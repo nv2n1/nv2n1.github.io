@@ -35,38 +35,38 @@ description: "fax – fax sending and receiving with mgetty+sendfax"
 <p> <i>g3cat</i> is used to concat multiple G3 files, as <i>cat</i> does with text files. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/var/spool/fax/outgoing/</code></p>
-<dd> outgoing fax spool directory</p>
-<dt><code>/var/spool/fax/incoming/</code></p>
-<dd> incoming faxes</p>
-<dt><code>/usr/lib64/mgetty+sendfax/</code></p>
-<dd> The cover page program, faxq-helper, and a few font files live here.</p>
-<dt><code>/etc/mgetty+sendfax/</code></p>
-<dd> most configuration files for mgetty and sendfax live here.</p>
-<dt><code>/usr/sbin</code></p>
-<dd> mgetty, sendfax and faxrunqd live here</p>
-<dt><code>/usr/bin</code></p>
-<dd> all the other programs</p>
-<dt><code>/etc/mgetty+sendfax/faxaliases</code></p>
-<dd> global fax alias file</p>
-<dt><code>$HOME/.faxnrs</code></p>
-<dd> private fax alias file</p>
-<dt><code>/etc/mgetty+sendfax/fax.allow</code></p>
-<dd> list of allowed users</p>
-<dt><code>/etc/mgetty+sendfax/fax.deny</code></p>
-<dd> list of denied users</p>
-<dt><code>/etc/mgetty+sendfax/faxheader</code></p>
-<dd> fax page header</p>
-<dt><code>/usr/lib64/mgetty+sendfax/make.coverpg</code></p>
-<dd> program to create fax cover page (see <a href="/docs/linux/man/1-coverpg/">coverpg</a>(1)).</p>
-<dt><code>/etc/mgetty+sendfax/login.config</code></p>
-<dd> login configuration file for mgetty.</p>
-<dt><code>/etc/mgetty+sendfax/dialin.config</code></p>
-<dd> caller ID setup file for mgetty (optional).</p>
-<dt><code>/etc/mgetty+sendfax/mgetty.config</code></p>
-<dd> runtime configuration file for mgetty (not implemented yet).</p>
-<dt><code>/etc/mgetty+sendfax/sendfax.config</code></p>
-<dd> runtime configuration file for sendfax (optional). </p>
+<dt><code>/var/spool/fax/outgoing/</code></dt>
+<dd> outgoing fax spool directory</dd>
+<dt><code>/var/spool/fax/incoming/</code></dt>
+<dd> incoming faxes</dd>
+<dt><code>/usr/lib64/mgetty+sendfax/</code></dt>
+<dd> The cover page program, faxq-helper, and a few font files live here.</dd>
+<dt><code>/etc/mgetty+sendfax/</code></dt>
+<dd> most configuration files for mgetty and sendfax live here.</dd>
+<dt><code>/usr/sbin</code></dt>
+<dd> mgetty, sendfax and faxrunqd live here</dd>
+<dt><code>/usr/bin</code></dt>
+<dd> all the other programs</dd>
+<dt><code>/etc/mgetty+sendfax/faxaliases</code></dt>
+<dd> global fax alias file</dd>
+<dt><code>$HOME/.faxnrs</code></dt>
+<dd> private fax alias file</dd>
+<dt><code>/etc/mgetty+sendfax/fax.allow</code></dt>
+<dd> list of allowed users</dd>
+<dt><code>/etc/mgetty+sendfax/fax.deny</code></dt>
+<dd> list of denied users</dd>
+<dt><code>/etc/mgetty+sendfax/faxheader</code></dt>
+<dd> fax page header</dd>
+<dt><code>/usr/lib64/mgetty+sendfax/make.coverpg</code></dt>
+<dd> program to create fax cover page (see <a href="/docs/linux/man/1-coverpg/">coverpg</a>(1)).</dd>
+<dt><code>/etc/mgetty+sendfax/login.config</code></dt>
+<dd> login configuration file for mgetty.</dd>
+<dt><code>/etc/mgetty+sendfax/dialin.config</code></dt>
+<dd> caller ID setup file for mgetty (optional).</dd>
+<dt><code>/etc/mgetty+sendfax/mgetty.config</code></dt>
+<dd> runtime configuration file for mgetty (not implemented yet).</dd>
+<dt><code>/etc/mgetty+sendfax/sendfax.config</code></dt>
+<dd> runtime configuration file for sendfax (optional). </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Look into the responding man pages. </p>

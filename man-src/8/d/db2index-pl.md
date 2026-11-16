@@ -15,36 +15,36 @@ description: "db2index.pl – Directory Server perl script for indexing a databa
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-D</code> <i>Root DN</i></p>
-<dd>The Directory Manager DN, or root DN. If not specified, the script will search the server instance configuration for the value.</p>
-<dt><code>-w</code> <i>password</i></p>
-<dd>The rootdn password.</p>
-<dt><code>-w &#8211;</code></p>
-<dd>Prompt for the rootdn password.</p>
-<dt><code>-j</code> <i>password filename</i></p>
-<dd>The name of the file that contains the root DN password.</p>
-<dt><code>-n</code> <i>Backend Name</i></p>
-<dd>The name of the LDBM database to restore. Example: userRoot</p>
-<dt><code>-t</code> <i>attributeName[:indextypes[:matchingrules]]</i></p>
-<dd>The attribute to index. Optionally you can specify a comma separated list of index types: eq, sub, pres, and approx. An optional matching rule OID can also be set.</p>
-<dt><code>-T</code> <i>vlvTag</i></p>
-<dd>This is the name of the vlv index entry under cn=config.</p>
-<dt><code>-P</code> <i>Protocol</i></p>
-<dd>The connection protocol to connect to the Directory Server. Protocols are STARTTLS, LDAPS, LDAPI, and LDAP. If this option is skipped, the most secure protocol that is available is used. For LDAPI, AUTOBIND is also available for the root user.</p>
-<dt><code>-v</code></p>
-<dd>Display verbose output</p>
-<dt><code>-h</code></p>
-<dd>Display usage</dl>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-D</code> <i>Root DN</i></dt>
+<dd>The Directory Manager DN, or root DN. If not specified, the script will search the server instance configuration for the value.</dd>
+<dt><code>-w</code> <i>password</i></dt>
+<dd>The rootdn password.</dd>
+<dt><code>-w &#8211;</code></dt>
+<dd>Prompt for the rootdn password.</dd>
+<dt><code>-j</code> <i>password filename</i></dt>
+<dd>The name of the file that contains the root DN password.</dd>
+<dt><code>-n</code> <i>Backend Name</i></dt>
+<dd>The name of the LDBM database to restore. Example: userRoot</dd>
+<dt><code>-t</code> <i>attributeName[:indextypes[:matchingrules]]</i></dt>
+<dd>The attribute to index. Optionally you can specify a comma separated list of index types: eq, sub, pres, and approx. An optional matching rule OID can also be set.</dd>
+<dt><code>-T</code> <i>vlvTag</i></dt>
+<dd>This is the name of the vlv index entry under cn=config.</dd>
+<dt><code>-P</code> <i>Protocol</i></dt>
+<dd>The connection protocol to connect to the Directory Server. Protocols are STARTTLS, LDAPS, LDAPI, and LDAP. If this option is skipped, the most secure protocol that is available is used. For LDAPI, AUTOBIND is also available for the root user.</dd>
+<dt><code>-v</code></dt>
+<dd>Display verbose output</dd>
+<dt><code>-h</code></dt>
+<dd>Display usage</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>db2index.pl -n userRoot -D &#8216;cn=directory manager&#8217; -w password -t uid:eq,pres,sub:1.3.6.1.4.1.42.2.27.9.4.76.1 -t cn:eq,pres</p>
+<dt>db2index.pl -n userRoot -D &#8216;cn=directory manager&#8217; -w password -t uid:eq,pres,sub:1.3.6.1.4.1.42.2.27.9.4.76.1 -t cn:eq,pres</dt>
 <dd>
-<dt>db2index.pl -Z instance3</p>
+</dd><dt>db2index.pl -Z instance3</dt>
 <dd>
-<dt>db2index.pl -Z instance2 -w password -s &#8216;dc=example,dc=com&#8217; -t uid:eq:pres:sub -t sn -P STARTTLS</p>
-<dd>Note: security must be enabled to use protocol STARTTLS. If STARTTLS is not available it will default to next strongest/available protocol automatically.</dl>
+</dd><dt>db2index.pl -Z instance2 -w password -s &#8216;dc=example,dc=com&#8217; -t uid:eq:pres:sub -t sn -P STARTTLS</dt>
+<dd>Note: security must be enabled to use protocol STARTTLS. If STARTTLS is not available it will default to next strongest/available protocol automatically.</dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

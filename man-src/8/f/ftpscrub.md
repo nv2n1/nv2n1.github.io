@@ -14,12 +14,12 @@ description: "ftpscrub – scrub the proftpd scoreboard file of stale entries"
 <p>The <code>ftpscrub</code> command provides a way to scrub the scoreboard file on demand, at times which suit the site best. This should be run periodically on sites which run proftpd in <i>inetd</i> mode.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h,&#8211;help</code></p>
-<dd>Display a short usage description, including all available options.</p>
-<dt><code>-f,&#8211;file</code><i> scoreboard-file</i></p>
-<dd>Specify the full path to proftpd&#8217;s run-time scoreboard file (configured via the <code>ScoreboardFile</code> directive in <i>proftpd.conf</i> ). If proftpd&#8217;s default directory has been changed via this directive, <code>ftpscrub</code> must either be recompiled, or this option must be used in order to find proftpd&#8217;s scoreboard.</p>
-<dt><code>-v,&#8211;verbose</code></p>
-<dd>Reports additional information while scrubbing the scoreboard.</dl>
+<dt><code>-h,&#8211;help</code></dt>
+<dd>Display a short usage description, including all available options.</dd>
+<dt><code>-f,&#8211;file</code><i> scoreboard-file</i></dt>
+<dd>Specify the full path to proftpd&#8217;s run-time scoreboard file (configured via the <code>ScoreboardFile</code> directive in <i>proftpd.conf</i> ). If proftpd&#8217;s default directory has been changed via this directive, <code>ftpscrub</code> must either be recompiled, or this option must be used in order to find proftpd&#8217;s scoreboard.</dd>
+<dt><code>-v,&#8211;verbose</code></dt>
+<dd>Reports additional information while scrubbing the scoreboard.</dd></dl>
 <h2>Files</h2>
 <p><code>/usr/sbin/ftpscrub</code><br />
  <code>/run/proftpd/proftpd.scoreboard</code></p>

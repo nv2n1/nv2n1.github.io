@@ -10,10 +10,8 @@ description: "std::add_pointer – std::add_pointer"
 <p>std::add_pointer &#8211; std::add_pointer</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct add_pointer;</code></pre>
 <p>If T is a reference type, then provides the member typedef type which is a pointer to the referred type.<br />
 Otherwise, if T names an object type, a function type that is not cv- or ref-qualified, or a (possibly cv-qualified) void type, provides the member typedef type which is the type T*.<br />
@@ -38,10 +36,8 @@ using add_pointer_t = typename add_pointer&lt;T&gt;::type;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     int i = 123;
     int &amp;ri = i;

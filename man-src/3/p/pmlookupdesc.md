@@ -23,7 +23,6 @@ typedef struct {
     int sem;       /* semantics of value (see below) *
    pmUnits units;  /* dimension and units (see below) */
 } pmDesc;
-
 /* pmDesc.type -- data type of metric values */
 #define PM_TYPE_NOSUPPORT -1       /* not impl. in this version */
 #define PM_TYPE_32 0               /* 32-bit signed integer */
@@ -37,7 +36,6 @@ typedef struct {
 #define PM_TYPE_AGGREGATE_STATIC 8 /* static pointer to aggregate */
 #define PM_TYPE_EVENT 9            /* packed pmEventArray */
 #define PM_TYPE_UNKNOWN 255        /* used in pmValueBlock, not pmDesc */
-
 /* pmDesc.sem -- semantics/interpretation of metric values */
 #define PM_SEM_COUNTER 1  /* cumulative ctr (monotonic incr) */
 #define PM_SEM_INSTANT 3  /* instant. value continuous domain */
@@ -67,7 +65,6 @@ typedef struct {
     unsigned int scaleTime : 4;  /* one of PM_TIME_* below */
     int scaleCount : 4;          /* one of PM_COUNT_* below */
 } pmUnits;                       /* dimensional units and scale of value */
-
 /* pmUnits.scaleSpace */
 #define PM_SPACE_BYTE 0  /* bytes */
 #define PM_SPACE_KBYTE 1 /* Kilobytes (1024) */
@@ -92,8 +89,8 @@ typedef struct {
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmatomstr/">pmAtomStr</a></code>(3), <code><a href="/docs/linux/man/3-pmconvscale/">pmConvScale</a></code>(3), <code><a href="/docs/linux/man/3-pmextractvalue/">pmExtractValue</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmtypestr/">pmTypeStr</a></code>(3), <code><a href="/docs/linux/man/3-pmunitsstr/">pmUnitsStr</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_PMID</code></p>
-<dd>The requested PMID is not known to the PMCS</p>
-<dt><code>PM_ERR_NOAGENT</code></p>
-<dd>The PMDA responsible for providing the metric is currently not available </p>
+<dt><code>PM_ERR_PMID</code></dt>
+<dd>The requested PMID is not known to the PMCS</dd>
+<dt><code>PM_ERR_NOAGENT</code></dt>
+<dd>The PMDA responsible for providing the metric is currently not available </dd>
 </dl>

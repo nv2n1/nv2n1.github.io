@@ -19,8 +19,8 @@ description: "sched_conf – xxQS_NAMExx default scheduler configuration file"
 <p> Currently <code>default</code> is the only allowed setting.</p>
 <h3><code>load_formula</code></h3>
 <p>A simple algebraic expression used to derive a single weighted load value from all or part of the load parameters reported by for each host and from all or part of the consumable resources (see being maintained for each host. The load formula expression syntax is that of a sum of weighted load values, that is: </p>
-<pre><dl><dt><dd>{<i>w1</i>|<i>load_val1</i>[*<i>w1</i>]}[{<code>+</code>|<code>-</code>}{<i>w2</i>|<i>load_val2</i>[<code>*</code><i>w2</i>]}[{<code>+</code>|<code>-</code>}...]]
-</dl></pre>
+<pre><dl><dt></dt><dd>{<i>w1</i>|<i>load_val1</i>[*<i>w1</i>]}[{<code>+</code>|<code>-</code>}{<i>w2</i>|<i>load_val2</i>[<code>*</code><i>w2</i>]}[{<code>+</code>|<code>-</code>}...]]
+</dd></dl></pre>
 <p><code>Note</code>, no blanks are allowed in the load formula.<br />
  The load values and consumable resources (load_val1, &#8230;) are specified by the name defined in the complex (see<br />
  <code>Note:</code> Administrator-defined load values (see the <code>load_sensor</code> parameter in for details) and consumable resources available for all hosts (see may be used as well as xxQS_NAMExx default load parameters.<br />
@@ -47,8 +47,8 @@ description: "sched_conf – xxQS_NAMExx default scheduler configuration file"
  If the value is set to 0, the usage is not decayed.</p>
 <h3><code>usage_weight_list</code></h3>
 <p>xxQS_NAMExx accounts for the consumption of the resources CPU-time, memory and IO to determine the usage which is imposed on a system by a job. A single usage value is computed from these three input parameters by multiplying the individual values by weights and adding them up. The weights are defined in the <code>usage_weight_list</code>. The format of the list is </p>
-<pre><dl><dt><dd><code>cpu=</code><i>wcpu</i><code>,mem=</code><i>wmem</i><code>,io=</code><i>wio</i>
-</dl></pre>
+<pre><dl><dt></dt><dd><code>cpu=</code><i>wcpu</i><code>,mem=</code><i>wmem</i><code>,io=</code><i>wio</i>
+</dd></dl></pre>
 <p>where <i>wcpu</i>, <i>wmem</i> and <i>wio</i> are the configurable weights. The weights are real numbers. The sum of all three weights should be 1. The default is <code>cpu=1,mem=0,io=0</code>.</p>
 <h3><code>compensation_factor</code></h3>
 <p>Determines how fast xxQS_NAMExx should compensate for past usage below or above the share entitlement defined in the share tree. Recommended values are between 2 and 10, where 10 means faster compensation. The default is 5.</p>
@@ -85,25 +85,25 @@ description: "sched_conf – xxQS_NAMExx default scheduler configuration file"
 <h3><code>params</code></h3>
 <p>This is for passing additional parameters to the xxQS_NAMExx scheduler. The following values are recognized:</p>
 <dl>
-<dt><i>DURATION_OFFSET</i></p>
+<dt><i>DURATION_OFFSET</i></dt>
 <dd>If set, overrides the default of value 60 seconds. This parameter is used by the xxQS_NAMExx scheduler when planning resource utilization as the delta between net job runtimes and total time until resources become available again. Net job runtime as specified with <code>-l h_rt=</code>&#8230; or <code>-l s_rt=</code>&#8230; or <code>default_duration</code> always differs from total job runtime due to delays before and after actual job start and finish. Among the delays before job start is the time until the end of a <code>schedule_interval</code>, the time it takes to deliver a job to and the delays caused by <code>prolog</code> in <code>start_proc_args</code> in and <code>starter_method</code> in The delays after job finish include those due to a forced job termination (<code>notify</code>, <code>terminate_method</code> or <code>checkpointing</code>), procedures run after actual job finish, such as <code>stop_proc_args</code> in or <code>epilog</code> in and the delay until a new <code>schedule_interval</code>.<br />
- If the offset is too low, resource reservations (see <code>max_reservation</code>) can be delayed repeatedly due to an overly optimistic job circulation time.</p>
-<dt><i>JC_FILTER</i></p>
+ If the offset is too low, resource reservations (see <code>max_reservation</code>) can be delayed repeatedly due to an overly optimistic job circulation time.</dd>
+<dt><i>JC_FILTER</i></dt>
 <dd><code>Note:</code> Deprecated, may be removed in future release.<br />
- If set to true, the scheduler limits the number of jobs it looks at during a scheduling run. At the beginning of the scheduling run it assigns each job a specific category, which is based on the job&#8217;s requests, priority settings, and the job owner. All scheduling policies will assign the same importance to each job in one category. Therefore the number of jobs per category has a FIFO order and can be limited to the number of free slots in the system.</p>
+ If set to true, the scheduler limits the number of jobs it looks at during a scheduling run. At the beginning of the scheduling run it assigns each job a specific category, which is based on the job&#8217;s requests, priority settings, and the job owner. All scheduling policies will assign the same importance to each job in one category. Therefore the number of jobs per category has a FIFO order and can be limited to the number of free slots in the system.</dd>
 <dl>
-<dd>An exception is jobs which request a resource reservation. They are included regardless of the number of jobs in a category. </p>
+<dd>An exception is jobs which request a resource reservation. They are included regardless of the number of jobs in a category. </dd>
 <p> This setting is turned off by default, because in very rare cases, the scheduler can make a wrong decision. It is also advised to turn <code>report_pjob_tickets</code> off. Otherwise <i>qstat -ext</i> can report outdated ticket amounts. The information shown with a <i>qstat -j</i> for a job that was excluded in a scheduling run is very limited.</dl>
-<dt><i>PROFILE</i></p>
-<dd>If set equal to 1, the scheduler logs profiling information summarizing each scheduling run.</p>
-<dt><i>MONITOR</i></p>
-<dd>If set equal to 1, the scheduler records information for each scheduling run, enabling reproduction of job resource utilization in the file <i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/schedule</i>.</p>
-<dt><i>PE_RANGE_ALG</i></p>
+<dt><i>PROFILE</i></dt>
+<dd>If set equal to 1, the scheduler logs profiling information summarizing each scheduling run.</dd>
+<dt><i>MONITOR</i></dt>
+<dd>If set equal to 1, the scheduler records information for each scheduling run, enabling reproduction of job resource utilization in the file <i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/schedule</i>.</dd>
+<dt><i>PE_RANGE_ALG</i></dt>
 <dd>This parameter sets the algorithm for the PE range computation. The default is automatic, which means that the scheduler will select the best one, and it should not be necessary to change it to a different setting in normal operation. If a custom setting is needed, the following values are available:<br />
  <code>auto</code>: the scheduler selects the best algorithm<br />
  <code>least</code>: starts the resource matching with the lowest slot amount first<br />
  <code>bin</code>: starts the resource matching in the middle of the pe slot range<br />
- <code>highest</code>: starts the resource matching with the highest slot amount first.</dl>
+ <code>highest</code>: starts the resource matching with the highest slot amount first.</dd></dl>
 <p> Changing <code>params</code> will take immediate effect. The default for <code>params</code> is none.</p>
 <h3><code>reprioritize_interval</code></h3>
 <p>Interval (<i>HH</i><code>:</code><i>MM</i><code>:</code><i>SS</i>) to reprioritize jobs on the execution hosts based on the current ticket amount for the running jobs. If the interval is set to 00:00:00 the reprioritization is turned off. The default value is 00:00:00. The reprioritization tickets are calculated by the scheduler and update events for running jobs are only sent after the scheduler calculated new values. How often the scheduler should calculate the tickets is defined by the reprioritize_interval. Because the scheduler is only triggered in a specific interval (scheduler_interval) this means the reprioritize_interval only has a meaning if set greater than the scheduler_interval. For example, if the scheduler_interval is 2 minutes and reprioritize_interval is set to 10 seconds, this means the jobs get re-prioritized every 2 minutes.</p>
@@ -113,8 +113,8 @@ description: "sched_conf – xxQS_NAMExx default scheduler configuration file"
 <h3><code>halflife_decay_list</code></h3>
 <p>The halflife_decay_list allows configuring different decay rates for the finished_jobs usage types, which is used in the pending job ticket calculation to account for jobs which have just ended. This allows the user the pending jobs algorithm to count finished jobs against a user or project for a configurable decayed time period. This feature is turned off by default, and the halftime is used instead.<br />
  The halflife_decay_list also allows one to configure different decay rates for each usage type being tracked (cpu, io, and mem). The list is specified in the following format: </p>
-<pre><dl><dt><dd><i>usage_type</i><code>=</code><i>time</i>[<code>:</code><i>usage_type</i><code>=</code><i>time</i>[<code>:</code><i>usage_type</i><code>=</code><i>time</i>]]
-</dl></pre>
+<pre><dl><dt></dt><dd><i>usage_type</i><code>=</code><i>time</i>[<code>:</code><i>usage_type</i><code>=</code><i>time</i>[<code>:</code><i>usage_type</i><code>=</code><i>time</i>]]
+</dd></dl></pre>
 <p><i>usage_type</i> can be one of <code>cpu</code>, <code>io</code>, or <code>mem</code>. <i>time</i> can be -1, 0 or a timespan specified in minutes. If <i>time</i> is -1, only the usage of currently running jobs is used. 0 means that the usage is not decayed.</p>
 <h3><code>policy_hierarchy</code></h3>
 <p>This parameter sets up a dependency chain of ticket-based policies. Each ticket-based policy in the dependency chain is influenced by the previous policies and influences the following policies. A typical scenario is to assign precedence for the override policy over the share-based policy. The override policy determines in such a case how share-based tickets are assigned among jobs of the same user or project. Note that all policies contribute to the ticket amount assigned to a particular job regardless of the policy hierarchy definition. Yet the tickets calculated in each of the policies can be different, depending on &quot;<i>POLICY_HIERARCHY</i>&quot;. </p>

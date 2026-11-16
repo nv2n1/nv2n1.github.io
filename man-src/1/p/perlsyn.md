@@ -560,30 +560,30 @@ given($foo)<br />
 <p> except that the block was automatically broken out of by a successful <tt>&quot;when&quot;</tt> or an explicit <tt>&quot;break&quot;</tt>. Because it was only a copy, and because it was only lexically scoped, not dynamically scoped, you could not do the things with it that you are used to in a <tt>&quot;foreach&quot;</tt> loop. In particular, it did not work for arbitrary function calls if those functions might try to access <tt>$_</tt>. Best stick to <tt>&quot;foreach&quot;</tt> for that. </p>
 <p> Most of the power comes from the implicit smartmatching that can sometimes apply. Most of the time, <tt>&quot;when(EXPR)&quot;</tt> is treated as an implicit smartmatch of <tt>$_</tt>, that is, <tt>&quot;$_ ~~ EXPR&quot;</tt>. (See &#8220;Smartmatch Operator&#8221; in perlop for more information on smartmatching.) But when <i></i><font SIZE="-1"><i>EXPR</i></font><i></i> is one of the 10 exceptional cases (or things like them) listed below, it is used directly as a boolean.</p>
 <dl>
-<dt>1.</p>
-<dd> A user-defined subroutine call or a method invocation.</p>
-<dt>2.</p>
-<dd> A regular expression match in the form of <tt>&quot;/REGEX/&quot;</tt>, <tt>&quot;$foo =~ /REGEX/&quot;</tt>, or <tt>&quot;$foo =~ EXPR&quot;</tt>. Also, a negated regular expression match in the form <tt>&quot;!/REGEX/&quot;</tt>, <tt>&quot;$foo !~ /REGEX/&quot;</tt>, or <tt>&quot;$foo !~ EXPR&quot;</tt>.</p>
-<dt>3.</p>
-<dd> A smart match that uses an explicit <tt>&quot;~~&quot;</tt> operator, such as <tt>&quot;EXPR ~~ EXPR&quot;</tt>. </p>
+<dt>1.</dt>
+<dd> A user-defined subroutine call or a method invocation.</dd>
+<dt>2.</dt>
+<dd> A regular expression match in the form of <tt>&quot;/REGEX/&quot;</tt>, <tt>&quot;$foo =~ /REGEX/&quot;</tt>, or <tt>&quot;$foo =~ EXPR&quot;</tt>. Also, a negated regular expression match in the form <tt>&quot;!/REGEX/&quot;</tt>, <tt>&quot;$foo !~ /REGEX/&quot;</tt>, or <tt>&quot;$foo !~ EXPR&quot;</tt>.</dd>
+<dt>3.</dt>
+<dd> A smart match that uses an explicit <tt>&quot;~~&quot;</tt> operator, such as <tt>&quot;EXPR ~~ EXPR&quot;</tt>. </dd>
 <p> <font SIZE="-1"><code>NOTE:</code></font> You will often have to use <tt>&quot;$c ~~ $_&quot;</tt> because the default case uses <tt>&quot;$_ ~~ $c&quot;</tt> , which is frequently the opposite of what you want.</p>
-<dt>4.</p>
-<dd> A boolean comparison operator such as <tt>&quot;$_ &lt; 10&quot;</tt> or <tt>&quot;$x eq &quot;abc&quot;&quot;</tt>. The relational operators that this applies to are the six numeric comparisons (<tt>&quot;&lt;&quot;</tt>, <tt>&quot;&gt;&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, <tt>&quot;==&quot;</tt>, and <tt>&quot;!=&quot;</tt>), and the six string comparisons (<tt>&quot;lt&quot;</tt>, <tt>&quot;gt&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;ge&quot;</tt>, <tt>&quot;eq&quot;</tt>, and <tt>&quot;ne&quot;</tt>).</p>
-<dt>5.</p>
-<dd> At least the three builtin functions <tt>&quot;defined(...)&quot;</tt>, <tt>&quot;exists(...)&quot;</tt>, and <tt>&quot;eof(...)&quot;</tt>. We might someday add more of these later if we think of them.</p>
-<dt>6.</p>
-<dd> A negated expression, whether <tt>&quot;!(EXPR)&quot;</tt> or <tt>&quot;not(EXPR)&quot;</tt>, or a logical exclusive-or, <tt>&quot;(EXPR1) xor (EXPR2)&quot;</tt>. The bitwise versions (<tt>&quot;~&quot;</tt> and <tt>&quot;^&quot;</tt>) are not included.</p>
-<dt>7.</p>
-<dd> A filetest operator, with exactly 4 exceptions: <tt>&quot;-s&quot;</tt>, <tt>&quot;-M&quot;</tt>, <tt>&quot;-A&quot;</tt>, and <tt>&quot;-C&quot;</tt>, as these return numerical values, not boolean ones. The <tt>&quot;-z&quot;</tt> filetest operator is not included in the exception list.</p>
-<dt>8.</p>
-<dd> The <tt>&quot;..&quot;</tt> and <tt>&quot;...&quot;</tt> flip-flop operators. Note that the <tt>&quot;...&quot;</tt> flip-flop operator is completely different from the <tt>&quot;...&quot;</tt> elliptical statement just described.</dl>
+<dt>4.</dt>
+<dd> A boolean comparison operator such as <tt>&quot;$_ &lt; 10&quot;</tt> or <tt>&quot;$x eq &quot;abc&quot;&quot;</tt>. The relational operators that this applies to are the six numeric comparisons (<tt>&quot;&lt;&quot;</tt>, <tt>&quot;&gt;&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, <tt>&quot;==&quot;</tt>, and <tt>&quot;!=&quot;</tt>), and the six string comparisons (<tt>&quot;lt&quot;</tt>, <tt>&quot;gt&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;ge&quot;</tt>, <tt>&quot;eq&quot;</tt>, and <tt>&quot;ne&quot;</tt>).</dd>
+<dt>5.</dt>
+<dd> At least the three builtin functions <tt>&quot;defined(...)&quot;</tt>, <tt>&quot;exists(...)&quot;</tt>, and <tt>&quot;eof(...)&quot;</tt>. We might someday add more of these later if we think of them.</dd>
+<dt>6.</dt>
+<dd> A negated expression, whether <tt>&quot;!(EXPR)&quot;</tt> or <tt>&quot;not(EXPR)&quot;</tt>, or a logical exclusive-or, <tt>&quot;(EXPR1) xor (EXPR2)&quot;</tt>. The bitwise versions (<tt>&quot;~&quot;</tt> and <tt>&quot;^&quot;</tt>) are not included.</dd>
+<dt>7.</dt>
+<dd> A filetest operator, with exactly 4 exceptions: <tt>&quot;-s&quot;</tt>, <tt>&quot;-M&quot;</tt>, <tt>&quot;-A&quot;</tt>, and <tt>&quot;-C&quot;</tt>, as these return numerical values, not boolean ones. The <tt>&quot;-z&quot;</tt> filetest operator is not included in the exception list.</dd>
+<dt>8.</dt>
+<dd> The <tt>&quot;..&quot;</tt> and <tt>&quot;...&quot;</tt> flip-flop operators. Note that the <tt>&quot;...&quot;</tt> flip-flop operator is completely different from the <tt>&quot;...&quot;</tt> elliptical statement just described.</dd></dl>
 <p> In those 8 cases above, the value of <font SIZE="-1">EXPR</font> is used directly as a boolean, so no smartmatching is done. You may think of <tt>&quot;when&quot;</tt> as a smartsmartmatch. </p>
 <p> Furthermore, Perl inspects the operands of logical operators to decide whether to use smartmatching for each one by applying the above test to the operands:</p>
 <dl>
-<dt>9.</p>
-<dd> If <font SIZE="-1">EXPR</font> is <tt>&quot;EXPR1 &amp;&amp; EXPR2&quot;</tt> or <tt>&quot;EXPR1 and EXPR2&quot;</tt>, the test is applied <i>recursively</i> to both <font SIZE="-1">EXPR1</font> and <font SIZE="-1">EXPR2.</font> Only if <i>both</i> operands also pass the test, <i>recursively</i>, will the expression be treated as boolean. Otherwise, smartmatching is used.</p>
-<dt>10.</p>
-<dd> If <font SIZE="-1">EXPR</font> is <tt>&quot;EXPR1 || EXPR2&quot;</tt>, <tt>&quot;EXPR1 // EXPR2&quot;</tt>, or <tt>&quot;EXPR1 or EXPR2&quot;</tt>, the test is applied <i>recursively</i> to <font SIZE="-1">EXPR1</font> only (which might itself be a higher-precedence <font SIZE="-1">AND</font> operator, for example, and thus subject to the previous rule), not to <font SIZE="-1">EXPR2.</font> If <font SIZE="-1">EXPR1</font> is to use smartmatching, then <font SIZE="-1">EXPR2</font> also does so, no matter what <font SIZE="-1">EXPR2</font> contains. But if <font SIZE="-1">EXPR2</font> does not get to use smartmatching, then the second argument will not be either. This is quite different from the <tt>&quot;&amp;&amp;&quot;</tt> case just described, so be careful.</dl>
+<dt>9.</dt>
+<dd> If <font SIZE="-1">EXPR</font> is <tt>&quot;EXPR1 &amp;&amp; EXPR2&quot;</tt> or <tt>&quot;EXPR1 and EXPR2&quot;</tt>, the test is applied <i>recursively</i> to both <font SIZE="-1">EXPR1</font> and <font SIZE="-1">EXPR2.</font> Only if <i>both</i> operands also pass the test, <i>recursively</i>, will the expression be treated as boolean. Otherwise, smartmatching is used.</dd>
+<dt>10.</dt>
+<dd> If <font SIZE="-1">EXPR</font> is <tt>&quot;EXPR1 || EXPR2&quot;</tt>, <tt>&quot;EXPR1 // EXPR2&quot;</tt>, or <tt>&quot;EXPR1 or EXPR2&quot;</tt>, the test is applied <i>recursively</i> to <font SIZE="-1">EXPR1</font> only (which might itself be a higher-precedence <font SIZE="-1">AND</font> operator, for example, and thus subject to the previous rule), not to <font SIZE="-1">EXPR2.</font> If <font SIZE="-1">EXPR1</font> is to use smartmatching, then <font SIZE="-1">EXPR2</font> also does so, no matter what <font SIZE="-1">EXPR2</font> contains. But if <font SIZE="-1">EXPR2</font> does not get to use smartmatching, then the second argument will not be either. This is quite different from the <tt>&quot;&amp;&amp;&quot;</tt> case just described, so be careful.</dd></dl>
 <p> These rules are complicated, but the goal is for them to do what you want (even if you don&#8217;t quite understand why they are doing it). For example: </p>
 <pre>
     when (/^\d+$/ &amp;&amp; $_ &lt; 75) { ... }
@@ -639,12 +639,12 @@ given($foo)<br />
 <p> <i>Return value</i> </p>
 <p> When a <tt>&quot;given&quot;</tt> statement is also a valid expression (for example, when it&#8217;s the last statement of a block), it evaluates to:</p>
 <dl>
-<dt>&bull;</p>
-<dd> An empty list as soon as an explicit <tt>&quot;break&quot;</tt> is encountered.</p>
-<dt>&bull;</p>
-<dd> The value of the last evaluated expression of the successful <tt>&quot;when&quot;</tt>/<tt>&quot;default&quot;</tt> clause, if there happens to be one.</p>
-<dt>&bull;</p>
-<dd> The value of the last evaluated expression of the <tt>&quot;given&quot;</tt> block if no condition is true.</dl>
+<dt>&bull;</dt>
+<dd> An empty list as soon as an explicit <tt>&quot;break&quot;</tt> is encountered.</dd>
+<dt>&bull;</dt>
+<dd> The value of the last evaluated expression of the successful <tt>&quot;when&quot;</tt>/<tt>&quot;default&quot;</tt> clause, if there happens to be one.</dd>
+<dt>&bull;</dt>
+<dd> The value of the last evaluated expression of the <tt>&quot;given&quot;</tt> block if no condition is true.</dd></dl>
 <p> In both last cases, the last expression is evaluated in the context that was applied to the <tt>&quot;given&quot;</tt> block. </p>
 <p> Note that, unlike <tt>&quot;if&quot;</tt> and <tt>&quot;unless&quot;</tt>, failed <tt>&quot;when&quot;</tt> statements always evaluate to an empty list. </p>
 <p>my $price = do {<br />

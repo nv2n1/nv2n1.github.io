@@ -11,15 +11,15 @@ description: "cone – Read and send E-mail messages"
 <p> cone &#8211; Read and send E-mail messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>cone</code> [-r] [-c&nbsp;<wbr><i>directory</i>]</dl>
+<dt> <code>cone</code> [-r] [-c&nbsp;<wbr><i>directory</i>]</dt></dl>
 <h2>USAGE</h2>
-<dd>Cone is a console newsreader and E-mail. It is an interactive program for reading and sending E-mail messages. Cone is designed to be intuitive and easy to learn. Starting Cone for the first time displays two links: one for the default system mailbox, and a second link to a quick online tutorial. The online tutorial provides a brief overview of using Cone for reading and sending E-mail. </p>
+<dd>Cone is a console newsreader and E-mail. It is an interactive program for reading and sending E-mail messages. Cone is designed to be intuitive and easy to learn. Starting Cone for the first time displays two links: one for the default system mailbox, and a second link to a quick online tutorial. The online tutorial provides a brief overview of using Cone for reading and sending E-mail. </dd>
 <p> Pressing Q on most screens exits Cone. Cone tries to gracefully log out and shut down all server connections. If Cone cannot log out of a remote server because the remote server is down, press CTRL-C (after Q to terminate Cone). </p>
 <p> Use CTRL-Z to temporarily suspend Cone and drop back to the shell prompt. Cone remains suspended in the background, and may be restarted by using the shell&#8217;s <code>fg</code> command. </p>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Connections to remote mail servers may be disconnected for inactivity if Cone remains suspended for a prolonged period of time. When suspended, Cone cannot maintain any active connections to remote mail servers. </p>
 </dl>
 <p> The <code>-c</code> option names a directory where Cone saves its configuration files, and defaults to $HOME/.cone. The configuration directory will be created, if necessary. </p>
@@ -34,11 +34,11 @@ description: "cone – Read and send E-mail messages"
 <p> <font SIZE="+1"> <code>Helper scripts</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Cone runs each helper script twice: </p>
-<dl>
+</dd><dl>
 <dt>
-<dd> </font></p>
+</dt><dd> </font></dd>
 <pre>
 TYPE.SUBTYPE.filter check <i>type/subtype</i>
 </pre>
@@ -47,23 +47,23 @@ TYPE.SUBTYPE.filter check <i>type/subtype</i>
 <p> The default helper script for image attachments terminates with a non-zero exit code if the <code>DISPLAY</code> environment variable is not initialized. When invoked from an X-Windows terminal, image attachments will be automatically displayed; and image attachments are ignored otherwise on non-graphical consoles. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 TYPE.SUBTYPE.filter filter <i>type/subtype</i> <i>filename</i>
 </pre>
-</dl>
+</dd></dl>
 <p> If the helper script initially terminates with a zero exit code, it will be invoked again after the MIME attachment is downloaded and decoded. The first argument will be &#8220;filter&#8221;, and the attachment&#8217;s filename is specified by the third argument. </p>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> This is a temporary file, whose extension will not necessary be the file extension associated with this MIME type. </p>
 </dl>
 <p> The helper script should read and process the file specified by the third argument. Cone interprets anything the helper script writes to standard output as HTML. </p>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Cone waits until the helper script terminates before displaying the rest of the message. Most helper scripts should run in the background. However, note that Cone removes the temporary file when the original message is closed; the temporary file may be removed any time after the helper script terminates. The helper script should make its own private copy of the file, if necessary. </p>
 </dl>
 </dl>
@@ -72,24 +72,23 @@ TYPE.SUBTYPE.filter filter <i>type/subtype</i> <i>filename</i>
 <p> Cone installs http.handler (hard linked to https.handler). This script checks if firefox or mozilla binaries are found in the current <code>PATH</code>, and runs them. </p>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Cone also looks <i>method</i>.handler in $HOME/.cone (or the directory specified by <code>-c</code>) in addition to /usr/share/cone. </p>
 </dl>
 <h2>FILES</h2>
 <p> $HOME/.cone</p>
 <dl>
 <dt>
-<dd> Configuration files, and other application data. May be modified by the <code>-c</code> option.</dl>
+</dt><dd> Configuration files, and other application data. May be modified by the <code>-c</code> option.</dd></dl>
 <p> /usr/share/cone/IMAGE.GIF.filter, /usr/share/cone/IMAGE.JPEG.filter, /usr/share/cone/IMAGE.PNG.filter, /usr/share/cone/APPLICATION.PDF.filter</p>
 <dl>
 <dt>
-<dd> Default helper scripts distributed with Cone.</dl>
+</dt><dd> Default helper scripts distributed with Cone.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mailtool/">mailtool</a></code>(1), <code>sendmail</code>(8).</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <h2>Index</h2>

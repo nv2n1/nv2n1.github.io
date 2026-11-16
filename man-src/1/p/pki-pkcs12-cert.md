@@ -18,23 +18,23 @@ pki[CLI options] pkcs12 - cert pki[CLI options] pkcs12 - cert - find[command opt
 <p> <code>pki</code> [CLI options] <code>pkcs12-cert-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list certificates in a PKCS #12 file.</dl>
+</dt><dd> This command is to list certificates in a PKCS #12 file.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-cert-export &lt;nickname&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to export a certificate from a PKCS #12 file.</dl>
+</dt><dd> This command is to export a certificate from a PKCS #12 file.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-cert-add &lt;nickname&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to add a certificate into a PKCS #12 file.</dl>
+</dt><dd> This command is to add a certificate into a PKCS #12 file.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-cert-mod &lt;nickname&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify a certificate in a PKCS #12 file.</dl>
+</dt><dd> This command is to modify a certificate in a PKCS #12 file.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-cert-del &lt;nickname&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a certificate from a PKCS #12 file.</dl>
+</dt><dd> This command is to delete a certificate from a PKCS #12 file.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

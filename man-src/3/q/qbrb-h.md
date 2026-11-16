@@ -12,40 +12,18 @@ description: "qbrb.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
-
 #include &lt;stdint.h&gt;</code></pre>
 <h3>Macros</h3>
 <pre><code>#define QB_RB_FLAG_CREATE   0x01
-
-
 create a ring buffer (rather than open and existing one)
-
-
 #define QB_RB_FLAG_OVERWRITE   0x02
-
-
 New calls to qb_rb_chunk_write() will call qb_rb_chunk_reclaim() if there is not enough space.
-
-
 #define QB_RB_FLAG_SHARED_THREAD   0x04
-
-
 The ringbuffer will be shared between pthreads not processes.
-
-
 #define QB_RB_FLAG_SHARED_PROCESS   0x08
-
-
 The ringbuffer will be shared between processes.
-
-
 #define QB_RB_FLAG_NO_SEMAPHORE   0x10
-
-
 Don't use semaphores, only atomic ops.
-
-
-
 Typedefs</code></pre>
 <p> typedef struct qb_ringbuffer_s <code>qb_ringbuffer_t</code></p>
 <h3>Functions</h3>
@@ -116,30 +94,30 @@ Typedefs</code></pre>
 * </pre>
 <p><code>Author:</code></p>
 <dl>
-<dd>Angus Salkeld asalkeld [at] redhat.com</dl>
+<dd>Angus Salkeld asalkeld [at] redhat.com</dd></dl>
 <h2>Macro Definition Documentation</h2>
 <h3>#define QB_RB_FLAG_CREATE 0x01</h3>
 <p>create a ring buffer (rather than open and existing one) </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_open()</code></dl>
+<dd><code>qb_rb_open()</code></dd></dl>
 <h3>#define QB_RB_FLAG_NO_SEMAPHORE 0x10</h3>
 <p>Don&#8217;t use semaphores, only atomic ops. This mean that the timeout passed into <code>qb_rb_chunk_read()</code> will be ignored.</p>
 <h3>#define QB_RB_FLAG_OVERWRITE 0x02</h3>
 <p>New calls to <code>qb_rb_chunk_write()</code> will call <code>qb_rb_chunk_reclaim()</code> if there is not enough space. If this is not set then new writes will be refused. </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_open()</code></dl>
+<dd><code>qb_rb_open()</code></dd></dl>
 <h3>#define QB_RB_FLAG_SHARED_PROCESS 0x08</h3>
 <p>The ringbuffer will be shared between processes. This effects the type of locks/semaphores that are used. </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_open()</code></dl>
+<dd><code>qb_rb_open()</code></dd></dl>
 <h3>#define QB_RB_FLAG_SHARED_THREAD 0x04</h3>
 <p>The ringbuffer will be shared between pthreads not processes. This effects the type of locks/semaphores that are used. </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_open()</code></dl>
+<dd><code>qb_rb_open()</code></dd></dl>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct qb_ringbuffer_s <code>qb_ringbuffer_t</code></h3>
 <h2>Function Documentation</h2>
@@ -148,52 +126,52 @@ Typedefs</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>mode</i> mode to change to<br />
- <i>rb</i> ringbuffer instance</dl>
+ <i>rb</i> ringbuffer instance</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>0</i> == ok<br />
- <i>-errno</i> for error</dl>
+ <i>-errno</i> for error</dd></dl>
 <h3>int32_t qb_rb_chown (<code>qb_ringbuffer_t</code> *rb, uid_towner, gid_tgroup)</h3>
 <p>Like &#8216;chown&#8217; it changes the owner and group of the ringbuffers resources. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>owner</i> uid of the owner to change to<br />
  <i>group</i> gid of the group to change to<br />
- <i>rb</i> ringbuffer instance</dl>
+ <i>rb</i> ringbuffer instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>status (0 = ok, -errno for error)</dl>
+<dd>status (0 = ok, -errno for error)</dd></dl>
 <h3>void* qb_rb_chunk_alloc (<code>qb_ringbuffer_t</code> *rb, size_tlen)</h3>
 <p>Allocate space for a chunk of the given size. If type == QB_RB_FLAG_OVERWRITE and NULL is returned, memory corruption of the memory file has occured. The ringbuffer should be destroyed. If type == QB_RB_NORMAL then when there is not enough space it will return NULL. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>rb</i> ringbuffer instance<br />
- <i>len</i> (in) the size to allocate.</dl>
+ <i>len</i> (in) the size to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>pointer to chunk to write to, or NULL (if no space).</dl>
+<dd>pointer to chunk to write to, or NULL (if no space).</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_chunk_alloc()</code></dl>
+<dd><code>qb_rb_chunk_alloc()</code></dd></dl>
 <h3>int32_t qb_rb_chunk_commit (<code>qb_ringbuffer_t</code> *rb, size_tlen)</h3>
 <p>finalize the chunk. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>rb</i> ringbuffer instance<br />
- <i>len</i> (in) the size of the chunk.</dl>
+ <i>len</i> (in) the size of the chunk.</dd></dl>
 <h3>ssize_t qb_rb_chunk_peek (<code>qb_ringbuffer_t</code> *rb, void **data_out, int32_tms_timeout)</h3>
 <p>Read (without reclaiming) the last chunk. This function is a way of accessing the next chunk without a memcpy(). You can read the chunk data in place. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>This function will not &#8216;pop&#8217; the chunk, you will need to call <code>qb_rb_chunk_reclaim()</code>.</dl>
+<dd>This function will not &#8216;pop&#8217; the chunk, you will need to call <code>qb_rb_chunk_reclaim()</code>.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>rb</i> ringbuffer instance<br />
  <i>data_out</i> (out) a pointer to the next chunk to read (not copied).<br />
- <i>ms_timeout</i> (in) time to wait for new data.</dl>
+ <i>ms_timeout</i> (in) time to wait for new data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the size of the chunk (0 if buffer empty).</dl>
+<dd>the size of the chunk (0 if buffer empty).</dd></dl>
 <h3>ssize_t qb_rb_chunk_read (<code>qb_ringbuffer_t</code> *rb, void *data_out, size_tlen, int32_tms_timeout)</h3>
 <p>Read the oldest chunk into data_out. This is the same as <code>qb_rb_chunk_peek()</code> memcpy() and <code>qb_rb_chunk_reclaim()</code>. </p>
 <p> <code>Parameters:</code></p>
@@ -201,59 +179,59 @@ Typedefs</code></pre>
 <dd><i>rb</i> ringbuffer instance<br />
  <i>data_out</i> (in/out) the chunk will be memcpy&#8217;ed into this.<br />
  <i>len</i> (in) the size of data_out.<br />
- <i>ms_timeout</i> the amount od time to wait for new data.</dl>
+ <i>ms_timeout</i> the amount od time to wait for new data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the size of the chunk, or error.</dl>
+<dd>the size of the chunk, or error.</dd></dl>
 <h3>void qb_rb_chunk_reclaim (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>Reclaim the oldest chunk. You will need to call this if using <code>qb_rb_chunk_peek()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <h3>ssize_t qb_rb_chunk_write (<code>qb_ringbuffer_t</code> *rb, const void *data, size_tlen)</h3>
 <p>Write a chunk to the ring buffer. This simply calls <code>qb_rb_chunk_alloc()</code> and then <code>qb_rb_chunk_commit()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>rb</i> ringbuffer instance<br />
  <i>data</i> (in) the data to write<br />
- <i>len</i> (in) the size of the chunk.</dl>
+ <i>len</i> (in) the size of the chunk.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the amount of bytes actually buffered (either len or -1).</dl>
+<dd>the amount of bytes actually buffered (either len or -1).</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_chunk_alloc()</code> </p>
+<dd><code>qb_rb_chunk_alloc()</code> </dd>
 <p> <code>qb_rb_chunk_commit()</code></dl>
 <h3>ssize_t qb_rb_chunks_used (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>The total number of chunks in the buffer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <h3>void qb_rb_close (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>Dereference the ringbuffer and if we are the last user destroy it. All files, mmaped memory, semaphores and locks will be destroyed. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <h3><code>qb_ringbuffer_t</code>* qb_rb_create_from_file (int32_tfd, uint32_tflags)</h3>
 <p>Load the saved ring buffer from file into tempory memory. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>fd</i> file with saved ringbuffer data.<br />
- <i>flags</i> same flags as passed into <code>qb_rb_open()</code></dl>
+ <i>flags</i> same flags as passed into <code>qb_rb_open()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>new ringbuffer instance</dl>
+<dd>new ringbuffer instance</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_write_to_file()</code></dl>
+<dd><code>qb_rb_write_to_file()</code></dd></dl>
 <h3>char* qb_rb_name_get (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>Get the name of the ringbuffer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>name.</dl>
+<dd>name.</dd></dl>
 <h3><code>qb_ringbuffer_t</code>* qb_rb_open (const char *name, size_tsize, uint32_tflags, size_tshared_user_data_size)</h3>
 <p>Create the ring buffer with the given type. This creates allocates a ring buffer in shared memory. </p>
 <p> <code>Parameters:</code></p>
@@ -261,59 +239,59 @@ Typedefs</code></pre>
 <dd><i>name</i> the unique name of this ringbuffer.<br />
  <i>size</i> the requested size.<br />
  <i>flags</i> or&#8217;ed flags<br />
- <i>shared_user_data_size</i> size for a shared data area.</dl>
+ <i>shared_user_data_size</i> size for a shared data area.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>the actual size will be rounded up to the next page size.</dl>
+<dd>the actual size will be rounded up to the next page size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a new ring buffer or NULL if there was a problem.</dl>
+<dd>a new ring buffer or NULL if there was a problem.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>QB_RB_FLAG_CREATE</code>, <code>QB_RB_FLAG_OVERWRITE</code>, <code>QB_RB_FLAG_SHARED_THREAD</code>, <code>QB_RB_FLAG_SHARED_PROCESS</code></dl>
+<dd><code>QB_RB_FLAG_CREATE</code>, <code>QB_RB_FLAG_OVERWRITE</code>, <code>QB_RB_FLAG_SHARED_THREAD</code>, <code>QB_RB_FLAG_SHARED_PROCESS</code></dd></dl>
 <h3>int32_t qb_rb_refcount_get (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>Get the reference count. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the number of references</dl>
+<dd>the number of references</dd></dl>
 <h3>void* qb_rb_shared_user_data_get (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>Get a point to user shared data area. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>this is of size &#8216;shared_user_data_size&#8217; passed into <code>qb_rb_open()</code></dl>
+<dd>this is of size &#8216;shared_user_data_size&#8217; passed into <code>qb_rb_open()</code></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>pointer to shared data.</dl>
+<dd>pointer to shared data.</dd></dl>
 <h3>ssize_t qb_rb_space_free (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>The amount of free space in the ring buffer. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>Some of this space will be consumed by the chunk headers.</dl>
+<dd>Some of this space will be consumed by the chunk headers.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <h3>ssize_t qb_rb_space_used (<code>qb_ringbuffer_t</code> *rb)</h3>
 <p>The total amount of data in the buffer. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>This includes the chunk headers (8 bytes per chunk).</dl>
+<dd>This includes the chunk headers (8 bytes per chunk).</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>rb</i> ringbuffer instance</dl>
+<dd><i>rb</i> ringbuffer instance</dd></dl>
 <h3>ssize_t qb_rb_write_to_file (<code>qb_ringbuffer_t</code> *rb, int32_tfd)</h3>
 <p>Write the contents of the Ring Buffer to file. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>fd</i> open file to write the ringbuffer data to.<br />
- <i>rb</i> ringbuffer instance</dl>
+ <i>rb</i> ringbuffer instance</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_rb_create_from_file()</code></dl>
+<dd><code>qb_rb_create_from_file()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for libqb from the source code.</p>

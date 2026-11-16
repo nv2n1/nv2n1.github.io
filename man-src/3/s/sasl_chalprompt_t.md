@@ -10,8 +10,6 @@ description: "sasl_chalprompt_t – Realm Acquisition Callback"
 <p>sasl_chalprompt_t &#8211; Realm Acquisition Callback </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_chalprompt_t(void *context, int id,
 const char *challenge,
 const char *prompt, const char *defresult,

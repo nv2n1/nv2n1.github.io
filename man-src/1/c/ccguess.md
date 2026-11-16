@@ -21,26 +21,26 @@ description: "ccguess – search for ccrypt encryption keys"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Help. Print usage information and exit.</p>
-<dt><code>-L, &#8211;license</code></p>
-<dd> Print license info and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print version info and exit.</p>
-<dt><code>-K </code><i>key</i>, &#8211;key <i>key</i></p>
-<dd> Specify the approximate key on the command line, rather than prompting the user for it.</p>
-<dt><code>-d </code><i>n</i>, &#8211;depth <i>n</i></p>
-<dd> Search keys that contain up to <i>n</i> changes. The default is 5.</p>
-<dt><code>-c, &#8211;continue</code></p>
-<dd> Keep trying more keys even after the first match is found. By default, <code>ccguess</code> will stop after the first key is found that matches all input files.</p>
-<dt><code>-t </code><i>chars</i>, &#8211;chartable <i>chars</i></p>
-<dd> Specify the list of characters to try for replacements and insertions. By default, <code>ccguess</code> will try all printable ASCII characters. If you know, for example, that your key only used lowercase letters and numbers, you can speed up the search by specifying a list of characters explicitly. This option is mutually exclusive with <code>-n</code>.</p>
-<dt><code>-n, &#8211;non-printable</code></p>
-<dd> Allow non-printable characters in keys. By default, <code>ccguess</code> will only try printable ASCII characters. Note that the use of this option slows down the search significantly. This option is mutually exclusive with <code>-t</code>.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Help. Print usage information and exit.</dd>
+<dt><code>-L, &#8211;license</code></dt>
+<dd> Print license info and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print version info and exit.</dd>
+<dt><code>-K </code><i>key</i>, &#8211;key <i>key</i></dt>
+<dd> Specify the approximate key on the command line, rather than prompting the user for it.</dd>
+<dt><code>-d </code><i>n</i>, &#8211;depth <i>n</i></dt>
+<dd> Search keys that contain up to <i>n</i> changes. The default is 5.</dd>
+<dt><code>-c, &#8211;continue</code></dt>
+<dd> Keep trying more keys even after the first match is found. By default, <code>ccguess</code> will stop after the first key is found that matches all input files.</dd>
+<dt><code>-t </code><i>chars</i>, &#8211;chartable <i>chars</i></dt>
+<dd> Specify the list of characters to try for replacements and insertions. By default, <code>ccguess</code> will try all printable ASCII characters. If you know, for example, that your key only used lowercase letters and numbers, you can speed up the search by specifying a list of characters explicitly. This option is mutually exclusive with <code>-n</code>.</dd>
+<dt><code>-n, &#8211;non-printable</code></dt>
+<dd> Allow non-printable characters in keys. By default, <code>ccguess</code> will only try printable ASCII characters. Note that the use of this option slows down the search significantly. This option is mutually exclusive with <code>-t</code>.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>file</i></p>
-<dd> The name of a file that has been encrypted with the unknown key. This file is only read from, not written to. The special filename &quot;-&quot; is used to denote standard input. </p>
+<dt><i>file</i></dt>
+<dd> The name of a file that has been encrypted with the unknown key. This file is only read from, not written to. The special filename &quot;-&quot; is used to denote standard input. </dd>
 <p> If multiple files are specified, <code>ccguess</code> will search for keys that match <i>any</i> of the files, but will print a warning for keys that do not match <i>all</i> of the files.</dl>
 <h2>EXAMPLE</h2>
 <p> Suppose the file <i>myfile.cpt</i> has been encrypted with the key &quot;gardenhouse&quot;, but the user remembers &quot;gardenhose&quot;. The command </p>
@@ -60,3 +60,4 @@ description: "ccguess – search for ccrypt encryption keys"
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA. See also <a rel="nofollow" href="http://www.gnu.org/.">http://www.gnu.org/.</a> </p>
 <h2>Index</h2>
+</p>

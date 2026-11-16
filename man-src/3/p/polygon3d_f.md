@@ -10,7 +10,6 @@ description: "polygon3d, polygon3d_f – Draws a 3d polygon onto the specified b
 <p>polygon3d, polygon3d_f &#8211; Draws a 3d polygon onto the specified bitmap. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void polygon3d(BITMAP *bmp, int type, BITMAP *texture, int vc, V3D *vtx[]);
 void polygon3d_f(BITMAP *bmp, int type, BITMAP *texture, int vc, V3D_f *vtx[]);</code></pre>
 <h2>Description</h2>
@@ -21,7 +20,6 @@ void polygon3d_f(BITMAP *bmp, int type, BITMAP *texture, int vc, V3D_f *vtx[]);<
  fixed u, v; - texture map coordinates
  int c; - color
  } V3D;
- 
  typedef struct V3D_f
  {
  float x, y, z; - position

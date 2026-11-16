@@ -20,22 +20,22 @@ description: "XmCreateScrolledList — The List ScrolledList convenience creatio
 <p> All arguments to either the List or the ScrolledWindow widget can be specified at creation time using this function. Changes to initial position and size are sent only to the ScrolledWindow widget. Other resources are sent to the List or the ScrolledWindow widget as appropriate. Note that the result of providing the <code>XmNdestroyCallback</code> resource in the creation <i>arglist</i> is unspecified. The application should use the <code>XtAddCallback</code> function to add callbacks to the appropriate widget (List or ScrolledWindow) after creating it. </p>
 <p> This function forces the following initial values for ScrolledWindow resources:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmNscrollingPolicy</code> is set to <code>XmAPPLICATION_DEFINED</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvisualPolicy</code> is set to <code>XmVARIABLE</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNscrollBarDisplayPolicy</code> is set to <code>XmSTATIC</code>. (No initial value is forced for the List&#8217;s <code>XmNscrollBarDisplayPolicy</code>.)</p>
-<dt> &bull;</p>
-<dd><code>XmNshadowThickness</code> is set to 0 (zero).</p>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dl>
+<dt> &bull;</dt>
+<dd><code>XmNscrollingPolicy</code> is set to <code>XmAPPLICATION_DEFINED</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvisualPolicy</code> is set to <code>XmVARIABLE</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNscrollBarDisplayPolicy</code> is set to <code>XmSTATIC</code>. (No initial value is forced for the List&#8217;s <code>XmNscrollBarDisplayPolicy</code>.)</dd>
+<dt> &bull;</dt>
+<dd><code>XmNshadowThickness</code> is set to 0 (zero).</dd>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the List widget ID.</p>

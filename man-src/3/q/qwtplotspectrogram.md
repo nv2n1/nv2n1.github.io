@@ -59,101 +59,101 @@ description: "QwtPlotSpectrogram –"
 <p> In ContourMode contour lines are painted for the contour levels. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtRasterData</code>, <code>QwtColorMap</code>, <code>QwtPlotItem::setRenderThreadCount()</code></dl>
+<dd><code>QwtRasterData</code>, <code>QwtColorMap</code>, <code>QwtPlotItem::setRenderThreadCount()</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotSpectrogram::DisplayMode</code></h3>
 <p>The display mode controls how the raster data will be represented. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setDisplayMode()</code>, <code>testDisplayMode()</code></dl>
+<dd><code>setDisplayMode()</code>, <code>testDisplayMode()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>ImageMode </i></p>
-<dd>The values are mapped to colors using a color map.</p>
-<dt><i>ContourMode </i></p>
-<dd>The data is displayed using contour lines.</dl>
+<dt><i>ImageMode </i></dt>
+<dd>The values are mapped to colors using a color map.</dd>
+<dt><i>ContourMode </i></dt>
+<dd>The data is displayed using contour lines.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotSpectrogram::QwtPlotSpectrogram (const QString &amp;title = QString::null) [explicit]</h3>
 <p>Sets the following item attributes:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::AutoScale</code>: true</p>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::Legend</code>: false</dl>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::AutoScale</code>: true</dd>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::Legend</code>: false</dd></dl>
 <p> The z value is initialized by 8.0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title</dl>
+<dd><i>title</i> Title</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::setItemAttribute()</code>, <code>QwtPlotItem::setZ()</code></dl>
+<dd><code>QwtPlotItem::setItemAttribute()</code>, <code>QwtPlotItem::setZ()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>const <code>QwtColorMap</code> * QwtPlotSpectrogram::colorMap () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Color Map used for mapping the intensity values to colors</dl>
+<dd>Color Map used for mapping the intensity values to colors</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setColorMap()</code></dl>
+<dd><code>setColorMap()</code></dd></dl>
 <h3>QList&lt; double &gt; QwtPlotSpectrogram::contourLevels () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Levels of the contour lines.</dl>
+<dd>Levels of the contour lines.</dd></dl>
 <p> The levels are sorted in increasing order. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>contourLevels()</code>, <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dl>
+<dd><code>contourLevels()</code>, <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dd></dl>
 <h3>QPen QwtPlotSpectrogram::contourPen (doublelevel) const [virtual]</h3>
 <p>Calculate the pen for a contour line. The color of the pen is the color for level calculated by the color map </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>level</i> Contour level</dl>
+<dd><i>level</i> Contour level</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen for the contour line</dl>
+<dd>Pen for the contour line</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>contourPen is only used if <code>defaultContourPen()</code>.style() == Qt::NoPen</dl>
+<dd>contourPen is only used if <code>defaultContourPen()</code>.style() == Qt::NoPen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setDefaultContourPen()</code>, <code>setColorMap()</code>, <code>setContourLevels()</code></dl>
+<dd><code>setDefaultContourPen()</code>, <code>setColorMap()</code>, <code>setContourLevels()</code></dd></dl>
 <h3>QSize QwtPlotSpectrogram::contourRasterSize (const QRectF &amp;area, const QRect &amp;rect) const [protected], [virtual]</h3>
 <p>Return the raster to be used by the CONREC contour algorithm. A larger size will improve the precision of the CONREC algorithm, but will slow down the time that is needed to calculate the lines. </p>
 <p> The default implementation returns rect.size() / 2 bounded to the resolution depending on pixelSize(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>area</i> Rectangle, where to calculate the contour lines<br />
- <i>rect</i> Rectangle in pixel coordinates, where to paint the contour lines</dl>
+ <i>rect</i> Rectangle in pixel coordinates, where to paint the contour lines</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Raster to be used by the CONREC contour algorithm.</dl>
+<dd>Raster to be used by the CONREC contour algorithm.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The size will be bounded to rect.size().</dl>
+<dd>The size will be bounded to rect.size().</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawContourLines()</code>, <code>QwtRasterData::contourLines()</code></dl>
+<dd><code>drawContourLines()</code>, <code>QwtRasterData::contourLines()</code></dd></dl>
 <h3>const <code>QwtRasterData</code> * QwtPlotSpectrogram::data () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spectrogram data</dl>
+<dd>Spectrogram data</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setData()</code></dl>
+<dd><code>setData()</code></dd></dl>
 <h3><code>QwtRasterData</code> * QwtPlotSpectrogram::data ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spectrogram data</dl>
+<dd>Spectrogram data</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setData()</code></dl>
+<dd><code>setData()</code></dd></dl>
 <h3>QPen QwtPlotSpectrogram::defaultContourPen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Default contour pen</dl>
+<dd>Default contour pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setDefaultContourPen()</code></dl>
+<dd><code>setDefaultContourPen()</code></dd></dl>
 <h3>void QwtPlotSpectrogram::draw (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const [virtual]</h3>
 <p>Draw the spectrogram. </p>
 <p> <code>Parameters:</code></p>
@@ -161,10 +161,10 @@ description: "QwtPlotSpectrogram –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> Maps x-values into pixel coordinates.<br />
  <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dl>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setDisplayMode()</code>, <code>renderImage()</code>, <code>QwtPlotRasterItem::draw()</code>, <code>drawContourLines()</code></dl>
+<dd><code>setDisplayMode()</code>, <code>renderImage()</code>, <code>QwtPlotRasterItem::draw()</code>, <code>drawContourLines()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotRasterItem</code>.</p>
 <h3>void QwtPlotSpectrogram::drawContourLines (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const <code>QwtRasterData::ContourLines</code> &amp;contourLines) const [protected], [virtual]</h3>
 <p>Paint the contour lines </p>
@@ -173,47 +173,47 @@ description: "QwtPlotSpectrogram –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> Maps x-values into pixel coordinates.<br />
  <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>contourLines</i> Contour lines</dl>
+ <i>contourLines</i> Contour lines</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>renderContourLines()</code>, <code>defaultContourPen()</code>, <code>contourPen()</code></dl>
+<dd><code>renderContourLines()</code>, <code>defaultContourPen()</code>, <code>contourPen()</code></dd></dl>
 <h3><code>QwtInterval</code> QwtPlotSpectrogram::interval (Qt::Axisaxis) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding interval for an axis</dl>
+<dd>Bounding interval for an axis</dd></dl>
 <p> The default implementation returns the interval of the associated raster data object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> X, Y, or Z axis</dl>
+<dd><i>axis</i> X, Y, or Z axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtRasterData::interval()</code></dl>
+<dd><code>QwtRasterData::interval()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotRasterItem</code>.</p>
 <h3>QRectF QwtPlotSpectrogram::pixelHint (const QRectF &amp;area) const [virtual]</h3>
 <p>Pixel hint. The geometry of a pixel is used to calculated the resolution and alignment of the rendered image. </p>
 <p> The default implementation returns <code>data()</code>-&gt;pixelHint( rect ); </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>area</i> In most implementations the resolution of the data doesn&#8217;t depend on the requested area.</dl>
+<dd><i>area</i> In most implementations the resolution of the data doesn&#8217;t depend on the requested area.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of a pixel</dl>
+<dd>Bounding rectangle of a pixel</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotRasterItem::pixelHint()</code>, <code>QwtRasterData::pixelHint()</code>, render(), <code>renderImage()</code></dl>
+<dd><code>QwtPlotRasterItem::pixelHint()</code>, <code>QwtRasterData::pixelHint()</code>, render(), <code>renderImage()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotRasterItem</code>.</p>
 <h3><code>QwtRasterData::ContourLines</code> QwtPlotSpectrogram::renderContourLines (const QRectF &amp;rect, const QSize &amp;raster) const [protected], [virtual]</h3>
 <p>Calculate contour lines </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>rect</i> Rectangle, where to calculate the contour lines<br />
- <i>raster</i> Raster, used by the CONREC algorithm</dl>
+ <i>raster</i> Raster, used by the CONREC algorithm</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated contour lines</dl>
+<dd>Calculated contour lines</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>contourLevels()</code>, <code>setConrecFlag()</code>, <code>QwtRasterData::contourLines()</code></dl>
+<dd><code>contourLevels()</code>, <code>setConrecFlag()</code>, <code>QwtRasterData::contourLines()</code></dd></dl>
 <h3>QImage QwtPlotSpectrogram::renderImage (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;area, const QSize &amp;imageSize) const [protected], [virtual]</h3>
 <p>Render an image from data and color map. For each pixel of area the value is mapped into a color. </p>
 <p> <code>Parameters:</code></p>
@@ -221,13 +221,13 @@ description: "QwtPlotSpectrogram –"
 <dd><i>xMap</i> X-Scale Map<br />
  <i>yMap</i> Y-Scale Map<br />
  <i>area</i> Requested area for the image in scale coordinates<br />
- <i>imageSize</i> Size of the requested image</dl>
+ <i>imageSize</i> Size of the requested image</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A QImage::Format_Indexed8 or QImage::Format_ARGB32 depending on the color map.</dl>
+<dd>A QImage::Format_Indexed8 or QImage::Format_ARGB32 depending on the color map.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtRasterData::value()</code>, <code>QwtColorMap::rgb()</code>, <code>QwtColorMap::colorIndex()</code></dl>
+<dd><code>QwtRasterData::value()</code>, <code>QwtColorMap::rgb()</code>, <code>QwtColorMap::colorIndex()</code></dd></dl>
 <p> Implements <code>QwtPlotRasterItem</code>.</p>
 <h3>void QwtPlotSpectrogram::renderTile (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRect &amp;tile, QImage *image) const [protected]</h3>
 <p>Render a tile of an image. Rendering in tiles can be used to composite an image in parallel threads. </p>
@@ -236,49 +236,49 @@ description: "QwtPlotSpectrogram –"
 <dd><i>xMap</i> X-Scale Map<br />
  <i>yMap</i> Y-Scale Map<br />
  <i>tile</i> Geometry of the tile in image coordinates<br />
- <i>image</i> Image to be rendered</dl>
+ <i>image</i> Image to be rendered</dd></dl>
 <h3>int QwtPlotSpectrogram::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotSpectrogram</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotSpectrogram</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotSpectrogram::setColorMap (<code>QwtColorMap</code> *colorMap)</h3>
 <p>Change the color map </p>
 <p> Often it is useful to display the mapping between intensities and colors as an additional plot axis, showing a color bar. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>colorMap</i> Color Map</dl>
+<dd><i>colorMap</i> Color Map</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>colorMap()</code>, <code>QwtScaleWidget::setColorBarEnabled()</code>, <code>QwtScaleWidget::setColorMap()</code></dl>
+<dd><code>colorMap()</code>, <code>QwtScaleWidget::setColorBarEnabled()</code>, <code>QwtScaleWidget::setColorMap()</code></dd></dl>
 <h3>void QwtPlotSpectrogram::setConrecFlag (<code>QwtRasterData::ConrecFlag</code>flag, boolon)</h3>
 <p>Modify an attribute of the CONREC algorithm, used to calculate the contour lines. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>flag</i> CONREC flag<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>testConrecFlag()</code>, <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dl>
+<dd><code>testConrecFlag()</code>, <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dd></dl>
 <h3>void QwtPlotSpectrogram::setContourLevels (const QList&lt; double &gt; &amp;levels)</h3>
 <p>Set the levels of the contour lines </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>levels</i> Values of the contour levels</dl>
+<dd><i>levels</i> Values of the contour levels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>contourLevels()</code>, <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dl>
+<dd><code>contourLevels()</code>, <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>contourLevels returns the same levels but sorted.</dl>
+<dd>contourLevels returns the same levels but sorted.</dd></dl>
 <h3>void QwtPlotSpectrogram::setData (<code>QwtRasterData</code> *data)</h3>
 <p>Set the data to be displayed </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Spectrogram Data</dl>
+<dd><i>data</i> Spectrogram Data</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>data()</code></dl>
+<dd><code>data()</code></dd></dl>
 <h3>void QwtPlotSpectrogram::setDefaultContourPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign the default pen for the contour lines </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -286,44 +286,44 @@ description: "QwtPlotSpectrogram –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>pen(), brush()</dl>
+<dd>pen(), brush()</dd></dl>
 <h3>void QwtPlotSpectrogram::setDefaultContourPen (const QPen &amp;pen)</h3>
 <p>Set the default pen for the contour lines. If the spectrogram has a valid default contour pen a contour line is painted using the default contour pen. Otherwise (pen.style() == Qt::NoPen) the pen is calculated for each contour level using <code>contourPen()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>defaultContourPen()</code>, <code>contourPen()</code></dl>
+<dd><code>defaultContourPen()</code>, <code>contourPen()</code></dd></dl>
 <h3>void QwtPlotSpectrogram::setDisplayMode (<code>DisplayMode</code>mode, boolon = true)</h3>
 <p>The display mode controls how the raster data will be represented. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>mode</i> Display mode<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> The default setting enables ImageMode. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>DisplayMode</code>, displayMode()</dl>
+<dd><code>DisplayMode</code>, displayMode()</dd></dl>
 <h3>bool QwtPlotSpectrogram::testConrecFlag (<code>QwtRasterData::ConrecFlag</code>flag) const</h3>
 <p>Test an attribute of the CONREC algorithm, used to calculate the contour lines. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>flag</i> CONREC flag</dl>
+<dd><i>flag</i> CONREC flag</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true, is enabled</dl>
+<dd>true, is enabled</dd></dl>
 <p> The default setting enables <code>QwtRasterData::IgnoreAllVerticesOnLevel</code> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>setConrecClag(), <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dl>
+<dd>setConrecClag(), <code>renderContourLines()</code>, <code>QwtRasterData::contourLines()</code></dd></dl>
 <h3>bool QwtPlotSpectrogram::testDisplayMode (<code>DisplayMode</code>mode) const</h3>
 <p>The display mode controls how the raster data will be represented. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Display mode</dl>
+<dd><i>mode</i> Display mode</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if mode is enabled</dl>
+<dd>true if mode is enabled</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

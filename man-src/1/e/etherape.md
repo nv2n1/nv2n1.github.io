@@ -16,30 +16,30 @@ description: "etherape – graphical network traffic browser"
 <h2>OPTIONS</h2>
 <p> These options can be supplied to the command:</p>
 <dl>
-<dt><code>-m, &#8211;mode </code>&lt;ethernet|fddi|ip|tcp&gt;</p>
-<dd> set mode of operation (default is lowest level for current device)</p>
-<dt><code>-i, &#8211;interface </code>&lt;interface name&gt;</p>
-<dd> set interface to listen to</p>
-<dt><code>-f, &#8211;filter </code>&lt;capture filter&gt;</p>
-<dd> set capture filter</p>
-<dt><code>-r, &#8211;infile </code>&lt;file name&gt;</p>
-<dd> set input file</p>
-<dt><code>-n, &#8211;numeric</code></p>
-<dd> don&#8217;t convert addresses to names</p>
-<dt><code>-d, &#8211;diagram-only</code></p>
-<dd> don&#8217;t display any node text identification</p>
-<dt><code>-F, &#8211;no-fade</code></p>
-<dd> do not fade old links</p>
-<dt><code>-N, &#8211;node-color </code>&lt;color&gt;</p>
-<dd> set the node color</p>
-<dt><code>-L, &#8211;link-color </code>&lt;color&gt;</p>
-<dd> set the link color</p>
-<dt><code>-T, &#8211;text-color </code>&lt;color&gt;</p>
-<dd> set the text color</p>
-<dt><code>-z, &#8211;zero-delay </code></p>
-<dd> ignores timestamps when replaying a capture file.</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> show a brief help message</dl>
+<dt><code>-m, &#8211;mode </code>&lt;ethernet|fddi|ip|tcp&gt;</dt>
+<dd> set mode of operation (default is lowest level for current device)</dd>
+<dt><code>-i, &#8211;interface </code>&lt;interface name&gt;</dt>
+<dd> set interface to listen to</dd>
+<dt><code>-f, &#8211;filter </code>&lt;capture filter&gt;</dt>
+<dd> set capture filter</dd>
+<dt><code>-r, &#8211;infile </code>&lt;file name&gt;</dt>
+<dd> set input file</dd>
+<dt><code>-n, &#8211;numeric</code></dt>
+<dd> don&#8217;t convert addresses to names</dd>
+<dt><code>-d, &#8211;diagram-only</code></dt>
+<dd> don&#8217;t display any node text identification</dd>
+<dt><code>-F, &#8211;no-fade</code></dt>
+<dd> do not fade old links</dd>
+<dt><code>-N, &#8211;node-color </code>&lt;color&gt;</dt>
+<dd> set the node color</dd>
+<dt><code>-L, &#8211;link-color </code>&lt;color&gt;</dt>
+<dd> set the link color</dd>
+<dt><code>-T, &#8211;text-color </code>&lt;color&gt;</dt>
+<dd> set the text color</dd>
+<dt><code>-z, &#8211;zero-delay </code></dt>
+<dd> ignores timestamps when replaying a capture file.</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> show a brief help message</dd></dl>
 <h2>FILES</h2>
 <p> Etherape will use <i>/etc/ethers</i> if there is one. If not, it will try to reverse lookup the ip address. </p>
 <p> <code>IMPORTANT!</code> It is particularly important when running in ethernet mode to have the ethernet address of your router in /etc/ethers. If not, your router will have as name whatever IP address it was forwarding traffic from when it was first heard. </p>

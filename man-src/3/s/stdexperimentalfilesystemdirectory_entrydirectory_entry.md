@@ -12,13 +12,10 @@ std::experimental::filesystem::directory_entry::directory_entry - std::experimen
 
 <pre><code>directory_entry() = default;
 (1)(filesystem TS)
-
     directory_entry(const directory_entry &amp;) = default;
 (2)(filesystem TS)
-
     directory_entry(directory_entry &amp;&amp;) = default;
 (3)(filesystem TS)
-
     explicit directory_entry(const path &amp;p);
 (4)(filesystem TS)</code></pre> 
 Constructs a new directory_entry object. 

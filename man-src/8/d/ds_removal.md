@@ -15,13 +15,13 @@ description: "ds_removal – Remove a directory server instance and un-register 
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-f</code></p>
-<dd>Optional &#8211; Force removal &#8211; ignore errors and remove everything</p>
-<dt><code>-s server_id</code></p>
-<dd>Required &#8211; server_id &#8211; the directory server identifier &#8211; slapd-<i>server_id</i></p>
-<dt><code>-w password</code></p>
+<dt><code>-f</code></dt>
+<dd>Optional &#8211; Force removal &#8211; ignore errors and remove everything</dd>
+<dt><code>-s server_id</code></dt>
+<dd>Required &#8211; server_id &#8211; the directory server identifier &#8211; slapd-<i>server_id</i></dd>
+<dt><code>-w password</code></dt>
 <dd>Required &#8211; password &#8211; the password for the console admin user. If password is &#8216;-&#8216;, prompt for the password.
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>ds_removal was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

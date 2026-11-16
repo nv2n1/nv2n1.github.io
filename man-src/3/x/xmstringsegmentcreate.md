@@ -19,14 +19,14 @@ description: "XmStringSegmentCreate — A compound string function that creates 
 <p>This function is obsolete and exists for compatibility with previous releases. It can be replaced by using a combination of <code>XmStringComponentCreate</code> and <code>XmStringConcat</code>. <code>XmStringSegmentCreate</code> is a high-level function that assembles a compound string consisting of a font list element tag, a direction component, a text component, and an optional separator component. </p>
 <p> The function allocates space for the returned compound string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmStringFree</code>.</p>
 <dl COMPACT>
-<dt><i>text</i></p>
-<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</p>
-<dt><i>tag</i></p>
-<dd>Specifies the tag component to be associated with the text. The value <code>XmFONTLIST_DEFAULT_TAG</code> is for compatibility with previous releases.</p>
-<dt><i>direction</i></p>
-<dd>Specifies the direction of the text.</p>
-<dt><i>separator</i></p>
-<dd>A value of False means the compound string does not have a separator at the end. A value of True, means a separator immediately follows the text component.</dl>
+<dt><i>text</i></dt>
+<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</dd>
+<dt><i>tag</i></dt>
+<dd>Specifies the tag component to be associated with the text. The value <code>XmFONTLIST_DEFAULT_TAG</code> is for compatibility with previous releases.</dd>
+<dt><i>direction</i></dt>
+<dd>Specifies the direction of the text.</dd>
+<dt><i>separator</i></dt>
+<dd>A value of False means the compound string does not have a separator at the end. A value of True, means a separator immediately follows the text component.</dd></dl>
 <h2>Return</h2>
 <p>Returns a new compound string.</p>
 <h2>Related</h2>

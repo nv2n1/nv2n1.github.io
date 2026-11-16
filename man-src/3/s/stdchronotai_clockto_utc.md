@@ -10,9 +10,7 @@ description: "std::chrono::tai_clock::to_utc – std::chrono::tai_clock::to_utc"
 <p>std::chrono::tai_clock::to_utc &#8211; std::chrono::tai_clock::to_utc</p>
 <h2>Synopsis</h2>
 <pre><code>template &lt;class Duration&gt;
-
 static std::chrono::utc_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;(since C++ 20)
-
     to_utc(const std::chrono::tai_time&lt;Duration&gt; &amp;t) noexcept;</code></pre>
 <p>Converts the tai_time t to a utc_time representing the same point in time. </p>
 <h2>Return value</h2>

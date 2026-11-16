@@ -15,20 +15,20 @@ description: "kacpimon – Kernel ACPI Event Monitor"
 <dl>
 <dd>1. /proc/acpi/event<br />
  2. netlink<br />
- 3. the input layer (/dev/input/event*)</dl>
+ 3. the input layer (/dev/input/event*)</dd></dl>
 <p> <code>kacpimon</code> then reports on what it sees while it is connected. </p>
 <p> Use <code>kacpimon</code> to make sure your kernel is sending acpi-related events via the three sources mentioned above. </p>
 <p> Since both <code><a href="/docs/linux/man/8-acpid/">acpid</a></code>(8) and <code>kacpimon</code> connect to the same sources, be sure to stop <code><a href="/docs/linux/man/8-acpid/">acpid</a></code>(8) before running kacpimon. If you are using <code>upstart</code>(7), use <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) to stop <code><a href="/docs/linux/man/8-acpid/">acpid</a></code>(8). If you are using <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), use <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) to stop <code><a href="/docs/linux/man/8-acpid/">acpid</a></code>(8). If you aren&#8217;t using either of those, you can try <code><a href="/docs/linux/man/1-killall/">killall</a></code>(1) to stop <code><a href="/docs/linux/man/8-acpid/">acpid</a></code>(8). </p>
 <p> Be sure to run <code>kacpimon</code> as root or else it won&#8217;t be able to open /proc/acpi/event or the input layer:</p>
 <dl>
-<dd>sudo kacpimon</dl>
+<dd>sudo kacpimon</dd></dl>
 <p> If you want to pipe the output of <code>kacpimon</code> to a file, be sure to use the &quot;Esc&quot; key to exit rather than Ctrl-C. Using Ctrl-C will cause output to be lost.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/proc/acpi/event</i></p>
-<dd>kernel ACPI event file</p>
-<dt><i>/dev/input/event*</i></p>
-<dd>input layer event files</dl>
+<dt><i>/proc/acpi/event</i></dt>
+<dd>kernel ACPI event file</dd>
+<dt><i>/dev/input/event*</i></dt>
+<dd>input layer event files</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-acpi_listen/">acpi_listen</a></code>(8), <code><a href="/docs/linux/man/8-acpid/">acpid</a></code>(8)</p>
 <h2>Author</h2>

@@ -10,9 +10,7 @@ description: "std::strstreambuf::seekpos – std::strstreambuf::seekpos"
 <p>std::strstreambuf::seekpos &#8211; std::strstreambuf::seekpos</p>
 <h2>Synopsis</h2>
 <pre><code>protected:
-
 virtual pos_type seekpos(pos_type sp,
-
 std::ios_base::openmode which = std::ios_base::in | std::ios_base::out );</code></pre>
 <p>Repositions std::basic_streambuf::gptr and/or std::basic_streambuf::pptr, if possible, to the position indicated by sp<br />
 If std::ios_base::in is set in which, attempts to reposition gptr() (the next pointer in the get area). If std::ios_base::out is set in which, attempts to reposition pptr() (the next pointer in the put area). If neither bit is set in which, the operation fails.<br />
@@ -33,12 +31,9 @@ Each next pointer is repositioned as follows:<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;strstream&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;iostream&gt;
 struct mybuf : std::strstreambuf
-
 {
     mybuf(const char *str)
         : std::strstreambuf(str, std::strlen(str))
@@ -61,7 +56,6 @@ After the call, &quot;
     }
 };
 int main()
-
 {
     mybuf buf(&quot;12345&quot;);
     std::iostream stream(&amp;buf);

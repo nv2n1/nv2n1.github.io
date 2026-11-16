@@ -14,14 +14,14 @@ description: "ata_host_suspend – suspend host"
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>host to suspend</dl>
+</dd><dd>host to suspend</dd></dl>
 <p> <i>mesg</i></p>
 <dl>
-<dd>PM message</dl>
+<dd>PM message</dd></dl>
 <h2>Description</h2>
 <p>Suspend <i>host</i>. Actual operation is performed by port suspend.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

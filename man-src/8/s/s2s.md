@@ -14,12 +14,12 @@ description: "s2s – server-to-server connector"
 <p><code>s2s</code> manages connections between local components and other Jabber servers.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-c</code></p>
-<dd>Alternate configuration file to use. The compiled-in default is /etc/jabberd/s2s.xml.</p>
-<dt><code>-D</code></p>
-<dd>Print debugging output. You should configure jabberd with the &#8211;enable-debug switch to enable this.</dl>
+<dt><code>-h</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-c</code></dt>
+<dd>Alternate configuration file to use. The compiled-in default is /etc/jabberd/s2s.xml.</dd>
+<dt><code>-D</code></dt>
+<dd>Print debugging output. You should configure jabberd with the &#8211;enable-debug switch to enable this.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-jabberd/">jabberd</a></code>(8) <code><a href="/docs/linux/man/8-c2s/">c2s</a></code>(8) <code><a href="/docs/linux/man/8-router/">router</a></code>(8) <code><a href="/docs/linux/man/8-sm/">sm</a></code>(8)</p>
 <h2>Author</h2>

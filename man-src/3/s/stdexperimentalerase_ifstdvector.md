@@ -11,10 +11,8 @@ std::experimental::erase_if(std::vector) - std::experimental::erase_if(std::vect
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / vector&gt;
-
     template &lt;class T, class Alloc, class Pred&gt;
     (library fundamentals TS v2)
-
         void erase_if(std::vector&lt;T, Alloc&gt; &amp;c, Pred pred);
 Erases all elements that satisfy the predicate pred from the container.Equivalent to c.erase(std::remove_if(c.begin(), c.end(), pred), c.end());
 </code></pre>

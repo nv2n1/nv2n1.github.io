@@ -11,27 +11,27 @@ description: "pkcheck – Check whether a process is authorized"
 <p> pkcheck &#8211; Check whether a process is authorized </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>pkcheck</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>]</p>
-<dt> <code>pkcheck</code> [<code>&#8211;list-temp</code>]</p>
-<dt> <code>pkcheck</code> [<code>&#8211;revoke-temp</code>]</p>
-<dt> <code>pkcheck</code> <code>&#8211;action-id</code>&nbsp;<i>action</i> {<code>&#8211;process</code>&nbsp;{&nbsp;<i>pid</i>&nbsp;|&nbsp;<i>pid,pid-start-time</i>&nbsp;|&nbsp;<i>pid,pid-start-time,uid</i>&nbsp;} | <code>&#8211;system-bus-name</code>&nbsp;<i>busname</i>} [<code>&#8211;allow-user-interaction</code>] [<code>&#8211;enable-internal-agent</code>] [<code>&#8211;detail</code>&nbsp;<i>key</i>&nbsp;<i>value</i>&#8230;]</dl>
+<dt> <code>pkcheck</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt>
+<dt> <code>pkcheck</code> [<code>&#8211;list-temp</code>]</dt>
+<dt> <code>pkcheck</code> [<code>&#8211;revoke-temp</code>]</dt>
+<dt> <code>pkcheck</code> <code>&#8211;action-id</code>&nbsp;<i>action</i> {<code>&#8211;process</code>&nbsp;{&nbsp;<i>pid</i>&nbsp;|&nbsp;<i>pid,pid-start-time</i>&nbsp;|&nbsp;<i>pid,pid-start-time,uid</i>&nbsp;} | <code>&#8211;system-bus-name</code>&nbsp;<i>busname</i>} [<code>&#8211;allow-user-interaction</code>] [<code>&#8211;enable-internal-agent</code>] [<code>&#8211;detail</code>&nbsp;<i>key</i>&nbsp;<i>value</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>pkcheck</code></p>
-<dd>is used to check whether a process, specified by either <code>&#8211;process</code> (see below) or <code>&#8211;system-bus-name</code>, is authorized for <i>action</i>. The <code>&#8211;detail</code> option can be used zero or more times to pass details about <i>action</i>. If <code>&#8211;allow-user-interaction</code> is passed, <code>pkcheck</code> blocks while waiting for authentication. </p>
+<dd>is used to check whether a process, specified by either <code>&#8211;process</code> (see below) or <code>&#8211;system-bus-name</code>, is authorized for <i>action</i>. The <code>&#8211;detail</code> option can be used zero or more times to pass details about <i>action</i>. If <code>&#8211;allow-user-interaction</code> is passed, <code>pkcheck</code> blocks while waiting for authentication. </dd>
 <p> The invocation <code>pkcheck &#8211;list-temp</code> will list all temporary authorizations for the current session and <code>pkcheck &#8211;revoke-temp</code> will revoke all temporary authorizations for the current session. </p>
 <p> This command is a simple wrapper around the PolicyKit D-Bus interface; see the D-Bus interface documentation for details.</p>
 <h2>RETURN VALUE</h2>
 <p> If the specified process is authorized, <code>pkcheck</code> exits with a return value of 0. If the authorization result contains any details, these are printed on standard output as key/value pairs using environment style reporting, e.g. first the key followed by a an equal sign, then the value followed by a newline. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 KEY1=VALUE1
 KEY2=VALUE2
 KEY3=VALUE3
 ...
 </pre>
-</dl>
+</dd></dl>
 <p> Octects that are not in [a-zA-Z0-9_] are escaped using octal codes prefixed with <i>\</i>. For example, the UTF-8 string <i>føl,你好</i> will be printed as <i>f\303\270l\54\344\275\240\345\245\275</i>. </p>
 <p> If the specificied process is not authorized, <code>pkcheck</code> exits with a return value of 1 and a diagnostic message is printed on standard error. Details are printed on standard output. </p>
 <p> If the specificied process is not authorized because no suitable authentication agent is available or if the <code>&#8211;allow-user-interaction</code> wasn&#8217;t passed, <code>pkcheck</code> exits with a return value of 2 and a diagnostic message is printed on standard error. Details are printed on standard output. </p>

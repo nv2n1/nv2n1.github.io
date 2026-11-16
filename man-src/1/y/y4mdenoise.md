@@ -22,32 +22,32 @@ description: "y4mdenoise – Motion-compensating YUV4MPEG-frame denoiser"
 <h2>OPTIONS</h2>
 <p> <code>y4mdenoise</code> accepts the following options: </p>
 <dl>
-<dt><code>-v</code><i> [0..2] verbosity</i></p>
-<dd> 0 = none, 1 = normal (per-frame pixel-detection totals), 2=debug. </p>
-<dt><code>-p</code><i> num</i></p>
-<dd> Controls the level of parallelism. Since intensity and color are denoised separately by design, it&#8217;s very easy to do each in parallel on a multiple-processor machine. The default value is 1; that reads and writes video frames in parallel with denoising. A value of 2 causes intensity and color to be denoised in parallel. A value of 3 does both types of concurrency. A value of 0 turns off all concurrency. </p>
-<dt><code>-r</code><i> [4..] search radius</i></p>
-<dd> The search radius, i.e. the maximum distance that a pixel can move and still be found by motion-detection. The default is 16. There are no particular restrictions on the search radius, e.g. it doesn&#8217;t have to be an even multiple of 4. </p>
-<dt><code>-R</code><i> [4..] color search radius</i></p>
-<dd> The search radius to use for color. Default is whatever the main search-radius was set to. Note that this value ends up getting scaled by the relative size of intensity &amp; color planes in your YUV4MPEG2 stream. </p>
-<dt><code>-t</code><i> [0..255] Error tolerance</i></p>
-<dd> The largest difference between two pixels that&#8217;s accepted for the two pixels to be considered equal. The default is 3, which is good for medium-noise material like analog cable TV. (This value will have to be changed to whatever is appropriate for your YUV4MPEG2 stream in order to avoid undesirable results. See the instructions below.) </p>
-<dt><code>-T</code><i> [0..255] Error tolerance for color</i></p>
-<dd> The default is whatever the main error-tolerance was set to. </p>
-<dt><code>-z</code><i> [0..255] Error tolerance for zero-motion pass</i></p>
-<dd> The error-tolerance used on pixels that haven&#8217;t moved. Usually equal to the main error-tolerance or one less than that. Default is 2. </p>
-<dt><code>-Z</code><i> [0..255] Error tolerance for color&#8217;s zero-motion pass</i></p>
-<dd> The default is whatever the main zero-motion error-tolerance was set to. </p>
-<dt><code>-m</code><i> [num] Match-count throttle</i></p>
-<dd> The maximum number of pixel-group matches (within the search radius) to consider. If more are found, only the closest matches are kept. Default is 15. </p>
-<dt><code>-M</code><i> [num] Match-size throttle</i></p>
-<dd> The minimum size of the flood-filled region generated from a match. Matches smaller than this are thrown away. Specified in terms of pixel-groups. Default is 3. </p>
-<dt><code>-f</code><i> num</i></p>
-<dd> The number of reference frames to keep. Pixel values are averaged over this many frames before they&#8217;re written to standard output; this also implies that output is delayed by this many frames. Default is 10. </p>
-<dt><code>-B</code></p>
-<dd> Black-and-white mode. Denoise only the intensity plane, and set the color plane to all white. </p>
-<dt><code>-I</code><i> num</i></p>
-<dd> Set interlacing type. Default is taken from the YUV4MPEG2 stream. 0 means not interlaced, 1 means top-field interlaced, 2 means bottom-field interlaced. This is useful when the signal is more naturally of some other interlacing type than its current representation (e.g. if the original was shot on film and then later it was transferred to interlaced video, it will denoise better if treated as film, i.e. non-interlaced). </p>
+<dt><code>-v</code><i> [0..2] verbosity</i></dt>
+<dd> 0 = none, 1 = normal (per-frame pixel-detection totals), 2=debug. </dd>
+<dt><code>-p</code><i> num</i></dt>
+<dd> Controls the level of parallelism. Since intensity and color are denoised separately by design, it&#8217;s very easy to do each in parallel on a multiple-processor machine. The default value is 1; that reads and writes video frames in parallel with denoising. A value of 2 causes intensity and color to be denoised in parallel. A value of 3 does both types of concurrency. A value of 0 turns off all concurrency. </dd>
+<dt><code>-r</code><i> [4..] search radius</i></dt>
+<dd> The search radius, i.e. the maximum distance that a pixel can move and still be found by motion-detection. The default is 16. There are no particular restrictions on the search radius, e.g. it doesn&#8217;t have to be an even multiple of 4. </dd>
+<dt><code>-R</code><i> [4..] color search radius</i></dt>
+<dd> The search radius to use for color. Default is whatever the main search-radius was set to. Note that this value ends up getting scaled by the relative size of intensity &amp; color planes in your YUV4MPEG2 stream. </dd>
+<dt><code>-t</code><i> [0..255] Error tolerance</i></dt>
+<dd> The largest difference between two pixels that&#8217;s accepted for the two pixels to be considered equal. The default is 3, which is good for medium-noise material like analog cable TV. (This value will have to be changed to whatever is appropriate for your YUV4MPEG2 stream in order to avoid undesirable results. See the instructions below.) </dd>
+<dt><code>-T</code><i> [0..255] Error tolerance for color</i></dt>
+<dd> The default is whatever the main error-tolerance was set to. </dd>
+<dt><code>-z</code><i> [0..255] Error tolerance for zero-motion pass</i></dt>
+<dd> The error-tolerance used on pixels that haven&#8217;t moved. Usually equal to the main error-tolerance or one less than that. Default is 2. </dd>
+<dt><code>-Z</code><i> [0..255] Error tolerance for color&#8217;s zero-motion pass</i></dt>
+<dd> The default is whatever the main zero-motion error-tolerance was set to. </dd>
+<dt><code>-m</code><i> [num] Match-count throttle</i></dt>
+<dd> The maximum number of pixel-group matches (within the search radius) to consider. If more are found, only the closest matches are kept. Default is 15. </dd>
+<dt><code>-M</code><i> [num] Match-size throttle</i></dt>
+<dd> The minimum size of the flood-filled region generated from a match. Matches smaller than this are thrown away. Specified in terms of pixel-groups. Default is 3. </dd>
+<dt><code>-f</code><i> num</i></dt>
+<dd> The number of reference frames to keep. Pixel values are averaged over this many frames before they&#8217;re written to standard output; this also implies that output is delayed by this many frames. Default is 10. </dd>
+<dt><code>-B</code></dt>
+<dd> Black-and-white mode. Denoise only the intensity plane, and set the color plane to all white. </dd>
+<dt><code>-I</code><i> num</i></dt>
+<dd> Set interlacing type. Default is taken from the YUV4MPEG2 stream. 0 means not interlaced, 1 means top-field interlaced, 2 means bottom-field interlaced. This is useful when the signal is more naturally of some other interlacing type than its current representation (e.g. if the original was shot on film and then later it was transferred to interlaced video, it will denoise better if treated as film, i.e. non-interlaced). </dd>
 </dl>
 <h2>TYPICAL USAGE AND TIPS</h2>
 <p> Keep in mind that all of this advice was gained through experience. (Just because one writes a tool doesn&#8217;t mean one understands how it should be used, for the same reason that car designers aren&#8217;t necessarily professional drivers.) </p>

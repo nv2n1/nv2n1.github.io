@@ -10,13 +10,9 @@ description: "std::basic_filebuf – std::basic_filebuf"
 <p>std::basic_filebuf &#8211; std::basic_filebuf</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;fstream&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_filebuf : public std::basic_streambuf&lt;CharT, Traits&gt;</code></pre>
 <p>std::basic_filebuf is a std::basic_streambuf whose associated character sequence is a file. Both the input sequence and the output sequence are associated with the same file, and a joint file position is maintained for both operations.<br />
 The functions underflow() and overflow()/sync() perform the actual I/O between the file and the get and put areas of the buffer. When CharT is not char, most implementations store multibyte characters in the file and a std::codecvt facet is used to perform wide/multibyte character conversion.<br />

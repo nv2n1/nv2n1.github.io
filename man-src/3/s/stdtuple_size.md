@@ -10,50 +10,31 @@ description: "std::tuple_size<std::tuple> – std::tuple_size<std::tuple>"
 <p>std::tuple_size&lt;std::tuple&gt; &#8211; std::tuple_size&lt;std::tuple&gt;</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;tuple&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         class tuple_size; /*undefined*/
-
 template &lt;class... Types&gt;
-
 class tuple_size&lt;std::tuple&lt;Types...&gt;&gt;(2)(since C++ 11)
-
     : public std::integral_constant&lt;std::size_t, sizeof...(Types)&gt;
 {
 };
-
 Defined in header&lt;tuple&gt;
-
     Defined in header&lt;array&gt;(since C++ 17)
-
         Defined in header&lt;utility&gt;(since C++ 17)
-
             Defined in header&lt;ranges&gt;(since C++ 20)
-
                 Defined in header&lt;span&gt;(since C++ 20)
-
                     template &lt;class T&gt;
-
                     class tuple_size&lt;const T&gt;(3)(since C++ 11)
-
     : public std::integral_constant&lt;std::size_t, tuple_size&lt;T&gt;::value&gt;
 {
 };
-
 template &lt;class T&gt;
-
 class tuple_size&lt;volatile T&gt;(4)(since C++ 11)
-
     : public std::integral_constant&lt;std::size_t, tuple_size&lt;T&gt;::value&gt;
 {
 };
-
 template &lt;class T&gt;
-
 class tuple_size&lt;const volatile T&gt;(5)(since C++ 11)
-
     : public std::integral_constant&lt;std::size_t, tuple_size&lt;T&gt;::value&gt;
 {
 };</code></pre>
@@ -95,7 +76,6 @@ type std::integral_constant&lt;std::size_t, value&gt;</p>
 '; // or at run time
 }
 int main()
-
 {
     test(std::make_tuple(1, 2, 3.14));
 }

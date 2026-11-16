@@ -11,10 +11,8 @@ std::atan(std::complex) - std::atan(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         complex&lt;T&gt; atan(const complex&lt;T&gt; &amp;z);</code></pre> 
 Computes complex arc tangent of a complex value z. Branch cut exists outside the interval [−i ; +i] along the imaginary axis. 
 
@@ -39,13 +37,9 @@ i [ln(1 - iz) - ln (1 + iz)]
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;complex&gt;
-
 #include &lt;cmath&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; std::fixed;
     std::complex&lt;double&gt; z1(0, 2);

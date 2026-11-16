@@ -11,9 +11,7 @@ description: "sc::canonical_aabc –"
 <p> If the shell loop structure has 2 fold symmetry between the first two indices, then this should be used as the template argument to <code>GPetite4</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;gpetite.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>canonical_aabc</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; bi, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; bj, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; bk, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; bl) </p>
 <p> sc_int_least64_t <code>offset</code> (int i, int j, int k, int l)</p>

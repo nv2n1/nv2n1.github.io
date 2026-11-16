@@ -14,28 +14,28 @@ description: "tee – read from standard input and write to standard output and 
 <h2>DESCRIPTION</h2>
 <p> Copy standard input to each FILE, and also to standard output.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;append</code></p>
-<dd> append to the given FILEs, do not overwrite</p>
-<dt><code>-i</code>, <code>&#8211;ignore-interrupts</code></p>
-<dd> ignore interrupt signals</p>
-<dt><code>-p</code></p>
-<dd> diagnose errors writing to non pipes</p>
-<dt><code>&#8211;output-error</code>[=<i>,MODE/</i>]</p>
-<dd> set behavior on write error. See MODE below</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;append</code></dt>
+<dd> append to the given FILEs, do not overwrite</dd>
+<dt><code>-i</code>, <code>&#8211;ignore-interrupts</code></dt>
+<dd> ignore interrupt signals</dd>
+<dt><code>-p</code></dt>
+<dd> diagnose errors writing to non pipes</dd>
+<dt><code>&#8211;output-error</code>[=<i>,MODE/</i>]</dt>
+<dd> set behavior on write error. See MODE below</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h3>MODE determines behavior with write errors on the outputs:</h3>
 <dl>
-<dt>&#8216;warn&#8217;</p>
-<dd> diagnose errors writing to any output</p>
-<dt>&#8216;warn-nopipe&#8217;</p>
-<dd> diagnose errors writing to any output not a pipe</p>
-<dt>&#8216;exit&#8217;</p>
-<dd> exit on error writing to any output</p>
-<dt>&#8216;exit-nopipe&#8217;</p>
-<dd> exit on error writing to any output not a pipe</dl>
+<dt>&#8216;warn&#8217;</dt>
+<dd> diagnose errors writing to any output</dd>
+<dt>&#8216;warn-nopipe&#8217;</dt>
+<dd> diagnose errors writing to any output not a pipe</dd>
+<dt>&#8216;exit&#8217;</dt>
+<dd> exit on error writing to any output</dd>
+<dt>&#8216;exit-nopipe&#8217;</dt>
+<dd> exit on error writing to any output not a pipe</dd></dl>
 <p> The default MODE for the <code>-p</code> option is &#8216;warn-nopipe&#8217;. The default operation when <code>&#8211;output-error</code> is not specified, is to exit immediately on error writing to a pipe, and diagnose errors writing to non pipe outputs.</p>
 <h2>AUTHOR</h2>
 <p> Written by Mike Parker, Richard M. Stallman, and David MacKenzie.</p>

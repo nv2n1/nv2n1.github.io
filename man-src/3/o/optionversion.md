@@ -11,7 +11,6 @@ optionVersion - return the compiled AutoOpts version number
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;your-opts.h&gt;
-
 cc[...] - o outfile infile.c - lopts[...] char const *optionVersion(void);
 </code></pre>
 

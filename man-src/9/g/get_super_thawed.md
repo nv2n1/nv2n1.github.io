@@ -14,7 +14,7 @@ description: "get_super_thawed – get thawed superblock of a device"
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>device to get the superblock for</dl>
+</dd><dd>device to get the superblock for</dd></dl>
 <h2>Description</h2>
 <p>Scans the superblock list and finds the superblock of the file system mounted on the device. The superblock is returned once it is thawed (or immediately if it was not frozen). <code>NULL</code> is returned if no match is found.</p>
 <h2>Copyright</h2>

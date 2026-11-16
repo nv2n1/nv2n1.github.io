@@ -28,30 +28,24 @@ exit_code - exit status of the program
 
 // Run this code <pre><code>#include &lt;iostream&gt;
 class Static {
-
     public:
     ~Static()
     {
         std::cout &lt;&lt; &quot;Static dtor\n&quot;;
     }
-
 };
 class Local {
-
     public:
     ~Local()
     {
         std::cout &lt;&lt; &quot;Local dtor\n&quot;;
     }
-
 };</code></pre> 
 &nbsp;<wbr>&nbsp;Static static_variable; // dtor of this object will *not* be called <pre><code>void atexit_handler()
-
 {
     std::cout &lt;&lt; &quot;atexit handler\n&quot;;
 }
 int main()
-
 {
     Local local_variable; // dtor of this object will *not* be called
                           // handler will *not* be called

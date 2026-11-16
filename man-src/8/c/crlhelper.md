@@ -19,15 +19,15 @@ description: "crlhelper – Helper program used to store-and-forward CRLs"
  # NOTE: Located at &#8216;/usr/bin/crlhelper&#8217; prior<br />
  # to &#8216;mod_revocator-1.0.3-16&#8217;.<br />
  #<br />
- CRLHelper /usr/libexec/crlhelper </p>
+ CRLHelper /usr/libexec/crlhelper </dd>
 <h2>Options</h2>
 <dl>
-<dt><code>&lt;semid&gt;</code></p>
-<dd>The semaphore which corresponds to the mod_revocator plug-in registered with the Apache <code>httpd</code> process during startup.</p>
-<dt><code>&lt;parentpid&gt;</code></p>
-<dd>The primary parent pid of the Apache <code>httpd</code> process into which both the mod_nss and mod_revocator plug-ins have been loaded.</p>
-<dt><code>&lt;directory&gt;</code></p>
-<dd>Since the mod_revocator plug-in depends upon the mod_nss plug-in being configured, this option specifies the destination directory of the NSS databases that will be associated with this executable specified by the following entry in the mod_nss plug-in&#8217;s <code>/etc/httpd/conf.d/nss.conf</code> configuration file:</p>
+<dt><code>&lt;semid&gt;</code></dt>
+<dd>The semaphore which corresponds to the mod_revocator plug-in registered with the Apache <code>httpd</code> process during startup.</dd>
+<dt><code>&lt;parentpid&gt;</code></dt>
+<dd>The primary parent pid of the Apache <code>httpd</code> process into which both the mod_nss and mod_revocator plug-ins have been loaded.</dd>
+<dt><code>&lt;directory&gt;</code></dt>
+<dd>Since the mod_revocator plug-in depends upon the mod_nss plug-in being configured, this option specifies the destination directory of the NSS databases that will be associated with this executable specified by the following entry in the mod_nss plug-in&#8217;s <code>/etc/httpd/conf.d/nss.conf</code> configuration file:</dd>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -61,8 +61,8 @@ description: "crlhelper – Helper program used to store-and-forward CRLs"
 </td>
 </tr>
 </table>
-<dt><code>[prefix]</code></p>
-<dd>Optional prefix to attach prior to the names of the NSS certificate and key databases contained in the directory referenced by the previous argument and specified by the following entry in mod_nss plug-in&#8217;s <code>/etc/httpd/conf.d/nss.conf</code> configuration file (must be uncommented in order to be utilized):</p>
+</dd><dt><code>[prefix]</code></dt>
+<dd>Optional prefix to attach prior to the names of the NSS certificate and key databases contained in the directory referenced by the previous argument and specified by the following entry in mod_nss plug-in&#8217;s <code>/etc/httpd/conf.d/nss.conf</code> configuration file (must be uncommented in order to be utilized):</dd>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -91,7 +91,7 @@ description: "crlhelper – Helper program used to store-and-forward CRLs"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a> </p>
 <h2>Authors</h2>
@@ -99,3 +99,4 @@ description: "crlhelper – Helper program used to store-and-forward CRLs"
 <h2>Copyright</h2>
 <p>Copyright (c) 2013 Red Hat, Inc. This is licensed under the Apache License, Version 2.0 (the &quot;License&quot;); no one may use this file except in compliance with the License. A copy of this license is available at <a rel="nofollow" href="http://www.apache.org/licenses/LICENSE-2.0.">http://www.apache.org/licenses/LICENSE-2.0.</a> </p>
 <p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+</dl>

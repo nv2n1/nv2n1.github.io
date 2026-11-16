@@ -11,21 +11,13 @@ std::experimental::sample - std::experimental::sample
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/algorithm&gt;
-
 template&lt; class PopulationIterator, class SampleIterator,
-
 class Distance, class URBG &gt;
-
 SampleIterator sample( PopulationIterator first, PopulationIterator last,  (1) (library fundamentals TS)
-
 SampleIterator out, Distance n,
-
 URBG&amp;&amp; g);
-
 template&lt; class PopulationIterator, class SampleIterator, class Distance &gt;
-
 SampleIterator sample( PopulationIterator first, PopulationIterator last,  (2) (library fundamentals TS v2)
-
 SampleIterator out, Distance n);</code></pre> 
 Selects n elements from the sequence [first; last) such that each possible sample has equal probability of appearance, and writes those selected elements into the output iterator out 
 If n is greater than the number of elements in the sequence, selects last-first elements. 
@@ -67,16 +59,11 @@ This function may implement selection sampling or reservoir sampling.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;random&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;experimental/algorithm&gt;
 int main()
-
 {
     std::string in = &quot;abcdefgh&quot;, out;
     std::experimental::sample(in.begin(), in.end(), std::back_inserter(out),

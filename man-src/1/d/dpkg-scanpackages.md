@@ -20,28 +20,28 @@ description: "dpkg-scanpackages – create Packages index files"
 <p> If more than one version of a package is found only the newest one is included in the output. If they have the same version and only differ in architecture only the first one found is used.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code>, <code>&#8211;type</code> <i>type</i></p>
-<dd> Scan for *.<i>type</i> packages, instead of *.deb.</p>
-<dt><code>-e</code>, <code>&#8211;extra-override</code> <i>file</i></p>
-<dd> Scan <i>file</i> to find supplementary overrides (the file can be compressed since dpkg 1.15.5). See <code><a href="/docs/linux/man/5-deb-extra-override/">deb-extra-override</a></code>(5) for more information on its format.</p>
-<dt><code>-a</code>, <code>&#8211;arch</code> <i>arch</i></p>
-<dd> Use a pattern consisting of <i>*_all.deb</i> and <i>*_arch.deb</i> instead of scanning for all debs.</p>
-<dt><code>-h</code>, <code>&#8211;hash</code> <i>hash-list</i></p>
-<dd> Only generate file hashes for the comma-specified list specified (since dpkg 1.17.14). The default is to generate all currently supported hashes. Supported values: <code>md5</code>, <code>sha1</code>, <code>sha256</code>.</p>
-<dt><code>-m</code>, <code>&#8211;multiversion</code></p>
-<dd> Include all found packages in the output.</p>
-<dt><code>-M</code>, <code>&#8211;medium</code> <i>id-string</i></p>
-<dd> Add an <code>X-Medium</code> field containing the value <i>id-string</i> (since dpkg 1.15.5). This field is required if you want to generate <code>Packages.cd</code> files for use by the multicd access method of dselect.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Show the usage message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version and exit.</dl>
+<dt><code>-t</code>, <code>&#8211;type</code> <i>type</i></dt>
+<dd> Scan for *.<i>type</i> packages, instead of *.deb.</dd>
+<dt><code>-e</code>, <code>&#8211;extra-override</code> <i>file</i></dt>
+<dd> Scan <i>file</i> to find supplementary overrides (the file can be compressed since dpkg 1.15.5). See <code><a href="/docs/linux/man/5-deb-extra-override/">deb-extra-override</a></code>(5) for more information on its format.</dd>
+<dt><code>-a</code>, <code>&#8211;arch</code> <i>arch</i></dt>
+<dd> Use a pattern consisting of <i>*_all.deb</i> and <i>*_arch.deb</i> instead of scanning for all debs.</dd>
+<dt><code>-h</code>, <code>&#8211;hash</code> <i>hash-list</i></dt>
+<dd> Only generate file hashes for the comma-specified list specified (since dpkg 1.17.14). The default is to generate all currently supported hashes. Supported values: <code>md5</code>, <code>sha1</code>, <code>sha256</code>.</dd>
+<dt><code>-m</code>, <code>&#8211;multiversion</code></dt>
+<dd> Include all found packages in the output.</dd>
+<dt><code>-M</code>, <code>&#8211;medium</code> <i>id-string</i></dt>
+<dd> Add an <code>X-Medium</code> field containing the value <i>id-string</i> (since dpkg 1.15.5). This field is required if you want to generate <code>Packages.cd</code> files for use by the multicd access method of dselect.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></p>
-<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</p>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></p>
-<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dl>
+<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
+<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> <code>dpkg-scanpackages</code> outputs the usual self-explanatory errors. It also warns about packages that are in the wrong subdirectory, are duplicated, have a Filename field in their control file, are missing from the override file, or have maintainer substitutions which do not take effect.</p>
 <h2>SEE ALSO</h2>

@@ -14,15 +14,15 @@ description: "ata_dump_status – user friendly display of error info"
 <p><i>id</i></p>
 <dl>
 <dd>
-<dd>id of the port in question</dl>
+</dd><dd>id of the port in question</dd></dl>
 <p> <i>tf</i></p>
 <dl>
-<dd>ptr to filled out taskfile</dl>
+<dd>ptr to filled out taskfile</dd></dl>
 <h2>Description</h2>
 <p>Decode and dump the ATA error/status registers for the user so that they have some idea what really happened at the non make-believe layer. </p>
 <p> LOCKING: inherited from caller</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

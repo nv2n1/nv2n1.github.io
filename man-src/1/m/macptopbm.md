@@ -15,8 +15,8 @@ description: "macptopbm – convert a MacPaint file into a portable bitmap"
 <p> Reads a MacPaint file as input. Produces a portable bitmap as output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-extraskip</code></p>
-<dd> This flag is to get around a problem with some methods of transferring files from the Mac world to the Unix world. Most of these methods leave the Mac files alone, but a few of them add the &quot;finderinfo&quot; data onto the front of the Unix file. This means an extra 128 bytes to skip over when reading the file. The symptom to watch for is that the resulting PBM file looks shifted to one side. If you get this, try <code>-extraskip</code> 128, and if that still doesn&#8217;t look right try another value.</dl>
+<dt><code>-extraskip</code></dt>
+<dd> This flag is to get around a problem with some methods of transferring files from the Mac world to the Unix world. Most of these methods leave the Mac files alone, but a few of them add the &quot;finderinfo&quot; data onto the front of the Unix file. This means an extra 128 bytes to skip over when reading the file. The symptom to watch for is that the resulting PBM file looks shifted to one side. If you get this, try <code>-extraskip</code> 128, and if that still doesn&#8217;t look right try another value.</dd></dl>
 <p> All flags can be abbreviated to their shortest unique prefix.</p>
 <h2>SEE ALSO</h2>
 <p> picttoppm(1), <a href="/docs/linux/man/1-pbmtomacp/">pbmtomacp</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>

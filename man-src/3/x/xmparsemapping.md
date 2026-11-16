@@ -27,28 +27,28 @@ str_include, call_data</i>)
 <p>A parse procedure provides an escape mechanism for arbitrarily complex parsing. This procedure is invoked when a pattern in the input text is matched with a pattern in a parse mapping whose <code>XmNincludeStatus</code> is <code>XmINVOKE</code>. </p>
 <p> The input text is a pointer to the first byte of the pattern that was matched to trigger the call to the parse procedure. The parse procedure consumes as many bytes of the input string as it needs and sets the input text pointer to the following byte. It returns a compound string to be included in the compound string being constructed, and it also returns an <code>XmIncludeStatus</code> indicating how the returned compound string should be handled. If the parse procedure does not set the input text pointer ahead by at least one byte, the parsing routine continues trying to match the input text with the patterns in the remaining parse mappings in the parse table. Otherwise, the parsing routine begins with the new input text pointer and tries to match the input text with patterns in the parse mappings starting at the beginning of the parse table.</p>
 <dl COMPACT>
-<dt><i>text_in_out</i></p>
-<dd>Specifies the text being parsed. The value is a pointer to the first byte of text matching the pattern that triggered the call to the parse procedure. When the parse procedure returns, this argument is set to the position in the text where parsing should resume&#8212;that is, to the byte following the last character parsed by the parse procedure.</p>
-<dt><i>text_end</i></p>
-<dd>Specifies a pointer to the end of the <i>text_in_out</i> string. If <i>text_end</i> is NULL, the string is scanned until a NULL character is found. Otherwise, the string is scanned up to but not including the character whose address is <i>text_end</i>.</p>
-<dt><i>type</i></p>
-<dd>Specifies the type of text and the tag type. If a locale tag should be created, <i>type</i> has a value of either <code>XmMULTIBYTE_TEXT</code> or <code>XmWIDECHAR_TEXT</code>. If a charset should be created, <i>type</i> has a value of <code>XmCHARSET_TEXT</code>.</p>
-<dt><i>tag</i></p>
-<dd>Specifies the tag to be used in creating the result. The type of string tag created (charset or locale) depends on the text type and the passed in <i>tag</i> value. If the <i>tag</i> value is NULL and if <i>type</i> indicates that a charset string tag should be created, the string tag has the value that is the result of mapping <code>XmSTRING_DEFAULT_CHARSET</code>. If <i>type</i> indicates a locale string tag, the string tag has the value <code>_MOTIF_DEFAULT_LOCALE</code>.</p>
-<dt><i>entry</i></p>
-<dd>Specifies the parse mapping that triggered the call to the parse procedure.</p>
-<dt><i>pattern_length</i></p>
-<dd>Specifies the number of bytes in the input text, following <i>text_in_out</i>, that constitute the matched pattern.</p>
-<dt><i>str_include</i></p>
-<dd>Specifies a pointer to a compound string. The parse procedure creates a compound string to be included in the compound string being constructed. The parse procedure then returns the compound string in this argument.</p>
-<dt><i>call_data</i></p>
-<dd>Specifies data passed by the application to the parsing routine.</dl>
+<dt><i>text_in_out</i></dt>
+<dd>Specifies the text being parsed. The value is a pointer to the first byte of text matching the pattern that triggered the call to the parse procedure. When the parse procedure returns, this argument is set to the position in the text where parsing should resume&#8212;that is, to the byte following the last character parsed by the parse procedure.</dd>
+<dt><i>text_end</i></dt>
+<dd>Specifies a pointer to the end of the <i>text_in_out</i> string. If <i>text_end</i> is NULL, the string is scanned until a NULL character is found. Otherwise, the string is scanned up to but not including the character whose address is <i>text_end</i>.</dd>
+<dt><i>type</i></dt>
+<dd>Specifies the type of text and the tag type. If a locale tag should be created, <i>type</i> has a value of either <code>XmMULTIBYTE_TEXT</code> or <code>XmWIDECHAR_TEXT</code>. If a charset should be created, <i>type</i> has a value of <code>XmCHARSET_TEXT</code>.</dd>
+<dt><i>tag</i></dt>
+<dd>Specifies the tag to be used in creating the result. The type of string tag created (charset or locale) depends on the text type and the passed in <i>tag</i> value. If the <i>tag</i> value is NULL and if <i>type</i> indicates that a charset string tag should be created, the string tag has the value that is the result of mapping <code>XmSTRING_DEFAULT_CHARSET</code>. If <i>type</i> indicates a locale string tag, the string tag has the value <code>_MOTIF_DEFAULT_LOCALE</code>.</dd>
+<dt><i>entry</i></dt>
+<dd>Specifies the parse mapping that triggered the call to the parse procedure.</dd>
+<dt><i>pattern_length</i></dt>
+<dd>Specifies the number of bytes in the input text, following <i>text_in_out</i>, that constitute the matched pattern.</dd>
+<dt><i>str_include</i></dt>
+<dd>Specifies a pointer to a compound string. The parse procedure creates a compound string to be included in the compound string being constructed. The parse procedure then returns the compound string in this argument.</dd>
+<dt><i>call_data</i></dt>
+<dd>Specifies data passed by the application to the parsing routine.</dd></dl>
 <p> The parse procedure returns an <code>XmIncludeStatus</code> indicating how <i>str_include</i> is to be included in the compound string being constructed. Following are the possible values:</p>
 <dl COMPACT>
-<dt><code>XmINSERT</code></p>
-<dd>Concatenate the result to the compound string being constructed and continue parsing.</p>
-<dt><code>XmTERMINATE</code></p>
-<dd>Concatenate the result to the compound string being constructed and terminate parsing.</dl>
+<dt><code>XmINSERT</code></dt>
+<dd>Concatenate the result to the compound string being constructed and continue parsing.</dd>
+<dt><code>XmTERMINATE</code></dt>
+<dd>Concatenate the result to the compound string being constructed and terminate parsing.</dd></dl>
 <h3>New Resources</h3>
 <p>The following table defines a set of resources used by the programmer to specify data. The codes in the access column indicate if the given resource can be set at creation time (C), set by using <code>XmParseMappingSetValues</code> (S), retrieved by using <code>XmParseMappingGetValues</code> (G), or is not applicable (N/A). </p>
 <table BORDER>
@@ -237,37 +237,37 @@ str_include, call_data</i>)
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNclientData</code></p>
-<dd>Specifies data to be used by the parse procedure.</p>
-<dt><code>XmNincludeStatus</code></p>
-<dd>Specifies how the result of the mapping is to be included in the compound string being constructed. Unless the value is <code>XmINVOKE</code>, the result of the mapping is the value of <code>XmNsubstitute</code>. Following are the possible values for <code>XmNincludeStatus</code>:</p>
+<dt><code>XmNclientData</code></dt>
+<dd>Specifies data to be used by the parse procedure.</dd>
+<dt><code>XmNincludeStatus</code></dt>
+<dd>Specifies how the result of the mapping is to be included in the compound string being constructed. Unless the value is <code>XmINVOKE</code>, the result of the mapping is the value of <code>XmNsubstitute</code>. Following are the possible values for <code>XmNincludeStatus</code>:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmINSERT</code></p>
-<dd>Concatenate the result to the compound string being constructed and continue parsing.</p>
-<dt><code>XmINVOKE</code></p>
-<dd>Invoke the <code>XmNinvokeParseProc</code> on the text being parsed and use the returned compound string instead of <code>XmNsubstitute</code> as the result to be inserted into the compound string being constructed. The include status returned by the parse procedure (<code>XmINSERT</code> or <code>XmTERMINATE</code>) determines how the returned compound string is included.</p>
-<dt><code>XmTERMINATE</code></p>
-<dd>Concatenate the result to the compound string being constructed and terminate parsing.</dl>
+</dd><dl COMPACT>
+<dt><code>XmINSERT</code></dt>
+<dd>Concatenate the result to the compound string being constructed and continue parsing.</dd>
+<dt><code>XmINVOKE</code></dt>
+<dd>Invoke the <code>XmNinvokeParseProc</code> on the text being parsed and use the returned compound string instead of <code>XmNsubstitute</code> as the result to be inserted into the compound string being constructed. The include status returned by the parse procedure (<code>XmINSERT</code> or <code>XmTERMINATE</code>) determines how the returned compound string is included.</dd>
+<dt><code>XmTERMINATE</code></dt>
+<dd>Concatenate the result to the compound string being constructed and terminate parsing.</dd></dl>
 </dl>
-<dt><code>XmNinvokeParseProc</code></p>
-<dd>Specifies the parse procedure to be invoked when <code>XmNincludeStatus</code> is <code>XmINVOKE</code>.</p>
-<dt><code>XmNpattern</code></p>
-<dd>Specifies a pattern to be matched in the text being parsed. This is a maximum of one character.</p>
-<dt><code>XmNpatternType</code></p>
-<dd>Specifies the type of the pattern that is the value of <code>XmNpattern</code>. Following are the possible values:</p>
+<dt><code>XmNinvokeParseProc</code></dt>
+<dd>Specifies the parse procedure to be invoked when <code>XmNincludeStatus</code> is <code>XmINVOKE</code>.</dd>
+<dt><code>XmNpattern</code></dt>
+<dd>Specifies a pattern to be matched in the text being parsed. This is a maximum of one character.</dd>
+<dt><code>XmNpatternType</code></dt>
+<dd>Specifies the type of the pattern that is the value of <code>XmNpattern</code>. Following are the possible values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmCHARSET_TEXT</code></p>
-<dt> &bull;</p>
-<dd><code>XmMULTIBYTE_TEXT</code></p>
-<dt> &bull;</p>
-<dd><code>XmWIDECHAR_TEXT</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmCHARSET_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmMULTIBYTE_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmWIDECHAR_TEXT</code></dd></dl>
 </dl>
-<dt><code>XmNsubstitute</code></p>
-<dd>Specifies the compound string to be included in the compound string being constructed when <code>XmNincludeStatus</code> is <code>XmINSERT</code> or <code>XmTERMINATE</code>.</dl>
+<dt><code>XmNsubstitute</code></dt>
+<dd>Specifies the compound string to be included in the compound string being constructed when <code>XmNincludeStatus</code> is <code>XmINSERT</code> or <code>XmTERMINATE</code>.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmparsemappingcreate/">XmParseMappingCreate</a></code>(3), <code><a href="/docs/linux/man/3-xmparsemappingfree/">XmParseMappingFree</a></code>(3), <code><a href="/docs/linux/man/3-xmparsemappinggetvalues/">XmParseMappingGetValues</a></code>(3), <code><a href="/docs/linux/man/3-xmparsemappingsetvalues/">XmParseMappingSetValues</a></code>(3), <code><a href="/docs/linux/man/3-xmparsetable/">XmParseTable</a></code>(3), and <code><a href="/docs/linux/man/3-xmstring/">XmString</a></code>(3).</p>

@@ -55,7 +55,7 @@ description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 <p>Black 1976 calculator class. </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>When the variance is null, division by zero occur during the calculation of delta, delta forward, gamma, gamma forward, rho, dividend rho, vega, and strike sensitivity.</dl>
+<dd>When the variance is null, division by zero occur during the calculation of delta, delta forward, gamma, gamma forward, rho, dividend rho, vega, and strike sensitivity.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>DiscreteHedging.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

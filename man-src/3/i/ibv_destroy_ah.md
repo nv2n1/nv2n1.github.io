@@ -46,7 +46,7 @@ struct ibv_global_route {
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_init_ah_from_wc</code>(3), <code>ibv_create_ah_from_wc</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -14,20 +14,20 @@ description: "corosync-qnetd-tool – corosync-qnetd control interface."
 <p><code>corosync-qnetd-tool</code> is a frontend to the internal corosync-qnetd IPC. Its main purpose is to show important information about the current internal state of <code>corosync-qnetd.</code></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-H</code></p>
-<dd>Properly shutdown the <code>corosync-qnetd</code> process</p>
-<dt><code>-h</code></p>
-<dd>Display a short usage text</p>
-<dt><code>-l</code></p>
-<dd>List all clients connected to the <code>corosync-qnetd</code> process. The output is described in its own section below.</p>
-<dt><code>-s</code></p>
-<dd>Display status of the <code>corosync-qnetd</code> process.</p>
-<dt><code>-v</code></p>
-<dd>Display more verbose output for options <code>-l</code> and <code>-s</code></p>
-<dt><code>-c</code></p>
-<dd>Used only with the <code>-l</code> option. By default, information about all clients from all clusters is displayed, with this option it&#8217;s possible to filter information from a single cluster given the <i>cluster_name.</i></p>
-<dt><code>-p</code></p>
-<dd>Path to the <code>corosync-qnetd</code> communication socket. </p>
+<dt><code>-H</code></dt>
+<dd>Properly shutdown the <code>corosync-qnetd</code> process</dd>
+<dt><code>-h</code></dt>
+<dd>Display a short usage text</dd>
+<dt><code>-l</code></dt>
+<dd>List all clients connected to the <code>corosync-qnetd</code> process. The output is described in its own section below.</dd>
+<dt><code>-s</code></dt>
+<dd>Display status of the <code>corosync-qnetd</code> process.</dd>
+<dt><code>-v</code></dt>
+<dd>Display more verbose output for options <code>-l</code> and <code>-s</code></dd>
+<dt><code>-c</code></dt>
+<dd>Used only with the <code>-l</code> option. By default, information about all clients from all clusters is displayed, with this option it&#8217;s possible to filter information from a single cluster given the <i>cluster_name.</i></dd>
+<dt><code>-p</code></dt>
+<dd>Path to the <code>corosync-qnetd</code> communication socket. </dd>
 </dl>
 <h2>List Command Output</h2>
 <pre>Cluster &quot;Cluster&quot;:

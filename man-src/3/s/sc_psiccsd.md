@@ -11,7 +11,6 @@ description: "sc::PsiCCSD –"
 <p> <code>PsiCCSD</code> is a concrete implementation of Psi CCSD wave function.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;psiwfn.h&gt;</code></pre>
 <p> Inherits <code>sc::PsiWavefunction</code>.</p>
 <h3>Public Member Functions</h3>

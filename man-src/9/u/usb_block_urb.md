@@ -15,7 +15,7 @@ usb_block_urb - reliably prevent further use of an URB
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>pointer to URB to be blocked, may be NULL</dl>
+<dl><dd></dd><dd>pointer to URB to be blocked, may be NULL</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,19 +15,19 @@ netdev_master_upper_dev_link - Add a master link to the upper device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>upper_dev</i>
-<dl><dd>new upper device</dl>
+<dl><dd>new upper device</dd></dl>
  
 
  <i>upper_priv</i>
-<dl><dd>upper device private</dl>
+<dl><dd>upper device private</dd></dl>
  
 
  <i>upper_info</i>
-<dl><dd>upper info to be passed down via notifier</dl>
+<dl><dd>upper info to be passed down via notifier</dd></dl>
 
 <h2>Description</h2>
 

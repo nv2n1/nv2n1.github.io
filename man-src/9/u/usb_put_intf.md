@@ -15,7 +15,7 @@ usb_put_intf - release a use of the usb interface structure
 <h2>Arguments</h2>
 
 <i>intf</i>
-<dl><dd><dd>interface that's been decremented</dl>
+<dl><dd></dd><dd>interface that's been decremented</dd></dl>
 
 <h2>Description</h2>
 

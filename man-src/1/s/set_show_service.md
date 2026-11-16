@@ -15,10 +15,10 @@ description: "set_show_service – enable or disable a service for the current u
 <p> <code>set_show_service</code> enables or disables the display of a specified service item.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;enable</code> <code>&lt;service&gt;</code></p>
-<dd> enable the given service for the user running this command. </p>
-<dt><code>&#8211;disable</code></p>
-<dd> disables the given service for the user running this command. </p>
+<dt><code>&#8211;enable</code> <code>&lt;service&gt;</code></dt>
+<dd> enable the given service for the user running this command. </dd>
+<dt><code>&#8211;disable</code></dt>
+<dd> disables the given service for the user running this command. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> None known </p>

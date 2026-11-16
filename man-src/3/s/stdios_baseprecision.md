@@ -22,13 +22,10 @@ The default precision, as established by std::basic_ios::init, is 6. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 int main()
-
 {
     const double d = 1.2345678901234;
     std::cout &lt;&lt; &quot;The  default precision is &quot; &lt;&lt; std::cout.precision() &lt;&lt; &quot;
-
 &quot;;
     std::cout &lt;&lt; &quot;With default precision d is &quot; &lt;&lt; d &lt;&lt; '
 ';

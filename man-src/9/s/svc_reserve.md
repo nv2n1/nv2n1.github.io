@@ -15,11 +15,11 @@ svc_reserve - change the space reserved for the reply to a request.
 <h2>Arguments</h2>
 
 <i>rqstp</i>
-<dl><dd><dd>The request in question</dl>
+<dl><dd></dd><dd>The request in question</dd></dl>
  
 
  <i>space</i>
-<dl><dd>new max space to reserve</dl>
+<dl><dd>new max space to reserve</dd></dl>
 
 <h2>Description</h2>
 

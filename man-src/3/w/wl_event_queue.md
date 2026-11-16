@@ -11,9 +11,7 @@ description: "wl_event_queue –"
 <p> A queue for <code>wl_proxy</code> object events.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;wayland-client.h&gt;
-
 Public Member Functions
 void wl_event_queue_destroy (struct wl_event_queue *queue)</code></pre>
 <h2>Detailed Description</h2>
@@ -24,7 +22,7 @@ void wl_event_queue_destroy (struct wl_event_queue *queue)</code></pre>
 <p>Destroy an event queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>queue</i> The event queue to be destroyed</dl>
+<dd><i>queue</i> The event queue to be destroyed</dd></dl>
 <p> Destroy the given event queue. Any pending event on that queue is discarded. </p>
 <p> The <code>wl_display</code> object used to create the queue should not be destroyed until all event queues created with it are destroyed with this function.</p>
 <h2>Author</h2>

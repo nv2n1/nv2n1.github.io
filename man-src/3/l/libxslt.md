@@ -13,12 +13,12 @@ description: "libxslt – library used to do XSL transformations on XML document
 <p> The <i>libxslt</i> library is used to do XSL transformations on XML documents that have been loaded into memory with functions from <i>libxml.</i> </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/lib/libxslt_1.0.0/libxslt.a</code></p>
-<dd> static library</p>
-<dt><code>/usr/lib/libxslt_1.0.0/libxslt.so</code></p>
-<dd> sharable library</p>
-<dt><code>/usr/package/libxslt_1.0.0/bin/xsltproc</code></p>
-<dd> binary application to do XSL transformations on the command line</dl>
+<dt><code>/usr/lib/libxslt_1.0.0/libxslt.a</code></dt>
+<dd> static library</dd>
+<dt><code>/usr/lib/libxslt_1.0.0/libxslt.so</code></dt>
+<dd> sharable library</dd>
+<dt><code>/usr/package/libxslt_1.0.0/bin/xsltproc</code></dt>
+<dd> binary application to do XSL transformations on the command line</dd></dl>
 <h2>AUTHORS</h2>
 <p> Daniel Veillard (daniel [at] veillard.com). If you download and install this package look at instructions on the Web site <a rel="nofollow" href="http://xmlsoft.org/XSLT/">http://xmlsoft.org/XSLT/</a> . Manual page by Heiko W. Rupp (hwr [at] pilhuhn.de)</p>
 <h2>SEE ALSO</h2>

@@ -22,135 +22,135 @@ description: "mongoc_uri_t – mongoc_uri_t provides an abstraction on top of th
  [/[database] &lt;6&gt;
  [?options]] &lt;7&gt;</pre>
 <dl COMPACT>
-<dt>\[bu]</p>
-<dd>mongodb is the specifier of the MongoDB protocol.</p>
-<dt>\[bu]</p>
-<dd>An optional username and password.</p>
-<dt>\[bu]</p>
-<dd>The only required part of the uri. This specifies either a hostname, IP address or UNIX domain socket.</p>
-<dt>\[bu]</p>
-<dd>An optional port number. Defaults to :27017.</p>
-<dt>\[bu]</p>
-<dd>Extra optional hosts and ports. You would specify multiple hosts, for example, for connections to replica sets.</p>
-<dt>\[bu]</p>
-<dd>The name of the database to authenticate if the connection string includes authentication credentials. If /database is not specified and the connection string includes credentials, defaults to the &#8216;admin&#8217; database.</p>
-<dt>\[bu]</p>
-<dd>Connection specific options. </p>
+<dt>\[bu]</dt>
+<dd>mongodb is the specifier of the MongoDB protocol.</dd>
+<dt>\[bu]</dt>
+<dd>An optional username and password.</dd>
+<dt>\[bu]</dt>
+<dd>The only required part of the uri. This specifies either a hostname, IP address or UNIX domain socket.</dd>
+<dt>\[bu]</dt>
+<dd>An optional port number. Defaults to :27017.</dd>
+<dt>\[bu]</dt>
+<dd>Extra optional hosts and ports. You would specify multiple hosts, for example, for connections to replica sets.</dd>
+<dt>\[bu]</dt>
+<dd>The name of the database to authenticate if the connection string includes authentication credentials. If /database is not specified and the connection string includes credentials, defaults to the &#8216;admin&#8217; database.</dd>
+<dt>\[bu]</dt>
+<dd>Connection specific options. </dd>
 </dl>
 <h2>Replica Set Example</h2>
 <p>To describe a connection to a replica set named &#8216;test&#8217; with the following mongod hosts: </p>
 <dl COMPACT>
-<dt>\[bu]</p>
-<dd><code>db1.example.com</code> on port <code>27017</code></p>
-<dt>\[bu]</p>
-<dd><code>db2.example.com</code> on port <code>2500</code> </p>
+<dt>\[bu]</dt>
+<dd><code>db1.example.com</code> on port <code>27017</code></dd>
+<dt>\[bu]</dt>
+<dd><code>db2.example.com</code> on port <code>2500</code> </dd>
 <p> You would use the connection string that resembles the following. </p>
 <pre>mongodb://db1.example.com,db2.example.com:2500/?replicaSet=test</pre>
 </dl>
 <h2>Connection Options</h2>
 <dl COMPACT>
-<dt><code>ssl</code></p>
-<dd>{true|false}, indicating if SSL must be used. (See also <code>mongoc_client_set_ssl_opts</code> and <code>mongoc_client_pool_set_ssl_opts</code> \&amp;.)</dl>
+<dt><code>ssl</code></dt>
+<dd>{true|false}, indicating if SSL must be used. (See also <code>mongoc_client_set_ssl_opts</code> and <code>mongoc_client_pool_set_ssl_opts</code> \&amp;.)</dd></dl>
 <dl COMPACT>
-<dt><code>connectTimeoutMS</code></p>
-<dd>A timeout in milliseconds to attempt a connection before timing out. This setting applies to server discovery and monitoring connections as well as to connections for application operations. The default is 10 seconds.</dl>
+<dt><code>connectTimeoutMS</code></dt>
+<dd>A timeout in milliseconds to attempt a connection before timing out. This setting applies to server discovery and monitoring connections as well as to connections for application operations. The default is 10 seconds.</dd></dl>
 <dl COMPACT>
-<dt><code>socketTimeoutMS</code></p>
-<dd>The time in milliseconds to attempt to send or receive on a socket before the attempt times out. The default is 5 minutes.</dl>
+<dt><code>socketTimeoutMS</code></dt>
+<dd>The time in milliseconds to attempt to send or receive on a socket before the attempt times out. The default is 5 minutes.</dd></dl>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Setting any of the *TimeoutMS options above to <code>0</code> will be interpreted as &quot;use the default value&quot; </p>
+<dd>Setting any of the *TimeoutMS options above to <code>0</code> will be interpreted as &quot;use the default value&quot; </dd>
 </dl>
 <h2>Server Discovery, Monitoring, And Selection Options</h2>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>Clients in a <code>mongoc_client_pool_t</code> share a topology scanner that runs on a background thread. The thread wakes every <code>heartbeatFrequencyMS</code> (default 10 seconds) to scan all MongoDB servers in parallel. Whenever an application operation requires a server that is not known&#8211;for example, if there is no known primary and your application attempts an insert&#8211;the thread rescans all servers every half-second. In this situation the pooled client waits up to <code>serverSelectionTimeoutMS</code> (default 30 seconds) for the thread to find a server suitable for the operation, then returns an error with domain <code>MONGOC_ERROR_SERVER_SELECTION</code> \&amp;. </p>
+<dd>Clients in a <code>mongoc_client_pool_t</code> share a topology scanner that runs on a background thread. The thread wakes every <code>heartbeatFrequencyMS</code> (default 10 seconds) to scan all MongoDB servers in parallel. Whenever an application operation requires a server that is not known&#8211;for example, if there is no known primary and your application attempts an insert&#8211;the thread rescans all servers every half-second. In this situation the pooled client waits up to <code>serverSelectionTimeoutMS</code> (default 30 seconds) for the thread to find a server suitable for the operation, then returns an error with domain <code>MONGOC_ERROR_SERVER_SELECTION</code> \&amp;. </dd>
 <p> Technically, the total time an operation may wait while a pooled client scans the topology is controlled both by <code>serverSelectionTimeoutMS</code> and <code>connectTimeoutMS</code> \&amp;. The longest wait occurs if the last scan begins just at the end of the selection timeout, and a slow or down server requires the full connection timeout before the client gives up. </p>
 <p> A non-pooled client is single-threaded. Every <code>heartbeatFrequencyMS</code> , it blocks the next application operation while it does a parallel scan. This scan takes as long as needed to check the slowest server: roughly <code>connectTimeoutMS</code> \&amp;. Therefore the default <code>heartbeatFrequencyMS</code> for single-threaded clients is greater than for pooled clients: 60 seconds. </p>
 <p> By default, single-threaded (non-pooled) clients scan only once when an operation requires a server that is not known. If you attempt an insert and there is no known primary, the client checks all servers once trying to find it, then succeeds or returns an error with domain <code>MONGOC_ERROR_SERVER_SELECTION</code> \&amp;. But if you set <code>serverSelectionTryOnce</code> to &quot;false&quot;, the single-threaded client loops, checking all servers every half-second, until <code>serverSelectionTimeoutMS</code> \&amp;. </p>
 <p> The total time an operation may wait for a single-threaded client to scan the topology is determined by <code>connectTimeoutMS</code> in the try-once case, or <code>serverSelectionTimeoutMS</code> and <code>connectTimeoutMS</code> if <code>serverSelectionTryOnce</code> is set &quot;false&quot;. </p>
 </dl>
 <dl COMPACT>
-<dt><code>heartbeatFrequencyMS</code></p>
-<dd>The interval between server monitoring checks. Defaults to 10 seconds in pooled (multi-threaded) mode, 60 seconds in non-pooled mode (single-threaded).</dl>
+<dt><code>heartbeatFrequencyMS</code></dt>
+<dd>The interval between server monitoring checks. Defaults to 10 seconds in pooled (multi-threaded) mode, 60 seconds in non-pooled mode (single-threaded).</dd></dl>
 <dl COMPACT>
-<dt><code>serverSelectionTimeoutMS</code></p>
-<dd>A timeout in milliseconds to block for server selection before throwing an exception. The default is 30 seconds.</dl>
+<dt><code>serverSelectionTimeoutMS</code></dt>
+<dd>A timeout in milliseconds to block for server selection before throwing an exception. The default is 30 seconds.</dd></dl>
 <dl COMPACT>
-<dt><code>serverSelectionTryOnce</code></p>
-<dd>If &quot;true&quot;, the driver scans the topology exactly once after server selection fails, then either selects a server or returns an error. If it is false, then the driver repeatedly searches for a suitable server for up to <code>serverSelectionTimeoutMS</code> milliseconds (pausing a half second between attempts). The default for <code>serverSelectionTryOnce</code> is &quot;false&quot; for pooled clients, otherwise &quot;true&quot;. Pooled clients ignore serverSelectionTryOnce; they signal the thread to rescan the topology every half-second until serverSelectionTimeoutMS expires.</dl>
+<dt><code>serverSelectionTryOnce</code></dt>
+<dd>If &quot;true&quot;, the driver scans the topology exactly once after server selection fails, then either selects a server or returns an error. If it is false, then the driver repeatedly searches for a suitable server for up to <code>serverSelectionTimeoutMS</code> milliseconds (pausing a half second between attempts). The default for <code>serverSelectionTryOnce</code> is &quot;false&quot; for pooled clients, otherwise &quot;true&quot;. Pooled clients ignore serverSelectionTryOnce; they signal the thread to rescan the topology every half-second until serverSelectionTimeoutMS expires.</dd></dl>
 <dl COMPACT>
-<dt><code>socketCheckIntervalMS</code></p>
-<dd>Only applies to single threaded clients. If a socket has not been used within this time, its connection is checked with a quick &quot;isMaster&quot; call before it is used again. Defaults to 5 seconds.</dl>
+<dt><code>socketCheckIntervalMS</code></dt>
+<dd>Only applies to single threaded clients. If a socket has not been used within this time, its connection is checked with a quick &quot;isMaster&quot; call before it is used again. Defaults to 5 seconds.</dd></dl>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Setting any of the *TimeoutMS options above to <code>0</code> will be interpreted as &quot;use the default value&quot; </p>
+<dd>Setting any of the *TimeoutMS options above to <code>0</code> will be interpreted as &quot;use the default value&quot; </dd>
 </dl>
 <h2>Connection Pool Options</h2>
 <dl COMPACT>
-<dt><code>maxPoolSize</code></p>
-<dd>The maximum number of connections in the pool. The default value is 100.</dl>
+<dt><code>maxPoolSize</code></dt>
+<dd>The maximum number of connections in the pool. The default value is 100.</dd></dl>
 <dl COMPACT>
-<dt><code>minPoolSize</code></p>
-<dd>The minimum number of connections in the connection pool. Default value is 0. These are lazily created.</dl>
+<dt><code>minPoolSize</code></dt>
+<dd>The minimum number of connections in the connection pool. Default value is 0. These are lazily created.</dd></dl>
 <dl COMPACT>
-<dt><code>maxIdleTimeMS</code></p>
-<dd>Not implemented.</dl>
+<dt><code>maxIdleTimeMS</code></dt>
+<dd>Not implemented.</dd></dl>
 <dl COMPACT>
-<dt><code>waitQueueMultiple</code></p>
-<dd>Not implemented.</dl>
+<dt><code>waitQueueMultiple</code></dt>
+<dd>Not implemented.</dd></dl>
 <dl COMPACT>
-<dt><code>waitQueueTimeoutMS</code></p>
-<dd>Not implemented.</dl>
+<dt><code>waitQueueTimeoutMS</code></dt>
+<dd>Not implemented.</dd></dl>
 <h2>Write Concern Options</h2>
 <dl COMPACT>
-<dt><code>w</code></p>
+<dt><code>w</code></dt>
 <dd>
-<dt><code>0</code></p>
-<dd>The driver will not acknowledge write operations but will pass or handle any network and socket errors that it receives to the client. If you disable write concern but enable the getLastError command’s w option, w overrides the w option.</dl>
+</dd><dt><code>0</code></dt>
+<dd>The driver will not acknowledge write operations but will pass or handle any network and socket errors that it receives to the client. If you disable write concern but enable the getLastError command’s w option, w overrides the w option.</dd></dl>
 <dl COMPACT>
-<dt><code>1</code></p>
-<dd>Provides basic acknowledgment of write operations. By specifying 1, you require that a standalone mongod instance, or the primary for replica sets, acknowledge all write operations. For drivers released after the default write concern change, this is the default write concern setting.</dl>
+<dt><code>1</code></dt>
+<dd>Provides basic acknowledgment of write operations. By specifying 1, you require that a standalone mongod instance, or the primary for replica sets, acknowledge all write operations. For drivers released after the default write concern change, this is the default write concern setting.</dd></dl>
 <dl COMPACT>
-<dt><code>majority</code></p>
-<dd>For replica sets, if you specify the special majority value to w option, write operations will only return successfully after a majority of the configured replica set members have acknowledged the write operation.</dl>
+<dt><code>majority</code></dt>
+<dd>For replica sets, if you specify the special majority value to w option, write operations will only return successfully after a majority of the configured replica set members have acknowledged the write operation.</dd></dl>
 <dl COMPACT>
-<dt><code>n</code></p>
-<dd>For replica sets, if you specify a number n greater than 1, operations with this write concern return only after n members of the set have acknowledged the write. If you set n to a number that is greater than the number of available set members or members that hold data, MongoDB will wait, potentially indefinitely, for these members to become available.</dl>
+<dt><code>n</code></dt>
+<dd>For replica sets, if you specify a number n greater than 1, operations with this write concern return only after n members of the set have acknowledged the write. If you set n to a number that is greater than the number of available set members or members that hold data, MongoDB will wait, potentially indefinitely, for these members to become available.</dd></dl>
 <dl COMPACT>
-<dt><code>tags</code></p>
-<dd>For replica sets, you can specify a tag set to require that all members of the set that have these tags configured return confirmation of the write operation.</dl>
+<dt><code>tags</code></dt>
+<dd>For replica sets, you can specify a tag set to require that all members of the set that have these tags configured return confirmation of the write operation.</dd></dl>
 <dl COMPACT>
-<dt><code>wtimeoutMS</code></p>
-<dd>The time in milliseconds to wait for replication to succeed, as specified in the w option, before timing out. When wtimeoutMS is 0, write operations will never time out.</dl>
+<dt><code>wtimeoutMS</code></dt>
+<dd>The time in milliseconds to wait for replication to succeed, as specified in the w option, before timing out. When wtimeoutMS is 0, write operations will never time out.</dd></dl>
 <dl COMPACT>
-<dt><code>journal</code></p>
-<dd>Controls whether write operations will wait until the mongod acknowledges the write operations and commits the data to the on disk journal.</p>
-<dt><code>true</code></p>
-<dd>Enables journal commit acknowledgment write concern. Equivalent to specifying the getLastError command with the j option enabled.</dl>
+<dt><code>journal</code></dt>
+<dd>Controls whether write operations will wait until the mongod acknowledges the write operations and commits the data to the on disk journal.</dd>
+<dt><code>true</code></dt>
+<dd>Enables journal commit acknowledgment write concern. Equivalent to specifying the getLastError command with the j option enabled.</dd></dl>
 <dl COMPACT>
-<dt><code>false</code></p>
-<dd>Does not require that mongod commit write operations to the journal before acknowledging the write operation. This is the default option for the journal parameter.</dl>
+<dt><code>false</code></dt>
+<dd>Does not require that mongod commit write operations to the journal before acknowledging the write operation. This is the default option for the journal parameter.</dd></dl>
 <h2>Read Concern Options</h2>
 <dl COMPACT>
-<dt><code>readConcernLevel</code></p>
-<dd>The level of isolation for read operations. If the level is left unspecified, the server default will be used. See the <code>readConcern in the MongoDB Manual</code> for details.</dl>
+<dt><code>readConcernLevel</code></dt>
+<dd>The level of isolation for read operations. If the level is left unspecified, the server default will be used. See the <code>readConcern in the MongoDB Manual</code> for details.</dd></dl>
 <h2>Read Preference Options</h2>
 <dl COMPACT>
-<dt><code>readPreference</code></p>
-<dd>Specifies the replica set read preference for this connection. This setting overrides any slaveOk value. The read preference values are the following:</p>
-<dt>\[bu]</p>
-<dd>primary</p>
-<dt>\[bu]</p>
-<dd>primaryPreferred</p>
-<dt>\[bu]</p>
-<dd>secondary</p>
-<dt>\[bu]</p>
-<dd>secondaryPreferred</p>
-<dt>\[bu]</p>
-<dd>nearest</dl>
+<dt><code>readPreference</code></dt>
+<dd>Specifies the replica set read preference for this connection. This setting overrides any slaveOk value. The read preference values are the following:</dd>
+<dt>\[bu]</dt>
+<dd>primary</dd>
+<dt>\[bu]</dt>
+<dd>primaryPreferred</dd>
+<dt>\[bu]</dt>
+<dd>secondary</dd>
+<dt>\[bu]</dt>
+<dd>secondaryPreferred</dd>
+<dt>\[bu]</dt>
+<dd>nearest</dd></dl>
 <dl COMPACT>
-<dt><code>readPreferenceTags</code></p>
-<dd>Specifies a tag set as a comma-seperated list of colon-separted key-value pairs.</dl>
+<dt><code>readPreferenceTags</code></dt>
+<dd>Specifies a tag set as a comma-seperated list of colon-separted key-value pairs.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

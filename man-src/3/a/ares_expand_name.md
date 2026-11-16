@@ -22,12 +22,12 @@ int ares_expand_name(const unsigned char *encoded,
 <h2>RETURN VALUES</h2>
 <p> <code>ares_expand_name</code> can return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> Expansion of the encoded name succeeded.</p>
-<dt><code>ARES_EBADNAME</code></p>
-<dd> The encoded domain name was malformed and could not be expanded.</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> Memory was exhausted.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> Expansion of the encoded name succeeded.</dd>
+<dt><code>ARES_EBADNAME</code></dt>
+<dd> The encoded domain name was malformed and could not be expanded.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_mkquery/">ares_mkquery</a></code>(3),<code><a href="/docs/linux/man/3-ares_free_string/">ares_free_string</a></code>(3)</p>
 <h2>AUTHOR</h2>

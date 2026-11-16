@@ -14,14 +14,14 @@ description: "gnutls_pkcs12_import – API function"
 <p> <code>int gnutls_pkcs12_import(gnutls_pkcs12_t </code><i>pkcs12</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs12_t pkcs12</p>
-<dd> The structure to store the parsed PKCS12.</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> The DER or PEM encoded PKCS12.</p>
-<dt>gnutls_x509_crt_fmt_t format</p>
-<dd> One of DER or PEM</p>
-<dt>unsigned int flags</p>
-<dd> an ORed sequence of gnutls_privkey_pkcs8_flags</dl>
+<dt>gnutls_pkcs12_t pkcs12</dt>
+<dd> The structure to store the parsed PKCS12.</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> The DER or PEM encoded PKCS12.</dd>
+<dt>gnutls_x509_crt_fmt_t format</dt>
+<dd> One of DER or PEM</dd>
+<dt>unsigned int flags</dt>
+<dd> an ORed sequence of gnutls_privkey_pkcs8_flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given DER or PEM encoded PKCS12 to the native gnutls_pkcs12_t format. The output will be stored in &#8216;pkcs12&#8217;. </p>
 <p> If the PKCS12 is PEM encoded it should have a header of &quot;PKCS12&quot;.</p>
@@ -36,6 +36,6 @@ description: "gnutls_pkcs12_import – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

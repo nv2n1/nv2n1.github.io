@@ -14,17 +14,17 @@ description: "sdev_evt_alloc – allocate a new scsi event"
 <p><i>evt_type</i></p>
 <dl>
 <dd>
-<dd>type of event to allocate</dl>
+</dd><dd>type of event to allocate</dd></dl>
 <p> <i>gfpflags</i></p>
 <dl>
-<dd>GFP flags for allocation</dl>
+<dd>GFP flags for allocation</dd></dl>
 <h2>Description</h2>
 <p>Allocates and returns a new scsi_event.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

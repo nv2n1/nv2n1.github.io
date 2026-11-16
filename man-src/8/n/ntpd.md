@@ -42,63 +42,63 @@ description: "ntpd – Network Time Protocol (NTP) daemon"
 <h2>Command Line Options</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>-4</code></p>
-<dd>Force DNS resolution of host names to the IPv4 namespace.</p>
-<dt><code>-6</code></p>
-<dd>Force DNS resolution of host names to the IPv6 namespace.</p>
-<dt><code>-a</code></p>
-<dd>Require cryptographic authentication for broadcast client, multicast client and symmetric passive associations. This is the same operation as the <code>enable auth</code> command and is the default.</p>
-<dt><code>-A</code></p>
-<dd>Do not require cryptographic authentication for broadcast client, multicast client and symmetric passive associations. This is the same operation as the <code>disable auth</code> command and almost never a good idea.</p>
-<dt><code>-b</code></p>
-<dd>Enable the client to synchronize to broadcast servers.</p>
-<dt><code>-c </code><i>conffile</i></p>
-<dd>Specify the name and path of the configuration file, default <code>/etc/ntp.conf</code>46</p>
-<dt><code>-d</code></p>
-<dd>Specify debugging mode. This option may occur more than once, with each occurrence indicating greater detail of display.</p>
-<dt><code>-D </code><i>level</i></p>
-<dd>Specify debugging level directly.</p>
-<dt><code>-f </code><i>driftfile</i></p>
-<dd>Specify the name and path of the frequency file. This is the same operation as the <code>driftfile </code><i>driftfile</i> command.</p>
-<dt><code>-g</code></p>
-<dd>Normally, <code>ntpd</code> exits with a message to the system log if the offset exceeds the panic threshold, which is 1000 s by default. This option allows the time to be set to any value without restriction; however, this can happen only once. If the threshold is exceeded after that, <code>ntpd</code> will exit with a message to the system log. This option can be used with the <code>-q</code> and <code>-x</code> options. See the <code>tinker</code> command for other options.</p>
-<dt><code>-i </code><i>jaildir</i></p>
-<dd>Chroot the server to the directory <i></i><code>jaildir</code><i></i>46 This option also implies that the server attempts to drop root privileges at startup (otherwise, chroot gives very little additional security), and it is only available if the OS supports to run the server without full root privileges. You may need to also specify a <code>-u</code> option.</p>
-<dt><code>-I [</code><i>address</i><code> | </code><i>interface name</i><code>]</code></p>
-<dd>Open the network address given, or all the addresses associated with the given interface name. This option may appear multiple times. This option also implies not opening other addresses, except wildcard and localhost. This option is deprecated. Please consider using the configuration file interface command, which is more versatile.</p>
-<dt><code>-k </code><i>keyfile</i></p>
-<dd>Specify the name and path of the symmetric key file. This is the same operation as the <code>keys </code><i>keyfile</i> command.</p>
-<dt><code>-l </code><i>logfile</i></p>
-<dd>Specify the name and path of the log file. The default is the system log file. This is the same operation as the <code>logfile </code><i>logfile</i> command.</p>
-<dt><code>-L</code></p>
-<dd>Do not listen to virtual interfaces, defined as those with names containing a colon. This option is deprecated. Please consider using the configuration file interface command, which is more versatile.</p>
-<dt><code>-M</code></p>
-<dd>Raise scheduler precision to its maximum (1 msec) using timeBeginPeriod. (Windows only)</p>
-<dt><code>-m</code></p>
-<dd>Lock memory.</p>
-<dt><code>-n</code></p>
-<dd>Don&#8217;t fork.</p>
-<dt><code>-N</code></p>
-<dd>To the extent permitted by the operating system, run the <code>ntpd</code> at the highest priority.</p>
-<dt><code>-p </code><i>pidfile</i></p>
-<dd>Specify the name and path of the file used to record the <code>ntpd</code> process ID. This is the same operation as the <code>pidfile </code><i>pidfile</i> command.</p>
-<dt><code>-P </code><i>priority</i></p>
-<dd>To the extent permitted by the operating system, run the <code>ntpd</code> at the specified priority.</p>
-<dt><code>-q</code></p>
-<dd>Exit the <code>ntpd</code> just after the first time the clock is set. This behavior mimics that of the <code>ntpdate</code> program, which is to be retired. The <code>-g</code> and <code>-x</code> options can be used with this option. Note: The kernel time discipline is disabled with this option.</p>
-<dt><code>-r </code><i>broadcastdelay</i></p>
-<dd>Specify the default propagation delay from the broadcast/multicast server to this client. This is necessary only if the delay cannot be computed automatically by the protocol.</p>
-<dt><code>-s </code><i>statsdir</i></p>
-<dd>Specify the directory path for files created by the statistics facility. This is the same operation as the <code>statsdir </code><i>statsdir</i> command.</p>
-<dt><code>-t </code><i>key</i></p>
-<dd>Add a key number to the trusted key list. This option can occur more than once. This is the same operation as the <code>trustedkey </code><i>key</i> command.</p>
-<dt><code>-u </code><i>user[:group]</i></p>
-<dd>Specify a user, and optionally a group, to switch to. This option is only available if the OS supports running the server without full root privileges. Currently, this option is supported under NetBSD (configure with <code>&#8211;enable-clockctl</code>) and Linux (configure with &#8212;<code>enable-linuxcaps</code>).</p>
-<dt><code>-U </code><i>interface update interval</i></p>
-<dd>Number of seconds to wait between interface list scans to pick up new and delete network interface. Set to 0 to disable dynamic interface list updating. The default is to scan every 5 minutes.</p>
-<dt><code>-x</code></p>
-<dd>Normally, the time is slewed if the offset is less than the step threshold, which is 128 ms by default, and stepped if above the threshold. This option sets the threshold to 600 s, which is well within the accuracy window to set the clock manually. Note: Since the slew rate of typical Unix kernels is limited to 0.5 ms/s, each second of adjustment requires an amortization interval of 2000 s. Thus, an adjustment as much as 600 s will take almost 14 days to complete. This option can be used with the <code>-g</code> and <code>-q</code> options. See the <code>tinker</code> command for other options. Note: The kernel time discipline is disabled with this option and the step threshold is applied also to leap second corrections.</dl>
+</dd><dl>
+<dt><code>-4</code></dt>
+<dd>Force DNS resolution of host names to the IPv4 namespace.</dd>
+<dt><code>-6</code></dt>
+<dd>Force DNS resolution of host names to the IPv6 namespace.</dd>
+<dt><code>-a</code></dt>
+<dd>Require cryptographic authentication for broadcast client, multicast client and symmetric passive associations. This is the same operation as the <code>enable auth</code> command and is the default.</dd>
+<dt><code>-A</code></dt>
+<dd>Do not require cryptographic authentication for broadcast client, multicast client and symmetric passive associations. This is the same operation as the <code>disable auth</code> command and almost never a good idea.</dd>
+<dt><code>-b</code></dt>
+<dd>Enable the client to synchronize to broadcast servers.</dd>
+<dt><code>-c </code><i>conffile</i></dt>
+<dd>Specify the name and path of the configuration file, default <code>/etc/ntp.conf</code>46</dd>
+<dt><code>-d</code></dt>
+<dd>Specify debugging mode. This option may occur more than once, with each occurrence indicating greater detail of display.</dd>
+<dt><code>-D </code><i>level</i></dt>
+<dd>Specify debugging level directly.</dd>
+<dt><code>-f </code><i>driftfile</i></dt>
+<dd>Specify the name and path of the frequency file. This is the same operation as the <code>driftfile </code><i>driftfile</i> command.</dd>
+<dt><code>-g</code></dt>
+<dd>Normally, <code>ntpd</code> exits with a message to the system log if the offset exceeds the panic threshold, which is 1000 s by default. This option allows the time to be set to any value without restriction; however, this can happen only once. If the threshold is exceeded after that, <code>ntpd</code> will exit with a message to the system log. This option can be used with the <code>-q</code> and <code>-x</code> options. See the <code>tinker</code> command for other options.</dd>
+<dt><code>-i </code><i>jaildir</i></dt>
+<dd>Chroot the server to the directory <i></i><code>jaildir</code><i></i>46 This option also implies that the server attempts to drop root privileges at startup (otherwise, chroot gives very little additional security), and it is only available if the OS supports to run the server without full root privileges. You may need to also specify a <code>-u</code> option.</dd>
+<dt><code>-I [</code><i>address</i><code> | </code><i>interface name</i><code>]</code></dt>
+<dd>Open the network address given, or all the addresses associated with the given interface name. This option may appear multiple times. This option also implies not opening other addresses, except wildcard and localhost. This option is deprecated. Please consider using the configuration file interface command, which is more versatile.</dd>
+<dt><code>-k </code><i>keyfile</i></dt>
+<dd>Specify the name and path of the symmetric key file. This is the same operation as the <code>keys </code><i>keyfile</i> command.</dd>
+<dt><code>-l </code><i>logfile</i></dt>
+<dd>Specify the name and path of the log file. The default is the system log file. This is the same operation as the <code>logfile </code><i>logfile</i> command.</dd>
+<dt><code>-L</code></dt>
+<dd>Do not listen to virtual interfaces, defined as those with names containing a colon. This option is deprecated. Please consider using the configuration file interface command, which is more versatile.</dd>
+<dt><code>-M</code></dt>
+<dd>Raise scheduler precision to its maximum (1 msec) using timeBeginPeriod. (Windows only)</dd>
+<dt><code>-m</code></dt>
+<dd>Lock memory.</dd>
+<dt><code>-n</code></dt>
+<dd>Don&#8217;t fork.</dd>
+<dt><code>-N</code></dt>
+<dd>To the extent permitted by the operating system, run the <code>ntpd</code> at the highest priority.</dd>
+<dt><code>-p </code><i>pidfile</i></dt>
+<dd>Specify the name and path of the file used to record the <code>ntpd</code> process ID. This is the same operation as the <code>pidfile </code><i>pidfile</i> command.</dd>
+<dt><code>-P </code><i>priority</i></dt>
+<dd>To the extent permitted by the operating system, run the <code>ntpd</code> at the specified priority.</dd>
+<dt><code>-q</code></dt>
+<dd>Exit the <code>ntpd</code> just after the first time the clock is set. This behavior mimics that of the <code>ntpdate</code> program, which is to be retired. The <code>-g</code> and <code>-x</code> options can be used with this option. Note: The kernel time discipline is disabled with this option.</dd>
+<dt><code>-r </code><i>broadcastdelay</i></dt>
+<dd>Specify the default propagation delay from the broadcast/multicast server to this client. This is necessary only if the delay cannot be computed automatically by the protocol.</dd>
+<dt><code>-s </code><i>statsdir</i></dt>
+<dd>Specify the directory path for files created by the statistics facility. This is the same operation as the <code>statsdir </code><i>statsdir</i> command.</dd>
+<dt><code>-t </code><i>key</i></dt>
+<dd>Add a key number to the trusted key list. This option can occur more than once. This is the same operation as the <code>trustedkey </code><i>key</i> command.</dd>
+<dt><code>-u </code><i>user[:group]</i></dt>
+<dd>Specify a user, and optionally a group, to switch to. This option is only available if the OS supports running the server without full root privileges. Currently, this option is supported under NetBSD (configure with <code>&#8211;enable-clockctl</code>) and Linux (configure with &#8212;<code>enable-linuxcaps</code>).</dd>
+<dt><code>-U </code><i>interface update interval</i></dt>
+<dd>Number of seconds to wait between interface list scans to pick up new and delete network interface. Set to 0 to disable dynamic interface list updating. The default is to scan every 5 minutes.</dd>
+<dt><code>-x</code></dt>
+<dd>Normally, the time is slewed if the offset is less than the step threshold, which is 128 ms by default, and stepped if above the threshold. This option sets the threshold to 600 s, which is well within the accuracy window to set the clock manually. Note: Since the slew rate of typical Unix kernels is limited to 0.5 ms/s, each second of adjustment requires an amortization interval of 2000 s. Thus, an adjustment as much as 600 s will take almost 14 days to complete. This option can be used with the <code>-g</code> and <code>-q</code> options. See the <code>tinker</code> command for other options. Note: The kernel time discipline is disabled with this option and the step threshold is applied also to leap second corrections.</dd></dl>
 </dl>
 <h2>The Configuration File</h2>
 <p>Ordinarily, <code>ntpd</code> reads the <code>ntp.conf</code> configuration file at startup in order to determine the synchronization sources and operating modes. It is also possible to specify a working, although limited, configuration entirely on the command line, obviating the need for a configuration file. This may be particularly useful when the local host is to be configured as a broadcast client, with servers determined by listening to broadcasts at run time. </p>

@@ -19,6 +19,6 @@ description: "QuantLib::PoissonDistribution – Normal distribution function."
 <p> Given an integer $ k $, it returns its probability in a Poisson distribution. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against known good results.</dl>
+<dd>the correctness of the returned value is tested by checking it against known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

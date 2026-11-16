@@ -60,10 +60,10 @@ qr ! \p
 <p> Calling <code>sysread()</code>, <code>syswrite()</code>, <code>send()</code> or <code>recv()</code> on a <tt>&quot;:utf8&quot;</tt> handle, whether applied explicitly or implicitly, is now fatal. This was deprecated in perl 5.24. </p>
 <p> There were two problems with calling these functions on <tt>&quot;:utf8&quot;</tt> handles:</p>
 <dl>
-<dt>&bull;</p>
-<dd> All four functions only paid attention to the <tt>&quot;:utf8&quot;</tt> flag. Other layers were completely ignored, so a handle with <tt>&quot;:encoding(UTF-16LE)&quot;</tt> layer would be treated as <font SIZE="-1">UTF-8.</font> Other layers, such as compression are completely ignored with or without the <tt>&quot;:utf8&quot;</tt> flag.</p>
-<dt>&bull;</p>
-<dd> <code>sysread()</code> and <code>recv()</code> would read from the handle, skipping any validation by the layers, and do no validation of their own. This could lead to invalidly encoded perl scalars.</dl>
+<dt>&bull;</dt>
+<dd> All four functions only paid attention to the <tt>&quot;:utf8&quot;</tt> flag. Other layers were completely ignored, so a handle with <tt>&quot;:encoding(UTF-16LE)&quot;</tt> layer would be treated as <font SIZE="-1">UTF-8.</font> Other layers, such as compression are completely ignored with or without the <tt>&quot;:utf8&quot;</tt> flag.</dd>
+<dt>&bull;</dt>
+<dd> <code>sysread()</code> and <code>recv()</code> would read from the handle, skipping any validation by the layers, and do no validation of their own. This could lead to invalidly encoded perl scalars.</dd></dl>
 <p> [perl #125760] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125760">https://rt.perl.org/Ticket/Display.html?id=125760</a>&gt;.</p>
 <h3><code>my()</code> in false conditional prohibited</h3>
 <p> Declarations such as <tt>&quot;my $x if 0&quot;</tt> are no longer permitted. </p>
@@ -81,3 +81,4 @@ qr ! \p
 <p> It croaks if it would otherwise return a <font SIZE="-1">UTF-8</font> string that contains malformed <font SIZE="-1">UTF-8.</font> This protects against potential security threats. This is considered a bug fix as well. [perl #131642] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=131642">https://rt.perl.org/Ticket/Display.html?id=131642</a>&gt;.</p>
 <h3>Any set of digits in the Common script are legal in a script run of another script</h3>
 <p> There are several sets of digits in the Common script. <tt>&quot;[0-9]&quot;</tt> is the most familiar. But there are also <tt>&quot;[
+</p>

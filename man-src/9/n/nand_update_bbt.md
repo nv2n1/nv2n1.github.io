@@ -14,14 +14,14 @@ description: "nand_update_bbt – update bad block table(s)"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>offs</i></p>
 <dl>
-<dd>the offset of the newly marked block</dl>
+<dd>the offset of the newly marked block</dd></dl>
 <h2>Description</h2>
 <p>The function updates the bad block table(s).</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

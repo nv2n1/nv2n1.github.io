@@ -30,17 +30,17 @@ rlWaitForCmd command[-p PID][-t time][-m count][-d delay][-r retval]
 </code></pre>
 <dl>
 <dt>command
-<dd> Command that will be executed until its return code is equal 0 or value speciefied as option to `-r'.
-<dt>-t time
-<dd> Timeout in seconds, default=120. If the command doesn't return 0 before time elapses, the command will be killed.
-<dt>-p <font SIZE="-1">PID</font>
-<dd> <font SIZE="-1">PID</font> of the process to check before running command. If the process exits before the socket is opened, the command will log a <font SIZE="-1">WARNING.</font>
-<dt>-m count
-<dd> Maximum number of `command' executions before continuing anyway. Default is infite. Returns 1 if the maximum was reached.
-<dt>-d delay
-<dd> Delay between `command' invocations. Default 1.
-<dt>-r retval
-<dd> Expected return value of command. Default 0.</dl>
+</dt><dd> Command that will be executed until its return code is equal 0 or value speciefied as option to `-r'.
+</dd><dt>-t time
+</dt><dd> Timeout in seconds, default=120. If the command doesn't return 0 before time elapses, the command will be killed.
+</dd><dt>-p <font SIZE="-1">PID</font>
+</dt><dd> <font SIZE="-1">PID</font> of the process to check before running command. If the process exits before the socket is opened, the command will log a <font SIZE="-1">WARNING.</font>
+</dd><dt>-m count
+</dt><dd> Maximum number of `command' executions before continuing anyway. Default is infite. Returns 1 if the maximum was reached.
+</dd><dt>-d delay
+</dt><dd> Delay between `command' invocations. Default 1.
+</dd><dt>-r retval
+</dt><dd> Expected return value of command. Default 0.</dd></dl>
  
 
  <i>rlWaitForFile</i> 
@@ -52,13 +52,13 @@ rlWaitForFile path[-p PID][-t time][-d delay]
 
 <dl>
 <dt>path
-<dd> Path to file that should start existing.
-<dt>-t time
-<dd> Timeout in seconds (optional, default=120). If the file isn't opened before the time elapses the command returns 1.
-<dt>-p <font SIZE="-1">PID</font>
-<dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the file is created, the command returns with status code of 1.
-<dt>-d delay
-<dd> Delay between subsequent checks for existence of file. Default 1.</dl>
+</dt><dd> Path to file that should start existing.
+</dd><dt>-t time
+</dt><dd> Timeout in seconds (optional, default=120). If the file isn't opened before the time elapses the command returns 1.
+</dd><dt>-p <font SIZE="-1">PID</font>
+</dt><dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the file is created, the command returns with status code of 1.
+</dd><dt>-d delay
+</dt><dd> Delay between subsequent checks for existence of file. Default 1.</dd></dl>
  
 
  <i>rlWaitForSocket</i> 
@@ -70,15 +70,15 @@ rlWaitForSocket{port | path}[-p PID][-t time][-d delay][--close]
 
 <dl>
 <dt>port|path
-<dd> Network port to wait for opening or a path to <font SIZE="-1">UNIX</font> socket. Regular expressions are also supported.
-<dt>-t time
-<dd> Timeout in seconds (optional, default=120). If the socket isn't opened before the time elapses the command returns 1.
-<dt>-p <font SIZE="-1">PID</font>
-<dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the socket is opened, the command returns with status code of 1.
-<dt>-d delay
-<dd> Delay between subsequent checks for availability of socket. Default 1.
-<dt>--close
-<dd> Wait for the socket to stop listening.</dl>
+</dt><dd> Network port to wait for opening or a path to <font SIZE="-1">UNIX</font> socket. Regular expressions are also supported.
+</dd><dt>-t time
+</dt><dd> Timeout in seconds (optional, default=120). If the socket isn't opened before the time elapses the command returns 1.
+</dd><dt>-p <font SIZE="-1">PID</font>
+</dt><dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the socket is opened, the command returns with status code of 1.
+</dd><dt>-d delay
+</dt><dd> Delay between subsequent checks for availability of socket. Default 1.
+</dd><dt>--close
+</dt><dd> Wait for the socket to stop listening.</dd></dl>
  
 
  <i>rlWait</i> 
@@ -90,19 +90,18 @@ rlWaitFor[n...][-s SIGNAL][-t time]
 </code></pre>
 <dl>
 <dt>n
-<dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i>bash_builtins</i>(1) section for `wait' command/
-<dt>-t time
-<dd> Timeout in seconds (optional, default=30). If the wait isn't successful before the time elapses then all specified tasks are killed.
-<dt>-s <font SIZE="-1">SIGNAL</font>
-<dd> Signal used to kill the process, optional <font SIZE="-1">SIGTERM</font> by default.</dl>
+</dt><dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i>bash_builtins</i>(1) section for `wait' command/
+</dd><dt>-t time
+</dt><dd> Timeout in seconds (optional, default=30). If the wait isn't successful before the time elapses then all specified tasks are killed.
+</dd><dt>-s <font SIZE="-1">SIGNAL</font>
+</dt><dd> Signal used to kill the process, optional <font SIZE="-1">SIGTERM</font> by default.</dd></dl>
 
 <h2>AUTHORS</h2>
 
 <dl>
 <dt>&bull;
-<dd> Hubert Kario &lt;hkario [at] redhat.com&gt; 
-
-</dl>
+</dt><dd> Hubert Kario &lt;hkario [at] redhat.com&gt; 
+</dd></dl>
 
 <h2>Index</h2>
 

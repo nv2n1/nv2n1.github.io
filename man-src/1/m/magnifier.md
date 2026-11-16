@@ -17,80 +17,80 @@ description: "magnifier – GNOME Magnifier (gnome-mag)"
 <p> A desktop screen magnifier. If present, the Region Of Interest (ROI) for the magnifier can be driven by a screen reader via the Assistive Technology Service Provider Interface (ATSPI); otherwise, the magnifier will be centered to the pointer position.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t, &#8211;target-display=STRING</code></p>
-<dd> specify display on which to show magnified view</p>
-<dt><code>-s, &#8211;source-display=STRING</code></p>
-<dd> specify display to magnify</p>
-<dt><code>&#8211;cursor-set=STRING</code></p>
-<dd> cursor set to use in target display</p>
-<dt><code>&#8211;cursor-size=INT</code></p>
-<dd> cursor size to use (overrides cursor-scale-factor)</p>
-<dt><code>&#8211;cursor-scale-factor=FLOAT</code></p>
-<dd> cursor scale factor</p>
-<dt><code>&#8211;cursor-color=LONG</code></p>
-<dd> cursor color (applied to &#8216;black&#8217; pixels</p>
-<dt><code>-v, -vertical</code></p>
-<dd> split screen vertically (if target display = source display)</p>
-<dt><code>-h, &#8211;horizontal </code></p>
-<dd> split screen horizontally (if target display = source display)</p>
-<dt><code>-m, &#8211;mouse-follow </code></p>
-<dd> track mouse movements</p>
-<dt><code>-r, &#8211;refresh-time=INT </code></p>
-<dd> minimum refresh time for idle, in ms</p>
-<dt><code>&#8211;mouse-latency=INT </code></p>
-<dd> maximum mouse latency time, in ms</p>
-<dt><code>-z, &#8211;zoom-factor=FLOAT </code></p>
-<dd> zoom (scale) factor used to magnify source display</p>
-<dt><code>-i, &#8211;invert-image </code></p>
-<dd> invert the image colormap</p>
-<dt><code>&#8211;no-initial-region </code></p>
-<dd> don&#8217;t create an initial zoom region</p>
-<dt><code>&#8211;timing-iterations=INT </code></p>
-<dd> iterations to run timing benchmark test (0=continuous)</p>
-<dt><code>&#8211;timing-output </code></p>
-<dd> display performance ouput</p>
-<dt><code>&#8211;timing-pan-rate=INT </code></p>
-<dd> timing pan rate in lines per frame</p>
-<dt><code>&#8211;timing-delta-x=INT </code></p>
-<dd> pixels to pan in x-dimension each frame in timing update test</p>
-<dt><code>&#8211;timing-delta-y=INT </code></p>
-<dd> pixels to pan in y-dimension each frame in timing update test</p>
-<dt><code>&#8211;smoothing-type=STRING </code></p>
-<dd> image smoothing algorithm to apply (bilinear-interpolation | none)</p>
-<dt><code>-f, \&#8211;fullscreen </code></p>
-<dd> fullscreen magnification, covers entire target display [REQUIRES &#8211;source-display and &#8211;target-display]</p>
-<dt><code>&#8211;smooth-scrolling </code></p>
-<dd> use smooth scrolling</p>
-<dt><code>-b, &#8211;border-size=INT </code></p>
-<dd> width of border</p>
-<dt><code>-c, &#8211;border-color=LONG </code></p>
-<dd> border color specified as (A)RGB 23-bit value, Alpha-MSB</p>
-<dt><code>&#8211;use-test-pattern </code></p>
-<dd> use test pattern as source</p>
-<dt><code>&#8211;override-redirect </code></p>
-<dd> make the magnifier window totally unmanaged by the window manager</p>
-<dt><code>&#8211;ignore-damage </code></p>
-<dd> ignore the X server DAMAGE extension, if present</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> command line help</p>
-<dt><code>&#8211;usage</code></p>
-<dd> command line synopsis</dl>
+<dt><code>-t, &#8211;target-display=STRING</code></dt>
+<dd> specify display on which to show magnified view</dd>
+<dt><code>-s, &#8211;source-display=STRING</code></dt>
+<dd> specify display to magnify</dd>
+<dt><code>&#8211;cursor-set=STRING</code></dt>
+<dd> cursor set to use in target display</dd>
+<dt><code>&#8211;cursor-size=INT</code></dt>
+<dd> cursor size to use (overrides cursor-scale-factor)</dd>
+<dt><code>&#8211;cursor-scale-factor=FLOAT</code></dt>
+<dd> cursor scale factor</dd>
+<dt><code>&#8211;cursor-color=LONG</code></dt>
+<dd> cursor color (applied to &#8216;black&#8217; pixels</dd>
+<dt><code>-v, -vertical</code></dt>
+<dd> split screen vertically (if target display = source display)</dd>
+<dt><code>-h, &#8211;horizontal </code></dt>
+<dd> split screen horizontally (if target display = source display)</dd>
+<dt><code>-m, &#8211;mouse-follow </code></dt>
+<dd> track mouse movements</dd>
+<dt><code>-r, &#8211;refresh-time=INT </code></dt>
+<dd> minimum refresh time for idle, in ms</dd>
+<dt><code>&#8211;mouse-latency=INT </code></dt>
+<dd> maximum mouse latency time, in ms</dd>
+<dt><code>-z, &#8211;zoom-factor=FLOAT </code></dt>
+<dd> zoom (scale) factor used to magnify source display</dd>
+<dt><code>-i, &#8211;invert-image </code></dt>
+<dd> invert the image colormap</dd>
+<dt><code>&#8211;no-initial-region </code></dt>
+<dd> don&#8217;t create an initial zoom region</dd>
+<dt><code>&#8211;timing-iterations=INT </code></dt>
+<dd> iterations to run timing benchmark test (0=continuous)</dd>
+<dt><code>&#8211;timing-output </code></dt>
+<dd> display performance ouput</dd>
+<dt><code>&#8211;timing-pan-rate=INT </code></dt>
+<dd> timing pan rate in lines per frame</dd>
+<dt><code>&#8211;timing-delta-x=INT </code></dt>
+<dd> pixels to pan in x-dimension each frame in timing update test</dd>
+<dt><code>&#8211;timing-delta-y=INT </code></dt>
+<dd> pixels to pan in y-dimension each frame in timing update test</dd>
+<dt><code>&#8211;smoothing-type=STRING </code></dt>
+<dd> image smoothing algorithm to apply (bilinear-interpolation | none)</dd>
+<dt><code>-f, \&#8211;fullscreen </code></dt>
+<dd> fullscreen magnification, covers entire target display [REQUIRES &#8211;source-display and &#8211;target-display]</dd>
+<dt><code>&#8211;smooth-scrolling </code></dt>
+<dd> use smooth scrolling</dd>
+<dt><code>-b, &#8211;border-size=INT </code></dt>
+<dd> width of border</dd>
+<dt><code>-c, &#8211;border-color=LONG </code></dt>
+<dd> border color specified as (A)RGB 23-bit value, Alpha-MSB</dd>
+<dt><code>&#8211;use-test-pattern </code></dt>
+<dd> use test pattern as source</dd>
+<dt><code>&#8211;override-redirect </code></dt>
+<dd> make the magnifier window totally unmanaged by the window manager</dd>
+<dt><code>&#8211;ignore-damage </code></dt>
+<dd> ignore the X server DAMAGE extension, if present</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> command line help</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> command line synopsis</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/share/gnome-mag/1_32/*.xpm</code></p>
+<dt><code>/usr/share/gnome-mag/1_32/*.xpm</code></dt>
 <dd>
-<dt><code>/usr/lib/bonobo/servers/GNOME_Magnifier.server</code></p>
+</dd><dt><code>/usr/lib/bonobo/servers/GNOME_Magnifier.server</code></dt>
 <dd>
-<dt><code>/usr/lib/libgnome-mag.so.2</code></p>
-<dd></dl>
+</dd><dt><code>/usr/lib/libgnome-mag.so.2</code></dt>
+<dd></dd></dl>
 <h2>BUGS</h2>
 <p> See <i><a rel="nofollow" href="http://bugs.gnome.org">http://bugs.gnome.org</a></i></p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Erwann Chenede &lt;erwann.chenede [at] sun.com&gt;</p>
+<dt>Erwann Chenede &lt;erwann.chenede [at] sun.com&gt;</dt>
 <dd>
-<dt>Bill Haneman &lt;bill.haneman [at] sun.com&gt;</p>
-<dd></dl>
+</dd><dt>Bill Haneman &lt;bill.haneman [at] sun.com&gt;</dt>
+<dd></dd></dl>
 <h2>LICENSE</h2>
 <p> Licensed under the GNU Lesser Public License (LGPL) v2.1</p>
 <h2>SEE ALSO</h2>

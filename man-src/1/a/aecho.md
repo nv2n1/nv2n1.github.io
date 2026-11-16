@@ -19,16 +19,16 @@ description: "aecho – send AppleTalk Echo Protocol packets to network hosts"
 <p> Check to see if a particular host is up and responding to AEP packets: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 example % aecho bloodsport 11 bytes from 8195.13 : aep_seq = 0. time = 10. ms 11 bytes from 8195.13 : aep_seq = 1. time = 10. ms 11 bytes from 8195.13 : aep_seq = 2. time = 10. ms 11 bytes from 8195.13 : aep_seq = 3. time = 10. ms 11 bytes from 8195.13 : aep_seq = 4. time = 10. ms 11 bytes from 8195.13 : aep_seq = 5. time = 9. ms ^ C-- --8195.13 AEP Statistics-- --6 packets sent, 6 packets received, 0 % packet loss round - trip(ms) min / avg / max = 9 / 9 / 10
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-c</code><i> count</i></p>
 <dl>
 <dt>
-<dd> Stop after <i>count</i> packets.</dl>
+</dt><dd> Stop after <i>count</i> packets.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>ping</code>(1), <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3), <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code>aep</code>(4), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>
 <h2>Index</h2>

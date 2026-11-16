@@ -21,103 +21,103 @@ git describe[--all][--tags][--contains][--abbrev = &lt;n&gt;][&lt;commit - ish&g
 <p> &lt;commit-ish&gt;&#8230;</p>
 <dl>
 <dt>
-<dd> Commit-ish object names to describe. Defaults to HEAD if omitted.</dl>
+</dt><dd> Commit-ish object names to describe. Defaults to HEAD if omitted.</dd></dl>
 <p> &#8211;dirty[=&lt;mark&gt;], &#8211;broken[=&lt;mark&gt;]</p>
 <dl>
 <dt>
-<dd> Describe the state of the working tree. When the working tree matches HEAD, the output is the same as &quot;git describe HEAD&quot;. If the working tree has local modification &quot;-dirty&quot; is appended to it. If a repository is corrupt and Git cannot determine if there is local modification, Git will error out, unless &#8216;&#8211;broken&#8217; is given, which appends the suffix &quot;-broken&quot; instead.</dl>
+</dt><dd> Describe the state of the working tree. When the working tree matches HEAD, the output is the same as &quot;git describe HEAD&quot;. If the working tree has local modification &quot;-dirty&quot; is appended to it. If a repository is corrupt and Git cannot determine if there is local modification, Git will error out, unless &#8216;&#8211;broken&#8217; is given, which appends the suffix &quot;-broken&quot; instead.</dd></dl>
 <p> &#8211;all</p>
 <dl>
 <dt>
-<dd> Instead of using only the annotated tags, use any ref found in <code>refs/</code> namespace. This option enables matching any known branch, remote-tracking branch, or lightweight tag.</dl>
+</dt><dd> Instead of using only the annotated tags, use any ref found in <code>refs/</code> namespace. This option enables matching any known branch, remote-tracking branch, or lightweight tag.</dd></dl>
 <p> &#8211;tags</p>
 <dl>
 <dt>
-<dd> Instead of using only the annotated tags, use any tag found in <code>refs/tags</code> namespace. This option enables matching a lightweight (non-annotated) tag.</dl>
+</dt><dd> Instead of using only the annotated tags, use any tag found in <code>refs/tags</code> namespace. This option enables matching a lightweight (non-annotated) tag.</dd></dl>
 <p> &#8211;contains</p>
 <dl>
 <dt>
-<dd> Instead of finding the tag that predates the commit, find the tag that comes after the commit, and thus contains it. Automatically implies &#8211;tags.</dl>
+</dt><dd> Instead of finding the tag that predates the commit, find the tag that comes after the commit, and thus contains it. Automatically implies &#8211;tags.</dd></dl>
 <p> &#8211;abbrev=&lt;n&gt;</p>
 <dl>
 <dt>
-<dd> Instead of using the default number of hexadecimal digits (which will vary according to the number of objects in the repository with a default of 7) of the abbreviated object name, use &lt;n&gt; digits, or as many digits as needed to form a unique object name. An &lt;n&gt; of 0 will suppress long format, only showing the closest tag.</dl>
+</dt><dd> Instead of using the default number of hexadecimal digits (which will vary according to the number of objects in the repository with a default of 7) of the abbreviated object name, use &lt;n&gt; digits, or as many digits as needed to form a unique object name. An &lt;n&gt; of 0 will suppress long format, only showing the closest tag.</dd></dl>
 <p> &#8211;candidates=&lt;n&gt;</p>
 <dl>
 <dt>
-<dd> Instead of considering only the 10 most recent tags as candidates to describe the input commit-ish consider up to &lt;n&gt; candidates. Increasing &lt;n&gt; above 10 will take slightly longer but may produce a more accurate result. An &lt;n&gt; of 0 will cause only exact matches to be output.</dl>
+</dt><dd> Instead of considering only the 10 most recent tags as candidates to describe the input commit-ish consider up to &lt;n&gt; candidates. Increasing &lt;n&gt; above 10 will take slightly longer but may produce a more accurate result. An &lt;n&gt; of 0 will cause only exact matches to be output.</dd></dl>
 <p> &#8211;exact-match</p>
 <dl>
 <dt>
-<dd> Only output exact matches (a tag directly references the supplied commit). This is a synonym for &#8211;candidates=0.</dl>
+</dt><dd> Only output exact matches (a tag directly references the supplied commit). This is a synonym for &#8211;candidates=0.</dd></dl>
 <p> &#8211;debug</p>
 <dl>
 <dt>
-<dd> Verbosely display information about the searching strategy being employed to standard error. The tag name will still be printed to standard out.</dl>
+</dt><dd> Verbosely display information about the searching strategy being employed to standard error. The tag name will still be printed to standard out.</dd></dl>
 <p> &#8211;long</p>
 <dl>
 <dt>
-<dd> Always output the long format (the tag, the number of commits and the abbreviated commit name) even when it matches a tag. This is useful when you want to see parts of the commit object name in &quot;describe&quot; output, even when the commit in question happens to be a tagged version. Instead of just emitting the tag name, it will describe such a commit as v1.2-0-gdeadbee (0th commit since tag v1.2 that points at object deadbee&#8230;.).</dl>
+</dt><dd> Always output the long format (the tag, the number of commits and the abbreviated commit name) even when it matches a tag. This is useful when you want to see parts of the commit object name in &quot;describe&quot; output, even when the commit in question happens to be a tagged version. Instead of just emitting the tag name, it will describe such a commit as v1.2-0-gdeadbee (0th commit since tag v1.2 that points at object deadbee&#8230;.).</dd></dl>
 <p> &#8211;match &lt;pattern&gt;</p>
 <dl>
 <dt>
-<dd> Only consider tags matching the given <code><a href="/docs/linux/man/7-glob/">glob</a>(7)</code> pattern, excluding the &quot;refs/tags/&quot; prefix. If used with <code>&#8211;all</code>, it also considers local branches and remote-tracking references matching the pattern, excluding respectively &quot;refs/heads/&quot; and &quot;refs/remotes/&quot; prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated, and tags matching any of the patterns will be considered. Use <code>&#8211;no-match</code> to clear and reset the list of patterns.</dl>
+</dt><dd> Only consider tags matching the given <code><a href="/docs/linux/man/7-glob/">glob</a>(7)</code> pattern, excluding the &quot;refs/tags/&quot; prefix. If used with <code>&#8211;all</code>, it also considers local branches and remote-tracking references matching the pattern, excluding respectively &quot;refs/heads/&quot; and &quot;refs/remotes/&quot; prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated, and tags matching any of the patterns will be considered. Use <code>&#8211;no-match</code> to clear and reset the list of patterns.</dd></dl>
 <p> &#8211;exclude &lt;pattern&gt;</p>
 <dl>
 <dt>
-<dd> Do not consider tags matching the given <code><a href="/docs/linux/man/7-glob/">glob</a>(7)</code> pattern, excluding the &quot;refs/tags/&quot; prefix. If used with <code>&#8211;all</code>, it also does not consider local branches and remote-tracking references matching the pattern, excluding respectively &quot;refs/heads/&quot; and &quot;refs/remotes/&quot; prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated and tags matching any of the patterns will be excluded. When combined with &#8211;match a tag will be considered when it matches at least one &#8211;match pattern and does not match any of the &#8211;exclude patterns. Use <code>&#8211;no-exclude</code> to clear and reset the list of patterns.</dl>
+</dt><dd> Do not consider tags matching the given <code><a href="/docs/linux/man/7-glob/">glob</a>(7)</code> pattern, excluding the &quot;refs/tags/&quot; prefix. If used with <code>&#8211;all</code>, it also does not consider local branches and remote-tracking references matching the pattern, excluding respectively &quot;refs/heads/&quot; and &quot;refs/remotes/&quot; prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated and tags matching any of the patterns will be excluded. When combined with &#8211;match a tag will be considered when it matches at least one &#8211;match pattern and does not match any of the &#8211;exclude patterns. Use <code>&#8211;no-exclude</code> to clear and reset the list of patterns.</dd></dl>
 <p> &#8211;always</p>
 <dl>
 <dt>
-<dd> Show uniquely abbreviated commit object as fallback.</dl>
+</dt><dd> Show uniquely abbreviated commit object as fallback.</dd></dl>
 <p> &#8211;first-parent</p>
 <dl>
 <dt>
-<dd> Follow only the first parent commit upon seeing a merge commit. This is useful when you wish to not match tags on branches merged in the history of the target commit.</dl>
+</dt><dd> Follow only the first parent commit upon seeing a merge commit. This is useful when you wish to not match tags on branches merged in the history of the target commit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> With something like git.git current tree, I get: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [torvalds@g5 git]$ git describe parent
 v1.0.4-14-g2414721
 </pre>
-</dl>
+</dd></dl>
 <p> i.e. the current head of my &quot;parent&quot; branch is based on v1.0.4, but since it has a few commits on top of that, describe has added the number of additional commits (&quot;14&quot;) and an abbreviated object name for the commit itself (&quot;2414721&quot;) at the end. </p>
 <p> The number of additional commits is the number of commits which would be displayed by &quot;git log v1.0.4..parent&quot;. The hash suffix is &quot;-g&quot; + an unambigous abbreviation for the tip commit of parent (which was <code>2414721b194453f058079d897d13c4e377f92dc6</code>). The length of the abbreviation scales as the repository grows, using the approximate number of objects in the repository and a bit of math around the birthday paradox, and defaults to a minimum of 7. The &quot;g&quot; prefix stands for &quot;git&quot; and is used to allow describing the version of a software depending on the SCM the software is managed with. This is useful in an environment where people may use different SCMs. </p>
 <p> Doing a <i>git describe</i> on a tag-name will just show the tag name: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [torvalds@g5 git]$ git describe v1.0.4
 v1.0.4
 </pre>
-</dl>
+</dd></dl>
 <p> With &#8211;all, the command can use branch heads as references, so the output shows the reference path as well: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 [torvalds @g5 git] $ git describe&#8211; all&#8211; abbrev = 4 v1 .0.5 ^ 2 tags / v1 .0.0 &#8211; 21 &#8211; g975b
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [torvalds @g5 git] $ git describe-- all-- abbrev = 4 HEAD ^
                                                    heads / lt / describe - 7 - g975b
 </code></pre>
-</dl>
+</dd></dl>
 <p> With &#8211;abbrev set to 0, the command can be used to find the closest tagname without any suffix: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [torvalds@g5 git]$ git describe --abbrev=0 v1.0.5^2
 tags/v1.0.0
 </pre>
-</dl>
+</dd></dl>
 <p> Note that the suffix you get if you type these commands today may be longer than what Linus saw above when he ran these commands, as your Git repository may have new commits whose object names begin with 975b that did not exist back then, and &quot;-g975b&quot; suffix alone may not be sufficient to disambiguate these commits.</p>
 <h2>SEARCH STRATEGY</h2>
 <p> For each commit-ish supplied, <i>git describe</i> will first look for a tag which tags exactly that commit. Annotated tags will always be preferred over lightweight tags, and tags with newer dates will always be preferred over tags with older dates. If an exact match is found, its name will be output and searching will stop. </p>

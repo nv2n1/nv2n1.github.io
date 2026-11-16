@@ -10,7 +10,6 @@ description: "std::logic_error – std::logic_error"
 <p>std::logic_error &#8211; std::logic_error</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 class logic_error;</code></pre>
 <p>Defines a type of object to be thrown as exception. It reports errors that are a consequence of faulty logic within the program such as violating logical preconditions or class invariants and may be preventable.<br />
 No standard library components throw this exception directly, but the exception types std::invalid_argument, std::domain_error, std::length_error, std::out_of_range, std::future_error, and std::experimental::bad_optional_access are derived from std::logic_error.<br />

@@ -17,11 +17,11 @@ description: "usbredirserver – exporting an USB device for use from another (v
 <p> Notice that an instance of usbredirserver can only be used to export a single USB device. If you want to export multiple devices you can start multiple instances listening on different TCP ports.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> Set the TCP port to listen on to <i>PORT</i></p>
-<dt><code>-v</code>, <code>&#8211;verbose</code>=<i>VERBOSE</i></p>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> Set the TCP port to listen on to <i>PORT</i></dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code>=<i>VERBOSE</i></dt>
 <dd> Set usbredirserver&#8217;s verbosity level to <i>VERBOSE</i>, this mostly affects USB redirection related messages. Valid values are 0-5:<br />
- 0:Silent 1:Errors 2:Warnings 3:Info 4:Debug 5:Debug++</dl>
+ 0:Silent 1:Errors 2:Warnings 3:Info 4:Debug 5:Debug++</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Hans de Goede &lt;hdegoede [at] redhat.com&gt;</p>
 <h2>REPORTING BUGS</h2>

@@ -14,14 +14,14 @@ description: "debugfs_create_devm_seqfile – create a debugfs file that is boun
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device related to this debugfs file.</dl>
+</dd><dd>device related to this debugfs file.</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>name of the debugfs file.</dl>
+<dd>name of the debugfs file.</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the debugfs filesystem.</dl>
+<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the debugfs filesystem.</dd></dl>
 <p> <i>read_fn</i></p>
 <dl>
-<dd>function pointer called to print the seq_file content.</dl>
+<dd>function pointer called to print the seq_file content.</dd></dl>
 <h2>Copyright</h2>

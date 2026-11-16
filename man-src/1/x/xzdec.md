@@ -17,26 +17,26 @@ description: "xzdec, lzmadec – Small .xz and .lzma decompressors"
 <p> To reduce the size of the executable, <code>xzdec</code> doesn&#8217;t support multithreading or localization, and doesn&#8217;t read options from <code>XZ_DEFAULTS</code> and <code>XZ_OPT</code> environment variables. <code>xzdec</code> doesn&#8217;t support displaying intermediate progress information: sending <code>SIGINFO</code> to <code>xzdec</code> does nothing, but sending <code>SIGUSR1</code> terminates the process instead of displaying progress information.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;decompress</code>, <code>&#8211;uncompress</code></p>
-<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> supports only decompression.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> never creates or removes any files.</p>
-<dt><code>-c</code>, <code>&#8211;stdout</code>, <code>&#8211;to-stdout</code></p>
-<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> always writes the decompressed data to standard output.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Specifying this once does nothing since <code>xzdec</code> never displays any warnings or notices. Specify this twice to suppress errors.</p>
-<dt><code>-Q</code>, <code>&#8211;no-warn</code></p>
-<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> never uses the exit status 2.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display a help message and exit successfully.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display the version number of <code>xzdec</code> and liblzma.</dl>
+<dt><code>-d</code>, <code>&#8211;decompress</code>, <code>&#8211;uncompress</code></dt>
+<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> supports only decompression.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> never creates or removes any files.</dd>
+<dt><code>-c</code>, <code>&#8211;stdout</code>, <code>&#8211;to-stdout</code></dt>
+<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> always writes the decompressed data to standard output.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Specifying this once does nothing since <code>xzdec</code> never displays any warnings or notices. Specify this twice to suppress errors.</dd>
+<dt><code>-Q</code>, <code>&#8211;no-warn</code></dt>
+<dd> Ignored for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) compatibility. <code>xzdec</code> never uses the exit status 2.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display a help message and exit successfully.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display the version number of <code>xzdec</code> and liblzma.</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> All was good.</p>
-<dt><code>1</code></p>
-<dd> An error occurred.</dl>
+<dt><code>0</code></dt>
+<dd> All was good.</dd>
+<dt><code>1</code></dt>
+<dd> An error occurred.</dd></dl>
 <p> <code>xzdec</code> doesn&#8217;t have any warning messages like <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) has, thus the exit status 2 is not used by <code>xzdec</code>.</p>
 <h2>NOTES</h2>
 <p> Use <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) instead of <code>xzdec</code> or <code>lzmadec</code> for normal everyday use. <code>xzdec</code> or <code>lzmadec</code> are meant only for situations where it is important to have a smaller decompressor than the full-featured <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1). </p>

@@ -39,91 +39,91 @@ description: "pam – Pluggable Authentication Modules Library"
 <p>The following return codes are known by PAM: </p>
 <p> PAM_ABORT</p>
 <dl>
-<dd>Critical error, immediate abort.</dl>
+<dd>Critical error, immediate abort.</dd></dl>
 <p> PAM_ACCT_EXPIRED</p>
 <dl>
-<dd>User account has expired.</dl>
+<dd>User account has expired.</dd></dl>
 <p> PAM_AUTHINFO_UNAVAIL</p>
 <dl>
-<dd>Authentication service cannot retrieve authentication info.</dl>
+<dd>Authentication service cannot retrieve authentication info.</dd></dl>
 <p> PAM_AUTHTOK_DISABLE_AGING</p>
 <dl>
-<dd>Authentication token aging disabled.</dl>
+<dd>Authentication token aging disabled.</dd></dl>
 <p> PAM_AUTHTOK_ERR</p>
 <dl>
-<dd>Authentication token manipulation error.</dl>
+<dd>Authentication token manipulation error.</dd></dl>
 <p> PAM_AUTHTOK_EXPIRED</p>
 <dl>
-<dd>Authentication token expired.</dl>
+<dd>Authentication token expired.</dd></dl>
 <p> PAM_AUTHTOK_LOCK_BUSY</p>
 <dl>
-<dd>Authentication token lock busy.</dl>
+<dd>Authentication token lock busy.</dd></dl>
 <p> PAM_AUTHTOK_RECOVERY_ERR</p>
 <dl>
-<dd>Authentication information cannot be recovered.</dl>
+<dd>Authentication information cannot be recovered.</dd></dl>
 <p> PAM_AUTH_ERR</p>
 <dl>
-<dd>Authentication failure.</dl>
+<dd>Authentication failure.</dd></dl>
 <p> PAM_BUF_ERR</p>
 <dl>
-<dd>Memory buffer error.</dl>
+<dd>Memory buffer error.</dd></dl>
 <p> PAM_CONV_ERR</p>
 <dl>
-<dd>Conversation failure.</dl>
+<dd>Conversation failure.</dd></dl>
 <p> PAM_CRED_ERR</p>
 <dl>
-<dd>Failure setting user credentials.</dl>
+<dd>Failure setting user credentials.</dd></dl>
 <p> PAM_CRED_EXPIRED</p>
 <dl>
-<dd>User credentials expired.</dl>
+<dd>User credentials expired.</dd></dl>
 <p> PAM_CRED_INSUFFICIENT</p>
 <dl>
-<dd>Insufficient credentials to access authentication data.</dl>
+<dd>Insufficient credentials to access authentication data.</dd></dl>
 <p> PAM_CRED_UNAVAIL</p>
 <dl>
-<dd>Authentication service cannot retrieve user credentials.</dl>
+<dd>Authentication service cannot retrieve user credentials.</dd></dl>
 <p> PAM_IGNORE</p>
 <dl>
-<dd>The return value should be ignored by PAM dispatch.</dl>
+<dd>The return value should be ignored by PAM dispatch.</dd></dl>
 <p> PAM_MAXTRIES</p>
 <dl>
-<dd>Have exhausted maximum number of retries for service.</dl>
+<dd>Have exhausted maximum number of retries for service.</dd></dl>
 <p> PAM_MODULE_UNKNOWN</p>
 <dl>
-<dd>Module is unknown.</dl>
+<dd>Module is unknown.</dd></dl>
 <p> PAM_NEW_AUTHTOK_REQD</p>
 <dl>
-<dd>Authentication token is no longer valid; new one required.</dl>
+<dd>Authentication token is no longer valid; new one required.</dd></dl>
 <p> PAM_NO_MODULE_DATA</p>
 <dl>
-<dd>No module specific data is present.</dl>
+<dd>No module specific data is present.</dd></dl>
 <p> PAM_OPEN_ERR</p>
 <dl>
-<dd>Failed to load module.</dl>
+<dd>Failed to load module.</dd></dl>
 <p> PAM_PERM_DENIED</p>
 <dl>
-<dd>Permission denied.</dl>
+<dd>Permission denied.</dd></dl>
 <p> PAM_SERVICE_ERR</p>
 <dl>
-<dd>Error in service module.</dl>
+<dd>Error in service module.</dd></dl>
 <p> PAM_SESSION_ERR</p>
 <dl>
-<dd>Cannot make/remove an entry for the specified session.</dl>
+<dd>Cannot make/remove an entry for the specified session.</dd></dl>
 <p> PAM_SUCCESS</p>
 <dl>
-<dd>Success.</dl>
+<dd>Success.</dd></dl>
 <p> PAM_SYMBOL_ERR</p>
 <dl>
-<dd>Symbol not found.</dl>
+<dd>Symbol not found.</dd></dl>
 <p> PAM_SYSTEM_ERR</p>
 <dl>
-<dd>System error.</dl>
+<dd>System error.</dd></dl>
 <p> PAM_TRY_AGAIN</p>
 <dl>
-<dd>Failed preliminary check by password service.</dl>
+<dd>Failed preliminary check by password service.</dd></dl>
 <p> PAM_USER_UNKNOWN</p>
 <dl>
-<dd>User not known to the underlying authentication module.</dl>
+<dd>User not known to the underlying authentication module.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-pam_acct_mgmt/">pam_acct_mgmt</a></code>(3), <code><a href="/docs/linux/man/3-pam_authenticate/">pam_authenticate</a></code>(3), <code><a href="/docs/linux/man/3-pam_chauthtok/">pam_chauthtok</a></code>(3), <code><a href="/docs/linux/man/3-pam_close_session/">pam_close_session</a></code>(3), <code><a href="/docs/linux/man/3-pam_conv/">pam_conv</a></code>(3), <code><a href="/docs/linux/man/3-pam_end/">pam_end</a></code>(3), <code><a href="/docs/linux/man/3-pam_get_data/">pam_get_data</a></code>(3), <code><a href="/docs/linux/man/3-pam_getenv/">pam_getenv</a></code>(3), <code><a href="/docs/linux/man/3-pam_getenvlist/">pam_getenvlist</a></code>(3), <code><a href="/docs/linux/man/3-pam_get_item/">pam_get_item</a></code>(3), <code><a href="/docs/linux/man/3-pam_get_user/">pam_get_user</a></code>(3), <code><a href="/docs/linux/man/3-pam_open_session/">pam_open_session</a></code>(3), <code><a href="/docs/linux/man/3-pam_putenv/">pam_putenv</a></code>(3), <code><a href="/docs/linux/man/3-pam_set_data/">pam_set_data</a></code>(3), <code><a href="/docs/linux/man/3-pam_set_item/">pam_set_item</a></code>(3), <code><a href="/docs/linux/man/3-pam_setcred/">pam_setcred</a></code>(3), <code><a href="/docs/linux/man/3-pam_start/">pam_start</a></code>(3), <code><a href="/docs/linux/man/3-pam_strerror/">pam_strerror</a></code>(3)</p>
 <h2>Notes</h2>

@@ -16,7 +16,7 @@ description: "stap-report – collect system information that is useful for debu
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ stap - report &gt; report.txt
                       $ head report.txt ==
@@ -28,7 +28,7 @@ enabled features: AVAHI LIBSQLITE3 NSS TR1_UNORDERED_MAP NLS
 /usr/bin/stap
 == locate --regex '/stap(run)?$' | xargs ls -ald ==
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <i><a href="//www.systutorials.com/docs/linux/man/1-stap/">stap</a></i>(1)

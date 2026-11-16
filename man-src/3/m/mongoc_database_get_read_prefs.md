@@ -14,8 +14,8 @@ mongoc_database_get_read_prefs (const mongoc_database_t *database);</pre>
 <p>Fetches the default read preferences to use with <code>database</code> \&amp;. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>A <code>mongoc_write_concern_t</code> that should not be modified or freed. </p>
 <h2>Colophon</h2>

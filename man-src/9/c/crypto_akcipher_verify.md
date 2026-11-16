@@ -14,7 +14,7 @@ description: "crypto_akcipher_verify – Invoke public key verify operation"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>asymmetric key request</dl>
+</dd><dd>asymmetric key request</dd></dl>
 <h2>Description</h2>
 <p>Function invokes the specific public key verify operation for a given public key algorithm</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_akcipher_verify – Invoke public key verify operation"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

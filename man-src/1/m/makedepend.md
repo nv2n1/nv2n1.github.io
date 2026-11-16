@@ -36,32 +36,32 @@ $(SRCS)
 <h2>OPTIONS</h2>
 <p> The program will ignore any option that it does not understand so that you may use the same arguments that you would for <code><a href="/docs/linux/man/1-cc/">cc</a>(1).</code></p>
 <dl>
-<dt><code>-D</code><i>name</i>=<i>def</i> or -D<i>name</i></p>
-<dd> Define. This places a definition for <i>name</i> in <code>makedepend&#8217;s</code> symbol table. Without <i>=def</i> the symbol becomes defined as &#8220;1&#8221;.</p>
-<dt><code>-I</code><i>includedir</i></p>
-<dd> Include directory. This option tells <code>makedepend</code> to prepend <i>includedir</i> to its list of directories to search when it encounters a <i>#include</i> directive. By default, <code>makedepend</code> only searches the standard include directories (usually /usr/include and possibly a compiler-dependent directory).</p>
-<dt><code>-Y</code><i>includedir</i></p>
-<dd> Replace all of the standard include directories with the single specified include directory; you can omit the <i>includedir</i> to simply prevent searching the standard include directories.</p>
-<dt><code>-a</code></p>
-<dd> Append the dependencies to the end of the file instead of replacing them.</p>
-<dt><code>-f</code><i>makefile</i></p>
-<dd> Filename. This allows you to specify an alternate makefile in which <code>makedepend</code> can place its output. Specifying &#8220;-&#8221; as the file name (i.e., <code>-f-</code>) sends the output to standard output instead of modifying an existing file.</p>
-<dt><code>-include </code><i>file</i></p>
-<dd> Process file as input, and include all the resulting output before processing the regular input file. This has the same affect as if the specified file is an include statement that appears before the very first line of the regular input file.</p>
-<dt><code>-o</code><i>objsuffix</i></p>
-<dd> Object file suffix. Some systems may have object files whose suffix is something other than &#8220;.o&#8221;. This option allows you to specify another suffix, such as &#8220;.b&#8221; with <i>-o.b</i> or &#8220;:obj&#8221; with <i>-o:obj</i> and so forth.</p>
-<dt><code>-p</code><i>objprefix</i></p>
-<dd> Object file prefix. The prefix is prepended to the name of the object file. This is usually used to designate a different directory for the object file. The default is the empty string.</p>
-<dt><code>-s</code><i>string</i></p>
-<dd> Starting string delimiter. This option permits you to specify a different string for <code>makedepend</code> to look for in the makefile.</p>
-<dt><code>-w</code><i>width</i></p>
-<dd> Line width. Normally, <code>makedepend</code> will ensure that every output line that it writes will be no wider than 78 characters for the sake of readability. This option enables you to change this width.</p>
-<dt><code>-v</code></p>
-<dd> Verbose operation. This option causes <code>makedepend</code> to emit the list of files included by each input file.</p>
-<dt><code>-m</code></p>
-<dd> Warn about multiple inclusion. This option causes <code>makedepend</code> to produce a warning if any input file includes another file more than once. In previous versions of <code>makedepend</code> this was the default behavior; the default has been changed to better match the behavior of the C compiler, which does not consider multiple inclusion to be an error. This option is provided for backward compatibility, and to aid in debugging problems related to multiple inclusion.</p>
-<dt><code>&#8212; </code><i>options</i> &#8212;</p>
-<dd> If <code>makedepend</code> encounters a double hyphen (&#8211;) in the argument list, then any unrecognized argument following it will be silently ignored; a second double hyphen terminates this special treatment. In this way, <code>makedepend</code> can be made to safely ignore esoteric compiler arguments that might normally be found in a CFLAGS <code>make</code> macro (see the <code>EXAMPLE</code> section above). All options that <code>makedepend</code> recognizes and appear between the pair of double hyphens are processed normally.</dl>
+<dt><code>-D</code><i>name</i>=<i>def</i> or -D<i>name</i></dt>
+<dd> Define. This places a definition for <i>name</i> in <code>makedepend&#8217;s</code> symbol table. Without <i>=def</i> the symbol becomes defined as &#8220;1&#8221;.</dd>
+<dt><code>-I</code><i>includedir</i></dt>
+<dd> Include directory. This option tells <code>makedepend</code> to prepend <i>includedir</i> to its list of directories to search when it encounters a <i>#include</i> directive. By default, <code>makedepend</code> only searches the standard include directories (usually /usr/include and possibly a compiler-dependent directory).</dd>
+<dt><code>-Y</code><i>includedir</i></dt>
+<dd> Replace all of the standard include directories with the single specified include directory; you can omit the <i>includedir</i> to simply prevent searching the standard include directories.</dd>
+<dt><code>-a</code></dt>
+<dd> Append the dependencies to the end of the file instead of replacing them.</dd>
+<dt><code>-f</code><i>makefile</i></dt>
+<dd> Filename. This allows you to specify an alternate makefile in which <code>makedepend</code> can place its output. Specifying &#8220;-&#8221; as the file name (i.e., <code>-f-</code>) sends the output to standard output instead of modifying an existing file.</dd>
+<dt><code>-include </code><i>file</i></dt>
+<dd> Process file as input, and include all the resulting output before processing the regular input file. This has the same affect as if the specified file is an include statement that appears before the very first line of the regular input file.</dd>
+<dt><code>-o</code><i>objsuffix</i></dt>
+<dd> Object file suffix. Some systems may have object files whose suffix is something other than &#8220;.o&#8221;. This option allows you to specify another suffix, such as &#8220;.b&#8221; with <i>-o.b</i> or &#8220;:obj&#8221; with <i>-o:obj</i> and so forth.</dd>
+<dt><code>-p</code><i>objprefix</i></dt>
+<dd> Object file prefix. The prefix is prepended to the name of the object file. This is usually used to designate a different directory for the object file. The default is the empty string.</dd>
+<dt><code>-s</code><i>string</i></dt>
+<dd> Starting string delimiter. This option permits you to specify a different string for <code>makedepend</code> to look for in the makefile.</dd>
+<dt><code>-w</code><i>width</i></dt>
+<dd> Line width. Normally, <code>makedepend</code> will ensure that every output line that it writes will be no wider than 78 characters for the sake of readability. This option enables you to change this width.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose operation. This option causes <code>makedepend</code> to emit the list of files included by each input file.</dd>
+<dt><code>-m</code></dt>
+<dd> Warn about multiple inclusion. This option causes <code>makedepend</code> to produce a warning if any input file includes another file more than once. In previous versions of <code>makedepend</code> this was the default behavior; the default has been changed to better match the behavior of the C compiler, which does not consider multiple inclusion to be an error. This option is provided for backward compatibility, and to aid in debugging problems related to multiple inclusion.</dd>
+<dt><code>&#8212; </code><i>options</i> &#8212;</dt>
+<dd> If <code>makedepend</code> encounters a double hyphen (&#8211;) in the argument list, then any unrecognized argument following it will be silently ignored; a second double hyphen terminates this special treatment. In this way, <code>makedepend</code> can be made to safely ignore esoteric compiler arguments that might normally be found in a CFLAGS <code>make</code> macro (see the <code>EXAMPLE</code> section above). All options that <code>makedepend</code> recognizes and appear between the pair of double hyphens are processed normally.</dd></dl>
 <h2>ALGORITHM</h2>
 <p> The approach used in this program enables it to run an order of magnitude faster than any other &#8220;dependency generator&#8221; I have ever seen. Central to this performance are two assumptions: that all files compiled by a single makefile will be compiled with roughly the same <i>-I</i> and <i>-D</i> options; and that most files in a single directory will include largely the same files. </p>
 <p> Given these assumptions, <code>makedepend</code> expects to be called once for each makefile, with all source files that are maintained by the makefile appearing on the command line. It parses each source and include file exactly once, maintaining an internal symbol table for each. Thus, the first file on the command line will take an amount of time proportional to the amount of time that a normal C preprocessor takes. But on subsequent files, if it encounters an include file that it has already parsed, it does not parse it again. </p>

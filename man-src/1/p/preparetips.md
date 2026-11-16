@@ -12,10 +12,10 @@ description: "preparetips – extract text from tips file"
 &nbsp;<wbr>&#8211; extract text from tips file </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>preparetips</code></dl>
+<dt> <code>preparetips</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>preparetips</code></p>
-<dd>is a script to extract the text from a tips file. It outputs the text so <code>xgettext</code> can add the tips to a PO file. PO files provide a human-readable string format used for translations. </p>
+<dd>is a script to extract the text from a tips file. It outputs the text so <code>xgettext</code> can add the tips to a PO file. PO files provide a human-readable string format used for translations. </dd>
 <p> <code>preparetips</code> looks for <i>data/tips-en</i> as tips file.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-kdeoptions/">kdeoptions</a></code>(7)</p>
@@ -25,13 +25,13 @@ description: "preparetips – extract text from tips file"
 <p> <code>Matthias Kiefer</code> &lt;matthias.kiefer [at] gmx.de&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> bugs.kde.org</p>
+<dt> 1.</dt>
+<dd> bugs.kde.org</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dl>
+</dt><dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dd></dl>
 </dl>
 <h2>Index</h2>

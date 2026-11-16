@@ -11,14 +11,10 @@ std::chrono::from_stream(std::chrono::year_month) - std::chrono::from_stream(std
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Alloc = std::allocator&lt;CharT&gt;&gt;
-
 std::basic_istream&lt;CharT, Traits&gt; &amp;
-
 from_stream(std::basic_istream&lt;CharT, Traits&gt; &amp;is, const CharT *fmt, (since C++ 20)
-
                                                                          std::chrono::year_month &amp;ym,
             std::basic_string&lt;CharT, Traits, Alloc&gt; *abbrev = nullptr,
-
             std::chrono::minutes *offset = nullptr);</code></pre> 
 Attempts to parse the input stream is into the std::chrono::year_month ym according to the format string fmt. 
 Behaves as an UnformattedInputFunction, except that it has an unspecified effect on is.gcount(). After constructing and checking the sentry object, attempts to parse the input stream is into ym according to the format string fmt. If the parse fails to decode a valid year_month, is.setstate(std::ios_base::failbit) is called and ym is not modified. 

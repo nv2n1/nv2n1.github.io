@@ -32,16 +32,16 @@ ZFS logical volume datapool/dbvol</pre>
 <p>This section lists the properties that control amzfs-snapshot&#8217;s functionality. See <code><a href="/docs/linux/man/7-amanda-scripts/">amanda-scripts</a></code>(7) for information on the Script API, script configuration. </p>
 <p> DF-PATH</p>
 <dl>
-<dd>Path to the &#8216;df&#8217; binary, search in $PATH by default.</dl>
+<dd>Path to the &#8216;df&#8217; binary, search in $PATH by default.</dd></dl>
 <p> ZFS-PATH</p>
 <dl>
-<dd>Path to the &#8216;zfs&#8217; binary, search in $PATH by default.</dl>
+<dd>Path to the &#8216;zfs&#8217; binary, search in $PATH by default.</dd></dl>
 <p> PFEXEC-PATH</p>
 <dl>
-<dd>Path to the &#8216;pfexec&#8217; binary, search in $PATH by default.</dl>
+<dd>Path to the &#8216;pfexec&#8217; binary, search in $PATH by default.</dd></dl>
 <p> PFEXEC</p>
 <dl>
-<dd>If &quot;NO&quot; (the default), pfexec is not used, if set to &quot;YES&quot; then pfexec is used.</dl>
+<dd>If &quot;NO&quot; (the default), pfexec is not used, if set to &quot;YES&quot; then pfexec is used.</dd></dl>
 <h2>Example</h2>
 <p>In this example, a dumptype is defined to use amzfs-snapshot script to create a snapshot and use amgtar to backup the snapshot. </p>
 <pre> define script-tool amzfs_snapshot {
@@ -64,7 +64,7 @@ ZFS logical volume datapool/dbvol</pre>
 <h2>Authors</h2>
 <p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
 <p> <code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

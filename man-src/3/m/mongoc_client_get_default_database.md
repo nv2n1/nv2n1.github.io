@@ -15,8 +15,8 @@ mongoc_client_get_default_database (mongoc_client_t *client);</pre>
 <p> Useful when you want to choose which database to use based only on the URI in a configuration file. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_database_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_database_destroy/">mongoc_database_destroy</a>(3)</code> \&amp;. </p>
 <h2>Example</h2>

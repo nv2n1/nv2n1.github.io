@@ -46,120 +46,120 @@ description: "radvd.conf – configuration file of the router advertisement daem
 <p>Prefix can be network prefix or the address of the interface. </p>
 <h2>Interface Specific Options</h2>
 <dl>
-<dt><code>IgnoreIfMissing</code> <code>on</code>|<code>off</code></p>
-<dd>A flag indicating whether or not the interface is ignored if it does not exist at start-up. By default, radvd exits. </p>
+<dt><code>IgnoreIfMissing</code> <code>on</code>|<code>off</code></dt>
+<dd>A flag indicating whether or not the interface is ignored if it does not exist at start-up. By default, radvd exits. </dd>
 <p> This is useful for dynamic interfaces which are not active when radvd starts or which are dynamically disabled and re-enabled during the time radvd runs. </p>
 <p> Current versions of radvd automatically try to re-enable interfaces. </p>
 <p> Enabling IgnoreIfMissing also quenches certain warnings in log messages relating to missing interfaces. </p>
 <p> Default: on </p>
-<dt><code>AdvSendAdvert</code> <code>on</code>|<code>off</code></p>
-<dd>A flag indicating whether or not the router sends periodic router advertisements and responds to router solicitations. </p>
+<dt><code>AdvSendAdvert</code> <code>on</code>|<code>off</code></dt>
+<dd>A flag indicating whether or not the router sends periodic router advertisements and responds to router solicitations. </dd>
 <p> This option no longer has to be specified first, but it needs to be <code>on</code> to enable advertisement on this interface. </p>
 <p> Default: off </p>
-<dt><code>UnicastOnly</code> <code>on</code>|<code>off</code></p>
-<dd>Indicates that the interface link type only supports unicast. This will prevent unsolicited advertisements from being sent, and will cause solicited advertisements to be unicast to the soliciting node. This option is necessary for non-broadcast, multiple-access links, such as ISATAP. </p>
+<dt><code>UnicastOnly</code> <code>on</code>|<code>off</code></dt>
+<dd>Indicates that the interface link type only supports unicast. This will prevent unsolicited advertisements from being sent, and will cause solicited advertisements to be unicast to the soliciting node. This option is necessary for non-broadcast, multiple-access links, such as ISATAP. </dd>
 <p> Default: off </p>
-<dt><code>MaxRtrAdvInterval </code>seconds</p>
-<dd>The maximum time allowed between sending unsolicited multicast router advertisements from the interface, in seconds. </p>
+<dt><code>MaxRtrAdvInterval </code>seconds</dt>
+<dd>The maximum time allowed between sending unsolicited multicast router advertisements from the interface, in seconds. </dd>
 <p> Must be no less than 4 seconds and no greater than 1800 seconds. </p>
 <p> Minimum when using Mobile IPv6 extensions: 0.07. </p>
 <p> For values less than 0.2 seconds, 0.02 seconds is added to account for scheduling granularities as specified in RFC3775. </p>
 <p> Default: 600 seconds<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>MinRtrAdvInterval </code>seconds</p>
-<dd>The minimum time allowed between sending unsolicited multicast router advertisements from the interface, in seconds. </p>
+<dt><code>MinRtrAdvInterval </code>seconds</dt>
+<dd>The minimum time allowed between sending unsolicited multicast router advertisements from the interface, in seconds. </dd>
 <p> Must be no less than 3 seconds and no greater than 0.75 * MaxRtrAdvInterval. </p>
 <p> Minimum when using Mobile IPv6 extensions: 0.03. </p>
 <p> Default: 0.33 * MaxRtrAdvInterval </p>
-<dt><code>MinDelayBetweenRAs </code>seconds</p>
-<dd>The minimum time allowed between sending multicast router advertisements from the interface, in seconds. </p>
+<dt><code>MinDelayBetweenRAs </code>seconds</dt>
+<dd>The minimum time allowed between sending multicast router advertisements from the interface, in seconds. </dd>
 <p> This applies to solicited multicast RAs. This is defined as the protocol constant MIN_DELAY_BETWEEN_RAS in RFC4861. MIPv6 redefines this parameter to have a minimum of 0.03 seconds. </p>
 <p> Minimum when using Mobile IPv6 extensions: 0.03. </p>
 <p> Default: 3 </p>
-<dt><code>AdvManagedFlag</code> <code>on</code>|<code>off</code></p>
-<dd>When set, hosts use the administered (stateful) protocol for address autoconfiguration in addition to any addresses autoconfigured using stateless address autoconfiguration. The use of this flag is described in RFC 4862. </p>
+<dt><code>AdvManagedFlag</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, hosts use the administered (stateful) protocol for address autoconfiguration in addition to any addresses autoconfigured using stateless address autoconfiguration. The use of this flag is described in RFC 4862. </dd>
 <p> Default: off </p>
-<dt><code>AdvOtherConfigFlag</code> <code>on</code>|<code>off</code></p>
-<dd>When set, hosts use the administered (stateful) protocol for autoconfiguration of other (non-address) information. The use of this flag is described in RFC 4862. </p>
+<dt><code>AdvOtherConfigFlag</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, hosts use the administered (stateful) protocol for autoconfiguration of other (non-address) information. The use of this flag is described in RFC 4862. </dd>
 <p> Default: off </p>
-<dt><code>AdvLinkMTU </code>integer</p>
-<dd>The MTU option is used in router advertisement messages to insure that all nodes on a link use the same MTU value in those cases where the link MTU is not well known. </p>
+<dt><code>AdvLinkMTU </code>integer</dt>
+<dd>The MTU option is used in router advertisement messages to insure that all nodes on a link use the same MTU value in those cases where the link MTU is not well known. </dd>
 <p> If specified, i.e. not 0, must not be smaller than 1280 and not greater than the maximum MTU allowed for this link (e.g. ethernet has a maximum MTU of 1500. See RFC 4864). </p>
 <p> Default: 0 </p>
-<dt><code>AdvReachableTime </code>milliseconds</p>
-<dd>The time, in milliseconds, that a node assumes a neighbor is reachable after having received a reachability confirmation. Used by the Neighbor Unreachability Detection algorithm (see Section 7.3 of RFC 4861). A value of zero means unspecified (by this router). </p>
+<dt><code>AdvReachableTime </code>milliseconds</dt>
+<dd>The time, in milliseconds, that a node assumes a neighbor is reachable after having received a reachability confirmation. Used by the Neighbor Unreachability Detection algorithm (see Section 7.3 of RFC 4861). A value of zero means unspecified (by this router). </dd>
 <p> Must be no greater than 3,600,000 milliseconds (1 hour). </p>
 <p> Default: 0 </p>
-<dt><code>AdvRetransTimer </code>milliseconds</p>
-<dd>The time, in milliseconds, between retransmitted Neighbor Solicitation messages. Used by address resolution and the Neighbor Unreachability Detection algorithm (see Sections 7.2 and 7.3 of RFC 4861). A value of zero means unspecified (by this router). </p>
+<dt><code>AdvRetransTimer </code>milliseconds</dt>
+<dd>The time, in milliseconds, between retransmitted Neighbor Solicitation messages. Used by address resolution and the Neighbor Unreachability Detection algorithm (see Sections 7.2 and 7.3 of RFC 4861). A value of zero means unspecified (by this router). </dd>
 <p> Default: 0 </p>
-<dt><code>AdvCurHopLimit </code>integer</p>
-<dd>The default value that should be placed in the Hop Count field of the IP header for outgoing (unicast) IP packets. The value should be set to the current diameter of the Internet. The value zero means unspecified (by this router). </p>
+<dt><code>AdvCurHopLimit </code>integer</dt>
+<dd>The default value that should be placed in the Hop Count field of the IP header for outgoing (unicast) IP packets. The value should be set to the current diameter of the Internet. The value zero means unspecified (by this router). </dd>
 <p> Default: 64 </p>
-<dt><code>AdvDefaultLifetime </code>seconds</p>
-<dd>The lifetime associated with the default router in units of seconds. The maximum value corresponds to 18.2 hours. A lifetime of 0 indicates that the router is not a default router and should not appear on the default router list. The router lifetime applies only to the router&#8217;s usefulness as a default router; it does not apply to information contained in other message fields or options. Options that need time limits for their information include their own lifetime fields. </p>
+<dt><code>AdvDefaultLifetime </code>seconds</dt>
+<dd>The lifetime associated with the default router in units of seconds. The maximum value corresponds to 18.2 hours. A lifetime of 0 indicates that the router is not a default router and should not appear on the default router list. The router lifetime applies only to the router&#8217;s usefulness as a default router; it does not apply to information contained in other message fields or options. Options that need time limits for their information include their own lifetime fields. </dd>
 <p> Must be either zero or between MaxRtrAdvInterval and 9000 seconds. </p>
 <p> Default: 3 * MaxRtrAdvInterval (Minimum 1 second). </p>
-<dt><code>AdvDefaultPreference</code> <code>low</code>|<code>medium</code>|<code>high</code></p>
-<dd>The preference associated with the default router, as either &quot;low&quot;, &quot;medium&quot;, or &quot;high&quot;. </p>
+<dt><code>AdvDefaultPreference</code> <code>low</code>|<code>medium</code>|<code>high</code></dt>
+<dd>The preference associated with the default router, as either &quot;low&quot;, &quot;medium&quot;, or &quot;high&quot;. </dd>
 <p> Default: medium </p>
-<dt><code>AdvSourceLLAddress</code> <code>on</code>|<code>off</code></p>
-<dd>When set, the link-layer address of the outgoing interface is included in the RA. </p>
+<dt><code>AdvSourceLLAddress</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, the link-layer address of the outgoing interface is included in the RA. </dd>
 <p> Default: on </p>
-<dt><code>AdvHomeAgentFlag</code> <code>on</code>|<code>off</code></p>
-<dd>When set, indicates that sending router is able to serve as Mobile IPv6 Home Agent. When set, minimum limits specified by Mobile IPv6 are used for MinRtrAdvInterval and MaxRtrAdvInterval. </p>
+<dt><code>AdvHomeAgentFlag</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, indicates that sending router is able to serve as Mobile IPv6 Home Agent. When set, minimum limits specified by Mobile IPv6 are used for MinRtrAdvInterval and MaxRtrAdvInterval. </dd>
 <p> Default: off </p>
-<dt><code>AdvHomeAgentInfo</code> <code>on</code>|<code>off</code></p>
-<dd>When set, Home Agent Information Option (specified by Mobile IPv6) is included in Router Advertisements. AdvHomeAgentFlag must also be set when using this option. </p>
+<dt><code>AdvHomeAgentInfo</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, Home Agent Information Option (specified by Mobile IPv6) is included in Router Advertisements. AdvHomeAgentFlag must also be set when using this option. </dd>
 <p> Default: off </p>
-<dt><code>HomeAgentLifetime </code>seconds</p>
-<dd>The length of time in seconds (relative to the time the packet is sent) that the router is offering Mobile IPv6 Home Agent services. A value 0 must not be used. The maximum lifetime is 65520 seconds (18.2 hours). This option is ignored, if AdvHomeAgentInfo is not set. </p>
+<dt><code>HomeAgentLifetime </code>seconds</dt>
+<dd>The length of time in seconds (relative to the time the packet is sent) that the router is offering Mobile IPv6 Home Agent services. A value 0 must not be used. The maximum lifetime is 65520 seconds (18.2 hours). This option is ignored, if AdvHomeAgentInfo is not set. </dd>
 <p> If both HomeAgentLifetime and HomeAgentPreference are set to their default values, Home Agent Information Option will not be sent. </p>
 <p> Default: AdvDefaultLifetime </p>
-<dt><code>HomeAgentPreference </code>integer</p>
-<dd>The preference for the Home Agent sending this Router Advertisement. Values greater than 0 indicate more preferable Home Agent, values less than 0 indicate less preferable Home Agent. This option is ignored, if AdvHomeAgentInfo is not set. </p>
+<dt><code>HomeAgentPreference </code>integer</dt>
+<dd>The preference for the Home Agent sending this Router Advertisement. Values greater than 0 indicate more preferable Home Agent, values less than 0 indicate less preferable Home Agent. This option is ignored, if AdvHomeAgentInfo is not set. </dd>
 <p> If both HomeAgentLifetime and HomeAgentPreference are set to their default values, Home Agent Information Option will not be sent. </p>
 <p> Default: 0 </p>
-<dt><code>AdvMobRtrSupportFlag</code> <code>on</code>|<code>off</code></p>
-<dd>When set, the Home Agent signals it supports Mobile Router registrations (specified by NEMO Basic). AdvHomeAgentInfo must also be set when using this option. </p>
+<dt><code>AdvMobRtrSupportFlag</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, the Home Agent signals it supports Mobile Router registrations (specified by NEMO Basic). AdvHomeAgentInfo must also be set when using this option. </dd>
 <p> Default: off </p>
-<dt><code>AdvIntervalOpt</code> <code>on</code>|<code>off</code></p>
-<dd>When set, Advertisement Interval Option (specified by Mobile IPv6) is included in Router Advertisements. When set, minimum limits specified by Mobile IPv6 are used for MinRtrAdvInterval and MaxRtrAdvInterval. </p>
+<dt><code>AdvIntervalOpt</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, Advertisement Interval Option (specified by Mobile IPv6) is included in Router Advertisements. When set, minimum limits specified by Mobile IPv6 are used for MinRtrAdvInterval and MaxRtrAdvInterval. </dd>
 <p> The advertisement interval is based on the configured MaxRtrAdvInterval parameter except where this is less than 200ms. In this case, the advertised interval is ( MaxRtrAdvInterval + 20ms ). </p>
 <p> Default: off </p>
 </dl>
 <h2>Prefix Specific Options</h2>
 <dl>
-<dt><code>AdvOnLink</code> <code>on</code>|<code>off</code></p>
-<dd>When set, indicates that this prefix can be used for on-link determination. When not set the advertisement makes no statement about on-link or off-link properties of the prefix. For instance, the prefix might be used for address configuration with some of the addresses belonging to the prefix being on-link and others being off-link. </p>
+<dt><code>AdvOnLink</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, indicates that this prefix can be used for on-link determination. When not set the advertisement makes no statement about on-link or off-link properties of the prefix. For instance, the prefix might be used for address configuration with some of the addresses belonging to the prefix being on-link and others being off-link. </dd>
 <p> Default: on </p>
-<dt><code>AdvAutonomous</code> <code>on</code>|<code>off</code></p>
-<dd>When set, indicates that this prefix can be used for autonomous address configuration as specified in RFC 4862. </p>
+<dt><code>AdvAutonomous</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, indicates that this prefix can be used for autonomous address configuration as specified in RFC 4862. </dd>
 <p> Default: on </p>
-<dt><code>AdvRouterAddr</code> <code>on</code>|<code>off</code></p>
-<dd>When set, indicates that the address of interface is sent instead of network prefix, as is required by Mobile IPv6. When set, minimum limits specified by Mobile IPv6 are used for MinRtrAdvInterval and MaxRtrAdvInterval. </p>
+<dt><code>AdvRouterAddr</code> <code>on</code>|<code>off</code></dt>
+<dd>When set, indicates that the address of interface is sent instead of network prefix, as is required by Mobile IPv6. When set, minimum limits specified by Mobile IPv6 are used for MinRtrAdvInterval and MaxRtrAdvInterval. </dd>
 <p> Default: off </p>
-<dt><code>AdvValidLifetime </code>seconds|<code>infinity</code></p>
-<dd>The length of time in seconds (relative to the time the packet is sent) that the prefix is valid for the purpose of on-link determination. The symbolic value <code>infinity</code> represents infinity (i.e. a value of all one bits (0xffffffff)). The valid lifetime is also used by RFC 4862. </p>
+<dt><code>AdvValidLifetime </code>seconds|<code>infinity</code></dt>
+<dd>The length of time in seconds (relative to the time the packet is sent) that the prefix is valid for the purpose of on-link determination. The symbolic value <code>infinity</code> represents infinity (i.e. a value of all one bits (0xffffffff)). The valid lifetime is also used by RFC 4862. </dd>
 <p> Note that clients will ignore AdvValidLifetime of an existing prefix if the lifetime is below two hours, as required in RFC 4862 Section 5.5.3 point e). </p>
 <p> Note: RFC4861&#8217;s suggested default value is significantly longer: 30 days. </p>
 <p> Default: 86400 seconds (1 day) </p>
-<dt><code>AdvPreferredLifetime </code>seconds|<code>infinity</code></p>
-<dd>The length of time in seconds (relative to the time the packet is sent) that addresses generated from the prefix via stateless address autoconfiguration remain preferred. The symbolic value <code>infinity</code> represents infinity (i.e. a value of all one bits (0xffffffff)). See RFC 4862. </p>
+<dt><code>AdvPreferredLifetime </code>seconds|<code>infinity</code></dt>
+<dd>The length of time in seconds (relative to the time the packet is sent) that addresses generated from the prefix via stateless address autoconfiguration remain preferred. The symbolic value <code>infinity</code> represents infinity (i.e. a value of all one bits (0xffffffff)). See RFC 4862. </dd>
 <p> Note: RFC4861&#8217;s suggested default value is significantly longer: 7 days. </p>
 <p> Default: 14400 seconds (4 hours) </p>
-<dt><code>DeprecatePrefix</code> <code>on</code>|<code>off</code></p>
-<dd>Upon shutdown, this option will cause radvd to deprecate the prefix by announcing it in the radvd shutdown RA with a zero preferred lifetime and a valid lifetime slightly greater than 2 hours. This will encourage end-nodes using this prefix to deprecate any associated addresses immediately. Note that this option should only be used when only one router is announcing the prefix onto the link, otherwise end-nodes will deprecate associated addresses despite the prefix still being valid for preferred use. </p>
+<dt><code>DeprecatePrefix</code> <code>on</code>|<code>off</code></dt>
+<dd>Upon shutdown, this option will cause radvd to deprecate the prefix by announcing it in the radvd shutdown RA with a zero preferred lifetime and a valid lifetime slightly greater than 2 hours. This will encourage end-nodes using this prefix to deprecate any associated addresses immediately. Note that this option should only be used when only one router is announcing the prefix onto the link, otherwise end-nodes will deprecate associated addresses despite the prefix still being valid for preferred use. </dd>
 <p> See RFC4862, section 5.5.3., &quot;Router Advertisement Processing&quot;, part (e). </p>
 <p> Default: off </p>
-<dt><code>DecrementLifetimes</code> <code>on</code>|<code>off</code></p>
-<dd>This option causes radvd to decrement the values of the preferred and valid lifetimes for the prefix over time. The lifetimes are decremented by the number of seconds since the last RA. If radvd receives a SIGUSR1 signal, it will reset the values of the preferred and valid lifetimes back to the initial values used by radvd when it started. If radvd never receives a SIGUSR1 signal, it will continue to decrement the lifetimes until the preferred lifetime reaches zero. After a final RA with a zero value preferred lifetime, radvd will cease to announce the prefix. If a SIGUSR1 signal then causes the lifetimes to be reset, the prefix will then re-appear in the RAs. </p>
+<dt><code>DecrementLifetimes</code> <code>on</code>|<code>off</code></dt>
+<dd>This option causes radvd to decrement the values of the preferred and valid lifetimes for the prefix over time. The lifetimes are decremented by the number of seconds since the last RA. If radvd receives a SIGUSR1 signal, it will reset the values of the preferred and valid lifetimes back to the initial values used by radvd when it started. If radvd never receives a SIGUSR1 signal, it will continue to decrement the lifetimes until the preferred lifetime reaches zero. After a final RA with a zero value preferred lifetime, radvd will cease to announce the prefix. If a SIGUSR1 signal then causes the lifetimes to be reset, the prefix will then re-appear in the RAs. </dd>
 <p> This option is intended to be used in conjunction with a DHCPv6 client that is using the Identity Association for Prefix Delegation (IA_PD) option to acquire a prefix from a Delegating Router for use by a Requesting Router. In this scenario, the prefix(es) from within the delegated prefix that are announced by radvd would age in parallel with and at the same rate as the delegated prefix, and expire at approximately the same time, if the delegated prefix&#8217;s life isn&#8217;t extended. </p>
 <p> See RFC3633, &quot;IPv6 Prefix Options for Dynamic Host Configuration Protocol (DHCP) version 6&quot;. </p>
 <p> Default: off </p>
-<dt><code>Base6Interface </code>name</p>
-<dd>If this options is specified, this prefix will be combined with the IPv6 address of the interface specified by <code>name. </code> The resulting prefix length will be 64. </p>
-<dt><code>Base6to4Interface </code>name</p>
-<dd>If this option is specified, this prefix will be combined with the IPv4 address of interface <code>name</code> to produce a valid 6to4 prefix. The first 16 bits of this prefix will be replaced by <code>2002</code> and the next 32 bits of this prefix will be replaced by the IPv4 address assigned to interface <code>name</code> at configuration time. The remaining 80 bits of the prefix (including the SLA ID) will be advertised as specified in the configuration file. See the next section for an example. </p>
+<dt><code>Base6Interface </code>name</dt>
+<dd>If this options is specified, this prefix will be combined with the IPv6 address of the interface specified by <code>name. </code> The resulting prefix length will be 64. </dd>
+<dt><code>Base6to4Interface </code>name</dt>
+<dd>If this option is specified, this prefix will be combined with the IPv4 address of interface <code>name</code> to produce a valid 6to4 prefix. The first 16 bits of this prefix will be replaced by <code>2002</code> and the next 32 bits of this prefix will be replaced by the IPv4 address assigned to interface <code>name</code> at configuration time. The remaining 80 bits of the prefix (including the SLA ID) will be advertised as specified in the configuration file. See the next section for an example. </dd>
 <p> If interface <code>name</code> is not available at configuration time, a warning will be written to the log and this prefix will be disabled until radvd is reconfigured. </p>
 <p> This option enables systems with dynamic IPv4 addresses to update their advertised 6to4 prefixes simply by restarting radvd or sending a SIGHUP signal to cause radvd to reconfigure itself. </p>
 <p> Note that 6to4 prefixes derived from dynamically-assigned IPv4 addresses should be advertised with a significantly shorter lifetime (see the <code>AdvValidLifetime</code> and <code>AdvPreferredLifetime</code> options). </p>
@@ -168,40 +168,40 @@ description: "radvd.conf – configuration file of the router advertisement daem
 </dl>
 <h2>Route Specific Options</h2>
 <dl>
-<dt><code>AdvRouteLifetime </code>seconds|<code>infinity</code></p>
-<dd>The lifetime associated with the route in units of seconds. The symbolic value <code>infinity</code> represents infinity (i.e. a value of all one bits (0xffffffff)). </p>
+<dt><code>AdvRouteLifetime </code>seconds|<code>infinity</code></dt>
+<dd>The lifetime associated with the route in units of seconds. The symbolic value <code>infinity</code> represents infinity (i.e. a value of all one bits (0xffffffff)). </dd>
 <p> Default: 3 * MaxRtrAdvInterval </p>
-<dt><code>AdvRoutePreference</code> <code>low</code>|<code>medium</code>|<code>high</code></p>
-<dd>The preference associated with the default router, as either &quot;low&quot;, &quot;medium&quot;, or &quot;high&quot;. </p>
+<dt><code>AdvRoutePreference</code> <code>low</code>|<code>medium</code>|<code>high</code></dt>
+<dd>The preference associated with the default router, as either &quot;low&quot;, &quot;medium&quot;, or &quot;high&quot;. </dd>
 <p> Default: medium </p>
-<dt><code>RemoveRoute</code> <code>on</code>|<code>off</code></p>
-<dd>Upon shutdown, announce this route with a zero second lifetime. This should cause the route to be immediately removed from the receiving end-nodes&#8217; route table. </p>
+<dt><code>RemoveRoute</code> <code>on</code>|<code>off</code></dt>
+<dd>Upon shutdown, announce this route with a zero second lifetime. This should cause the route to be immediately removed from the receiving end-nodes&#8217; route table. </dd>
 <p> Default: on </p>
 </dl>
 <h2>Rdnss Specific Options</h2>
 <dl>
-<dt><code>AdvRDNSSLifetime </code>seconds<code>|</code>infinity</p>
-<dd>The maximum duration how long the RDNSS entries are used for name resolution. A value of 0 means the nameserver must no longer be used. The value, if not 0, must be at least MaxRtrAdvInterval. To ensure stale RDNSS info gets removed in a timely fashion, this should not be greater than 2*MaxRtrAdvInterval. </p>
+<dt><code>AdvRDNSSLifetime </code>seconds<code>|</code>infinity</dt>
+<dd>The maximum duration how long the RDNSS entries are used for name resolution. A value of 0 means the nameserver must no longer be used. The value, if not 0, must be at least MaxRtrAdvInterval. To ensure stale RDNSS info gets removed in a timely fashion, this should not be greater than 2*MaxRtrAdvInterval. </dd>
 <p> Default: 2*MaxRtrAdvInterval </p>
-<dt><code>FlushRDNSS</code> <code>on</code>|<code>off</code></p>
-<dd>Upon shutdown, announce the RDNSS entries with a zero second lifetime. This should cause the RDNSS addresses to be immediately removed from the end-nodes&#8217; list of Recursive DNS Servers. </p>
+<dt><code>FlushRDNSS</code> <code>on</code>|<code>off</code></dt>
+<dd>Upon shutdown, announce the RDNSS entries with a zero second lifetime. This should cause the RDNSS addresses to be immediately removed from the end-nodes&#8217; list of Recursive DNS Servers. </dd>
 <p> Default: on </p>
 </dl>
 <h2>Dnssl Specific Options</h2>
 <dl>
-<dt><code>AdvDNSSLLifetime </code>seconds<code>|</code>infinity;</p>
-<dd>The maximum duration how long the DNSSL entries are used for name resolution. A value of 0 means the suffix should no longer be used. The value, if not 0, must be at least MaxRtrAdvInterval. To ensure stale DNSSL info gets removed in a timely fashion, this should not be greater than 2*MaxRtrAdvInterval. </p>
+<dt><code>AdvDNSSLLifetime </code>seconds<code>|</code>infinity;</dt>
+<dd>The maximum duration how long the DNSSL entries are used for name resolution. A value of 0 means the suffix should no longer be used. The value, if not 0, must be at least MaxRtrAdvInterval. To ensure stale DNSSL info gets removed in a timely fashion, this should not be greater than 2*MaxRtrAdvInterval. </dd>
 <p> Default: 2*MaxRtrAdvInterval </p>
-<dt><code>FlushDNSSL</code> <code>on</code>|<code>off</code></p>
-<dd>Upon shutdown, announce the DNSSL entries with a zero second lifetime. This should cause the DNSSL entries to be immediately removed from the end-nodes&#8217; DNS search list. </p>
+<dt><code>FlushDNSSL</code> <code>on</code>|<code>off</code></dt>
+<dd>Upon shutdown, announce the DNSSL entries with a zero second lifetime. This should cause the DNSSL entries to be immediately removed from the end-nodes&#8217; DNS search list. </dd>
 <p> Default: on </p>
 </dl>
 <h2>Abro Specific Options</h2>
 <dl>
-<dt><code>AdvValidLifeTime </code>seconds</p>
-<dd>The time in units of that the set of border router information is valid. A value of all zero bits assumes a default value of 10,000(~one week). </p>
-<dt><code>AdvVersionLow, AdvVersionHigh </code>unsigned<code>integer</code></p>
-<dd>Both forms 32-bit unsigned version number corresponding to the set of information contained in RA message. </p>
+<dt><code>AdvValidLifeTime </code>seconds</dt>
+<dd>The time in units of that the set of border router information is valid. A value of all zero bits assumes a default value of 10,000(~one week). </dd>
+<dt><code>AdvVersionLow, AdvVersionHigh </code>unsigned<code>integer</code></dt>
+<dd>Both forms 32-bit unsigned version number corresponding to the set of information contained in RA message. </dd>
 </dl>
 <h2>Examples</h2>
 <pre>interface eth0

@@ -34,62 +34,62 @@ description: "ldns_rdf2buffer_str_a, ldns_rdf2buffer_str_aaaa, ldns_rdf2buffer_s
 <p> ldns_status ldns_rdf2buffer_str_ipseckey(ldns_buffer *output, const ldns_rdf *rdf); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_a</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_A rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_a</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_A rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_aaaa</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_AAAA rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_aaaa</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_AAAA rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_str</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_STR rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_str</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_STR rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_b64</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_B64 rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_b64</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_B64 rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_hex</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_HEX rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_hex</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_HEX rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_type</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_TYPE rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_type</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_TYPE rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_class</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_CLASS rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_class</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_CLASS rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_alg</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_ALG rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_alg</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_ALG rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_loc</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_LOC rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_loc</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_LOC rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_unknown</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_UNKNOWN rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_unknown</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_UNKNOWN rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_nsap</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_NSAP rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_nsap</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_NSAP rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_wks</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_WKS rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_wks</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_WKS rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_nsec</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_NSEC rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_nsec</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_NSEC rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_period</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_PERIOD rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_period</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_PERIOD rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_tsigtime</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_TSIGTIME rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_tsigtime</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_TSIGTIME rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_apl</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_APL rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_apl</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_APL rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_int16_data</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_INT16_DATA rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_int16_data</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_INT16_DATA rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_int16</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_INT16 rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_int16</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_INT16 rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2buffer_str_ipseckey</i>()</p>
-<dd>Converts an LDNS_RDF_TYPE_IPSECKEY rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dl>
+<dt> <i>ldns_rdf2buffer_str_ipseckey</i>()</dt>
+<dd>Converts an LDNS_RDF_TYPE_IPSECKEY rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

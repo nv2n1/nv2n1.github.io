@@ -75,7 +75,6 @@ format &#8211;<br />
 <h2>Notes</h2>
 <p>Because most conversion specifiers first consume all consecutive whitespace, code such as </p>
 <pre><code>std::scanf(&quot;%d&quot;, &amp;a);
-
 std::scanf(&quot;%d&quot;, &amp;b);</code></pre>
 <p>will read two integers that are entered on different lines (second %d will consume the newline left over by the first) or on the same line, separated by spaces or tabs (second %d will consume the spaces or tabs).<br />
 The conversion specifiers that do not consume leading whitespace, such as %c, can be made to do so by using a whitespace character in the format string:<br />
@@ -84,12 +83,9 @@ The conversion specifiers that do not consume leading whitespace, such as %c, ca
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;cstdio&gt;
 int main()
-
 {
     int i, j;
     float x, y;

@@ -59,91 +59,91 @@ url: "/docs/linux/man/1-inkscape-zh_tw/"
 <p> <code>Inkscape</code> 使用 <font SIZE="-1">SVG</font> 作為內定文件格式，並且以成為在開放原碼社群中完整相容 <font SIZE="-1">SVG</font> 格式的繪圖程式為目標。</p>
 <h2>選項</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>顯示說明訊息</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>顯示 Inkscape 版本和建立日期。</p>
-<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></p>
-<dd>匯出 <font SIZE="-1">PNG</font> 時，以 <font SIZE="-1">SVG</font> 使用者單位設定匯出範圍 (在 Inkscape <font SIZE="-1">SVG</font> 中一般用匿名長度單位)。 預設是匯出整個文件畫布。原點 (0,0) 為左下角。</p>
-<dt><code>-C</code>, <code>&#8211;export-area-page</code></p>
-<dd>匯出 PNG、PDF、PS 和 <font SIZE="-1">EPS</font> 時，匯出範圍是畫布 (頁面)。這是匯出 PNG、PDF 和 <font SIZE="-1">PS</font> 的預設值，所以你不必指 定這個，除非你使用 &#8211;export-id 來匯出指定的物件。匯出 <font SIZE="-1">EPS</font> 時，這就不是預設值；此外，對於 EPS，格式的 規格不允許外框邊界超出內容範圍。這表示當 &#8211;export-area-canvas 用於 <font SIZE="-1">EPS</font> 匯出時，如果內容的外框邊界較 小則畫布的外框邊界會被向內裁剪成內容的外框邊界。</p>
-<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></p>
-<dd>匯出 PNG、PDF、PS 和 <font SIZE="-1">EPS</font> 時，匯出範圍為繪畫部份 (不是畫布)，即文件全部物件的外框邊界 (如果使用 &#8211;export -id 則是匯出物件的外框邊界)。 使用這個選項，匯出的圖片會顯示文件中所有的可見物件，而不會有頁邊空白或裁剪。 這是 <font SIZE="-1">EPS</font> 預設的匯出範圍。對於 PNG，這個可以和 &#8211;export-use-hints 結合使用。</p>
-<dt><code>&#8211;export-area-snap</code></p>
-<dd>匯出 <font SIZE="-1">PNG</font> 時，向外捉取匯出範圍為最接近的整數 <font SIZE="-1">SVG</font> 使用者單位 (px) 數值。如果你使用預設的匯出解析度 90 dpi 且你的圖形是像素捉取來最小化平滑，這項改變允許你維持這種校正方式，即使你正要匯出的物件的外框邊界 (使用 &#8211;export-id 或 &#8211;export-area-drawing) 是本身而不是像素校正。</p>
-<dt><code>-b</code> <i>顏色</i>, <code>&#8211;export-background</code>=<i>顏色</i></p>
-<dd>匯出 <font SIZE="-1">PNG</font> 的背景顏色。 可以是任何 <font SIZE="-1">SVG</font> 的顏色字串，例如 &#8220;#ff007f&#8221; 或 &#8220;rgb(255, 0, 128)&#8221;。 如果沒有設定顏色，那麼就會使用在 Inkscape 文件選項對話窗所設定的頁面顏色 (儲存在 pagecolor= sodipodi:namedview 的屬性)。</p>
-<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></p>
-<dd>匯出 <font SIZE="-1">PNG</font> 所使用的解析度。 當匯出為 PS、EPS 或 <font SIZE="-1">PDF </font>(除非你指定 &#8211;export-ignore-filters 禁止點陣化) 時，也用於退回套用濾鏡 物件的點陣化過程。預設值為 90 dpi，其對應成 1 <font SIZE="-1">SVG</font> 使用者單位 (px, 亦稱「使用者單位」) 匯出為 1 點 陣圖像素。 如果和 &#8211;export-use-hints 一起使用，這個數值會覆蓋 <font SIZE="-1">DPI</font> 內定值。</p>
-<dt><code>-e</code> <i>檔名</i>, <code>&#8211;export-png</code>=<i>檔名</i></p>
-<dd>指定匯出 <font SIZE="-1">PNG</font> 的檔名。 如果指定的檔名已經存在，則不會詢問便覆蓋原有的檔案。</p>
-<dt><code>-f</code> <i>檔名</i>, <code>&#8211;file</code>=<i>檔名</i></p>
-<dd>開啟指定的文件。 選項字串可以省略，即你可以不要輸入 -f 只列出檔名。</p>
-<dt><code>-g</code>, <code>&#8211;with-gui</code></p>
-<dd>試著使用圖形介面 (在 Unix 系統，即使沒有設定 <tt>$DISPLAY</tt> 也會使用 X server)。</p>
-<dt><code>-h</code> <i>高度</i>, <code>&#8211;export-height</code>=<i>高度</i></p>
-<dd>匯出點陣圖的高度，單位為像素。 這個數值會覆蓋 &#8211;export-dpi 設定值 (如果和 &#8211;export-use-hints 同時使用，會覆蓋 <font SIZE="-1">DPI</font> 內定值)。</p>
-<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i></i><font SIZE="-1"><i>ID</i></font><i></i></p>
-<dd>For <font SIZE="-1">PNG, PS, EPS, PDF</font> and plain <font SIZE="-1">SVG</font> export, the id attribute value of the object that you want to export from the document; all other objects are not exported. By default the exported area is the bounding box of the object; you can override this using &#8211;export-area (<font SIZE="-1">PNG</font> only) or &#8211;export-area-page.</p>
-<dt><code>-j</code>, <code>&#8211;export-id-only</code></p>
-<dd>For <font SIZE="-1">PNG</font> and plain <font SIZE="-1">SVG,</font> only export the object whose id is given in &#8211;export-id. All other objects are hidden and won&#8217;t show in export even if they overlay the exported object. Without &#8211;export-id, this option is ignored. For <font SIZE="-1">PDF</font> export, this is the default, so this option has no effect.</p>
-<dt><code>-l</code>, <code>&#8211;export-plain-svg</code>=<i>檔名</i></p>
-<dd>匯出文件為普通的 <font SIZE="-1">SVG</font> 格式，沒有 sodipodi: 或 inkscape: 名稱集也沒有 <font SIZE="-1">RDF</font> 後設資料。</p>
-<dt><code>-x</code>, <code>&#8211;extension-directory</code></p>
-<dd>列出 Inkscape 目前設定為使用且存在的擴充模組目錄。這選項用於外部擴充模組使用相同設定作為原始的 Inkscape 安裝。</p>
-<dt><code>&#8211;verb-list</code></p>
-<dd>依照 <font SIZE="-1">ID</font> 列出在 Inkscape 中全部可用的動詞。這 <font SIZE="-1">ID</font> 可用在定義按鍵對應或選單中。也可以和 &#8211;verb 命令 列選項一起使用。</p>
-<dt><code>&#8211;verb</code>=<i>動詞-ID</i>, <code>&#8211;select</code>=<i>物件-ID</i></p>
-<dd>這兩個選項一起使用可由命令列上提供一些 Inkscape 的基本腳本。於命令列上要執行多少次都可以，而且可在每一 個指定的文件上執行。 </p>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>顯示說明訊息</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>顯示 Inkscape 版本和建立日期。</dd>
+<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></dt>
+<dd>匯出 <font SIZE="-1">PNG</font> 時，以 <font SIZE="-1">SVG</font> 使用者單位設定匯出範圍 (在 Inkscape <font SIZE="-1">SVG</font> 中一般用匿名長度單位)。 預設是匯出整個文件畫布。原點 (0,0) 為左下角。</dd>
+<dt><code>-C</code>, <code>&#8211;export-area-page</code></dt>
+<dd>匯出 PNG、PDF、PS 和 <font SIZE="-1">EPS</font> 時，匯出範圍是畫布 (頁面)。這是匯出 PNG、PDF 和 <font SIZE="-1">PS</font> 的預設值，所以你不必指 定這個，除非你使用 &#8211;export-id 來匯出指定的物件。匯出 <font SIZE="-1">EPS</font> 時，這就不是預設值；此外，對於 EPS，格式的 規格不允許外框邊界超出內容範圍。這表示當 &#8211;export-area-canvas 用於 <font SIZE="-1">EPS</font> 匯出時，如果內容的外框邊界較 小則畫布的外框邊界會被向內裁剪成內容的外框邊界。</dd>
+<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></dt>
+<dd>匯出 PNG、PDF、PS 和 <font SIZE="-1">EPS</font> 時，匯出範圍為繪畫部份 (不是畫布)，即文件全部物件的外框邊界 (如果使用 &#8211;export -id 則是匯出物件的外框邊界)。 使用這個選項，匯出的圖片會顯示文件中所有的可見物件，而不會有頁邊空白或裁剪。 這是 <font SIZE="-1">EPS</font> 預設的匯出範圍。對於 PNG，這個可以和 &#8211;export-use-hints 結合使用。</dd>
+<dt><code>&#8211;export-area-snap</code></dt>
+<dd>匯出 <font SIZE="-1">PNG</font> 時，向外捉取匯出範圍為最接近的整數 <font SIZE="-1">SVG</font> 使用者單位 (px) 數值。如果你使用預設的匯出解析度 90 dpi 且你的圖形是像素捉取來最小化平滑，這項改變允許你維持這種校正方式，即使你正要匯出的物件的外框邊界 (使用 &#8211;export-id 或 &#8211;export-area-drawing) 是本身而不是像素校正。</dd>
+<dt><code>-b</code> <i>顏色</i>, <code>&#8211;export-background</code>=<i>顏色</i></dt>
+<dd>匯出 <font SIZE="-1">PNG</font> 的背景顏色。 可以是任何 <font SIZE="-1">SVG</font> 的顏色字串，例如 &#8220;#ff007f&#8221; 或 &#8220;rgb(255, 0, 128)&#8221;。 如果沒有設定顏色，那麼就會使用在 Inkscape 文件選項對話窗所設定的頁面顏色 (儲存在 pagecolor= sodipodi:namedview 的屬性)。</dd>
+<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></dt>
+<dd>匯出 <font SIZE="-1">PNG</font> 所使用的解析度。 當匯出為 PS、EPS 或 <font SIZE="-1">PDF </font>(除非你指定 &#8211;export-ignore-filters 禁止點陣化) 時，也用於退回套用濾鏡 物件的點陣化過程。預設值為 90 dpi，其對應成 1 <font SIZE="-1">SVG</font> 使用者單位 (px, 亦稱「使用者單位」) 匯出為 1 點 陣圖像素。 如果和 &#8211;export-use-hints 一起使用，這個數值會覆蓋 <font SIZE="-1">DPI</font> 內定值。</dd>
+<dt><code>-e</code> <i>檔名</i>, <code>&#8211;export-png</code>=<i>檔名</i></dt>
+<dd>指定匯出 <font SIZE="-1">PNG</font> 的檔名。 如果指定的檔名已經存在，則不會詢問便覆蓋原有的檔案。</dd>
+<dt><code>-f</code> <i>檔名</i>, <code>&#8211;file</code>=<i>檔名</i></dt>
+<dd>開啟指定的文件。 選項字串可以省略，即你可以不要輸入 -f 只列出檔名。</dd>
+<dt><code>-g</code>, <code>&#8211;with-gui</code></dt>
+<dd>試著使用圖形介面 (在 Unix 系統，即使沒有設定 <tt>$DISPLAY</tt> 也會使用 X server)。</dd>
+<dt><code>-h</code> <i>高度</i>, <code>&#8211;export-height</code>=<i>高度</i></dt>
+<dd>匯出點陣圖的高度，單位為像素。 這個數值會覆蓋 &#8211;export-dpi 設定值 (如果和 &#8211;export-use-hints 同時使用，會覆蓋 <font SIZE="-1">DPI</font> 內定值)。</dd>
+<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i></i><font SIZE="-1"><i>ID</i></font><i></i></dt>
+<dd>For <font SIZE="-1">PNG, PS, EPS, PDF</font> and plain <font SIZE="-1">SVG</font> export, the id attribute value of the object that you want to export from the document; all other objects are not exported. By default the exported area is the bounding box of the object; you can override this using &#8211;export-area (<font SIZE="-1">PNG</font> only) or &#8211;export-area-page.</dd>
+<dt><code>-j</code>, <code>&#8211;export-id-only</code></dt>
+<dd>For <font SIZE="-1">PNG</font> and plain <font SIZE="-1">SVG,</font> only export the object whose id is given in &#8211;export-id. All other objects are hidden and won&#8217;t show in export even if they overlay the exported object. Without &#8211;export-id, this option is ignored. For <font SIZE="-1">PDF</font> export, this is the default, so this option has no effect.</dd>
+<dt><code>-l</code>, <code>&#8211;export-plain-svg</code>=<i>檔名</i></dt>
+<dd>匯出文件為普通的 <font SIZE="-1">SVG</font> 格式，沒有 sodipodi: 或 inkscape: 名稱集也沒有 <font SIZE="-1">RDF</font> 後設資料。</dd>
+<dt><code>-x</code>, <code>&#8211;extension-directory</code></dt>
+<dd>列出 Inkscape 目前設定為使用且存在的擴充模組目錄。這選項用於外部擴充模組使用相同設定作為原始的 Inkscape 安裝。</dd>
+<dt><code>&#8211;verb-list</code></dt>
+<dd>依照 <font SIZE="-1">ID</font> 列出在 Inkscape 中全部可用的動詞。這 <font SIZE="-1">ID</font> 可用在定義按鍵對應或選單中。也可以和 &#8211;verb 命令 列選項一起使用。</dd>
+<dt><code>&#8211;verb</code>=<i>動詞-ID</i>, <code>&#8211;select</code>=<i>物件-ID</i></dt>
+<dd>這兩個選項一起使用可由命令列上提供一些 Inkscape 的基本腳本。於命令列上要執行多少次都可以，而且可在每一 個指定的文件上執行。 </dd>
 <p> 其 &#8211;verb 指令會執行某個指定的動詞，就像從選單或按鈕上呼叫一樣。如果執行的是部份動詞便會跳出對話窗。 使用 &#8211;verb-list 命令列選項可取得可用動詞 <font SIZE="-1">ID</font> 的清單。 </p>
 <p> 而 &#8211;select 指令會選取被指定 <font SIZE="-1">ID</font> 的物件。此選項允許對選取物件執行各種動詞。使用 &#8211;verb=EditDeselect 可移除所有選取的項目。可用的物件 <font SIZE="-1">ID</font> 取決於文件指定載入哪些物件。</p>
-<dt><code>-p</code> <i>印表機</i>, <code>&#8211;print</code>=<i>印表機</i></p>
-<dd>用指定的印表機來列印文件，使用 `lpr -P <font SIZE="-1">PRINTER</font>&#8216; 來指定印表機。 用 `| 指令&#8217; 來指定一個不同的指令到管線中，或用 `&gt; 檔名&#8217; 來寫入 PostScript 輸出到檔案而不是印表機。 記得加上適當的引號，例如 </p>
+<dt><code>-p</code> <i>印表機</i>, <code>&#8211;print</code>=<i>印表機</i></dt>
+<dd>用指定的印表機來列印文件，使用 `lpr -P <font SIZE="-1">PRINTER</font>&#8216; 來指定印表機。 用 `| 指令&#8217; 來指定一個不同的指令到管線中，或用 `&gt; 檔名&#8217; 來寫入 PostScript 輸出到檔案而不是印表機。 記得加上適當的引號，例如 </dd>
 <p> inkscape &#8211;print=&#8217;| ps2pdf &#8211; 我的文件.pdf&#8217; 我的文件.svg</p>
-<dt><code>-t</code>, <code>&#8211;export-use-hints</code></p>
-<dd>使用匯出檔名和儲存在匯出物件中的 <font SIZE="-1">DPI</font> 內定值 (只能和 &#8211;export-id 一起使用)。 當你從 Inkscape 內部匯出選取範圍時會自動設定為這些內定值。 例如，你用 Inkscape 圖形介面從 document.svg 裡將 id=&#8220;path231&#8221; 的形狀以 300 dpi 匯出成 /home/me/shape.png ，並儲存文件，之後你便可簡單地用下面的指令以相同的解析度重新匯出相同的檔案 </p>
+<dt><code>-t</code>, <code>&#8211;export-use-hints</code></dt>
+<dd>使用匯出檔名和儲存在匯出物件中的 <font SIZE="-1">DPI</font> 內定值 (只能和 &#8211;export-id 一起使用)。 當你從 Inkscape 內部匯出選取範圍時會自動設定為這些內定值。 例如，你用 Inkscape 圖形介面從 document.svg 裡將 id=&#8220;path231&#8221; 的形狀以 300 dpi 匯出成 /home/me/shape.png ，並儲存文件，之後你便可簡單地用下面的指令以相同的解析度重新匯出相同的檔案 </dd>
 <p> inkscape -i path231 -t 文件.svg </p>
 <p> 如果你將這個選項和 &#8211;export-dpi、&#8211;export-width 或 &#8211;export-height 一起使用,那麼 <font SIZE="-1">DPI</font> 內定值會被忽略並使用命令列上的數值。 如果你將這個選項和 &#8211;export-png 一起使用，那麼檔名內定值會被忽略並使用命令列上的檔名。</p>
-<dt><code>-w</code> <i>寬度</i>, <code>&#8211;export-width</code>=<i>寬度</i></p>
-<dd>匯出點陣圖的寬度，單位為像素。 這個數值會覆蓋 &#8211;export-dpi 設定值 (如果和 &#8211;export-use-hints 同時使用則會覆蓋 <font SIZE="-1">DPI</font> 內定值)。</p>
-<dt><code>-y</code> <i>數值</i>, <code>&#8211;export-background-opacity</code>=<i>數值</i></p>
-<dd>匯出 <font SIZE="-1">PNG</font> 背景的不透明度。 這個數值可以是 0.0 到 1.0 之間的數值 (0.0 表示完全透明，1.0 表示完全不透明) 或者大於 1 到 255 以內的數值 (255 代表完全不透明)。 如果沒有設定數值且沒有使用 -b 選項，那麼就會使用在 Inkscape 文件選項對話窗所設定的頁面不透明度 (儲存 在 inkscape:pageopacity= sodipodi:namedview 的屬性)。 如果沒有設定數值但有使用 -b 選項，那麼會使用 255 (完全不透明)。</p>
-<dt><code>-P</code> <i>檔名</i>, <code>&#8211;export-ps</code>=<i>檔名</i></p>
-<dd>將文件匯出成 PostScript 格式。注意 PostScript 不支援透明，所以原本 <font SIZE="-1">SVG</font> 中的透明物件都會自動轉成點 陣圖。使用的字型成子集合並嵌入。預設的匯出範圍是畫布；你可以用 &#8211;export-area-drawing 將匯出範圍設定 成繪圖部份。你可指定 &#8211;export-id 來匯出單一物件 (其餘全部隱藏); 假如那樣的話匯出範圍就是物件的外框邊 界，但可用 &#8211;export-area-canvas 設定成畫布。</p>
-<dt><code>-E</code> <i>檔名</i>, <code>&#8211;export-eps</code>=<i>檔名</i></p>
-<dd>將文件匯出成封裝的 PostScript 格式。注意 PostScript 不支援透明，所以原始 <font SIZE="-1">SVG</font> 中的透明物件都會自動轉成點 陣圖。使用的字型成子集合並嵌入。預設的匯出範圍是繪圖部份；你可設定成畫布，不過會看見 &#8211;export-area-canvas 的適用限制。你可以指定 &#8211;export-id 來匯出單一物件 (其餘全部隱藏)。</p>
-<dt><code>-A</code> <i>檔名</i>, <code>&#8211;export-pdf</code>=<i>檔名</i></p>
-<dd>將文件匯出成 <font SIZE="-1">PDF</font> 格式。這種格式會保存原始 <font SIZE="-1">SVG</font> 中的透明度。使用的字型成子集合並嵌入。 預設的匯出範圍是畫 布；你可以用 &#8211;export-area-drawing 將匯出範圍設定成繪圖部份。你可以指定 &#8211;export-id 來匯出單一物 件 (其餘全部隱藏); 假如那樣的話匯出範圍就是物件的外框邊界，但可用 &#8211;export-area-canvas 設定成畫布。</p>
-<dt><code>&#8211;export-pdf-version</code>=<i>PDF-VERSION</i></p>
-<dd>Select the <font SIZE="-1">PDF</font> version of the exported <font SIZE="-1">PDF</font> file. This option basically exposes the <font SIZE="-1">PDF</font> version selector found in the PDF-export dialog of the <font SIZE="-1">GUI.</font> You must provide one of the versions from that combo-box, e.g. &#8220;1.4&#8221;. The default pdf export version is &#8220;1.4&#8221;.</p>
-<dt><code>&#8211;export-latex</code></p>
-<dd>(PS、EPS 和 <font SIZE="-1">PDF</font> 匯出) 用來建立 LaTeX 文件的圖片，而圖片的文字則由 LaTeX 排版。當匯出成 <font SIZE="-1">PDF/PS/EPS</font> 格式時，此選項會將輸出分離成一個 <font SIZE="-1">PDF/PS/EPS</font> 檔 (例如用 &#8211;export-pdf 指定) 和 LaTeX 檔。文字不會輸出到 <font SIZE="-1">PDF/PS/EPS</font> 檔案裡，但會出現在 LaTeX 檔案。這個 LaTeX 檔案包含 PDF/PS/EPS。輸入 (\input{image.tex}) LaTeX 檔案到你的 LaTeX 文件會顯示圖片和全部由 LaTeX 排版的文字。查閱結果的 LaTeX 檔案可得知更多資訊。也請查看 GNUPlot 的「epslatex」輸出終端機。</p>
-<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></p>
-<dd>Convert text objects to paths on export, where applicable (for <font SIZE="-1">PS, EPS, PDF</font> and <font SIZE="-1">SVG</font> export).</p>
-<dt><code>&#8211;export-ignore-filters</code></p>
-<dd>將套用濾鏡的物件 (例如這些物件套用模糊) 匯出成向量屬性，忽略濾鏡 (匯出 PS、EPS 和PDF 時)。 在預設情況下，全部套用濾鏡的物件會以 &#8211;export-dpi (預設為 90 dpi) 的解析度轉成點陣圖以維持外觀。</p>
-<dt><code>-I</code>, <code>&#8211;query-id</code></p>
-<dd>設定要查詢尺寸的物件 ID。如果沒有設定，查詢選項會回傳繪圖部份的尺寸 (即文件的全部物件)，而不是頁面或 檢視外框。</p>
-<dt><code>-X</code>, <code>&#8211;query-x</code></p>
-<dd>查詢繪圖部份的 X 坐標或用 &#8211;query-id 所指定物件的 X 坐標。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</p>
-<dt><code>-Y</code>, <code>&#8211;query-y</code></p>
-<dd>查詢繪圖部份的 Y 坐標或用 &#8211;query-id 所指定物件的 Y 坐標。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</p>
-<dt><code>-W</code>, <code>&#8211;query-width</code></p>
-<dd>查詢繪圖部份的寬度或用 &#8211;query-id 所指定物件的寬度。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</p>
-<dt><code>-H</code>, <code>&#8211;query-height</code></p>
-<dd>查詢繪圖部份的高度或用 &#8211;query-id 所指定物件的高度。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</p>
-<dt><code>-S</code>, <code>&#8211;query-all</code></p>
-<dd>列印一份 <font SIZE="-1">SVG</font> 文件中已定義 <font SIZE="-1">ID</font> 的所有物件以逗點區隔的清單，與 x、y、寬度和高度數值同樣。</p>
-<dt><code>&#8211;shell</code></p>
-<dd>使用這個參數，Inkscape 會進入互動式命令列 shell 模式。在這種模式中，你在提示符上輸入指令然後 Inkscape 執行，而不必對每一道指令執行新的 Inkscape。這個功能對腳本和伺服器用途極為有用：它沒有加入任何新功能，但可 讓任何多次呼叫 Inkscape 執行命令列任務 (比如匯出或轉換) 腳本的速度更快、需要更少的記憶體。 在 shell 模式中的每一道指令必須是完全正確的 Inkscape 命令列但不含 Inkscape 程式名稱， 例如 &#8220;檔案.svg &#8211;export-pdf=檔案.pdf&#8221;。</p>
-<dt><code>&#8211;vacuum-defs</code></p>
-<dd>從 <font SIZE="-1">SVG</font> 檔案的 &lt;lt&gt;defs&lt;gt&gt; 段落中移除所有未使用的項目。如果這個選項與 &#8211;export-plain-svg 一起調用， 只有匯出的檔案會有作用。如果單獨使用會適當地修飾所指定的檔案。</p>
-<dt><code>-z</code>, <code>&#8211;without-gui</code></p>
-<dd>不要開啟圖形介面 (在 Unix 系統，不使用 X server)；只從終端機處理檔案。 這被假定為 -p、-e、-l 和 &#8211;vacuum-defs 選項。</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd>這標準 <font SIZE="-1">GTK</font> 選項會強制出現任何警告時，使 Inkscape 中止 (對除錯很有用)。</p>
-<dt><code>&#8211;usage</code></p>
-<dd>顯示簡單的使用訊息。</dl>
+<dt><code>-w</code> <i>寬度</i>, <code>&#8211;export-width</code>=<i>寬度</i></dt>
+<dd>匯出點陣圖的寬度，單位為像素。 這個數值會覆蓋 &#8211;export-dpi 設定值 (如果和 &#8211;export-use-hints 同時使用則會覆蓋 <font SIZE="-1">DPI</font> 內定值)。</dd>
+<dt><code>-y</code> <i>數值</i>, <code>&#8211;export-background-opacity</code>=<i>數值</i></dt>
+<dd>匯出 <font SIZE="-1">PNG</font> 背景的不透明度。 這個數值可以是 0.0 到 1.0 之間的數值 (0.0 表示完全透明，1.0 表示完全不透明) 或者大於 1 到 255 以內的數值 (255 代表完全不透明)。 如果沒有設定數值且沒有使用 -b 選項，那麼就會使用在 Inkscape 文件選項對話窗所設定的頁面不透明度 (儲存 在 inkscape:pageopacity= sodipodi:namedview 的屬性)。 如果沒有設定數值但有使用 -b 選項，那麼會使用 255 (完全不透明)。</dd>
+<dt><code>-P</code> <i>檔名</i>, <code>&#8211;export-ps</code>=<i>檔名</i></dt>
+<dd>將文件匯出成 PostScript 格式。注意 PostScript 不支援透明，所以原本 <font SIZE="-1">SVG</font> 中的透明物件都會自動轉成點 陣圖。使用的字型成子集合並嵌入。預設的匯出範圍是畫布；你可以用 &#8211;export-area-drawing 將匯出範圍設定 成繪圖部份。你可指定 &#8211;export-id 來匯出單一物件 (其餘全部隱藏); 假如那樣的話匯出範圍就是物件的外框邊 界，但可用 &#8211;export-area-canvas 設定成畫布。</dd>
+<dt><code>-E</code> <i>檔名</i>, <code>&#8211;export-eps</code>=<i>檔名</i></dt>
+<dd>將文件匯出成封裝的 PostScript 格式。注意 PostScript 不支援透明，所以原始 <font SIZE="-1">SVG</font> 中的透明物件都會自動轉成點 陣圖。使用的字型成子集合並嵌入。預設的匯出範圍是繪圖部份；你可設定成畫布，不過會看見 &#8211;export-area-canvas 的適用限制。你可以指定 &#8211;export-id 來匯出單一物件 (其餘全部隱藏)。</dd>
+<dt><code>-A</code> <i>檔名</i>, <code>&#8211;export-pdf</code>=<i>檔名</i></dt>
+<dd>將文件匯出成 <font SIZE="-1">PDF</font> 格式。這種格式會保存原始 <font SIZE="-1">SVG</font> 中的透明度。使用的字型成子集合並嵌入。 預設的匯出範圍是畫 布；你可以用 &#8211;export-area-drawing 將匯出範圍設定成繪圖部份。你可以指定 &#8211;export-id 來匯出單一物 件 (其餘全部隱藏); 假如那樣的話匯出範圍就是物件的外框邊界，但可用 &#8211;export-area-canvas 設定成畫布。</dd>
+<dt><code>&#8211;export-pdf-version</code>=<i>PDF-VERSION</i></dt>
+<dd>Select the <font SIZE="-1">PDF</font> version of the exported <font SIZE="-1">PDF</font> file. This option basically exposes the <font SIZE="-1">PDF</font> version selector found in the PDF-export dialog of the <font SIZE="-1">GUI.</font> You must provide one of the versions from that combo-box, e.g. &#8220;1.4&#8221;. The default pdf export version is &#8220;1.4&#8221;.</dd>
+<dt><code>&#8211;export-latex</code></dt>
+<dd>(PS、EPS 和 <font SIZE="-1">PDF</font> 匯出) 用來建立 LaTeX 文件的圖片，而圖片的文字則由 LaTeX 排版。當匯出成 <font SIZE="-1">PDF/PS/EPS</font> 格式時，此選項會將輸出分離成一個 <font SIZE="-1">PDF/PS/EPS</font> 檔 (例如用 &#8211;export-pdf 指定) 和 LaTeX 檔。文字不會輸出到 <font SIZE="-1">PDF/PS/EPS</font> 檔案裡，但會出現在 LaTeX 檔案。這個 LaTeX 檔案包含 PDF/PS/EPS。輸入 (\input{image.tex}) LaTeX 檔案到你的 LaTeX 文件會顯示圖片和全部由 LaTeX 排版的文字。查閱結果的 LaTeX 檔案可得知更多資訊。也請查看 GNUPlot 的「epslatex」輸出終端機。</dd>
+<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></dt>
+<dd>Convert text objects to paths on export, where applicable (for <font SIZE="-1">PS, EPS, PDF</font> and <font SIZE="-1">SVG</font> export).</dd>
+<dt><code>&#8211;export-ignore-filters</code></dt>
+<dd>將套用濾鏡的物件 (例如這些物件套用模糊) 匯出成向量屬性，忽略濾鏡 (匯出 PS、EPS 和PDF 時)。 在預設情況下，全部套用濾鏡的物件會以 &#8211;export-dpi (預設為 90 dpi) 的解析度轉成點陣圖以維持外觀。</dd>
+<dt><code>-I</code>, <code>&#8211;query-id</code></dt>
+<dd>設定要查詢尺寸的物件 ID。如果沒有設定，查詢選項會回傳繪圖部份的尺寸 (即文件的全部物件)，而不是頁面或 檢視外框。</dd>
+<dt><code>-X</code>, <code>&#8211;query-x</code></dt>
+<dd>查詢繪圖部份的 X 坐標或用 &#8211;query-id 所指定物件的 X 坐標。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</dd>
+<dt><code>-Y</code>, <code>&#8211;query-y</code></dt>
+<dd>查詢繪圖部份的 Y 坐標或用 &#8211;query-id 所指定物件的 Y 坐標。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</dd>
+<dt><code>-W</code>, <code>&#8211;query-width</code></dt>
+<dd>查詢繪圖部份的寬度或用 &#8211;query-id 所指定物件的寬度。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</dd>
+<dt><code>-H</code>, <code>&#8211;query-height</code></dt>
+<dd>查詢繪圖部份的高度或用 &#8211;query-id 所指定物件的高度。回傳值的單位是 px (<font SIZE="-1">SVG</font> 使用者單位)。</dd>
+<dt><code>-S</code>, <code>&#8211;query-all</code></dt>
+<dd>列印一份 <font SIZE="-1">SVG</font> 文件中已定義 <font SIZE="-1">ID</font> 的所有物件以逗點區隔的清單，與 x、y、寬度和高度數值同樣。</dd>
+<dt><code>&#8211;shell</code></dt>
+<dd>使用這個參數，Inkscape 會進入互動式命令列 shell 模式。在這種模式中，你在提示符上輸入指令然後 Inkscape 執行，而不必對每一道指令執行新的 Inkscape。這個功能對腳本和伺服器用途極為有用：它沒有加入任何新功能，但可 讓任何多次呼叫 Inkscape 執行命令列任務 (比如匯出或轉換) 腳本的速度更快、需要更少的記憶體。 在 shell 模式中的每一道指令必須是完全正確的 Inkscape 命令列但不含 Inkscape 程式名稱， 例如 &#8220;檔案.svg &#8211;export-pdf=檔案.pdf&#8221;。</dd>
+<dt><code>&#8211;vacuum-defs</code></dt>
+<dd>從 <font SIZE="-1">SVG</font> 檔案的 &lt;lt&gt;defs&lt;gt&gt; 段落中移除所有未使用的項目。如果這個選項與 &#8211;export-plain-svg 一起調用， 只有匯出的檔案會有作用。如果單獨使用會適當地修飾所指定的檔案。</dd>
+<dt><code>-z</code>, <code>&#8211;without-gui</code></dt>
+<dd>不要開啟圖形介面 (在 Unix 系統，不使用 X server)；只從終端機處理檔案。 這被假定為 -p、-e、-l 和 &#8211;vacuum-defs 選項。</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd>這標準 <font SIZE="-1">GTK</font> 選項會強制出現任何警告時，使 Inkscape 中止 (對除錯很有用)。</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>顯示簡單的使用訊息。</dd></dl>
 <h2>組態設定</h2>
 <p>主要的組態設定檔放在 ~/.config/Inkscape/preferences.xml； 組態設定檔儲存各種設定值，可在 Inkscape 中變更 (大部份在 Inkscape 偏好設定對話窗)。也可以在那裡的子目錄中放置你自己的組態設定檔： </p>
 <p> $HOME/.config/Inkscape/extensions/ &#8211; 擴充模組。 </p>

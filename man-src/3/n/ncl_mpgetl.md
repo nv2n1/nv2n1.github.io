@@ -12,9 +12,9 @@ MAPGTL - Gets the current value of a specified EZMAP parameter of type LOGICAL. 
 
  void c_mapgtl (char *pnam, int *lval)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. Only the first two characters of the string are examined.
-<dt>LVAL
-<dd>(an output variable of type LOGICAL) receives the value of the parameter specified by PNAM.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. Only the first two characters of the string are examined.
+</dd><dt>LVAL
+</dt><dd>(an output variable of type LOGICAL) receives the value of the parameter specified by PNAM.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to retrieve the current value of EZMAP parameters. For a complete list of parameters available in this utility, see the ezmap_params man page.
 <h2>Examples</h2>The capabilities offered by the MAPGTL or MPGETL routines are also offered by the MAPGTI or MPGETI routines. See the examples listed on the MAPGTI or MPGETI man page.
 <h2>Access</h2>To use MAPGTL, MPGETL, or c_mapgtl load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

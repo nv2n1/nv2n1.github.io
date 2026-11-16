@@ -12,25 +12,10 @@ description: "sc::RenderedObjectSet –"
 <p> Inherits <code>sc::RenderedObject</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>RenderedObjectSet (int capacity=10)
-
-
-
 RenderedObjectSet (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 int n () const
-
-
-
 const Ref&lt; RenderedObject &gt; &amp; element (int i) const
-
-
-
 virtual void add (const Ref&lt; RenderedObject &gt; &amp;)
-
-
-
 Protected Member Functions
 void render (const Ref&lt; Render &gt; &amp;)
 </code></pre>

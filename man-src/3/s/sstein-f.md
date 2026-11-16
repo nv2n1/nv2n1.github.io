@@ -23,10 +23,10 @@ description: "sstein.f –"
  iteration.
  The maximum number of iterations allowed for each eigenvector is
  specified by an internal parameter MAXITS (currently set to 5).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix. N &gt;= 0.</pre>
 <p><i>D</i> </p>
@@ -95,16 +95,16 @@ description: "sstein.f –"
  EXTRA INTEGER, default = 2
  The number of iterations performed after norm growth
  criterion is satisfied, should be at least 1.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 174 of file sstein.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

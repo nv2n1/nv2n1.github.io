@@ -10,15 +10,11 @@ description: "regcomp, regexec, regerror, regfree – POSIX regex functions"
 <p>regcomp, regexec, regerror, regfree &#8211; POSIX regex functions</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;regex.h&gt;
-
 int regcomp(regex_t *preg, const char *regex, int cflags);
-
 int regexec(const regex_t *preg, const char *string, size_t nmatch,
             regmatch_t pmatch[], int eflags);
-
 size_t regerror(int errcode, const regex_t *preg, char *errbuf,
                 size_t errbuf_size);
-
 void regfree(regex_t *preg);</code></pre>
 <h2>Description</h2>
 <h3>POSIX regex compiling</h3>
@@ -144,3 +140,4 @@ N+1.)</p>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;regoff_t rm_eo; } regmatch_t; Each <i>rm_so</i> element that is not -1 indicates the start offset of the next largest substring match within the string. The relative <i>rm_eo</i> element indicates the end offset of the match, which is the offset of the first character after the matching text.</p>
 <h3>POSIX error reporting</h3>
 <p><code>regerror</code>() is used to turn the error codes that can be returned by both <code>regcomp</code>() and <code>regexec</code>() into error message strings. <code>regerror</code>() is passed the error code, <i>errcode</i>, the pattern buffer, <i>preg</i>, a pointer to a character string buffer, <i>errbuf</i>, and the size of the string buffer, <i>errbuf_size</i>. It returns the size of the <i>errbuf</i> required to contain the null-terminated error message string. If both <i>errbuf</i> and <i>errbuf_size</i> are nonzero, <i>errbuf</i> is filled in with the first <i>errbuf_size &#8211; 1</i> characters of the error message and a terminating null byte (&#8216;
+</p>

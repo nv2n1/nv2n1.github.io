@@ -42,22 +42,22 @@ dbmapreduce[-dMS][-k KeyField][-f CodeFile][-C Filtercode][--][ReduceCommand[Red
 <p> As of 2013-09-21, we don&#8217;t verify key order with options <tt>&quot;-M -S&quot;</tt>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k</code> or <code>&#8211;key</code> KeyField</p>
-<dd> specify which column is the key for grouping (default: the first column)</p>
-<dt><code>-S</code> or <code>&#8211;pre-sorted</code></p>
-<dd> Assume data is already grouped by tag. Provided twice, it removes the validation of this assertion.</p>
-<dt><code>-M</code> or <code>&#8211;multiple-ok</code></p>
-<dd> Assume the ReduceCommand can handle multiple grouped keys, and the ReduceCommand is responsible for outputting the with each output row. (By default, a separate ReduceCommand is run for each key, and dbmapreduce adds the key to each output row.)</p>
-<dt><code>-K</code> or <code>&#8211;pass-current-key</code></p>
-<dd> Pass the current key as an argument to the external, non-map-aware ReduceCommand. This is only done optionally since some external commands do not expect an extra argument. (Internal, non-map-aware Perl reducers are always given the current key as an argument.)</p>
-<dt><code>&#8211;prepend-key</code></p>
-<dd> Add the current key into the reducer output for non-multi-key-aware reducers only. Not done by default.</p>
-<dt><code>&#8211;copy-fs</code> or <code>&#8211;copy-fieldseparator</code></p>
-<dd> Change the field separator of a non-multi-key-aware reducers to match the input&#8217;s field separator. Not done by default.</p>
-<dt>&lt;&#8211;parallelism=N&gt;</p>
-<dd> Allow up to N reducers to run in parallel. Default is the number of CPUs in the machine.</p>
-<dt><code>-C FILTER-CODE</code> or <code>&#8211;filter-code=FILTER-CODE</code></p>
-<dd> Provide FILTER-CODE, Perl code that generates and returns a Fsdb::Filter object that implements the reduce function. The provided code should be an anonymous sub that creates a Fsdb Filter that implements the reduce object. </p>
+<dt><code>-k</code> or <code>&#8211;key</code> KeyField</dt>
+<dd> specify which column is the key for grouping (default: the first column)</dd>
+<dt><code>-S</code> or <code>&#8211;pre-sorted</code></dt>
+<dd> Assume data is already grouped by tag. Provided twice, it removes the validation of this assertion.</dd>
+<dt><code>-M</code> or <code>&#8211;multiple-ok</code></dt>
+<dd> Assume the ReduceCommand can handle multiple grouped keys, and the ReduceCommand is responsible for outputting the with each output row. (By default, a separate ReduceCommand is run for each key, and dbmapreduce adds the key to each output row.)</dd>
+<dt><code>-K</code> or <code>&#8211;pass-current-key</code></dt>
+<dd> Pass the current key as an argument to the external, non-map-aware ReduceCommand. This is only done optionally since some external commands do not expect an extra argument. (Internal, non-map-aware Perl reducers are always given the current key as an argument.)</dd>
+<dt><code>&#8211;prepend-key</code></dt>
+<dd> Add the current key into the reducer output for non-multi-key-aware reducers only. Not done by default.</dd>
+<dt><code>&#8211;copy-fs</code> or <code>&#8211;copy-fieldseparator</code></dt>
+<dd> Change the field separator of a non-multi-key-aware reducers to match the input&#8217;s field separator. Not done by default.</dd>
+<dt>&lt;&#8211;parallelism=N&gt;</dt>
+<dd> Allow up to N reducers to run in parallel. Default is the number of CPUs in the machine.</dd>
+<dt><code>-C FILTER-CODE</code> or <code>&#8211;filter-code=FILTER-CODE</code></dt>
+<dd> Provide FILTER-CODE, Perl code that generates and returns a Fsdb::Filter object that implements the reduce function. The provided code should be an anonymous sub that creates a Fsdb Filter that implements the reduce object. </dd>
 <p> The reduce object will then be called with &#8211;input and &#8211;output parameters that hook it into a the reduce with queues. </p>
 <p> One sample fragment that works is just: </p>
 <pre>
@@ -78,8 +78,8 @@ dbmapreduce[-dMS][-k KeyField][-f CodeFile][-C Filtercode][--][ReduceCommand[Red
 &nbsp;<wbr>dbmapreduce(-k&nbsp;<wbr>=&gt;&nbsp;<wbr>&#8216;experiment&#8217;,&nbsp;<wbr> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-C =&gt; sub { dbcolstats(qw(&#8211;nolong duration)) });</p>
 <p> The reduce object must consume <i>all</i> input as a Fsdb stream, and close the output Fsdb stream. (If this assumption is not met the map/reduce will be aborted.) </p>
 <p> For non-map-reduce-aware filters, when the filter-generator code runs, <tt>$_[0]</tt> will be the current key.</p>
-<dt><code>-f CODE-FILE</code> or <code>&#8211;code-file=CODE-FILE</code></p>
-<dd> Includes <i>CODE-FILE</i> in the program. This option is useful for more complicated perl reducer functions. </p>
+<dt><code>-f CODE-FILE</code> or <code>&#8211;code-file=CODE-FILE</code></dt>
+<dd> Includes <i>CODE-FILE</i> in the program. This option is useful for more complicated perl reducer functions. </dd>
 <p> Thus, if reducer.pl has the code. </p>
 <pre><code>
 sub make_reducer
@@ -94,26 +94,26 @@ sub make_reducer
         dbmapreduce -k experiment -f reducer.pl -C make_reducer
 </pre>
 <p> does the same thing as the example.</p>
-<dt><code>-w</code> or <code>&#8211;warnings</code></p>
-<dd> Enable warnings in user supplied code. Warnings are issued if an external reducer fails to consume all input. (Default to include warnings.)</p>
-<dt><code>-T TmpDir</code></p>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dl>
+<dt><code>-w</code> or <code>&#8211;warnings</code></dt>
+<dd> Enable warnings in user supplied code. Warnings are issued if an external reducer fails to consume all input. (Default to include warnings.)</dd>
+<dt><code>-T TmpDir</code></dt>
+<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;header</code> H</p>
-<dd> Use H as the full Fsdb header, rather than reading a header from then input.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;header</code> H</dt>
+<dd> Use H as the full Fsdb header, rather than reading a header from then input.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

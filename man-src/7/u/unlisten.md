@@ -15,10 +15,10 @@ description: "UNLISTEN – stop listening for a notification"
 <p> NOTIFY [<code><a href="/docs/linux/man/7-notify/">notify</a></code>(7)] contains a more extensive discussion of the use of <code>LISTEN</code> and <code>NOTIFY</code>.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>Name of a notification (any identifier).</p>
-<dt><code>*</code></p>
-<dd>All current listen registrations for this session are cleared.</dl>
+<dt><i>name</i></dt>
+<dd>Name of a notification (any identifier).</dd>
+<dt><code>*</code></dt>
+<dd>All current listen registrations for this session are cleared.</dd></dl>
 <h2>Notes</h2>
 <p>You can unlisten something you were not listening for; no warning or error will appear. </p>
 <p> At the end of each session, <code>UNLISTEN *</code> is automatically executed.</p>

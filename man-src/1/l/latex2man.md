@@ -20,90 +20,86 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <p> Using the <code>-L</code> option, LaTeX ouput can be produced, instead of <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code><i>transfile</i></p>
+<dt><code>-t</code><i>transfile</i></dt>
 <dd>
-&nbsp;Translation for user defined LaTeX macros.&nbsp;</p>
-<dt><code>-c</code><i>CSSfile</i></p>
+&nbsp;Translation for user defined LaTeX macros.&nbsp;</dd>
+<dt><code>-c</code><i>CSSfile</i></dt>
 <dd>
-&nbsp;If you use the&nbsp;<code>-H</code> you can also specify a file that contains CSS style sheets. The link to the CSS file is inserted into the generatedHTML output using the specified <i>CSSfile</i> filename.</p>
-<dt><code>-M</code></p>
+&nbsp;If you use the&nbsp;<code>-H</code> you can also specify a file that contains CSS style sheets. The link to the CSS file is inserted into the generatedHTML output using the specified <i>CSSfile</i> filename.</dd>
+<dt><code>-M</code></dt>
 <dd>
-&nbsp;Produce output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command (default).</p>
-<dt><code>-H</code></p>
+&nbsp;Produce output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command (default).</dd>
+<dt><code>-H</code></dt>
 <dd>
-&nbsp;Instead of producing output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command, HTML code is produced (despite the name of the command).</p>
-<dt><code>-T</code></p>
+&nbsp;Instead of producing output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command, HTML code is produced (despite the name of the command).</dd>
+<dt><code>-T</code></dt>
 <dd>
-&nbsp;Instead of producing output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command, TexInfo code is produced (despite the name of the command). The generated .texi-file may be processed with <i><a href="/docs/linux/man/1-makeinfo/">makeinfo</a></i>(1) (to produce an .info-file) which in turn may be installed using <i><a href="/docs/linux/man/1-install-info/">install-info</a></i>(1). The Info tags @dircategory and @direntry are provided.</p>
-<dt><code>-L</code></p>
+&nbsp;Instead of producing output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command, TexInfo code is produced (despite the name of the command). The generated .texi-file may be processed with <i><a href="/docs/linux/man/1-makeinfo/">makeinfo</a></i>(1) (to produce an .info-file) which in turn may be installed using <i><a href="/docs/linux/man/1-install-info/">install-info</a></i>(1). The Info tags @dircategory and @direntry are provided.</dd>
+<dt><code>-L</code></dt>
 <dd>
-&nbsp;The LaTeX source is written to the&nbsp;<i>outfile</i>. This is useful in conjunction with the <code>-C</code><i>name</i> option.</p>
-<dt><code>-C</code><i>name</i></p>
+&nbsp;The LaTeX source is written to the&nbsp;<i>outfile</i>. This is useful in conjunction with the <code>-C</code><i>name</i> option.</dd>
+<dt><code>-C</code><i>name</i></dt>
 <dd>
 &nbsp;Output the conditional text for&nbsp;<i>name</i>. If more than one name should be given use quotes: <code>-C</code><i>&#8216;name1 name2 &#8230;&#8217;</i><br />
- The following names are defined automatically:</p>
+ The following names are defined automatically:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>*</code></p>
-<dd> <code>-H</code> defines HTML</p>
-<dt><code>*</code></p>
-<dd> <code>-T</code> defines TEXI</p>
-<dt><code>*</code></p>
-<dd> <code>-M</code> defines MAN</p>
-<dt><code>*</code></p>
-<dd> <code>-L</code> defines LATEX</dl>
+<dt><code>*</code></dt>
+<dd> <code>-H</code> defines HTML</dd>
+<dt><code>*</code></dt>
+<dd> <code>-T</code> defines TEXI</dd>
+<dt><code>*</code></dt>
+<dd> <code>-M</code> defines MAN</dd>
+<dt><code>*</code></dt>
+<dd> <code>-L</code> defines LATEX</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 </dl>
-<dt><code>-a</code><i>char</i></p>
+<dt><code>-a</code><i>char</i></dt>
 <dd>
 &nbsp;Is used only in conjunction with -T.<br />
  Background:<br />
  TexInfo ignores all blanks before the first word on a new line. In order to produce some additional space before that word (using \SP) some character has to be printed before the additional space. By default this is a . (dot). The <i>char</i> specifies an alternative for that first character. Giving a blank to <code>-a</code> supresses the indentation of a line.<br />
- Note: only for the first \SP of a series that <i>char</i> is printed.</p>
-<dt><code>-h</code></p>
+ Note: only for the first \SP of a series that <i>char</i> is printed.</dd>
+<dt><code>-h</code></dt>
 <dd>
-&nbsp;Show a help text.&nbsp;</p>
-<dt><code>-V</code></p>
+&nbsp;Show a help text.&nbsp;</dd>
+<dt><code>-V</code></dt>
 <dd>
-&nbsp;Show version information.&nbsp;</dl>
+&nbsp;Show version information.&nbsp;</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>latex2man.tex</p>
+<dt>latex2man.tex</dt>
 <dd>
-&nbsp;The LaTeX file containing this Man-page.&nbsp;</p>
-<dt>latex2man.inc</p>
+&nbsp;The LaTeX file containing this Man-page.&nbsp;</dd>
+<dt>latex2man.inc</dt>
 <dd>
-&nbsp;A file read with&nbsp;\input{..}&nbsp;.&nbsp;</p>
-<dt>latex2man.sty</p>
+&nbsp;A file read with&nbsp;\input{..}&nbsp;.&nbsp;</dd>
+<dt>latex2man.sty</dt>
 <dd>
-&nbsp;The LaTeX package defining the environments and&nbsp; commands.</p>
-<dt>latex2man.cfg</p>
+&nbsp;The LaTeX package defining the environments and&nbsp; commands.</dd>
+<dt>latex2man.cfg</dt>
 <dd>
-&nbsp;The configuration file for Latex2man LaTeX-package.</p>
-<dt>latex2man.css</p>
+&nbsp;The configuration file for Latex2man LaTeX-package.</dd>
+<dt>latex2man.css</dt>
 <dd>
-&nbsp;File containing example CSS definitions.&nbsp;</p>
-<dt>latex2man.trans</p>
+&nbsp;File containing example CSS definitions.&nbsp;</dd>
+<dt>latex2man.trans</dt>
 <dd>
-&nbsp;File containing example translations of user&nbsp; defined LaTeX macros.</p>
-<dt>fancyheadings.sty</p>
+&nbsp;File containing example translations of user&nbsp; defined LaTeX macros.</dd>
+<dt>fancyheadings.sty</dt>
 <dd>
-&nbsp;A LaTeX package used to typeset head- and&nbsp; foot lines.</p>
-<dt>fancyhdr.sty</p>
+&nbsp;A LaTeX package used to typeset head- and&nbsp; foot lines.</dd>
+<dt>fancyhdr.sty</dt>
 <dd>
-&nbsp;A LaTeX package used to typeset head- and foot&nbsp; lines.</p>
-<dt>rcsinfo.sty</p>
+&nbsp;A LaTeX package used to typeset head- and foot&nbsp; lines.</dd>
+<dt>rcsinfo.sty</dt>
 <dd>
-&nbsp;A LaTeX package used to extract and use RCS version&nbsp; control information in LaTeX documents.</dl>
+&nbsp;A LaTeX package used to extract and use RCS version&nbsp; control information in LaTeX documents.</dd></dl>
 <dl>
-<dt><code>latex2man.pdf</code></p>
+<dt><code>latex2man.pdf</code></dt>
 <dd>
-&nbsp;The PDF version of this document.&nbsp;</dl>
+&nbsp;The PDF version of this document.&nbsp;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> LaTeX,TexInfo, <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1), <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-makeinfo/">makeinfo</a></i>(1). </p>
 <h2>LaTeX COMMANDS</h2>
@@ -111,20 +107,20 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <h3>PACKAGE OPTIONS</h3>
 <p> The latex2man package accepts the following options: </p>
 <dl>
-<dt>fancy</p>
-<dd> use the LaTeX package fancyheadings.</p>
-<dt>fancyhdr</p>
-<dd> use the LaTeX package fancyhdr.</p>
-<dt>nofancy</p>
-<dd> neither the LaTeX package fancyheadings nor fancyhdr are used.</dl>
+<dt>fancy</dt>
+<dd> use the LaTeX package fancyheadings.</dd>
+<dt>fancyhdr</dt>
+<dd> use the LaTeX package fancyhdr.</dd>
+<dt>nofancy</dt>
+<dd> neither the LaTeX package fancyheadings nor fancyhdr are used.</dd></dl>
 <p> The default option may be specified in the file latex2man.cfg. </p>
 <h3>PACKAGE SPECIFIC ENVIRONMENTS</h3>
 <p> The following environments are provided by the package:</p>
 <dl>
-<dt>egin{Name}{chapter}{name}{author}{info}{title}</p>
-<dd> The Name environment takes five arguments: 1. the Man-page chapter, 2. the name of the Man-page, 3. the author, 4. some short information about the tool printed in the footline of the Man-page, and 5. a text which is used as title, for HTML and LaTeX (it&#8217;s ignored for output of the Man-page or TeXinfo. The Name environment must be the first environment in the document. Processing starts with this environment. Any text before this is ignored (exception: the setVersion and setDate commands). (Note: all arguments of egin{Name} must be written on one line).</p>
-<dt>egin{Table}[width]{columns}</p>
-<dd> The Table environment takes two arguments: the first optional one specifies a width of the last column, the second one gives the number of columns. For example:</dl>
+<dt>egin{Name}{chapter}{name}{author}{info}{title}</dt>
+<dd> The Name environment takes five arguments: 1. the Man-page chapter, 2. the name of the Man-page, 3. the author, 4. some short information about the tool printed in the footline of the Man-page, and 5. a text which is used as title, for HTML and LaTeX (it&#8217;s ignored for output of the Man-page or TeXinfo. The Name environment must be the first environment in the document. Processing starts with this environment. Any text before this is ignored (exception: the setVersion and setDate commands). (Note: all arguments of egin{Name} must be written on one line).</dd>
+<dt>egin{Table}[width]{columns}</dt>
+<dd> The Table environment takes two arguments: the first optional one specifies a width of the last column, the second one gives the number of columns. For example:</dd></dl>
 <p> egin{Table}[2cm]{3}<br />
  Here &amp; am &amp; I \\hline<br />
  A 1 &amp; A 2 &amp; A 3 1 2 3 4 5 A 3 1 2 3 4 5 \<br />
@@ -160,177 +156,164 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <p> \hline may be used. </p>
 <p> If the Man-page is formatted with <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1) and tables are used, the <i><a href="/docs/linux/man/1-tbl/">tbl</a></i>(1) preprocessor should be called, usually by giving a <code>-t</code> to the call of <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1). When viewing the generated manula page using <i><a href="/docs/linux/man/1-man/">man</a></i>(1), <i><a href="/docs/linux/man/1-tbl/">tbl</a></i>(1) is called automatically.</p>
 <dl>
-<dt>egin{Description}</p>
-<dd> is the same as egin{description}</p>
-<dt>egin{Description}[label]</p>
-<dd> is similar to egin{description}, but the item labels have at minimum the size of the (optional) word <i>label</i>. The difference is visible only in the DVI and PDF-output, not in the troff, TexInfo or HTML output.</p>
+<dt>egin{Description}</dt>
+<dd> is the same as egin{description}</dd>
+<dt>egin{Description}[label]</dt>
+<dd> is similar to egin{description}, but the item labels have at minimum the size of the (optional) word <i>label</i>. The difference is visible only in the DVI and PDF-output, not in the troff, TexInfo or HTML output.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>a</p>
-<dd> |a egin{description}</p>
-<dt>ab</p>
-<dd> |ab</p>
-<dt>abc</p>
-<dd> |abc</dl>
+<dt>a</dt>
+<dd> |a egin{description}</dd>
+<dt>ab</dt>
+<dd> |ab</dd>
+<dt>abc</dt>
+<dd> |abc</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>
-<dd></dl>
-<dl>
-<dt>a</p>
-<dd> |a egin{Description}</p>
-<dt>ab</p>
-<dd> |ab</p>
-<dt>abc</p>
-<dd> |abc</dl>
 </dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>
-<dd></dl>
-<dl>
-<dt>a</p>
-<dd> |a egin{Description}[aa]</p>
-<dt>ab</p>
-<dd> |ab</p>
-<dt>abc</p>
-<dd> |abc</dl>
+<dt>a</dt>
+<dd> |a egin{Description}</dd>
+<dt>ab</dt>
+<dd> |ab</dd>
+<dt>abc</dt>
+<dd> |abc</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
+<dl>
+</dl>
+<dl>
+<dt>a</dt>
+<dd> |a egin{Description}[aa]</dd>
+<dt>ab</dt>
+<dd> |ab</dd>
+<dt>abc</dt>
+<dd> |abc</dd></dl>
+</dl>
+<dl>
 </dl>
 </dl>
 <h3>ACCEPTED LaTeX ENVIRONMENTS</h3>
 <p> The following environments are accepted:</p>
 <dl>
-<dt><code>*</code></p>
-<dd> description</p>
-<dt><code>*</code></p>
-<dd> enumerate</p>
-<dt><code>*</code></p>
-<dd> itemize</p>
-<dt><code>*</code></p>
-<dd> verbatim</p>
-<dt><code>*</code></p>
-<dd> center</dl>
+<dt><code>*</code></dt>
+<dd> description</dd>
+<dt><code>*</code></dt>
+<dd> enumerate</dd>
+<dt><code>*</code></dt>
+<dd> itemize</dd>
+<dt><code>*</code></dt>
+<dd> verbatim</dd>
+<dt><code>*</code></dt>
+<dd> center</dd></dl>
 <p> They may be nested:</p>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd> Itemize and nested center: <center> A centered line.<br />
- Another centered line. </p>
-<dt><code>*</code></p>
+ Another centered line. </dd>
+<dt><code>*</code></dt>
 <dd>
- Another item an nested enumerate </p>
+ Another item an nested enumerate </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1.</p>
+<dt>1.</dt>
 <dd>
- a </p>
-<dt>2.</p>
+ a </dd>
+<dt>2.</dt>
 <dd>
  b
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 </dl>
 </dl>
 <h3>PACKAGE SPECIFIC MACROS</h3>
 <p> The following commands are provided: </p>
 <dl>
-<dt>\Opt{option}</p>
+<dt>\Opt{option}</dt>
 <dd>
- Option: \Opt{-o} will be typeset as <code>-o</code>.</p>
-<dt>\Arg{argument}</p>
+ Option: \Opt{-o} will be typeset as <code>-o</code>.</dd>
+<dt>\Arg{argument}</dt>
 <dd>
  Argument: \Arg{filename} will be typeset as<br />
- <i>filename</i>.</p>
-<dt>\OptArg{option}{argument}</p>
+ <i>filename</i>.</dd>
+<dt>\OptArg{option}{argument}</dt>
 <dd>
  Option with Argument:<br />
- \OptArg{-o}{filename} will be typeset as <code>-o</code><i>filename</i>.</p>
-<dt>\OptoArg{option}{argument}</p>
+ \OptArg{-o}{filename} will be typeset as <code>-o</code><i>filename</i>.</dd>
+<dt>\OptoArg{option}{argument}</dt>
 <dd>
  Option with optional Argument:<br />
  \OptoArg{-o}{filename} will be<br />
- typeset as <code>-o</code>[<i>filename</i>].</p>
-<dt>\oOpt{option}</p>
+ typeset as <code>-o</code>[<i>filename</i>].</dd>
+<dt>\oOpt{option}</dt>
 <dd>
  Optional option, e.g. \oOpt{-o} will be<br />
- typeset as [<code>-o</code>].</p>
-<dt>\oArg{argument}</p>
+ typeset as [<code>-o</code>].</dd>
+<dt>\oArg{argument}</dt>
 <dd>
  Optional argument, e.g. \oArg{filename}<br />
- will be typeset as [<i>filename</i>].</p>
-<dt>\oOptArg{option}{argument}</p>
+ will be typeset as [<i>filename</i>].</dd>
+<dt>\oOptArg{option}{argument}</dt>
 <dd>
  Optional option with argument, e.g.<br />
- \oOptArg{-o}{filename} will be typeset as [<code>-o</code><i>filename</i>].</p>
-<dt>\oOptoArg{option}{argument}</p>
+ \oOptArg{-o}{filename} will be typeset as [<code>-o</code><i>filename</i>].</dd>
+<dt>\oOptoArg{option}{argument}</dt>
 <dd>
  Optional option with optional<br />
  argument, e.g.<br />
- \oOptoArg{-o}{filename} will be typeset as [<code>-o</code>[<i>filename</i>]].</p>
-<dt>\File{filename}</p>
+ \oOptoArg{-o}{filename} will be typeset as [<code>-o</code>[<i>filename</i>]].</dd>
+<dt>\File{filename}</dt>
 <dd>
  used to typeset filenames, e.g.<br />
- \File{filename} will be typeset as filename.</p>
-<dt>\Prog{prog}</p>
+ \File{filename} will be typeset as filename.</dd>
+<dt>\Prog{prog}</dt>
 <dd>
  used to typeset program names, e.g.<br />
- \Prog{latex2man} will be typeset as latex2man.</p>
-<dt>\Cmd{command}{chapter}</p>
+ \Prog{latex2man} will be typeset as latex2man.</dd>
+<dt>\Cmd{command}{chapter}</dt>
 <dd>
  used to typeset references to other<br />
  commands, e.g.<br />
- \Cmd{latex2man}{1} will be typeset as <i><a href="/docs/linux/man/1-latex2man/">latex2man</a></i>(1).</p>
-<dt>\Bar</p>
+ \Cmd{latex2man}{1} will be typeset as <i><a href="/docs/linux/man/1-latex2man/">latex2man</a></i>(1).</dd>
+<dt>\Bar</dt>
 <dd>
- is typeset as |.</p>
-<dt>\Bs</p>
+ is typeset as |.</dd>
+<dt>\Bs</dt>
 <dd>
- (BackSlash) is typeset as \.</p>
-<dt>\Tilde</p>
+ (BackSlash) is typeset as \.</dd>
+<dt>\Tilde</dt>
 <dd>
- is typeset as a ~.</p>
-<dt>\Dots</p>
+ is typeset as a ~.</dd>
+<dt>\Dots</dt>
 <dd>
- is typeset as &#8230;</p>
-<dt>\Bullet</p>
+ is typeset as &#8230;</dd>
+<dt>\Bullet</dt>
 <dd>
- us typeset as *.</p>
-<dt>\setVersion{..}</p>
+ us typeset as *.</dd>
+<dt>\setVersion{..}</dt>
 <dd>
- set .. as version information. </p>
-<dt>\setVersionWord{..}</p>
+ set .. as version information. </dd>
+<dt>\setVersionWord{..}</dt>
 <dd>
  set .. for the word <i>Version:</i><br />
  in<br />
  the footline.<br />
- The default is \setVersionWord{Version:}. </p>
-<dt>\Version</p>
+ The default is \setVersionWord{Version:}. </dd>
+<dt>\Version</dt>
 <dd>
- returns the version information. </p>
-<dt>\setDate{..}</p>
+ returns the version information. </dd>
+<dt>\setDate{..}</dt>
 <dd>
- sets .. as date information. </p>
-<dt>\Date</p>
+ sets .. as date information. </dd>
+<dt>\Date</dt>
 <dd>
- returns the date information. </p>
-<dt>\Email{..}</p>
+ returns the date information. </dd>
+<dt>\Email{..}</dt>
 <dd>
  use to mark an Email address:<br />
  \Email{Juergen.Vollmer [at] informatik-vollmer.de} is typeset as:<br />
- <code>Juergen.Vollmer [at] informatik-vollmer.de</code>.</p>
+ <code>Juergen.Vollmer [at] informatik-vollmer.de</code>.</dd>
 <dt>
+</dt></dl>

@@ -32,9 +32,7 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Notes</h2>
 <p>This function behaves as if implemented as follows: </p>
 <pre><code>double modf(double x, double *iptr)
-
 {
-
 #pragma STDC FENV_ACCESS ON
     int save_round = std::fegetround();
     std::fesetround(FE_TOWARDZERO);
@@ -47,12 +45,9 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <p>Compares different floating-point decomposition functions<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;limits&gt;
 int main()
-
 {
     double f = 123.45;
     std::cout &lt;&lt; &quot;Given the number &quot; &lt;&lt; f &lt;&lt; &quot; or &quot; &lt;&lt; std::hexfloat

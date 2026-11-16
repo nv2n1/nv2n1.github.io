@@ -19,18 +19,18 @@ description: "ldns_update_zocount, ldns_update_prcount, ldns_update_upcount, ldn
 <p>&nbsp;<wbr>ldns_update_adcount(); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_update_zocount</i>()</p>
-<dd>Get the zo count .br <code>p</code>: the packet .br Returns the zo count</dl>
+<dt> <i>ldns_update_zocount</i>()</dt>
+<dd>Get the zo count .br <code>p</code>: the packet .br Returns the zo count</dd></dl>
 <dl>
-<dt> <i>ldns_update_prcount</i>()</p>
-<dd>Get the zo count .br <code>p</code>: the packet .br Returns the pr count</dl>
+<dt> <i>ldns_update_prcount</i>()</dt>
+<dd>Get the zo count .br <code>p</code>: the packet .br Returns the pr count</dd></dl>
 <dl>
-<dt> <i>ldns_update_upcount</i>()</p>
-<dd>Get the zo count .br <code>p</code>: the packet .br Returns the up count</dl>
+<dt> <i>ldns_update_upcount</i>()</dt>
+<dd>Get the zo count .br <code>p</code>: the packet .br Returns the up count</dd></dl>
 <dl>
-<dt> <i>ldns_update_adcount</i>()</dl>
+<dt> <i>ldns_update_adcount</i>()</dt></dl>
 <h2>AUTHOR</h2>
-<dd>The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
+<dd>The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </dd>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to ldns-team [at] nlnetlabs.nl or in our bugzilla at <a rel="nofollow" href="http://www.nlnetlabs.nl/bugs/index.html">http://www.nlnetlabs.nl/bugs/index.html</a> </p>
 <h2>COPYRIGHT</h2>

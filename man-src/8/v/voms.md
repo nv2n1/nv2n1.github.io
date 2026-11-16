@@ -10,9 +10,9 @@ description: "voms – VOMS server"
 <p>voms &#8211; VOMS server</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>voms</code> [-foreground] [-port&nbsp;<wbr><i>port</i>] [-backlog&nbsp;<wbr><i>pnum</i>] [-logfile&nbsp;<wbr><i>file</i>] [-globusid&nbsp;<wbr><i>id</i>] [-globuspwd&nbsp;<wbr><i>file</i>] [-passfile&nbsp;<wbr><i>file</i>] [-x509_cert_dir&nbsp;<wbr><i>path</i>] [-x509_cert_file&nbsp;<wbr><i>file</i>] [-x509_user_cert&nbsp;<wbr><i>file</i>] [-x509_user_key&nbsp;<wbr><i>file</i>] [-x509_user_proxy&nbsp;<wbr><i>file</i>] [-dbname&nbsp;<wbr><i>name</i>] [-username&nbsp;<wbr><i>name</i>] [-vo&nbsp;<wbr><i>&nbsp;<wbr>name</i>] [-timeout&nbsp;<wbr><i>&nbsp;<wbr>limit</i>] [-test] [-conf&nbsp;<wbr><i>&nbsp;<wbr>file</i>] [-uri&nbsp;<wbr><i>&nbsp;<wbr>uri</i>] [-version] [-code&nbsp;<wbr><i>c</i>] [-loglevel&nbsp;<wbr><i>lev</i>] [-logtype&nbsp;<wbr><i>type</i>] [-logformat&nbsp;<wbr><i>str</i>] [-logdateformat&nbsp;<wbr><i>str</i>] [-debug] [-sqlloc&nbsp;<wbr><i>path</i>] [-compat] [-socktimeout&nbsp;<wbr><i>num</i>] [-logmax&nbsp;<wbr><i>num</i>] [-newformat] [-skipcacheck] [-help] [-usage] [-globus&nbsp;<wbr><i>version</i>] [-contactstring&nbsp;<wbr><i>contact</i>] [-mysql-port&nbsp;<wbr><i>port</i>] [-mysql-socket&nbsp;<wbr><i>socket</i>] [-shortfqans] [-syslog] [-base64] [-nologfile]</dl>
+<dt> <code>voms</code> [-foreground] [-port&nbsp;<wbr><i>port</i>] [-backlog&nbsp;<wbr><i>pnum</i>] [-logfile&nbsp;<wbr><i>file</i>] [-globusid&nbsp;<wbr><i>id</i>] [-globuspwd&nbsp;<wbr><i>file</i>] [-passfile&nbsp;<wbr><i>file</i>] [-x509_cert_dir&nbsp;<wbr><i>path</i>] [-x509_cert_file&nbsp;<wbr><i>file</i>] [-x509_user_cert&nbsp;<wbr><i>file</i>] [-x509_user_key&nbsp;<wbr><i>file</i>] [-x509_user_proxy&nbsp;<wbr><i>file</i>] [-dbname&nbsp;<wbr><i>name</i>] [-username&nbsp;<wbr><i>name</i>] [-vo&nbsp;<wbr><i>&nbsp;<wbr>name</i>] [-timeout&nbsp;<wbr><i>&nbsp;<wbr>limit</i>] [-test] [-conf&nbsp;<wbr><i>&nbsp;<wbr>file</i>] [-uri&nbsp;<wbr><i>&nbsp;<wbr>uri</i>] [-version] [-code&nbsp;<wbr><i>c</i>] [-loglevel&nbsp;<wbr><i>lev</i>] [-logtype&nbsp;<wbr><i>type</i>] [-logformat&nbsp;<wbr><i>str</i>] [-logdateformat&nbsp;<wbr><i>str</i>] [-debug] [-sqlloc&nbsp;<wbr><i>path</i>] [-compat] [-socktimeout&nbsp;<wbr><i>num</i>] [-logmax&nbsp;<wbr><i>num</i>] [-newformat] [-skipcacheck] [-help] [-usage] [-globus&nbsp;<wbr><i>version</i>] [-contactstring&nbsp;<wbr><i>contact</i>] [-mysql-port&nbsp;<wbr><i>port</i>] [-mysql-socket&nbsp;<wbr><i>socket</i>] [-shortfqans] [-syslog] [-base64] [-nologfile]</dt></dl>
 <h2>Description</h2>
-<dd>VOMS &#8211; Virtual Organization Membership Service. </p>
+<dd>VOMS &#8211; Virtual Organization Membership Service. </dd>
 <p> For the initial setup of the server, run the voms_install_db script as root.</p>
 <h2>Options</h2>
 <p>Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. Their meaning is the following. </p>
@@ -60,53 +60,53 @@ description: "voms – VOMS server"
 <p> <code>-logtype</code> <i>type</i> </p>
 <p> Sets the type of messages that will be loggged. Acceptable values are: </p>
 <dl>
-<dd>&bull; 1 &#8211; STARTUP, print startup messages.</dl>
+<dd>&bull; 1 &#8211; STARTUP, print startup messages.</dd></dl>
 <dl>
-<dd>&bull; 2 &#8211; REQUEST, print messages during the request interpretation phase.</dl>
+<dd>&bull; 2 &#8211; REQUEST, print messages during the request interpretation phase.</dd></dl>
 <dl>
-<dd>&bull; 4 &#8211; RESULT, print messages during the result sending phase.</dl>
+<dd>&bull; 4 &#8211; RESULT, print messages during the result sending phase.</dd></dl>
 <p> This values can be ORed together to indicate that all the corresponding types of messages are required. The default values is 255. </p>
 <p> <code>-loglevel</code> <i>lev</i> </p>
 <p> Sets the level of verbosity of log messages. Acceptable values are: </p>
 <dl>
-<dd>&bull; 1 &#8211; LEV_NONE, do not log anything.</dl>
+<dd>&bull; 1 &#8211; LEV_NONE, do not log anything.</dd></dl>
 <dl>
-<dd>&bull; 2 &#8211; LEV_ERROR, the default, logs only error conditions.</dl>
+<dd>&bull; 2 &#8211; LEV_ERROR, the default, logs only error conditions.</dd></dl>
 <dl>
-<dd>&bull; 3 &#8211; LEV_WARNINGS, logs also warning messages.</dl>
+<dd>&bull; 3 &#8211; LEV_WARNINGS, logs also warning messages.</dd></dl>
 <dl>
-<dd>&bull; 4 &#8211; LEV_INFO, logs also general informational messages.</dl>
+<dd>&bull; 4 &#8211; LEV_INFO, logs also general informational messages.</dd></dl>
 <dl>
-<dd>&bull; 5 &#8211; LEV_DEBUG, logs also a lot of debug messages. Setting this level of verbosity overwrites the value of the <code>-logtype</code> option to 255.</dl>
+<dd>&bull; 5 &#8211; LEV_DEBUG, logs also a lot of debug messages. Setting this level of verbosity overwrites the value of the <code>-logtype</code> option to 255.</dd></dl>
 <p> Higher values include all messages printed by lower ones, and values not documented here are translated as the highest level possible, LEV_DEBUG </p>
 <p> <code>-logformat</code> <i>str</i> </p>
 <p> Sets the format used by the loggin system according toa printf-like format string with the following directives format: <i>\%[size][char]</i> where size, if present, sets the maximum length of the field and <i>char</i> selects the type of substitution done. Possible values are the following: </p>
 <dl>
-<dd>&bull; % &#8211; Substitutes a plain &#8216;%&#8217;.</dl>
+<dd>&bull; % &#8211; Substitutes a plain &#8216;%&#8217;.</dd></dl>
 <dl>
-<dd>&bull; d &#8211; Substitutes the date. The date format is specified by the <code>-logdateformat</code> option.</dl>
+<dd>&bull; d &#8211; Substitutes the date. The date format is specified by the <code>-logdateformat</code> option.</dd></dl>
 <dl>
-<dd>&bull; f &#8211; Substitutes the name of the source file that logs the message.</dl>
+<dd>&bull; f &#8211; Substitutes the name of the source file that logs the message.</dd></dl>
 <dl>
-<dd>&bull; F &#8211; Substitutes the name of the function that logs the message.</dl>
+<dd>&bull; F &#8211; Substitutes the name of the function that logs the message.</dd></dl>
 <dl>
-<dd>&bull; h &#8211; Substitutes the hostname of the machine hosting the service.</dl>
+<dd>&bull; h &#8211; Substitutes the hostname of the machine hosting the service.</dd></dl>
 <dl>
-<dd>&bull; l &#8211; Substitutes the line number that logs the message.</dl>
+<dd>&bull; l &#8211; Substitutes the line number that logs the message.</dd></dl>
 <dl>
-<dd>&bull; m &#8211; Substitutes the message proper.</dl>
+<dd>&bull; m &#8211; Substitutes the message proper.</dd></dl>
 <dl>
-<dd>&bull; p &#8211; Substitutes the process&#8217; pid.</dl>
+<dd>&bull; p &#8211; Substitutes the process&#8217; pid.</dd></dl>
 <dl>
-<dd>&bull; s &#8211; Substitutes the service name (&quot;vomsd&quot;).</dl>
+<dd>&bull; s &#8211; Substitutes the service name (&quot;vomsd&quot;).</dd></dl>
 <dl>
-<dd>&bull; t &#8211; Substitutes the number of the message type. (see the <code>-logtype</code> option)</dl>
+<dd>&bull; t &#8211; Substitutes the number of the message type. (see the <code>-logtype</code> option)</dd></dl>
 <dl>
-<dd>&bull; T &#8211; Substitutes the name of the message type. (see the <code>-logtype</code> option)</dl>
+<dd>&bull; T &#8211; Substitutes the name of the message type. (see the <code>-logtype</code> option)</dd></dl>
 <dl>
-<dd>&bull; v &#8211; Substitutes the number of the message level. (see the <code>-loglevel</code> option)</dl>
+<dd>&bull; v &#8211; Substitutes the number of the message level. (see the <code>-loglevel</code> option)</dd></dl>
 <dl>
-<dd>&bull; V &#8211; Substitutes the name of the message level. (see the <code>-loglevel</code> option)</dl>
+<dd>&bull; V &#8211; Substitutes the name of the message level. (see the <code>-loglevel</code> option)</dd></dl>
 <p> The default value for this options is: &quot;%d:%h:%s(%p):%V:%T:%F (%f:%l):%m&quot; </p>
 <p> <code>-logdateformat</code> <i>str</i> </p>
 <p> This option sets the format used to print the date. The format is the same used by the <a href="/docs/linux/man/3-strftime/">strftime</a>(3) function, and its default value is: &quot;%c&quot;. </p>
@@ -153,23 +153,24 @@ description: "voms – VOMS server"
 <p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>EGEE Bug Tracking Tool</p>
+<dt> 1.</dt>
+<dd>EGEE Bug Tracking Tool</dd>
 <dl>
-<dd><a rel="nofollow" href="https://savannah.cern.ch/projects/jra1mdw/">https://savannah.cern.ch/projects/jra1mdw/</a></dl>
-<dt> 2.</p>
-<dd>EDT Auth Home page</p>
+<dd><a rel="nofollow" href="https://savannah.cern.ch/projects/jra1mdw/">https://savannah.cern.ch/projects/jra1mdw/</a></dd></dl>
+<dt> 2.</dt>
+<dd>EDT Auth Home page</dd>
 <dl>
-<dd><a rel="nofollow" href="http://grid-auth.infn.it">http://grid-auth.infn.it</a></dl>
-<dt> 3.</p>
-<dd>CVSweb</p>
+<dd><a rel="nofollow" href="http://grid-auth.infn.it">http://grid-auth.infn.it</a></dd></dl>
+<dt> 3.</dt>
+<dd>CVSweb</dd>
 <dl>
-<dd><a rel="nofollow" href="http://datagrid.in2p3.fr/cgi-bin/cvsweb.cgi/Auth/voms">http://datagrid.in2p3.fr/cgi-bin/cvsweb.cgi/Auth/voms</a></dl>
-<dt> 4.</p>
-<dd>RPM repository</p>
+<dd><a rel="nofollow" href="http://datagrid.in2p3.fr/cgi-bin/cvsweb.cgi/Auth/voms">http://datagrid.in2p3.fr/cgi-bin/cvsweb.cgi/Auth/voms</a></dd></dl>
+<dt> 4.</dt>
+<dd>RPM repository</dd>
 <dl>
-<dd><a rel="nofollow" href="http://datagrid.in2p3.fr/distribution/autobuild/i386-rh7.3">http://datagrid.in2p3.fr/distribution/autobuild/i386-rh7.3</a></dl>
-<dt> 5.</p>
-<dd><a rel="nofollow" href="http://www.apache.org">www.apache.org</a>/licenses/LICENSE-2.0</p>
+<dd><a rel="nofollow" href="http://datagrid.in2p3.fr/distribution/autobuild/i386-rh7.3">http://datagrid.in2p3.fr/distribution/autobuild/i386-rh7.3</a></dd></dl>
+<dt> 5.</dt>
+<dd><a rel="nofollow" href="http://www.apache.org">www.apache.org</a>/licenses/LICENSE-2.0</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></dl>
+<dd><a rel="nofollow" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></dd></dl>
+</dl>

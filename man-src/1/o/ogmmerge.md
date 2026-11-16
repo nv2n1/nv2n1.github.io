@@ -15,53 +15,53 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <p> This program takes the input from several media files and joins their streams (all of them or just a selection) into an OGM. It was formerly known as &#8216;oggmerge&#8217; and is based on the &#8216;oggmerge&#8217; CVS module from Xiph&#8217;s repository (&lt;<a rel="nofollow" href="http://www.xiph.org/">http://www.xiph.org/</a>&gt;). </p>
 <p> Global options:</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Increase verbosity.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Suppress status output.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> <i>out</i></p>
-<dd> Write to the file &#8216;<i>out</i>&#8216;.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Increase verbosity.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Suppress status output.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> <i>out</i></dt>
+<dd> Write to the file &#8216;<i>out</i>&#8216;.</dd></dl>
 <p> Options that can be used for each input file:</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;astreams</code> &lt;<i>n</i>,<i>m</i>,&#8230;&gt;</p>
-<dd> Copy the <i>n</i>&#8216;th audio stream, NOT the stream with the serial no. <i>n</i>. Default: copy all audio streams.</p>
-<dt><code>-d</code>, <code>&#8211;vstreams</code> &lt;<i>n</i>,<i>m</i>,&#8230;&gt;</p>
-<dd> Copy the <i>n</i>&#8216;th video stream, NOT the stream with the serial no. <i>n</i>. Default: copy all video streams.</p>
-<dt><code>-t</code>, <code>&#8211;tstreams</code> &lt;<i>n</i>,<i>m</i>,&#8230;&gt;</p>
-<dd> Copy the <i>n</i>&#8216;th text stream, NOT the stream with the serial no. <i>n</i>. Default: copy all text streams.</p>
-<dt><code>-A</code>, <code>&#8211;noaudio</code></p>
-<dd> Don&#8217;t copy any audio stream from this file.</p>
-<dt><code>-D</code>, <code>&#8211;novideo</code></p>
-<dd> Don&#8217;t copy any video stream from this file.</p>
-<dt><code>-T</code>, <code>&#8211;notext</code></p>
-<dd> Don&#8217;t copy any text stream from this file.</p>
-<dt><code>-s</code>, <code>&#8211;sync</code> &lt;<i>d</i>[,<i>o</i>[/<i>p</i>]]&gt;</p>
+<dt><code>-a</code>, <code>&#8211;astreams</code> &lt;<i>n</i>,<i>m</i>,&#8230;&gt;</dt>
+<dd> Copy the <i>n</i>&#8216;th audio stream, NOT the stream with the serial no. <i>n</i>. Default: copy all audio streams.</dd>
+<dt><code>-d</code>, <code>&#8211;vstreams</code> &lt;<i>n</i>,<i>m</i>,&#8230;&gt;</dt>
+<dd> Copy the <i>n</i>&#8216;th video stream, NOT the stream with the serial no. <i>n</i>. Default: copy all video streams.</dd>
+<dt><code>-t</code>, <code>&#8211;tstreams</code> &lt;<i>n</i>,<i>m</i>,&#8230;&gt;</dt>
+<dd> Copy the <i>n</i>&#8216;th text stream, NOT the stream with the serial no. <i>n</i>. Default: copy all text streams.</dd>
+<dt><code>-A</code>, <code>&#8211;noaudio</code></dt>
+<dd> Don&#8217;t copy any audio stream from this file.</dd>
+<dt><code>-D</code>, <code>&#8211;novideo</code></dt>
+<dd> Don&#8217;t copy any video stream from this file.</dd>
+<dt><code>-T</code>, <code>&#8211;notext</code></dt>
+<dd> Don&#8217;t copy any text stream from this file.</dd>
+<dt><code>-s</code>, <code>&#8211;sync</code> &lt;<i>d</i>[,<i>o</i>[/<i>p</i>]]&gt;</dt>
 <dd> Synchronize manually, delay the audio stream by <i>d</i> ms.<br />
  <i>d</i> &gt; 0: Pad with silent samples.<br />
  <i>d</i> &lt; 0: Remove samples from the beginning.<br />
  <i>o</i>/<i>p</i>: adjust the timestamps by <i>o</i>/<i>p</i> to fix linear drifts. <i>p</i> defaults to 1000 if omitted. Both <i>o</i> and <i>p</i> can be floating point numbers.<br />
- Defaults: no manual synch correction (which is the same as <i>d</i> = 0 and <i>o</i>/<i>p</i> = 1.0).</p>
-<dt><code>-r</code>, <code>&#8211;range</code> &lt;<i>start</i>&#8211;<i>end</i>&gt;</p>
+ Defaults: no manual synch correction (which is the same as <i>d</i> = 0 and <i>o</i>/<i>p</i> = 1.0).</dd>
+<dt><code>-r</code>, <code>&#8211;range</code> &lt;<i>start</i>&#8211;<i>end</i>&gt;</dt>
 <dd> Only process from <i>start</i> to <i>end</i>. Both values take the form &#8216;<i>HH:MM:SS.mmm</i>&#8216; or &#8216;<i>SS.mmm</i>&#8216;, e.g. &#8217;00:01:00.500&#8217; or &#8216;60.500&#8217;. If one of <i>start</i> or <i>end</i> is omitted then it defaults to 0 or to end of the file respectively.<br />
- If you want to split a file into smaller ones I strongly suggest you use <code><a href="/docs/linux/man/1-ogmsplit/">ogmsplit</a>(1)</code> as it can do a much better job than using the <code>-r</code> option.</p>
-<dt><code>-c</code>, <code>&#8211;comment</code> &#8216;<i>A=B#C=D</i>&#8216; or &#8216;<i>@filename</i>&#8216;</p>
-<dd> Set additional comment fields for the streams. Sensitive values would be &#8216;<i>LANGUAGE=English</i>&#8216; or &#8216;<i>TITLE=Ally McBeal</i>&#8216;. If the parameter starts with &#8216;@&#8217; then the comments will be read from a file with the same name without the leading &#8216;@&#8217;. <code>-c</code> can be specified multiple times per file. The comments will all be concatenated.</p>
-<dt><code>-f</code>, <code>&#8211;fourcc</code> &lt;<i>FourCC</i>&gt;</p>
-<dd> Forces the FourCC to the specified value. Works only for video streams. Note that you cannot simply use a hex editor and change the FourCC by hand as the OGG file format uses checksums which would be wrong after such a change.</p>
-<dt><code>&#8211;omit-empty-packets</code></p>
-<dd> Normally, when a subtitle entry should be removed, an empty packet is created and inserted with the appropriate timestamp. With this option these empty packets are omitted completely.</p>
-<dt><code>&#8211;old-headers</code></p>
-<dd> Assume that the input file has been created with an older version of <code>ogmmerge</code> ( &lt; 1.1). This may be needed if ogmmerge cannot read such a file correctly.</p>
-<dt><code>&#8211;nav-seek</code> &lt;<i>filename</i>&gt;</p>
-<dd> Use an external AVI index file as generated by <code>aviindex</code> from the transcode package. Can be used if an AVI file has a broken index.</dl>
+ If you want to split a file into smaller ones I strongly suggest you use <code><a href="/docs/linux/man/1-ogmsplit/">ogmsplit</a>(1)</code> as it can do a much better job than using the <code>-r</code> option.</dd>
+<dt><code>-c</code>, <code>&#8211;comment</code> &#8216;<i>A=B#C=D</i>&#8216; or &#8216;<i>@filename</i>&#8216;</dt>
+<dd> Set additional comment fields for the streams. Sensitive values would be &#8216;<i>LANGUAGE=English</i>&#8216; or &#8216;<i>TITLE=Ally McBeal</i>&#8216;. If the parameter starts with &#8216;@&#8217; then the comments will be read from a file with the same name without the leading &#8216;@&#8217;. <code>-c</code> can be specified multiple times per file. The comments will all be concatenated.</dd>
+<dt><code>-f</code>, <code>&#8211;fourcc</code> &lt;<i>FourCC</i>&gt;</dt>
+<dd> Forces the FourCC to the specified value. Works only for video streams. Note that you cannot simply use a hex editor and change the FourCC by hand as the OGG file format uses checksums which would be wrong after such a change.</dd>
+<dt><code>&#8211;omit-empty-packets</code></dt>
+<dd> Normally, when a subtitle entry should be removed, an empty packet is created and inserted with the appropriate timestamp. With this option these empty packets are omitted completely.</dd>
+<dt><code>&#8211;old-headers</code></dt>
+<dd> Assume that the input file has been created with an older version of <code>ogmmerge</code> ( &lt; 1.1). This may be needed if ogmmerge cannot read such a file correctly.</dd>
+<dt><code>&#8211;nav-seek</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Use an external AVI index file as generated by <code>aviindex</code> from the transcode package. Can be used if an AVI file has a broken index.</dd></dl>
 <p> Other options:</p>
 <dl>
-<dt><code>-l</code>, <code>&#8211;list-types</code></p>
-<dd> List supported input file types.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show usage information.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Show version information.</dl>
+<dt><code>-l</code>, <code>&#8211;list-types</code></dt>
+<dd> List supported input file types.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show usage information.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Show version information.</dd></dl>
 <h2>USAGE</h2>
 <p> For each file the user can select which tracks <code>ogmmerge</code> should take. They are all put into the file specified with &#8216;-o&#8217;. A list of known (and supported) source formats can be obtained with the &#8216;-l&#8217; option.</p>
 <h2>EXAMPLES</h2>
@@ -87,20 +87,20 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <p> The sync options can also be used for subtitles in the same manner. </p>
 <p> For text subtitles you can either use some Windows software (like <code>SubRipper</code>) or the <code>subrip</code> package found in <code><a href="/docs/linux/man/1-transcode/">transcode</a>(1)</code>&#8216;s sources (in <code>contrib/subrip</code>). The general process is:</p>
 <dl>
-<dt>1.</p>
+<dt>1.</dt>
 <dd> extract a raw subtitle stream from the source:<br />
- $ <code>tccat -i /path/to/copied/dvd/ -T 1 -L | \ </p>
+ $ <code>tccat -i /path/to/copied/dvd/ -T 1 -L | \ </dd>
 <p>&nbsp;<wbr>tcextract -x ps1 -t vob -a 0x20 |&nbsp;<wbr>\ </p>
 <p>&nbsp;<wbr>subtitle2pgm -o mymovie</code></p>
-<dt>2.</p>
+<dt>2.</dt>
 <dd> convert the resulting PGM images to text with <code>gocr</code>:<br />
- $ <code>pgm2txt mymovie</code></p>
-<dt>3.</p>
+ $ <code>pgm2txt mymovie</code></dd>
+<dt>3.</dt>
 <dd> spell-check the resulting text files:<br />
- $ <code>ispell -d american *txt</code></p>
-<dt>4.</p>
+ $ <code>ispell -d american *txt</code></dd>
+<dt>4.</dt>
 <dd> convert the text files to a SRT file:<br />
- $ <code>srttool -s -w -i mymovie.srtx -o mymovie.srt</code></dl>
+ $ <code>srttool -s -w -i mymovie.srtx -o mymovie.srt</code></dd></dl>
 <p> The resulting file can be used as another input file for <code>ogmmerge</code>: </p>
 <p> $ <code>ogmmerge -o mymovie.ogm -c &#8216;TITLE=My Movie&#8217; mymovie.avi \ </p>
 <p>&nbsp;<wbr>-c LANGUAGE=English mymovie.ogg -c LANGUAGE=English mymovie.srt</code></p>
@@ -116,38 +116,38 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <h2>NOTES</h2>
 <p> What works:</p>
 <dl>
-<dt>*</p>
-<dd> AVI as the video and audio source (currently only raw PCM, MP3 and AC3 audio tracks)</p>
-<dt>*</p>
-<dd> OGG as the source for video, audio (Vorbis, raw PCM, MP3 and AC3 audio) and text streams (subtitles).</p>
-<dt>*</p>
-<dd> WAV as the audio source</p>
-<dt>*</p>
-<dd> MP3 audio files</p>
-<dt>*</p>
-<dd> AC3 audio files</p>
-<dt>*</p>
-<dd> Track selection</p>
-<dt>*</p>
-<dd> Manual audio synchronization by adding silence/removing packets for Vorbis audio and for text streams by adjusting the starting point and duration.</p>
-<dt>*</p>
-<dd> Manual audio synchronization for AC3 and MP3 audio by duplicating/removing packets at the beginning.</p>
-<dt>*</p>
-<dd> Adding user comments to the mandatory comment headers (only the headers are mandatory. Comments themselves are not mandatory.)</p>
-<dt>*</p>
-<dd> Text subtitles can be read from SRT (SubRipper / subrip) and MicroDVD files or taken from other OGM files.</p>
-<dt>*</p>
-<dd> PCM, AC3 and MP3 audio work well under Windows and with MPlayer now.</p>
-<dt>*</p>
-<dd> Chapter information as generated by <code>dvdxchap</code> are supported.</dl>
+<dt>*</dt>
+<dd> AVI as the video and audio source (currently only raw PCM, MP3 and AC3 audio tracks)</dd>
+<dt>*</dt>
+<dd> OGG as the source for video, audio (Vorbis, raw PCM, MP3 and AC3 audio) and text streams (subtitles).</dd>
+<dt>*</dt>
+<dd> WAV as the audio source</dd>
+<dt>*</dt>
+<dd> MP3 audio files</dd>
+<dt>*</dt>
+<dd> AC3 audio files</dd>
+<dt>*</dt>
+<dd> Track selection</dd>
+<dt>*</dt>
+<dd> Manual audio synchronization by adding silence/removing packets for Vorbis audio and for text streams by adjusting the starting point and duration.</dd>
+<dt>*</dt>
+<dd> Manual audio synchronization for AC3 and MP3 audio by duplicating/removing packets at the beginning.</dd>
+<dt>*</dt>
+<dd> Adding user comments to the mandatory comment headers (only the headers are mandatory. Comments themselves are not mandatory.)</dd>
+<dt>*</dt>
+<dd> Text subtitles can be read from SRT (SubRipper / subrip) and MicroDVD files or taken from other OGM files.</dd>
+<dt>*</dt>
+<dd> PCM, AC3 and MP3 audio work well under Windows and with MPlayer now.</dd>
+<dt>*</dt>
+<dd> Chapter information as generated by <code>dvdxchap</code> are supported.</dd></dl>
 <p> What not works:</p>
 <dl>
-<dt>*</p>
-<dd> Manual audio synchronization for PCM sound (who needs it anyway?)</dl>
+<dt>*</dt>
+<dd> Manual audio synchronization for PCM sound (who needs it anyway?)</dd></dl>
 <p> Planned functionality:</p>
 <dl>
-<dt>*</p>
-<dd> support for other subtitle formats</dl>
+<dt>*</dt>
+<dd> support for other subtitle formats</dd></dl>
 <h2>CHAPTERS</h2>
 <p> <code>ogmmerge</code> supports chapter information as generated by <code><a href="/docs/linux/man/1-dvdxchap/">dvdxchap</a>(1)</code>. The format is very simple: </p>
 <p> CHAPTER01=HH:MM:SS.sss<br />
@@ -160,12 +160,12 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <p> This section is not needed by the average user. </p>
 <p> <code>ogmmerge</code> consists of three parts:</p>
 <dl>
-<dt>*</p>
-<dd> Demultiplexers (called readers) open and read input files specified on the command line and extract specific tracks.</p>
-<dt>*</p>
-<dd> Packetizers (or output modules) take data from a demultiplexer and encapsulate them into OGG pages. These are stored in queues.</p>
-<dt>*</p>
-<dd> The main program requests from every known demultiplexer that it should read some data. It then gets the OGG page with the smallest timestamp from all the packetizer queues. This page is written to the output file.</dl>
+<dt>*</dt>
+<dd> Demultiplexers (called readers) open and read input files specified on the command line and extract specific tracks.</dd>
+<dt>*</dt>
+<dd> Packetizers (or output modules) take data from a demultiplexer and encapsulate them into OGG pages. These are stored in queues.</dd>
+<dt>*</dt>
+<dd> The main program requests from every known demultiplexer that it should read some data. It then gets the OGG page with the smallest timestamp from all the packetizer queues. This page is written to the output file.</dd></dl>
 <p> The general class definitions for the readers and the packetizers can be found in <code>ogmmerge.h</code>. </p>
 <p> The main loop expects that the queues managed by the demuxer&#8217;s packetizers are filled with at least one page after a call to the demuxer&#8217;s <code>read()</code> function. The demuxer must make sure that enough data is passed to each of its associated packetizers. Have a look at <code>r_ogm.cpp</code>. </p>
 <p> A possible setup might look like this: </p>

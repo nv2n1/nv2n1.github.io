@@ -16,12 +16,12 @@ description: "lpmove – move a job or all jobs to a new destination"
 <h2>Options</h2>
 <p>The <code>lpmove</code> command supports the following options:</p>
 <dl>
-<dt><code>-E</code></p>
-<dd>Forces encryption when connecting to the server.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd>Specifies an alternate username.</p>
-<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</p>
-<dd>Specifies an alternate server.</dl>
+<dt><code>-E</code></dt>
+<dd>Forces encryption when connecting to the server.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd>Specifies an alternate username.</dd>
+<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</dt>
+<dd>Specifies an alternate server.</dd></dl>
 <h2>Examples</h2>
 <p>Move job 123 from &quot;oldprinter&quot; to &quot;newprinter&quot;: </p>
 <pre> lpmove 123 newprinter

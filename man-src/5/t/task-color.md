@@ -115,7 +115,7 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <p>Taskwarrior supports themes. What this really means is that with the ability to include other files into the .taskrc file, different sets of color rules can be included. </p>
 <p> To get a good idea of what a color theme looks like, try adding this entry to your .taskrc file (note that your installation may use a slightly different path from the example): </p>
 <dl>
-<dd>include /usr/share/doc/task/rc/dark-256.theme</dl>
+<dd>include /usr/share/doc/task/rc/dark-256.theme</dd></dl>
 <p> You can use any of the standard Taskwarrior themes: </p>
 <dl>
 <dd>dark-16.theme<br />
@@ -132,7 +132,7 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
  solarized-light-256.theme<br />
  dark-default-16.theme<br />
  dark-gray-blue-256.theme<br />
- no-color.theme</dl>
+ no-color.theme</dd></dl>
 <p> Bear in mind that if you are using a terminal with a dark background, you will see better results using a dark theme. </p>
 <p> You can also see how the theme will color the various tasks with the command: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>task color legend </p>
@@ -143,14 +143,15 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-task/">task</a>(1),</code> <code><a href="/docs/linux/man/5-taskrc/">taskrc</a>(5),</code> <code><a href="/docs/linux/man/5-task-sync/">task-sync</a>(5)</code> For more information regarding Taskwarrior, the following may be referenced:</p>
 <dl>
-<dt>The official site at</p>
-<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt;</p>
-<dt>The official code repository at</p>
-<dd>&lt;<a rel="nofollow" href="https://git.tasktools.org/scm/tm/task.git">https://git.tasktools.org/scm/tm/task.git</a>&gt;</p>
-<dt>You can contact the project by writing an email to</p>
-<dd>&lt;support [at] taskwarrior.org&gt; </p>
+<dt>The official site at</dt>
+<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt;</dd>
+<dt>The official code repository at</dt>
+<dd>&lt;<a rel="nofollow" href="https://git.tasktools.org/scm/tm/task.git">https://git.tasktools.org/scm/tm/task.git</a>&gt;</dd>
+<dt>You can contact the project by writing an email to</dt>
+<dd>&lt;support [at] taskwarrior.org&gt; </dd>
 <h2>Reporting Bugs</h2>
 <dl>
-<dt>Bugs in Taskwarrior may be reported to the issue-tracker at</p>
-<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt; </p>
+<dt>Bugs in Taskwarrior may be reported to the issue-tracker at</dt>
+<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt; </dd>
+</dl>
 </dl>

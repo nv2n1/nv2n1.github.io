@@ -19,17 +19,17 @@ description: "cpftrs.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CPFTRS solves a system of linear equations A*X = B with a Hermitian
  positive definite matrix A using the Cholesky factorization
  A = U**H*U or A = L*L**H computed by CPFTRF.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANSR</i> </p>
+</dt><dd> <i>TRANSR</i> </dd>
 <pre>
           TRANSR is CHARACTER*1
           = 'N':  The Normal TRANSR of RFP A is stored;
@@ -80,18 +80,18 @@ description: "cpftrs.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 We first consider Standard Packed Format when N is even.We give an example where N = 6. AP is Upper AP is Lower 00 01 02 03 04 05 00 11 12 13 14 15 10 11 22 23 24 25 20 21 22 33 34 35 30 31 32 33 44 45 40 41 42 43 44 55 50 51 52 53 54 55 Let TRANSR = 'N'.RFP holds AP as follows : For UPLO = 'U' the upper trapezoid A(0 : 5, 0 : 2) consists of the last
                                                                                                                                                                                                                                                                                                         three columns of AP upper.The lower triangle A(4 : 6, 0 : 2) consists of
@@ -109,8 +109,9 @@ We first consider Standard Packed Format when N is even.We give an example where
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             transpose of the last two columns of AP lower.To denote conjugate we place-- above the element.This covers the case N odd and TRANSR = 'N'.RFP A RFP A-- --02 03 04 00 33 43 --12 13 14 10 11 44 22 23 24 20 21 22 --00 33 34 30 31 32 -- --01 11 44 40 41 42 Now let TRANSR = 'C'.RFP A in both UPLO cases is just the conjugate -
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            transpose of RFP A above.One therefore gets : RFP A RFP A-- -- -- -- -- -- -- -- --02 12 22 00 01 00 10 20 30 40 50 -- -- -- -- -- -- -- -- --03 13 23 33 11 33 11 21 31 41 51 -- -- -- -- -- -- -- -- --04 14 24 34 44 43 44 22 32 42 52
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 221 of file cpftrs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

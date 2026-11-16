@@ -11,9 +11,7 @@ std::UnsignedIntegral - std::UnsignedIntegral
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template &lt; class T &gt;                                                     (since C++20)
-
 concept UnsignedIntegral = std::Integral&lt;T&gt; &amp;&amp; !std::SignedIntegral&lt;T&gt;;</code></pre> 
 The concept UnsignedIntegral&lt;T&gt; is satisfied if and only if T is an integral type and std::is_signed_v&lt;T&gt; is false. 
 

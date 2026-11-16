@@ -10,14 +10,11 @@ description: "ne_session_create, ne_close_connection, ne_session_destroy – set
 <p>ne_session_create, ne_close_connection, ne_session_destroy &#8211; set up HTTP sessions</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ne_session.h&gt;
-
 ne_session *ne_session_create(const char *scheme, const char *hostname, unsigned int port);
-
 void ne_close_connection(ne_session *session);
-
 void ne_session_destroy(ne_session *session);</code></pre>
 <h2>Description</h2>
-<dd>An <code>ne_session</code> object represents an HTTP session &#8211; a logical grouping of a sequence of HTTP requests made to a certain server. Any requests made using the session can use a persistent connection, share cached authentication credentials and any other common attributes. </p>
+<dd>An <code>ne_session</code> object represents an HTTP session &#8211; a logical grouping of a sequence of HTTP requests made to a certain server. Any requests made using the session can use a persistent connection, share cached authentication credentials and any other common attributes. </dd>
 <p> A new HTTP session is created using the <code>ne_session_create</code> function; the <i>hostname</i> and <i>port</i> parameters specify the origin server to use, along with the <i>scheme</i> (usually &quot;http&quot;). Before the first use of <code>ne_session_create</code> in a process, ne_sock_init must have been called to perform any global initialization needed by any libraries used by neon. </p>
 <p> To enable SSL/TLS for the session, pass the string &quot;https&quot; as the <i>scheme</i> parameter, and either register a certificate verification function (see ne_ssl_set_verify) or trust the appropriate certificate (see ne_ssl_trust_cert, ne_ssl_trust_default_ca). </p>
 <p> To use a proxy server for the session, it must be configured (see ne_session_proxy) before any requests are created from session object. </p>
@@ -39,5 +36,5 @@ ne_session_destroy(sess);</code></pre>
 <h2>Author</h2>
 <p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

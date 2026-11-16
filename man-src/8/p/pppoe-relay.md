@@ -14,21 +14,21 @@ description: "pppoe-relay – user-space PPPoE relay agent."
 <p><code>pppoe-relay</code> is a user-space relay agent for PPPoE (Point-to-Point Protocol over Ethernet) for Linux. <code>pppoe-relay</code> works in concert with the <code>pppoe</code> client and <code>pppoe-server</code> server. See the OPERATION section later in this manual for details on how <code>pppoe-relay</code> works. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-S </code><i>interface</i></p>
-<dd>Adds the Ethernet interface <i>interface</i> to the list of interfaces managed by <code>pppoe-relay</code>. Only PPPoE servers may be connected to this interface. </p>
-<dt><code>-C </code><i>interface</i></p>
-<dd>Adds the Ethernet interface <i>interface</i> to the list of interfaces managed by <code>pppoe-relay</code>. Only PPPoE clients may be connected to this interface. </p>
-<dt><code>-B </code><i>interface</i></p>
-<dd>Adds the Ethernet interface <i>interface</i> to the list of interfaces managed by <code>pppoe-relay</code>. Both PPPoE clients and servers may be connected to this interface. </p>
-<dt><code>-n </code><i>num</i></p>
-<dd>Allows at most <i>num</i> concurrent PPPoE sessions. If not specified, the default is 5000. <i>num</i> can range from 1 to 65534. </p>
-<dt><code>-i </code><i>timeout</i></p>
-<dd>Specifies the session idle timeout. If both peers in a session are idle for more than <i>timeout</i> seconds, the session is terminated. If <i>timeout</i> is specified as zero, sessions will never be terminated because of idleness. </p>
+<dt><code>-S </code><i>interface</i></dt>
+<dd>Adds the Ethernet interface <i>interface</i> to the list of interfaces managed by <code>pppoe-relay</code>. Only PPPoE servers may be connected to this interface. </dd>
+<dt><code>-C </code><i>interface</i></dt>
+<dd>Adds the Ethernet interface <i>interface</i> to the list of interfaces managed by <code>pppoe-relay</code>. Only PPPoE clients may be connected to this interface. </dd>
+<dt><code>-B </code><i>interface</i></dt>
+<dd>Adds the Ethernet interface <i>interface</i> to the list of interfaces managed by <code>pppoe-relay</code>. Both PPPoE clients and servers may be connected to this interface. </dd>
+<dt><code>-n </code><i>num</i></dt>
+<dd>Allows at most <i>num</i> concurrent PPPoE sessions. If not specified, the default is 5000. <i>num</i> can range from 1 to 65534. </dd>
+<dt><code>-i </code><i>timeout</i></dt>
+<dd>Specifies the session idle timeout. If both peers in a session are idle for more than <i>timeout</i> seconds, the session is terminated. If <i>timeout</i> is specified as zero, sessions will never be terminated because of idleness. </dd>
 <p> Note that the idle-session expiry routine is never run more frequently than every 30 seconds, so the timeout is approximate. The default value for <i>timeout</i> is 600 seconds (10 minutes.) </p>
-<dt><code>-F</code></p>
-<dd>The <code>-F</code> option causes <code>pppoe-relay</code> <i>not</i> to fork into the background; instead, it remains in the foreground. </p>
-<dt><code>-h</code></p>
-<dd>The <code>-h</code> option prints a brief usage message and exits. </p>
+<dt><code>-F</code></dt>
+<dd>The <code>-F</code> option causes <code>pppoe-relay</code> <i>not</i> to fork into the background; instead, it remains in the foreground. </dd>
+<dt><code>-h</code></dt>
+<dd>The <code>-h</code> option prints a brief usage message and exits. </dd>
 </dl>
 <h2>Operation</h2>
 <p><code>pppoe-relay</code> listens for incoming PPPoE PADI frames on all interfaces specified with <code>-B</code> or <code>-C</code> options. When a PADI frame appears, <code>pppoe-relay</code> adds a Relay-Session-ID tag and broadcasts the PADI on all interfaces specified with <code>-B</code> or <code>-S</code> options (except the interface on which the frame arrived.) </p>

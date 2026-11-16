@@ -19,39 +19,33 @@ description: "condor_job_router_info Discover and display information related to
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information and exit.</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display HTCondor version information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display HTCondor version information and exit.</dd>
+</dl>
 <p> <code>-config</code></p>
 <dl>
 <dt>
-<dd> Display configured routes.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display configured routes.</dd>
+</dl>
 <p> <code>-match-jobs</code></p>
 <dl>
 <dt>
-<dd> For each job listed in the file specified by the <code>-jobads</code> option, display the first route found.</p>
-<dt>
-<dd></dl>
+</dt><dd> For each job listed in the file specified by the <code>-jobads</code> option, display the first route found.</dd>
+</dl>
 <p> <code>-ignore-prior-routing</code></p>
 <dl>
 <dt>
-<dd> For each job, remove any existing routing ClassAd attributes, and set attribute JobStatus to the Idle state before finding the first route.</p>
-<dt>
-<dd></dl>
+</dt><dd> For each job, remove any existing routing ClassAd attributes, and set attribute JobStatus to the Idle state before finding the first route.</dd>
+</dl>
 <p> <code>-jobads </code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Read job ClassAds from file <i>filename</i> . If <i>filename</i> is &#8211; , then read from stdin .</p>
-<dt>
-<dd></dl>
+</dt><dd> Read job ClassAds from file <i>filename</i> . If <i>filename</i> is &#8211; , then read from stdin .</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_job_router_info</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Author</h2>

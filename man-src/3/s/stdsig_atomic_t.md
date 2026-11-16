@@ -11,7 +11,6 @@ std::sig_atomic_t - std::sig_atomic_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;csignal&gt;
-
 typedef /* unspecified */ sig_atomic_t;</code></pre> 
 An integer type which can be accessed as an atomic entity even in the presence of asynchronous interrupts made by signals. 
 

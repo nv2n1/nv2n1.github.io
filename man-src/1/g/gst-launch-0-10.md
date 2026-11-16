@@ -18,54 +18,54 @@ description: "gst-launch – build and run a GStreamer pipeline"
 <h2>Options</h2>
 <p><i>gst-launch</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Print help synopsis and available FLAGS</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Output status information and property notifications</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>Do not print any progress information</p>
-<dt><code>-m, &#8211;messages</code></p>
-<dd>Output messages posted on the pipeline&#8217;s bus</p>
-<dt><code>-t, &#8211;tags</code></p>
-<dd>Output tags (also known as metadata)</p>
-<dt><code>-e, &#8211;eos-on-shutdown</code></p>
-<dd>Force an EOS event on sources before shutting the pipeline down. This is useful to make sure muxers create readable files when a muxing pipeline is shut down forcefully via Control-C.</p>
-<dt><code>-i, &#8211;index</code></p>
-<dd>Gather and print index statistics. This is mostly useful for playback or recording pipelines.</p>
-<dt><code>-o FILE, &#8211;output=FILE</code></p>
-<dd>Save XML representation of pipeline to FILE and exit (DEPRECATED, DO NOT USE)</p>
-<dt><code>-f, &#8211;no-fault</code></p>
-<dd>Do not install a fault handler</p>
-<dt><code>&#8211;no-sigusr-handler</code></p>
-<dd>Do not install signal handlers for SIGUSR1 (play) and SIGUSR2 (stop)</p>
-<dt><code>-T, &#8211;trace</code></p>
-<dd>Print memory allocation traces. The feature must be enabled at compile time to work.</p>
-<dd></dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Print help synopsis and available FLAGS</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Output status information and property notifications</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>Do not print any progress information</dd>
+<dt><code>-m, &#8211;messages</code></dt>
+<dd>Output messages posted on the pipeline&#8217;s bus</dd>
+<dt><code>-t, &#8211;tags</code></dt>
+<dd>Output tags (also known as metadata)</dd>
+<dt><code>-e, &#8211;eos-on-shutdown</code></dt>
+<dd>Force an EOS event on sources before shutting the pipeline down. This is useful to make sure muxers create readable files when a muxing pipeline is shut down forcefully via Control-C.</dd>
+<dt><code>-i, &#8211;index</code></dt>
+<dd>Gather and print index statistics. This is mostly useful for playback or recording pipelines.</dd>
+<dt><code>-o FILE, &#8211;output=FILE</code></dt>
+<dd>Save XML representation of pipeline to FILE and exit (DEPRECATED, DO NOT USE)</dd>
+<dt><code>-f, &#8211;no-fault</code></dt>
+<dd>Do not install a fault handler</dd>
+<dt><code>&#8211;no-sigusr-handler</code></dt>
+<dd>Do not install signal handlers for SIGUSR1 (play) and SIGUSR2 (stop)</dd>
+<dt><code>-T, &#8211;trace</code></dt>
+<dd>Print memory allocation traces. The feature must be enabled at compile time to work.</dd>
+<dd></dd></dl>
 <h2>Gstreamer Options</h2>
 <p><i>gst-launch</i> also accepts the following options that are common to all GStreamer applications:</p>
 <dl>
-<dt><code>&#8211;gst-version</code></p>
-<dd>Prints the version string of the <i>GStreamer</i> core library.</p>
-<dt><code>&#8211;gst-fatal-warnings</code></p>
-<dd>Causes <i>GStreamer</i> to abort if a warning message occurs. This is equivalent to setting the environment variable G_DEBUG to &#8216;fatal_warnings&#8217; (see the section <i>environment variables</i> below for further information).</p>
-<dt><code>&#8211;gst-debug=STRING</code></p>
-<dd>A comma separated list of category_name:level pairs to specify debugging levels for each category. Level is in the range 0-5 where 0 will show no messages, and 5 will show all messages. The wildcard * can be used to match category names. </p>
+<dt><code>&#8211;gst-version</code></dt>
+<dd>Prints the version string of the <i>GStreamer</i> core library.</dd>
+<dt><code>&#8211;gst-fatal-warnings</code></dt>
+<dd>Causes <i>GStreamer</i> to abort if a warning message occurs. This is equivalent to setting the environment variable G_DEBUG to &#8216;fatal_warnings&#8217; (see the section <i>environment variables</i> below for further information).</dd>
+<dt><code>&#8211;gst-debug=STRING</code></dt>
+<dd>A comma separated list of category_name:level pairs to specify debugging levels for each category. Level is in the range 0-5 where 0 will show no messages, and 5 will show all messages. The wildcard * can be used to match category names. </dd>
 <p> Use &#8211;gst-debug-help to show category names </p>
 <p> Example: GST_CAT:5,GST_ELEMENT_*:3,oggdemux:5 </p>
-<dt><code>&#8211;gst-debug-level=LEVEL</code></p>
-<dd>Sets the threshold for printing debugging messages. A higher level will print more messages. The useful range is 0-5, with the default being 0.</p>
-<dt><code>&#8211;gst-debug-no-color</code></p>
-<dd><i>GStreamer</i> normally prints debugging messages so that the messages are color-coded when printed to a terminal that handles ANSI escape sequences. Using this option causes <i>GStreamer</i> to print messages without color. Setting the <code>GST_DEBUG_NO_COLOR</code> environment variable will achieve the same thing.</p>
-<dt><code>&#8211;gst-debug-disable</code></p>
-<dd>Disables debugging.</p>
-<dt><code>&#8211;gst-debug-help</code></p>
-<dd>Prints a list of available debug categories and their default debugging level.</p>
-<dt><code>&#8211;gst-plugin-spew</code></p>
-<dd><i>GStreamer</i> info flags to set Enable printout of errors while loading <i>GStreamer</i> plugins</p>
-<dt><code>&#8211;gst-plugin-path=PATH</code></p>
-<dd>Add directories separated with &#8216;:&#8217; to the plugin search path</p>
-<dt><code>&#8211;gst-plugin-load=PLUGINS</code></p>
-<dd>Preload plugins specified in a comma-separated list. Another way to specify plugins to preload is to use the environment variable GST_PLUGIN_PATH </p>
+<dt><code>&#8211;gst-debug-level=LEVEL</code></dt>
+<dd>Sets the threshold for printing debugging messages. A higher level will print more messages. The useful range is 0-5, with the default being 0.</dd>
+<dt><code>&#8211;gst-debug-no-color</code></dt>
+<dd><i>GStreamer</i> normally prints debugging messages so that the messages are color-coded when printed to a terminal that handles ANSI escape sequences. Using this option causes <i>GStreamer</i> to print messages without color. Setting the <code>GST_DEBUG_NO_COLOR</code> environment variable will achieve the same thing.</dd>
+<dt><code>&#8211;gst-debug-disable</code></dt>
+<dd>Disables debugging.</dd>
+<dt><code>&#8211;gst-debug-help</code></dt>
+<dd>Prints a list of available debug categories and their default debugging level.</dd>
+<dt><code>&#8211;gst-plugin-spew</code></dt>
+<dd><i>GStreamer</i> info flags to set Enable printout of errors while loading <i>GStreamer</i> plugins</dd>
+<dt><code>&#8211;gst-plugin-path=PATH</code></dt>
+<dd>Add directories separated with &#8216;:&#8217; to the plugin search path</dd>
+<dt><code>&#8211;gst-plugin-load=PLUGINS</code></dt>
+<dd>Preload plugins specified in a comma-separated list. Another way to specify plugins to preload is to use the environment variable GST_PLUGIN_PATH </dd>
 </dl>
 <h2>Pipeline Description</h2>
 <p>A pipeline consists <i>elements</i> and <i>links</i>. <i>Elements</i> can be put into <i>bins</i> of different sorts. <i>Elements</i>, <i>links</i> and <i>bins</i> can be specified in a pipeline description in any order. </p>
@@ -207,28 +207,28 @@ description: "gst-launch – build and run a GStreamer pipeline"
  record audio and write it to a .wav file. Force usage of signed 16 to 32 bit samples and a sample rate between 32kHz and 64KHz. </p>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>GST_DEBUG</code></p>
-<dd>Comma-separated list of debug categories and levels, e.g. GST_DEBUG=totem:4,typefind:5</p>
-<dt><code>GST_DEBUG_NO_COLOR</code></p>
-<dd>When this environment variable is set, coloured debug output is disabled.</p>
-<dt><code>GST_DEBUG_DUMP_DOT_DIR</code></p>
-<dd>When set to a filesystem path, store dot files of pipeline graphs there.</p>
-<dt><code>GST_REGISTRY</code></p>
-<dd>Path of the plugin registry file. Default is ~/.gstreamer-0.10/registry-CPU.xml where CPU is the machine/cpu type GStreamer was compiled for, e.g. &#8216;i486&#8217;, &#8216;i686&#8217;, &#8216;x86-64&#8217;, &#8216;ppc&#8217;, etc. (check the output of &quot;uname -i&quot; and &quot;uname -m&quot; for details).</p>
-<dt><code>GST_REGISTRY_UPDATE</code></p>
-<dd>Set to &quot;no&quot; to force GStreamer to assume that no plugins have changed, been added or been removed. This will make GStreamer skip the initial check whether a rebuild of the registry cache is required or not. This may be useful in embedded environments where the installed plugins never change. Do not use this option in any other setup.</p>
-<dt><code>GST_PLUGIN_PATH</code></p>
-<dd>Specifies a list of directories to scan for additional plugins. These take precedence over the system plugins.</p>
-<dt><code>GST_PLUGIN_SYSTEM_PATH</code></p>
-<dd>Specifies a list of plugins that are always loaded by default. If not set, this defaults to the system-installed path, and the plugins installed in the user&#8217;s home directory</p>
-<dt><code>ORC_CODE</code></p>
-<dd>Useful Orc environment variable. Set ORC_CODE=debug to enable debuggers such as gdb to create useful backtraces from Orc-generated code. Set ORC_CODE=backup or ORC_CODE=emulate if you suspect Orc&#8217;s SIMD code generator is producing incorrect code. (Quite a few important GStreamer plugins like videotestsrc, audioconvert or audioresample use Orc).</p>
-<dt><code>G_DEBUG</code></p>
-<dd>Useful GLib environment variable. Set G_DEBUG=fatal_warnings to make GStreamer programs abort when a critical warning such as an assertion failure occurs. This is useful if you want to find out which part of the code caused that warning to be triggered and under what circumstances. Simply set G_DEBUG as mentioned above and run the program in gdb (or let it core dump). Then get a stack trace in the usual way.</dl>
+<dt><code>GST_DEBUG</code></dt>
+<dd>Comma-separated list of debug categories and levels, e.g. GST_DEBUG=totem:4,typefind:5</dd>
+<dt><code>GST_DEBUG_NO_COLOR</code></dt>
+<dd>When this environment variable is set, coloured debug output is disabled.</dd>
+<dt><code>GST_DEBUG_DUMP_DOT_DIR</code></dt>
+<dd>When set to a filesystem path, store dot files of pipeline graphs there.</dd>
+<dt><code>GST_REGISTRY</code></dt>
+<dd>Path of the plugin registry file. Default is ~/.gstreamer-0.10/registry-CPU.xml where CPU is the machine/cpu type GStreamer was compiled for, e.g. &#8216;i486&#8217;, &#8216;i686&#8217;, &#8216;x86-64&#8217;, &#8216;ppc&#8217;, etc. (check the output of &quot;uname -i&quot; and &quot;uname -m&quot; for details).</dd>
+<dt><code>GST_REGISTRY_UPDATE</code></dt>
+<dd>Set to &quot;no&quot; to force GStreamer to assume that no plugins have changed, been added or been removed. This will make GStreamer skip the initial check whether a rebuild of the registry cache is required or not. This may be useful in embedded environments where the installed plugins never change. Do not use this option in any other setup.</dd>
+<dt><code>GST_PLUGIN_PATH</code></dt>
+<dd>Specifies a list of directories to scan for additional plugins. These take precedence over the system plugins.</dd>
+<dt><code>GST_PLUGIN_SYSTEM_PATH</code></dt>
+<dd>Specifies a list of plugins that are always loaded by default. If not set, this defaults to the system-installed path, and the plugins installed in the user&#8217;s home directory</dd>
+<dt><code>ORC_CODE</code></dt>
+<dd>Useful Orc environment variable. Set ORC_CODE=debug to enable debuggers such as gdb to create useful backtraces from Orc-generated code. Set ORC_CODE=backup or ORC_CODE=emulate if you suspect Orc&#8217;s SIMD code generator is producing incorrect code. (Quite a few important GStreamer plugins like videotestsrc, audioconvert or audioresample use Orc).</dd>
+<dt><code>G_DEBUG</code></dt>
+<dd>Useful GLib environment variable. Set G_DEBUG=fatal_warnings to make GStreamer programs abort when a critical warning such as an assertion failure occurs. This is useful if you want to find out which part of the code caused that warning to be triggered and under what circumstances. Simply set G_DEBUG as mentioned above and run the program in gdb (or let it core dump). Then get a stack trace in the usual way.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>~/.gstreamer-0.10/registry-*.xml</p>
-<dd>The xml plugin database; can be deleted at any time, will be re-created automatically when it does not exist yet or plugins change.</dl>
+<dt>~/.gstreamer-0.10/registry-*.xml</dt>
+<dd>The xml plugin database; can be deleted at any time, will be re-created automatically when it does not exist yet or plugins change.</dd></dl>
 <h2>See Also</h2>
 <p><code>gst-feedback</code>(1), <code>gst-inspect</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>Author</h2>

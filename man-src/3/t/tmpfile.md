@@ -10,7 +10,6 @@ description: "tmpfile – create a temporary file"
 <p>tmpfile &#8211; create a temporary file</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
-
 FILE *tmpfile(void);</code></pre>
 <h2>Description</h2>
 <p>The <code>tmpfile</code>() function opens a unique temporary file in binary read/write (w+b) mode. The file will be automatically deleted when it is closed or the program terminates.</p>
@@ -18,20 +17,20 @@ FILE *tmpfile(void);</code></pre>
 <p>The <code>tmpfile</code>() function returns a stream descriptor, or NULL if a unique filename cannot be generated or the unique file cannot be opened. In the latter case, <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>Search permission denied for directory in file&#8217;s path prefix.</p>
-<dt><code>EEXIST</code></p>
-<dd>Unable to generate a unique filename.</p>
-<dt><code>EINTR</code></p>
-<dd>The call was interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EMFILE</code></p>
-<dd>The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd>The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOSPC</code></p>
-<dd>There was no room in the directory to add the new filename.</p>
-<dt><code>EROFS</code></p>
-<dd>Read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd>Search permission denied for directory in file&#8217;s path prefix.</dd>
+<dt><code>EEXIST</code></dt>
+<dd>Unable to generate a unique filename.</dd>
+<dt><code>EINTR</code></dt>
+<dd>The call was interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EMFILE</code></dt>
+<dd>The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd>The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd>There was no room in the directory to add the new filename.</dd>
+<dt><code>EROFS</code></dt>
+<dd>Read-only filesystem.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -14,16 +14,16 @@ description: "debugfs_create_regset32 – create a debugfs file that returns reg
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>a pointer to a string containing the name of the file to create.</dl>
+</dd><dd>a pointer to a string containing the name of the file to create.</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>the permission that the file should have</dl>
+<dd>the permission that the file should have</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the debugfs filesystem.</dl>
+<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the debugfs filesystem.</dd></dl>
 <p> <i>regset</i></p>
 <dl>
-<dd>a pointer to a struct debugfs_regset32, which contains a pointer to an array of register definitions, the array size and the base address where the register bank is to be found.</dl>
+<dd>a pointer to a struct debugfs_regset32, which contains a pointer to an array of register definitions, the array size and the base address where the register bank is to be found.</dd></dl>
 <h2>Description</h2>
 <p>This function creates a file in debugfs with the given name that reports the names and values of a set of 32-bit registers. If the <i>mode</i> variable is so set it can be read from. Writing is not supported. </p>
 <p> This function will return a pointer to a dentry if it succeeds. This pointer must be passed to the <code>debugfs_remove</code> function when the file is to be removed (no automatic cleanup happens if your module is unloaded, you are responsible here.) If an error occurs, <code>NULL</code> will be returned. </p>

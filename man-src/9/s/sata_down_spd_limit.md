@@ -14,10 +14,10 @@ description: "sata_down_spd_limit – adjust SATA spd limit downward"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>Link to adjust SATA spd limit for</dl>
+</dd><dd>Link to adjust SATA spd limit for</dd></dl>
 <p> <i>spd_limit</i></p>
 <dl>
-<dd>Additional limit</dl>
+<dd>Additional limit</dd></dl>
 <h2>Description</h2>
 <p>Adjust SATA spd limit of <i>link</i> downward. Note that this function only adjusts the limit. The change must be applied using <code>sata_set_spd</code>. </p>
 <p> If <i>spd_limit</i> is non-zero, the speed is limited to equal to or lower than <i>spd_limit</i> if such speed is supported. If <i>spd_limit</i> is slower than any supported speed, only the lowest supported speed is allowed. </p>
@@ -27,5 +27,5 @@ description: "sata_down_spd_limit – adjust SATA spd limit downward"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

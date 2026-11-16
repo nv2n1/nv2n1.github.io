@@ -11,9 +11,7 @@ description: "sc::GaussianBasisSet::ValueData –"
 <p> This holds scratch data needed to compute basis function values.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;gaussbas.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>ValueData</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>Integral</code> &gt; &amp;) </p>
 <p> <code>CartesianIter</code> ** <code>civec</code> () </p>

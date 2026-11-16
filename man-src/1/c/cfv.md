@@ -15,92 +15,92 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
 <p> <code>cfv</code> verifies that the files you have are the same as those that the were used to create the checksum file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-v</p>
-<dd> Enable printing of extra messages.</p>
-<dt>-V</p>
-<dd> Disable printing of extra messages. (default)</p>
-<dt>-VV</p>
-<dd> Like -V, but don&#8217;t print status line at end either.</p>
-<dt>-q</p>
-<dd> Like -VV, but not even error messages are printed. Check the exit status.</p>
-<dt>-Q</p>
-<dd> Only status lines are printed, but not individual errors.</p>
-<dt>&#8211;progress VAL</p>
-<dd> Set when cfv should display progress bars. If no, progress bars are never displayed. If auto, progress bars are displayed when the output is to a tty.(default) If yes, progress is always displayed.</p>
-<dt>-r</p>
-<dd> Recursive mode 1. In create mode, make seperate chksum files for each dir.</p>
-<dt>-rr</p>
-<dd> Recursive mode 2. In create mode make a single file with deep listing in it. Both recursive modes are equivilant for test mode.</p>
-<dt>-R</p>
-<dd> Disable recursive mode (default)</p>
-<dt>-l</p>
-<dd> Follow directory symlinks in recursive mode. (default)</p>
-<dt>-L</p>
-<dd> Don&#8217;t follow directory symlinks in recursive mode.</p>
-<dt>-T</p>
-<dd> Set test mode. (default)</p>
-<dt>-C</p>
-<dd> Set create mode.</p>
-<dt>-m</p>
-<dd> Check only for missing files (don&#8217;t compare checksums)</p>
-<dt>-M</p>
-<dd> Check checksums (default)</p>
-<dt>-n</p>
-<dd> Rename bad files. With -s, also renames misnamed files to the correct name.</p>
-<dt>-N</p>
-<dd> Don&#8217;t rename bad files (default)</p>
-<dt>&#8211;renameformat string</p>
+<dt>-v</dt>
+<dd> Enable printing of extra messages.</dd>
+<dt>-V</dt>
+<dd> Disable printing of extra messages. (default)</dd>
+<dt>-VV</dt>
+<dd> Like -V, but don&#8217;t print status line at end either.</dd>
+<dt>-q</dt>
+<dd> Like -VV, but not even error messages are printed. Check the exit status.</dd>
+<dt>-Q</dt>
+<dd> Only status lines are printed, but not individual errors.</dd>
+<dt>&#8211;progress VAL</dt>
+<dd> Set when cfv should display progress bars. If no, progress bars are never displayed. If auto, progress bars are displayed when the output is to a tty.(default) If yes, progress is always displayed.</dd>
+<dt>-r</dt>
+<dd> Recursive mode 1. In create mode, make seperate chksum files for each dir.</dd>
+<dt>-rr</dt>
+<dd> Recursive mode 2. In create mode make a single file with deep listing in it. Both recursive modes are equivilant for test mode.</dd>
+<dt>-R</dt>
+<dd> Disable recursive mode (default)</dd>
+<dt>-l</dt>
+<dd> Follow directory symlinks in recursive mode. (default)</dd>
+<dt>-L</dt>
+<dd> Don&#8217;t follow directory symlinks in recursive mode.</dd>
+<dt>-T</dt>
+<dd> Set test mode. (default)</dd>
+<dt>-C</dt>
+<dd> Set create mode.</dd>
+<dt>-m</dt>
+<dd> Check only for missing files (don&#8217;t compare checksums)</dd>
+<dt>-M</dt>
+<dd> Check checksums (default)</dd>
+<dt>-n</dt>
+<dd> Rename bad files. With -s, also renames misnamed files to the correct name.</dd>
+<dt>-N</dt>
+<dd> Don&#8217;t rename bad files (default)</dd>
+<dt>&#8211;renameformat string</dt>
 <dd> Format string to use with -n option. Simply, put any of the 4 strings %(fullname)s, %(name)s, %(ext)s, and %(count)i in the format string, along with whatever other text you wish.<br />
  The default is &#8216;%(name)s.bad-%(count)i%(ext)s&#8217;<br />
- In detail, this is a standard python format string with mapping that contains {&#8216;fullname&#8217;: original filename, &#8216;name&#8217;: fullname minus extension, &#8216;ext&#8217;: extension(including .), &#8216;count&#8217;: rename attempt}. If the format string does not contain count, then cfv will append &#8216;-%(count)i&#8217; to the filename if the first attempt fails.</p>
-<dt>-s</p>
-<dd> Search for misnamed files. No effect in create mode. Also, keep in mind that using -m together with -s will do nothing if the checksum type doesn&#8217;t include filesizes, and if it does, can give false positives if some files have the same size.</p>
-<dt>-S</p>
-<dd> Don&#8217;t search for misnamed files. (default)</p>
-<dt>-i</p>
-<dd> Ignore case. Currently has no effect in create mode.</p>
-<dt>-I</p>
-<dd> Don&#8217;t ignore case (default)</p>
-<dt>-u</p>
-<dd> Show unverified files. If no files in a directory are verified, shows dir/*. If no files in a directory or its subdirs are verified, shows dir/**. Has no effect in create mode.</p>
-<dt>-uu</p>
-<dd> Show each unverified file individually, no special directory handling. Has no effect in create mode.</p>
-<dt>-U</p>
-<dd> Don&#8217;t show unverified files (default)</p>
-<dt>-zz</p>
-<dd> Force making/reading checksum files as gzipped files, even if not ending in .gz (mainly useful for &quot;-f -&quot;)</p>
-<dt>-z</p>
-<dd> Make gzipped files in create mode.</p>
-<dt>-Z</p>
-<dd> Don&#8217;t create gzipped files automatically. (default)</p>
-<dt>-ZZ</p>
-<dd> Never use gzip, even if file ends in &quot;.gz&quot;.</p>
-<dt>&#8211;unquote BOOL</p>
-<dd> If yes, handle checksum files that were generated by buggy encoders that quote filenames in checksum formats that don&#8217;t need it. Default is no, since quotes can be a valid character in a filename and we don&#8217;t want to remove them if they are actually part of the filename.</p>
-<dt>&#8211;fixpaths string</p>
-<dd> Convert all occurances of any characters in string to the dir seperator for the current platform. No effect in create mode. Use an empty string to disable.</p>
-<dt>&#8211;strippaths VAL</p>
-<dd> Strip NUM leading components from file names in test mode. Similar to the -p/&#8211;strip options of patch. VAL may be &#8216;none&#8217;: leave exactly as is, &#8216;all&#8217;: strip everything but the filename, 0: strip the leading driveletter/slash (if any), 1+: strip this many path components in addition. The default is 0.</p>
-<dt>&#8211;showpaths VAL</p>
-<dd> Show paths in displayed filenames. VAL should be one of yes/1/no/0/auto/2 or absolute/relative, or one from first list and one from second joined by a -. For backwards compatability, 1=yes, 0=none, 2=auto. The default is auto-relative. Abrieviations are accepted. Examples: &#8211;showpaths=y-a always shows absolute paths. &#8211;showpaths=n never shows paths.</p>
-<dt>-p dir</p>
-<dd> Change to directory before doing anything.</p>
-<dt>-f file</p>
-<dd> Specify the name of the checksum file to test or create. If file is -, stdin (for -T) or stdout (for -C) will be used.</p>
-<dt>-t type</p>
-<dd> Specify the type of the file. Can be sfv, sfvmd5, csv, csv2, csv4, sha1, md5, bsdmd5, par, par2, torrent, crc, auto, or help. If the type is help, or an unknown type is given, a list of the types and their descriptions will be printed. The default is auto, which will detect the file type for you. When creating, if type is auto an sfv will be made, unless a different default has been set in the config file.</p>
-<dt>&#8211;list listset</p>
-<dd> Prints a raw listing of files in the given set (ok, bad, unverified, notfound). Usually used with -q, but not strictly needed since specifying &#8211;list will redirect all other messages to stderr.</p>
-<dt>&#8211;list0 listset</p>
-<dd> Like &#8211;list but files are seperated by a null char. Useful in combination with xargs -0.</p>
-<dt>&#8211;announceurl URL</p>
-<dd> Tracker announce URL for .torrent file creation.</p>
-<dt>&#8211;piece_size_pow2 N</p>
-<dd> Power of two to set piece size to for .torrent file creation. The default is 18, which gives a piece size of 2^18=256KB.</p>
-<dt>-h/&#8211;help</p>
-<dd> Print help info.</p>
-<dt>&#8211;version</p>
-<dd> Print version of cfv and modules it uses.</dl>
+ In detail, this is a standard python format string with mapping that contains {&#8216;fullname&#8217;: original filename, &#8216;name&#8217;: fullname minus extension, &#8216;ext&#8217;: extension(including .), &#8216;count&#8217;: rename attempt}. If the format string does not contain count, then cfv will append &#8216;-%(count)i&#8217; to the filename if the first attempt fails.</dd>
+<dt>-s</dt>
+<dd> Search for misnamed files. No effect in create mode. Also, keep in mind that using -m together with -s will do nothing if the checksum type doesn&#8217;t include filesizes, and if it does, can give false positives if some files have the same size.</dd>
+<dt>-S</dt>
+<dd> Don&#8217;t search for misnamed files. (default)</dd>
+<dt>-i</dt>
+<dd> Ignore case. Currently has no effect in create mode.</dd>
+<dt>-I</dt>
+<dd> Don&#8217;t ignore case (default)</dd>
+<dt>-u</dt>
+<dd> Show unverified files. If no files in a directory are verified, shows dir/*. If no files in a directory or its subdirs are verified, shows dir/**. Has no effect in create mode.</dd>
+<dt>-uu</dt>
+<dd> Show each unverified file individually, no special directory handling. Has no effect in create mode.</dd>
+<dt>-U</dt>
+<dd> Don&#8217;t show unverified files (default)</dd>
+<dt>-zz</dt>
+<dd> Force making/reading checksum files as gzipped files, even if not ending in .gz (mainly useful for &quot;-f -&quot;)</dd>
+<dt>-z</dt>
+<dd> Make gzipped files in create mode.</dd>
+<dt>-Z</dt>
+<dd> Don&#8217;t create gzipped files automatically. (default)</dd>
+<dt>-ZZ</dt>
+<dd> Never use gzip, even if file ends in &quot;.gz&quot;.</dd>
+<dt>&#8211;unquote BOOL</dt>
+<dd> If yes, handle checksum files that were generated by buggy encoders that quote filenames in checksum formats that don&#8217;t need it. Default is no, since quotes can be a valid character in a filename and we don&#8217;t want to remove them if they are actually part of the filename.</dd>
+<dt>&#8211;fixpaths string</dt>
+<dd> Convert all occurances of any characters in string to the dir seperator for the current platform. No effect in create mode. Use an empty string to disable.</dd>
+<dt>&#8211;strippaths VAL</dt>
+<dd> Strip NUM leading components from file names in test mode. Similar to the -p/&#8211;strip options of patch. VAL may be &#8216;none&#8217;: leave exactly as is, &#8216;all&#8217;: strip everything but the filename, 0: strip the leading driveletter/slash (if any), 1+: strip this many path components in addition. The default is 0.</dd>
+<dt>&#8211;showpaths VAL</dt>
+<dd> Show paths in displayed filenames. VAL should be one of yes/1/no/0/auto/2 or absolute/relative, or one from first list and one from second joined by a -. For backwards compatability, 1=yes, 0=none, 2=auto. The default is auto-relative. Abrieviations are accepted. Examples: &#8211;showpaths=y-a always shows absolute paths. &#8211;showpaths=n never shows paths.</dd>
+<dt>-p dir</dt>
+<dd> Change to directory before doing anything.</dd>
+<dt>-f file</dt>
+<dd> Specify the name of the checksum file to test or create. If file is -, stdin (for -T) or stdout (for -C) will be used.</dd>
+<dt>-t type</dt>
+<dd> Specify the type of the file. Can be sfv, sfvmd5, csv, csv2, csv4, sha1, md5, bsdmd5, par, par2, torrent, crc, auto, or help. If the type is help, or an unknown type is given, a list of the types and their descriptions will be printed. The default is auto, which will detect the file type for you. When creating, if type is auto an sfv will be made, unless a different default has been set in the config file.</dd>
+<dt>&#8211;list listset</dt>
+<dd> Prints a raw listing of files in the given set (ok, bad, unverified, notfound). Usually used with -q, but not strictly needed since specifying &#8211;list will redirect all other messages to stderr.</dd>
+<dt>&#8211;list0 listset</dt>
+<dd> Like &#8211;list but files are seperated by a null char. Useful in combination with xargs -0.</dd>
+<dt>&#8211;announceurl URL</dt>
+<dd> Tracker announce URL for .torrent file creation.</dd>
+<dt>&#8211;piece_size_pow2 N</dt>
+<dd> Power of two to set piece size to for .torrent file creation. The default is 18, which gives a piece size of 2^18=256KB.</dd>
+<dt>-h/&#8211;help</dt>
+<dd> Print help info.</dd>
+<dt>&#8211;version</dt>
+<dd> Print version of cfv and modules it uses.</dd></dl>
 <p> <code>sfv</code> is a Simple File Verify format file<br />
  <code>sfvmd5</code> is a Simple File Verify format file, using MD5 checksums rather than crc32.<br />
  <code>csv</code> is a Comma Seperated Value file, with the fields being name,size,crc32,<br />
@@ -118,18 +118,18 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
 <p> An exit status of 1 indictates a command line argument error, or an unhandled exception. </p>
 <p> Otherwise, the exit status will be a bitwise OR of:</p>
 <dl>
-<dt>2</p>
-<dd> badcrc (a file had a different checksum than listed in the checksum file)</p>
-<dt>4</p>
-<dd> badsize (a file had a different size than listed. Not all checksum file formats include file size)</p>
-<dt>8</p>
-<dd> notfound (a file that was listed was not found)</p>
-<dt>16</p>
-<dd> ferror (some other file error occured when trying to open/read a file)</p>
-<dt>32</p>
-<dd> unverified (a file was not verified, only with -u)</p>
-<dt>64</p>
-<dd> cferror (a checksum file was not found or not recognized)</dl>
+<dt>2</dt>
+<dd> badcrc (a file had a different checksum than listed in the checksum file)</dd>
+<dt>4</dt>
+<dd> badsize (a file had a different size than listed. Not all checksum file formats include file size)</dd>
+<dt>8</dt>
+<dd> notfound (a file that was listed was not found)</dd>
+<dt>16</dt>
+<dd> ferror (some other file error occured when trying to open/read a file)</dd>
+<dt>32</dt>
+<dd> unverified (a file was not verified, only with -u)</dd>
+<dt>64</dt>
+<dd> cferror (a checksum file was not found or not recognized)</dd></dl>
 <h2>NOTES</h2>
 <p> Since different platforms represent the path seperator differently, using recursive mode 2 (-rr) is not recommended for anything other than personal usage. Although the addition of the fixpaths option can be used to work around this, it isn&#8217;t guaranteed that whatever program others user have will have a similar feature. </p>
 <p> The -s option is not currently implemented for .torrent files. (Unless you also use -m)</p>
@@ -199,18 +199,18 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
  piece_size_pow2 18</p>
 <h2>FILES</h2>
 <dl>
-<dt>~/.cfvrc</p>
-<dd> cfv configuration file. See configuration section.</p>
-<dt>~/_cfvrc</p>
-<dd> alternate configuration file name. (Since windows won&#8217;t let you create files starting with a dot.)</dl>
+<dt>~/.cfvrc</dt>
+<dd> cfv configuration file. See configuration section.</dd>
+<dt>~/_cfvrc</dt>
+<dd> alternate configuration file name. (Since windows won&#8217;t let you create files starting with a dot.)</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>HOME</p>
-<dd> Where to look for cfvrc file. Note that win9x doesn&#8217;t set this to anything automatically.</p>
-<dt>CFV_NOFCHKSUM</p>
-<dd> Set to a non-empty value to disable usage of python-fchksum module.</p>
-<dt>CFV_NOMMAP</p>
-<dd> Set to a non-empty value to disable usage of mmap.</dl>
+<dt>HOME</dt>
+<dd> Where to look for cfvrc file. Note that win9x doesn&#8217;t set this to anything automatically.</dd>
+<dt>CFV_NOFCHKSUM</dt>
+<dd> Set to a non-empty value to disable usage of python-fchksum module.</dd>
+<dt>CFV_NOMMAP</dt>
+<dd> Set to a non-empty value to disable usage of mmap.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Matthew Mueller &lt;donut AT dakotacom DOT net&gt; </p>
 <p> The latest version can be found at any of:<br />

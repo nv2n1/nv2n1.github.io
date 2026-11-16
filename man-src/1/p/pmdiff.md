@@ -23,24 +23,24 @@ description: "pmdiff – compares archives and report significant differences"
 <p> Should any metrics be present in one window but missing from the other, a diagnostic will be displayed listing each missing metric and the archive set from which it was missing. </p>
 <p> The remaining options control the specific information to be reported. Metrics with counter semantics are converted to rates before being evaluated.</p>
 <dl>
-<dt><code>-p</code>/<code>&#8211;precision</code></p>
-<dd> Print all floating point numbers with <i>precision</i> digits after the decimal place.</p>
-<dt><code>&#8211;skip-excluded</code></p>
-<dd> Cull the list of names of metrics being excluded from the output.</p>
-<dt><code>&#8211;skip-missing</code></p>
-<dd> By default, <code>pmdiff</code> will report the names of any metrics that are in one archive set but not the other. This option suppresses that reporting.</p>
-<dt><code>-x</code></p>
-<dd> Compare each metric in each archive set in the time windows specified to a given <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) pattern, excluding those that match from the report output.</p>
-<dt><code>-X</code></p>
-<dd> Allows a <i>file</i> to be specified which containing <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) patterns which are applied to the metric names to optionally exclude some from the report.</p>
-<dt><code>-z</code></p>
-<dd> Use the local timezone from the given archive set.</p>
-<dt><code>-Z</code>/<code>&#8211;timezone</code></p>
-<dd> Changes the timezone in the archive labels to <i>timezone</i> in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dl>
+<dt><code>-p</code>/<code>&#8211;precision</code></dt>
+<dd> Print all floating point numbers with <i>precision</i> digits after the decimal place.</dd>
+<dt><code>&#8211;skip-excluded</code></dt>
+<dd> Cull the list of names of metrics being excluded from the output.</dd>
+<dt><code>&#8211;skip-missing</code></dt>
+<dd> By default, <code>pmdiff</code> will report the names of any metrics that are in one archive set but not the other. This option suppresses that reporting.</dd>
+<dt><code>-x</code></dt>
+<dd> Compare each metric in each archive set in the time windows specified to a given <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) pattern, excluding those that match from the report output.</dd>
+<dt><code>-X</code></dt>
+<dd> Allows a <i>file</i> to be specified which containing <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) patterns which are applied to the metric names to optionally exclude some from the report.</dd>
+<dt><code>-z</code></dt>
+<dd> Use the local timezone from the given archive set.</dd>
+<dt><code>-Z</code>/<code>&#8211;timezone</code></dt>
+<dd> Changes the timezone in the archive labels to <i>timezone</i> in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></p>
-<dd> Default directory for PCP archives containing performance metric values collected from the host <i>hostname</i>.</dl>
+<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></dt>
+<dd> Default directory for PCP archives containing performance metric values collected from the host <i>hostname</i>.</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

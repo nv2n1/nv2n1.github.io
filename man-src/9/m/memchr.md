@@ -14,13 +14,13 @@ description: "memchr – Find a character in an area of memory."
 <p><i>s</i></p>
 <dl>
 <dd>
-<dd>The memory area</dl>
+</dd><dd>The memory area</dd></dl>
 <p> <i>c</i></p>
 <dl>
-<dd>The byte to search for</dl>
+<dd>The byte to search for</dd></dl>
 <p> <i>n</i></p>
 <dl>
-<dd>The size of the area.</dl>
+<dd>The size of the area.</dd></dl>
 <h2>Description</h2>
 <p>returns the address of the first occurrence of <i>c</i>, or <code>NULL</code> if <i>c</i> is not found</p>
 <h2>Copyright</h2>

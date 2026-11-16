@@ -16,7 +16,6 @@ T* uninitialized_construct_using_allocator( T* p, const Alloc&amp; alloc, Args&a
 Creates an object of the given type T by means of uses-allocator_construction at the uninitialized memory location indicated by p 
 Equivalent to <pre><code>return ::new (static_cast&lt;void *&gt;(p)) T(
     std::make_obj_using_allocator&lt;T&gt;(alloc, std::forward&lt;Args&gt;(args)...)
-
 );
 </code></pre>
 

@@ -15,24 +15,24 @@ description: "l2ping – Send L2CAP echo request and receive answer"
 <p> <code><a href="/docs/linux/man/1-l2ping/">l2ping</a>(1)</code> sends a L2CAP echo request to the Bluetooth MAC address bd_addr given in dotted hex notation.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code><i>&nbsp;&lt;hciX&gt;</i></p>
-<dd> The command is applied to device <i>hciX</i>, which must be the name of an installed Bluetooth device (X = 0, 1, 2, &#8230;) If not specified, the command will be sent to the first available Bluetooth device.</p>
-<dt><code>-s</code><i>&nbsp;size</i></p>
-<dd> The size of the data packets to be sent.</p>
-<dt><code>-c</code><i>&nbsp;count</i></p>
-<dd> Send count number of packets then exit.</p>
-<dt><code>-t</code><i>&nbsp;timeout</i></p>
-<dd> Wait timeout seconds for the response.</p>
-<dt><code>-d</code><i>&nbsp;delay</i></p>
-<dd> Wait delay seconds between pings.</p>
-<dt><code>-f</code></p>
-<dd> Kind of flood ping. Use with care! It reduces the delay time between packets to 0.</p>
-<dt><code>-r</code></p>
-<dd> Reverse ping (gnip?). Send echo response instead of echo request.</p>
-<dt><code>-v</code></p>
-<dd> Verify response payload is identical to request payload. It is not required for remote stacks to return the request payload, but most stacks do (including Bluez).</p>
-<dt><code>bd_addr</code></p>
-<dd> The Bluetooth MAC address to be pinged in dotted hex notation like <code>01:02:03:ab:cd:ef</code> or <code>01:EF:cd:aB:02:03</code></dl>
+<dt><code>-i</code><i>&nbsp;&lt;hciX&gt;</i></dt>
+<dd> The command is applied to device <i>hciX</i>, which must be the name of an installed Bluetooth device (X = 0, 1, 2, &#8230;) If not specified, the command will be sent to the first available Bluetooth device.</dd>
+<dt><code>-s</code><i>&nbsp;size</i></dt>
+<dd> The size of the data packets to be sent.</dd>
+<dt><code>-c</code><i>&nbsp;count</i></dt>
+<dd> Send count number of packets then exit.</dd>
+<dt><code>-t</code><i>&nbsp;timeout</i></dt>
+<dd> Wait timeout seconds for the response.</dd>
+<dt><code>-d</code><i>&nbsp;delay</i></dt>
+<dd> Wait delay seconds between pings.</dd>
+<dt><code>-f</code></dt>
+<dd> Kind of flood ping. Use with care! It reduces the delay time between packets to 0.</dd>
+<dt><code>-r</code></dt>
+<dd> Reverse ping (gnip?). Send echo response instead of echo request.</dd>
+<dt><code>-v</code></dt>
+<dd> Verify response payload is identical to request payload. It is not required for remote stacks to return the request payload, but most stacks do (including Bluez).</dd>
+<dt><code>bd_addr</code></dt>
+<dd> The Bluetooth MAC address to be pinged in dotted hex notation like <code>01:02:03:ab:cd:ef</code> or <code>01:EF:cd:aB:02:03</code></dd></dl>
 <h2>RESOURCES</h2>
 <p> <i><a rel="nofollow" href="http://www.bluez.org">http://www.bluez.org</a></i></p>
 <h2>REPORTING BUGS</h2>

@@ -34,11 +34,11 @@ This routine may be thought of as an initialization routine or as just a routine
 
  The arguments of TDPARA are as follows:
 <dl><dt>UA00, VA00, and WA00
-<dd>(input expressions of type REAL) - the coordinates of the &quot;origin&quot; of the parallelogram: the point with parallelogram coordinates (0,0).
-<dt>UV10, VV10, and WV10
-<dd>(input expressions of type REAL) - the U, V, and W components of the vector from the origin of the parallelogram to the point with parallelogram coordinates (1,0).
-<dt>UV01, VV10, and WV01
-<dd>(input expressions of type REAL) - the U, V, and W components of the vector from the origin of the parallelogram to the point with parallelogram coordinates (0,1).</dl>
+</dt><dd>(input expressions of type REAL) - the coordinates of the &quot;origin&quot; of the parallelogram: the point with parallelogram coordinates (0,0).
+</dd><dt>UV10, VV10, and WV10
+</dt><dd>(input expressions of type REAL) - the U, V, and W components of the vector from the origin of the parallelogram to the point with parallelogram coordinates (1,0).
+</dd><dt>UV01, VV10, and WV01
+</dt><dd>(input expressions of type REAL) - the U, V, and W components of the vector from the origin of the parallelogram to the point with parallelogram coordinates (0,1).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -25,12 +25,9 @@ A value of type std::error_condition that holds the error code number from e ass
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;system_error&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::error_condition ec = std::make_error_condition(std::io_errc::stream);
     std::cout &lt;&lt; &quot;error condition for io_errc::stream has value &quot; &lt;&lt; ec.value()

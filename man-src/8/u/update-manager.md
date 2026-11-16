@@ -16,20 +16,20 @@ description: "update-manager – graphical management of software packages updat
 <p>For a daily use, you may launch update-manager with no options so that your system is just upgraded. </p>
 <p> For migration purposes, update-manager accepts some options: </p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a similar help message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show version</p>
-<dt><code>&#8211;data-dir=DATA_DIR</code></p>
-<dd>Directory that contains the data files</p>
-<dt><code>-c</code>, <code>&#8211;check-dist-upgrades</code></p>
-<dd>Check if a new distribution release is available</p>
-<dt><code>-d</code>, <code>&#8211;devel-release</code></p>
-<dd>If using the latest supported release, upgrade to the development release</p>
-<dt><code>-p</code>, <code>&#8211;proposed</code></p>
-<dd>Upgrade using the latest proposed version of the release upgrader</p>
-<dt><code>&#8211;no-focus-on-map</code></p>
-<dd>Do not focus on map when starting </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a similar help message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show version</dd>
+<dt><code>&#8211;data-dir=DATA_DIR</code></dt>
+<dd>Directory that contains the data files</dd>
+<dt><code>-c</code>, <code>&#8211;check-dist-upgrades</code></dt>
+<dd>Check if a new distribution release is available</dd>
+<dt><code>-d</code>, <code>&#8211;devel-release</code></dt>
+<dd>If using the latest supported release, upgrade to the development release</dd>
+<dt><code>-p</code>, <code>&#8211;proposed</code></dt>
+<dd>Upgrade using the latest proposed version of the release upgrader</dd>
+<dt><code>&#8211;no-focus-on-map</code></dt>
+<dd>Do not focus on map when starting </dd>
 </dl>
 <h2>Actions Performed During An Upgrade To A New Version</h2>
 <p>* eventually reinstall the package ubuntu-desktop </p>

@@ -15,7 +15,7 @@ phy_probe - probe and init a PHY device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to probe and init</dl>
+<dl><dd></dd><dd>device to probe and init</dd></dl>
 
 <h2>Description</h2>
 

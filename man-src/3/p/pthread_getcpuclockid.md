@@ -11,9 +11,7 @@ description: "pthread_getcpuclockid – retrieve ID of a thread’s CPU time clo
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
 #include &lt;time.h&gt;
-
 int pthread_getcpuclockid(pthread_t thread, clockid_t *clockid);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_getcpuclockid</code>() function obtains the ID of the CPU-time clock of the thread whose ID is given in <i>thread</i>, and returns it in the location pointed to by <i>clockid</i>.</p>
@@ -21,10 +19,10 @@ Compile and link with - pthread.</code></pre>
 <p>On success, this function returns 0; on error, it returns a nonzero error number.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOENT</code></p>
-<dd>Per-thread CPU time clocks are not supported by the system.</p>
-<dt><code>ESRCH</code></p>
-<dd>No thread with the ID <i>thread</i> could be found.</dl>
+<dt><code>ENOENT</code></dt>
+<dd>Per-thread CPU time clocks are not supported by the system.</dd>
+<dt><code>ESRCH</code></dt>
+<dd>No thread with the ID <i>thread</i> could be found.</dd></dl>
 <h2>Versions</h2>
 <p>This function is available in glibc since version 2.2.</p>
 <h2>Attributes</h2>

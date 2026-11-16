@@ -16,16 +16,16 @@ description: "rip98d – Send and receive RIP98 routing messages"
 <p> The time interval between RIP98 transmissions is set to one hour by default but other intervals can be set with the -t option. The routes advertised and received can be restricted by the -r option which only allows processing of ampr.org addresses. At present <code>rip98d</code> is under development and any feedback on its operation would be welcome.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Set debugging on. Information is only output if the logging option is also enabled.</p>
-<dt><code>-l</code></p>
-<dd>Enable logging to the system log, the default is off.</p>
-<dt><code>-r</code></p>
-<dd>Restricts the transmitting and receiving of routes to ampr.org (44.x.x.x) addresses only.</p>
-<dt><code>-t interval</code></p>
-<dd>The time interval between routing broadcasts, in minutes. The default is 60 minutes.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-d</code></dt>
+<dd>Set debugging on. Information is only output if the logging option is also enabled.</dd>
+<dt><code>-l</code></dt>
+<dd>Enable logging to the system log, the default is off.</dd>
+<dt><code>-r</code></dt>
+<dd>Restricts the transmitting and receiving of routes to ampr.org (44.x.x.x) addresses only.</dd>
+<dt><code>-t interval</code></dt>
+<dd>The time interval between routing broadcasts, in minutes. The default is 60 minutes.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>Files</h2>
 <pre>/proc/net/route
 <br>

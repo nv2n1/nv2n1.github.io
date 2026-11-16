@@ -15,15 +15,15 @@ bitmap_ord_to_pos - find position of n-th set bit in bitmap
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>pointer to bitmap</dl>
+<dl><dd></dd><dd>pointer to bitmap</dd></dl>
  
 
  <i>ord</i>
-<dl><dd>ordinal bit position (n-th set bit, n &gt;= 0)</dl>
+<dl><dd>ordinal bit position (n-th set bit, n &gt;= 0)</dd></dl>
  
 
  <i>nbits</i>
-<dl><dd>number of valid bit positions in <i>buf</i></dl>
+<dl><dd>number of valid bit positions in <i>buf</i></dd></dl>
 
 <h2>Description</h2>
 

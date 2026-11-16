@@ -11,7 +11,6 @@ std::ungetwc - std::ungetwc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwchar&gt;
-
 wint_t ungetwc( wint_t ch, std::FILE* stream );</code></pre> 
 If ch does not equal WEOF, pushes the wide character ch into the input buffer associated with the stream stream in such a manner than subsequent read operation from stream will retrieve that wide character. The external device associated with the stream is not modified. 
 Stream repositioning operations std::fseek, std::fsetpos, and std::rewind discard the effects of ungetwc. 

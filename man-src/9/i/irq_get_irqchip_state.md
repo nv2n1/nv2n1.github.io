@@ -15,15 +15,15 @@ irq_get_irqchip_state - returns the irqchip state of a interrupt.
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>Interrupt line that is forwarded to a VM</dl>
+<dl><dd></dd><dd>Interrupt line that is forwarded to a VM</dd></dl>
  
 
  <i>which</i>
-<dl><dd>One of IRQCHIP_STATE_* the caller wants to know about</dl>
+<dl><dd>One of IRQCHIP_STATE_* the caller wants to know about</dd></dl>
  
 
  <i>state</i>
-<dl><dd>a pointer to a boolean where the state is to be storeed</dl>
+<dl><dd>a pointer to a boolean where the state is to be storeed</dd></dl>
 
 <h2>Description</h2>
 

@@ -50,10 +50,10 @@ url: "/docs/linux/man/1-bombardment/"
 
 
 <dt><a HREF="#lbAD">DESCRIPTION</a>
-<dd>
-<dt><a HREF="#lbAE">OPTIONS</a>
-<dd>
-<dt><a HREF="#lbAF">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbAG">AUTHOR</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAE">OPTIONS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAF">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAG">AUTHOR</a>
+</dt><dd></dd></dl>

@@ -21,8 +21,8 @@ description: "slapd-null – Null backend to slapd"
 <h2>Configuration</h2>
 <p>This <code>slapd.conf</code> option applies to the NULL backend database. That is, it must follow a &quot;database null&quot; line and come before any subsequent &quot;database&quot; lines. Other database options are described in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) manual page.</p>
 <dl>
-<dt><code>bind &lt;on/off&gt;</code></p>
-<dd>Allow binds as any DN in this backend&#8217;s suffix, with any password. The default is &quot;off&quot;.</dl>
+<dt><code>bind &lt;on/off&gt;</code></dt>
+<dd>Allow binds as any DN in this backend&#8217;s suffix, with any password. The default is &quot;off&quot;.</dd></dl>
 <h2>Example</h2>
 <p>Here is a possible slapd.conf extract using the Null backend: </p>
 <dl>
@@ -30,12 +30,12 @@ description: "slapd-null – Null backend to slapd"
 <pre>database null
 suffix &quot;cn=Nothing&quot;
 bind on</pre>
-</dl>
+</dd></dl>
 <h2>Access Control</h2>
 <p>The <code>null</code> backend does not honor any of the access control semantics described in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5).</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code><a href="/docs/linux/man/8-slapadd/">slapadd</a></code>(8), <code><a href="/docs/linux/man/8-slapcat/">slapcat</a></code>(8). </p>

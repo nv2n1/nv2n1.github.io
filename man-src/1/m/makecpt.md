@@ -21,44 +21,44 @@ description: "makecpt – Make GMT color palette tables"
 <p> None.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code>[<code>+</code>]<i>transparency</i></p>
-<dd> Sets a constant level of transparency (0-100) for all color slices. Prepend <code>+</code> to also affect the fore-, back-, and nan-colors [Default is no transparency, i.e., 0 (opaque)].</p>
-<dt><code>-C</code><i>cpt</i></p>
-<dd> Selects the master color table CPT file to use in the interpolation. Choose among the built-in tables (type <code>makecpt</code> to see the list) or give the name of an existing CPT file [Default gives a rainbow CPT file]. Yet another option is to specify -Ccolor1,color2[,color3,&#8230;] to build a linear continuous cpt from those colors automatically. In this case <i>color</i><code>n</code> can be a r/g/b triplet, a color name, or an HTML hexadecimal color (e.g. #aabbcc ).</p>
-<dt><code>-D</code>[<code>i</code>|<code>o</code>]</p>
-<dd> Select the back- and foreground colors to match the colors for lowest and highest <i>z</i>-values in the output CPT file [Default uses the colors specified in the master file, or those defined by the parameters <i>COLOR_BACKGROUND</i>, <i>COLOR_FOREGROUND</i>, and <i>COLOR_NAN</i>]. Append <code>i</code> to match the colors for the lowest and highest values in the input (instead of the output) CPT file.</p>
-<dt><code>-E</code>[<i>nlevels</i>]</p>
-<dd> Implies reading data table(s) from given command-line files or standard input. We use the last data column to determine the data range; use <code>-i</code> to select another column, and use <code>-bi</code> if your data table is native binary. This z-range information is used instead of providing the <code>-T</code> option. We create a linear color table by dividing the table data z-range into <i>nlevels</i> equidistant slices. If <i>nlevels</i> is not given it defaults to the number of levels in the chosen CPT file.</p>
-<dt><code>-F</code>[<code>R</code>|<code>r</code>|<code>h</code>|<code>c</code>]</p>
-<dd> Force output CPT file to written with r/g/b codes, gray-scale values or color name (<code>R</code>, default) or r/g/b codes only (<code>r</code>), or h-s-v codes (<code>h</code>), or c/m/y/k codes (<code>c</code>).</p>
-<dt><code>-G</code><i>zlo</i>/<i>zhi</i></p>
-<dd> Truncate the incoming CPT so that the lowest and highest z-levels are to <i>zlo</i> and <i>zhi</i>. If one of these equal NaN then we leave that end of the CPT alone. The truncation takes place before any resampling.</p>
-<dt><code>-I</code></p>
-<dd> Reverses the sense of color progression in the master CPT file. Also exchanges the foreground and background colors, including those specified by the parameters <i>COLOR_BACKGROUND</i> and <i>COLOR_FOREGROUND</i>.</p>
-<dt><code>-M</code></p>
-<dd> Overrule background, foreground, and NaN colors specified in the master CPT file with the values of the parameters <i>COLOR_BACKGROUND</i>, <i>COLOR_FOREGROUND</i>, and <i>COLOR_NAN</i> specified in the <code>gmt.conf</code> file or on the command line. When combined with <code>-D</code>, only <i>COLOR_NAN</i> is considered.</p>
-<dt><code>-N</code></p>
-<dd> Do not write out the background, foreground, and NaN-color fields [Default will write them].</p>
-<dt><code>-Q</code>[<code>i</code>|<code>o</code>]</p>
-<dd> Selects a logarithmic interpolation scheme [Default is linear]. <code>-Qi</code> expects input z-values to be log10(z), assigns colors, and writes out z [Default]. <code>-Qo</code> takes log10(z) first, assigns colors, and writes out z.</p>
-<dt><code>-T</code><i>z_min</i>/<i>z_max</i>[/<i>z_inc</i>[+]] | <code>-T</code><i>ztable</i></p>
-<dd> Defines the range of the new CPT file by giving the lowest and highest z-value and interval. When used with <code>-C</code> and <i>z_inc</i> is not specified, the number of intervals remains the same as in the input palette. If <i>z_inc</i> is specified with a trailing <code>+</code> we interpret <i>z_inc</i> as the number of desired intervals instead. Alternatively, give the name of a ASCII file that has one z-value per record. If <code>-T</code> is not given, the existing range in the master CPT file will be used intact.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-W</code></p>
-<dd> Do not interpolate the input color table but pick the output colors starting at the beginning of the color table, until colors for all intervals are assigned. This is particularly useful in combination with a categorical color table, like &quot;categorical&quot;. Cannot be used in combination with <code>-Z</code>.</p>
-<dt><code>-Z</code></p>
-<dd> Creates a continuous CPT file [Default is discontinuous, i.e., constant colors for each interval].</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-A</code>[<code>+</code>]<i>transparency</i></dt>
+<dd> Sets a constant level of transparency (0-100) for all color slices. Prepend <code>+</code> to also affect the fore-, back-, and nan-colors [Default is no transparency, i.e., 0 (opaque)].</dd>
+<dt><code>-C</code><i>cpt</i></dt>
+<dd> Selects the master color table CPT file to use in the interpolation. Choose among the built-in tables (type <code>makecpt</code> to see the list) or give the name of an existing CPT file [Default gives a rainbow CPT file]. Yet another option is to specify -Ccolor1,color2[,color3,&#8230;] to build a linear continuous cpt from those colors automatically. In this case <i>color</i><code>n</code> can be a r/g/b triplet, a color name, or an HTML hexadecimal color (e.g. #aabbcc ).</dd>
+<dt><code>-D</code>[<code>i</code>|<code>o</code>]</dt>
+<dd> Select the back- and foreground colors to match the colors for lowest and highest <i>z</i>-values in the output CPT file [Default uses the colors specified in the master file, or those defined by the parameters <i>COLOR_BACKGROUND</i>, <i>COLOR_FOREGROUND</i>, and <i>COLOR_NAN</i>]. Append <code>i</code> to match the colors for the lowest and highest values in the input (instead of the output) CPT file.</dd>
+<dt><code>-E</code>[<i>nlevels</i>]</dt>
+<dd> Implies reading data table(s) from given command-line files or standard input. We use the last data column to determine the data range; use <code>-i</code> to select another column, and use <code>-bi</code> if your data table is native binary. This z-range information is used instead of providing the <code>-T</code> option. We create a linear color table by dividing the table data z-range into <i>nlevels</i> equidistant slices. If <i>nlevels</i> is not given it defaults to the number of levels in the chosen CPT file.</dd>
+<dt><code>-F</code>[<code>R</code>|<code>r</code>|<code>h</code>|<code>c</code>]</dt>
+<dd> Force output CPT file to written with r/g/b codes, gray-scale values or color name (<code>R</code>, default) or r/g/b codes only (<code>r</code>), or h-s-v codes (<code>h</code>), or c/m/y/k codes (<code>c</code>).</dd>
+<dt><code>-G</code><i>zlo</i>/<i>zhi</i></dt>
+<dd> Truncate the incoming CPT so that the lowest and highest z-levels are to <i>zlo</i> and <i>zhi</i>. If one of these equal NaN then we leave that end of the CPT alone. The truncation takes place before any resampling.</dd>
+<dt><code>-I</code></dt>
+<dd> Reverses the sense of color progression in the master CPT file. Also exchanges the foreground and background colors, including those specified by the parameters <i>COLOR_BACKGROUND</i> and <i>COLOR_FOREGROUND</i>.</dd>
+<dt><code>-M</code></dt>
+<dd> Overrule background, foreground, and NaN colors specified in the master CPT file with the values of the parameters <i>COLOR_BACKGROUND</i>, <i>COLOR_FOREGROUND</i>, and <i>COLOR_NAN</i> specified in the <code>gmt.conf</code> file or on the command line. When combined with <code>-D</code>, only <i>COLOR_NAN</i> is considered.</dd>
+<dt><code>-N</code></dt>
+<dd> Do not write out the background, foreground, and NaN-color fields [Default will write them].</dd>
+<dt><code>-Q</code>[<code>i</code>|<code>o</code>]</dt>
+<dd> Selects a logarithmic interpolation scheme [Default is linear]. <code>-Qi</code> expects input z-values to be log10(z), assigns colors, and writes out z [Default]. <code>-Qo</code> takes log10(z) first, assigns colors, and writes out z.</dd>
+<dt><code>-T</code><i>z_min</i>/<i>z_max</i>[/<i>z_inc</i>[+]] | <code>-T</code><i>ztable</i></dt>
+<dd> Defines the range of the new CPT file by giving the lowest and highest z-value and interval. When used with <code>-C</code> and <i>z_inc</i> is not specified, the number of intervals remains the same as in the input palette. If <i>z_inc</i> is specified with a trailing <code>+</code> we interpret <i>z_inc</i> as the number of desired intervals instead. Alternatively, give the name of a ASCII file that has one z-value per record. If <code>-T</code> is not given, the existing range in the master CPT file will be used intact.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-W</code></dt>
+<dd> Do not interpolate the input color table but pick the output colors starting at the beginning of the color table, until colors for all intervals are assigned. This is particularly useful in combination with a categorical color table, like &quot;categorical&quot;. Cannot be used in combination with <code>-Z</code>.</dd>
+<dt><code>-Z</code></dt>
+<dd> Creates a continuous CPT file [Default is discontinuous, i.e., constant colors for each interval].</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To make a CPT file with z-values from -200 to 200, with discrete color changes every 25, and using a polar blue-white-red colortable: </p>
 <pre>

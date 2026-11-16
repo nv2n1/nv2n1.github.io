@@ -74,8 +74,8 @@ description: "initrc_selinux – Security Enhanced Linux Policy for the initrc p
 <p> <code>initrc_exec_t</code> </p>
 <p> &#8211; Set files with the initrc_exec_t type, if you want to transition an executable to the initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/init.d/.*, /etc/rc.d/rc.[^/]+, /etc/rc.d/init.d/.*, /opt/nfast/sbin/init.d-ncipher, /usr/lib/systemd/rhel[^/]*, /usr/libexec/dcc/stop-.*, /usr/libexec/dcc/start-.*, /opt/nfast/scripts/init.d/(.*), /etc/rc.d/rc, /etc/X11/prefdm, /usr/sbin/startx, /usr/bin/sepg_ctl, /usr/sbin/apachectl, /usr/sbin/ldap-agent, /usr/sbin/start-dirsrv, /usr/sbin/open_init_pty, /usr/sbin/restart-dirsrv, /etc/sysconfig/network-scripts/ifup-ipsec, /usr/share/system-config-services/system-config-services-mechanism.py </p>
+<dt>Paths:</dt>
+<dd>/etc/init.d/.*, /etc/rc.d/rc.[^/]+, /etc/rc.d/init.d/.*, /opt/nfast/sbin/init.d-ncipher, /usr/lib/systemd/rhel[^/]*, /usr/libexec/dcc/stop-.*, /usr/libexec/dcc/start-.*, /opt/nfast/scripts/init.d/(.*), /etc/rc.d/rc, /etc/X11/prefdm, /usr/sbin/startx, /usr/bin/sepg_ctl, /usr/sbin/apachectl, /usr/sbin/ldap-agent, /usr/sbin/start-dirsrv, /usr/sbin/open_init_pty, /usr/sbin/restart-dirsrv, /etc/sysconfig/network-scripts/ifup-ipsec, /usr/share/system-config-services/system-config-services-mechanism.py </dd>
 </dl>
 <p> <code>initrc_state_t</code> </p>
 <p> &#8211; Set files with the initrc_state_t type, if you want to treat the files as initrc state data. </p>
@@ -86,8 +86,8 @@ description: "initrc_selinux – Security Enhanced Linux Policy for the initrc p
 <p> <code>initrc_var_run_t</code> </p>
 <p> &#8211; Set files with the initrc_var_run_t type, if you want to store the initrc files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/utmp, /var/run/random-seed, /var/run/runlevel.dir, /var/run/setmixer_flag </p>
+<dt>Paths:</dt>
+<dd>/var/run/utmp, /var/run/random-seed, /var/run/runlevel.dir, /var/run/setmixer_flag </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

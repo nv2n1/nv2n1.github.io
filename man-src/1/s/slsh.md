@@ -15,28 +15,28 @@ description: "slsh – Interpreter for S-Lang scripts"
 <p> <code>slsh</code> is a simple program for interpreting S-Lang scripts. It supports dynamic loading of S-Lang modules and includes a readline interface for interactive use.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show a summary of options</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show <code>slsh</code> version information</p>
-<dt><code>-g</code></p>
-<dd> Compile with debugging code, tracebacks, etc</p>
-<dt><code>-n</code></p>
-<dd> Don&#8217;t load the personal initialization file</p>
-<dt><code>&#8211;init </code><i>file</i></p>
-<dd> Use this file instead of ~/.slshrc</p>
-<dt><code>&#8211;no-readline</code></p>
-<dd> Do not use a readline interface for the interactive mode</p>
-<dt><code>-e </code><i>string</i></p>
-<dd> Execute &#8220;string&#8221; as S-Lang code.</p>
-<dt><code>-i</code></p>
-<dd> Force interactive mode. Normally <code>slsh</code> will go into interactive mode if both stdin and stdout are attached to a terminal.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Startup quietly by not printing the version and copyright information.</p>
-<dt><code>-t</code></p>
-<dd> Normally, <code>slsh</code> will call slsh_main if it is defined. This option prevents that from happening making it useful for checking for syntax error.</p>
-<dt><code>-v</code></p>
-<dd> Show verbose loading messages. This is useful for seeing what files are being loaded.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show a summary of options</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show <code>slsh</code> version information</dd>
+<dt><code>-g</code></dt>
+<dd> Compile with debugging code, tracebacks, etc</dd>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t load the personal initialization file</dd>
+<dt><code>&#8211;init </code><i>file</i></dt>
+<dd> Use this file instead of ~/.slshrc</dd>
+<dt><code>&#8211;no-readline</code></dt>
+<dd> Do not use a readline interface for the interactive mode</dd>
+<dt><code>-e </code><i>string</i></dt>
+<dd> Execute &#8220;string&#8221; as S-Lang code.</dd>
+<dt><code>-i</code></dt>
+<dd> Force interactive mode. Normally <code>slsh</code> will go into interactive mode if both stdin and stdout are attached to a terminal.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Startup quietly by not printing the version and copyright information.</dd>
+<dt><code>-t</code></dt>
+<dd> Normally, <code>slsh</code> will call slsh_main if it is defined. This option prevents that from happening making it useful for checking for syntax error.</dd>
+<dt><code>-v</code></dt>
+<dd> Show verbose loading messages. This is useful for seeing what files are being loaded.</dd></dl>
 <h2>INITIALIZATION</h2>
 <p> Upon startup, the program will try to load <i>slsh.rc</i> as follows. If either SLSH_CONF_DIR or SLSH_LIB_DIR environment variables exist, then <code>slsh</code> will look look in the corresponding directories for <i>slsh.rc</i>. Otherwise it will look in: </p>
 <p> <i>$(prefix)/etc/</i> (as specified in the Makefile) </p>
@@ -153,12 +153,12 @@ slsh_append_semicolon(1);<br />
 <h2>MISCELLANEOUS SCRIPTS</h2>
 <p> Several useful example scripts are located in <i>$prefix/share/slsh/scripts/</i>, where $prefix represents the <code>slsh</code> installation prefix (<i>/usr</i>, <i>/usr/local</i>,&#8230;). These scripts include:</p>
 <dl>
-<dt><code>sldb</code></p>
-<dd> A script that runs the S-Lang debugger.</p>
-<dt><code>jpegsize</code></p>
-<dd> Reports the size of a jpeg file.</p>
-<dt><code>svnsh</code></p>
-<dd> A shell for browsing an SVN repository.</dl>
+<dt><code>sldb</code></dt>
+<dd> A script that runs the S-Lang debugger.</dd>
+<dt><code>jpegsize</code></dt>
+<dd> Reports the size of a jpeg file.</dd>
+<dt><code>svnsh</code></dt>
+<dd> A shell for browsing an SVN repository.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The principal author of <code>slsh</code> is John E. Davis &lt;<a rel="nofollow" href="http://www.jedsoft.org">www.jedsoft.org</a>&gt;. The interactive mode was provided by Mike Noble. The S-Lang library upon which <code>slsh</code> is based is primarily the work of John E. Davis with help from many others. </p>
 <p> This manual page was originally written by Rafael Laboissiere for the Debian system (but may be used by others). </p>

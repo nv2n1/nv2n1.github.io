@@ -14,7 +14,7 @@ description: "ata_scsi_start_stop_xlat – Translate SCSI START STOP UNIT comman
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Storage for translated ATA taskfile</dl>
+</dd><dd>Storage for translated ATA taskfile</dd></dl>
 <h2>Description</h2>
 <p>Sets up an ATA taskfile to issue STANDBY (to stop) or READ VERIFY (to start). Perhaps these commands should be preceded by CHECK POWER MODE to see what power mode the device is already in. [See SAT revision 5 at <a rel="nofollow" href="http://www.t10.org">www.t10.org</a>] </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
@@ -23,5 +23,5 @@ description: "ata_scsi_start_stop_xlat – Translate SCSI START STOP UNIT comman
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

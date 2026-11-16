@@ -14,22 +14,22 @@ description: "net2kiss – convert a network AX.25 driver to a KISS stream on a 
 <p><code>net2kiss</code> takes AX.25 packets from an AX.25 kernel network interface and converts them into a KISS data stream via a pseudo-tty.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>ptyname</code></p>
-<dd>specifies the path to the pseudo-tty. If you use the special name &quot;/dev/ptmx&quot;, then a Unix98-PTY pair is used; the pty name is written to stdout.</dl>
+<dt><code>ptyname</code></dt>
+<dd>specifies the path to the pseudo-tty. If you use the special name &quot;/dev/ptmx&quot;, then a Unix98-PTY pair is used; the pty name is written to stdout.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-i ifname</code></p>
-<dd>specifies the name of the kernel AX.25 network interface. The default is bc0.</p>
-<dt><code>-s</code></p>
-<dd>tells net2kiss to search by itself for a free pseudoterminal, open the master side and create a symlink named by -p to the slave side.</p>
-<dt><code>-f</code></p>
-<dd>can be used in conjunction with -s to force the creation of the symlink even if the target file does already exist. *DANGEROUS*</p>
-<dt><code>-v</code></p>
-<dd>Verbose output. Displays error messages during operation and decoded packets to stdout.</p>
-<dt><code>-z</code></p>
-<dd>put the network interface into promiscious mode.</p>
-<dt><code>-a</code></p>
-<dd>receive every packet instead of only AX.25 from the kernel AX.25 network interface.</dl>
+<dt><code>-i ifname</code></dt>
+<dd>specifies the name of the kernel AX.25 network interface. The default is bc0.</dd>
+<dt><code>-s</code></dt>
+<dd>tells net2kiss to search by itself for a free pseudoterminal, open the master side and create a symlink named by -p to the slave side.</dd>
+<dt><code>-f</code></dt>
+<dd>can be used in conjunction with -s to force the creation of the symlink even if the target file does already exist. *DANGEROUS*</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose output. Displays error messages during operation and decoded packets to stdout.</dd>
+<dt><code>-z</code></dt>
+<dd>put the network interface into promiscious mode.</dd>
+<dt><code>-a</code></dt>
+<dd>receive every packet instead of only AX.25 from the kernel AX.25 network interface.</dd></dl>
 <h2>Bugs</h2>
 <p>None known.</p>
 <h2>See Also</h2>

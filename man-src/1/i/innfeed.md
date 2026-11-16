@@ -21,7 +21,7 @@ description: "innfeed – multi-host, multi-connection, streaming NNTP feeder."
 <p> Funnel-file mode is used when a filename is given as an argument or the &#8220;input-file&#8221; keyword is given in the config file. In funnel file mode it reads the specified file for the same formatted information as innd would give in channel mode. It is expected that innd is continually writing to this file, so when innfeed reaches the end of the file it will check periodically for new information. To prevent the funnel file from growing without bounds, you will need to periodically move the file to the side (or simply remove it) and have innd flush the file. Then, after the file is flushed by innd, you can send innfeed a SIGALRM, and it too will close the file and open the new file created by innd. Something like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 innfeed -p /var/run/news/innfeed.pid my-funnel-file &amp;
 while true; do
@@ -31,7 +31,7 @@ while true; do
         kill -ALRM `cat /var/run/news/innfeed.pid`
 done
 </pre>
-</dl>
+</dd></dl>
 <p> Batch mode is used when the &#8220;<i>-x</i>&#8221; flag is used. In batch mode innfeed will ignore stdin, and will simply process any backlog created by a previously running innfeed. This mode is not normally needed as innfeed will take care of backlog processing.</p>
 <h2>CONFIGURATION</h2>
 <p> Innfeed expects a couple of things to be able to run correctly: a directory where it can store backlog files and a configuration file to describe which peers it should handle. </p>
@@ -41,12 +41,12 @@ done
 <p> The format of these last three files is one of the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 /path/to/article &lt;message-id&gt;
 @token@ &lt;message-id&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> This is the same as the first two fields of the lines innd feeds to innfeed, and the same as the first two fields of the lines of the batch file innd will write if innfeed is unavailable for some reason. When innfeed processes its own batch files it ignores everything after the first two whitespace separated fields, so moving the innd-created batch file to the appropriate spot will work, even though the lines have extra fields. </p>
 <p> The first field can also be a storage API token. The two types of lines can be intermingled; innfeed will use the storage manager if appropriate and otherwise treat the first field as a filename to read directly. </p>
 <p> Innfeed writes its current status to the file &#8220;<i>innfeed.status</i>&#8221; (or the file given by the &#8220;<i>-S</i>&#8221; option). This file contains details on the process as a whole, and on each peer this instance of innfeed is managing. </p>
@@ -70,30 +70,30 @@ done
 </pre>
 <p> These meanings of these fields are:</p>
 <dl>
-<dt>seconds</p>
-<dd> The time since innfeed connected to the host or since the statistics were reset by a &#8220;final&#8221; log entry.</p>
-<dt>offered</p>
-<dd> The number of IHAVE commands sent to the host if it is not in streaming mode. The sum of the number of TAKETHIS commands sent when no-CHECK mode is in effect plus the number CHECK commands sent in streaming mode (when no-CHECK mode is not in effect).</p>
-<dt>accepted</p>
-<dd> The number of articles which were sent to the remote host and accepted by it.</p>
-<dt>refused</p>
-<dd> The number of articles offered to the host that it it indicated it didn&#8217;t want because it had already seen the Message-ID. The remote host indicates this by sending a 435 response to an IHAVE command or a 438 response to a CHECK command.</p>
-<dt>rejected</p>
-<dd> The number of articles transferred to the host that it did not accept because it determined either that it already had the article or it did not want it because of the article&#8217;s Newsgroups: or Distribution: headers, etc. The remote host indicates that it is rejecting the article by sending a 437 or 439 response after innfeed sent the entire article.</p>
-<dt>missing</p>
-<dd> The number of articles which innfeed was told to offer to the host but which were not present in the article spool. These articles were probably cancelled or expired before innfeed was able to offer them to the host.</p>
-<dt>spooled</p>
-<dd> The number of article entries that were written to the .output backlog file because the articles could not either be sent to the host or be refused by it. Articles are generally spooled either because new articles are arriving more quickly than they can be offered to the host, or because innfeed closed all the connections to the host and pushed all the articles currently in progress to the .output backlog file.</p>
-<dt>on_close</p>
-<dd> The number of articles that were spooled when innfeed closed all the connections to the host.</p>
-<dt>unspooled</p>
-<dd> The number of article entries that were read from the .input backlog file.</p>
-<dt>deferred</p>
-<dd> The number of articles that the host told innfeed to retry later by sending a 431 or 436 response. Innfeed immediately puts these articles back on the tail of the queue.</p>
-<dt>requeued</p>
-<dd> The number of articles that were in progress on connections when innfeed dropped those connections and put the articles back on the queue. These connections may have been broken by a network problem or became unresponsive causing innfeed to time them out.</p>
-<dt>queue</p>
-<dd> The first number is the average (mean) queue size during the previous logging interval. The second number is the maximum allowable queue size. The third number is the percentage of the time that the queue was empty. The fourth through seventh numbers are the percentages of the time that the queue was &gt;0% to 25% full, 25% to 50% full, 50% to 75% full, and 75% to &lt;100% full. The last number is the percentage of the time that the queue was totally full.</dl>
+<dt>seconds</dt>
+<dd> The time since innfeed connected to the host or since the statistics were reset by a &#8220;final&#8221; log entry.</dd>
+<dt>offered</dt>
+<dd> The number of IHAVE commands sent to the host if it is not in streaming mode. The sum of the number of TAKETHIS commands sent when no-CHECK mode is in effect plus the number CHECK commands sent in streaming mode (when no-CHECK mode is not in effect).</dd>
+<dt>accepted</dt>
+<dd> The number of articles which were sent to the remote host and accepted by it.</dd>
+<dt>refused</dt>
+<dd> The number of articles offered to the host that it it indicated it didn&#8217;t want because it had already seen the Message-ID. The remote host indicates this by sending a 435 response to an IHAVE command or a 438 response to a CHECK command.</dd>
+<dt>rejected</dt>
+<dd> The number of articles transferred to the host that it did not accept because it determined either that it already had the article or it did not want it because of the article&#8217;s Newsgroups: or Distribution: headers, etc. The remote host indicates that it is rejecting the article by sending a 437 or 439 response after innfeed sent the entire article.</dd>
+<dt>missing</dt>
+<dd> The number of articles which innfeed was told to offer to the host but which were not present in the article spool. These articles were probably cancelled or expired before innfeed was able to offer them to the host.</dd>
+<dt>spooled</dt>
+<dd> The number of article entries that were written to the .output backlog file because the articles could not either be sent to the host or be refused by it. Articles are generally spooled either because new articles are arriving more quickly than they can be offered to the host, or because innfeed closed all the connections to the host and pushed all the articles currently in progress to the .output backlog file.</dd>
+<dt>on_close</dt>
+<dd> The number of articles that were spooled when innfeed closed all the connections to the host.</dd>
+<dt>unspooled</dt>
+<dd> The number of article entries that were read from the .input backlog file.</dd>
+<dt>deferred</dt>
+<dd> The number of articles that the host told innfeed to retry later by sending a 431 or 436 response. Innfeed immediately puts these articles back on the tail of the queue.</dd>
+<dt>requeued</dt>
+<dd> The number of articles that were in progress on connections when innfeed dropped those connections and put the articles back on the queue. These connections may have been broken by a network problem or became unresponsive causing innfeed to time them out.</dd>
+<dt>queue</dt>
+<dd> The first number is the average (mean) queue size during the previous logging interval. The second number is the maximum allowable queue size. The third number is the percentage of the time that the queue was empty. The fourth through seventh numbers are the percentages of the time that the queue was &gt;0% to 25% full, 25% to 50% full, 50% to 75% full, and 75% to &lt;100% full. The last number is the percentage of the time that the queue was totally full.</dd></dl>
 <p> If the &#8220;<i>-z</i>&#8221; option is used (see below), then when the peer stats are generated, each Connection will log its stats too. For example, for connection number zero (from a set of five): </p>
 <pre>
   May 23 12:49:08 data innfeed[16015]: vixie:0 checkpoint
@@ -116,42 +116,41 @@ done
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> The &#8220;<i>-a</i>&#8221; flag is used to specify the top of the article spool tree. Innfeed does a <a href="/docs/linux/man/2-chdir/">chdir</a>(2) to this directory, so it should probably be an absolute path. The default is &lt;patharticles in inn.conf&gt;.</p>
-<dt><code>-b</code></p>
-<dd> The &#8220;<i>-b</i>&#8221; flag may be used to specify a different directory for backlog file storage and retrieval. If the path is relative then it is relative to &lt;pathspool in inn.conf&gt;. The default is &#8220;<i>innfeed</i>&#8221;.</p>
-<dt><code>-c</code></p>
-<dd> The &#8220;<i>-c</i>&#8221; flag may be used to specify a different config file from the default value. If the path is relative then it is relative to &lt;pathetc in inn.conf&gt;. The default is &#8220;<i>innfeed.conf</i>&#8221;.</p>
-<dt><code>-C </code></p>
-<dd> The &#8220;<i>-C</i>&#8221; flag is used to have innfeed simply check the config file, report on any errors and then exit.</p>
-<dt><code>-d </code></p>
-<dd> The &#8220;<i>-d</i>&#8221; flag may be used to specify the initial logging level. All debugging messages go to stderr (which may not be what you want, see the &#8220;<i>-l</i>&#8221; flag below).</p>
-<dt><code>-e</code></p>
-<dd> The &#8220;<i>-e</i>&#8221; flag may be used to specify the size limit (in bytes) for the <i>.output</i> backlog files innfeed creates. If the output file gets bigger than 10% more than the given number, innfeed will replace the output file with the tail of the original version. The default value is 0, which means there is no limit.</p>
-<dt><code>-h</code></p>
-<dd> Use the &#8220;<i>-h</i>&#8221; flag to print the usage message.</p>
-<dt><code>-l</code></p>
-<dd> The &#8220;<i>-l</i>&#8221; flag may be used to specify a different log file from stderr. As innd starts innfeed with stderr attached to /dev/null, using this option can be useful in catching any abnormal error messages, or any debugging messages (all &#8220;normal&#8221; errors messages go to syslog).</p>
-<dt><code>-M</code></p>
-<dd> If innfeed has been built with mmap support, then the &#8220;<i>-M</i>&#8221; flag turns OFF the use of mmap(); otherwise it has no effect.</p>
-<dt><code>-m</code></p>
-<dd> The &#8220;<i>-m</i>&#8221; flag is used to turn on logging of all missing articles. Normally if an article is missing, innfeed keeps a count, but logs no further information. When this flag is used, details about message-id and expected pathname are logged.</p>
-<dt><code>-o</code></p>
-<dd> The &#8220;<i>-o</i>&#8221; flag sets a value of the maximum number of bytes of article data innfeed is supposed to keep in memory. This doesn&#8217;t work properly yet.</p>
-<dt><code>-p </code></p>
-<dd> The &#8220;<i>-p</i>&#8221; flag is used to specify the filename to write the pid of the process into. A relative path is relative to &lt;pathrun in inn.conf&gt;. The default is &#8220;<i>innfeed.pid</i>&#8221;.</p>
-<dt><code>-S</code></p>
-<dd> The &#8220;<i>-S</i>&#8221; flag specifies the name of the file to write the periodic staus to. If the path is relative it is considered relative to &lt;pathlog in inn.conf&gt;. The default is &#8220;<i>innfeed.status</i>&#8221;.</p>
-<dt><code>-v</code></p>
-<dd> When the &#8220;<i>-v</i>&#8221; flag is given, version information is printed to stderr and then innfeed exits.</p>
-<dt><code>-x</code></p>
-<dd> The &#8220;<i>-x</i>&#8221; flag is used to tell innfeed not to expect any article information from innd but just to process any backlog files that exist and then exit.</p>
-<dt><code>-y</code></p>
-<dd> The &#8220;<i>-y</i>&#8221; flag is used to allow dynamic peer binding. If this flag is used and article information is received from innd that specifies an unknown peer, then the peer name is taken to be the IP name too, and an association with it is created. Using this it is possible to only have the global defaults in the <i>innfeed.conf</i> file, provided the peername as used by innd is the same as the ip name. Note that <i>innfeed</i> with &#8220;<i>-y</i>&#8221; and no peer in <i>innfeed.conf</i> would cause a problem that <i>innfeed</i> drops the first article.</p>
-<dt><code>-z</code></p>
-<dd> The &#8220;<i>-z</i>&#8221; flag is used to cause each connection, in a parallel feed configuration, to report statistics when the controller for the connections prints its statistics.</p>
-<dt>
-<dd></dl>
+<dt><code>-a</code></dt>
+<dd> The &#8220;<i>-a</i>&#8221; flag is used to specify the top of the article spool tree. Innfeed does a <a href="/docs/linux/man/2-chdir/">chdir</a>(2) to this directory, so it should probably be an absolute path. The default is &lt;patharticles in inn.conf&gt;.</dd>
+<dt><code>-b</code></dt>
+<dd> The &#8220;<i>-b</i>&#8221; flag may be used to specify a different directory for backlog file storage and retrieval. If the path is relative then it is relative to &lt;pathspool in inn.conf&gt;. The default is &#8220;<i>innfeed</i>&#8221;.</dd>
+<dt><code>-c</code></dt>
+<dd> The &#8220;<i>-c</i>&#8221; flag may be used to specify a different config file from the default value. If the path is relative then it is relative to &lt;pathetc in inn.conf&gt;. The default is &#8220;<i>innfeed.conf</i>&#8221;.</dd>
+<dt><code>-C </code></dt>
+<dd> The &#8220;<i>-C</i>&#8221; flag is used to have innfeed simply check the config file, report on any errors and then exit.</dd>
+<dt><code>-d </code></dt>
+<dd> The &#8220;<i>-d</i>&#8221; flag may be used to specify the initial logging level. All debugging messages go to stderr (which may not be what you want, see the &#8220;<i>-l</i>&#8221; flag below).</dd>
+<dt><code>-e</code></dt>
+<dd> The &#8220;<i>-e</i>&#8221; flag may be used to specify the size limit (in bytes) for the <i>.output</i> backlog files innfeed creates. If the output file gets bigger than 10% more than the given number, innfeed will replace the output file with the tail of the original version. The default value is 0, which means there is no limit.</dd>
+<dt><code>-h</code></dt>
+<dd> Use the &#8220;<i>-h</i>&#8221; flag to print the usage message.</dd>
+<dt><code>-l</code></dt>
+<dd> The &#8220;<i>-l</i>&#8221; flag may be used to specify a different log file from stderr. As innd starts innfeed with stderr attached to /dev/null, using this option can be useful in catching any abnormal error messages, or any debugging messages (all &#8220;normal&#8221; errors messages go to syslog).</dd>
+<dt><code>-M</code></dt>
+<dd> If innfeed has been built with mmap support, then the &#8220;<i>-M</i>&#8221; flag turns OFF the use of mmap(); otherwise it has no effect.</dd>
+<dt><code>-m</code></dt>
+<dd> The &#8220;<i>-m</i>&#8221; flag is used to turn on logging of all missing articles. Normally if an article is missing, innfeed keeps a count, but logs no further information. When this flag is used, details about message-id and expected pathname are logged.</dd>
+<dt><code>-o</code></dt>
+<dd> The &#8220;<i>-o</i>&#8221; flag sets a value of the maximum number of bytes of article data innfeed is supposed to keep in memory. This doesn&#8217;t work properly yet.</dd>
+<dt><code>-p </code></dt>
+<dd> The &#8220;<i>-p</i>&#8221; flag is used to specify the filename to write the pid of the process into. A relative path is relative to &lt;pathrun in inn.conf&gt;. The default is &#8220;<i>innfeed.pid</i>&#8221;.</dd>
+<dt><code>-S</code></dt>
+<dd> The &#8220;<i>-S</i>&#8221; flag specifies the name of the file to write the periodic staus to. If the path is relative it is considered relative to &lt;pathlog in inn.conf&gt;. The default is &#8220;<i>innfeed.status</i>&#8221;.</dd>
+<dt><code>-v</code></dt>
+<dd> When the &#8220;<i>-v</i>&#8221; flag is given, version information is printed to stderr and then innfeed exits.</dd>
+<dt><code>-x</code></dt>
+<dd> The &#8220;<i>-x</i>&#8221; flag is used to tell innfeed not to expect any article information from innd but just to process any backlog files that exist and then exit.</dd>
+<dt><code>-y</code></dt>
+<dd> The &#8220;<i>-y</i>&#8221; flag is used to allow dynamic peer binding. If this flag is used and article information is received from innd that specifies an unknown peer, then the peer name is taken to be the IP name too, and an association with it is created. Using this it is possible to only have the global defaults in the <i>innfeed.conf</i> file, provided the peername as used by innd is the same as the ip name. Note that <i>innfeed</i> with &#8220;<i>-y</i>&#8221; and no peer in <i>innfeed.conf</i> would cause a problem that <i>innfeed</i> drops the first article.</dd>
+<dt><code>-z</code></dt>
+<dd> The &#8220;<i>-z</i>&#8221; flag is used to cause each connection, in a parallel feed configuration, to report statistics when the controller for the connections prints its statistics.</dd>
+</dl>
 <h2>BUGS</h2>
 <p> When using the &#8220;-x&#8221; option, the config file entry&#8217;s &#8220;initial-connections&#8221; field will be the total number of connections created and used, no matter how many big the batch file, and no matter how big the &#8220;max-connectiond&#8221; field specifies. Thus a value of 0 for &#8220;initial-connections&#8221; means nothing will happen in &#8220;-x&#8221; mode. </p>
 <p> Innfeed does not automatically grab the file out of out.going&#8211;this needs to be prepared for it by external means. </p>

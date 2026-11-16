@@ -15,11 +15,11 @@ kstrtobool - convert common user inputs into boolean values
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>input string</dl>
+<dl><dd></dd><dd>input string</dd></dl>
  
 
  <i>res</i>
-<dl><dd>result</dl>
+<dl><dd>result</dd></dl>
 
 <h2>Description</h2>
 

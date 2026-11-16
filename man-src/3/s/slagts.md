@@ -19,7 +19,7 @@ description: "slagts.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAGTS may be used to solve one of the systems of equations
     (T - lambda*I)*x = y   or   (T - lambda*I)**T*x = y,
@@ -31,11 +31,11 @@ description: "slagts.f –"
  to perturb zero or very small diagonal elements of U, this option
  being intended for use in applications such as inverse iteration.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre>
           JOB is INTEGER
           Specifies the job to be performed by SLAGTS as follows:
@@ -121,14 +121,14 @@ description: "slagts.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 162 of file slagts.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -14,7 +14,7 @@ description: "debugfs_use_file_finish – mark the end of file data access"
 <p><i>srcu_idx</i></p>
 <dl>
 <dd>
-<dd>the SRCU index &#8220;created&#8221; by a former call to <code>debugfs_use_file_start</code>.</dl>
+</dd><dd>the SRCU index &#8220;created&#8221; by a former call to <code>debugfs_use_file_start</code>.</dd></dl>
 <h2>Description</h2>
 <p>Allow any ongoing concurrent call into <code>debugfs_remove</code> or <code>debugfs_remove_recursive</code> blocked by a former call to <code>debugfs_use_file_start</code> to proceed and return to its caller.</p>
 <h2>Copyright</h2>

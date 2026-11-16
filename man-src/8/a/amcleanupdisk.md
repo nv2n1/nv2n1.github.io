@@ -10,19 +10,19 @@ description: "amcleanupdisk – cleanup holding disk directory"
 <p>amcleanupdisk &#8211; cleanup holding disk directory</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amcleanupdisk</code> [<code>-r</code>] [<code>-v</code>] <i>config</i></dl>
+<dt> <code>amcleanupdisk</code> [<code>-r</code>] [<code>-v</code>] <i>config</i></dt></dl>
 <h2>Description</h2>
 <p><code>Amcleanupdisk</code></p>
-<dd>list and/or remove invalid file from the holding disk directories. </p>
+<dd>list and/or remove invalid file from the holding disk directories. </dd>
 <p> This program is run by <code>amcleanup</code>. </p>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Options</h2>
 <p><code>-r</code></p>
 <dl>
-<dd>Remove invalid file from holding disk.</dl>
+<dd>Remove invalid file from holding disk.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
-<dd>Generate verbose output.</dl>
+<dd>Generate verbose output.</dd></dl>
 <h2>Examples</h2>
 <p>This example runs the Amanda holding disk cleanup process. </p>
 <pre>% amcleanupdisk daily -v -r</pre>

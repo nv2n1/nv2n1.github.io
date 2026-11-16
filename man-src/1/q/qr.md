@@ -17,19 +17,19 @@ description: "qr – script to create QR codes at the command line"
 <p> <code>&nbsp;<wbr>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show a help message.</dl>
+</dt><dd> Show a help message.</dd></dl>
 <p> <code>&nbsp;<wbr>&#8211;factory=FACTORY</code></p>
 <dl>
 <dt>
-<dd> Full python path to the image factory class to create the image with. You can use the following shortcuts to the built-in image factory classes: pil (default), pymaging, svg, svg-fragment, svg-path.</dl>
+</dt><dd> Full python path to the image factory class to create the image with. You can use the following shortcuts to the built-in image factory classes: pil (default), pymaging, svg, svg-fragment, svg-path.</dd></dl>
 <p> <code>&nbsp;<wbr>&#8211;optimize=OPTIMIZE</code></p>
 <dl>
 <dt>
-<dd> Optimize the data by looking for chunks of at least this many characters that could use a more efficient encoding method. Use 0 to turn off chunk optimization.</dl>
+</dt><dd> Optimize the data by looking for chunks of at least this many characters that could use a more efficient encoding method. Use 0 to turn off chunk optimization.</dd></dl>
 <p> <code>&nbsp;<wbr>data</code></p>
 <dl>
 <dt>
-<dd> The data from which the QR code will be generated.</dl>
+</dt><dd> The data from which the QR code will be generated.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="https://github.com/lincolnloop/python-qrcode/">https://github.com/lincolnloop/python-qrcode/</a> </p>
 <h2>Index</h2>

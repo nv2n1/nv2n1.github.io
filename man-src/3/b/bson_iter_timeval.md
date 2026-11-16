@@ -16,11 +16,11 @@ void bson_iter_timeval(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>tv</code></p>
-<dd> A struct timeval.</dl>
+<dt><code>tv</code></dt>
+<dd> A struct timeval.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_timeval/">bson_iter_timeval</a>(3)</code> function shall return the number of seconds and microseconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element into <code>tv</code> \&amp;. </p>
 <h2>COLOPHON</h2>

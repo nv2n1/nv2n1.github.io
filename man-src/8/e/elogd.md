@@ -15,36 +15,36 @@ description: "elogd – web server program for Electronic Logbook ELOG"
 <h2>Options</h2>
 <p><code>elogd</code> accepts the following options:</p>
 <dl>
-<dt><code>-C</code><i> url</i></p>
-<dd>clone remote elogd configuration</p>
-<dt><code>-c</code><i> file</i></p>
-<dd>specify configuration file</p>
-<dt><code>-D</code></p>
-<dd>become a daemon</p>
-<dt><code>-d</code><i> directory</i></p>
-<dd>specify logbook root directory</p>
-<dt><code>-f</code><i> file</i></p>
-<dd>specify PID file</p>
-<dt><code>-M</code></p>
-<dd>synchronize with removing deleted entries</p>
-<dt><code>-m</code></p>
-<dd>synchronize logbook(s) with remote server</p>
-<dt><code>-n</code><i> host</i></p>
-<dd>host where <code>elogd</code> will run</p>
-<dt><code>-k</code></p>
-<dd>do not use keep-alive</p>
-<dt><code>-l</code><i> logbook</i></p>
-<dd>specify logbook for `-r&#8217; and `-w&#8217; commands</p>
-<dt><code>-p</code><i> port</i></p>
-<dd>port where <code>elogd</code> will run</p>
-<dt><code>-S</code></p>
-<dd>be silent</p>
-<dt><code>-s</code><i> directory</i></p>
-<dd>specify resource directory (eg. themes, icons)</p>
-<dt><code>-v</code></p>
-<dd>debugging output</p>
-<dt><code>-x</code></p>
-<dd>enable execution of shell commands (unless compiled with this feature)</dl>
+<dt><code>-C</code><i> url</i></dt>
+<dd>clone remote elogd configuration</dd>
+<dt><code>-c</code><i> file</i></dt>
+<dd>specify configuration file</dd>
+<dt><code>-D</code></dt>
+<dd>become a daemon</dd>
+<dt><code>-d</code><i> directory</i></dt>
+<dd>specify logbook root directory</dd>
+<dt><code>-f</code><i> file</i></dt>
+<dd>specify PID file</dd>
+<dt><code>-M</code></dt>
+<dd>synchronize with removing deleted entries</dd>
+<dt><code>-m</code></dt>
+<dd>synchronize logbook(s) with remote server</dd>
+<dt><code>-n</code><i> host</i></dt>
+<dd>host where <code>elogd</code> will run</dd>
+<dt><code>-k</code></dt>
+<dd>do not use keep-alive</dd>
+<dt><code>-l</code><i> logbook</i></dt>
+<dd>specify logbook for `-r&#8217; and `-w&#8217; commands</dd>
+<dt><code>-p</code><i> port</i></dt>
+<dd>port where <code>elogd</code> will run</dd>
+<dt><code>-S</code></dt>
+<dd>be silent</dd>
+<dt><code>-s</code><i> directory</i></dt>
+<dd>specify resource directory (eg. themes, icons)</dd>
+<dt><code>-v</code></dt>
+<dd>debugging output</dd>
+<dt><code>-x</code></dt>
+<dd>enable execution of shell commands (unless compiled with this feature)</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-elog/">elog</a></code>(1). </p>
 <p> The full documentation for <code>ELOG</code> is maintained as an html manual. You can reach it from the package document directory.</p>

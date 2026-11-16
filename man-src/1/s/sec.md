@@ -11,7 +11,7 @@ description: "sec – simple event correlator"
 <p> sec &#8211; simple event correlator</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>sec</code></p>
+<dt><code>sec</code></dt>
 <dd> [&#8211;conf=&lt;file pattern&gt; &#8230;]<br />
  [&#8211;input=&lt;file pattern&gt;[=&lt;context&gt;] &#8230;]<br />
  [&#8211;input-timeout=&lt;input timeout&gt;]<br />
@@ -45,7 +45,7 @@ description: "sec – simple event correlator"
  [&#8211;intcontexts | &#8211;nointcontexts]<br />
  [&#8211;testonly | &#8211;notestonly]<br />
  [&#8211;help] [-?]<br />
- [&#8211;version]</dl>
+ [&#8211;version]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> SEC is an event correlation tool for advanced event processing which can be harnessed for event log monitoring, for network and security management, for fraud detection, and for any other task which involves event correlation. Event correlation is a procedure where a stream of events is processed, in order to detect (and act on) certain event groups that occur within predefined time windows. Unlike many other event correlation products which are heavyweight solutions, SEC is a lightweight and platform-independent event correlator which runs as a single process. The user can start it as a daemon, employ it in shell pipelines, execute it interactively in a terminal, run many SEC processes simultaneously for different tasks, and use it in a wide variety of other ways. </p>
 <p> SEC reads lines from files, named pipes, or standard input, matches the lines with patterns (regular expressions, Perl subroutines, etc.) for recognizing input events, and correlates events according to the rules in its configuration file(s). Rules are matched against input in the order they are given in the configuration file. If there are two or more configuration files, rule sequence from every file is matched against input (unless explicitly specified otherwise). SEC can produce output by executing external programs (e.g., <code><a href="/docs/linux/man/1-snmptrap/">snmptrap</a></code>(1) or <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1)), by writing to files, by sending data to TCP and UDP based servers, by calling precompiled Perl subroutines, etc. </p>
@@ -105,33 +105,33 @@ description: "sec – simple event correlator"
 <p> The above examples have presented the event correlation capabilities of SEC in a very brief fashion. The following sections will provide an in-depth discussion of SEC features.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;conf=&lt;file_pattern&gt;</code></p>
-<dd> expand &lt;file_pattern&gt; to filenames (with the Perl <code>glob</code>() function) and read event correlation rules from every file. Multiple <code>&#8211;conf</code> options can be specified at command line. Each time SEC receives a signal that forces a configuration reload, &lt;file_pattern&gt; is re-evaluated. See also INPUT PROCESSING AND TIMING section for a discussion on rule processing order for multiple configuration files.</p>
-<dt><code>&#8211;input=&lt;file_pattern&gt;[=&lt;context&gt;]</code></p>
-<dd> expand &lt;file_pattern&gt; to filenames (with the Perl <code>glob</code>() function) and use the files as input sources. An input file can be a regular file, named pipe, or standard input if <code>&#8211;</code> was specified. Multiple <code>&#8211;input</code> options can be specified at command line. Each time SEC receives the <code>SIGHUP</code> or <code>SIGABRT</code> signal, &lt;file_pattern&gt; is re-evaluated. If SEC experiences a system error when reading from an input file, it will close the file (use the <code>&#8211;reopen-timeout</code> option for reopening the file). If &lt;context&gt; is given, SEC will set up the context &lt;context&gt; each time it reads a line from input files that correspond to &lt;file_pattern&gt;. This will help the user to write rules that match data from particular input source(s) only. When there is an <code>&#8211;input</code> option with &lt;context&gt; specified, it will automatically enable the <code>&#8211;intcontexts</code> option. See INTERNAL EVENTS AND CONTEXTS section for more information.</p>
-<dt><code>&#8211;input-timeout=&lt;input_timeout&gt;</code>, <code>&#8211;timeout-script=&lt;timeout_script&gt;</code></p>
-<dd> if SEC has not observed new data in an input file during &lt;input_timeout&gt; seconds (or the file was closed &lt;input_timeout&gt; seconds ago), &lt;timeout_script&gt; will be executed with command line parameters 1 and &lt;the name of the input file&gt;. If fresh data become available again, &lt;timeout_script&gt; will be executed with command line parameters 0 and &lt;the name of the input file&gt;. Setting &lt;input_timeout&gt; to 0 disables this behavior (this is also the default). Note that <code>&#8211;input_timeout </code> and <code>&#8211;timeout_script</code> options can be used as synonyms for <code>&#8211;input-timeout </code> and <code>&#8211;timeout-script</code>, respectively.</p>
-<dt><code>&#8211;reopen-timeout=&lt;reopen_timeout&gt; </code></p>
-<dd> if an input file is in the closed state (e.g., SEC fails to open the file at startup, because it has not been created yet), SEC will attempt to reopen the file after every &lt;reopen_timeout&gt; seconds until open succeeds. Setting &lt;reopen_timeout&gt; to 0 disables this behavior (this is also the default). This option has no meaning when the <code>&#8211;notail</code> option is also specified. Note that <code>&#8211;reopen_timeout</code> is a synonym for <code>&#8211;reopen-timeout</code>.</p>
-<dt><code>&#8211;check-timeout=&lt;check_timeout&gt;</code></p>
-<dd> if SEC has not observed new data in an input file, the file will not be polled (both for status and data) during the next &lt;check_timeout&gt; seconds. Setting &lt;check_timeout&gt; to 0 disables this behavior (this is also the default). Note that <code>&#8211;check_timeout</code> is a synonym for <code>&#8211;check-timeout</code>.</p>
-<dt><code>&#8211;poll-timeout=&lt;poll_timeout&gt;</code></p>
-<dd> a real number that specifies how many seconds SEC will sleep when no new data were read from input files. Default is 0.1 seconds. Note that <code>&#8211;poll_timeout</code> is a synonym for <code>&#8211;poll-timeout</code>.</p>
-<dt><code>&#8211;socket-timeout=&lt;socket_timeout&gt;</code></p>
-<dd> if a network connection to a remote peer can&#8217;t be established within &lt;socket_timeout&gt; seconds, give up. Default is 60 seconds. Note that <code>&#8211;socket_timeout</code> is a synonym for <code>&#8211;socket-timeout</code>.</p>
-<dt><code>&#8211;blocksize=&lt;io_block_size&gt;</code></p>
-<dd> the number of bytes SEC will attempt to read at once from an input file. Default is 8192 bytes (i.e., read from input files by 8KB blocks).</p>
-<dt><code>&#8211;bufsize=&lt;input_buffer_size&gt;</code></p>
-<dd> set all input buffers to hold &lt;input_buffer_size&gt; lines. The content of input buffers will be compared with patterns that are part of rule definitions (i.e., no more than &lt;input_buffer_size&gt; lines can be matched by a pattern at a time). If &lt;input_buffer_size&gt; is set to 0, SEC will determine the proper value for &lt;input_buffer_size&gt; by checking event matching patterns of all SEC rules. Default is 0 (i.e., determine the size of input buffers automatically).</p>
-<dt><code>&#8211;evstoresize=&lt;event_store_size&gt;</code></p>
-<dd> set an upper limit to the number of events in context event stores. Default is 0 which sets no limit.</p>
-<dt><code>&#8211;cleantime=&lt;clean_time&gt;</code></p>
-<dd> time interval in seconds that specifies how often internal event correlation and context lists are processed, in order to accomplish time-related tasks and to remove obsolete elements. See INPUT PROCESSING AND TIMING section for more information. Default is 1 second.</p>
-<dt><code>&#8211;log=&lt;logfile&gt;</code></p>
-<dd> use &lt;logfile&gt; for logging SEC activities. Note that if the SEC standard error is connected to a terminal, messages will also be logged there, in order to facilitate debugging.</p>
-<dt><code>&#8211;syslog=&lt;facility&gt;</code></p>
-<dd> use syslog for logging SEC activities. All messages will be logged with the facility &lt;facility&gt;, e.g., <i>local0</i> (see <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) for possible facility values). Warning: be careful with using this option if SEC is employed for monitoring syslog log files, because message loops might occur.</p>
-<dt><code>&#8211;debug=&lt;debuglevel&gt;</code></p>
+<dt><code>&#8211;conf=&lt;file_pattern&gt;</code></dt>
+<dd> expand &lt;file_pattern&gt; to filenames (with the Perl <code>glob</code>() function) and read event correlation rules from every file. Multiple <code>&#8211;conf</code> options can be specified at command line. Each time SEC receives a signal that forces a configuration reload, &lt;file_pattern&gt; is re-evaluated. See also INPUT PROCESSING AND TIMING section for a discussion on rule processing order for multiple configuration files.</dd>
+<dt><code>&#8211;input=&lt;file_pattern&gt;[=&lt;context&gt;]</code></dt>
+<dd> expand &lt;file_pattern&gt; to filenames (with the Perl <code>glob</code>() function) and use the files as input sources. An input file can be a regular file, named pipe, or standard input if <code>&#8211;</code> was specified. Multiple <code>&#8211;input</code> options can be specified at command line. Each time SEC receives the <code>SIGHUP</code> or <code>SIGABRT</code> signal, &lt;file_pattern&gt; is re-evaluated. If SEC experiences a system error when reading from an input file, it will close the file (use the <code>&#8211;reopen-timeout</code> option for reopening the file). If &lt;context&gt; is given, SEC will set up the context &lt;context&gt; each time it reads a line from input files that correspond to &lt;file_pattern&gt;. This will help the user to write rules that match data from particular input source(s) only. When there is an <code>&#8211;input</code> option with &lt;context&gt; specified, it will automatically enable the <code>&#8211;intcontexts</code> option. See INTERNAL EVENTS AND CONTEXTS section for more information.</dd>
+<dt><code>&#8211;input-timeout=&lt;input_timeout&gt;</code>, <code>&#8211;timeout-script=&lt;timeout_script&gt;</code></dt>
+<dd> if SEC has not observed new data in an input file during &lt;input_timeout&gt; seconds (or the file was closed &lt;input_timeout&gt; seconds ago), &lt;timeout_script&gt; will be executed with command line parameters 1 and &lt;the name of the input file&gt;. If fresh data become available again, &lt;timeout_script&gt; will be executed with command line parameters 0 and &lt;the name of the input file&gt;. Setting &lt;input_timeout&gt; to 0 disables this behavior (this is also the default). Note that <code>&#8211;input_timeout </code> and <code>&#8211;timeout_script</code> options can be used as synonyms for <code>&#8211;input-timeout </code> and <code>&#8211;timeout-script</code>, respectively.</dd>
+<dt><code>&#8211;reopen-timeout=&lt;reopen_timeout&gt; </code></dt>
+<dd> if an input file is in the closed state (e.g., SEC fails to open the file at startup, because it has not been created yet), SEC will attempt to reopen the file after every &lt;reopen_timeout&gt; seconds until open succeeds. Setting &lt;reopen_timeout&gt; to 0 disables this behavior (this is also the default). This option has no meaning when the <code>&#8211;notail</code> option is also specified. Note that <code>&#8211;reopen_timeout</code> is a synonym for <code>&#8211;reopen-timeout</code>.</dd>
+<dt><code>&#8211;check-timeout=&lt;check_timeout&gt;</code></dt>
+<dd> if SEC has not observed new data in an input file, the file will not be polled (both for status and data) during the next &lt;check_timeout&gt; seconds. Setting &lt;check_timeout&gt; to 0 disables this behavior (this is also the default). Note that <code>&#8211;check_timeout</code> is a synonym for <code>&#8211;check-timeout</code>.</dd>
+<dt><code>&#8211;poll-timeout=&lt;poll_timeout&gt;</code></dt>
+<dd> a real number that specifies how many seconds SEC will sleep when no new data were read from input files. Default is 0.1 seconds. Note that <code>&#8211;poll_timeout</code> is a synonym for <code>&#8211;poll-timeout</code>.</dd>
+<dt><code>&#8211;socket-timeout=&lt;socket_timeout&gt;</code></dt>
+<dd> if a network connection to a remote peer can&#8217;t be established within &lt;socket_timeout&gt; seconds, give up. Default is 60 seconds. Note that <code>&#8211;socket_timeout</code> is a synonym for <code>&#8211;socket-timeout</code>.</dd>
+<dt><code>&#8211;blocksize=&lt;io_block_size&gt;</code></dt>
+<dd> the number of bytes SEC will attempt to read at once from an input file. Default is 8192 bytes (i.e., read from input files by 8KB blocks).</dd>
+<dt><code>&#8211;bufsize=&lt;input_buffer_size&gt;</code></dt>
+<dd> set all input buffers to hold &lt;input_buffer_size&gt; lines. The content of input buffers will be compared with patterns that are part of rule definitions (i.e., no more than &lt;input_buffer_size&gt; lines can be matched by a pattern at a time). If &lt;input_buffer_size&gt; is set to 0, SEC will determine the proper value for &lt;input_buffer_size&gt; by checking event matching patterns of all SEC rules. Default is 0 (i.e., determine the size of input buffers automatically).</dd>
+<dt><code>&#8211;evstoresize=&lt;event_store_size&gt;</code></dt>
+<dd> set an upper limit to the number of events in context event stores. Default is 0 which sets no limit.</dd>
+<dt><code>&#8211;cleantime=&lt;clean_time&gt;</code></dt>
+<dd> time interval in seconds that specifies how often internal event correlation and context lists are processed, in order to accomplish time-related tasks and to remove obsolete elements. See INPUT PROCESSING AND TIMING section for more information. Default is 1 second.</dd>
+<dt><code>&#8211;log=&lt;logfile&gt;</code></dt>
+<dd> use &lt;logfile&gt; for logging SEC activities. Note that if the SEC standard error is connected to a terminal, messages will also be logged there, in order to facilitate debugging.</dd>
+<dt><code>&#8211;syslog=&lt;facility&gt;</code></dt>
+<dd> use syslog for logging SEC activities. All messages will be logged with the facility &lt;facility&gt;, e.g., <i>local0</i> (see <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) for possible facility values). Warning: be careful with using this option if SEC is employed for monitoring syslog log files, because message loops might occur.</dd>
+<dt><code>&#8211;debug=&lt;debuglevel&gt;</code></dt>
 <dd> set logging verbosity for SEC. Setting debuglevel to &lt;debuglevel&gt; means that all messages of level &lt;debuglevel&gt; and lower are logged (e.g., if &lt;debuglevel&gt; is 3, messages from levels 1-3 are logged). The following levels are recognized by SEC:<br />
  1 &#8211; critical messages (severe faults that cause SEC to terminate, e.g., a failed system call)<br />
  2 &#8211; error messages (faults that need attention, e.g., an incorrect rule definition in a configuration file)<br />
@@ -139,43 +139,43 @@ description: "sec – simple event correlator"
  4 &#8211; notification messages (normal system level events and interrupts, e.g., the reception of a signal)<br />
  5 &#8211; informative messages (information about external programs forked from SEC)<br />
  6 &#8211; debug messages (detailed information about all SEC activities)<br />
- Default &lt;debuglevel&gt; is 6 (i.e., log everything). See SIGNALS section for information on how to change &lt;debuglevel&gt; at runtime.</p>
-<dt><code>&#8211;pid=&lt;pidfile&gt;</code></p>
-<dd> SEC will store its process ID to &lt;pidfile&gt; at startup.</p>
-<dt><code>&#8211;dump=&lt;dumpfile&gt;</code></p>
-<dd> SEC will use &lt;dumpfile&gt; as its dump file for writing performance and debug data. With the <code>&#8211;dumpfts</code> option, a timestamp suffix is appended to the dump file name. See SIGNALS section for more information. Default is /tmp/sec.dump.</p>
-<dt><code>&#8211;user=&lt;username&gt;</code>, <code>&#8211;group=&lt;groupname&gt;</code></p>
-<dd> if SEC is started with effective user ID 0, it will drop root privileges by switching to user &lt;username&gt; and group &lt;groupname&gt;. The <code>&#8211;group</code> option can&#8217;t be used without the <code>&#8211;user</code> option. If the <code>&#8211;user</code> option is given without <code>&#8211;group</code>, primary group of the user &lt;username&gt; is assumed for &lt;groupname&gt;. If several groups are provided with multiple <code>&#8211;group</code> options, SEC switches to the first group with other groups as supplementary groups.</p>
-<dt><code>&#8211;umask=&lt;mode&gt;</code></p>
-<dd> set file mode creation mask to &lt;mode&gt; at SEC startup, where &lt;mode&gt; is a value from the range 0..0777 (see also <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2)). Octal, decimal, hexadecimal, and binary values can be specified for &lt;mode&gt; (e.g., octal mask 0027 can also be expressed as 23, 0x17, and 0b000010111).</p>
-<dt><code>&#8211;dumpfts</code>, <code>&#8211;nodumpfts</code></p>
-<dd> if the <code>&#8211;dumpfts</code> option is specified, a timestamp suffix (seconds since Epoch) is appended to the dump file name that reflects the file creation time. Default is <code>&#8211;nodumpfts</code>.</p>
-<dt><code>&#8211;quoting</code>, <code>&#8211;noquoting</code></p>
-<dd> if the <code>&#8211;quoting</code> option is specified, operation description strings that are supplied to command lines of <i>shellcmd</i>, <i>spawn</i>, and <i>cspawn</i> actions will be put inside single quotes. Each single quote (&#8216;) that strings originally contain will be masked. This option prevents the shell from interpreting special symbols that operation description strings might contain. Default is <code>&#8211;noquoting</code>.</p>
-<dt><code>&#8211;tail</code>, <code>&#8211;notail</code></p>
-<dd> if the <code>&#8211;notail</code> option is specified, SEC will process all data that are currently available in input files and exit after reaching all EOFs. If all input is received from a pipe and the <code>&#8211;notail</code> option is given, SEC terminates when the last writer closes the pipe (EOF condition). Please note that with named pipes <code>&#8211;notail</code> should be used with <code>&#8211;norwfifo</code>. With the <code>&#8211;tail</code> option, SEC will jump to the end of input files and wait for new lines to arrive. Each input file is tracked both by its name and i-node, and input file rotations are handled seamlessly. If the input file is recreated or truncated, SEC will reopen it and process its content from the beginning. If the input file is removed (i.e., there is just an i-node left without a name), SEC will keep the i-node open and wait for the input file recreation. Default is <code>&#8211;tail</code>.</p>
-<dt><code>&#8211;fromstart</code>, <code>&#8211;nofromstart</code></p>
-<dd> these flags have no meaning when the <code>&#8211;notail</code> option is also specified. When used in combination with <code>&#8211;tail</code> (or alone, since <code>&#8211;tail</code> is enabled by default), <code>&#8211;fromstart</code> will force SEC to read and process input files from the beginning to the end, before the &#8216;tail&#8217; mode is entered. Default is <code>&#8211;nofromstart</code>.</p>
-<dt><code>&#8211;detach</code>, <code>&#8211;nodetach</code></p>
-<dd> if the <code>&#8211;detach</code> option is specified, SEC will disassociate itself from the controlling terminal and become a daemon at startup (note that SEC will close its standard input, standard output, and standard error, and change its working directory to the root directory). Default is <code>&#8211;nodetach</code>.</p>
-<dt><code>&#8211;jointbuf</code>, <code>&#8211;nojointbuf</code></p>
-<dd> if the <code>&#8211;jointbuf</code> option is specified, SEC uses joint input buffer for all input sources (the size of the buffer is set with the <code>&#8211;bufsize</code> option). The <code>&#8211;nojointbuf</code> option creates a separate input buffer for each input file, and a separate buffer for all synthetic and internal events (the sizes of all buffers are set with the <code>&#8211;bufsize</code> option). The <code>&#8211;jointbuf</code> option allows multiline patterns to match lines from several input sources, while the <code>&#8211;nojointbuf </code> pattern restricts the matching to lines from one input source only. See INPUT PROCESSING AND TIMING section for more information. If the size of input buffer(s) is 1 (either explicitly set with <code>&#8211;bufsize=1</code> or automatically determined from SEC rules), <code>&#8211;jointbuf</code> option is enabled, otherwise the default is <code>&#8211;nojointbuf</code>.</p>
-<dt><code>&#8211;keepopen</code>, <code>&#8211;nokeepopen</code></p>
-<dd> if the <code>&#8211;keepopen</code> option is specified, SEC will keep input files open across soft restarts. When the <code>SIGABRT</code> signal is received, SEC will not reopen input files which have been opened previously, but will only open input files which are in the closed state. The <code>&#8211;nokeepopen </code> option forces SEC to close and (re)open all input files during soft restarts. Default is <code>&#8211;keepopen</code>.</p>
-<dt><code>&#8211;rwfifo</code>, <code>&#8211;norwfifo</code></p>
-<dd> if the <code>&#8211;norwfifo</code> option is specified, named pipe input files are opened in read-only mode. In this mode, the named pipe has to be reopened when the last writer closes the pipe, in order to clear the EOF condition on the pipe. With the <code>&#8211;rwfifo</code> option, named pipe input files are opened in read-write mode, although SEC never writes to the pipes. In this mode, the pipe does not need to be reopened when an external writer closes it, since there is always at least one writer on the pipe and EOF will never appear. Therefore, if the <code>&#8211;notail</code> option has been given, <code>&#8211;norwfifo</code> should also be specified. Default is <code>&#8211;rwfifo</code>.</p>
-<dt><code>&#8211;childterm</code>, <code>&#8211;nochildterm</code></p>
-<dd> if the <code>&#8211;childterm</code> option is specified, SEC will send the SIGTERM signal to all its child processes when it terminates or goes through a full restart. Default is <code>&#8211;childterm</code>.</p>
-<dt><code>&#8211;intevents</code>, <code>&#8211;nointevents</code></p>
-<dd> SEC will generate internal events when it starts up, when it receives certain signals, and when it terminates gracefully. Specific rules can be written to match those internal events, in order to accomplish special tasks at SEC startup, restart, and shutdown. See INTERNAL EVENTS AND CONTEXTS section for more information. Default is <code>&#8211;nointevents</code>.</p>
-<dt><code>&#8211;intcontexts</code>, <code>&#8211;nointcontexts</code></p>
-<dd> SEC will create an internal context when it reads a line from an input file. This will help the user to write rules that match data from particular input source only. See INTERNAL EVENTS AND CONTEXTS section for more information. Default is <code>&#8211;nointcontexts</code>.</p>
-<dt><code>&#8211;testonly</code>, <code>&#8211;notestonly</code></p>
-<dd> if the <code>&#8211;testonly</code> option is specified, SEC will exit immediately after parsing the configuration file(s). If the configuration file(s) contained no faulty rules, SEC will exit with 0, otherwise with 1. Default is <code>&#8211;notestonly</code>.</p>
-<dt><code>&#8211;help</code>, <code>-?</code></p>
-<dd> SEC will output usage information and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> SEC will output version information and exit.</dl>
+ Default &lt;debuglevel&gt; is 6 (i.e., log everything). See SIGNALS section for information on how to change &lt;debuglevel&gt; at runtime.</dd>
+<dt><code>&#8211;pid=&lt;pidfile&gt;</code></dt>
+<dd> SEC will store its process ID to &lt;pidfile&gt; at startup.</dd>
+<dt><code>&#8211;dump=&lt;dumpfile&gt;</code></dt>
+<dd> SEC will use &lt;dumpfile&gt; as its dump file for writing performance and debug data. With the <code>&#8211;dumpfts</code> option, a timestamp suffix is appended to the dump file name. See SIGNALS section for more information. Default is /tmp/sec.dump.</dd>
+<dt><code>&#8211;user=&lt;username&gt;</code>, <code>&#8211;group=&lt;groupname&gt;</code></dt>
+<dd> if SEC is started with effective user ID 0, it will drop root privileges by switching to user &lt;username&gt; and group &lt;groupname&gt;. The <code>&#8211;group</code> option can&#8217;t be used without the <code>&#8211;user</code> option. If the <code>&#8211;user</code> option is given without <code>&#8211;group</code>, primary group of the user &lt;username&gt; is assumed for &lt;groupname&gt;. If several groups are provided with multiple <code>&#8211;group</code> options, SEC switches to the first group with other groups as supplementary groups.</dd>
+<dt><code>&#8211;umask=&lt;mode&gt;</code></dt>
+<dd> set file mode creation mask to &lt;mode&gt; at SEC startup, where &lt;mode&gt; is a value from the range 0..0777 (see also <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2)). Octal, decimal, hexadecimal, and binary values can be specified for &lt;mode&gt; (e.g., octal mask 0027 can also be expressed as 23, 0x17, and 0b000010111).</dd>
+<dt><code>&#8211;dumpfts</code>, <code>&#8211;nodumpfts</code></dt>
+<dd> if the <code>&#8211;dumpfts</code> option is specified, a timestamp suffix (seconds since Epoch) is appended to the dump file name that reflects the file creation time. Default is <code>&#8211;nodumpfts</code>.</dd>
+<dt><code>&#8211;quoting</code>, <code>&#8211;noquoting</code></dt>
+<dd> if the <code>&#8211;quoting</code> option is specified, operation description strings that are supplied to command lines of <i>shellcmd</i>, <i>spawn</i>, and <i>cspawn</i> actions will be put inside single quotes. Each single quote (&#8216;) that strings originally contain will be masked. This option prevents the shell from interpreting special symbols that operation description strings might contain. Default is <code>&#8211;noquoting</code>.</dd>
+<dt><code>&#8211;tail</code>, <code>&#8211;notail</code></dt>
+<dd> if the <code>&#8211;notail</code> option is specified, SEC will process all data that are currently available in input files and exit after reaching all EOFs. If all input is received from a pipe and the <code>&#8211;notail</code> option is given, SEC terminates when the last writer closes the pipe (EOF condition). Please note that with named pipes <code>&#8211;notail</code> should be used with <code>&#8211;norwfifo</code>. With the <code>&#8211;tail</code> option, SEC will jump to the end of input files and wait for new lines to arrive. Each input file is tracked both by its name and i-node, and input file rotations are handled seamlessly. If the input file is recreated or truncated, SEC will reopen it and process its content from the beginning. If the input file is removed (i.e., there is just an i-node left without a name), SEC will keep the i-node open and wait for the input file recreation. Default is <code>&#8211;tail</code>.</dd>
+<dt><code>&#8211;fromstart</code>, <code>&#8211;nofromstart</code></dt>
+<dd> these flags have no meaning when the <code>&#8211;notail</code> option is also specified. When used in combination with <code>&#8211;tail</code> (or alone, since <code>&#8211;tail</code> is enabled by default), <code>&#8211;fromstart</code> will force SEC to read and process input files from the beginning to the end, before the &#8216;tail&#8217; mode is entered. Default is <code>&#8211;nofromstart</code>.</dd>
+<dt><code>&#8211;detach</code>, <code>&#8211;nodetach</code></dt>
+<dd> if the <code>&#8211;detach</code> option is specified, SEC will disassociate itself from the controlling terminal and become a daemon at startup (note that SEC will close its standard input, standard output, and standard error, and change its working directory to the root directory). Default is <code>&#8211;nodetach</code>.</dd>
+<dt><code>&#8211;jointbuf</code>, <code>&#8211;nojointbuf</code></dt>
+<dd> if the <code>&#8211;jointbuf</code> option is specified, SEC uses joint input buffer for all input sources (the size of the buffer is set with the <code>&#8211;bufsize</code> option). The <code>&#8211;nojointbuf</code> option creates a separate input buffer for each input file, and a separate buffer for all synthetic and internal events (the sizes of all buffers are set with the <code>&#8211;bufsize</code> option). The <code>&#8211;jointbuf</code> option allows multiline patterns to match lines from several input sources, while the <code>&#8211;nojointbuf </code> pattern restricts the matching to lines from one input source only. See INPUT PROCESSING AND TIMING section for more information. If the size of input buffer(s) is 1 (either explicitly set with <code>&#8211;bufsize=1</code> or automatically determined from SEC rules), <code>&#8211;jointbuf</code> option is enabled, otherwise the default is <code>&#8211;nojointbuf</code>.</dd>
+<dt><code>&#8211;keepopen</code>, <code>&#8211;nokeepopen</code></dt>
+<dd> if the <code>&#8211;keepopen</code> option is specified, SEC will keep input files open across soft restarts. When the <code>SIGABRT</code> signal is received, SEC will not reopen input files which have been opened previously, but will only open input files which are in the closed state. The <code>&#8211;nokeepopen </code> option forces SEC to close and (re)open all input files during soft restarts. Default is <code>&#8211;keepopen</code>.</dd>
+<dt><code>&#8211;rwfifo</code>, <code>&#8211;norwfifo</code></dt>
+<dd> if the <code>&#8211;norwfifo</code> option is specified, named pipe input files are opened in read-only mode. In this mode, the named pipe has to be reopened when the last writer closes the pipe, in order to clear the EOF condition on the pipe. With the <code>&#8211;rwfifo</code> option, named pipe input files are opened in read-write mode, although SEC never writes to the pipes. In this mode, the pipe does not need to be reopened when an external writer closes it, since there is always at least one writer on the pipe and EOF will never appear. Therefore, if the <code>&#8211;notail</code> option has been given, <code>&#8211;norwfifo</code> should also be specified. Default is <code>&#8211;rwfifo</code>.</dd>
+<dt><code>&#8211;childterm</code>, <code>&#8211;nochildterm</code></dt>
+<dd> if the <code>&#8211;childterm</code> option is specified, SEC will send the SIGTERM signal to all its child processes when it terminates or goes through a full restart. Default is <code>&#8211;childterm</code>.</dd>
+<dt><code>&#8211;intevents</code>, <code>&#8211;nointevents</code></dt>
+<dd> SEC will generate internal events when it starts up, when it receives certain signals, and when it terminates gracefully. Specific rules can be written to match those internal events, in order to accomplish special tasks at SEC startup, restart, and shutdown. See INTERNAL EVENTS AND CONTEXTS section for more information. Default is <code>&#8211;nointevents</code>.</dd>
+<dt><code>&#8211;intcontexts</code>, <code>&#8211;nointcontexts</code></dt>
+<dd> SEC will create an internal context when it reads a line from an input file. This will help the user to write rules that match data from particular input source only. See INTERNAL EVENTS AND CONTEXTS section for more information. Default is <code>&#8211;nointcontexts</code>.</dd>
+<dt><code>&#8211;testonly</code>, <code>&#8211;notestonly</code></dt>
+<dd> if the <code>&#8211;testonly</code> option is specified, SEC will exit immediately after parsing the configuration file(s). If the configuration file(s) contained no faulty rules, SEC will exit with 0, otherwise with 1. Default is <code>&#8211;notestonly</code>.</dd>
+<dt><code>&#8211;help</code>, <code>-?</code></dt>
+<dd> SEC will output usage information and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> SEC will output version information and exit.</dd></dl>
 <p> Note that options can be introduced both with the single dash (-) and double dash (&#8211;), and both the equal sign (=) and whitespace can be used for separating the option name from the option value. For example, <code>-conf=&lt;file_pattern&gt;</code> and <code>&#8211;conf &lt;file_pattern&gt;</code> options are equivalent.</p>
 <h2>CONFIGURATION FILES</h2>
 <p> Each SEC configuration file consists of rule definitions which are separated by empty lines, whitespace lines and/or comment lines. Each rule definition consists of keyword=value fields, one keyword and value per line. Values are case insensitive only where character case is not important (like the values specifying rule types, e.g., &#8216;Single&#8217; and &#8216;single&#8217; are treated identically). The backslash character (\) may be used at the end of a line to continue the current rule field in the next line. Lines which begin with the number sign (#) are treated as comments and ignored (whitespace characters may precede #). Any comment line, empty line, whitespace line, or end of file will terminate the preceding rule definition. For inserting comments into rule definitions, the <i>rem</i> keyword can be used. For example, the following lines define two rules: </p>
@@ -200,14 +200,14 @@ description: "sec – simple event correlator"
 <p> Apart from keywords that are part of rule definitions, <i>label</i> keywords may appear anywhere in the configuration file. The value of each <i>label</i> keyword will be treated as a label that can be referred to in rule definitions as a point-of-continue. This allows for continuing event processing at a rule that follows the label, after the current rule has matched and processed the event. </p>
 <p> The points-of-continue are defined with <i>continue*</i> fields. Accepted values for these fields are:</p>
 <dl>
-<dt><i>TakeNext </i></p>
-<dd> after an event has matched the rule, search for matching rules in the configuration file will continue from the next rule.</p>
-<dt><i>GoTo &lt;label&gt;</i></p>
-<dd> after an event has matched the rule, search for matching rules will continue from the location of &lt;label&gt; in the configuration file (&lt;label&gt; must be defined with the <i>label</i> keyword anywhere in the configuration file *after* the current rule definition).</p>
-<dt><i>DontCont</i> (default value)</p>
-<dd> after an event has matched the rule, search for matching rules ends in the *current* configuration file.</p>
-<dt><i>EndMatch</i></p>
-<dd> after an event has matched the rule, search for matching rules ends for *all* configuration files.</dl>
+<dt><i>TakeNext </i></dt>
+<dd> after an event has matched the rule, search for matching rules in the configuration file will continue from the next rule.</dd>
+<dt><i>GoTo &lt;label&gt;</i></dt>
+<dd> after an event has matched the rule, search for matching rules will continue from the location of &lt;label&gt; in the configuration file (&lt;label&gt; must be defined with the <i>label</i> keyword anywhere in the configuration file *after* the current rule definition).</dd>
+<dt><i>DontCont</i> (default value)</dt>
+<dd> after an event has matched the rule, search for matching rules ends in the *current* configuration file.</dd>
+<dt><i>EndMatch</i></dt>
+<dd> after an event has matched the rule, search for matching rules ends for *all* configuration files.</dd></dl>
 <p> SEC rules from the same configuration file are matched against input in the order they have been given in the file. For example, consider a configuration file which contains the following rule sequence: </p>
 <p> type=Single<br />
  ptype=SubStr<br />
@@ -262,6 +262,8 @@ description: "sec – simple event correlator"
 <h2>PATTERNS, PATTERN TYPES AND MATCH VARIABLES</h2>
 <p> Patterns and pattern types are defined with <i>pattern*</i> and <i>ptype*</i> rule fields. Many pattern types define the number of lines <i>N </i> which the pattern matches (if <i>N </i> is omitted, 1 is assumed). If <i>N</i> is greater than 1, the scope of matching is set with the <code>&#8211;jointbuf</code> and <code>&#8211;nojointbuf</code> options. With <code>&#8211;jointbuf</code>, the pattern is used for matching <i>N </i> last input lines taken from the joint input buffer (the lines can come from different input sources). With <code>&#8211;nojointbuf</code>, the source of the last input line is identified, and the pattern is matched with <i>N </i> last input lines from the input buffer of the identified source.</p>
 <dl>
-<dt><i>SubStr[N]</i></p>
+<dt><i>SubStr[N]</i></dt>
 <dd> pattern is a string that is searched in the last N input lines L1, L2, &#8230;, LN. If N is greater than 1, the input lines are joined into a string &quot;L1&lt;NEWLINE&gt;L2&lt;NEWLINE&gt;&#8230;&lt;NEWLINE&gt;LN&quot;, and the pattern string will be searched from it. If the pattern string is found in input line(s), the pattern matches. Backslash sequences 	, 
-, , \s, and 
+, 
+, \s, and 
+</dd></dl>

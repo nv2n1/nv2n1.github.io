@@ -24,19 +24,19 @@ url: "/docs/linux/man/1-umap/"
  The following options are recognized:
 <dl>
 <dt>--list [charset]
-<dd> Without argument list all character sets recognized. With a specified character set list the mapping between this set and Unicode.
-<dt>--strict
-<dd> Do the stict mapping between the character sets. The default is to not translate unmapped character. With <i>--stict</i> we will remove unmapped characters or use the default specified with <i>--def8</i> or <i>--def16</i>.
-<dt>--def8=&lt;charcode&gt;
-<dd> Set the default 8-bit code for unmapped chars.
-<dt>--def16=&lt;charcode&gt;
-<dd> Set the default 16-bit code for unmapped chars.
-<dt>--verbose
-<dd> Generate more verbose output.
-<dt>--version
-<dd> Print the version number of this program and quit.
-<dt>--help
-<dd> Print the usage message.</dl>
+</dt><dd> Without argument list all character sets recognized. With a specified character set list the mapping between this set and Unicode.
+</dd><dt>--strict
+</dt><dd> Do the stict mapping between the character sets. The default is to not translate unmapped character. With <i>--stict</i> we will remove unmapped characters or use the default specified with <i>--def8</i> or <i>--def16</i>.
+</dd><dt>--def8=&lt;charcode&gt;
+</dt><dd> Set the default 8-bit code for unmapped chars.
+</dd><dt>--def16=&lt;charcode&gt;
+</dt><dd> Set the default 16-bit code for unmapped chars.
+</dd><dt>--verbose
+</dt><dd> Generate more verbose output.
+</dd><dt>--version
+</dt><dd> Print the version number of this program and quit.
+</dd><dt>--help
+</dt><dd> Print the usage message.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

@@ -11,9 +11,7 @@ std::experimental::atomic_shared_ptr - std::experimental::atomic_shared_ptr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/atomic&gt;
-
 template &lt; class T &gt;                     (concurrency TS)
-
 class atomic_shared_ptr;</code></pre> 
 The class template atomic_shared_ptr provides thread-safe atomic pointer operations over a std::shared_ptr. It provides a better alternative to the_non-member_shared_ptr_atomic_access_functions. 
 

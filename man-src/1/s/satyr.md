@@ -17,11 +17,11 @@ description: "satyr – create and manipulate problem reports"
 <h2>OPTIONS</h2>
 <p> <code>Commands</code></p>
 <dl>
-<dt>abrt-print-report-from-dir &lt;directory&gt;</p>
+<dt>abrt-print-report-from-dir &lt;directory&gt;</dt>
 <dd>
 <p> Creates report from ABRT problem directory <i>directory</i> and prints it to standard output. </p>
-<dt>abrt-create-core-stacktrace &lt;directory&gt;</p>
+</dd><dt>abrt-create-core-stacktrace &lt;directory&gt;</dt>
 <dd>
 <p> Creates stacktrace from ABRT problem directory <i>directory</i> that contains a core dump. </p>
-</dl>
+</dd></dl>
 <h2>Index</h2>

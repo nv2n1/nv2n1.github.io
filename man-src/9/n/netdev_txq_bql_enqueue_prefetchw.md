@@ -14,7 +14,7 @@ description: "netdev_txq_bql_enqueue_prefetchw – prefetch bql data for write"
 <p><i>dev_queue</i></p>
 <dl>
 <dd>
-<dd>pointer to transmit queue</dl>
+</dd><dd>pointer to transmit queue</dd></dl>
 <h2>Description</h2>
 <p>BQL enabled drivers might use this helper in their <code>ndo_start_xmit</code>, to give appropriate hint to the CPU.</p>
 <h2>Copyright</h2>

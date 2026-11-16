@@ -56,20 +56,20 @@ description: "QwtPlotPicker –"
 <p>Create a plot picker. The picker is set to those x- and y-axis of the plot that are enabled. If both or no x-axis are enabled, the picker is set to <code>QwtPlot::xBottom</code>. If both or no y-axis are enabled, it is set to <code>QwtPlot::yLeft</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>canvas</i> Plot canvas to observe, also the parent object</dl>
+<dd><i>canvas</i> Plot canvas to observe, also the parent object</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::autoReplot()</code>, <code>QwtPlot::replot()</code>, <code>scaleRect()</code></dl>
+<dd><code>QwtPlot::autoReplot()</code>, <code>QwtPlot::replot()</code>, <code>scaleRect()</code></dd></dl>
 <h3>QwtPlotPicker::QwtPlotPicker (intxAxis, intyAxis, QWidget *canvas) [explicit]</h3>
 <p>Create a plot picker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xAxis</i> Set the x axis of the picker<br />
  <i>yAxis</i> Set the y axis of the picker<br />
- <i>canvas</i> Plot canvas to observe, also the parent object</dl>
+ <i>canvas</i> Plot canvas to observe, also the parent object</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::autoReplot()</code>, <code>QwtPlot::replot()</code>, <code>scaleRect()</code></dl>
+<dd><code>QwtPlot::autoReplot()</code>, <code>QwtPlot::replot()</code>, <code>scaleRect()</code></dd></dl>
 <h3>QwtPlotPicker::QwtPlotPicker (intxAxis, intyAxis, <code>RubberBand</code>rubberBand, <code>DisplayMode</code>trackerMode, QWidget *canvas) [explicit]</h3>
 <p>Create a plot picker </p>
 <p> <code>Parameters:</code></p>
@@ -78,156 +78,156 @@ description: "QwtPlotPicker –"
  <i>yAxis</i> Y axis of the picker<br />
  <i>rubberBand</i> Rubber band style<br />
  <i>trackerMode</i> Tracker mode<br />
- <i>canvas</i> Plot canvas to observe, also the parent object</dl>
+ <i>canvas</i> Plot canvas to observe, also the parent object</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPicker</code>, QwtPicker::setSelectionFlags(), <code>QwtPicker::setRubberBand()</code>, <code>QwtPicker::setTrackerMode</code> </p>
+<dd><code>QwtPicker</code>, QwtPicker::setSelectionFlags(), <code>QwtPicker::setRubberBand()</code>, <code>QwtPicker::setTrackerMode</code> </dd>
 <p> <code>QwtPlot::autoReplot()</code>, <code>QwtPlot::replot()</code>, <code>scaleRect()</code></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtPlotPicker::append (const QPoint &amp;pos) [protected], [virtual]</h3>
 <p>Append a point to the selection and update rubber band and tracker. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Additional point</dl>
+<dd><i>pos</i> Additional point</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isActive</code>, <code>begin()</code>, <code>end()</code>, <code>move()</code>, <code>appended()</code></dl>
+<dd><code>isActive</code>, <code>begin()</code>, <code>end()</code>, <code>move()</code>, <code>appended()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The <code>appended(const QPoint &amp;)</code>, appended(const QDoublePoint &amp;) signals are emitted.</dl>
+<dd>The <code>appended(const QPoint &amp;)</code>, appended(const QDoublePoint &amp;) signals are emitted.</dd></dl>
 <p> Reimplemented from <code>QwtPicker</code>.</p>
 <h3>void QwtPlotPicker::appended (const QPointF &amp;pos) [signal]</h3>
 <p>A signal emitted when a point has been appended to the selection </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Position of the appended point.</dl>
+<dd><i>pos</i> Position of the appended point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>append()</code>. <code>moved()</code></dl>
+<dd><code>append()</code>. <code>moved()</code></dd></dl>
 <h3>QWidget * QwtPlotPicker::canvas ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Observed plot canvas</dl>
+<dd>Observed plot canvas</dd></dl>
 <h3>const QWidget * QwtPlotPicker::canvas () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Observed plot canvas</dl>
+<dd>Observed plot canvas</dd></dl>
 <h3>bool QwtPlotPicker::end (boolok = true) [protected], [virtual]</h3>
 <p>Close a selection setting the state to inactive. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ok</i> If true, complete the selection and emit selected signals otherwise discard the selection.</dl>
+<dd><i>ok</i> If true, complete the selection and emit selected signals otherwise discard the selection.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True if the selection has been accepted, false otherwise</dl>
+<dd>True if the selection has been accepted, false otherwise</dd></dl>
 <p> Reimplemented from <code>QwtPicker</code>. </p>
 <p> Reimplemented in <code>QwtPlotZoomer</code>.</p>
 <h3>QRectF QwtPlotPicker::invTransform (const QRect &amp;rect) const [protected]</h3>
 <p>Translate a rectangle from pixel into plot coordinates </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rectangle in plot coordinates</dl>
+<dd>Rectangle in plot coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>transform()</code></dl>
+<dd><code>transform()</code></dd></dl>
 <h3>QPointF QwtPlotPicker::invTransform (const QPoint &amp;pos) const [protected]</h3>
 <p>Translate a point from pixel into plot coordinates </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Point in plot coordinates</dl>
+<dd>Point in plot coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>transform()</code></dl>
+<dd><code>transform()</code></dd></dl>
 <h3>void QwtPlotPicker::move (const QPoint &amp;pos) [protected], [virtual]</h3>
 <p>Move the last point of the selection </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> New position</dl>
+<dd><i>pos</i> New position</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isActive</code>, <code>begin()</code>, <code>end()</code>, <code>append()</code></dl>
+<dd><code>isActive</code>, <code>begin()</code>, <code>end()</code>, <code>append()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The <code>moved(const QPoint &amp;)</code>, moved(const QDoublePoint &amp;) signals are emitted.</dl>
+<dd>The <code>moved(const QPoint &amp;)</code>, moved(const QDoublePoint &amp;) signals are emitted.</dd></dl>
 <p> Reimplemented from <code>QwtPicker</code>.</p>
 <h3>void QwtPlotPicker::moved (const QPointF &amp;pos) [signal]</h3>
 <p>A signal emitted whenever the last appended point of the selection has been moved. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Position of the moved last point of the selection.</dl>
+<dd><i>pos</i> Position of the moved last point of the selection.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>move()</code>, <code>appended()</code></dl>
+<dd><code>move()</code>, <code>appended()</code></dd></dl>
 <h3><code>QwtPlot</code> * QwtPlotPicker::plot ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Plot widget, containing the observed plot canvas</dl>
+<dd>Plot widget, containing the observed plot canvas</dd></dl>
 <h3>const <code>QwtPlot</code> * QwtPlotPicker::plot () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Plot widget, containing the observed plot canvas</dl>
+<dd>Plot widget, containing the observed plot canvas</dd></dl>
 <h3>QRectF QwtPlotPicker::scaleRect () const [protected]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Normalized bounding rectangle of the axes</dl>
+<dd>Normalized bounding rectangle of the axes</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::autoReplot()</code>, <code>QwtPlot::replot()</code>.</dl>
+<dd><code>QwtPlot::autoReplot()</code>, <code>QwtPlot::replot()</code>.</dd></dl>
 <h3>void QwtPlotPicker::selected (const QPointF &amp;pos) [signal]</h3>
 <p>A signal emitted in case of <code>QwtPickerMachine::PointSelection</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Selected point</dl>
+<dd><i>pos</i> Selected point</dd></dl>
 <h3>void QwtPlotPicker::selected (const QRectF &amp;rect) [signal]</h3>
 <p>A signal emitted in case of <code>QwtPickerMachine::RectSelection</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Selected rectangle</dl>
+<dd><i>rect</i> Selected rectangle</dd></dl>
 <h3>void QwtPlotPicker::selected (const QVector&lt; QPointF &gt; &amp;pa) [signal]</h3>
 <p>A signal emitting the selected points, at the end of a selection. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pa</i> Selected points</dl>
+<dd><i>pa</i> Selected points</dd></dl>
 <h3>void QwtPlotPicker::setAxis (intxAxis, intyAxis) [virtual]</h3>
 <p>Set the x and y axes of the picker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xAxis</i> X axis<br />
- <i>yAxis</i> Y axis</dl>
+ <i>yAxis</i> Y axis</dd></dl>
 <p> Reimplemented in <code>QwtPlotZoomer</code>.</p>
 <h3><code>QwtText</code> QwtPlotPicker::trackerText (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Translate a pixel position into a position string </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Position in pixel coordinates</dl>
+<dd><i>pos</i> Position in pixel coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Position string</dl>
+<dd>Position string</dd></dl>
 <p> Reimplemented from <code>QwtPicker</code>.</p>
 <h3><code>QwtText</code> QwtPlotPicker::trackerTextF (const QPointF &amp;pos) const [protected], [virtual]</h3>
 <p>Translate a position into a position string. In case of HLineRubberBand the label is the value of the y position, in case of VLineRubberBand the value of the x position. Otherwise the label contains x and y position separated by a &#8216;,&#8217; . </p>
 <p> The format for the double to string conversion is &#8216;%.4f&#8217;. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Position</dl>
+<dd><i>pos</i> Position</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Position string</dl>
+<dd>Position string</dd></dl>
 <h3>QRect QwtPlotPicker::transform (const QRectF &amp;rect) const [protected]</h3>
 <p>Translate a rectangle from plot into pixel coordinates </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rectangle in pixel coordinates</dl>
+<dd>Rectangle in pixel coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invTransform()</code></dl>
+<dd><code>invTransform()</code></dd></dl>
 <h3>QPoint QwtPlotPicker::transform (const QPointF &amp;pos) const [protected]</h3>
 <p>Translate a point from plot into pixel coordinates </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Point in pixel coordinates</dl>
+<dd>Point in pixel coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invTransform()</code></dl>
+<dd><code>invTransform()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

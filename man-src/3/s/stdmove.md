@@ -11,13 +11,9 @@ std::move - std::move
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;utility&gt;
-
 template&lt; class T &gt;                                                          (since C++11)
-
 typename std::remove_reference&lt;T&gt;::type&amp;&amp; move( T&amp;&amp; t ) noexcept;            (until C++14)
-
 template&lt; class T &gt;                                                          (since C++14)
-
 constexpr typename std::remove_reference&lt;T&gt;::type&amp;&amp; move( T&amp;&amp; t ) noexcept;</code></pre> 
 std::move is used to indicate that an object t may be &quot;moved from&quot;, i.e. allowing the efficient transfer of resources from t to another object. 
 In particular, std::move produces an xvalue_expression that identifies its argument t. It is exactly equivalent to a static_cast to an rvalue reference type. 
@@ -66,14 +62,10 @@ v = std::move(v); // the value of v is unspecified
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::string str = &quot;Hello&quot;;
     std::vector&lt;std::string&gt; v;

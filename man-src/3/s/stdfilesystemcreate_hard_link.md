@@ -11,15 +11,10 @@ std::filesystem::create_hard_link - std::filesystem::create_hard_link
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     void create_hard_link(const std::filesystem::path &amp;target,
-
                           const std::filesystem::path &amp;link);
-
 void create_hard_link(const std::filesystem::path &amp;target, (since C++ 17)
-
                                                                const std::filesystem::path &amp;link,
-
                       std::error_code &amp;ec) noexcept;</code></pre> 
 Creates a hard link link with its target set to target as if by POSIX link(): the pathname target must exist. 
 Once created, link and target are two logical names that refer to the same file (they are equivalent). Even if the original name target is deleted, the file continues to exist and is accessible as link. 
@@ -50,14 +45,10 @@ The special pathname dot (&quot;.&quot;) is a hard link to its parent directory.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/subdir&quot;);
     std::ofstream(&quot;sandbox/a&quot;).put('a'); // create regular file

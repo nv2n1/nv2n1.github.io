@@ -10,18 +10,18 @@ description: "pwupdate – updates passwd and shadow NIS map"
 <p>pwupdate &#8211; updates passwd and shadow NIS map</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>/usr/lib/yp/pwupdate</code> [<i>shadow</i>]</dl>
+<dt> <code>/usr/lib/yp/pwupdate</code> [<i>shadow</i>]</dt></dl>
 <h2>Description</h2>
 <p><code>pwupdate</code></p>
-<dd>is invoked by <code><a href="/docs/linux/man/8-rpc-yppasswdd/">rpc.yppasswdd</a></code>(8) after changing the password and it should update the passwd and shadow NIS map. Never run it by hand.</p>
+<dd>is invoked by <code><a href="/docs/linux/man/8-rpc-yppasswdd/">rpc.yppasswdd</a></code>(8) after changing the password and it should update the passwd and shadow NIS map. Never run it by hand.</dd>
 <h2>Options</h2>
 <p><code>shadow</code></p>
 <dl>
-<dd>Normally, only the passwd map will be updated. With this option, <code>pwupdate</code> will update the shadow map, too.</dl>
+<dd>Normally, only the passwd map will be updated. With this option, <code>pwupdate</code> will update the shadow map, too.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/passwd</i>, <i>/etc/shadow</i></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rpc-yppasswdd/">rpc.yppasswdd</a></code>(8), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8)</p>
 <h2>Author</h2>

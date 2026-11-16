@@ -12,7 +12,7 @@ description: "smbtar – shell script for backing up SMB/CIFS shares directly to
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>smbtar [-r] [-i] [-a] [-v] {-s server} [-p password] [-x services] [-X] [-N filename] [-b blocksize] [-d directory] [-l loglevel] [-u user] [-t tape] {filenames}</dl>
+</dt><dd>smbtar [-r] [-i] [-a] [-v] {-s server} [-p password] [-x services] [-X] [-N filename] [-b blocksize] [-d directory] [-l loglevel] [-u user] [-t tape] {filenames}</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbtar is a very small shell script on top of <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1) which dumps SMB shares directly to tape.</p>
@@ -20,59 +20,59 @@ description: "smbtar – shell script for backing up SMB/CIFS shares directly to
 <p> -s server</p>
 <dl>
 <dt>
-<dd> The SMB/CIFS server that the share resides upon.</dl>
+</dt><dd> The SMB/CIFS server that the share resides upon.</dd></dl>
 <p> -x service</p>
 <dl>
 <dt>
-<dd> The share name on the server to connect to. The default is &quot;backup&quot;.</dl>
+</dt><dd> The share name on the server to connect to. The default is &quot;backup&quot;.</dd></dl>
 <p> -X</p>
 <dl>
 <dt>
-<dd> Exclude mode. Exclude filenames&#8230; from tar create or restore.</dl>
+</dt><dd> Exclude mode. Exclude filenames&#8230; from tar create or restore.</dd></dl>
 <p> -d directory</p>
 <dl>
 <dt>
-<dd> Change to initial <i>directory </i> before restoring / backing up files.</dl>
+</dt><dd> Change to initial <i>directory </i> before restoring / backing up files.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Verbose mode.</dl>
+</dt><dd> Verbose mode.</dd></dl>
 <p> -p password</p>
 <dl>
 <dt>
-<dd> The password to use to access a share. Default: none</dl>
+</dt><dd> The password to use to access a share. Default: none</dd></dl>
 <p> -u user</p>
 <dl>
 <dt>
-<dd> The user id to connect as. Default: UNIX login name.</dl>
+</dt><dd> The user id to connect as. Default: UNIX login name.</dd></dl>
 <p> -a</p>
 <dl>
 <dt>
-<dd> Reset DOS archive bit mode to indicate file has been archived.</dl>
+</dt><dd> Reset DOS archive bit mode to indicate file has been archived.</dd></dl>
 <p> -t tape</p>
 <dl>
 <dt>
-<dd> Tape device. May be regular file or tape device. Default: <i>$TAPE</i> environmental variable; if not set, a file called tar.out.</dl>
+</dt><dd> Tape device. May be regular file or tape device. Default: <i>$TAPE</i> environmental variable; if not set, a file called tar.out.</dd></dl>
 <p> -b blocksize</p>
 <dl>
 <dt>
-<dd> Blocking factor. Defaults to 20. See <a href="/docs/linux/man/1-tar/">tar</a>(1) for a fuller explanation.</dl>
+</dt><dd> Blocking factor. Defaults to 20. See <a href="/docs/linux/man/1-tar/">tar</a>(1) for a fuller explanation.</dd></dl>
 <p> -N filename</p>
 <dl>
 <dt>
-<dd> Backup only files newer than filename. Could be used (for example) on a log file to implement incremental backups.</dl>
+</dt><dd> Backup only files newer than filename. Could be used (for example) on a log file to implement incremental backups.</dd></dl>
 <p> -i</p>
 <dl>
 <dt>
-<dd> Incremental mode; tar files are only backed up if they have the archive bit set. The archive bit is reset after each file is read.</dl>
+</dt><dd> Incremental mode; tar files are only backed up if they have the archive bit set. The archive bit is reset after each file is read.</dd></dl>
 <p> -r</p>
 <dl>
 <dt>
-<dd> Restore. Files are restored to the share from the tar file.</dl>
+</dt><dd> Restore. Files are restored to the share from the tar file.</dd></dl>
 <p> -l log level</p>
 <dl>
 <dt>
-<dd> Log (debug) level. Corresponds to the <i>-d</i> flag of <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1).</dl>
+</dt><dd> Log (debug) level. Corresponds to the <i>-d</i> flag of <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1).</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The <i>$TAPE</i> variable specifies the default tape device to write to. May be overridden with the -t option.</p>
 <h2>BUGS</h2>

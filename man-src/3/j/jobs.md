@@ -34,23 +34,23 @@ description: "Remembering submitted job in session. –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>c</i> DRMAA session.<br />
- <i>job</i> Malloced drmaa_job_t structure with filled jobid field (also malloced).</dl>
+</dt><dd> <i>c</i> DRMAA session.<br />
+ <i>job</i> Malloced drmaa_job_t structure with filled jobid field (also malloced).</dd></dl>
 <h3>bool drmaa_find_job (<code>drmaa_session_t</code> *c, const char *jobid, <code>drmaa_job_t</code> *found, unsignedflags)</h3>
 <p> Checks if job with given identifier exist in hash table and optionally removes it. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>c</i> Opened DRMAA session.<br />
+</dt><dd> <i>c</i> Opened DRMAA session.<br />
  <i>jobid</i> Job identifier.<br />
  <i>found</i> If not NULL and job was found job session data will be stored here.<br />
- <i>flags</i> Information to store into session. If DRMAA_JOB_DISPOSE bit is set session data will be removed.</dl>
+ <i>flags</i> Information to store into session. If DRMAA_JOB_DISPOSE bit is set session data will be removed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> job_flag_t</dl>
+</dt><dd> job_flag_t</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for torque from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

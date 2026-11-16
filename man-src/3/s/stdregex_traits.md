@@ -10,9 +10,7 @@ description: "std::regex_traits – std::regex_traits"
 <p>std::regex_traits &#8211; std::regex_traits</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;regex&gt;
-
 template&lt; class CharT &gt;    (since C++11)
-
 class regex_traits;</code></pre>
 <p>The type trait template regex_traits supplies std::basic_regex with the set of types and functions necessary to operate on the type CharT.<br />
 Since many of regex operations are locale-sensitive (when std::regex_constants::collate flag is set), the regex_traits class typically holds an instance of a std::locale as a private member. </p>

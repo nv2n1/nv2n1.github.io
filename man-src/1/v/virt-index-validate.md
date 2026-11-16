@@ -18,42 +18,36 @@ description: "virt-index-validate – Validate virt-builder index file"
 <p> Note that virt-index-validate can validate either the signed or unsigned index file (ie. either <i>index</i> or <i>index.asc</i>). It can only validate a local file, not a <font SIZE="-1">URL.</font></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;compat-1.24.0</code></p>
-<dd> Check for compatibility with virt-builder 1.24.0. (Using this option implies <i>&#8211;compat-1.24.1</i>, so you don&#8217;t need to use both.) </p>
+<dt><code>&#8211;compat-1.24.0</code></dt>
+<dd> Check for compatibility with virt-builder 1.24.0. (Using this option implies <i>&#8211;compat-1.24.1</i>, so you don&#8217;t need to use both.) </dd>
 <p> In particular:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> This version of virt-builder could not handle <tt>&quot;[...]&quot;</tt> (square brackets) in field names (eg. <tt>&quot;checksum[sha512]=...&quot;</tt>).</p>
-<dt>&bull;</p>
-<dd> It required detached signatures (<tt>&quot;sig=...&quot;</tt>).</dl>
+<dt>&bull;</dt>
+<dd> This version of virt-builder could not handle <tt>&quot;[...]&quot;</tt> (square brackets) in field names (eg. <tt>&quot;checksum[sha512]=...&quot;</tt>).</dd>
+<dt>&bull;</dt>
+<dd> It required detached signatures (<tt>&quot;sig=...&quot;</tt>).</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;compat-1.24.1</code></p>
-<dd> Check for compatibility with virt-builder ≥ 1.24.1. </p>
+</dl>
+<dt><code>&#8211;compat-1.24.1</code></dt>
+<dd> Check for compatibility with virt-builder ≥ 1.24.1. </dd>
 <p> In particular:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> This version of virt-builder could not handle <tt>&quot;.&quot;</tt> (period) in field names or <tt>&quot;,&quot;</tt> (comma) in subfield names.</p>
-<dt>&bull;</p>
-<dd> It could not handle comments appearing in the file.</dl>
+<dt>&bull;</dt>
+<dd> This version of virt-builder could not handle <tt>&quot;.&quot;</tt> (period) in field names or <tt>&quot;,&quot;</tt> (comma) in subfield names.</dd>
+<dt>&bull;</dt>
+<dd> It could not handle comments appearing in the file.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>-V</code></p>
+</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if the index file validates, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
@@ -71,13 +65,13 @@ description: "virt-index-validate – Validate virt-builder index file"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

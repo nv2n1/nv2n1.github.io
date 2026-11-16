@@ -15,30 +15,30 @@ description: "oathtool – OATH one-time password tool"
 <p> oathtool 2.4.1 </p>
 <p> Generate and validate OATH one-time passwords.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</p>
-<dt><code>&#8211;hotp</code></p>
-<dd> use event-based HOTP mode (default=on)</p>
-<dt><code>&#8211;totp</code></p>
-<dd> use time-variant TOTP mode (default=off)</p>
-<dt><code>-b</code>, <code>&#8211;base32</code></p>
-<dd> use base32 encoding of KEY instead of hex (default=off)</p>
-<dt><code>-c</code>, <code>&#8211;counter</code>=<i>COUNTER</i></p>
-<dd> HOTP counter value</p>
-<dt><code>-s</code>, <code>&#8211;time-step-size</code>=<i>DURATION</i> TOTP time-step duration</p>
-<dd> (default=`30s&#8217;)</p>
-<dt><code>-S</code>, <code>&#8211;start-time</code>=<i>TIME</i></p>
-<dd> when to start counting time steps for TOTP (default=`1970-01-01 00:00:00 UTC&#8217;)</p>
-<dt><code>-N</code>, <code>&#8211;now</code>=<i>TIME</i></p>
-<dd> use this time as current time for TOTP (default=`now&#8217;)</p>
-<dt><code>-d</code>, <code>&#8211;digits</code>=<i>DIGITS</i></p>
-<dd> number of digits in one-time password</p>
-<dt><code>-w</code>, <code>&#8211;window</code>=<i>WIDTH</i></p>
-<dd> window of counter values to test when validating OTPs</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> explain what is being done (default=off)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd>
+<dt><code>&#8211;hotp</code></dt>
+<dd> use event-based HOTP mode (default=on)</dd>
+<dt><code>&#8211;totp</code></dt>
+<dd> use time-variant TOTP mode (default=off)</dd>
+<dt><code>-b</code>, <code>&#8211;base32</code></dt>
+<dd> use base32 encoding of KEY instead of hex (default=off)</dd>
+<dt><code>-c</code>, <code>&#8211;counter</code>=<i>COUNTER</i></dt>
+<dd> HOTP counter value</dd>
+<dt><code>-s</code>, <code>&#8211;time-step-size</code>=<i>DURATION</i> TOTP time-step duration</dt>
+<dd> (default=`30s&#8217;)</dd>
+<dt><code>-S</code>, <code>&#8211;start-time</code>=<i>TIME</i></dt>
+<dd> when to start counting time steps for TOTP (default=`1970-01-01 00:00:00 UTC&#8217;)</dd>
+<dt><code>-N</code>, <code>&#8211;now</code>=<i>TIME</i></dt>
+<dd> use this time as current time for TOTP (default=`now&#8217;)</dd>
+<dt><code>-d</code>, <code>&#8211;digits</code>=<i>DIGITS</i></dt>
+<dd> number of digits in one-time password</dd>
+<dt><code>-w</code>, <code>&#8211;window</code>=<i>WIDTH</i></dt>
+<dd> window of counter values to test when validating OTPs</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> explain what is being done (default=off)</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To generate the first event-based (HOTP) one-time password for an all-zero key: </p>
 <p>$&nbsp;<wbr>oathtool 00<br />

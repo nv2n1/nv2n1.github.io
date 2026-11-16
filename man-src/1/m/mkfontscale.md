@@ -16,34 +16,34 @@ description: "mkfontscale – create an index of scalable font files for X"
 <p> The resulting <code>fonts.scale</code> file should be checked and possibly manually edited before being used as input for the <code><a href="/docs/linux/man/1-mkfontdir/">mkfontdir</a></code>(1) program.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> read bitmap fonts. By default, bitmap fonts are ignored.</p>
-<dt><code>-s</code></p>
-<dd> ignore scalable fonts. By default, scalable fonts are read. If <code>-b</code> is set, this flag has the side effect of enabling the reading of <code>fonts.scale</code> files.</p>
-<dt><code>-o</code><i> filename</i></p>
-<dd> send program output to <i>filename</i>; default is <code>fonts.scale</code> if bitmap fonts are not being read, and <code>fonts.dir</code> if they are. If <i>filename</i> is relative, it is created in the directory being processed. If it is the special value <code>&#8211;</code>, output is written to standard output.</p>
-<dt><code>-x</code><i> suffix</i></p>
-<dd> exclude all files with the specified <i>suffix</i>.</p>
-<dt><code>-a</code><i> encoding</i></p>
-<dd> add <i>encoding</i> to the list of encodings searched for.</p>
-<dt><code>-f</code><i> fuzz</i></p>
-<dd> set the fraction of characters that may be missing in large encodings to <i>fuzz</i> percent. Defaults to 2%.</p>
-<dt><code>-l</code></p>
-<dd> Write <code>fonts.dir</code> files suitable for implementations that cannot reencode legacy fonts (BDF and PCF). By default, it is assumed that the implementation can reencode Unicode-encoded legacy fonts.</p>
-<dt><code>-e</code></p>
-<dd> specifies a directory with encoding files. Every such directory is scanned for encoding files, the list of which is then written to an &quot;encodings.dir&quot; file in every font directory.</p>
-<dt><code>-p</code></p>
-<dd> Specifies a prefix that is prepended to the encoding file path names when they are written to the &quot;encodings.dir&quot; file. The prefix is prepended literally: if a `/&#8217; is required between the prefix and the path names, it must be supplied explicitly as part of the prefix.</p>
-<dt><code>-r</code></p>
-<dd> Keep non-absolute encoding directories in their relative form when writing the &quot;encodings.dir&quot; file. The default is to convert relative encoding directories to absolute directories by prepending the current directory. The positioning of this options is significant, as this option only applies to subsequent <code>-e</code> options.</p>
-<dt><code>-n</code></p>
-<dd> do not scan for fonts, do not write font directory files. This option is useful when generating encoding directories only.</p>
-<dt><code>-u, -U</code></p>
-<dd> disable (<i>-u</i>) or enable (<i>-U</i>) indexing of ISO 10646:1 font encodings (default: enabled).</p>
-<dt><code>-v</code></p>
-<dd> print program version and exit.</p>
-<dt><code>&#8212;</code></p>
-<dd> end of options.</dl>
+<dt><code>-b</code></dt>
+<dd> read bitmap fonts. By default, bitmap fonts are ignored.</dd>
+<dt><code>-s</code></dt>
+<dd> ignore scalable fonts. By default, scalable fonts are read. If <code>-b</code> is set, this flag has the side effect of enabling the reading of <code>fonts.scale</code> files.</dd>
+<dt><code>-o</code><i> filename</i></dt>
+<dd> send program output to <i>filename</i>; default is <code>fonts.scale</code> if bitmap fonts are not being read, and <code>fonts.dir</code> if they are. If <i>filename</i> is relative, it is created in the directory being processed. If it is the special value <code>&#8211;</code>, output is written to standard output.</dd>
+<dt><code>-x</code><i> suffix</i></dt>
+<dd> exclude all files with the specified <i>suffix</i>.</dd>
+<dt><code>-a</code><i> encoding</i></dt>
+<dd> add <i>encoding</i> to the list of encodings searched for.</dd>
+<dt><code>-f</code><i> fuzz</i></dt>
+<dd> set the fraction of characters that may be missing in large encodings to <i>fuzz</i> percent. Defaults to 2%.</dd>
+<dt><code>-l</code></dt>
+<dd> Write <code>fonts.dir</code> files suitable for implementations that cannot reencode legacy fonts (BDF and PCF). By default, it is assumed that the implementation can reencode Unicode-encoded legacy fonts.</dd>
+<dt><code>-e</code></dt>
+<dd> specifies a directory with encoding files. Every such directory is scanned for encoding files, the list of which is then written to an &quot;encodings.dir&quot; file in every font directory.</dd>
+<dt><code>-p</code></dt>
+<dd> Specifies a prefix that is prepended to the encoding file path names when they are written to the &quot;encodings.dir&quot; file. The prefix is prepended literally: if a `/&#8217; is required between the prefix and the path names, it must be supplied explicitly as part of the prefix.</dd>
+<dt><code>-r</code></dt>
+<dd> Keep non-absolute encoding directories in their relative form when writing the &quot;encodings.dir&quot; file. The default is to convert relative encoding directories to absolute directories by prepending the current directory. The positioning of this options is significant, as this option only applies to subsequent <code>-e</code> options.</dd>
+<dt><code>-n</code></dt>
+<dd> do not scan for fonts, do not write font directory files. This option is useful when generating encoding directories only.</dd>
+<dt><code>-u, -U</code></dt>
+<dd> disable (<i>-u</i>) or enable (<i>-U</i>) indexing of ISO 10646:1 font encodings (default: enabled).</dd>
+<dt><code>-v</code></dt>
+<dd> print program version and exit.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> end of options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/1-mkfontdir/">mkfontdir</a>(1), <a href="/docs/linux/man/1-ttmkfdir/">ttmkfdir</a>(1), xfs(1), <a href="/docs/linux/man/1-xset/">xset</a>(1)</p>
 <h2>NOTES</h2>

@@ -16,12 +16,12 @@ description: "printerbanner – print large banner on printer"
 <p> The output should be printed on paper of the appropriate width, with no breaks between the pages. </p>
 <p> The following options are available:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debug.</p>
-<dt><code>-t</code></p>
-<dd> Enable trace.</p>
-<dt><code>-w </code><i>width</i></p>
-<dd> Change the output from a width of 132 to <i>width</i> suitable for a narrow terminal.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debug.</dd>
+<dt><code>-t</code></dt>
+<dd> Enable trace.</dd>
+<dt><code>-w </code><i>width</i></dt>
+<dd> Change the output from a width of 132 to <i>width</i> suitable for a narrow terminal.</dd></dl>
 <h2>AUTHORS</h2>
 <p> An Mark Horton</p>
 <h2>BUGS</h2>

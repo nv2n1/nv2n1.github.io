@@ -17,7 +17,7 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show a help message related to the given sub-command.</dl>
+</dt><dd> Show a help message related to the given sub-command.</dd></dl>
 <h2>INSTALL</h2>
 <p> The <code>install</code> sub-command is used to install roles.</p>
 <h3>USAGE</h3>
@@ -25,34 +25,34 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> Roles can be installed in several different ways: </p>
 <dl>
 <dt>
-<dd> &bull; A username.rolename[,version] &#8211; this will install a single role. The Galaxy API will be contacted to provide the information about the role, and the corresponding .tar.gz will be downloaded from <code>github.com</code>. If the version is omitted, the most recent version available will be installed.</dl>
+</dt><dd> &bull; A username.rolename[,version] &#8211; this will install a single role. The Galaxy API will be contacted to provide the information about the role, and the corresponding .tar.gz will be downloaded from <code>github.com</code>. If the version is omitted, the most recent version available will be installed.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; A file name, using <code>-r</code> &#8211; this will install multiple roles listed one per line. The format of each line is the same as above: username.rolename[,version]</dl>
+</dt><dd> &bull; A file name, using <code>-r</code> &#8211; this will install multiple roles listed one per line. The format of each line is the same as above: username.rolename[,version]</dd></dl>
 <dl>
 <dt>
-<dd> &bull; A .tar.gz of a valid role you&#8217;ve downloaded directly from <code>github.com</code>. This is mainly useful when the system running Ansible does not have access to the Galaxy API, for instance when behind a firewall or proxy.</dl>
+</dt><dd> &bull; A .tar.gz of a valid role you&#8217;ve downloaded directly from <code>github.com</code>. This is mainly useful when the system running Ansible does not have access to the Galaxy API, for instance when behind a firewall or proxy.</dd></dl>
 <h3>OPTIONS</h3>
 <p> <code>-f</code>, <code>&#8211;force</code></p>
 <dl>
 <dt>
-<dd> Force overwriting an existing role.</dl>
+</dt><dd> Force overwriting an existing role.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;ignore-errors</code></p>
 <dl>
 <dt>
-<dd> Ignore errors and continue with the next specified role.</dl>
+</dt><dd> Ignore errors and continue with the next specified role.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;no-deps</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t download roles listed as dependencies.</dl>
+</dt><dd> Don&#8217;t download roles listed as dependencies.</dd></dl>
 <p> <code>-p</code> <i>ROLES_PATH</i>, <code>&#8211;roles-path=</code><i>ROLES_PATH</i></p>
 <dl>
 <dt>
-<dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dl>
+</dt><dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dd></dl>
 <p> <code>-r</code> <i>ROLE_FILE</i>, <code>&#8211;role-file=</code><i>ROLE_FILE</i></p>
 <dl>
 <dt>
-<dd> A file containing a list of roles to be imported, as specified above. This option cannot be used if a rolename or .tar.gz have been specified.</dl>
+</dt><dd> A file containing a list of roles to be imported, as specified above. This option cannot be used if a rolename or .tar.gz have been specified.</dd></dl>
 <h2>REMOVE</h2>
 <p> The <code>remove</code> sub-command is used to remove one or more roles.</p>
 <h3>USAGE</h3>
@@ -61,7 +61,7 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-p</code> <i>ROLES_PATH</i>, <code>&#8211;roles-path=</code><i>ROLES_PATH</i></p>
 <dl>
 <dt>
-<dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dl>
+</dt><dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dd></dl>
 <h2>INIT</h2>
 <p> The <code>init</code> command is used to create an empty role suitable for uploading to <a rel="nofollow" href="https://galaxy.ansible.com">https://galaxy.ansible.com</a> (or for roles in general).</p>
 <h3>USAGE</h3>
@@ -70,15 +70,15 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-f</code>, <code>&#8211;force</code></p>
 <dl>
 <dt>
-<dd> Force overwriting an existing role.</dl>
+</dt><dd> Force overwriting an existing role.</dd></dl>
 <p> <code>-p</code> <i>INIT_PATH</i>, <code>&#8211;init-path=</code><i>INIT_PATH</i></p>
 <dl>
 <dt>
-<dd> The path in which the skeleton role will be created.The default is the current working directory.</dl>
+</dt><dd> The path in which the skeleton role will be created.The default is the current working directory.</dd></dl>
 <p> <code>&#8211;offline</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t query the galaxy API when creating roles</dl>
+</dt><dd> Don&#8217;t query the galaxy API when creating roles</dd></dl>
 <h2>LIST</h2>
 <p> The <code>list</code> sub-command is used to show what roles are currently installed. You can specify a role name, and if installed only that role will be shown.</p>
 <h3>USAGE</h3>
@@ -87,7 +87,7 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-p</code> <i>ROLES_PATH</i>, <code>&#8211;roles-path=</code><i>ROLES_PATH</i></p>
 <dl>
 <dt>
-<dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dl>
+</dt><dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dd></dl>
 <h2>SEARCH</h2>
 <p> The <code>search</code> sub-command returns a filtered list of roles found on the remote server.</p>
 <h3>USAGE</h3>
@@ -96,23 +96,23 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>&#8211;galaxy-tags</code></p>
 <dl>
 <dt>
-<dd> Provide a comma separated list of Galaxy Tags on which to filter.</dl>
+</dt><dd> Provide a comma separated list of Galaxy Tags on which to filter.</dd></dl>
 <p> <code>&#8211;platforms</code></p>
 <dl>
 <dt>
-<dd> Provide a comma separated list of Platforms on which to filter.</dl>
+</dt><dd> Provide a comma separated list of Platforms on which to filter.</dd></dl>
 <p> <code>&#8211;author</code></p>
 <dl>
 <dt>
-<dd> Specify the username of a Galaxy contributor on which to filter.</dl>
+</dt><dd> Specify the username of a Galaxy contributor on which to filter.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;ignore-certs</code></p>
 <dl>
 <dt>
-<dd> Ignore TLS certificate errors.</dl>
+</dt><dd> Ignore TLS certificate errors.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;server</code></p>
 <dl>
 <dt>
-<dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dl>
+</dt><dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dd></dl>
 <h2>INFO</h2>
 <p> The <code>info</code> sub-command shows detailed information for a specific role. Details returned about the role included information from the local copy as well as information from galaxy.ansible.com.</p>
 <h3>USAGE</h3>
@@ -121,15 +121,15 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-p</code> <i>ROLES_PATH</i>, <code>&#8211;roles-path=</code><i>ROLES_PATH</i></p>
 <dl>
 <dt>
-<dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dl>
+</dt><dd> The path to the directory containing your roles. The default is the <code>roles_path</code> configured in your <code>ansible.cfg</code> file (/etc/ansible/roles if not configured)</dd></dl>
 <p> <code>-c</code>, <code>&#8211;ignore-certs</code></p>
 <dl>
 <dt>
-<dd> Ignore TLS certificate errors.</dl>
+</dt><dd> Ignore TLS certificate errors.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;server</code></p>
 <dl>
 <dt>
-<dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dl>
+</dt><dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dd></dl>
 <h2>LOGIN</h2>
 <p> The <code>login</code> sub-command is used to authenticate with galaxy.ansible.com. Authentication is required to use the import, delete and setup commands. It will authenticate the user, retrieve a token from Galaxy, and store it in the user&#8217;s home directory.</p>
 <h3>USAGE</h3>
@@ -140,15 +140,15 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-c</code>, <code>&#8211;ignore-certs</code></p>
 <dl>
 <dt>
-<dd> Ignore TLS certificate errors.</dl>
+</dt><dd> Ignore TLS certificate errors.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;server</code></p>
 <dl>
 <dt>
-<dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dl>
+</dt><dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dd></dl>
 <p> <code>&#8211;github-token</code></p>
 <dl>
 <dt>
-<dd> Authenticate using a <code>GitHub</code> personal access token rather than a password.</dl>
+</dt><dd> Authenticate using a <code>GitHub</code> personal access token rather than a password.</dd></dl>
 <h2>IMPORT</h2>
 <p> Import a role from <code>GitHub</code> to galaxy.ansible.com. Requires the user first authenticate with galaxy.ansible.com using the <code>login</code> subcommand.</p>
 <h3>USAGE</h3>
@@ -157,15 +157,15 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-c</code>, <code>&#8211;ignore-certs</code></p>
 <dl>
 <dt>
-<dd> Ignore TLS certificate errors.</dl>
+</dt><dd> Ignore TLS certificate errors.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;server</code></p>
 <dl>
 <dt>
-<dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dl>
+</dt><dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dd></dl>
 <p> <code>&#8211;branch</code></p>
 <dl>
 <dt>
-<dd> Provide a specific branch to import. When a branch is not specified the branch found in meta/main.yml is used. If no branch is specified in meta/main.yml, the repo&#8217;s default branch (usually master) is used.</dl>
+</dt><dd> Provide a specific branch to import. When a branch is not specified the branch found in meta/main.yml is used. If no branch is specified in meta/main.yml, the repo&#8217;s default branch (usually master) is used.</dd></dl>
 <h2>DELETE</h2>
 <p> The <code>delete</code> sub-command will delete a role from galaxy.ansible.com. Requires the user first authenticate with galaxy.ansible.com using the <code>login</code> subcommand.</p>
 <h3>USAGE</h3>
@@ -174,38 +174,38 @@ description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 <p> <code>-c</code>, <code>&#8211;ignore-certs</code></p>
 <dl>
 <dt>
-<dd> Ignore TLS certificate errors.</dl>
+</dt><dd> Ignore TLS certificate errors.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;server</code></p>
 <dl>
 <dt>
-<dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dl>
+</dt><dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dd></dl>
 <h2>SETUP</h2>
 <p> The <code>setup</code> sub-command creates an integration point for <code>Travis CI</code>, enabling galaxy.ansible.com to receive notifications from <code>Travis</code> on build completion. Requires the user first authenticate with galaxy.ansible.com using the <code>login</code> subcommand.</p>
 <h3>USAGE</h3>
 <p> $ ansible-galaxy setup [options] source github_user github_repo secret </p>
 <dl>
 <dt>
-<dd> &bull; Use <code>travis</code> as the source value. In the future additional source values may be added.</dl>
+</dt><dd> &bull; Use <code>travis</code> as the source value. In the future additional source values may be added.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Provide your <code>Travis</code> user token as the secret. The token is not stored by galaxy.ansible.com. A hash is created using github_user, github_repo and your token. The hash value is what actually gets stored.</dl>
+</dt><dd> &bull; Provide your <code>Travis</code> user token as the secret. The token is not stored by galaxy.ansible.com. A hash is created using github_user, github_repo and your token. The hash value is what actually gets stored.</dd></dl>
 <h3>OPTIONS</h3>
 <p> <code>-c</code>, <code>&#8211;ignore-certs</code></p>
 <dl>
 <dt>
-<dd> Ignore TLS certificate errors.</dl>
+</dt><dd> Ignore TLS certificate errors.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;server</code></p>
 <dl>
 <dt>
-<dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dl>
+</dt><dd> Override the default server <a rel="nofollow" href="https://galaxy.ansible.com.">https://galaxy.ansible.com.</a></dd></dl>
 <p> &#8211;list</p>
 <dl>
 <dt>
-<dd> Show your configured integrations. Provides the ID of each integration which can be used with the remove option.</dl>
+</dt><dd> Show your configured integrations. Provides the ID of each integration which can be used with the remove option.</dd></dl>
 <p> &#8211;remove</p>
 <dl>
 <dt>
-<dd> Remove a specific integration. Provide the ID of the integration to be removed.</dl>
+</dt><dd> Remove a specific integration. Provide the ID of the integration to be removed.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Ansible was originally written by Michael DeHaan. See the AUTHORS file for a complete list of contributors.</p>
 <h2>COPYRIGHT</h2>

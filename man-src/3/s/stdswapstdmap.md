@@ -11,15 +11,10 @@ std::swap(std::map) - std::swap(std::map)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Key, class T, class Compare, class Alloc&gt;
-
 void swap(map&lt;Key, T, Compare, Alloc&gt; &amp;lhs, (until C++ 17)
-
                                                 map&lt;Key, T, Compare, Alloc&gt; &amp;rhs);
-
 template &lt;class Key, class T, class Compare, class Alloc&gt;
-
 void swap(map&lt;Key, T, Compare, Alloc&gt; &amp;lhs, (since C++ 17)
-
                                                 map&lt;Key, T, Compare, Alloc&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::map. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 

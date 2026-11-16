@@ -55,15 +55,15 @@ $ brew install --force python
 <h3>Windows</h3>
 <h3>Prerequisites:</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Python2.7 (x86) from Python.org</p>
-<dt>&bull;</p>
-<dd> Microsoft Visual Studio</dl>
+<dt>&bull;</dt>
+<dd> Python2.7 (x86) from Python.org</dd>
+<dt>&bull;</dt>
+<dd> Microsoft Visual Studio</dd></dl>
 <h3>Step 1: Install Distribute &amp; Pip</h3>
 <p> <code>Distribute</code> is a fantastic drop-in replacement for <code>easy_install</code> and <code>setuptools</code>. It allows you to install and manage python packages from PyPi, amongst a few other sources.</p>
 <dl>
-<dt><code>To install it, run the python script available here:</code></p>
-<dd> &lt;<i><a rel="nofollow" href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></i>&gt; </p>
+<dt><code>To install it, run the python script available here:</code></dt>
+<dd> &lt;<i><a rel="nofollow" href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></i>&gt; </dd>
 <p> Make sure that <code>`C:\Python27\`</code>, and <code>`C:\Python27\Scripts`</code> are in your PATH. </p>
 <p> <code>easy_install</code> is considered by many to be a deprecated system, so we will install it&#8217;s replacement: <code>pip</code>. Pip allows for uninstallation of packages, and is actively maintained, unlike setuptool&#8217;s easy_install. </p>
 <p> To install pip, simply run: </p>

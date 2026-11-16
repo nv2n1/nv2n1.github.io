@@ -23,17 +23,16 @@ url: "/docs/linux/man/1-xsensors/"
 
 <dl>
 <dt><b>-f</b>
-<dd> display all temperatures in Fahrenheit.
-<dt><b>-c</b> filename
-<dd> specify the libsensors configuration file.
-<dt><b>-i</b>
-<dd> specify the image file to use as the graphical theme.
-<dt><b>-t</b> time
-<dd> specify the update interval in seconds.
-<dt><b>-v</b>
-<dd> display the version number. 
-
-</dl>
+</dt><dd> display all temperatures in Fahrenheit.
+</dd><dt><b>-c</b> filename
+</dt><dd> specify the libsensors configuration file.
+</dd><dt><b>-i</b>
+</dt><dd> specify the image file to use as the graphical theme.
+</dd><dt><b>-t</b> time
+</dt><dd> specify the update interval in seconds.
+</dd><dt><b>-v</b>
+</dt><dd> display the version number. 
+</dd></dl>
 
 <h2>CONFIGURATION</h2>
 

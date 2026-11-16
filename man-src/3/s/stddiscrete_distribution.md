@@ -11,10 +11,8 @@ std::discrete_distribution - std::discrete_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;random&gt;
-
     template &lt;class IntType = int&gt;
     (since C++ 11)
-
         class discrete_distribution;</code></pre> 
 std::discrete_distribution produces random integers on the interval [0, n), where the probability of each individual integer i is defined as w 
 i/S, that is the weight of the ith integer divided by the sum of all n weights. 
@@ -65,12 +63,9 @@ operator&gt;&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

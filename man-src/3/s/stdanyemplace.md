@@ -11,11 +11,8 @@ std::any::emplace - std::any::emplace
 <h2>Synopsis</h2>
 
 <pre><code>template&lt; class ValueType, class... Args &gt;                                       (1) (since C++17)
-
 std::decay_t&lt;ValueType&gt;&amp; emplace( Args&amp;&amp;... args );
-
 template&lt; class ValueType, class U, class... Args &gt;                              (2) (since C++17)
-
 std::decay_t&lt;ValueType&gt;&amp; emplace( std::initializer_list&lt;U&gt; il, Args&amp;&amp;... args );</code></pre> 
 Changes the contained object to one of type std::decay_t&lt;ValueType&gt; constructed from the arguments. 
 First destroys the current contained object (if any) by reset(), then: 

@@ -15,28 +15,28 @@ description: "drbdlinks – manages links into a shared DRBD partition"
 <h2>Options</h2>
 <p><code>drbdlinks</code> has several options, using either short or long variants. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print a short help message describing the available options and exit. </p>
-<dt><code>-c, &#8211;config-file=CONFIGFILE</code></p>
-<dd>Specify an alternate config file. The default config file is /etc/drbdlinks.conf. Alternate config files should have a &quot;drbdlinks-&quot; prefix, e.g. &quot;drbdlinks-httpd.conf&quot;. </p>
-<dt><code>-s, &#8211;suffix=SUFFIX</code></p>
-<dd>Name to append to the local file-system name when the link is in place. The default is &quot;drbdlinks&quot;, which would result in a renamed file like &quot;/etc/httpd.drbdlinks&quot;. </p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Increase verbosity level by 1 for every occurrence of this option. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print a short help message describing the available options and exit. </dd>
+<dt><code>-c, &#8211;config-file=CONFIGFILE</code></dt>
+<dd>Specify an alternate config file. The default config file is /etc/drbdlinks.conf. Alternate config files should have a &quot;drbdlinks-&quot; prefix, e.g. &quot;drbdlinks-httpd.conf&quot;. </dd>
+<dt><code>-s, &#8211;suffix=SUFFIX</code></dt>
+<dd>Name to append to the local file-system name when the link is in place. The default is &quot;drbdlinks&quot;, which would result in a renamed file like &quot;/etc/httpd.drbdlinks&quot;. </dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Increase verbosity level by 1 for every occurrence of this option. </dd>
 </dl>
 <h2>Examples</h2>
 <p>Here are a few examples of how drbdlinks can be used. The most straight-forward, and default, method for starting drbdlinks:</p>
 <dl>
-<dd>drbdlinks start</dl>
+<dd>drbdlinks start</dd></dl>
 <p> To use a suffix different from the default when linking to a file or directory, the -s option can be used, specifying the desired string:</p>
 <dl>
-<dd>drbdlinks -s orig start</dl>
+<dd>drbdlinks -s orig start</dd></dl>
 <p> would rename the file-system name to &quot;name.orig&quot;. Increase the verbosity to assist in debugging:</p>
 <dl>
-<dd>drbdlinks -v -v start</dl>
+<dd>drbdlinks -v -v start</dd></dl>
 <p> Use an alternate configuration file, possibly from with a DRBD mounted file-system:</p>
 <dl>
-<dd>drbdlinks -c /shared1/drbdlinks-httpd.conf start</dl>
+<dd>drbdlinks -c /shared1/drbdlinks-httpd.conf start</dd></dl>
 <p> This would use the specified configuration file, found on our DRBD device mounted on /shared1. This would allow us to easily keep drbdlinks configurations tied to a specific set of data on a DRBD disk in an active/active sort of HA configuration. </p>
 <h2>See Also</h2>
 <p><code>DRBD</code>(8), <code>drbdadm</code>(8), <code>drbdsetup</code>(8), <code><a href="/docs/linux/man/8-heartbeat/">heartbeat</a></code>(8).</p>

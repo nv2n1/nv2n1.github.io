@@ -12,8 +12,8 @@ description: "ecryptfs-migrate-home – migrate a user’s home directory to an 
 <p><code>ecryptfs-migrate-home</code> [-u|&#8211;user USER] </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-u, &#8211;user USER</code></p>
-<dd>Migrate USER&#8217;s home directory to an encrypted home directory </p>
+<dt><code>-u, &#8211;user USER</code></dt>
+<dd>Migrate USER&#8217;s home directory to an encrypted home directory </dd>
 </dl>
 <h2>Description</h2>
 <p><code>WARNING</code>: Make a complete backup copy of the non-encrypted data to another system or external media. This script is dangerous and in case of an error, could result in data lost, or USER locked out of the system! This program must be executed by root. This program will attempt to migrate a user&#8217;s home directory to an encrypted home directory. This program requires free disk space 2.5x the current size of the home directory to be migrated. Once successful, you can recover most of this space by deleting the cleartext directory. The USER must be logged out of all sessions in order to perform the migration, and have no open files according to <code>lsof</code>(1). Once the migration has completed, the USER must login immediately, BEFORE THE NEXT REBOOT in order to complete the migration. After logging in, if USER can read and write files in their home directory successfully, then the migration has completed successfully and can remove the cleartext backup in <i>/home/</i>. After a successful migration, the USER really must run <code><a href="/docs/linux/man/1-ecryptfs-unwrap-passphrase/">ecryptfs-unwrap-passphrase</a></code>(1) or <code>zescrow</code>(1) and record their randomly generated mount passphrase. If swap is not already encrypted, it is highly recommended that your administrator setup encrypted swap using <code><a href="/docs/linux/man/1-ecryptfs-setup-swap/">ecryptfs-setup-swap</a></code>(1). </p>

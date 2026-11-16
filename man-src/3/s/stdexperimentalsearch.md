@@ -11,11 +11,8 @@ std::experimental::search - std::experimental::search
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / algorithm&gt;
-
     template &lt;class ForwardIterator, class Searcher&gt;
-
     ForwardIterator search(ForwardIterator first, ForwardIterator last, (library fundamentals TS)
-
                                                                             const Searcher &amp;searcher);</code></pre> 
 Searches the sequence [first, last) for the pattern specified in the constructor of searcher. 
 Effectively executes searcher(first, last). <i>(until C++17)</i> 
@@ -44,14 +41,10 @@ Depends on the searcher
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;experimental/algorithm&gt;
-
 #include &lt;experimental/functional&gt;
 int main()
-
 {
     std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
                      &quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;

@@ -62,21 +62,21 @@ url: "/docs/linux/man/1-ctwill-twinx/"
  The present incarnation of ctwill and its utilities tries hard to be a drop-in replacement for the original package. There are, however, a few differences worth noting:
 <dl>
 <dt>&bull;
-<dd> This version is based on the most recent version of CWEB (4.4).
-<dt>&bull;
-<dd> In TeX Live the utility programs are prefixed with ctwill- and the macro files with ct for technical reasons.
-<dt>&bull;
-<dd> Options --help, --quiet, --verbose, --version, and flags -c, -i, -o, and +lX are new in CWEBbin and TeX Live.
-<dt>&bull;
-<dd> Option +lX is accompanied by example wrapper files for ctwimac.tex and ctproofmac.tex with translated captions for German (+ld).
-<dt>&bull;
-<dd> Option +lX is also accompanied by an extended pdfctwimac.tex for production of PDF output with active hyperlinks (+lpdf).
-<dt>&bull;
-<dd> ctwill in TeX Live operates silently by default; use the --verbose option to get the original behavior.
-<dt>&bull;
-<dd> File lookup with the environment variable CWEBINPUTS is extended to permit several, colon-separated, paths; see ENVIRONMENT below.
-<dt>&bull;
-<dd> If properly configured, the main program ctwill is localized with the "GNU gettext utilities".</dl>
+</dt><dd> This version is based on the most recent version of CWEB (4.4).
+</dd><dt>&bull;
+</dt><dd> In TeX Live the utility programs are prefixed with ctwill- and the macro files with ct for technical reasons.
+</dd><dt>&bull;
+</dt><dd> Options --help, --quiet, --verbose, --version, and flags -c, -i, -o, and +lX are new in CWEBbin and TeX Live.
+</dd><dt>&bull;
+</dt><dd> Option +lX is accompanied by example wrapper files for ctwimac.tex and ctproofmac.tex with translated captions for German (+ld).
+</dd><dt>&bull;
+</dt><dd> Option +lX is also accompanied by an extended pdfctwimac.tex for production of PDF output with active hyperlinks (+lpdf).
+</dd><dt>&bull;
+</dt><dd> ctwill in TeX Live operates silently by default; use the --verbose option to get the original behavior.
+</dd><dt>&bull;
+</dt><dd> File lookup with the environment variable CWEBINPUTS is extended to permit several, colon-separated, paths; see ENVIRONMENT below.
+</dd><dt>&bull;
+</dt><dd> If properly configured, the main program ctwill is localized with the "GNU gettext utilities".</dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -85,39 +85,39 @@ url: "/docs/linux/man/1-ctwill-twinx/"
  Options on the command line may be either turned off with `-' (if they are on by default) or turned on with `+' (if they are off by default). In fact, the options are processed from left to right, so a sequence like --verbose -h will only show the banner line (+b) and the progress report (+p), but leave out the happy message (-h).
 <dl>
 <dt>&bull;
-<dd> +b: print banner line on terminal
-<dt>&bull;
-<dd> +h: print success message on completion
-<dt>&bull;
-<dd> +p: print progress report messages
-<dt>&bull;
-<dd> +q/-q: shortcut for -bhp; also --quiet (default)
-<dt>&bull;
-<dd> +v/-v: shortcut for +bhp; also --verbose
-<dt>&bull;
-<dd> -c: ignore temporary output irrespective of changes
-<dt>&bull;
-<dd> -e: do not enclose C/C++&nbsp;material in \PB{...}
-<dt>&bull;
-<dd> -f: do not force a newline after every C/C++&nbsp;statement in output
-<dt>&bull;
-<dd> -i: suppress indentation of parameter declarations
-<dt>&bull;
-<dd> -o: suppress separation of declarations and statements
-<dt>&bull;
-<dd> -x: omit indices, section names, table of contents
-<dt>&bull;
-<dd> +P: \input ctproofmac.tex instead of ctwimac.tex
-<dt>&bull;
-<dd> +lX/-lX: use macros for language X as of X{ctwimac|ctproofmac}.tex
-<dt>&bull;
-<dd> +s: print usage statistics
-<dt>&bull;
-<dd> +t: treat typename in a template like typedef
-<dt>&bull;
-<dd> --help: display help message and exit
-<dt>&bull;
-<dd> --version: output version information and exit</dl>
+</dt><dd> +b: print banner line on terminal
+</dd><dt>&bull;
+</dt><dd> +h: print success message on completion
+</dd><dt>&bull;
+</dt><dd> +p: print progress report messages
+</dd><dt>&bull;
+</dt><dd> +q/-q: shortcut for -bhp; also --quiet (default)
+</dd><dt>&bull;
+</dt><dd> +v/-v: shortcut for +bhp; also --verbose
+</dd><dt>&bull;
+</dt><dd> -c: ignore temporary output irrespective of changes
+</dd><dt>&bull;
+</dt><dd> -e: do not enclose C/C++&nbsp;material in \PB{...}
+</dd><dt>&bull;
+</dt><dd> -f: do not force a newline after every C/C++&nbsp;statement in output
+</dd><dt>&bull;
+</dt><dd> -i: suppress indentation of parameter declarations
+</dd><dt>&bull;
+</dt><dd> -o: suppress separation of declarations and statements
+</dd><dt>&bull;
+</dt><dd> -x: omit indices, section names, table of contents
+</dd><dt>&bull;
+</dt><dd> +P: \input ctproofmac.tex instead of ctwimac.tex
+</dd><dt>&bull;
+</dt><dd> +lX/-lX: use macros for language X as of X{ctwimac|ctproofmac}.tex
+</dd><dt>&bull;
+</dt><dd> +s: print usage statistics
+</dd><dt>&bull;
+</dt><dd> +t: treat typename in a template like typedef
+</dd><dt>&bull;
+</dt><dd> --help: display help message and exit
+</dd><dt>&bull;
+</dt><dd> --version: output version information and exit</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -136,35 +136,35 @@ url: "/docs/linux/man/1-ctwill-twinx/"
  The location of the files mentioned below varies from system to system. Use the kpsewhich utility to find their locations.
 <dl>
 <dt>&bull;
-<dd> ctwimac.tex: The default TeX macros \input in the first line of the output file.
-<dt>&bull;
-<dd> ctproofmac.tex: If ctwill is invoked with the +P option, it will change the first line of the output file to \input ctproofmac.tex.</dl>
+</dt><dd> ctwimac.tex: The default TeX macros \input in the first line of the output file.
+</dd><dt>&bull;
+</dt><dd> ctproofmac.tex: If ctwill is invoked with the +P option, it will change the first line of the output file to \input ctproofmac.tex.</dd></dl>
  
 
  In both cases you can request some prefix X with the +lX option, e.g., +ld will \input dctwimac.tex and +Pld will \input dctproofmac.tex. A special application is the use of option +lpdf that will \input pdfctwimac.tex for production of PDF output with active hyperlinks.
 <dl>
 <dt>&bull;
-<dd> webfile.bux: Reference definitions to resolve from other modules.
-<dt>&bull;
-<dd> system.bux: Reference definitions to resolve from C/C++&nbsp;standard library header files like &lt;stdio.h&gt;.</dl>
+</dt><dd> webfile.bux: Reference definitions to resolve from other modules.
+</dd><dt>&bull;
+</dt><dd> system.bux: Reference definitions to resolve from C/C++&nbsp;standard library header files like &lt;stdio.h&gt;.</dd></dl>
  
 
  Other auxiliary files with references are created automatically by ctwill and the actual index files are created by TeX.
 <dl>
 <dt>&bull;
-<dd> cwebman.tex: The CWEB user manual, available in PDF from CTAN (<a rel="nofollow" HREF="https://ctan.org/pkg/cweb">https://ctan.org/pkg/cweb</a>).</dl>
+</dt><dd> cwebman.tex: The CWEB user manual, available in PDF from CTAN (<a rel="nofollow" HREF="https://ctan.org/pkg/cweb">https://ctan.org/pkg/cweb</a>).</dd></dl>
 
 <h2>SEE ALSO</h2>
 
 <dl>
 <dt>&bull;
-<dd> The CWEB System of Structured Documentation: by Donald E. Knuth and Silvio Levy (hardcopy version of cwebman.tex and the source code listings of common.w, ctangle.w, and cweave.w).
-<dt>&bull;
-<dd> Digital Typography: by D. E. Knuth.
-<dt>&bull;
-<dd> Literate Programming: by D. E. Knuth.
-<dt>&bull;
-<dd> Weaving a Program: by Wayne Sewell.</dl>
+</dt><dd> The CWEB System of Structured Documentation: by Donald E. Knuth and Silvio Levy (hardcopy version of cwebman.tex and the source code listings of common.w, ctangle.w, and cweave.w).
+</dd><dt>&bull;
+</dt><dd> Digital Typography: by D. E. Knuth.
+</dd><dt>&bull;
+</dt><dd> Literate Programming: by D. E. Knuth.
+</dd><dt>&bull;
+</dt><dd> Weaving a Program: by Wayne Sewell.</dd></dl>
  
 
  <a HREF="/docs/linux/man/1-cweb/">cweb</a>(1), <a HREF="/docs/linux/man/1-tex/">tex</a>(1), <a HREF="/docs/linux/man/1-cc/">cc</a>(1)

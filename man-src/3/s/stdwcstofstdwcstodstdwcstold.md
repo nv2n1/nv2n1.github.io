@@ -46,14 +46,10 @@ Floating point value corresponding to the contents of str on success. If the con
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     const wchar_t *p = L&quot;111.11 -2.22 0X1.BC70A3D70A3D7P+6  1.18973e+4932zzz&quot;;
     wchar_t *end;

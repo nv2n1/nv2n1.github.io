@@ -14,16 +14,16 @@ description: "skb_find_text – Find a text pattern in skb data"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>the buffer to look in</dl>
+</dd><dd>the buffer to look in</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>search offset</dl>
+<dd>search offset</dd></dl>
 <p> <i>to</i></p>
 <dl>
-<dd>search limit</dl>
+<dd>search limit</dd></dl>
 <p> <i>config</i></p>
 <dl>
-<dd>textsearch configuration</dl>
+<dd>textsearch configuration</dd></dl>
 <h2>Description</h2>
 <p>Finds a pattern in the skb data according to the specified textsearch configuration. Use <code>textsearch_next</code> to retrieve subsequent occurrences of the pattern. Returns the offset to the first occurrence or UINT_MAX if no match was found.</p>
 <h2>Copyright</h2>

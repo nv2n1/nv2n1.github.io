@@ -12,14 +12,10 @@ std::chrono::year_month_weekday::year_month_weekday - std::chrono::year_month_we
 
 <pre><code>year_month_weekday() = default;
 (1)(since C++ 20)
-
     constexpr year_month_weekday(const std::chrono::year &amp;y, const std::chrono::month &amp;m, (2)(since C++ 20)
-
                                                                                               const std::chrono::weekday_indexed &amp;wdi) noexcept;
-
 constexpr year_month_weekday(const std::chrono::sys_days &amp;dp) noexcept;
 (3)(since C++ 20)
-
     explicit constexpr year_month_weekday(const std::chrono::local_days &amp;dp) noexcept;
 (4)(since C++ 20)</code></pre> 
 Constructs a year_month_weekday object. 

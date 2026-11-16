@@ -16,19 +16,19 @@ description: "zone2sqlite – Load BIND 9 zone file into SQLite database"
 <p> <code>zone</code></p>
 <dl>
 <dt>
-<dd> Zone origin, eg &quot;mydomain.net.&quot;</dl>
+</dt><dd> Zone origin, eg &quot;mydomain.net.&quot;</dd></dl>
 <p> <code>zonefile</code></p>
 <dl>
 <dt>
-<dd> Master zone database file, eg. mydomain.net.zone</dl>
+</dt><dd> Master zone database file, eg. mydomain.net.zone</dd></dl>
 <p> <code>dbfile</code></p>
 <dl>
 <dt>
-<dd> Name of SQLite database file</dl>
+</dt><dd> Name of SQLite database file</dd></dl>
 <p> <code>dbtable</code></p>
 <dl>
 <dt>
-<dd> Name of table in database</dl>
+</dt><dd> Name of table in database</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Exits with 0 on success or 1 on failure.</p>
 <h2>SEE ALSO</h2>

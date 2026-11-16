@@ -31,119 +31,119 @@ description: "SAOimage 1.23 – X11 window based, interactive, color or halftone
 <p> <code>saoimage</code> tracks world coordinate systems as well as pixel coordinates within the image, if WCS information is present. Several single character keyboard commands have been added. <code>c</code> prints the world coordinate (RA and Dec as hh:mm:ss.sss dd:mm:ss.ss and Lat Long as dd.ddddd dd.ddddd) and image pixel coordinate, along with the value of that pixel to standard output. <code>w</code> executes the command set by <code>-wcscom</code>, substituting that same world coordinate string for %s. <code>b</code> prints the world coordinate RA and Dec in the FK4/B1950 system. <code>j</code> prints the world coordinate RA and Dec in the FK5/J2000 system. <code>g</code> prints the world coordinates as galactic longitude and latitude. <code>e</code> prints the world coordinates as ecliptic longitude and latitude. <code>i</code> prints the world coordinates as the image header defines them. <code>h</code> toggles between degrees and sexigesimal units for RA and Dec.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-blue</code></p>
-<dd> Set the color of all graphics to be blue. Some inexpensive systems use a monochrome monitor connected to one of the three color outputs on the computer. That color must be specified to make the graphics visible.</p>
-<dt><code>-bordercolor </code><i>colorname</i></p>
-<dd> Specify the color of all subwindow borders. The color name must be a recognized X color (there are many). This is a style issue. <code>-bc</code> may be used instead of <code>-bordercolor</code>.</p>
-<dt><code>-byteswap</code></p>
-<dd> Switch the bytes order between big-endian and little-endian order. This may be needed where data has been copied from another machine or if there is some confusion about the FITS file format. This switch toggles the previous setting. <code>-bswap</code> may be used instead of <code>-byteswap</code>.</p>
-<dt><code>+/-coord</code></p>
-<dd> Set the coordinate tracking state initially on or off. In coordinate tracking, the coordinates of the mouse and value of the pixel under it are printed in the upper-left text area, above the main display window. <code>+/-ct</code> can be used instead of <code>+/-coord</code>.</p>
-<dt><code>-display </code><i>nodename:0.0</i></p>
-<dd> Specify the name of the X display server. This makes it possible to run the <i>SAOimage</i> program on a machine other than the one connected to your display screen, with no difference in appearance or use. By default, <i>SAOimage</i> gets the server name from the <code>DISPLAY</code> environment variable. See the <i>xhost</i> manual page for more details. The display server cannot be changed once <i>SAOimage</i> is running. <code>-display</code> may be abbreviated <code>-d</code>.</p>
-<dt><code>-dfits</code></p>
-<dd> Image file is a FITS file (see <code>-fits</code>), but in unexpected byteswapped order. The FITS standard is not swapped, but some naive VAX applications may swap it (see <code>-bswap</code>).</p>
-<dt><code>-fbconfig </code><i>filename</i></p>
-<dd> Specify an alternate frame buffer configuration file for use with IRAF. By default, the file installed with <i>SAOimage</i> (/usr/local/lib/imtoolrc) is used.</p>
-<dt><code>-fits</code></p>
-<dd> Image file is a FITS file. If the image filename ends in <i>.fits</i>, this switch is not necessary. Only T=SIMPLE array types are supported. The header BITPIX card must be 8 (unsigned byte), 16 (signed short), 32 (signed int), -32 (float), -64 (double), or -16 (unsigned short). (The last two are not recognized standards). IEEE floats are not converted if that is not the machine format.</p>
-<dt><code>-fk4</code></p>
-<dd> If WCS information is available in the image header, track the cursor in FK4/B1950 right ascension and declination as well as pixel coordinates. These coordinates, followed by <i>B1950</i> will be fed to an external program if the <code>w</code> command is used.</p>
-<dt><code>-fk5</code></p>
-<dd> If WCS information is available in the image header, track the cursor in FK5/J2000 right ascension and declination as well as pixel coordinates. These coordinates, followed by <i>J2000</i> will be fed to an external program if the <code>w</code> command is used.</p>
-<dt><code>-gal</code></p>
-<dd> If WCS information is available in the image header, track the cursor in galactic longitude and latitude as well as pixel coordinates. These coordinates, followed by <i>galactic</i> will be fed to an external program if the <code>w</code> command is used.</p>
-<dt><code>-gd </code><i>geometry</i></p>
-<dd> Specify the size of the image display subwindow and/or the screen position of <i>SAOimage</i>. The format is a standard X geometry statement. This switch works like <code>-geometry</code>, except that width and height (if given) are applied to the display subwindow. The overall <i>SAOimage</i> window is sized accordingly.</p>
-<dt><code>-geometry </code><i>geometry</i></p>
-<dd> Specify the size and/or the screen position of <i>SAOimage</i>. The format is a standard X geometry statement. Both size and position may be specified, or only the size or the position. Width and height refer to the dimensions of <i>SAOimage</i>&#8216;s desktop window (see <code>-gd</code> for sizing just the image display window). <i>+x</i> and <i>+y</i> refer to the upper left corner in screen coordinates. <i>-x</i> positions the right edge from the right edge of the screen. <i>-y</i> would positions the lower edge from the bottom of the screen. Width and height below a minimum size are defaulted to the minimum. Specifying the default minimum size (<code>-geometry 0x0</code>) also triggers <i>SAOimage</i> to use smaller dimensions for its internal windows. Once <i>SAOimage</i> is running, use the window manager&#8217;s normal size and move mechanisms to make adjustments to <i>SAOimage</i>&#8216;s main window. <code>-geometry</code> may be abbreviated <code>-g</code>.</p>
-<dt><code>-green</code></p>
-<dd> Set the color of all graphics to be green. See <code>-blue</code>.</p>
-<dt><code>-histeq</code> may be abbreviated <code>-hi</code>.</p>
-<dd> Set the scaling mode for histogram equalization.</p>
-<dt><code>-horizgraph</code></p>
-<dd> Use a horizontal auxiliary color graph window, with a color bar along the bottom. See <code>-vertgraph</code>. <code>-hg</code> can be used as a shorthand for <code>-horizgraph</code>.</p>
-<dt><code>-i2 </code><i>width height</i></p>
-<dd> Image file is a signed short integer array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-shortarray </code><i>width height</i> has the same function.</p>
-<dt><code>-i4 </code><i>width height</i></p>
-<dd> Image file is a signed long integer array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-longarray </code><i>width height</i> has the same function.</p>
-<dt><code>-idev </code><i>pipename</i></p>
-<dd> Specify the name of the named pipe used for listening. The default is /dev/imt1o, which is the default used by IRAF. See <code>-odev</code>.</p>
-<dt><code>+/-imtool</code></p>
-<dd> Open/close the named input pipe connection and wait for input from IRAF. When open, <i>SAOimage</i> emulates IRAF&#8217;s <i>imtool</i>. IRAF&#8217;s image loading and cursor read-back functions are supported. Unlike <i>imtool</i>, <i>SAOimage</i> has only one frame buffer; IRAF&#8217;s frame buffer numbers are ignored. Listening on the pipe is possible even while reading image files directly. The connection may be opened, closed, or re-opened at any time. When supported, the default mode is commonly to start with the IRAF connection open. See <code>-idev</code>, <code>-odev</code>, and <code>-pros</code>.</p>
-<dt><code>-lfrac </code>[<i>fraction of histogram numerical peak</i>]</p>
-<dd> Set the linear scaling limits to the values where the pixel value distribution is at a given fraction of its peak</p>
-<dt><code>-linear</code></p>
-<dd> Set the scaling mode to linear.</p>
-<dt><code>-log </code>[<i>exponent for exponential curve</i>]</p>
-<dd> Set the scaling mode to log (exponential), and set the exponent for the curve function e sup n if given.</p>
-<dt><code>-lowerleft</code></p>
-<dd> First pixel in file represents the lower left of the image, assuming the lines of input run left to right on the screen. This is the IRAF standard and the <i>SAOimage</i> default. See <code>-rotate</code>, <code>-upperleft</code>, and <code>-zero</code>. <code>-lowerleft</code> may be abbreviated <code>-ll</code>.</p>
-<dt><code>-lprbuttons</code></p>
-<dd> Include the button menu in the hardcopy image (only on color workstations). The default on color workstations includes the area above the button panel, but excludes the buttons.</p>
-<dt><code>-mag </code><i>magnification</i></p>
-<dd> Set the magnification factor of the magnifier. This factor relates the magnifier to the magnification of the display window. The default is 4; the magnifier magnifies the image to 4 times the magnification of the main display window (but never less than zoom 1 of the original data).</p>
-<dt><code>+/-magnifier</code></p>
-<dd> Set the magnifier tracking state initially on or off. With magnifier tracking, the magnifier window is continuously updated to show a magnification of the image the image under the mouse. <code>+/-mt</code> can be used instead of <code>+/-magnifier</code>.</p>
-<dt><code>-max </code>[<i>max val</i>]</p>
-<dd> Set the maximum for the image value range used to compute scaling. The default is to take the maximum from the image shown in the display window. <code>-max</code> with no value resets the default. If the maximum value in the displayed image is lower than the given maximum, the image&#8217;s maximum vale is used for the scaling range.</p>
-<dt><code>-min </code>[<i>min val</i>]</p>
-<dd> Set the minimum for the image value range used to compute scaling. The default is to take the minimum from the image shown in the display window. <code>-min</code> with no value resets the default. If the minimum value in the displayed image is higher than the given minimum, the image&#8217;s minimum vale is used for the scaling range.</p>
-<dt><code>-mtf</code></p>
-<dd> Give the button panel a chiseled look popularized by HP&#8217;s widget set. This appearance may contrast less with other applications being used at the same time.</p>
-<dt><code>-name </code><i>filename</i></p>
-<dd> This switch is only needed if the filename starts with a number or might otherwise be recognized as a switch.</p>
-<dt><code>-odev </code><i>pipename</i></p>
-<dd> Specify the name of the named pipe used for sending feedback. The default is /dev/imt1i, which is the default used by IRAF. See <code>-idev</code>.</p>
-<dt><code>-oif</code></p>
-<dd> Image file is an IRAF image header file in OIF format. If the image filename ends in <i>.imh</i>, this switch is not necessary. IRAF STF and QPOE formats are not supported. Complex data cannot be handled. The data must have at least 2 dimensions. Only the first plane of multidimensional images is read. The data file is read directly by <i>SAOimage</i> (see <code>-imtool</code> and <code>-pros</code>).</p>
-<dt><code>-one</code></p>
-<dd> The file coordinate of the first pixel is (1,1). The real coordinates of the center of the first pixel are (1.0,1.0). This is the IRAF standard and the default for <i>SAOimage</i>. The second pixel is (2,1). See <code>-zero</code>.</p>
-<dt><code>-palette </code><i>number</i></p>
-<dd> Specify the number of read/write color cells to reserve. On color workstations, <i>SAOimage</i> reserves color cells in the default colormap for its own use. <i>SAOimage</i> reserves as many color cells as it can get, up to the number given (the default is 200). If the number given is negative, <i>SAOimage</i> comes up in overlay mode, using 1/2 + 2 of the color cells for overlays and graphics. In verbose mode (see <code>-verbose</code>), <i>SAOimage</i> tells you how many cells it is able to use for display colors. This number can be re-entered at run-time, unless <code>-palette 1</code> is given, in which case <i>SAOimage</i> stays in halftone mode. <code>-p</code> is an acceptable shorthand for <code>-palette</code>.</p>
-<dt><code>-panboxav | -panboxsum | -panboxsamp | -panboxmax</code></p>
-<dd> These switches select the kind of image reduction used to fit a picture of the entire image into the pan window. Each pixel is computed from a block of image pixels by averaging, summing, sampling, or taking the maximum. The default is to show the maximum from each block. When zooming in the main display involves reduction, subsampling is always used.</p>
-<dt><code>-pros</code></p>
-<dd> Virtually identical to the <code>+imtool</code> switch. The difference occurs when the user writes the saved regions to a disk file. <i>imtool</i> emulation includes writing only an IRAF list file giving center coordinates only. With <code>-pros</code>, <i>SAOimage</i>&#8216;s normal region descriptor file will be written in place of the simpler list file. One may switch between this mode and <code>+imtool</code>, or close the IRAF connection with <code>-imtool</code>.</p>
-<dt><code>-quiet</code></p>
-<dd> Disable verbose mode;<code>-q</code> may also be used. See <code>-verbose</code>.</p>
-<dt><code>-r4 </code><i>width height</i></p>
-<dd> Image file is a real*4 array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-floatarray </code><i>width height</i> has the same function.</p>
-<dt><code>-r8 </code><i>width height</i></p>
-<dd> Image file is a real*8 array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-doublearray </code><i>width height</i> has the same function.</p>
-<dt><code>-red</code></p>
-<dd> Set the color of all graphics to be red. See <code>-blue</code>.</p>
-<dt><code>-rmax </code>[<i>max val</i>]</p>
-<dd> Set maximum value for reading from the image file. This value is used as the maximum value when images are pre-scaled to fit the 16 bit (signed short) working buffer.</p>
-<dt><code>-rmin </code>[<i>min val</i>]</p>
-<dd> Set minimum value for reading from the image file. This value is used as the minimum value when images are pre-scaled to fit the 16 bit (signed short) working buffer.</p>
-<dt><code>-rotate </code><i>1,2,or 3</i></p>
-<dd> Rotate the image 90, 180, or 270 degrees (respectively) before displaying it. Rotation is applied after conversion to a lower left coordinate system (<code>-ll</code>) if such conversion is also requested. This is useful for images when the CCD was not mounted North-up. <code>-rot</code> can be used as a shorthand for <code>-rotate</code>.</p>
-<dt><code>-scalebias </code><i>scale bias</i></p>
-<dd> The data in the image file should be scaled and biased to get the true image value (TrueValue = (scale * FileValue) + bias). This cannot be used with the <code>-fits</code> image type (scale and bias are in the FITS header), nor with <code>-imtool</code> or <code>-pros</code> (they are passed by IRAF). <code>-sb</code> is a shorthand for <code>-scalebias</code>.</p>
-<dt><code>-skip </code><i>bytes</i></p>
+<dt><code>-blue</code></dt>
+<dd> Set the color of all graphics to be blue. Some inexpensive systems use a monochrome monitor connected to one of the three color outputs on the computer. That color must be specified to make the graphics visible.</dd>
+<dt><code>-bordercolor </code><i>colorname</i></dt>
+<dd> Specify the color of all subwindow borders. The color name must be a recognized X color (there are many). This is a style issue. <code>-bc</code> may be used instead of <code>-bordercolor</code>.</dd>
+<dt><code>-byteswap</code></dt>
+<dd> Switch the bytes order between big-endian and little-endian order. This may be needed where data has been copied from another machine or if there is some confusion about the FITS file format. This switch toggles the previous setting. <code>-bswap</code> may be used instead of <code>-byteswap</code>.</dd>
+<dt><code>+/-coord</code></dt>
+<dd> Set the coordinate tracking state initially on or off. In coordinate tracking, the coordinates of the mouse and value of the pixel under it are printed in the upper-left text area, above the main display window. <code>+/-ct</code> can be used instead of <code>+/-coord</code>.</dd>
+<dt><code>-display </code><i>nodename:0.0</i></dt>
+<dd> Specify the name of the X display server. This makes it possible to run the <i>SAOimage</i> program on a machine other than the one connected to your display screen, with no difference in appearance or use. By default, <i>SAOimage</i> gets the server name from the <code>DISPLAY</code> environment variable. See the <i>xhost</i> manual page for more details. The display server cannot be changed once <i>SAOimage</i> is running. <code>-display</code> may be abbreviated <code>-d</code>.</dd>
+<dt><code>-dfits</code></dt>
+<dd> Image file is a FITS file (see <code>-fits</code>), but in unexpected byteswapped order. The FITS standard is not swapped, but some naive VAX applications may swap it (see <code>-bswap</code>).</dd>
+<dt><code>-fbconfig </code><i>filename</i></dt>
+<dd> Specify an alternate frame buffer configuration file for use with IRAF. By default, the file installed with <i>SAOimage</i> (/usr/local/lib/imtoolrc) is used.</dd>
+<dt><code>-fits</code></dt>
+<dd> Image file is a FITS file. If the image filename ends in <i>.fits</i>, this switch is not necessary. Only T=SIMPLE array types are supported. The header BITPIX card must be 8 (unsigned byte), 16 (signed short), 32 (signed int), -32 (float), -64 (double), or -16 (unsigned short). (The last two are not recognized standards). IEEE floats are not converted if that is not the machine format.</dd>
+<dt><code>-fk4</code></dt>
+<dd> If WCS information is available in the image header, track the cursor in FK4/B1950 right ascension and declination as well as pixel coordinates. These coordinates, followed by <i>B1950</i> will be fed to an external program if the <code>w</code> command is used.</dd>
+<dt><code>-fk5</code></dt>
+<dd> If WCS information is available in the image header, track the cursor in FK5/J2000 right ascension and declination as well as pixel coordinates. These coordinates, followed by <i>J2000</i> will be fed to an external program if the <code>w</code> command is used.</dd>
+<dt><code>-gal</code></dt>
+<dd> If WCS information is available in the image header, track the cursor in galactic longitude and latitude as well as pixel coordinates. These coordinates, followed by <i>galactic</i> will be fed to an external program if the <code>w</code> command is used.</dd>
+<dt><code>-gd </code><i>geometry</i></dt>
+<dd> Specify the size of the image display subwindow and/or the screen position of <i>SAOimage</i>. The format is a standard X geometry statement. This switch works like <code>-geometry</code>, except that width and height (if given) are applied to the display subwindow. The overall <i>SAOimage</i> window is sized accordingly.</dd>
+<dt><code>-geometry </code><i>geometry</i></dt>
+<dd> Specify the size and/or the screen position of <i>SAOimage</i>. The format is a standard X geometry statement. Both size and position may be specified, or only the size or the position. Width and height refer to the dimensions of <i>SAOimage</i>&#8216;s desktop window (see <code>-gd</code> for sizing just the image display window). <i>+x</i> and <i>+y</i> refer to the upper left corner in screen coordinates. <i>-x</i> positions the right edge from the right edge of the screen. <i>-y</i> would positions the lower edge from the bottom of the screen. Width and height below a minimum size are defaulted to the minimum. Specifying the default minimum size (<code>-geometry 0x0</code>) also triggers <i>SAOimage</i> to use smaller dimensions for its internal windows. Once <i>SAOimage</i> is running, use the window manager&#8217;s normal size and move mechanisms to make adjustments to <i>SAOimage</i>&#8216;s main window. <code>-geometry</code> may be abbreviated <code>-g</code>.</dd>
+<dt><code>-green</code></dt>
+<dd> Set the color of all graphics to be green. See <code>-blue</code>.</dd>
+<dt><code>-histeq</code> may be abbreviated <code>-hi</code>.</dt>
+<dd> Set the scaling mode for histogram equalization.</dd>
+<dt><code>-horizgraph</code></dt>
+<dd> Use a horizontal auxiliary color graph window, with a color bar along the bottom. See <code>-vertgraph</code>. <code>-hg</code> can be used as a shorthand for <code>-horizgraph</code>.</dd>
+<dt><code>-i2 </code><i>width height</i></dt>
+<dd> Image file is a signed short integer array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-shortarray </code><i>width height</i> has the same function.</dd>
+<dt><code>-i4 </code><i>width height</i></dt>
+<dd> Image file is a signed long integer array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-longarray </code><i>width height</i> has the same function.</dd>
+<dt><code>-idev </code><i>pipename</i></dt>
+<dd> Specify the name of the named pipe used for listening. The default is /dev/imt1o, which is the default used by IRAF. See <code>-odev</code>.</dd>
+<dt><code>+/-imtool</code></dt>
+<dd> Open/close the named input pipe connection and wait for input from IRAF. When open, <i>SAOimage</i> emulates IRAF&#8217;s <i>imtool</i>. IRAF&#8217;s image loading and cursor read-back functions are supported. Unlike <i>imtool</i>, <i>SAOimage</i> has only one frame buffer; IRAF&#8217;s frame buffer numbers are ignored. Listening on the pipe is possible even while reading image files directly. The connection may be opened, closed, or re-opened at any time. When supported, the default mode is commonly to start with the IRAF connection open. See <code>-idev</code>, <code>-odev</code>, and <code>-pros</code>.</dd>
+<dt><code>-lfrac </code>[<i>fraction of histogram numerical peak</i>]</dt>
+<dd> Set the linear scaling limits to the values where the pixel value distribution is at a given fraction of its peak</dd>
+<dt><code>-linear</code></dt>
+<dd> Set the scaling mode to linear.</dd>
+<dt><code>-log </code>[<i>exponent for exponential curve</i>]</dt>
+<dd> Set the scaling mode to log (exponential), and set the exponent for the curve function e sup n if given.</dd>
+<dt><code>-lowerleft</code></dt>
+<dd> First pixel in file represents the lower left of the image, assuming the lines of input run left to right on the screen. This is the IRAF standard and the <i>SAOimage</i> default. See <code>-rotate</code>, <code>-upperleft</code>, and <code>-zero</code>. <code>-lowerleft</code> may be abbreviated <code>-ll</code>.</dd>
+<dt><code>-lprbuttons</code></dt>
+<dd> Include the button menu in the hardcopy image (only on color workstations). The default on color workstations includes the area above the button panel, but excludes the buttons.</dd>
+<dt><code>-mag </code><i>magnification</i></dt>
+<dd> Set the magnification factor of the magnifier. This factor relates the magnifier to the magnification of the display window. The default is 4; the magnifier magnifies the image to 4 times the magnification of the main display window (but never less than zoom 1 of the original data).</dd>
+<dt><code>+/-magnifier</code></dt>
+<dd> Set the magnifier tracking state initially on or off. With magnifier tracking, the magnifier window is continuously updated to show a magnification of the image the image under the mouse. <code>+/-mt</code> can be used instead of <code>+/-magnifier</code>.</dd>
+<dt><code>-max </code>[<i>max val</i>]</dt>
+<dd> Set the maximum for the image value range used to compute scaling. The default is to take the maximum from the image shown in the display window. <code>-max</code> with no value resets the default. If the maximum value in the displayed image is lower than the given maximum, the image&#8217;s maximum vale is used for the scaling range.</dd>
+<dt><code>-min </code>[<i>min val</i>]</dt>
+<dd> Set the minimum for the image value range used to compute scaling. The default is to take the minimum from the image shown in the display window. <code>-min</code> with no value resets the default. If the minimum value in the displayed image is higher than the given minimum, the image&#8217;s minimum vale is used for the scaling range.</dd>
+<dt><code>-mtf</code></dt>
+<dd> Give the button panel a chiseled look popularized by HP&#8217;s widget set. This appearance may contrast less with other applications being used at the same time.</dd>
+<dt><code>-name </code><i>filename</i></dt>
+<dd> This switch is only needed if the filename starts with a number or might otherwise be recognized as a switch.</dd>
+<dt><code>-odev </code><i>pipename</i></dt>
+<dd> Specify the name of the named pipe used for sending feedback. The default is /dev/imt1i, which is the default used by IRAF. See <code>-idev</code>.</dd>
+<dt><code>-oif</code></dt>
+<dd> Image file is an IRAF image header file in OIF format. If the image filename ends in <i>.imh</i>, this switch is not necessary. IRAF STF and QPOE formats are not supported. Complex data cannot be handled. The data must have at least 2 dimensions. Only the first plane of multidimensional images is read. The data file is read directly by <i>SAOimage</i> (see <code>-imtool</code> and <code>-pros</code>).</dd>
+<dt><code>-one</code></dt>
+<dd> The file coordinate of the first pixel is (1,1). The real coordinates of the center of the first pixel are (1.0,1.0). This is the IRAF standard and the default for <i>SAOimage</i>. The second pixel is (2,1). See <code>-zero</code>.</dd>
+<dt><code>-palette </code><i>number</i></dt>
+<dd> Specify the number of read/write color cells to reserve. On color workstations, <i>SAOimage</i> reserves color cells in the default colormap for its own use. <i>SAOimage</i> reserves as many color cells as it can get, up to the number given (the default is 200). If the number given is negative, <i>SAOimage</i> comes up in overlay mode, using 1/2 + 2 of the color cells for overlays and graphics. In verbose mode (see <code>-verbose</code>), <i>SAOimage</i> tells you how many cells it is able to use for display colors. This number can be re-entered at run-time, unless <code>-palette 1</code> is given, in which case <i>SAOimage</i> stays in halftone mode. <code>-p</code> is an acceptable shorthand for <code>-palette</code>.</dd>
+<dt><code>-panboxav | -panboxsum | -panboxsamp | -panboxmax</code></dt>
+<dd> These switches select the kind of image reduction used to fit a picture of the entire image into the pan window. Each pixel is computed from a block of image pixels by averaging, summing, sampling, or taking the maximum. The default is to show the maximum from each block. When zooming in the main display involves reduction, subsampling is always used.</dd>
+<dt><code>-pros</code></dt>
+<dd> Virtually identical to the <code>+imtool</code> switch. The difference occurs when the user writes the saved regions to a disk file. <i>imtool</i> emulation includes writing only an IRAF list file giving center coordinates only. With <code>-pros</code>, <i>SAOimage</i>&#8216;s normal region descriptor file will be written in place of the simpler list file. One may switch between this mode and <code>+imtool</code>, or close the IRAF connection with <code>-imtool</code>.</dd>
+<dt><code>-quiet</code></dt>
+<dd> Disable verbose mode;<code>-q</code> may also be used. See <code>-verbose</code>.</dd>
+<dt><code>-r4 </code><i>width height</i></dt>
+<dd> Image file is a real*4 array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-floatarray </code><i>width height</i> has the same function.</dd>
+<dt><code>-r8 </code><i>width height</i></dt>
+<dd> Image file is a real*8 array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-doublearray </code><i>width height</i> has the same function.</dd>
+<dt><code>-red</code></dt>
+<dd> Set the color of all graphics to be red. See <code>-blue</code>.</dd>
+<dt><code>-rmax </code>[<i>max val</i>]</dt>
+<dd> Set maximum value for reading from the image file. This value is used as the maximum value when images are pre-scaled to fit the 16 bit (signed short) working buffer.</dd>
+<dt><code>-rmin </code>[<i>min val</i>]</dt>
+<dd> Set minimum value for reading from the image file. This value is used as the minimum value when images are pre-scaled to fit the 16 bit (signed short) working buffer.</dd>
+<dt><code>-rotate </code><i>1,2,or 3</i></dt>
+<dd> Rotate the image 90, 180, or 270 degrees (respectively) before displaying it. Rotation is applied after conversion to a lower left coordinate system (<code>-ll</code>) if such conversion is also requested. This is useful for images when the CCD was not mounted North-up. <code>-rot</code> can be used as a shorthand for <code>-rotate</code>.</dd>
+<dt><code>-scalebias </code><i>scale bias</i></dt>
+<dd> The data in the image file should be scaled and biased to get the true image value (TrueValue = (scale * FileValue) + bias). This cannot be used with the <code>-fits</code> image type (scale and bias are in the FITS header), nor with <code>-imtool</code> or <code>-pros</code> (they are passed by IRAF). <code>-sb</code> is a shorthand for <code>-scalebias</code>.</dd>
+<dt><code>-skip </code><i>bytes</i></dt>
 <dd> Skip over the given number of bytes at the head of the file before reading<tt>&nbsp;<wbr></tt>data. This is used to skip header information or the first<br />
- image if two images are stored in one file. <code>-header</code> and <code>-sk</code> are aliases for <code>-skip</code>.</p>
-<dt><code>-sqrt </code>[<i>inverse of exponent for geometric curve</i>]</p>
-<dd> Set the scaling function to square root (geometric), and set the inverse of the exponent for the x sup {1/n} curve, if given.</p>
-<dt><code>-u1 </code><i>width height</i></p>
-<dd> Image file is an unsigned byte array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-chararray </code><i>width height</i> has the same function.</p>
-<dt><code>-u2 </code><i>width height</i></p>
-<dd> Image file is a unsigned short integer array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-ushortarray </code><i>width height</i> has the same function.</p>
-<dt><code>-upperleft</code></p>
-<dd> First pixel in file represents the upper left of the image, assuming the lines of input run left to right on the screen (see <code>-rotate</code> and <code>-lowerleft</code>). This switch does not override IRAF WCS image coordinates. <code>-upperleft</code> may be abbreviated <code>-ul</code>.</p>
-<dt><code>+/-verbose</code></p>
-<dd> Set <i>verbose</i> mode on or off. In verbose mode, informative statements are printed to the terminal window when various actions are taken. The default mode is to be verbose. <code>+/-v</code> can be used instead of <code>+/-verbose</code>.</p>
-<dt><code>-vertgraph</code></p>
-<dd> Use a vertical auxiliary color graph window, with a color bar along the left side. See <code>-horizgraph</code>. <code>-vg</code> can be used as a shorthand for <code>-vertgraph</code>.</p>
-<dt><code>-wcscom </code>[<i>format for command to be executed</i>]</p>
-<dd> Set the command to be executed when the <code>w</code> key is struck, where the world coordinates are substituted for %s in the string. Underscores should be used instead of spaces.</p>
-<dt><code>-wrap </code>[<i>number of wraps within scaling range</i>]</p>
-<dd> Set the scaling mode to wrapped linear, and set the number of wraps for this mode, if given.</p>
-<dt><code>-zero</code></p>
-<dd> The file coordinate of the first pixel is (0,0). The real coordinates of the center of the first pixel are (0.5,0.5) which makes the very edge (0,0). This is the standard coordinate system for image displays, but not the default for <i>SAOimage</i>. The second pixel is indexed (1,0). See <code>-one</code>.</p>
-<dt><code>-zf </code><i>zoom factor</i></p>
-<dd> Zoom the initial display of the image by <i>zoom factor</i>. A number larger than one makes the image larger by that factor, using that many display pixels per image pixel. A fractional <i>zoom factor</i> displays that the image with that fraction of a display pixel per image pixel.</dl>
+ image if two images are stored in one file. <code>-header</code> and <code>-sk</code> are aliases for <code>-skip</code>.</dd>
+<dt><code>-sqrt </code>[<i>inverse of exponent for geometric curve</i>]</dt>
+<dd> Set the scaling function to square root (geometric), and set the inverse of the exponent for the x sup {1/n} curve, if given.</dd>
+<dt><code>-u1 </code><i>width height</i></dt>
+<dd> Image file is an unsigned byte array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-chararray </code><i>width height</i> has the same function.</dd>
+<dt><code>-u2 </code><i>width height</i></dt>
+<dd> Image file is a unsigned short integer array file of the given dimensions. If the file is square and has no added padding, the dimensions are not necessary. <code>-ushortarray </code><i>width height</i> has the same function.</dd>
+<dt><code>-upperleft</code></dt>
+<dd> First pixel in file represents the upper left of the image, assuming the lines of input run left to right on the screen (see <code>-rotate</code> and <code>-lowerleft</code>). This switch does not override IRAF WCS image coordinates. <code>-upperleft</code> may be abbreviated <code>-ul</code>.</dd>
+<dt><code>+/-verbose</code></dt>
+<dd> Set <i>verbose</i> mode on or off. In verbose mode, informative statements are printed to the terminal window when various actions are taken. The default mode is to be verbose. <code>+/-v</code> can be used instead of <code>+/-verbose</code>.</dd>
+<dt><code>-vertgraph</code></dt>
+<dd> Use a vertical auxiliary color graph window, with a color bar along the left side. See <code>-horizgraph</code>. <code>-vg</code> can be used as a shorthand for <code>-vertgraph</code>.</dd>
+<dt><code>-wcscom </code>[<i>format for command to be executed</i>]</dt>
+<dd> Set the command to be executed when the <code>w</code> key is struck, where the world coordinates are substituted for %s in the string. Underscores should be used instead of spaces.</dd>
+<dt><code>-wrap </code>[<i>number of wraps within scaling range</i>]</dt>
+<dd> Set the scaling mode to wrapped linear, and set the number of wraps for this mode, if given.</dd>
+<dt><code>-zero</code></dt>
+<dd> The file coordinate of the first pixel is (0,0). The real coordinates of the center of the first pixel are (0.5,0.5) which makes the very edge (0,0). This is the standard coordinate system for image displays, but not the default for <i>SAOimage</i>. The second pixel is indexed (1,0). See <code>-one</code>.</dd>
+<dt><code>-zf </code><i>zoom factor</i></dt>
+<dd> Zoom the initial display of the image by <i>zoom factor</i>. A number larger than one makes the image larger by that factor, using that many display pixels per image pixel. A fractional <i>zoom factor</i> displays that the image with that fraction of a display pixel per image pixel.</dd></dl>
 <h2>USAGE</h2>
 <p> Refer to the <i>SAOimage User Manual</i> for detailed descriptions of all functions. </p>
 <p> Most control actions take place within the context of a mode. Modes are selected by clicking on menu buttons in the top row of the button panel. Each menu mode brings up its own submenu buttons (the lower row in the button panel) for mode specific selections. Actions and submodes are selected by clicking on buttons in the submenu row of the menu panel. </p>

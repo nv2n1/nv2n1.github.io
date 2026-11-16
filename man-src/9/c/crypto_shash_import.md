@@ -14,10 +14,10 @@ description: "crypto_shash_import – import operational state"
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>reference to the operational state handle the state imported into</dl>
+</dd><dd>reference to the operational state handle the state imported into</dd></dl>
 <p> <i>in</i></p>
 <dl>
-<dd>buffer holding the state</dl>
+<dd>buffer holding the state</dd></dl>
 <h2>Description</h2>
 <p>This function imports the hash state into the operational state handle from the input buffer. That buffer should have been generated with the crypto_ahash_export function.</p>
 <h2>Return</h2>
@@ -25,8 +25,8 @@ description: "crypto_shash_import – import operational state"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

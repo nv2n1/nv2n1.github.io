@@ -25,7 +25,6 @@ CUNBDB5 orthogonalizes the column vector
     then some other vector from the orthogonal complement
             is returned.This vector is chosen in an arbitrary but deterministic
                 way..fi
-
                     Parameters : M1
                                      M1 is INTEGER
                                          The dimension of X1 and the number of rows in Q1.0 &lt;= M1.
@@ -102,14 +101,14 @@ CUNBDB5 orthogonalizes the column vector
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> July 2012</dl>
+</dt><dd> July 2012</dd></dl>
 <p> Definition at line 156 of file cunbdb5.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

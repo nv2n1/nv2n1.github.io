@@ -13,30 +13,30 @@ description: "gfmkdir – manual page for gfmkdir (glusterfs-coreutils) 0.2.0"
 <p> <code>gfmkdir</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></p>
-<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify the port on which to connect</p>
-<dt><code>-r</code>, <code>&#8211;parents</code></p>
-<dd> no error if existing, make parent directories as needed</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
+<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>-r</code>, <code>&#8211;parents</code></dt>
+<dd> no error if existing, make parent directories as needed</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gfmkdir <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></p>
+</dt><dd> gfmkdir <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></dd>
 <dt>
-<dd> Create the directory /directory on the Gluster volume of groot on host localhost.</p>
+</dt><dd> Create the directory /directory on the Gluster volume of groot on host localhost.</dd>
 <dt>
-<dd> gfmkdir -r <a href="glfs://localhost/groot/directory/subdirectory">glfs://localhost/groot/directory/subdirectory</a></p>
+</dt><dd> gfmkdir -r <a href="glfs://localhost/groot/directory/subdirectory">glfs://localhost/groot/directory/subdirectory</a></dd>
 <dt>
-<dd> Recursively create the directory /directory/subdirectory on the Gluster volume of groot host localhost.</p>
+</dt><dd> Recursively create the directory /directory/subdirectory on the Gluster volume of groot host localhost.</dd>
 <dt>
-<dd> gfcli (localhost/groot)&gt; mkdir /directory</p>
+</dt><dd> gfcli (localhost/groot)&gt; mkdir /directory</dd>
 <dt>
-<dd> In the context of a shell with a connection established, create a directory on the root of the Gluster volume groot on localhost.</dl>
+</dt><dd> In the context of a shell with a connection established, create a directory on the root of the Gluster volume groot on localhost.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

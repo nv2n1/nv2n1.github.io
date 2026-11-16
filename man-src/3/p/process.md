@@ -10,9 +10,6 @@ description: "QuantLib::GJRGARCHModel – GJR-GARCH model for the stochastic vol
 <p>QuantLib::GJRGARCHModel &#8211; GJR-GARCH model for the stochastic volatility of an asset. </p>
 <h2>Synopsis</h2>
 <pre><code>void generateArguments ()
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::CalibratedModel</code>.</p>
 <h3>Public Member Functions</h3>
@@ -26,9 +23,6 @@ Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; <code>GJRGARCHProcess</code> &gt; <code>process</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void generateArguments ()
-
-
-
 Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; <code>GJRGARCHProcess</code> &gt; <code>process_</code></p>
 <h2>Detailed Description</h2>
@@ -37,6 +31,6 @@ Protected Attributes</code></pre>
 <p> Glosten, L., Jagannathan, R., Runkle, D., 1993. Relationship between the expected value and the volatility of the nominal excess return on stocks. Journal of Finance 48, 1779-1801 </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>calibration is not implemented for GJR-GARCH</dl>
+<dd>calibration is not implemented for GJR-GARCH</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

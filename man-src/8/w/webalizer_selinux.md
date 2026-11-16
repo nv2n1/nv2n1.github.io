@@ -82,8 +82,8 @@ description: "webalizer_selinux – Security Enhanced Linux Policy for the webal
 <p> <code>webalizer_exec_t</code> </p>
 <p> &#8211; Set files with the webalizer_exec_t type, if you want to transition an executable to the webalizer_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/awffull, /usr/bin/webalizer, /usr/bin/webazolver </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/awffull, /usr/bin/webalizer, /usr/bin/webazolver </dd>
 </dl>
 <p> <code>webalizer_htaccess_t</code> </p>
 <p> &#8211; Set files with the webalizer_htaccess_t type, if you want to treat the file as a webalizer access file. </p>

@@ -18,20 +18,20 @@ The <i>snmp.conf</i> file configures how the standard CUPS network backends (htt
 
 The following directives are understood by the CUPS network backends. Consult the on-line help for detailed descriptions:
 <dl><dt>Address @IF(<i>name</i>)
-<dd><dt>Address @LOCAL
-<dd><dt>Address <i>address</i>
-<dd>Sends SNMP broadcast queries to the specified address(es). There is no default for the broadcast address.
-<dt>Community <i>name</i>
-<dd>Specifies the community name to use. Only a single community name may be specified. The default community name is &quot;public&quot;.
-<dt>DebugLevel number
-<dd>Specifies the logging level from 0 (none) to 3 (everything). Typically only used for debugging (thus the name). The default debug level is 0.
-<dt>DeviceURI &quot;regular expression&quot; device-uri [... device-uri]
-<dd>Specifies one or more device URIs that should be used for a given make and model string. The regular expression is used to match the detected make and model, and the device URI strings must be of the form &quot;<a HREF="scheme://%s[:port]/[path]">scheme://%s[:port]/[path]</a>&quot;, where &quot;%s&quot; represents the detected address or hostname. There are no default device URI matching rules.
-<dt>HostNameLookups on
-<dd><dt>HostNameLookups off
-<dd>Specifies whether the addresses of printers should be converted to hostnames or left as numeric IP addresses. The default is &quot;off&quot;.
-<dt>MaxRunTime <i>seconds</i>
-<dd>Specifies the maximum number of seconds that the SNMP backend will scan the network for printers. The default is 120 seconds (2 minutes).</dl>
+</dt><dd></dd><dt>Address @LOCAL
+</dt><dd></dd><dt>Address <i>address</i>
+</dt><dd>Sends SNMP broadcast queries to the specified address(es). There is no default for the broadcast address.
+</dd><dt>Community <i>name</i>
+</dt><dd>Specifies the community name to use. Only a single community name may be specified. The default community name is &quot;public&quot;.
+</dd><dt>DebugLevel number
+</dt><dd>Specifies the logging level from 0 (none) to 3 (everything). Typically only used for debugging (thus the name). The default debug level is 0.
+</dd><dt>DeviceURI &quot;regular expression&quot; device-uri [... device-uri]
+</dt><dd>Specifies one or more device URIs that should be used for a given make and model string. The regular expression is used to match the detected make and model, and the device URI strings must be of the form &quot;<a HREF="scheme://%s[:port]/[path]">scheme://%s[:port]/[path]</a>&quot;, where &quot;%s&quot; represents the detected address or hostname. There are no default device URI matching rules.
+</dd><dt>HostNameLookups on
+</dt><dd></dd><dt>HostNameLookups off
+</dt><dd>Specifies whether the addresses of printers should be converted to hostnames or left as numeric IP addresses. The default is &quot;off&quot;.
+</dd><dt>MaxRunTime <i>seconds</i>
+</dt><dd>Specifies the maximum number of seconds that the SNMP backend will scan the network for printers. The default is 120 seconds (2 minutes).</dd></dl>
 
 <h2>See Also</h2>
 

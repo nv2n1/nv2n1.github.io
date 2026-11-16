@@ -17,9 +17,9 @@ description: "ldns_pkt, ldns_pkt_section, ldns_pkt_type"
 <p>&nbsp;<wbr>ldns_pkt_type(); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_pkt</i></p>
+<dt> <i>ldns_pkt</i></dt>
 <dd>
-<dd>DNS packet </p>
+</dd><dd>DNS packet </dd>
 <p> This structure contains a complete DNS packet (either a query or an answer) </p>
 <p> It is the complete representation of what you actually send to a<br />
  nameserver, and what it sends back (assuming you are the client here).<br />
@@ -59,11 +59,11 @@ description: "ldns_pkt, ldns_pkt_section, ldns_pkt_type"
 <p> };<br />
  typedef struct ldns_struct_pkt ldns_pkt;</dl>
 <dl>
-<dt> <i>ldns_pkt_section</i>()</dl>
+<dt> <i>ldns_pkt_section</i>()</dt></dl>
 <dl>
-<dt> <i>ldns_pkt_type</i>()</dl>
+<dt> <i>ldns_pkt_type</i>()</dt></dl>
 <h2>AUTHOR</h2>
-<dd>The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
+<dd>The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </dd>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to ldns-team [at] nlnetlabs.nl or in our bugzilla at <a rel="nofollow" href="http://www.nlnetlabs.nl/bugs/index.html">http://www.nlnetlabs.nl/bugs/index.html</a> </p>
 <h2>COPYRIGHT</h2>

@@ -15,10 +15,10 @@ description: "passenger-config – Show configuration settings for Phusion Passe
 <p> <code>passenger-config</code> shows the current configuration settings for Phusion Passenger. You need to select one of the following options.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;root</code></p>
-<dd> Shows the Phusion Passenger root directory</p>
-<dt><code>&#8211;version</code></p>
-<dd> Shows the current Phusion Passenger version number</dl>
+<dt><code>&#8211;root</code></dt>
+<dd> Shows the Phusion Passenger root directory</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows the current Phusion Passenger version number</dd></dl>
 <h2>SEE ALSO</h2>
 <p> passenger-memory-stats(1), passenger-stress-test(1), <a href="/docs/linux/man/8-passenger-status/">passenger-status</a>(8) </p>
 <p> User guide at <a rel="nofollow" href="https://www.phusionpassenger.com/documentation_and_support">https://www.phusionpassenger.com/documentation_and_support</a></p>

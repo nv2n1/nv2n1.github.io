@@ -20,20 +20,20 @@ description: "sulogin – single-user login"
 <h2>Options</h2>
 <p><code>-e</code>, <code>&#8211;force</code></p>
 <dl>
-<dd>If the default method of obtaining the root password from the system via <code><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></code>(3) fails, then examine <i>/etc/passwd</i> and <i>/etc/shadow</i> to get the password. If these files are damaged or nonexistent, or when root account is locked by &#8216;!&#8217; or &#8216;*&#8217; at the begin of the password then <code>sulogin</code> will <code>start a root shell without asking for a password</code>. </p>
+<dd>If the default method of obtaining the root password from the system via <code><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></code>(3) fails, then examine <i>/etc/passwd</i> and <i>/etc/shadow</i> to get the password. If these files are damaged or nonexistent, or when root account is locked by &#8216;!&#8217; or &#8216;*&#8217; at the begin of the password then <code>sulogin</code> will <code>start a root shell without asking for a password</code>. </dd>
 <p> Only use the <code>-e</code> option if you are sure the console is physically protected against unauthorized access.</dl>
 <p> <code>-p</code>, <code>&#8211;login-shell</code></p>
 <dl>
-<dd>Specifying this option causes <code>sulogin</code> to start the shell process as a login shell.</dl>
+<dd>Specifying this option causes <code>sulogin</code> to start the shell process as a login shell.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;timeout</code> <i>seconds</i></p>
 <dl>
-<dd>Specify the maximum amount of time to wait for user input. By default, <code>sulogin</code> will wait forever.</dl>
+<dd>Specify the maximum amount of time to wait for user input. By default, <code>sulogin</code> will wait forever.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <h2>Environment</h2>
 <p><code>sulogin</code> looks for the environment variable <code>SUSHELL</code> or <code>sushell</code> to determine what shell to start. If the environment variable is not set, it will try to execute root&#8217;s shell from <i>/etc/passwd</i>. If that fails, it will fall back to <i>/bin/sh</i>.</p>
 <h2>Authors</h2>

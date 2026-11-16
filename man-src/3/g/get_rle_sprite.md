@@ -22,10 +22,8 @@ BITMAP *bmp;
     rle = get_rle_sprite(bmp);
 if (!rle)
     abort_on_error("Couldn't create RLE sprite!");
-
 /* We don't need the bitmap any more.*/
 destroy_bitmap(bmp);
-
 /* Use the RLE sprite. */
 ...
     /* Destroy it when we don't need it any more. */

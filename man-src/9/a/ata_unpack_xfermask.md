@@ -14,20 +14,20 @@ description: "ata_unpack_xfermask – Unpack xfer_mask into pio, mwdma and udma 
 <p><i>xfer_mask</i></p>
 <dl>
 <dd>
-<dd>xfer_mask to unpack</dl>
+</dd><dd>xfer_mask to unpack</dd></dl>
 <p> <i>pio_mask</i></p>
 <dl>
-<dd>resulting pio_mask</dl>
+<dd>resulting pio_mask</dd></dl>
 <p> <i>mwdma_mask</i></p>
 <dl>
-<dd>resulting mwdma_mask</dl>
+<dd>resulting mwdma_mask</dd></dl>
 <p> <i>udma_mask</i></p>
 <dl>
-<dd>resulting udma_mask</dl>
+<dd>resulting udma_mask</dd></dl>
 <h2>Description</h2>
 <p>Unpack <i>xfer_mask</i> into <i>pio_mask</i>, <i>mwdma_mask</i> and <i>udma_mask</i>. Any NULL destination masks will be ignored.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

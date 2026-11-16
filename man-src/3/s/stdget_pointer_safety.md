@@ -25,10 +25,8 @@ The pointer safety used by this implementation.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;Pointer safety: &quot;;
     switch (std::get_pointer_safety()) {

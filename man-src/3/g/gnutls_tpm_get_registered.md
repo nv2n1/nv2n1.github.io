@@ -14,8 +14,8 @@ description: "gnutls_tpm_get_registered – API function"
 <p> <code>int gnutls_tpm_get_registered(gnutls_tpm_key_list_t * </code><i>list</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_tpm_key_list_t * list</p>
-<dd> a list to store the keys</dl>
+<dt>gnutls_tpm_key_list_t * list</dt>
+<dd> a list to store the keys</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will get a list of stored keys in the TPM. The uuid of those keys</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_tpm_get_registered – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

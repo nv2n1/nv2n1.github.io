@@ -35,12 +35,9 @@ Calling wait on the same std::shared_future from multiple threads is not safe; t
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;future&gt;
-
 #include &lt;thread&gt;
 int fib(int n)
-
 {
     if (n &lt; 3)
         return 1;
@@ -48,7 +45,6 @@ int fib(int n)
         return fib(n - 1) + fib(n - 2);
 }
 int main()
-
 {
     std::shared_future&lt;int&gt; f1 = std::async(std::launch::async, []() {
         return fib(20);

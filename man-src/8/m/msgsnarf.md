@@ -14,16 +14,16 @@ description: "msgsnarf – sniff chat messages"
 <p><code>msgsnarf</code> records selected messages from AOL Instant Messenger, ICQ 2000, IRC, MSN Messenger, or Yahoo Messenger chat sessions.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i </code><i>interface</i></p>
-<dd>Specify the interface to listen on.</p>
-<dt><code>-p </code><i>pcapfile</i></p>
-<dd>Process packets from the specified PCAP capture file instead of the network.</p>
-<dt><code>-v</code></p>
-<dd>&quot;Versus&quot; mode. Invert the sense of matching, to select non-matching messages.</p>
-<dt><i>pattern</i></p>
-<dd>Specify regular expression for message matching.</p>
-<dt><i>expression</i></p>
-<dd>Specify a <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8) filter expression to select traffic to sniff.</dl>
+<dt><code>-i </code><i>interface</i></dt>
+<dd>Specify the interface to listen on.</dd>
+<dt><code>-p </code><i>pcapfile</i></dt>
+<dd>Process packets from the specified PCAP capture file instead of the network.</dd>
+<dt><code>-v</code></dt>
+<dd>&quot;Versus&quot; mode. Invert the sense of matching, to select non-matching messages.</dd>
+<dt><i>pattern</i></dt>
+<dd>Specify regular expression for message matching.</dd>
+<dt><i>expression</i></dt>
+<dd>Specify a <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8) filter expression to select traffic to sniff.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-dsniff/">dsniff</a>(8)</p>
 <h2>Author</h2>

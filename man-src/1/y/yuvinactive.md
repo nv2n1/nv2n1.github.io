@@ -16,18 +16,18 @@ description: "yuvinactive – Set a part of the video to a defined state"
 <h2>OPTIONS</h2>
 <p> <code>lav2yuv</code> accepts the following options: </p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Some help output</p>
-<dt><code>-i</code><i>XxY+XOFF+YOFF</i></p>
-<dd> Specifies the area yuvinactive shall work with. With this option the area is set to black. There are no restrictions because of interlacing.</p>
-<dt><code>-d</code><i> num</i></p>
-<dd> How much darker the area should be compared to the original color. This is done by setting a lower value for the luma. The value is in percent from the original luma.</p>
-<dt><code>-s</code><i> num</i></p>
-<dd> Here you specify a certain color in the yuv format.</p>
-<dt><code>-a</code><i> num</i></p>
-<dd> With this option the program uses on pixel and averages the surrounding pixels with the same color to make the original less readable. The number tells the the program how much pixels around the original pixel should be overwritten with the same color. You have to use a even number here</p>
-<dt><code>-c</code><i> num</i></p>
-<dd> Sets the number of surrounding pixels yuvinactive should use to copy them into the given area. You have to use a even number here. yuvinactive uses the lines above and below the specified area for copying them into the area. </p>
+<dt><code>-h</code></dt>
+<dd> Some help output</dd>
+<dt><code>-i</code><i>XxY+XOFF+YOFF</i></dt>
+<dd> Specifies the area yuvinactive shall work with. With this option the area is set to black. There are no restrictions because of interlacing.</dd>
+<dt><code>-d</code><i> num</i></dt>
+<dd> How much darker the area should be compared to the original color. This is done by setting a lower value for the luma. The value is in percent from the original luma.</dd>
+<dt><code>-s</code><i> num</i></dt>
+<dd> Here you specify a certain color in the yuv format.</dd>
+<dt><code>-a</code><i> num</i></dt>
+<dd> With this option the program uses on pixel and averages the surrounding pixels with the same color to make the original less readable. The number tells the the program how much pixels around the original pixel should be overwritten with the same color. You have to use a even number here</dd>
+<dt><code>-c</code><i> num</i></dt>
+<dd> Sets the number of surrounding pixels yuvinactive should use to copy them into the given area. You have to use a even number here. yuvinactive uses the lines above and below the specified area for copying them into the area. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Right, there are bugs hidden. The thing is not well tested, and not every option might work. yuvinactive is in the first state of becoming a useful program. </p>
@@ -36,8 +36,8 @@ description: "yuvinactive – Set a part of the video to a defined state"
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
-<dt>For more info, see our website at</p>
-<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </p>
+<dt>For more info, see our website at</dt>
+<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-lav2yuv/">lav2yuv</a></code>(1), <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1), <code><a href="/docs/linux/man/1-yuvscaler/">yuvscaler</a></code>(1), <code><a href="/docs/linux/man/1-yuv2lav/">yuv2lav</a></code>(1), <code><a href="/docs/linux/man/1-yuvdenoise/">yuvdenoise</a></code>(1), <code><a href="/docs/linux/man/1-yuvplay/">yuvplay</a></code>(1), <code><a href="/docs/linux/man/1-yuvmedianfilter/">yuvmedianfilter</a></code>(1) </p>

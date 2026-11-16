@@ -15,20 +15,20 @@ description: "dbverify – Directory Server script for indexing attributes"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-n</code> <i>Backend Name</i></p>
-<dd>The name of the LDBM database to reindex. Example: userRoot</p>
-<dt><code>-a</code> <i>Database Directory</i></p>
-<dd>Location of database if it is different than what is in the server configuration(e.g. backup directories)</p>
-<dt><code>-d</code> <i>Debug Level</i></p>
-<dd>Sets the debugging level.</p>
-<dt><code>-V</code></p>
-<dd>Verbose output.</p>
-<dt><code>-v</code></p>
-<dd>Display the version of the Directory Server.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-n</code> <i>Backend Name</i></dt>
+<dd>The name of the LDBM database to reindex. Example: userRoot</dd>
+<dt><code>-a</code> <i>Database Directory</i></dt>
+<dd>Location of database if it is different than what is in the server configuration(e.g. backup directories)</dd>
+<dt><code>-d</code> <i>Debug Level</i></dt>
+<dd>Sets the debugging level.</dd>
+<dt><code>-V</code></dt>
+<dd>Verbose output.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version of the Directory Server.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <p>dbverify -Z instance3 -n userRoot -V </p>
 <h2>Diagnostics</h2>

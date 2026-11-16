@@ -18,33 +18,31 @@ description: "ppudump – The FPC Pascal unit dump program."
 <h2>Options</h2>
 <p> <code>ppudump</code> has only two options: </p>
 <dl>
-<dt><code>-h</code></p>
-<dd> shows a short help screen.</p>
-<dt><code>-v</code><i>xxx</i></p>
-<dd> Controls the level of verbosity. <i>xxx </i> is any combination of the following letters:</p>
+<dt><code>-h</code></dt>
+<dd> shows a short help screen.</dd>
+<dt><code>-v</code><i>xxx</i></dt>
+<dd> Controls the level of verbosity. <i>xxx </i> is any combination of the following letters:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>a</i></p>
-<dd> Shows all information stored in the PPU file.</p>
-<dt><i>b</i></p>
-<dd> Shows the browser information in the PPU file (if present).</p>
-<dt><i>d</i></p>
-<dd> Shows the definitions in the PPU file.</p>
-<dt><i>h </i></p>
-<dd> Shows the header information in the PPU file.</p>
-<dt><i>i</i></p>
-<dd> Shows only interface information, implementation information is not shown.</p>
-<dt><i>m</i></p>
-<dd> Shows only implementation information, interface interface is not shown.</p>
-<dt><i>s</i></p>
-<dd> Shows the symbols stored in the PPU file.</dl>
+<dt><i>a</i></dt>
+<dd> Shows all information stored in the PPU file.</dd>
+<dt><i>b</i></dt>
+<dd> Shows the browser information in the PPU file (if present).</dd>
+<dt><i>d</i></dt>
+<dd> Shows the definitions in the PPU file.</dd>
+<dt><i>h </i></dt>
+<dd> Shows the header information in the PPU file.</dd>
+<dt><i>i</i></dt>
+<dd> Shows only interface information, implementation information is not shown.</dd>
+<dt><i>m</i></dt>
+<dd> Shows only implementation information, interface interface is not shown.</dd>
+<dt><i>s</i></dt>
+<dd> Shows the symbols stored in the PPU file.</dd></dl>
 </dl>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

@@ -15,11 +15,11 @@ skb_propagate_pfmemalloc - Propagate pfmemalloc if skb is allocated after RX pag
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>The page that was allocated from skb_alloc_page</dl>
+<dl><dd></dd><dd>The page that was allocated from skb_alloc_page</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>The skb that may need pfmemalloc set</dl>
+<dl><dd>The skb that may need pfmemalloc set</dd></dl>
 
 <h2>Copyright</h2>
 

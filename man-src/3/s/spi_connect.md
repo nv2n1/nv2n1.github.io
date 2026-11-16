@@ -16,7 +16,7 @@ description: "SPI_connect – connect a procedure to the SPI manager"
 <h2>Return Value</h2>
 <p>SPI_OK_CONNECT</p>
 <dl COMPACT>
-<dd>on success</dl>
+<dd>on success</dd></dl>
 <p> SPI_ERROR_CONNECT</p>
 <dl COMPACT>
-<dd>on error</dl>
+<dd>on error</dd></dl>

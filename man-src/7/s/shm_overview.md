@@ -12,24 +12,24 @@ description: "shm_overview – overview of POSIX shared memory"
 <p>The POSIX shared memory API allows processes to communicate information by sharing a region of memory. </p>
 <p> The interfaces employed in the API are:</p>
 <dl>
-<dt><code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3)</p>
-<dd>Create and open a new object, or open an existing object. This is analogous to <code><a href="/docs/linux/man/2-open/">open</a></code>(2). The call returns a file descriptor for use by the other interfaces listed below.</p>
-<dt><code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2)</p>
-<dd>Set the size of the shared memory object. (A newly created shared memory object has a length of zero.)</p>
-<dt><code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)</p>
-<dd>Map the shared memory object into the virtual address space of the calling process.</p>
-<dt><code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2)</p>
-<dd>Unmap the shared memory object from the virtual address space of the calling process.</p>
-<dt><code><a href="/docs/linux/man/3-shm_unlink/">shm_unlink</a></code>(3)</p>
-<dd>Remove a shared memory object name.</p>
-<dt><code><a href="/docs/linux/man/2-close/">close</a></code>(2)</p>
-<dd>Close the file descriptor allocated by <code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3) when it is no longer needed.</p>
-<dt><code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2)</p>
-<dd>Obtain a <i>stat</i> structure that describes the shared memory object. Among the information returned by this call are the object&#8217;s size (<i>st_size</i>), permissions (<i>st_mode</i>), owner (<i>st_uid</i>), and group (<i>st_gid</i>).</p>
-<dt><code><a href="/docs/linux/man/2-fchown/">fchown</a></code>(2)</p>
-<dd>To change the ownership of a shared memory object.</p>
-<dt><code><a href="/docs/linux/man/2-fchmod/">fchmod</a></code>(2)</p>
-<dd>To change the permissions of a shared memory object.</dl>
+<dt><code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3)</dt>
+<dd>Create and open a new object, or open an existing object. This is analogous to <code><a href="/docs/linux/man/2-open/">open</a></code>(2). The call returns a file descriptor for use by the other interfaces listed below.</dd>
+<dt><code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2)</dt>
+<dd>Set the size of the shared memory object. (A newly created shared memory object has a length of zero.)</dd>
+<dt><code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)</dt>
+<dd>Map the shared memory object into the virtual address space of the calling process.</dd>
+<dt><code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2)</dt>
+<dd>Unmap the shared memory object from the virtual address space of the calling process.</dd>
+<dt><code><a href="/docs/linux/man/3-shm_unlink/">shm_unlink</a></code>(3)</dt>
+<dd>Remove a shared memory object name.</dd>
+<dt><code><a href="/docs/linux/man/2-close/">close</a></code>(2)</dt>
+<dd>Close the file descriptor allocated by <code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3) when it is no longer needed.</dd>
+<dt><code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2)</dt>
+<dd>Obtain a <i>stat</i> structure that describes the shared memory object. Among the information returned by this call are the object&#8217;s size (<i>st_size</i>), permissions (<i>st_mode</i>), owner (<i>st_uid</i>), and group (<i>st_gid</i>).</dd>
+<dt><code><a href="/docs/linux/man/2-fchown/">fchown</a></code>(2)</dt>
+<dd>To change the ownership of a shared memory object.</dd>
+<dt><code><a href="/docs/linux/man/2-fchmod/">fchmod</a></code>(2)</dt>
+<dd>To change the permissions of a shared memory object.</dd></dl>
 <h3>Versions</h3>
 <p>POSIX shared memory is supported since Linux 2.4 and glibc 2.2.</p>
 <h3>Persistence</h3>

@@ -14,17 +14,17 @@ description: "nand_scan_ident – [NAND Interface] Scan for the NAND device"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>maxchips</i></p>
 <dl>
-<dd>number of chips to scan for</dl>
+<dd>number of chips to scan for</dd></dl>
 <p> <i>table</i></p>
 <dl>
-<dd>alternative NAND ID table</dl>
+<dd>alternative NAND ID table</dd></dl>
 <h2>Description</h2>
 <p>This is the first phase of the normal <code>nand_scan</code> function. It reads the flash ID and sets up MTD fields accordingly.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

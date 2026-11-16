@@ -28,8 +28,8 @@ description: "pambackground – create a mask of the background area of an image
 <p> To simply make a mask of all the areas of a specified color, use <code>ppmcolormask</code>. If you have a unique background color (one that doesn&#8217;t occur in the foreground) and know what it is, this can create a background mask in cases that <code>pambackground</code> cannot: where there are see-through holes in the foreground image. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> Tell interesting facts about the process. </p>
+<dt><code>-verbose</code></dt>
+<dd> Tell interesting facts about the process. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1) , <code><a href="/docs/linux/man/1-pamcomp/">pamcomp</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , </p>

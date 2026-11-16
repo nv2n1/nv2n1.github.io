@@ -14,17 +14,17 @@ description: "trace_block_bio_queue – putting new block IO operation in queue"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>queue holding operation</dl>
+</dd><dd>queue holding operation</dd></dl>
 <p> <i>bio</i></p>
 <dl>
-<dd>new block operation</dl>
+<dd>new block operation</dd></dl>
 <h2>Description</h2>
 <p>About to place the block IO operation <i>bio</i> into queue <i>q</i>.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

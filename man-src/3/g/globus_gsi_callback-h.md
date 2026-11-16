@@ -22,7 +22,8 @@ description: "globus_gsi_callback.h – Globus GSI Callback."
 <p>Globus GSI Callback. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Lang </p>
+<dd>Sam Lang </dd>
 <p> Sam Meder</dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gsi_callback from the source code.</p>
+</p>

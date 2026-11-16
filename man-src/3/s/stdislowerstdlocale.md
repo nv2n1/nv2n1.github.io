@@ -11,9 +11,7 @@ std::islower(std::locale) - std::islower(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
-
     bool islower(charT ch, const locale &amp;loc);</code></pre> 
 Checks if the given character is classified as a lowercase alphabetic character by the given locale's std::ctype facet. 
 
@@ -37,11 +35,8 @@ Returns true if the character is classified as lowercase, false otherwise.
 
 Demonstrates the use of islower() with different locales (OS-specific). 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 int main()
-
 {
     const wchar_t c = L'\u03c0'; // greek small letter pi
     std::locale loc1(&quot;C&quot;);

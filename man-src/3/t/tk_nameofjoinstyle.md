@@ -16,10 +16,10 @@ const char *
 <code>Tk_NameOfJoinStyle(</code><i>join</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting.</p>
-<dd>const char <i>*string</i> (in) String containing name of join style: one of &#8220;bevel&#8221;, &#8220;miter&#8221;, or &#8220;round&#8221;.</p>
-<dd>int <i>*joinPtr</i> (out) Pointer to location in which to store X join style corresponding to <i>string</i>.</p>
-<dd>int <i>join</i> (in) Join style: one of <code>JoinBevel</code>, <code>JoinMiter</code>, <code>JoinRound</code>. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting.</dd>
+<dd>const char <i>*string</i> (in) String containing name of join style: one of &#8220;bevel&#8221;, &#8220;miter&#8221;, or &#8220;round&#8221;.</dd>
+<dd>int <i>*joinPtr</i> (out) Pointer to location in which to store X join style corresponding to <i>string</i>.</dd>
+<dd>int <i>join</i> (in) Join style: one of <code>JoinBevel</code>, <code>JoinMiter</code>, <code>JoinRound</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_GetJoinStyle</code> places in <i>*joinPtr</i> the X join style corresponding to <i>string</i>, which will be one of <code>JoinBevel</code>, <code>JoinMiter</code>, or <code>JoinRound</code>. Join styles are typically used in X graphics contexts to indicate how adjacent line segments should be joined together. See the X documentation for information on what each style implies. </p>

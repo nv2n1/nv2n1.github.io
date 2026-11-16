@@ -15,11 +15,11 @@ strcspn - Calculate the length of the initial substring of <i>s</i> which does n
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>The string to be searched</dl>
+<dl><dd></dd><dd>The string to be searched</dd></dl>
  
 
  <i>reject</i>
-<dl><dd>The string to avoid</dl>
+<dl><dd>The string to avoid</dd></dl>
 
 <h2>Copyright</h2>
 

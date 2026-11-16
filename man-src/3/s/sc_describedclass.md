@@ -11,7 +11,6 @@ description: "sc::DescribedClass –"
 <p> Classes which need runtime information about themselves and their relationship to other classes can virtually inherit from <code>DescribedClass</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;class.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::AnimatedObject</code>, <code>sc::Appearance</code>, <code>sc::BEMSolvent</code>, <code>sc::DescribedClassProxy</code>, <code>sc::DiagSCMatrix</code>, <code>sc::FileGrp</code>, <code>sc::GlobalMsgIter</code>, <code>sc::IntegralStorer</code>, <code>sc::MachineTopology</code>, <code>sc::Material</code>, <code>sc::MemoryGrp</code>, <code>sc::MessageGrp</code>, <code>sc::MoleculeColorizer</code>, <code>sc::PsiExEnv</code>, <code>sc::RegionTimer</code>, <code>sc::Render</code>, <code>sc::RenderedObject</code>, <code>sc::SavableState</code>, <code>sc::SCMatrix</code>, <code>sc::SCMatrixKit</code>, <code>sc::SCVector</code>, <code>sc::StateIn</code>, <code>sc::StateOut</code>, <code>sc::SymmSCMatrix</code>, <code>sc::ThreadGrp</code>, <code>sc::Transform</code>, <code>sc::TriangleIntegrator</code>, and <code>sc::TriangulatedSurface</code>.</p>
 <h3>Public Member Functions</h3>

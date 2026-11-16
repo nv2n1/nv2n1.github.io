@@ -15,9 +15,9 @@ description: "ldns_zone"
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_zone</i></p>
+<dt> <i>ldns_zone</i></dt>
 <dd>
-<dd>DNS Zone </p>
+</dd><dd>DNS Zone </dd>
 <p> A list of RR&#8217;s with some<br />
  extra information which comes from the SOA RR<br />
  Note: nothing has been done to make this efficient (yet).<br />
@@ -43,3 +43,4 @@ description: "ldns_zone"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

@@ -11,11 +11,8 @@ std::literals::chrono_literals::operator&quot;&quot;min - std::literals::chrono_
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;chrono&gt;
-
 constexpr chrono::minutes operator &quot;&quot; min(unsigned long long mins); (1) (since C++14)
-
 constexpr chrono::duration&lt;/*unspecified*/, ratio&lt;60,1&gt;&gt;            (2) (since C++14)
-
 operator &quot;&quot; min(long double mins);</code></pre> 
 Forms a std::chrono::duration literal representing minutes. 
 1) integer literal, returns exactly std::chrono::minutes(mins) 
@@ -49,10 +46,8 @@ In addition, within the namespace std::chrono, the directive using namespace lit
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     using namespace std::chrono_literals;
     auto lesson = 45min;

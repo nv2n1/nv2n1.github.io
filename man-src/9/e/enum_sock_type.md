@@ -23,31 +23,31 @@ enum_sock_type - Socket types
 <h2>Constants</h2>
 
 SOCK_STREAM
-<dl><dd>stream (connection) socket</dl>
+<dl><dd>stream (connection) socket</dd></dl>
  
 
  SOCK_DGRAM
-<dl><dd>datagram (conn.less) socket</dl>
+<dl><dd>datagram (conn.less) socket</dd></dl>
  
 
  SOCK_RAW
-<dl><dd>raw socket</dl>
+<dl><dd>raw socket</dd></dl>
  
 
  SOCK_RDM
-<dl><dd>reliably-delivered message</dl>
+<dl><dd>reliably-delivered message</dd></dl>
  
 
  SOCK_SEQPACKET
-<dl><dd>sequential packet socket</dl>
+<dl><dd>sequential packet socket</dd></dl>
  
 
  SOCK_DCCP
-<dl><dd>Datagram Congestion Control Protocol socket</dl>
+<dl><dd>Datagram Congestion Control Protocol socket</dd></dl>
  
 
  SOCK_PACKET
-<dl><dd>linux specific way of getting packets at the dev level. For writing rarp and other similar things on the user level.</dl>
+<dl><dd>linux specific way of getting packets at the dev level. For writing rarp and other similar things on the user level.</dd></dl>
 
 <h2>Description</h2>
 

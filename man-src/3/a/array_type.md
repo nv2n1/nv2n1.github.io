@@ -29,7 +29,7 @@ description: "QuantLib::BoundaryCondition – Abstract boundary condition class 
 <p> <code>Possible enhancements</code></p>
 <dl>
 <dt>
-<dd> Generalize for n-dimensional conditions</dl>
+</dt><dd> Generalize for n-dimensional conditions</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual void applyBeforeApplying (operator_type &amp;) const [pure virtual]</h3>
 <p> This method modifies an operator $ L $ before it is applied to an array $ u $ so that $ v = Lu $ will satisfy the given condition. </p>
@@ -49,7 +49,7 @@ description: "QuantLib::BoundaryCondition – Abstract boundary condition class 
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Member Function Documentation</a></p>
+<dt><a href="#lbAJ">Member Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAP">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">Author</a></dt>
+<dd></dd></dl>

@@ -32,7 +32,7 @@ exceptions:
  The following example statement can be included in user
  documentation to satisfy this requirement:
  [program/widget] is based in part on the work of
- the Qwt project (</P><a rel="nofollow" HREF="http://qwt.sf.net">http://qwt.sf.net</a>).
+ the Qwt project (<a rel="nofollow" HREF="http://qwt.sf.net">http://qwt.sf.net</a>).
 ----------------------------------------------------------------------
  GNU LESSER GENERAL PUBLIC LICENSE
  Version 2.1, February 1999

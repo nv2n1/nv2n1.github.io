@@ -13,7 +13,6 @@ description: "std::strtoimax,std::strtoumax – std::strtoimax,std::strtoumax"
 std::intmax_t strtoimax( const char* nptr, char** endptr, int base ); <i>(since C++11)</i><br />
 std::uintmax_t strtoumax( const char* nptr, char** endptr, int base ); <i>(since C++11)</i> </p>
 <pre><code>Interprets an integer value in a byte string pointed to by nptr.
-
 Discards any whitespace characters (as identified by calling isspace()) until the first non-whitespace character is found, then takes as many characters as possible to form a valid base-n (where n=base) integer number representation and converts them to an integer value. The valid integer value consists of the following parts:</code></pre>
 <p>* (optional) plus or minus sign<br />
 * (optional) prefix <code>(0)</code> indicating octal base (applies only when the base is 8 or 0)<br />
@@ -36,12 +35,9 @@ base &#8211; base of the interpreted integer value</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cinttypes&gt;
 int main()
-
 {
     std::string str = &quot;helloworld&quot;;
     std::intmax_t val = std::strtoimax(str.c_str(), nullptr, 36);

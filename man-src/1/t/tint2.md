@@ -19,8 +19,8 @@ description: "tint2 – lightweight panel/taskbar"
 <p> See the wiki page at <a rel="nofollow" href="https://gitlab.com/o9000/tint2/wikis/home">https://gitlab.com/o9000/tint2/wikis/home</a> for more information.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c config-file</code></p>
-<dd> Specify which configuration file to use instead of the default.</dl>
+<dt><code>-c config-file</code></dt>
+<dd> Specify which configuration file to use instead of the default.</dd></dl>
 <h2>AUTHOR</h2>
 <p> tint2 was written by Thierry Lorthiois &lt;lorthiois [at] bbsoft.fr&gt;. It is based on ttm, originally written by Pål Staurland &lt;staura [at] gmail.com&gt; </p>
 <p> This manual page was written by Daniel Moerner &lt;dmoerner [at] gmail.com&gt;, for the Debian project (but may be used by others). It was adopted from the tint2 docs. </p>

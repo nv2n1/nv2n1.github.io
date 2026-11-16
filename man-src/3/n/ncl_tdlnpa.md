@@ -22,9 +22,9 @@ CALL TDLNPA (XCP1, YCP1, XCP2, YCP2)
 
 The arguments of TDLNPA are as follows:
 <dl><dt>XCP1 and YCP1
-<dd>(input expressions of type REAL) - the parallelogram coordinates of a point in the reference parallelogram (as defined by the last call to TDPARA).
-<dt>XCP2 and YCP2
-<dd>(input expressions of type REAL) - the parallelogram coordinates of another point in the reference parallelogram.</dl>
+</dt><dd>(input expressions of type REAL) - the parallelogram coordinates of a point in the reference parallelogram (as defined by the last call to TDPARA).
+</dd><dt>XCP2 and YCP2
+</dt><dd>(input expressions of type REAL) - the parallelogram coordinates of another point in the reference parallelogram.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

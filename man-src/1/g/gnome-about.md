@@ -17,8 +17,8 @@ description: "gnome-about – Learn more about GNOME"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;gnome-version</i></p>
-<dd> Output the GNOME version instead of running a graphical interface.</dl>
+<dt><i>&#8211;gnome-version</i></dt>
+<dd> Output the GNOME version instead of running a graphical interface.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>gnome-about</i> program, please report these on <a rel="nofollow" href="http://bugzilla.gnome.org.">http://bugzilla.gnome.org.</a> </p>
 <h2>Index</h2>

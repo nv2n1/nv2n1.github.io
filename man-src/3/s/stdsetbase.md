@@ -11,7 +11,6 @@ std::setbase - std::setbase
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iomanip&gt;
-
 /*unspecified*/ setbase(int base);</code></pre> 
 Sets the numeric base of the stream. When used in an expression out &lt;&lt; setbase(base) or in &gt;&gt; setbase(base), changes the basefield flag of the stream out or in, depending on the value of base: 
 * the value 16 sets basefield to std::ios_base::hex 
@@ -36,13 +35,9 @@ std::ios_base::basefield);
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;iomanip&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;Parsing string \&quot;10 0x10 010\&quot;\n&quot;;
     int n1, n2, n3;

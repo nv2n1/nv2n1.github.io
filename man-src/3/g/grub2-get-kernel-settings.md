@@ -15,10 +15,10 @@ description: "grub-get-kernel-settings — Evaluate the system’s kernel instal
 <p> <code>grub-get-kernel-settings</code> reads the kernel installation settings on the host system, and emits a set of grub settings suitable for use when creating a grub configuration file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display program usage and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Display the current version. </p>
+<dt>-h, &#8211;help</dt>
+<dd> Display program usage and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Display the current version. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>

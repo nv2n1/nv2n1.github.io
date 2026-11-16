@@ -20,12 +20,12 @@ description: "powerman-pdu – Driver for Powerman PDU"
 <h2>Commands</h2>
 <p>The following commands are available for each outlet, with X for the outlet number:</p>
 <dl>
-<dt><code>outlet.X.load.on</code></p>
-<dd>power on the outlet.</p>
-<dt><code>outlet.X.load.off</code></p>
-<dd>power off the outlet.</p>
-<dt><code>outlet.X.load.cycle</code></p>
-<dd>cycle the outlet (power off then power on, possibly with a delay). </p>
+<dt><code>outlet.X.load.on</code></dt>
+<dd>power on the outlet.</dd>
+<dt><code>outlet.X.load.off</code></dt>
+<dd>power off the outlet.</dd>
+<dt><code>outlet.X.load.cycle</code></dt>
+<dd>cycle the outlet (power off then power on, possibly with a delay). </dd>
 </dl>
 <h2>Implementation</h2>
 <p>The hostname of the Powerman server is specified using the &quot;port&quot; value in <code>ups.conf</code>, i.e.: </p>

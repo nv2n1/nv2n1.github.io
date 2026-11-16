@@ -13,20 +13,20 @@ description: "vpCurrentMatrix – choose the current transformation matrix"
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpCurrentMatrix(</code><i>vpc, option</i><code>)</code></p>
+<dt> <code>vpCurrentMatrix(</code><i>vpc, option</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>option;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>option;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>option</i></p>
-<dd>A code specifying one of the VolPack transformation matrices (VP_MODEL, VP_VIEW or VP_PROJECT).</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>option</i></dt>
+<dd>A code specifying one of the VolPack transformation matrices (VP_MODEL, VP_VIEW or VP_PROJECT).</dd></dl>
 <h2>Description</h2>
 <p><code>vpCurrentMatrix</code> is used to choose the current transformation matrix. The <i>option</i> parameter must be one of the following:</p>
 <dl>
-<dd>VP_MODEL<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>modeling transformation</p>
+<dd>VP_MODEL<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>modeling transformation</dd>
 <p> VP_VIEW<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>viewing transformation</p>
 <p> VP_PROJECT<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>projection transformation
 </dl>
@@ -39,7 +39,7 @@ description: "vpCurrentMatrix – choose the current transformation matrix"
 <h2>Errors</h2>
 <p>The normal return value is VP_OK. The following error return value is possible:</p>
 <dl>
-<dt>VPERROR_BAD_OPTION</p>
-<dd>The <i>option</i> argument is invalid.</dl>
+<dt>VPERROR_BAD_OPTION</dt>
+<dd>The <i>option</i> argument is invalid.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vpgetmatrix/">vpGetMatrix</a>(3) </p>

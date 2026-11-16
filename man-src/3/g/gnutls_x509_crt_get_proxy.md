@@ -14,18 +14,18 @@ description: "gnutls_x509_crt_get_proxy – API function"
 <p> <code>int gnutls_x509_crt_get_proxy(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int * </code><i>critical</i><code>, int * </code><i>pathlen</i><code>, char ** </code><i>policyLanguage</i><code>, char ** </code><i>policy</i><code>, size_t * </code><i>sizeof_policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>unsigned int * critical</p>
-<dd> will be non-zero if the extension is marked as critical</p>
-<dt>int * pathlen</p>
-<dd> pointer to output integer indicating path length (may be NULL), non-negative error codes indicate a present pCPathLenConstraint field and the actual value, -1 indicate that the field is absent.</p>
-<dt>char ** policyLanguage</p>
-<dd> output variable with OID of policy language</p>
-<dt>char ** policy</p>
-<dd> output variable with policy data</p>
-<dt>size_t * sizeof_policy</p>
-<dd> output variable size of policy data</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>unsigned int * critical</dt>
+<dd> will be non-zero if the extension is marked as critical</dd>
+<dt>int * pathlen</dt>
+<dd> pointer to output integer indicating path length (may be NULL), non-negative error codes indicate a present pCPathLenConstraint field and the actual value, -1 indicate that the field is absent.</dd>
+<dt>char ** policyLanguage</dt>
+<dd> output variable with OID of policy language</dd>
+<dt>char ** policy</dt>
+<dd> output variable with policy data</dd>
+<dt>size_t * sizeof_policy</dt>
+<dd> output variable size of policy data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will get information from a proxy certificate. It reads the ProxyCertInfo X.509 extension (1.3.6.1.5.5.7.1.14).</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_x509_crt_get_proxy – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

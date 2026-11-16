@@ -22,28 +22,28 @@ description: "struct_futex_q – The hashed futex queue entry, one per waiting t
 <h2>Members</h2>
 <p>list</p>
 <dl>
-<dd>priority-sorted list of tasks waiting on this futex</dl>
+<dd>priority-sorted list of tasks waiting on this futex</dd></dl>
 <p> task</p>
 <dl>
-<dd>the task waiting on the futex</dl>
+<dd>the task waiting on the futex</dd></dl>
 <p> lock_ptr</p>
 <dl>
-<dd>the hash bucket lock</dl>
+<dd>the hash bucket lock</dd></dl>
 <p> key</p>
 <dl>
-<dd>the key the futex is hashed on</dl>
+<dd>the key the futex is hashed on</dd></dl>
 <p> pi_state</p>
 <dl>
-<dd>optional priority inheritance state</dl>
+<dd>optional priority inheritance state</dd></dl>
 <p> rt_waiter</p>
 <dl>
-<dd>rt_waiter storage for use with requeue_pi</dl>
+<dd>rt_waiter storage for use with requeue_pi</dd></dl>
 <p> requeue_pi_key</p>
 <dl>
-<dd>the requeue_pi target futex key</dl>
+<dd>the requeue_pi target futex key</dd></dl>
 <p> bitset</p>
 <dl>
-<dd>bitset for the optional bitmasked wakeup</dl>
+<dd>bitset for the optional bitmasked wakeup</dd></dl>
 <h2>Description</h2>
 <p>We use this hashed waitqueue, instead of a normal wait_queue_t, so we can wake only the relevant ones (hashed queues may be shared). </p>
 <p> A futex_q has a woken state, just like tasks have TASK_RUNNING. It is considered woken when plist_node_empty(q-&gt;list) || q-&gt;lock_ptr == 0. The order of wakeup is always to make the first condition true, then the second. </p>
@@ -51,5 +51,5 @@ description: "struct_futex_q – The hashed futex queue entry, one per waiting t
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

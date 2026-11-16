@@ -32,7 +32,7 @@ description: "Plugin library access –"
 <p> <i>host_features</i> NULL-terminated array of features the host supports. NULL may be passed if the host supports no additional features (unlike the LV2 specification &#8211; SLV2 takes care of it). </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL if instantiation failed.</dl>
+<dd>NULL if instantiation failed.</dd></dl>
 <h3>void slv2_instance_free (SLV2Instanceinstance)</h3>
 <p>Free a plugin instance. <i>instance</i> is invalid after this call.</p>
 <h3>static const char* slv2_instance_get_uri (SLV2Instanceinstance) [inline], [static]</h3>
@@ -59,7 +59,7 @@ description: "Plugin library access –"
 <p> <i>host_features</i> NULL-terminated array of features the host supports. NULL may be passed if the host supports no additional features (unlike the LV2 specification &#8211; SLV2 takes care of it). </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL if instantiation failed.</dl>
+<dd>NULL if instantiation failed.</dd></dl>
 <h3>void slv2_ui_instance_free (SLV2UIInstanceinstance)</h3>
 <p>Free a plugin UI instance. It is the caller&#8217;s responsibility to ensure all references to the UI instance (including any returned widgets) are cut before calling this function. </p>
 <p> <i>instance</i> is invalid after this call.</p>

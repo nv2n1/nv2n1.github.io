@@ -34,3 +34,4 @@ description: "ascii – ASCII character set encoded in octal, decimal, and hexad
 <td>0</td>
 <td>00</td>
 <td>NUL &#8216;
+</table>

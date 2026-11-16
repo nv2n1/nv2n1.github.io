@@ -11,7 +11,6 @@ std::locale::id - std::locale::id
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;locale&gt;
-
 class locale::id;</code></pre> 
 The class std::locale::id provides implementation-specific identification of a locale facet. Each class derived from std::locale::facet must have a public static member named id of type std::locale::id and each std::locale object maintains a list of facets it implements, indexed by their ids. 
 Facets with the same id belong to the same facet category and replace each other when added to a locale object. 
@@ -27,10 +26,8 @@ operator= <i>(public member function)</i>
 
 The following example shows how to construct a minimal custom facet. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 struct myfacet : std::locale::facet
-
 {
     myfacet(std::size_t refs = 0)
         : facet(refs)
@@ -40,7 +37,6 @@ struct myfacet : std::locale::facet
 };
 std::locale::id myfacet::id;
 int main()
-
 {
     std::locale myloc(std::locale(), new myfacet);
     std::cout &lt;&lt; &quot;has_facet&lt;myfacet&gt;(myloc) returns &quot; &lt;&lt; std::boolalpha

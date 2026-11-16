@@ -35,58 +35,58 @@ description: "QwtSeriesStore< T > –"
 <h3>template&lt;typename T &gt; <code>QwtSeriesData</code>&lt; T &gt; * <code>QwtSeriesStore</code>&lt; T &gt;::data () [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the the series data</dl>
+<dd>the the series data</dd></dl>
 <h3>template&lt;typename T &gt; const <code>QwtSeriesData</code>&lt; T &gt; * <code>QwtSeriesStore</code>&lt; T &gt;::data () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the the series data</dl>
+<dd>the the series data</dd></dl>
 <h3>template&lt;typename T &gt; QRectF <code>QwtSeriesStore</code>&lt; T &gt;::dataRect () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the series or an invalid rectangle, when no series is stored</dl>
+<dd>Bounding rectangle of the series or an invalid rectangle, when no series is stored</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtSeriesData&lt;T&gt;::boundingRect()</code></dl>
+<dd><code>QwtSeriesData&lt;T&gt;::boundingRect()</code></dd></dl>
 <p> Implements <code>QwtAbstractSeriesStore</code>.</p>
 <h3>template&lt;typename T &gt; size_t <code>QwtSeriesStore</code>&lt; T &gt;::dataSize () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of samples of the series</dl>
+<dd>Number of samples of the series</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setData()</code>, <code>QwtSeriesData&lt;T&gt;::size()</code></dl>
+<dd><code>setData()</code>, <code>QwtSeriesData&lt;T&gt;::size()</code></dd></dl>
 <p> Implements <code>QwtAbstractSeriesStore</code>.</p>
 <h3>template&lt;typename T &gt; T <code>QwtSeriesStore</code>&lt; T &gt;::sample (intindex) const [inline]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index</dl>
+<dd><i>index</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Sample at position index</dl>
+<dd>Sample at position index</dd></dl>
 <h3>template&lt;typename T&gt; void <code>QwtSeriesStore</code>&lt; T &gt;::setData (<code>QwtSeriesData</code>&lt; T &gt; *series)</h3>
 <p>Assign a series of samples </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>series</i> Data</dl>
+<dd><i>series</i> Data</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dl>
+<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dd></dl>
 <h3>template&lt;typename T &gt; void <code>QwtSeriesStore</code>&lt; T &gt;::setRectOfInterest (const QRectF &amp;rect) [virtual]</h3>
 <p>Set a the &#8216;rect of interest&#8217; for the series </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Rectangle of interest</dl>
+<dd><i>rect</i> Rectangle of interest</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtSeriesData&lt;T&gt;::setRectOfInterest()</code></dl>
+<dd><code>QwtSeriesData&lt;T&gt;::setRectOfInterest()</code></dd></dl>
 <p> Implements <code>QwtAbstractSeriesStore</code>.</p>
 <h3>template&lt;typename T&gt; <code>QwtSeriesData</code>&lt; T &gt; * <code>QwtSeriesStore</code>&lt; T &gt;::swapData (<code>QwtSeriesData</code>&lt; T &gt; *series)</h3>
 <p>Replace a series without deleting the previous one </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>series</i> New series</dl>
+<dd><i>series</i> New series</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Previously assigned series</dl>
+<dd>Previously assigned series</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

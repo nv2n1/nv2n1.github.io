@@ -15,38 +15,38 @@ description: "bundle-update – Update your gems to the latest available version
 <p> You would use <code>bundle update</code> to explicitly update the version of a gem.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;all</code></p>
-<dd>Update all gems specified in Gemfile.</p>
-<dt><code>&#8211;group=&lt;name&gt;</code>, <code>-g=[&lt;name&gt;]</code></p>
-<dd>Only update the gems in the specified group. For instance, you can update all gems in the development group with <code>bundle update &#8211;group development</code>. You can also call <code>bundle update rails &#8211;group test</code> to update the rails gem and all gems in the test group, for example.</p>
-<dt><code>&#8211;source=&lt;name&gt;</code></p>
-<dd>The name of a <code>:git</code> or <code>:path</code> source used in the Gemfile(5). For instance, with a <code>:git</code> source of <code><a rel="nofollow" href="http://github.com/rails/rails.git">http://github.com/rails/rails.git</a></code>, you would call <code>bundle update &#8211;source rails</code></p>
-<dt><code>&#8211;local</code></p>
-<dd>Do not attempt to fetch gems remotely and use the gem cache instead.</p>
-<dt><code>&#8211;ruby</code></p>
-<dd>Update the locked version of Ruby to the current version of Ruby.</p>
-<dt><code>&#8211;bundler</code></p>
-<dd>Update the locked version of bundler to the invoked bundler version.</p>
-<dt><code>&#8211;full-index</code></p>
-<dd>Fall back to using the single-file index of all gems.</p>
-<dt><code>&#8211;jobs=[&lt;number&gt;]</code>, <code>-j[&lt;number&gt;]</code></p>
-<dd>Specify the number of jobs to run in parallel. The default is <code>1</code>.</p>
-<dt><code>&#8211;retry=[&lt;number&gt;]</code></p>
-<dd>Retry failed network or git requests for <i>number</i> times.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Only output warnings and errors.</p>
-<dt><code>&#8211;redownload</code></p>
-<dd>Force downloading every gem.</p>
-<dt><code>&#8211;patch</code></p>
-<dd>Prefer updating only to next patch version.</p>
-<dt><code>&#8211;minor</code></p>
-<dd>Prefer updating only to next minor version.</p>
-<dt><code>&#8211;major</code></p>
-<dd>Prefer updating to next major version (default).</p>
-<dt><code>&#8211;strict</code></p>
-<dd>Do not allow any gem to be updated past latest <code>&#8211;patch</code> | <code>&#8211;minor</code> | <code>&#8211;major</code>.</p>
-<dt><code>&#8211;conservative</code></p>
-<dd>Use bundle install conservative update behavior and do not allow shared dependencies to be updated.</dl>
+<dt><code>&#8211;all</code></dt>
+<dd>Update all gems specified in Gemfile.</dd>
+<dt><code>&#8211;group=&lt;name&gt;</code>, <code>-g=[&lt;name&gt;]</code></dt>
+<dd>Only update the gems in the specified group. For instance, you can update all gems in the development group with <code>bundle update &#8211;group development</code>. You can also call <code>bundle update rails &#8211;group test</code> to update the rails gem and all gems in the test group, for example.</dd>
+<dt><code>&#8211;source=&lt;name&gt;</code></dt>
+<dd>The name of a <code>:git</code> or <code>:path</code> source used in the Gemfile(5). For instance, with a <code>:git</code> source of <code><a rel="nofollow" href="http://github.com/rails/rails.git">http://github.com/rails/rails.git</a></code>, you would call <code>bundle update &#8211;source rails</code></dd>
+<dt><code>&#8211;local</code></dt>
+<dd>Do not attempt to fetch gems remotely and use the gem cache instead.</dd>
+<dt><code>&#8211;ruby</code></dt>
+<dd>Update the locked version of Ruby to the current version of Ruby.</dd>
+<dt><code>&#8211;bundler</code></dt>
+<dd>Update the locked version of bundler to the invoked bundler version.</dd>
+<dt><code>&#8211;full-index</code></dt>
+<dd>Fall back to using the single-file index of all gems.</dd>
+<dt><code>&#8211;jobs=[&lt;number&gt;]</code>, <code>-j[&lt;number&gt;]</code></dt>
+<dd>Specify the number of jobs to run in parallel. The default is <code>1</code>.</dd>
+<dt><code>&#8211;retry=[&lt;number&gt;]</code></dt>
+<dd>Retry failed network or git requests for <i>number</i> times.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Only output warnings and errors.</dd>
+<dt><code>&#8211;redownload</code></dt>
+<dd>Force downloading every gem.</dd>
+<dt><code>&#8211;patch</code></dt>
+<dd>Prefer updating only to next patch version.</dd>
+<dt><code>&#8211;minor</code></dt>
+<dd>Prefer updating only to next minor version.</dd>
+<dt><code>&#8211;major</code></dt>
+<dd>Prefer updating to next major version (default).</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd>Do not allow any gem to be updated past latest <code>&#8211;patch</code> | <code>&#8211;minor</code> | <code>&#8211;major</code>.</dd>
+<dt><code>&#8211;conservative</code></dt>
+<dd>Use bundle install conservative update behavior and do not allow shared dependencies to be updated.</dd></dl>
 <h2>Updating All Gems</h2>
 <p>If you run <code>bundle update &#8211;all</code>, bundler will ignore any previously installed gems and resolve all dependencies again based on the latest versions of all gems available in the sources. </p>
 <p> Consider the following Gemfile(5):</p>
@@ -55,7 +55,7 @@ description: "bundle-update – Update your gems to the latest available version
 <pre>source &quot;<a rel="nofollow" href="https://rubygems.org">https://rubygems.org</a>&quot;
 gem &quot;rails&quot;, &quot;3.0.0.rc&quot;
 gem &quot;nokogiri&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> When you run bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> the first time, bundler will resolve all of the dependencies, all the way down, and install what you need:</p>
 <dl>
 <dd>
@@ -89,7 +89,7 @@ Installing rails 3.0.0.rc
 Installing nokogiri 1.6.5
 Bundle complete! 2 Gemfile dependencies, 26 gems total.
 Use `bundle show [gemname]` to see where a bundled gem is installed.</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> As you can see, even though you have two gems in the Gemfile(5), your application needs 26 different gems in order to run. Bundler remembers the exact versions it installed in <code>Gemfile.lock</code>. The next time you run bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i>, bundler skips the dependency resolution and installs the same gems as it installed last time. </p>
 <p> After checking in the <code>Gemfile.lock</code> into version control and cloning it on another machine, running bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> will <i>still</i> install the gems that you installed last time. You don&#8217;t need to worry that a new release of <code>erubis</code> or <code>mail</code> changes the gems you use. </p>
 <p> However, from time to time, you might want to update the gems you are using to the newest versions that still match the gems in your Gemfile(5). </p>
@@ -105,7 +105,7 @@ Use `bundle show [gemname]` to see where a bundled gem is installed.</pre>
 <pre>source &quot;<a rel="nofollow" href="https://rubygems.org">https://rubygems.org</a>&quot;
 gem &quot;thin&quot;
 gem &quot;rack-perftools-profiler&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The <code>thin</code> gem depends on <code>rack &gt;= 1.0</code>, while <code>rack-perftools-profiler</code> depends on <code>rack ~&gt; 1.0</code>. If you run bundle install, you get:</p>
 <dl>
 <dd>
@@ -118,7 +118,7 @@ Installing rack (1.2.1)
 Installing rack-perftools_profiler (0.0.2)
 Installing thin (1.2.7) with native extensions
 Using bundler (1.0.0.rc.3)</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> In this case, the two gems have their own set of dependencies, but they share <code>rack</code> in common. If you run <code>bundle update thin</code>, bundler will update <code>daemons</code>, <code>eventmachine</code> and <code>rack</code>, which are dependencies of <code>thin</code>, but not <code>open4</code> or <code>perftools.rb</code>, which are dependencies of <code>rack-perftools_profiler</code>. Note that <code>bundle update thin</code> will update <code>rack</code> even though it&#8217;s <i>also</i> a dependency of <code>rack-perftools_profiler</code>. </p>
 <p> In short, by default, when you update a gem using <code>bundle update</code>, bundler will update all dependencies of that gem, including those that are also dependencies of another gem. </p>
 <p> To prevent updating shared dependencies, prior to version 1.14 the only option was the <code>CONSERVATIVE UPDATING</code> behavior in bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i>: </p>
@@ -127,14 +127,14 @@ Using bundler (1.0.0.rc.3)</pre>
 <h2>Patch Level Options</h2>
 <p>Version 1.14 introduced 4 patch-level options that will influence how gem versions are resolved. One of the following options can be used: <code>&#8211;patch</code>, <code>&#8211;minor</code> or <code>&#8211;major</code>. <code>&#8211;strict</code> can be added to further influence resolution.</p>
 <dl>
-<dt><code>&#8211;patch</code></p>
-<dd>Prefer updating only to next patch version.</p>
-<dt><code>&#8211;minor</code></p>
-<dd>Prefer updating only to next minor version.</p>
-<dt><code>&#8211;major</code></p>
-<dd>Prefer updating to next major version (default).</p>
-<dt><code>&#8211;strict</code></p>
-<dd>Do not allow any gem to be updated past latest <code>&#8211;patch</code> | <code>&#8211;minor</code> | <code>&#8211;major</code>.</dl>
+<dt><code>&#8211;patch</code></dt>
+<dd>Prefer updating only to next patch version.</dd>
+<dt><code>&#8211;minor</code></dt>
+<dd>Prefer updating only to next minor version.</dd>
+<dt><code>&#8211;major</code></dt>
+<dd>Prefer updating to next major version (default).</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd>Do not allow any gem to be updated past latest <code>&#8211;patch</code> | <code>&#8211;minor</code> | <code>&#8211;major</code>.</dd></dl>
 <p> When Bundler is resolving what versions to use to satisfy declared requirements in the Gemfile or in parent gems, it looks up all available versions, filters out any versions that don&#8217;t satisfy the requirement, and then, by default, sorts them from newest to oldest, considering them in that order. </p>
 <p> Providing one of the patch level options (e.g. <code>&#8211;patch</code>) changes the sort order of the satisfying versions, causing Bundler to consider the latest <code>&#8211;patch</code> or <code>&#8211;minor</code> version available before other versions. Note that versions outside the stated patch level could still be resolved to if necessary to find a suitable dependency graph. </p>
 <p> For example, if gem &#8216;foo&#8217; is locked at 1.0.2, with no gem requirement defined in the Gemfile, and versions 1.0.3, 1.0.4, 1.1.0, 1.1.1, 2.0.0 all exist, the default order of preference by default (<code>&#8211;major</code>) will be &quot;2.0.0, 1.1.1, 1.1.0, 1.0.4, 1.0.3, 1.0.2&quot;. </p>
@@ -153,19 +153,19 @@ foo 1.4.5, requires: ~&gt; bar 2.1
 foo 1.5.0, requires: ~&gt; bar 2.1
 foo 1.5.1, requires: ~&gt; bar 3.0
 bar with versions 2.0.3, 2.0.4, 2.1.0, 2.1.1, 3.0.0</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Gemfile:</p>
 <dl>
 <dd>
 <pre>gem 'foo'</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Gemfile.lock:</p>
 <dl>
 <dd>
 <pre>foo (1.4.3)
  bar (~&gt; 2.0)
 bar (2.0.3)</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Cases:</p>
 <dl>
 <dd>
@@ -176,7 +176,7 @@ bar (2.0.3)</pre>
 3 bundle update --minor 'foo 1.5.1', 'bar 3.0.0'
 4 bundle update --minor --strict 'foo 1.5.0', 'bar 2.1.1'
 5 bundle update --patch --strict 'foo 1.4.4', 'bar 2.0.4'</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> In case 1, bar is upgraded to 2.1.1, a minor version increase, because the dependency from foo 1.4.5 required it. </p>
 <p> In case 2, only foo is requested to be unlocked, but bar is also allowed to move because it&#8217;s not a declared dependency in the Gemfile. </p>
 <p> In case 3, bar goes up a whole major release, because a minor increase is preferred now for foo, and when it goes to 1.5.1, it requires 3.0.0 of bar. </p>
@@ -185,28 +185,28 @@ bar (2.0.3)</pre>
 <h2>Recommended Workflow</h2>
 <p>In general, when working with an application managed with bundler, you should use the following workflow:</p>
 <dl>
-<dt>&bull;</p>
-<dd>After you create your Gemfile(5) for the first time, run</p>
-<dd>$ bundle install</p>
-<dt>&bull;</p>
-<dd>Check the resulting <code>Gemfile.lock</code> into version control</p>
-<dd>$ git add Gemfile.lock</p>
-<dt>&bull;</p>
-<dd>When checking out this repository on another development machine, run</p>
-<dd>$ bundle install</p>
-<dt>&bull;</p>
-<dd>When checking out this repository on a deployment machine, run</p>
-<dd>$ bundle install &#8211;deployment</p>
-<dt>&bull;</p>
-<dd>After changing the Gemfile(5) to reflect a new or update dependency, run</p>
-<dd>$ bundle install</p>
-<dt>&bull;</p>
-<dd>Make sure to check the updated <code>Gemfile.lock</code> into version control</p>
-<dd>$ git add Gemfile.lock</p>
-<dt>&bull;</p>
-<dd>If bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> reports a conflict, manually update the specific gems that you changed in the Gemfile(5)</p>
-<dd>$ bundle update rails thin</p>
-<dt>&bull;</p>
-<dd>If you want to update all the gems to the latest possible versions that still match the gems listed in the Gemfile(5), run</p>
-<dd>$ bundle update &#8211;all</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>After you create your Gemfile(5) for the first time, run</dd>
+<dd>$ bundle install</dd>
+<dt>&bull;</dt>
+<dd>Check the resulting <code>Gemfile.lock</code> into version control</dd>
+<dd>$ git add Gemfile.lock</dd>
+<dt>&bull;</dt>
+<dd>When checking out this repository on another development machine, run</dd>
+<dd>$ bundle install</dd>
+<dt>&bull;</dt>
+<dd>When checking out this repository on a deployment machine, run</dd>
+<dd>$ bundle install &#8211;deployment</dd>
+<dt>&bull;</dt>
+<dd>After changing the Gemfile(5) to reflect a new or update dependency, run</dd>
+<dd>$ bundle install</dd>
+<dt>&bull;</dt>
+<dd>Make sure to check the updated <code>Gemfile.lock</code> into version control</dd>
+<dd>$ git add Gemfile.lock</dd>
+<dt>&bull;</dt>
+<dd>If bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> reports a conflict, manually update the specific gems that you changed in the Gemfile(5)</dd>
+<dd>$ bundle update rails thin</dd>
+<dt>&bull;</dt>
+<dd>If you want to update all the gems to the latest possible versions that still match the gems listed in the Gemfile(5), run</dd>
+<dd>$ bundle update &#8211;all</dd>
+<dd></dd></dl>

@@ -11,10 +11,8 @@ std::chrono::round(std::chrono::duration) - std::chrono::round(std::chrono::dura
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class ToDuration, class Rep, class Period&gt;
     (since C++ 17)
-
         constexpr ToDuration round(const duration&lt;Rep, Period&gt; &amp;d);</code></pre> 
 Returns the value t representable in ToDuration that is the closest to d. If there are two such values, returns the even value (that is, the value t such that t % 2 == 0). 
 The function does not participate in the overload resolution unless ToDuration is an instance of std::chrono::duration and std::chrono::treat_as_floating_point&lt;typename ToDuration::rep&gt;::value is false 

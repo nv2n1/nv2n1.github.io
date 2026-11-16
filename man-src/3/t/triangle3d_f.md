@@ -10,7 +10,6 @@ description: "triangle3d, triangle3d_f – Draws a 3d triangle onto the specifie
 <p>triangle3d, triangle3d_f &#8211; Draws a 3d triangle onto the specified bitmap. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void triangle3d(BITMAP *bmp, int type, BITMAP *tex, V3D *v1, *v2, *v3);
 void triangle3d_f(BITMAP *bmp, int type, BITMAP *tex, V3D_f *v1, *v2, *v3);</code></pre>
 <h2>Description</h2>

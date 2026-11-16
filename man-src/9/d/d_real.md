@@ -15,15 +15,15 @@ d_real - Return the real dentry
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>the dentry to query</dl>
+<dl><dd></dd><dd>the dentry to query</dd></dl>
  
 
  <i>inode</i>
-<dl><dd>inode to select the dentry from multiple layers (can be NULL)</dl>
+<dl><dd>inode to select the dentry from multiple layers (can be NULL)</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>open flags to control copy-up behavior</dl>
+<dl><dd>open flags to control copy-up behavior</dd></dl>
 
 <h2>Description</h2>
 

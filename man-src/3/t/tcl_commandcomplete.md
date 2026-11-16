@@ -14,7 +14,7 @@ int
 <code>Tcl_CommandComplete</code>(<i>cmd</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>const char <i>*cmd</i> (in) Command string to test for completeness. </p>
+<dd>const char <i>*cmd</i> (in) Command string to test for completeness. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_CommandComplete</code> takes a Tcl command string as argument and determines whether it contains one or more complete commands (i.e. there are no unclosed quotes, braces, brackets, or variable references). If the command string is complete then it returns 1; otherwise it returns 0. </p>

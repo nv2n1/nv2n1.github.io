@@ -76,8 +76,8 @@ description: "init_selinux – Security Enhanced Linux Policy for the init proce
 <p> <code>init_exec_t</code> </p>
 <p> &#8211; Set files with the init_exec_t type, if you want to transition an executable to the init_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/init(ng)?, /usr/sbin/init(ng)?, /usr/lib/systemd/[^/]*, /usr/lib/systemd/system-generators/[^/]*, /bin/systemd, /sbin/upstart, /usr/bin/systemd, /usr/sbin/upstart </p>
+<dt>Paths:</dt>
+<dd>/sbin/init(ng)?, /usr/sbin/init(ng)?, /usr/lib/systemd/[^/]*, /usr/lib/systemd/system-generators/[^/]*, /bin/systemd, /sbin/upstart, /usr/bin/systemd, /usr/sbin/upstart </dd>
 </dl>
 <p> <code>init_tmp_t</code> </p>
 <p> &#8211; Set files with the init_tmp_t type, if you want to store init temporary files in the /tmp directories. </p>
@@ -88,16 +88,16 @@ description: "init_selinux – Security Enhanced Linux Policy for the init proce
 <p> <code>initctl_t</code> </p>
 <p> &#8211; Set files with the initctl_t type, if you want to treat the files as initctl data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/dev/initctl, /var/run/initctl, /var/run/systemd/initctl/fifo </p>
+<dt>Paths:</dt>
+<dd>/dev/initctl, /var/run/initctl, /var/run/systemd/initctl/fifo </dd>
 </dl>
 <p> <code>initrc_devpts_t</code> </p>
 <p> &#8211; Set files with the initrc_devpts_t type, if you want to treat the files as initrc devpts data. </p>
 <p> <code>initrc_exec_t</code> </p>
 <p> &#8211; Set files with the initrc_exec_t type, if you want to transition an executable to the initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/init.d/.*, /etc/rc.d/rc.[^/]+, /etc/rc.d/init.d/.*, /opt/nfast/sbin/init.d-ncipher, /usr/lib/systemd/rhel[^/]*, /usr/libexec/dcc/stop-.*, /usr/libexec/dcc/start-.*, /opt/nfast/scripts/init.d/(.*), /etc/rc.d/rc, /etc/X11/prefdm, /usr/sbin/startx, /usr/bin/sepg_ctl, /usr/sbin/apachectl, /usr/sbin/ldap-agent, /usr/sbin/start-dirsrv, /usr/sbin/open_init_pty, /usr/sbin/restart-dirsrv, /etc/sysconfig/network-scripts/ifup-ipsec, /usr/share/system-config-services/system-config-services-mechanism.py </p>
+<dt>Paths:</dt>
+<dd>/etc/init.d/.*, /etc/rc.d/rc.[^/]+, /etc/rc.d/init.d/.*, /opt/nfast/sbin/init.d-ncipher, /usr/lib/systemd/rhel[^/]*, /usr/libexec/dcc/stop-.*, /usr/libexec/dcc/start-.*, /opt/nfast/scripts/init.d/(.*), /etc/rc.d/rc, /etc/X11/prefdm, /usr/sbin/startx, /usr/bin/sepg_ctl, /usr/sbin/apachectl, /usr/sbin/ldap-agent, /usr/sbin/start-dirsrv, /usr/sbin/open_init_pty, /usr/sbin/restart-dirsrv, /etc/sysconfig/network-scripts/ifup-ipsec, /usr/share/system-config-services/system-config-services-mechanism.py </dd>
 </dl>
 <p> <code>initrc_state_t</code> </p>
 <p> &#8211; Set files with the initrc_state_t type, if you want to treat the files as initrc state data. </p>
@@ -108,8 +108,8 @@ description: "init_selinux – Security Enhanced Linux Policy for the init proce
 <p> <code>initrc_var_run_t</code> </p>
 <p> &#8211; Set files with the initrc_var_run_t type, if you want to store the initrc files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/utmp, /var/run/random-seed, /var/run/runlevel.dir, /var/run/setmixer_flag </p>
+<dt>Paths:</dt>
+<dd>/var/run/utmp, /var/run/random-seed, /var/run/runlevel.dir, /var/run/setmixer_flag </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

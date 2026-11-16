@@ -14,14 +14,14 @@ description: "gnutls_x509_crt_get_basic_constraints – API function"
 <p> <code>int gnutls_x509_crt_get_basic_constraints(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int * </code><i>critical</i><code>, unsigned int * </code><i>ca</i><code>, int * </code><i>pathlen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>unsigned int * critical</p>
-<dd> will be non-zero if the extension is marked as critical</p>
-<dt>unsigned int * ca</p>
-<dd> pointer to output integer indicating CA status, may be NULL, value is 1 if the certificate CA flag is set, 0 otherwise.</p>
-<dt>int * pathlen</p>
-<dd> pointer to output integer indicating path length (may be NULL), non-negative error codes indicate a present pathLenConstraint field and the actual value, -1 indicate that the field is absent.</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>unsigned int * critical</dt>
+<dd> will be non-zero if the extension is marked as critical</dd>
+<dt>unsigned int * ca</dt>
+<dd> pointer to output integer indicating CA status, may be NULL, value is 1 if the certificate CA flag is set, 0 otherwise.</dd>
+<dt>int * pathlen</dt>
+<dd> pointer to output integer indicating path length (may be NULL), non-negative error codes indicate a present pathLenConstraint field and the actual value, -1 indicate that the field is absent.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will read the certificate&#8217;s basic constraints, and return the certificates CA status. It reads the basicConstraints X.509 extension (2.5.29.19).</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_crt_get_basic_constraints – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

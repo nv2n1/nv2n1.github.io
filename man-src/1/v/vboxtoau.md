@@ -16,18 +16,18 @@ description: "vboxtoau – isdn voice box (sound converter)"
 <h2>OPTIONS</h2>
 <p> Vboxtoau reads from stdin and writes to stdout.</p>
 <dl>
-<dt><code>-r, &#8211;samplerate RATE</code></p>
-<dd> Samplerate to write into the header of the output file. There is no sound conversion! Default is 8000.</p>
-<dt><code>-u, &#8211;ulaw</code></p>
-<dd> Convert to 8-bit ulaw.</p>
-<dt><code>-1, &#8211;linear8</code></p>
-<dd> Convert to 8-bit linear.</p>
-<dt><code>-2, &#8211;linear16</code></p>
-<dd> Convert to 16-bit linear. (Default)</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-r, &#8211;samplerate RATE</code></dt>
+<dd> Samplerate to write into the header of the output file. There is no sound conversion! Default is 8000.</dd>
+<dt><code>-u, &#8211;ulaw</code></dt>
+<dd> Convert to 8-bit ulaw.</dd>
+<dt><code>-1, &#8211;linear8</code></dt>
+<dd> Convert to 8-bit linear.</dd>
+<dt><code>-2, &#8211;linear16</code></dt>
+<dd> Convert to 16-bit linear. (Default)</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version of program.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-autovbox/">autovbox</a>(1), <a href="/docs/linux/man/1-rmdtovbox/">rmdtovbox</a>(1), <a href="/docs/linux/man/1-vboxmode/">vboxmode</a>(1), <a href="/docs/linux/man/1-vboxcnvt/">vboxcnvt</a>(1), <a href="/docs/linux/man/5-vbox/">vbox</a>(5)</code></p>
 <h2>AUTHOR</h2>

@@ -18,43 +18,43 @@ description: "ctinfo – tc connmark processing action"
 <h2>Parameters</h2>
 <h3>DSCP mode parameters:</h3>
 <dl>
-<dt>mask</p>
-<dd>A mask of 6 contiguous bits indicating where the DSCP value is located in the 32 bit conntrack mark field. A mask must be provided for this mode. mask is a 32 bit unsigned value.</p>
-<dt>statemask</p>
-<dd>A mask of at least 1 bit indicating where a conditional restore flag is located in the 32 bit conntrack mark field. The statemask bit/s must NOT overlap the mask bits. The DSCP will be restored if the conntrack mark logically ANDed with the statemask yields a non-zero result. statemask is an optional unsigned 32 bit value.</dl>
+<dt>mask</dt>
+<dd>A mask of 6 contiguous bits indicating where the DSCP value is located in the 32 bit conntrack mark field. A mask must be provided for this mode. mask is a 32 bit unsigned value.</dd>
+<dt>statemask</dt>
+<dd>A mask of at least 1 bit indicating where a conditional restore flag is located in the 32 bit conntrack mark field. The statemask bit/s must NOT overlap the mask bits. The DSCP will be restored if the conntrack mark logically ANDed with the statemask yields a non-zero result. statemask is an optional unsigned 32 bit value.</dd></dl>
 <h3>CPMARK mode parameters:</h3>
 <dl>
-<dt>mask</p>
-<dd>Store the logically ANDed result of conntrack mark and mask into the packet&#8217;s mark field. Default is 0xffffffff i.e. the whole mark field. mask is an optional unsigned 32 bit value</dl>
+<dt>mask</dt>
+<dd>Store the logically ANDed result of conntrack mark and mask into the packet&#8217;s mark field. Default is 0xffffffff i.e. the whole mark field. mask is an optional unsigned 32 bit value</dd></dl>
 <h3>Overall action parameters:</h3>
 <dl>
-<dt>zone</p>
-<dd>Specify the conntrack zone when doing conntrack lookups for packets. zone is a 16bit unsigned decimal value. Default is 0.</p>
-<dt>CONTROL</p>
-<dd>The following keywords allow to control how the tree of qdisc, classes, filters and actions is further traversed after this action.</p>
+<dt>zone</dt>
+<dd>Specify the conntrack zone when doing conntrack lookups for packets. zone is a 16bit unsigned decimal value. Default is 0.</dd>
+<dt>CONTROL</dt>
+<dd>The following keywords allow to control how the tree of qdisc, classes, filters and actions is further traversed after this action.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>reclassify</code></p>
-<dd>Restart with the first filter in the current list.</p>
-<dt><code>pipe</code></p>
-<dd>Continue with the next action attached to the same filter.</p>
-<dt><code>drop</code></p>
-<dd>Drop the packet.</p>
-<dt><code>shot</code></p>
-<dd>synonym for <code>drop</code></p>
-<dt><code>continue</code></p>
-<dd>Continue classification with the next filter in line.</p>
-<dt><code>pass</code></p>
-<dd>Finish classification process and return to calling qdisc for further packet processing. This is the default.</dl>
+</dd><dl>
+<dt><code>reclassify</code></dt>
+<dd>Restart with the first filter in the current list.</dd>
+<dt><code>pipe</code></dt>
+<dd>Continue with the next action attached to the same filter.</dd>
+<dt><code>drop</code></dt>
+<dd>Drop the packet.</dd>
+<dt><code>shot</code></dt>
+<dd>synonym for <code>drop</code></dd>
+<dt><code>continue</code></dt>
+<dd>Continue classification with the next filter in line.</dd>
+<dt><code>pass</code></dt>
+<dd>Finish classification process and return to calling qdisc for further packet processing. This is the default.</dd></dl>
 </dl>
-<dt>index</p>
-<dd>Specify an index for this action in order to being able to identify it in later commands. index is a 32bit unsigned decimal value.</dl>
+<dt>index</dt>
+<dd>Specify an index for this action in order to being able to identify it in later commands. index is a 32bit unsigned decimal value.</dd></dl>
 <h2>Examples</h2>
 <p>Example showing conditional restoration of DSCP on ingress via an IFB</p>
 <dl>
 <dd>#Set up the IFB interface<br />
- tc qdisc add dev ifb4eth0 handle ffff: ingress </p>
+ tc qdisc add dev ifb4eth0 handle ffff: ingress </dd>
 <p> #Put CAKE qdisc on it<br />
  tc qdisc add dev ifb4eth0 root cake bandwidth 40mbit </p>
 <p> #Set interface UP<br />
@@ -84,7 +84,7 @@ description: "ctinfo – tc connmark processing action"
 <dl>
 <dd># Send unmarked connections to a marking chain which needs to store a DSCP and set statemask bit in the connmark<br />
  iptables -t mangle -A POSTROUTING -o eth0 -m connmark \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;mark 0x00000000/0x01000000 -g CLASS_MARKING_CHAIN </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;mark 0x00000000/0x01000000 -g CLASS_MARKING_CHAIN </dd>
 <p> # Apply marked DSCP to the packets<br />
  tc filter add dev eth0 protocol all prio 10 u32 \<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match u32 0 0 flowid 1:1 action&nbsp;\<br />
@@ -104,3 +104,4 @@ description: "ctinfo – tc connmark processing action"
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-cake/">tc-cake</a></code>(8) <code><a href="/docs/linux/man/8-tc-connmark/">tc-connmark</a></code>(8) <code><a href="/docs/linux/man/8-tc-mirred/">tc-mirred</a></code>(8)</p>
 <h2>Authors</h2>
 <p>ctinfo was written by Kevin Darbyshire-Bryant.</p>
+</p>

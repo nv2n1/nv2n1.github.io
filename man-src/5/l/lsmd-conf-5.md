@@ -13,8 +13,8 @@ description: "lsmd.conf – libStorageMgmt daemon lsmd configuration file."
 &nbsp;<wbr>*&nbsp;<wbr>MegaRAID plugin&nbsp;<wbr>(<code>megaraid</code>://):&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>megaraid.conf</code> The <code>lsmd.conf</code> file controls the global settings for <code>lsmd</code> while the plugin configuration file for each plugin controls individual plugin behavior. Each option line of the configuration file should contain a trailing semicolon(<code>;</code>). </p>
 <h2>lsmd.conf OPTIONS</h2>
 <dl>
-<dt><code>allow-plugin-root-privilege = true;</code></p>
-<dd>Indicates whether the <code>lsmd</code> daemon should keep running as root mode and invoke plugin as root user when needed. </p>
+<dt><code>allow-plugin-root-privilege = true;</code></dt>
+<dd>Indicates whether the <code>lsmd</code> daemon should keep running as root mode and invoke plugin as root user when needed. </dd>
 <p> Without this option or with option set as <code>false</code> means that the daemon and the plugins will never run as root. </p>
 <p> Only when all the following requirements are met, will <code>lsmd</code> run specified plugins as root user: </p>
 <p>&nbsp;<wbr>1.&nbsp;<wbr>&quot;allow-plugin-root-privilege&nbsp;<wbr>=&nbsp;<wbr>true;&quot;&nbsp;<wbr>in lsmd.conf<br />
@@ -23,8 +23,8 @@ description: "lsmd.conf – libStorageMgmt daemon lsmd configuration file."
 </dl>
 <h2>Plugin OPTIONS</h2>
 <dl>
-<dt><code>require-root-privilege = true;</code></p>
-<dd>Indicates plugin requires root privilege. Without this line or set as <code>false</code>, the plugin will never be invoked as root user by <code>lsmd</code>. </p>
+<dt><code>require-root-privilege = true;</code></dt>
+<dd>Indicates plugin requires root privilege. Without this line or set as <code>false</code>, the plugin will never be invoked as root user by <code>lsmd</code>. </dd>
 <p> Please check <code>lsmd.conf</code> option <code>allow-plugin-root-privilege</code> for detail. </p>
 </dl>
 <h2>See Also</h2>

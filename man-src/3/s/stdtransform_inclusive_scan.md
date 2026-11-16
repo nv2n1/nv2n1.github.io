@@ -11,45 +11,25 @@ std::transform_inclusive_scan - std::transform_inclusive_scan
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class InputIt, class OutputIt,
-
 class BinaryOperation, class UnaryOperation &gt;                                     (1) (since C++17)
-
 OutputIt transform_inclusive_scan( InputIt first, InputIt last, OutputIt d_first,
-
 BinaryOperation binary_op, UnaryOperation unary_op );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
-
 class BinaryOperation, class UnaryOperation &gt;
-
 ForwardIt2 transform_inclusive_scan( ExecutionPolicy&amp;&amp; policy,                    (2) (since C++17)
-
 ForwardIt1 first, ForwardIt1 last, ForwardIt2 d_first,
-
 BinaryOperation binary_op, UnaryOperation unary_op );
-
 template&lt; class InputIt, class OutputIt,
-
 class BinaryOperation, class UnaryOperation, class T &gt;
-
 OutputIt transform_inclusive_scan( InputIt first, InputIt last, OutputIt d_first, (3) (since C++17)
-
 BinaryOperation binary_op, UnaryOperation unary_op,
-
 T init );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
-
 class BinaryOperation, class UnaryOperation, class T &gt;
-
 ForwardIt2 transform_inclusive_scan( ExecutionPolicy&amp;&amp; policy,                    (4) (since C++17)
-
 ForwardIt1 first, ForwardIt1 last, ForwardIt2 d_first,
-
 BinaryOperation binary_op, UnaryOperation unary_op,
-
 T init );</code></pre> 
 Transforms each element in the range [first, last) with unary_op, then computes an inclusive prefix sum operation using binary_op over the resulting range, optionally with init as the initial value, and writes the results to the range beginning at d_first. &quot;inclusive&quot; means that the i-th input element is included in the i-th sum. 
 Formally, assigns through each iterator i in [d_first, d_first + (last - first)) the value of 
@@ -120,34 +100,24 @@ The parameter init appears last, differing from std::transform_exclusive_scan, b
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;vector&gt;
 int times_10(int x)
-
 {
     return x * 10;
 }
 int main()
-
 {
     std::vector data{3, 1, 4, 1, 5, 9, 2, 6};
     std::cout &lt;&lt; &quot;10 times exclusive sum: &quot;;
     std::transform_exclusive_scan(data.begin(), data.end(),
-
                                   std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
-
                                   0, std::plus&lt;int&gt;{}, times_10);
     std::cout &lt;&lt; &quot;\n10 times inclusive sum: &quot;;
     std::transform_inclusive_scan(data.begin(), data.end(),
-
                                   std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
-
                                   std::plus&lt;int&gt;{}, times_10);
 }
 </code></pre>

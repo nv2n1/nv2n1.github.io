@@ -17,22 +17,22 @@ description: "b43-fwcutter – Utility for extracting Broadcom 43xx firmware"
 <p> Example:</p>
 <dl>
 <dt>
-<dd> b43-fwcutter bcmwl5.sys</dl>
+</dt><dd> b43-fwcutter bcmwl5.sys</dd></dl>
 <p> to cut the firmware out of bcmwl5.sys</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code>|&#8211;list</p>
-<dd> List supported driver versions</p>
-<dt><code>-i</code>|&#8211;identify</p>
-<dd> Only identify the driver file (don&#8217;t extract)</p>
-<dt><code>-w</code>|&#8211;target-dir DIR</p>
-<dd> Extract and write firmware to DIR</p>
-<dt><code>-a</code>|&#8211;alt-iv</p>
-<dd> Extract alternative initvals (only 3.10.x.x)</p>
-<dt><code>-v</code>|&#8211;version</p>
-<dd> Print b43-fwcutter version</p>
-<dt><code>-h</code>|&#8211;help</p>
-<dd> Print help information</dl>
+<dt><code>-l</code>|&#8211;list</dt>
+<dd> List supported driver versions</dd>
+<dt><code>-i</code>|&#8211;identify</dt>
+<dd> Only identify the driver file (don&#8217;t extract)</dd>
+<dt><code>-w</code>|&#8211;target-dir DIR</dt>
+<dd> Extract and write firmware to DIR</dd>
+<dt><code>-a</code>|&#8211;alt-iv</dt>
+<dd> Extract alternative initvals (only 3.10.x.x)</dd>
+<dt><code>-v</code>|&#8211;version</dt>
+<dd> Print b43-fwcutter version</dd>
+<dt><code>-h</code>|&#8211;help</dt>
+<dd> Print help information</dd></dl>
 <h2>AUTHORS</h2>
 <p> b43 development team, <a rel="nofollow" href="http://wireless.kernel.org/en/users/Drivers/b43">http://wireless.kernel.org/en/users/Drivers/b43</a> </p>
 <h2>Index</h2>

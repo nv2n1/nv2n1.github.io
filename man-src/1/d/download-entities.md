@@ -17,7 +17,6 @@ url: "/docs/linux/man/1-download-entities/"
  $ perl download-entities.pl -i # interactive
  $ perl download-entities.pl &gt; output-file.pm
  $ perl download-entities.pl output-file.pm
- 
  # instead of <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a>
  $ perl download-entities.pl <a rel="nofollow" HREF="http://my.server.com/entities.html">http://my.server.com/entities.html</a>
 </pre>

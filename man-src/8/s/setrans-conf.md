@@ -15,62 +15,57 @@ The <i>/etc/selinux/{SELINUXTYPE}/setrans.conf</i> configuration file specifies 
 <h3>Keywords</h3>
 
 <dl><dt>Base
-<dd>once a base is declared, subsequent sensitivity label definitions will have all modifiers applied to them during translation. Sensitivity labels defined before the base declaration are immediately cached and no modifiers will be applied these are used as direct translations.
-<dt>Default
-<dd>defines the category bit range that will be used for inverse bits.
-<dt>Domain
-<dd>creates a new domain with the supplied name.
-<dt>Include
-<dd>read and process the contents of the specified configuration file.
-<dt>Join
-<dd>defines a character used to separate members of a modifier group when more than one is specified (ex. USA/AUS).
-<dt>ModifierGroup
-<dd>a means of grouping category bit definitions by how they modify the sensitivity label.
-<dt>Prefix
-<dd>word(s) that may proceed member(s) of a modifier group (ex. REL USA).
-<dt>Suffix
-<dd>word(s) that may follow member(s) of a modifier group (ex. USA EYES ONLY).
-<dt>Whitespace
-<dd>defines the set of acceptable white space characters that may be used in label being translated.</dl>
+</dt><dd>once a base is declared, subsequent sensitivity label definitions will have all modifiers applied to them during translation. Sensitivity labels defined before the base declaration are immediately cached and no modifiers will be applied these are used as direct translations.
+</dd><dt>Default
+</dt><dd>defines the category bit range that will be used for inverse bits.
+</dd><dt>Domain
+</dt><dd>creates a new domain with the supplied name.
+</dd><dt>Include
+</dt><dd>read and process the contents of the specified configuration file.
+</dd><dt>Join
+</dt><dd>defines a character used to separate members of a modifier group when more than one is specified (ex. USA/AUS).
+</dd><dt>ModifierGroup
+</dt><dd>a means of grouping category bit definitions by how they modify the sensitivity label.
+</dd><dt>Prefix
+</dt><dd>word(s) that may proceed member(s) of a modifier group (ex. REL USA).
+</dd><dt>Suffix
+</dt><dd>word(s) that may follow member(s) of a modifier group (ex. USA EYES ONLY).
+</dd><dt>Whitespace
+</dt><dd>defines the set of acceptable white space characters that may be used in label being translated.</dd></dl>
 
 <h3>Sensitivity Level Definition Examples</h3>
 
 <dl><dt>s0=SystemLow
-<dd>defines a translation of s0 (the lowest sensitivity level) with no categories to SystemLow.
-<dt>s15:c0.c1023=SystemHigh
-<dd>defines a translation of s15:c0.c1023 to SystemHigh. c0.c1023 is shorthand for all categories. A colon separates the sensitivity level and categories.
-<dt>s0-s15:c0.c1023=SystemLow-SystemHigh
-<dd>defines a range translation of of s0-s15:c0.c1023 to SystemLow-SystemHigh. The two range components are separated by a dash.
-<dt>s0:c0=PatientRecord
-<dd>defines a translation of sensitivity s0 with category c0 to PatientRecord.
-<dt>s0:c1=Accounting
-<dd>defines a translation of sensitivity s0 with category c1 to Accounting.
-<dt>s2:c1,c2,c3=Confidential3Categories
-<dd><dt>s2:c1.c3=Confidential3Categories
-<dd>both define a translation of sensitivity s2 with categories c1, c2 and c3 to Confidential3Categories.
-<dt>s5=TopSecret
-<dd>defines a translation of sensitivity s5 with no categories to TopSecret.</dl>
+</dt><dd>defines a translation of s0 (the lowest sensitivity level) with no categories to SystemLow.
+</dd><dt>s15:c0.c1023=SystemHigh
+</dt><dd>defines a translation of s15:c0.c1023 to SystemHigh. c0.c1023 is shorthand for all categories. A colon separates the sensitivity level and categories.
+</dd><dt>s0-s15:c0.c1023=SystemLow-SystemHigh
+</dt><dd>defines a range translation of of s0-s15:c0.c1023 to SystemLow-SystemHigh. The two range components are separated by a dash.
+</dd><dt>s0:c0=PatientRecord
+</dt><dd>defines a translation of sensitivity s0 with category c0 to PatientRecord.
+</dd><dt>s0:c1=Accounting
+</dt><dd>defines a translation of sensitivity s0 with category c1 to Accounting.
+</dd><dt>s2:c1,c2,c3=Confidential3Categories
+</dt><dd></dd><dt>s2:c1.c3=Confidential3Categories
+</dt><dd>both define a translation of sensitivity s2 with categories c1, c2 and c3 to Confidential3Categories.
+</dd><dt>s5=TopSecret
+</dt><dd>defines a translation of sensitivity s5 with no categories to TopSecret.</dd></dl>
 
 <h3>Constraint Examples</h3>
 
 <dl><dt>c0!c1
-<dd>if category bits 0 and 1 are both set, the constraint will fail and the original context will be returned.
-<dt>c5.c9&gt;c1
-<dd>if category bits 5 through 9 are set, bit 1 must also be set or the constraint will fail and the original context will be returned.
-<dt>s1!c5,c9
-<dd>if category bits 5 and 9 are set and the sensitivity level is s1, the constraint will fail and the original context will be returned. 
-
+</dt><dd>if category bits 0 and 1 are both set, the constraint will fail and the original context will be returned.
+</dd><dt>c5.c9&gt;c1
+</dt><dd>if category bits 5 through 9 are set, bit 1 must also be set or the constraint will fail and the original context will be returned.
+</dd><dt>s1!c5,c9
+</dt><dd>if category bits 5 and 9 are set and the sensitivity level is s1, the constraint will fail and the original context will be returned. 
 <h2>Author</h2>
-
 &nbsp;<wbr>Written by Joe Nall&nbsp;<wbr>&lt;joe [at] nall.com&gt;. 
 &nbsp;<wbr>Updated by Ted X. Toth&nbsp;<wbr>&lt;txtoth [at] gmail.com&gt;. 
 &nbsp;<wbr>
-
 <h2>See Also</h2>
-
 <a HREF="/docs/linux/man/8-selinux/">selinux</a>(8), <a HREF="/docs/linux/man/8-mcs/">mcs</a>(8), mls(8), <a HREF="/docs/linux/man/1-chcon/">chcon</a>(1) 
-
 <h2>Files</h2>
-
 /etc/selinux/{SELINUXTYPE}/setrans.conf 
  /usr/share/mcstrans/examples
+</dd></dl>

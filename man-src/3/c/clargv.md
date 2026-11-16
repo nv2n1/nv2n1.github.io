@@ -19,7 +19,7 @@ description: "clargv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLARGV generates a vector of complex plane rotations with real
  cosines, determined by elements of the complex vectors x and y.
@@ -32,11 +32,11 @@ description: "clargv.f –"
     If y(i)=0, then c(i)=1 and s(i)=0.
     If x(i)=0, then c(i)=0 and s(i) is chosen so that r(i) is real.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The number of plane rotations to be generated.
@@ -77,25 +77,26 @@ description: "clargv.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   6-6-96 - Modified with a new algorithm by W. Kahan and J. Demmel
   This version has a few statements commented out for thread safety
   (machine parameters are computed on each entry). 10 feb 03, SJH.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 123 of file clargv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

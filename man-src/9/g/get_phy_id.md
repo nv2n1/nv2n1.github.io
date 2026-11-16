@@ -14,19 +14,19 @@ description: "get_phy_id – reads the specified addr for its ID."
 <p><i>bus</i></p>
 <dl>
 <dd>
-<dd>the target MII bus</dl>
+</dd><dd>the target MII bus</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>PHY address on the MII bus</dl>
+<dd>PHY address on the MII bus</dd></dl>
 <p> <i>phy_id</i></p>
 <dl>
-<dd>where to store the ID retrieved.</dl>
+<dd>where to store the ID retrieved.</dd></dl>
 <p> <i>is_c45</i></p>
 <dl>
-<dd>If true the PHY uses the 802.3 clause 45 protocol</dl>
+<dd>If true the PHY uses the 802.3 clause 45 protocol</dd></dl>
 <p> <i>c45_ids</i></p>
 <dl>
-<dd>where to store the c45 ID information.</dl>
+<dd>where to store the c45 ID information.</dd></dl>
 <h2>Description</h2>
 <p>In the case of a 802.3-c22 PHY, reads the ID registers of the PHY at <i>addr</i> on the <i>bus</i>, stores it in <i>phy_id</i> and returns zero on success. </p>
 <p> In the case of a 802.3-c45 PHY, <code>get_phy_c45_ids</code> is invoked, and its return value is in turn returned.</p>

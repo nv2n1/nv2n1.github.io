@@ -12,25 +12,21 @@ rdma_resolve_addr - Resolve destination and optional source addresses.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_resolve_addr
-
     (struct rdma_cm_id *id,
-
      struct sockaddr *src_addr,
-
      struct sockaddr *dst_addr,
-
      int timeout_ms);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>src_addr
-<dd>Source address information. This parameter may be NULL.
-<dt>dst_addr
-<dd>Destination address information.
-<dt>timeout_ms
-<dd>Time to wait for resolution to complete.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>src_addr
+</dt><dd>Source address information. This parameter may be NULL.
+</dd><dt>dst_addr
+</dt><dd>Destination address information.
+</dd><dt>timeout_ms
+</dt><dd>Time to wait for resolution to complete.</dd></dl>
 
 <h2>Description</h2>
 

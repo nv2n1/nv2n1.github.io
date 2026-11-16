@@ -26,11 +26,11 @@ struct hesiod_postoffice *hesiod_getmailhost(void *context,
  This family of functions allows you to retrieve user to postoffice mappings using Hesiod. To perform lookups, you need an initialized Hesiod context; see <a HREF="/docs/linux/man/3-hesiod/">hesiod</a>(3) for details. Information is returned in a <i>hesiod_postoffice</i> structure, which has the following fields:
 <dl>
 <dt>hesiod_po_type
-<dd> The type of postoffice box, typically ``POP''.
-<dt>hesiod_po_host
-<dd> The hostname where the postoffice box resides.
-<dt>hesiod_po_name
-<dd> The account name on the given postoffice server.</dl>
+</dt><dd> The type of postoffice box, typically ``POP''.
+</dd><dt>hesiod_po_host
+</dt><dd> The hostname where the postoffice box resides.
+</dd><dt>hesiod_po_name
+</dt><dd> The account name on the given postoffice server.</dd></dl>
  
 
  It is the caller's responsibility to call <i>hesiod_free_postoffice</i> with the returned postoffice entry to free the resources used by the postoffice entry. 

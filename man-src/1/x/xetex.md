@@ -18,12 +18,12 @@ description: "xetex – extended TeX with native support for Unicode, OpenType, 
 <h2>OPTIONS</h2>
 <p> XeTeX&#8217;s handling of its command-line arguments is similar to that of the other TeX programs in the Web2C implementation. Here we list only additions/deletions of command line options which are specific to XeTeX; see <a href="/docs/linux/man/1-etex/">etex</a>(1) for common options. Additions:</p>
 <dl>
-<dt><code>-no-pdf</code></p>
-<dd> Generate XeTeX&#8217;s extended DVI (.xdv) output instead of pdf.</p>
-<dt><code>-output-driver</code><i>&nbsp;cmd</i></p>
-<dd> Run <i>cmd</i> instead of xdvipdfmx to translate xdv to pdf.</p>
-<dt><code>-papersize</code><i>&nbsp;string</i></p>
-<dd> Set pdf media size to <i>string</i>.</dl>
+<dt><code>-no-pdf</code></dt>
+<dd> Generate XeTeX&#8217;s extended DVI (.xdv) output instead of pdf.</dd>
+<dt><code>-output-driver</code><i>&nbsp;cmd</i></dt>
+<dd> Run <i>cmd</i> instead of xdvipdfmx to translate xdv to pdf.</dd>
+<dt><code>-papersize</code><i>&nbsp;string</i></dt>
+<dd> Set pdf media size to <i>string</i>.</dd></dl>
 <p> Removals: <code>-draftmode</code>, <code>-enc</code>, <code>-ipc</code>, <code>-ipc-start</code>, <code>-translate-file</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-etex/">etex</a></code>(1), <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1).<br />

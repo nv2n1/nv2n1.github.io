@@ -15,7 +15,7 @@ snd_compress_register - register compressed device
 <h2>Arguments</h2>
 
 <i>device</i>
-<dl><dd><dd>compressed device to register</dl>
+<dl><dd></dd><dd>compressed device to register</dd></dl>
 
 <h2>Copyright</h2>
 

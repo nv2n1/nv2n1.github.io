@@ -43,7 +43,7 @@ endorsement_cred = /var/lib/tpm/endorsement.cert
 remote_ops = create_key,random
 host_platform_class = server_12
 all_platform_classes = pc_11,pc_12,mobile_12</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tcsd/">tcsd</a></code>(8)</p>
 <h2>Author</h2>

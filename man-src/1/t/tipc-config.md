@@ -24,69 +24,48 @@ url: "/docs/linux/man/1-tipc-config/"
 
 <dl>
 <dt>-help
-<dd> This usage list 
-
-<dt>-i
-<dd> Interactive set operations 
-
-<dt>-l [=&lt;domain&gt;|&lt;linkpat&gt;]
-<dd> Get links to domain 
-
-<dt>-log [=&lt;size&gt;]
-<dd> Dump/resize log 
-
-<dt>-lp =&lt;linkpat&gt;|&lt;bearer&gt;|&lt;media&gt;/&lt;value&gt;
-<dd> Set link priority 
-
-<dt>-ls [=&lt;linkpat&gt;]
-<dd> Get link statistics 
-
-<dt>-lsr =&lt;linkpat&gt;
-<dd> Reset link statistics 
-
-<dt>-lt =&lt;linkpat&gt;|&lt;bearer&gt;|&lt;media&gt;/&lt;value&gt;
-<dd> Set link tolerance 
-
-<dt>-lw =&lt;linkpat&gt;|&lt;bearer&gt;|&lt;media&gt;/&lt;value&gt;
-<dd> Set link window 
-
-<dt>-m
-<dd> Get media 
-
-<dt>-max_ports [=&lt;value&gt;]
-<dd> Get/set max number of ports 
-
-<dt>-max_publ [=&lt;value&gt;]
-<dd> Get/set max publications 
-
-<dt>-max_subscr [=&lt;value&gt;]
-<dd> Get/set max subscriptions 
-
-<dt>-mng [=enable|disable]
-<dd> Get/set remote management 
-
-<dt>-n [=&lt;domain&gt;]
-<dd> Get nodes in domain 
-
-<dt>-netid[=&lt;value&gt;]
-<dd> Get/set network id 
-
-<dt>-nt [=[&lt;depth&gt;,]&lt;type&gt;[,&lt;low&gt;[,&lt;up&gt;]]]
-<dd> Get name table where &lt;depth&gt; = types|names|ports|all 
-
-<dt>-p
-<dd> Get port info 
-
-<dt>-s
-<dd> Get TIPC status info 
-
-<dt>-v
-<dd> Verbose output 
-
-<dt>-V
-<dd> Get tipc-config version info 
-
-</dl>
+</dt><dd> This usage list 
+</dd><dt>-i
+</dt><dd> Interactive set operations 
+</dd><dt>-l [=&lt;domain&gt;|&lt;linkpat&gt;]
+</dt><dd> Get links to domain 
+</dd><dt>-log [=&lt;size&gt;]
+</dt><dd> Dump/resize log 
+</dd><dt>-lp =&lt;linkpat&gt;|&lt;bearer&gt;|&lt;media&gt;/&lt;value&gt;
+</dt><dd> Set link priority 
+</dd><dt>-ls [=&lt;linkpat&gt;]
+</dt><dd> Get link statistics 
+</dd><dt>-lsr =&lt;linkpat&gt;
+</dt><dd> Reset link statistics 
+</dd><dt>-lt =&lt;linkpat&gt;|&lt;bearer&gt;|&lt;media&gt;/&lt;value&gt;
+</dt><dd> Set link tolerance 
+</dd><dt>-lw =&lt;linkpat&gt;|&lt;bearer&gt;|&lt;media&gt;/&lt;value&gt;
+</dt><dd> Set link window 
+</dd><dt>-m
+</dt><dd> Get media 
+</dd><dt>-max_ports [=&lt;value&gt;]
+</dt><dd> Get/set max number of ports 
+</dd><dt>-max_publ [=&lt;value&gt;]
+</dt><dd> Get/set max publications 
+</dd><dt>-max_subscr [=&lt;value&gt;]
+</dt><dd> Get/set max subscriptions 
+</dd><dt>-mng [=enable|disable]
+</dt><dd> Get/set remote management 
+</dd><dt>-n [=&lt;domain&gt;]
+</dt><dd> Get nodes in domain 
+</dd><dt>-netid[=&lt;value&gt;]
+</dt><dd> Get/set network id 
+</dd><dt>-nt [=[&lt;depth&gt;,]&lt;type&gt;[,&lt;low&gt;[,&lt;up&gt;]]]
+</dt><dd> Get name table where &lt;depth&gt; = types|names|ports|all 
+</dd><dt>-p
+</dt><dd> Get port info 
+</dd><dt>-s
+</dt><dd> Get TIPC status info 
+</dd><dt>-v
+</dt><dd> Verbose output 
+</dd><dt>-V
+</dt><dd> Get tipc-config version info 
+</dd></dl>
 
 <h2>EXMAPLES</h2>
 

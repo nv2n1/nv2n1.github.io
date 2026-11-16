@@ -39,57 +39,39 @@ url: "/docs/linux/man/3-sgbtrf/"
  <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
  SGBTRF computes an LU factorization of a real m-by-n band matrix A
  using partial pivoting with row interchanges.
  This is the blocked version of the algorithm, calling Level 3 BLAS.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>M</i> 
-
+</dt><dd> <i>M</i> 
  <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
 </pre> 
-
- 
  <i>N</i> 
-
  <pre>
           N is INTEGER
           The number of columns of the matrix A.  N &gt;= 0.
 </pre> 
-
- 
  <i>KL</i> 
-
  <pre>
           KL is INTEGER
           The number of subdiagonals within the band of A.  KL &gt;= 0.
 </pre> 
-
- 
  <i>KU</i> 
-
  <pre>
           KU is INTEGER
           The number of superdiagonals within the band of A.  KU &gt;= 0.
 </pre> 
-
- 
  <i>AB</i> 
-
  <pre><code>
 AB is REAL array, dimension(LDAB, N) On entry, the matrix A in band storage, in rows KL + 1 to 2 * KL + KU + 1; rows 1 to KL of the array need not be set.
           The j-th column of A is stored in the j-th column of the
@@ -101,18 +83,12 @@ AB is REAL array, dimension(LDAB, N) On entry, the matrix A in band storage, in 
           factorization are stored in rows KL+KU+2 to 2*KL+KU+1.
           See below for further details.
 </code></pre> 
-
- 
  <i>LDAB</i> 
-
  <pre>
           LDAB is INTEGER
           The leading dimension of the array AB.  LDAB &gt;= 2*KL+KU+1.
 </pre> 
-
- 
  <i>IPIV</i> 
-
  <pre><code>
 IPIV is INTEGER array, dimension(min(M, N))
                            The pivot indices; for
@@ -120,10 +96,7 @@ IPIV is INTEGER array, dimension(min(M, N))
                      matrix was interchanged with row IPIV(i)
                          .
 </code></pre> 
-
- 
  <i>INFO</i> 
-
  <pre>
           INFO is INTEGER
           = 0: successful exit
@@ -133,36 +106,28 @@ IPIV is INTEGER array, dimension(min(M, N))
                singular, and division by zero will occur if it is used
                to solve a system of equations.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  <b>Further Details: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
   The band storage scheme is illustrated by the following example, when
   M = N = 6, KL = 2, KU = 1:
@@ -177,9 +142,7 @@ IPIV is INTEGER array, dimension(min(M, N))
   + need not be set on entry, but are required by the routine to store
   elements of U because of fill-in resulting from the row interchanges.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  

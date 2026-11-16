@@ -15,7 +15,7 @@ skip_spaces - Removes leading whitespace from <i>str</i>.
 <h2>Arguments</h2>
 
 <i>str</i>
-<dl><dd><dd>The string to be stripped.</dl>
+<dl><dd></dd><dd>The string to be stripped.</dd></dl>
 
 <h2>Description</h2>
 

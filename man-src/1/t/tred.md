@@ -17,15 +17,15 @@ description: "tred – transitive reduction filter for directed graphs"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Verbose output.</p>
-<dt><code>-?</code></p>
-<dd> Print usage information.</dl>
+<dt><code>-v</code></dt>
+<dd> Verbose output.</dd>
+<dt><code>-?</code></dt>
+<dd> Print usage information.</dd></dl>
 <h2>OPERANDS</h2>
 <p> The following operand is supported:</p>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>BUGS</h2>
 <p> Using bitmaps internally would substantially decrease running time.</p>
 <h2>DIAGNOSTICS</h2>

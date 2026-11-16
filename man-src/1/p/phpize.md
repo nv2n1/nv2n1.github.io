@@ -16,15 +16,14 @@ description: "phpize – prepare a PHP extension for compiling"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>&#8211;clean</code> Remove all created files</p>
+</dt><dd> <code>&#8211;clean</code> Remove all created files</dd>
 <dt>
-<dd> <code>&#8211;help</code> Prints usage information</p>
+</dt><dd> <code>&#8211;help</code> Prints usage information</dd>
 <dt>
-<dd> <code>&#8211;version</code></p>
+</dt><dd> <code>&#8211;version</code></dd>
 <dt>
-<dd> <code>-v</code> Prints API version information</p>
-<dt>
-<dd></dl>
+</dt><dd> <code>-v</code> Prints API version information</dd>
+</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-php/">php</a></code>(1)</p>
 <h2>VERSION INFORMATION</h2>

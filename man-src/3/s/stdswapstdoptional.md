@@ -11,10 +11,8 @@ std::swap(std::optional) - std::swap(std::optional)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;optional&gt;
-
     template &lt;class T&gt;
     (since C++ 17)
-
         void swap(optional&lt;T&gt; &amp;lhs, optional&lt;T&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Overloads the std::swap algorithm for std::optional. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 This function template does not participate in overload resolution unless std::is_move_constructible_v&lt;T&gt; and std::is_swappable_v&lt;T&gt; are both true. 

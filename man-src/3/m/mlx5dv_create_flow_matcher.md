@@ -19,12 +19,12 @@ url: "/docs/linux/man/3-mlx5dv_create_flow_matcher/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_flow_matcher *
 mlx5dv_create_flow_matcher(struct ibv_context *context,
                            struct mlx5dv_flow_matcher_attr *attr)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -42,7 +42,7 @@ mlx5dv_create_flow_matcher(struct ibv_context *context,
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 struct mlx5dv_flow_matcher_attr {
     enum ibv_flow_attr_type type;
     uint32_t flags; /* From enum ibv_flow_flags */
@@ -52,32 +52,31 @@ struct mlx5dv_flow_matcher_attr {
     uint64_t comp_mask;
     enum mlx5dv_flow_table_type ft_type;
 };
-
-<dt>type
-<dd> Type of matcher to be created: IBV_FLOW_ATTR_NORMAL: Normal rule according to specification.
-<dt>flags
-<dd> special flags to control rule: 0: Nothing or zero value means matcher will store ingress flow rules. IBV_FLOW_ATTR_FLAGS_EGRESS: Specified this matcher will store egress flow rules.
-<dt>priority
-<dd> See ibv_create_flow(3).
-<dt>match_criteria_enable
-<dd> What match criteria is configured in match_mask, passed in device spec format.</dl>
+</dd><dt>type
+</dt><dd> Type of matcher to be created: IBV_FLOW_ATTR_NORMAL: Normal rule according to specification.
+</dd><dt>flags
+</dt><dd> special flags to control rule: 0: Nothing or zero value means matcher will store ingress flow rules. IBV_FLOW_ATTR_FLAGS_EGRESS: Specified this matcher will store egress flow rules.
+</dd><dt>priority
+</dt><dd> See ibv_create_flow(3).
+</dd><dt>match_criteria_enable
+</dt><dd> What match criteria is configured in match_mask, passed in device spec format.</dd></dl>
 
 <h3>match_mask</h3>
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 struct mlx5dv_flow_match_parameters {
     size_t match_sz;
     uint64_t match_buf[]; /* Device spec format */
 };
 </code></pre>
-<dt>match_sz
-<dd> Size in bytes of match_buf.
-<dt>match_buf
-<dd> Set which mask to be used, passed in device spec format.
-<dt>comp_mask
-<dd> MLX5DV_FLOW_MATCHER_MASK_FT_TYPE for ft_type</dl>
+</dd><dt>match_sz
+</dt><dd> Size in bytes of match_buf.
+</dd><dt>match_buf
+</dt><dd> Set which mask to be used, passed in device spec format.
+</dd><dt>comp_mask
+</dt><dd> MLX5DV_FLOW_MATCHER_MASK_FT_TYPE for ft_type</dd></dl>
 
 <h3>ft_type</h3>
 

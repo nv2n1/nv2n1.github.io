@@ -20,26 +20,26 @@ description: "splitindex – manual page for splitindex 0.2a"
 <p> Example: splitindex.pl foo.idx.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help and terminate</p>
-<dt><code>-m</code>, <code>&#8211;makeindex</code> PROGNAME</p>
-<dd> call PROGNAME instead of default `makeindex&#8217;.</p>
-<dt><code>-i</code>, <code>&#8211;identify</code> EXPRESSION</p>
-<dd> use regular EXPRESSION to match entries (see also option <code>&#8211;resultis</code> and <code>&#8211;suffixis</code>). Default is `^(\indexentry)\[([^]]*)\](.*)$&#8217;.</p>
-<dt><code>-r</code>, <code>&#8211;resultis</code> PATTERN</p>
-<dd> create line to be written from PATTERN after matching lines (see also option <code>&#8211;identify</code>). Default is `$1$3&#8242;.</p>
-<dt><code>-s</code>, <code>&#8211;suffixis</code> PATTERN</p>
-<dd> create suffix to be used from PATTERN after matching lines (see also option <code>&#8211;identify</code>). Default is `-$2&#8242;.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> be more verbose (can be used multiple to increase verbosity)</p>
-<dt><code>&#8211;version</code></p>
-<dd> show version and terminate</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help and terminate</dd>
+<dt><code>-m</code>, <code>&#8211;makeindex</code> PROGNAME</dt>
+<dd> call PROGNAME instead of default `makeindex&#8217;.</dd>
+<dt><code>-i</code>, <code>&#8211;identify</code> EXPRESSION</dt>
+<dd> use regular EXPRESSION to match entries (see also option <code>&#8211;resultis</code> and <code>&#8211;suffixis</code>). Default is `^(\indexentry)\[([^]]*)\](.*)$&#8217;.</dd>
+<dt><code>-r</code>, <code>&#8211;resultis</code> PATTERN</dt>
+<dd> create line to be written from PATTERN after matching lines (see also option <code>&#8211;identify</code>). Default is `$1$3&#8242;.</dd>
+<dt><code>-s</code>, <code>&#8211;suffixis</code> PATTERN</dt>
+<dd> create suffix to be used from PATTERN after matching lines (see also option <code>&#8211;identify</code>). Default is `-$2&#8242;.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> be more verbose (can be used multiple to increase verbosity)</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show version and terminate</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002 Markus Kohm &lt;kohm [at] gmx.de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>splitindex</code> is maintained as a LaTeX manual. If the <code>texdoc</code> and <code>splitindex</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>texdoc splitidx</code></dl>
+</dt><dd> <code>texdoc splitidx</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

@@ -10,22 +10,22 @@ description: "XSetWMColormapWindows, XGetWMColormapWindows – set or read a win
 <p>XSetWMColormapWindows, XGetWMColormapWindows &#8211; set or read a window&#8217;s WM_COLORMAP_WINDOWS property </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XSetWMColormapWindows(Display *<i>display</i>, Window <i>w</i>, Window *<i>colormap_windows</i>, int <i>count</i>);</p>
-<dd>Status XGetWMColormapWindows(Display *<i>display</i>, Window <i>w</i>, Window **<i>colormap_windows_return</i>, int *<i>count_return</i>);</dl>
+<dd>Status XSetWMColormapWindows(Display *<i>display</i>, Window <i>w</i>, Window *<i>colormap_windows</i>, int <i>count</i>);</dd>
+<dd>Status XGetWMColormapWindows(Display *<i>display</i>, Window <i>w</i>, Window **<i>colormap_windows_return</i>, int *<i>count_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>colormap_windows</i></p>
-<dd>Specifies the list of windows.</p>
-<dt><i>colormap_windows_return</i></p>
-<dd>Returns the list of windows.</p>
-<dt><i>count</i></p>
-<dd>Specifies the number of windows in the list.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of windows in the list.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>colormap_windows</i></dt>
+<dd>Specifies the list of windows.</dd>
+<dt><i>colormap_windows_return</i></dt>
+<dd>Returns the list of windows.</dd>
+<dt><i>count</i></dt>
+<dd>Specifies the number of windows in the list.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of windows in the list.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetWMColormapWindows</code> function replaces the WM_COLORMAP_WINDOWS property on the specified window with the list of windows specified by the colormap_windows argument. It the property does not already exist, <code>XSetWMColormapWindows</code> sets the WM_COLORMAP_WINDOWS property on the specified window to the list of windows specified by the colormap_windows argument. The property is stored with a type of WINDOW and a format of 32. If it cannot intern the WM_COLORMAP_WINDOWS atom, <code>XSetWMColormapWindows</code> returns a zero status. Otherwise, it returns a nonzero status. </p>
 <p> <code>XSetWMColormapWindows</code> can generate <code>BadAlloc</code> and <code>BadWindow</code> errors. </p>
@@ -33,14 +33,14 @@ description: "XSetWMColormapWindows, XGetWMColormapWindows – set or read a win
 <p> <code>XGetWMColormapWindows</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_COLORMAP_WINDOWS</font></p>
-<dd>The list of window IDs that may need a different colormap from that of their top-level window.</dl>
+<dt><font SIZE="-1">WM_COLORMAP_WINDOWS</font></dt>
+<dd>The list of window IDs that may need a different colormap from that of their top-level window.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmproperties/">XSetWMProperties</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

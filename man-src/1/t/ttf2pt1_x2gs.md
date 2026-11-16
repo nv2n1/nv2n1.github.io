@@ -26,25 +26,25 @@ description: "ttf2pt1_x2gs – font installer for Ghostscript"
 <p> After that you may also want to redefine some of the aliases in <tt>&quot;Fontmap&quot;</tt> to refer to the newly installed fonts. But the redefinition of the aliases may be dangerous if the width of characters in the new font will be different from the old font. Alas, there is no visible solution of this problem yet.</p>
 <h2>FILES</h2>
 <dl>
-<dt>&bull;</p>
-<dd> /usr/share/doc/ttf2pt1-3.4.4/convert.cfg.sample</p>
-<dt>&bull;</p>
-<dd> /usr/share/ttf2pt1/scripts/*</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">/usr/share/doc/ttf2pt1-3.4.4/README</font></p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">/usr/share/doc/ttf2pt1-3.4.4/FONTS</font></p>
-<dt>&bull;</p>
-<dd> /usr/share/ttf2pt1/*</p>
-<dt>&bull;</p>
-<dd> /usr/bin/ttf2pt1</dl>
+<dt>&bull;</dt>
+<dd> /usr/share/doc/ttf2pt1-3.4.4/convert.cfg.sample</dd>
+<dt>&bull;</dt>
+<dd> /usr/share/ttf2pt1/scripts/*</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">/usr/share/doc/ttf2pt1-3.4.4/README</font></dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">/usr/share/doc/ttf2pt1-3.4.4/FONTS</font></dd>
+<dt>&bull;</dt>
+<dd> /usr/share/ttf2pt1/*</dd>
+<dt>&bull;</dt>
+<dd> /usr/bin/ttf2pt1</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <i><a href="/docs/linux/man/1-ttf2pt1/">ttf2pt1</a></i>(1)</p>
-<dt>&bull;</p>
-<dd> <i><a href="/docs/linux/man/1-ttf2pt1_convert/">ttf2pt1_convert</a></i>(1)</p>
-<dt>&bull;</p>
-<dd> <i><a href="/docs/linux/man/1-t1asm/">t1asm</a></i>(1) </p>
+<dt>&bull;</dt>
+<dd> <i><a href="/docs/linux/man/1-ttf2pt1/">ttf2pt1</a></i>(1)</dd>
+<dt>&bull;</dt>
+<dd> <i><a href="/docs/linux/man/1-ttf2pt1_convert/">ttf2pt1_convert</a></i>(1)</dd>
+<dt>&bull;</dt>
+<dd> <i><a href="/docs/linux/man/1-t1asm/">t1asm</a></i>(1) </dd>
 </dl>
 <h2>Index</h2>

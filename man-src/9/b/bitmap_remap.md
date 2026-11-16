@@ -15,23 +15,23 @@ bitmap_remap - Apply map defined by a pair of bitmaps to another bitmap
 <h2>Arguments</h2>
 
 <i>dst</i>
-<dl><dd><dd>remapped result</dl>
+<dl><dd></dd><dd>remapped result</dd></dl>
  
 
  <i>src</i>
-<dl><dd>subset to be remapped</dl>
+<dl><dd>subset to be remapped</dd></dl>
  
 
  <i>old</i>
-<dl><dd>defines domain of map</dl>
+<dl><dd>defines domain of map</dd></dl>
  
 
  <i>new</i>
-<dl><dd>defines range of map</dl>
+<dl><dd>defines range of map</dd></dl>
  
 
  <i>nbits</i>
-<dl><dd>number of bits in each of these bitmaps</dl>
+<dl><dd>number of bits in each of these bitmaps</dd></dl>
 
 <h2>Description</h2>
 

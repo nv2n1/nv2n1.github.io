@@ -38,42 +38,42 @@ int ioctl(fd, RNDrequest, param);</code></pre>
 <h3>/proc interfaces</h3>
 <p>The files in the directory <i>/proc/sys/kernel/random</i> (present since 2.3.16) provide additional information about the <i>/dev/random</i> device:</p>
 <dl>
-<dt><i>entropy_avail</i></p>
-<dd>This read-only file gives the available entropy, in bits. This will be a number in the range 0 to 4096.</p>
-<dt><i>poolsize</i></p>
-<dd>This file gives the size of the entropy pool. The semantics of this file vary across kernel versions:</p>
+<dt><i>entropy_avail</i></dt>
+<dd>This read-only file gives the available entropy, in bits. This will be a number in the range 0 to 4096.</dd>
+<dt><i>poolsize</i></dt>
+<dd>This file gives the size of the entropy pool. The semantics of this file vary across kernel versions:</dd>
 <dl>
 <dd>
-<dl>
-<dt>Linux 2.4:</p>
-<dd>This file gives the size of the entropy pool in <i>bytes</i>. Normally, this file will have the value 512, but it is writable, and can be changed to any value for which an algorithm is available. The choices are 32, 64, 128, 256, 512, 1024, or 2048.</p>
-<dt>Linux 2.6 and later:</p>
-<dd>This file is read-only, and gives the size of the entropy pool in <i>bits</i>. It contains the value 4096.</dl>
+</dd><dl>
+<dt>Linux 2.4:</dt>
+<dd>This file gives the size of the entropy pool in <i>bytes</i>. Normally, this file will have the value 512, but it is writable, and can be changed to any value for which an algorithm is available. The choices are 32, 64, 128, 256, 512, 1024, or 2048.</dd>
+<dt>Linux 2.6 and later:</dt>
+<dd>This file is read-only, and gives the size of the entropy pool in <i>bits</i>. It contains the value 4096.</dd></dl>
 </dl>
-<dt><i>read_wakeup_threshold</i></p>
-<dd>This file contains the number of bits of entropy required for waking up processes that sleep waiting for entropy from <i>/dev/random</i>. The default is 64.</p>
-<dt><i>write_wakeup_threshold</i></p>
-<dd>This file contains the number of bits of entropy below which we wake up processes that do a <code><a href="/docs/linux/man/2-select/">select</a></code>(2) or <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) for write access to <i>/dev/random</i>. These values can be changed by writing to the files.</p>
-<dt><i>uuid</i> and <i>boot_id</i></p>
-<dd>These read-only files contain random strings like 6fd5a44b-35f4-4ad4-a9b9-6b9be13e1fe9. The former is generated afresh for each read, the latter was generated once.</dl>
+<dt><i>read_wakeup_threshold</i></dt>
+<dd>This file contains the number of bits of entropy required for waking up processes that sleep waiting for entropy from <i>/dev/random</i>. The default is 64.</dd>
+<dt><i>write_wakeup_threshold</i></dt>
+<dd>This file contains the number of bits of entropy below which we wake up processes that do a <code><a href="/docs/linux/man/2-select/">select</a></code>(2) or <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) for write access to <i>/dev/random</i>. These values can be changed by writing to the files.</dd>
+<dt><i>uuid</i> and <i>boot_id</i></dt>
+<dd>These read-only files contain random strings like 6fd5a44b-35f4-4ad4-a9b9-6b9be13e1fe9. The former is generated afresh for each read, the latter was generated once.</dd></dl>
 <h3><a href="/docs/linux/man/2-ioctl/">ioctl</a>(2) interface</h3>
 <p>The following <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) requests are defined on file descriptors connected to either <i>/dev/random</i> or <i>/dev/urandom</i>. All requests performed will interact with the input entropy pool impacting both <i>/dev/random</i> and <i>/dev/urandom</i>. The <code>CAP_SYS_ADMIN</code> capability is required for all requests except <code>RNDGETENTCNT</code>.</p>
 <dl>
-<dt><code>RNDGETENTCNT</code></p>
-<dd>Retrieve the entropy count of the input pool, the contents will be the same as the <i>entropy_avail</i> file under proc. The result will be stored in the int pointed to by the argument.</p>
-<dt><code>RNDADDTOENTCNT</code></p>
-<dd>Increment or decrement the entropy count of the input pool by the value pointed to by the argument.</p>
-<dt><code>RNDGETPOOL</code></p>
-<dd>Removed in Linux 2.6.9.</p>
-<dt><code>RNDADDENTROPY</code></p>
-<dd>Add some additional entropy to the input pool, incrementing the entropy count. This differs from writing to <i>/dev/random</i> or <i>/dev/urandom</i>, which only adds some data but does not increment the entropy count. The following structure is used:</p>
+<dt><code>RNDGETENTCNT</code></dt>
+<dd>Retrieve the entropy count of the input pool, the contents will be the same as the <i>entropy_avail</i> file under proc. The result will be stored in the int pointed to by the argument.</dd>
+<dt><code>RNDADDTOENTCNT</code></dt>
+<dd>Increment or decrement the entropy count of the input pool by the value pointed to by the argument.</dd>
+<dt><code>RNDGETPOOL</code></dt>
+<dd>Removed in Linux 2.6.9.</dd>
+<dt><code>RNDADDENTROPY</code></dt>
+<dd>Add some additional entropy to the input pool, incrementing the entropy count. This differs from writing to <i>/dev/random</i> or <i>/dev/urandom</i>, which only adds some data but does not increment the entropy count. The following structure is used:</dd>
 <dd>struct rand_pool_info {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entropy_count;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf_size;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;buf[0]; };</p>
-<dd>Here <i>entropy_count</i> is the value added to (or subtracted from) the entropy count, and <i>buf</i> is the buffer of size <i>buf_size</i> which gets added to the entropy pool.</p>
-<dt><code>RNDZAPENTCNT</code>, <code>RNDCLEARPOOL</code></p>
-<dd>Zero the entropy count of all pools and add some system data (such as wall clock) to the pools.</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;buf[0]; };</dd>
+<dd>Here <i>entropy_count</i> is the value added to (or subtracted from) the entropy count, and <i>buf</i> is the buffer of size <i>buf_size</i> which gets added to the entropy pool.</dd>
+<dt><code>RNDZAPENTCNT</code>, <code>RNDCLEARPOOL</code></dt>
+<dd>Zero the entropy count of all pools and add some system data (such as wall clock) to the pools.</dd></dl>
 <h2>Files</h2>
 <p><i>/dev/random</i><br />
  <i>/dev/urandom</i></p>

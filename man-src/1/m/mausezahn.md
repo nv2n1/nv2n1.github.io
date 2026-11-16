@@ -25,35 +25,35 @@ description: "mausezahn – a fast versatile packet generator"
 <p> Mausezahn has a built-in context specific help. Simply append the keyword <code>help</code> to the configuration options.<br />
  The most important options are:</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Verbose mode.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode (only warnings and errors are displayed).</p>
-<dt><code>-c &lt;count&gt;</code></p>
-<dd> Send the packet count times (default: 1, infinite: 0).</p>
-<dt><code>-d &lt;delay&gt;</code></p>
-<dd> Apply delay between transmissions. The delay value can be specified in usec (default, no additional unit needed), or in msec (e. g. 100m or 100msec), or in seconds (e. g. 100s or 100sec).</p>
-<dt><code>-p &lt;lenght&gt;</code></p>
-<dd> Pad the raw frame to specified length (using zero bytes). Note that for raw layer 2 frames the specified length defines the whole frame length, while for higher layer packets the number of additional padding bytes are specified.</p>
-<dt><code>-a &lt;Src_MAC|keyword&gt;</code></p>
-<dd> Use specified source mac address (use hex notation such as 00:00:aa:bb:cc:dd). By default the interface MAC address will be used. The keywords <i>rand</i> and <i>own</i> refer to a random MAC address (only unicast addresses are created) and the own address, respectively. You can also use the keywords mentioned below (although broadcast-type source addresses are officially invalid).</p>
-<dt><code>-b &lt;Dst_MAC|keyword&gt;</code></p>
-<dd> Use specified destination mac address. By default a broadcast is sent in raw layer 2 mode or the destination hosts/gateways interface MAC address in normal (IP) mode. You can use the same keywords as mentioned above as well as <i>bc</i> (or <i>bcast</i>), <i>cisco</i>, and <i>stp</i>. Please note that for the destination MAC address the <i>rand</i> keyword is supported but creates a random address only once, even when you send multiple packets.</p>
-<dt><code>-A &lt;Src_IP|range|rand&gt;</code></p>
-<dd> Use specified source IP address (default is own interface IP). Optionally the keyword <i>rand</i> can again be used for a random source IP address or a range can be specified, such as 192.168.1.1-192.168.1.100 or 10.1.0.0/16. Also a DNS name can be specified for which Mausezahn tries to determine the corresponding IP address automatically.</p>
-<dt><code>-B &lt;Dst_IP|range&gt;</code></p>
-<dd> Use specified destination IP address (default is broadcast i. e. 255.255.255.255). As with the source address (see above) you can also specify a range or a DNS name.</p>
-<dt><code>-t &lt;packet_type&gt;</code></p>
-<dd> Create the specified packet type using the built-in packet builder. Currently supported packet types are: <i>arp</i>, <i>bpdu</i>, <i>ip</i>, <i>udp</i>, <i>tcp</i>, <i>rtp</i>, and <i>dns</i>. There is currently also a limited support for ICMP. Enter <i>-t help</i> to verify which packet builders your actual Mausezahn version supports. Also, for any particular packet type, for example <i>tcp</i> enter <i>mausezahn -t tcp help</i> to receive a context specific help.</p>
-<dt><code>-T &lt;packet_type&gt;</code></p>
-<dd> Make this Mausezahn instance the receiving station. Currently (version 0.30) only <i>rtp</i> is an option here and provides precise jitter measurements. For this purpose start another Mausezahn instance on the sending station and the local receiving station will output jitter statistics. See <i>mausezahn -T rtp help</i> for a detailed help.</p>
-<dt><code>-Q &lt;[CoS:]vlan&gt; [, &lt;[CoS:]vlan&gt;, &#8230;]</code></p>
-<dd> Specify 802.1Q VLAN tag and optional Class of Service. An arbitrary number of VLAN tags can be specified (that is you can simulate QinQ or even QinQinQinQ&#8230;). Multiple tags must be separated via a comma or a period (e. g. &quot;5:10,20,2:30&quot;). VLAN tags are not supported for ARP and BPDU packets (in which case you could specify the whole frame in hex using the raw layer 2 interface of Mausezahn).</p>
-<dt><code>-M &lt;label[:cos[:ttl]][bos]&gt; [, &lt;label&#8230;&gt;] </code></p>
-<dd> Specify a MPLS label or even a MPLS label stack. Optionally for each label the experimental bits (usually the Class of Service, CoS) and the Time To Live (TTL) can be specified. And if you are really crazy you can set/unset the Bottom of Stack (BoS) bit at each label using the <i>S</i> (set) and <i>s</i> (unset) option. By default the BoS is set automatically and correctly. Any other setting will lead to invalid frames. Enter <i>-M help</i> for detailed instructions and examples.</p>
-<dt><code>-P &lt;ASCII_payload&gt;</code></p>
+<dt><code>-v</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode (only warnings and errors are displayed).</dd>
+<dt><code>-c &lt;count&gt;</code></dt>
+<dd> Send the packet count times (default: 1, infinite: 0).</dd>
+<dt><code>-d &lt;delay&gt;</code></dt>
+<dd> Apply delay between transmissions. The delay value can be specified in usec (default, no additional unit needed), or in msec (e. g. 100m or 100msec), or in seconds (e. g. 100s or 100sec).</dd>
+<dt><code>-p &lt;lenght&gt;</code></dt>
+<dd> Pad the raw frame to specified length (using zero bytes). Note that for raw layer 2 frames the specified length defines the whole frame length, while for higher layer packets the number of additional padding bytes are specified.</dd>
+<dt><code>-a &lt;Src_MAC|keyword&gt;</code></dt>
+<dd> Use specified source mac address (use hex notation such as 00:00:aa:bb:cc:dd). By default the interface MAC address will be used. The keywords <i>rand</i> and <i>own</i> refer to a random MAC address (only unicast addresses are created) and the own address, respectively. You can also use the keywords mentioned below (although broadcast-type source addresses are officially invalid).</dd>
+<dt><code>-b &lt;Dst_MAC|keyword&gt;</code></dt>
+<dd> Use specified destination mac address. By default a broadcast is sent in raw layer 2 mode or the destination hosts/gateways interface MAC address in normal (IP) mode. You can use the same keywords as mentioned above as well as <i>bc</i> (or <i>bcast</i>), <i>cisco</i>, and <i>stp</i>. Please note that for the destination MAC address the <i>rand</i> keyword is supported but creates a random address only once, even when you send multiple packets.</dd>
+<dt><code>-A &lt;Src_IP|range|rand&gt;</code></dt>
+<dd> Use specified source IP address (default is own interface IP). Optionally the keyword <i>rand</i> can again be used for a random source IP address or a range can be specified, such as 192.168.1.1-192.168.1.100 or 10.1.0.0/16. Also a DNS name can be specified for which Mausezahn tries to determine the corresponding IP address automatically.</dd>
+<dt><code>-B &lt;Dst_IP|range&gt;</code></dt>
+<dd> Use specified destination IP address (default is broadcast i. e. 255.255.255.255). As with the source address (see above) you can also specify a range or a DNS name.</dd>
+<dt><code>-t &lt;packet_type&gt;</code></dt>
+<dd> Create the specified packet type using the built-in packet builder. Currently supported packet types are: <i>arp</i>, <i>bpdu</i>, <i>ip</i>, <i>udp</i>, <i>tcp</i>, <i>rtp</i>, and <i>dns</i>. There is currently also a limited support for ICMP. Enter <i>-t help</i> to verify which packet builders your actual Mausezahn version supports. Also, for any particular packet type, for example <i>tcp</i> enter <i>mausezahn -t tcp help</i> to receive a context specific help.</dd>
+<dt><code>-T &lt;packet_type&gt;</code></dt>
+<dd> Make this Mausezahn instance the receiving station. Currently (version 0.30) only <i>rtp</i> is an option here and provides precise jitter measurements. For this purpose start another Mausezahn instance on the sending station and the local receiving station will output jitter statistics. See <i>mausezahn -T rtp help</i> for a detailed help.</dd>
+<dt><code>-Q &lt;[CoS:]vlan&gt; [, &lt;[CoS:]vlan&gt;, &#8230;]</code></dt>
+<dd> Specify 802.1Q VLAN tag and optional Class of Service. An arbitrary number of VLAN tags can be specified (that is you can simulate QinQ or even QinQinQinQ&#8230;). Multiple tags must be separated via a comma or a period (e. g. &quot;5:10,20,2:30&quot;). VLAN tags are not supported for ARP and BPDU packets (in which case you could specify the whole frame in hex using the raw layer 2 interface of Mausezahn).</dd>
+<dt><code>-M &lt;label[:cos[:ttl]][bos]&gt; [, &lt;label&#8230;&gt;] </code></dt>
+<dd> Specify a MPLS label or even a MPLS label stack. Optionally for each label the experimental bits (usually the Class of Service, CoS) and the Time To Live (TTL) can be specified. And if you are really crazy you can set/unset the Bottom of Stack (BoS) bit at each label using the <i>S</i> (set) and <i>s</i> (unset) option. By default the BoS is set automatically and correctly. Any other setting will lead to invalid frames. Enter <i>-M help</i> for detailed instructions and examples.</dd>
+<dt><code>-P &lt;ASCII_payload&gt;</code></dt>
 <dd> Specify a cleartext payload. Alternatively each packet type supports a hexadecimal specification of the payload (see for example <i>-t udp help</i>).
-</dl>
+</dd></dl>
 <h2>COMBINATION OF RANGES</h2>
 <p> When multiple ranges are specified, e. g. destination port ranges AND destination address ranges, then <code>all</code> possible combinations of ports and addresses are used for packet generation. This can lead to a very huge number of frames. </p>
 <h2>DISCLAIMER AND WARNING</h2>

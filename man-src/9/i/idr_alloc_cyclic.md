@@ -15,23 +15,23 @@ idr_alloc_cyclic - allocate new idr entry in a cyclical fashion
 <h2>Arguments</h2>
 
 <i>idr</i>
-<dl><dd><dd>the (initialized) idr</dl>
+<dl><dd></dd><dd>the (initialized) idr</dd></dl>
  
 
  <i>ptr</i>
-<dl><dd>pointer to be associated with the new id</dl>
+<dl><dd>pointer to be associated with the new id</dd></dl>
  
 
  <i>start</i>
-<dl><dd>the minimum id (inclusive)</dl>
+<dl><dd>the minimum id (inclusive)</dd></dl>
  
 
  <i>end</i>
-<dl><dd>the maximum id (exclusive, &lt;= 0 for max)</dl>
+<dl><dd>the maximum id (exclusive, &lt;= 0 for max)</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>memory allocation flags</dl>
+<dl><dd>memory allocation flags</dd></dl>
 
 <h2>Description</h2>
 

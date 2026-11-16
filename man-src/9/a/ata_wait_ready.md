@@ -14,13 +14,13 @@ description: "ata_wait_ready – wait for link to become ready"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>link to be waited on</dl>
+</dd><dd>link to be waited on</dd></dl>
 <p> <i>deadline</i></p>
 <dl>
-<dd>deadline jiffies for the operation</dl>
+<dd>deadline jiffies for the operation</dd></dl>
 <p> <i>check_ready</i></p>
 <dl>
-<dd>callback to check link readiness</dl>
+<dd>callback to check link readiness</dd></dl>
 <h2>Description</h2>
 <p>Wait for <i>link</i> to become ready. <i>check_ready</i> should return positive number if <i>link</i> is ready, 0 if it isn&#8217;t, -ENODEV if link doesn&#8217;t seem to be occupied, other errno for other error conditions. </p>
 <p> Transient -ENODEV conditions are allowed for ATA_TMOUT_FF_WAIT. </p>
@@ -30,5 +30,5 @@ description: "ata_wait_ready – wait for link to become ready"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

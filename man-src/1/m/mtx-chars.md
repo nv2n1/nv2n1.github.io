@@ -15,12 +15,12 @@ description: "mtx-chars – MkII Character Table Generators"
 <p> <code>MkII Character Table Generators</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;xtx</code></p>
-<dd> generate xetx-*.tex (used by xetex)</p>
-<dt><code>&#8211;pdf</code></p>
-<dd> generate pdfr-def.tex (used by pdftex)</p>
-<dt><code>&#8211;entities</code></p>
-<dd> generate entities table</dl>
+<dt><code>&#8211;xtx</code></dt>
+<dd> generate xetx-*.tex (used by xetex)</dd>
+<dt><code>&#8211;pdf</code></dt>
+<dd> generate pdfr-def.tex (used by pdftex)</dd>
+<dt><code>&#8211;entities</code></dt>
+<dd> generate entities table</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -10,12 +10,12 @@ description: "wimax_state_get – Return the current state of a WiMAX device"
 <p>wimax_state_get &#8211; Return the current state of a WiMAX device</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>enum wimax_st wimax_state_get(struct wimax_dev&nbsp;<wbr>*&nbsp;<wbr></code><i>wimax_dev</i><code>);</code></dl>
+<dt> <code>enum wimax_st wimax_state_get(struct wimax_dev&nbsp;<wbr>*&nbsp;<wbr></code><i>wimax_dev</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor</dl>
+</dd><dd>WiMAX device descriptor</dd></dl>
 <h2>Return</h2>
 <p>Current state of the device according to its driver.</p>
 <h2>Copyright</h2>

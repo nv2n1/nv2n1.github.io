@@ -34,14 +34,11 @@ description: "gdaldem – gdaldem Tools to analyze and visualize DEMs. (since GD
                                                                              [-q] -
                                                                          To generate a color relief map from any GDAL - supported elevation raster gdaldem color - relief input_dem color_text_file output_color_relief_map[-alpha][-exact_color_entry | -nearest_color_entry][-b Band(default = 1)][-of format][-co "NAME=VALUE"] *
                                                                                                                                                                        [-q] where color_text_file contains lines of the format "elevation_value red green blue"
-
                                                                          - To generate a Terrain Ruggedness Index(TRI)
 map from any GDAL - supported elevation raster : gdaldem TRI input_dem output_TRI_map[-compute_edges][-b Band(default = 1)][-of format][-q]
-
                                                  -
                                                  To generate a Topographic Position Index(TPI)
 map from any GDAL - supported elevation raster : gdaldem TPI input_dem output_TPI_map[-compute_edges][-b Band(default = 1)][-of format][-q]
-
                                                  -
                                                  To generate a roughness map from any GDAL - supported elevation raster : gdaldem roughness input_dem output_roughness_map[-compute_edges][-b Band(default = 1)][-of format][-q] Notes : gdaldem generally assumes that x,
     y and z units are identical.If x(east - west) and y(north - south) units are identical, but z(elevation)
@@ -50,38 +47,38 @@ units are different, the scale(-s) option can be used to set the ratio of vertic
 <h2>DESCRIPTION</h2>
 <p> This utility has 7 different modes :</p>
 <dl>
-<dt><code>hillshade</code></p>
-<dd> to generate a shaded relief map from any GDAL-supported elevation raster</p>
-<dt><code>slope</code></p>
-<dd> to generate a slope map from any GDAL-supported elevation raster</p>
-<dt><code>aspect</code></p>
-<dd> to generate an aspect map from any GDAL-supported elevation raster</p>
-<dt><code>color-relief</code></p>
-<dd> to generate a color relief map from any GDAL-supported elevation raster</p>
-<dt><code>TRI</code></p>
-<dd> to generate a map of Terrain Ruggedness Index from any GDAL-supported elevation raster</p>
-<dt><code>TPI</code></p>
-<dd> to generate a map of Topographic Position Index from any GDAL-supported elevation raster</p>
-<dt><code>roughness</code></p>
-<dd> to generate a map of roughness from any GDAL-supported elevation raster</dl>
+<dt><code>hillshade</code></dt>
+<dd> to generate a shaded relief map from any GDAL-supported elevation raster</dd>
+<dt><code>slope</code></dt>
+<dd> to generate a slope map from any GDAL-supported elevation raster</dd>
+<dt><code>aspect</code></dt>
+<dd> to generate an aspect map from any GDAL-supported elevation raster</dd>
+<dt><code>color-relief</code></dt>
+<dd> to generate a color relief map from any GDAL-supported elevation raster</dd>
+<dt><code>TRI</code></dt>
+<dd> to generate a map of Terrain Ruggedness Index from any GDAL-supported elevation raster</dd>
+<dt><code>TPI</code></dt>
+<dd> to generate a map of Topographic Position Index from any GDAL-supported elevation raster</dd>
+<dt><code>roughness</code></dt>
+<dd> to generate a map of roughness from any GDAL-supported elevation raster</dd></dl>
 <p> The following general options are available :</p>
 <dl>
-<dt><i>input_dem</i>:</p>
-<dd> The input DEM raster to be processed</p>
-<dt><i>output_xxx_map</i>:</p>
-<dd> The output raster produced</p>
-<dt><code>-of</code> <i>format</i>:</p>
-<dd> Select the output format. The default is GeoTIFF (GTiff). Use the short format name.</p>
-<dt><code>-compute_edges</code>:</p>
-<dd> (GDAL &gt;= 1.8.0) Do the computation at raster edges and near nodata values</p>
-<dt><code>-alg</code> <i>ZevenbergenThorne</i>:</p>
-<dd> (GDAL &gt;= 1.8.0) Use Zevenbergen &amp; Thorne formula, instead of Horn&#8217;s formula, to compute slope &amp; aspect. The litterature suggests Zevenbergen &amp; Thorne to be more suited to smooth landscapes, whereas Horn&#8217;s formula to perform better on rougher terrain.</p>
-<dt><code>-b</code> <i>band</i>:</p>
-<dd> Select an input <i>band</i> to be processed. Bands are numbered from 1.</p>
-<dt><code>-co</code> <i>&#8216;NAME=VALUE&#8217;</i>:</p>
-<dd> Passes a creation option to the output format driver. Multiple <code>-co</code> options may be listed. See format specific documentation for legal creation options for each format.</p>
-<dt><code>-q</code>:</p>
-<dd> Suppress progress monitor and other non-error output.</dl>
+<dt><i>input_dem</i>:</dt>
+<dd> The input DEM raster to be processed</dd>
+<dt><i>output_xxx_map</i>:</dt>
+<dd> The output raster produced</dd>
+<dt><code>-of</code> <i>format</i>:</dt>
+<dd> Select the output format. The default is GeoTIFF (GTiff). Use the short format name.</dd>
+<dt><code>-compute_edges</code>:</dt>
+<dd> (GDAL &gt;= 1.8.0) Do the computation at raster edges and near nodata values</dd>
+<dt><code>-alg</code> <i>ZevenbergenThorne</i>:</dt>
+<dd> (GDAL &gt;= 1.8.0) Use Zevenbergen &amp; Thorne formula, instead of Horn&#8217;s formula, to compute slope &amp; aspect. The litterature suggests Zevenbergen &amp; Thorne to be more suited to smooth landscapes, whereas Horn&#8217;s formula to perform better on rougher terrain.</dd>
+<dt><code>-b</code> <i>band</i>:</dt>
+<dd> Select an input <i>band</i> to be processed. Bands are numbered from 1.</dd>
+<dt><code>-co</code> <i>&#8216;NAME=VALUE&#8217;</i>:</dt>
+<dd> Passes a creation option to the output format driver. Multiple <code>-co</code> options may be listed. See format specific documentation for legal creation options for each format.</dd>
+<dt><code>-q</code>:</dt>
+<dd> Suppress progress monitor and other non-error output.</dd></dl>
 <p> For all algorithms, except color-relief, a nodata value in the target dataset will be emitted if at least one pixel set to the nodata value is found in the 3&#215;3 window centered around each source pixel. The consequence is that there will be a 1-pixel border around each image set with nodata value. From GDAL 1.8.0, if -compute_edges is specified, gdaldem will compute values at image edges or if a nodata value is found in the 3&#215;3 window, by interpolating missing values.</p>
 <h2>Modes</h2>
 <h3>hillshade</h3>
@@ -89,46 +86,46 @@ units are different, the scale(-s) option can be used to set the ratio of vertic
 <p> The value 0 is used as the output nodata value. </p>
 <p> The following specific options are available :</p>
 <dl>
-<dt><code>-z</code> <i>zFactor</i>:</p>
-<dd> vertical exaggeration used to pre-multiply the elevations</p>
-<dt><code>-s</code> <i>scale</i>:</p>
-<dd> ratio of vertical units to horizontal. If the horizontal unit of the source DEM is degrees (e.g Lat/Long WGS84 projection), you can use scale=111120 if the vertical units are meters (or scale=370400 if they are in feet)</p>
-<dt><code>-az</code> <i>azimuth</i>:</p>
-<dd> azimuth of the light, in degrees. 0 if it comes from the top of the raster, 90 from the east, &#8230; The default value, 315, should rarely be changed as it is the value generally used to generate shaded maps.</p>
-<dt><code>-alt</code> <i>altitude</i>:</p>
-<dd> altitude of the light, in degrees. 90 if the light comes from above the DEM, 0 if it is raking light.</p>
-<dt><code>-combined</code> <i>combined shading</i>:</p>
-<dd> (starting with GDAL 1.10) a combination of slope and oblique shading.</dl>
+<dt><code>-z</code> <i>zFactor</i>:</dt>
+<dd> vertical exaggeration used to pre-multiply the elevations</dd>
+<dt><code>-s</code> <i>scale</i>:</dt>
+<dd> ratio of vertical units to horizontal. If the horizontal unit of the source DEM is degrees (e.g Lat/Long WGS84 projection), you can use scale=111120 if the vertical units are meters (or scale=370400 if they are in feet)</dd>
+<dt><code>-az</code> <i>azimuth</i>:</dt>
+<dd> azimuth of the light, in degrees. 0 if it comes from the top of the raster, 90 from the east, &#8230; The default value, 315, should rarely be changed as it is the value generally used to generate shaded maps.</dd>
+<dt><code>-alt</code> <i>altitude</i>:</dt>
+<dd> altitude of the light, in degrees. 90 if the light comes from above the DEM, 0 if it is raking light.</dd>
+<dt><code>-combined</code> <i>combined shading</i>:</dt>
+<dd> (starting with GDAL 1.10) a combination of slope and oblique shading.</dd></dl>
 <h3>slope</h3>
 <p> This command will take a DEM raster and output a 32-bit float raster with slope values. You have the option of specifying the type of slope value you want: degrees or percent slope. In cases where the horizontal units differ from the vertical units, you can also supply a scaling factor. </p>
 <p> The value -9999 is used as the output nodata value. </p>
 <p> The following specific options are available :</p>
 <dl>
-<dt><code>-p</code> :</p>
-<dd> if specified, the slope will be expressed as percent slope. Otherwise, it is expressed as degrees</p>
-<dt><code>-s</code> <i>scale</i>:</p>
-<dd> ratio of vertical units to horizontal. If the horizontal unit of the source DEM is degrees (e.g Lat/Long WGS84 projection), you can use scale=111120 if the vertical units are meters (or scale=370400 if they are in feet)</dl>
+<dt><code>-p</code> :</dt>
+<dd> if specified, the slope will be expressed as percent slope. Otherwise, it is expressed as degrees</dd>
+<dt><code>-s</code> <i>scale</i>:</dt>
+<dd> ratio of vertical units to horizontal. If the horizontal unit of the source DEM is degrees (e.g Lat/Long WGS84 projection), you can use scale=111120 if the vertical units are meters (or scale=370400 if they are in feet)</dd></dl>
 <h3>aspect</h3>
 <p> This command outputs a 32-bit float raster with values between 0° and 360° representing the azimuth that slopes are facing. The definition of the azimuth is such that : 0° means that the slope is facing the North, 90° it&#8217;s facing the East, 180° it&#8217;s facing the South and 270° it&#8217;s facing the West (provided that the top of your input raster is north oriented). The aspect value -9999 is used as the nodata value to indicate undefined aspect in flat areas with slope=0. </p>
 <p> The following specifics options are available :</p>
 <dl>
-<dt><code>-trigonometric</code>:</p>
-<dd> return trigonometric angle instead of azimuth. Thus 0° means East, 90° North, 180° West, 270° South</p>
-<dt><code>-zero_for_flat</code>:</p>
-<dd> return 0 for flat areas with slope=0, instead of -9999</dl>
+<dt><code>-trigonometric</code>:</dt>
+<dd> return trigonometric angle instead of azimuth. Thus 0° means East, 90° North, 180° West, 270° South</dd>
+<dt><code>-zero_for_flat</code>:</dt>
+<dd> return 0 for flat areas with slope=0, instead of -9999</dd></dl>
 <p> By using those 2 options, the aspect returned by gdaldem aspect should be identical to the one of GRASS r.slope.aspect. Otherwise, it&#8217;s identical to the one of Matthew Perry&#8217;s aspect.cpp utility.</p>
 <h3>color-relief</h3>
 <p> This command outputs a 3-band (RGB) or 4-band (RGBA) raster with values are computed from the elevation and a text-based color configuration file, containing the association between various elevation values and the corresponding wished color. By default, the colors between the given elevation values are blended smoothly and the result is a nice colorized DEM. The -exact_color_entry or -nearest_color_entry options can be used to avoid that linear interpolation for values that don&#8217;t match an index of the color configuration file. </p>
 <p> The following specifics options are available :</p>
 <dl>
-<dt><i>color_text_file</i>:</p>
-<dd> text-based color configuration file</p>
-<dt><code>-alpha</code> :</p>
-<dd> add an alpha channel to the output raster</p>
-<dt><code>-exact_color_entry</code> :</p>
-<dd> use strict matching when searching in the color configuration file. If none matching color entry is found, the &#8216;0,0,0,0&#8217; RGBA quadruplet will be used</p>
-<dt><code>-nearest_color_entry</code> :</p>
-<dd> use the RGBA quadruplet corresponding to the closest entry in the color configuration file.</dl>
+<dt><i>color_text_file</i>:</dt>
+<dd> text-based color configuration file</dd>
+<dt><code>-alpha</code> :</dt>
+<dd> add an alpha channel to the output raster</dd>
+<dt><code>-exact_color_entry</code> :</dt>
+<dd> use strict matching when searching in the color configuration file. If none matching color entry is found, the &#8216;0,0,0,0&#8217; RGBA quadruplet will be used</dd>
+<dt><code>-nearest_color_entry</code> :</dt>
+<dd> use the RGBA quadruplet corresponding to the closest entry in the color configuration file.</dd></dl>
 <p> The color-relief mode is the only mode that supports VRT as output format. In that case, it will translate the color configuration file into appropriate LUT elements. Note that elevations specified as percentage will be translated as absolute values, which must be taken into account when the statistics of the source raster differ from the one that was used when building the VRT. </p>
 <p> The text-based color configuration file generally contains 4 columns per line : the elevation value and the corresponding Red, Green, Blue component (between 0 and 255). The elevation value can be any floating point value, or the <i>nv</i> keyword for the nodata value.. The elevation can also be expressed as a percentage : 0% being the minimum value found in the raster, 100% the maximum value. </p>
 <p> An extra column can be optionally added for the alpha component. If it is not specified, full opacity (255) is assumed. </p>

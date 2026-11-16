@@ -20,9 +20,9 @@ description: "perlrebackslash – Perl Regular Expression Backslash Sequences an
 <p> It is however guaranteed that backslash or escape sequences never have a punctuation character following the backslash, not now, and not in a future version of Perl 5. So it is safe to put a backslash in front of a non-word character. </p>
 <p> Note that the backslash itself is special; if you want to match a backslash, you have to escape the backslash with a backslash: <tt>&quot;/\/&quot;</tt> matches a single backslash.</p>
 <dl>
-<dt>[1]</p>
-<dd> There is one exception. If you use an alphanumeric character as the delimiter of your pattern (which you probably shouldn&#8217;t do for readability reasons), you have to escape the delimiter if you want to match it. Perl won&#8217;t warn then. See also &#8220;Gory details of parsing quoted constructs&#8221; in perlop.</dl>
+<dt>[1]</dt>
+<dd> There is one exception. If you use an alphanumeric character as the delimiter of your pattern (which you probably shouldn&#8217;t do for readability reasons), you have to escape the delimiter if you want to match it. Perl won&#8217;t warn then. See also &#8220;Gory details of parsing quoted constructs&#8221; in perlop.</dd></dl>
 <h3>All the sequences and escapes</h3>
 <p> Those not usable within a bracketed character class (like <tt>&quot;[\da-z]&quot;</tt>) are marked as <tt>&quot;Not in [].&quot;</tt> </p>
 <pre><code>
-
+</code></pre>

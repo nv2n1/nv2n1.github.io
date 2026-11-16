@@ -19,25 +19,25 @@ description: "nntpd – NNTP server process"
 <p> If the directory log/<i>user</i> exists under the directory specified in the <i>configdirectory</i> configuration option, then <i>nntpd</i> will create protocol telemetry logs for sessions authenticating as <i>user</i>. The telemetry logs will be stored in the log/<i>user</i> directory with a filename of the <i>nntpd</i> process-id.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-U</code><i> uses</i></p>
-<dd>The maximum number of times that the process should be used for new connections before shutting down. The default is 250.</p>
-<dt><code>-T</code><i> timeout</i></p>
-<dd>The number of seconds that the process will wait for a new connection before shutting down. Note that a value of 0 (zero) will disable the timeout. The default is 60.</p>
-<dt><code>-D</code></p>
-<dd>Run external debugger specified in debug_command.</p>
-<dt><code>-s</code></p>
-<dd>Serve NNTP over SSL (nntps). All data to and from <i>nntpd</i> is encrypted using the Secure Sockets Layer.</p>
-<dt><code>-r</code></p>
-<dd>Only allow NNTP reader commands. Permitted clients will only be allowed to read/post articles.</p>
-<dt><code>-f</code></p>
-<dd>Only allow NNTP feeder commands. Permitted clients will only be allowed to feed articles (no reading).</p>
-<dt><code>-p</code><i> ssf</i></p>
-<dd>Tell <i>nntpd</i> that an external layer exists. An SSF (security strength factor) of 1 means an integrity protection layer exists. Any higher SSF implies some form of privacy protection.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-U</code><i> uses</i></dt>
+<dd>The maximum number of times that the process should be used for new connections before shutting down. The default is 250.</dd>
+<dt><code>-T</code><i> timeout</i></dt>
+<dd>The number of seconds that the process will wait for a new connection before shutting down. Note that a value of 0 (zero) will disable the timeout. The default is 60.</dd>
+<dt><code>-D</code></dt>
+<dd>Run external debugger specified in debug_command.</dd>
+<dt><code>-s</code></dt>
+<dd>Serve NNTP over SSL (nntps). All data to and from <i>nntpd</i> is encrypted using the Secure Sockets Layer.</dd>
+<dt><code>-r</code></dt>
+<dd>Only allow NNTP reader commands. Permitted clients will only be allowed to read/post articles.</dd>
+<dt><code>-f</code></dt>
+<dd>Only allow NNTP feeder commands. Permitted clients will only be allowed to feed articles (no reading).</dd>
+<dt><code>-p</code><i> ssf</i></dt>
+<dd>Tell <i>nntpd</i> that an external layer exists. An SSF (security strength factor) of 1 means an integrity protection layer exists. Any higher SSF implies some form of privacy protection.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a>(5)</code>, <code><a href="/docs/linux/man/8-cyrus-master/">cyrus-master</a>(8)</code> </p>

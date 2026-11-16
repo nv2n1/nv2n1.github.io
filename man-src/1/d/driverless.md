@@ -19,22 +19,22 @@ driverless[-h | --help | --version][-d | -v | --debug][list][_ipps._tcp][_ipp._t
 <p> A second symbolic link to /usr/lib/cups/driver/driverless from /usr/bin/ allows driverless to be called directly by a user.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code>, <code>&#8211;version</code></p>
-<dd> Show help page, including version number.</p>
-<dt><code>-v</code>, <code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Debug mode, verbose logging to stderr.</p>
-<dt><code>list</code></p>
-<dd> List the driver URIs and metadata for all available IPP/IPPS printers suitable for driverless PPD file generation (to be used by CUPS).</p>
-<dt><code>_ipps._tcp</code></p>
-<dd> Check for only IPPS printers supporting driverless printing .</p>
-<dt><code>_ipp._tcp</code></p>
-<dd> Check for only IPP printers supporting driverless printing .</p>
-<dt><code>&#8211;std-ipp-uris</code></p>
-<dd> Show URIS in standard form</p>
-<dt><code>cat</code> <i>driver URI</i></p>
-<dd> Generate the PPD file for the supplied <i>driver URI</i> from the output of &quot;list&quot; (to be used by CUPS).</p>
-<dt><i>IPP printer URI</i></p>
-<dd> Generate the PPD file for the supplied <i>IPP printer URI</i> (suitable URIs are listed when calling driverless without options).</dl>
+<dt><code>-h</code>, <code>&#8211;help</code>, <code>&#8211;version</code></dt>
+<dd> Show help page, including version number.</dd>
+<dt><code>-v</code>, <code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Debug mode, verbose logging to stderr.</dd>
+<dt><code>list</code></dt>
+<dd> List the driver URIs and metadata for all available IPP/IPPS printers suitable for driverless PPD file generation (to be used by CUPS).</dd>
+<dt><code>_ipps._tcp</code></dt>
+<dd> Check for only IPPS printers supporting driverless printing .</dd>
+<dt><code>_ipp._tcp</code></dt>
+<dd> Check for only IPP printers supporting driverless printing .</dd>
+<dt><code>&#8211;std-ipp-uris</code></dt>
+<dd> Show URIS in standard form</dd>
+<dt><code>cat</code> <i>driver URI</i></dt>
+<dd> Generate the PPD file for the supplied <i>driver URI</i> from the output of &quot;list&quot; (to be used by CUPS).</dd>
+<dt><i>IPP printer URI</i></dt>
+<dd> Generate the PPD file for the supplied <i>IPP printer URI</i> (suitable URIs are listed when calling driverless without options).</dd></dl>
 <p> When called without options, the IPP printer URIs of all available driverless-capable IPP printers will be listed. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-cups-browsed/">cups-browsed</a></code>(8), <code><a href="/docs/linux/man/1-ippfind/">ippfind</a></code>(1), <code><a href="/docs/linux/man/8-ippusbxd/">ippusbxd</a></code>(8) </p>

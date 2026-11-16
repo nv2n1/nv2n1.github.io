@@ -20,22 +20,22 @@ description: "tv_grab_it – Grab TV listings for Italy."
 <p> Output <font SIZE="-1">TV</font> listings for several channels available in Italy. The grabber relies on parsing <font SIZE="-1">HTML</font> so it might stop working at any time. The data comes from different backends. This is to minimize blackouts in case of site changes but also to extend the number of channels. If the grabber can&#8217;t find the data with the first backend it will try the second one, and so on. You can specify your order of preference using the &#8211;backend option. </p>
 <p> Currently configured backends are (in default order):</p>
 <dl>
-<dt><code>skylife</code> &#8211; grabs data from <a rel="nofollow" href="http://www.skylife.it">www.skylife.it</a></p>
+<dt><code>skylife</code> &#8211; grabs data from <a rel="nofollow" href="http://www.skylife.it">www.skylife.it</a></dt>
 <dd>
-<dt><code>mtvit</code> &#8211; grabs data from <a rel="nofollow" href="http://www.mtv.it">www.mtv.it</a></p>
+</dd><dt><code>mtvit</code> &#8211; grabs data from <a rel="nofollow" href="http://www.mtv.it">www.mtv.it</a></dt>
 <dd>
-<dt><code>boingtv</code> &#8211; grabs data from <a rel="nofollow" href="http://www.boingtv.it">www.boingtv.it</a></p>
+</dd><dt><code>boingtv</code> &#8211; grabs data from <a rel="nofollow" href="http://www.boingtv.it">www.boingtv.it</a></dt>
 <dd>
-<dt><code>sitcom1</code> &#8211; grabs data from <a rel="nofollow" href="http://www.sitcom1.it">www.sitcom1.it</a></p>
+</dd><dt><code>sitcom1</code> &#8211; grabs data from <a rel="nofollow" href="http://www.sitcom1.it">www.sitcom1.it</a></dt>
 <dd>
-<dt><code>raisat</code> &#8211; grabs data from <a rel="nofollow" href="http://www.risat.it">www.risat.it</a></p>
+</dd><dt><code>raisat</code> &#8211; grabs data from <a rel="nofollow" href="http://www.risat.it">www.risat.it</a></dt>
 <dd>
-<dt><code>raiit</code> &#8211; grabs data from <a rel="nofollow" href="http://www.rai.it">www.rai.it</a></p>
+</dd><dt><code>raiit</code> &#8211; grabs data from <a rel="nofollow" href="http://www.rai.it">www.rai.it</a></dt>
 <dd>
-<dt><code>iris</code> &#8211; grabs data from <a rel="nofollow" href="http://www.iris.it">www.iris.it</a></p>
+</dd><dt><code>iris</code> &#8211; grabs data from <a rel="nofollow" href="http://www.iris.it">www.iris.it</a></dt>
 <dd>
-<dt><code>mediasetpremium</code> &#8211; grabs data from <a rel="nofollow" href="http://www.mediasetpremium.it">www.mediasetpremium.it</a></p>
-<dd></dl>
+</dd><dt><code>mediasetpremium</code> &#8211; grabs data from <a rel="nofollow" href="http://www.mediasetpremium.it">www.mediasetpremium.it</a></dt>
+<dd></dd></dl>
 <p> First run <code>tv_grab_it &#8211;configure</code> to choose which channels you want to download. Then running <code>tv_grab_it</code> with no arguments will output listings in <font SIZE="-1">XML</font> format to standard output. </p>
 <p> <code>&#8211;configure</code> Prompt for which channels, and writes the configuration file. </p>
 <p> <code>&#8211;config-file </code><font SIZE="-1"><code>FILE</code></font> Set the name of the configuration file, the default is <code>~/.xmltv/tv_grab_it.conf</code>. This is the file written by <code>&#8211;configure</code> and read when grabbing. </p>
@@ -56,16 +56,16 @@ description: "tv_grab_it – Grab TV listings for Italy."
 <p> The backends&#8217; data quality differs a lot. For example, mytv was very basic, yet complete and uses the least amount of bandwith. Skytv has a lot of channels, but unless you use it with the &#8211;slow option the data is not very good (and in this case i would be <font SIZE="-1">VERY</font> slow). wfactory is a good overall site if you don&#8217;t need the whole sky package.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>tv_grab_it &#8211;backend mtvit &#8211;configure</p>
-<dd> configures tv_grab_it using only the backend mtvit</p>
-<dt>tv_grab_it &#8211;backend skylife,wfactory &#8211;days 1</p>
-<dd> grabs one day of data overiding the default order (could also be &#8211;backend skylife &#8211;backend wfactory)</p>
-<dt>tv_grab_it &#8211;cache &#8211;slow &#8211;days 3</p>
-<dd> grabs the full data for the next three days using the default backend order and using a disk cache.</dl>
+<dt>tv_grab_it &#8211;backend mtvit &#8211;configure</dt>
+<dd> configures tv_grab_it using only the backend mtvit</dd>
+<dt>tv_grab_it &#8211;backend skylife,wfactory &#8211;days 1</dt>
+<dd> grabs one day of data overiding the default order (could also be &#8211;backend skylife &#8211;backend wfactory)</dd>
+<dt>tv_grab_it &#8211;cache &#8211;slow &#8211;days 3</dt>
+<dd> grabs the full data for the next three days using the default backend order and using a disk cache.</dd></dl>
 <h2>RECOMMENDED USAGE</h2>
 <dl>
-<dt>tv_grab_it &#8211;cache &#8211;slow &#8211;cache-slow &#8211;errors-in-xml</p>
-<dd></dl>
+<dt>tv_grab_it &#8211;cache &#8211;slow &#8211;cache-slow &#8211;errors-in-xml</dt>
+<dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> xmltv.</p>
 <h2>AUTHOR</h2>

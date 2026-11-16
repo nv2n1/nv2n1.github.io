@@ -16,8 +16,8 @@ description: "libinput-replay – replay kernel events from a recording"
 <p> If the recording contains more than one device, all devices are replayed simultaneously.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help</dd></dl>
 <h2>NOTES</h2>
 <p> This tool replays events from a recording through the the kernel and is independent of libinput. In other words, updating or otherwise changing libinput will not alter the output from this tool. libinput itself does not need to be in use to replay events.</p>
 <h2>LIBINPUT</h2>

@@ -37,14 +37,14 @@ description: "QuantLib::Index – purely virtual base class for indexes"
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> this class performs no check that the provided/requested fixings are for dates in the past, i.e. for dates less than or equal to the evaluation date. It is up to the client code to take care of possible inconsistencies due to &#8216;seeing in the future&#8217;</dl>
+</dt><dd> this class performs no check that the provided/requested fixings are for dates in the past, i.e. for dates less than or equal to the evaluation date. It is up to the client code to take care of possible inconsistencies due to &#8216;seeing in the future&#8217;</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual std::string name () const [pure virtual]</h3>
 <p> Returns the name of the index. </p>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+</dt><dd> This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <p> Implemented in <code>BMAIndex</code>, <code>InflationIndex</code>, and <code>InterestRateIndex</code>.</p>
 <h3>virtual Real fixing (const <code>Date</code> &amp; fixingDate, bool forecastTodaysFixing = false) const [pure virtual]</h3>
 <p> returns the fixing at the given date </p>
@@ -62,5 +62,5 @@ description: "QuantLib::Index – purely virtual base class for indexes"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

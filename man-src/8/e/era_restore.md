@@ -15,16 +15,16 @@ description: "era_restore – restore era metadata file to device or file."
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Don&#8217;t print any output. Check the exit code to test for success.</p>
-<dt><code>-i</code>, <code>&#8211;input</code> {xml file}</p>
-<dd>Specify input file containing xml metadata.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> {device|file}</p>
-<dd>Output device or file for restored binary metadata.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Don&#8217;t print any output. Check the exit code to test for success.</dd>
+<dt><code>-i</code>, <code>&#8211;input</code> {xml file}</dt>
+<dd>Specify input file containing xml metadata.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> {device|file}</dt>
+<dd>Output device or file for restored binary metadata.</dd></dl>
 <pre> If a file is used, then it must be preallocated, and large enough to hold
  the metadata.</pre>
 <h2>Example</h2>

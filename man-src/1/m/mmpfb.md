@@ -24,38 +24,38 @@ description: "mmpfb – creates single-master fonts from multiple master fonts"
 <h2>OPTIONS</h2>
 <p> Long options may be abbreviated to their unique prefixes.</p>
 <dl>
-<dt> <code>&#8211;output</code>=<i>file</i>, <code>-o </code><i>file</i><i></i></p>
-<dd> Send output to <i>file</i> instead of standard output.</p>
-<dt><code>&#8211;pfb</code>, <code>-b</code></p>
-<dd> Output a PFB font. This is the default.</p>
-<dt><code>&#8211;pfa</code>, <code>-a</code></p>
-<dd> Output a PFA font.</p>
-<dt> <code>&#8211;amcp-info</code></p>
-<dd> Do not create a font; instead, output an AMCP file for use by A message is printed if the font doesn&#8217;t have intermediate masters, in which case no AMCP file is necessary.</p>
-<dt> <code>&#8211;weight</code>=<i>N</i>, <code>-w </code><i>N</i><i></i></p>
-<dd> Set the weight axis to <i>N</i>.</p>
-<dt> <code>&#8211;width</code>=<i>N</i>, <code>-W </code><i>N</i><i></i></p>
-<dd> Set the width axis to <i>N</i>.</p>
-<dt> <code>&#8211;optical-size</code>=<i>N</i>, <code>-O </code><i>N</i><i></i></p>
-<dd> Set the optical size axis to <i>N</i>.</p>
-<dt> <code>&#8211;style</code>=<i>N</i><i></i><i></i></p>
-<dd> Set the style axis to <i>N</i>.</p>
-<dt><code>&#8211;1</code>=<i>N</i> (<code>&#8211;2</code>=<i>N</i>, <code>&#8211;3</code>=<i>N</i>, <code>&#8211;4</code>=<i>N</i>)</p>
-<dd> Set the first (second, third, fourth) axis to <i>N</i>.</p>
-<dt> <code>&#8211;precision</code>=<i>N</i>, <code>-p </code><i>N</i><i></i></p>
-<dd> Set the output precision to <i>N</i>. Higher values mean the control points in the output font will be more exactly aligned; lower values (1 or 2) create smaller output font files, and are close enough for most purposes. A precision of <i>N</i> means that each point will be within 1/<i>N</i> font units of the exact interpolated value. (A font unit is generally 1/7200 inch for a 10-point font.) The default is 5.</p>
-<dt> <code>&#8211;subrs</code>=<i>N</i><i></i><i></i></p>
-<dd> Limit the output font to at most <i>N</i> subroutines. 256 is a good value for <i>N</i>.</p>
-<dt><code>&#8211;no-minimize</code></p>
-<dd> Do not minimize the output font definition. By default, <code>mmpfb</code> removes extra PostScript code and dictionary definitions from the font. Supply the <code>&#8211;no-minimize</code> option to avoid this behavior.</dl>
+<dt> <code>&#8211;output</code>=<i>file</i>, <code>-o </code><i>file</i><i></i></dt>
+<dd> Send output to <i>file</i> instead of standard output.</dd>
+<dt><code>&#8211;pfb</code>, <code>-b</code></dt>
+<dd> Output a PFB font. This is the default.</dd>
+<dt><code>&#8211;pfa</code>, <code>-a</code></dt>
+<dd> Output a PFA font.</dd>
+<dt> <code>&#8211;amcp-info</code></dt>
+<dd> Do not create a font; instead, output an AMCP file for use by A message is printed if the font doesn&#8217;t have intermediate masters, in which case no AMCP file is necessary.</dd>
+<dt> <code>&#8211;weight</code>=<i>N</i>, <code>-w </code><i>N</i><i></i></dt>
+<dd> Set the weight axis to <i>N</i>.</dd>
+<dt> <code>&#8211;width</code>=<i>N</i>, <code>-W </code><i>N</i><i></i></dt>
+<dd> Set the width axis to <i>N</i>.</dd>
+<dt> <code>&#8211;optical-size</code>=<i>N</i>, <code>-O </code><i>N</i><i></i></dt>
+<dd> Set the optical size axis to <i>N</i>.</dd>
+<dt> <code>&#8211;style</code>=<i>N</i><i></i><i></i></dt>
+<dd> Set the style axis to <i>N</i>.</dd>
+<dt><code>&#8211;1</code>=<i>N</i> (<code>&#8211;2</code>=<i>N</i>, <code>&#8211;3</code>=<i>N</i>, <code>&#8211;4</code>=<i>N</i>)</dt>
+<dd> Set the first (second, third, fourth) axis to <i>N</i>.</dd>
+<dt> <code>&#8211;precision</code>=<i>N</i>, <code>-p </code><i>N</i><i></i></dt>
+<dd> Set the output precision to <i>N</i>. Higher values mean the control points in the output font will be more exactly aligned; lower values (1 or 2) create smaller output font files, and are close enough for most purposes. A precision of <i>N</i> means that each point will be within 1/<i>N</i> font units of the exact interpolated value. (A font unit is generally 1/7200 inch for a 10-point font.) The default is 5.</dd>
+<dt> <code>&#8211;subrs</code>=<i>N</i><i></i><i></i></dt>
+<dd> Limit the output font to at most <i>N</i> subroutines. 256 is a good value for <i>N</i>.</dd>
+<dt><code>&#8211;no-minimize</code></dt>
+<dd> Do not minimize the output font definition. By default, <code>mmpfb</code> removes extra PostScript code and dictionary definitions from the font. Supply the <code>&#8211;no-minimize</code> option to avoid this behavior.</dd></dl>
 <h2>TROUBLESHOOTING</h2>
 <p> The &quot;IBM&quot; Type 1 font interpreter shipped as part of the X font server and <code>ps2pk</code> (among others) is inappropriately strict about PostScript code embedded in a font. The <code>&#8211;minimize</code> option (now the default) fixes this problem. </p>
 <p> Some versions of Adobe Acrobat Distiller may report &quot;Warning: unable to embed font X. Invalid character outline data&quot; when distilling an instance generated by <code>mmpfb</code>. This is due to a limitation in the number of font subroutines Distiller can accept. (Multiple master fonts, and the single-master fonts generated by <code>mmpfb</code>, tend to have a lot of subroutines.) Try limiting the number of subroutines in the generated font with the <code>&#8211;subrs</code> option.</p>
 <h2>SEE ALSO</h2>
 <h2>DIAGNOSTICS</h2>
 <dl>
-<dt>reducing <i>font</i> to minimum number of subroutines (<i>N</i>)</p>
-<dd> You tried to reduce the number of subroutines to less than <i>N</i> using the <code>&#8211;subrs</code> option, but the font needs at least <i>N</i> to function. The output font will have <i>N</i> subroutines.</dl>
+<dt>reducing <i>font</i> to minimum number of subroutines (<i>N</i>)</dt>
+<dd> You tried to reduce the number of subroutines to less than <i>N</i> using the <code>&#8211;subrs</code> option, but the font needs at least <i>N</i> to function. The output font will have <i>N</i> subroutines.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler, ekohler [at] gmail.com </p>
 <p> The latest version is available from:<br />

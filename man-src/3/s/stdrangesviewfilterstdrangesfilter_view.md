@@ -10,15 +10,10 @@ description: "std::ranges::view::filter,std::ranges::filter_view – std::ranges
 <p>std::ranges::view::filter,std::ranges::filter_view &#8211; std::ranges::view::filter,std::ranges::filter_view</p>
 <h2>Synopsis</h2>
 <pre><code>template&lt; InputRange V, IndirectUnaryPredicate&lt;iterator_t&lt;V&gt;&gt; Pred &gt;
-
 requires View&lt;V&gt; &amp;&amp; std::is_object_v&lt;Pred&gt;                              (1) (since C++20)
-
 class filter_view : public ranges::view_interface&lt;filter_view&lt;V, Pred&gt;&gt;
-
 namespace view {
-
     inline constexpr /*unspecified*/ filter = /*unspecified*/;              (2) (since C++20)
-
 }</code></pre>
 <p>1) A range adaptor that represents View of an underlying sequence without the elements that fail to satisfy a predicate.<br />
 2) The expression view::filter(E, P) is expression-equivalent to (has the same effect as) filter_view{E, P} for any suitable subexpressions E and P.<br />
@@ -109,12 +104,9 @@ friend constexpr bool operator!=(const sentinel&amp; x, const iterator&amp; y); 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;vector&gt;
-
 #include &lt;ranges&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;int&gt; ints{0, 1, 2, 3, 4, 5};
     auto even = [](int i) { return 0 == i % 2; };

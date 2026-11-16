@@ -12,9 +12,7 @@ description: "readpassphrase – get a passphrase from the user"
 <p>Lb libbsd</p>
 <h2>Synopsis</h2>
 <pre><code>Fd #include &lt;bsd/readpassphrase.h&gt;
-
 Ft char *
-
 Fn readpassphrase const char *prompt char *buf size_t bufsiz int flags</code></pre>
 <h2>Description</h2>
 <p>The Fn readpassphrase function displays a prompt to, and reads in a passphrase from, /dev/tty If this file is inaccessible and the <code>RPP_REQUIRE_TTY</code> flag is not set, Fn readpassphrase displays the prompt on the standard error output and reads from the standard input. In this case it is generally not possible to turn off echo. </p>
@@ -34,8 +32,8 @@ RPP_STDIN force read of passphrase from stdin</pre>
 <p>Upon successful completion, Fn readpassphrase returns a pointer to the NUL-terminated passphrase. If an error is encountered, the terminal state is restored and a null pointer is returned.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/dev/tty </code></p>
-<dd></dl>
+<dt><code>/dev/tty </code></dt>
+<dd></dd></dl>
 <h2>Examples</h2>
 <p>The following code fragment will read a passphrase from /dev/tty into the buffer Fa passbuf . </p>
 <blockquote>
@@ -50,18 +48,18 @@ if (compare(transform(passbuf), epass) != 0)
 memset(passbuf, 0, sizeof(passbuf));</pre>
 </blockquote>
 <h2>Errors</h2>
-<dt><code>Bq </code>Er EINTR</p>
-<dd>The Fn readpassphrase function was interrupted by a signal.</p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>The <i>bufsiz</i> argument was zero.</p>
-<dt><code>Bq </code>Er EIO</p>
-<dd>The process is a member of a background process attempting to read from its controlling terminal, the process is ignoring or blocking the <code>SIGTTIN</code> signal, or the process group is orphaned.</p>
-<dt><code>Bq </code>Er EMFILE</p>
-<dd>The process has already reached its limit for open file descriptors.</p>
-<dt><code>Bq </code>Er ENFILE</p>
-<dd>The system file table is full.</p>
-<dt><code>Bq </code>Er ENOTTY</p>
-<dd>There is no controlling terminal and the <code>RPP_REQUIRE_TTY</code> flag was specified.</dl>
+<dt><code>Bq </code>Er EINTR</dt>
+<dd>The Fn readpassphrase function was interrupted by a signal.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>The <i>bufsiz</i> argument was zero.</dd>
+<dt><code>Bq </code>Er EIO</dt>
+<dd>The process is a member of a background process attempting to read from its controlling terminal, the process is ignoring or blocking the <code>SIGTTIN</code> signal, or the process group is orphaned.</dd>
+<dt><code>Bq </code>Er EMFILE</dt>
+<dd>The process has already reached its limit for open file descriptors.</dd>
+<dt><code>Bq </code>Er ENFILE</dt>
+<dd>The system file table is full.</dd>
+<dt><code>Bq </code>Er ENOTTY</dt>
+<dd>There is no controlling terminal and the <code>RPP_REQUIRE_TTY</code> flag was specified.</dd></dl>
 <h2>Signals</h2>
 <p>Fn readpassphrase will catch the following signals: </p>
 <blockquote>

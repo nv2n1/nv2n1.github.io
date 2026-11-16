@@ -25,105 +25,105 @@ description: "guilt – quilt on top of git"
 <p> The following hooks are supported: </p>
 <p> delete &lt;patch name&gt;</p>
 <dl>
-<dd>Executed when a patch is deleted from the patch series via linkguilt:guilt-delete[1].</dl>
+<dd>Executed when a patch is deleted from the patch series via linkguilt:guilt-delete[1].</dd></dl>
 <h2>Guilt Commands</h2>
 <p>All commands can be called with or without a dash. e.g. <i>guilt add</i> or <i>guilt-add</i> </p>
 <p> linkguilt:guilt-add[1]</p>
 <dl>
-<dd>guilt-add &#8211; Add a file to git and guilt.</dl>
+<dd>guilt-add &#8211; Add a file to git and guilt.</dd></dl>
 <p> linkguilt:guilt-applied[1]</p>
 <dl>
-<dd>guilt-applied &#8211; List applied patches.</dl>
+<dd>guilt-applied &#8211; List applied patches.</dd></dl>
 <p> linkguilt:guilt-branch[1]</p>
 <dl>
-<dd>guilt-branch &#8211; Branch the entire patch series.</dl>
+<dd>guilt-branch &#8211; Branch the entire patch series.</dd></dl>
 <p> linkguilt:guilt-commit[1]</p>
 <dl>
-<dd>guilt-commit &#8211; Commit specified number of patches.</dl>
+<dd>guilt-commit &#8211; Commit specified number of patches.</dd></dl>
 <p> linkguilt:guilt-delete[1]</p>
 <dl>
-<dd>guilt-delete &#8211; Delete a patch.</dl>
+<dd>guilt-delete &#8211; Delete a patch.</dd></dl>
 <p> linkguilt:guilt-diff[1]</p>
 <dl>
-<dd>guilt-diff &#8211; Outputs various diffs.</dl>
+<dd>guilt-diff &#8211; Outputs various diffs.</dd></dl>
 <p> linkguilt:guilt-export[1]</p>
 <dl>
-<dd>guilt-export &#8211; Export a patch series (to be used by quilt).</dl>
+<dd>guilt-export &#8211; Export a patch series (to be used by quilt).</dd></dl>
 <p> linkguilt:guilt-files[1]</p>
 <dl>
-<dd>guilt-files &#8211; Print the list of files that the topmost patch changes.</dl>
+<dd>guilt-files &#8211; Print the list of files that the topmost patch changes.</dd></dl>
 <p> linkguilt:guilt-fold[1]</p>
 <dl>
-<dd>guilt-fold &#8211; Fold a specified patch into the topmost applied patch.</dl>
+<dd>guilt-fold &#8211; Fold a specified patch into the topmost applied patch.</dd></dl>
 <p> linkguilt:guilt-fork[1]</p>
 <dl>
-<dd>guilt-fork &#8211; Fork the topmost applied patch.</dl>
+<dd>guilt-fork &#8211; Fork the topmost applied patch.</dd></dl>
 <p> linkguilt:guilt-graph[1]</p>
 <dl>
-<dd>guilt-graph &#8211; Create a patch dependency graph.</dl>
+<dd>guilt-graph &#8211; Create a patch dependency graph.</dd></dl>
 <p> linkguilt:guilt-guard[1]</p>
 <dl>
-<dd>guilt-guard &#8211; Assign guards to patches.</dl>
+<dd>guilt-guard &#8211; Assign guards to patches.</dd></dl>
 <p> linkguilt:guilt-header[1]</p>
 <dl>
-<dd>guilt-header &#8211; Print a patch header.</dl>
+<dd>guilt-header &#8211; Print a patch header.</dd></dl>
 <p> linkguilt:guilt-help[1]</p>
 <dl>
-<dd>guilt-help &#8211; open man page of a guilt command.</dl>
+<dd>guilt-help &#8211; open man page of a guilt command.</dd></dl>
 <p> linkguilt:guilt-import-commit[1]</p>
 <dl>
-<dd>guilt-import-commit &#8211; Import one or more commits as patches.</dl>
+<dd>guilt-import-commit &#8211; Import one or more commits as patches.</dd></dl>
 <p> linkguilt:guilt-import[1]</p>
 <dl>
-<dd>guilt-import &#8211; Import specified patch file.</dl>
+<dd>guilt-import &#8211; Import specified patch file.</dd></dl>
 <p> linkguilt:guilt-init[1]</p>
 <dl>
-<dd>guilt-init &#8211; Initialize guilt for use in a git repository.</dl>
+<dd>guilt-init &#8211; Initialize guilt for use in a git repository.</dd></dl>
 <p> linkguilt:guilt-new[1]</p>
 <dl>
-<dd>guilt-new &#8211; Create a new patch.</dl>
+<dd>guilt-new &#8211; Create a new patch.</dd></dl>
 <p> linkguilt:guilt-next[1]</p>
 <dl>
-<dd>guilt-next &#8211; Output the name of next patch to be pushed.</dl>
+<dd>guilt-next &#8211; Output the name of next patch to be pushed.</dd></dl>
 <p> linkguilt:guilt-patchbomb[1]</p>
 <dl>
-<dd>guilt-patchbomb &#8211; Email a series of commits interactively.</dl>
+<dd>guilt-patchbomb &#8211; Email a series of commits interactively.</dd></dl>
 <p> linkguilt:guilt-pop[1]</p>
 <dl>
-<dd>guilt-pop &#8211; Pop patches from the tree.</dl>
+<dd>guilt-pop &#8211; Pop patches from the tree.</dd></dl>
 <p> linkguilt:guilt-prev[1]</p>
 <dl>
-<dd>guilt-prev &#8211; Output name of second topmost applied patch.</dl>
+<dd>guilt-prev &#8211; Output name of second topmost applied patch.</dd></dl>
 <p> linkguilt:guilt-push[1]</p>
 <dl>
-<dd>guilt-push &#8211; Push patches onto the tree.</dl>
+<dd>guilt-push &#8211; Push patches onto the tree.</dd></dl>
 <p> linkguilt:guilt-rebase[1]</p>
 <dl>
-<dd>guilt-rebase &#8211; Rebase pushed patches.</dl>
+<dd>guilt-rebase &#8211; Rebase pushed patches.</dd></dl>
 <p> linkguilt:guilt-refresh[1]</p>
 <dl>
-<dd>guilt-refresh &#8211; Refresh topmost applied patch.</dl>
+<dd>guilt-refresh &#8211; Refresh topmost applied patch.</dd></dl>
 <p> linkguilt:guilt-repair[1]</p>
 <dl>
-<dd>guilt-repair &#8211; Repair the repository state.</dl>
+<dd>guilt-repair &#8211; Repair the repository state.</dd></dl>
 <p> linkguilt:guilt-rm[1]</p>
 <dl>
-<dd>guilt-rm &#8211; Remove a file from the git tree and guilt.</dl>
+<dd>guilt-rm &#8211; Remove a file from the git tree and guilt.</dd></dl>
 <p> linkguilt:guilt-select[1]</p>
 <dl>
-<dd>guilt-select &#8211; Select guards to apply when pushing patches.</dl>
+<dd>guilt-select &#8211; Select guards to apply when pushing patches.</dd></dl>
 <p> linkguilt:guilt-series[1]</p>
 <dl>
-<dd>guilt-series &#8211; Print the stack of patches.</dl>
+<dd>guilt-series &#8211; Print the stack of patches.</dd></dl>
 <p> linkguilt:guilt-status[1]</p>
 <dl>
-<dd>guilt-status &#8211; Print the status of files since the last refresh.</dl>
+<dd>guilt-status &#8211; Print the status of files since the last refresh.</dd></dl>
 <p> linkguilt:guilt-top[1]</p>
 <dl>
-<dd>guilt-top &#8211; Output name of topmost applied patch.</dl>
+<dd>guilt-top &#8211; Output name of topmost applied patch.</dd></dl>
 <p> linkguilt:guilt-unapplied[1]</p>
 <dl>
-<dd>guilt-unapplied &#8211; List all unapplied patches.</dl>
+<dd>guilt-unapplied &#8211; List all unapplied patches.</dd></dl>
 <h2>Author</h2>
 <p>Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>Documentation</h2>
@@ -132,11 +132,12 @@ description: "guilt – quilt on top of git"
 <p>Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd>jeffpc [at] josefsipek.net</dd>
 <dl>
-<dd>mailto:jeffpc [at] josefsipek.net</dl>
-<dt> 2.</p>
-<dd>brandon [at] ifup.org</p>
+<dd>mailto:jeffpc [at] josefsipek.net</dd></dl>
+<dt> 2.</dt>
+<dd>brandon [at] ifup.org</dd>
 <dl>
-<dd>mailto:brandon [at] ifup.org</dl>
+<dd>mailto:brandon [at] ifup.org</dd></dl>
+</dl>

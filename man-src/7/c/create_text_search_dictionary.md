@@ -20,14 +20,14 @@ description: "CREATE TEXT SEARCH DICTIONARY – define a new text search diction
 <p> Refer to in the documentation for further information.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the text search dictionary to be created. The name can be schema-qualified.</p>
-<dt><i>template</i></p>
-<dd>The name of the text search template that will define the basic behavior of this dictionary.</p>
-<dt><i>option</i></p>
-<dd>The name of a template-specific option to be set for this dictionary.</p>
-<dt><i>value</i></p>
-<dd>The value to use for a template-specific option. If the value is not a simple identifier or number, it must be quoted (but you can always quote it, if you wish).</dl>
+<dt><i>name</i></dt>
+<dd>The name of the text search dictionary to be created. The name can be schema-qualified.</dd>
+<dt><i>template</i></dt>
+<dd>The name of the text search template that will define the basic behavior of this dictionary.</dd>
+<dt><i>option</i></dt>
+<dd>The name of a template-specific option to be set for this dictionary.</dd>
+<dt><i>value</i></dt>
+<dd>The value to use for a template-specific option. If the value is not a simple identifier or number, it must be quoted (but you can always quote it, if you wish).</dd></dl>
 <p> The options can appear in any order.</p>
 <h2>Examples</h2>
 <p>The following example command creates a Snowball-based dictionary with a nonstandard list of stop words. </p>

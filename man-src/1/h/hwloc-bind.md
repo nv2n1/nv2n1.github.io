@@ -14,52 +14,52 @@ description: "hwloc-bind – Launch a command that is bound to specific processo
 <p> Note that <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) provides a detailed explanation of the hwloc system and of valid &lt;location&gt; formats; it should be read before reading this man page.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;cpubind</code></p>
-<dd> Use following arguments for CPU binding (default).</p>
-<dt><code>&#8211;membind</code></p>
-<dd> Use following arguments for memory binding. If <code>&#8211;mempolicy</code> is not also given, the default policy is bind.</p>
-<dt><code>&#8211;mempolicy</code> &lt;policy&gt;</p>
-<dd> Change the memory binding policy. The available policies are default, firsttouch, bind, interleave replicate and nexttouch. This option is only meaningful when an actual binding is also given with <code>&#8211;membind</code>. If <code>&#8211;membind</code> is given without <code>&#8211;mempolicy</code>, the default policy is bind. </p>
-<dt><code>&#8211;get</code></p>
-<dd> Report the current bindings.</p>
-<dt>&nbsp;<wbr></p>
-<dd> When a command is given, the binding is displayed before executing the command. When no command is given, the program exits after displaying the current binding.</p>
-<dt>&nbsp;<wbr></p>
-<dd> When combined with <code>&#8211;membind</code>, report the memory binding instead of CPU binding.</p>
-<dt>&nbsp;<wbr></p>
-<dd> No location may be given since no binding is performed. </p>
-<dt><code>-e</code> <code>&#8211;get-last-cpu-location</code></p>
-<dd> Report the last processors where the process ran. Note that the result may already be outdated when reported since the operating system may move the process to other processors at any time according to the binding.</p>
-<dt>&nbsp;<wbr></p>
-<dd> When a command is given, the last processors is displayed before executing the command. When no command is given, the program exits after displaying the last processors.</p>
-<dt>&nbsp;<wbr></p>
-<dd> This option cannot be combined with <code>&#8211;membind</code>.</p>
-<dt>&nbsp;<wbr></p>
-<dd> No location may be given since no binding is performed. </p>
-<dt><code>&#8211;single</code></p>
-<dd> Bind on a single CPU to prevent migration.</p>
-<dt><code>&#8211;strict</code></p>
-<dd> Require strict binding.</p>
-<dt><code>&#8211;pid</code> &lt;pid&gt;</p>
-<dd> Operate on pid &lt;pid&gt;</p>
-<dt><code>-p</code> <code>&#8211;physical</code></p>
-<dd> take OS/physical indexes instead of logical indexes</p>
-<dt><code>-l</code> <code>&#8211;logical</code></p>
-<dd> take logical indexes instead of physical/OS indexes (default)</p>
-<dt><code>&#8211;taskset</code></p>
-<dd> Display CPU set strings in the format recognized by the taskset command-line program instead of hwloc-specific CPU set string format. This option has no impact on the format of input CPU set strings, both formats are always accepted.</p>
-<dt><code>&#8211;restrict</code> &lt;cpuset&gt;</p>
-<dd> Restrict the topology to the given cpuset.</p>
-<dt><code>&#8211;whole-system</code></p>
-<dd> Do not consider administration limitations.</p>
-<dt><code>-f</code> <code>&#8211;force</code></p>
-<dd> Launch the executable even if binding failed.</p>
-<dt><code>-q</code> <code>&#8211;quiet</code></p>
-<dd> Hide non-fatal error messages. It includes locations pointing to non-existing objects, as well as failure to bind. This is usually useful in addition to <code>&#8211;force</code>.</p>
-<dt><code>-v</code> <code>&#8211;verbose</code></p>
-<dd> Verbose output.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Report version and exit.</dl>
+<dt><code>&#8211;cpubind</code></dt>
+<dd> Use following arguments for CPU binding (default).</dd>
+<dt><code>&#8211;membind</code></dt>
+<dd> Use following arguments for memory binding. If <code>&#8211;mempolicy</code> is not also given, the default policy is bind.</dd>
+<dt><code>&#8211;mempolicy</code> &lt;policy&gt;</dt>
+<dd> Change the memory binding policy. The available policies are default, firsttouch, bind, interleave replicate and nexttouch. This option is only meaningful when an actual binding is also given with <code>&#8211;membind</code>. If <code>&#8211;membind</code> is given without <code>&#8211;mempolicy</code>, the default policy is bind. </dd>
+<dt><code>&#8211;get</code></dt>
+<dd> Report the current bindings.</dd>
+<dt>&nbsp;<wbr></dt>
+<dd> When a command is given, the binding is displayed before executing the command. When no command is given, the program exits after displaying the current binding.</dd>
+<dt>&nbsp;<wbr></dt>
+<dd> When combined with <code>&#8211;membind</code>, report the memory binding instead of CPU binding.</dd>
+<dt>&nbsp;<wbr></dt>
+<dd> No location may be given since no binding is performed. </dd>
+<dt><code>-e</code> <code>&#8211;get-last-cpu-location</code></dt>
+<dd> Report the last processors where the process ran. Note that the result may already be outdated when reported since the operating system may move the process to other processors at any time according to the binding.</dd>
+<dt>&nbsp;<wbr></dt>
+<dd> When a command is given, the last processors is displayed before executing the command. When no command is given, the program exits after displaying the last processors.</dd>
+<dt>&nbsp;<wbr></dt>
+<dd> This option cannot be combined with <code>&#8211;membind</code>.</dd>
+<dt>&nbsp;<wbr></dt>
+<dd> No location may be given since no binding is performed. </dd>
+<dt><code>&#8211;single</code></dt>
+<dd> Bind on a single CPU to prevent migration.</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd> Require strict binding.</dd>
+<dt><code>&#8211;pid</code> &lt;pid&gt;</dt>
+<dd> Operate on pid &lt;pid&gt;</dd>
+<dt><code>-p</code> <code>&#8211;physical</code></dt>
+<dd> take OS/physical indexes instead of logical indexes</dd>
+<dt><code>-l</code> <code>&#8211;logical</code></dt>
+<dd> take logical indexes instead of physical/OS indexes (default)</dd>
+<dt><code>&#8211;taskset</code></dt>
+<dd> Display CPU set strings in the format recognized by the taskset command-line program instead of hwloc-specific CPU set string format. This option has no impact on the format of input CPU set strings, both formats are always accepted.</dd>
+<dt><code>&#8211;restrict</code> &lt;cpuset&gt;</dt>
+<dd> Restrict the topology to the given cpuset.</dd>
+<dt><code>&#8211;whole-system</code></dt>
+<dd> Do not consider administration limitations.</dd>
+<dt><code>-f</code> <code>&#8211;force</code></dt>
+<dd> Launch the executable even if binding failed.</dd>
+<dt><code>-q</code> <code>&#8211;quiet</code></dt>
+<dd> Hide non-fatal error messages. It includes locations pointing to non-existing objects, as well as failure to bind. This is usually useful in addition to <code>&#8211;force</code>.</dd>
+<dt><code>-v</code> <code>&#8211;verbose</code></dt>
+<dd> Verbose output.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Report version and exit.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> hwloc-bind execs an executable (with optional command line arguments) that is bound to the specified location (or list of locations). Upon successful execution, hwloc-bind simply sets bindings and then execs the executable over itself. </p>
 <p> If binding fails, or if the binding set is empty, and <code>&#8211;force</code> was not given, hwloc-bind returns with an error instead of launching the executable. </p>

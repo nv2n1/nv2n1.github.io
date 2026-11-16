@@ -14,12 +14,12 @@ description: "system-config-kickstart – graphical interface for creating kicks
 <p><code>system-config-kickstart</code> provides a simple method of creating a kickstart file that can be used to automate the installation process on Red Hat Enterprise Linux, Fedora, and derived distributions. If given, the program will take its initial settings from the KSFILE provided on the command line. This allows editing of existing kickstart files. Currently, this program has some serious limitations. For example, it cannot work with LVM nor do advanced RAID and BTRFS configurations. These are supported by kickstart, but the graphical program does not provide a way to set them up nor manipulate them in existing kickstart files. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Print out program usage.</p>
-<dt><code>&#8211;generate FILENAME</code></p>
-<dd>Examine the system and create a kickstart file that more or less matches, writing the output to FILENAME.</p>
-<dt><code>&#8211;display DISPLAY#</code></p>
-<dd>Specify the X display to use. </p>
+<dt><code>&#8211;help</code></dt>
+<dd>Print out program usage.</dd>
+<dt><code>&#8211;generate FILENAME</code></dt>
+<dd>Examine the system and create a kickstart file that more or less matches, writing the output to FILENAME.</dd>
+<dt><code>&#8211;display DISPLAY#</code></dt>
+<dd>Specify the X display to use. </dd>
 </dl>
 <h2>Examples</h2>
 <p>To run the program type: system-config-kickstart </p>

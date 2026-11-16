@@ -11,16 +11,16 @@ description: "XtRegisterDrawable – register a drawable with the Intrinsics eve
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtRegisterDrawable(Display* <i>display</i>, Drawable <i>drawable</i>, Widget <i>widget</i>);</p>
-<dd>void XtUnregisterDrawable(Display* <i>display</i>, Drawable <i>drawable</i>);</dl>
+<dd>void XtRegisterDrawable(Display* <i>display</i>, Drawable <i>drawable</i>, Widget <i>widget</i>);</dd>
+<dd>void XtUnregisterDrawable(Display* <i>display</i>, Drawable <i>drawable</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the drawable&#8217;s display.</p>
-<dt><i>drawable</i></p>
-<dd>Specifies the drawable to register.</p>
-<dt><i>widget</i></p>
-<dd>Specifies the widget to register the drawable for.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the drawable&#8217;s display.</dd>
+<dt><i>drawable</i></dt>
+<dd>Specifies the drawable to register.</dd>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget to register the drawable for.</dd></dl>
 <h2>Description</h2>
 <p><code>XtRegisterDrawable</code> associates the specified drawable with the specified widget so that future calls to <code>XtWindowToWidget</code> with the drawable will return the widget. The default event dispatcher will dispatch future core events that arrive with the drawable to the widget as though the event contained the widget&#8217;s window, but the event itself will not be changed in any way when being passed to even handler or action procedures. </p>
 <p> If the drawable is already registered with another widget, or if the drawable is the window of a widget in the client&#8217;s widget tree, the results of calling <code>XtRegisterDrawable</code> are undefined. </p>

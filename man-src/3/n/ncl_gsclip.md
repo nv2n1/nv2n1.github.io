@@ -12,11 +12,11 @@ GSCLIP (Set clipping indicator) - controls whether data are displayed outside th
 
  void gset_clip_ind(Gclip_ind clip_ind);
 <h2>Description</h2><dl COMPACT><dt>ICLIP
-<dd>(Integer, Input) - A flag to turn clipping on or off.
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Clipping is off. Data outside of the window will be plotted.
-<dt>1
-<dd>Clipping is on. Data outside of the window will not be plotted. This is the default.</dl></dl>
+</dt><dd>(Integer, Input) - A flag to turn clipping on or off.
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Clipping is off. Data outside of the window will be plotted.
+</dd><dt>1
+</dt><dd>Clipping is on. Data outside of the window will not be plotted. This is the default.</dd></dl></dl>
 </dl><h2>Usage</h2>If the clipping indicator is off, and you make GKS output calls to plot world coordinate data outside your defined world coordinate window (and your viewport is smaller than the full plotting surface), those data will appear with your plot. If the clipping indicator is on, the data will be clipped to fit your window.
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: set, gsup, gswn, gselnt, gqclip, gset_clip_ind 

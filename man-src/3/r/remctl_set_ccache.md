@@ -28,7 +28,6 @@ int remctl_set_ccache(struct remctl *r, const char *ccache);</code></pre>
 <h2>Examples</h2>
 
 Here's an example of attempting to use this function to set a ticket cache location and falling back on setting <font SIZE="-1">KRB5CCNAME</font> in the environment if this function is not supported. <pre><code>struct remctl r;
-
 r = remctl_new();
 if (r != NULL)
     if (!remctl_set_ccache(r, &quot;/tmp/krb5cc_example&quot;))

@@ -15,11 +15,11 @@ bio_associate_blkcg - associate a bio with the specified blkcg
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>target bio</dl>
+<dl><dd></dd><dd>target bio</dd></dl>
  
 
  <i>blkcg_css</i>
-<dl><dd>css of the blkcg to associate</dl>
+<dl><dd>css of the blkcg to associate</dd></dl>
 
 <h2>Description</h2>
 

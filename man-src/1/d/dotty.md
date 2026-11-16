@@ -19,12 +19,12 @@ description: "dotty – A Customizable Graph Editor"
 <p> The file name is optional. If present, the graph contained in that file is displayed in the <code>dotty</code> window.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> Prints the version.</p>
-<dt><code>-lm</code><i>mode</i></p>
-<dd> Sets the layout mode. The <i>mode</i> can be <code>sync</code> or <code>async</code>. The default is <code>async</code>.</p>
-<dt><code>-el</code><i>lev</i></p>
-<dd> Sets the mesage level. The <i>lev</i> can be <code>0</code> or <code>1</code>. The default is <code>0</code>.</dl>
+<dt><code>-V</code></dt>
+<dd> Prints the version.</dd>
+<dt><code>-lm</code><i>mode</i></dt>
+<dd> Sets the layout mode. The <i>mode</i> can be <code>sync</code> or <code>async</code>. The default is <code>async</code>.</dd>
+<dt><code>-el</code><i>lev</i></dt>
+<dd> Sets the mesage level. The <i>lev</i> can be <code>0</code> or <code>1</code>. The default is <code>0</code>.</dd></dl>
 <h2>BUGS</h2>
 <p> The lefty parser does not accept anonymous graphs.</p>
 <h2>SEE ALSO</h2>

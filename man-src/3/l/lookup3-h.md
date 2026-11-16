@@ -29,14 +29,14 @@ description: "src/lookup3.h –"
 <dl COMPACT>
 <dd><i>k</i> the key, an array of uint32 values<br />
  <i>length</i> the length of the key, in uint32s<br />
- <i>initval</i> the previous hash, or an arbitrary value</dl>
+ <i>initval</i> the previous hash, or an arbitrary value</dd></dl>
 <h3>uint32_t hashlittle (const void *key, size_tlength, uint32initval)</h3>
 <p><code>hashlittle()</code> &#8212; hash a variable-length key into a 32-bit value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> the key (the unaligned variable-length array of bytes)<br />
  <i>length</i> the length of the key, counting by bytes<br />
- <i>initval</i> can be any 4-byte value</dl>
+ <i>initval</i> can be any 4-byte value</dd></dl>
 <p> Returns a 32-bit value. Every bit of the key affects every bit of the return value. Two keys differing by one or two bits will have totally different hash values. </p>
 <p> The best hash table sizes are powers of 2. There is no need to do mod a prime (mod is sooo slow!). If you need less than 32 bits, use a bitmask. For example, if you need only 10 bits, do h = (h &amp; hashmask(10)); In which case, the hash table should have hashsize(10) elements. </p>
 <p> If you are hashing n strings (uint8 **)k, do it like this: for (i=0, h=0; i&lt;n; ++i) h = hashlittle( k[i], len[i], h); </p>

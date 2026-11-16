@@ -17,10 +17,10 @@ description: "malshow – show Malaga’s results and/or debugging state"
 <p> See <code>info Malaga</code> for details. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>[<code>elp</code>]</p>
-<dd> Print a help text about <code>malshow</code>&#8216;s command line arguments and exit.</p>
-<dt><code>-v</code>[<code>ersion</code>]</p>
-<dd> Print <code>malshow</code>&#8216;s version number and exit. </p>
+<dt><code>-h</code>[<code>elp</code>]</dt>
+<dd> Print a help text about <code>malshow</code>&#8216;s command line arguments and exit.</dd>
+<dt><code>-v</code>[<code>ersion</code>]</dt>
+<dd> Print <code>malshow</code>&#8216;s version number and exit. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Malaga has been developed by Bjoern Beutel. Numerous other people distributed to it. This manpage was originally written for the Debian distribution by Antti-Juhani Kaijanaho. </p>

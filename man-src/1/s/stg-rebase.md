@@ -18,31 +18,31 @@ stg rebase[options][--]&lt;new - base - id&gt;
 <p> If you experience merge conflicts, resolve the problem and continue the rebase by executing the following sequence: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git add --update
 $ stg refresh
 $ stg goto top-patch
 </pre>
-</dl>
+</dd></dl>
 <p> Or if you want to skip that patch: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ stg undo --hard
 $ stg push next-patch..top-patch
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -n, &#8211;nopush</p>
 <dl>
 <dt>
-<dd> Do not push the patches back after rebasing.</dl>
+</dt><dd> Do not push the patches back after rebasing.</dd></dl>
 <p> -m, &#8211;merged</p>
 <dl>
 <dt>
-<dd> Check for patches merged upstream.</dl>
+</dt><dd> Check for patches merged upstream.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

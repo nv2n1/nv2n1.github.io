@@ -14,16 +14,16 @@ description: "bitmap_onto – translate one bitmap relative to another"
 <p><i>dst</i></p>
 <dl>
 <dd>
-<dd>resulting translated bitmap</dl>
+</dd><dd>resulting translated bitmap</dd></dl>
 <p> <i>orig</i></p>
 <dl>
-<dd>original untranslated bitmap</dl>
+<dd>original untranslated bitmap</dd></dl>
 <p> <i>relmap</i></p>
 <dl>
-<dd>bitmap relative to which translated</dl>
+<dd>bitmap relative to which translated</dd></dl>
 <p> <i>bits</i></p>
 <dl>
-<dd>number of bits in each of these bitmaps</dl>
+<dd>number of bits in each of these bitmaps</dd></dl>
 <h2>Description</h2>
 <p>Set the n-th bit of <i>dst</i> iff there exists some m such that the n-th bit of <i>relmap</i> is set, the m-th bit of <i>orig</i> is set, and the n-th bit of <i>relmap</i> is also the m-th _set_ bit of <i>relmap</i>. (If you understood the previous sentence the first time your read it, you&#8217;re overqualified for your current job.) </p>
 <p> In other words, <i>orig</i> is mapped onto (surjectively) <i>dst</i>, using the map { &lt;n, m&gt; | the n-th bit of <i>relmap</i> is the m-th set bit of <i>relmap</i> }. </p>

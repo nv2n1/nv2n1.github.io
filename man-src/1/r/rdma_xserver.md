@@ -26,9 +26,9 @@ rdma_xserver[-p port][-c comm_type]
 
 <dl>
 <dt>-p port
-<dd> Changes the port number that the server listens on. By default the server listens on port 7471.
-<dt>-c communication type
-<dd> Specifies the type of communication established with the client program. 'r' results in using a reliable-connected QP (the default). 'x' uses extended reliable-connected XRC QPs.</dl>
+</dt><dd> Changes the port number that the server listens on. By default the server listens on port 7471.
+</dd><dt>-c communication type
+</dt><dd> Specifies the type of communication established with the client program. 'r' results in using a reliable-connected QP (the default). 'x' uses extended reliable-connected XRC QPs.</dd></dl>
 
 <h2>NOTES</h2>
 

@@ -14,10 +14,10 @@ description: "asn1_find_structure_from_oid – API function"
 <p> <code>const char * asn1_find_structure_from_oid(asn1_node </code><i>definitions</i><code>, const char * </code><i>oidValue</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>asn1_node definitions</p>
-<dd> ASN1 definitions</p>
-<dt>const char * oidValue</p>
-<dd> value of the OID to search (e.g. &quot;1.2.3.4&quot;).</dl>
+<dt>asn1_node definitions</dt>
+<dd> ASN1 definitions</dd>
+<dt>const char * oidValue</dt>
+<dd> value of the OID to search (e.g. &quot;1.2.3.4&quot;).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Search the structure that is defined just after an OID definition.</p>
 <h2>RETURNS</h2>
@@ -29,9 +29,9 @@ description: "asn1_find_structure_from_oid – API function"
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
 <h2>Index</h2>

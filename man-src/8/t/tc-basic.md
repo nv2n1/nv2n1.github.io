@@ -14,11 +14,11 @@ description: "basic – basic traffic control filter"
 <p>The <code>basic</code> filter allows to classify packets using the extended match infrastructure.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>action</code><i> ACTION_SPEC</i></p>
-<dd>Apply an action from the generic actions framework on matching packets.</p>
-<dt><code>classid</code><i> CLASSID</i></p>
-<dd>Push matching packets into the class identified by <i>CLASSID</i>.</p>
-<dt><code>match</code><i> EMATCH_TREE</i></p>
-<dd>Match packets using the extended match infrastructure. See <code><a href="/docs/linux/man/8-tc-ematch/">tc-ematch</a></code>(8) for a detailed description of the allowed syntax in <i>EMATCH_TREE</i>.</dl>
+<dt><code>action</code><i> ACTION_SPEC</i></dt>
+<dd>Apply an action from the generic actions framework on matching packets.</dd>
+<dt><code>classid</code><i> CLASSID</i></dt>
+<dd>Push matching packets into the class identified by <i>CLASSID</i>.</dd>
+<dt><code>match</code><i> EMATCH_TREE</i></dt>
+<dd>Match packets using the extended match infrastructure. See <code><a href="/docs/linux/man/8-tc-ematch/">tc-ematch</a></code>(8) for a detailed description of the allowed syntax in <i>EMATCH_TREE</i>.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-ematch/">tc-ematch</a></code>(8) </p>

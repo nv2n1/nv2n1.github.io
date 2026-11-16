@@ -18,9 +18,9 @@ Tk_Window
 <code>Tk_NameToWindow</code>(<i>interp, pathName, tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window.</p>
-<dd>Tcl_Interp <i>*interp</i> (out) Interpreter to use for error reporting.</p>
-<dd>const char <i>*pathName</i> (in) Character string containing path name of window. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>Tcl_Interp <i>*interp</i> (out) Interpreter to use for error reporting.</dd>
+<dd>const char <i>*pathName</i> (in) Character string containing path name of window. </dd>
 </dl>
 <h2>Description</h2>
 <p>Each window managed by Tk has two names, a short name that identifies a window among children of the same parent, and a path name that identifies the window uniquely among all the windows belonging to the same main window. The path name is used more often in Tk than the short name; many commands, like <code>bind</code>, expect path names as arguments. </p>

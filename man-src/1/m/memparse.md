@@ -17,8 +17,8 @@ description: "memparse – libmemcached Documentation"
 <h2>OPTIONS</h2>
 <p> For a full list of operations run the tool with the option:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd></dl>
+<dt><code>&#8211;help</code></dt>
+<dd></dd></dl>
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://libmemcached.org/">http://libmemcached.org/</a></i></p>
 <h2>AUTHOR</h2>

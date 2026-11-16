@@ -25,7 +25,7 @@ description: "MWM related functions. – Functions related to MWM."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The window.<br />
- <i>borderless</i> The borderless flag.</dl>
+ <i>borderless</i> The borderless flag.</dd></dl>
 <h3>EAPI int ecore_x_mwm_hints_get (Ecore_X_Window window __UNUSED__, Ecore_X_MWM_Hint_Func * fhint, Ecore_X_MWM_Hint_Decor * dhint, Ecore_X_MWM_Hint_Input * ihint)</h3>
 <p>To document. </p>
 <p> <code>Parameters:</code></p>
@@ -33,15 +33,15 @@ description: "MWM related functions. – Functions related to MWM."
 <dd><i>window</i> Unused.<br />
  <i>fhint</i> To document.<br />
  <i>dhint</i> To document.<br />
- <i>ihint</i> To document.</dl>
+ <i>ihint</i> To document.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 otherwise.</dl>
+<dd>1 on success, 0 otherwise.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_mwm_hints_get_prefetch()</code>, which sends the GetProperty request, then <code>ecore_x_mwm_hints_get_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_mwm_hints_get_prefetch (Ecore_X_Window window)</h3>
 <p>Sends the GetProperty request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Window whose MWM hints are requested.</dl>
+<dd><i>window</i> Window whose MWM hints are requested.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

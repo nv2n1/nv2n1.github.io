@@ -18,43 +18,43 @@ description: "wireless – Wireless Tools and Wireless Extensions"
 <h2>Debian 3.0</h2>
 <p>In Debian 3.0 (and later) you can configure wireless LAN networking devices using the network configuration tool <code>ifupdown</code>(8).</p>
 <dl>
-<dt><code>File :</code></p>
-<dd><i>/etc/network/interfaces</i></p>
-<dt><code>Form :</code></p>
+<dt><code>File :</code></dt>
+<dd><i>/etc/network/interfaces</i></dd>
+<dt><code>Form :</code></dt>
 <dd>wireless-<i>&lt;function&gt; &lt;value&gt;</i><br />
  wireless-essid Home<br />
- wireless-mode Ad-Hoc</p>
-<dt><code>See also :</code></p>
+ wireless-mode Ad-Hoc</dd>
+<dt><code>See also :</code></dt>
 <dd><i>/etc/network/if-pre-up.d/wireless-tools</i><br />
- <i>/usr/share/doc/wireless-tools/README.Debian</i></dl>
+ <i>/usr/share/doc/wireless-tools/README.Debian</i></dd></dl>
 <h2>SuSE 8.0</h2>
 <p>SuSE 8.0 (and later) has integrated wireless configuration in their network scripts.</p>
 <dl>
-<dt><code>Tool :</code></p>
-<dd><code>Yast2</code></p>
-<dt><code>File :</code></p>
+<dt><code>Tool :</code></dt>
+<dd><code>Yast2</code></dd>
+<dt><code>File :</code></dt>
 <dd><i>/etc/sysconfig/network/wireless</i><br />
- <i>/etc/sysconfig/network/ifcfg-*</i></p>
-<dt><code>Form :</code></p>
+ <i>/etc/sysconfig/network/ifcfg-*</i></dd>
+<dt><code>Form :</code></dt>
 <dd>WIRELESS_<i>&lt;function&gt;</i>=<i>&lt;value&gt;</i><br />
  WIRELESS_ESSID=&quot;Home&quot;<br />
- WIRELESS_MODE=Ad-Hoc</p>
-<dt><code>See also :</code></p>
+ WIRELESS_MODE=Ad-Hoc</dd>
+<dt><code>See also :</code></dt>
 <dd>man ifup<br />
- info scpm</dl>
+ info scpm</dd></dl>
 <h2>Original Pcmcia Scripts</h2>
 <p>If you are using the original configuration scripts from the Pcmcia package, you can use this method.</p>
 <dl>
-<dt><code>File :</code></p>
-<dd><i>/etc/pcmcia/wireless.opts</i></p>
-<dt><code>Form :</code></p>
-<dd>*,*,*,*) </p>
+<dt><code>File :</code></dt>
+<dd><i>/etc/pcmcia/wireless.opts</i></dd>
+<dt><code>Form :</code></dt>
+<dd>*,*,*,*) </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ESSID=&quot;Home&quot; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;MODE=&quot;Ad-Hoc&quot; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;;;</p>
-<dt><code>See also :</code></p>
+<dt><code>See also :</code></dt>
 <dd><i>/etc/pcmcia/wireless</i><br />
- File <i>PCMCIA.txt</i> part of Wireless Tools package</dl>
+ File <i>PCMCIA.txt</i> part of Wireless Tools package</dd></dl>
 <h2>Author</h2>
 <p>Jean Tourrilhes &#8211; jt [at] hpl.hp.com<br />
  <i><a rel="nofollow" href="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/">http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/</a></i></p>

@@ -10,13 +10,13 @@ description: "list_next_entry – get the next element in list"
 <p>list_next_entry &#8211; get the next element in list</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>list_next_entry(</code><i>pos</i><code>, </code><i>member</i><code>);</code></dl>
+<dt> <code>list_next_entry(</code><i>pos</i><code>, </code><i>member</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>pos</i></p>
 <dl>
 <dd>
-<dd>the type * to cursor</dl>
+</dd><dd>the type * to cursor</dd></dl>
 <p> <i>member</i></p>
 <dl>
-<dd>the name of the list_head within the struct.</dl>
+<dd>the name of the list_head within the struct.</dd></dl>
 <h2>Copyright</h2>

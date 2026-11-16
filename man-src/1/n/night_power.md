@@ -19,8 +19,8 @@ description: "night_power – control the power of camera"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> info<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> print short info about camera</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> login<tt>&nbsp;<wbr>&nbsp;<wbr></tt> login into server (test of connection)</p>
 <dl>
-<dt><code>-host</code></p>
-<dd> address:port internet address server, default: local connect</dl>
+<dt><code>-host</code></dt>
+<dd> address:port internet address server, default: local connect</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Setting of environment variable NIGHTVIEW_HOST is equivalent to -host option.</p>
 <h2>REPORTING BUGS</h2>

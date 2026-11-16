@@ -15,15 +15,15 @@ rpc_call_sync - Perform a synchronous RPC call
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>pointer to RPC client</dl>
+<dl><dd></dd><dd>pointer to RPC client</dd></dl>
  
 
  <i>msg</i>
-<dl><dd>RPC call parameters</dl>
+<dl><dd>RPC call parameters</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>RPC call flags</dl>
+<dl><dd>RPC call flags</dd></dl>
 
 <h2>Copyright</h2>
 

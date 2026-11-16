@@ -57,10 +57,8 @@ Specializes the std::hash algorithm for std::monostate.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;variant&gt;
-
 #include &lt;iostream&gt;
 struct S
-
 {
     S(int i)
         : i(i)

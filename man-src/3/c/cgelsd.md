@@ -19,7 +19,7 @@ description: "cgelsd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGELSD computes the minimum-norm solution to a real linear least
  squares problem:
@@ -47,11 +47,11 @@ description: "cgelsd.f –"
  Cray-2. It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A. M &gt;= 0.
@@ -159,21 +159,22 @@ RWORK is REAL array, dimension(MAX(1, LRWORK)) LRWORK &gt;= 10 * N + 2 * N *SMLS
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </p>
+</dt><dd> Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 225 of file cgelsd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

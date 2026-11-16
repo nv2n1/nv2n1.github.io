@@ -16,34 +16,34 @@ description: "v4l-conf – configure a video4linux driver"
 <p> <code>v4l-conf</code> knows three ways to get the informations:</p>
 <dl>
 <dt>
-&nbsp;<wbr>*</p>
-<dd>Query the X-Server using the XF86 DGA extension. This is the default if the DISPLAY environment variable is set.</p>
+&nbsp;<wbr>*</dt>
+<dd>Query the X-Server using the XF86 DGA extension. This is the default if the DISPLAY environment variable is set.</dd>
 <dt>
-&nbsp;<wbr>*&nbsp;<wbr></p>
-<dd>Query the framebuffer driver. This is the default if DISPLAY is not set.</p>
+&nbsp;<wbr>*&nbsp;<wbr></dt>
+<dd>Query the framebuffer driver. This is the default if DISPLAY is not set.</dd>
 <dt>
-&nbsp;<wbr>*</p>
-<dd>Query the console driver. This is used on mklinux only.</dl>
+&nbsp;<wbr>*</dt>
+<dd>Query the console driver. This is used on mklinux only.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Print a short description of all command line options.</p>
-<dt><code>-q</code></p>
-<dd>Be quiet.</p>
-<dt><code>-d</code> dpy</p>
-<dd>Use the X11 display <code>dpy</code> to get the parameters.</p>
-<dt><code>-f</code></p>
-<dd>Use the framebuffer driver to get the parameters.</p>
-<dt><code>-c</code> device</p>
-<dd>Set the video4linux device.</p>
-<dt><code>-b</code> n</p>
-<dd>enforce <code>n</code> bpp color depth. Works for switching between 15/16 and 24/32 bpp.</p>
-<dt><code>-s</code> n</p>
-<dd>Shift the video display by <code>n</code> bytes.</p>
-<dt><code>-a</code> adr</p>
-<dd>Set framebuffer address to <code>adr</code>. The value should be specified in hex. This option is allowed for root only. You can&#8217;t overwrite the autodetected value, this switch is only useful if autodetect doesn&#8217;t work because the X-Server lacks DGA support. You can put this into /etc/conf.modules, as &quot;post-install bttv &#8230;&quot; for example.</p>
-<dt><code>-p</code> pitch</p>
-<dd>Set framebuffer pitch to <code>pitch</code> bytes. The value should be specified in decimal. Allowed for root only.</dl>
+<dt><code>-h</code></dt>
+<dd>Print a short description of all command line options.</dd>
+<dt><code>-q</code></dt>
+<dd>Be quiet.</dd>
+<dt><code>-d</code> dpy</dt>
+<dd>Use the X11 display <code>dpy</code> to get the parameters.</dd>
+<dt><code>-f</code></dt>
+<dd>Use the framebuffer driver to get the parameters.</dd>
+<dt><code>-c</code> device</dt>
+<dd>Set the video4linux device.</dd>
+<dt><code>-b</code> n</dt>
+<dd>enforce <code>n</code> bpp color depth. Works for switching between 15/16 and 24/32 bpp.</dd>
+<dt><code>-s</code> n</dt>
+<dd>Shift the video display by <code>n</code> bytes.</dd>
+<dt><code>-a</code> adr</dt>
+<dd>Set framebuffer address to <code>adr</code>. The value should be specified in hex. This option is allowed for root only. You can&#8217;t overwrite the autodetected value, this switch is only useful if autodetect doesn&#8217;t work because the X-Server lacks DGA support. You can put this into /etc/conf.modules, as &quot;post-install bttv &#8230;&quot; for example.</dd>
+<dt><code>-p</code> pitch</dt>
+<dd>Set framebuffer pitch to <code>pitch</code> bytes. The value should be specified in decimal. Allowed for root only.</dd></dl>
 <h2>Bugs</h2>
 <p>Hope I haven&#8217;t any security flaws in there. If you find one, drop me a note. Mails with patches are preferred :-)</p>
 <h2>See Also</h2>

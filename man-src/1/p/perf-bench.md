@@ -19,18 +19,18 @@ perf bench[&lt;common options&gt;]&lt;subsystem&gt;&lt;suite&gt;[&lt;options&gt;
 <p> -r, &#8211;repeat=</p>
 <dl>
 <dt>
-<dd> Specify amount of times to repeat the run (default 10).</dl>
+</dt><dd> Specify amount of times to repeat the run (default 10).</dd></dl>
 <p> -f, &#8211;format=</p>
 <dl>
 <dt>
-<dd> Specify format style. Current available format styles are:</dl>
+</dt><dd> Specify format style. Current available format styles are:</dd></dl>
 <p> <i>default</i></p>
 <dl>
 <dt>
-<dd> Default style. This is mainly for human reading.</dl>
+</dt><dd> Default style. This is mainly for human reading.</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .ft C
 % perf bench sched pipe                      # with no style specified
@@ -40,75 +40,73 @@ perf bench[&lt;common options&gt;]&lt;subsystem&gt;&lt;suite&gt;[&lt;options&gt;
                 170792 ops/sec
 .ft
 </pre>
-</dl>
+</dd></dl>
 <p> <i>simple</i></p>
 <dl>
 <dt>
-<dd> This simple style is friendly for automated processing by scripts.</dl>
+</dt><dd> This simple style is friendly for automated processing by scripts.</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .ft C
 % perf bench --format=simple sched pipe      # specified simple
 5.988
 .ft
 </pre>
-</dl>
+</dd></dl>
 <h2>SUBSYSTEM</h2>
 <p> <i>sched</i></p>
 <dl>
 <dt>
-<dd> Scheduler and IPC mechanisms.</dl>
+</dt><dd> Scheduler and IPC mechanisms.</dd></dl>
 <p> <i>mem</i></p>
 <dl>
 <dt>
-<dd> Memory access performance.</dl>
+</dt><dd> Memory access performance.</dd></dl>
 <p> <i>numa</i></p>
 <dl>
 <dt>
-<dd> NUMA scheduling and MM benchmarks.</dl>
+</dt><dd> NUMA scheduling and MM benchmarks.</dd></dl>
 <p> <i>futex</i></p>
 <dl>
 <dt>
-<dd> Futex stressing benchmarks.</dl>
+</dt><dd> Futex stressing benchmarks.</dd></dl>
 <p> <i>all</i></p>
 <dl>
 <dt>
-<dd> All benchmark subsystems.</dl>
+</dt><dd> All benchmark subsystems.</dd></dl>
 <h3>SUITES FOR <i>sched</i></h3>
 <p> <code>messaging</code></p>
 <dl>
 <dt>
-<dd> Suite for evaluating performance of scheduler and IPC mechanisms. Based on hackbench by Rusty Russell.</dl>
+</dt><dd> Suite for evaluating performance of scheduler and IPC mechanisms. Based on hackbench by Rusty Russell.</dd></dl>
 <p> <font SIZE="+1"> <code>Options of messaging</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> -p, &#8211;pipe</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> Use pipe() instead of socketpair()</dl>
+</dt><dd> Use pipe() instead of socketpair()</dd></dl>
 <p> -t, &#8211;thread</p>
 <dl>
 <dt>
-<dd> Be multi thread instead of multi process</dl>
+</dt><dd> Be multi thread instead of multi process</dd></dl>
 <p> -g, &#8211;group=</p>
 <dl>
 <dt>
-<dd> Specify number of groups</dl>
+</dt><dd> Specify number of groups</dd></dl>
 <p> -l, &#8211;loop=</p>
 <dl>
 <dt>
-<dd> Specify number of loops</dl>
+</dt><dd> Specify number of loops</dd></dl>
 </dl>
 <p> </font><font SIZE="+2"> <code>Example of messaging</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> </font></p>
+</dt><dd> </font></dd>
 <pre>
 .ft C
 % perf bench sched messaging                 # run with default
@@ -125,24 +123,22 @@ options (20 sender and receiver processes per group)
 <p> <code>pipe</code></p>
 <dl>
 <dt>
-<dd> Suite for pipe() system call. Based on pipe-test-1m.c by Ingo Molnar.</dl>
+</dt><dd> Suite for pipe() system call. Based on pipe-test-1m.c by Ingo Molnar.</dd></dl>
 </dl>
 <p> <font SIZE="+1"> <code>Options of pipe</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> -l, &#8211;loop=</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specify number of loops.</dl>
+</dt><dd> Specify number of loops.</dd></dl>
 </dl>
 <p> </font><font SIZE="+2"> <code>Example of pipe</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> </font></p>
+</dt><dd> </font></dd>
 <pre>
 .ft C
 % perf bench sched pipe
@@ -163,90 +159,90 @@ options (20 sender and receiver processes per group)
 <p> <code>memcpy</code></p>
 <dl>
 <dt>
-<dd> Suite for evaluating performance of simple memory copy in various ways.</dl>
+</dt><dd> Suite for evaluating performance of simple memory copy in various ways.</dd></dl>
 <p> <font SIZE="+1"> <code>Options of memcpy</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> -l, &#8211;length</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specify length of memory to copy (default: 1MB). Available units are B, KB, MB, GB and TB (case insensitive).</dl>
+</dt><dd> Specify length of memory to copy (default: 1MB). Available units are B, KB, MB, GB and TB (case insensitive).</dd></dl>
 <p> -r, &#8211;routine</p>
 <dl>
 <dt>
-<dd> Specify routine to copy (default: default). Available routines are depend on the architecture. On x86-64, x86-64-unrolled, x86-64-movsq and x86-64-movsb are supported.</dl>
+</dt><dd> Specify routine to copy (default: default). Available routines are depend on the architecture. On x86-64, x86-64-unrolled, x86-64-movsq and x86-64-movsb are supported.</dd></dl>
 <p> -i, &#8211;iterations</p>
 <dl>
 <dt>
-<dd> Repeat memcpy invocation this number of times.</dl>
+</dt><dd> Repeat memcpy invocation this number of times.</dd></dl>
 <p> -c, &#8211;cycle</p>
 <dl>
 <dt>
-<dd> Use perf&#8217;s cpu-cycles event instead of gettimeofday syscall.</dl>
+</dt><dd> Use perf&#8217;s cpu-cycles event instead of gettimeofday syscall.</dd></dl>
 <p> -o, &#8211;only-prefault</p>
 <dl>
 <dt>
-<dd> Show only the result with page faults before memcpy.</dl>
+</dt><dd> Show only the result with page faults before memcpy.</dd></dl>
 <p> -n, &#8211;no-prefault</p>
 <dl>
 <dt>
-<dd> Show only the result without page faults before memcpy.</dl>
+</dt><dd> Show only the result without page faults before memcpy.</dd></dl>
 <p> <code>memset</code></p>
 <dl>
 <dt>
-<dd> Suite for evaluating performance of simple memory set in various ways.</dl>
+</dt><dd> Suite for evaluating performance of simple memory set in various ways.</dd></dl>
 </dl>
 <p> </font><font SIZE="+2"> <code>Options of memset</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> -l, &#8211;length</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specify length of memory to set (default: 1MB). Available units are B, KB, MB, GB and TB (case insensitive).</dl>
+</dt><dd> Specify length of memory to set (default: 1MB). Available units are B, KB, MB, GB and TB (case insensitive).</dd></dl>
 <p> -r, &#8211;routine</p>
 <dl>
 <dt>
-<dd> Specify routine to set (default: default). Available routines are depend on the architecture. On x86-64, x86-64-unrolled, x86-64-stosq and x86-64-stosb are supported.</dl>
+</dt><dd> Specify routine to set (default: default). Available routines are depend on the architecture. On x86-64, x86-64-unrolled, x86-64-stosq and x86-64-stosb are supported.</dd></dl>
 <p> -i, &#8211;iterations</p>
 <dl>
 <dt>
-<dd> Repeat memset invocation this number of times.</dl>
+</dt><dd> Repeat memset invocation this number of times.</dd></dl>
 <p> -c, &#8211;cycle</p>
 <dl>
 <dt>
-<dd> Use perf&#8217;s cpu-cycles event instead of gettimeofday syscall.</dl>
+</dt><dd> Use perf&#8217;s cpu-cycles event instead of gettimeofday syscall.</dd></dl>
 <p> -o, &#8211;only-prefault</p>
 <dl>
 <dt>
-<dd> Show only the result with page faults before memset.</dl>
+</dt><dd> Show only the result with page faults before memset.</dd></dl>
 <p> -n, &#8211;no-prefault</p>
 <dl>
 <dt>
-<dd> Show only the result without page faults before memset.</dl>
+</dt><dd> Show only the result without page faults before memset.</dd></dl>
 </dl>
 <p> </font></p>
 <h3>SUITES FOR <i>numa</i></h3>
 <p> <code>mem</code></p>
 <dl>
 <dt>
-<dd> Suite for evaluating NUMA workloads.</dl>
+</dt><dd> Suite for evaluating NUMA workloads.</dd></dl>
 <h3>SUITES FOR <i>futex</i></h3>
 <p> <code>hash</code></p>
 <dl>
 <dt>
-<dd> Suite for evaluating hash tables.</dl>
+</dt><dd> Suite for evaluating hash tables.</dd></dl>
 <p> <code>wake</code></p>
 <dl>
 <dt>
-<dd> Suite for evaluating wake calls.</dl>
+</dt><dd> Suite for evaluating wake calls.</dd></dl>
 <p> <code>requeue</code></p>
 <dl>
 <dt>
-<dd> Suite for evaluating requeue calls.</dl>
+</dt><dd> Suite for evaluating requeue calls.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf/">perf</a></code>(1) </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">SEE ALSO</a></p>
-<dd></dl>
+<dt><a href="#lbAK">SEE ALSO</a></dt>
+<dd></dd></dl>

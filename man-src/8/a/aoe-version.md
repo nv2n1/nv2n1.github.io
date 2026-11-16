@@ -19,7 +19,7 @@ description: "aoe-version – print AoE-related software version information"
  aoetools: 17
  installed aoe driver: 50
  running aoe driver: 50</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-aoe-discover/">aoe-discover</a></i>(8), <i><a href="/docs/linux/man/8-aoe-interfaces/">aoe-interfaces</a></i>(8), <i>aoetools</i>(8), <i><a href="/docs/linux/man/8-aoe-stat/">aoe-stat</a></i>(8).</p>
 <h2>Author</h2>

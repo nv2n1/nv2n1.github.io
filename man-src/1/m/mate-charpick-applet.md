@@ -16,9 +16,10 @@ description: "mate-charpick-applet – Character Picker Applet for the MATE pane
 <p> To add this applet to a Panel, right-click on the Panel and choose Applets-&gt;Utility-&gt;Character Picker.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;activate-goad-server</code></p>
-<dd> (Internal use only) GOAD server ID to activate. </p>
+<dt><code>&#8211;activate-goad-server</code></dt>
+<dd> (Internal use only) GOAD server ID to activate. </dd>
 <p> GOAD_ID is usually the applet name [<code>mate-charpick-applet</code>]</dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Marillat &lt;marillat [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
 <h2>Index</h2>
+</p>

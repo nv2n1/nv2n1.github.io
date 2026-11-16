@@ -16,10 +16,10 @@ description: "a2ps-lpr-wrapper — lp/lpr wrapper script for GNU a2ps on Debian"
 <p> <code>a2ps-lpr-wrapper</code> uses either <code>lp</code> or <code>lpr</code> to send <i>files</i> to <i>printer</i>. It determines which of the two programs is currently installed and adds the appropriate parameters.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d </code><i>printer</i></p>
-<dd> Destination system printer.</p>
-<dt><i>files</i></p>
-<dd> List of files to be printed.</dl>
+<dt><code>-d </code><i>printer</i></dt>
+<dd> Destination system printer.</dd>
+<dt><i>files</i></dt>
+<dd> List of files to be printed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> a2ps (1). </p>
 <p> The programs are documented fully by the a2ps documentation available via the <code>Info</code> system.</p>

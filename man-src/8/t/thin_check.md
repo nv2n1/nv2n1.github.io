@@ -15,43 +15,43 @@ description: "thin_check – validates thin provisioning metadata on a device or
 <p> The tool cannot be run on live metadata unless the <code>&#8211;metadata-snapshot</code> option is used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress output messages, return only exit code.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output version information and exit.</p>
-<dt><code>&#8211;super-block-only</code></p>
-<dd>Only check the superblock.</p>
-<dt><code>&#8211;skip-mappings</code></p>
-<dd>Skip checking of the block mappings which make up the bulk of the metadata.</p>
-<dt><code>&#8211;ignore-non-fatal-errors</code></p>
-<dd>Will only return a non-zero exit code if it finds a fatal error.</dl>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress output messages, return only exit code.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output version information and exit.</dd>
+<dt><code>&#8211;super-block-only</code></dt>
+<dd>Only check the superblock.</dd>
+<dt><code>&#8211;skip-mappings</code></dt>
+<dd>Skip checking of the block mappings which make up the bulk of the metadata.</dd>
+<dt><code>&#8211;ignore-non-fatal-errors</code></dt>
+<dd>Will only return a non-zero exit code if it finds a fatal error.</dd></dl>
 <pre> An example of a nonfatal error is an incorrect data block reference count
  causing a block to be considered allocated when it in fact isn't. Ignoring
  errors for a long time is not advised, you really should be using
  thin_repair to fix them.</pre>
 <dl>
-<dt><code>&#8211;clear-needs-check-flag</code></p>
-<dd>Clears the &#8216;needs_check&#8217; flag in the superblock.</dl>
+<dt><code>&#8211;clear-needs-check-flag</code></dt>
+<dd>Clears the &#8216;needs_check&#8217; flag in the superblock.</dd></dl>
 <pre> The kernel may set a flag to force the pool to be checked before it's next
  activated. Set this switch to clear the flag if the check is successful.
  If the metadata check failed, the flag is not cleared and a thin_repair run
  is needed to fix any issues. After thin_repair succeeded, you may run
  thin_check again.</pre>
 <dl>
-<dt><code>&#8211;metadata-snapshot</code>, <code>-m</code></p>
-<dd>Check the metadata snapshot.</dl>
+<dt><code>&#8211;metadata-snapshot</code>, <code>-m</code></dt>
+<dd>Check the metadata snapshot.</dd></dl>
 <pre> This will check the devices tree and mappings in a metadata snapshot.
  The snap does not contain space maps, so these will not be checked. This
  may be used on live metadata.</pre>
 <dl>
-<dt><code>&#8211;auto-repair</code></p>
-<dd>Automatically repair any trivial issues found with the metadata.</dl>
+<dt><code>&#8211;auto-repair</code></dt>
+<dd>Automatically repair any trivial issues found with the metadata.</dd></dl>
 <pre> Currently only fixes metadata leaks.</pre>
 <dl>
-<dt><code>&#8211;override-mapping-root</code> &lt;block&gt;</p>
-<dd>Specify a mapping root to use.</dl>
+<dt><code>&#8211;override-mapping-root</code> &lt;block&gt;</dt>
+<dd>Specify a mapping root to use.</dd></dl>
 <pre> Don't use this. This overrides what's specified in the superblock. Only
  use this if you really understand the metadata format and are trying to
  recover damaged metadata.</pre>

@@ -17,12 +17,12 @@ ALTER SERVER <i>servername</i> OWNER TO <i>new_owner</i></pre>
 <p> To alter the server you must be the owner of the server. Additionally to alter the owner, you must own the server and also be a direct or indirect member of the new owning role, and you must have USAGE privilege on the server&#8217;s foreign-data wrapper. (Note that superusers satisfy all these criteria automatically.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>servername</i></p>
-<dd>The name of an existing server.</p>
-<dt><i>serverversion</i></p>
-<dd>New server version.</p>
-<dt><code>OPTIONS ( [ ADD | SET | DROP ] </code><i>option</i><code> [&#8216;</code><i>value</i><code>&#8216;] [, &#8230; ] )</code></p>
-<dd>Change options for the server. ADD, SET, and DROP specify the action to be performed. ADD is assumed if no operation is explicitly specified. Option names must be unique; names and values are also validated using the server&#8217;s foreign-data wrapper library.</dl>
+<dt><i>servername</i></dt>
+<dd>The name of an existing server.</dd>
+<dt><i>serverversion</i></dt>
+<dd>New server version.</dd>
+<dt><code>OPTIONS ( [ ADD | SET | DROP ] </code><i>option</i><code> [&#8216;</code><i>value</i><code>&#8216;] [, &#8230; ] )</code></dt>
+<dd>Change options for the server. ADD, SET, and DROP specify the action to be performed. ADD is assumed if no operation is explicitly specified. Option names must be unique; names and values are also validated using the server&#8217;s foreign-data wrapper library.</dd></dl>
 <h2>Examples</h2>
 <p>Alter server foo, add connection options: </p>
 <pre>ALTER SERVER foo OPTIONS (host 'foo', dbname 'foodb');</pre>

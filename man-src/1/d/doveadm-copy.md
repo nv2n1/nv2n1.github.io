@@ -26,30 +26,30 @@ description: "doveadm-move – Move messages matching the given search query int
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> If the <code>-A</code> option is present, the <i>command</i> will be performed for all users. Using this option in combination with system users from <code>userdb { driver = passwd }</code> is not recommended, because it contains also users with a lower UID than the one configured with the <i>first_valid_uid</i> setting. </p>
+<dt><code>-A</code></dt>
+<dd> If the <code>-A</code> option is present, the <i>command</i> will be performed for all users. Using this option in combination with system users from <code>userdb { driver = passwd }</code> is not recommended, because it contains also users with a lower UID than the one configured with the <i>first_valid_uid</i> setting. </dd>
 <p> When the SQL userdb module is used make sure that the <i>iterate_query</i> setting in <i>/etc/dovecot/dovecot-sql.conf.ext</i> matches your database layout. When using the LDAP userdb module, make sure that the <i>iterate_attrs</i> and <i>iterate_filter</i> settings in <i>/etc/dovecot/dovecot-ldap.conf.ext</i> match your LDAP schema. Otherwise <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will be unable to iterate over all users.</p>
-<dt><code>-S&nbsp;<wbr></code><i>socket_path</i></p>
-<dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </p>
+<dt><code>-S&nbsp;<wbr></code><i>socket_path</i></dt>
+<dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
-<dt><code>-u&nbsp;<wbr></code><i>user/mask</i></p>
+<dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
 <dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
- When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dl>
+ When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>destination</i></p>
-<dd> The name of the destination mailbox, into which the mails should be moved or copied. The <i>destination</i> mailbox must exist, otherwise this command will fail.</p>
-<dt><i>search_query</i></p>
-<dd> Move/copy messages matching the given search query. See <code><a href="/docs/linux/man/7-doveadm-search-query/">doveadm-search-query</a></code>(7) for details.</p>
-<dt><code>user</code><i>&nbsp;<wbr>source_user</i></p>
+<dt><i>destination</i></dt>
+<dd> The name of the destination mailbox, into which the mails should be moved or copied. The <i>destination</i> mailbox must exist, otherwise this command will fail.</dd>
+<dt><i>search_query</i></dt>
+<dd> Move/copy messages matching the given search query. See <code><a href="/docs/linux/man/7-doveadm-search-query/">doveadm-search-query</a></code>(7) for details.</dd>
+<dt><code>user</code><i>&nbsp;<wbr>source_user</i></dt>
 <dd> The keyword <code>user</code> followed by a valid user name. When this argument is present, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will apply the <i>search_query</i> to the <i>source_user</i>&#8216;s <i>mail_location</i>.<br />
- <code>Limitation:</code> Currently the users, specified by <code>-u</code><i> user</i> and <code>user</code><i> source_user,</i> must share the same UID and GID.</dl>
+ <code>Limitation:</code> Currently the users, specified by <code>-u</code><i> user</i> and <code>user</code><i> source_user,</i> must share the same UID and GID.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Move jane&#8217;s messages &#8211; received in September 2011 &#8211; from her INBOX into her archive. </p>
 <pre>

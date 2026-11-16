@@ -14,14 +14,14 @@ description: "nand_memory_bbt – [GENERIC] create a memory based bad block tabl
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>bd</i></p>
 <dl>
-<dd>descriptor for the good/bad block search pattern</dl>
+<dd>descriptor for the good/bad block search pattern</dd></dl>
 <h2>Description</h2>
 <p>The function creates a memory based bbt by scanning the device for manufacturer / software marked good / bad blocks.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

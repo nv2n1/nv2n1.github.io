@@ -15,15 +15,15 @@ eth_header_cache_update - update cache entry
 <h2>Arguments</h2>
 
 <i>hh</i>
-<dl><dd><dd>destination cache entry</dl>
+<dl><dd></dd><dd>destination cache entry</dd></dl>
  
 
  <i>dev</i>
-<dl><dd>network device</dl>
+<dl><dd>network device</dd></dl>
  
 
  <i>haddr</i>
-<dl><dd>new hardware address</dl>
+<dl><dd>new hardware address</dd></dl>
 
 <h2>Description</h2>
 

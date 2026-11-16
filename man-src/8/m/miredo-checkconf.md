@@ -14,19 +14,19 @@ description: "miredo-checkconf – Miredo configuration file syntax checking too
 <p><code>miredo-checkconf</code> checks the syntax of a configuration file for Miredo. miredo-checkconf exits with an error code if the syntax was found to be incorrect, contained unused directives or if the file could not be opened.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Display some help and exit. </p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd>Display program version and exit. </p>
-<dt><code>config_file</code></p>
-<dd>This optional argument specifies the path to the configuration file to be checked. If not given, the default /etc/miredo/miredo.conf will be assumed. </p>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Display some help and exit. </dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd>Display program version and exit. </dd>
+<dt><code>config_file</code></dt>
+<dd>This optional argument specifies the path to the configuration file to be checked. If not given, the default /etc/miredo/miredo.conf will be assumed. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>miredo-checkconf cannot check the syntax of a configuration file for miredo-server. </p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/miredo/miredo.conf</i></p>
-<dd>The default configuration file. </p>
+<dt><i>/etc/miredo/miredo.conf</i></dt>
+<dd>The default configuration file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-miredo-conf/">miredo.conf</a>(5), <a href="/docs/linux/man/8-miredo/">miredo</a>(8) </p>

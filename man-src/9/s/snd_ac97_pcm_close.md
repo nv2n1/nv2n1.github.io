@@ -15,7 +15,7 @@ snd_ac97_pcm_close - closes the given AC97 pcm
 <h2>Arguments</h2>
 
 <i>pcm</i>
-<dl><dd><dd>the ac97 pcm instance</dl>
+<dl><dd></dd><dd>the ac97 pcm instance</dd></dl>
 
 <h2>Description</h2>
 

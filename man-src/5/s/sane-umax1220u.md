@@ -23,17 +23,17 @@ description: "sane-umax1220u – SANE backend for the UMAX Astra 1220U and simil
 <p>See <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) for information on how to set the access permissions on the usb device files.</p>
 <h2>Files</h2>
 <dl>
-<dt>The backend configuration file:</p>
-<dd><i>/etc/sane.d/umax1220u.conf</i></p>
-<dt>The static library implementing this backend:</p>
-<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-umax1220u.a</i></p>
-<dt>The shared library implementing this backend:</p>
-<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-umax1220u.so</i> (present on systems that support dynamic loading) </p>
+<dt>The backend configuration file:</dt>
+<dd><i>/etc/sane.d/umax1220u.conf</i></dd>
+<dt>The static library implementing this backend:</dt>
+<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-umax1220u.a</i></dd>
+<dt>The shared library implementing this backend:</dt>
+<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-umax1220u.so</i> (present on systems that support dynamic loading) </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_UMAX1220U</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity: </p>
+<dt><code>SANE_DEBUG_UMAX1220U</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity: </dd>
 <p> <code>SANE_DEBUG_UMAX1220U</code> values: </p>
 <pre>Number Remark
  1 print failures
@@ -44,8 +44,8 @@ description: "sane-umax1220u – SANE backend for the UMAX Astra 1220U and simil
  10 print mid-level function checkpoints
  80 print protocol-level function entry
  90 print protocol-level function exit</pre>
-<dt>Example:</p>
-<dd>export SANE_DEBUG_UMAX1220U=10 </p>
+<dt>Example:</dt>
+<dd>export SANE_DEBUG_UMAX1220U=10 </dd>
 </dl>
 <h2>Known Bugs</h2>
 <p>600 dpi scanning may fail for large image sizes. </p>
@@ -55,11 +55,12 @@ description: "sane-umax1220u – SANE backend for the UMAX Astra 1220U and simil
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5)</p>
 <dl>
-<dt>(Old) homepage:</p>
-<dd><i><a rel="nofollow" href="http://umax1220u-sane.sourceforge.net/">http://umax1220u-sane.sourceforge.net/</a></i> </p>
+<dt>(Old) homepage:</dt>
+<dd><i><a rel="nofollow" href="http://umax1220u-sane.sourceforge.net/">http://umax1220u-sane.sourceforge.net/</a></i> </dd>
 <h2>Author</h2>
 <p>Marcio Luis Teixeira &lt;<i>marciot [at] users.sourceforge.net</i>&gt;</p>
 <h2>Email-Contact</h2>
 <p><i>sane-devel [at] alioth-lists.debian.net</i></p>
 <h2>Reporting Bugs</h2>
 <p>This backend isn&#8217;t actively maintained. Nevertheless, bug reports and comments should be sent to the sane-devel mailing list. When reporting bugs, please run the backend with <code>SANE_DEBUG_UMAX1220U</code> set to 10 and attach a copy of the log messages.</p>
+</dl>

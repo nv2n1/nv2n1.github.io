@@ -11,9 +11,7 @@ std::gcd - std::gcd
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class M, class N&gt;                        (since C++17)
-
 constexpr std::common_type_t&lt;M, N&gt; gcd(M m, N n);</code></pre> 
 Computes the greatest common divisor of the integers m and n. 
 

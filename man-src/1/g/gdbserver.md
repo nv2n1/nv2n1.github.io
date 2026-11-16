@@ -58,53 +58,53 @@ description: "gdbserver – Remote Server for the GNU Debugger"
 <h2>OPTIONS</h2>
 <p> There are three different modes for invoking <code>gdbserver</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Debug a specific program specified by its program name: </p>
+<dt>&bull;</dt>
+<dd> Debug a specific program specified by its program name: </dd>
 <pre>
         gdbserver &lt;comm&gt; &lt;prog&gt; [&lt;args&gt;...]
 </pre>
 <p> The <i>comm</i> parameter specifies how should the server communicate with <font SIZE="-1">GDB</font>; it is either a device name (to use a serial line), a <font SIZE="-1">TCP</font> port number (<tt>&quot;:1234&quot;</tt>), or <tt>&quot;-&quot;</tt> or <tt>&quot;stdio&quot;</tt> to use stdin/stdout of <tt>&quot;gdbserver&quot;</tt>. Specify the name of the program to debug in <i>prog</i>. Any remaining arguments will be passed to the program verbatim. When the program exits, <font SIZE="-1">GDB</font> will close the connection, and <tt>&quot;gdbserver&quot;</tt> will exit.</p>
-<dt>&bull;</p>
-<dd> Debug a specific program by specifying the process <font SIZE="-1">ID</font> of a running program: </p>
+<dt>&bull;</dt>
+<dd> Debug a specific program by specifying the process <font SIZE="-1">ID</font> of a running program: </dd>
 <pre>
         gdbserver --attach &lt;comm&gt; &lt;pid&gt;
 </pre>
 <p> The <i>comm</i> parameter is as described above. Supply the process <font SIZE="-1">ID</font> of a running program in <i>pid</i>; <font SIZE="-1">GDB</font> will do everything else. Like with the previous mode, when the process <i>pid</i> exits, <font SIZE="-1">GDB</font> will close the connection, and <tt>&quot;gdbserver&quot;</tt> will exit.</p>
-<dt>&bull;</p>
-<dd> Multi-process mode &#8212; debug more than one program/process: </p>
+<dt>&bull;</dt>
+<dd> Multi-process mode &#8212; debug more than one program/process: </dd>
 <pre>
         gdbserver --multi &lt;comm&gt;
 </pre>
 <p> In this mode, <font SIZE="-1">GDB</font> can instruct <code>gdbserver</code> which command(s) to run. Unlike the other 2 modes, <font SIZE="-1">GDB</font> will not close the connection when a process being debugged exits, so you can debug several processes in the same session.</dl>
 <p> In each of the modes you may specify these options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> List all options, with brief explanations.</p>
-<dt><code>&#8211;version</code></p>
-<dd> This option causes <code>gdbserver</code> to print its version number and exit.</p>
-<dt><code>&#8211;attach</code></p>
-<dd> <code>gdbserver</code> will attach to a running program. The syntax is: </p>
+<dt><code>&#8211;help</code></dt>
+<dd> List all options, with brief explanations.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> This option causes <code>gdbserver</code> to print its version number and exit.</dd>
+<dt><code>&#8211;attach</code></dt>
+<dd> <code>gdbserver</code> will attach to a running program. The syntax is: </dd>
 <pre>
         target&gt; gdbserver --attach &lt;comm&gt; &lt;pid&gt;
 </pre>
 <p> <i>pid</i> is the process <font SIZE="-1">ID</font> of a currently running process. It isn&#8217;t necessary to point <code>gdbserver</code> at a binary for the running process.</p>
-<dt><code>&#8211;multi</code></p>
-<dd> To start <tt>&quot;gdbserver&quot;</tt> without supplying an initial command to run or process <font SIZE="-1">ID</font> to attach, use this command line option. Then you can connect using <tt>&quot;target extended-remote&quot;</tt> and start the program you want to debug. The syntax is: </p>
+<dt><code>&#8211;multi</code></dt>
+<dd> To start <tt>&quot;gdbserver&quot;</tt> without supplying an initial command to run or process <font SIZE="-1">ID</font> to attach, use this command line option. Then you can connect using <tt>&quot;target extended-remote&quot;</tt> and start the program you want to debug. The syntax is: </dd>
 <pre>
         target&gt; gdbserver --multi &lt;comm&gt;
 </pre>
-<dt><code>&#8211;debug</code></p>
-<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to display extra status information about the debugging process. This option is intended for <tt>&quot;gdbserver&quot;</tt> development and for bug reports to the developers.</p>
-<dt><code>&#8211;remote-debug</code></p>
-<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to display remote protocol debug output. This option is intended for <tt>&quot;gdbserver&quot;</tt> development and for bug reports to the developers.</p>
-<dt><code>&#8211;debug-file=</code><i>filename</i></p>
-<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to send any debug output to the given <i>filename</i>. This option is intended for <tt>&quot;gdbserver&quot;</tt> development and for bug reports to the developers.</p>
-<dt><code>&#8211;debug-format=option1</code>[<code>,option2,&#8230;</code>]</p>
-<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to include extra information in each line of debugging output.</p>
-<dt><code>&#8211;wrapper</code></p>
-<dd> Specify a wrapper to launch programs for debugging. The option should be followed by the name of the wrapper, then any command-line arguments to pass to the wrapper, then <tt>&quot;--&quot;</tt> indicating the end of the wrapper arguments.</p>
-<dt><code>&#8211;once</code></p>
-<dd> By default, <code>gdbserver</code> keeps the listening <font SIZE="-1">TCP</font> port open, so that additional connections are possible. However, if you start <tt>&quot;gdbserver&quot;</tt> with the <code>&#8211;once</code> option, it will stop listening for any further connection attempts after connecting to the first <font SIZE="-1">GDB</font> session.</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to display extra status information about the debugging process. This option is intended for <tt>&quot;gdbserver&quot;</tt> development and for bug reports to the developers.</dd>
+<dt><code>&#8211;remote-debug</code></dt>
+<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to display remote protocol debug output. This option is intended for <tt>&quot;gdbserver&quot;</tt> development and for bug reports to the developers.</dd>
+<dt><code>&#8211;debug-file=</code><i>filename</i></dt>
+<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to send any debug output to the given <i>filename</i>. This option is intended for <tt>&quot;gdbserver&quot;</tt> development and for bug reports to the developers.</dd>
+<dt><code>&#8211;debug-format=option1</code>[<code>,option2,&#8230;</code>]</dt>
+<dd> Instruct <tt>&quot;gdbserver&quot;</tt> to include extra information in each line of debugging output.</dd>
+<dt><code>&#8211;wrapper</code></dt>
+<dd> Specify a wrapper to launch programs for debugging. The option should be followed by the name of the wrapper, then any command-line arguments to pass to the wrapper, then <tt>&quot;--&quot;</tt> indicating the end of the wrapper arguments.</dd>
+<dt><code>&#8211;once</code></dt>
+<dd> By default, <code>gdbserver</code> keeps the listening <font SIZE="-1">TCP</font> port open, so that additional connections are possible. However, if you start <tt>&quot;gdbserver&quot;</tt> with the <code>&#8211;once</code> option, it will stop listening for any further connection attempts after connecting to the first <font SIZE="-1">GDB</font> session.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <font SIZE="-1">GDB</font> is maintained as a Texinfo manual. If the <tt>&quot;info&quot;</tt> and <tt>&quot;gdb&quot;</tt> programs and <font SIZE="-1">GDB</font>&#8216;s Texinfo documentation are properly installed at your site, the command </p>
 <pre>

@@ -26,48 +26,48 @@ description: "perl5262delta – what is new for perl v5.26.2"
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules and Pragmata</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Module::CoreList has been upgraded from version 5.20170922_26 to 5.20180414_26.</p>
-<dt>&bull;</p>
-<dd> PerlIO::via has been upgraded from version 0.16 to 0.17.</p>
-<dt>&bull;</p>
-<dd> Term::ReadLine has been upgraded from version 1.16 to 1.17.</p>
-<dt>&bull;</p>
-<dd> Unicode::UCD has been upgraded from version 0.68 to 0.69.</dl>
+<dt>&bull;</dt>
+<dd> Module::CoreList has been upgraded from version 5.20170922_26 to 5.20180414_26.</dd>
+<dt>&bull;</dt>
+<dd> PerlIO::via has been upgraded from version 0.16 to 0.17.</dd>
+<dt>&bull;</dt>
+<dd> Term::ReadLine has been upgraded from version 1.16 to 1.17.</dd>
+<dt>&bull;</dt>
+<dd> Unicode::UCD has been upgraded from version 0.68 to 0.69.</dd></dl>
 <h2>Documentation</h2>
 <h3>Changes to Existing Documentation</h3>
 <p> <i>perluniprops</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> This has been updated to note that <tt>&quot;\p{Word}&quot;</tt> now includes code points matching the <tt>&quot;\p{Join_Control}&quot;</tt> property. The change to the property was made in Perl 5.18, but not documented until now. There are currently only two code points that match this property: U+200C (<font SIZE="-1">ZERO WIDTH</font> NON-JOINER) and U+200D (<font SIZE="-1">ZERO WIDTH JOINER</font>).</dl>
+<dt>&bull;</dt>
+<dd> This has been updated to note that <tt>&quot;\p{Word}&quot;</tt> now includes code points matching the <tt>&quot;\p{Join_Control}&quot;</tt> property. The change to the property was made in Perl 5.18, but not documented until now. There are currently only two code points that match this property: U+200C (<font SIZE="-1">ZERO WIDTH</font> NON-JOINER) and U+200D (<font SIZE="-1">ZERO WIDTH JOINER</font>).</dd></dl>
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt>Windows</p>
-<dd> Visual C<font SIZE="-2">++</font> compiler version detection has been improved to work on non-English language systems. [perl #132421] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=132421">https://rt.perl.org/Public/Bug/Display.html?id=132421</a>&gt; </p>
+<dt>Windows</dt>
+<dd> Visual C<font SIZE="-2">++</font> compiler version detection has been improved to work on non-English language systems. [perl #132421] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=132421">https://rt.perl.org/Public/Bug/Display.html?id=132421</a>&gt; </dd>
 <p> We now set <tt>$Config{libpth}</tt> correctly for 64-bit builds using Visual C<font SIZE="-2">++</font> versions earlier than 14.1. [perl #132484] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=132484">https://rt.perl.org/Public/Bug/Display.html?id=132484</a>&gt;</dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The <tt>&quot;readpipe()&quot;</tt> built-in function now checks at compile time that it has only one parameter expression, and puts it in scalar context, thus ensuring that it doesn&#8217;t corrupt the stack at runtime. [perl #4574] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=4574">https://rt.perl.org/Public/Bug/Display.html?id=4574</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Fixed a use after free bug in <tt>&quot;pp_list&quot;</tt> introduced in Perl 5.27.1. [perl #131954] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131954">https://rt.perl.org/Public/Bug/Display.html?id=131954</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Parsing a <tt>&quot;sub&quot;</tt> definition could cause a use after free if the <tt>&quot;sub&quot;</tt> keyword was followed by whitespace including newlines (and comments). [perl #131836] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131836">https://rt.perl.org/Public/Bug/Display.html?id=131836</a>&gt;</p>
-<dt>&bull;</p>
-<dd> The tokenizer now correctly adjusts a parse pointer when skipping whitespace in an <tt>&quot; ${identifier} &quot;</tt> construct. [perl #131949] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131949">https://rt.perl.org/Public/Bug/Display.html?id=131949</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Accesses to <tt>&quot;${^LAST_FH}&quot;</tt> no longer assert after using any of a variety of I/O operations on a non-glob. [perl #128263] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128263">https://rt.perl.org/Public/Bug/Display.html?id=128263</a>&gt;</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;sort&quot;</tt> now performs correct reference counting when aliasing <tt>$a</tt> and <tt>$b</tt>, thus avoiding premature destruction and leakage of scalars if they are re-aliased during execution of the sort comparator. [perl #92264] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=92264">https://rt.perl.org/Public/Bug/Display.html?id=92264</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Some convoluted kinds of regexp no longer cause an arithmetic overflow when compiled. [perl #131893] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131893">https://rt.perl.org/Public/Bug/Display.html?id=131893</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Fixed a duplicate symbol failure with <code>-flto -mieee-fp</code> builds. <i>pp.c</i> defined <tt>&quot;_LIB_VERSION&quot;</tt> which <code>-lieee</code> already defines. [perl #131786] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131786">https://rt.perl.org/Public/Bug/Display.html?id=131786</a>&gt;</p>
-<dt>&bull;</p>
-<dd> A <font SIZE="-1">NULL</font> pointer dereference in the <tt>&quot;S_regmatch()&quot;</tt> function has been fixed. [perl #132017] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=132017">https://rt.perl.org/Public/Bug/Display.html?id=132017</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Failures while compiling code within other constructs, such as with string interpolation and the right part of <tt>&quot;s///e&quot;</tt> now cause compilation to abort earlier. </p>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;readpipe()&quot;</tt> built-in function now checks at compile time that it has only one parameter expression, and puts it in scalar context, thus ensuring that it doesn&#8217;t corrupt the stack at runtime. [perl #4574] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=4574">https://rt.perl.org/Public/Bug/Display.html?id=4574</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Fixed a use after free bug in <tt>&quot;pp_list&quot;</tt> introduced in Perl 5.27.1. [perl #131954] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131954">https://rt.perl.org/Public/Bug/Display.html?id=131954</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Parsing a <tt>&quot;sub&quot;</tt> definition could cause a use after free if the <tt>&quot;sub&quot;</tt> keyword was followed by whitespace including newlines (and comments). [perl #131836] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131836">https://rt.perl.org/Public/Bug/Display.html?id=131836</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> The tokenizer now correctly adjusts a parse pointer when skipping whitespace in an <tt>&quot; ${identifier} &quot;</tt> construct. [perl #131949] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131949">https://rt.perl.org/Public/Bug/Display.html?id=131949</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Accesses to <tt>&quot;${^LAST_FH}&quot;</tt> no longer assert after using any of a variety of I/O operations on a non-glob. [perl #128263] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128263">https://rt.perl.org/Public/Bug/Display.html?id=128263</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;sort&quot;</tt> now performs correct reference counting when aliasing <tt>$a</tt> and <tt>$b</tt>, thus avoiding premature destruction and leakage of scalars if they are re-aliased during execution of the sort comparator. [perl #92264] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=92264">https://rt.perl.org/Public/Bug/Display.html?id=92264</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Some convoluted kinds of regexp no longer cause an arithmetic overflow when compiled. [perl #131893] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131893">https://rt.perl.org/Public/Bug/Display.html?id=131893</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Fixed a duplicate symbol failure with <code>-flto -mieee-fp</code> builds. <i>pp.c</i> defined <tt>&quot;_LIB_VERSION&quot;</tt> which <code>-lieee</code> already defines. [perl #131786] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131786">https://rt.perl.org/Public/Bug/Display.html?id=131786</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> A <font SIZE="-1">NULL</font> pointer dereference in the <tt>&quot;S_regmatch()&quot;</tt> function has been fixed. [perl #132017] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=132017">https://rt.perl.org/Public/Bug/Display.html?id=132017</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Failures while compiling code within other constructs, such as with string interpolation and the right part of <tt>&quot;s///e&quot;</tt> now cause compilation to abort earlier. </dd>
 <p> Previously compilation could continue in order to report other errors, but the failed sub-parse could leave partly parsed constructs on the parser shift-reduce stack, confusing the parser, leading to perl crashes. [perl #125351] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=125351">https://rt.perl.org/Public/Bug/Display.html?id=125351</a>&gt;</dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.26.2 represents approximately 7 months of development since Perl 5.26.1 and contains approximately 3,300 lines of changes across 82 files from 17 authors. </p>
@@ -93,21 +93,21 @@ description: "perl5262delta – what is new for perl v5.26.2"
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Incompatible Changes</a></p>
+<dt><a href="#lbAI">Incompatible Changes</a></dt>
 <dd>
-<dt><a href="#lbAJ">Modules and Pragmata</a></p>
+</dd><dt><a href="#lbAJ">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbAL">Documentation</a></p>
+</dd><dt><a href="#lbAL">Documentation</a></dt>
 <dd>
-<dt><a href="#lbAN">Platform Support</a></p>
+</dd><dt><a href="#lbAN">Platform Support</a></dt>
 <dd>
-<dt><a href="#lbAP">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbAP">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbAQ">Acknowledgements</a></p>
+</dd><dt><a href="#lbAQ">Acknowledgements</a></dt>
 <dd>
-<dt><a href="#lbAR">Reporting Bugs</a></p>
+</dd><dt><a href="#lbAR">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbAS">Give Thanks</a></p>
+</dd><dt><a href="#lbAS">Give Thanks</a></dt>
 <dd>
-<dt><a href="#lbAT">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAT">SEE ALSO</a></dt>
+<dd></dd></dl>

@@ -19,7 +19,7 @@ description: "ctrsen.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CTRSEN reorders the Schur factorization of a complex matrix
  A = Q*T*Q**H, so that a selected cluster of eigenvalues appears in
@@ -29,11 +29,11 @@ description: "ctrsen.f –"
  Optionally the routine computes the reciprocal condition numbers of
  the cluster of eigenvalues and/or the invariant subspace.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre><code>
           JOB is CHARACTER*1
           Specifies whether condition numbers are required for the
@@ -139,18 +139,18 @@ the routine
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   CTRSEN first collects the selected eigenvalues by computing a unitary
   transformation Z to move them to the top left corner of T. In other
@@ -200,8 +200,9 @@ the routine
   error in the computed right invariant subspace is
                       EPS * norm(T) / SEP
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 264 of file ctrsen.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -13,18 +13,18 @@ description: "ginq_set_seg_names (Inquire set of segment names in use) – Retri
 <p> void ginq_set_seg_names(Gint num_elems_appl_list, Gint start_pos, Gint *err_ind, Gint_list *seg_names, Gint *length_list);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>num_elems_appl_list</p>
-<dd>(Input) &#8211; The number of elements in the application list you wish to request.</p>
-<dt>start_pos</p>
-<dd>(Input) &#8211; The first set member requested.</p>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the GKS state is WSOP (workstation open), WSAC (workstation active), or SGOP (segment open), then err_ind is returned as &quot;0&quot;; otherwise err_ind is returned as &quot;7&quot;.</p>
-<dt>length_list</p>
-<dd>(Output) &#8211; The number of segment names that are currently in use.</p>
-<dt>seg_names.num_ints</p>
-<dd>(Gint, Output) &#8211; The number of segment names returned.</p>
-<dt>seg_names.ints</p>
-<dd>(Gint *, Output) &#8211; If the GKS state is WSOP (workstation open), WSAC (workstation active), or SGOP (segment open), and if start_pos is non-negative, then seg_names.ints is returned as the list of segment names starting with element &quot;start_pos&quot; and ending with element &quot;start_pos + num_elems_appl_list &#8211; 1&quot; or &quot;start_pos + length_list &#8211; 1&quot;, whichever is less; otherwise seg_names.num_ints is undefined.</dl>
+<dt>num_elems_appl_list</dt>
+<dd>(Input) &#8211; The number of elements in the application list you wish to request.</dd>
+<dt>start_pos</dt>
+<dd>(Input) &#8211; The first set member requested.</dd>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the GKS state is WSOP (workstation open), WSAC (workstation active), or SGOP (segment open), then err_ind is returned as &quot;0&quot;; otherwise err_ind is returned as &quot;7&quot;.</dd>
+<dt>length_list</dt>
+<dd>(Output) &#8211; The number of segment names that are currently in use.</dd>
+<dt>seg_names.num_ints</dt>
+<dd>(Gint, Output) &#8211; The number of segment names returned.</dd>
+<dt>seg_names.ints</dt>
+<dd>(Gint *, Output) &#8211; If the GKS state is WSOP (workstation open), WSAC (workstation active), or SGOP (segment open), and if start_pos is non-negative, then seg_names.ints is returned as the list of segment names starting with element &quot;start_pos&quot; and ending with element &quot;start_pos + num_elems_appl_list &#8211; 1&quot; or &quot;start_pos + length_list &#8211; 1&quot;, whichever is less; otherwise seg_names.num_ints is undefined.</dd></dl>
 <h2>Usage</h2>
 <p>For NCAR GKS, segment names are integers between 0 and 99 inclusive (see the man page for gcreate_seg(3NCARG)). </p>
 <h2>Access</h2>

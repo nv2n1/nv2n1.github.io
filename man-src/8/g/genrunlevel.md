@@ -16,18 +16,18 @@ description: "genrunlevel – create initng’s runlevels"
 <p><code>genrunlevel</code> creates the runlevels and virtuals used by initng. Generally these are <i>default.runlevel</i> and <i>system.virtual</i>. <code>genrunlevel &#8211;migrate</code> fixes your runlevels when there&#8217;s a change in initng-ifiles. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;overwrite</code></p>
-<dd>Overwrite files if they exist.</p>
-<dt><code>&#8211;path </code><i>PATH</i></p>
-<dd>Sets the search path for executables.</p>
-<dt><code>&#8211;destdir </code><i>PATH</i></p>
-<dd>Destination path prefix (default: /).</p>
-<dt><code>&#8211;confdir </code><i>PATH</i></p>
-<dd>Configuration directory (default: /etc/initng).</p>
-<dt><code>&#8211;all</code></p>
-<dd>Create all runlevels.</p>
-<dt><i>file1 file2 &#8230;</i></p>
-<dd>Create file1 file2 &#8230; fileN runlevels. </p>
+<dt><code>&#8211;overwrite</code></dt>
+<dd>Overwrite files if they exist.</dd>
+<dt><code>&#8211;path </code><i>PATH</i></dt>
+<dd>Sets the search path for executables.</dd>
+<dt><code>&#8211;destdir </code><i>PATH</i></dt>
+<dd>Destination path prefix (default: /).</dd>
+<dt><code>&#8211;confdir </code><i>PATH</i></dt>
+<dd>Configuration directory (default: /etc/initng).</dd>
+<dt><code>&#8211;all</code></dt>
+<dd>Create all runlevels.</dd>
+<dt><i>file1 file2 &#8230;</i></dt>
+<dd>Create file1 file2 &#8230; fileN runlevels. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-initng/">initng</a>(8),</code> <code><a href="/docs/linux/man/8-ngc/">ngc</a>(8),</code> <code><a href="/docs/linux/man/8-ngdc/">ngdc</a>(8),</code> <code><a href="/docs/linux/man/8-ng-update/">ng-update</a>(8),</code> <code><a href="/docs/linux/man/8-install_service/">install_service</a>(8),</code> <code>system_off(8).</code></p>

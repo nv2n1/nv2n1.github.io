@@ -14,14 +14,14 @@ description: "gdb_regs_to_pt_regs – Convert GDB regs to ptrace regs."
 <p><i>gdb_regs</i></p>
 <dl>
 <dd>
-<dd>A pointer to hold the registers we&#8217;ve received from GDB.</dl>
+</dd><dd>A pointer to hold the registers we&#8217;ve received from GDB.</dd></dl>
 <p> <i>regs</i></p>
 <dl>
-<dd>A pointer to a struct pt_regs to hold these values in.</dl>
+<dd>A pointer to a struct pt_regs to hold these values in.</dd></dl>
 <h2>Description</h2>
 <p>Convert the GDB regs in <i>gdb_regs</i> into the pt_regs, and store them in <i>regs</i>.</p>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -12,16 +12,16 @@ description: "cdk_display – Curses Development Kit Display Capabilities."
 <h2>SYNOPSIS</h2>
 <p> Cdk has a number of pre-defined display types. The following are outlined in this manual page: </p>
 <dl>
-<dt>&bull; How To Use Colors</p>
+<dt>&bull; How To Use Colors</dt>
 <dd>
-<dt>&bull; How To Use Different Character Attributes</p>
+</dd><dt>&bull; How To Use Different Character Attributes</dt>
 <dd>
-<dt>&bull; How To Justify Strings</p>
+</dd><dt>&bull; How To Justify Strings</dt>
 <dd>
-<dt>&bull; How To Use Special Drawing Characters</p>
+</dd><dt>&bull; How To Use Special Drawing Characters</dt>
 <dd>
-<dt>&bull; Edit/Display Type Codes (EDisplayType)</p>
-<dd></dl>
+</dd><dt>&bull; Edit/Display Type Codes (EDisplayType)</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Cdk has special formatting commands which can be included in any string which add highlights, justification, or even colors to a basic string. These attributes, once set, remain in effect until changed explicitly, or until the end of the string. </p>
 <p> This manual page outlines and demonstrates how they work.</p>
@@ -30,9 +30,7 @@ description: "cdk_display – Curses Development Kit Display Capabilities."
 <p> The color settings are stored directly in the string. When the widget is created or activated, the string is converted to take advantage of any color commands in the string. To turn on a color pair insert &lt;/XX&gt; into the string; where <i>XX</i> is a numeric value from 0 to 64. Color pair 0 is the standard default color pair for the screen. To turn off a color pair use the format command &lt;!XX&gt; where <i>XX</i> is a numeric value from 0 to 64. </p>
 <p> The following example demonstrates the use of the color commands. </p>
 <pre><code>
-
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
 #include &lt;cdk/cdk.h&gt;
                                                          void
                                                          main()
@@ -241,15 +239,15 @@ void main()<br />
 <p> The bullet format command can take either a single character or a string. The bullet in the above example would look like</p>
 <dl>
 <dt>
-<dd> <i>+</i> This is a bullet.</dl>
+</dt><dd> <i>+</i> This is a bullet.</dd></dl>
 <p> but if we were to use the following command instead</p>
 <dl>
 <dt>
-<dd> &lt;B=***&gt;This is a bullet.</dl>
+</dt><dd> &lt;B=***&gt;This is a bullet.</dd></dl>
 <p> it would look like</p>
 <dl>
 <dt>
-<dd> <i>***</i> This is a bullet.</dl>
+</dt><dd> <i>***</i> This is a bullet.</dd></dl>
 <p> A format command must be at the beginning of the string.</p>
 <h3>How To Use Special Drawing Characters</h3>
 <p> Cdk has a set of special drawing characters which can be inserted into any ASCII file. In order to use a special character the format command &lt;#XXX&gt; is used. The following table lists all of the special character commands available. <center></p>

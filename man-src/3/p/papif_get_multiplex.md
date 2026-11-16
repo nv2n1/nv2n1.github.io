@@ -14,9 +14,9 @@ description: "PAPIF_get_multiplex –"
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
 <dd>#include &#8216;fpapi.h&#8217;<br />
- <code>PAPIF_get_multiplex( C_INT EventSet, C_INT check )</code></dl>
+ <code>PAPIF_get_multiplex( C_INT EventSet, C_INT check )</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_multiplex</code></dl>
+<dd><code>PAPI_get_multiplex</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

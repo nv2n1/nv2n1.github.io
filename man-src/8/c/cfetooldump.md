@@ -15,20 +15,20 @@ description: "cfetool dump – dump the contents of a database in XML format"
 <p> The <code>-d</code>, <code>-w</code>, and <code>-y</code> options specify which databases to include in the dump, and may be combined. If they are all ommitted, the default is to only dump the weekly database.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></p>
-<dd>Names the directory in which the database specified by <i>name</i> can be found.</p>
-<dt><code>&#8211;file</code>|<code>-f</code> <i>filename</i></p>
-<dd>Names a file to print the <font SIZE="-1">XML</font> to. If this option is omitted, the <font SIZE="-1">XML</font> will be printed to the standard output stream.</p>
-<dt><code>&#8211;daily</code>|<code>-d</code></p>
-<dd>Include the daily pattern database in the dump.</p>
-<dt><code>&#8211;weekly</code>|<code>-w</code></p>
-<dd>Include the weekly pattern database in the dump.</p>
-<dt><code>&#8211;yearly</code>|<code>-y</code></p>
-<dd>Include the yearly pattern database in the dump.</p>
-<dt><code>&#8211;verbose</code>|<code>-v</code></p>
-<dd>Print details of the command&#8217;s execution to the standard output stream. When using this argument, it is recommended that you also provide the <code>-f</code> argument, to avoid sharing the standard output stream.</p>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd>Print a short help message and then exit.</dl>
+<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></dt>
+<dd>Names the directory in which the database specified by <i>name</i> can be found.</dd>
+<dt><code>&#8211;file</code>|<code>-f</code> <i>filename</i></dt>
+<dd>Names a file to print the <font SIZE="-1">XML</font> to. If this option is omitted, the <font SIZE="-1">XML</font> will be printed to the standard output stream.</dd>
+<dt><code>&#8211;daily</code>|<code>-d</code></dt>
+<dd>Include the daily pattern database in the dump.</dd>
+<dt><code>&#8211;weekly</code>|<code>-w</code></dt>
+<dd>Include the weekly pattern database in the dump.</dd>
+<dt><code>&#8211;yearly</code>|<code>-y</code></dt>
+<dd>Include the yearly pattern database in the dump.</dd>
+<dt><code>&#8211;verbose</code>|<code>-v</code></dt>
+<dd>Print details of the command&#8217;s execution to the standard output stream. When using this argument, it is recommended that you also provide the <code>-f</code> argument, to avoid sharing the standard output stream.</dd>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Print a short help message and then exit.</dd></dl>
 <h2>Example</h2>
 <pre> % cfetool dump temperature --path /my/path -f temperature.xml</pre>
 <p>Prints the following to the file <code>temperature.xml</code>: </p>
@@ -54,10 +54,10 @@ description: "cfetool dump – dump the contents of a database in XML format"
 <h2>Authors</h2>
 <p>The code and documentation were contributed by Stanford Linear Accelerator Center, a department of Stanford University. This documentation was written by</p>
 <dl>
-<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</p>
+<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</dt>
 <dd>
-<dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</p>
-<dd></dl>
+</dd><dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</dt>
+<dd></dd></dl>
 <h2>Copyright And Disclaimer</h2>
 <pre> Copyright 2004 Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt; and
  Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt;

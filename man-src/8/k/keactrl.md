@@ -10,47 +10,47 @@ description: "keactrl – Shell script for managing Kea"
 <p>keactrl &#8211; Shell script for managing Kea</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>keactrl</code> [command] [<code>-c&nbsp;<wbr></code><i>keactrl-config-file</i>] [<code>-s&nbsp;<wbr></code><i>server[,server,&#8230;]</i>]</dl>
+<dt> <code>keactrl</code> [command] [<code>-c&nbsp;<wbr></code><i>keactrl-config-file</i>] [<code>-s&nbsp;<wbr></code><i>server[,server,&#8230;]</i>]</dt></dl>
 <h2>Description</h2>
-<dd>keactrl is a shell script which controls the startup, shutdown and reconfiguration of the Kea servers (<code>kea-dhcp4</code>, <code>kea-dhcp6</code> and <code>kea-dhcp-ddns</code>). It also provides the means for checking the current status of the servers and determining the configuration files in use.</p>
+<dd>keactrl is a shell script which controls the startup, shutdown and reconfiguration of the Kea servers (<code>kea-dhcp4</code>, <code>kea-dhcp6</code> and <code>kea-dhcp-ddns</code>). It also provides the means for checking the current status of the servers and determining the configuration files in use.</dd>
 <h2>Configuration File</h2>
 <p>Depending on requirements, not all of the available servers need be run. The keactrl configuration file sets which servers are enabled and which are disabled. By default the configuration file is [kea-install-dir]/etc/kea/keactrl.conf. </p>
 <p> See the Kea Administrator&#8217;s Guide for the documentation of the parameters in the <code>keactrl</code> configuration file.</p>
 <h2>Options</h2>
 <p><i>command</i></p>
 <dl>
-<dd>Command to be issued to the servers. It can be one of the following: </p>
+<dd>Command to be issued to the servers. It can be one of the following: </dd>
 <p> start</p>
 <dl>
-<dd>Start the servers.</dl>
+<dd>Start the servers.</dd></dl>
 <p> stop</p>
 <dl>
-<dd>Stop the servers.</dl>
+<dd>Stop the servers.</dd></dl>
 <p> reload</p>
 <dl>
-<dd>Instructs the servers to re-read the kea configuration file.</dl>
+<dd>Instructs the servers to re-read the kea configuration file.</dd></dl>
 <p> status</p>
 <dl>
-<dd>Print the status of the servers.</dl>
+<dd>Print the status of the servers.</dd></dl>
 </dl>
 <p> <code>-c|&#8211;ctrl-config </code><i>keactrl-config-file</i></p>
 <dl>
-<dd>Specify the <code>keactrl</code> configuration file. Without this switch, the <code>keactrl</code> will attempt to use the file [kea-install-dir]/etc/kea/keactrl.conf.</dl>
+<dd>Specify the <code>keactrl</code> configuration file. Without this switch, the <code>keactrl</code> will attempt to use the file [kea-install-dir]/etc/kea/keactrl.conf.</dd></dl>
 <p> <code>-s|&#8211;server </code><i>server[,server,&#8230;]</i></p>
 <dl>
-<dd>Specifies a subset of the enabled servers to which the command should be issued. The list of servers should be separated by commas with no intervening spaces. Acceptable values are: </p>
+<dd>Specifies a subset of the enabled servers to which the command should be issued. The list of servers should be separated by commas with no intervening spaces. Acceptable values are: </dd>
 <p> dhcp4</p>
 <dl>
-<dd>DHCPv4 server (<code>kea-dhcp4</code>).</dl>
+<dd>DHCPv4 server (<code>kea-dhcp4</code>).</dd></dl>
 <p> dhcp6</p>
 <dl>
-<dd>DHCPv6 server (<code>kea-dhcp6</code>).</dl>
+<dd>DHCPv6 server (<code>kea-dhcp6</code>).</dd></dl>
 <p> dhcp_ddns</p>
 <dl>
-<dd>DHCP DDNS server (<code>kea-dhcp-ddns</code>).</dl>
+<dd>DHCP DDNS server (<code>kea-dhcp-ddns</code>).</dd></dl>
 <p> all</p>
 <dl>
-<dd>All servers (default).</dl>
+<dd>All servers (default).</dd></dl>
 </dl>
 <h2>Documentation</h2>
 <p>Kea comes with an extensive Kea User&#8217;s Guide documentation that covers all aspects of running the Kea software &#8211; compilation, installation, configuration, configuration examples and many more. Kea also features a Kea Messages Manual, which lists all possible messages Kea can print with a brief description for each of them. Both documents are typically available in various formats (txt, html, pdf) with your Kea distribution. The on-line version is available at <a rel="nofollow" href="http://kea.isc.org/docs/.">http://kea.isc.org/docs/.</a> </p>

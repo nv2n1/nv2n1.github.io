@@ -25,28 +25,28 @@ description: "sessreg – manage utmpx/wtmpx entries for non-init clients"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-w</code> <i>wtmpx-file</i></p>
-<dd> This specifies an alternate wtmpx file, instead of <code>/var/log/wtmp</code>. The special name &quot;none&quot; disables writing records to the wtmpx file.</p>
-<dt><code>-u</code> <i>utmpx-file</i></p>
-<dd> This specifies an alternate utmpx file, instead of <code>/var/run/utmp</code>. The special name &quot;none&quot; disables writing records to the utmpx file.</p>
-<dt><code>-L</code> <i>lastlog-file</i></p>
-<dd> This specifies an alternate lastlog file, instead of <code>/var/log/lastlog</code>, if the platform supports lastlog files. The special name &quot;none&quot; disables writing records to the lastlog file.</p>
-<dt><code>-l</code> <i>line-name</i></p>
-<dd> This describes the &quot;line&quot; name of the entry. For terminal sessions, this is the final pathname segment of the terminal device filename (e.g. ttyd0). For X sessions, it should probably be the local display name given to the users session (e.g. :0). If none is specified, the terminal name will be determined with <a href="/docs/linux/man/3-ttyname/">ttyname</a>(3) and stripped of leading components.</p>
-<dt><code>-h</code> <i>host-name</i></p>
-<dd> This is set to indicate that the session was initiated from a remote host. In typical xdm usage, this options is not used.</p>
-<dt><code>-s</code> <i>slot-number</i></p>
-<dd> This option is accepted for compatibility, but does nothing in this version of <i>sessreg</i>.</p>
-<dt><code>-x</code> <i>Xservers-file</i></p>
-<dd> This option is accepted for compatibility, but does nothing in this version of <i>sessreg</i>.</p>
-<dt><code>-t</code> <i>ttys-file</i></p>
-<dd> This option is accepted for compatibility, but does nothing in this version of <i>sessreg</i>.</p>
-<dt><code>-V</code></p>
-<dd> This option causes the command to print its version and exit.</p>
-<dt><code>-a</code></p>
-<dd> This session should be added to utmpx/wtmpx.</p>
-<dt><code>-d</code></p>
-<dd> This session should be deleted from utmpx/wtmpx. One of -a/-d must be specified.</dl>
+<dt><code>-w</code> <i>wtmpx-file</i></dt>
+<dd> This specifies an alternate wtmpx file, instead of <code>/var/log/wtmp</code>. The special name &quot;none&quot; disables writing records to the wtmpx file.</dd>
+<dt><code>-u</code> <i>utmpx-file</i></dt>
+<dd> This specifies an alternate utmpx file, instead of <code>/var/run/utmp</code>. The special name &quot;none&quot; disables writing records to the utmpx file.</dd>
+<dt><code>-L</code> <i>lastlog-file</i></dt>
+<dd> This specifies an alternate lastlog file, instead of <code>/var/log/lastlog</code>, if the platform supports lastlog files. The special name &quot;none&quot; disables writing records to the lastlog file.</dd>
+<dt><code>-l</code> <i>line-name</i></dt>
+<dd> This describes the &quot;line&quot; name of the entry. For terminal sessions, this is the final pathname segment of the terminal device filename (e.g. ttyd0). For X sessions, it should probably be the local display name given to the users session (e.g. :0). If none is specified, the terminal name will be determined with <a href="/docs/linux/man/3-ttyname/">ttyname</a>(3) and stripped of leading components.</dd>
+<dt><code>-h</code> <i>host-name</i></dt>
+<dd> This is set to indicate that the session was initiated from a remote host. In typical xdm usage, this options is not used.</dd>
+<dt><code>-s</code> <i>slot-number</i></dt>
+<dd> This option is accepted for compatibility, but does nothing in this version of <i>sessreg</i>.</dd>
+<dt><code>-x</code> <i>Xservers-file</i></dt>
+<dd> This option is accepted for compatibility, but does nothing in this version of <i>sessreg</i>.</dd>
+<dt><code>-t</code> <i>ttys-file</i></dt>
+<dd> This option is accepted for compatibility, but does nothing in this version of <i>sessreg</i>.</dd>
+<dt><code>-V</code></dt>
+<dd> This option causes the command to print its version and exit.</dd>
+<dt><code>-a</code></dt>
+<dd> This session should be added to utmpx/wtmpx.</dd>
+<dt><code>-d</code></dt>
+<dd> This session should be deleted from utmpx/wtmpx. One of -a/-d must be specified.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xdm/">xdm</a></code>(1), <code><a href="/docs/linux/man/5-utmpx/">utmpx</a></code>(5), <code>wtmpx</code>(5)</p>
 <h2>AUTHOR</h2>

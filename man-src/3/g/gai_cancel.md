@@ -25,10 +25,10 @@ Link with - lanl.
 <p> The <code>getaddrinfo_a</code>() function performs the same task as <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), but allows multiple name look-ups to be performed asynchronously, with optional notification on completion of look-up operations. </p>
 <p> The <i>mode</i> argument has one of the following values:</p>
 <dl>
-<dt><code>GAI_WAIT</code></p>
-<dd> Perform the look-ups synchronously. The call blocks until the look-ups have completed.</p>
-<dt><code>GAI_NOWAIT</code></p>
-<dd> Perform the look-ups asynchronously. The call returns immediately, and the requests are resolved in the background. See the discussion of the <i>sevp</i> argument below.</dl>
+<dt><code>GAI_WAIT</code></dt>
+<dd> Perform the look-ups synchronously. The call blocks until the look-ups have completed.</dd>
+<dt><code>GAI_NOWAIT</code></dt>
+<dd> Perform the look-ups asynchronously. The call returns immediately, and the requests are resolved in the background. See the discussion of the <i>sevp</i> argument below.</dd></dl>
 <p> The array <i>list</i> specifies the look-up requests to process. The <i>nitems</i> argument specifies the number of elements in <i>list</i>. The requested look-up operations are started in parallel. NULL elements in <i>list</i> are ignored. Each request is described by a <i>gaicb</i> structure, defined as follows: </p>
 <p> struct gaicb {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;const char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ar_name;<br />
@@ -38,50 +38,50 @@ Link with - lanl.
 <p> The elements of this structure correspond to the arguments of <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3). Thus, <i>ar_name</i> corresponds to the <i>node</i> argument and <i>ar_service</i> to the <i>service</i> argument, identifying an Internet host and a service. The <i>ar_request</i> element corresponds to the <i>hints</i> argument, specifying the criteria for selecting the returned socket address structures. Finally, <i>ar_result</i> corresponds to the <i>res</i> argument; you do not need to initialize this element, it will be automatically set when the request is resolved. The <i>addrinfo</i> structure referenced by the last two elements is described in <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3). </p>
 <p> When <i>mode</i> is specified as <code>GAI_NOWAIT</code>, notifications about resolved requests can be obtained by employing the <i>sigevent</i> structure pointed to by the <i>sevp</i> argument. For the definition and general details of this structure, see <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7). The <i>sevp-&gt;sigev_notify</i> field can have the following values:</p>
 <dl>
-<dt><code>SIGEV_NONE</code></p>
-<dd> Don&#8217;t provide any notification.</p>
-<dt><code>SIGEV_SIGNAL</code></p>
-<dd> When a look-up completes, generate the signal <i>sigev_signo</i> for the process. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for general details. The <i>si_code</i> field of the <i>siginfo_t</i> structure will be set to <code>SI_ASYNCNL</code>.</p>
-<dt><code>SIGEV_THREAD</code></p>
-<dd> When a look-up completes, invoke <i>sigev_notify_function</i> as if it were the start function of a new thread. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for details.</dl>
+<dt><code>SIGEV_NONE</code></dt>
+<dd> Don&#8217;t provide any notification.</dd>
+<dt><code>SIGEV_SIGNAL</code></dt>
+<dd> When a look-up completes, generate the signal <i>sigev_signo</i> for the process. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for general details. The <i>si_code</i> field of the <i>siginfo_t</i> structure will be set to <code>SI_ASYNCNL</code>.</dd>
+<dt><code>SIGEV_THREAD</code></dt>
+<dd> When a look-up completes, invoke <i>sigev_notify_function</i> as if it were the start function of a new thread. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for details.</dd></dl>
 <p> For <code>SIGEV_SIGNAL</code> and <code>SIGEV_THREAD</code>, it may be useful to point <i>sevp-&gt;sigev_value.sival_ptr</i> to <i>list</i>. </p>
 <p> The <code>gai_suspend</code>() function suspends execution of the calling thread, waiting for the completion of one or more requests in the array <i>list</i>. The <i>nitems</i> argument specifies the size of the array <i>list</i>. The call blocks until one of the following occurs:</p>
 <dl>
-<dt>*</p>
-<dd> One or more of the operations in <i>list</i> completes.</p>
-<dt>*</p>
-<dd> The call is interrupted by a signal that is caught.</p>
-<dt>*</p>
-<dd> The time interval specified in <i>timeout</i> elapses. This argument specifies a timeout in seconds plus nanoseconds (see <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2) for details of the <i>timespec</i> structure). If <i>timeout</i> is NULL, then the call blocks indefinitely (until one of the events above occurs).</dl>
+<dt>*</dt>
+<dd> One or more of the operations in <i>list</i> completes.</dd>
+<dt>*</dt>
+<dd> The call is interrupted by a signal that is caught.</dd>
+<dt>*</dt>
+<dd> The time interval specified in <i>timeout</i> elapses. This argument specifies a timeout in seconds plus nanoseconds (see <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2) for details of the <i>timespec</i> structure). If <i>timeout</i> is NULL, then the call blocks indefinitely (until one of the events above occurs).</dd></dl>
 <p> No explicit indication of which request was completed is given; you must determine which request(s) have completed by iterating with <code>gai_error</code>() over the list of requests. </p>
 <p> The <code>gai_error</code>() function returns the status of the request <i>req</i>: either <code>EAI_INPROGRESS</code> if the request was not completed yet, 0 if it was handled successfully, or an error code if the request could not be resolved. </p>
 <p> The <code>gai_cancel</code>() function cancels the request <i>req</i>. If the request has been canceled successfully, the error status of the request will be set to <code>EAI_CANCELED</code> and normal asynchronous notification will be performed. The request cannot be canceled if it is currently being processed; in that case, it will be handled as if <code>gai_cancel</code>() has never been called. If <i>req</i> is NULL, an attempt is made to cancel all outstanding requests that the process has made.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>getaddrinfo_a</code>() function returns 0 if all of the requests have been enqueued successfully, or one of the following nonzero error codes:</p>
 <dl>
-<dt><code>EAI_AGAIN</code></p>
-<dd> The resources necessary to enqueue the look-up requests were not available. The application may check the error status of each request to determine which ones failed.</p>
-<dt><code>EAI_MEMORY</code></p>
-<dd> Out of memory.</p>
-<dt><code>EAI_SYSTEM</code></p>
-<dd> <i>mode</i> is invalid.</dl>
+<dt><code>EAI_AGAIN</code></dt>
+<dd> The resources necessary to enqueue the look-up requests were not available. The application may check the error status of each request to determine which ones failed.</dd>
+<dt><code>EAI_MEMORY</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>EAI_SYSTEM</code></dt>
+<dd> <i>mode</i> is invalid.</dd></dl>
 <p> The <code>gai_suspend</code>() function returns 0 if at least one of the listed requests has been completed. Otherwise, it returns one of the following nonzero error codes:</p>
 <dl>
-<dt><code>EAI_AGAIN</code></p>
-<dd> The given timeout expired before any of the requests could be completed.</p>
-<dt><code>EAI_ALLDONE</code></p>
-<dd> There were no actual requests given to the function.</p>
-<dt><code>EAI_INTR</code></p>
-<dd> A signal has interrupted the function. Note that this interruption might have been caused by signal notification of some completed look-up request.</dl>
+<dt><code>EAI_AGAIN</code></dt>
+<dd> The given timeout expired before any of the requests could be completed.</dd>
+<dt><code>EAI_ALLDONE</code></dt>
+<dd> There were no actual requests given to the function.</dd>
+<dt><code>EAI_INTR</code></dt>
+<dd> A signal has interrupted the function. Note that this interruption might have been caused by signal notification of some completed look-up request.</dd></dl>
 <p> The <code>gai_error</code>() function can return <code>EAI_INPROGRESS</code> for an unfinished look-up request, 0 for a successfully completed look-up (as described above), one of the error codes that could be returned by <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), or the error code <code>EAI_CANCELED</code> if the request has been canceled explicitly before it could be finished. </p>
 <p> The <code>gai_cancel</code>() function can return one of these values:</p>
 <dl>
-<dt><code>EAI_CANCELED</code></p>
-<dd> The request has been canceled successfully.</p>
-<dt><code>EAI_NOTCANCELED</code></p>
-<dd> The request has not been canceled.</p>
-<dt><code>EAI_ALLDONE</code></p>
-<dd> The request has already completed.</dl>
+<dt><code>EAI_CANCELED</code></dt>
+<dd> The request has been canceled successfully.</dd>
+<dt><code>EAI_NOTCANCELED</code></dt>
+<dd> The request has not been canceled.</dd>
+<dt><code>EAI_ALLDONE</code></dt>
+<dd> The request has already completed.</dd></dl>
 <p> The <code><a href="/docs/linux/man/3-gai_strerror/">gai_strerror</a></code>(3) function translates these error codes to a human readable string, suitable for error reporting.</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

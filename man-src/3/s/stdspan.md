@@ -10,16 +10,11 @@ description: "std::span<T,Extent>::subspan – std::span<T,Extent>::subspan"
 <p>std::span&lt;T,Extent&gt;::subspan &#8211; std::span&lt;T,Extent&gt;::subspan</p>
 <h2>Synopsis</h2>
 <pre><code>template &lt;std::size_t Offset,
-
           std::size_t Count = std::dynamic_extent&gt;
 (1)
-
     constexpr std::span&lt;element_type, E /* see below */&gt; subspan() const;
-
 constexpr std::span&lt;element_type, std::dynamic_extent&gt;
-
 subspan(std::size_t Offset, (2)
-
                                 std::size_t Count = std::dynamic_extent) const;</code></pre>
 <p>Obtains a span that is a view over the Count elements of this span starting at offset Offset. If Count is std::dynamic_extent, the number of elements in the subspan is size() &#8211; offset (i.e., it ends at the end of *this.).<br />
 The behavior is undefined if either Offset or Count is out of range. This happens if<br />

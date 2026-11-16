@@ -18,66 +18,64 @@ mdb - schema[options] database[backend]
 <p> It produces DDL (data definition language) output for the given <i>database</i>. This can be passed to another <i>database</i> to create a replica of the original access table format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-T</code> &lt;table&gt;, <code>&#8211;table</code> &lt;table&gt;</p>
-<dd> Single table option. Create schema for this table only. Default is to export all tables.</p>
-<dt><code>-N</code> namespace</p>
-<dd> Prefix identifiers with namespace.</p>
-<dt><code>&#8211;drop-table</code></p>
-<dd> Issue DROP TABLE statement.</p>
-<dt><code>&#8211;no-drop-table</code></p>
-<dd> Don&#8217;t issue DROP TABLE statement. This is the default.</p>
-<dt><code>&#8211;not-null</code></p>
-<dd> Issue NOT NULL constraints. This is the default.</p>
-<dt><code>&#8211;no-not-null</code></p>
-<dd> Don&#8217;t issue NOT NULL constraints.</p>
-<dt><code>&#8211;default-values</code></p>
-<dd> Issue DEFAULT values.</p>
-<dt><code>&#8211;no-default-values</code></p>
-<dd> Don&#8217;t issue DEFAULT values. This is the default.</p>
-<dt><code>&#8211;not-empty</code></p>
-<dd> Issue CHECK &lt;&gt; &#8221; constraints.</p>
-<dt><code>&#8211;no-not-empty</code></p>
-<dd> Don&#8217;t issue CHECK &lt;&gt; &#8221; constraints. This is the default.</p>
-<dt><code>&#8211;indexes</code></p>
-<dd> Export INDEXes. This is the default.</p>
-<dt><code>&#8211;no-indexes</code></p>
-<dd> Don&#8217;t export INDEXes.</p>
-<dt><code>&#8211;relations</code></p>
-<dd> Export foreign keys constraints. This is the default.</p>
-<dt><code>&#8211;no-relations</code></p>
-<dd> Don&#8217;t export foreign keys constraints.</p>
-<dt><i>backend</i></p>
-<dd> Specifies target DDL dialect. Supported values are access, sybase, oracle, postgres, mysql and sqlite. If not specified the generated DDL will be in access format.</dl>
+<dt><code>-T</code> &lt;table&gt;, <code>&#8211;table</code> &lt;table&gt;</dt>
+<dd> Single table option. Create schema for this table only. Default is to export all tables.</dd>
+<dt><code>-N</code> namespace</dt>
+<dd> Prefix identifiers with namespace.</dd>
+<dt><code>&#8211;drop-table</code></dt>
+<dd> Issue DROP TABLE statement.</dd>
+<dt><code>&#8211;no-drop-table</code></dt>
+<dd> Don&#8217;t issue DROP TABLE statement. This is the default.</dd>
+<dt><code>&#8211;not-null</code></dt>
+<dd> Issue NOT NULL constraints. This is the default.</dd>
+<dt><code>&#8211;no-not-null</code></dt>
+<dd> Don&#8217;t issue NOT NULL constraints.</dd>
+<dt><code>&#8211;default-values</code></dt>
+<dd> Issue DEFAULT values.</dd>
+<dt><code>&#8211;no-default-values</code></dt>
+<dd> Don&#8217;t issue DEFAULT values. This is the default.</dd>
+<dt><code>&#8211;not-empty</code></dt>
+<dd> Issue CHECK &lt;&gt; &#8221; constraints.</dd>
+<dt><code>&#8211;no-not-empty</code></dt>
+<dd> Don&#8217;t issue CHECK &lt;&gt; &#8221; constraints. This is the default.</dd>
+<dt><code>&#8211;indexes</code></dt>
+<dd> Export INDEXes. This is the default.</dd>
+<dt><code>&#8211;no-indexes</code></dt>
+<dd> Don&#8217;t export INDEXes.</dd>
+<dt><code>&#8211;relations</code></dt>
+<dd> Export foreign keys constraints. This is the default.</dd>
+<dt><code>&#8211;no-relations</code></dt>
+<dd> Don&#8217;t export foreign keys constraints.</dd>
+<dt><i>backend</i></dt>
+<dd> Specifies target DDL dialect. Supported values are access, sybase, oracle, postgres, mysql and sqlite. If not specified the generated DDL will be in access format.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>MDB_JET3_CHARSET</code></p>
-<dd> Defines the charset of the input JET3 (access 97) file. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</p>
-<dt><code>MDBICONV</code></p>
-<dd> Defines the output charset to use for the SQL file. Default is UTF-8. mdbtools must have been compiled with iconv.</p>
-<dt><code>MDBOPTS</code></p>
-<dd> semi-column separated list of <i>options</i>:</p>
+<dt><code>MDB_JET3_CHARSET</code></dt>
+<dd> Defines the charset of the input JET3 (access 97) file. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</dd>
+<dt><code>MDBICONV</code></dt>
+<dd> Defines the output charset to use for the SQL file. Default is UTF-8. mdbtools must have been compiled with iconv.</dd>
+<dt><code>MDBOPTS</code></dt>
+<dd> semi-column separated list of <i>options</i>:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> use_index</p>
-<dt>&bull;</p>
-<dd> no_memo</p>
-<dt>&bull;</p>
-<dd> debug_like</p>
-<dt>&bull;</p>
-<dd> debug_write</p>
-<dt>&bull;</p>
-<dd> debug_usage</p>
-<dt>&bull;</p>
-<dd> debug_ole</p>
-<dt>&bull;</p>
-<dd> debug_row</p>
-<dt>&bull;</p>
-<dd> debug_props</p>
-<dt>&bull;</p>
-<dd> debug_all is a shortcut for all debug_* <i>options</i></dl>
+<dt>&bull;</dt>
+<dd> use_index</dd>
+<dt>&bull;</dt>
+<dd> no_memo</dd>
+<dt>&bull;</dt>
+<dd> debug_like</dd>
+<dt>&bull;</dt>
+<dd> debug_write</dd>
+<dt>&bull;</dt>
+<dd> debug_usage</dd>
+<dt>&bull;</dt>
+<dd> debug_ole</dd>
+<dt>&bull;</dt>
+<dd> debug_row</dd>
+<dt>&bull;</dt>
+<dd> debug_props</dd>
+<dt>&bull;</dt>
+<dd> debug_all is a shortcut for all debug_* <i>options</i></dd></dl>
 </dl>
 </dl>
 <h2>NOTES</h2>

@@ -17,22 +17,22 @@ description: "sg_sat_set_features – use ATA SET FEATURES command via a SCSI to
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;count</code>=<i>CO</i></p>
-<dd>the number <i>CO</i> is placed in the &quot;count&quot; field in the ATA SET FEATURES command. Only some subcommands (a term used for the value placed in the &quot;feature&quot; field) require the count field to be set. The default value placed in the &quot;count&quot; field is 0.</p>
-<dt><code>-C</code>, <code>&#8211;ck_cond</code></p>
-<dd>sets the CK_COND bit in the ATA PASS-THROUGH SCSI cdb. The default setting is clear (i.e. 0). When set the SATL should yield a sense buffer containing a ATA Result descriptor irrespective of whether the ATA command succeeded or failed. When clear the SATL should only yield a sense buffer containing a ATA Result descriptor if the ATA command failed.</p>
-<dt><code>-f</code>, <code>&#8211;feature</code>=<i>FEA</i></p>
-<dd>the value <i>FEA</i> is placed in the &quot;feature&quot; field in the ATA SET FEATURES command. The term &quot;subcommand&quot; is sometimes used for this value. The default value placed in the &quot;feature&quot; field is 0 which is reserved and hence should not change anything. Two common examples are 2h to enable the write cache and 82h to disable it.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>outputs the usage message summarizing command line options then exits. Ignores <i>DEVICE</i> if given.</p>
-<dt><code>-L</code>, <code>&#8211;lba</code>=<i>LBA</i></p>
-<dd>the number <i>LBA</i> is placed in the &quot;lba&quot; field of the ATA SET FEATURES command. Only some sub-commands (a term used for the value placed in the &quot;feature&quot; field) require the lba field to be set. This value is typically not a &quot;logical block address&quot; as the acronym might imply. The default value placed in the &quot;lba&quot; field is 0. The maximum value allowed for <i>LBA</i> is 0xfffffffe (or 0xffffff if <i>&#8211;len=</i>12).</p>
-<dt><code>-l</code>, <code>&#8211;len</code>={16|12}</p>
-<dd>this is the length of the SCSI cdb used for the ATA PASS-THROUGH commands. The argument can either be 16 or 12. The default is 16. Some SCSI transports cannot convey SCSI commands longer than 12 bytes.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increases the level or verbosity.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print out version string</dl>
+<dt><code>-c</code>, <code>&#8211;count</code>=<i>CO</i></dt>
+<dd>the number <i>CO</i> is placed in the &quot;count&quot; field in the ATA SET FEATURES command. Only some subcommands (a term used for the value placed in the &quot;feature&quot; field) require the count field to be set. The default value placed in the &quot;count&quot; field is 0.</dd>
+<dt><code>-C</code>, <code>&#8211;ck_cond</code></dt>
+<dd>sets the CK_COND bit in the ATA PASS-THROUGH SCSI cdb. The default setting is clear (i.e. 0). When set the SATL should yield a sense buffer containing a ATA Result descriptor irrespective of whether the ATA command succeeded or failed. When clear the SATL should only yield a sense buffer containing a ATA Result descriptor if the ATA command failed.</dd>
+<dt><code>-f</code>, <code>&#8211;feature</code>=<i>FEA</i></dt>
+<dd>the value <i>FEA</i> is placed in the &quot;feature&quot; field in the ATA SET FEATURES command. The term &quot;subcommand&quot; is sometimes used for this value. The default value placed in the &quot;feature&quot; field is 0 which is reserved and hence should not change anything. Two common examples are 2h to enable the write cache and 82h to disable it.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>outputs the usage message summarizing command line options then exits. Ignores <i>DEVICE</i> if given.</dd>
+<dt><code>-L</code>, <code>&#8211;lba</code>=<i>LBA</i></dt>
+<dd>the number <i>LBA</i> is placed in the &quot;lba&quot; field of the ATA SET FEATURES command. Only some sub-commands (a term used for the value placed in the &quot;feature&quot; field) require the lba field to be set. This value is typically not a &quot;logical block address&quot; as the acronym might imply. The default value placed in the &quot;lba&quot; field is 0. The maximum value allowed for <i>LBA</i> is 0xfffffffe (or 0xffffff if <i>&#8211;len=</i>12).</dd>
+<dt><code>-l</code>, <code>&#8211;len</code>={16|12}</dt>
+<dd>this is the length of the SCSI cdb used for the ATA PASS-THROUGH commands. The argument can either be 16 or 12. The default is 16. Some SCSI transports cannot convey SCSI commands longer than 12 bytes.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increases the level or verbosity.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print out version string</dd></dl>
 <h2>Notes</h2>
 <p>In the 2.4 series of Linux kernels the <i>DEVICE</i> must be a SCSI generic (sg) device. In the 2.6 and 3 series block devices (e.g. disks and ATAPI DVDs) can also be specified. For example &quot;sg_inq /dev/sda&quot; will work in the 2.6 series kernels. From lk 2.6.6 other SCSI &quot;char&quot; device names may be used as well (e.g. &quot;/dev/st0m&quot;). Prior to lk 2.6.29 USB mass storage limited sense data to 18 bytes which made the <code>&#8211;ck_cond</code> option yield strange (truncated) results.</p>
 <h2>Exit Status</h2>

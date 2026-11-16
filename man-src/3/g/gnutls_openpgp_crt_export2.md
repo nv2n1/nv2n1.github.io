@@ -14,12 +14,12 @@ description: "gnutls_openpgp_crt_export2 – API function"
 <p> <code>int gnutls_openpgp_crt_export2(gnutls_openpgp_crt_t </code><i>key</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_crt_t key</p>
-<dd> Holds the key.</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> One of gnutls_openpgp_crt_fmt_t elements.</p>
-<dt>gnutls_datum_t * out</p>
-<dd> will contain the raw or base64 encoded key</dl>
+<dt>gnutls_openpgp_crt_t key</dt>
+<dd> Holds the key.</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> One of gnutls_openpgp_crt_fmt_t elements.</dd>
+<dt>gnutls_datum_t * out</dt>
+<dd> will contain the raw or base64 encoded key</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given key to RAW or Base64 format. The output buffer is allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_openpgp_crt_export2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

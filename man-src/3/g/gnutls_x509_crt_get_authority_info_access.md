@@ -14,16 +14,16 @@ description: "gnutls_x509_crt_get_authority_info_access – API function"
 <p> <code>int gnutls_x509_crt_get_authority_info_access(gnutls_x509_crt_t </code><i>crt</i><code>, unsigned int </code><i>seq</i><code>, int </code><i>what</i><code>, gnutls_datum_t * </code><i>data</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> Holds the certificate</p>
-<dt>unsigned int seq</p>
-<dd> specifies the sequence number of the access descriptor (0 for the first one, 1 for the second etc.)</p>
-<dt>int what</p>
-<dd> what data to get, a <code>gnutls_info_access_what_t</code> type.</p>
-<dt>gnutls_datum_t * data</p>
-<dd> output data to be freed with <code>gnutls_free()</code>.</p>
-<dt>unsigned int * critical</p>
-<dd> pointer to output integer that is set to non-zero if the extension is marked as critical (may be <code>NULL</code>)</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> Holds the certificate</dd>
+<dt>unsigned int seq</dt>
+<dd> specifies the sequence number of the access descriptor (0 for the first one, 1 for the second etc.)</dd>
+<dt>int what</dt>
+<dd> what data to get, a <code>gnutls_info_access_what_t</code> type.</dd>
+<dt>gnutls_datum_t * data</dt>
+<dd> output data to be freed with <code>gnutls_free()</code>.</dd>
+<dt>unsigned int * critical</dt>
+<dd> pointer to output integer that is set to non-zero if the extension is marked as critical (may be <code>NULL</code>)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Note that a simpler API to access the authority info data is provided by <code>gnutls_x509_aia_get()</code> and <code>gnutls_x509_ext_import_aia()</code>. </p>
 <p> This function extracts the Authority Information Access (AIA) extension, see RFC 5280 section 4.2.2.1 for more information. The AIA extension holds a sequence of AccessDescription (AD) data. </p>
@@ -50,6 +50,6 @@ description: "gnutls_x509_crt_get_authority_info_access – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

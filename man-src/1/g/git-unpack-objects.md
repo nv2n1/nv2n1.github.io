@@ -21,23 +21,23 @@ git unpack - objects[-n][-q][-r][--strict]
 <p> -n</p>
 <dl>
 <dt>
-<dd> Dry run. Check the pack file without actually unpacking the objects.</dl>
+</dt><dd> Dry run. Check the pack file without actually unpacking the objects.</dd></dl>
 <p> -q</p>
 <dl>
 <dt>
-<dd> The command usually shows percentage progress. This flag suppresses it.</dl>
+</dt><dd> The command usually shows percentage progress. This flag suppresses it.</dd></dl>
 <p> -r</p>
 <dl>
 <dt>
-<dd> When unpacking a corrupt packfile, the command dies at the first corruption. This flag tells it to keep going and make the best effort to recover as many objects as possible.</dl>
+</dt><dd> When unpacking a corrupt packfile, the command dies at the first corruption. This flag tells it to keep going and make the best effort to recover as many objects as possible.</dd></dl>
 <p> &#8211;strict</p>
 <dl>
 <dt>
-<dd> Don&#8217;t write objects with broken content or links.</dl>
+</dt><dd> Don&#8217;t write objects with broken content or links.</dd></dl>
 <p> &#8211;max-input-size=&lt;size&gt;</p>
 <dl>
 <dt>
-<dd> Die, if the pack is larger than &lt;size&gt;.</dl>
+</dt><dd> Die, if the pack is larger than &lt;size&gt;.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

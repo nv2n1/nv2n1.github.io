@@ -16,10 +16,10 @@ description: "dirsplit – splits directory into multiple with equal size"
 <p> The actual action is either adding the files to mkisofs catalogs or real moving of files into new directories (or creating links/symlinks). The method is not limited to files, whole directories can also be handled this way (see various filesystem exploration modes).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Run dirsplit <code>-h</code> to get the basic usage info.</p>
+<dt>Run dirsplit <code>-h</code> to get the basic usage info.</dt>
 <dd>
-<dt>Run dirsplit <code>-H</code> to get the whole option overview and description.</p>
-<dd></dl>
+</dd><dt>Run dirsplit <code>-H</code> to get the whole option overview and description.</dt>
+<dd></dd></dl>
 <h2>EXAMPLES</h2>
 <p> Run dirsplit <code>-H</code> to see the commented examples.</p>
 <h2>AUTHOR</h2>

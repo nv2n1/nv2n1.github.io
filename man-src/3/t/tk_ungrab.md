@@ -16,9 +16,9 @@ void
 <code>Tk_Ungrab</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting</p>
-<dd>Tk_Window <i>tkwin</i> (in) Window on whose behalf the pointer is to be grabbed or released</p>
-<dd>int <i>grabGlobal</i> (in) Boolean indicating whether the grab is global or application local </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Window on whose behalf the pointer is to be grabbed or released</dd>
+<dd>int <i>grabGlobal</i> (in) Boolean indicating whether the grab is global or application local </dd>
 </dl>
 <h2>Description</h2>
 <p>These functions are used to set or release a global or application local grab. When a grab is set on a particular window in a Tk application, mouse and keyboard events can only be received by that window and its descendants. Mouse and keyboard events for windows outside the tree rooted at <i>tkwin</i> will be redirected to <i>tkwin</i>. If the grab is global, then all mouse and keyboard events for windows outside the tree rooted at <i>tkwin</i> (even those intended for windows in other applications) will be redirected to <i>tkwin</i>. If the grab is application local, only mouse and keyboard events intended for a windows within the same application (but outside the tree rooted at <i>tkwin</i>) will be redirected. </p>

@@ -15,15 +15,15 @@ C:
 #include &lt;gps.h&gt;
 </code></pre>
 <dl>
-<dt> <code>int gps_open(char&nbsp;<wbr>*</code><i>server</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>port</i><code>, struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></p>
-<dt> <code>int gps_send(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>, char&nbsp;<wbr>*</code><i>fmt</i><code>&#8230;);</code></p>
-<dt> <code>int gps_read(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></p>
-<dt> <code>bool gps_waiting(const struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>, int&nbsp;<wbr></code><i>timeout</i><code>);</code></p>
-<dt> <code>char *gps_data(const struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></p>
-<dt> <code>int gps_unpack(char&nbsp;<wbr>*</code><i>buf</i><code>, struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></p>
-<dt> <code>void gps_close(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></p>
-<dt> <code>int gps_stream(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>, unsigned int</code><i>flags</i><code>, void&nbsp;<wbr>*</code><i>data</i><code>);</code></p>
-<dt> <code>const char *gps_errstr(int&nbsp;<wbr></code><i>err</i><code>);</code> </p>
+<dt> <code>int gps_open(char&nbsp;<wbr>*</code><i>server</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>port</i><code>, struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></dt>
+<dt> <code>int gps_send(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>, char&nbsp;<wbr>*</code><i>fmt</i><code>&#8230;);</code></dt>
+<dt> <code>int gps_read(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></dt>
+<dt> <code>bool gps_waiting(const struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>, int&nbsp;<wbr></code><i>timeout</i><code>);</code></dt>
+<dt> <code>char *gps_data(const struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></dt>
+<dt> <code>int gps_unpack(char&nbsp;<wbr>*</code><i>buf</i><code>, struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></dt>
+<dt> <code>void gps_close(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>);</code></dt>
+<dt> <code>int gps_stream(struct gps_data_t&nbsp;<wbr>*</code><i>gpsdata</i><code>, unsigned int</code><i>flags</i><code>, void&nbsp;<wbr>*</code><i>data</i><code>);</code></dt>
+<dt> <code>const char *gps_errstr(int&nbsp;<wbr></code><i>err</i><code>);</code> </dt>
 <pre>
 <dd>Python:
 import gps
@@ -33,13 +33,13 @@ for report in session:
     process(report)
 del session
 </pre>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>libgps</code> is a service library which supports communicating with an instance of the <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8); link it with the linker option -lgps. </p>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Warning</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Warning</code> </font> </dd>
 <p> Take care to conditionalize your code on the major and minor API version symbols in gps.h; ideally, force a compilation failure if GPSD_API_MAJOR_VERSION is not a version you recognize. See the GPSD project website for more information on the protocol and API changes. </p>
 </dl>
 <p> Calling <code>gps_open()</code> initializes a GPS-data structure to hold the data collected by the GPS, and sets up access to <code>gpsd</code>(1) via either the socket or shared-memory export. The shared-memory export is faster, but does not carry information about device activation and deactivation events and will not allow you to monitor device packet traffic. </p>
@@ -54,43 +54,43 @@ del session
 <p> WATCH_DISABLE</p>
 <dl>
 <dt>
-<dd> Disable the reporting modes specified by the other WATCH_ flags.</dl>
+</dt><dd> Disable the reporting modes specified by the other WATCH_ flags.</dd></dl>
 <p> WATCH_ENABLE</p>
 <dl>
 <dt>
-<dd> Disable the reporting modes specified by the other WATCH_ flags. This is the default.</dl>
+</dt><dd> Disable the reporting modes specified by the other WATCH_ flags. This is the default.</dd></dl>
 <p> WATCH_JSON</p>
 <dl>
 <dt>
-<dd> Enable JSON reporting of data. If WATCH_ENABLE is set, and no other WATCH flags are set, this is the default.</dl>
+</dt><dd> Enable JSON reporting of data. If WATCH_ENABLE is set, and no other WATCH flags are set, this is the default.</dd></dl>
 <p> WATCH_NMEA</p>
 <dl>
 <dt>
-<dd> Enable generated pseudo-NMEA reporting on binary devices.</dl>
+</dt><dd> Enable generated pseudo-NMEA reporting on binary devices.</dd></dl>
 <p> WATCH_RARE</p>
 <dl>
 <dt>
-<dd> Enable reporting of binary packets in encoded hex.</dl>
+</dt><dd> Enable reporting of binary packets in encoded hex.</dd></dl>
 <p> WATCH_RAW</p>
 <dl>
 <dt>
-<dd> Enable literal passthrough of binary packets.</dl>
+</dt><dd> Enable literal passthrough of binary packets.</dd></dl>
 <p> WATCH_SCALED</p>
 <dl>
 <dt>
-<dd> When reporting AIS or Subframe data, scale integer quantities to floats if they have a divisor or rendering formula associated with them.</dl>
+</dt><dd> When reporting AIS or Subframe data, scale integer quantities to floats if they have a divisor or rendering formula associated with them.</dd></dl>
 <p> WATCH_NEWSTYLE</p>
 <dl>
 <dt>
-<dd> Force issuing a JSON initialization and getting new-style responses. This is the default.</dl>
+</dt><dd> Force issuing a JSON initialization and getting new-style responses. This is the default.</dd></dl>
 <p> WATCH_OLDSTYLE</p>
 <dl>
 <dt>
-<dd> Force issuing a W or R command and getting old-style responses. Warning: this flag (and the capability) will be removed in a future release.</dl>
+</dt><dd> Force issuing a W or R command and getting old-style responses. Warning: this flag (and the capability) will be removed in a future release.</dd></dl>
 <p> WATCH_DEVICE</p>
 <dl>
 <dt>
-<dd> Restrict watching to a specified device, patch given as second argument.</dl>
+</dt><dd> Restrict watching to a specified device, patch given as second argument.</dd></dl>
 <p> <code>gps_errstr()</code> returns an ASCII string (in English) describing the error indicated by a nonzero return value from <code>gps_open()</code>. </p>
 <p> Consult gps.h to learn more about the data members and associated timestamps. Note that information will accumulate in the session structure over time, and the &#8216;valid&#8217; field is not automatically zeroed by each <code>gps_read()</code>. It is up to the client to zero that field when appropriate and to keep an eye on the fix and sentence timestamps. </p>
 <p> The Python implementation supports the same facilities as the socket-export calls in the C library; there is no shared-memory interface. <code>gps_open()</code> is replaced by the initialization of a gps session object; the other calls are methods of that object, and have the same names as the corresponding C functions. However, it is simpler just to use the session object as an iterator, as in the example given below. Resources within the session object will be properly released when it is garbage-collected.</p>
@@ -98,7 +98,7 @@ del session
 <p> The following is an excerpted and simplified version of the libgps interface code from <code><a href="/docs/linux/man/1-cgps/">cgps</a></code>(1). </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct gps_data_t gps_data;
 ret = gps_open(hostName, hostPort, &amp;gps_data);
@@ -117,7 +117,7 @@ if (gps_waiting(&amp;gps_data, 500)) {
 (void)gps_stream(&amp;gps_data, WATCH_DISABLE, NULL);
 (void)gps_close(&amp;gps_data);
 </code></pre>
-</dl>
+</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> On some systems (those which do not support implicit linking in libraries) you may need to add -lm to your link line when you link libgps. It is always safe to do this. </p>
 <p> In the C API, incautious use of <code>gps_send()</code> may lead to subtle bugs. In order to not bloat struct gps_data_t with space used by responses that are not expected to be shipped in close sequence with each other, the storage for fields associated with certain responses are combined in a union. </p>

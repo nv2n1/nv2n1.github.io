@@ -14,13 +14,13 @@ description: "usb_register_driver – register a USB interface driver"
 <p><i>new_driver</i></p>
 <dl>
 <dd>
-<dd>USB operations for the interface driver</dl>
+</dd><dd>USB operations for the interface driver</dd></dl>
 <p> <i>owner</i></p>
 <dl>
-<dd>module owner of this driver.</dl>
+<dd>module owner of this driver.</dd></dl>
 <p> <i>mod_name</i></p>
 <dl>
-<dd>module name string</dl>
+<dd>module name string</dd></dl>
 <h2>Description</h2>
 <p>Registers a USB interface driver with the USB core. The list of unattached interfaces will be rescanned whenever a new driver is added, allowing the new driver to attach to any recognized interfaces.</p>
 <h2>Return</h2>

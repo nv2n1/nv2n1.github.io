@@ -37,10 +37,10 @@ description: "Tspi_Policy_SetSecret – set the authorization data of a policy o
 <h2>Return Codes</h2>
 <p><code>Tspi_Policy_SetSecret</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; hPolicy is an invalid parameter.</font></p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; hPolicy is an invalid parameter.</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></p>
-<dd></dl>
+</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+<dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Policy_SetSecret</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
 <h2>See Also</h2>

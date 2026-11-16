@@ -15,20 +15,20 @@ description: "mate-panel-test-applets – display and test installed applets"
 <p> <code>mate-panel-test-applets</code> display installed applets in a dialog box and allow you to test them.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;iid</code></p>
-<dd> Specify an applet IID to load</p>
-<dt><code>&#8211;prefs-path</code></p>
-<dd> Specify a gsettings path in which the applet preferences should be stored</p>
-<dt><code>&#8211;size</code></p>
-<dd> Specify the initial size of the applet (xx-small, medium, large etc.)</p>
-<dt><code>&#8211;orient</code></p>
-<dd> Specify the initial orientation of the applet (top, bottom, left or right)</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>&#8211;iid</code></dt>
+<dd> Specify an applet IID to load</dd>
+<dt><code>&#8211;prefs-path</code></dt>
+<dd> Specify a gsettings path in which the applet preferences should be stored</dd>
+<dt><code>&#8211;size</code></dt>
+<dd> Specify the initial size of the applet (xx-small, medium, large etc.)</dd>
+<dt><code>&#8211;orient</code></dt>
+<dd> Specify the initial orientation of the applet (top, bottom, left or right)</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <p> This program also accepts the standard GTK options.</p>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>

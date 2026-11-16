@@ -27,10 +27,10 @@ description: "sla_gercond.f –"
  is computed by computing scaling factors R such that
  diag(R)*A*op2(C) is row equilibrated and computing the standard
  infinity-norm condition number.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  Specifies the form of the system of equations:
  = 'N': A * X = B (No transpose)
@@ -80,13 +80,13 @@ description: "sla_gercond.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 150 of file sla_gercond.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

@@ -14,16 +14,16 @@ description: "Pacemaker – Part of the Pacemaker cluster resource manager"
 <p>crm_error &#8211; Tool for displaying the textual name or description of a reported error code</p>
 <h2>Options</h2>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd>This text</p>
-<dt>-$, <code>&#8211;version</code></p>
-<dd>Version information</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd>Increase debug output</p>
-<dt><code>-n</code>, <code>&#8211;name</code></p>
-<dd>Show the error&#8217;s name rather than the description. Useful for looking for sources of the error in source code</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd>Show all known errors.</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>This text</dd>
+<dt>-$, <code>&#8211;version</code></dt>
+<dd>Version information</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase debug output</dd>
+<dt><code>-n</code>, <code>&#8211;name</code></dt>
+<dd>Show the error&#8217;s name rather than the description. Useful for looking for sources of the error in source code</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd>Show all known errors.</dd></dl>
 <h2>Author</h2>
 <p>Written by Andrew Beekhof</p>
 <h2>Reporting Bugs</h2>

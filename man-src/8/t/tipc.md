@@ -11,38 +11,35 @@ description: "tipc – a TIPC configuration and management tool"
 <h2>Synopsis</h2>
 <p><code>tipc</code> [ <i>OPTIONS</i> ] <i>COMMAND</i> <i>ARGUMENTS</i> </p>
 <pre><code>COMMAND := {
-
     bearer | link | media | nametable | node | socket }
-
 OPTIONS := {
-
     -h[help] }
 </code></pre>
 <h2>Description</h2>
 <p>The Transparent Inter-Process Communication (TIPC) protocol offers total address transparency between processes which allows applications in a clustered computer environment to communicate quickly and reliably with each other, regardless of their location within the cluster. TIPC originated at the telecommunications manufacturer Ericsson. The first open source version of TIPC was created in 2000 when Ericsson released its first Linux version of TIPC. TIPC was introduced in the mainline Linux kernel in 2006 and is now widely used both within and outside of Ericsson. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd>Show help about last given command. For example <code>tipc bearer &#8211;help</code> will show bearer help and <code>tipc &#8211;help</code> will show general help. The position of the option in the string is irrelevant. </p>
-<dt><code>-j,</code> -json</p>
-<dd>Output results in JavaScript Object Notation (JSON). </p>
-<dt><code>-p,</code> -pretty</p>
-<dd>The default JSON format is compact and more efficient to parse but hard for most users to read. This flag adds indentation for readability. </p>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd>Show help about last given command. For example <code>tipc bearer &#8211;help</code> will show bearer help and <code>tipc &#8211;help</code> will show general help. The position of the option in the string is irrelevant. </dd>
+<dt><code>-j,</code> -json</dt>
+<dd>Output results in JavaScript Object Notation (JSON). </dd>
+<dt><code>-p,</code> -pretty</dt>
+<dd>The default JSON format is compact and more efficient to parse but hard for most users to read. This flag adds indentation for readability. </dd>
 </dl>
 <h2>Commands</h2>
 <dl>
-<dt><code>BEARER</code></p>
-<dd>&#8211; Show or modify TIPC bearers </p>
-<dt><code>LINK</code></p>
-<dd>&#8211; Show or modify TIPC links </p>
-<dt><code>MEDIA</code></p>
-<dd>&#8211; Show or modify TIPC media </p>
-<dt><code>NAMETABLE</code></p>
-<dd>&#8211; Show TIPC nametable </p>
-<dt><code>NODE</code></p>
-<dd>&#8211; Show or modify TIPC node parameters </p>
-<dt><code>SOCKET</code></p>
-<dd>&#8211; Show TIPC sockets </p>
+<dt><code>BEARER</code></dt>
+<dd>&#8211; Show or modify TIPC bearers </dd>
+<dt><code>LINK</code></dt>
+<dd>&#8211; Show or modify TIPC links </dd>
+<dt><code>MEDIA</code></dt>
+<dd>&#8211; Show or modify TIPC media </dd>
+<dt><code>NAMETABLE</code></dt>
+<dd>&#8211; Show TIPC nametable </dd>
+<dt><code>NODE</code></dt>
+<dd>&#8211; Show or modify TIPC node parameters </dd>
+<dt><code>SOCKET</code></dt>
+<dd>&#8211; Show TIPC sockets </dd>
 </dl>
 <h2>Arguments</h2>
 <p>Command arguments are described in a command specific man page and typically consists of nested commands along with key value pairs. If no arguments are given a command typically shows its help text. The explicit help option <code>-h</code> or <code>&#8211;help</code> can occur anywhere among the arguments and will show help for the last valid command given.</p>

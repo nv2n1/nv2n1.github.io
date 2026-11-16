@@ -39,23 +39,20 @@ an2ln(void *plug_ctx, krb5_context context, const char *rule,
 <p> The arguments for the <i>an2ln</i> plugin are similar to those of the kuserok plugin, but the result, being a string, is set by calling the <i>set_res_f</i> function argument with the <i>set_res_ctx</i> and result string as arguments. The <i>set_res_f</i> function will make a copy of the string.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>libdir/plugin/krb5/* </code></p>
-<dd>Shared objects containing plugins for Heimdal.</dl>
+<dt><code>libdir/plugin/krb5/* </code></dt>
+<dd>Shared objects containing plugins for Heimdal.</dd></dl>
 <h2>Examples</h2>
 <p>An example an2ln plugin that maps principals to a constant &quot;nouser&quot; follows: </p>
 <pre><code>#include &lt;krb5/an2ln_plugin.h&gt;
-
 static krb5_error_code
 nouser_plug_init(krb5_context context, void **ctx)
 {
     *ctx = NULL;
     return 0;
 }
-
 static void nouser_plug_fini(void *ctx)
 {
 }
-
 static krb5_error_code
 nouser_plug_an2ln(void *plug_ctx, krb5_context context,
                   const char *rule,
@@ -63,15 +60,11 @@ nouser_plug_an2ln(void *plug_ctx, krb5_context context,
                   set_result_f set_res_f, void *set_res_ctx)
 {
     krb5_error_code ret;
-
     if (strcmp(rule, &quot;NOUSER&quot;) != 0)
         return KRB5_PLUGIN_NO_HANDLE;
-
     ret = set_res_f(set_res_ctx, &quot;nouser&quot;);
-
     return ret;
 }
-
 krb5plugin_an2ln_ftable an2ln = {
     KRB5_PLUGIN_AN2LN_VERSION_0,
     nouser_plug_init,
@@ -80,18 +73,15 @@ krb5plugin_an2ln_ftable an2ln = {
 };</code></pre>
 <p> An example kuserok plugin that rejects all requests follows. (Note that there exists a built-in plugin with this functionality; see krb5_kuserok3 ). </p>
 <pre><code>#include &lt;krb5/kuserok_plugin.h&gt;
-
 static krb5_error_code
 reject_plug_init(krb5_context context, void **ctx)
 {
     *ctx = NULL;
     return 0;
 }
-
 static void reject_plug_fini(void *ctx)
 {
 }
-
 static krb5_error_code
 reject_plug_kuserok(void *plug_ctx, krb5_context context, const char *rule,
                     unsigned int flags, const char *k5login_dir,
@@ -100,11 +90,9 @@ reject_plug_kuserok(void *plug_ctx, krb5_context context, const char *rule,
 {
     if (strcmp(rule, &quot;REJECT&quot;) != 0)
         return KRB5_PLUGIN_NO_HANDLE;
-
     *result = FALSE;
     return 0;
 }
-
 krb5plugin_kuserok_ftable kuserok = {
     KRB5_PLUGIN_KUSEROK_VERSION_0,
     reject_plug_init,

@@ -15,7 +15,7 @@ filemap_fdatawait - wait for all under-writeback pages to complete
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>address space structure to wait for</dl>
+<dl><dd></dd><dd>address space structure to wait for</dd></dl>
 
 <h2>Description</h2>
 

@@ -17,30 +17,30 @@ valuators (current value) on the device is reported by this
 request. Each key or button is represented by a bit in the
 XDeviceState structure that is returned. Valuators on the
 device report 0 if they are reporting relative information, and
-the current value if they are reporting absolute information.</pre></dl><dl COMPACT><dd><pre>XQueryDeviceState can generate a BadDevice error.</pre></dl><dl COMPACT><dd><pre>Structures:</pre></dl><dl COMPACT><dd><pre>The XDeviceState structure contains:</pre></dl><dl COMPACT><dd><pre>typedef struct {
+the current value if they are reporting absolute information.</pre></dd></dl><dl COMPACT><dd><pre>XQueryDeviceState can generate a BadDevice error.</pre></dd></dl><dl COMPACT><dd><pre>Structures:</pre></dd></dl><dl COMPACT><dd><pre>The XDeviceState structure contains:</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  XID device_id;
  int num_classes;
  XInputClass *data;
-} XDeviceState;</pre></dl><dl COMPACT><dd><pre>The XValuatorState structure contains:</pre></dl><dl COMPACT><dd><pre>typedef struct {
+} XDeviceState;</pre></dd></dl><dl COMPACT><dd><pre>The XValuatorState structure contains:</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  unsigned char class;
  unsigned char length;
  unsigned char num_valuators;
  unsigned char mode;
  int *valuators;
-} XValuatorState;</pre></dl><dl COMPACT><dd><pre>The XKeyState structure contains:</pre></dl><dl COMPACT><dd><pre>typedef struct {
+} XValuatorState;</pre></dd></dl><dl COMPACT><dd><pre>The XKeyState structure contains:</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  unsigned char class;
  unsigned char length;
  short num_keys;
  char keys[32];
-} XKeyState;</pre></dl><dl COMPACT><dd><pre>The XButtonState structure contains:</pre></dl><dl COMPACT><dd><pre>typedef struct {
+} XKeyState;</pre></dd></dl><dl COMPACT><dd><pre>The XButtonState structure contains:</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  unsigned char class;
  unsigned char length;
  short num_buttons;
  char buttons[32];
-} XButtonState;</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+} XButtonState;</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if some
  other client has caused the specified device to become
  the X keyboard or X pointer device via the
- XChangeKeyboardDevice or XChangePointerDevice requests.</pre></dl>
+ XChangeKeyboardDevice or XChangePointerDevice requests.</pre></dd></dl>

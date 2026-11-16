@@ -13,10 +13,10 @@ description: "pskc_set_key_reference – API function"
 void pskc_set_key_reference(pskc_key_t *key, const char *keyref);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>const char * keyref</p>
-<dd>pointer to key reference string to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>const char * keyref</dt>
+<dd>pointer to key reference string to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key KeyReference value. </p>
 <p> The pointer is stored in <i>container</i>, not a copy of the data, so you must not deallocate the data before another call to this function or the last call to any function using <i>container</i>.</p>

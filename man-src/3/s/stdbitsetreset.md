@@ -24,10 +24,8 @@ Sets bits to false.<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     std::bitset&lt;8&gt; b(42);
     std::cout &lt;&lt; &quot;Bitset is         &quot; &lt;&lt; b &lt;&lt; '

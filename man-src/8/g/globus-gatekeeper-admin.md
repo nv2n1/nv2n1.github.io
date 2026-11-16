@@ -26,6 +26,6 @@ description: "globus-gatekeeper-admin – Manage globus-gatekeeper services"
 <p>The following files affect <code>globus-gatekeeper-admin</code> execution: </p>
 <p> <code>/etc/grid-services</code></p>
 <dl>
-<dd>Default location of enabled gatekeeper service descriptions.</dl>
+<dd>Default location of enabled gatekeeper service descriptions.</dd></dl>
 <h2>Author</h2>
 <p>Copyright &#169; 1999-2016 University of Chicago</p>

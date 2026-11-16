@@ -40,57 +40,57 @@ description: "Driver-Specific modes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>driver</i> Specifies the name of the driver for which the raw communication will be established.</dl>
+</dt><dd> <i>driver</i> Specifies the name of the driver for which the raw communication will be established.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success, -1 on error</dl>
+</dt><dd> 0 on success, -1 on error</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_leaveRawMode (void)</h3>
 <p> Leave Raw mode </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success, -1 on error</dl>
+</dt><dd> 0 on success, -1 on error</dd></dl>
 <h3>ssize_t <code>BRLAPI_STDCALL</code> brlapi_recvRaw (void *buffer, size_tsize)</h3>
 <p> Get Raw data </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>buffer</i> points on a buffer where the function will store the received data;<br />
- <i>size</i> holds the buffer size.</dl>
+</dt><dd> <i>buffer</i> points on a buffer where the function will store the received data;<br />
+ <i>size</i> holds the buffer size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> its size, -1 on error or signal interruption</dl>
+</dt><dd> its size, -1 on error or signal interruption</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_resumeDriver (void)</h3>
 <p> Resume braille driver </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 on error</dl>
+</dt><dd> -1 on error</dd></dl>
 <h3>ssize_t <code>BRLAPI_STDCALL</code> brlapi_sendRaw (const void *buffer, size_tsize)</h3>
 <p> Send Raw data </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>buffer</i> points on the data;<br />
- <i>size</i> holds the packet size.</dl>
+</dt><dd> <i>buffer</i> points on the data;<br />
+ <i>size</i> holds the packet size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> size on success, -1 on error</dl>
+</dt><dd> size on success, -1 on error</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_suspendDriver (const char *driver)</h3>
 <p> Suspend braille driver </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>driver</i> Specifies the name of the driver which will be suspended.</dl>
+</dt><dd> <i>driver</i> Specifies the name of the driver which will be suspended.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 on error</dl>
+</dt><dd> -1 on error</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAR">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAR">Author</a></dt>
+<dd></dd></dl>

@@ -14,16 +14,16 @@ description: "bitmap_print_to_pagebuf – convert bitmap to list or hex format A
 <p><i>list</i></p>
 <dl>
 <dd>
-<dd>indicates whether the bitmap must be list</dl>
+</dd><dd>indicates whether the bitmap must be list</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>page aligned buffer into which string is placed</dl>
+<dd>page aligned buffer into which string is placed</dd></dl>
 <p> <i>maskp</i></p>
 <dl>
-<dd>pointer to bitmap to convert</dl>
+<dd>pointer to bitmap to convert</dd></dl>
 <p> <i>nmaskbits</i></p>
 <dl>
-<dd>size of bitmap, in bits</dl>
+<dd>size of bitmap, in bits</dd></dl>
 <h2>Description</h2>
 <p>Output format is a comma-separated list of decimal numbers and ranges if list is specified or hex digits grouped into comma-separated sets of 8 digits/set. Returns the number of characters written to buf. </p>
 <p> It is assumed that <i>buf</i> is a pointer into a PAGE_SIZE area and that sufficient storage remains at <i>buf</i> to accommodate the <code>bitmap_print_to_pagebuf</code> output.</p>

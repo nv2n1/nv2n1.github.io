@@ -15,7 +15,7 @@ description: "pgmtexture – calculate textural features on a portable graymap"
 <p> Reads a portable graymap as input. Calculates textural features based on spatial dependence matrices at 0, 45, 90, and 135 degrees for a distance <i>d</i> (default = 1). Textural features include:</p>
 <dl>
 <dt>
-<dd> (1) Angular Second Moment,<br />
+</dt><dd> (1) Angular Second Moment,<br />
  (2) Contrast,<br />
  (3) Correlation,<br />
  (4) Variance,<br />
@@ -27,7 +27,7 @@ description: "pgmtexture – calculate textural features on a portable graymap"
  (10) Difference Variance,<br />
  (11) Difference Entropy,<br />
  (12, 13) Information Measures of Correlation, and<br />
- (14) Maximal Correlation Coefficient.</dl>
+ (14) Maximal Correlation Coefficient.</dd></dl>
 <p> Algorithm taken from:<br />
  Haralick, R.M., K. Shanmugam, and I. Dinstein. 1973. Textural features for image classification. <i>IEEE Transactions on Systems, Man, </i> <i>and Cybertinetics,</i> SMC-3(6):610-621.</p>
 <h2>BUGS</h2>

@@ -20,18 +20,18 @@ XineramaScreenInfo * XineramaQueryScreens (Display *<i>dpy</i>,
  int *<i>number</i>);</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>event_base_return</i></p>
-<dd>Specifies the return location for the assigned base event code</p>
-<dt><i>error_base_return</i></p>
-<dd>Specifies the return location for the assigned base error code</p>
-<dt><i>major_version_return</i></p>
-<dd>Returns the major version supported by the server</p>
-<dt><i>minor_version_return</i></p>
-<dd>Returns the minor version supported by the server</p>
-<dt><i>number</i></p>
-<dd>Returns the number of entries in the returned XineramaScreenInfo array.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>event_base_return</i></dt>
+<dd>Specifies the return location for the assigned base event code</dd>
+<dt><i>error_base_return</i></dt>
+<dd>Specifies the return location for the assigned base error code</dd>
+<dt><i>major_version_return</i></dt>
+<dd>Returns the major version supported by the server</dd>
+<dt><i>minor_version_return</i></dt>
+<dd>Returns the minor version supported by the server</dd>
+<dt><i>number</i></dt>
+<dd>Returns the number of entries in the returned XineramaScreenInfo array.</dd></dl>
 <h2>Description</h2>
 <p><code>Xinerama</code> is a simple library designed to interface the Xinerama Extension for retrieving information about physical output devices which may be combined into a single logical X screen. </p>
 <h2>Functions</h2>

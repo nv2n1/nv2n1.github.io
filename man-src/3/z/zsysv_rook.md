@@ -11,8 +11,6 @@ description: "zsysv_rook.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zsysv_rook (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)
-
-
 ZSYSV_ROOK computes the solution to system of linear equations A * X = B for SY matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsysv_rook (characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -36,10 +34,10 @@ ZSYSV_ROOK computes the solution to system of linear equations A * X = B for SY 
  pivoting method.
  The factored form of A is then used to solve the system 
  of equations A * X = B by calling ZSYTRS_ROOK.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre>
@@ -100,7 +98,6 @@ ZSYSV_ROOK computes the solution to system of linear equations A * X = B for SY 
  The length of WORK. LWORK &gt;= 1, and for best performance
  LWORK &gt;= max(1,N*NB), where NB is the optimal blocksize for
  ZSYTRF_ROOK.
- 
  TRS will be done with Level 2 BLAS
  If LWORK = -1, then a workspace query is assumed; the routine
  only calculates the optimal size of the WORK array, returns
@@ -116,13 +113,13 @@ ZSYSV_ROOK computes the solution to system of linear equations A * X = B for SY 
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dd>
@@ -132,7 +129,8 @@ ZSYSV_ROOK computes the solution to system of linear equations A * X = B for SY 
  September 2007, Sven Hammarling, Nicholas J. Higham, Craig Lucas,
  School of Mathematics,
  University of Manchester</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 204 of file zsysv_rook.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

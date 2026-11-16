@@ -58,6 +58,6 @@ description: "QuantLib::Problem – Constrained optimization problem."
 <h3>void reset ()</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>it does not reset the current minumum to any initial value</dl>
+<dd>it does not reset the current minumum to any initial value</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -11,13 +11,9 @@ std::exchange - std::exchange
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;utility&gt;
-
 template&lt; class T, class U = T &gt;                (since C++14)
-
 T exchange( T&amp; obj, U&amp;&amp; new_value );            (until C++20)
-
 template&lt; class T, class U = T &gt;                (since C++20)
-
 constexpr T exchange( T&amp; obj, U&amp;&amp; new_value );</code></pre> 
 Replaces the value of obj with new_value and returns the old value of obj. 
 
@@ -98,7 +94,6 @@ void f()
     std::cout &lt;&lt; &quot;f()&quot;;
 }
 int main()
-
 {
     stream s;
     std::cout &lt;&lt; s.flags() &lt;&lt; '\n';

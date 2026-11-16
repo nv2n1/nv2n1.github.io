@@ -17,16 +17,16 @@ XSetDeviceMode - change the mode of a device
 that is capable of reporting either absolute positional
 information or relative motion information. Not all input
 devices are capable of reporting motion data, and not all are
-capable of changing modes from Absolute to Relative.</pre></dl><dl COMPACT><dd><pre>XSetDeviceMode can generate a BadDevice or BadMode error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+capable of changing modes from Absolute to Relative.</pre></dd></dl><dl COMPACT><dd><pre>XSetDeviceMode can generate a BadDevice or BadMode error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if some
  other client has caused the specified device to become
  the X keyboard or X pointer device via the
- XChangeKeyboardDevice or XChangePointerDevice requests.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ XChangeKeyboardDevice or XChangePointerDevice requests.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XSetDeviceMode request is
  made specifying a device that has no valuators and
- reports no axes of motion.</pre></dl><dl COMPACT><dd><pre>BadMode
+ reports no axes of motion.</pre></dd></dl><dl COMPACT><dd><pre>BadMode
  An invalid mode was specified. This error will also be
  returned if the specified device is not capable of
- supporting the XSetDeviceMode request.</pre></dl>
+ supporting the XSetDeviceMode request.</pre></dd></dl>

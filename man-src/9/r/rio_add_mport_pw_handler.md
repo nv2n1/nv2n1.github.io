@@ -14,17 +14,17 @@ description: "rio_add_mport_pw_handler – add port-write message handler into t
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO master port to bind the portwrite callback</dl>
+</dd><dd>RIO master port to bind the portwrite callback</dd></dl>
 <p> <i>context</i></p>
 <dl>
-<dd>Handler specific context to pass on event</dl>
+<dd>Handler specific context to pass on event</dd></dl>
 <p> <i>pwcback</i></p>
 <dl>
-<dd>Callback to execute when portwrite is received</dl>
+<dd>Callback to execute when portwrite is received</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

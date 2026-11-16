@@ -38,26 +38,26 @@ description: "statfs, fstatfs – get filesystem statistics"
 <p> Most of these MAGIC constants are defined in <i>/usr/include/linux/magic.h</i>, and some are hardcoded in kernel sources. </p>
 <p> The <i>f_flags</i> field is a bit mask indicating mount options for the filesystem. It contains zero or more of the following bits:</p>
 <dl>
-<dt><code>ST_MANDLOCK</code></p>
-<dd> Mandatory locking is permitted on the filesystem (see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</p>
-<dt><code>ST_NOATIME</code></p>
-<dd> Do not update access times; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</p>
-<dt><code>ST_NODEV</code></p>
-<dd> Disallow access to device special files on this filesystem.</p>
-<dt><code>ST_NODIRATIME</code></p>
-<dd> Do not update directory access times; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</p>
-<dt><code>ST_NOEXEC</code></p>
-<dd> Execution of programs is disallowed on this filesystem.</p>
-<dt><code>ST_NOSUID</code></p>
-<dd> The set-user-ID and set-group-ID bits are ignored by <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) for executable files on this filesystem</p>
-<dt><code>ST_RDONLY</code></p>
-<dd> This filesystem is mounted read-only.</p>
-<dt><code>ST_RELATIME</code></p>
-<dd> Update atime relative to mtime/ctime; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</p>
-<dt><code>ST_SYNCHRONOUS</code></p>
-<dd> Writes are synched to the filesystem immediately (see the description of <code>O_SYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</p>
-<dt><code>ST_NOSYMFOLLOW</code> (since Linux 5.10)</p>
-<dd> Symbolic links are not followed when resolving paths; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</dl>
+<dt><code>ST_MANDLOCK</code></dt>
+<dd> Mandatory locking is permitted on the filesystem (see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</dd>
+<dt><code>ST_NOATIME</code></dt>
+<dd> Do not update access times; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</dd>
+<dt><code>ST_NODEV</code></dt>
+<dd> Disallow access to device special files on this filesystem.</dd>
+<dt><code>ST_NODIRATIME</code></dt>
+<dd> Do not update directory access times; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</dd>
+<dt><code>ST_NOEXEC</code></dt>
+<dd> Execution of programs is disallowed on this filesystem.</dd>
+<dt><code>ST_NOSUID</code></dt>
+<dd> The set-user-ID and set-group-ID bits are ignored by <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) for executable files on this filesystem</dd>
+<dt><code>ST_RDONLY</code></dt>
+<dd> This filesystem is mounted read-only.</dd>
+<dt><code>ST_RELATIME</code></dt>
+<dd> Update atime relative to mtime/ctime; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</dd>
+<dt><code>ST_SYNCHRONOUS</code></dt>
+<dd> Writes are synched to the filesystem immediately (see the description of <code>O_SYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</dd>
+<dt><code>ST_NOSYMFOLLOW</code> (since Linux 5.10)</dt>
+<dd> Symbolic links are not followed when resolving paths; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).</dd></dl>
 <p> Nobody knows what <i>f_fsid</i> is supposed to contain (but see below). </p>
 <p> Fields that are undefined for a particular filesystem are set to 0. </p>
 <p> <code>fstatfs</code>() returns the same information about an open file referenced by descriptor <i>fd</i>.</p>
@@ -65,30 +65,30 @@ description: "statfs, fstatfs – get filesystem statistics"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> (<code>statfs</code>()) Search permission is denied for a component of the path prefix of <i>path</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EBADF</code></p>
-<dd> (<code>fstatfs</code>()) <i>fd</i> is not a valid open file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>buf</i> or <i>path</i> points to an invalid address.</p>
-<dt><code>EINTR</code></p>
-<dd> The call was interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred while reading from the filesystem.</p>
-<dt><code>ELOOP</code></p>
-<dd> (<code>statfs</code>()) Too many symbolic links were encountered in translating <i>path</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> (<code>statfs</code>()) <i>path</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> (<code>statfs</code>()) The file referred to by <i>path</i> does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The filesystem does not support this call.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> (<code>statfs</code>()) A component of the path prefix of <i>path</i> is not a directory.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd> Some values were too large to be represented in the returned struct.</dl>
+<dt><code>EACCES</code></dt>
+<dd> (<code>statfs</code>()) Search permission is denied for a component of the path prefix of <i>path</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EBADF</code></dt>
+<dd> (<code>fstatfs</code>()) <i>fd</i> is not a valid open file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>buf</i> or <i>path</i> points to an invalid address.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The call was interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred while reading from the filesystem.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> (<code>statfs</code>()) Too many symbolic links were encountered in translating <i>path</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> (<code>statfs</code>()) <i>path</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> (<code>statfs</code>()) The file referred to by <i>path</i> does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The filesystem does not support this call.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> (<code>statfs</code>()) A component of the path prefix of <i>path</i> is not a directory.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd> Some values were too large to be represented in the returned struct.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> Linux-specific. The Linux <code>statfs</code>() was inspired by the 4.4BSD one (but they do not use the same structure).</p>
 <h2>NOTES</h2>

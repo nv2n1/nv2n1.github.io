@@ -14,13 +14,13 @@ description: "/$LIB/security/pam_krb5/pam_krb5_storetmp – Temporary file helpe
 <p>The pam_krb5.so module uses pam_krb5_storetmp to create and remove temporary files. It is not intended for any other use. </p>
 <h2>Arguments</h2>
 <dl>
-<dt>pattern</p>
+<dt>pattern</dt>
 <dd>A filename pattern of the form <i>/tmp/fooXXXXXX</i>. A temporary file will be created using <a href="/docs/linux/man/3-mkstemp/">mkstemp</a>(3) and any data provided to standard input will be piped to the file. Upon reading an end-of-file, the helper will print the name of the created file.<br />
- If the pattern does not end with the distinctive patterh <i>XXXXXX</i>, then the file is simply deleted. </p>
-<dt>uid</p>
-<dd>An optional numeric UID which the helper will attempt to switch to before creating the file. The helper continues in its task if the attempt fails. </p>
-<dt>gid</p>
-<dd>An optional numeric GID which the helper will attempt to switch to before creating the file. The helper continues in its task if the attempt fails. </p>
+ If the pattern does not end with the distinctive patterh <i>XXXXXX</i>, then the file is simply deleted. </dd>
+<dt>uid</dt>
+<dd>An optional numeric UID which the helper will attempt to switch to before creating the file. The helper continues in its task if the attempt fails. </dd>
+<dt>gid</dt>
+<dd>An optional numeric GID which the helper will attempt to switch to before creating the file. The helper continues in its task if the attempt fails. </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/$LIB/security/pam_krb5.so</i></p>

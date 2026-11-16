@@ -36,21 +36,19 @@ va_alist alist;
 <p> <code>is_callback(</code><i>callback</i><code>)</code> checks whether the C function <i>callback</i> was produced by a call to <i>alloc_callback</i>. If this returns true, the arguments given to <i>alloc_callback</i> can be retrieved:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>callback_address(</code><i>callback</i><code>)</code> returns <i>&amp;function</i>, </p>
-<p> <code>callback_data(</code><i>callback</i><code>)</code> returns <i>data</i>.</dl>
+<p> <code>callback_data(</code><i>callback</i><code>)</code> returns <i>data</i>.</dd></dl>
 <h2>VACALL MACROS</h2>
 <p> Within <i>function</i>, the following macros can be used to walk through the argument list and specify a return value:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>va_start_</code><i>type</i><code>(</code><i>alist</i><code>[, </code><i>return_type</i><code>]);</code></p>
-<dd> starts the walk through the argument list and specifies the return type.</p>
-<dt><i>arg</i><code> = va_arg_</code><i>type</i><code>(</code><i>alist</i><code>[, </code><i>arg_type</i><code>]);</code></p>
-<dd> fetches the next argument from the argument list.</p>
-<dt><code>va_return_</code><i>type</i><code>(</code><i>alist</i><code>[[, </code><i>return_type</i><code>], </code><i>return_value</i><code>]);</code></p>
-<dd> ends the walk through the argument list and specifies the return value.</dl>
+<dt><code>va_start_</code><i>type</i><code>(</code><i>alist</i><code>[, </code><i>return_type</i><code>]);</code></dt>
+<dd> starts the walk through the argument list and specifies the return type.</dd>
+<dt><i>arg</i><code> = va_arg_</code><i>type</i><code>(</code><i>alist</i><code>[, </code><i>arg_type</i><code>]);</code></dt>
+<dd> fetches the next argument from the argument list.</dd>
+<dt><code>va_return_</code><i>type</i><code>(</code><i>alist</i><code>[[, </code><i>return_type</i><code>], </code><i>return_value</i><code>]);</code></dt>
+<dd> ends the walk through the argument list and specifies the return value.</dd></dl>
 </dl>
 <p> The <i>type</i> in <code>va_start_</code><i>type</i> and <code>va_return_</code><i>type</i> shall be one of <code>void</code>, <code>int</code>, <code>uint</code>, <code>long</code>, <code>ulong</code>, <code>longlong</code>, <code>ulonglong</code>, <code>double</code>, <code>struct</code>, <code>ptr</code> or (for ANSI C calling conventions only) <code>char</code>, <code>schar</code>, <code>uchar</code>, <code>short</code>, <code>ushort</code>, <code>float</code>, depending on the class of <i>return_type</i>. </p>
 <p> The <i>type</i> specifiers in <code>va_start_</code><i>type</i> and <code>va_return_</code><i>type</i> must be the same. The <i>return_type</i> specifiers passed to <code>va_start_</code><i>type</i> and <code>va_return_</code><i>type</i> must be the same. </p>

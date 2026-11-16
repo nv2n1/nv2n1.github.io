@@ -10,7 +10,6 @@ description: "sasl_getsimple_t – The SASL callback for username/authname/realm
 <p>sasl_getsimple_t &#8211; The SASL callback for username/authname/realm </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_getsimple_t(void *context,
                      int id,
                      const char **result,

@@ -55,18 +55,14 @@ url: "/docs/linux/man/1-perlfangkuai/"
 use Gtk2::Gdk::Keysyms;
 use Glib qw / TRUE FALSE / ;
 use Gtk2 - init;
-
 my $window = Gtk2::Window-&gt;new ('toplevel');
 $window-&gt;signal_connect(delete_event = &gt; sub{Gtk2-&gt;main_quit});
 $window-&gt;signal_connect('key-press-event' = &gt; \&amp; show_key);
-
 my $label = Gtk2::Label-&gt;new ();
 $label-&gt;set_markup("&lt;span foreground=\"blue\" size=\"x-large\"&gt;Type something on the keyboard!&lt;/span&gt;");
-
 $window-&gt;add($label);
 $window-&gt;show_all;
 $window-&gt;set_position('center-always');
-
 Gtk2-&gt;main;
 sub show_key
 {

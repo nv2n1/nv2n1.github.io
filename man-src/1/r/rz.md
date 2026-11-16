@@ -31,103 +31,103 @@ description: "rx, rb, rz – XMODEM, YMODEM, ZMODEM (Batch) file receive"
 <h2>OPTIONS</h2>
 <p> The meanings of the available options are: </p>
 <dl>
-<dt><code>-+, &#8211;append</code></p>
-<dd> append received data to an existing file (ZMODEM, ASCII only).</p>
-<dt><code>-a, &#8211;ascii</code></p>
-<dd> Convert files to <font SIZE="-1">Unix</font> conventions by stripping carriage returns and all characters beginning with the first Control Z (CP/M end of file).</p>
-<dt><code>-b, &#8211;binary</code></p>
-<dd> Binary (tell it like it is) file transfer override.</p>
-<dt><code>-B NUMBER, &#8211;bufsize NUMBER</code></p>
-<dd> Buffer <code>NUMBER</code> bytes before writing to disk. Default ist 32768, which should be enough for most situations. If you have a slow machine or a bad disk interface or suffer from other hardware problems you might want to increase the buffersize. <code>-1</code> or <code>auto</code> use a buffer large enough to buffer the whole file. Be careful with this options &#8211; things normally get worse, not better, if the machine starts to swap.</p>
-<dt><code>-c, &#8211;with-crc</code></p>
-<dd> XMODEM only. Use 16 bit CRC (normally a one byte checksum is used).</p>
-<dt><code>-C, &#8211;allow-remote-commands</code></p>
-<dd> allow remote command execution ( <code>insecure</code> ). This allows the sender to execute an arbitrary command through <code>system</code> () or <code>execl</code> (). Default is to disable this feature (?). This option is ignored if running in restricted mode.</p>
-<dt><code>-D, &#8211;null</code></p>
-<dd> Output file data to /dev/null; for testing. (Unix only)</p>
-<dt><code>&#8211;delay-startup N</code></p>
-<dd> Wait <code>N</code> seconds before doing anything.</p>
-<dt><code>-e, &#8211;escape</code></p>
-<dd> Force sender to escape all control characters; normally XON, XOFF, DLE, CR-@-CR, and Ctrl-X are escaped.</p>
-<dt><code>-E, &#8211;rename</code></p>
-<dd> Rename incoming file if target filename already exists. The new file name will have a dot and a number (0..999) appended.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> give help screen.</p>
-<dt><code>-m N, &#8211;min-bps N</code></p>
-<dd> Stop transmission if BPS-Rate (Bytes Per Second) falls below N for a certain time (see &#8211;min-bps-time option).</p>
-<dt><code>-M N, &#8211;min-bps-time</code></p>
-<dd> Used together with &#8211;min-bps. Default is 120 (seconds).</p>
-<dt><code>-O, &#8211;disable-timeouts</code></p>
-<dd> Disable read timeout handling code. This makes lrz hang if the sender does not send any more, but increases performance (a bit) and decreases system load (through reducing the number of system calls by about 50 percent). </p>
+<dt><code>-+, &#8211;append</code></dt>
+<dd> append received data to an existing file (ZMODEM, ASCII only).</dd>
+<dt><code>-a, &#8211;ascii</code></dt>
+<dd> Convert files to <font SIZE="-1">Unix</font> conventions by stripping carriage returns and all characters beginning with the first Control Z (CP/M end of file).</dd>
+<dt><code>-b, &#8211;binary</code></dt>
+<dd> Binary (tell it like it is) file transfer override.</dd>
+<dt><code>-B NUMBER, &#8211;bufsize NUMBER</code></dt>
+<dd> Buffer <code>NUMBER</code> bytes before writing to disk. Default ist 32768, which should be enough for most situations. If you have a slow machine or a bad disk interface or suffer from other hardware problems you might want to increase the buffersize. <code>-1</code> or <code>auto</code> use a buffer large enough to buffer the whole file. Be careful with this options &#8211; things normally get worse, not better, if the machine starts to swap.</dd>
+<dt><code>-c, &#8211;with-crc</code></dt>
+<dd> XMODEM only. Use 16 bit CRC (normally a one byte checksum is used).</dd>
+<dt><code>-C, &#8211;allow-remote-commands</code></dt>
+<dd> allow remote command execution ( <code>insecure</code> ). This allows the sender to execute an arbitrary command through <code>system</code> () or <code>execl</code> (). Default is to disable this feature (?). This option is ignored if running in restricted mode.</dd>
+<dt><code>-D, &#8211;null</code></dt>
+<dd> Output file data to /dev/null; for testing. (Unix only)</dd>
+<dt><code>&#8211;delay-startup N</code></dt>
+<dd> Wait <code>N</code> seconds before doing anything.</dd>
+<dt><code>-e, &#8211;escape</code></dt>
+<dd> Force sender to escape all control characters; normally XON, XOFF, DLE, CR-@-CR, and Ctrl-X are escaped.</dd>
+<dt><code>-E, &#8211;rename</code></dt>
+<dd> Rename incoming file if target filename already exists. The new file name will have a dot and a number (0..999) appended.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> give help screen.</dd>
+<dt><code>-m N, &#8211;min-bps N</code></dt>
+<dd> Stop transmission if BPS-Rate (Bytes Per Second) falls below N for a certain time (see &#8211;min-bps-time option).</dd>
+<dt><code>-M N, &#8211;min-bps-time</code></dt>
+<dd> Used together with &#8211;min-bps. Default is 120 (seconds).</dd>
+<dt><code>-O, &#8211;disable-timeouts</code></dt>
+<dd> Disable read timeout handling code. This makes lrz hang if the sender does not send any more, but increases performance (a bit) and decreases system load (through reducing the number of system calls by about 50 percent). </dd>
 <p> Use this option with care.</p>
-<dt><code>&#8211;o-sync</code></p>
-<dd> Open output files in synchronous write mode. This may be useful if you experience errors due to lost interrupts if update (or bdflush or whoever this daemon is called on your system) writes the buffers to the disk. </p>
+<dt><code>&#8211;o-sync</code></dt>
+<dd> Open output files in synchronous write mode. This may be useful if you experience errors due to lost interrupts if update (or bdflush or whoever this daemon is called on your system) writes the buffers to the disk. </dd>
 <p> This option is ignored and a warning is printed if your systems doesn&#8217;t support O_SYNC.</p>
-<dt><code>-p, &#8211;protect</code></p>
-<dd> (ZMODEM) Protect: skip file if destination file exists.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Quiet suppresses verbosity.</p>
-<dt><code>-r, &#8211;resume</code></p>
-<dd> Crash recovery mode. lrz tries to resume interrupted file transfers.</p>
-<dt><code>-R, &#8211;restricted</code></p>
-<dd> Enter more restricted mode. lrz will not create directories or files with a leading dot if this option is given twice. </p>
+<dt><code>-p, &#8211;protect</code></dt>
+<dd> (ZMODEM) Protect: skip file if destination file exists.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Quiet suppresses verbosity.</dd>
+<dt><code>-r, &#8211;resume</code></dt>
+<dd> Crash recovery mode. lrz tries to resume interrupted file transfers.</dd>
+<dt><code>-R, &#8211;restricted</code></dt>
+<dd> Enter more restricted mode. lrz will not create directories or files with a leading dot if this option is given twice. </dd>
 <p> See <code>SECURITY</code> for mode information about restricted mode.</p>
-<dt><code>-s HH:MM, &#8211;stop-at HH:MM</code></p>
-<dd> Stop transmission at <code>HH</code> hours, <code>MM</code> minutes. Another variant, using <code>+N</code> instead of <code>HH:MM,</code> stops transmission in <code>N</code> seconds.</p>
-<dt><code>-S, &#8211;timesync</code></p>
-<dd> Request timesync packet from the sender. The sender sends its system time, causing lrz to complain about more then 60 seconds difference. </p>
+<dt><code>-s HH:MM, &#8211;stop-at HH:MM</code></dt>
+<dd> Stop transmission at <code>HH</code> hours, <code>MM</code> minutes. Another variant, using <code>+N</code> instead of <code>HH:MM,</code> stops transmission in <code>N</code> seconds.</dd>
+<dt><code>-S, &#8211;timesync</code></dt>
+<dd> Request timesync packet from the sender. The sender sends its system time, causing lrz to complain about more then 60 seconds difference. </dd>
 <p> Lrz tries to set the local system time to the remote time if this option is given twice (this fails if lrz is not run by root). </p>
 <p> This option makes lrz incompatible with certain other ZModems. Don&#8217;t use it unless you know what you are doing.</p>
-<dt><code>&#8211;syslog[=off]</code></p>
-<dd> turn syslogging on or off. the default is set at configure time. This option is ignored if no syslog support is compiled in.</p>
-<dt><code>-t TIM, &#8211;timeout TIM</code></p>
-<dd> Change timeout to <i>TIM</i> tenths of seconds. This is ignored if timeout handling is turned of through the <code>O </code> option.</p>
-<dt><code>&#8211;tcp-client ADDRESS:PORT</code></p>
-<dd> Act as a tcp/ip client: Connect to the given port. </p>
+<dt><code>&#8211;syslog[=off]</code></dt>
+<dd> turn syslogging on or off. the default is set at configure time. This option is ignored if no syslog support is compiled in.</dd>
+<dt><code>-t TIM, &#8211;timeout TIM</code></dt>
+<dd> Change timeout to <i>TIM</i> tenths of seconds. This is ignored if timeout handling is turned of through the <code>O </code> option.</dd>
+<dt><code>&#8211;tcp-client ADDRESS:PORT</code></dt>
+<dd> Act as a tcp/ip client: Connect to the given port. </dd>
 <p> See <code>&#8211;tcp-server</code> for more information. </p>
-<dt><code>&#8211;tcp-server</code></p>
-<dd> Act as a server: Open a socket, print out what to do, wait for connection. </p>
+<dt><code>&#8211;tcp-server</code></dt>
+<dd> Act as a server: Open a socket, print out what to do, wait for connection. </dd>
 <p> You will normally not want to use this option as lrzsz is the only zmodem which understands what to do (private extension). You might want to use this if you have to use zmodem (for which reason whatever), and cannot use the <code>&#8211;tcp</code> option of <i>lsz</i> (perhaps because your telnet doesn&#8217;t allow to spawn a local program with stdin/stdout connected to the remote side). </p>
 <p> If you use this option you have to start <i>lsz </i> with the <code>&#8211;tcp-client ADDRESS:PORT</code> option. <i>lrz will print the address and port on startup.</i> </p>
 <p> Use of this option imposes a security risk, somebody else could connect to the port in between. See <code>SECURITY </code> for details.</p>
-<dt><code>-U, &#8211;unrestrict</code></p>
-<dd> turn off restricted mode (this is not possible if running under a restricted shell).</p>
-<dt><code>&#8211;version</code></p>
-<dd> prints out version number.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Verbose causes a list of file names to be appended to stderr. More v&#8217;s generate more output.</p>
-<dt><code>-wN, &#8211;windowsize N</code></p>
-<dd> Set window size to N.</p>
-<dt><code>-X, &#8211;xmodem</code></p>
-<dd> use XMODEM protocol.</p>
-<dt><code>-y, &#8211;overwrite</code></p>
-<dd> Yes, clobber any existing files with the same name.</p>
-<dt><code>&#8211;ymodem</code></p>
-<dd> use YMODEM protocol.</p>
-<dt><code>-Z, &#8211;zmodem</code></p>
-<dd> use ZMODEM protocol.</dl>
+<dt><code>-U, &#8211;unrestrict</code></dt>
+<dd> turn off restricted mode (this is not possible if running under a restricted shell).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> prints out version number.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Verbose causes a list of file names to be appended to stderr. More v&#8217;s generate more output.</dd>
+<dt><code>-wN, &#8211;windowsize N</code></dt>
+<dd> Set window size to N.</dd>
+<dt><code>-X, &#8211;xmodem</code></dt>
+<dd> use XMODEM protocol.</dd>
+<dt><code>-y, &#8211;overwrite</code></dt>
+<dd> Yes, clobber any existing files with the same name.</dd>
+<dt><code>&#8211;ymodem</code></dt>
+<dd> use YMODEM protocol.</dd>
+<dt><code>-Z, &#8211;zmodem</code></dt>
+<dd> use ZMODEM protocol.</dd></dl>
 <h2>SECURITY</h2>
 <p> Contrary to the original ZMODEM lrz defaults to restricted mode. In restricted mode lrz will not accept absolute pathnames or references to a parent directory, will not modify an existing file, and removes any files received in error. Remote command execution is disabled. </p>
 <p> To use a more restricted mode set the environment variable <code>ZMODEM_RESTRICTED </code> or give the <code>R</code> option. This disables creation of subdirectories and invisible files. </p>
 <p> Restricted mode may be turned off with the <code>U </code> option, unless lrz runs under a restricted shell. </p>
 <dl>
-<dt>Use of the</p>
-<dd> <code>&#8211;tcp-client </code> or <code>&#8211;tcp-server </code> options imposes a security risk, as somebody else could connect to the port before you do it, and grab your data. If there&#8217;s strong demand for a more secure mode i might introduce some sort of password challenge. </p>
+<dt>Use of the</dt>
+<dd> <code>&#8211;tcp-client </code> or <code>&#8211;tcp-server </code> options imposes a security risk, as somebody else could connect to the port before you do it, and grab your data. If there&#8217;s strong demand for a more secure mode i might introduce some sort of password challenge. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> lrz uses the following environment variables:</p>
 <dl>
-<dt><code>SHELL</code></p>
-<dd> lrz recognizes a restricted shell if this variable includes <i>rsh</i> or <i>rksh</i> .</p>
-<dt><code>ZMODEM_RESTRICTED</code></p>
-<dd> lrz enters the more restricted mode if the variable is set.</dl>
+<dt><code>SHELL</code></dt>
+<dd> lrz recognizes a restricted shell if this variable includes <i>rsh</i> or <i>rksh</i> .</dd>
+<dt><code>ZMODEM_RESTRICTED</code></dt>
+<dd> lrz enters the more restricted mode if the variable is set.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> (Pro-YAM command)</p>
 <dl>
 <dt>
-<dd> <i>&lt;ALT-2&gt;</i><br />
+</dt><dd> <i>&lt;ALT-2&gt;</i><br />
  Pro-YAM Command: <i>sz *.h *.c</i><br />
- (This automatically invokes <i>rz</i> on the connected system.)</dl>
+ (This automatically invokes <i>rz</i> on the connected system.)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ZMODEM.DOC, YMODEM.DOC, Professional-YAM, crc(omen), sz(omen), usq(omen), undos(omen) </p>
 <p> Compile time options required for various operating systems are described in the source file.</p>

@@ -14,10 +14,10 @@ description: "iptables-xml — Convert iptables-save format to XML"
 <h2>DESCRIPTION</h2>
 <p> <code>iptables-xml</code> is used to convert the output of iptables-save into an easily manipulatable XML format to STDOUT. Use I/O-redirection provided by your shell to write to a file.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;combine</code></p>
-<dd> combine consecutive rules with the same matches but different targets. iptables does not currently support more than one target per match, so this simulates that by collecting the targets from consecutive iptables rules into one action tag, but only when the rule matches are identical. Terminating actions like RETURN, DROP, ACCEPT and QUEUE are not combined with subsequent targets.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Output xml comments containing the iptables line from which the XML is derived </p>
+<dt><code>-c</code>, <code>&#8211;combine</code></dt>
+<dd> combine consecutive rules with the same matches but different targets. iptables does not currently support more than one target per match, so this simulates that by collecting the targets from consecutive iptables rules into one action tag, but only when the rule matches are identical. Terminating actions like RETURN, DROP, ACCEPT and QUEUE are not combined with subsequent targets.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Output xml comments containing the iptables line from which the XML is derived </dd>
 </dl>
 <p> iptables-xml does a mechanistic conversion to a very expressive xml format; the only semantic considerations are for -g and -j targets in order to discriminate between &lt;call&gt; &lt;goto&gt; and &lt;nane-of-target&gt; as it helps xml processing scripts if they can tell the difference between a target like SNAT and another chain. </p>
 <p> Some sample output is: </p>

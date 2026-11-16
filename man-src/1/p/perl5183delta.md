@@ -23,11 +23,10 @@ url: "/docs/linux/man/1-perl5183delta/"
 
 <dl>
 <dt>&bull;
-<dd> Digest::SHA has been upgraded from 5.84_01 to 5.84_02.
-<dt>&bull;
-<dd> perl5db.pl has been upgraded from version 1.39_10 to 1.39_11. 
-
- This fixes a crash in tab completion, where available. [perl #120827] Also, filehandle information is properly reset after a pager is run. [perl #121456]</dl>
+</dt><dd> Digest::SHA has been upgraded from 5.84_01 to 5.84_02.
+</dd><dt>&bull;
+</dt><dd> perl5db.pl has been upgraded from version 1.39_10 to 1.39_11. 
+ This fixes a crash in tab completion, where available. [perl #120827] Also, filehandle information is properly reset after a pager is run. [perl #121456]</dd></dl>
 
 <h2>Platform Support</h2>
 
@@ -35,35 +34,32 @@ url: "/docs/linux/man/1-perl5183delta/"
 
 <dl>
 <dt>Win32
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> Introduced by perl #113536 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=113536">https://rt.perl.org/Public/Bug/Display.html?id=113536</a>&gt;, a memory leak on every call to <tt>&quot;system&quot;</tt> and backticks (<tt>&quot; `` &quot;</tt>), on most Win32 Perls starting from 5.18.0 has been fixed. The memory leak only occurred if you enabled psuedo-fork in your build of Win32 Perl, and were running that build on Server 2003 R2 or newer <font SIZE="-1">OS. </font> The leak does not appear on WinXP <font SIZE="-1">SP3.</font> [perl #121676 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=121676">https://rt.perl.org/Public/Bug/Display.html?id=121676</a>&gt;]</dl>
+</dt><dd> Introduced by perl #113536 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=113536">https://rt.perl.org/Public/Bug/Display.html?id=113536</a>&gt;, a memory leak on every call to <tt>&quot;system&quot;</tt> and backticks (<tt>&quot; `` &quot;</tt>), on most Win32 Perls starting from 5.18.0 has been fixed. The memory leak only occurred if you enabled psuedo-fork in your build of Win32 Perl, and were running that build on Server 2003 R2 or newer <font SIZE="-1">OS. </font> The leak does not appear on WinXP <font SIZE="-1">SP3.</font> [perl #121676 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=121676">https://rt.perl.org/Public/Bug/Display.html?id=121676</a>&gt;]</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> The debugger now properly resets filehandles as needed. [perl #121456]
-<dt>&bull;
-<dd> A segfault in Digest::SHA has been addressed. [perl #121421]
-<dt>&bull;
-<dd> perl can again be built with <font SIZE="-1">USE_64_BIT_INT,</font> with Visual C 2003, 32 bit. [perl #120925]
-<dt>&bull;
-<dd> A leading { (brace) in formats is properly parsed again. [perl #119973]
-<dt>&bull;
-<dd> Copy the values used to perturb hash iteration when cloning an interpreter. This was fairly harmless but caused <tt>&quot;valgrind&quot;</tt> to complain. [perl #121336]
-<dt>&bull;
-<dd> In Perl v5.18 <tt>&quot;undef *_; goto &amp;sub&quot;</tt> and <tt>&quot;local *_; goto &amp;sub&quot;</tt> started crashing. This has been fixed. [perl #119949]</dl>
+</dt><dd> The debugger now properly resets filehandles as needed. [perl #121456]
+</dd><dt>&bull;
+</dt><dd> A segfault in Digest::SHA has been addressed. [perl #121421]
+</dd><dt>&bull;
+</dt><dd> perl can again be built with <font SIZE="-1">USE_64_BIT_INT,</font> with Visual C 2003, 32 bit. [perl #120925]
+</dd><dt>&bull;
+</dt><dd> A leading { (brace) in formats is properly parsed again. [perl #119973]
+</dd><dt>&bull;
+</dt><dd> Copy the values used to perturb hash iteration when cloning an interpreter. This was fairly harmless but caused <tt>&quot;valgrind&quot;</tt> to complain. [perl #121336]
+</dd><dt>&bull;
+</dt><dd> In Perl v5.18 <tt>&quot;undef *_; goto &amp;sub&quot;</tt> and <tt>&quot;local *_; goto &amp;sub&quot;</tt> started crashing. This has been fixed. [perl #119949]</dd></dl>
 
 <h2>Acknowledgements</h2>
 

@@ -14,14 +14,14 @@ description: "z8530_sync_close – Close a PIO Z8530 channel"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Network device to close</dl>
+</dd><dd>Network device to close</dd></dl>
 <p> <i>c</i></p>
 <dl>
-<dd>Z8530 channel to disassociate and move to idle</dl>
+<dd>Z8530 channel to disassociate and move to idle</dd></dl>
 <h2>Description</h2>
 <p>Close down a Z8530 interface and switch its interrupt handlers to discard future events.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

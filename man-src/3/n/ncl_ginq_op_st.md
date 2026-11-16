@@ -13,21 +13,21 @@ description: "ginq_op_st (Inquire operating state value) – returns the operati
 <p> void ginq_op_st(Gop_st *op_st);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>op_st</p>
-<dd>(Output) &#8211; Returns the GKS operating state:</p>
+<dt>op_st</dt>
+<dd>(Output) &#8211; Returns the GKS operating state:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GST_GKCL</p>
-<dd>GKS is closed</p>
-<dt>GST_GKOP</p>
-<dd>GKS is open</p>
-<dt>GST_WSOP</p>
-<dd>Additionally, a workstation is open</p>
-<dt>GST_WSAC</p>
-<dd>Additionally, a workstation is active</p>
-<dt>GST_SGOP</p>
-<dd>Additionally, a segment is open</dl>
+</dd><dl COMPACT>
+<dt>GST_GKCL</dt>
+<dd>GKS is closed</dd>
+<dt>GST_GKOP</dt>
+<dd>GKS is open</dd>
+<dt>GST_WSOP</dt>
+<dd>Additionally, a workstation is open</dd>
+<dt>GST_WSAC</dt>
+<dd>Additionally, a workstation is active</dd>
+<dt>GST_SGOP</dt>
+<dd>Additionally, a segment is open</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

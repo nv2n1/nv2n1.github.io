@@ -17,8 +17,8 @@ description: "aoe-flush – flush the down devices out of the aoe driver"
 <p> By specifying a series of specific aoe devices, e.g., <code>e7.0 e3.2</code>, it is possible to ask the aoe driver to forget these devices. This feature may be convenient after a temporary AoE target is no longer being used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>The <code>-a</code> option tells the aoe driver to forget all unused devices.</dl>
+<dt><code>-a</code></dt>
+<dd>The <code>-a</code> option tells the aoe driver to forget all unused devices.</dd></dl>
 <h2>Example</h2>
 <pre>nai# aoe-stat | grep e12.0
  e12.0 0.000GB eth1 down 

@@ -14,26 +14,26 @@ description: "fc_host_post_vendor_event – called to post a vendor unique event
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>host the event occurred on</dl>
+</dd><dd>host the event occurred on</dd></dl>
 <p> <i>event_number</i></p>
 <dl>
-<dd>fc event number obtained from <code>get_fc_event_number</code></dl>
+<dd>fc event number obtained from <code>get_fc_event_number</code></dd></dl>
 <p> <i>data_len</i></p>
 <dl>
-<dd>amount, in bytes, of vendor unique data</dl>
+<dd>amount, in bytes, of vendor unique data</dd></dl>
 <p> <i>data_buf</i></p>
 <dl>
-<dd>pointer to vendor unique data</dl>
+<dd>pointer to vendor unique data</dd></dl>
 <p> <i>vendor_id</i></p>
 <dl>
-<dd>Vendor id</dl>
+<dd>Vendor id</dd></dl>
 <h2>Notes</h2>
 <p>This routine assumes no locks are held on entry.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

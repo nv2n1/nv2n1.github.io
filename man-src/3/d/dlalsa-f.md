@@ -27,10 +27,10 @@ description: "dlalsa.f –"
  ICOMPQ = 1, DLALSA applies the right singular vector matrix to the
  right hand side. The singular vector matrices were generated in
  compact form by DLALSA.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ICOMPQ</i> </p>
+<dd><i>ICOMPQ</i> </dd>
 <pre> ICOMPQ is INTEGER
  Specifies whether the left or the right singular vector
  matrix is involved.
@@ -141,18 +141,19 @@ description: "dlalsa.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </p>
+<dd>Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 267 of file dlalsa.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

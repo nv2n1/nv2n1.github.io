@@ -19,26 +19,26 @@ description: "fpcmake – The Free Pascal makefile constructor program."
 <h2>OPTIONS</h2>
 <p> fpcmake has a small number of options to control it&#8217;s behaviour: </p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Emit a short help text describing the use of <code>fpcmake</code></p>
-<dt><code>-p</code></p>
-<dd> If this option is given, a package description file is generated as well as a makefile.</p>
-<dt><code>-q</code></p>
-<dd> Tells <code>fpcmake</code> to be more quiet, i.e. emit less messages.</p>
-<dt><code>-r</code></p>
-<dd> If this option is given, <code>fpcmake</code> will recursively scan subdirectories for <code>makefile.fpc</code> files and generate makefiles for them.</p>
-<dt><code>-T</code></p>
-<dd> Specifies the targets for which <code>fpcmake </code> should generate makefiles. This can be a comma-separated list of target systems, or the special identifier <i>all</i> which indicates that a makefile should be generated for all supported platforms.</p>
-<dt><code>-v</code></p>
-<dd> This option instructs <code>fpcmake</code> to be more verbose.</p>
-<dt><code>-V</code></p>
-<dd> Print <code>fpcmake</code> version and exit.</p>
-<dt><code>-w</code></p>
-<dd> This is the standard option and tells <code>fpcmake</code> to generate a makefile. </p>
+<dt><code>-h</code></dt>
+<dd> Emit a short help text describing the use of <code>fpcmake</code></dd>
+<dt><code>-p</code></dt>
+<dd> If this option is given, a package description file is generated as well as a makefile.</dd>
+<dt><code>-q</code></dt>
+<dd> Tells <code>fpcmake</code> to be more quiet, i.e. emit less messages.</dd>
+<dt><code>-r</code></dt>
+<dd> If this option is given, <code>fpcmake</code> will recursively scan subdirectories for <code>makefile.fpc</code> files and generate makefiles for them.</dd>
+<dt><code>-T</code></dt>
+<dd> Specifies the targets for which <code>fpcmake </code> should generate makefiles. This can be a comma-separated list of target systems, or the special identifier <i>all</i> which indicates that a makefile should be generated for all supported platforms.</dd>
+<dt><code>-v</code></dt>
+<dd> This option instructs <code>fpcmake</code> to be more verbose.</dd>
+<dt><code>-V</code></dt>
+<dd> Print <code>fpcmake</code> version and exit.</dd>
+<dt><code>-w</code></dt>
+<dd> This is the standard option and tells <code>fpcmake</code> to generate a makefile. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/5-fpcmake/">fpcmake</a></code>(5) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/5-fpcmake/">fpcmake</a></code>(5) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

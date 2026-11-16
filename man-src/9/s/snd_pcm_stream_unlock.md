@@ -14,7 +14,7 @@ description: "snd_pcm_stream_unlock – Unlock the PCM stream"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>PCM substream</dl>
+</dd><dd>PCM substream</dd></dl>
 <h2>Description</h2>
 <p>This unlocks the PCM stream that has been locked via <code>snd_pcm_stream_lock</code>.</p>
 <h2>Copyright</h2>

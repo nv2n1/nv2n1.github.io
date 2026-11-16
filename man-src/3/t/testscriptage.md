@@ -19,10 +19,10 @@ description: "Test::ScriptAge — routines relating to the age of Perl scripts"
 <p>Routines to calculated modification times of Perl scripts.</p>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>perl_modification_epoch</p>
-<dd>Calculate the time our Perl was last modified.</p>
-<dt>our_modification_epoch</p>
-<dd>Calculate the time our scripts, including all libraries, was last modified.</dl>
+<dt>perl_modification_epoch</dt>
+<dd>Calculate the time our Perl was last modified.</dd>
+<dt>our_modification_epoch</dt>
+<dd>Calculate the time our scripts, including all libraries, was last modified.</dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

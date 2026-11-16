@@ -49,19 +49,15 @@ description: "ccze – A robust log colorizer, plugin infrastructure"
 <pre><code>#include &lt;ccze.h&gt;
 #include &lt;stddef.h&gt;
 #include &lt;string.h&gt;
-
 static char **ccze_foo_argv;
-
 static int
 ccze_foo_handle(const char *str, size_t length, char **rest)
 {
     int i = 1;
-
     if (strstr(str, &quot;foo&quot;)) {
         ccze_addstr(CCZE_COLOR_GOODWORD, str);
         return 1;
     }
-
     while (ccze_foo_argv[i]) {
         if (strstr(str, ccze_foo_argv[i])) {
             ccze_addstr(CCZE_COLOR_GOODWORD, str);
@@ -71,18 +67,15 @@ ccze_foo_handle(const char *str, size_t length, char **rest)
     }
     return 0;
 }
-
 static void
 ccze_foo_startup(void)
 {
     ccze_foo_argv = ccze_plugin_argv_get(ccze_plugin_name_get());
 }
-
 static void
 ccze_foo_shutdown(void)
 {
 }
-
 CCZE_DEFINE_PLUGIN(foo, PARTIAL, &quot;Partial FOO coloriser.&quot;);</code></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-ccze/">ccze</a></code>(1)</p>

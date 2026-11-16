@@ -26,3 +26,4 @@ ssize_t flistxattr(int fd, char &amp;nbsp; *list, size_t size);
 <p> If <i>size</i> is specified as zero, these calls return the current size of the list of extended attribute names (and leave <i>list</i> unchanged). This can be used to determine the size of the buffer that should be supplied in a subsequent call. (But, bear in mind that there is a possibility that the set of extended attributes may change between the two calls, so that it is still necessary to check the return status from the second call.)</p>
 <h3>Example</h3>
 <p> The <i>list</i> of names is returned as an unordered array of null-terminated character strings (attribute names are separated by null bytes (&#8216;
+</p>

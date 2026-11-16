@@ -53,105 +53,97 @@ description: "ioctl_getfsmap – retrieve the physical layout of the filesystem"
 <p> The <i>fmr_length</i> field contains the length of the extent in bytes. </p>
 <p> The <i>fmr_flags</i> field is a bit mask of extent state flags. The bits are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>FMR_OF_PREALLOC</code></p>
-<dd> The extent is allocated but not yet written.</p>
-<dt><code>FMR_OF_ATTR_FORK</code></p>
-<dd> This extent contains extended attribute data.</p>
-<dt><code>FMR_OF_EXTENT_MAP</code></p>
-<dd> This extent contains extent map information for the owner.</p>
-<dt><code>FMR_OF_SHARED</code></p>
-<dd> Parts of this extent may be shared.</p>
-<dt><code>FMR_OF_SPECIAL_OWNER</code></p>
-<dd> The <i>fmr_owner</i> field contains a special value instead of an inode number.</p>
-<dt><code>FMR_OF_LAST</code></p>
-<dd> This is the last record in the data set.</dl>
+<dt><code>FMR_OF_PREALLOC</code></dt>
+<dd> The extent is allocated but not yet written.</dd>
+<dt><code>FMR_OF_ATTR_FORK</code></dt>
+<dd> This extent contains extended attribute data.</dd>
+<dt><code>FMR_OF_EXTENT_MAP</code></dt>
+<dd> This extent contains extent map information for the owner.</dd>
+<dt><code>FMR_OF_SHARED</code></dt>
+<dd> Parts of this extent may be shared.</dd>
+<dt><code>FMR_OF_SPECIAL_OWNER</code></dt>
+<dd> The <i>fmr_owner</i> field contains a special value instead of an inode number.</dd>
+<dt><code>FMR_OF_LAST</code></dt>
+<dd> This is the last record in the data set.</dd></dl>
 </dl>
 <p> The <i>fmr_reserved</i> field will be set to zero.</p>
 <h3>Owner values</h3>
 <p> Generally, the value of the <i>fmr_owner</i> field for non-metadata extents should be an inode number. However, filesystems are under no obligation to report inode numbers; they may instead report <code>FMR_OWN_UNKNOWN</code> if the inode number cannot easily be retrieved, if the caller lacks sufficient privilege, if the filesystem does not support stable inode numbers, or for any other reason. If a filesystem wishes to condition the reporting of inode numbers based on process capabilities, it is strongly urged that the <code>CAP_SYS_ADMIN</code> capability be used for this purpose.</p>
 <dl>
-<dt>The following special owner values are generic to all filesystems:</p>
+<dt>The following special owner values are generic to all filesystems:</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt><code>FMR_OWN_FREE</code></p>
-<dd> Free space.</p>
-<dt><code>FMR_OWN_UNKNOWN</code></p>
-<dd> This extent is in use but its owner is not known or not easily retrieved.</p>
-<dt><code>FMR_OWN_METADATA</code></p>
-<dd> This extent is filesystem metadata.</dl>
+<dt><code>FMR_OWN_FREE</code></dt>
+<dd> Free space.</dd>
+<dt><code>FMR_OWN_UNKNOWN</code></dt>
+<dd> This extent is in use but its owner is not known or not easily retrieved.</dd>
+<dt><code>FMR_OWN_METADATA</code></dt>
+<dd> This extent is filesystem metadata.</dd></dl>
 </dl>
 </dl>
 <p> XFS can return the following special owner values:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>XFS_FMR_OWN_FREE</code></p>
-<dd> Free space.</p>
-<dt><code>XFS_FMR_OWN_UNKNOWN</code></p>
-<dd> This extent is in use but its owner is not known or not easily retrieved.</p>
-<dt><code>XFS_FMR_OWN_FS</code></p>
-<dd> Static filesystem metadata which exists at a fixed address. These are the AG superblock, the AGF, the AGFL, and the AGI headers.</p>
-<dt><code>XFS_FMR_OWN_LOG</code></p>
-<dd> The filesystem journal.</p>
-<dt><code>XFS_FMR_OWN_AG</code></p>
-<dd> Allocation group metadata, such as the free space btrees and the reverse mapping btrees.</p>
-<dt><code>XFS_FMR_OWN_INOBT</code></p>
-<dd> The inode and free inode btrees.</p>
-<dt><code>XFS_FMR_OWN_INODES</code></p>
-<dd> Inode records.</p>
-<dt><code>XFS_FMR_OWN_REFC</code></p>
-<dd> Reference count information.</p>
-<dt><code>XFS_FMR_OWN_COW</code></p>
-<dd> This extent is being used to stage a copy-on-write.</p>
-<dt><code>XFS_FMR_OWN_DEFECTIVE:</code></p>
-<dd> This extent has been marked defective either by the filesystem or the underlying device.</dl>
+<dt><code>XFS_FMR_OWN_FREE</code></dt>
+<dd> Free space.</dd>
+<dt><code>XFS_FMR_OWN_UNKNOWN</code></dt>
+<dd> This extent is in use but its owner is not known or not easily retrieved.</dd>
+<dt><code>XFS_FMR_OWN_FS</code></dt>
+<dd> Static filesystem metadata which exists at a fixed address. These are the AG superblock, the AGF, the AGFL, and the AGI headers.</dd>
+<dt><code>XFS_FMR_OWN_LOG</code></dt>
+<dd> The filesystem journal.</dd>
+<dt><code>XFS_FMR_OWN_AG</code></dt>
+<dd> Allocation group metadata, such as the free space btrees and the reverse mapping btrees.</dd>
+<dt><code>XFS_FMR_OWN_INOBT</code></dt>
+<dd> The inode and free inode btrees.</dd>
+<dt><code>XFS_FMR_OWN_INODES</code></dt>
+<dd> Inode records.</dd>
+<dt><code>XFS_FMR_OWN_REFC</code></dt>
+<dd> Reference count information.</dd>
+<dt><code>XFS_FMR_OWN_COW</code></dt>
+<dd> This extent is being used to stage a copy-on-write.</dd>
+<dt><code>XFS_FMR_OWN_DEFECTIVE:</code></dt>
+<dd> This extent has been marked defective either by the filesystem or the underlying device.</dd></dl>
 </dl>
 <p> ext4 can return the following special owner values:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>EXT4_FMR_OWN_FREE</code></p>
-<dd> Free space.</p>
-<dt><code>EXT4_FMR_OWN_UNKNOWN</code></p>
-<dd> This extent is in use but its owner is not known or not easily retrieved.</p>
-<dt><code>EXT4_FMR_OWN_FS</code></p>
-<dd> Static filesystem metadata which exists at a fixed address. This is the superblock and the group descriptors.</p>
-<dt><code>EXT4_FMR_OWN_LOG</code></p>
-<dd> The filesystem journal.</p>
-<dt><code>EXT4_FMR_OWN_INODES</code></p>
-<dd> Inode records.</p>
-<dt><code>EXT4_FMR_OWN_BLKBM</code></p>
-<dd> Block bit map.</p>
-<dt><code>EXT4_FMR_OWN_INOBM</code></p>
-<dd> Inode bit map.</dl>
+<dt><code>EXT4_FMR_OWN_FREE</code></dt>
+<dd> Free space.</dd>
+<dt><code>EXT4_FMR_OWN_UNKNOWN</code></dt>
+<dd> This extent is in use but its owner is not known or not easily retrieved.</dd>
+<dt><code>EXT4_FMR_OWN_FS</code></dt>
+<dd> Static filesystem metadata which exists at a fixed address. This is the superblock and the group descriptors.</dd>
+<dt><code>EXT4_FMR_OWN_LOG</code></dt>
+<dd> The filesystem journal.</dd>
+<dt><code>EXT4_FMR_OWN_INODES</code></dt>
+<dd> Inode records.</dd>
+<dt><code>EXT4_FMR_OWN_BLKBM</code></dt>
+<dd> Block bit map.</dd>
+<dt><code>EXT4_FMR_OWN_INOBM</code></dt>
+<dd> Inode bit map.</dd></dl>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> On error, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <p> The error placed in <i>errno</i> can be one of, but is not limited to, the following:</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not open for reading.</p>
-<dt><code>EBADMSG</code></p>
-<dd> The filesystem has detected a checksum error in the metadata.</p>
-<dt><code>EFAULT</code></p>
-<dd> The pointer passed in was not mapped to a valid memory address.</p>
-<dt><code>EINVAL</code></p>
-<dd> The array is not long enough, the keys do not point to a valid part of the filesystem, the low key points to a higher point in the filesystem&#8217;s physical storage address space than the high key, or a nonzero value was passed in one of the fields that must be zero.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to process the request.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> The filesystem does not support this command.</p>
-<dt><code>EUCLEAN</code></p>
-<dd> The filesystem metadata is corrupt and needs repair.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not open for reading.</dd>
+<dt><code>EBADMSG</code></dt>
+<dd> The filesystem has detected a checksum error in the metadata.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The pointer passed in was not mapped to a valid memory address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The array is not long enough, the keys do not point to a valid part of the filesystem, the low key points to a higher point in the filesystem&#8217;s physical storage address space than the high key, or a nonzero value was passed in one of the fields that must be zero.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to process the request.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> The filesystem does not support this command.</dd>
+<dt><code>EUCLEAN</code></dt>
+<dd> The filesystem metadata is corrupt and needs repair.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>FS_IOC_GETFSMAP</code> operation first appeared in Linux 4.12.</p>
 <h2>CONFORMING TO</h2>

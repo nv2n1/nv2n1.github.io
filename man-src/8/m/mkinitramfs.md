@@ -15,36 +15,36 @@ description: "mkinitramfs – low-level tool for generating an initramfs image"
 <p>The <code>mkinitramfs</code> script generates an initramfs image. The initramfs is a compressed cpio archive. The archive can be used on a different box of the same arch with the corresponding Linux kernel. <code>mkinitramfs</code> is meant for advanced usage. On your local box <code>update-initramfs</code> calls <code>mkinitramfs</code> with the relevant parameters. <code>update-initramfs</code> keeps sha1sum of generated initramfs. It takes care to generate backups and eventually runs the bootloader. At boot time, the kernel unpacks that archive into RAM disk, mounts and uses it as initial root file system. All finding of the root device happens in this early userspace. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c </code><i> compress</p>
-<dd>Override the </i><code>COMPRESS</code> setting in <i>initramfs.conf</i>. </p>
-<dt><code>-d </code><i> confdir</p>
-<dd>Set an alternate configuration directory. </p>
-<dt></i><code>-k</p>
-<dd>Keep the temporary directory used to make the image. </p>
-<dt>-o </code><i> outfile</p>
-<dd>Write the image to outfile</i>. </p>
-<dt><code>-r </code><i> root</p>
-<dd>Override the </i><code>ROOT</code> setting in <i>initramfs.conf</i>. </p>
-<dt><code>-v</p>
-<dd>Set the verbose mode output. </p>
-<dt></code><i>version</p>
-<dd>Set the kernel version of the initramfs image (defaults to the running kernel). </p>
-<dt></i><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display usage information and exit. </p>
+<dt><code>-c </code><i> compress</dt>
+<dd>Override the </i><code>COMPRESS</code> setting in <i>initramfs.conf</i>. </dd>
+<dt><code>-d </code><i> confdir</dt>
+<dd>Set an alternate configuration directory. </dd>
+<dt></i><code>-k</dt>
+<dd>Keep the temporary directory used to make the image. </dd>
+<dt>-o </code><i> outfile</dt>
+<dd>Write the image to outfile</i>. </dd>
+<dt><code>-r </code><i> root</dt>
+<dd>Override the </i><code>ROOT</code> setting in <i>initramfs.conf</i>. </dd>
+<dt><code>-v</dt>
+<dd>Set the verbose mode output. </dd>
+<dt></code><i>version</dt>
+<dd>Set the kernel version of the initramfs image (defaults to the running kernel). </dd>
+<dt></i><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display usage information and exit. </dd>
 </dl>
 <h2>Environment</h2>
 <p><code>mkinitramfs</code> honours the <code>TMPDIR</code> environment variable. If set, it uses subdirectories in the given directory to create its temporary working directories. Else it uses <i>/var/tmp</i> as default value for that purpose. The given directory should be on a filesystem which allows the execution of files stored there, i.e. should not be mounted with the <code>noexec</code> mount option. </p>
 <p> If <code>SOURCE_DATE_EPOCH</code> is set, <code>mkinitramfs</code> attempts to generate a reproducible initramfs image.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/initramfs-tools/initramfs.conf</i></p>
-<dd>The default configuration file for the script. See <code><a href="/docs/linux/man/5-initramfs-conf/">initramfs.conf</a></code>(5) for a description of the available configuration parameter. </p>
-<dt><i>/etc/initramfs-tools/modules</i></p>
-<dd>Specified modules will be put in the generated image and loaded when the system boots. The format &#8211; one per line &#8211; is identical to that of <i>/etc/modules,</i> which is described in <code><a href="/docs/linux/man/5-modules/">modules</a></code>(5). </p>
-<dt><i>/etc/initramfs-tools/conf.d</i></p>
-<dd>The conf.d directory allows one to hardcode bootargs at initramfs build time via config snippets. This allows one to set ROOT or RESUME. This is especially useful for bootloaders, which do not pass an root bootarg. </p>
-<dt><i>/etc/initramfs-tools/DSDT.aml</i></p>
-<dd>If this file exists, it will be appended to the initramfs in a way that causes it to be loaded by ACPI. </p>
+<dt><i>/etc/initramfs-tools/initramfs.conf</i></dt>
+<dd>The default configuration file for the script. See <code><a href="/docs/linux/man/5-initramfs-conf/">initramfs.conf</a></code>(5) for a description of the available configuration parameter. </dd>
+<dt><i>/etc/initramfs-tools/modules</i></dt>
+<dd>Specified modules will be put in the generated image and loaded when the system boots. The format &#8211; one per line &#8211; is identical to that of <i>/etc/modules,</i> which is described in <code><a href="/docs/linux/man/5-modules/">modules</a></code>(5). </dd>
+<dt><i>/etc/initramfs-tools/conf.d</i></dt>
+<dd>The conf.d directory allows one to hardcode bootargs at initramfs build time via config snippets. This allows one to set ROOT or RESUME. This is especially useful for bootloaders, which do not pass an root bootarg. </dd>
+<dt><i>/etc/initramfs-tools/DSDT.aml</i></dt>
+<dd>If this file exists, it will be appended to the initramfs in a way that causes it to be loaded by ACPI. </dd>
 </dl>
 <h2>Examples</h2>
 <p>Create an initramfs for current running kernel: <code>mkinitramfs -o ~/tmp/initramfs-$(uname -r)</code> Create an initramfs for specific kernel and keep builddirs: <code>mkinitramfs -k -o ~/tmp/initramfs-2.6.21-686 2.6.21-686</code> Debug initramfs creation (check out written logfile) <code>sh -x mkinitramfs -o ~/tmp/initramfs-$(uname -r) 2&gt; ~/tmp/log</code> </p>

@@ -17,11 +17,11 @@ description: "Lintian::Processable::Diffstat – access to collected diffstat da
 <p> Lintian::Processable::Diffstat provides an interface to diffstat data.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>diffstat</p>
-<dd> Returns the path to diffstat output run on the Debian packaging diff (a.k.a. the &#8220;diff.gz&#8221;) for 1.0 non-native packages. For source packages without a &#8220;diff.gz&#8221; component, this returns the path to an empty file (this may be a device like /dev/null). </p>
+<dt>diffstat</dt>
+<dd> Returns the path to diffstat output run on the Debian packaging diff (a.k.a. the &#8220;diff.gz&#8221;) for 1.0 non-native packages. For source packages without a &#8220;diff.gz&#8221; component, this returns the path to an empty file (this may be a device like /dev/null). </dd>
 <p> Needs-Info requirements for using <i>diffstat</i>: diffstat</p>
-<dt>saved_diffstat</p>
-<dd> Returns the cached diffstat information.</dl>
+<dt>saved_diffstat</dt>
+<dd> Returns the cached diffstat information.</dd></dl>
 <h2>Author</h2>
 <p> Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

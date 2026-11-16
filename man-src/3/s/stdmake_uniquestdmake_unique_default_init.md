@@ -10,30 +10,18 @@ description: "std::make_unique,std::make_unique_default_init – std::make_uniqu
 <p>std::make_unique,std::make_unique_default_init &#8211; std::make_unique,std::make_unique_default_init</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T, class... Args&gt;
     (1)(since C++ 14)
-
         unique_ptr&lt;T&gt; make_unique(Args &amp;&amp;...args);                               (only for non-array types)
-
 template&lt; class T &gt;                                                    (2) (since C++14)
-
 unique_ptr&lt;T&gt; make_unique( std::size_t size );                             (only for array types with unknown bound)
-
 template&lt; class T, class... Args &gt;                                     (3) (since C++14)
-
 /* unspecified */ make_unique( Args&amp;&amp;... args ) = delete;                  (only for array types with known bound)
-
 template&lt; class T &gt;                                                    (4) (since C++20)
-
 unique_ptr&lt;T&gt; make_unique_default_init( );                                 (only for non-array types)
-
 template&lt; class T &gt;                                                    (5) (since C++20)
-
 unique_ptr&lt;T&gt; make_unique_default_init( std::size_t size );                (only for array types with unknown bound)
-
 template&lt; class T, class... Args &gt;                                     (6) (since C++20)
-
 /* unspecified */ make_unique_default_init( Args&amp;&amp;... args ) = delete;     (only for array types with known bound)</code></pre>
 <p>Constructs an object of type T and wraps it in a std::unique_ptr.<br />
 1) Constructs a non-array type T. The arguments args are passed to the constructor of T. This overload only participates in overload resolution if T is not an array type. The function is equivalent to:<br />
@@ -64,10 +52,8 @@ size &#8211; the size of the array to construct</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 struct Vec3
-
 {
     int x, y, z;
     Vec3()
@@ -84,7 +70,6 @@ struct Vec3
     }
 };
 int main()
-
 {
     // Use the default constructor.
     std::unique_ptr&lt;Vec3&gt; v1 = std::make_unique&lt;Vec3&gt;();

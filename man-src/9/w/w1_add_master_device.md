@@ -14,9 +14,9 @@ description: "w1_add_master_device – registers a new master device"
 <p><i>master</i></p>
 <dl>
 <dd>
-<dd>master bus device to register</dl>
+</dd><dd>master bus device to register</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

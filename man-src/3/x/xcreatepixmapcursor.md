@@ -11,35 +11,35 @@ description: "XCreateFontCursor, XCreatePixmapCursor, XCreateGlyphCursor – cre
 <h2>Syntax</h2>
 <p>#include &lt;X11/cursorfont.h&gt;</p>
 <dl COMPACT>
-<dd>Cursor XCreateFontCursor(Display *<i>display</i>, unsigned int <i>shape</i>);</p>
-<dd>Cursor XCreatePixmapCursor(Display *<i>display</i>, Pixmap <i>source</i>, Pixmap <i>mask</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>, unsigned int <i>x</i>, unsigned int <i>y</i>);</p>
-<dd>Cursor XCreateGlyphCursor(Display *<i>display</i>, Font <i>source_font</i>, Font <i>mask_font</i>, unsigned int <i>source_char</i>, unsigned int <i>mask_char</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>);</dl>
+<dd>Cursor XCreateFontCursor(Display *<i>display</i>, unsigned int <i>shape</i>);</dd>
+<dd>Cursor XCreatePixmapCursor(Display *<i>display</i>, Pixmap <i>source</i>, Pixmap <i>mask</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>, unsigned int <i>x</i>, unsigned int <i>y</i>);</dd>
+<dd>Cursor XCreateGlyphCursor(Display *<i>display</i>, Font <i>source_font</i>, Font <i>mask_font</i>, unsigned int <i>source_char</i>, unsigned int <i>mask_char</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>background_color</i></p>
-<dd>Specifies the RGB values for the background of the source.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>foreground_color</i></p>
-<dd>Specifies the RGB values for the foreground of the source.</p>
-<dt><i>mask</i></p>
-<dd>Specifies the cursor&#8217;s source bits to be displayed or <code>None</code>.</p>
-<dt><i>mask_char</i></p>
-<dd>Specifies the glyph character for the mask.</p>
-<dt><i>mask_font</i></p>
-<dd>Specifies the font for the mask glyph or <code>None</code>.</p>
-<dt><i>shape</i></p>
-<dd>Specifies the shape of the cursor.</p>
-<dt><i>source</i></p>
-<dd>Specifies the shape of the source cursor.</p>
-<dt><i>source_char</i></p>
-<dd>Specifies the character glyph for the source.</p>
-<dt><i>source_font</i></p>
-<dd>Specifies the font for the source glyph.</p>
-<dt><i>x</i></p>
+<dt><i>background_color</i></dt>
+<dd>Specifies the RGB values for the background of the source.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>foreground_color</i></dt>
+<dd>Specifies the RGB values for the foreground of the source.</dd>
+<dt><i>mask</i></dt>
+<dd>Specifies the cursor&#8217;s source bits to be displayed or <code>None</code>.</dd>
+<dt><i>mask_char</i></dt>
+<dd>Specifies the glyph character for the mask.</dd>
+<dt><i>mask_font</i></dt>
+<dd>Specifies the font for the mask glyph or <code>None</code>.</dd>
+<dt><i>shape</i></dt>
+<dd>Specifies the shape of the cursor.</dd>
+<dt><i>source</i></dt>
+<dd>Specifies the shape of the source cursor.</dd>
+<dt><i>source_char</i></dt>
+<dd>Specifies the character glyph for the source.</dd>
+<dt><i>source_font</i></dt>
+<dd>Specifies the font for the source glyph.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates, which indicate the hotspot relative to the source&#8217;s origin.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates, which indicate the hotspot relative to the source&#8217;s origin.</dd></dl>
 <h2>Description</h2>
 <p>X provides a set of standard cursor shapes in a special font named cursor. Applications are encouraged to use this interface for their cursors because the font can be customized for the individual display type. The shape argument specifies which glyph of the standard fonts to use. </p>
 <p> The hotspot comes from the information stored in the cursor font. The initial colors of a cursor are a black foreground and a white background (see <code>XRecolorCursor</code>). </p>
@@ -52,16 +52,16 @@ description: "XCreateFontCursor, XCreatePixmapCursor, XCreateGlyphCursor – cre
 <p> <code>XCreateGlyphCursor</code> can generate <code>BadAlloc</code>, <code>BadFont</code>, and <code>BadValue</code> errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadFont</code></p>
-<dd>A value for a Font or GContext argument does not name a defined Font.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadPixmap</code></p>
-<dd>A value for a Pixmap argument does not name a defined Pixmap.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadFont</code></dt>
+<dd>A value for a Font or GContext argument does not name a defined Font.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadPixmap</code></dt>
+<dd>A value for a Pixmap argument does not name a defined Pixmap.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xdefinecursor/">XDefineCursor</a>(3), <a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xrecolorcursor/">XRecolorCursor</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

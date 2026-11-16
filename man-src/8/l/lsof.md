@@ -35,15 +35,15 @@ In the absence of any options, <i>lsof</i> lists all open files belonging to all
 
  Normally list options that are specifically stated are ORed - i.e., specifying the <b>-i</b> option without an address and the <b>-u</b>foo option produces a listing of all network files OR files belonging to processes owned by user ``foo''. The exceptions are:
 <dl><dt>1)
-<dd>the `^' (negated) login name or user ID (UID), specified with the <b>-u</b> option;
-<dt>2)
-<dd>the `^' (negated) process ID (PID), specified with the <b>-p</b> option;
-<dt>3)
-<dd>the `^' (negated) process group ID (PGID), specified with the <b>-g</b> option;
-<dt>4)
-<dd>the `^' (negated) command, specified with the <b>-c</b> option;
-<dt>5)
-<dd>the (`^') negated TCP or UDP protocol state names, specified with the <b>-s</b><i> [p:s]</i> option.</dl>
+</dt><dd>the `^' (negated) login name or user ID (UID), specified with the <b>-u</b> option;
+</dd><dt>2)
+</dt><dd>the `^' (negated) process ID (PID), specified with the <b>-p</b> option;
+</dd><dt>3)
+</dt><dd>the `^' (negated) process group ID (PGID), specified with the <b>-g</b> option;
+</dd><dt>4)
+</dt><dd>the `^' (negated) command, specified with the <b>-c</b> option;
+</dd><dt>5)
+</dt><dd>the (`^') negated TCP or UDP protocol state names, specified with the <b>-s</b><i> [p:s]</i> option.</dd></dl>
  
 
  Since they represent exclusions, they are applied without ORing or ANDing and take effect before any other selection criteria are applied. 
@@ -58,108 +58,108 @@ In the absence of any options, <i>lsof</i> lists all open files belonging to all
 
  Either the `+' or the `-' prefix may be applied to a group of options. Options that don't take on separate meanings for each prefix - e.g., <b>-i</b> - may be grouped under either prefix. Thus, for example, ``+M -i'' may be stated as ``+Mi'' and the group means the same as the separate options. Be careful of prefix grouping when one or more options in the group does take on separate meanings under different prefixes - e.g., <b>+|-M</b>; ``-iM'' is not the same request as ``-i +M''. When in doubt, use separate options with appropriate prefixes.
 <dl><dt><b>-? -h</b>
-<dd>These two equivalent options select a usage (help) output list. <i>Lsof</i> displays a shortened form of this output when it detects an error in the options supplied to it, after it has displayed messages explaining each error. (Escape the `?' character as your shell requires.)
-<dt><b>-a</b>
-<dd>causes list selection options to be ANDed, as described above.
-<dt><b>-A</b><i> A</i>
-<dd>is available on systems configured for AFS whose AFS kernel code is implemented via dynamic modules. It allows the <i>lsof</i> user to specify <i>A</i> as an alternate name list file where the kernel addresses of the dynamic modules might be found. See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information about dynamic modules, their symbols, and how they affect <i>lsof</i>.
-<dt><b>-b</b>
-<dd>causes <i>lsof</i> to avoid kernel functions that might block - <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2), <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2), and <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2).
-<dd>See the <b>BLOCKS AND TIMEOUTS</b> and <b>AVOIDING KERNEL BLOCKS</b> sections for information on using this option.
-<dt><b>-c</b><i> c</i>
-<dd>selects the listing of files for processes executing the command that begins with the characters of <i>c</i>. Multiple commands may be specified, using multiple <b>-c</b> options. They are joined in a single ORed set before participating in AND option selection.
-<dd>If <i>c</i> begins with a `^', then the following characters specify a command name whose processes are to be ignored (excluded.)
-<dd>If <i>c</i> begins and ends with a slash ('/'), the characters between the slashes are interpreted as a regular expression. Shell meta-characters in the regular expression must be quoted to prevent their interpretation by the shell. The closing slash may be followed by these modifiers:
-<dd><pre> b the regular expression is a basic one.
+</dt><dd>These two equivalent options select a usage (help) output list. <i>Lsof</i> displays a shortened form of this output when it detects an error in the options supplied to it, after it has displayed messages explaining each error. (Escape the `?' character as your shell requires.)
+</dd><dt><b>-a</b>
+</dt><dd>causes list selection options to be ANDed, as described above.
+</dd><dt><b>-A</b><i> A</i>
+</dt><dd>is available on systems configured for AFS whose AFS kernel code is implemented via dynamic modules. It allows the <i>lsof</i> user to specify <i>A</i> as an alternate name list file where the kernel addresses of the dynamic modules might be found. See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information about dynamic modules, their symbols, and how they affect <i>lsof</i>.
+</dd><dt><b>-b</b>
+</dt><dd>causes <i>lsof</i> to avoid kernel functions that might block - <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2), <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2), and <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2).
+</dd><dd>See the <b>BLOCKS AND TIMEOUTS</b> and <b>AVOIDING KERNEL BLOCKS</b> sections for information on using this option.
+</dd><dt><b>-c</b><i> c</i>
+</dt><dd>selects the listing of files for processes executing the command that begins with the characters of <i>c</i>. Multiple commands may be specified, using multiple <b>-c</b> options. They are joined in a single ORed set before participating in AND option selection.
+</dd><dd>If <i>c</i> begins with a `^', then the following characters specify a command name whose processes are to be ignored (excluded.)
+</dd><dd>If <i>c</i> begins and ends with a slash ('/'), the characters between the slashes are interpreted as a regular expression. Shell meta-characters in the regular expression must be quoted to prevent their interpretation by the shell. The closing slash may be followed by these modifiers:
+</dd><dd><pre> b the regular expression is a basic one.
 <br>
  i ignore the case of letters.
 <br>
  x the regular expression is an extended one
 <br>
- (default).</pre><dd>See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information on basic and extended regular expressions.
-<dd>The simple command specification is tested first. If that test fails, the command regular expression is applied. If the simple command test succeeds, the command regular expression test isn't made. This may result in ``no command found for regex:'' messages when lsof's <b>-V</b> option is specified.
-<dt><b>+c</b><i> w</i>
-<dd>defines the maximum number of initial characters of the name, supplied by the UNIX dialect, of the UNIX command associated with a process to be printed in the COMMAND column. (The <i>lsof</i> default is nine.)
-<dd>Note that many UNIX dialects do not supply all command name characters to <i>lsof</i> in the files and structures from which <i>lsof</i> obtains command name. Often dialects limit the number of characters supplied in those sources. For example, Linux 2.4.27 and Solaris 9 both limit command name length to 16 characters.
-<dd>If <i>w</i> is zero ('0'), all command characters supplied to <i>lsof</i> by the UNIX dialect will be printed.
-<dd>If <i>w</i> is less than the length of the column title, ``COMMAND'', it will be raised to that length.
-<dt><b>-C</b>
-<dd>disables the reporting of any path name components from the kernel's name cache. See the <b>KERNEL NAME CACHE</b> section for more information.
-<dt><b>+d</b><i> s</i>
-<dd>causes <i>lsof</i> to search for all open instances of directory <i>s</i> and the files and directories it contains at its top level. <b>+d</b> does NOT descend the directory tree, rooted at <i>s</i>. The <b>+D</b><i> D</i> option may be used to request a full-descent directory tree search, rooted at directory <i>D</i>.
-<dd>Processing of the <b>+d</b> option does not follow symbolic links within <i>s</i> unless the <b>-x</b> or <b>-x l</b> option is also specified. Nor does it search for open files on file system mount points on subdirectories of <i>s</i> unless the <b>-x</b> or <b>-x f</b> option is also specified.
-<dd>Note: the authority of the user of this option limits it to searching for files that the user has permission to examine with the system <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) function.
-<dt><b>-d</b><i> s</i>
-<dd>specifies a list of file descriptors (FDs) to exclude from or include in the output listing. The file descriptors are specified in the comma-separated set <i>s</i> - e.g., ``cwd,1,3'', ``^6,^2''. (There should be no spaces in the set.)
-<dd>The list is an exclusion list if all entries of the set begin with `^'. It is an inclusion list if no entry begins with `^'. Mixed lists are not permitted.
-<dd>A file descriptor number range may be in the set as long as neither member is empty, both members are numbers, and the ending member is larger than the starting one - e.g., ``0-7'' or ``3-10''. Ranges may be specified for exclusion if they have the `^' prefix - e.g., ``^0-7'' excludes all file descriptors 0 through 7.
-<dd>Multiple file descriptor numbers are joined in a single ORed set before participating in AND option selection.
-<dd>When there are exclusion and inclusion members in the set, <i>lsof</i> reports them as errors and exits with a non-zero return code.
-<dd>See the description of File Descriptor (FD) output values in the <b>OUTPUT</b> section for more information on file descriptor names.
-<dt><b>+D</b><i> D</i>
-<dd>causes <i>lsof</i> to search for all open instances of directory <i>D</i> and all the files and directories it contains to its complete depth.
-<dd>Processing of the <b>+D</b> option does not follow symbolic links within <i>D</i> unless the <b>-x</b> or <b>-x l</b> option is also specified. Nor does it search for open files on file system mount points on subdirectories of <i>D</i> unless the <b>-x</b> or <b>-x f</b> option is also specified.
-<dd>Note: the authority of the user of this option limits it to searching for files that the user has permission to examine with the system <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) function.
-<dd>Further note: <i>lsof</i> may process this option slowly and require a large amount of dynamic memory to do it. This is because it must descend the entire directory tree, rooted at <i>D</i>, calling <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) for each file and directory, building a list of all the files it finds, and searching that list for a match with every open file. When directory <i>D</i> is large, these steps can take a long time, so use this option prudently.
-<dt><b>-D</b><i> D</i>
-<dd>directs <i>lsof's</i> use of the device cache file. The use of this option is sometimes restricted. See the <b>DEVICE CACHE FILE</b> section and the sections that follow it for more information on this option.
-<dd><b>-D</b> must be followed by a function letter; the function letter may optionally be followed by a path name. <i>Lsof</i> recognizes these function letters:
-<dd><pre> <b>?</b> - report device cache file paths
+ (default).</pre></dd><dd>See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information on basic and extended regular expressions.
+</dd><dd>The simple command specification is tested first. If that test fails, the command regular expression is applied. If the simple command test succeeds, the command regular expression test isn't made. This may result in ``no command found for regex:'' messages when lsof's <b>-V</b> option is specified.
+</dd><dt><b>+c</b><i> w</i>
+</dt><dd>defines the maximum number of initial characters of the name, supplied by the UNIX dialect, of the UNIX command associated with a process to be printed in the COMMAND column. (The <i>lsof</i> default is nine.)
+</dd><dd>Note that many UNIX dialects do not supply all command name characters to <i>lsof</i> in the files and structures from which <i>lsof</i> obtains command name. Often dialects limit the number of characters supplied in those sources. For example, Linux 2.4.27 and Solaris 9 both limit command name length to 16 characters.
+</dd><dd>If <i>w</i> is zero ('0'), all command characters supplied to <i>lsof</i> by the UNIX dialect will be printed.
+</dd><dd>If <i>w</i> is less than the length of the column title, ``COMMAND'', it will be raised to that length.
+</dd><dt><b>-C</b>
+</dt><dd>disables the reporting of any path name components from the kernel's name cache. See the <b>KERNEL NAME CACHE</b> section for more information.
+</dd><dt><b>+d</b><i> s</i>
+</dt><dd>causes <i>lsof</i> to search for all open instances of directory <i>s</i> and the files and directories it contains at its top level. <b>+d</b> does NOT descend the directory tree, rooted at <i>s</i>. The <b>+D</b><i> D</i> option may be used to request a full-descent directory tree search, rooted at directory <i>D</i>.
+</dd><dd>Processing of the <b>+d</b> option does not follow symbolic links within <i>s</i> unless the <b>-x</b> or <b>-x l</b> option is also specified. Nor does it search for open files on file system mount points on subdirectories of <i>s</i> unless the <b>-x</b> or <b>-x f</b> option is also specified.
+</dd><dd>Note: the authority of the user of this option limits it to searching for files that the user has permission to examine with the system <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) function.
+</dd><dt><b>-d</b><i> s</i>
+</dt><dd>specifies a list of file descriptors (FDs) to exclude from or include in the output listing. The file descriptors are specified in the comma-separated set <i>s</i> - e.g., ``cwd,1,3'', ``^6,^2''. (There should be no spaces in the set.)
+</dd><dd>The list is an exclusion list if all entries of the set begin with `^'. It is an inclusion list if no entry begins with `^'. Mixed lists are not permitted.
+</dd><dd>A file descriptor number range may be in the set as long as neither member is empty, both members are numbers, and the ending member is larger than the starting one - e.g., ``0-7'' or ``3-10''. Ranges may be specified for exclusion if they have the `^' prefix - e.g., ``^0-7'' excludes all file descriptors 0 through 7.
+</dd><dd>Multiple file descriptor numbers are joined in a single ORed set before participating in AND option selection.
+</dd><dd>When there are exclusion and inclusion members in the set, <i>lsof</i> reports them as errors and exits with a non-zero return code.
+</dd><dd>See the description of File Descriptor (FD) output values in the <b>OUTPUT</b> section for more information on file descriptor names.
+</dd><dt><b>+D</b><i> D</i>
+</dt><dd>causes <i>lsof</i> to search for all open instances of directory <i>D</i> and all the files and directories it contains to its complete depth.
+</dd><dd>Processing of the <b>+D</b> option does not follow symbolic links within <i>D</i> unless the <b>-x</b> or <b>-x l</b> option is also specified. Nor does it search for open files on file system mount points on subdirectories of <i>D</i> unless the <b>-x</b> or <b>-x f</b> option is also specified.
+</dd><dd>Note: the authority of the user of this option limits it to searching for files that the user has permission to examine with the system <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) function.
+</dd><dd>Further note: <i>lsof</i> may process this option slowly and require a large amount of dynamic memory to do it. This is because it must descend the entire directory tree, rooted at <i>D</i>, calling <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) for each file and directory, building a list of all the files it finds, and searching that list for a match with every open file. When directory <i>D</i> is large, these steps can take a long time, so use this option prudently.
+</dd><dt><b>-D</b><i> D</i>
+</dt><dd>directs <i>lsof's</i> use of the device cache file. The use of this option is sometimes restricted. See the <b>DEVICE CACHE FILE</b> section and the sections that follow it for more information on this option.
+</dd><dd><b>-D</b> must be followed by a function letter; the function letter may optionally be followed by a path name. <i>Lsof</i> recognizes these function letters:
+</dd><dd><pre> <b>?</b> - report device cache file paths
  <b>b</b> - build the device cache file
  <b>i</b> - ignore the device cache file
  <b>r</b> - read the device cache file
- <b>u</b> - read and update the device cache file</pre><dd>The <b>b</b>, <b>r</b>, and <b>u</b> functions, accompanied by a path name, are sometimes restricted. When these functions are restricted, they will not appear in the description of the <b>-D</b> option that accompanies <b>-h</b> or <b>-?</b> option output. See the <b>DEVICE CACHE FILE</b> section and the sections that follow it for more information on these functions and when they're restricted.
-<dd>The <b>?</b> function reports the read-only and write paths that lsof can use for the device cache file, the names of any environment variables whose values <i>lsof</i> will examine when forming the device cache file path, and the format for the personal device cache file path. (Escape the `?' character as your shell requires.)
-<dd>When available, the <b>b</b>, <b>r</b>, and <b>u</b> functions may be followed by the device cache file's path. The standard default is <i>.lsof_hostname</i> in the home directory of the real user ID that executes <i>lsof</i>, but this could have been changed when <i>lsof</i> was configured and compiled. (The output of the <b>-h</b> and <b>-?</b> options show the current default prefix - e.g., ``.lsof''.) The suffix, <i>hostname</i>, is the first component of the host's name returned by <i><a HREF="/docs/linux/man/2-gethostname/">gethostname</a></i>(2).
-<dd>When available, the <b>b</b> function directs <i>lsof</i> to build a new device cache file at the default or specified path.
-<dd>The <b>i</b> function directs <i>lsof</i> to ignore the default device cache file and obtain its information about devices via direct calls to the kernel.
-<dd>The <b>r</b> function directs <i>lsof</i> to read the device cache at the default or specified path, but prevents it from creating a new device cache file when none exists or the existing one is improperly structured. The <b>r</b> function, when specified without a path name, prevents <i>lsof</i> from updating an incorrect or outdated device cache file, or creating a new one in its place. The <b>r</b> function is always available when it is specified without a path name argument; it may be restricted by the permissions of the <i>lsof</i> process.
-<dd>When available, the <b>u</b> function directs <i>lsof</i> to read the device cache file at the default or specified path, if possible, and to rebuild it, if necessary. This is the default device cache file function when no <b>-D</b> option has been specified.
-<dt><b>+|-e</b><i> s</i>
-<dd>exempts the file system whose path name is <i>s</i> from being subjected to kernel function calls that might block. The <b>+e</b> option exempts <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2), <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2) and most <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2) kernel function calls. The <b>-e</b> option exempts only <i><a HREF="/docs/linux/man/2-stat/">stat</a>(2)</i> and <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2) kernel function calls. Multiple file systems may be specified with separate <b>+|-e</b> specifications and each may have <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2) calls exempted or not.
-<dd>This option is currently implemented only for Linux.
-<dd><b>CAUTION:</b> this option can easily be mis-applied to other than the file system of interest, because it uses path name rather than the more reliable device and inode numbers. (Device and inode numbers are acquired via the potentially blocking <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) kernel call and are thus not available, but see the <b>+|-m</b><i> m</i> option as a possible alternative way to supply device numbers.) <b>Use this option with great care and fully specify the path name of the file system to be exempted.</b>
-<dd>When open files on exempted file systems are reported, it may not be possible to obtain all their information. Therefore, some information columns will be blank, the characters ``UNKN'' preface the values in the TYPE column, and the applicable exemption option is added in parentheses to the end of the NAME column. (Some device number information might be made available via the <b>+|-m</b><i> m</i> option.)
-<dt><b>+|-E</b>
-<dd><b>+E</b> specifies that Linux pipe, Linux UNIX socket and Linux pseudoterminal files should be displayed with endpoint information and the files of the endpoints should also be displayed. Note: UNIX socket file endpoint information is only available when the compile flags line of <b>-v</b> output contains HASUXSOCKEPT, and psudoterminal endpoint information is only available when the compile flags line contains HASPTYEPT.
-<dd>Pipe endpoint information is displayed in the NAME column in the form ``<i>PID,cmd,FDmode</i>'', where <i>PID</i> is the endpoint process ID; <i>cmd</i> is the endpoint process command; <i>FD</i> is the endpoint file's descriptor; and <i>mode</i> is the endpoint file's access mode.
-<dd>Pseudoterminal endpoint information is displayed in the NAME column as ``-&gt;/dev/pts<i>min</i>&nbsp;<i>PID,cmd,FDmode</i>'' or ``<i>PID,cmd,FDmode</i>''. The first form is for a master device; the second, for a slave device. <i>min</i> is a slave device's minor device number; and <i>PID, cmd, FD</i> and <i>mode</i> are the same as with pipe endpoint information. Note: psudoterminal endpoint information is only available when the compile flags line of <b>-V</b> output contains HASPTYEPT.
-<dd>UNIX socket file endpoint information is displayed in the NAME column in the form 
+ <b>u</b> - read and update the device cache file</pre></dd><dd>The <b>b</b>, <b>r</b>, and <b>u</b> functions, accompanied by a path name, are sometimes restricted. When these functions are restricted, they will not appear in the description of the <b>-D</b> option that accompanies <b>-h</b> or <b>-?</b> option output. See the <b>DEVICE CACHE FILE</b> section and the sections that follow it for more information on these functions and when they're restricted.
+</dd><dd>The <b>?</b> function reports the read-only and write paths that lsof can use for the device cache file, the names of any environment variables whose values <i>lsof</i> will examine when forming the device cache file path, and the format for the personal device cache file path. (Escape the `?' character as your shell requires.)
+</dd><dd>When available, the <b>b</b>, <b>r</b>, and <b>u</b> functions may be followed by the device cache file's path. The standard default is <i>.lsof_hostname</i> in the home directory of the real user ID that executes <i>lsof</i>, but this could have been changed when <i>lsof</i> was configured and compiled. (The output of the <b>-h</b> and <b>-?</b> options show the current default prefix - e.g., ``.lsof''.) The suffix, <i>hostname</i>, is the first component of the host's name returned by <i><a HREF="/docs/linux/man/2-gethostname/">gethostname</a></i>(2).
+</dd><dd>When available, the <b>b</b> function directs <i>lsof</i> to build a new device cache file at the default or specified path.
+</dd><dd>The <b>i</b> function directs <i>lsof</i> to ignore the default device cache file and obtain its information about devices via direct calls to the kernel.
+</dd><dd>The <b>r</b> function directs <i>lsof</i> to read the device cache at the default or specified path, but prevents it from creating a new device cache file when none exists or the existing one is improperly structured. The <b>r</b> function, when specified without a path name, prevents <i>lsof</i> from updating an incorrect or outdated device cache file, or creating a new one in its place. The <b>r</b> function is always available when it is specified without a path name argument; it may be restricted by the permissions of the <i>lsof</i> process.
+</dd><dd>When available, the <b>u</b> function directs <i>lsof</i> to read the device cache file at the default or specified path, if possible, and to rebuild it, if necessary. This is the default device cache file function when no <b>-D</b> option has been specified.
+</dd><dt><b>+|-e</b><i> s</i>
+</dt><dd>exempts the file system whose path name is <i>s</i> from being subjected to kernel function calls that might block. The <b>+e</b> option exempts <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2), <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2) and most <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2) kernel function calls. The <b>-e</b> option exempts only <i><a HREF="/docs/linux/man/2-stat/">stat</a>(2)</i> and <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2) kernel function calls. Multiple file systems may be specified with separate <b>+|-e</b> specifications and each may have <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2) calls exempted or not.
+</dd><dd>This option is currently implemented only for Linux.
+</dd><dd><b>CAUTION:</b> this option can easily be mis-applied to other than the file system of interest, because it uses path name rather than the more reliable device and inode numbers. (Device and inode numbers are acquired via the potentially blocking <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) kernel call and are thus not available, but see the <b>+|-m</b><i> m</i> option as a possible alternative way to supply device numbers.) <b>Use this option with great care and fully specify the path name of the file system to be exempted.</b>
+</dd><dd>When open files on exempted file systems are reported, it may not be possible to obtain all their information. Therefore, some information columns will be blank, the characters ``UNKN'' preface the values in the TYPE column, and the applicable exemption option is added in parentheses to the end of the NAME column. (Some device number information might be made available via the <b>+|-m</b><i> m</i> option.)
+</dd><dt><b>+|-E</b>
+</dt><dd><b>+E</b> specifies that Linux pipe, Linux UNIX socket and Linux pseudoterminal files should be displayed with endpoint information and the files of the endpoints should also be displayed. Note: UNIX socket file endpoint information is only available when the compile flags line of <b>-v</b> output contains HASUXSOCKEPT, and psudoterminal endpoint information is only available when the compile flags line contains HASPTYEPT.
+</dd><dd>Pipe endpoint information is displayed in the NAME column in the form ``<i>PID,cmd,FDmode</i>'', where <i>PID</i> is the endpoint process ID; <i>cmd</i> is the endpoint process command; <i>FD</i> is the endpoint file's descriptor; and <i>mode</i> is the endpoint file's access mode.
+</dd><dd>Pseudoterminal endpoint information is displayed in the NAME column as ``-&gt;/dev/pts<i>min</i>&nbsp;<i>PID,cmd,FDmode</i>'' or ``<i>PID,cmd,FDmode</i>''. The first form is for a master device; the second, for a slave device. <i>min</i> is a slave device's minor device number; and <i>PID, cmd, FD</i> and <i>mode</i> are the same as with pipe endpoint information. Note: psudoterminal endpoint information is only available when the compile flags line of <b>-V</b> output contains HASPTYEPT.
+</dd><dd>UNIX socket file endpoint information is displayed in the NAME column in the form 
  ``type=<i>TYPE</i>&nbsp;-&gt;INO=<i>INODE</i>&nbsp;<i>PID,cmd,FDmode</i>'', where <i>TYPE</i> is the socket type; <i>INODE</i> is the i-node number of the connected socket; and <i>PID, cmd, FD</i> and <i>mode</i> are the same as with pipe endpoint information. Note: UNIX socket file endpoint information is available only when the compile flags line of <b>-v</b> output contains HASUXSOCKEPT.
-<dd>Multiple occurrences of this information can appear in a file's NAME column.
-<dd><b>-E</b> specfies that Linux pipe and Linux UNIX socket files should be displayed with endpoint information, but not the files of the endpoints.
-<dt><b>+|-f [cfgGn]</b>
-<dd><b>f</b> by itself clarifies how path name arguments are to be interpreted. When followed by <b>c</b>, <b>f</b>, <b>g</b>, <b>G</b>, or <b>n</b> in any combination it specifies that the listing of kernel file structure information is to be enabled (`+') or inhibited (`-').
-<dd>Normally a path name argument is taken to be a file system name if it matches a mounted-on directory name reported by <i><a HREF="/docs/linux/man/8-mount/">mount</a></i>(8), or if it represents a block device, named in the <i>mount</i> output and associated with a mounted directory name. When <b>+f</b> is specified, all path name arguments will be taken to be file system names, and <i>lsof</i> will complain if any are not. This can be useful, for example, when the file system name (mounted-on device) isn't a block device. This happens for some CD-ROM file systems.
-<dd>When <b>-f</b> is specified by itself, all path name arguments will be taken to be simple files. Thus, for example, the ``<b>-f</b>&nbsp;-- /'' arguments direct lsof to search for open files with a `/' path name, not all open files in the `/' (root) file system.
-<dd>Be careful to make sure <b>+f</b> and <b>-f</b> are properly terminated and aren't followed by a character (e.g., of the file or file system name) that might be taken as a parameter. For example, use ``--'' after <b>+f</b> and <b>-f</b> as in these examples.
-<dd><pre> $ lsof +f -- /file/system/name
- $ lsof -f -- /file/name</pre><dd>The listing of information from kernel file structures, requested with the <b>+f [cfgGn]</b> option form, is normally inhibited, and is not available in whole or part for some dialects - e.g., /proc-based Linux kernels below 2.6.22. When the prefix to <b>f</b> is a plus sign (`+'), these characters request file structure information:
-<dd><pre> <b>c</b> file structure use count (not Linux)
+</dd><dd>Multiple occurrences of this information can appear in a file's NAME column.
+</dd><dd><b>-E</b> specfies that Linux pipe and Linux UNIX socket files should be displayed with endpoint information, but not the files of the endpoints.
+</dd><dt><b>+|-f [cfgGn]</b>
+</dt><dd><b>f</b> by itself clarifies how path name arguments are to be interpreted. When followed by <b>c</b>, <b>f</b>, <b>g</b>, <b>G</b>, or <b>n</b> in any combination it specifies that the listing of kernel file structure information is to be enabled (`+') or inhibited (`-').
+</dd><dd>Normally a path name argument is taken to be a file system name if it matches a mounted-on directory name reported by <i><a HREF="/docs/linux/man/8-mount/">mount</a></i>(8), or if it represents a block device, named in the <i>mount</i> output and associated with a mounted directory name. When <b>+f</b> is specified, all path name arguments will be taken to be file system names, and <i>lsof</i> will complain if any are not. This can be useful, for example, when the file system name (mounted-on device) isn't a block device. This happens for some CD-ROM file systems.
+</dd><dd>When <b>-f</b> is specified by itself, all path name arguments will be taken to be simple files. Thus, for example, the ``<b>-f</b>&nbsp;-- /'' arguments direct lsof to search for open files with a `/' path name, not all open files in the `/' (root) file system.
+</dd><dd>Be careful to make sure <b>+f</b> and <b>-f</b> are properly terminated and aren't followed by a character (e.g., of the file or file system name) that might be taken as a parameter. For example, use ``--'' after <b>+f</b> and <b>-f</b> as in these examples.
+</dd><dd><pre> $ lsof +f -- /file/system/name
+ $ lsof -f -- /file/name</pre></dd><dd>The listing of information from kernel file structures, requested with the <b>+f [cfgGn]</b> option form, is normally inhibited, and is not available in whole or part for some dialects - e.g., /proc-based Linux kernels below 2.6.22. When the prefix to <b>f</b> is a plus sign (`+'), these characters request file structure information:
+</dd><dd><pre> <b>c</b> file structure use count (not Linux)
  <b>f</b> file structure address (not Linux)
  <b>g</b> file flag abbreviations (Linux 2.6.22 and up)
  <b>G</b> file flags in hexadecimal (Linux 2.6.22 and up)
- <b>n</b> file structure node address (not Linux)</pre><dd>When the prefix is minus (`-') the same characters disable the listing of the indicated values.
-<dd>File structure addresses, use counts, flags, and node addresses may be used to detect more readily identical files inherited by child processes and identical files in use by different processes. <i>Lsof</i> column output can be sorted by output columns holding the values and listed to identify identical file use, or <i>lsof</i> field output can be parsed by an AWK or Perl post-filter script, or by a C program.
-<dt><b>-F</b><i> f</i>
-<dd>specifies a character list, <i>f</i>, that selects the fields to be output for processing by another program, and the character that terminates each output field. Each field to be output is specified with a single character in <i>f</i>. The field terminator defaults to NL, but may be changed to NUL (000). See the <b>OUTPUT FOR OTHER PROGRAMS</b> section for a description of the field identification characters and the field output process.
-<dd>When the field selection character list is empty, all standard fields are selected (except the raw device field, security context and zone field for compatibility reasons) and the NL field terminator is used.
-<dd>When the field selection character list contains only a zero (`0'), all fields are selected (except the raw device field for compatibility reasons) and the NUL terminator character is used.
-<dd>Other combinations of fields and their associated field terminator character must be set with explicit entries in <i>f</i>, as described in the <b>OUTPUT FOR OTHER PROGRAMS</b> section.
-<dd>When a field selection character identifies an item <i>lsof</i> does not normally list - e.g., PPID, selected with <b>-R</b> - specification of the field character - e.g., ``<b>-FR</b>'' - also selects the listing of the item.
-<dd>When the field selection character list contains the single character `?', <i>lsof</i> will display a help list of the field identification characters. (Escape the `?' character as your shell requires.)
-<dt><b>-g</b><i> [s]</i>
-<dd>excludes or selects the listing of files for the processes whose optional process group IDentification (PGID) numbers are in the comma-separated set <i>s</i> - e.g., ``123'' or ``123,^456''. (There should be no spaces in the set.)
-<dd>PGID numbers that begin with `^' (negation) represent exclusions.
-<dd>Multiple PGID numbers are joined in a single ORed set before participating in AND option selection. However, PGID exclusions are applied without ORing or ANDing and take effect before other selection criteria are applied.
-<dd>The <b>-g</b> option also enables the output display of PGID numbers. When specified without a PGID set that's all it does.
-<dt><b>-i</b><i> [i]</i>
-<dd>selects the listing of files any of whose Internet address matches the address specified in <i>i</i>. If no address is specified, this option selects the listing of all Internet and x.25 (HP-UX) network files.
-<dd>If <b>-i</b><i>4</i> or <b>-i</b><i>6</i> is specified with no following address, only files of the indicated IP version, IPv4 or IPv6, are displayed. (An IPv6 specification may be used only if the dialects supports IPv6, as indicated by ``[46]'' and ``IPv[46]'' in <i>lsof's</i> <b>-h</b> or <b>-?</b> output.) Sequentially specifying <b>-i</b>4, followed by <b>-i</b>6 is the same as specifying <b>-i</b>, and vice-versa. Specifying <b>-i</b>4, or <b>-i</b>6 after <b>-i</b> is the same as specifying <b>-i</b>4 or <b>-i</b>6 by itself.
-<dd>Multiple addresses (up to a limit of 100) may be specified with multiple <b>-i</b> options. (A port number or service name range is counted as one address.) They are joined in a single ORed set before participating in AND option selection.
-<dd>An Internet address is specified in the form (Items in square brackets are optional.):
-<dd>[<i>46</i>][<i>protocol</i>][@<i>hostname</i>|<i>hostaddr</i>][:<i>service</i>|<i>port</i>]
-<dd>where: <pre><br>
+ <b>n</b> file structure node address (not Linux)</pre></dd><dd>When the prefix is minus (`-') the same characters disable the listing of the indicated values.
+</dd><dd>File structure addresses, use counts, flags, and node addresses may be used to detect more readily identical files inherited by child processes and identical files in use by different processes. <i>Lsof</i> column output can be sorted by output columns holding the values and listed to identify identical file use, or <i>lsof</i> field output can be parsed by an AWK or Perl post-filter script, or by a C program.
+</dd><dt><b>-F</b><i> f</i>
+</dt><dd>specifies a character list, <i>f</i>, that selects the fields to be output for processing by another program, and the character that terminates each output field. Each field to be output is specified with a single character in <i>f</i>. The field terminator defaults to NL, but may be changed to NUL (000). See the <b>OUTPUT FOR OTHER PROGRAMS</b> section for a description of the field identification characters and the field output process.
+</dd><dd>When the field selection character list is empty, all standard fields are selected (except the raw device field, security context and zone field for compatibility reasons) and the NL field terminator is used.
+</dd><dd>When the field selection character list contains only a zero (`0'), all fields are selected (except the raw device field for compatibility reasons) and the NUL terminator character is used.
+</dd><dd>Other combinations of fields and their associated field terminator character must be set with explicit entries in <i>f</i>, as described in the <b>OUTPUT FOR OTHER PROGRAMS</b> section.
+</dd><dd>When a field selection character identifies an item <i>lsof</i> does not normally list - e.g., PPID, selected with <b>-R</b> - specification of the field character - e.g., ``<b>-FR</b>'' - also selects the listing of the item.
+</dd><dd>When the field selection character list contains the single character `?', <i>lsof</i> will display a help list of the field identification characters. (Escape the `?' character as your shell requires.)
+</dd><dt><b>-g</b><i> [s]</i>
+</dt><dd>excludes or selects the listing of files for the processes whose optional process group IDentification (PGID) numbers are in the comma-separated set <i>s</i> - e.g., ``123'' or ``123,^456''. (There should be no spaces in the set.)
+</dd><dd>PGID numbers that begin with `^' (negation) represent exclusions.
+</dd><dd>Multiple PGID numbers are joined in a single ORed set before participating in AND option selection. However, PGID exclusions are applied without ORing or ANDing and take effect before other selection criteria are applied.
+</dd><dd>The <b>-g</b> option also enables the output display of PGID numbers. When specified without a PGID set that's all it does.
+</dd><dt><b>-i</b><i> [i]</i>
+</dt><dd>selects the listing of files any of whose Internet address matches the address specified in <i>i</i>. If no address is specified, this option selects the listing of all Internet and x.25 (HP-UX) network files.
+</dd><dd>If <b>-i</b><i>4</i> or <b>-i</b><i>6</i> is specified with no following address, only files of the indicated IP version, IPv4 or IPv6, are displayed. (An IPv6 specification may be used only if the dialects supports IPv6, as indicated by ``[46]'' and ``IPv[46]'' in <i>lsof's</i> <b>-h</b> or <b>-?</b> output.) Sequentially specifying <b>-i</b>4, followed by <b>-i</b>6 is the same as specifying <b>-i</b>, and vice-versa. Specifying <b>-i</b>4, or <b>-i</b>6 after <b>-i</b> is the same as specifying <b>-i</b>4 or <b>-i</b>6 by itself.
+</dd><dd>Multiple addresses (up to a limit of 100) may be specified with multiple <b>-i</b> options. (A port number or service name range is counted as one address.) They are joined in a single ORed set before participating in AND option selection.
+</dd><dd>An Internet address is specified in the form (Items in square brackets are optional.):
+</dd><dd>[<i>46</i>][<i>protocol</i>][@<i>hostname</i>|<i>hostaddr</i>][:<i>service</i>|<i>port</i>]
+</dd><dd>where: <pre><br>
  <i>46</i> specifies the IP version, IPv4 or IPv6
 <br>
  that applies to the following address.
@@ -198,11 +198,11 @@ In the absence of any options, <i>lsof</i> lists all open files belonging to all
  <i>service</i> is an <i>/etc/services</i> name - e.g., <b>smtp</b> -
  or a list of them.
 <br>
- <i>port</i> is a port number, or a list of them.</pre><dd>IPv6 options may be used only if the UNIX dialect supports IPv6. To see if the dialect supports IPv6, run <i>lsof</i> and specify the <b>-h</b> or <b>-?</b> (help) option. If the displayed description of the <b>-i</b> option contains ``[46]'' and ``IPv[46]'', IPv6 is supported.
-<dd>IPv4 host names and addresses may not be specified if network file selection is limited to IPv6 with <b>-i</b> 6. IPv6 host names and addresses may not be specified if network file selection is limited to IPv4 with <b>-i</b> 4. When an open IPv4 network file's address is mapped in an IPv6 address, the open file's type will be IPv6, not IPv4, and its display will be selected by '6', not '4'.
-<dd>At least one address component - <b>4,</b> <b>6,</b> <i>protocol</i>, <i>hostname</i>, <i>hostaddr</i>, or <i>service</i> - must be supplied. The `@' character, leading the host specification, is always required; as is the `:', leading the port specification. Specify either <i>hostname</i> or <i>hostaddr</i>. Specify either <i>service</i> name list or <i>port</i> number list. If a <i>service</i> name list is specified, the <i>protocol</i> may also need to be specified if the TCP, UDP and UDPLITE port numbers for the service name are different. Use any case - lower or upper - for <i>protocol</i>.
-<dd><i>Service</i> names and <i>port</i> numbers may be combined in a list whose entries are separated by commas and whose numeric range entries are separated by minus signs. There may be no embedded spaces, and all service names must belong to the specified <i>protocol</i>. Since service names may contain embedded minus signs, the starting entry of a range can't be a service name; it can be a port number, however.
-<dd>Here are some sample addresses: <pre><br>
+ <i>port</i> is a port number, or a list of them.</pre></dd><dd>IPv6 options may be used only if the UNIX dialect supports IPv6. To see if the dialect supports IPv6, run <i>lsof</i> and specify the <b>-h</b> or <b>-?</b> (help) option. If the displayed description of the <b>-i</b> option contains ``[46]'' and ``IPv[46]'', IPv6 is supported.
+</dd><dd>IPv4 host names and addresses may not be specified if network file selection is limited to IPv6 with <b>-i</b> 6. IPv6 host names and addresses may not be specified if network file selection is limited to IPv4 with <b>-i</b> 4. When an open IPv4 network file's address is mapped in an IPv6 address, the open file's type will be IPv6, not IPv4, and its display will be selected by '6', not '4'.
+</dd><dd>At least one address component - <b>4,</b> <b>6,</b> <i>protocol</i>, <i>hostname</i>, <i>hostaddr</i>, or <i>service</i> - must be supplied. The `@' character, leading the host specification, is always required; as is the `:', leading the port specification. Specify either <i>hostname</i> or <i>hostaddr</i>. Specify either <i>service</i> name list or <i>port</i> number list. If a <i>service</i> name list is specified, the <i>protocol</i> may also need to be specified if the TCP, UDP and UDPLITE port numbers for the service name are different. Use any case - lower or upper - for <i>protocol</i>.
+</dd><dd><i>Service</i> names and <i>port</i> numbers may be combined in a list whose entries are separated by commas and whose numeric range entries are separated by minus signs. There may be no embedded spaces, and all service names must belong to the specified <i>protocol</i>. Since service names may contain embedded minus signs, the starting entry of a range can't be a service name; it can be a port number, however.
+</dd><dd>Here are some sample addresses: <pre><br>
  -i6 - IPv6 only
 <br>
  TCP:25 - TCP and port 25
@@ -221,110 +221,110 @@ In the absence of any options, <i>lsof</i> lists all open files belonging to all
 <br>
  tcp@bar:1-smtp - TCP, ports 1 through <i>smtp</i>, host bar
 <br>
- :time - either TCP, UDP or UDPLITE time service port</pre><dt><b>-K</b><i> k</i>
-<dd>selects the listing of tasks (threads) of processes, on dialects where task (thread) reporting is supported. (If help output - i.e., the output of the <b>-h</b> or <b>-?</b> options - shows this option, then task (thread) reporting is supported by the dialect.)
-<dd>If <b>-K</b> is followed by a value, <i>k</i>, it must be ``i''. That causes <i>lsof</i> to ignore tasks, particularly in the default, list-everything case when no other options are specified.
-<dd>When <b>-K</b> and <b>-a</b> are both specified on Linux, and the tasks of a main process are selected by other options, the main process will also be listed as though it were a task, but without a task ID. (See the description of the TID column in the <b>OUTPUT</b> section.)
-<dd>Where the FreeBSD version supports threads, all threads will be listed with their IDs.
-<dd>In general threads and tasks inherit the files of the caller, but may close some and open others, so <i>lsof</i> always reports all the open files of threads and tasks.
-<dt><b>-k</b><i> k</i>
-<dd>specifies a kernel name list file, <i>k</i>, in place of /vmunix, /mach, etc. <b>-k</b> is not available under AIX on the IBM RISC/System 6000.
-<dt><b>-l</b>
-<dd>inhibits the conversion of user ID numbers to login names. It is also useful when login name lookup is working improperly or slowly.
-<dt><b>+|-L</b><i> [l]</i>
-<dd>enables (`+') or disables (`-') the listing of file link counts, where they are available - e.g., they aren't available for sockets, or most FIFOs and pipes.
-<dd>When <b>+L</b> is specified without a following number, all link counts will be listed. When <b>-L</b> is specified (the default), no link counts will be listed.
-<dd>When <b>+L</b> is followed by a number, only files having a link count less than that number will be listed. (No number may follow <b>-L</b>.) A specification of the form ``<b>+L1</b>'' will select open files that have been unlinked. A specification of the form ``<b>+aL1&nbsp;</b><i>&lt;file_system&gt;</i>'' will select unlinked open files on the specified file system.
-<dd>For other link count comparisons, use field output (<b>-F</b>) and a post-processing script or program.
-<dt><b>+|-m</b><i> m</i>
-<dd>specifies an alternate kernel memory file or activates mount table supplement processing.
-<dd>The option form <b>-m</b><i> m</i> specifies a kernel memory file, <i>m</i>, in place of <i>/dev/kmem</i> or <i>/dev/mem</i> - e.g., a crash dump file.
-<dd>The option form <b>+m</b> requests that a mount supplement file be written to the standard output file. All other options are silently ignored.
-<dd>There will be a line in the mount supplement file for each mounted file system, containing the mounted file system directory, followed by a single space, followed by the device number in hexadecimal &quot;0x&quot; format - e.g.,
-<dd><pre> / 0x801</pre><dd><i>Lsof</i> can use the mount supplement file to get device numbers for file systems when it can't get them via <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) or <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2).
-<dd>The option form <b>+m</b><i> m</i> identifies <i>m</i> as a mount supplement file.
-<dd>Note: the <b>+m</b> and <b>+m</b><i> m</i> options are not available for all supported dialects. Check the output of <i>lsof's</i> <b>-h</b> or <b>-?</b> options to see if the <b>+m</b> and <b>+m</b><i> m</i> options are available.
-<dt><b>+|-M</b>
-<dd>Enables (<b>+</b>) or disables (<b>-</b>) the reporting of portmapper registrations for local TCP, UDP and UDPLITE ports, where port mapping is supported. (See the last paragraph of this option description for information about where portmapper registration reporting is supported.)
-<dd>The default reporting mode is set by the <i>lsof</i> builder with the HASPMAPENABLED #define in the dialect's machine.h header file; <i>lsof</i> is distributed with the HASPMAPENABLED #define deactivated, so portmapper reporting is disabled by default and must be requested with <b>+M</b>. Specifying <i>lsof's</i> <b>-h</b> or <b>-?</b> option will report the default mode. Disabling portmapper registration when it is already disabled or enabling it when already enabled is acceptable. When portmapper registration reporting is enabled, <i>lsof</i> displays the portmapper registration (if any) for local TCP, UDP or UDPLITE ports in square brackets immediately following the port numbers or service names - e.g., ``:1234[name]'' or ``:name[100083]''. The registration information may be a name or number, depending on what the registering program supplied to the portmapper when it registered the port.
-<dd>When portmapper registration reporting is enabled, <i>lsof</i> may run a little more slowly or even become blocked when access to the portmapper becomes congested or stopped. Reverse the reporting mode to determine if portmapper registration reporting is slowing or blocking <i>lsof</i>.
-<dd>For purposes of portmapper registration reporting <i>lsof</i> considers a TCP, UDP or UDPLITE port local if: it is found in the local part of its containing kernel structure; or if it is located in the foreign part of its containing kernel structure and the local and foreign Internet addresses are the same; or if it is located in the foreign part of its containing kernel structure and the foreign Internet address is INADDR_LOOPBACK (127.0.0.1). This rule may make <i>lsof</i> ignore some foreign ports on machines with multiple interfaces when the foreign Internet address is on a different interface from the local one.
-<dd>See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for further discussion of portmapper registration reporting issues.
-<dd>Portmapper registration reporting is supported only on dialects that have RPC header files. (Some Linux distributions with GlibC 2.14 do not have them.) When portmapper registration reporting is supported, the <b>-h</b> or <b>-?</b> help output will show the <b>+|-M</b> option.
-<dt><b>-n</b>
-<dd>inhibits the conversion of network numbers to host names for network files. Inhibiting conversion may make <i>lsof</i> run faster. It is also useful when host name lookup is not working properly.
-<dt><b>-N</b>
-<dd>selects the listing of NFS files.
-<dt><b>-o</b>
-<dd>directs <i>lsof</i> to display file offset at all times. It causes the SIZE/OFF output column title to be changed to OFFSET. Note: on some UNIX dialects <i>lsof</i> can't obtain accurate or consistent file offset information from its kernel data sources, sometimes just for particular kinds of files (e.g., socket files.) Consult the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information.
-<dd>The <b>-o</b> and <b>-s</b> options are mutually exclusive; they can't both be specified. When neither is specified, <i>lsof</i> displays whatever value - size or offset - is appropriate and available for the type of the file.
-<dt><b>-o</b><i> o</i>
-<dd>defines the number of decimal digits (<i>o</i>) to be printed after the ``0t'' for a file offset before the form is switched to ``0x...''. An <i>o</i> value of zero (unlimited) directs <i>lsof</i> to use the ``0t'' form for all offset output.
-<dd>This option does NOT direct <i>lsof</i> to display offset at all times; specify <b>-o</b> (without a trailing number) to do that. <b>-o</b><i> o</i> only specifies the number of digits after ``0t'' in either mixed size and offset or offset-only output. Thus, for example, to direct <i>lsof</i> to display offset at all times with a decimal digit count of 10, use:
-<dd><pre> -o -o 10
+ :time - either TCP, UDP or UDPLITE time service port</pre></dd><dt><b>-K</b><i> k</i>
+</dt><dd>selects the listing of tasks (threads) of processes, on dialects where task (thread) reporting is supported. (If help output - i.e., the output of the <b>-h</b> or <b>-?</b> options - shows this option, then task (thread) reporting is supported by the dialect.)
+</dd><dd>If <b>-K</b> is followed by a value, <i>k</i>, it must be ``i''. That causes <i>lsof</i> to ignore tasks, particularly in the default, list-everything case when no other options are specified.
+</dd><dd>When <b>-K</b> and <b>-a</b> are both specified on Linux, and the tasks of a main process are selected by other options, the main process will also be listed as though it were a task, but without a task ID. (See the description of the TID column in the <b>OUTPUT</b> section.)
+</dd><dd>Where the FreeBSD version supports threads, all threads will be listed with their IDs.
+</dd><dd>In general threads and tasks inherit the files of the caller, but may close some and open others, so <i>lsof</i> always reports all the open files of threads and tasks.
+</dd><dt><b>-k</b><i> k</i>
+</dt><dd>specifies a kernel name list file, <i>k</i>, in place of /vmunix, /mach, etc. <b>-k</b> is not available under AIX on the IBM RISC/System 6000.
+</dd><dt><b>-l</b>
+</dt><dd>inhibits the conversion of user ID numbers to login names. It is also useful when login name lookup is working improperly or slowly.
+</dd><dt><b>+|-L</b><i> [l]</i>
+</dt><dd>enables (`+') or disables (`-') the listing of file link counts, where they are available - e.g., they aren't available for sockets, or most FIFOs and pipes.
+</dd><dd>When <b>+L</b> is specified without a following number, all link counts will be listed. When <b>-L</b> is specified (the default), no link counts will be listed.
+</dd><dd>When <b>+L</b> is followed by a number, only files having a link count less than that number will be listed. (No number may follow <b>-L</b>.) A specification of the form ``<b>+L1</b>'' will select open files that have been unlinked. A specification of the form ``<b>+aL1&nbsp;</b><i>&lt;file_system&gt;</i>'' will select unlinked open files on the specified file system.
+</dd><dd>For other link count comparisons, use field output (<b>-F</b>) and a post-processing script or program.
+</dd><dt><b>+|-m</b><i> m</i>
+</dt><dd>specifies an alternate kernel memory file or activates mount table supplement processing.
+</dd><dd>The option form <b>-m</b><i> m</i> specifies a kernel memory file, <i>m</i>, in place of <i>/dev/kmem</i> or <i>/dev/mem</i> - e.g., a crash dump file.
+</dd><dd>The option form <b>+m</b> requests that a mount supplement file be written to the standard output file. All other options are silently ignored.
+</dd><dd>There will be a line in the mount supplement file for each mounted file system, containing the mounted file system directory, followed by a single space, followed by the device number in hexadecimal &quot;0x&quot; format - e.g.,
+</dd><dd><pre> / 0x801</pre></dd><dd><i>Lsof</i> can use the mount supplement file to get device numbers for file systems when it can't get them via <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) or <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2).
+</dd><dd>The option form <b>+m</b><i> m</i> identifies <i>m</i> as a mount supplement file.
+</dd><dd>Note: the <b>+m</b> and <b>+m</b><i> m</i> options are not available for all supported dialects. Check the output of <i>lsof's</i> <b>-h</b> or <b>-?</b> options to see if the <b>+m</b> and <b>+m</b><i> m</i> options are available.
+</dd><dt><b>+|-M</b>
+</dt><dd>Enables (<b>+</b>) or disables (<b>-</b>) the reporting of portmapper registrations for local TCP, UDP and UDPLITE ports, where port mapping is supported. (See the last paragraph of this option description for information about where portmapper registration reporting is supported.)
+</dd><dd>The default reporting mode is set by the <i>lsof</i> builder with the HASPMAPENABLED #define in the dialect's machine.h header file; <i>lsof</i> is distributed with the HASPMAPENABLED #define deactivated, so portmapper reporting is disabled by default and must be requested with <b>+M</b>. Specifying <i>lsof's</i> <b>-h</b> or <b>-?</b> option will report the default mode. Disabling portmapper registration when it is already disabled or enabling it when already enabled is acceptable. When portmapper registration reporting is enabled, <i>lsof</i> displays the portmapper registration (if any) for local TCP, UDP or UDPLITE ports in square brackets immediately following the port numbers or service names - e.g., ``:1234[name]'' or ``:name[100083]''. The registration information may be a name or number, depending on what the registering program supplied to the portmapper when it registered the port.
+</dd><dd>When portmapper registration reporting is enabled, <i>lsof</i> may run a little more slowly or even become blocked when access to the portmapper becomes congested or stopped. Reverse the reporting mode to determine if portmapper registration reporting is slowing or blocking <i>lsof</i>.
+</dd><dd>For purposes of portmapper registration reporting <i>lsof</i> considers a TCP, UDP or UDPLITE port local if: it is found in the local part of its containing kernel structure; or if it is located in the foreign part of its containing kernel structure and the local and foreign Internet addresses are the same; or if it is located in the foreign part of its containing kernel structure and the foreign Internet address is INADDR_LOOPBACK (127.0.0.1). This rule may make <i>lsof</i> ignore some foreign ports on machines with multiple interfaces when the foreign Internet address is on a different interface from the local one.
+</dd><dd>See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for further discussion of portmapper registration reporting issues.
+</dd><dd>Portmapper registration reporting is supported only on dialects that have RPC header files. (Some Linux distributions with GlibC 2.14 do not have them.) When portmapper registration reporting is supported, the <b>-h</b> or <b>-?</b> help output will show the <b>+|-M</b> option.
+</dd><dt><b>-n</b>
+</dt><dd>inhibits the conversion of network numbers to host names for network files. Inhibiting conversion may make <i>lsof</i> run faster. It is also useful when host name lookup is not working properly.
+</dd><dt><b>-N</b>
+</dt><dd>selects the listing of NFS files.
+</dd><dt><b>-o</b>
+</dt><dd>directs <i>lsof</i> to display file offset at all times. It causes the SIZE/OFF output column title to be changed to OFFSET. Note: on some UNIX dialects <i>lsof</i> can't obtain accurate or consistent file offset information from its kernel data sources, sometimes just for particular kinds of files (e.g., socket files.) Consult the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information.
+</dd><dd>The <b>-o</b> and <b>-s</b> options are mutually exclusive; they can't both be specified. When neither is specified, <i>lsof</i> displays whatever value - size or offset - is appropriate and available for the type of the file.
+</dd><dt><b>-o</b><i> o</i>
+</dt><dd>defines the number of decimal digits (<i>o</i>) to be printed after the ``0t'' for a file offset before the form is switched to ``0x...''. An <i>o</i> value of zero (unlimited) directs <i>lsof</i> to use the ``0t'' form for all offset output.
+</dd><dd>This option does NOT direct <i>lsof</i> to display offset at all times; specify <b>-o</b> (without a trailing number) to do that. <b>-o</b><i> o</i> only specifies the number of digits after ``0t'' in either mixed size and offset or offset-only output. Thus, for example, to direct <i>lsof</i> to display offset at all times with a decimal digit count of 10, use:
+</dd><dd><pre> -o -o 10
 or
- -oo10</pre><dd>The default number of digits allowed after ``0t'' is normally 8, but may have been changed by the lsof builder. Consult the description of the <b>-o</b><i> o</i> option in the output of the <b>-h</b> or <b>-?</b> option to determine the default that is in effect.
-<dt><b>-O</b>
-<dd>directs <i>lsof</i> to bypass the strategy it uses to avoid being blocked by some kernel operations - i.e., doing them in forked child processes. See the <b>BLOCKS AND TIMEOUTS</b> and <b>AVOIDING KERNEL BLOCKS</b> sections for more information on kernel operations that may block <i>lsof</i>.
-<dd>While use of this option will reduce <i>lsof</i> startup overhead, it may also cause <i>lsof</i> to hang when the kernel doesn't respond to a function. Use this option cautiously.
-<dt><b>-p</b><i> s</i>
-<dd>excludes or selects the listing of files for the processes whose optional process IDentification (PID) numbers are in the comma-separated set <i>s</i> - e.g., ``123'' or ``123,^456''. (There should be no spaces in the set.)
-<dd>PID numbers that begin with `^' (negation) represent exclusions.
-<dd>Multiple process ID numbers are joined in a single ORed set before participating in AND option selection. However, PID exclusions are applied without ORing or ANDing and take effect before other selection criteria are applied.
-<dt><b>-P</b>
-<dd>inhibits the conversion of port numbers to port names for network files. Inhibiting the conversion may make <i>lsof</i> run a little faster. It is also useful when port name lookup is not working properly.
-<dt><b>+|-r</b><i> [t[m&lt;fmt&gt;]]</i>
-<dd>puts <i>lsof</i> in repeat mode. There <i>lsof</i> lists open files as selected by other options, delays <i>t</i> seconds (default fifteen), then repeats the listing, delaying and listing repetitively until stopped by a condition defined by the prefix to the option.
-<dd>If the prefix is a `-', repeat mode is endless. <i>Lsof</i> must be terminated with an interrupt or quit signal.
-<dd>If the prefix is `+', repeat mode will end the first cycle no open files are listed - and of course when <i>lsof</i> is stopped with an interrupt or quit signal. When repeat mode ends because no files are listed, the process exit code will be zero if any open files were ever listed; one, if none were ever listed.
-<dd><i>Lsof</i> marks the end of each listing: if field output is in progress (the <b>-F</b>, option has been specified), the default marker is `m'; otherwise the default marker is ``========''. The marker is followed by a NL character.
-<dd>The optional &quot;m&lt;fmt&gt;&quot; argument specifies a format for the marker line. The &lt;fmt&gt; characters following `m' are interpreted as a format specification to the <i><a HREF="/docs/linux/man/3-strftime/">strftime</a></i>(3) function, when both it and the <i><a HREF="/docs/linux/man/3-localtime/">localtime</a></i>(3) function are available in the dialect's C library. Consult the <i><a HREF="/docs/linux/man/3-strftime/">strftime</a></i>(3) documentation for what may appear in its format specification. Note that when field output is requested with the <b>-F</b> option, &lt;fmt&gt; cannot contain the NL format, ``%n''. Note also that when &lt;fmt&gt; contains spaces or other characters that affect the shell's interpretation of arguments, &lt;fmt&gt; must be quoted appropriately.
-<dd>Repeat mode reduces <i>lsof</i> startup overhead, so it is more efficient to use this mode than to call <i>lsof</i> repetitively from a shell script, for example.
-<dd>To use repeat mode most efficiently, accompany <b>+|-r</b> with specification of other <i>lsof</i> selection options, so the amount of kernel memory access <i>lsof</i> does will be kept to a minimum. Options that filter at the process level - e.g., <b>-c</b>, <b>-g</b>, <b>-p</b>, <b>-u</b> - are the most efficient selectors.
-<dd>Repeat mode is useful when coupled with field output (see the <b>-F</b>, option description) and a supervising <i>awk</i> or <i>Perl</i> script, or a C program.
-<dt><b>-R</b>
-<dd>directs lsof to list the Parent Process IDentification number in the PPID column.
-<dt><b>-s</b><i> [p:s]</i>
-<dd><b>s</b> alone directs <i>lsof</i> to display file size at all times. It causes the SIZE/OFF output column title to be changed to SIZE. If the file does not have a size, nothing is displayed.
-<dd>The optional <b>-s</b><i> p:s</i> form is available only for selected dialects, and only when the <b>-h</b> or <b>-?</b> help output lists it.
-<dd>When the optional form is available, the <b>s</b> may be followed by a protocol name (<i>p</i>), either TCP or UDP, a colon (`:') and a comma-separated protocol state name list, the option causes open TCP and UDP files to be excluded if their state name(s) are in the list (<i>s</i>) preceded by a `^'; or included if their name(s) are not preceded by a `^'.
-<dd>Dialects that support this option may support only one protocol. When an unsupported protocol is specified, a message will be displayed indicating state names for the protocol are unavailable.
-<dd>When an inclusion list is defined, only network files with state names in the list will be present in the <i>lsof</i> output. Thus, specifying one state name means that only network files with that lone state name will be listed.
-<dd>Case is unimportant in the protocol or state names, but there may be no spaces and the colon (`:') separating the protocol name (<i>p</i>) and the state name list (<i>s</i>) is required.
-<dd>If only TCP and UDP files are to be listed, as controlled by the specified exclusions and inclusions, the <b>-i</b> option must be specified, too. If only a single protocol's files are to be listed, add its name as an argument to the <b>-i</b> option.
-<dd>For example, to list only network files with TCP state LISTEN, use:
-<dd><pre> -iTCP -sTCP:LISTEN</pre><dd>Or, for example, to list network files with all UDP states except Idle, use:
-<dd><pre> -iUDP -sUDP:^Idle</pre><dd>State names vary with UNIX dialects, so it's not possible to provide a complete list. Some common TCP state names are: CLOSED, IDLE, BOUND, LISTEN, ESTABLISHED, SYN_SENT, SYN_RCDV, ESTABLISHED, CLOSE_WAIT, FIN_WAIT1, CLOSING, LAST_ACK, FIN_WAIT_2, and TIME_WAIT. Two common UDP state names are Unbound and Idle.
-<dd>See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information on how to use protocol state exclusion and inclusion, including examples.
-<dd>The <b>-o</b> (without a following decimal digit count) and <b>-s</b> option (without a following protocol and state name list) are mutually exclusive; they can't both be specified. When neither is specified, <i>lsof</i> displays whatever value - size or offset - is appropriate and available for the type of file.
-<dd>Since some types of files don't have true sizes - sockets, FIFOs, pipes, etc. - lsof displays for their sizes the content amounts in their associated kernel buffers, if possible.
-<dt><b>-S</b><i> [t]</i>
-<dd>specifies an optional time-out seconds value for kernel functions - <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2), <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2), and <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) - that might otherwise deadlock. The minimum for <i>t</i> is two; the default, fifteen; when no value is specified, the default is used.
-<dd>See the <b>BLOCKS AND TIMEOUTS</b> section for more information.
-<dt><b>-T</b><i> [t]</i>
-<dd>controls the reporting of some TCP/TPI information, also reported by <i>netstat</i>(1), following the network addresses. In normal output the information appears in parentheses, each item except TCP or TPI state name identified by a keyword, followed by `=', separated from others by a single space:
-<dd><pre> &lt;TCP or TPI state name&gt;
+ -oo10</pre></dd><dd>The default number of digits allowed after ``0t'' is normally 8, but may have been changed by the lsof builder. Consult the description of the <b>-o</b><i> o</i> option in the output of the <b>-h</b> or <b>-?</b> option to determine the default that is in effect.
+</dd><dt><b>-O</b>
+</dt><dd>directs <i>lsof</i> to bypass the strategy it uses to avoid being blocked by some kernel operations - i.e., doing them in forked child processes. See the <b>BLOCKS AND TIMEOUTS</b> and <b>AVOIDING KERNEL BLOCKS</b> sections for more information on kernel operations that may block <i>lsof</i>.
+</dd><dd>While use of this option will reduce <i>lsof</i> startup overhead, it may also cause <i>lsof</i> to hang when the kernel doesn't respond to a function. Use this option cautiously.
+</dd><dt><b>-p</b><i> s</i>
+</dt><dd>excludes or selects the listing of files for the processes whose optional process IDentification (PID) numbers are in the comma-separated set <i>s</i> - e.g., ``123'' or ``123,^456''. (There should be no spaces in the set.)
+</dd><dd>PID numbers that begin with `^' (negation) represent exclusions.
+</dd><dd>Multiple process ID numbers are joined in a single ORed set before participating in AND option selection. However, PID exclusions are applied without ORing or ANDing and take effect before other selection criteria are applied.
+</dd><dt><b>-P</b>
+</dt><dd>inhibits the conversion of port numbers to port names for network files. Inhibiting the conversion may make <i>lsof</i> run a little faster. It is also useful when port name lookup is not working properly.
+</dd><dt><b>+|-r</b><i> [t[m&lt;fmt&gt;]]</i>
+</dt><dd>puts <i>lsof</i> in repeat mode. There <i>lsof</i> lists open files as selected by other options, delays <i>t</i> seconds (default fifteen), then repeats the listing, delaying and listing repetitively until stopped by a condition defined by the prefix to the option.
+</dd><dd>If the prefix is a `-', repeat mode is endless. <i>Lsof</i> must be terminated with an interrupt or quit signal.
+</dd><dd>If the prefix is `+', repeat mode will end the first cycle no open files are listed - and of course when <i>lsof</i> is stopped with an interrupt or quit signal. When repeat mode ends because no files are listed, the process exit code will be zero if any open files were ever listed; one, if none were ever listed.
+</dd><dd><i>Lsof</i> marks the end of each listing: if field output is in progress (the <b>-F</b>, option has been specified), the default marker is `m'; otherwise the default marker is ``========''. The marker is followed by a NL character.
+</dd><dd>The optional &quot;m&lt;fmt&gt;&quot; argument specifies a format for the marker line. The &lt;fmt&gt; characters following `m' are interpreted as a format specification to the <i><a HREF="/docs/linux/man/3-strftime/">strftime</a></i>(3) function, when both it and the <i><a HREF="/docs/linux/man/3-localtime/">localtime</a></i>(3) function are available in the dialect's C library. Consult the <i><a HREF="/docs/linux/man/3-strftime/">strftime</a></i>(3) documentation for what may appear in its format specification. Note that when field output is requested with the <b>-F</b> option, &lt;fmt&gt; cannot contain the NL format, ``%n''. Note also that when &lt;fmt&gt; contains spaces or other characters that affect the shell's interpretation of arguments, &lt;fmt&gt; must be quoted appropriately.
+</dd><dd>Repeat mode reduces <i>lsof</i> startup overhead, so it is more efficient to use this mode than to call <i>lsof</i> repetitively from a shell script, for example.
+</dd><dd>To use repeat mode most efficiently, accompany <b>+|-r</b> with specification of other <i>lsof</i> selection options, so the amount of kernel memory access <i>lsof</i> does will be kept to a minimum. Options that filter at the process level - e.g., <b>-c</b>, <b>-g</b>, <b>-p</b>, <b>-u</b> - are the most efficient selectors.
+</dd><dd>Repeat mode is useful when coupled with field output (see the <b>-F</b>, option description) and a supervising <i>awk</i> or <i>Perl</i> script, or a C program.
+</dd><dt><b>-R</b>
+</dt><dd>directs lsof to list the Parent Process IDentification number in the PPID column.
+</dd><dt><b>-s</b><i> [p:s]</i>
+</dt><dd><b>s</b> alone directs <i>lsof</i> to display file size at all times. It causes the SIZE/OFF output column title to be changed to SIZE. If the file does not have a size, nothing is displayed.
+</dd><dd>The optional <b>-s</b><i> p:s</i> form is available only for selected dialects, and only when the <b>-h</b> or <b>-?</b> help output lists it.
+</dd><dd>When the optional form is available, the <b>s</b> may be followed by a protocol name (<i>p</i>), either TCP or UDP, a colon (`:') and a comma-separated protocol state name list, the option causes open TCP and UDP files to be excluded if their state name(s) are in the list (<i>s</i>) preceded by a `^'; or included if their name(s) are not preceded by a `^'.
+</dd><dd>Dialects that support this option may support only one protocol. When an unsupported protocol is specified, a message will be displayed indicating state names for the protocol are unavailable.
+</dd><dd>When an inclusion list is defined, only network files with state names in the list will be present in the <i>lsof</i> output. Thus, specifying one state name means that only network files with that lone state name will be listed.
+</dd><dd>Case is unimportant in the protocol or state names, but there may be no spaces and the colon (`:') separating the protocol name (<i>p</i>) and the state name list (<i>s</i>) is required.
+</dd><dd>If only TCP and UDP files are to be listed, as controlled by the specified exclusions and inclusions, the <b>-i</b> option must be specified, too. If only a single protocol's files are to be listed, add its name as an argument to the <b>-i</b> option.
+</dd><dd>For example, to list only network files with TCP state LISTEN, use:
+</dd><dd><pre> -iTCP -sTCP:LISTEN</pre></dd><dd>Or, for example, to list network files with all UDP states except Idle, use:
+</dd><dd><pre> -iUDP -sUDP:^Idle</pre></dd><dd>State names vary with UNIX dialects, so it's not possible to provide a complete list. Some common TCP state names are: CLOSED, IDLE, BOUND, LISTEN, ESTABLISHED, SYN_SENT, SYN_RCDV, ESTABLISHED, CLOSE_WAIT, FIN_WAIT1, CLOSING, LAST_ACK, FIN_WAIT_2, and TIME_WAIT. Two common UDP state names are Unbound and Idle.
+</dd><dd>See the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information on how to use protocol state exclusion and inclusion, including examples.
+</dd><dd>The <b>-o</b> (without a following decimal digit count) and <b>-s</b> option (without a following protocol and state name list) are mutually exclusive; they can't both be specified. When neither is specified, <i>lsof</i> displays whatever value - size or offset - is appropriate and available for the type of file.
+</dd><dd>Since some types of files don't have true sizes - sockets, FIFOs, pipes, etc. - lsof displays for their sizes the content amounts in their associated kernel buffers, if possible.
+</dd><dt><b>-S</b><i> [t]</i>
+</dt><dd>specifies an optional time-out seconds value for kernel functions - <i><a HREF="/docs/linux/man/2-lstat/">lstat</a></i>(2), <i><a HREF="/docs/linux/man/2-readlink/">readlink</a></i>(2), and <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) - that might otherwise deadlock. The minimum for <i>t</i> is two; the default, fifteen; when no value is specified, the default is used.
+</dd><dd>See the <b>BLOCKS AND TIMEOUTS</b> section for more information.
+</dd><dt><b>-T</b><i> [t]</i>
+</dt><dd>controls the reporting of some TCP/TPI information, also reported by <i>netstat</i>(1), following the network addresses. In normal output the information appears in parentheses, each item except TCP or TPI state name identified by a keyword, followed by `=', separated from others by a single space:
+</dd><dd><pre> &lt;TCP or TPI state name&gt;
  QR=&lt;read queue length&gt;
  QS=&lt;send queue length&gt;
  SO=&lt;socket options and values&gt;
  SS=&lt;socket states&gt;
  TF=&lt;TCP flags and values&gt;
  WR=&lt;window read length&gt;
- WW=&lt;window write length&gt;</pre><dd>Not all values are reported for all UNIX dialects. Items values (when available) are reported after the item name and '='.
-<dd>When the field output mode is in effect (See <b>OUTPUT FOR OTHER PROGRAMS</b>.) each item appears as a field with a `T' leading character.
-<dd><b>-T</b> with no following key characters disables TCP/TPI information reporting.
-<dd><b>-T</b> with following characters selects the reporting of specific TCP/TPI information:
-<dd><pre> <b>f</b> selects reporting of socket options,
+ WW=&lt;window write length&gt;</pre></dd><dd>Not all values are reported for all UNIX dialects. Items values (when available) are reported after the item name and '='.
+</dd><dd>When the field output mode is in effect (See <b>OUTPUT FOR OTHER PROGRAMS</b>.) each item appears as a field with a `T' leading character.
+</dd><dd><b>-T</b> with no following key characters disables TCP/TPI information reporting.
+</dd><dd><b>-T</b> with following characters selects the reporting of specific TCP/TPI information:
+</dd><dd><pre> <b>f</b> selects reporting of socket options,
  states and values, and TCP flags and
  values.
  <b>q</b> selects queue length reporting.
  <b>s</b> selects connection state reporting.
- <b>w</b> selects window size reporting.</pre><dd>Not all selections are enabled for some UNIX dialects. State may be selected for all dialects and is reported by default. The <b>-h</b> or <b>-?</b> help output for the <b>-T</b> option will show what selections may be used with the UNIX dialect.
-<dd>When <b>-T</b> is used to select information - i.e., it is followed by one or more selection characters - the displaying of state is disabled by default, and it must be explicitly selected again in the characters following <b>-T</b>. (In effect, then, the default is equivalent to <b>-Ts</b>.) For example, if queue lengths and state are desired, use <b>-Tqs</b>.
-<dd>Socket options, socket states, some socket values, TCP flags and one TCP value may be reported (when available in the UNIX dialect) in the form of the names that commonly appear after SO_, so_, SS_, TCP_ and TF_ in the dialect's header files - most often &lt;sys/socket.h&gt;, &lt;sys/socketvar.h&gt; and &lt;netinet/tcp_var.h&gt;. Consult those header files for the meaning of the flags, options, states and values.
-<dd>``SO='' precedes socket options and values; ``SS='', socket states; and ``TF='', TCP flags and values.
-<dd>If a flag or option has a value, the value will follow an '=' and the name -- e.g., ``SO=LINGER=5'', ``SO=QLIM=5'', ``TF=MSS=512''. The following seven values may be reported:
-<dd><pre> Name
+ <b>w</b> selects window size reporting.</pre></dd><dd>Not all selections are enabled for some UNIX dialects. State may be selected for all dialects and is reported by default. The <b>-h</b> or <b>-?</b> help output for the <b>-T</b> option will show what selections may be used with the UNIX dialect.
+</dd><dd>When <b>-T</b> is used to select information - i.e., it is followed by one or more selection characters - the displaying of state is disabled by default, and it must be explicitly selected again in the characters following <b>-T</b>. (In effect, then, the default is equivalent to <b>-Ts</b>.) For example, if queue lengths and state are desired, use <b>-Tqs</b>.
+</dd><dd>Socket options, socket states, some socket values, TCP flags and one TCP value may be reported (when available in the UNIX dialect) in the form of the names that commonly appear after SO_, so_, SS_, TCP_ and TF_ in the dialect's header files - most often &lt;sys/socket.h&gt;, &lt;sys/socketvar.h&gt; and &lt;netinet/tcp_var.h&gt;. Consult those header files for the meaning of the flags, options, states and values.
+</dd><dd>``SO='' precedes socket options and values; ``SS='', socket states; and ``TF='', TCP flags and values.
+</dd><dd>If a flag or option has a value, the value will follow an '=' and the name -- e.g., ``SO=LINGER=5'', ``SO=QLIM=5'', ``TF=MSS=512''. The following seven values may be reported:
+</dd><dd><pre> Name
  Reported Description (Common Symbol)
  KEEPALIVE keep alive time (SO_KEEPALIVE)
  LINGER linger time (SO_LINGER)
@@ -333,68 +333,68 @@ or
  QLEN established listen queue connections
  QLIM established listen queue limit
  RCVBUF receive buffer length (SO_RCVBUF)
- SNDBUF send buffer length (SO_SNDBUF)</pre><dd>Details on what socket options and values, socket states, and TCP flags and values may be displayed for particular UNIX dialects may be found in the answer to the ``Why doesn't lsof report socket options, socket states, and TCP flags and values for my dialect?'' and ``Why doesn't lsof report the partial listen queue connection count for my dialect?'' questions in the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.)
-<dt><b>-t</b>
-<dd>specifies that <i>lsof</i> should produce terse output with process identifiers only and no header - e.g., so that the output may be piped to <i><a HREF="/docs/linux/man/1-kill/">kill</a></i>(1). <b>-t</b> selects the <b>-w</b> option.
-<dt><b>-u</b><i> s</i>
-<dd>selects the listing of files for the user whose login names or user ID numbers are in the comma-separated set <i>s</i> - e.g., ``abe'', or ``548,root''. (There should be no spaces in the set.)
-<dd>Multiple login names or user ID numbers are joined in a single ORed set before participating in AND option selection.
-<dd>If a login name or user ID is preceded by a `^', it becomes a negation - i.e., files of processes owned by the login name or user ID will never be listed. A negated login name or user ID selection is neither ANDed nor ORed with other selections; it is applied before all other selections and absolutely excludes the listing of the files of the process. For example, to direct <i>lsof</i> to exclude the listing of files belonging to root processes, specify ``-u^root'' or ``-u^0''.
-<dt><b>-U</b>
-<dd>selects the listing of UNIX domain socket files.
-<dt><b>-v</b>
-<dd>selects the listing of <i>lsof</i> version information, including: revision number; when the <i>lsof</i> binary was constructed; who constructed the binary and where; the name of the compiler used to construct the <i>lsof binary;</i> the version number of the compiler when readily available; the compiler and loader flags used to construct the <i>lsof</i> binary; and system information, typically the output of <i>uname</i>'s <b>-a</b> option.
-<dt><b>-V</b>
-<dd>directs <i>lsof</i> to indicate the items it was asked to list and failed to find - command names, file names, Internet addresses or files, login names, NFS files, PIDs, PGIDs, and UIDs.
-<dd>When other options are ANDed to search options, or compile-time options restrict the listing of some files, <i>lsof</i> may not report that it failed to find a search item when an ANDed option or compile-time option prevents the listing of the open file containing the located search item.
-<dd>For example, ``lsof -V -iTCP [at] foobar -a -d 999'' may not report a failure to locate open files at ``TCP [at] foobar'' and may not list any, if none have a file descriptor number of 999. A similar situation arises when HASSECURITY and HASNOSOCKSECURITY are defined at compile time and they prevent the listing of open files.
-<dt><b>+|-w</b>
-<dd>Enables (<b>+</b>) or disables (<b>-</b>) the suppression of warning messages.
-<dd>The <i>lsof</i> builder may choose to have warning messages disabled or enabled by default. The default warning message state is indicated in the output of the <b>-h</b> or <b>-?</b> option. Disabling warning messages when they are already disabled or enabling them when already enabled is acceptable.
-<dd>The <b>-t</b> option selects the <b>-w</b> option.
-<dt><b>-x</b><i> [fl]</i>
-<dd>may accompany the <b>+d</b> and <b>+D</b> options to direct their processing to cross over symbolic links and|or file system mount points encountered when scanning the directory (<b>+d</b>) or directory tree (<b>+D</b>).
-<dd>If <b>-x</b> is specified by itself without a following parameter, cross-over processing of both symbolic links and file system mount points is enabled. Note that when <b>-x</b> is specified without a parameter, the next argument must begin with '-' or '+'.
-<dd>The optional 'f' parameter enables file system mount point cross-over processing; 'l', symbolic link cross-over processing.
-<dd>The <b>-x</b> option may not be supplied without also supplying a <b>+d</b> or <b>+D</b> option.
-<dt><b>-X</b>
-<dd>This is a dialect-specific option.
-<dt> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;AIX:
-<dd><dd>This IBM AIX RISC/System 6000 option requests the reporting of executed text file and shared library references.
-<dd><b>WARNING:</b> because this option uses the kernel readx() function, its use on a busy AIX system might cause an application process to hang so completely that it can neither be killed nor stopped. I have never seen this happen or had a report of its happening, but I think there is a remote possibility it could happen.
-<dd>By default use of readx() is disabled. On AIX 5L and above <i>lsof</i> may need setuid-root permission to perform the actions this option requests.
-<dd>The <i>lsof</i> builder may specify that the <b>-X</b> option be restricted to processes whose real UID is root. If that has been done, the <b>-X</b> option will not appear in the <b>-h</b> or <b>-?</b> help output unless the real UID of the <i>lsof</i> process is root. The default <i>lsof</i> distribution allows any UID to specify <b>-X,</b> so by default it will appear in the help output.
-<dd>When AIX readx() use is disabled, <i>lsof</i> may not be able to report information for all text and loader file references, but it may also avoid exacerbating an AIX kernel directory search kernel error, known as the Stale Segment ID bug.
-<dd>The readx() function, used by <i>lsof</i> or any other program to access some sections of kernel virtual memory, can trigger the Stale Segment ID bug. It can cause the kernel's dir_search() function to believe erroneously that part of an in-memory copy of a file system directory has been zeroed. Another application process, distinct from <i>lsof</i>, asking the kernel to search the directory - e.g., by using <i><a HREF="/docs/linux/man/2-open/">open</a></i>(2) - can cause dir_search() to loop forever, thus hanging the application process.
-<dd>Consult the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) and the <i>00README</i> file of the <i>lsof</i> distribution for a more complete description of the Stale Segment ID bug, its APAR, and methods for defining readx() use when compiling <i>lsof</i>.
-<dt> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Linux:
-<dd><dd>This Linux option requests that <i>lsof</i> skip the reporting of information on all open TCP, UDP and UDPLITE IPv4 and IPv6 files.
-<dd>This Linux option is most useful when the system has an extremely large number of open TCP, UDP and UDPLITE files, the processing of whose information in the <i>/proc/net/tcp*</i> and <i>/proc/net/udp*</i> files would take <i>lsof</i> a long time, and whose reporting is not of interest.
-<dd>Use this option with care and only when you are sure that the information you want <i>lsof</i> to display isn't associated with open TCP, UDP or UDPLITE socket files.
-<dt> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Solaris 10 and above:
-<dd><dd>This Solaris 10 and above option requests the reporting of cached paths for files that have been deleted - i.e., removed with <i><a HREF="/docs/linux/man/1-rm/">rm</a></i>(1) or <i><a HREF="/docs/linux/man/2-unlink/">unlink</a></i>(2).
-<dd>The cached path is followed by the string ``&nbsp;(deleted)'' to indicate that the path by which the file was opened has been deleted.
-<dd>Because intervening changes made to the path - i.e., renames with <i><a HREF="/docs/linux/man/1-mv/">mv</a></i>(1) or <i><a HREF="/docs/linux/man/2-rename/">rename</a></i>(2) - are not recorded in the cached path, what <i>lsof</i> reports is only the path by which the file was opened, not its possibly different final path.
-<dt><b>-z</b><i> [z]</i>
-<dd>specifies how Solaris 10 and higher zone information is to be handled.
-<dd>Without a following argument - e.g., NO <i>z</i> - the option specifies that zone names are to be listed in the ZONE output column.
-<dd>The <b>-z</b> option may be followed by a zone name, <b>z</b><i>.</i> That causes lsof to list only open files for processes in that zone. Multiple <b>-z</b><i> z</i> option and argument pairs may be specified to form a list of named zones. Any open file of any process in any of the zones will be listed, subject to other conditions specified by other options and arguments.
-<dt><b>-Z</b><i> [Z]</i>
-<dd>specifies how SELinux security contexts are to be handled. It and 'Z' field output character support are inhibited when SELinux is disabled in the running Linux kernel. See <b>OUTPUT FOR OTHER PROGRAMS</b> for more information on the 'Z' field output character.
-<dd>Without a following argument - e.g., NO <i>Z</i> - the option specifies that security contexts are to be listed in the SECURITY-CONTEXT output column.
-<dd>The <b>-Z</b> option may be followed by a wildcard security context name, <b>Z</b><i>.</i> That causes lsof to list only open files for processes in that security context. Multiple <b>-Z</b><i> Z</i> option and argument pairs may be specified to form a list of security contexts. Any open file of any process in any of the security contexts will be listed, subject to other conditions specified by other options and arguments. Note that <i>Z</i> can be A:B:C or *:B:C or A:B:* or *:*:C to match against the A:B:C context.
-<dt><b>--</b>
-<dd>The double minus sign option is a marker that signals the end of the keyed options. It may be used, for example, when the first file name begins with a minus sign. It may also be used when the absence of a value for the last keyed option must be signified by the presence of a minus sign in the following option and before the start of the file names.
-<dt><i>names</i>
-<dd>These are path names of specific files to list. Symbolic links are resolved before use. The first name may be separated from the preceding options with the ``--'' option.
-<dd>If a <i>name</i> is the mounted-on directory of a file system or the device of the file system, <i>lsof</i> will list all the files open on the file system. To be considered a file system, the <i>name</i> must match a mounted-on directory name in <i><a HREF="/docs/linux/man/8-mount/">mount</a></i>(8) output, or match the name of a block device associated with a mounted-on directory name. The <b>+|-f</b> option may be used to force <i>lsof</i> to consider a <i>name</i> a file system identifier (<b>+f</b>) or a simple file (<b>-f</b>).
-<dd>If <i>name</i> is a path to a directory that is not the mounted-on directory name of a file system, it is treated just as a regular file is treated - i.e., its listing is restricted to processes that have it open as a file or as a process-specific directory, such as the root or current working directory. To request that <i>lsof</i> look for open files inside a directory name, use the <b>+d</b><i> s</i> and <b>+D</b><i> D</i> options.
-<dd>If a <i>name</i> is the base name of a family of multiplexed files - e.g, AIX's <i>/dev/pt[cs]</i> - <i>lsof</i> will list all the associated multiplexed files on the device that are open - e.g., <i>/dev/pt[cs]/1</i>, <i>/dev/pt[cs]/2</i>, etc.
-<dd>If a <i>name</i> is a UNIX domain socket name, <i>lsof</i> will usually search for it by the characters of the name alone - exactly as it is specified and is recorded in the kernel socket structure. (See the next paragraph for an exception to that rule for Linux.) Specifying a relative path - e.g., <i>./file</i> - in place of the file's absolute path - e.g., <i>/tmp/file</i> - won't work because <i>lsof</i> must match the characters you specify with what it finds in the kernel UNIX domain socket structures.
-<dd>If a <i>name</i> is a Linux UNIX domain socket name, in one case <i>lsof</i> is able to search for it by its device and inode number, allowing <i>name</i> to be a relative path. The case requires that the absolute path -- i.e., one beginning with a slash ('/') be used by the process that created the socket, and hence be stored in the <i>/proc/net/unix</i> file; and it requires that <i>lsof</i> be able to obtain the device and node numbers of both the absolute path in <i>/proc/net/unix</i> and <i>name</i> via successful <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) system calls. When those conditions are met, <i>lsof</i> will be able to search for the UNIX domain socket when some path to it is is specified in <i>name</i>. Thus, for example, if the path is <i>/dev/log</i>, and an <i>lsof</i> search is initiated when the working directory is <i>/dev</i>, then <i>name</i> could be <i>./log</i>.
-<dd>If a <i>name</i> is none of the above, <i>lsof</i> will list any open files whose device and inode match that of the specified path <i>name</i>.
-<dd>If you have also specified the <b>-b</b> option, the only <i>names</i> you may safely specify are file systems for which your mount table supplies alternate device numbers. See the <b>AVOIDING KERNEL BLOCKS</b> and <b>ALTERNATE DEVICE NUMBERS</b> sections for more information.
-<dd>Multiple file names are joined in a single ORed set before participating in AND option selection.</dl>
+ SNDBUF send buffer length (SO_SNDBUF)</pre></dd><dd>Details on what socket options and values, socket states, and TCP flags and values may be displayed for particular UNIX dialects may be found in the answer to the ``Why doesn't lsof report socket options, socket states, and TCP flags and values for my dialect?'' and ``Why doesn't lsof report the partial listen queue connection count for my dialect?'' questions in the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.)
+</dd><dt><b>-t</b>
+</dt><dd>specifies that <i>lsof</i> should produce terse output with process identifiers only and no header - e.g., so that the output may be piped to <i><a HREF="/docs/linux/man/1-kill/">kill</a></i>(1). <b>-t</b> selects the <b>-w</b> option.
+</dd><dt><b>-u</b><i> s</i>
+</dt><dd>selects the listing of files for the user whose login names or user ID numbers are in the comma-separated set <i>s</i> - e.g., ``abe'', or ``548,root''. (There should be no spaces in the set.)
+</dd><dd>Multiple login names or user ID numbers are joined in a single ORed set before participating in AND option selection.
+</dd><dd>If a login name or user ID is preceded by a `^', it becomes a negation - i.e., files of processes owned by the login name or user ID will never be listed. A negated login name or user ID selection is neither ANDed nor ORed with other selections; it is applied before all other selections and absolutely excludes the listing of the files of the process. For example, to direct <i>lsof</i> to exclude the listing of files belonging to root processes, specify ``-u^root'' or ``-u^0''.
+</dd><dt><b>-U</b>
+</dt><dd>selects the listing of UNIX domain socket files.
+</dd><dt><b>-v</b>
+</dt><dd>selects the listing of <i>lsof</i> version information, including: revision number; when the <i>lsof</i> binary was constructed; who constructed the binary and where; the name of the compiler used to construct the <i>lsof binary;</i> the version number of the compiler when readily available; the compiler and loader flags used to construct the <i>lsof</i> binary; and system information, typically the output of <i>uname</i>'s <b>-a</b> option.
+</dd><dt><b>-V</b>
+</dt><dd>directs <i>lsof</i> to indicate the items it was asked to list and failed to find - command names, file names, Internet addresses or files, login names, NFS files, PIDs, PGIDs, and UIDs.
+</dd><dd>When other options are ANDed to search options, or compile-time options restrict the listing of some files, <i>lsof</i> may not report that it failed to find a search item when an ANDed option or compile-time option prevents the listing of the open file containing the located search item.
+</dd><dd>For example, ``lsof -V -iTCP [at] foobar -a -d 999'' may not report a failure to locate open files at ``TCP [at] foobar'' and may not list any, if none have a file descriptor number of 999. A similar situation arises when HASSECURITY and HASNOSOCKSECURITY are defined at compile time and they prevent the listing of open files.
+</dd><dt><b>+|-w</b>
+</dt><dd>Enables (<b>+</b>) or disables (<b>-</b>) the suppression of warning messages.
+</dd><dd>The <i>lsof</i> builder may choose to have warning messages disabled or enabled by default. The default warning message state is indicated in the output of the <b>-h</b> or <b>-?</b> option. Disabling warning messages when they are already disabled or enabling them when already enabled is acceptable.
+</dd><dd>The <b>-t</b> option selects the <b>-w</b> option.
+</dd><dt><b>-x</b><i> [fl]</i>
+</dt><dd>may accompany the <b>+d</b> and <b>+D</b> options to direct their processing to cross over symbolic links and|or file system mount points encountered when scanning the directory (<b>+d</b>) or directory tree (<b>+D</b>).
+</dd><dd>If <b>-x</b> is specified by itself without a following parameter, cross-over processing of both symbolic links and file system mount points is enabled. Note that when <b>-x</b> is specified without a parameter, the next argument must begin with '-' or '+'.
+</dd><dd>The optional 'f' parameter enables file system mount point cross-over processing; 'l', symbolic link cross-over processing.
+</dd><dd>The <b>-x</b> option may not be supplied without also supplying a <b>+d</b> or <b>+D</b> option.
+</dd><dt><b>-X</b>
+</dt><dd>This is a dialect-specific option.
+</dd><dt> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;AIX:
+</dt><dd></dd><dd>This IBM AIX RISC/System 6000 option requests the reporting of executed text file and shared library references.
+</dd><dd><b>WARNING:</b> because this option uses the kernel readx() function, its use on a busy AIX system might cause an application process to hang so completely that it can neither be killed nor stopped. I have never seen this happen or had a report of its happening, but I think there is a remote possibility it could happen.
+</dd><dd>By default use of readx() is disabled. On AIX 5L and above <i>lsof</i> may need setuid-root permission to perform the actions this option requests.
+</dd><dd>The <i>lsof</i> builder may specify that the <b>-X</b> option be restricted to processes whose real UID is root. If that has been done, the <b>-X</b> option will not appear in the <b>-h</b> or <b>-?</b> help output unless the real UID of the <i>lsof</i> process is root. The default <i>lsof</i> distribution allows any UID to specify <b>-X,</b> so by default it will appear in the help output.
+</dd><dd>When AIX readx() use is disabled, <i>lsof</i> may not be able to report information for all text and loader file references, but it may also avoid exacerbating an AIX kernel directory search kernel error, known as the Stale Segment ID bug.
+</dd><dd>The readx() function, used by <i>lsof</i> or any other program to access some sections of kernel virtual memory, can trigger the Stale Segment ID bug. It can cause the kernel's dir_search() function to believe erroneously that part of an in-memory copy of a file system directory has been zeroed. Another application process, distinct from <i>lsof</i>, asking the kernel to search the directory - e.g., by using <i><a HREF="/docs/linux/man/2-open/">open</a></i>(2) - can cause dir_search() to loop forever, thus hanging the application process.
+</dd><dd>Consult the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) and the <i>00README</i> file of the <i>lsof</i> distribution for a more complete description of the Stale Segment ID bug, its APAR, and methods for defining readx() use when compiling <i>lsof</i>.
+</dd><dt> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Linux:
+</dt><dd></dd><dd>This Linux option requests that <i>lsof</i> skip the reporting of information on all open TCP, UDP and UDPLITE IPv4 and IPv6 files.
+</dd><dd>This Linux option is most useful when the system has an extremely large number of open TCP, UDP and UDPLITE files, the processing of whose information in the <i>/proc/net/tcp*</i> and <i>/proc/net/udp*</i> files would take <i>lsof</i> a long time, and whose reporting is not of interest.
+</dd><dd>Use this option with care and only when you are sure that the information you want <i>lsof</i> to display isn't associated with open TCP, UDP or UDPLITE socket files.
+</dd><dt> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Solaris 10 and above:
+</dt><dd></dd><dd>This Solaris 10 and above option requests the reporting of cached paths for files that have been deleted - i.e., removed with <i><a HREF="/docs/linux/man/1-rm/">rm</a></i>(1) or <i><a HREF="/docs/linux/man/2-unlink/">unlink</a></i>(2).
+</dd><dd>The cached path is followed by the string ``&nbsp;(deleted)'' to indicate that the path by which the file was opened has been deleted.
+</dd><dd>Because intervening changes made to the path - i.e., renames with <i><a HREF="/docs/linux/man/1-mv/">mv</a></i>(1) or <i><a HREF="/docs/linux/man/2-rename/">rename</a></i>(2) - are not recorded in the cached path, what <i>lsof</i> reports is only the path by which the file was opened, not its possibly different final path.
+</dd><dt><b>-z</b><i> [z]</i>
+</dt><dd>specifies how Solaris 10 and higher zone information is to be handled.
+</dd><dd>Without a following argument - e.g., NO <i>z</i> - the option specifies that zone names are to be listed in the ZONE output column.
+</dd><dd>The <b>-z</b> option may be followed by a zone name, <b>z</b><i>.</i> That causes lsof to list only open files for processes in that zone. Multiple <b>-z</b><i> z</i> option and argument pairs may be specified to form a list of named zones. Any open file of any process in any of the zones will be listed, subject to other conditions specified by other options and arguments.
+</dd><dt><b>-Z</b><i> [Z]</i>
+</dt><dd>specifies how SELinux security contexts are to be handled. It and 'Z' field output character support are inhibited when SELinux is disabled in the running Linux kernel. See <b>OUTPUT FOR OTHER PROGRAMS</b> for more information on the 'Z' field output character.
+</dd><dd>Without a following argument - e.g., NO <i>Z</i> - the option specifies that security contexts are to be listed in the SECURITY-CONTEXT output column.
+</dd><dd>The <b>-Z</b> option may be followed by a wildcard security context name, <b>Z</b><i>.</i> That causes lsof to list only open files for processes in that security context. Multiple <b>-Z</b><i> Z</i> option and argument pairs may be specified to form a list of security contexts. Any open file of any process in any of the security contexts will be listed, subject to other conditions specified by other options and arguments. Note that <i>Z</i> can be A:B:C or *:B:C or A:B:* or *:*:C to match against the A:B:C context.
+</dd><dt><b>--</b>
+</dt><dd>The double minus sign option is a marker that signals the end of the keyed options. It may be used, for example, when the first file name begins with a minus sign. It may also be used when the absence of a value for the last keyed option must be signified by the presence of a minus sign in the following option and before the start of the file names.
+</dd><dt><i>names</i>
+</dt><dd>These are path names of specific files to list. Symbolic links are resolved before use. The first name may be separated from the preceding options with the ``--'' option.
+</dd><dd>If a <i>name</i> is the mounted-on directory of a file system or the device of the file system, <i>lsof</i> will list all the files open on the file system. To be considered a file system, the <i>name</i> must match a mounted-on directory name in <i><a HREF="/docs/linux/man/8-mount/">mount</a></i>(8) output, or match the name of a block device associated with a mounted-on directory name. The <b>+|-f</b> option may be used to force <i>lsof</i> to consider a <i>name</i> a file system identifier (<b>+f</b>) or a simple file (<b>-f</b>).
+</dd><dd>If <i>name</i> is a path to a directory that is not the mounted-on directory name of a file system, it is treated just as a regular file is treated - i.e., its listing is restricted to processes that have it open as a file or as a process-specific directory, such as the root or current working directory. To request that <i>lsof</i> look for open files inside a directory name, use the <b>+d</b><i> s</i> and <b>+D</b><i> D</i> options.
+</dd><dd>If a <i>name</i> is the base name of a family of multiplexed files - e.g, AIX's <i>/dev/pt[cs]</i> - <i>lsof</i> will list all the associated multiplexed files on the device that are open - e.g., <i>/dev/pt[cs]/1</i>, <i>/dev/pt[cs]/2</i>, etc.
+</dd><dd>If a <i>name</i> is a UNIX domain socket name, <i>lsof</i> will usually search for it by the characters of the name alone - exactly as it is specified and is recorded in the kernel socket structure. (See the next paragraph for an exception to that rule for Linux.) Specifying a relative path - e.g., <i>./file</i> - in place of the file's absolute path - e.g., <i>/tmp/file</i> - won't work because <i>lsof</i> must match the characters you specify with what it finds in the kernel UNIX domain socket structures.
+</dd><dd>If a <i>name</i> is a Linux UNIX domain socket name, in one case <i>lsof</i> is able to search for it by its device and inode number, allowing <i>name</i> to be a relative path. The case requires that the absolute path -- i.e., one beginning with a slash ('/') be used by the process that created the socket, and hence be stored in the <i>/proc/net/unix</i> file; and it requires that <i>lsof</i> be able to obtain the device and node numbers of both the absolute path in <i>/proc/net/unix</i> and <i>name</i> via successful <i><a HREF="/docs/linux/man/2-stat/">stat</a></i>(2) system calls. When those conditions are met, <i>lsof</i> will be able to search for the UNIX domain socket when some path to it is is specified in <i>name</i>. Thus, for example, if the path is <i>/dev/log</i>, and an <i>lsof</i> search is initiated when the working directory is <i>/dev</i>, then <i>name</i> could be <i>./log</i>.
+</dd><dd>If a <i>name</i> is none of the above, <i>lsof</i> will list any open files whose device and inode match that of the specified path <i>name</i>.
+</dd><dd>If you have also specified the <b>-b</b> option, the only <i>names</i> you may safely specify are file systems for which your mount table supplies alternate device numbers. See the <b>AVOIDING KERNEL BLOCKS</b> and <b>ALTERNATE DEVICE NUMBERS</b> sections for more information.
+</dd><dd>Multiple file names are joined in a single ORed set before participating in AND option selection.</dd></dl>
 
 <h2>Afs</h2>
 
@@ -451,31 +451,31 @@ This section describes the information <i>lsof</i> lists for each open file. See
 
  <i>Lsof</i> dynamically sizes the output columns each time it runs, guaranteeing that each column is a minimum size. It also guarantees that each column is separated from its predecessor by at least one space.
 <dl><dt>COMMAND
-<dd>contains the first nine characters of the name of the UNIX command associated with the process. If a non-zero <i>w</i> value is specified to the <b>+c</b><i> w</i> option, the column contains the first <i>w</i> characters of the name of the UNIX command associated with the process up to the limit of characters supplied to <i>lsof</i> by the UNIX dialect. (See the description of the <b>+c</b><i> w</i> command or the <i>lsof</i> FAQ for more information. The <b>FAQ</b> section gives its location.)
-<dd>If <i>w</i> is less than the length of the column title, ``COMMAND'', it will be raised to that length.
-<dd>If a zero <i>w</i> value is specified to the <b>+c</b><i> w</i> option, the column contains all the characters of the name of the UNIX command associated with the process.
-<dd>All command name characters maintained by the kernel in its structures are displayed in field output when the command name descriptor (`c') is specified. See the <b>OUTPUT FOR OTHER COMMANDS</b> section for information on selecting field output and the associated command name descriptor.
-<dt>PID
-<dd>is the Process IDentification number of the process.
-<dt>TID
-<dd>is the task (thread) IDentification number, if task (thread) reporting is supported by the dialect and a task (thread) is being listed. (If help output - i.e., the output of the <b>-h</b> or <b>-?</b> options - shows this option, then task (thread) reporting is supported by the dialect.)
-<dd>A blank TID column in Linux indicates a process - i.e., a non-task.
-<dt>TASKCMD
-<dd>is the task command name. Generally this will be the same as the process named in the COMMAND column, but some task implementations (e.g., Linux) permit a task to change its command name.
-<dd>The TASKCMD column width is subject to the same size limitation as the COMMAND column.
-<dt>ZONE
-<dd>is the Solaris 10 and higher zone name. This column must be selected with the <b>-z</b> option.
-<dt>SECURITY-CONTEXT
-<dd>is the SELinux security context. This column must be selected with the <b>-Z</b> option. Note that the <b>-Z</b> option is inhibited when SELinux is disabled in the running Linux kernel.
-<dt>PPID
-<dd>is the Parent Process IDentification number of the process. It is only displayed when the <b>-R</b> option has been specified.
-<dt>PGID
-<dd>is the process group IDentification number associated with the process. It is only displayed when the <b>-g</b> option has been specified.
-<dt>USER
-<dd>is the user ID number or login name of the user to whom the process belongs, usually the same as reported by <i><a HREF="/docs/linux/man/1-ps/">ps</a></i>(1). However, on Linux USER is the user ID number or login that owns the directory in /proc where <i>lsof</i> finds information about the process. Usually that is the same value reported by <i><a HREF="/docs/linux/man/1-ps/">ps</a></i>(1), but may differ when the process has changed its effective user ID. (See the <b>-l</b> option description for information on when a user ID number or login name is displayed.)
-<dt>FD
-<dd>is the File Descriptor number of the file or:
-<dd><pre> <b>cwd</b> current working directory;
+</dt><dd>contains the first nine characters of the name of the UNIX command associated with the process. If a non-zero <i>w</i> value is specified to the <b>+c</b><i> w</i> option, the column contains the first <i>w</i> characters of the name of the UNIX command associated with the process up to the limit of characters supplied to <i>lsof</i> by the UNIX dialect. (See the description of the <b>+c</b><i> w</i> command or the <i>lsof</i> FAQ for more information. The <b>FAQ</b> section gives its location.)
+</dd><dd>If <i>w</i> is less than the length of the column title, ``COMMAND'', it will be raised to that length.
+</dd><dd>If a zero <i>w</i> value is specified to the <b>+c</b><i> w</i> option, the column contains all the characters of the name of the UNIX command associated with the process.
+</dd><dd>All command name characters maintained by the kernel in its structures are displayed in field output when the command name descriptor (`c') is specified. See the <b>OUTPUT FOR OTHER COMMANDS</b> section for information on selecting field output and the associated command name descriptor.
+</dd><dt>PID
+</dt><dd>is the Process IDentification number of the process.
+</dd><dt>TID
+</dt><dd>is the task (thread) IDentification number, if task (thread) reporting is supported by the dialect and a task (thread) is being listed. (If help output - i.e., the output of the <b>-h</b> or <b>-?</b> options - shows this option, then task (thread) reporting is supported by the dialect.)
+</dd><dd>A blank TID column in Linux indicates a process - i.e., a non-task.
+</dd><dt>TASKCMD
+</dt><dd>is the task command name. Generally this will be the same as the process named in the COMMAND column, but some task implementations (e.g., Linux) permit a task to change its command name.
+</dd><dd>The TASKCMD column width is subject to the same size limitation as the COMMAND column.
+</dd><dt>ZONE
+</dt><dd>is the Solaris 10 and higher zone name. This column must be selected with the <b>-z</b> option.
+</dd><dt>SECURITY-CONTEXT
+</dt><dd>is the SELinux security context. This column must be selected with the <b>-Z</b> option. Note that the <b>-Z</b> option is inhibited when SELinux is disabled in the running Linux kernel.
+</dd><dt>PPID
+</dt><dd>is the Parent Process IDentification number of the process. It is only displayed when the <b>-R</b> option has been specified.
+</dd><dt>PGID
+</dt><dd>is the process group IDentification number associated with the process. It is only displayed when the <b>-g</b> option has been specified.
+</dd><dt>USER
+</dt><dd>is the user ID number or login name of the user to whom the process belongs, usually the same as reported by <i><a HREF="/docs/linux/man/1-ps/">ps</a></i>(1). However, on Linux USER is the user ID number or login that owns the directory in /proc where <i>lsof</i> finds information about the process. Usually that is the same value reported by <i><a HREF="/docs/linux/man/1-ps/">ps</a></i>(1), but may differ when the process has changed its effective user ID. (See the <b>-l</b> option description for information on when a user ID number or login name is displayed.)
+</dd><dt>FD
+</dt><dd>is the File Descriptor number of the file or:
+</dd><dd><pre> <b>cwd</b> current working directory;
 <br>
  <b>L</b><i>nn</i> library references (AIX);
 <br>
@@ -501,129 +501,112 @@ This section describes the information <i>lsof</i> lists for each open file. See
 <br>
  <b>txt</b> program text (code and data);
 <br>
- <b>v86</b> VP/ix mapped file;</pre><dd>FD is followed by one of these characters, describing the mode under which the file is open:
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>r</b> for read access;
- 
+ <b>v86</b> VP/ix mapped file;</pre></dd><dd>FD is followed by one of these characters, describing the mode under which the file is open:
+</dd><dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>r</b> for read access;
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>w</b> for write access;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>u</b> for read and write access;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>space if mode unknown and no lock
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>character follows;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>`-' if mode unknown and lock
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>character follows.
-
-<dd>The mode character is followed by one of these lock characters, describing the type of lock applied to the file:
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>N</b> for a Solaris NFS lock of unknown type;
- 
+</dd><dd>The mode character is followed by one of these lock characters, describing the type of lock applied to the file:
+</dd><dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>N</b> for a Solaris NFS lock of unknown type;
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>r</b> for read lock on part of the file;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>R</b> for a read lock on the entire file;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>w</b> for a write lock on part of the file;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>W</b> for a write lock on the entire file;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>u</b> for a read and write lock of any length;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>U</b> for a lock of unknown type;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>x</b> for an SCO OpenServer Xenix lock on part
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>of the file;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><b>X</b> for an SCO OpenServer Xenix lock on the entire file;
- 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>space if there is no lock.
-
-<dd>See the <b>LOCKS</b> section for more information on the lock information character.
-<dd>The FD column contents constitutes a single field for parsing in post-processing scripts.
-<dt>TYPE
-<dd>is the type of the node associated with the file - e.g., GDIR, GREG, VDIR, VREG, etc.
-<dd>or ``IPv4'' for an IPv4 socket;
-<dd>or ``IPv6'' for an open IPv6 network file - even if its address is IPv4, mapped in an IPv6 address;
-<dd>or ``ax25'' for a Linux AX.25 socket;
-<dd>or ``inet'' for an Internet domain socket;
-<dd>or ``lla'' for a HP-UX link level access file;
-<dd>or ``rte'' for an AF_ROUTE socket;
-<dd>or ``sock'' for a socket of unknown domain;
-<dd>or ``unix'' for a UNIX domain socket;
-<dd>or ``x.25'' for an HP-UX x.25 socket;
-<dd>or ``BLK'' for a block special file;
-<dd>or ``CHR'' for a character special file;
-<dd>or ``DEL'' for a Linux map file that has been deleted;
-<dd>or ``DIR'' for a directory;
-<dd>or ``DOOR'' for a VDOOR file;
-<dd>or ``FIFO'' for a FIFO special file;
-<dd>or ``KQUEUE'' for a BSD style kernel event queue file;
-<dd>or ``LINK'' for a symbolic link file;
-<dd>or ``MPB'' for a multiplexed block file;
-<dd>or ``MPC'' for a multiplexed character file;
-<dd>or ``NOFD'' for a Linux /proc/&lt;PID&gt;/fd directory that can't be opened -- the directory path appears in the NAME column, followed by an error message;
-<dd>or ``PAS'' for a <i>/proc/as</i> file;
-<dd>or ``PAXV'' for a <i>/proc/auxv</i> file;
-<dd>or ``PCRE'' for a <i>/proc/cred</i> file;
-<dd>or ``PCTL'' for a <i>/proc</i> control file;
-<dd>or ``PCUR'' for the current <i>/proc</i> process;
-<dd>or ``PCWD'' for a <i>/proc</i> current working directory;
-<dd>or ``PDIR'' for a <i>/proc</i> directory;
-<dd>or ``PETY'' for a <i>/proc</i> executable type (<i>etype</i>);
-<dd>or ``PFD'' for a <i>/proc</i> file descriptor;
-<dd>or ``PFDR'' for a <i>/proc</i> file descriptor directory;
-<dd>or ``PFIL'' for an executable <i>/proc</i> file;
-<dd>or ``PFPR'' for a <i>/proc</i> FP register set;
-<dd>or ``PGD'' for a <i>/proc/pagedata</i> file;
-<dd>or ``PGID'' for a <i>/proc</i> group notifier file;
-<dd>or ``PIPE'' for pipes;
-<dd>or ``PLC'' for a <i>/proc/lwpctl</i> file;
-<dd>or ``PLDR'' for a <i>/proc/lpw</i> directory;
-<dd>or ``PLDT'' for a <i>/proc/ldt</i> file;
-<dd>or ``PLPI'' for a <i>/proc/lpsinfo</i> file;
-<dd>or ``PLST'' for a <i>/proc/lstatus</i> file;
-<dd>or ``PLU'' for a <i>/proc/lusage</i> file;
-<dd>or ``PLWG'' for a <i>/proc/gwindows</i> file;
-<dd>or ``PLWI'' for a <i>/proc/lwpsinfo</i> file;
-<dd>or ``PLWS'' for a <i>/proc/lwpstatus</i> file;
-<dd>or ``PLWU'' for a <i>/proc/lwpusage</i> file;
-<dd>or ``PLWX'' for a <i>/proc/xregs</i> file;
-<dd>or ``PMAP'' for a <i>/proc</i> map file (<i>map</i>);
-<dd>or ``PMEM'' for a <i>/proc</i> memory image file;
-<dd>or ``PNTF'' for a <i>/proc</i> process notifier file;
-<dd>or ``POBJ'' for a <i>/proc/object</i> file;
-<dd>or ``PODR'' for a <i>/proc/object</i> directory;
-<dd>or ``POLP'' for an old format <i>/proc</i> light weight process file;
-<dd>or ``POPF'' for an old format <i>/proc</i> PID file;
-<dd>or ``POPG'' for an old format <i>/proc</i> page data file;
-<dd>or ``PORT'' for a SYSV named pipe;
-<dd>or ``PREG'' for a <i>/proc</i> register file;
-<dd>or ``PRMP'' for a <i>/proc/rmap</i> file;
-<dd>or ``PRTD'' for a <i>/proc</i> root directory;
-<dd>or ``PSGA'' for a <i>/proc/sigact</i> file;
-<dd>or ``PSIN'' for a <i>/proc/psinfo</i> file;
-<dd>or ``PSTA'' for a <i>/proc</i> status file;
-<dd>or ``PSXSEM'' for a POSIX semaphore file;
-<dd>or ``PSXSHM'' for a POSIX shared memory file;
-<dd>or ``PTS'' for a <i>/dev/pts</i> file;
-<dd>or ``PUSG'' for a <i>/proc/usage</i> file;
-<dd>or ``PW'' for a <i>/proc/watch</i> file;
-<dd>or ``PXMP'' for a <i>/proc/xmap</i> file;
-<dd>or ``REG'' for a regular file;
-<dd>or ``SMT'' for a shared memory transport file;
-<dd>or ``STSO'' for a stream socket;
-<dd>or ``UNNM'' for an unnamed type file;
-<dd>or ``XNAM'' for an OpenServer Xenix special file of unknown type;
-<dd>or ``XSEM'' for an OpenServer Xenix semaphore file;
-<dd>or ``XSD'' for an OpenServer Xenix shared data file;
-<dd>or the four type number octets if the corresponding name isn't known.
-<dt>FILE-ADDR
-<dd>contains the kernel file structure address when <b>f</b> has been specified to <b>+f</b>;
-<dt>FCT
-<dd>contains the file reference count from the kernel file structure when <b>c</b> has been specified to <b>+f</b>;
-<dt>FILE-FLAG
-<dd>when <b>g</b> or <b>G</b> has been specified to <b>+f</b>, this field contains the contents of the f_flag[s] member of the kernel file structure and the kernel's per-process open file flags (if available); `G' causes them to be displayed in hexadecimal; `g', as short-hand names; two lists may be displayed with entries separated by commas, the lists separated by a semicolon (`;'); the first list may contain short-hand names for f_flag[s] values from the following table:
-<dd><pre> AIO asynchronous I/O (e.g., FAIO)
+</dd><dd>See the <b>LOCKS</b> section for more information on the lock information character.
+</dd><dd>The FD column contents constitutes a single field for parsing in post-processing scripts.
+</dd><dt>TYPE
+</dt><dd>is the type of the node associated with the file - e.g., GDIR, GREG, VDIR, VREG, etc.
+</dd><dd>or ``IPv4'' for an IPv4 socket;
+</dd><dd>or ``IPv6'' for an open IPv6 network file - even if its address is IPv4, mapped in an IPv6 address;
+</dd><dd>or ``ax25'' for a Linux AX.25 socket;
+</dd><dd>or ``inet'' for an Internet domain socket;
+</dd><dd>or ``lla'' for a HP-UX link level access file;
+</dd><dd>or ``rte'' for an AF_ROUTE socket;
+</dd><dd>or ``sock'' for a socket of unknown domain;
+</dd><dd>or ``unix'' for a UNIX domain socket;
+</dd><dd>or ``x.25'' for an HP-UX x.25 socket;
+</dd><dd>or ``BLK'' for a block special file;
+</dd><dd>or ``CHR'' for a character special file;
+</dd><dd>or ``DEL'' for a Linux map file that has been deleted;
+</dd><dd>or ``DIR'' for a directory;
+</dd><dd>or ``DOOR'' for a VDOOR file;
+</dd><dd>or ``FIFO'' for a FIFO special file;
+</dd><dd>or ``KQUEUE'' for a BSD style kernel event queue file;
+</dd><dd>or ``LINK'' for a symbolic link file;
+</dd><dd>or ``MPB'' for a multiplexed block file;
+</dd><dd>or ``MPC'' for a multiplexed character file;
+</dd><dd>or ``NOFD'' for a Linux /proc/&lt;PID&gt;/fd directory that can't be opened -- the directory path appears in the NAME column, followed by an error message;
+</dd><dd>or ``PAS'' for a <i>/proc/as</i> file;
+</dd><dd>or ``PAXV'' for a <i>/proc/auxv</i> file;
+</dd><dd>or ``PCRE'' for a <i>/proc/cred</i> file;
+</dd><dd>or ``PCTL'' for a <i>/proc</i> control file;
+</dd><dd>or ``PCUR'' for the current <i>/proc</i> process;
+</dd><dd>or ``PCWD'' for a <i>/proc</i> current working directory;
+</dd><dd>or ``PDIR'' for a <i>/proc</i> directory;
+</dd><dd>or ``PETY'' for a <i>/proc</i> executable type (<i>etype</i>);
+</dd><dd>or ``PFD'' for a <i>/proc</i> file descriptor;
+</dd><dd>or ``PFDR'' for a <i>/proc</i> file descriptor directory;
+</dd><dd>or ``PFIL'' for an executable <i>/proc</i> file;
+</dd><dd>or ``PFPR'' for a <i>/proc</i> FP register set;
+</dd><dd>or ``PGD'' for a <i>/proc/pagedata</i> file;
+</dd><dd>or ``PGID'' for a <i>/proc</i> group notifier file;
+</dd><dd>or ``PIPE'' for pipes;
+</dd><dd>or ``PLC'' for a <i>/proc/lwpctl</i> file;
+</dd><dd>or ``PLDR'' for a <i>/proc/lpw</i> directory;
+</dd><dd>or ``PLDT'' for a <i>/proc/ldt</i> file;
+</dd><dd>or ``PLPI'' for a <i>/proc/lpsinfo</i> file;
+</dd><dd>or ``PLST'' for a <i>/proc/lstatus</i> file;
+</dd><dd>or ``PLU'' for a <i>/proc/lusage</i> file;
+</dd><dd>or ``PLWG'' for a <i>/proc/gwindows</i> file;
+</dd><dd>or ``PLWI'' for a <i>/proc/lwpsinfo</i> file;
+</dd><dd>or ``PLWS'' for a <i>/proc/lwpstatus</i> file;
+</dd><dd>or ``PLWU'' for a <i>/proc/lwpusage</i> file;
+</dd><dd>or ``PLWX'' for a <i>/proc/xregs</i> file;
+</dd><dd>or ``PMAP'' for a <i>/proc</i> map file (<i>map</i>);
+</dd><dd>or ``PMEM'' for a <i>/proc</i> memory image file;
+</dd><dd>or ``PNTF'' for a <i>/proc</i> process notifier file;
+</dd><dd>or ``POBJ'' for a <i>/proc/object</i> file;
+</dd><dd>or ``PODR'' for a <i>/proc/object</i> directory;
+</dd><dd>or ``POLP'' for an old format <i>/proc</i> light weight process file;
+</dd><dd>or ``POPF'' for an old format <i>/proc</i> PID file;
+</dd><dd>or ``POPG'' for an old format <i>/proc</i> page data file;
+</dd><dd>or ``PORT'' for a SYSV named pipe;
+</dd><dd>or ``PREG'' for a <i>/proc</i> register file;
+</dd><dd>or ``PRMP'' for a <i>/proc/rmap</i> file;
+</dd><dd>or ``PRTD'' for a <i>/proc</i> root directory;
+</dd><dd>or ``PSGA'' for a <i>/proc/sigact</i> file;
+</dd><dd>or ``PSIN'' for a <i>/proc/psinfo</i> file;
+</dd><dd>or ``PSTA'' for a <i>/proc</i> status file;
+</dd><dd>or ``PSXSEM'' for a POSIX semaphore file;
+</dd><dd>or ``PSXSHM'' for a POSIX shared memory file;
+</dd><dd>or ``PTS'' for a <i>/dev/pts</i> file;
+</dd><dd>or ``PUSG'' for a <i>/proc/usage</i> file;
+</dd><dd>or ``PW'' for a <i>/proc/watch</i> file;
+</dd><dd>or ``PXMP'' for a <i>/proc/xmap</i> file;
+</dd><dd>or ``REG'' for a regular file;
+</dd><dd>or ``SMT'' for a shared memory transport file;
+</dd><dd>or ``STSO'' for a stream socket;
+</dd><dd>or ``UNNM'' for an unnamed type file;
+</dd><dd>or ``XNAM'' for an OpenServer Xenix special file of unknown type;
+</dd><dd>or ``XSEM'' for an OpenServer Xenix semaphore file;
+</dd><dd>or ``XSD'' for an OpenServer Xenix shared data file;
+</dd><dd>or the four type number octets if the corresponding name isn't known.
+</dd><dt>FILE-ADDR
+</dt><dd>contains the kernel file structure address when <b>f</b> has been specified to <b>+f</b>;
+</dd><dt>FCT
+</dt><dd>contains the file reference count from the kernel file structure when <b>c</b> has been specified to <b>+f</b>;
+</dd><dt>FILE-FLAG
+</dt><dd>when <b>g</b> or <b>G</b> has been specified to <b>+f</b>, this field contains the contents of the f_flag[s] member of the kernel file structure and the kernel's per-process open file flags (if available); `G' causes them to be displayed in hexadecimal; `g', as short-hand names; two lists may be displayed with entries separated by commas, the lists separated by a semicolon (`;'); the first list may contain short-hand names for f_flag[s] values from the following table:
+</dd><dd><pre> AIO asynchronous I/O (e.g., FAIO)
  AP append
  ASYN asynchronous I/O (e.g., FASYNC)
  BAS block, test, and set in use
@@ -700,9 +683,9 @@ This section describes the information <i>lsof</i> lists for each open file. See
  WTG parallel I/O synchronization
  VH vhangup pending
  VTXT virtual text
- XL exclusive lock</pre><dd>this list of names was derived from F* #define's in dialect header files &lt;fcntl.h&gt;, &lt;linux&lt;/fs.h&gt;, &lt;sys/fcntl.c&gt;, &lt;sys/fcntlcom.h&gt;, and &lt;sys/file.h&gt;; see the lsof.h header file for a list showing the correspondence between the above short-hand names and the header file definitions;
-<dd>the second list (after the semicolon) may contain short-hand names for kernel per-process open file flags from this table:
-<dd><pre> ALLC allocated
+ XL exclusive lock</pre></dd><dd>this list of names was derived from F* #define's in dialect header files &lt;fcntl.h&gt;, &lt;linux&lt;/fs.h&gt;, &lt;sys/fcntl.c&gt;, &lt;sys/fcntlcom.h&gt;, and &lt;sys/file.h&gt;; see the lsof.h header file for a list showing the correspondence between the above short-hand names and the header file definitions;
+</dd><dd>the second list (after the semicolon) may contain short-hand names for kernel per-process open file flags from this table:
+</dd><dd><pre> ALLC allocated
  BR the file has been read
  BHUP activity stopped by SIGHUP
  BW the file has been written
@@ -713,57 +696,57 @@ This section describes the information <i>lsof</i> lists for each open file. See
  OPIP open pending - in progress
  RSVW reserved wait
  SHMT UF_FSHMAT set (AIX)
- USE in use (multi-threaded)</pre><dt>NODE-ID
-<dd>(or INODE-ADDR for some dialects) contains a unique identifier for the file node (usually the kernel vnode or inode address, but also occasionally a concatenation of device and node number) when <b>n</b> has been specified to <b>+f</b>;
-<dt>DEVICE
-<dd>contains the device numbers, separated by commas, for a character special, block special, regular, directory or NFS file;
-<dd>or ``memory'' for a memory file system node under Tru64 UNIX;
-<dd>or the address of the private data area of a Solaris socket stream;
-<dd>or a kernel reference address that identifies the file (The kernel reference address may be used for FIFO's, for example.);
-<dd>or the base address or device name of a Linux AX.25 socket device.
-<dd>Usually only the lower thirty two bits of Tru64 UNIX kernel addresses are displayed.
-<dt>SIZE, SIZE/OFF, or OFFSET
-<dd>is the size of the file or the file offset in bytes. A value is displayed in this column only if it is available. <i>Lsof</i> displays whatever value - size or offset - is appropriate for the type of the file and the version of <i>lsof</i>.
-<dd>On some UNIX dialects <i>lsof</i> can't obtain accurate or consistent file offset information from its kernel data sources, sometimes just for particular kinds of files (e.g., socket files.) In other cases, files don't have true sizes - e.g., sockets, FIFOs, pipes - so <i>lsof</i> displays for their sizes the content amounts it finds in their kernel buffer descriptors (e.g., socket buffer size counts or TCP/IP window sizes.) Consult the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information.
-<dd>The file size is displayed in decimal; the offset is normally displayed in decimal with a leading ``0t'' if it contains 8 digits or less; in hexadecimal with a leading ``0x'' if it is longer than 8 digits. (Consult the <b>-o</b><i> o</i> option description for information on when 8 might default to some other value.)
-<dd>Thus the leading ``0t'' and ``0x'' identify an offset when the column may contain both a size and an offset (i.e., its title is SIZE/OFF).
-<dd>If the <b>-o</b> option is specified, <i>lsof</i> always displays the file offset (or nothing if no offset is available) and labels the column OFFSET. The offset always begins with ``0t'' or ``0x'' as described above.
-<dd>The <i>lsof</i> user can control the switch from ``0t'' to ``0x'' with the <b>-o</b><i> o</i> option. Consult its description for more information.
-<dd>If the <b>-s</b> option is specified, <i>lsof</i> always displays the file size (or nothing if no size is available) and labels the column SIZE. The <b>-o</b> and <b>-s</b> options are mutually exclusive; they can't both be specified.
-<dd>For files that don't have a fixed size - e.g., don't reside on a disk device - <i>lsof</i> will display appropriate information about the current size or position of the file if it is available in the kernel structures that define the file.
-<dt>NLINK
-<dd>contains the file link count when <b>+L</b> has been specified;
-<dt>NODE
-<dd>is the node number of a local file;
-<dd>or the inode number of an NFS file in the server host;
-<dd>or the Internet protocol type - e.g, ``TCP'';
-<dd>or ``STR'' for a stream;
-<dd>or ``CCITT'' for an HP-UX x.25 socket;
-<dd>or the IRQ or inode number of a Linux AX.25 socket device.
-<dt>NAME
-<dd>is the name of the mount point and file system on which the file resides;
-<dd>or the name of a file specified in the <i>names</i> option (after any symbolic links have been resolved);
-<dd>or the name of a character special or block special device;
-<dd>or the local and remote Internet addresses of a network file; the local host name or IP number is followed by a colon (':'), the port, ``-&gt;'', and the two-part remote address; IP addresses may be reported as numbers or names, depending on the <b>+|-M</b>, <b>-n</b>, and <b>-P</b> options; colon-separated IPv6 numbers are enclosed in square brackets; IPv4 INADDR_ANY and IPv6 IN6_IS_ADDR_UNSPECIFIED addresses, and zero port numbers are represented by an asterisk ('*'); a UDP destination address may be followed by the amount of time elapsed since the last packet was sent to the destination; TCP, UDP and UDPLITE remote addresses may be followed by TCP/TPI information in parentheses - state (e.g., ``(ESTABLISHED)'', ``(Unbound)''), queue sizes, and window sizes (not all dialects) - in a fashion similar to what <i>netstat</i>(1) reports; see the <b>-T</b> option description or the description of the TCP/TPI field in <b>OUTPUT FOR OTHER PROGRAMS</b> for more information on state, queue size, and window size;
-<dd>or the address or name of a UNIX domain socket, possibly including a stream clone device name, a file system object's path name, local and foreign kernel addresses, socket pair information, and a bound vnode address;
-<dd>or the local and remote mount point names of an NFS file;
-<dd>or ``STR'', followed by the stream name;
-<dd>or a stream character device name, followed by ``-&gt;'' and the stream name or a list of stream module names, separated by ``-&gt;'';
-<dd>or ``STR:'' followed by the SCO OpenServer stream device and module names, separated by ``-&gt;'';
-<dd>or system directory name, `` -- '', and as many components of the path name as <i>lsof</i> can find in the kernel's name cache for selected dialects (See the <b>KERNEL NAME CACHE</b> section for more information.);
-<dd>or ``PIPE-&gt;'', followed by a Solaris kernel pipe destination address;
-<dd>or ``COMMON:'', followed by the vnode device information structure's device name, for a Solaris common vnode;
-<dd>or the address family, followed by a slash (`/'), followed by fourteen comma-separated bytes of a non-Internet raw socket address;
-<dd>or the HP-UX x.25 local address, followed by the virtual connection number (if any), followed by the remote address (if any);
-<dd>or ``(dead)'' for disassociated Tru64 UNIX files - typically terminal files that have been flagged with the TIOCNOTTY ioctl and closed by daemons;
-<dd>or ``rd=&lt;offset&gt;'' and ``wr=&lt;offset&gt;'' for the values of the read and write offsets of a FIFO;
-<dd>or ``clone <i>n</i>:/dev/event'' for SCO OpenServer file clones of the <i>/dev/event</i> device, where <i>n</i> is the minor device number of the file;
-<dd>or ``(socketpair: n)'' for a Solaris 2.6, 8, 9 or 10 UNIX domain socket, created by the <i>socketpair</i>(3N) network function;
-<dd>or ``no PCB'' for socket files that do not have a protocol block associated with them, optionally followed by ``, CANTSENDMORE'' if sending on the socket has been disabled, or ``, CANTRCVMORE'' if receiving on the socket has been disabled (e.g., by the <i><a HREF="/docs/linux/man/2-shutdown/">shutdown</a></i>(2) function);
-<dd>or the local and remote addresses of a Linux IPX socket file in the form &lt;net&gt;:[&lt;node&gt;:]&lt;port&gt;, followed in parentheses by the transmit and receive queue sizes, and the connection state;
-<dd>or ``dgram'' or ``stream'' for the type UnixWare 7.1.1 and above in-kernel UNIX domain sockets, followed by a colon (':') and the local path name when available, followed by ``-&gt;'' and the remote path name or kernel socket address in hexadecimal when available;
-<dd>or the association value, association index, endpoint value, local address, local port, remote address and remote port for Linux SCTP sockets;
-<dd>or ``protocol: '' followed by the Linux socket's protocol attribute.</dl>
+ USE in use (multi-threaded)</pre></dd><dt>NODE-ID
+</dt><dd>(or INODE-ADDR for some dialects) contains a unique identifier for the file node (usually the kernel vnode or inode address, but also occasionally a concatenation of device and node number) when <b>n</b> has been specified to <b>+f</b>;
+</dd><dt>DEVICE
+</dt><dd>contains the device numbers, separated by commas, for a character special, block special, regular, directory or NFS file;
+</dd><dd>or ``memory'' for a memory file system node under Tru64 UNIX;
+</dd><dd>or the address of the private data area of a Solaris socket stream;
+</dd><dd>or a kernel reference address that identifies the file (The kernel reference address may be used for FIFO's, for example.);
+</dd><dd>or the base address or device name of a Linux AX.25 socket device.
+</dd><dd>Usually only the lower thirty two bits of Tru64 UNIX kernel addresses are displayed.
+</dd><dt>SIZE, SIZE/OFF, or OFFSET
+</dt><dd>is the size of the file or the file offset in bytes. A value is displayed in this column only if it is available. <i>Lsof</i> displays whatever value - size or offset - is appropriate for the type of the file and the version of <i>lsof</i>.
+</dd><dd>On some UNIX dialects <i>lsof</i> can't obtain accurate or consistent file offset information from its kernel data sources, sometimes just for particular kinds of files (e.g., socket files.) In other cases, files don't have true sizes - e.g., sockets, FIFOs, pipes - so <i>lsof</i> displays for their sizes the content amounts it finds in their kernel buffer descriptors (e.g., socket buffer size counts or TCP/IP window sizes.) Consult the <i>lsof</i> FAQ (The <b>FAQ</b> section gives its location.) for more information.
+</dd><dd>The file size is displayed in decimal; the offset is normally displayed in decimal with a leading ``0t'' if it contains 8 digits or less; in hexadecimal with a leading ``0x'' if it is longer than 8 digits. (Consult the <b>-o</b><i> o</i> option description for information on when 8 might default to some other value.)
+</dd><dd>Thus the leading ``0t'' and ``0x'' identify an offset when the column may contain both a size and an offset (i.e., its title is SIZE/OFF).
+</dd><dd>If the <b>-o</b> option is specified, <i>lsof</i> always displays the file offset (or nothing if no offset is available) and labels the column OFFSET. The offset always begins with ``0t'' or ``0x'' as described above.
+</dd><dd>The <i>lsof</i> user can control the switch from ``0t'' to ``0x'' with the <b>-o</b><i> o</i> option. Consult its description for more information.
+</dd><dd>If the <b>-s</b> option is specified, <i>lsof</i> always displays the file size (or nothing if no size is available) and labels the column SIZE. The <b>-o</b> and <b>-s</b> options are mutually exclusive; they can't both be specified.
+</dd><dd>For files that don't have a fixed size - e.g., don't reside on a disk device - <i>lsof</i> will display appropriate information about the current size or position of the file if it is available in the kernel structures that define the file.
+</dd><dt>NLINK
+</dt><dd>contains the file link count when <b>+L</b> has been specified;
+</dd><dt>NODE
+</dt><dd>is the node number of a local file;
+</dd><dd>or the inode number of an NFS file in the server host;
+</dd><dd>or the Internet protocol type - e.g, ``TCP'';
+</dd><dd>or ``STR'' for a stream;
+</dd><dd>or ``CCITT'' for an HP-UX x.25 socket;
+</dd><dd>or the IRQ or inode number of a Linux AX.25 socket device.
+</dd><dt>NAME
+</dt><dd>is the name of the mount point and file system on which the file resides;
+</dd><dd>or the name of a file specified in the <i>names</i> option (after any symbolic links have been resolved);
+</dd><dd>or the name of a character special or block special device;
+</dd><dd>or the local and remote Internet addresses of a network file; the local host name or IP number is followed by a colon (':'), the port, ``-&gt;'', and the two-part remote address; IP addresses may be reported as numbers or names, depending on the <b>+|-M</b>, <b>-n</b>, and <b>-P</b> options; colon-separated IPv6 numbers are enclosed in square brackets; IPv4 INADDR_ANY and IPv6 IN6_IS_ADDR_UNSPECIFIED addresses, and zero port numbers are represented by an asterisk ('*'); a UDP destination address may be followed by the amount of time elapsed since the last packet was sent to the destination; TCP, UDP and UDPLITE remote addresses may be followed by TCP/TPI information in parentheses - state (e.g., ``(ESTABLISHED)'', ``(Unbound)''), queue sizes, and window sizes (not all dialects) - in a fashion similar to what <i>netstat</i>(1) reports; see the <b>-T</b> option description or the description of the TCP/TPI field in <b>OUTPUT FOR OTHER PROGRAMS</b> for more information on state, queue size, and window size;
+</dd><dd>or the address or name of a UNIX domain socket, possibly including a stream clone device name, a file system object's path name, local and foreign kernel addresses, socket pair information, and a bound vnode address;
+</dd><dd>or the local and remote mount point names of an NFS file;
+</dd><dd>or ``STR'', followed by the stream name;
+</dd><dd>or a stream character device name, followed by ``-&gt;'' and the stream name or a list of stream module names, separated by ``-&gt;'';
+</dd><dd>or ``STR:'' followed by the SCO OpenServer stream device and module names, separated by ``-&gt;'';
+</dd><dd>or system directory name, `` -- '', and as many components of the path name as <i>lsof</i> can find in the kernel's name cache for selected dialects (See the <b>KERNEL NAME CACHE</b> section for more information.);
+</dd><dd>or ``PIPE-&gt;'', followed by a Solaris kernel pipe destination address;
+</dd><dd>or ``COMMON:'', followed by the vnode device information structure's device name, for a Solaris common vnode;
+</dd><dd>or the address family, followed by a slash (`/'), followed by fourteen comma-separated bytes of a non-Internet raw socket address;
+</dd><dd>or the HP-UX x.25 local address, followed by the virtual connection number (if any), followed by the remote address (if any);
+</dd><dd>or ``(dead)'' for disassociated Tru64 UNIX files - typically terminal files that have been flagged with the TIOCNOTTY ioctl and closed by daemons;
+</dd><dd>or ``rd=&lt;offset&gt;'' and ``wr=&lt;offset&gt;'' for the values of the read and write offsets of a FIFO;
+</dd><dd>or ``clone <i>n</i>:/dev/event'' for SCO OpenServer file clones of the <i>/dev/event</i> device, where <i>n</i> is the minor device number of the file;
+</dd><dd>or ``(socketpair: n)'' for a Solaris 2.6, 8, 9 or 10 UNIX domain socket, created by the <i>socketpair</i>(3N) network function;
+</dd><dd>or ``no PCB'' for socket files that do not have a protocol block associated with them, optionally followed by ``, CANTSENDMORE'' if sending on the socket has been disabled, or ``, CANTRCVMORE'' if receiving on the socket has been disabled (e.g., by the <i><a HREF="/docs/linux/man/2-shutdown/">shutdown</a></i>(2) function);
+</dd><dd>or the local and remote addresses of a Linux IPX socket file in the form &lt;net&gt;:[&lt;node&gt;:]&lt;port&gt;, followed in parentheses by the transmit and receive queue sizes, and the connection state;
+</dd><dd>or ``dgram'' or ``stream'' for the type UnixWare 7.1.1 and above in-kernel UNIX domain sockets, followed by a colon (':') and the local path name when available, followed by ``-&gt;'' and the remote path name or kernel socket address in hexadecimal when available;
+</dd><dd>or the association value, association index, endpoint value, local address, local port, remote address and remote port for Linux SCTP sockets;
+</dd><dd>or ``protocol: '' followed by the Linux socket's protocol attribute.</dd></dl>
  
 
  For dialects that support a ``namefs'' file system, allowing one file to be attached to another with <i>fattach</i>(3C), <i>lsof</i> will add ``(FA:&lt;address1&gt;&lt;direction&gt;&lt;address2&gt;)'' to the NAME column. &lt;address1&gt; and &lt;address2&gt; are hexadecimal vnode addresses. &lt;direction&gt; will be ``&lt;-'' if &lt;address2&gt; has been fattach'ed to this vnode whose address is &lt;address1&gt;; and ``-&gt;'' if &lt;address1&gt;, the vnode address of this vnode, has been fattach'ed to &lt;address2&gt;. &lt;address1&gt; may be omitted if it already appears in the DEVICE column. 
@@ -899,7 +882,7 @@ On some dialects, when <i>lsof</i> has to break a block because it can't get inf
 
  If you're not sure your dialect supplies alternate device numbers for file systems from its mount table, use this <i>lsof</i> incantation to see if it reports any alternate device numbers: 
 
-<dl><dd>lsof -b</dl>
+<dl><dd>lsof -b</dd></dl>
  
 
  Look for standard error file warning messages that begin ``assuming &quot;dev=xxxx&quot; from ...''.
@@ -1068,91 +1051,91 @@ Errors are identified with messages on the standard error file.
 For a more extensive set of examples, documented more fully, see the <i>00QUICKSTART</i> file of the <i>lsof</i> distribution. 
 
  To list all open files, use:
-<dl><dd>lsof</dl>
+<dl><dd>lsof</dd></dl>
  
 
  To list all open Internet, x.25 (HP-UX), and UNIX domain files, use:
-<dl><dd>lsof -i -U</dl>
+<dl><dd>lsof -i -U</dd></dl>
  
 
  To list all open IPv4 network files in use by the process whose PID is 1234, use:
-<dl><dd>lsof -i 4 -a -p 1234</dl>
+<dl><dd>lsof -i 4 -a -p 1234</dd></dl>
  
 
  Presuming the UNIX dialect supports IPv6, to list only open IPv6 network files, use:
-<dl><dd>lsof -i 6</dl>
+<dl><dd>lsof -i 6</dd></dl>
  
 
  To list all files using any protocol on ports 513, 514, or 515 of host wonderland.cc.purdue.edu, use:
-<dl><dd>lsof -i @wonderland.cc.purdue.edu:513-515</dl>
+<dl><dd>lsof -i @wonderland.cc.purdue.edu:513-515</dd></dl>
  
 
  To list all files using any protocol on any port of mace.cc.purdue.edu (cc.purdue.edu is the default domain), use:
-<dl><dd>lsof -i @mace</dl>
+<dl><dd>lsof -i @mace</dd></dl>
  
 
  To list all open files for login name ``abe'', or user ID 1234, or process 456, or process 123, or process 789, use:
-<dl><dd>lsof -p 456,123,789 -u 1234,abe</dl>
+<dl><dd>lsof -p 456,123,789 -u 1234,abe</dd></dl>
  
 
  To list all open files on device /dev/hd4, use:
-<dl><dd>lsof /dev/hd4</dl>
+<dl><dd>lsof /dev/hd4</dd></dl>
  
 
  To find the process that has /u/abe/foo open, use:
-<dl><dd>lsof /u/abe/foo</dl>
+<dl><dd>lsof /u/abe/foo</dd></dl>
  
 
  To send a SIGHUP to the processes that have /u/abe/bar open, use:
-<dl><dd>kill -HUP `lsof -t /u/abe/bar`</dl>
+<dl><dd>kill -HUP `lsof -t /u/abe/bar`</dd></dl>
  
 
  To find any open file, including an open UNIX domain socket file, with the name <i>/dev/log</i>, use:
-<dl><dd>lsof /dev/log</dl>
+<dl><dd>lsof /dev/log</dd></dl>
  
 
  To find processes with open files on the NFS file system named <i>/nfs/mount/point</i> whose server is inaccessible, and presuming your mount table supplies the device number for <i>/nfs/mount/point</i>, use:
-<dl><dd>lsof -b /nfs/mount/point</dl>
+<dl><dd>lsof -b /nfs/mount/point</dd></dl>
  
 
  To do the preceding search with warning messages suppressed, use:
-<dl><dd>lsof -bw /nfs/mount/point</dl>
+<dl><dd>lsof -bw /nfs/mount/point</dd></dl>
  
 
  To ignore the device cache file, use:
-<dl><dd>lsof -Di</dl>
+<dl><dd>lsof -Di</dd></dl>
  
 
  To obtain PID and command name field output for each process, file descriptor, file device number, and file inode number for each file of each process, use:
-<dl><dd>lsof -FpcfDi</dl>
+<dl><dd>lsof -FpcfDi</dd></dl>
  
 
  To list the files at descriptors 1 and 3 of every process running the <i>lsof</i> command for login ID ``abe'' every 10 seconds, use:
-<dl><dd>lsof -c lsof -a -d 1 -d 3 -u abe -r10</dl>
+<dl><dd>lsof -c lsof -a -d 1 -d 3 -u abe -r10</dd></dl>
  
 
  To list the current working directory of processes running a command that is exactly four characters long and has an 'o' or 'O' in character three, use this regular expression form of the <b>-c</b><i> c</i> option:
-<dl><dd>lsof -c /^..o.$/i -a -d cwd</dl>
+<dl><dd>lsof -c /^..o.$/i -a -d cwd</dd></dl>
  
 
  To find an IP version 4 socket file by its associated numeric dot-form address, use:
-<dl><dd>lsof -i [at] 128.210.15.17</dl>
+<dl><dd>lsof -i [at] 128.210.15.17</dd></dl>
  
 
  To find an IP version 6 socket file (when the UNIX dialect supports IPv6) by its associated numeric colon-form address, use:
-<dl><dd>lsof -i@[0:1:2:3:4:5:6:7]</dl>
+<dl><dd>lsof -i@[0:1:2:3:4:5:6:7]</dd></dl>
  
 
  To find an IP version 6 socket file (when the UNIX dialect supports IPv6) by an associated numeric colon-form address that has a run of zeroes in it - e.g., the loop-back address - use:
-<dl><dd>lsof -i@[::1]</dl>
+<dl><dd>lsof -i@[::1]</dd></dl>
  
 
  To obtain a repeat mode marker line that contains the current time, use:
-<dl><dd>lsof -rm====%T====</dl>
+<dl><dd>lsof -rm====%T====</dd></dl>
  
 
  To add spaces to the previous marker line, use:
-<dl><dd>lsof -r &quot;m==== %T ====&quot;</dl>
+<dl><dd>lsof -r &quot;m==== %T ====&quot;</dd></dl>
 
 <h2>Bugs</h2>
 
@@ -1184,29 +1167,29 @@ Since <i>lsof</i> reads kernel memory in its search for open files, rapid change
 
 <i>Lsof</i> may access these environment variables.
 <dl><dt>LANG
-<dd>defines a language locale. See <i><a HREF="/docs/linux/man/3-setlocale/">setlocale</a></i>(3) for the names of other variables that can be used in place of LANG - e.g., LC_ALL, LC_TYPE, etc.
-<dt>LSOFDEVCACHE
-<dd>defines the path to a device cache file. See the <b>DEVICE CACHE PATH FROM AN ENVIRONMENT VARIABLE</b> section for more information.
-<dt>LSOFPERSDCPATH
-<dd>defines the middle component of a modified personal device cache file path. See the <b>MODIFIED PERSONAL DEVICE CACHE PATH</b> section for more information.</dl>
+</dt><dd>defines a language locale. See <i><a HREF="/docs/linux/man/3-setlocale/">setlocale</a></i>(3) for the names of other variables that can be used in place of LANG - e.g., LC_ALL, LC_TYPE, etc.
+</dd><dt>LSOFDEVCACHE
+</dt><dd>defines the path to a device cache file. See the <b>DEVICE CACHE PATH FROM AN ENVIRONMENT VARIABLE</b> section for more information.
+</dd><dt>LSOFPERSDCPATH
+</dt><dd>defines the middle component of a modified personal device cache file path. See the <b>MODIFIED PERSONAL DEVICE CACHE PATH</b> section for more information.</dd></dl>
 
 <h2>Faq</h2>
 
 Frequently-asked questions and their answers (an FAQ) are available in the <i>00FAQ</i> file of the <i>lsof</i> distribution. 
 
  That file is also available via anonymous ftp from <i>lsof.itap.purdue.edu</i> at <i>pub/tools/unix/lsof</i>FAQ<i>.</i> The URL is:
-<dl><dd><a HREF="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ">ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ</a></dl>
+<dl><dd><a HREF="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ">ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ</a></dd></dl>
 
 <h2>Files</h2>
 
 <dl><dt><i>/dev/kmem</i>
-<dd>kernel virtual memory device
-<dt><i>/dev/mem</i>
-<dd>physical memory device
-<dt><i>/dev/swap</i>
-<dd>system paging device
-<dt><i>.lsof_hostname</i>
-<dd><i>lsof's</i> device cache file (The suffix, <i>hostname</i>, is the first component of the host's name returned by <i><a HREF="/docs/linux/man/2-gethostname/">gethostname</a></i>(2).)</dl>
+</dt><dd>kernel virtual memory device
+</dd><dt><i>/dev/mem</i>
+</dt><dd>physical memory device
+</dd><dt><i>/dev/swap</i>
+</dt><dd>system paging device
+</dd><dt><i>.lsof_hostname</i>
+</dt><dd><i>lsof's</i> device cache file (The suffix, <i>hostname</i>, is the first component of the host's name returned by <i><a HREF="/docs/linux/man/2-gethostname/">gethostname</a></i>(2).)</dd></dl>
 
 <h2>Authors</h2>
 
@@ -1217,7 +1200,7 @@ Frequently-asked questions and their answers (an FAQ) are available in the <i>00
 The latest distribution of <i>lsof</i> is available via anonymous ftp from the host <i>lsof.itap.purdue.edu</i>. You'll find the <i>lsof</i> distribution in the <i>pub/tools/unix/lsof</i> directory. 
 
  You can also use this URL:
-<dl><dd><a HREF="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof">ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof</a></dl>
+<dl><dd><a HREF="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof">ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof</a></dd></dl>
  
 
  <i>Lsof</i> is also mirrored elsewhere. When you access <i>lsof.itap.purdue.edu</i> and change to its <i>pub/tools/unix/lsof</i> directory, you'll be given a list of some mirror sites. The <i>pub/tools/unix/lsof</i> directory also contains a more complete list in its <i>mirrors</i> file. Use mirrors with caution - not all mirrors always have the latest <i>lsof</i> revision. 

@@ -19,8 +19,8 @@ description: "i2c-stub-from-dump – feed i2c-stub with a dump file"
 <h2>Limitations</h2>
 <p>There are some limitations to the kind of devices that can be handled:</p>
 <dl>
-<dt>*</p>
-<dd>Device must not have banks (as most Winbond devices do). </p>
+<dt>*</dt>
+<dd>Device must not have banks (as most Winbond devices do). </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-i2cdump/">i2cdump</a>(8), <a href="/docs/linux/man/8-i2cdetect/">i2cdetect</a>(8), <a href="/docs/linux/man/8-i2cset/">i2cset</a>(8) </p>

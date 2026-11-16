@@ -36,79 +36,79 @@ nvme - io - passthru&lt;device&gt;[--opcode = &lt;opcode&gt; | -o&lt;opcode&gt;]
  -o &lt;opcode&gt;, --opcode=&lt;opcode&gt;
 <dl>
 <dt>
-<dd> The NVMe opcode to send to the device in the command</dl>
+</dt><dd> The NVMe opcode to send to the device in the command</dd></dl>
  
 
  -f &lt;flags&gt;, --flags=&lt;flags&gt;
 <dl>
 <dt>
-<dd> The NVMe command flags to send to the device in the command</dl>
+</dt><dd> The NVMe command flags to send to the device in the command</dd></dl>
  
 
  -R &lt;rsvd&gt;, --rsvd=&lt;rsvd&gt;
 <dl>
 <dt>
-<dd> The value for the reserved field in the command.</dl>
+</dt><dd> The value for the reserved field in the command.</dd></dl>
  
 
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> The value for the ns-id in the command. Defaults to <i>0</i>.</dl>
+</dt><dd> The value for the ns-id in the command. Defaults to <i>0</i>.</dd></dl>
  
 
  --cdw[2-3,10-15]=&lt;cdw&gt;
 <dl>
 <dt>
-<dd> Specifies the command dword value for that specified entry in the command</dl>
+</dt><dd> Specifies the command dword value for that specified entry in the command</dd></dl>
  
 
  -r, --read, -w, --write
 <dl>
 <dt>
-<dd> Used for the data-direction for the command and required for commands sending/receiving data. Don't use both read and write at the same time.</dl>
+</dt><dd> Used for the data-direction for the command and required for commands sending/receiving data. Don't use both read and write at the same time.</dd></dl>
  
 
  -i &lt;file&gt;, --input-file=&lt;file&gt;
 <dl>
 <dt>
-<dd> If the command is a data-out (write) command, use this file to fill the buffer sent to the device. If no file is given, assumed to use STDIN.</dl>
+</dt><dd> If the command is a data-out (write) command, use this file to fill the buffer sent to the device. If no file is given, assumed to use STDIN.</dd></dl>
  
 
  -l &lt;data-len&gt;, --data-len=&lt;data-len&gt;
 <dl>
 <dt>
-<dd> The data length for the buffer used for this command.</dl>
+</dt><dd> The data length for the buffer used for this command.</dd></dl>
  
 
  -m &lt;data-len&gt;, --metadata-len=&lt;data-len&gt;
 <dl>
 <dt>
-<dd> The metadata length for the buffer used for this command.</dl>
+</dt><dd> The metadata length for the buffer used for this command.</dd></dl>
  
 
  -s, --show-cmd
 <dl>
 <dt>
-<dd> Print out the command to be sent.</dl>
+</dt><dd> Print out the command to be sent.</dd></dl>
  
 
  -d, --dry-run
 <dl>
 <dt>
-<dd> Do not actually send the command.</dl>
+</dt><dd> Do not actually send the command.</dd></dl>
  
 
  -b, --raw-binary
 <dl>
 <dt>
-<dd> Print the raw returned buffer to stdout if the command returns data or a structure.</dl>
+</dt><dd> Print the raw returned buffer to stdout if the command returns data or a structure.</dd></dl>
  
 
  -p &lt;prefill&gt;, --prefill &lt;prefill&gt;
 <dl>
 <dt>
-<dd> Prefill the buffer with a predetermined byte value. Defaults to 0. This may be useful if the data you are writing is shorter than the required buffer, and you need to pad it with a known value. It may also be useful if you need to confirm if a device is overwriting a buffer on a data-in command.</dl>
+</dt><dd> Prefill the buffer with a predetermined byte value. Defaults to 0. This may be useful if the data you are writing is shorter than the required buffer, and you need to pad it with a known value. It may also be useful if you need to confirm if a device is overwriting a buffer on a data-in command.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

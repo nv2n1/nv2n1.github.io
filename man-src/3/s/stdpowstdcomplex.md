@@ -11,35 +11,23 @@ std::pow(std::complex) - std::pow(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
     (1)
-
         complex&lt;T&gt; pow(const complex&lt;T&gt; &amp;x, const complex&lt;T&gt; &amp;y);
-
 template &lt;class T&gt;
 (2)
-
     complex&lt;T&gt; pow(const complex&lt;T&gt; &amp;x, const T &amp;y);
-
 template &lt;class T&gt;
 (3)
-
     complex&lt;T&gt; pow(const T &amp;x, const complex&lt;T&gt; &amp;y);
-
 template &lt;class T, class U&gt;
 (4)(since C++ 11)
-
     complex&lt;/*Promoted*/&gt; pow(const complex&lt;T&gt; &amp;x, const complex&lt;U&gt; &amp;y);
-
 template &lt;class T, class U&gt;
 (5)(since C++ 11)
-
     complex&lt;/*Promoted*/&gt; pow(const complex&lt;T&gt; &amp;x, const U &amp;y);
-
 template &lt;class T, class U&gt;
 (6)(since C++ 11)
-
     complex&lt;/*Promoted*/&gt; pow(const T &amp;x, const complex&lt;U&gt; &amp;y);</code></pre> 
 1-3) Computes complex x raised to a complex power y with a branch cut along the negative real axis for the first argument. 
 4-6) Additional overloads are provided for all arithmetic types, such that 
@@ -62,10 +50,8 @@ The result of std::pow(0, 0) is implementation-defined.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::fixed;
     std::complex&lt;double&gt; z(1, 2);

@@ -11,19 +11,12 @@ operator+(std::reverse_iterator) - operator+(std::reverse_iterator)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Iter&gt;
-
 reverse_iterator&lt;Iter&gt;(until C++ 17)
-
 operator+(typename reverse_iterator&lt;Iter&gt;::difference_type n,
-
           const reverse_iterator&lt;Iter&gt; &amp;it);
-
 template &lt;class Iter&gt;
-
 constexpr reverse_iterator&lt;Iter&gt;(since C++ 17)
-
 operator+(typename reverse_iterator&lt;Iter&gt;::difference_type n,
-
           const reverse_iterator&lt;Iter&gt; &amp;it);</code></pre> 
 Returns the iterator it incremented by n. 
 
@@ -44,22 +37,11 @@ The incremented iterator, that is reverse_iterator&lt;Iter&gt;(it.base() - n)
 <h2>See also</h2>
 
 <pre><code>operator++
-
 operator++(int)
-
 operator+=      advances or decrements the iterator
-
 operator+       (public member function)
-
 operator--
-
 operator--(int)
-
 operator-=
-
 operator-
-
-
-
-
 </code></pre>

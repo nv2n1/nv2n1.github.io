@@ -13,10 +13,10 @@ description: "asn1Decoding – ASN.1 DER decoder"
 <h2>Description</h2>
 <p>Decodes DER data in ENCODED file, for the ASN1TYPE element described in ASN.1 DEFINITIONS file, and print decoded structures.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>output version information and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
 <h2>Author</h2>
 <p>Written by Fabio Fiorina.</p>
 <h2>Reporting Bugs</h2>
@@ -29,5 +29,5 @@ description: "asn1Decoding – ASN.1 DER decoder"
 <h2>See Also</h2>
 <p>The full documentation for <code>asn1Decoding</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>asn1Decoding</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libtasn1</code></dl>
+<dd><code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual.</p>

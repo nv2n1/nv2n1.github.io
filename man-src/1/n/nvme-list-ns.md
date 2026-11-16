@@ -36,7 +36,7 @@ url: "/docs/linux/man/1-nvme-list-ns/"
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Retrieve the identify list structure starting with the given nsid.</dl>
+</dt><dd> Retrieve the identify list structure starting with the given nsid.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

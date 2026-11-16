@@ -16,38 +16,38 @@ description: "ttf2afm – utility to generate AFM files for TrueType fonts"
 <p> <code>ttf2afm</code> takes the name of a TrueType font file as a required argument. It may also take one or more options from the list below (<code>-i</code> and <code>-u</code> are mutually exclusive). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd> force printing glyph names in form `index&#8217;<i>decnum</i></p>
-<dt><code>-u</code></p>
-<dd> force printing glyph names in form `uni&#8217;<i>hexnum</i></p>
-<dt><code>-c</code> <i>name</i></p>
-<dd> write encoding tables to file <i>name.eMN</i>, where <i>M</i> is the platform ID and <i>N</i> is the encoding ID</p>
-<dt><code>-v</code></p>
-<dd> print program version</p>
-<dt><code>-e</code> <i>enc</i></p>
-<dd> encode AFM output using encoding vector from <i>enc</i></p>
-<dt><code>-o</code> <i>outfile</i></p>
-<dd> output to file <i>outfile</i> instead of standard output</p>
-<dt><code>-m</code> <i>num</i></p>
-<dd> use Unicode mapping <i>num</i> in the font</dl>
+<dt><code>-i</code></dt>
+<dd> force printing glyph names in form `index&#8217;<i>decnum</i></dd>
+<dt><code>-u</code></dt>
+<dd> force printing glyph names in form `uni&#8217;<i>hexnum</i></dd>
+<dt><code>-c</code> <i>name</i></dt>
+<dd> write encoding tables to file <i>name.eMN</i>, where <i>M</i> is the platform ID and <i>N</i> is the encoding ID</dd>
+<dt><code>-v</code></dt>
+<dd> print program version</dd>
+<dt><code>-e</code> <i>enc</i></dt>
+<dd> encode AFM output using encoding vector from <i>enc</i></dd>
+<dt><code>-o</code> <i>outfile</i></dt>
+<dd> output to file <i>outfile</i> instead of standard output</dd>
+<dt><code>-m</code> <i>num</i></dt>
+<dd> use Unicode mapping <i>num</i> in the font</dd></dl>
 <p> Platform numbers can be one of</p>
 <dl>
-<dt>0</p>
-<dd> Apple Unicode</p>
-<dt>1</p>
-<dd> Macintosh</p>
-<dt>2</p>
-<dd> ISO</p>
-<dt>3</p>
-<dd> Microsoft</dl>
+<dt>0</dt>
+<dd> Apple Unicode</dd>
+<dt>1</dt>
+<dd> Macintosh</dd>
+<dt>2</dt>
+<dd> ISO</dd>
+<dt>3</dt>
+<dd> Microsoft</dd></dl>
 <p> Encodings can be</p>
 <dl>
-<dt>0</p>
-<dd> Roman (if platform is Macintosh)</p>
-<dt>0</p>
-<dd> Symbol (if platform is Microsoft)</p>
-<dt>1</p>
-<dd> Unicode (if platform is Microsoft)</dl>
+<dt>0</dt>
+<dd> Roman (if platform is Macintosh)</dd>
+<dt>0</dt>
+<dd> Symbol (if platform is Microsoft)</dd>
+<dt>1</dt>
+<dd> Unicode (if platform is Microsoft)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-afm2tfm/">afm2tfm</a>(1), <a href="/docs/linux/man/1-afm2pl/">afm2pl</a>(1). FontForge (<a rel="nofollow" href="http://fontforge.sf.net">http://fontforge.sf.net</a>). LCDF TypeTools (<a rel="nofollow" href="http://lcdf.org">http://lcdf.org</a>). A closer look at TrueType fonts and pdfTeX, Han The Thanh (<a rel="nofollow" href="http://tug.org/TUGboat/tb30-1/tb94thanh.pdf">http://tug.org/TUGboat/tb30-1/tb94thanh.pdf</a>). </p>
 <h2>BUGS</h2>

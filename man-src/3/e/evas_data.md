@@ -89,10 +89,10 @@ description: "Evas_Data.h – These routines are used for Evas data types."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list handle to move inside<br />
- <i>move_list</i> The list node which is to be moved</dl>
+ <i>move_list</i> The list node which is to be moved</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list handle to replace the old one</dl>
+<dd>A new list handle to replace the old one</dd></dl>
 <p> Calling this function takes the list node move_list and moves it to the front of the list. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;

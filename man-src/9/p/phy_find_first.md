@@ -15,7 +15,7 @@ phy_find_first - finds the first PHY device on the bus
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>the target MII bus</dl>
+<dl><dd></dd><dd>the target MII bus</dd></dl>
 
 <h2>Copyright</h2>
 

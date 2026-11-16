@@ -38,28 +38,28 @@ description: "CURLOPT_URL – provide the URL to use in the request"
 <p> <a href="smtp://mail.example.com:587/">smtp://mail.example.com:587/</a> &#8211; This will connect to a SMTP server on the alternative mail port. </p>
 <p> The path part of the URL is protocol specific and whilst some examples are given below this list is not conclusive: </p>
 <dl COMPACT>
-<dt>HTTP</p>
-<dd>The path part of a HTTP request specifies the file to retrieve and from what directory. If the directory is not specified then the web server&#8217;s root directory is used. If the file is omitted then the default document will be retrieved for either the directory specified or the root directory. The exact resource returned for each URL is entirely dependent on the server&#8217;s configuration. </p>
+<dt>HTTP</dt>
+<dd>The path part of a HTTP request specifies the file to retrieve and from what directory. If the directory is not specified then the web server&#8217;s root directory is used. If the file is omitted then the default document will be retrieved for either the directory specified or the root directory. The exact resource returned for each URL is entirely dependent on the server&#8217;s configuration. </dd>
 <p> <a rel="nofollow" href="http://www.example.com">http://www.example.com</a> &#8211; This gets the main page from the web server. </p>
 <p> <a rel="nofollow" href="http://www.example.com/index.html">http://www.example.com/index.html</a> &#8211; This returns the main page by explicitly requesting it. </p>
 <p> <a rel="nofollow" href="http://www.example.com/contactus/">http://www.example.com/contactus/</a> &#8211; This returns the default document from the contactus directory. </p>
-<dt>FTP</p>
-<dd>The path part of an FTP request specifies the file to retrieve and from what directory. If the file part is omitted then libcurl downloads the directory listing for the directory specified. If the directory is omitted then the directory listing for the root / home directory will be returned. </p>
+<dt>FTP</dt>
+<dd>The path part of an FTP request specifies the file to retrieve and from what directory. If the file part is omitted then libcurl downloads the directory listing for the directory specified. If the directory is omitted then the directory listing for the root / home directory will be returned. </dd>
 <p> <a href="ftp://ftp.example.com">ftp://ftp.example.com</a> &#8211; This retrieves the directory listing for the root directory. </p>
 <p> <a href="ftp://ftp.example.com/readme.txt">ftp://ftp.example.com/readme.txt</a> &#8211; This downloads the file readme.txt from the root directory. </p>
 <p> <a href="ftp://ftp.example.com/libcurl/readme.txt">ftp://ftp.example.com/libcurl/readme.txt</a> &#8211; This downloads readme.txt from the libcurl directory. </p>
 <p> <a href="ftp://user:password@ftp.example.com/readme.txt">ftp://user:password@ftp.example.com/readme.txt</a> &#8211; This retrieves the readme.txt file from the user&#8217;s home directory. When a username and password is specified, everything that is specified in the path part is relative to the user&#8217;s home directory. To retrieve files from the root directory or a directory underneath the root directory then the absolute path must be specified by prepending an additional forward slash to the beginning of the path. </p>
 <p> <a href="ftp://user:password@ftp.example.com//readme.txt">ftp://user:password@ftp.example.com//readme.txt</a> &#8211; This retrieves the readme.txt from the root directory when logging in as a specified user. </p>
-<dt>SMTP</p>
-<dd>The path part of a SMTP request specifies the host name to present during communication with the mail server. If the path is omitted then libcurl will attempt to resolve the local computer&#8217;s host name. However, this may not return the fully qualified domain name that is required by some mail servers and specifying this path allows you to set an alternative name, such as your machine&#8217;s fully qualified domain name, which you might have obtained from an external function such as gethostname or getaddrinfo. </p>
+<dt>SMTP</dt>
+<dd>The path part of a SMTP request specifies the host name to present during communication with the mail server. If the path is omitted then libcurl will attempt to resolve the local computer&#8217;s host name. However, this may not return the fully qualified domain name that is required by some mail servers and specifying this path allows you to set an alternative name, such as your machine&#8217;s fully qualified domain name, which you might have obtained from an external function such as gethostname or getaddrinfo. </dd>
 <p> <a href="smtp://mail.example.com">smtp://mail.example.com</a> &#8211; This connects to the mail server at example.com and sends your local computer&#8217;s host name in the HELO / EHLO command. </p>
 <p> <a href="smtp://mail.example.com/client.example.com">smtp://mail.example.com/client.example.com</a> &#8211; This will send client.example.com in the HELO / EHLO command to the mail server at example.com. </p>
-<dt>POP3</p>
-<dd>The path part of a POP3 request specifies the message ID to retrieve. If the ID is not specified then a list of waiting messages is returned instead. </p>
+<dt>POP3</dt>
+<dd>The path part of a POP3 request specifies the message ID to retrieve. If the ID is not specified then a list of waiting messages is returned instead. </dd>
 <p> pop3://user:password [at] mail.example.com &#8211; This lists the available messages for the user </p>
 <p> pop3://user:password [at] mail.example.com/1 &#8211; This retrieves the first message for the user </p>
-<dt>IMAP</p>
-<dd>The path part of an IMAP request not only specifies the mailbox to list (Added in 7.30.0) or select, but can also be used to check the UIDVALIDITY of the mailbox, to specify the UID, SECTION (Added in 7.30.0) and PARTIAL octets (Added in 7.37.0) of the message to fetch and to specify what messages to search for (Added in 7.37.0). </p>
+<dt>IMAP</dt>
+<dd>The path part of an IMAP request not only specifies the mailbox to list (Added in 7.30.0) or select, but can also be used to check the UIDVALIDITY of the mailbox, to specify the UID, SECTION (Added in 7.30.0) and PARTIAL octets (Added in 7.37.0) of the message to fetch and to specify what messages to search for (Added in 7.37.0). </dd>
 <p> <a href="imap://user:password@mail.example.com">imap://user:password@mail.example.com</a> &#8211; Performs a top level folder list </p>
 <p> <a href="imap://user:password@mail.example.com/INBOX">imap://user:password@mail.example.com/INBOX</a> &#8211; Performs a folder list on the user&#8217;s inbox </p>
 <p> <a href="imap://user:password@mail.example.com/INBOX/;UID=1">imap://user:password@mail.example.com/INBOX/;UID=1</a> &#8211; Selects the user&#8217;s inbox and fetches message 1 </p>
@@ -69,27 +69,27 @@ description: "CURLOPT_URL – provide the URL to use in the request"
 <p> <a href="imap://user:password@mail.example.com/INBOX?NEW">imap://user:password@mail.example.com/INBOX?NEW</a> &#8211; Selects the user&#8217;s inbox and checks for NEW messages </p>
 <p> <a href="imap://user:password@mail.example.com/INBOX?SUBJECT%20shadows">imap://user:password@mail.example.com/INBOX?SUBJECT%20shadows</a> &#8211; Selects the user&#8217;s inbox and searches for messages containing &quot;shadows&quot; in the subject line </p>
 <p> For more information about the individual components of an IMAP URL please see RFC5092. </p>
-<dt>SCP</p>
-<dd>The path part of a SCP request specifies the file to retrieve and from what directory. The file part may not be omitted. The file is taken as an absolute path from the root directory on the server. To specify a path relative to the user&#8217;s home directory on the server, prepend ~/ to the path portion. If the user name is not embedded in the URL, it can be set with the <i><a href="/docs/linux/man/3-curlopt_userpwd/">CURLOPT_USERPWD</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_username/">CURLOPT_USERNAME</a>(3)</i> option. </p>
+<dt>SCP</dt>
+<dd>The path part of a SCP request specifies the file to retrieve and from what directory. The file part may not be omitted. The file is taken as an absolute path from the root directory on the server. To specify a path relative to the user&#8217;s home directory on the server, prepend ~/ to the path portion. If the user name is not embedded in the URL, it can be set with the <i><a href="/docs/linux/man/3-curlopt_userpwd/">CURLOPT_USERPWD</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_username/">CURLOPT_USERNAME</a>(3)</i> option. </dd>
 <p> <a href="scp://user@example.com/etc/issue">scp://user@example.com/etc/issue</a> &#8211; This specifies the file /etc/issue </p>
 <p> <a href="scp://example.com/~/my-file">scp://example.com/~/my-file</a> &#8211; This specifies the file my-file in the user&#8217;s home directory on the server </p>
-<dt>SFTP</p>
-<dd>The path part of a SFTP request specifies the file to retrieve and from what directory. If the file part is omitted then libcurl downloads the directory listing for the directory specified. If the path ends in a / then a directory listing is returned instead of a file. If the path is omitted entirely then the directory listing for the root / home directory will be returned. If the user name is not embedded in the URL, it can be set with the <i><a href="/docs/linux/man/3-curlopt_userpwd/">CURLOPT_USERPWD</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_username/">CURLOPT_USERNAME</a>(3)</i> option. </p>
+<dt>SFTP</dt>
+<dd>The path part of a SFTP request specifies the file to retrieve and from what directory. If the file part is omitted then libcurl downloads the directory listing for the directory specified. If the path ends in a / then a directory listing is returned instead of a file. If the path is omitted entirely then the directory listing for the root / home directory will be returned. If the user name is not embedded in the URL, it can be set with the <i><a href="/docs/linux/man/3-curlopt_userpwd/">CURLOPT_USERPWD</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_username/">CURLOPT_USERNAME</a>(3)</i> option. </dd>
 <p> <a href="sftp://user:password@example.com/etc/issue">sftp://user:password@example.com/etc/issue</a> &#8211; This specifies the file /etc/issue </p>
 <p> <a href="sftp://user@example.com/~/my-file">sftp://user@example.com/~/my-file</a> &#8211; This specifies the file my-file in the user&#8217;s home directory </p>
 <p> <a href="sftp://ssh.example.com/~/Documents/">sftp://ssh.example.com/~/Documents/</a> &#8211; This requests a directory listing of the Documents directory under the user&#8217;s home directory </p>
-<dt>SMB</p>
-<dd>The path part of a SMB request specifies the file to retrieve and from what share and directory or the share to upload to and as such, may not be omitted. If the user name is not embedded in the URL, it can be set with the <i><a href="/docs/linux/man/3-curlopt_userpwd/">CURLOPT_USERPWD</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_username/">CURLOPT_USERNAME</a>(3)</i> option. If the user name is embedded in the URL then it must contain the domain name and as such, the backslash must be URL encoded as %2f. </p>
+<dt>SMB</dt>
+<dd>The path part of a SMB request specifies the file to retrieve and from what share and directory or the share to upload to and as such, may not be omitted. If the user name is not embedded in the URL, it can be set with the <i><a href="/docs/linux/man/3-curlopt_userpwd/">CURLOPT_USERPWD</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_username/">CURLOPT_USERNAME</a>(3)</i> option. If the user name is embedded in the URL then it must contain the domain name and as such, the backslash must be URL encoded as %2f. </dd>
 <p> <a href="smb://server.example.com/files/issue">smb://server.example.com/files/issue</a> &#8211; This specifies the file &quot;issue&quot; located in the root of the &quot;files&quot; share </p>
 <p> <a href="smb://server.example.com/files/">smb://server.example.com/files/</a> -T issue &#8211; This specifies the file &quot;issue&quot; will be uploaded to the root of the &quot;files&quot; share. </p>
-<dt>LDAP</p>
-<dd>The path part of a LDAP request can be used to specify the: Distinguished Name, Attributes, Scope, Filter and Extension for a LDAP search. Each field is separated by a question mark and when that field is not required an empty string with the question mark separator should be included. </p>
+<dt>LDAP</dt>
+<dd>The path part of a LDAP request can be used to specify the: Distinguished Name, Attributes, Scope, Filter and Extension for a LDAP search. Each field is separated by a question mark and when that field is not required an empty string with the question mark separator should be included. </dd>
 <p> <a href="ldap://ldap.example.com/o=My%20Organisation">ldap://ldap.example.com/o=My%20Organisation</a> &#8211; This will perform a LDAP search with the DN as My Organisation. </p>
 <p> <a href="ldap://ldap.example.com/o=My%20Organisation?postalAddress">ldap://ldap.example.com/o=My%20Organisation?postalAddress</a> &#8211; This will perform the same search but will only return postalAddress attributes. </p>
 <p> <a href="ldap://ldap.example.com/?rootDomainNamingContext">ldap://ldap.example.com/?rootDomainNamingContext</a> &#8211; This specifies an empty DN and requests information about the rootDomainNamingContext attribute for an Active Directory server. </p>
 <p> For more information about the individual components of a LDAP URL please see RFC4516.</p>
-<dt>RTMP</p>
-<dd>There&#8217;s no official URL spec for RTMP so libcurl uses the URL syntax supported by the underlying librtmp library. It has a syntax where it wants a traditional URL, followed by a space and a series of space-separated name=value pairs. </p>
+<dt>RTMP</dt>
+<dd>There&#8217;s no official URL spec for RTMP so libcurl uses the URL syntax supported by the underlying librtmp library. It has a syntax where it wants a traditional URL, followed by a space and a series of space-separated name=value pairs. </dd>
 <p> While space is not typically a &quot;legal&quot; letter, libcurl accepts them. When a user wants to pass in a &#8216;#&#8217; (hash) character it will be treated as a fragment and get cut off by libcurl if provided literally. You will instead have to escape it by providing it as backslash and its ASCII value in hexadecimal: &quot;\23&quot;.</dl>
 <h2>Default</h2>
 <p>There is no default URL. If this option isn&#8217;t set, no transfer can be performed.</p>
@@ -108,3 +108,4 @@ if(curl) {
 <p> Note that <i><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3)</i> won&#8217;t actually parse the given string so given a bad URL, it will not be detected until <i><a href="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a>(3)</i> or similar is called.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-curlopt_verbose/">CURLOPT_VERBOSE</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_protocols/">CURLOPT_PROTOCOLS</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_forbid_reuse/">CURLOPT_FORBID_REUSE</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_fresh_connect/">CURLOPT_FRESH_CONNECT</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a></code>(3)</p>
+</p>

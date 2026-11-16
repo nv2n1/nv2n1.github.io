@@ -14,10 +14,10 @@ description: "skb_dst_set – sets skb dst"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>buffer</dl>
+</dd><dd>buffer</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>dst entry</dl>
+<dd>dst entry</dd></dl>
 <h2>Description</h2>
 <p>Sets skb dst, assuming a reference was taken on dst and should be released by <code>skb_dst_drop</code></p>
 <h2>Copyright</h2>

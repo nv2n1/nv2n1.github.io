@@ -17,12 +17,12 @@ CREATE SCHEMA AUTHORIZATION <i>username</i> [ <i>schema_element</i> [ ... ] ]</p
 <p> Optionally, <code>CREATE SCHEMA</code> can include subcommands to create objects within the new schema. The subcommands are treated essentially the same as separate commands issued after creating the schema, except that if the AUTHORIZATION clause is used, all the created objects will be owned by that user.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>schemaname</i></p>
-<dd>The name of a schema to be created. If this is omitted, the user name is used as the schema name. The name cannot begin with pg_, as such names are reserved for system schemas.</p>
-<dt><i>username</i></p>
-<dd>The name of the user who will own the schema. If omitted, defaults to the user executing the command. Only superusers can create schemas owned by users other than themselves.</p>
-<dt><i>schema_element</i></p>
-<dd>An SQL statement defining an object to be created within the schema. Currently, only <code>CREATE TABLE</code>, <code>CREATE VIEW</code>, <code>CREATE INDEX</code>, <code>CREATE SEQUENCE</code>, <code>CREATE TRIGGER</code> and <code>GRANT</code> are accepted as clauses within <code>CREATE SCHEMA</code>. Other kinds of objects may be created in separate commands after the schema is created.</dl>
+<dt><i>schemaname</i></dt>
+<dd>The name of a schema to be created. If this is omitted, the user name is used as the schema name. The name cannot begin with pg_, as such names are reserved for system schemas.</dd>
+<dt><i>username</i></dt>
+<dd>The name of the user who will own the schema. If omitted, defaults to the user executing the command. Only superusers can create schemas owned by users other than themselves.</dd>
+<dt><i>schema_element</i></dt>
+<dd>An SQL statement defining an object to be created within the schema. Currently, only <code>CREATE TABLE</code>, <code>CREATE VIEW</code>, <code>CREATE INDEX</code>, <code>CREATE SEQUENCE</code>, <code>CREATE TRIGGER</code> and <code>GRANT</code> are accepted as clauses within <code>CREATE SCHEMA</code>. Other kinds of objects may be created in separate commands after the schema is created.</dd></dl>
 <h2>Notes</h2>
 <p>To create a schema, the invoking user must have the CREATE privilege for the current database. (Of course, superusers bypass this check.)</p>
 <h2>Examples</h2>

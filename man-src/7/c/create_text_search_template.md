@@ -20,12 +20,12 @@ description: "CREATE TEXT SEARCH TEMPLATE – define a new text search template"
 <p> Refer to in the documentation for further information.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the text search template to be created. The name can be schema-qualified.</p>
-<dt><i>init_function</i></p>
-<dd>The name of the init function for the template.</p>
-<dt><i>lexize_function</i></p>
-<dd>The name of the lexize function for the template.</dl>
+<dt><i>name</i></dt>
+<dd>The name of the text search template to be created. The name can be schema-qualified.</dd>
+<dt><i>init_function</i></dt>
+<dd>The name of the init function for the template.</dd>
+<dt><i>lexize_function</i></dt>
+<dd>The name of the lexize function for the template.</dd></dl>
 <p> The function names can be schema-qualified if necessary. Argument types are not given, since the argument list for each type of function is predetermined. The lexize function is required, but the init function is optional. </p>
 <p> The arguments can appear in any order, not only the one shown above.</p>
 <h2>Compatibility</h2>

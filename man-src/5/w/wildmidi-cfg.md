@@ -22,75 +22,75 @@ drumset 0
 26 snap note=65</pre>
 <h2>Syntax</h2>
 <dl>
-<dt><code>guspat_editor_author_cant_read_so_fix_release_time_for_me</code></p>
-<dd>Some patch file editors switch the 4th and 5th envelopes around making the sound play much longer than intended in players that stuck to the Gravis Ultrasound patch standard. Including this option in the config enables a fix that detects this oversight, playing the sound samples as if they were correct.</p>
-<dd>NOTE: This is a global setting. If it is found to affect good patch samples it will be moved to a per patch setting in a future version.</dl>
+<dt><code>guspat_editor_author_cant_read_so_fix_release_time_for_me</code></dt>
+<dd>Some patch file editors switch the 4th and 5th envelopes around making the sound play much longer than intended in players that stuck to the Gravis Ultrasound patch standard. Including this option in the config enables a fix that detects this oversight, playing the sound samples as if they were correct.</dd>
+<dd>NOTE: This is a global setting. If it is found to affect good patch samples it will be moved to a per patch setting in a future version.</dd></dl>
 <dl>
-<dt><code>auto_amp</code></p>
-<dd>Forces WildMIDI to amplify samples to their maximum level ignoring the amp=% in the patch lines of the config.</dl>
+<dt><code>auto_amp</code></dt>
+<dd>Forces WildMIDI to amplify samples to their maximum level ignoring the amp=% in the patch lines of the config.</dd></dl>
 <dl>
-<dt><code>auto_amp_with_amp</code></p>
-<dd>Forces WildMIDI to amplify samples to their maximum level then apply the amp=% in the patch lines of the config.</dl>
+<dt><code>auto_amp_with_amp</code></dt>
+<dd>Forces WildMIDI to amplify samples to their maximum level then apply the amp=% in the patch lines of the config.</dd></dl>
 <dl>
-<dt><code>dir</code> <i>dir-name</i></p>
-<dd>Change the search path for config and patch files to <i>dir-name</i>. This is specific to the current config file and carried to any included config file unless they have their own <code>dir</code> setting. Any included file that has its own <code>dir</code> setting does not effect the <code>dir</code> setting of the current config file.</dl>
+<dt><code>dir</code> <i>dir-name</i></dt>
+<dd>Change the search path for config and patch files to <i>dir-name</i>. This is specific to the current config file and carried to any included config file unless they have their own <code>dir</code> setting. Any included file that has its own <code>dir</code> setting does not effect the <code>dir</code> setting of the current config file.</dd></dl>
 <dl>
-<dt><code>source</code> <i>include-confg</i></p>
-<dd>Include the settings from <i>include-config</i>. Any patch already set will be over-ridden by the included config file.</dl>
+<dt><code>source</code> <i>include-confg</i></dt>
+<dd>Include the settings from <i>include-config</i>. Any patch already set will be over-ridden by the included config file.</dd></dl>
 <dl>
-<dt><code>bank</code> <i>N</i></p>
-<dd>The patches following this setting belong to MIDI instrument bank <i>N</i>.</dl>
+<dt><code>bank</code> <i>N</i></dt>
+<dd>The patches following this setting belong to MIDI instrument bank <i>N</i>.</dd></dl>
 <dl>
-<dt><code>drumset</code> <i>N</i></p>
-<dd>The patches following this setting belong to MIDI drum bank <i>N</i>.</dl>
+<dt><code>drumset</code> <i>N</i></dt>
+<dd>The patches following this setting belong to MIDI drum bank <i>N</i>.</dd></dl>
 <dl>
-<dt><i>patchno</i> <i>patchfile</i> [<code>amp=</code><i>volume</i>] [<code>note=</code><i>miodinte</i>] [<code>keep=loop</code>] [<code>keep=env</code>] [<code>remove=sustain</code>] [<code>remove=clamped</code>] [<code>env_level</code>[<i>0-5</i>]<code>=</code><i>level</i>] [<code>env_time</code>[<i>0-5</i>]<code>=</code><i>time</i>]</p>
-<dd></dl>
+<dt><i>patchno</i> <i>patchfile</i> [<code>amp=</code><i>volume</i>] [<code>note=</code><i>miodinte</i>] [<code>keep=loop</code>] [<code>keep=env</code>] [<code>remove=sustain</code>] [<code>remove=clamped</code>] [<code>env_level</code>[<i>0-5</i>]<code>=</code><i>level</i>] [<code>env_time</code>[<i>0-5</i>]<code>=</code><i>time</i>]</dt>
+<dd></dd></dl>
 <p> Example: 0 acpiano.pat amp=110 </p>
 <dl>
 <dd>
+</dd><dl>
+<dt><i>patchno</i></dt>
+<dd>This is the MIDI patch number the instrument belongs to.</dd></dl>
 <dl>
-<dt><i>patchno</i></p>
-<dd>This is the MIDI patch number the instrument belongs to.</dl>
+<dt><i>patchfile</i></dt>
+<dd>The filename of the Gravis Ultrasound compatible patch file. If the filename is missing the .pat extension, libWildMidi will add .pat when attempting to load the file.</dd></dl>
 <dl>
-<dt><i>patchfile</i></p>
-<dd>The filename of the Gravis Ultrasound compatible patch file. If the filename is missing the .pat extension, libWildMidi will add .pat when attempting to load the file.</dl>
+<dt><code>amp=</code><i>volume</i></dt>
+<dd>Force the volume of the samples in this patch to <i>volume</i>% prior to using it.</dd></dl>
 <dl>
-<dt><code>amp=</code><i>volume</i></p>
-<dd>Force the volume of the samples in this patch to <i>volume</i>% prior to using it.</dl>
+<dt><code>note=</code><i>midinote</i></dt>
+<dd>Use note <i>midinote</i> when playing the samples in this patch. NOTE: this is for instruments listed under drumset.</dd></dl>
 <dl>
-<dt><code>note=</code><i>midinote</i></p>
-<dd>Use note <i>midinote</i> when playing the samples in this patch. NOTE: this is for instruments listed under drumset.</dl>
+<dt><code>keep=loop</code></dt>
+<dd>Play the samples in this patch with the loop, when normally we would not for this instrument.</dd></dl>
 <dl>
-<dt><code>keep=loop</code></p>
-<dd>Play the samples in this patch with the loop, when normally we would not for this instrument.</dl>
+<dt><code>keep=env</code></dt>
+<dd>Use the envelope data in this patch, when normally we wouldn&#8217;t for this instrument.</dd></dl>
 <dl>
-<dt><code>keep=env</code></p>
-<dd>Use the envelope data in this patch, when normally we wouldn&#8217;t for this instrument.</dl>
+<dt><code>remove=sustain</code></dt>
+<dd>Do note hold the note after the 3rd envelope until note off, which is what happens if the sustain bit is set in the patch file.</dd></dl>
 <dl>
-<dt><code>remove=sustain</code></p>
-<dd>Do note hold the note after the 3rd envelope until note off, which is what happens if the sustain bit is set in the patch file.</dl>
+<dt><code>remove=clamped</code></dt>
+<dd>Do not jump to 6th envelope on note off, which is what happens if the clamped bit is set in the patch file.</dd></dl>
 <dl>
-<dt><code>remove=clamped</code></p>
-<dd>Do not jump to 6th envelope on note off, which is what happens if the clamped bit is set in the patch file.</dl>
+<dt><code>env_level</code>[<i>0-5</i>]<code>=</code><i>level</i></dt>
+<dd>Set the envelope level to <i>level</i> with 1.0 being maximum, and 0.0 being minimum.</dd>
+<dd>Example: set 5th envelope level to 10% &#8211; <code>env_level[0-5]=</code>0.1</dd></dl>
 <dl>
-<dt><code>env_level</code>[<i>0-5</i>]<code>=</code><i>level</i></p>
-<dd>Set the envelope level to <i>level</i> with 1.0 being maximum, and 0.0 being minimum.</p>
-<dd>Example: set 5th envelope level to 10% &#8211; <code>env_level[0-5]=</code>0.1</dl>
-<dl>
-<dt><code>env_time</code>[<i>0-5</i>]<code>=</code><i>time</i></p>
-<dd>Set the envelope time to <i>time</i> with a resolution of 1/1000th of a second. This setting is the time it should take for the envelope to reach maximum level.</p>
-<dd>Example: set 1st envelope time to 1sec &#8211; <code>env_time0=</code>1000</p>
-<dd>Example: set 3rd envelope time to 0.5secs &#8211; <code>env_time2=</code>500</dl>
+<dt><code>env_time</code>[<i>0-5</i>]<code>=</code><i>time</i></dt>
+<dd>Set the envelope time to <i>time</i> with a resolution of 1/1000th of a second. This setting is the time it should take for the envelope to reach maximum level.</dd>
+<dd>Example: set 1st envelope time to 1sec &#8211; <code>env_time0=</code>1000</dd>
+<dd>Example: set 3rd envelope time to 0.5secs &#8211; <code>env_time2=</code>500</dd></dl>
 </dl>
 <dl>
-<dt><code>reverb_room_width</code> <i>fval</i></p>
-<dd>Set the room width for the reverb engine in meters. <i>fval</i> is a float value in meters. Minimum setting is 1.0 meter, maximum setting is 100.0 meters, and default is 15.0 meters.</p>
-<dd>Example: set room width to 30 meters &#8211; <code>reverb_room_width 30</code></dl>
+<dt><code>reverb_room_width</code> <i>fval</i></dt>
+<dd>Set the room width for the reverb engine in meters. <i>fval</i> is a float value in meters. Minimum setting is 1.0 meter, maximum setting is 100.0 meters, and default is 15.0 meters.</dd>
+<dd>Example: set room width to 30 meters &#8211; <code>reverb_room_width 30</code></dd></dl>
 <dl>
-<dt><code>reverb_room_length</code> <i>fval</i></p>
-<dd>Set the room length for the reverb engine in meters. <i>fval</i> is a float value in meters. Minimum setting is 1.0 meter, maximum setting is 100.0 meters, and default is 20.0 meters.</p>
-<dd>Example: set room length to 40 meters &#8211; <code>reverb_room_length 40</code></dl>
+<dt><code>reverb_room_length</code> <i>fval</i></dt>
+<dd>Set the room length for the reverb engine in meters. <i>fval</i> is a float value in meters. Minimum setting is 1.0 meter, maximum setting is 100.0 meters, and default is 20.0 meters.</dd>
+<dd>Example: set room length to 40 meters &#8211; <code>reverb_room_length 40</code></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-wildmidi/">wildmidi</a></code>(1) </p>
 <h2>Author</h2>

@@ -18,50 +18,50 @@ description: "dpkg-gencontrol – generate Debian control files"
 <p> <code>dpkg-gencontrol</code> also adds an entry for the binary package to <code>debian/files</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code><i>version</i></p>
-<dd> Sets the version number of the binary package which will be generated.</p>
-<dt><code>-V</code><i>name</i><code>=</code><i>value</i></p>
-<dd> Set an output substitution variable. See <code><a href="/docs/linux/man/5-deb-substvars/">deb-substvars</a></code>(5) for discussion of output substitution.</p>
-<dt><code>-T</code><i>substvars-file</i></p>
-<dd> Read substitution variables in <i>substvars-file</i>; the default is <code>debian/substvars</code>. This option can be used multiple times to read substitution variables from multiple files (since dpkg 1.15.6).</p>
-<dt><code>-D</code><i>field</i><code>=</code><i>value</i></p>
-<dd> Override or add an output control file field.</p>
-<dt><code>-U</code><i>field</i></p>
-<dd> Remove an output control file field.</p>
-<dt><code>-c</code><i>control-file</i></p>
-<dd> Specifies the main source control file to read information from. The default is <code>debian/control</code>.</p>
-<dt><code>-l</code><i>changelog-file</i></p>
-<dd> Specifies the changelog file to read information from. The default is <code>debian/changelog</code>.</p>
-<dt><code>-f</code><i>files-list-file</i></p>
-<dd> Read or write the list of files to be uploaded here, rather than using <code>debian/files</code>.</p>
-<dt><code>-F</code><i>changelog-format</i></p>
-<dd> Specifies the format of the changelog. See <code><a href="/docs/linux/man/1-dpkg-parsechangelog/">dpkg-parsechangelog</a></code>(1) for information about alternative formats.</p>
-<dt><code>-p</code><i>package</i></p>
-<dd> Generate information for the binary package <i>package</i>. If the source control file lists only one binary package then this option may be omitted; otherwise it is essential to select which binary package&#8217;s information to generate.</p>
-<dt><code>-n</code><i>filename</i></p>
-<dd> Assume the filename of the package will be <i>filename</i> instead of the normal package_version_arch.deb filename.</p>
-<dt><code>-is</code>, <code>-ip</code>, <code>-isp</code></p>
-<dd> These options are ignored for compatibility with older versions of the dpkg build scripts but are now deprecated. Previously they were used to tell <code>dpkg-gencontrol</code> to include the Section and Priority fields in the control file. This is now the default behaviour. If you want to get the old behaviour you can use the <code>-U</code> option to delete the fields from the control file.</p>
-<dt><code>-P</code><i>package-build-dir</i></p>
-<dd> Scan <i>package-build-dir</i> instead of <code>debian/tmp</code>. This value is used to find the default value of the <code>Installed-Size</code> substitution variable and control file field, and for the default location of the output file.</p>
-<dt><code>-O</code>[<i>filename</i>]</p>
-<dd> Print the control file to standard output (or <i>filename</i> if specified, since dpkg 1.17.2), rather than to <code>debian/tmp/DEBIAN/control</code> (or <i>package-build-dir</i><code>/DEBIAN/control</code> if <code>-P</code> was used).</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Show the usage message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version and exit.</dl>
+<dt><code>-v</code><i>version</i></dt>
+<dd> Sets the version number of the binary package which will be generated.</dd>
+<dt><code>-V</code><i>name</i><code>=</code><i>value</i></dt>
+<dd> Set an output substitution variable. See <code><a href="/docs/linux/man/5-deb-substvars/">deb-substvars</a></code>(5) for discussion of output substitution.</dd>
+<dt><code>-T</code><i>substvars-file</i></dt>
+<dd> Read substitution variables in <i>substvars-file</i>; the default is <code>debian/substvars</code>. This option can be used multiple times to read substitution variables from multiple files (since dpkg 1.15.6).</dd>
+<dt><code>-D</code><i>field</i><code>=</code><i>value</i></dt>
+<dd> Override or add an output control file field.</dd>
+<dt><code>-U</code><i>field</i></dt>
+<dd> Remove an output control file field.</dd>
+<dt><code>-c</code><i>control-file</i></dt>
+<dd> Specifies the main source control file to read information from. The default is <code>debian/control</code>.</dd>
+<dt><code>-l</code><i>changelog-file</i></dt>
+<dd> Specifies the changelog file to read information from. The default is <code>debian/changelog</code>.</dd>
+<dt><code>-f</code><i>files-list-file</i></dt>
+<dd> Read or write the list of files to be uploaded here, rather than using <code>debian/files</code>.</dd>
+<dt><code>-F</code><i>changelog-format</i></dt>
+<dd> Specifies the format of the changelog. See <code><a href="/docs/linux/man/1-dpkg-parsechangelog/">dpkg-parsechangelog</a></code>(1) for information about alternative formats.</dd>
+<dt><code>-p</code><i>package</i></dt>
+<dd> Generate information for the binary package <i>package</i>. If the source control file lists only one binary package then this option may be omitted; otherwise it is essential to select which binary package&#8217;s information to generate.</dd>
+<dt><code>-n</code><i>filename</i></dt>
+<dd> Assume the filename of the package will be <i>filename</i> instead of the normal package_version_arch.deb filename.</dd>
+<dt><code>-is</code>, <code>-ip</code>, <code>-isp</code></dt>
+<dd> These options are ignored for compatibility with older versions of the dpkg build scripts but are now deprecated. Previously they were used to tell <code>dpkg-gencontrol</code> to include the Section and Priority fields in the control file. This is now the default behaviour. If you want to get the old behaviour you can use the <code>-U</code> option to delete the fields from the control file.</dd>
+<dt><code>-P</code><i>package-build-dir</i></dt>
+<dd> Scan <i>package-build-dir</i> instead of <code>debian/tmp</code>. This value is used to find the default value of the <code>Installed-Size</code> substitution variable and control file field, and for the default location of the output file.</dd>
+<dt><code>-O</code>[<i>filename</i>]</dt>
+<dd> Print the control file to standard output (or <i>filename</i> if specified, since dpkg 1.17.2), rather than to <code>debian/tmp/DEBIAN/control</code> (or <i>package-build-dir</i><code>/DEBIAN/control</code> if <code>-P</code> was used).</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></p>
-<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</p>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></p>
-<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dl>
+<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
+<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>debian/control</code></p>
-<dd> The main source control information file, giving version-independent information about the source package and the binary packages it can produce.</p>
-<dt><code>debian/files</code></p>
-<dd> The list of generated files which are part of the upload being prepared. <code>dpkg-gencontrol</code> adds the presumed filenames of binary packages whose control files it generates here.</dl>
+<dt><code>debian/control</code></dt>
+<dd> The main source control information file, giving version-independent information about the source package and the binary packages it can produce.</dd>
+<dt><code>debian/files</code></dt>
+<dd> The list of generated files which are part of the upload being prepared. <code>dpkg-gencontrol</code> adds the presumed filenames of binary packages whose control files it generates here.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-substvars/">deb-substvars</a></code>(5), <code><a href="/docs/linux/man/5-deb-src-control/">deb-src-control</a></code>(5), <code><a href="/docs/linux/man/5-deb-changelog/">deb-changelog</a></code>(5), <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5). </p>
 <h2>Index</h2>

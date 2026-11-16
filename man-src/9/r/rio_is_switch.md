@@ -14,11 +14,11 @@ description: "rio_is_switch – Tests if a RIO device has switch capabilities"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <h2>Description</h2>
 <p>Gets the RIO device Processing Element Features register contents and tests for switch capabilities. Returns 1 if the device is a switch or 0 if it is not a switch. The RIO device struct is freed.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

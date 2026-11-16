@@ -15,30 +15,30 @@ description: "ceph-dencoder – ceph encoder/decoder utility"
 <p> <code>ceph-dencoder</code> takes a simple list of commands and performs them in order.</p>
 <h2>Commands</h2>
 <dl>
-<dt><code>version</code></p>
-<dd>Print the version string for the <code>ceph-dencoder</code> binary.</p>
-<dt><code>import &lt;file&gt;</code></p>
-<dd>Read a binary blob of encoded data from the given file. It will be placed in an in-memory buffer.</p>
-<dt><code>export &lt;file&gt;</code></p>
-<dd>Write the contents of the current in-memory buffer to the given file.</p>
-<dt><code>list_types</code></p>
-<dd>List the data types known to this build of <code>ceph-dencoder</code>.</p>
-<dt><code>type &lt;name&gt;</code></p>
-<dd>Select the given type for future <code>encode</code> or <code>decode</code> operations.</p>
-<dt><code>decode</code></p>
-<dd>Decode the contents of the in-memory buffer into an instance of the previously selected type. If there is an error, report it.</p>
-<dt><code>encode</code></p>
-<dd>Encode the contents of the in-memory instance of the previously selected type to the in-memory buffer.</p>
-<dt><code>dump_json</code></p>
-<dd>Print a JSON-formatted description of the in-memory object.</p>
-<dt><code>count_tests</code></p>
-<dd>Print the number of built-in test instances of the previosly selected type that <code>ceph-dencoder</code> is able to generate.</p>
-<dt><code>select_test &lt;n&gt;</code></p>
-<dd>Select the given build-in test instance as a the in-memory instance of the type.</p>
-<dt><code>get_features</code></p>
-<dd>Print the decimal value of the feature set supported by this version of <code>ceph-dencoder</code>. Each bit represents a feature. These correspond to CEPH_FEATURE_* defines in src/include/ceph_features.h.</p>
-<dt><code>set_features &lt;f&gt;</code></p>
-<dd>Set the feature bits provided to <code>encode</code> to <i>f</i>. This allows you to encode objects such that they can be understood by old versions of the software (for those types that support it).</dl>
+<dt><code>version</code></dt>
+<dd>Print the version string for the <code>ceph-dencoder</code> binary.</dd>
+<dt><code>import &lt;file&gt;</code></dt>
+<dd>Read a binary blob of encoded data from the given file. It will be placed in an in-memory buffer.</dd>
+<dt><code>export &lt;file&gt;</code></dt>
+<dd>Write the contents of the current in-memory buffer to the given file.</dd>
+<dt><code>list_types</code></dt>
+<dd>List the data types known to this build of <code>ceph-dencoder</code>.</dd>
+<dt><code>type &lt;name&gt;</code></dt>
+<dd>Select the given type for future <code>encode</code> or <code>decode</code> operations.</dd>
+<dt><code>decode</code></dt>
+<dd>Decode the contents of the in-memory buffer into an instance of the previously selected type. If there is an error, report it.</dd>
+<dt><code>encode</code></dt>
+<dd>Encode the contents of the in-memory instance of the previously selected type to the in-memory buffer.</dd>
+<dt><code>dump_json</code></dt>
+<dd>Print a JSON-formatted description of the in-memory object.</dd>
+<dt><code>count_tests</code></dt>
+<dd>Print the number of built-in test instances of the previosly selected type that <code>ceph-dencoder</code> is able to generate.</dd>
+<dt><code>select_test &lt;n&gt;</code></dt>
+<dd>Select the given build-in test instance as a the in-memory instance of the type.</dd>
+<dt><code>get_features</code></dt>
+<dd>Print the decimal value of the feature set supported by this version of <code>ceph-dencoder</code>. Each bit represents a feature. These correspond to CEPH_FEATURE_* defines in src/include/ceph_features.h.</dd>
+<dt><code>set_features &lt;f&gt;</code></dt>
+<dd>Set the feature bits provided to <code>encode</code> to <i>f</i>. This allows you to encode objects such that they can be understood by old versions of the software (for those types that support it).</dd></dl>
 <h2>Example</h2>
 <p>Say you want to examine an attribute on an object stored by <code>ceph-osd</code>. You can do: </p>
 <pre>$ cd /mnt/osd.12/current/2.b_head

@@ -14,10 +14,10 @@ description: "gnutls_session_get_data2 – API function"
 <p> <code>int gnutls_session_get_data2(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_datum_t * data</p>
-<dd> is a pointer to a datum that will hold the session.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_datum_t * data</dt>
+<dd> is a pointer to a datum that will hold the session.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns all session parameters needed to be stored to support resumption. The client should call this, and store the returned session data. A session may be resumed later by calling <code>gnutls_session_set_data()</code>. This function must be called after a successful (full) handshake. It should not be used in resumed sessions &#8211;see <code>gnutls_session_is_resumed()</code>. </p>
 <p> The returned <i>data</i> are allocated and must be released using <code>gnutls_free()</code>.</p>
@@ -32,6 +32,6 @@ description: "gnutls_session_get_data2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -17,56 +17,56 @@ description: "db2x_xsltproc – XSLT processor invocation wrapper"
 <p> To read the source XML document from standard input, specify &#8211; as the input document.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Display the docbook2X version.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Display the docbook2X version.</dd></dl>
 <h3>TRANSFORMATION OUTPUT OPTIONS</h3>
 <dl>
-<dt><code>&#8211;output </code><i>file</i>, <code>-o </code><i>file</i></p>
-<dd> Write output to the given file (or URI), instead of standard output.</dl>
+<dt><code>&#8211;output </code><i>file</i>, <code>-o </code><i>file</i></dt>
+<dd> Write output to the given file (or URI), instead of standard output.</dd></dl>
 <h3>SOURCE DOCUMENT OPTIONS</h3>
 <dl>
-<dt><code>&#8211;xinclude</code>, <code>-I</code></p>
-<dd> Process XInclude directives in the source document.</p>
-<dt><code>&#8211;sgml</code>, <code>-S</code></p>
-<dd> Indicate that the input document is SGML instead of XML. You need this set this option if <i>xml-document</i> is actually a SGML file. </p>
+<dt><code>&#8211;xinclude</code>, <code>-I</code></dt>
+<dd> Process XInclude directives in the source document.</dd>
+<dt><code>&#8211;sgml</code>, <code>-S</code></dt>
+<dd> Indicate that the input document is SGML instead of XML. You need this set this option if <i>xml-document</i> is actually a SGML file. </dd>
 <p> SGML parsing is implemented by conversion to XML via <code><a href="/docs/linux/man/1-sgml2xml/">sgml2xml</a></code>(1) from the SP package (or <code><a href="/docs/linux/man/1-osx/">osx</a></code>(1) from the OpenSP package). All tag names in the SGML file will be normalized to lowercase (i.e. the <code>-xlower</code> option of <code><a href="/docs/linux/man/1-sgml2xml/">sgml2xml</a></code>(1) is used). ID attributes are available for the stylesheet (i.e. option <code>-xid</code>). In addition, any ISO SDATA entities used in the SGML document are automatically converted to their XML Unicode equivalents. (This is done by a <code>sed</code> filter.) </p>
 <p> The encoding of the SGML document, if it is not us-ascii, must be specified with the standard SP environment variables: <code>SP_CHARSET_FIXED=1 SP_ENCODING=</code><i>encoding</i>. (Note that XML files specify their encoding with the XML declaration <code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;</code><i>encoding&quot;</i><code> ?&gt;</code> at the top of the file.) </p>
 <p> The above conversion options cannot be changed. If you desire different conversion options, you should invoke <code><a href="/docs/linux/man/1-sgml2xml/">sgml2xml</a></code>(1) manually, and then pass the results of that conversion to this program.</dl>
 <h3>RETRIEVAL OPTIONS</h3>
 <dl>
-<dt><code>&#8211;catalogs </code><i>catalog-files</i>, <code>-C </code><i>catalog-files</i></p>
-<dd> Specify additional XML catalogs to use for resolving Formal Public Identifiers or URIs. SGML catalogs are not supported. </p>
+<dt><code>&#8211;catalogs </code><i>catalog-files</i>, <code>-C </code><i>catalog-files</i></dt>
+<dd> Specify additional XML catalogs to use for resolving Formal Public Identifiers or URIs. SGML catalogs are not supported. </dd>
 <p> These catalogs are <i>not</i> used for parsing an SGML document under the <code>&#8211;sgml</code> option. Use the environment variable <code>SGML_CATALOG_FILES</code> instead to specify the catalogs for parsing the SGML document.</p>
-<dt><code>&#8211;network</code>, <code>-N</code></p>
-<dd> <code>db2x_xsltproc</code> will normally refuse to load external resources from the network, for security reasons. If you do want to load from the network, set this option. </p>
+<dt><code>&#8211;network</code>, <code>-N</code></dt>
+<dd> <code>db2x_xsltproc</code> will normally refuse to load external resources from the network, for security reasons. If you do want to load from the network, set this option. </dd>
 <p> Usually you want to have installed locally the relevent DTDs and other files, and set up catalogs for them, rather than load them automatically from the network.</dl>
 <h3>STYLESHEET OPTIONS</h3>
 <dl>
-<dt><code>&#8211;stylesheet </code><i>file</i>, <code>-s </code><i>file</i></p>
-<dd> Specify the filename (or URI) of the stylesheet to use. The special values man and texi are accepted as abbreviations, to specify that <i>xml-document</i> is in DocBook and should be converted to man pages or Texinfo (respectively).</p>
-<dt><code>&#8211;param </code><i>name</i><code>=</code><i>expr</i>, <code>-p </code><i>name</i><code>=</code><i>expr</i></p>
-<dd> Add or modify a parameter to the stylesheet. <i>name</i> is a XSLT parameter name, and <i>expr</i> is an XPath expression that evaluates to the desired value for the parameter. (This means that strings must be quoted, <i>in addition</i> to the usual quoting of shell arguments; use <code>&#8211;string-param</code> to avoid this.)</p>
-<dt><code>&#8211;string-param </code><i>name</i><code>=</code><i>string</i>, <code>-g </code><i>name</i><code>=</code><i>string</i></p>
-<dd> Add or modify a string-valued parameter to the stylesheet. </p>
+<dt><code>&#8211;stylesheet </code><i>file</i>, <code>-s </code><i>file</i></dt>
+<dd> Specify the filename (or URI) of the stylesheet to use. The special values man and texi are accepted as abbreviations, to specify that <i>xml-document</i> is in DocBook and should be converted to man pages or Texinfo (respectively).</dd>
+<dt><code>&#8211;param </code><i>name</i><code>=</code><i>expr</i>, <code>-p </code><i>name</i><code>=</code><i>expr</i></dt>
+<dd> Add or modify a parameter to the stylesheet. <i>name</i> is a XSLT parameter name, and <i>expr</i> is an XPath expression that evaluates to the desired value for the parameter. (This means that strings must be quoted, <i>in addition</i> to the usual quoting of shell arguments; use <code>&#8211;string-param</code> to avoid this.)</dd>
+<dt><code>&#8211;string-param </code><i>name</i><code>=</code><i>string</i>, <code>-g </code><i>name</i><code>=</code><i>string</i></dt>
+<dd> Add or modify a string-valued parameter to the stylesheet. </dd>
 <p> The string must be encoded in UTF-8 (regardless of the locale character encoding).</dl>
 <h3>DEBUGGING AND PROFILING</h3>
 <dl>
-<dt><code>&#8211;debug</code>, <code>-d</code></p>
-<dd> Display, to standard error, logs of what is happening during the XSL transformation.</p>
-<dt><code>&#8211;nesting-limit </code><i>n</i>, <code>-D </code><i>n</i></p>
-<dd> Change the maximum number of nested calls to XSL templates, used to detect potential infinite loops. If not specified, the limit is 500 (libxslt&#8217;s default).</p>
-<dt><code>&#8211;profile</code>, <code>-P</code></p>
-<dd> Display profile information: the total number of calls to each template in the stylesheet and the time taken for each. This information is output to standard error.</p>
-<dt><code>&#8211;xslt-processor </code><i>processor</i>, <code>-X </code><i>processor</i></p>
-<dd> Select the underlying XSLT processor used. The possible choices for <i>processor</i> are: libxslt, saxon, xalan-j. </p>
+<dt><code>&#8211;debug</code>, <code>-d</code></dt>
+<dd> Display, to standard error, logs of what is happening during the XSL transformation.</dd>
+<dt><code>&#8211;nesting-limit </code><i>n</i>, <code>-D </code><i>n</i></dt>
+<dd> Change the maximum number of nested calls to XSL templates, used to detect potential infinite loops. If not specified, the limit is 500 (libxslt&#8217;s default).</dd>
+<dt><code>&#8211;profile</code>, <code>-P</code></dt>
+<dd> Display profile information: the total number of calls to each template in the stylesheet and the time taken for each. This information is output to standard error.</dd>
+<dt><code>&#8211;xslt-processor </code><i>processor</i>, <code>-X </code><i>processor</i></dt>
+<dd> Select the underlying XSLT processor used. The possible choices for <i>processor</i> are: libxslt, saxon, xalan-j. </dd>
 <p> The default processor is whatever was set when docbook2X was built. libxslt is recommended (because it is lean and fast), but SAXON is much more robust and would be more helpful when debugging stylesheets. </p>
 <p> All the processors have XML catalogs support enabled. (docbook2X requires it.) But note that not all the options above work with processors other than the libxslt one.</dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>XML_CATALOG_FILES</code></p>
-<dd> Specify XML Catalogs. If not specified, the standard catalog (<i>/etc/xml/catalog</i>) is loaded, if available.</p>
-<dt><code>DB2X_XSLT_PROCESSOR</code></p>
-<dd> Specify the XSLT processor to use. The effect is the same as the <code>&#8211;xslt-processor</code> option. The primary use of this variable is to allow you to quickly test different XSLT processors without having to add <code>&#8211;xslt-processor</code> to every script or make file in your documentation build system.</dl>
+<dt><code>XML_CATALOG_FILES</code></dt>
+<dd> Specify XML Catalogs. If not specified, the standard catalog (<i>/etc/xml/catalog</i>) is loaded, if available.</dd>
+<dt><code>DB2X_XSLT_PROCESSOR</code></dt>
+<dd> Specify the XSLT processor to use. The effect is the same as the <code>&#8211;xslt-processor</code> option. The primary use of this variable is to allow you to quickly test different XSLT processors without having to add <code>&#8211;xslt-processor</code> to every script or make file in your documentation build system.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> XML Stylesheet Language &#8211; Transformations (XSLT), version 1.0 &lt;<a rel="nofollow" href="http://www.w3.org/TR/xslt">http://www.w3.org/TR/xslt</a>&gt; , a W3C Recommendation.</p>
 <h2>NOTES</h2>

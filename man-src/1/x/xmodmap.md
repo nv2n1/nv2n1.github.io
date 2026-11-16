@@ -16,53 +16,53 @@ description: "xmodmap – utility for modifying keymaps and pointer button mappi
 <h2>OPTIONS</h2>
 <p> The following options may be used with <i>xmodmap</i>:</p>
 <dl>
-<dt><code>-display </code><i>display</i></p>
-<dd> This option specifies the host and display to use.</p>
-<dt><code>-help</code></p>
-<dd> This option indicates that a brief description of the command line arguments should be printed on the standard error channel. This will be done whenever an unhandled argument is given to <i>xmodmap.</i></p>
-<dt><code>-grammar</code></p>
-<dd> This option indicates that a help message describing the expression grammar used in files and with -e expressions should be printed on the standard error.</p>
-<dt><code>-version</code></p>
-<dd> This option indicates that <i>xmodmap</i> should print its version information and exit.</p>
-<dt><code>-verbose</code></p>
-<dd> This option indicates that <i>xmodmap</i> should print logging information as it parses its input.</p>
-<dt><code>-quiet</code></p>
-<dd> This option turns off the verbose logging. This is the default.</p>
-<dt><code>-n</code></p>
-<dd> This option indicates that <i>xmodmap</i> should not change the mappings, but should display what it would do, like <i><a href="/docs/linux/man/1-make/">make</a>(1)</i> does when given this option.</p>
-<dt><code>-e </code><i>expression</i></p>
-<dd> This option specifies an expression to be executed. Any number of expressions may be specified from the command line.</p>
-<dt><code>-pm</code></p>
-<dd> This option indicates that the current modifier map should be printed on the standard output. This is the default mode of operation if no other mode options are specified.</p>
-<dt><code>-pk</code></p>
-<dd> This option indicates that the current keymap table should be printed on the standard output.</p>
-<dt><code>-pke</code></p>
-<dd> This option indicates that the current keymap table should be printed on the standard output in the form of expressions that can be fed back to <i>xmodmap</i>.</p>
-<dt><code>-pp</code></p>
-<dd> This option indicates that the current pointer map should be printed on the standard output.</p>
-<dt><code>&#8211;</code></p>
-<dd> A lone dash means that the standard input should be used as the input file.</dl>
+<dt><code>-display </code><i>display</i></dt>
+<dd> This option specifies the host and display to use.</dd>
+<dt><code>-help</code></dt>
+<dd> This option indicates that a brief description of the command line arguments should be printed on the standard error channel. This will be done whenever an unhandled argument is given to <i>xmodmap.</i></dd>
+<dt><code>-grammar</code></dt>
+<dd> This option indicates that a help message describing the expression grammar used in files and with -e expressions should be printed on the standard error.</dd>
+<dt><code>-version</code></dt>
+<dd> This option indicates that <i>xmodmap</i> should print its version information and exit.</dd>
+<dt><code>-verbose</code></dt>
+<dd> This option indicates that <i>xmodmap</i> should print logging information as it parses its input.</dd>
+<dt><code>-quiet</code></dt>
+<dd> This option turns off the verbose logging. This is the default.</dd>
+<dt><code>-n</code></dt>
+<dd> This option indicates that <i>xmodmap</i> should not change the mappings, but should display what it would do, like <i><a href="/docs/linux/man/1-make/">make</a>(1)</i> does when given this option.</dd>
+<dt><code>-e </code><i>expression</i></dt>
+<dd> This option specifies an expression to be executed. Any number of expressions may be specified from the command line.</dd>
+<dt><code>-pm</code></dt>
+<dd> This option indicates that the current modifier map should be printed on the standard output. This is the default mode of operation if no other mode options are specified.</dd>
+<dt><code>-pk</code></dt>
+<dd> This option indicates that the current keymap table should be printed on the standard output.</dd>
+<dt><code>-pke</code></dt>
+<dd> This option indicates that the current keymap table should be printed on the standard output in the form of expressions that can be fed back to <i>xmodmap</i>.</dd>
+<dt><code>-pp</code></dt>
+<dd> This option indicates that the current pointer map should be printed on the standard output.</dd>
+<dt><code>&#8211;</code></dt>
+<dd> A lone dash means that the standard input should be used as the input file.</dd></dl>
 <p> The <i>filename</i> specifies a file containing <i>xmodmap</i> expressions to be executed. This file is usually kept in the user&#8217;s home directory with a name like <i>.xmodmaprc</i>.</p>
 <h2>EXPRESSION GRAMMAR</h2>
 <p> The <i>xmodmap</i> program reads a list of expressions and parses them all before attempting to execute any of them. This makes it possible to refer to keysyms that are being redefined in a natural way without having to worry as much about name conflicts. </p>
 <p> The list of keysym names may be found in the header file <i>&lt;X11/keysymdef.h&gt;</i> (without the <i>XK_</i> prefix). Keysyms matching Unicode characters may be specified as &quot;U0020&quot; to &quot;U007E&quot; and &quot;U00A0&quot; to &quot;U10FFFF&quot; for all possible Unicode characters.</p>
 <dl>
-<dt><code>keycode </code><i>NUMBER</i> = <i>KEYSYMNAME &#8230;</i></p>
-<dd> The list of keysyms is assigned to the indicated keycode (which may be specified in decimal, hex or octal and can be determined by running the <i>xev</i> program). Up to eight keysyms may be attached to a key, however the last four are not used in any major X server implementation. The first keysym is used when no modifier key is pressed in conjunction with this key, the second with Shift, the third when the Mode_switch key is used with this key and the fourth when both the Mode_switch and Shift keys are used.</p>
-<dt><code>keycode any = </code><i>KEYSYMNAME &#8230;</i></p>
-<dd> If no existing key has the specified list of keysyms assigned to it, a spare key on the keyboard is selected and the keysyms are assigned to it. The list of keysyms may be specified in decimal, hex or octal.</p>
-<dt><code>keysym </code><i>KEYSYMNAME</i> = <i>KEYSYMNAME &#8230;</i></p>
-<dd> The <i>KEYSYMNAME</i> on the left hand side is translated into matching keycodes used to perform the corresponding set of <code>keycode</code> expressions. Note that if the same keysym is bound to multiple keys, the expression is executed for each matching keycode.</p>
-<dt><code>clear </code><i>MODIFIERNAME</i></p>
-<dd> This removes all entries in the modifier map for the given modifier, where valid name are: <code>Shift</code>, <code>Lock</code>, <code>Control</code>, <code>Mod1</code>, <code>Mod2</code>, <code>Mod3</code>, <code>Mod4</code>, and <code>Mod5</code> (case does not matter in modifier names, although it does matter for all other names). For example, &#8220;clear Lock&#8221; will remove all any keys that were bound to the shift lock modifier.</p>
-<dt><code>add </code><i>MODIFIERNAME</i> = <i>KEYSYMNAME &#8230;</i></p>
-<dd> This adds all keys containing the given keysyms to the indicated modifier map. The keysym names are evaluated after all input expressions are read to make it easy to write expressions to swap keys (see the EXAMPLES section).</p>
-<dt><code>remove </code><i>MODIFIERNAME</i> = <i>KEYSYMNAME &#8230;</i></p>
-<dd> This removes all keys containing the given keysyms from the indicated modifier map. Unlike <code>add,</code> the keysym names are evaluated as the line is read in. This allows you to remove keys from a modifier without having to worry about whether or not they have been reassigned.</p>
-<dt><code>pointer = default</code></p>
-<dd> This sets the pointer map back to its default settings (button 1 generates a code of 1, button 2 generates a 2, etc.).</p>
-<dt><code>pointer = </code><i>NUMBER &#8230;</i></p>
-<dd> This sets the pointer map to contain the indicated button codes. The list always starts with the first physical button. Setting a button code to 0 disables events from that button.</dl>
+<dt><code>keycode </code><i>NUMBER</i> = <i>KEYSYMNAME &#8230;</i></dt>
+<dd> The list of keysyms is assigned to the indicated keycode (which may be specified in decimal, hex or octal and can be determined by running the <i>xev</i> program). Up to eight keysyms may be attached to a key, however the last four are not used in any major X server implementation. The first keysym is used when no modifier key is pressed in conjunction with this key, the second with Shift, the third when the Mode_switch key is used with this key and the fourth when both the Mode_switch and Shift keys are used.</dd>
+<dt><code>keycode any = </code><i>KEYSYMNAME &#8230;</i></dt>
+<dd> If no existing key has the specified list of keysyms assigned to it, a spare key on the keyboard is selected and the keysyms are assigned to it. The list of keysyms may be specified in decimal, hex or octal.</dd>
+<dt><code>keysym </code><i>KEYSYMNAME</i> = <i>KEYSYMNAME &#8230;</i></dt>
+<dd> The <i>KEYSYMNAME</i> on the left hand side is translated into matching keycodes used to perform the corresponding set of <code>keycode</code> expressions. Note that if the same keysym is bound to multiple keys, the expression is executed for each matching keycode.</dd>
+<dt><code>clear </code><i>MODIFIERNAME</i></dt>
+<dd> This removes all entries in the modifier map for the given modifier, where valid name are: <code>Shift</code>, <code>Lock</code>, <code>Control</code>, <code>Mod1</code>, <code>Mod2</code>, <code>Mod3</code>, <code>Mod4</code>, and <code>Mod5</code> (case does not matter in modifier names, although it does matter for all other names). For example, &#8220;clear Lock&#8221; will remove all any keys that were bound to the shift lock modifier.</dd>
+<dt><code>add </code><i>MODIFIERNAME</i> = <i>KEYSYMNAME &#8230;</i></dt>
+<dd> This adds all keys containing the given keysyms to the indicated modifier map. The keysym names are evaluated after all input expressions are read to make it easy to write expressions to swap keys (see the EXAMPLES section).</dd>
+<dt><code>remove </code><i>MODIFIERNAME</i> = <i>KEYSYMNAME &#8230;</i></dt>
+<dd> This removes all keys containing the given keysyms from the indicated modifier map. Unlike <code>add,</code> the keysym names are evaluated as the line is read in. This allows you to remove keys from a modifier without having to worry about whether or not they have been reassigned.</dd>
+<dt><code>pointer = default</code></dt>
+<dd> This sets the pointer map back to its default settings (button 1 generates a code of 1, button 2 generates a 2, etc.).</dd>
+<dt><code>pointer = </code><i>NUMBER &#8230;</i></dt>
+<dd> This sets the pointer map to contain the indicated button codes. The list always starts with the first physical button. Setting a button code to 0 disables events from that button.</dd></dl>
 <p> Lines that begin with an exclamation point (!) are taken as comments. </p>
 <p> If you want to change the binding of a modifier key, you must also remove it from the appropriate modifier map.</p>
 <h2>EXAMPLES</h2>
@@ -126,8 +126,8 @@ add Lock = Caps_Lock
 </pre>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to get default host and display number.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to get default host and display number.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xev/">xev</a>(1), <a href="/docs/linux/man/1-setxkbmap/">setxkbmap</a>(1), <a href="/docs/linux/man/3-xstringtokeysym/">XStringToKeysym</a>(3), <i>Xlib</i> documentation on key and pointer events</p>
 <h2>BUGS</h2>

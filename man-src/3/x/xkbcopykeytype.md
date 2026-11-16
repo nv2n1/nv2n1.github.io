@@ -11,14 +11,14 @@ description: "XkbCopyKeyType – Copy one XkbKeyTypeRec structures"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbCopyKeyType</code> <code>(XkbKeyTypePtr </code><i>from</i><code>,</code> <code>XkbKeyTypePtr </code><i>into</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; from</i></p>
+<dt><i>&#8211; from</i></dt>
 <dd>
-<dd>pointer to XkbKeyTypeRec to be copied</p>
-<dt><i>&#8211; into</i></p>
-<dd>pointer to XkbKeyTypeRec to be changed</dl>
+</dd><dd>pointer to XkbKeyTypeRec to be copied</dd>
+<dt><i>&#8211; into</i></dt>
+<dd>pointer to XkbKeyTypeRec to be changed</dd></dl>
 <h2>Description</h2>
 <p><i>XkbCopyKeyType </i> copies the key type specified by <i>from </i> to the key type specified by <i>into. </i> Both must point to legal XkbKeyTypeRec structures. Xkb assumes <i>from </i> and <i>into </i> point to different places. As a result, overlaps can be fatal. <i>XkbCopyKeyType </i> frees any existing <i>map, preserve, </i> and <i>level_names </i> in <i>into </i> prior to copying. If any allocation errors occur while copying <i>from </i> to <i>into, XkbCopyKeyType </i> returns BadAlloc. Otherwise, <i>XkbCopyKeyType </i> copies <i>from </i> to <i>into </i> and returns Success.</p>
 <h2>Structures</h2>
@@ -34,6 +34,6 @@ description: "XkbCopyKeyType – Copy one XkbKeyTypeRec structures"
 } XkbKeyTypeRec, *XkbKeyTypePtr;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage </p>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage </dd>
 </dl>

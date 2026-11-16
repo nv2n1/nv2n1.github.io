@@ -17,16 +17,18 @@ description: "TiMidity++ – MIDI-to-WAVE converter and player"
 <h2>FILENAME</h2>
 <p> You can use the following expressions as the <i>filename</i> argument:</p>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> Read a MIDI file from standard input.</p>
-<dt><code>path/filename</code></p>
-<dd> Read a MIDI file from the specified path on a filesystem.</p>
-<dt><code>dir:directory</code></p>
+<dt><code>&#8211;</code></dt>
+<dd> Read a MIDI file from standard input.</dd>
+<dt><code>path/filename</code></dt>
+<dd> Read a MIDI file from the specified path on a filesystem.</dd>
+<dt><code>dir:directory</code></dt>
 <dd>
-<dt><code>directory/</code></p>
-<dd> Read and play all MIDI files in the specified <i>directory</i>. For example, </p>
+</dd><dt><code>directory/</code></dt>
+<dd> Read and play all MIDI files in the specified <i>directory</i>. For example, </dd>
 <p> % timidity some/where/ </p>
 <p> plays all files in the directory <code>some/where/</code>.</p>
-<dt><code>Archive File</code></p>
+<dt><code>Archive File</code></dt>
 <dd> Extract and play the file(s) in the archive. If you want to specify a certain MIDI file in the archive, append <code>#&lt;MIDI-filename&gt;</code> to the archive name. The path after `#&#8217; allows the use of the wildcard expressions (case insensitive).<br />
  You can use escape sequence <code>
+</dd></dl>
+</code>

@@ -116,11 +116,11 @@ HASH
  <i>HeaderCleanFrom</i> removes the extraneous information from the value of a ``From'' or ``Reply-To'' header and leaves just the official mailing address. In particular, the following transformations are made to the <i>from</i> parameter:
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 address          --&gt;  address
 address (stuff)  --&gt;  address
 stuff &lt;address&gt;  --&gt;  address
-</pre></dl>
+</pre></dd></dl>
  The transformations are simple, based on RFC 5536 which limits the format of the header. 
 
  <i>HeaderFind</i> searches through <i>Article</i> looking for the specified <i>Header</i>. <i>Size</i> should be the length of the header name. It returns a pointer to the value of the header, skipping leading whitespace, or NULL if the header cannot be found. <i>Article</i> should be a standard C string containing the text of the article; the end of the headers is indicated by a blank line --- two consecutive \n characters. 
@@ -171,7 +171,7 @@ stuff &lt;address&gt;  --&gt;  address
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 char *p;
 char *Article;
 char buff[256], errbuff[256];
@@ -195,7 +195,7 @@ if (NNTPremoteopen(port, &amp;FromServer, &amp;ToServer, errbuff) &lt; 0)
     Fatal("Can't connect to server");
 if ((p = GetModeratorAddress("comp.sources.unix")) == NULL)
     Fatal("Can't find moderator's address");
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>HISTORY</h2>
 

@@ -11,16 +11,16 @@ description: "XkbSetDeviceInfo – Modify some or all of the characteristics of 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetDeviceInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask indicating characteristics to modify</p>
-<dt><i>&#8211; device_info</i></p>
-<dd>structure defining the device and modifications</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask indicating characteristics to modify</dd>
+<dt><i>&#8211; device_info</i></dt>
+<dd>structure defining the device and modifications</dd></dl>
 <h2>Description</h2>
 <p>To change characteristics of an X Input Extension device in the server, first modify a local copy of the device structure and then use either <i>XkbSetDeviceInfo, </i> or, to save network traffic, use an XkbDeviceChangesRec structure and call <i>XkbChangeDeviceInfo </i> to download the changes to the server. </p>
 <p> <i>XkbSetDeviceInfo </i> sends a request to the server to modify the characteristics of the device specified in the <i>device_info </i> structure. The particular characteristics modified are identified by the bits set in <i>which </i> and take their values from the relevant fields in device_info (see Table 1). XkbSetDeviceInfo returns True if the request was successfully sent to the server. If the X server implementation does not allow interaction between the X input extension and the Xkb Extension, the function does nothing and returns False. </p>
@@ -38,12 +38,10 @@ XkbXI_ButtonActionsMask num_btns (1L &lt;&lt;1) Clients can assign key
  btn_acts actions to buttons 
  non-KeyClass input
  extension devices.
- 
 XkbXI_IndicatorNamesMask leds-&gt;names (1L &lt;&lt;2) Clients can assign
  names to indicators on
  non-KeyClass input
  extension devices.
- 
 XkbXI_IndicatorMapsMask leds-&gt;maps (1L &lt;&lt;3) Clients can assign
  indicator maps to
  indicators on 
@@ -73,10 +71,10 @@ XkbXI_AllDetailsMask Those selected (0x801f) XkbXI_AllFeaturesMask |
 &nbsp; If the XkbXI_IndicatorMapsMask and / or XkbXI_IndicatorNamesMask flag is set in <i>which, </i> the indicator maps and / or names for all <i>device_info-&gt;num_leds </i> indicator devices specified in <i>device_info-&gt;leds </i> are set to the maps and / or names specified in <i>device_info-&gt;leds. device_info-&gt;leds-&gt;led_class </i> and <i>led_id </i> specify the input extension class and device ID for each indicator device to modify; if they have invalid values, a BadValue protocol error results and <i>XkbSetDeviceInfo </i> returns False. If they have legal values but do not specify a keyboard or indicator class feedback for the device in question, a BadMatch error results. If any of the values in <i>device_info-&gt;leds-&gt;names </i> are not a valid Atom or None, a BadAtom protocol error results.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSetDeviceInfo </i> function returns True if the request was successfully sent to the server.</p>
-<dt>False</p>
-<dd>The <i>XkbSetDeviceInfo </i> function returns False if the X server implementation does not allow interaction between the X input extension and the Xkb Extension.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSetDeviceInfo </i> function returns True if the request was successfully sent to the server.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetDeviceInfo </i> function returns False if the X server implementation does not allow interaction between the X input extension and the Xkb Extension.</dd></dl>
 <h2>Structures</h2>
 <p>Changes to an Xkb extension device may be tracked by listening to XkbDeviceExtensionNotify events and accumulating the changes in an XkbDeviceChangesRec structure. The changes noted in the structure may then be used in subsequent operations to update either a server configuration or a local copy of an Xkb extension device configuration. The changes structure is defined as follows: </p>
 <pre>typedef struct _XkbDeviceChanges {
@@ -87,11 +85,11 @@ XkbXI_AllDetailsMask Those selected (0x801f) XkbXI_AllFeaturesMask |
 } XkbDeviceChangesRec,*XkbDeviceChangesPtr;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAtom</code></p>
-<dd>A name is neither a valid Atom or None</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadAtom</code></dt>
+<dd>A name is neither a valid Atom or None</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbchangedeviceinfo/">XkbChangeDeviceInfo</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetdeviceinfo/">XkbGetDeviceInfo</a></code>(3)</p>

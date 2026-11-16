@@ -10,16 +10,15 @@ description: "wcsdup – duplicate a wide-character string"
 <p>wcsdup &#8211; duplicate a wide-character string</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wchar_t *wcsdup(const wchar_t *s);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>wcsdup</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.10:</p>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl>
+<dt>Since glibc 2.10:</dt>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The <code>wcsdup</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-strdup/">strdup</a></code>(3) function. It allocates and returns a new wide-character string whose initial contents is a duplicate of the wide-character string pointed to by <i>s</i>. </p>
@@ -28,8 +27,8 @@ wchar_t *wcsdup(const wchar_t *s);</code></pre>
 <p>On success, <code>wcsdup</code>() returns a pointer to the new wide-character string. On error, it returns NULL, with <i>errno</i> set to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory available to allocate duplicate string.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory available to allocate duplicate string.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

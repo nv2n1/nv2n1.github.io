@@ -20,29 +20,25 @@ int ffsll(long long i);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>ffs</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.12:</p>
+<dt>Since glibc 2.12:</dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;!&nbsp;(_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
-<dt>Before glibc 2.12:</p>
-<dd> none</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd>
+<dt>Before glibc 2.12:</dt>
+<dd> none</dd></dl>
 </dl>
 <p> <code>ffsl</code>(), <code>ffsll</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.27:</p>
+<dt>Since glibc 2.27:</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE</p>
-<dt>Before glibc 2.27:</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE</dd>
+<dt>Before glibc 2.27:</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>ffs</code>() function returns the position of the first (least significant) bit set in the word <i>i</i>. The least significant bit is position 1 and the most significant position is, for example, 32 or 64. The functions <code>ffsll</code>() and <code>ffsl</code>() do the same but take arguments of possibly different size.</p>

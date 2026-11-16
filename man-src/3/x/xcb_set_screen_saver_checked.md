@@ -10,49 +10,44 @@ description: "xcb_set_screen_saver –"
 <p>xcb_set_screen_saver &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_set_screen_saver(xcb_connection_t *conn, int16_t timeout, int16_t interval, uint8_t prefer_blanking, uint8_t allow_exposures);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>timeout</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>interval</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>prefer_blanking</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>timeout</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>interval</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>prefer_blanking</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_BLANKING_NOT_PREFERRED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_BLANKING_PREFERRED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_BLANKING_DEFAULT</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_BLANKING_NOT_PREFERRED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_BLANKING_PREFERRED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_BLANKING_DEFAULT</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>allow_exposures</i></p>
-<dd>One of the following values:</p>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>allow_exposures</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_EXPOSURES_NOT_ALLOWED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_EXPOSURES_ALLOWED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_EXPOSURES_DEFAULT</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_EXPOSURES_NOT_ALLOWED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_EXPOSURES_ALLOWED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_EXPOSURES_DEFAULT</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <h2>Description</h2>
 <h2>Return Value</h2>

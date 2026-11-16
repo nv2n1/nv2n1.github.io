@@ -17,20 +17,20 @@ description: "sky2xy – Compute X Y from RA Dec using WCS in FITS and IRAF imag
 <p> <i>sky2xy</i> (pronounced sky-to-X-Y) is a utility for getting the image coordinates of a set of world coordinates in a FITS or IRAF image. World coordinate system (WCS) information in the image header describes, in a standard way, the relationship between sky coordinates and image pixels. This information is used by the program to transform image right ascension and declination sky coordinate pairs to image coordinate (X,Y) pairs. The program prints the coordinates at the same system as is given in the image header, but future versions will allow transformations to B1950/FK4, J2000/FK5, ecliptic or galactic coordinates. Input and output files in the Starbase format will eventually be allowed.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> B1950 (FK4) input</p>
-<dt><code>-e</code></p>
-<dd> Ecliptic longitude and latitude input</p>
-<dt><code>-g</code></p>
-<dd> Galactic longitude and latitude input</p>
-<dt><code>-j</code></p>
-<dd> J2000 (FK5) input</p>
-<dt><code>-g</code></p>
-<dd> Galactic longitude and latitude input</p>
-<dt><code>-v</code></p>
-<dd> More descriptive output</p>
-<dt><code>-z</code></p>
-<dd> Use AIPS classic projections instead of WCSLIB </p>
+<dt><code>-b</code></dt>
+<dd> B1950 (FK4) input</dd>
+<dt><code>-e</code></dt>
+<dd> Ecliptic longitude and latitude input</dd>
+<dt><code>-g</code></dt>
+<dd> Galactic longitude and latitude input</dd>
+<dt><code>-j</code></dt>
+<dd> J2000 (FK5) input</dd>
+<dt><code>-g</code></dt>
+<dd> Galactic longitude and latitude input</dd>
+<dt><code>-v</code></dt>
+<dd> More descriptive output</dd>
+<dt><code>-z</code></dt>
+<dd> Use AIPS classic projections instead of WCSLIB </dd>
 </dl>
 <h2>See Also</h2>
 <p> xy2sky() </p>

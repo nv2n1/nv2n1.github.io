@@ -15,23 +15,23 @@ description: "proofgeneral – manual page for proofgeneral ()"
 <p> Launches Emacs Proof General, editing the proof script FILE.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;emacs</code></p>
-<dd> startup Proof General with emacs (GNU Emacs)</p>
-<dt><code>&#8211;xemacs</code></p>
-<dd> startup Proof General with xemacs (XEmacs)</p>
-<dt><code>&#8211;emacsbin</code> &lt;EMACS&gt;</p>
-<dd> startup Proof General with emacs binary &lt;EMACS&gt;</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;emacs</code></dt>
+<dd> startup Proof General with emacs (GNU Emacs)</dd>
+<dt><code>&#8211;xemacs</code></dt>
+<dd> startup Proof General with xemacs (XEmacs)</dd>
+<dt><code>&#8211;emacsbin</code> &lt;EMACS&gt;</dt>
+<dd> startup Proof General with emacs binary &lt;EMACS&gt;</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Unrecognized options are passed to Emacs, along with file names.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>proofgeneral Example.thy</p>
-<dd> Load Proof General editing Isar file Example.thy</p>
-<dt>proofgeneral example.v</p>
-<dd> Load Proof General editing Coq file Example.v</dl>
+<dt>proofgeneral Example.thy</dt>
+<dd> Load Proof General editing Isar file Example.thy</dd>
+<dt>proofgeneral example.v</dt>
+<dd> Load Proof General editing Coq file Example.v</dd></dl>
 <p> For documentation and latest versions, visit <a rel="nofollow" href="http://proofgeneral.inf.ed.ac.uk.">http://proofgeneral.inf.ed.ac.uk.</a></p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;da+pg-bugs [at] inf.ed.ac.uk&gt;. </p>
@@ -43,6 +43,6 @@ description: "proofgeneral – manual page for proofgeneral ()"
 <p> The full documentation for <code>proofgeneral</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>proofgeneral</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info proofgeneral</code></dl>
+</dt><dd> <code>info proofgeneral</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

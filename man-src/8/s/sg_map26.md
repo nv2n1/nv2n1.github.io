@@ -18,20 +18,20 @@ description: "sg_map26 – map SCSI generic (sg) device to corresponding device 
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;dev_dir</code>=<i>DIR</i></p>
-<dd>where <i>DIR</i> is the directory to search for resultant device special files in (or symlinks to same). Only active when &#8216;&#8211;result=0&#8217; (the default) or &#8216;&#8211;result=2&#8217;. If this option is not given and <i>DEVICE</i> is a device special file then the directory part of <i>DEVICE</i> is assumed. If this option is not given and <i>DEVICE</i> is a sysfs name, then if necessary &#8216;/dev&#8217; is assumed as the directory.</p>
-<dt><code>-g</code>, <code>&#8211;given_is</code>=0 | 1</p>
-<dd>specifies the <i>DEVICE</i> is either a device special file (when the argument is 0), or a sysfs &#8216;dev&#8217; file (when the argument is 1). The parent directory of a sysfs &#8216;dev&#8217; file is also accepted (e.g. either &#8216;/sys/block/sda/dev&#8217; or &#8216;/sys/block/sda&#8217; are accepted). Usually there is no need to give this option since this utility first checks for special files (or symlinks to special files) and if not, assumes it has been given a sysfs &#8216;dev&#8217; file (or its parent). Generates an error if given and disagrees with variety of <i>DEVICE</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-r</code>, <code>&#8211;result</code>=0 | 1 | 2 | 3</p>
-<dd>specifies what variety of file (or files) that this utility tries to find. The default is a &quot;mapped&quot; device special file, when the argument is 0. When the argument is 1, this utility tries to find the &quot;mapped&quot; sysfs node name. When the argument is 2, this utility tries to find the &quot;matching&quot; device special file. When the argument is 3, this utility tries to find the &quot;matching&quot; sysfs node name.</p>
-<dt><code>-s</code>, <code>&#8211;symlink</code></p>
-<dd>when a device special file is being sought (i.e. when &#8216;&#8211;result=0&#8217; (the default) or &#8216;&#8211;result=2&#8217;) then also look for symlinks to that device special file in the same directory.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-d</code>, <code>&#8211;dev_dir</code>=<i>DIR</i></dt>
+<dd>where <i>DIR</i> is the directory to search for resultant device special files in (or symlinks to same). Only active when &#8216;&#8211;result=0&#8217; (the default) or &#8216;&#8211;result=2&#8217;. If this option is not given and <i>DEVICE</i> is a device special file then the directory part of <i>DEVICE</i> is assumed. If this option is not given and <i>DEVICE</i> is a sysfs name, then if necessary &#8216;/dev&#8217; is assumed as the directory.</dd>
+<dt><code>-g</code>, <code>&#8211;given_is</code>=0 | 1</dt>
+<dd>specifies the <i>DEVICE</i> is either a device special file (when the argument is 0), or a sysfs &#8216;dev&#8217; file (when the argument is 1). The parent directory of a sysfs &#8216;dev&#8217; file is also accepted (e.g. either &#8216;/sys/block/sda/dev&#8217; or &#8216;/sys/block/sda&#8217; are accepted). Usually there is no need to give this option since this utility first checks for special files (or symlinks to special files) and if not, assumes it has been given a sysfs &#8216;dev&#8217; file (or its parent). Generates an error if given and disagrees with variety of <i>DEVICE</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-r</code>, <code>&#8211;result</code>=0 | 1 | 2 | 3</dt>
+<dd>specifies what variety of file (or files) that this utility tries to find. The default is a &quot;mapped&quot; device special file, when the argument is 0. When the argument is 1, this utility tries to find the &quot;mapped&quot; sysfs node name. When the argument is 2, this utility tries to find the &quot;matching&quot; device special file. When the argument is 3, this utility tries to find the &quot;matching&quot; sysfs node name.</dd>
+<dt><code>-s</code>, <code>&#8211;symlink</code></dt>
+<dd>when a device special file is being sought (i.e. when &#8216;&#8211;result=0&#8217; (the default) or &#8216;&#8211;result=2&#8217;) then also look for symlinks to that device special file in the same directory.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>This utility is designed for the Linux 2.6 (and later) kernel series. It uses special file major and minor numbers (and whether the special is block or character) together with sysfs to do its mapping or matching. In the absence of any other information, device special files are assumed to be in the &#8216;/dev&#8217; directory while sysfs is assumed to be mounted at &#8216;/sys&#8217;. Device names in sysfs are predictable, given the corresponding major and minor number of the device. However, due to udev rules, the name of device special files can be anything the user desires (e.g. &#8216;/dev/sda&#8217; could be named &#8216;/dev/my_boot_disk&#8217;). When trying to find a resultant device special file, this utility uses the major and minor numbers (and whether a block or char device is sought) to search the device directory. </p>
 <p> This utility only shows one relationship at a time. To get an overview of all SCSI devices, with special file names and optionally the &quot;mapped&quot; sg device name, see the lsscsi utility.</p>
@@ -42,36 +42,25 @@ description: "sg_map26 – map SCSI generic (sg) device to corresponding device 
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sg_map26&nbsp;<wbr>/dev/sdb </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>/dev/sg2 </p>
 <pre><code># sg_map26 --result=0 /dev/sdb
-
 /dev/sg2
 # sg_map26 --result=3 /dev/sdb
-
 /sys/block/sda
 # sg_map26 --result=1 /dev/sdb
-
 /sys/class/scsi_generic/sg0</code></pre>
 <p> Now look at &#8216;/dev/hdc&#8217; and friends<br />
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sg_map26&nbsp;<wbr>/dev/hdc </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;error: a hd device does not map to a sg device&gt; </p>
 <pre><code># sg_map26 --result=3 /dev/hdc
-
 /sys/block/hdc
 # sg_map26 --result=2 /dev/hdc
-
 /dev/hdc
 # sg_map26 --result=2 --symlink /dev/hdc
-
 /dev/cdrom
-
 /dev/dvd
-
 /dev/hdc
 # sg_map26 --result=2 --symlink /sys/block/hdc
-
 /dev/cdrom
-
 /dev/dvd
-
 /dev/hdc</code></pre>
 <h2>Exit Status</h2>
 <p>The exit status of sg_map26 is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>

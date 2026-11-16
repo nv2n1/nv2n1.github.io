@@ -15,7 +15,7 @@ snd_soc_component_to_platform - Casts a component to the platform it is embedded
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>The component to cast to a platform</dl>
+<dl><dd></dd><dd>The component to cast to a platform</dd></dl>
 
 <h2>Description</h2>
 

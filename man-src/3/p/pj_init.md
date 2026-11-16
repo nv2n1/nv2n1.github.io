@@ -15,18 +15,12 @@ description: "pj_init – initialize cartographic projection pj_init_plus – in
  pj_free &#8211; de-initialize projection</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;proj_api.h&gt;
-
 projPJ pj_init(int argc, char **argv)
-
 projPJ pj_init_plus(const char *defn)
-
 projUV pj_fwd(projUV val, projPJ proj)
-
 projUV pj_inv(projUV val, projPJ proj)
-
 int pj_transform(projPJ src_cs, projPJ dst_cs, long point_count,
 int point_offset, double *x, double *y, double *z)
-
 void pj_free(projPJ proj)</code></pre>
 <h2>Description</h2>
 <p>Procedure <code>pj_init</code> selects and initializes a cartographic projection with its argument control parameters. <code>Argc</code> is the number of elements in the array of control strings <code>argv</code> that each contain individual cartographic control keyword assignments (<tt>+</tt> <code>proj</code> arguments). The list must contain at least the <code>proj=</code><i>projection</i> and Earth&#8217;s radius or elliptical parameters. If the initialization of the projection is successful a valid address is returned otherwise a NULL value. </p>

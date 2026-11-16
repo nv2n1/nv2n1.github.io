@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_get_chunk_size() – Fetches the chunk size use
 mongoc_gridfs_file_get_chunk_size (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the chunk size used with the underlying gridfs file. </p>
 <h2>Returns</h2>

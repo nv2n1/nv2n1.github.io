@@ -15,15 +15,15 @@ snd_ctl_notify - Send notification to user-space for a control change
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card to send notification</dl>
+<dl><dd></dd><dd>the card to send notification</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>the event mask, SNDRV_CTL_EVENT_*</dl>
+<dl><dd>the event mask, SNDRV_CTL_EVENT_*</dd></dl>
  
 
  <i>id</i>
-<dl><dd>the ctl element id to send notification</dl>
+<dl><dd>the ctl element id to send notification</dd></dl>
 
 <h2>Description</h2>
 

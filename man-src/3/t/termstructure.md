@@ -11,15 +11,10 @@ description: "ql/termstructure.hpp – base class for term structures"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/time/calendar.hpp&gt;
-
 #include &lt;ql/time/daycounters/actual365fixed.hpp&gt;
-
 #include &lt;ql/settings.hpp&gt;
-
 #include &lt;ql/handle.hpp&gt;
-
 #include &lt;ql/math/interpolations/extrapolation.hpp&gt;
-
 #include &lt;ql/utilities/null.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>TermStructure</code><br />

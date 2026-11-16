@@ -19,6 +19,6 @@ description: "QuantLib::TRLibor – TRY LIBOR rate"
 <p> See &lt;<a rel="nofollow" href="http://www.trlibor.org/trlibor/english/default.asp">http://www.trlibor.org/trlibor/english/default.asp</a>&gt; </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>check end-of-month adjustment.</dl>
+<dd>check end-of-month adjustment.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -16,7 +16,7 @@ description: "apparmor.d – syntax of security profiles for AppArmor."
 <p> The text in AppArmor policy is split into two sections, the preamble and the profile definitions. The preamble must occur at the head of the file and once profile definitions begin, no more preamble rules are allowed (even in files that are included into the profile). When AppArmor policy (set of profiles) is split across multiple files, each file can have its own preamble section, which may be the same or different from other files preamble. Files included within a profile section can not have a preamble section. </p>
 <p> The following is a BNF-style description of AppArmor policy configuration files; see below for an example AppArmor policy file. AppArmor configuration files are line-oriented; <code>#</code> introduces a comment, similar to shell scripting languages. The exception to this rule is that <code>#include</code> will <i>include</i> the contents of a file inline to the policy; this behaviour is modelled after <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1). </p>
 <dl>
-<dd><font SIZE="-1"><code>PROFILE FILE</code></font> = ( [ <i></i><font SIZE="-1"><i>PREAMBLE</i></font><i></i> ] [ <i></i><font SIZE="-1"><i>PROFILE</i></font><i></i> ] )* </p>
+<dd><font SIZE="-1"><code>PROFILE FILE</code></font> = ( [ <i></i><font SIZE="-1"><i>PREAMBLE</i></font><i></i> ] [ <i></i><font SIZE="-1"><i>PROFILE</i></font><i></i> ] )* </dd>
 <p> <font SIZE="-1"><code>PREAMBLE</code></font> = ( <i></i><font SIZE="-1"><i>COMMENT</i></font><i></i> | <i></i><font SIZE="-1"><i>VARIABLE ASSIGNMENT</i></font><i></i> | <i></i><font SIZE="-1"><i>ALIAS RULE</i></font><i></i> | <i></i><font SIZE="-1"><i>INCLUDE</i></font><i></i> | <i></i><font SIZE="-1"><i>ABI</i></font><i></i> )*<br />
 &nbsp;<wbr>&nbsp;Variable assignment and alias rules must come before the profile. </p>
 <p> <font SIZE="-1"><code>VARIABLE ASSIGNMENT</code></font> = <i></i><font SIZE="-1"><i>VARIABLE</i></font><i></i> (&#8216;=&#8217; | &#8216;+=&#8217;) (space separated values) </p>
@@ -187,141 +187,141 @@ description: "apparmor.d – syntax of security profiles for AppArmor."
 <p> The profile mode allow controlling the enforcement behavior of the profile rules. </p>
 <p> If no mode is specified the profile defaults to <i>enforce</i> mode.</p>
 <dl>
-<dt><code>enforce</code> For a given action, if the profile rules do not grant permission the action will be denied, with an <i></i><font SIZE="-1"><i>EACCES</i></font><i></i> or <i></i><font SIZE="-1"><i>EPERM</i></font><i></i> error code returned to userspace, and the violation will be logged with a tag of the access being <font SIZE="-1"><code>DENIED</code></font>.</p>
+<dt><code>enforce</code> For a given action, if the profile rules do not grant permission the action will be denied, with an <i></i><font SIZE="-1"><i>EACCES</i></font><i></i> or <i></i><font SIZE="-1"><i>EPERM</i></font><i></i> error code returned to userspace, and the violation will be logged with a tag of the access being <font SIZE="-1"><code>DENIED</code></font>.</dt>
 <dd>
-<dt><code>kill</code> This is a variant of enforce mode where in addition to returning <i></i><font SIZE="-1"><i>EACCES</i></font><i></i> or <i></i><font SIZE="-1"><i>EPERM</i></font><i></i> for a violation, the task is also sent a signal to kill it.</p>
+</dd><dt><code>kill</code> This is a variant of enforce mode where in addition to returning <i></i><font SIZE="-1"><i>EACCES</i></font><i></i> or <i></i><font SIZE="-1"><i>EPERM</i></font><i></i> for a violation, the task is also sent a signal to kill it.</dt>
 <dd>
-<dt><code>complain</code> For a given action, if the profile rules do not grant permission the action will be allowed, but the violation will be logged with a tag of the access being <font SIZE="-1"><code>ALLOWED</code></font>.</p>
+</dd><dt><code>complain</code> For a given action, if the profile rules do not grant permission the action will be allowed, but the violation will be logged with a tag of the access being <font SIZE="-1"><code>ALLOWED</code></font>.</dt>
 <dd>
-<dt><code>unconfined</code> This mode allows a task confined by the profile to behave as though they are <i>unconfined</i>. This mode allow for an unconfined behavior that can be later changed to confinement by using profile replacement. This mode is should not be used under regular deployment but can be useful during debugging and some system initialization scenarios.</p>
-<dd></dl>
+</dd><dt><code>unconfined</code> This mode allows a task confined by the profile to behave as though they are <i>unconfined</i>. This mode allow for an unconfined behavior that can be later changed to confinement by using profile replacement. This mode is should not be used under regular deployment but can be useful during debugging and some system initialization scenarios.</dt>
+<dd></dd></dl>
 <p> Audit Mode </p>
 <p> The audit mode allows control of how AppArmor messages are are logged to the audit system.</p>
 <dl>
-<dt><code>audit</code> This flag causes all actions whether allowed or denied to be logged.</p>
-<dd></dl>
+<dt><code>audit</code> This flag causes all actions whether allowed or denied to be logged.</dt>
+<dd></dd></dl>
 <p> Misc modes</p>
 <dl>
-<dt><code>mediate_deleted</code> This forces AppArmor to mediate deleted files as if they still exist in the file system.</p>
+<dt><code>mediate_deleted</code> This forces AppArmor to mediate deleted files as if they still exist in the file system.</dt>
 <dd>
-<dt><code>attach_disconnected</code> This forces AppArmor to attach disconnected objects to the task&#8217;s namespace and mediate them as though they are part of the namespace. <font SIZE="-1">WARNING</font> this mode is unsafe and can result in aliasing and access to objects that should not be allowed. Its intent is a debug and policy development tool.</p>
+</dd><dt><code>attach_disconnected</code> This forces AppArmor to attach disconnected objects to the task&#8217;s namespace and mediate them as though they are part of the namespace. <font SIZE="-1">WARNING</font> this mode is unsafe and can result in aliasing and access to objects that should not be allowed. Its intent is a debug and policy development tool.</dt>
 <dd>
-<dt><code>chroot_relative</code> This forces file names to be relative to a chroot and behave as if the chroot is a mount namespace.</p>
-<dd></dl>
+</dd><dt><code>chroot_relative</code> This forces file names to be relative to a chroot and behave as if the chroot is a mount namespace.</dt>
+<dd></dd></dl>
 <h3>Access Modes</h3>
 <p>File permission access modes consists of combinations of the following modes:</p>
 <dl>
-<dt><code>r</code></p>
-<dd>&#8211; read</p>
-<dt><code>w</code></p>
-<dd>&#8211; write &#8212; conflicts with append</p>
-<dt><code>a</code></p>
-<dd>&#8211; append &#8212; conflicts with write</p>
-<dt><code>ux</code></p>
-<dd>&#8211; unconfined execute</p>
-<dt><code>Ux</code></p>
-<dd>&#8211; unconfined execute &#8212; scrub the environment</p>
-<dt><code>px</code></p>
-<dd>&#8211; discrete profile execute</p>
-<dt><code>Px</code></p>
-<dd>&#8211; discrete profile execute &#8212; scrub the environment</p>
-<dt><code>cx</code></p>
-<dd>&#8211; transition to subprofile on execute</p>
-<dt><code>Cx</code></p>
-<dd>&#8211; transition to subprofile on execute &#8212; scrub the environment</p>
-<dt><code>ix</code></p>
-<dd>&#8211; inherit execute</p>
-<dt><code>pix</code></p>
-<dd>&#8211; discrete profile execute with inherit fallback</p>
-<dt><code>Pix</code></p>
-<dd>&#8211; discrete profile execute with inherit fallback &#8212; scrub the environment</p>
-<dt><code>cix</code></p>
-<dd>&#8211; transition to subprofile on execute with inherit fallback</p>
-<dt><code>Cix</code></p>
-<dd>&#8211; transition to subprofile on execute with inherit fallback &#8212; scrub the environment</p>
-<dt><code>pux</code></p>
-<dd>&#8211; discrete profile execute with fallback to unconfined</p>
-<dt><code>PUx</code></p>
-<dd>&#8211; discrete profile execute with fallback to unconfined &#8212; scrub the environment</p>
-<dt><code>cux</code></p>
-<dd>&#8211; transition to subprofile on execute with fallback to unconfined</p>
-<dt><code>CUx</code></p>
-<dd>&#8211; transition to subprofile on execute with fallback to unconfined &#8212; scrub the environment</p>
-<dt><code>deny x</code></p>
-<dd>&#8211; disallow execute (in rules with the deny qualifier)</p>
-<dt><code>m</code></p>
-<dd>&#8211; allow <font SIZE="-1">PROT_EXEC</font> with <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) calls</p>
-<dt><code>l</code></p>
-<dd>&#8211; link</p>
-<dt><code>k</code></p>
-<dd>&#8211; lock</dl>
+<dt><code>r</code></dt>
+<dd>&#8211; read</dd>
+<dt><code>w</code></dt>
+<dd>&#8211; write &#8212; conflicts with append</dd>
+<dt><code>a</code></dt>
+<dd>&#8211; append &#8212; conflicts with write</dd>
+<dt><code>ux</code></dt>
+<dd>&#8211; unconfined execute</dd>
+<dt><code>Ux</code></dt>
+<dd>&#8211; unconfined execute &#8212; scrub the environment</dd>
+<dt><code>px</code></dt>
+<dd>&#8211; discrete profile execute</dd>
+<dt><code>Px</code></dt>
+<dd>&#8211; discrete profile execute &#8212; scrub the environment</dd>
+<dt><code>cx</code></dt>
+<dd>&#8211; transition to subprofile on execute</dd>
+<dt><code>Cx</code></dt>
+<dd>&#8211; transition to subprofile on execute &#8212; scrub the environment</dd>
+<dt><code>ix</code></dt>
+<dd>&#8211; inherit execute</dd>
+<dt><code>pix</code></dt>
+<dd>&#8211; discrete profile execute with inherit fallback</dd>
+<dt><code>Pix</code></dt>
+<dd>&#8211; discrete profile execute with inherit fallback &#8212; scrub the environment</dd>
+<dt><code>cix</code></dt>
+<dd>&#8211; transition to subprofile on execute with inherit fallback</dd>
+<dt><code>Cix</code></dt>
+<dd>&#8211; transition to subprofile on execute with inherit fallback &#8212; scrub the environment</dd>
+<dt><code>pux</code></dt>
+<dd>&#8211; discrete profile execute with fallback to unconfined</dd>
+<dt><code>PUx</code></dt>
+<dd>&#8211; discrete profile execute with fallback to unconfined &#8212; scrub the environment</dd>
+<dt><code>cux</code></dt>
+<dd>&#8211; transition to subprofile on execute with fallback to unconfined</dd>
+<dt><code>CUx</code></dt>
+<dd>&#8211; transition to subprofile on execute with fallback to unconfined &#8212; scrub the environment</dd>
+<dt><code>deny x</code></dt>
+<dd>&#8211; disallow execute (in rules with the deny qualifier)</dd>
+<dt><code>m</code></dt>
+<dd>&#8211; allow <font SIZE="-1">PROT_EXEC</font> with <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) calls</dd>
+<dt><code>l</code></dt>
+<dd>&#8211; link</dd>
+<dt><code>k</code></dt>
+<dd>&#8211; lock</dd></dl>
 <h3>Access Modes Details</h3>
 <dl>
-<dt><code>r &#8211; Read mode</code></p>
-<dd>Allows the program to have read access to the file or directory listing. Read access is required for shell scripts and other interpreted content.</p>
-<dt><code>w &#8211; Write mode</code></p>
-<dd>Allows the program to have write access to the file. Files and directories must have this permission if they are to be unlinked (removed.) Write mode is not required on a directory to rename or create files within the directory. </p>
+<dt><code>r &#8211; Read mode</code></dt>
+<dd>Allows the program to have read access to the file or directory listing. Read access is required for shell scripts and other interpreted content.</dd>
+<dt><code>w &#8211; Write mode</code></dt>
+<dd>Allows the program to have write access to the file. Files and directories must have this permission if they are to be unlinked (removed.) Write mode is not required on a directory to rename or create files within the directory. </dd>
 <p> This mode conflicts with append mode.</p>
-<dt><code>a &#8211; Append mode</code></p>
-<dd>Allows the program to have a limited appending only write access to the file. Append mode will prevent an application from opening the file for write unless it passes the O_APPEND parameter flag on open. </p>
+<dt><code>a &#8211; Append mode</code></dt>
+<dd>Allows the program to have a limited appending only write access to the file. Append mode will prevent an application from opening the file for write unless it passes the O_APPEND parameter flag on open. </dd>
 <p> The mode conflicts with Write mode.</p>
-<dt><code>ux &#8211; Unconfined execute mode</code></p>
-<dd>Allows the program to execute the program without any AppArmor profile being applied to the program. </p>
+<dt><code>ux &#8211; Unconfined execute mode</code></dt>
+<dd>Allows the program to execute the program without any AppArmor profile being applied to the program. </dd>
 <p> This mode is useful when a confined program needs to be able to perform a privileged operation, such as rebooting the machine. By placing the privileged section in another executable and granting unconfined execution rights, it is possible to bypass the mandatory constraints imposed on all confined processes. For more information on what is constrained, see the <code><a href="/docs/linux/man/7-apparmor/">apparmor</a></code>(7) man page. </p>
 <p> <font SIZE="-1"><code>WARNING</code></font> &#8216;ux&#8217; should only be used in very special cases. It enables the designated child processes to be run without any AppArmor protection. &#8216;ux&#8217; does not scrub the environment of variables such as <font SIZE="-1">LD_PRELOAD</font>; as a result, the calling domain may have an undue amount of influence over the callee. Use this mode only if the child absolutely must be run unconfined and <font SIZE="-1">LD_PRELOAD</font> must be used. Any profile using this mode provides negligible security. Use at your own risk. </p>
 <p> Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>Ux &#8211; unconfined execute &#8212; scrub the environment</code></p>
-<dd>&#8216;Ux&#8217; allows the named program to run in &#8216;ux&#8217; mode, but AppArmor will invoke the Linux Kernel&#8217;s <code>unsafe_exec</code> routines to scrub the environment, similar to setuid programs. (See <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for some information on setuid/setgid environment scrubbing.) </p>
+<dt><code>Ux &#8211; unconfined execute &#8212; scrub the environment</code></dt>
+<dd>&#8216;Ux&#8217; allows the named program to run in &#8216;ux&#8217; mode, but AppArmor will invoke the Linux Kernel&#8217;s <code>unsafe_exec</code> routines to scrub the environment, similar to setuid programs. (See <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for some information on setuid/setgid environment scrubbing.) </dd>
 <p> <font SIZE="-1"><code>WARNING</code></font> &#8216;Ux&#8217; should only be used in very special cases. It enables the designated child processes to be run without any AppArmor protection. Use this mode only if the child absolutely must be run unconfined. Use at your own risk. </p>
 <p> Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>px &#8211; Discrete Profile execute mode</code></p>
-<dd>This mode requires that a discrete security profile is defined for a program executed and forces an AppArmor domain transition. If there is no profile defined then the access will be denied. </p>
+<dt><code>px &#8211; Discrete Profile execute mode</code></dt>
+<dd>This mode requires that a discrete security profile is defined for a program executed and forces an AppArmor domain transition. If there is no profile defined then the access will be denied. </dd>
 <p> <font SIZE="-1"><code>WARNING</code></font> &#8216;px&#8217; does not scrub the environment of variables such as <font SIZE="-1">LD_PRELOAD</font>; as a result, the calling domain may have an undue amount of influence over the callee. </p>
 <p> Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>Px &#8211; Discrete Profile execute mode &#8212; scrub the environment</code></p>
-<dd>&#8216;Px&#8217; allows the named program to run in &#8216;px&#8217; mode, but AppArmor will invoke the Linux Kernel&#8217;s <code>unsafe_exec</code> routines to scrub the environment, similar to setuid programs. (See <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for some information on setuid/setgid environment scrubbing.) </p>
+<dt><code>Px &#8211; Discrete Profile execute mode &#8212; scrub the environment</code></dt>
+<dd>&#8216;Px&#8217; allows the named program to run in &#8216;px&#8217; mode, but AppArmor will invoke the Linux Kernel&#8217;s <code>unsafe_exec</code> routines to scrub the environment, similar to setuid programs. (See <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for some information on setuid/setgid environment scrubbing.) </dd>
 <p> Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>cx &#8211; Transition to Subprofile execute mode</code></p>
-<dd>This mode requires that a local security profile is defined and forces an AppArmor domain transition to the named profile. If there is no profile defined then the access will be denied. </p>
+<dt><code>cx &#8211; Transition to Subprofile execute mode</code></dt>
+<dd>This mode requires that a local security profile is defined and forces an AppArmor domain transition to the named profile. If there is no profile defined then the access will be denied. </dd>
 <p> <font SIZE="-1"><code>WARNING</code></font> &#8216;cx&#8217; does not scrub the environment of variables such as <font SIZE="-1">LD_PRELOAD</font>; as a result, the calling domain may have an undue amount of influence over the callee. </p>
 <p> Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>Cx &#8211; Transition to Subprofile execute mode &#8212; scrub the environment</code></p>
-<dd>&#8216;Cx&#8217; allows the named program to run in &#8216;cx&#8217; mode, but AppArmor will invoke the Linux Kernel&#8217;s <code>unsafe_exec</code> routines to scrub the environment, similar to setuid programs. (See <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for some information on setuid/setgid environment scrubbing.) </p>
+<dt><code>Cx &#8211; Transition to Subprofile execute mode &#8212; scrub the environment</code></dt>
+<dd>&#8216;Cx&#8217; allows the named program to run in &#8216;cx&#8217; mode, but AppArmor will invoke the Linux Kernel&#8217;s <code>unsafe_exec</code> routines to scrub the environment, similar to setuid programs. (See <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for some information on setuid/setgid environment scrubbing.) </dd>
 <p> Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>ix &#8211; Inherit execute mode</code></p>
-<dd>Prevent the normal AppArmor domain transition on <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) when the profiled program executes the named program. Instead, the executed resource will inherit the current profile. </p>
+<dt><code>ix &#8211; Inherit execute mode</code></dt>
+<dd>Prevent the normal AppArmor domain transition on <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) when the profiled program executes the named program. Instead, the executed resource will inherit the current profile. </dd>
 <p> This mode is useful when a confined program needs to call another confined program without gaining the permissions of the target&#8217;s profile, or losing the permissions of the current profile. There is no version to scrub the environment because &#8216;ix&#8217; executions don&#8217;t change privileges. </p>
 <p> Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>Profile transition with inheritance fallback execute mode</code></p>
-<dd>These modes attempt to perform a domain transition as specified by the matching permission (shown below) and if that transition fails to find the matching profile the domain transition proceeds using the &#8216;ix&#8217; transition mode. </p>
+<dt><code>Profile transition with inheritance fallback execute mode</code></dt>
+<dd>These modes attempt to perform a domain transition as specified by the matching permission (shown below) and if that transition fails to find the matching profile the domain transition proceeds using the &#8216;ix&#8217; transition mode. </dd>
 <pre> 'Pix' == 'Px' with fallback to 'ix'
  'pix' == 'px' with fallback to 'ix'
  'Cix' == 'Cx' with fallback to 'ix'
  'cix' == 'cx' with fallback to 'ix'</pre>
 <p>Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>Profile transition with unconfined fallback execute mode</code></p>
-<dd>These modes attempt to perform a domain transition as specified by the matching permission (shown below) and if that transition fails to find the matching profile the domain transition proceeds using the &#8216;ux&#8217; transition mode if &#8216;pux&#8217;, &#8216;cux&#8217; or the &#8216;Ux&#8217; transition mode if &#8216;PUx&#8217;, &#8216;CUx&#8217; is used. </p>
+<dt><code>Profile transition with unconfined fallback execute mode</code></dt>
+<dd>These modes attempt to perform a domain transition as specified by the matching permission (shown below) and if that transition fails to find the matching profile the domain transition proceeds using the &#8216;ux&#8217; transition mode if &#8216;pux&#8217;, &#8216;cux&#8217; or the &#8216;Ux&#8217; transition mode if &#8216;PUx&#8217;, &#8216;CUx&#8217; is used. </dd>
 <pre> 'PUx' == 'Px' with fallback to 'Ux'
  'pux' == 'px' with fallback to 'ux'
  'CUx' == 'Cx' with fallback to 'Ux'
  'cux' == 'cx' with fallback to 'ux'</pre>
 <p>Incompatible with other exec transition modes and the deny qualifier.</p>
-<dt><code>deny x &#8211; Deny execute</code></p>
-<dd>For rules including the deny modifier, only &#8216;x&#8217; is allowed to deny execute. </p>
+<dt><code>deny x &#8211; Deny execute</code></dt>
+<dd>For rules including the deny modifier, only &#8216;x&#8217; is allowed to deny execute. </dd>
 <p> The &#8216;ix&#8217;, &#8216;Px&#8217;, &#8216;px&#8217;, &#8216;Cx&#8217;, &#8216;cx&#8217; and the fallback modes conflict with the deny modifier.</p>
-<dt><code>Directed profile transitions</code></p>
-<dd>The directed (&#8216;px&#8217;, &#8216;Px&#8217;, &#8216;pix&#8217;, &#8216;Pix&#8217;, &#8216;pux&#8217;, &#8216;PUx&#8217;) profile and subprofile (&#8216;cx&#8217;, &#8216;Cx&#8217;, &#8216;cix&#8217;, &#8216;Cix&#8217;, &#8216;cux&#8217;, &#8216;CUx&#8217;) transitions normally determine the profile to transition to from the executable name. It is however possible to specify the name of the profile that the transition should use. </p>
+<dt><code>Directed profile transitions</code></dt>
+<dd>The directed (&#8216;px&#8217;, &#8216;Px&#8217;, &#8216;pix&#8217;, &#8216;Pix&#8217;, &#8216;pux&#8217;, &#8216;PUx&#8217;) profile and subprofile (&#8216;cx&#8217;, &#8216;Cx&#8217;, &#8216;cix&#8217;, &#8216;Cix&#8217;, &#8216;cux&#8217;, &#8216;CUx&#8217;) transitions normally determine the profile to transition to from the executable name. It is however possible to specify the name of the profile that the transition should use. </dd>
 <p> The name of the profile to transition to is specified using the &#8216;-&gt;&#8217; followed by the name of the profile to transition to. Eg. </p>
 <pre> /bin/** px -&gt; profile,</pre>
 <p>Incompatible with other exec transition modes.</p>
-<dt><code>m &#8211; Allow executable mapping</code></p>
-<dd>This mode allows a file to be mapped into memory using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)&#8217;s <font SIZE="-1">PROT_EXEC</font> flag. This flag marks the pages executable; it is used on some architectures to provide non-executable data pages, which can complicate exploit attempts. AppArmor uses this mode to limit which files a well-behaved program (or all programs on architectures that enforce non-executable memory access controls) may use as libraries, to limit the effect of invalid <code>-L</code> flags given to <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) and <font SIZE="-1"><code>LD_PRELOAD</code></font>, <font SIZE="-1"><code>LD_LIBRARY_PATH</code></font>, given to <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8).</p>
-<dt><code>l &#8211; Link mode</code></p>
-<dd>Allows the program to be able to create a link with this name. When a link is created, the new link <font SIZE="-1"><code>MUST</code></font> have a subset of permissions as the original file (with the exception that the destination does not have to have link access.) If there is an &#8216;x&#8217; rule on the new link, it must match the original file exactly.</p>
-<dt><code>k &#8211; lock mode</code></p>
-<dd>Allows the program to be able lock a file with this name. This permission covers both advisory and mandatory locking.</p>
-<dt><code>leading </code><font SIZE="-1"><code>OR</code></font><code> trailing access permissions</code></p>
-<dd>File rules can be specified with the access permission either leading or trailing the file glob. Eg. </p>
+<dt><code>m &#8211; Allow executable mapping</code></dt>
+<dd>This mode allows a file to be mapped into memory using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)&#8217;s <font SIZE="-1">PROT_EXEC</font> flag. This flag marks the pages executable; it is used on some architectures to provide non-executable data pages, which can complicate exploit attempts. AppArmor uses this mode to limit which files a well-behaved program (or all programs on architectures that enforce non-executable memory access controls) may use as libraries, to limit the effect of invalid <code>-L</code> flags given to <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) and <font SIZE="-1"><code>LD_PRELOAD</code></font>, <font SIZE="-1"><code>LD_LIBRARY_PATH</code></font>, given to <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8).</dd>
+<dt><code>l &#8211; Link mode</code></dt>
+<dd>Allows the program to be able to create a link with this name. When a link is created, the new link <font SIZE="-1"><code>MUST</code></font> have a subset of permissions as the original file (with the exception that the destination does not have to have link access.) If there is an &#8216;x&#8217; rule on the new link, it must match the original file exactly.</dd>
+<dt><code>k &#8211; lock mode</code></dt>
+<dd>Allows the program to be able lock a file with this name. This permission covers both advisory and mandatory locking.</dd>
+<dt><code>leading </code><font SIZE="-1"><code>OR</code></font><code> trailing access permissions</code></dt>
+<dd>File rules can be specified with the access permission either leading or trailing the file glob. Eg. </dd>
 <pre> rw /**, # leading permissions
  /** rw, # trailing permissions</pre>
 <p>When leading permissions are used further rule options and context may be allowed, Eg. </p>
@@ -361,16 +361,16 @@ description: "apparmor.d – syntax of security profiles for AppArmor."
 <h3>Mount Rules</h3>
 <p>AppArmor supports mount mediation and allows specifying filesystem types and mount flags. The syntax of mount rules in AppArmor is based on the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) command syntax. Mount rules must contain one of the mount, remount or umount keywords, but all mount conditions are optional. Unspecified optional conditionals are assumed to match all entries (eg, not specifying fstype means all fstypes are matched). Due to the complexity of the mount command and how options may be specified, AppArmor allows specifying conditionals three different ways:</p>
 <dl>
-<dt>1.</p>
-<dd>If a conditional is specified using &#8216;=&#8217;, then the rule only grants permission for mounts matching the exactly specified options. For example, an AppArmor policy with the following rule: </p>
+<dt>1.</dt>
+<dd>If a conditional is specified using &#8216;=&#8217;, then the rule only grants permission for mounts matching the exactly specified options. For example, an AppArmor policy with the following rule: </dd>
 <pre> mount options=ro /dev/foo -E&lt;gt&gt; /mnt/,</pre>
 <p>Would match: </p>
 <pre> $ mount -o ro /dev/foo /mnt</pre>
 <p>but not either of these: </p>
 <pre> $ mount -o ro,atime /dev/foo /mnt
  $ mount -o rw /dev/foo /mnt</pre>
-<dt>2.</p>
-<dd>If a conditional is specified using &#8216;in&#8217;, then the rule grants permission for mounts matching any combination of the specified options. For example, if an AppArmor policy has the following rule: </p>
+<dt>2.</dt>
+<dd>If a conditional is specified using &#8216;in&#8217;, then the rule grants permission for mounts matching any combination of the specified options. For example, if an AppArmor policy has the following rule: </dd>
 <pre> mount options in (ro,atime) /dev/foo -&gt; /mnt/,</pre>
 <p>all of these mount commands will match: </p>
 <pre> $ mount -o ro /dev/foo /mnt
@@ -382,8 +382,8 @@ description: "apparmor.d – syntax of security profiles for AppArmor."
  $ mount -o rw /dev/foo /mnt
  $ mount -o rw,noatime /dev/foo /mnt
  $ mount /dev/foo /mnt</pre>
-<dt>3.</p>
-<dd>If multiple conditionals are specified in a single mount rule, then the rule grants permission for each set of options. This provides a shorthand when writing mount rules which might help to logically break up a conditional. For example, if an AppArmor policy has the following rule: </p>
+<dt>3.</dt>
+<dd>If multiple conditionals are specified in a single mount rule, then the rule grants permission for each set of options. This provides a shorthand when writing mount rules which might help to logically break up a conditional. For example, if an AppArmor policy has the following rule: </dd>
 <pre> mount options=ro options=atime</pre>
 <p>both of these mount commands will match: </p>
 <pre> $ mount -o ro /dev/foo /mnt
@@ -399,44 +399,44 @@ description: "apparmor.d – syntax of security profiles for AppArmor."
  mount options in (ro,atime),</pre>
 <p>To help clarify the flexibility and complexity of mount rules, here are some example rules with accompanying matching commands:</p>
 <dl>
-<dt><code>mount,</code></p>
-<dd>the &#8216;mount&#8217; rule without any conditionals is the most generic and allows any mount. Equivalent to &#8216;mount fstype=** options=** ** -&gt; /**&#8217;.</p>
-<dt><code>mount /dev/foo,</code></p>
-<dd>allow mounting of /dev/foo anywhere with any options. Some matching mount commands: </p>
+<dt><code>mount,</code></dt>
+<dd>the &#8216;mount&#8217; rule without any conditionals is the most generic and allows any mount. Equivalent to &#8216;mount fstype=** options=** ** -&gt; /**&#8217;.</dd>
+<dt><code>mount /dev/foo,</code></dt>
+<dd>allow mounting of /dev/foo anywhere with any options. Some matching mount commands: </dd>
 <pre> $ mount /dev/foo /mnt
  $ mount -t ext3 /dev/foo /mnt
  $ mount -t vfat /dev/foo /mnt
  $ mount -o ro,atime,noexec,nodiratime /dev/foo /srv/some/mountpoint</pre>
-<dt><code>mount options=ro /dev/foo,</code></p>
-<dd>allow mounting of /dev/foo anywhere, as read only. Some matching mount commands: </p>
+<dt><code>mount options=ro /dev/foo,</code></dt>
+<dd>allow mounting of /dev/foo anywhere, as read only. Some matching mount commands: </dd>
 <pre> $ mount -o ro /dev/foo /mnt
  $ mount -o ro /dev/foo /some/where/else</pre>
-<dt><code>mount options=(ro,atime) /dev/foo,</code></p>
-<dd>allow mount of /dev/foo anywhere, as read only and using inode access times. Some matching mount commands: </p>
+<dt><code>mount options=(ro,atime) /dev/foo,</code></dt>
+<dd>allow mount of /dev/foo anywhere, as read only and using inode access times. Some matching mount commands: </dd>
 <pre> $ mount -o ro,atime /dev/foo /mnt
  $ mount -o ro,atime /dev/foo /some/where/else</pre>
-<dt><code>mount options in (ro,atime) /dev/foo,</code></p>
-<dd>allow mount of /dev/foo anywhere using some combination of &#8216;ro&#8217; and &#8216;atime&#8217; (see above). Some matching mount commands: </p>
+<dt><code>mount options in (ro,atime) /dev/foo,</code></dt>
+<dd>allow mount of /dev/foo anywhere using some combination of &#8216;ro&#8217; and &#8216;atime&#8217; (see above). Some matching mount commands: </dd>
 <pre> $ mount -o ro /dev/foo /mnt
  $ mount -o atime /dev/foo /some/where/else
  $ mount -o ro,atime /dev/foo /some/other/place</pre>
-<dt><code>mount options=ro /dev/foo, mount options=atime /dev/foo,</code></p>
-<dd>allow mount of /dev/foo anywhere as read only, and allow mount of /dev/foo anywhere using inode access times. Note this is expressed as two different rules. Matches: </p>
+<dt><code>mount options=ro /dev/foo, mount options=atime /dev/foo,</code></dt>
+<dd>allow mount of /dev/foo anywhere as read only, and allow mount of /dev/foo anywhere using inode access times. Note this is expressed as two different rules. Matches: </dd>
 <pre> $ mount -o ro /dev/foo /mnt/1
  $ mount -o atime /dev/foo /mnt/2</pre>
-<dt><code>mount -&gt; /mnt/**,</code></p>
-<dd>allow mounting anything under a directory in /mnt/**. Some matching mount commands: </p>
+<dt><code>mount -&gt; /mnt/**,</code></dt>
+<dd>allow mounting anything under a directory in /mnt/**. Some matching mount commands: </dd>
 <pre> $ mount /dev/foo1 /mnt/1
  $ mount -o ro,atime,noexec,nodiratime /dev/foo2 /mnt/deep/path/foo2</pre>
-<dt><code>mount options=ro -&gt; /mnt/**,</code></p>
-<dd>allow mounting anything under /mnt/**, as read only. Some matching mount commands: </p>
+<dt><code>mount options=ro -&gt; /mnt/**,</code></dt>
+<dd>allow mounting anything under /mnt/**, as read only. Some matching mount commands: </dd>
 <pre> $ mount -o ro /dev/foo1 /mnt/1
  $ mount -o ro /dev/foo2 /mnt/deep/path/foo2</pre>
-<dt><code>mount fstype=ext3 options=(rw,atime) /dev/sdb1 -&gt; /mnt/stick/,</code></p>
-<dd>allow mounting an ext3 filesystem in /dev/sdb1 on /mnt/stick as read/write and using inode access times. Matches only: </p>
+<dt><code>mount fstype=ext3 options=(rw,atime) /dev/sdb1 -&gt; /mnt/stick/,</code></dt>
+<dd>allow mounting an ext3 filesystem in /dev/sdb1 on /mnt/stick as read/write and using inode access times. Matches only: </dd>
 <pre> $ mount -o rw,atime /dev/sdb1 /mnt/stick</pre>
-<dt><code>mount options=(ro, atime) options in (nodev, user) /dev/foo -&gt; /mnt/,</code></p>
-<dd>allow mounting /dev/foo on /mmt/ read only and using inode access times or allow mounting /dev/foo on /mnt/ with some combination of &#8216;nodev&#8217; and &#8216;user&#8217;. Matches only: </p>
+<dt><code>mount options=(ro, atime) options in (nodev, user) /dev/foo -&gt; /mnt/,</code></dt>
+<dd>allow mounting /dev/foo on /mmt/ read only and using inode access times or allow mounting /dev/foo on /mnt/ with some combination of &#8216;nodev&#8217; and &#8216;user&#8217;. Matches only: </dd>
 <pre> $ mount -o ro,atime /dev/foo /mnt
  $ mount -o nodev /dev/foo /mnt
  $ mount -o user /dev/foo /mnt
@@ -557,3 +557,4 @@ description: "apparmor.d – syntax of security profiles for AppArmor."
 <pre> addr=</pre>
 <p>conditional. If an address conditional is not specified as part of a rule then the rule matches both abstract and anonymous sockets. </p>
 <p> In apparmor the address of an abstract unix domain socket begins with the <i>@</i> character, similar to how they are reported (as paths) by netstat -x. The address then follows and may contain pattern matching and any characters including the null character. In apparmor null characters must be specified by using an escape sequence <i>
+</p>

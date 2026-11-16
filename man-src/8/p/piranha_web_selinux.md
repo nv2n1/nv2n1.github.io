@@ -102,8 +102,8 @@ description: "piranha_web_selinux – Security Enhanced Linux Policy for the pir
 <p> <code>piranha_web_conf_t</code> </p>
 <p> &#8211; Set files with the piranha_web_conf_t type, if you want to treat the files as piranha web configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/luci/etc(/.*)?, /var/lib/luci/cert(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/luci/etc(/.*)?, /var/lib/luci/cert(/.*)? </dd>
 </dl>
 <p> <code>piranha_web_data_t</code> </p>
 <p> &#8211; Set files with the piranha_web_data_t type, if you want to treat the files as piranha web content. </p>

@@ -10,7 +10,6 @@ description: "std::invalid_argument – std::invalid_argument"
 <p>std::invalid_argument &#8211; std::invalid_argument</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 class invalid_argument;</code></pre>
 <p>Defines a type of object to be thrown as exception. It reports errors that arise because an argument value has not been accepted.<br />
 This exception is thrown by std::bitset::bitset, and the std::stoi and std::stof families of functions.<br />

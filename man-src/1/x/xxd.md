@@ -19,40 +19,40 @@ description: "xxd – make a hexdump or do the reverse."
 <p> If no <i>infile</i> is given, standard input is read. If <i>infile</i> is specified as a `<code>&#8211;</code>&#8216; character, then input is taken from standard input. If no <i>outfile</i> is given (or a `<code>&#8211;</code>&#8216; character is in its place), results are sent to standard output. </p>
 <p> Note that a &quot;lazy&quot; parser is used which does not check for more than the first option letter, unless the option is followed by a parameter. Spaces between a single option letter and its parameter are optional. Parameters to options can be specified in decimal, hexadecimal or octal notation. Thus <code>-c8</code>, <code>-c 8</code>, <code>-c 010</code> and <code>-cols 8</code> are all equivalent. </p>
 <dl>
-<dt><i>-a</i> | <i>-autoskip</i></p>
-<dd> Toggle autoskip: A single &#8216;*&#8217; replaces nul-lines. Default off.</p>
-<dt><i>-b</i> | <i>-bits</i></p>
-<dd> Switch to bits (binary digits) dump, rather than hexdump. This option writes octets as eight digits &quot;1&quot;s and &quot;0&quot;s instead of a normal hexadecimal dump. Each line is preceded by a line number in hexadecimal and followed by an ascii (or ebcdic) representation. The command line switches -r, -p, -i do not work with this mode.</p>
-<dt><i>-c cols </i>|<i> -cols cols</i></p>
-<dd> Format &lt;<i>cols</i>&gt; octets per line. Default 16 (-i: 12, -ps: 30, -b: 6). Max 256.</p>
-<dt><i>-C</i> | <i>-capitalize</i></p>
-<dd> Capitalize variable names in C include file style, when using -i.</p>
-<dt><i>-E</i> | <i>-EBCDIC</i></p>
-<dd> Change the character encoding in the righthand column from ASCII to EBCDIC. This does not change the hexadecimal representation. The option is meaningless in combinations with -r, -p or -i.</p>
-<dt><i>-e</i></p>
-<dd> Switch to little-endian hexdump. This option treats byte groups as words in little-endian byte order. The default grouping of 4 bytes may be changed using <i>-g</i>. This option only applies to hexdump, leaving the ASCII (or EBCDIC) representation unchanged. The command line switches -r, -p, -i do not work with this mode.</p>
-<dt><i>-g bytes </i>|<i> -groupsize bytes</i></p>
-<dd> Separate the output of every &lt;<i>bytes</i>&gt; bytes (two hex characters or eight bit-digits each) by a whitespace. Specify <i>-g 0</i> to suppress grouping. &lt;<i>Bytes</i>&gt; defaults to <i>2</i> in normal mode, <i>4</i> in little-endian mode and <i>1</i> in bits mode. Grouping does not apply to postscript or include style.</p>
-<dt><i>-h</i> | <i>-help</i></p>
-<dd> Print a summary of available commands and exit. No hex dumping is performed.</p>
-<dt><i>-i</i> | <i>-include</i></p>
-<dd> Output in C include file style. A complete static array definition is written (named after the input file), unless xxd reads from stdin.</p>
-<dt><i>-l len </i>|<i> -len len</i></p>
-<dd> Stop after writing &lt;<i>len</i>&gt; octets.</p>
-<dt><i>-o offset</i></p>
-<dd> Add &lt;<i>offset</i>&gt; to the displayed file position.</p>
-<dt><i>-p</i> | <i>-ps</i> | <i>-postscript</i> | <i>-plain</i></p>
-<dd> Output in postscript continuous hexdump style. Also known as plain hexdump style.</p>
-<dt><i>-r</i> | <i>-revert</i></p>
-<dd> Reverse operation: convert (or patch) hexdump into binary. If not writing to stdout, xxd writes into its output file without truncating it. Use the combination <i>-r -p</i> to read plain hexadecimal dumps without line number information and without a particular column layout. Additional Whitespace and line-breaks are allowed anywhere.</p>
-<dt><i>-seek offset</i></p>
-<dd> When used after <i>-r</i>: revert with &lt;<i>offset</i>&gt; added to file positions found in hexdump.</p>
-<dt><i>-s [+][-]seek</i></p>
-<dd> Start at &lt;<i>seek</i>&gt; bytes abs. (or rel.) infile offset. <i>+ </i>indicates that the seek is relative to the current stdin file position (meaningless when not reading from stdin). <i>&#8211; </i>indicates that the seek should be that many characters from the end of the input (or if combined with <i>+</i>: before the current stdin file position). Without -s option, xxd starts at the current file position.</p>
-<dt><i>-u</i></p>
-<dd> Use upper case hex letters. Default is lower case.</p>
-<dt><i>-v</i> | <i>-version</i></p>
-<dd> Show version string.</dl>
+<dt><i>-a</i> | <i>-autoskip</i></dt>
+<dd> Toggle autoskip: A single &#8216;*&#8217; replaces nul-lines. Default off.</dd>
+<dt><i>-b</i> | <i>-bits</i></dt>
+<dd> Switch to bits (binary digits) dump, rather than hexdump. This option writes octets as eight digits &quot;1&quot;s and &quot;0&quot;s instead of a normal hexadecimal dump. Each line is preceded by a line number in hexadecimal and followed by an ascii (or ebcdic) representation. The command line switches -r, -p, -i do not work with this mode.</dd>
+<dt><i>-c cols </i>|<i> -cols cols</i></dt>
+<dd> Format &lt;<i>cols</i>&gt; octets per line. Default 16 (-i: 12, -ps: 30, -b: 6). Max 256.</dd>
+<dt><i>-C</i> | <i>-capitalize</i></dt>
+<dd> Capitalize variable names in C include file style, when using -i.</dd>
+<dt><i>-E</i> | <i>-EBCDIC</i></dt>
+<dd> Change the character encoding in the righthand column from ASCII to EBCDIC. This does not change the hexadecimal representation. The option is meaningless in combinations with -r, -p or -i.</dd>
+<dt><i>-e</i></dt>
+<dd> Switch to little-endian hexdump. This option treats byte groups as words in little-endian byte order. The default grouping of 4 bytes may be changed using <i>-g</i>. This option only applies to hexdump, leaving the ASCII (or EBCDIC) representation unchanged. The command line switches -r, -p, -i do not work with this mode.</dd>
+<dt><i>-g bytes </i>|<i> -groupsize bytes</i></dt>
+<dd> Separate the output of every &lt;<i>bytes</i>&gt; bytes (two hex characters or eight bit-digits each) by a whitespace. Specify <i>-g 0</i> to suppress grouping. &lt;<i>Bytes</i>&gt; defaults to <i>2</i> in normal mode, <i>4</i> in little-endian mode and <i>1</i> in bits mode. Grouping does not apply to postscript or include style.</dd>
+<dt><i>-h</i> | <i>-help</i></dt>
+<dd> Print a summary of available commands and exit. No hex dumping is performed.</dd>
+<dt><i>-i</i> | <i>-include</i></dt>
+<dd> Output in C include file style. A complete static array definition is written (named after the input file), unless xxd reads from stdin.</dd>
+<dt><i>-l len </i>|<i> -len len</i></dt>
+<dd> Stop after writing &lt;<i>len</i>&gt; octets.</dd>
+<dt><i>-o offset</i></dt>
+<dd> Add &lt;<i>offset</i>&gt; to the displayed file position.</dd>
+<dt><i>-p</i> | <i>-ps</i> | <i>-postscript</i> | <i>-plain</i></dt>
+<dd> Output in postscript continuous hexdump style. Also known as plain hexdump style.</dd>
+<dt><i>-r</i> | <i>-revert</i></dt>
+<dd> Reverse operation: convert (or patch) hexdump into binary. If not writing to stdout, xxd writes into its output file without truncating it. Use the combination <i>-r -p</i> to read plain hexadecimal dumps without line number information and without a particular column layout. Additional Whitespace and line-breaks are allowed anywhere.</dd>
+<dt><i>-seek offset</i></dt>
+<dd> When used after <i>-r</i>: revert with &lt;<i>offset</i>&gt; added to file positions found in hexdump.</dd>
+<dt><i>-s [+][-]seek</i></dt>
+<dd> Start at &lt;<i>seek</i>&gt; bytes abs. (or rel.) infile offset. <i>+ </i>indicates that the seek is relative to the current stdin file position (meaningless when not reading from stdin). <i>&#8211; </i>indicates that the seek should be that many characters from the end of the input (or if combined with <i>+</i>: before the current stdin file position). Without -s option, xxd starts at the current file position.</dd>
+<dt><i>-u</i></dt>
+<dd> Use upper case hex letters. Default is lower case.</dd>
+<dt><i>-v</i> | <i>-version</i></dt>
+<dd> Show version string.</dd></dl>
 <h2>CAVEATS</h2>
 <p> <i>xxd -r</i> has some builtin magic while evaluating line number information. If the output file is seekable, then the linenumbers at the start of each hexdump line may be out of order, lines may be missing, or overlapping. In these cases xxd will <a href="/docs/linux/man/2-lseek/">lseek</a>(2) to the next position. If the output file is not seekable, only gaps are allowed, which will be filled by null-bytes. </p>
 <p> <i>xxd -r</i> never generates parse errors. Garbage is silently skipped. </p>
@@ -125,18 +125,18 @@ description: "xxd – make a hexdump or do the reverse."
 <h2>RETURN VALUES</h2>
 <p> The following error values are returned:</p>
 <dl>
-<dt>0</p>
-<dd> no errors encountered.</p>
-<dt>-1</p>
-<dd> operation not supported ( <i>xxd -r -i</i> still impossible).</p>
-<dt>1</p>
-<dd> error while parsing options.</p>
-<dt>2</p>
-<dd> problems with input file.</p>
-<dt>3</p>
-<dd> problems with output file.</p>
-<dt>4,5</p>
-<dd> desired seek position is unreachable.</dl>
+<dt>0</dt>
+<dd> no errors encountered.</dd>
+<dt>-1</dt>
+<dd> operation not supported ( <i>xxd -r -i</i> still impossible).</dd>
+<dt>1</dt>
+<dd> error while parsing options.</dd>
+<dt>2</dt>
+<dd> problems with input file.</dd>
+<dt>3</dt>
+<dd> problems with output file.</dd>
+<dt>4,5</dt>
+<dd> desired seek position is unreachable.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> uuencode(1), uudecode(1), <a href="/docs/linux/man/1-patch/">patch</a>(1) </p>
 <h2>WARNINGS</h2>

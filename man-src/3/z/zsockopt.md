@@ -54,7 +54,6 @@ CZMQ_EXPORT int zsocket_rcvmore(void *zocket);
 CZMQ_EXPORT SOCKET zsocket_fd(void *zocket);
 CZMQ_EXPORT int zsocket_events(void *zocket);
 CZMQ_EXPORT char *zsocket_last_endpoint(void *zocket);
-
 //  Set socket options
 CZMQ_EXPORT void zsocket_set_tos(void *zocket, int tos);
 CZMQ_EXPORT void zsocket_set_router_handover(void *zocket, int router_handover);
@@ -108,7 +107,6 @@ CZMQ_EXPORT void zsocket_set_tcp_keepalive_cnt(void *zocket, int tcp_keepalive_c
 CZMQ_EXPORT void zsocket_set_tcp_keepalive_intvl(void *zocket, int tcp_keepalive_intvl);
 CZMQ_EXPORT void zsocket_set_tcp_accept_filter(void *zocket, const char *tcp_accept_filter);
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 3)
 //  Get socket options
 CZMQ_EXPORT int zsocket_ipv4only(void *zocket);
@@ -138,7 +136,6 @@ CZMQ_EXPORT int zsocket_rcvmore(void *zocket);
 CZMQ_EXPORT SOCKET zsocket_fd(void *zocket);
 CZMQ_EXPORT int zsocket_events(void *zocket);
 CZMQ_EXPORT char *zsocket_last_endpoint(void *zocket);
-
 //  Set socket options
 CZMQ_EXPORT void zsocket_set_router_raw(void *zocket, int router_raw);
 CZMQ_EXPORT void zsocket_set_ipv4only(void *zocket, int ipv4only);
@@ -168,7 +165,6 @@ CZMQ_EXPORT void zsocket_set_tcp_keepalive_cnt(void *zocket, int tcp_keepalive_c
 CZMQ_EXPORT void zsocket_set_tcp_keepalive_intvl(void *zocket, int tcp_keepalive_intvl);
 CZMQ_EXPORT void zsocket_set_tcp_accept_filter(void *zocket, const char *tcp_accept_filter);
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 2)
 //  Get socket options
 CZMQ_EXPORT int zsocket_hwm(void *zocket);
@@ -195,7 +191,6 @@ CZMQ_EXPORT int zsocket_type(void *zocket);
 CZMQ_EXPORT int zsocket_rcvmore(void *zocket);
 CZMQ_EXPORT SOCKET zsocket_fd(void *zocket);
 CZMQ_EXPORT int zsocket_events(void *zocket);
-
 //  Set socket options
 CZMQ_EXPORT void zsocket_set_hwm(void *zocket, int hwm);
 CZMQ_EXPORT void zsocket_set_swap(void *zocket, int swap);
@@ -220,7 +215,6 @@ CZMQ_EXPORT void zsocket_set_backlog(void *zocket, int backlog);
 CZMQ_EXPORT void zsocket_set_subscribe(void *zocket, const char *subscribe);
 CZMQ_EXPORT void zsocket_set_unsubscribe(void *zocket, const char *unsubscribe);
 #endif
-
 //  Self test of this class
 CZMQ_EXPORT void zsockopt_test(bool verbose);</code></pre>
 <h2>Description</h2>
@@ -574,7 +568,6 @@ free(last_endpoint);
 zsocket_destroy(ctx, zocket);
 #endif
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 3)
 #if defined(ZMQ_ROUTER_RAW)
 zocket = zsocket_new(ctx, ZMQ_ROUTER);
@@ -817,7 +810,6 @@ free(last_endpoint);
 zsocket_destroy(ctx, zocket);
 #endif
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 2)
 #if defined(ZMQ_HWM)
 zocket = zsocket_new(ctx, ZMQ_SUB);
@@ -989,7 +981,6 @@ zsocket_events(zocket);
 zsocket_destroy(ctx, zocket);
 #endif
 #endif
-
 zctx_destroy(&amp;ctx);
 </code></pre>
 <h2>Authors</h2>
@@ -1001,7 +992,8 @@ zctx_destroy(&amp;ctx);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

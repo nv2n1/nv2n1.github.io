@@ -25,6 +25,6 @@ description: "QuantLib::SVD – Singular value decomposition."
 <p> Refer to Golub and Van Loan: <code>Matrix</code> computation, The Johns Hopkins University Press </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking their properties.</dl>
+<dd>the correctness of the returned values is tested by checking their properties.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

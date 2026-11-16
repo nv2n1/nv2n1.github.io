@@ -13,30 +13,31 @@ description: "httpress – High performance HTTP server stress & benchmark utili
 <h2>Description</h2>
 <p>This is a high performance HTTP server stress &amp; benchmark utility; inspired by weighttp tool. Main features:</p>
 <dl>
-<dt><code>event driven</code> (low memory footprint, large number of connections)</p>
+<dt><code>event driven</code> (low memory footprint, large number of connections)</dt>
 <dd>
-<dt><code>multi-threaded</code> (uses all cores of your CPU)</p>
+</dd><dt><code>multi-threaded</code> (uses all cores of your CPU)</dt>
 <dd>
-<dt><code>SSL support</code> (via GNUTLS library) with cipher suite selection</p>
+</dd><dt><code>SSL support</code> (via GNUTLS library) with cipher suite selection</dt>
 <dd>
 <h2>Options</h2>
-<dl>
-<dt><code>-n</code> num</p>
-<dd>number of requests (default: 1)</p>
-<dt><code>-t</code> num</p>
-<dd>number of threads (default: 1)</p>
-<dt><code>-c</code> num</p>
-<dd>concurrent connections (default: 1)</p>
-<dt><code>-k</code></p>
-<dd>keep alive (default: no)</p>
-<dt><code>-q</code></p>
-<dd>no progress indication (default: no)</p>
-<dt><code>-z</code> pri</p>
-<dd>GNUTLS cipher priority (default: NORMAL)</p>
-<dt><code>-h</code></p>
-<dd>show this help</dl>
+</dd><dl>
+<dt><code>-n</code> num</dt>
+<dd>number of requests (default: 1)</dd>
+<dt><code>-t</code> num</dt>
+<dd>number of threads (default: 1)</dd>
+<dt><code>-c</code> num</dt>
+<dd>concurrent connections (default: 1)</dd>
+<dt><code>-k</code></dt>
+<dd>keep alive (default: no)</dd>
+<dt><code>-q</code></dt>
+<dd>no progress indication (default: no)</dd>
+<dt><code>-z</code> pri</dt>
+<dd>GNUTLS cipher priority (default: NORMAL)</dd>
+<dt><code>-h</code></dt>
+<dd>show this help</dd></dl>
 <p> example: httpress <code>-n</code> 10000 <code>-c</code> 100 <code>-t</code> 4 <code>-k</code> <a rel="nofollow" href="http://localhost:8080/index.html">http://localhost:8080/index.html</a></p>
 <h2>Authors</h2>
 <p>Yaroslav Stavnichiy</p>
 <h2>Bugs</h2>
 <p>Please report issues reports to: <a rel="nofollow" href="https://bitbucket.org/yarosla/httpress/issues">https://bitbucket.org/yarosla/httpress/issues</a> </p>
+</dl>

@@ -44,15 +44,15 @@ url: "/docs/linux/man/1-ctangle/"
  CWEBbin tries hard to be a drop-in replacement for CWEB, so in general you should not notice any differences in invoking the programs nor in the resulting output. There are, however, a few differences worth noting:
 <dl>
 <dt>&bull;
-<dd> Options --help, --quiet, --verbose, --version, and flags -c, -i, -o, and +lX are new in CWEBbin and TeX Live.
-<dt>&bull;
-<dd> Option +lX is accompanied by several wrapper files for cwebmac.tex with translated captions for German (+ld), French (+lf), and Italian (+li).
-<dt>&bull;
-<dd> CWEB in TeX Live operates silently by default (as of 2019); use the --verbose option to get the original behavior.
-<dt>&bull;
-<dd> File lookup with the environment variable CWEBINPUTS is extended to permit several, colon-separated, paths; see ENVIRONMENT below.
-<dt>&bull;
-<dd> If properly configured, the main programs ctangle and cweave are localized with the "GNU gettext utilities".</dl>
+</dt><dd> Options --help, --quiet, --verbose, --version, and flags -c, -i, -o, and +lX are new in CWEBbin and TeX Live.
+</dd><dt>&bull;
+</dt><dd> Option +lX is accompanied by several wrapper files for cwebmac.tex with translated captions for German (+ld), French (+lf), and Italian (+li).
+</dd><dt>&bull;
+</dt><dd> CWEB in TeX Live operates silently by default (as of 2019); use the --verbose option to get the original behavior.
+</dd><dt>&bull;
+</dt><dd> File lookup with the environment variable CWEBINPUTS is extended to permit several, colon-separated, paths; see ENVIRONMENT below.
+</dd><dt>&bull;
+</dt><dd> If properly configured, the main programs ctangle and cweave are localized with the "GNU gettext utilities".</dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -63,47 +63,47 @@ url: "/docs/linux/man/1-ctangle/"
  The first batch of options are common to both ctangle and cweave:
 <dl>
 <dt>&bull;
-<dd> +b: print banner line on terminal
-<dt>&bull;
-<dd> +h: print success message on completion
-<dt>&bull;
-<dd> +p: print progress report messages
-<dt>&bull;
-<dd> +q/-q: shortcut for -bhp; also --quiet (default)
-<dt>&bull;
-<dd> +v/-v: shortcut for +bhp; also --verbose
-<dt>&bull;
-<dd> -c: ignore temporary output irrespective of changes
-<dt>&bull;
-<dd> +s: print usage statistics
-<dt>&bull;
-<dd> --help: display help message and exit
-<dt>&bull;
-<dd> --version: output version information and exit</dl>
+</dt><dd> +b: print banner line on terminal
+</dd><dt>&bull;
+</dt><dd> +h: print success message on completion
+</dd><dt>&bull;
+</dt><dd> +p: print progress report messages
+</dd><dt>&bull;
+</dt><dd> +q/-q: shortcut for -bhp; also --quiet (default)
+</dd><dt>&bull;
+</dt><dd> +v/-v: shortcut for +bhp; also --verbose
+</dd><dt>&bull;
+</dt><dd> -c: ignore temporary output irrespective of changes
+</dd><dt>&bull;
+</dt><dd> +s: print usage statistics
+</dd><dt>&bull;
+</dt><dd> --help: display help message and exit
+</dd><dt>&bull;
+</dt><dd> --version: output version information and exit</dd></dl>
  
 
  There is one other option applicable to ctangle only:
 <dl>
 <dt>&bull;
-<dd> +k: keep separators in numeric literals in the output</dl>
+</dt><dd> +k: keep separators in numeric literals in the output</dd></dl>
  
 
  There are seven other options applicable to cweave only:
 <dl>
 <dt>&bull;
-<dd> -e: do not enclose C/C++&nbsp;material in \PB{...}
-<dt>&bull;
-<dd> -f: do not force a newline after every C/C++&nbsp;statement in output
-<dt>&bull;
-<dd> -i: suppress indentation of parameter declarations
-<dt>&bull;
-<dd> -o: suppress separation of declarations and statements
-<dt>&bull;
-<dd> -x: omit indices, section names, table of contents
-<dt>&bull;
-<dd> +lX/-lX: use macros for language X as of Xcwebmac.tex
-<dt>&bull;
-<dd> +t: treat typename in a template like typedef</dl>
+</dt><dd> -e: do not enclose C/C++&nbsp;material in \PB{...}
+</dd><dt>&bull;
+</dt><dd> -f: do not force a newline after every C/C++&nbsp;statement in output
+</dd><dt>&bull;
+</dt><dd> -i: suppress indentation of parameter declarations
+</dd><dt>&bull;
+</dt><dd> -o: suppress separation of declarations and statements
+</dd><dt>&bull;
+</dt><dd> -x: omit indices, section names, table of contents
+</dd><dt>&bull;
+</dt><dd> +lX/-lX: use macros for language X as of Xcwebmac.tex
+</dd><dt>&bull;
+</dt><dd> +t: treat typename in a template like typedef</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -122,19 +122,19 @@ url: "/docs/linux/man/1-ctangle/"
  The location of the files mentioned below varies from system to system. Use the kpsewhich utility to find their locations.
 <dl>
 <dt>&bull;
-<dd> cwebmac.tex: The default TeX macros \input in the first line of the cweave output file.
-<dt>&bull;
-<dd> cwebman.tex: The CWEB user manual, available in PDF from CTAN (<a rel="nofollow" HREF="https://ctan.org/pkg/cweb">https://ctan.org/pkg/cweb</a>).</dl>
+</dt><dd> cwebmac.tex: The default TeX macros \input in the first line of the cweave output file.
+</dd><dt>&bull;
+</dt><dd> cwebman.tex: The CWEB user manual, available in PDF from CTAN (<a rel="nofollow" HREF="https://ctan.org/pkg/cweb">https://ctan.org/pkg/cweb</a>).</dd></dl>
 
 <h2>SEE ALSO</h2>
 
 <dl>
 <dt>&bull;
-<dd> The CWEB System of Structured Documentation: by Donald E. Knuth and Silvio Levy (hardcopy version of cwebman.tex and the source code listings of common.w, ctangle.w, and cweave.w).
-<dt>&bull;
-<dd> Literate Programming: by D. E. Knuth.
-<dt>&bull;
-<dd> Weaving a Program: by Wayne Sewell.</dl>
+</dt><dd> The CWEB System of Structured Documentation: by Donald E. Knuth and Silvio Levy (hardcopy version of cwebman.tex and the source code listings of common.w, ctangle.w, and cweave.w).
+</dd><dt>&bull;
+</dt><dd> Literate Programming: by D. E. Knuth.
+</dd><dt>&bull;
+</dt><dd> Weaving a Program: by Wayne Sewell.</dd></dl>
  
 
  <a HREF="/docs/linux/man/1-cweb/">cweb</a>(1), <a HREF="/docs/linux/man/1-tex/">tex</a>(1), <a HREF="/docs/linux/man/1-cc/">cc</a>(1)

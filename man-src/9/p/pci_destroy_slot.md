@@ -14,7 +14,7 @@ description: "pci_destroy_slot – decrement refcount for physical PCI slot"
 <p><i>slot</i></p>
 <dl>
 <dd>
-<dd>struct pci_slot to decrement</dl>
+</dd><dd>struct pci_slot to decrement</dd></dl>
 <h2>Description</h2>
 <p><code>struct</code> pci_slot is refcounted, so destroying them is really easy; we just call kobject_put on its kobj and let our release methods do the rest.</p>
 <h2>Copyright</h2>

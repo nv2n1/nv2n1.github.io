@@ -14,28 +14,28 @@ description: "ec2-converter, creates ready to bundle EC2 AMI disk images for Ama
 <p><code>ec2-converter</code> creates creates ready to bundle <font SIZE="-1">EC2</font> <font SIZE="-1">AMI</font> disk images for Amazon&#8217;s <font SIZE="-1">EC2</font>.</p>
 <h2>Options</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd>Shows a help message and exits.</dl>
+<dt>-h, &#8211;help</dt>
+<dd>Shows a help message and exits.</dd></dl>
 <h2>Image Options</h2>
 <p>These options define the converted <font SIZE="-1">EC2</font> <font SIZE="-1">AMI</font> image.</p>
 <dl>
-<dt>-f <font SIZE="-1">IMAGEFILE</font> &#8211;imagefile=IMAGEFILE</p>
-<dd>Image filename or directory to convert</p>
-<dt>-n <font SIZE="-1">IMAGENAME</font>, &#8211;imagename=IMAGENAME</p>
-<dd>Name of <font SIZE="-1">EC2</font> <font SIZE="-1">AMI</font> image to be created (default based on config name)</p>
-<dt>&#8211;inputtype=INPUTTYPE</p>
-<dd>Input image type valid options are: (loopbackfs, diskimage, directory)</p>
-<dt>&#8211;ssh=(yes/no)</p>
-<dd>Configure ssh to allow remote logins, default is yes,set to no if ssh is not installed</p>
-<dt>&#8211;rpmcheck=(yes/no)</p>
-<dd>Perform rpm package checks (curl/openssh-server), default is yes, set to no to override</dl>
+<dt>-f <font SIZE="-1">IMAGEFILE</font> &#8211;imagefile=IMAGEFILE</dt>
+<dd>Image filename or directory to convert</dd>
+<dt>-n <font SIZE="-1">IMAGENAME</font>, &#8211;imagename=IMAGENAME</dt>
+<dd>Name of <font SIZE="-1">EC2</font> <font SIZE="-1">AMI</font> image to be created (default based on config name)</dd>
+<dt>&#8211;inputtype=INPUTTYPE</dt>
+<dd>Input image type valid options are: (loopbackfs, diskimage, directory)</dd>
+<dt>&#8211;ssh=(yes/no)</dt>
+<dd>Configure ssh to allow remote logins, default is yes,set to no if ssh is not installed</dd>
+<dt>&#8211;rpmcheck=(yes/no)</dt>
+<dd>Perform rpm package checks (curl/openssh-server), default is yes, set to no to override</dd></dl>
 <h2>System Directory Options</h2>
 <p>These options define directories used on your system for creating the <font SIZE="-1">AMI</font> image</p>
 <dl>
-<dt>-t <font SIZE="-1">TMPDIR</font>, &#8211;tmpdir=TMPDIR</p>
-<dd>Temporary directory to use (default: /var/tmp)</p>
-<dt>&#8211;cache=CACHEDIR</p>
-<dd>Cache directory to use (default: private cache)</dl>
+<dt>-t <font SIZE="-1">TMPDIR</font>, &#8211;tmpdir=TMPDIR</dt>
+<dd>Temporary directory to use (default: /var/tmp)</dd>
+<dt>&#8211;cache=CACHEDIR</dt>
+<dd>Cache directory to use (default: private cache)</dd></dl>
 <h2>Examples</h2>
 <p>Convert a partitioned disk image created by appliance-creator </p>
 <pre> ec2-converter -f testimage.raw --inputtype=diskimage</pre>

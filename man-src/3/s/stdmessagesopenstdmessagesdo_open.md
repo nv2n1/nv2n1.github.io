@@ -11,14 +11,10 @@ std::messages&lt;CharT&gt;::open,std::messages&lt;CharT&gt;::do_open - std::mess
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  catalog open(const std::basic_string&lt;char&gt; &amp;name, const std::locale &amp;loc) const;
-
 protected:
 (2)
-
     virtual catalog do_open(const std::basic_string&lt;char&gt; &amp;name, const std::locale &amp;loc) const;</code></pre> 
 1) Public member function, calls the protected virtual member function do_open of the most derived class. 
 2) Obtains a value of type catalog (inherited from std::messages_base), which can be passed to get() to retrieve messages from the message catalog named by name. This value is usable until passed to close(). 
@@ -41,10 +37,8 @@ The actual catalog location is implementation-defined: for the catalog &quot;sed
 
 The following example demonstrated retrieval of messages: on a typical GNU/Linux system it reads from /usr/share/locale/de/LC_MESSAGES/sed.mo 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::locale loc(&quot;de_DE.utf8&quot;);
     std::cout.imbue(loc);

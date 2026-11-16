@@ -15,11 +15,11 @@ blk_queue_resize_tags - change the queueing depth
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>new_depth</i>
-<dl><dd>the new max command queueing depth</dl>
+<dl><dd>the new max command queueing depth</dd></dl>
 
 <h2>Notes</h2>
 

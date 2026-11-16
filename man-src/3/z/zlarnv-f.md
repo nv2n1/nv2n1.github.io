@@ -20,10 +20,10 @@ description: "zlarnv.f –"
 <dd>
 <pre> ZLARNV returns a vector of n random complex numbers from a uniform or
  normal distribution.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>IDIST</i> </p>
+<dd><i>IDIST</i> </dd>
 <pre> IDIST is INTEGER
  Specifies the distribution of the random numbers:
  = 1: real and imaginary parts each uniform (0,1)
@@ -46,13 +46,13 @@ description: "zlarnv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -60,7 +60,8 @@ description: "zlarnv.f –"
  real numbers from a uniform (0,1) distribution, in batches of up to
  128 using vectorisable code. The Box-Muller method is used to
  transform numbers from a uniform to a normal distribution.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 100 of file zlarnv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

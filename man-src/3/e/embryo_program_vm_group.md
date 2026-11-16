@@ -25,19 +25,19 @@ description: "Virtual Machine Functions – Functions that deal with creating an
 <p> See <code>Virtual Machine Functions</code> for more information about how this works. Note that you will need to retrieve any return data or data on the stack before you pop. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.</dl>
+<dd><i>ep</i> The given program.</dd></dl>
 <h3>EAPI void embryo_program_vm_push (Embryo_Program * ep)</h3>
 <p>Starts a new virtual machine session for the given program. </p>
 <p> See <code>Virtual Machine Functions</code> for more information about how this works. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.</dl>
+<dd><i>ep</i> The given program.</dd></dl>
 <p> References embryo_program_vm_reset().</p>
 <h3>EAPI void embryo_program_vm_reset (Embryo_Program * ep)</h3>
 <p>Resets the current virtual machine session of the given program. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.</dl>
+<dd><i>ep</i> The given program.</dd></dl>
 <p> Referenced by embryo_program_vm_push().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

@@ -15,11 +15,11 @@ inode_congested - test whether an inode is congested
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode to test for congestion (may be NULL)</dl>
+<dl><dd></dd><dd>inode to test for congestion (may be NULL)</dd></dl>
  
 
  <i>cong_bits</i>
-<dl><dd>mask of WB_[a]sync_congested bits to test</dl>
+<dl><dd>mask of WB_[a]sync_congested bits to test</dd></dl>
 
 <h2>Description</h2>
 

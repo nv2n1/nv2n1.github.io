@@ -17,11 +17,9 @@ description: "load_wav_pf – Packfile version of load_wav. Allegro game program
 <pre><code>
 PACKFILE *packfile;
 SAMPLE *sample;
-
 packfile = pack_fopen("sound.wav", F_READ);
 if (!packfile)
     abort_on_error("Couldn't open sound.wav");
-
 sample = load_wav_pf(packfile);
 if (!sample)
     abort_on_error("Error loading sound.wav");

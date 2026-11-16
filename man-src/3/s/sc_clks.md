@@ -11,84 +11,31 @@ description: "sc::CLKS –"
 <p> This provides a Kohn-Sham implementation for closed-shell systems.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;clks.h&gt;</code></pre>
 <p> Inherits <code>sc::CLSCF</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>CLKS (StateIn &amp;)
-
-
-
 CLKS (const Ref&lt; KeyVal &gt; &amp;)
-
-
 This KeyVal constructor reads the following keywords:.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Print information about the object.
-
-
 void two_body_energy (double &amp;ec, double &amp;ex)
-
-
-
 int value_implemented () const
-
-
 Information about the availability of values, gradients, and hessians.
-
-
 int gradient_implemented () const
-
-
-
 RefSymmSCMatrix density ()
-
-
 Returns the SO density.
-
-
-
 Protected Member Functions
 void ao_fock (double accuracy)
-
-
-
 double scf_energy ()
-
-
-
 Ref&lt; SCExtrapData &gt; extrap_data ()
-
-
-
 RefSymmSCMatrix effective_fock ()
-
-
 Returns closed-shell Fock matrix in MO basis (including XC contribution for KS DFT).
-
-
 void init_vector ()
-
-
-
 void done_vector ()
-
-
-
 void two_body_deriv (double *)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>DenIntegrator</code> &gt; <code>integrator_</code> </p>
 <p> <code>Ref</code>&lt; <code>DenFunctional</code> &gt; <code>functional_</code> </p>
@@ -100,8 +47,8 @@ Protected Attributes</code></pre>
 <h3>sc::CLKS::CLKS (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>This <code>KeyVal</code> constructor reads the following keywords:. .IP &quot;integrator&quot; 1c Specifies the <code>DenIntegrator</code> that will be used to integrate the density functional. The default is <code>RadialAngularIntegrator</code>. </p>
 <dl>
-<dt>functional</p>
-<dd>Specifies the <code>DenFunctional</code> that will be used to compute the exchange/correlation <code>contribution</code>. This is no default.</dl>
+<dt>functional</dt>
+<dd>Specifies the <code>DenFunctional</code> that will be used to compute the exchange/correlation <code>contribution</code>. This is no default.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>RefSymmSCMatrix</code> sc::CLKS::effective_fock () [protected, virtual]</h3>
 <p>Returns closed-shell Fock matrix in MO basis (including XC <code>contribution</code> for KS DFT). </p>

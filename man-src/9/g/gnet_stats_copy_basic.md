@@ -14,16 +14,16 @@ description: "gnet_stats_copy_basic – copy basic statistics into statistic TLV
 <p><i>running</i></p>
 <dl>
 <dd>
-<dd>seqcount_t pointer</dl>
+</dd><dd>seqcount_t pointer</dd></dl>
 <p> <i>d</i></p>
 <dl>
-<dd>dumping handle</dl>
+<dd>dumping handle</dd></dl>
 <p> <i>cpu</i></p>
 <dl>
-<dd>copy statistic per cpu</dl>
+<dd>copy statistic per cpu</dd></dl>
 <p> <i>b</i></p>
 <dl>
-<dd>basic statistics</dl>
+<dd>basic statistics</dd></dl>
 <h2>Description</h2>
 <p>Appends the basic statistics to the top level TLV created by <code>gnet_stats_start_copy</code>. </p>
 <p> Returns 0 on success or -1 with the statistic lock released if the room in the socket buffer was not sufficient.</p>

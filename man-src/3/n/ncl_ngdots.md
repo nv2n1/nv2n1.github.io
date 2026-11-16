@@ -14,15 +14,15 @@ NGDOTS - Draws filled circular dots at coordinate positions (X(I),Y(I),I=1,NUM) 
  void c_ngdots(float *x, float *y, int num, float size, 
  int icolor)
 <h2>Description</h2><dl COMPACT><dt>X
-<dd>(an input array of type REAL) defining the X world coordinates where a sequence of circular filled dots is to be drawn.
-<dt>Y
-<dd>(an input array of type REAL) defining the Y world coordinates where a sequence of circular filled dots is to be drawn.
-<dt>NUM
-<dd>(an input parameter of type INTEGER) the value of which is the number of dots to be drawn.
-<dt>SIZE
-<dd>(an input parameter of type REAL) the value of which is the size, in world coordinate Y-axis units, of the diameter of each dot to be drawn.
-<dt>ICOLOR
-<dd>(an input parameter of type INTEGER) the value of which is the GKS color index specifying what color the dots will be.</dl><h2>C-Binding Description</h2>The C binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input array of type REAL) defining the X world coordinates where a sequence of circular filled dots is to be drawn.
+</dd><dt>Y
+</dt><dd>(an input array of type REAL) defining the Y world coordinates where a sequence of circular filled dots is to be drawn.
+</dd><dt>NUM
+</dt><dd>(an input parameter of type INTEGER) the value of which is the number of dots to be drawn.
+</dd><dt>SIZE
+</dt><dd>(an input parameter of type REAL) the value of which is the size, in world coordinate Y-axis units, of the diameter of each dot to be drawn.
+</dd><dt>ICOLOR
+</dt><dd>(an input parameter of type INTEGER) the value of which is the GKS color index specifying what color the dots will be.</dd></dl><h2>C-Binding Description</h2>The C binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>The coordinates must be world coordinates and not user coordinates. NGDOTS does not respect the log scaling or axis reversal options of the SET call and will report a warning if these are not set to their default values. 
 
  The dots are scaled appropriately so that they will be circular when the normalization transformation does not preserve aspect ratio. 

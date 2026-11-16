@@ -18,4 +18,4 @@ This configuration file provides definitions of events specific for problems in 
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

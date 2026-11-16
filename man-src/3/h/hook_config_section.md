@@ -19,17 +19,14 @@ int decode_encrypted_int(const char *name, int def)
 {
     ...
 }
-
 const char *decode_encrypted_string(const char *name, const char *def)
 {
     ...
 }
-
 void encode_plaintext_string(const char *name, const char *value)
 {
     ...
 }
-
 int main(int argc, char *argv[])
 {
     ...

@@ -43,7 +43,7 @@ void ibnd_destroy_fabric(ibnd_fabric_t *fabric) void ibnd_debug(int i) void ibnd
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>libibmad, mad_rpc_open_port</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</p>
+<dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

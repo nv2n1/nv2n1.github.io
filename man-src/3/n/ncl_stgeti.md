@@ -21,9 +21,9 @@ CALL STGETI (CNM,IVL)
 <h2>Description</h2>
 
 <dl><dt>CNM
-<dd>(CHARACTER, input) is the name of a parameter whose integer value is to be retrieved. Only the first three characters of CNM are examined. The three characters must either be entirely upper or entirely lower case; mixed case is not recognized. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of just 'PLR', use 'PLR - Polar Input Mode'.
-<dt>IVL
-<dd>(INTEGER, output) is a variable in which the value of the parameter specified by CNM is to be returned.</dl>
+</dt><dd>(CHARACTER, input) is the name of a parameter whose integer value is to be retrieved. Only the first three characters of CNM are examined. The three characters must either be entirely upper or entirely lower case; mixed case is not recognized. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of just 'PLR', use 'PLR - Polar Input Mode'.
+</dd><dt>IVL
+</dt><dd>(INTEGER, output) is a variable in which the value of the parameter specified by CNM is to be returned.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

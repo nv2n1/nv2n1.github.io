@@ -19,8 +19,8 @@ description: "nxagent – NoMachine’s NX Agent."
 <p> Available clients are NoMachine&#8217;s <code>nxclient</code> or the community projects <code>qtnx</code> and <code>remmina</code> (with NX plugin). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Lists all others options that are not listed here. </p>
+<dt><code>-help</code></dt>
+<dd> Lists all others options that are not listed here. </dd>
 </dl>
 <h2>FURTHER READINGS</h2>
 <p> Information on NX: <a rel="nofollow" href="http://www.nomachine.com">http://www.nomachine.com</a> </p>

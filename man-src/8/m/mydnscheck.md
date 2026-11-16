@@ -14,24 +14,24 @@ description: "mydnscheck – Check zone data for consistency and syntax."
 <p><code>mydnscheck</code> scans the zones named on the command line for syntax. If no zones are specified, all zones are scanned. If the -c (or -C) option is specified, additional database consistency checks are performed. The program writes all results to stdout in a format that both humans and computers should be able to read. Each problem found is listed on a separate line, with a TAB character in between each field. The fields listed are: <code>MESSAGE</code> .. <code>SOA ID</code> .. <code>RR ID</code> .. <code>NAME</code> .. <code>TTL</code> .. <code>TYPE</code> .. <code>DATA</code> If stderr is a terminal, a progress meter is displayed if scanning all zones.</p>
 <h2>Program Options</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;consistency</code></p>
-<dd>Perform database consistency checks in addition to the usual syntax checks</p>
-<dt><code>-C</code>, <code>&#8211;consistency-only</code></p>
-<dd>Skip the syntax checks and only perform the database consistency checks.</p>
-<dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></p>
-<dd>Use the database called <i>dbname</i>.</p>
-<dt><code>-h</code>, <code>&#8211;host</code>=<i>hostname</i></p>
-<dd>Connect to database server at <i>hostname</i>.</p>
-<dt><code>-p</code>, <code>&#8211;pass</code>=<i>password</i></p>
-<dd>Supply <i>password</i> when connecting to the database server. If the <i>password</i> argument is omitted, it will be prompted on the tty.</p>
-<dt><code>-u</code>, <code>&#8211;user</code>=<i>username</i></p>
-<dd>Use <i>username</i> when connecting to the database server.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Enable verbose output while running.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display program help and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Output version number and exit.</dl>
+<dt><code>-c</code>, <code>&#8211;consistency</code></dt>
+<dd>Perform database consistency checks in addition to the usual syntax checks</dd>
+<dt><code>-C</code>, <code>&#8211;consistency-only</code></dt>
+<dd>Skip the syntax checks and only perform the database consistency checks.</dd>
+<dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></dt>
+<dd>Use the database called <i>dbname</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;host</code>=<i>hostname</i></dt>
+<dd>Connect to database server at <i>hostname</i>.</dd>
+<dt><code>-p</code>, <code>&#8211;pass</code>=<i>password</i></dt>
+<dd>Supply <i>password</i> when connecting to the database server. If the <i>password</i> argument is omitted, it will be prompted on the tty.</dd>
+<dt><code>-u</code>, <code>&#8211;user</code>=<i>username</i></dt>
+<dd>Use <i>username</i> when connecting to the database server.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Enable verbose output while running.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display program help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Output version number and exit.</dd></dl>
 <h2>Author</h2>
 <p>Don Moore &lt;bboy [at] bboy.net&gt; Howard Wilkinson &lt;howard [at] cohtech.com&gt;</p>
 <h2>Homepage</h2>

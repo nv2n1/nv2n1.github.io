@@ -28,16 +28,16 @@ description: "cups_selinux – Security Enhanced Linux Policy for the cups proce
 <p> <code>cupsd_config_exec_t </code> </p>
 <p> &#8211; Set files with the cupsd_config_exec_t type, if you want to transition an executable to the cupsd_config_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/printconf-backend, /usr/sbin/hal_lpadmin, /usr/lib/udev/udev-configure-printer, /usr/libexec/cups-pk-helper-mechanism, /usr/libexec/hal_lpadmin, /lib/udev/udev-configure-printer, /usr/bin/cups-config-daemon </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/printconf-backend, /usr/sbin/hal_lpadmin, /usr/lib/udev/udev-configure-printer, /usr/libexec/cups-pk-helper-mechanism, /usr/libexec/hal_lpadmin, /lib/udev/udev-configure-printer, /usr/bin/cups-config-daemon </dd>
 </dl>
 <p> <code>cupsd_config_var_run_t </code> </p>
 <p> &#8211; Set files with the cupsd_config_var_run_t type, if you want to store the cupsd config files under the /run directory. </p>
 <p> <code>cupsd_etc_t </code> </p>
 <p> &#8211; Set files with the cupsd_etc_t type, if you want to store cupsd files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/cups(/.*)?, /etc/cups(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/usr/share/cups(/.*)?, /etc/cups(/.*)? </dd>
 </dl>
 <p> <code>cupsd_exec_t </code> </p>
 <p> &#8211; Set files with the cupsd_exec_t type, if you want to transition an executable to the cupsd_t domain. </p>
@@ -50,8 +50,8 @@ description: "cups_selinux – Security Enhanced Linux Policy for the cups proce
 <p> <code>cupsd_log_t </code> </p>
 <p> &#8211; Set files with the cupsd_log_t type, if you want to treat the data as cupsd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/cups(/.*)?, /var/log/turboprint.*, /usr/local/Brother/fax/.*.log </p>
+<dt>Paths:</dt>
+<dd>/var/log/cups(/.*)?, /var/log/turboprint.*, /usr/local/Brother/fax/.*.log </dd>
 </dl>
 <p> <code>cupsd_lpd_exec_t </code> </p>
 <p> &#8211; Set files with the cupsd_lpd_exec_t type, if you want to transition an executable to the cupsd_lpd_t domain. </p>
@@ -62,8 +62,8 @@ description: "cups_selinux – Security Enhanced Linux Policy for the cups proce
 <p> <code>cupsd_rw_etc_t </code> </p>
 <p> &#8211; Set files with the cupsd_rw_etc_t type, if you want to store cupsd rw files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cups/lpoptions.*, /usr/local/linuxprinter/ppd(/.*)?, /etc/cups/subscriptions.*, /opt/brother/Printers(.*/)?inf(/.*)?, /usr/local/Brother/(.*/)?inf(/.*)?, /etc/cups/classes.conf.*, /usr/lib/bjlib(/.*)?, /etc/cups/ppd(/.*)?, /opt/gutenprint/ppds(/.*)?, /etc/printcap.*, /etc/alchemist/namespace/printconf(/.*)?, /usr/local/Printer/(.*/)?inf(/.*)?, /var/lib/cups/certs, /etc/cups/ppds.dat, /etc/cups/certs, /etc/cups/certs/.*, /etc/cups/printers.conf.*, /var/lib/cups/certs/.*, /var/cache/foomatic(/.*)?, /var/cache/alchemist/printconf.*, /etc/cups/cupsd.conf.*, /var/cache/cups(/.*)?, /usr/share/foomatic/db/oldprinterids </p>
+<dt>Paths:</dt>
+<dd>/etc/cups/lpoptions.*, /usr/local/linuxprinter/ppd(/.*)?, /etc/cups/subscriptions.*, /opt/brother/Printers(.*/)?inf(/.*)?, /usr/local/Brother/(.*/)?inf(/.*)?, /etc/cups/classes.conf.*, /usr/lib/bjlib(/.*)?, /etc/cups/ppd(/.*)?, /opt/gutenprint/ppds(/.*)?, /etc/printcap.*, /etc/alchemist/namespace/printconf(/.*)?, /usr/local/Printer/(.*/)?inf(/.*)?, /var/lib/cups/certs, /etc/cups/ppds.dat, /etc/cups/certs, /etc/cups/certs/.*, /etc/cups/printers.conf.*, /var/lib/cups/certs/.*, /var/cache/foomatic(/.*)?, /var/cache/alchemist/printconf.*, /etc/cups/cupsd.conf.*, /var/cache/cups(/.*)?, /usr/share/foomatic/db/oldprinterids </dd>
 </dl>
 <p> <code>cupsd_tmp_t </code> </p>
 <p> &#8211; Set files with the cupsd_tmp_t type, if you want to store cupsd temporary files in the /tmp directories. </p>
@@ -72,8 +72,8 @@ description: "cups_selinux – Security Enhanced Linux Policy for the cups proce
 <p> <code>cupsd_var_run_t </code> </p>
 <p> &#8211; Set files with the cupsd_var_run_t type, if you want to store the cupsd files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/ccpd(/.*)?, /var/ekpd(/.*)?, /var/turboprint(/.*)?, /var/run/cups(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/ccpd(/.*)?, /var/ekpd(/.*)?, /var/turboprint(/.*)?, /var/run/cups(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanantly change the file context you need to use the <code>semanage fcontext </code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Process Types</h2>

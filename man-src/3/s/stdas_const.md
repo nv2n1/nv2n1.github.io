@@ -11,15 +11,11 @@ std::as_const - std::as_const
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;utility&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 17)
-
         constexpr std::add_const_t&lt;T&gt; &amp;as_const(T &amp;t) noexcept;
-
 template &lt;class T&gt;
 (2)(since C++ 17)
-
     void as_const(const T &amp;&amp;) = delete;</code></pre> 
 1) Forms lvalue reference to const type of t 
 2) const rvalue reference overload is deleted to disallow rvalue arguments 
@@ -35,14 +31,10 @@ template &lt;class T&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;cassert&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     std::string mutableString = &quot;Hello World!&quot;;
     const std::string &amp;constView = std::as_const(mutableString);

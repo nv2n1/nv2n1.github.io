@@ -19,6 +19,6 @@ description: "pmWhichContext – identify the current PMAPI context"
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmdestroycontext/">pmDestroyContext</a></code>(3), <code><a href="/docs/linux/man/3-pmdupcontext/">pmDupContext</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3) and <code><a href="/docs/linux/man/3-pmusecontext/">pmUseContext</a></code>(3).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOCONTEXT</code></p>
-<dd>no current context </p>
+<dt><code>PM_ERR_NOCONTEXT</code></dt>
+<dd>no current context </dd>
 </dl>

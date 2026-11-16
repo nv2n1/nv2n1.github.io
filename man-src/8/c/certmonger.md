@@ -14,34 +14,34 @@ description: "certmonger"
 <p>The <i>certmonger</i> daemon monitors certificates for impending expiration, and can optionally refresh soon-to-be-expired certificates with the help of a CA. If told to, it can drive the entire enrollment process from key generation through enrollment and refresh. The daemon provides a control interface via the <i>org.fedorahosted.certmonger</i> service, with which client tools such as <code><a href="/docs/linux/man/1-getcert/">getcert</a></code>(1) interact. </p>
 <h2>Options</h2>
 <dl>
-<dt>-s</p>
-<dd>Listen on the session bus rather than the system bus.</p>
-<dt>-S</p>
-<dd>Listen on the system bus rather than the session bus. This is the default.</p>
-<dt>-l</p>
-<dd>Also listen on a private socket for connections from clients running under the same UID.</p>
-<dt>-L</p>
-<dd>Listen only on a private socket for connections from clients running under the same UID, and skip connecting to a bus.</p>
-<dt>-P</p>
-<dd>Specify a location for the private listening socket. If the location beings with a &#8216;/&#8217; character, it will be prefixed with &#8216;unix:path=&#8217;, otherwise it will be prefixed with &#8216;unix:&#8217;. If this option is not specified, the listening socket, if one is created, will be placed in the abstract namespace.</p>
-<dt>-b TIMEOUT</p>
-<dd>Behave as a bus-activated service: if there are no certificates to be monitored or obtained, and no requests are received within TIMEOUT seconds, exit. Not compatible with the -c option.</p>
-<dt>-B</p>
-<dd>Don&#8217;t behave as a bus-activated service. This is the default.</p>
-<dt>-n</p>
-<dd>Don&#8217;t fork, and log messages to stderr rather than syslog.</p>
-<dt>-f</p>
-<dd>Do fork, and log messages to syslog rather than stderr. This is the default.</p>
-<dt>-d LEVEL</p>
-<dd>Set debugging level. Higher values produce more debugging output. Implies -n.</p>
-<dt>-p FILE</p>
-<dd>Store the daemon&#8217;s process ID in the named file.</p>
-<dt>-F</p>
-<dd>Force NSS to be initialized in FIPS mode. The default behavior is to heed the setting stored in <i>/proc/sys/crypto/fips_enabled</i>.</p>
-<dt>-c cmd</p>
-<dd>After the service has initialized, run the specified command, then shut down the service after the command exits. If the -l or -L option was also specified, the command will be run with the <i>CERTMONGER_PVT_ADDRESS</i> environment variable set to the listening socket&#8217;s location. Not compatible with the -b option.</p>
-<dt>-v</p>
-<dd>Print version information and exit. </p>
+<dt>-s</dt>
+<dd>Listen on the session bus rather than the system bus.</dd>
+<dt>-S</dt>
+<dd>Listen on the system bus rather than the session bus. This is the default.</dd>
+<dt>-l</dt>
+<dd>Also listen on a private socket for connections from clients running under the same UID.</dd>
+<dt>-L</dt>
+<dd>Listen only on a private socket for connections from clients running under the same UID, and skip connecting to a bus.</dd>
+<dt>-P</dt>
+<dd>Specify a location for the private listening socket. If the location beings with a &#8216;/&#8217; character, it will be prefixed with &#8216;unix:path=&#8217;, otherwise it will be prefixed with &#8216;unix:&#8217;. If this option is not specified, the listening socket, if one is created, will be placed in the abstract namespace.</dd>
+<dt>-b TIMEOUT</dt>
+<dd>Behave as a bus-activated service: if there are no certificates to be monitored or obtained, and no requests are received within TIMEOUT seconds, exit. Not compatible with the -c option.</dd>
+<dt>-B</dt>
+<dd>Don&#8217;t behave as a bus-activated service. This is the default.</dd>
+<dt>-n</dt>
+<dd>Don&#8217;t fork, and log messages to stderr rather than syslog.</dd>
+<dt>-f</dt>
+<dd>Do fork, and log messages to syslog rather than stderr. This is the default.</dd>
+<dt>-d LEVEL</dt>
+<dd>Set debugging level. Higher values produce more debugging output. Implies -n.</dd>
+<dt>-p FILE</dt>
+<dd>Store the daemon&#8217;s process ID in the named file.</dd>
+<dt>-F</dt>
+<dd>Force NSS to be initialized in FIPS mode. The default behavior is to heed the setting stored in <i>/proc/sys/crypto/fips_enabled</i>.</dd>
+<dt>-c cmd</dt>
+<dd>After the service has initialized, run the specified command, then shut down the service after the command exits. If the -l or -L option was also specified, the command will be run with the <i>CERTMONGER_PVT_ADDRESS</i> environment variable set to the listening socket&#8217;s location. Not compatible with the -b option.</dd>
+<dt>-v</dt>
+<dd>Print version information and exit. </dd>
 </dl>
 <h2>Files</h2>
 <p>The set of certificates being monitored or signed is tracked using files stored under <i>/var/lib/certmonger/requests</i>, or in a directory named by the <i>CERTMONGER_REQUESTS_DIR</i> environment variable. </p>

@@ -22,14 +22,14 @@ description: "chrome_selinux – Security Enhanced Linux Policy for the chrome p
 <p> chrome_sandbox_exec_t </code> </p>
 <p> &#8211; Set files with the chrome_sandbox_exec_t type, if you want to transition an executable to the chrome_sandbox_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/chromium-browser/chrome-sandbox, /opt/google/chrome/chrome-sandbox </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/chromium-browser/chrome-sandbox, /opt/google/chrome/chrome-sandbox </dd>
 </dl>
 <p> <code>chrome_sandbox_nacl_exec_t </code> </p>
 <p> &#8211; Set files with the chrome_sandbox_nacl_exec_t type, if you want to transition an executable to the chrome_sandbox_nacl_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/google/chrome/nacl_helper_bootstrap, /usr/lib/chromium-browser/nacl_helper_bootstrap </p>
+<dt>Paths:</dt>
+<dd>/opt/google/chrome/nacl_helper_bootstrap, /usr/lib/chromium-browser/nacl_helper_bootstrap </dd>
 </dl>
 <p> <code>chrome_sandbox_tmp_t </code> </p>
 <p> &#8211; Set files with the chrome_sandbox_tmp_t type, if you want to store chrome sandbox temporary files in the /tmp directories. </p>

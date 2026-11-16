@@ -11,18 +11,18 @@ description: "XcupQueryVersion – Returns TOG-CUP protocol version supported by
 <h2>Synopsis</h2>
 <pre><code>cc</code> [ <i>flag</i> ... ] <i>file</i> ... -<code>lXext</code> [ <i>library</i> ... ]
 #include &lt;X11/extensions/Xcup.h&gt;
-<dl COMPACT><dt><dd>Status <code>XcupQueryVersion</code>(Display *<i>display</i>,
+<dl COMPACT><dt></dt><dd>Status <code>XcupQueryVersion</code>(Display *<i>display</i>,
 int *<i>major_version_return</i>, int *<i>minor_version_return</i>);
 <br>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl></pre>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server</p>
-<dt><i>major_version_return</i></p>
-<dd>Returns the major version supported by the server</p>
-<dt><i>minor_version_return</i></p>
-<dd>Returns the minor version supported by the server</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server</dd>
+<dt><i>major_version_return</i></dt>
+<dd>Returns the major version supported by the server</dd>
+<dt><i>minor_version_return</i></dt>
+<dd>Returns the minor version supported by the server</dd></dl>
 <h2>Description</h2>
 <p><i>XcupQueryVersion</i> sets <i>major_version_return</i> and <i>minor_version_return</i> to the major and minor TOG-CUP protocol version supported by the server. If the TOG-CUP library is compatible with the version returned by the server, it returns nonzero. If the server does not support the TOG-CUP extension, or if there was an error during communications with the server, or if the server and library protocol versions are incompatible, it returns zero. No other Xcup functions may be called before this function. If a client violates this rule, the effects of all subsequent Xcup calls that it makes are undefined. </p>
 <p> To get the list of reserved colormap entries, use <i>XcupGetReservedColormapEntries.</i> </p>

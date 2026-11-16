@@ -14,12 +14,12 @@ description: "gnutls_x509_name_constraints_add_excluded – API function"
 <p> <code>int gnutls_x509_name_constraints_add_excluded(gnutls_x509_name_constraints_t </code><i>nc</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const gnutls_datum_t * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_name_constraints_t nc</p>
-<dd> The nameconstraints structure</p>
-<dt>gnutls_x509_subject_alt_name_t type</p>
-<dd> The type of the constraints</p>
-<dt>const gnutls_datum_t * name</p>
-<dd> The data of the constraints</dl>
+<dt>gnutls_x509_name_constraints_t nc</dt>
+<dd> The nameconstraints structure</dd>
+<dt>gnutls_x509_subject_alt_name_t type</dt>
+<dd> The type of the constraints</dd>
+<dt>const gnutls_datum_t * name</dt>
+<dd> The data of the constraints</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will add a name constraint to the list of excluded constraints. The constraints <i>type</i> can be any of the following types: <code>GNUTLS_SAN_DNSNAME</code>, <code>GNUTLS_SAN_RFC822NAME</code>, <code>GNUTLS_SAN_DN</code>, <code>GNUTLS_SAN_URI</code>, <code>GNUTLS_SAN_IPADDRESS</code>. For the latter, an IP address in network byte order is expected, followed by its network mask (which is 4 bytes in IPv4 or 16-bytes in IPv6).</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_name_constraints_add_excluded – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

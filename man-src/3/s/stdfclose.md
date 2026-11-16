@@ -11,7 +11,6 @@ std::fclose - std::fclose
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fclose(std::FILE *stream);</code></pre> 
 Closes the given file stream. Any unwritten buffered data are flushed to the OS. Any unread buffered data are discarded. 
 Whether or not the operation succeeds, the stream is no longer associated with a file, and the buffer allocated by std::setbuf or std::setvbuf, if any, is also disassociated and deallocated if automatic allocation was used. 
@@ -28,10 +27,8 @@ stream - the file stream to close
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     FILE *fp = std::fopen(&quot;test.txt&quot;, &quot;r&quot;);
     if (!fp) {

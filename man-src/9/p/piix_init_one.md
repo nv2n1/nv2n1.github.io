@@ -14,10 +14,10 @@ description: "piix_init_one – Register PIIX ATA PCI device with kernel service
 <p><i>pdev</i></p>
 <dl>
 <dd>
-<dd>PCI device to register</dl>
+</dd><dd>PCI device to register</dd></dl>
 <p> <i>ent</i></p>
 <dl>
-<dd>Entry in piix_pci_tbl matching with <i>pdev</i></dl>
+<dd>Entry in piix_pci_tbl matching with <i>pdev</i></dd></dl>
 <h2>Description</h2>
 <p>Called from kernel PCI layer. We probe for combined mode (sigh), and then hand over control to libata, for it to do the rest. </p>
 <p> LOCKING: Inherited from PCI layer (may sleep).</p>
@@ -26,5 +26,5 @@ description: "piix_init_one – Register PIIX ATA PCI device with kernel service
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

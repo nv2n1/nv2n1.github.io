@@ -15,22 +15,22 @@ description: "cgget – print parameter(s) of given group(s)"
 <h2>DESCRIPTION</h2>
 <p> Prints the parameter(s) of input cgroup(s). If neither controller nor variable are specified, the values of all possible variables are displayed. </p>
 <dl>
-<dt><code>&lt;path&gt;</code></p>
-<dd> is the name of the cgroup which should be read. This parameter can be used multiple times. </p>
-<dt><code>-a, &#8211;all</code></p>
-<dd> print the variables for all controllers which consist in the given cgroup </p>
-<dt><code>-g &lt;controller&gt;</code></p>
-<dd> defines controllers whose values should be displayed. This option can be used multiple times. </p>
-<dt><code>-g &lt;controller&gt;:&lt;path&gt;</code></p>
-<dd> defines control groups whose values should be displayed. This option can be used multiple times. </p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> display help and exit </p>
-<dt><code>-n</code></p>
-<dd> do not print headers, i.e. names of groups. </p>
-<dt><code>-r, &#8211;variable &lt;name&gt;</code></p>
-<dd> defines parameter to display. This option can be used multiple times. </p>
-<dt><code>-v, &#8211;values-only</code></p>
-<dd> print only values, not parameter names. </p>
+<dt><code>&lt;path&gt;</code></dt>
+<dd> is the name of the cgroup which should be read. This parameter can be used multiple times. </dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd> print the variables for all controllers which consist in the given cgroup </dd>
+<dt><code>-g &lt;controller&gt;</code></dt>
+<dd> defines controllers whose values should be displayed. This option can be used multiple times. </dd>
+<dt><code>-g &lt;controller&gt;:&lt;path&gt;</code></dt>
+<dd> defines control groups whose values should be displayed. This option can be used multiple times. </dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> display help and exit </dd>
+<dt><code>-n</code></dt>
+<dd> do not print headers, i.e. names of groups. </dd>
+<dt><code>-r, &#8211;variable &lt;name&gt;</code></dt>
+<dd> defines parameter to display. This option can be used multiple times. </dd>
+<dt><code>-v, &#8211;values-only</code></dt>
+<dd> print only values, not parameter names. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <pre>
@@ -58,8 +58,8 @@ cpu.shares=1024
 </pre>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>CGROUP_LOGLEVEL</code></p>
-<dd> controls verbosity of the tool. Allowed values are <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code> or <code>ERROR</code>. </p>
+<dt><code>CGROUP_LOGLEVEL</code></dt>
+<dd> controls verbosity of the tool. Allowed values are <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code> or <code>ERROR</code>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgrules.conf (1), cgcreate (1), cgget (1) </p>

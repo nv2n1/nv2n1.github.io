@@ -21,41 +21,41 @@ description: "checkpoint – xxQS_NAMExx checkpointing environment configuration
 <h3><code>interface</code></h3>
 <p>The type of checkpointing to be used. Currently, the following types are valid:</p>
 <dl>
-<dt><i>hibernator</i></p>
-<dd>The Hibernator kernel level checkpointing is interfaced.</p>
-<dt><i>cpr</i></p>
-<dd>The SGI kernel level checkpointing is used.</p>
-<dt><i>transparent</i></p>
-<dd>xxQS_NAMExx assumes that the jobs submitted with reference to this checkpointing interface use a checkpointing library such as provided by the free package <i>Condor</i>.</p>
-<dt><i>userdefined</i></p>
-<dd>xxQS_NAMExx assumes that the jobs submitted with reference to this checkpointing interface perform their private checkpointing method.</p>
-<dt><i>application-level</i></p>
-<dd>Uses all of the interface commands configured in the checkpointing object like in the case of one of the kernel level checkpointing interfaces (<i>cpr</i>, etc.) except for the <code>restart_command</code> (see below), which is not used (even if it is configured) but the job script is invoked in case of a restart instead.</dl>
+<dt><i>hibernator</i></dt>
+<dd>The Hibernator kernel level checkpointing is interfaced.</dd>
+<dt><i>cpr</i></dt>
+<dd>The SGI kernel level checkpointing is used.</dd>
+<dt><i>transparent</i></dt>
+<dd>xxQS_NAMExx assumes that the jobs submitted with reference to this checkpointing interface use a checkpointing library such as provided by the free package <i>Condor</i>.</dd>
+<dt><i>userdefined</i></dt>
+<dd>xxQS_NAMExx assumes that the jobs submitted with reference to this checkpointing interface perform their private checkpointing method.</dd>
+<dt><i>application-level</i></dt>
+<dd>Uses all of the interface commands configured in the checkpointing object like in the case of one of the kernel level checkpointing interfaces (<i>cpr</i>, etc.) except for the <code>restart_command</code> (see below), which is not used (even if it is configured) but the job script is invoked in case of a restart instead.</dd></dl>
 <h3><code>ckpt_command</code></h3>
 <p>A command-line type command string to be executed by xxQS_NAMExx in order to initiate a checkpoint. The following pseudo-variables are available to be substituted in the value:</p>
 <dl>
-<dt><code>$host</code></p>
-<dd>The name of the host on which the command is executed.</p>
-<dt><code>$ja_task_id</code></p>
-<dd>The array job task index (0 if not an array job).</p>
-<dt><code>$job_owner</code></p>
-<dd>The user name of the job owner.</p>
-<dt><code>$job_id</code></p>
-<dd>xxQS_NAMExx&#8217;s unique job identification number.</p>
-<dt><code>$job_name</code></p>
-<dd>The name of the job.</p>
-<dt><code>$queue</code></p>
-<dd>The cluster queue name of the master queue instance, on which the command is started.</p>
-<dt><code>$job_pid</code></p>
-<dd>The process id of the job/task to checkpoint.</p>
-<dt><code>$ckpt_dir</code></p>
-<dd>See <code>ckpt_dir</code> below.</p>
-<dt><code>$ckpt_signal</code></p>
-<dd>See <code>signal</code> below.</p>
-<dt><code>$sge_cell</code></p>
-<dd>The SGE_CELL environment variable (useful for locating files).</p>
-<dt><code>$sge_root</code></p>
-<dd>The SGE_ROOT environment variable (useful for locating files).</dl>
+<dt><code>$host</code></dt>
+<dd>The name of the host on which the command is executed.</dd>
+<dt><code>$ja_task_id</code></dt>
+<dd>The array job task index (0 if not an array job).</dd>
+<dt><code>$job_owner</code></dt>
+<dd>The user name of the job owner.</dd>
+<dt><code>$job_id</code></dt>
+<dd>xxQS_NAMExx&#8217;s unique job identification number.</dd>
+<dt><code>$job_name</code></dt>
+<dd>The name of the job.</dd>
+<dt><code>$queue</code></dt>
+<dd>The cluster queue name of the master queue instance, on which the command is started.</dd>
+<dt><code>$job_pid</code></dt>
+<dd>The process id of the job/task to checkpoint.</dd>
+<dt><code>$ckpt_dir</code></dt>
+<dd>See <code>ckpt_dir</code> below.</dd>
+<dt><code>$ckpt_signal</code></dt>
+<dd>See <code>signal</code> below.</dd>
+<dt><code>$sge_cell</code></dt>
+<dd>The SGE_CELL environment variable (useful for locating files).</dd>
+<dt><code>$sge_root</code></dt>
+<dd>The SGE_ROOT environment variable (useful for locating files).</dd></dl>
 <h3><code>migr_command</code></h3>
 <p>A command-line type command string to be executed by xxQS_NAMExx during a migration of a checkpointing job from one host to another. The same pseudo-variables are available as for <code>ckpt_command</code>. Note that the command is expected to create a checkpoint itself &#8211; the checkpointing command isn&#8217;t called automatically on migration.</p>
 <h3><code>restart_command</code></h3>
@@ -69,14 +69,14 @@ description: "checkpoint – xxQS_NAMExx checkpointing environment configuration
 <h3><code>when</code></h3>
 <p>The points of time when checkpoints are expected to be generated. Valid values for this parameter are composed from the letters <i>s</i>, <i>m</i>, <i>x</i>, <i>r</i>, and any combinations thereof without any separating character in between. The same letters are allowed for the <i>-c</i> option of the command which will overwrite the definitions in the checkpointing environment used. The meaning of the letters is as follows:</p>
 <dl>
-<dt><i>s</i></p>
-<dd>A job is checkpointed, aborted and, if possible, migrated if the corresponding is shut down on the job&#8217;s host. This operation is handled by the specified <code>migr_command</code>.</p>
-<dt><i>m</i></p>
-<dd>checkpoints are generated periodically at the <i>min_cpu_interval</i> interval defined by the queue (see in which a job executes.</p>
-<dt><i>x</i></p>
-<dd>A job is checkpointed, aborted and, if possible, migrated as soon as the job gets suspended (manually as well as automatically). This operation is handled by the specified <code>migr_command</code>.</p>
-<dt><i>r</i></p>
-<dd>A job will be rescheduled (not checkpointed) when the host on which the job currently runs goes into the &quot;unknown&quot; state and the time interval <i>reschedule_unknown</i> (see defined in the global/local cluster configuration is exceeded.</dl>
+<dt><i>s</i></dt>
+<dd>A job is checkpointed, aborted and, if possible, migrated if the corresponding is shut down on the job&#8217;s host. This operation is handled by the specified <code>migr_command</code>.</dd>
+<dt><i>m</i></dt>
+<dd>checkpoints are generated periodically at the <i>min_cpu_interval</i> interval defined by the queue (see in which a job executes.</dd>
+<dt><i>x</i></dt>
+<dd>A job is checkpointed, aborted and, if possible, migrated as soon as the job gets suspended (manually as well as automatically). This operation is handled by the specified <code>migr_command</code>.</dd>
+<dt><i>r</i></dt>
+<dd>A job will be rescheduled (not checkpointed) when the host on which the job currently runs goes into the &quot;unknown&quot; state and the time interval <i>reschedule_unknown</i> (see defined in the global/local cluster configuration is exceeded.</dd></dl>
 <h2>Environment Variables</h2>
 <p><code>xxQS_NAME_Sxx_BINDING</code> and <code>xxQS_NAME_Sxx_CKPT_DIR</code> may be specified on job submission. See</p>
 <h2>Restrictions</h2>

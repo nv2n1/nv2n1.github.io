@@ -17,13 +17,13 @@ description: "session-migration – Migrate in user session settings."
 <p> Even if the program tries to cache some timestamp and scripts to not be launched twiced (they are skipped on subsequent runs), the executables file should be idempotent. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;dry-run</code></p>
-<dd> This parameter enables to run the session-migration tool without really launching the scripts and marking them are migrated. It&#8217;s generally used with &#8211;verbose for debugging purposes. </p>
-<dt><code>&#8211;file</code>&nbsp;<i>filename</i></p>
-<dd> This parameter, followed by a path or filename, tells sesions-migration to only consider that script file and ignoring XDG_DATA_DIR. It won&#8217;t log as well this special file as being migrated. </p>
-<dt><code>&#8211;help</code></p>
-<dd> Display a quick command help. </p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Show a lot of verbose information. It can be used by the user to debug configuration issues; </p>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> This parameter enables to run the session-migration tool without really launching the scripts and marking them are migrated. It&#8217;s generally used with &#8211;verbose for debugging purposes. </dd>
+<dt><code>&#8211;file</code>&nbsp;<i>filename</i></dt>
+<dd> This parameter, followed by a path or filename, tells sesions-migration to only consider that script file and ignoring XDG_DATA_DIR. It won&#8217;t log as well this special file as being migrated. </dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a quick command help. </dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Show a lot of verbose information. It can be used by the user to debug configuration issues; </dd>
 </dl>
 <h2>Index</h2>

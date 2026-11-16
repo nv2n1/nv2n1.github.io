@@ -15,7 +15,7 @@ rpc_clone_client - Clone an RPC client structure
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client whose parameters are copied</dl>
+<dl><dd></dd><dd>RPC client whose parameters are copied</dd></dl>
 
 <h2>Description</h2>
 

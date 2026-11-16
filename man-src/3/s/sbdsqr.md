@@ -19,14 +19,12 @@ description: "sbdsqr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SBDSQR computes the singular values and, optionally, the right and / or left singular vectors from the singular value decomposition(SVD) of
  a real N-by-N (upper or lower) bidiagonal matrix B using the implicit
  zero-shift QR algorithm.  The SVD of B has the form
- 
     B = Q * S * P**T
- 
  where S is the diagonal matrix of singular values, Q is an orthogonal
  matrix of left singular vectors, and P is an orthogonal matrix of
  right singular vectors.  If left singular vectors are requested, this
@@ -35,9 +33,7 @@ SBDSQR computes the singular values and, optionally, the right and / or left sin
  P**T, for given real input matrices U and VT.  When U and VT are the
  orthogonal matrices that reduce a general matrix A to bidiagonal
  form:  A = U*B*VT, as computed by SGEBRD, then
- 
     A = (U*Q) * S * (P**T*VT)
- 
  is the SVD of A.  Optionally, the subroutine may also compute Q**T*C
  for a given real input matrix C.
  See "Computing  Small Singular Values of Bidiagonal Matrices With
@@ -49,11 +45,11 @@ SBDSQR computes the singular values and, optionally, the right and / or left sin
  Department, University of California at Berkeley, July 1992
  for a detailed description of the algorithm.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           = 'U':  B is upper bidiagonal;
@@ -152,7 +148,7 @@ if INFO
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   TOLMUL  REAL, default = max(10,min(100,EPS**(-1/8)))
           TOLMUL controls the convergence criterion of the QR loop.
@@ -174,18 +170,18 @@ if INFO
           (and so fails to converge) if the number of passes
           through the inner loop exceeds MAXITR*N**2.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 230 of file sbdsqr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

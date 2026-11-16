@@ -14,8 +14,8 @@ description: "Tcl_BackgroundException, Tcl_BackgroundError – report Tcl except
 <code>Tcl_BackgroundError</code>(<i>interp</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which the exception occurred.</p>
-<dd>int <i>code</i> (in) The exceptional return code to be reported. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which the exception occurred.</dd>
+<dd>int <i>code</i> (in) The exceptional return code to be reported. </dd>
 </dl>
 <h2>Description</h2>
 <p>This procedure is typically invoked when a Tcl exception (any return code other than TCL_OK) occurs during &#8220;background processing&#8221; such as executing an event handler. When such an exception occurs, the condition is reported to Tcl or to a widget or some other C code, and there is not usually any obvious way for that code to report the exception to the user. In these cases the code calls <code>Tcl_BackgroundException</code> with an <i>interp</i> argument identifying the interpreter in which the exception occurred, and a <i>code</i> argument holding the return code value of the exception. The state of the interpreter, including any error message in the interpreter result, and the values of any entries in the return options dictionary, is captured and saved. <code>Tcl_BackgroundException</code> then arranges for the event loop to invoke at some later time the command registered in that interpreter to handle background errors by the <code>interp bgerror</code> command, passing the captured values as arguments. The registered handler command is meant to report the exception in an application-specific fashion. The handler command receives two arguments, the result of the interp, and the return options of the interp at the time the error occurred. If the application registers no handler command, the default handler command will attempt to call <code>bgerror</code> to report the error. If an error condition arises while invoking the handler command, then <code>Tcl_BackgroundException</code> reports the error itself by printing a message on the standard error file. </p>
@@ -25,6 +25,6 @@ description: "Tcl_BackgroundException, Tcl_BackgroundError – report Tcl except
 <dl COMPACT>
 <dd>
 <pre>Tcl_BackgroundException(interp, TCL_ERROR);</pre>
-</dl>
+</dd></dl>
 <h2>Keywords</h2>
 <p>background, bgerror, error, interp</p>

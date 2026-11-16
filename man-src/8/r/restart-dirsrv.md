@@ -14,14 +14,14 @@ description: "restart-dirsrv – restart script for Directory Server"
 <p>restart-dirsrv restarts all Directory Server instances on a system, or only a single instance if specified </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&lt;instance&gt;</code></p>
+<dt><code>&lt;instance&gt;</code></dt>
 <dd>Specifies a single Directory Server instance to restart
-</dl>
+</dd></dl>
 <h2>Usage</h2>
 <p>Sample usage:</p>
 <dl>
-<dt><code>restart-dirsrv example</code></p>
-<dd></dl>
+<dt><code>restart-dirsrv example</code></dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>restart-dirsrv was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

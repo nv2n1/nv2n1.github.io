@@ -26,7 +26,7 @@ description: "docker-inspect – Return low-level information on a container or 
 <p> Get information about an image when image name conflicts with the container name, e.g. both image and container are named rhel7: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker inspect-- type = image rhel7
     [{
@@ -35,12 +35,12 @@ $ docker inspect-- type = image rhel7
         ....
     }]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Getting information on a container</h2>
 <p> To get information on a container use its ID or instance name: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect d2cc496561d6<br />
     [{<br />
         &#8220;Id&#8221; : &#8220;d2cc496561d6d520cbc0236b4ba88c362c446a7619992123f11c809cded25b47&#8221;,<br />
@@ -189,40 +189,40 @@ $ docker inspect-- type = image rhel7
             &#8220;StopSignal&#8221; : &#8220;SIGTERM&#8221;<br />
         }<br />
     }]
-</dl>
+</dd></dl>
 <h2>Getting the IP address of a container instance</h2>
 <p> To get the IP address of a container use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect&#8211; format = &#8216;&#123;&#123;range .NetworkSettings.Networks}}&#123;&#123;.IPAddress}}&#123;&#123;end}}&#8217; d2cc496561d6 172.17.0.2
-</dl>
+</dd></dl>
 <h2>Listing all port bindings</h2>
 <p> One can loop over arrays and maps in the results to produce simple text output: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect&#8211; format = &#8216;&#123;&#123;range $p, $conf := .NetworkSettings.Ports}} \<br />
   &#123;&#123;$p}} -&gt; &#123;&#123;(index $conf 0).HostPort}} &#123;&#123;end}}&#8217; d2cc496561d6 80 /<br />
                             tcp-&gt;80
-</dl>
+</dd></dl>
 <p> You can get more information about how to write a Go template from: </p>
 <p> &lt;<a rel="nofollow" href="https://golang.org/pkg/text/template/">https://golang.org/pkg/text/template/</a>&gt;. </p>
 <h2>Getting size information on a container</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect &#8211; s d2cc496561d6<br />
                        [{<br />
                            &#8220;SizeRw&#8221; : 0,<br />
                            &#8220;SizeRootFs&#8221; : 972,<br />
                        }]
-</dl>
+</dd></dl>
 <h2>Getting information on an image</h2>
 <p> Use an image&#8217;s ID or name (e.g., repository/name[:tag]) to get information about the image: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker inspect ded7cd95e059
     [{
@@ -297,7 +297,7 @@ $ docker inspect ded7cd95e059
         }
     }]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; April 2015, updated by Qiang Huang &lt;h.huangqiang [at] huawei.com&gt; October 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
 <h2>Index</h2>

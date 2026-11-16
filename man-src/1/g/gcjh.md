@@ -17,34 +17,34 @@ description: "gcjh – – generate header files from Java class files"
 <p> See <tt>&quot;javah&quot;</tt> for a full description; this page only lists the additional options provided by <tt>&quot;gcjh&quot;</tt>. </p>
 <p> <font SIZE="-1">CNI</font> text options</p>
 <dl>
-<dt><code>-add</code> <i>text</i></p>
-<dd> Insert <i>text</i> into class body.</p>
-<dt><code>-append</code> <i>text</i></p>
-<dd> Append <i>text</i> after class declaration.</p>
-<dt><code>-friend</code> <i>text</i></p>
-<dd> Insert <i>text</i> as a <tt>&quot;friend&quot;</tt> declaration.</p>
-<dt><code>-prepend</code> <i>text</i></p>
-<dd> Insert <i>text</i> before start of class.</dl>
+<dt><code>-add</code> <i>text</i></dt>
+<dd> Insert <i>text</i> into class body.</dd>
+<dt><code>-append</code> <i>text</i></dt>
+<dd> Append <i>text</i> after class declaration.</dd>
+<dt><code>-friend</code> <i>text</i></dt>
+<dd> Insert <i>text</i> as a <tt>&quot;friend&quot;</tt> declaration.</dd>
+<dt><code>-prepend</code> <i>text</i></dt>
+<dd> Insert <i>text</i> before start of class.</dd></dl>
 <p> Compatibility options (unused)</p>
 <dl>
-<dt><code>-td</code> <i></i><font SIZE="-1"><i>DIR</i></font><i></i></p>
+<dt><code>-td</code> <i></i><font SIZE="-1"><i>DIR</i></font><i></i></dt>
 <dd>
-<dt><code>-M</code></p>
+</dd><dt><code>-M</code></dt>
 <dd>
-<dt><code>-MM</code></p>
+</dd><dt><code>-MM</code></dt>
 <dd>
-<dt><code>-MD</code></p>
+</dd><dt><code>-MD</code></dt>
 <dd>
-<dt><code>-MMD</code></p>
-<dd> Unused compatibility option.</dl>
+</dd><dt><code>-MMD</code></dt>
+<dd> Unused compatibility option.</dd></dl>
 <p> Standard options:</p>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print help text, then exit.</p>
-<dt><code>-version</code></p>
-<dd> Print version number, then exit.</p>
-<dt><code>-J</code><i></i><font SIZE="-1"><i>OPTION</i></font><i></i></p>
-<dd> Pass argument to the Java runtime.</dl>
+<dt><code>-help</code></dt>
+<dd> Print help text, then exit.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version number, then exit.</dd>
+<dt><code>-J</code><i></i><font SIZE="-1"><i>OPTION</i></font><i></i></dt>
+<dd> Pass argument to the Java runtime.</dd></dl>
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-javac/">javac</a></i>(1), <i>javah</i>(1), &#8230;</p>

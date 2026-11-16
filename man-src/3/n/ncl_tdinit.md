@@ -26,28 +26,24 @@ TDINIT - Initialization routine for TDPACK, called to define the position of the
  The arguments of TDINIT are as follows:
 <dl COMPACT>
 <dt>UMID, VMID, and WMID
-<dd> (input expressions of type REAL) - the coordinates of a point, E, at the eye position (if a single view is being drawn), or of a point midway between the two eyes (if a stereo view is being drawn).
-<dt>UORI, VORI, and WORI
-<dd> (input expressions of type REAL) - the coordinates of a point, O, that the eye is looking at. That point defines the origin of the XY projection plane. The line of sight is the line from E to O. The projection plane passes through O and is perpendicular to the line of sight.
-<dt>UTHI, VTHI, and WTHI
-<dd> (input expressions of type REAL) - the coordinates of a third point, T, needed to completely specify the orientation of the X and Y axes in the projection plane. The Y axis of the projection plane is its intersection with the plane passing though the points E, O, and T. The X axis of the projection plane passes through the point O and is perpendicular to the Y axis.
-<dt>OTEP
-<dd> (an input expression of type REAL) - set non-zero if and only if a stereo view is to be drawn. Make the value negative to draw a left-eye view, positive to draw a right-eye view. The magnitude of OTEP is the distance from either eye to the point midway between the eyes; if R represents the approximate distance from the eye to the objects being drawn, then OTEP may be set using a statement like 
-
+</dt><dd> (input expressions of type REAL) - the coordinates of a point, E, at the eye position (if a single view is being drawn), or of a point midway between the two eyes (if a stereo view is being drawn).
+</dd><dt>UORI, VORI, and WORI
+</dt><dd> (input expressions of type REAL) - the coordinates of a point, O, that the eye is looking at. That point defines the origin of the XY projection plane. The line of sight is the line from E to O. The projection plane passes through O and is perpendicular to the line of sight.
+</dd><dt>UTHI, VTHI, and WTHI
+</dt><dd> (input expressions of type REAL) - the coordinates of a third point, T, needed to completely specify the orientation of the X and Y axes in the projection plane. The Y axis of the projection plane is its intersection with the plane passing though the points E, O, and T. The X axis of the projection plane passes through the point O and is perpendicular to the Y axis.
+</dd><dt>OTEP
+</dt><dd> (an input expression of type REAL) - set non-zero if and only if a stereo view is to be drawn. Make the value negative to draw a left-eye view, positive to draw a right-eye view. The magnitude of OTEP is the distance from either eye to the point midway between the eyes; if R represents the approximate distance from the eye to the objects being drawn, then OTEP may be set using a statement like 
  <pre>
   OTEP = (+ or -) R *
          TAN(.017453292519943*ANGD/2.)
 </pre> 
-
  where the constant (.01745...) is just pi/180 and ANGD is the desired difference in the angle between the two views, in degrees; use a value of about 1 or 2 degrees for ANGD. 
-
  Note that, if the origin is approximately in the middle of the objects being viewed, then it's probably appropriate to use a value of R computed as follows: 
-
  <pre>
   R = SQRT((UMID-UORI)**2
            (VMID-VORI)**2+
            (WMID-WORI)**2)
-</pre></dl>
+</pre></dd></dl>
 
 <h2>C-Binding Description</h2>
  The C-binding argument descriptions are the same as the FORTRAN argument descriptions.

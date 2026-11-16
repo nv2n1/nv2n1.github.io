@@ -11,7 +11,6 @@ description: "CREATE USER – define a new database role"
 <h2>Synopsis</h2>
 <pre>CREATE USER <i>name</i> [ [ WITH ] <i>option</i> [ ... ] ]
 where <i>option</i> can be:
- 
  SUPERUSER | NOSUPERUSER
  | CREATEDB | NOCREATEDB
  | CREATEROLE | NOCREATEROLE

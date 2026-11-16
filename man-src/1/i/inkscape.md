@@ -25,117 +25,117 @@ description: "Inkscape – an SVG (Scalable Vector Graphics) editing program."
 <p> <code>Inkscape</code> uses <font SIZE="-1">SVG</font> as its native document format, and has the goal of becoming the most fully compliant drawing program for <font SIZE="-1">SVG</font> files available in the Open Source community.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Shows a help message.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Shows the Inkscape version and build date.</p>
-<dt><code>&#8211;debug-info</code></p>
-<dd> Prints technical information including Inkscape version, dependency versions and operating system. This Information is useful when debugging issues with Inkscape and should be included whenever filing a bug report.</p>
-<dt><code>&#8211;system-data-directory</code></p>
-<dd> Prints the system data directory where data files that ship with Inkscape are stored. This includes files which Inkscape requires to run (like unit definitions, built-in key maps, files describing <font SIZE="-1">UI</font> layout, icon themes, etc.), core extensions, stock resources (filters, fonts, markers, color palettes, symbols, templates) and documentation (<font SIZE="-1">SVG</font> example files, tutorials). </p>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Shows a help message.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Shows the Inkscape version and build date.</dd>
+<dt><code>&#8211;debug-info</code></dt>
+<dd> Prints technical information including Inkscape version, dependency versions and operating system. This Information is useful when debugging issues with Inkscape and should be included whenever filing a bug report.</dd>
+<dt><code>&#8211;system-data-directory</code></dt>
+<dd> Prints the system data directory where data files that ship with Inkscape are stored. This includes files which Inkscape requires to run (like unit definitions, built-in key maps, files describing <font SIZE="-1">UI</font> layout, icon themes, etc.), core extensions, stock resources (filters, fonts, markers, color palettes, symbols, templates) and documentation (<font SIZE="-1">SVG</font> example files, tutorials). </dd>
 <p> The location in which Inkscape expects the system data directory can be overridden with the <font SIZE="-1">INKSCAPE_DATADIR</font> environment variable.</p>
-<dt><code>&#8211;user-data-directory</code></p>
-<dd> Prints the user profile directory where user-specific data files and preferences are stored. Custom extensions and resources (filters, fonts, markers, color palettes, symbols, templates) should be installed into their respective subdirectories in this directory. In addition placing a file with a name identical to one in the system data directory here allows to override most presets from the system data directory (e.g. default templates, <font SIZE="-1">UI</font> files, etc.). </p>
+<dt><code>&#8211;user-data-directory</code></dt>
+<dd> Prints the user profile directory where user-specific data files and preferences are stored. Custom extensions and resources (filters, fonts, markers, color palettes, symbols, templates) should be installed into their respective subdirectories in this directory. In addition placing a file with a name identical to one in the system data directory here allows to override most presets from the system data directory (e.g. default templates, <font SIZE="-1">UI</font> files, etc.). </dd>
 <p> The default location of the profile directory can be overridden with the <font SIZE="-1">INKSCAPE_PROFILE_DIR</font> environment variable.</p>
-<dt><code>-p</code>, <code>&#8211;pipe</code></p>
-<dd> Reads input file from standard input (stdin).</p>
-<dt><code>&#8211;pdf-page</code>=<i></i><font SIZE="-1"><i>PAGE</i></font><i></i></p>
-<dd> Imports the given page of a pdf file. Numbering starts with 1.</p>
-<dt><code>&#8211;pdf-poppler</code></p>
-<dd> By default Inkscape imports <font SIZE="-1">PDF</font> files via an internal (poppler-derived) library. Text is stored as text. Meshes are converted to tiles. Use &#8211;pdf-poppler to import via an external (poppler with cairo backend) library instead. Text consists of groups containing cloned glyphs where each glyph is a path. Images are stored internally. Meshes cause entire document to be rendered as a raster image.</p>
-<dt><code>&#8211;convert-dpi-method</code>=<i></i><font SIZE="-1"><i>METHOD</i></font><i></i></p>
-<dd> Choose method used to rescale legacy (pre-0.92) files which render slightly smaller due to the switch from 90 <font SIZE="-1">DPI</font> to 96 <font SIZE="-1">DPI</font> when interpreting lengths expressed in units of pixels. Possible values are &#8220;none&#8221; (no change, document will render at 94% of its original size), &#8220;scale-viewbox&#8221; (document will be rescaled globally, individual lengths will stay untouched) and &#8220;scale-document&#8221; (each length will be re-scaled individually).</p>
-<dt><code>&#8211;no-convert-text-baseline-spacing</code></p>
-<dd> Do not automatically fix text baselines in legacy (pre-0.92) files on opening. Inkscape 0.92 adopts the <font SIZE="-1">CSS</font> standard definition for the &#8216;line-height&#8217; property, which differs from past versions. By default, the line height values in files created prior to Inkscape 0.92 will be adjusted on loading to preserve the intended text layout. This command line option will skip that adjustment.</p>
-<dt><code>-o</code>, <code>&#8211;export-filename</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></p>
-<dd> Sets the name of the output file. The default is to re-use the name of the input file. If &#8211;export-type is also used, the file extension will be adjusted (or added) as appropriate. Otherwise the file type to export will be inferred from the extension of the specified filename. </p>
+<dt><code>-p</code>, <code>&#8211;pipe</code></dt>
+<dd> Reads input file from standard input (stdin).</dd>
+<dt><code>&#8211;pdf-page</code>=<i></i><font SIZE="-1"><i>PAGE</i></font><i></i></dt>
+<dd> Imports the given page of a pdf file. Numbering starts with 1.</dd>
+<dt><code>&#8211;pdf-poppler</code></dt>
+<dd> By default Inkscape imports <font SIZE="-1">PDF</font> files via an internal (poppler-derived) library. Text is stored as text. Meshes are converted to tiles. Use &#8211;pdf-poppler to import via an external (poppler with cairo backend) library instead. Text consists of groups containing cloned glyphs where each glyph is a path. Images are stored internally. Meshes cause entire document to be rendered as a raster image.</dd>
+<dt><code>&#8211;convert-dpi-method</code>=<i></i><font SIZE="-1"><i>METHOD</i></font><i></i></dt>
+<dd> Choose method used to rescale legacy (pre-0.92) files which render slightly smaller due to the switch from 90 <font SIZE="-1">DPI</font> to 96 <font SIZE="-1">DPI</font> when interpreting lengths expressed in units of pixels. Possible values are &#8220;none&#8221; (no change, document will render at 94% of its original size), &#8220;scale-viewbox&#8221; (document will be rescaled globally, individual lengths will stay untouched) and &#8220;scale-document&#8221; (each length will be re-scaled individually).</dd>
+<dt><code>&#8211;no-convert-text-baseline-spacing</code></dt>
+<dd> Do not automatically fix text baselines in legacy (pre-0.92) files on opening. Inkscape 0.92 adopts the <font SIZE="-1">CSS</font> standard definition for the &#8216;line-height&#8217; property, which differs from past versions. By default, the line height values in files created prior to Inkscape 0.92 will be adjusted on loading to preserve the intended text layout. This command line option will skip that adjustment.</dd>
+<dt><code>-o</code>, <code>&#8211;export-filename</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dd> Sets the name of the output file. The default is to re-use the name of the input file. If &#8211;export-type is also used, the file extension will be adjusted (or added) as appropriate. Otherwise the file type to export will be inferred from the extension of the specified filename. </dd>
 <p> Usage of the special filename &#8220;-&#8221; makes Inkscape write the image data to standard output (stdout).</p>
-<dt><code>&#8211;export-overwrite</code></p>
-<dd> Overwrites input file.</p>
-<dt><code>&#8211;export-type</code>=<i>TYPE[,TYPE]*</i></p>
-<dd> Specify the file type to export. Possible values: svg, png, ps, eps, pdf, emf, wmf and every file type for which an export extension exists. It is possible to export more than one file type at a time. </p>
+<dt><code>&#8211;export-overwrite</code></dt>
+<dd> Overwrites input file.</dd>
+<dt><code>&#8211;export-type</code>=<i>TYPE[,TYPE]*</i></dt>
+<dd> Specify the file type to export. Possible values: svg, png, ps, eps, pdf, emf, wmf and every file type for which an export extension exists. It is possible to export more than one file type at a time. </dd>
 <p> Note that PostScript does not support transparency, so any transparent objects in the original <font SIZE="-1">SVG</font> will be automatically rasterized. Used fonts are subset and embedded. The default export area is page; you can set it to drawing by &#8211;export-area-drawing. </p>
 <p> Note that <font SIZE="-1">PDF</font> format preserves the transparency in the original <font SIZE="-1">SVG.</font></p>
-<dt><code>&#8211;export-extension</code>=<i>EXTENSION-ID</i></p>
-<dd> Allows to specify an output extension that will be used for exporting, which is especially relevant if there is more than one export option for a given file type. If set, the file extension in &#8211;export-filename and &#8211;export-type may be omitted. Additionally, if set, only one file type may be given in &#8211;export-type.</p>
-<dt><code>-C</code>, <code>&#8211;export-area-page</code></p>
-<dd> In <font SIZE="-1">SVG, PNG, PDF, PS</font> exported area is the page. This is the default for <font SIZE="-1">SVG, PNG, PDF,</font> and <font SIZE="-1">PS,</font> so you don&#8217;t need to specify this unless you are using &#8211;export-id to export a specific object. For <font SIZE="-1">EPS</font> this option is currently not supported.</p>
-<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></p>
-<dd> In <font SIZE="-1">SVG, PNG, PDF, PS,</font> and <font SIZE="-1">EPS</font> export, exported area is the drawing (not page), i.e. the bounding box of all objects of the document (or of the exported object if &#8211;export-id is used). With this option, the exported image will display all the visible objects of the document without margins or cropping. This is the default export area for <font SIZE="-1">EPS.</font> For <font SIZE="-1">PNG,</font> it can be used in combination with &#8211;export-use-hints.</p>
-<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></p>
-<dd> In <font SIZE="-1">PNG</font> export, set the exported area in <font SIZE="-1">SVG</font> user units (anonymous length units normally used in Inkscape <font SIZE="-1">SVG</font>). The default is to export the entire document page. The point (0,0) is the lower-left corner.</p>
-<dt><code>&#8211;export-area-snap</code></p>
-<dd> For <font SIZE="-1">PNG</font> export, snap the export area outwards to the nearest integer <font SIZE="-1">SVG</font> user unit (px) values. If you are using the default export resolution of 96 dpi and your graphics are pixel-snapped to minimize antialiasing, this switch allows you to preserve this alignment even if you are exporting some object&#8217;s bounding box (with &#8211;export-id or &#8211;export-area-drawing) which is itself not pixel-aligned.</p>
-<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></p>
-<dd> The resolution used for <font SIZE="-1">PNG</font> export. It is also used for fallback rasterization of filtered objects when exporting to <font SIZE="-1">PS, EPS,</font> or <font SIZE="-1">PDF</font> (unless you specify &#8211;export-ignore-filters to suppress rasterization). The default is 96 dpi, which corresponds to 1 <font SIZE="-1">SVG</font> user unit (px, also called &#8220;user unit&#8221;) exporting to 1 bitmap pixel. This value overrides the <font SIZE="-1">DPI</font> hint if used with &#8211;export-use-hints.</p>
-<dt><code>-w</code> <i></i><font SIZE="-1"><i>WIDTH</i></font><i></i>, <code>&#8211;export-width</code>=<i></i><font SIZE="-1"><i>WIDTH</i></font><i></i></p>
-<dd> The width of generated bitmap in pixels. This value overrides the &#8211;export-dpi setting (or the <font SIZE="-1">DPI</font> hint if used with &#8211;export-use-hints).</p>
-<dt><code>-h</code> <i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i>, <code>&#8211;export-height</code>=<i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i></p>
-<dd> The height of generated bitmap in pixels. This value overrides the &#8211;export-dpi setting (or the <font SIZE="-1">DPI</font> hint if used with &#8211;export-use-hints).</p>
-<dt><code>&#8211;export-margin</code>=<i></i><font SIZE="-1"><i>MARGIN</i></font><i></i></p>
-<dd> Adds a margin around the exported area. The size of the margin is specified in units of page size (for <font SIZE="-1">SVG</font>) or millimeters (for <font SIZE="-1">PS/PDF</font>). The option currently has no effect for other export formats.</p>
-<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i>OBJECT-ID[;OBJECT-ID]*</i></p>
-<dd> For <font SIZE="-1">PNG, PS, EPS, PDF</font> and plain <font SIZE="-1">SVG</font> export, the id attribute value of the object(s) that you want to export from the document; all other objects are not exported. By default the exported area is the bounding box of the object; you can override this using &#8211;export-area (<font SIZE="-1">PNG</font> only) or &#8211;export-area-page. </p>
+<dt><code>&#8211;export-extension</code>=<i>EXTENSION-ID</i></dt>
+<dd> Allows to specify an output extension that will be used for exporting, which is especially relevant if there is more than one export option for a given file type. If set, the file extension in &#8211;export-filename and &#8211;export-type may be omitted. Additionally, if set, only one file type may be given in &#8211;export-type.</dd>
+<dt><code>-C</code>, <code>&#8211;export-area-page</code></dt>
+<dd> In <font SIZE="-1">SVG, PNG, PDF, PS</font> exported area is the page. This is the default for <font SIZE="-1">SVG, PNG, PDF,</font> and <font SIZE="-1">PS,</font> so you don&#8217;t need to specify this unless you are using &#8211;export-id to export a specific object. For <font SIZE="-1">EPS</font> this option is currently not supported.</dd>
+<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></dt>
+<dd> In <font SIZE="-1">SVG, PNG, PDF, PS,</font> and <font SIZE="-1">EPS</font> export, exported area is the drawing (not page), i.e. the bounding box of all objects of the document (or of the exported object if &#8211;export-id is used). With this option, the exported image will display all the visible objects of the document without margins or cropping. This is the default export area for <font SIZE="-1">EPS.</font> For <font SIZE="-1">PNG,</font> it can be used in combination with &#8211;export-use-hints.</dd>
+<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></dt>
+<dd> In <font SIZE="-1">PNG</font> export, set the exported area in <font SIZE="-1">SVG</font> user units (anonymous length units normally used in Inkscape <font SIZE="-1">SVG</font>). The default is to export the entire document page. The point (0,0) is the lower-left corner.</dd>
+<dt><code>&#8211;export-area-snap</code></dt>
+<dd> For <font SIZE="-1">PNG</font> export, snap the export area outwards to the nearest integer <font SIZE="-1">SVG</font> user unit (px) values. If you are using the default export resolution of 96 dpi and your graphics are pixel-snapped to minimize antialiasing, this switch allows you to preserve this alignment even if you are exporting some object&#8217;s bounding box (with &#8211;export-id or &#8211;export-area-drawing) which is itself not pixel-aligned.</dd>
+<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></dt>
+<dd> The resolution used for <font SIZE="-1">PNG</font> export. It is also used for fallback rasterization of filtered objects when exporting to <font SIZE="-1">PS, EPS,</font> or <font SIZE="-1">PDF</font> (unless you specify &#8211;export-ignore-filters to suppress rasterization). The default is 96 dpi, which corresponds to 1 <font SIZE="-1">SVG</font> user unit (px, also called &#8220;user unit&#8221;) exporting to 1 bitmap pixel. This value overrides the <font SIZE="-1">DPI</font> hint if used with &#8211;export-use-hints.</dd>
+<dt><code>-w</code> <i></i><font SIZE="-1"><i>WIDTH</i></font><i></i>, <code>&#8211;export-width</code>=<i></i><font SIZE="-1"><i>WIDTH</i></font><i></i></dt>
+<dd> The width of generated bitmap in pixels. This value overrides the &#8211;export-dpi setting (or the <font SIZE="-1">DPI</font> hint if used with &#8211;export-use-hints).</dd>
+<dt><code>-h</code> <i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i>, <code>&#8211;export-height</code>=<i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i></dt>
+<dd> The height of generated bitmap in pixels. This value overrides the &#8211;export-dpi setting (or the <font SIZE="-1">DPI</font> hint if used with &#8211;export-use-hints).</dd>
+<dt><code>&#8211;export-margin</code>=<i></i><font SIZE="-1"><i>MARGIN</i></font><i></i></dt>
+<dd> Adds a margin around the exported area. The size of the margin is specified in units of page size (for <font SIZE="-1">SVG</font>) or millimeters (for <font SIZE="-1">PS/PDF</font>). The option currently has no effect for other export formats.</dd>
+<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i>OBJECT-ID[;OBJECT-ID]*</i></dt>
+<dd> For <font SIZE="-1">PNG, PS, EPS, PDF</font> and plain <font SIZE="-1">SVG</font> export, the id attribute value of the object(s) that you want to export from the document; all other objects are not exported. By default the exported area is the bounding box of the object; you can override this using &#8211;export-area (<font SIZE="-1">PNG</font> only) or &#8211;export-area-page. </dd>
 <p> If you specify many values with a semicolon separated list of objects, each one will be exported separately. In this case the exported files will be named this way: [input_filename]_[<font SIZE="-1">ID</font>].[export_type]</p>
-<dt><code>-j</code>, <code>&#8211;export-id-only</code></p>
-<dd> For <font SIZE="-1">PNG</font> and plain <font SIZE="-1">SVG,</font> only export the object whose id is given in &#8211;export-id. All other objects are hidden and won&#8217;t show in export even if they overlay the exported object. Without &#8211;export-id, this option is ignored. For <font SIZE="-1">PDF</font> export, this is the default, so this option has no effect.</p>
-<dt><code>-l</code>, <code>&#8211;export-plain-svg</code></p>
-<dd> Export document(s) to plain <font SIZE="-1">SVG</font> format, without sodipodi: or inkscape: namespaces and without <font SIZE="-1">RDF</font> metadata. Use the &#8211;export-filename option to specify the filename.</p>
-<dt><code>&#8211;export-ps-level</code>=<i></i><font SIZE="-1"><i>LEVEL</i></font><i></i></p>
-<dd> Set language version for <font SIZE="-1">PS</font> and <font SIZE="-1">EPS</font> export. PostScript level 2 or 3 is supported. Default is 3.</p>
-<dt><code>&#8211;export-pdf-version</code>=<i></i><font SIZE="-1"><i>VERSION</i></font><i></i></p>
-<dd> Select the <font SIZE="-1">PDF</font> version of the exported <font SIZE="-1">PDF</font> file. This option basically exposes the <font SIZE="-1">PDF</font> version selector found in the PDF-export dialog of the <font SIZE="-1">GUI.</font> You must provide one of the versions from that combo-box, e.g. &#8220;1.4&#8221;. The default pdf export version is &#8220;1.4&#8221;.</p>
-<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></p>
-<dd> Convert text objects to paths on export, where applicable (for <font SIZE="-1">PS, EPS, PDF</font> and <font SIZE="-1">SVG</font> export).</p>
-<dt><code>&#8211;export-latex</code></p>
-<dd> (for <font SIZE="-1">PS, EPS,</font> and <font SIZE="-1">PDF</font> export) Used for creating images for LaTeX documents, where the image&#8217;s text is typeset by LaTeX. When exporting to <font SIZE="-1">PDF/PS/EPS</font> format, this option splits the output into a <font SIZE="-1">PDF/PS/EPS</font> file (e.g. as specified by &#8211;export-type) and a LaTeX file. Text will not be output in the <font SIZE="-1">PDF/PS/EPS</font> file, but instead will appear in the LaTeX file. This LaTeX file includes the <font SIZE="-1">PDF/PS/EPS.</font> Inputting (\input{image.tex}) the LaTeX file in your LaTeX document will show the image and all text will be typeset by LaTeX. See the resulting LaTeX file for more information. Also see GNUPlot&#8217;s `epslatex&#8217; output terminal.</p>
-<dt><code>&#8211;export-ignore-filters</code></p>
-<dd> Export filtered objects (e.g. those with blur) as vectors, ignoring the filters (for <font SIZE="-1">PS, EPS,</font> and <font SIZE="-1">PDF</font> export). By default, all filtered objects are rasterized at &#8211;export-dpi (default 96 dpi), preserving the appearance.</p>
-<dt><code>-t</code>, <code>&#8211;export-use-hints</code></p>
-<dd> While exporting to <font SIZE="-1">PNG,</font> use export filename and <font SIZE="-1">DPI</font> hints stored in the exported object (only with &#8211;export-id). These hints are set automatically when you export selection from within Inkscape. So, for example, if you export a shape with id=&#8220;path231&#8221; as /home/me/shape.png at 300 dpi from document.svg using Inkscape <font SIZE="-1">GUI,</font> and save the document, then later you will be able to reexport that shape to the same file with the same resolution simply with </p>
+<dt><code>-j</code>, <code>&#8211;export-id-only</code></dt>
+<dd> For <font SIZE="-1">PNG</font> and plain <font SIZE="-1">SVG,</font> only export the object whose id is given in &#8211;export-id. All other objects are hidden and won&#8217;t show in export even if they overlay the exported object. Without &#8211;export-id, this option is ignored. For <font SIZE="-1">PDF</font> export, this is the default, so this option has no effect.</dd>
+<dt><code>-l</code>, <code>&#8211;export-plain-svg</code></dt>
+<dd> Export document(s) to plain <font SIZE="-1">SVG</font> format, without sodipodi: or inkscape: namespaces and without <font SIZE="-1">RDF</font> metadata. Use the &#8211;export-filename option to specify the filename.</dd>
+<dt><code>&#8211;export-ps-level</code>=<i></i><font SIZE="-1"><i>LEVEL</i></font><i></i></dt>
+<dd> Set language version for <font SIZE="-1">PS</font> and <font SIZE="-1">EPS</font> export. PostScript level 2 or 3 is supported. Default is 3.</dd>
+<dt><code>&#8211;export-pdf-version</code>=<i></i><font SIZE="-1"><i>VERSION</i></font><i></i></dt>
+<dd> Select the <font SIZE="-1">PDF</font> version of the exported <font SIZE="-1">PDF</font> file. This option basically exposes the <font SIZE="-1">PDF</font> version selector found in the PDF-export dialog of the <font SIZE="-1">GUI.</font> You must provide one of the versions from that combo-box, e.g. &#8220;1.4&#8221;. The default pdf export version is &#8220;1.4&#8221;.</dd>
+<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></dt>
+<dd> Convert text objects to paths on export, where applicable (for <font SIZE="-1">PS, EPS, PDF</font> and <font SIZE="-1">SVG</font> export).</dd>
+<dt><code>&#8211;export-latex</code></dt>
+<dd> (for <font SIZE="-1">PS, EPS,</font> and <font SIZE="-1">PDF</font> export) Used for creating images for LaTeX documents, where the image&#8217;s text is typeset by LaTeX. When exporting to <font SIZE="-1">PDF/PS/EPS</font> format, this option splits the output into a <font SIZE="-1">PDF/PS/EPS</font> file (e.g. as specified by &#8211;export-type) and a LaTeX file. Text will not be output in the <font SIZE="-1">PDF/PS/EPS</font> file, but instead will appear in the LaTeX file. This LaTeX file includes the <font SIZE="-1">PDF/PS/EPS.</font> Inputting (\input{image.tex}) the LaTeX file in your LaTeX document will show the image and all text will be typeset by LaTeX. See the resulting LaTeX file for more information. Also see GNUPlot&#8217;s `epslatex&#8217; output terminal.</dd>
+<dt><code>&#8211;export-ignore-filters</code></dt>
+<dd> Export filtered objects (e.g. those with blur) as vectors, ignoring the filters (for <font SIZE="-1">PS, EPS,</font> and <font SIZE="-1">PDF</font> export). By default, all filtered objects are rasterized at &#8211;export-dpi (default 96 dpi), preserving the appearance.</dd>
+<dt><code>-t</code>, <code>&#8211;export-use-hints</code></dt>
+<dd> While exporting to <font SIZE="-1">PNG,</font> use export filename and <font SIZE="-1">DPI</font> hints stored in the exported object (only with &#8211;export-id). These hints are set automatically when you export selection from within Inkscape. So, for example, if you export a shape with id=&#8220;path231&#8221; as /home/me/shape.png at 300 dpi from document.svg using Inkscape <font SIZE="-1">GUI,</font> and save the document, then later you will be able to reexport that shape to the same file with the same resolution simply with </dd>
 <pre>
     inkscape -i path231 -t document.svg
 </pre>
 <p> If you use &#8211;export-dpi, &#8211;export-width, or &#8211;export-height with this option, then the <font SIZE="-1">DPI</font> hint will be ignored and the value from the command line will be used. If you use &#8211;export-filename with this option, then the filename hint will be ignored and the filename from the command line will be used.</p>
-<dt><code>-b</code> <i></i><font SIZE="-1"><i>COLOR</i></font><i></i>, <code>&#8211;export-background</code>=<i></i><font SIZE="-1"><i>COLOR</i></font><i></i></p>
-<dd> Background color of exported <font SIZE="-1">PNG.</font> This may be any <font SIZE="-1">SVG</font> supported color string, for example &#8220;#ff007f&#8221; or &#8220;rgb(255, 0, 128)&#8221;. If not set, then the page color set in Inkscape in the Document Properties dialog will be used (stored in the pagecolor= attribute of sodipodi:namedview).</p>
-<dt><code>-y</code> <i></i><font SIZE="-1"><i>VALUE</i></font><i></i>, <code>&#8211;export-background-opacity</code>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></p>
-<dd> Opacity of the background of exported <font SIZE="-1">PNG.</font> This may be a value either between 0.0 and 1.0 (0.0 meaning full transparency, 1.0 full opacity) or greater than 1 up to 255 (255 meaning full opacity). If not set and the -b option is not used, then the page opacity set in Inkscape in the Document Properties dialog will be used (stored in the inkscape:pageopacity= attribute of sodipodi:namedview). If not set but the -b option is used, then the value of 255 (full opacity) will be used.</p>
-<dt><code>-I</code>, <code>&#8211;query-id</code>=<i>OBJECT-ID[,OBJECT-ID]*</i></p>
-<dd> Set the <font SIZE="-1">ID</font>(s) of the object(s) whose dimensions are queried in a comma-separated list. If not set, query options will return the dimensions of the drawing (i.e. all document objects), not the page or viewbox. </p>
+<dt><code>-b</code> <i></i><font SIZE="-1"><i>COLOR</i></font><i></i>, <code>&#8211;export-background</code>=<i></i><font SIZE="-1"><i>COLOR</i></font><i></i></dt>
+<dd> Background color of exported <font SIZE="-1">PNG.</font> This may be any <font SIZE="-1">SVG</font> supported color string, for example &#8220;#ff007f&#8221; or &#8220;rgb(255, 0, 128)&#8221;. If not set, then the page color set in Inkscape in the Document Properties dialog will be used (stored in the pagecolor= attribute of sodipodi:namedview).</dd>
+<dt><code>-y</code> <i></i><font SIZE="-1"><i>VALUE</i></font><i></i>, <code>&#8211;export-background-opacity</code>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></dt>
+<dd> Opacity of the background of exported <font SIZE="-1">PNG.</font> This may be a value either between 0.0 and 1.0 (0.0 meaning full transparency, 1.0 full opacity) or greater than 1 up to 255 (255 meaning full opacity). If not set and the -b option is not used, then the page opacity set in Inkscape in the Document Properties dialog will be used (stored in the inkscape:pageopacity= attribute of sodipodi:namedview). If not set but the -b option is used, then the value of 255 (full opacity) will be used.</dd>
+<dt><code>-I</code>, <code>&#8211;query-id</code>=<i>OBJECT-ID[,OBJECT-ID]*</i></dt>
+<dd> Set the <font SIZE="-1">ID</font>(s) of the object(s) whose dimensions are queried in a comma-separated list. If not set, query options will return the dimensions of the drawing (i.e. all document objects), not the page or viewbox. </dd>
 <p> If you specify many values with a comma separated list of objects, any geometry query (e.g. &#8211;query-x) will return a comma separated list of values corresponding to the list of objects in <i>&#8211;query-id</i>.</p>
-<dt><code>-S</code>, <code>&#8211;query-all</code></p>
-<dd> Prints a comma delimited listing of all objects in the <font SIZE="-1">SVG</font> document with IDs defined, along with their x, y, width, and height values.</p>
-<dt><code>-X</code>, <code>&#8211;query-x</code></p>
-<dd> Query the X coordinate of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</p>
-<dt><code>-Y</code>, <code>&#8211;query-y</code></p>
-<dd> Query the Y coordinate of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</p>
-<dt><code>-W</code>, <code>&#8211;query-width</code></p>
-<dd> Query the width of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</p>
-<dt><code>-H</code>, <code>&#8211;query-height</code></p>
-<dd> Query the height of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</p>
-<dt><code>&#8211;vacuum-defs</code></p>
-<dd> Remove all unused items from the <tt>&quot;&lt;defs&gt;&quot;</tt> section of the <font SIZE="-1">SVG</font> file. If this option is invoked in conjunction with &#8211;export-plain-svg, only the exported file will be affected. If it is used alone, the specified file will be modified in place.</p>
-<dt><code>&#8211;select</code>=<i>OBJECT-ID[,OBJECT-ID]*</i></p>
-<dd> The &#8211;select command will cause objects that have the <font SIZE="-1">ID</font> specified to be selected. You can select many objects width a comma separated list. This allows various verbs to act upon them. To remove all the selections use <tt>&quot;--verb=EditDeselect&quot;</tt>. The object IDs available are dependent on the document specified to load.</p>
-<dt><code>&#8211;actions</code>=<i></i><font SIZE="-1"><i>ACTION</i></font><i>(:ARG)[;ACTION(:ARG)]*</i></p>
-<dd> Actions are a new method to call functions with an optional single parameter. To get a list of the action IDs available, use the &#8211;action-list command line option. Eventually all verbs will be replaced by actions. Temporarily, any verb can be used as an action (without a parameter). Note, most verbs require a <font SIZE="-1">GUI</font> (even if they don&#8217;t use it). To close the <font SIZE="-1">GUI</font> automatically at the end of processing, use &#8211;batch-process. In addition all export options have matching actions (remove the &#8216;&#8211;&#8216; in front of the option and replace &#8216;=&#8217; with &#8216;:&#8217;). </p>
+<dt><code>-S</code>, <code>&#8211;query-all</code></dt>
+<dd> Prints a comma delimited listing of all objects in the <font SIZE="-1">SVG</font> document with IDs defined, along with their x, y, width, and height values.</dd>
+<dt><code>-X</code>, <code>&#8211;query-x</code></dt>
+<dd> Query the X coordinate of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</dd>
+<dt><code>-Y</code>, <code>&#8211;query-y</code></dt>
+<dd> Query the Y coordinate of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</dd>
+<dt><code>-W</code>, <code>&#8211;query-width</code></dt>
+<dd> Query the width of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</dd>
+<dt><code>-H</code>, <code>&#8211;query-height</code></dt>
+<dd> Query the height of the drawing or, if specified, of the object with &#8211;query-id. The returned value is in px (<font SIZE="-1">SVG</font> user units).</dd>
+<dt><code>&#8211;vacuum-defs</code></dt>
+<dd> Remove all unused items from the <tt>&quot;&lt;defs&gt;&quot;</tt> section of the <font SIZE="-1">SVG</font> file. If this option is invoked in conjunction with &#8211;export-plain-svg, only the exported file will be affected. If it is used alone, the specified file will be modified in place.</dd>
+<dt><code>&#8211;select</code>=<i>OBJECT-ID[,OBJECT-ID]*</i></dt>
+<dd> The &#8211;select command will cause objects that have the <font SIZE="-1">ID</font> specified to be selected. You can select many objects width a comma separated list. This allows various verbs to act upon them. To remove all the selections use <tt>&quot;--verb=EditDeselect&quot;</tt>. The object IDs available are dependent on the document specified to load.</dd>
+<dt><code>&#8211;actions</code>=<i></i><font SIZE="-1"><i>ACTION</i></font><i>(:ARG)[;ACTION(:ARG)]*</i></dt>
+<dd> Actions are a new method to call functions with an optional single parameter. To get a list of the action IDs available, use the &#8211;action-list command line option. Eventually all verbs will be replaced by actions. Temporarily, any verb can be used as an action (without a parameter). Note, most verbs require a <font SIZE="-1">GUI</font> (even if they don&#8217;t use it). To close the <font SIZE="-1">GUI</font> automatically at the end of processing, use &#8211;batch-process. In addition all export options have matching actions (remove the &#8216;&#8211;&#8216; in front of the option and replace &#8216;=&#8217; with &#8216;:&#8217;). </dd>
 <p> If only actions are used &#8211;batch-process must be used. </p>
 <p> Export can be forced at any point with the export-do action. This allows one to do multiple exports on a single file.</p>
-<dt><code>&#8211;action-list</code></p>
-<dd> Prints a list of all available actions.</p>
-<dt><code>&#8211;verb</code>=<i>VERB[;VERB]*</i></p>
-<dd> The &#8211;verb command will execute a specific verb or list of verbs as if they were called from a menu or button. Dialogs will appear if that is part of the verb. To get a list of the verb IDs available, use the &#8211;verb-list command line option. </p>
+<dt><code>&#8211;action-list</code></dt>
+<dd> Prints a list of all available actions.</dd>
+<dt><code>&#8211;verb</code>=<i>VERB[;VERB]*</i></dt>
+<dd> The &#8211;verb command will execute a specific verb or list of verbs as if they were called from a menu or button. Dialogs will appear if that is part of the verb. To get a list of the verb IDs available, use the &#8211;verb-list command line option. </dd>
 <p> Note that the &#8211;verb command requires a <font SIZE="-1">GUI.</font> </p>
 <p> Together with &#8211;select provides some basic scripting for Inkscape from the command line. They both can receive many arguments as needed on the command line and are executed in order on every document.</p>
-<dt><code>&#8211;verb-list</code></p>
-<dd> Lists all the verbs that are available in Inkscape by <font SIZE="-1">ID.</font> This <font SIZE="-1">ID</font> can be used in defining keymaps or menus. It can also be used with the &#8211;verb command line option.</p>
-<dt><code>-g</code>, <code>&#8211;with-gui</code></p>
-<dd> Try to use the <font SIZE="-1">GUI</font> (on Unix, use the X server even if <tt>$DISPLAY</tt> is not set).</p>
-<dt><code>&#8211;batch-process</code></p>
-<dd> Close <font SIZE="-1">GUI</font> after executing all actions or verbs.</p>
-<dt><code>&#8211;shell</code></p>
-<dd> With this parameter, Inkscape will enter an interactive command line shell mode. In this mode, you type in commands at the prompt and Inkscape executes them, without you having to run a new copy of Inkscape for each command. This feature is mostly useful for scripting and server uses: it adds no new capabilities but allows you to improve the speed and memory requirements of any script that repeatedly calls Inkscape to perform command line tasks (such as export or conversions). </p>
+<dt><code>&#8211;verb-list</code></dt>
+<dd> Lists all the verbs that are available in Inkscape by <font SIZE="-1">ID.</font> This <font SIZE="-1">ID</font> can be used in defining keymaps or menus. It can also be used with the &#8211;verb command line option.</dd>
+<dt><code>-g</code>, <code>&#8211;with-gui</code></dt>
+<dd> Try to use the <font SIZE="-1">GUI</font> (on Unix, use the X server even if <tt>$DISPLAY</tt> is not set).</dd>
+<dt><code>&#8211;batch-process</code></dt>
+<dd> Close <font SIZE="-1">GUI</font> after executing all actions or verbs.</dd>
+<dt><code>&#8211;shell</code></dt>
+<dd> With this parameter, Inkscape will enter an interactive command line shell mode. In this mode, you type in commands at the prompt and Inkscape executes them, without you having to run a new copy of Inkscape for each command. This feature is mostly useful for scripting and server uses: it adds no new capabilities but allows you to improve the speed and memory requirements of any script that repeatedly calls Inkscape to perform command line tasks (such as export or conversions). </dd>
 <p> In shell mode Inkscape expects a sequence of actions (or verbs) as input. They will be processed line by line, that means typically when pressing enter. It is possible (but not necessary) to put all actions on a single line. </p>
 <p> The following example opens a file and exports it into two different formats, then opens another file and exports a single object: </p>
 <p>file &#8211; open : file1.svg;<br />
@@ -221,12 +221,12 @@ inkscape-- actions = "export-id:MyTriangle; export-id-only; export-background:pu
 </pre>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1"><code>INKSCAPE_PROFILE_DIR</code></font></p>
-<dd> Set a custom location for the user profile directory.</p>
-<dt><font SIZE="-1"><code>INKSCAPE_DATADIR</code></font></p>
-<dd> Set a custom location for the Inkscape data directory (e.g. $PREFIX/share if Inkscape&#8217;s shared files are in $PREFIX/share/inkscape).</p>
-<dt><font SIZE="-1"><code>INKSCAPE_LOCALEDIR</code></font></p>
-<dd> Set a custom location for the translation catalog.</dl>
+<dt><font SIZE="-1"><code>INKSCAPE_PROFILE_DIR</code></font></dt>
+<dd> Set a custom location for the user profile directory.</dd>
+<dt><font SIZE="-1"><code>INKSCAPE_DATADIR</code></font></dt>
+<dd> Set a custom location for the Inkscape data directory (e.g. $PREFIX/share if Inkscape&#8217;s shared files are in $PREFIX/share/inkscape).</dd>
+<dt><font SIZE="-1"><code>INKSCAPE_LOCALEDIR</code></font></dt>
+<dd> Set a custom location for the translation catalog.</dd></dl>
 <p> For more details see also &lt;<a rel="nofollow" href="http://wiki.inkscape.org/wiki/index.php/Environment_variables">http://wiki.inkscape.org/wiki/index.php/Environment_variables</a>&gt;</p>
 <h2>THEMES</h2>
 <p> To load different icons sets instead of the default $PREFIX/share/inkscape/icons/icons.svg file, the directory $HOME/.config/inkscape/icons/ is used. Icons are loaded by name (e.g. <i>fill_none.svg</i>), or if not found, then from <i>icons.svg</i>. If the icon is not loaded from either of those locations, it falls back to the default system location. </p>

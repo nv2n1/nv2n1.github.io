@@ -16,18 +16,18 @@ description: "convdate – Convert to/from RFC 5322 dates and seconds since epoc
 <p> If <i>date</i> is not given, <code>convdate</code> outputs the current date.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Each argument is taken to be the number of seconds since epoch (a time_t) rather than a date.</p>
-<dt><code>-d</code></p>
-<dd> Output a valid Usenet Date: header instead of the results of <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) for each date given on the command line. This is useful for testing the algorithm used to generate Date: headers for local posts. Normally, the date will be in <font SIZE="-1">UTC</font>, but see the <code>-l</code> option.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information and exit.</p>
-<dt><code>-l</code></p>
-<dd> Only makes sense in combination with <code>-d</code>. If given, Date: headers generated will use the local time zone instead of <font SIZE="-1">UTC</font>.</p>
-<dt><code>-n</code></p>
-<dd> Rather than outputting the results of <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) or a Date: header, output each date given as the number of seconds since epoch (a time_t). This option doesn&#8217;t make sense in combination with <code>-d</code>.</p>
-<dt><code>-s</code></p>
-<dd> Pass each given date to the <font SIZE="-1">RFC</font>&nbsp;<wbr>5322 date parser and print the results of <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) (or a Date: header if <code>-d</code> is given). This is the default behavior.</dl>
+<dt><code>-c</code></dt>
+<dd> Each argument is taken to be the number of seconds since epoch (a time_t) rather than a date.</dd>
+<dt><code>-d</code></dt>
+<dd> Output a valid Usenet Date: header instead of the results of <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) for each date given on the command line. This is useful for testing the algorithm used to generate Date: headers for local posts. Normally, the date will be in <font SIZE="-1">UTC</font>, but see the <code>-l</code> option.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information and exit.</dd>
+<dt><code>-l</code></dt>
+<dd> Only makes sense in combination with <code>-d</code>. If given, Date: headers generated will use the local time zone instead of <font SIZE="-1">UTC</font>.</dd>
+<dt><code>-n</code></dt>
+<dd> Rather than outputting the results of <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) or a Date: header, output each date given as the number of seconds since epoch (a time_t). This option doesn&#8217;t make sense in combination with <code>-d</code>.</dd>
+<dt><code>-s</code></dt>
+<dd> Pass each given date to the <font SIZE="-1">RFC</font>&nbsp;<wbr>5322 date parser and print the results of <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) (or a Date: header if <code>-d</code> is given). This is the default behavior.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Most of these examples are taken, with modifications from the original man page dating from 1991 and were run in the <font SIZE="-1">EST/EDT</font> time zone. </p>
 <pre>

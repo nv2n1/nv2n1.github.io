@@ -13,137 +13,138 @@ description: "amf.conf – corosync AMF configuration file"
 <dl>
 <dd>
 <pre><code>&lt;Object Class&gt; = &lt;Object Name&gt; {
-<dl><dt><dd>&lt;attribute&gt; = &lt;value&gt;
-</dl>
+</dd><dl><dt></dt><dd>&lt;attribute&gt; = &lt;value&gt;
+</dd></dl>
 }
 </code></pre>
 </dl>
 <p> Object entries are nested, one entry contains another entry. This way relations between objects are built up. For example a component object defined inside a Software Unit (SU) object means that the component belongs to the SU. In other words, the SU is composed of the component. See the example configuration file. The relation between objects has to comply with the AMF model specified in [5]. Object names shall use only printable ASCII characters. Object names shall be unique within its context, i.e. two components within the same service unit has to have different names, but can have the same name as another component within another service unit. Attribute names are consistent with the naming of the configuration attributes in [5]. AMF object attributes are either configuration or runtime attributes. The AMF configuration file is used to specify configuration attributes. Some configuration attributes have default values and does not need to be specified. Others are not valid in certain redundancy models and so on. The type of an attribute value is either a string, a number, a time or an enumeration. Enumeration values are specified according to the type definition in the AIS specification. Time values are specified in milliseconds. Multivalue attributes are specified using multiple entries with the same attribute name but different values. See the example configuration file. The (RDN) value of &#8216;safAmfNode&#8217; is a logical name for an AMF node. It is mapped to a real physical node using the attribute &#8216;saAmfNodeClmNode&#8217;. The value of the attribute &#8216;saAmfNodeClmNode&#8217; should be the hostname (without domain name) as given to the host at boot time. This name is returned by the shell command &#8216;hostname&#8217;. Currently, AMF is enabled/disabled by an entry in the corosync.conf file, see [1]. It is default disabled. The following list of attributes is currently supported:</p>
 <dl>
-<dt><code>safAmfCluster</code></p>
+<dt><code>safAmfCluster</code></dt>
 <dd>
-<dt><code>saAmfClusterStartupTimeout</code></p>
+</dd><dt><code>saAmfClusterStartupTimeout</code></dt>
 <dd>
-<dt><code>safAmfNode</code></p>
+</dd><dt><code>safAmfNode</code></dt>
 <dd>
-<dt><code>saAmfNodeClmNode</code></p>
-<dd>Host name, required</p>
-<dt><code>saAmfNodeSuFailOverProb</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfNodeSuFailoverMax</code></p>
-<dd>Required but not used.</p>
-<dt><code>safApp</code></p>
+</dd><dt><code>saAmfNodeClmNode</code></dt>
+<dd>Host name, required</dd>
+<dt><code>saAmfNodeSuFailOverProb</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfNodeSuFailoverMax</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>safApp</code></dt>
 <dd>
-<dt><code>clccli_path</code></p>
-<dd>A path added to all CLC-CLI scripts</p>
-<dt><code>saAmfSIProtectedbySG</code></p>
-<dd>Required when several SGs are specified</p>
-<dt><code>safSg</code></p>
+</dd><dt><code>clccli_path</code></dt>
+<dd>A path added to all CLC-CLI scripts</dd>
+<dt><code>saAmfSIProtectedbySG</code></dt>
+<dd>Required when several SGs are specified</dd>
+<dt><code>safSg</code></dt>
 <dd>
-<dt><code>safSi</code></p>
+</dd><dt><code>safSi</code></dt>
 <dd>
-<dt><code>saAmfSINumCSIs</code></p>
-<dd>Required but not used.</p>
-<dt><code>safCSType</code></p>
+</dd><dt><code>saAmfSINumCSIs</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>safCSType</code></dt>
 <dd>
-<dt><code>saAmfSGRedundancyModel</code></p>
-<dd>Currently only &#8216;nplusm&#8217; is supported, required.</p>
-<dt><code>saAmfSGNumPrefActiveSUs</code></p>
+</dd><dt><code>saAmfSGRedundancyModel</code></dt>
+<dd>Currently only &#8216;nplusm&#8217; is supported, required.</dd>
+<dt><code>saAmfSGNumPrefActiveSUs</code></dt>
 <dd>
-<dt><code>saAmfSGNumPrefStandbySUs</code></p>
+</dd><dt><code>saAmfSGNumPrefStandbySUs</code></dt>
 <dd>
-<dt><code>saAmfSGMaxActiveSIsperSUs</code></p>
+</dd><dt><code>saAmfSGMaxActiveSIsperSUs</code></dt>
 <dd>
-<dt><code>saAmfSGMaxStandbySIsperSUs</code></p>
+</dd><dt><code>saAmfSGMaxStandbySIsperSUs</code></dt>
 <dd>
-<dt><code>saAmfSGCompRestartProb</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfSGCompRestartMax</code></p>
+</dd><dt><code>saAmfSGCompRestartProb</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfSGCompRestartMax</code></dt>
 <dd>
-<dt><code>saAmfSGSuRestartProb</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfSGAutoAdjustProb</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfSGSuRestartMax</code></p>
+</dd><dt><code>saAmfSGSuRestartProb</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfSGAutoAdjustProb</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfSGSuRestartMax</code></dt>
 <dd>
-<dt><code>safSu</code></p>
+</dd><dt><code>safSu</code></dt>
 <dd>
-<dt><code>saAmfSUNumComponents</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfSUIsExternal</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfSUFailover</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfSUHostedByNode</code></p>
-<dd>Required. Set to AMF node name. Note: this is a deviation from the specification.</p>
-<dt><code>safComp</code></p>
+</dd><dt><code>saAmfSUNumComponents</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfSUIsExternal</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfSUFailover</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfSUHostedByNode</code></dt>
+<dd>Required. Set to AMF node name. Note: this is a deviation from the specification.</dd>
+<dt><code>safComp</code></dt>
 <dd>
-<dt><code>saAmfCompCsTypes</code></p>
-<dd>Multivalue</p>
-<dt><code>saAmfCompCategory</code></p>
+</dd><dt><code>saAmfCompCsTypes</code></dt>
+<dd>Multivalue</dd>
+<dt><code>saAmfCompCategory</code></dt>
 <dd>
-<dt><code>saAmfCompCapability</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfCompNumMaxActiveCsi</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfCompNumMaxStandbyCsi</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfCompCmdEnv</code></p>
-<dd>Multivalue</p>
-<dt><code>saAmfCompDefaultClcCliTimeout</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfCompDefaultCallbackTimeOut</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfCompInstantiateCmdArgv</code></p>
+</dd><dt><code>saAmfCompCapability</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfCompNumMaxActiveCsi</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfCompNumMaxStandbyCsi</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfCompCmdEnv</code></dt>
+<dd>Multivalue</dd>
+<dt><code>saAmfCompDefaultClcCliTimeout</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfCompDefaultCallbackTimeOut</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfCompInstantiateCmdArgv</code></dt>
 <dd>
-<dt><code>saAmfCompInstantiateCmd</code></p>
+</dd><dt><code>saAmfCompInstantiateCmd</code></dt>
 <dd>
-<dt><code>saAmfCompTerminateCmdArgv</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfCompTerminateCmd</code></p>
-<dd>Required but not used.</p>
-<dt><code>saAmfCompCleanupCmdArgv</code></p>
+</dd><dt><code>saAmfCompTerminateCmdArgv</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfCompTerminateCmd</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>saAmfCompCleanupCmdArgv</code></dt>
 <dd>
-<dt><code>saAmfCompCleanupCmd</code></p>
+</dd><dt><code>saAmfCompCleanupCmd</code></dt>
 <dd>
-<dt><code>saAmfCompRecoveryOnError</code></p>
-<dd>Required but not used.</p>
-<dt><code>safHealthcheckKey</code></p>
+</dd><dt><code>saAmfCompRecoveryOnError</code></dt>
+<dd>Required but not used.</dd>
+<dt><code>safHealthcheckKey</code></dt>
 <dd>
-<dt><code>saAmfHealthcheckPeriod</code></p>
+</dd><dt><code>saAmfHealthcheckPeriod</code></dt>
 <dd>
-<dt><code>saAmfHealthcheckMaxDuration</code></p>
+</dd><dt><code>saAmfHealthcheckMaxDuration</code></dt>
 <dd>
-<dt><code>safCsi</code></p>
+</dd><dt><code>safCsi</code></dt>
 <dd>
-<dt><code>saAmfSIPrefActiveAssignments</code></p>
+</dd><dt><code>saAmfSIPrefActiveAssignments</code></dt>
 <dd>
-<dt><code>saAmfSIPrefStandbyAssignments</code></p>
+</dd><dt><code>saAmfSIPrefStandbyAssignments</code></dt>
 <dd>
-<dt><code>saAmfCSTypeName</code></p>
+</dd><dt><code>saAmfCSTypeName</code></dt>
 <dd>
-<dt><code>safCSIAttr</code></p>
-<dd>Multivalue </p>
+</dd><dt><code>safCSIAttr</code></dt>
+<dd>Multivalue </dd>
 <h2>Author</h2>
 <p>Hans.Feldt at ericsson.com</p>
 <h2>Example</h2>
 <p>For an AMF configuration file example, see the amf.conf file under the corosync <code>conf</code> directory. </p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/ais/amf.conf</p>
+<dt>/etc/ais/amf.conf</dt>
 <dd>
-<dt>/etc/ais/corosync.conf</p>
-<dd></dl>
+</dd><dt>/etc/ais/corosync.conf</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p>[1] corosync_conf (5)</p>
 <dl>
-<dt>[2] corosync_overview (8)</p>
+<dt>[2] corosync_overview (8)</dt>
 <dd>
-<dt>[3] README.amf</p>
+</dd><dt>[3] README.amf</dt>
 <dd>
-<dt>[4] <a rel="nofollow" href="http://www.saforum.org">www.saforum.org</a> &#8211; SAI-XMI-A.01.01.xml.xip</p>
+</dd><dt>[4] <a rel="nofollow" href="http://www.saforum.org">www.saforum.org</a> &#8211; SAI-XMI-A.01.01.xml.xip</dt>
 <dd>
-<dt>[5] <a rel="nofollow" href="http://www.saforum.org">www.saforum.org</a> &#8211; SAI-Overview.B.02.01.pdf</p>
+</dd><dt>[5] <a rel="nofollow" href="http://www.saforum.org">www.saforum.org</a> &#8211; SAI-Overview.B.02.01.pdf</dt>
 <dd>
-<dt>[6] <a rel="nofollow" href="http://www.saforum.org">www.saforum.org</a> &#8211; SAI-AIS-AMF-B.02.01.pdf</p>
-<dd></dl>
+</dd><dt>[6] <a rel="nofollow" href="http://www.saforum.org">www.saforum.org</a> &#8211; SAI-AIS-AMF-B.02.01.pdf</dt>
+<dd></dd></dl>
+</dl>

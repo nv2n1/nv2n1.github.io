@@ -17,44 +17,44 @@ description: "rfkill – tool for enabling and disabling wireless devices"
 <h2>Options</h2>
 <p><code>-J</code>, <code>&#8211;json</code></p>
 <dl>
-<dd>Use JSON output format.</dl>
+<dd>Use JSON output format.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
-<dd>Do not print a header line.</dl>
+<dd>Do not print a header line.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code></p>
 <dl>
-<dd>Specify which output columns to print. Use <code>&#8211;help</code> to get a list of available columns.</dl>
+<dd>Specify which output columns to print. Use <code>&#8211;help</code> to get a list of available columns.</dd></dl>
 <p> <code>&#8211;output-all</code></p>
 <dl>
-<dd>Output all available columns.</dl>
+<dd>Output all available columns.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;raw</code></p>
 <dl>
-<dd>Use the raw output format.</dl>
+<dd>Use the raw output format.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <h2>Commands</h2>
 <p><code>help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <p> <code>event</code></p>
 <dl>
-<dd>Listen for rfkill events and display them on stdout.</dl>
+<dd>Listen for rfkill events and display them on stdout.</dd></dl>
 <p> <code>list</code> [<i>id</i>|<i>type</i> &#8230;]</p>
 <dl>
-<dd>List the current state of all available devices. The command output format is deprecated, see the section DESCRIPTION. It is a good idea to check with <code>list</code> command <i>id</i> or <i>type</i> scope is appropriate before setting <code>block</code> or <code>unblock</code>. Special <i>all</i> type string will match everything. Use of multiple <i>ID</i> or <i>type</i> arguments is supported.</dl>
+<dd>List the current state of all available devices. The command output format is deprecated, see the section DESCRIPTION. It is a good idea to check with <code>list</code> command <i>id</i> or <i>type</i> scope is appropriate before setting <code>block</code> or <code>unblock</code>. Special <i>all</i> type string will match everything. Use of multiple <i>ID</i> or <i>type</i> arguments is supported.</dd></dl>
 <p> <code>block id</code>|<code>type</code> [&#8230;]</p>
 <dl>
-<dd>Disable the corresponding device.</dl>
+<dd>Disable the corresponding device.</dd></dl>
 <p> <code>unblock id</code>|<code>type</code> [&#8230;]</p>
 <dl>
-<dd>Enable the corresponding device. If the device is hard-blocked, for example via a hardware switch, it will remain unavailable though it is now soft-unblocked.</dl>
+<dd>Enable the corresponding device. If the device is hard-blocked, for example via a hardware switch, it will remain unavailable though it is now soft-unblocked.</dd></dl>
 <p> <code>toggle id</code>|<code>type</code> [&#8230;]</p>
 <dl>
-<dd>Enable or disable the corresponding device.</dl>
+<dd>Enable or disable the corresponding device.</dd></dl>
 <h2>Example</h2>
 <dl>
 <dd>
@@ -62,7 +62,7 @@ description: "rfkill – tool for enabling and disabling wireless devices"
  rfkill block all
  rfkill unblock wlan
  rfkill block bluetooth uwb wimax wwan gps fm nfc</pre>
-</dl>
+</dd></dl>
 <h2>Authors</h2>
 <p><code>rfkill</code> was originally written by and The code has been later modified by and for the util-linux project. </p>
 <p> This manual page was written by for the Debian project (and may be used by others).</p>

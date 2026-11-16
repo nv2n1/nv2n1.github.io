@@ -48,11 +48,11 @@ description: "Net Manager –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>manager</i> Manager information to register.<br />
- <i>module</i> Module descriptor to register. Use GlobusExtensionMyModule(module name)</dl>
+ <i>module</i> Module descriptor to register. Use GlobusExtensionMyModule(module name)</dd></dl>
 <h3>globus_result_t globus_net_manager_unregister (<code>globus_net_manager_t</code> *manager)</h3>
 <p>Unregister a network manager. The <code>globus_net_manager_unregister()</code> function removes this network manager from those which will be called by the network manager interface when network events occur. This is typically called by the network manager when its module is deactivated. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>manager</i> Manager information to unregister.</dl>
+<dd><i>manager</i> Manager information to unregister.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_net_manager from the source code.</p>

@@ -31,12 +31,12 @@ int sigtimedwait(const sigset_t *set, siginfo_t *info,
 <p> On success, both <code>sigwaitinfo</code>() and <code>sigtimedwait</code>() return a signal number (i.e., a value greater than zero). On failure both calls return -1, with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> No signal in <i>set</i> was became pending within the <i>timeout</i> period specified to <code>sigtimedwait</code>().</p>
-<dt><code>EINTR</code></p>
-<dd> The wait was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7). (This handler was for a signal other than one of those in <i>set</i>.)</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>timeout</i> was invalid.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> No signal in <i>set</i> was became pending within the <i>timeout</i> period specified to <code>sigtimedwait</code>().</dd>
+<dt><code>EINTR</code></dt>
+<dd> The wait was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7). (This handler was for a signal other than one of those in <i>set</i>.)</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>timeout</i> was invalid.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>NOTES</h2>

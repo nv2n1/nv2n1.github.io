@@ -16,97 +16,97 @@ description: "Hitch – high performance TLS proxy"
 <p> The only required argument is a path to a PEM file that contains the certificate (or a chain of certificates) and private key. It should also contain DH parameter if you wish to use Diffie-Hellman cipher suites.</p>
 <h2>Command Line Arguments</h2>
 <dl>
-<dt><code>&#8211;config=</code><i>FILE</i></p>
-<dd>Load configuration from specified file. See <i><a href="/docs/linux/man/5-hitch-conf/">hitch.conf</a>(5)</i> for details.</p>
-<dt><code>&#8211;tls</code></p>
-<dd>All TLS versions, no SSLv3 (deprecated). See config file setting <code>tls-protos</code>.</p>
-<dt><code>&#8211;ssl</code></p>
-<dd>enable SSLv3 (deprecated). See config file setting <code>tls-protos</code>.</p>
-<dt><code>-c</code></p>
+<dt><code>&#8211;config=</code><i>FILE</i></dt>
+<dd>Load configuration from specified file. See <i><a href="/docs/linux/man/5-hitch-conf/">hitch.conf</a>(5)</i> for details.</dd>
+<dt><code>&#8211;tls</code></dt>
+<dd>All TLS versions, no SSLv3 (deprecated). See config file setting <code>tls-protos</code>.</dd>
+<dt><code>&#8211;ssl</code></dt>
+<dd>enable SSLv3 (deprecated). See config file setting <code>tls-protos</code>.</dd>
+<dt><code>-c</code></dt>
 <dd>
-<dt><code>&#8211;ciphers=</code><i>SUITE</i></p>
-<dd>Sets allowed ciphers (Default: &quot;&quot;)</p>
-<dt><code>-e</code></p>
+</dd><dt><code>&#8211;ciphers=</code><i>SUITE</i></dt>
+<dd>Sets allowed ciphers (Default: &quot;&quot;)</dd>
+<dt><code>-e</code></dt>
 <dd>
-<dt><code>&#8211;ssl-engine=</code><i>NAME</i></p>
-<dd>Sets OpenSSL engine (Default: &quot;&quot;)</p>
-<dt><code>-O</code></p>
+</dd><dt><code>&#8211;ssl-engine=</code><i>NAME</i></dt>
+<dd>Sets OpenSSL engine (Default: &quot;&quot;)</dd>
+<dt><code>-O</code></dt>
 <dd>
-<dt><code>&#8211;prefer-server-ciphers</code></p>
-<dd>Prefer server list order</p>
-<dt><code>&#8211;client</code></p>
-<dd>Enable client proxy mode</p>
-<dt><code>-b</code></p>
-<dd>&#8211;backend=[HOST]:PORT Backend [connect] (default is &quot;[127.0.0.1]:8000&quot;)</p>
-<dt><code>-f</code></p>
-<dd>&#8211;frontend=[HOST]:PORT[+CERT] Frontend [bind] (default is &quot;[*]:8443&quot;) (Note: brackets are mandatory in endpoint specifiers.)</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;prefer-server-ciphers</code></dt>
+<dd>Prefer server list order</dd>
+<dt><code>&#8211;client</code></dt>
+<dd>Enable client proxy mode</dd>
+<dt><code>-b</code></dt>
+<dd>&#8211;backend=[HOST]:PORT Backend [connect] (default is &quot;[127.0.0.1]:8000&quot;)</dd>
+<dt><code>-f</code></dt>
+<dd>&#8211;frontend=[HOST]:PORT[+CERT] Frontend [bind] (default is &quot;[*]:8443&quot;) (Note: brackets are mandatory in endpoint specifiers.)</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;workers=</code><i>NUM</i></p>
-<dd>Number of worker processes (Default: 1)</p>
-<dt><code>-B</code></p>
+</dd><dt><code>&#8211;workers=</code><i>NUM</i></dt>
+<dd>Number of worker processes (Default: 1)</dd>
+<dt><code>-B</code></dt>
 <dd>
-<dt><code>&#8211;backlog=</code><i>NUM</i></p>
-<dd>Set listen backlog size (Default: 100)</p>
-<dt><code>-k</code></p>
+</dd><dt><code>&#8211;backlog=</code><i>NUM</i></dt>
+<dd>Set listen backlog size (Default: 100)</dd>
+<dt><code>-k</code></dt>
 <dd>
-<dt><code>&#8211;keepalive=</code><i>SECS</i></p>
-<dd>TCP keepalive on client socket (Default: 3600)</p>
-<dt><code>-r</code></p>
+</dd><dt><code>&#8211;keepalive=</code><i>SECS</i></dt>
+<dd>TCP keepalive on client socket (Default: 3600)</dd>
+<dt><code>-r</code></dt>
 <dd>
-<dt><code>&#8211;chroot=</code><i>DIR</i></p>
-<dd>Sets chroot directory (Default: &quot;&quot;)</p>
-<dt><code>-u</code></p>
+</dd><dt><code>&#8211;chroot=</code><i>DIR</i></dt>
+<dd>Sets chroot directory (Default: &quot;&quot;)</dd>
+<dt><code>-u</code></dt>
 <dd>
-<dt><code>&#8211;user=</code><i>USER</i></p>
-<dd>Set uid/gid after binding the socket (Default: &quot;&quot;)</p>
-<dt><code>-g</code></p>
+</dd><dt><code>&#8211;user=</code><i>USER</i></dt>
+<dd>Set uid/gid after binding the socket (Default: &quot;&quot;)</dd>
+<dt><code>-g</code></dt>
 <dd>
-<dt><code>&#8211;group=</code><i>GROUP</i></p>
-<dd>Set gid after binding the socket (Default: &quot;&quot;)</p>
-<dt><code>-q</code></p>
+</dd><dt><code>&#8211;group=</code><i>GROUP</i></dt>
+<dd>Set gid after binding the socket (Default: &quot;&quot;)</dd>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd>Be quiet; emit only error messages</p>
-<dt><code>-s</code></p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd>Be quiet; emit only error messages</dd>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;syslog</code></p>
-<dd>Send log message to syslog in addition to stderr/stdout</p>
-<dt><code>&#8211;syslog-facility=</code><i>FACILITY</i></p>
-<dd>Syslog facility to use (Default: &quot;daemon&quot;)</p>
-<dt><code>&#8211;daemon</code></p>
-<dd>Fork into background and become a daemon; this also sets the &#8211;quiet option (Default: off)</p>
-<dt><code>&#8211;write-ip</code></p>
-<dd>Write 1 octet with the IP family followed by the IP address in 4 (IPv4) or 16 (IPv6) octets little-endian to backend before the actual data (Default: off)</p>
-<dt><code>&#8211;write-proxy-v1</code></p>
-<dd>Write HaProxy&#8217;s PROXY v1 (IPv4 or IPv6) protocol line before actual data (Default: off)</p>
-<dt><code>&#8211;write-proxy-v2</code></p>
-<dd>Write HaProxy&#8217;s PROXY v2 binary (IPv4 or IPv6) protocol line before actual data (Default: off)</p>
-<dt><code>&#8211;write-proxy</code></p>
-<dd>Equivalent to &#8211;write-proxy-v2. For PROXY version 1 use &#8211;write-proxy-v1 explicitly</p>
-<dt><code>&#8211;proxy-proxy</code></p>
-<dd>Proxy HaProxy&#8217;s PROXY (IPv4 or IPv6) protocol line before actual data (PROXY v1 only) (Default: off)</p>
-<dt><code>&#8211;alpn-protos=</code><i>LIST</i></p>
-<dd>Sets the protocols for ALPN/NPN negotiation, given by a comma separated list. If this is not set explicitly, ALPN/NPN will not be used. Requires OpenSSL 1.0.1 for NPN and OpenSSL 1.0.2 for ALPN.</p>
-<dt><code>&#8211;sni-nomatch-abort</code></p>
-<dd>Abort handshake when client submits an unrecognized SNI server name (Default: off)</p>
-<dt><code>&#8211;ocsp-dir=</code><i>DIR</i></p>
-<dd>Set OCSP staple cache directory This enables automated retrieval and stapling of OCSP responses (Default: &quot;&quot;)</p>
-<dt><code>-t</code></p>
+</dd><dt><code>&#8211;syslog</code></dt>
+<dd>Send log message to syslog in addition to stderr/stdout</dd>
+<dt><code>&#8211;syslog-facility=</code><i>FACILITY</i></dt>
+<dd>Syslog facility to use (Default: &quot;daemon&quot;)</dd>
+<dt><code>&#8211;daemon</code></dt>
+<dd>Fork into background and become a daemon; this also sets the &#8211;quiet option (Default: off)</dd>
+<dt><code>&#8211;write-ip</code></dt>
+<dd>Write 1 octet with the IP family followed by the IP address in 4 (IPv4) or 16 (IPv6) octets little-endian to backend before the actual data (Default: off)</dd>
+<dt><code>&#8211;write-proxy-v1</code></dt>
+<dd>Write HaProxy&#8217;s PROXY v1 (IPv4 or IPv6) protocol line before actual data (Default: off)</dd>
+<dt><code>&#8211;write-proxy-v2</code></dt>
+<dd>Write HaProxy&#8217;s PROXY v2 binary (IPv4 or IPv6) protocol line before actual data (Default: off)</dd>
+<dt><code>&#8211;write-proxy</code></dt>
+<dd>Equivalent to &#8211;write-proxy-v2. For PROXY version 1 use &#8211;write-proxy-v1 explicitly</dd>
+<dt><code>&#8211;proxy-proxy</code></dt>
+<dd>Proxy HaProxy&#8217;s PROXY (IPv4 or IPv6) protocol line before actual data (PROXY v1 only) (Default: off)</dd>
+<dt><code>&#8211;alpn-protos=</code><i>LIST</i></dt>
+<dd>Sets the protocols for ALPN/NPN negotiation, given by a comma separated list. If this is not set explicitly, ALPN/NPN will not be used. Requires OpenSSL 1.0.1 for NPN and OpenSSL 1.0.2 for ALPN.</dd>
+<dt><code>&#8211;sni-nomatch-abort</code></dt>
+<dd>Abort handshake when client submits an unrecognized SNI server name (Default: off)</dd>
+<dt><code>&#8211;ocsp-dir=</code><i>DIR</i></dt>
+<dd>Set OCSP staple cache directory This enables automated retrieval and stapling of OCSP responses (Default: &quot;&quot;)</dd>
+<dt><code>-t</code></dt>
 <dd>
-<dt><code>&#8211;test</code></p>
-<dd>Test configuration and exit</p>
-<dt><code>-p</code></p>
+</dd><dt><code>&#8211;test</code></dt>
+<dd>Test configuration and exit</dd>
+<dt><code>-p</code></dt>
 <dd>
-<dt><code>&#8211;pidfile=</code><i>FILE</i></p>
-<dd>PID file</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;pidfile=</code><i>FILE</i></dt>
+<dd>PID file</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd>Print program version and exit</p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd>Print program version and exit</dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd>This help message</dl>
+</dd><dt><code>&#8211;help</code></dt>
+<dd>This help message</dd></dl>
 <h2>History</h2>
 <p>Hitch was originally called stud and was written by Jamie Turner at Bump.com.</p>

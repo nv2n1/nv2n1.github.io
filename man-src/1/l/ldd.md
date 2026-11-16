@@ -31,18 +31,18 @@ description: "ldd – print shared object dependencies"
 <p> Note, however, that this alternative shows only the direct dependencies of the executable, while <code>ldd</code> shows the entire dependency tree of the executable.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number of <code>ldd</code>.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Print all information, including, for example, symbol versioning information.</p>
-<dt><code>-u</code>, <code>&#8211;unused</code></p>
-<dd> Print unused direct dependencies. (Since glibc 2.3.4.)</p>
-<dt><code>-d</code>, <code>&#8211;data-relocs</code></p>
-<dd> Perform relocations and report any missing objects (ELF only).</p>
-<dt><code>-r</code>, <code>&#8211;function-relocs</code></p>
-<dd> Perform relocations for both data objects and functions, and report any missing objects or functions (ELF only).</p>
-<dt><code>&#8211;help</code></p>
-<dd> Usage information.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number of <code>ldd</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print all information, including, for example, symbol versioning information.</dd>
+<dt><code>-u</code>, <code>&#8211;unused</code></dt>
+<dd> Print unused direct dependencies. (Since glibc 2.3.4.)</dd>
+<dt><code>-d</code>, <code>&#8211;data-relocs</code></dt>
+<dd> Perform relocations and report any missing objects (ELF only).</dd>
+<dt><code>-r</code>, <code>&#8211;function-relocs</code></dt>
+<dd> Perform relocations for both data objects and functions, and report any missing objects or functions (ELF only).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Usage information.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>ldd</code> does not work on a.out shared libraries. </p>
 <p> <code>ldd</code> does not work with some extremely old a.out programs which were built before <code>ldd</code> support was added to the compiler releases. If you use <code>ldd</code> on one of these programs, the program will attempt to run with <i>argc</i> = 0 and the results will be unpredictable.</p>

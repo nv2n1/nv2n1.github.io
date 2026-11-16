@@ -29,10 +29,8 @@ This is an I/O manipulator, it may be called with an expression such as out &lt;
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;The number 0.01 in fixed:      &quot; &lt;&lt; std::fixed &lt;&lt; 0.01 &lt;&lt; '
 '

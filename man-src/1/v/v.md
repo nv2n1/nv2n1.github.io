@@ -17,26 +17,26 @@ description: "v.what.vect – Uploads vector values at positions of vector point
  <code>v.what.vect vector</code>=<i>name</i> [<code>layer</code>=<i>integer</i>] <code>column</code>=<i>string</i> <code>qvector</code>=<i>name</i> [<code>qlayer</code>=<i>integer</i>] <code>qcolumn</code>=<i>string</i> [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Parameters:</h3>
 <dl>
-<dt><code>vector</code>=<i>name</i></p>
+<dt><code>vector</code>=<i>name</i></dt>
 <dd>
- Points vector map to modify</p>
-<dt><code>layer</code>=<i>integer</i></p>
+ Points vector map to modify</dd>
+<dt><code>layer</code>=<i>integer</i></dt>
 <dd>
  Layer in the vector to be modified<br />
- Default: <i>1</i></p>
-<dt><code>column</code>=<i>string</i></p>
+ Default: <i>1</i></dd>
+<dt><code>column</code>=<i>string</i></dt>
 <dd>
- Column to be updated with the query result</p>
-<dt><code>qvector</code>=<i>name</i></p>
+ Column to be updated with the query result</dd>
+<dt><code>qvector</code>=<i>name</i></dt>
 <dd>
- Vector map to be queried</p>
-<dt><code>qlayer</code>=<i>integer</i></p>
+ Vector map to be queried</dd>
+<dt><code>qlayer</code>=<i>integer</i></dt>
 <dd>
  Layer of the query vector containg data<br />
- Default: <i>1</i></p>
-<dt><code>qcolumn</code>=<i>string</i></p>
+ Default: <i>1</i></dd>
+<dt><code>qcolumn</code>=<i>string</i></dt>
 <dd>
- Column to be queried</dl>
+ Column to be queried</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>v.what.vect</i> transfers attributes from the <code>qvector</code>&#8216;s map attribute table into the attribute table of points present in the <code>vector</code> map. The script is based on <i>v.distance</i>.</p>
 <h2>NOTES</h2>

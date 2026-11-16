@@ -11,7 +11,6 @@ description: "sc::MemAllocFailed –"
 <p> This is thrown when a memory allocation fails.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;scexception.h&gt;</code></pre>
 <p> Inherits <code>sc::SystemException</code>.</p>
 <h3>Public Member Functions</h3>

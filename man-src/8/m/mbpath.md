@@ -17,12 +17,12 @@ description: "mbpath – translate mailbox names to filesystem paths"
 <p> <i>Mbpath</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd></dl>
 <p> <i>-q</i> suppress any error output. </p>
 <p> <i>-s</i> if any error occurs, stop processing the list of mailboxes and exit. </p>
 <p> <i>-m</i> output the path to the metadata files (if different from the message files).</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>

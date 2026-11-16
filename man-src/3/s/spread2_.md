@@ -37,7 +37,7 @@ description: "QuantLib::DoubleStickyRatchetPayoff – Intermediate class for sin
 <h3>std::string name () const [virtual]</h3>
 <p><code>Warning</code></p>
 <dl>
-<dd>This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <p> Implements <code>Payoff</code>. </p>
 <p> Reimplemented in <code>RatchetPayoff</code>, <code>StickyPayoff</code>, <code>RatchetMaxPayoff</code>, <code>RatchetMinPayoff</code>, <code>StickyMaxPayoff</code>, and <code>StickyMinPayoff</code>.</p>
 <h2>Author</h2>

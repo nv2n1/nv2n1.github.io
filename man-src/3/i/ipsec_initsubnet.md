@@ -23,13 +23,11 @@ description: "ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_ma
 <p> The <code>&lt;libreswan.h&gt;</code> library uses an internal type <i>ip_subnet</i> to contain a description of an IP subnet (base address plus mask). These functions provide basic tools for creating and examining this type. </p>
 <p> <i>Initsubnet</i> initializes a variable <i>*dst</i> of type <i>ip_subnet</i> from a base address and a count of mask bits. The <i>clash</i> parameter specifies what to do if the base address includes <code>1</code> bits outside the prefix specified by the mask (that is, in the &#8220;host number&#8221; part of the address):</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8216;0&#8217;</p>
-<dd> zero out host-number bits</p>
-<dt>&#8216;x&#8217;</p>
-<dd> non-zero host-number bits are an error</dl>
+<dt>&#8216;0&#8217;</dt>
+<dd> zero out host-number bits</dd>
+<dt>&#8216;x&#8217;</dt>
+<dd> non-zero host-number bits are an error</dd></dl>
 </dl>
 <p> <i>Initsubnet</i> returns <code>NULL</code> for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS. </p>
 <p> <i>Addrtosubnet</i> initializes an <i>ip_subnet</i> variable <i>*dst</i> to a &#8220;singleton subnet&#8221; containing the single address <i>*addr</i>. It returns <code>NULL</code> for success and a pointer to a string-literal error message for failure. </p>

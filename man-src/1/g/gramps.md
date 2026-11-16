@@ -15,24 +15,24 @@ description: "gramps – Genealogical Research and Analysis Management Programmi
 <p> <i>Gramps</i> is a Free/OpenSource genealogy program. It is written in Python, using the GTK+/GNOME interface. Gramps should seem familiar to anyone who has used other genealogy programs before such as <i>Family Tree Maker (TM)</i>, <i>Personal Ancestral Files (TM)</i>, or the GNU Geneweb. It supports importing of the ever popular GEDCOM format which is used world wide by almost all other genealogy software. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>gramps</code><i> FILE</i></p>
-<dd> When <i>FILE</i> is given (without any flags) as a family tree name or as a family tree database directory, then it is opened and an interactive session is started. If FILE is a file format understood by GRAMPS, an empty family tree is created whose name is based on the <i>FILE</i> name and the data is imported into it. The rest of the options is ignored. This way of launching is suitable for using gramps as a handler for genealogical data in e.g. web browsers. This invocation can accept any data format native to gramps, see below. </p>
-<dt><code>-f,&#8211;format=</code><i> FORMAT</i></p>
-<dd> Explicitly specify format of <i>FILE</i> given by preceding <code>-i</code>, or <code>-e</code> option. If the <code>-f</code> option is not given for any <i>FILE</i>, the format of that file is guessed according to its extension or MIME-type. </p>
+<dt><code>gramps</code><i> FILE</i></dt>
+<dd> When <i>FILE</i> is given (without any flags) as a family tree name or as a family tree database directory, then it is opened and an interactive session is started. If FILE is a file format understood by GRAMPS, an empty family tree is created whose name is based on the <i>FILE</i> name and the data is imported into it. The rest of the options is ignored. This way of launching is suitable for using gramps as a handler for genealogical data in e.g. web browsers. This invocation can accept any data format native to gramps, see below. </dd>
+<dt><code>-f,&#8211;format=</code><i> FORMAT</i></dt>
+<dd> Explicitly specify format of <i>FILE</i> given by preceding <code>-i</code>, or <code>-e</code> option. If the <code>-f</code> option is not given for any <i>FILE</i>, the format of that file is guessed according to its extension or MIME-type. </dd>
 <p> Formats available for output are <code>gramps-xml</code> (guessed if <i>FILE</i> ends with <code>.gramps</code>), <code>gedcom</code> (guessed if <i>FILE</i> ends with <code>.ged</code>), or any file export available through the GRAMPS plugin system. </p>
 <p> Formats available for import are <code>grdb</code>, <code>gramps-xml</code>, <code>gedcom</code>, <code>gramps-pkg</code> (guessed if <i>FILE</i> ends with <code>.gpkg</code>), and <code>geneweb</code> (guessed if <i>FILE</i> ends with <code>.gw</code>). </p>
 <p> Formats available for export are <code>gramps-xml</code>, <code>gedcom</code>, <code>gramps-pkg</code>, <code>wft</code> (guessed if <i>FILE</i> ends with <code>.wft</code>), <code>geneweb</code>, and <code>iso</code> (never guessed, always specify with <code>-f</code> option). </p>
-<dt><code>-l</code></p>
-<dd> Print a list of known family trees. </p>
-<dt><code>-u,&#8211;force-unlock</code></p>
-<dd> Unlock a locked database. </p>
-<dt><code>-O,&#8211;open=</code><i> DATABASE</i></p>
-<dd> Open <i>DATABASE</i> which must be an existing database directory or existing family tree name. If no action, import or export options are given on the command line then an interactive session is started using that database. </p>
-<dt><code>-i,&#8211;import=</code><i> FILE</i></p>
-<dd> Import data from <i>FILE</i>. If you haven&#8217;t specified a database then a temporary database is used; this is deleted when you exit gramps. </p>
+<dt><code>-l</code></dt>
+<dd> Print a list of known family trees. </dd>
+<dt><code>-u,&#8211;force-unlock</code></dt>
+<dd> Unlock a locked database. </dd>
+<dt><code>-O,&#8211;open=</code><i> DATABASE</i></dt>
+<dd> Open <i>DATABASE</i> which must be an existing database directory or existing family tree name. If no action, import or export options are given on the command line then an interactive session is started using that database. </dd>
+<dt><code>-i,&#8211;import=</code><i> FILE</i></dt>
+<dd> Import data from <i>FILE</i>. If you haven&#8217;t specified a database then a temporary database is used; this is deleted when you exit gramps. </dd>
 <p> When more than one input file is given, each has to be preceded by <code>-i</code> flag. The files are imported in the specified order, i.e. <code>-i</code> <i>FILE1</i> <code>-i</code> <i>FILE2</i> and <code>-i</code> <i>FILE2</i> <code>-i</code> <i>FILE1</i> might produce different gramps IDs in the resulting database. </p>
-<dt><code>-a,&#8211;action=</code><i> ACTION</i></p>
-<dd> Perform <i>ACTION</i> on the imported data. This is done after all imports are successfully completed. Currently available actions are <code>summary</code> (same as Reports-&gt;View-&gt;Summary), <code>check</code> (same as Tools-&gt;Database Processing-&gt;Check and Repair), <code>report</code> (generates report), and <code>tool</code> (runs a plugin tool). Both <code>report</code> and <code>tool</code> need the <i>OPTIONSTRING</i> supplied by the <code>-p</code> flag). </p>
+<dt><code>-a,&#8211;action=</code><i> ACTION</i></dt>
+<dd> Perform <i>ACTION</i> on the imported data. This is done after all imports are successfully completed. Currently available actions are <code>summary</code> (same as Reports-&gt;View-&gt;Summary), <code>check</code> (same as Tools-&gt;Database Processing-&gt;Check and Repair), <code>report</code> (generates report), and <code>tool</code> (runs a plugin tool). Both <code>report</code> and <code>tool</code> need the <i>OPTIONSTRING</i> supplied by the <code>-p</code> flag). </dd>
 <p> The <i>OPTIONSTRING</i> should satisfy the following conditions:<br />
  It must not contain any spaces. If some arguments need to include spaces, the string should be enclosed with quotation marks, i.e., follow the shell syntax. Option string is a list of pairs with name and value (separated by the equality sign). The name and value pairs must be separated by commas. </p>
 <p> Most of the report or tools options are specific for each report or tool. However, there are some common options. </p>
@@ -46,10 +46,10 @@ description: "gramps – Genealogical Research and Analysis Management Programmi
 </dl>
 <p> When more than one output action is given, each has to be preceded by <code>-a</code> flag. The actions are performed one by one, in the specified order. </p>
 <dl>
-<dt><code>-d,&#8211;debug=</code><i> LOGGER_NAME</i></p>
-<dd> Enables debug logs for development and testing. Look at the source code for details</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the version number of gramps and then exits </p>
+<dt><code>-d,&#8211;debug=</code><i> LOGGER_NAME</i></dt>
+<dd> Enables debug logs for development and testing. Look at the source code for details</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the version number of gramps and then exits </dd>
 </dl>
 <h2>Operation</h2>
 <p> If the first argument on the command line does not start with dash (i.e. no flag), gramps will attempt to open the file with the name given by the first argument and start interactive session, ignoring the rest of the command line arguments. </p>
@@ -61,22 +61,22 @@ description: "gramps – Genealogical Research and Analysis Management Programmi
 <p> The error encountered during import, export, or action, will be either dumped to <i>stdout</i> (if these are exceptions handled by gramps) or to <i>stderr</i> (if these are not handled). Use usual shell redirections of <i>stdout</i> and <i>stderr</i> to save messages and errors in files. </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>To open an existing family tree and import an xml file into it, one may type:</p>
-<dd> <code>gramps</code> <code>-O</code> <i>&#8216;My Family Tree&#8217;</i> <code>-i</code> <i>~/db3.gramps</i></p>
-<dt>The above changes the opened family tree, to do the same, but import both in a temporary family tree and start an interactive session, one may type:</p>
-<dd> <code>gramps</code> <code>-i</code> <i>&#8216;My Family Tree&#8217;</i> <code>-i</code> <i>~/db3.gramps</i></p>
-<dt>To import four databases (whose formats can be determined from their names) and then check the resulting database for errors, one may type:</p>
-<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-i</code> <i>file2.tgz</i> <code>-i</code> <i>~/db3.gramps</i> <code>-i</code> <i>file4.wft</i> <code>-a</code> <i>check</i></p>
-<dt>To explicitly specify the formats in the above example, append filenames with appropriate <code>-f</code> options:</p>
-<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-f</code> <i>gedcom</i> <code>-i</code> <i>file2.tgz</i> <code>-f</code> <i>gramps-pkg</i> <code>-i</code> <i>~/db3.gramps</i> <code>-f</code> <i>gramps-xml</i> <code>-i</code> <i>file4.wft</i> <code>-f</code> <i>wft</i> <code>-a</code> <i>check</i></p>
-<dt>To record the database resulting from all imports, supply <code>-e</code> flag (use <code>-f</code> if the filename does not allow gramps to guess the format):</p>
-<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-i</code> <i>file2.tgz</i> <code>-e</code> <i>~/new-package</i> <code>-f</code> <i>gramps-pkg</i></p>
-<dt>To import three databases and start interactive gramps session with the result:</p>
-<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-i</code> <i>file2.tgz</i> <code>-i</code> <i>~/db3.gramps</i></p>
-<dt>To run the Verify tool from the commandline and output the result to stdout:</p>
-<dd> <code>gramps</code> <code>-O</code> <i>&#8216;My Family Tree&#8217;</i> <code>-a</code> <i>tool</i> <code>-p</code> <code>name</code>=<i>verify</i></p>
-<dt>Finally, to start normal interactive session type:</p>
-<dd> <code>gramps</code> </p>
+<dt>To open an existing family tree and import an xml file into it, one may type:</dt>
+<dd> <code>gramps</code> <code>-O</code> <i>&#8216;My Family Tree&#8217;</i> <code>-i</code> <i>~/db3.gramps</i></dd>
+<dt>The above changes the opened family tree, to do the same, but import both in a temporary family tree and start an interactive session, one may type:</dt>
+<dd> <code>gramps</code> <code>-i</code> <i>&#8216;My Family Tree&#8217;</i> <code>-i</code> <i>~/db3.gramps</i></dd>
+<dt>To import four databases (whose formats can be determined from their names) and then check the resulting database for errors, one may type:</dt>
+<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-i</code> <i>file2.tgz</i> <code>-i</code> <i>~/db3.gramps</i> <code>-i</code> <i>file4.wft</i> <code>-a</code> <i>check</i></dd>
+<dt>To explicitly specify the formats in the above example, append filenames with appropriate <code>-f</code> options:</dt>
+<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-f</code> <i>gedcom</i> <code>-i</code> <i>file2.tgz</i> <code>-f</code> <i>gramps-pkg</i> <code>-i</code> <i>~/db3.gramps</i> <code>-f</code> <i>gramps-xml</i> <code>-i</code> <i>file4.wft</i> <code>-f</code> <i>wft</i> <code>-a</code> <i>check</i></dd>
+<dt>To record the database resulting from all imports, supply <code>-e</code> flag (use <code>-f</code> if the filename does not allow gramps to guess the format):</dt>
+<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-i</code> <i>file2.tgz</i> <code>-e</code> <i>~/new-package</i> <code>-f</code> <i>gramps-pkg</i></dd>
+<dt>To import three databases and start interactive gramps session with the result:</dt>
+<dd> <code>gramps</code> <code>-i</code> <i>file1.ged</i> <code>-i</code> <i>file2.tgz</i> <code>-i</code> <i>~/db3.gramps</i></dd>
+<dt>To run the Verify tool from the commandline and output the result to stdout:</dt>
+<dd> <code>gramps</code> <code>-O</code> <i>&#8216;My Family Tree&#8217;</i> <code>-a</code> <i>tool</i> <code>-p</code> <code>name</code>=<i>verify</i></dd>
+<dt>Finally, to start normal interactive session type:</dt>
+<dd> <code>gramps</code> </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The program checks whether these environment variables are set: </p>

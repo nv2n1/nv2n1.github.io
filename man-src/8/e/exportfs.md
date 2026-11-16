@@ -24,24 +24,24 @@ description: "exportfs – maintain table of exported NFS file systems"
 <p> In the legacy mode, exports which identify a specific host, rather than a subnet or netgroup, are entered directly into the kernel&#8217;s export table, as well as being written to <i>/var/lib/nfs/etab</i>. Further, exports listed in <i>/var/lib/nfs/rmtab</i> which match a non host-specific export request will cause an appropriate export entry for the host given in <i>rmtab</i> to be added to the kernel&#8217;s export table.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d kind or &#8211;debug kind</code></p>
-<dd>Turn on debugging. Valid kinds are: all, auth, call, general and parse. Debugging can also be turned on by setting <code>debug=</code> in the <code>[exportfs]</code> section of <i>/etc/nfs.conf</i>. </p>
-<dt><code>-a</code></p>
-<dd>Export or unexport all directories.</p>
-<dt><code>-o </code><i>options,&#8230;</i></p>
-<dd>Specify a list of export options in the same manner as in <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5).</p>
-<dt><code>-i</code></p>
-<dd>Ignore the <i>/etc/exports</i> file and files under <i>/etc/exports.d</i> directory. Only default options and options given on the command line are used.</p>
-<dt><code>-r</code></p>
-<dd>Reexport all directories, synchronizing <i>/var/lib/nfs/etab</i> with <i>/etc/exports</i> and files under <i>/etc/exports.d</i>. This option removes entries in <i>/var/lib/nfs/etab</i> which have been deleted from <i>/etc/exports</i> or files under <i>/etc/exports.d</i>, and removes any entries from the kernel export table which are no longer valid.</p>
-<dt><code>-u</code></p>
-<dd>Unexport one or more directories.</p>
-<dt><code>-f</code></p>
-<dd>If <i>/proc/fs/nfsd</i> or <i>/proc/fs/nfs</i> is mounted, flush everything out of the kernel&#8217;s export table. Fresh entries for active clients are added to the kernel&#8217;s export table by <code>rpc.mountd</code> when they make their next NFS mount request.</p>
-<dt><code>-v</code></p>
-<dd>Be verbose. When exporting or unexporting, show what&#8217;s going on. When displaying the current export list, also display the list of export options.</p>
-<dt><code>-s</code></p>
-<dd>Display the current export list suitable for /etc/exports.</dl>
+<dt><code>-d kind or &#8211;debug kind</code></dt>
+<dd>Turn on debugging. Valid kinds are: all, auth, call, general and parse. Debugging can also be turned on by setting <code>debug=</code> in the <code>[exportfs]</code> section of <i>/etc/nfs.conf</i>. </dd>
+<dt><code>-a</code></dt>
+<dd>Export or unexport all directories.</dd>
+<dt><code>-o </code><i>options,&#8230;</i></dt>
+<dd>Specify a list of export options in the same manner as in <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5).</dd>
+<dt><code>-i</code></dt>
+<dd>Ignore the <i>/etc/exports</i> file and files under <i>/etc/exports.d</i> directory. Only default options and options given on the command line are used.</dd>
+<dt><code>-r</code></dt>
+<dd>Reexport all directories, synchronizing <i>/var/lib/nfs/etab</i> with <i>/etc/exports</i> and files under <i>/etc/exports.d</i>. This option removes entries in <i>/var/lib/nfs/etab</i> which have been deleted from <i>/etc/exports</i> or files under <i>/etc/exports.d</i>, and removes any entries from the kernel export table which are no longer valid.</dd>
+<dt><code>-u</code></dt>
+<dd>Unexport one or more directories.</dd>
+<dt><code>-f</code></dt>
+<dd>If <i>/proc/fs/nfsd</i> or <i>/proc/fs/nfs</i> is mounted, flush everything out of the kernel&#8217;s export table. Fresh entries for active clients are added to the kernel&#8217;s export table by <code>rpc.mountd</code> when they make their next NFS mount request.</dd>
+<dt><code>-v</code></dt>
+<dd>Be verbose. When exporting or unexporting, show what&#8217;s going on. When displaying the current export list, also display the list of export options.</dd>
+<dt><code>-s</code></dt>
+<dd>Display the current export list suitable for /etc/exports.</dd></dl>
 <h2>Discussion</h2>
 <h3>Exporting Directories</h3>
 <p>The first synopsis shows how to invoke <code>exportfs</code> when adding new entries to the export table. When using <code>exportfs -a</code>, all exports listed in <i>/etc/exports</i> and files under <i>/etc/exports.d</i> are added to <i>/var/lib/nfs/etab</i>. The kernel&#8217;s export table is also updated as needed. </p>
@@ -71,14 +71,14 @@ description: "exportfs – maintain table of exported NFS file systems"
 <p> When unexporting a network or domain entry, any current exports to members of this group will be checked against the remaining valid exports and if they themselves are no longer valid they will be removed.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/exports</i></p>
-<dd>input file listing exports, export options, and access control lists</p>
-<dt><i>/etc/exports.d</i></p>
-<dd>directory where extra input files are stored. <code>Note:</code> only files that end with <i>.exports</i> are used.</p>
-<dt><i>/var/lib/nfs/etab</i></p>
-<dd>master table of exports</p>
-<dt><i>/var/lib/nfs/rmtab</i></p>
-<dd>table of clients accessing server&#8217;s exports</dl>
+<dt><i>/etc/exports</i></dt>
+<dd>input file listing exports, export options, and access control lists</dd>
+<dt><i>/etc/exports.d</i></dt>
+<dd>directory where extra input files are stored. <code>Note:</code> only files that end with <i>.exports</i> are used.</dd>
+<dt><i>/var/lib/nfs/etab</i></dt>
+<dd>master table of exports</dd>
+<dt><i>/var/lib/nfs/rmtab</i></dt>
+<dd>table of clients accessing server&#8217;s exports</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code>rpc.mountd</code>(8), <code><a href="/docs/linux/man/5-netgroup/">netgroup</a></code>(5)</p>
 <h2>Authors</h2>

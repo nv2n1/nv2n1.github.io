@@ -63,9 +63,9 @@ description: "mysqld_selinux – Security Enhanced Linux Policy for the mysqld p
 <p> Policy governs the access confined processes have to these ports. SELinux mysqld policy is very flexible allowing users to setup their mysqld processes in as secure a method as possible. </p>
 <p> The following port types are defined for mysqld: </p>
 <dl>
-<dt><code>mysqld_port_t</code></p>
+<dt><code>mysqld_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1186,3306,63132-63164</dl>
+</dd><dd>Default Defined Ports: tcp 1186,3306,63132-63164</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type mysqld_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -145,48 +145,48 @@ description: "mysqld_selinux – Security Enhanced Linux Policy for the mysqld p
 <p> <code>mysqld_etc_t</code> </p>
 <p> &#8211; Set files with the mysqld_etc_t type, if you want to store mysqld files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/mysql(/.*)?, /etc/my.cnf.d(/.*)?, /etc/my.cnf </p>
+<dt>Paths:</dt>
+<dd>/etc/mysql(/.*)?, /etc/my.cnf.d(/.*)?, /etc/my.cnf </dd>
 </dl>
 <p> <code>mysqld_exec_t</code> </p>
 <p> &#8211; Set files with the mysqld_exec_t type, if you want to transition an executable to the mysqld_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/mysqld(-max)?, /usr/sbin/ndbd, /usr/libexec/mysqld, /usr/bin/mysql_upgrade </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/mysqld(-max)?, /usr/sbin/ndbd, /usr/libexec/mysqld, /usr/bin/mysql_upgrade </dd>
 </dl>
 <p> <code>mysqld_home_t</code> </p>
 <p> &#8211; Set files with the mysqld_home_t type, if you want to store mysqld files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.my.cnf, /home/[^/]+/.my.cnf </p>
+<dt>Paths:</dt>
+<dd>/root/.my.cnf, /home/[^/]+/.my.cnf </dd>
 </dl>
 <p> <code>mysqld_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the mysqld_initrc_exec_t type, if you want to transition an executable to the mysqld_initrc_t domain. </p>
 <p> <code>mysqld_log_t</code> </p>
 <p> &#8211; Set files with the mysqld_log_t type, if you want to treat the data as mysqld log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/mysql.*, /var/log/mariadb(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/mysql.*, /var/log/mariadb(/.*)? </dd>
 </dl>
 <p> <code>mysqld_safe_exec_t</code> </p>
 <p> &#8211; Set files with the mysqld_safe_exec_t type, if you want to transition an executable to the mysqld_safe_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/mysqld_safe, /usr/libexec/mysqld_safe-scl-helper </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/mysqld_safe, /usr/libexec/mysqld_safe-scl-helper </dd>
 </dl>
 <p> <code>mysqld_tmp_t</code> </p>
 <p> &#8211; Set files with the mysqld_tmp_t type, if you want to store mysqld temporary files in the /tmp directories. </p>
 <p> <code>mysqld_unit_file_t</code> </p>
 <p> &#8211; Set files with the mysqld_unit_file_t type, if you want to treat the files as mysqld unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/mysqld.*, /usr/lib/systemd/system/mariadb.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/mysqld.*, /usr/lib/systemd/system/mariadb.* </dd>
 </dl>
 <p> <code>mysqld_var_run_t</code> </p>
 <p> &#8211; Set files with the mysqld_var_run_t type, if you want to store the mysqld files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/mysqld(/.*)?, /var/run/mariadb(/.*)?, /var/lib/mysql/mysql.sock </p>
+<dt>Paths:</dt>
+<dd>/var/run/mysqld(/.*)?, /var/run/mariadb(/.*)?, /var/lib/mysql/mysql.sock </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

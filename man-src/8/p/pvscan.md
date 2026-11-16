@@ -25,7 +25,7 @@ description: "pvscan – List all physical volumes"
  [ <code>-n</code>|<code>&#8211;novolumegroup</code> ]<br />
  [ <code>-s</code>|<code>&#8211;short</code> ]<br />
  [ <code>-u</code>|<code>&#8211;uuid</code> ]<br />
- [ COMMON_OPTIONS ]</dl>
+ [ COMMON_OPTIONS ]</dd></dl>
 <p> Autoactivate a VG when all PVs are online. </p>
 <p> <code>pvscan</code> <code>&#8211;cache</code> </p>
 <dl>
@@ -33,13 +33,13 @@ description: "pvscan – List all physical volumes"
  [ <code>-j</code>|<code>&#8211;major</code> <i>Number</i> ]<br />
  [ <code>&#8211;minor</code> <i>Number</i> ]<br />
  [ <code>&#8211;noudevsync</code> ]<br />
- [ COMMON_OPTIONS ]</dl>
+ [ COMMON_OPTIONS ]</dd></dl>
 <dl>
-<dd>[ <i>String</i>|<i>PV</i> &#8230; ]</dl>
+<dd>[ <i>String</i>|<i>PV</i> &#8230; ]</dd></dl>
 <p> Common options for command:</p>
 <dl>
 <dd>[ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]</dl>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
 <dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
@@ -55,95 +55,95 @@ description: "pvscan – List all physical volumes"
  [ <code>&#8211;longhelp</code> ]<br />
  [ <code>&#8211;nolocking</code> ]<br />
  [ <code>&#8211;profile</code> <i>String</i> ]<br />
- [ <code>&#8211;version</code> ]</dl>
+ [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt> <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code></p>
+<dt> <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code></dt>
 <dd>
-<dd>Auto-activate LVs in a VG when the PVs scanned have completed the VG. (Only <code>ay</code> is applicable.)</p>
-<dt> <code>&#8211;cache</code></p>
+</dd><dd>Auto-activate LVs in a VG when the PVs scanned have completed the VG. (Only <code>ay</code> is applicable.)</dd>
+<dt> <code>&#8211;cache</code></dt>
 <dd>
-<dd>Scan one or more devices and record that they are online.</p>
-<dt> <code>&#8211;commandprofile</code> <i>String</i></p>
+</dd><dd>Scan one or more devices and record that they are online.</dd>
+<dt> <code>&#8211;commandprofile</code> <i>String</i></dt>
 <dd>
-<dd>The command profile to use for command configuration. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about profiles.</p>
-<dt> <code>&#8211;config</code> <i>String</i></p>
+</dd><dd>The command profile to use for command configuration. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about profiles.</dd>
+<dt> <code>&#8211;config</code> <i>String</i></dt>
 <dd>
-<dd>Config settings for the command. These override lvm.conf settings. The String arg uses the same format as lvm.conf, or may use section/field syntax. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about config.</p>
-<dt> <code>-d</code>|<code>&#8211;debug</code> &#8230;</p>
+</dd><dd>Config settings for the command. These override lvm.conf settings. The String arg uses the same format as lvm.conf, or may use section/field syntax. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about config.</dd>
+<dt> <code>-d</code>|<code>&#8211;debug</code> &#8230;</dt>
 <dd>
-<dd>Set debug level. Repeat from 1 to 6 times to increase the detail of messages sent to the log file and/or syslog (if configured).</p>
-<dt> <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code></p>
+</dd><dd>Set debug level. Repeat from 1 to 6 times to increase the detail of messages sent to the log file and/or syslog (if configured).</dd>
+<dt> <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code></dt>
 <dd>
-<dd>If set to no, the command will not attempt to use device-mapper. For testing and debugging.</p>
-<dt> <code>-e</code>|<code>&#8211;exported</code></p>
+</dd><dd>If set to no, the command will not attempt to use device-mapper. For testing and debugging.</dd>
+<dt> <code>-e</code>|<code>&#8211;exported</code></dt>
 <dd>
-<dd>Only show PVs belonging to exported VGs.</p>
-<dt> <code>-h</code>|<code>&#8211;help</code></p>
+</dd><dd>Only show PVs belonging to exported VGs.</dd>
+<dt> <code>-h</code>|<code>&#8211;help</code></dt>
 <dd>
-<dd>Display help text.</p>
-<dt> <code>&#8211;ignorelockingfailure</code></p>
+</dd><dd>Display help text.</dd>
+<dt> <code>&#8211;ignorelockingfailure</code></dt>
 <dd>
-<dd>Allows a command to continue with read-only metadata operations after locking failures.</p>
-<dt> <code>&#8211;lockopt</code> <i>String</i></p>
+</dd><dd>Allows a command to continue with read-only metadata operations after locking failures.</dd>
+<dt> <code>&#8211;lockopt</code> <i>String</i></dt>
 <dd>
-<dd>Used to pass options for special cases to lvmlockd. See <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) for more information.</p>
-<dt> <code>&#8211;longhelp</code></p>
+</dd><dd>Used to pass options for special cases to lvmlockd. See <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) for more information.</dd>
+<dt> <code>&#8211;longhelp</code></dt>
 <dd>
-<dd>Display long help text.</p>
-<dt> <code>-j</code>|<code>&#8211;major</code> <i>Number</i></p>
+</dd><dd>Display long help text.</dd>
+<dt> <code>-j</code>|<code>&#8211;major</code> <i>Number</i></dt>
 <dd>
-<dd>The major number of a device.</p>
-<dt> <code>&#8211;minor</code> <i>Number</i></p>
+</dd><dd>The major number of a device.</dd>
+<dt> <code>&#8211;minor</code> <i>Number</i></dt>
 <dd>
-<dd>The minor number of a device.</p>
-<dt> <code>&#8211;nolocking</code></p>
+</dd><dd>The minor number of a device.</dd>
+<dt> <code>&#8211;nolocking</code></dt>
 <dd>
-<dd>Disable locking.</p>
-<dt> <code>&#8211;noudevsync</code></p>
+</dd><dd>Disable locking.</dd>
+<dt> <code>&#8211;noudevsync</code></dt>
 <dd>
-<dd>Disables udev synchronisation. The process will not wait for notification from udev. It will continue irrespective of any possible udev processing in the background. Only use this if udev is not running or has rules that ignore the devices LVM creates.</p>
-<dt> <code>-n</code>|<code>&#8211;novolumegroup</code></p>
+</dd><dd>Disables udev synchronisation. The process will not wait for notification from udev. It will continue irrespective of any possible udev processing in the background. Only use this if udev is not running or has rules that ignore the devices LVM creates.</dd>
+<dt> <code>-n</code>|<code>&#8211;novolumegroup</code></dt>
 <dd>
-<dd>Only show PVs not belonging to any VG.</p>
-<dt> <code>&#8211;profile</code> <i>String</i></p>
+</dd><dd>Only show PVs not belonging to any VG.</dd>
+<dt> <code>&#8211;profile</code> <i>String</i></dt>
 <dd>
-<dd>An alias for &#8211;commandprofile or &#8211;metadataprofile, depending on the command.</p>
-<dt> <code>-q</code>|<code>&#8211;quiet</code> &#8230;</p>
+</dd><dd>An alias for &#8211;commandprofile or &#8211;metadataprofile, depending on the command.</dd>
+<dt> <code>-q</code>|<code>&#8211;quiet</code> &#8230;</dt>
 <dd>
-<dd>Suppress output and log messages. Overrides &#8211;debug and &#8211;verbose. Repeat once to also suppress any prompts with answer &#8216;no&#8217;.</p>
-<dt> <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code></p>
+</dd><dd>Suppress output and log messages. Overrides &#8211;debug and &#8211;verbose. Repeat once to also suppress any prompts with answer &#8216;no&#8217;.</dd>
+<dt> <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code></dt>
 <dd>
-<dd>Overrides current output format for reports which is defined globally by the report/output_format setting in lvm.conf. <code>basic</code> is the original format with columns and rows. If there is more than one report per command, each report is prefixed with the report name for identification. <code>json</code> produces report output in JSON format. See <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) for more information.</p>
-<dt> <code>-s</code>|<code>&#8211;short</code></p>
+</dd><dd>Overrides current output format for reports which is defined globally by the report/output_format setting in lvm.conf. <code>basic</code> is the original format with columns and rows. If there is more than one report per command, each report is prefixed with the report name for identification. <code>json</code> produces report output in JSON format. See <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) for more information.</dd>
+<dt> <code>-s</code>|<code>&#8211;short</code></dt>
 <dd>
-<dd>Short listing format.</p>
-<dt> <code>-t</code>|<code>&#8211;test</code></p>
+</dd><dd>Short listing format.</dd>
+<dt> <code>-t</code>|<code>&#8211;test</code></dt>
 <dd>
-<dd>Run in test mode. Commands will not update metadata. This is implemented by disabling all metadata writing but nevertheless returning success to the calling function. This may lead to unusual error messages in multi-stage operations if a tool relies on reading back metadata it believes has changed but hasn&#8217;t.</p>
-<dt> <code>-u</code>|<code>&#8211;uuid</code></p>
+</dd><dd>Run in test mode. Commands will not update metadata. This is implemented by disabling all metadata writing but nevertheless returning success to the calling function. This may lead to unusual error messages in multi-stage operations if a tool relies on reading back metadata it believes has changed but hasn&#8217;t.</dd>
+<dt> <code>-u</code>|<code>&#8211;uuid</code></dt>
 <dd>
-<dd>Show UUIDs in addition to device names.</p>
-<dt> <code>-v</code>|<code>&#8211;verbose</code> &#8230;</p>
+</dd><dd>Show UUIDs in addition to device names.</dd>
+<dt> <code>-v</code>|<code>&#8211;verbose</code> &#8230;</dt>
 <dd>
-<dd>Set verbose level. Repeat from 1 to 4 times to increase the detail of messages sent to stdout and stderr.</p>
-<dt> <code>&#8211;version</code></p>
+</dd><dd>Set verbose level. Repeat from 1 to 4 times to increase the detail of messages sent to stdout and stderr.</dd>
+<dt> <code>&#8211;version</code></dt>
 <dd>
-<dd>Display version information.</p>
-<dt> <code>-y</code>|<code>&#8211;yes</code></p>
+</dd><dd>Display version information.</dd>
+<dt> <code>-y</code>|<code>&#8211;yes</code></dt>
 <dd>
-<dd>Do not prompt for confirmation interactively but always assume the answer yes. Use with extreme caution. (For automatic no, see -qq.)</dl>
+</dd><dd>Do not prompt for confirmation interactively but always assume the answer yes. Use with extreme caution. (For automatic no, see -qq.)</dd></dl>
 <h2>Variables</h2>
 <dl>
-<dt> <i>PV</i></p>
+<dt> <i>PV</i></dt>
 <dd>
-<dd>Physical Volume name, a device path under /dev. For commands managing physical extents, a PV positional arg generally accepts a suffix indicating a range (or multiple ranges) of physical extents (PEs). When the first PE is omitted, it defaults to the start of the device, and when the last PE is omitted it defaults to end. Start and end range (inclusive): <i>PV</i>[<code>:</code><i>PE</i><code>&#8211;</code><i>PE</i>]&#8230; Start and length range (counting from 0): <i>PV</i>[<code>:</code><i>PE</i><code>+</code><i>PE</i>]&#8230;</p>
-<dt> <i>String</i></p>
+</dd><dd>Physical Volume name, a device path under /dev. For commands managing physical extents, a PV positional arg generally accepts a suffix indicating a range (or multiple ranges) of physical extents (PEs). When the first PE is omitted, it defaults to the start of the device, and when the last PE is omitted it defaults to end. Start and end range (inclusive): <i>PV</i>[<code>:</code><i>PE</i><code>&#8211;</code><i>PE</i>]&#8230; Start and length range (counting from 0): <i>PV</i>[<code>:</code><i>PE</i><code>+</code><i>PE</i>]&#8230;</dd>
+<dt> <i>String</i></dt>
 <dd>
-<dd>See the option description for information about the string content.</p>
-<dt> <i>Size</i>[UNIT]</p>
+</dd><dd>See the option description for information about the string content.</dd>
+<dt> <i>Size</i>[UNIT]</dt>
 <dd>
-<dd>Size is an input number that accepts an optional unit. Input units are always treated as base two values, regardless of capitalization, e.g. &#8216;k&#8217; and &#8216;K&#8217; both refer to 1024. The default input unit is specified by letter, followed by |UNIT. UNIT represents other possible input units: <code>bBsSkKmMgGtTpPeE</code>. b|B is bytes, s|S is sectors of 512 bytes, k|K is kilobytes, m|M is megabytes, g|G is gigabytes, t|T is terabytes, p|P is petabytes, e|E is exabytes. (This should not be confused with the output control &#8211;units, where capital letters mean multiple of 1000.)</dl>
+</dd><dd>Size is an input number that accepts an optional unit. Input units are always treated as base two values, regardless of capitalization, e.g. &#8216;k&#8217; and &#8216;K&#8217; both refer to 1024. The default input unit is specified by letter, followed by |UNIT. UNIT represents other possible input units: <code>bBsSkKmMgGtTpPeE</code>. b|B is bytes, s|S is sectors of 512 bytes, k|K is kilobytes, m|M is megabytes, g|G is gigabytes, t|T is terabytes, p|P is petabytes, e|E is exabytes. (This should not be confused with the output control &#8211;units, where capital letters mean multiple of 1000.)</dd></dl>
 <h2>Environment Variables</h2>
 <p>See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for information about environment variables used by lvm. For example, LVM_VG_NAME can generally be substituted for a required VG parameter.</p>
 <h2>See Also</h2>

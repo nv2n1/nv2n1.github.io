@@ -14,10 +14,10 @@ description: "clear_bit – Clears a bit in memory"
 <p><i>nr</i></p>
 <dl>
 <dd>
-<dd>Bit to clear</dl>
+</dd><dd>Bit to clear</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>Address to start counting from</dl>
+<dd>Address to start counting from</dd></dl>
 <h2>Description</h2>
 <p><code>clear_bit</code> is atomic and may not be reordered. However, it does not contain a memory barrier, so if it is used for locking purposes, you should call <code>smp_mb__before_atomic</code> and/or <code>smp_mb__after_atomic</code> in order to ensure changes are visible on other processors.</p>
 <h2>Copyright</h2>

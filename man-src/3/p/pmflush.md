@@ -18,7 +18,7 @@ description: "pmprintf, pmflush – print formatted output in a window or to sta
 <h2>Environment</h2>
 <p>The environment variable <code>PCP_STDERR</code> controls the output technique used by <code>pmflush</code>:</p>
 <dl>
-<dd>If <code>PCP_STDERR</code> is unset, the text is written onto the <i>stderr</i> stream of the caller. </p>
+<dd>If <code>PCP_STDERR</code> is unset, the text is written onto the <i>stderr</i> stream of the caller. </dd>
 <p> If <code>PCP_STDERR</code> is set to the literal reserved word <code>DISPLAY</code> then the text will be displayed as a GUI dialog using <code>xconfirm</code>(1). </p>
 <p> If <code>PCP_STDERR</code> is set to any other value then <code>pmflush</code> interprets the value as a file name and appends the text to that file. The file is created if it doesn&#8217;t already exist, and in this case if the file creation fails, then <i>stderr</i> is used instead).</dl>
 <h2>Files</h2>
@@ -28,3 +28,4 @@ description: "pmprintf, pmflush – print formatted output in a window or to sta
 <p> For either routine, a negative value is returned if an error was encountered, and this can be passed to <code><a href="/docs/linux/man/3-pmerrstr/">pmErrStr</a></code>(3) to obtain the associated error message.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pmdbg/">pmdbg</a></code>(1), <code><a href="/docs/linux/man/3-fprintf/">fprintf</a></code>(3), <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3), <code><a href="/docs/linux/man/3-pmerrstr/">pmErrStr</a></code>(3) and <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3). </p>
+</p>

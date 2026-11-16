@@ -14,24 +14,24 @@ description: "upstart-dbus-bridge – Bridge between Upstart and D-Bus"
 <p><code>upstart-dbus-bridge</code> receives information about D-Bus signals and creates <code><a href="/docs/linux/man/8-init/">init</a></code>(8) events for them. With no options, monitors signals on the D-Bus system bus and emits an Upstart event called <i>dbus</i> via a D-Bus system bus connection to Upstart. When run with <code>&#8211;user</code>, monitors signals on the users D-Bus session bus and emits Upstart events via the private D-Bus connection to the users Session Init. See <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) and for further details. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;always</code></p>
-<dd>Always emit events on receipt of D-Bus signal regardless of whether jobs care about them.</p>
-<dt><code>&#8211;daemon</code></p>
-<dd>Detach and run in the background.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Enable debugging output.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Show brief usage summary.</p>
-<dt><code>&#8211;session</code></p>
-<dd>Monitor signals on the D-Bus session bus.</p>
-<dt><code>&#8211;system</code></p>
-<dd>Monitor signals on the D-Bus system bus.</p>
-<dt><code>&#8211;user</code></p>
-<dd>User-session mode: connect to Upstart via the user session rather than over the D-Bus system bus.</p>
-<dt><code>&#8211;bus-name</code></p>
-<dd>Set a name for the bus to be passed as an additional argument to the event under the property BUS. Used to distinguish multiple D-Bus bridges.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Enable verbose output.</dl>
+<dt><code>&#8211;always</code></dt>
+<dd>Always emit events on receipt of D-Bus signal regardless of whether jobs care about them.</dd>
+<dt><code>&#8211;daemon</code></dt>
+<dd>Detach and run in the background.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Enable debugging output.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Show brief usage summary.</dd>
+<dt><code>&#8211;session</code></dt>
+<dd>Monitor signals on the D-Bus session bus.</dd>
+<dt><code>&#8211;system</code></dt>
+<dd>Monitor signals on the D-Bus system bus.</dd>
+<dt><code>&#8211;user</code></dt>
+<dd>User-session mode: connect to Upstart via the user session rather than over the D-Bus system bus.</dd>
+<dt><code>&#8211;bus-name</code></dt>
+<dd>Set a name for the bus to be passed as an additional argument to the event under the property BUS. Used to distinguish multiple D-Bus bridges.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Enable verbose output.</dd></dl>
 <h2>Restrictions</h2>
 <p>D-Bus signals emitted by Upstart itself are ignored.</p>
 <h2>Author</h2>

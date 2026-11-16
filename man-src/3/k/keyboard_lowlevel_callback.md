@@ -16,7 +16,6 @@ description: "keyboard_lowlevel_callback – User specified low level keyboard e
 <p> If set, this function is called by the keyboard handler in response to every keyboard event, both presses (including keyboard repeat rate) and releases. It will be passed a raw keyboard scancode byte (scancodes are 7 bits long), with the top bit (8th bit) clear if the key has been pressed or set if it was released. This routine executes in an interrupt context, so it must be in locked memory. Example: </p>
 <pre><code>
 volatile int key_down, key_up;
-
 void keypress_watcher(int scancode)
 {
     if (scancode &amp; 0x80) {
@@ -26,9 +25,7 @@ void keypress_watcher(int scancode)
     }
 }
 END_OF_FUNCTION(keypress_watcher)
-
 ...
-
     install_timer();
 LOCK_FUNCTION(silence_g_key);
 LOCK_VARIABLE(key_down);
@@ -37,9 +34,7 @@ install_keyboard();
 keyboard_lowlevel_callback = keypress_watcher;
 /* Disable keyboard repeat to get typewriter effect. */
 set_keyboard_rate(0, 0);
-
 ...
-
     while (game_loop)
 {
     if (key_down) {

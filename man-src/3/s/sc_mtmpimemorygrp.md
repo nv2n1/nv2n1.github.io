@@ -11,41 +11,19 @@ description: "sc::MTMPIMemoryGrp –"
 <p> This <code>MemoryGrp</code> class requires a MT-safe MPI implementation.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;memmtmpi.h&gt;</code></pre>
 <p> Inherits <code>sc::ActiveMsgMemoryGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>MTMPIMemoryGrp (const Ref&lt; MessageGrp &gt; &amp;msg, const Ref&lt; ThreadGrp &gt; &amp;th, MPI_Comm comm=MPI_COMM_WORLD)
-
-
 Construct a MTMPIMemoryGrp given a MessageGrp, ThreadGrp, and an MPI communicator.
-
-
 MTMPIMemoryGrp (const Ref&lt; KeyVal &gt; &amp;)
-
-
 Construct a MTMPIMemoryGrp given a KeyVal input object.
-
-
 void activate ()
-
-
 Activate is called before the memory is to be used.
-
-
 void deactivate ()
-
-
 Deactivate is called after the memory has been used.
-
-
 void sync ()
-
-
 Synchronizes all the nodes.
-
-
-
 Friends</code></pre>
 <p> class <code>MTMPIThread</code></p>
 <h2>Detailed Description</h2>

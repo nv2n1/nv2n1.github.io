@@ -19,7 +19,7 @@ description: "upscli_splitaddr – split a listening address into its components
 <dl>
 <dd>
 <pre>&lt;hostname&gt;[:&lt;port&gt;]</pre>
-</dl>
+</dd></dl>
 <p> Definitions without an explicit port value receive the default value of 3493.</p>
 <h2>Memory Usage</h2>
 <p>You must <code><a href="/docs/linux/man/3-free/">free</a></code>(3) the pointer <i>hostname</i> when you are done with it to avoid memory leaks.</p>

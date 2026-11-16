@@ -11,7 +11,6 @@ description: "sc::OneBodyDerivIntV3 –"
 <p> This implements one body derivative integrals in the IntV3 library.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;obintv3.h&gt;</code></pre>
 <p> Inherits <code>sc::OneBodyDerivInt</code>.</p>
 <h3>Public Member Functions</h3>

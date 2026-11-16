@@ -15,11 +15,11 @@ netdev_lower_state_changed - Dispatch event about lower device state change
 <h2>Arguments</h2>
 
 <i>lower_dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>lower_state_info</i>
-<dl><dd>state to dispatch</dl>
+<dl><dd>state to dispatch</dd></dl>
 
 <h2>Description</h2>
 

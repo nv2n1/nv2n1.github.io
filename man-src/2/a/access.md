@@ -22,13 +22,11 @@ int faccessat2(int dirfd, const char *pathname, int mode, int flags);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>faccessat</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _ATFILE_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _ATFILE_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>access</code>() checks whether the calling process can access the file <i>pathname</i>. If <i>pathname</i> is a symbolic link, it is dereferenced. </p>
@@ -43,10 +41,10 @@ int faccessat2(int dirfd, const char *pathname, int mode, int flags);
 <p> If <i>pathname</i> is absolute, then <i>dirfd</i> is ignored. </p>
 <p> <i>flags</i> is constructed by ORing together zero or more of the following values:</p>
 <dl>
-<dt><code>AT_EACCESS</code></p>
-<dd> Perform access checks using the effective user and group IDs. By default, <code>faccessat</code>() uses the real IDs (like <code>access</code>()).</p>
-<dt><code>AT_SYMLINK_NOFOLLOW</code></p>
-<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead return information about the link itself.</dl>
+<dt><code>AT_EACCESS</code></dt>
+<dd> Perform access checks using the effective user and group IDs. By default, <code>faccessat</code>() uses the real IDs (like <code>access</code>()).</dd>
+<dt><code>AT_SYMLINK_NOFOLLOW</code></dt>
+<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead return information about the link itself.</dd></dl>
 <p> See <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) for an explanation of the need for <code>faccessat</code>().</p>
 <h3>faccessat2()</h3>
 <p> The description of <code>faccessat</code>() given above corresponds to POSIX.1 and to the implementation provided by glibc. However, the glibc implementation was an imperfect emulation (see BUGS) that papered over the fact that the raw Linux <code>faccessat</code>() system call does not have a <i>flags</i> argument. To allow for a proper implementation, Linux 5.8 added the <code>faccessat2</code>() system call, which supports the <i>flags</i> argument and allows a correct implementation of the <code>faccessat</code>() wrapper function.</p>
@@ -55,38 +53,38 @@ int faccessat2(int dirfd, const char *pathname, int mode, int flags);
 <h2>ERRORS</h2>
 <p> <code>access</code>() and <code>faccessat</code>() shall fail if:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The requested access would be denied to the file, or search permission is denied for one of the directories in the path prefix of <i>pathname</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A component of <i>pathname</i> does not exist or is a dangling symbolic link.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</p>
-<dt><code>EROFS</code></p>
-<dd> Write permission was requested for a file on a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The requested access would be denied to the file, or search permission is denied for one of the directories in the path prefix of <i>pathname</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A component of <i>pathname</i> does not exist or is a dangling symbolic link.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</dd>
+<dt><code>EROFS</code></dt>
+<dd> Write permission was requested for a file on a read-only filesystem.</dd></dl>
 <p> <code>access</code>() and <code>faccessat</code>() may fail if:</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>mode</i> was incorrectly specified.</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ETXTBSY</code></p>
-<dd> Write access was requested to an executable which is being executed.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>mode</i> was incorrectly specified.</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ETXTBSY</code></dt>
+<dd> Write access was requested to an executable which is being executed.</dd></dl>
 <p> The following additional errors can occur for <code>faccessat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid flag specified in <i>flags</i>.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid flag specified in <i>flags</i>.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>faccessat</code>() was added to Linux in kernel 2.6.16; library support was added to glibc in version 2.4. </p>
 <p> <code>faccessat2</code>() was added to Linux in version 5.8.</p>

@@ -11,7 +11,6 @@ PMIx_Initialized - Check if PMIxInit_ has been called
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;pmix.h&gt;
-
 int PMIx_Initialized(void);</code></pre>
 
 <h2>Arguments</h2>

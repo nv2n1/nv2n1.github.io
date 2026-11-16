@@ -11,9 +11,7 @@ std::sqrt(std::valarray) - std::sqrt(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;valarray&gt;
-
     template &lt;class T&gt;
-
     valarray&lt;T&gt; sqrt(const valarray&lt;T&gt; &amp;va);</code></pre> 
 For each element in va computes the square root of the value of the element. 
 
@@ -55,10 +53,8 @@ The function can be implemented with the return type different from std::valarra
 
 Finds real roots of multiple quadratic equations. 
  // Run this code <pre><code>#include &lt;valarray&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::valarray&lt;double&gt; a(1, 8);
     std::valarray&lt;double&gt; b{1, 2, 3, 4, 5, 6, 7, 8};

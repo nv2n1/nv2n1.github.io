@@ -11,13 +11,9 @@ std::emit_on_flush,std::no_emit_on_flush - std::emit_on_flush,std::no_emit_on_fl
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ostream&gt;
-
 template&lt; class CharT, class Traits &gt;                                                         (1) (since C++20)
-
 std::basic_ostream&lt;CharT, Traits&gt;&amp; emit_on_flush( std::basic_ostream&lt;CharT, Traits&gt;&amp; os );
-
 template&lt; class CharT, class Traits &gt;                                                         (2) (since C++20)
-
 std::basic_ostream&lt;CharT, Traits&gt;&amp; no_emit_on_flush( std::basic_ostream&lt;CharT, Traits&gt;&amp; os );</code></pre> 
 If os.rdbuf() actually points to a std::basic_syncbuf&lt;CharT, Traits, Allocator&gt; buf, toggles whether it emits (i.e., transmits data to the underlying stream buffer) when flushed: 
 1) calls buf.set_emit_on_sync(true) 

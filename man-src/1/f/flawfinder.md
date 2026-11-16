@@ -17,12 +17,12 @@ description: "flawfinder – find potential security flaws (\"hits\") in source 
 <p> Not every hit is actually a security vulnerability, and not every security vulnerability is necessarily found. Nevertheless, flawfinder can be an aid in finding and removing security vulnerabilities. A common way to use flawfinder is to first apply flawfinder to a set of source code and examine the highest-risk items. Then, use &#8211;inputs to examine the input locations, and check to make sure that only legal and safe input values are accepted from untrusted users. </p>
 <p> Once you&#8217;ve audited a program, you can mark source code lines that are actually fine but cause spurious warnings so that flawfinder will stop complaining about them. To mark a line so that these warnings are suppressed, put a specially-formatted comment either on the same line (after the source code) or all by itself in the previous line. The comment must have one of the two following formats:</p>
 <dl>
-<dt>*</p>
+<dt>*</dt>
 <dd>
-&nbsp;<wbr>//&nbsp;<wbr>Flawfinder: ignore</p>
-<dt>*</p>
+&nbsp;<wbr>//&nbsp;<wbr>Flawfinder: ignore</dd>
+<dt>*</dt>
 <dd>
-&nbsp;<wbr>/*&nbsp;<wbr>Flawfinder: ignore&nbsp;<wbr>*/</dl>
+&nbsp;<wbr>/*&nbsp;<wbr>Flawfinder: ignore&nbsp;<wbr>*/</dd></dl>
 <p> Note that, for compatibility&#8217;s sake, you can replace &quot;Flawfinder:&quot; with &quot;ITS4:&quot; or &quot;RATS:&quot; in these specially-formatted comments. Since it&#8217;s possible that such lines are wrong, you can use the &#8220;&#8211;neverignore&#8221; option, which causes flawfinder to never ignore any line no matter what the comments say. Thus, responses that would otherwise be ignored would be included (or, more confusingly, &#8211;neverignore ignores the ignores). This comment syntax is actually a more general syntax for special directives to flawfinder, but currently only ignoring lines is supported. </p>
 <p> Flawfinder uses an internal database called the &#8220;ruleset&#8221;; the ruleset identifies functions that are common causes of security flaws. The standard ruleset includes a large number of different potential problems, including both general issues that can impact any C/C++ program, as well as a number of specific Unix-like and Windows functions that are especially problematic. As noted above, every potential security flaw found in a given source code file (matching an entry in the ruleset) is called a &#8220;hit,&#8221; and the set of hits found during any particular run of the program is called the &#8220;hitlist.&#8221; Hitlists can be saved (using &#8211;savehitlist), reloaded back for redisplay (using &#8211;loadhitlist), and you can show only the hits that are different from another run (using &#8211;diffhitlist). </p>
 <p> Any filename given on the command line will be examined (even if it doesn&#8217;t have a usual C/C++ filename extension); thus you can force flawfinder to examine any specific files you desire. While searching directories recursively, flawfinder only opens and examines regular files that have C/C++ filename extensions. Flawfinder presumes that, files are C/C++ files if they have the extensions &quot;.c&quot;, &quot;.h&quot;, &quot;.ec&quot;, &quot;.ecp&quot;, &quot;.pgc&quot;, &quot;.C&quot;, &quot;.cpp&quot;, &quot;.CPP&quot;, &quot;.cxx&quot;, &quot;.cc&quot;, &quot;.CC&quot;, &quot;.pcc&quot;, &quot;.hpp&quot;, or &quot;.H&quot;. The filename &#8220;-&#8221; means the standard input. To prevent security problems, special files (such as device special files and named pipes) are always skipped, and by default symbolic links are skipped, </p>
@@ -33,33 +33,34 @@ description: "flawfinder – find potential security flaws (\"hits\") in source 
 <p> If the source code is in a subdirectory named xyzzy, you would probably start by opening a text window and using flawfinder&#8217;s default settings, to analyze the program and report a prioritized list of potential security vulnerabilities (the &#8220;less&#8221; just makes sure the results stay on the screen):</p>
 <dl>
 <dt>
-<dd> flawfinder xyzzy | less</dl>
+</dt><dd> flawfinder xyzzy | less</dd></dl>
 <p> At this point, you will a large number of entries; each entry begins with a filename, a colon, a line number, a risk level in brackets (where 5 is the most risky), a category, the name of the function, and a description of why flawfinder thinks the line is a vulnerability. Flawfinder normally sorts by risk level, showing the riskiest items first; if you have limited time, it&#8217;s probably best to start working on the riskiest items and continue until you run out of time. If you want to limit the display to risks with only a certain risk level or higher, use the &#8211;minlevel option. If you&#8217;re getting an extraordinary number of false positives because variable names look like dangerous function names, use the -F option to remove reports about them. If you don&#8217;t understand the error message, please see documents such as the <i>Writing Secure Programs for Linux and Unix HOWTO</i> at <a rel="nofollow" href="http://www.dwheeler.com/secure-programs">http://www.dwheeler.com/secure-programs</a> which provides more information on writing secure programs. </p>
 <p> Once you identify the problem and understand it, you can fix it. Occasionally you may want to re-do the analysis, both because the line numbers will change <i>and</i> to make sure that the new code doesn&#8217;t introduce yet a different vulnerability. </p>
 <p> If you&#8217;ve determined that some line isn&#8217;t really a problem, and you&#8217;re sure of it, you can insert just before or on the offending line a comment like</p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>/*&nbsp;<wbr>Flawfinder: ignore&nbsp;<wbr>*/</dl>
+</dt><dd>
+&nbsp;<wbr>/*&nbsp;<wbr>Flawfinder: ignore&nbsp;<wbr>*/</dd></dl>
 <p> to keep them from showing up in the output. </p>
 <p> Once you&#8217;ve done that, you should go back and search for the program&#8217;s inputs, to make sure that the program strongly filters any of its untrusted inputs. Flawfinder can identify many program inputs by using the &#8211;inputs option, like this:</p>
 <dl>
 <dt>
-<dd> flawfinder &#8211;inputs xyzzy</dl>
+</dt><dd> flawfinder &#8211;inputs xyzzy</dd></dl>
 <p> Flawfinder can integrate well with text editors and integrated development environments; see the examples for more information. </p>
 <p> Flawfinder includes many other options, including ones to create HTML versions of the output (useful for prettier displays). The next section describes those options in more detail. </p>
 <h2>OPTIONS</h2>
 <p> Flawfinder has a number of options, which can be grouped into options that control its own documentation, select which hits to display, select the output format, and perform hitlist management. </p>
 <h3>Documentation</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show usage (help) information. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Shows (just) the version number and exits. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Show usage (help) information. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows (just) the version number and exits. </dd>
 </dl>
 <h3>Selecting Hits to Display</h3>
 <dl>
-<dt><code>&#8211;patch</code><i>patchfile</i></p>
-<dd> <code>-P</code><i>patchfile</i> Only report hits that are changed by the given patch file. The patch file must be in unified diff format (e.g., the output of &quot;diff -u old new&quot; or &quot;svn diff&quot;), where the new files are the ones that are being examined by flawfinder. The line numbers given in the patch file are used to determine which lines were changed, so if you have modified the files since the patch file was created, regenerate the patch file first. Beware that the file names of the new files given in the patch file must match exactly, including upper/lower case, path prefix, and directory separator (\ vs. /). Only unified diff format is accepted (either GNU diff or svn diff output is okay); if you have a different format, again regenerate it first. Only hits that occur on resultant changed lines, or immediately above and below them, are reported. This option implies &#8211;neverignore. </p>
-<dt><code>&#8211;allowlink</code></p>
+<dt><code>&#8211;patch</code><i>patchfile</i></dt>
+<dd> <code>-P</code><i>patchfile</i> Only report hits that are changed by the given patch file. The patch file must be in unified diff format (e.g., the output of &quot;diff -u old new&quot; or &quot;svn diff&quot;), where the new files are the ones that are being examined by flawfinder. The line numbers given in the patch file are used to determine which lines were changed, so if you have modified the files since the patch file was created, regenerate the patch file first. Beware that the file names of the new files given in the patch file must match exactly, including upper/lower case, path prefix, and directory separator (\ vs. /). Only unified diff format is accepted (either GNU diff or svn diff output is okay); if you have a different format, again regenerate it first. Only hits that occur on resultant changed lines, or immediately above and below them, are reported. This option implies &#8211;neverignore. </dd>
+<dt><code>&#8211;allowlink</code></dt>
 <dd> Allow the use of symbolic links; normally symbolic links are skipped. Don&#8217;t use this option if you&#8217;re analyzing code by others; attackers could do many things to cause problems for an analysis with this option enabled. For example, an attacker could insert symbolic links to files such as /etc/passwd (leaking information about the file) or create a circular loop, which would cause flawfinder to run &#8220;forever&#8221;. Another problem with enabling this option is that if the same file is referenced multiple times using symbolic links, it will be analyzed multiple times (and thus reported multiple times). Note that flawfinder already includes some protection against symbolic links to special file types such as device file types (e.g., /dev/zero or C:\mystuff
+</dd></dl>

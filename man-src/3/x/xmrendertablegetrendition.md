@@ -17,10 +17,10 @@ description: "XmRenderTableGetRendition — A convenience function that matches 
 <p><code>XmRenderTableGetRendition</code> searches <i>table</i> and returns a copy of the rendition whose <code>XmNtag</code> resource matches <i>tag</i>. If no rendition matches, then NULL is returned. This function is to be used for just one rendition match. </p>
 <p> It is the responsibility of the caller to free the returned rendition with the <code>XmRenditionFree</code> function.</p>
 <dl COMPACT>
-<dt><i>table</i></p>
-<dd>Specifies the table containing renditions to be searched.</p>
-<dt><i>tag</i></p>
-<dd>Specifies the tag to search for.</dl>
+<dt><i>table</i></dt>
+<dd>Specifies the table containing renditions to be searched.</dd>
+<dt><i>tag</i></dt>
+<dd>Specifies the tag to search for.</dd></dl>
 <h2>Return</h2>
 <p>Returns NULL if there is no match; otherwise, this function returns a new <code>XmRendition</code>.</p>
 <h2>Related</h2>

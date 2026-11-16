@@ -11,10 +11,8 @@ std::experimental::ranges::invoke - std::experimental::ranges::invoke
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / functional&gt;
-
     template &lt;class F, class... Args&gt;
     (ranges TS)
-
         std::result_of_t&lt;F &amp;&amp; (Args &amp;&amp; ...)&gt; invoke(F &amp;&amp;f, Args &amp;&amp;...args);
 Invoke the Callable object f with the parameters args, and return the result, as if by return INVOKE(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);
 , where INVOKE(f, t1, t2, ..., tN)

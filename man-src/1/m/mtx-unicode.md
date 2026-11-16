@@ -15,8 +15,8 @@ description: "mtx-unicode – Checker for char-dat.lua"
 <p> <code>Checker for char-dat.lua</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;whatever</code></p>
-<dd> do whatever</dl>
+<dt><code>&#8211;whatever</code></dt>
+<dd> do whatever</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -15,7 +15,7 @@ snd_pcm_running - Check whether the substream is in a running state
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>substream to check</dl>
+<dl><dd></dd><dd>substream to check</dd></dl>
 
 <h2>Description</h2>
 

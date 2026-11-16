@@ -23,12 +23,9 @@ bool isfinite( IntegralType arg ); <code>(4)</code> <i>(since C++11)</i><br />
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfloat&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; &quot;isfinite(NaN) = &quot; &lt;&lt; std::isfinite(NAN) &lt;&lt; '

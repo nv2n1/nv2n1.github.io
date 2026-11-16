@@ -10,8 +10,6 @@ description: "sasl_setprop – Set a SASL property"
 <p>sasl_setprop &#8211; Set a SASL property</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_setprop(sasl_conn_t *conn,
 int propnum,
 const void * pvalue)</code></pre>

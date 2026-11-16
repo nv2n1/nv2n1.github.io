@@ -15,66 +15,66 @@ description: "ipmiutil_reset – perform a hardware reset on the system"
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-c</p>
-<dd>Power Cycle the system chassis</p>
-<dt>-d</p>
-<dd>Power Down the system chassis</p>
-<dt>-n</p>
-<dd>Send NMI to the system</p>
-<dt>-u</p>
-<dd>Power Up the system chassis</p>
-<dt>-r</p>
-<dd>Hard Reset the system chassis</p>
-<dt>-D</p>
-<dd>Do a soft shutdown of the OS, and then power down. Note that remote soft shutdown (-D -N) for Intel S5000 baseboard requires ipmiutil getevt -a running on the target server.</p>
-<dt>-o</p>
-<dd>Do a soft shutdown of the OS, and then reset. Note that remote soft shutdown (-o -N) for Intel S5000 baseboard requires ipmiutil getevt -a running on the target server.</p>
-<dt>-k</p>
-<dd>Do a cold reset to restart the BMC firmware.</p>
-<dt>-m 002000s</p>
-<dd>Perform these function for a specific MC (e.g. bus 00, sa 20, lun 00). The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</p>
-<dt>-b</p>
-<dd>Do a hard reset and reboot to the BIOS Setup menu, for this reboot only.</p>
-<dt>-e</p>
-<dd>Do a hard reset to EFI, if IPMI EFI boot is enabled, for this reboot only.</p>
-<dt>-f</p>
-<dd>Do a hard reset to Floppy/Removable, for this reboot only.</p>
-<dt>-h</p>
-<dd>Do a hard reset to a Hard Disk, for this reboot only.</p>
-<dt>-i</p>
-<dd>Set the boot Initiator mailbox string, usually for PXE use. The string must be less than 78 characters.</p>
-<dt>-j</p>
-<dd>Set the IANA number used for the boot Initiator mailbox string.</p>
-<dt>-p</p>
-<dd>Do a hard reset and network boot to PXE server, for this reboot only.</p>
-<dt>-s</p>
-<dd>Do a hard reset and reboot to the Service/Diagnostic Partition, for this reboot only. Reboots to the default if no service partition is configured.</p>
-<dt>-v</p>
-<dd>Do a hard reset to DVD/CDROM Media, for this reboot only.</p>
-<dt>-w</p>
-<dd>Wait for BMC ready after a reset before exiting the utility.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-y</p>
-<dd>Yes, try to persist any boot options used [-befhprsv]. This requires the IPMI firmware to ask the BIOS to change boot order settings, so it may not be supported by all BMC firmware vendors.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-c</dt>
+<dd>Power Cycle the system chassis</dd>
+<dt>-d</dt>
+<dd>Power Down the system chassis</dd>
+<dt>-n</dt>
+<dd>Send NMI to the system</dd>
+<dt>-u</dt>
+<dd>Power Up the system chassis</dd>
+<dt>-r</dt>
+<dd>Hard Reset the system chassis</dd>
+<dt>-D</dt>
+<dd>Do a soft shutdown of the OS, and then power down. Note that remote soft shutdown (-D -N) for Intel S5000 baseboard requires ipmiutil getevt -a running on the target server.</dd>
+<dt>-o</dt>
+<dd>Do a soft shutdown of the OS, and then reset. Note that remote soft shutdown (-o -N) for Intel S5000 baseboard requires ipmiutil getevt -a running on the target server.</dd>
+<dt>-k</dt>
+<dd>Do a cold reset to restart the BMC firmware.</dd>
+<dt>-m 002000s</dt>
+<dd>Perform these function for a specific MC (e.g. bus 00, sa 20, lun 00). The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</dd>
+<dt>-b</dt>
+<dd>Do a hard reset and reboot to the BIOS Setup menu, for this reboot only.</dd>
+<dt>-e</dt>
+<dd>Do a hard reset to EFI, if IPMI EFI boot is enabled, for this reboot only.</dd>
+<dt>-f</dt>
+<dd>Do a hard reset to Floppy/Removable, for this reboot only.</dd>
+<dt>-h</dt>
+<dd>Do a hard reset to a Hard Disk, for this reboot only.</dd>
+<dt>-i</dt>
+<dd>Set the boot Initiator mailbox string, usually for PXE use. The string must be less than 78 characters.</dd>
+<dt>-j</dt>
+<dd>Set the IANA number used for the boot Initiator mailbox string.</dd>
+<dt>-p</dt>
+<dd>Do a hard reset and network boot to PXE server, for this reboot only.</dd>
+<dt>-s</dt>
+<dd>Do a hard reset and reboot to the Service/Diagnostic Partition, for this reboot only. Reboots to the default if no service partition is configured.</dd>
+<dt>-v</dt>
+<dd>Do a hard reset to DVD/CDROM Media, for this reboot only.</dd>
+<dt>-w</dt>
+<dd>Wait for BMC ready after a reset before exiting the utility.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-y</dt>
+<dd>Yes, try to persist any boot options used [-befhprsv]. This requires the IPMI firmware to ask the BIOS to change boot order settings, so it may not be supported by all BMC firmware vendors.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-icmd/">icmd</a>(8) <a href="/docs/linux/man/8-idiscover/">idiscover</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) <a href="/docs/linux/man/8-igetevent/">igetevent</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ilan/">ilan</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-isensor/">isensor</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) </p>

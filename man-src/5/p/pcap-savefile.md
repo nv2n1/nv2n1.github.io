@@ -69,17 +69,17 @@ description: "pcap-savefile – libpcap savefile format"
 </tr>
 </table>
 </table>
-</dl>
+</dd></dl>
 <p> All fields in the per-file header are in the byte order of the host writing the file. Normally, the first field in the per-file header is a 4-byte magic number, with the value 0xa1b2c3d4. The magic number, when read by a host with the same byte order as the host that wrote the file, will have the value 0xa1b2c3d4, and, when read by a host with the opposite byte order as the host that wrote the file, will have the value 0xd4c3b2a1. That allows software reading the file to determine whether the byte order of the host that wrote the file is the same as the byte order of the host on which the file is being read, and thus whether the values in the per-file and per-packet headers need to be byte-swapped. </p>
 <p> If the magic number has the value 0xa1b23c4d (with the two nibbles of the two lower-order bytes of the magic number swapped), which would be read as 0xa1b23c4d by a host with the same byte order as the host that wrote the file and as 0x4d3cb2a1 by a host with the opposite byte order as the host that wrote the file, the file format is the same as for regular files, except that the time stamps for packets are given in seconds and nanoseconds rather than seconds and microseconds. </p>
 <p> Following this are:</p>
 <dl>
-<dd>A 2-byte file format major version number; the current version number is 2.</p>
-<dd>A 2-byte file format minor version number; the current version number is 4.</p>
-<dd>A 4-byte time zone offset; this is always 0.</p>
-<dd>A 4-byte number giving the accuracy of time stamps in the file; this is always 0.</p>
-<dd>A 4-byte number giving the &quot;snapshot length&quot; of the capture; packets longer than the snapshot length are truncated to the snapshot length, so that, if the snapshot length is <i>N</i>, only the first <i>N</i> bytes of a packet longer than <i>N</i> bytes will be saved in the capture.</p>
-<dd>a 4-byte number giving the link-layer header type for packets in the capture; see <code><a href="/docs/linux/man/7-pcap-linktype/">pcap-linktype</a></code>(7) for the <code>LINKTYPE_</code> values that can appear in this field.</dl>
+<dd>A 2-byte file format major version number; the current version number is 2.</dd>
+<dd>A 2-byte file format minor version number; the current version number is 4.</dd>
+<dd>A 4-byte time zone offset; this is always 0.</dd>
+<dd>A 4-byte number giving the accuracy of time stamps in the file; this is always 0.</dd>
+<dd>A 4-byte number giving the &quot;snapshot length&quot; of the capture; packets longer than the snapshot length are truncated to the snapshot length, so that, if the snapshot length is <i>N</i>, only the first <i>N</i> bytes of a packet longer than <i>N</i> bytes will be saved in the capture.</dd>
+<dd>a 4-byte number giving the link-layer header type for packets in the capture; see <code><a href="/docs/linux/man/7-pcap-linktype/">pcap-linktype</a></code>(7) for the <code>LINKTYPE_</code> values that can appear in this field.</dd></dl>
 <p> Following the per-file header are zero or more packets; each packet begins with a per-packet header, which is immediately followed by the raw packet data. The format of the per-packet header is:</p>
 <dl>
 <dd>
@@ -120,7 +120,7 @@ description: "pcap-savefile – libpcap savefile format"
 </tr>
 </table>
 </table>
-</dl>
+</dd></dl>
 <p> All fields in the per-packet header are in the byte order of the host writing the file. The per-packet header begins with a time stamp giving the approximate time the packet was captured; the time stamp consists of a 4-byte value, giving the time in seconds since January 1, 1970, 00:00:00 UTC, followed by a 4-byte value, giving the time in microseconds or nanoseconds since that second, depending on the magic number in the file header. Following that are a 4-byte value giving the number of bytes of captured data that follow the per-packet header and a 4-byte value giving the number of bytes that would have been present had the packet not been truncated by the snapshot length. The two lengths will be equal if the number of bytes of packet data are less than or equal to the snapshot length.</p>
 <h2>See Also</h2>
 <p>pcap(3PCAP), <a href="/docs/linux/man/7-pcap-linktype/">pcap-linktype</a>(7) </p>

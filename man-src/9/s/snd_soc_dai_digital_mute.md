@@ -15,15 +15,15 @@ snd_soc_dai_digital_mute - configure DAI system or master clock.
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>mute</i>
-<dl><dd>mute enable</dl>
+<dl><dd>mute enable</dd></dl>
  
 
  <i>direction</i>
-<dl><dd>stream to mute</dl>
+<dl><dd>stream to mute</dd></dl>
 
 <h2>Description</h2>
 

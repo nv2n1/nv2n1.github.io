@@ -15,11 +15,11 @@ pci_intx - enables/disables PCI INTx for device dev
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>the PCI device to operate on</dl>
+<dl><dd></dd><dd>the PCI device to operate on</dd></dl>
  
 
  <i>enable</i>
-<dl><dd>boolean: whether to enable or disable PCI INTx</dl>
+<dl><dd>boolean: whether to enable or disable PCI INTx</dd></dl>
 
 <h2>Description</h2>
 

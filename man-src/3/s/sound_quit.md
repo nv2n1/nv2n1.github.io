@@ -64,10 +64,10 @@ description: "SDL_sound.h –"
 <p> This macro fills in a <code>Sound_Version</code> structure with the version of the library you compiled against. This is determined by what header the compiler uses. Note that if you dynamically linked the library, you might have a slightly newer or older version at runtime. That version can be determined with <code>Sound_GetLinkedVersion()</code>, which, unlike SOUND_VERSION, is not a macro. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> A pointer to a <code>Sound_Version</code> struct to initialize.</dl>
+<dd><i>x</i> A pointer to a <code>Sound_Version</code> struct to initialize.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Version</code> </p>
+<dd><code>Sound_Version</code> </dd>
 <p> <code>Sound_GetLinkedVersion</code></dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>Sound_SampleFlags</code></h3>
@@ -76,23 +76,23 @@ description: "SDL_sound.h –"
 <pre> if (sample-&gt;flags &amp; SOUND_SAMPLEFLAG_ERROR) { dosomething(); }</pre>
 <p><code>See also:</code></p>
 <dl COMPACT>
-<dd>Sound_SampleNew </p>
+<dd>Sound_SampleNew </dd>
 <p> Sound_SampleNewFromFile </p>
 <p> Sound_SampleDecode </p>
 <p> Sound_SampleDecodeAll </p>
 <p> Sound_SampleSeek</dl>
 <p> <code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>SOUND_SAMPLEFLAG_NONE </i></p>
-<dd>No special attributes.</p>
-<dt><i>SOUND_SAMPLEFLAG_CANSEEK </i></p>
-<dd>Sample can seek to arbitrary points.</p>
-<dt><i>SOUND_SAMPLEFLAG_EOF </i></p>
-<dd>End of input stream.</p>
-<dt><i>SOUND_SAMPLEFLAG_ERROR </i></p>
-<dd>Unrecoverable error.</p>
-<dt><i>SOUND_SAMPLEFLAG_EAGAIN </i></p>
-<dd>Function would block, or temp error.</dl>
+<dt><i>SOUND_SAMPLEFLAG_NONE </i></dt>
+<dd>No special attributes.</dd>
+<dt><i>SOUND_SAMPLEFLAG_CANSEEK </i></dt>
+<dd>Sample can seek to arbitrary points.</dd>
+<dt><i>SOUND_SAMPLEFLAG_EOF </i></dt>
+<dd>End of input stream.</dd>
+<dt><i>SOUND_SAMPLEFLAG_ERROR </i></dt>
+<dd>Unrecoverable error.</dd>
+<dt><i>SOUND_SAMPLEFLAG_EAGAIN </i></dt>
+<dd>Function would block, or temp error.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>const <code>Sound_DecoderInfo</code> ** Sound_AvailableDecoders (void)</h3>
 <p>Get a list of sound formats supported by this version of SDL_sound. </p>
@@ -108,28 +108,28 @@ description: "SDL_sound.h –"
 <p>The return values are pointers to static internal memory, and should be considered READ ONLY, and never freed. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>READ ONLY Null-terminated array of READ ONLY structures.</dl>
+<dd>READ ONLY Null-terminated array of READ ONLY structures.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_DecoderInfo</code></dl>
+<dd><code>Sound_DecoderInfo</code></dd></dl>
 <h3>void Sound_ClearError (void)</h3>
 <p>Clear the current error message. </p>
 <p> The next call to <code>Sound_GetError()</code> after <code>Sound_ClearError()</code> will return NULL. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_GetError</code></dl>
+<dd><code>Sound_GetError</code></dd></dl>
 <h3>Uint32 Sound_Decode (<code>Sound_Sample</code> * sample)</h3>
 <p>Decode more of the sound data in a <code>Sound_Sample</code>. </p>
 <p> It will decode at most sample-&gt;buffer_size bytes into sample-&gt;buffer in the desired format, and return the number of decoded bytes. If sample-&gt;buffer_size bytes could not be decoded, then please refer to sample-&gt;flags to determine if this was an end-of-stream or error condition. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sample</i> Do more decoding to this <code>Sound_Sample</code>.</dl>
+<dd><i>sample</i> Do more decoding to this <code>Sound_Sample</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>number of bytes decoded into sample-&gt;buffer. If it is less than sample-&gt;buffer_size, then you should check sample-&gt;flags to see what the current state of the sample is (EOF, error, read again).</dl>
+<dd>number of bytes decoded into sample-&gt;buffer. If it is less than sample-&gt;buffer_size, then you should check sample-&gt;flags to see what the current state of the sample is (EOF, error, read again).</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_DecodeAll</code> </p>
+<dd><code>Sound_DecodeAll</code> </dd>
 <p> <code>Sound_SetBufferSize</code> </p>
 <p> <code>Sound_Seek</code> </p>
 <p> <code>Sound_Rewind</code></dl>
@@ -140,33 +140,33 @@ description: "SDL_sound.h –"
 <p> When decoding the sample in its entirety, the work is done one buffer at a time. That is, sound is decoded in sample-&gt;buffer_size blocks, and appended to a continually-growing buffer until the decoding completes. That means that this function will need enough RAM to hold approximately sample-&gt;buffer_size bytes plus the complete decoded sample at most. The larger your buffer size, the less overhead this function needs, but beware the possibility of paging to disk. Best to make this user-configurable if the sample isn&#8217;t specific and small. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sample</i> Do all decoding for this <code>Sound_Sample</code>.</dl>
+<dd><i>sample</i> Do all decoding for this <code>Sound_Sample</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>number of bytes decoded into sample-&gt;buffer. You should check sample-&gt;flags to see what the current state of the sample is (EOF, error, read again).</dl>
+<dd>number of bytes decoded into sample-&gt;buffer. You should check sample-&gt;flags to see what the current state of the sample is (EOF, error, read again).</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Decode</code> </p>
+<dd><code>Sound_Decode</code> </dd>
 <p> <code>Sound_SetBufferSize</code></dl>
 <h3>void Sound_FreeSample (<code>Sound_Sample</code> * sample)</h3>
 <p>Dispose of a <code>Sound_Sample</code>. </p>
 <p> This will also close/dispose of the SDL_RWops that was used at creation time, so there&#8217;s no need to keep a reference to that around. The <code>Sound_Sample</code> pointer is invalid after this call, and will almost certainly result in a crash if you attempt to keep using it. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sample</i> The <code>Sound_Sample</code> to delete.</dl>
+<dd><i>sample</i> The <code>Sound_Sample</code> to delete.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_NewSample</code> </p>
+<dd><code>Sound_NewSample</code> </dd>
 <p> <code>Sound_NewSampleFromFile</code></dl>
 <h3>const char * Sound_GetError (void)</h3>
 <p>Get the last SDL_sound error message as a null-terminated string. </p>
 <p> This will be NULL if there&#8217;s been no error since the last call to this function. The pointer returned by this call points to an internal buffer, and should not be deallocated. Each thread has a unique error state associated with it, but each time a new error message is set, it will overwrite the previous one associated with that thread. It is safe to call this function at anytime, even before <code>Sound_Init()</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>READ ONLY string of last error message.</dl>
+<dd>READ ONLY string of last error message.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_ClearError</code></dl>
+<dd><code>Sound_ClearError</code></dd></dl>
 <h3>void Sound_GetLinkedVersion (<code>Sound_Version</code> * ver)</h3>
 <p>Get the version of SDL_sound that is linked against your program. </p>
 <p> If you are using a shared library (DLL) version of SDL_sound, then it is possible that it will be different than the version you compiled against. </p>
@@ -182,20 +182,20 @@ description: "SDL_sound.h –"
 <p>This function may be called safely at any time, even before <code>Sound_Init()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ver</i> <code>Sound_Version</code> structure to fill with shared library&#8217;s version.</dl>
+<dd><i>ver</i> <code>Sound_Version</code> structure to fill with shared library&#8217;s version.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Version</code> </p>
+<dd><code>Sound_Version</code> </dd>
 <p> <code>SOUND_VERSION</code></dl>
 <h3>Sound_Init (void)</h3>
 <p>Initialize SDL_sound. </p>
 <p> This must be called before any other SDL_sound function (except perhaps <code>Sound_GetLinkedVersion()</code>). You should call SDL_Init() before calling this. <code>Sound_Init()</code> will attempt to call SDL_Init(SDL_INIT_AUDIO), just in case. This is a safe behaviour, but it may not configure SDL to your liking by itself. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>.</dl>
+<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Quit</code></dl>
+<dd><code>Sound_Quit</code></dd></dl>
 <h3><code>Sound_Sample</code> * Sound_NewSample (SDL_RWops * rw, const char * ext, <code>Sound_AudioInfo</code> * desired, Uint32 bufferSize)</h3>
 <p>Start decoding a new sound sample. </p>
 <p> The data is read via an SDL_RWops structure (see SDL_rwops.h in the SDL include directory), so it may be coming from memory, disk, network stream, etc. The (ext) parameter is merely a hint to determining the correct decoder; if you specify, for example, &#8216;mp3&#8217; for an extension, and one of the decoders lists that as a handled extension, then that decoder is given first shot at trying to claim the data for decoding. If none of the extensions match (or the extension is NULL), then every decoder examines the data to determine if it can handle it, until one accepts it. In such a case your SDL_RWops will need to be capable of rewinding to the start of the stream. </p>
@@ -211,13 +211,13 @@ description: "SDL_sound.h –"
 <dd><i>rw</i> SDL_RWops with sound data.<br />
  <i>ext</i> File extension normally associated with a data format. Can usually be NULL.<br />
  <i>desired</i> Format to convert sound data into. Can usually be NULL, if you don&#8217;t need conversion.<br />
- <i>bufferSize</i> Size, in bytes, to allocate for the decoding buffer.</dl>
+ <i>bufferSize</i> Size, in bytes, to allocate for the decoding buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Sample</code> pointer, which is used as a handle to several other SDL_sound APIs. NULL on error. If error, use <code>Sound_GetError()</code> to see what went wrong.</dl>
+<dd><code>Sound_Sample</code> pointer, which is used as a handle to several other SDL_sound APIs. NULL on error. If error, use <code>Sound_GetError()</code> to see what went wrong.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_NewSampleFromFile</code> </p>
+<dd><code>Sound_NewSampleFromFile</code> </dd>
 <p> <code>Sound_SetBufferSize</code> </p>
 <p> <code>Sound_Decode</code> </p>
 <p> <code>Sound_DecodeAll</code> </p>
@@ -231,13 +231,13 @@ description: "SDL_sound.h –"
 <dl COMPACT>
 <dd><i>filename</i> file containing sound data.<br />
  <i>desired</i> Format to convert sound data into. Can usually be NULL, if you don&#8217;t need conversion.<br />
- <i>bufferSize</i> size, in bytes, of initial read buffer.</dl>
+ <i>bufferSize</i> size, in bytes, of initial read buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Sample</code> pointer, which is used as a handle to several other SDL_sound APIs. NULL on error. If error, use <code>Sound_GetError()</code> to see what went wrong.</dl>
+<dd><code>Sound_Sample</code> pointer, which is used as a handle to several other SDL_sound APIs. NULL on error. If error, use <code>Sound_GetError()</code> to see what went wrong.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_NewSample</code> </p>
+<dd><code>Sound_NewSample</code> </dd>
 <p> <code>Sound_SetBufferSize</code> </p>
 <p> <code>Sound_Decode</code> </p>
 <p> <code>Sound_DecodeAll</code> </p>
@@ -252,10 +252,10 @@ description: "SDL_sound.h –"
 <p> You should call this BEFORE SDL_Quit(). This will NOT call SDL_Quit() for you! </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>. If failure, state of SDL_sound is undefined, and probably badly screwed up.</dl>
+<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>. If failure, state of SDL_sound is undefined, and probably badly screwed up.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Init</code></dl>
+<dd><code>Sound_Init</code></dd></dl>
 <h3>int Sound_Rewind (<code>Sound_Sample</code> * sample)</h3>
 <p>Rewind a sample to the start. </p>
 <p> Restart a sample at the start of its waveform data, as if newly created with <code>Sound_NewSample()</code>. If successful, the next call to Sound_Decode[All]() will give audio data from the earliest point in the stream. </p>
@@ -265,13 +265,13 @@ description: "SDL_sound.h –"
 <p> On success, ERROR, EOF, and EAGAIN are cleared from sample-&gt;flags. The ERROR flag is set on error. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sample</i> The <code>Sound_Sample</code> to rewind.</dl>
+<dd><i>sample</i> The <code>Sound_Sample</code> to rewind.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>.</dl>
+<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Seek</code></dl>
+<dd><code>Sound_Seek</code></dd></dl>
 <h3>int Sound_Seek (<code>Sound_Sample</code> * sample, Uint32 ms)</h3>
 <p>Seek to a different point in a sample. </p>
 <p> Reposition a sample&#8217;s stream. If successful, the next call to Sound_Decode[All]() will give audio data from the offset you specified. </p>
@@ -284,13 +284,13 @@ description: "SDL_sound.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>sample</i> The <code>Sound_Sample</code> to seek.<br />
- <i>ms</i> The new position, in milliseconds from start of sample.</dl>
+ <i>ms</i> The new position, in milliseconds from start of sample.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>.</dl>
+<dd>nonzero on success, zero on error. Specifics of the error can be gleaned from <code>Sound_GetError()</code>.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Rewind</code></dl>
+<dd><code>Sound_Rewind</code></dd></dl>
 <h3>int Sound_SetBufferSize (<code>Sound_Sample</code> * sample, Uint32 new_size)</h3>
 <p>Change the current buffer size for a sample. </p>
 <p> If the buffer size could be changed, then the sample-&gt;buffer and sample-&gt;buffer_size fields will reflect that. If they could not be changed, then your original sample state is preserved. If the buffer is shrinking, the data at the end of buffer is truncated. If the buffer is growing, the contents of the new space at the end is undefined until you decode more into it or initialize it yourself. </p>
@@ -298,13 +298,14 @@ description: "SDL_sound.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>sample</i> The <code>Sound_Sample</code> whose buffer to modify.<br />
- <i>new_size</i> The desired size, in bytes, of the new buffer.</dl>
+ <i>new_size</i> The desired size, in bytes, of the new buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>non-zero if buffer size changed, zero on failure.</dl>
+<dd>non-zero if buffer size changed, zero on failure.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_Decode</code> </p>
+<dd><code>Sound_Decode</code> </dd>
 <p> <code>Sound_DecodeAll</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for SDL_sound from the source code.</p>
+</p>

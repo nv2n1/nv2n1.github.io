@@ -21,8 +21,8 @@ description: "pamstack – stack planes of multiple PAM images into one PAM imag
 <p> pamstack -tupletype=RGBA myimage.ppm myalpha.pgm | pamtouil &gt;myimage.uil </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-tupletype </code><i>tupletype</i></p>
-<dd> This specified the tuple type name to be recorded in the output. You may use any string up to 255 characters. Some programs recognize some names. If you omit this option, the default tuple type name is null. </p>
+<dt><code>-tupletype </code><i>tupletype</i></dt>
+<dd> This specified the tuple type name to be recorded in the output. You may use any string up to 255 characters. Some programs recognize some names. If you omit this option, the default tuple type name is null. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pam/">pam</a></code>(5) </p>

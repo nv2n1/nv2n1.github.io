@@ -29,18 +29,18 @@ extern _LIB_VERSION_TYPE _LIB_VERSION;
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;double retval;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Function return value&nbsp;*/ } </p>
 <p> The <i>type</i> field has one of the following values:</p>
 <dl>
-<dt><code>DOMAIN</code></p>
-<dd> A domain error occurred (the function argument was outside the range for which the function is defined). The return value depends on the function; <i>errno</i> is set to <code>EDOM</code>.</p>
-<dt><code>SING</code></p>
-<dd> A pole error occurred (the function result is an infinity). The return value in most cases is <code>HUGE</code> (the largest single precision floating-point number), appropriately signed. In most cases, <i>errno</i> is set to <code>EDOM</code>.</p>
-<dt><code>OVERFLOW</code></p>
-<dd> An overflow occurred. In most cases, the value <code>HUGE</code> is returned, and <i>errno</i> is set to <code>ERANGE</code>.</p>
-<dt><code>UNDERFLOW</code></p>
-<dd> An underflow occurred. 0.0 is returned, and <i>errno</i> is set to <code>ERANGE</code>.</p>
-<dt><code>TLOSS</code></p>
-<dd> Total loss of significance. 0.0 is returned, and <i>errno</i> is set to <code>ERANGE</code>.</p>
-<dt><code>PLOSS</code></p>
-<dd> Partial loss of significance. This value is unused on glibc (and many other systems).</dl>
+<dt><code>DOMAIN</code></dt>
+<dd> A domain error occurred (the function argument was outside the range for which the function is defined). The return value depends on the function; <i>errno</i> is set to <code>EDOM</code>.</dd>
+<dt><code>SING</code></dt>
+<dd> A pole error occurred (the function result is an infinity). The return value in most cases is <code>HUGE</code> (the largest single precision floating-point number), appropriately signed. In most cases, <i>errno</i> is set to <code>EDOM</code>.</dd>
+<dt><code>OVERFLOW</code></dt>
+<dd> An overflow occurred. In most cases, the value <code>HUGE</code> is returned, and <i>errno</i> is set to <code>ERANGE</code>.</dd>
+<dt><code>UNDERFLOW</code></dt>
+<dd> An underflow occurred. 0.0 is returned, and <i>errno</i> is set to <code>ERANGE</code>.</dd>
+<dt><code>TLOSS</code></dt>
+<dd> Total loss of significance. 0.0 is returned, and <i>errno</i> is set to <code>ERANGE</code>.</dd>
+<dt><code>PLOSS</code></dt>
+<dd> Partial loss of significance. This value is unused on glibc (and many other systems).</dd></dl>
 <p> The <i>arg1</i> and <i>arg2</i> fields are the arguments supplied to the function (<i>arg2</i> is undefined for functions that take only one argument). </p>
 <p> The <i>retval</i> field specifies the return value that the math function will return to its caller. The programmer-defined <code>matherr</code>() can modify this field to change the return value of the math function. </p>
 <p> If the <code>matherr</code>() function returns zero, then the system sets <i>errno</i> as described above, and may print an error message on standard error (see below). </p>
@@ -51,7 +51,7 @@ extern _LIB_VERSION_TYPE _LIB_VERSION;
 <p> The table uses the following notations and abbreviations: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>x first argument to function</td>
@@ -99,7 +99,7 @@ extern _LIB_VERSION_TYPE _LIB_VERSION;
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <table>
 <tr VALIGN=top>
 <td><code>Function</code></td>

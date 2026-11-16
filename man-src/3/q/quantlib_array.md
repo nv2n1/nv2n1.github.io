@@ -37,7 +37,7 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p> v *= w and similar operation involving two vectors are shortcuts for $ rall i : v_i = v_i imes w_i $ </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>all arrays involved in an algebraic expression must have the same size.</dl>
+<dd>all arrays involved in an algebraic expression must have the same size.</dd></dl>
 <p> const <code>Array</code> &amp; <code>operator+=</code> (const <code>Array</code> &amp;) </p>
 <p> const <code>Array</code> &amp; <code>operator+=</code> (Real) </p>
 <p> const <code>Array</code> &amp; <code>operator-=</code> (const <code>Array</code> &amp;) </p>
@@ -101,7 +101,7 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p> This class implements the concept of vector as used in linear algebra. As such, it is <code>not</code> meant to be used as a container &#8211; std::vector should be used instead. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>construction of arrays is checked in a number of cases</dl>
+<dd>construction of arrays is checked in a number of cases</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>Real DotProduct (const <code>Array</code> &amp;, const <code>Array</code> &amp;) [related]</h3>
 <h3>const <code>Disposable</code>&lt; <code>Array</code> &gt; operator+ (const <code>Array</code> &amp; v) [related]</h3>

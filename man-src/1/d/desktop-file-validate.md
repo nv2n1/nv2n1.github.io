@@ -19,12 +19,12 @@ description: "desktop-file-validate – Validate desktop entry files"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;no-hints</i></p>
-<dd> Do not output hints about things that might be improved in the desktop file.</p>
-<dt><i>&#8211;no-warn-deprecated</i></p>
-<dd> Do not warn about usage of deprecated items that were defined in previous versions of the specification.</p>
-<dt><i>&#8211;warn-kde</i></p>
-<dd> Warn about usage of KDE extensions to the specification. This includes the use of the <code>KDE Desktop Entry</code> group, of the <code>ServiceTypes</code>, <code>DocPath</code>, <code>Keywords</code>, <code>InitialPreference</code>, <code>Dev</code>, <code>FSType</code>, <code>MountPoint</code>, <code>ReadOnly</code>, <code>UnmountIcon</code> keys, or of the <code>Service</code>, <code>ServiceType</code> and <code>FSDevice</code> types.</dl>
+<dt><i>&#8211;no-hints</i></dt>
+<dd> Do not output hints about things that might be improved in the desktop file.</dd>
+<dt><i>&#8211;no-warn-deprecated</i></dt>
+<dd> Do not warn about usage of deprecated items that were defined in previous versions of the specification.</dd>
+<dt><i>&#8211;warn-kde</i></dt>
+<dd> Warn about usage of KDE extensions to the specification. This includes the use of the <code>KDE Desktop Entry</code> group, of the <code>ServiceTypes</code>, <code>DocPath</code>, <code>Keywords</code>, <code>InitialPreference</code>, <code>Dev</code>, <code>FSType</code>, <code>MountPoint</code>, <code>ReadOnly</code>, <code>UnmountIcon</code> keys, or of the <code>Service</code>, <code>ServiceType</code> and <code>FSDevice</code> types.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>desktop-file-validate</i> program, please report these on <a rel="nofollow" href="https://bugs.freedesktop.org.">https://bugs.freedesktop.org.</a></p>
 <h2>SEE ALSO</h2>

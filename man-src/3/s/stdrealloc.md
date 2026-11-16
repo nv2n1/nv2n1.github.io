@@ -11,7 +11,6 @@ std::realloc - std::realloc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     void *realloc(void *ptr, std::size_t new_size);</code></pre> 
 Reallocates the given area of memory. It must be previously allocated by std::malloc(), std::calloc() or std::realloc() and not yet freed with std::free(), otherwise, the results are undefined. 
 The reallocation is done by either: 
@@ -49,15 +48,11 @@ Objects of such type can be accessed after their storage is reallocated even if 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdlib&gt;
-
 #include &lt;new&gt;
-
 #include &lt;cassert&gt;
 class MallocDynamicBuffer
-
 {
     char *p;
-
   public:
     explicit MallocDynamicBuffer(std::size_t initial = 0)
         : p(nullptr)
@@ -90,7 +85,6 @@ class MallocDynamicBuffer
     }
 };
 int main()
-
 {
     MallocDynamicBuffer buf1(1024);
     buf1[5] = 'f';

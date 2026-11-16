@@ -11,27 +11,19 @@ std::pop_heap - std::pop_heap
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (until C++ 20)
-
         void pop_heap(RandomIt first, RandomIt last);
-
 template &lt;class RandomIt&gt;
 (since C++ 20)
-
     constexpr void pop_heap(RandomIt first, RandomIt last);
 (1)
-
     template &lt;class RandomIt, class Compare&gt;
     (until C++ 20)
-
         void pop_heap(RandomIt first, RandomIt last, Compare comp);
 (2)
-
     template &lt;class RandomIt, class Compare&gt;
     (since C++ 20)
-
         constexpr void pop_heap(RandomIt first, RandomIt last, Compare comp);</code></pre> 
 Swaps the value in the position first and the value in the position last-1 and makes the subrange [first, last-1) into a max heap. This has the effect of removing the first (largest) element from the heap defined by the range [first, last). 
 The first version of the function uses operator&lt; to compare the elements, the second uses the given comparison function comp. 
@@ -69,12 +61,9 @@ A max heap is a range of elements [f,l) that has the following properties:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4, 1, 5, 9};
     std::make_heap(v.begin(), v.end());

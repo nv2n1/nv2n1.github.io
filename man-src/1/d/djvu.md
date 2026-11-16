@@ -48,42 +48,42 @@ description: "DjVu – DjVu and DjVuLibre."
 <p> These two releases form the basis of our initial DjVuLibre software. We modified the build system to comply with the expectations of the open source community. Various bugs and portability issues have been fixed. We also tried to make it simpler to use and install, while preserving the essential structure of the Lizardtech releases. </p>
 <p> The DjVuLibre software contains the following components:</p>
 <dl>
-<dt><code><a href="/docs/linux/man/1-bzz/">bzz</a></code>(1)</p>
-<dd> A general purpose compression command line program. Many internal DjVu data structures are compressed using this technique.</p>
-<dt><code><a href="/docs/linux/man/1-c44/">c44</a></code>(1)</p>
-<dd> A DjVuPhoto command line encoder. This state-of-the-art wavelet compressor produces DjVuPhoto images from PPM or JPEG images.</p>
-<dt><code><a href="/docs/linux/man/1-cjb2/">cjb2</a></code>(1)</p>
-<dd> A DjVuBitonal command line encoder. This soft-pattern-matching compressor produces DjVuBitonal images from PBM images. It can encode images without loss, or introduce small changes in order to improve the compression ratio. The lossless encoding mode is competitive with that of the Lizardtech commercial encoders.</p>
-<dt><code><a href="/docs/linux/man/1-cpaldjvu/">cpaldjvu</a></code>(1)</p>
-<dd> A DjVuDocument command line encoder for images with few colors. This encoder is well suited to compressing images with a small number of distinct colors (e.g. screen-shots). The dominant color is encoded by the background layer. The other colors are encoded by the foreground layer.</p>
-<dt><code><a href="/docs/linux/man/1-csepdjvu/">csepdjvu</a></code>(1)</p>
-<dd> A DjVuDocument command line encoder for separated images. This encoder takes a file containing pre-segmented foreground and background images and produces a DjVuDocument image.</p>
-<dt><code><a href="/docs/linux/man/1-ddjvu/">ddjvu</a></code>(1)</p>
-<dd> A command line decoder for DjVu images. This program produces a <font SIZE="-1">PNM</font> image representing any segment of any page of a DjVu document at any resolution.</p>
-<dt><code><a href="/docs/linux/man/1-djview/">djview</a></code>(1)</p>
-<dd> A stand-alone viewer for DjVu images. This sophisticated viewer displays DjVu documents. It implements document navigation as well as fast zooming and panning.</p>
-<dt><code><a href="/docs/linux/man/1-nsdejavu/">nsdejavu</a></code>(1)</p>
-<dd> A web browser plugin for viewing DjVu images. This small plugin allows for viewing DjVu documents from web browsers. It internally uses djview to perform the actual work.</p>
-<dt><code><a href="/docs/linux/man/1-djvups/">djvups</a></code>(1)</p>
-<dd> A command line tool for converting DjVu documents into PostScript .</p>
-<dt><code><a href="/docs/linux/man/1-djvm/">djvm</a></code>(1)</p>
-<dd> A command line tool for manipulating bundled multi-page DjVu documents. This program is often used to collect individual pages and produce a bundled document.</p>
-<dt><code><a href="/docs/linux/man/1-djvmcvt/">djvmcvt</a></code>(1)</p>
-<dd> A command line tool for converting bundled documents to indirect documents and conversely.</p>
-<dt><code><a href="/docs/linux/man/1-djvused/">djvused</a></code>(1)</p>
-<dd> A powerful command line tool for manipulating multi-page documents, creating or editing annotation chunks, creating or editing hidden text layers, pre-computing thumbnail images, and more&#8230;</p>
-<dt><code><a href="/docs/linux/man/1-djvutxt/">djvutxt</a></code>(1)</p>
-<dd> A command line tool to extract the hidden text from DjVu documents.</p>
-<dt><code><a href="/docs/linux/man/1-djvudump/">djvudump</a></code>(1)</p>
-<dd> A command line tool for inspecting DjVu files and displaying their internal structure.</p>
-<dt><code><a href="/docs/linux/man/1-djvuextract/">djvuextract</a></code>(1)</p>
-<dd> A command line tool for dis-assembling DjVu image files.</p>
-<dt><code><a href="/docs/linux/man/1-djvumake/">djvumake</a></code>(1)</p>
-<dd> A command line tool for assembling DjVu image files.</p>
-<dt><code><a href="/docs/linux/man/1-djvuserve/">djvuserve</a></code>(1)</p>
-<dd> A <font SIZE="-1">CGI</font> program for generating indirect multi-page DjVu documents on the fly.</p>
-<dt><code><a href="/docs/linux/man/1-djvutoxml/">djvutoxml</a></code>(1), <code><a href="/docs/linux/man/1-djvuxmlparser/">djvuxmlparser</a></code>(1)</p>
-<dd> Command line tools to edit DjVu metadata as XML files. </p>
+<dt><code><a href="/docs/linux/man/1-bzz/">bzz</a></code>(1)</dt>
+<dd> A general purpose compression command line program. Many internal DjVu data structures are compressed using this technique.</dd>
+<dt><code><a href="/docs/linux/man/1-c44/">c44</a></code>(1)</dt>
+<dd> A DjVuPhoto command line encoder. This state-of-the-art wavelet compressor produces DjVuPhoto images from PPM or JPEG images.</dd>
+<dt><code><a href="/docs/linux/man/1-cjb2/">cjb2</a></code>(1)</dt>
+<dd> A DjVuBitonal command line encoder. This soft-pattern-matching compressor produces DjVuBitonal images from PBM images. It can encode images without loss, or introduce small changes in order to improve the compression ratio. The lossless encoding mode is competitive with that of the Lizardtech commercial encoders.</dd>
+<dt><code><a href="/docs/linux/man/1-cpaldjvu/">cpaldjvu</a></code>(1)</dt>
+<dd> A DjVuDocument command line encoder for images with few colors. This encoder is well suited to compressing images with a small number of distinct colors (e.g. screen-shots). The dominant color is encoded by the background layer. The other colors are encoded by the foreground layer.</dd>
+<dt><code><a href="/docs/linux/man/1-csepdjvu/">csepdjvu</a></code>(1)</dt>
+<dd> A DjVuDocument command line encoder for separated images. This encoder takes a file containing pre-segmented foreground and background images and produces a DjVuDocument image.</dd>
+<dt><code><a href="/docs/linux/man/1-ddjvu/">ddjvu</a></code>(1)</dt>
+<dd> A command line decoder for DjVu images. This program produces a <font SIZE="-1">PNM</font> image representing any segment of any page of a DjVu document at any resolution.</dd>
+<dt><code><a href="/docs/linux/man/1-djview/">djview</a></code>(1)</dt>
+<dd> A stand-alone viewer for DjVu images. This sophisticated viewer displays DjVu documents. It implements document navigation as well as fast zooming and panning.</dd>
+<dt><code><a href="/docs/linux/man/1-nsdejavu/">nsdejavu</a></code>(1)</dt>
+<dd> A web browser plugin for viewing DjVu images. This small plugin allows for viewing DjVu documents from web browsers. It internally uses djview to perform the actual work.</dd>
+<dt><code><a href="/docs/linux/man/1-djvups/">djvups</a></code>(1)</dt>
+<dd> A command line tool for converting DjVu documents into PostScript .</dd>
+<dt><code><a href="/docs/linux/man/1-djvm/">djvm</a></code>(1)</dt>
+<dd> A command line tool for manipulating bundled multi-page DjVu documents. This program is often used to collect individual pages and produce a bundled document.</dd>
+<dt><code><a href="/docs/linux/man/1-djvmcvt/">djvmcvt</a></code>(1)</dt>
+<dd> A command line tool for converting bundled documents to indirect documents and conversely.</dd>
+<dt><code><a href="/docs/linux/man/1-djvused/">djvused</a></code>(1)</dt>
+<dd> A powerful command line tool for manipulating multi-page documents, creating or editing annotation chunks, creating or editing hidden text layers, pre-computing thumbnail images, and more&#8230;</dd>
+<dt><code><a href="/docs/linux/man/1-djvutxt/">djvutxt</a></code>(1)</dt>
+<dd> A command line tool to extract the hidden text from DjVu documents.</dd>
+<dt><code><a href="/docs/linux/man/1-djvudump/">djvudump</a></code>(1)</dt>
+<dd> A command line tool for inspecting DjVu files and displaying their internal structure.</dd>
+<dt><code><a href="/docs/linux/man/1-djvuextract/">djvuextract</a></code>(1)</dt>
+<dd> A command line tool for dis-assembling DjVu image files.</dd>
+<dt><code><a href="/docs/linux/man/1-djvumake/">djvumake</a></code>(1)</dt>
+<dd> A command line tool for assembling DjVu image files.</dd>
+<dt><code><a href="/docs/linux/man/1-djvuserve/">djvuserve</a></code>(1)</dt>
+<dd> A <font SIZE="-1">CGI</font> program for generating indirect multi-page DjVu documents on the fly.</dd>
+<dt><code><a href="/docs/linux/man/1-djvutoxml/">djvutoxml</a></code>(1), <code><a href="/docs/linux/man/1-djvuxmlparser/">djvuxmlparser</a></code>(1)</dt>
+<dd> Command line tools to edit DjVu metadata as XML files. </dd>
 </dl>
 <h2>DJVU ENCODERS AND ANY2DJVU</h2>
 <p> DjVuLibre comes with a variety of specialized encoders, <code><a href="/docs/linux/man/1-c44/">c44</a></code>(1) for photographic images, <code><a href="/docs/linux/man/1-cjb2/">cjb2</a></code>(1) for bitonal images, and <code><a href="/docs/linux/man/1-cpaldjvu/">cpaldjvu</a></code>(1) for images with few distinct colors. Although these encoders perform well in their specialized domain, they cannot handle complex tasks involving segmentation and multipage encoding. </p>
@@ -93,6 +93,6 @@ description: "DjVu – DjVu and DjVuLibre."
 <p> Numerous people have contributed to the DjVu source code during the last five years. Please submit a sourceforge bug report to update the following list.</p>
 <dl>
 <dt>
-<dd> Yoshua Bengio, L&eacute;on Bottou, Chakradhar Chandaluri, Regis M. Chaplin, Ming Chen, Parag Deshmukh, Royce Edwards, Andrew Erofeev, Praveen Guduru, Patrick Haffner, Paul G. Howard, Orlando Keise, Yann Le Cun, Artem Mikheev, Florin Nicsa, Joseph M. Orost, Steven Pigeon, Bill Riemers, Patrice Simard, Jeffery Triggs, Luc Vincent, Pascal Vincent. </p>
+</dt><dd> Yoshua Bengio, L&eacute;on Bottou, Chakradhar Chandaluri, Regis M. Chaplin, Ming Chen, Parag Deshmukh, Royce Edwards, Andrew Erofeev, Praveen Guduru, Patrick Haffner, Paul G. Howard, Orlando Keise, Yann Le Cun, Artem Mikheev, Florin Nicsa, Joseph M. Orost, Steven Pigeon, Bill Riemers, Patrice Simard, Jeffery Triggs, Luc Vincent, Pascal Vincent. </dd>
 </dl>
 <h2>Index</h2>

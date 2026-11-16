@@ -61,7 +61,6 @@ description: "zgossip – decentralized configuration management"
 //
 CZMQ_EXPORT void
 zgossip(zsock_t *pipe, void *args);
-
 //  Self test of this class
 CZMQ_EXPORT void
 zgossip_test(bool verbose);</code></pre>
@@ -69,28 +68,28 @@ zgossip_test(bool verbose);</code></pre>
 <p>Implements a gossip protocol for decentralized configuration management. Your applications nodes form a loosely connected network (which can have cycles), and publish name/value tuples. Each node re-distributes the new tuples it receives, so that the entire network eventually achieves a consistent state. The current design does not expire tuples. </p>
 <p> Provides these commands (sent as multipart strings to the actor): </p>
 <dl>
-<dd>&bull; BIND endpoint &#8212; binds the gossip service to specified endpoint</dl>
+<dd>&bull; BIND endpoint &#8212; binds the gossip service to specified endpoint</dd></dl>
 <dl>
-<dd>&bull; PORT &#8212; returns the last TCP port, if any, used for binding</dl>
+<dd>&bull; PORT &#8212; returns the last TCP port, if any, used for binding</dd></dl>
 <dl>
-<dd>&bull; LOAD configfile &#8212; load configuration from specified file</dl>
+<dd>&bull; LOAD configfile &#8212; load configuration from specified file</dd></dl>
 <dl>
-<dd>&bull; SET configpath value &#8212; set configuration path = value</dl>
+<dd>&bull; SET configpath value &#8212; set configuration path = value</dd></dl>
 <dl>
-<dd>&bull; SAVE configfile &#8212; save configuration to specified file</dl>
+<dd>&bull; SAVE configfile &#8212; save configuration to specified file</dd></dl>
 <dl>
-<dd>&bull; CONNECT endpoint &#8212; connect the gossip service to the specified peer</dl>
+<dd>&bull; CONNECT endpoint &#8212; connect the gossip service to the specified peer</dd></dl>
 <dl>
-<dd>&bull; PUBLISH key value &#8212; publish a key/value pair to the gossip cluster</dl>
+<dd>&bull; PUBLISH key value &#8212; publish a key/value pair to the gossip cluster</dd></dl>
 <dl>
-<dd>&bull; STATUS &#8212; return number of key/value pairs held by gossip service</dl>
+<dd>&bull; STATUS &#8212; return number of key/value pairs held by gossip service</dd></dl>
 <p> Returns these messages: </p>
 <dl>
-<dd>&bull; PORT number &#8212; reply to PORT command</dl>
+<dd>&bull; PORT number &#8212; reply to PORT command</dd></dl>
 <dl>
-<dd>&bull; STATUS number &#8212; reply to STATUS command</dl>
+<dd>&bull; STATUS number &#8212; reply to STATUS command</dd></dl>
 <dl>
-<dd>&bull; DELIVER key value &#8212; new tuple delivered from network</dl>
+<dd>&bull; DELIVER key value &#8212; new tuple delivered from network</dd></dl>
 <p> The gossip protocol distributes information around a loosely-connected network of gossip services. The information consists of name/value pairs published by applications at any point in the network. The goal of the gossip protocol is to create eventual consistency between all the using applications. </p>
 <p> The name/value pairs (tuples) can be used for configuration data, for status updates, for presence, or for discovery. When used for discovery, the gossip protocol works as an alternative to e.g. UDP beaconing. </p>
 <p> The gossip network consists of a set of loosely-coupled nodes that exchange tuples. Nodes can be connected across arbitrary transports, so the gossip network can have nodes that communicate over inproc, over IPC, and/or over TCP, at the same time. </p>
@@ -103,7 +102,7 @@ zgossip_test(bool verbose);</code></pre>
 <p> At present there is no way to expire tuples from the network. </p>
 <p> The assumptions in this design are: </p>
 <dl>
-<dd>&bull; The data set is slow-changing. Thus, the cost of the gossip protocol is irrelevant with respect to other traffic.</dl>
+<dd>&bull; The data set is slow-changing. Thus, the cost of the gossip protocol is irrelevant with respect to other traffic.</dd></dl>
 <h2>Example</h2>
 <p><code>From zgossip_test method</code>. </p>
 <pre><code>//  Test basic client-to-server operation of the protocol
@@ -112,28 +111,23 @@ assert(server);
 if (verbose)
     zstr_send(server, &quot;VERBOSE&quot;);
 zstr_sendx(server, &quot;BIND&quot;, &quot;inproc://zgossip&quot;, NULL);
-
 zsock_t *client = zsock_new(ZMQ_DEALER);
 assert(client);
 zsock_set_rcvtimeo(client, 2000);
 int rc = zsock_connect(client, &quot;inproc://zgossip&quot;);
 assert(rc == 0);
-
 //  Send HELLO, which gets no message
 zgossip_msg_t *message = zgossip_msg_new();
 zgossip_msg_set_id(message, ZGOSSIP_MSG_HELLO);
 zgossip_msg_send(message, client);
-
 //  Send PING, expect PONG back
 zgossip_msg_set_id(message, ZGOSSIP_MSG_PING);
 zgossip_msg_send(message, client);
 zgossip_msg_recv(message, client);
 assert(zgossip_msg_id(message) == ZGOSSIP_MSG_PONG);
 zgossip_msg_destroy(&amp;message);
-
 zactor_destroy(&amp;server);
 zsock_destroy(&amp;client);
-
 //  Test peer-to-peer operations
 zactor_t *base = zactor_new(zgossip, &quot;base&quot;);
 assert(base);
@@ -142,22 +136,18 @@ if (verbose)
 //  Set a 100msec timeout on clients so we can test expiry
 zstr_sendx(base, &quot;SET&quot;, &quot;server/timeout&quot;, &quot;100&quot;, NULL);
 zstr_sendx(base, &quot;BIND&quot;, &quot;inproc://base&quot;, NULL);
-
 zactor_t *alpha = zactor_new(zgossip, &quot;alpha&quot;);
 assert(alpha);
 zstr_sendx(alpha, &quot;CONNECT&quot;, &quot;inproc://base&quot;, NULL);
 zstr_sendx(alpha, &quot;PUBLISH&quot;, &quot;inproc://alpha-1&quot;, &quot;service1&quot;, NULL);
 zstr_sendx(alpha, &quot;PUBLISH&quot;, &quot;inproc://alpha-2&quot;, &quot;service2&quot;, NULL);
-
 zactor_t *beta = zactor_new(zgossip, &quot;beta&quot;);
 assert(beta);
 zstr_sendx(beta, &quot;CONNECT&quot;, &quot;inproc://base&quot;, NULL);
 zstr_sendx(beta, &quot;PUBLISH&quot;, &quot;inproc://beta-1&quot;, &quot;service1&quot;, NULL);
 zstr_sendx(beta, &quot;PUBLISH&quot;, &quot;inproc://beta-2&quot;, &quot;service2&quot;, NULL);
-
 //  got nothing
 zclock_sleep(200);
-
 zactor_destroy(&amp;base);
 zactor_destroy(&amp;alpha);
 zactor_destroy(&amp;beta);
@@ -171,7 +161,8 @@ zactor_destroy(&amp;beta);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

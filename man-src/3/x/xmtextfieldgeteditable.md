@@ -15,8 +15,8 @@ description: "XmTextFieldGetEditable — A TextField function that accesses the 
 <h2>Description</h2>
 <p><code>XmTextFieldGetEditable</code> accesses the edit permission state of the TextField widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns a Boolean value that indicates the state of the <code>XmNeditable</code> resource.</p>

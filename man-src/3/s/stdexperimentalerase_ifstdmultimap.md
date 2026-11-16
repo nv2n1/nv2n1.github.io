@@ -11,10 +11,8 @@ std::experimental::erase_if(std::multimap) - std::experimental::erase_if(std::mu
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / map&gt;
-
     template &lt;class Key, class T, class Compare, class Alloc, class Pred&gt;
     (library fundamentals TS v2)
-
         void erase_if(std::multimap&lt;Key, T, Compare, Alloc&gt; &amp;c, Pred pred);</code></pre> 
 Erases all elements that satisfy the predicate pred from the container. Equivalent to <pre><code>for (auto i = c.begin(), last = c.end(); i != last;) {
     if (pred(*i)) {

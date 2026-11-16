@@ -10,7 +10,6 @@ description: "std::numeric_limits<T>::quiet_NaN – std::numeric_limits<T>::quie
 <p>std::numeric_limits&lt;T&gt;::quiet_NaN &#8211; std::numeric_limits&lt;T&gt;::quiet_NaN</p>
 <h2>Synopsis</h2>
 <pre><code>static T quiet_NaN() throw();             (until C++11)
-
 static constexpr T quiet_NaN() noexcept;  (since C++11)</code></pre>
 <p>Returns the special value &quot;quiet not-a-number&quot;, as represented by the floating-point type T. Only meaningful if std::numeric_limits&lt;T&gt;::has_quiet_NaN == true. In IEEE 754, the most common binary representation of floating-point numbers, any value with all bits of the exponent set and at least one bit of the fraction set represents a NaN. It is implementation-defined which values of the fraction represent quiet or signaling NaNs, and whether the sign bit is meaningful. </p>
 <h2>Return value</h2>
@@ -41,12 +40,9 @@ long double implementation-defined </p>
 <p>Several ways to generate a NaN (the output string is compiler-specific)<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::numeric_limits&lt;double&gt;::quiet_NaN() &lt;&lt; ' '
               &lt;&lt; std::numeric_limits&lt;double&gt;::signaling_NaN() &lt;&lt; ' '

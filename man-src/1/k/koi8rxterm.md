@@ -18,8 +18,8 @@ description: "koi8rxterm – X terminal emulator for KOI8-R environments"
 <p> A similar wrapper, <code><a href="/docs/linux/man/1-uxterm/">uxterm</a>(1),</code> is available for Unicode UTF-8 environments.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>LC_ALL</code>, <code>LC_CTYPE</code>, <code>LANG</code></p>
-<dd> The values of these variables are checked, in order, to determine the character set used by the current locale.</dl>
+<dt><code>LC_ALL</code>, <code>LC_CTYPE</code>, <code>LANG</code></dt>
+<dd> The values of these variables are checked, in order, to determine the character set used by the current locale.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>koi8rxterm</code> was written by Branden Robinson and is very heavily based on <code>uxterm</code>, by Thomas Dickey. The assistance of Jurij Smakov was invaluable in sanity-checking its operation.</p>
 <h2>SEE ALSO</h2>

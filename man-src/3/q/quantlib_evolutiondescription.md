@@ -23,22 +23,22 @@ description: "QuantLib::EvolutionDescription – Market-model evolution descript
 <p>Market-model evolution description. </p>
 <p> This class stores:</p>
 <dl COMPACT>
-<dt>1.</p>
-<dd>evolutionTimes = the times defining the rates that are to be evolved,</p>
-<dt>2.</p>
-<dd>rateTimes = the times at which the rates need to be known,</p>
-<dt>3.</p>
-<dd>relevanceRates = which rates need to be known at each time.</dl>
+<dt>1.</dt>
+<dd>evolutionTimes = the times defining the rates that are to be evolved,</dd>
+<dt>2.</dt>
+<dd>rateTimes = the times at which the rates need to be known,</dd>
+<dt>3.</dt>
+<dd>relevanceRates = which rates need to be known at each time.</dd></dl>
 <p> This class is really just a tuple of evolution and rate times;</p>
 <dl COMPACT>
-<dt>*</p>
-<dd>there will be n+1 rate times expressing payment and reset times of forward rates.</p>
-<dt>*</p>
-<dd>there will be any number of evolution times.</p>
-<dt>*</p>
-<dd>we also store which part of the rates are relevant for pricing via relevance rates. The important part for the i-th step will then range from relevanceRates[i].first to relevanceRates[i].second. Default values for relevance rates will be 0 and n.</p>
-<dt>*</p>
-<dd>example for n = 5:</dl>
+<dt>*</dt>
+<dd>there will be n+1 rate times expressing payment and reset times of forward rates.</dd>
+<dt>*</dt>
+<dd>there will be any number of evolution times.</dd>
+<dt>*</dt>
+<dd>we also store which part of the rates are relevant for pricing via relevance rates. The important part for the i-th step will then range from relevanceRates[i].first to relevanceRates[i].second. Default values for relevance rates will be 0 and n.</dd>
+<dt>*</dt>
+<dd>example for n = 5:</dd></dl>
 <pre> |-----|-----|-----|-----|-----| (size = 6)
  t0 t1 t2 t3 t4 t5 rateTimes
  f0 f1 f2 f3 f4 forwardRates

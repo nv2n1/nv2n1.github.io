@@ -11,10 +11,8 @@ std::experimental::disjunction - std::experimental::disjunction
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / type_traits&gt;
-
     template &lt;class... B&gt;
     (library fundamentals TS v2)
-
         struct disjunction;</code></pre> 
 Forms the logical_disjunction of the type traits B..., effectively performing a logical or on the sequence of traits. 
 The specialization std::experimental::disjunction&lt;B1, ..., BN&gt; has a public and unambiguous base that is 

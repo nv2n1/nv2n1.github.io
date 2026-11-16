@@ -14,10 +14,10 @@ description: "snd_soc_dapm_force_enable_pin – force a pin to be enabled"
 <p><i>dapm</i></p>
 <dl>
 <dd>
-<dd>DAPM context</dl>
+</dd><dd>DAPM context</dd></dl>
 <p> <i>pin</i></p>
 <dl>
-<dd>pin name</dl>
+<dd>pin name</dd></dl>
 <h2>Description</h2>
 <p>Enables input/output pin regardless of any other state. This is intended for use with microphone bias supplies used in microphone jack detection.</p>
 <h2>Note</h2>

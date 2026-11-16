@@ -25,39 +25,39 @@ description: "struct_ccwgroup_driver – driver for ccw group devices"
 <h2>Members</h2>
 <p>setup</p>
 <dl>
-<dd>function called during device creation to setup the device</dl>
+<dd>function called during device creation to setup the device</dd></dl>
 <p> remove</p>
 <dl>
-<dd>function called on remove</dl>
+<dd>function called on remove</dd></dl>
 <p> set_online</p>
 <dl>
-<dd>function called when device is set online</dl>
+<dd>function called when device is set online</dd></dl>
 <p> set_offline</p>
 <dl>
-<dd>function called when device is set offline</dl>
+<dd>function called when device is set offline</dd></dl>
 <p> shutdown</p>
 <dl>
-<dd>function called when device is shut down</dl>
+<dd>function called when device is shut down</dd></dl>
 <p> prepare</p>
 <dl>
-<dd>prepare for pm state transition</dl>
+<dd>prepare for pm state transition</dd></dl>
 <p> complete</p>
 <dl>
-<dd>undo work done in <i>prepare</i></dl>
+<dd>undo work done in <i>prepare</i></dd></dl>
 <p> freeze</p>
 <dl>
-<dd>callback for freezing during hibernation snapshotting</dl>
+<dd>callback for freezing during hibernation snapshotting</dd></dl>
 <p> thaw</p>
 <dl>
-<dd>undo work done in <i>freeze</i></dl>
+<dd>undo work done in <i>freeze</i></dd></dl>
 <p> restore</p>
 <dl>
-<dd>callback for restoring after hibernation</dl>
+<dd>callback for restoring after hibernation</dd></dl>
 <p> driver</p>
 <dl>
-<dd>embedded driver structure</dl>
+<dd>embedded driver structure</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

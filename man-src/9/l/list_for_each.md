@@ -10,13 +10,13 @@ description: "list_for_each – iterate over a list"
 <p>list_for_each &#8211; iterate over a list</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>list_for_each(</code><i>pos</i><code>, </code><i>head</i><code>);</code></dl>
+<dt> <code>list_for_each(</code><i>pos</i><code>, </code><i>head</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>pos</i></p>
 <dl>
 <dd>
-<dd>the struct list_head to use as a loop cursor.</dl>
+</dd><dd>the struct list_head to use as a loop cursor.</dd></dl>
 <p> <i>head</i></p>
 <dl>
-<dd>the head for your list.</dl>
+<dd>the head for your list.</dd></dl>
 <h2>Copyright</h2>

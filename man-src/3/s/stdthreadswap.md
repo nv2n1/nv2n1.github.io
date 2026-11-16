@@ -25,22 +25,17 @@ other - the thread to swap with
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 void foo()
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 void bar()
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 int main()
-
 {
     std::thread t1(foo);
     std::thread t2(bar);

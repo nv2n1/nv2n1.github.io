@@ -14,24 +14,24 @@ description: "privoxy – Privacy Enhancing Proxy"
 <h2>OPTIONS</h2>
 <p> <code>Privoxy</code> may be invoked with the following command line options:</p>
 <dl>
-<dt><code>&#8211;chroot</code></p>
-<dd> Before changing to the user ID given in the &#8211;user option, chroot to that user&#8217;s home directory, i.e. make the kernel pretend to the <code>Privoxy</code> process that the directory tree starts there. If set up carefully, this can limit the impact of possible vulnerabilities in <code>Privoxy</code> to the files contained in that hierarchy.</p>
-<dt><code>&#8211;config-test</code></p>
-<dd> Exit after loading the configuration files before binding to the listen address. The exit code signals whether or not the configuration files have been successfully loaded. </p>
+<dt><code>&#8211;chroot</code></dt>
+<dd> Before changing to the user ID given in the &#8211;user option, chroot to that user&#8217;s home directory, i.e. make the kernel pretend to the <code>Privoxy</code> process that the directory tree starts there. If set up carefully, this can limit the impact of possible vulnerabilities in <code>Privoxy</code> to the files contained in that hierarchy.</dd>
+<dt><code>&#8211;config-test</code></dt>
+<dd> Exit after loading the configuration files before binding to the listen address. The exit code signals whether or not the configuration files have been successfully loaded. </dd>
 <p> If the exit code is 1, at least one of the configuration files is invalid, if it is 0, all the configuration files have been successfully loaded (but may still contain errors that can currently only be detected at run time). </p>
 <p> This option doesn&#8217;t affect the log setting, combination with &quot;&#8211;no-daemon&quot; is recommended if a configured log file shouldn&#8217;t be used.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print brief usage info and exit.</p>
-<dt><code>&#8211;no-daemon</code></p>
-<dd> Don&#8217;t become a daemon, i.e. don&#8217;t fork and become process group leader, don&#8217;t detach from controlling tty, and do all logging there.</p>
-<dt><code>&#8211;pidfile </code><i>pidfile</i></p>
-<dd> On startup, write the process ID to <i>pidfile</i>. Delete the <i>pidfile</i> on exit. Failure to create or delete the <i>pidfile</i> is non-fatal. If no <code>&#8211;pidfile</code> option is given, no PID file will be used.</p>
-<dt><code>&#8211;pre-chroot-nslookup </code><i>hostname</i></p>
-<dd> Initialize the resolver library using <i>hostname</i> before chroot&#8217;ing. On some systems this reduces the number of files that must be copied into the chroot tree.</p>
-<dt><code>&#8211;user </code><i>user[.group]</i></p>
-<dd> After (optionally) writing the PID file, assume the user ID of <i>user</i> and the GID of <i>group</i>, or, if the optional <i>group</i> was not given, the default group of <i>user</i>. Exit if the privileges are not sufficient to do so.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version info and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print brief usage info and exit.</dd>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd> Don&#8217;t become a daemon, i.e. don&#8217;t fork and become process group leader, don&#8217;t detach from controlling tty, and do all logging there.</dd>
+<dt><code>&#8211;pidfile </code><i>pidfile</i></dt>
+<dd> On startup, write the process ID to <i>pidfile</i>. Delete the <i>pidfile</i> on exit. Failure to create or delete the <i>pidfile</i> is non-fatal. If no <code>&#8211;pidfile</code> option is given, no PID file will be used.</dd>
+<dt><code>&#8211;pre-chroot-nslookup </code><i>hostname</i></dt>
+<dd> Initialize the resolver library using <i>hostname</i> before chroot&#8217;ing. On some systems this reduces the number of files that must be copied into the chroot tree.</dd>
+<dt><code>&#8211;user </code><i>user[.group]</i></dt>
+<dd> After (optionally) writing the PID file, assume the user ID of <i>user</i> and the GID of <i>group</i>, or, if the optional <i>group</i> was not given, the default group of <i>user</i>. Exit if the privileges are not sufficient to do so.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version info and exit.</dd></dl>
 <p> If the <i>configfile</i> is not specified on the command line, <code>Privoxy</code> will look for a file named <i>config</i> in the current directory. If no <i>configfile</i> is found, <code>Privoxy</code> will fail to start.</p>
 <h2>DESCRIPTION</h2>
 <p> Privoxy is a non-caching web proxy with advanced filtering capabilities for enhancing privacy, modifying web page data and HTTP headers, controlling access, and removing ads and other obnoxious Internet junk. Privoxy has a flexible configuration and can be customized to suit individual needs and tastes. It has application for both stand-alone systems and multi-user networks. </p>
@@ -39,10 +39,10 @@ description: "privoxy – Privacy Enhancing Proxy"
 <p> Privoxy is an associated project of Software in the Public Interest (SPI). </p>
 <p> Helping hands and donations are welcome:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <a rel="nofollow" href="https://www.privoxy.org/faq/general.html#PARTICIPATE">https://www.privoxy.org/faq/general.html#PARTICIPATE</a></p>
-<dt>&bull;</p>
-<dd> <a rel="nofollow" href="https://www.privoxy.org/faq/general.html#DONATE">https://www.privoxy.org/faq/general.html#DONATE</a></dl>
+<dt>&bull;</dt>
+<dd> <a rel="nofollow" href="https://www.privoxy.org/faq/general.html#PARTICIPATE">https://www.privoxy.org/faq/general.html#PARTICIPATE</a></dd>
+<dt>&bull;</dt>
+<dd> <a rel="nofollow" href="https://www.privoxy.org/faq/general.html#DONATE">https://www.privoxy.org/faq/general.html#DONATE</a></dd></dl>
 <h2>INSTALLATION AND USAGE</h2>
 <p> Browsers can either be individually configured to use <code>Privoxy</code> as a HTTP proxy (recommended), or <code>Privoxy</code> can be combined with a packet filter to build an intercepting proxy (see <i>config</i>). The default setting is for localhost, on port 8118 (configurable in the main config file). To set the HTTP proxy in Firefox, go through: <code>Tools</code>; <code>Options</code>; <code>General</code>; <code>Connection Settings</code>; <code>Manual Proxy Configuration</code>. </p>
 <p> For Internet Explorer, go through: <code>Tools</code>; <code>Internet Properties</code>; <code>Connections</code>; <code>LAN Settings</code>. </p>

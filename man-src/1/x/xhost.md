@@ -16,18 +16,18 @@ description: "xhost – server access control program for X"
 <h2>OPTIONS</h2>
 <p> <i>Xhost</i> accepts the following command line options described below. For security, the options that affect access control may only be run from the &quot;controlling host&quot;. For workstations, this is the same machine as the server. For X terminals, it is the login host.</p>
 <dl>
-<dt><code>-help</code></p>
-<dd> Prints a usage message.</p>
-<dt><code>[+]</code><i>name</i></p>
-<dd> The given <i>name</i> (the plus sign is optional) is added to the list allowed to connect to the X server. The name can be a host name or a complete name (See <font SIZE="-1"><code>NAMES</code> </font> for more details).</p>
-<dt><code>&#8211;</code><i>name</i></p>
-<dd> The given <i>name</i> is removed from the list of allowed to connect to the server. The name can be a host name or a complete name (See <font SIZE="-1"><code>NAMES</code> </font> for more details). Existing connections are not broken, but new connection attempts will be denied. Note that the current machine is allowed to be removed; however, further connections (including attempts to add it back) will not be permitted. Resetting the server (thereby breaking all connections) is the only way to allow local connections again.</p>
-<dt><code>+</code></p>
-<dd> Access is granted to everyone, even if they aren&#8217;t on the list (i.e., access control is turned off).</p>
-<dt><code>&#8211;</code></p>
-<dd> Access is restricted to only those on the list (i.e., access control is turned on).</p>
-<dt><i>nothing</i></p>
-<dd> If no command line arguments are given, a message indicating whether or not access control is currently enabled is printed, followed by the list of those allowed to connect. This is the only option that may be used from machines other than the controlling host.</dl>
+<dt><code>-help</code></dt>
+<dd> Prints a usage message.</dd>
+<dt><code>[+]</code><i>name</i></dt>
+<dd> The given <i>name</i> (the plus sign is optional) is added to the list allowed to connect to the X server. The name can be a host name or a complete name (See <font SIZE="-1"><code>NAMES</code> </font> for more details).</dd>
+<dt><code>&#8211;</code><i>name</i></dt>
+<dd> The given <i>name</i> is removed from the list of allowed to connect to the server. The name can be a host name or a complete name (See <font SIZE="-1"><code>NAMES</code> </font> for more details). Existing connections are not broken, but new connection attempts will be denied. Note that the current machine is allowed to be removed; however, further connections (including attempts to add it back) will not be permitted. Resetting the server (thereby breaking all connections) is the only way to allow local connections again.</dd>
+<dt><code>+</code></dt>
+<dd> Access is granted to everyone, even if they aren&#8217;t on the list (i.e., access control is turned off).</dd>
+<dt><code>&#8211;</code></dt>
+<dd> Access is restricted to only those on the list (i.e., access control is turned on).</dd>
+<dt><i>nothing</i></dt>
+<dd> If no command line arguments are given, a message indicating whether or not access control is currently enabled is printed, followed by the list of those allowed to connect. This is the only option that may be used from machines other than the controlling host.</dd></dl>
 <h2>NAMES</h2>
 <p> A complete name has the syntax &#8220;family:name&#8221; where the families are as follows: </p>
 <pre>
@@ -51,8 +51,8 @@ si        Server Interpreted
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/7-xsecurity/">Xsecurity</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/1-xdm/">xdm</a>(1), <a href="/docs/linux/man/1-xauth/">xauth</a>(1), <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3)</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to get the default host and display to use.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display to use.</dd></dl>
 <h2>BUGS</h2>
 <p> You can&#8217;t specify a display on the command line because <code>-display</code> is a valid command line argument (indicating that you want to remove the machine named <i>&#8220;display&#8221;</i> from the access list). </p>
 <p> The X server stores network addresses, not host names, unless you use the server-interpreted hostname type address. If somehow you change a host&#8217;s network address while the server is still running, and you are using a network-address based form of authentication, <i>xhost</i> must be used to add the new address and/or remove the old address.</p>

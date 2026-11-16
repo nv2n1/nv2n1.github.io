@@ -260,23 +260,23 @@ description: "XmDrawingArea — The DrawingArea widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNconvertCallback</code></p>
-<dd>Specifies a list of callbacks called when the DrawingArea is asked to convert a selection. The type of the structure whose address is passed to these callbacks is <code>XmConvertCallbackStruct</code>. The reason is <code>XmCR_OK</code>.</p>
-<dt><code>XmNdestinationCallback</code></p>
-<dd>Specifies a list of callbacks called when the DrawingArea is the destination of a transfer operation. The type of the structure whose address is passed to these callbacks is <code>XmDestinationCallbackStruct</code>. The reason is <code>XmCR_OK</code>.</p>
-<dt><code>XmNexposeCallback</code></p>
-<dd>Specifies the list of callbacks that is called when DrawingArea receives an exposure event. The callback reason is <code>XmCR_EXPOSE</code>. The callback structure also includes the exposure event.</p>
-<dd>The default bit gravity for Manager windows is <code>NorthWestGravity</code>. This may cause the <code>XmNexposeCallback</code> procedures not to be invoked when the DrawingArea window is made smaller.</p>
-<dt><code>XmNinputCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the DrawingArea receives a keyboard or mouse event (key or button, up or down). The callback reason is <code>XmCR_INPUT</code>. The callback structure also includes the input event.</p>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the minimum spacing in pixels between the top or bottom edge of DrawingArea and any child widget.</p>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the minimum spacing in pixels between the left or right edge of DrawingArea and any child widget.</p>
-<dt><code>XmNresizeCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the DrawingArea is resized. The callback reason is <code>XmCR_RESIZE</code>.</p>
-<dt><code>XmNresizePolicy</code></p>
-<dd>Controls the policy for resizing DrawingArea widgets. Possible values include <code>XmRESIZE_NONE</code> (fixed size), <code>XmRESIZE_ANY</code> (shrink or grow as needed), and <code>XmRESIZE_GROW</code> (grow only).</dl>
+<dt><code>XmNconvertCallback</code></dt>
+<dd>Specifies a list of callbacks called when the DrawingArea is asked to convert a selection. The type of the structure whose address is passed to these callbacks is <code>XmConvertCallbackStruct</code>. The reason is <code>XmCR_OK</code>.</dd>
+<dt><code>XmNdestinationCallback</code></dt>
+<dd>Specifies a list of callbacks called when the DrawingArea is the destination of a transfer operation. The type of the structure whose address is passed to these callbacks is <code>XmDestinationCallbackStruct</code>. The reason is <code>XmCR_OK</code>.</dd>
+<dt><code>XmNexposeCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when DrawingArea receives an exposure event. The callback reason is <code>XmCR_EXPOSE</code>. The callback structure also includes the exposure event.</dd>
+<dd>The default bit gravity for Manager windows is <code>NorthWestGravity</code>. This may cause the <code>XmNexposeCallback</code> procedures not to be invoked when the DrawingArea window is made smaller.</dd>
+<dt><code>XmNinputCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the DrawingArea receives a keyboard or mouse event (key or button, up or down). The callback reason is <code>XmCR_INPUT</code>. The callback structure also includes the input event.</dd>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the minimum spacing in pixels between the top or bottom edge of DrawingArea and any child widget.</dd>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the minimum spacing in pixels between the left or right edge of DrawingArea and any child widget.</dd>
+<dt><code>XmNresizeCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the DrawingArea is resized. The callback reason is <code>XmCR_RESIZE</code>.</dd>
+<dt><code>XmNresizePolicy</code></dt>
+<dd>Controls the policy for resizing DrawingArea widgets. Possible values include <code>XmRESIZE_NONE</code> (fixed size), <code>XmRESIZE_ANY</code> (shrink or grow as needed), and <code>XmRESIZE_GROW</code> (grow only).</dd></dl>
 <h3>Inherited Resources</h3>
 <p>DrawingArea inherits behavior and resources from the following superclasses. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1368,12 +1368,12 @@ description: "XmDrawingArea — The DrawingArea widget class"
  Window <i>window</i>;
 } XmDrawingAreaCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback. This is NULL for the <code>XmNresizeCallback</code>.</p>
-<dt><i>window</i></p>
-<dd>Is set to the widget window.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback. This is NULL for the <code>XmNresizeCallback</code>.</dd>
+<dt><i>window</i></dt>
+<dd>Is set to the widget window.</dd></dl>
 <p> A pointer to the following structure is passed to the <code>XmNconvertCallback</code> procedures: </p>
 <pre>typedef struct
 {
@@ -1394,61 +1394,61 @@ description: "XmDrawingArea — The DrawingArea widget class"
  unsigned long <i>length</i>;
 } XmConvertCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</p>
-<dt><i>selection</i></p>
-<dd>Indicates the selection for which conversion is being requested. Possible values are <code>CLIPBOARD</code>, <code>PRIMARY</code>, <code>SECONDARY</code>, and <code>_MOTIF_DROP</code>.</p>
-<dt><i>target</i></p>
-<dd>Indicates the conversion target.</p>
-<dt><i>source_data</i></p>
-<dd>Contains information about the selection source. When the selection is <code>_MOTIF_DROP</code>, <i>source_data</i> is the DragContext. Otherwise, it is NULL.</p>
-<dt><code>location_data</code></p>
-<dd>Contains information about the location of data to be converted. If the value is NULL, the data to be transferred consists of the widget&#8217;s current selection.</p>
-<dt><i>flags</i></p>
-<dd>Indicates the status of the conversion. Following are the possible values:</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</dd>
+<dt><i>selection</i></dt>
+<dd>Indicates the selection for which conversion is being requested. Possible values are <code>CLIPBOARD</code>, <code>PRIMARY</code>, <code>SECONDARY</code>, and <code>_MOTIF_DROP</code>.</dd>
+<dt><i>target</i></dt>
+<dd>Indicates the conversion target.</dd>
+<dt><i>source_data</i></dt>
+<dd>Contains information about the selection source. When the selection is <code>_MOTIF_DROP</code>, <i>source_data</i> is the DragContext. Otherwise, it is NULL.</dd>
+<dt><code>location_data</code></dt>
+<dd>Contains information about the location of data to be converted. If the value is NULL, the data to be transferred consists of the widget&#8217;s current selection.</dd>
+<dt><i>flags</i></dt>
+<dd>Indicates the status of the conversion. Following are the possible values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmCONVERTING_NONE</code></p>
-<dd>This flag is currently unused.</p>
-<dt><code>XmCONVERTING_PARTIAL</code></p>
-<dd>The target widget was able to be converted, but some data was lost.</p>
-<dt><code>XmCONVERTING_SAME</code></p>
-<dd>The conversion target is the source of the data to be transferred.</p>
-<dt><code>XmCONVERTING_TRANSACT</code></p>
-<dd>This flag is currently unused.</dl>
+</dd><dl COMPACT>
+<dt><code>XmCONVERTING_NONE</code></dt>
+<dd>This flag is currently unused.</dd>
+<dt><code>XmCONVERTING_PARTIAL</code></dt>
+<dd>The target widget was able to be converted, but some data was lost.</dd>
+<dt><code>XmCONVERTING_SAME</code></dt>
+<dd>The conversion target is the source of the data to be transferred.</dd>
+<dt><code>XmCONVERTING_TRANSACT</code></dt>
+<dd>This flag is currently unused.</dd></dl>
 </dl>
-<dt><i>parm</i></p>
-<dd>Contains parameter data for this target. If no parameter data exists, the value is NULL.</p>
-<dd>When <i>selection</i> is <code>CLIPBOARD</code> and <i>target</i> is <code>_MOTIF_CLIPBOARD_TARGETS</code> or <code>_MOTIF_DEFERRED_CLIPBOARD_TARGETS</code>, the value is the requested operation (<code>XmCOPY</code>, <code>XmMOVE</code>, or <code>XmLINK</code>).</p>
-<dt><i>parm_format</i></p>
-<dd>Specifies whether the data in <i>parm</i> should be viewed as a list of <i>char</i>, <i>short</i>, or <i>long</i> quantities. Possible values are 0 (when <i>parm</i> is NULL), 8 (when the data in <i>parm</i> should be viewed as a list of <i>char</i>s), 16 (when the data in <i>parm</i> should be viewed as a list of <i>short</i>s), or 32 (when the data in <i>parm</i> should be viewed as a list of <i>long</i>s). Note that <i>parm_format</i> symbolizes a data type, not the number of bits in each list element. For example, on some machines, a <i>parm_format</i> of 32 means that the data in <i>parm</i> should be viewed as a list of 64-bit quantities, not 32-bit quantities.</p>
-<dt><i>parm_length</i></p>
-<dd>Specifies the number of elements of data in <i>parm</i>, where each element has the size specified by <i>parm_format</i>. When <i>parm</i> is NULL, the value is 0.</p>
-<dt><i>status</i></p>
-<dd>An IN/OUT member that specifies the status of the conversion. The initial value is <code>XmCONVERT_DEFAULT</code>. The callback procedure can set this member to one of the following values:</p>
+<dt><i>parm</i></dt>
+<dd>Contains parameter data for this target. If no parameter data exists, the value is NULL.</dd>
+<dd>When <i>selection</i> is <code>CLIPBOARD</code> and <i>target</i> is <code>_MOTIF_CLIPBOARD_TARGETS</code> or <code>_MOTIF_DEFERRED_CLIPBOARD_TARGETS</code>, the value is the requested operation (<code>XmCOPY</code>, <code>XmMOVE</code>, or <code>XmLINK</code>).</dd>
+<dt><i>parm_format</i></dt>
+<dd>Specifies whether the data in <i>parm</i> should be viewed as a list of <i>char</i>, <i>short</i>, or <i>long</i> quantities. Possible values are 0 (when <i>parm</i> is NULL), 8 (when the data in <i>parm</i> should be viewed as a list of <i>char</i>s), 16 (when the data in <i>parm</i> should be viewed as a list of <i>short</i>s), or 32 (when the data in <i>parm</i> should be viewed as a list of <i>long</i>s). Note that <i>parm_format</i> symbolizes a data type, not the number of bits in each list element. For example, on some machines, a <i>parm_format</i> of 32 means that the data in <i>parm</i> should be viewed as a list of 64-bit quantities, not 32-bit quantities.</dd>
+<dt><i>parm_length</i></dt>
+<dd>Specifies the number of elements of data in <i>parm</i>, where each element has the size specified by <i>parm_format</i>. When <i>parm</i> is NULL, the value is 0.</dd>
+<dt><i>status</i></dt>
+<dd>An IN/OUT member that specifies the status of the conversion. The initial value is <code>XmCONVERT_DEFAULT</code>. The callback procedure can set this member to one of the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmCONVERT_DEFAULT</code></p>
-<dd>This value means that the widget class conversion procedure, if any, is called after the callback procedures return. If the widget class conversion procedure produces any data, it overwrites the data provided by the callback procedures in the <i>value</i> member.</p>
-<dt><code>XmCONVERT_MERGE</code></p>
-<dd>This value means that the widget class conversion procedure, if any, is called after the callback procedures return. If the widget class conversion procedure produces any data, it appends its data to the data provided by the callback procedures in the <i>value</i> member. This value is intended for use with targets that result in lists of data, such as <code>TARGETS</code>.</p>
-<dt><code>XmCONVERT_DONE</code></p>
-<dd>This value means that the callback procedure has successfully finished the conversion. The widget class conversion procedure, if any, is not called after the callback procedures return.</p>
-<dt><code>XmCONVERT_REFUSE</code></p>
-<dd>This value means that the callback procedure has terminated the conversion process without completing the requested conversion. The widget class conversion procedure, if any, is not called after the callback procedures return.</dl>
+</dd><dl COMPACT>
+<dt><code>XmCONVERT_DEFAULT</code></dt>
+<dd>This value means that the widget class conversion procedure, if any, is called after the callback procedures return. If the widget class conversion procedure produces any data, it overwrites the data provided by the callback procedures in the <i>value</i> member.</dd>
+<dt><code>XmCONVERT_MERGE</code></dt>
+<dd>This value means that the widget class conversion procedure, if any, is called after the callback procedures return. If the widget class conversion procedure produces any data, it appends its data to the data provided by the callback procedures in the <i>value</i> member. This value is intended for use with targets that result in lists of data, such as <code>TARGETS</code>.</dd>
+<dt><code>XmCONVERT_DONE</code></dt>
+<dd>This value means that the callback procedure has successfully finished the conversion. The widget class conversion procedure, if any, is not called after the callback procedures return.</dd>
+<dt><code>XmCONVERT_REFUSE</code></dt>
+<dd>This value means that the callback procedure has terminated the conversion process without completing the requested conversion. The widget class conversion procedure, if any, is not called after the callback procedures return.</dd></dl>
 </dl>
-<dt><i>value</i></p>
-<dd>An IN/OUT parameter that contains any data that the callback procedure produces as a result of the conversion. The initial value is NULL. If the callback procedure sets this member, it must ensure that the <i>type</i>, <i>format</i>, and <i>length</i> members correspond to the data in <i>value</i>. The callback procedure is responsible for allocating, but not for freeing, memory when it sets this member.</p>
-<dt><i>type</i></p>
-<dd>An IN/OUT parameter that indicates the type of the data in the <i>value</i> member. The initial value is <code>INTEGER</code>.</p>
-<dt><i>format</i></p>
-<dd>An IN/OUT parameter that specifies whether the data in <i>value</i> should be viewed as a list of <i>char</i>, <i>short</i>, or <i>long</i> quantities. The initial value is 8. The callback procedure can set this member to 8 (for a list of <i>char</i>), 16 (for a list of <i>short</i>), or 32 (for a list of <i>long</i>).</p>
-<dt><i>length</i></p>
-<dd>An IN/OUT member that specifies the number of elements of data in <i>value</i>, where each element has the size symbolized by <i>format</i>. The initial value is 0.</dl>
+<dt><i>value</i></dt>
+<dd>An IN/OUT parameter that contains any data that the callback procedure produces as a result of the conversion. The initial value is NULL. If the callback procedure sets this member, it must ensure that the <i>type</i>, <i>format</i>, and <i>length</i> members correspond to the data in <i>value</i>. The callback procedure is responsible for allocating, but not for freeing, memory when it sets this member.</dd>
+<dt><i>type</i></dt>
+<dd>An IN/OUT parameter that indicates the type of the data in the <i>value</i> member. The initial value is <code>INTEGER</code>.</dd>
+<dt><i>format</i></dt>
+<dd>An IN/OUT parameter that specifies whether the data in <i>value</i> should be viewed as a list of <i>char</i>, <i>short</i>, or <i>long</i> quantities. The initial value is 8. The callback procedure can set this member to 8 (for a list of <i>char</i>), 16 (for a list of <i>short</i>), or 32 (for a list of <i>long</i>).</dd>
+<dt><i>length</i></dt>
+<dd>An IN/OUT member that specifies the number of elements of data in <i>value</i>, where each element has the size symbolized by <i>format</i>. The initial value is 0.</dd></dl>
 <p> A pointer to the following callback structure is passed to the <code>XmNdestinationCallback</code> procedures: </p>
 <pre>typedef struct
 {
@@ -1463,68 +1463,68 @@ description: "XmDrawingArea — The DrawingArea widget class"
  Time <i>time</i>;
 } XmDestinationCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</p>
-<dt><i>selection</i></p>
-<dd>Indicates the selection for which data transfer is being requested. Possible values are <code>CLIPBOARD</code>, <code>PRIMARY</code>, <code>SECONDARY</code>, and <code>_MOTIF_DROP</code>.</p>
-<dt><i>operation</i></p>
-<dd>Indicates the type of transfer operation requested.</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</dd>
+<dt><i>selection</i></dt>
+<dd>Indicates the selection for which data transfer is being requested. Possible values are <code>CLIPBOARD</code>, <code>PRIMARY</code>, <code>SECONDARY</code>, and <code>_MOTIF_DROP</code>.</dd>
+<dt><i>operation</i></dt>
+<dd>Indicates the type of transfer operation requested.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>When the selection is <code>PRIMARY</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, and <code>XmLINK</code>.</p>
-<dt> &bull;</p>
-<dd>When the selection is <code>SECONDARY</code> or <code>CLIPBOARD</code>, possible values are <code>XmCOPY</code> and <code>XmLINK</code>.</p>
-<dt> &bull;</p>
-<dd>When the selection is <code>_MOTIF_DROP</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, <code>XmLINK</code>, and <code>XmOTHER</code>. A value of <code>XmOTHER</code> means that the callback procedure must get further information from the <code>XmDropProcCallbackStruct</code> in the <i>destination_data</i> member.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>When the selection is <code>PRIMARY</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, and <code>XmLINK</code>.</dd>
+<dt> &bull;</dt>
+<dd>When the selection is <code>SECONDARY</code> or <code>CLIPBOARD</code>, possible values are <code>XmCOPY</code> and <code>XmLINK</code>.</dd>
+<dt> &bull;</dt>
+<dd>When the selection is <code>_MOTIF_DROP</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, <code>XmLINK</code>, and <code>XmOTHER</code>. A value of <code>XmOTHER</code> means that the callback procedure must get further information from the <code>XmDropProcCallbackStruct</code> in the <i>destination_data</i> member.</dd></dl>
 </dl>
-<dt><i>flags</i></p>
-<dd>Indicates whether or not the destination widget is also the source of the data to be transferred. Following are the possible values:</p>
+<dt><i>flags</i></dt>
+<dd>Indicates whether or not the destination widget is also the source of the data to be transferred. Following are the possible values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmCONVERTING_NONE</code></p>
-<dd>The destination widget is not the source of the data to be transferred.</p>
-<dt><code>XmCONVERTING_SAME</code></p>
-<dd>The destination widget is the source of the data to be transferred.</dl>
+</dd><dl COMPACT>
+<dt><code>XmCONVERTING_NONE</code></dt>
+<dd>The destination widget is not the source of the data to be transferred.</dd>
+<dt><code>XmCONVERTING_SAME</code></dt>
+<dd>The destination widget is the source of the data to be transferred.</dd></dl>
 </dl>
-<dt><code>transfer_id</code></p>
-<dd>Serves as a unique ID to identify the transfer transaction.</p>
-<dt><i>destination_data</i></p>
-<dd>Contains information about the destination. When the selection is <code>_MOTIF_DROP</code>, the callback procedures are called by the drop site&#8217;s <code>XmNdropProc</code>, and <i>destination_data</i> is a pointer to the <code>XmDropProcCallbackStruct</code> passed to the <code>XmNdropProc</code> procedure. When the selection is <code>SECONDARY</code>, <i>destination_data</i> is an Atom representing a target recommmended by the selection owner for use in converting the selection. Otherwise, <i>destination_data</i> is NULL.</p>
-<dt><code>location_data</code></p>
-<dd>Contains information about the location where data is to be transferred. The value is always NULL when the selection is <code>SECONDARY</code> or <code>CLIPBOARD</code>. If the value is NULL, the data is to be inserted at the widget&#8217;s cursor position. <code>location_data</code> is only valid for the duration of a transfer. Once <code>XmTransferDone</code> procedures start to be called, <code>location_data</code> will no longer be stable.</p>
-<dt><i>time</i></p>
-<dd>Indicates the time when the transfer operation began.</dl>
+<dt><code>transfer_id</code></dt>
+<dd>Serves as a unique ID to identify the transfer transaction.</dd>
+<dt><i>destination_data</i></dt>
+<dd>Contains information about the destination. When the selection is <code>_MOTIF_DROP</code>, the callback procedures are called by the drop site&#8217;s <code>XmNdropProc</code>, and <i>destination_data</i> is a pointer to the <code>XmDropProcCallbackStruct</code> passed to the <code>XmNdropProc</code> procedure. When the selection is <code>SECONDARY</code>, <i>destination_data</i> is an Atom representing a target recommmended by the selection owner for use in converting the selection. Otherwise, <i>destination_data</i> is NULL.</dd>
+<dt><code>location_data</code></dt>
+<dd>Contains information about the location where data is to be transferred. The value is always NULL when the selection is <code>SECONDARY</code> or <code>CLIPBOARD</code>. If the value is NULL, the data is to be inserted at the widget&#8217;s cursor position. <code>location_data</code> is only valid for the duration of a transfer. Once <code>XmTransferDone</code> procedures start to be called, <code>location_data</code> will no longer be stable.</dd>
+<dt><i>time</i></dt>
+<dd>Indicates the time when the transfer operation began.</dd></dl>
 <h3>Translations</h3>
 <p>XmDrawingArea inherits translations from XmManager. Before calling the XmManager actions, all events in the inherited translations except <code>&lt;BtnMotion&gt;</code>, <code>&lt;EnterWindow&gt;</code>, <code>&lt;LeaveWindow&gt;</code>, <code>&lt;FocusIn&gt;</code>, and <code>&lt;FocusOut&gt;</code> also call the DrawingAreaInput() action. </p>
 <p> XmDrawingArea has the following additional translations. The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>&lt;BtnDown&gt;</code>:</p>
-<dd>DrawingAreaInput()</p>
-<dt><code>&lt;BtnUp&gt;</code>:</p>
-<dd>DrawingAreaInput()</p>
-<dt><code>&lt;KeyDown&gt;</code>:</p>
-<dd>DrawingAreaInput() ManagerGadgetKeyInput()</p>
-<dt><code>&lt;KeyUp&gt;</code>:</p>
-<dd>DrawingAreaInput()</dl>
+<dt><code>&lt;BtnDown&gt;</code>:</dt>
+<dd>DrawingAreaInput()</dd>
+<dt><code>&lt;BtnUp&gt;</code>:</dt>
+<dd>DrawingAreaInput()</dd>
+<dt><code>&lt;KeyDown&gt;</code>:</dt>
+<dd>DrawingAreaInput() ManagerGadgetKeyInput()</dd>
+<dt><code>&lt;KeyUp&gt;</code>:</dt>
+<dd>DrawingAreaInput()</dd></dl>
 <h3>Action Routines</h3>
 <p>The <code>XmDrawingArea</code> action routines are</p>
 <dl COMPACT>
-<dt>DrawingAreaInput():</p>
-<dd>Unless the event takes place in a gadget, calls the callbacks for <code>XmNinputCallback</code></p>
-<dt>ManagerGadgetKeyInput():</p>
-<dd>Causes the current gadget to process a keyboard event</dl>
+<dt>DrawingAreaInput():</dt>
+<dd>Unless the event takes place in a gadget, calls the callbacks for <code>XmNinputCallback</code></dd>
+<dt>ManagerGadgetKeyInput():</dt>
+<dd>Causes the current gadget to process a keyboard event</dd></dl>
 <h3>Additional Behavior</h3>
 <p>The XmDrawingArea widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Expose&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNexposeCallback</code></p>
-<dt><code>&lt;Widget Resize&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNresizeCallback</code></dl>
+<dt><code>&lt;Expose&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNexposeCallback</code></dd>
+<dt><code>&lt;Widget Resize&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNresizeCallback</code></dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

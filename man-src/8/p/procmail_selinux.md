@@ -107,14 +107,14 @@ description: "procmail_selinux – Security Enhanced Linux Policy for the procma
 <p> <code>procmail_home_t</code> </p>
 <p> &#8211; Set files with the procmail_home_t type, if you want to store procmail files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.procmailrc, /home/[^/]+/.procmailrc </p>
+<dt>Paths:</dt>
+<dd>/root/.procmailrc, /home/[^/]+/.procmailrc </dd>
 </dl>
 <p> <code>procmail_log_t</code> </p>
 <p> &#8211; Set files with the procmail_log_t type, if you want to treat the data as procmail log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/procmail(/.*)?, /var/log/procmail.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/procmail(/.*)?, /var/log/procmail.log.* </dd>
 </dl>
 <p> <code>procmail_tmp_t</code> </p>
 <p> &#8211; Set files with the procmail_tmp_t type, if you want to store procmail temporary files in the /tmp directories. </p>

@@ -19,43 +19,41 @@ description: "sort-dctrl – sort Debian control files"
 <p> You can specify arbitrary number of keys for sorting, using the <code>-k</code> option. The keys are interpreted in a descending order of priority: the first key specified is primary, the second key specified is secondary, and so on. If two records compare equal under the primary key, then they are compared under the secondary key, and so on. If no keys are specified, a default key is assumed (the &quot;Package&quot; field with no modifiers).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k </code><i>keyspec</i>, <code>&#8211;key-spec=</code><i>keyspec</p>
-<dd> Specify one or more keys for sorting. You may specify this option any number of times. The keyspec</i> argument consists of a comma-separated list of key specifications. Each key specification consists of the name of the field that serves as the key, optionally followed by a colon and key modifiers. The following key modifiers are supported:</p>
+<dt><code>-k </code><i>keyspec</i>, <code>&#8211;key-spec=</code><i>keyspec</dt>
+<dd> Specify one or more keys for sorting. You may specify this option any number of times. The keyspec</i> argument consists of a comma-separated list of key specifications. Each key specification consists of the name of the field that serves as the key, optionally followed by a colon and key modifiers. The following key modifiers are supported:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>r</code></p>
-<dd> Invert the comparison for this key, reversing the sorting order.</p>
-<dt><code>v</code></p>
-<dd> Treat this field as a version number field.</p>
-<dt><code>n</code></p>
-<dd> Treat this field as numeric, which currently is synonymous with <code>v</code>.</dl>
+<dt><code>r</code></dt>
+<dd> Invert the comparison for this key, reversing the sorting order.</dd>
+<dt><code>v</code></dt>
+<dd> Treat this field as a version number field.</dd>
+<dt><code>n</code></dt>
+<dd> Treat this field as numeric, which currently is synonymous with <code>v</code>.</dd></dl>
 </dl>
-<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</p>
-<dd> Output nothing to the standard output stream. Instead, exit immediately after finding the first match.</p>
-<dt>-l </code><i>level</i>, <code>&#8211;errorlevel=</code><i>level</p>
-<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</p>
-<dt><code>-V</code>, <code>&#8211;version</p>
-<dd> Print out version information.</p>
-<dt>-C</code>, <code>&#8211;copying</p>
-<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</p>
-<dt>-h</code>, <code>&#8211;help</p>
-<dd> Print out a help summary.</dl>
+<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</dt>
+<dd> Output nothing to the standard output stream. Instead, exit immediately after finding the first match.</dd>
+<dt>-l </code><i>level</i>, <code>&#8211;errorlevel=</code><i>level</dt>
+<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</dd>
+<dt><code>-V</code>, <code>&#8211;version</dt>
+<dd> Print out version information.</dd>
+<dt>-C</code>, <code>&#8211;copying</dt>
+<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</dd>
+<dt>-h</code>, <code>&#8211;help</dt>
+<dd> Print out a help summary.</dd></dl>
 <p> </code></p>
 <h2>EXAMPLES</h2>
 <p> Here are some sample invocations of the program:</p>
 <dl>
-<dt>sort-dctrl /var/lib/dpkg/available</p>
-<dd> Output the <code>dpkg</code> <i>available</i> file sorted by the package name.</p>
-<dt>sort-dctrl -k Version:v /var/lib/dpkg/available</p>
-<dd> Output the <code>dpkg</code> <i>available</i> file sorted in ascending order of version numbers.</p>
-<dt>sort-dctrl -k Version:vr /var/lib/dpkg/available</p>
-<dd> Output the <code>dpkg</code> <i>available</i> file sorted in descending order of version numbers.</p>
-<dt>sort-dctrl -k Package,Version:v /var/lib/dpkg/available</p>
-<dd> Output the <code>dpkg</code> <i>available</i> file sorted primarily in ascending order of package names and secondarily in descending order of version numbers.</p>
-<dt>sort-dctrl -k Installed-Size:n,Size:nr /var/lib/dpkg/available</p>
-<dd> Output the <code>dpkg</code> <i>available</i> file sorted primarily in ascending order of installation sizes and secondarily in descending order of package sizes.</dl>
+<dt>sort-dctrl /var/lib/dpkg/available</dt>
+<dd> Output the <code>dpkg</code> <i>available</i> file sorted by the package name.</dd>
+<dt>sort-dctrl -k Version:v /var/lib/dpkg/available</dt>
+<dd> Output the <code>dpkg</code> <i>available</i> file sorted in ascending order of version numbers.</dd>
+<dt>sort-dctrl -k Version:vr /var/lib/dpkg/available</dt>
+<dd> Output the <code>dpkg</code> <i>available</i> file sorted in descending order of version numbers.</dd>
+<dt>sort-dctrl -k Package,Version:v /var/lib/dpkg/available</dt>
+<dd> Output the <code>dpkg</code> <i>available</i> file sorted primarily in ascending order of package names and secondarily in descending order of version numbers.</dd>
+<dt>sort-dctrl -k Installed-Size:n,Size:nr /var/lib/dpkg/available</dt>
+<dd> Output the <code>dpkg</code> <i>available</i> file sorted primarily in ascending order of installation sizes and secondarily in descending order of package sizes.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The program and this manual page were written by Antti-Juhani Kaijanaho &lt;ajk [at] debian.org&gt;.</p>
 <h2>SEE ALSO</h2>

@@ -20,13 +20,13 @@ description: "rtcwake – enter a system sleep state until specified wakeup time
 <h2>Options</h2>
 <p><code>-A</code>, <code>&#8211;adjfile</code> <i>file</i></p>
 <dl>
-<dd>Specify an alternative path to the adjust file.</dl>
+<dd>Specify an alternative path to the adjust file.</dd></dl>
 <p> <code>-a</code>, <code>&#8211;auto</code></p>
 <dl>
-<dd>Read the clock mode (whether the hardware clock is set to UTC or local time) from the <i>adjtime</i> file, where <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) stores that information. This is the default.</dl>
+<dd>Read the clock mode (whether the hardware clock is set to UTC or local time) from the <i>adjtime</i> file, where <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) stores that information. This is the default.</dd></dl>
 <p> <code>&#8211;date</code> <i>timestamp</i></p>
 <dl>
-<dd>Set the wakeup time to the value of the timestamp. Format of the timestamp can be any of the following:</dl>
+<dd>Set the wakeup time to the value of the timestamp. Format of the timestamp can be any of the following:</dd></dl>
 <table BORDER>
 <tr VALIGN=top>
 <td>
@@ -84,65 +84,65 @@ description: "rtcwake – enter a system sleep state until specified wakeup time
 </table>
 <p> <code>-d</code>, <code>&#8211;device</code> <i>device</i></p>
 <dl>
-<dd>Use the specified <i>device</i> instead of <code>rtc0</code> as realtime clock. This option is only relevant if your system has more than one RTC. You may specify <code>rtc1</code>, <code>rtc2</code>, &#8230; here.</dl>
+<dd>Use the specified <i>device</i> instead of <code>rtc0</code> as realtime clock. This option is only relevant if your system has more than one RTC. You may specify <code>rtc1</code>, <code>rtc2</code>, &#8230; here.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;local</code></p>
 <dl>
-<dd>Assume that the hardware clock is set to local time, regardless of the contents of the <i>adjtime</i> file.</dl>
+<dd>Assume that the hardware clock is set to local time, regardless of the contents of the <i>adjtime</i> file.</dd></dl>
 <p> <code>&#8211;list-modes</code></p>
 <dl>
-<dd>List available <code>&#8211;mode</code> option arguments.</dl>
+<dd>List available <code>&#8211;mode</code> option arguments.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;mode</code> <i>mode</i></p>
 <dl>
-<dd>Go into the given standby state. Valid values for <i>mode</i> are: </p>
+<dd>Go into the given standby state. Valid values for <i>mode</i> are: </dd>
 <p> <code>standby</code></p>
 <dl>
-<dd>ACPI state S1. This state offers minimal, though real, power savings, while providing a very low-latency transition back to a working system. This is the default mode.</dl>
+<dd>ACPI state S1. This state offers minimal, though real, power savings, while providing a very low-latency transition back to a working system. This is the default mode.</dd></dl>
 <p> <code>freeze</code></p>
 <dl>
-<dd>The processes are frozen, all the devices are suspended and all the processors idled. This state is a general state that does not need any platform-specific support, but it saves less power than Suspend-to-RAM, because the system is still in a running state. (Available since Linux 3.9.)</dl>
+<dd>The processes are frozen, all the devices are suspended and all the processors idled. This state is a general state that does not need any platform-specific support, but it saves less power than Suspend-to-RAM, because the system is still in a running state. (Available since Linux 3.9.)</dd></dl>
 <p> <code>mem</code></p>
 <dl>
-<dd>ACPI state S3 (Suspend-to-RAM). This state offers significant power savings as everything in the system is put into a low-power state, except for memory, which is placed in self-refresh mode to retain its contents.</dl>
+<dd>ACPI state S3 (Suspend-to-RAM). This state offers significant power savings as everything in the system is put into a low-power state, except for memory, which is placed in self-refresh mode to retain its contents.</dd></dl>
 <p> <code>disk</code></p>
 <dl>
-<dd>ACPI state S4 (Suspend-to-disk). This state offers the greatest power savings, and can be used even in the absence of low-level platform support for power management. This state operates similarly to Suspend-to-RAM, but includes a final step of writing memory contents to disk.</dl>
+<dd>ACPI state S4 (Suspend-to-disk). This state offers the greatest power savings, and can be used even in the absence of low-level platform support for power management. This state operates similarly to Suspend-to-RAM, but includes a final step of writing memory contents to disk.</dd></dl>
 <p> <code>off</code></p>
 <dl>
-<dd>ACPI state S5 (Poweroff). This is done by calling &#8216;/sbin/shutdown&#8217;. Not officially supported by ACPI, but it usually works.</dl>
+<dd>ACPI state S5 (Poweroff). This is done by calling &#8216;/sbin/shutdown&#8217;. Not officially supported by ACPI, but it usually works.</dd></dl>
 <p> <code>no</code></p>
 <dl>
-<dd>Don&#8217;t suspend, only set the RTC wakeup time.</dl>
+<dd>Don&#8217;t suspend, only set the RTC wakeup time.</dd></dl>
 <p> <code>on</code></p>
 <dl>
-<dd>Don&#8217;t suspend, but read the RTC device until an alarm time appears. This mode is useful for debugging.</dl>
+<dd>Don&#8217;t suspend, but read the RTC device until an alarm time appears. This mode is useful for debugging.</dd></dl>
 <p> <code>disable</code></p>
 <dl>
-<dd>Disable a previously set alarm.</dl>
+<dd>Disable a previously set alarm.</dd></dl>
 <p> <code>show</code></p>
 <dl>
-<dd>Print alarm information in format: &quot;alarm: off|on &lt;time&gt;&quot;. The time is in ctime() output format, e.g., &quot;alarm: on Tue Nov 16 04:48:45 2010&quot;.</dl>
+<dd>Print alarm information in format: &quot;alarm: off|on &lt;time&gt;&quot;. The time is in ctime() output format, e.g., &quot;alarm: on Tue Nov 16 04:48:45 2010&quot;.</dd></dl>
 </dl>
 <p> <code>-n</code>, <code>&#8211;dry-run</code></p>
 <dl>
-<dd>This option does everything apart from actually setting up the alarm, suspending the system, or waiting for the alarm.</dl>
+<dd>This option does everything apart from actually setting up the alarm, suspending the system, or waiting for the alarm.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;seconds</code> <i>seconds</i></p>
 <dl>
-<dd>Set the wakeup time to <i>seconds</i> in the future from now.</dl>
+<dd>Set the wakeup time to <i>seconds</i> in the future from now.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;time</code> <i>time_t</i></p>
 <dl>
-<dd>Set the wakeup time to the absolute time <i>time_t</i>. <i>time_t</i> is the time in seconds since 1970-01-01, 00:00 UTC. Use the <code><a href="/docs/linux/man/1-date/">date</a></code>(1) tool to convert between human-readable time and <i>time_t</i>.</dl>
+<dd>Set the wakeup time to the absolute time <i>time_t</i>. <i>time_t</i> is the time in seconds since 1970-01-01, 00:00 UTC. Use the <code><a href="/docs/linux/man/1-date/">date</a></code>(1) tool to convert between human-readable time and <i>time_t</i>.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;utc</code></p>
 <dl>
-<dd>Assume that the hardware clock is set to UTC (Universal Time Coordinated), regardless of the contents of the <i>adjtime</i> file.</dl>
+<dd>Assume that the hardware clock is set to UTC (Universal Time Coordinated), regardless of the contents of the <i>adjtime</i> file.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Be verbose.</dl>
+<dd>Be verbose.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Notes</h2>
 <p>Some PC systems can&#8217;t currently exit sleep states such as <code>mem</code> using only the kernel code accessed by this driver. They need help from userspace code to make the framebuffer work again.</p>
 <h2>Files</h2>

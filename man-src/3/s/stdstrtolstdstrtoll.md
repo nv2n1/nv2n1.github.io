@@ -13,7 +13,6 @@ description: "std::strtol,std::strtoll – std::strtol,std::strtoll"
 long strtol( const char *str, char **str_end, int base );<br />
 long long strtoll( const char *str, char **str_end, int base ); <i>(since C++11)</i> </p>
 <pre><code>Interprets an integer value in a byte string pointed to by str.
-
 Discards any whitespace characters (as identified by calling isspace()) until the first non-whitespace character is found, then takes as many characters as possible to form a valid base-n (where n=base) integer number representation and converts them to an integer value. The valid integer value consists of the following parts:</code></pre>
 <p>* (optional) plus or minus sign<br />
 * (optional) prefix <code>(0)</code> indicating octal base (applies only when the base is 8 or 0)<br />
@@ -36,14 +35,10 @@ base &#8211; base of the interpreted integer value</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     const char *p = &quot;10 200000000000000000000000000000 30 -40&quot;;
     char *end;

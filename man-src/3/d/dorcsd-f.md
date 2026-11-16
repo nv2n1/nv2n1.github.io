@@ -31,10 +31,10 @@ description: "dorcsd.f –"
  (M-P)-by-(M-P), Q-by-Q, and (M-Q)-by-(M-Q), respectively. C and S are
  R-by-R nonnegative diagonal matrices satisfying C^2 + S^2 = I, in
  which R = MIN(P,M-P,Q,M-Q).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBU1</i> </p>
+<dd><i>JOBU1</i> </dd>
 <pre> JOBU1 is CHARACTER
  = 'Y': U1 is computed;
  otherwise: U1 is not computed.</pre>
@@ -157,16 +157,16 @@ description: "dorcsd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 297 of file dorcsd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

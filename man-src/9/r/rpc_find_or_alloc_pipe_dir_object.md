@@ -14,17 +14,17 @@ description: "rpc_find_or_alloc_pipe_dir_object –"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>pointer to struct net</dl>
+</dd><dd>pointer to struct net</dd></dl>
 <p> <i>pdh</i></p>
 <dl>
-<dd>pointer to struct rpc_pipe_dir_head</dl>
+<dd>pointer to struct rpc_pipe_dir_head</dd></dl>
 <p> <i>match</i></p>
 <dl>
-<dd>match struct rpc_pipe_dir_object to data</dl>
+<dd>match struct rpc_pipe_dir_object to data</dd></dl>
 <p> <i>alloc</i></p>
 <dl>
-<dd>allocate a new struct rpc_pipe_dir_object</dl>
+<dd>allocate a new struct rpc_pipe_dir_object</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>user defined data for <code>match</code> and <code>alloc</code></dl>
+<dd>user defined data for <code>match</code> and <code>alloc</code></dd></dl>
 <h2>Copyright</h2>

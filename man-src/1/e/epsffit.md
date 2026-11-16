@@ -16,16 +16,16 @@ description: "epsffit – fit encapsulated PostScript file (EPSF) into constrain
 <p> If no input or output files are specified, <i>epsffit</i> read from the standard input and writes to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Center the image in the given bounding box.</p>
-<dt><code>-r</code></p>
-<dd> Rotate the image by 90 degrees counter-clockwise.</p>
-<dt><code>-a</code></p>
-<dd> Adjust the aspect ratio to fit the bounding box. The default is to preserve the aspect ratio.</p>
-<dt><code>-m</code></p>
-<dd> Rotates the image to maximise the size if it would fit the specified bounding box better.</p>
-<dt><code>-s</code></p>
-<dd> Add a <i>showpage</i> at the end of the file to force the image to print.</dl>
+<dt><code>-c</code></dt>
+<dd> Center the image in the given bounding box.</dd>
+<dt><code>-r</code></dt>
+<dd> Rotate the image by 90 degrees counter-clockwise.</dd>
+<dt><code>-a</code></dt>
+<dd> Adjust the aspect ratio to fit the bounding box. The default is to preserve the aspect ratio.</dd>
+<dt><code>-m</code></dt>
+<dd> Rotates the image to maximise the size if it would fit the specified bounding box better.</dd>
+<dt><code>-s</code></dt>
+<dd> Add a <i>showpage</i> at the end of the file to force the image to print.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright (C) Angus J. C. Duggan 1991-1995</p>
 <h2>SEE ALSO</h2>

@@ -14,13 +14,13 @@ description: "snd_info_create_card_entry – create an info entry for the given 
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>the file name</dl>
+<dd>the file name</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>the parent directory</dl>
+<dd>the parent directory</dd></dl>
 <h2>Description</h2>
 <p>Creates a new info entry and assigns it to the given card.</p>
 <h2>Return</h2>

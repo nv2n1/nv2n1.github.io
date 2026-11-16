@@ -46,10 +46,10 @@ description: "stgsyl.f –"
  reciprocal of the smallest singular value of Z. See [1-2] for more
  information.
  This is a level 3 BLAS algorithm.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  = 'N', solve the generalized Sylvester equation (1).
  = 'T', solve the 'transposed' system (3).</pre>
@@ -153,16 +153,16 @@ description: "stgsyl.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dd>
@@ -180,7 +180,8 @@ description: "stgsyl.f –"
  Condition Estimators for Solving the Generalized Sylvester
  Equation, IEEE Transactions on Automatic Control, Vol. 34, No. 7,
  July 1989, pp 745-751.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 298 of file stgsyl.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

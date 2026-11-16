@@ -20,20 +20,20 @@ hpidomain[-h - V - X] hpidomain[--help][--verbose][--debug]
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-D</code>, <code>&#8211;domain</code>=<i>nn</i></p>
-<dd> Select domain id nn</p>
-<dt><code>-X</code>, <code>&#8211;debug</code></p>
-<dd> Display debug messages</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose mode</p>
-<dt><code>-N</code>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></p>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables.</p>
-<dt><code>-C</code>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></p>
-<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dl>
+<dt><code>-D</code>, <code>&#8211;domain</code>=<i>nn</i></dt>
+<dd> Select domain id nn</dd>
+<dt><code>-X</code>, <code>&#8211;debug</code></dt>
+<dd> Display debug messages</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>-N</code>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
+<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables.</dd>
+<dt><code>-C</code>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
+<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
          hpi_shell

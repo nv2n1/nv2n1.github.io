@@ -20,57 +20,57 @@ int shmdt(const void *shmaddr);
 <h3>shmat()</h3>
 <p> <code>shmat</code>() attaches the System V shared memory segment identified by <i>shmid</i> to the address space of the calling process. The attaching address is specified by <i>shmaddr</i> with one of the following criteria:</p>
 <dl>
-<dt>&bull;</p>
-<dd> If <i>shmaddr</i> is NULL, the system chooses a suitable (unused) page-aligned address to attach the segment.</p>
-<dt>&bull;</p>
-<dd> If <i>shmaddr</i> isn&#8217;t NULL and <code>SHM_RND</code> is specified in <i>shmflg</i>, the attach occurs at the address equal to <i>shmaddr</i> rounded down to the nearest multiple of <code>SHMLBA</code>.</p>
-<dt>&bull;</p>
-<dd> Otherwise, <i>shmaddr</i> must be a page-aligned address at which the attach occurs.</dl>
+<dt>&bull;</dt>
+<dd> If <i>shmaddr</i> is NULL, the system chooses a suitable (unused) page-aligned address to attach the segment.</dd>
+<dt>&bull;</dt>
+<dd> If <i>shmaddr</i> isn&#8217;t NULL and <code>SHM_RND</code> is specified in <i>shmflg</i>, the attach occurs at the address equal to <i>shmaddr</i> rounded down to the nearest multiple of <code>SHMLBA</code>.</dd>
+<dt>&bull;</dt>
+<dd> Otherwise, <i>shmaddr</i> must be a page-aligned address at which the attach occurs.</dd></dl>
 <p> In addition to <code>SHM_RND</code>, the following flags may be specified in the <i>shmflg</i> bit-mask argument:</p>
 <dl>
-<dt><code>SHM_EXEC</code> (Linux-specific; since Linux 2.6.9)</p>
-<dd> Allow the contents of the segment to be executed. The caller must have execute permission on the segment.</p>
-<dt><code>SHM_RDONLY</code></p>
-<dd> Attach the segment for read-only access. The process must have read permission for the segment. If this flag is not specified, the segment is attached for read and write access, and the process must have read and write permission for the segment. There is no notion of a write-only shared memory segment.</p>
-<dt><code>SHM_REMAP</code> (Linux-specific)</p>
-<dd> This flag specifies that the mapping of the segment should replace any existing mapping in the range starting at <i>shmaddr</i> and continuing for the size of the segment. (Normally, an <code>EINVAL</code> error would result if a mapping already exists in this address range.) In this case, <i>shmaddr</i> must not be NULL.</dl>
+<dt><code>SHM_EXEC</code> (Linux-specific; since Linux 2.6.9)</dt>
+<dd> Allow the contents of the segment to be executed. The caller must have execute permission on the segment.</dd>
+<dt><code>SHM_RDONLY</code></dt>
+<dd> Attach the segment for read-only access. The process must have read permission for the segment. If this flag is not specified, the segment is attached for read and write access, and the process must have read and write permission for the segment. There is no notion of a write-only shared memory segment.</dd>
+<dt><code>SHM_REMAP</code> (Linux-specific)</dt>
+<dd> This flag specifies that the mapping of the segment should replace any existing mapping in the range starting at <i>shmaddr</i> and continuing for the size of the segment. (Normally, an <code>EINVAL</code> error would result if a mapping already exists in this address range.) In this case, <i>shmaddr</i> must not be NULL.</dd></dl>
 <p> The <code><a href="/docs/linux/man/2-brk/">brk</a></code>(2) value of the calling process is not altered by the attach. The segment will automatically be detached at process exit. The same segment may be attached as a read and as a read-write one, and more than once, in the process&#8217;s address space. </p>
 <p> A successful <code>shmat</code>() call updates the members of the <i>shmid_ds</i> structure (see <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2)) associated with the shared memory segment as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>shm_atime</i> is set to the current time.</p>
-<dt>&bull;</p>
-<dd> <i>shm_lpid</i> is set to the process-ID of the calling process.</p>
-<dt>&bull;</p>
-<dd> <i>shm_nattch</i> is incremented by one.</dl>
+<dt>&bull;</dt>
+<dd> <i>shm_atime</i> is set to the current time.</dd>
+<dt>&bull;</dt>
+<dd> <i>shm_lpid</i> is set to the process-ID of the calling process.</dd>
+<dt>&bull;</dt>
+<dd> <i>shm_nattch</i> is incremented by one.</dd></dl>
 <h3>shmdt()</h3>
 <p> <code>shmdt</code>() detaches the shared memory segment located at the address specified by <i>shmaddr</i> from the address space of the calling process. The to-be-detached segment must be currently attached with <i>shmaddr</i> equal to the value returned by the attaching <code>shmat</code>() call. </p>
 <p> On a successful <code>shmdt</code>() call, the system updates the members of the <i>shmid_ds</i> structure associated with the shared memory segment as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>shm_dtime</i> is set to the current time.</p>
-<dt>&bull;</p>
-<dd> <i>shm_lpid</i> is set to the process-ID of the calling process.</p>
-<dt>&bull;</p>
-<dd> <i>shm_nattch</i> is decremented by one. If it becomes 0 and the segment is marked for deletion, the segment is deleted.</dl>
+<dt>&bull;</dt>
+<dd> <i>shm_dtime</i> is set to the current time.</dd>
+<dt>&bull;</dt>
+<dd> <i>shm_lpid</i> is set to the process-ID of the calling process.</dd>
+<dt>&bull;</dt>
+<dd> <i>shm_nattch</i> is decremented by one. If it becomes 0 and the segment is marked for deletion, the segment is deleted.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>shmat</code>() returns the address of the attached shared memory segment; on error, <i>(void&nbsp;*)&nbsp;-1</i> is returned, and <i>errno</i> is set to indicate the cause of the error. </p>
 <p> On success, <code>shmdt</code>() returns 0; on error -1 is returned, and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <p> When <code>shmat</code>() fails, <i>errno</i> is set to one of the following:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The calling process does not have the required permissions for the requested attach type, and does not have the <code>CAP_IPC_OWNER</code> capability in the user namespace that governs its IPC namespace.</p>
-<dt><code>EIDRM</code></p>
-<dd> <i>shmid</i> points to a removed identifier.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid <i>shmid</i> value, unaligned (i.e., not page-aligned and <code>SHM_RND</code> was not specified) or invalid <i>shmaddr</i> value, or can&#8217;t attach segment at <i>shmaddr</i>, or <code>SHM_REMAP</code> was specified and <i>shmaddr</i> was NULL.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Could not allocate memory for the descriptor or for the page tables.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The calling process does not have the required permissions for the requested attach type, and does not have the <code>CAP_IPC_OWNER</code> capability in the user namespace that governs its IPC namespace.</dd>
+<dt><code>EIDRM</code></dt>
+<dd> <i>shmid</i> points to a removed identifier.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid <i>shmid</i> value, unaligned (i.e., not page-aligned and <code>SHM_RND</code> was not specified) or invalid <i>shmaddr</i> value, or can&#8217;t attach segment at <i>shmaddr</i>, or <code>SHM_REMAP</code> was specified and <i>shmaddr</i> was NULL.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Could not allocate memory for the descriptor or for the page tables.</dd></dl>
 <p> When <code>shmdt</code>() fails, <i>errno</i> is set as follows:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> There is no shared memory segment attached at <i>shmaddr</i>; or, <i>shmaddr</i> is not aligned on a page boundary.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> There is no shared memory segment attached at <i>shmaddr</i>; or, <i>shmaddr</i> is not aligned on a page boundary.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4. </p>
 <p> In SVID 3 (or perhaps earlier), the type of the <i>shmaddr</i> argument was changed from <i>char&nbsp;*</i> into <i>const void&nbsp;*</i>, and the returned type of <code>shmat</code>() from <i>char&nbsp;*</i> into <i>void&nbsp;*</i>.</p>
@@ -82,8 +82,8 @@ int shmdt(const void *shmaddr);
 <p> On Linux, it is possible to attach a shared memory segment even if it is already marked to be deleted. However, POSIX.1 does not specify this behavior and many other implementations do not support it. </p>
 <p> The following system parameter affects <code>shmat</code>():</p>
 <dl>
-<dt><code>SHMLBA</code></p>
-<dd> Segment low boundary address multiple. When explicitly specifying an attach address in a call to <code>shmat</code>(), the caller should ensure that the address is a multiple of this value. This is necessary on some architectures, in order either to ensure good CPU cache performance or to ensure that different attaches of the same segment have consistent views within the CPU cache. <code>SHMLBA</code> is normally some multiple of the system page size. (On many Linux architectures, <code>SHMLBA</code> is the same as the system page size.)</dl>
+<dt><code>SHMLBA</code></dt>
+<dd> Segment low boundary address multiple. When explicitly specifying an attach address in a call to <code>shmat</code>(), the caller should ensure that the address is a multiple of this value. This is necessary on some architectures, in order either to ensure good CPU cache performance or to ensure that different attaches of the same segment have consistent views within the CPU cache. <code>SHMLBA</code> is normally some multiple of the system page size. (On many Linux architectures, <code>SHMLBA</code> is the same as the system page size.)</dd></dl>
 <p> The implementation places no intrinsic per-process limit on the number of shared memory segments (<code>SHMSEG</code>).</p>
 <h2>EXAMPLES</h2>
 <p> The two programs shown below exchange a string using a shared memory segment. Further details about the programs are given below. First, we show a shell session demonstrating their use. </p>
@@ -161,3 +161,4 @@ int shmdt(const void *shmaddr);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;len&nbsp;=&nbsp;strlen(argv[3])&nbsp;+&nbsp;1;&nbsp;<wbr>&nbsp;/*&nbsp;+1 to include trailing&nbsp;&#8216;
+</p>

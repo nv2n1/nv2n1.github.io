@@ -14,7 +14,7 @@ description: "sk_state_load – read sk->sk_state for lockless contexts"
 <p><i>sk</i></p>
 <dl>
 <dd>
-<dd>socket pointer</dl>
+</dd><dd>socket pointer</dd></dl>
 <h2>Description</h2>
 <p>Paired with <code>sk_state_store</code>. Used in places we do not hold socket lock : <code>tcp_diag_get_info</code>, <code>tcp_get_info</code>, <code>tcp_poll</code>, <code>get_tcp4_sock</code> &#8230;</p>
 <h2>Copyright</h2>

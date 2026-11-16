@@ -21,33 +21,33 @@ description: "ntfscluster – identify files in a specified region of an NTFS vo
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfscluster</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;cluster</code> RANGE</p>
-<dd>Any files whose data is in this range of clusters will be displayed.</p>
-<dt><code>-F</code>, <code>&#8211;filename</code> NAME</p>
-<dd>Show information about this file.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>This will override some sensible defaults, such as not working with a mounted volume. Use this option with caution.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a list of options with a brief description of each one.</p>
-<dt><code>-I</code>, <code>&#8211;inode</code> NUM</p>
-<dd>Show information about this inode.</p>
-<dt><code>-i</code>, <code>&#8211;info</code></p>
-<dd>This option is not yet implemented.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Reduce the amount of output to a minimum. Naturally, it doesn&#8217;t make sense to combine this option with <code>&#8211;verbose</code></p>
-<dt><code>-s</code>, <code>&#8211;sector</code> RANGE</p>
-<dd>Any files whose data is in this range of sectors will be displayed.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Increase the amount of output that <code>ntfscluster</code> prints.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license for <code>ntfscluster</code>.</dl>
+<dt><code>-c</code>, <code>&#8211;cluster</code> RANGE</dt>
+<dd>Any files whose data is in this range of clusters will be displayed.</dd>
+<dt><code>-F</code>, <code>&#8211;filename</code> NAME</dt>
+<dd>Show information about this file.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>This will override some sensible defaults, such as not working with a mounted volume. Use this option with caution.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a list of options with a brief description of each one.</dd>
+<dt><code>-I</code>, <code>&#8211;inode</code> NUM</dt>
+<dd>Show information about this inode.</dd>
+<dt><code>-i</code>, <code>&#8211;info</code></dt>
+<dd>This option is not yet implemented.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Reduce the amount of output to a minimum. Naturally, it doesn&#8217;t make sense to combine this option with <code>&#8211;verbose</code></dd>
+<dt><code>-s</code>, <code>&#8211;sector</code> RANGE</dt>
+<dd>Any files whose data is in this range of sectors will be displayed.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase the amount of output that <code>ntfscluster</code> prints.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license for <code>ntfscluster</code>.</dd></dl>
 <h2>Examples</h2>
 <p>Get some information about the volume /dev/hda1.</p>
 <dl>
-<dd><code>ntfscluster /dev/hda1</code></dl>
+<dd><code>ntfscluster /dev/hda1</code></dd></dl>
 <p> Look for files in the first 500 clusters of /dev/hda1.</p>
 <dl>
-<dd><code>ntfscluster -c 0-500 /dev/hda1</code> </p>
+<dd><code>ntfscluster -c 0-500 /dev/hda1</code> </dd>
 <h2>Bugs</h2>
 <p>The <i>info</i> mode isn&#8217;t implemented yet. <code>ntfscluster</code> is quite limited, but it has no known bugs. If you find a bug please send an email describing the problem to the development team:<br />
  ntfs-3g-devel [at] lists.sf.net</p>
@@ -58,3 +58,4 @@ description: "ntfscluster – identify files in a specified region of an NTFS vo
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsinfo/">ntfsinfo</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>
+</dl>

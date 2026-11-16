@@ -76,36 +76,36 @@ description: "QwtDial –"
 <p> Often dials have to be updated very often according to values from external devices. For these high refresh rates <code>QwtDial</code> caches as much as possible. For derived classes it might be necessary to clear these caches manually according to attribute changes using <code>invalidateCache()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtCompass</code>, <code>QwtAnalogClock</code>, <code>QwtDialNeedle</code></dl>
+<dd><code>QwtCompass</code>, <code>QwtAnalogClock</code>, <code>QwtDialNeedle</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The controls and dials examples shows different types of dials. </p>
+<dd>The controls and dials examples shows different types of dials. </dd>
 <p> QDial is more similar to <code>QwtKnob</code> than to <code>QwtDial</code></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtDial::Mode</code></h3>
 <p>Mode controlling whether the needle or the scale is rotating. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>RotateNeedle </i></p>
-<dd>The needle is rotating.</p>
-<dt><i>RotateScale </i></p>
-<dd>The needle is fixed, the scales are rotating.</dl>
+<dt><i>RotateNeedle </i></dt>
+<dd>The needle is rotating.</dd>
+<dt><i>RotateScale </i></dt>
+<dd>The needle is fixed, the scales are rotating.</dd></dl>
 <h3>enum <code>QwtDial::Shadow</code></h3>
 <p>Frame shadow. Unfortunately it is not possible to use QFrame::Shadow as a property of a widget that is not derived from QFrame. The following enum is made for the designer only. It is safe to use QFrame::Shadow instead. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Plain </i></p>
-<dd>QFrame::Plain.</p>
-<dt><i>Raised </i></p>
-<dd>QFrame::Raised.</p>
-<dt><i>Sunken </i></p>
-<dd>QFrame::Sunken.</dl>
+<dt><i>Plain </i></dt>
+<dd>QFrame::Plain.</dd>
+<dt><i>Raised </i></dt>
+<dd>QFrame::Raised.</dd>
+<dt><i>Sunken </i></dt>
+<dd>QFrame::Sunken.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtDial::QwtDial (QWidget *parent = NULL) [explicit]</h3>
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <p> Create a dial widget with no needle. The scale is initialized to [ 0.0, 360.0 ] and 360 steps ( <code>QwtAbstractSlider::setTotalSteps()</code> ). The origin of the scale is at 90°, </p>
 <p> The value is set to 0.0. </p>
 <p> The default mode is <code>QwtDial::RotateNeedle</code>.</p>
@@ -113,37 +113,37 @@ description: "QwtDial –"
 <h3>QRect QwtDial::boundingRect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>bounding rectangle of the dial including the frame</dl>
+<dd>bounding rectangle of the dial including the frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineWidth()</code>, <code>scaleInnerRect()</code>, <code>innerRect()</code></dl>
+<dd><code>setLineWidth()</code>, <code>scaleInnerRect()</code>, <code>innerRect()</code></dd></dl>
 <h3>void QwtDial::changeEvent (QEvent *event) [protected], [virtual]</h3>
 <p>Change Event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Change event</dl>
+<dd><i>event</i> Change event</dd></dl>
 <p> Invalidates internal paint caches if necessary</p>
 <h3>void QwtDial::drawContents (QPainter *painter) const [protected], [virtual]</h3>
 <p>Draw the contents inside the frame. QPalette::Window is the background color outside of the frame. QPalette::Base is the background color inside the frame. QPalette::WindowText is the background color inside the scale. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>boundingRect()</code>, <code>innerRect()</code>, <code>scaleInnerRect()</code>, QWidget::setPalette()</dl>
+<dd><code>boundingRect()</code>, <code>innerRect()</code>, <code>scaleInnerRect()</code>, QWidget::setPalette()</dd></dl>
 <h3>void QwtDial::drawFocusIndicator (QPainter *painter) const [protected], [virtual]</h3>
 <p>Draw the focus indicator </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <h3>void QwtDial::drawFrame (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the frame around the dial </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>lineWidth()</code>, <code>frameShadow()</code></dl>
+<dd><code>lineWidth()</code>, <code>frameShadow()</code></dd></dl>
 <h3>void QwtDial::drawNeedle (QPainter *painter, const QPointF &amp;center, doubleradius, doubledirection, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle </p>
 <p> <code>Parameters:</code></p>
@@ -152,7 +152,7 @@ description: "QwtDial –"
  <i>center</i> Center of the dial<br />
  <i>radius</i> Length for the needle<br />
  <i>direction</i> Direction of the needle in degrees, counter clockwise<br />
- <i>colorGroup</i> ColorGroup</dl>
+ <i>colorGroup</i> ColorGroup</dd></dl>
 <p> Reimplemented in <code>QwtAnalogClock</code>.</p>
 <h3>void QwtDial::drawScale (QPainter *painter, const QPointF &amp;center, doubleradius) const [protected], [virtual]</h3>
 <p>Draw the scale </p>
@@ -160,7 +160,7 @@ description: "QwtDial –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>center</i> Center of the dial<br />
- <i>radius</i> Radius of the scale</dl>
+ <i>radius</i> Radius of the scale</dd></dl>
 <h3>void QwtDial::drawScaleContents (QPainter *painter, const QPointF &amp;center, doubleradius) const [protected], [virtual]</h3>
 <p>Draw the contents inside the scale </p>
 <p> Paints nothing. </p>
@@ -168,213 +168,213 @@ description: "QwtDial –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>center</i> Center of the contents circle<br />
- <i>radius</i> Radius of the contents circle</dl>
+ <i>radius</i> Radius of the contents circle</dd></dl>
 <p> Reimplemented in <code>QwtCompass</code>.</p>
 <h3><code>QwtDial::Shadow</code> QwtDial::frameShadow () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Frame shadow /sa <code>setFrameShadow()</code>, <code>lineWidth()</code>, QFrame::frameShadow()</dl>
+<dd>Frame shadow /sa <code>setFrameShadow()</code>, <code>lineWidth()</code>, QFrame::frameShadow()</dd></dl>
 <h3>QRect QwtDial::innerRect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>bounding rectangle of the circle inside the frame</dl>
+<dd>bounding rectangle of the circle inside the frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineWidth()</code>, <code>scaleInnerRect()</code>, <code>boundingRect()</code></dl>
+<dd><code>setLineWidth()</code>, <code>scaleInnerRect()</code>, <code>boundingRect()</code></dd></dl>
 <h3>void QwtDial::invalidateCache () [protected]</h3>
 <p>Invalidate the internal caches used to speed up repainting</p>
 <h3>bool QwtDial::isScrollPosition (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Determine what to do when the user presses a mouse button. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>True,when</i> the inner circle contains pos</dl>
+<dd><i>True,when</i> the inner circle contains pos</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scrolledTo()</code></dl>
+<dd><code>scrolledTo()</code></dd></dl>
 <p> Implements <code>QwtAbstractSlider</code>.</p>
 <h3>int QwtDial::lineWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Line width of the frame</dl>
+<dd>Line width of the frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineWidth()</code>, <code>frameShadow()</code>, <code>lineWidth()</code></dl>
+<dd><code>setLineWidth()</code>, <code>frameShadow()</code>, <code>lineWidth()</code></dd></dl>
 <h3>double QwtDial::maxScaleArc () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Upper limit of the scale arc</dl>
+<dd>Upper limit of the scale arc</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleArc()</code></dl>
+<dd><code>setScaleArc()</code></dd></dl>
 <h3>QSize QwtDial::minimumSizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Minimum size hint</dl>
+<dd>Minimum size hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>sizeHint()</code></dl>
+<dd><code>sizeHint()</code></dd></dl>
 <h3>double QwtDial::minScaleArc () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Lower limit of the scale arc</dl>
+<dd>Lower limit of the scale arc</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleArc()</code></dl>
+<dd><code>setScaleArc()</code></dd></dl>
 <h3><code>QwtDial::Mode</code> QwtDial::mode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mode of the dial.</dl>
+<dd>Mode of the dial.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMode()</code>, <code>origin()</code>, <code>setScaleArc()</code>, <code>value()</code></dl>
+<dd><code>setMode()</code>, <code>origin()</code>, <code>setScaleArc()</code>, <code>value()</code></dd></dl>
 <h3>const <code>QwtDialNeedle</code> * QwtDial::needle () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>needle</dl>
+<dd>needle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setNeedle()</code></dl>
+<dd><code>setNeedle()</code></dd></dl>
 <h3><code>QwtDialNeedle</code> * QwtDial::needle ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>needle</dl>
+<dd>needle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setNeedle()</code></dl>
+<dd><code>setNeedle()</code></dd></dl>
 <h3>double QwtDial::origin () const</h3>
 <p>The origin is the angle where scale and needle is relative to. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Origin of the dial</dl>
+<dd>Origin of the dial</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOrigin()</code></dl>
+<dd><code>setOrigin()</code></dd></dl>
 <h3>void QwtDial::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Paint the dial </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <h3>void QwtDial::scaleChange () [protected], [virtual]</h3>
 <p>Invalidate the internal caches and call <code>QwtAbstractSlider::scaleChange()</code> </p>
 <p> Reimplemented from <code>QwtAbstractSlider</code>.</p>
 <h3><code>QwtRoundScaleDraw</code> * QwtDial::scaleDraw ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale draw</dl>
+<dd>the scale draw</dd></dl>
 <h3>const <code>QwtRoundScaleDraw</code> * QwtDial::scaleDraw () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale draw</dl>
+<dd>the scale draw</dd></dl>
 <h3>QRect QwtDial::scaleInnerRect () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>rectangle inside the scale</dl>
+<dd>rectangle inside the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineWidth()</code>, <code>boundingRect()</code>, <code>innerRect()</code></dl>
+<dd><code>setLineWidth()</code>, <code>boundingRect()</code>, <code>innerRect()</code></dd></dl>
 <h3>double QwtDial::scrolledTo (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Determine the value for a new position of the slider handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value for the mouse position</dl>
+<dd>Value for the mouse position</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isScrollPosition()</code></dl>
+<dd><code>isScrollPosition()</code></dd></dl>
 <p> Implements <code>QwtAbstractSlider</code>.</p>
 <h3>void QwtDial::setFrameShadow (<code>Shadow</code>shadow)</h3>
 <p>Sets the frame shadow value from the frame style. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>shadow</i> Frame shadow</dl>
+<dd><i>shadow</i> Frame shadow</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineWidth()</code>, QFrame::setFrameShadow()</dl>
+<dd><code>setLineWidth()</code>, QFrame::setFrameShadow()</dd></dl>
 <h3>void QwtDial::setLineWidth (intlineWidth)</h3>
 <p>Sets the line width of the frame </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lineWidth</i> Line width</dl>
+<dd><i>lineWidth</i> Line width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFrameShadow()</code></dl>
+<dd><code>setFrameShadow()</code></dd></dl>
 <h3>void QwtDial::setMaxScaleArc (doublemax)</h3>
 <p>Set the upper limit for the scale arc </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>max</i> Upper limit of the scale arc</dl>
+<dd><i>max</i> Upper limit of the scale arc</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleArc()</code>, <code>setMinScaleArc()</code></dl>
+<dd><code>setScaleArc()</code>, <code>setMinScaleArc()</code></dd></dl>
 <h3>void QwtDial::setMinScaleArc (doublemin)</h3>
 <p>Set the lower limit for the scale arc </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>min</i> Lower limit of the scale arc</dl>
+<dd><i>min</i> Lower limit of the scale arc</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleArc()</code>, <code>setMaxScaleArc()</code></dl>
+<dd><code>setScaleArc()</code>, <code>setMaxScaleArc()</code></dd></dl>
 <h3>void QwtDial::setMode (<code>Mode</code>mode)</h3>
 <p>Change the mode of the dial. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> New mode</dl>
+<dd><i>mode</i> New mode</dd></dl>
 <p> In case of <code>QwtDial::RotateNeedle</code> the needle is rotating, in case of <code>QwtDial::RotateScale</code>, the needle points to <code>origin()</code> and the scale is rotating. </p>
 <p> The default mode is <code>QwtDial::RotateNeedle</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mode()</code>, <code>setValue()</code>, <code>setOrigin()</code></dl>
+<dd><code>mode()</code>, <code>setValue()</code>, <code>setOrigin()</code></dd></dl>
 <h3>void QwtDial::setNeedle (<code>QwtDialNeedle</code> *needle)</h3>
 <p>Set a needle for the dial </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>needle</i> Needle</dl>
+<dd><i>needle</i> Needle</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The needle will be deleted, when a different needle is set or in <code>~QwtDial()</code></dl>
+<dd>The needle will be deleted, when a different needle is set or in <code>~QwtDial()</code></dd></dl>
 <h3>void QwtDial::setOrigin (doubleorigin) [virtual]</h3>
 <p>Change the origin. The origin is the angle where scale and needle is relative to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>origin</i> New origin</dl>
+<dd><i>origin</i> New origin</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>origin()</code></dl>
+<dd><code>origin()</code></dd></dl>
 <h3>void QwtDial::setScaleArc (doubleminArc, doublemaxArc)</h3>
 <p>Change the arc of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>minArc</i> Lower limit<br />
- <i>maxArc</i> Upper limit</dl>
+ <i>maxArc</i> Upper limit</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minScaleArc()</code>, <code>maxScaleArc()</code></dl>
+<dd><code>minScaleArc()</code>, <code>maxScaleArc()</code></dd></dl>
 <h3>void QwtDial::setScaleDraw (<code>QwtRoundScaleDraw</code> *scaleDraw)</h3>
 <p>Set an individual scale draw </p>
 <p> The motivation for setting a scale draw is often to overload <code>QwtRoundScaleDraw::label()</code> to return individual tick labels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDraw</i> Scale draw</dl>
+<dd><i>scaleDraw</i> Scale draw</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The previous scale draw is deleted</dl>
+<dd>The previous scale draw is deleted</dd></dl>
 <h3>QSize QwtDial::sizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size hint</dl>
+<dd>Size hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minimumSizeHint()</code></dl>
+<dd><code>minimumSizeHint()</code></dd></dl>
 <h3>void QwtDial::wheelEvent (QWheelEvent *event) [protected], [virtual]</h3>
 <p>Wheel Event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Wheel event</dl>
+<dd><i>event</i> Wheel event</dd></dl>
 <p> Reimplemented from <code>QwtAbstractSlider</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

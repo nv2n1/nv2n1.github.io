@@ -10,10 +10,8 @@ description: "std::is_void – std::is_void"
 <p>std::is_void &#8211; std::is_void</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_void;</code></pre>
 <p>Checks whether T is a void type. Provides the member constant value that is equal to true, if T is the type void, const void, volatile void, or const volatile void. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -42,10 +40,8 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_void&lt;void&gt;::value &lt;&lt; '

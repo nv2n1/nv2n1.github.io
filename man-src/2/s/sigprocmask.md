@@ -27,12 +27,12 @@ int sigprocmask(int how, const old_kernel_sigset_t *set,
 <p> <code>sigprocmask</code>() is used to fetch and/or change the signal mask of the calling thread. The signal mask is the set of signals whose delivery is currently blocked for the caller (see also <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for more details). </p>
 <p> The behavior of the call is dependent on the value of <i>how</i>, as follows.</p>
 <dl>
-<dt><code>SIG_BLOCK</code></p>
-<dd> The set of blocked signals is the union of the current set and the <i>set</i> argument.</p>
-<dt><code>SIG_UNBLOCK</code></p>
-<dd> The signals in <i>set</i> are removed from the current set of blocked signals. It is permissible to attempt to unblock a signal which is not blocked.</p>
-<dt><code>SIG_SETMASK</code></p>
-<dd> The set of blocked signals is set to the argument <i>set</i>.</dl>
+<dt><code>SIG_BLOCK</code></dt>
+<dd> The set of blocked signals is the union of the current set and the <i>set</i> argument.</dd>
+<dt><code>SIG_UNBLOCK</code></dt>
+<dd> The signals in <i>set</i> are removed from the current set of blocked signals. It is permissible to attempt to unblock a signal which is not blocked.</dd>
+<dt><code>SIG_SETMASK</code></dt>
+<dd> The set of blocked signals is set to the argument <i>set</i>.</dd></dl>
 <p> If <i>oldset</i> is non-NULL, the previous value of the signal mask is stored in <i>oldset</i>. </p>
 <p> If <i>set</i> is NULL, then the signal mask is unchanged (i.e., <i>how</i> is ignored), but the current value of the signal mask is nevertheless returned in <i>oldset</i> (if it is not NULL). </p>
 <p> A set of functions for modifying and inspecting variables of type <i>sigset_t</i> (&quot;signal sets&quot;) is described in <code><a href="/docs/linux/man/3-sigsetops/">sigsetops</a></code>(3). </p>
@@ -41,10 +41,10 @@ int sigprocmask(int how, const old_kernel_sigset_t *set,
 <p> <code>sigprocmask</code>() returns 0 on success and -1 on error. In the event of an error, <i>errno</i> is set to indicate the cause.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The <i>set</i> or <i>oldset</i> argument points outside the process&#8217;s allocated address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> Either the value specified in <i>how</i> was invalid or the kernel does not support the size passed in <i>sigsetsize.</i></dl>
+<dt><code>EFAULT</code></dt>
+<dd> The <i>set</i> or <i>oldset</i> argument points outside the process&#8217;s allocated address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Either the value specified in <i>how</i> was invalid or the kernel does not support the size passed in <i>sigsetsize.</i></dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>NOTES</h2>

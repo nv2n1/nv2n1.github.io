@@ -11,11 +11,11 @@ description: "XtParent – obtain widget’s parent widget id"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>Widget XtParent(Widget <i>w</i>);</dl>
+<dd>Widget XtParent(Widget <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <h2>Description</h2>
 <p><code>XtParent</code> returns the widget&#8217;s parent widget ID.</p>
 <h2>See Also</h2>

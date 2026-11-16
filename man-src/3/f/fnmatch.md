@@ -18,30 +18,30 @@ int fnmatch(const char *pattern, const char *string, int flags);
 <p> The <code>fnmatch</code>() function checks whether the <i>string</i> argument matches the <i>pattern</i> argument, which is a shell wildcard pattern (see <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7)). </p>
 <p> The <i>flags</i> argument modifies the behavior; it is the bitwise OR of zero or more of the following flags:</p>
 <dl>
-<dt><code>FNM_NOESCAPE</code></p>
-<dd> If this flag is set, treat backslash as an ordinary character, instead of an escape character.</p>
-<dt><code>FNM_PATHNAME</code></p>
-<dd> If this flag is set, match a slash in <i>string</i> only with a slash in <i>pattern</i> and not by an asterisk (*) or a question mark (?) metacharacter, nor by a bracket expression ([]) containing a slash.</p>
-<dt><code>FNM_PERIOD</code></p>
-<dd> If this flag is set, a leading period in <i>string</i> has to be matched exactly by a period in <i>pattern</i>. A period is considered to be leading if it is the first character in <i>string</i>, or if both <code>FNM_PATHNAME</code> is set and the period immediately follows a slash.</p>
-<dt><code>FNM_FILE_NAME</code></p>
-<dd> This is a GNU synonym for <code>FNM_PATHNAME</code>.</p>
-<dt><code>FNM_LEADING_DIR</code></p>
-<dd> If this flag (a GNU extension) is set, the pattern is considered to be matched if it matches an initial segment of <i>string</i> which is followed by a slash. This flag is mainly for the internal use of glibc and is implemented only in certain cases.</p>
-<dt><code>FNM_CASEFOLD</code></p>
-<dd> If this flag (a GNU extension) is set, the pattern is matched case-insensitively.</p>
-<dt><code>FNM_EXTMATCH</code></p>
-<dd> If this flag (a GNU extension) is set, extended patterns are supported, as introduced by &#8216;ksh&#8217; and now supported by other shells. The extended format is as follows, with <i>pattern-list</i> being a &#8216;|&#8217; separated list of patterns.</p>
-<dt>&#8216;?(<i>pattern-list</i>)&#8217;</p>
-<dd> The pattern matches if zero or one occurrences of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</p>
-<dt>&#8216;*(<i>pattern-list</i>)&#8217;</p>
-<dd> The pattern matches if zero or more occurrences of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</p>
-<dt>&#8216;+(<i>pattern-list</i>)&#8217;</p>
-<dd> The pattern matches if one or more occurrences of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</p>
-<dt>&#8216;@(<i>pattern-list</i>)&#8217;</p>
-<dd> The pattern matches if exactly one occurrence of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</p>
-<dt>&#8216;!(<i>pattern-list</i>)&#8217;</p>
-<dd> The pattern matches if the input <i>string</i> cannot be matched with any of the patterns in the <i>pattern-list</i>.</dl>
+<dt><code>FNM_NOESCAPE</code></dt>
+<dd> If this flag is set, treat backslash as an ordinary character, instead of an escape character.</dd>
+<dt><code>FNM_PATHNAME</code></dt>
+<dd> If this flag is set, match a slash in <i>string</i> only with a slash in <i>pattern</i> and not by an asterisk (*) or a question mark (?) metacharacter, nor by a bracket expression ([]) containing a slash.</dd>
+<dt><code>FNM_PERIOD</code></dt>
+<dd> If this flag is set, a leading period in <i>string</i> has to be matched exactly by a period in <i>pattern</i>. A period is considered to be leading if it is the first character in <i>string</i>, or if both <code>FNM_PATHNAME</code> is set and the period immediately follows a slash.</dd>
+<dt><code>FNM_FILE_NAME</code></dt>
+<dd> This is a GNU synonym for <code>FNM_PATHNAME</code>.</dd>
+<dt><code>FNM_LEADING_DIR</code></dt>
+<dd> If this flag (a GNU extension) is set, the pattern is considered to be matched if it matches an initial segment of <i>string</i> which is followed by a slash. This flag is mainly for the internal use of glibc and is implemented only in certain cases.</dd>
+<dt><code>FNM_CASEFOLD</code></dt>
+<dd> If this flag (a GNU extension) is set, the pattern is matched case-insensitively.</dd>
+<dt><code>FNM_EXTMATCH</code></dt>
+<dd> If this flag (a GNU extension) is set, extended patterns are supported, as introduced by &#8216;ksh&#8217; and now supported by other shells. The extended format is as follows, with <i>pattern-list</i> being a &#8216;|&#8217; separated list of patterns.</dd>
+<dt>&#8216;?(<i>pattern-list</i>)&#8217;</dt>
+<dd> The pattern matches if zero or one occurrences of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</dd>
+<dt>&#8216;*(<i>pattern-list</i>)&#8217;</dt>
+<dd> The pattern matches if zero or more occurrences of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</dd>
+<dt>&#8216;+(<i>pattern-list</i>)&#8217;</dt>
+<dd> The pattern matches if one or more occurrences of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</dd>
+<dt>&#8216;@(<i>pattern-list</i>)&#8217;</dt>
+<dd> The pattern matches if exactly one occurrence of any of the patterns in the <i>pattern-list</i> match the input <i>string</i>.</dd>
+<dt>&#8216;!(<i>pattern-list</i>)&#8217;</dt>
+<dd> The pattern matches if the input <i>string</i> cannot be matched with any of the patterns in the <i>pattern-list</i>.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Zero if <i>string</i> matches <i>pattern</i>, <code>FNM_NOMATCH</code> if there is no match or another nonzero value if there is an error.</p>
 <h2>ATTRIBUTES</h2>

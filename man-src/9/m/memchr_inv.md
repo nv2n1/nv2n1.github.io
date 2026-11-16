@@ -14,13 +14,13 @@ description: "memchr_inv – Find an unmatching character in an area of memory."
 <p><i>start</i></p>
 <dl>
 <dd>
-<dd>The memory area</dl>
+</dd><dd>The memory area</dd></dl>
 <p> <i>c</i></p>
 <dl>
-<dd>Find a character other than c</dl>
+<dd>Find a character other than c</dd></dl>
 <p> <i>bytes</i></p>
 <dl>
-<dd>The size of the area.</dl>
+<dd>The size of the area.</dd></dl>
 <h2>Description</h2>
 <p>returns the address of the first character other than <i>c</i>, or <code>NULL</code> if the whole buffer contains just <i>c</i>.</p>
 <h2>Copyright</h2>

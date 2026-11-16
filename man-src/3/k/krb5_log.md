@@ -23,18 +23,18 @@ description: "krb5_initlog krb5_openlog krb5_closelog krb5_addlog_dest krb5_addl
 <h3>Destinations</h3>
 <p> The defined destinations (as specified in krb5.conf follows:</p>
 <dl>
-<dt><code>STDERR</code></p>
-<dd> This logs to the program&#8217;s stderr.</p>
-<dt><code>FILE: /file </code></p>
+<dt><code>STDERR</code></dt>
+<dd> This logs to the program&#8217;s stderr.</dd>
+<dt><code>FILE: /file </code></dt>
 <dd>
-<dt><code>FILE= /file </code></p>
-<dd> Log to the specified file. The form using a colon appends to the file, the form with an equal truncates the file. The truncating form keeps the file open, while the appending form closes it after each log message (which makes it possible to rotate logs). The truncating form is mainly for compatibility with the MIT libkrb5.</p>
-<dt><code>DEVICE= /device </code></p>
-<dd> This logs to the specified device, at present this is the same as <code>FILE:/device</code></p>
-<dt><code>CONSOLE</code></p>
-<dd> Log to the console, this is the same as <code>DEVICE=/dev/console</code></p>
-<dt><code>SYSLOG </code>[:priority [:facility] ]</p>
-<dd> Send messages to the syslog system, using priority, and facility. To get the name for one of these, you take the name of the macro passed to <a href="/docs/linux/man/3-syslog/">syslog</a>(3), and remove the leading <code>LOG_</code> <code>( LOG_NOTICE</code> becomes <code>NOTICE )</code> The default values (as well as the values used for unrecognised values), are <code>ERR</code> and <code>AUTH</code> respectively. See <a href="/docs/linux/man/3-syslog/">syslog</a>(3) for a list of priorities and facilities.</dl>
+</dd><dt><code>FILE= /file </code></dt>
+<dd> Log to the specified file. The form using a colon appends to the file, the form with an equal truncates the file. The truncating form keeps the file open, while the appending form closes it after each log message (which makes it possible to rotate logs). The truncating form is mainly for compatibility with the MIT libkrb5.</dd>
+<dt><code>DEVICE= /device </code></dt>
+<dd> This logs to the specified device, at present this is the same as <code>FILE:/device</code></dd>
+<dt><code>CONSOLE</code></dt>
+<dd> Log to the console, this is the same as <code>DEVICE=/dev/console</code></dd>
+<dt><code>SYSLOG </code>[:priority [:facility] ]</dt>
+<dd> Send messages to the syslog system, using priority, and facility. To get the name for one of these, you take the name of the macro passed to <a href="/docs/linux/man/3-syslog/">syslog</a>(3), and remove the leading <code>LOG_</code> <code>( LOG_NOTICE</code> becomes <code>NOTICE )</code> The default values (as well as the values used for unrecognised values), are <code>ERR</code> and <code>AUTH</code> respectively. See <a href="/docs/linux/man/3-syslog/">syslog</a>(3) for a list of priorities and facilities.</dd></dl>
 <p> Each destination may optionally be prepended with a range of logging levels, specified as <code>min-max/</code> If the Fa level parameter to Fn krb5_log is within this range (inclusive) the message gets logged to this destination, otherwise not. Either of the min and max valued may be omitted, in this case min is assumed to be zero, and max is assumed to be infinity. If you don&#8217;t include a dash, both min and max gets set to the specified value. If no range is specified, all messages gets logged.</p>
 <h2>EXAMPLES</h2>
 <blockquote>

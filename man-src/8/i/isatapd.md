@@ -16,24 +16,24 @@ description: "isatapd – ISATAP IPv6 Router and Prefix Discovery"
 <p> This program is also intended for use on hosts and routers that follow the specifications for Virtual Enterprise Traversal (VET) (draft-templin-autoconf-dhcp).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Display some help and exit. </p>
-<dt><code>-d ifname</code> or <code>&#8211;dev ifname</code></p>
-<dd>Supply the name of an ISATAP/VET netwok interface associated with the Potential Router List. By default, isatapd uses the name &quot;is0&quot;. </p>
-<dt><code>-p prlname</code> or <code>&#8211;prl prlname</code></p>
-<dd>Supply the Potential Router List (PRL) name for use on this ISATAP/VET interface (e.g., isatap.example.com). There is no default PRL name, and this option may be ommitted if IPv4 addresses are manually configured. </p>
-<dt><code>-q</code> or <code>&#8211;quiet</code></p>
-<dd>Only display advertised IPv6 prefixes. Display nothing in case of failure. That is mostly useful when calling the program from a shell script. </p>
-<dt><code>-r attempts</code> or <code>&#8211;retry attempts</code></p>
-<dd>Send ICMPv6 Router Solicitations that many times until a Router Advertisement is received. (If no advertisement is received, isatapd will initiate the sending sequence again after delaying 120 seconds.) By default, isatapd will try 3 times (MAX_RTR_SOLICITATIONS from RFC2461) before delaying 120 seconds and trying again. </p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd>Display program version and license and exit. </p>
-<dt><code>-v</code> or <code>&#8211;verbose</code></p>
-<dd>Display verbose information. That is the default. </p>
-<dt><code>-w wait_ms</code> or <code>&#8211;wait wait_ms</code></p>
-<dd>Wait <i>wait_ms</i> milliseconds for a response before retrying. By default, isatapd waits 4 second between each attempts (RTR_SOLICITATION_INTERVAL from RFC2461). </p>
-<dt><code>ADDRS</code></p>
-<dd>A list of IPv4 addresses of ISATAP default routers. This list is in addition to any IPv4 addresses discovered through domain name resolution in the site name service. </p>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Display some help and exit. </dd>
+<dt><code>-d ifname</code> or <code>&#8211;dev ifname</code></dt>
+<dd>Supply the name of an ISATAP/VET netwok interface associated with the Potential Router List. By default, isatapd uses the name &quot;is0&quot;. </dd>
+<dt><code>-p prlname</code> or <code>&#8211;prl prlname</code></dt>
+<dd>Supply the Potential Router List (PRL) name for use on this ISATAP/VET interface (e.g., isatap.example.com). There is no default PRL name, and this option may be ommitted if IPv4 addresses are manually configured. </dd>
+<dt><code>-q</code> or <code>&#8211;quiet</code></dt>
+<dd>Only display advertised IPv6 prefixes. Display nothing in case of failure. That is mostly useful when calling the program from a shell script. </dd>
+<dt><code>-r attempts</code> or <code>&#8211;retry attempts</code></dt>
+<dd>Send ICMPv6 Router Solicitations that many times until a Router Advertisement is received. (If no advertisement is received, isatapd will initiate the sending sequence again after delaying 120 seconds.) By default, isatapd will try 3 times (MAX_RTR_SOLICITATIONS from RFC2461) before delaying 120 seconds and trying again. </dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd>Display program version and license and exit. </dd>
+<dt><code>-v</code> or <code>&#8211;verbose</code></dt>
+<dd>Display verbose information. That is the default. </dd>
+<dt><code>-w wait_ms</code> or <code>&#8211;wait wait_ms</code></dt>
+<dd>Wait <i>wait_ms</i> milliseconds for a response before retrying. By default, isatapd waits 4 second between each attempts (RTR_SOLICITATION_INTERVAL from RFC2461). </dd>
+<dt><code>ADDRS</code></dt>
+<dd>A list of IPv4 addresses of ISATAP default routers. This list is in addition to any IPv4 addresses discovered through domain name resolution in the site name service. </dd>
 </dl>
 <h2>Security</h2>
 <p>isatapd must be <i>setuid</i> <i>root</i> to allow use by non privileged users. It will drop its root privileges before any attempt is made to send or receive data from the network to reduce the possible impact of a security vulnerability.</p>

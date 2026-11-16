@@ -16,22 +16,22 @@ description: "nicotine-import-winconfig is a script to convert SoulSeek Windows 
 <h2>OPTIONS</h2>
 <p> If you don&#8217;t want to import the whole configuration, you may consider using the command line flags below.</p>
 <dl>
-<dt><i>-q, &#8211;queue</i></p>
-<dd> Import the download queue.</p>
-<dt><i>-u, &#8211;userlist</i></p>
-<dd> Import the userlist.</p>
-<dt><i>-l, &#8211;login</i></p>
-<dd> Import the login information.</p>
-<dt><i>-C, &#8211;chatrooms</i></p>
-<dd> Import the list of autojoined chatrooms.</p>
-<dt><i>-b, &#8211;banned</i></p>
-<dd> Import the list of banned users.</p>
-<dt><i>-i, &#8211;userinfo</i></p>
-<dd> Import the userinfo and picture.</p>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Show help and exit.</p>
-<dt><i>-c &lt;file&gt;, &#8211;config=&lt;file&gt;</i></p>
-<dd> Use &lt;file&gt; as Nicotine configuration file. If &lt;file&gt; do not exists a new empty configuration file will be created.</dl>
+<dt><i>-q, &#8211;queue</i></dt>
+<dd> Import the download queue.</dd>
+<dt><i>-u, &#8211;userlist</i></dt>
+<dd> Import the userlist.</dd>
+<dt><i>-l, &#8211;login</i></dt>
+<dd> Import the login information.</dd>
+<dt><i>-C, &#8211;chatrooms</i></dt>
+<dd> Import the list of autojoined chatrooms.</dd>
+<dt><i>-b, &#8211;banned</i></dt>
+<dd> Import the list of banned users.</dd>
+<dt><i>-i, &#8211;userinfo</i></dt>
+<dd> Import the userinfo and picture.</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Show help and exit.</dd>
+<dt><i>-c &lt;file&gt;, &#8211;config=&lt;file&gt;</i></dt>
+<dd> Use &lt;file&gt; as Nicotine configuration file. If &lt;file&gt; do not exists a new empty configuration file will be created.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Import the SoulSeek Windows client configuration from /mnt/windows into the default nicotine configuration file : </p>
 <p> Nicotine should be shut down before doing this. </p>

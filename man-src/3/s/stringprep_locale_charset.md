@@ -13,8 +13,8 @@ description: "stringprep_locale_charset – API function"
 const char *stringprep_locale_charset(void);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>Description</h2>
 <p>Find out current locale charset. The function respect the CHARSET environment variable, but typically uses nl_langinfo(CODESET) when it is supported. It fall back on &quot;ASCII&quot; if CHARSET isn&#8217;t set and nl_langinfo isn&#8217;t supported or return anything. </p>
 <p> Note that this function return the application&#8217;s locale&#8217;s preferred charset (or thread&#8217;s locale&#8217;s preffered charset, if your system support thread-specific locales). It does not return what the system may be using. Thus, if you receive data from external sources you cannot in general use this function to guess what charset it is encoded in. Use stringprep_convert from the external representation into the charset returned by this function, to have data in the locale encoding.</p>
@@ -28,5 +28,5 @@ const char *stringprep_locale_charset(void);</code></pre>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

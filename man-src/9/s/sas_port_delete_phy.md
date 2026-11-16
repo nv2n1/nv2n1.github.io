@@ -14,17 +14,17 @@ description: "sas_port_delete_phy – remove a phy from a port or wide port"
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>port to remove the phy from</dl>
+</dd><dd>port to remove the phy from</dd></dl>
 <p> <i>phy</i></p>
 <dl>
-<dd>phy to remove</dl>
+<dd>phy to remove</dd></dl>
 <h2>Description</h2>
 <p>This operation is used for tearing down ports again. It must be done to every port or wide port before calling sas_port_delete.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

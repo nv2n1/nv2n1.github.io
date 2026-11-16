@@ -18,20 +18,20 @@ description: "struct_w1_netlink_cmd – holds the command and data"
 <h2>Members</h2>
 <p>cmd</p>
 <dl>
-<dd>one of enum w1_commands</dl>
+<dd>one of enum w1_commands</dd></dl>
 <p> res</p>
 <dl>
-<dd>reserved</dl>
+<dd>reserved</dd></dl>
 <p> len</p>
 <dl>
-<dd>length of data following w1_netlink_cmd</dl>
+<dd>length of data following w1_netlink_cmd</dd></dl>
 <p> data[0]</p>
 <dl>
-<dd>start address of any following data</dl>
+<dd>start address of any following data</dd></dl>
 <h2>Description</h2>
 <p>One or more struct w1_netlink_cmd is placed starting at w1_netlink_msg.data each with optional data.</p>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -133,7 +133,7 @@ description: "Atlas::Message::Element – Multi-type container."
 <p> FIXME: Document this </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dl>
+<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dd></dl>
 <p> Changes: </p>
 <p> 2003/04/02 Al Riddcoh &lt;alriddoch [at] zepler.org&gt; Add in some assignment operators for efficiency 2002/11/07 Al Riddcoh &lt;alriddoch [at] zepler.org&gt; Changed the name to <code>Element</code> as Object is a stupid name for a class. 2000/08/05 Karsten-O. Laux &lt;klaux [at] rhrk.uni-kl.de&gt; Changed the members to pointers which only get created when really needed. This is a major speedup for passing Object as parameter or when copying it. Because copying of unused members is omitted. All pointers are stored as a union, so we save memory ! Changed IntType to long and added convinience Constructors for float, int and bool </p>
 <h2>Author</h2>

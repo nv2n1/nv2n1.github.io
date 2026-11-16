@@ -28,7 +28,7 @@ description: "log4cpp::BufferingAppender –"
 <p>Log in <code>Appender</code> specific way. Subclasses of <code>Appender</code> should implement this method to perform actual logging. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>virtual void log4cpp::BufferingAppender::close () [inline], [virtual]</h3>
 <p>Release any resources allocated within the appender such as file handles, network connections, etc. </p>

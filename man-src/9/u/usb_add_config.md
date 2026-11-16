@@ -14,13 +14,13 @@ description: "usb_add_config – add a configuration to a device."
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>wraps the USB gadget</dl>
+</dd><dd>wraps the USB gadget</dd></dl>
 <p> <i>config</i></p>
 <dl>
-<dd>the configuration, with bConfigurationValue assigned</dl>
+<dd>the configuration, with bConfigurationValue assigned</dd></dl>
 <p> <i>bind</i></p>
 <dl>
-<dd>the configuration&#8217;s bind function</dl>
+<dd>the configuration&#8217;s bind function</dd></dl>
 <h2>Context</h2>
 <p>single threaded during gadget setup</p>
 <h2>Description</h2>
@@ -29,5 +29,5 @@ description: "usb_add_config – add a configuration to a device."
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

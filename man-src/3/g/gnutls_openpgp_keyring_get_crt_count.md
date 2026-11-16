@@ -14,8 +14,8 @@ description: "gnutls_openpgp_keyring_get_crt_count – API function"
 <p> <code>int gnutls_openpgp_keyring_get_crt_count(gnutls_openpgp_keyring_t </code><i>ring</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_keyring_t ring</p>
-<dd> is an OpenPGP key ring</dl>
+<dt>gnutls_openpgp_keyring_t ring</dt>
+<dd> is an OpenPGP key ring</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the number of OpenPGP certificates present in the given keyring.</p>
 <h2>RETURNS</h2>
@@ -29,6 +29,6 @@ description: "gnutls_openpgp_keyring_get_crt_count – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

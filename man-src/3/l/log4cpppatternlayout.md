@@ -50,10 +50,10 @@ description: "log4cpp::PatternLayout –"
 <p>&nbsp;<wbr>Date format: The date format character may be followed by a date format specifier enclosed between braces. For example,&nbsp;<wbr>%d{%H:%M:%S,%l}&nbsp;<wbr>or&nbsp;<wbr>%d{%d&nbsp;<wbr>%m&nbsp;<wbr>%Y&nbsp;<wbr>%H:%M:%S,%l}. If no date format specifier is given then the following format is used:&nbsp;<wbr>&#8216;Wed Jan 02 02:03:55 1980&#8217;. The date format specifier admits the same syntax as the ANSI C function strftime, with 1 addition. The addition is the specifier&nbsp;<wbr>%l for milliseconds, padded with zeros to make 3 digits.&nbsp;<wbr><code>%m</code>&nbsp;<wbr>&#8211; the message&nbsp;<wbr><code>%n</code>&nbsp;<wbr>&#8211; the platform specific line separator&nbsp;<wbr><code>%p</code>&nbsp;<wbr>&#8211; the priority&nbsp;<wbr><code>%r</code>&nbsp;<wbr>&#8211; milliseconds since this layout was created.&nbsp;<wbr><code>%R</code>&nbsp;<wbr>&#8211; seconds since Jan 1, 1970&nbsp;<wbr><code>%u</code>&nbsp;<wbr>&#8211; clock ticks since process start&nbsp;<wbr><code>%x</code>&nbsp;<wbr>&#8211; the&nbsp;<wbr><code>NDC</code>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>conversionPattern</i> the conversion pattern</dl>
+<dd><i>conversionPattern</i> the conversion pattern</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl COMPACT>
-<dd><i></i><code>ConfigureFailure</code> if the pattern is invalid</dl>
+<dd><i></i><code>ConfigureFailure</code> if the pattern is invalid</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3>const char * log4cpp::PatternLayout::BASIC_CONVERSION_PATTERN = &#8216;%R %p %c %x: %m%n&#8217; [static]</h3>
 <p>A conversion pattern equivalent to the <code>BasicLayout</code>.</p>

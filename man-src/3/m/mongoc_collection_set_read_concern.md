@@ -14,11 +14,11 @@ mongoc_collection_set_read_concern (mongoc_collection_t *collection,
  const mongoc_read_concern_t *read_concern);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>read_concern</code></p>
-<dd>A <code>mongoc_read_concern_t</code> \&amp;.</dl>
+<dt><code>read_concern</code></dt>
+<dd>A <code>mongoc_read_concern_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Sets the read concern to use for operations on <code>collection</code> \&amp;. </p>
 <p> The default read concern is empty: No readConcern is sent to the server unless explicitly configured. </p>

@@ -12,7 +12,6 @@ std::basic_string&lt;CharT,Traits,Allocator&gt;::swap - std::basic_string&lt;Cha
 
 <pre><code>void swap(basic_string &amp;other);
 (until C++ 17)
-
     void swap(basic_string &amp;other) noexcept(/* see below */);
 (since C++ 17)</code></pre> 
 Exchanges the contents of the string with those of other. All iterators and references may be invalidated. 
@@ -36,10 +35,8 @@ noexcept(std::allocator_traits&lt;Allocator&gt;::propagate_on_container_swap::va
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::string a = &quot;AAA&quot;;
     std::string b = &quot;BBB&quot;;

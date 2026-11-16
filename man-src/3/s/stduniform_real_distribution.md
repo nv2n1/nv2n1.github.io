@@ -11,9 +11,7 @@ std::uniform_real_distribution - std::uniform_real_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class uniform_real_distribution;</code></pre> 
 Produces random floating-point values i, uniformly distributed on the interval [a, b), that is, distributed according to the probability density function: 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;P(i|a,b) = 
@@ -74,10 +72,8 @@ Some existing implementations have a bug where they may occasionally return b if
 
 print 10 random numbers between 1 and 2 
  // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::random_device rd;  // Will be used to obtain a seed for the random number engine
     std::mt19937 gen(rd()); // Standard mersenne_twister_engine seeded with rd()

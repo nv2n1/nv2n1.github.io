@@ -14,25 +14,24 @@ description: "git-info – Returns information on current repository"
 <h2>DESCRIPTION</h2>
 <p> Shows the following information about a repository:</p>
 <dl>
-<dt>1.</p>
-<dd> Remote Url(s)</p>
-<dt>2.</p>
-<dd> Remote Branches</p>
-<dt>3.</p>
-<dd> Local Branches</p>
-<dt>4.</p>
-<dd> Most recent commit</p>
-<dt>5.</p>
-<dd> Configuration Info</p>
-<dt>
-<dd></dl>
+<dt>1.</dt>
+<dd> Remote Url(s)</dd>
+<dt>2.</dt>
+<dd> Remote Branches</dd>
+<dt>3.</dt>
+<dd> Local Branches</dd>
+<dt>4.</dt>
+<dd> Most recent commit</dd>
+<dt>5.</dt>
+<dd> Configuration Info</dd>
+</dl>
 <h2>OPTIONS</h2>
 <p> N/A</p>
 <h2>EXAMPLES</h2>
 <p> Outputs info about a repo:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git info
 ## Remote URLs:
@@ -65,8 +64,7 @@ remote.origin.url=git [at] github.com:mub/git-extras.git
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Leila Muhtasib &lt;<i>muhtasib [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

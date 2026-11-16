@@ -15,27 +15,27 @@ gen_new_estimator - create a new rate estimator
 <h2>Arguments</h2>
 
 <i>bstats</i>
-<dl><dd><dd>basic statistics</dl>
+<dl><dd></dd><dd>basic statistics</dd></dl>
  
 
  <i>cpu_bstats</i>
-<dl><dd>bstats per cpu</dl>
+<dl><dd>bstats per cpu</dd></dl>
  
 
  <i>rate_est</i>
-<dl><dd>rate estimator statistics</dl>
+<dl><dd>rate estimator statistics</dd></dl>
  
 
  <i>stats_lock</i>
-<dl><dd>statistics lock</dl>
+<dl><dd>statistics lock</dd></dl>
  
 
  <i>running</i>
-<dl><dd>qdisc running seqcount</dl>
+<dl><dd>qdisc running seqcount</dd></dl>
  
 
  <i>opt</i>
-<dl><dd>rate estimator configuration TLV</dl>
+<dl><dd>rate estimator configuration TLV</dd></dl>
 
 <h2>Description</h2>
 

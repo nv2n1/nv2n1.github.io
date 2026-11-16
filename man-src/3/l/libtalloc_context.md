@@ -24,26 +24,26 @@ talloc_free(str2); /* we can not use free() on str2 */
 <h3>Context meta data</h3>
 <p> Every talloc context carries several pieces of internal information along with the allocated memory: </p>
 <dl>
-<dt>&bull;</p>
-<dd> name &#8211; which is used in reports of context hierarchy and to simulate a dynamic type system,</p>
-<dt>&bull;</p>
-<dd> size of the requested memory in bytes &#8211; this can be used to determine the number of elements in arrays,</p>
-<dt>&bull;</p>
-<dd> attached destructor &#8211; which is executed just before the memory block is about to be freed,</p>
-<dt>&bull;</p>
-<dd> references to the context</p>
-<dt>&bull;</p>
-<dd> children and parent contexts &#8211; create the hierarchical view on the memory.</dl>
+<dt>&bull;</dt>
+<dd> name &#8211; which is used in reports of context hierarchy and to simulate a dynamic type system,</dd>
+<dt>&bull;</dt>
+<dd> size of the requested memory in bytes &#8211; this can be used to determine the number of elements in arrays,</dd>
+<dt>&bull;</dt>
+<dd> attached destructor &#8211; which is executed just before the memory block is about to be freed,</dd>
+<dt>&bull;</dt>
+<dd> references to the context</dd>
+<dt>&bull;</dt>
+<dd> children and parent contexts &#8211; create the hierarchical view on the memory.</dd></dl>
 <h2>Hierarchy of talloc context</h2>
 <p> Every talloc context contains information about its parent and children. Talloc uses this information to create a hierarchical model of memory or to be more precise, it creates an n-ary tree where each node represents a single talloc context. The root node of the tree is referred to as a top level context &#8211; a context without any parent. </p>
 <p> This approach has several advantages: </p>
 <dl>
-<dt>&bull;</p>
-<dd> as a consequence of freeing a talloc context, all of its children will be properly deallocated as well,</p>
-<dt>&bull;</p>
-<dd> the parent of a context can be changed at any time, which results in moving the whole subtree under another node,</p>
-<dt>&bull;</p>
-<dd> it creates a more natural way of managing data structures.</dl>
+<dt>&bull;</dt>
+<dd> as a consequence of freeing a talloc context, all of its children will be properly deallocated as well,</dd>
+<dt>&bull;</dt>
+<dd> the parent of a context can be changed at any time, which results in moving the whole subtree under another node,</dd>
+<dt>&bull;</dt>
+<dd> it creates a more natural way of managing data structures.</dd></dl>
 <h3>Example</h3>
 <p> We have a structure that stores basic information about a user &#8211; his/her name, identification number and groups he/she is a member of: </p>
 <p>struct user {<br />
@@ -104,12 +104,12 @@ talloc_free(tmp_ctx);
 </code></pre>
 <h3>See also</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <code>talloc_size()</code></p>
-<dt>&bull;</p>
-<dd> <code>talloc_named()</code></p>
-<dt>&bull;</p>
-<dd> <code>The talloc array functions</code></p>
-<dt>&bull;</p>
-<dd> <code>The talloc string functions.</code></dl>
+<dt>&bull;</dt>
+<dd> <code>talloc_size()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>talloc_named()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>The talloc array functions</code></dd>
+<dt>&bull;</dt>
+<dd> <code>The talloc string functions.</code></dd></dl>
 <h2>Index</h2>

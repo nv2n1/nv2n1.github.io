@@ -17,42 +17,42 @@ description: "pq2-ana-dist – Analyse the file distribution of a dataset (or a 
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>datasets</i></p>
-<dd> Comma-separated list of datasets to be analysed; the &#8216;*&#8217; wild card in the items (in such a case the full string &#8211; as shown by pq2-ls &#8211; should be given in quotes, e.g. &#8216;/default/ganis/h1-set5*&#8217;.</dl>
+<dt><i>datasets</i></dt>
+<dd> Comma-separated list of datasets to be analysed; the &#8216;*&#8217; wild card in the items (in such a case the full string &#8211; as shown by pq2-ls &#8211; should be given in quotes, e.g. &#8216;/default/ganis/h1-set5*&#8217;.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep the temporary files created during the analysis under $TMPDIR</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>&#8211;dataset</code>=&lt;<i>datasets</i>&gt;</p>
-<dd> Alternative way to define the datasets to be analysed.</p>
-<dt><code>-s</code> &lt;<i>servers</i>&gt;, <code>&#8211;servers</code>=&lt;<i>servers</i>&gt;</p>
-<dd> Comma-separated list of servers to be used (-s) in the analysis; a &#8216;+&#8217; in front of the list adds the specified servers to the existing ones: this can be useful when determining file movements to empty or new servers</p>
-<dt><code>-e</code> &lt;<i>excsrvs</i>&gt;, <code>&#8211;exclude</code>=&lt;<i>excsrvs</i>&gt;</p>
-<dd> Comma-separated list of servers to be excluded from the target servers; this can be used, for example, to determine the files movements to drain a server.</p>
-<dt><code>-i</code> &lt;<i>ignsrvs</i>&gt;, <code>&#8211;ignore</code>=&lt;<i>ignsrvs</i>&gt;</p>
-<dd> Comma-separated list of servers to be ignored in the analysis; this can be used, for example, to skip the redirector.</p>
-<dt><code>-m</code> &lt;<i>metrics</i>&gt;, <code>&#8211;metrics</code>=&lt;<i>metrics</i>&gt;</p>
-<dd> Metrics to be used to calculate the degree of evenness: </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep the temporary files created during the analysis under $TMPDIR</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>&#8211;dataset</code>=&lt;<i>datasets</i>&gt;</dt>
+<dd> Alternative way to define the datasets to be analysed.</dd>
+<dt><code>-s</code> &lt;<i>servers</i>&gt;, <code>&#8211;servers</code>=&lt;<i>servers</i>&gt;</dt>
+<dd> Comma-separated list of servers to be used (-s) in the analysis; a &#8216;+&#8217; in front of the list adds the specified servers to the existing ones: this can be useful when determining file movements to empty or new servers</dd>
+<dt><code>-e</code> &lt;<i>excsrvs</i>&gt;, <code>&#8211;exclude</code>=&lt;<i>excsrvs</i>&gt;</dt>
+<dd> Comma-separated list of servers to be excluded from the target servers; this can be used, for example, to determine the files movements to drain a server.</dd>
+<dt><code>-i</code> &lt;<i>ignsrvs</i>&gt;, <code>&#8211;ignore</code>=&lt;<i>ignsrvs</i>&gt;</dt>
+<dd> Comma-separated list of servers to be ignored in the analysis; this can be used, for example, to skip the redirector.</dd>
+<dt><code>-m</code> &lt;<i>metrics</i>&gt;, <code>&#8211;metrics</code>=&lt;<i>metrics</i>&gt;</dt>
+<dd> Metrics to be used to calculate the degree of evenness: </dd>
 <pre>
     F          use the number of files (default)
     S          use the file size
 </pre>
-<dt><code>-f</code> &lt;<i>filemv</i>&gt;, <code>&#8211;filemv</code>=&lt;<i>filemv</i>&gt;</p>
-<dd> Defines the file where to save the result of the analysis; by the default the result is send to the screen. The output contains one line per each file that needs to be moved with the format &#8216;file source destination&#8217; where &#8216;file&#8217; is the file name, &#8216;source&#8217; is the source server URL and &#8216;destination&#8217; is the destination server URL. The file can be used as input, for example, to <i><a href="/docs/linux/man/1-pq2-redistribute/">pq2-redistribute</a></i>(1).</p>
-<dt><code>&#8211;plot</code>[=&lt;<i>fileplot.fmt</i>&gt;]</p>
-<dd> Defines the file with the output plot with the original distribution with the server names and the +-10% limits; the extension (if known) defines the format; the default format is &#8216;png&#8217; and the default name &#8216;plot.png&#8217;. The plot can also be obtained directly from a binary output file (saved with &#8216;&#8211;fout=&lt;outfile&gt;.root&#8217;) but just specifying &#8216;&#8211;fin=&lt;outfile&gt;.root &#8211;plot&#8217;. The available formats are those known by ROOT: png (default), eps, ps, pdf, svg, gif, xpm, jpg, tiff.</p>
-<dt><code>&#8211;fout</code>[=&lt;<i>outfile</i>&gt;]</p>
-<dd> Defines the file where to save the output of the analysis in binary form (ROOT file); this output can be used as starting point for a next run, allowing to run over many datasets in separate steps.</p>
-<dt><code>&#8211;fin</code>[=&lt;<i>infile</i>&gt;]</p>
-<dd> Defines the ROOT file from where to fetch the output of a previous run (saved with &#8211;fout=infile).</p>
-<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</p>
-<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dl>
+<dt><code>-f</code> &lt;<i>filemv</i>&gt;, <code>&#8211;filemv</code>=&lt;<i>filemv</i>&gt;</dt>
+<dd> Defines the file where to save the result of the analysis; by the default the result is send to the screen. The output contains one line per each file that needs to be moved with the format &#8216;file source destination&#8217; where &#8216;file&#8217; is the file name, &#8216;source&#8217; is the source server URL and &#8216;destination&#8217; is the destination server URL. The file can be used as input, for example, to <i><a href="/docs/linux/man/1-pq2-redistribute/">pq2-redistribute</a></i>(1).</dd>
+<dt><code>&#8211;plot</code>[=&lt;<i>fileplot.fmt</i>&gt;]</dt>
+<dd> Defines the file with the output plot with the original distribution with the server names and the +-10% limits; the extension (if known) defines the format; the default format is &#8216;png&#8217; and the default name &#8216;plot.png&#8217;. The plot can also be obtained directly from a binary output file (saved with &#8216;&#8211;fout=&lt;outfile&gt;.root&#8217;) but just specifying &#8216;&#8211;fin=&lt;outfile&gt;.root &#8211;plot&#8217;. The available formats are those known by ROOT: png (default), eps, ps, pdf, svg, gif, xpm, jpg, tiff.</dd>
+<dt><code>&#8211;fout</code>[=&lt;<i>outfile</i>&gt;]</dt>
+<dd> Defines the file where to save the output of the analysis in binary form (ROOT file); this output can be used as starting point for a next run, allowing to run over many datasets in separate steps.</dd>
+<dt><code>&#8211;fin</code>[=&lt;<i>infile</i>&gt;]</dt>
+<dd> Defines the ROOT file from where to fetch the output of a previous run (saved with &#8211;fout=infile).</dd>
+<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</dt>
+<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dd></dl>
 <h2>FORMAT OF THE FILE WITH MOVE DIRECTIVES</h2>
 <p> The out file constist of one line per file to be moved with the following format: </p>
 <pre>

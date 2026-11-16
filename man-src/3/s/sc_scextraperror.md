@@ -11,37 +11,18 @@ description: "sc::SCExtrapError –"
 <p> <code>SCExtrapError</code> holds the error data needed by <code>SelfConsistentExtrapolation</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;scextrap.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::SymmSCMatrixSCExtrapError</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SCExtrapError ()
-
-
 Construct a new SCExtrapError.
-
-
 SCExtrapError (StateIn &amp;)
-
-
 Constructor to restore SCExtrapError from a StateIn object.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 virtual double error ()=0
-
-
 Returns some measure of the total error.
-
-
 virtual double scalar_product (const Ref&lt; SCExtrapError &gt; &amp;)=0
-
-
 Performs a scalar product between this and the given SCExtrapError.</code></pre>
 <h2>Detailed Description</h2>
 <p><code>SCExtrapError</code> holds the error data needed by <code>SelfConsistentExtrapolation</code>.</p>

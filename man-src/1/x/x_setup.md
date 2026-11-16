@@ -14,10 +14,10 @@ description: "x_setup – Determine Pairs of Legs that need Cross-Over Checking"
 <h2>DESCRIPTION</h2>
 <p> <code>x_setup</code> scans the <i>gmtindex.b</i> file that contains information on which legs occupy each 1 by 1 degree bin and reports all the pairs of legs that may overlap. Each pair is only reported once, even if the two legs involved are found in other bins also.</p>
 <dl>
-<dt><code>-L</code></p>
-<dd> Only report pairs where at least one of the legs are present in the <i>legfile</i>.</p>
-<dt><code>-R</code></p>
-<dd> The region of interest. [Default is world]</dl>
+<dt><code>-L</code></dt>
+<dd> Only report pairs where at least one of the legs are present in the <i>legfile</i>.</dd>
+<dt><code>-R</code></dt>
+<dd> The region of interest. [Default is world]</dd></dl>
 <h2>BEWARE</h2>
 <p> The <code>-L</code> option is useful when one wants to check out a handful of new cruises. Obviously we only need to compute COEs for the pairs that involve one or two of the new cruises, since all the other combinations have already been done.</p>
 <h2>SEE ALSO</h2>

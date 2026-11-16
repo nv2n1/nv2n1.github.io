@@ -10,23 +10,21 @@ description: "xcb_poly_fill_arc –"
 <p>xcb_poly_fill_arc &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_poly_fill_arc(xcb_connection_t *conn, xcb_drawable_t drawable, xcb_gcontext_t gc, uint32_t arcs_len, const xcb_arc_t *arcs);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>gc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>arcs_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>arcs</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>gc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>arcs_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>arcs</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

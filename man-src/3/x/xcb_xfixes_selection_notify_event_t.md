@@ -24,22 +24,22 @@ description: "xcb_xfixes_selection_notify_event_t –"
 } <code>xcb_xfixes_selection_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_XFIXES_SELECTION_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>subtype</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>window</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>owner</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>selection</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>timestamp</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>selection_timestamp</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_XFIXES_SELECTION_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>subtype</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>window</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>owner</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>selection</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>timestamp</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>selection_timestamp</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

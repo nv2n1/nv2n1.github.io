@@ -16,22 +16,22 @@ description: "connect-proxy — connect over SOCKS4/5 proxy"
 <p> Please, note that any HTTP-Proxy tunnel won&#8217;t work with content-inspection firewall (unless using SSL).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-H</code></p>
-<dd> specifies a hostname and port number of the http proxy server to relay. If port is omitted, 80 is used. You can specify this value in the environment variable HTTP_PROXY and pass the -h option to use it.</p>
-<dt><code>-S</code></p>
-<dd> specifies the hostname and port number of the SOCKS server to relay. Like -H, port number can be omitted and the default is 1080. You can also specify this value pair in the environment variable SOCKS5_SERVER and give the -s option to use it.</p>
-<dt><code>-4</code></p>
-<dd> specifies SOCKS relaying and indicates protocol version to use. It is valid only when used with &#8216;-s&#8217; or &#8216;-S&#8217;. Default is &#8216;-5&#8217; (protocol version 5)</p>
-<dt><code>-R</code></p>
-<dd> method to resolve the hostname. Three keywords (&quot;local&quot;, &quot;remote&quot;, &quot;both&quot;) or dot-notation IP address are acceptable. The keyword &quot;both&quot; means, &quot;Try local first, then remote&quot;. If a dot-notation IP address is specified, use this host as nameserver. The default is &quot;remote&quot; for SOCKS5 or &quot;local&quot; for others. On SOCKS4 protocol, remote resolving method (&quot;remote&quot; and &quot;both&quot;) requires protocol 4a supported server.</p>
-<dt><code>-p</code></p>
-<dd> will forward a local TCP port instead of using the standard input and output.</p>
-<dt><code>-P</code></p>
-<dd> same to &#8216;-p&#8217; except keep remote session. The program repeats waiting the port with holding remote session without disconnecting. To connect the remote session, send EOF to stdin or kill the program.</p>
-<dt><code>-w</code></p>
-<dd> timeout in seconds for making connection with TARGET host.</p>
-<dt><code>-d</code></p>
-<dd> used for debug. If you fail to connect, use this and check request to and response from server.</dl>
+<dt><code>-H</code></dt>
+<dd> specifies a hostname and port number of the http proxy server to relay. If port is omitted, 80 is used. You can specify this value in the environment variable HTTP_PROXY and pass the -h option to use it.</dd>
+<dt><code>-S</code></dt>
+<dd> specifies the hostname and port number of the SOCKS server to relay. Like -H, port number can be omitted and the default is 1080. You can also specify this value pair in the environment variable SOCKS5_SERVER and give the -s option to use it.</dd>
+<dt><code>-4</code></dt>
+<dd> specifies SOCKS relaying and indicates protocol version to use. It is valid only when used with &#8216;-s&#8217; or &#8216;-S&#8217;. Default is &#8216;-5&#8217; (protocol version 5)</dd>
+<dt><code>-R</code></dt>
+<dd> method to resolve the hostname. Three keywords (&quot;local&quot;, &quot;remote&quot;, &quot;both&quot;) or dot-notation IP address are acceptable. The keyword &quot;both&quot; means, &quot;Try local first, then remote&quot;. If a dot-notation IP address is specified, use this host as nameserver. The default is &quot;remote&quot; for SOCKS5 or &quot;local&quot; for others. On SOCKS4 protocol, remote resolving method (&quot;remote&quot; and &quot;both&quot;) requires protocol 4a supported server.</dd>
+<dt><code>-p</code></dt>
+<dd> will forward a local TCP port instead of using the standard input and output.</dd>
+<dt><code>-P</code></dt>
+<dd> same to &#8216;-p&#8217; except keep remote session. The program repeats waiting the port with holding remote session without disconnecting. To connect the remote session, send EOF to stdin or kill the program.</dd>
+<dt><code>-w</code></dt>
+<dd> timeout in seconds for making connection with TARGET host.</dd>
+<dt><code>-d</code></dt>
+<dd> used for debug. If you fail to connect, use this and check request to and response from server.</dd></dl>
 <h2>USAGE</h2>
 <p> To use proxy, this example is for SOCKS5 connection to connect to<br />
 &nbsp;<wbr> <code>connect-proxy -S firewall host 25</code><br />

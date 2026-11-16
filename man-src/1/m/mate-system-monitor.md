@@ -18,10 +18,10 @@ description: "mate-system-monitor – view and control processes"
 <h2>OPTIONS</h2>
 <p> This program accepts all the standard MATE and GTK+ options, which follow the usual GNU command line syntax, with long options starting with two dashes (&#8216;-&#8216;). In addition to those standard MATE options, the mate-system-monitor accepts the following options:</p>
 <dl>
-<dt><code>-s, &#8211;show-system-tab</code></p>
-<dd> Show the System tab.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</dl>
+<dt><code>-s, &#8211;show-system-tab</code></dt>
+<dd> Show the System tab.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/mate-system-monitor/issues">http://github.com/mate-desktop/mate-system-monitor/issues</a></p>

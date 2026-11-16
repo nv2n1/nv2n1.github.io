@@ -24,16 +24,16 @@ int s390_pci_mmio_read(unsigned long mmio_addr,
 <p> On success, <code>s390_pci_mmio_write</code>() and <code>s390_pci_mmio_read</code>() return 0. On error, -1 is returned and <i>errno</i> is set to one of the error codes listed below.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The address in <i>mmio_addr</i> is invalid.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>user_buffer</i> does not point to a valid location in the caller&#8217;s address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid <i>length</i> argument.</p>
-<dt><code>ENODEV</code></p>
-<dd> PCI support is not enabled.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The address in <i>mmio_addr</i> is invalid.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>user_buffer</i> does not point to a valid location in the caller&#8217;s address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid <i>length</i> argument.</dd>
+<dt><code>ENODEV</code></dt>
+<dd> PCI support is not enabled.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls are available since Linux 3.19.</p>
 <h2>CONFORMING TO</h2>

@@ -24,21 +24,19 @@ libssh2_sftp_open_ex(LIBSSH2_SFTP *sftp, const char *filename,
 <p> <i>filename_len</i> &#8211; Length of filename </p>
 <p> <i>flags</i> &#8211; Any reasonable combination of the LIBSSH2_FXF_* constants:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>LIBSSH2_FXF_READ</p>
-<dd> Open the file for reading.</p>
-<dt>LIBSSH2_FXF_WRITE</p>
-<dd> Open the file for writing. If both this and LIBSSH2_FXF_READ are specified, the file is opened for both reading and writing.</p>
-<dt>LIBSSH2_FXF_APPEND</p>
-<dd> Force all writes to append data at the end of the file.</p>
-<dt>LIBSSH2_FXF_CREAT,</p>
-<dd> If this flag is specified, then a new file will be created if one does not already exist (if LIBSSH2_FXF_TRUNC is specified, the new file will be truncated to zero length if it previously exists)</p>
-<dt>LIBSSH2_FXF_TRUNC</p>
-<dd> Forces an existing file with the same name to be truncated to zero length when creating a file by specifying LIBSSH2_FXF_CREAT. LIBSSH2_FXF_CREAT MUST also be specified if this flag is used.</p>
-<dt>LIBSSH2_FXF_EXCL</p>
-<dd> Causes the request to fail if the named file already exists. LIBSSH2_FXF_CREAT MUST also be specified if this flag is used. </p>
+<dt>LIBSSH2_FXF_READ</dt>
+<dd> Open the file for reading.</dd>
+<dt>LIBSSH2_FXF_WRITE</dt>
+<dd> Open the file for writing. If both this and LIBSSH2_FXF_READ are specified, the file is opened for both reading and writing.</dd>
+<dt>LIBSSH2_FXF_APPEND</dt>
+<dd> Force all writes to append data at the end of the file.</dd>
+<dt>LIBSSH2_FXF_CREAT,</dt>
+<dd> If this flag is specified, then a new file will be created if one does not already exist (if LIBSSH2_FXF_TRUNC is specified, the new file will be truncated to zero length if it previously exists)</dd>
+<dt>LIBSSH2_FXF_TRUNC</dt>
+<dd> Forces an existing file with the same name to be truncated to zero length when creating a file by specifying LIBSSH2_FXF_CREAT. LIBSSH2_FXF_CREAT MUST also be specified if this flag is used.</dd>
+<dt>LIBSSH2_FXF_EXCL</dt>
+<dd> Causes the request to fail if the named file already exists. LIBSSH2_FXF_CREAT MUST also be specified if this flag is used. </dd>
 </dl>
 </dl>
 <p> <i>mode</i> &#8211; POSIX file permissions to assign if the file is being newly created. See the LIBSSH2_SFTP_S_* convenience defines in &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>

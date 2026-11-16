@@ -14,21 +14,21 @@ description: "gmtlegs – Find cruises in a given region"
 <h2>DESCRIPTION</h2>
 <p> <code>gmtlegs</code> will report the name of all the cruises that happened to be wholly or partially inside the specified region. As an option, only those cruises that collected a certain type of data can be reported.</p>
 <dl>
-<dt><code>-R</code></p>
-<dd> <i>west, east, south,</i> and <i>north</i> specify the Region of interest, and you may specify them in decimal degrees or in [+-]dd:mm[:ss.xxx][W|E|S|N] format. Append <code>r</code> if lower left and upper right map coordinates are given instead of w/e/s/n. The two shorthands <code>-Rg</code> and <code>-Rd</code> stand for global domain (0/360 and -180/+180 in longitude respectively, with -90/+90 in latitude). Alternatively, specify the name of an existing grid file and the <code>-R</code> settings (and grid spacing, if applicable) are copied from the grid.</dl>
+<dt><code>-R</code></dt>
+<dd> <i>west, east, south,</i> and <i>north</i> specify the Region of interest, and you may specify them in decimal degrees or in [+-]dd:mm[:ss.xxx][W|E|S|N] format. Append <code>r</code> if lower left and upper right map coordinates are given instead of w/e/s/n. The two shorthands <code>-Rg</code> and <code>-Rd</code> stand for global domain (0/360 and -180/+180 in longitude respectively, with -90/+90 in latitude). Alternatively, specify the name of an existing grid file and the <code>-R</code> settings (and grid spacing, if applicable) are copied from the grid.</dd></dl>
 <h2>OPTIONS</h2>
 <p> No space between the option flag and the associated arguments</p>
 <dl>
-<dt><code>-G</code></p>
-<dd> Report cruises that collected Gravity data. [Default is any data].</p>
-<dt><code>-M</code></p>
-<dd> Report cruises that collected Magnetics. [Default is any data].</p>
-<dt><code>-T</code></p>
-<dd> Report cruises that collected Topography. [Default is any data].</p>
-<dt><code>-L</code></p>
-<dd> Long output, i.e. cruisenames and data types available. [Default is cruisenames only].</p>
-<dt><code>-V</code></p>
-<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</dl>
+<dt><code>-G</code></dt>
+<dd> Report cruises that collected Gravity data. [Default is any data].</dd>
+<dt><code>-M</code></dt>
+<dd> Report cruises that collected Magnetics. [Default is any data].</dd>
+<dt><code>-T</code></dt>
+<dd> Report cruises that collected Topography. [Default is any data].</dd>
+<dt><code>-L</code></dt>
+<dd> Long output, i.e. cruisenames and data types available. [Default is cruisenames only].</dd>
+<dt><code>-V</code></dt>
+<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To find all cruises around Hawaii that collected gravity and topography: </p>
 <p> <code>gmtlegs</code> <code>-R</code>-162/-152/18/25 <code>-G</code> <code>-T</code> &gt; hawaii_gt.legs </p>

@@ -21,13 +21,11 @@ description: "mouse_x, mouse_y, mouse_z, mouse_w, mouse_b, mouse_pos – Global 
 <pre> if (mouse_b &amp; 1)
  printf(&quot;Left button is pressed
 &quot;);
- 
  if (!(mouse_b &amp; 2))
  printf(&quot;Right button is not pressed
 &quot;);</pre>
 <p>The `mouse_pos&#8217; variable has the current X coordinate in the upper 16 bits and the Y in the lower 16 bits. This may be useful in tight polling loops where a mouse interrupt could occur between your reading of the two separate variables, since you can copy this value into a local variable with a single instruction and then split it up at your leisure. Example: </p>
 <pre> int pos, x, y;
- 
  pos = mouse_pos;
  x = pos &gt;&gt; 16;
  y = pos &amp; 0x0000ffff;</pre>

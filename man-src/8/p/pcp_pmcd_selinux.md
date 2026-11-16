@@ -100,8 +100,8 @@ description: "pcp_pmcd_selinux – Security Enhanced Linux Policy for the pcp_pm
 <p> <code>pcp_pmcd_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmcd_exec_t type, if you want to transition an executable to the pcp_pmcd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pmcd, /usr/libexec/pcp/bin/pmcd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pmcd, /usr/libexec/pcp/bin/pmcd </dd>
 </dl>
 <p> <code>pcp_pmcd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmcd_initrc_exec_t type, if you want to transition an executable to the pcp_pmcd_initrc_t domain. </p>

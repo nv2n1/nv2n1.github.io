@@ -14,14 +14,14 @@ description: "ccw_device_get_chp_desc – return newly allocated channel-path de
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>device to obtain the descriptor for</dl>
+</dd><dd>device to obtain the descriptor for</dd></dl>
 <p> <i>chp_idx</i></p>
 <dl>
-<dd>index of the channel path</dl>
+<dd>index of the channel path</dd></dl>
 <h2>Description</h2>
 <p>On success return a newly allocated copy of the channel-path description data associated with the given channel path. Return <code>NULL</code> on error.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

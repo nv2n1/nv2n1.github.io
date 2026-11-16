@@ -11,13 +11,10 @@ description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpn
 <h2>Synopsis</h2>
 <pre><code>#include &lt;utmp.h&gt;
 struct utmp *getutent(void);
-
 struct utmp *getutid(const struct utmp *ut);
-
 struct utmp *getutline(const struct utmp *ut);
 struct utmp *pututline(const struct utmp *ut);
 void setutent(void);
-
 void endutent(void);
 int utmpname(const char *file);</code></pre>
 <h2>Description</h2>
@@ -36,17 +33,17 @@ int utmpname(const char *file);</code></pre>
 <p> In the event of an error, these functions <i>errno</i> set to indicate the cause.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>Out of memory.</p>
-<dt><code>ESRCH</code></p>
-<dd>Record not found.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>Out of memory.</dd>
+<dt><code>ESRCH</code></dt>
+<dd>Record not found.</dd></dl>
 <p> <code>setutent</code>(), <code>pututline</code>(), and the <code>getut*</code>() functions can also fail for the reasons described in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/run/utmp</i></p>
-<dd>database of currently logged-in users</p>
-<dt><i>/var/log/wtmp</i></p>
-<dd>database of past user logins</dl>
+<dt><i>/var/run/utmp</i></dt>
+<dd>database of currently logged-in users</dd>
+<dt><i>/var/log/wtmp</i></dt>
+<dd>database of past user logins</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

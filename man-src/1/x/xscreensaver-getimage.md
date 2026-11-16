@@ -18,14 +18,14 @@ description: "xscreensaver-getimage – put some randomly-selected image on the 
 <h2>OPTIONS</h2>
 <p> <i>xscreensaver-getimage</i> reads the <i>~/.xscreensaver</i> file for configuration information. It uses these settings:</p>
 <dl>
-<dt><code>grabDesktopImages</code></p>
-<dd> Whether it is acceptable to grab snapshots of the desktop. The security paranoid might want to turn this off, to avoid letting people see (but not touch!) your desktop while the screen is locked.</p>
-<dt><code>grabVideoFrames</code></p>
-<dd> Whether it is acceptable to grab frames of video from the system&#8217;s video input. Grabbing of video is done by invoking the <code><a href="/docs/linux/man/1-xscreensaver-getimage-video/">xscreensaver-getimage-video</a></code>(1) program.</p>
-<dt><code>chooseRandomImages</code></p>
-<dd> Whether it is acceptable to display random images found on disk. Selection and loading of images is done by invoking the <code><a href="/docs/linux/man/1-xscreensaver-getimage-file/">xscreensaver-getimage-file</a></code>(1) program.</p>
-<dt><code>imageDirectory</code></p>
-<dd> When loading images from disk, this is the directory to find them in. The directory will be searched recursively for images. </p>
+<dt><code>grabDesktopImages</code></dt>
+<dd> Whether it is acceptable to grab snapshots of the desktop. The security paranoid might want to turn this off, to avoid letting people see (but not touch!) your desktop while the screen is locked.</dd>
+<dt><code>grabVideoFrames</code></dt>
+<dd> Whether it is acceptable to grab frames of video from the system&#8217;s video input. Grabbing of video is done by invoking the <code><a href="/docs/linux/man/1-xscreensaver-getimage-video/">xscreensaver-getimage-video</a></code>(1) program.</dd>
+<dt><code>chooseRandomImages</code></dt>
+<dd> Whether it is acceptable to display random images found on disk. Selection and loading of images is done by invoking the <code><a href="/docs/linux/man/1-xscreensaver-getimage-file/">xscreensaver-getimage-file</a></code>(1) program.</dd>
+<dt><code>imageDirectory</code></dt>
+<dd> When loading images from disk, this is the directory to find them in. The directory will be searched recursively for images. </dd>
 <p> It may also be the URL of an RSS or Atom feed, in which case a random image from that feed will be selected instead. The contents of the feed will be cached locally and refreshed periodically as needed.</dl>
 <p> If none of the three options are set to True, then video colorbars will be displayed instead.</p>
 <h2>BUGS</h2>
@@ -37,3 +37,4 @@ description: "xscreensaver-getimage – put some randomly-selected image on the 
 <h2>AUTHOR</h2>
 <p> Jamie Zawinski &lt;jwz [at] jwz.org&gt;, 14-Apr-01 </p>
 <h2>Index</h2>
+</p>

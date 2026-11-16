@@ -16,24 +16,24 @@ description: "monodocs2html – Translate Monodoc XML to HTML"
 <p> <i>monodocs2html</i> is a program that creates HTML documentation from the Monodoc documentation XML files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-dest:DEST_DIR</i></p>
-<dd> Write the HTML files into the directory <i>DEST_DIR</i> .</p>
-<dt><i>-dumptemplate</i></p>
-<dd> Dump the default page template to standard output so that you can use it as a base for a new template for use with the <i>-template</i> option.</p>
-<dt><i>-ext:FILE_EXTENSION</i></p>
-<dd> <i>FILE_EXTENSION</i> is the file extension for generated files. </p>
+<dt><i>-dest:DEST_DIR</i></dt>
+<dd> Write the HTML files into the directory <i>DEST_DIR</i> .</dd>
+<dt><i>-dumptemplate</i></dt>
+<dd> Dump the default page template to standard output so that you can use it as a base for a new template for use with the <i>-template</i> option.</dd>
+<dt><i>-ext:FILE_EXTENSION</i></dt>
+<dd> <i>FILE_EXTENSION</i> is the file extension for generated files. </dd>
 <p> This defaults to <i>html</i> .</p>
-<dt><i>-?, -help</i></p>
-<dd> Show program argument information.</p>
-<dt><i>-onlytype:TYPE</i></p>
-<dd> Only generate HTML for the type <i>TYPE</i> .</p>
-<dt><i>-source:SOURCE_DIR</i></p>
-<dd> <i>SOURCE_DIR</i> is the base directory containing the Monodoc XML documentation. </p>
+<dt><i>-?, -help</i></dt>
+<dd> Show program argument information.</dd>
+<dt><i>-onlytype:TYPE</i></dt>
+<dd> Only generate HTML for the type <i>TYPE</i> .</dd>
+<dt><i>-source:SOURCE_DIR</i></dt>
+<dd> <i>SOURCE_DIR</i> is the base directory containing the Monodoc XML documentation. </dd>
 <p> This directory should contain an <i>index.xml</i> file, the <i>namespace-name.xml</i> files (one for each namespace), and <i>namespace-name</i> directories (one for each namespace), which will contain the <i>type.xml</i> files holding the monodoc documentation.</p>
-<dt><i>-template:TEMPLATE</i></p>
-<dd> Generate HTML using the page template <i>TEMPLATE</i> .</p>
-<dt><i>-V, -version</i></p>
-<dd> Display version and licensing information.</dl>
+<dt><i>-template:TEMPLATE</i></dt>
+<dd> Generate HTML using the page template <i>TEMPLATE</i> .</dd>
+<dt><i>-V, -version</i></dt>
+<dd> Display version and licensing information.</dd></dl>
 <h2>TEMPLATE FORMAT</h2>
 <p> The template file is an XSLT which needs to process the following input XML document: </p>
 <pre>
@@ -49,62 +49,60 @@ description: "monodocs2html – Translate Monodoc XML to HTML"
 </pre>
 <p> The generated HTML also makes use of the following CSS classes, which should be defined so that output is nicely formatted:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>.CollectionTitle</i></p>
+<dt><i>.CollectionTitle</i></dt>
 <dd>
-<dt><i>.PageTitle</i></p>
+</dd><dt><i>.PageTitle</i></dt>
 <dd>
-<dt><i>.Summary</i></p>
+</dd><dt><i>.Summary</i></dt>
 <dd>
-<dt><i>.Signature</i></p>
+</dd><dt><i>.Signature</i></dt>
 <dd>
-<dt><i>.Remarks</i></p>
+</dd><dt><i>.Remarks</i></dt>
 <dd>
-<dt><i>.Members</i></p>
+</dd><dt><i>.Members</i></dt>
 <dd>
-<dt><i>.Copyright</i></p>
+</dd><dt><i>.Copyright</i></dt>
 <dd>
-<dt><i>.Section</i></p>
+</dd><dt><i>.Section</i></dt>
 <dd>
-<dt><i>.SectionBox</i></p>
+</dd><dt><i>.SectionBox</i></dt>
 <dd>
-<dt><i>.NamespaceName</i></p>
+</dd><dt><i>.NamespaceName</i></dt>
 <dd>
-<dt><i>.NamespaceSummary</i></p>
+</dd><dt><i>.NamespaceSummary</i></dt>
 <dd>
-<dt><i>.MemberName</i></p>
+</dd><dt><i>.MemberName</i></dt>
 <dd>
-<dt><i>.MemberSignature</i></p>
+</dd><dt><i>.MemberSignature</i></dt>
 <dd>
-<dt><i>.MemberBox</i></p>
+</dd><dt><i>.MemberBox</i></dt>
 <dd>
-<dt><i>.Subsection</i></p>
+</dd><dt><i>.Subsection</i></dt>
 <dd>
-<dt><i>.SubsectionBox</i></p>
+</dd><dt><i>.SubsectionBox</i></dt>
 <dd>
-<dt><i>.SignatureTable</i></p>
+</dd><dt><i>.SignatureTable</i></dt>
 <dd>
-<dt><i>.EnumerationsTable</i></p>
+</dd><dt><i>.EnumerationsTable</i></dt>
 <dd>
-<dt><i>.CodeExampleTable</i></p>
+</dd><dt><i>.CodeExampleTable</i></dt>
 <dd>
-<dt><i>.MembersListing</i></p>
+</dd><dt><i>.MembersListing</i></dt>
 <dd>
-<dt><i>.TypesListing</i></p>
+</dd><dt><i>.TypesListing</i></dt>
 <dd>
-<dt><i>.InnerSignatureTable</i></p>
+</dd><dt><i>.InnerSignatureTable</i></dt>
 <dd>
-<dt><i>.TypePermissionsTable</i></p>
-<dd></dl>
+</dd><dt><i>.TypePermissionsTable</i></dt>
+<dd></dd></dl>
 </dl>
 <h2>HTML LINKS</h2>
 <p> All members within the HTML file have a <i>id</i> attribute to permit linking to a specific member. The value of the <i>id</i> attribute is the String ID of the specified member. See the <code>STRING ID FORMAT</code> section of the <code>monodocer</code> man page for more information.</p>
 <h2>MAILING LISTS</h2>
 <dl>
-<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>
-<dd></dl>
+<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</dt>
+<dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
 <h2>Index</h2>

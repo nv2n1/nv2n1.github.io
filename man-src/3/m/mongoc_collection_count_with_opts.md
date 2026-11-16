@@ -20,36 +20,36 @@ mongoc_collection_count_with_opts (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd>A <code>bson_t</code> containing the query.</dl>
+<dt><code>query</code></dt>
+<dd>A <code>bson_t</code> containing the query.</dd></dl>
 <dl COMPACT>
-<dt><code>skip</code></p>
-<dd>A int64_t, zero to ignore.</dl>
+<dt><code>skip</code></dt>
+<dd>A int64_t, zero to ignore.</dd></dl>
 <dl COMPACT>
-<dt><code>limit</code></p>
-<dd>A int64_t, zero to ignore.</dl>
+<dt><code>limit</code></dt>
+<dd>A int64_t, zero to ignore.</dd></dl>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd>A <code>bson_t</code> , <code>NULL</code> to ignore.</dl>
+<dt><code>opts</code></dt>
+<dd>A <code>bson_t</code> , <code>NULL</code> to ignore.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall execute a count query on the underlying &#8216;collection&#8217;. The bson &#8216;query&#8217; is not validated, simply passed along as appropriate to the server. As such, compatibility and errors should be validated in the appropriate server documentation. </p>
 <p> In addition to the standard functionality available from mongoc_collection_count, this function allows the user to add arbitrary extra keys to the count. This pass through enables features such as hinting for counts. </p>
 <p> For more information, see the <code>query reference</code> at the MongoDB website. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>The <code>mongoc_read_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dl>
+<dd>The <code>mongoc_read_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

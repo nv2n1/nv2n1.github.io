@@ -16,8 +16,8 @@ description: "ldns_rr_list_sort"
 <p> void ldns_rr_list_sort(ldns_rr_list *unsorted); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_list_sort</i>()</p>
-<dd>sorts an rr_list (canonical wire format). the sorting is done inband. .br <code>unsorted</code>: the rr_list to be sorted .br Returns void</dl>
+<dt> <i>ldns_rr_list_sort</i>()</dt>
+<dd>sorts an rr_list (canonical wire format). the sorting is done inband. .br <code>unsorted</code>: the rr_list to be sorted .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

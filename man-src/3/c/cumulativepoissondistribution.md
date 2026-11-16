@@ -20,6 +20,6 @@ description: "QuantLib::CumulativePoissonDistribution – Cumulative Poisson dis
 <p> For this implementation see &#8216;Numerical Recipes in C&#8217;, 2nd edition, Press, Teukolsky, Vetterling, Flannery, chapter 6 </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against known good results.</dl>
+<dd>the correctness of the returned value is tested by checking it against known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

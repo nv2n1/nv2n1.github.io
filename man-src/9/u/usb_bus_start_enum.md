@@ -14,10 +14,10 @@ description: "usb_bus_start_enum – start immediate enumeration (for OTG)"
 <p><i>bus</i></p>
 <dl>
 <dd>
-<dd>the bus (must use hcd framework)</dl>
+</dd><dd>the bus (must use hcd framework)</dd></dl>
 <p> <i>port_num</i></p>
 <dl>
-<dd>1-based number of port; usually bus-&gt;otg_port</dl>
+<dd>1-based number of port; usually bus-&gt;otg_port</dd></dl>
 <h2>Context</h2>
 <p><code>in_interrupt</code></p>
 <h2>Description</h2>

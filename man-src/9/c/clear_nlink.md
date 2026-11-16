@@ -14,7 +14,7 @@ description: "clear_nlink – directly zero an inode’s link count"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>inode</dl>
+</dd><dd>inode</dd></dl>
 <h2>Description</h2>
 <p>This is a low-level filesystem helper to replace any direct filesystem manipulation of i_nlink. See <code>drop_nlink</code> for why we care about i_nlink hitting zero.</p>
 <h2>Copyright</h2>

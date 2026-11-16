@@ -10,10 +10,8 @@ description: "std::has_unique_object_representations – std::has_unique_object_
 <p>std::has_unique_object_representations &#8211; std::has_unique_object_representations</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 17)
-
         struct has_unique_object_representations;</code></pre>
 <p>If T is TriviallyCopyable and if any two objects of type T with the same value have the same object_representation, provides the member constant value equal true. For any other type, value is false.<br />
 For the purpose of this trait, two arrays have the same value if their elements have the same values, two non-union classes have the same value if their direct subobjects have the same value, and two unions have the same value if they have the same active member and the value of that member are the same.<br />
@@ -46,10 +44,8 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct foo
-
 {
     char c;
     float f;
@@ -57,13 +53,11 @@ struct foo
     int i;
 };
 struct bar
-
 {
     int a;
     int b;
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; &quot;Does foo have unique object representations? &quot;

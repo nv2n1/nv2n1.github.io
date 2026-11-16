@@ -24,31 +24,31 @@ description: "CREATE OPERATOR CLASS – define a new operator class"
 <p> Refer to in the documentation for further information.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the operator class to be created. The name can be schema-qualified.</p>
-<dt><code>DEFAULT</code></p>
-<dd>If present, the operator class will become the default operator class for its data type. At most one operator class can be the default for a specific data type and index method.</p>
-<dt><i>data_type</i></p>
-<dd>The column data type that this operator class is for.</p>
-<dt><i>index_method</i></p>
-<dd>The name of the index method this operator class is for.</p>
-<dt><i>family_name</i></p>
-<dd>The name of the existing operator family to add this operator class to. If not specified, a family named the same as the operator class is used (creating it, if it doesn&#8217;t already exist).</p>
-<dt><i>strategy_number</i></p>
-<dd>The index method&#8217;s strategy number for an operator associated with the operator class.</p>
-<dt><i>operator_name</i></p>
-<dd>The name (optionally schema-qualified) of an operator associated with the operator class.</p>
-<dt><i>op_type</i></p>
-<dd>In an OPERATOR clause, the operand data type(s) of the operator, or NONE to signify a left-unary or right-unary operator. The operand data types can be omitted in the normal case where they are the same as the operator class&#8217;s data type. </p>
+<dt><i>name</i></dt>
+<dd>The name of the operator class to be created. The name can be schema-qualified.</dd>
+<dt><code>DEFAULT</code></dt>
+<dd>If present, the operator class will become the default operator class for its data type. At most one operator class can be the default for a specific data type and index method.</dd>
+<dt><i>data_type</i></dt>
+<dd>The column data type that this operator class is for.</dd>
+<dt><i>index_method</i></dt>
+<dd>The name of the index method this operator class is for.</dd>
+<dt><i>family_name</i></dt>
+<dd>The name of the existing operator family to add this operator class to. If not specified, a family named the same as the operator class is used (creating it, if it doesn&#8217;t already exist).</dd>
+<dt><i>strategy_number</i></dt>
+<dd>The index method&#8217;s strategy number for an operator associated with the operator class.</dd>
+<dt><i>operator_name</i></dt>
+<dd>The name (optionally schema-qualified) of an operator associated with the operator class.</dd>
+<dt><i>op_type</i></dt>
+<dd>In an OPERATOR clause, the operand data type(s) of the operator, or NONE to signify a left-unary or right-unary operator. The operand data types can be omitted in the normal case where they are the same as the operator class&#8217;s data type. </dd>
 <p> In a FUNCTION clause, the operand data type(s) the function is intended to support, if different from the input data type(s) of the function (for B-tree and hash indexes) or the class&#8217;s data type (for GIN and GiST indexes). These defaults are always correct, so there is no point in specifying <i>op_type</i> in a FUNCTION clause in <code>CREATE OPERATOR CLASS</code>, but the option is provided for consistency with the comparable syntax in <code>ALTER OPERATOR FAMILY</code>.</p>
-<dt><i>support_number</i></p>
-<dd>The index method&#8217;s support procedure number for a function associated with the operator class.</p>
-<dt><i>funcname</i></p>
-<dd>The name (optionally schema-qualified) of a function that is an index method support procedure for the operator class.</p>
-<dt><i>argument_types</i></p>
-<dd>The parameter data type(s) of the function.</p>
-<dt><i>storage_type</i></p>
-<dd>The data type actually stored in the index. Normally this is the same as the column data type, but some index methods (currently GIN and GiST) allow it to be different. The STORAGE clause must be omitted unless the index method allows a different type to be used.</dl>
+<dt><i>support_number</i></dt>
+<dd>The index method&#8217;s support procedure number for a function associated with the operator class.</dd>
+<dt><i>funcname</i></dt>
+<dd>The name (optionally schema-qualified) of a function that is an index method support procedure for the operator class.</dd>
+<dt><i>argument_types</i></dt>
+<dd>The parameter data type(s) of the function.</dd>
+<dt><i>storage_type</i></dt>
+<dd>The data type actually stored in the index. Normally this is the same as the column data type, but some index methods (currently GIN and GiST) allow it to be different. The STORAGE clause must be omitted unless the index method allows a different type to be used.</dd></dl>
 <p> The OPERATOR, FUNCTION, and STORAGE clauses can appear in any order.</p>
 <h2>Notes</h2>
 <p>Because the index machinery does not check access permissions on functions before using them, including a function or operator in an operator class is tantamount to granting public execute permission on it. This is usually not an issue for the sorts of functions that are useful in an operator class. </p>

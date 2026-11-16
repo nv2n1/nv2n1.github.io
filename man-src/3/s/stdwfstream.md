@@ -10,13 +10,9 @@ description: "std::basic_fstream – std::basic_fstream"
 <p>std::basic_fstream &#8211; std::basic_fstream</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;fstream&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_fstream : public std::basic_iostream&lt;CharT, Traits&gt;</code></pre>
 <p>The class template basic_fstream implements high-level input/output operations on file based streams. It interfaces a file-based streambuffer (std::basic_filebuf) with the high-level interface of (std::basic_iostream).<br />
 A typical implementation of std::basic_fstream holds only one non-derived data member: an instance of std::basic_filebuf&lt;CharT, Traits&gt;.<br />
@@ -261,9 +257,7 @@ getline <i>(function template)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;string&gt;
 int main()
 {

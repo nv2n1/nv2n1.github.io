@@ -23,10 +23,10 @@ description: "fftw-wisdom-to-conf – generate FFTW wisdom (pre-planned transfor
 <p> Note that the configuration routine does not contain the wisdom, only the routines necessary to implement the wisdom, so your program should also import the wisdom in order to benefit from the pre-optimized plans.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help on the command-line options and usage.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print the version number and copyright information.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help on the command-line options and usage.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print the version number and copyright information.</dd></dl>
 <h2>BUGS</h2>
 <p> Send bug reports to fftw [at] fftw.org.</p>
 <h2>AUTHORS</h2>

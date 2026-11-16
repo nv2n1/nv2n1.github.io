@@ -11,7 +11,6 @@ description: "sc::AggregateKeyVal –"
 <p> This takes several <code>KeyVal</code> objects and makes them look like one <code>KeyVal</code> object.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::KeyVal</code>.</p>
 <h3>Public Member Functions</h3>

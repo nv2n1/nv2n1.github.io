@@ -11,7 +11,6 @@ std::fflush - std::fflush
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fflush(std::FILE *stream);</code></pre> 
 For output streams (and for update streams on which the last operation was output), writes any unwritten data from the stream's buffer to the associated output device. 
 For input streams (and for update streams on which the last operation was input), the behavior is undefined. 

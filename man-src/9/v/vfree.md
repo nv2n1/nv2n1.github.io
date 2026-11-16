@@ -14,7 +14,7 @@ description: "vfree – release memory allocated by vmalloc"
 <p><i>addr</i></p>
 <dl>
 <dd>
-<dd>memory base address</dl>
+</dd><dd>memory base address</dd></dl>
 <h2>Description</h2>
 <p>Free the virtually continuous memory area starting at <i>addr</i>, as obtained from <code>vmalloc</code>, <code>vmalloc_32</code> or <code>__vmalloc</code>. If <i>addr</i> is NULL, no operation is performed. </p>
 <p> Must not be called in NMI context (strictly speaking, only if we don&#8217;t have CONFIG_ARCH_HAVE_NMI_SAFE_CMPXCHG, but making the calling conventions for <code>vfree</code> arch-depenedent would be a really bad idea)</p>

@@ -14,14 +14,14 @@ description: "gnutls_privkey_sign_raw_data – API function"
 <p> <code>int gnutls_privkey_sign_raw_data(gnutls_privkey_t </code><i>key</i><code>, unsigned </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_privkey_t key</p>
-<dd> Holds the key</p>
-<dt>unsigned flags</p>
-<dd> should be zero</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> holds the data to be signed</p>
-<dt>gnutls_datum_t * signature</p>
-<dd> will contain the signature allocate with <code>gnutls_malloc()</code></dl>
+<dt>gnutls_privkey_t key</dt>
+<dd> Holds the key</dd>
+<dt>unsigned flags</dt>
+<dd> should be zero</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> holds the data to be signed</dd>
+<dt>gnutls_datum_t * signature</dt>
+<dd> will contain the signature allocate with <code>gnutls_malloc()</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will sign the given data using a signature algorithm supported by the private key. Note that this is a low-level function and does not apply any preprocessing or hash on the signed data. For example on an RSA key the input <i>data</i> should be of the DigestInfo PKCS <code>1</code> 1.5 format. Use it only if you know what are you doing. </p>
 <p> Note this function is equivalent to using the <code>GNUTLS_PRIVKEY_SIGN_FLAG_TLS1_RSA</code> flag with <code>gnutls_privkey_sign_hash()</code>.</p>
@@ -38,6 +38,6 @@ description: "gnutls_privkey_sign_raw_data – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

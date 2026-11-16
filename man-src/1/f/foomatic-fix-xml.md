@@ -11,8 +11,8 @@ description: "foomatic-fix-xml – Remove leading blank lines from Foomatic data
 <p> foomatic-fix-xml &#8211; Remove leading blank lines from Foomatic database</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>foomatic-fix-xml</code> [<i>DBDIR</i>] </p>
+<dt> <code>foomatic-fix-xml</code> [<i>DBDIR</i>] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>Use the <code>foomatic-fix-xml</code> command if you have compiled foomatic-perl-data against libxml 1.x and you have old database entries with a leading blank line. </p>
+<dd>Use the <code>foomatic-fix-xml</code> command if you have compiled foomatic-perl-data against libxml 1.x and you have old database entries with a leading blank line. </dd>
 <h2>Index</h2>

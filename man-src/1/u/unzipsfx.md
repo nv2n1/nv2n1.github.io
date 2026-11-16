@@ -16,27 +16,25 @@ description: "unzipsfx – self-extracting stub for prepending to ZIP archives"
 <p> <code>Note that self-extracting archives made with</code> <i>unzipsfx</i> <code>are no more (or less) portable across different operating systems than is the</code> <i>unzip</i> <code>executable itself.</code> In general a self-extracting archive made on a particular Unix system, for example, will only self-extract under the same flavor of Unix. Regular <i>unzip</i> may still be used to extract the embedded archive as with any normal zipfile, although it will generate a harmless warning about extra bytes at the beginning of the zipfile. <i>Despite this</i>, however, the self-extracting archive is technically <i>not</i> a valid ZIP archive, and PKUNZIP may be unable to test or extract it. This limitation is due to the simplistic manner in which the archive is created; the internal directory structure is not updated to reflect the extra bytes prepended to the original zipfile.</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>[<i>file(s)</i>]</p>
-<dd> An optional list of archive members to be processed. Regular expressions (wildcards) similar to those in Unix <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1) may be used to match multiple members. These wildcards may contain:</p>
+<dt>[<i>file(s)</i>]</dt>
+<dd> An optional list of archive members to be processed. Regular expressions (wildcards) similar to those in Unix <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1) may be used to match multiple members. These wildcards may contain:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> matches a sequence of 0 or more characters</p>
-<dt>?</p>
-<dd> matches exactly 1 character</p>
-<dt>[&#8230;]</p>
-<dd> matches any single character found inside the brackets; ranges are specified by a beginning character, a hyphen, and an ending character. If an exclamation point or a caret (`!&#8217; or `^&#8217;) follows the left bracket, then the range of characters within the brackets is complemented (that is, anything <i>except</i> the characters inside the brackets is considered a match).</dl>
+<dt>*</dt>
+<dd> matches a sequence of 0 or more characters</dd>
+<dt>?</dt>
+<dd> matches exactly 1 character</dd>
+<dt>[&#8230;]</dt>
+<dd> matches any single character found inside the brackets; ranges are specified by a beginning character, a hyphen, and an ending character. If an exclamation point or a caret (`!&#8217; or `^&#8217;) follows the left bracket, then the range of characters within the brackets is complemented (that is, anything <i>except</i> the characters inside the brackets is considered a match).</dd></dl>
 </dl>
 <dt>
-<dd> (Be sure to quote any character that might otherwise be interpreted or modified by the operating system, particularly under Unix and VMS.)</p>
-<dt>[<code>-x</code>&nbsp;<i>xfile(s)</i>]</p>
-<dd> An optional list of archive members to be excluded from processing. Since wildcard characters match directory separators (`/&#8217;), this option may be used to exclude any files that are in subdirectories. For example, &#8220;foosfx *.[ch] -x */*&#8221; would extract all C source files in the main directory, but none in any subdirectories. Without the <code>-x</code> option, all C source files in all directories within the zipfile would be extracted.</dl>
+</dt><dd> (Be sure to quote any character that might otherwise be interpreted or modified by the operating system, particularly under Unix and VMS.)</dd>
+<dt>[<code>-x</code>&nbsp;<i>xfile(s)</i>]</dt>
+<dd> An optional list of archive members to be excluded from processing. Since wildcard characters match directory separators (`/&#8217;), this option may be used to exclude any files that are in subdirectories. For example, &#8220;foosfx *.[ch] -x */*&#8221; would extract all C source files in the main directory, but none in any subdirectories. Without the <code>-x</code> option, all C source files in all directories within the zipfile would be extracted.</dd></dl>
 <p> If <i>unzipsfx</i> is compiled with SFX_EXDIR defined, the following option is also enabled:</p>
 <dl>
-<dt>[<code>-d</code>&nbsp;<i>exdir</i>]</p>
-<dd> An optional directory to which to extract files. By default, all files and subdirectories are recreated in the current directory; the <code>-d</code> option allows extraction in an arbitrary directory (always assuming one has permission to write to the directory). The option and directory may be concatenated without any white space between them, but note that this may cause normal shell behavior to be suppressed. In particular, &#8220;-d&nbsp;~&#8221; (tilde) is expanded by Unix C shells into the name of the user&#8217;s home directory, but &#8220;-d~&#8221; is treated as a literal subdirectory &#8220;<code>~</code>&#8221; of the current directory.</dl>
+<dt>[<code>-d</code>&nbsp;<i>exdir</i>]</dt>
+<dd> An optional directory to which to extract files. By default, all files and subdirectories are recreated in the current directory; the <code>-d</code> option allows extraction in an arbitrary directory (always assuming one has permission to write to the directory). The option and directory may be concatenated without any white space between them, but note that this may cause normal shell behavior to be suppressed. In particular, &#8220;-d&nbsp;~&#8221; (tilde) is expanded by Unix C shells into the name of the user&#8217;s home directory, but &#8220;-d~&#8221; is treated as a literal subdirectory &#8220;<code>~</code>&#8221; of the current directory.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <i>unzipsfx</i> supports the following <i><a href="/docs/linux/man/1-unzip/">unzip</a></i>(1) options: <code>-c</code> and <code>-p</code> (extract to standard output/screen), <code>-f</code> and <code>-u</code> (freshen and update existing files upon extraction), <code>-t</code> (test archive) and <code>-z</code> (print archive comment). All normal listing options (<code>-l</code>, <code>-v</code> and <code>-Z</code>) have been removed, but the testing option (<code>-t</code>) may be used as a &#8220;poor man&#8217;s&#8221; listing. Alternatively, those creating self-extracting archives may wish to include a short listing in the zipfile comment. </p>
 <p> See <i><a href="/docs/linux/man/1-unzip/">unzip</a></i>(1) for a more complete description of these options.</p>

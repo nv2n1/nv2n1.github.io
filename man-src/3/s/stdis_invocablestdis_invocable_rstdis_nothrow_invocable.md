@@ -10,25 +10,17 @@ description: "std::is_invocable,std::is_invocable_r,std::is_nothrow_invocable, â
 <p>std::is_invocable,std::is_invocable_r,std::is_nothrow_invocable, &#8211; std::is_invocable,std::is_invocable_r,std::is_nothrow_invocable,</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class Fn, class... ArgTypes&gt;
     (1)(since C++ 17)
-
         struct is_invocable;
-
 template &lt;class R, class Fn, class... ArgTypes&gt;
 (2)(since C++ 17)
-
     struct is_invocable_r;
-
 template &lt;class Fn, class... ArgTypes&gt;
 (3)(since C++ 17)
-
     struct is_nothrow_invocable;
-
 template &lt;class R, class Fn, class... ArgTypes&gt;
 (4)(since C++ 17)
-
     struct is_nothrow_invocable_r;</code></pre>
 <p>1)&nbsp;<wbr>Determines whether Fn can be invoked with the arguments ArgTypes&#8230;. Formally,<br />
 determines whether INVOKE(declval&lt;Fn&gt;(), declval&lt;ArgTypes&gt;()&#8230;)&nbsp;<wbr>is well formed when<br />
@@ -79,12 +71,10 @@ type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr
 <p>// Run this code </p>
 <pre><code>#include &lt;type_traits&gt;
 auto func2(char) -&gt; int (*)()
-
 {
     return nullptr;
 }
 int main()
-
 {
     static_assert(std::is_invocable&lt;int()&gt;::value);
     static_assert(std::is_invocable_r&lt;int, int()&gt;::value);

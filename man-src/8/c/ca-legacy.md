@@ -21,19 +21,19 @@ description: "ca-legacy – Manage the system configuration for legacy CA certif
 <h2>Commands</h2>
 <p><code>check</code></p>
 <dl>
-<dd>The current configuration will be shown.</dl>
+<dd>The current configuration will be shown.</dd></dl>
 <p> <code>default</code></p>
 <dl>
-<dd>Configure the system to use the default configuration, as recommended by the package maintainers.</dl>
+<dd>Configure the system to use the default configuration, as recommended by the package maintainers.</dd></dl>
 <p> <code>disable</code></p>
 <dl>
-<dd>Configure the system to explicitly disable legacy CA certificates. Using this configuration, the system will use the set of included and trusted CA certificates as released by Mozilla.</dl>
+<dd>Configure the system to explicitly disable legacy CA certificates. Using this configuration, the system will use the set of included and trusted CA certificates as released by Mozilla.</dd></dl>
 <p> <code>install</code></p>
 <dl>
-<dd>The configuration file will be read and the system configuration will be set accordingly. This command is executed automatically during upgrades of the ca-certificates package.</dl>
+<dd>The configuration file will be read and the system configuration will be set accordingly. This command is executed automatically during upgrades of the ca-certificates package.</dd></dl>
 <h2>Files</h2>
 <p>/etc/pki/ca-trust/ca-legacy.conf</p>
 <dl>
-<dd>A configuration file that will be used and modified by the ca-legacy command. The contents of the configuration file will be read on package upgrades.</dl>
+<dd>A configuration file that will be used and modified by the ca-legacy command. The contents of the configuration file will be read on package upgrades.</dd></dl>
 <h2>Author</h2>
 <p>Written by Kai Engert.</p>

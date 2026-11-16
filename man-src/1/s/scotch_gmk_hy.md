@@ -21,18 +21,18 @@ gmk_hy[options] dim[ofile] gmk_m2[options][-gcfile] dimX dimY[ofile] gmk_m3[opti
 <p> <code>gmk_ub2</code> creates an unoriented de Bruijn graph of dimension <i>dim</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code> base</p>
-<dd> For <code>gmk_m2</code> and <code>gmk_m3</code> only. Output graphs with base value set to base. Default value is 0.</p>
-<dt><code>-e</code></p>
-<dd> For <code>gmk_m2</code> only. Build a 8-neighbor grid rather than a 4-neighbor grid.</p>
-<dt><code>-g</code><i>cfile</i></p>
-<dd> For <code>gmk_m2</code> and <code>gmk_m3</code> only. Output graph vertex coordinates (that is, geometry data to be used by <code>gout</code>(1)) in file <i>cfile</i>.</p>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-t</code></p>
-<dd> For <code>gmk_m2</code> and <code>gmk_m3</code> only. Create torus graphs, that is, graphs such that there exist loop edges between vertices of rank 0 and (<i>dim</i>-1) in every dimension.</p>
-<dt><code>-V</code></p>
-<dd> Display program version and copyright.</dl>
+<dt><code>-b</code> base</dt>
+<dd> For <code>gmk_m2</code> and <code>gmk_m3</code> only. Output graphs with base value set to base. Default value is 0.</dd>
+<dt><code>-e</code></dt>
+<dd> For <code>gmk_m2</code> only. Build a 8-neighbor grid rather than a 4-neighbor grid.</dd>
+<dt><code>-g</code><i>cfile</i></dt>
+<dd> For <code>gmk_m2</code> and <code>gmk_m3</code> only. Output graph vertex coordinates (that is, geometry data to be used by <code>gout</code>(1)) in file <i>cfile</i>.</dd>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-t</code></dt>
+<dd> For <code>gmk_m2</code> and <code>gmk_m3</code> only. Create torus graphs, that is, graphs such that there exist loop edges between vertices of rank 0 and (<i>dim</i>-1) in every dimension.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Create a 5&#215;7 grid along with its geometry: </p>
 <pre>

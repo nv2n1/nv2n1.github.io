@@ -10,21 +10,21 @@ description: "USB_VENDOR_AND_INTERFACE_INFO – describe a specific usb vendor w
 <p>USB_VENDOR_AND_INTERFACE_INFO &#8211; describe a specific usb vendor with a class of usb interfaces</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>USB_VENDOR_AND_INTERFACE_INFO(</code><i>vend</i><code>, </code><i>cl</i><code>, </code><i>sc</i><code>, </code><i>pr</i><code>);</code></dl>
+<dt> <code>USB_VENDOR_AND_INTERFACE_INFO(</code><i>vend</i><code>, </code><i>cl</i><code>, </code><i>sc</i><code>, </code><i>pr</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>vend</i></p>
 <dl>
 <dd>
-<dd>the 16 bit USB Vendor ID</dl>
+</dd><dd>the 16 bit USB Vendor ID</dd></dl>
 <p> <i>cl</i></p>
 <dl>
-<dd>bInterfaceClass value</dl>
+<dd>bInterfaceClass value</dd></dl>
 <p> <i>sc</i></p>
 <dl>
-<dd>bInterfaceSubClass value</dl>
+<dd>bInterfaceSubClass value</dd></dl>
 <p> <i>pr</i></p>
 <dl>
-<dd>bInterfaceProtocol value</dl>
+<dd>bInterfaceProtocol value</dd></dl>
 <h2>Description</h2>
 <p>This macro is used to create a struct usb_device_id that matches a specific vendor with a specific class of interfaces. </p>
 <p> This is especially useful when explicitly matching devices that have vendor specific bDeviceClass values, but standards-compliant interfaces.</p>

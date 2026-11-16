@@ -10,10 +10,10 @@ description: "amgpgcrypt – reference crypt program for Amanda public-key data 
 <p>amgpgcrypt &#8211; reference crypt program for Amanda public-key data encryption</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amgpgcrypt</code> to be called by Amanda only</dl>
+<dt> <code>amgpgcrypt</code> to be called by Amanda only</dt></dl>
 <h2>Description</h2>
 <p><code>amgpgcrypt</code></p>
-<dd>calls <code>gpg</code> to perform public-key data encryption on Amanda backup. <code>amgpgcrypt</code> will search for the gpg program in the following directories: /usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin </p>
+<dd>calls <code>gpg</code> to perform public-key data encryption on Amanda backup. <code>amgpgcrypt</code> will search for the gpg program in the following directories: /usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin </dd>
 <p> <code>amgpgcrypt</code> sets GNUPGHOME to $AMANDA_HOME/.gnupg where gpg will look for the gpg keys. <code>amgpgcrypt</code> uses the public key to encrypt the Amanda data and uses the private key to decrypt the Amanda backup data. Thus, passphrase is only required at the time of data restore.</p>
 <h2>Key And Passphrase</h2>
 <p><code>amgpgcrypt</code> uses the private key to decrypt Amanda backup data. </p>
@@ -76,13 +76,13 @@ sub 1024g/8C3A6A78 2006-02-07 [expires: 2006-08-06]</pre>
 <h2>Files</h2>
 <p><code>$AMANDA_HOME/.gnupg/pubring.gpg</code></p>
 <dl>
-<dd>The public key. <code>amgpgcrypt</code> encrypt data with this public key along with the cipher algorithm.</dl>
+<dd>The public key. <code>amgpgcrypt</code> encrypt data with this public key along with the cipher algorithm.</dd></dl>
 <p> <code>$AMANDA_HOME/.gnupg/secring.gpg</code></p>
 <dl>
-<dd>The private/secret key. It&#8217;s only needed during amrecover/amrestore. Store and protect it properly during other time.</dl>
+<dd>The private/secret key. It&#8217;s only needed during amrecover/amrestore. Store and protect it properly during other time.</dd></dl>
 <p> <code>$AMANDA_HOME/.am_passphrase</code></p>
 <dl>
-<dd>The passphrase. It&#8217;s only needed during amrecover/amrestore. Store and protect it properly during other time.</dl>
+<dd>The passphrase. It&#8217;s only needed during amrecover/amrestore. Store and protect it properly during other time.</dd></dl>
 <h2>Bugs</h2>
 <p>Amanda has problem with gpg mdc(modification detection code) in the binary mode. <code>amgpgcrypt</code> calls gpg with mdc disabled</p>
 <h2>See Also</h2>
@@ -91,4 +91,4 @@ sub 1024g/8C3A6A78 2006-02-07 [expires: 2006-08-06]</pre>
 <h2>Author</h2>
 <p><code>Kevin Till</code> &lt;kevin.till [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

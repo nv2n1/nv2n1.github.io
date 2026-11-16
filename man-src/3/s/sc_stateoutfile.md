@@ -11,7 +11,6 @@ description: "sc::StateOutFile –"
 <p> Writes state information to files.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;state_file.h&gt;</code></pre>
 <p> Inherits <code>sc::StateOut</code>. Inherited by <code>sc::StateOutBin</code>, and <code>sc::StateOutText</code>.</p>
 <h3>Public Member Functions</h3>
@@ -29,9 +28,6 @@ description: "sc::StateOutFile –"
  <i>Close the output stream. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>int opened_
-
-
-
 std::streambuf * buf_</code></pre>
 <h2>Detailed Description</h2>
 <p>Writes state information to files.</p>

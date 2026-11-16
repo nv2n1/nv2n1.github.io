@@ -11,17 +11,17 @@ description: "man.config – configuration data for man"
 <h2>Description</h2>
 <p>This file is read by <code><a href="/docs/linux/man/1-man/">man</a></code>(1) and contains (a) information on how to construct the search path for man, (b) full path names for various programs like nroff, eqn, tbl etc. used by man, and (c) a list with uncompressors for files with a given extension. An alternative version of this file can be specified with </p>
 <dl>
-<dd>man -C private_man.config &#8230;</dl>
+<dd>man -C private_man.config &#8230;</dd></dl>
 <p> The command names may be provided with options. Useful options to nroff can be found in <a href="/docs/linux/man/1-grotty/">grotty</a>(1). For example, instead of the default line </p>
 <dl>
 <dd>
 <pre>NROFF /usr/bin/groff -mandoc -Tlatin1</pre>
-</dl>
+</dd></dl>
 <p> one may write </p>
 <dl>
 <dd>
 <pre>NROFF /usr/bin/groff -mandoc -Tlatin1 -P-u -P-b</pre>
-</dl>
+</dd></dl>
 <p> in order to suppress underlining and overstriking.</p>
 <h2>Files</h2>
 <p><i>@man_config_file@</i></p>

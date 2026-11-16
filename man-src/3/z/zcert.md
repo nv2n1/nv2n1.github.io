@@ -84,7 +84,6 @@ CZMQ_EXPORT void
 <pre><code>//  Create temporary directory for test files
 #define TESTDIR &quot;.test_zcert&quot;
 zsys_dir_create(TESTDIR);
-
 //  Create a simple certificate with metadata
 zcert_t *cert = zcert_new();
 assert(cert);
@@ -96,34 +95,27 @@ assert(streq(zcert_meta(cert, &quot;email&quot;), &quot;ph [at] imatix.com&quot;
 zlist_t *keys = zcert_meta_keys(cert);
 assert(zlist_size(keys) == 4);
 zlist_destroy(&amp;keys);
-
 //  Check the dup and eq methods
 zcert_t *shadow = zcert_dup(cert);
 assert(zcert_eq(cert, shadow));
 zcert_destroy(&amp;shadow);
-
 //  Check we can save and load certificate
 zcert_save(cert, TESTDIR &quot;/mycert.txt&quot;);
 assert(zsys_file_exists(TESTDIR &quot;/mycert.txt&quot;));
 assert(zsys_file_exists(TESTDIR &quot;/mycert.txt_secret&quot;));
-
 //  Load certificate, will in fact load secret one
 shadow = zcert_load(TESTDIR &quot;/mycert.txt&quot;);
 assert(shadow);
 assert(zcert_eq(cert, shadow));
 zcert_destroy(&amp;shadow);
-
 //  Delete secret certificate, load public one
 int rc = zsys_file_delete(TESTDIR &quot;/mycert.txt_secret&quot;);
 assert(rc == 0);
 shadow = zcert_load(TESTDIR &quot;/mycert.txt&quot;);
-
 //  32-byte null key encodes as 40 '0' characters
 assert(streq(zcert_secret_txt(shadow), FORTY_ZEROES));
-
 zcert_destroy(&amp;shadow);
 zcert_destroy(&amp;cert);
-
 //  Delete all test files
 zdir_t *dir = zdir_new(TESTDIR, NULL);
 assert(dir);
@@ -139,7 +131,8 @@ zdir_destroy(&amp;dir);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

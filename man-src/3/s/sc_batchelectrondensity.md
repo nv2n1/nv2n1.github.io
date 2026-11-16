@@ -11,7 +11,6 @@ description: "sc::BatchElectronDensity –"
 <p> This a more highly optimized than <code>ElectronDensity</code> since everything is precomputed.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;density.h&gt;</code></pre>
 <p> Inherits <code>sc::Volume</code>.</p>
 <h3>Public Types</h3>
@@ -42,55 +41,19 @@ description: "sc::BatchElectronDensity –"
  <i>Turn use of density matrix bounds on/off. </i> <code>DFT Support Members.</code><br />
  These return some of the internal data, some of which is only value after a density has been computed. This data is needed by the density functional theory code. </p>
 <pre><code>double * alpha_density_matrix ()
-
-
 Return the alpha density matrix.
-
-
 double * beta_density_matrix ()
-
-
 Return the beta density matrix.
-
-
 int ncontrib ()
-
-
-
 int * contrib ()
-
-
-
 int ncontrib_bf ()
-
-
-
 int * contrib_bf ()
-
-
-
 double * bs_values ()
-
-
-
 double * bsg_values ()
-
-
-
 double * bsh_values ()
-
-
-
 void set_need_basis_gradient (bool b)
-
-
 To ensure that that the basis functions gradients are computed, use this.
-
-
 void set_need_basis_hessian (bool b)
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual void <code>init_common_data</code> (bool initialize_density_matrices) </p>
 <p> virtual void <code>init_scratch_data</code> () </p>

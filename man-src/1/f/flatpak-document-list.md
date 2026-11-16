@@ -11,23 +11,23 @@ description: "flatpak-document-list – List exported files"
 <p> flatpak-document-list &#8211; List exported files </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>flatpak document-list</code> [OPTION&#8230;] [APPID]</dl>
+<dt> <code>flatpak document-list</code> [OPTION&#8230;] [APPID]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Lists exported files, with their document id and the full path to their origin. If an APPID is specified, only the files exported to this app are listed.</p>
+<dd>Lists exported files, with their document id and the full path to their origin. If an APPID is specified, only the files exported to this app are listed.</dd>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help options and exit.</dl>
+</dt><dd> Show help options and exit.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Print debug information during command processing.</dl>
+</dt><dd> Print debug information during command processing.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print version information and exit.</dl>
+</dt><dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-document-export/">flatpak-document-export</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-document-unexport/">flatpak-document-unexport</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-document-info/">flatpak-document-info</a></code>(1) </p>
 <h2>Index</h2>

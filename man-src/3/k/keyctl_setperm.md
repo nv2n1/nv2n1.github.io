@@ -20,30 +20,30 @@ long keyctl_setperm(key_serial_t key, key_perm_t perm);
 <p> The caller must have <code>setattr</code> permission on a key to be able change its permissions mask. </p>
 <p> The permissions mask is a bitwise-OR of the following flags:</p>
 <dl>
-<dt><code>KEY_xxx_VIEW</code></p>
-<dd> Grant permission to view the attributes of a key.</p>
-<dt><code>KEY_xxx_READ</code></p>
-<dd> Grant permission to read the payload of a key or to list a keyring.</p>
-<dt><code>KEY_xxx_WRITE</code></p>
-<dd> Grant permission to modify the payload of a key or to add or remove links to/from a keyring.</p>
-<dt><code>KEY_xxx_SEARCH</code></p>
-<dd> Grant permission to find a key or to search a keyring.</p>
-<dt><code>KEY_xxx_LINK</code></p>
-<dd> Grant permission to make links to a key.</p>
-<dt><code>KEY_xxx_SETATTR</code></p>
-<dd> Grant permission to change the ownership and permissions attributes of a key.</p>
-<dt><code>KEY_xxx_ALL</code></p>
-<dd> Grant all the above.</dl>
+<dt><code>KEY_xxx_VIEW</code></dt>
+<dd> Grant permission to view the attributes of a key.</dd>
+<dt><code>KEY_xxx_READ</code></dt>
+<dd> Grant permission to read the payload of a key or to list a keyring.</dd>
+<dt><code>KEY_xxx_WRITE</code></dt>
+<dd> Grant permission to modify the payload of a key or to add or remove links to/from a keyring.</dd>
+<dt><code>KEY_xxx_SEARCH</code></dt>
+<dd> Grant permission to find a key or to search a keyring.</dd>
+<dt><code>KEY_xxx_LINK</code></dt>
+<dd> Grant permission to make links to a key.</dd>
+<dt><code>KEY_xxx_SETATTR</code></dt>
+<dd> Grant permission to change the ownership and permissions attributes of a key.</dd>
+<dt><code>KEY_xxx_ALL</code></dt>
+<dd> Grant all the above.</dd></dl>
 <p> The &#8216;<code>xxx</code>&#8216; in the above should be replaced by one of:</p>
 <dl>
-<dt><code>POS</code></p>
-<dd> Grant the permission to a process that possesses the key (has it attached searchably to one of the process&#8217;s keyrings).</p>
-<dt><code>USR</code></p>
-<dd> Grant the permission to a process with the same UID as the key.</p>
-<dt><code>GRP</code></p>
-<dd> Grant the permission to a process with the same GID as the key, or with a match for the key&#8217;s GID amongst that process&#8217;s Groups list.</p>
-<dt><code>OTH</code></p>
-<dd> Grant the permission to any other process.</dl>
+<dt><code>POS</code></dt>
+<dd> Grant the permission to a process that possesses the key (has it attached searchably to one of the process&#8217;s keyrings).</dd>
+<dt><code>USR</code></dt>
+<dd> Grant the permission to a process with the same UID as the key.</dd>
+<dt><code>GRP</code></dt>
+<dd> Grant the permission to a process with the same GID as the key, or with a match for the key&#8217;s GID amongst that process&#8217;s Groups list.</dd>
+<dt><code>OTH</code></dt>
+<dd> Grant the permission to any other process.</dd></dl>
 <p> Examples include: <code>KEY_POS_VIEW</code>, <code>KEY_USR_READ</code>, <code>KEY_GRP_SEARCH</code> and <code>KEY_OTH_ALL</code>. </p>
 <p> User, group and other grants are exclusive: if a process qualifies in the &#8216;user&#8217; category, it will not qualify in the &#8216;groups&#8217; category; and if a process qualifies in either &#8216;user&#8217; or &#8216;groups&#8217; then it will not qualify in the &#8216;other&#8217; category. </p>
 <p> Possessor grants are cumulative with the grants from the &#8216;user&#8217;, &#8216;groups&#8217; and &#8216;other&#8217; categories.</p>
@@ -51,14 +51,14 @@ long keyctl_setperm(key_serial_t key, key_perm_t perm);
 <p> On success <code>keyctl_setperm</code>() returns <code>0 .</code> On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The specified key does not exist.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The specified key has expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The specified key has been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The named key exists, but does not grant <code>setattr</code> permission to the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The specified key does not exist.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The specified key has expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The specified key has been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The named key exists, but does not grant <code>setattr</code> permission to the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

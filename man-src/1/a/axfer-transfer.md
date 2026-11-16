@@ -21,10 +21,10 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 <h2>OPTIONS</h2>
 <h3>Direction</h3>
 <dl>
-<dt><code>capture</code></p>
-<dd> Operates for capture transmission. </p>
-<dt><code>playback</code></p>
-<dd> Operates for playback transmission. </p>
+<dt><code>capture</code></dt>
+<dd> Operates for capture transmission. </dd>
+<dt><code>playback</code></dt>
+<dd> Operates for playback transmission. </dd>
 </dl>
 <h3>Filepath</h3>
 <p> Filepath is handled as a path relative to current working directory of run time if it&#8217;s not full path from root directory. </p>
@@ -38,18 +38,18 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 &nbsp;&#8211;&nbsp;/dev/urandom </p>
 <h3>Common options</h3>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print help messages and finish run time. </p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Quiet mode. Suppress messages (not sound :)) </p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Verbose mode. Runtime dumps supplemental information according to the number of this option given in command line. </p>
-<dt><code>-d, &#8211;duration=#</code></p>
-<dd> Interrupt after # seconds. A value of zero means infinity. The default is zero, so if this option is omitted then the transmission process will run until it is killed. Either <i>-d</i> or <i>-s</i> option is available exclusively. </p>
-<dt><code>-s, &#8211;samples=#</code></p>
-<dd> Interrupt after transmission of # number of data frames. A value of zero means infinity. The default is zero, so if this options is omitted then the transmission process will run until it is killed. Either <i>-d</i> or <i>-s</i> option is available exclusively. </p>
-<dt><code>-f, &#8211;format=FORMAT</code></p>
-<dd> Indicate format of audio sample. This is required for capture transmission, or playback transmission with files including raw audio data. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print help messages and finish run time. </dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Quiet mode. Suppress messages (not sound :)) </dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Verbose mode. Runtime dumps supplemental information according to the number of this option given in command line. </dd>
+<dt><code>-d, &#8211;duration=#</code></dt>
+<dd> Interrupt after # seconds. A value of zero means infinity. The default is zero, so if this option is omitted then the transmission process will run until it is killed. Either <i>-d</i> or <i>-s</i> option is available exclusively. </dd>
+<dt><code>-s, &#8211;samples=#</code></dt>
+<dd> Interrupt after transmission of # number of data frames. A value of zero means infinity. The default is zero, so if this options is omitted then the transmission process will run until it is killed. Either <i>-d</i> or <i>-s</i> option is available exclusively. </dd>
+<dt><code>-f, &#8211;format=FORMAT</code></dt>
+<dd> Indicate format of audio sample. This is required for capture transmission, or playback transmission with files including raw audio data. </dd>
 <p> Available sample format is listed below:<br />
 &nbsp;&#8211;&nbsp;[S8|U8|S16|U16|S32|U32][_LE|_BE]<br />
 &nbsp;&#8211;&nbsp;[S24|U24][_LE|_BE]<br />
@@ -79,122 +79,122 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 &nbsp;&#8211; G723_24_1B<br />
 &nbsp;&#8211; G723_40<br />
 &nbsp;&#8211; G723_40_1B </p>
-<dt><code>-c, &#8211;channels=#</code></p>
-<dd> Indicate the number of audio data samples per frame. This is required for capture transmission, or playback transmission with files including raw audio data. The value should be between <i>1 to</i> <i>256</i> . If omitted, <i>1</i> is used as a default. </p>
-<dt><code>-r, &#8211;rate=#</code></p>
-<dd> Indicate the number of audio data frame per second. This is required for capture transmission, or playback transmission with files including raw audio data. If the value is less than <i>1000</i> , it&#8217;s interpreted by <i>kHz</i> unit. The value should be between <i>2000</i> and <i>192000</i> . If omitted, <i>8000</i> is used as a default. </p>
-<dt><code>-t, &#8211;file-type=TYPE</code></p>
+<dt><code>-c, &#8211;channels=#</code></dt>
+<dd> Indicate the number of audio data samples per frame. This is required for capture transmission, or playback transmission with files including raw audio data. The value should be between <i>1 to</i> <i>256</i> . If omitted, <i>1</i> is used as a default. </dd>
+<dt><code>-r, &#8211;rate=#</code></dt>
+<dd> Indicate the number of audio data frame per second. This is required for capture transmission, or playback transmission with files including raw audio data. If the value is less than <i>1000</i> , it&#8217;s interpreted by <i>kHz</i> unit. The value should be between <i>2000</i> and <i>192000</i> . If omitted, <i>8000</i> is used as a default. </dd>
+<dt><code>-t, &#8211;file-type=TYPE</code></dt>
 <dd> Indicate the type of file. This is required for capture transmission. Available types are listed below:<br />
 &nbsp;&#8211; wav: Microsoft/IBM RIFF/Wave format<br />
 &nbsp;&#8211; au, sparc: Sparc AU format<br />
 &nbsp;&#8211; voc: Creative Tech. voice format<br />
-&nbsp;&#8211; raw: raw data </p>
+&nbsp;&#8211; raw: raw data </dd>
 <p> When nothing is indicated, for capture transmission, the type is decided according to suffix of <i>filepath</i> , and <i>raw</i> type is used for fallback. </p>
-<dt><code>-I, &#8211;separate-channels</code></p>
-<dd> Indicate this option when several files are going to be handled. For capture transmission, if one filepath is given as <i>filepath</i> , a list of <i>filepaths</i> is generated in a formula &#8216;&lt;filepath&gt;-&lt;sequential number&gt;[.suffix]&#8217;. The suffix is omitted when raw format of container is used. </p>
-<dt><code>&#8211;dump-hw-params</code></p>
-<dd> Dump hardware parameters and finish run time if backend supports it. </p>
-<dt><code>&#8211;xfer-backend=BACKEND</code></p>
-<dd> Select backend of transmission from a list below. The default is libasound. </p>
+<dt><code>-I, &#8211;separate-channels</code></dt>
+<dd> Indicate this option when several files are going to be handled. For capture transmission, if one filepath is given as <i>filepath</i> , a list of <i>filepaths</i> is generated in a formula &#8216;&lt;filepath&gt;-&lt;sequential number&gt;[.suffix]&#8217;. The suffix is omitted when raw format of container is used. </dd>
+<dt><code>&#8211;dump-hw-params</code></dt>
+<dd> Dump hardware parameters and finish run time if backend supports it. </dd>
+<dt><code>&#8211;xfer-backend=BACKEND</code></dt>
+<dd> Select backend of transmission from a list below. The default is libasound. </dd>
 <p>&nbsp;&#8211; libasound<br />
 &nbsp;&#8211; libffado&nbsp;(optional if compiled) </p>
 </dl>
 <h3>Backend options for libasound</h3>
 <dl>
-<dt><code>-D, &#8211;device=NODE</code></p>
+<dt><code>-D, &#8211;device=NODE</code></dt>
 <dd>
 <p> This option is used to select PCM node in libasound configuration space. Available nodes are listed by <i>pcm</i> operation of <i>list</i> subcommand. </p>
-<dt><code>-N, &#8211;nonblock</code></p>
+</dd><dt><code>-N, &#8211;nonblock</code></dt>
 <dd>
 <p> With this option, PCM substream is opened in non-blocking mode. When audio data frame is not available in buffer of the PCM substream, I/O operation immediately returns without blocking process. This option implicitly uses <i>&#8211;waiter-type</i> option as well to prevent heavy consumption of CPU time. </p>
-<dt><code>-M, &#8211;mmap</code></p>
+</dd><dt><code>-M, &#8211;mmap</code></dt>
 <dd>
 <p> With this option, audio data frame is processed directly in buffer of PCM substream if selected node supports this operation. Without the option, temporary buffers are used to copy audio data frame for buffer of PCM substream. This option implicitly uses <i>&#8211;waiter-type</i> option as well to prevent heavy consumption of CPU time. </p>
-<dt><code>-F, &#8211;period-size=#</code></p>
+</dd><dt><code>-F, &#8211;period-size=#</code></dt>
 <dd>
 <p> This option configures given value to <i>period_size</i> hardware parameter of PCM substream. The parameter indicates the number of audio data frame per period in buffer of the PCM substream. Actual number is decided as a result of interaction between each implementation of PCM plugin chained from the selected PCM node, and in-kernel driver or PCM I/O plugins. </p>
 <p> Ideally, the same amount of audio data frame as the value should be handled in one I/O operation. Actually, it is not, depending on implementation of the PCM plugins, in-kernel driver, PCM I/O plugins and scheduling model. For &#8216;hw&#8217; PCM plugin in &#8216;irq&#8217; scheduling model, the value is used to decide intervals of hardware interrupt, thus the same amount of audio data frame as the value is expected to be available for one I/O operation. </p>
-<dt><code>&#8211;period-time=#</code></p>
+</dd><dt><code>&#8211;period-time=#</code></dt>
 <dd>
 <p> This option configures given value to <i>period_time</i> hardware parameter of PCM substream. This option is similar to <i>&#8211;period-size</i> option, however its unit is micro-second. </p>
-<dt><code>-B, &#8211;buffer-size=#</code></p>
+</dd><dt><code>-B, &#8211;buffer-size=#</code></dt>
 <dd>
 <p> This option configures given value to <i>buffer_size</i> hardware parameter of PCM substream. The parameter indicates the number of audio data frame in buffer of PCM substream. Actual number is decided as a result of interaction between each implementation of PCM plugin chained from the selected PCM node, and in-kernel driver or PCM I/O plugins. </p>
 <p> Ideally, this is multiples of the number of audio data frame per period, thus the size of period. Actually, it is not, depending on implementation of the PCM plugins, in-kernel driver and PCM I/O plugins. </p>
-<dt><code>&#8211;buffer-time=#</code></p>
+</dd><dt><code>&#8211;buffer-time=#</code></dt>
 <dd>
 <p> This option configures given value to <i>buffer_time</i> hardware parameter of PCM substream. This option is similar to <i>&#8211;buffer-size</i> option, however its unit is micro-second. </p>
-<dt><code>&#8211;waiter-type=TYPE</code></p>
+</dd><dt><code>&#8211;waiter-type=TYPE</code></dt>
 <dd>
 <p> This option indicates the type of waiter for event notification. At present, four types are available; <i>default</i> , <i>select</i> , <i>poll</i> and <i>epoll</i> . With <i>default</i> type, &#8216;snd_pcm_wait()&#8217; is used. With <i>select</i> type, &#8216;<a href="/docs/linux/man/2-select/">select</a>(2)&#8217; system call is used. With <i>poll</i> type, &#8216;<a href="/docs/linux/man/2-poll/">poll</a>(2)&#8217; system call is used. With <i>epoll</i> type, Linux-specific &#8216;<a href="/docs/linux/man/7-epoll/">epoll</a>(7)&#8217; system call is used. </p>
 <p> This option should correspond to one of <i>&#8211;nonblock</i> or <i>&#8211;mmap</i> options, or <i>timer</i> value of <i>&#8211;sched-model</i> option. Neither this option nor <i>&#8211;test-nowait</i> is available at the same time. </p>
-<dt><code>&#8211;sched-model=MODEL</code></p>
+</dd><dt><code>&#8211;sched-model=MODEL</code></dt>
 <dd>
 <p> This option selects scheduling model for process of this program. One of <i>irq</i> or <i>timer</i> is available. In detail, please read &#8216;SCHEDULING MODEL&#8217; section. </p>
 <p> When nothing specified, <i>irq</i> model is used. </p>
-<dt><code>-A, &#8211;avail-min=#</code></p>
+</dd><dt><code>-A, &#8211;avail-min=#</code></dt>
 <dd>
 <p> This option configures given value to <i>avail-min</i> software parameter of PCM substream. In blocking mode, the value is used as threshold of the number of available audio data frames in buffer of PCM substream to wake up process blocked by I/O operation. In non-blocking mode, any I/O operation returns -EAGAIN until the available number of audio data frame reaches the threshold. </p>
 <p> This option has an effect in cases neither <i>&#8211;mmap</i> nor <i>timer</i> value of <i>&#8211;sched-model</i> option is used. </p>
-<dt><code>-R, &#8211;start-delay=#</code></p>
+</dd><dt><code>-R, &#8211;start-delay=#</code></dt>
 <dd>
 <p> This option configures given value to <i>start_threshold</i> software parameter of PCM substream. The value is used as threshold to start PCM substream automatically. At present, this option has an effect in cases neither <i>&#8211;mmap</i> nor <i>timer</i> value of <i>&#8211;sched-model</i> option is used. </p>
 <p> For playback transmission, when the number of accumulated audio data frame in buffer of PCM substream to which this program writes out reaches the threshold, the PCM substream starts automatically without an explicit call of <i>snd_pcm_start()</i> to the PCM substream. </p>
 <p> For capture transmission, this option is useless. The number of accumulated audio data frame is not increased without an explicit call of <i>snd_pcm_start()</i> to the PCM substream. </p>
 <p> This option has an effect in cases neither <i>&#8211;mmap</i> nor <i>timer</i> value of <i>&#8211;sched-model</i> option is used. </p>
-<dt><code>-T, &#8211;stop-delay=#</code></p>
+</dd><dt><code>-T, &#8211;stop-delay=#</code></dt>
 <dd>
 <p> This option configures given value to <i>stop_threshold</i> software parameter of PCM substream. The value is used as threshold to stop PCM substream automatically. At present, this option has an effect in cases neither <i>&#8211;mmap</i> nor <i>timer</i> value of <i>&#8211;sched-model</i> option is used. </p>
 <p> For capture transmission, when the number of accumulated audio data frame in buffer of PCM substream to which a driver or alsa-lib PCM plugins write reaches the threshold, the PCM substream stops automatically without an explicit call of <i>snd_pcm_stop()</i> to the PCM substream. This is a case that this program leaves the audio data frames without reading for a while. </p>
 <p> For playback transmission, when the number available audio data frame in buffer of PCM substream from which a driver or alsa-lib PCM plugins read reaches the threshold, the PCM substream stops automatically without an explicit call of <i>snd_pcm_stop()</i> to the PCM substream. This is a case that this program leaves the audio data frames without writing for a while. </p>
 <p> This option has an effect in cases neither <i>&#8211;mmap</i> nor <i>timer</i> value of <i>&#8211;sched-model</i> option is used. </p>
-<dt><code>&#8211;disable-resample</code></p>
+</dd><dt><code>&#8211;disable-resample</code></dt>
 <dd>
 <p> This option has an effect for &#8216;plug&#8217; plugin in alsa-lib to suppress conversion of sampling rate for audio data frame. </p>
-<dt><code>&#8211;disable-channels</code></p>
+</dd><dt><code>&#8211;disable-channels</code></dt>
 <dd>
 <p> This option has an effect for &#8216;plug&#8217; plugin in alsa-lib to suppress conversion of channels for audio data frame. </p>
-<dt><code>&#8211;disable-format</code></p>
+</dd><dt><code>&#8211;disable-format</code></dt>
 <dd>
 <p> This option has an effect for &#8216;plug&#8217; plugin in alsa-lib to suppress conversion of sample format for audio data frame. </p>
-<dt><code>&#8211;disable-softvol</code></p>
+</dd><dt><code>&#8211;disable-softvol</code></dt>
 <dd>
 <p> This option has an effect for &#8216;softvol&#8217; plugin in alsa-lib to suppress conversion of samples for audio data frame via additional control element. </p>
-<dt><code>&#8211;fatal-errors</code></p>
+</dd><dt><code>&#8211;fatal-errors</code></dt>
 <dd>
 <p> This option suppresses recovery operation from XRUN state of running PCM substream, then process of this program is going to finish as usual. </p>
-<dt><code>&#8211;test-nowait</code></p>
+</dd><dt><code>&#8211;test-nowait</code></dt>
 <dd>
 <p> This option disables any waiter for I/O event notification. I/O operations are iterated till any of audio data frame is available. The option brings heavy load in consumption of CPU time. </p>
-</dl>
+</dd></dl>
 <h3>Backend options for libffado</h3>
 <p> This backend is automatically available when configure script detects <i>ffado_streaming_init()</i> symbol in libffado shared object. </p>
 <dl>
-<dt><code>-p, &#8211;port=#</code></p>
+<dt><code>-p, &#8211;port=#</code></dt>
 <dd>
 <p> This option uses given value to decide which 1394 OHCI controller is used to communicate. When Linux system has two 1394 OHCI controllers, <i>0</i> or <i>1</i> are available. Neither this option nor <i>-g</i> is available at the same time. If nothing specified, libffado performs to communicate to units on IEEE 1394 bus managed by all of 1394 OHCI controller available in Linux system. </p>
-<dt><code>-n, &#8211;node=#</code></p>
+</dd><dt><code>-n, &#8211;node=#</code></dt>
 <dd>
 <p> This option uses given value to decide which unit is used to communicate. This option requires <i>-p</i> option to indicate which 1394 OHCI controller is used to communicate to the specified unit. </p>
-<dt><code>-g, &#8211;guid=HEXADECIMAL</code></p>
+</dd><dt><code>-g, &#8211;guid=HEXADECIMAL</code></dt>
 <dd>
 <p> This option uses given value to decide a target unit to communicate. The value should be prefixed with &#8216;0x&#8217; and consists of hexadecimal literal letters (0-9, a-f, A-F). Neither this option nor <i>-p</i> is available at the same time. If nothing specified, libffado performs to communicate to units on IEEE 1394 bus managed by all of 1394 OHCI controller available in Linux system. </p>
-<dt><code>&#8211;frames-per-period=#</code></p>
+</dd><dt><code>&#8211;frames-per-period=#</code></dt>
 <dd>
 <p> This option uses given value to decide the number of audio data frame in one read/write operation. The operation is blocked till the number of available audio data frame exceeds the given value. As a default, 512 audio data frames is used. </p>
-<dt><code>&#8211;periods-per-buffer=#</code></p>
+</dd><dt><code>&#8211;periods-per-buffer=#</code></dt>
 <dd>
 <p> This option uses given value to decide the size of intermediate buffer between this program and libffado. As a default, 2 periods per buffer is used. </p>
-<dt><code>&#8211;slave</code></p>
+</dd><dt><code>&#8211;slave</code></dt>
 <dd>
 <p> This option allows this program to run slave mode. In this mode, libffado adds unit directory into configuration ROM of 1394 OHCI controller where Linux system runs. The unit directory can be found by the other node on the same bus. Linux system running on the node can transfer isochronous packet with audio data frame to the unit. This program can receive the packet and demultiplex the audio data frame. </p>
-<dt><code>&#8211;snoop</code></p>
+</dd><dt><code>&#8211;snoop</code></dt>
 <dd>
 <p> This option allows this program to run snoop mode. In this mode, libffado listens isochronous channels to which device transfers isochronous packet. When isochronous communication starts by any unit on the same bus, the packets can be handled by this program. </p>
-<dt><code>&#8211;sched-priority=#</code></p>
+</dd><dt><code>&#8211;sched-priority=#</code></dt>
 <dd>
 <p> This option executes <i>pthread_setschedparam()</i> in a call of <i>ffado_streaming_init()</i> to configure scheduling policy and given value as its priority for threads related to isochronous communication. The given value should be within <i>RLIMIT_RTPRIO</i> parameter of process. Please read <i><a href="/docs/linux/man/2-getrlimit/">getrlimit</a>(2)</i> for details. </p>
-</dl>
+</dd></dl>
 <h2>POSIX SIGNALS</h2>
 <p> During transmission, <i>SIGINT</i> and <i>SIGTERM</i> will close handled files and PCM substream to be going to finish run time. </p>
 <p> <i>SIGTSTP</i> will suspend PCM substream and <i>SIGCONT</i> will resume it. No XRUNs are expected. With libffado backend, the suspend/resume is not supported and runtime is aboeted immediately. </p>
@@ -227,30 +227,30 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 <h2>COMPATIBILITY TO APLAY</h2>
 <p> The <code>transfer</code> subcommand of <code>axfer</code> is designed to keep compatibility to <a href="/docs/linux/man/1-aplay/">aplay</a>(1). However some options below are not compatible due to several technical reasons. </p>
 <dl>
-<dt><i>-I, &#8211;separate-channels</i></p>
-<dd> This option is supported just for files to store audio data frames corresponding to each channel. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has an additional effect to use PCM buffer aligned to non-interleaved order if a target device supports. As of 2018, PCM buffer of non-interleaved order is hardly used by sound devices. </p>
-<dt><i>-A, &#8211;avail-min=#</i></p>
-<dd> This option indicates threshold to wake up blocked process in a unit of audio data frame. Against <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has no effect with <i>&#8211;mmap</i> option as well as <i>timer</i> of <i>&#8211;sched-model</i> option. </p>
-<dt><i>-R, &#8211;start-delay=#</i></p>
-<dd> This option indicates threshold to start prepared PCM substream in a unit of audio data frame. Against <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has no effect with <i>&#8211;mmap</i> option as well as <i>timer</i> of <i>&#8211;sched-model</i> option. </p>
-<dt><i>-T, &#8211;stop-delay=#</i></p>
-<dd> This option indicates threshold to stop running PCM substream in a unit of audio data frame. Against <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has no effect with <i>&#8211;mmap</i> option as well as <i>timer</i> of <i>&#8211;sched-model</i> option. </p>
-<dt><i>&#8211;max-file-time=#</i></p>
-<dd> This option is unsupported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, the option has an effect for capture transmission to save files up to the same number of data frames as the given value by second unit, or the maximum number of data frames supported by used file format. When reaching to the limitation, used file is closed, then new file is opened and audio data frames are written. However, this option requires extra handling of files and shall increase complexity of main loop of axfer. </p>
-<dt><i>&#8211;use-strftime=FORMAT</i></p>
-<dd> This option is unsupported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, the option has an effect for capture transmission to generate file paths according to given format in which some extra formats are available as well as formats supported by <a href="/docs/linux/man/3-strftime/">strftime</a>(3). However, this option requires extra string processing for file paths and it&#8217;s bothersome if written in C language. </p>
-<dt><i>&#8211;process-id-file=FILEPATH</i></p>
-<dd> This option is unsupported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, the option has an effect to create a file for given value and write out process ID to it. This file allows users to get process ID and send any POSIX signal to aplay process. However, this idea has some troubles for file locking when multiple aplay processes run with the same file. </p>
-<dt><i>-V, &#8211;vumeter=TYPE</i></p>
-<dd> This option is not supported at present. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has an effect to occupy stdout with some terminal control characters and display vumeter for monaural and stereo channels. However, some problems lay; this feature is just for audio data frames with PCM format, this feature brings disorder of terminal after aborting, stdout is not available for pipeline. </p>
-<dt><i>-i, &#8211;interactive</i></p>
-<dd> This option is not supported at present. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has an effect to occupy stdin for key input and suspend/resume PCM substream according to pushed enter key. However, this feature requires an additional input handling in main loop and leave bothersome operation to maintain PCM substream. </p>
-<dt><i>-m, &#8211;chmap=CH1,CH2,&#8230;</i></p>
-<dd> ALSA PCM core and control core doesn&#8217;t support this feature, therefore remapping should be done in userspace. This brings overhead to align audio data frames, especially for mmap operation. Furthermore, as of alsa-lib v1.1.8, some plugins don&#8217;t support this feature expectedly, thus this option is a lack of transparent operation. At present, this option is not supported yet not to confuse users. </p>
-<dt><i>SIGTSTP, SIGCONT</i></p>
-<dd> This performs suspend/resume of PCM substream. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, these operations bring XRUN state to the substream, and suspend/resume is done in interactive mode in the above. Some developers use the signal for recovery test from XRUN. At present, no alternative is supported for the test. </p>
-<dt><i>SIGUSR1</i></p>
-<dd> This is not supported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this signal is assigned to a handler to close a current file to store audio data frame and open a new file to continue processing. However, as well as <i>&#8211;max-file-time</i> option, this option should increase complexity of main loop of axfer. </p>
+<dt><i>-I, &#8211;separate-channels</i></dt>
+<dd> This option is supported just for files to store audio data frames corresponding to each channel. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has an additional effect to use PCM buffer aligned to non-interleaved order if a target device supports. As of 2018, PCM buffer of non-interleaved order is hardly used by sound devices. </dd>
+<dt><i>-A, &#8211;avail-min=#</i></dt>
+<dd> This option indicates threshold to wake up blocked process in a unit of audio data frame. Against <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has no effect with <i>&#8211;mmap</i> option as well as <i>timer</i> of <i>&#8211;sched-model</i> option. </dd>
+<dt><i>-R, &#8211;start-delay=#</i></dt>
+<dd> This option indicates threshold to start prepared PCM substream in a unit of audio data frame. Against <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has no effect with <i>&#8211;mmap</i> option as well as <i>timer</i> of <i>&#8211;sched-model</i> option. </dd>
+<dt><i>-T, &#8211;stop-delay=#</i></dt>
+<dd> This option indicates threshold to stop running PCM substream in a unit of audio data frame. Against <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has no effect with <i>&#8211;mmap</i> option as well as <i>timer</i> of <i>&#8211;sched-model</i> option. </dd>
+<dt><i>&#8211;max-file-time=#</i></dt>
+<dd> This option is unsupported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, the option has an effect for capture transmission to save files up to the same number of data frames as the given value by second unit, or the maximum number of data frames supported by used file format. When reaching to the limitation, used file is closed, then new file is opened and audio data frames are written. However, this option requires extra handling of files and shall increase complexity of main loop of axfer. </dd>
+<dt><i>&#8211;use-strftime=FORMAT</i></dt>
+<dd> This option is unsupported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, the option has an effect for capture transmission to generate file paths according to given format in which some extra formats are available as well as formats supported by <a href="/docs/linux/man/3-strftime/">strftime</a>(3). However, this option requires extra string processing for file paths and it&#8217;s bothersome if written in C language. </dd>
+<dt><i>&#8211;process-id-file=FILEPATH</i></dt>
+<dd> This option is unsupported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, the option has an effect to create a file for given value and write out process ID to it. This file allows users to get process ID and send any POSIX signal to aplay process. However, this idea has some troubles for file locking when multiple aplay processes run with the same file. </dd>
+<dt><i>-V, &#8211;vumeter=TYPE</i></dt>
+<dd> This option is not supported at present. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has an effect to occupy stdout with some terminal control characters and display vumeter for monaural and stereo channels. However, some problems lay; this feature is just for audio data frames with PCM format, this feature brings disorder of terminal after aborting, stdout is not available for pipeline. </dd>
+<dt><i>-i, &#8211;interactive</i></dt>
+<dd> This option is not supported at present. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this option has an effect to occupy stdin for key input and suspend/resume PCM substream according to pushed enter key. However, this feature requires an additional input handling in main loop and leave bothersome operation to maintain PCM substream. </dd>
+<dt><i>-m, &#8211;chmap=CH1,CH2,&#8230;</i></dt>
+<dd> ALSA PCM core and control core doesn&#8217;t support this feature, therefore remapping should be done in userspace. This brings overhead to align audio data frames, especially for mmap operation. Furthermore, as of alsa-lib v1.1.8, some plugins don&#8217;t support this feature expectedly, thus this option is a lack of transparent operation. At present, this option is not supported yet not to confuse users. </dd>
+<dt><i>SIGTSTP, SIGCONT</i></dt>
+<dd> This performs suspend/resume of PCM substream. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, these operations bring XRUN state to the substream, and suspend/resume is done in interactive mode in the above. Some developers use the signal for recovery test from XRUN. At present, no alternative is supported for the test. </dd>
+<dt><i>SIGUSR1</i></dt>
+<dd> This is not supported. In <a href="/docs/linux/man/1-aplay/">aplay</a>(1) implementation, this signal is assigned to a handler to close a current file to store audio data frame and open a new file to continue processing. However, as well as <i>&#8211;max-file-time</i> option, this option should increase complexity of main loop of axfer. </dd>
 </dl>
 <h2>DESIGN</h2>
 <h3>Modular structure</h3>

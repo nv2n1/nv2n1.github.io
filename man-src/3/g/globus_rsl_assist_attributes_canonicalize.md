@@ -22,26 +22,26 @@ description: "RSL Helper Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>rsl</i> Pointer to the RSL parse tree to canonicalize.</dl>
+</dt><dd> <i>rsl</i> Pointer to the RSL parse tree to canonicalize.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> If <code>globus_rsl_assist_attributes_canonicalize()</code> is successful, it will ensure that all attribute names in the given RSL will be in canonical form and return GLOBUS_SUCCESS. If an error occurs, it will return GLOBUS_FAILURE.</dl>
+</dt><dd> If <code>globus_rsl_assist_attributes_canonicalize()</code> is successful, it will ensure that all attribute names in the given RSL will be in canonical form and return GLOBUS_SUCCESS. If an error occurs, it will return GLOBUS_FAILURE.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> Success<br />
- <i>GLOBUS_FAILURE</i> Failure</dl>
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+ <i>GLOBUS_FAILURE</i> Failure</dd></dl>
 <h3>void globus_rsl_assist_string_canonicalize (char *ptr)</h3>
 <p> Canonicalize an attribute name. The <code>globus_rsl_assist_string_canonicalize()</code> function modifies the NULL-terminated string pointed to by its <i>ptr</i> parameter so that it is in canonical form. The canonical form is all lower-case with all underscore characters removed. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ptr</i> Pointer to the RSL string to modify in place.</dl>
+</dt><dd> <i>ptr</i> Pointer to the RSL string to modify in place.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
 <h2>Index</h2>

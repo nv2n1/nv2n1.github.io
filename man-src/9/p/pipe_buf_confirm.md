@@ -15,11 +15,11 @@ pipe_buf_confirm - verify contents of the pipe buffer
 <h2>Arguments</h2>
 
 <i>pipe</i>
-<dl><dd><dd>the pipe that the buffer belongs to</dl>
+<dl><dd></dd><dd>the pipe that the buffer belongs to</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>the buffer to confirm</dl>
+<dl><dd>the buffer to confirm</dd></dl>
 
 <h2>Copyright</h2>
 

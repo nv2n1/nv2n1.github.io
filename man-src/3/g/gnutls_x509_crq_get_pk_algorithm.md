@@ -14,10 +14,10 @@ description: "gnutls_x509_crq_get_pk_algorithm – API function"
 <p> <code>int gnutls_x509_crq_get_pk_algorithm(gnutls_x509_crq_t </code><i>crq</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a <code>gnutls_x509_crq_t</code> structure</p>
-<dt>unsigned int * bits</p>
-<dd> if bits is non-<code>NULL</code> it will hold the size of the parameters&#8217; in bits</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a <code>gnutls_x509_crq_t</code> structure</dd>
+<dt>unsigned int * bits</dt>
+<dd> if bits is non-<code>NULL</code> it will hold the size of the parameters&#8217; in bits</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the public key algorithm of a PKCS<code>10</code> certificate request. </p>
 <p> If bits is non-<code>NULL</code>, it should have enough size to hold the parameters size in bits. For RSA the bits returned is the modulus. For DSA the bits returned are of the public exponent.</p>
@@ -32,6 +32,6 @@ description: "gnutls_x509_crq_get_pk_algorithm – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

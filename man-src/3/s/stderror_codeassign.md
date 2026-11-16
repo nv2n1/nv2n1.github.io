@@ -26,10 +26,5 @@ ecat - error category corresponding to ec
 <h2>See also</h2>
 
 <pre><code>assigns another error code
-
 operator= (public member function)
-
-
-
-
 </code></pre>

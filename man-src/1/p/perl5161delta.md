@@ -33,15 +33,15 @@ url: "/docs/linux/man/1-perl5161delta/"
 
 <dl>
 <dt>&bull;
-<dd> Scalar::Util and List::Util have been upgraded from version 1.23 to version 1.25.
-<dt>&bull;
-<dd> B::Deparse has been updated from version 1.14 to 1.14_01. An ``uninitialized'' warning emitted by B::Deparse has been squashed [perl #113464].</dl>
+</dt><dd> Scalar::Util and List::Util have been upgraded from version 1.23 to version 1.25.
+</dd><dt>&bull;
+</dt><dd> B::Deparse has been updated from version 1.14 to 1.14_01. An ``uninitialized'' warning emitted by B::Deparse has been squashed [perl #113464].</dd></dl>
 
 <h2>Configuration and Compilation</h2>
 
 <dl>
 <dt>&bull;
-<dd> Building perl with some Windows compilers used to fail due to a problem with miniperl's <tt>&quot;glob&quot;</tt> operator (which uses the <tt>&quot;perlglob&quot;</tt> program) deleting the <font SIZE="-1">PATH</font> environment variable [perl #113798].</dl>
+</dt><dd> Building perl with some Windows compilers used to fail due to a problem with miniperl's <tt>&quot;glob&quot;</tt> operator (which uses the <tt>&quot;perlglob&quot;</tt> program) deleting the <font SIZE="-1">PATH</font> environment variable [perl #113798].</dd></dl>
 
 <h2>Platform Support</h2>
 
@@ -49,29 +49,29 @@ url: "/docs/linux/man/1-perl5161delta/"
 
 <dl>
 <dt><font SIZE="-1">VMS</font>
-<dd> All C header files from the top-level directory of the distribution are now installed on <font SIZE="-1">VMS,</font> providing consistency with a long-standing practice on other platforms. Previously only a subset were installed, which broke non-core extension builds for extensions that depended on the missing include files.</dl>
+</dt><dd> All C header files from the top-level directory of the distribution are now installed on <font SIZE="-1">VMS,</font> providing consistency with a long-standing practice on other platforms. Previously only a subset were installed, which broke non-core extension builds for extensions that depended on the missing include files.</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> A regression introduced in Perl v5.16.0 involving <tt>&quot;tr/</tt>SEARCHLIST<tt>/</tt>REPLACEMENTLIST<tt>/&quot;</tt> has been fixed. Only the first instance is supposed to be meaningful if a character appears more than once in <tt>&quot;</tt>SEARCHLIST<tt>&quot;</tt>. Under some circumstances, the final instance was overriding all earlier ones. [perl #113584]
-<dt>&bull;
-<dd> <tt>&quot;B::COP::stashlen&quot;</tt> has been added. This provides access to an internal field added in perl 5.16 under threaded builds. It was broken at the last minute before 5.16 was released [perl #113034].
-<dt>&bull;
-<dd> The re pragma will no longer clobber <tt>$_</tt>. [perl #113750]
-<dt>&bull;
-<dd> Unicode 6.1 published an incorrect alias for one of the Canonical_Combining_Class property's values (which range between 0 and 254). The alias <tt>&quot;CCC133&quot;</tt> should have been <tt>&quot;CCC132&quot;</tt>. Perl now overrides the data file furnished by Unicode to give the correct value.
-<dt>&bull;
-<dd> Duplicating scalar filehandles works again. [perl #113764]
-<dt>&bull;
-<dd> Under threaded perls, a runtime code block in a regular expression could corrupt the package name stored in the op tree, resulting in bad reads in <tt>&quot;caller&quot;</tt>, and possibly crashes [perl #113060].
-<dt>&bull;
-<dd> For efficiency's sake, many operators and built-in functions return the same scalar each time. Lvalue subroutines and subroutines in the <font SIZE="-1">CORE::</font> namespace were allowing this implementation detail to leak through. <tt>&quot;print &amp;CORE::uc(&quot;a&quot;), &amp;CORE::uc(&quot;b&quot;)&quot;</tt> used to print ``<font SIZE="-1">BB''.</font> The same thing would happen with an lvalue subroutine returning the return value of <tt>&quot;uc&quot;</tt>. Now the value is copied in such cases [perl #113044].
-<dt>&bull;
-<dd> <tt>&quot;__SUB__&quot;</tt> now works in special blocks (<tt>&quot;BEGIN&quot;</tt>, <tt>&quot;END&quot;</tt>, etc.).
-<dt>&bull;
-<dd> Formats that reference lexical variables from outside no longer result in crashes.</dl>
+</dt><dd> A regression introduced in Perl v5.16.0 involving <tt>&quot;tr/</tt>SEARCHLIST<tt>/</tt>REPLACEMENTLIST<tt>/&quot;</tt> has been fixed. Only the first instance is supposed to be meaningful if a character appears more than once in <tt>&quot;</tt>SEARCHLIST<tt>&quot;</tt>. Under some circumstances, the final instance was overriding all earlier ones. [perl #113584]
+</dd><dt>&bull;
+</dt><dd> <tt>&quot;B::COP::stashlen&quot;</tt> has been added. This provides access to an internal field added in perl 5.16 under threaded builds. It was broken at the last minute before 5.16 was released [perl #113034].
+</dd><dt>&bull;
+</dt><dd> The re pragma will no longer clobber <tt>$_</tt>. [perl #113750]
+</dd><dt>&bull;
+</dt><dd> Unicode 6.1 published an incorrect alias for one of the Canonical_Combining_Class property's values (which range between 0 and 254). The alias <tt>&quot;CCC133&quot;</tt> should have been <tt>&quot;CCC132&quot;</tt>. Perl now overrides the data file furnished by Unicode to give the correct value.
+</dd><dt>&bull;
+</dt><dd> Duplicating scalar filehandles works again. [perl #113764]
+</dd><dt>&bull;
+</dt><dd> Under threaded perls, a runtime code block in a regular expression could corrupt the package name stored in the op tree, resulting in bad reads in <tt>&quot;caller&quot;</tt>, and possibly crashes [perl #113060].
+</dd><dt>&bull;
+</dt><dd> For efficiency's sake, many operators and built-in functions return the same scalar each time. Lvalue subroutines and subroutines in the <font SIZE="-1">CORE::</font> namespace were allowing this implementation detail to leak through. <tt>&quot;print &amp;CORE::uc(&quot;a&quot;), &amp;CORE::uc(&quot;b&quot;)&quot;</tt> used to print ``<font SIZE="-1">BB''.</font> The same thing would happen with an lvalue subroutine returning the return value of <tt>&quot;uc&quot;</tt>. Now the value is copied in such cases [perl #113044].
+</dd><dt>&bull;
+</dt><dd> <tt>&quot;__SUB__&quot;</tt> now works in special blocks (<tt>&quot;BEGIN&quot;</tt>, <tt>&quot;END&quot;</tt>, etc.).
+</dd><dt>&bull;
+</dt><dd> Formats that reference lexical variables from outside no longer result in crashes.</dd></dl>
 
 <h2>Known Problems</h2>
 

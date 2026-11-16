@@ -17,18 +17,18 @@ description: "aggregate – optimise a list of route prefixes to help make nice 
 <p> The second optimisation identifies adjacent prefixes that can be combined under a single, shorter-length prefix. For example, 203.97.2.0/24 and 203.97.3.0/24 can be combined into the single prefix 203.97.2.0/23. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m max-length</code></p>
-<dd> Sets the maximum prefix length for entries read from stdin <i>max_length</i> bits. The default is 32. Prefixes with longer lengths will be discarded prior to processing. </p>
-<dt><code>-o max-opt-length</code></p>
-<dd> Sets the maximum prefix length for optimisation to <i>max-opt-length</i> bits. The default is 32. Prefixes with longer lengths will not be subject to optimisation. </p>
-<dt><code>-p default-length</code></p>
-<dd> Sets the default prefix length. There is no default; without this option a prefix without a mask length is treated as invalid. Use <code>-p 32 -m 32 -o 32</code> to aggregate a list of host routes specified as bare addresses, for example. </p>
-<dt><code>-q</code></p>
-<dd> Sets quiet mode &#8212; instructs <code>aggregate</code> never to generate warning messages or other output on stderr. </p>
-<dt><code>-t</code></p>
-<dd> Silently truncate prefixes that seem to have an inconsistent prefix: e.g. an input prefix 203.97.2.226/24 would be truncated to 203.97.2.0/24. Without this option an input prefix 203.97.2.226/24 would not be accepted, and a warning about the inconsistent mask would be generated. </p>
-<dt><code>-v</code></p>
-<dd> Sets verbose mode. This changes the output format to display the source line number that the prefix was obtained from, together with a preceding &quot;-&quot; to indicate a route that can be suppressed, or a &quot;+&quot; to indicate a shorter-prefix aggregate that was added by <code>aggregate</code> as an adjacency optimisation. Note that verbose output continues even if -q is selected.</dl>
+<dt><code>-m max-length</code></dt>
+<dd> Sets the maximum prefix length for entries read from stdin <i>max_length</i> bits. The default is 32. Prefixes with longer lengths will be discarded prior to processing. </dd>
+<dt><code>-o max-opt-length</code></dt>
+<dd> Sets the maximum prefix length for optimisation to <i>max-opt-length</i> bits. The default is 32. Prefixes with longer lengths will not be subject to optimisation. </dd>
+<dt><code>-p default-length</code></dt>
+<dd> Sets the default prefix length. There is no default; without this option a prefix without a mask length is treated as invalid. Use <code>-p 32 -m 32 -o 32</code> to aggregate a list of host routes specified as bare addresses, for example. </dd>
+<dt><code>-q</code></dt>
+<dd> Sets quiet mode &#8212; instructs <code>aggregate</code> never to generate warning messages or other output on stderr. </dd>
+<dt><code>-t</code></dt>
+<dd> Silently truncate prefixes that seem to have an inconsistent prefix: e.g. an input prefix 203.97.2.226/24 would be truncated to 203.97.2.0/24. Without this option an input prefix 203.97.2.226/24 would not be accepted, and a warning about the inconsistent mask would be generated. </dd>
+<dt><code>-v</code></dt>
+<dd> Sets verbose mode. This changes the output format to display the source line number that the prefix was obtained from, together with a preceding &quot;-&quot; to indicate a route that can be suppressed, or a &quot;+&quot; to indicate a shorter-prefix aggregate that was added by <code>aggregate</code> as an adjacency optimisation. Note that verbose output continues even if -q is selected.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> <code>Aggregate</code> exits 0 on success, and &gt;0 if an error occurs. </p>
 <h2>EXAMPLES</h2>

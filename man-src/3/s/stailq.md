@@ -10,37 +10,23 @@ description: "STAILQ_CONCAT, STAILQ_EMPTY, STAILQ_ENTRY, STAILQ_FIRST, STAILQ_FO
 <p>STAILQ_CONCAT, STAILQ_EMPTY, STAILQ_ENTRY, STAILQ_FIRST, STAILQ_FOREACH, STAILQ_HEAD, STAILQ_HEAD_INITIALIZER, STAILQ_INIT, STAILQ_INSERT_AFTER, STAILQ_INSERT_HEAD, STAILQ_INSERT_TAIL, STAILQ_NEXT, STAILQ_REMOVE, STAILQ_REMOVE_HEAD, &#8211; implementation of a singly linked tail queue</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/queue.h&gt;
-
 void STAILQ_CONCAT(STAILQ_HEAD *head1, STAILQ_HEAD *head2);
-
 int STAILQ_EMPTY(STAILQ_HEAD *head);
-
 STAILQ_ENTRY(TYPE);
-
 struct TYPE *STAILQ_FIRST(STAILQ_HEAD *head);
-
 STAILQ_FOREACH(struct TYPE *var, STAILQ_HEAD *head, STAILQ_ENTRY NAME);
-
 STAILQ_HEAD(HEADNAME, TYPE);
-
 STAILQ_HEAD STAILQ_HEAD_INITIALIZER(STAILQ_HEAD head);
-
 void STAILQ_INIT(STAILQ_HEAD *head);
-
 void STAILQ_INSERT_AFTER(STAILQ_HEAD *head, struct TYPE *listelm,
                          struct TYPE *elm, STAILQ_ENTRY NAME);
-
 void STAILQ_INSERT_HEAD(STAILQ_HEAD *head, struct TYPE *elm,
                         STAILQ_ENTRY NAME);
-
 void STAILQ_INSERT_TAIL(STAILQ_HEAD *head, struct TYPE *elm,
                         STAILQ_ENTRY NAME);
-
 struct TYPE *STAILQ_NEXT(struct TYPE *elm, STAILQ_ENTRY NAME);
-
 void STAILQ_REMOVE(STAILQ_HEAD *head, struct TYPE *elm, TYPE,
                    STAILQ_ENTRY NAME);
-
 void STAILQ_REMOVE_HEAD(STAILQ_HEAD *head, STAILQ_ENTRY NAME);</code></pre>
 <h2>Description</h2>
 <p>These macros define and operate on singly linked tail queues. In the macro definitions, <i>TYPE</i> is the name of a user-defined structure, that must contain a field of type <i>STAILQ_ENTRY</i>, named <i>NAME</i>. The argument <i>HEADNAME</i> is the name of a user-defined structure that must be declared using the macro <code>STAILQ_HEAD</code>(). A singly linked tail queue is headed by a structure defined by the <code>STAILQ_HEAD</code>() macro. This structure contains a pair of pointers, one to the first element in the tail queue and the other to the last element in the tail queue. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of O(n) removal for arbitrary elements. New elements can be added to the tail queue after an existing element, at the head of the tail queue, or at the end of the tail queue. A <i>STAILQ_HEAD</i> structure is declared as follows: STAILQ_HEAD(HEADNAME, TYPE) head; where <i>struct HEADNAME</i> is the structure to be defined, and <i>struct TYPE</i> is the type of the elements to be linked into the tail queue. A pointer to the head of the tail queue can later be declared as: struct HEADNAME *headp; (The names <i>head</i> and <i>headp</i> are user selectable.) The macro <code>STAILQ_HEAD_INITIALIZER</code>() evaluates to an initializer for the tail queue <i>head</i>. The macro <code>STAILQ_CONCAT</code>() concatenates the tail queue headed by <i>head2</i> onto the end of the one headed by <i>head1</i> removing all entries from the former. The macro <code>STAILQ_EMPTY</code>() evaluates to true if there are no items on the tail queue. The macro <code>STAILQ_ENTRY</code>() declares a structure that connects the elements in the tail queue. The macro <code>STAILQ_FIRST</code>() returns the first item on the tail queue or NULL if the tail queue is empty. The macro <code>STAILQ_FOREACH</code>() traverses the tail queue referenced by <i>head</i> in the forward direction, assigning each element in turn to <i>var</i>. The macro <code>STAILQ_INIT</code>() initializes the tail queue referenced by <i>head</i>. The macro <code>STAILQ_INSERT_HEAD</code>() inserts the new element <i>elm</i> at the head of the tail queue. The macro <code>STAILQ_INSERT_TAIL</code>() inserts the new element <i>elm</i> at the end of the tail queue. The macro <code>STAILQ_INSERT_AFTER</code>() inserts the new element <i>elm</i> after the element <i>listelm</i>. The macro <code>STAILQ_NEXT</code>() returns the next item on the tail queue, or NULL this item is the last. The macro <code>STAILQ_REMOVE_HEAD</code>() removes the element at the head of the tail queue. For optimum efficiency, elements being removed from the head of the tail queue should use this macro explicitly rather than the generic <code>STAILQ_REMOVE</code>() macro. The macro <code>STAILQ_REMOVE</code>() removes the element <i>elm</i> from the tail queue.</p>

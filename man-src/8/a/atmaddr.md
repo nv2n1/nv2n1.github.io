@@ -20,16 +20,16 @@ description: "atmaddr – list and maintain local ATM addresses"
 <p> Note that local ATM addresses are normally automatically maintained by the ILMI demon.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>append the specified address at the end of the list.</p>
-<dt><code>-d</code></p>
-<dd>delete the specified address from the list.</p>
-<dt><code>-n</code></p>
-<dd>numeric address output only. No address to name translation is attempted.</p>
-<dt><code>-r</code></p>
-<dd>reset (clear) the local address list of the specified interface.</p>
-<dt><code>-V</code></p>
-<dd>print the version number of <code>atmaddr</code> on standard output and exit.</dl>
+<dt><code>-a</code></dt>
+<dd>append the specified address at the end of the list.</dd>
+<dt><code>-d</code></dt>
+<dd>delete the specified address from the list.</dd>
+<dt><code>-n</code></dt>
+<dd>numeric address output only. No address to name translation is attempted.</dd>
+<dt><code>-r</code></dt>
+<dd>reset (clear) the local address list of the specified interface.</dd>
+<dt><code>-V</code></dt>
+<dd>print the version number of <code>atmaddr</code> on standard output and exit.</dd></dl>
 <h2>Author</h2>
 <p>Werner Almesberger, EPFL ICA &lt;Werner.Almesberger [at] epfl.ch&gt;</p>
 <h2>See Also</h2>

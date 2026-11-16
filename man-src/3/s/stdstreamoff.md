@@ -11,7 +11,6 @@ std::streamoff - std::streamoff
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ios&gt;
-
 typedef /*unspecified*/ streamoff;</code></pre> 
 The type std::streamoff is a signed integral type of sufficient size to represent the maximum possible file size supported by the operating system. Typically, this is a typedef to long long. 
 It is used to represent offsets from stream positions (values of type std::fpos). A std::streamoff value of -1 is also used to represent error conditions by some of the I/O library functions. 

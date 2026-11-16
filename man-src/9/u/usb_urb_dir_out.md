@@ -15,7 +15,7 @@ usb_urb_dir_out - check if an URB describes an OUT transfer
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>URB to be checked</dl>
+<dl><dd></dd><dd>URB to be checked</dd></dl>
 
 <h2>Return</h2>
 

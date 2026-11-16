@@ -19,36 +19,36 @@ description: "bbkeysrc – bbkeys configuration file"
 <p> For more information, see the man page for blackbox&#8217;s menu. </p>
 <h2>List Of Config Options</h2>
 <dl>
-<dt><i>stylefile</i>:</p>
-<dd>filename of blackbox style to use (string) </p>
-<dt><i>honorModifiers</i>:</p>
-<dd>whether or not to break if NumLock or ScrollLock is pressed. (hint: for bbkeys to ignore your keybindings if NumLock or ScrollLock are pressed, set this to true) (true or false) </p>
-<dt><i>raiseWhileCycling</i>:</p>
-<dd>should bbkeys raise the windows you&#8217;re cycling through while cycling through them? (true or false) </p>
-<dt><i>showCycleMenu</i></p>
-<dd>show the window-cycling menu or cycle without it? (true or false) </p>
-<dt><i>cycleMenuTitle</i></p>
-<dd>show the given string as the title of the window-cycling menu. if an empty string is passed as the parameter to this config option(&quot;{}&quot;), then the title will not be drawn. (string value) </p>
-<dt><i>menuTextJustify</i></p>
-<dd>how should the window-cycling menu be justified? (left, center, right) </p>
-<dt><i>menuTitleJustify</i></p>
-<dd>how should the window-cycling title be justified? (left, center, right) </p>
-<dt><i>autoConfig</i></p>
-<dd>should bbkeys watch for changes to its config file? (true or false) Note: if you decide to not do this (though it should be VERY light on system resources), you can always force bbkeys to reconfigure itself by sending it a SIGHUP (killall -HUP bbkeys). </p>
-<dt><i>autoConfigCheckTimeout</i></p>
-<dd>how often should bbkeys check for changes made to its config file? (numeric number of seconds) </p>
-<dt><i>workspaceColumns</i></p>
-<dd>number of columns that you have your workspaces laid out in your pager (numeric) </p>
-<dt><i>workspaceRows</i></p>
-<dd>number of rows that you have your workspaces/desktops laid out in (numeric). As way of an example, if you have your pager laid out in a 4&#215;2 grid (4 wide, 2 high), then you would set workspaceColumns to 4 and workspaceRows to 2. </p>
-<dt><i>cycleMenuX</i></p>
-<dd>horizontal position that you want the window cycling menu to show up at. (numeric) </p>
-<dt><i>cycleMenuY</i></p>
-<dd>vertical position that you want the window cycling menu to show up at. (numeric) NOTE. The cycleMenuX and cycleMenuY config options allow you to place your window-cycling window exactly where you want to put it on screen. We at the Bbkeys Foundation For Better Software (TM) call this a feature, though some crazy nuts might call it a bug caused by the fact that blackbox&#8217;s Menu class doesn&#8217;t have anything in it to center it on-screen, etc. It also doesn&#8217;t have any methods available to figure out how big the menu will be on-screen. This can be worked around by bbkeys, but I&#8217;ve not the time to do it now. Patch anyone? Or, you can just consider it a really neat feature that you can place the popup window-cycling window anywhere you want. =:D</dl>
+<dt><i>stylefile</i>:</dt>
+<dd>filename of blackbox style to use (string) </dd>
+<dt><i>honorModifiers</i>:</dt>
+<dd>whether or not to break if NumLock or ScrollLock is pressed. (hint: for bbkeys to ignore your keybindings if NumLock or ScrollLock are pressed, set this to true) (true or false) </dd>
+<dt><i>raiseWhileCycling</i>:</dt>
+<dd>should bbkeys raise the windows you&#8217;re cycling through while cycling through them? (true or false) </dd>
+<dt><i>showCycleMenu</i></dt>
+<dd>show the window-cycling menu or cycle without it? (true or false) </dd>
+<dt><i>cycleMenuTitle</i></dt>
+<dd>show the given string as the title of the window-cycling menu. if an empty string is passed as the parameter to this config option(&quot;{}&quot;), then the title will not be drawn. (string value) </dd>
+<dt><i>menuTextJustify</i></dt>
+<dd>how should the window-cycling menu be justified? (left, center, right) </dd>
+<dt><i>menuTitleJustify</i></dt>
+<dd>how should the window-cycling title be justified? (left, center, right) </dd>
+<dt><i>autoConfig</i></dt>
+<dd>should bbkeys watch for changes to its config file? (true or false) Note: if you decide to not do this (though it should be VERY light on system resources), you can always force bbkeys to reconfigure itself by sending it a SIGHUP (killall -HUP bbkeys). </dd>
+<dt><i>autoConfigCheckTimeout</i></dt>
+<dd>how often should bbkeys check for changes made to its config file? (numeric number of seconds) </dd>
+<dt><i>workspaceColumns</i></dt>
+<dd>number of columns that you have your workspaces laid out in your pager (numeric) </dd>
+<dt><i>workspaceRows</i></dt>
+<dd>number of rows that you have your workspaces/desktops laid out in (numeric). As way of an example, if you have your pager laid out in a 4&#215;2 grid (4 wide, 2 high), then you would set workspaceColumns to 4 and workspaceRows to 2. </dd>
+<dt><i>cycleMenuX</i></dt>
+<dd>horizontal position that you want the window cycling menu to show up at. (numeric) </dd>
+<dt><i>cycleMenuY</i></dt>
+<dd>vertical position that you want the window cycling menu to show up at. (numeric) NOTE. The cycleMenuX and cycleMenuY config options allow you to place your window-cycling window exactly where you want to put it on screen. We at the Bbkeys Foundation For Better Software (TM) call this a feature, though some crazy nuts might call it a bug caused by the fact that blackbox&#8217;s Menu class doesn&#8217;t have anything in it to center it on-screen, etc. It also doesn&#8217;t have any methods available to figure out how big the menu will be on-screen. This can be worked around by bbkeys, but I&#8217;ve not the time to do it now. Patch anyone? Or, you can just consider it a really neat feature that you can place the popup window-cycling window anywhere you want. =:D</dd></dl>
 <h2>Keybindings</h2>
 <p>The format of this section is similar to the config section, and blackbox&#8217;s menu structure. Each line will look like this:</p>
 <dl>
-<dd>[command] (keys) {parameters} </p>
+<dd>[command] (keys) {parameters} </dd>
 </dl>
 <p> <code>Parameters:</code><br />
  Not all directives need to have parameters provided, and within the [keybindings] section, the only sub-group allowed (a group that will have an [end] tag) is the [chain] tag. The chain tag is special and allows the user to give emacs-style keybindings, where a certain keystroke is given, released, and then another keystroke is given to complete the action. A good example would be the following: </p>
@@ -58,7 +58,7 @@ description: "bbkeysrc – bbkeys configuration file"
 [sendToWorkspace]&nbsp;<wbr>(2)&nbsp;<wbr>{2}<br />
 [sendToWorkspace]&nbsp;<wbr>(3)&nbsp;<wbr>{3}<br />
 [sendToWorkspace]&nbsp;<wbr>(4)&nbsp;<wbr>{4}<br />
-&nbsp;<wbr>[end] </p>
+&nbsp;<wbr>[end] </dd>
 </dl>
 <p> Note that both the beginning [chain] and the ending [end] tags must be provided. In this example, the chain is begun by the user pressing (and holding) the Control modifier, the Mod1 (Alt) modifier, and the &quot;W&quot; key on his keyboard. The user then releases these keys and bbkeys enters the chain. Bbkeys will then wait for the user to press one of the keybindings from within that chain to execute the next action. In this case, if bbkeys sees either the 1, 2, 3 or 4 key pressed on the keyboard, it will execute the given action for that key. Again, in this case, bbkeys will send the currently-focused window to the workspace specified in the {}-enclosed parameter (workspace 1, 2, 3, or 4 as the case may be here. </p>
 <p> So, the parameters provided in a keybinding directive can be seen as additional information to provide to the &quot;command&quot;. In some cases, it will be a number (what workspace to send a window to, how many pixels to move the window, how many pixels to resize a window, etc.). In other cases, it will be a string (&quot;xterm -fn nexus&quot;, for example, as an argument to the Execute command. And for many directives, it is not needed at all. </p>
@@ -67,82 +67,82 @@ description: "bbkeysrc – bbkeys configuration file"
 <p> <code>Commands:</code><br />
  The following commands are understood by bbkeys. Bbkeys is not case-sensitive with regards to its commands, so the case may be mixed accidentally or on purpose. =:) </p>
 <dl>
-<dt><i>execute</i></p>
-<dd>Executes a command. An string argument/parameter is expected for this directive that lists the command to be executed. </p>
-<dt><i>iconify</i></p>
+<dt><i>execute</i></dt>
+<dd>Executes a command. An string argument/parameter is expected for this directive that lists the command to be executed. </dd>
+<dt><i>iconify</i></dt>
 <dd>
-<dt><i>raise</i></p>
+</dd><dt><i>raise</i></dt>
 <dd>
-<dt><i>lower</i></p>
+</dd><dt><i>lower</i></dt>
 <dd>
-<dt><i>close</i></p>
+</dd><dt><i>close</i></dt>
 <dd>
-<dt><i>toggleShade</i></p>
+</dd><dt><i>toggleShade</i></dt>
 <dd>
-<dt><i>toggleOmnipresent</i></p>
-<dd>Sets a window to be &quot;sticky&quot;&#8211;on all workspaces. </p>
-<dt><i>toggleDecorations</i></p>
-<dd>Either strips a window of all decorations or causes it to be decorated regularly. </p>
-<dt><i>moveWindowUp</i></p>
-<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </p>
-<dt><i>moveWindowDown</i></p>
-<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </p>
-<dt><i>moveWindowLeft</i></p>
-<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </p>
-<dt><i>moveWindowRight</i></p>
-<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </p>
-<dt><i>resizeWindowWidth</i></p>
-<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to resize the currently-selected window. This may be a positive or negative number, allowing bbkeys to grow or shrink the window. </p>
-<dt><i>resizeWindowHeight</i></p>
-<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to resize the currently-selected window. This may be a positive or negative number, allowing bbkeys to grow or shrink the window. </p>
-<dt><i>toggleMaximizeFull</i></p>
+</dd><dt><i>toggleOmnipresent</i></dt>
+<dd>Sets a window to be &quot;sticky&quot;&#8211;on all workspaces. </dd>
+<dt><i>toggleDecorations</i></dt>
+<dd>Either strips a window of all decorations or causes it to be decorated regularly. </dd>
+<dt><i>moveWindowUp</i></dt>
+<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </dd>
+<dt><i>moveWindowDown</i></dt>
+<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </dd>
+<dt><i>moveWindowLeft</i></dt>
+<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </dd>
+<dt><i>moveWindowRight</i></dt>
+<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to move the currently-selected window. </dd>
+<dt><i>resizeWindowWidth</i></dt>
+<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to resize the currently-selected window. This may be a positive or negative number, allowing bbkeys to grow or shrink the window. </dd>
+<dt><i>resizeWindowHeight</i></dt>
+<dd>A numeric parameter may be provided which tells bbkeys how many pixels in the given direction to resize the currently-selected window. This may be a positive or negative number, allowing bbkeys to grow or shrink the window. </dd>
+<dt><i>toggleMaximizeFull</i></dt>
 <dd>
-<dt><i>toggleMaximizeVertical</i></p>
+</dd><dt><i>toggleMaximizeVertical</i></dt>
 <dd>
-<dt><i>toggleMaximizeHorizontal</i></p>
+</dd><dt><i>toggleMaximizeHorizontal</i></dt>
 <dd>
-<dt><i>sendToWorkspace</i></p>
-<dd>A numeric parameter must be provided which tells bbkeys which workspace (1-based index) to send the current window to. </p>
-<dt><i>nextWindow</i></p>
-<dd>Used for window cycling (alt-tabbing, most often). Selects the next window according to the window stack. </p>
-<dt><i>prevWindow</i></p>
-<dd>Used for window cycling (alt-tabbing, most often). Selects the previous window according to the window stack. </p>
-<dt><i>nextWindowOnAllWorkspaces</i></p>
+</dd><dt><i>sendToWorkspace</i></dt>
+<dd>A numeric parameter must be provided which tells bbkeys which workspace (1-based index) to send the current window to. </dd>
+<dt><i>nextWindow</i></dt>
+<dd>Used for window cycling (alt-tabbing, most often). Selects the next window according to the window stack. </dd>
+<dt><i>prevWindow</i></dt>
+<dd>Used for window cycling (alt-tabbing, most often). Selects the previous window according to the window stack. </dd>
+<dt><i>nextWindowOnAllWorkspaces</i></dt>
 <dd>
-<dt><i>prevWindowOnAllWorkspaces</i></p>
+</dd><dt><i>prevWindowOnAllWorkspaces</i></dt>
 <dd>
-<dt><i>nextWindowOnAllScreens</i></p>
+</dd><dt><i>nextWindowOnAllScreens</i></dt>
 <dd>
-<dt><i>prevWindowOnAllScreens</i></p>
+</dd><dt><i>prevWindowOnAllScreens</i></dt>
 <dd>
-<dt><i>nextWindowOfClass</i></p>
+</dd><dt><i>nextWindowOfClass</i></dt>
 <dd>
-<dt><i>prevWindowOfClass</i></p>
+</dd><dt><i>prevWindowOfClass</i></dt>
 <dd>
-<dt><i>nextWindowOfClassOnAllWorkspaces</i></p>
+</dd><dt><i>nextWindowOfClassOnAllWorkspaces</i></dt>
 <dd>
-<dt><i>prevWindowOfClassOnAllWorkspaces</i></p>
+</dd><dt><i>prevWindowOfClassOnAllWorkspaces</i></dt>
 <dd>
-<dt><i>changeWorkspace</i></p>
-<dd>A numeric parameter must be given to tell bbkeys which 1-based workspace to switch to. </p>
-<dt><i>nextWorkspace</i></p>
+</dd><dt><i>changeWorkspace</i></dt>
+<dd>A numeric parameter must be given to tell bbkeys which 1-based workspace to switch to. </dd>
+<dt><i>nextWorkspace</i></dt>
 <dd>
-<dt><i>prevWorkspace</i></p>
+</dd><dt><i>prevWorkspace</i></dt>
 <dd>
-<dt><i>upWorkspace</i></p>
+</dd><dt><i>upWorkspace</i></dt>
 <dd>
-<dt><i>downWorkspace</i></p>
+</dd><dt><i>downWorkspace</i></dt>
 <dd>
-<dt><i>leftWorkspace</i></p>
+</dd><dt><i>leftWorkspace</i></dt>
 <dd>
-<dt><i>rightWorkspace</i></p>
+</dd><dt><i>rightWorkspace</i></dt>
 <dd>
-<dt><i>nextScreen</i></p>
+</dd><dt><i>nextScreen</i></dt>
 <dd>
-<dt><i>prevScreen</i></p>
+</dd><dt><i>prevScreen</i></dt>
 <dd>
-<dt><i>chain</i></p>
-<dd>No parameter is needed for this directive. </p>
+</dd><dt><i>chain</i></dt>
+<dd>No parameter is needed for this directive. </dd>
 </dl>
 <h2>Example</h2>
 <p>Example config file below&#8230;<br />
@@ -161,91 +161,48 @@ description: "bbkeysrc – bbkeys configuration file"
 &nbsp;<wbr>[option]&nbsp;<wbr>(cycleMenuY)&nbsp;<wbr>{20}<br />
 &nbsp;<wbr>&nbsp;<wbr>[end] </p>
 <pre><code>[keybindings] (begin keybindings)
-
 [chain] (Control-Mod1-W)
-
 [sendToWorkspace] (1) {1}
-
 [sendToWorkspace] (2) {2}
-
 [sendToWorkspace] (3) {3}
-
 [sendToWorkspace] (4) {4}
-
 [sendToWorkspace] (5) {5}
-
 [sendToWorkspace] (6) {6}
-
 [sendToWorkspace] (7) {7}
-
 [sendToWorkspace] (8) {8}
-
 [end]
-
 [chain] (Mod1-Y)
-
 [execute] (1) {xmms}
-
 [execute] (2) {aumix -v +5}
-
 [execute] (3) {aumix -v -5}
-
 [end]
-
 [Lower]  (Mod1-Down)
-
 [Raise]  (Mod1-Up)
-
 [toggleShade]  (Mod1-F9)
-
 [Close]  (Mod1-F4)
-
 [Iconify]  (Mod1-m)
-
 [toggleMaximizeFull]  (Mod1-F12)
-
 [toggleMaximizeHorizontal]  (Mod1-F11)
-
 [toggleMaximizeVertical]  (Mod1-F10)
-
 [toggleOmnipresent]  (Mod1-Control-S)
-
 [resizeWindowWidth]  (Mod1-Control-Shift-Left) {-5}
-
 [resizeWindowWidth]  (Mod1-Control-Shift-Right) {5}
-
 [resizeWindowHeight]  (Mod1-Control-Shift-Up) {-5}
-
 [resizeWindowHeight]  (Mod1-Control-Shift-Down) {5}
-
 [moveWindowUp]  (Mod1-Control-Up) {1}
-
 [moveWindowDown]  (Mod1-Control-Down) {1}
-
 [moveWindowLeft]  (Mod1-Control-Left) {1}
-
 [moveWindowRight]  (Mod1-Control-Right) {1}
-
 [NextWindow]  (Mod1-Tab)
-
 [NextWindowOnAllWorkspaces]  (Mod1-Control-Tab)
-
 [PrevWindow]  (Mod1-Shift-Tab)
-
 [changeWorkspace]  (Mod1-1) {1}
-
 [changeWorkspace]  (Mod1-2) {2}
-
 [changeWorkspace]  (Mod1-3) {3}
-
 [changeWorkspace]  (Mod1-4) {4}
-
 [changeWorkspace]  (Mod1-5) {5}
-
 [changeWorkspace]  (Mod1-6) {6}
-
 [changeWorkspace]  (Mod1-7) {7}
-
 [changeWorkspace]  (Mod1-8) {8}</code></pre>
 <p>&nbsp;<wbr>[upWorkspace]&nbsp;<wbr>(Mod1-Control-K)<br />
 &nbsp;<wbr>[downWorkspace]&nbsp;<wbr>(Mod1-Control-J)<br />

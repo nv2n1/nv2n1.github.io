@@ -44,21 +44,21 @@ kdbClose(handle);<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
  <i>name</i> the name where to get the keys below<br />
  <i>returned</i> the (pre-initialized) KeySet returned with all keys found<br />
- <i>options</i> ORed options to control approaches Unlike to <code>kdbGet()</code> is KDB_O_POP set per default.</dl>
+ <i>options</i> ORed options to control approaches Unlike to <code>kdbGet()</code> is KDB_O_POP set per default.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> number of keys contained by returned </p>
+</dt><dd> number of keys contained by returned </dd>
 <p> -1 on failure </p>
 <p> -1 when name is no valid key </p>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbGet()</code></dl>
+</dt><dd> <code>kdbGet()</code></dd></dl>
 <h3>int kdbGetKey (KDB * handle, Key * dest)Fully retrieves the passed key from the backend storage.</h3>
 <p> The backend will try to get the key, identified through its name. </p>
 <p> It uses <code>kdbGet()</code> for retrieving the key and copies the found data to dest. </p>
@@ -66,18 +66,18 @@ kdbClose(handle);<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>dest</i> a pointer to a Key that has a name set</dl>
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+ <i>dest</i> a pointer to a Key that has a name set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on failure </p>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbSetKey()</code> to set a single <code>Key :: Basic Methods</code> </p>
+</dt><dd> <code>kdbSetKey()</code> to set a single <code>Key :: Basic Methods</code> </dd>
 <p> commandGet() code in <code>KDB :: Low Level Methods</code> command for usage example </p>
 <p> <code>kdbGet()</code> and <code>kdbGetByName()</code> to have more control over <code>KeySet :: Class Methods</code> and options</dl>
 <h3>int kdbGetString (KDB * handle, const char * keyname, char * returned, size_t maxSize)A high-level method to get a key value, by key name.</h3>
@@ -97,21 +97,21 @@ kdbClose(handle);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
  <i>keyname</i> the name of the key to receive the value<br />
  <i>returned</i> a buffer to put the key value<br />
- <i>maxSize</i> the size of the buffer</dl>
+ <i>maxSize</i> the size of the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on failure </p>
 <p> -1 on NULL pointers </p>
 <p> -1 if maxSize is 0 or larger than SSIZE_MAX</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbSetString()</code> and <code>kdbRemove()</code> to set and remove a string </p>
+</dt><dd> <code>kdbSetString()</code> and <code>kdbRemove()</code> to set and remove a string </dd>
 <p> <code>kdbGetKey()</code>, keySetKey() to work with Keys </p>
 <p> <code>kdbGet()</code> and <code>kdbGetByName()</code> for full access to <code>KDB Backends :: Internal Helper for Elektra</code> datastructures</dl>
 <h3>int kdbRemove (KDB * handle, const char * keyname)Remove a key by its name from the backend storage.</h3>
@@ -119,36 +119,36 @@ kdbClose(handle);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>keyname</i> the name of the key to be removed</dl>
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+ <i>keyname</i> the name of the key to be removed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on failure </p>
 <p> -1 on NULL pointers</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> together with <code>kdbSetString()</code> and <code>kdbGetString()</code> a highlevel interface for <code>KDB :: Low Level Methods</code> </p>
+</dt><dd> together with <code>kdbSetString()</code> and <code>kdbGetString()</code> a highlevel interface for <code>KDB :: Low Level Methods</code> </dd>
 <p> commandRemove() code in <code>KDB :: Low Level Methods</code> command for usage example</dl>
 <h3>int kdbSetKey (KDB * handle, const Key * key)Sets key in the backend storage.</h3>
 <p> While <code>kdbSetKey()</code> is perfect for a simple get of a specific key, <code>kdbGet()</code> and <code>kdbGetByName()</code> gives you more control over the keyset. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>key</i> Key to set</dl>
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+ <i>key</i> Key to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on failure </p>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbGetKey()</code> to get a single <code>Key :: Basic Methods</code> </p>
+</dt><dd> <code>kdbGetKey()</code> to get a single <code>Key :: Basic Methods</code> </dd>
 <p> <code>kdbSet()</code> for more control over <code>KeySet :: Class Methods</code> and options </p>
 <p> commandSet() code in <code>KDB :: Low Level Methods</code> command for usage example</dl>
 <h3>int kdbSetString (KDB * handle, const char * keyname, const char * value)A high-level method to set a value to a key, by key name.</h3>
@@ -157,21 +157,21 @@ kdbClose(handle);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
  <i>keyname</i> the name of the key to receive the value<br />
- <i>value</i> the value to be set</dl>
+ <i>value</i> the value to be set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on NULL pointers </p>
 <p> -1 on failure</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbGetString()</code>, <code>keySetString()</code>, <code>kdbSetKey()</code></dl>
+</dt><dd> <code>kdbGetString()</code>, <code>keySetString()</code>, <code>kdbSetKey()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

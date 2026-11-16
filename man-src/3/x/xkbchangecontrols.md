@@ -11,16 +11,16 @@ description: "XkbChangeControls – Provides a flexible method for updating the 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbChangeControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbControlsChangesPtr </code><i>changes</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description with changed xkb-&gt;ctrls</p>
-<dt><i>&#8211; changes</i></p>
-<dd>which parts of xkb-&gt;ctrls have changed</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description with changed xkb-&gt;ctrls</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>which parts of xkb-&gt;ctrls have changed</dd></dl>
 <h2>Description</h2>
 <p>The XkbControlsChangesRec structure allows applications to track modifications to an XkbControlsRec structure and thereby reduce the amount of traffic sent to the server. The same XkbControlsChangesRec structure may be used in several successive modifications to the same XkbControlsRec structure, then subsequently used to cause all of the changes, and only the changes, to be propagated to the server. </p>
 <p> The <i>changed_ctrls </i> field is a mask specifying which logical sets of data in the controls structure have been modified. In this context, modified means <i>set, </i> that is, if a value is set to the same value it previously contained, it has still been modified, and is noted as changed. Valid values for <i>changed_ctrls </i> are any combination of the masks listed in Table 1 that have &quot;ok&quot; in the <i>changed_ctrls </i> column. Setting a bit implies the corresponding data fields from the &quot;Relevant XkbControlsRec Data Fields&quot; column in Table 1 have been modified. The <i>enabled_ctrls_changes </i> field specifies which bits in the <i>enabled_ctrls </i> field have changed. If the number of keyboard groups has changed, the <i>num_groups_changed </i> field is set to True. </p>

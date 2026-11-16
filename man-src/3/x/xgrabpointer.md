@@ -10,29 +10,29 @@ description: "XGrabPointer, XUngrabPointer, XChangeActivePointerGrab – grab th
 <p>XGrabPointer, XUngrabPointer, XChangeActivePointerGrab &#8211; grab the pointer </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XGrabPointer(Display *<i>display</i>, Window <i>grab_window</i>, Bool <i>owner_events</i>, unsigned int <i>event_mask</i>, int <i>pointer_mode</i>, int <i>keyboard_mode</i>, Window <i>confine_to</i>, Cursor <i>cursor</i>, Time <i>time</i>);</p>
-<dd>int XUngrabPointer(Display *<i>display</i>, Time <i>time</i>);</p>
-<dd>int XChangeActivePointerGrab(Display *<i>display</i>, unsigned int <i>event_mask</i>, Cursor <i>cursor</i>, Time <i>time</i>);</dl>
+<dd>int XGrabPointer(Display *<i>display</i>, Window <i>grab_window</i>, Bool <i>owner_events</i>, unsigned int <i>event_mask</i>, int <i>pointer_mode</i>, int <i>keyboard_mode</i>, Window <i>confine_to</i>, Cursor <i>cursor</i>, Time <i>time</i>);</dd>
+<dd>int XUngrabPointer(Display *<i>display</i>, Time <i>time</i>);</dd>
+<dd>int XChangeActivePointerGrab(Display *<i>display</i>, unsigned int <i>event_mask</i>, Cursor <i>cursor</i>, Time <i>time</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>confine_to</i></p>
-<dd>Specifies the window to confine the pointer in or <code>None</code>.</p>
-<dt><i>cursor</i></p>
-<dd>Specifies the cursor that is to be displayed during the grab or <code>None</code>.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>event_mask</i></p>
-<dd>Specifies which pointer events are reported to the client. The mask is the bitwise inclusive OR of the valid pointer event mask bits.</p>
-<dt><i>grab_window</i></p>
-<dd>Specifies the grab window.</p>
-<dt><i>keyboard_mode</i></p>
-<dd>Specifies further processing of keyboard events. You can pass <code>GrabModeSync</code> or <code>GrabModeAsync</code>.</p>
-<dt><i>owner_events</i></p>
-<dd>Specifies a Boolean value that indicates whether the pointer events are to be reported as usual or reported with respect to the grab window if selected by the event mask.</p>
-<dt><i>pointer_mode</i></p>
-<dd>Specifies further processing of pointer events. You can pass <code>GrabModeSync</code> or <code>GrabModeAsync</code>.</p>
-<dt><i>time</i></p>
-<dd>Specifies the time. You can pass either a timestamp or <code>CurrentTime</code>.</dl>
+<dt><i>confine_to</i></dt>
+<dd>Specifies the window to confine the pointer in or <code>None</code>.</dd>
+<dt><i>cursor</i></dt>
+<dd>Specifies the cursor that is to be displayed during the grab or <code>None</code>.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>event_mask</i></dt>
+<dd>Specifies which pointer events are reported to the client. The mask is the bitwise inclusive OR of the valid pointer event mask bits.</dd>
+<dt><i>grab_window</i></dt>
+<dd>Specifies the grab window.</dd>
+<dt><i>keyboard_mode</i></dt>
+<dd>Specifies further processing of keyboard events. You can pass <code>GrabModeSync</code> or <code>GrabModeAsync</code>.</dd>
+<dt><i>owner_events</i></dt>
+<dd>Specifies a Boolean value that indicates whether the pointer events are to be reported as usual or reported with respect to the grab window if selected by the event mask.</dd>
+<dt><i>pointer_mode</i></dt>
+<dd>Specifies further processing of pointer events. You can pass <code>GrabModeSync</code> or <code>GrabModeAsync</code>.</dd>
+<dt><i>time</i></dt>
+<dd>Specifies the time. You can pass either a timestamp or <code>CurrentTime</code>.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XGrabPointer</code> function actively grabs control of the pointer and returns <code>GrabSuccess</code> if the grab was successful. Further pointer events are reported only to the grabbing client. <code>XGrabPointer</code> overrides any active pointer grab by this client. If owner_events is <code>False</code>, all generated pointer events are reported with respect to grab_window and are reported only if selected by event_mask. If owner_events is <code>True</code> and if a generated pointer event would normally be reported to this client, it is reported as usual. Otherwise, the event is reported with respect to the grab_window and is reported only if selected by event_mask. For either value of owner_events, unreported events are discarded. </p>
 <p> If the pointer_mode is <code>GrabModeAsync</code>, pointer event processing continues as usual. If the pointer is currently frozen by this client, the processing of events for the pointer is resumed. If the pointer_mode is <code>GrabModeSync</code>, the state of the pointer, as seen by client applications, appears to freeze, and the X server generates no further pointer events until the grabbing client calls <code>XAllowEvents</code> or until the pointer grab is released. Actual pointer changes are not lost while the pointer is frozen; they are simply queued in the server for later processing. </p>
@@ -48,12 +48,12 @@ description: "XGrabPointer, XUngrabPointer, XChangeActivePointerGrab – grab th
 <p> <code>XChangeActivePointerGrab</code> can generate a <code>BadCursor</code> and <code>BadValue</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadCursor</code></p>
-<dd>A value for a Cursor argument does not name a defined Cursor.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadCursor</code></dt>
+<dd>A value for a Cursor argument does not name a defined Cursor.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallowevents/">XAllowEvents</a>(3), <a href="/docs/linux/man/3-xgrabbutton/">XGrabButton</a>(3), <a href="/docs/linux/man/3-xgrabkey/">XGrabKey</a>(3), <a href="/docs/linux/man/3-xgrabkeyboard/">XGrabKeyboard</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

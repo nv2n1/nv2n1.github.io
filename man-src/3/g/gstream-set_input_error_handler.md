@@ -23,7 +23,6 @@ description: "set_input_error_handler"
 <p> Note that these constants are defined in &#8216;gbuf&#8217; so you have to put </p>
 <pre><code>
 int stupid_mistakes = 0;
-
 void ieh_for_my_number_inputter(int e)
 {
     switch (e) {
@@ -52,9 +51,7 @@ void ieh_for_my_number_inputter(int e)
 <p> There is a typedef, &#8216;input_error_handler&#8217;, in &#8216;gbuf&#8217; for the type of a pointer to a handler function: </p>
 <pre><code>
 gbuf::input_error_handler tmp_ieh;
-
 //...
-
 tmp_ieh = gs1.get_input_error_handler();
 gs1.set_input_error_handler(gs2.get_input_error_handler());
 gs2.set_input_error_handler(tmp_ieh);

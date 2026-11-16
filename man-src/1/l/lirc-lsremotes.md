@@ -18,23 +18,20 @@ description: "lirc-lsremotes – parse lirc configuration files."
 <p> In the second form lirc-lsremotes displays remote configurations for a given config file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d, &#8211;dump</code></p>
-<dd> Dump the complete configuration data for listed configurations.</p>
-<dt><code>-s, &#8211;silent</code></p>
-<dd> Only print diagnostics.</p>
-<dt><code>-v &#8211;version</code></p>
-<dd> Print version info</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print help message.</dl>
+<dt><code>-d, &#8211;dump</code></dt>
+<dd> Dump the complete configuration data for listed configurations.</dd>
+<dt><code>-s, &#8211;silent</code></dt>
+<dd> Only print diagnostics.</dd>
+<dt><code>-v &#8211;version</code></dt>
+<dd> Print version info</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print help message.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Print a status line and possible diagnostics for a file: </p>
 <pre><code>
-
 $ lirc - lsremotes remotes / hitachi / RM - 466E.lircd.conf
-
     lirc -
     lsremotes : Warning RM - 466E : you should specify a valid gap value
-
                                         hitachi;
 RM - 466E.lircd.conf;
 no_lircmd;
@@ -47,7 +44,7 @@ no_raw
 <p> List a status line for all remotes under remotes, saving diagnostics into a file:</p>
 <dl>
 <dt>
-<dd> $ lirc-lsremotes remotes &gt; remotes.list 2&gt;warnings.txt </p>
+</dt><dd> $ lirc-lsremotes remotes &gt; remotes.list 2&gt;warnings.txt </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://sourceforge.net/projects/lirc-remotes">http://sourceforge.net/projects/lirc-remotes</a> </p>

@@ -11,7 +11,6 @@ description: "sc::BeckeIntegrationWeight –"
 <p> Implements Becke&#8217;s integration weight scheme.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::IntegrationWeight</code>.</p>
 <h3>Public Member Functions</h3>

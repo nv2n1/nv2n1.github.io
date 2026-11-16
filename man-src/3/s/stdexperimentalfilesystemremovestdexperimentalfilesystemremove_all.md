@@ -11,15 +11,11 @@ std::experimental::filesystem::remove,std::experimental::filesystem::remove_all 
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     bool remove(const path &amp;p);
 (1)(filesystem TS)
-
     bool remove(const path &amp;p, error_code &amp;ec);
-
 std::uintmax_t remove_all(const path &amp;p);
 (2)(filesystem TS)
-
     std::uintmax_t remove_all(const path &amp;p, error_code &amp;ec);</code></pre> 
 1) The file or empty directory identified by the path p is deleted as if by the POSIX remove. Symlinks are not followed (symlink is removed, not its target) 
 2) Deletes the contents of p (if it is a directory) and the contents of all its subdirectories, recursively, then deletes p itself as if by repeatedly applying the POSIX remove. Symlinks are not followed (symlink is removed, not its target) 
@@ -47,15 +43,10 @@ On POSIX systems, this function typically calls unlink and rmdir as needed, on W
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::path dir = fs::temp_directory_path();
     fs::create_directories(dir / &quot;abcdef/example&quot;);

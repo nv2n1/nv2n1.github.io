@@ -18,27 +18,27 @@ description: "fcrls – Fibre Channel Read Link Error Status Block (RLS) tool"
 <h2>Options</h2>
 <p><code>&#8211;port</code> <i>rport_bsg_name</i></p>
 <dl>
-<dd>Send RLS to a rport by FC remote port bsg name, e.g., rport-7:0-1.</dl>
+<dd>Send RLS to a rport by FC remote port bsg name, e.g., rport-7:0-1.</dd></dl>
 <p> <code>&#8211;fcid</code> <i>rport_port_FC-ID</i></p>
 <dl>
-<dd>Send RLS to a rport by port FC-ID, e.g., 0xce000d.</dl>
+<dd>Send RLS to a rport by port FC-ID, e.g., 0xce000d.</dd></dl>
 <p> <code>&#8211;quiet</code></p>
 <dl>
-<dd>Disable verbose output.</dl>
+<dd>Disable verbose output.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>Display a help message with basic usage instructions.</dl>
+<dd>Display a help message with basic usage instructions.</dd></dl>
 <h2>Examples</h2>
 <p>Sends RLS to the FC remote port as rport-7:0-1 </p>
 <dl>
 <dd>
 <pre>fcrls --port rport-7:0-1</pre>
-</dl>
+</dd></dl>
 <p> Sends RLS to the FC remote port with 0xce000d as its port FC-ID </p>
 <dl>
 <dd>
 <pre>fcrls --fcid 0xce000d</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fcoeadm/">fcoeadm</a></code>(8)</p>
 <h2>Support</h2>

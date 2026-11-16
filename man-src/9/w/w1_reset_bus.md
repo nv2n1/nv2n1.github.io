@@ -14,11 +14,11 @@ description: "w1_reset_bus – Issues a reset bus sequence."
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the master device</dl>
+</dd><dd>the master device</dd></dl>
 <h2>Return</h2>
 <p>0=Device present, 1=No device present or error</p>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

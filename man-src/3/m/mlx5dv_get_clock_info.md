@@ -22,5 +22,5 @@ description: "mlx5dv_get_clock_info – Get device clock information"
 <p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7), <code><a href="/docs/linux/man/3-mlx5dv_ts_to_ns/">mlx5dv_ts_to_ns</a></code>(3)</p>
 <h2>Authors</h2>
 <dl COMPACT>
-<dt>Feras Daoud &lt;ferasda [at] mellanox.com&gt;</p>
-<dd></dl>
+<dt>Feras Daoud &lt;ferasda [at] mellanox.com&gt;</dt>
+<dd></dd></dl>

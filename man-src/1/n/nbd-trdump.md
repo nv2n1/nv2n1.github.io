@@ -17,20 +17,20 @@ description: "nbd-trdump – translate an nbd transaction log into human readabl
 <h2>OUTPUT</h2>
 <p> The following may be output:</p>
 <dl>
-<dt><code>&gt;</code></p>
-<dd> A request packet sent from the client to the server.</p>
-<dt><code>&lt;</code></p>
-<dd> A reply packet sent from the server to the client.</p>
-<dt><code>H</code></p>
-<dd> The handle of the packet.</p>
-<dt><code>C</code></p>
-<dd> The command sent.</p>
-<dt><code>O</code></p>
-<dd> The offet from the start of the disk.</p>
-<dt><code>L</code></p>
-<dd> The length of data.</p>
-<dt><code>E</code></p>
-<dd> The error returned.</dl>
+<dt><code>&gt;</code></dt>
+<dd> A request packet sent from the client to the server.</dd>
+<dt><code>&lt;</code></dt>
+<dd> A reply packet sent from the server to the client.</dd>
+<dt><code>H</code></dt>
+<dd> The handle of the packet.</dd>
+<dt><code>C</code></dt>
+<dd> The command sent.</dd>
+<dt><code>O</code></dt>
+<dd> The offet from the start of the disk.</dd>
+<dt><code>L</code></dt>
+<dd> The length of data.</dd>
+<dt><code>E</code></dt>
+<dd> The error returned.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> nbd-server (1).</p>
 <h2>AUTHOR</h2>

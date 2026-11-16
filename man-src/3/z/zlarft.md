@@ -11,8 +11,6 @@ description: "zlarft.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zlarft (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)
-
-
 ZLARFT forms the triangular factor T of a block reflector H = I - vtvH</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarft (characterDIRECT, characterSTOREV, integerN, integerK, complex*16, dimension( ldv, * )V, integerLDV, complex*16, dimension( * )TAU, complex*16, dimension( ldt, * )T, integerLDT)</h3>
@@ -30,10 +28,10 @@ ZLARFT forms the triangular factor T of a block reflector H = I - vtvH</code></p
  If STOREV = 'R', the vector which defines the elementary reflector
  H(i) is stored in the i-th row of the array V, and
  H = I - V**H * T * V</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>DIRECT</i> </p>
+<dd><i>DIRECT</i> </dd>
 <pre> DIRECT is CHARACTER*1
  Specifies the order in which the elementary reflectors are
  multiplied to form the block reflector:
@@ -76,13 +74,13 @@ ZLARFT forms the triangular factor T of a block reflector H = I - vtvH</code></p
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -101,7 +99,8 @@ ZLARFT forms the triangular factor T of a block reflector H = I - vtvH</code></p
  ( 1 v2 v3 ) ( v3 v3 v3 v3 1 )
  ( 1 v3 )
  ( 1 )</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 164 of file zlarft.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

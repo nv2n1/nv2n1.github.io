@@ -23,44 +23,44 @@ int isinf(x);
 <p> <code>fpclassify</code>(), <code>isfinite</code>(), <code>isnormal</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <p> <code>isnan</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>isinf</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Floating point numbers can have special values, such as infinite or NaN. With the macro <code>fpclassify(</code><i>x</i><code>)</code> you can find out what type <i>x</i> is. The macro takes any floating-point expression as argument. The result is one of the following values:</p>
 <dl>
-<dt><code>FP_NAN</code></p>
-<dd> <i>x</i> is &quot;Not a Number&quot;.</p>
-<dt><code>FP_INFINITE</code></p>
-<dd> <i>x</i> is either positive infinity or negative infinity.</p>
-<dt><code>FP_ZERO</code></p>
-<dd> <i>x</i> is zero.</p>
-<dt><code>FP_SUBNORMAL</code></p>
-<dd> <i>x</i> is too small to be represented in normalized format.</p>
-<dt><code>FP_NORMAL</code></p>
-<dd> if nothing of the above is correct then it must be a normal floating-point number.</dl>
+<dt><code>FP_NAN</code></dt>
+<dd> <i>x</i> is &quot;Not a Number&quot;.</dd>
+<dt><code>FP_INFINITE</code></dt>
+<dd> <i>x</i> is either positive infinity or negative infinity.</dd>
+<dt><code>FP_ZERO</code></dt>
+<dd> <i>x</i> is zero.</dd>
+<dt><code>FP_SUBNORMAL</code></dt>
+<dd> <i>x</i> is too small to be represented in normalized format.</dd>
+<dt><code>FP_NORMAL</code></dt>
+<dd> if nothing of the above is correct then it must be a normal floating-point number.</dd></dl>
 <p> The other macros provide a short answer to some standard questions.</p>
 <dl>
-<dt><code>isfinite(</code><i>x</i><code>)</code></p>
+<dt><code>isfinite(</code><i>x</i><code>)</code></dt>
 <dd> returns a nonzero value if<br />
- (fpclassify(x) != FP_NAN &amp;&amp; fpclassify(x) != FP_INFINITE)</p>
-<dt><code>isnormal(</code><i>x</i><code>)</code></p>
-<dd> returns a nonzero value if (fpclassify(x) == FP_NORMAL)</p>
-<dt><code>isnan(</code><i>x</i><code>)</code></p>
-<dd> returns a nonzero value if (fpclassify(x) == FP_NAN)</p>
-<dt><code>isinf(</code><i>x</i><code>)</code></p>
-<dd> returns 1 if <i>x</i> is positive infinity, and -1 if <i>x</i> is negative infinity.</dl>
+ (fpclassify(x) != FP_NAN &amp;&amp; fpclassify(x) != FP_INFINITE)</dd>
+<dt><code>isnormal(</code><i>x</i><code>)</code></dt>
+<dd> returns a nonzero value if (fpclassify(x) == FP_NORMAL)</dd>
+<dt><code>isnan(</code><i>x</i><code>)</code></dt>
+<dd> returns a nonzero value if (fpclassify(x) == FP_NAN)</dd>
+<dt><code>isinf(</code><i>x</i><code>)</code></dt>
+<dd> returns 1 if <i>x</i> is positive infinity, and -1 if <i>x</i> is negative infinity.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

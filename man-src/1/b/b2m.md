@@ -16,10 +16,10 @@ description: "b2m – convert old Emacs Rmail Babyl format to mbox format"
 <h2>OPTIONS</h2>
 <p> The program accepts unambiguous abbreviations for long option names.</p>
 <dl>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display basic usage information.</dl>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display basic usage information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The Babyl format is described in the file <code>etc/BABYL</code> in the Emacs distribution. <code>Rmail</code> is documented in the GNU Emacs manual, which you can read using <code>Info</code>, either from Emacs or as a standalone program.</p>
 <h2>AUTHORS</h2>

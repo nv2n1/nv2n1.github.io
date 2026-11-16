@@ -10,25 +10,23 @@ description: "xcb_x_print_create_context –"
 <p>xcb_x_print_create_context &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xprint.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_x_print_create_context(xcb_connection_t *conn, uint32_t context_id, uint32_t printerNameLen, uint32_t localeLen, const xcb_x_print_string8_t *printerName, const xcb_x_print_string8_t *locale);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>context_id</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>printerNameLen</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>localeLen</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>printerName</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>locale</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>context_id</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>printerNameLen</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>localeLen</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>printerName</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>locale</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

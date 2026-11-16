@@ -15,15 +15,15 @@ CALL STUMXY(XDA,YDA,XUS,YUS,IST)
 <h2>Description</h2>
 
 <dl><dt>XDA
-<dd>(REAL, input): The X coordinate of a point on the streamline in data coordinate space.
-<dt>YDA
-<dd>(REAL, input): The Y coordinate of a point on the streamline in data coordinate space.
-<dt>XUS
-<dd>(REAL, output): The X coordinate of the point in user coordinate space.
-<dt>YUS
-<dd>(REAL, output): The Y coordinate of the point in user coordinate space.
-<dt>IST
-<dd>(REAL, output) Status of the mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dl>
+</dt><dd>(REAL, input): The X coordinate of a point on the streamline in data coordinate space.
+</dd><dt>YDA
+</dt><dd>(REAL, input): The Y coordinate of a point on the streamline in data coordinate space.
+</dd><dt>XUS
+</dt><dd>(REAL, output): The X coordinate of the point in user coordinate space.
+</dd><dt>YUS
+</dt><dd>(REAL, output): The Y coordinate of the point in user coordinate space.
+</dd><dt>IST
+</dt><dd>(REAL, output) Status of the mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dd></dl>
 
 <h2>Usage</h2>
 
@@ -38,7 +38,7 @@ STUMXY is a user-modifiable routine provided to support custom mappings of the d
  ...map YDA to YUS
  ...if error, set IST to a negative value
  RETURN
-ENDIF</pre></dl>
+ENDIF</pre></dd></dl>
  
 
  Note that after the return from STUMXY, Streamlines checks to ensure that XUS and YUS are within the current boundaries of the user coordinate system. 

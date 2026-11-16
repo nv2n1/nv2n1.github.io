@@ -36,17 +36,12 @@ unlock() is usually not called directly: std::unique_lock and std::lock_guard ar
 
 This example shows how lock and unlock can be used to protect shared data. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;mutex&gt;
 int g_num = 0; // protected by g_num_mutex
-
 std::mutex g_num_mutex;
 void slow_increment(int id)
-
 {
     for (int i = 0; i &lt; 3; ++i) {
         g_num_mutex.lock();
@@ -57,7 +52,6 @@ void slow_increment(int id)
     }
 }
 int main()
-
 {
     std::thread t1(slow_increment, 0);
     std::thread t2(slow_increment, 1);

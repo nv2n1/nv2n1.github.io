@@ -45,7 +45,7 @@ description: "org.freedesktop.timedate1 – The D-Bus interface of systemd-timed
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p>Use <code>SetTime()</code> to change the system clock. Pass a value of microseconds since the UNIX epoch (1 Jan 1970 UTC). If <i>relative</i> is true, the passed usec value will be added to the current system time. If it is false, the current system time will be set to the passed usec value. If the system time is set with this method, the RTC will be updated as well. </p>
 <p> Use <code>SetTimezone()</code> to set the system timezone. Pass a value like &quot;Europe/Berlin&quot; to set the timezone. Valid timezones are listed in /usr/share/zoneinfo/zone.tab. If the RTC is configured to be maintained in local time, it will be updated accordingly. </p>
@@ -67,22 +67,23 @@ description: "org.freedesktop.timedate1 – The D-Bus interface of systemd-timed
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.timedate1 \
  --object-path /org/freedesktop/timedate1</pre>
-</dl>
+</dd></dl>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[2]</font>.</p>
 <h2>See Also</h2>
 <p>m[blue]<code>More information on how the system clock and RTC interact</code>m[]<font SIZE="-2">[3]</font></p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>polkit</p>
+<dt> 1.</dt>
+<dd>polkit</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dl>
-<dt> 2.</p>
-<dd>the usual interface versioning guidelines</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dd></dl>
+<dt> 2.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
-<dt> 3.</p>
-<dd>More information on how the system clock and RTC interact</p>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+<dt> 3.</dt>
+<dd>More information on how the system clock and RTC interact</dd>
 <dl>
-<dd><a rel="nofollow" href="https://lists.freedesktop.org/archives/systemd-devel/2011-May/002526.html">https://lists.freedesktop.org/archives/systemd-devel/2011-May/002526.html</a></dl>
+<dd><a rel="nofollow" href="https://lists.freedesktop.org/archives/systemd-devel/2011-May/002526.html">https://lists.freedesktop.org/archives/systemd-devel/2011-May/002526.html</a></dd></dl>
+</dl>

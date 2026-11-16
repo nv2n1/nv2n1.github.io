@@ -11,14 +11,14 @@ description: "XkbKeyNumGroups – Returns the number of groups of symbols bound 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>int XkbKeyNumGroups</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>Xkb description of interest</p>
-<dt><i>&#8211; keycode</i></p>
-<dd>keycode of interest</dl>
+</dd><dd>Xkb description of interest</dd>
+<dt><i>&#8211; keycode</i></dt>
+<dd>keycode of interest</dd></dl>
 <h2>Description</h2>
 <p>The <i>group_info </i> field of an XkbSymMapRec is an encoded value containing the number of groups of symbols bound to the key as well as the specification of the treatment of out-of-range groups. It is legal for a key to have zero groups, in which case it also has zero symbols and all events from that key yield NoSymbol. To obtain the number of groups of symbols bound to the key, use <i>XkbKeyNumGroups. </i> To change the number of groups bound to a key, use <i>XkbChangeTypesOfKey. </i> To obtain a mask that determines the treatment of out-of-range groups, use <i>XkbKeyGroupInfo </i> and <i>XkbOutOfRangeGroupInfo.</i> </p>
 <p> The keyboard controls contain a <i>groups_wrap </i> field specifying the handling of illegal groups on a global basis. That is, when the user performs an action causing the effective group to go out of the legal range, the <i>groups_wrap </i> field specifies how to normalize the effective keyboard group to a group that is legal for the keyboard as a whole, but there is no guarantee that the normalized group will be within the range of legal groups for any individual key. The per-key <i>group_info </i> field specifies how a key treats a legal effective group if the key does not have a type specified for the group of concern. For example, the Enter key usually has just one group defined. If the user performs an action causing the global keyboard group to change to Group2, the <i>group_info </i> field for the Enter key describes how to handle this situation. </p>
@@ -220,7 +220,6 @@ description: "XkbKeyNumGroups – Returns the number of groups of symbols bound 
 <p>The KeySymMapRec structure is defined as follows: </p>
 <pre> #define XkbNumKbdGroups 4
  #define XkbMaxKbdGroup (XkbNumKbdGroups-1)
- 
  typedef struct { /* map to keysyms for a single keycode 
 */
  unsigned char kt_index[XkbNumKbdGroups]; /* key type index for 
@@ -234,8 +233,6 @@ handling */
 <p>The XkbControlsRec structure is defined as follows: </p>
 <pre> #define XkbMaxLegalKeyCode 255
  #define XkbPerKeyBitArraySize ((XkbMaxLegalKeyCode+1)/8)
- 
- 
  typedef struct {
  unsigned char mk_dflt_btn; /* default button for keyboard driven 
 mouse */
@@ -276,8 +273,6 @@ repeat */
 <pre>The XkbControlsRec structure is defined as follows:
  #define XkbMaxLegalKeyCode 255
  #define XkbPerKeyBitArraySize ((XkbMaxLegalKeyCode+1)/8)
- 
- 
  typedef struct {
  unsigned char mk_dflt_btn; /* default button for keyboard driven 
 mouse */

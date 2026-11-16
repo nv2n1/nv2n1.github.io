@@ -14,14 +14,14 @@ description: "nand_wait – [DEFAULT] wait until the command is done"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>NAND chip structure</dl>
+<dd>NAND chip structure</dd></dl>
 <h2>Description</h2>
 <p>Wait for command done. This applies to erase and program only.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

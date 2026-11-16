@@ -28,10 +28,10 @@ description: "sgejsv.f –"
  the right singular vectors of [A], respectively. The matrices [U] and [V]
  are computed and stored in the arrays U and V, respectively. The diagonal
  of [SIGMA] is computed and stored in the array SVA.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBA</i> </p>
+<dd><i>JOBA</i> </dd>
 <pre> JOBA is CHARACTER*1
  Specifies the level of accuracy:
  = 'C': This option works well (high relative accuracy) if A = B * D,
@@ -267,7 +267,6 @@ description: "sgejsv.f –"
  2*N+LWORK(DGEQRF), N+LWORK(DORMQR)). 
  Here LWORK(DORMQR) equals N*NB (for JOBU.EQ.'U') or 
  M*NB (for JOBU.EQ.'F').
- 
  If the full SVD is needed: (JOBU.EQ.'U' or JOBU.EQ.'F') and 
  -&gt; if JOBV.EQ.'V' 
  the minimal requirement is LWORK &gt;= max(2*M+N,6*N+2*N*N). 
@@ -296,13 +295,13 @@ description: "sgejsv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -344,10 +343,10 @@ description: "sgejsv.f –"
  this extra QRF step easily. The implementer can also improve data movement
  (matrix transpose, matrix copy, matrix transposed copy) - this
  implementation of SGEJSV uses only the simplest, naive data movement.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+<dd>Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dd>
@@ -364,10 +363,10 @@ description: "sgejsv.f –"
  [4] Z. Drmac: SIGMA - mathematical software library for accurate SVD, PSV,
  QSVD, (H,K)-SVD computations.
  Department of Mathematics, University of Zagreb, 2008.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Bugs, examples and comments: </code></p>
 <dl>
-<dd>Please report all bugs and send interesting examples and/or comments to drmac [at] math.hr. Thank you.</dl>
+<dd>Please report all bugs and send interesting examples and/or comments to drmac [at] math.hr. Thank you.</dd></dl>
 <p> Definition at line 473 of file sgejsv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

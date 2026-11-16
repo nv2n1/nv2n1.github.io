@@ -10,7 +10,6 @@ description: "umad_get_ca, umad_release_ca – get and release InfiniBand device
 <p>umad_get_ca, umad_release_ca &#8211; get and release InfiniBand device port attributes</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_get_ca(char *ca_name, umad_ca_t *ca);
 int umad_release_ca(umad_ca_t *ca);</code></pre>
 <h2>Description</h2>
@@ -31,7 +30,7 @@ umad_port_t *ports[UMAD_CA_MAX_PORTS]; /* Array of device port properties */
 <p><code>umad_get_ca()</code> and <code>umad_release_ca()</code> return 0 on success, and a negative value on error.</p>
 <h2>Authors</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
 <dd>
-<dt>Dotan Barak &lt;dotanb [at] mellanox.co.il&gt;</p>
-<dd></dl>
+</dd><dt>Dotan Barak &lt;dotanb [at] mellanox.co.il&gt;</dt>
+<dd></dd></dl>

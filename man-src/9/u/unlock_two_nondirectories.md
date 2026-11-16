@@ -14,8 +14,8 @@ description: "unlock_two_nondirectories – release locks from lock_two_nondirec
 <p><i>inode1</i></p>
 <dl>
 <dd>
-<dd>first inode to unlock</dl>
+</dd><dd>first inode to unlock</dd></dl>
 <p> <i>inode2</i></p>
 <dl>
-<dd>second inode to unlock</dl>
+<dd>second inode to unlock</dd></dl>
 <h2>Copyright</h2>

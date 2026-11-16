@@ -11,10 +11,8 @@ std::remove_extent - std::remove_extent
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct remove_extent;</code></pre> 
 If T is an array of some type X, provides the member typedef type equal to X, otherwise type is T. Note that if T is a multidimensional array, only the first dimension is removed. 
 
@@ -44,28 +42,20 @@ using remove_extent_t = typename remove_extent&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;type_traits&gt;
 template &lt;class A&gt;
-
 typename std::enable_if&lt;std::rank&lt;A&gt;::value == 1&gt;::type
-
 print_1d(const A &amp;a)
-
 {
     copy(a, a + std::extent&lt;A&gt;::value,
          std::ostream_iterator&lt;typename std::remove_extent&lt;A&gt;::type&gt;(std::cout, &quot; &quot;));
     std::cout &lt;&lt; '\n';
 }
 int main()
-
 {
     int a[][3] = &#123;&#123;1, 2, 3}, {4, 5, 6}};
-
     //  print_1d(a); // compile-time error
     print_1d(a[1]);
 }

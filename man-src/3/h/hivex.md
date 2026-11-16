@@ -139,15 +139,13 @@ hive_h *hivex_open(const char *filename, int flags);
  Flags is an ORed list of the open flags (or <tt>0</tt> if you don't want to pass any flags). These flags are defined:
 <dl>
 <dt><font SIZE="-1">HIVEX_OPEN_VERBOSE</font>
-<dd> Verbose messages.
-<dt><font SIZE="-1">HIVEX_OPEN_DEBUG</font>
-<dd> Very verbose messages, suitable for debugging problems in the library itself. 
-
+</dt><dd> Verbose messages.
+</dd><dt><font SIZE="-1">HIVEX_OPEN_DEBUG</font>
+</dt><dd> Very verbose messages, suitable for debugging problems in the library itself. 
  This is also selected if the <tt>&quot;HIVEX_DEBUG&quot;</tt> environment variable is set to 1.
-<dt><font SIZE="-1">HIVEX_OPEN_WRITE</font>
-<dd> Open the hive for writing. If omitted, the hive is read-only. 
-
- See ``<font SIZE="-1">WRITING TO HIVE FILES''</font> in <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3).</dl>
+</dd><dt><font SIZE="-1">HIVEX_OPEN_WRITE</font>
+</dt><dd> Open the hive for writing. If omitted, the hive is read-only. 
+ See ``<font SIZE="-1">WRITING TO HIVE FILES''</font> in <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3).</dd></dl>
  
 
  Returns a new hive handle. On error this returns <font SIZE="-1">NULL</font> and sets errno.
@@ -488,13 +486,13 @@ int hivex_node_set_value(hive_h *h, hive_node_h node, const hive_set_value *val,
 
 <dl>
 <dt>&bull;
-<dd> Changing the root node.
-<dt>&bull;
-<dd> Creating a new hive file from scratch. This is impossible at present because not all fields in the header are understood. In the hivex source tree is a file called <tt>&quot;images/minimal&quot;</tt> which could be used as the basis for a new hive (but <i>caveat emptor</i>).
-<dt>&bull;
-<dd> Modifying or deleting single values at a node.
-<dt>&bull;
-<dd> Modifying security key (sk) records or classnames. Previously we did not understand these records. However now they are well-understood and we could add support if it was required (but nothing much really uses them).</dl>
+</dt><dd> Changing the root node.
+</dd><dt>&bull;
+</dt><dd> Creating a new hive file from scratch. This is impossible at present because not all fields in the header are understood. In the hivex source tree is a file called <tt>&quot;images/minimal&quot;</tt> which could be used as the basis for a new hive (but <i>caveat emptor</i>).
+</dd><dt>&bull;
+</dt><dd> Modifying or deleting single values at a node.
+</dd><dt>&bull;
+</dt><dd> Modifying security key (sk) records or classnames. Previously we did not understand these records. However now they are well-understood and we could add support if it was required (but nothing much really uses them).</dd></dl>
 
 <h2>VISITING ALL NODES</h2>
 
@@ -534,25 +532,18 @@ struct hivex_visitor {
 
 <dl>
 <dt>hivex_visit
-<dd> 
+</dt><dd> 
 int hivex_visit(hive_h *h, const struct hivex_visitor *visitor, size_t len, void *opaque, int flags);
- 
-
  Visit all the nodes recursively in the hive <tt>&quot;h&quot;</tt>. 
-
  <tt>&quot;visitor&quot;</tt> should be a <tt>&quot;hivex_visitor&quot;</tt> structure with callback fields filled in as required (unwanted callbacks can be set to <font SIZE="-1">NULL</font>). <tt>&quot;len&quot;</tt> must be the length of the 'visitor' struct (you should pass <tt>&quot;sizeof (struct hivex_visitor)&quot;</tt> for this). 
-
  This returns 0 if the whole recursive visit was completed successfully. On error this returns -1. If one of the callback functions returned an error than we don't touch errno. If the error was generated internally then we set errno. 
-
  You can skip bad registry entries by setting <tt>&quot;flag&quot;</tt> to <tt>&quot;HIVEX_VISIT_SKIP_BAD&quot;</tt>. If this flag is not set, then a bad registry causes the function to return an error immediately. 
-
  This function is robust if the registry contains cycles or pointers which are invalid or outside the registry. It detects these cases and returns an error.
-<dt>hivex_visit_node
-<dd> <pre><code>
+</dd><dt>hivex_visit_node
+</dt><dd> <pre><code>
 int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *visitor, size_t len, void *opaque);
 </code></pre> 
-
- Same as <tt>&quot;hivex_visit&quot;</tt> but instead of starting out at the root, this starts at <tt>&quot;node&quot;</tt>.</dl>
+ Same as <tt>&quot;hivex_visit&quot;</tt> but instead of starting out at the root, this starts at <tt>&quot;node&quot;</tt>.</dd></dl>
 
 <h2>THE STRUCTURE OF THE WINDOWS REGISTRY</h2>
 
@@ -632,27 +623,27 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
  Many functions in this library set errno to indicate errors. These are the values of errno you may encounter (this list is not exhaustive):
 <dl>
 <dt><font SIZE="-1">ENOTSUP</font>
-<dd> Corrupt or unsupported Registry file format.
-<dt><font SIZE="-1">HIVEX_NO_KEY</font>
-<dd> Missing root key.
-<dt><font SIZE="-1">EINVAL</font>
-<dd> Passed an invalid argument to the function.
-<dt><font SIZE="-1">EFAULT</font>
-<dd> Followed a Registry pointer which goes outside the registry or outside a registry block.
-<dt><font SIZE="-1">ELOOP</font>
-<dd> Registry contains cycles.
-<dt><font SIZE="-1">ERANGE</font>
-<dd> Field in the registry out of range.
-<dt><font SIZE="-1">EEXIST</font>
-<dd> Registry key already exists.
-<dt><font SIZE="-1">EROFS</font>
-<dd> Tried to write to a registry which is not opened for writing.</dl>
+</dt><dd> Corrupt or unsupported Registry file format.
+</dd><dt><font SIZE="-1">HIVEX_NO_KEY</font>
+</dt><dd> Missing root key.
+</dd><dt><font SIZE="-1">EINVAL</font>
+</dt><dd> Passed an invalid argument to the function.
+</dd><dt><font SIZE="-1">EFAULT</font>
+</dt><dd> Followed a Registry pointer which goes outside the registry or outside a registry block.
+</dd><dt><font SIZE="-1">ELOOP</font>
+</dt><dd> Registry contains cycles.
+</dd><dt><font SIZE="-1">ERANGE</font>
+</dt><dd> Field in the registry out of range.
+</dd><dt><font SIZE="-1">EEXIST</font>
+</dt><dd> Registry key already exists.
+</dd><dt><font SIZE="-1">EROFS</font>
+</dt><dd> Tried to write to a registry which is not opened for writing.</dd></dl>
 
 <h2>ENVIRONMENT VARIABLES</h2>
 
 <dl>
 <dt><font SIZE="-1">HIVEX_DEBUG</font>
-<dd> Setting HIVEX_DEBUG=1 will enable very verbose messages. This is useful for debugging problems with the library itself.</dl>
+</dt><dd> Setting HIVEX_DEBUG=1 will enable very verbose messages. This is useful for debugging problems with the library itself.</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -679,18 +670,18 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
 
 
 <dt><a HREF="#lbBP">VISITING ALL NODES</a>
-<dd>
-<dt><a HREF="#lbBQ">THE STRUCTURE OF THE WINDOWS REGISTRY</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbBQ">THE STRUCTURE OF THE WINDOWS REGISTRY</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBS">NOTE ON THE USE OF ERRNO</a>
-<dd>
-<dt><a HREF="#lbBT">ENVIRONMENT VARIABLES</a>
-<dd>
-<dt><a HREF="#lbBU">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbBV">AUTHORS</a>
-<dd>
-<dt><a HREF="#lbBW">COPYRIGHT</a>
-<dd></dl>
+</dd><dt><a HREF="#lbBS">NOTE ON THE USE OF ERRNO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBT">ENVIRONMENT VARIABLES</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBU">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBV">AUTHORS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBW">COPYRIGHT</a>
+</dt><dd></dd></dl>

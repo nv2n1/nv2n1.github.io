@@ -11,18 +11,18 @@ description: "fdebugdump – dumps a hierarchy of the debug info dies"
 <p> fdebugdump &#8211; dumps a hierarchy of the debug info dies </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>fdebugrpm</code> {<i>executable</i>}</dl>
+<dt> <code>fdebugrpm</code> {<i>executable</i>}</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>fdebugdump</code></p>
-<dd>runs the given program and dumps a hierarchical view of libraries loaded at attach time. Does not watch for loading of new modules, but that would be a good extension.</p>
+<dd>runs the given program and dumps a hierarchical view of libraries loaded at attach time. Does not watch for loading of new modules, but that would be a good extension.</dd>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fdebugdump ls
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-frysk/">frysk</a>(7)</p>
 <h2>BUGS</h2>

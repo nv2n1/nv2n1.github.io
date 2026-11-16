@@ -17,19 +17,19 @@ description: "podofoimpose – A powerful PDF imposition tool"
 <p> <code>Input</code></p>
 <dl>
 <dt>
-<dd> PDF file or a file which contains a list of PDF file paths.</dl>
+</dt><dd> PDF file or a file which contains a list of PDF file paths.</dd></dl>
 <p> <code>Output</code></p>
 <dl>
 <dt>
-<dd> Resulting PDF file.</dl>
+</dt><dd> Resulting PDF file.</dd></dl>
 <p> <code>Plan</code></p>
 <dl>
 <dt>
-<dd> Imposition plan file.</dl>
+</dt><dd> Imposition plan file.</dd></dl>
 <p> <code>[Interpretor]</code></p>
 <dl>
 <dt>
-<dd> Imposition interpretor. It can be &quot;native&quot; (default value) or &quot;lua&quot;.</dl>
+</dt><dd> Imposition interpretor. It can be &quot;native&quot; (default value) or &quot;lua&quot;.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-podofobox/">podofobox</a></code>(1), <code>podofocolor</code>(1), <code><a href="/docs/linux/man/1-podofocountpages/">podofocountpages</a></code>(1), <code><a href="/docs/linux/man/1-podofocrop/">podofocrop</a></code>(1), <code><a href="/docs/linux/man/1-podofoencrypt/">podofoencrypt</a></code>(1), <code>podofogc</code>(1), <code><a href="/docs/linux/man/1-podofoimg2pdf/">podofoimg2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofoimgextract/">podofoimgextract</a></code>(1), <code><a href="/docs/linux/man/1-podofomerge/">podofomerge</a></code>(1), <code><a href="/docs/linux/man/1-podofoincrementalupdates/">podofoincrementalupdates</a></code>(1), <code><a href="/docs/linux/man/1-podofopages/">podofopages</a></code>(1), <code><a href="/docs/linux/man/1-podofopdfinfo/">podofopdfinfo</a></code>(1), <code><a href="/docs/linux/man/1-podofotxt2pdf/">podofotxt2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofotxtextract/">podofotxtextract</a></code>(1), <code><a href="/docs/linux/man/1-podofouncompress/">podofouncompress</a></code>(1), <code><a href="/docs/linux/man/1-podofoxmp/">podofoxmp</a></code>(1) </p>
 <h2>AUTHORS</h2>

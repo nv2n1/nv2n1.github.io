@@ -15,8 +15,8 @@ description: "XmTextGetInsertionPosition — A Text function that accesses the p
 <h2>Description</h2>
 <p><code>XmTextGetInsertionPosition</code> accesses the insertion cursor position of the Text widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns an <code>XmTextPosition</code> value that indicates the state of the <code>XmNcursorPosition</code> resource. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</p>

@@ -15,7 +15,7 @@ bh_submit_read - Submit a locked buffer for reading
 <h2>Arguments</h2>
 
 <i>bh</i>
-<dl><dd><dd>struct buffer_head</dl>
+<dl><dd></dd><dd>struct buffer_head</dd></dl>
 
 <h2>Description</h2>
 

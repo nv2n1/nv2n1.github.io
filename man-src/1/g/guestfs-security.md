@@ -28,18 +28,18 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <h3>General security considerations</h3>
 <p> Be careful with any files or data that you download from a guest (by &#8220;download&#8221; we mean not just the &#8220;guestfs_download&#8221; in <code>guestfs</code>(3) command but any command that reads files, filenames, directories or anything else from a disk image). An attacker could manipulate the data to fool your program into doing the wrong thing. Consider cases such as:</p>
 <dl>
-<dt>&bull;</p>
-<dd> the data (file etc) not being present</p>
-<dt>&bull;</p>
-<dd> being present but empty</p>
-<dt>&bull;</p>
-<dd> being much larger than normal</p>
-<dt>&bull;</p>
-<dd> containing arbitrary 8 bit data</p>
-<dt>&bull;</p>
-<dd> being in an unexpected character encoding</p>
-<dt>&bull;</p>
-<dd> containing homoglyphs.</dl>
+<dt>&bull;</dt>
+<dd> the data (file etc) not being present</dd>
+<dt>&bull;</dt>
+<dd> being present but empty</dd>
+<dt>&bull;</dt>
+<dd> being much larger than normal</dd>
+<dt>&bull;</dt>
+<dd> containing arbitrary 8 bit data</dd>
+<dt>&bull;</dt>
+<dd> being in an unexpected character encoding</dd>
+<dt>&bull;</dt>
+<dd> containing homoglyphs.</dd></dl>
 <h3>Protocol security</h3>
 <p> The protocol is designed to be secure, being based on <font SIZE="-1">RFC 4506</font> (<font SIZE="-1">XDR</font>) with a defined upper message size. However a program that uses libguestfs must also take care &#8211; for example you can write a program that downloads a binary from a disk image and executes it locally, and no amount of protocol security will save you from the consequences.</p>
 <h3>Inspection security</h3>
@@ -57,10 +57,10 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <p> This in itself would not be a problem, but qcow2 offers many features, one of which is to allow a disk image to refer to another image (called the &#8220;backing disk&#8221;). It does this by placing the path to the backing disk into the qcow2 header. This path is not validated and could point to any host file (eg. &#8220;/etc/passwd&#8221;). The backing disk is then exposed through &#8220;holes&#8221; in the qcow2 disk image, which of course is completely under the control of the attacker. </p>
 <p> In libguestfs this is rather hard to exploit except under two circumstances:</p>
 <dl>
-<dt>1.</p>
-<dd> You have enabled the network or have opened the disk in write mode.</p>
-<dt>2.</p>
-<dd> You are also running untrusted code from the guest (see &#8220;<font SIZE="-1">RUNNING COMMANDS&#8221;</font> in <code>guestfs</code>(3)).</dl>
+<dt>1.</dt>
+<dd> You have enabled the network or have opened the disk in write mode.</dd>
+<dt>2.</dt>
+<dd> You are also running untrusted code from the guest (see &#8220;<font SIZE="-1">RUNNING COMMANDS&#8221;</font> in <code>guestfs</code>(3)).</dd></dl>
 <p> The way to avoid this is to specify the expected disk format when adding disks (the optional <tt>&quot;format&quot;</tt> option to &#8220;guestfs_add_drive_opts&#8221; in <code>guestfs</code>(3)). You should always do this if the disk is raw format, and it’s a good idea for other cases too. (See also &#8220;<font SIZE="-1">DISK IMAGE FORMATS&#8221;</font> in <code>guestfs</code>(3)). </p>
 <p> For disks added from libvirt using calls like &#8220;guestfs_add_domain&#8221; in <code>guestfs</code>(3), the format is fetched from libvirt and passed through. </p>
 <p> For libguestfs tools, use the <i>&#8211;format</i> command line parameter as appropriate.</p>
@@ -99,10 +99,10 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <p> <a rel="nofollow" href="https://bugzilla.redhat.com/show_bug.cgi?id=1251157">https://bugzilla.redhat.com/show_bug.cgi?id=1251157</a> </p>
 <p> This is not a vulnerability in libguestfs, but because we always give a virtio-serial port to each guest (since that is how guest-host communication happens), an escalation from the appliance to the host qemu process is possible. This could affect you if:</p>
 <dl>
-<dt>&bull;</p>
-<dd> your libguestfs program runs untrusted programs out of the guest (using &#8220;guestfs_sh&#8221; in <code>guestfs</code>(3) etc), or</p>
-<dt>&bull;</p>
-<dd> another exploit was found in (for example) kernel filesystem code that allowed a malformed filesystem to take over the appliance.</dl>
+<dt>&bull;</dt>
+<dd> your libguestfs program runs untrusted programs out of the guest (using &#8220;guestfs_sh&#8221; in <code>guestfs</code>(3) etc), or</dd>
+<dt>&bull;</dt>
+<dd> another exploit was found in (for example) kernel filesystem code that allowed a malformed filesystem to take over the appliance.</dd></dl>
 <p> If you use sVirt to confine qemu, that would thwart some attacks.</p>
 <h3>Permissions of <i>.ssh</i> and <i>.ssh/authorized_keys</i></h3>
 <p> <a rel="nofollow" href="https://bugzilla.redhat.com/1260778">https://bugzilla.redhat.com/1260778</a> </p>
@@ -141,23 +141,23 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbBB">SEE ALSO</a></p>
+<dt><a href="#lbBB">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBC">AUTHORS</a></p>
+</dd><dt><a href="#lbBC">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbBD">COPYRIGHT</a></p>
+</dd><dt><a href="#lbBD">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbBE">LICENSE</a></p>
+</dd><dt><a href="#lbBE">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbBF">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBF">BUGS</a></dt>
+<dd></dd></dl>

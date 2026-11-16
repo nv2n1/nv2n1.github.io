@@ -16,12 +16,12 @@ description: "imsettings-info – Display information about Input Method"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> Show summary of options</p>
-<dt><i>Input Method name</i></p>
-<dd> Displays information for <i>Input Method name</i>.</p>
-<dt><i>configuration filename</i></p>
-<dd> Displays information for <i>configuration filename</i>.</dl>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> Show summary of options</dd>
+<dt><i>Input Method name</i></dt>
+<dd> Displays information for <i>Input Method name</i>.</dd>
+<dt><i>configuration filename</i></dt>
+<dd> Displays information for <i>configuration filename</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-imsettings-reload/">imsettings-reload</a></code>(1)</p>
 <h2>AUTHOR</h2>

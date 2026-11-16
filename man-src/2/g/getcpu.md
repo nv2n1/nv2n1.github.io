@@ -22,8 +22,8 @@ int getcpu(unsigned *cpu, unsigned *node, struct getcpu_cache *tcache);
 <p> On success, 0 is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Arguments point outside the calling process&#8217;s address space.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Arguments point outside the calling process&#8217;s address space.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>getcpu</code>() was added in kernel 2.6.19 for x86-64 and i386. Library support was added in glibc 2.29 (Earlier glibc versions did not provide a wrapper for this system call, necessitating the use of <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2).)</p>
 <h2>CONFORMING TO</h2>

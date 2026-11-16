@@ -22,40 +22,40 @@ description: "strings – print the strings of printable characters in files."
 <p> <code>strings</code> is mainly useful for determining the contents of non-text files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
+<dt><code>-a</code></dt>
 <dd>
-<dt><code>&#8211;all</code></p>
+</dd><dt><code>&#8211;all</code></dt>
 <dd>
-<dt><code>&#8211;</code></p>
-<dd> Do not scan only the initialized and loaded sections of object files; scan the whole files.</p>
-<dt><code>-f</code></p>
+</dd><dt><code>&#8211;</code></dt>
+<dd> Do not scan only the initialized and loaded sections of object files; scan the whole files.</dd>
+<dt><code>-f</code></dt>
 <dd>
-<dt><code>&#8211;print-file-name</code></p>
-<dd> Print the name of the file before each string.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of the program usage on the standard output and exit.</p>
-<dt><code>&#8211;</code><i>min-len</i></p>
+</dd><dt><code>&#8211;print-file-name</code></dt>
+<dd> Print the name of the file before each string.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of the program usage on the standard output and exit.</dd>
+<dt><code>&#8211;</code><i>min-len</i></dt>
 <dd>
-<dt><code>-n</code> <i>min-len</i></p>
+</dd><dt><code>-n</code> <i>min-len</i></dt>
 <dd>
-<dt><code>&#8211;bytes=</code><i>min-len</i></p>
-<dd> Print sequences of characters that are at least <i>min-len</i> characters long, instead of the default 4.</p>
-<dt><code>-o</code></p>
-<dd> Like <code>-t o</code>. Some other versions of <code>strings</code> have <code>-o</code> act like <code>-t d</code> instead. Since we can not be compatible with both ways, we simply chose one.</p>
-<dt><code>-t</code> <i>radix</i></p>
+</dd><dt><code>&#8211;bytes=</code><i>min-len</i></dt>
+<dd> Print sequences of characters that are at least <i>min-len</i> characters long, instead of the default 4.</dd>
+<dt><code>-o</code></dt>
+<dd> Like <code>-t o</code>. Some other versions of <code>strings</code> have <code>-o</code> act like <code>-t d</code> instead. Since we can not be compatible with both ways, we simply chose one.</dd>
+<dt><code>-t</code> <i>radix</i></dt>
 <dd>
-<dt><code>&#8211;radix=</code><i>radix</i></p>
-<dd> Print the offset within the file before each string. The single character argument specifies the radix of the offset&#8212;<code>o</code> for octal, <code>x</code> for hexadecimal, or <code>d</code> for decimal.</p>
-<dt><code>-e</code> <i>encoding</i></p>
+</dd><dt><code>&#8211;radix=</code><i>radix</i></dt>
+<dd> Print the offset within the file before each string. The single character argument specifies the radix of the offset&#8212;<code>o</code> for octal, <code>x</code> for hexadecimal, or <code>d</code> for decimal.</dd>
+<dt><code>-e</code> <i>encoding</i></dt>
 <dd>
-<dt><code>&#8211;encoding=</code><i>encoding</i></p>
-<dd> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (<font SIZE="-1">ASCII</font>, <font SIZE="-1">ISO</font> 8859, etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings.</p>
-<dt><code>&#8211;target=</code><i>bfdname</i></p>
-<dd> Specify an object code format other than your system&#8217;s default format.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;encoding=</code><i>encoding</i></dt>
+<dd> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (<font SIZE="-1">ASCII</font>, <font SIZE="-1">ISO</font> 8859, etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings.</dd>
+<dt><code>&#8211;target=</code><i>bfdname</i></dt>
+<dd> Specify an object code format other than your system&#8217;s default format.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Print the program version number on the standard output and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Print the program version number on the standard output and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1), <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1), <i><a href="/docs/linux/man/1-objdump/">objdump</a></i>(1), <i><a href="/docs/linux/man/1-ranlib/">ranlib</a></i>(1), <i><a href="/docs/linux/man/1-readelf/">readelf</a></i>(1) and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>

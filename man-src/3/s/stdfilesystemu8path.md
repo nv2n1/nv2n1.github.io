@@ -35,41 +35,26 @@ The value type of InputIt must be char</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cstdio&gt;
-
 #ifdef _MSC_VER
-
 #include &lt;io.h&gt;
-
 #include &lt;fcntl.h&gt;
-
 #else
-
 #include &lt;locale&gt;
-
 #include &lt;clocale&gt;
-
 #endif
-
 #include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
-
 #ifdef _MSC_VER
     _setmode(_fileno(stderr), _O_WTEXT);
-
 #else
     std::setlocale(LC_ALL, &quot;&quot;);
     std::locale::global(std::locale(&quot;&quot;));
     std::cout.imbue(std::locale());
     std::wcerr.imbue(std::locale());
-
 #endif
     fs::path p = fs::u8path(u8&quot;要らない.txt&quot;);
     std::ofstream(p) &lt;&lt; &quot;File contents&quot;; // Prior to LWG2676 uses operator string_type()
@@ -78,13 +63,10 @@ int main()
                                          // Post-LWG2676 uses new fstream constructors
                                          // native string representation can be used with OS APIs
     if (std::FILE *f =
-
 #ifdef _MSC_VER
             _wfopen(p.c_str(), L&quot;r&quot;)
-
 #else
             std::fopen(p.c_str(), &quot;r&quot;)
-
 #endif
     ) {
         int ch;

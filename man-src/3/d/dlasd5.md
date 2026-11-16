@@ -19,7 +19,7 @@ description: "dlasd5.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  This subroutine computes the square root of the I-th eigenvalue
  of a positive symmetric rank-one modification of a 2-by-2 diagonal
@@ -30,11 +30,11 @@ description: "dlasd5.f –"
  We also assume RHO &gt; 0 and that the Euclidean norm of the vector
  Z is one.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>I</i> </p>
+</dt><dd> <i>I</i> </dd>
 <pre>
           I is INTEGER
          The index of the eigenvalue to be computed.  I = 1 or I = 2.
@@ -75,18 +75,18 @@ description: "dlasd5.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 117 of file dlasd5.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

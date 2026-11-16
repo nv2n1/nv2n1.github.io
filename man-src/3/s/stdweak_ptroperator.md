@@ -12,25 +12,18 @@ std::weak_ptr&lt;T&gt;::operator= - std::weak_ptr&lt;T&gt;::operator=
 
 <pre><code>weak_ptr &amp;operator=(const weak_ptr &amp;r) noexcept;
 (1)(since C++ 11)
-
     template &lt;class Y&gt;
     (2)(since C++ 11)
-
         weak_ptr &amp;
         operator=(const weak_ptr&lt;Y&gt; &amp;r) noexcept;
-
 template &lt;class Y&gt;
 (3)(since C++ 11)
-
     weak_ptr &amp;
     operator=(const shared_ptr&lt;Y&gt; &amp;r) noexcept;
-
 weak_ptr &amp;operator=(weak_ptr &amp;&amp;r) noexcept;
 (4)(since C++ 14)
-
     template &lt;class Y&gt;
     (5)(since C++ 14)
-
         weak_ptr &amp;
         operator=(weak_ptr&lt;Y&gt; &amp;&amp;r) noexcept;</code></pre> 
 Replaces the managed object with the one managed by r. The object is shared with r. If r manages no object, *this manages no object too. 

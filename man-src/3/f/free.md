@@ -41,8 +41,8 @@ void *reallocarray(void *ptr, size_t nmemb, size_t size);
 <h2>ERRORS</h2>
 <p> <code>calloc</code>(), <code>malloc</code>(), <code>realloc</code>(), and <code>reallocarray</code>() can fail with the following error:</p>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory. Possibly, the application hit the <code>RLIMIT_AS</code> or <code>RLIMIT_DATA</code> limit described in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2).</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory. Possibly, the application hit the <code>RLIMIT_AS</code> or <code>RLIMIT_DATA</code> limit described in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2).</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>reallocarray</code>() first appeared in glibc in version 2.26.</p>
 <h2>ATTRIBUTES</h2>

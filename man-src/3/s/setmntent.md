@@ -11,20 +11,13 @@ description: "getmntent, setmntent, addmntent, endmntent, hasmntopt, getmntent_r
 <h2>Synopsis</h2>
 <pre><code>#include &lt;mntent.h&gt;
 #include &lt;stdio.h&gt;
-
 FILE *setmntent(const char *filename, const char *type);
-
 struct mntent *getmntent(FILE *stream);
-
 int addmntent(FILE *stream, const struct mntent *mnt);
-
 int endmntent(FILE *streamp);
-
 char *hasmntopt(const struct mntent *mnt, const char *opt);
-
 /* GNU extension */
 #include &lt;mntent.h&gt;
-
 struct mntent *getmntent_r(FILE *streamp, struct mntent *mntbuf,
                            char *buf, int buflen);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getmntent_r</code>():<br />
@@ -51,10 +44,10 @@ struct mntent *getmntent_r(FILE *streamp, struct mntent *mntbuf,
 <p> The <code>hasmntopt</code>() function returns the address of the substring if a match is found and NULL otherwise.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/fstab</i></p>
-<dd>filesystem description file</p>
-<dt><i>/etc/mtab</i></p>
-<dd>mounted filesystem description file</dl>
+<dt><i>/etc/fstab</i></dt>
+<dd>filesystem description file</dd>
+<dt><i>/etc/mtab</i></dt>
+<dd>mounted filesystem description file</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

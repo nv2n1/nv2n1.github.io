@@ -14,7 +14,7 @@ description: "securityfs_remove – removes a file or directory from the securit
 <p><i>dentry</i></p>
 <dl>
 <dd>
-<dd>a pointer to a the dentry of the file or directory to be removed.</dl>
+</dd><dd>a pointer to a the dentry of the file or directory to be removed.</dd></dl>
 <h2>Description</h2>
 <p>This function removes a file or directory in securityfs that was previously created with a call to another securityfs function (like <code>securityfs_create_file</code> or variants thereof.) </p>
 <p> This function is required to be called in order for the file to be removed. No automatic cleanup of files will happen when a module is removed; you are responsible here.</p>

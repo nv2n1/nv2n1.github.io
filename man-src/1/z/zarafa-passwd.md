@@ -11,9 +11,9 @@ description: "zarafa-passwd – Change Zarafa user password."
 <p> zarafa-passwd &#8211; Change Zarafa user password. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>zarafa-passwd</code> <i>ACTION</i> [<i>OPTION</i>&#8230;]</dl>
+<dt> <code>zarafa-passwd</code> <i>ACTION</i> [<i>OPTION</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This tool can be used to change a user password. The Zarafa server must be running for <code>zarafa-passwd</code> to work. </p>
+<dd>This tool can be used to change a user password. The Zarafa server must be running for <code>zarafa-passwd</code> to work. </dd>
 <p> If no action is given, an error message is printed. When invalid actions or not enough options for an action are given, an error message is printed. </p>
 <p> The Zarafa passwd works only with the dbplugin. Please see the <code>EXTERNAL USERS</code>() section for more information.</p>
 <h2>ACTIONS</h2>
@@ -21,22 +21,22 @@ description: "zarafa-passwd – Change Zarafa user password."
 <p> <code>-u</code> <i>username</i></p>
 <dl>
 <dt>
-<dd> Update the password. Valid parameters are: <i>[-p]</i> and <i>-o</i> </p>
+</dt><dd> Update the password. Valid parameters are: <i>[-p]</i> and <i>-o</i> </dd>
 <p> Default the password can be entered on the password prompt. The password will not be shown.</dl>
 <h2>OPTIONS</h2>
 <p> The options used by actions are as follows: </p>
 <p> <code>-p</code> <i>&#8216;new password&#8217;</i></p>
 <dl>
 <dt>
-<dd> Set new password for a user. This option is only valid with the <i>-o</i>.</dl>
+</dt><dd> Set new password for a user. This option is only valid with the <i>-o</i>.</dd></dl>
 <p> <code>-o</code> <i>oldpassword</i></p>
 <dl>
 <dt>
-<dd> old password of a user. This option is only valid with the <i>-p</i>.</dl>
+</dt><dd> old password of a user. This option is only valid with the <i>-p</i>.</dd></dl>
 <p> <code>&#8211;host</code>, <code>-h</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> Connect to the Zarafa server through <i>path</i>, e.g. file:///path/to/socket. Default: file:///var/run/zarafa. This option can always be specified.</dl>
+</dt><dd> Connect to the Zarafa server through <i>path</i>, e.g. file:///path/to/socket. Default: file:///var/run/zarafa. This option can always be specified.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>

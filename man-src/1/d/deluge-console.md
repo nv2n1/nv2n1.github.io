@@ -19,24 +19,24 @@ description: "deluge-console – a bittorrent client curses interface"
 <h2>OPTIONS</h2>
 <h3>General Options</h3>
 <dl>
-<dt><code>-c&nbsp;<wbr></code><i>path</i>,&nbsp;<wbr><code>&#8211;config=</code><i>path</i></p>
-<dd> Set the config directory location. </p>
+<dt><code>-c&nbsp;<wbr></code><i>path</i>,&nbsp;<wbr><code>&#8211;config=</code><i>path</i></dt>
+<dd> Set the config directory location. </dd>
 </dl>
 <h3>Logging Options</h3>
 <dl>
-<dt><code>-l&nbsp;<wbr></code><i>file</i>,&nbsp;<wbr><code>&#8211;logfile=</code><i>file</i></p>
-<dd> Output to designated logfile instead of stdout</p>
-<dt><code>-L&nbsp;<wbr></code><i>loglevel</i>,&nbsp;<wbr><code>&#8211;loglevel=</code><i>loglevel</i></p>
-<dd> Set the log level (default is error): <code>none, info, warning, error, critical, debug</code></p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Sets the log level to &#8216;none&#8217;, same as `-L none` </p>
+<dt><code>-l&nbsp;<wbr></code><i>file</i>,&nbsp;<wbr><code>&#8211;logfile=</code><i>file</i></dt>
+<dd> Output to designated logfile instead of stdout</dd>
+<dt><code>-L&nbsp;<wbr></code><i>loglevel</i>,&nbsp;<wbr><code>&#8211;loglevel=</code><i>loglevel</i></dt>
+<dd> Set the log level (default is error): <code>none, info, warning, error, critical, debug</code></dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Sets the log level to &#8216;none&#8217;, same as `-L none` </dd>
 </dl>
 <h3>Help Options</h3>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show program&#8217;s version number and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show help message and exit. </p>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show program&#8217;s version number and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show help message and exit. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-deluge/">deluge</a>(1),</code> <code><a href="/docs/linux/man/1-deluged/">deluged</a>(1),</code> <code><a href="/docs/linux/man/1-deluge-web/">deluge-web</a>(1)</code> </p>

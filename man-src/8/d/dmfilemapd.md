@@ -15,24 +15,24 @@ description: "dmfilemapd — device-mapper filemap monitoring daemon"
 <p> The daemon is normally launched automatically by the dmstats create command, but can be run manually, either to create a new daemon where one did not previously exist, or to change the options previously used, by killing the existing daemon and starting a new one.</p>
 <h2>Options</h2>
 <dl>
-<dt> <code>file_descriptor</code></p>
+<dt> <code>file_descriptor</code></dt>
 <dd>
-<dd>Specify the file descriptor number for the file to be monitored. The file descriptor must reference a regular file, open for reading, in a local file system that supports the FIEMAP ioctl, and that returns data describing the physical location of extents. </p>
+</dd><dd>Specify the file descriptor number for the file to be monitored. The file descriptor must reference a regular file, open for reading, in a local file system that supports the FIEMAP ioctl, and that returns data describing the physical location of extents. </dd>
 <p> The process that executes <code>dmfilemapd</code> is responsible for opening the file descriptor that is handed to the daemon.</p>
-<dt> <code>group_id</code></p>
+<dt> <code>group_id</code></dt>
 <dd>
-<dd>The <code>dmstats</code> group identifier of the group that <code>dmfilemapd</code> should update. The group must exist and it should correspond to a set of regions created by a previous filemap operation.</p>
-<dt> <code>abs_path</code></p>
+</dd><dd>The <code>dmstats</code> group identifier of the group that <code>dmfilemapd</code> should update. The group must exist and it should correspond to a set of regions created by a previous filemap operation.</dd>
+<dt> <code>abs_path</code></dt>
 <dd>
-<dd>The absolute path to the file being monitored, at the time that it was opened. The use of <code>path</code> by the daemon differs, depending on the filemap following mode in use; see <code>MODES</code> and the <code>mode</code> option for more information. </p>
-<dt> <code>mode</code></p>
+</dd><dd>The absolute path to the file being monitored, at the time that it was opened. The use of <code>path</code> by the daemon differs, depending on the filemap following mode in use; see <code>MODES</code> and the <code>mode</code> option for more information. </dd>
+<dt> <code>mode</code></dt>
 <dd>
-<dd>The filemap monitoring mode the daemon should use: either &quot;inode&quot; (<code>DM_FILEMAP_FOLLOW_INODE</code>), or &quot;path&quot; (<code>DM_FILEMAP_FOLLOW_PATH</code>), to enable follow-inode or follow-path mode respectively.</p>
-<dt> <code>[foreground]</code></p>
+</dd><dd>The filemap monitoring mode the daemon should use: either &quot;inode&quot; (<code>DM_FILEMAP_FOLLOW_INODE</code>), or &quot;path&quot; (<code>DM_FILEMAP_FOLLOW_PATH</code>), to enable follow-inode or follow-path mode respectively.</dd>
+<dt> <code>[foreground]</code></dt>
 <dd>
-<dd>If set to 1, disable forking and allow the daemon to run in the foreground.</p>
-<dt> <code>[verbose]</code></p>
-<dd>Control daemon logging. If set to zero, the daemon will close all stdio streams and run silently. If <code>verbose</code> is a number between 1 and 3, stdio will be retained and the daemon will log messages to stdout and stderr that match the specified verbosity level.</dl>
+</dd><dd>If set to 1, disable forking and allow the daemon to run in the foreground.</dd>
+<dt> <code>[verbose]</code></dt>
+<dd>Control daemon logging. If set to zero, the daemon will close all stdio streams and run silently. If <code>verbose</code> is a number between 1 and 3, stdio will be retained and the daemon will log messages to stdout and stderr that match the specified verbosity level.</dd></dl>
 <h2>Modes</h2>
 <p>The file map monitoring daemon can monitor files in two distinct ways: the mode affects the behaviour of the daemon when a file under monitoring is renamed or unlinked, and the conditions which cause the daemon to terminate. </p>
 <p> In both modes, the daemon will always shut down when the group being monitored is deleted. </p>

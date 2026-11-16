@@ -10,21 +10,15 @@ description: "sd_journal_get_data, sd_journal_enumerate_data, sd_journal_restart
 <p>sd_journal_get_data, sd_journal_enumerate_data, sd_journal_restart_data, SD_JOURNAL_FOREACH_DATA, sd_journal_set_data_threshold, sd_journal_get_data_threshold &#8211; Read data fields from the current journal entry</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-journal.h&gt;
-
 int sd_journal_get_data(sd_journal *j, const char *field, const void **data, size_t *length);
-
 int sd_journal_enumerate_data(sd_journal *j, const void **data, size_t *length);
-
 void sd_journal_restart_data(sd_journal *j);
-
 SD_JOURNAL_FOREACH_DATA(sd_journal *j, const void *data, size_t length);
-
 int sd_journal_set_data_threshold(sd_journal *j, size_t sz);
-
 int sd_journal_get_data_threshold(sd_journal *j, size_t *sz);</code></pre>
 <h2>Description</h2>
 <p><code>sd_journal_get_data()</code></p>
-<dd>gets the data object associated with a specific field from the current journal entry. It takes four arguments: the journal context object, a string with the field name to request, plus a pair of pointers to pointer/size variables where the data object and its size shall be stored in. The field name should be an entry field name. Well-known field names are listed in <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7). The returned data is in a read-only memory map and is only valid until the next invocation of <code>sd_journal_get_data()</code> or <code>sd_journal_enumerate_data()</code>, or the read pointer is altered. Note that the data returned will be prefixed with the field name and &#8216;=&#8217;. Also note that by default data fields larger than 64K might get truncated to 64K. This threshold may be changed and turned off with <code>sd_journal_set_data_threshold()</code> (see below). </p>
+<dd>gets the data object associated with a specific field from the current journal entry. It takes four arguments: the journal context object, a string with the field name to request, plus a pair of pointers to pointer/size variables where the data object and its size shall be stored in. The field name should be an entry field name. Well-known field names are listed in <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7). The returned data is in a read-only memory map and is only valid until the next invocation of <code>sd_journal_get_data()</code> or <code>sd_journal_enumerate_data()</code>, or the read pointer is altered. Note that the data returned will be prefixed with the field name and &#8216;=&#8217;. Also note that by default data fields larger than 64K might get truncated to 64K. This threshold may be changed and turned off with <code>sd_journal_set_data_threshold()</code> (see below). </dd>
 <p> <code>sd_journal_enumerate_data()</code> may be used to iterate through all fields of the current entry. On each invocation the data for the next field is returned. The order of these fields is not defined. The data returned is in the same format as with <code>sd_journal_get_data()</code> and also follows the same life-time semantics. </p>
 <p> <code>sd_journal_restart_data()</code> resets the data enumeration index to the beginning of the entry. The next invocation of <code>sd_journal_enumerate_data()</code> will return the first field of the entry again. </p>
 <p> Note that the <code>SD_JOURNAL_FOREACH_DATA()</code> macro may be used as a handy wrapper around <code>sd_journal_restart_data()</code> and <code>sd_journal_enumerate_data()</code>. </p>
@@ -49,6 +43,6 @@ int print_fields(sd_journal *j) {
 &quot;, (int) length, data);
 }
 ...</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7), <code><a href="/docs/linux/man/3-sd-journal/">sd-journal</a></code>(3), <code><a href="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></code>(3), <code><a href="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></code>(3), <code><a href="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></code>(3), <code><a href="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></code>(3) </p>

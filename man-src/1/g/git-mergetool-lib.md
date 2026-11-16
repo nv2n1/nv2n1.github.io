@@ -17,18 +17,18 @@ description: "git-mergetool–lib – Common Git merge tool shell scriptlets"
 <h2>Functions</h2>
 <p>get_merge_tool</p>
 <dl>
-<dd>returns a merge tool. the return code is 1 if we returned a guessed merge tool, else 0. <i>$GIT_MERGETOOL_GUI</i> may be set to <i>true</i> to search for the appropriate guitool.</dl>
+<dd>returns a merge tool. the return code is 1 if we returned a guessed merge tool, else 0. <i>$GIT_MERGETOOL_GUI</i> may be set to <i>true</i> to search for the appropriate guitool.</dd></dl>
 <p> get_merge_tool_cmd</p>
 <dl>
-<dd>returns the custom command for a merge tool.</dl>
+<dd>returns the custom command for a merge tool.</dd></dl>
 <p> get_merge_tool_path</p>
 <dl>
-<dd>returns the custom path for a merge tool.</dl>
+<dd>returns the custom path for a merge tool.</dd></dl>
 <p> initialize_merge_tool</p>
 <dl>
-<dd>bring merge tool specific functions into scope so they can be used or overridden.</dl>
+<dd>bring merge tool specific functions into scope so they can be used or overridden.</dd></dl>
 <p> run_merge_tool</p>
 <dl>
-<dd>launches a merge tool given the tool name and a true/false flag to indicate whether a merge base is present. <i>$MERGED</i>, <i>$LOCAL</i>, <i>$REMOTE</i>, and <i>$BASE</i> must be defined for use by the merge tool.</dl>
+<dd>launches a merge tool given the tool name and a true/false flag to indicate whether a merge base is present. <i>$MERGED</i>, <i>$LOCAL</i>, <i>$REMOTE</i>, and <i>$BASE</i> must be defined for use by the merge tool.</dd></dl>
 <h2>Git</h2>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>

@@ -19,37 +19,37 @@ description: "pmempool – Persistent Memory Pool Management Tool"
 <p> <code>-V, &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Prints the version of <code>pmempool.</code></dl>
+</dt><dd> Prints the version of <code>pmempool.</code></dd></dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Prints synopsis and list of commands.</dl>
+</dt><dd> Prints synopsis and list of commands.</dd></dl>
 <h2>COMMANDS</h2>
 <p> Currently there is a following set of commands available: </p>
 <p> <code><a href="/docs/linux/man/1-pmempool-info/">pmempool-info</a>(1)</code></p>
 <dl>
 <dt>
-<dd> Prints information and statistics in human-readable format about specified pool.</dl>
+</dt><dd> Prints information and statistics in human-readable format about specified pool.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pmempool-check/">pmempool-check</a>(1)</code></p>
 <dl>
 <dt>
-<dd> Checks pool&#8217;s consistency and repairs pool if it is not consistent.</dl>
+</dt><dd> Checks pool&#8217;s consistency and repairs pool if it is not consistent.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pmempool-create/">pmempool-create</a>(1)</code></p>
 <dl>
 <dt>
-<dd> Creates a pool of specified type with additional properties specific for this type of pool.</dl>
+</dt><dd> Creates a pool of specified type with additional properties specific for this type of pool.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pmempool-dump/">pmempool-dump</a>(1)</code></p>
 <dl>
 <dt>
-<dd> Dumps usable data from pool in hexadecimal or binary format.</dl>
+</dt><dd> Dumps usable data from pool in hexadecimal or binary format.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pmempool-rm/">pmempool-rm</a>(1)</code></p>
 <dl>
 <dt>
-<dd> Removes pool file or all pool files listed in poolset configuration file.</dl>
+</dt><dd> Removes pool file or all pool files listed in poolset configuration file.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pmempool-convert/">pmempool-convert</a>(1)</code></p>
 <dl>
 <dt>
-<dd> Updates the pool to the latest available layout version.</dl>
+</dt><dd> Updates the pool to the latest available layout version.</dd></dl>
 <p> In order to get more information about specific <i>command</i> you can use <code>pmempool help &lt;command&gt;.</code></p>
 <h2>SEE ALSO</h2>
 <p> <code>libpmemlog(3) libpmemblk(3) libpmemobj(3)</code> </p>

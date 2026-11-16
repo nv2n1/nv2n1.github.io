@@ -14,27 +14,27 @@ description: "auter – manual page for auter 0.8"
 <h2>DESCRIPTION</h2>
 <h3>Actions:</h3>
 <dl>
-<dt><code>&#8211;enable</code></p>
-<dd> Enable auter</p>
-<dt><code>&#8211;disable</code></p>
-<dd> Disable auter</p>
-<dt><code>&#8211;status</code></p>
-<dd> Show whether enabled or disabled</p>
-<dt><code>&#8211;prep</code></p>
-<dd> Pre-download updates before applying</p>
-<dt><code>&#8211;apply</code></p>
-<dd> Apply updates, and reboot if AUTOREBOOT=yes</p>
-<dt><code>&#8211;reboot</code></p>
-<dd> Reboot system</p>
-<dt><code>&#8211;postreboot</code></p>
-<dd> Run post reboot script</dl>
+<dt><code>&#8211;enable</code></dt>
+<dd> Enable auter</dd>
+<dt><code>&#8211;disable</code></dt>
+<dd> Disable auter</dd>
+<dt><code>&#8211;status</code></dt>
+<dd> Show whether enabled or disabled</dd>
+<dt><code>&#8211;prep</code></dt>
+<dd> Pre-download updates before applying</dd>
+<dt><code>&#8211;apply</code></dt>
+<dd> Apply updates, and reboot if AUTOREBOOT=yes</dd>
+<dt><code>&#8211;reboot</code></dt>
+<dd> Reboot system</dd>
+<dt><code>&#8211;postreboot</code></dt>
+<dd> Run post reboot script</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt> <code>&#8211;config</code>=<i>FILE</i> Specify the full path to an auter config file. Defaults to <i>/etc/auter/auter.conf</i></p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+<dt> <code>&#8211;config</code>=<i>FILE</i> Specify the full path to an auter config file. Defaults to <i>/etc/auter/auter.conf</i></dt>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
-<dd>Show this help text</p>
-<dt> <code>-v</code>, <code>&#8211;version</code> Show the version</dl>
+</dd><dd>Show this help text</dd>
+<dt> <code>-v</code>, <code>&#8211;version</code> Show the version</dt></dl>
 <h2>FILES</h2>
 <p> //etc/auter/auter.conf<br />
 &nbsp;<wbr>&nbsp;<wbr>Default config file location. Use the &#8211;config option to pass an alternative config file to use within&nbsp;<wbr>/etc/auter. </p>
@@ -55,7 +55,7 @@ description: "auter – manual page for auter 0.8"
 <p> //var/cache/auter/<br />
 &nbsp;<wbr>&nbsp;<wbr>Will be created during the during install but is also checked&nbsp;<wbr>(and created if it does not exist)&nbsp;<wbr>during the prep stage if ONLYINSTALLFROMPREP is set to&nbsp;<wbr>&#8216;yes&#8217;. A configset sub-directory will be created which will hold the updates that were downloaded from the most recent &#8211;prep execution. Any existing rpm files will be deleted as part of the following &#8211;prep execution. The directories for each profile must have owner and group set to root and must NOT be writable by other.</p>
 <h2>ENABLE/DISABLE</h2>
-<dd>To provide an easy way to switch on/off all auter jobs, use auter &#8211;enable or auter &#8211;disable to set the lockfile /var/lib/auter/enabled. Auter will check for the presence of this file before running.</p>
+<dd>To provide an easy way to switch on/off all auter jobs, use auter &#8211;enable or auter &#8211;disable to set the lockfile /var/lib/auter/enabled. Auter will check for the presence of this file before running.</dd>
 <h2>REBOOTING</h2>
 <p> Rebooting is an essential part of applying updates, in order to ensure the updated packages are in use. An update to the kernel will always need a reboot. Some application updates, for example Apache, will restart the service. However often libraries are updated, such as openssl, which don&#8217;t force a reboot of services that use them. Rebooting guarantees that every update is in use by running services. You can either enable AUTOREBOOT=yes in the config file (the default is AUTOREBOOT=no), to reboot after &#8211;apply, or you can schedule a seperate schedule for &#8211;reboot via a second cronjob. A 2 minute warning is emitted before the server is rebooted, and this can be cancelled by a superuser with shutdown -c.</p>
 <h2>CONFIG FILE OPTIONS</h2>

@@ -17,56 +17,56 @@ description: "asterisk – All-purpose telephony server."
 <p> Asterisk is a trademark of Digium, Inc.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C </code><i>file</i></p>
-<dd>Use <i>file</i> as master configuration file instead of the default, /etc/asterisk/asterisk.conf</p>
-<dt><code>-c</code></p>
-<dd>Provide a control console on the calling terminal. Specifying this option implies <code>-f</code> and will cause asterisk to no longer fork or detach from the controlling terminal.</p>
-<dt><code>-d</code></p>
-<dd>Enable extra debugging statements. </p>
+<dt><code>-C </code><i>file</i></dt>
+<dd>Use <i>file</i> as master configuration file instead of the default, /etc/asterisk/asterisk.conf</dd>
+<dt><code>-c</code></dt>
+<dd>Provide a control console on the calling terminal. Specifying this option implies <code>-f</code> and will cause asterisk to no longer fork or detach from the controlling terminal.</dd>
+<dt><code>-d</code></dt>
+<dd>Enable extra debugging statements. </dd>
 <p> Note: This always sets the debug level in the asterisk process, even if it is running in the background. This will affect the size of your log files.</p>
-<dt><code>-f</code></p>
-<dd>Do not fork or detach from controlling terminal.</p>
-<dt><code>-g</code></p>
-<dd>Remove resource limit on core size, thus forcing Asterisk to dump core in the unlikely event of a segmentation fault or abort signal. <code>NOTE:</code> in some cases this may be incompatible with the <code>-U</code> or <code>-G</code> flags.</p>
-<dt><code>-G </code><i>group</i></p>
-<dd>Run as group <i>group</i> instead of the calling group. <code>NOTE:</code> this requires substantial work to be sure that Asterisk&#8217;s environment has permission to write the files required for its operation, including logs, its comm socket, the asterisk database, etc.</p>
-<dt><code>-h</code></p>
-<dd>Provide brief summary of command line arguments and terminate.</p>
-<dt><code>-i</code></p>
-<dd>Prompt user to initialize any encrypted private keys for IAX2 secure authentication during startup.</p>
-<dt><code>-L </code><i>loadaverage</i></p>
-<dd>Limits the maximum load average before rejecting new calls. This can be useful to prevent a system from being brought down by terminating too many simultaneous calls.</p>
-<dt><code>-m</code></p>
-<dd>Disable log and verbose output to remote (-r) consoles.</p>
-<dt><code>-M </code><i>value</i></p>
-<dd>Limits the maximum number of calls to the specified value. This can be useful to prevent a system from being brought down by terminating too many simultaneous calls.</p>
-<dt><code>-n</code></p>
-<dd>Disable ANSI colors even on terminals capable of displaying them.</p>
-<dt><code>-p</code></p>
-<dd>If supported by the operating system (and executing as root), attempt to run with realtime priority for increased performance and responsiveness within the Asterisk process, at the expense of other programs running on the same machine.</p>
-<dt><code>-q</code></p>
-<dd>Reduce default console output when running in conjunction with console mode (<code>-c</code>).</p>
-<dt><code>-r</code></p>
-<dd>Instead of running a new Asterisk process, attempt to connect to a running Asterisk process and provide a console interface for controlling it.</p>
-<dt><code>-R</code></p>
-<dd>Much like <code>-r</code>. Instead of running a new Asterisk process, attempt to connect to a running Asterisk process and provide a console interface for controlling it. Additionally, if connection to the Asterisk process is lost, attempt to reconnect for as long as 30 seconds.</p>
-<dt><code>-s </code><i>socket</i></p>
-<dd>Allows to specify the socket file to be used to connect to the Asterisk console. Used in conjunction with <code>-r</code> or <code>-R</code>.</p>
-<dt><code>-I</code></p>
-<dd>Enable internal timing if DAHDI timer is available The default behaviour is that outbound packets are phase locked to inbound packets. Enabling this switch causes them to be locked to the internal DAHDI timer instead.</p>
-<dt><code>-t</code></p>
-<dd>When recording files, write them first into a temporary holding directory, then move them into the final location when done.</p>
-<dt><code>-T</code></p>
-<dd>Add timestamp to all non-command related output going to the console when running with verbose and/or logging to the console.</p>
-<dt><code>-U </code><i>user</i></p>
-<dd>Run as user <i>user</i> instead of the calling user. <code>NOTE:</code> this requires substantial work to be sure that Asterisk&#8217;s environment has permission to write the files required for its operation, including logs, its comm socket, the asterisk database, etc.</p>
-<dt><code>-v</code></p>
-<dd>Increase the level of verboseness on the console. The more times <code>-v</code> is specified, the more verbose the output is. Specifying this option implies <code>-f</code> and will cause asterisk to no longer fork or detach from the controlling terminal. This option may also be used in conjunction with <code>-r</code> and <code>-R</code>. </p>
+<dt><code>-f</code></dt>
+<dd>Do not fork or detach from controlling terminal.</dd>
+<dt><code>-g</code></dt>
+<dd>Remove resource limit on core size, thus forcing Asterisk to dump core in the unlikely event of a segmentation fault or abort signal. <code>NOTE:</code> in some cases this may be incompatible with the <code>-U</code> or <code>-G</code> flags.</dd>
+<dt><code>-G </code><i>group</i></dt>
+<dd>Run as group <i>group</i> instead of the calling group. <code>NOTE:</code> this requires substantial work to be sure that Asterisk&#8217;s environment has permission to write the files required for its operation, including logs, its comm socket, the asterisk database, etc.</dd>
+<dt><code>-h</code></dt>
+<dd>Provide brief summary of command line arguments and terminate.</dd>
+<dt><code>-i</code></dt>
+<dd>Prompt user to initialize any encrypted private keys for IAX2 secure authentication during startup.</dd>
+<dt><code>-L </code><i>loadaverage</i></dt>
+<dd>Limits the maximum load average before rejecting new calls. This can be useful to prevent a system from being brought down by terminating too many simultaneous calls.</dd>
+<dt><code>-m</code></dt>
+<dd>Disable log and verbose output to remote (-r) consoles.</dd>
+<dt><code>-M </code><i>value</i></dt>
+<dd>Limits the maximum number of calls to the specified value. This can be useful to prevent a system from being brought down by terminating too many simultaneous calls.</dd>
+<dt><code>-n</code></dt>
+<dd>Disable ANSI colors even on terminals capable of displaying them.</dd>
+<dt><code>-p</code></dt>
+<dd>If supported by the operating system (and executing as root), attempt to run with realtime priority for increased performance and responsiveness within the Asterisk process, at the expense of other programs running on the same machine.</dd>
+<dt><code>-q</code></dt>
+<dd>Reduce default console output when running in conjunction with console mode (<code>-c</code>).</dd>
+<dt><code>-r</code></dt>
+<dd>Instead of running a new Asterisk process, attempt to connect to a running Asterisk process and provide a console interface for controlling it.</dd>
+<dt><code>-R</code></dt>
+<dd>Much like <code>-r</code>. Instead of running a new Asterisk process, attempt to connect to a running Asterisk process and provide a console interface for controlling it. Additionally, if connection to the Asterisk process is lost, attempt to reconnect for as long as 30 seconds.</dd>
+<dt><code>-s </code><i>socket</i></dt>
+<dd>Allows to specify the socket file to be used to connect to the Asterisk console. Used in conjunction with <code>-r</code> or <code>-R</code>.</dd>
+<dt><code>-I</code></dt>
+<dd>Enable internal timing if DAHDI timer is available The default behaviour is that outbound packets are phase locked to inbound packets. Enabling this switch causes them to be locked to the internal DAHDI timer instead.</dd>
+<dt><code>-t</code></dt>
+<dd>When recording files, write them first into a temporary holding directory, then move them into the final location when done.</dd>
+<dt><code>-T</code></dt>
+<dd>Add timestamp to all non-command related output going to the console when running with verbose and/or logging to the console.</dd>
+<dt><code>-U </code><i>user</i></dt>
+<dd>Run as user <i>user</i> instead of the calling user. <code>NOTE:</code> this requires substantial work to be sure that Asterisk&#8217;s environment has permission to write the files required for its operation, including logs, its comm socket, the asterisk database, etc.</dd>
+<dt><code>-v</code></dt>
+<dd>Increase the level of verboseness on the console. The more times <code>-v</code> is specified, the more verbose the output is. Specifying this option implies <code>-f</code> and will cause asterisk to no longer fork or detach from the controlling terminal. This option may also be used in conjunction with <code>-r</code> and <code>-R</code>. </dd>
 <p> Note: This always sets the verbose level in the asterisk process, even if it is running in the background. This will affect the size of your log files.</p>
-<dt><code>-V</code></p>
-<dd>Display version information and exit immediately.</p>
-<dt><code>-x </code><i>command</i></p>
-<dd>Connect to a running Asterisk process and execute a command on a command line, passing any output through to standard out and then terminating when the command execution completes. Implies <code>-r</code> when <code>-R</code> is not explicitly supplied.</dl>
+<dt><code>-V</code></dt>
+<dd>Display version information and exit immediately.</dd>
+<dt><code>-x </code><i>command</i></dt>
+<dd>Connect to a running Asterisk process and execute a command on a command line, passing any output through to standard out and then terminating when the command execution completes. Implies <code>-r</code> when <code>-R</code> is not explicitly supplied.</dd></dl>
 <h2>Examples</h2>
 <p><code>asterisk</code> &#8211; Begin Asterisk as a daemon </p>
 <p> <code>asterisk -vvvgc</code> &#8211; Run on controlling terminal </p>

@@ -13,8 +13,8 @@ description: "mongoc_write_concern_get_wtag() – A string containing the wtag s
 mongoc_write_concern_get_wtag (const mongoc_write_concern_t *write_concern);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>A string containing the wtag setting if it has been set. Otherwise returns <code>NULL</code> \&amp;. </p>
 <h2>Returns</h2>

@@ -50,12 +50,12 @@ memcpy(&amp;thetime, value-&gt;value, value-&gt;len);
 <p> Fn dhcpctl_new_object creates a local handle for an object on the the server. The &#8220;object_type&#8221; parameter is the ascii name of the type of object being accessed. e.g. Qq lease . This function only sets up local data structures, it does not queue any messages to be sent to the remote side, Fn dhcpctl_open_object does that. </p>
 <p> Fn dhcpctl_open_object builds and queues the request to the remote side. This function is used with handle created via Fn dhcpctl_new_object . The flags argument is a bit mask with the following values available for setting:</p>
 <dl>
-<dt><code>DHCPCTL_CREATE</code></p>
-<dd> if the object does not exist then the remote will create it</p>
-<dt><code>DHCPCTL_UPDATE</code></p>
-<dd> update the object on the remote side using the attributes already set in the handle.</p>
-<dt><code>DHCPCTL_EXCL</code></p>
-<dd> return and error if the object exists and DHCPCTL_CREATE was also specified</dl>
+<dt><code>DHCPCTL_CREATE</code></dt>
+<dd> if the object does not exist then the remote will create it</dd>
+<dt><code>DHCPCTL_UPDATE</code></dt>
+<dd> update the object on the remote side using the attributes already set in the handle.</dd>
+<dt><code>DHCPCTL_EXCL</code></dt>
+<dd> return and error if the object exists and DHCPCTL_CREATE was also specified</dd></dl>
 <p> The Fn omapi_data_string_new function allocates a new Ft dhcpctl_data_string object. The data string will be large enough to hold &#8220;length&#8221; bytes of data. The &#8220;file &#8221; and &#8220;lineno&#8221; arguments are the source file location the call is made from, typically by using the <code>__FILE__</code> and <code>__LINE__</code> macros or the <code>MDL</code> macro defined in </p>
 <p> Fn dhcpctl_data_string_dereference deallocates a data string created by Fn omapi_data_string_new . The memory for the object won&#8217;t be freed until the last reference is released.</p>
 <h2>EXAMPLES</h2>
@@ -84,7 +84,6 @@ int main(int argc, char **argv)
     dhcpctl_initialize();
     dhcpctl_connect(&amp;connection, "127.0.0.1",
                     7911, 0);
-
     dhcpctl_new_object(&amp;lease, connection,
                        "lease");
     memset(&amp;ipaddrstring, 0, sizeof ipaddrstring);

@@ -15,16 +15,16 @@ url: "/docs/linux/man/1-rassplit/"
 <p> The names of the output rasterfiles are derived from the name of the source rasterfile, the output format, and the frame numbers. The examples given below will demonstrate this.</p>
 <h2><code>OPTIONS</code></h2>
 <dl>
-<dt><code>-f</code><i> f1 f2 f3 &#8230;</i></p>
-<dd> This option allows the user to specify a list of frames to be extracted from the input rasterfile.</p>
-<dt><code>-ofmt</code><i> output-format</i></p>
-<dd> The user can specify <i>output-format</i> to be the desired format e.g. <code>hdf</code>, <code>rgb</code>, etc.</p>
-<dt><code>-help</code></p>
-<dd> Print help information.</p>
-<dt><code>-verbose</code></p>
-<dd> Print a message each time an output rasterfile is written.</p>
-<dt><code>-Version</code></p>
-<dd> Print the version number. </p>
+<dt><code>-f</code><i> f1 f2 f3 &#8230;</i></dt>
+<dd> This option allows the user to specify a list of frames to be extracted from the input rasterfile.</dd>
+<dt><code>-ofmt</code><i> output-format</i></dt>
+<dd> The user can specify <i>output-format</i> to be the desired format e.g. <code>hdf</code>, <code>rgb</code>, etc.</dd>
+<dt><code>-help</code></dt>
+<dd> Print help information.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Print a message each time an output rasterfile is written.</dd>
+<dt><code>-Version</code></dt>
+<dd> Print the version number. </dd>
 </dl>
 <h2><code>EXAMPLES</code></h2>
 <p> Assume you have a file called &#8216;temp.nrif&#8217; that has three frames and that you&#8217;d like to split it into three separate frames, also in NRIF format. </p>

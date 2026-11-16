@@ -11,7 +11,6 @@ std::lconv - std::lconv
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;clocale&gt;
-
     struct lconv;</code></pre> 
 The class std::lconv contains numeric and monetary formatting rules as defined by a C locale. Objects of this struct may be obtained with std::localeconv. The members of std::lconv are values of type char and of type char*. Each char* member except decimal_point may be pointing at a null character (that is, at an empty C-string). The members of type char are all non-negative numbers, any of which may be CHAR_MAX if the corresponding value is not available in the current C locale. 
 
@@ -119,10 +118,8 @@ The values of p_sign_posn, n_sign_posn, int_p_sign_posn, int_n_sign_posn are int
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;ja_JP.UTF-8&quot;);
     std::lconv *lc = std::localeconv();

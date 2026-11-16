@@ -11,30 +11,25 @@ c_ftsurf - 2D tension spline interpolation of rectangular data
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>int, int, float&nbsp;<wbr>*, float&nbsp;<wbr>*, int&nbsp;<wbr>*);
 <h2>Synopsis</h2>float *c_ftsurf (mi, ni, xi, yi, zi, mo, no, xo, yo, ier);
 <h2>Description</h2><dl COMPACT><dt>mi
-<dd>The number of grid lines in the X direction. (mi &gt; 1)
-<dt>ni
-<dd>The number of grid lines in the Y direction. (ni &gt; 1)
-<dt>xi
-<dd>Pointer to an array containing m X coordinates for grid lines in the X direction.
-<dt>yi
-<dd>Pointer to an array containing n Y coordinates for grid lines in the Y direction.
-<dt>zi
-<dd>Pointer to m x n floats which are the functional values at the grid points defined by xi and yi.
-<dt>mo
-<dd>The number of output values in the X direction.
-<dt>no
-<dd>The number of output values in the Y direction.
-<dt>ier
-<dd>The value *ier is an error flag as per: 
-
- 
+</dt><dd>The number of grid lines in the X direction. (mi &gt; 1)
+</dd><dt>ni
+</dt><dd>The number of grid lines in the Y direction. (ni &gt; 1)
+</dd><dt>xi
+</dt><dd>Pointer to an array containing m X coordinates for grid lines in the X direction.
+</dd><dt>yi
+</dt><dd>Pointer to an array containing n Y coordinates for grid lines in the Y direction.
+</dd><dt>zi
+</dt><dd>Pointer to m x n floats which are the functional values at the grid points defined by xi and yi.
+</dd><dt>mo
+</dt><dd>The number of output values in the X direction.
+</dd><dt>no
+</dt><dd>The number of output values in the Y direction.
+</dd><dt>ier
+</dt><dd>The value *ier is an error flag as per: 
 &nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>0 -- no error.&nbsp;<wbr> 
- 
 &nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>1 -- if n is less than 2 or m is less than 2.&nbsp;<wbr> 
- 
 &nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>2 -- if X or Y values are not strictly increasing.&nbsp;<wbr> 
-
-</dl><h2>Return Value</h2>c_ftsurf returns a pointer to an array containing mo x no floats which are the interpolated values on the grid specified by the arrays xo and yo.
+</dd></dl><h2>Return Value</h2>c_ftsurf returns a pointer to an array containing mo x no floats which are the interpolated values on the grid specified by the arrays xo and yo.
 <h2>Usage</h2>This procedure calculates an interpolatory surface passing through a rectangular grid of function values. The surface computed is a tensor product of splines under tension. 
 
  c_ftsurf is called after all of the desired values for control parameters have been set using the procedures c_ftseti, c_ftsetr, c_ftsetc, c_ftsetfa. The control parameters that apply to c_ftsurf are: sig, zx1, zxm, zy1, zyn, z11, zm1, z1n, zmn, df1, df2, df3, df4, df5, df6, df7, df8 

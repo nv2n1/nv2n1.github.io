@@ -19,33 +19,33 @@ description: "lttng-relayd — LTTng remote trace collection daemon"
 <h2>Options</h2>
 <p>This program follow the usual GNU command line syntax with long options starting with two dashes. Below is a summary of the available options. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of possible options and commands</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Increase verbosity </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of possible options and commands</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Increase verbosity </dd>
 <p> There is three debugging level which will print on stderr. Maximum verbosity is <code>-vvv</code>.</p>
-<dt><code>-d, &#8211;daemonize</code></p>
-<dd>Start as a daemon</p>
-<dt><code>-b, &#8211;background</code></p>
-<dd>Start as a daemon, keeping console open</p>
-<dt><code>-g, &#8211;group NAME</code></p>
-<dd>Specify the tracing group name. (default: tracing)</p>
-<dt><code>-C, &#8211;control-port</code></p>
-<dd>Control port URL (<a href="tcp://0.0.0.0:5342">tcp://0.0.0.0:5342</a> is the default)</p>
-<dt><code>-D, &#8211;data-port</code></p>
-<dd>Data port URL (<a href="tcp://0.0.0.0:5343">tcp://0.0.0.0:5343</a> is the default)</p>
-<dt><code>-L, &#8211;live-port URL</code></p>
-<dd>Live view port URL (<a href="tcp://localhost:5344">tcp://localhost:5344</a> is the default).</p>
-<dt><code>-o, &#8211;output</code></p>
-<dd>Output base directory. Must use an absolute path (~/lttng-traces is the default)</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Show version number</dl>
+<dt><code>-d, &#8211;daemonize</code></dt>
+<dd>Start as a daemon</dd>
+<dt><code>-b, &#8211;background</code></dt>
+<dd>Start as a daemon, keeping console open</dd>
+<dt><code>-g, &#8211;group NAME</code></dt>
+<dd>Specify the tracing group name. (default: tracing)</dd>
+<dt><code>-C, &#8211;control-port</code></dt>
+<dd>Control port URL (<a href="tcp://0.0.0.0:5342">tcp://0.0.0.0:5342</a> is the default)</dd>
+<dt><code>-D, &#8211;data-port</code></dt>
+<dd>Data port URL (<a href="tcp://0.0.0.0:5343">tcp://0.0.0.0:5343</a> is the default)</dd>
+<dt><code>-L, &#8211;live-port URL</code></dt>
+<dd>Live view port URL (<a href="tcp://localhost:5344">tcp://localhost:5344</a> is the default).</dd>
+<dt><code>-o, &#8211;output</code></dt>
+<dd>Output base directory. Must use an absolute path (~/lttng-traces is the default)</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Show version number</dd></dl>
 <h2>Environment Variables</h2>
 <dl>
-<dt>LTTNG_NETWORK_SOCKET_TIMEOUT</p>
-<dd>Control timeout of socket connection, receive and send. Takes an integer parameter: the timeout value, in milliseconds. A value of 0 or -1 uses the timeout of the operating system (this is the default).</p>
-<dt>LTTNG_RELAYD_HEALTH</p>
-<dd>File path used for relay daemon health check communication.</dl>
+<dt>LTTNG_NETWORK_SOCKET_TIMEOUT</dt>
+<dd>Control timeout of socket connection, receive and send. Takes an integer parameter: the timeout value, in milliseconds. A value of 0 or -1 uses the timeout of the operating system (this is the default).</dd>
+<dt>LTTNG_RELAYD_HEALTH</dt>
+<dd>File path used for relay daemon health check communication.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-babeltrace/">babeltrace</a>(1), <a href="/docs/linux/man/8-lttng-sessiond/">lttng-sessiond</a>(8), <a href="/docs/linux/man/3-lttng-ust/">lttng-ust</a>(3), <a href="/docs/linux/man/1-lttng/">lttng</a>(1) </p>
 <h2>Limitations</h2>

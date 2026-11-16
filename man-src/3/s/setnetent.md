@@ -10,15 +10,10 @@ description: "getnetent, getnetbyname, getnetbyaddr, setnetent, endnetent – ge
 <p>getnetent, getnetbyname, getnetbyaddr, setnetent, endnetent &#8211; get network entry</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt;
-
 struct netent *getnetent(void);
-
 struct netent *getnetbyname(const char *name);
-
 struct netent *getnetbyaddr(uint32_t net, int type);
-
 void setnetent(int stayopen);
-
 void endnetent(void);</code></pre>
 <h2>Description</h2>
 <p>The <code>getnetent</code>() function reads the next entry from the networks database and returns a <i>netent</i> structure containing the broken-out fields from the entry. A connection is opened to the database if necessary. The <code>getnetbyname</code>() function returns a <i>netent</i> structure for the entry from the database that matches the network <i>name</i>. The <code>getnetbyaddr</code>() function returns a <i>netent</i> structure for the entry from the database that matches the network number <i>net</i> of type <i>type</i>. The <i>net</i> argument must be in host byte order. The <code>setnetent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getnet*</code>() functions. The <code>endnetent</code>() function closes the connection to the database. The <i>netent</i> structure is defined in <i>&lt;netdb.h&gt;</i> as follows: </p>
@@ -30,20 +25,20 @@ void endnetent(void);</code></pre>
 }</code></pre>
 <p> The members of the <i>netent</i> structure are:</p>
 <dl>
-<dt><i>n_name</i></p>
-<dd>The official name of the network.</p>
-<dt><i>n_aliases</i></p>
-<dd>A NULL-terminated list of alternative names for the network.</p>
-<dt><i>n_addrtype</i></p>
-<dd>The type of the network number; always <code>AF_INET</code>.</p>
-<dt><i>n_net</i></p>
-<dd>The network number in host byte order.</dl>
+<dt><i>n_name</i></dt>
+<dd>The official name of the network.</dd>
+<dt><i>n_aliases</i></dt>
+<dd>A NULL-terminated list of alternative names for the network.</dd>
+<dt><i>n_addrtype</i></dt>
+<dd>The type of the network number; always <code>AF_INET</code>.</dd>
+<dt><i>n_net</i></dt>
+<dd>The network number in host byte order.</dd></dl>
 <h2>Return Value</h2>
 <p>The <code>getnetent</code>(), <code>getnetbyname</code>(), and <code>getnetbyaddr</code>() functions return a pointer to a statically allocated <i>netent</i> structure, or a null pointer if an error occurs or the end of the file is reached.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/networks</i></p>
-<dd>networks database file</dl>
+<dt><i>/etc/networks</i></dt>
+<dd>networks database file</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

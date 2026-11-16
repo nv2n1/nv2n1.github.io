@@ -11,9 +11,7 @@ std::experimental::apply - std::experimental::apply
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/tuple&gt;
-
 template &lt;class F, class Tuple&gt;                    (library fundamentals TS)
-
 constexpr decltype(auto) apply(F&amp;&amp; f, Tuple&amp;&amp; t);</code></pre> 
 Invoke the Callable object f with a tuple of arguments. 
 
@@ -48,12 +46,9 @@ What returned by f.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;tuple&gt;
 template &lt;typename... Ts&gt;
-
 void print_tuple(const std::tuple&lt;Ts...&gt; &amp;tuple)
-
 {
     std::apply([](const auto &amp;...elem) {
         ((std::cout &lt;&lt; elem &lt;&lt; '\n'), ...);

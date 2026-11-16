@@ -13,11 +13,11 @@ description: "PAPI_perror –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>void&nbsp;<wbr><code>PAPI_perror(&nbsp;<wbr>char&nbsp;<wbr>*s&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>s</i> &#8212; Optional message to print before the string describing the last error message.</dl>
+<dd><i>s</i> &#8212; Optional message to print before the string describing the last error message.</dd></dl>
 <p> The routine <code>PAPI_perror()</code> produces a message on the standard error output, describing the last error encountered during a call to PAPI. If s is not NULL, s is printed, followed by a colon and a space. Then the error message and a new-line are printed. </p>
 <p> <code>Example:</code></p>
 <dl COMPACT>
@@ -42,9 +42,9 @@ description: "PAPI_perror –"
 * ret = PAPI_start(EventSet);
 * if (ret != PAPI_OK) handle_error(ret);
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_strerror</code></dl>
+<dd><code>PAPI_strerror</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

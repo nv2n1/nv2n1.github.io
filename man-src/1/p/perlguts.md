@@ -88,3 +88,4 @@ s = SvGROW(sv, len + needlen + 1);<br />
    ignoring errors for these examples<br />
  */<br />
 s[len + newlen] = &#8216;
+</p>

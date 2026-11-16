@@ -39,51 +39,51 @@ description: "atomic-diff – show the differences between two images|containers
 <p> Compare images the files in &#8216;foo1&#8217; and &#8216;foo2&#8217;. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic diff foo1 foo2
 </pre>
-</dl>
+</dd></dl>
 <p> Compare the files in images &#8216;foo1&#8217; and &#8216;foo2&#8217; and output in JSON. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic diff --json foo1 foo2
 </pre>
-</dl>
+</dd></dl>
 <p> Compare only the RPMs in images &#8216;foo1&#8217; and &#8216;foo2&#8217; </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic diff -r -n foo1 foo2
 </pre>
-</dl>
+</dd></dl>
 <p> Compare the files and RPMs (without versions) in images &#8216;foo1&#8217; and &#8216;foo2&#8217; and output as json </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic diff -r --json foo1 foo2
 </pre>
-</dl>
+</dd></dl>
 <p> Compare only the metadata between images &#8216;foo1&#8217; and &#8216;foo2&#8217; </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic diff -m foo1 foo2
 </pre>
-</dl>
+</dd></dl>
 <p> Compare files by &#8216;sha256digests&#8217; and &#8216;time&#8217; between images &#8216;foo1&#8217; and &#8216;foo2&#8217; </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic diff foo1 foo2 --keywords sha256digest time
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> Updated by Brent Baude (bbaude at redhat dot com) Nov 2016 Updated by Brent Baude (bbaude at redhat dot com) May 2016 Initial revision by Brent Baude (bbaude at redhat dot com) November 2015 </p>
 <h2>Index</h2>

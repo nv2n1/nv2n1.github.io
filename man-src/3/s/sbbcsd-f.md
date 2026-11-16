@@ -39,10 +39,10 @@ description: "sbbcsd.f –"
  The orthogonal matrices U1, U2, V1T, and V2T are input/output.
  The input matrices are pre- or post-multiplied by the appropriate
  singular vector matrices.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBU1</i> </p>
+<dd><i>JOBU1</i> </dd>
 <pre> JOBU1 is CHARACTER
  = 'Y': U1 is updated;
  otherwise: U1 is not updated.</pre>
@@ -187,19 +187,19 @@ description: "sbbcsd.f –"
  TOLMUL controls the convergence criterion of the QR loop.
  Angles THETA(i), PHI(i) are rounded to 0 or PI/2 when they
  are within TOLMUL*EPS of either bound.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 330 of file sbbcsd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

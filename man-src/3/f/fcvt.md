@@ -16,17 +16,15 @@ description: "ecvt, fcvt – convert a floating-point number to a string"
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>ecvt</code>(), <code>fcvt</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.12:</p>
+<dt>Since glibc 2.12:</dt>
 <dd>
 <pre><code>
 (_XOPEN_SOURCE &amp;nbsp; &gt;= &amp;nbsp; 500) !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L) || /* Glibc since 2.19: */ _DEFAULT_SOURCE
     || /* Glibc versions &lt;= 2.19: */ _SVID_SOURCE
 </code></pre>
-<dt>Before glibc 2.12:</p>
-<dd> _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dd><dt>Before glibc 2.12:</dt>
+<dd> _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>ecvt</code>() function converts <i>number</i> to a null-terminated string of <i>ndigits</i> digits (where <i>ndigits</i> is reduced to a system-specific limit determined by the precision of a <i>double</i>), and returns a pointer to the string. The high-order digit is nonzero, unless <i>number</i> is zero. The low order digit is rounded. The string itself does not contain a decimal point; however, the position of the decimal point relative to the start of the string is stored in <i>*decpt</i>. A negative value for <i>*decpt</i> means that the decimal point is to the left of the start of the string. If the sign of <i>number</i> is negative, <i>*sign</i> is set to a nonzero value, otherwise it is set to 0. If <i>number</i> is zero, it is unspecified whether <i>*decpt</i> is 0 or 1. </p>

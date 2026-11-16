@@ -10,31 +10,31 @@ description: "XConfigureWindow, XMoveWindow, XResizeWindow, XMoveResizeWindow, X
 <p>XConfigureWindow, XMoveWindow, XResizeWindow, XMoveResizeWindow, XSetWindowBorderWidth, XWindowChanges &#8211; configure windows and window changes structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XConfigureWindow(Display *<i>display</i>, Window <i>w</i>, unsigned <i>value_mask</i>, XWindowChanges *<i>changes</i>);</p>
-<dd>int XMoveWindow(Display *<i>display</i>, Window <i>w</i>, int <i>x</i>, <i>y</i>);</p>
-<dd>int XResizeWindow(Display *<i>display</i>, Window <i>w</i>, unsigned <i>width</i>, unsigned <i>height</i>);</p>
-<dd>int XMoveResizeWindow(Display *<i>display</i>, Window <i>w</i>, int <i>x</i>, int <i>y</i>, unsigned <i>width</i>, unsigned <i>height</i>);</p>
-<dd>int XSetWindowBorderWidth(Display *<i>display</i>, Window <i>w</i>, unsigned <i>width</i>);</dl>
+<dd>int XConfigureWindow(Display *<i>display</i>, Window <i>w</i>, unsigned <i>value_mask</i>, XWindowChanges *<i>changes</i>);</dd>
+<dd>int XMoveWindow(Display *<i>display</i>, Window <i>w</i>, int <i>x</i>, <i>y</i>);</dd>
+<dd>int XResizeWindow(Display *<i>display</i>, Window <i>w</i>, unsigned <i>width</i>, unsigned <i>height</i>);</dd>
+<dd>int XMoveResizeWindow(Display *<i>display</i>, Window <i>w</i>, int <i>x</i>, int <i>y</i>, unsigned <i>width</i>, unsigned <i>height</i>);</dd>
+<dd>int XSetWindowBorderWidth(Display *<i>display</i>, Window <i>w</i>, unsigned <i>width</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>value_mask</i></p>
-<dd>Specifies which values are to be set using information in the values structure. This mask is the bitwise inclusive OR of the valid configure window values bits.</p>
-<dt><i>values</i></p>
-<dd>Specifies the <code>XWindowChanges</code> structure.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window to be reconfigured, moved, or resized..</p>
-<dt><i>width</i></p>
-<dd>Specifies the width of the window border.</p>
-<dt><i>width</i></p>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>value_mask</i></dt>
+<dd>Specifies which values are to be set using information in the values structure. This mask is the bitwise inclusive OR of the valid configure window values bits.</dd>
+<dt><i>values</i></dt>
+<dd>Specifies the <code>XWindowChanges</code> structure.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window to be reconfigured, moved, or resized..</dd>
+<dt><i>width</i></dt>
+<dd>Specifies the width of the window border.</dd>
+<dt><i>width</i></dt>
 <dd>
-<dt><i>height</i></p>
-<dd>Specify the width and height, which are the interior dimensions of the window.</p>
-<dt><i>x</i></p>
+</dd><dt><i>height</i></dt>
+<dd>Specify the width and height, which are the interior dimensions of the window.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates, which define the new location of the top-left pixel of the window&#8217;s border or the window itself if it has no border or define the new position of the window relative to its parent.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates, which define the new location of the top-left pixel of the window&#8217;s border or the window itself if it has no border or define the new position of the window relative to its parent.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XConfigureWindow</code> function uses the values specified in the <code>XWindowChanges</code> structure to reconfigure a window&#8217;s size, position, border, and stacking order. Values not specified are taken from the existing geometry of the window. </p>
 <p> If a sibling is specified without a stack_mode or if the window is not actually a sibling, a <code>BadMatch</code> error results. Note that the computations for <code>BottomIf</code>, <code>TopIf</code>, and <code>Opposite</code> are performed with respect to the window&#8217;s final geometry (as controlled by the other arguments passed to <code>XConfigureWindow</code>), not its initial geometry. Any backing store contents of the window, its inferiors, and other newly visible windows are either discarded or changed to reflect the current screen contents (depending on the implementation). </p>
@@ -109,14 +109,14 @@ description: "XConfigureWindow, XMoveWindow, XResizeWindow, XMoveResizeWindow, X
 <p> The sibling member is used to set the sibling window for stacking operations. The stack_mode member is used to set how the window is to be restacked and can be set to <code>Above</code>, <code>Below</code>, <code>TopIf</code>, <code>BottomIf</code>, or <code>Opposite</code>.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadMatch</code></p>
-<dd>An <code>InputOnly</code> window is used as a Drawable.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadMatch</code></dt>
+<dd>An <code>InputOnly</code> window is used as a Drawable.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xcreatewindow/">XCreateWindow</a>(3), <a href="/docs/linux/man/3-xdestroywindow/">XDestroyWindow</a>(3), <a href="/docs/linux/man/3-xmapwindow/">XMapWindow</a>(3), <a href="/docs/linux/man/3-xraisewindow/">XRaiseWindow</a>(3), <a href="/docs/linux/man/3-xunmapwindow/">XUnmapWindow</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

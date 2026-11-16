@@ -21,7 +21,6 @@ FONT *fontcopy;
 ...
     /* Create a font of only capital letters */
     capitals = extract_font_range(myfont, 'A', 'Z');
-
 /* Create a copy of the font */
 fontcopy = extract_font_range(myfont, -1, -1);
 ... destroy_font(capitals);

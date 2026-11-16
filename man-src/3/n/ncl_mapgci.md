@@ -14,15 +14,15 @@ MAPGCI - Returns a set of points on the shortest great circle route between two 
  void c_mapgci( float alat, float alon, float blat, 
  float blon, int nopi, float *rlti, float *rlni)
 <h2>Description</h2><dl COMPACT><dt>ALAT and ALON
-<dd>(input expressions, of type REAL) are the latitude and longitude of the point at the beginning of a great circle route.
-<dt>BLAT and BLON
-<dd>(input expressions, of type REAL) are the latitude and longitude of the point at the end of a great circle route.
-<dt>NOPI
-<dd>(an input expression, of type INTEGER) is the number of equally-spaced points to be interpolated along the great circle route.
-<dt>RLTI and RLNI
-<dd>(output arrays of type REAL, each dimensioned at least NOPI) are arrays containing the latitudes and longitudes of points interpolated along the great circle route. Each lat/lon pair defines one of the points; they appear in order of increasing distance along the great circle route. The positions of the first point and the last point are not returned in these arrays; only the interpolated points are.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(input expressions, of type REAL) are the latitude and longitude of the point at the beginning of a great circle route.
+</dd><dt>BLAT and BLON
+</dt><dd>(input expressions, of type REAL) are the latitude and longitude of the point at the end of a great circle route.
+</dd><dt>NOPI
+</dt><dd>(an input expression, of type INTEGER) is the number of equally-spaced points to be interpolated along the great circle route.
+</dd><dt>RLTI and RLNI
+</dt><dd>(output arrays of type REAL, each dimensioned at least NOPI) are arrays containing the latitudes and longitudes of points interpolated along the great circle route. Each lat/lon pair defines one of the points; they appear in order of increasing distance along the great circle route. The positions of the first point and the last point are not returned in these arrays; only the interpolated points are.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>The statement:
-<dl COMPACT><dd>CALL MAPGCI (ALAT,ALON,BLAT,BLON,NOPI,RLTI,RLNI)</dl>
+<dl COMPACT><dd>CALL MAPGCI (ALAT,ALON,BLAT,BLON,NOPI,RLTI,RLNI)</dd></dl>
  
 
  defines the positions of two points, A and B, on the globe and the number of equally-spaced points, NOPI, to be interpolated along the great circle route from A to B. The latitudes and longitudes of the interpolated points are returned to the caller in the arrays RLTI and RLNI. If the points A and B are exactly opposite one another on the globe, the code does not fail, but the direction of the great circle route will be somewhat unpredictable (since, in that case, there is more than one great circle route joining the two points).

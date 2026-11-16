@@ -14,13 +14,13 @@ description: "ata_dev_revalidate – Revalidate ATA device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to revalidate</dl>
+</dd><dd>device to revalidate</dd></dl>
 <p> <i>new_class</i></p>
 <dl>
-<dd>new class code</dl>
+<dd>new class code</dd></dl>
 <p> <i>readid_flags</i></p>
 <dl>
-<dd>read ID flags</dl>
+<dd>read ID flags</dd></dl>
 <h2>Description</h2>
 <p>Re-read IDENTIFY page, make sure <i>dev</i> is still attached to the port and reconfigure it according to the new IDENTIFY page. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
@@ -29,5 +29,5 @@ description: "ata_dev_revalidate – Revalidate ATA device"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

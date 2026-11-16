@@ -16,11 +16,11 @@ description: "gammu-smsd-tables – description of tables for database backends 
 <p>Transmitted messages are read from table outbox and possible subsequent parts of the same message from outbox_multipart.</p>
 <h3>Description of tables</h3>
 <dl>
-<dt><code>daemons</code></p>
-<dd>Information about running daemons.</p>
-<dt><code>gammu</code></p>
-<dd>Table holding single value &#8211; version of a database schema. See HISTORY for details what has changed.</p>
-<dt><code>inbox</code></p>
+<dt><code>daemons</code></dt>
+<dd>Information about running daemons.</dd>
+<dt><code>gammu</code></dt>
+<dd>Table holding single value &#8211; version of a database schema. See HISTORY for details what has changed.</dd>
+<dt><code>inbox</code></dt>
 <dd>Table where received messages will be stored. Fields description: <code>UpdatedInDB</code> (timestamp)<br />
  when somebody (daemon, user, etc.) updated it <code>ReceivingDateTime</code> (timestamp)<br />
  when SMS was received <code>Text</code> (text)<br />
@@ -33,8 +33,8 @@ description: "gammu-smsd-tables – description of tables for database backends 
  decoded SMS text (for Default Alphabet/Unicode SMS) <code>ID</code> (integer unsigned)<br />
  SMS identificator (for using with external applications) <code>RecipientID</code> (text)<br />
  which Gammu daemon has added it <code>Processed</code> (enum(&#8216;false&#8217;, &#8216;true&#8217;))<br />
- you can use for marking, whether SMS was processed or not</p>
-<dt><code>outbox</code></p>
+ you can use for marking, whether SMS was processed or not</dd>
+<dt><code>outbox</code></dt>
 <dd>Messages enqueued for sending should be placed in this table. If message is multipart, subsequent parts are stored in table outbox_multipart. Fields description: <code>UpdatedInDB</code> (timestamp)<br />
  when somebody (daemon, user, etc.) updated it <code>InsertIntoDB</code> (timestamp)<br />
  when message was inserted into database <code>SendingDateTime</code> (timestamp)<br />
@@ -51,8 +51,8 @@ description: "gammu-smsd-tables – description of tables for database backends 
  which SMSD instance should send this one sequence <code>SendingTimeOut</code> (timestamp)<br />
  used by SMSD instance for own targets <code>DeliveryReport</code> (enum(&#8216;default&#8217;,&#8217;yes&#8217;,&#8217;no&#8217;))<br />
  when default is used, Delivery Report is used or not according to SMSD instance settings; yes forces Delivery Report. <code>CreatorID</code> (text)<br />
- sender identification, it has to match PhoneID in SMSD configuration to make SMSD process this message</p>
-<dt><code>outbox_multipart</code></p>
+ sender identification, it has to match PhoneID in SMSD configuration to make SMSD process this message</dd>
+<dt><code>outbox_multipart</code></dt>
 <dd>Data for outgoing multipart messages. Fields description: <code>ID</code> (integer unsigned)<br />
  <code>Text</code> (text)<br />
  <code>Coding</code> (enum(&#8216;Default_No_Compression&#8217;, &#8216;Unicode_No_Compression&#8217;, &#8216;8bit&#8217;, &#8216;Default_Compression&#8217;, &#8216;Unicode_Compression&#8217;))<br />
@@ -61,8 +61,8 @@ description: "gammu-smsd-tables – description of tables for database backends 
  <code>TextDecoded</code> (varchar(160))<br />
  <code>ID</code> (integer unsigned)<br />
  the same meaning as values in outbox table <code>SequencePosition</code> (integer)<br />
- info, what is SMS number in SMS sequence (start at 2, first part is in outbox table).</p>
-<dt><code>phones</code></p>
+ info, what is SMS number in SMS sequence (start at 2, first part is in outbox table).</dd>
+<dt><code>phones</code></dt>
 <dd>Information about connected phones. This table is periodically refreshed and you can get information such as battery or signal level from here. Fields description: <code>ID</code> (text)<br />
  PhoneID value <code>UpdatedInDB</code> (timestamp)<br />
  when this record has been updated <code>InsertIntoDB</code> (timestamp)<br />
@@ -75,8 +75,8 @@ description: "gammu-smsd-tables – description of tables for database backends 
  battery level in percent (or -1 if unknown) <code>Signal</code> (integer)<br />
  signal level in percent (or -1 if unknown) <code>Sent</code> (integer)<br />
  Number of sent SMS messages (SMSD does not reset this counter, so it might overflow). <code>Received</code> (integer)<br />
- Number of received SMS messages (SMSD does not reset this counter, so it might overflow).</p>
-<dt><code>sentitems</code></p>
+ Number of received SMS messages (SMSD does not reset this counter, so it might overflow).</dd>
+<dt><code>sentitems</code></dt>
 <dd>Log of sent messages (and unsent ones with error code). Also if delivery reports are enabled, message state is updated after receiving delivery report. Fields description: <code>UpdatedInDB</code> (timestamp)<br />
  when somebody (daemon, user, etc.) updated it <code>InsertIntoDB</code> (timestamp)<br />
  when message was inserted into database <code>SendingDateTime</code> (timestamp)<br />
@@ -99,7 +99,7 @@ description: "gammu-smsd-tables – description of tables for database backends 
  decoded number of SMSC, which sent SMS <code>Class</code> (integer)<br />
  SMS class or -1 (0 is normal SMS, 1 is flash one) <code>TextDecoded</code> (varchar(160))<br />
  SMS text in &quot;human readable&quot; form <code>ID</code> (integer unsigned)<br />
- SMS ID <code>SenderID</code> (text)</dl>
+ SMS ID <code>SenderID</code> (text)</dd></dl>
 <h3>Injecting a message using SQL</h3>
 <p>which SMSD instance sent this one sequence <code>SequencePosition</code> (integer)<br />
  SMS number in SMS sequence <code>TPMR</code> (integer)<br />
@@ -107,10 +107,10 @@ description: "gammu-smsd-tables – description of tables for database backends 
  SMS relative validity like encoded using GSM specs <code>CreatorID</code> (text)<br />
  copied from CreatorID from outbox table, matches PhoneID</p>
 <dl>
-<dt><code>pbk</code></p>
-<dd>Not used by SMSD currently, included only for application usage.</p>
-<dt><code>pbk_groups</code></p>
-<dd>Not used by SMSD currently, included only for application usage. </p>
+<dt><code>pbk</code></dt>
+<dd>Not used by SMSD currently, included only for application usage.</dd>
+<dt><code>pbk_groups</code></dt>
+<dd>Not used by SMSD currently, included only for application usage. </dd>
 <h2>History</h2>
 <p>History of schema versions: </p>
 <p> 10 &#8211; DeliveryDateTime is now NULL when message is not delivered, added several indexes </p>
@@ -129,13 +129,11 @@ DestinationNumber,
 TextDecoded,
 CreatorID,
 Coding
-
 ) VALUES (
 '800123465',
 'This is a SQL test message',
 'Program',
 'Default_No_Compression'
-
 );</code></pre>
 <h3>Injecting long message using SQL</h3>
 <p>Inserting multipart messages is a bit more tricky, you need to construct also UDH header. For example long text message would look like (please note that each UDH needs to contain number of parts and sequence position as last two bytes, the D3 value in example is message reference number, it can be anything):<br />
@@ -178,3 +176,4 @@ Coding
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>Reporting Bugs</h2>
 <p>Please report bugs to &lt;<a rel="nofollow" href="http://bugs.cihar.com">http://bugs.cihar.com</a>&gt;.</p>
+</dl>

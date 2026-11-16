@@ -21,11 +21,11 @@ description: "lexnames – List of WordNet lexicographer file names and numbers"
 <code>2</code> VERB
 <code>3</code> ADJECTIVE
 <code>4</code> ADVERB</pre>
-</dl>
+</dd></dl>
 <h3>Lexicographer Files</h3>
 <p>The names of the lexicographer files and their corresponding file numbers are listed below along with a brief description each file&#8217;s contents. </p>
 <dl>
-<dd><center></p>
+<dd><center></dd>
 <table>
 <tr VALIGN=top>
 <td><code>File Number</code></td>
@@ -314,17 +314,17 @@ description: "lexnames – List of WordNet lexicographer file names and numbers"
 <p>The lexicographer files are not included in the WordNet database package.</p>
 <h2>Environment Variables (Unix)</h2>
 <dl>
-<dt><code>WNHOME</code></p>
-<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</p>
-<dt><code>WNSEARCHDIR</code></p>
-<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dl>
+<dt><code>WNHOME</code></dt>
+<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
 <h2>Registry (Windows)</h2>
 <dl>
-<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></p>
-<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>lexnames</code></p>
-<dd>list of lexicographer file names and numbers</dl>
+<dt><code>lexnames</code></dt>
+<dd>list of lexicographer file names and numbers</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-grind/">grind</a></code>(1), <code><a href="/docs/linux/man/5-wnintro/">wnintro</a></code>(5), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/5-wninput/">wninput</a></code>(5). </p>

@@ -15,11 +15,11 @@ blk_queue_max_segment_size - set max segment size for blk_rq_map_sg
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>max_size</i>
-<dl><dd>max size of segment in bytes</dl>
+<dl><dd>max size of segment in bytes</dd></dl>
 
 <h2>Description</h2>
 

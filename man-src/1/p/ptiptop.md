@@ -25,121 +25,121 @@ description: "tiptop – display hardware performance counters for Linux tasks"
 <h2>COMMAND-LINE OPTIONS</h2>
 <p> Command line options with a parameter override values specified in the configuration file. Toggles set the value or invert the value read in the configuration file (if any). </p>
 <dl>
-<dt>&#8211;<code>b</code></p>
-<dd> Start tiptop in batch-mode. Output is sent to stdout, and no interactive command is accepted. tiptop will run forever, or until the number of iterations specified by <code>-n</code>. </p>
-<dt>&#8211;<code>c</code></p>
-<dd> display the command line of the task instead of its name. (toggle) </p>
-<dt>&#8212;<code>cpu-min</code> VALUE</p>
+<dt>&#8211;<code>b</code></dt>
+<dd> Start tiptop in batch-mode. Output is sent to stdout, and no interactive command is accepted. tiptop will run forever, or until the number of iterations specified by <code>-n</code>. </dd>
+<dt>&#8211;<code>c</code></dt>
+<dd> display the command line of the task instead of its name. (toggle) </dd>
+<dt>&#8212;<code>cpu-min</code> VALUE</dt>
 <dd> %CPU activity threshold. Below this value, a task is considered<br />
-&nbsp;<wbr>idle and is not reported&nbsp;<wbr>(unless idle-mode is on, see flag -i). </p>
-<dt>&#8211;<code>d</code> VALUE</p>
-<dd> Specify the delay between refreshes. VALUE can be fractional. It must be larger than 0.01. </p>
-<dt>&#8211;<code>E</code> FILENAME</p>
-<dd> Specify file where errors are logged. By default errors are logged to stderr in batch-mode, and a temporary file in live-mode. </p>
-<dt>&#8212;<code>epoch</code></p>
-<dd> Print the Epoch at each refresh. In batch-mode, it is printed at the beginning of each row. In live-mode, it is at the bottom of the display. (toggle) </p>
-<dt>&#8211;<code>h &#8211;help</code></p>
-<dd> Print a brief help message and exit. </p>
-<dt>&#8211;<code>H</code></p>
-<dd> Show threads. (toggle) </p>
-<dt>&#8211;<code>i</code></p>
-<dd> Show idle tasks. (toggle) </p>
-<dt>&#8211;<code>K &#8211;kernel</code></p>
-<dd> Include kernel activity in the reported values. This is only possible is the user is root, the tiptop executable is setuid root, or the paranoia level is low enough. (toggle) </p>
+&nbsp;<wbr>idle and is not reported&nbsp;<wbr>(unless idle-mode is on, see flag -i). </dd>
+<dt>&#8211;<code>d</code> VALUE</dt>
+<dd> Specify the delay between refreshes. VALUE can be fractional. It must be larger than 0.01. </dd>
+<dt>&#8211;<code>E</code> FILENAME</dt>
+<dd> Specify file where errors are logged. By default errors are logged to stderr in batch-mode, and a temporary file in live-mode. </dd>
+<dt>&#8212;<code>epoch</code></dt>
+<dd> Print the Epoch at each refresh. In batch-mode, it is printed at the beginning of each row. In live-mode, it is at the bottom of the display. (toggle) </dd>
+<dt>&#8211;<code>h &#8211;help</code></dt>
+<dd> Print a brief help message and exit. </dd>
+<dt>&#8211;<code>H</code></dt>
+<dd> Show threads. (toggle) </dd>
+<dt>&#8211;<code>i</code></dt>
+<dd> Show idle tasks. (toggle) </dd>
+<dt>&#8211;<code>K &#8211;kernel</code></dt>
+<dd> Include kernel activity in the reported values. This is only possible is the user is root, the tiptop executable is setuid root, or the paranoia level is low enough. (toggle) </dd>
 <pre>
 See file /proc/sys/kernel/perf_event_paranoid
 (perf_counter_paranoid on Linux 2.6.31).
 </pre>
-<dt>&#8212;<code>list-screens</code></p>
-<dd> List available screens and exit. </p>
-<dt>&#8211;<code>n</code> VALUE</p>
-<dd> Automatically exit after VALUE iterations. </p>
-<dt>&#8212;<code>no-collect</code></p>
-<dd> By default, when the maximum number of open files is reached, and new processes appear, tiptop searches for idle processes and closes the files in order to make room for the new ones. This flag disables this behavior: in case of file shortage, new processes will not get more chances than older ones. </p>
-<dt>&#8211;<code>o</code> FILENAME</p>
-<dd> Specify the filename for the output of batch mode. </p>
-<dt>&#8212;<code>only-conf</code></p>
-<dd> Only screens defined in configuration file displayed (no default). </p>
-<dt>&#8211;<code>p &#8211;pid</code> VALUE</p>
-<dd> Filters processes according to VALUE. VALUE can be either the numeric value PID, or a string. In case of a string, all tasks whose names or command lines (depending on the display, see -c) contain VALUE are reported. </p>
-<dt>&#8211;<code>S</code> VALUE</p>
-<dd> Start tiptop with screen number VALUE if VALUE is an integer. Otherwise looks for the first screen whose name contains VALUE. </p>
-<dt>&#8212;<code>sticky</code></p>
-<dd> Start in sticky mode: tasks stay in the list after they die. In live-mode, they appear in a different color (when supported). In batch-mode, the word DEAD is appended. (toggle) </p>
-<dt>&#8212;<code>timestamp</code></p>
-<dd> Print a timestamp at the beginning of each row. The timestamp is the number of refreshes so far. In batch-mode, it is printed at the beginning of each row. In live-mode, it is at the bottom of the display. (toggle) </p>
-<dt>&#8211;<code>u</code> USER</p>
-<dd> Only show tasks owned by USER. USER can be either a login name, or the numeric value UID. </p>
-<dt>&#8211;<code>U</code></p>
-<dd> Show the owner of each task. (toggle) </p>
-<dt>&#8211;<code>v</code></p>
-<dd> Display build information and exit. </p>
-<dt>&#8212;<code>version</code></p>
-<dd> Display version information and disclaimer and exit. </p>
-<dt>&#8211;<code>w</code> VALUE</p>
-<dd> Watch the task specified by VALUE. VALUE can be either the numeric value PID, or a string. In case of a string, all tasks whose names or command lines (depending on the display, see -c) contain VALUE are reported. In live-mode, watched tasks are shown in a different color (when supported). In batch-mode, an ASCII arrow points to the watched tasks. </p>
-<dt>&#8211;<code>W</code> PATH</p>
-<dd> Directory where the configuration file is located. </p>
+<dt>&#8212;<code>list-screens</code></dt>
+<dd> List available screens and exit. </dd>
+<dt>&#8211;<code>n</code> VALUE</dt>
+<dd> Automatically exit after VALUE iterations. </dd>
+<dt>&#8212;<code>no-collect</code></dt>
+<dd> By default, when the maximum number of open files is reached, and new processes appear, tiptop searches for idle processes and closes the files in order to make room for the new ones. This flag disables this behavior: in case of file shortage, new processes will not get more chances than older ones. </dd>
+<dt>&#8211;<code>o</code> FILENAME</dt>
+<dd> Specify the filename for the output of batch mode. </dd>
+<dt>&#8212;<code>only-conf</code></dt>
+<dd> Only screens defined in configuration file displayed (no default). </dd>
+<dt>&#8211;<code>p &#8211;pid</code> VALUE</dt>
+<dd> Filters processes according to VALUE. VALUE can be either the numeric value PID, or a string. In case of a string, all tasks whose names or command lines (depending on the display, see -c) contain VALUE are reported. </dd>
+<dt>&#8211;<code>S</code> VALUE</dt>
+<dd> Start tiptop with screen number VALUE if VALUE is an integer. Otherwise looks for the first screen whose name contains VALUE. </dd>
+<dt>&#8212;<code>sticky</code></dt>
+<dd> Start in sticky mode: tasks stay in the list after they die. In live-mode, they appear in a different color (when supported). In batch-mode, the word DEAD is appended. (toggle) </dd>
+<dt>&#8212;<code>timestamp</code></dt>
+<dd> Print a timestamp at the beginning of each row. The timestamp is the number of refreshes so far. In batch-mode, it is printed at the beginning of each row. In live-mode, it is at the bottom of the display. (toggle) </dd>
+<dt>&#8211;<code>u</code> USER</dt>
+<dd> Only show tasks owned by USER. USER can be either a login name, or the numeric value UID. </dd>
+<dt>&#8211;<code>U</code></dt>
+<dd> Show the owner of each task. (toggle) </dd>
+<dt>&#8211;<code>v</code></dt>
+<dd> Display build information and exit. </dd>
+<dt>&#8212;<code>version</code></dt>
+<dd> Display version information and disclaimer and exit. </dd>
+<dt>&#8211;<code>w</code> VALUE</dt>
+<dd> Watch the task specified by VALUE. VALUE can be either the numeric value PID, or a string. In case of a string, all tasks whose names or command lines (depending on the display, see -c) contain VALUE are reported. In live-mode, watched tasks are shown in a different color (when supported). In batch-mode, an ASCII arrow points to the watched tasks. </dd>
+<dt>&#8211;<code>W</code> PATH</dt>
+<dd> Directory where the configuration file is located. </dd>
 </dl>
 <h2>INTERACTIVE COMMANDS</h2>
 <p> In live-mode, tiptop accepts single-key commands. </p>
 <dl>
-<dt><code>LEFT</code>, <code>RIGHT</code></p>
-<dd> Rotate through available screens. </p>
-<dt><code>&lt;</code>, <code>&gt;</code></p>
-<dd> Change the reference column for sorting to the left or to the right. </p>
-<dt><code>c</code></p>
-<dd> Toggle between showing task names and command lines. </p>
-<dt><code>d</code></p>
-<dd> Change the refresh interval. The new value is queried. Fractional values larger than 0.01 are accepted. </p>
-<dt><code>e</code></p>
-<dd> Display the errors encoutered so far. Scroll with UP, DOWN, PAGE_UP, PAGE_DOWN, HOME and END. </p>
-<dt><code>h</code></p>
-<dd> Display a brief description of the screen and each column. </p>
-<dt><code>H</code></p>
-<dd> Toggle between showing individual threads and accumulating values per process. </p>
-<dt><code>i</code></p>
-<dd> Toggle between showing only active tasks and showing also idle tasks. </p>
-<dt><code>K</code></p>
-<dd> Toggle between showing kernel activity and only user activity. Kernel mode is only available to root. Switching to and from kernel mode resets all counters. </p>
-<dt><code>k</code></p>
-<dd> Kill a process. The user is asked for the PID, and the signal to send. </p>
-<dt><code>p</code></p>
-<dd> Filter tasks by name or PID. The user is asked for a PID or string. In case a string is entered, only the tasks whose name or command line contain the string are displayed. Changing the filter resets all counters. </p>
-<dt><code>q</code></p>
-<dd> Quit. </p>
-<dt><code>R</code></p>
-<dd> Change sorting order: ascending or descending. </p>
-<dt><code>S</code></p>
-<dd> Toggle sticky mode. </p>
-<dt><code>s</code></p>
-<dd> Same as d. </p>
-<dt><code>u</code></p>
-<dd> Filter tasks by user. The user name or PID is queried. Note that, unless tiptop is run by root or setuid root, tasks owned by somebody else cannot be monitored. Changing the filter resets all counters. </p>
-<dt><code>U</code></p>
-<dd> Toggle displaying each task&#8217;s owner. </p>
-<dt><code>w</code></p>
-<dd> Used to track a particular task. The user is asked for a PID or string. In case a string is entered, all tasks whose name or command line contain the string are highlighted. </p>
-<dt><code>W</code></p>
-<dd> Writes a configuration file for the current state in the current directory. </p>
+<dt><code>LEFT</code>, <code>RIGHT</code></dt>
+<dd> Rotate through available screens. </dd>
+<dt><code>&lt;</code>, <code>&gt;</code></dt>
+<dd> Change the reference column for sorting to the left or to the right. </dd>
+<dt><code>c</code></dt>
+<dd> Toggle between showing task names and command lines. </dd>
+<dt><code>d</code></dt>
+<dd> Change the refresh interval. The new value is queried. Fractional values larger than 0.01 are accepted. </dd>
+<dt><code>e</code></dt>
+<dd> Display the errors encoutered so far. Scroll with UP, DOWN, PAGE_UP, PAGE_DOWN, HOME and END. </dd>
+<dt><code>h</code></dt>
+<dd> Display a brief description of the screen and each column. </dd>
+<dt><code>H</code></dt>
+<dd> Toggle between showing individual threads and accumulating values per process. </dd>
+<dt><code>i</code></dt>
+<dd> Toggle between showing only active tasks and showing also idle tasks. </dd>
+<dt><code>K</code></dt>
+<dd> Toggle between showing kernel activity and only user activity. Kernel mode is only available to root. Switching to and from kernel mode resets all counters. </dd>
+<dt><code>k</code></dt>
+<dd> Kill a process. The user is asked for the PID, and the signal to send. </dd>
+<dt><code>p</code></dt>
+<dd> Filter tasks by name or PID. The user is asked for a PID or string. In case a string is entered, only the tasks whose name or command line contain the string are displayed. Changing the filter resets all counters. </dd>
+<dt><code>q</code></dt>
+<dd> Quit. </dd>
+<dt><code>R</code></dt>
+<dd> Change sorting order: ascending or descending. </dd>
+<dt><code>S</code></dt>
+<dd> Toggle sticky mode. </dd>
+<dt><code>s</code></dt>
+<dd> Same as d. </dd>
+<dt><code>u</code></dt>
+<dd> Filter tasks by user. The user name or PID is queried. Note that, unless tiptop is run by root or setuid root, tasks owned by somebody else cannot be monitored. Changing the filter resets all counters. </dd>
+<dt><code>U</code></dt>
+<dd> Toggle displaying each task&#8217;s owner. </dd>
+<dt><code>w</code></dt>
+<dd> Used to track a particular task. The user is asked for a PID or string. In case a string is entered, all tasks whose name or command line contain the string are highlighted. </dd>
+<dt><code>W</code></dt>
+<dd> Writes a configuration file for the current state in the current directory. </dd>
 </dl>
 <h2>FILES</h2>
 <p> During startup, <code>tiptop</code> attempts to read a configuration file. The file must be named <code>.tiptoprc</code>. This file is first searched in the current directory, then in the directory defined by the environment variable <code>TIPTOP</code> if it exists, finally in the user&#8217;s home. </p>
 <h3>Syntax</h3>
 <p> The file is structured in XML. The syntax is as follows. </p>
 <dl>
-<dt>Root of tree</p>
-<dd> The root of the xml tree is tiptop. &lt;tiptop&gt; &#8230; &lt;/tiptop&gt; </p>
-<dt>Options</p>
-<dd> Options can be specified on an &lt;options&gt; block. </p>
+<dt>Root of tree</dt>
+<dd> The root of the xml tree is tiptop. &lt;tiptop&gt; &#8230; &lt;/tiptop&gt; </dd>
+<dt>Options</dt>
+<dd> Options can be specified on an &lt;options&gt; block. </dd>
 <p> &lt;options&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>&lt;option name=&quot;option1&quot;&nbsp;<wbr>value=&quot;value_option1&quot;/&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>&lt;option name=&quot;option2&quot;&nbsp;<wbr>value=&quot;value_option2&quot;/&gt;<br />
 &nbsp;<wbr>&#8230; &lt;/options&gt; </p>
 <p> Recognized options listed below, with their corresponding command line option. </p>
 <p> cpu_threshold (&#8211;cpu-min), delay (-d), idle (-i), max_iter (-n), show_cmdline (-c), show_epoch (&#8211;epoch), show_kernel (-K), show_timestamp (&#8211;timestamp), show_threads (-H), show_user (-U), watch_name (-w), sticky (&#8211;sticky), watch_uid (-w) </p>
-<dt>Screens</p>
-<dd> Screens are defined inside a &lt;screen&gt; block. A screen is made of counters and columns. A screen has a name and an optional description. </p>
+<dt>Screens</dt>
+<dd> Screens are defined inside a &lt;screen&gt; block. A screen is made of counters and columns. A screen has a name and an optional description. </dd>
 <p> &lt;screen name=&quot;my_screen&quot; desc=&quot;what this screen is about&quot;&gt;<br />
 &nbsp;<wbr>&#8230;. &lt;/screen&gt; </p>
 <p> Counters must provide an alias (used for further reference) and a configuration. The configuration is either a predefined value, or the actual value that must be provided to the perf_even_open system call (typically found in vendor architecture manuals). </p>
@@ -182,7 +182,7 @@ See file /proc/sys/kernel/perf_event_paranoid
       desc=&quot;Average IPC over last period&quot;
       expr=&quot;delta(instr) / delta(cycle)&quot; /&gt;
 </pre>
-<dt>Sample config file</p>
+<dt>Sample config file</dt>
 <dd>
 <pre>
 &lt;tiptop&gt;
@@ -223,7 +223,7 @@ See file /proc/sys/kernel/perf_event_paranoid
   &lt;/screen&gt;
 &lt;/tiptop&gt;
 </pre>
-</dl>
+</dd></dl>
 <h2>CAVEATS</h2>
 <p> tiptop does not seem to work within a virtualized environment. </p>
 <p> Attaching counters to processes may fail for various reasons, such as asking for more than available in hardware (tiptop does not implement sampling), or reaching the maximum number of open files. In these cases, you may consider filtering the processes (see flags -u, -p). </p>

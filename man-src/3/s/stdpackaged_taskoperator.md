@@ -12,7 +12,6 @@ std::packaged_task&lt;R(Args...)&gt;::operator= - std::packaged_task&lt;R(Args..
 
 <pre><code>packaged_task &amp;operator=(const packaged_task &amp;) = delete;
 (1)(since C++ 11)
-
     packaged_task &amp;
     operator=(packaged_task &amp;&amp;rhs) noexcept;
 (2)(since C++ 11)</code></pre> 

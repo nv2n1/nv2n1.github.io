@@ -11,7 +11,6 @@ description: "sc::Convergence –"
 <p> The <code>Convergence</code> class is used by the optimizer to determine when an optimization is converged.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;conv.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::MolEnergyConvergence</code>.</p>
 <h3>Public Member Functions</h3>
@@ -31,13 +30,7 @@ description: "sc::Convergence –"
  <i>Return nonzero if the optimization has converged. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void check_conv (const char *heading, double val, double bound, int &amp;pass, int &amp;fail)
-
-
-
 void set_defaults ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>RefSCVector</code> <code>grad_</code> </p>
 <p> <code>RefSCVector</code> <code>x_</code> </p>
@@ -65,17 +58,17 @@ Protected Attributes</code></pre>
 <h3>sc::Convergence::Convergence (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor reads the following keywords:. .IP &quot;max_disp&quot; 1c The value of the maximum displacement must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above. </p>
 <dl>
-<dt>max_grad</p>
-<dd>The value of the maximum gradient must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dl>
+<dt>max_grad</dt>
+<dd>The value of the maximum gradient must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dd></dl>
 <dl>
-<dt>rms_disp</p>
-<dd>The value of the RMS of the displacements must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dl>
+<dt>rms_disp</dt>
+<dd>The value of the RMS of the displacements must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dd></dl>
 <dl>
-<dt>rms_grad</p>
-<dd>The value of the RMS of the gradients must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dl>
+<dt>rms_grad</dt>
+<dd>The value of the RMS of the gradients must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dd></dl>
 <dl>
-<dt>graddisp</p>
-<dd>The value of the scalar product of the gradient vector with the displacement vector must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dl>
+<dt>graddisp</dt>
+<dd>The value of the scalar product of the gradient vector with the displacement vector must be less then the value of this keyword for the calculation to be converged. The default is to not check this parameter. However, if no other keyword are given, default convergence parameters are chosen as described above.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void sc::Convergence::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

@@ -158,19 +158,14 @@ PURPOSE WHERE
  The default behavior for matching can be changed, using various modifiers. Modifiers that relate to the interpretation of the pattern are listed just below. Modifiers that alter the way a pattern is used by Perl are detailed in ``Regexp Quote-Like Operators'' in perlop and ``Gory details of parsing quoted constructs'' in perlop.
 <dl>
 <dt>&quot;m&quot;
-<dd> Treat the string being matched against as multiple lines. That is, change <tt>&quot;^&quot;</tt> and <tt>&quot;$&quot;</tt> from matching the start of the string's first line and the end of its last line to matching the start and end of each line within the string.
-<dt>&quot;s&quot;
-<dd> Treat the string as single line. That is, change <tt>&quot;.&quot;</tt> to match any character whatsoever, even a newline, which normally it would not match. 
-
+</dt><dd> Treat the string being matched against as multiple lines. That is, change <tt>&quot;^&quot;</tt> and <tt>&quot;$&quot;</tt> from matching the start of the string's first line and the end of its last line to matching the start and end of each line within the string.
+</dd><dt>&quot;s&quot;
+</dt><dd> Treat the string as single line. That is, change <tt>&quot;.&quot;</tt> to match any character whatsoever, even a newline, which normally it would not match. 
  Used together, as <tt>&quot;/ms&quot;</tt>, they let the <tt>&quot;.&quot;</tt> match any character whatsoever, while still allowing <tt>&quot;^&quot;</tt> and <tt>&quot;$&quot;</tt> to match, respectively, just after and just before newlines within the string.
-<dt>&quot;i&quot;
-<dd> Do case-insensitive pattern matching. For example, ``A'' will match ``a'' under <tt>&quot;/i&quot;</tt>. 
-
+</dd><dt>&quot;i&quot;
+</dt><dd> Do case-insensitive pattern matching. For example, ``A'' will match ``a'' under <tt>&quot;/i&quot;</tt>. 
  If locale matching rules are in effect, the case map is taken from the current locale for code points less than 255, and from Unicode rules for larger code points. However, matches that would cross the Unicode rules/non-Unicode rules boundary (ords 255/256) will not succeed, unless the locale is a <font SIZE="-1">UTF-8</font> one. See perllocale. 
-
  There are a number of Unicode characters that match a sequence of multiple characters under <tt>&quot;/i&quot;</tt>. For example, <tt>&quot;LATIN SMALL LIGATURE FI&quot;</tt> should match the sequence <tt>&quot;fi&quot;</tt>. Perl is not currently able to do this when the multiple characters are in the pattern and are split between groupings, or when one or more are quantified. Thus 
-
- 
 "\N{LATIN SMALL LIGATURE FI}" = ~ / fi / i;
 #Matches
     "\N{LATIN SMALL LIGATURE FI}" = ~ / [fi][fi] / i;
@@ -180,60 +175,44 @@ PURPOSE WHERE
 #be even if it did !!
     "\N{LATIN SMALL LIGATURE FI}" = ~ / (f)(i) / i;
 #Doesn't match!
- 
-
  Perl doesn't match multiple characters in a bracketed character class unless the character that maps to them is explicitly mentioned, and it doesn't match them at all if the character class is inverted, which otherwise could be highly confusing. See ``Bracketed Character Classes'' in perlrecharclass, and ``Negation'' in perlrecharclass.
-<dt>&quot;x&quot; and &quot;xx&quot;
-<dd> Extend your pattern's legibility by permitting whitespace and comments. Details in ``/x and /xx''
-<dt>&quot;p&quot;
-<dd> Preserve the string matched such that <tt>&quot;${^PREMATCH}&quot;</tt>, <tt>&quot;${^MATCH}&quot;</tt>, and <tt>&quot;${^POSTMATCH}&quot;</tt> are available for use after matching. 
-
+</dd><dt>&quot;x&quot; and &quot;xx&quot;
+</dt><dd> Extend your pattern's legibility by permitting whitespace and comments. Details in ``/x and /xx''
+</dd><dt>&quot;p&quot;
+</dt><dd> Preserve the string matched such that <tt>&quot;${^PREMATCH}&quot;</tt>, <tt>&quot;${^MATCH}&quot;</tt>, and <tt>&quot;${^POSTMATCH}&quot;</tt> are available for use after matching. 
  In Perl 5.20 and higher this is ignored. Due to a new copy-on-write mechanism, <tt>&quot;${^PREMATCH}&quot;</tt>, <tt>&quot;${^MATCH}&quot;</tt>, and <tt>&quot;${^POSTMATCH}&quot;</tt> will be available after the match regardless of the modifier.
-<dt>&quot;a&quot;, &quot;d&quot;, &quot;l&quot;, and &quot;u&quot;
-<dd> These modifiers, all new in 5.14, affect which character-set rules (Unicode, <i>etc</i>.) are used, as described below in ``Character set modifiers''.
-<dt>&quot;n&quot;
-<dd> Prevent the grouping metacharacters <tt>&quot;()&quot;</tt> from capturing. This modifier, new in 5.22, will stop <tt>$1</tt>, <tt>$2</tt>, <i>etc</i>... from being filled in. 
-
- 
+</dd><dt>&quot;a&quot;, &quot;d&quot;, &quot;l&quot;, and &quot;u&quot;
+</dt><dd> These modifiers, all new in 5.14, affect which character-set rules (Unicode, <i>etc</i>.) are used, as described below in ``Character set modifiers''.
+</dd><dt>&quot;n&quot;
+</dt><dd> Prevent the grouping metacharacters <tt>&quot;()&quot;</tt> from capturing. This modifier, new in 5.22, will stop <tt>$1</tt>, <tt>$2</tt>, <i>etc</i>... from being filled in. 
 "hello" = ~ / (hi | hello) / ;
 #$1 is "hello"
        "hello" = ~ / (hi | hello) / n;
 #$1 is undef
- 
-
  This is equivalent to putting <tt>&quot;?:&quot;</tt> at the beginning of every capturing group: 
-
  <pre>
   &quot;hello&quot; =~ /(?:hi|hello)/; # $1 is undef
 </pre> 
-
  <tt>&quot;/n&quot;</tt> can be negated on a per-group basis. Alternatively, named captures may still be used. 
-
- 
 "hello" = ~ / (? -n : (hi | hello)) / n;
 #$1 is "hello"
        "hello" = ~ / (? &lt;greet&gt; hi | hello) / n;
 #$1 is "hello", $ + {greet } is
 #"hello"
-
-<dt>Other Modifiers
-<dd> There are a number of flags that can be found at the end of regular expression constructs that are <i>not</i> generic regular expression flags, but apply to the operation being performed, like matching or substitution (<tt>&quot;m//&quot;</tt> or <tt>&quot;s///&quot;</tt> respectively). 
-
+</dd><dt>Other Modifiers
+</dt><dd> There are a number of flags that can be found at the end of regular expression constructs that are <i>not</i> generic regular expression flags, but apply to the operation being performed, like matching or substitution (<tt>&quot;m//&quot;</tt> or <tt>&quot;s///&quot;</tt> respectively). 
  Flags described further in ``Using regular expressions in Perl'' in perlretut are: 
-
  <pre>
   c  - keep the current position during repeated matching
   g  - globally match the pattern repeatedly in the string
 </pre> 
-
  Substitution-specific modifiers described in ``s/PATTERN/REPLACEMENT/msixpodualngcer'' in perlop are: 
-
  <pre>
   e  - evaluate the right-hand side as an expression
   ee - evaluate the right side as a string then eval the result
   o  - pretend to optimize your code, but actually introduce bugs
   r  - perform non-destructive substitution and return the new value
-</pre></dl>
+</pre></dd></dl>
  
 
  Regular expression modifiers are usually written in documentation as <i>e.g.</i>, &quot;the <tt>&quot;/x&quot;</tt> modifier&quot;, even though the delimiter in question might not really be a slash. The modifiers <tt>&quot;/imnsxadlup&quot;</tt> may also be embedded within the regular expression itself using the <tt>&quot;(?...)&quot;</tt> construct, see ``Extended Patterns'' below. 
@@ -356,21 +335,21 @@ $program = ~s{
  This modifier means to use the ``Default'' native rules of the platform except when there is cause to use Unicode rules instead, as follows:
 <dl>
 <dt>1.
-<dd> the target string is encoded in <font SIZE="-1">UTF-8</font>; or
-<dt>2.
-<dd> the pattern is encoded in <font SIZE="-1">UTF-8</font>; or
-<dt>3.
-<dd> the pattern explicitly mentions a code point that is above 255 (say by <tt>&quot;\x{100}&quot;</tt>); or
-<dt>4.
-<dd> the pattern uses a Unicode name (<tt>&quot;\N{...}&quot;</tt>); or
-<dt>5.
-<dd> the pattern uses a Unicode property (<tt>&quot;\p{...}&quot;</tt> or <tt>&quot;\P{...}&quot;</tt>); or
-<dt>6.
-<dd> the pattern uses a Unicode break (<tt>&quot;\b{...}&quot;</tt> or <tt>&quot;\B{...}&quot;</tt>); or
-<dt>7.
-<dd> the pattern uses &quot;<tt>&quot;(?[ ])&quot;</tt>&quot;
-<dt>8.
-<dd> the pattern uses <tt>&quot;(*script_run: ...)&quot;</tt></dl>
+</dt><dd> the target string is encoded in <font SIZE="-1">UTF-8</font>; or
+</dd><dt>2.
+</dt><dd> the pattern is encoded in <font SIZE="-1">UTF-8</font>; or
+</dd><dt>3.
+</dt><dd> the pattern explicitly mentions a code point that is above 255 (say by <tt>&quot;\x{100}&quot;</tt>); or
+</dd><dt>4.
+</dt><dd> the pattern uses a Unicode name (<tt>&quot;\N{...}&quot;</tt>); or
+</dd><dt>5.
+</dt><dd> the pattern uses a Unicode property (<tt>&quot;\p{...}&quot;</tt> or <tt>&quot;\P{...}&quot;</tt>); or
+</dd><dt>6.
+</dt><dd> the pattern uses a Unicode break (<tt>&quot;\b{...}&quot;</tt> or <tt>&quot;\B{...}&quot;</tt>); or
+</dd><dt>7.
+</dt><dd> the pattern uses &quot;<tt>&quot;(?[ ])&quot;</tt>&quot;
+</dd><dt>8.
+</dt><dd> the pattern uses <tt>&quot;(*script_run: ...)&quot;</tt></dd></dl>
  
 
  Another mnemonic for this modifier is ``Depends'', as the rules actually used depend on various things, and as a result you can get unexpected results. See ``The ''Unicode Bug&quot;&quot; in perlunicode. The Unicode Bug has become rather infamous, leading to yet another (without swearing) name for this modifier, ``Dodgy''. 
@@ -571,21 +550,21 @@ pattern metacharacters until \E
 
 <dl>
 <dt>[1]
-<dd> See ``Bracketed Character Classes'' in perlrecharclass for details.
-<dt>[2]
-<dd> See ``<font SIZE="-1">POSIX</font> Character Classes'' in perlrecharclass for details.
-<dt>[3]
-<dd> See ``Unicode Character Properties'' in perlunicode for details
-<dt>[4]
-<dd> See ``Misc'' in perlrebackslash for details.
-<dt>[5]
-<dd> See ``Capture groups'' below for details.
-<dt>[6]
-<dd> See ``Extended Patterns'' below for details.
-<dt>[7]
-<dd> Note that <tt>&quot;\N&quot;</tt> has two meanings. When of the form <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, it matches the character or character sequence whose name is <i></i><font SIZE="-1"><i>NAME</i></font><i></i>; and similarly when of the form <tt>&quot;\N{U+</tt>hex<tt>}&quot;</tt>, it matches the character whose Unicode code point is <i>hex</i>. Otherwise it matches any character but <tt>&quot;\n&quot;</tt>.
-<dt>[8]
-<dd> See ``Extended Bracketed Character Classes'' in perlrecharclass for details.</dl>
+</dt><dd> See ``Bracketed Character Classes'' in perlrecharclass for details.
+</dd><dt>[2]
+</dt><dd> See ``<font SIZE="-1">POSIX</font> Character Classes'' in perlrecharclass for details.
+</dd><dt>[3]
+</dt><dd> See ``Unicode Character Properties'' in perlunicode for details
+</dd><dt>[4]
+</dt><dd> See ``Misc'' in perlrebackslash for details.
+</dd><dt>[5]
+</dt><dd> See ``Capture groups'' below for details.
+</dd><dt>[6]
+</dt><dd> See ``Extended Patterns'' below for details.
+</dd><dt>[7]
+</dt><dd> Note that <tt>&quot;\N&quot;</tt> has two meanings. When of the form <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, it matches the character or character sequence whose name is <i></i><font SIZE="-1"><i>NAME</i></font><i></i>; and similarly when of the form <tt>&quot;\N{U+</tt>hex<tt>}&quot;</tt>, it matches the character whose Unicode code point is <i>hex</i>. Otherwise it matches any character but <tt>&quot;\n&quot;</tt>.
+</dd><dt>[8]
+</dt><dd> See ``Extended Bracketed Character Classes'' in perlrecharclass for details.</dd></dl>
  
 
  <i>Assertions</i> 
@@ -763,13 +742,9 @@ s / ^([^] *)*([^] *) / $2 $1 / ;
  A question mark was chosen for this and for the minimal-matching construct because 1) question marks are rare in older regular expressions, and 2) whenever you see one, you should stop and ``question'' exactly what is going on. That's psychology....
 <dl>
 <dt>&quot;(?#<i>text</i>)&quot;
-<dd> A comment. The <i>text</i> is ignored. Note that Perl closes the comment as soon as it sees a <tt>&quot;)&quot;</tt>, so there is no way to put a literal <tt>&quot;)&quot;</tt> in the comment. The pattern's closing delimiter must be escaped by a backslash if it appears in the comment. 
-
+</dt><dd> A comment. The <i>text</i> is ignored. Note that Perl closes the comment as soon as it sees a <tt>&quot;)&quot;</tt>, so there is no way to put a literal <tt>&quot;)&quot;</tt> in the comment. The pattern's closing delimiter must be escaped by a backslash if it appears in the comment. 
  See ``/x'' for another way to have comments in patterns. 
-
  Note that a comment can go just about anywhere, except in the middle of an escape sequence. Examples: 
-
- 
  qr/foo(?#comment)bar/'  # Matches 'foobar'
 #The pattern below matches 'abcd', 'abccd', or 'abcccd'
  qr/abc(?#comment between literal and its quantifier){1,3}d/
@@ -783,15 +758,11 @@ s / ^([^] *)*([^] *) / $2 $1 / ;
 #Comments can be used to fold long patterns into multiple lines
  qr/First part of a long regex(?#
    )remaining part/
-
-<dt>&quot;(?adlupimnsx-imnsx)&quot;
-<dd>
-<dt>&quot;(?^alupimnsx)&quot;
-<dd> Zero or more embedded pattern-match modifiers, to be turned on (or turned off if preceded by <tt>&quot;-&quot;</tt>) for the remainder of the pattern or the remainder of the enclosing pattern group (if any). 
-
+</dd><dt>&quot;(?adlupimnsx-imnsx)&quot;
+</dt><dd>
+</dd><dt>&quot;(?^alupimnsx)&quot;
+</dt><dd> Zero or more embedded pattern-match modifiers, to be turned on (or turned off if preceded by <tt>&quot;-&quot;</tt>) for the remainder of the pattern or the remainder of the enclosing pattern group (if any). 
  This is particularly useful for dynamically-generated patterns, such as those read in from a configuration file, taken from an argument, or specified in a table somewhere. Consider the case where some patterns want to be case-sensitive and some do not: The case-insensitive ones merely need to include <tt>&quot;(?i)&quot;</tt> at the front of the pattern. For example: 
-
- 
 $pattern = "foobar";
 if (/ $pattern / i) {
 }
@@ -799,225 +770,152 @@ if (/ $pattern / i) {
 $pattern = "(?i)foobar";
 if (/ $pattern /) {
 }
- 
-
  These modifiers are restored at the end of the enclosing group. For example, 
-
  <pre>
     ( (?i) blah ) \s+ \g1
 </pre> 
-
  will match <tt>&quot;blah&quot;</tt> in any case, some spaces, and an exact (<i>including the case</i>!) repetition of the previous word, assuming the <tt>&quot;/x&quot;</tt> modifier, and no <tt>&quot;/i&quot;</tt> modifier outside this group. 
-
  These modifiers do not carry over into named subpatterns called in the enclosing group. In other words, a pattern such as <tt>&quot;((?i)(?&amp;</tt>NAME<tt>))&quot;</tt> does not change the case-sensitivity of the <i></i><font SIZE="-1"><i>NAME</i></font><i></i> pattern. 
-
  A modifier is overridden by later occurrences of this construct in the same scope containing the same modifier, so that 
-
  <pre>
     /((?im)foo(?-m)bar)/
 </pre> 
-
  matches all of <tt>&quot;foobar&quot;</tt> case insensitively, but uses <tt>&quot;/m&quot;</tt> rules for only the <tt>&quot;foo&quot;</tt> portion. The <tt>&quot;a&quot;</tt> flag overrides <tt>&quot;aa&quot;</tt> as well; likewise <tt>&quot;aa&quot;</tt> overrides <tt>&quot;a&quot;</tt>. The same goes for <tt>&quot;x&quot;</tt> and <tt>&quot;xx&quot;</tt>. Hence, in 
-
  <pre>
     /(?-x)foo/xx
 </pre> 
-
  both <tt>&quot;/x&quot;</tt> and <tt>&quot;/xx&quot;</tt> are turned off during matching <tt>&quot;foo&quot;</tt>. And in 
-
  <pre>
     /(?x)foo/x
 </pre> 
-
  <tt>&quot;/x&quot;</tt> but <font SIZE="-1">NOT</font> <tt>&quot;/xx&quot;</tt> is turned on for matching <tt>&quot;foo&quot;</tt>. (One might mistakenly think that since the inner <tt>&quot;(?x)&quot;</tt> is already in the scope of <tt>&quot;/x&quot;</tt>, that the result would effectively be the sum of them, yielding <tt>&quot;/xx&quot;</tt>. It doesn't work that way.) Similarly, doing something like <tt>&quot;(?xx-x)foo&quot;</tt> turns off all <tt>&quot;x&quot;</tt> behavior for matching <tt>&quot;foo&quot;</tt>, it is not that you subtract 1 <tt>&quot;x&quot;</tt> from 2 to get 1 <tt>&quot;x&quot;</tt> remaining. 
-
  Any of these modifiers can be set to apply globally to all regular expressions compiled within the scope of a <tt>&quot;use re&quot;</tt>. See ``'/flags' mode'' in re. 
-
  Starting in Perl 5.14, a <tt>&quot;^&quot;</tt> (caret or circumflex accent) immediately after the <tt>&quot;?&quot;</tt> is a shorthand equivalent to <tt>&quot;d-imnsx&quot;</tt>. Flags (except <tt>&quot;d&quot;</tt>) may follow the caret to override it. But a minus sign is not legal with it. 
-
  Note that the <tt>&quot;a&quot;</tt>, <tt>&quot;d&quot;</tt>, <tt>&quot;l&quot;</tt>, <tt>&quot;p&quot;</tt>, and <tt>&quot;u&quot;</tt> modifiers are special in that they can only be enabled, not disabled, and the <tt>&quot;a&quot;</tt>, <tt>&quot;d&quot;</tt>, <tt>&quot;l&quot;</tt>, and <tt>&quot;u&quot;</tt> modifiers are mutually exclusive: specifying one de-specifies the others, and a maximum of one (or two <tt>&quot;a&quot;</tt>'s) may appear in the construct. Thus, for example, <tt>&quot;(?-p)&quot;</tt> will warn when compiled under <tt>&quot;use warnings&quot;</tt>; <tt>&quot;(?-d:...)&quot;</tt> and <tt>&quot;(?dl:...)&quot;</tt> are fatal errors. 
-
  Note also that the <tt>&quot;p&quot;</tt> modifier is special in that its presence anywhere in a pattern has a global effect. 
-
  Having zero modifiers makes this a no-op (so why did you specify it, unless it's generated code), and starting in v5.30, warns under <tt>&quot;use re 'strict'&quot;</tt>.
-<dt>&quot;(?:<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(?adluimnsx-imnsx:<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(?^aluimnsx:<i>pattern</i>)&quot;
-<dd> This is for clustering, not capturing; it groups subexpressions like <tt>&quot;()&quot;</tt>, but doesn't make backreferences as <tt>&quot;()&quot;</tt> does. So 
-
+</dd><dt>&quot;(?:<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(?adluimnsx-imnsx:<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(?^aluimnsx:<i>pattern</i>)&quot;
+</dt><dd> This is for clustering, not capturing; it groups subexpressions like <tt>&quot;()&quot;</tt>, but doesn't make backreferences as <tt>&quot;()&quot;</tt> does. So 
  <pre>
     @fields = split(/\b(?:a|b|c)\b/)
 </pre> 
-
  matches the same field delimiters as 
-
  <pre>
     @fields = split(/\b(a|b|c)\b/)
 </pre> 
-
  but doesn't spit out the delimiters themselves as extra fields (even though that's the behaviour of ``split'' in perlfunc when its pattern contains capturing groups). It's also cheaper not to capture characters if you don't need to. 
-
  Any letters between <tt>&quot;?&quot;</tt> and <tt>&quot;:&quot;</tt> act as flags modifiers as with <tt>&quot;(?adluimnsx-imnsx)&quot;</tt>. For example, 
-
  <pre>
     /(?s-i:more.*than).*million/i
 </pre> 
-
  is equivalent to the more verbose 
-
  <pre>
     /(?:(?s-i)more.*than).*million/i
 </pre> 
-
  Note that any <tt>&quot;()&quot;</tt> constructs enclosed within this one will still capture unless the <tt>&quot;/n&quot;</tt> modifier is in effect. 
-
  Like the ``(?adlupimnsx-imnsx)'' construct, <tt>&quot;aa&quot;</tt> and <tt>&quot;a&quot;</tt> override each other, as do <tt>&quot;xx&quot;</tt> and <tt>&quot;x&quot;</tt>. They are not additive. So, doing something like <tt>&quot;(?xx-x:foo)&quot;</tt> turns off all <tt>&quot;x&quot;</tt> behavior for matching <tt>&quot;foo&quot;</tt>. 
-
  Starting in Perl 5.14, a <tt>&quot;^&quot;</tt> (caret or circumflex accent) immediately after the <tt>&quot;?&quot;</tt> is a shorthand equivalent to <tt>&quot;d-imnsx&quot;</tt>. Any positive flags (except <tt>&quot;d&quot;</tt>) may follow the caret, so 
-
  <pre>
     (?^x:foo)
 </pre> 
-
  is equivalent to 
-
  <pre>
     (?x-imns:foo)
 </pre> 
-
  The caret tells Perl that this cluster doesn't inherit the flags of any surrounding pattern, but uses the system defaults (<tt>&quot;d-imnsx&quot;</tt>), modified by any flags specified. 
-
  The caret allows for simpler stringification of compiled regular expressions. These look like 
-
  <pre>
     (?^:pattern)
 </pre> 
-
  with any non-default flags appearing between the caret and the colon. A test that looks at such stringification thus doesn't need to have the system default flags hard-coded in it, just the caret. If new flags are added to Perl, the meaning of the caret's expansion will change to include the default for those flags, so the test will still work, unchanged. 
-
  Specifying a negative flag after the caret is an error, as the flag is redundant. 
-
  Mnemonic for <tt>&quot;(?^...)&quot;</tt>: A fresh beginning since the usual use of a caret is to match at the beginning.
-<dt>&quot;(?|<i>pattern</i>)&quot;
-<dd> This is the ``branch reset'' pattern, which has the special property that the capture groups are numbered from the same starting point in each alternation branch. It is available starting from perl 5.10.0. 
-
+</dd><dt>&quot;(?|<i>pattern</i>)&quot;
+</dt><dd> This is the ``branch reset'' pattern, which has the special property that the capture groups are numbered from the same starting point in each alternation branch. It is available starting from perl 5.10.0. 
  Capture groups are numbered from left to right, but inside this construct the numbering is restarted for each branch. 
-
  The numbering within each branch will be as normal, and any groups following this construct will be numbered as though the construct contained only one branch, that being the one with the most capture groups in it. 
-
  This construct is useful when you want to capture one of a number of alternative matches. 
-
  Consider the following pattern. The numbers underneath show in which group the captured content will be stored. 
-
- 
 #before-- -- -- -- -- -- -- -branch - reset-- -- -- -- -- -after
     / ( a )  (?| x ( y ) z | (p (q) r) | (t) u (v) ) ( z ) /x
 # 1 2 2 3 2 3 4
- 
-
  Be careful when using the branch reset pattern in combination with named captures. Named captures are implemented as being aliases to numbered groups holding the captures, and that interferes with the implementation of the branch reset pattern. If you are using named captures in a branch reset pattern, it's best to use the same names, in the same order, in each of the alternations: 
-
  <pre>
    /(?|  (?&lt;a&gt; x ) (?&lt;b&gt; y )
       |  (?&lt;a&gt; z ) (?&lt;b&gt; w )) /x
 </pre> 
-
  Not doing so may lead to surprises: 
-
- 
   "12" =~ /(?| (?&lt;a&gt; \d+ ) | (?&lt;b&gt; \D+))/x;
   say $ + {a};
 #Prints '12' say $ + {b };
 #* Also * prints '12'.
- 
-
  The problem here is that both the group named <tt>&quot;a&quot;</tt> and the group named <tt>&quot;b&quot;</tt> are aliases for the group belonging to <tt>$1</tt>.
-<dt>Lookaround Assertions
-<dd> Lookaround assertions are zero-width patterns which match a specific pattern without including it in <tt>$&amp;</tt>. Positive assertions match when their subpattern matches, negative assertions match when their subpattern fails. Lookbehind matches text up to the current match position, lookahead matches text following the current match position.
-<dl>
-<dt>
-<dd>
+</dd><dt>Lookaround Assertions
+</dt><dd> Lookaround assertions are zero-width patterns which match a specific pattern without including it in <tt>$&amp;</tt>. Positive assertions match when their subpattern matches, negative assertions match when their subpattern fails. Lookbehind matches text up to the current match position, lookahead matches text following the current match position.
+</dd><dl>
 <dl>
 <dt>&quot;(?=<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*pla:<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*positive_lookahead:<i>pattern</i>)&quot;
-<dd> A zero-width positive lookahead assertion. For example, <tt>&quot;/\w+(?=\t)/&quot;</tt> matches a word followed by a tab, without including the tab in <tt>$&amp;</tt>. 
-
+</dt><dd>
+</dd><dt>&quot;(*pla:<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(*positive_lookahead:<i>pattern</i>)&quot;
+</dt><dd> A zero-width positive lookahead assertion. For example, <tt>&quot;/\w+(?=\t)/&quot;</tt> matches a word followed by a tab, without including the tab in <tt>$&amp;</tt>. 
  The alphabetic forms are experimental; using them yields a warning in the <tt>&quot;experimental::alpha_assertions&quot;</tt> category.
-<dt>&quot;(?!<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*nla:<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*negative_lookahead:<i>pattern</i>)&quot;
-<dd> A zero-width negative lookahead assertion. For example <tt>&quot;/foo(?!bar)/&quot;</tt> matches any occurrence of ``foo'' that isn't followed by ``bar''. Note however that lookahead and lookbehind are <font SIZE="-1">NOT</font> the same thing. You cannot use this for lookbehind. 
-
+</dd><dt>&quot;(?!<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(*nla:<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(*negative_lookahead:<i>pattern</i>)&quot;
+</dt><dd> A zero-width negative lookahead assertion. For example <tt>&quot;/foo(?!bar)/&quot;</tt> matches any occurrence of ``foo'' that isn't followed by ``bar''. Note however that lookahead and lookbehind are <font SIZE="-1">NOT</font> the same thing. You cannot use this for lookbehind. 
  If you are looking for a ``bar'' that isn't preceded by a ``foo'', <tt>&quot;/(?!foo)bar/&quot;</tt> will not do what you want. That's because the <tt>&quot;(?!foo)&quot;</tt> is just saying that the next thing cannot be ``foo''--and it's not, it's a ``bar'', so ``foobar'' will match. Use lookbehind instead (see below). 
-
  The alphabetic forms are experimental; using them yields a warning in the <tt>&quot;experimental::alpha_assertions&quot;</tt> category.
-<dt>&quot;(?&lt;=<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;\K&quot;
-<dd>
-<dt>&quot;(*plb:<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*positive_lookbehind:<i>pattern</i>)&quot;
-<dd> A zero-width positive lookbehind assertion. For example, <tt>&quot;/(?&lt;=\t)\w+/&quot;</tt> matches a word that follows a tab, without including the tab in <tt>$&amp;</tt>. 
-
+</dd><dt>&quot;(?&lt;=<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;\K&quot;
+</dt><dd>
+</dd><dt>&quot;(*plb:<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(*positive_lookbehind:<i>pattern</i>)&quot;
+</dt><dd> A zero-width positive lookbehind assertion. For example, <tt>&quot;/(?&lt;=\t)\w+/&quot;</tt> matches a word that follows a tab, without including the tab in <tt>$&amp;</tt>. 
  Prior to Perl 5.30, it worked only for fixed-width lookbehind, but starting in that release, it can handle variable lengths from 1 to 255 characters as an experimental feature. The feature is enabled automatically if you use a variable length lookbehind assertion, but will raise a warning at pattern compilation time, unless turned off, in the <tt>&quot;experimental::vlb&quot;</tt> category. This is to warn you that the exact behavior is subject to change should feedback from actual use in the field indicate to do so; or even complete removal if the problems found are not practically surmountable. You can achieve close to pre-5.30 behavior by fatalizing warnings in this category. 
-
  There is a special form of this construct, called <tt>&quot;\K&quot;</tt> (available since Perl 5.10.0), which causes the regex engine to ``keep'' everything it had matched prior to the <tt>&quot;\K&quot;</tt> and not include it in <tt>$&amp;</tt>. This effectively provides non-experimental variable-length lookbehind of any length. 
-
  And, there is a technique that can be used to handle variable length lookbehinds on earlier releases, and longer than 255 characters. It is described in &lt;<a rel="nofollow" HREF="http://www.drregex.com/2019/02/variable-length-lookbehinds-actually.html">http://www.drregex.com/2019/02/variable-length-lookbehinds-actually.html</a>&gt;. 
-
  Note that under <tt>&quot;/i&quot;</tt>, a few single characters match two or three other characters. This makes them variable length, and the 255 length applies to the maximum number of characters in the match. For example <tt>&quot;qr/\N{LATIN SMALL LETTER SHARP S}/i&quot;</tt> matches the sequence <tt>&quot;ss&quot;</tt>. Your lookbehind assertion could contain 127 Sharp S characters under <tt>&quot;/i&quot;</tt>, but adding a 128th would generate a compilation error, as that could match 256 <tt>&quot;s&quot;</tt> characters in a row. 
-
  The use of <tt>&quot;\K&quot;</tt> inside of another lookaround assertion is allowed, but the behaviour is currently not well defined. 
-
  For various reasons <tt>&quot;\K&quot;</tt> may be significantly more efficient than the equivalent <tt>&quot;(?&lt;=...)&quot;</tt> construct, and it is especially useful in situations where you want to efficiently remove something following something else in a string. For instance 
-
  <pre>
   s/(foo)bar/$1/g;
 </pre> 
-
  can be rewritten as the much more efficient 
-
  <pre>
   s/foo\Kbar//g;
 </pre> 
-
  Use of the non-greedy modifier <tt>&quot;?&quot;</tt> may not give you the expected results if it is within a capturing group within the construct. 
-
  The alphabetic forms (not including <tt>&quot;\K&quot;</tt> are experimental; using them yields a warning in the <tt>&quot;experimental::alpha_assertions&quot;</tt> category.
-<dt>&quot;(?&lt;!<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*nlb:<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*negative_lookbehind:<i>pattern</i>)&quot;
-<dd> A zero-width negative lookbehind assertion. For example <tt>&quot;/(?&lt;!bar)foo/&quot;</tt> matches any occurrence of ``foo'' that does not follow ``bar''. 
-
+</dd><dt>&quot;(?&lt;!<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(*nlb:<i>pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(*negative_lookbehind:<i>pattern</i>)&quot;
+</dt><dd> A zero-width negative lookbehind assertion. For example <tt>&quot;/(?&lt;!bar)foo/&quot;</tt> matches any occurrence of ``foo'' that does not follow ``bar''. 
  Prior to Perl 5.30, it worked only for fixed-width lookbehind, but starting in that release, it can handle variable lengths from 1 to 255 characters as an experimental feature. The feature is enabled automatically if you use a variable length lookbehind assertion, but will raise a warning at pattern compilation time, unless turned off, in the <tt>&quot;experimental::vlb&quot;</tt> category. This is to warn you that the exact behavior is subject to change should feedback from actual use in the field indicate to do so; or even complete removal if the problems found are not practically surmountable. You can achieve close to pre-5.30 behavior by fatalizing warnings in this category. 
-
  There is a technique that can be used to handle variable length lookbehinds on earlier releases, and longer than 255 characters. It is described in &lt;<a rel="nofollow" HREF="http://www.drregex.com/2019/02/variable-length-lookbehinds-actually.html">http://www.drregex.com/2019/02/variable-length-lookbehinds-actually.html</a>&gt;. 
-
  Note that under <tt>&quot;/i&quot;</tt>, a few single characters match two or three other characters. This makes them variable length, and the 255 length applies to the maximum number of characters in the match. For example <tt>&quot;qr/\N{LATIN SMALL LETTER SHARP S}/i&quot;</tt> matches the sequence <tt>&quot;ss&quot;</tt>. Your lookbehind assertion could contain 127 Sharp S characters under <tt>&quot;/i&quot;</tt>, but adding a 128th would generate a compilation error, as that could match 256 <tt>&quot;s&quot;</tt> characters in a row. 
-
  Use of the non-greedy modifier <tt>&quot;?&quot;</tt> may not give you the expected results if it is within a capturing group within the construct. 
-
- The alphabetic forms are experimental; using them yields a warning in the <tt>&quot;experimental::alpha_assertions&quot;</tt> category.</dl>
+ The alphabetic forms are experimental; using them yields a warning in the <tt>&quot;experimental::alpha_assertions&quot;</tt> category.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>&quot;(?&lt;<i>NAME</i>&gt;<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(?'<i>NAME</i>'<i>pattern</i>)&quot;
-<dd> A named capture group. Identical in every respect to normal capturing parentheses <tt>&quot;()&quot;</tt> but for the additional fact that the group can be referred to by name in various regular expression constructs (like <tt>&quot;\g{</tt>NAME<tt>}&quot;</tt>) and can be accessed by name after a successful match via <tt>&quot;%+&quot;</tt> or <tt>&quot;%-&quot;</tt>. See perlvar for more details on the <tt>&quot;%+&quot;</tt> and <tt>&quot;%-&quot;</tt> hashes. 
+</dt><dd>
+</dd><dt>&quot;(?'<i>NAME</i>'<i>pattern</i>)&quot;
+</dt><dd> A named capture group. Identical in every respect to normal capturing parentheses <tt>&quot;()&quot;</tt> but for the additional fact that the group can be referred to by name in various regular expression constructs (like <tt>&quot;\g{</tt>NAME<tt>}&quot;</tt>) and can be accessed by name after a successful match via <tt>&quot;%+&quot;</tt> or <tt>&quot;%-&quot;</tt>. See perlvar for more details on the <tt>&quot;%+&quot;</tt> and <tt>&quot;%-&quot;</tt> hashes. 
 
  If multiple distinct capture groups have the same name, then <tt>$+{</tt>NAME<tt>}</tt> will refer to the leftmost defined group in the match. 
 
@@ -1034,18 +932,18 @@ if (/ $pattern /) {
  Currently <i></i><font SIZE="-1"><i>NAME</i></font><i></i> is restricted to simple identifiers only. In other words, it must match <tt>&quot;/^[_A-Za-z][_A-Za-z0-9]*\z/&quot;</tt> or its Unicode extension (see utf8), though it isn't extended by the locale (see perllocale). 
 
  <font SIZE="-1"><b>NOTE:</b></font> In order to make things easier for programmers with experience with the Python or <font SIZE="-1">PCRE</font> regex engines, the pattern <tt>&quot;(?P&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt> may be used instead of <tt>&quot;(?&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt>; however this form does not support the use of single quotes as a delimiter for the name.
-<dt>&quot;\k&lt;<i>NAME</i>&gt;&quot;
-<dd>
-<dt>&quot;\k'<i>NAME</i>'&quot;
-<dd> Named backreference. Similar to numeric backreferences, except that the group is designated by name and not number. If multiple groups have the same name then it refers to the leftmost defined group in the current match. 
+</dd><dt>&quot;\k&lt;<i>NAME</i>&gt;&quot;
+</dt><dd>
+</dd><dt>&quot;\k'<i>NAME</i>'&quot;
+</dt><dd> Named backreference. Similar to numeric backreferences, except that the group is designated by name and not number. If multiple groups have the same name then it refers to the leftmost defined group in the current match. 
 
  It is an error to refer to a name not defined by a <tt>&quot;(?&lt;</tt>NAME<tt>&gt;)&quot;</tt> earlier in the pattern. 
 
  Both forms are equivalent. 
 
  <font SIZE="-1"><b>NOTE:</b></font> In order to make things easier for programmers with experience with the Python or <font SIZE="-1">PCRE</font> regex engines, the pattern <tt>&quot;(?P=</tt>NAME<tt>)&quot;</tt> may be used instead of <tt>&quot;\k&lt;</tt>NAME<tt>&gt;&quot;</tt>.
-<dt>&quot;(?{ <i>code</i> })&quot;
-<dd> <font SIZE="-1"><b>WARNING</b></font>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
+</dd><dt>&quot;(?{ <i>code</i> })&quot;
+</dt><dd> <font SIZE="-1"><b>WARNING</b></font>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
 
  This zero-width assertion executes any embedded Perl code. It always succeeds, and its return value is set as <tt>$^R</tt>. 
 
@@ -1158,8 +1056,8 @@ $_ = "The brown fox jumps over the lazy dog";
   /the (\S+)(?{ $color = $^N }) (\S+)(?{ $animal = $^N })/i;
   print "color = $color, animal = $animal\n";
 
-<dt>&quot;(??{ <i>code</i> })&quot;
-<dd> <font SIZE="-1"><b>WARNING</b></font>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
+</dd><dt>&quot;(??{ <i>code</i> })&quot;
+</dt><dd> <font SIZE="-1"><b>WARNING</b></font>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
 
  This is a ``postponed'' regular subexpression. It behaves in <i>exactly</i> the same way as a <tt>&quot;(?{ </tt>code<tt> })&quot;</tt> code block as described above, except that its return value, rather than being assigned to <tt>$^R</tt>, is treated as a pattern, compiled if it's a string (or used as-is if its a qr// object), then matched as if it were inserted instead of this construct. 
 
@@ -1197,8 +1095,8 @@ my $inner = '(.)\1';
  See also <tt>&quot;(?</tt>PARNO<tt>)&quot;</tt> for a different, more efficient way to accomplish the same task. 
 
  Executing a postponed regular expression too many times without consuming any input string will also result in a fatal error. The depth at which that happens is compiled into perl, so it can be changed with a custom build.
-<dt>&quot;(?<i>PARNO</i>)&quot; &quot;(?-<i>PARNO</i>)&quot; &quot;(?+<i>PARNO</i>)&quot; &quot;(?R)&quot; &quot;(?0)&quot;
-<dd> Recursive subpattern. Treat the contents of a given capture buffer in the current pattern as an independent subpattern and attempt to match it at the current position in the string. Information about capture state from the caller for things like backreferences is available to the subpattern, but capture buffers set by the subpattern are not visible to the caller. 
+</dd><dt>&quot;(?<i>PARNO</i>)&quot; &quot;(?-<i>PARNO</i>)&quot; &quot;(?+<i>PARNO</i>)&quot; &quot;(?R)&quot; &quot;(?0)&quot;
+</dt><dd> Recursive subpattern. Treat the contents of a given capture buffer in the current pattern as an independent subpattern and attempt to match it at the current position in the string. Information about capture state from the caller for things like backreferences is available to the subpattern, but capture buffers set by the subpattern are not visible to the caller. 
 
  Similar to <tt>&quot;(??{ </tt>code<tt> })&quot;</tt> except that it does not involve executing any code or potentially compiling a returned pattern string; instead it treats the part of the current pattern contained within a specified capture group as an independent pattern that must match at the current position. Also different is the treatment of capture buffers, unlike <tt>&quot;(??{ </tt>code<tt> })&quot;</tt> recursive patterns have access to their caller's match state, so one can use backreferences safely. 
 
@@ -1253,89 +1151,71 @@ my $inner = '(.)\1';
  
 
  <b>Note</b> that this pattern does not behave the same way as the equivalent <font SIZE="-1">PCRE</font> or Python construct of the same form. In Perl you can backtrack into a recursed group, in <font SIZE="-1">PCRE</font> and Python the recursed into group is treated as atomic. Also, modifiers are resolved at compile time, so constructs like <tt>&quot;(?i:(?1))&quot;</tt> or <tt>&quot;(?:(?i)(?1))&quot;</tt> do not affect how the sub-pattern will be processed.
-<dt>&quot;(?&amp;<i>NAME</i>)&quot;
-<dd> Recurse to a named subpattern. Identical to <tt>&quot;(?</tt>PARNO<tt>)&quot;</tt> except that the parenthesis to recurse to is determined by name. If multiple parentheses have the same name, then it recurses to the leftmost. 
+</dd><dt>&quot;(?&amp;<i>NAME</i>)&quot;
+</dt><dd> Recurse to a named subpattern. Identical to <tt>&quot;(?</tt>PARNO<tt>)&quot;</tt> except that the parenthesis to recurse to is determined by name. If multiple parentheses have the same name, then it recurses to the leftmost. 
 
  It is an error to refer to a name that is not declared somewhere in the pattern. 
 
  <font SIZE="-1"><b>NOTE:</b></font> In order to make things easier for programmers with experience with the Python or <font SIZE="-1">PCRE</font> regex engines the pattern <tt>&quot;(?P&gt;</tt>NAME<tt>)&quot;</tt> may be used instead of <tt>&quot;(?&amp;</tt>NAME<tt>)&quot;</tt>.
-<dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>|<i>no-pattern</i>)&quot;
-<dd>
-<dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>)&quot;
-<dd> Conditional expression. Matches <i>yes-pattern</i> if <i>condition</i> yields a true value, matches <i>no-pattern</i> otherwise. A missing pattern always matches. 
+</dd><dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>|<i>no-pattern</i>)&quot;
+</dt><dd>
+</dd><dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>)&quot;
+</dt><dd> Conditional expression. Matches <i>yes-pattern</i> if <i>condition</i> yields a true value, matches <i>no-pattern</i> otherwise. A missing pattern always matches. 
 
  <tt>&quot;(</tt>condition<tt>)&quot;</tt> should be one of:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt>an integer in parentheses
-<dd> (which is valid if the corresponding pair of parentheses matched);
-<dt>a lookahead/lookbehind/evaluate zero-width assertion;
-<dd>
-<dt>a name in angle brackets or single quotes
-<dd> (which is valid if a group with the given name matched);
-<dt>the special symbol &quot;(R)&quot;
-<dd> (true when evaluated inside of recursion or eval). Additionally the <tt>&quot;R&quot;</tt> may be followed by a number, (which will be true when evaluated when recursing inside of the appropriate group), or by <tt>&quot;&amp;</tt>NAME<tt>&quot;</tt>, in which case it will be true only when evaluated during recursion in the named group.</dl>
+</dt><dd> (which is valid if the corresponding pair of parentheses matched);
+</dd><dt>a lookahead/lookbehind/evaluate zero-width assertion;
+</dt><dd>
+</dd><dt>a name in angle brackets or single quotes
+</dt><dd> (which is valid if a group with the given name matched);
+</dd><dt>the special symbol &quot;(R)&quot;
+</dt><dd> (true when evaluated inside of recursion or eval). Additionally the <tt>&quot;R&quot;</tt> may be followed by a number, (which will be true when evaluated when recursing inside of the appropriate group), or by <tt>&quot;&amp;</tt>NAME<tt>&quot;</tt>, in which case it will be true only when evaluated during recursion in the named group.</dd></dl>
 </dl>
 
 <dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  Here's a summary of the possible predicates:
-<dl>
+</dd><dl>
 <dt>&quot;(1)&quot; &quot;(2)&quot; ...
-<dd> Checks if the numbered capturing group has matched something. Full syntax: <tt>&quot;(?(1)then|else)&quot;</tt>
-<dt>&quot;(&lt;<i>NAME</i>&gt;)&quot; &quot;('<i>NAME</i>')&quot;
-<dd> Checks if a group with the given name has matched something. Full syntax: <tt>&quot;(?(&lt;name&gt;)then|else)&quot;</tt>
-<dt>&quot;(?=...)&quot; &quot;(?!...)&quot; &quot;(?&lt;=...)&quot; &quot;(?&lt;!...)&quot;
-<dd> Checks whether the pattern matches (or does not match, for the <tt>&quot;!&quot;</tt> variants). Full syntax: <tt>&quot;(?(?=</tt>lookahead<tt>)</tt>then<tt>|</tt>else<tt>)&quot;</tt>
-<dt>&quot;(?{ <i>CODE</i> })&quot;
-<dd> Treats the return value of the code block as the condition. Full syntax: <tt>&quot;(?(?{ </tt>code<tt> })</tt>then<tt>|</tt>else<tt>)&quot;</tt>
-<dt>&quot;(R)&quot;
-<dd> Checks if the expression has been evaluated inside of recursion. Full syntax: <tt>&quot;(?(R)</tt>then<tt>|</tt>else<tt>)&quot;</tt>
-<dt>&quot;(R1)&quot; &quot;(R2)&quot; ...
-<dd> Checks if the expression has been evaluated while executing directly inside of the n-th capture group. This check is the regex equivalent of 
-
- 
+</dt><dd> Checks if the numbered capturing group has matched something. Full syntax: <tt>&quot;(?(1)then|else)&quot;</tt>
+</dd><dt>&quot;(&lt;<i>NAME</i>&gt;)&quot; &quot;('<i>NAME</i>')&quot;
+</dt><dd> Checks if a group with the given name has matched something. Full syntax: <tt>&quot;(?(&lt;name&gt;)then|else)&quot;</tt>
+</dd><dt>&quot;(?=...)&quot; &quot;(?!...)&quot; &quot;(?&lt;=...)&quot; &quot;(?&lt;!...)&quot;
+</dt><dd> Checks whether the pattern matches (or does not match, for the <tt>&quot;!&quot;</tt> variants). Full syntax: <tt>&quot;(?(?=</tt>lookahead<tt>)</tt>then<tt>|</tt>else<tt>)&quot;</tt>
+</dd><dt>&quot;(?{ <i>CODE</i> })&quot;
+</dt><dd> Treats the return value of the code block as the condition. Full syntax: <tt>&quot;(?(?{ </tt>code<tt> })</tt>then<tt>|</tt>else<tt>)&quot;</tt>
+</dd><dt>&quot;(R)&quot;
+</dt><dd> Checks if the expression has been evaluated inside of recursion. Full syntax: <tt>&quot;(?(R)</tt>then<tt>|</tt>else<tt>)&quot;</tt>
+</dd><dt>&quot;(R1)&quot; &quot;(R2)&quot; ...
+</dt><dd> Checks if the expression has been evaluated while executing directly inside of the n-th capture group. This check is the regex equivalent of 
 if ((caller(0))[3] eq 'subname') {
     ...
 }
- 
-
  In other words, it does not check the full recursion stack. 
-
  Full syntax: <tt>&quot;(?(R1)</tt>then<tt>|</tt>else<tt>)&quot;</tt>
-<dt>&quot;(R&amp;<i>NAME</i>)&quot;
-<dd> Similar to <tt>&quot;(R1)&quot;</tt>, this predicate checks to see if we're executing directly inside of the leftmost group with a given name (this is the same logic used by <tt>&quot;(?&amp;</tt>NAME<tt>)&quot;</tt> to disambiguate). It does not check the full stack, but only the name of the innermost active recursion. Full syntax: <tt>&quot;(?(R&amp;</tt>name<tt>)</tt>then<tt>|</tt>else<tt>)&quot;</tt>
-<dt>&quot;(DEFINE)&quot;
-<dd> In this case, the yes-pattern is never directly executed, and no no-pattern is allowed. Similar in spirit to <tt>&quot;(?{0})&quot;</tt> but more efficient. See below for details. Full syntax: <tt>&quot;(?(DEFINE)</tt>definitions<tt>...)&quot;</tt></dl>
+</dd><dt>&quot;(R&amp;<i>NAME</i>)&quot;
+</dt><dd> Similar to <tt>&quot;(R1)&quot;</tt>, this predicate checks to see if we're executing directly inside of the leftmost group with a given name (this is the same logic used by <tt>&quot;(?&amp;</tt>NAME<tt>)&quot;</tt> to disambiguate). It does not check the full stack, but only the name of the innermost active recursion. Full syntax: <tt>&quot;(?(R&amp;</tt>name<tt>)</tt>then<tt>|</tt>else<tt>)&quot;</tt>
+</dd><dt>&quot;(DEFINE)&quot;
+</dt><dd> In this case, the yes-pattern is never directly executed, and no no-pattern is allowed. Similar in spirit to <tt>&quot;(?{0})&quot;</tt> but more efficient. See below for details. Full syntax: <tt>&quot;(?(DEFINE)</tt>definitions<tt>...)&quot;</tt></dd></dl>
 </dl>
 
 <dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  For example: 
-
- 
     m{ ( \( )?
        [^()]+
        (?(1) \) )
      }x
- 
-
  matches a chunk of non-parentheses, possibly included in parentheses themselves. 
-
  A special form is the <tt>&quot;(DEFINE)&quot;</tt> predicate, which never executes its yes-pattern directly, and does not allow a no-pattern. This allows one to define subpatterns which will be executed only by the recursion mechanism. This way, you can define a set of regular expression rules that can be bundled into any pattern you choose. 
-
  It is recommended that for this usage you put the <font SIZE="-1">DEFINE</font> block at the end of the pattern, and that you name any subpatterns defined within it. 
-
  Also, it's worth noting that patterns defined this way probably will not be as efficient, as the optimizer is not very clever about handling them. 
-
  An example of how this might be used is as follows: 
-
  <pre>
   /(?&lt;NAME&gt;(?&amp;NAME_PAT))(?&lt;ADDR&gt;(?&amp;ADDRESS_PAT))
    (?(DEFINE)
@@ -1343,11 +1223,8 @@ if ((caller(0))[3] eq 'subname') {
      (?&lt;ADDRESS_PAT&gt;....)
    )/x
 </pre> 
-
  Note that capture groups matched inside of recursion are not accessible after the recursion returns, so the extra layer of capturing groups is necessary. Thus <tt>$+{NAME_PAT}</tt> would not be defined even though <tt>$+{NAME}</tt> would be. 
-
  Finally, keep in mind that subpatterns created inside a <font SIZE="-1">DEFINE</font> block count towards the absolute and relative number of captures, so this: 
-
  <pre>
     my @captures = &quot;a&quot; =~ /(.)                  # First capture
                            (?(DEFINE)
@@ -1355,13 +1232,12 @@ if ((caller(0))[3] eq 'subname') {
                            )/x;
     say scalar @captures;
 </pre> 
-
- Will output 2, not 1. This is particularly important if you intend to compile the definitions with the <tt>&quot;qr//&quot;</tt> operator, and later interpolate them in another pattern.</dl>
+ Will output 2, not 1. This is particularly important if you intend to compile the definitions with the <tt>&quot;qr//&quot;</tt> operator, and later interpolate them in another pattern.</dd></dl>
 
 <dt>&quot;(?&gt;<i>pattern</i>)&quot;
-<dd>
-<dt>&quot;(*atomic:<i>pattern</i>)&quot;
-<dd> An ``independent'' subexpression, one which matches the substring that a standalone <i>pattern</i> would match if anchored at the given position, and it matches <i>nothing other than this substring</i>. This construct is useful for optimizations of what would otherwise be ``eternal'' matches, because it will not backtrack (see ``Backtracking''). It may also be useful in places where the ``grab all you can, and do not give anything back'' semantic is desirable. 
+</dt><dd>
+</dd><dt>&quot;(*atomic:<i>pattern</i>)&quot;
+</dt><dd> An ``independent'' subexpression, one which matches the substring that a standalone <i>pattern</i> would match if anchored at the given position, and it matches <i>nothing other than this substring</i>. This construct is useful for optimizations of what would otherwise be ``eternal'' matches, because it will not backtrack (see ``Backtracking''). It may also be useful in places where the ``grab all you can, and do not give anything back'' semantic is desirable. 
 
  For example: <tt>&quot;^(?&gt;a*)ab&quot;</tt> will never match, since <tt>&quot;(?&gt;a*)&quot;</tt> (anchored at the beginning of string, as above) will match <i>all</i> characters <tt>&quot;a&quot;</tt> at the beginning of string, leaving no <tt>&quot;a&quot;</tt> for <tt>&quot;ab&quot;</tt> to match. In contrast, <tt>&quot;a*ab&quot;</tt> will match the same as <tt>&quot;a+b&quot;</tt>, since the match of the subgroup <tt>&quot;a*&quot;</tt> is influenced by the following group <tt>&quot;ab&quot;</tt> (see ``Backtracking''). In particular, <tt>&quot;a*&quot;</tt> inside <tt>&quot;a*ab&quot;</tt> will match fewer characters than a standalone <tt>&quot;a*&quot;</tt>, since this makes the tail match. 
 
@@ -1441,10 +1317,10 @@ m{ \(
  does not. 
 
  The alphabetic form (<tt>&quot;(*atomic:...)&quot;</tt>) is experimental; using it yields a warning in the <tt>&quot;experimental::alpha_assertions&quot;</tt> category.
-<dt>&quot;(?[ ])&quot;
-<dd> See ``Extended Bracketed Character Classes'' in perlrecharclass. 
+</dd><dt>&quot;(?[ ])&quot;
+</dt><dd> See ``Extended Bracketed Character Classes'' in perlrecharclass. 
 
- Note that this feature is currently experimental; using it yields a warning in the <tt>&quot;experimental::regex_sets&quot;</tt> category.</dl>
+ Note that this feature is currently experimental; using it yields a warning in the <tt>&quot;experimental::regex_sets&quot;</tt> category.</dd></dl>
 
 <h3>Backtracking</h3>
 
@@ -1656,31 +1532,23 @@ $y = 'ABC445';
  To summarize,
 <dl>
 <dt>&bull;
-<dd> All length 0 or length 1 sequences are script runs.
-<dt>&bull;
-<dd> A longer sequence is a script run if and only if <b>all</b> of the following conditions are met: 
-
- 
-
-<dl>
-<dt>
-<dd>
+</dt><dd> All length 0 or length 1 sequences are script runs.
+</dd><dt>&bull;
+</dt><dd> A longer sequence is a script run if and only if <b>all</b> of the following conditions are met: 
+</dd><dl>
 <dl>
 <dt>1.
-<dd> No code point in the sequence has the <tt>&quot;Script_Extension&quot;</tt> property of <tt>&quot;Unknown&quot;</tt>. 
-
+</dt><dd> No code point in the sequence has the <tt>&quot;Script_Extension&quot;</tt> property of <tt>&quot;Unknown&quot;</tt>. 
  This currently means that all code points in the sequence have been assigned by Unicode to be characters that aren't private use nor surrogate code points.
-<dt>2.
-<dd> All characters in the sequence come from the Common script and/or the Inherited script and/or a single other script. 
-
+</dd><dt>2.
+</dt><dd> All characters in the sequence come from the Common script and/or the Inherited script and/or a single other script. 
  The script of a character is determined by the <tt>&quot;Script_Extensions&quot;</tt> property as modified by <font SIZE="-1">UTS 39</font> (&lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr39/">http://unicode.org/reports/tr39/</a>&gt;), as described above.
-<dt>3.
-<dd> All decimal digits in the sequence come from the same block of 10 consecutive digits.</dl>
+</dd><dt>3.
+</dt><dd> All decimal digits in the sequence come from the same block of 10 consecutive digits.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 
 <h3>Special Backtracking Control Verbs</h3>
@@ -1698,23 +1566,15 @@ $y = 'ABC445';
  If a pattern does not contain a special backtracking verb that allows an argument, then <tt>$REGERROR</tt> and <tt>$REGMARK</tt> are not touched at all.
 <dl>
 <dt>Verbs
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
+</dd><dl>
 <dl>
 <dt>&quot;(*PRUNE)&quot; &quot;(*PRUNE:<i>NAME</i>)&quot;
-<dd> This zero-width pattern prunes the backtracking tree at the current point when backtracked into on failure. Consider the pattern <tt>&quot;/</tt>A<tt> (*PRUNE) </tt>B<tt>/&quot;</tt>, where <i>A</i> and <i>B</i> are complex patterns. Until the <tt>&quot;(*PRUNE)&quot;</tt> verb is reached, <i>A</i> may backtrack as necessary to match. Once it is reached, matching continues in <i>B</i>, which may also backtrack as necessary; however, should B not match, then no further backtracking will take place, and the pattern will fail outright at the current starting position. 
-
+</dt><dd> This zero-width pattern prunes the backtracking tree at the current point when backtracked into on failure. Consider the pattern <tt>&quot;/</tt>A<tt> (*PRUNE) </tt>B<tt>/&quot;</tt>, where <i>A</i> and <i>B</i> are complex patterns. Until the <tt>&quot;(*PRUNE)&quot;</tt> verb is reached, <i>A</i> may backtrack as necessary to match. Once it is reached, matching continues in <i>B</i>, which may also backtrack as necessary; however, should B not match, then no further backtracking will take place, and the pattern will fail outright at the current starting position. 
  The following example counts all the possible matching strings in a pattern (without actually matching any of them). 
-
- 
 'aaab' = ~ / a + b ? (? {print "$&amp;\n"; $count++ })(*FAIL) / ;
 print "Count=$count\n";
- 
-
  which produces: 
-
  <pre>
     aaab
     aaa
@@ -1727,132 +1587,87 @@ print "Count=$count\n";
     a
     Count=9
 </pre> 
-
  If we add a <tt>&quot;(*PRUNE)&quot;</tt> before the count like the following 
-
- 
 'aaab' = ~ / a + b ? (*PRUNE)(? {print "$&amp;\n"; $count++ })(*FAIL) / ;
 print "Count=$count\n";
- 
-
  we prevent backtracking and find the count of the longest matching string at each matching starting point like so: 
-
  <pre>
     aaab
     aab
     ab
     Count=3
 </pre> 
-
  Any number of <tt>&quot;(*PRUNE)&quot;</tt> assertions may be used in a pattern. 
-
  See also <tt>&quot;(?&gt;</tt>pattern<tt>)&quot;</tt> and possessive quantifiers for other ways to control backtracking. In some cases, the use of <tt>&quot;(*PRUNE)&quot;</tt> can be replaced with a <tt>&quot;(?&gt;pattern)&quot;</tt> with no functional difference; however, <tt>&quot;(*PRUNE)&quot;</tt> can be used to handle cases that cannot be expressed using a <tt>&quot;(?&gt;pattern)&quot;</tt> alone.
-<dt>&quot;(*SKIP)&quot; &quot;(*SKIP:<i>NAME</i>)&quot;
-<dd> This zero-width pattern is similar to <tt>&quot;(*PRUNE)&quot;</tt>, except that on failure it also signifies that whatever text that was matched leading up to the <tt>&quot;(*SKIP)&quot;</tt> pattern being executed cannot be part of <i>any</i> match of this pattern. This effectively means that the regex engine ``skips'' forward to this position on failure and tries to match again, (assuming that there is sufficient room to match). 
-
+</dd><dt>&quot;(*SKIP)&quot; &quot;(*SKIP:<i>NAME</i>)&quot;
+</dt><dd> This zero-width pattern is similar to <tt>&quot;(*PRUNE)&quot;</tt>, except that on failure it also signifies that whatever text that was matched leading up to the <tt>&quot;(*SKIP)&quot;</tt> pattern being executed cannot be part of <i>any</i> match of this pattern. This effectively means that the regex engine ``skips'' forward to this position on failure and tries to match again, (assuming that there is sufficient room to match). 
  The name of the <tt>&quot;(*SKIP:</tt>NAME<tt>)&quot;</tt> pattern has special significance. If a <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> was encountered while matching, then it is that position which is used as the ``skip point''. If no <tt>&quot;(*MARK)&quot;</tt> of that name was encountered, then the <tt>&quot;(*SKIP)&quot;</tt> operator has no effect. When used without a name the ``skip point'' is where the match point was when executing the <tt>&quot;(*SKIP)&quot;</tt> pattern. 
-
  Compare the following to the examples in <tt>&quot;(*PRUNE)&quot;</tt>; note the string is twice as long: 
-
- 
 'aaabaaab' = ~ / a + b ? (*SKIP)(? {print "$&amp;\n"; $count++ })(*FAIL) / ;
 print "Count=$count\n";
- 
-
  outputs 
-
  <pre>
     aaab
     aaab
     Count=2
 </pre> 
-
  Once the 'aaab' at the start of the string has matched, and the <tt>&quot;(*SKIP)&quot;</tt> executed, the next starting point will be where the cursor was when the <tt>&quot;(*SKIP)&quot;</tt> was executed.
-<dt>&quot;(*MARK:<i>NAME</i>)&quot; &quot;(*:<i>NAME</i>)&quot;
-<dd> This zero-width pattern can be used to mark the point reached in a string when a certain part of the pattern has been successfully matched. This mark may be given a name. A later <tt>&quot;(*SKIP)&quot;</tt> pattern will then skip forward to that point if backtracked into on failure. Any number of <tt>&quot;(*MARK)&quot;</tt> patterns are allowed, and the <i></i><font SIZE="-1"><i>NAME</i></font><i></i> portion may be duplicated. 
-
+</dd><dt>&quot;(*MARK:<i>NAME</i>)&quot; &quot;(*:<i>NAME</i>)&quot;
+</dt><dd> This zero-width pattern can be used to mark the point reached in a string when a certain part of the pattern has been successfully matched. This mark may be given a name. A later <tt>&quot;(*SKIP)&quot;</tt> pattern will then skip forward to that point if backtracked into on failure. Any number of <tt>&quot;(*MARK)&quot;</tt> patterns are allowed, and the <i></i><font SIZE="-1"><i>NAME</i></font><i></i> portion may be duplicated. 
  In addition to interacting with the <tt>&quot;(*SKIP)&quot;</tt> pattern, <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> can be used to ``label'' a pattern branch, so that after matching, the program can determine which branches of the pattern were involved in the match. 
-
  When a match is successful, the <tt>$REGMARK</tt> variable will be set to the name of the most recently executed <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> that was involved in the match. 
-
  This can be used to determine which branch of a pattern was matched without using a separate capture group for each branch, which in turn can result in a performance improvement, as perl cannot optimize <tt>&quot;/(?:(x)|(y)|(z))/&quot;</tt> as efficiently as something like <tt>&quot;/(?:x(*MARK:x)|y(*MARK:y)|z(*MARK:z))/&quot;</tt>. 
-
  When a match has failed, and unless another verb has been involved in failing the match and has provided its own name to use, the <tt>$REGERROR</tt> variable will be set to the name of the most recently executed <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt>. 
-
  See ``(*SKIP)'' for more details. 
-
  As a shortcut <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> can be written <tt>&quot;(*:</tt>NAME<tt>)&quot;</tt>.
-<dt>&quot;(*THEN)&quot; &quot;(*THEN:<i>NAME</i>)&quot;
-<dd> This is similar to the ``cut group'' operator <tt>&quot;::&quot;</tt> from Perl 6. Like <tt>&quot;(*PRUNE)&quot;</tt>, this verb always matches, and when backtracked into on failure, it causes the regex engine to try the next alternation in the innermost enclosing group (capturing or otherwise) that has alternations. The two branches of a <tt>&quot;(?(</tt>condition<tt>)</tt>yes-pattern<tt>|</tt>no-pattern<tt>)&quot;</tt> do not count as an alternation, as far as <tt>&quot;(*THEN)&quot;</tt> is concerned. 
-
+</dd><dt>&quot;(*THEN)&quot; &quot;(*THEN:<i>NAME</i>)&quot;
+</dt><dd> This is similar to the ``cut group'' operator <tt>&quot;::&quot;</tt> from Perl 6. Like <tt>&quot;(*PRUNE)&quot;</tt>, this verb always matches, and when backtracked into on failure, it causes the regex engine to try the next alternation in the innermost enclosing group (capturing or otherwise) that has alternations. The two branches of a <tt>&quot;(?(</tt>condition<tt>)</tt>yes-pattern<tt>|</tt>no-pattern<tt>)&quot;</tt> do not count as an alternation, as far as <tt>&quot;(*THEN)&quot;</tt> is concerned. 
  Its name comes from the observation that this operation combined with the alternation operator (<tt>&quot;|&quot;</tt>) can be used to create what is essentially a pattern-based if/then/else block: 
-
  <pre>
   ( COND (*THEN) FOO | COND2 (*THEN) BAR | COND3 (*THEN) BAZ )
 </pre> 
-
  Note that if this operator is used and <font SIZE="-1">NOT</font> inside of an alternation then it acts exactly like the <tt>&quot;(*PRUNE)&quot;</tt> operator. 
-
  <pre>
   / A (*PRUNE) B /
 </pre> 
-
  is the same as 
-
  <pre>
   / A (*THEN) B /
 </pre> 
-
  but 
-
  <pre>
   / ( A (*THEN) B | C ) /
 </pre> 
-
  is not the same as 
-
  <pre>
   / ( A (*PRUNE) B | C ) /
 </pre> 
-
  as after matching the <i>A</i> but failing on the <i>B</i> the <tt>&quot;(*THEN)&quot;</tt> verb will backtrack and try <i>C</i>; but the <tt>&quot;(*PRUNE)&quot;</tt> verb will simply fail.
-<dt>&quot;(*COMMIT)&quot; &quot;(*COMMIT:<i>arg</i>)&quot;
-<dd> This is the Perl 6 ``commit pattern'' <tt>&quot;&lt;commit&gt;&quot;</tt> or <tt>&quot;:::&quot;</tt>. It's a zero-width pattern similar to <tt>&quot;(*SKIP)&quot;</tt>, except that when backtracked into on failure it causes the match to fail outright. No further attempts to find a valid match by advancing the start pointer will occur again. For example, 
-
- 
+</dd><dt>&quot;(*COMMIT)&quot; &quot;(*COMMIT:<i>arg</i>)&quot;
+</dt><dd> This is the Perl 6 ``commit pattern'' <tt>&quot;&lt;commit&gt;&quot;</tt> or <tt>&quot;:::&quot;</tt>. It's a zero-width pattern similar to <tt>&quot;(*SKIP)&quot;</tt>, except that when backtracked into on failure it causes the match to fail outright. No further attempts to find a valid match by advancing the start pointer will occur again. For example, 
 'aaabaaab' = ~ / a + b ? (*COMMIT)(? {print "$&amp;\n"; $count++ })(*FAIL) / ;
 print "Count=$count\n";
- 
-
  outputs 
-
  <pre>
     aaab
     Count=1
 </pre> 
-
  In other words, once the <tt>&quot;(*COMMIT)&quot;</tt> has been entered, and if the pattern does not match, the regex engine will not try any further matching on the rest of the string.
-<dt>&quot;(*FAIL)&quot; &quot;(*F)&quot; &quot;(*FAIL:<i>arg</i>)&quot;
-<dd> This pattern matches nothing and always fails. It can be used to force the engine to backtrack. It is equivalent to <tt>&quot;(?!)&quot;</tt>, but easier to read. In fact, <tt>&quot;(?!)&quot;</tt> gets optimised into <tt>&quot;(*FAIL)&quot;</tt> internally. You can provide an argument so that if the match fails because of this <tt>&quot;FAIL&quot;</tt> directive the argument can be obtained from <tt>$REGERROR</tt>. 
-
+</dd><dt>&quot;(*FAIL)&quot; &quot;(*F)&quot; &quot;(*FAIL:<i>arg</i>)&quot;
+</dt><dd> This pattern matches nothing and always fails. It can be used to force the engine to backtrack. It is equivalent to <tt>&quot;(?!)&quot;</tt>, but easier to read. In fact, <tt>&quot;(?!)&quot;</tt> gets optimised into <tt>&quot;(*FAIL)&quot;</tt> internally. You can provide an argument so that if the match fails because of this <tt>&quot;FAIL&quot;</tt> directive the argument can be obtained from <tt>$REGERROR</tt>. 
  It is probably useful only when combined with <tt>&quot;(?{})&quot;</tt> or <tt>&quot;(??{})&quot;</tt>.
-<dt>&quot;(*ACCEPT)&quot; &quot;(*ACCEPT:<i>arg</i>)&quot;
-<dd> This pattern matches nothing and causes the end of successful matching at the point at which the <tt>&quot;(*ACCEPT)&quot;</tt> pattern was encountered, regardless of whether there is actually more to match in the string. When inside of a nested pattern, such as recursion, or in a subpattern dynamically generated via <tt>&quot;(??{})&quot;</tt>, only the innermost pattern is ended immediately. 
-
+</dd><dt>&quot;(*ACCEPT)&quot; &quot;(*ACCEPT:<i>arg</i>)&quot;
+</dt><dd> This pattern matches nothing and causes the end of successful matching at the point at which the <tt>&quot;(*ACCEPT)&quot;</tt> pattern was encountered, regardless of whether there is actually more to match in the string. When inside of a nested pattern, such as recursion, or in a subpattern dynamically generated via <tt>&quot;(??{})&quot;</tt>, only the innermost pattern is ended immediately. 
  If the <tt>&quot;(*ACCEPT)&quot;</tt> is inside of capturing groups then the groups are marked as ended at the point at which the <tt>&quot;(*ACCEPT)&quot;</tt> was encountered. For instance: 
-
  <pre>
   'AB' =~ /(A (A|B(*ACCEPT)|C) D)(E)/x;
 </pre> 
-
  will match, and <tt>$1</tt> will be <tt>&quot;AB&quot;</tt> and <tt>$2</tt> will be <tt>&quot;B&quot;</tt>, <tt>$3</tt> will not be set. If another branch in the inner parentheses was matched, such as in the string '<font SIZE="-1">ACDE</font>', then the <tt>&quot;D&quot;</tt> and <tt>&quot;E&quot;</tt> would have to be matched as well. 
-
- You can provide an argument, which will be available in the var <tt>$REGMARK</tt> after the match completes.</dl>
+ You can provide an argument, which will be available in the var <tt>$REGMARK</tt> after the match completes.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 
 <h3>Warning on \1 Instead of $1</h3>
@@ -1977,35 +1792,32 @@ print "match: &lt;$&amp;&gt;\n" while 'foo' = ~m{o ? } xg;
  Again, for elementary pieces there is no such question, since at most one match at a given position is possible. This section describes the notion of better/worse for combining operators. In the description below <tt>&quot;S&quot;</tt> and <tt>&quot;T&quot;</tt> are regular subexpressions.
 <dl>
 <dt>&quot;ST&quot;
-<dd> Consider two possible matches, <tt>&quot;AB&quot;</tt> and <tt>&quot;A'B'&quot;</tt>, <tt>&quot;A&quot;</tt> and <tt>&quot;A'&quot;</tt> are substrings which can be matched by <tt>&quot;S&quot;</tt>, <tt>&quot;B&quot;</tt> and <tt>&quot;B'&quot;</tt> are substrings which can be matched by <tt>&quot;T&quot;</tt>. 
-
+</dt><dd> Consider two possible matches, <tt>&quot;AB&quot;</tt> and <tt>&quot;A'B'&quot;</tt>, <tt>&quot;A&quot;</tt> and <tt>&quot;A'&quot;</tt> are substrings which can be matched by <tt>&quot;S&quot;</tt>, <tt>&quot;B&quot;</tt> and <tt>&quot;B'&quot;</tt> are substrings which can be matched by <tt>&quot;T&quot;</tt>. 
  If <tt>&quot;A&quot;</tt> is a better match for <tt>&quot;S&quot;</tt> than <tt>&quot;A'&quot;</tt>, <tt>&quot;AB&quot;</tt> is a better match than <tt>&quot;A'B'&quot;</tt>. 
-
  If <tt>&quot;A&quot;</tt> and <tt>&quot;A'&quot;</tt> coincide: <tt>&quot;AB&quot;</tt> is a better match than <tt>&quot;AB'&quot;</tt> if <tt>&quot;B&quot;</tt> is a better match for <tt>&quot;T&quot;</tt> than <tt>&quot;B'&quot;</tt>.
-<dt>&quot;S|T&quot;
-<dd> When <tt>&quot;S&quot;</tt> can match, it is a better match than when only <tt>&quot;T&quot;</tt> can match. 
-
+</dd><dt>&quot;S|T&quot;
+</dt><dd> When <tt>&quot;S&quot;</tt> can match, it is a better match than when only <tt>&quot;T&quot;</tt> can match. 
  Ordering of two matches for <tt>&quot;S&quot;</tt> is the same as for <tt>&quot;S&quot;</tt>. Similar for two matches for <tt>&quot;T&quot;</tt>.
-<dt>&quot;S{REPEAT_COUNT}&quot;
-<dd> Matches as <tt>&quot;SSS...S&quot;</tt> (repeated as many times as necessary).
-<dt>&quot;S{min,max}&quot;
-<dd> Matches as <tt>&quot;S{max}|S{max-1}|...|S{min+1}|S{min}&quot;</tt>.
-<dt>&quot;S{min,max}?&quot;
-<dd> Matches as <tt>&quot;S{min}|S{min+1}|...|S{max-1}|S{max}&quot;</tt>.
-<dt>&quot;S?&quot;, &quot;S*&quot;, &quot;S+&quot;
-<dd> Same as <tt>&quot;S{0,1}&quot;</tt>, <tt>&quot;S{0,BIG_NUMBER}&quot;</tt>, <tt>&quot;S{1,BIG_NUMBER}&quot;</tt> respectively.
-<dt>&quot;S??&quot;, &quot;S*?&quot;, &quot;S+?&quot;
-<dd> Same as <tt>&quot;S{0,1}?&quot;</tt>, <tt>&quot;S{0,BIG_NUMBER}?&quot;</tt>, <tt>&quot;S{1,BIG_NUMBER}?&quot;</tt> respectively.
-<dt>&quot;(?&gt;S)&quot;
-<dd> Matches the best match for <tt>&quot;S&quot;</tt> and only that.
-<dt>&quot;(?=S)&quot;, &quot;(?&lt;=S)&quot;
-<dd> Only the best match for <tt>&quot;S&quot;</tt> is considered. (This is important only if <tt>&quot;S&quot;</tt> has capturing parentheses, and backreferences are used somewhere else in the whole regular expression.)
-<dt>&quot;(?!S)&quot;, &quot;(?&lt;!S)&quot;
-<dd> For this grouping operator there is no need to describe the ordering, since only whether or not <tt>&quot;S&quot;</tt> can match is important.
-<dt>&quot;(??{ <i>EXPR</i> })&quot;, &quot;(?<i>PARNO</i>)&quot;
-<dd> The ordering is the same as for the regular expression which is the result of <i></i><font SIZE="-1"><i>EXPR</i></font><i></i>, or the pattern contained by capture group <i></i><font SIZE="-1"><i>PARNO</i></font><i></i>.
-<dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>|<i>no-pattern</i>)&quot;
-<dd> Recall that which of <i>yes-pattern</i> or <i>no-pattern</i> actually matches is already determined. The ordering of the matches is the same as for the chosen subexpression.</dl>
+</dd><dt>&quot;S{REPEAT_COUNT}&quot;
+</dt><dd> Matches as <tt>&quot;SSS...S&quot;</tt> (repeated as many times as necessary).
+</dd><dt>&quot;S{min,max}&quot;
+</dt><dd> Matches as <tt>&quot;S{max}|S{max-1}|...|S{min+1}|S{min}&quot;</tt>.
+</dd><dt>&quot;S{min,max}?&quot;
+</dt><dd> Matches as <tt>&quot;S{min}|S{min+1}|...|S{max-1}|S{max}&quot;</tt>.
+</dd><dt>&quot;S?&quot;, &quot;S*&quot;, &quot;S+&quot;
+</dt><dd> Same as <tt>&quot;S{0,1}&quot;</tt>, <tt>&quot;S{0,BIG_NUMBER}&quot;</tt>, <tt>&quot;S{1,BIG_NUMBER}&quot;</tt> respectively.
+</dd><dt>&quot;S??&quot;, &quot;S*?&quot;, &quot;S+?&quot;
+</dt><dd> Same as <tt>&quot;S{0,1}?&quot;</tt>, <tt>&quot;S{0,BIG_NUMBER}?&quot;</tt>, <tt>&quot;S{1,BIG_NUMBER}?&quot;</tt> respectively.
+</dd><dt>&quot;(?&gt;S)&quot;
+</dt><dd> Matches the best match for <tt>&quot;S&quot;</tt> and only that.
+</dd><dt>&quot;(?=S)&quot;, &quot;(?&lt;=S)&quot;
+</dt><dd> Only the best match for <tt>&quot;S&quot;</tt> is considered. (This is important only if <tt>&quot;S&quot;</tt> has capturing parentheses, and backreferences are used somewhere else in the whole regular expression.)
+</dd><dt>&quot;(?!S)&quot;, &quot;(?&lt;!S)&quot;
+</dt><dd> For this grouping operator there is no need to describe the ordering, since only whether or not <tt>&quot;S&quot;</tt> can match is important.
+</dd><dt>&quot;(??{ <i>EXPR</i> })&quot;, &quot;(?<i>PARNO</i>)&quot;
+</dt><dd> The ordering is the same as for the regular expression which is the result of <i></i><font SIZE="-1"><i>EXPR</i></font><i></i>, or the pattern contained by capture group <i></i><font SIZE="-1"><i>PARNO</i></font><i></i>.
+</dd><dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>|<i>no-pattern</i>)&quot;
+</dt><dd> Recall that which of <i>yes-pattern</i> or <i>no-pattern</i> actually matches is already determined. The ordering of the matches is the same as for the chosen subexpression.</dd></dl>
  
 
  The above recipes describe the ordering of matches <i>at a given position</i>. One more rule is needed to understand how a match is determined for the whole regular expression: a match at an earlier position is always better than a match at a later position.
@@ -2084,11 +1896,11 @@ $re = customre::convert $re;
  As of Perl 5.10.0, Perl supports several Python/PCRE-specific extensions to the regex syntax. While Perl programmers are encouraged to use the Perl-specific syntax, the following are also accepted:
 <dl>
 <dt>&quot;(?P&lt;<i>NAME</i>&gt;<i>pattern</i>)&quot;
-<dd> Define a named capture group. Equivalent to <tt>&quot;(?&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt>.
-<dt>&quot;(?P=<i>NAME</i>)&quot;
-<dd> Backreference to a named capture group. Equivalent to <tt>&quot;\g{</tt>NAME<tt>}&quot;</tt>.
-<dt>&quot;(?P&gt;<i>NAME</i>)&quot;
-<dd> Subroutine call to a named capture group. Equivalent to <tt>&quot;(?&amp;</tt>NAME<tt>)&quot;</tt>.</dl>
+</dt><dd> Define a named capture group. Equivalent to <tt>&quot;(?&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt>.
+</dd><dt>&quot;(?P=<i>NAME</i>)&quot;
+</dt><dd> Backreference to a named capture group. Equivalent to <tt>&quot;\g{</tt>NAME<tt>}&quot;</tt>.
+</dd><dt>&quot;(?P&gt;<i>NAME</i>)&quot;
+</dt><dd> Subroutine call to a named capture group. Equivalent to <tt>&quot;(?&amp;</tt>NAME<tt>)&quot;</tt>.</dd></dl>
 
 <h2>BUGS</h2>
 
@@ -2125,6 +1937,6 @@ $re = customre::convert $re;
 
 
 <dt><a HREF="#lbAR">BUGS</a>
-<dd>
-<dt><a HREF="#lbAS">SEE ALSO</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAS">SEE ALSO</a>
+</dt><dd></dd></dl>

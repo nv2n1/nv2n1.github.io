@@ -20,10 +20,10 @@ gotst[options][gfile][ofile][lfile]
 <p> Since <code>gotst</code> performs sequentially the symbolic factorization of matrix <i>gfile</i> in order to compute fill-in and operation count numbers, this program can take a long time or even run out of memory, when applied to very large graphs.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-V</code></p>
-<dd> Display program version and copyright.</dl>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Display statistics on ordering brol.ord of graph brol.grf: </p>
 <pre>

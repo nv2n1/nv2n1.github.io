@@ -15,10 +15,10 @@ description: "voikkovfstc – compiler for Varissuo finite state transducers"
 <p> <code>voikkovfstc</code> is a compiler for Varissuo finite state transducers that are used as dictionaries for libvoikko, a library of language tools for Finnish and other languages. The compiler reads the transducer from stdin in unweighted AT&amp;T format. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o filename</code></p>
-<dd> Specify name for output file.</p>
-<dt><code>-f format</code></p>
-<dd> Specify format for output file. Possible formats are &#8216;be&#8217; (big endian), &#8216;le&#8217; (little endian) or &#8216;native&#8217; (use the endianess of the host). Default is &#8216;le&#8217;.</dl>
+<dt><code>-o filename</code></dt>
+<dd> Specify name for output file.</dd>
+<dt><code>-f format</code></dt>
+<dd> Specify format for output file. Possible formats are &#8216;be&#8217; (big endian), &#8216;le&#8217; (little endian) or &#8216;native&#8217; (use the endianess of the host). Default is &#8216;le&#8217;.</dd></dl>
 <h2>AUTHOR</h2>
 <p> voikkovfstc and this manual page were written by Harri Pitk&auml;nen (hatapitk [at] iki.fi). </p>
 <h2>Index</h2>

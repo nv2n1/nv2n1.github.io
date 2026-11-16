@@ -14,12 +14,10 @@ struct pam_message {
     int msg_style;
     const char *msg;
 };
-
 struct pam_response {
     char *resp;
     int resp_retcode;
 };
-
 struct pam_conv {
     int (*conv)(int num_msg, const struct pam_message **msg,
                 struct pam_response **resp, void *appdata_ptr);
@@ -34,37 +32,37 @@ struct pam_conv {
 <p> Each message can have one of four types, specified by the <i>msg_style</i> member of <i>struct pam_message</i>: </p>
 <p> PAM_PROMPT_ECHO_OFF</p>
 <dl>
-<dd>Obtain a string without echoing any text.</dl>
+<dd>Obtain a string without echoing any text.</dd></dl>
 <p> PAM_PROMPT_ECHO_ON</p>
 <dl>
-<dd>Obtain a string whilst echoing text.</dl>
+<dd>Obtain a string whilst echoing text.</dd></dl>
 <p> PAM_ERROR_MSG</p>
 <dl>
-<dd>Display an error message.</dl>
+<dd>Display an error message.</dd></dl>
 <p> PAM_TEXT_INFO</p>
 <dl>
-<dd>Display some text.</dl>
+<dd>Display some text.</dd></dl>
 <p> The point of having an array of messages is that it becomes possible to pass a number of things to the application in a single call from the module. It can also be convenient for the application that related things come at once: a windows based application can then present a single form with many messages/prompts on at once. </p>
 <p> In passing, it is worth noting that there is a descrepency between the way Linux-PAM handles the const struct pam_message **msg conversation function argument from the way that Solaris&#8217; PAM (and derivitives, known to include HP/UX, are there others?) does. Linux-PAM interprets the msg argument as entirely equivalent to the following prototype const struct pam_message *msg[] (which, in spirit, is consistent with the commonly used prototypes for argv argument to the familiar main() function: char **argv; and char *argv[]). Said another way Linux-PAM interprets the msg argument as a pointer to an array of num_msg read only &#8216;struct pam_message&#8217; pointers. Solaris&#8217; PAM implementation interprets this argument as a pointer to a pointer to an array of num_msg pam_message structures. Fortunately, perhaps, for most module/application developers when num_msg has a value of one these two definitions are entirely equivalent. Unfortunately, casually raising this number to two has led to unanticipated compatibility problems. </p>
 <p> For what its worth the two known module writer work-arounds for trying to maintain source level compatibility with both PAM implementations are: </p>
 <dl>
-<dd>&bull; never call the conversation function with num_msg greater than one.</dl>
+<dd>&bull; never call the conversation function with num_msg greater than one.</dd></dl>
 <dl>
-<dd>&bull; set up msg as doubly referenced so both types of conversation function can find the messages. That is, make </p>
+<dd>&bull; set up msg as doubly referenced so both types of conversation function can find the messages. That is, make </dd>
 <dl>
 <dd>
 <pre> msg[n] = &amp; (( *msg )[n])</pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>Return Values</h2>
 <p>PAM_BUF_ERR</p>
 <dl>
-<dd>Memory buffer error.</dl>
+<dd>Memory buffer error.</dd></dl>
 <p> PAM_CONV_ERR</p>
 <dl>
-<dd>Conversation failure. The application should not set <i>*resp</i>.</dl>
+<dd>Conversation failure. The application should not set <i>*resp</i>.</dd></dl>
 <p> PAM_SUCCESS</p>
 <dl>
-<dd>Success.</dl>
+<dd>Success.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-pam_start/">pam_start</a></code>(3), <code><a href="/docs/linux/man/3-pam_set_item/">pam_set_item</a></code>(3), <code><a href="/docs/linux/man/3-pam_get_item/">pam_get_item</a></code>(3), <code><a href="/docs/linux/man/3-pam_strerror/">pam_strerror</a></code>(3), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8) </p>

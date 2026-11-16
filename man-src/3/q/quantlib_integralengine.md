@@ -18,7 +18,7 @@ description: "QuantLib::IntegralEngine – Pricing engine for European vanilla o
 <p>Pricing engine for European vanilla options using integral approach. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>define tolerance for calculate()</dl>
+<dd>define tolerance for calculate()</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>EquityOption.cpp</code>. </p>
 <h2>Author</h2>

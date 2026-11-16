@@ -10,10 +10,10 @@ description: "rndc.conf – rndc configuration file"
 <p>rndc.conf &#8211; rndc configuration file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>rndc.conf</code></dl>
+<dt> <code>rndc.conf</code></dt></dl>
 <h2>Description</h2>
 <p><i>rndc.conf</i></p>
-<dd>is the configuration file for <code>rndc</code>, the BIND 9 name server control utility. This file has a similar structure and syntax to <i>named.conf</i>. Statements are enclosed in braces and terminated with a semi-colon. Clauses in the statements are also semi-colon terminated. The usual comment styles are supported: </p>
+<dd>is the configuration file for <code>rndc</code>, the BIND 9 name server control utility. This file has a similar structure and syntax to <i>named.conf</i>. Statements are enclosed in braces and terminated with a semi-colon. Clauses in the statements are also semi-colon terminated. The usual comment styles are supported: </dd>
 <p> C style: /* */ </p>
 <p> C++ style: // to end of line </p>
 <p> Unix style: # to end of line </p>
@@ -29,34 +29,34 @@ description: "rndc.conf – rndc configuration file"
  default-server localhost;
  default-key samplekey;
  };</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre> server localhost {
  key samplekey;
  };</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre> server testserver {
  key testkey;
  addresses { localhost port 5353; };
  };</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre> key samplekey {
  algorithm hmac-md5;
  secret &quot;6FMfj43Osz4lyb24OIe2iGEz9lf1llJO+lz&quot;;
  };</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre> key testkey {
  algorithm hmac-md5;
  secret &quot;R3HI8P6BKw9ZwXwN3VZKuQ==&quot;;
  };</pre>
-</dl>
+</dd></dl>
 <p> In the above example, <code>rndc</code> will by default use the server at localhost (127.0.0.1) and the key called samplekey. Commands to the localhost server will use the samplekey key, which must also be defined in the server&#8217;s configuration file with the same name and secret. The key statement indicates that samplekey uses the HMAC-MD5 algorithm and its secret clause contains the base-64 encoding of the HMAC-MD5 secret enclosed in double quotes. </p>
 <p> If <code>rndc -s testserver</code> is used then <code>rndc</code> will connect to server on localhost port 5353 using the key testkey. </p>
 <p> To generate a random secret with <code>rndc-confgen</code>: </p>

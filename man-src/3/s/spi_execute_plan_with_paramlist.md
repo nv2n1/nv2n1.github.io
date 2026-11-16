@@ -18,16 +18,16 @@ description: "SPI_execute_plan_with_paramlist – execute a statement prepared b
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>prepared statement (returned by <code>SPI_prepare</code>)</dl>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
 <p> ParamListInfo <i>params</i></p>
 <dl COMPACT>
-<dd>data structure containing parameter types and values; NULL if none</dl>
+<dd>data structure containing parameter types and values; NULL if none</dd></dl>
 <p> bool <i>read_only</i></p>
 <dl COMPACT>
-<dd>true for read-only execution</dl>
+<dd>true for read-only execution</dd></dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>maximum number of rows to return, or 0 for no limit</dl>
+<dd>maximum number of rows to return, or 0 for no limit</dd></dl>
 <h2>Return Value</h2>
 <p>The return value is the same as for <code>SPI_execute_plan</code>. </p>
 <p> <i>SPI_processed</i> and <i>SPI_tuptable</i> are set as in <code>SPI_execute_plan</code> if successful.</p>

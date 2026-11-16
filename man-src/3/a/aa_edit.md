@@ -22,18 +22,18 @@ description: "aa_edit – Simple interactive line editor."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int x</code></p>
-<dd> X coordinate of the edited text.</p>
-<dt><code>int y</code></p>
-<dd> Y coordinate of the edited text.</p>
-<dt><code>int size</code></p>
-<dd> Length of the editor window.</p>
-<dt><code>char *s</code></p>
-<dd> Buffer to edit (containing default value).</p>
-<dt><code>int maxsize</code></p>
-<dd> Size of the buffer.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int x</code></dt>
+<dd> X coordinate of the edited text.</dd>
+<dt><code>int y</code></dt>
+<dd> Y coordinate of the edited text.</dd>
+<dt><code>int size</code></dt>
+<dd> Length of the editor window.</dd>
+<dt><code>char *s</code></dt>
+<dd> Buffer to edit (containing default value).</dd>
+<dt><code>int maxsize</code></dt>
+<dd> Size of the buffer.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function produces the simple interactive line editor that can be used by AA-lib programs to input strings.</p>
 <h2>SEE ALSO</h2>

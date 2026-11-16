@@ -20,16 +20,16 @@ description: "maildir – E-mail directory"
 <p> Folders are not physically nested. A folder subdirectory, such as .Sent does not itself contain any subfolders. The main maildir contains a single, flat list of subfolders. These folders are logically nested, and periods serve to separate folder hierarchies. For example, .Sent.2002 is considered to be a subfolder called &#8220;2002&#8221; which is a subfolder of &#8220;Sent&#8221;. </p>
 <p> <font SIZE="+1"> <code>Folder name encoding</code></p>
 <dl>
-<dd>Folder names can contain any Unicode character, except for control characters. US-ASCII characters, U+0x0020 &#8211; U+0x007F, except for the period, forward-slash, and ampersand characters (U+0x002E, U+0x002F, and U+0x0026) represent themselves. The ampersand is represent by the two character sequence &#8220;&amp;-&#8220;. The period, forward slash, and non US-ASCII Unicode characters are represented using the UTF-7 character set, and encoded with a modified form of base64-encoding. </p>
+<dd>Folder names can contain any Unicode character, except for control characters. US-ASCII characters, U+0x0020 &#8211; U+0x007F, except for the period, forward-slash, and ampersand characters (U+0x002E, U+0x002F, and U+0x0026) represent themselves. The ampersand is represent by the two character sequence &#8220;&amp;-&#8220;. The period, forward slash, and non US-ASCII Unicode characters are represented using the UTF-7 character set, and encoded with a modified form of base64-encoding. </dd>
 <p> The &#8220;&amp;&#8221; character starts the modified base64-encoded sequence; the sequence is terminated by the &#8220;-&#8221; character. The sequence of 16-bit Unicode characters is written in big-endian order, and encoded using the base64-encoding method described in section 5.2 of m[blue]<code>RFC 1521</code>m[]</font><font SIZE="-1">[2]</font><font SIZE="+1">, with the following modifications: </p>
 <dl>
-<dd>&bull; The &#8220;=&#8221; padding character is omitted. When decoding, an incomplete 16-bit character is discarded.</dl>
+<dd>&bull; The &#8220;=&#8221; padding character is omitted. When decoding, an incomplete 16-bit character is discarded.</dd></dl>
 <dl>
-<dd>&bull; The comma character, &#8220;,&#8221; is used in place of the &#8220;/&#8221; character in the base64 alphabet.</dl>
+<dd>&bull; The comma character, &#8220;,&#8221; is used in place of the &#8220;/&#8221; character in the base64 alphabet.</dd></dl>
 <p> For example, the word &#8220;Resume&#8221; with both &quot;e&quot;s being the e-acute character, U+0x00e9, is encoded as &#8220;R&amp;AOk-sum&amp;AOk-&#8221; (so a folder of that name would be a maildir subdirectory called &#8220;.R&amp;AOk-sum&amp;AOk-&#8220;).</dl>
 <p> </font><font SIZE="+2"> <code>Other maildir contents</code></p>
 <dl>
-<dd>Software that uses maildirs may also create additional files besides the tmp, new, and cur subdirectories &#8212; in the main maildir or a subfolder &#8212; for its own purposes.</dl>
+<dd>Software that uses maildirs may also create additional files besides the tmp, new, and cur subdirectories &#8212; in the main maildir or a subfolder &#8212; for its own purposes.</dd></dl>
 <p> </font></p>
 <h3>Messages</h3>
 <p>E-mail messages are stored in separate, individual files, one E-mail message per file. The tmp subdirectory temporarily stores E-mail messages that are in the process of being delivered to this maildir. tmp may also store other kinds of temporary files, as long as they are created in the same way that message files are created in tmp. The new subdirectory stores messages that have been delivered to this maildir, but have not yet been seen by any mail application. The cur subdirectory stores messages that have already been seen by mail applications.</p>
@@ -56,12 +56,12 @@ description: "maildir – E-mail directory"
 <dl>
 <dd>
 <pre><code>maildirmake -q 5000000S,1000C ./Maildir</code></pre>
-</dl>
+</dd></dl>
 <p> This sets the quota to 5,000,000 bytes or 1000 messages, whichever comes first. </p>
 <dl>
 <dd>
 <pre><code>maildirmake -q 1000000S ./Maildir</code></pre>
-</dl>
+</dd></dl>
 <p> This sets the quota to 1,000,000 bytes, without limiting the number of messages. </p>
 <p> A quota of an existing maildir can be changed by rerunning the <code>maildirmake</code> command with a new -q option. To delete a quota entirely, delete the <i>Maildir</i>/maildirsize file.</p>
 <h2>See Also</h2>
@@ -69,26 +69,27 @@ description: "maildir – E-mail directory"
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
-<dd>Author</dl>
+<dd>Author</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd><code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)</p>
+<dt> 1.</dt>
+<dd><code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/maildirmake.html</dl>
-<dt> 2.</p>
-<dd>RFC 1521</p>
+<dd>[set $man.base.url.for.relative.links]/maildirmake.html</dd></dl>
+<dt> 2.</dt>
+<dd>RFC 1521</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.rfc-editor.org/rfc/rfc1521.txt">http://www.rfc-editor.org/rfc/rfc1521.txt</a></dl>
-<dt> 3.</p>
-<dd>Courier</p>
+<dd><a rel="nofollow" href="http://www.rfc-editor.org/rfc/rfc1521.txt">http://www.rfc-editor.org/rfc/rfc1521.txt</a></dd></dl>
+<dt> 3.</dt>
+<dd>Courier</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.courier-mta.org">http://www.courier-mta.org</a></dl>
-<dt> 4.</p>
-<dd><code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)</p>
+<dd><a rel="nofollow" href="http://www.courier-mta.org">http://www.courier-mta.org</a></dd></dl>
+<dt> 4.</dt>
+<dd><code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/deliverquota.html</dl>
-<dt> 5.</p>
-<dd><code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)</p>
+<dd>[set $man.base.url.for.relative.links]/deliverquota.html</dd></dl>
+<dt> 5.</dt>
+<dd><code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/maildirquota.html</dl>
+<dd>[set $man.base.url.for.relative.links]/maildirquota.html</dd></dl>
+</dl>

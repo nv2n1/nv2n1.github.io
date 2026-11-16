@@ -17,8 +17,8 @@ description: "gethostname, sethostname – get/set hostname"
 <p> <code>gethostname</code>():</p>
 <dl>
 <dt>
-<dd> Since glibc 2.12: _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
- || /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> Since glibc 2.12: _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+ || /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <p> <code>sethostname</code>(): </p>
 <pre><code>
 Since glibc 2.21 : _DEFAULT_SOURCE
@@ -37,14 +37,14 @@ Since glibc 2.21 : _DEFAULT_SOURCE
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>name</i> is an invalid address.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>len</i> is negative or, for <code>sethostname</code>(), <i>len</i> is larger than the maximum allowed size.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> (glibc <code>gethostname</code>()) <i>len</i> is smaller than the actual size. (Before version 2.1, glibc uses <code>EINVAL</code> for this case.)</p>
-<dt><code>EPERM</code></p>
-<dd> For <code>sethostname</code>(), the caller did not have the <code>CAP_SYS_ADMIN</code> capability in the user namespace associated with its UTS namespace (see <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7)).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>name</i> is an invalid address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>len</i> is negative or, for <code>sethostname</code>(), <i>len</i> is larger than the maximum allowed size.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> (glibc <code>gethostname</code>()) <i>len</i> is smaller than the actual size. (Before version 2.1, glibc uses <code>EINVAL</code> for this case.)</dd>
+<dt><code>EPERM</code></dt>
+<dd> For <code>sethostname</code>(), the caller did not have the <code>CAP_SYS_ADMIN</code> capability in the user namespace associated with its UTS namespace (see <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7)).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.4BSD (these interfaces first appeared in 4.2BSD). POSIX.1-2001 and POSIX.1-2008 specify <code>gethostname</code>() but not <code>sethostname</code>().</p>
 <h2>NOTES</h2>

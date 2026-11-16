@@ -64,8 +64,8 @@ description: "dmesg_selinux – Security Enhanced Linux Policy for the dmesg pro
 <p> <code>dmesg_exec_t</code> </p>
 <p> &#8211; Set files with the dmesg_exec_t type, if you want to transition an executable to the dmesg_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/dmesg, /usr/bin/dmesg </p>
+<dt>Paths:</dt>
+<dd>/bin/dmesg, /usr/bin/dmesg </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

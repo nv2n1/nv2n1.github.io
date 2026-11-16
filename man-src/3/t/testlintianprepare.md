@@ -14,14 +14,14 @@ description: "Test::Lintian::Prepare — routines to prepare the work directorie
 <p>The routines in this module prepare the work directories in which the tests are run. To do so, they use the specifications in the test set.</p>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>prepare(<font SIZE="-1">SPEC_PATH, SOURCE_PATH, TEST_SET, REBUILD</font>)</p>
-<dd>Populates a work directory <font SIZE="-1">SOURCE_PATH</font> with data from the test located in <font SIZE="-1">SPEC_PATH.</font> The optional parameter <font SIZE="-1">REBUILD</font> forces a rebuild if true.</p>
-<dt>filleval(<font SIZE="-1">SPEC_PATH, EVAL_PATH, TEST_SET, REBUILD</font>)</p>
-<dd>Populates a evaluation directory <font SIZE="-1">EVAL_PATH</font> with data from the test located in <font SIZE="-1">SPEC_PATH.</font> The optional parameter <font SIZE="-1">REBUILD</font> forces a rebuild if true.</p>
-<dt>combine_fields</p>
+<dt>prepare(<font SIZE="-1">SPEC_PATH, SOURCE_PATH, TEST_SET, REBUILD</font>)</dt>
+<dd>Populates a work directory <font SIZE="-1">SOURCE_PATH</font> with data from the test located in <font SIZE="-1">SPEC_PATH.</font> The optional parameter <font SIZE="-1">REBUILD</font> forces a rebuild if true.</dd>
+<dt>filleval(<font SIZE="-1">SPEC_PATH, EVAL_PATH, TEST_SET, REBUILD</font>)</dt>
+<dd>Populates a evaluation directory <font SIZE="-1">EVAL_PATH</font> with data from the test located in <font SIZE="-1">SPEC_PATH.</font> The optional parameter <font SIZE="-1">REBUILD</font> forces a rebuild if true.</dd>
+<dt>combine_fields</dt>
 <dd>
-<dt>fill_hash_from_hash</p>
-<dd></dl>
+</dd><dt>fill_hash_from_hash</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

@@ -10,47 +10,47 @@ description: "sss_usermod – modify a user account"
 <p>sss_usermod &#8211; modify a user account</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sss_usermod</code> [<i>options</i>] <i>LOGIN</i></dl>
+<dt> <code>sss_usermod</code> [<i>options</i>] <i>LOGIN</i></dt></dl>
 <h2>Description</h2>
 <p><code>sss_usermod</code></p>
-<dd>modifies the account specified by <i>LOGIN</i> to reflect the changes that are specified on the command line.</p>
+<dd>modifies the account specified by <i>LOGIN</i> to reflect the changes that are specified on the command line.</dd>
 <h2>Options</h2>
 <p><code>-c</code>,<code>&#8211;gecos</code> <i>COMMENT</i></p>
 <dl>
-<dd>Any text string describing the user. Often used as the field for the user&#8217;s full name.</dl>
+<dd>Any text string describing the user. Often used as the field for the user&#8217;s full name.</dd></dl>
 <p> <code>-h</code>,<code>&#8211;home</code> <i>HOME_DIR</i></p>
 <dl>
-<dd>The home directory of the user account.</dl>
+<dd>The home directory of the user account.</dd></dl>
 <p> <code>-s</code>,<code>&#8211;shell</code> <i>SHELL</i></p>
 <dl>
-<dd>The user&#8217;s login shell.</dl>
+<dd>The user&#8217;s login shell.</dd></dl>
 <p> <code>-a</code>,<code>&#8211;append-group</code> <i>GROUPS</i></p>
 <dl>
-<dd>Append this user to groups specified by the <i>GROUPS</i> parameter. The <i>GROUPS</i> parameter is a comma separated list of group names.</dl>
+<dd>Append this user to groups specified by the <i>GROUPS</i> parameter. The <i>GROUPS</i> parameter is a comma separated list of group names.</dd></dl>
 <p> <code>-r</code>,<code>&#8211;remove-group</code> <i>GROUPS</i></p>
 <dl>
-<dd>Remove this user from groups specified by the <i>GROUPS</i> parameter.</dl>
+<dd>Remove this user from groups specified by the <i>GROUPS</i> parameter.</dd></dl>
 <p> <code>-l</code>,<code>&#8211;lock</code></p>
 <dl>
-<dd>Lock the user account. The user won&#8217;t be able to log in.</dl>
+<dd>Lock the user account. The user won&#8217;t be able to log in.</dd></dl>
 <p> <code>-u</code>,<code>&#8211;unlock</code></p>
 <dl>
-<dd>Unlock the user account.</dl>
+<dd>Unlock the user account.</dd></dl>
 <p> <code>-Z</code>,<code>&#8211;selinux-user</code> <i>SELINUX_USER</i></p>
 <dl>
-<dd>The SELinux user for the user&#8217;s login.</dl>
+<dd>The SELinux user for the user&#8217;s login.</dd></dl>
 <p> <code>&#8211;addattr</code> <i>ATTR_NAME_VAL</i></p>
 <dl>
-<dd>Add an attribute/value pair. The format is attrname=value.</dl>
+<dd>Add an attribute/value pair. The format is attrname=value.</dd></dl>
 <p> <code>&#8211;setattr</code> <i>ATTR_NAME_VAL</i></p>
 <dl>
-<dd>Set an attribute to a name/value pair. The format is attrname=value. For multi-valued attributes, the command replaces the values already present</dl>
+<dd>Set an attribute to a name/value pair. The format is attrname=value. For multi-valued attributes, the command replaces the values already present</dd></dl>
 <p> <code>&#8211;delattr</code> <i>ATTR_NAME_VAL</i></p>
 <dl>
-<dd>Delete an attribute/value pair. The format is attrname=value.</dl>
+<dd>Delete an attribute/value pair. The format is attrname=value.</dd></dl>
 <p> <code>-?</code>,<code>&#8211;help</code></p>
 <dl>
-<dd>Display help message and exit.</dl>
+<dd>Display help message and exit.</dd></dl>
 <h2>The Local Domain</h2>
 <p>In order to function correctly, a domain with &#8220;id_provider=local&#8221; must be created and the SSSD must be running. </p>
 <p> The administrator might want to use the SSSD local users instead of traditional UNIX users in cases where the group nesting (see <code><a href="/docs/linux/man/8-sss_groupadd/">sss_groupadd</a></code>(8)) is needed. The local users are also useful for testing and development of the SSSD without having to deploy a full remote server. The <code>sss_user*</code> and <code>sss_group*</code> tools use a local LDB storage to store users and groups.</p>

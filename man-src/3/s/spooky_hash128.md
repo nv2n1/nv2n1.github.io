@@ -24,10 +24,10 @@ void spooky_hash128(const void *message, size_t len, uint64_t *hash1, uint64_t *
 <p>The original code was written in C<font SIZE="-2">++</font>. The spooky-c library is a reimplementation of the hash function in C. It&#8217;s quite fast on 64-bit hardware. </p>
 <p> There are some caveats with the SpookyHash function:</p>
 <dl>
-<dt>&bull;</p>
-<dd>It was written for little-endian machines. It will run and work on big-endian machines as well, but it will produce different results. Do not use these functions if you plan to distribute these hashes in a mixed endianness environment.</p>
-<dt>&bull;</p>
-<dd>It is optimized for 64-bit machines that can do unaligned reads. It will work on 32-bit hardware and on machines that require aligned reads, but it won&#8217;t perform as well on that hardware. You may want to consider a different hash function in that situation.</dl>
+<dt>&bull;</dt>
+<dd>It was written for little-endian machines. It will run and work on big-endian machines as well, but it will produce different results. Do not use these functions if you plan to distribute these hashes in a mixed endianness environment.</dd>
+<dt>&bull;</dt>
+<dd>It is optimized for 64-bit machines that can do unaligned reads. It will work on 32-bit hardware and on machines that require aligned reads, but it won&#8217;t perform as well on that hardware. You may want to consider a different hash function in that situation.</dd></dl>
 <h2>See Also</h2>
 <p>Bob Jenkins&#8217; webpage on SpookyHash: &lt;<a rel="nofollow" href="http://www.burtleburtle.net/bob/hash/spooky.html">http://www.burtleburtle.net/bob/hash/spooky.html</a>&gt;</p>
 <h2>Authors</h2>

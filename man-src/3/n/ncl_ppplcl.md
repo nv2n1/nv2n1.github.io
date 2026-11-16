@@ -33,33 +33,32 @@ CALL PPPLCL (XMIN,XMAX,YMIN,YMAX,XCPL,YCPL,NCPL,RWRK,LRWK,URPF,IERR)
 <h2>Description</h2>
 
 <dl><dt>XMIN
-<dd>(an input expression of type REAL) is the X coordinate value defining the position of the left edge of the clipping rectangle.
-<dt>XMAX
-<dd>(an input expression of type REAL) is the X coordinate value defining the position of the right edge of the clipping rectangle.
-<dt>YMIN
-<dd>(an input expression of type REAL) is the Y coordinate value defining the position of the bottom of the clipping rectangle.
-<dt>YMAX
-<dd>(an input expression of type REAL) is the Y coordinate value defining the position of the top of the clipping rectangle.
-<dt>XCPL
-<dd>(an input array of type REAL) is the X coordinate array for the polyline that is to be clipped.
-<dt>YCPL
-<dd>(an input array of type REAL) is the Y coordinate array for the polyline that is to be clipped.
-<dt>NCPL
-<dd>(an input expression of type INTEGER) is the number of points defining the input polyline (the number of meaningful elements in each of the arrays XCPL and YCPL).
-<dt>RWRK
-<dd>(a scratch array of type REAL) is a workspace array for PPPLCL to use. It is divided into halves; one half is used for X coordinates and the other half for Y coordinates. This array doesn't have to be too big unless it is important not to break the polyline except at the edges of the clipping rectangle.
-<dt>LRWK
-<dd>(an input expression of type INTEGER) is the length of the array RWRK.
-<dt>URPF
-<dd>is the name of a user-provided routine to process the fragments of the polyline resulting from the clipping process. This name must appear in an EXTERNAL statement in the routine that calls PPPLCL and the routine itself must have the following form: 
-
+</dt><dd>(an input expression of type REAL) is the X coordinate value defining the position of the left edge of the clipping rectangle.
+</dd><dt>XMAX
+</dt><dd>(an input expression of type REAL) is the X coordinate value defining the position of the right edge of the clipping rectangle.
+</dd><dt>YMIN
+</dt><dd>(an input expression of type REAL) is the Y coordinate value defining the position of the bottom of the clipping rectangle.
+</dd><dt>YMAX
+</dt><dd>(an input expression of type REAL) is the Y coordinate value defining the position of the top of the clipping rectangle.
+</dd><dt>XCPL
+</dt><dd>(an input array of type REAL) is the X coordinate array for the polyline that is to be clipped.
+</dd><dt>YCPL
+</dt><dd>(an input array of type REAL) is the Y coordinate array for the polyline that is to be clipped.
+</dd><dt>NCPL
+</dt><dd>(an input expression of type INTEGER) is the number of points defining the input polyline (the number of meaningful elements in each of the arrays XCPL and YCPL).
+</dd><dt>RWRK
+</dt><dd>(a scratch array of type REAL) is a workspace array for PPPLCL to use. It is divided into halves; one half is used for X coordinates and the other half for Y coordinates. This array doesn't have to be too big unless it is important not to break the polyline except at the edges of the clipping rectangle.
+</dd><dt>LRWK
+</dt><dd>(an input expression of type INTEGER) is the length of the array RWRK.
+</dd><dt>URPF
+</dt><dd>is the name of a user-provided routine to process the fragments of the polyline resulting from the clipping process. This name must appear in an EXTERNAL statement in the routine that calls PPPLCL and the routine itself must have the following form: 
  <pre> SUBROUTINE URPF (XCRA,YCRA,NCRA)
  DIMENSION XCRA(NCRA),YCRA(NCRA)
  ...(code to process a polyline)...
  RETURN
  END</pre>Each of the arguments XCRA and YCRA is a real array, dimensioned NCRA; the former holds the X coordinates, and the latter the Y coordinates, of a polyline fragment.
-<dt>IERR
-<dd>(an output variable of type INTEGER) is returned with the value zero if no errors occurred in the execution of PPPLCL or with a small positive value if an error did occur. The value 1 indicates that NCPL is less than or equal to zero and the value 2 indicates that LRWK is less than 4.</dl>
+</dd><dt>IERR
+</dt><dd>(an output variable of type INTEGER) is returned with the value zero if no errors occurred in the execution of PPPLCL or with a small positive value if an error did occur. The value 1 indicates that NCPL is less than or equal to zero and the value 2 indicates that LRWK is less than 4.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

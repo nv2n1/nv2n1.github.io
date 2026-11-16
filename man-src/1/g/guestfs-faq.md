@@ -23,16 +23,16 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <p> Red Hat sponsors (ie. pays for) development of libguestfs and a huge number of other open source projects. But you can run libguestfs and the virt tools on many different Linux distros and Mac <font SIZE="-1">OS X.</font> We try our best to support all Linux distros as first-class citizens. Some virt tools have been ported to Windows.</p>
 <h3>How does libguestfs compare to other tools?</h3>
 <dl>
-<dt><i>vs. kpartx</i></p>
-<dd> Libguestfs takes a different approach from kpartx. kpartx needs root, and mounts filesystems on the host kernel (which can be insecure &#8211; see <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1)). Libguestfs isolates your host kernel from guests, is more flexible, scriptable, supports <font SIZE="-1">LVM,</font> doesn&#8217;t require root, is isolated from other processes, and cleans up after itself. Libguestfs is more than just file access because you can use it to create images from scratch.</p>
-<dt><i>vs. vdfuse</i></p>
-<dd> vdfuse is like kpartx but for VirtualBox images. See the kpartx comparison above. You can use libguestfs on the partition files exposed by vdfuse, although it’s not necessary since libguestfs can access VirtualBox images directly.</p>
-<dt><i>vs. qemu-nbd</i></p>
-<dd> <font SIZE="-1">NBD</font> (Network Block Device) is a protocol for exporting block devices over the network. qemu-nbd is an <font SIZE="-1">NBD</font> server which can handle any disk format supported by qemu (eg. raw, qcow2). You can use libguestfs and qemu-nbd or nbdkit together to access block devices over the network, for example: <tt>&quot;guestfish -a <a href="nbd://remote">nbd://remote</a>&quot;</tt></p>
-<dt><i>vs. mounting filesystems in the host</i></p>
-<dd> Mounting guest filesystems in the host is insecure and should be avoided completely for untrusted guests. Use libguestfs to provide a layer of protection against filesystem exploits. See also <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1).</p>
-<dt><i>vs. parted</i></p>
-<dd> Libguestfs supports <font SIZE="-1">LVM.</font> Libguestfs uses parted and provides most parted features through the libguestfs <font SIZE="-1">API.</font></dl>
+<dt><i>vs. kpartx</i></dt>
+<dd> Libguestfs takes a different approach from kpartx. kpartx needs root, and mounts filesystems on the host kernel (which can be insecure &#8211; see <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1)). Libguestfs isolates your host kernel from guests, is more flexible, scriptable, supports <font SIZE="-1">LVM,</font> doesn&#8217;t require root, is isolated from other processes, and cleans up after itself. Libguestfs is more than just file access because you can use it to create images from scratch.</dd>
+<dt><i>vs. vdfuse</i></dt>
+<dd> vdfuse is like kpartx but for VirtualBox images. See the kpartx comparison above. You can use libguestfs on the partition files exposed by vdfuse, although it’s not necessary since libguestfs can access VirtualBox images directly.</dd>
+<dt><i>vs. qemu-nbd</i></dt>
+<dd> <font SIZE="-1">NBD</font> (Network Block Device) is a protocol for exporting block devices over the network. qemu-nbd is an <font SIZE="-1">NBD</font> server which can handle any disk format supported by qemu (eg. raw, qcow2). You can use libguestfs and qemu-nbd or nbdkit together to access block devices over the network, for example: <tt>&quot;guestfish -a <a href="nbd://remote">nbd://remote</a>&quot;</tt></dd>
+<dt><i>vs. mounting filesystems in the host</i></dt>
+<dd> Mounting guest filesystems in the host is insecure and should be avoided completely for untrusted guests. Use libguestfs to provide a layer of protection against filesystem exploits. See also <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1).</dd>
+<dt><i>vs. parted</i></dt>
+<dd> Libguestfs supports <font SIZE="-1">LVM.</font> Libguestfs uses parted and provides most parted features through the libguestfs <font SIZE="-1">API.</font></dd></dl>
 <h2>GETTING HELP AND REPORTING BUGS</h2>
 <h3>How do I know what version I&#8217;m using?</h3>
 <p> The simplest method is: </p>
@@ -80,17 +80,17 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <p> There is a bug open against libvirt to fix this: <a rel="nofollow" href="https://bugzilla.redhat.com/show_bug.cgi?id=1045069">https://bugzilla.redhat.com/show_bug.cgi?id=1045069</a> </p>
 <p> You can work around this by one of the following methods:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Switch to the direct backend: </p>
+<dt>&bull;</dt>
+<dd> Switch to the direct backend: </dd>
 <pre>
  export LIBGUESTFS_BACKEND=direct
 </pre>
-<dt>&bull;</p>
-<dd> Don’t run libguestfs as root.</p>
-<dt>&bull;</p>
-<dd> Chmod the disk image and any parent directories so that the qemu user can access them.</p>
-<dt>&bull;</p>
-<dd> (Nasty) Edit <i>/etc/libvirt/qemu.conf</i> and change the <tt>&quot;user&quot;</tt> setting.</dl>
+<dt>&bull;</dt>
+<dd> Don’t run libguestfs as root.</dd>
+<dt>&bull;</dt>
+<dd> Chmod the disk image and any parent directories so that the qemu user can access them.</dd>
+<dt>&bull;</dt>
+<dd> (Nasty) Edit <i>/etc/libvirt/qemu.conf</i> and change the <tt>&quot;user&quot;</tt> setting.</dd></dl>
 <h3>execl: /init: Permission denied</h3>
 <p> <code>Note:</code> If this error happens when you are using a distro package of libguestfs (eg. from Fedora, Debian, etc) then file a bug against the distro. This is not an error which normal users should ever see if the distro package has been prepared correctly. </p>
 <p> This error happens during the supermin boot phase of starting the appliance: </p>
@@ -111,30 +111,27 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <h2>DOWNLOADING, INSTALLING, COMPILING LIBGUESTFS</h2>
 <h3>Where can I get the latest binaries for &#8230;?</h3>
 <dl>
-<dt>Fedora ≥ 11</p>
-<dd> Use: </p>
+<dt>Fedora ≥ 11</dt>
+<dd> Use: </dd>
 <pre>
  yum install '*guestf*'
 </pre>
 <p> For the latest builds, see: <a rel="nofollow" href="http://koji.fedoraproject.org/koji/packageinfo?packageID=8391">http://koji.fedoraproject.org/koji/packageinfo?packageID=8391</a></p>
-<dt>Red Hat Enterprise Linux</p>
+<dt>Red Hat Enterprise Linux</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><font SIZE="-1">RHEL 5</font></dt>
+<dd> The version shipped in official <font SIZE="-1">RHEL 5</font> is very old and should not be used except in conjunction with virt-v2v. Use the up-to-date libguestfs 1.20 package in <font SIZE="-1">EPEL 5:</font> <a rel="nofollow" href="https://fedoraproject.org/wiki/EPEL">https://fedoraproject.org/wiki/EPEL</a></dd>
+<dt><font SIZE="-1">RHEL 6</font></dt>
 <dd>
-<dl>
-<dt><font SIZE="-1">RHEL 5</font></p>
-<dd> The version shipped in official <font SIZE="-1">RHEL 5</font> is very old and should not be used except in conjunction with virt-v2v. Use the up-to-date libguestfs 1.20 package in <font SIZE="-1">EPEL 5:</font> <a rel="nofollow" href="https://fedoraproject.org/wiki/EPEL">https://fedoraproject.org/wiki/EPEL</a></p>
-<dt><font SIZE="-1">RHEL 6</font></p>
-<dd>
-<dt><font SIZE="-1">RHEL 7</font></p>
-<dd> It is part of the default install. On <font SIZE="-1">RHEL 6</font> and 7 (only) you have to install <tt>&quot;libguestfs-winsupport&quot;</tt> to get Windows guest support.</dl>
+</dd><dt><font SIZE="-1">RHEL 7</font></dt>
+<dd> It is part of the default install. On <font SIZE="-1">RHEL 6</font> and 7 (only) you have to install <tt>&quot;libguestfs-winsupport&quot;</tt> to get Windows guest support.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Debian and Ubuntu</p>
-<dd> For libguestfs &lt; 1.26, after installing libguestfs you need to do: </p>
+</dl>
+<dt>Debian and Ubuntu</dt>
+<dd> For libguestfs &lt; 1.26, after installing libguestfs you need to do: </dd>
 <pre>
  sudo update-guestfs-appliance
 </pre>
@@ -148,25 +145,21 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
  sudo usermod -a -G kvm yourlogin
 </pre>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Debian Squeeze (6)</p>
-<dd> Hilko Bengen has built libguestfs in squeeze backports: <a rel="nofollow" href="http://packages.debian.org/search?keywords=guestfs">http://packages.debian.org/search?keywords=guestfs</a>&amp;searchon=names&amp;section=all&amp;suite=squeeze-backports</p>
-<dt>Debian Wheezy and later (7+)</p>
-<dd> Hilko Bengen supports libguestfs on Debian. Official Debian packages are available: <a rel="nofollow" href="http://packages.debian.org/search?keywords=libguestfs">http://packages.debian.org/search?keywords=libguestfs</a></p>
-<dt>Ubuntu</p>
-<dd> We don’t have a full time Ubuntu maintainer, and the packages supplied by Canonical (which are outside our control) are sometimes broken. </p>
+<dt>Debian Squeeze (6)</dt>
+<dd> Hilko Bengen has built libguestfs in squeeze backports: <a rel="nofollow" href="http://packages.debian.org/search?keywords=guestfs">http://packages.debian.org/search?keywords=guestfs</a>&amp;searchon=names&amp;section=all&amp;suite=squeeze-backports</dd>
+<dt>Debian Wheezy and later (7+)</dt>
+<dd> Hilko Bengen supports libguestfs on Debian. Official Debian packages are available: <a rel="nofollow" href="http://packages.debian.org/search?keywords=libguestfs">http://packages.debian.org/search?keywords=libguestfs</a></dd>
+<dt>Ubuntu</dt>
+<dd> We don’t have a full time Ubuntu maintainer, and the packages supplied by Canonical (which are outside our control) are sometimes broken. </dd>
 <p> Canonical decided to change the permissions on the kernel so that it&#8217;s not readable except by root. This is completely stupid, but they won&#8217;t change it (<a rel="nofollow" href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/759725">https://bugs.launchpad.net/ubuntu/+source/linux/+bug/759725</a>). So every user should do this: </p>
 <pre>
  sudo chmod 0644 /boot/vmlinuz*
 </pre>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Ubuntu 12.04</p>
-<dd> libguestfs in this version of Ubuntu works, but you need to update febootstrap and seabios to the latest versions. </p>
+<dt>Ubuntu 12.04</dt>
+<dd> libguestfs in this version of Ubuntu works, but you need to update febootstrap and seabios to the latest versions. </dd>
 <p> You need febootstrap ≥ 3.14-2 from: <a rel="nofollow" href="http://packages.ubuntu.com/precise/febootstrap">http://packages.ubuntu.com/precise/febootstrap</a> </p>
 <p> After installing or updating febootstrap, rebuild the appliance: </p>
 <pre>
@@ -180,26 +173,24 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Gentoo</p>
-<dd> Libguestfs was added to Gentoo in 2012-07 by Andreis Vinogradovs (libguestfs) and Maxim Koltsov (mainly hivex). Do: </p>
+</dl>
+<dt>Gentoo</dt>
+<dd> Libguestfs was added to Gentoo in 2012-07 by Andreis Vinogradovs (libguestfs) and Maxim Koltsov (mainly hivex). Do: </dd>
 <pre>
  emerge libguestfs
 </pre>
-<dt>SuSE</p>
-<dd> Libguestfs was added to SuSE in 2012 by Olaf Hering.</p>
-<dt>ArchLinux</p>
-<dd> Libguestfs was added to the <font SIZE="-1">AUR</font> in 2010.</p>
-<dt>Other Linux distro</p>
-<dd> Compile from source (next section).</p>
-<dt>Other non-Linux distro</p>
-<dd> You&#8217;ll have to compile from source, and port it.</dl>
+<dt>SuSE</dt>
+<dd> Libguestfs was added to SuSE in 2012 by Olaf Hering.</dd>
+<dt>ArchLinux</dt>
+<dd> Libguestfs was added to the <font SIZE="-1">AUR</font> in 2010.</dd>
+<dt>Other Linux distro</dt>
+<dd> Compile from source (next section).</dd>
+<dt>Other non-Linux distro</dt>
+<dd> You&#8217;ll have to compile from source, and port it.</dd></dl>
 <h3>How can I compile and install libguestfs from source?</h3>
 <p> You can compile libguestfs from git or a source tarball. Read the <font SIZE="-1">README</font> file before starting. </p>
 <p> Git: <a rel="nofollow" href="https://github.com/libguestfs/libguestfs">https://github.com/libguestfs/libguestfs</a> Source tarballs: <a rel="nofollow" href="http://libguestfs.org/download">http://libguestfs.org/download</a> </p>
@@ -248,12 +239,12 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <h3>Libguestfs has a really long list of dependencies!</h3>
 <p> The base library doesn&#8217;t depend on very much, but there are three causes of the long list of other dependencies:</p>
 <dl>
-<dt>1.</p>
-<dd> Libguestfs has to be able to read and edit many different disk formats. For example, <font SIZE="-1">XFS</font> support requires <font SIZE="-1">XFS</font> tools.</p>
-<dt>2.</p>
-<dd> There are language bindings for many different languages, all requiring their own development tools. All language bindings (except C) are optional.</p>
-<dt>3.</p>
-<dd> There are some optional library features which can be disabled.</dl>
+<dt>1.</dt>
+<dd> Libguestfs has to be able to read and edit many different disk formats. For example, <font SIZE="-1">XFS</font> support requires <font SIZE="-1">XFS</font> tools.</dd>
+<dt>2.</dt>
+<dd> There are language bindings for many different languages, all requiring their own development tools. All language bindings (except C) are optional.</dd>
+<dt>3.</dt>
+<dd> There are some optional library features which can be disabled.</dd></dl>
 <p> Since libguestfs ≥ 1.26 it is possible to split up the appliance dependencies (item 1 in the list above) and thus have (eg) <tt>&quot;libguestfs-xfs&quot;</tt> as a separate subpackage for processing <font SIZE="-1">XFS</font> disk images. We encourage downstream packagers to start splitting the base libguestfs package into smaller subpackages.</p>
 <h3>Errors during launch on Fedora ≥ 18, <font SIZE="-1">RHEL</font> ≥ 7</h3>
 <p> In Fedora ≥ 18 and <font SIZE="-1">RHEL</font> ≥ 7, libguestfs uses libvirt to manage the appliance. Previously (and upstream) libguestfs runs qemu directly: </p>
@@ -271,7 +262,6 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
                        ┌───────┐
                        │ qemu  │
                        └───────┘
- 
     upstream          Fedora 18+
     non-Fedora         RHEL 7+
     non-RHEL
@@ -360,13 +350,13 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <p> Qemu (and hence libguestfs) only supports certain <font SIZE="-1">VMDK</font> disk images. Others won&#8217;t work, giving this or similar errors. </p>
 <p> Ideally someone would fix qemu to support the latest <font SIZE="-1">VMDK</font> features, but in the meantime you have three options:</p>
 <dl>
-<dt>1.</p>
-<dd> If the guest is hosted on a live, reachable <font SIZE="-1">ESX</font> server, then locate and download the disk image called <i>somename-flat.vmdk</i>. Despite the name, this is a raw disk image, and can be opened by anything. </p>
+<dt>1.</dt>
+<dd> If the guest is hosted on a live, reachable <font SIZE="-1">ESX</font> server, then locate and download the disk image called <i>somename-flat.vmdk</i>. Despite the name, this is a raw disk image, and can be opened by anything. </dd>
 <p> If you have a recent enough version of qemu and libguestfs, then you may be able to access this disk image remotely using either <font SIZE="-1">HTTPS</font> or ssh. See &#8220;<font SIZE="-1">REMOTE STORAGE&#8221;</font> in <code>guestfs</code>(3).</p>
-<dt>2.</p>
-<dd> Use VMware’s proprietary vdiskmanager tool to convert the image to raw format.</p>
-<dt>3.</p>
-<dd> Use nbdkit with the proprietary <font SIZE="-1">VDDK</font> plugin to live export the disk image as an <font SIZE="-1">NBD</font> source. This should allow you to read and write the <font SIZE="-1">VMDK</font> file.</dl>
+<dt>2.</dt>
+<dd> Use VMware’s proprietary vdiskmanager tool to convert the image to raw format.</dd>
+<dt>3.</dt>
+<dd> Use nbdkit with the proprietary <font SIZE="-1">VDDK</font> plugin to live export the disk image as an <font SIZE="-1">NBD</font> source. This should allow you to read and write the <font SIZE="-1">VMDK</font> file.</dd></dl>
 <h3><font SIZE="-1">UFS</font> disks (as used by <font SIZE="-1">BSD</font>) cannot be opened.</h3>
 <p> The <font SIZE="-1">UFS</font> filesystem format has many variants, and these are not self-identifying. The Linux kernel has to be told which variant of <font SIZE="-1">UFS</font> it has to use, which libguestfs cannot know. </p>
 <p> You have to pass the right <tt>&quot;ufstype&quot;</tt> mount option when mounting these filesystems. </p>
@@ -376,10 +366,10 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <h3>Non-ASCII characters don’t appear on <font SIZE="-1">VFAT</font> filesystems.</h3>
 <p> Typical symptoms of this problem:</p>
 <dl>
-<dt>&bull;</p>
-<dd> You get an error when you create a file where the filename contains non-ASCII characters, particularly non 8-bit characters from Asian languages (Chinese, Japanese, etc). The filesystem is <font SIZE="-1">VFAT.</font></p>
-<dt>&bull;</p>
-<dd> When you list a directory from a <font SIZE="-1">VFAT</font> filesystem, filenames appear as question marks.</dl>
+<dt>&bull;</dt>
+<dd> You get an error when you create a file where the filename contains non-ASCII characters, particularly non 8-bit characters from Asian languages (Chinese, Japanese, etc). The filesystem is <font SIZE="-1">VFAT.</font></dd>
+<dt>&bull;</dt>
+<dd> When you list a directory from a <font SIZE="-1">VFAT</font> filesystem, filenames appear as question marks.</dd></dl>
 <p> This is a design flaw of the GNU/Linux system. </p>
 <p> <font SIZE="-1">VFAT</font> stores long filenames as <font SIZE="-1">UTF-16</font> characters. When opening or returning filenames, the Linux kernel has to translate these to some form of 8 bit string. <font SIZE="-1">UTF-8</font> would be the obvious choice, except for Linux users who persist in using non-UTF-8 locales (the user’s locale is not known to the kernel because it’s a function of libc). </p>
 <p> Therefore you have to tell the kernel what translation you want done when you mount the filesystem. The two methods are the <tt>&quot;iocharset&quot;</tt> parameter (which is not relevant to libguestfs) and the <tt>&quot;utf8&quot;</tt> flag. </p>
@@ -398,10 +388,10 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <p> The kernel will then translate filenames to and from <font SIZE="-1">UTF-8</font> strings. </p>
 <p> We considered adding this mount option transparently, but unfortunately there are several problems with doing that:</p>
 <dl>
-<dt>&bull;</p>
-<dd> On some Linux systems, the <tt>&quot;utf8&quot;</tt> mount option doesn&#8217;t work. We don&#8217;t precisely understand what systems or why, but this was reliably reported by one user.</p>
-<dt>&bull;</p>
-<dd> It would prevent you from using the <tt>&quot;iocharset&quot;</tt> parameter because it is incompatible with <tt>&quot;utf8&quot;</tt>. It is probably not a good idea to use this parameter, but we don&#8217;t want to prevent it.</dl>
+<dt>&bull;</dt>
+<dd> On some Linux systems, the <tt>&quot;utf8&quot;</tt> mount option doesn&#8217;t work. We don&#8217;t precisely understand what systems or why, but this was reliably reported by one user.</dd>
+<dt>&bull;</dt>
+<dd> It would prevent you from using the <tt>&quot;iocharset&quot;</tt> parameter because it is incompatible with <tt>&quot;utf8&quot;</tt>. It is probably not a good idea to use this parameter, but we don&#8217;t want to prevent it.</dd></dl>
 <h3>Non-ASCII characters appear as underscore (_) on <font SIZE="-1">ISO9660</font> filesystems.</h3>
 <p> The filesystem was not prepared correctly with mkisofs or genisoimage. Make sure the filesystem was created using Joliet and/or Rock Ridge extensions. libguestfs does not require any special mount options to handle the filesystem.</p>
 <h3>Cannot open Windows guests which use <font SIZE="-1">NTFS.</font></h3>
@@ -444,27 +434,27 @@ Shell(guestfish) ln - sf target linkname
 </pre>
 <p> If a particular operation fails, supply all the information in this checklist, in an email to <tt>&quot;libguestfs&quot;</tt> @ <tt>&quot;redhat.com&quot;</tt>:</p>
 <dl>
-<dt>1.</p>
-<dd> What are you trying to do?</p>
-<dt>2.</p>
-<dd> What exact command(s) did you run?</p>
-<dt>3.</p>
-<dd> What was the precise error or output of these commands?</p>
-<dt>4.</p>
-<dd> Enable debugging, run the commands again, and capture the <code>complete</code> output. <code>Do not edit the output.</code> </p>
+<dt>1.</dt>
+<dd> What are you trying to do?</dd>
+<dt>2.</dt>
+<dd> What exact command(s) did you run?</dd>
+<dt>3.</dt>
+<dd> What was the precise error or output of these commands?</dd>
+<dt>4.</dt>
+<dd> Enable debugging, run the commands again, and capture the <code>complete</code> output. <code>Do not edit the output.</code> </dd>
 <pre>
  export LIBGUESTFS_DEBUG=1
  export LIBGUESTFS_TRACE=1
 </pre>
-<dt>5.</p>
-<dd> Include the version of libguestfs, the operating system version, and how you installed libguestfs (eg. from source, <tt>&quot;yum install&quot;</tt>, etc.)</dl>
+<dt>5.</dt>
+<dd> Include the version of libguestfs, the operating system version, and how you installed libguestfs (eg. from source, <tt>&quot;yum install&quot;</tt>, etc.)</dd></dl>
 <h3>How do I debug when using any libguestfs program or tool (eg. virt-v2v or virt-df)?</h3>
 <p> There are two <tt>&quot;LIBGUESTFS_*&quot;</tt> environment variables you can set in order to get more information from libguestfs.</p>
 <dl>
-<dt>&quot;LIBGUESTFS_TRACE&quot;</p>
-<dd> Set this to 1 and libguestfs will print out each command / <font SIZE="-1">API</font> call in a format which is similar to guestfish commands.</p>
-<dt>&quot;LIBGUESTFS_DEBUG&quot;</p>
-<dd> Set this to 1 in order to enable massive amounts of debug messages. If you think there is some problem inside the libguestfs appliance, then you should use this option.</dl>
+<dt>&quot;LIBGUESTFS_TRACE&quot;</dt>
+<dd> Set this to 1 and libguestfs will print out each command / <font SIZE="-1">API</font> call in a format which is similar to guestfish commands.</dd>
+<dt>&quot;LIBGUESTFS_DEBUG&quot;</dt>
+<dd> Set this to 1 in order to enable massive amounts of debug messages. If you think there is some problem inside the libguestfs appliance, then you should use this option.</dd></dl>
 <p> To set these from the shell, do this before running the program: </p>
 <pre>
  export LIBGUESTFS_TRACE=1
@@ -622,20 +612,20 @@ Shell(guestfish) ln - sf target linkname
 </pre>
 <p> This scenario is safe (as long as you set the <tt>&quot;readonly&quot;</tt> flag when adding the drive). However the libguestfs appliance kernel (2) does not see all the changes made to the disk image, for two reasons:</p>
 <dl>
-<dt>i.</p>
-<dd> The <font SIZE="-1">VM</font> kernel (1) can cache data in memory, so it doesn&#8217;t appear in the disk image.</p>
-<dt>ii.</p>
-<dd> The libguestfs appliance kernel (2) doesn&#8217;t expect that the disk image is changing underneath it, so its own cache is not magically updated even when the <font SIZE="-1">VM</font> kernel (1) does update the disk image.</dl>
+<dt>i.</dt>
+<dd> The <font SIZE="-1">VM</font> kernel (1) can cache data in memory, so it doesn&#8217;t appear in the disk image.</dd>
+<dt>ii.</dt>
+<dd> The libguestfs appliance kernel (2) doesn&#8217;t expect that the disk image is changing underneath it, so its own cache is not magically updated even when the <font SIZE="-1">VM</font> kernel (1) does update the disk image.</dd></dl>
 <p> The only supported solution is to restart the entire libguestfs appliance whenever you want to look at changes in the disk image. At the <font SIZE="-1">API</font> level that corresponds to calling <tt>&quot;guestfs_shutdown&quot;</tt> followed by <tt>&quot;guestfs_launch&quot;</tt>, which is a heavyweight operation (see also <code>guestfs-performance</code>(3)). </p>
 <p> There are some unsupported hacks you can try if relaunching the appliance is really too costly:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Call <tt>&quot;guestfs_drop_caches (g, 3)&quot;</tt>. This causes all cached data help by the libguestfs appliance kernel (2) to be discarded, so it goes back to the disk image. </p>
+<dt>&bull;</dt>
+<dd> Call <tt>&quot;guestfs_drop_caches (g, 3)&quot;</tt>. This causes all cached data help by the libguestfs appliance kernel (2) to be discarded, so it goes back to the disk image. </dd>
 <p> However this on its own is not sufficient, because qemu also caches some data. You will also need to patch libguestfs to (re-)enable the <tt>&quot;cache=none&quot;</tt> mode. See: <a rel="nofollow" href="https://rwmj.wordpress.com/2013/09/02/new-in-libguestfs-allow-cache-mode-to-be-selected/">https://rwmj.wordpress.com/2013/09/02/new-in-libguestfs-allow-cache-mode-to-be-selected/</a></p>
-<dt>&bull;</p>
-<dd> Use a tool like virt-bmap instead.</p>
-<dt>&bull;</p>
-<dd> Run an agent inside the guest.</dl>
+<dt>&bull;</dt>
+<dd> Use a tool like virt-bmap instead.</dd>
+<dt>&bull;</dt>
+<dd> Run an agent inside the guest.</dd></dl>
 <p> Nothing helps if the guest is making more fundamental changes (eg. deleting filesystems). For those kinds of things you must relaunch the appliance. </p>
 <p> (Note there is a third problem that you need to use consistent snapshots to really examine live disk images, but that’s a general problem with using libguestfs against any live disk image.)</p>
 <h2>SEE ALSO</h2>
@@ -653,43 +643,43 @@ Shell(guestfish) ln - sf target linkname
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAH">GETTING HELP AND REPORTING BUGS</a></p>
+<dt><a href="#lbAH">GETTING HELP AND REPORTING BUGS</a></dt>
 <dd>
-<dt><a href="#lbAM">COMMON PROBLEMS</a></p>
+</dd><dt><a href="#lbAM">COMMON PROBLEMS</a></dt>
 <dd>
-<dt><a href="#lbAU">DOWNLOADING, INSTALLING, COMPILING LIBGUESTFS</a></p>
+</dd><dt><a href="#lbAU">DOWNLOADING, INSTALLING, COMPILING LIBGUESTFS</a></dt>
 <dd>
-<dt><a href="#lbBE">SPEED, DISK SPACE USED BY LIBGUESTFS</a></p>
+</dd><dt><a href="#lbBE">SPEED, DISK SPACE USED BY LIBGUESTFS</a></dt>
 <dd>
-<dt><a href="#lbBK">PROBLEMS OPENING DISK IMAGES</a></p>
+</dd><dt><a href="#lbBK">PROBLEMS OPENING DISK IMAGES</a></dt>
 <dd>
-<dt><a href="#lbBW">USING LIBGUESTFS IN YOUR OWN PROGRAMS</a></p>
+</dd><dt><a href="#lbBW">USING LIBGUESTFS IN YOUR OWN PROGRAMS</a></dt>
 <dd>
-<dt><a href="#lbBZ">DEBUGGING LIBGUESTFS</a></p>
+</dd><dt><a href="#lbBZ">DEBUGGING LIBGUESTFS</a></dt>
 <dd>
-<dt><a href="#lbCK">DESIGN/INTERNALS OF LIBGUESTFS</a></p>
+</dd><dt><a href="#lbCK">DESIGN/INTERNALS OF LIBGUESTFS</a></dt>
 <dd>
-<dt><a href="#lbCX">DEVELOPERS</a></p>
+</dd><dt><a href="#lbCX">DEVELOPERS</a></dt>
 <dd>
-<dt><a href="#lbDC">MISCELLANEOUS QUESTIONS</a></p>
+</dd><dt><a href="#lbDC">MISCELLANEOUS QUESTIONS</a></dt>
 <dd>
-<dt><a href="#lbDE">SEE ALSO</a></p>
+</dd><dt><a href="#lbDE">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbDF">AUTHORS</a></p>
+</dd><dt><a href="#lbDF">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbDG">COPYRIGHT</a></p>
+</dd><dt><a href="#lbDG">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbDH">LICENSE</a></p>
+</dd><dt><a href="#lbDH">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbDI">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbDI">BUGS</a></dt>
+<dd></dd></dl>

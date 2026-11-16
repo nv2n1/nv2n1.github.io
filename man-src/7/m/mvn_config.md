@@ -15,10 +15,10 @@ description: "mvn_config – specify custom XMvn configuration option"
 <h2>Operands</h2>
 <p><code>key</code></p>
 <dl>
-<dd>Configuration option key (unique name). This is XPath-like address of XML configuration node &#8211; list of XML nodes delimited by <i>/</i>. If unknown key is given, behavior is unspecified. For list of available keys see XMvn Configuration Reference.</dl>
+<dd>Configuration option key (unique name). This is XPath-like address of XML configuration node &#8211; list of XML nodes delimited by <i>/</i>. If unknown key is given, behavior is unspecified. For list of available keys see XMvn Configuration Reference.</dd></dl>
 <p> <code>value</code></p>
 <dl>
-<dd>Value of specified option. Must be either plain text or XML content. If value format is inappropriate for particular option, behavior is unspecified.</dl>
+<dd>Value of specified option. Must be either plain text or XML content. If value format is inappropriate for particular option, behavior is unspecified.</dd></dl>
 <h2>Author</h2>
 <p>Originally written by Mikolaj Izdebski. Versions 3.0.0 and later were written by Stanislav Ochotnicky.</p>
 <h2>Reporting Bugs</h2>

@@ -14,7 +14,7 @@ description: "fc_block_scsi_eh – Block SCSI eh thread for blocked fc_rport"
 <p><i>cmnd</i></p>
 <dl>
 <dd>
-<dd>SCSI command that scsi_eh is trying to recover</dl>
+</dd><dd>SCSI command that scsi_eh is trying to recover</dd></dl>
 <h2>Description</h2>
 <p>This routine can be called from a FC LLD scsi_eh callback. It blocks the scsi_eh thread until the fc_rport leaves the FC_PORTSTATE_BLOCKED, or the fast_io_fail_tmo fires. This is necessary to avoid the scsi_eh failing recovery actions for blocked rports which would lead to offlined SCSI devices.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "fc_block_scsi_eh – Block SCSI eh thread for blocked fc_rport"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

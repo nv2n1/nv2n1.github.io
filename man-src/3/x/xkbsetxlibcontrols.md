@@ -11,16 +11,16 @@ description: "XkbSetXlibControls – Changes the state of the Library Controls"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>unsigned int XkbSetXlibControls</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned long </code><i>bits_to_change</i><code>,</code> <code>unsigned long </code><i>values_for_bits</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; bits_to_change</i></p>
-<dd>selects controls to be modified</p>
-<dt><i>&#8211; values_for_bits</i></p>
-<dd>turns selected controls on (1) or off (0)</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; bits_to_change</i></dt>
+<dd>selects controls to be modified</dd>
+<dt><i>&#8211; values_for_bits</i></dt>
+<dd>turns selected controls on (1) or off (0)</dd></dl>
 <h2>Description</h2>
 <p><i>XkbSetXlibControls </i> modifies the state of the controls selected by <i>bits_to_change; </i> only the controls selected by <i>bits_to_change </i> are modified. If the bit corresponding to a control is on in <i>bits_to_change </i> and also on in <i>values_for_bits, </i> the control is enabled. If the bit corresponding to a control is on in <i>bits_to_change </i> but off in <i>values_for_bits, </i> the control is disabled. <i>bits_to_change </i> should be an inclusive OR of bits from Table 1. </p>
 <table>
@@ -86,20 +86,20 @@ description: "XkbSetXlibControls – Changes the state of the Library Controls"
 </table>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>(1 &lt;&lt; 0)</p>
-<dd>XkbLC_ForceLatin1Lookup</p>
-<dt>(1 &lt;&lt; 1)</p>
-<dd>XkbLC_ConsumeLookupMods</p>
-<dt>(1 &lt;&lt; 2)</p>
-<dd>XkbLC_AlwaysConsumeShiftAndLock</p>
-<dt>(1 &lt;&lt; 3)</p>
-<dd>XkbLC_IgnoreNewKeyboards</p>
-<dt>(1 &lt;&lt; 29)</p>
-<dd>XkbLC_ConsumeKeysOnComposeFail</p>
-<dt>(1 &lt;&lt; 30)</p>
-<dd>XkbLC_ComposeLED</p>
-<dt>(1 &lt;&lt; 31)</p>
-<dd>XkbLC_BeepOnComposeFail</p>
-<dt>(0xc0000007)</p>
-<dd>XkbLC_AllControls </p>
+<dt>(1 &lt;&lt; 0)</dt>
+<dd>XkbLC_ForceLatin1Lookup</dd>
+<dt>(1 &lt;&lt; 1)</dt>
+<dd>XkbLC_ConsumeLookupMods</dd>
+<dt>(1 &lt;&lt; 2)</dt>
+<dd>XkbLC_AlwaysConsumeShiftAndLock</dd>
+<dt>(1 &lt;&lt; 3)</dt>
+<dd>XkbLC_IgnoreNewKeyboards</dd>
+<dt>(1 &lt;&lt; 29)</dt>
+<dd>XkbLC_ConsumeKeysOnComposeFail</dd>
+<dt>(1 &lt;&lt; 30)</dt>
+<dd>XkbLC_ComposeLED</dd>
+<dt>(1 &lt;&lt; 31)</dt>
+<dd>XkbLC_BeepOnComposeFail</dd>
+<dt>(0xc0000007)</dt>
+<dd>XkbLC_AllControls </dd>
 </dl>

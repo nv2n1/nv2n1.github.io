@@ -14,11 +14,11 @@ mongoc_stream_tls_check_cert (mongoc_stream_t *stream,
  const char *host);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_tls_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_tls_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>host</code></p>
-<dd>A UTF-8 string holding the hostname used in socket creation. This value is what will be matched against the server provided certificate.</dl>
+<dt><code>host</code></dt>
+<dd>A UTF-8 string holding the hostname used in socket creation. This value is what will be matched against the server provided certificate.</dd></dl>
 <p> The <code><a href="/docs/linux/man/3-mongoc_stream_tls_check_cert/">mongoc_stream_tls_check_cert</a>(3)</code> function shall perform a RFC-6125 certificate verification. </p>
 <h2>Returns</h2>
 <p>The <code><a href="/docs/linux/man/3-mongoc_stream_tls_check_cert/">mongoc_stream_tls_check_cert</a>(3)</code> function returns true if the certificate is valid was successful. If false, openssl errors may be set. </p>

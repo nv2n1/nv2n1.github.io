@@ -13,10 +13,10 @@ description: "PAPIF_flips –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_flips(&nbsp;<wbr>C_FLOAT real_time, C_FLOAT proc_time, C_LONG_LONG flpins, C_FLOAT mflips, C_INT check&nbsp;<wbr>)</code></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_flips</code></dl>
+<dd><code>PAPI_flips</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

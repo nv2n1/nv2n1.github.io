@@ -100,15 +100,15 @@ XRectangle *XShapeGetRectangles (
 <i>ShapeUnion</i>
 <i>ShapeIntersect</i>
 <i>ShapeSubtract</i>
-<i>ShapeInvert</i></pre></dl>
+<i>ShapeInvert</i></pre></dd></dl>
  
 
  Shape Kinds:
 <dl COMPACT><dd><pre><i>ShapeBounding</i>
-<i>ShapeClip</i></pre></dl>
+<i>ShapeClip</i></pre></dd></dl>
  
 
  Event defines:
 <dl COMPACT><dd><pre><i>ShapeNotifyMask</i>
-<i>ShapeNotify</i></pre></dl><h2>Bugs</h2>This manual page needs a lot more work.
+<i>ShapeNotify</i></pre></dd></dl><h2>Bugs</h2>This manual page needs a lot more work.
 <h2>See Also</h2><i>X11 Nonrectangular Window Shape Extension</i>

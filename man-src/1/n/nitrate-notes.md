@@ -13,56 +13,56 @@ description: "Release Notes – python-nitrate release notes"
 <p> There have been many substantial changes in the python-nitrate implementation and a bunch of new features have been added. Many thanks to Filip Holec for contributing substantial part of the new caching implementation. Here&#8217;s the summary of important changes: </p>
 <p> Improved Performance</p>
 <dl>
-<dt>&bull;</p>
-<dd> Common caching support for all Nitrate classes</p>
-<dt>&bull;</p>
-<dd> Persistent cache implementation, MultiCall support</p>
-<dt>&bull;</p>
-<dd> Cache().update() support for multicall slicing</p>
-<dt>&bull;</p>
-<dd> Experimental support for fetching data from Teiid </p>
+<dt>&bull;</dt>
+<dd> Common caching support for all Nitrate classes</dd>
+<dt>&bull;</dt>
+<dd> Persistent cache implementation, MultiCall support</dd>
+<dt>&bull;</dt>
+<dd> Cache().update() support for multicall slicing</dd>
+<dt>&bull;</dt>
+<dd> Experimental support for fetching data from Teiid </dd>
 <p> New Object Attributes</p>
-<dt>&bull;</p>
-<dd> TestPlan.owner attribute holding the default owner</p>
-<dt>&bull;</p>
-<dd> TestPlan.sortkey() for getting/setting test case order</p>
-<dt>&bull;</p>
-<dd> TestRun.testcases for easy iteration over linked cases</p>
-<dt>&bull;</p>
-<dd> TestRun.started and TestRun.finished timestamps</p>
-<dt>&bull;</p>
-<dd> TestCase.created for accessing the creation date </p>
+<dt>&bull;</dt>
+<dd> TestPlan.owner attribute holding the default owner</dd>
+<dt>&bull;</dt>
+<dd> TestPlan.sortkey() for getting/setting test case order</dd>
+<dt>&bull;</dt>
+<dd> TestRun.testcases for easy iteration over linked cases</dd>
+<dt>&bull;</dt>
+<dd> TestRun.started and TestRun.finished timestamps</dd>
+<dt>&bull;</dt>
+<dd> TestCase.created for accessing the creation date </dd>
 <p> Other Features</p>
-<dt>&bull;</p>
-<dd> Huge api module refactored into several modules</p>
-<dt>&bull;</p>
-<dd> New utility functions header() and sliced() added</p>
-<dt>&bull;</p>
-<dd> Support for colored logging, new custom log levels</p>
-<dt>&bull;</p>
-<dd> Plain authentication supported in addition to Kerberos</p>
-<dt>&bull;</p>
-<dd> Improved man pages, module documentation and examples </p>
+<dt>&bull;</dt>
+<dd> Huge api module refactored into several modules</dd>
+<dt>&bull;</dt>
+<dd> New utility functions header() and sliced() added</dd>
+<dt>&bull;</dt>
+<dd> Support for colored logging, new custom log levels</dd>
+<dt>&bull;</dt>
+<dd> Plain authentication supported in addition to Kerberos</dd>
+<dt>&bull;</dt>
+<dd> Improved man pages, module documentation and examples </dd>
 <p> Under the Hood</p>
-<dt>&bull;</p>
-<dd> The big cleanup of ininitialization and caching</p>
-<dt>&bull;</p>
-<dd> TestPlan.testruns reimplemented using PlanRuns container</p>
-<dt>&bull;</p>
-<dd> TestRun.caseruns and TestRun.testcases containers</p>
-<dt>&bull;</p>
-<dd> Test case containers iterate over sorted test cases</p>
-<dt>&bull;</p>
-<dd> Bugs reimplemented with containers and caching</p>
-<dt>&bull;</p>
-<dd> Store the initial object dict as _inject for future use </p>
+<dt>&bull;</dt>
+<dd> The big cleanup of ininitialization and caching</dd>
+<dt>&bull;</dt>
+<dd> TestPlan.testruns reimplemented using PlanRuns container</dd>
+<dt>&bull;</dt>
+<dd> TestRun.caseruns and TestRun.testcases containers</dd>
+<dt>&bull;</dt>
+<dd> Test case containers iterate over sorted test cases</dd>
+<dt>&bull;</dt>
+<dd> Bugs reimplemented with containers and caching</dd>
+<dt>&bull;</dt>
+<dd> Store the initial object dict as _inject for future use </dd>
 <p> Test Suite</p>
-<dt>&bull;</p>
-<dd> New unit test cases implemented, many improved</p>
-<dt>&bull;</p>
-<dd> Added support for performance tests (&#8211;performance)</p>
-<dt>&bull;</p>
-<dd> Overall test summary printed at the end of testing </p>
+<dt>&bull;</dt>
+<dd> New unit test cases implemented, many improved</dd>
+<dt>&bull;</dt>
+<dd> Added support for performance tests (&#8211;performance)</dd>
+<dt>&bull;</dt>
+<dd> Overall test summary printed at the end of testing </dd>
 <p> API Changes </p>
 <p> Several backward-incompatible changes had to be introduced in order to improve the performance and because of necessary cleanup. Below you can find the list of differences in the module API. </p>
 <p> Object id cannot be provided as string: </p>

@@ -11,11 +11,9 @@ std::experimental::future&lt;T&gt;::then - std::experimental::future&lt;T&gt;::t
 <h2>Synopsis</h2>
 
 <pre><code>template &lt; class F &gt;
-
 future&lt;/* see below */&gt; then(F&amp;&amp; func) ;</code></pre> 
 Attach the continuation func to *this. The behavior is undefined if *this has no associated shared state (i.e., valid() == false). 
 Creates a shared state associated with the future object to be returned, and a copy fd of func constructed as if by DECAY_COPY(std::forward&lt;F&gt;(func)) evaluated in the thread calling then, where DECAY_COPY is defined as <pre><code>template &lt;class T&gt;
-
 std::decay_t&lt;T&gt; DECAY_COPY(T &amp;&amp;v)
 {
     return std::forward&lt;T&gt;(v);

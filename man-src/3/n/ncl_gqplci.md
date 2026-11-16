@@ -12,9 +12,9 @@ GQPLCI (Inquire polyline color index) - gets the polyline color index.
 
  void ginq_line_colr_ind(Gint *err_ind, Gint *line_colr_ind);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt>COLI
-<dd>(Integer, Output) - Returns the polyline color index as set by default of by a call to GSPLCI.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
+</dd><dt>COLI
+</dt><dd>(Integer, Output) - Returns the polyline color index as set by default of by a call to GSPLCI.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gpl, gsln, gslwsc, gscr, gsplci, gqln, gqlwsc, gqplci, ginq_line_colr_ind, dashline 
 
  Hardcopy: User's Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version

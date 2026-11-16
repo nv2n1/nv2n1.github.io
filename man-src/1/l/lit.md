@@ -21,52 +21,52 @@ description: "lit – LLVM Integrated Tester"
 <p> Users interested in the <code>lit</code> architecture or designing a <code>lit</code> testing implementation should see &#8220;<font SIZE="-1">LIT</font> <font SIZE="-1">ARCHITECTURE</font>&#8221;</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show the <code>lit</code> help message.</p>
-<dt><code>-j</code> <i>N</i>, <code>&#8211;threads</code>=<i>N</i></p>
-<dd> Run <i>N</i> tests in parallel. By default, this is automatically chosen to match the number of detected available CPUs.</p>
-<dt><code>&#8211;config-prefix</code>=<i></i><font SIZE="-1"><i>NAME</i></font><i></i></p>
-<dd> Search for <i></i><font SIZE="-1"><i>NAME</i></font><i>.cfg</i> and <i></i><font SIZE="-1"><i>NAME</i></font><i>.site.cfg</i> when searching for test suites, instead of <i>lit.cfg</i> and <i>lit.site.cfg</i>.</p>
-<dt><code>&#8211;param</code> <i></i><font SIZE="-1"><i>NAME</i></font><i></i>, <code>&#8211;param</code> <i></i><font SIZE="-1"><i>NAME</i></font><i></i>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></p>
-<dd> Add a user defined parameter <i></i><font SIZE="-1"><i>NAME</i></font><i></i> with the given <i></i><font SIZE="-1"><i>VALUE</i></font><i></i> (or the empty string if not given). The meaning and use of these parameters is test suite dependent.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show the <code>lit</code> help message.</dd>
+<dt><code>-j</code> <i>N</i>, <code>&#8211;threads</code>=<i>N</i></dt>
+<dd> Run <i>N</i> tests in parallel. By default, this is automatically chosen to match the number of detected available CPUs.</dd>
+<dt><code>&#8211;config-prefix</code>=<i></i><font SIZE="-1"><i>NAME</i></font><i></i></dt>
+<dd> Search for <i></i><font SIZE="-1"><i>NAME</i></font><i>.cfg</i> and <i></i><font SIZE="-1"><i>NAME</i></font><i>.site.cfg</i> when searching for test suites, instead of <i>lit.cfg</i> and <i>lit.site.cfg</i>.</dd>
+<dt><code>&#8211;param</code> <i></i><font SIZE="-1"><i>NAME</i></font><i></i>, <code>&#8211;param</code> <i></i><font SIZE="-1"><i>NAME</i></font><i></i>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></dt>
+<dd> Add a user defined parameter <i></i><font SIZE="-1"><i>NAME</i></font><i></i> with the given <i></i><font SIZE="-1"><i>VALUE</i></font><i></i> (or the empty string if not given). The meaning and use of these parameters is test suite dependent.</dd></dl>
 <h2>OUTPUT OPTIONS</h2>
 <dl>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Suppress any output except for test failures.</p>
-<dt><code>-s</code>, <code>&#8211;succinct</code></p>
-<dd> Show less output, for example don&#8217;t show information on tests that pass.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Show more information on test failures, for example the entire test output instead of just the test result.</p>
-<dt><code>&#8211;no-progress-bar</code></p>
-<dd> Do not use curses based progress bar.</dl>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Suppress any output except for test failures.</dd>
+<dt><code>-s</code>, <code>&#8211;succinct</code></dt>
+<dd> Show less output, for example don&#8217;t show information on tests that pass.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Show more information on test failures, for example the entire test output instead of just the test result.</dd>
+<dt><code>&#8211;no-progress-bar</code></dt>
+<dd> Do not use curses based progress bar.</dd></dl>
 <h2>EXECUTION OPTIONS</h2>
 <dl>
-<dt><code>&#8211;path</code>=<i></i><font SIZE="-1"><i>PATH</i></font><i></i></p>
-<dd> Specify an addition <i></i><font SIZE="-1"><i>PATH</i></font><i></i> to use when searching for executables in tests.</p>
-<dt><code>&#8211;vg</code></p>
-<dd> Run individual tests under valgrind (using the memcheck tool). The <i>&#8211;error-exitcode</i> argument for valgrind is used so that valgrind failures will cause the program to exit with a non-zero status.</p>
-<dt><code>&#8211;vg-arg</code>=<i></i><font SIZE="-1"><i>ARG</i></font><i></i></p>
-<dd> When <i>&#8211;vg</i> is used, specify an additional argument to pass to valgrind itself.</p>
-<dt><code>&#8211;time-tests</code></p>
-<dd> Track the wall time individual tests take to execute and includes the results in the summary output. This is useful for determining which tests in a test suite take the most time to execute. Note that this option is most useful with <i>-j 1</i>.</dl>
+<dt><code>&#8211;path</code>=<i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dd> Specify an addition <i></i><font SIZE="-1"><i>PATH</i></font><i></i> to use when searching for executables in tests.</dd>
+<dt><code>&#8211;vg</code></dt>
+<dd> Run individual tests under valgrind (using the memcheck tool). The <i>&#8211;error-exitcode</i> argument for valgrind is used so that valgrind failures will cause the program to exit with a non-zero status.</dd>
+<dt><code>&#8211;vg-arg</code>=<i></i><font SIZE="-1"><i>ARG</i></font><i></i></dt>
+<dd> When <i>&#8211;vg</i> is used, specify an additional argument to pass to valgrind itself.</dd>
+<dt><code>&#8211;time-tests</code></dt>
+<dd> Track the wall time individual tests take to execute and includes the results in the summary output. This is useful for determining which tests in a test suite take the most time to execute. Note that this option is most useful with <i>-j 1</i>.</dd></dl>
 <h2>SELECTION OPTIONS</h2>
 <dl>
-<dt><code>&#8211;max-tests</code>=<i>N</i></p>
-<dd> Run at most <i>N</i> tests and then terminate.</p>
-<dt><code>&#8211;max-time</code>=<i>N</i></p>
-<dd> Spend at most <i>N</i> seconds (approximately) running tests and then terminate.</p>
-<dt><code>&#8211;shuffle</code></p>
-<dd> Run the tests in a random order.</dl>
+<dt><code>&#8211;max-tests</code>=<i>N</i></dt>
+<dd> Run at most <i>N</i> tests and then terminate.</dd>
+<dt><code>&#8211;max-time</code>=<i>N</i></dt>
+<dd> Spend at most <i>N</i> seconds (approximately) running tests and then terminate.</dd>
+<dt><code>&#8211;shuffle</code></dt>
+<dd> Run the tests in a random order.</dd></dl>
 <h2>ADDITIONAL OPTIONS</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd> Run <code>lit</code> in debug mode, for debugging configuration issues and <code>lit</code> itself.</p>
-<dt><code>&#8211;show-suites</code></p>
-<dd> List the discovered test suites as part of the standard output.</p>
-<dt><code>&#8211;no-tcl-as-sh</code></p>
-<dd> Run Tcl scripts internally (instead of converting to shell scripts).</p>
-<dt><code>&#8211;repeat</code>=<i>N</i></p>
-<dd> Run each test <i>N</i> times. Currently this is primarily useful for timing tests, other results are not collated in any reasonable fashion.</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> Run <code>lit</code> in debug mode, for debugging configuration issues and <code>lit</code> itself.</dd>
+<dt><code>&#8211;show-suites</code></dt>
+<dd> List the discovered test suites as part of the standard output.</dd>
+<dt><code>&#8211;no-tcl-as-sh</code></dt>
+<dd> Run Tcl scripts internally (instead of converting to shell scripts).</dd>
+<dt><code>&#8211;repeat</code>=<i>N</i></dt>
+<dd> Run each test <i>N</i> times. Currently this is primarily useful for timing tests, other results are not collated in any reasonable fashion.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>lit</code> will exit with an exit code of 1 if there are any <font SIZE="-1">FAIL</font> or <font SIZE="-1">XPASS</font> results. Otherwise, it will exit with the status 0. Other exit codes used for non-test related failures (for example a user error or an internal program error).</p>
 <h2>TEST DISCOVERY</h2>
@@ -77,18 +77,18 @@ description: "lit – LLVM Integrated Tester"
 <h2>TEST STATUS RESULTS</h2>
 <p> Each test ultimately produces one of the following six results:</p>
 <dl>
-<dt><font SIZE="-1"><code>PASS</code></font></p>
-<dd> The test succeeded.</p>
-<dt><font SIZE="-1"><code>XFAIL</code></font></p>
-<dd> The test failed, but that is expected. This is used for test formats which allow specifying that a test does not currently work, but wish to leave it in the test suite.</p>
-<dt><font SIZE="-1"><code>XPASS</code></font></p>
-<dd> The test succeeded, but it was expected to fail. This is used for tests which were specified as expected to fail, but are now succeeding (generally because the feautre they test was broken and has been fixed).</p>
-<dt><font SIZE="-1"><code>FAIL</code></font></p>
-<dd> The test failed.</p>
-<dt><font SIZE="-1"><code>UNRESOLVED</code></font></p>
-<dd> The test result could not be determined. For example, this occurs when the test could not be run, the test itself is invalid, or the test was interrupted.</p>
-<dt><font SIZE="-1"><code>UNSUPPORTED</code></font></p>
-<dd> The test is not supported in this environment. This is used by test formats which can report unsupported tests.</dl>
+<dt><font SIZE="-1"><code>PASS</code></font></dt>
+<dd> The test succeeded.</dd>
+<dt><font SIZE="-1"><code>XFAIL</code></font></dt>
+<dd> The test failed, but that is expected. This is used for test formats which allow specifying that a test does not currently work, but wish to leave it in the test suite.</dd>
+<dt><font SIZE="-1"><code>XPASS</code></font></dt>
+<dd> The test succeeded, but it was expected to fail. This is used for tests which were specified as expected to fail, but are now succeeding (generally because the feautre they test was broken and has been fixed).</dd>
+<dt><font SIZE="-1"><code>FAIL</code></font></dt>
+<dd> The test failed.</dd>
+<dt><font SIZE="-1"><code>UNRESOLVED</code></font></dt>
+<dd> The test result could not be determined. For example, this occurs when the test could not be run, the test itself is invalid, or the test was interrupted.</dd>
+<dt><font SIZE="-1"><code>UNSUPPORTED</code></font></dt>
+<dd> The test is not supported in this environment. This is used by test formats which can report unsupported tests.</dd></dl>
 <p> Depending on the test format tests may produce additional information about their status (generally only for failures). See the Output section for more information.</p>
 <h2>LIT INFRASTRUCTURE</h2>
 <p> This section describes the <code>lit</code> testing architecture for users interested in creating a new <code>lit</code> testing implementation, or extending an existing one. </p>
@@ -98,10 +98,10 @@ description: "lit – LLVM Integrated Tester"
 <p> <code>lit</code> identifies test suites as directories containing <i>lit.cfg</i> or <i>lit.site.cfg</i> files (see also <code>&#8211;config-prefix</code>. Test suites are initially discovered by recursively searching up the directory hierarchy for all the input files passed on the command line. You can use <code>&#8211;show-suites</code> to display the discovered test suites at startup. </p>
 <p> Once a test suite is discovered, its config file is loaded. Config files themselves are just Python modules which will be executed. When the config file is executed, two important global variables are predefined:</p>
 <dl>
-<dt><code>lit</code></p>
-<dd> The global <code>lit</code> configuration object (a <i>LitConfig</i> instance), which defines the builtin test formats, global configuration parameters, and other helper routines for implementing test configurations.</p>
-<dt><code>config</code></p>
-<dd> This is the config object (a <i>TestingConfig</i> instance) for the test suite, which the config file is expected to populate. The following variables are also available on the <i>config</i> object, some of which must be set by the config and others are optional or predefined: </p>
+<dt><code>lit</code></dt>
+<dd> The global <code>lit</code> configuration object (a <i>LitConfig</i> instance), which defines the builtin test formats, global configuration parameters, and other helper routines for implementing test configurations.</dd>
+<dt><code>config</code></dt>
+<dd> This is the config object (a <i>TestingConfig</i> instance) for the test suite, which the config file is expected to populate. The following variables are also available on the <i>config</i> object, some of which must be set by the config and others are optional or predefined: </dd>
 <p> <code>name</code> <i>[required]</i> The name of the test suite, for use in reports and diagnostics. </p>
 <p> <code>test_format</code> <i>[required]</i> The test format object which will be used to discover and run tests in the test suite. Generally this will be a builtin test format available from the <i>lit.formats</i> module. </p>
 <p> <code>test_src_root</code> The filesystem path to the test suite root. For out-of-dir builds this is the directory that will be scanned for tests. </p>
@@ -124,3 +124,4 @@ description: "lit – LLVM Integrated Tester"
 <h2>AUTHOR</h2>
 <p> Written by Daniel Dunbar and maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
 <h2>Index</h2>
+</p>

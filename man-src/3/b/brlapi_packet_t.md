@@ -34,5 +34,5 @@ description: "brlapi_packet_t –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAO">Author</a></dt>
+<dd></dd></dl>

@@ -16,16 +16,16 @@ description: "obminimize – optimize the geometry, minimize the energy for a mo
 <h2>OPTIONS</h2>
 <p> If no filename is given, obminimize will give all options including the available forcefields.</p>
 <dl>
-<dt><code>-n </code><i>steps</i></p>
-<dd> Specify the maximum number of steps (default=2500)</p>
-<dt><code>-cg</code></p>
-<dd> Use conjugate gradients algorithm (default)</p>
-<dt><code>-sd</code></p>
-<dd> Use steepest descent algorithm</p>
-<dt><code>-c </code><i>criteria</i></p>
-<dd> Set convergence criteria (default=1e-6)</p>
-<dt><code>-ff </code><i>forcefield</i></p>
-<dd> Select the forcefield</dl>
+<dt><code>-n </code><i>steps</i></dt>
+<dd> Specify the maximum number of steps (default=2500)</dd>
+<dt><code>-cg</code></dt>
+<dd> Use conjugate gradients algorithm (default)</dd>
+<dt><code>-sd</code></dt>
+<dd> Use steepest descent algorithm</dd>
+<dt><code>-c </code><i>criteria</i></dt>
+<dd> Set convergence criteria (default=1e-6)</dd>
+<dt><code>-ff </code><i>forcefield</i></dt>
+<dd> Select the forcefield</dd></dl>
 <h2>EXAMPLES</h2>
 <p> View the possible options, including available forcefields: </p>
 <blockquote><p><tt>&quot;obminimize&quot;</tt></p></blockquote>

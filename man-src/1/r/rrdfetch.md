@@ -14,18 +14,18 @@ description: "rrdfetch – Fetch data from an RRD."
 <h2>DESCRIPTION</h2>
 <p> The <code>fetch</code> function is normally used internally by the graph function to get data from <font SIZE="-1"><code>RRD</code></font>s. <code>fetch</code> will analyze the <font SIZE="-1"><code>RRD</code></font> and try to retrieve the data in the resolution requested. The data fetched is printed to stdout. <i>*UNKNOWN*</i> data is often represented by the string &#8220;NaN&#8221; depending on your <font SIZE="-1">OS</font>&#8216;s printf function.</p>
 <dl>
-<dt><i>filename</i></p>
-<dd> the name of the <font SIZE="-1"><code>RRD</code></font> you want to fetch the data from.</p>
-<dt><i></i><font SIZE="-1"><i>CF</i></font><i></i></p>
-<dd> the consolidation function that is applied to the data you want to fetch (<font SIZE="-1">AVERAGE</font>,MIN,MAX,LAST)</p>
-<dt><code>&#8211;resolution</code>|<code>-r</code> <i>resolution</i> (default is the highest resolution)</p>
-<dd> the interval you want the values to have (seconds per value). <code>rrdfetch</code> will try to match your request, but it will return data even if no absolute match is possible. <font SIZE="-1"><code>NB</code></font><code>.</code> See note below.</p>
-<dt><code>&#8211;start</code>|<code>-s</code> <i>start</i> (default end-1day)</p>
-<dd> start of the time series. A time in seconds since epoch (1970-01-01) is required. Negative numbers are relative to the current time. By default, one day worth of data will be fetched. See also AT-STYLE <font SIZE="-1">TIME</font> <font SIZE="-1">SPECIFICATION</font> section for a detailed explanation on ways to specify the start time.</p>
-<dt><code>&#8211;end</code>|<code>-e</code> <i>end</i> (default now)</p>
-<dd> the end of the time series in seconds since epoch. See also AT-STYLE <font SIZE="-1">TIME</font> <font SIZE="-1">SPECIFICATION</font> section for a detailed explanation of how to specify the end time.</p>
-<dt><code>&#8211;daemon</code> <i>address</i></p>
-<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the <font SIZE="-1">RRD</font> files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </p>
+<dt><i>filename</i></dt>
+<dd> the name of the <font SIZE="-1"><code>RRD</code></font> you want to fetch the data from.</dd>
+<dt><i></i><font SIZE="-1"><i>CF</i></font><i></i></dt>
+<dd> the consolidation function that is applied to the data you want to fetch (<font SIZE="-1">AVERAGE</font>,MIN,MAX,LAST)</dd>
+<dt><code>&#8211;resolution</code>|<code>-r</code> <i>resolution</i> (default is the highest resolution)</dt>
+<dd> the interval you want the values to have (seconds per value). <code>rrdfetch</code> will try to match your request, but it will return data even if no absolute match is possible. <font SIZE="-1"><code>NB</code></font><code>.</code> See note below.</dd>
+<dt><code>&#8211;start</code>|<code>-s</code> <i>start</i> (default end-1day)</dt>
+<dd> start of the time series. A time in seconds since epoch (1970-01-01) is required. Negative numbers are relative to the current time. By default, one day worth of data will be fetched. See also AT-STYLE <font SIZE="-1">TIME</font> <font SIZE="-1">SPECIFICATION</font> section for a detailed explanation on ways to specify the start time.</dd>
+<dt><code>&#8211;end</code>|<code>-e</code> <i>end</i> (default now)</dt>
+<dd> the end of the time series in seconds since epoch. See also AT-STYLE <font SIZE="-1">TIME</font> <font SIZE="-1">SPECIFICATION</font> section for a detailed explanation of how to specify the end time.</dd>
+<dt><code>&#8211;daemon</code> <i>address</i></dt>
+<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the <font SIZE="-1">RRD</font> files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </dd>
 <pre>
  rrdtool fetch --daemon unix:/var/run/rrdcached.sock /var/lib/rrd/foo.rrd AVERAGE
 </pre>
@@ -49,10 +49,10 @@ description: "rrdfetch – Fetch data from an RRD."
 <p> However, this will almost always result in a time series that is <font SIZE="-1"><code>NOT</code></font> in the 15 minute <font SIZE="-1">RRA</font>. Therefore, the highest resolution <font SIZE="-1">RRA</font>, i.e. 5 minute averages, will be chosen which in this case is not what you want. </p>
 <p> Hence, make sure that</p>
 <dl>
-<dt>1.</p>
-<dd> both start and end time are a multiple of 900</p>
-<dt>2.</p>
-<dd> both start and end time are within the desired <font SIZE="-1">RRA</font></dl>
+<dt>1.</dt>
+<dd> both start and end time are a multiple of 900</dd>
+<dt>2.</dt>
+<dd> both start and end time are within the desired <font SIZE="-1">RRA</font></dd></dl>
 <p> So, if time now is called &#8220;t&#8221;, do </p>
 <pre><code>
 end time == int(t / 900) * 900,
@@ -88,10 +88,10 @@ perl - e '$ctime = time; $rrdres = 900; \
 <p> In contrast, hours, minutes, and seconds are well defined time intervals, and these are guaranteed to always produce time offsets exactly as specified (e.g. for <font SIZE="-1">EET</font> timezone, &#8216;8:00 Mar 27 1999&nbsp;<wbr>+2 days&#8217; = &#8216;8:00 Mar 29 1999&#8217;, but since there is 1-hour <font SIZE="-1">DST</font> forward clock adjustment that occurs around 3:00 Mar 28 1999, the actual time interval between 8:00 Mar 27 1999 and 8:00 Mar 29 1999 equals 47 hours; on the other hand, &#8216;8:00 Mar 27 1999&nbsp;<wbr>+48 hours&#8217; = &#8216;9:00 Mar 29 1999&#8217;, as expected) </p>
 <p> <i></i><font SIZE="-1"><i>NOTE4</i></font><i></i>: The single-letter abbreviation for both <code>months</code> and <code>minutes</code> is <code>m</code>. To disambiguate them, the parser tries to read your mind :) by applying the following two heuristics:</p>
 <dl>
-<dt>1.</p>
-<dd> If <code>m</code> is used in context of (i.e. right after the) years, months, weeks, or days it is assumed to mean <code>months</code>, while in the context of hours, minutes, and seconds it means minutes. (e.g., in -1y6m or +3w1m <code>m</code> is interpreted as <code>months</code>, while in -3h20m or +5s2m <code>m</code> the parser decides for <code>minutes</code>).</p>
-<dt>2.</p>
-<dd> Out of context (i.e. right after the <code>+</code> or <code>&#8211;</code> sign) the meaning of <code>m</code> is guessed from the number it directly follows. Currently, if the number&#8217;s absolute value is below 25 it is assumed that <code>m</code> means <code>months</code>, otherwise it is treated as <code>minutes</code>. (e.g., -25m == -25 minutes, while +24m == +24 months)</dl>
+<dt>1.</dt>
+<dd> If <code>m</code> is used in context of (i.e. right after the) years, months, weeks, or days it is assumed to mean <code>months</code>, while in the context of hours, minutes, and seconds it means minutes. (e.g., in -1y6m or +3w1m <code>m</code> is interpreted as <code>months</code>, while in -3h20m or +5s2m <code>m</code> the parser decides for <code>minutes</code>).</dd>
+<dt>2.</dt>
+<dd> Out of context (i.e. right after the <code>+</code> or <code>&#8211;</code> sign) the meaning of <code>m</code> is guessed from the number it directly follows. Currently, if the number&#8217;s absolute value is below 25 it is assumed that <code>m</code> means <code>months</code>, otherwise it is treated as <code>minutes</code>. (e.g., -25m == -25 minutes, while +24m == +24 months)</dd></dl>
 <p> <i>Final </i><font SIZE="-1"><i>NOTES</i></font><i></i>: Time specification is case-insensitive. Whitespace can be inserted freely or omitted altogether. There are, however, cases when whitespace is required (e.g., &#8216;midnight Thu&#8217;). In this case you should either quote the whole phrase to prevent it from being taken apart by your shell or use &#8216;_&#8217; (underscore) or &#8216;,&#8217; (comma) which also count as whitespace (e.g., midnight_Thu or midnight,Thu).</p>
 <h3><font SIZE="-1">TIME</font> <font SIZE="-1">SPECIFICATION</font> <font SIZE="-1">EXAMPLES</font></h3>
 <p> <i>Oct 12</i> &#8212; October 12 this year </p>
@@ -107,12 +107,12 @@ perl - e '$ctime = time; $rrdres = 900; \
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be used to change the behavior of <tt>&quot;rrdtool fetch&quot;</tt>:</p>
 <dl>
-<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></p>
-<dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dl>
+<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></dt>
+<dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">ENVIRONMENT VARIABLES</a></p>
+<dt><a href="#lbAJ">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAK">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAK">AUTHOR</a></dt>
+<dd></dd></dl>

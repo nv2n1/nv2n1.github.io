@@ -12,27 +12,25 @@ description: "npm-profile – Change settings on your registry profile"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm profile get[--json | --parseable][&lt;property&gt;] npm profile set[--json | --parseable]&lt;property&gt;&lt;value&gt;
         npm profile set password
             npm profile enable -
     2fa [auth - and-writes | auth - only] npm profile disable - 2fa
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Change your profile information on the registry. This not be available if you&#8217;re using a non-npmjs registry.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <code>npm profile get [&lt;property&gt;]</code>: Display all of the properties of your profile, or one or more specific properties. It looks like: </p>
+<dt>&bull;</dt>
+<dd> <code>npm profile get [&lt;property&gt;]</code>: Display all of the properties of your profile, or one or more specific properties. It looks like: </dd>
 </dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 + -- -- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -- -- -- -- -+ | name | example |
     +-- -- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -- -- -- -- -+ | email | me[at] example.com(verified) |
@@ -49,41 +47,35 @@ npm profile get[--json | --parseable][&lt;property&gt;] npm profile set[--json |
          :45.922Z |
           +-- -- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -- -- -- -- -+
 </code></pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> <code>npm profile set &lt;property&gt; &lt;value&gt;</code>: Set the value of a profile property. You can set the following properties this way:<br />
-&nbsp;<wbr>&nbsp;email, fullname, homepage, freenode, twitter, github</p>
-<dt>&bull;</p>
-<dd> <code>npm profile set password</code>: Change your password. This is interactive, you&#8217;ll be prompted for your current password and a new password. You&#8217;ll also be prompted for an OTP if you have two-factor authentication enabled.</p>
-<dt>&bull;</p>
-<dd> <code>npm profile enable-2fa [auth-and-writes|auth-only]</code>: Enables two-factor authentication. Defaults to <code>auth-and-writes</code> mode. Modes are:</p>
+&nbsp;<wbr>&nbsp;email, fullname, homepage, freenode, twitter, github</dd>
+<dt>&bull;</dt>
+<dd> <code>npm profile set password</code>: Change your password. This is interactive, you&#8217;ll be prompted for your current password and a new password. You&#8217;ll also be prompted for an OTP if you have two-factor authentication enabled.</dd>
+<dt>&bull;</dt>
+<dd> <code>npm profile enable-2fa [auth-and-writes|auth-only]</code>: Enables two-factor authentication. Defaults to <code>auth-and-writes</code> mode. Modes are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <code>auth-only</code>: Require an OTP when logging in or making changes to your account&#8217;s authentication. The OTP will be required on both the website and the command line.</p>
-<dt>&bull;</p>
-<dd> <code>auth-and-writes</code>: Requires an OTP at all the times <code>auth-only</code> does, and also requires one when publishing a module, setting the <code>latest</code> dist-tag, or changing access via <code>npm access</code> and <code>npm owner</code>. </p>
+<dt>&bull;</dt>
+<dd> <code>auth-only</code>: Require an OTP when logging in or making changes to your account&#8217;s authentication. The OTP will be required on both the website and the command line.</dd>
+<dt>&bull;</dt>
+<dd> <code>auth-and-writes</code>: Requires an OTP at all the times <code>auth-only</code> does, and also requires one when publishing a module, setting the <code>latest</code> dist-tag, or changing access via <code>npm access</code> and <code>npm owner</code>. </dd>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> <code>npm profile disable-2fa</code>: Disables two-factor authentication. </p>
+<dt>&bull;</dt>
+<dd> <code>npm profile disable-2fa</code>: Disables two-factor authentication. </dd>
 </dl>
 </dl>
 <h3>Details</h3>
 <p> All of the <code>npm profile</code> subcommands accept <code>&#8211;json</code> and <code>&#8211;parseable</code> and will tailor their output based on those. Some of these commands may not be available on non npmjs.com registries.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help config </p>
+<dt>&bull;</dt>
+<dd> npm help config </dd>
 </dl>
 </dl>
 <h2>Index</h2>

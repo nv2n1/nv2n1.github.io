@@ -11,23 +11,15 @@ std::experimental::invocation_type,std::experimental::raw_invocation_type - std:
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / type_traits&gt;
-
     template &lt;class&gt;
-
     struct raw_invocation_type; // undefined
 (1)(library fundamentals TS)
-
     template &lt;class Fn, class... ArgTypes&gt;
-
     struct raw_invocation_type&lt;Fn(ArgTypes...)&gt;;
-
 template &lt;class&gt;
-
 struct invocation_type; // undefined
 (2)(library fundamentals TS)
-
     template &lt;class Fn, class... ArgTypes&gt;
-
     struct invocation_type&lt;Fn(ArgTypes...)&gt;;</code></pre> 
 Computes the invocation parameters when Fn is called with the arguments ArgTypes..., as in INVOKE(std::declval&lt;Fn&gt;(), std::declval&lt;ArgTypes&gt;()...), where INVOKE is the operation defined in Callable. 
 The invocation parameters of the expression INVOKE(f, t1, t2, ..., tN) is defined as follows, where T1 is the (possibly cv-qualified) type of t1 and U1 is T1&amp; if t1 is an lvalue and T1&amp;&amp; otherwise: 

@@ -19,11 +19,12 @@ description: "rdiff-backup-statistics – summarize rdiff-backup statistics file
 <p> If a file or directory is listed, its contributions are subtracted from its parent. That is why the percentage listed after a directory can be larger than the percentage of its parent. Without this, the root directory would always be the largest, and the output would be boring. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;begin-time</code><i> time</i></p>
-<dd> Do not read statistics files older than <i>time</i>. By default, all statistics files will be read. <i>time</i> should be in the same format taken by &#8211;restore-as-of. (See <code>TIME FORMATS</code> in the rdiff-backup man page for details.)</p>
-<dt><code>&#8211;end-time</code><i> time</i></p>
-<dd> Like <code>&#8211;begin-time</code> but exclude statistics files later than <i>time</i>.</p>
-<dt><code>&#8211;minimum-ratio</code><i> ratio</i></p>
-<dd> Print all directories contributing more than the given ratio to the total. The default value is .05, or 5 percent.</p>
-<dt><code>&#8211;null-separator</code></p>
+<dt><code>&#8211;begin-time</code><i> time</i></dt>
+<dd> Do not read statistics files older than <i>time</i>. By default, all statistics files will be read. <i>time</i> should be in the same format taken by &#8211;restore-as-of. (See <code>TIME FORMATS</code> in the rdiff-backup man page for details.)</dd>
+<dt><code>&#8211;end-time</code><i> time</i></dt>
+<dd> Like <code>&#8211;begin-time</code> but exclude statistics files later than <i>time</i>.</dd>
+<dt><code>&#8211;minimum-ratio</code><i> ratio</i></dt>
+<dd> Print all directories contributing more than the given ratio to the total. The default value is .05, or 5 percent.</dd>
+<dt><code>&#8211;null-separator</code></dt>
 <dd> Specify that the lines of the file_statistics file are separated by nulls (
+</dd></dl>

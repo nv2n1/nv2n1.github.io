@@ -17,193 +17,162 @@ description: "condor_userlog Display and summarize job statistics from job log f
 <p> <code>Job</code></p>
 <dl>
 <dt>
-<dd> The cluster/process id of the HTCondor job.</p>
-<dt>
-<dd></dl>
+</dt><dd> The cluster/process id of the HTCondor job.</dd>
+</dl>
 <p> <code>Host</code></p>
 <dl>
 <dt>
-<dd> The host where the job ran. By default, the host&#8217;s IP address is displayed. If <code>-hostname</code> is specified, the host name will be displayed instead.</p>
-<dt>
-<dd></dl>
+</dt><dd> The host where the job ran. By default, the host&#8217;s IP address is displayed. If <code>-hostname</code> is specified, the host name will be displayed instead.</dd>
+</dl>
 <p> <code>Start Time</code></p>
 <dl>
 <dt>
-<dd> The time (month/day hour:minute) when the job began running on the host.</p>
-<dt>
-<dd></dl>
+</dt><dd> The time (month/day hour:minute) when the job began running on the host.</dd>
+</dl>
 <p> <code>Evict Time</code></p>
 <dl>
 <dt>
-<dd> The time (month/day hour:minute) when the job was evicted from the host.</p>
-<dt>
-<dd></dl>
+</dt><dd> The time (month/day hour:minute) when the job was evicted from the host.</dd>
+</dl>
 <p> <code>Wall Time</code></p>
 <dl>
 <dt>
-<dd> The time (days+hours:minutes) for which this workstation was allocated to the job.</p>
-<dt>
-<dd></dl>
+</dt><dd> The time (days+hours:minutes) for which this workstation was allocated to the job.</dd>
+</dl>
 <p> <code>Good Time</code></p>
 <dl>
 <dt>
-<dd> The allocated time (days+hours:min) which contributed to the completion of this job. If the job exited during the allocation, then this value will equal &#8220;Wall Time.&#8221; If the job performed a checkpoint, then the value equals the work saved in the checkpoint during this allocation. If the job did not exit or perform a checkpoint during this allocation, the value will be 0+00:00. This value can be greater than 0 and less than &#8220;Wall Time&#8221; if the application completed a periodic checkpoint during the allocation but failed to checkpoint when evicted.</p>
-<dt>
-<dd></dl>
+</dt><dd> The allocated time (days+hours:min) which contributed to the completion of this job. If the job exited during the allocation, then this value will equal &#8220;Wall Time.&#8221; If the job performed a checkpoint, then the value equals the work saved in the checkpoint during this allocation. If the job did not exit or perform a checkpoint during this allocation, the value will be 0+00:00. This value can be greater than 0 and less than &#8220;Wall Time&#8221; if the application completed a periodic checkpoint during the allocation but failed to checkpoint when evicted.</dd>
+</dl>
 <p> <code>CPU Usage</code></p>
 <dl>
 <dt>
-<dd> The CPU time (days+hours:min) which contributed to the completion of this job.</p>
-<dt>
-<dd></dl>
+</dt><dd> The CPU time (days+hours:min) which contributed to the completion of this job.</dd>
+</dl>
 <p> <i>condor_userlog</i> will then display summary statistics per host: </p>
 <p> <code>Host/Job</code></p>
 <dl>
 <dt>
-<dd> The IP address or host name for the host.</p>
-<dt>
-<dd></dl>
+</dt><dd> The IP address or host name for the host.</dd>
+</dl>
 <p> <code>Wall Time</code></p>
 <dl>
 <dt>
-<dd> The workstation time (days+hours:minutes) allocated by this host to the jobs specified in the query. By default, all jobs in the log are included in the query.</p>
-<dt>
-<dd></dl>
+</dt><dd> The workstation time (days+hours:minutes) allocated by this host to the jobs specified in the query. By default, all jobs in the log are included in the query.</dd>
+</dl>
 <p> <code>Good Time</code></p>
 <dl>
 <dt>
-<dd> The time (days+hours:minutes) allocated on this host which contributed to the completion of the jobs specified in the query.</p>
-<dt>
-<dd></dl>
+</dt><dd> The time (days+hours:minutes) allocated on this host which contributed to the completion of the jobs specified in the query.</dd>
+</dl>
 <p> <code>CPU Usage</code></p>
 <dl>
 <dt>
-<dd> The CPU time (days+hours:minutes) obtained from this host which contributed to the completion of the jobs specified in the query.</p>
-<dt>
-<dd></dl>
+</dt><dd> The CPU time (days+hours:minutes) obtained from this host which contributed to the completion of the jobs specified in the query.</dd>
+</dl>
 <p> <code>Avg Alloc</code></p>
 <dl>
 <dt>
-<dd> The average length of an allocation on this host (days+hours:minutes).</p>
-<dt>
-<dd></dl>
+</dt><dd> The average length of an allocation on this host (days+hours:minutes).</dd>
+</dl>
 <p> <code>Avg Lost</code></p>
 <dl>
 <dt>
-<dd> The average amount of work lost (days+hours:minutes) when a job was evicted from this host without successfully performing a checkpoint.</p>
-<dt>
-<dd></dl>
+</dt><dd> The average amount of work lost (days+hours:minutes) when a job was evicted from this host without successfully performing a checkpoint.</dd>
+</dl>
 <p> <code>Goodput</code></p>
 <dl>
 <dt>
-<dd> This percentage is computed as Good Time divided by Wall Time.</p>
-<dt>
-<dd></dl>
+</dt><dd> This percentage is computed as Good Time divided by Wall Time.</dd>
+</dl>
 <p> <code>Util.</code></p>
 <dl>
 <dt>
-<dd> This percentage is computed as CPU Usage divided by Good Time.</p>
-<dt>
-<dd></dl>
+</dt><dd> This percentage is computed as CPU Usage divided by Good Time.</dd>
+</dl>
 <p> <i>condor_userlog</i> will then display summary statistics per job: </p>
 <p> <code>Host/Job</code></p>
 <dl>
 <dt>
-<dd> The cluster/process id of the HTCondor job.</p>
-<dt>
-<dd></dl>
+</dt><dd> The cluster/process id of the HTCondor job.</dd>
+</dl>
 <p> <code>Wall Time</code></p>
 <dl>
 <dt>
-<dd> The total workstation time (days+hours:minutes) allocated to this job.</p>
-<dt>
-<dd></dl>
+</dt><dd> The total workstation time (days+hours:minutes) allocated to this job.</dd>
+</dl>
 <p> <code>Good Time</code></p>
 <dl>
 <dt>
-<dd> The total time (days+hours:minutes) allocated to this job which contributed to the job&#8217;s completion.</p>
-<dt>
-<dd></dl>
+</dt><dd> The total time (days+hours:minutes) allocated to this job which contributed to the job&#8217;s completion.</dd>
+</dl>
 <p> <code>CPU Usage</code></p>
 <dl>
 <dt>
-<dd> The total CPU time (days+hours:minutes) which contributed to this job&#8217;s completion.</p>
-<dt>
-<dd></dl>
+</dt><dd> The total CPU time (days+hours:minutes) which contributed to this job&#8217;s completion.</dd>
+</dl>
 <p> <code>Avg Alloc</code></p>
 <dl>
 <dt>
-<dd> The average length of a workstation allocation obtained by this job in minutes (days+hours:minutes).</p>
-<dt>
-<dd></dl>
+</dt><dd> The average length of a workstation allocation obtained by this job in minutes (days+hours:minutes).</dd>
+</dl>
 <p> <code>Avg Lost</code></p>
 <dl>
 <dt>
-<dd> The average amount of work lost (days+hours:minutes) when this job was evicted from a host without successfully performing a checkpoint.</p>
-<dt>
-<dd></dl>
+</dt><dd> The average amount of work lost (days+hours:minutes) when this job was evicted from a host without successfully performing a checkpoint.</dd>
+</dl>
 <p> <code>Goodput</code></p>
 <dl>
 <dt>
-<dd> This percentage is computed as Good Time divided by Wall Time.</p>
-<dt>
-<dd></dl>
+</dt><dd> This percentage is computed as Good Time divided by Wall Time.</dd>
+</dl>
 <p> <code>Util.</code></p>
 <dl>
 <dt>
-<dd> This percentage is computed as CPU Usage divided by Good Time.</p>
-<dt>
-<dd></dl>
+</dt><dd> This percentage is computed as CPU Usage divided by Good Time.</dd>
+</dl>
 <p> Finally, <i>condor_userlog</i> will display a summary for all hosts and jobs. </p>
 <h2>Options</h2>
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Get a brief description of the supported options</p>
-<dt>
-<dd></dl>
+</dt><dd> Get a brief description of the supported options</dd>
+</dl>
 <p> <code>-total</code></p>
 <dl>
 <dt>
-<dd> Only display job totals</p>
-<dt>
-<dd></dl>
+</dt><dd> Only display job totals</dd>
+</dl>
 <p> <code>-raw</code></p>
 <dl>
 <dt>
-<dd> Display raw data only</p>
-<dt>
-<dd></dl>
+</dt><dd> Display raw data only</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Debug mode</p>
-<dt>
-<dd></dl>
+</dt><dd> Debug mode</dd>
+</dl>
 <p> <code>-j</code></p>
 <dl>
 <dt>
-<dd> Select a specific cluster or cluster.proc</p>
-<dt>
-<dd></dl>
+</dt><dd> Select a specific cluster or cluster.proc</dd>
+</dl>
 <p> <code>-evict</code></p>
 <dl>
 <dt>
-<dd> Select only allocations which ended due to eviction</p>
-<dt>
-<dd></dl>
+</dt><dd> Select only allocations which ended due to eviction</dd>
+</dl>
 <p> <code>-all</code></p>
 <dl>
 <dt>
-<dd> Select all clusters and all allocations</p>
-<dt>
-<dd></dl>
+</dt><dd> Select all clusters and all allocations</dd>
+</dl>
 <p> <code>-hostname</code></p>
 <dl>
 <dt>
-<dd> Display host name instead of IP address</p>
-<dt>
-<dd></dl>
+</dt><dd> Display host name instead of IP address</dd>
+</dl>
 <h2>General Remarks</h2>
 <p> Since the HTCondor job log file format does not contain a year field in the timestamp, all entries are assumed to occur in the current year. Allocations which begin in one year and end in the next will be silently ignored. </p>
 <h2>Exit Status</h2>

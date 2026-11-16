@@ -15,11 +15,11 @@ relay_file_poll - poll file op for relay files
 <h2>Arguments</h2>
 
 <i>filp</i>
-<dl><dd><dd>the file</dl>
+<dl><dd></dd><dd>the file</dd></dl>
  
 
  <i>wait</i>
-<dl><dd>poll table</dl>
+<dl><dd>poll table</dd></dl>
 
 <h2>Description</h2>
 

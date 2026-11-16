@@ -14,10 +14,10 @@ description: "devm_mdiobus_free – Resource-managed mdiobus_free"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device this mii_bus belongs to</dl>
+</dd><dd>Device this mii_bus belongs to</dd></dl>
 <p> <i>bus</i></p>
 <dl>
-<dd>the mii_bus associated with the device</dl>
+<dd>the mii_bus associated with the device</dd></dl>
 <h2>Description</h2>
 <p>Free mii_bus allocated with <code>devm_mdiobus_alloc_size</code>.</p>
 <h2>Copyright</h2>

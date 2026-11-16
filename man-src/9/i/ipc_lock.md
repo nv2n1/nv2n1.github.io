@@ -15,11 +15,11 @@ ipc_lock - lock an ipc structure without rwsem held
 <h2>Arguments</h2>
 
 <i>ids</i>
-<dl><dd><dd>ipc identifier set</dl>
+<dl><dd></dd><dd>ipc identifier set</dd></dl>
  
 
  <i>id</i>
-<dl><dd>ipc id to look for</dl>
+<dl><dd>ipc id to look for</dd></dl>
 
 <h2>Description</h2>
 

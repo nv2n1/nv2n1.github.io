@@ -10,100 +10,40 @@ description: "QuantLib::Currency – Currency specification"
 <p>QuantLib::Currency &#8211; Currency specification </p>
 <h2>Synopsis</h2>
 <pre><code>const std::string &amp; name () const
-
-
 currency name, e.g, 'U.S. Dollar'
-
-
 const std::string &amp; code () const
-
-
 ISO 4217 three-letter code, e.g, 'USD'.
-
-
 Integer numericCode () const
-
-
 ISO 4217 numeric code, e.g, '840'.
-
-
 const std::string &amp; symbol () const
-
-
 symbol, e.g, '$'
-
-
 const std::string &amp; fractionSymbol () const
-
-
 fraction symbol, e.g, '¢'
-
-
 Integer fractionsPerUnit () const
-
-
 number of fractionary parts in a unit, e.g, 100
-
-
 const Rounding &amp; rounding () const
-
-
 rounding convention
-
-
 std::string format () const
-
-
 output format</code></pre>
 <p> Inherited by <code>ARSCurrency</code>, <code>ATSCurrency</code>, <code>AUDCurrency</code>, <code>BDTCurrency</code>, <code>BEFCurrency</code>, <code>BGLCurrency</code>, <code>BRLCurrency</code>, <code>BYRCurrency</code>, <code>CADCurrency</code>, <code>CHFCurrency</code>, <code>CLPCurrency</code>, <code>CNYCurrency</code>, <code>COPCurrency</code>, <code>CYPCurrency</code>, <code>CZKCurrency</code>, <code>DEMCurrency</code>, <code>DKKCurrency</code>, <code>EEKCurrency</code>, <code>ESPCurrency</code>, <code>EURCurrency</code>, <code>FIMCurrency</code>, <code>FRFCurrency</code>, <code>GBPCurrency</code>, <code>GRDCurrency</code>, <code>HKDCurrency</code>, <code>HUFCurrency</code>, <code>IEPCurrency</code>, <code>ILSCurrency</code>, <code>INRCurrency</code>, <code>IQDCurrency</code>, <code>IRRCurrency</code>, <code>ISKCurrency</code>, <code>ITLCurrency</code>, <code>JPYCurrency</code>, <code>KRWCurrency</code>, <code>KWDCurrency</code>, <code>LTLCurrency</code>, <code>LUFCurrency</code>, <code>LVLCurrency</code>, <code>MTLCurrency</code>, <code>MXNCurrency</code>, <code>NLGCurrency</code>, <code>NOKCurrency</code>, <code>NPRCurrency</code>, <code>NZDCurrency</code>, <code>PEHCurrency</code>, <code>PEICurrency</code>, <code>PENCurrency</code>, <code>PKRCurrency</code>, <code>PLNCurrency</code>, <code>PTECurrency</code>, <code>ROLCurrency</code>, <code>RONCurrency</code>, <code>SARCurrency</code>, <code>SEKCurrency</code>, <code>SGDCurrency</code>, <code>SITCurrency</code>, <code>SKKCurrency</code>, <code>THBCurrency</code>, <code>TRLCurrency</code>, <code>TRYCurrency</code>, <code>TTDCurrency</code>, <code>TWDCurrency</code>, <code>USDCurrency</code>, <code>VEBCurrency</code>, and <code>ZARCurrency</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>Currency</code> ()<br />
  <i>default constructor </i> <code>Inspectors</code> </p>
 <pre><code>const std::string &amp; name () const
-
-
 currency name, e.g, 'U.S. Dollar'
-
-
 const std::string &amp; code () const
-
-
 ISO 4217 three-letter code, e.g, 'USD'.
-
-
 Integer numericCode () const
-
-
 ISO 4217 numeric code, e.g, '840'.
-
-
 const std::string &amp; symbol () const
-
-
 symbol, e.g, '$'
-
-
 const std::string &amp; fractionSymbol () const
-
-
 fraction symbol, e.g, '¢'
-
-
 Integer fractionsPerUnit () const
-
-
 number of fractionary parts in a unit, e.g, 100
-
-
 const Rounding &amp; rounding () const
-
-
 rounding convention
-
-
 std::string format () const
-
-
 output format</code></pre>
 <p> <code>Other information</code> </p>
 <p> bool <code>empty</code> () const<br />

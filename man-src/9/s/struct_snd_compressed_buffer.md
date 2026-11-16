@@ -18,11 +18,11 @@ struct_snd_compressed_buffer - compressed buffer
 <h2>Members</h2>
 
 fragment_size
-<dl><dd>size of buffer fragment in bytes</dl>
+<dl><dd>size of buffer fragment in bytes</dd></dl>
  
 
  fragments
-<dl><dd>number of such fragments</dl>
+<dl><dd>number of such fragments</dd></dl>
 
 <h2>Copyright</h2>
 

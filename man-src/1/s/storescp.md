@@ -265,16 +265,16 @@ peer authentication:<br />
 <p> Option <i>&#8211;filename-extension</i> appends a specified suffix to each filename (a dot &#8216;.&#8217; is not added automatically). This suffix is not appended to the filenames created by <i>&#8211;rename-on-eostudy</i> to maintain the length of 8 characters. </p>
 <p> Option <i>&#8211;exec-on-reception</i> allows to execute a certain command line after having received and processed one DICOM object (through a C-STORE-RQ message). The command line to be executed is passed to this option as a parameter. The specified command line may contain a number of placeholders which will be replaced at run time: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>#p:</code> complete path to the output directory into which the last DICOM object was stored (not available with option <i>&#8211;ignore</i> though)</p>
-<dt>&bull;</p>
-<dd> <code>#f:</code> filename of the current output file (not available with option <i>&#8211;ignore</i> though)</p>
-<dt>&bull;</p>
-<dd> <code>#a:</code> calling application entity title of the peer Storage SCU</p>
-<dt>&bull;</p>
-<dd> <code>#c:</code> called application entity title used by the peer Storage SCU to address <code>storescp</code></p>
-<dt>&bull;</p>
-<dd> <code>#r:</code> calling presentation address, i.e. hostname or IP address of the peer Storage SCU</dl>
+<dt>&bull;</dt>
+<dd> <code>#p:</code> complete path to the output directory into which the last DICOM object was stored (not available with option <i>&#8211;ignore</i> though)</dd>
+<dt>&bull;</dt>
+<dd> <code>#f:</code> filename of the current output file (not available with option <i>&#8211;ignore</i> though)</dd>
+<dt>&bull;</dt>
+<dd> <code>#a:</code> calling application entity title of the peer Storage SCU</dd>
+<dt>&bull;</dt>
+<dd> <code>#c:</code> called application entity title used by the peer Storage SCU to address <code>storescp</code></dd>
+<dt>&bull;</dt>
+<dd> <code>#r:</code> calling presentation address, i.e. hostname or IP address of the peer Storage SCU</dd></dl>
 <p> The specified command line is executed as a separate process, so that the execution of <code>storescp</code> will not be held back. </p>
 <p> Option <i>&#8211;exec-on-eostudy</i> allows to execute a certain command line when all DICOM objects that belong to one study have been received by <code>storescp</code>. The same placeholders as with <i>&#8211;exec-on-reception</i> may be used, except for &#8216;#f&#8217;, which is not supported. A study is considered complete by <code>storescp</code> when an object belonging to a different study is received or the timeout specified with <i>&#8211;eostudy-timeout</i> takes place. If option <i>&#8211;rename-on-eostudy</i> is in force, the renaming takes place before the external command is executed. </p>
 <p> Option <i>&#8211;rename-on-eostudy</i> refers to the above mentioned <i>&#8211;sort-xxx</i> options and can only be used in combination with one of these options. If a user specifies option <i>&#8211;rename-on-eostudy</i> and <code>storescp</code> determines that all DICOM objects that belong to a certain study have been received, all DICOM files that belong to the last study will be renamed in the corresponding output directory. The filenames into which the files are being renamed will be calculated using the pattern </p>

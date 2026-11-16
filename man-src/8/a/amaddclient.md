@@ -12,91 +12,91 @@ description: "amaddclient – program to add client to an existing Amanda config
 <dl>
 <dt> <code>amaddclient</code> &#8211;config <i>config</i> ||<br />
 &nbsp;<wbr>&#8211;client&nbsp;<wbr><i>client name</i>&nbsp;<wbr>||<br />
-&nbsp;<wbr>&#8211;diskdev&nbsp;<wbr><i>directory to backup</i>&nbsp;<wbr>[&#8211;m]&nbsp;<wbr>[&#8211;dumptype&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;includefile&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;includelist&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;excludefile&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;excludelist&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;user&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;auth&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;gnutar_list_dir&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;amandates&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;no-client-update]&nbsp;<wbr>[&#8211;batch]&nbsp;<wbr>[&#8211;help]</dl>
+&nbsp;<wbr>&#8211;diskdev&nbsp;<wbr><i>directory to backup</i>&nbsp;<wbr>[&#8211;m]&nbsp;<wbr>[&#8211;dumptype&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;includefile&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;includelist&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;excludefile&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;excludelist&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;user&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;auth&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;gnutar_list_dir&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;amandates&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;no-client-update]&nbsp;<wbr>[&#8211;batch]&nbsp;<wbr>[&#8211;help]</dt></dl>
 <h2>Description</h2>
-<dd>After Amanda rpms are successfully installed and <code>amserverconfig</code> is run, <code>amaddclient</code> will add client to the Amanda configuration. <code>amaddclient</code> create or update Amanda <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file and create or update /var/lib/amanda/.amandahosts file on the server. </p>
+<dd>After Amanda rpms are successfully installed and <code>amserverconfig</code> is run, <code>amaddclient</code> will add client to the Amanda configuration. <code>amaddclient</code> create or update Amanda <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file and create or update /var/lib/amanda/.amandahosts file on the server. </dd>
 <p> If &#8211;no-client-update is not specified, <code>amaddclient</code> will attempt to update or create /var/lib/amanda/.amandahost, amanda-client.conf and gnutar-lists on the client. (See <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a>(1) and <a href="/docs/linux/man/1-ssh-add/">ssh-add</a>(1) for detail.) </p>
 <p> <code>amaddclient</code> must be run by user amandabackup. </p>
 <p> &#8211;config, &#8211;client and &#8211;diskdev must be specified.</p>
 <h2>Options</h2>
 <dl>
-<dd>Options may be abbreviated, as long as the abbreviation is not ambiguous. Option argument can either separated by &#8216;=&#8217; or a space. Example: &#8211;conf=v253, &#8211;client client8.zmanda.com</dl>
+<dd>Options may be abbreviated, as long as the abbreviation is not ambiguous. Option argument can either separated by &#8216;=&#8217; or a space. Example: &#8211;conf=v253, &#8211;client client8.zmanda.com</dd></dl>
 <p> <code>&#8211;config config</code></p>
 <dl>
-<dd>Amanda configuration which this program will add the client to.</dl>
+<dd>Amanda configuration which this program will add the client to.</dd></dl>
 <p> <code>&#8211;client client</code></p>
 <dl>
-<dd>The name of the client machine to add. FQDN name recommended.</dl>
+<dd>The name of the client machine to add. FQDN name recommended.</dd></dl>
 <p> <code>&#8211;diskdev diskdev</code></p>
 <dl>
-<dd>Directory for this Amanda configuration to backup.</dl>
+<dd>Directory for this Amanda configuration to backup.</dd></dl>
 <p> <code>&#8211;m</code></p>
 <dl>
-<dd>Modify existing entry in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file. </p>
+<dd>Modify existing entry in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file. </dd>
 <p> Note: if <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file has been modified manually, this option might not work.</dl>
 <p> <code>&#8211;dumptype dumptype</code></p>
 <dl>
-<dd>dumptype to use. Dumptype must be defined in /etc/amanda/template.d/dumptypes or /etc/amanda/$config/amanda.conf file. Default: [user-tar]</dl>
+<dd>dumptype to use. Dumptype must be defined in /etc/amanda/template.d/dumptypes or /etc/amanda/$config/amanda.conf file. Default: [user-tar]</dd></dl>
 <p> <code>&#8211;user string</code></p>
 <dl>
-<dd>name of user using <code>amrecover</code> on the client, default is root.</dl>
+<dd>name of user using <code>amrecover</code> on the client, default is root.</dd></dl>
 <p> <code>&#8211;auth string</code></p>
 <dl>
-<dd>authentication method to use when running <code>amrecover</code> from the client , default is bsdtcp.</dl>
+<dd>authentication method to use when running <code>amrecover</code> from the client , default is bsdtcp.</dd></dl>
 <p> <code>&#8211;gnutar_list_dir string</code></p>
 <dl>
-<dd>directory where gnutar keep its state file on the client. Absolute path required. Default is /var/lib/amanda/gnutar-lists. If &#8211;no-client-update is not set, this program will attempt to create the directory on the client.</dl>
+<dd>directory where gnutar keep its state file on the client. Absolute path required. Default is /var/lib/amanda/gnutar-lists. If &#8211;no-client-update is not set, this program will attempt to create the directory on the client.</dd></dl>
 <p> <code>&#8211;amandates string</code></p>
 <dl>
-<dd>file where amanda keep the date of each dumplevel on the client, default is /etc/amandates.</dl>
+<dd>file where amanda keep the date of each dumplevel on the client, default is /etc/amandates.</dd></dl>
 <p> <code>&#8211;batch</code></p>
 <dl>
-<dd>Turn on batch mode when copying files to the client, default is off</dl>
+<dd>Turn on batch mode when copying files to the client, default is off</dd></dl>
 <p> <code>&#8211;no-client-update</code></p>
 <dl>
-<dd>If this option is set, <code>amaddclient</code> will not attempt to update/create .amandahosts, amanda-client.conf and gnutar-lists file on the client.</dl>
+<dd>If this option is set, <code>amaddclient</code> will not attempt to update/create .amandahosts, amanda-client.conf and gnutar-lists file on the client.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>Display usage.</dl>
+<dd>Display usage.</dd></dl>
 <dl>
-<dd>&nbsp;<wbr> If any of the following four options are used, <code>amaddclient</code> will extend the dumptype definition to an in-line definition in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file.</dl>
+<dd>&nbsp;<wbr> If any of the following four options are used, <code>amaddclient</code> will extend the dumptype definition to an in-line definition in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file.</dd></dl>
 <p> <code>&#8211;includefile string</code></p>
 <dl>
-<dd>string is a glob expression</dl>
+<dd>string is a glob expression</dd></dl>
 <p> <code>&#8211;includelist string</code></p>
 <dl>
-<dd>string is a file name on the client containing glob expressions. Specify either &#8211;includefile or &#8211;includelist.</dl>
+<dd>string is a file name on the client containing glob expressions. Specify either &#8211;includefile or &#8211;includelist.</dd></dl>
 <p> <code>&#8211;excludefile string</code></p>
 <dl>
-<dd>string is a glob expression</dl>
+<dd>string is a glob expression</dd></dl>
 <p> <code>&#8211;excludelist string</code></p>
 <dl>
-<dd>string is a file name on the client containing glob expressions. Specify either &#8211;excludefile or &#8211;excludelist.</dl>
+<dd>string is a file name on the client containing glob expressions. Specify either &#8211;excludefile or &#8211;excludelist.</dd></dl>
 <h2>Files</h2>
 <p><code>/var/lib/amanda/template.d</code></p>
 <dl>
-<dd>Amanda configuration template files install location</dl>
+<dd>Amanda configuration template files install location</dd></dl>
 <p> <code>/var/lib/amanda</code></p>
 <dl>
-<dd>amandabackup home directory</dl>
+<dd>amandabackup home directory</dd></dl>
 <p> <code>/var/lib/amanda/.amandahosts</code></p>
 <dl>
-<dd>Amanda authentication file.</dl>
+<dd>Amanda authentication file.</dd></dl>
 <p> <code>/var/lib/amanda/gnutar-lists</code></p>
 <dl>
-<dd>A directory which contains backup timestamp and list of files backed up.</dl>
+<dd>A directory which contains backup timestamp and list of files backed up.</dd></dl>
 <p> <code>/etc/amanda/$config</code></p>
 <dl>
-<dd>Amanda configuration files location for $config(e.g: DailySet1).</dl>
+<dd>Amanda configuration files location for $config(e.g: DailySet1).</dd></dl>
 <p> <code>/etc/amanda/template.d</code></p>
 <dl>
-<dd>A directory contains dumptypes and tapetypes files used by all Amanda configurations.</dl>
+<dd>A directory contains dumptypes and tapetypes files used by all Amanda configurations.</dd></dl>
 <p> <code>/etc/amandates</code></p>
 <dl>
-<dd>Amanda file on the client. It keeps track of structures of previous dumps.</dl>
+<dd>Amanda file on the client. It keeps track of structures of previous dumps.</dd></dl>
 <p> <code>/tmp/amanda</code></p>
 <dl>
-<dd>directory contains Amanda debug log files.</dl>
+<dd>directory contains Amanda debug log files.</dd></dl>
 <h2>Return Value</h2>
 <p>On success, zero is returned. On error, 1 is returned.</p>
 <h2>See Also</h2>
@@ -105,4 +105,4 @@ description: "amaddclient – program to add client to an existing Amanda config
 <h2>Author</h2>
 <p><code>Kevin Till</code> &lt;kevin.till [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

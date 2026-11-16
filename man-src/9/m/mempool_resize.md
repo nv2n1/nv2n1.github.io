@@ -14,10 +14,10 @@ description: "mempool_resize – resize an existing memory pool"
 <p><i>pool</i></p>
 <dl>
 <dd>
-<dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dl>
+</dd><dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dd></dl>
 <p> <i>new_min_nr</i></p>
 <dl>
-<dd>the new minimum number of elements guaranteed to be allocated for this pool.</dl>
+<dd>the new minimum number of elements guaranteed to be allocated for this pool.</dd></dl>
 <h2>Description</h2>
 <p>This function shrinks/grows the pool. In the case of growing, it cannot be guaranteed that the pool will be grown to the new size immediately, but new <code>mempool_free</code> calls will refill it. This function may sleep. </p>
 <p> Note, the caller must guarantee that no mempool_destroy is called while this function is running. <code>mempool_alloc</code> &amp; <code>mempool_free</code> might be called (eg. from IRQ contexts) while this function executes.</p>

@@ -11,34 +11,21 @@ std::iter_value_t,std::iter_reference_t,std::iter_difference_t, - std::iter_valu
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class T &gt;
-
 concept /*dereferenceable*/ = /* see below */; // exposition only
-
 template&lt; class T &gt;                                                      (1) (since
-
 using iter_value_t = /* see below */;                                        C++20)
-
 template&lt; /*dereferenceable*/ T &gt;                                        (2) (since
-
 using iter_reference_t = decltype(*std::declval&lt;T&amp;&gt;());                      C++20)
-
 template&lt; class T &gt;                                                      (3) (since
-
 using iter_difference_t = /* see below */;                                   C++20)
-
 template&lt; /*dereferenceable*/ T&gt;
 requires /* see below */                                                 (4) (since
 C++20)
-
 using iter_rvalue_reference_t =
-
 decltype(ranges::iter_move(std::declval&lt;T&amp;&gt;()));
-
 template&lt; Readable T &gt;
 using iter_common_reference_t =                                          (5) (since
-
 std::common_reference_t&lt;std::iter_reference_t&lt;T&gt;,                            C++20)
 std::iter_value_t&lt;T&gt;&amp;&gt;;</code></pre> 
 Compute the associated types of an iterator. The exposition-only concept 

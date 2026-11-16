@@ -23,12 +23,12 @@ description: "rename – renames multiple files"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose: print names of files successfully renamed.</p>
-<dt><code>-n</code>, <code>&#8211;no-act</code></p>
-<dd> No Action: show what files would have been renamed.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Force: overwrite existing files.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose: print names of files successfully renamed.</dd>
+<dt><code>-n</code>, <code>&#8211;no-act</code></dt>
+<dd> No Action: show what files would have been renamed.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Force: overwrite existing files.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> No environment variables are used.</p>
 <h2>AUTHOR</h2>

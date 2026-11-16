@@ -15,10 +15,10 @@ description: "dh_installmime – install mime files into package build directori
 <p> <code>dh_installmime</code> is a debhelper program that is responsible for installing mime files into package build directories.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.mime</p>
-<dd> Installed into usr/lib/mime/packages/<i>package</i> in the package build directory.</p>
-<dt>debian/<i>package</i>.sharedmimeinfo</p>
-<dd> Installed into /usr/share/mime/packages/<i>package</i>.xml in the package build directory.</dl>
+<dt>debian/<i>package</i>.mime</dt>
+<dd> Installed into usr/lib/mime/packages/<i>package</i> in the package build directory.</dd>
+<dt>debian/<i>package</i>.sharedmimeinfo</dt>
+<dd> Installed into /usr/share/mime/packages/<i>package</i>.xml in the package build directory.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

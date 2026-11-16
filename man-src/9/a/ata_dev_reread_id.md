@@ -14,10 +14,10 @@ description: "ata_dev_reread_id – Re-read IDENTIFY data"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>target ATA device</dl>
+</dd><dd>target ATA device</dd></dl>
 <p> <i>readid_flags</i></p>
 <dl>
-<dd>read ID flags</dl>
+<dd>read ID flags</dd></dl>
 <h2>Description</h2>
 <p>Re-read IDENTIFY page and make sure <i>dev</i> is still attached to the port. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
@@ -26,5 +26,5 @@ description: "ata_dev_reread_id – Re-read IDENTIFY data"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

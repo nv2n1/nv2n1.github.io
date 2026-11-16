@@ -23,40 +23,40 @@ description: "gozilla – force mozilla to display specified source file."
 <h2>OPTIONS</h2>
 <p> The following options are available:</p>
 <dl>
-<dt><code>+no</code></p>
-<dd> line number. It must be a line on which function definition or function reference is exist. If you execute <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1) with <code>-l</code> option, you can specify any line.</p>
-<dt><code>-b</code> <i>browser</i></p>
-<dd> browser to use. By default, it is assumed <code>mozilla</code>.</p>
-<dt><code>-d</code> <i>name</i></p>
-<dd> print function.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>-p</code></p>
-<dd> just print generated target URL.</p>
-<dt><i>file</i></p>
-<dd> path of source file or alias name.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Quiet mode.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose mode.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version number.</dl>
+<dt><code>+no</code></dt>
+<dd> line number. It must be a line on which function definition or function reference is exist. If you execute <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1) with <code>-l</code> option, you can specify any line.</dd>
+<dt><code>-b</code> <i>browser</i></dt>
+<dd> browser to use. By default, it is assumed <code>mozilla</code>.</dd>
+<dt><code>-d</code> <i>name</i></dt>
+<dd> print function.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>-p</code></dt>
+<dd> just print generated target URL.</dd>
+<dt><i>file</i></dt>
+<dd> path of source file or alias name.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Quiet mode.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version number.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>&#8216;HTML/&#8217;</p>
-<dd> hypertext of source tree.</p>
-<dt>&#8216;GTAGS/&#8217;</p>
-<dd> tags file for function definitions.</p>
-<dt>&#8216;$HOME/.gozillarc&#8217;</p>
-<dd> alias file. Please read source code for the detail.</dl>
+<dt>&#8216;HTML/&#8217;</dt>
+<dd> hypertext of source tree.</dd>
+<dt>&#8216;GTAGS/&#8217;</dt>
+<dd> tags file for function definitions.</dd>
+<dt>&#8216;$HOME/.gozillarc&#8217;</dt>
+<dd> alias file. Please read source code for the detail.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>GTAGSROOT</code></p>
-<dd> The directory which is the root of source tree.</p>
-<dt><code>GTAGSDBPATH</code></p>
-<dd> The directory on which gtags database exist. This value is ignored when <code>GTAGSROOT</code> is not defined.</p>
-<dt><code>BROWSER</code></p>
-<dd> browser to use. By default, it is assumed mozilla.</dl>
+<dt><code>GTAGSROOT</code></dt>
+<dd> The directory which is the root of source tree.</dd>
+<dt><code>GTAGSDBPATH</code></dt>
+<dd> The directory on which gtags database exist. This value is ignored when <code>GTAGSROOT</code> is not defined.</dd>
+<dt><code>BROWSER</code></dt>
+<dd> browser to use. By default, it is assumed mozilla.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
         $ gtags

@@ -18,11 +18,11 @@ struct_usbdrv_wrap - wrapper for driver-model structure
 <h2>Members</h2>
 
 driver
-<dl><dd>The driver-model core driver structure.</dl>
+<dl><dd>The driver-model core driver structure.</dd></dl>
  
 
  for_devices
-<dl><dd>Non-zero for device drivers, 0 for interface drivers.</dl>
+<dl><dd>Non-zero for device drivers, 0 for interface drivers.</dd></dl>
 
 <h2>Copyright</h2>
 

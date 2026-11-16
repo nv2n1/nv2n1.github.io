@@ -11,14 +11,10 @@ description: "selabel_media – userspace SELinux labeling interface and configu
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/label.h&gt;
 int selabel_lookup(struct selabel_handle *hnd,
-
                    char **context,
-
                    const char *device_name, int unused);
 int selabel_lookup_raw(struct selabel_handle *hnd,
-
                        char **context,
-
                        const char *device_name, int unused);</code></pre>
 <h2>Description</h2>
 <p>The media contexts backend maps from media device names such as &quot;cdrom&quot; or &quot;floppy&quot; into security contexts. It is used to find the appropriate context for establishing context mounts on these devices. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br />
@@ -30,34 +26,34 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <h2>Options</h2>
 <p>In addition to the global options described in <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), this backend recognizes the following options:</p>
 <dl>
-<dt><code>SELABEL_OPT_PATH</code></p>
-<dd>A non-null value for this option specifies a path to a file that will be opened in lieu of the standard <i>media</i> contexts file.</dl>
+<dt><code>SELABEL_OPT_PATH</code></dt>
+<dd>A non-null value for this option specifies a path to a file that will be opened in lieu of the standard <i>media</i> contexts file.</dd></dl>
 <h2>Files</h2>
 <p>The media context file used to retrieve a default context depends on the <code>SELABEL_OPT_PATH</code> parameter passed to <code>selabel_openFR(3). If </code><i>NULL</i>, then the <code>SELABEL_OPT_PATH</code> value will default to the active policy media contexts location (as returned by <code><a href="/docs/linux/man/3-selinux_media_context_path/">selinux_media_context_path</a></code>(3)), otherwise the actual <code>SELABEL_OPT_PATH</code> value specified is used. </p>
 <p> The default media contexts file is:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/files/media</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/files/media</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> Should there not be a valid entry in the <i>media</i> file, then the default <i>removable_context</i> file will be read (see <code><a href="/docs/linux/man/5-removable_context/">removable_context</a></code>(5)).</p>
 <h2>File Format</h2>
 <p>Each line within the <i>media</i> file is as follows:</p>
 <dl>
-<dd><i>device_name context</i></dl>
+<dd><i>device_name context</i></dd></dl>
 <p> Where:</p>
 <dl>
-<dd><i>device_name</i></p>
+<dd><i>device_name</i></dd>
 <dl>
-<dd>The media identifier (e.g. cdrom, floppy, disk and usb).</dl>
+<dd>The media identifier (e.g. cdrom, floppy, disk and usb).</dd></dl>
 <p> <i>context</i></p>
 <dl>
-<dd>The context to be used for labeling the device.</dl>
+<dd>The context to be used for labeling the device.</dd></dl>
 </dl>
 <p> Example:</p>
 <dl>
 <dd># contexts/files/media<br />
  cdrom system_u:object_r:removable_device_t<br />
  floppy system_u:object_r:removable_device_t<br />
- disk system_u:object_r:fixed_disk_device_t</dl>
+ disk system_u:object_r:fixed_disk_device_t</dd></dl>
 <h2>Notes</h2>
 <p>If contexts are to be validated, then the global option <code>SELABEL_OPT_VALIDATE</code> must be set before calling <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3). If this is not set, then it is possible for an invalid context to be returned.</p>
 <h2>See Also</h2>

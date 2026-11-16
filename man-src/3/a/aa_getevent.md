@@ -18,10 +18,10 @@ description: "aa_getevent – keyboard functions"
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int wait</code></p>
-<dd> 1 if you wish to wait for the even when queue is empty.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int wait</code></dt>
+<dd> 1 if you wish to wait for the even when queue is empty.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Return next event from queue. Return next even from queue. Optionally wait for even when queue is empty.</p>
 <h2>RETURNS</h2>

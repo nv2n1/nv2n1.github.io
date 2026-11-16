@@ -25,10 +25,10 @@ description: "pmGetChildrenStatus – return the descendent nodes of a PMNS node
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmgetchildren/">pmGetChildren</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmloadasciinamespace/">pmLoadASCIINameSpace</a></code>(3), <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupname/">pmLookupName</a></code>(3), <code><a href="/docs/linux/man/3-pmnameid/">pmNameID</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5), <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5) and <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOPMNS</code></p>
-<dd>Failed to access a PMNS for operation. Note that if the application hasn&#8217;t a priori called <a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a>(3) and wants to use the distributed PMNS, then a call to <code>pmGetChildrenStatus</code> must be made inside a current context.</p>
-<dt><code>PM_ERR_NAME</code></p>
-<dd>The pathname <i>name</i> is not valid in the current PMNS</p>
-<dt><code>PM_ERR_*</code></p>
-<dd>Other diagnostics are for protocol failures when accessing the distributed PMNS. </p>
+<dt><code>PM_ERR_NOPMNS</code></dt>
+<dd>Failed to access a PMNS for operation. Note that if the application hasn&#8217;t a priori called <a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a>(3) and wants to use the distributed PMNS, then a call to <code>pmGetChildrenStatus</code> must be made inside a current context.</dd>
+<dt><code>PM_ERR_NAME</code></dt>
+<dd>The pathname <i>name</i> is not valid in the current PMNS</dd>
+<dt><code>PM_ERR_*</code></dt>
+<dd>Other diagnostics are for protocol failures when accessing the distributed PMNS. </dd>
 </dl>

@@ -11,247 +11,247 @@ description: "pkcon – PackageKit console client"
 <p> pkcon &#8211; PackageKit console client </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>pkcon</code> [<code>OPTION</code>&#8230;] [<code>COMMAND</code>]</dl>
+<dt> <code>pkcon</code> [<code>OPTION</code>&#8230;] [<code>COMMAND</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This manual page documents briefly the <code>pkcon</code> command. </p>
+<dd>This manual page documents briefly the <code>pkcon</code> command. </dd>
 <p> <code>pkcon</code> is the command line client for PackageKit.</p>
 <h2>COMMANDS</h2>
 <p> pkcon knows about the following commands. Depending on the backend in use, not all of them may be available. </p>
 <p> backend-details</p>
 <dl>
 <dt>
-<dd> Print information about the PackageKit backend in use.</dl>
+</dt><dd> Print information about the PackageKit backend in use.</dd></dl>
 <p> get-roles</p>
 <dl>
 <dt>
-<dd> List the roles that a transaction can have.</dl>
+</dt><dd> List the roles that a transaction can have.</dd></dl>
 <p> get-groups</p>
 <dl>
 <dt>
-<dd> List the available package groups.</dl>
+</dt><dd> List the available package groups.</dd></dl>
 <p> get-filters</p>
 <dl>
 <dt>
-<dd> List the available filters.</dl>
+</dt><dd> List the available filters.</dd></dl>
 <p> get-transactions</p>
 <dl>
 <dt>
-<dd> List known transactions.</dl>
+</dt><dd> List known transactions.</dd></dl>
 <p> get-time <i>ROLE</i></p>
 <dl>
 <dt>
-<dd> Print the time that has passed since the last transaction with the given role.</dl>
+</dt><dd> Print the time that has passed since the last transaction with the given role.</dd></dl>
 <p> search [name|details|group|file] <i>DATA</i></p>
 <dl>
 <dt>
-<dd> Search for a package matching the given data. The search is performed in the package information that is indicated by the first argument: name, details, group or files.</dl>
+</dt><dd> Search for a package matching the given data. The search is performed in the package information that is indicated by the first argument: name, details, group or files.</dd></dl>
 <p> install <i>PACKAGES</i></p>
 <dl>
 <dt>
-<dd> Install the given packages from repositories.</dl>
+</dt><dd> Install the given packages from repositories.</dd></dl>
 <p> install-local <i>FILES</i></p>
 <dl>
 <dt>
-<dd> Install the given packages from the local filesystem.</dl>
+</dt><dd> Install the given packages from the local filesystem.</dd></dl>
 <p> download <i>DIRECTORY</i> <i>PACKAGES</i></p>
 <dl>
 <dt>
-<dd> Download the given packages from repositories, and store them in the given directory.</dl>
+</dt><dd> Download the given packages from repositories, and store them in the given directory.</dd></dl>
 <p> install-sig <i>TYPE</i> <i>KEY_ID</i> <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> Install a package signature. Only GPG signatures are supported at this time.</dl>
+</dt><dd> Install a package signature. Only GPG signatures are supported at this time.</dd></dl>
 <p> remove <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> Remove the given package.</dl>
+</dt><dd> Remove the given package.</dd></dl>
 <p> update [<i>PACKAGES</i>]</p>
 <dl>
 <dt>
-<dd> Update the system by installing available updates. If a list of packages is specified, only install updates for these packages.</dl>
+</dt><dd> Update the system by installing available updates. If a list of packages is specified, only install updates for these packages.</dd></dl>
 <p> refresh [force]</p>
 <dl>
 <dt>
-<dd> Refresh the cached information about available updates.</dl>
+</dt><dd> Refresh the cached information about available updates.</dd></dl>
 <p> resolve <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> Resolve the given package name and print information about installed or available packages and updates.</dl>
+</dt><dd> Resolve the given package name and print information about installed or available packages and updates.</dd></dl>
 <p> upgrade-system <i>DISTRIBUTION</i> [minimal|default|complete]</p>
 <dl>
 <dt>
-<dd> Upgrade the system to the given distribution.</dl>
+</dt><dd> Upgrade the system to the given distribution.</dd></dl>
 <p> get-updates</p>
 <dl>
 <dt>
-<dd> List available updates.</dl>
+</dt><dd> List available updates.</dd></dl>
 <p> get-distro-upgrades</p>
 <dl>
 <dt>
-<dd> List available distribution upgrades.</dl>
+</dt><dd> List available distribution upgrades.</dd></dl>
 <p> depends-on <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> List dependencies fo the given package.</dl>
+</dt><dd> List dependencies fo the given package.</dd></dl>
 <p> required-by <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> List packages that require the given package.</dl>
+</dt><dd> List packages that require the given package.</dd></dl>
 <p> get-details <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> Print details about the available or installed package with the given name.</dl>
+</dt><dd> Print details about the available or installed package with the given name.</dd></dl>
 <p> get-details-local <i>FILE</i></p>
 <dl>
 <dt>
-<dd> Print details about the local package.</dl>
+</dt><dd> Print details about the local package.</dd></dl>
 <p> get-files <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> List the files contained in the given package.</dl>
+</dt><dd> List the files contained in the given package.</dd></dl>
 <p> get-files-local <i>FILE</i></p>
 <dl>
 <dt>
-<dd> List the files contained in the local package.</dl>
+</dt><dd> List the files contained in the local package.</dd></dl>
 <p> get-update-detail <i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> Print the package changelog for the given package.</dl>
+</dt><dd> Print the package changelog for the given package.</dd></dl>
 <p> get-packages</p>
 <dl>
 <dt>
-<dd> List all available and installed packages.</dl>
+</dt><dd> List all available and installed packages.</dd></dl>
 <p> repo-list</p>
 <dl>
 <dt>
-<dd> List all configured package repositories.</dl>
+</dt><dd> List all configured package repositories.</dd></dl>
 <p> repo-enable <i>REPOSITORY</i></p>
 <dl>
 <dt>
-<dd> Enable the given repository.</dl>
+</dt><dd> Enable the given repository.</dd></dl>
 <p> repo-disable <i>REPOSITORY</i></p>
 <dl>
 <dt>
-<dd> Disable the given repository.</dl>
+</dt><dd> Disable the given repository.</dd></dl>
 <p> repo-set-data <i>REPOSITORY</i> <i>PARAMETER</i> <i>DATA</i></p>
 <dl>
 <dt>
-<dd> Set the given parameter to the given value for the repository.</dl>
+</dt><dd> Set the given parameter to the given value for the repository.</dd></dl>
 <p> repo-remove <i>REPOSITORY</i> <i>PARAMETER</i></p>
 <dl>
 <dt>
-<dd> Removes the repository and optionally any packages installed from it.</dl>
+</dt><dd> Removes the repository and optionally any packages installed from it.</dd></dl>
 <p> what-provides <i>STRING</i></p>
 <dl>
 <dt>
-<dd> List packages that provide the given string.</dl>
+</dt><dd> List packages that provide the given string.</dd></dl>
 <p> accept-eula <i>EULA_ID</i></p>
 <dl>
 <dt>
-<dd> Accept the EULA with the given id.</dl>
+</dt><dd> Accept the EULA with the given id.</dd></dl>
 <p> get-categories</p>
 <dl>
 <dt>
-<dd> List available categories.</dl>
+</dt><dd> List available categories.</dd></dl>
 <p> repair</p>
 <dl>
 <dt>
-<dd> Attempt to repair the system package database.</dl>
+</dt><dd> Attempt to repair the system package database.</dd></dl>
 <p> offline-get-prepared</p>
 <dl>
 <dt>
-<dd> Print information about the prepared offline update. If no offline update is prepared, exit with an exit code of 1.</dl>
+</dt><dd> Print information about the prepared offline update. If no offline update is prepared, exit with an exit code of 1.</dd></dl>
 <p> offline-trigger</p>
 <dl>
 <dt>
-<dd> Trigger an offline update.</dl>
+</dt><dd> Trigger an offline update.</dd></dl>
 <p> offline-status</p>
 <dl>
 <dt>
-<dd> Print information about the result of the last offline update.</dl>
+</dt><dd> Print information about the result of the last offline update.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The following options can be used to influence the behavior of <code>pkcon</code>. </p>
 <p> &#8211;version</p>
 <dl>
 <dt>
-<dd> Print the program version and exit.</dl>
+</dt><dd> Print the program version and exit.</dd></dl>
 <p> -h, &#8211;help</p>
 <dl>
 <dt>
-<dd> Show help options.</dl>
+</dt><dd> Show help options.</dd></dl>
 <p> &#8211;help-all</p>
 <dl>
 <dt>
-<dd> Show all help options.</dl>
+</dt><dd> Show all help options.</dd></dl>
 <p> &#8211;filter <i>FILTER</i></p>
 <dl>
 <dt>
-<dd> Set the filter to use.</dl>
+</dt><dd> Set the filter to use.</dd></dl>
 <p> -y, &#8211;noninteractive</p>
 <dl>
 <dt>
-<dd> Install packages without asking for confirmation.</dl>
+</dt><dd> Install packages without asking for confirmation.</dd></dl>
 <p> &#8211;only-download</p>
 <dl>
 <dt>
-<dd> Prepare the transaction by downloading packages only.</dl>
+</dt><dd> Prepare the transaction by downloading packages only.</dd></dl>
 <p> -n, &#8211;background</p>
 <dl>
 <dt>
-<dd> Run the command using idle network bandwidth and also using less power.</dl>
+</dt><dd> Run the command using idle network bandwidth and also using less power.</dd></dl>
 <p> -p, &#8211;plain</p>
 <dl>
 <dt>
-<dd> Print to screen a machine-readable output, rather than using animated widgets.</dl>
+</dt><dd> Print to screen a machine-readable output, rather than using animated widgets.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Show debugging information.</dl>
+</dt><dd> Show debugging information.</dd></dl>
 <p> -c, &#8211;cache-age <i>AGE</i></p>
 <dl>
 <dt>
-<dd> Set the maximum acceptable age for cached metadata, in seconds. Use -1 for &#8216;never&#8217;.</dl>
+</dt><dd> Set the maximum acceptable age for cached metadata, in seconds. Use -1 for &#8216;never&#8217;.</dd></dl>
 <p> &#8211;allow-untrusted</p>
 <dl>
 <dt>
-<dd> Allow untrusted packages to be installed.</dl>
+</dt><dd> Allow untrusted packages to be installed.</dd></dl>
 <p> &#8211;allow-downgrade</p>
 <dl>
 <dt>
-<dd> Allow packages to be downgraded during transaction.</dl>
+</dt><dd> Allow packages to be downgraded during transaction.</dd></dl>
 <p> &#8211;allow-reinstall</p>
 <dl>
 <dt>
-<dd> Allow packages to be reinstalled during transaction.</dl>
+</dt><dd> Allow packages to be reinstalled during transaction.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> <code>0</code></p>
 <dl>
 <dt>
-<dd> Success</dl>
+</dt><dd> Success</dd></dl>
 <p> <code>1</code></p>
 <dl>
 <dt>
-<dd> Failed with miscellaneous internal error.</dl>
+</dt><dd> Failed with miscellaneous internal error.</dd></dl>
 <p> <code>3</code></p>
 <dl>
 <dt>
-<dd> Failed with syntax error, or failed to parse command.</dl>
+</dt><dd> Failed with syntax error, or failed to parse command.</dd></dl>
 <p> <code>4</code></p>
 <dl>
 <dt>
-<dd> Failed as a file or directory was not found.</dl>
+</dt><dd> Failed as a file or directory was not found.</dd></dl>
 <p> <code>5</code></p>
 <dl>
 <dt>
-<dd> Nothing useful was done.</dl>
+</dt><dd> Nothing useful was done.</dd></dl>
 <p> <code>6</code></p>
 <dl>
 <dt>
-<dd> The initial setup failed, e.g. setting the network proxy.</dl>
+</dt><dd> The initial setup failed, e.g. setting the network proxy.</dd></dl>
 <p> <code>7</code></p>
 <dl>
 <dt>
-<dd> The transaction failed, see the detailed error for more information.</dl>
+</dt><dd> The transaction failed, see the detailed error for more information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> pkmon (1). </p>
 <p> The programs are documented fully on <a rel="nofollow" href="http://www.packagekit.org.">http://www.packagekit.org.</a></p>
@@ -261,7 +261,7 @@ description: "pkcon – PackageKit console client"
 <p> <code>Richard Hughes</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2007 &#8211; 2013 Richard Hughes </p>
 <h2>Index</h2>

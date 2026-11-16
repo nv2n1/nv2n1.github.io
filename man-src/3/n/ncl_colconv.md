@@ -31,25 +31,25 @@ Colconv - Allows a user to convert among the color models RGB, HSV, HLS, and YIQ
 
 <h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. The possible error messages are as follows:
 <dl COMPACT><dt>HLSRGB - L out of range
-<dd>Lightness is less than 0. or greater than 100.
-<dt>HLSRGB - S out of range
-<dd>Saturation is less than 0. or greater than 100.
-<dt>HSVRGB - S out of range
-<dd>Saturation is less than 0. or greater than 1.
-<dt>HSVRGB - V out of range
-<dd>Value of input color is less than 0. or greater than 1.
-<dt>RGBHLS - R out of range
-<dd>Value of red intensity component is less than 0. or greater than 1.
-<dt>RGBHLS - G out of range
-<dd>Value of green intensity component is less than 0. or greater than 1.
-<dt>RGBHLS - B out of range
-<dd>Value of blue intensity component is less than 0. or greater than 1.
-<dt>RGBHSV - R out of range
-<dd>Value of red intensity component is less than 0. or greater than 1.
-<dt>RGBHSV - G out of range
-<dd>Value of green intensity component is less than 0. or greater than 1.
-<dt>RGBHSV - B out of range
-<dd>Value of blue intensity component is less than 0. or greater than 1.</dl><h2>See Also</h2>Online: hlsrgb, hsvrgb, rgbhls, rgbhsv, rgbyiq, yiqrgb, ncarg_cbind. 
+</dt><dd>Lightness is less than 0. or greater than 100.
+</dd><dt>HLSRGB - S out of range
+</dt><dd>Saturation is less than 0. or greater than 100.
+</dd><dt>HSVRGB - S out of range
+</dt><dd>Saturation is less than 0. or greater than 1.
+</dd><dt>HSVRGB - V out of range
+</dt><dd>Value of input color is less than 0. or greater than 1.
+</dd><dt>RGBHLS - R out of range
+</dt><dd>Value of red intensity component is less than 0. or greater than 1.
+</dd><dt>RGBHLS - G out of range
+</dt><dd>Value of green intensity component is less than 0. or greater than 1.
+</dd><dt>RGBHLS - B out of range
+</dt><dd>Value of blue intensity component is less than 0. or greater than 1.
+</dd><dt>RGBHSV - R out of range
+</dt><dd>Value of red intensity component is less than 0. or greater than 1.
+</dd><dt>RGBHSV - G out of range
+</dt><dd>Value of green intensity component is less than 0. or greater than 1.
+</dd><dt>RGBHSV - B out of range
+</dt><dd>Value of blue intensity component is less than 0. or greater than 1.</dd></dl><h2>See Also</h2>Online: hlsrgb, hsvrgb, rgbhls, rgbhsv, rgbyiq, yiqrgb, ncarg_cbind. 
 
  Hardcopy: NCAR Graphics Fundamentals, UNIX Version
 <h2>Copyright</h2>Copyright (C) 1987-2009 

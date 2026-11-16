@@ -41,12 +41,9 @@ param <i>(public member function)</i>
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::seed_seq seq{1, 2, 3, 4, 5};
     std::vector&lt;std::uint32_t&gt; seeds(10);

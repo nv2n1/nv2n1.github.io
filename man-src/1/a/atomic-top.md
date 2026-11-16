@@ -31,27 +31,27 @@ description: "atomic-top – Run a top-like list of active container processes"
 <p> Monitor processes with default fields. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic top
 </pre>
-</dl>
+</dd></dl>
 <p> Monitor processes with default fields on a 5 second interval for 3 iterations </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic top -d 5 -n 3
 </pre>
-</dl>
+</dd></dl>
 <p> Monitor processes and add in the data for the parent PIDs and UID. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic top -o ppid -o uid
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> December 2015, Originally written by Brent Baude (bbaude at redhat dot com) </p>
 <h2>Index</h2>

@@ -106,68 +106,68 @@ local ${$x} local @{$x} local %
 <h3>Updated Modules And Pragmata</h3>
 <p> The following modules and pragmata have been updated since Perl 5.8.0:</p>
 <dl>
-<dt>base</p>
+<dt>base</dt>
 <dd>
-<dt>B::Bytecode</p>
-<dd> In much better shape than it used to be. Still far from perfect, but maybe worth a try.</p>
-<dt>B::Concise</p>
+</dd><dt>B::Bytecode</dt>
+<dd> In much better shape than it used to be. Still far from perfect, but maybe worth a try.</dd>
+<dt>B::Concise</dt>
 <dd>
-<dt>B::Deparse</p>
+</dd><dt>B::Deparse</dt>
 <dd>
-<dt>Benchmark</p>
-<dd> An optional feature, <tt>&quot;:hireswallclock&quot;</tt>, now allows for high resolution wall clock times (uses Time::HiRes).</p>
-<dt>ByteLoader</p>
-<dd> See B::Bytecode.</p>
-<dt>bytes</p>
-<dd> Now has bytes::substr.</p>
-<dt><font SIZE="-1">CGI</font></p>
+</dd><dt>Benchmark</dt>
+<dd> An optional feature, <tt>&quot;:hireswallclock&quot;</tt>, now allows for high resolution wall clock times (uses Time::HiRes).</dd>
+<dt>ByteLoader</dt>
+<dd> See B::Bytecode.</dd>
+<dt>bytes</dt>
+<dd> Now has bytes::substr.</dd>
+<dt><font SIZE="-1">CGI</font></dt>
 <dd>
-<dt>charnames</p>
-<dd> One can now have custom character name aliases.</p>
-<dt><font SIZE="-1">CPAN</font></p>
-<dd> There is now a simple command line frontend to the <font SIZE="-1">CPAN</font>.pm module called <i>cpan</i>.</p>
-<dt>Data::Dumper</p>
-<dd> A new option, Pair, allows choosing the separator between hash keys and values.</p>
-<dt>DB_File</p>
+</dd><dt>charnames</dt>
+<dd> One can now have custom character name aliases.</dd>
+<dt><font SIZE="-1">CPAN</font></dt>
+<dd> There is now a simple command line frontend to the <font SIZE="-1">CPAN</font>.pm module called <i>cpan</i>.</dd>
+<dt>Data::Dumper</dt>
+<dd> A new option, Pair, allows choosing the separator between hash keys and values.</dd>
+<dt>DB_File</dt>
 <dd>
-<dt>Devel::PPPort</p>
+</dd><dt>Devel::PPPort</dt>
 <dd>
-<dt>Digest::MD5</p>
+</dd><dt>Digest::MD5</dt>
 <dd>
-<dt>Encode</p>
-<dd> Significant updates on the encoding pragma functionality (tr/// and the <font SIZE="-1">DATA</font> filehandle, formats). </p>
+</dd><dt>Encode</dt>
+<dd> Significant updates on the encoding pragma functionality (tr/// and the <font SIZE="-1">DATA</font> filehandle, formats). </dd>
 <p> If a filehandle has been marked as to have an encoding, unmappable characters are detected already during input, not later (when the corrupted data is being used). </p>
 <p> The <font SIZE="-1">ISO 8859-6</font> conversion table has been corrected (the 0x30..0x39 erroneously mapped to U+0660..U+0669, instead of U+0030..U+0039). The <font SIZE="-1">GSM 03.38</font> conversion did not handle escape sequences correctly. The <font SIZE="-1">UTF-7</font> encoding has been added (making Encode feature-complete with Unicode::String).</p>
-<dt>fields</p>
+<dt>fields</dt>
 <dd>
-<dt>libnet</p>
+</dd><dt>libnet</dt>
 <dd>
-<dt>Math::BigInt</p>
-<dd> A lot of bugs have been fixed since v1.60, the version included in Perl v5.8.0. Especially noteworthy are the bug in Calc that caused div and mod to fail for some large values, and the fixes to the handling of bad inputs. </p>
+</dd><dt>Math::BigInt</dt>
+<dd> A lot of bugs have been fixed since v1.60, the version included in Perl v5.8.0. Especially noteworthy are the bug in Calc that caused div and mod to fail for some large values, and the fixes to the handling of bad inputs. </dd>
 <p> Some new features were added, e.g. the <code>broot()</code> method, you can now pass parameters to <code>config()</code> to change some settings at runtime, and it is now possible to trap the creation of NaN and infinity. </p>
 <p> As usual, some optimizations took place and made the math overall a tad faster. In some cases, quite a lot faster, actually. Especially alternative libraries like Math::BigInt::GMP benefit from this. In addition, a lot of the quite clunky routines like <code>fsqrt()</code> and <code>flog()</code> are now much much faster.</p>
-<dt>MIME::Base64</p>
+<dt>MIME::Base64</dt>
 <dd>
-<dt><font SIZE="-1">NEXT</font></p>
-<dd> Diamond inheritance now works.</p>
-<dt>Net::Ping</p>
+</dd><dt><font SIZE="-1">NEXT</font></dt>
+<dd> Diamond inheritance now works.</dd>
+<dt>Net::Ping</dt>
 <dd>
-<dt>PerlIO::scalar</p>
-<dd> Reading from non-string scalars (like the special variables, see perlvar) now works.</p>
-<dt>podlators</p>
+</dd><dt>PerlIO::scalar</dt>
+<dd> Reading from non-string scalars (like the special variables, see perlvar) now works.</dd>
+<dt>podlators</dt>
 <dd>
-<dt>Pod::LaTeX</p>
+</dd><dt>Pod::LaTeX</dt>
 <dd>
-<dt>PodParsers</p>
+</dd><dt>PodParsers</dt>
 <dd>
-<dt>Pod::Perldoc</p>
-<dd> Complete rewrite. As a side-effect, no longer refuses to startup when run by root.</p>
-<dt>Scalar::Util</p>
-<dd> New utilities: refaddr, isvstring, looks_like_number, set_prototype.</p>
-<dt>Storable</p>
-<dd> Can now store code references (via B::Deparse, so not foolproof).</p>
-<dt>strict</p>
-<dd> Earlier versions of the strict pragma did not check the parameters implicitly passed to its &#8220;import&#8221; (use) and &#8220;unimport&#8221; (no) routine. This caused the false idiom such as: </p>
+</dd><dt>Pod::Perldoc</dt>
+<dd> Complete rewrite. As a side-effect, no longer refuses to startup when run by root.</dd>
+<dt>Scalar::Util</dt>
+<dd> New utilities: refaddr, isvstring, looks_like_number, set_prototype.</dd>
+<dt>Storable</dt>
+<dd> Can now store code references (via B::Deparse, so not foolproof).</dd>
+<dt>strict</dt>
+<dd> Earlier versions of the strict pragma did not check the parameters implicitly passed to its &#8220;import&#8221; (use) and &#8220;unimport&#8221; (no) routine. This caused the false idiom such as: </dd>
 <p>use strict qw(@ISA);<br />
 @ISA = qw(Foo);</p>
 <p> This however (probably) raised the false expectation that the strict refs, vars and subs were being enforced (and that <tt>@ISA</tt> was somehow &#8220;declared&#8221;). But the strict refs, vars, and subs are <code>not</code> enforced when using this false idiom. </p>
@@ -185,30 +185,30 @@ use strict;
 use vars qw(@ISA);
 @ISA = qw(Foo);
 </code></pre>
-<dt>Term::ANSIcolor</p>
+<dt>Term::ANSIcolor</dt>
 <dd>
-<dt>Test::Harness</p>
-<dd> Now much more picky about extra or missing output from test scripts.</p>
-<dt>Test::More</p>
+</dd><dt>Test::Harness</dt>
+<dd> Now much more picky about extra or missing output from test scripts.</dd>
+<dt>Test::More</dt>
 <dd>
-<dt>Test::Simple</p>
+</dd><dt>Test::Simple</dt>
 <dd>
-<dt>Text::Balanced</p>
+</dd><dt>Text::Balanced</dt>
 <dd>
-<dt>Time::HiRes</p>
-<dd> Use of <code>nanosleep()</code>, if available, allows mixing subsecond sleeps with alarms.</p>
-<dt>threads</p>
-<dd> Several fixes, for example for <code>join()</code> problems and memory leaks. In some platforms (like Linux) that use glibc the minimum memory footprint of one ithread has been reduced by several hundred kilobytes.</p>
-<dt>threads::shared</p>
-<dd> Many memory leaks have been fixed.</p>
-<dt>Unicode::Collate</p>
+</dd><dt>Time::HiRes</dt>
+<dd> Use of <code>nanosleep()</code>, if available, allows mixing subsecond sleeps with alarms.</dd>
+<dt>threads</dt>
+<dd> Several fixes, for example for <code>join()</code> problems and memory leaks. In some platforms (like Linux) that use glibc the minimum memory footprint of one ithread has been reduced by several hundred kilobytes.</dd>
+<dt>threads::shared</dt>
+<dd> Many memory leaks have been fixed.</dd>
+<dt>Unicode::Collate</dt>
 <dd>
-<dt>Unicode::Normalize</p>
+</dd><dt>Unicode::Normalize</dt>
 <dd>
-<dt>Win32::GetFolderPath</p>
+</dd><dt>Win32::GetFolderPath</dt>
 <dd>
-<dt>Win32::GetOSVersion</p>
-<dd> Now returns extra information.</dl>
+</dd><dt>Win32::GetOSVersion</dt>
+<dd> Now returns extra information.</dd></dl>
 <h2>Utility Changes</h2>
 <p> The <tt>&quot;h2xs&quot;</tt> utility now produces a more modern layout: <i>Foo-Bar/lib/Foo/Bar.pm</i> instead of <i>Foo/Bar/Bar.pm</i>. Also, the boilerplate test is now called <i>t/Foo-Bar.t</i> instead of <i>t/1.t</i>. </p>
 <p> The Perl debugger (<i>lib/perl5db.pl</i>) has now been extensively documented and bugs found while documenting have been fixed. </p>
@@ -260,38 +260,38 @@ use vars qw(@ISA);
 <h3>Platform-specific fixes</h3>
 <p> Linux</p>
 <dl>
-<dt>&bull;</p>
-<dd> Setting <tt>$0</tt> works again (with certain limitations that Perl cannot do much about: see &#8220;$0&#8221; in perlvar)</dl>
+<dt>&bull;</dt>
+<dd> Setting <tt>$0</tt> works again (with certain limitations that Perl cannot do much about: see &#8220;$0&#8221; in perlvar)</dd></dl>
 <p> HP-UX</p>
 <dl>
-<dt>&bull;</p>
-<dd> Setting <tt>$0</tt> now works.</dl>
+<dt>&bull;</dt>
+<dd> Setting <tt>$0</tt> now works.</dd></dl>
 <p> <font SIZE="-1">VMS</font></p>
 <dl>
-<dt>&bull;</p>
-<dd> Configuration now tests for the presence of <tt>&quot;poll()&quot;</tt>, and IO::Poll now uses the vendor-supplied function if detected.</p>
-<dt>&bull;</p>
-<dd> A rare access violation at Perl start-up could occur if the Perl image was installed with privileges or if there was an identifier with the subsystem attribute set in the process&#8217;s rightslist. Either of these circumstances triggered tainting code that contained a pointer bug. The faulty pointer arithmetic has been fixed.</p>
-<dt>&bull;</p>
-<dd> The length limit on values (not keys) in the <tt>%ENV</tt> hash has been raised from 255 bytes to 32640 bytes (except when the <font SIZE="-1">PERL_ENV_TABLES</font> setting overrides the default use of logical names for <tt>%ENV</tt>). If it is necessary to access these long values from outside Perl, be aware that they are implemented using search list logical names that store the value in pieces, each 255-byte piece (up to 128 of them) being an element in the search list. When doing a lookup in <tt>%ENV</tt> from within Perl, the elements are combined into a single value. The existing VMS-specific ability to access individual elements of a search list logical name via the <tt>$ENV</tt>{&#8216;foo;N&#8217;} syntax (where N is the search list index) is unimpaired.</p>
-<dt>&bull;</p>
-<dd> The piping implementation now uses local rather than global <font SIZE="-1">DCL</font> symbols for inter-process communication.</p>
-<dt>&bull;</p>
-<dd> File::Find could become confused when navigating to a relative directory whose name collided with a logical name. This problem has been corrected by adding directory syntax to relative path names, thus preventing logical name translation.</dl>
+<dt>&bull;</dt>
+<dd> Configuration now tests for the presence of <tt>&quot;poll()&quot;</tt>, and IO::Poll now uses the vendor-supplied function if detected.</dd>
+<dt>&bull;</dt>
+<dd> A rare access violation at Perl start-up could occur if the Perl image was installed with privileges or if there was an identifier with the subsystem attribute set in the process&#8217;s rightslist. Either of these circumstances triggered tainting code that contained a pointer bug. The faulty pointer arithmetic has been fixed.</dd>
+<dt>&bull;</dt>
+<dd> The length limit on values (not keys) in the <tt>%ENV</tt> hash has been raised from 255 bytes to 32640 bytes (except when the <font SIZE="-1">PERL_ENV_TABLES</font> setting overrides the default use of logical names for <tt>%ENV</tt>). If it is necessary to access these long values from outside Perl, be aware that they are implemented using search list logical names that store the value in pieces, each 255-byte piece (up to 128 of them) being an element in the search list. When doing a lookup in <tt>%ENV</tt> from within Perl, the elements are combined into a single value. The existing VMS-specific ability to access individual elements of a search list logical name via the <tt>$ENV</tt>{&#8216;foo;N&#8217;} syntax (where N is the search list index) is unimpaired.</dd>
+<dt>&bull;</dt>
+<dd> The piping implementation now uses local rather than global <font SIZE="-1">DCL</font> symbols for inter-process communication.</dd>
+<dt>&bull;</dt>
+<dd> File::Find could become confused when navigating to a relative directory whose name collided with a logical name. This problem has been corrected by adding directory syntax to relative path names, thus preventing logical name translation.</dd></dl>
 <p> Win32</p>
 <dl>
-<dt>&bull;</p>
-<dd> A memory leak in the <code>fork()</code> emulation has been fixed.</p>
-<dt>&bull;</p>
-<dd> The return value of the <code>ioctl()</code> built-in function was accidentally broken in 5.8.0. This has been corrected.</p>
-<dt>&bull;</p>
-<dd> The internal message loop executed by perl during blocking operations sometimes interfered with messages that were external to Perl. This often resulted in blocking operations terminating prematurely or returning incorrect results, when Perl was executing under environments that could generate Windows messages. This has been corrected.</p>
-<dt>&bull;</p>
-<dd> Pipes and sockets are now automatically in binary mode.</p>
-<dt>&bull;</p>
-<dd> The four-argument form of <code>select()</code> did not preserve $! (errno) properly when there were errors in the underlying call. This is now fixed.</p>
-<dt>&bull;</p>
-<dd> The &#8220;<font SIZE="-1">CR CR LF&#8221;</font> problem of has been fixed, binmode(<font SIZE="-1">FH,</font> &#8220;:crlf&#8221;) is now effectively a no-op.</dl>
+<dt>&bull;</dt>
+<dd> A memory leak in the <code>fork()</code> emulation has been fixed.</dd>
+<dt>&bull;</dt>
+<dd> The return value of the <code>ioctl()</code> built-in function was accidentally broken in 5.8.0. This has been corrected.</dd>
+<dt>&bull;</dt>
+<dd> The internal message loop executed by perl during blocking operations sometimes interfered with messages that were external to Perl. This often resulted in blocking operations terminating prematurely or returning incorrect results, when Perl was executing under environments that could generate Windows messages. This has been corrected.</dd>
+<dt>&bull;</dt>
+<dd> Pipes and sockets are now automatically in binary mode.</dd>
+<dt>&bull;</dt>
+<dd> The four-argument form of <code>select()</code> did not preserve $! (errno) properly when there were errors in the underlying call. This is now fixed.</dd>
+<dt>&bull;</dt>
+<dd> The &#8220;<font SIZE="-1">CR CR LF&#8221;</font> problem of has been fixed, binmode(<font SIZE="-1">FH,</font> &#8220;:crlf&#8221;) is now effectively a no-op.</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <p> All the warnings related to <code>pack()</code> and <code>unpack()</code> were made more informative and consistent.</p>
 <h3>Changed A thread exited while %d threads were running</h3>

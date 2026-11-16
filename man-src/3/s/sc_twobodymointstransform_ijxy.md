@@ -11,7 +11,6 @@ description: "sc::TwoBodyMOIntsTransform_ijxy –"
 <p> <code>TwoBodyMOIntsTransform_ijxy</code> computes (ij|xy) integrals using parallel integrals-direct AO-&gt;MO transformation.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;transform_ijxy.h&gt;</code></pre>
 <p> Inherits <code>sc::TwoBodyMOIntsTransform</code>.</p>
 <h3>Public Member Functions</h3>

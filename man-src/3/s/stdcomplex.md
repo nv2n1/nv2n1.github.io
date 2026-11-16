@@ -127,14 +127,10 @@ operator&quot;&quot;il <i>(function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;complex&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     using namespace std::complex_literals;
     std::cout &lt;&lt; std::fixed &lt;&lt; std::setprecision(1);

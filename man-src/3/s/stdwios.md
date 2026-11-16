@@ -10,13 +10,9 @@ description: "std::basic_ios – std::basic_ios"
 <p>std::basic_ios &#8211; std::basic_ios</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;ios&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_ios : public std::ios_base</code></pre>
 <p>The class std::basic_ios provides facilities for interfacing with objects that have std::basic_streambuf interface. Several std::basic_ios objects can refer to one actual std::basic_streambuf object.<br />
 &nbsp;std-basic ios-inheritance.svg<br />

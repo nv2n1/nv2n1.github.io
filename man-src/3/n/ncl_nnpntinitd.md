@@ -15,13 +15,13 @@ CALL NNPNTINITD (NPNTS, X, Y, Z)
 <h2>Description</h2>
 
 <dl><dt>NPNTS
-<dd>(Integer, Input) - The number of input data points. (NPNTS &gt; 3).
-<dt>X
-<dd>(Double precison, Input) - An array of dimension NPNTS containing the X coordinates of the input data points.
-<dt>Y
-<dd>(Double precison, Input) - An array of dimension NPNTS containing the Y coordinates of the input data points.
-<dt>Z
-<dd>(Double precison, Input) - An array of dimension NPNTS containing the functional values of the input data points. That is, Z(L) is the value of the input function at coordinate (X(L),Y(L)), for L=1,NPNTS.</dl>
+</dt><dd>(Integer, Input) - The number of input data points. (NPNTS &gt; 3).
+</dd><dt>X
+</dt><dd>(Double precison, Input) - An array of dimension NPNTS containing the X coordinates of the input data points.
+</dd><dt>Y
+</dt><dd>(Double precison, Input) - An array of dimension NPNTS containing the Y coordinates of the input data points.
+</dd><dt>Z
+</dt><dd>(Double precison, Input) - An array of dimension NPNTS containing the functional values of the input data points. That is, Z(L) is the value of the input function at coordinate (X(L),Y(L)), for L=1,NPNTS.</dd></dl>
 
 <h2>Usage</h2>
 

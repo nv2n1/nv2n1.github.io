@@ -63,10 +63,10 @@ description: "dstemr.f –"
  floating-point standard in their handling of infinities and NaNs.
  This permits the use of efficient inner loops avoiding a check for
  zero divisors.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBZ</i> </p>
+<dd><i>JOBZ</i> </dd>
 <pre> JOBZ is CHARACTER*1
  = 'N': Compute eigenvalues only;
  = 'V': Compute eigenvalues and eigenvectors.</pre>
@@ -195,16 +195,16 @@ description: "dstemr.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Beresford Parlett, University of California, Berkeley, USA </p>
+<dd>Beresford Parlett, University of California, Berkeley, USA </dd>
 <p>&nbsp;<wbr>Jim Demmel, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Inderjit Dhillon, University of Texas, Austin, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
@@ -212,3 +212,4 @@ description: "dstemr.f –"
 <p> Definition at line 311 of file dstemr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

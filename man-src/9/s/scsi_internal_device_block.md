@@ -14,7 +14,7 @@ description: "scsi_internal_device_block – internal function to put a device t
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>device to block</dl>
+</dd><dd>device to block</dd></dl>
 <h2>Description</h2>
 <p>Block request made by scsi lld&#8217;s to temporarily stop all scsi commands on the specified device. Called from interrupt or normal process context. </p>
 <p> Returns zero if successful or error if not</p>
@@ -23,8 +23,8 @@ description: "scsi_internal_device_block – internal function to put a device t
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -16,69 +16,69 @@ description: "spectrum1d – Compute auto- [and cross- ] spectra from one [or tw
 <p> <code>spectrum1d</code> reads X [and Y] values from the first [and second] columns on standard input [or <i>x[y]file</i>]. These values are treated as timeseries X(t) [Y(t)] sampled at equal intervals spaced <i>dt</i> units apart. There may be any number of lines of input. <code>spectrum1d</code> will create file[s] containing auto- [and cross- ] spectral density estimates by Welch&#8217;s method of ensemble averaging of multiple overlapped windows, using standard error estimates from Bendat and Piersol. </p>
 <p> The output files have 3 columns: f or w, p, and e. f or w is the frequency or wavelength, p is the spectral density estimate, and e is the one standard deviation error bar size. These files are named based on <i>name_stem</i>. If the <code>-C</code> option is used, up to eight files are created; otherwise only one (xpower) is written. The files (which are ASCII unless <code>-bo</code> is set) are as follows:</p>
 <dl>
-<dt><i>name_stem</i>.xpower</p>
-<dd> Power spectral density of X(t). Units of X * X * <i>dt</i>.</p>
-<dt><i>name_stem</i>.ypower</p>
-<dd> Power spectral density of Y(t). Units of Y * Y * <i>dt</i>.</p>
-<dt><i>name_stem</i>.cpower</p>
-<dd> Power spectral density of the coherent output. Units same as ypower.</p>
-<dt><i>name_stem</i>.npower</p>
-<dd> Power spectral density of the noise output. Units same as ypower.</p>
-<dt><i>name_stem</i>.gain</p>
-<dd> Gain spectrum, or modulus of the transfer function. Units of (Y / X).</p>
-<dt><i>name_stem</i>.phase</p>
-<dd> Phase spectrum, or phase of the transfer function. Units are radians.</p>
-<dt><i>name_stem</i>.admit</p>
-<dd> Admittance spectrum, or real part of the transfer function. Units of (Y / X).</p>
-<dt><i>name_stem</i>.coh</p>
-<dd> (Squared) coherency spectrum, or linear correlation coefficient as a function of frequency. Dimensionless number in [0, 1]. The Signal-to-Noise-Ratio (SNR) is coh / (1 &#8211; coh). SNR = 1 when coh = 0.5. </p>
+<dt><i>name_stem</i>.xpower</dt>
+<dd> Power spectral density of X(t). Units of X * X * <i>dt</i>.</dd>
+<dt><i>name_stem</i>.ypower</dt>
+<dd> Power spectral density of Y(t). Units of Y * Y * <i>dt</i>.</dd>
+<dt><i>name_stem</i>.cpower</dt>
+<dd> Power spectral density of the coherent output. Units same as ypower.</dd>
+<dt><i>name_stem</i>.npower</dt>
+<dd> Power spectral density of the noise output. Units same as ypower.</dd>
+<dt><i>name_stem</i>.gain</dt>
+<dd> Gain spectrum, or modulus of the transfer function. Units of (Y / X).</dd>
+<dt><i>name_stem</i>.phase</dt>
+<dd> Phase spectrum, or phase of the transfer function. Units are radians.</dd>
+<dt><i>name_stem</i>.admit</dt>
+<dd> Admittance spectrum, or real part of the transfer function. Units of (Y / X).</dd>
+<dt><i>name_stem</i>.coh</dt>
+<dd> (Squared) coherency spectrum, or linear correlation coefficient as a function of frequency. Dimensionless number in [0, 1]. The Signal-to-Noise-Ratio (SNR) is coh / (1 &#8211; coh). SNR = 1 when coh = 0.5. </dd>
 <p> In addition, a single file with all of the above as individual columns will be written to <i>stdout</i> (unless disabled via <code>-T</code>).</dl>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><code>-S</code><i>segment_size</i>]</p>
-<dd> <i>segment_size</i> is a radix-2 number of samples per window for ensemble averaging. The smallest frequency estimated is 1.0/(<i>segment_size</i> * <i>dt</i>), while the largest is 1.0/(2 * <i>dt</i>). One standard error in power spectral density is approximately 1.0 / sqrt(<i>n_data</i> / <i>segment_size</i>), so if <i>segment_size</i> = 256, you need 25,600 data to get a one standard error bar of 10%. Cross-spectral error bars are larger and more complicated, being a function also of the coherency.</dl>
+<dt><code>-S</code><i>segment_size</i>]</dt>
+<dd> <i>segment_size</i> is a radix-2 number of samples per window for ensemble averaging. The smallest frequency estimated is 1.0/(<i>segment_size</i> * <i>dt</i>), while the largest is 1.0/(2 * <i>dt</i>). One standard error in power spectral density is approximately 1.0 / sqrt(<i>n_data</i> / <i>segment_size</i>), so if <i>segment_size</i> = 256, you need 25,600 data to get a one standard error bar of 10%. Cross-spectral error bars are larger and more complicated, being a function also of the coherency.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>) files holding X(t) [Y(t)] samples in the first 1 [or 2] columns. If no files are specified, <code>spectrum1d</code> will read from standard input.</p>
-<dt><code>-C</code>[<code>xycnpago</code>]</p>
-<dd> Read the first two columns of input as samples of two time-series, X(t) and Y(t). Consider Y(t) to be the output and X(t) the input in a linear system with noise. Estimate the optimum frequency response function by least squares, such that the noise output is minimized and the coherent output and the noise output are uncorrelated. Optionally specify up to 8 letters from the set { <code>x y c n p a g o</code> } in any order to create only those output files instead of the default [all]. <code>x</code> = xpower, <code>y</code> = ypower, <code>c</code> = cpower, <code>n</code> = npower, <code>p</code> = phase, <code>a</code> = admit, <code>g</code> = gain, <code>o</code> = coh.</p>
-<dt><code>-D</code><i>dt</i></p>
-<dd> <i>dt</i> Set the spacing between samples in the time-series [Default = 1].</p>
-<dt><code>-L</code></p>
-<dd> Leave trend alone. By default, a linear trend will be removed prior to the transform. Alternatively, append <code>m</code> to just remove the mean value or <code>h</code> to remove the mid-value.</p>
-<dt><code>-N</code>[<i>name_stem</i>]</p>
-<dd> Supply an alternate name stem to be used for output files [Default = &quot;spectrum&quot;]. Giving no argument will disable the writing of individual output files.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-T</code></p>
-<dd> Disable the writing of a single composite results file to stdout.</p>
-<dt><code>-W</code></p>
-<dd> Write Wavelength rather than frequency in column 1 of the output file[s] [Default = frequency, (cycles / <i>dt</i>)].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is 2 output columns].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>) files holding X(t) [Y(t)] samples in the first 1 [or 2] columns. If no files are specified, <code>spectrum1d</code> will read from standard input.</dd>
+<dt><code>-C</code>[<code>xycnpago</code>]</dt>
+<dd> Read the first two columns of input as samples of two time-series, X(t) and Y(t). Consider Y(t) to be the output and X(t) the input in a linear system with noise. Estimate the optimum frequency response function by least squares, such that the noise output is minimized and the coherent output and the noise output are uncorrelated. Optionally specify up to 8 letters from the set { <code>x y c n p a g o</code> } in any order to create only those output files instead of the default [all]. <code>x</code> = xpower, <code>y</code> = ypower, <code>c</code> = cpower, <code>n</code> = npower, <code>p</code> = phase, <code>a</code> = admit, <code>g</code> = gain, <code>o</code> = coh.</dd>
+<dt><code>-D</code><i>dt</i></dt>
+<dd> <i>dt</i> Set the spacing between samples in the time-series [Default = 1].</dd>
+<dt><code>-L</code></dt>
+<dd> Leave trend alone. By default, a linear trend will be removed prior to the transform. Alternatively, append <code>m</code> to just remove the mean value or <code>h</code> to remove the mid-value.</dd>
+<dt><code>-N</code>[<i>name_stem</i>]</dt>
+<dd> Supply an alternate name stem to be used for output files [Default = &quot;spectrum&quot;]. Giving no argument will disable the writing of individual output files.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-T</code></dt>
+<dd> Disable the writing of a single composite results file to stdout.</dd>
+<dt><code>-W</code></dt>
+<dd> Write Wavelength rather than frequency in column 1 of the output file[s] [Default = frequency, (cycles / <i>dt</i>)].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is 2 output columns].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your <code>gmt.conf</code> file. Longitude and latitude are formatted according to <i>FORMAT_GEO_OUT</i>, whereas other values are formatted according to <i>FORMAT_FLOAT_OUT</i>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <i>FORMAT_FLOAT_OUT</i> setting.</p>
 <h2>EXAMPLES</h2>

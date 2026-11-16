@@ -23,3 +23,4 @@ int ungetc(int c, FILE *stream);
 <p> <code>getc</code>() is equivalent to <code>fgetc</code>() except that it may be implemented as a macro which evaluates <i>stream</i> more than once. </p>
 <p> <code>getchar</code>() is equivalent to <code>getc(</code><i>stdin</i><code>)</code><i></i>. </p>
 <p> <code>fgets</code>() reads in at most one less than <i>size</i> characters from <i>stream</i> and stores them into the buffer pointed to by <i>s</i>. Reading stops after an <code>EOF</code> or a newline. If a newline is read, it is stored into the buffer. A terminating null byte (&#8216;
+</p>

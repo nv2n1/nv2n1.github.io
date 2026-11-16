@@ -16,7 +16,7 @@ description: "XmImUnregister — An input manager function that removes a widget
 <p><code>XmImUnregister</code> removes the specified widget from the list of widgets registered for input by the input manager. </p>
 <p> Note that the Text, TextField, and List widgets already call the <code>XmImRegister</code> internally. You should call the <code>XmImUnregister</code> function for these widgets before calling <code>XmImRegister</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget to be unregistered</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget to be unregistered</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmimregister/">XmImRegister</a></code>(3).</p>

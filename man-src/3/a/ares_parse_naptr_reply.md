@@ -32,14 +32,14 @@ struct ares_naptr_reply {
 <h2>RETURN VALUES</h2>
 <p> <code>ares_parse_naptr_reply</code> can return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> The response was successfully parsed.</p>
-<dt><code>ARES_EBADRESP</code></p>
-<dd> The response was malformatted.</p>
-<dt><code>ARES_ENODATA</code></p>
-<dd> The response did not contain an answer to the query.</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> Memory was exhausted.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The response was successfully parsed.</dd>
+<dt><code>ARES_EBADRESP</code></dt>
+<dd> The response was malformatted.</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> The response did not contain an answer to the query.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd></dl>
 <h2>AVAILABILITY</h2>
 <p> This function was first introduced in c-ares version 1.7.6.</p>
 <h2>SEE ALSO</h2>

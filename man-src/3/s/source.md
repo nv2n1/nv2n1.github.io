@@ -10,31 +10,13 @@ description: "QuantLib::ExchangeRate – exchange rate between two currencies"
 <p>QuantLib::ExchangeRate &#8211; exchange rate between two currencies </p>
 <h2>Synopsis</h2>
 <pre><code>const Currency &amp; source () const
-
-
 the source currency.
-
-
 const Currency &amp; target () const
-
-
 the target currency.
-
-
 Type type () const
-
-
 the type
-
-
 Decimal rate () const
-
-
 the exchange rate (when available)
-
-
-
-
 Utility methods</code></pre>
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>Direct</code>, <code>Derived</code> }</p>
@@ -44,31 +26,13 @@ Utility methods</code></pre>
 <p> <code>ExchangeRate</code> (const <code>Currency</code> &amp;source, const <code>Currency</code> &amp;target, Decimal rate)<br />
  <code>Inspectors</code> </p>
 <pre><code>const Currency &amp; source () const
-
-
 the source currency.
-
-
 const Currency &amp; target () const
-
-
 the target currency.
-
-
 Type type () const
-
-
 the type
-
-
 Decimal rate () const
-
-
 the exchange rate (when available)
-
-
-
-
 Utility methods</code></pre>
 <p> <code>Money</code> <code>exchange</code> (const <code>Money</code> &amp;amount) const<br />
  <i>apply the exchange rate to a cash amount </i><br />
@@ -78,15 +42,15 @@ Utility methods</code></pre>
 <p>exchange rate between two currencies </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>application of direct and derived exchange rate is tested against calculations.</dl>
+<dd>application of direct and derived exchange rate is tested against calculations.</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Type</code></h3>
 <p><code>Enumerator: </code></p>
 <dl>
-<dt><i>Direct </i></p>
-<dd>given directly by the user</p>
-<dt><i>Derived </i></p>
-<dd>derived from exchange rates between other currencies</dl>
+<dt><i>Direct </i></dt>
+<dd>given directly by the user</dd>
+<dt><i>Derived </i></dt>
+<dd>derived from exchange rates between other currencies</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>ExchangeRate</code> (const <code>Currency</code> &amp; source, const <code>Currency</code> &amp; target, Decimal rate)</h3>
 <p>the rate $ r $ is given with the convention that a unit of the source is worth $ r $ units of the target.</p>

@@ -14,10 +14,10 @@ description: "ata_read_native_max_address – Read native max address"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>target device</dl>
+</dd><dd>target device</dd></dl>
 <p> <i>max_sectors</i></p>
 <dl>
-<dd>out parameter for the result native max address</dl>
+<dd>out parameter for the result native max address</dd></dl>
 <h2>Description</h2>
 <p>Perform an LBA48 or LBA28 native size query upon the device in question.</p>
 <h2>Return</h2>
@@ -25,5 +25,5 @@ description: "ata_read_native_max_address – Read native max address"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

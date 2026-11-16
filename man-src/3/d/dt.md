@@ -33,7 +33,7 @@ description: "QuantLib::TsiveriotisFernandesLattice – Binomial lattice approxi
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dl>
+</dt><dd> In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dd></dl>
 <pre><code>
 method-&gt;rollAlmostBack(asset, t);
 </code></pre>
@@ -47,5 +47,5 @@ asset-&gt;preAdjustValues();
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

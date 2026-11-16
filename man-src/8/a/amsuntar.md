@@ -16,40 +16,40 @@ description: "amsuntar – Amanda Application to interface with native tar utili
 <p>This section lists the properties that control amsuntar&#8217;s functionality. See <code><a href="/docs/linux/man/7-amanda-applications/">amanda-applications</a></code>(7) for information on application properties and how they are configured. </p>
 <p> BLOCK-SIZE</p>
 <dl>
-<dd>Optional tar read or write block size. The default is 256.</dl>
+<dd>Optional tar read or write block size. The default is 256.</dd></dl>
 <p> DIRECTORY</p>
 <dl>
-<dd>If set, suntar will backup from that directory instead of the <i>diskdevice</i> set by the DLE. On restore, the data is restore in that directory instead of the current working directory.</dl>
+<dd>If set, suntar will backup from that directory instead of the <i>diskdevice</i> set by the DLE. On restore, the data is restore in that directory instead of the current working directory.</dd></dl>
 <p> EXTENDED-ATTRIBUTES</p>
 <dl>
-<dd>Include extended attributes in archive. The default is YES.</dl>
+<dd>Include extended attributes in archive. The default is YES.</dd></dl>
 <p> EXTENDED-HEADERS</p>
 <dl>
-<dd>Write tar file with extended headers. With this optiion the modification time is maintained with a granularity of microseconds,Long file names and file sizes greater than 8GB can be archived. The default is YES.</dl>
+<dd>Write tar file with extended headers. With this optiion the modification time is maintained with a granularity of microseconds,Long file names and file sizes greater than 8GB can be archived. The default is YES.</dd></dl>
 <p> SUNTAR-PATH</p>
 <dl>
-<dd>The path to the suntar binary. The default is set when Amanda is built.</dl>
+<dd>The path to the suntar binary. The default is set when Amanda is built.</dd></dl>
 <p> LANG</p>
 <dl>
-<dd>Default LANG is &quot;C&quot;. suntar require an UTF-8 LANG if you have UTF-8 filename and it is configured for extended headers. A good value can be &quot;en_US.UTF-8&quot; if that locale is installed on your machine.</dl>
+<dd>Default LANG is &quot;C&quot;. suntar require an UTF-8 LANG if you have UTF-8 filename and it is configured for extended headers. A good value can be &quot;en_US.UTF-8&quot; if that locale is installed on your machine.</dd></dl>
 <p> NORMAL</p>
 <dl>
-<dd>List all regex (Perl Regular Expression syntax) that are normal output from sun tar. These output are in the &quot;FAILED DUMP DETAILS&quot; section of the email report if the dump result is STRANGE or FAILED. Default values: </p>
+<dd>List all regex (Perl Regular Expression syntax) that are normal output from sun tar. These output are in the &quot;FAILED DUMP DETAILS&quot; section of the email report if the dump result is STRANGE or FAILED. Default values: </dd>
 <pre>is not a file. Not dumped\$
 same as archive file\$</pre>
 <p>To treat one of these default patterns differently, specify it explicitly in a different property.</dl>
 <p> IGNORE</p>
 <dl>
-<dd>List all regex (Perl Regular Expression syntax) that amanda ignore. These output are never in the email report.</dl>
+<dd>List all regex (Perl Regular Expression syntax) that amanda ignore. These output are never in the email report.</dd></dl>
 <p> STRANGE</p>
 <dl>
-<dd>List all regex (Perl Regular Expression syntax) that are strange output from sun tar. The result of the dump is STRANGE if sun tar produce a strange output. These output are in the &quot;FAILED DUMP DETAILS&quot; section of the email report. Default values: </p>
+<dd>List all regex (Perl Regular Expression syntax) that are strange output from sun tar. The result of the dump is STRANGE if sun tar produce a strange output. These output are in the &quot;FAILED DUMP DETAILS&quot; section of the email report. Default values: </dd>
 <pre>: invalid character in UTF-8 conversion of 
 : UTF-8 conversion failed.\$</pre>
 <p>To treat one of these default patterns differently, specify it explicitly in a different property.</dl>
 <p> ERROR</p>
 <dl>
-<dd>List all regex (perl Regular Expression syntax) that are error output from sun tar. All sun tar output that doesn&#8217;t match a normal, ignore or strange regex are error by default. The result of the dump is FAILED if sun tar produce an error output. These output are in the &quot;FAILED DUMP DETAILS&quot; section of the email report. Default values: </p>
+<dd>List all regex (perl Regular Expression syntax) that are error output from sun tar. All sun tar output that doesn&#8217;t match a normal, ignore or strange regex are error by default. The result of the dump is FAILED if sun tar produce an error output. These output are in the &quot;FAILED DUMP DETAILS&quot; section of the email report. Default values: </dd>
 <pre>: Permission denied\$</pre>
 <p>To treat one of these default patterns differently, specify it explicitly in a different property.</dl>
 <h2>See Also</h2>
@@ -58,10 +58,10 @@ same as archive file\$</pre>
 <h2>Authors</h2>
 <p><code>Satya Ganga</code> &lt;gast [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
 <p> <code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
 <p> <code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

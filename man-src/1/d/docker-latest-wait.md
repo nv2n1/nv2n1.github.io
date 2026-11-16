@@ -19,14 +19,14 @@ description: "docker-wait – Block until a container stops, then print its exit
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -d fedora sleep 99
 079b83f558a2bc52ecad6b2a5de13622d584e6bb1aea058c11b36511e85e7622
 $ docker wait 079b83f558a2bc
 0
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
 <h2>Index</h2>

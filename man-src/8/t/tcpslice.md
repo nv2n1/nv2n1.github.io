@@ -28,26 +28,26 @@ description: "tcpslice – extract pieces of and/or merge together tcpdump files
 <h2>Options</h2>
 <p>If any of <code>-R,</code> <code>-r</code> or <code>-t</code> are specified then <i>tcpslice</i> reports the timestamps of the first and last packets in each input file and exits. Only one of these three options may be specified.</p>
 <dl>
-<dt><code>-D</code></p>
-<dd>Do not discard duplicate packets seen when merging multiple trace files.</p>
-<dt><code>-d</code></p>
-<dd>Dump the start and end times specified by the given range and exit. This option is useful for checking that the given range actually specifies the times you think it does. If one of <code>-R,</code> <code>-r</code> or <code>-t</code> has been specified then the times are dumped in the corresponding format; otherwise, raw format (<code> -R</code>) is used.</p>
-<dt><code>-l</code></p>
-<dd>When merging more than one file, merge on the basis of relative time, rather than absolute time. Normally, when merging files is done, packets are merged based on absolute timestamps. With <code>-l</code> packets are merged based on the relative time between the start of the file in which the packet is found and the timestamp of the packet itself. The timestamp of packets in the output file is calculated as the relative time for the packet within its file plus <i>first time.</i></p>
-<dt><code>-R</code></p>
-<dd>Dump the timestamps of the first and last packets in each input file as raw timestamps (i.e., in the form <i> sssssssss.uuuuuu</i>).</p>
-<dt><code>-r</code></p>
-<dd>Same as <code>-R</code> except the timestamps are dumped in human-readable format, similar to that used by <i> <a href="/docs/linux/man/1-date/">date</a>(1)</i>.</p>
-<dt><code>-t</code></p>
-<dd>Same as <code>-R</code> except the timestamps are dumped in <i>tcpslice</i> format, i.e., in the <i>ymdhmsu</i> format discussed above.</p>
-<dt><code>-w</code></p>
-<dd>Direct the output to <i>file</i> rather than <i>stdout</i>.</dl>
+<dt><code>-D</code></dt>
+<dd>Do not discard duplicate packets seen when merging multiple trace files.</dd>
+<dt><code>-d</code></dt>
+<dd>Dump the start and end times specified by the given range and exit. This option is useful for checking that the given range actually specifies the times you think it does. If one of <code>-R,</code> <code>-r</code> or <code>-t</code> has been specified then the times are dumped in the corresponding format; otherwise, raw format (<code> -R</code>) is used.</dd>
+<dt><code>-l</code></dt>
+<dd>When merging more than one file, merge on the basis of relative time, rather than absolute time. Normally, when merging files is done, packets are merged based on absolute timestamps. With <code>-l</code> packets are merged based on the relative time between the start of the file in which the packet is found and the timestamp of the packet itself. The timestamp of packets in the output file is calculated as the relative time for the packet within its file plus <i>first time.</i></dd>
+<dt><code>-R</code></dt>
+<dd>Dump the timestamps of the first and last packets in each input file as raw timestamps (i.e., in the form <i> sssssssss.uuuuuu</i>).</dd>
+<dt><code>-r</code></dt>
+<dd>Same as <code>-R</code> except the timestamps are dumped in human-readable format, similar to that used by <i> <a href="/docs/linux/man/1-date/">date</a>(1)</i>.</dd>
+<dt><code>-t</code></dt>
+<dd>Same as <code>-R</code> except the timestamps are dumped in <i>tcpslice</i> format, i.e., in the <i>ymdhmsu</i> format discussed above.</dd>
+<dt><code>-w</code></dt>
+<dd>Direct the output to <i>file</i> rather than <i>stdout</i>.</dd></dl>
 <h2>See Also</h2>
 <p>tcpdump(l)</p>
 <h2>Author</h2>
 <p>Vern Paxson, of Lawrence Berkeley Laboratory, University of California, Berkeley, CA. </p>
 <p> The current version is available via anonymous ftp: </p>
 <dl>
-<dd><i><a href="ftp://ftp.ee.lbl.gov/tcpslice.tar.Z">ftp://ftp.ee.lbl.gov/tcpslice.tar.Z</a></i></dl>
+<dd><i><a href="ftp://ftp.ee.lbl.gov/tcpslice.tar.Z">ftp://ftp.ee.lbl.gov/tcpslice.tar.Z</a></i></dd></dl>
 <h2>Bugs</h2>
 <p>Please send bug reports to tcpslice [at] ee.lbl.gov. An input filename that beings with a digit or a `+&#8217; can be confused with a start/end time. Such filenames can be specified with a leading `./&#8217;; for example, specify the file `04Jul76.trace&#8217; as `./04Jul76.trace&#8217;. <i>tcpslice</i> cannot read its input from <i>stdin</i>, since it uses random-access to rummage through its input files. <i>tcpslice</i> refuses to write to its output if it is a terminal (as indicated by <i>isatty(3)</i>). This is not a bug but a feature, to prevent it from spraying binary data to the user&#8217;s terminal. Note that this means you must either redirect <i>stdout</i> or specify an output file via <code>-w</code>. <i>tcpslice</i> will not work properly on <i>tcpdump</i> files spanning more than one year; with files containing portions of packets whose original length was more than 65,535 bytes; nor with files containing fewer than two packets. Such files result in the error message: `couldn&#8217;t find final packet in file&#8217;. These problems are due to the interpolation scheme used by <i>tcpslice</i> to greatly speed up its processing when dealing with large trace files. Note that <i>tcpslice</i> can efficiently extract slices from the middle of trace files of any size, and can also work with truncated trace files (i.e., the final packet in the file is only partially present, typically due to <i>tcpdump</i> being ungracefully killed). Adding <code>-l</code> has broken some compatibility with older versions, since <i>tcpslice</i> now merges its input files, rather than (approximately) concatenating them together as it did previously. It would sometimes be convenient if you could specify a clock offset to use with the <code>-l</code> option. It would be nice if <i>tcpslice</i> supported more general editing of trace files. </p>

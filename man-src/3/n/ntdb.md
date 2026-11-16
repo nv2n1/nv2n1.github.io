@@ -53,7 +53,7 @@ struct ntdb_context *ntdb_open_talloc(const void *parent,
  }
  return ntdb;
 }</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://tdb.samba.org/">http://tdb.samba.org/</a></code>m[]</p>
 <h2>Author</h2>

@@ -10,9 +10,7 @@ description: "std::chrono::utc_clock::from_sys – std::chrono::utc_clock::from_
 <p>std::chrono::utc_clock::from_sys &#8211; std::chrono::utc_clock::from_sys</p>
 <h2>Synopsis</h2>
 <pre><code>template &lt;class Duration&gt;
-
 static std::chrono::utc_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;(since C++ 20)
-
     from_sys(const std::chrono::sys_time&lt;Duration&gt; &amp;t);</code></pre>
 <p>Converts a sys_time t to a utc_time u that represents the same point in time.<br />
 u.time_since_epoch() &#8211; t.time_since_epoch() is equal to the number of leap seconds that was inserted between t and 1 January 1970. If t is the exact date of a leap second insertion, that leap second is counted as inserted. </p>

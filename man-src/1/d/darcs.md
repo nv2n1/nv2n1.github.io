@@ -56,12 +56,12 @@ description: "darcs – an advanced revision control system"
 <h2>DESCRIPTION</h2>
 <p> Darcs is a free, open source revision control system. It is:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Distributed: Every user has access to the full command set, removing boundaries between server and client or committer and non-committers.</p>
-<dt>&bull;</p>
-<dd> Interactive: Darcs is easy to learn and efficient to use because it asks you questions in response to simple commands, giving you choices in your work flow. You can choose to record one change in a file, while ignoring another. As you update from upstream, you can review each patch name, even the full `diff&#8217; for interesting patches.</p>
-<dt>&bull;</p>
-<dd> Smart: Originally developed by physicist David Roundy, darcs is based on a unique algebra of patches. This smartness lets you respond to changing demands in ways that would otherwise not be possible. Learn more about spontaneous branches with darcs.</dl>
+<dt>&bull;</dt>
+<dd> Distributed: Every user has access to the full command set, removing boundaries between server and client or committer and non-committers.</dd>
+<dt>&bull;</dt>
+<dd> Interactive: Darcs is easy to learn and efficient to use because it asks you questions in response to simple commands, giving you choices in your work flow. You can choose to record one change in a file, while ignoring another. As you update from upstream, you can review each patch name, even the full `diff&#8217; for interesting patches.</dd>
+<dt>&bull;</dt>
+<dd> Smart: Originally developed by physicist David Roundy, darcs is based on a unique algebra of patches. This smartness lets you respond to changing demands in ways that would otherwise not be possible. Learn more about spontaneous branches with darcs.</dd></dl>
 <h2>OPTIONS</h2>
 <p> Different options are accepted by different Darcs commands. Each command&#8217;s most important options are listed in the <code>COMMANDS</code> section. For a full list of all options accepted by a particular command, run `darcs <i>command</i> &#8211;help&#8217;.</p>
 <h3>Selecting Patches:</h3>
@@ -99,13 +99,13 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs help</code> [&lt;<i>darcs</i>_<i>command</i>&gt; [<i>darcs</i>_<i>subcommand</i>]]</p>
 <dl>
 <dt>
-<dd> Without arguments, `darcs help&#8217; prints a categorized list of darcs commands and a short description of each one. With an extra argument, `darcs help foo&#8217; prints detailed help about the darcs command foo. </p>
+</dt><dd> Without arguments, `darcs help&#8217; prints a categorized list of darcs commands and a short description of each one. With an extra argument, `darcs help foo&#8217; prints detailed help about the darcs command foo. </dd>
 </dl>
 <h3>Changing and querying the working copy:</h3>
 <p> <code>darcs add</code> &lt;<i>file</i>|<i>directory</i>&gt; &#8230;</p>
 <dl>
 <dt>
-<dd> Generally a repository contains both files that should be version controlled (such as source code) and files that Darcs should ignore (such as executables compiled from the source code). The `darcs add&#8217; command is used to tell Darcs which files to version control. </p>
+</dt><dd> Generally a repository contains both files that should be version controlled (such as source code) and files that Darcs should ignore (such as executables compiled from the source code). The `darcs add&#8217; command is used to tell Darcs which files to version control. </dd>
 <p> When an existing project is first imported into a Darcs repository, it is common to run `darcs add -r *&#8217; or `darcs record -l&#8217; to add all initial source files into darcs. </p>
 <p> Adding symbolic links (symlinks) is not supported. </p>
 <p> Darcs will ignore all files and folders that look `boring&#8217;. The &#8211;boring option overrides this behaviour. </p>
@@ -114,19 +114,19 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs remove</code> &lt;<i>file</i>|<i>directory</i>&gt; &#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs remove&#8217; command exists primarily for symmetry with `darcs add&#8217;, as the normal way to remove a file from version control is simply to delete it from the working tree. This command is only useful in the unusual case where one wants to record a removal patch WITHOUT deleting the copy in the working tree (which can be re-added). </p>
+</dt><dd> The `darcs remove&#8217; command exists primarily for symmetry with `darcs add&#8217;, as the normal way to remove a file from version control is simply to delete it from the working tree. This command is only useful in the unusual case where one wants to record a removal patch WITHOUT deleting the copy in the working tree (which can be re-added). </dd>
 <p> Note that applying a removal patch to a repository (e.g. by pulling the patch) will ALWAYS affect the working tree of that repository. </p>
 </dl>
 <p> <code>darcs move</code> &lt;<i>source</i>&gt; &#8230; &lt;<i>destination</i>&gt;</p>
 <dl>
 <dt>
-<dd> Darcs cannot reliably distinguish between a file being deleted and a new one added, and a file being moved. Therefore Darcs always assumes the former, and provides the `darcs mv&#8217; command to let Darcs know when you want the latter. This command will also move the file in the working tree (unlike `darcs remove&#8217;), unless it has already been moved. </p>
+</dt><dd> Darcs cannot reliably distinguish between a file being deleted and a new one added, and a file being moved. Therefore Darcs always assumes the former, and provides the `darcs mv&#8217; command to let Darcs know when you want the latter. This command will also move the file in the working tree (unlike `darcs remove&#8217;), unless it has already been moved. </dd>
 <p> Darcs will not rename a file if another file in the same folder has the same name, except for case. The &#8211;case-ok option overrides this behaviour. Windows and OS X usually use filesystems that do not allow files a folder to have the same name except for case (for example, `ReadMe&#8217; and `README&#8217;). If &#8211;case-ok is used, the repository might be unusable on those systems! </p>
 </dl>
 <p> <code>darcs replace</code> &lt;<i>old</i>&gt; &lt;<i>new</i>&gt; &lt;<i>file</i>&gt; &#8230;</p>
 <dl>
 <dt>
-<dd> In addition to line-based patches, Darcs supports a limited form of lexical substitution. Files are treated as sequences of words, and each occurrence of the old word is replaced by the new word. This is intended to provide a clean way to rename a function or variable. Such renamings typically affect lines all through the source code, so a traditional line-based patch would be very likely to conflict with other branches, requiring manual merging. </p>
+</dt><dd> In addition to line-based patches, Darcs supports a limited form of lexical substitution. Files are treated as sequences of words, and each occurrence of the old word is replaced by the new word. This is intended to provide a clean way to rename a function or variable. Such renamings typically affect lines all through the source code, so a traditional line-based patch would be very likely to conflict with other branches, requiring manual merging. </dd>
 <p> Files are tokenized according to one simple rule: words are strings of valid token characters, and everything between them (punctuation and whitespace) is discarded. By default, valid token characters are letters, numbers and the underscore (i.e. [A-Za-z0-9_]). However if the old and/or new token contains either a hyphen or period, BOTH hyphen and period are treated as valid (i.e. [A-Za-z0-9_.-]). </p>
 <p> The set of valid characters can be customized using the &#8211;token-chars option. The argument must be surrounded by square brackets. If a hyphen occurs between two characters in the set, it is treated as a set range. For example, in most locales [A-Z] denotes all uppercase letters. If the first character is a caret, valid tokens are taken to be the complement of the remaining characters. For example, [^:
 ] could be used to match fields in the <a href="/docs/linux/man/5-passwd/">passwd</a>(5), where records and fields are separated by newlines and colons respectively. </p>
@@ -141,19 +141,19 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs revert</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs revert&#8217; command discards unrecorded changes the working tree. As with `darcs record&#8217;, you will be asked which hunks (changes) to revert. The &#8211;all switch can be used to avoid such prompting. If files or directories are specified, other parts of the working tree are not reverted. </p>
+</dt><dd> The `darcs revert&#8217; command discards unrecorded changes the working tree. As with `darcs record&#8217;, you will be asked which hunks (changes) to revert. The &#8211;all switch can be used to avoid such prompting. If files or directories are specified, other parts of the working tree are not reverted. </dd>
 <p> In you accidentally reverted something you wanted to keep (for example, typing `darcs rev -a&#8217; instead of `darcs rec -a&#8217;), you can immediately run `darcs unrevert&#8217; to restore it. This is only guaranteed to work if the repository has not changed since `darcs revert&#8217; ran. </p>
 </dl>
 <p> <code>darcs unrevert</code></p>
 <dl>
 <dt>
-<dd> Unrevert is a rescue command in case you accidentally reverted something you wanted to keep (for example, typing `darcs rev -a&#8217; instead of `darcs rec -a&#8217;). </p>
+</dt><dd> Unrevert is a rescue command in case you accidentally reverted something you wanted to keep (for example, typing `darcs rev -a&#8217; instead of `darcs rec -a&#8217;). </dd>
 <p> This command may fail if the repository has changed since the revert took place. Darcs will ask for confirmation before executing an interactive command that will DEFINITELY prevent unreversion. </p>
 </dl>
 <p> <code>darcs whatsnew</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs whatsnew&#8217; command lists unrecorded changes to the working tree. If you specify a set of files and directories, only unrecorded changes to those files and directories are listed. </p>
+</dt><dd> The `darcs whatsnew&#8217; command lists unrecorded changes to the working tree. If you specify a set of files and directories, only unrecorded changes to those files and directories are listed. </dd>
 <p> With the &#8211;summary option, the changes are condensed to one line per file, with mnemonics to indicate the nature and extent of the change. The &#8211;look-for-adds option causes candidates for `darcs add&#8217; to be included in the summary output. Summary mnemonics are as follows: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>`A f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`A d/&#8217;&nbsp;<wbr>respectively mean an added file or directory.<br />
 &nbsp;<wbr>&nbsp;<wbr>`R f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`R d/&#8217;&nbsp;<wbr>respectively mean a removed file or directory.<br />
@@ -172,7 +172,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs record</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs record&#8217; command is used to create a patch from changes in the working tree. If you specify a set of files and directories, changes to other files will be skipped. </p>
+</dt><dd> The `darcs record&#8217; command is used to create a patch from changes in the working tree. If you specify a set of files and directories, changes to other files will be skipped. </dd>
 <p> Every patch has a name, an optional description, an author and a date. </p>
 <p> The patch name should be a short sentence that concisely describes the patch, such as `Add error handling to main event loop.&#8217; You can supply it in advance with the -m option, or provide it when prompted. </p>
 <p> The patch description is an optional block of free-form text. It is used to supply additional information that doesn&#8217;t fit in the patch name. For example, it might include a rationale of WHY the change was necessary. By default Darcs asks if you want to add a description; the &#8211;edit-long-comment and &#8211;skip-long-comment can be used to answer `yes&#8217; or `no&#8217; (respectively) to this prompt. Finally, the &#8211;logfile option allows you to supply a file that already contains the patch name (first line) and patch description (subsequent lines). This is useful if a previous record failed and left a darcs-record-0 file. </p>
@@ -186,12 +186,12 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs unrecord</code></p>
 <dl>
 <dt>
-<dd> Unrecord does the opposite of record in that it makes the changes from patches active changes again which you may record or revert later. The working copy itself will not change. Beware that you should not use this command if you are going to re-record the changes in any way and there is a possibility that another user may have already pulled the patch. </p>
+</dt><dd> Unrecord does the opposite of record in that it makes the changes from patches active changes again which you may record or revert later. The working copy itself will not change. Beware that you should not use this command if you are going to re-record the changes in any way and there is a possibility that another user may have already pulled the patch. </dd>
 </dl>
 <p> <code>darcs amend-record</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> Amend-record updates a `draft&#8217; patch with additions or improvements, resulting in a single `finished&#8217; patch. This is better than recording the additions and improvements as separate patches, because then whenever the `draft&#8217; patch is copied between repositories, you would need to make sure all the extra patches are copied, too. </p>
+</dt><dd> Amend-record updates a `draft&#8217; patch with additions or improvements, resulting in a single `finished&#8217; patch. This is better than recording the additions and improvements as separate patches, because then whenever the `draft&#8217; patch is copied between repositories, you would need to make sure all the extra patches are copied, too. </dd>
 <p> Do not copy draft patches between repositories, because a finished patch cannot be copied into a repository that contains a draft of the same patch. If this has already happened, `darcs obliterate&#8217; can be used to remove the draft patch. </p>
 <p> Do not run amend-record in repository that other developers can pull from, because if they pull while an amend-record is in progress, their repository may be corrupted. </p>
 <p> When recording a draft patch, it is a good idea to start the name with `DRAFT:&#8217; so that other developers know it is not finished. When finished, remove it with `darcs amend-record &#8211;edit-long-comment&#8217;. To change the patch name without starting an editor, use &#8211;patch-name. </p>
@@ -202,7 +202,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs mark-conflicts</code></p>
 <dl>
 <dt>
-<dd> Darcs requires human guidance to unify changes to the same part of a source file. When a conflict first occurs, darcs will add the initial state and both choices to the working tree, delimited by the markers `v v v&#8217;, `=====&#8217;, `* * *&#8217; and `^ ^ ^&#8217;, as follows: </p>
+</dt><dd> Darcs requires human guidance to unify changes to the same part of a source file. When a conflict first occurs, darcs will add the initial state and both choices to the working tree, delimited by the markers `v v v&#8217;, `=====&#8217;, `* * *&#8217; and `^ ^ ^&#8217;, as follows: </dd>
 <p> v v v v v v v Initial state. ============= First choice. ************* Second choice. ^ ^ ^ ^ ^ ^ ^ </p>
 <p> However, you might revert or manually delete these markers without actually resolving the conflict. In this case, `darcs mark-conflicts&#8217; is useful to show where any unresolved conflicts. It is also useful if `darcs apply&#8217; is called with &#8211;apply-conflicts, where conflicts aren&#8217;t marked initially. </p>
 <p> Any unrecorded changes to the working tree WILL be lost forever when you run this command! You will be prompted for confirmation before this takes place. </p>
@@ -211,7 +211,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs tag</code> [<i>tagname</i>]</p>
 <dl>
 <dt>
-<dd> The `darcs tag&#8217; command names the current repository state, so that it can easily be referred to later. Every `important&#8217; state should be tagged; in particular it is good practice to tag each stable release with a number or codename. Advice on release numbering can be found at <a rel="nofollow" href="http://producingoss.com/en/development-cycle.html.">http://producingoss.com/en/development-cycle.html.</a> </p>
+</dt><dd> The `darcs tag&#8217; command names the current repository state, so that it can easily be referred to later. Every `important&#8217; state should be tagged; in particular it is good practice to tag each stable release with a number or codename. Advice on release numbering can be found at <a rel="nofollow" href="http://producingoss.com/en/development-cycle.html.">http://producingoss.com/en/development-cycle.html.</a> </dd>
 <p> To reproduce the state of a repository `R&#8217; as at tag `t&#8217;, use the command `darcs get &#8211;tag t R&#8217;. The command `darcs show tags&#8217; lists all tags in the current repository. </p>
 <p> Tagging also provides significant performance benefits: when Darcs reaches a shared tag that depends on all antecedent patches, it can simply stop processing. </p>
 <p> Like normal patches, a tag has a name, an author, a timestamp and an optional long description, but it does not change the working tree. A tag can have any name, but it is generally best to pick a naming scheme and stick to it. </p>
@@ -220,7 +220,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs setpref</code> &lt;<i>pref</i>&gt; &lt;<i>value</i>&gt;</p>
 <dl>
 <dt>
-<dd> When working on project with multiple repositories and contributors, it is sometimes desirable for a preference to be set consistently project-wide. This is achieved by treating a preference set with `darcs setpref&#8217; as an unrecorded change, which can then be recorded and then treated like any other patch. </p>
+</dt><dd> When working on project with multiple repositories and contributors, it is sometimes desirable for a preference to be set consistently project-wide. This is achieved by treating a preference set with `darcs setpref&#8217; as an unrecorded change, which can then be recorded and then treated like any other patch. </dd>
 <p> Valid preferences are: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>test &#8212; a shell command that runs regression tests<br />
 &nbsp;<wbr>&nbsp;<wbr>predist &#8212; a shell command to run before&nbsp;<wbr>`darcs dist&#8217;<br />
@@ -234,7 +234,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs diff</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs diff&#8217; command compares two versions of the working tree of the current repository. Without options, the pristine (recorded) and unrecorded working trees are compared. This is lower-level than the `darcs whatsnew&#8217; command, since it outputs a line-by-line diff, and it is also slower. As with `darcs whatsnew&#8217;, if you specify files or directories, changes to other files are not listed. The command always uses an external diff utility. </p>
+</dt><dd> The `darcs diff&#8217; command compares two versions of the working tree of the current repository. Without options, the pristine (recorded) and unrecorded working trees are compared. This is lower-level than the `darcs whatsnew&#8217; command, since it outputs a line-by-line diff, and it is also slower. As with `darcs whatsnew&#8217;, if you specify files or directories, changes to other files are not listed. The command always uses an external diff utility. </dd>
 <p> With the &#8211;patch option, the comparison will be made between working trees with and without that patch. Patches `after&#8217; the selected patch are not present in either of the compared working trees. The &#8211;from-patch and &#8211;to-patch options allow the set of patches in the `old&#8217; and `new&#8217; working trees to be specified separately. </p>
 <p> The associated tag and match options are also understood, e.g. `darcs diff &#8211;from-tag 1.0 &#8211;to-tag 1.1&#8242;. All these options assume an ordering of the patch set, so results may be affected by operations such as `darcs optimize &#8211;reorder&#8217;. </p>
 <p> <a href="/docs/linux/man/1-diff/">diff</a>(1) is called with the arguments -rN. The &#8211;unified option causes -u to be passed to <a href="/docs/linux/man/1-diff/">diff</a>(1). An additional argument can be passed using &#8211;diff-opts, such as &#8211;diff-opts=-ud or &#8211;diff-opts=-wU9. </p>
@@ -243,7 +243,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs changes</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs changes&#8217; command lists the patches that constitute the current repository or, with &#8211;repo, a remote repository. Without options or arguments, ALL patches will be listed. </p>
+</dt><dd> The `darcs changes&#8217; command lists the patches that constitute the current repository or, with &#8211;repo, a remote repository. Without options or arguments, ALL patches will be listed. </dd>
 <p> When given one or more files or directories as arguments, only patches which affect those files or directories are listed. This includes changes that happened to files before they were moved or renamed. </p>
 <p> When given a &#8211;from-tag, &#8211;from-patch or &#8211;from-match, only changes since that tag or patch are listed. Similarly, the &#8211;to-tag, &#8211;to-patch and &#8211;to-match options restrict the list to older patches. </p>
 <p> The &#8211;last and &#8211;max-count options both limit the number of patches listed. The former applies BEFORE other filters, whereas the latter applies AFTER other filters. For example `darcs changes foo.c &#8211;max-count 3&#8242; will print the last three patches that affect foo.c, whereas `darcs changes &#8211;last 3 foo.c&#8217; will, of the last three patches, print only those that affect foo.c. </p>
@@ -254,37 +254,37 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs annotate</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs annotate&#8217; command provides two unrelated operations. When called on a file, it will find the patch that last modified each line in that file. When called on a patch (e.g. using &#8211;patch), it will print the internal representation of that patch. </p>
+</dt><dd> The `darcs annotate&#8217; command provides two unrelated operations. When called on a file, it will find the patch that last modified each line in that file. When called on a patch (e.g. using &#8211;patch), it will print the internal representation of that patch. </dd>
 <p> The &#8211;summary option will result in a summarized patch annotation, similar to `darcs whatsnew&#8217;. It has no effect on file annotations. </p>
 <p> By default, output is in a human-readable format. The &#8211;machine-readable option can be used to generate output for machine postprocessing. </p>
 </dl>
 <p> <code>darcs dist</code></p>
 <dl>
 <dt>
-<dd> The `darcs dist&#8217; command creates a compressed archive (a `tarball&#8217;) in the repository&#8217;s root directory, containing the recorded state of the working tree (unrecorded changes and the _darcs directory are excluded). </p>
+</dt><dd> The `darcs dist&#8217; command creates a compressed archive (a `tarball&#8217;) in the repository&#8217;s root directory, containing the recorded state of the working tree (unrecorded changes and the _darcs directory are excluded). </dd>
 <p> If a predist command is set (see `darcs setpref&#8217;), that command will be run on the tarball contents prior to archiving. For example, autotools projects would set it to `autoconf &amp;&amp; automake&#8217;. </p>
 <p> By default, the tarball (and the top-level directory within the tarball) has the same name as the repository, but this can be overridden with the &#8211;dist-name option. </p>
 </dl>
 <p> <code>darcs test</code></p>
 <dl>
 <dt>
-<dd> If a regression test is defined (see `darcs setpref&#8217;) it will be run. </p>
+</dt><dd> If a regression test is defined (see `darcs setpref&#8217;) it will be run. </dd>
 </dl>
 <p> <code>darcs trackdown</code> [[<i>initialization</i>] command<i>]</i></p>
 <dl>
 <dt>
-<dd> Trackdown tries to find the most recent version in the repository which passes a test. Given no arguments, it uses the default repository test. Given one argument, it treats it as a test command. Given two arguments, the first is an initialization command with is run only once, and the second is the test command. </p>
+</dt><dd> Trackdown tries to find the most recent version in the repository which passes a test. Given no arguments, it uses the default repository test. Given one argument, it treats it as a test command. Given two arguments, the first is an initialization command with is run only once, and the second is the test command. </dd>
 <p> Without the &#8211;bisect option, trackdown does linear search starting from head, and moving away from head. With the &#8211;bisect option, it does binary search. </p>
 <p> Under the assumption that failure is monotonous, trackdown produces the same result with and without &#8211;bisect. (Monotonous means that when moving away from head, the test result changes only once from &quot;fail&quot; to &quot;ok&quot;.) If failure is not monotonous, any one of the patches that break the test is found at random.</dl>
 <p> <code>darcs show contents</code> [<i>file</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> Show contents can be used to display an earlier version of some file(s). If you give show contents no version arguments, it displays the recorded version of the file(s). </p>
+</dt><dd> Show contents can be used to display an earlier version of some file(s). If you give show contents no version arguments, it displays the recorded version of the file(s). </dd>
 </dl>
 <p> <code>darcs show files</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> The `darcs show files&#8217; command lists those files and directories in the working tree that are under version control. This command is primarily for scripting purposes; end users will probably want `darcs whatsnew &#8211;summary&#8217;. </p>
+</dt><dd> The `darcs show files&#8217; command lists those files and directories in the working tree that are under version control. This command is primarily for scripting purposes; end users will probably want `darcs whatsnew &#8211;summary&#8217;. </dd>
 <p> A file is `pending&#8217; if it has been added but not recorded. By default, pending files (and directories) are listed; the &#8211;no-pending option prevents this. </p>
 <p> By default `darcs show files&#8217; lists both files and directories, but the alias `darcs show manifest&#8217; only lists files. The &#8211;files, &#8211;directories, &#8211;no-files and &#8211;no-directories modify this behaviour. </p>
 <p> By default entries are one-per-line (i.e. newline separated). This can cause problems if the files themselves contain newlines or other control characters. To get aroudn this, the &#8211;null option uses the null character instead. The script interpreting output from this command needs to understand this idiom; `xargs -0&#8242; is such a command. </p>
@@ -294,22 +294,22 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs show index</code></p>
 <dl>
 <dt>
-<dd> The `darcs show index&#8217; command lists all version-controlled files and directories along with their hashes as stored in _darcs/index. For files, the fields correspond to file size, sha256 of the current file content and the filename.</dl>
+</dt><dd> The `darcs show index&#8217; command lists all version-controlled files and directories along with their hashes as stored in _darcs/index. For files, the fields correspond to file size, sha256 of the current file content and the filename.</dd></dl>
 <p> <code>darcs show pristine</code></p>
 <dl>
 <dt>
-<dd> The `darcs show pristine&#8217; command lists all version-controlled files and directories along with the hashes of their pristine copies. For files, the fields correspond to file size, sha256 of the pristine file content and the filename.</dl>
+</dt><dd> The `darcs show pristine&#8217; command lists all version-controlled files and directories along with the hashes of their pristine copies. For files, the fields correspond to file size, sha256 of the pristine file content and the filename.</dd></dl>
 <p> <code>darcs show repo</code></p>
 <dl>
 <dt>
-<dd> The `darcs show repo&#8217; command displays statistics about the current repository, allowing third-party scripts to access this information without inspecting _darcs directly (and without breaking when the _darcs format changes). </p>
+</dt><dd> The `darcs show repo&#8217; command displays statistics about the current repository, allowing third-party scripts to access this information without inspecting _darcs directly (and without breaking when the _darcs format changes). </dd>
 <p> By default, the number of patches is shown. If this data isn&#8217;t needed, use &#8211;no-files to accelerate this command from O(n) to O(1). </p>
 <p> By default, output is in a human-readable format. The &#8211;xml-output option can be used to generate output for machine postprocessing. </p>
 </dl>
 <p> <code>darcs show authors</code></p>
 <dl>
 <dt>
-<dd> The `darcs show authors&#8217; command lists the authors of the current repository, sorted by the number of patches contributed. With the &#8211;verbose option, this command simply lists the author of each patch (without aggregation or sorting). </p>
+</dt><dd> The `darcs show authors&#8217; command lists the authors of the current repository, sorted by the number of patches contributed. With the &#8211;verbose option, this command simply lists the author of each patch (without aggregation or sorting). </dd>
 <p> An author&#8217;s name or email address may change over time. To tell Darcs when multiple author strings refer to the same individual, create an `.authorspellings&#8217; file in the root of the working tree. Each line in this file begins with an author&#8217;s canonical name and address, and may be followed by a comma separated list of extended regular expressions. Blank lines and lines beginning with two hyphens are ignored. The format of .authorspelling can be described by this pattern: </p>
 <p>&nbsp;<wbr>name&nbsp;<wbr>&lt;address&gt;&nbsp;<wbr>[, regexp&nbsp;<wbr>]* </p>
 <p> There are some pitfalls concerning special characters: Whitespaces are stripped, if you need space in regexp use [ ]. Because comma serves as a separator you have to escape it if you want it in regexp. Note that .authorspelingfile use extended regular expressions so +, ? and so on are metacharacters and you need to escape them to be interpreted literally. </p>
@@ -324,43 +324,43 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs show tags</code></p>
 <dl>
 <dt>
-<dd> The tags command writes a list of all tags in the repository to standard output. </p>
+</dt><dd> The tags command writes a list of all tags in the repository to standard output. </dd>
 <p> Tab characters (ASCII character 9) in tag names are changed to spaces for better interoperability with shell tools. A warning is printed if this happens.</dl>
 <h3>Copying patches between repositories with working copy update:</h3>
 <p> <code>darcs pull</code> [<i>repository</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> Pull is used to bring changes made in another repository into the current repository (that is, either the one in the current directory, or the one specified with the &#8211;repodir option). Pull allows you to bring over all or some of the patches that are in that repository but not in this one. Pull accepts arguments, which are URLs from which to pull, and when called without an argument, pull will use the repository from which you have most recently either pushed or pulled. </p>
+</dt><dd> Pull is used to bring changes made in another repository into the current repository (that is, either the one in the current directory, or the one specified with the &#8211;repodir option). Pull allows you to bring over all or some of the patches that are in that repository but not in this one. Pull accepts arguments, which are URLs from which to pull, and when called without an argument, pull will use the repository from which you have most recently either pushed or pulled. </dd>
 <p> See &#8216;darcs help apply&#8217; for detailed description of many options. </p>
 </dl>
 <p> <code>darcs fetch</code> [<i>repository</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> fetch is used to bring changes made in another repository into the current repository without actually applying them. Fetch allows you to bring over all or some of the patches that are in that repository but not in this one. Fetch accepts arguments, which are URLs from which to fetch, and when called without an argument, fetch will use the repository from which you have most recently either pushed or pulled. The fetched patches are stored into a patch bundle, to be later applied using &quot;darcs apply&quot;.</dl>
+</dt><dd> fetch is used to bring changes made in another repository into the current repository without actually applying them. Fetch allows you to bring over all or some of the patches that are in that repository but not in this one. Fetch accepts arguments, which are URLs from which to fetch, and when called without an argument, fetch will use the repository from which you have most recently either pushed or pulled. The fetched patches are stored into a patch bundle, to be later applied using &quot;darcs apply&quot;.</dd></dl>
 <p> <code>darcs obliterate</code></p>
 <dl>
 <dt>
-<dd> Obliterate completely removes recorded patches from your local repository. The changes will be undone in your working copy and the patches will not be shown in your changes list anymore. Beware that you can lose precious code by obliterating! </p>
+</dt><dd> Obliterate completely removes recorded patches from your local repository. The changes will be undone in your working copy and the patches will not be shown in your changes list anymore. Beware that you can lose precious code by obliterating! </dd>
 </dl>
 <p> <code>darcs rollback</code> [<i>file</i>|<i>directory</i>]&#8230;</p>
 <dl>
 <dt>
-<dd> Rollback is used to undo the effects of one or more patches without actually deleting them. Instead, it creates a new patch reversing selected portions. of those changes. Unlike obliterate and unrecord (which accomplish a similar goal) rollback is perfectly safe, since it leaves in the repository a record of its changes. </p>
+</dt><dd> Rollback is used to undo the effects of one or more patches without actually deleting them. Instead, it creates a new patch reversing selected portions. of those changes. Unlike obliterate and unrecord (which accomplish a similar goal) rollback is perfectly safe, since it leaves in the repository a record of its changes. </dd>
 </dl>
 <p> <code>darcs push</code> [<i>repository</i>]</p>
 <dl>
 <dt>
-<dd> Push is the opposite of pull. Push allows you to copy changes from the current repository into another repository. </p>
+</dt><dd> Push is the opposite of pull. Push allows you to copy changes from the current repository into another repository. </dd>
 </dl>
 <p> <code>darcs send</code> [<i>repository</i>]</p>
 <dl>
 <dt>
-<dd> Send is used to prepare a bundle of patches that can be applied to a target repository. Send accepts the URL of the repository as an argument. When called without an argument, send will use the most recent repository that was either pushed to, pulled from or sent to. By default, the patch bundle is sent by email, although you may save it to a file. </p>
+</dt><dd> Send is used to prepare a bundle of patches that can be applied to a target repository. Send accepts the URL of the repository as an argument. When called without an argument, send will use the most recent repository that was either pushed to, pulled from or sent to. By default, the patch bundle is sent by email, although you may save it to a file. </dd>
 </dl>
 <p> <code>darcs apply</code> &lt;<i>patchfile</i>&gt;</p>
 <dl>
 <dt>
-<dd> The `darcs apply&#8217; command takes a patch bundle and attempts to insert it into the current repository. In addition to invoking it directly on bundles created by `darcs send&#8217;, it is used internally by `darcs push&#8217; and `darcs put&#8217; on the remote end of an SSH connection. </p>
+</dt><dd> The `darcs apply&#8217; command takes a patch bundle and attempts to insert it into the current repository. In addition to invoking it directly on bundles created by `darcs send&#8217;, it is used internally by `darcs push&#8217; and `darcs put&#8217; on the remote end of an SSH connection. </dd>
 <p> If no file is supplied, the bundle is read from standard input. </p>
 <p> If given an email instead of a patch bundle, Darcs will look for the bundle as a MIME attachment to that email. Currently this will fail if the MIME boundary is rewritten, such as in Courier and Mail.app. </p>
 <p> If the `&#8211;reply noreply [at] example.net&#8217; option is used, and the bundle is attached to an email, Darcs will send a report (indicating success or failure) to the sender of the bundle (the To field). The argument to noreply is the address the report will appear to originate FROM. </p>
@@ -376,7 +376,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs get</code> &lt;<i>repository</i>&gt; [&lt;<i>directory</i>&gt;]</p>
 <dl>
 <dt>
-<dd> Get creates a local copy of a repository. The optional second argument specifies a destination directory for the new copy; if omitted, it is inferred from the source location. </p>
+</dt><dd> Get creates a local copy of a repository. The optional second argument specifies a destination directory for the new copy; if omitted, it is inferred from the source location. </dd>
 <p> By default Darcs will copy every patch from the original repository. This means the copy is completely independent of the original; you can operate on the new repository even when the original is inaccessible. If you expect the original repository to remain accessible, you can use &#8211;lazy to avoid copying patches until they are needed (`copy on demand&#8217;). This is particularly useful when copying a remote repository with a long history that you don&#8217;t care about. </p>
 <p> The &#8211;lazy option isn&#8217;t as useful for local copies, because Darcs will automatically use `hard linking&#8217; where possible. As well as saving time and space, you can move or delete the original repository without affecting a complete, hard-linked copy. Hard linking requires that the copy be on the same filesystem and the original repository, and that the filesystem support hard linking. This includes NTFS, HFS+ and all general-purpose Unix filesystems (such as ext3, UFS and ZFS). FAT does not support hard links. </p>
 <p> Darcs get will not copy unrecorded changes to the source repository&#8217;s working tree. </p>
@@ -387,14 +387,14 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs put</code> &lt;<i>new</i> <i>repository</i>&gt;</p>
 <dl>
 <dt>
-<dd> The `darcs put&#8217; command creates a copy of the current repository. It is currently very inefficient, so when creating local copies you should use `darcs get . x&#8217; instead of `darcs put x&#8217;. </p>
+</dt><dd> The `darcs put&#8217; command creates a copy of the current repository. It is currently very inefficient, so when creating local copies you should use `darcs get . x&#8217; instead of `darcs put x&#8217;. </dd>
 <p> Currently this command just uses `darcs init&#8217; to create the target repository, then `darcs push &#8211;all&#8217; to copy patches to it. Options passed to `darcs put&#8217; are passed to the init and/or push commands as appropriate. See those commands for an explanation of each option. </p>
 </dl>
 <h3>Administrating repositories:</h3>
 <p> <code>darcs initialize</code></p>
 <dl>
 <dt>
-<dd> The `darcs initialize&#8217; command turns the current directory into a Darcs repository. Any existing files and subdirectories become UNSAVED changes: record them with `darcs record &#8211;look-for-adds&#8217;. </p>
+</dt><dd> The `darcs initialize&#8217; command turns the current directory into a Darcs repository. Any existing files and subdirectories become UNSAVED changes: record them with `darcs record &#8211;look-for-adds&#8217;. </dd>
 <p> This command creates the `_darcs&#8217; directory, which stores version control metadata. It also contains per-repository settings in _darcs/prefs/, which you can read about in the user manual. </p>
 <p> By default, patches of the new repository are in the darcs-2 semantics. However it is possible to create a repository in darcs-1 semantics with the flag `&#8211;hashed&#8217;, althought this is not recommended except for sharing patches with a project that uses patches in the darcs-1 semantics. </p>
 <p> Initialize is commonly abbreviated to `init&#8217;. </p>
@@ -402,7 +402,7 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs optimize</code></p>
 <dl>
 <dt>
-<dd> The `darcs optimize&#8217; command modifies the current repository in an attempt to reduce its resource requirements. By default a single fast, safe optimization is performed; additional optimization techniques can be enabled by passing options to `darcs optimize&#8217;. </p>
+</dt><dd> The `darcs optimize&#8217; command modifies the current repository in an attempt to reduce its resource requirements. By default a single fast, safe optimization is performed; additional optimization techniques can be enabled by passing options to `darcs optimize&#8217;. </dd>
 <p> The default optimization moves recent patches (those not included in the latest tag) to the `front&#8217;, reducing the amount that a typical remote command needs to download. It should also reduce the CPU time needed for some operations. </p>
 <p> The `darcs optimize &#8211;relink&#8217; command hard-links patches that the current repository has in common with its peers. Peers are those repositories listed in _darcs/prefs/sources, or defined with the `&#8211;sibling&#8217; option (which can be used multiple times). </p>
 <p> Darcs uses hard-links automatically, so this command is rarely needed. It is most useful if you used `cp -r&#8217; instead of `darcs get&#8217; to copy a repository, or if you pulled the same patch from a remote repository into multiple local repositories. </p>
@@ -414,18 +414,18 @@ description: "darcs – an advanced revision control system"
 <p> <code>darcs check</code></p>
 <dl>
 <dt>
-<dd> This command verifies that the patches in the repository, when applied successively to an empty tree, result in the pristine tree. If not, the differences are printed and Darcs exits unsucessfully (with a non-zero exit status). </p>
+</dt><dd> This command verifies that the patches in the repository, when applied successively to an empty tree, result in the pristine tree. If not, the differences are printed and Darcs exits unsucessfully (with a non-zero exit status). </dd>
 <p> If a regression test is defined (see `darcs setpref&#8217;) it will be run by `darcs check&#8217;. Use the &#8211;no-test option to disable this. </p>
 </dl>
 <p> <code>darcs repair</code></p>
 <dl>
 <dt>
-<dd> The `darcs repair&#8217; command attempts to fix corruption in the current repository. Currently it can only repair damage to the pristine tree, which is where most corruption occurs. </p>
+</dt><dd> The `darcs repair&#8217; command attempts to fix corruption in the current repository. Currently it can only repair damage to the pristine tree, which is where most corruption occurs. </dd>
 </dl>
 <p> <code>darcs convert</code> &lt;<i>source</i>&gt; [&lt;<i>destination</i>&gt;]</p>
 <dl>
 <dt>
-<dd> The current repository format is called `darcs-2&#8242;. It was introduced in Darcs 2.0 and became the default for new projects in Darcs 2.2. The `darcs convert&#8217; command allows existing projects to migrate to this format from the older `darcs-1&#8242; format. </p>
+</dt><dd> The current repository format is called `darcs-2&#8242;. It was introduced in Darcs 2.0 and became the default for new projects in Darcs 2.2. The `darcs convert&#8217; command allows existing projects to migrate to this format from the older `darcs-1&#8242; format. </dd>
 <p> This command DOES NOT modify the source repository; a new destination repository is created. It is safe to run this command more than once on a repository (e.g. for testing), before the final conversion. </p>
 <p> WARNING: the repository produced by this command is not understood by Darcs 1.x, and patches cannot be exchanged between repositories in darcs-1 and darcs-2 formats. </p>
 <p> Furthermore, darcs 2 repositories created by different invocations of this command SHOULD NOT exchange patches, unless those repositories had no patches in common when they were converted. (That is, within a set of repos that exchange patches, no patch should be converted more than once.) </p>

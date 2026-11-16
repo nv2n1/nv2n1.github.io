@@ -15,11 +15,11 @@ blk_queue_prep_rq - set a prepare_request function for queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>queue</dl>
+<dl><dd></dd><dd>queue</dd></dl>
  
 
  <i>pfn</i>
-<dl><dd>prepare_request function</dl>
+<dl><dd>prepare_request function</dd></dl>
 
 <h2>Description</h2>
 

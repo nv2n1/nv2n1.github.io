@@ -60,10 +60,10 @@ description: "perl5280delta – what is new for perl v5.28.0"
 <p> This works by creating a work file in the same directory, which is renamed over the input file once the output file is complete. </p>
 <p> Incompatibilities:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Since this renaming needs to only happen once, if you create a thread or child process, that renaming will only happen in the original thread or process.</p>
-<dt>&bull;</p>
-<dd> If you change directories while processing a file, and your operating system doesn&#8217;t provide the <tt>&quot;unlinkat()&quot;</tt>, <tt>&quot;renameat()&quot;</tt> and <tt>&quot;fchmodat()&quot;</tt> functions, the final rename step may fail.</dl>
+<dt>&bull;</dt>
+<dd> Since this renaming needs to only happen once, if you create a thread or child process, that renaming will only happen in the original thread or process.</dd>
+<dt>&bull;</dt>
+<dd> If you change directories while processing a file, and your operating system doesn&#8217;t provide the <tt>&quot;unlinkat()&quot;</tt>, <tt>&quot;renameat()&quot;</tt> and <tt>&quot;fchmodat()&quot;</tt> functions, the final rename step may fail.</dd></dl>
 <p> [perl #127663] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=127663">https://rt.perl.org/Public/Bug/Display.html?id=127663</a>&gt;</p>
 <h3>Initialisation of aggregate state variables</h3>
 <p> A persistent lexical array or hash variable can now be initialized, by an expression such as <tt>&quot;state @a = qw(x y z)&quot;</tt>. Initialization of a list of persistent lexical variables is still not possible.</p>
@@ -195,16 +195,16 @@ description: "perl5280delta – what is new for perl v5.28.0"
 <p> The core versions of these modules will now issue <tt>&quot;deprecated&quot;</tt>-category warnings to alert you to this fact. To silence these deprecation warnings, install the modules in question from <font SIZE="-1">CPAN.</font> </p>
 <p> Note that these are (with rare exceptions) fine modules that you are encouraged to continue to use. Their disinclusion from core primarily hinges on their necessity to bootstrapping a fully functional, CPAN-capable Perl installation, not usually on concerns over their design.</p>
 <dl>
-<dt>B::Debug</p>
+<dt>B::Debug</dt>
 <dd>
-<dt>Locale::Codes and its associated Country, Currency and Language modules</p>
-<dd></dl>
+</dd><dt>Locale::Codes and its associated Country, Currency and Language modules</dt>
+<dd></dd></dl>
 <h2>Performance Enhancements</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The start up overhead for creating regular expression patterns with Unicode properties (<tt>&quot;\p{...}&quot;</tt>) has been greatly reduced in most cases.</p>
-<dt>&bull;</p>
-<dd> Many string concatenation expressions are now considerably faster, due to the introduction internally of a <tt>&quot;multiconcat&quot;</tt> opcode which combines multiple concatenations, and optionally a <tt>&quot;=&quot;</tt> or <tt>&quot;.=&quot;</tt>, into a single action. For example, apart from retrieving <tt>$s</tt>, <tt>$a</tt> and <tt>$b</tt>, this whole expression is now handled as a single op: </p>
+<dt>&bull;</dt>
+<dd> The start up overhead for creating regular expression patterns with Unicode properties (<tt>&quot;\p{...}&quot;</tt>) has been greatly reduced in most cases.</dd>
+<dt>&bull;</dt>
+<dd> Many string concatenation expressions are now considerably faster, due to the introduction internally of a <tt>&quot;multiconcat&quot;</tt> opcode which combines multiple concatenations, and optionally a <tt>&quot;=&quot;</tt> or <tt>&quot;.=&quot;</tt>, into a single action. For example, apart from retrieving <tt>$s</tt>, <tt>$a</tt> and <tt>$b</tt>, this whole expression is now handled as a single op: </dd>
 <pre>
     $s .= &quot;a=$a b=$b
 &quot;
@@ -213,3 +213,4 @@ description: "perl5280delta – what is new for perl v5.28.0"
 <p> In general, the more the expression includes a mix of constant strings and variable expressions, the longer the expression, and the more it mixes together non-utf8 and utf8 strings, the more marked the performance improvement. For example on a <tt>&quot;x86_64&quot;</tt> system, this code has been benchmarked running four times faster: </p>
 <p>my $s;<br />
 my $a = &#8220;ab
+</p></dl>

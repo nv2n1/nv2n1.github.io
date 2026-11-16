@@ -14,23 +14,23 @@ description: "iscsi_create_session – create iscsi class session"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>scsi host</dl>
+</dd><dd>scsi host</dd></dl>
 <p> <i>transport</i></p>
 <dl>
-<dd>iscsi transport</dl>
+<dd>iscsi transport</dd></dl>
 <p> <i>dd_size</i></p>
 <dl>
-<dd>private driver data size</dl>
+<dd>private driver data size</dd></dl>
 <p> <i>target_id</i></p>
 <dl>
-<dd>which target</dl>
+<dd>which target</dd></dl>
 <h2>Description</h2>
 <p>This can be called from a LLD or iscsi_transport.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

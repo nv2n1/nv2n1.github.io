@@ -14,25 +14,25 @@ description: "nand_check_erased_ecc_chunk – check if an ECC chunk contains (al
 <p><i>data</i></p>
 <dl>
 <dd>
-<dd>data buffer to test</dl>
+</dd><dd>data buffer to test</dd></dl>
 <p> <i>datalen</i></p>
 <dl>
-<dd>data length</dl>
+<dd>data length</dd></dl>
 <p> <i>ecc</i></p>
 <dl>
-<dd>ECC buffer</dl>
+<dd>ECC buffer</dd></dl>
 <p> <i>ecclen</i></p>
 <dl>
-<dd>ECC length</dl>
+<dd>ECC length</dd></dl>
 <p> <i>extraoob</i></p>
 <dl>
-<dd>extra OOB buffer</dl>
+<dd>extra OOB buffer</dd></dl>
 <p> <i>extraooblen</i></p>
 <dl>
-<dd>extra OOB length</dl>
+<dd>extra OOB length</dd></dl>
 <p> <i>bitflips_threshold</i></p>
 <dl>
-<dd>maximum number of bitflips</dl>
+<dd>maximum number of bitflips</dd></dl>
 <h2>Description</h2>
 <p>Check if a data buffer and its associated ECC and OOB data contains only 0xff pattern, which means the underlying region has been erased and is ready to be programmed. The bitflips_threshold specify the maximum number of bitflips before considering the region as not erased.</p>
 <h2>Note</h2>
@@ -41,5 +41,5 @@ description: "nand_check_erased_ecc_chunk – check if an ECC chunk contains (al
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

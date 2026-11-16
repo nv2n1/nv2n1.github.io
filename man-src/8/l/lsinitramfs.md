@@ -15,10 +15,10 @@ description: "lsinitramfs – list content of an initramfs image"
 <p>The <code>lsinitramfs</code> command lists the content of given initramfs images. It allows one to quickly check the content of one (or multiple) specified initramfs files. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Display usage information and exit. </p>
-<dt><code>-l</code></p>
-<dd>Display long and more verbose listing of initramfs content. </p>
+<dt><code>-h</code></dt>
+<dd>Display usage information and exit. </dd>
+<dt><code>-l</code></dt>
+<dd>Display long and more verbose listing of initramfs content. </dd>
 </dl>
 <h2>Usage Examples</h2>
 <p>List initramfs content of current running kernel: </p>

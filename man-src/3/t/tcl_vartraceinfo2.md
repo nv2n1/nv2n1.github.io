@@ -22,35 +22,35 @@ ClientData
 <code>Tcl_VarTraceInfo2(</code><i>interp, name1, name2, flags, proc, prevClientData</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter containing variable.</p>
-<dd>const char <i>*varName</i> (in) Name of variable. May refer to a scalar variable, to an array variable with no index, or to an array variable with a parenthesized index.</p>
-<dd>int <i>flags</i> (in) OR-ed combination of the values <code>TCL_TRACE_READS</code>, <code>TCL_TRACE_WRITES</code>, <code>TCL_TRACE_UNSETS</code>, <code>TCL_TRACE_ARRAY</code>, <code>TCL_GLOBAL_ONLY</code>, <code>TCL_NAMESPACE_ONLY</code>, <code>TCL_TRACE_RESULT_DYNAMIC</code> and <code>TCL_TRACE_RESULT_OBJECT</code>. Not all flags are used by all procedures. See below for more information.</p>
-<dd>Tcl_VarTraceProc <i>*proc</i> (in) Procedure to invoke whenever one of the traced operations occurs.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>.</p>
-<dd>const char <i>*name1</i> (in) Name of scalar or array variable (without array index).</p>
-<dd>const char <i>*name2</i> (in) For a trace on an element of an array, gives the index of the element. For traces on scalar variables or on whole arrays, is NULL.</p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter containing variable.</dd>
+<dd>const char <i>*varName</i> (in) Name of variable. May refer to a scalar variable, to an array variable with no index, or to an array variable with a parenthesized index.</dd>
+<dd>int <i>flags</i> (in) OR-ed combination of the values <code>TCL_TRACE_READS</code>, <code>TCL_TRACE_WRITES</code>, <code>TCL_TRACE_UNSETS</code>, <code>TCL_TRACE_ARRAY</code>, <code>TCL_GLOBAL_ONLY</code>, <code>TCL_NAMESPACE_ONLY</code>, <code>TCL_TRACE_RESULT_DYNAMIC</code> and <code>TCL_TRACE_RESULT_OBJECT</code>. Not all flags are used by all procedures. See below for more information.</dd>
+<dd>Tcl_VarTraceProc <i>*proc</i> (in) Procedure to invoke whenever one of the traced operations occurs.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>.</dd>
+<dd>const char <i>*name1</i> (in) Name of scalar or array variable (without array index).</dd>
+<dd>const char <i>*name2</i> (in) For a trace on an element of an array, gives the index of the element. For traces on scalar variables or on whole arrays, is NULL.</dd>
 <dd>ClientData <i>prevClientData</i> (in) If non-NULL, gives last value returned by <code>Tcl_VarTraceInfo</code> or <code>Tcl_VarTraceInfo2</code>, so this call will return information about next trace. If NULL, this call will return information about first trace.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p><code>Tcl_TraceVar</code> allows a C procedure to monitor and control access to a Tcl variable, so that the C procedure is invoked whenever the variable is read or written or unset. If the trace is created successfully then <code>Tcl_TraceVar</code> returns <code>TCL_OK</code>. If an error occurred (e.g. <i>varName</i> specifies an element of an array, but the actual variable is not an array) then <code>TCL_ERROR</code> is returned and an error message is left in the interpreter&#8217;s result. </p>
 <p> The <i>flags</i> argument to <code>Tcl_TraceVar</code> indicates when the trace procedure is to be invoked and provides information for setting up the trace. It consists of an OR-ed combination of any of the following values:</p>
 <dl COMPACT>
-<dt><code>TCL_GLOBAL_ONLY</code></p>
-<dd>Normally, the variable will be looked up at the current level of procedure call; if this bit is set then the variable will be looked up at global level, ignoring any active procedures.</p>
-<dt><code>TCL_NAMESPACE_ONLY</code></p>
-<dd>Normally, the variable will be looked up at the current level of procedure call; if this bit is set then the variable will be looked up in the current namespace, ignoring any active procedures.</p>
-<dt><code>TCL_TRACE_READS</code></p>
-<dd>Invoke <i>proc</i> whenever an attempt is made to read the variable.</p>
-<dt><code>TCL_TRACE_WRITES</code></p>
-<dd>Invoke <i>proc</i> whenever an attempt is made to modify the variable.</p>
-<dt><code>TCL_TRACE_UNSETS</code></p>
-<dd>Invoke <i>proc</i> whenever the variable is unset. A variable may be unset either explicitly by an <code>unset</code> command, or implicitly when a procedure returns (its local variables are automatically unset) or when the interpreter is deleted (all variables are automatically unset).</p>
-<dt><code>TCL_TRACE_ARRAY</code></p>
-<dd>Invoke <i>proc</i> whenever the array command is invoked. This gives the trace procedure a chance to update the array before array names or array get is called. Note that this is called before an array set, but that will trigger write traces.</p>
-<dt><code>TCL_TRACE_RESULT_DYNAMIC</code></p>
-<dd>The result of invoking the <i>proc</i> is a dynamically allocated string that will be released by the Tcl library via a call to <code>ckfree</code>. Must not be specified at the same time as <code>TCL_TRACE_RESULT_OBJECT</code>.</p>
-<dt><code>TCL_TRACE_RESULT_OBJECT</code></p>
-<dd>The result of invoking the <i>proc</i> is a Tcl_Obj* (cast to a char*) with a reference count of at least one. The ownership of that reference will be transferred to the Tcl core for release (when the core has finished with it) via a call to <code>Tcl_DecrRefCount</code>. Must not be specified at the same time as <code>TCL_TRACE_RESULT_DYNAMIC</code>.</dl>
+<dt><code>TCL_GLOBAL_ONLY</code></dt>
+<dd>Normally, the variable will be looked up at the current level of procedure call; if this bit is set then the variable will be looked up at global level, ignoring any active procedures.</dd>
+<dt><code>TCL_NAMESPACE_ONLY</code></dt>
+<dd>Normally, the variable will be looked up at the current level of procedure call; if this bit is set then the variable will be looked up in the current namespace, ignoring any active procedures.</dd>
+<dt><code>TCL_TRACE_READS</code></dt>
+<dd>Invoke <i>proc</i> whenever an attempt is made to read the variable.</dd>
+<dt><code>TCL_TRACE_WRITES</code></dt>
+<dd>Invoke <i>proc</i> whenever an attempt is made to modify the variable.</dd>
+<dt><code>TCL_TRACE_UNSETS</code></dt>
+<dd>Invoke <i>proc</i> whenever the variable is unset. A variable may be unset either explicitly by an <code>unset</code> command, or implicitly when a procedure returns (its local variables are automatically unset) or when the interpreter is deleted (all variables are automatically unset).</dd>
+<dt><code>TCL_TRACE_ARRAY</code></dt>
+<dd>Invoke <i>proc</i> whenever the array command is invoked. This gives the trace procedure a chance to update the array before array names or array get is called. Note that this is called before an array set, but that will trigger write traces.</dd>
+<dt><code>TCL_TRACE_RESULT_DYNAMIC</code></dt>
+<dd>The result of invoking the <i>proc</i> is a dynamically allocated string that will be released by the Tcl library via a call to <code>ckfree</code>. Must not be specified at the same time as <code>TCL_TRACE_RESULT_OBJECT</code>.</dd>
+<dt><code>TCL_TRACE_RESULT_OBJECT</code></dt>
+<dd>The result of invoking the <i>proc</i> is a Tcl_Obj* (cast to a char*) with a reference count of at least one. The ownership of that reference will be transferred to the Tcl core for release (when the core has finished with it) via a call to <code>Tcl_DecrRefCount</code>. Must not be specified at the same time as <code>TCL_TRACE_RESULT_DYNAMIC</code>.</dd></dl>
 <p> Whenever one of the specified operations occurs on the variable, <i>proc</i> will be invoked. It should have arguments and result that match the type <code>Tcl_VarTraceProc</code>:</p>
 <dl COMPACT>
 <dd>
@@ -60,7 +60,7 @@ ClientData
  char *<i>name1</i>,
  char *<i>name2</i>,
  int <i>flags</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> and <i>interp</i> parameters will have the same values as those passed to <code>Tcl_TraceVar</code> when the trace was created. <i>ClientData</i> typically points to an application-specific data structure that describes what to do when <i>proc</i> is invoked. <i>Name1</i> and <i>name2</i> give the name of the traced variable in the normal two-part form (see the description of <code>Tcl_TraceVar2</code> below for details). <i>Flags</i> is an OR-ed combination of bits providing several pieces of information. One of the bits <code>TCL_TRACE_READS</code>, <code>TCL_TRACE_WRITES</code>, <code>TCL_TRACE_ARRAY</code>, or <code>TCL_TRACE_UNSETS</code> will be set in <i>flags</i> to indicate which operation is being performed on the variable. The bit <code>TCL_GLOBAL_ONLY</code> will be set whenever the variable being accessed is a global one not accessible from the current level of procedure call: the trace procedure will need to pass this flag back to variable-related procedures like <code>Tcl_GetVar</code> if it attempts to access the variable. The bit <code>TCL_NAMESPACE_ONLY</code> will be set whenever the variable being accessed is a namespace one not accessible from the current level of procedure call: the trace procedure will need to pass this flag back to variable-related procedures like <code>Tcl_GetVar</code> if it attempts to access the variable. The bit <code>TCL_TRACE_DESTROYED</code> will be set in <i>flags</i> if the trace is about to be destroyed; this information may be useful to <i>proc</i> so that it can clean up its own internal data structures (see the section <code>TCL_TRACE_DESTROYED</code> below for more details). Lastly, the bit <code>TCL_INTERP_DESTROYED</code> will be set if the entire interpreter is being destroyed. When this bit is set, <i>proc</i> must be especially careful in the things it does (see the section <code>TCL_INTERP_DESTROYED</code> below). The trace procedure&#8217;s return value should normally be NULL; see <code>ERROR RETURNS</code> below for information on other possibilities. </p>
 <p> <code>Tcl_UntraceVar</code> may be used to remove a trace. If the variable specified by <i>interp</i>, <i>varName</i>, and <i>flags</i> has a trace set with <i>flags</i>, <i>proc</i>, and <i>clientData</i>, then the corresponding trace is removed. If no such trace exists, then the call to <code>Tcl_UntraceVar</code> has no effect. The same bits are valid for <i>flags</i> as for calls to <code>Tcl_TraceVar</code>. </p>
 <p> <code>Tcl_VarTraceInfo</code> may be used to retrieve information about traces set on a given variable. The return value from <code>Tcl_VarTraceInfo</code> is the <i>clientData</i> associated with a particular trace. The trace must be on the variable specified by the <i>interp</i>, <i>varName</i>, and <i>flags</i> arguments (only the <code>TCL_GLOBAL_ONLY</code> and <code>TCL_NAMESPACE_ONLY</code> bits from <i>flags</i> is used; other bits are ignored) and its trace procedure must the same as the <i>proc</i> argument. If the <i>prevClientData</i> argument is NULL then the return value corresponds to the first (most recently created) matching trace, or NULL if there are no matching traces. If the <i>prevClientData</i> argument is not NULL, then it should be the return value from a previous call to <code>Tcl_VarTraceInfo</code>. In this case, the new return value will correspond to the next matching trace after the one whose <i>clientData</i> matches <i>prevClientData</i>, or NULL if no trace matches <i>prevClientData</i> or if there are no more matching traces after it. This mechanism makes it possible to step through all of the traces for a given variable that have the same <i>proc</i>.</p>

@@ -13,7 +13,6 @@ description: "cdk_menu – curses menu widget"
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
-
 int activateCDKMenu(
     CDKMENU *menu,
     chtype *actions);
@@ -84,78 +83,74 @@ void setCDKMenuTitleHighlight(
 <p> The Cdk menu widget creates a pull-down menu list. The following are functions which create or manipulate the Cdk menu widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>
-<dt><code>activateCDKMenu</code></p>
-<dd> activates the menu widget and lets the user interact with the widget. The parameter <code>menu</code> is a pointer to a non-NULL menu widget. If the <code>actions</code> parameter is passed with a non-NULL value, the characters in the array will be injected into the widget. To activate the widget interactively pass in a <i>NULL</i> pointer for <code>actions</code>. If the character entered into this widget is <i>RETURN</i> then this then this function returns an integer which is a value of the current menu list * 100 + the sub-menu number. It will also set the widget data <i>exitType</i> to <i>vNORMAL</i>. If the character entered into this widget was <i>ESCAPE</i> then the widget will return a value of -1 and the widget data <i>exitType</i> will be set to <i>vESCAPE_HIT</i>.</p>
-<dt><code>destroyCDKMenu</code></p>
-<dd> removes the widget from the screen and frees memory the object used.</p>
-<dt><code>drawCDKMenu</code></p>
-<dd> draws the menu widget on the screen. If the <code>box</code> parameter is true, the widget is drawn with a box.</p>
-<dt><code>drawCDKMenuSubwin</code></p>
-<dd> draws the menu item subwindow.</p>
-<dt><code>eraseCDKMenu</code></p>
-<dd> removes the widget from the screen. This does <i>NOT</i> destroy the widget.</p>
-<dt><code>eraseCDKMenuSubwin</code></p>
-<dd> erases the menu item subwindow.</p>
-<dt><code>getCDKMenuCurrentItem</code></p>
-<dd> returns the values <code>menuItem</code> and <code>submenuItem</code> to the current menu selection.</p>
-<dt><code>getCDKMenuSubTitleHighlight</code></p>
-<dd> returns the highlight attribute of the sub-menu selection bar.</p>
-<dt><code>getCDKMenuTitleHighlight</code></p>
-<dd> returns the highlight attributes of the menu title.</p>
-<dt><code>injectCDKMenu</code></p>
-<dd> injects a single character into the widget. The parameter <code>menu</code> is a pointer to a non-NULL menu widget. The parameter <code>character</code> is the character to inject into the widget. The return value and side-effect (setting the widget data <i>exitType</i>) depend upon the injected character:</p>
+<dt><code>activateCDKMenu</code></dt>
+<dd> activates the menu widget and lets the user interact with the widget. The parameter <code>menu</code> is a pointer to a non-NULL menu widget. If the <code>actions</code> parameter is passed with a non-NULL value, the characters in the array will be injected into the widget. To activate the widget interactively pass in a <i>NULL</i> pointer for <code>actions</code>. If the character entered into this widget is <i>RETURN</i> then this then this function returns an integer which is a value of the current menu list * 100 + the sub-menu number. It will also set the widget data <i>exitType</i> to <i>vNORMAL</i>. If the character entered into this widget was <i>ESCAPE</i> then the widget will return a value of -1 and the widget data <i>exitType</i> will be set to <i>vESCAPE_HIT</i>.</dd>
+<dt><code>destroyCDKMenu</code></dt>
+<dd> removes the widget from the screen and frees memory the object used.</dd>
+<dt><code>drawCDKMenu</code></dt>
+<dd> draws the menu widget on the screen. If the <code>box</code> parameter is true, the widget is drawn with a box.</dd>
+<dt><code>drawCDKMenuSubwin</code></dt>
+<dd> draws the menu item subwindow.</dd>
+<dt><code>eraseCDKMenu</code></dt>
+<dd> removes the widget from the screen. This does <i>NOT</i> destroy the widget.</dd>
+<dt><code>eraseCDKMenuSubwin</code></dt>
+<dd> erases the menu item subwindow.</dd>
+<dt><code>getCDKMenuCurrentItem</code></dt>
+<dd> returns the values <code>menuItem</code> and <code>submenuItem</code> to the current menu selection.</dd>
+<dt><code>getCDKMenuSubTitleHighlight</code></dt>
+<dd> returns the highlight attribute of the sub-menu selection bar.</dd>
+<dt><code>getCDKMenuTitleHighlight</code></dt>
+<dd> returns the highlight attributes of the menu title.</dd>
+<dt><code>injectCDKMenu</code></dt>
+<dd> injects a single character into the widget. The parameter <code>menu</code> is a pointer to a non-NULL menu widget. The parameter <code>character</code> is the character to inject into the widget. The return value and side-effect (setting the widget data <i>exitType</i>) depend upon the injected character:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>RETURN</i> or <i>TAB</i></p>
-<dd> the function returns the current menu list * 100 + the sub-menu number. The widget data <i>exitType</i> is set to <i>vNORMAL</i>.</p>
-<dt><i>ESCAPE</i></p>
-<dd> the function returns -1. to <i>vESCAPE_HIT</i>. The widget data <i>exitType</i> is set to <i>vESCAPE_HIT</i>.</p>
-<dt>Otherwise</p>
-<dd> unless modified by preprocessing, postprocessing or key bindings, the function returns -1. The widget data <i>exitType</i> is set to <i>vEARLY_EXIT</i>.</dl>
+<dt><i>RETURN</i> or <i>TAB</i></dt>
+<dd> the function returns the current menu list * 100 + the sub-menu number. The widget data <i>exitType</i> is set to <i>vNORMAL</i>.</dd>
+<dt><i>ESCAPE</i></dt>
+<dd> the function returns -1. to <i>vESCAPE_HIT</i>. The widget data <i>exitType</i> is set to <i>vESCAPE_HIT</i>.</dd>
+<dt>Otherwise</dt>
+<dd> unless modified by preprocessing, postprocessing or key bindings, the function returns -1. The widget data <i>exitType</i> is set to <i>vEARLY_EXIT</i>.</dd></dl>
 </dl>
-<dt><code>newCDKMenu</code></p>
-<dd> creates a menu widget and returns a pointer to it. Parameters:</p>
+<dt><code>newCDKMenu</code></dt>
+<dd> creates a menu widget and returns a pointer to it. Parameters:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>screen</code></p>
-<dd> is the screen you wish this widget to be placed in.</p>
-<dt><code>menuList</code></p>
-<dd> is a list of the menu list titles.</p>
-<dt><code>menuListLength</code></p>
-<dd> is the number of pull down menus.</p>
-<dt><code>submenuListLength</code></p>
-<dd> is the number of menu items under each menu list.</p>
-<dt><code>menuLocation</code></p>
-<dd> tells where each menu is to be located. Valid values are <i>LEFT</i> and <i>RIGHT</i>.</p>
-<dt><code>menuPos</code></p>
-<dd> tells whether the menu is to be on the top of the screen or the bottom. Valid values are <i>TOP</i> and <i>BOTTOM</i>.</p>
-<dt><code>titleAttribute</code> and</p>
+<dt><code>screen</code></dt>
+<dd> is the screen you wish this widget to be placed in.</dd>
+<dt><code>menuList</code></dt>
+<dd> is a list of the menu list titles.</dd>
+<dt><code>menuListLength</code></dt>
+<dd> is the number of pull down menus.</dd>
+<dt><code>submenuListLength</code></dt>
+<dd> is the number of menu items under each menu list.</dd>
+<dt><code>menuLocation</code></dt>
+<dd> tells where each menu is to be located. Valid values are <i>LEFT</i> and <i>RIGHT</i>.</dd>
+<dt><code>menuPos</code></dt>
+<dd> tells whether the menu is to be on the top of the screen or the bottom. Valid values are <i>TOP</i> and <i>BOTTOM</i>.</dd>
+<dt><code>titleAttribute</code> and</dt>
 <dd>
-<dt><code>subtitleAttribute</code></p>
-<dd> are the character attributes of the title and sub-titles respectively.</dl>
+</dd><dt><code>subtitleAttribute</code></dt>
+<dd> are the character attributes of the title and sub-titles respectively.</dd></dl>
 </dl>
 <dt>
-<dd> If the widget could not be created then a <i>NULL</i> pointer is returned.</p>
-<dt><code>setCDKMenu</code></p>
-<dd> lets the programmer modify certain elements of an existing menu widget. The parameters <code>menuItem</code> and <code>submenuItem</code> set which menu list and sub-menu item are going to be highlighted when the widget is activated. The other parameter names correspond to the same parameter names listed in the <code>newCDKMenu</code> function.</p>
-<dt><code>setCDKMenuBackgroundAttrib</code></p>
-<dd> sets the background attribute of the widget. The parameter <code>attribute</code> is a curses attribute, e.g., A_BOLD.</p>
-<dt><code>setCDKMenuBackgroundColor</code></p>
-<dd> sets the background color of the widget. The parameter <code>color</code> is in the format of the Cdk format strings. See <code>cdk_display (3)</code>.</p>
-<dt><code>setCDKMenuCurrentItem</code></p>
-<dd> sets the current item in the menu widget.</p>
-<dt><code>setCDKMenuPostProcess</code></p>
-<dd> allows the user to have the widget call a function after the key has been applied to the widget. The parameter <code>function</code> is the callback function. The parameter <code>data</code> points to data passed to the callback function. To learn more about post-processing see <i>cdk_process (3)</i>.</p>
-<dt><code>setCDKMenuPreProcess</code></p>
-<dd> allows the user to have the widget call a function after a key is hit and before the key is applied to the widget. The parameter <code>function</code> is the callback function. The parameter <code>data</code> points to data passed to the callback function. To learn more about pre-processing see <i>cdk_process (3)</i>.</p>
-<dt><code>setCDKMenuSubTitleHighlight</code></p>
-<dd> sets the highlight attribute of the sub-menu selection bar.</p>
-<dt><code>setCDKMenuTitleHighlight</code></p>
-<dd> sets the highlight attributes of the menu title.</dl>
+</dt><dd> If the widget could not be created then a <i>NULL</i> pointer is returned.</dd>
+<dt><code>setCDKMenu</code></dt>
+<dd> lets the programmer modify certain elements of an existing menu widget. The parameters <code>menuItem</code> and <code>submenuItem</code> set which menu list and sub-menu item are going to be highlighted when the widget is activated. The other parameter names correspond to the same parameter names listed in the <code>newCDKMenu</code> function.</dd>
+<dt><code>setCDKMenuBackgroundAttrib</code></dt>
+<dd> sets the background attribute of the widget. The parameter <code>attribute</code> is a curses attribute, e.g., A_BOLD.</dd>
+<dt><code>setCDKMenuBackgroundColor</code></dt>
+<dd> sets the background color of the widget. The parameter <code>color</code> is in the format of the Cdk format strings. See <code>cdk_display (3)</code>.</dd>
+<dt><code>setCDKMenuCurrentItem</code></dt>
+<dd> sets the current item in the menu widget.</dd>
+<dt><code>setCDKMenuPostProcess</code></dt>
+<dd> allows the user to have the widget call a function after the key has been applied to the widget. The parameter <code>function</code> is the callback function. The parameter <code>data</code> points to data passed to the callback function. To learn more about post-processing see <i>cdk_process (3)</i>.</dd>
+<dt><code>setCDKMenuPreProcess</code></dt>
+<dd> allows the user to have the widget call a function after a key is hit and before the key is applied to the widget. The parameter <code>function</code> is the callback function. The parameter <code>data</code> points to data passed to the callback function. To learn more about pre-processing see <i>cdk_process (3)</i>.</dd>
+<dt><code>setCDKMenuSubTitleHighlight</code></dt>
+<dd> sets the highlight attribute of the sub-menu selection bar.</dd>
+<dt><code>setCDKMenuTitleHighlight</code></dt>
+<dd> sets the highlight attributes of the menu title.</dd></dl>
 <h2>KEY BINDINGS</h2>
 <p> When the widget is activated there are several default key bindings which will help the user enter or manipulate the information quickly. The following table outlines the keys and their actions for this widget. </p>
 <p> <center></p>

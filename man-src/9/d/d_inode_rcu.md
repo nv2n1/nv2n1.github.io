@@ -14,7 +14,7 @@ description: "d_inode_rcu – Get the actual inode of this dentry with ACCESS_ON
 <p><i>dentry</i></p>
 <dl>
 <dd>
-<dd>The dentry to query</dl>
+</dd><dd>The dentry to query</dd></dl>
 <h2>Description</h2>
 <p>This is the helper normal filesystems should use to get at their own inodes in their own dentries and ignore the layering superimposed upon them.</p>
 <h2>Copyright</h2>

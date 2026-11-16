@@ -24,44 +24,44 @@ description: "hx509 error functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context.</dl>
+</dt><dd> <i>context</i> A hx509 context.</dd></dl>
 <h3>void hx509_err (hx509_contextcontext, intexit_code, interror_code, const char *fmt, &#8230;)</h3>
 <p> Print error message and fatally exit from error code </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br />
  <i>exit_code</i> exit() code from process.<br />
  <i>error_code</i> Error code for the reason to exit.<br />
  <i>fmt</i> format string with the exit message.<br />
- <i>&#8230;</i> argument to format string.</dl>
+ <i>&#8230;</i> argument to format string.</dd></dl>
 <h3>void hx509_free_error_string (char *str)</h3>
 <p> Free error string returned by <code>hx509_get_error_string()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>str</i> error string to free.</dl>
+</dt><dd> <i>str</i> error string to free.</dd></dl>
 <h3>char * hx509_get_error_string (hx509_contextcontext, interror_code)</h3>
 <p> Get an error string from context associated with error_code. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context.<br />
- <i>error_code</i> Get error message for this error code.</dl>
+</dt><dd> <i>context</i> A hx509 context.<br />
+ <i>error_code</i> Get error message for this error code.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> error string, free with <code>hx509_free_error_string()</code>.</dl>
+</dt><dd> error string, free with <code>hx509_free_error_string()</code>.</dd></dl>
 <h3>void hx509_set_error_string (hx509_contextcontext, intflags, intcode, const char *fmt, &#8230;)</h3>
 <p> See <code>hx509_set_error_stringv()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context.<br />
- <i>flags</i></p>
+</dt><dd> <i>context</i> A hx509 context.<br />
+ <i>flags</i></dd>
 <dl>
-<dt>&bull;</p>
-<dd> HX509_ERROR_APPEND appends the error string to the old messages (code is updated).</dl>
+<dt>&bull;</dt>
+<dd> HX509_ERROR_APPEND appends the error string to the old messages (code is updated).</dd></dl>
 <p> <i>code</i> error code related to error message<br />
  <i>fmt</i> error message format<br />
  <i>&#8230;</i> arguments to error message format</dl>
@@ -70,14 +70,15 @@ description: "hx509 error functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context.<br />
- <i>flags</i></p>
+</dt><dd> <i>context</i> A hx509 context.<br />
+ <i>flags</i></dd>
 <dl>
-<dt>&bull;</p>
-<dd> HX509_ERROR_APPEND appends the error string to the old messages (code is updated).</dl>
+<dt>&bull;</dt>
+<dd> HX509_ERROR_APPEND appends the error string to the old messages (code is updated).</dd></dl>
 <p> <i>code</i> error code related to error message<br />
  <i>fmt</i> error message format<br />
  <i>ap</i> arguments to error message format</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
 <h2>Index</h2>
+</p>

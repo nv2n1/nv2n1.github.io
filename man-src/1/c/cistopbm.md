@@ -16,18 +16,18 @@ description: "cistopbm – convert Compuserve RLE image to PBM"
 <p> <code>cistopbm</code> reads a Compuserve RLE file as input. and produces a PBM image as output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd> Inverse: Reverse the mapping of foreground/background to black/white. </p>
+<dt><code>-i</code></dt>
+<dd> Inverse: Reverse the mapping of foreground/background to black/white. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-pbmtocis/">pbmtocis</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code>pbm</code>(1) CompuServe RLE file format </p>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> <code>cistopbm</code> was new in Netpbm 10.48 (September 2009). </p>
 <h2>AUTHOR</h2>

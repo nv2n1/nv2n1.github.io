@@ -18,6 +18,6 @@ description: "systemd-backlight [at] .service, systemd-backlight – Load and sa
 <p>systemd-backlight understands the following kernel command line parameter: </p>
 <p> <i>systemd.restore_state=</i></p>
 <dl>
-<dd>Takes a boolean argument. Defaults to &quot;1&quot;. If &quot;0&quot;, does not restore the backlight settings on boot. However, settings will still be stored on shutdown.</dl>
+<dd>Takes a boolean argument. Defaults to &quot;1&quot;. If &quot;0&quot;, does not restore the backlight settings on boot. However, settings will still be stored on shutdown.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) </p>

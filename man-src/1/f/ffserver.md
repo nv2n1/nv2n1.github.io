@@ -59,11 +59,9 @@ _________ __________ | | | |
                     \ | | | |
                      \| feed 2 | -- -- - | stream 3 |
     | _________ | | __________ |
-
     _________ __________ | | | |
     ffmpeg 2 -- -- - | feed 3 | -- -- - | stream 4 |
     | _________ | | __________ |
-
     _________ __________ | | | |
     | file 1 | -- -- - | stream 5 |
     | _________ | | __________ |
@@ -79,7 +77,6 @@ _________ __________ | | | |
 <pre>
         &lt;Stream status.html&gt;
         Format status
-        
         # Only allow local people to get the status
         ACL allow localhost
         ACL allow 192.168.0.0 192.168.255.255
@@ -129,145 +126,138 @@ _________ __________ | | | |
 <p> An empty stream specifier matches all streams. For example, <tt>&quot;-codec copy&quot;</tt> or <tt>&quot;-codec: copy&quot;</tt> would copy all the streams without reencoding. </p>
 <p> Possible forms of stream specifiers are:</p>
 <dl>
-<dt><i>stream_index</i></p>
-<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4.</p>
-<dt><i>stream_type</i><code>[:</code><i>stream_index</i><code>]</code></p>
-<dd> <i>stream_type</i> is one of following: &#8216;v&#8217; or &#8216;V&#8217; for video, &#8216;a&#8217; for audio, &#8216;s&#8217; for subtitle, &#8216;d&#8217; for data, and &#8216;t&#8217; for attachments. &#8216;v&#8217; matches all video streams, &#8216;V&#8217; only matches video streams which are not attached pictures, video thumbnails or cover arts. If <i>stream_index</i> is given, then it matches stream number <i>stream_index</i> of this type. Otherwise, it matches all streams of this type.</p>
-<dt><code>p:</code><i>program_id</i><code>[:</code><i>stream_index</i><code>]</code></p>
-<dd> If <i>stream_index</i> is given, then it matches the stream with number <i>stream_index</i> in the program with the id <i>program_id</i>. Otherwise, it matches all streams in the program.</p>
-<dt><code>#</code><i>stream_id</i> <code>or i:</code><i>stream_id</i></p>
-<dd> Match the stream by stream id (e.g. <font SIZE="-1">PID</font> in MPEG-TS container).</p>
-<dt><code>m:</code><i>key</i><code>[:</code><i>value</i><code>]</code></p>
-<dd> Matches streams with the metadata tag <i>key</i> having the specified value. If <i>value</i> is not given, matches streams that contain the given tag with any value.</p>
-<dt><code>u</code></p>
-<dd> Matches streams with usable configuration, the codec must be defined and the essential information such as video dimension or audio sample rate must be present. </p>
+<dt><i>stream_index</i></dt>
+<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4.</dd>
+<dt><i>stream_type</i><code>[:</code><i>stream_index</i><code>]</code></dt>
+<dd> <i>stream_type</i> is one of following: &#8216;v&#8217; or &#8216;V&#8217; for video, &#8216;a&#8217; for audio, &#8216;s&#8217; for subtitle, &#8216;d&#8217; for data, and &#8216;t&#8217; for attachments. &#8216;v&#8217; matches all video streams, &#8216;V&#8217; only matches video streams which are not attached pictures, video thumbnails or cover arts. If <i>stream_index</i> is given, then it matches stream number <i>stream_index</i> of this type. Otherwise, it matches all streams of this type.</dd>
+<dt><code>p:</code><i>program_id</i><code>[:</code><i>stream_index</i><code>]</code></dt>
+<dd> If <i>stream_index</i> is given, then it matches the stream with number <i>stream_index</i> in the program with the id <i>program_id</i>. Otherwise, it matches all streams in the program.</dd>
+<dt><code>#</code><i>stream_id</i> <code>or i:</code><i>stream_id</i></dt>
+<dd> Match the stream by stream id (e.g. <font SIZE="-1">PID</font> in MPEG-TS container).</dd>
+<dt><code>m:</code><i>key</i><code>[:</code><i>value</i><code>]</code></dt>
+<dd> Matches streams with the metadata tag <i>key</i> having the specified value. If <i>value</i> is not given, matches streams that contain the given tag with any value.</dd>
+<dt><code>u</code></dt>
+<dd> Matches streams with usable configuration, the codec must be defined and the essential information such as video dimension or audio sample rate must be present. </dd>
 <p> Note that in <code>ffmpeg</code>, matching by metadata will only work properly for input files.</dl>
 <h3>Generic options</h3>
 <p> These options are shared amongst the ff* tools.</p>
 <dl>
-<dt><code>-L</code></p>
-<dd> Show license.</p>
-<dt><code>-h, -?, -help, &#8211;help [</code><i>arg</i><code>]</code></p>
-<dd> Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown. </p>
+<dt><code>-L</code></dt>
+<dd> Show license.</dd>
+<dt><code>-h, -?, -help, &#8211;help [</code><i>arg</i><code>]</code></dt>
+<dd> Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown. </dd>
 <p> Possible values of <i>arg</i> are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>long</code></p>
-<dd> Print advanced tool options in addition to the basic tool options.</p>
-<dt><code>full</code></p>
-<dd> Print complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.</p>
-<dt><code>decoder=</code><i>decoder_name</i></p>
-<dd> Print detailed information about the decoder named <i>decoder_name</i>. Use the <code>-decoders</code> option to get a list of all decoders.</p>
-<dt><code>encoder=</code><i>encoder_name</i></p>
-<dd> Print detailed information about the encoder named <i>encoder_name</i>. Use the <code>-encoders</code> option to get a list of all encoders.</p>
-<dt><code>demuxer=</code><i>demuxer_name</i></p>
-<dd> Print detailed information about the demuxer named <i>demuxer_name</i>. Use the <code>-formats</code> option to get a list of all demuxers and muxers.</p>
-<dt><code>muxer=</code><i>muxer_name</i></p>
-<dd> Print detailed information about the muxer named <i>muxer_name</i>. Use the <code>-formats</code> option to get a list of all muxers and demuxers.</p>
-<dt><code>filter=</code><i>filter_name</i></p>
-<dd> Print detailed information about the filter name <i>filter_name</i>. Use the <code>-filters</code> option to get a list of all filters.</dl>
+<dt><code>long</code></dt>
+<dd> Print advanced tool options in addition to the basic tool options.</dd>
+<dt><code>full</code></dt>
+<dd> Print complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.</dd>
+<dt><code>decoder=</code><i>decoder_name</i></dt>
+<dd> Print detailed information about the decoder named <i>decoder_name</i>. Use the <code>-decoders</code> option to get a list of all decoders.</dd>
+<dt><code>encoder=</code><i>encoder_name</i></dt>
+<dd> Print detailed information about the encoder named <i>encoder_name</i>. Use the <code>-encoders</code> option to get a list of all encoders.</dd>
+<dt><code>demuxer=</code><i>demuxer_name</i></dt>
+<dd> Print detailed information about the demuxer named <i>demuxer_name</i>. Use the <code>-formats</code> option to get a list of all demuxers and muxers.</dd>
+<dt><code>muxer=</code><i>muxer_name</i></dt>
+<dd> Print detailed information about the muxer named <i>muxer_name</i>. Use the <code>-formats</code> option to get a list of all muxers and demuxers.</dd>
+<dt><code>filter=</code><i>filter_name</i></dt>
+<dd> Print detailed information about the filter name <i>filter_name</i>. Use the <code>-filters</code> option to get a list of all filters.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-version</code></p>
-<dd> Show version.</p>
-<dt><code>-formats</code></p>
-<dd> Show available formats (including devices).</p>
-<dt><code>-demuxers</code></p>
-<dd> Show available demuxers.</p>
-<dt><code>-muxers</code></p>
-<dd> Show available muxers.</p>
-<dt><code>-devices</code></p>
-<dd> Show available devices.</p>
-<dt><code>-codecs</code></p>
-<dd> Show all codecs known to libavcodec. </p>
+</dl>
+<dt><code>-version</code></dt>
+<dd> Show version.</dd>
+<dt><code>-formats</code></dt>
+<dd> Show available formats (including devices).</dd>
+<dt><code>-demuxers</code></dt>
+<dd> Show available demuxers.</dd>
+<dt><code>-muxers</code></dt>
+<dd> Show available muxers.</dd>
+<dt><code>-devices</code></dt>
+<dd> Show available devices.</dd>
+<dt><code>-codecs</code></dt>
+<dd> Show all codecs known to libavcodec. </dd>
 <p> Note that the term &#8216;codec&#8217; is used throughout this documentation as a shortcut for what is more correctly called a media bitstream format.</p>
-<dt><code>-decoders</code></p>
-<dd> Show available decoders.</p>
-<dt><code>-encoders</code></p>
-<dd> Show all available encoders.</p>
-<dt><code>-bsfs</code></p>
-<dd> Show available bitstream filters.</p>
-<dt><code>-protocols</code></p>
-<dd> Show available protocols.</p>
-<dt><code>-filters</code></p>
-<dd> Show available libavfilter filters.</p>
-<dt><code>-pix_fmts</code></p>
-<dd> Show available pixel formats.</p>
-<dt><code>-sample_fmts</code></p>
-<dd> Show available sample formats.</p>
-<dt><code>-layouts</code></p>
-<dd> Show channel names and standard channel layouts.</p>
-<dt><code>-colors</code></p>
-<dd> Show recognized color names.</p>
-<dt><code>-sources</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></p>
-<dd> Show autodetected sources of the input device. Some devices may provide system-dependent source names that cannot be autodetected. The returned list cannot be assumed to be always complete. </p>
+<dt><code>-decoders</code></dt>
+<dd> Show available decoders.</dd>
+<dt><code>-encoders</code></dt>
+<dd> Show all available encoders.</dd>
+<dt><code>-bsfs</code></dt>
+<dd> Show available bitstream filters.</dd>
+<dt><code>-protocols</code></dt>
+<dd> Show available protocols.</dd>
+<dt><code>-filters</code></dt>
+<dd> Show available libavfilter filters.</dd>
+<dt><code>-pix_fmts</code></dt>
+<dd> Show available pixel formats.</dd>
+<dt><code>-sample_fmts</code></dt>
+<dd> Show available sample formats.</dd>
+<dt><code>-layouts</code></dt>
+<dd> Show channel names and standard channel layouts.</dd>
+<dt><code>-colors</code></dt>
+<dd> Show recognized color names.</dd>
+<dt><code>-sources</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></dt>
+<dd> Show autodetected sources of the input device. Some devices may provide system-dependent source names that cannot be autodetected. The returned list cannot be assumed to be always complete. </dd>
 <pre>
         ffmpeg -sources pulse,server=192.168.0.4
 </pre>
-<dt><code>-sinks</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></p>
-<dd> Show autodetected sinks of the output device. Some devices may provide system-dependent sink names that cannot be autodetected. The returned list cannot be assumed to be always complete. </p>
+<dt><code>-sinks</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></dt>
+<dd> Show autodetected sinks of the output device. Some devices may provide system-dependent sink names that cannot be autodetected. The returned list cannot be assumed to be always complete. </dd>
 <pre>
         ffmpeg -sinks pulse,server=192.168.0.4
 </pre>
-<dt><code>-loglevel [repeat+]</code><i>loglevel</i> <code>| -v [repeat+]</code><i>loglevel</i></p>
-<dd> Set the logging level used by the library. Adding &#8220;repeat+&#8221; indicates that repeated log output should not be compressed to the first line and the &#8220;Last message repeated n times&#8221; line will be omitted. &#8220;repeat&#8221; can also be used alone. If &#8220;repeat&#8221; is used alone, and with no prior loglevel set, the default loglevel will be used. If multiple loglevel parameters are given, using &#8216;repeat&#8217; will not change the loglevel. <i>loglevel</i> is a string or a number containing one of the following values:</p>
+<dt><code>-loglevel [repeat+]</code><i>loglevel</i> <code>| -v [repeat+]</code><i>loglevel</i></dt>
+<dd> Set the logging level used by the library. Adding &#8220;repeat+&#8221; indicates that repeated log output should not be compressed to the first line and the &#8220;Last message repeated n times&#8221; line will be omitted. &#8220;repeat&#8221; can also be used alone. If &#8220;repeat&#8221; is used alone, and with no prior loglevel set, the default loglevel will be used. If multiple loglevel parameters are given, using &#8216;repeat&#8217; will not change the loglevel. <i>loglevel</i> is a string or a number containing one of the following values:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>quiet, -8</code></p>
-<dd> Show nothing at all; be silent.</p>
-<dt><code>panic, 0</code></p>
-<dd> Only show fatal errors which could lead the process to crash, such as an assertion failure. This is not currently used for anything.</p>
-<dt><code>fatal, 8</code></p>
-<dd> Only show fatal errors. These are errors after which the process absolutely cannot continue.</p>
-<dt><code>error, 16</code></p>
-<dd> Show all errors, including ones which can be recovered from.</p>
-<dt><code>warning, 24</code></p>
-<dd> Show all warnings and errors. Any message related to possibly incorrect or unexpected events will be shown.</p>
-<dt><code>info, 32</code></p>
-<dd> Show informative messages during processing. This is in addition to warnings and errors. This is the default value.</p>
-<dt><code>verbose, 40</code></p>
-<dd> Same as <tt>&quot;info&quot;</tt>, except more verbose.</p>
-<dt><code>debug, 48</code></p>
-<dd> Show everything, including debugging information.</p>
-<dt><code>trace, 56</code></p>
-<dd></dl>
+<dt><code>quiet, -8</code></dt>
+<dd> Show nothing at all; be silent.</dd>
+<dt><code>panic, 0</code></dt>
+<dd> Only show fatal errors which could lead the process to crash, such as an assertion failure. This is not currently used for anything.</dd>
+<dt><code>fatal, 8</code></dt>
+<dd> Only show fatal errors. These are errors after which the process absolutely cannot continue.</dd>
+<dt><code>error, 16</code></dt>
+<dd> Show all errors, including ones which can be recovered from.</dd>
+<dt><code>warning, 24</code></dt>
+<dd> Show all warnings and errors. Any message related to possibly incorrect or unexpected events will be shown.</dd>
+<dt><code>info, 32</code></dt>
+<dd> Show informative messages during processing. This is in addition to warnings and errors. This is the default value.</dd>
+<dt><code>verbose, 40</code></dt>
+<dd> Same as <tt>&quot;info&quot;</tt>, except more verbose.</dd>
+<dt><code>debug, 48</code></dt>
+<dd> Show everything, including debugging information.</dd>
+<dt><code>trace, 56</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_NOCOLOR</code></font> or <font SIZE="-1"><code>NO_COLOR</code></font>, or can be forced setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_COLOR</code></font>. The use of the environment variable <font SIZE="-1"><code>NO_COLOR</code></font> is deprecated and will be dropped in a future FFmpeg version.</dl>
-<dt><code>-report</code></p>
-<dd> Dump full command line and console output to a file named <tt>&quot;</tt>program<tt>-</tt>YYYYMMDD<tt>-</tt>HHMMSS<tt>.log&quot;</tt> in the current directory. This file can be useful for bug reports. It also implies <tt>&quot;-loglevel verbose&quot;</tt>. </p>
+</dt><dd>
+<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_NOCOLOR</code></font> or <font SIZE="-1"><code>NO_COLOR</code></font>, or can be forced setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_COLOR</code></font>. The use of the environment variable <font SIZE="-1"><code>NO_COLOR</code></font> is deprecated and will be dropped in a future FFmpeg version.</dd></dl>
+<dt><code>-report</code></dt>
+<dd> Dump full command line and console output to a file named <tt>&quot;</tt>program<tt>-</tt>YYYYMMDD<tt>-</tt>HHMMSS<tt>.log&quot;</tt> in the current directory. This file can be useful for bug reports. It also implies <tt>&quot;-loglevel verbose&quot;</tt>. </dd>
 <p> Setting the environment variable <font SIZE="-1"><code>FFREPORT</code></font> to any value has the same effect. If the value is a &#8216;:&#8217;-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter &#8216;:&#8217; (see the &#8220;Quoting and escaping&#8221; section in the ffmpeg-utils manual). </p>
 <p> The following options are recognized:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>file</code></p>
-<dd> set the file name to use for the report; <tt>%p</tt> is expanded to the name of the program, <tt>%t</tt> is expanded to a timestamp, <tt>&quot;%%&quot;</tt> is expanded to a plain <tt>&quot;%&quot;</tt></p>
-<dt><code>level</code></p>
-<dd> set the log verbosity level using a numerical value (see <tt>&quot;-loglevel&quot;</tt>).</dl>
+<dt><code>file</code></dt>
+<dd> set the file name to use for the report; <tt>%p</tt> is expanded to the name of the program, <tt>%t</tt> is expanded to a timestamp, <tt>&quot;%%&quot;</tt> is expanded to a plain <tt>&quot;%&quot;</tt></dd>
+<dt><code>level</code></dt>
+<dd> set the log verbosity level using a numerical value (see <tt>&quot;-loglevel&quot;</tt>).</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> For example, to output a report to a file named <i>ffreport.log</i> using a log level of <tt>32</tt> (alias for log level <tt>&quot;info&quot;</tt>): </p>
 <pre>
         FFREPORT=file=ffreport.log:level=32 ffmpeg -i input output
 </pre>
-<p> Errors in parsing the environment variable are not fatal, and will not appear in the report.</dl>
-<dt><code>-hide_banner</code></p>
-<dd> Suppress printing banner. </p>
+<p> Errors in parsing the environment variable are not fatal, and will not appear in the report.</dd></dl>
+<dt><code>-hide_banner</code></dt>
+<dd> Suppress printing banner. </dd>
 <p> All FFmpeg tools will normally show a copyright notice, build options and library versions. This option can be used to suppress printing this information.</p>
-<dt><code>-cpuflags flags (</code><i>global</i><code>)</code></p>
-<dd> Allows setting and clearing cpu flags. This option is intended for testing. Do not use it unless you know what you&#8217;re doing. </p>
+<dt><code>-cpuflags flags (</code><i>global</i><code>)</code></dt>
+<dd> Allows setting and clearing cpu flags. This option is intended for testing. Do not use it unless you know what you&#8217;re doing. </dd>
 <pre>
         ffmpeg -cpuflags -sse+mmx ...
         ffmpeg -cpuflags mmx ...
@@ -275,146 +265,128 @@ _________ __________ | | | |
 </pre>
 <p> Possible flags for this option are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>x86</code></p>
+<dt><code>x86</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>mmx</code></dt>
 <dd>
-<dl>
-<dt><code>mmx</code></p>
+</dd><dt><code>mmxext</code></dt>
 <dd>
-<dt><code>mmxext</code></p>
+</dd><dt><code>sse</code></dt>
 <dd>
-<dt><code>sse</code></p>
+</dd><dt><code>sse2</code></dt>
 <dd>
-<dt><code>sse2</code></p>
+</dd><dt><code>sse2slow</code></dt>
 <dd>
-<dt><code>sse2slow</code></p>
+</dd><dt><code>sse3</code></dt>
 <dd>
-<dt><code>sse3</code></p>
+</dd><dt><code>sse3slow</code></dt>
 <dd>
-<dt><code>sse3slow</code></p>
+</dd><dt><code>ssse3</code></dt>
 <dd>
-<dt><code>ssse3</code></p>
+</dd><dt><code>atom</code></dt>
 <dd>
-<dt><code>atom</code></p>
+</dd><dt><code>sse4.1</code></dt>
 <dd>
-<dt><code>sse4.1</code></p>
+</dd><dt><code>sse4.2</code></dt>
 <dd>
-<dt><code>sse4.2</code></p>
+</dd><dt><code>avx</code></dt>
 <dd>
-<dt><code>avx</code></p>
+</dd><dt><code>avx2</code></dt>
 <dd>
-<dt><code>avx2</code></p>
+</dd><dt><code>xop</code></dt>
 <dd>
-<dt><code>xop</code></p>
+</dd><dt><code>fma3</code></dt>
 <dd>
-<dt><code>fma3</code></p>
+</dd><dt><code>fma4</code></dt>
 <dd>
-<dt><code>fma4</code></p>
+</dd><dt><code>3dnow</code></dt>
 <dd>
-<dt><code>3dnow</code></p>
+</dd><dt><code>3dnowext</code></dt>
 <dd>
-<dt><code>3dnowext</code></p>
+</dd><dt><code>bmi1</code></dt>
 <dd>
-<dt><code>bmi1</code></p>
+</dd><dt><code>bmi2</code></dt>
 <dd>
-<dt><code>bmi2</code></p>
-<dd>
-<dt><code>cmov</code></p>
-<dd></dl>
+</dd><dt><code>cmov</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><font SIZE="-1"><code>ARM</code></font></p>
+</dl>
+<dt><font SIZE="-1"><code>ARM</code></font></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>armv5te</code></dt>
 <dd>
-<dl>
-<dt><code>armv5te</code></p>
+</dd><dt><code>armv6</code></dt>
 <dd>
-<dt><code>armv6</code></p>
+</dd><dt><code>armv6t2</code></dt>
 <dd>
-<dt><code>armv6t2</code></p>
+</dd><dt><code>vfp</code></dt>
 <dd>
-<dt><code>vfp</code></p>
+</dd><dt><code>vfpv3</code></dt>
 <dd>
-<dt><code>vfpv3</code></p>
+</dd><dt><code>neon</code></dt>
 <dd>
-<dt><code>neon</code></p>
-<dd>
-<dt><code>setend</code></p>
-<dd></dl>
+</dd><dt><code>setend</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>AArch64</code></p>
+</dl>
+<dt><code>AArch64</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>armv8</code></dt>
 <dd>
-<dl>
-<dt><code>armv8</code></p>
+</dd><dt><code>vfp</code></dt>
 <dd>
-<dt><code>vfp</code></p>
-<dd>
-<dt><code>neon</code></p>
-<dd></dl>
+</dd><dt><code>neon</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>PowerPC</code></p>
+</dl>
+<dt><code>PowerPC</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt><code>altivec</code></p>
-<dd></dl>
+<dt><code>altivec</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>Specific Processors</code></p>
+</dl>
+<dt><code>Specific Processors</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>pentium2</code></dt>
 <dd>
-<dl>
-<dt><code>pentium2</code></p>
+</dd><dt><code>pentium3</code></dt>
 <dd>
-<dt><code>pentium3</code></p>
+</dd><dt><code>pentium4</code></dt>
 <dd>
-<dt><code>pentium4</code></p>
+</dd><dt><code>k6</code></dt>
 <dd>
-<dt><code>k6</code></p>
+</dd><dt><code>k62</code></dt>
 <dd>
-<dt><code>k62</code></p>
+</dd><dt><code>athlon</code></dt>
 <dd>
-<dt><code>athlon</code></p>
+</dd><dt><code>athlonxp</code></dt>
 <dd>
-<dt><code>athlonxp</code></p>
-<dd>
-<dt><code>k8</code></p>
-<dd></dl>
+</dd><dt><code>k8</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-opencl_bench</code></p>
-<dd> This option is used to benchmark all available OpenCL devices and print the results. This option is only available when FFmpeg has been compiled with <tt>&quot;--enable-opencl&quot;</tt>. </p>
+</dl>
+<dt><code>-opencl_bench</code></dt>
+<dd> This option is used to benchmark all available OpenCL devices and print the results. This option is only available when FFmpeg has been compiled with <tt>&quot;--enable-opencl&quot;</tt>. </dd>
 <p> When FFmpeg is configured with <tt>&quot;--enable-opencl&quot;</tt>, the options for the global OpenCL context are set via <code>-opencl_options</code>. See the &#8220;OpenCL Options&#8221; section in the ffmpeg-utils manual for the complete list of supported options. Amongst others, these options include the ability to select a specific platform and device to run the OpenCL code on. By default, FFmpeg will run on the first device of the first platform. While the options for the global OpenCL context provide flexibility to the user in selecting the OpenCL device of their choice, most users would probably want to select the fastest OpenCL device for their system. </p>
 <p> This option assists the selection of the most efficient configuration by identifying the appropriate device for the user&#8217;s system. The built-in benchmark is run on all the OpenCL devices and the performance is measured for each device. The devices in the results list are sorted based on their performance with the fastest device listed first. The user can subsequently invoke <code>ffmpeg</code> using the device deemed most appropriate via <code>-opencl_options</code> to obtain the best performance for the OpenCL accelerated code. </p>
 <p> Typical usage to use the fastest OpenCL device involve the following steps. </p>
@@ -426,16 +398,16 @@ _________ __________ | | | |
 <pre>
         ffmpeg -opencl_options platform_idx=&lt;pidx&gt;:device_idx=&lt;didx&gt; ...
 </pre>
-<dt><code>-opencl_options options (</code><i>global</i><code>)</code></p>
-<dd> Set OpenCL environment options. This option is only available when FFmpeg has been compiled with <tt>&quot;--enable-opencl&quot;</tt>. </p>
+<dt><code>-opencl_options options (</code><i>global</i><code>)</code></dt>
+<dd> Set OpenCL environment options. This option is only available when FFmpeg has been compiled with <tt>&quot;--enable-opencl&quot;</tt>. </dd>
 <p> <i>options</i> must be a list of <i>key</i>=<i>value</i> option pairs separated by &#8216;:&#8217;. See the &#8220;OpenCL Options&#8221; section in the ffmpeg-utils manual for the list of supported options.</dl>
 <h3>AVOptions</h3>
 <p> These options are provided directly by the libavformat, libavdevice and libavcodec libraries. To see the list of available AVOptions, use the <code>-help</code> option. They are separated into two categories:</p>
 <dl>
-<dt><code>generic</code></p>
-<dd> These options can be set for any container, codec or device. Generic options are listed under AVFormatContext options for containers/devices and under AVCodecContext options for codecs.</p>
-<dt><code>private</code></p>
-<dd> These options are specific to the given container, device or codec. Private options are listed under their corresponding containers/devices/codecs.</dl>
+<dt><code>generic</code></dt>
+<dd> These options can be set for any container, codec or device. Generic options are listed under AVFormatContext options for containers/devices and under AVCodecContext options for codecs.</dd>
+<dt><code>private</code></dt>
+<dd> These options are specific to the given container, device or codec. Private options are listed under their corresponding containers/devices/codecs.</dd></dl>
 <p> For example to write an ID3v2.3 header instead of a default ID3v2.4 to an <font SIZE="-1">MP3</font> file, use the <code>id3v2_version</code> private option of the <font SIZE="-1">MP3</font> muxer: </p>
 <pre>
         ffmpeg -i input.flac -id3v2_version 3 out.mp3
@@ -445,12 +417,12 @@ _________ __________ | | | |
 <p> Note: the old undocumented way of specifying per-stream AVOptions by prepending v/a/s to the options name is now obsolete and will be removed soon.</p>
 <h3>Main options</h3>
 <dl>
-<dt><code>-f</code> <i>configfile</i></p>
-<dd> Read configuration file <i>configfile</i>. If not specified it will read by default from <i>/etc/ffserver.conf</i>.</p>
-<dt><code>-n</code></p>
-<dd> Enable no-launch mode. This option disables all the <tt>&quot;Launch&quot;</tt> directives within the various <tt>&quot;&lt;Feed&gt;&quot;</tt> sections. Since <code>ffserver</code> will not launch any <code>ffmpeg</code> instances, you will have to launch them manually.</p>
-<dt><code>-d</code></p>
-<dd> Enable debug mode. This option increases log verbosity, and directs log messages to stdout. When specified, the <code>CustomLog</code> option is ignored.</dl>
+<dt><code>-f</code> <i>configfile</i></dt>
+<dd> Read configuration file <i>configfile</i>. If not specified it will read by default from <i>/etc/ffserver.conf</i>.</dd>
+<dt><code>-n</code></dt>
+<dd> Enable no-launch mode. This option disables all the <tt>&quot;Launch&quot;</tt> directives within the various <tt>&quot;&lt;Feed&gt;&quot;</tt> sections. Since <code>ffserver</code> will not launch any <code>ffmpeg</code> instances, you will have to launch them manually.</dd>
+<dt><code>-d</code></dt>
+<dd> Enable debug mode. This option increases log verbosity, and directs log messages to stdout. When specified, the <code>CustomLog</code> option is ignored.</dd></dl>
 <h2>CONFIGURATION FILE SYNTAX</h2>
 <p> <code>ffserver</code> reads a configuration file containing global options and settings for each stream and feed. </p>
 <p> The configuration file consists of global options and dedicated sections, which must be introduced by &quot;&lt;<i></i><font SIZE="-1"><i>SECTION_NAME</i></font><i></i> <i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&gt;&#8220; on a separate line and must be terminated by a line in the form &#8221;&lt;/<i></i><font SIZE="-1"><i>SECTION_NAME</i></font><i></i>&gt;&quot;. <i></i><font SIZE="-1"><i>ARGS</i></font><i></i> is optional. </p>
@@ -461,14 +433,14 @@ _________ __________ | | | |
 <p> An <font SIZE="-1">ACL</font> (Access Control List) specifies the address which are allowed to access a given stream, or to write a given feed. </p>
 <p> It accepts the following forms</p>
 <dl>
-<dt>&bull;</p>
-<dd> Allow/deny access to <i>address</i>. </p>
+<dt>&bull;</dt>
+<dd> Allow/deny access to <i>address</i>. </dd>
 <pre>
         ACL ALLOW &lt;address&gt;
         ACL DENY &lt;address&gt;
 </pre>
-<dt>&bull;</p>
-<dd> Allow/deny access to ranges of addresses from <i>first_address</i> to <i>last_address</i>. </p>
+<dt>&bull;</dt>
+<dd> Allow/deny access to ranges of addresses from <i>first_address</i> to <i>last_address</i>. </dd>
 <pre>
         ACL ALLOW &lt;first_address&gt; &lt;last_address&gt;
         ACL DENY &lt;first_address&gt; &lt;last_address&gt;
@@ -478,41 +450,41 @@ _________ __________ | | | |
 <p> Thus &#8216;<font SIZE="-1">ACL</font> allow localhost&#8217; only allows access from localhost. &#8216;<font SIZE="-1">ACL</font> deny 1.0.0.0 1.255.255.255&#8242; would deny the whole of network 1 and allow everybody else.</p>
 <h3>Global options</h3>
 <dl>
-<dt><code>HTTPPort</code> <i>port_number</i></p>
+<dt><code>HTTPPort</code> <i>port_number</i></dt>
 <dd>
-<dt><code>Port</code> <i>port_number</i></p>
+</dd><dt><code>Port</code> <i>port_number</i></dt>
 <dd>
-<dt><code>RTSPPort</code> <i>port_number</i></p>
-<dd> <i>HTTPPort</i> sets the <font SIZE="-1">HTTP</font> server listening <font SIZE="-1">TCP</font> port number, <i>RTSPPort</i> sets the <font SIZE="-1">RTSP</font> server listening <font SIZE="-1">TCP</font> port number. </p>
+</dd><dt><code>RTSPPort</code> <i>port_number</i></dt>
+<dd> <i>HTTPPort</i> sets the <font SIZE="-1">HTTP</font> server listening <font SIZE="-1">TCP</font> port number, <i>RTSPPort</i> sets the <font SIZE="-1">RTSP</font> server listening <font SIZE="-1">TCP</font> port number. </dd>
 <p> <i>Port</i> is the equivalent of <i>HTTPPort</i> and is deprecated. </p>
 <p> You must select a different port from your standard <font SIZE="-1">HTTP</font> web server if it is running on the same computer. </p>
 <p> If not specified, no corresponding server will be created.</p>
-<dt><code>HTTPBindAddress</code> <i>ip_address</i></p>
+<dt><code>HTTPBindAddress</code> <i>ip_address</i></dt>
 <dd>
-<dt><code>BindAddress</code> <i>ip_address</i></p>
+</dd><dt><code>BindAddress</code> <i>ip_address</i></dt>
 <dd>
-<dt><code>RTSPBindAddress</code> <i>ip_address</i></p>
-<dd> Set address on which the <font SIZE="-1">HTTP/RTSP</font> server is bound. Only useful if you have several network interfaces. </p>
+</dd><dt><code>RTSPBindAddress</code> <i>ip_address</i></dt>
+<dd> Set address on which the <font SIZE="-1">HTTP/RTSP</font> server is bound. Only useful if you have several network interfaces. </dd>
 <p> <i>BindAddress</i> is the equivalent of <i>HTTPBindAddress</i> and is deprecated.</p>
-<dt><code>MaxHTTPConnections</code> <i>n</i></p>
-<dd> Set number of simultaneous <font SIZE="-1">HTTP</font> connections that can be handled. It has to be defined <i>before</i> the <code>MaxClients</code> parameter, since it defines the <code>MaxClients</code> maximum limit. </p>
+<dt><code>MaxHTTPConnections</code> <i>n</i></dt>
+<dd> Set number of simultaneous <font SIZE="-1">HTTP</font> connections that can be handled. It has to be defined <i>before</i> the <code>MaxClients</code> parameter, since it defines the <code>MaxClients</code> maximum limit. </dd>
 <p> Default value is 2000.</p>
-<dt><code>MaxClients</code> <i>n</i></p>
-<dd> Set number of simultaneous requests that can be handled. Since <code>ffserver</code> is very fast, it is more likely that you will want to leave this high and use <code>MaxBandwidth</code>. </p>
+<dt><code>MaxClients</code> <i>n</i></dt>
+<dd> Set number of simultaneous requests that can be handled. Since <code>ffserver</code> is very fast, it is more likely that you will want to leave this high and use <code>MaxBandwidth</code>. </dd>
 <p> Default value is 5.</p>
-<dt><code>MaxBandwidth</code> <i>kbps</i></p>
-<dd> Set the maximum amount of kbit/sec that you are prepared to consume when streaming to clients. </p>
+<dt><code>MaxBandwidth</code> <i>kbps</i></dt>
+<dd> Set the maximum amount of kbit/sec that you are prepared to consume when streaming to clients. </dd>
 <p> Default value is 1000.</p>
-<dt><code>CustomLog</code> <i>filename</i></p>
-<dd> Set access log file (uses standard Apache log file format). &#8216;-&#8216; is the standard output. </p>
+<dt><code>CustomLog</code> <i>filename</i></dt>
+<dd> Set access log file (uses standard Apache log file format). &#8216;-&#8216; is the standard output. </dd>
 <p> If not specified <code>ffserver</code> will produce no log. </p>
 <p> In case the commandline option <code>-d</code> is specified this option is ignored, and the log is written to standard output.</p>
-<dt><code>NoDaemon</code></p>
-<dd> Set no-daemon mode. This option is currently ignored since now <code>ffserver</code> will always work in no-daemon mode, and is deprecated.</p>
-<dt><code>UseDefaults</code></p>
+<dt><code>NoDaemon</code></dt>
+<dd> Set no-daemon mode. This option is currently ignored since now <code>ffserver</code> will always work in no-daemon mode, and is deprecated.</dd>
+<dt><code>UseDefaults</code></dt>
 <dd>
-<dt><code>NoDefaults</code></p>
-<dd> Control whether default codec options are used for the all streams or not. Each stream may overwrite this setting for its own. Default is <i>UseDefaults</i>. The last occurrence overrides the previous if multiple definitions exist.</dl>
+</dd><dt><code>NoDefaults</code></dt>
+<dd> Control whether default codec options are used for the all streams or not. Each stream may overwrite this setting for its own. Default is <i>UseDefaults</i>. The last occurrence overrides the previous if multiple definitions exist.</dd></dl>
 <h3>Feed section</h3>
 <p> A Feed section defines a feed provided to <code>ffserver</code>. </p>
 <p> Each live feed contains one video and/or audio sequence coming from an <code>ffmpeg</code> encoder or another <code>ffserver</code>. This sequence may be encoded simultaneously with several codecs at several resolutions. </p>
@@ -523,25 +495,25 @@ _________ __________ | | | |
 <p> where <i></i><font SIZE="-1"><i>FEED_FILENAME</i></font><i></i> specifies the unique name of the <font SIZE="-1">FFM</font> stream. </p>
 <p> The following options are recognized within a Feed section.</p>
 <dl>
-<dt><code>File</code> <i>filename</i></p>
+<dt><code>File</code> <i>filename</i></dt>
 <dd>
-<dt><code>ReadOnlyFile</code> <i>filename</i></p>
-<dd> Set the path where the feed file is stored on disk. </p>
+</dd><dt><code>ReadOnlyFile</code> <i>filename</i></dt>
+<dd> Set the path where the feed file is stored on disk. </dd>
 <p> If not specified, the <i>/tmp/FEED.ffm</i> is assumed, where <i></i><font SIZE="-1"><i>FEED</i></font><i></i> is the feed name. </p>
 <p> If <code>ReadOnlyFile</code> is used the file is marked as read-only and it will not be deleted or updated.</p>
-<dt><code>Truncate</code></p>
-<dd> Truncate the feed file, rather than appending to it. By default <code>ffserver</code> will append data to the file, until the maximum file size value is reached (see <code>FileMaxSize</code> option).</p>
-<dt><code>FileMaxSize</code> <i>size</i></p>
-<dd> Set maximum size of the feed file in bytes. 0 means unlimited. The postfixes <tt>&quot;K&quot;</tt> (2^10), <tt>&quot;M&quot;</tt> (2^20), and <tt>&quot;G&quot;</tt> (2^30) are recognized. </p>
+<dt><code>Truncate</code></dt>
+<dd> Truncate the feed file, rather than appending to it. By default <code>ffserver</code> will append data to the file, until the maximum file size value is reached (see <code>FileMaxSize</code> option).</dd>
+<dt><code>FileMaxSize</code> <i>size</i></dt>
+<dd> Set maximum size of the feed file in bytes. 0 means unlimited. The postfixes <tt>&quot;K&quot;</tt> (2^10), <tt>&quot;M&quot;</tt> (2^20), and <tt>&quot;G&quot;</tt> (2^30) are recognized. </dd>
 <p> Default value is 5M.</p>
-<dt><code>Launch</code> <i>args</i></p>
-<dd> Launch an <code>ffmpeg</code> command when creating <code>ffserver</code>. </p>
+<dt><code>Launch</code> <i>args</i></dt>
+<dd> Launch an <code>ffmpeg</code> command when creating <code>ffserver</code>. </dd>
 <p> <i>args</i> must be a sequence of arguments to be provided to an <code>ffmpeg</code> instance. The first provided argument is ignored, and it is replaced by a path with the same dirname of the <code>ffserver</code> instance, followed by the remaining argument and terminated with a path corresponding to the feed. </p>
 <p> When the launched process exits, <code>ffserver</code> will launch another program instance. </p>
 <p> In case you need a more complex <code>ffmpeg</code> configuration, e.g. if you need to generate multiple <font SIZE="-1">FFM</font> feeds with a single <code>ffmpeg</code> instance, you should launch <code>ffmpeg</code> by hand. </p>
 <p> This option is ignored in case the commandline option <code>-n</code> is specified.</p>
-<dt><font SIZE="-1"><code>ACL</code></font> <i>spec</i></p>
-<dd> Specify the list of <font SIZE="-1">IP</font> address which are allowed or denied to write the feed. Multiple <font SIZE="-1">ACL</font> options can be specified.</dl>
+<dt><font SIZE="-1"><code>ACL</code></font> <i>spec</i></dt>
+<dd> Specify the list of <font SIZE="-1">IP</font> address which are allowed or denied to write the feed. Multiple <font SIZE="-1">ACL</font> options can be specified.</dd></dl>
 <h3>Stream section</h3>
 <p> A Stream section defines a stream provided by <code>ffserver</code>, and identified by a single name. </p>
 <p> The stream is sent when answering a request containing the stream name. </p>
@@ -554,123 +526,123 @@ _________ __________ | | | |
 <p> Encoding options are marked with the <i>encoding</i> tag, and they are used to set the encoding parameters, and are mapped to libavcodec encoding options. Not all encoding options are supported, in particular it is not possible to set encoder private options. In order to override the encoding options specified by <code>ffserver</code>, you can use the <code>ffmpeg</code> <code>override_ffserver</code> commandline option. </p>
 <p> Only one of the <code>Feed</code> and <code>File</code> options should be set.</p>
 <dl>
-<dt><code>Feed</code> <i>feed_name</i></p>
-<dd> Set the input feed. <i>feed_name</i> must correspond to an existing feed defined in a <tt>&quot;Feed&quot;</tt> section. </p>
+<dt><code>Feed</code> <i>feed_name</i></dt>
+<dd> Set the input feed. <i>feed_name</i> must correspond to an existing feed defined in a <tt>&quot;Feed&quot;</tt> section. </dd>
 <p> When this option is set, encoding options are used to setup the encoding operated by the remote <code>ffmpeg</code> process.</p>
-<dt><code>File</code> <i>filename</i></p>
-<dd> Set the filename of the pre-recorded input file to stream. </p>
+<dt><code>File</code> <i>filename</i></dt>
+<dd> Set the filename of the pre-recorded input file to stream. </dd>
 <p> When this option is set, encoding options are ignored and the input file content is re-streamed as is.</p>
-<dt><code>Format</code> <i>format_name</i></p>
-<dd> Set the format of the output stream. </p>
+<dt><code>Format</code> <i>format_name</i></dt>
+<dd> Set the format of the output stream. </dd>
 <p> Must be the name of a format recognized by FFmpeg. If set to <code>status</code>, it is treated as a status stream.</p>
-<dt><code>InputFormat</code> <i>format_name</i></p>
-<dd> Set input format. If not specified, it is automatically guessed.</p>
-<dt><code>Preroll</code> <i>n</i></p>
-<dd> Set this to the number of seconds backwards in time to start. Note that most players will buffer 5-10 seconds of video, and also you need to allow for a keyframe to appear in the data stream. </p>
+<dt><code>InputFormat</code> <i>format_name</i></dt>
+<dd> Set input format. If not specified, it is automatically guessed.</dd>
+<dt><code>Preroll</code> <i>n</i></dt>
+<dd> Set this to the number of seconds backwards in time to start. Note that most players will buffer 5-10 seconds of video, and also you need to allow for a keyframe to appear in the data stream. </dd>
 <p> Default value is 0.</p>
-<dt><code>StartSendOnKey</code></p>
-<dd> Do not send stream until it gets the first key frame. By default <code>ffserver</code> will send data immediately.</p>
-<dt><code>MaxTime</code> <i>n</i></p>
-<dd> Set the number of seconds to run. This value set the maximum duration of the stream a client will be able to receive. </p>
+<dt><code>StartSendOnKey</code></dt>
+<dd> Do not send stream until it gets the first key frame. By default <code>ffserver</code> will send data immediately.</dd>
+<dt><code>MaxTime</code> <i>n</i></dt>
+<dd> Set the number of seconds to run. This value set the maximum duration of the stream a client will be able to receive. </dd>
 <p> A value of 0 means that no limit is set on the stream duration.</p>
-<dt><font SIZE="-1"><code>ACL</code></font> <i>spec</i></p>
-<dd> Set <font SIZE="-1">ACL</font> for the stream.</p>
-<dt><code>DynamicACL</code> <i>spec</i></p>
+<dt><font SIZE="-1"><code>ACL</code></font> <i>spec</i></dt>
+<dd> Set <font SIZE="-1">ACL</font> for the stream.</dd>
+<dt><code>DynamicACL</code> <i>spec</i></dt>
 <dd>
-<dt><code>RTSPOption</code> <i>option</i></p>
+</dd><dt><code>RTSPOption</code> <i>option</i></dt>
 <dd>
-<dt><code>MulticastAddress</code> <i>address</i></p>
+</dd><dt><code>MulticastAddress</code> <i>address</i></dt>
 <dd>
-<dt><code>MulticastPort</code> <i>port</i></p>
+</dd><dt><code>MulticastPort</code> <i>port</i></dt>
 <dd>
-<dt><code>MulticastTTL</code> <i>integer</i></p>
+</dd><dt><code>MulticastTTL</code> <i>integer</i></dt>
 <dd>
-<dt><code>NoLoop</code></p>
+</dd><dt><code>NoLoop</code></dt>
 <dd>
-<dt><code>FaviconURL</code> <i>url</i></p>
-<dd> Set favicon (favourite icon) for the server status page. It is ignored for regular streams.</p>
-<dt><code>Author</code> <i>value</i></p>
+</dd><dt><code>FaviconURL</code> <i>url</i></dt>
+<dd> Set favicon (favourite icon) for the server status page. It is ignored for regular streams.</dd>
+<dt><code>Author</code> <i>value</i></dt>
 <dd>
-<dt><code>Comment</code> <i>value</i></p>
+</dd><dt><code>Comment</code> <i>value</i></dt>
 <dd>
-<dt><code>Copyright</code> <i>value</i></p>
+</dd><dt><code>Copyright</code> <i>value</i></dt>
 <dd>
-<dt><code>Title</code> <i>value</i></p>
-<dd> Set metadata corresponding to the option. All these options are deprecated in favor of <code>Metadata</code>.</p>
-<dt><code>Metadata</code> <i>key</i><i>value</i></p>
-<dd> Set metadata value on the output stream.</p>
-<dt><code>UseDefaults</code></p>
+</dd><dt><code>Title</code> <i>value</i></dt>
+<dd> Set metadata corresponding to the option. All these options are deprecated in favor of <code>Metadata</code>.</dd>
+<dt><code>Metadata</code> <i>key</i><i>value</i></dt>
+<dd> Set metadata value on the output stream.</dd>
+<dt><code>UseDefaults</code></dt>
 <dd>
-<dt><code>NoDefaults</code></p>
-<dd> Control whether default codec options are used for the stream or not. Default is <i>UseDefaults</i> unless disabled globally.</p>
-<dt><code>NoAudio</code></p>
+</dd><dt><code>NoDefaults</code></dt>
+<dd> Control whether default codec options are used for the stream or not. Default is <i>UseDefaults</i> unless disabled globally.</dd>
+<dt><code>NoAudio</code></dt>
 <dd>
-<dt><code>NoVideo</code></p>
-<dd> Suppress audio/video.</p>
-<dt><code>AudioCodec</code> <i>codec_name</i> <code>(</code><i>encoding,audio</i><code>)</code></p>
-<dd> Set audio codec.</p>
-<dt><code>AudioBitRate</code> <i>rate</i> <code>(</code><i>encoding,audio</i><code>)</code></p>
-<dd> Set bitrate for the audio stream in kbits per second.</p>
-<dt><code>AudioChannels</code> <i>n</i> <code>(</code><i>encoding,audio</i><code>)</code></p>
-<dd> Set number of audio channels.</p>
-<dt><code>AudioSampleRate</code> <i>n</i> <code>(</code><i>encoding,audio</i><code>)</code></p>
-<dd> Set sampling frequency for audio. When using low bitrates, you should lower this frequency to 22050 or 11025. The supported frequencies depend on the selected audio codec.</p>
-<dt><code>AVOptionAudio [</code><i>codec</i><code>:]</code><i>option</i><i>value</i> <code>(</code><i>encoding,audio</i><code>)</code></p>
-<dd> Set generic or private option for audio stream. Private option must be prefixed with codec name or codec must be defined before.</p>
-<dt><code>AVPresetAudio</code> <i>preset</i> <code>(</code><i>encoding,audio</i><code>)</code></p>
-<dd> Set preset for audio stream.</p>
-<dt><code>VideoCodec</code> <i>codec_name</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video codec.</p>
-<dt><code>VideoBitRate</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set bitrate for the video stream in kbits per second.</p>
-<dt><code>VideoBitRateRange</code> <i>range</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video bitrate range. </p>
+</dd><dt><code>NoVideo</code></dt>
+<dd> Suppress audio/video.</dd>
+<dt><code>AudioCodec</code> <i>codec_name</i> <code>(</code><i>encoding,audio</i><code>)</code></dt>
+<dd> Set audio codec.</dd>
+<dt><code>AudioBitRate</code> <i>rate</i> <code>(</code><i>encoding,audio</i><code>)</code></dt>
+<dd> Set bitrate for the audio stream in kbits per second.</dd>
+<dt><code>AudioChannels</code> <i>n</i> <code>(</code><i>encoding,audio</i><code>)</code></dt>
+<dd> Set number of audio channels.</dd>
+<dt><code>AudioSampleRate</code> <i>n</i> <code>(</code><i>encoding,audio</i><code>)</code></dt>
+<dd> Set sampling frequency for audio. When using low bitrates, you should lower this frequency to 22050 or 11025. The supported frequencies depend on the selected audio codec.</dd>
+<dt><code>AVOptionAudio [</code><i>codec</i><code>:]</code><i>option</i><i>value</i> <code>(</code><i>encoding,audio</i><code>)</code></dt>
+<dd> Set generic or private option for audio stream. Private option must be prefixed with codec name or codec must be defined before.</dd>
+<dt><code>AVPresetAudio</code> <i>preset</i> <code>(</code><i>encoding,audio</i><code>)</code></dt>
+<dd> Set preset for audio stream.</dd>
+<dt><code>VideoCodec</code> <i>codec_name</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video codec.</dd>
+<dt><code>VideoBitRate</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set bitrate for the video stream in kbits per second.</dd>
+<dt><code>VideoBitRateRange</code> <i>range</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video bitrate range. </dd>
 <p> A range must be specified in the form <i>minrate</i>&#8211;<i>maxrate</i>, and specifies the <code>minrate</code> and <code>maxrate</code> encoding options expressed in kbits per second.</p>
-<dt><code>VideoBitRateRangeTolerance</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video bitrate tolerance in kbits per second.</p>
-<dt><code>PixelFormat</code> <i>pixel_format</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video pixel format.</p>
-<dt><code>Debug</code> <i>integer</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video <code>debug</code> encoding option.</p>
-<dt><code>Strict</code> <i>integer</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video <code>strict</code> encoding option.</p>
-<dt><code>VideoBufferSize</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set ratecontrol buffer size, expressed in <font SIZE="-1">KB.</font></p>
-<dt><code>VideoFrameRate</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set number of video frames per second.</p>
-<dt><code>VideoSize (</code><i>encoding,video</i><code>)</code></p>
-<dd> Set size of the video frame, must be an abbreviation or in the form <i>W</i>x<i>H</i>. See <code>the Video size section in the </code><a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a><code>(1) manual</code>. </p>
+<dt><code>VideoBitRateRangeTolerance</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video bitrate tolerance in kbits per second.</dd>
+<dt><code>PixelFormat</code> <i>pixel_format</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video pixel format.</dd>
+<dt><code>Debug</code> <i>integer</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video <code>debug</code> encoding option.</dd>
+<dt><code>Strict</code> <i>integer</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video <code>strict</code> encoding option.</dd>
+<dt><code>VideoBufferSize</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set ratecontrol buffer size, expressed in <font SIZE="-1">KB.</font></dd>
+<dt><code>VideoFrameRate</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set number of video frames per second.</dd>
+<dt><code>VideoSize (</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set size of the video frame, must be an abbreviation or in the form <i>W</i>x<i>H</i>. See <code>the Video size section in the </code><a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a><code>(1) manual</code>. </dd>
 <p> Default value is <tt>&quot;160x128&quot;</tt>.</p>
-<dt><code>VideoIntraOnly (</code><i>encoding,video</i><code>)</code></p>
-<dd> Transmit only intra frames (useful for low bitrates, but kills frame rate).</p>
-<dt><code>VideoGopSize</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> If non-intra only, an intra frame is transmitted every VideoGopSize frames. Video synchronization can only begin at an intra frame.</p>
-<dt><code>VideoTag</code> <i>tag</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video tag.</p>
-<dt><code>VideoHighQuality (</code><i>encoding,video</i><code>)</code></p>
+<dt><code>VideoIntraOnly (</code><i>encoding,video</i><code>)</code></dt>
+<dd> Transmit only intra frames (useful for low bitrates, but kills frame rate).</dd>
+<dt><code>VideoGopSize</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> If non-intra only, an intra frame is transmitted every VideoGopSize frames. Video synchronization can only begin at an intra frame.</dd>
+<dt><code>VideoTag</code> <i>tag</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video tag.</dd>
+<dt><code>VideoHighQuality (</code><i>encoding,video</i><code>)</code></dt>
 <dd>
-<dt><code>Video4MotionVector (</code><i>encoding,video</i><code>)</code></p>
+</dd><dt><code>Video4MotionVector (</code><i>encoding,video</i><code>)</code></dt>
 <dd>
-<dt><code>BitExact (</code><i>encoding,video</i><code>)</code></p>
-<dd> Set bitexact encoding flag.</p>
-<dt><code>IdctSimple (</code><i>encoding,video</i><code>)</code></p>
-<dd> Set simple <font SIZE="-1">IDCT</font> algorithm.</p>
-<dt><code>Qscale</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Enable constant quality encoding, and set video qscale (quantization scale) value, expressed in <i>n</i> <font SIZE="-1">QP</font> units.</p>
-<dt><code>VideoQMin</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
+</dd><dt><code>BitExact (</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set bitexact encoding flag.</dd>
+<dt><code>IdctSimple (</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set simple <font SIZE="-1">IDCT</font> algorithm.</dd>
+<dt><code>Qscale</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Enable constant quality encoding, and set video qscale (quantization scale) value, expressed in <i>n</i> <font SIZE="-1">QP</font> units.</dd>
+<dt><code>VideoQMin</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
 <dd>
-<dt><code>VideoQMax</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video qmin/qmax.</p>
-<dt><code>VideoQDiff</code> <i>integer</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set video <code>qdiff</code> encoding option.</p>
-<dt><code>LumiMask</code> <i>float</i> <code>(</code><i>encoding,video</i><code>)</code></p>
+</dd><dt><code>VideoQMax</code> <i>n</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video qmin/qmax.</dd>
+<dt><code>VideoQDiff</code> <i>integer</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set video <code>qdiff</code> encoding option.</dd>
+<dt><code>LumiMask</code> <i>float</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
 <dd>
-<dt><code>DarkMask</code> <i>float</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set <code>lumi_mask</code>/<code>dark_mask</code> encoding options.</p>
-<dt><code>AVOptionVideo [</code><i>codec</i><code>:]</code><i>option</i><i>value</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set generic or private option for video stream. Private option must be prefixed with codec name or codec must be defined before.</p>
-<dt><code>AVPresetVideo</code> <i>preset</i> <code>(</code><i>encoding,video</i><code>)</code></p>
-<dd> Set preset for video stream. </p>
+</dd><dt><code>DarkMask</code> <i>float</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set <code>lumi_mask</code>/<code>dark_mask</code> encoding options.</dd>
+<dt><code>AVOptionVideo [</code><i>codec</i><code>:]</code><i>option</i><i>value</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set generic or private option for video stream. Private option must be prefixed with codec name or codec must be defined before.</dd>
+<dt><code>AVPresetVideo</code> <i>preset</i> <code>(</code><i>encoding,video</i><code>)</code></dt>
+<dd> Set preset for video stream. </dd>
 <p> <i>preset</i> must be the path of a preset file.</dl>
 <p> <i>Server status stream</i> </p>
 <p> A server status stream is a special stream which is used to show statistics about the <code>ffserver</code> operations. </p>
@@ -685,8 +657,8 @@ _________ __________ | | | |
 <p> It only accepts the option <font SIZE="-1"><code>URL</code></font>, which specify the redirection <font SIZE="-1">URL.</font></p>
 <h2>STREAM EXAMPLES</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Multipart <font SIZE="-1">JPEG</font> </p>
+<dt>&bull;</dt>
+<dd> Multipart <font SIZE="-1">JPEG</font> </dd>
 <pre>
         &lt;Stream test.mjpg&gt;
         Feed feed1.ffm
@@ -697,8 +669,8 @@ _________ __________ | | | |
         Strict -1
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> Single <font SIZE="-1">JPEG</font> </p>
+<dt>&bull;</dt>
+<dd> Single <font SIZE="-1">JPEG</font> </dd>
 <pre>
         &lt;Stream test.jpg&gt;
         Feed feed1.ffm
@@ -710,8 +682,8 @@ _________ __________ | | | |
         Strict -1
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> Flash </p>
+<dt>&bull;</dt>
+<dd> Flash </dd>
 <pre>
         &lt;Stream test.swf&gt;
         Feed feed1.ffm
@@ -721,8 +693,8 @@ _________ __________ | | | |
         NoAudio
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">ASF</font> compatible </p>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">ASF</font> compatible </dd>
 <pre>
         &lt;Stream test.asf&gt;
         Feed feed1.ffm
@@ -736,8 +708,8 @@ _________ __________ | | | |
         StartSendOnKey
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">MP3</font> audio </p>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">MP3</font> audio </dd>
 <pre>
         &lt;Stream test.mp3&gt;
         Feed feed1.ffm
@@ -749,8 +721,8 @@ _________ __________ | | | |
         NoVideo
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> Ogg Vorbis audio </p>
+<dt>&bull;</dt>
+<dd> Ogg Vorbis audio </dd>
 <pre>
         &lt;Stream test.ogg&gt;
         Feed feed1.ffm
@@ -761,8 +733,8 @@ _________ __________ | | | |
         NoVideo
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> Real with audio only at 32 kbits </p>
+<dt>&bull;</dt>
+<dd> Real with audio only at 32 kbits </dd>
 <pre>
         &lt;Stream test.ra&gt;
         Feed feed1.ffm
@@ -771,8 +743,8 @@ _________ __________ | | | |
         NoVideo
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> Real with audio and video at 64 kbits </p>
+<dt>&bull;</dt>
+<dd> Real with audio and video at 64 kbits </dd>
 <pre>
         &lt;Stream test.rm&gt;
         Feed feed1.ffm
@@ -783,14 +755,13 @@ _________ __________ | | | |
         VideoGopSize 25
         &lt;/Stream&gt;
 </pre>
-<dt>&bull;</p>
-<dd> For stream coming from a file: you only need to set the input filename and optionally a new format. </p>
+<dt>&bull;</dt>
+<dd> For stream coming from a file: you only need to set the input filename and optionally a new format. </dd>
 <pre>
         &lt;Stream file.rm&gt;
         File &quot;/usr/local/httpd/htdocs/tlive.rm&quot;
         NoAudio
         &lt;/Stream&gt;
-        
         &lt;Stream file.asf&gt;
         File &quot;/usr/local/httpd/htdocs/test.asf&quot;
         NoAudio
@@ -808,13 +779,13 @@ _________ __________ | | | |
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
 <p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">OPTIONS</a></p>
+<dt><a href="#lbAM">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAR">CONFIGURATION FILE SYNTAX</a></p>
+</dd><dt><a href="#lbAR">CONFIGURATION FILE SYNTAX</a></dt>
 <dd>
-<dt><a href="#lbAX">STREAM EXAMPLES</a></p>
+</dd><dt><a href="#lbAX">STREAM EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAY">SEE ALSO</a></p>
+</dd><dt><a href="#lbAY">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAZ">AUTHORS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAZ">AUTHORS</a></dt>
+<dd></dd></dl>

@@ -124,15 +124,15 @@ description: "dbus-binding-tool – C language GLib bindings generation utility.
 <h2>NOTES</h2>
 <p> Written by Brian Cameron, Sun Microsystems Inc., 2009. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">OPTIONS</a></p>
+<dt><a href="#lbAI">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAJ">OPERANDS</a></p>
+</dd><dt><a href="#lbAJ">OPERANDS</a></dt>
 <dd>
-<dt><a href="#lbAK">FILES</a></p>
+</dd><dt><a href="#lbAK">FILES</a></dt>
 <dd>
-<dt><a href="#lbAL">ATTRIBUTES</a></p>
+</dd><dt><a href="#lbAL">ATTRIBUTES</a></dt>
 <dd>
-<dt><a href="#lbAM">SEE ALSO</a></p>
+</dd><dt><a href="#lbAM">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAN">NOTES</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAN">NOTES</a></dt>
+<dd></dd></dl>

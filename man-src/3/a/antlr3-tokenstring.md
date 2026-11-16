@@ -103,7 +103,7 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <p>Make childID a child of rootID. If you are receiving this event over a socket via RemoteDebugEventSocketListener then only IDs are set. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>org.antlr.runtime.tree.TreeAdaptor.addChild()</code></dl>
+<dd><code>org.antlr.runtime.tree.TreeAdaptor.addChild()</code></dd></dl>
 <p> Referenced by antlr3DebugListenerNew(), dbgAddChild(), dbgAddChildToken(), and simulateTreeConstruction().</p>
 <h3>void(* <code>ANTLR3_DEBUG_EVENT_LISTENER_struct::becomeRoot</code>)(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> newRoot, <code>pANTLR3_BASE_TREE</code> oldRoot)</h3>
 <p>Make a node the new root of an existing root. See </p>
@@ -112,7 +112,7 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <p> If you are receiving this event over a socket via RemoteDebugEventSocketListener then only IDs are set. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>org.antlr.runtime.tree.TreeAdaptor.becomeRoot()</code></dl>
+<dd><code>org.antlr.runtime.tree.TreeAdaptor.becomeRoot()</code></dd></dl>
 <p> Referenced by antlr3DebugListenerNew(), dbgBecomeRoot(), and dbgBecomeRootToken().</p>
 <h3>void(* <code>ANTLR3_DEBUG_EVENT_LISTENER_struct::beginBacktrack</code>)(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int level)</h3>
 <p>Referenced by antlr3DebugListenerNew(), and beginBacktrack().</p>
@@ -130,7 +130,7 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <p> Note that unlike the Java version, the node type of the C parsers is always fixed as pANTLR3_BASE_TREE because all such structures contain a super pointer to their parent, which is generally COMMON_TREE and within that there is a super pointer that can point to a user type that encapsulates it. Almost akin to saying that it is an interface pointer except we don&#8217;t need to know what the interface is in full, just those bits that are the base. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>t</i></dl>
+<dd><i>t</i></dd></dl>
 <p> Referenced by antlr3DebugListenerNew().</p>
 <h3>void(* <code>ANTLR3_DEBUG_EVENT_LISTENER_struct::consumeToken</code>)(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_COMMON_TOKEN</code> t)</h3>
 <p>An input token was consumed; matched by any kind of element. Trigger after the token was matched by things like <code>match()</code>, <code>matchAny()</code>. </p>

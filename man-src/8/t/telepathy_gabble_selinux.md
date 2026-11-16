@@ -92,8 +92,8 @@ description: "telepathy_gabble_selinux – Security Enhanced Linux Policy for th
 <p> <code>telepathy_gabble_cache_home_t</code> </p>
 <p> &#8211; Set files with the telepathy_gabble_cache_home_t type, if you want to store telepathy gabble cache files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/home/[^/]+/.cache/wocky(/.*)?, /home/[^/]+/.cache/telepathy/gabble(/.*)?, /home/[^/]+/.cache/telepathy/avatars/gabble(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/home/[^/]+/.cache/wocky(/.*)?, /home/[^/]+/.cache/telepathy/gabble(/.*)?, /home/[^/]+/.cache/telepathy/avatars/gabble(/.*)? </dd>
 </dl>
 <p> <code>telepathy_gabble_exec_t</code> </p>
 <p> &#8211; Set files with the telepathy_gabble_exec_t type, if you want to transition an executable to the telepathy_gabble_t domain. </p>

@@ -42,5 +42,5 @@ description: "dmlite_replica –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for dmlite from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAR">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAR">Author</a></dt>
+<dd></dd></dl>

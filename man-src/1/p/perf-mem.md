@@ -21,23 +21,23 @@ perf mem[&lt;options&gt;](record[&lt;command&gt;] | report)
 <p> &lt;command&gt;&#8230;</p>
 <dl>
 <dt>
-<dd> Any command you can specify in a shell.</dl>
+</dt><dd> Any command you can specify in a shell.</dd></dl>
 <p> -t, &#8211;type=</p>
 <dl>
 <dt>
-<dd> Select the memory operation type: load or store (default: load)</dl>
+</dt><dd> Select the memory operation type: load or store (default: load)</dd></dl>
 <p> -D, &#8211;dump-raw-samples=</p>
 <dl>
 <dt>
-<dd> Dump the raw decoded samples on the screen in a format that is easy to parse with one sample per line.</dl>
+</dt><dd> Dump the raw decoded samples on the screen in a format that is easy to parse with one sample per line.</dd></dl>
 <p> -x, &#8211;field-separator</p>
 <dl>
 <dt>
-<dd> Specify the field separator used when dump raw samples (-D option). By default, The separator is the space character.</dl>
+</dt><dd> Specify the field separator used when dump raw samples (-D option). By default, The separator is the space character.</dd></dl>
 <p> -C, &#8211;cpu-list</p>
 <dl>
 <dt>
-<dd> Restrict dump of raw samples to those provided via this option. Note that the same option can be passed in record mode. It will be interpreted the same way as perf record.</dl>
+</dt><dd> Restrict dump of raw samples to those provided via this option. Note that the same option can be passed in record mode. It will be interpreted the same way as perf record.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
 <h2>Index</h2>

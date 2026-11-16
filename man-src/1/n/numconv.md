@@ -17,38 +17,38 @@ description: "numconv – convert numbers from one number system to another"
 <p> <code>numconv</code> is a command line interface to <code>libuninum</code> a library for converting between textual representations of numbers and machine-internal representations. Further information about the conversions performed is available in the documentation for this library.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code> &lt;input file&gt;</p>
-<dd> Read input from the specified file.</p>
-<dt><code>-o</code> &lt;output file&gt;</p>
-<dd> Write output into the specified file.</p>
-<dt><code>-I</code></p>
-<dd> Identify the number system of the input.</p>
-<dt><code>-c</code></p>
-<dd> List the available number system cover terms.</p>
-<dt><code>-l</code></p>
-<dd> List the available number systems.</p>
-<dt><code>-f</code> &lt;input number system&gt;</p>
-<dd> Specify the number system of the input.</p>
-<dt><code>-t</code> &lt;output number system&gt;</p>
-<dd> Specify the number system of the output.</p>
-<dt><code>-b</code> &lt;input base&gt;</p>
-<dd> Specify the input base for Western numbers. The base must be in the range [1,36].</p>
-<dt><code>-B</code> &lt;output base&gt;</p>
-<dd> Specify the output base for Western numbers. The base must be in the range [1,36].</p>
-<dt><code>-g</code> &lt;output general group size&gt;</p>
-<dd> Specify the size of digit groups other than the ow-order group. The default is 3.</p>
-<dt><code>-G</code> &lt;output low group size&gt;</p>
-<dd> Specify the size of the low-order group of digits. The default is 3.</p>
-<dt><code>-s</code> &lt;output group separator character&gt;</p>
-<dd> Specify character to use as &quot;thousands separator&quot;. The default is a comma.</p>
-<dt><code>-L</code></p>
-<dd> Set the output grouping parameters, general group size, first group size, and group separator character, according to the current locale.</p>
-<dt><code>-m</code></p>
-<dd> When generating Roman numerals, use unit characters with superscript macron for thousands greater than one instead of Ms.</p>
-<dt><code>-h</code></p>
-<dd> Print help information.</p>
-<dt><code>-v</code></p>
-<dd> Print version information.</dl>
+<dt><code>-i</code> &lt;input file&gt;</dt>
+<dd> Read input from the specified file.</dd>
+<dt><code>-o</code> &lt;output file&gt;</dt>
+<dd> Write output into the specified file.</dd>
+<dt><code>-I</code></dt>
+<dd> Identify the number system of the input.</dd>
+<dt><code>-c</code></dt>
+<dd> List the available number system cover terms.</dd>
+<dt><code>-l</code></dt>
+<dd> List the available number systems.</dd>
+<dt><code>-f</code> &lt;input number system&gt;</dt>
+<dd> Specify the number system of the input.</dd>
+<dt><code>-t</code> &lt;output number system&gt;</dt>
+<dd> Specify the number system of the output.</dd>
+<dt><code>-b</code> &lt;input base&gt;</dt>
+<dd> Specify the input base for Western numbers. The base must be in the range [1,36].</dd>
+<dt><code>-B</code> &lt;output base&gt;</dt>
+<dd> Specify the output base for Western numbers. The base must be in the range [1,36].</dd>
+<dt><code>-g</code> &lt;output general group size&gt;</dt>
+<dd> Specify the size of digit groups other than the ow-order group. The default is 3.</dd>
+<dt><code>-G</code> &lt;output low group size&gt;</dt>
+<dd> Specify the size of the low-order group of digits. The default is 3.</dd>
+<dt><code>-s</code> &lt;output group separator character&gt;</dt>
+<dd> Specify character to use as &quot;thousands separator&quot;. The default is a comma.</dd>
+<dt><code>-L</code></dt>
+<dd> Set the output grouping parameters, general group size, first group size, and group separator character, according to the current locale.</dd>
+<dt><code>-m</code></dt>
+<dd> When generating Roman numerals, use unit characters with superscript macron for thousands greater than one instead of Ms.</dd>
+<dt><code>-h</code></dt>
+<dd> Print help information.</dd>
+<dt><code>-v</code></dt>
+<dd> Print version information.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To convert from Roman Numerals to ordinary Western numbers: </p>
 <p> numconv -f Roman -t Western_Lower </p>

@@ -77,10 +77,10 @@ description: "cggsvd.f –"
  form by taking the nonsingular matrix X as
  X = Q*( I 0 )
  ( 0 inv(R) )</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBU</i> </p>
+<dd><i>JOBU</i> </dd>
 <pre> JOBU is CHARACTER*1
  = 'U': Unitary matrix U is computed;
  = 'N': U is not computed.</pre>
@@ -195,19 +195,19 @@ description: "cggsvd.f –"
  TOLB = MAX(P,N)*norm(B)*MACHEPS.
  The size of TOLA and TOLB may affect the size of backward
  errors of the decomposition.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 335 of file cggsvd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

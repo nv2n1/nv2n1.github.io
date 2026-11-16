@@ -15,15 +15,15 @@ snd_jack_set_key - Set a key mapping on a jack
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>The jack to configure</dl>
+<dl><dd></dd><dd>The jack to configure</dd></dl>
  
 
  <i>type</i>
-<dl><dd>Jack report type for this key</dl>
+<dl><dd>Jack report type for this key</dd></dl>
  
 
  <i>keytype</i>
-<dl><dd>Input layer key type to be reported</dl>
+<dl><dd>Input layer key type to be reported</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,10 +14,10 @@ description: "devm_iio_trigger_register – Resource-managed iio_trigger_registe
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device this trigger was allocated for</dl>
+</dd><dd>device this trigger was allocated for</dd></dl>
 <p> <i>trig_info</i></p>
 <dl>
-<dd>trigger to register</dl>
+<dd>trigger to register</dd></dl>
 <h2>Description</h2>
 <p>Managed <code>iio_trigger_register</code>. The IIO trigger registered with this function is automatically unregistered on driver detach. This function calls <code>iio_trigger_register</code> internally. Refer to that function for more information. </p>
 <p> If an iio_trigger registered with this function needs to be unregistered separately, <code>devm_iio_trigger_unregister</code> must be used.</p>
@@ -26,5 +26,5 @@ description: "devm_iio_trigger_register – Resource-managed iio_trigger_registe
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

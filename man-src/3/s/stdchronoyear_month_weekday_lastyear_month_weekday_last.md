@@ -11,7 +11,6 @@ std::chrono::year_month_weekday_last::year_month_weekday_last - std::chrono::yea
 <h2>Synopsis</h2>
 
 <pre><code>constexpr year_month_weekday_last(const std::chrono::year &amp;y, const std::chrono::month &amp;m, (since C++ 20)
-
                                                                                                const chrono::weekday_last &amp;wdl) noexcept;</code></pre> 
 Constructs a year_month_weekday_last object storing the year y, the month m, and the weekday wdl.weekday(). The constructed object represents the last weekday of that year and month. 
 

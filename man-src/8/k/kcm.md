@@ -16,39 +16,39 @@ description: "kcm – process-based credential cache for Kerberos tickets."
  default_cc_name = KCM:%{uid}</pre>
 <p>to the /etc/krb5.conf configuration file and make sure <code>kcm</code> is started in the system startup files. The daemon can hold the credentials for all users in the system. Access control is done with Unix-like permissions. The daemon checks the access on all operations based on the uid and gid of the user. The tickets are renewed as long as is permitted by the KDC&#8217;s policy. The daemon can also keep a SYSTEM credential that server processes can use to access services. One example of usage might be an nss_ldap module that quickly needs to get credentials and doesn&#8217;t want to renew the ticket itself. Supported options:</p>
 <dl>
-<dt><code>&#8211;cache-name= </code><i>cachename</i></p>
-<dd>system cache name</p>
-<dt><code>-c </code><i>file , &#8211;</i><code>-config-file= </code><i>file</i></p>
-<dd>location of config file</p>
-<dt><code>-g </code><i>group , &#8211;</i><code>-group= </code><i>group</i></p>
-<dd>system cache group</p>
-<dt><code>&#8211;max-request= </code><i>size</i></p>
-<dd>max size for a kcm-request</p>
-<dt><code>&#8211;disallow-getting-krbtgt</code></p>
-<dd>disallow extracting any krbtgt from the <code>kcm</code> daemon.</p>
-<dt><code>&#8211;detach</code></p>
-<dd>detach from console</p>
-<dt><code>-h , &#8211;help</code></p>
+<dt><code>&#8211;cache-name= </code><i>cachename</i></dt>
+<dd>system cache name</dd>
+<dt><code>-c </code><i>file , &#8211;</i><code>-config-file= </code><i>file</i></dt>
+<dd>location of config file</dd>
+<dt><code>-g </code><i>group , &#8211;</i><code>-group= </code><i>group</i></dt>
+<dd>system cache group</dd>
+<dt><code>&#8211;max-request= </code><i>size</i></dt>
+<dd>max size for a kcm-request</dd>
+<dt><code>&#8211;disallow-getting-krbtgt</code></dt>
+<dd>disallow extracting any krbtgt from the <code>kcm</code> daemon.</dd>
+<dt><code>&#8211;detach</code></dt>
+<dd>detach from console</dd>
+<dt><code>-h , &#8211;help</code></dt>
 <dd>
-<dt><code>-k </code><i>principal , &#8211;</i><code>-system-principal= </code><i>principal</i></p>
-<dd>system principal name</p>
-<dt><code>-l </code><i>time , &#8211;</i><code>-lifetime= </code><i>time</i></p>
-<dd>lifetime of system tickets</p>
-<dt><code>-m </code><i>mode , &#8211;</i><code>-mode= </code><i>mode</i></p>
-<dd>octal mode of system cache</p>
-<dt><code>-n , &#8211;no-name-constraints</code></p>
-<dd>disable credentials cache name constraints</p>
-<dt><code>-r </code><i>time , &#8211;</i><code>-renewable-life= </code><i>time</i></p>
-<dd>renewable lifetime of system tickets</p>
-<dt><code>-s </code><i>path , &#8211;</i><code>-socket-path= </code><i>path</i></p>
-<dd>path to kcm domain socket</p>
-<dt><code>&#8211;door-path= </code><i>path</i></p>
-<dd>path to kcm door socket</p>
-<dt><code>-S </code><i>principal , &#8211;</i><code>-server= </code><i>principal</i></p>
-<dd>server to get system ticket for</p>
-<dt><code>-t </code><i>keytab , &#8211;</i><code>-keytab= </code><i>keytab</i></p>
-<dd>system keytab name</p>
-<dt><code>-u </code><i>user , &#8211;</i><code>-user= </code><i>user</i></p>
-<dd>system cache owner</p>
-<dt><code>-v , &#8211;version</code></p>
-<dd></dl>
+</dd><dt><code>-k </code><i>principal , &#8211;</i><code>-system-principal= </code><i>principal</i></dt>
+<dd>system principal name</dd>
+<dt><code>-l </code><i>time , &#8211;</i><code>-lifetime= </code><i>time</i></dt>
+<dd>lifetime of system tickets</dd>
+<dt><code>-m </code><i>mode , &#8211;</i><code>-mode= </code><i>mode</i></dt>
+<dd>octal mode of system cache</dd>
+<dt><code>-n , &#8211;no-name-constraints</code></dt>
+<dd>disable credentials cache name constraints</dd>
+<dt><code>-r </code><i>time , &#8211;</i><code>-renewable-life= </code><i>time</i></dt>
+<dd>renewable lifetime of system tickets</dd>
+<dt><code>-s </code><i>path , &#8211;</i><code>-socket-path= </code><i>path</i></dt>
+<dd>path to kcm domain socket</dd>
+<dt><code>&#8211;door-path= </code><i>path</i></dt>
+<dd>path to kcm door socket</dd>
+<dt><code>-S </code><i>principal , &#8211;</i><code>-server= </code><i>principal</i></dt>
+<dd>server to get system ticket for</dd>
+<dt><code>-t </code><i>keytab , &#8211;</i><code>-keytab= </code><i>keytab</i></dt>
+<dd>system keytab name</dd>
+<dt><code>-u </code><i>user , &#8211;</i><code>-user= </code><i>user</i></dt>
+<dd>system cache owner</dd>
+<dt><code>-v , &#8211;version</code></dt>
+<dd></dd></dl>

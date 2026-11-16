@@ -28,31 +28,31 @@ description: "reporter-mantisbt – Reports problem to Mantis Bug Tracker."
 <p> <i>Login</i></p>
 <dl>
 <dt>
-<dd> Login to MantisBT account.</dl>
+</dt><dd> Login to MantisBT account.</dd></dl>
 <p> <i>Password</i></p>
 <dl>
 <dt>
-<dd> Password to MantisBT account.</dl>
+</dt><dd> Password to MantisBT account.</dd></dl>
 <p> <i>MantisbtURL</i></p>
 <dl>
 <dt>
-<dd> MantisBT HTTP(S) address. (default: m[blue]<code><a rel="nofollow" href="http://localhost/mantisbt">http://localhost/mantisbt</a></code>m[])</dl>
+</dt><dd> MantisBT HTTP(S) address. (default: m[blue]<code><a rel="nofollow" href="http://localhost/mantisbt">http://localhost/mantisbt</a></code>m[])</dd></dl>
 <p> <i>SSLVerify</i></p>
 <dl>
 <dt>
-<dd> Use yes/true/on/1 to verify server&#8217;s SSL certificate. (default: no)</dl>
+</dt><dd> Use yes/true/on/1 to verify server&#8217;s SSL certificate. (default: no)</dd></dl>
 <p> <i>Project</i></p>
 <dl>
 <dt>
-<dd> Project issue field value. Useful if you needed different project than specified in /etc/os-release</dl>
+</dt><dd> Project issue field value. Useful if you needed different project than specified in /etc/os-release</dd></dl>
 <p> <i>ProjectVersion</i></p>
 <dl>
 <dt>
-<dd> Version issue field value. Useful if you needed different project version than specified in /etc/os-release</dl>
+</dt><dd> Version issue field value. Useful if you needed different project version than specified in /etc/os-release</dd></dl>
 <p> <i>CreatePrivate</i></p>
 <dl>
 <dt>
-<dd> Create private MantisBT issue. (default: no)</dl>
+</dt><dd> Create private MantisBT issue. (default: no)</dd></dl>
 <p> Parameters can be overridden via $Mantisbt_PARAM environment variables.</p>
 <h3>Formatting configuration files</h3>
 <p> Lines starting with # are ignored. </p>
@@ -61,21 +61,21 @@ description: "reporter-mantisbt – Reports problem to Mantis Bug Tracker."
 <p> &quot;%summary</p>
 <dl>
 <dt>
-<dd> summary format&quot;</dl>
+</dt><dd> summary format&quot;</dd></dl>
 <p> &quot;section</p>
 <dl>
 <dt>
-<dd> element1[,element2]&#8230;&quot; The literal text line to be added to MantisBT Description or Additional information. Can be empty. (Empty lines are NOT ignored!) </p>
+</dt><dd> element1[,element2]&#8230;&quot; The literal text line to be added to MantisBT Description or Additional information. Can be empty. (Empty lines are NOT ignored!) </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Summary format is a line of text, where % element % is replaced by text element's content, and [[...%element%...]] block is used only if % element % exists.[[...]] blocks can nest.
 </code></pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Sections can be:
 - %summary: issue Summary format string.
@@ -83,10 +83,10 @@ Sections can be:
 - %Additional info: issue Additional Information content.
 - text, double colon (::) and the list of comma-separated elements.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Description and Additional information MantisBT's fields:
 All text, double colons (::) and lists of comma-separated elements which
@@ -94,10 +94,10 @@ are placed above the section '%Additional info::' in the configuration file are
 stored in the 'Description' field in MantisBT. All text etc. which are placed
 under the '%Additional info::' are stored in the 'Additional information' field.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 For example:
 |:: comment               |  (Description)
@@ -110,10 +110,10 @@ For example:
 |                         |  (Additional info)
 |Directories:: root,cwd   |  (Additional info)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Elements can be:
 - problem directory element names, which get formatted as
@@ -132,111 +132,111 @@ Elements can be:
 - problem directory element names prefixed by &quot;-&quot;,
   which excludes given element from all wildcards
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Nonexistent elements are silently ignored.
 If none of elements exists, the section will not be created.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h3>Integration with ABRT events</h3>
 <p> <i>reporter-mantisbt</i> can be used as an ABRT reporter. Example fragment for /etc/libreport/report_event.conf: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # Report Python crashes
 EVENT=report_CentOSBugTracker analyzer=Python
       reporter-mantisbt -d . -c /etc/libreport/plugins/mantisbt.conf
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -d DIR</p>
 <dl>
 <dt>
-<dd> Path to problem directory.</dl>
+</dt><dd> Path to problem directory.</dd></dl>
 <p> -c CONFFILE</p>
 <dl>
 <dt>
-<dd> Path to configuration file.</dl>
+</dt><dd> Path to configuration file.</dd></dl>
 <p> -f</p>
 <dl>
 <dt>
-<dd> Force reporting even if this problem is already reported.</dl>
+</dt><dd> Force reporting even if this problem is already reported.</dd></dl>
 <p> -F CONF_FORMAT_FILE</p>
 <dl>
 <dt>
-<dd> Formatting file for new issues. Default: /etc/libreport/plugins/mantisbt_format.conf</dl>
+</dt><dd> Formatting file for new issues. Default: /etc/libreport/plugins/mantisbt_format.conf</dd></dl>
 <p> -A CONF_FORMAT_FILE</p>
 <dl>
 <dt>
-<dd> Formatting file for duplicates. Default: /etc/libreport/plugins/mantisbt_formatdup.conf</dl>
+</dt><dd> Formatting file for duplicates. Default: /etc/libreport/plugins/mantisbt_formatdup.conf</dd></dl>
 <p> -t[ID]</p>
 <dl>
 <dt>
-<dd> Upload FILEs to the already created issue on MantisBT site.</dl>
+</dt><dd> Upload FILEs to the already created issue on MantisBT site.</dd></dl>
 <p> -h, &#8211;duphash DUPHASH</p>
 <dl>
 <dt>
-<dd> Search in MantisBT by abrt&#8217;s DUPHASH and print ISSUE_ID.</dl>
+</dt><dd> Search in MantisBT by abrt&#8217;s DUPHASH and print ISSUE_ID.</dd></dl>
 <p> -r TRACKER_NAME</p>
 <dl>
 <dt>
-<dd> Set the last url from reporter_to element which is prefixed with TRACKER_NAME to URL field in MantisBT.</dl>
+</dt><dd> Set the last url from reporter_to element which is prefixed with TRACKER_NAME to URL field in MantisBT.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> Environment variables take precedence over values provided in the configuration file. </p>
 <p> <i>Mantisbt_Login</i></p>
 <dl>
 <dt>
-<dd> Login to MantisBT account.</dl>
+</dt><dd> Login to MantisBT account.</dd></dl>
 <p> <i>Mantisbt_Password</i></p>
 <dl>
 <dt>
-<dd> Password to MantisBT account.</dl>
+</dt><dd> Password to MantisBT account.</dd></dl>
 <p> <i>Mantisbt_MantisbtURL</i></p>
 <dl>
 <dt>
-<dd> MantisBT HTTP(S) address. (default: m[blue]<code><a rel="nofollow" href="http://localhost/mantisbt">http://localhost/mantisbt</a></code>m[])</dl>
+</dt><dd> MantisBT HTTP(S) address. (default: m[blue]<code><a rel="nofollow" href="http://localhost/mantisbt">http://localhost/mantisbt</a></code>m[])</dd></dl>
 <p> <i>Mantisbt_SSLVerify</i></p>
 <dl>
 <dt>
-<dd> Use yes/true/on/1 to verify server&#8217;s SSL certificate. (default: no)</dl>
+</dt><dd> Use yes/true/on/1 to verify server&#8217;s SSL certificate. (default: no)</dd></dl>
 <p> <i>Mantisbt_Project</i></p>
 <dl>
 <dt>
-<dd> Project issue field value. Useful if you needed different project than specified in /etc/os-release</dl>
+</dt><dd> Project issue field value. Useful if you needed different project than specified in /etc/os-release</dd></dl>
 <p> <i>Mantisbt_ProjectVersion</i></p>
 <dl>
 <dt>
-<dd> Version issue field value. Useful if you needed different project version than specified in /etc/os-release</dl>
+</dt><dd> Version issue field value. Useful if you needed different project version than specified in /etc/os-release</dd></dl>
 <p> <i>Mantisbt_CreatePrivate</i></p>
 <dl>
 <dt>
-<dd> Create private MantisBT issue. (default: no)</dl>
+</dt><dd> Create private MantisBT issue. (default: no)</dd></dl>
 <h2>FILES</h2>
 <p> /usr/share/libreport/conf.d/plugins/mantisbt.conf</p>
 <dl>
 <dt>
-<dd> Readonly default configuration files.</dl>
+</dt><dd> Readonly default configuration files.</dd></dl>
 <p> /etc/libreport/plugins/mantisbt.conf</p>
 <dl>
 <dt>
-<dd> Configuration file.</dl>
+</dt><dd> Configuration file.</dd></dl>
 <p> /etc/libreport/plugins/mantisbt_format.conf</p>
 <dl>
 <dt>
-<dd> Configure formating for reporting.</dl>
+</dt><dd> Configure formating for reporting.</dd></dl>
 <p> /etc/libreport/plugins/mantisbt_formatdup.conf</p>
 <dl>
 <dt>
-<dd> Configure formating for reporting duplicates.</dl>
+</dt><dd> Configure formating for reporting duplicates.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-report_event-conf/">report_event.conf</a>(5), <a href="/docs/linux/man/5-mantisbt_format-conf/">mantisbt_format.conf</a>(5), <a href="/docs/linux/man/5-mantisbt_formatdup-conf/">mantisbt_formatdup.conf</a>(5)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
 <h2>Index</h2>

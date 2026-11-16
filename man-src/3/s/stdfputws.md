@@ -11,7 +11,6 @@ std::fputws - std::fputws
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int fputws(const wchar_t *str, std::FILE *stream);</code></pre> 
 Writes every wide character from the null-terminated wide string str to the output stream stream, as if by repeatedly executing std::fputwc. 
 The terminating null wide character from str is not written. 
@@ -29,12 +28,9 @@ On failure, returns EOF and sets the error indicator (see std::ferror) on stream
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     int rc = std::fputws(L&quot;御休みなさい&quot;, stdout);

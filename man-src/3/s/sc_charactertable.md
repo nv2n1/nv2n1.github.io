@@ -11,9 +11,7 @@ description: "sc::CharacterTable –"
 <p> The <code>CharacterTable</code> class provides a workable character table for all of the non-cubic <code>point</code> groups.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;pointgrp.h&gt;
-
 Public Types</code></pre>
 <p> enum <code>pgroups</code> { <code>C1</code>, <code>CS</code>, <code>CI</code>, <code>CN</code>, <code>CNV</code>, <code>CNH</code>, <code>DN</code>, <code>DND</code>, <code>DNH</code>, <code>SN</code>, <code>T</code>, <code>TH</code>, <code>TD</code>, <code>O</code>, <code>OH</code>, <code>I</code>, <code>IH</code> }</p>
 <h3>Public Member Functions</h3>

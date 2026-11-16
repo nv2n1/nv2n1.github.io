@@ -14,12 +14,12 @@ description: "ata_scsi_unlock_native_capacity – unlock native capacity"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>SCSI device to adjust device capacity for</dl>
+</dd><dd>SCSI device to adjust device capacity for</dd></dl>
 <h2>Description</h2>
 <p>This function is called if a partition on <i>sdev</i> extends beyond the end of the device. It requests EH to unlock HPA. </p>
 <p> LOCKING: Defined by the SCSI layer. Might sleep.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

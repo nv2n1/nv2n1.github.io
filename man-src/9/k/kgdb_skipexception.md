@@ -14,14 +14,14 @@ description: "kgdb_skipexception – (optional) exit kgdb_handle_exception early
 <p><i>exception</i></p>
 <dl>
 <dd>
-<dd>Exception vector number</dl>
+</dd><dd>Exception vector number</dd></dl>
 <p> <i>regs</i></p>
 <dl>
-<dd>Current struct pt_regs.</dl>
+<dd>Current struct pt_regs.</dd></dl>
 <h2>Description</h2>
 <p>On some architectures it is required to skip a breakpoint exception when it occurs after a breakpoint has been removed. This can be implemented in the architecture specific portion of kgdb.</p>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

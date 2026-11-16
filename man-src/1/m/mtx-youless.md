@@ -15,22 +15,22 @@ description: "mtx-youless – youless Fetcher"
 <p> <code>youless Fetcher</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;collect</code></p>
-<dd> collect data from device</p>
-<dt><code>&#8211;nobackup</code></p>
-<dd> don&#8217;t backup old datafile</p>
-<dt><code>&#8211;nofile</code></p>
-<dd> don&#8217;t write data to file (for checking)</p>
-<dt><code>&#8211;electricity</code></p>
-<dd> collected eletricity data (p)</p>
-<dt><code>&#8211;gas</code></p>
-<dd> collected gas data</p>
-<dt><code>&#8211;pulse</code></p>
-<dd> collected eletricity data (s)</p>
-<dt><code>&#8211;host</code></p>
-<dd> ip address of device</p>
-<dt><code>&#8211;auto</code></p>
-<dd> fetch (refresh) all data every hour</dl>
+<dt><code>&#8211;collect</code></dt>
+<dd> collect data from device</dd>
+<dt><code>&#8211;nobackup</code></dt>
+<dd> don&#8217;t backup old datafile</dd>
+<dt><code>&#8211;nofile</code></dt>
+<dd> don&#8217;t write data to file (for checking)</dd>
+<dt><code>&#8211;electricity</code></dt>
+<dd> collected eletricity data (p)</dd>
+<dt><code>&#8211;gas</code></dt>
+<dd> collected gas data</dd>
+<dt><code>&#8211;pulse</code></dt>
+<dd> collected eletricity data (s)</dd>
+<dt><code>&#8211;host</code></dt>
+<dd> ip address of device</dd>
+<dt><code>&#8211;auto</code></dt>
+<dd> fetch (refresh) all data every hour</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

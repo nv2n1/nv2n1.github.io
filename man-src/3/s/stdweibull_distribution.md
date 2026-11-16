@@ -11,9 +11,7 @@ std::weibull_distribution - std::weibull_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class weibull_distribution;</code></pre> 
 The weibull_distribution meets the requirements of a RandomNumberDistribution and produces random numbers according to the Weibull_distribution: 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;f(x;a,b) = 
@@ -89,19 +87,12 @@ operator&gt;&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
-
 #include &lt;cmath&gt;
-
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

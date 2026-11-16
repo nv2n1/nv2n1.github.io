@@ -25,45 +25,45 @@ description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
  $HOME/.sge_ar_request (user private defaults file).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code> <i>date_time</i></p>
-<dd> Defines the activation (start) date and time of an AR. The option is not mandatory. If omitted, the current date_time is assumed. Either a duration or end <i>date_time</i> must also be specified. For details of the <i>date_time</i> definition please see</p>
-<dt><code>-A</code> <i>account_string</i></p>
-<dd> Identifies the account to which the resource reservation of the AR should be charged. For &quot;<i>account_string</i>&quot; value details please see the &quot;<code>name</code>&quot; definition in In the absence of this parameter xxQS_NAMExx will place the default account string &quot;xxqs_name_sxx&quot; in the accounting record of the AR.</p>
-<dt><code>-ckpt</code> <i>ckpt_name</i></p>
-<dd> Selects the checkpointing environment (see the AR jobs may request. Using this option guarantees that only queues providing this checkpoint environment will be reserved.</p>
-<dt><code>-d</code> <i>date_time</i></p>
-<dd> Defines the duration of the AR. The use of &quot;<code>-d</code>&quot; is optional if &quot;<code>-e</code> <i>date_time</i>&quot; is requested. For details of the &quot;<i>date_time</i>&quot; definition please see</p>
-<dt><code>-e</code> <i>date_time</i></p>
-<dd> Defines the end date and time of an AR. The use of &quot;<code>-e date_time</code>&quot; is optional if &quot;<code>-d time</code>&quot; is requested. For details about &quot;<code>date_time</code>&quot; definition please see</p>
-<dt><code>-he y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</p>
-<dd> Specifies the behavior when the AR goes into an error state. The AR goes into error state when a reserved host goes into unknown state, a queue error happens, or when a queue is disabled or suspended. </p>
+<dt><code>-a</code> <i>date_time</i></dt>
+<dd> Defines the activation (start) date and time of an AR. The option is not mandatory. If omitted, the current date_time is assumed. Either a duration or end <i>date_time</i> must also be specified. For details of the <i>date_time</i> definition please see</dd>
+<dt><code>-A</code> <i>account_string</i></dt>
+<dd> Identifies the account to which the resource reservation of the AR should be charged. For &quot;<i>account_string</i>&quot; value details please see the &quot;<code>name</code>&quot; definition in In the absence of this parameter xxQS_NAMExx will place the default account string &quot;xxqs_name_sxx&quot; in the accounting record of the AR.</dd>
+<dt><code>-ckpt</code> <i>ckpt_name</i></dt>
+<dd> Selects the checkpointing environment (see the AR jobs may request. Using this option guarantees that only queues providing this checkpoint environment will be reserved.</dd>
+<dt><code>-d</code> <i>date_time</i></dt>
+<dd> Defines the duration of the AR. The use of &quot;<code>-d</code>&quot; is optional if &quot;<code>-e</code> <i>date_time</i>&quot; is requested. For details of the &quot;<i>date_time</i>&quot; definition please see</dd>
+<dt><code>-e</code> <i>date_time</i></dt>
+<dd> Defines the end date and time of an AR. The use of &quot;<code>-e date_time</code>&quot; is optional if &quot;<code>-d time</code>&quot; is requested. For details about &quot;<code>date_time</code>&quot; definition please see</dd>
+<dt><code>-he y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</dt>
+<dd> Specifies the behavior when the AR goes into an error state. The AR goes into error state when a reserved host goes into unknown state, a queue error happens, or when a queue is disabled or suspended. </dd>
 <p> A hard error, &quot;<code>-he yes</code>&quot;, means as long as the AR is in error state no jobs using the AR will be scheduled. If soft error, &quot;<code>-he no</code>&quot;, is specified the AR stays usable with the remaining resources.<br />
  By default soft error handling is used. </p>
-<dt><code>-help</code></p>
-<dd> Prints a list of all options.</p>
-<dt><code>-l</code> <i>resource</i><code>=</code><i>value</i><code>,</code>&#8230;</p>
+<dt><code>-help</code></dt>
+<dd> Prints a list of all options.</dd>
+<dt><code>-l</code> <i>resource</i><code>=</code><i>value</i><code>,</code>&#8230;</dt>
 <dd> Creates an AR in a xxQS_NAMExx queue, providing the given resource request list. describes how a list of available resources and their associated valid value specifiers can be obtained.<br />
- There may be multiple <code>-l</code> switches in a single command.</p>
-<dt><code>-m b</code>|<code>e</code>|<code>a</code>|<code>n</code></p>
-<dd> Defines or redefines under which circumstances mail is to be sent to the AR owner or to the users defined with the <code>-M</code> option described below. The option arguments have the following meaning: </p>
+ There may be multiple <code>-l</code> switches in a single command.</dd>
+<dt><code>-m b</code>|<code>e</code>|<code>a</code>|<code>n</code></dt>
+<dd> Defines or redefines under which circumstances mail is to be sent to the AR owner or to the users defined with the <code>-M</code> option described below. The option arguments have the following meaning: </dd>
 <pre>
 <code>b</code>     Mail is sent at the beginning of the AR
 <code>e</code>     Mail is sent at the end of the AR
 <code>a</code>     Mail is sent when the AR goes into error state
 <code>n</code>     No mail is sent, default for <i>qrsub</i>
 </pre>
-<dt><code>-M</code> <i>user</i>[<code>@</code><i>host</i>]<code>,</code>&#8230;</p>
-<dd> Defines or redefines the list of users to which the qmaster sends mail.</p>
-<dt><code>-masterq</code> <i>wc_queue_list</i></p>
-<dd> Only meaningful for a parallel AR request together with the -pe option. </p>
+<dt><code>-M</code> <i>user</i>[<code>@</code><i>host</i>]<code>,</code>&#8230;</dt>
+<dd> Defines or redefines the list of users to which the qmaster sends mail.</dd>
+<dt><code>-masterq</code> <i>wc_queue_list</i></dt>
+<dd> Only meaningful for a parallel AR request together with the -pe option. </dd>
 <p> This option is used to reserve the proper queues to match this request if it would be requested by a qsub. A more detailed description of <i>wc_queue_list</i> can be found in</p>
-<dt><code>-now y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</p>
+<dt><code>-now y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</dt>
 <dd> This option affects the queue selection for reservation.<br />
- With the &quot;<code>-now y</code>&quot; option, only queues with the qtype &quot;INTERACTIVE&quot; assigned will be considered for reservation. &quot;<code>-now n</code>&quot; is the default for <i>qrsub</i>.</p>
-<dt><code>-N</code> <i>name</i></p>
-<dd> The name of the AR. The name, if requested, must conform to &quot;<i>name</i>&quot; as defined in Invalid names will be denied at submit time.</p>
-<dt><code>-w e</code>|<code>v</code></p>
-<dd> Specifies the validation level applied to the AR request. </p>
+ With the &quot;<code>-now y</code>&quot; option, only queues with the qtype &quot;INTERACTIVE&quot; assigned will be considered for reservation. &quot;<code>-now n</code>&quot; is the default for <i>qrsub</i>.</dd>
+<dt><code>-N</code> <i>name</i></dt>
+<dd> The name of the AR. The name, if requested, must conform to &quot;<i>name</i>&quot; as defined in Invalid names will be denied at submit time.</dd>
+<dt><code>-w e</code>|<code>v</code></dt>
+<dd> Specifies the validation level applied to the AR request. </dd>
 <p> The specifiers e and v define the following validation modes: </p>
 <pre>
 <code>v</code>    verify - does not submit the AR but prints
@@ -71,32 +71,30 @@ description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
 <code>e</code>    error - rejects request if requirements cannot
      be fulfilled, default for <i>qrsub</i>
 </pre>
-<dt><code>-pe</code> <i>parallel_env n</i>[<code>&#8211;</code>[<i>m</i>]]|[<code>&#8211;</code>]<i>m</i>,&#8230;</p>
-<dd> Parallel programming environment (PE) to select for the AR queue reservation. Please see the details of a PE in</p>
-<dt><code>-q</code> <i>wc_queue_list</i></p>
-<dd> Defines or redefines a list of cluster queues, queue domains or queue instances that may be reserved by the AR. Please find a description of <i>wc_queue_list</i> in This parameter has all the properties of a resource request and will be merged with requirements derived from the <code>-l</code> option described above.</p>
-<dt><code>-u</code> [<i>username</i>|<code>@</code><i>access_list</i>],&#8230;</p>
+<dt><code>-pe</code> <i>parallel_env n</i>[<code>&#8211;</code>[<i>m</i>]]|[<code>&#8211;</code>]<i>m</i>,&#8230;</dt>
+<dd> Parallel programming environment (PE) to select for the AR queue reservation. Please see the details of a PE in</dd>
+<dt><code>-q</code> <i>wc_queue_list</i></dt>
+<dd> Defines or redefines a list of cluster queues, queue domains or queue instances that may be reserved by the AR. Please find a description of <i>wc_queue_list</i> in This parameter has all the properties of a resource request and will be merged with requirements derived from the <code>-l</code> option described above.</dd>
+<dt><code>-u</code> [<i>username</i>|<code>@</code><i>access_list</i>],&#8230;</dt>
 <dd> Defines the users allowed to submit jobs requesting the AR. The access is specified by a comma-separated list containing UNIX users or ACLs (see An ACL is differentiated from a UNIX user name by prefixing the ACL name with an &#8216;@&#8217; sign.<br />
- By default only the AR owner is allowed to submit jobs requesting the AR. </p>
+ By default only the AR owner is allowed to submit jobs requesting the AR. </dd>
 <p> Note: Only queues where all users specified in the list have access are considered for reservation (see</dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell, <i>qsub</i>, <i>qsh</i>, <i>qlogin</i> or <i>qalter</i> use (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell, <i>qsub</i>, <i>qsh</i>, <i>qlogin</i> or <i>qalter</i> use (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>.</dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the TCP port on which is expected to listen for communication requests. Most installations will use a services map entry for the service &quot;sge_qmaster&quot; instead of defining the port.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the TCP port on which is expected to listen for communication requests. Most installations will use a services map entry for the service &quot;sge_qmaster&quot; instead of defining the port.</dd></dl>
 <h2>FILES</h2>
 <pre>
 <i>$xxQS_NAME_Sxx_ROOT/$xxQS_NAME_Sxx_CELL/common/sge_ar_request</i>

@@ -15,15 +15,15 @@ adjust_resource - modify a resource's start and size
 <h2>Arguments</h2>
 
 <i>res</i>
-<dl><dd><dd>resource to modify</dl>
+<dl><dd></dd><dd>resource to modify</dd></dl>
  
 
  <i>start</i>
-<dl><dd>new start value</dl>
+<dl><dd>new start value</dd></dl>
  
 
  <i>size</i>
-<dl><dd>new size</dl>
+<dl><dd>new size</dd></dl>
 
 <h2>Description</h2>
 

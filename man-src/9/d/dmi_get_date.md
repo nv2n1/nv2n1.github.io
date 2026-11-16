@@ -10,21 +10,21 @@ description: "dmi_get_date – parse a DMI date"
 <p>dmi_get_date &#8211; parse a DMI date</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool dmi_get_date(int&nbsp;<wbr></code><i>field</i><code>, int&nbsp;<wbr>*&nbsp;<wbr></code><i>yearp</i><code>, int&nbsp;<wbr>*&nbsp;<wbr></code><i>monthp</i><code>, int&nbsp;<wbr>*&nbsp;<wbr></code><i>dayp</i><code>);</code></dl>
+<dt> <code>bool dmi_get_date(int&nbsp;<wbr></code><i>field</i><code>, int&nbsp;<wbr>*&nbsp;<wbr></code><i>yearp</i><code>, int&nbsp;<wbr>*&nbsp;<wbr></code><i>monthp</i><code>, int&nbsp;<wbr>*&nbsp;<wbr></code><i>dayp</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>field</i></p>
 <dl>
 <dd>
-<dd>data index (see enum dmi_field)</dl>
+</dd><dd>data index (see enum dmi_field)</dd></dl>
 <p> <i>yearp</i></p>
 <dl>
-<dd>optional out parameter for the year</dl>
+<dd>optional out parameter for the year</dd></dl>
 <p> <i>monthp</i></p>
 <dl>
-<dd>optional out parameter for the month</dl>
+<dd>optional out parameter for the month</dd></dl>
 <p> <i>dayp</i></p>
 <dl>
-<dd>optional out parameter for the day</dl>
+<dd>optional out parameter for the day</dd></dl>
 <h2>Description</h2>
 <p>The date field is assumed to be in the form resembling [mm[/dd]]/yy[yy] and the result is stored in the out parameters any or all of which can be omitted. </p>
 <p> If the field doesn&#8217;t exist, all out parameters are set to zero and false is returned. Otherwise, true is returned with any invalid part of date set to zero. </p>

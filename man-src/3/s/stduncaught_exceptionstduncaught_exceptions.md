@@ -28,9 +28,7 @@ Sometimes it&#8217;s safe to throw an exception even while std::uncaught_excepti
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;exception&gt;
-
 #include &lt;stdexcept&gt;
 struct Foo {
     int count = std::uncaught_exceptions();
@@ -43,9 +41,7 @@ struct Foo {
 &quot;);
     }
 };
-
 int main()
-
 {
     Foo f;
     try {

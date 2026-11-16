@@ -14,12 +14,13 @@ description: "sasldblistusers2 – list users in sasldb"
 <p><i>sasldblistusers2</i> is used to list the users in the SASL password database (usually /etc/sasldb2). This will NOT list all the users in /etc/passwd, shadow, PAM, etc. only those created by SASL (via <i>saslpasswd2</i>).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f file</code></p>
-<dd>use <code>file</code> for sasldb</p>
-<dt><code>-v</code></p>
-<dd>Print libsasl2 version number and exit.</dl>
+<dt><code>-f file</code></dt>
+<dd>use <code>file</code> for sasldb</dd>
+<dt><code>-v</code></dt>
+<dd>Print libsasl2 version number and exit.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-saslpasswd2/">saslpasswd2</a>(8)</p>
 <dl>
-<dt>rfc4422 &#8211; Simple Authentication and Security Layer (SASL)</p>
+<dt>rfc4422 &#8211; Simple Authentication and Security Layer (SASL)</dt>
 <dd>
+</dd></dl>

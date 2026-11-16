@@ -26,18 +26,18 @@ description: "stapgraph – systemtap grapher"
 <p> Scripts can output Comma Seperated Values (CSV) which will be interpreted by <i>stapgraph.</i> The first value is the X coordinate of the graph, usually a time value. <i>stapgraph</i> assumes that this value is constantly increasing. </p>
 <p> A different syntax allows the script to specify many details of the graph&#8217;s appearance.</p>
 <dl>
-<dt><code>%DataSet:</code> DATA-SET-NAME <code> SCALE </code> COLOR <code> GRAPHSTYLE </code></p>
-<dd></dl>
+<dt><code>%DataSet:</code> DATA-SET-NAME <code> SCALE </code> COLOR <code> GRAPHSTYLE </code></dt>
+<dd></dd></dl>
 <p> The data set name identifies a data set that will be emitted by the script. &quot;SCALE&quot; is the overall vertical scale of the graph for this data set. &quot;COLOR&quot; is a red-green-blue hex color. &quot;GRAPHSTYLE&quot; is one of bar &#8211; a traditional bar graph dot &#8211; plotted points discreet &#8211; An event style timeline that records that an event happened at a certain time.</p>
 <dl>
-<dt><code>%Title:</code> TITLE</p>
-<dd> A title for the whole graph.</p>
-<dt><code>%XAxisTitle:</code> TITLE</p>
-<dd> The legend for the X axis</p>
-<dt><code>%YAxisTitle:</code> TITLE</p>
-<dd> The legend for the Y axis.</p>
-<dt><code>%YMax:</code> MAX VALUE</p>
-<dd> The maximum value displayed on the graph. </p>
+<dt><code>%Title:</code> TITLE</dt>
+<dd> A title for the whole graph.</dd>
+<dt><code>%XAxisTitle:</code> TITLE</dt>
+<dd> The legend for the X axis</dd>
+<dt><code>%YAxisTitle:</code> TITLE</dt>
+<dd> The legend for the Y axis.</dd>
+<dt><code>%YMax:</code> MAX VALUE</dt>
+<dd> The maximum value displayed on the graph. </dd>
 </dl>
 <h2>GRAPH DATA</h2>
 <p> <code> DATA SET </code> TIME <code> VALUE </code> Each data point that is to be plotted is tagged with the data set name, followed by the time and value of the point. </p>

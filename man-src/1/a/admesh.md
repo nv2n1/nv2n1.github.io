@@ -22,60 +22,60 @@ description: "ADMesh – a program for processing triangulated solid meshes"
 <p> would first do an exact check because it is required, and then the unconnected facets would be removed. The results would be printed and no other checks would be done.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;x-rotate</code>=<i>angle</i></p>
-<dd> Rotate CCW about x-axis by angle degrees</p>
-<dt><code>&#8211;y-rotate</code>=<i>angle</i></p>
-<dd> Rotate CCW about y-axis by angle degrees</p>
-<dt><code>&#8211;z-rotate</code>=<i>angle</i></p>
-<dd> Rotate CCW about z-axis by angle degrees</p>
-<dt><code>&#8211;xy-mirror</code></p>
-<dd> Mirror about the xy plane</p>
-<dt><code>&#8211;yz-mirror</code></p>
-<dd> Mirror about the yz plane</p>
-<dt><code>&#8211;xz-mirror</code></p>
-<dd> Mirror about the xz plane</p>
-<dt><code>&#8211;scale</code>=<i>factor</i></p>
-<dd> Scale the file by factor (multiply by factor)</p>
-<dt><code>&#8211;translate</code>=<i>x</i>,y,z</p>
-<dd> Translate the file to x, y, and z</p>
-<dt><code>&#8211;merge</code>=<i>name</i></p>
-<dd> Merge file called name with input file</p>
-<dt><code>-e</code>, <code>&#8211;exact</code></p>
-<dd> Only check for perfectly matched edges</p>
-<dt><code>-n</code>, <code>&#8211;nearby</code></p>
-<dd> Find and connect nearby facets. Correct bad facets</p>
-<dt><code>-t</code>, <code>&#8211;tolerance</code>=<i>tol</i></p>
-<dd> Initial tolerance to use for nearby check = tol</p>
-<dt><code>-i</code>, <code>&#8211;iterations</code>=<i>i</i></p>
-<dd> Number of iterations for nearby check = i</p>
-<dt><code>-m</code>, <code>&#8211;increment</code>=<i>inc</i></p>
-<dd> Amount to increment tolerance after iteration=inc</p>
-<dt> <code>-u</code>, <code>&#8211;remove-unconnected</code> Remove facets that have 0 neighbors</p>
-<dt><code>-f</code>, <code>&#8211;fill-holes</code></p>
+<dt><code>&#8211;x-rotate</code>=<i>angle</i></dt>
+<dd> Rotate CCW about x-axis by angle degrees</dd>
+<dt><code>&#8211;y-rotate</code>=<i>angle</i></dt>
+<dd> Rotate CCW about y-axis by angle degrees</dd>
+<dt><code>&#8211;z-rotate</code>=<i>angle</i></dt>
+<dd> Rotate CCW about z-axis by angle degrees</dd>
+<dt><code>&#8211;xy-mirror</code></dt>
+<dd> Mirror about the xy plane</dd>
+<dt><code>&#8211;yz-mirror</code></dt>
+<dd> Mirror about the yz plane</dd>
+<dt><code>&#8211;xz-mirror</code></dt>
+<dd> Mirror about the xz plane</dd>
+<dt><code>&#8211;scale</code>=<i>factor</i></dt>
+<dd> Scale the file by factor (multiply by factor)</dd>
+<dt><code>&#8211;translate</code>=<i>x</i>,y,z</dt>
+<dd> Translate the file to x, y, and z</dd>
+<dt><code>&#8211;merge</code>=<i>name</i></dt>
+<dd> Merge file called name with input file</dd>
+<dt><code>-e</code>, <code>&#8211;exact</code></dt>
+<dd> Only check for perfectly matched edges</dd>
+<dt><code>-n</code>, <code>&#8211;nearby</code></dt>
+<dd> Find and connect nearby facets. Correct bad facets</dd>
+<dt><code>-t</code>, <code>&#8211;tolerance</code>=<i>tol</i></dt>
+<dd> Initial tolerance to use for nearby check = tol</dd>
+<dt><code>-i</code>, <code>&#8211;iterations</code>=<i>i</i></dt>
+<dd> Number of iterations for nearby check = i</dd>
+<dt><code>-m</code>, <code>&#8211;increment</code>=<i>inc</i></dt>
+<dd> Amount to increment tolerance after iteration=inc</dd>
+<dt> <code>-u</code>, <code>&#8211;remove-unconnected</code> Remove facets that have 0 neighbors</dt>
+<dt><code>-f</code>, <code>&#8211;fill-holes</code></dt>
 <dd>
-<dd>Add facets to fill holes</p>
-<dt><code>-d</code>, <code>&#8211;normal-directions</code></p>
-<dd> Check and fix direction of normals(ie cw, ccw)</p>
-<dt><code>&#8211;reverse-all</code></p>
-<dd> Reverse the directions of all facets and normals</p>
-<dt><code>-v</code>, <code>&#8211;normal-values</code></p>
-<dd> Check and fix normal values</p>
-<dt><code>-c</code>, <code>&#8211;no-check</code></p>
-<dd> Don&#8217;t do any check on input file</p>
-<dt><code>-b</code>, <code>&#8211;write-binary-stl</code>=<i>name</i></p>
-<dd> Output a binary STL file called name</p>
-<dt><code>-a</code>, <code>&#8211;write-ascii-stl</code>=<i>name</i></p>
-<dd> Output an ascii STL file called name</p>
-<dt><code>&#8211;write-off</code>=<i>name</i></p>
-<dd> Output a Geomview OFF format file called name</p>
-<dt><code>&#8211;write-dxf</code>=<i>name</i></p>
-<dd> Output a DXF format file called name</p>
-<dt><code>&#8211;write-vrml</code>=<i>name</i></p>
-<dd> Output a VRML format file called name</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit</dl>
+</dd><dd>Add facets to fill holes</dd>
+<dt><code>-d</code>, <code>&#8211;normal-directions</code></dt>
+<dd> Check and fix direction of normals(ie cw, ccw)</dd>
+<dt><code>&#8211;reverse-all</code></dt>
+<dd> Reverse the directions of all facets and normals</dd>
+<dt><code>-v</code>, <code>&#8211;normal-values</code></dt>
+<dd> Check and fix normal values</dd>
+<dt><code>-c</code>, <code>&#8211;no-check</code></dt>
+<dd> Don&#8217;t do any check on input file</dd>
+<dt><code>-b</code>, <code>&#8211;write-binary-stl</code>=<i>name</i></dt>
+<dd> Output a binary STL file called name</dd>
+<dt><code>-a</code>, <code>&#8211;write-ascii-stl</code>=<i>name</i></dt>
+<dd> Output an ascii STL file called name</dd>
+<dt><code>&#8211;write-off</code>=<i>name</i></dt>
+<dd> Output a Geomview OFF format file called name</dd>
+<dt><code>&#8211;write-dxf</code>=<i>name</i></dt>
+<dd> Output a DXF format file called name</dd>
+<dt><code>&#8211;write-vrml</code>=<i>name</i></dt>
+<dd> Output a VRML format file called name</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit</dd></dl>
 <p> The functions are executed in the same order as the options shown here. So check here to find what happens if, for example, <code>&#8211;translate</code> and <code>&#8211;merge</code> options are specified together. The order of the options specified on the command line is not important.</p>
 <h2>EXAMPLES</h2>
 <p> To perform all checks except for nearby, the following command line would be used: </p>

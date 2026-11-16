@@ -16,20 +16,20 @@ description: "FreeHDL-CONFIG – The FreeHDL configuration script."
 <p> <code>FreeHDL-CONFIG</code> can be used to obtain the installation (path) configuration of the FreeHDL package.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd> show installed FreeHDL version</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show usage info</p>
-<dt><code>-l, &#8211;ldflags</code></p>
-<dd> print libraries to link with</p>
-<dt><code>-libs, &#8211;libtool</code></p>
-<dd> print libtool libraries to link with</p>
-<dt><code>-ieee, &#8211;ieee</code></p>
-<dd> print IEEE libtool libraries to link with</p>
-<dt><code>-c, &#8211;cxxflags</code></p>
-<dd> print C++ compiler flags to compile with</p>
-<dt><code>-cxx, &#8211;cxx</code></p>
-<dd> print C++ compiler <code>-linker, &#8211;linker</code> print libtool linker</dl>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> show installed FreeHDL version</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show usage info</dd>
+<dt><code>-l, &#8211;ldflags</code></dt>
+<dd> print libraries to link with</dd>
+<dt><code>-libs, &#8211;libtool</code></dt>
+<dd> print libtool libraries to link with</dd>
+<dt><code>-ieee, &#8211;ieee</code></dt>
+<dd> print IEEE libtool libraries to link with</dd>
+<dt><code>-c, &#8211;cxxflags</code></dt>
+<dd> print C++ compiler flags to compile with</dd>
+<dt><code>-cxx, &#8211;cxx</code></dt>
+<dd> print C++ compiler <code>-linker, &#8211;linker</code> print libtool linker</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gvhdl/">gvhdl</a>(1), <a href="/docs/linux/man/1-freehdl-v2cc/">freehdl-v2cc</a>(1), v2cc.libs(5)</p>
 <h2>AVAILABILITY</h2>

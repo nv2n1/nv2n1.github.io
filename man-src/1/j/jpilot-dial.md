@@ -17,34 +17,34 @@ description: "jpilot-dial – generates the DTMF tone signals used for telephone
 <p> It is intended for dialing from within database programs that also store telephone numbers.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;tone-time</code></p>
-<dd> milliseconds, default 100</p>
-<dt><code>&#8211;silent-time</code></p>
-<dd> milliseconds, default 50</p>
-<dt><code>&#8211;sleep-time</code></p>
-<dd> milliseconds, default 500</p>
-<dt><code>&#8211;output-dev</code></p>
-<dd> default <i>/dev/dsp</i></p>
-<dt><code>&#8211;use-audio</code></p>
-<dd> default 1</p>
-<dt><code>&#8211;bufsize</code></p>
-<dd> default 4096</p>
-<dt><code>&#8211;speed</code></p>
-<dd> default 8000</p>
-<dt><code>&#8211;bits</code></p>
-<dd> default 8</p>
-<dt><code>&#8211;lv</code></p>
-<dd> left speaker volume</p>
-<dt><code>&#8211;rv</code></p>
-<dd> right speaker volume</p>
-<dt><code>&#8211;table-size</code></p>
-<dd> default 256</p>
-<dt><code>&#8211;volume</code></p>
-<dd> default 100</p>
-<dt><code>&#8211;left</code></p>
-<dd> default 0</p>
-<dt><code>&#8211;right</code></p>
-<dd> default 0</dl>
+<dt><code>&#8211;tone-time</code></dt>
+<dd> milliseconds, default 100</dd>
+<dt><code>&#8211;silent-time</code></dt>
+<dd> milliseconds, default 50</dd>
+<dt><code>&#8211;sleep-time</code></dt>
+<dd> milliseconds, default 500</dd>
+<dt><code>&#8211;output-dev</code></dt>
+<dd> default <i>/dev/dsp</i></dd>
+<dt><code>&#8211;use-audio</code></dt>
+<dd> default 1</dd>
+<dt><code>&#8211;bufsize</code></dt>
+<dd> default 4096</dd>
+<dt><code>&#8211;speed</code></dt>
+<dd> default 8000</dd>
+<dt><code>&#8211;bits</code></dt>
+<dd> default 8</dd>
+<dt><code>&#8211;lv</code></dt>
+<dd> left speaker volume</dd>
+<dt><code>&#8211;rv</code></dt>
+<dd> right speaker volume</dd>
+<dt><code>&#8211;table-size</code></dt>
+<dd> default 256</dd>
+<dt><code>&#8211;volume</code></dt>
+<dd> default 100</dd>
+<dt><code>&#8211;left</code></dt>
+<dd> default 0</dd>
+<dt><code>&#8211;right</code></dt>
+<dd> default 0</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jpilot/">jpilot</a></code>(1) </p>
 <h2>AUTHOR</h2>

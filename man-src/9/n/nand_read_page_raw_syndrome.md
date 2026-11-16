@@ -14,23 +14,23 @@ description: "nand_read_page_raw_syndrome – [INTERN] read raw page data withou
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>mtd info structure</dl>
+</dd><dd>mtd info structure</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>nand chip info structure</dl>
+<dd>nand chip info structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>buffer to store read data</dl>
+<dd>buffer to store read data</dd></dl>
 <p> <i>oob_required</i></p>
 <dl>
-<dd>caller requires OOB data read to chip-&gt;oob_poi</dl>
+<dd>caller requires OOB data read to chip-&gt;oob_poi</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>page number to read</dl>
+<dd>page number to read</dd></dl>
 <h2>Description</h2>
 <p>We need a special oob layout and handling even when OOB isn&#8217;t used.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

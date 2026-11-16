@@ -11,29 +11,17 @@ std::unique - std::unique
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt &gt;                                                                               (until C++20)
-
 ForwardIt unique( ForwardIt first, ForwardIt last );
-
 template&lt; class ForwardIt &gt;                                                                               (since C++20)
-
 constexpr ForwardIt unique( ForwardIt first, ForwardIt last );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;                                                    (2) (since C++17)
-
 ForwardIt unique( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last );                    (1)
-
 template&lt; class ForwardIt, class BinaryPredicate &gt;                                                                      (until C++20)
-
 ForwardIt unique( ForwardIt first, ForwardIt last, BinaryPredicate p );
-
 template&lt; class ForwardIt, class BinaryPredicate &gt;                                                    (3)               (since C++20)
-
 constexpr ForwardIt unique( ForwardIt first, ForwardIt last, BinaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class BinaryPredicate &gt;                                 (4)           (since C++17)
-
 ForwardIt unique( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, BinaryPredicate p );</code></pre> 
 Eliminates all but the first element from every consecutive group of equivalent elements from the range [first, last) and returns a past-the-end iterator for the new logical end of the range. 
 Removing is done by shifting the elements in the range in such a way that elements to be erased are overwritten. Relative order of the elements that remain is preserved and the physical size of the container is unchanged. Iterators pointing to an element between the new logical end and the physical end of the range are still dereferenceable, but the elements themselves have unspecified values. A call to unique is typically followed by a call to a container's erase method, which erases the unspecified values and reduces the physical size of the container to match its new logical size. 
@@ -117,16 +105,11 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cctype&gt;
 int main()
-
 {
     // remove duplicate elements
     std::vector&lt;int&gt; v{1, 2, 3, 1, 2, 3, 3, 4, 5, 4, 5, 6, 7};

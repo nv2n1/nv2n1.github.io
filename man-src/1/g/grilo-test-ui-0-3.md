@@ -15,11 +15,11 @@ description: "grilo-test-ui – Grilo test UI"
 <p> <code>grilo-test-ui</code> is a graphical interface for Grilo that allows the user to perform queries and see their results.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of grilo-test-ui options.</p>
-<dt><code>&#8211;help-grl</code></p>
-<dd>Show summary of Grilo options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd>Show summary of all options.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of grilo-test-ui options.</dd>
+<dt><code>&#8211;help-grl</code></dt>
+<dd>Show summary of Grilo options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd>Show summary of all options.</dd></dl>
 <h2>Author</h2>
 <p>This manual page was written by Alberto Garcia &lt;berto [at] igalia.com&gt;.</p>

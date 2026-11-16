@@ -69,42 +69,42 @@ description: "virt-p2v-make-disk – Build the virt-p2v disk using virt-builder"
 <p> For more information, see &#8220;<font SIZE="-1">SSH IDENTITIES&#8221;</font> in <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>&#8211;inject-ssh-identity</code> id_rsa</p>
-<dd> Add an <font SIZE="-1">SSH</font> identity (private key) file into the image. See &#8220;<font SIZE="-1">ADDING AN SSH IDENTITY&#8221;</font> above.</p>
-<dt><code>&#8211;install</code> pkg,pkg,&#8230;</p>
-<dd> Add extra packages to the image. See &#8220;<font SIZE="-1">ADDING EXTRA PACKAGES&#8221;</font> above.</p>
-<dt><code>&#8211;no-warn-if-partition</code></p>
-<dd> Normally you should not write to a partition on a <font SIZE="-1">USB</font> drive (ie. don&#8217;t use <tt>&quot;-o /dev/sdX1&quot;</tt>, use <tt>&quot;-o /dev/sdX&quot;</tt> to make a bootable <font SIZE="-1">USB</font> drive). If you do this, virt-builder prints a warning. This option suppresses that warning.</p>
-<dt><code>-o</code> <font SIZE="-1">OUTPUT</font></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>&#8211;inject-ssh-identity</code> id_rsa</dt>
+<dd> Add an <font SIZE="-1">SSH</font> identity (private key) file into the image. See &#8220;<font SIZE="-1">ADDING AN SSH IDENTITY&#8221;</font> above.</dd>
+<dt><code>&#8211;install</code> pkg,pkg,&#8230;</dt>
+<dd> Add extra packages to the image. See &#8220;<font SIZE="-1">ADDING EXTRA PACKAGES&#8221;</font> above.</dd>
+<dt><code>&#8211;no-warn-if-partition</code></dt>
+<dd> Normally you should not write to a partition on a <font SIZE="-1">USB</font> drive (ie. don&#8217;t use <tt>&quot;-o /dev/sdX1&quot;</tt>, use <tt>&quot;-o /dev/sdX&quot;</tt> to make a bootable <font SIZE="-1">USB</font> drive). If you do this, virt-builder prints a warning. This option suppresses that warning.</dd>
+<dt><code>-o</code> <font SIZE="-1">OUTPUT</font></dt>
 <dd>
-<dt><code>&#8211;output</code> <font SIZE="-1">OUTPUT</font></p>
-<dd> Write output to <tt>&quot;OUTPUT&quot;</tt>, which can be a local file or block device. <code>The existing contents of the device will be erased</code>.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;output</code> <font SIZE="-1">OUTPUT</font></dt>
+<dd> Write output to <tt>&quot;OUTPUT&quot;</tt>, which can be a local file or block device. <code>The existing contents of the device will be erased</code>.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose output. Use this if you need to debug problems with the script or if you are filing a bug.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose output. Use this if you need to debug problems with the script or if you are filing a bug.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>$libexecdir/virt-p2v</i></p>
-<dd> The <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1) binary which is copied into the bootable disk image. </p>
+<dt><i>$libexecdir/virt-p2v</i></dt>
+<dd> The <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1) binary which is copied into the bootable disk image. </dd>
 <p> The location of the binary can be changed by setting the <tt>&quot;VIRT_P2V_DATA_DIR&quot;</tt> environment variable.</p>
-<dt><i>$datadir/virt-p2v/issue</i></p>
+<dt><i>$datadir/virt-p2v/issue</i></dt>
 <dd>
-<dt><i>$datadir/virt-p2v/launch-virt-p2v.in</i></p>
+</dd><dt><i>$datadir/virt-p2v/launch-virt-p2v.in</i></dt>
 <dd>
-<dt><i>$datadir/virt-p2v/p2v.service</i></p>
-<dd> Various data files that are copied into the bootable disk image. </p>
+</dd><dt><i>$datadir/virt-p2v/p2v.service</i></dt>
+<dd> Various data files that are copied into the bootable disk image. </dd>
 <p> The location of these files can be changed by setting the <tt>&quot;VIRT_P2V_DATA_DIR&quot;</tt> environment variable.</dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>&quot;VIRT_P2V_DATA_DIR&quot;</p>
-<dd> The directory where virt-p2v-make-disk looks for data files (see &#8220;<font SIZE="-1">FILES&#8221;</font> above). If not set, a compiled-in location is used.</dl>
+<dt>&quot;VIRT_P2V_DATA_DIR&quot;</dt>
+<dd> The directory where virt-p2v-make-disk looks for data files (see &#8220;<font SIZE="-1">FILES&#8221;</font> above). If not set, a compiled-in location is used.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1), <i><a href="/docs/linux/man/1-virt-p2v-make-kickstart/">virt-p2v-make-kickstart</a></i>(1), <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
@@ -120,13 +120,13 @@ description: "virt-p2v-make-disk – Build the virt-p2v disk using virt-builder"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

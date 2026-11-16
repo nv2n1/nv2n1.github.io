@@ -11,14 +11,10 @@ std::experimental::filesystem::space_info - std::experimental::filesystem::space
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     struct space_info {
-
     uintmax_t capacity;
-
     uintmax_t free;
     (filesystem TS)
-
         uintmax_t available;
 };</code></pre> 
 Represents the filesystem information as determined by space 
@@ -30,13 +26,9 @@ The members have the following meaning:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::space_info devi = fs::space(&quot;/dev/null&quot;);
     fs::space_info tmpi = fs::space(&quot;/tmp&quot;);

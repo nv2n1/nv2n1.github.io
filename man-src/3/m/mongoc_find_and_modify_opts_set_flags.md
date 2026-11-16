@@ -14,28 +14,28 @@ mongoc_find_and_modify_opts_set_flags (mongoc_find_and_modify_opts_t *opts,
  const mongoc_find_and_modify_flags_t flags);</pre>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in mongoc 1.3.0</dl>
+<dd>New in mongoc 1.3.0</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dl>
+<dt><code>opts</code></dt>
+<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>\&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>\&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Adds one or more flags to the builder. </p>
 <dl COMPACT>
-<dt><code>MONGOC_FIND_AND_MODIFY_NONE</code></p>
-<dd>Default. Doesn&#8217;t add anything to the builder.</dl>
+<dt><code>MONGOC_FIND_AND_MODIFY_NONE</code></dt>
+<dd>Default. Doesn&#8217;t add anything to the builder.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_FIND_AND_MODIFY_REMOVE</code></p>
-<dd>Will instruct find_and_modify to remove the matching document.</dl>
+<dt><code>MONGOC_FIND_AND_MODIFY_REMOVE</code></dt>
+<dd>Will instruct find_and_modify to remove the matching document.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_FIND_AND_MODIFY_UPSERT</code></p>
-<dd>Update the matching document or, if no document matches, insert the document.</dl>
+<dt><code>MONGOC_FIND_AND_MODIFY_UPSERT</code></dt>
+<dd>Update the matching document or, if no document matches, insert the document.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_FIND_AND_MODIFY_RETURN_NEW</code></p>
-<dd>Return the resulting document.</dl>
+<dt><code>MONGOC_FIND_AND_MODIFY_RETURN_NEW</code></dt>
+<dd>Return the resulting document.</dd></dl>
 <h2>Returns</h2>
 <p>Returns true if it successfully added the option to the builder. </p>
 <h2>Setting Flags</h2>

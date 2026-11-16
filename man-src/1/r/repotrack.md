@@ -15,24 +15,24 @@ description: "repotrack – track a package and its dependencies and download th
 <p> <code>repotrack</code> is a program for keeping track of a particular package and its dependencies. It will download one or more packages and all dependencies. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a help message, and then quit.</p>
-<dt><code>-c CONFIG, &#8211;config=CONFIG</code></p>
-<dd> Config file to use (defaults to /etc/yum.conf).</p>
-<dt><code>-a ARCH, &#8211;arch=ARCH</code></p>
-<dd> Act as if running the specified arch (default: current arch).</p>
-<dt><code>-r REPOID, &#8211;repoid=REPOID</code></p>
-<dd> Specify repo ids to query, can be specified multiple times (default is all enabled).</p>
-<dt><code>-t, &#8211;tempcache</code></p>
-<dd> Use a temp dir for storing/accessing yum-cache.</p>
-<dt><code>-p DESTDIR, &#8211;download_path=DESTDIR</code></p>
-<dd> Path to download packages to.</p>
-<dt><code>-u, &#8211;urls</code></p>
-<dd> Instead of downloading RPMs, list the URLs that would be downloaded.</p>
-<dt><code>-n, &#8211;newest</code></p>
-<dd> Toggle downloading only the newest packages (defaults to newest-only).</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Output as little information as possible. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a help message, and then quit.</dd>
+<dt><code>-c CONFIG, &#8211;config=CONFIG</code></dt>
+<dd> Config file to use (defaults to /etc/yum.conf).</dd>
+<dt><code>-a ARCH, &#8211;arch=ARCH</code></dt>
+<dd> Act as if running the specified arch (default: current arch).</dd>
+<dt><code>-r REPOID, &#8211;repoid=REPOID</code></dt>
+<dd> Specify repo ids to query, can be specified multiple times (default is all enabled).</dd>
+<dt><code>-t, &#8211;tempcache</code></dt>
+<dd> Use a temp dir for storing/accessing yum-cache.</dd>
+<dt><code>-p DESTDIR, &#8211;download_path=DESTDIR</code></dt>
+<dd> Path to download packages to.</dd>
+<dt><code>-u, &#8211;urls</code></dt>
+<dd> Instead of downloading RPMs, list the URLs that would be downloaded.</dd>
+<dt><code>-n, &#8211;newest</code></dt>
+<dd> Toggle downloading only the newest packages (defaults to newest-only).</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Output as little information as possible. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

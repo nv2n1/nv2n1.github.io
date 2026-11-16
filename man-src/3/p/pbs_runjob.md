@@ -10,7 +10,6 @@ description: "pbs_runjob – run a pbs batch job"
 <p>pbs_runjob &#8211; run a pbs batch job</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <p> <code> int pbs_runjob(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*location, char&nbsp;<wbr>*extend) int pbs_asyrunjob(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*location, char&nbsp;<wbr>*extend) </code></p>
 <h2>Description</h2>

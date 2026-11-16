@@ -59,8 +59,8 @@ description: "dirsrvadmin_unconfined_script_selinux – Security Enhanced Linux 
 <p> <code>dirsrvadmin_unconfined_script_exec_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_unconfined_script_exec_t type, if you want to transition an executable to the dirsrvadmin_unconfined_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/dirsrv/cgi-bin/ds_create, /usr/lib/dirsrv/cgi-bin/ds_remove </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/dirsrv/cgi-bin/ds_create, /usr/lib/dirsrv/cgi-bin/ds_remove </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

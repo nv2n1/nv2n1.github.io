@@ -14,10 +14,10 @@ description: "hwloc-patch – Apply a topology difference to an existing XML top
 <p> <code>hwloc-patch</code> [<i>options</i>] <i>[&lt;topology.xml&gt; | refname]</i> <i>[&lt;diff.xml&gt; | -]</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-R &#8211;reverse</code></p>
-<dd> Reverse the sense the difference file.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Report version and exit.</dl>
+<dt><code>-R &#8211;reverse</code></dt>
+<dd> Reverse the sense the difference file.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Report version and exit.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> hwloc-patch loads the difference between two topologies from a XML file (or from the standard input) and applies it to an existing topology, generating a new, modified one. </p>
 <p> The XML difference may have been computed earlier with hwloc-diff or hwloc-compress-dir. </p>

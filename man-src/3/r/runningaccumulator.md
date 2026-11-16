@@ -10,16 +10,10 @@ description: "QuantLib::DiscreteAveragingAsianOption::arguments – Extra argume
 <p>QuantLib::DiscreteAveragingAsianOption::arguments &#8211; Extra arguments for single-asset discrete-average Asian option. </p>
 <h2>Synopsis</h2>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Inherits OneAssetOption::arguments.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Average::Type <code>averageType</code> </p>
 <p> <code>Real</code> <code>runningAccumulator</code> </p>

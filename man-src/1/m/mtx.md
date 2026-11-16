@@ -21,36 +21,36 @@ description: "mtx – control SCSI media changer devices"
 <p> Following these options there may follow one or more robotics control commands. Note that the &#8216;invert&#8217; and &#8216;noattach&#8217; options apply to ALL of robotics control commands. </p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Report the mtx version number (e.g. mtx 1.2.8) and exit. </p>
-<dt><code>inquiry</code></p>
-<dd> Report the product type (Medium Changer, Tape Drive, etc.), Vendor ID, Product ID, Revision, and whether this uses the Attached Changer API (some tape drives use this rather than reporting a Medium Changer on a separate LUN or SCSI address).</p>
-<dt><code>noattach</code></p>
-<dd> Make further commands use the regular media changer API rather than the _ATTACHED API, no matter what the &quot;Attached&quot; bit said in the Inquiry info. Needed with some brain-dead changers that report Attached bit but don&#8217;t respond to _ATTACHED API.</p>
-<dt><code>inventory</code></p>
-<dd> Makes the robot arm go and check what elements are in the slots. This is needed for a few libraries like the Breece Hill ones that do not automatically check the tape inventory at system startup.</p>
-<dt><code>status</code></p>
-<dd> Reports how many drives and storage elements are contained in the device. For each drive, reports whether it has media loaded in it, and if so, from which storage slot the media originated. For each storage slot, reports whether it is empty or full, and if the media changer has a bar code, MIC reader, or some other way of uniquely identifying media without loading it into a drive, this reports the volume tag and/or alternate volume tag for each piece of media. For historical reasons drives are numbered from 0 and storage slots are numbered from 1.</p>
-<dt><code>load &lt;slotnum&gt; [ &lt;drivenum&gt; ]</code></p>
-<dd> Load media from slot &lt;slotnum&gt; into drive &lt;drivenum&gt;. Drive 0 is assumed if the drive number is omitted.</p>
-<dt><code>unload [&lt;slotnum&gt;] [ &lt;drivenum&gt; ]</code></p>
-<dd> Unloads media from drive &lt;drivenum&gt; into slot &lt;slotnum&gt;. If &lt;drivenum&gt; is omitted, defaults to drive 0 (as do all commands). If &lt;slotnum&gt; is omitted, defaults to the slot that the drive was loaded from. Note that there&#8217;s currently no way to say &#8216;unload drive 1&#8217;s media to the slot it came from&#8217;, other than to explicitly use that slot number as the destination.</p>
-<dt><code>[eepos &lt;operation&gt;] transfer &lt;slotnum&gt; &lt;slotnum&gt;</code></p>
-<dd> Transfers media from one slot to another, assuming that your mechanism is capable of doing so. Usually used to move media to/from an import/export port. &#8216;eepos&#8217; is used to extend/retract the import/export tray on certain mid-range to high end tape libraries (if, e.g., the tray was slot 32, you might say say &#8216;eepos 1 transfer 32 32&#8217; to extend the tray). Valid values for eepos &lt;operation&gt; are 0 (do nothing to the import/export tray), 1, and 2 (what 1 and 2 do varies depending upon the library, consult your library&#8217;s SCSI-level documentation).</p>
-<dt><code>[eepos &lt;operation&gt;] [invert] [invert2] exchange &lt;slotnum&gt; &lt;slotnum&gt; [&lt;slotnum&gt;]</code></p>
-<dd> Move medium from the first slot to the second slot, placing the medium currently in the second slot either back into the first slot or into the optional third slot. </p>
-<dt><code>first [&lt;drivenum&gt;]</code></p>
-<dd> Loads drive &lt;drivenum&gt; from the first slot in the media changer. Unloads the drive if there is already media in it (note: you may need to eject the tape using your OS&#8217;s tape control commands first). Note that this command may not be what you want on large tape libraries &#8212; e.g. on Exabyte 220, the first slot is usually a cleaning tape. If &lt;drivenum&gt; is omitted, defaults to first drive.</p>
-<dt><code>last [&lt;drivenum&gt;]</code></p>
-<dd> Loads drive &lt;drivenum&gt; from the last slot in the media changer. Unloads the drive if there is already a tape in it. (Note: you may need to eject the tape using your OS&#8217;s tape control commands first).</p>
-<dt><code>previous [&lt;drivenum&gt;]</code></p>
-<dd> Unloads the drive and loads the previous tape in sequence. If the drive was empty, loads the first tape into the drive.</p>
-<dt><code>next [&lt;drivenum&gt;]</code></p>
-<dd> Unloads the drive and loads the next tape in sequence. If the drive was empty, loads the first tape into the drive.</p>
-<dt><code>position &lt;slotnum&gt;</code></p>
-<dd> Positions the robot at a specific slot. Needed by some changers to move to and open the import/export, or mailbox, slot.</p>
-<dt><code>eject</code></p>
-<dd> Eject the tape currently in the drive. </p>
+<dt><code>&#8211;version</code></dt>
+<dd> Report the mtx version number (e.g. mtx 1.2.8) and exit. </dd>
+<dt><code>inquiry</code></dt>
+<dd> Report the product type (Medium Changer, Tape Drive, etc.), Vendor ID, Product ID, Revision, and whether this uses the Attached Changer API (some tape drives use this rather than reporting a Medium Changer on a separate LUN or SCSI address).</dd>
+<dt><code>noattach</code></dt>
+<dd> Make further commands use the regular media changer API rather than the _ATTACHED API, no matter what the &quot;Attached&quot; bit said in the Inquiry info. Needed with some brain-dead changers that report Attached bit but don&#8217;t respond to _ATTACHED API.</dd>
+<dt><code>inventory</code></dt>
+<dd> Makes the robot arm go and check what elements are in the slots. This is needed for a few libraries like the Breece Hill ones that do not automatically check the tape inventory at system startup.</dd>
+<dt><code>status</code></dt>
+<dd> Reports how many drives and storage elements are contained in the device. For each drive, reports whether it has media loaded in it, and if so, from which storage slot the media originated. For each storage slot, reports whether it is empty or full, and if the media changer has a bar code, MIC reader, or some other way of uniquely identifying media without loading it into a drive, this reports the volume tag and/or alternate volume tag for each piece of media. For historical reasons drives are numbered from 0 and storage slots are numbered from 1.</dd>
+<dt><code>load &lt;slotnum&gt; [ &lt;drivenum&gt; ]</code></dt>
+<dd> Load media from slot &lt;slotnum&gt; into drive &lt;drivenum&gt;. Drive 0 is assumed if the drive number is omitted.</dd>
+<dt><code>unload [&lt;slotnum&gt;] [ &lt;drivenum&gt; ]</code></dt>
+<dd> Unloads media from drive &lt;drivenum&gt; into slot &lt;slotnum&gt;. If &lt;drivenum&gt; is omitted, defaults to drive 0 (as do all commands). If &lt;slotnum&gt; is omitted, defaults to the slot that the drive was loaded from. Note that there&#8217;s currently no way to say &#8216;unload drive 1&#8217;s media to the slot it came from&#8217;, other than to explicitly use that slot number as the destination.</dd>
+<dt><code>[eepos &lt;operation&gt;] transfer &lt;slotnum&gt; &lt;slotnum&gt;</code></dt>
+<dd> Transfers media from one slot to another, assuming that your mechanism is capable of doing so. Usually used to move media to/from an import/export port. &#8216;eepos&#8217; is used to extend/retract the import/export tray on certain mid-range to high end tape libraries (if, e.g., the tray was slot 32, you might say say &#8216;eepos 1 transfer 32 32&#8217; to extend the tray). Valid values for eepos &lt;operation&gt; are 0 (do nothing to the import/export tray), 1, and 2 (what 1 and 2 do varies depending upon the library, consult your library&#8217;s SCSI-level documentation).</dd>
+<dt><code>[eepos &lt;operation&gt;] [invert] [invert2] exchange &lt;slotnum&gt; &lt;slotnum&gt; [&lt;slotnum&gt;]</code></dt>
+<dd> Move medium from the first slot to the second slot, placing the medium currently in the second slot either back into the first slot or into the optional third slot. </dd>
+<dt><code>first [&lt;drivenum&gt;]</code></dt>
+<dd> Loads drive &lt;drivenum&gt; from the first slot in the media changer. Unloads the drive if there is already media in it (note: you may need to eject the tape using your OS&#8217;s tape control commands first). Note that this command may not be what you want on large tape libraries &#8212; e.g. on Exabyte 220, the first slot is usually a cleaning tape. If &lt;drivenum&gt; is omitted, defaults to first drive.</dd>
+<dt><code>last [&lt;drivenum&gt;]</code></dt>
+<dd> Loads drive &lt;drivenum&gt; from the last slot in the media changer. Unloads the drive if there is already a tape in it. (Note: you may need to eject the tape using your OS&#8217;s tape control commands first).</dd>
+<dt><code>previous [&lt;drivenum&gt;]</code></dt>
+<dd> Unloads the drive and loads the previous tape in sequence. If the drive was empty, loads the first tape into the drive.</dd>
+<dt><code>next [&lt;drivenum&gt;]</code></dt>
+<dd> Unloads the drive and loads the next tape in sequence. If the drive was empty, loads the first tape into the drive.</dd>
+<dt><code>position &lt;slotnum&gt;</code></dt>
+<dd> Positions the robot at a specific slot. Needed by some changers to move to and open the import/export, or mailbox, slot.</dd>
+<dt><code>eject</code></dt>
+<dd> Eject the tape currently in the drive. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> The original &#8216;mtx&#8217; program was written by Leonard Zubkoff and extensively revised for large multi-drive libraries with bar code readers by Eric Lee Green &lt;eric [at] badtux.org&gt;. See &#8216;mtx.c&#8217; for other contributors.</p>

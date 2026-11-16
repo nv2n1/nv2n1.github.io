@@ -10,13 +10,9 @@ description: "std::midpoint – std::midpoint"
 <p>std::midpoint &#8211; std::midpoint</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class T &gt;                      (1) (since C++20)
-
 constexpr T midpoint(T a, T b) noexcept;
-
 template&lt; class T &gt;                      (2) (since C++20)
-
 constexpr T* midpoint(T* a, T* b);</code></pre>
 <p>Computes the midpoint of the integers, floating-points, or pointers a and b. </p>
 <h2>Parameters</h2>

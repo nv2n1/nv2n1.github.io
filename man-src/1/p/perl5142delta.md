@@ -49,25 +49,19 @@ url: "/docs/linux/man/1-perl5142delta/"
 
 <dl>
 <dt>&bull;
-<dd> <font SIZE="-1">CPAN</font> has been upgraded from version 1.9600 to version 1.9600_01. 
-
+</dt><dd> <font SIZE="-1">CPAN</font> has been upgraded from version 1.9600 to version 1.9600_01. 
  CPAN::Distribution has been upgraded from version 1.9602 to 1.9602_01. 
-
  Backported bugfixes from <font SIZE="-1">CPAN</font> version 1.9800. Ensures proper detection of <tt>&quot;configure_requires&quot;</tt> prerequisites from <font SIZE="-1">CPAN</font> Meta files in the case where <tt>&quot;dynamic_config&quot;</tt> is true. [rt.cpan.org #68835] 
-
  Also ensures that <tt>&quot;configure_requires&quot;</tt> is only checked in <font SIZE="-1">META</font> files, not <font SIZE="-1">MYMETA</font> files, so protect against <font SIZE="-1">MYMETA</font> generation that drops <tt>&quot;configure_requires&quot;</tt>.
-<dt>&bull;
-<dd> Encode has been upgraded from version 2.42 to 2.42_01. 
-
+</dd><dt>&bull;
+</dt><dd> Encode has been upgraded from version 2.42 to 2.42_01. 
  See ``Security''.
-<dt>&bull;
-<dd> File::Glob has been upgraded from version 1.12 to version 1.13. 
-
+</dd><dt>&bull;
+</dt><dd> File::Glob has been upgraded from version 1.12 to version 1.13. 
  See ``Security''.
-<dt>&bull;
-<dd> PerlIO::scalar has been upgraded from version 0.11 to 0.11_01. 
-
- It fixes a problem with <tt>&quot;open my $fh, &quot;&gt;&quot;, \$scalar&quot;</tt> not working if <tt>$scalar</tt> is a copy-on-write scalar.</dl>
+</dd><dt>&bull;
+</dt><dd> PerlIO::scalar has been upgraded from version 0.11 to 0.11_01. 
+ It fixes a problem with <tt>&quot;open my $fh, &quot;&gt;&quot;, \$scalar&quot;</tt> not working if <tt>$scalar</tt> is a copy-on-write scalar.</dd></dl>
 
 <h3>Removed Modules and Pragmata</h3>
 
@@ -87,42 +81,39 @@ url: "/docs/linux/man/1-perl5142delta/"
 
 <dl>
 <dt>HP-UX <font SIZE="-1">PA-RISC/64</font> now supports gcc-4.x
-<dd> A fix to correct the socketsize now makes the test suite pass on HP-UX PA-RISC for 64bitall builds.
-<dt>Building on <font SIZE="-1">OS X 10.7</font> Lion and Xcode 4 works again
-<dd> The build system has been updated to work with the build tools under Mac <font SIZE="-1">OS X 10.7.</font></dl>
+</dt><dd> A fix to correct the socketsize now makes the test suite pass on HP-UX PA-RISC for 64bitall builds.
+</dd><dt>Building on <font SIZE="-1">OS X 10.7</font> Lion and Xcode 4 works again
+</dt><dd> The build system has been updated to work with the build tools under Mac <font SIZE="-1">OS X 10.7.</font></dd></dl>
 
 <h2>Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> In <tt>@INC</tt> filters (subroutines returned by subroutines in <tt>@INC</tt>), <tt>$_</tt> used to misbehave: If returned from a subroutine, it would not be copied, but the variable itself would be returned; and freeing <tt>$_</tt> (e.g., with <tt>&quot;undef *_&quot;</tt>) would cause perl to crash. This has been fixed [perl #91880].
-<dt>&bull;
-<dd> Perl 5.10.0 introduced some faulty logic that made ``U*'' in the middle of a pack template equivalent to ``U0'' if the input string was empty. This has been fixed [perl #90160].
-<dt>&bull;
-<dd> <tt>&quot;caller&quot;</tt> no longer leaks memory when called from the <font SIZE="-1">DB</font> package if <tt>@DB::args</tt> was assigned to after the first call to <tt>&quot;caller&quot;</tt>. Carp was triggering this bug [perl #97010].
-<dt>&bull;
-<dd> <tt>&quot;utf8::decode&quot;</tt> had a nasty bug that would modify copy-on-write scalars' string buffers in place (i.e., skipping the copy). This could result in hashes having two elements with the same key [perl #91834].
-<dt>&bull;
-<dd> Localising a tied variable used to make it read-only if it contained a copy-on-write string.
-<dt>&bull;
-<dd> Elements of restricted hashes (see the fields pragma) containing copy-on-write values couldn't be deleted, nor could such hashes be cleared (<tt>&quot;%hash = ()&quot;</tt>).
-<dt>&bull;
-<dd> Locking a hash element that is a glob copy no longer causes subsequent assignment to it to corrupt the glob.
-<dt>&bull;
-<dd> A panic involving the combination of the regular expression modifiers <tt>&quot;/aa&quot;</tt> introduced in 5.14.0 and the <tt>&quot;\b&quot;</tt> escape sequence has been fixed [perl #95964].</dl>
+</dt><dd> In <tt>@INC</tt> filters (subroutines returned by subroutines in <tt>@INC</tt>), <tt>$_</tt> used to misbehave: If returned from a subroutine, it would not be copied, but the variable itself would be returned; and freeing <tt>$_</tt> (e.g., with <tt>&quot;undef *_&quot;</tt>) would cause perl to crash. This has been fixed [perl #91880].
+</dd><dt>&bull;
+</dt><dd> Perl 5.10.0 introduced some faulty logic that made ``U*'' in the middle of a pack template equivalent to ``U0'' if the input string was empty. This has been fixed [perl #90160].
+</dd><dt>&bull;
+</dt><dd> <tt>&quot;caller&quot;</tt> no longer leaks memory when called from the <font SIZE="-1">DB</font> package if <tt>@DB::args</tt> was assigned to after the first call to <tt>&quot;caller&quot;</tt>. Carp was triggering this bug [perl #97010].
+</dd><dt>&bull;
+</dt><dd> <tt>&quot;utf8::decode&quot;</tt> had a nasty bug that would modify copy-on-write scalars' string buffers in place (i.e., skipping the copy). This could result in hashes having two elements with the same key [perl #91834].
+</dd><dt>&bull;
+</dt><dd> Localising a tied variable used to make it read-only if it contained a copy-on-write string.
+</dd><dt>&bull;
+</dt><dd> Elements of restricted hashes (see the fields pragma) containing copy-on-write values couldn't be deleted, nor could such hashes be cleared (<tt>&quot;%hash = ()&quot;</tt>).
+</dd><dt>&bull;
+</dt><dd> Locking a hash element that is a glob copy no longer causes subsequent assignment to it to corrupt the glob.
+</dd><dt>&bull;
+</dt><dd> A panic involving the combination of the regular expression modifiers <tt>&quot;/aa&quot;</tt> introduced in 5.14.0 and the <tt>&quot;\b&quot;</tt> escape sequence has been fixed [perl #95964].</dd></dl>
 
 <h2>Known Problems</h2>
 
  This is a list of some significant unfixed bugs, which are regressions from 5.12.0.
 <dl>
 <dt>&bull;
-<dd> <tt>&quot;PERL_GLOBAL_STRUCT&quot;</tt> is broken. 
-
+</dt><dd> <tt>&quot;PERL_GLOBAL_STRUCT&quot;</tt> is broken. 
  Since perl 5.14.0, building with <tt>&quot;-DPERL_GLOBAL_STRUCT&quot;</tt> hasn't been possible. This means that perl currently doesn't work on any platforms that require it to be built this way, including Symbian. 
-
  While <tt>&quot;PERL_GLOBAL_STRUCT&quot;</tt> now works again on recent development versions of perl, it actually working on Symbian again hasn't been verified. 
-
- We'd be very interested in hearing from anyone working with Perl on Symbian.</dl>
+ We'd be very interested in hearing from anyone working with Perl on Symbian.</dd></dl>
 
 <h2>Acknowledgements</h2>
 
@@ -155,24 +146,24 @@ url: "/docs/linux/man/1-perl5142delta/"
 
 
 <dt><a HREF="#lbAH">Incompatible Changes</a>
-<dd>
-<dt><a HREF="#lbAI">Deprecations</a>
-<dd>
-<dt><a HREF="#lbAJ">Modules and Pragmata</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAI">Deprecations</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAJ">Modules and Pragmata</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAN">Platform Support</a>
-<dd>
+</dd><dt><a HREF="#lbAN">Platform Support</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAR">Bug Fixes</a>
-<dd>
-<dt><a HREF="#lbAS">Known Problems</a>
-<dd>
-<dt><a HREF="#lbAT">Acknowledgements</a>
-<dd>
-<dt><a HREF="#lbAU">Reporting Bugs</a>
-<dd>
-<dt><a HREF="#lbAV">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAR">Bug Fixes</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAS">Known Problems</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAT">Acknowledgements</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAU">Reporting Bugs</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAV">SEE ALSO</a>
+</dt><dd></dd></dl>

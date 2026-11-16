@@ -15,46 +15,46 @@ description: "sxpm – Show an XPM (X PixMap) file and/or convert XPM 1 or 2 fil
 <p> The <i>sxpm</i> program can be used to view any XPM (version 1, 2, or 3) file and/or to convert a file from XPM1 or XPM2 to XPM version 3. If <i>sxpm</i> is run with any dummy option specified, the usage is displayed. If no geometry is specified, the show window will have the size of the read pixmap. Pressing the key Q in the window will quit the program.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d </code><i>display</i></p>
-<dd> Specifies the display to connect to.</p>
-<dt><code>-g </code><i>geom</i></p>
-<dd> Window geometry (default is pixmap&#8217;s size).</p>
-<dt><code>-hints</code></p>
-<dd> Set ResizeInc for window.</p>
-<dt><code>-icon </code><i>filename</i></p>
-<dd> Set icon to pixmap created from the file <i>filename</i>.</p>
-<dt><code>-plaid</code></p>
-<dd> Show the plaid pixmap which is stored as data.</p>
-<dt><i>filename</i></p>
-<dd> Read from the file <i>filename</i> and from standard input if <i>filename</i> is &#8216;-&#8216;. If no input is specified sxpm reads from standard input.</p>
-<dt><code>-o </code><i>filename</i></p>
-<dd> Write to the file <i>filename</i> (overwrite if it already exists) and to standard output if <i>filename</i> is &#8216;-&#8216;.</p>
-<dt><code>-mono</code></p>
-<dd> Use the colors specified for a monochrome visual.</p>
-<dt><code>-grey4</code></p>
-<dd> Use the colors specified for a 4 color greyscale visual.</p>
-<dt><code>-grey</code></p>
-<dd> Use the colors specified for a greyscale visual.</p>
-<dt><code>-color</code></p>
-<dd> Use the colors specified for a color visual.</p>
-<dt><code>-pcmap</code></p>
-<dd> Use a private colormap.</p>
-<dt><code>-closecolors</code></p>
-<dd> Try to use &quot;close colors&quot; before reverting to other visuals.</p>
-<dt><code>-nod</code></p>
-<dd> Do not display the pixmap in a window. (Useful when using as converter)</p>
-<dt><code>-nom</code></p>
-<dd> Do not use the clipmask if there is any.</p>
-<dt><code>-sc </code><i>symbol colorname</i></p>
-<dd> Override default color to <i>symbol</i> to <i>colorname</i>.</p>
-<dt><code>-sp </code><i>symbol pixelvalue</i></p>
-<dd> Override default color to <i>symbol</i> to <i>pixelvalue</i>.</p>
-<dt><code>-cp </code><i>colorname pixelvalue</i></p>
-<dd> Override default color to <i>colorname</i> to <i>pixelvalue</i>.</p>
-<dt><code>-rgb </code><i>filename</i></p>
-<dd> Search color names in the file <i>filename</i> and write them out instead of the rgb values.</p>
-<dt><code>-v</code></p>
-<dd> Verbose &#8211; to print out extensions (stderr). </p>
+<dt><code>-d </code><i>display</i></dt>
+<dd> Specifies the display to connect to.</dd>
+<dt><code>-g </code><i>geom</i></dt>
+<dd> Window geometry (default is pixmap&#8217;s size).</dd>
+<dt><code>-hints</code></dt>
+<dd> Set ResizeInc for window.</dd>
+<dt><code>-icon </code><i>filename</i></dt>
+<dd> Set icon to pixmap created from the file <i>filename</i>.</dd>
+<dt><code>-plaid</code></dt>
+<dd> Show the plaid pixmap which is stored as data.</dd>
+<dt><i>filename</i></dt>
+<dd> Read from the file <i>filename</i> and from standard input if <i>filename</i> is &#8216;-&#8216;. If no input is specified sxpm reads from standard input.</dd>
+<dt><code>-o </code><i>filename</i></dt>
+<dd> Write to the file <i>filename</i> (overwrite if it already exists) and to standard output if <i>filename</i> is &#8216;-&#8216;.</dd>
+<dt><code>-mono</code></dt>
+<dd> Use the colors specified for a monochrome visual.</dd>
+<dt><code>-grey4</code></dt>
+<dd> Use the colors specified for a 4 color greyscale visual.</dd>
+<dt><code>-grey</code></dt>
+<dd> Use the colors specified for a greyscale visual.</dd>
+<dt><code>-color</code></dt>
+<dd> Use the colors specified for a color visual.</dd>
+<dt><code>-pcmap</code></dt>
+<dd> Use a private colormap.</dd>
+<dt><code>-closecolors</code></dt>
+<dd> Try to use &quot;close colors&quot; before reverting to other visuals.</dd>
+<dt><code>-nod</code></dt>
+<dd> Do not display the pixmap in a window. (Useful when using as converter)</dd>
+<dt><code>-nom</code></dt>
+<dd> Do not use the clipmask if there is any.</dd>
+<dt><code>-sc </code><i>symbol colorname</i></dt>
+<dd> Override default color to <i>symbol</i> to <i>colorname</i>.</dd>
+<dt><code>-sp </code><i>symbol pixelvalue</i></dt>
+<dd> Override default color to <i>symbol</i> to <i>pixelvalue</i>.</dd>
+<dt><code>-cp </code><i>colorname pixelvalue</i></dt>
+<dd> Override default color to <i>colorname</i> to <i>pixelvalue</i>.</dd>
+<dt><code>-rgb </code><i>filename</i></dt>
+<dd> Search color names in the file <i>filename</i> and write them out instead of the rgb values.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose &#8211; to print out extensions (stderr). </dd>
 </dl>
 <h2>KNOWN BUGS</h2>
 <p> Some window managers may not accept a pixmap which is not a bitmap as icon because this does not respect ICCCM, many of the well known ones will accept it though. </p>

@@ -10,10 +10,8 @@ description: "std::is_placeholder – std::is_placeholder"
 <p>std::is_placeholder &#8211; std::is_placeholder</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_placeholder;</code></pre>
 <p>If T is the type of a standard placeholder (_1, _2, _3, &#8230;), then this template is derived from std::integral_constant&lt;int,1&gt;, std::integral_constant&lt;int,2&gt;, std::integral_constant&lt;int,3&gt;, respectively.<br />
 If T is not a standard placeholder type, this template is derived from std::integral_constant&lt;int,0&gt;<br />
@@ -40,27 +38,21 @@ type std::integral_constant&lt;int, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;functional&gt;
 struct My_2 {
-
 } my_2;
 namespace std
 {
 template &lt;&gt;
 struct is_placeholder&lt;My_2&gt; : public integral_constant&lt;int, 2&gt; {
 };
-
 } // namespace std
 int f(int n1, int n2)
-
 {
     return n1 + n2;
 }
 int main()
-
 {
     std::cout &lt;&lt; &quot;Standard placeholder _5 is for the argument number &quot;
               &lt;&lt; std::is_placeholder&lt;decltype(std::placeholders::_5)&gt;::value

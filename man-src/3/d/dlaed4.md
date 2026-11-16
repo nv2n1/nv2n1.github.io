@@ -19,7 +19,7 @@ description: "dlaed4.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  This subroutine computes the I-th updated eigenvalue of a symmetric
  rank-one modification to a diagonal matrix whose elements are
@@ -32,11 +32,11 @@ description: "dlaed4.f –"
  The method consists of approximating the rational functions in the
  secular equation by simpler interpolating rational functions.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
          The length of all arrays.
@@ -85,7 +85,7 @@ description: "dlaed4.f –"
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
   Logical variable ORGATI (origin-at-i?) is used for distinguishing
   whether D(i) or D(i+1) is treated as the origin.
@@ -96,22 +96,22 @@ description: "dlaed4.f –"
    MAXIT is the maximum number of iterations allowed for each
    eigenvalue.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 146 of file dlaed4.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -49,73 +49,73 @@ description: "ncidd – Network Caller ID Server"
 <p> <code>NCIDD</code> will reload the alias file when sent a SIGHUP signal.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-A &lt;file&gt; | &#8211;alias &lt;file&gt;</code></p>
+<dt><code>-A &lt;file&gt; | &#8211;alias &lt;file&gt;</code></dt>
 <dd>Alias file.<br />
- Default: /etc/ncid/ncidd.alias</p>
-<dt><code>-C &lt;file&gt; | &#8211;config &lt;file&gt;</code></p>
+ Default: /etc/ncid/ncidd.alias</dd>
+<dt><code>-C &lt;file&gt; | &#8211;config &lt;file&gt;</code></dt>
 <dd>Config file.<br />
- Default: /etc/ncid/ncidd.conf</p>
-<dt><code>-c &lt;file&gt; | &#8211;cidlog &lt;file&gt;</code></p>
+ Default: /etc/ncid/ncidd.conf</dd>
+<dt><code>-c &lt;file&gt; | &#8211;cidlog &lt;file&gt;</code></dt>
 <dd>Call log data file.<br />
- Default: /var/log/cidcall.log</p>
-<dt><code>-D | &#8211;debug</code></p>
-<dd>Debug mode.</p>
-<dt><code>-d &lt;file&gt; | &#8211;datalog &lt;file&gt;</code></p>
+ Default: /var/log/cidcall.log</dd>
+<dt><code>-D | &#8211;debug</code></dt>
+<dd>Debug mode.</dd>
+<dt><code>-d &lt;file&gt; | &#8211;datalog &lt;file&gt;</code></dt>
 <dd>Data log data file, usually from a modem.<br />
- Default: /var/log/datalog.log</p>
-<dt><code>-e &lt;identifier&gt; | &#8211;lineid &lt;identifier&gt;</code></p>
+ Default: /var/log/datalog.log</dd>
+<dt><code>-e &lt;identifier&gt; | &#8211;lineid &lt;identifier&gt;</code></dt>
 <dd>The telephone line identifier is for a modem. It is normally 1 to 4 characters. The default indicator is not displayed, but for one POTS line, you could change it to <i>POTS</i>. For multiple lines you should use a identifier. You could change it to the 4 digit extension for an exchange. For example, if the telephone number is 321-555-1212 the identifier whould be 1212.<br />
- Default: &#8211;</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd>Display a help message.</p>
-<dt><code>-I string | &#8211;initstr string</code></p>
+ Default: &#8211;</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd>Display a help message.</dd>
+<dt><code>-I string | &#8211;initstr string</code></dt>
 <dd>Modem initialization string<br />
- Default: ATE1V1Q0</p>
-<dt><code>-i string | &#8211;initcid string</code></p>
+ Default: ATE1V1Q0</dd>
+<dt><code>-i string | &#8211;initcid string</code></dt>
 <dd>CID initialization string<br />
  Default: AT+VCID=1<br />
- if it fails: AT#CID=1</p>
-<dt><code>-L &lt;file&gt; | &#8211;logfile &lt;file&gt;</code></p>
+ if it fails: AT#CID=1</dd>
+<dt><code>-L &lt;file&gt; | &#8211;logfile &lt;file&gt;</code></dt>
 <dd>Server logfile.<br />
- Default: /var/log/ncidd.log</p>
-<dt><code>-l &lt;file&gt; | &#8211;lockfile &lt;file&gt;</code></p>
+ Default: /var/log/ncidd.log</dd>
+<dt><code>-l &lt;file&gt; | &#8211;lockfile &lt;file&gt;</code></dt>
 <dd>Modem lockfile.<br />
- Default: /var/lock/LCK..modem</p>
-<dt><code>-M &lt;MaxBytes&gt; | &#8211;cidlogmax &lt;MaxBytes&gt;</code></p>
+ Default: /var/lock/LCK..modem</dd>
+<dt><code>-M &lt;MaxBytes&gt; | &#8211;cidlogmax &lt;MaxBytes&gt;</code></dt>
 <dd>Set the maximum CID call log file size in bytes.<br />
  Maximum size is 100000000<br />
- Default: cidlogmax = 110000</p>
-<dt><code>-N &lt;0|1&gt; | &#8211;noserial &lt;0|1&gt;</code></p>
+ Default: cidlogmax = 110000</dd>
+<dt><code>-N &lt;0|1&gt; | &#8211;noserial &lt;0|1&gt;</code></dt>
 <dd>serial device (0) or no serial device (1)<br />
- Default: noserial = 0</p>
-<dt><code>-n &lt;0|1&gt; | &#8211;nomodem &lt;0|1&gt;</code></p>
+ Default: noserial = 0</dd>
+<dt><code>-n &lt;0|1&gt; | &#8211;nomodem &lt;0|1&gt;</code></dt>
 <dd>modem (0) or no modem (1)<br />
- Default: nomodem = 0</p>
-<dt><code>-P &lt;pidfile&gt; | &#8211;pidfile &lt;pidfile&gt;</code></p>
-<dd>Server PID file. Set to <i>/var/run/ncidd.pid</i><code> in a rc or init script when used as a service. The program will still run if it does not have permission to write a pidfile. There is no default. If pidfile is not set, no pid file will be used.</p>
-<dt>-p &lt;port&gt; | &#8211;port &lt;port&gt;</code></p>
+ Default: nomodem = 0</dd>
+<dt><code>-P &lt;pidfile&gt; | &#8211;pidfile &lt;pidfile&gt;</code></dt>
+<dd>Server PID file. Set to <i>/var/run/ncidd.pid</i><code> in a rc or init script when used as a service. The program will still run if it does not have permission to write a pidfile. There is no default. If pidfile is not set, no pid file will be used.</dd>
+<dt>-p &lt;port&gt; | &#8211;port &lt;port&gt;</code></dt>
 <dd>Server port.<br />
- Default: 3333</p>
-<dt><code>-S &lt;0|1&gt; | &#8211;ttyclocal &lt;0|1&gt;</code></p>
+ Default: 3333</dd>
+<dt><code>-S &lt;0|1&gt; | &#8211;ttyclocal &lt;0|1&gt;</code></dt>
 <dd>Enable (0) or disable (1) modem control signals.<br />
- Default: modem control signals disabled</p>
-<dt><code>-s &lt;datatype&gt; | &#8211;send &lt;datatype&gt;</code></p>
+ Default: modem control signals disabled</dd>
+<dt><code>-s &lt;datatype&gt; | &#8211;send &lt;datatype&gt;</code></dt>
 <dd>Send optional CID data to a client. Where <i>datatype</i> is:<br />
  <i>cidlog</i>: sent when the client connects. If the CID call log gets too big, it will not be sent.<br />
  <i>cidinfo</i>: sent on each ring, to all clients, gives the current ring count.<br />
- Default: Optional CID DATA is not sent</p>
-<dt><code>-T &lt;ttyspeed&gt; | &#8211;ttyspeed &lt;ttyspeed&gt;</code></p>
+ Default: Optional CID DATA is not sent</dd>
+<dt><code>-T &lt;ttyspeed&gt; | &#8211;ttyspeed &lt;ttyspeed&gt;</code></dt>
 <dd>Set the tty port speed to one of: 19200, 9600, 4800<br />
- Default: ttyspeed = 19200</p>
-<dt><code>-t &lt;ttyport&gt; | &#8211;ttyport &lt;ttyport&gt;</code></p>
+ Default: ttyspeed = 19200</dd>
+<dt><code>-t &lt;ttyport&gt; | &#8211;ttyport &lt;ttyport&gt;</code></dt>
 <dd>Modem device file, or serial port that provides Caller ID information.<br />
- Default: /dev/modem</p>
-<dt><code>-V | &#8211;version</code></p>
-<dd>Display the version number.</p>
-<dt><code>-v &lt;1-9&gt; | &#8211;verbose &lt;1-9&gt;</code></p>
+ Default: /dev/modem</dd>
+<dt><code>-V | &#8211;version</code></dt>
+<dd>Display the version number.</dd>
+<dt><code>-v &lt;1-9&gt; | &#8211;verbose &lt;1-9&gt;</code></dt>
 <dd>Output information, used for the logfile and the -D option. Set higher number for more information.<br />
  Default: verbose = 1<br />
- Most Useful: verbose = 3</dl>
+ Most Useful: verbose = 3</dd></dl>
 <h2>Configuration</h2>
 <p>The ncidd.conf(5) file is used to set options. The syntax of the ncidd.conf(5) file is discussed seperately, and should be consulted for detailed reference information. </p>
 <p> The ncidd.alias(5) file is used to create aliases. The syntax of the ncidd.alias(5) file is discussed seperately, and should be consulted for detailed reference information.</p>
@@ -135,12 +135,12 @@ MSG: Too many clients connected: 15
 MSGLOG: Too many clients connected: 15</pre>
 <h2>Log Files</h2>
 <dl>
-<dt><code>cidcall.log</code></p>
-<dd>Contains CID and MSG lines</p>
-<dt><code>ciddata.log</code></p>
-<dd>Contains the output from the modem or CID device</p>
-<dt><code>ncidd.log</code></p>
-<dd>Server log file. Contents controlled by verbose.</dl>
+<dt><code>cidcall.log</code></dt>
+<dd>Contains CID and MSG lines</dd>
+<dt><code>ciddata.log</code></dt>
+<dd>Contains the output from the modem or CID device</dd>
+<dt><code>ncidd.log</code></dt>
+<dd>Server log file. Contents controlled by verbose.</dd></dl>
 <h2>Diagnostics</h2>
 <pre> Return Code Meaning
  ----------- -------

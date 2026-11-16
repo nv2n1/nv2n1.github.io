@@ -43,14 +43,12 @@ description: "include/antlr3input.h –"
 <p> Common function to setup function interface for an 8 bit ASCII input stream. <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>input</i> Input stream context pointer</dl>
+</dt><dd> <i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> Many of the 8 bit ASCII oriented file stream handling functions will be usable by any or at least some other input streams. Therefore it is perfectly acceptable to call this function to install the ASCII handler then override just those functions that would not work for the particular input encoding, such as consume for instance.</dl>
+<dt>*</dt>
+<dd> Many of the 8 bit ASCII oriented file stream handling functions will be usable by any or at least some other input streams. Therefore it is perfectly acceptable to call this function to install the ASCII handler then override just those functions that would not work for the particular input encoding, such as consume for instance.</dd></dl>
 </dl>
 <p> References antlr3GenericSetupStream(), antlr3StringFactoryNew(), and ANTLR3_INPUT_STREAM_struct::strFactory. </p>
 <p> Referenced by antlr3AsciiFileStreamNew(), antlr3NewAsciiStringCopyStream(), and antlr3NewAsciiStringInPlaceStream().</p>
@@ -61,21 +59,19 @@ description: "include/antlr3input.h –"
 <p> Common function to setup function interface for a 16 bit &#8216;UCS2&#8217; input stream. <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>input</i> Input stream context pointer</dl>
+</dt><dd> <i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> Strictly speaking, there is no such thing as a UCS2 input stream as the term tends to confuse the notions of character encoding, unicode and so on. However because there will possibly be a need for a UTF-16 stream, I needed to identify 16 bit streams that do not support surrogate encodings and UCS2 is how it is mostly referred to. For instance Java, Oracle and others use a 16 bit encoding of characters and so this type of stream is very common. Take it to mean, therefore, a straight 16 bit uncomplicated encoding of Unicode code points.</dl>
+<dt>*</dt>
+<dd> Strictly speaking, there is no such thing as a UCS2 input stream as the term tends to confuse the notions of character encoding, unicode and so on. However because there will possibly be a need for a UTF-16 stream, I needed to identify 16 bit streams that do not support surrogate encodings and UCS2 is how it is mostly referred to. For instance Java, Oracle and others use a 16 bit encoding of characters and so this type of stream is very common. Take it to mean, therefore, a straight 16 bit uncomplicated encoding of Unicode code points.</dd></dl>
 </dl>
 <p> References ANTLR3_INT_STREAM_struct::_LA, antlr3GenericSetupStream(), antlr3UCS2Consume(), antlr3UCS2Index(), antlr3UCS2LA(), antlr3UCS2Seek(), antlr3UCS2StringFactoryNew(), antlr3UCS2Substr(), ANTLR3_INPUT_STREAM_struct::charByteSize, ANTLR3_INT_STREAM_struct::consume, ANTLR3_INT_STREAM_struct::index, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_INT_STREAM_struct::seek, ANTLR3_INPUT_STREAM_struct::strFactory, and ANTLR3_INPUT_STREAM_struct::substr. </p>
 <p> Referenced by antlr3NewUCS2StringInPlaceStream().</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Function Documentation</a></p>
+<dt><a href="#lbAJ">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAN">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAN">Author</a></dt>
+<dd></dd></dl>

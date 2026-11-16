@@ -11,9 +11,7 @@ description: "voms_apic.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;openssl/x509.h&gt;
-
 #include &lt;time.h&gt;
-
 #include 'newformat.h'</code></pre>
 <h3>Data Structures</h3>
 <p>struct data</p>
@@ -67,173 +65,47 @@ description: "voms_apic.h –"
 <p> typedef void * <code>gss_ctx_id_t</code></p>
 <h3>Functions</h3>
 <pre><code>struct contactdata ** VOMS_FindByAlias (struct vomsdata *vd, char *alias, char *system, char *user, int *error)
-
-
-
 struct contactdata ** VOMS_FindByVO (struct vomsdata *vd, char *vo, char *system, char *user, int *error)
-
-
-
 void VOMS_DeleteContacts (struct contactdata **list)
-
-
-
 struct vomsdata * VOMS_Init (char *voms, char *cert)
-
-
-
 struct voms * VOMS_Copy (struct voms *v, int *error)
-
-
-
 struct vomsdata * VOMS_CopyAll (struct vomsdata *vd, int *error)
-
-
-
 void VOMS_Delete (struct voms *v)
-
-
-
 int VOMS_AddTarget (struct vomsdata *vd, char *target, int *error)
-
-
-
 void VOMS_FreeTargets (struct vomsdata *vd, int *error)
-
-
-
 char * VOMS_ListTargets (struct vomsdata *vd, int *error)
-
-
-
 int VOMS_SetVerificationType (int type, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_SetLifetime (int length, struct vomsdata *vd, int *error)
-
-
-
 void VOMS_Destroy (struct vomsdata *vd)
-
-
-
 int VOMS_ResetOrder (struct vomsdata *vd, int *error)
-
-
-
 int VOMS_Ordering (char *order, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_Contact (char *hostname, int port, char *servsubject, char *command, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_ContactRaw (char *hostname, int port, char *servsubject, char *command, void **data, int *datalen, int *version, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_Retrieve (X509 *cert, STACK_OF(X509)*chain, int how, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_Import (char *buffer, int buflen, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_Export (char **buffer, int *buflen, struct vomsdata *vd, int *error)
-
-
-
 struct voms * VOMS_DefaultData (struct vomsdata *vd, int *error)
-
-
-
 char * VOMS_ErrorMessage (struct vomsdata *vd, int error, char *buffer, int len)
-
-
-
 int VOMS_RetrieveEXT (X509_EXTENSION *ext, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_RetrieveFromCred (gss_cred_id_t cred, int how, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_RetrieveFromFile (FILE *file, int how, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_RetrieveFromCtx (gss_ctx_id_t ctx, int how, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_RetrieveFromProxy (int how, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_RetrieveFromAC (AC *ac, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_GetAttributeSourcesNumber (struct voms *v, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_GetAttributeSourceHandle (struct voms *v, int num, struct vomsdata *vd, int *error)
-
-
-
 const char * VOMS_GetAttributeGrantor (struct voms *v, int handle, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_GetAttributesNumber (struct voms *v, int handle, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_GetAttribute (struct voms *v, int handle, int num, struct attribute *at, struct vomsdata *vd, int *error)
-
-
-
 struct vomsdata * VOMS_Duplicate (struct vomsdata *vd)
-
-
-
 AC * VOMS_GetAC (struct voms *v)
-
-
-
 int getMajorVersionNumber (void)
-
-
-
 int getMinorVersionNumber (void)
-
-
-
 int getPatchVersionNumber (void)
-
-
-
 int VOMS_SetVerificationTime (time_t verificationtime, struct vomsdata *vd, int *error)
-
-
-
 char ** VOMS_GetTargetsList (struct voms *v, struct vomsdata *vd, int *error)
-
-
-
 void VOMS_FreeTargetsList (char **)
-
-
-
 int VOMS_SetTimeout (int t, struct vomsdata *vd, int *error)
-
-
-
 int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, struct vomsdata *vd, int *error)</code></pre>
 <h2>Macro Definition Documentation</h2>
 <h3>#define NOGLOBUS</h3>
@@ -350,10 +222,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <dl>
 <dd><i>vd</i> The vomsdata structure.<br />
  <i>target</i> The target to add. It should be a FQDN.<br />
- <i>error</i> RETURN PARAMETER: qualifies the error message.</dl>
+ <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_Contact (char *hostname, intport, char *servsubject, char *command, struct <code>vomsdata</code> *vd, int *error)</h3>
 <p>Contacts a VOMS server to get a certificate </p>
 <p> It is the equivalent of the voms_proxy_init command, but without the &#8211;include functionality. </p>
@@ -364,10 +236,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
  <i>servsubject</i> the subject of the server&#8217;s certificate<br />
  <i>command</i> Command<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_ContactRaw (char *hostname, intport, char *servsubject, char *command, void **data, int *datalen, int *version, struct <code>vomsdata</code> *vd, int *error)</h3>
 <p>The same as VOMS_Contact, except that instead of starting the verification process, the data is returned as is in the </p>
 <p> <code>Parameters:</code></p>
@@ -380,10 +252,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
  <i>command</i> the command sent to the server<br />
  <i>version</i> is the version number of the data.<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>struct <code>voms</code>* VOMS_Copy (struct <code>voms</code> *v, int *error)</h3>
 <pre> Copies a voms structure.
  N.B: This is the ONLY way to correctly initialize a voms structure as a</pre>
@@ -391,10 +263,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>v</i> The structure to copy.<br />
- <i>error</i> RETURN PARAMETER: qualifies the error message.</dl>
+ <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL (error) or the new voms structure.</dl>
+<dd>NULL (error) or the new voms structure.</dd></dl>
 <h3>struct <code>vomsdata</code>* VOMS_CopyAll (struct <code>vomsdata</code> *vd, int *error)</h3>
 <pre> Copies a vomsdata structure.
  N.B: This is the ONLY way to correctly initialize a vomsdata structure as a</pre>
@@ -402,32 +274,32 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>vd</i> The structure to copy.<br />
- <i>error</i> RETURN PARAMETER: qualifies the error message.</dl>
+ <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL (error) or the new vomsdata structure.</dl>
+<dd>NULL (error) or the new vomsdata structure.</dd></dl>
 <h3>struct <code>voms</code>* VOMS_DefaultData (struct <code>vomsdata</code> *vd, int *error)</h3>
 <p>Gets the default attributes from a vomsdata structure. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>vd</i> the vomsdata structure to analyze<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a pointer to the relevant voms structure. DO NOT modify the fields.</dl>
+<dd>a pointer to the relevant voms structure. DO NOT modify the fields.</dd></dl>
 <h3>void VOMS_Delete (struct <code>voms</code> *v)</h3>
 <p>Deletes a voms structure </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>v</i> Pointer to the structure to delete.</dl>
+<dd><i>v</i> Pointer to the structure to delete.</dd></dl>
 <h3>void VOMS_DeleteContacts (struct <code>contactdata</code> **list)</h3>
 <p>Frees a contactdata vector. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>list</i> The vector to free.</dl>
+<dd><i>list</i> The vector to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NONE</dl>
+<dd>NONE</dd></dl>
 <h3>void VOMS_Destroy (struct <code>vomsdata</code> *vd)</h3>
 <p>Destroys a proper vomsdata structure /param vd The structure to deallocate.</p>
 <h3>struct <code>vomsdata</code>* VOMS_Duplicate (struct <code>vomsdata</code> *vd)</h3>
@@ -439,10 +311,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <dd><i>vd</i> The vomsdata structure to analyze<br />
  <i>error</i> The error returned by the last function<br />
  <i>buffer</i> A pointer to a buffer where the error message will be written. If NULL, then memory is allocated by the function, and will have to be free()ed by the caller.<br />
- <i>len</i> The length of the memory pointed to by the buffer parameter.</dl>
+ <i>len</i> The length of the memory pointed to by the buffer parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A pointer to the error message.</dl>
+<dd>A pointer to the error message.</dd></dl>
 <h3>int VOMS_Export (char **buffer, int *buflen, struct <code>vomsdata</code> *vd, int *error)</h3>
 <pre> Converts data into a test format</pre>
 <p>&nbsp;<wbr> </p>
@@ -451,10 +323,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <dd><i>buffer</i> OUTPUT PARAMETER contains the converted data<br />
  <i>buflen</i> OUTPUT PARAMETER contains the length of buffer<br />
  <i>vd</i> contains the data to convert<br />
- <i>error</i> RETURN PARAMETER Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>struct <code>contactdata</code>** VOMS_FindByAlias (struct <code>vomsdata</code> *vd, char *alias, char *system, char *user, int *error)</h3>
 <p>Gets a list of VOMS servers which share an alias. </p>
 <p> <code>Parameters:</code></p>
@@ -463,10 +335,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
  <i>alias</i> The alias to look for.<br />
  <i>system</i> The directory in which to look for the system configuration files. If NULL, defaults to /opt/edc/etc/vomses<br />
  <i>user</i> The directory in which to look for the user configuration files. Defaults to $VOMS_USERCONF if NULL. Again defaults to $HOME/.edg/vomses if the latter is NULL, or to ~/.edg/vomses as a last resort.<br />
- <i>error</i> RETURN PARAMETER: qualifies the error message.</dl>
+ <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL, or a NULL-terminated vector of contactdata structures. The only supported way to free this array is via the VOMS_DeleteContacts function. Note also that the order in which the servers are returned is unspecified.</dl>
+<dd>NULL, or a NULL-terminated vector of contactdata structures. The only supported way to free this array is via the VOMS_DeleteContacts function. Note also that the order in which the servers are returned is unspecified.</dd></dl>
 <h3>struct <code>contactdata</code>** VOMS_FindByVO (struct <code>vomsdata</code> *vd, char *vo, char *system, char *user, int *error)</h3>
 <p>Gets a list of VOMS servers which serve the same VO. </p>
 <p> <code>Parameters:</code></p>
@@ -475,16 +347,16 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
  <i>vo</i> The VO to look for.<br />
  <i>system</i> The directory in which to look for the system configuration files. If NULL, defaults to /opt/edc/etc/vomses<br />
  <i>user</i> The directory in which to look for the user configuration files. Defaults to $VOMS_USERCONF if NULL. Again defaults to $HOME/.edg/vomses if the latter is NULL, or to ~/.edg/vomses as a last resort.<br />
- <i>error</i> RETURN PARAMETER: qualifies the error message.</dl>
+ <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL, or a NULL-terminated vector of contactdata structures. The only supported way to free this array is via the VOMS_DeleteContacts function. Note also that the order in which the servers are returned is unspecified.</dl>
+<dd>NULL, or a NULL-terminated vector of contactdata structures. The only supported way to free this array is via the VOMS_DeleteContacts function. Note also that the order in which the servers are returned is unspecified.</dd></dl>
 <h3>void VOMS_FreeTargets (struct <code>vomsdata</code> *vd, int *error)</h3>
 <p>Delete the targets from the AC. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>vd</i> The vomsdata structure.<br />
- <i>error</i> RETURN PARAMETER: qualifies the error message.</dl>
+ <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <h3>void VOMS_FreeTargetsList (char **)</h3>
 <h3>AC* VOMS_GetAC (struct <code>voms</code> *v)</h3>
 <h3>int VOMS_GetAttribute (struct <code>voms</code> *v, inthandle, intnum, struct <code>attribute</code> *at, struct <code>vomsdata</code> *vd, int *error)</h3>
@@ -501,21 +373,21 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <dd><i>buffer</i> contains the data to be converted<br />
  <i>buflen</i> contains the length of buffer<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>struct <code>vomsdata</code>* VOMS_Init (char *voms, char *cert)</h3>
 <p>Initializes a vomsdata structure for use by the other functions. N.B: This is the ONLY way to correctly initialize a vomsdata structure. It is also forbidden to directly take the sizeof() of this structure. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>voms</i> The directory which contains the certificates of the VOMS servers<br />
- <i>cert</i> The directory which contains the CA certificates</dl>
+ <i>cert</i> The directory which contains the CA certificates</dd></dl>
 <p> If voms_dir is empty, the value of the environment variable X509_VOMS_DIR is taken </p>
 <p> If cert_dir is empty, the value of the environment variable X509_CERT_DIR is taken </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL for failure, or a pointer to a properly initialized structure.</dl>
+<dd>NULL for failure, or a pointer to a properly initialized structure.</dd></dl>
 <h3>char* VOMS_ListTargets (struct <code>vomsdata</code> *vd, int *error)</h3>
 <h3>int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, struct <code>vomsdata</code> *vd, int *error)</h3>
 <h3>int VOMS_Ordering (char *order, struct <code>vomsdata</code> *vd, int *error)</h3>
@@ -524,19 +396,19 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <dl>
 <dd><i>order</i> the group:role attribute.<br />
  <i>vd</i> RETURN PARAMETER: contains the modified data.<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_ResetOrder (struct <code>vomsdata</code> *vd, int *error)</h3>
 <p>Unsets the return order of the attributes. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>vd</i> RETURN PARAMETER: contains the modified data.<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_Retrieve (X509 *cert, STACK_OF(X509)*chain, inthow, struct <code>vomsdata</code> *vd, int *error)</h3>
 <p>Extracts the VOMS extension from an X.509 certificate. </p>
 <pre> The function doesn't check the validity of the certificates, 
@@ -561,10 +433,10 @@ aram error RETURN PARAMETER: Qualifies the error message
 <dl>
 <dd><i>ext</i> The extension to parse.<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_RetrieveFromAC (AC *ac, struct <code>vomsdata</code> *vd, int *error)</h3>
 <pre> Gets VOMS information from an existing globus proxy</pre>
 <p>&nbsp;<wbr> </p>
@@ -572,10 +444,10 @@ aram error RETURN PARAMETER: Qualifies the error message
 <dl>
 <dd><i>ac</i> AC from which to get the credentials<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_RetrieveFromCred (<code>gss_cred_id_t</code>cred, inthow, struct <code>vomsdata</code> *vd, int *error)</h3>
 <pre> Gets VOMS information from the given globus credential</pre>
 <p>&nbsp;<wbr> </p>
@@ -584,10 +456,10 @@ aram error RETURN PARAMETER: Qualifies the error message
 <dd><i>cred</i> The credential from which to retrieve the certificate.<br />
  <i>how</i> Recursion type<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_RetrieveFromCtx (<code>gss_ctx_id_t</code>ctx, inthow, struct <code>vomsdata</code> *vd, int *error)</h3>
 <pre> Gets VOMS information from the given globus context</pre>
 <p>&nbsp;<wbr> </p>
@@ -596,10 +468,10 @@ aram error RETURN PARAMETER: Qualifies the error message
 <dd><i>ctx</i> The context from which to retrieve the certificate.<br />
  <i>how</i> Recursion type<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_RetrieveFromFile (FILE *file, inthow, struct <code>vomsdata</code> *vd, int *error)</h3>
 <pre> Gets VOMS information from the given globus credential</pre>
 <p>&nbsp;<wbr> </p>
@@ -608,10 +480,10 @@ aram error RETURN PARAMETER: Qualifies the error message
 <dd><i>file</i> The file from which to retrieve the certificate.<br />
  <i>how</i> Recursion type<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_RetrieveFromProxy (inthow, struct <code>vomsdata</code> *vd, int *error)</h3>
 <pre> Gets VOMS information from an existing globus proxy</pre>
 <p>&nbsp;<wbr> </p>
@@ -619,20 +491,20 @@ aram error RETURN PARAMETER: Qualifies the error message
 <dl>
 <dd><i>how</i> Recursion type<br />
  <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_SetLifetime (intlength, struct <code>vomsdata</code> *vd, int *error)</h3>
 <p>Set requested lifetime for <code>VOMS_Contact()</code> calls. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>length</i> Lifetime requested.<br />
  <i>vd</i> RETURN PARAMETER: contains the modified data.<br />
- <i>error</i> RETURN PARAMETER: Qualifies the error message</dl>
+ <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (0) or success (&lt;&gt;0)</dl>
+<dd>failure (0) or success (&lt;&gt;0)</dd></dl>
 <h3>int VOMS_SetTimeout (intt, struct <code>vomsdata</code> *vd, int *error)</h3>
 <h3>int VOMS_SetVerificationTime (time_tverificationtime, struct <code>vomsdata</code> *vd, int *error)</h3>
 <h3>int VOMS_SetVerificationType (inttype, struct <code>vomsdata</code> *vd, int *error)</h3>

@@ -19,8 +19,8 @@ description: "Lintian::Processable::Installable – Lintian interface to binary 
 <p> Native heuristics are only available in source packages.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>unpack</p>
-<dd></dl>
+<dt>unpack</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p> Originally written by Frank Lichtenheld &lt;djpig [at] debian.org&gt; for Lintian.</p>
 <h2>See Also</h2>

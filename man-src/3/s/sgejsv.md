@@ -19,7 +19,7 @@ description: "sgejsv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SGEJSV computes the singular value decomposition(SVD) of a real M-by-N
  matrix [A], where M &gt;= N. The SVD of [A] is written as
@@ -32,11 +32,11 @@ SGEJSV computes the singular value decomposition(SVD) of a real M-by-N
  are computed and stored in the arrays U and V, respectively. The diagonal
  of [SIGMA] is computed and stored in the array SVA.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBA</i> </p>
+</dt><dd> <i>JOBA</i> </dd>
 <p>          JOBA is CHARACTER*1<br />
          Specifies the level of accuracy:<br />
        = &#8216;C&#8217;: This option works well (high relative accuracy) if A = B * D,<br />
@@ -321,18 +321,18 @@ If JOBV = &#8216;W&#8217;, AND(JOBU.EQ.&#8217;U&#8217; AND JOBT.EQ.&#8217;T&#821
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>  SGEJSV implements a preconditioned Jacobi SVD algorithm. It uses SGEQP3,<br />
   SGEQRF, and SGELQF as preprocessors and preconditioners. Optionally, an<br />
   additional row pivoting can be used as a preprocessor, which in some<br />
@@ -378,15 +378,15 @@ If JOBV = &#8216;W&#8217;, AND(JOBU.EQ.&#8217;U&#8217; AND JOBT.EQ.&#8217;T&#821
                 this extra QRF step easily.The implementer can also improve data movement(matrix transpose, matrix copy, matrix transposed copy) &#8211;<br />
           this implementation of SGEJSV uses only the simplest,<br />
       naive data movement.</p>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+</dt><dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  [1] Z. Drmac and K. Veselic: New fast and accurate Jacobi SVD algorithm I.
      SIAM J. Matrix Anal. Appl. Vol. 35, No. 2 (2008), pp. 1322-1342.
@@ -402,11 +402,11 @@ If JOBV = &#8216;W&#8217;, AND(JOBU.EQ.&#8217;U&#8217; AND JOBT.EQ.&#8217;T&#821
      QSVD, (H,K)-SVD computations.
      Department of Mathematics, University of Zagreb, 2008.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Bugs, examples and comments: </code></p>
 <dl>
 <dt>
-<dd> Please report all bugs and send interesting examples and/or comments to drmac [at] math.hr. Thank you.</dl>
+</dt><dd> Please report all bugs and send interesting examples and/or comments to drmac [at] math.hr. Thank you.</dd></dl>
 <p> Definition at line 473 of file sgejsv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

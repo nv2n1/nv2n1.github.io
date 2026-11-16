@@ -24,92 +24,92 @@ git commit - tree&lt;tree&gt;[(-p&lt;parent&gt;)...] git commit - tree[(-p&lt;pa
 <p> &lt;tree&gt;</p>
 <dl>
 <dt>
-<dd> An existing tree object.</dl>
+</dt><dd> An existing tree object.</dd></dl>
 <p> -p &lt;parent&gt;</p>
 <dl>
 <dt>
-<dd> Each <code>-p</code> indicates the id of a parent commit object.</dl>
+</dt><dd> Each <code>-p</code> indicates the id of a parent commit object.</dd></dl>
 <p> -m &lt;message&gt;</p>
 <dl>
 <dt>
-<dd> A paragraph in the commit log message. This can be given more than once and each &lt;message&gt; becomes its own paragraph.</dl>
+</dt><dd> A paragraph in the commit log message. This can be given more than once and each &lt;message&gt; becomes its own paragraph.</dd></dl>
 <p> -F &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Read the commit log message from the given file. Use <code>&#8211;</code> to read from the standard input. This can be given more than once and the content of each file becomes its own paragraph.</dl>
+</dt><dd> Read the commit log message from the given file. Use <code>&#8211;</code> to read from the standard input. This can be given more than once and the content of each file becomes its own paragraph.</dd></dl>
 <p> -S[&lt;keyid&gt;], &#8211;gpg-sign[=&lt;keyid&gt;], &#8211;no-gpg-sign</p>
 <dl>
 <dt>
-<dd> GPG-sign commits. The <code>keyid</code> argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. <code>&#8211;no-gpg-sign</code> is useful to countermand a <code>&#8211;gpg-sign</code> option given earlier on the command line.</dl>
+</dt><dd> GPG-sign commits. The <code>keyid</code> argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. <code>&#8211;no-gpg-sign</code> is useful to countermand a <code>&#8211;gpg-sign</code> option given earlier on the command line.</dd></dl>
 <h2>COMMIT INFORMATION</h2>
 <p> A commit encapsulates: </p>
 <dl>
 <dt>
-<dd> &bull; all parent object ids</dl>
+</dt><dd> &bull; all parent object ids</dd></dl>
 <dl>
 <dt>
-<dd> &bull; author name, email and date</dl>
+</dt><dd> &bull; author name, email and date</dd></dl>
 <dl>
 <dt>
-<dd> &bull; committer name and email and the commit time.</dl>
+</dt><dd> &bull; committer name and email and the commit time.</dd></dl>
 <p> A commit comment is read from stdin. If a changelog entry is not provided via &quot;&lt;&quot; redirection, <i>git commit-tree</i> will just wait for one to be entered and terminated with ^D.</p>
 <h2>DATE FORMATS</h2>
 <p> The <code>GIT_AUTHOR_DATE</code> and <code>GIT_COMMITTER_DATE</code> environment variables support the following date formats: </p>
 <p> Git internal format</p>
 <dl>
 <dt>
-<dd> It is <code>&lt;unix timestamp&gt; &lt;time zone offset&gt;</code>, where <code>&lt;unix timestamp&gt;</code> is the number of seconds since the UNIX epoch. <code>&lt;time zone offset&gt;</code> is a positive or negative offset from UTC. For example CET (which is 1 hour ahead of UTC) is <code>+0100</code>.</dl>
+</dt><dd> It is <code>&lt;unix timestamp&gt; &lt;time zone offset&gt;</code>, where <code>&lt;unix timestamp&gt;</code> is the number of seconds since the UNIX epoch. <code>&lt;time zone offset&gt;</code> is a positive or negative offset from UTC. For example CET (which is 1 hour ahead of UTC) is <code>+0100</code>.</dd></dl>
 <p> RFC 2822</p>
 <dl>
 <dt>
-<dd> The standard email format as described by RFC 2822, for example <code>Thu, 07 Apr 2005 22:13:13 +0200</code>.</dl>
+</dt><dd> The standard email format as described by RFC 2822, for example <code>Thu, 07 Apr 2005 22:13:13 +0200</code>.</dd></dl>
 <p> ISO 8601</p>
 <dl>
 <dt>
-<dd> Time and date specified by the ISO 8601 standard, for example <code>2005-04-07T22:13:13</code>. The parser accepts a space instead of the <code>T</code> character as well. Fractional parts of a second will be ignored, for example <code>2005-04-07T22:13:13.019</code> will be treated as <code>2005-04-07T22:13:13</code>. </p>
+</dt><dd> Time and date specified by the ISO 8601 standard, for example <code>2005-04-07T22:13:13</code>. The parser accepts a space instead of the <code>T</code> character as well. Fractional parts of a second will be ignored, for example <code>2005-04-07T22:13:13.019</code> will be treated as <code>2005-04-07T22:13:13</code>. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  <font SIZE="+1"> <code>Note</code> </font><br />
- In addition, the date part is accepted in the following formats: <code>YYYY.MM.DD</code>, <code>MM/DD/YYYY</code> and <code>DD.MM.YYYY</code>. </p>
+ In addition, the date part is accepted in the following formats: <code>YYYY.MM.DD</code>, <code>MM/DD/YYYY</code> and <code>DD.MM.YYYY</code>. </dd>
 </dl>
 </dl>
 <h2>DISCUSSION</h2>
 <p> Git is to some extent character encoding agnostic. </p>
 <dl>
 <dt>
-<dd> &bull; The contents of the blob objects are uninterpreted sequences of bytes. There is no encoding translation at the core level.</dl>
+</dt><dd> &bull; The contents of the blob objects are uninterpreted sequences of bytes. There is no encoding translation at the core level.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the index file, ref names, as well as path names in command line arguments, environment variables and config files (<code>.git/config</code> (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)), <code><a href="/docs/linux/man/5-gitignore/">gitignore</a></code>(5), <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5) and <code><a href="/docs/linux/man/5-gitmodules/">gitmodules</a></code>(5)). </p>
+</dt><dd> &bull; Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the index file, ref names, as well as path names in command line arguments, environment variables and config files (<code>.git/config</code> (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)), <code><a href="/docs/linux/man/5-gitignore/">gitignore</a></code>(5), <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5) and <code><a href="/docs/linux/man/5-gitmodules/">gitmodules</a></code>(5)). </dd>
 <p> Note that Git at the core level treats path names simply as sequences of non-NUL bytes, there are no path name encoding conversions (except on Mac and Windows). Therefore, using non-ASCII path names will mostly work even on platforms and file systems that use legacy extended ASCII encodings. However, repositories created on such systems will not work properly on UTF-8-based systems (e.g. Linux, Mac, Windows) and vice versa. Additionally, many Git-based tools simply assume path names to be UTF-8 and will fail to display other encodings correctly.</dl>
 <dl>
 <dt>
-<dd> &bull; Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings are also supported. This includes ISO-8859-x, CP125x and many others, but <i>not</i> UTF-16/32, EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.).</dl>
+</dt><dd> &bull; Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings are also supported. This includes ISO-8859-x, CP125x and many others, but <i>not</i> UTF-16/32, EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.).</dd></dl>
 <p> Although we encourage that the commit log messages are encoded in UTF-8, both the core and Git Porcelain are designed not to force UTF-8 on projects. If all participants of a particular project find it more convenient to use legacy encodings, Git does not forbid it. However, there are a few things to keep in mind. </p>
 <dl>
 <dt>
-<dd> 1. <i>git commit</i> and <i>git commit-tree</i> issues a warning if the commit log message given to it does not look like a valid UTF-8 string, unless you explicitly say your project uses a legacy encoding. The way to say this is to have <code>i18n.commitEncoding</code> in <code>.git/config</code> file, like this: </p>
+</dt><dd> 1. <i>git commit</i> and <i>git commit-tree</i> issues a warning if the commit log message given to it does not look like a valid UTF-8 string, unless you explicitly say your project uses a legacy encoding. The way to say this is to have <code>i18n.commitEncoding</code> in <code>.git/config</code> file, like this: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [i18n]
         commitEncoding = ISO-8859-1
 </pre>
-</dl>
+</dd></dl>
 <p> Commit objects created with the above setting record the value of <code>i18n.commitEncoding</code> in its <code>encoding</code> header. This is to help other people who look at them later. Lack of this header implies that the commit log message is encoded in UTF-8.</dl>
 <dl>
 <dt>
-<dd> 2. <i>git log</i>, <i>git show</i>, <i>git blame</i> and friends look at the <code>encoding</code> header of a commit object, and try to re-code the log message into UTF-8 unless otherwise specified. You can specify the desired output encoding with <code>i18n.logOutputEncoding</code> in <code>.git/config</code> file, like this: </p>
+</dt><dd> 2. <i>git log</i>, <i>git show</i>, <i>git blame</i> and friends look at the <code>encoding</code> header of a commit object, and try to re-code the log message into UTF-8 unless otherwise specified. You can specify the desired output encoding with <code>i18n.logOutputEncoding</code> in <code>.git/config</code> file, like this: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [i18n]
         logOutputEncoding = ISO-8859-1
 </pre>
-</dl>
+</dd></dl>
 <p> If you do not have this configuration variable, the value of <code>i18n.commitEncoding</code> is used instead.</dl>
 <p> Note that we deliberately chose not to re-code the commit log message when a commit is made to force UTF-8 at the commit object level, because re-coding to UTF-8 is not necessarily a reversible operation.</p>
 <h2>FILES</h2>
@@ -119,3 +119,4 @@ git commit - tree&lt;tree&gt;[(-p&lt;parent&gt;)...] git commit - tree[(-p&lt;pa
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>
+</p>

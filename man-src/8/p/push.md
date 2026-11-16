@@ -13,47 +13,47 @@ description: "push – fetch mail via POP"
 <h2>Description</h2>
 <p>retrieves mail from the post office box <i>po-box</i> and stores the mail in mbox format in filename The <i>po-box</i> can have any of the following formats:</p>
 <dl>
-<dt><code>`hostname:username&#8217; </code></p>
+<dt><code>`hostname:username&#8217; </code></dt>
 <dd>
-<dt><code>`po:hostname:username&#8217; </code></p>
+</dd><dt><code>`po:hostname:username&#8217; </code></dt>
 <dd>
-<dt><code>`username [at] hostname&#8217; </code></p>
+</dd><dt><code>`username [at] hostname&#8217; </code></dt>
 <dd>
-<dt><code>`po:username [at] hostname&#8217; </code></p>
+</dd><dt><code>`po:username [at] hostname&#8217; </code></dt>
 <dd>
-<dt><code>`hostname&#8217; </code></p>
+</dd><dt><code>`hostname&#8217; </code></dt>
 <dd>
-<dt><code>`po:username&#8217; </code></p>
-<dd></dl>
+</dd><dt><code>`po:username&#8217; </code></dt>
+<dd></dd></dl>
 <p> If no username is specified, assumes that it&#8217;s the same as on the local machine; <i>hostname</i> defaults to the value of the <code>MAILHOST</code> environment variable. </p>
 <p> Supported options:</p>
 <dl>
-<dt> &#8211;<code>5</code> &#8211;<code>-krb5</code></p>
+<dt> &#8211;<code>5</code> &#8211;<code>-krb5</code></dt>
 <dd>
-<dd>use Kerberos 5 (if compiled with support for Kerberos 5)</p>
-<dt> &#8211;<code>f</code> &#8211;<code>-fork</code></p>
+</dd><dd>use Kerberos 5 (if compiled with support for Kerberos 5)</dd>
+<dt> &#8211;<code>f</code> &#8211;<code>-fork</code></dt>
 <dd>
-<dd>fork before starting to delete messages</p>
-<dt> &#8211;<code>l</code> &#8211;<code>-leave</code></p>
+</dd><dd>fork before starting to delete messages</dd>
+<dt> &#8211;<code>l</code> &#8211;<code>-leave</code></dt>
 <dd>
-<dd>don&#8217;t delete fetched mail</p>
-<dt> &#8211;<code>-from</code></p>
+</dd><dd>don&#8217;t delete fetched mail</dd>
+<dt> &#8211;<code>-from</code></dt>
 <dd>
-<dd>behave like from.</p>
-<dt> &#8211;<code>c</code> &#8211;<code>-count</code></p>
+</dd><dd>behave like from.</dd>
+<dt> &#8211;<code>c</code> &#8211;<code>-count</code></dt>
 <dd>
-<dd>first print how many messages and bytes there are.</p>
-<dt> &#8211;<code>-headers = </code><i>headers</i></p>
+</dd><dd>first print how many messages and bytes there are.</dd>
+<dt> &#8211;<code>-headers = </code><i>headers</i></dt>
 <dd>
-<dd>a list of comma-separated headers that should get printed.</p>
-<dt> &#8211;<code>p </code><i>port-spec</i> &#8211;<code>-port = </code><i>port-spec</i></p>
+</dd><dd>a list of comma-separated headers that should get printed.</dd>
+<dt> &#8211;<code>p </code><i>port-spec</i> &#8211;<code>-port = </code><i>port-spec</i></dt>
 <dd>
-<dd>use this port instead of the default `kpop&#8217; or `1109&#8242;</dl>
+</dd><dd>use this port instead of the default `kpop&#8217; or `1109&#8242;</dd></dl>
 <p> The default is to first try Kerberos 5 authentication and then, if that fails, Kerberos 4.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>MAILHOST</code></p>
-<dd>points to the post office, if no other hostname is specified.</dl>
+<dt><code>MAILHOST</code></dt>
+<dd>points to the post office, if no other hostname is specified.</dd></dl>
 <h2>Examples</h2>
 <blockquote>
 <pre>$ push cornfield:roosta ~/.emacs-mail-crash-box</pre>

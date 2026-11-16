@@ -14,11 +14,11 @@ mongoc_write_concern_set_wtag (mongoc_write_concern_t *write_concern,
  const char *tag);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>tag</code></p>
-<dd>A string containing the write tag.</dl>
+<dt><code>tag</code></dt>
+<dd>A string containing the write tag.</dd></dl>
 <h2>Description</h2>
 <p>Sets the write tag that must be satistified for the write to indicate success. Write tags are preset write concerns configured on your MongoDB server. See <code>mongoc_write_concern_t</code> for more information on this setting. </p>
 <h2>Colophon</h2>

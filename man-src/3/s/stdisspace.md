@@ -11,7 +11,6 @@ std::isspace - std::isspace
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int isspace(int ch);</code></pre> 
 Checks if the given character is whitespace character as classified by the currently installed C locale. In the default locale, the whitespace characters are the following: * space (0x20, ' ')
 
@@ -42,7 +41,6 @@ Like all other functions from &lt;cctype&gt;, the behavior of std::isspace is un
     return std::isspace(static_cast&lt;unsigned char&gt;(ch));
 } 
 Similarly, they should not be directly used with standard algorithms when the iterator's value type is char or signed char. Instead, convert the value to unsigned char first: <pre><code>int count_spaces(const std::string &amp;s)
-
 {
     return std::count_if(s.begin(), s.end(),
                          // static_cast&lt;int(*)(int)&gt;(std::isspace)         // wrong

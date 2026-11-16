@@ -10,7 +10,6 @@ description: "ustrtod – Converts a string into a floating point number. Allegr
 <p>ustrtod &#8211; Converts a string into a floating point number. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 double ustrtod(const char *s, char **endp);</code></pre>
 <h2>Description</h2>
 <p>This function converts as many characters of `s&#8217; that look like a floating point number into one, and sets `*endp&#8217; to point to the first unused character, if `endp&#8217; is not a NULL pointer. Example: </p>

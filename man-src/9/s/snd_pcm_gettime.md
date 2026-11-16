@@ -15,11 +15,11 @@ snd_pcm_gettime - Fill the timespec depending on the timestamp mode
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>tv</i>
-<dl><dd>timespec to fill</dl>
+<dl><dd>timespec to fill</dd></dl>
 
 <h2>Copyright</h2>
 

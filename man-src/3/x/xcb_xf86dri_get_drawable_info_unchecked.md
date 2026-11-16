@@ -10,12 +10,7 @@ description: "xcb_xf86dri_get_drawable_info –"
 <p>xcb_xf86dri_get_drawable_info &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xf86dri.h&gt;
-
-
 Request function
-
-
-
 xcb_xf86dri_get_drawable_info_cookie_t xcb_xf86dri_get_drawable_info(xcb_connection_t *conn, uint32_t screen, uint32_t drawable);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xf86dri_get_drawable_info_reply_t {
@@ -36,52 +31,52 @@ xcb_xf86dri_get_drawable_info_cookie_t xcb_xf86dri_get_drawable_info(xcb_connect
 } <code>xcb_xf86dri_get_drawable_info_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_xf86dri_get_drawable_info_reply_t *<code>xcb_xf86dri_get_drawable_info_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xf86dri_get_drawable_info_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_xf86dri_get_drawable_info_reply_t *<code>xcb_xf86dri_get_drawable_info_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xf86dri_get_drawable_info_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_xf86dri_drm_clip_rect_t *<code>xcb_xf86dri_get_drawable_info_clip_rects</code>(const xcb_xf86dri_get_drawable_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xf86dri_get_drawable_info_clip_rects_length</code>(const xcb_xf86dri_get_drawable_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_xf86dri_drm_clip_rect_iterator_t <code>xcb_xf86dri_get_drawable_info_clip_rects_iterator</code>(const xcb_xf86dri_get_drawable_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_xf86dri_drm_clip_rect_t *<code>xcb_xf86dri_get_drawable_info_back_clip_rects</code>(const xcb_xf86dri_get_drawable_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xf86dri_get_drawable_info_back_clip_rects_length</code>(const xcb_xf86dri_get_drawable_info_reply_t *<i>reply</i>);</p>
+<dd>xcb_xf86dri_drm_clip_rect_t *<code>xcb_xf86dri_get_drawable_info_clip_rects</code>(const xcb_xf86dri_get_drawable_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xf86dri_get_drawable_info_clip_rects_length</code>(const xcb_xf86dri_get_drawable_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xf86dri_drm_clip_rect_iterator_t <code>xcb_xf86dri_get_drawable_info_clip_rects_iterator</code>(const xcb_xf86dri_get_drawable_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xf86dri_drm_clip_rect_t *<code>xcb_xf86dri_get_drawable_info_back_clip_rects</code>(const xcb_xf86dri_get_drawable_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xf86dri_get_drawable_info_back_clip_rects_length</code>(const xcb_xf86dri_get_drawable_info_reply_t *<i>reply</i>);</dd>
 <dd>xcb_xf86dri_drm_clip_rect_iterator_t <code>xcb_xf86dri_get_drawable_info_back_clip_rects_iterator</code>(const xcb_xf86dri_get_drawable_info_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>screen</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>screen</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XF86DRI_GET_DRAWABLE_INFO</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>drawable_table_index</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable_table_stamp</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable_origin_X</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable_origin_Y</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable_size_W</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable_size_H</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_clip_rects</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>back_x</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>back_y</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_back_clip_rects</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XF86DRI_GET_DRAWABLE_INFO</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>drawable_table_index</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable_table_stamp</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable_origin_X</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable_origin_Y</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable_size_W</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable_size_H</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_clip_rects</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>back_x</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>back_y</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_back_clip_rects</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xf86dri_get_drawable_info_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xf86dri_get_drawable_info_reply</i>. </p>

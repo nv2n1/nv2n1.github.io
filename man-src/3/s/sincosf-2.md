@@ -11,7 +11,6 @@ description: "sincos, sincosf, sincosl – calculate sin and cos simultaneously"
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;math.h&gt;
-
 void sincos(double x, double *sin, double *cos);
 void sincosf(float x, float *sin, float *cos);
 void sincosl(long double x, long double *sin, long double *cos);</code></pre>
@@ -26,8 +25,8 @@ void sincosl(long double x, long double *sin, long double *cos);</code></pre>
 <p>See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Domain error: <i>x</i> is an infinity</p>
-<dd><i>errno</i> is set to <code>EDOM</code> (but see BUGS). An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dl>
+<dt>Domain error: <i>x</i> is an infinity</dt>
+<dd><i>errno</i> is set to <code>EDOM</code> (but see BUGS). An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dd></dl>
 <h2>Versions</h2>
 <p>These functions first appeared in glibc in version 2.1.</p>
 <h2>Attributes</h2>

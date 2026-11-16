@@ -88,18 +88,18 @@ reported if all of the following conditions are true:
  window, OR the grab window is a descendent of the focus
  window and contains the device.
  * A passive grab on the same button/modifier combination does
- not exist on any ancestor of grab_window.</pre></dl><dl COMPACT><dd><pre>The interpretation of the remaining arguments is as for
+ not exist on any ancestor of grab_window.</pre></dd></dl><dl COMPACT><dd><pre>The interpretation of the remaining arguments is as for
 XIGrabDevice. The active grab is terminated automatically when
 the logical state of the device has all buttons or keys
 released (independent of the logical state of the modifier
-keys).</pre></dl><dl COMPACT><dd><pre>If the device is an attached slave device, the device is
+keys).</pre></dd></dl><dl COMPACT><dd><pre>If the device is an attached slave device, the device is
 automatically detached from the master device when the grab
 activates and reattached to the same master device when the
 grab deactivates. If the master device is removed while the
 device is floating as a result of a grab, the device remains
-floating once the grab deactivates.</pre></dl><dl COMPACT><dd><pre>Note that the logical state of a device (as seen by client
+floating once the grab deactivates.</pre></dd></dl><dl COMPACT><dd><pre>Note that the logical state of a device (as seen by client
 applications) may lag the physical state if device event
-processing is frozen.</pre></dl><dl COMPACT><dd><pre>This request overrides all previous grabs by the same client on
+processing is frozen.</pre></dd></dl><dl COMPACT><dd><pre>This request overrides all previous grabs by the same client on
 the same button/modifier or keycode/modifier combinations on the
 same window. A modifiers of XIAnyModifier is equivalent to
 issuing the grab request for all possible modifier combinations
@@ -108,19 +108,19 @@ that all modifiers specified have currently assigned KeyCodes.
 A button of XIAnyButton is equivalent to issuing the request
 for all possible buttons. Otherwise, it is not required that
 the specified button currently be assigned to a physical
-button.</pre></dl><dl COMPACT><dd><pre>If some other client has already issued a XIGrabButton or
+button.</pre></dd></dl><dl COMPACT><dd><pre>If some other client has already issued a XIGrabButton or
 XIGrabKeycode with the same button/modifier or keycode/modifier
 combination on the same window, a BadAccess error results. When
 using XIAnyModifier or XIAnyButton , the request fails
 completely, and a XIBadAccess error results (no grabs are
 established) if there is a conflicting grab for any
 combination. XIGrabButton and XIGrabKeycode have no effect on an
-active grab.</pre></dl><dl COMPACT><dd><pre>On success, XIGrabButton, XIGrabKeycode and XIGrabTouchBegin return 0;
+active grab.</pre></dd></dl><dl COMPACT><dd><pre>On success, XIGrabButton, XIGrabKeycode and XIGrabTouchBegin return 0;
 If one or more modifier combinations could not be grabbed,
 XIGrabButton, XIGrabKeycode and XIGrabTouchBegin return the number of
 failed combinations and modifiers_inout contains the failed combinations
-and their respective error codes.</pre></dl><dl COMPACT><dd><pre>XIGrabButton, XIGrabKeycode and XIGrabTouchBegin can generate BadClass,
-BadDevice, BadMatch, BadValue, and BadWindow errors.</pre></dl><dl COMPACT><dd><pre>XIUngrabButton, XIUngrabKeycode and XIUngrabTouchBegin release the
+and their respective error codes.</pre></dd></dl><dl COMPACT><dd><pre>XIGrabButton, XIGrabKeycode and XIGrabTouchBegin can generate BadClass,
+BadDevice, BadMatch, BadValue, and BadWindow errors.</pre></dd></dl><dl COMPACT><dd><pre>XIUngrabButton, XIUngrabKeycode and XIUngrabTouchBegin release the
 passive grab for a button/modifier, keycode/modifier or touch/modifier
 combination on the specified window if it was grabbed by this client. A
 modifier of XIAnyModifier is equivalent to issuing the ungrab request
@@ -128,24 +128,24 @@ for all possible modifier combinations, including the
 combination of no modifiers. A button of XIAnyButton is
 equivalent to issuing the request for all possible buttons.
 XIUngrabButton and XIUngrabKeycode have no effect on an active
-grab.</pre></dl><dl COMPACT><dd><pre>XIUngrabButton, XIUngrabKeycode and XIUngrabTouchBegin can generate
-BadDevice, BadMatch, BadValue and BadWindow errors.</pre></dl><h2>Return Value</h2><dl COMPACT><dd><pre>XIGrabButton, XIGrabKeycode and XIGrabTouchBegin return the number of
+grab.</pre></dd></dl><dl COMPACT><dd><pre>XIUngrabButton, XIUngrabKeycode and XIUngrabTouchBegin can generate
+BadDevice, BadMatch, BadValue and BadWindow errors.</pre></dd></dl><h2>Return Value</h2><dl COMPACT><dd><pre>XIGrabButton, XIGrabKeycode and XIGrabTouchBegin return the number of
 modifier combination that could not establish a passive grab. The
 modifiers are returned in modifiers_inout, along with the respective
 error for this modifier combination. If XIGrabButton, XIGrabKeycode
 or XIGrabTouchBegin return zero, passive grabs with all requested
-modifier combinations were established successfully.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
- An invalid deviceid was specified.</pre></dl><dl COMPACT><dd><pre>BadMatch
+modifier combinations were established successfully.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+ An invalid deviceid was specified.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if XIGrabButton specified a device
  that has no buttons, or XIGrabKeycode specified a device
  that has no keys, or XIGrabTouchBegin specified a device
- that is not touch-capable.</pre></dl><dl COMPACT><dd><pre>BadValue
+ that is not touch-capable.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ set of alternatives can generate this error.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- Window.</pre></dl><h2>Bugs</h2><dl COMPACT><dd><pre>The protocol headers for XI 2.0 did not provide
+ Window.</pre></dd></dl><h2>Bugs</h2><dl COMPACT><dd><pre>The protocol headers for XI 2.0 did not provide
 XIGrabModeAsync or XIGrabModeSync. Use GrabModeSync and
-GrabModeAsync instead, respectively.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XIAllowEvents(3)</pre></dl>
+GrabModeAsync instead, respectively.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XIAllowEvents(3)</pre></dd></dl>

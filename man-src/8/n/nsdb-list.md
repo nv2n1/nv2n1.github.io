@@ -18,60 +18,60 @@ description: "nsdb-list – list file set name and location entries on an NSDB"
 <p>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command is part of a collection of low-level single-use programs that is intended for testing the NSDB protocol or for use in scripts. It retrieves the list of file set name and location records stored on an NSDB under one NSDB Container Entry.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d, &#8211;debug</p>
-<dd>Specifies that debugging messages be produced during operation.</p>
-<dt>-?, &#8211;help</p>
-<dd>Prints an <a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) version and usage message on <i>stderr</i>, then exits.</p>
-<dt><code>-l, &#8211;nsdbname=</code><i>NSDB-hostname</i></p>
-<dd>Specifies the hostname of the NSDB to enumerate. If the <code>&#8211;nsdbname</code> option is not specified, the value of the FEDFS_NSDB_HOST environment variable is consulted. If the variable is not set and the <code>&#8211;nsdbname</code> option is not specified, the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command fails.</p>
-<dt><code>-r, &#8211;nsdbport=</code><i>NSDB-port</i></p>
-<dd>Specifies the IP port of the NSDB to enumerate. If the <code>&#8211;nsdbport</code> option is not specified, the value of the FEDFS_NSDB_PORT environment variable is consulted. The default value if the variable is not set is 389.</p>
-<dt><code>-e, &#8211;nce=</code><i>NSDB-container-entry</i></p>
-<dd>Limits the query to a particular NSDB Container Entry on the target NSDB. If the <code>&#8211;nce</code> option is not specified, the value of the FEDFS_NSDB_NCE environment variable is consulted. If the variable is not set and the <code>&#8211;nce</code> option is not specified, or the specified NCE does not exist on the target NSDB, the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command fails.</dl>
+<dt><code>-d, &#8211;debug</dt>
+<dd>Specifies that debugging messages be produced during operation.</dd>
+<dt>-?, &#8211;help</dt>
+<dd>Prints an <a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) version and usage message on <i>stderr</i>, then exits.</dd>
+<dt><code>-l, &#8211;nsdbname=</code><i>NSDB-hostname</i></dt>
+<dd>Specifies the hostname of the NSDB to enumerate. If the <code>&#8211;nsdbname</code> option is not specified, the value of the FEDFS_NSDB_HOST environment variable is consulted. If the variable is not set and the <code>&#8211;nsdbname</code> option is not specified, the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command fails.</dd>
+<dt><code>-r, &#8211;nsdbport=</code><i>NSDB-port</i></dt>
+<dd>Specifies the IP port of the NSDB to enumerate. If the <code>&#8211;nsdbport</code> option is not specified, the value of the FEDFS_NSDB_PORT environment variable is consulted. The default value if the variable is not set is 389.</dd>
+<dt><code>-e, &#8211;nce=</code><i>NSDB-container-entry</i></dt>
+<dd>Limits the query to a particular NSDB Container Entry on the target NSDB. If the <code>&#8211;nce</code> option is not specified, the value of the FEDFS_NSDB_NCE environment variable is consulted. If the variable is not set and the <code>&#8211;nce</code> option is not specified, or the specified NCE does not exist on the target NSDB, the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command fails.</dd></dl>
 <h2>Exit Codes</h2>
 <p>The NSDB returns a value that reflects the success of the requested operation.</p>
 <dl>
-<dt><code>FEDFS_OK</code></p>
-<dd>The LDAP query succeeded. A list of FSN and FSL records are summarized on <i>stdout</i>.</p>
-<dt><code>FEDFS_ERR_ACCESS</code></p>
-<dd>The anonymous entity does not have permission to perform the requested operation.</p>
-<dt><code>FEDFS_ERR_INVAL</code></p>
-<dd>One of the arguments was not valid.</p>
-<dt><code>FEDFS_ERR_SVRFAULT</code></p>
-<dd>An unanticipated non-protocol error occurred.</p>
-<dt><code>FEDFS_ERR_NSDB_ROUTE</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to find a route to the specified NSDB.</p>
-<dt><code>FEDFS_ERR_NSDB_DOWN</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command determined that the specified NSDB was down.</p>
-<dt><code>FEDFS_ERR_NSDB_CONN</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to establish a connection with the specified NSDB.</p>
-<dt><code>FEDFS_ERR_NSDB_AUTH</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to authenticate and establish a secure connection with the specified NSDB.</p>
-<dt><code>FEDFS_ERR_NSDB_LDAP</code></p>
-<dd>A non-specific LDAP error occurred on the connection between the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command and specified NSDB.</p>
-<dt><code>FEDFS_ERR_NSDB_LDAP_VAL</code></p>
-<dd>An LDAP error occurred on the connection between the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command and specified NSDB. The specific error may be displayed on the command line.</p>
-<dt><code>FEDFS_ERR_NSDB_NONCE</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to locate the NCE on the specified NSDB.</p>
-<dt><code>FEDFS_ERR_NSDB_RESPONSE</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received a malformed response from the specified NSDB.</p>
-<dt><code>FEDFS_ERR_NSDB_FAULT</code></p>
-<dd>An unanticipated error related to the specified NSDB occurred.</p>
-<dt><code>FEDFS_ERR_NSDB_PARAMS</code></p>
-<dd>The local NSDB connection parameter database does not have any connection parameters on record for the specified NSDB.</p>
-<dt><code>FEDFS_ERR_NSDB_LDAP_REFERRAL</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it was unable to follow.</p>
-<dt><code>FEDFS_ERR_NSDB_LDAP_REFERRAL_VAL</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it was unable to follow. A specific error may be displayed on the command line.</p>
-<dt><code>FEDFS_ERR_NSDB_LDAP_REFERRAL_NOTFOLLOWED</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it chose not to follow, either because the local implementation does not support following LDAP referrals or LDAP referral following is disabled.</p>
-<dt><code>FEDFS_ERR_NSDB_PARAMS_LDAP_REFERRAL</code></p>
-<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it chose not to follow because the local NSDB connection parameter database had no connection parameters for the NSDB targeted by the LDAP referral.</dl>
+<dt><code>FEDFS_OK</code></dt>
+<dd>The LDAP query succeeded. A list of FSN and FSL records are summarized on <i>stdout</i>.</dd>
+<dt><code>FEDFS_ERR_ACCESS</code></dt>
+<dd>The anonymous entity does not have permission to perform the requested operation.</dd>
+<dt><code>FEDFS_ERR_INVAL</code></dt>
+<dd>One of the arguments was not valid.</dd>
+<dt><code>FEDFS_ERR_SVRFAULT</code></dt>
+<dd>An unanticipated non-protocol error occurred.</dd>
+<dt><code>FEDFS_ERR_NSDB_ROUTE</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to find a route to the specified NSDB.</dd>
+<dt><code>FEDFS_ERR_NSDB_DOWN</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command determined that the specified NSDB was down.</dd>
+<dt><code>FEDFS_ERR_NSDB_CONN</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to establish a connection with the specified NSDB.</dd>
+<dt><code>FEDFS_ERR_NSDB_AUTH</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to authenticate and establish a secure connection with the specified NSDB.</dd>
+<dt><code>FEDFS_ERR_NSDB_LDAP</code></dt>
+<dd>A non-specific LDAP error occurred on the connection between the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command and specified NSDB.</dd>
+<dt><code>FEDFS_ERR_NSDB_LDAP_VAL</code></dt>
+<dd>An LDAP error occurred on the connection between the <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command and specified NSDB. The specific error may be displayed on the command line.</dd>
+<dt><code>FEDFS_ERR_NSDB_NONCE</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command was unable to locate the NCE on the specified NSDB.</dd>
+<dt><code>FEDFS_ERR_NSDB_RESPONSE</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received a malformed response from the specified NSDB.</dd>
+<dt><code>FEDFS_ERR_NSDB_FAULT</code></dt>
+<dd>An unanticipated error related to the specified NSDB occurred.</dd>
+<dt><code>FEDFS_ERR_NSDB_PARAMS</code></dt>
+<dd>The local NSDB connection parameter database does not have any connection parameters on record for the specified NSDB.</dd>
+<dt><code>FEDFS_ERR_NSDB_LDAP_REFERRAL</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it was unable to follow.</dd>
+<dt><code>FEDFS_ERR_NSDB_LDAP_REFERRAL_VAL</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it was unable to follow. A specific error may be displayed on the command line.</dd>
+<dt><code>FEDFS_ERR_NSDB_LDAP_REFERRAL_NOTFOLLOWED</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it chose not to follow, either because the local implementation does not support following LDAP referrals or LDAP referral following is disabled.</dd>
+<dt><code>FEDFS_ERR_NSDB_PARAMS_LDAP_REFERRAL</code></dt>
+<dd>The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command received an LDAP referral that it chose not to follow because the local NSDB connection parameter database had no connection parameters for the NSDB targeted by the LDAP referral.</dd></dl>
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to know if the LDAP server <i>ldap.example.net</i> is an NSDB. Use:</p>
 <dl>
 <dd>$ nsdb-list -l ldap.example.net -e o=fedfs<br />
- NSDB: ldap.example.net:389 </p>
+ NSDB: ldap.example.net:389 </dd>
 <pre><code>NCE: o=fedfs</code></pre>
 <p>&nbsp;<wbr>FSN UUID: c1c21720-1fcd-4ad6-a837-f57af4cf2972 </p>
 <p>FSL UUID: 4c887035-ad2f-4ba8-ab75-7118df9714cd </p>
@@ -88,3 +88,4 @@ description: "nsdb-list – list file set name and location entries on an NSDB"
 <p>This page is part of the fedfs-utils package. A description of the project and information about reporting bugs can be found at <i><a rel="nofollow" href="http://wiki.linux-nfs.org/wiki/index.php/FedFsUtilsProject">http://wiki.linux-nfs.org/wiki/index.php/FedFsUtilsProject</a></i>.</p>
 <h2>Author</h2>
 <p>Chuck Lever &lt;chuck.lever [at] oracle.com&gt;</p>
+</p>

@@ -17,18 +17,18 @@ description: "qjackctl – User interface for controlling JACK (Jack Audio Conne
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. For a complete description, see the Info files.</p>
 <dl>
-<dt><code>-s, &#8211;start</code></p>
-<dd> Start JACK audio server immediately</p>
-<dt><code>-p, &#8211;preset=[label]</code></p>
-<dd> Set default settings preset name</p>
-<dt><code>-a, &#8211;active-patchbay=[path]</code></p>
-<dd> Set active patchbay definition file</p>
-<dt><code>-n, &#8211;server-name=[label]</code></p>
-<dd> Set default JACK audio server name</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show help about command line options</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version information.</dl>
+<dt><code>-s, &#8211;start</code></dt>
+<dd> Start JACK audio server immediately</dd>
+<dt><code>-p, &#8211;preset=[label]</code></dt>
+<dd> Set default settings preset name</dd>
+<dt><code>-a, &#8211;active-patchbay=[path]</code></dt>
+<dd> Set active patchbay definition file</dd>
+<dt><code>-n, &#8211;server-name=[label]</code></dt>
+<dd> Set default JACK audio server name</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show help about command line options</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jackd/">jackd</a>(1).</code> </p>
 <h2>FILES</h2>

@@ -15,13 +15,13 @@ description: "ipmidetectd.conf – ipmidetectd configuration file"
 <h2>Ipmidetectd Configuration Options</h2>
 <dl>
 <dt>
-<dt><i>ipmiping_period num</i></p>
+</dt><dt><i>ipmiping_period num</i></dt>
 <dd>
-<dd>Specify the period time in milliseconds that IPMI pings should be regularly sent out. Default is 15000.</p>
-<dt><i>ipmidetectd_server_port port</i></p>
-<dd>Specify the alternate default port the ipmidetectd server should listen for requests off of. Default is 9225.</p>
-<dt><i>host string[:port]</i></p>
-<dd>Specify a host or IP address the ipmidetectd daemon should send IPMI pings to. Can be specified as many times as necessary. An optional port can be specified. Can accept host ranges as input. See HOSTRANGED SUPPORT in <code><a href="/docs/linux/man/8-ipmidetect/">ipmidetect</a>(8)</code> for information on ranged formats.</dl>
+</dd><dd>Specify the period time in milliseconds that IPMI pings should be regularly sent out. Default is 15000.</dd>
+<dt><i>ipmidetectd_server_port port</i></dt>
+<dd>Specify the alternate default port the ipmidetectd server should listen for requests off of. Default is 9225.</dd>
+<dt><i>host string[:port]</i></dt>
+<dd>Specify a host or IP address the ipmidetectd daemon should send IPMI pings to. Can be specified as many times as necessary. An optional port can be specified. Can accept host ranges as input. See HOSTRANGED SUPPORT in <code><a href="/docs/linux/man/8-ipmidetect/">ipmidetect</a>(8)</code> for information on ranged formats.</dd></dl>
 <h2>Files</h2>
 <p>/etc/freeipmi//ipmidetectd.conf</p>
 <h2>Reporting Bugs</h2>

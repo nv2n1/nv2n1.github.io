@@ -28,10 +28,10 @@ description: "sstebz.f –"
  See W. Kahan &quot;Accurate Eigenvalues of a Symmetric Tridiagonal
  Matrix&quot;, Report CS41, Computer Science Dept., Stanford
  University, July 21, 1966.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>RANGE</i> </p>
+<dd><i>RANGE</i> </dd>
 <pre> RANGE is CHARACTER*1
  = 'A': (&quot;All&quot;) all eigenvalues will be found.
  = 'V': (&quot;Value&quot;) all eigenvalues in the half-open interval
@@ -162,16 +162,16 @@ description: "sstebz.f –"
  publicly released versions should be large enough to handle
  the worst machine around. Note that this has no effect
  on accuracy of the solution.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 262 of file sstebz.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

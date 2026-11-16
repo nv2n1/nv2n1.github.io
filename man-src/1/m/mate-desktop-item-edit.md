@@ -15,20 +15,20 @@ description: "mate-desktop-item-edit – A small tool to edit .desktop files."
 <p> Distributed with mate-panel, <code>mate-desktop-item-edit</code> allows you to edit .desktop files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;create-new</code></p>
-<dd> Create a new file in the given directory.</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>&#8211;create-new</code></dt>
+<dd> Create a new file in the given directory.</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <p> This program also accepts the standard GTK options.</p>
 <h2>EXAMPLES</h2>
 <p> <code>mate-desktop-item-edit &#8211;create-new ~/Desktop/Icon.desktop</code></p>
 <dl>
 <dt>
-<dd> Open a <code>mate-desktop-item-edit</code> dialog to create a launcher icon on the desktop named &quot;Icon&quot;.</dl>
+</dt><dd> Open a <code>mate-desktop-item-edit</code> dialog to create a launcher icon on the desktop named &quot;Icon&quot;.</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/mate-panel/issues">http://github.com/mate-desktop/mate-panel/issues</a></p>

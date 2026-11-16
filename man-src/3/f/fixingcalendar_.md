@@ -50,13 +50,13 @@ description: "QuantLib::InterestRateIndex – base class for interest rate index
 <p>base class for interest rate indexes </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add methods returning <code>InterestRate</code></dl>
+<dd>add methods returning <code>InterestRate</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>std::string name () const [virtual]</h3>
 <p>Returns the name of the index. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <p> Implements <code>Index</code>. </p>
 <p> Reimplemented in <code>BMAIndex</code>.</p>
 <h3><code>Rate</code> fixing (const <code>Date</code> &amp; fixingDate, bool forecastTodaysFixing = false) const [virtual]</h3>

@@ -20,36 +20,36 @@ ogrinfo[--help - general][-ro][-q][-where restricted_where]
 <h2>DESCRIPTION</h2>
 <p> The ogrinfo program lists various information about an OGR supported data source to stdout (the terminal). </p>
 <dl>
-<dt><code>-ro</code>:</p>
-<dd> Open the data source in read-only mode.</p>
-<dt><code>-al</code>:</p>
-<dd> List all features of all layers (used instead of having to give layer names as arguments).</p>
-<dt><code>-so</code>:</p>
-<dd> Summary Only: supress listing of features, show only the summary information like projection, schema, feature count and extents.</p>
-<dt><code>-q</code>:</p>
-<dd> Quiet verbose reporting of various information, including coordinate system, layer schema, extents, and feature count.</p>
-<dt><code>-where</code> <i>restricted_where</i>:</p>
-<dd> An attribute query in a restricted form of the queries used in the SQL WHERE statement. Only features matching the attribute query will be reported.</p>
-<dt><code>-sql</code> <i>statement</i>:</p>
-<dd> Execute the indicated SQL statement and return the result.</p>
-<dt><code>-dialect</code> <i>dialect</i>:</p>
-<dd> SQL dialect. In some cases can be used to use (unoptimized) OGR SQL instead of the native SQL of an RDBMS by passing OGRSQL. Starting with GDAL 1.10, the &#8216;SQLITE&#8217; dialect can also be used with any datasource.</p>
-<dt><code>-spat</code> <i>xmin ymin xmax ymax</i>:</p>
-<dd> The area of interest. Only features within the rectangle will be reported.</p>
-<dt><code>-geomfield</code> <i>field</i>:</p>
-<dd> (OGR &gt;= 1.11) Name of the geometry field on which the spatial filter operates on.</p>
-<dt><code>-fid</code> <i>fid</i>:</p>
-<dd> If provided, only the feature with this feature id will be reported. Operates exclusive of the spatial or attribute queries. Note: if you want to select several features based on their feature id, you can also use the fact the &#8216;fid&#8217; is a special field recognized by OGR SQL. So, &#8216;-where &#8216;fid in (1,3,5)&#8221; would select features 1, 3 and 5.</p>
-<dt><code>-fields</code>={YES/NO}:</p>
-<dd> (starting with GDAL 1.6.0) If set to NO, the feature dump will not display field values. Default value is YES.</p>
-<dt><code>-geom</code>={YES/NO/SUMMARY}:</p>
-<dd> (starting with GDAL 1.6.0) If set to NO, the feature dump will not display the geometry. If set to SUMMARY, only a summary of the geometry will be displayed. If set to YES, the geometry will be reported in full OGC WKT format. Default value is YES.</p>
-<dt><code>&#8211;formats</code>:</p>
-<dd> List the format drivers that are enabled.</p>
-<dt><i>datasource_name</i>:</p>
-<dd> The data source to open. May be a filename, directory or other virtual name. See the OGR Vector Formats list for supported datasources.</p>
-<dt><i>layer</i>:</p>
-<dd> One or more layer names may be reported.</dl>
+<dt><code>-ro</code>:</dt>
+<dd> Open the data source in read-only mode.</dd>
+<dt><code>-al</code>:</dt>
+<dd> List all features of all layers (used instead of having to give layer names as arguments).</dd>
+<dt><code>-so</code>:</dt>
+<dd> Summary Only: supress listing of features, show only the summary information like projection, schema, feature count and extents.</dd>
+<dt><code>-q</code>:</dt>
+<dd> Quiet verbose reporting of various information, including coordinate system, layer schema, extents, and feature count.</dd>
+<dt><code>-where</code> <i>restricted_where</i>:</dt>
+<dd> An attribute query in a restricted form of the queries used in the SQL WHERE statement. Only features matching the attribute query will be reported.</dd>
+<dt><code>-sql</code> <i>statement</i>:</dt>
+<dd> Execute the indicated SQL statement and return the result.</dd>
+<dt><code>-dialect</code> <i>dialect</i>:</dt>
+<dd> SQL dialect. In some cases can be used to use (unoptimized) OGR SQL instead of the native SQL of an RDBMS by passing OGRSQL. Starting with GDAL 1.10, the &#8216;SQLITE&#8217; dialect can also be used with any datasource.</dd>
+<dt><code>-spat</code> <i>xmin ymin xmax ymax</i>:</dt>
+<dd> The area of interest. Only features within the rectangle will be reported.</dd>
+<dt><code>-geomfield</code> <i>field</i>:</dt>
+<dd> (OGR &gt;= 1.11) Name of the geometry field on which the spatial filter operates on.</dd>
+<dt><code>-fid</code> <i>fid</i>:</dt>
+<dd> If provided, only the feature with this feature id will be reported. Operates exclusive of the spatial or attribute queries. Note: if you want to select several features based on their feature id, you can also use the fact the &#8216;fid&#8217; is a special field recognized by OGR SQL. So, &#8216;-where &#8216;fid in (1,3,5)&#8221; would select features 1, 3 and 5.</dd>
+<dt><code>-fields</code>={YES/NO}:</dt>
+<dd> (starting with GDAL 1.6.0) If set to NO, the feature dump will not display field values. Default value is YES.</dd>
+<dt><code>-geom</code>={YES/NO/SUMMARY}:</dt>
+<dd> (starting with GDAL 1.6.0) If set to NO, the feature dump will not display the geometry. If set to SUMMARY, only a summary of the geometry will be displayed. If set to YES, the geometry will be reported in full OGC WKT format. Default value is YES.</dd>
+<dt><code>&#8211;formats</code>:</dt>
+<dd> List the format drivers that are enabled.</dd>
+<dt><i>datasource_name</i>:</dt>
+<dd> The data source to open. May be a filename, directory or other virtual name. See the OGR Vector Formats list for supported datasources.</dd>
+<dt><i>layer</i>:</dt>
+<dd> One or more layer names may be reported.</dd></dl>
 <p> If no layer names are passed then ogrinfo will report a list of available layers (and their layerwide geometry type). If layer name(s) are given then their extents, coordinate system, feature count, geometry type, schema and all features matching query parameters will be reported to the terminal. If no query parameters are provided, all features are reported. </p>
 <p> Geometries are reported in OGC WKT format.</p>
 <h2>EXAMPLE</h2>

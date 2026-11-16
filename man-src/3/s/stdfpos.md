@@ -11,9 +11,7 @@ std::fpos - std::fpos
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ios&gt;
-
 template&lt; class State &gt;
-
 class fpos;</code></pre> 
 Specializations of the class template std::fpos identify absolute positions in a stream or in a file. Each object of type fpos holds the byte position in the stream (typically as a private member of type std::streamoff) and the current shift state, a value of type State (typically std::mbstate_t). 
 The following specializations of std::fpos are provided: 

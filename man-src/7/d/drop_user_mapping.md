@@ -15,12 +15,12 @@ description: "DROP USER MAPPING – remove a user mapping for a foreign server"
 <p> The owner of a foreign server can drop user mappings for that server for any user. Also, a user can drop a user mapping for his own user name if USAGE privilege on the server has been granted to the user.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the user mapping does not exist. A notice is issued in this case.</p>
-<dt><i>username</i></p>
-<dd>User name of the mapping. CURRENT_USER and USER match the name of the current user. PUBLIC is used to match all present and future user names in the system.</p>
-<dt><i>servername</i></p>
-<dd>Server name of the user mapping.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the user mapping does not exist. A notice is issued in this case.</dd>
+<dt><i>username</i></dt>
+<dd>User name of the mapping. CURRENT_USER and USER match the name of the current user. PUBLIC is used to match all present and future user names in the system.</dd>
+<dt><i>servername</i></dt>
+<dd>Server name of the user mapping.</dd></dl>
 <h2>Examples</h2>
 <p>Drop a user mapping bob, server foo if it exists: </p>
 <pre>DROP USER MAPPING IF EXISTS FOR bob SERVER foo;</pre>

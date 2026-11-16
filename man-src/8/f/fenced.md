@@ -21,51 +21,51 @@ description: "fenced – the I/O Fencing daemon"
 <h2>Options</h2>
 <p>Command line options override a corresponding setting in cluster.conf. </p>
 <dl>
-<dt><code>-D</code></p>
+<dt><code>-D</code></dt>
 <dd>Enable debugging to stderr and don&#8217;t fork.<br />
- See also <code>fence_tool dump</code> in <code><a href="/docs/linux/man/8-fence_tool/">fence_tool</a></code>(8).</p>
-<dt><code>-L</code></p>
+ See also <code>fence_tool dump</code> in <code><a href="/docs/linux/man/8-fence_tool/">fence_tool</a></code>(8).</dd>
+<dt><code>-L</code></dt>
 <dd>Enable debugging to log file.<br />
- See also <code>logging</code> in <code>cluster.conf</code>(5).</p>
-<dt><code>-g</code><i> num</i></p>
-<dd>groupd compatibility mode, 0 off, 1 on. Default 0.</p>
-<dt><code>-r</code><i> path</i></p>
-<dd>Register a directory that needs to be empty for the daemon to start. Use a dash (-) to skip default directories /sys/fs/gfs, /sys/fs/gfs2, /sys/kernel/dlm.</p>
-<dt><code>-c</code></p>
-<dd>All nodes are in a clean state to start. Do no startup fencing.</p>
-<dt><code>-s</code></p>
-<dd>Skip startup fencing of nodes with no defined fence methods.</p>
-<dt><code>-j</code><i> secs</i></p>
-<dd>Post-join fencing delay. Default 6.</p>
-<dt><code>-f</code><i> secs</i></p>
-<dd>Post-fail fencing delay. Default 0.</p>
-<dt><code>-R</code><i> secs</i></p>
-<dd>Number of seconds to wait for a manual override after a failed fencing attempt before the next attempt. Default 3.</p>
-<dt><code>-O</code><i> path</i></p>
-<dd>Location of a FIFO used for communication between fenced and fence_ack_manual.</p>
-<dt><code>-h</code></p>
-<dd>Print a help message describing available options, then exit.</p>
-<dt><code>-V</code></p>
-<dd>Print program version information, then exit. </p>
+ See also <code>logging</code> in <code>cluster.conf</code>(5).</dd>
+<dt><code>-g</code><i> num</i></dt>
+<dd>groupd compatibility mode, 0 off, 1 on. Default 0.</dd>
+<dt><code>-r</code><i> path</i></dt>
+<dd>Register a directory that needs to be empty for the daemon to start. Use a dash (-) to skip default directories /sys/fs/gfs, /sys/fs/gfs2, /sys/kernel/dlm.</dd>
+<dt><code>-c</code></dt>
+<dd>All nodes are in a clean state to start. Do no startup fencing.</dd>
+<dt><code>-s</code></dt>
+<dd>Skip startup fencing of nodes with no defined fence methods.</dd>
+<dt><code>-j</code><i> secs</i></dt>
+<dd>Post-join fencing delay. Default 6.</dd>
+<dt><code>-f</code><i> secs</i></dt>
+<dd>Post-fail fencing delay. Default 0.</dd>
+<dt><code>-R</code><i> secs</i></dt>
+<dd>Number of seconds to wait for a manual override after a failed fencing attempt before the next attempt. Default 3.</dd>
+<dt><code>-O</code><i> path</i></dt>
+<dd>Location of a FIFO used for communication between fenced and fence_ack_manual.</dd>
+<dt><code>-h</code></dt>
+<dd>Print a help message describing available options, then exit.</dd>
+<dt><code>-V</code></dt>
+<dd>Print program version information, then exit. </dd>
 </dl>
 <h2>Files</h2>
 <p><code>cluster.conf</code>(5) is usually located at /etc/cluster/cluster.conf. It is not read directly. Other cluster components load the contents into memory, and the values are accessed through the libccs library. </p>
 <p> Configuration options for fenced are added to the &lt;fence_daemon /&gt; section of cluster.conf, within the top level &lt;cluster&gt; section. </p>
 <dl>
-<dt><code>post_join_delay</code></p>
-<dd>is the number of seconds the daemon will wait before fencing any victims after a node joins the domain. Default 6. </p>
+<dt><code>post_join_delay</code></dt>
+<dd>is the number of seconds the daemon will wait before fencing any victims after a node joins the domain. Default 6. </dd>
 <p> &lt;fence_daemon post_join_delay=&quot;6&quot;/&gt; </p>
-<dt><code>post_fail_delay</code></p>
-<dd>is the number of seconds the daemon will wait before fencing any victims after a domain member fails. Default 0. </p>
+<dt><code>post_fail_delay</code></dt>
+<dd>is the number of seconds the daemon will wait before fencing any victims after a domain member fails. Default 0. </dd>
 <p> &lt;fence_daemon post_fail_delay=&quot;0&quot;/&gt; </p>
-<dt><code>clean_start</code></p>
-<dd>is used to prevent any startup fencing the daemon might do. It indicates that the daemon should assume all nodes are in a clean state to start. Default 0. </p>
+<dt><code>clean_start</code></dt>
+<dd>is used to prevent any startup fencing the daemon might do. It indicates that the daemon should assume all nodes are in a clean state to start. Default 0. </dd>
 <p> &lt;fence_daemon clean_start=&quot;0&quot;/&gt; </p>
-<dt><code>override_path</code></p>
-<dd>is the location of a FIFO used for communication between fenced and fence_ack_manual. Default shown. </p>
+<dt><code>override_path</code></dt>
+<dd>is the location of a FIFO used for communication between fenced and fence_ack_manual. Default shown. </dd>
 <p> &lt;fence_daemon override_path=&quot;/var/run/cluster/fenced_override&quot;/&gt; </p>
-<dt><code>override_time</code></p>
-<dd>is the number of seconds to wait for administrator intervention between fencing attempts following fence agent failures. Default 3. </p>
+<dt><code>override_time</code></dt>
+<dd>is the number of seconds to wait for administrator intervention between fencing attempts following fence agent failures. Default 3. </dd>
 <p> &lt;fence_daemon override_time=&quot;3&quot;/&gt; </p>
 </dl>
 <h3>Per-node fencing settings</h3>

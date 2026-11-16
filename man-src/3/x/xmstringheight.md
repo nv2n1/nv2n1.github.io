@@ -16,10 +16,10 @@ description: "XmStringHeight — A compound string function that returns the lin
 <h2>Description</h2>
 <p><code>XmStringHeight</code> returns the height, in pixels, of the sum of all the line heights of the given compound string. Separator components delimit lines.</p>
 <dl COMPACT>
-<dt><i>rendertable</i></p>
-<dd>Specifies the render table</p>
-<dt><i>string</i></p>
-<dd>Specifies the string</dl>
+<dt><i>rendertable</i></dt>
+<dd>Specifies the render table</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the string</dd></dl>
 <h2>Return</h2>
 <p>Returns the height of the specified string.</p>
 <h2>Related</h2>

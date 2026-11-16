@@ -10,9 +10,6 @@ description: "QuantLib::CallableBond – Callable bond base class."
 <p>QuantLib::CallableBond &#8211; Callable bond base class. </p>
 <h2>Synopsis</h2>
 <pre><code>CallableBond (Natural settlementDays, Real faceAmount, const Schedule &amp;schedule, const DayCounter &amp;paymentDayCounter, BusinessDayConvention paymentConvention=Following, Real redemption=100.0, const Date &amp;issueDate=Date(), const CallabilitySchedule &amp;putCallSchedule=CallabilitySchedule())
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Bond</code>. Inherited by <code>CallableFixedRateBond</code>.</p>
 <h3>Classes</h3>
@@ -29,9 +26,6 @@ Protected Attributes</code></pre>
  <i>returns the Black implied forward yield volatility </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>CallableBond (Natural settlementDays, Real faceAmount, const Schedule &amp;schedule, const DayCounter &amp;paymentDayCounter, BusinessDayConvention paymentConvention=Following, Real redemption=100.0, const Date &amp;issueDate=Date(), const CallabilitySchedule &amp;putCallSchedule=CallabilitySchedule())
-
-
-
 Protected Attributes</code></pre>
 <p> <code>DayCounter</code> <code>paymentDayCounter_</code> </p>
 <p> <code>Frequency</code> <code>frequency_</code> </p>
@@ -49,7 +43,7 @@ Protected Attributes</code></pre>
 <p> Base callable bond class for fixed and zero coupon bonds. Defines commonalities between fixed and zero coupon callable bonds. At present, only European and Bermudan put/call schedules supported (no American optionality), as defined by the <code>Callability</code> class. </p>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>models/shortrate/calibrationHelpers </p>
+<dd>models/shortrate/calibrationHelpers </dd>
 <p> OAS/OAD </p>
 <p> floating rate callable bonds ?</dl>
 <h2>Member Function Documentation</h2>
@@ -62,3 +56,4 @@ Protected Attributes</code></pre>
 <p> Reimplemented in <code>CallableFixedRateBond</code>.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+</p>

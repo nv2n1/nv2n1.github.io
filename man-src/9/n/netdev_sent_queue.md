@@ -14,10 +14,10 @@ description: "netdev_sent_queue – report the number of bytes queued to hardwar
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>network device</dl>
+</dd><dd>network device</dd></dl>
 <p> <i>bytes</i></p>
 <dl>
-<dd>number of bytes queued to the hardware device queue</dl>
+<dd>number of bytes queued to the hardware device queue</dd></dl>
 <h2>Description</h2>
 <p>Report the number of bytes queued for sending/completion to the network device hardware queue. <i>bytes</i> should be a good approximation and should exactly match <code>netdev_completed_queue</code><i>bytes</i></p>
 <h2>Copyright</h2>

@@ -15,12 +15,12 @@ description: "sevmgr-library –"
 <h2>Description</h2>
 <p>SEvMgr is a C++ library of discrete event queue management classes and functions, exclusively targeting simulation purposes. SEvMgr makes an extensive use of existing open-source libraries for increased functionality, speed and accuracy. In particular the Boost (C++ Standard Extensions: <a rel="nofollow" href="http://www.boost.org)">http://www.boost.org)</a> library is used. The library covers the following areas:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Booking and cancellation requests</p>
-<dt>&bull;</p>
-<dd>Forecast and Optimisation notification requests</p>
-<dt>&bull;</p>
-<dd>Simulation break-points</dl>
+<dt>&bull;</dt>
+<dd>Booking and cancellation requests</dd>
+<dt>&bull;</dt>
+<dd>Forecast and Optimisation notification requests</dd>
+<dt>&bull;</dt>
+<dd>Simulation break-points</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-sevmgr/">sevmgr</a>(1)</code>, <code><a href="/docs/linux/man/1-sevmgr_demo/">sevmgr_demo</a>(1)</code>, <code><a href="/docs/linux/man/1-sevmgr-config/">sevmgr-config</a></code>(1)</p>
 <h2>Support</h2>

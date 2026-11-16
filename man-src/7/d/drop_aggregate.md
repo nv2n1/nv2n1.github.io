@@ -14,16 +14,16 @@ description: "DROP AGGREGATE – remove an aggregate function"
 <p><code>DROP AGGREGATE</code> removes an existing aggregate function. To execute this command the current user must be the owner of the aggregate function.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the aggregate does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing aggregate function.</p>
-<dt><i>type</i></p>
-<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the aggregate function.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the aggregate function if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the aggregate does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing aggregate function.</dd>
+<dt><i>type</i></dt>
+<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the aggregate function.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the aggregate function if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>To remove the aggregate function myavg for type <code>integer</code>: </p>
 <pre>DROP AGGREGATE myavg(integer);</pre>

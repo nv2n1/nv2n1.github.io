@@ -12,27 +12,16 @@ std::chrono::parse - std::chrono::parse
 
 <pre><code>template &lt;class CharT, class Traits, class Alloc, class Parsable&gt;
 (1)(since C++ 20)
-
     /* unspecified */ parse(const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;fmt, Parsable &amp;tp);
-
 template &lt;class CharT, class Traits, class Alloc, class Parsable&gt;
-
 /* unspecified */ parse(const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;fmt, Parsable &amp;tp, (2)(since C++ 20)
-
                                                                                               std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;abbrev);
-
 template &lt;class CharT, class Traits, class Alloc, class Parsable&gt;
-
 /* unspecified */ parse(const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;fmt, Parsable &amp;tp, (3)(since C++ 20)
-
                                                                                               std::chrono::minutes &amp;offset);
-
 template &lt;class CharT, class Traits, class Alloc, class Parsable&gt;
-
 /* unspecified */ parse(const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;fmt, Parsable &amp;tp, (4)(since C++ 20)
-
                                                                                               std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;abbrev,
-
                         std::chrono::minutes &amp;offset);</code></pre> 
 Returns an object manip of unspecified type such that, given a std::basic_istream&lt;CharT, Traits&gt; object is, the expression is &gt;&gt; manip calls from_stream (unqualified, to enable argument-dependent_lookup) as follows: 
 1) from_stream(is, fmt.c_str(), tp) 

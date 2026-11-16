@@ -12,7 +12,7 @@ description: "Error Types – The File driver is very close to the system code, 
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_error_errno_match()</dl>
+</dt><dd> globus_error_errno_match()</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
 <h2>Index</h2>

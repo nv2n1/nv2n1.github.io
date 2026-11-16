@@ -20,30 +20,30 @@ description: "systemd.path – Path unit configuration"
 <h3>Implicit Dependencies</h3>
 <p>The following dependencies are implicitly added: </p>
 <dl>
-<dd>&bull; If a path unit is beneath another mount unit in the file system hierarchy, both a requirement and an ordering dependency between both units are created automatically.</dl>
+<dd>&bull; If a path unit is beneath another mount unit in the file system hierarchy, both a requirement and an ordering dependency between both units are created automatically.</dd></dl>
 <dl>
-<dd>&bull; An implicit <i>Before=</i> dependency is added between a path unit and the unit it is supposed to activate.</dl>
+<dd>&bull; An implicit <i>Before=</i> dependency is added between a path unit and the unit it is supposed to activate.</dd></dl>
 <h3>Default Dependencies</h3>
 <p>The following dependencies are added unless <i>DefaultDependencies=no</i> is set: </p>
 <dl>
-<dd>&bull; Path units will automatically have dependencies of type <i>Before=</i> on paths.target, dependencies of type <i>After=</i> and <i>Requires=</i> on sysinit.target, and have dependencies of type <i>Conflicts=</i> and <i>Before=</i> on shutdown.target. These ensure that path units are terminated cleanly prior to system shutdown. Only path units involved with early boot or late system shutdown should disable <i>DefaultDependencies=</i> option.</dl>
+<dd>&bull; Path units will automatically have dependencies of type <i>Before=</i> on paths.target, dependencies of type <i>After=</i> and <i>Requires=</i> on sysinit.target, and have dependencies of type <i>Conflicts=</i> and <i>Before=</i> on shutdown.target. These ensure that path units are terminated cleanly prior to system shutdown. Only path units involved with early boot or late system shutdown should disable <i>DefaultDependencies=</i> option.</dd></dl>
 <h2>Options</h2>
 <p>Path files must include a [Path] section, which carries information about the path(s) it monitors. The options specific to the [Path] section of path units are the following: </p>
 <p> <i>PathExists=</i>, <i>PathExistsGlob=</i>, <i>PathChanged=</i>, <i>PathModified=</i>, <i>DirectoryNotEmpty=</i></p>
 <dl>
-<dd>Defines paths to monitor for certain changes: <i>PathExists=</i> may be used to watch the mere existence of a file or directory. If the file specified exists, the configured unit is activated. <i>PathExistsGlob=</i> works similar, but checks for the existence of at least one file matching the globbing pattern specified. <i>PathChanged=</i> may be used to watch a file or directory and activate the configured unit whenever it changes. It is not activated on every write to the watched file but it is activated if the file which was open for writing gets closed. <i>PathModified=</i> is similar, but additionally it is activated also on simple writes to the watched file. <i>DirectoryNotEmpty=</i> may be used to watch a directory and activate the configured unit whenever it contains at least one file. </p>
+<dd>Defines paths to monitor for certain changes: <i>PathExists=</i> may be used to watch the mere existence of a file or directory. If the file specified exists, the configured unit is activated. <i>PathExistsGlob=</i> works similar, but checks for the existence of at least one file matching the globbing pattern specified. <i>PathChanged=</i> may be used to watch a file or directory and activate the configured unit whenever it changes. It is not activated on every write to the watched file but it is activated if the file which was open for writing gets closed. <i>PathModified=</i> is similar, but additionally it is activated also on simple writes to the watched file. <i>DirectoryNotEmpty=</i> may be used to watch a directory and activate the configured unit whenever it contains at least one file. </dd>
 <p> The arguments of these directives must be absolute file system paths. </p>
 <p> Multiple directives may be combined, of the same and of different types, to watch multiple paths. If the empty string is assigned to any of these options, the list of paths to watch is reset, and any prior assignments of these options will not have any effect. </p>
 <p> If a path already exists (in case of <i>PathExists=</i> and <i>PathExistsGlob=</i>) or a directory already is not empty (in case of <i>DirectoryNotEmpty=</i>) at the time the path unit is activated, then the configured unit is immediately activated as well. Something similar does not apply to <i>PathChanged=</i> and <i>PathModified=</i>. </p>
 <p> If the path itself or any of the containing directories are not accessible, <code>systemd</code> will watch for permission changes and notice that conditions are satisfied when permissions allow that.</dl>
 <p> <i>Unit=</i></p>
 <dl>
-<dd>The unit to activate when any of the configured paths changes. The argument is a unit name, whose suffix is not &quot;.path&quot;. If not specified, this value defaults to a service that has the same name as the path unit, except for the suffix. (See above.) It is recommended that the unit name that is activated and the unit name of the path unit are named identical, except for the suffix.</dl>
+<dd>The unit to activate when any of the configured paths changes. The argument is a unit name, whose suffix is not &quot;.path&quot;. If not specified, this value defaults to a service that has the same name as the path unit, except for the suffix. (See above.) It is recommended that the unit name that is activated and the unit name of the path unit are named identical, except for the suffix.</dd></dl>
 <p> <i>MakeDirectory=</i></p>
 <dl>
-<dd>Takes a boolean argument. If true, the directories to watch are created before watching. This option is ignored for <i>PathExists=</i> settings. Defaults to <code>false</code>.</dl>
+<dd>Takes a boolean argument. If true, the directories to watch are created before watching. This option is ignored for <i>PathExists=</i> settings. Defaults to <code>false</code>.</dd></dl>
 <p> <i>DirectoryMode=</i></p>
 <dl>
-<dd>If <i>MakeDirectory=</i> is enabled, use the mode specified here to create the directories in question. Takes an access mode in octal notation. Defaults to <code>0755</code>.</dl>
+<dd>If <i>MakeDirectory=</i> is enabled, use the mode specified here to create the directories in question. Takes an access mode in octal notation. Defaults to <code>0755</code>.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7), <code><a href="/docs/linux/man/7-systemd-directives/">systemd.directives</a></code>(7) </p>

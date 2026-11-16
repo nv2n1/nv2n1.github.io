@@ -17,23 +17,23 @@ description: "ffcfstress – constant force stress test for force-feedback devic
 <h2>OPTIONS</h2>
 <p> At least one option is required.</p>
 <dl>
-<dt><code>-d</code> &lt;<i>device</i>&gt;</p>
-<dd> The device to test (by default <i>/dev/input/event0</i>).</p>
-<dt><code>-u</code> &lt;<i>update rate</i>&gt;</p>
-<dd> The update rate in Hz (25 by default).</p>
-<dt><code>-f</code> &lt;<i>frequency</i>&gt;</p>
-<dd> The spring center motion frequency in Hz (0.1 by default).</p>
-<dt><code>-a</code> &lt;<i>amplitude</i>&gt;</p>
-<dd> The spring center motion amplitude, between 0.0 and 1.0 (1.0 by default).</p>
-<dt><code>-s</code> &lt;<i>strength</i>&gt;</p>
-<dd> The spring strength factor (1.0 by default).</p>
-<dt><code>-x</code> &lt;<i>axis</i>&gt;</p>
+<dt><code>-d</code> &lt;<i>device</i>&gt;</dt>
+<dd> The device to test (by default <i>/dev/input/event0</i>).</dd>
+<dt><code>-u</code> &lt;<i>update rate</i>&gt;</dt>
+<dd> The update rate in Hz (25 by default).</dd>
+<dt><code>-f</code> &lt;<i>frequency</i>&gt;</dt>
+<dd> The spring center motion frequency in Hz (0.1 by default).</dd>
+<dt><code>-a</code> &lt;<i>amplitude</i>&gt;</dt>
+<dd> The spring center motion amplitude, between 0.0 and 1.0 (1.0 by default).</dd>
+<dt><code>-s</code> &lt;<i>strength</i>&gt;</dt>
+<dd> The spring strength factor (1.0 by default).</dd>
+<dt><code>-x</code> &lt;<i>axis</i>&gt;</dt>
 <dd> absolute axis to test (default: 0)<br />
- [0 = X, 1 = Y, 2 = Z, 3 = RX, 4 = RY, 5 = RZ, 6 = WHEEL]</p>
-<dt><code>-A</code></p>
-<dd> switch off auto-centering</p>
-<dt><code>-o</code></p>
-<dd> Dummy option, useful when all defaults should be used.</dl>
+ [0 = X, 1 = Y, 2 = Z, 3 = RX, 4 = RY, 5 = RZ, 6 = WHEEL]</dd>
+<dt><code>-A</code></dt>
+<dd> switch off auto-centering</dd>
+<dt><code>-o</code></dt>
+<dd> Dummy option, useful when all defaults should be used.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffmvforce/">ffmvforce</a></code>(1), <code><a href="/docs/linux/man/1-fftest/">fftest</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1).</p>
 <h2>AUTHOR</h2>

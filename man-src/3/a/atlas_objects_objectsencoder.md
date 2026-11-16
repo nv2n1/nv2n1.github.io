@@ -24,21 +24,21 @@ description: "Atlas::Objects::ObjectsEncoder – Objects hierarchy encoder."
 <p> Simply call the streamMessage member with a pointer to the object to be sent. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd>Atlas::Objects::Decoder</dl>
+<dd>Atlas::Objects::Decoder</dd></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dl>
+<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>Atlas::Objects::ObjectsEncoder::ObjectsEncoder (<code>Atlas::Bridge</code> &amp; b) [inline, explicit]</h3>
 <p>The default constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>b</i> The <code>Bridge</code> to which objects are to be sent.</dl>
+<dd><i>b</i> The <code>Bridge</code> to which objects are to be sent.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>template&lt;class ObjectData &gt; void Atlas::Objects::ObjectsEncoder::streamObjectsMessage (const Atlas::Objects::SmartPtr&lt; ObjectData &gt; &amp; o) [inline]</h3>
 <p>Send an object to the bridge. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>o</i> The object that is to be sent.</dl>
+<dd><i>o</i> The object that is to be sent.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

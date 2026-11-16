@@ -33,43 +33,43 @@ Description: 'Specifies the path of the directory the jobmanager will
 <p> <code>Attribute</code></p>
 <dl>
 <dt>
-<dd> The name of the RSL parameter to which this record refers.</dl>
+</dt><dd> The name of the RSL parameter to which this record refers.</dd></dl>
 <p> <code>Description</code></p>
 <dl>
 <dt>
-<dd> A textual description of what the RSL parameter means.</dl>
+</dt><dd> A textual description of what the RSL parameter means.</dd></dl>
 <p> <code>Default</code></p>
 <dl>
 <dt>
-<dd> The default value of the RSL parameter if it is not found in the RSL. The default value is only used if the DefaultWhen value matches the current validation mode.</dl>
+</dt><dd> The default value of the RSL parameter if it is not found in the RSL. The default value is only used if the DefaultWhen value matches the current validation mode.</dd></dl>
 <p> <code>Values</code></p>
 <dl>
 <dt>
-<dd> A string containing whitespace-separated list of enumerated values which are valid for this RSL attribute. For example, for the &#8216;dryrun&#8217; parameter, this may be <code>&#8216;yes no&#8217;</code>.</dl>
+</dt><dd> A string containing whitespace-separated list of enumerated values which are valid for this RSL attribute. For example, for the &#8216;dryrun&#8217; parameter, this may be <code>&#8216;yes no&#8217;</code>.</dd></dl>
 <p> <code>RequiredWhen</code></p>
 <dl>
 <dt>
-<dd> Some subset of the &#8216;when strings&#8217; (<code>see below</code>), indicating when the RSL parameter is required for the RSL to be valid.</dl>
+</dt><dd> Some subset of the &#8216;when strings&#8217; (<code>see below</code>), indicating when the RSL parameter is required for the RSL to be valid.</dd></dl>
 <p> <code>DefaultWhen</code></p>
 <dl>
 <dt>
-<dd> Some subset of the &#8216;when strings&#8217; (<code>see below</code>) indicating when then RSL&#8217;s default value will be used if the RSL attribute is not present in the RSL.</dl>
+</dt><dd> Some subset of the &#8216;when strings&#8217; (<code>see below</code>) indicating when then RSL&#8217;s default value will be used if the RSL attribute is not present in the RSL.</dd></dl>
 <p> <code>ValidWhen</code></p>
 <dl>
 <dt>
-<dd> Some subset of the &#8216;when strings&#8217; (<code>see below</code>) indicating when then RSL attribute may be used.</dl>
+</dt><dd> Some subset of the &#8216;when strings&#8217; (<code>see below</code>) indicating when then RSL attribute may be used.</dd></dl>
 <h3>&#8216;When&#8217; Strings</h3>
 <p> The set of when strings understood by the RSL validation file parser are </p>
 <p> <code>GLOBUS_GRAM_JOB_SUBMIT</code></p>
 <dl>
 <dt>
-<dd> The RSL attribute pertains to job submission.</dl>
+</dt><dd> The RSL attribute pertains to job submission.</dd></dl>
 <p> <code>GLOBUS_GRAM_JOB_MANAGER_RESTART</code></p>
 <dl>
 <dt>
-<dd> The RSL attribute pertains to job manager restart.</dl>
+</dt><dd> The RSL attribute pertains to job manager restart.</dd></dl>
 <p> <code>GLOBUS_GRAM_JOB_MANAGER_STDIO_UPDATE</code></p>
 <dl>
 <dt>
-<dd> The RSL attribute pertains to the STDIO_UPDATE signal.</dl>
+</dt><dd> The RSL attribute pertains to the STDIO_UPDATE signal.</dd></dl>
 <h2>Index</h2>

@@ -15,11 +15,11 @@ snd_pcm_stop - try to stop all running streams in the substream group
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the PCM substream instance</dl>
+<dl><dd></dd><dd>the PCM substream instance</dd></dl>
  
 
  <i>state</i>
-<dl><dd>PCM state after stopping the stream</dl>
+<dl><dd>PCM state after stopping the stream</dd></dl>
 
 <h2>Description</h2>
 

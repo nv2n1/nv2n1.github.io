@@ -32,12 +32,9 @@ replacement - the extension to replace with
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::path p = &quot;/foo/bar.jpeg&quot;;
     std::cout &lt;&lt; &quot;Was: &quot; &lt;&lt; p &lt;&lt; '\n';

@@ -18,9 +18,9 @@ description: "lppasswd – add, change, or delete digest passwords."
 <h2>OPTIONS</h2>
 <p> <i>lppasswd</i> supports the following options:</p>
 <dl>
-<dt>-g groupname</p>
+<dt>-g groupname</dt>
 <dd>
- Specifies a group other than the default system group.</dl>
+ Specifies a group other than the default system group.</dd></dl>
 <h2>SECURITY ISSUES</h2>
 <p> By default, the <i>lppasswd</i> program is not installed to allow ordinary users to change their passwords. To enable this, the <i>lppasswd</i> command must be made setuid to root with the command: </p>
 <pre>

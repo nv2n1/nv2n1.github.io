@@ -14,17 +14,17 @@ description: "akcipher_request_alloc – allocates public key request"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>AKCIPHER tfm handle allocated with <code>crypto_alloc_akcipher</code></dl>
+</dd><dd>AKCIPHER tfm handle allocated with <code>crypto_alloc_akcipher</code></dd></dl>
 <p> <i>gfp</i></p>
 <dl>
-<dd>allocation flags</dl>
+<dd>allocation flags</dd></dl>
 <h2>Return</h2>
 <p>allocated handle in case of success or NULL in case of an error.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

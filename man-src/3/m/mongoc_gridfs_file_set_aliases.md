@@ -14,11 +14,11 @@ mongoc_gridfs_file_set_aliases (mongoc_gridfs_file_t *file,
  const bson_t *bson);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>bson</code></p>
-<dd>A <code>bson_t</code> containing the aliases.</dl>
+<dt><code>bson</code></dt>
+<dd>A <code>bson_t</code> containing the aliases.</dd></dl>
 <h2>Description</h2>
 <p>Sets the aliases for a gridfs file. </p>
 <p> You need to call <code><a href="/docs/linux/man/3-mongoc_gridfs_file_save/">mongoc_gridfs_file_save</a>(3)</code> to persist this change. </p>

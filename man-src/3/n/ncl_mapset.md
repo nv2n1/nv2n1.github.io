@@ -14,7 +14,7 @@ MAPSET - Specifies the rectangular portion of the u/v plane to be drawn.
  void c_mapset (char *jlts, float *plm1, float *plm2, 
  float *plm3, float *plm4)
 <h2>Description</h2><dl COMPACT><dt>JLTS
-<dd>(an input expression, of type CHARACTER) is a character string specifying how the limits of the map are to be chosen. There are six possibilities, as follows: <pre><code>&amp;bull;
+</dt><dd>(an input expression, of type CHARACTER) is a character string specifying how the limits of the map are to be chosen. There are six possibilities, as follows: <pre><code>&amp;bull;
 JLTS = 'MA'(MAXIMUM).The maximum useful area produced by the projection
            is plotted.PLM1,
     PLM2, PLM3, and PLM4 are not used.&amp; bull;
@@ -34,7 +34,6 @@ one attempts to use JLTS='AN' with JPRJ='LC'.
 JLTS = 'LI'(LIMITS).PLM1, PLM2, PLM3, and PLM4 specify the minimum value of u, the maximum value of u, the minimum value of v, and the maximum value of v, respectively.Knowledge of the projection equations is necessary in order to use this option correctly.&amp;bull;
 JLTS = 'GR'(GRID).PLM1, PLM2, PLM3, and PLM4 specify the minimum value of latitude, the minimum value of longitude, the maximum value of latitude,
     and the maximum value of longitude, in degrees, on a lat / lon grid.The limits will be determined in such a way as to ensure that the entire grid will be visible on the map.
-
                                                                PLM1,
     PLM2, PLM3, and PLM4(input arrays, dimensioned 2, of type REAL) are as described above, depending on the value of JLTS.Note that each is a two - element array.Strictly speaking, the FORTRAN standard requires that they be declared as such, even when only the first element of each array is used.</code></pre>
 <h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
@@ -43,8 +42,8 @@ JLTS = 'GR'(GRID).PLM1, PLM2, PLM3, and PLM4 specify the minimum value of latitu
 <h2>Access</h2>To use MAPSET or c_mapset, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the ezmap man page for a description of all EZMAP error messages and/or informational messages.
 <h2>See Also</h2>Online: ezmap, ezmap_params, mapaci, mapbla, mapblm, mapdrw, mapeod, mapfst, mapgci, mapgrd, mapgrm, mapgtc, mapgti, mapgtl, mapgtr, mapint, mapiq, mapiqa, mapiqd, mapiqd, mapiqm, mapit, mapita, mapitd, mapitd, mapitm, maplbl, maplmb, maplot, mappos, maproj, maprs, maprst, mapsav, mapstc, mapsti, mapstl, mapstr, maptra, maptri, maptrn, mapusr, mapvec, mpchln, mpfnme, mpgetc, mpgeti, mpgetl, mpgetr, mpglty, mpiaty, mpifnb, mpilnb, mpiola, mpiosa, mpipai, mpipan, mpipar, mpisci, mplnam, mplndm, mplndr, mplnri, mpname, mprset, mpsetc, mpseti, mpsetl, mpsetr, supmap, supcon, ncarg_cbind 
-
  Hardcopy: NCAR Graphics Contouring and Mapping Tutorial
 <h2>Copyright</h2>Copyright (C) 1987-2009 
  University Corporation for Atmospheric Research 
  The use of this Software is governed by a License Agreement.
+</dd></dl>

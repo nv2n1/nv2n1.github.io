@@ -25,29 +25,29 @@ description: "mmafm – creates AFM font metrics for multiple master fonts"
 <h2>OPTIONS</h2>
 <p> Long options may be abbreviated to their unique prefixes.</p>
 <dl>
-<dt> <code>&#8211;output</code>=<i>file</i>, <code>-o </code><i>file</i><i></i></p>
-<dd> Send output to <i>file</i> instead of standard output.</p>
-<dt> <code>&#8211;weight</code>=<i>N</i>, <code>-w </code><i>N</i><i></i></p>
-<dd> Set the weight axis to <i>N</i>.</p>
-<dt> <code>&#8211;width</code>=<i>N</i>, <code>-W </code><i>N</i><i></i></p>
-<dd> Set the width axis to <i>N</i>.</p>
-<dt> <code>&#8211;optical-size</code>=<i>N</i>, <code>-O </code><i>N</i><i></i></p>
-<dd> Set the optical size axis to <i>N</i>.</p>
-<dt> <code>&#8211;style</code>=<i>N</i><i></i><i></i></p>
-<dd> Set the style axis to <i>N</i>.</p>
-<dt><code>&#8211;1</code>=<i>N</i> (<code>&#8211;2</code>=<i>N</i>, <code>&#8211;3</code>=<i>N</i>, <code>&#8211;4</code>=<i>N</i>)</p>
-<dd> Set the first (second, third, fourth) axis to <i>N</i>.</p>
-<dt> <code>&#8211;precision</code>=<i>N</i>, <code>-p </code><i>N</i><i></i></p>
-<dd> Round output numbers so they have at most <i>N</i> digits after the decimal point. Smaller numbers are less precise; `<code>-p </code>0&#8242; rounds all numbers to integers. The default precision is 3.</p>
-<dt> <code>&#8211;min-kern</code>=<i>N</i>, <code>-k </code><i>N</i><i></i></p>
-<dd> Only output kerning pairs whose absolute value is <i>N</i> or larger. Smaller minimum kerns make kerning more precise and the output AFM file bigger. The default minimum kern is 2.0.</dl>
+<dt> <code>&#8211;output</code>=<i>file</i>, <code>-o </code><i>file</i><i></i></dt>
+<dd> Send output to <i>file</i> instead of standard output.</dd>
+<dt> <code>&#8211;weight</code>=<i>N</i>, <code>-w </code><i>N</i><i></i></dt>
+<dd> Set the weight axis to <i>N</i>.</dd>
+<dt> <code>&#8211;width</code>=<i>N</i>, <code>-W </code><i>N</i><i></i></dt>
+<dd> Set the width axis to <i>N</i>.</dd>
+<dt> <code>&#8211;optical-size</code>=<i>N</i>, <code>-O </code><i>N</i><i></i></dt>
+<dd> Set the optical size axis to <i>N</i>.</dd>
+<dt> <code>&#8211;style</code>=<i>N</i><i></i><i></i></dt>
+<dd> Set the style axis to <i>N</i>.</dd>
+<dt><code>&#8211;1</code>=<i>N</i> (<code>&#8211;2</code>=<i>N</i>, <code>&#8211;3</code>=<i>N</i>, <code>&#8211;4</code>=<i>N</i>)</dt>
+<dd> Set the first (second, third, fourth) axis to <i>N</i>.</dd>
+<dt> <code>&#8211;precision</code>=<i>N</i>, <code>-p </code><i>N</i><i></i></dt>
+<dd> Round output numbers so they have at most <i>N</i> digits after the decimal point. Smaller numbers are less precise; `<code>-p </code>0&#8242; rounds all numbers to integers. The default precision is 3.</dd>
+<dt> <code>&#8211;min-kern</code>=<i>N</i>, <code>-k </code><i>N</i><i></i></dt>
+<dd> Only output kerning pairs whose absolute value is <i>N</i> or larger. Smaller minimum kerns make kerning more precise and the output AFM file bigger. The default minimum kern is 2.0.</dd></dl>
 <h2>TROUBLESHOOTING</h2>
 <p> Some programs, such as TeX&#8217;s <code>fontinst</code>, can choke on AFM files that include fractional numbers. Therefore, if you have trouble with an AFM file, try rerunning <code>mmafm</code> with the <code>&#8211;precision=0</code> option.</p>
 <h2>SEE ALSO</h2>
 <h2>DIAGNOSTICS</h2>
 <dl>
-<dt><i>Font</i> requires intermediate master conversion programs</p>
-<dd> You haven&#8217;t yet created an AMCP file for <i>Font</i>.</dl>
+<dt><i>Font</i> requires intermediate master conversion programs</dt>
+<dd> You haven&#8217;t yet created an AMCP file for <i>Font</i>.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler, ekohler [at] gmail.com </p>
 <p> The latest version is available from:<br />

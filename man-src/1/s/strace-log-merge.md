@@ -15,16 +15,16 @@ description: "strace-log-merge – merge strace -ff -tt output"
 <p> <code>strace-log-merge</code> merges the output of <code>strace -ff -tt[t]</code> command, prepending PID to each line and sorting the result using time stamp as a key.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show program usage and exit.</p>
-<dt><i>STRACE_LOG</i></p>
-<dd> Output file name prefix of files produced by a <code>strace -ff -tt[t]</code> command.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show program usage and exit.</dd>
+<dt><i>STRACE_LOG</i></dt>
+<dd> Output file name prefix of files produced by a <code>strace -ff -tt[t]</code> command.</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Success</p>
-<dt><code>Non-zero</code></p>
-<dd> Error occurred: either no argument specified (in that case a usage is printed), or something went wrong during the processing of <i>STRACE_LOG</i>.* files.</dl>
+<dt><code>0</code></dt>
+<dd> Success</dd>
+<dt><code>Non-zero</code></dt>
+<dd> Error occurred: either no argument specified (in that case a usage is printed), or something went wrong during the processing of <i>STRACE_LOG</i>.* files.</dd></dl>
 <h2>USAGE EXAMPLE</h2>
 <pre><code>
 $ strace -o sleepy -ff -tt -e trace=execve,nanosleep \

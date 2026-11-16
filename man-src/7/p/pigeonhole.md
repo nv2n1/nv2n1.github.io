@@ -14,23 +14,23 @@ description: "pigeonhole – Overview of the Pigeonhole project’s Sieve suppor
 <p> Using the ManageSieve protocol, users can upload their Sieve scripts remotely, without needing direct filesystem access through FTP or SCP. Additionally, a ManageSieve server always makes sure that uploaded scripts are valid, preventing compile failures at mail delivery. </p>
 <p> The Pigeonhole project provides the following items:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The LDA Sieve plugin for Dovecot&#8217;s Local Delivery Agent (LDA) (<code><a href="/docs/linux/man/1-dovecot-lda/">dovecot-lda</a></code>(1)) that facilitates the actual Sieve filtering upon delivery.</p>
-<dt>&bull;</p>
-<dd>The ManageSieve Service that implements the ManageSieve protocol through which users can remotely manage Sieve scripts on the server.</p>
-<dt>&bull;</p>
-<dd>Command line tools that provide the means to manually compile, analyse and test Sieve scripts.</dl>
+<dt>&bull;</dt>
+<dd>The LDA Sieve plugin for Dovecot&#8217;s Local Delivery Agent (LDA) (<code><a href="/docs/linux/man/1-dovecot-lda/">dovecot-lda</a></code>(1)) that facilitates the actual Sieve filtering upon delivery.</dd>
+<dt>&bull;</dt>
+<dd>The ManageSieve Service that implements the ManageSieve protocol through which users can remotely manage Sieve scripts on the server.</dd>
+<dt>&bull;</dt>
+<dd>Command line tools that provide the means to manually compile, analyse and test Sieve scripts.</dd></dl>
 <p> The functionality and configuration of the LDA Sieve plugin and the ManageSieve service is described in detail in the README and INSTALL files contained in the Pigeonhole package and in the Dovecot Wiki &lt;<a rel="nofollow" href="http://wiki2.dovecot.org/Pigeonhole">http://wiki2.dovecot.org/Pigeonhole</a>&gt;. </p>
 <p> The following command line tools are available:</p>
 <dl>
-<dt><code><a href="/docs/linux/man/1-sievec/">sievec</a></code>(1)</p>
-<dd>Compiles Sieve scripts into a binary representation for later execution.</p>
-<dt><code><a href="/docs/linux/man/1-sieve-test/">sieve-test</a></code>(1)</p>
-<dd>The universal Sieve test tool for testing the effect of a Sieve script on a particular message.</p>
-<dt><code><a href="/docs/linux/man/1-sieve-filter/">sieve-filter</a></code>(1)</p>
-<dd>Filters all messages in a particular source mailbox through a Sieve script.</p>
-<dt><code><a href="/docs/linux/man/1-sieve-dump/">sieve-dump</a></code>(1)</p>
-<dd>Dumps the content of a Sieve binary file for (development) debugging purposes.</dl>
+<dt><code><a href="/docs/linux/man/1-sievec/">sievec</a></code>(1)</dt>
+<dd>Compiles Sieve scripts into a binary representation for later execution.</dd>
+<dt><code><a href="/docs/linux/man/1-sieve-test/">sieve-test</a></code>(1)</dt>
+<dd>The universal Sieve test tool for testing the effect of a Sieve script on a particular message.</dd>
+<dt><code><a href="/docs/linux/man/1-sieve-filter/">sieve-filter</a></code>(1)</dt>
+<dd>Filters all messages in a particular source mailbox through a Sieve script.</dd>
+<dt><code><a href="/docs/linux/man/1-sieve-dump/">sieve-dump</a></code>(1)</dt>
+<dd>Dumps the content of a Sieve binary file for (development) debugging purposes.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs, including <i>doveconf -n</i> output, to the Dovecot Mailing List &lt;dovecot [at] dovecot.org&gt;. Information about reporting Dovecot and Pigeonhole bugs is available at: <a rel="nofollow" href="http://dovecot.org/bugreport.html">http://dovecot.org/bugreport.html</a></p>
 <h2>Author</h2>
@@ -38,9 +38,10 @@ description: "pigeonhole – Overview of the Pigeonhole project’s Sieve suppor
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1), <code><a href="/docs/linux/man/1-dovecot-lda/">dovecot-lda</a></code>(1), <code><a href="/docs/linux/man/1-sieve-dump/">sieve-dump</a></code>(1), <code><a href="/docs/linux/man/1-sieve-test/">sieve-test</a></code>(1), <code><a href="/docs/linux/man/1-sieve-filter/">sieve-filter</a></code>(1), <code><a href="/docs/linux/man/1-sievec/">sievec</a></code>(1) Additional resources:</p>
 <dl>
-<dt>Dovecot website</p>
-<dd><a rel="nofollow" href="http://www.dovecot.org">http://www.dovecot.org</a></p>
-<dt>Dovecot v2.x Wiki</p>
-<dd><a rel="nofollow" href="http://wiki2.dovecot.org/Pigeonhole">http://wiki2.dovecot.org/Pigeonhole</a></p>
-<dt>Pigeonhole website</p>
-<dd><a rel="nofollow" href="http://pigeonhole.dovecot.org">http://pigeonhole.dovecot.org</a> </p>
+<dt>Dovecot website</dt>
+<dd><a rel="nofollow" href="http://www.dovecot.org">http://www.dovecot.org</a></dd>
+<dt>Dovecot v2.x Wiki</dt>
+<dd><a rel="nofollow" href="http://wiki2.dovecot.org/Pigeonhole">http://wiki2.dovecot.org/Pigeonhole</a></dd>
+<dt>Pigeonhole website</dt>
+<dd><a rel="nofollow" href="http://pigeonhole.dovecot.org">http://pigeonhole.dovecot.org</a> </dd>
+</dl>

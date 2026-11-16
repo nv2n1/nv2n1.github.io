@@ -15,8 +15,8 @@ description: "XmSetColorCalculation — A function to set the procedure used for
 <h2>Description</h2>
 <p><code>XmSetColorCalculation</code> sets the procedure to calculate default colors. This procedure is used to calculate the foreground, top shadow, bottom shadow, and select colors on the basis of a given background color. If called with an argument of NULL, it restores the default procedure used to calculate colors.</p>
 <dl COMPACT>
-<dt><i>color_proc</i></p>
-<dd>Specifies the procedure to use for color calculation.</dl>
+<dt><i>color_proc</i></dt>
+<dd>Specifies the procedure to use for color calculation.</dd></dl>
 <p> Following is a description of the <code>XmColorProc</code> type used by <code>XmSetColorCalculation</code>: </p>
 <pre>void (*<i>color_proc</i>) (<i>background_color, foreground_color, select_color, top_shadow_color,
 bottom_shadow_color</i>)
@@ -29,16 +29,16 @@ bottom_shadow_color</i>)
 <p>Specifies the procedure used to calculate default colors. The procedure is passed a pointer to an <code>XColor</code> structure representing the background color. The <i>pixel</i>, <i>red</i>, <i>green</i>, and <i>blue</i> members of this structure are filled in with values that are valid for the current colormap. </p>
 <p> The procedure is passed pointers to <code>XColor</code> structures representing the foreground, select, top shadow, and bottom shadow colors to be calculated. The procedure calculates and fills in the <i>red</i>, <i>green</i>, and <i>blue</i> members of these structures. The procedure should not allocate color cells for any of these colors.</p>
 <dl COMPACT>
-<dt><i>background_color</i></p>
-<dd>Specifies the background color.</p>
-<dt><i>foreground_color</i></p>
-<dd>Specifies the foreground color to be calculated.</p>
-<dt><i>select_color</i></p>
-<dd>Specifies the select color to be calculated.</p>
-<dt><i>top_shadow_color</i></p>
-<dd>Specifies the top shadow color to be calculated.</p>
-<dt><i>bottom_shadow_color</i></p>
-<dd>Specifies the bottom shadow color to be calculated.</dl>
+<dt><i>background_color</i></dt>
+<dd>Specifies the background color.</dd>
+<dt><i>foreground_color</i></dt>
+<dd>Specifies the foreground color to be calculated.</dd>
+<dt><i>select_color</i></dt>
+<dd>Specifies the select color to be calculated.</dd>
+<dt><i>top_shadow_color</i></dt>
+<dd>Specifies the top shadow color to be calculated.</dd>
+<dt><i>bottom_shadow_color</i></dt>
+<dd>Specifies the bottom shadow color to be calculated.</dd></dl>
 <h2>Return</h2>
 <p>Returns the color calculation procedure that was used at the time this routine was called.</p>
 <h2>Related</h2>

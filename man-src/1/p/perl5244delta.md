@@ -45,13 +45,13 @@ url: "/docs/linux/man/1-perl5244delta/"
 
 <dl>
 <dt>&bull;
-<dd> Module::CoreList has been upgraded from version 5.20170922_24 to 5.20180414_24.</dl>
+</dt><dd> Module::CoreList has been upgraded from version 5.20170922_24 to 5.20180414_24.</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> The <tt>&quot;readpipe()&quot;</tt> built-in function now checks at compile time that it has only one parameter expression, and puts it in scalar context, thus ensuring that it doesn't corrupt the stack at runtime. [perl #4574] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=4574">https://rt.perl.org/Public/Bug/Display.html?id=4574</a>&gt;</dl>
+</dt><dd> The <tt>&quot;readpipe()&quot;</tt> built-in function now checks at compile time that it has only one parameter expression, and puts it in scalar context, thus ensuring that it doesn't corrupt the stack at runtime. [perl #4574] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=4574">https://rt.perl.org/Public/Bug/Display.html?id=4574</a>&gt;</dd></dl>
 
 <h2>Acknowledgements</h2>
 
@@ -92,16 +92,16 @@ url: "/docs/linux/man/1-perl5244delta/"
 
 
 <dt><a HREF="#lbAI">Incompatible Changes</a>
-<dd>
-<dt><a HREF="#lbAJ">Modules and Pragmata</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAJ">Modules and Pragmata</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAL">Selected Bug Fixes</a>
-<dd>
-<dt><a HREF="#lbAM">Acknowledgements</a>
-<dd>
-<dt><a HREF="#lbAN">Reporting Bugs</a>
-<dd>
-<dt><a HREF="#lbAO">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAL">Selected Bug Fixes</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAM">Acknowledgements</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">Reporting Bugs</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAO">SEE ALSO</a>
+</dt><dd></dd></dl>

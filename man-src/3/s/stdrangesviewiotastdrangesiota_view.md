@@ -10,15 +10,10 @@ description: "std::ranges::view::iota,std::ranges::iota_view – std::ranges::vi
 <p>std::ranges::view::iota,std::ranges::iota_view &#8211; std::ranges::view::iota,std::ranges::iota_view</p>
 <h2>Synopsis</h2>
 <pre><code>template&lt;WeaklyIncrementable W, Semiregular Bound = unreachable_sentinel_t&gt;
-
 requires _WeaklyEqualityComparableWith&lt;W, Bound&gt;                            (1) (since C++20)
-
 class iota_view : public view_interface&lt;iota_view&lt;W, Bound&gt;&gt;
-
 namespace view {
-
     inline constexpr /*unspecified*/ iota = /*unspecified*/;                    (2) (since C++20)
-
 }</code></pre>
 <p>1) A range factory that generates a sequence of elements by repeatedly incrementing an initial value. Can be both bounded and unbounded (infinite)<br />
 2) view::iota(E) and view::iota(E, F) are expression-equivalent to (has the same effect as) iota_view{E} and iota_view{E, F} respectively for any suitable subexpressions E and F<br />
@@ -107,12 +102,9 @@ friend constexpr bool operator!=(const sentinel&amp; x, const iterator&amp; y); 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;ranges&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     for (int i : std::view::iota{1, 10})
         std::cout &lt;&lt; i &lt;&lt; ' ';

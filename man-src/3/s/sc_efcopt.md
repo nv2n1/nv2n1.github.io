@@ -11,7 +11,6 @@ description: "sc::EFCOpt –"
 <p> The <code>EFCOpt</code> class implements eigenvector following as described by Baker in J.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;efc.h&gt;</code></pre>
 <p> Inherits <code>sc::Optimize</code>.</p>
 <h3>Public Member Functions</h3>
@@ -27,33 +26,12 @@ description: "sc::EFCOpt –"
  <i>Take a step. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>int tstate
-
-
-
 int modef
-
-
-
 double maxabs_gradient
-
-
-
 double convergence_
-
-
-
 double accuracy_
-
-
-
 RefSymmSCMatrix hessian_
-
-
-
 Ref&lt; HessianUpdate &gt; update_
-
-
-
 RefSCVector last_mode_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>EFCOpt</code> class implements eigenvector following as described by Baker in J. </p>
@@ -62,17 +40,17 @@ RefSCVector last_mode_</code></pre>
 <h3>sc::EFCOpt::EFCOpt (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor reads the following keywords:. .IP &quot;update&quot; 1c This gives an <code>HessianUpdate</code> object. The default is to not update the hessian. </p>
 <dl>
-<dt>transition_state</p>
-<dd>If this is true than a transition state search will be performed. The default is false.</dl>
+<dt>transition_state</dt>
+<dd>If this is true than a transition state search will be performed. The default is false.</dd></dl>
 <dl>
-<dt>mode_following</p>
-<dd>If this is true, then the initial search direction for a transition state search will be choosen to similar to the first coordinate of the <code>Function</code>. The default is false.</dl>
+<dt>mode_following</dt>
+<dd>If this is true, then the initial search direction for a transition state search will be choosen to similar to the first coordinate of the <code>Function</code>. The default is false.</dd></dl>
 <dl>
-<dt>hessian</p>
-<dd>By default, the guess hessian is obtained from the <code>Function</code> object. This keyword specifies an lower triangle array (the second index must be less than or equal to than the first) that replaces the guess hessian. If some of the elements are not given, elements from the guess hessian will be used.</dl>
+<dt>hessian</dt>
+<dd>By default, the guess hessian is obtained from the <code>Function</code> object. This keyword specifies an lower triangle array (the second index must be less than or equal to than the first) that replaces the guess hessian. If some of the elements are not given, elements from the guess hessian will be used.</dd></dl>
 <dl>
-<dt>accuracy</p>
-<dd>The accuracy with which the first gradient will be computed. If this is too large, it may be necessary to evaluate the first gradient <code>point</code> twice. If it is too small, it may take longer to evaluate the first <code>point</code>. The default is 0.0001.</dl>
+<dt>accuracy</dt>
+<dd>The accuracy with which the first gradient will be computed. If this is too large, it may be necessary to evaluate the first gradient <code>point</code> twice. If it is too small, it may take longer to evaluate the first <code>point</code>. The default is 0.0001.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void sc::EFCOpt::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

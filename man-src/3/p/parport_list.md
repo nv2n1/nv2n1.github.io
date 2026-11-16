@@ -22,10 +22,10 @@ description: "parport_list – a collection of parallel ports"
  /* The ports. */
  struct parport **portv;
 };</pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p><code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2001-2003 Tim Waugh</p>

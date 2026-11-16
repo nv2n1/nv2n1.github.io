@@ -16,7 +16,6 @@ description: "fixacos – Fixed point inverse cosine lookup table. Allegro game 
 <p> This function finds the inverse cosine of a value using a lookup table. The input value must be a fixed point radian. The inverse cosine is defined only in the domain from `-1&#8242; to `1&#8242;. Outside of this input range, the function will set `errno&#8217; to EDOM and return zero. Example: </p>
 <pre>
    fixed result;
-   
    /* Sets `result' to binary angle 128. */
    result = fixacos(itofix(-1));
 </pre>

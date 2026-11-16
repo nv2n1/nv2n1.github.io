@@ -13,7 +13,6 @@ description: "readline – get a line from a user with editing"
 #include &lt;readline/readline.h&gt;
 #include &lt;stdio.h&gt;
 char *
-
 readline(const char *prompt);</code></pre>
 <h2>Copyright</h2>
 <p>Readline is Copyright (C) 1989-2011 Free Software Foundation, Inc.</p>
@@ -31,10 +30,10 @@ readline(const char *prompt);</code></pre>
 <p>Readline is customized by putting commands in an initialization file (the <i>inputrc</i> file). The name of this file is taken from the value of the <code>INPUTRC</code> environment variable. If that variable is unset, the default is <i>~/.inputrc</i>. If that file does not exist or cannot be read, the ultimate default is <i>/etc/inputrc</i>. When a program which uses the readline library starts up, the init file is read, and the key bindings and variables are set. There are only a few basic constructs allowed in the readline init file. Blank lines are ignored. Lines beginning with a <code>#</code> are comments. Lines beginning with a <code>$</code> indicate conditional constructs. Other lines denote key bindings and variable settings. Each program using this library may add its own commands and bindings. </p>
 <p> For example, placing</p>
 <dl>
-<dd>M-Control-u: universal-argument</dl>
+<dd>M-Control-u: universal-argument</dd></dl>
 <p> or</p>
 <dl>
-<dd>C-Meta-u: universal-argument</dl>
+<dd>C-Meta-u: universal-argument</dd></dl>
 <p> into the <i>inputrc</i> would make M-C-u execute the readline command <i>universal-argument</i>. </p>
 <p> The following symbolic character names are recognized while processing key bindings: <i>DEL</i>, <i>ESC</i>, <i>ESCAPE</i>, <i>LFD</i>, <i>NEWLINE</i>, <i>RET</i>, <i>RETURN</i>, <i>RUBOUT</i>, <i>SPACE</i>, <i>SPC</i>, and <i>TAB</i>. </p>
 <p> In addition to command names, readline allows keys to be bound to a string that is inserted when the key is pressed (a <i>macro</i>).</p>
@@ -44,52 +43,55 @@ readline(const char *prompt);</code></pre>
 <dl>
 <dd>Control-u: universal-argument<br />
  Meta-Rubout: backward-kill-word<br />
- Control-o: &quot;&gt; output&quot;</dl>
+ Control-o: &quot;&gt; output&quot;</dd></dl>
 <p> In the above example, <i>C-u</i> is bound to the function <code>universal-argument</code>, <i>M-DEL</i> is bound to the function <code>backward-kill-word</code>, and <i>C-o</i> is bound to run the macro expressed on the right hand side (that is, to insert the text &#8220;&gt; output&#8221; into the line). </p>
 <p> In the second form, <code>&quot;keyseq&quot;</code>:<i>function-name</i> or <i>macro</i>, <code>keyseq</code> differs from <code>keyname</code> above in that strings denoting an entire key sequence may be specified by placing the sequence within double quotes. Some GNU Emacs style key escapes can be used, as in the following example, but the symbolic character names are not recognized. </p>
 <dl>
 <dd>&quot;\C-u&quot;: universal-argument<br />
  &quot;\C-x\C-r&quot;: re-read-init-file<br />
- &quot;[11~&quot;: &quot;Function Key 1&quot;</dl>
+ &quot;[11~&quot;: &quot;Function Key 1&quot;</dd></dl>
 <p> In this example, <i>C-u</i> is again bound to the function <code>universal-argument</code>. <i>C-x C-r</i> is bound to the function <code>re-read-init-file</code>, and <i>ESC [ 1 1 ~</i> is bound to insert the text &#8220;Function Key 1&#8221;. </p>
 <p> The full set of GNU Emacs style escape sequences available when specifying key sequences is</p>
 <dl>
 <dd>
-<dl>
-<dt><code>\C-</code></p>
-<dd>control prefix</p>
-<dt><code>\M-</code></p>
-<dd>meta prefix</p>
-<dt><code></code></p>
-<dd>an escape character</p>
-<dt><code>\</code></p>
-<dd>backslash</p>
-<dt><code>\</code></p>
-<dd>literal &quot;, a double quote</p>
-<dt><code>\&#8217;</code></p>
-<dd>literal &#8216;, a single quote</dl>
+</dd><dl>
+<dt><code>\C-</code></dt>
+<dd>control prefix</dd>
+<dt><code>\M-</code></dt>
+<dd>meta prefix</dd>
+<dt><code></code></dt>
+<dd>an escape character</dd>
+<dt><code>\</code></dt>
+<dd>backslash</dd>
+<dt><code>\</code></dt>
+<dd>literal &quot;, a double quote</dd>
+<dt><code>\&#8217;</code></dt>
+<dd>literal &#8216;, a single quote</dd></dl>
 </dl>
 <p> In addition to the GNU Emacs style escape sequences, a second set of backslash escapes is available:</p>
 <dl>
 <dd>
-<dl>
-<dt><code></code></p>
-<dd>alert (bell)</p>
-<dt><code></code></p>
-<dd>backspace</p>
-<dt><code>\d</code></p>
-<dd>delete</p>
-<dt><code></code></p>
-<dd>form feed</p>
+</dd><dl>
+<dt><code></code></dt>
+<dd>alert (bell)</dd>
+<dt><code></code></dt>
+<dd>backspace</dd>
+<dt><code>\d</code></dt>
+<dd>delete</dd>
+<dt><code></code></dt>
+<dd>form feed</dd>
 <dt><code>
-</code></p>
-<dd>newline</p>
-<dt><code></code></p>
-<dd>carriage return</p>
-<dt><code>	</code></p>
-<dd>horizontal tab</p>
-<dt><code></code></p>
-<dd>vertical tab</p>
-<dt><code>\</code><i>nnn</i></p>
-<dd>the eight-bit character whose value is the octal value <i>nnn</i> (one to three digits)</p>
+</code></dt>
+<dd>newline</dd>
 <dt><code>
+</code></dt>
+<dd>carriage return</dd>
+<dt><code>	</code></dt>
+<dd>horizontal tab</dd>
+<dt><code></code></dt>
+<dd>vertical tab</dd>
+<dt><code>\</code><i>nnn</i></dt>
+<dd>the eight-bit character whose value is the octal value <i>nnn</i> (one to three digits)</dd>
+<dt><code>
+</dt></dl></dl>
+</code>

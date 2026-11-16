@@ -11,24 +11,16 @@ std::ctype&lt;CharT&gt;::is,std::ctype&lt;CharT&gt;::do_is - std::ctype&lt;CharT
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  bool is(mask m, CharT c) const;
-
 public:
 (2)
-
     const CharT *is(const CharT *low, const CharT *high, mask *vec) const;
-
 protected:
 (3)
-
     virtual bool do_is(mask m, CharT c) const;
-
 protected:
 (4)
-
     virtual const CharT *do_is(const CharT *low, const CharT *high, mask *vec) const;</code></pre> 
 1,2) public member function, calls the protected virtual member function do_is of the most derived class. 
 3) Checks if the character c is classified by the mask m 
@@ -50,18 +42,12 @@ vec - pointer to the first element of the array of masks to fill
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;locale&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
 // utility wrapper to make locale-bound facets destructible
-
 template &lt;class Facet&gt;
-
 struct deletable_facet : Facet
-
 {
     template &lt;class... Args&gt;
     deletable_facet(Args &amp;&amp;...args)
@@ -73,7 +59,6 @@ struct deletable_facet : Facet
     }
 };
 int main()
-
 {
     // classify a single character using the default locale
     auto &amp;f = std::use_facet&lt;std::ctype&lt;char&gt;&gt;(std::locale());

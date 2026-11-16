@@ -17,22 +17,22 @@ description: "hostapd – IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authen
 <h2>Options</h2>
 <p>A summary of options is included below. For a complete description, run <code>hostapd</code> from the command line.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd>Show usage.</p>
-<dt><code>-d</code></p>
-<dd>Show more debug messages.</p>
-<dt><code>-dd</code></p>
-<dd>Show even more debug messages.</p>
-<dt><code>-B</code></p>
-<dd>Run daemon in the background.</p>
-<dt><code>-P &lt;PID file&gt;</code></p>
-<dd>Path to PID file.</p>
-<dt><code>-K</code></p>
-<dd>Include key data in debug messages.</p>
-<dt><code>-t</code></p>
-<dd>Include timestamps in some debug messages.</p>
-<dt><code>-v</code></p>
-<dd>Show hostapd version.</dl>
+<dt><code>-h</code></dt>
+<dd>Show usage.</dd>
+<dt><code>-d</code></dt>
+<dd>Show more debug messages.</dd>
+<dt><code>-dd</code></dt>
+<dd>Show even more debug messages.</dd>
+<dt><code>-B</code></dt>
+<dd>Run daemon in the background.</dd>
+<dt><code>-P &lt;PID file&gt;</code></dt>
+<dd>Path to PID file.</dd>
+<dt><code>-K</code></dt>
+<dd>Include key data in debug messages.</dd>
+<dt><code>-t</code></dt>
+<dd>Include timestamps in some debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd>Show hostapd version.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-hostapd_cli/">hostapd_cli</a></code>(1).</p>
 <h2>Author</h2>

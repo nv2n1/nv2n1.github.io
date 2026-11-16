@@ -16,16 +16,16 @@ description: "fold – wrap each input line to fit in specified width"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;bytes</code></p>
-<dd> count bytes rather than columns</p>
-<dt><code>-s</code>, <code>&#8211;spaces</code></p>
-<dd> break at spaces</p>
-<dt><code>-w</code>, <code>&#8211;width</code>=<i>,WIDTH/</i></p>
-<dd> use WIDTH columns instead of 80</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-b</code>, <code>&#8211;bytes</code></dt>
+<dd> count bytes rather than columns</dd>
+<dt><code>-s</code>, <code>&#8211;spaces</code></dt>
+<dd> break at spaces</dd>
+<dt><code>-w</code>, <code>&#8211;width</code>=<i>,WIDTH/</i></dt>
+<dd> use WIDTH columns instead of 80</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

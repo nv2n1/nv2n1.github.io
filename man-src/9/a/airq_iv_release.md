@@ -14,9 +14,9 @@ description: "airq_iv_release – release an interrupt vector"
 <p><i>iv</i></p>
 <dl>
 <dd>
-<dd>pointer to interrupt vector structure</dl>
+</dd><dd>pointer to interrupt vector structure</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -23,28 +23,28 @@ description: "ImageMagick – is a free software suite for the creation, modific
 &nbsp;work your way down. Also be sure to peruse Anthony Thyssen&#8217;s tutorial on how to<br />
 &nbsp;use ImageMagick utilities to convert, compose, or edit images from the command- line.</p>
 <dl>
-<dt><code>convert</code></p>
-<dd>convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</p>
-<dt><code>identify</code></p>
-<dd>describes the format and characteristics of one or more image files.</p>
-<dt><code>mogrify</code></p>
-<dd>resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. Mogrify overwrites the original image file, whereas, convert writes to a different image file.</p>
-<dt><code>composite</code></p>
-<dd>overlaps one image over another.</p>
-<dt><code>montage</code></p>
-<dd>create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more.</p>
-<dt><code>compare</code></p>
-<dd>mathematically and visually annotate the difference between an image and its reconstruction.. </p>
-<dt><code>stream</code></p>
-<dd>is a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. It writes the pixel components as they are read from the input image a row at a time making stream desirable when working with large images or when you require raw pixel components. </p>
-<dt><code>display</code></p>
-<dd>displays an image or image sequence on any X server.</p>
-<dt><code>animate</code></p>
-<dd>animates an image sequence on any X server.</p>
-<dt><code>import</code></p>
-<dd>saves any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen.</p>
-<dt><code>conjure</code></p>
-<dd>interprets and executes scripts written in the Magick Scripting Language (MSL).</dl>
+<dt><code>convert</code></dt>
+<dd>convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
+<dt><code>identify</code></dt>
+<dd>describes the format and characteristics of one or more image files.</dd>
+<dt><code>mogrify</code></dt>
+<dd>resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. Mogrify overwrites the original image file, whereas, convert writes to a different image file.</dd>
+<dt><code>composite</code></dt>
+<dd>overlaps one image over another.</dd>
+<dt><code>montage</code></dt>
+<dd>create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more.</dd>
+<dt><code>compare</code></dt>
+<dd>mathematically and visually annotate the difference between an image and its reconstruction.. </dd>
+<dt><code>stream</code></dt>
+<dd>is a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. It writes the pixel components as they are read from the input image a row at a time making stream desirable when working with large images or when you require raw pixel components. </dd>
+<dt><code>display</code></dt>
+<dd>displays an image or image sequence on any X server.</dd>
+<dt><code>animate</code></dt>
+<dd>animates an image sequence on any X server.</dd>
+<dt><code>import</code></dt>
+<dd>saves any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen.</dd>
+<dt><code>conjure</code></dt>
+<dd>interprets and executes scripts written in the Magick Scripting Language (MSL).</dd></dl>
 <p> For more information about the ImageMagick, point your browser to file:///usr/share/doc/imagemagick-6-common/html/index.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="http://imagemagick.org/.">http://imagemagick.org/.</a></p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-convert-im6-q16/">convert-im6.q16</a>(1), <a href="/docs/linux/man/1-identify-im6-q16/">identify-im6.q16</a>(1), <a href="/docs/linux/man/1-composite-im6-q16/">composite-im6.q16</a>(1), <a href="/docs/linux/man/1-montage-im6-q16/">montage-im6.q16</a>(1), <a href="/docs/linux/man/1-compare-im6-q16/">compare-im6.q16</a>(1), <a href="/docs/linux/man/1-display-im6-q16/">display-im6.q16</a>(1), <a href="/docs/linux/man/1-animate-im6-q16/">animate-im6.q16</a>(1), <a href="/docs/linux/man/1-import-im6-q16/">import-im6.q16</a>(1), <a href="/docs/linux/man/1-conjure-im6-q16/">conjure-im6.q16</a>(1), <a href="/docs/linux/man/5-quantize/">quantize</a>(5), <a href="/docs/linux/man/4-miff/">miff</a>(4) </p>

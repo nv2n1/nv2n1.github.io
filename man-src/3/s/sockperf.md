@@ -24,28 +24,28 @@ People are often concerned about measuring the maximum data throughput rate of a
 
 sockperf tests UDP/TCP network connection and maintance following functionality:
 <dl><dt>&bull;
-<dd>Measure latency;
-<dt>&bull;
-<dd>Measure TX/RX bandwidth;
-<dt>&bull;
-<dd>Measure packet loss;
-<dt>&bull;
-<dd>Multicast;
-<dt>&bull;
-<dd>Multi-threaded;</dl>
+</dt><dd>Measure latency;
+</dd><dt>&bull;
+</dt><dd>Measure TX/RX bandwidth;
+</dd><dt>&bull;
+</dt><dd>Measure packet loss;
+</dd><dt>&bull;
+</dt><dd>Multicast;
+</dd><dt>&bull;
+</dt><dd>Multi-threaded;</dd></dl>
  
 
  
 
  features:
 <dl><dt>&bull;
-<dd>Measure the RTT of packets in descrete way;
-<dt>&bull;
-<dd>Provide full log of packet times;
-<dt>&bull;
-<dd>Provide few modes to monitor multiple file descriptors as recv/select/epoll/poll;
-<dt>&bull;
-<dd>Improved CPU utilization;</dl>
+</dt><dd>Measure the RTT of packets in descrete way;
+</dd><dt>&bull;
+</dt><dd>Provide full log of packet times;
+</dd><dt>&bull;
+</dt><dd>Provide few modes to monitor multiple file descriptors as recv/select/epoll/poll;
+</dd><dt>&bull;
+</dt><dd>Improved CPU utilization;</dd></dl>
  
 
  
@@ -78,11 +78,11 @@ sockperf: [SERVER] listen on:
 sockperf: Warmup stage (sending a few dummy packets)...
 sockperf: [tid 4857] using select() to block on socket(s)</pre>Every line in feed file should have following format as where
 <dl><dt>&bull;
-<dd>[U|T] - UDP or TCP protocol;
-<dt>&bull;
-<dd>address - Internet Protocol (IP) address;
-<dt>&bull;
-<dd>port - Port number;</dl>
+</dt><dd>[U|T] - UDP or TCP protocol;
+</dd><dt>&bull;
+</dt><dd>address - Internet Protocol (IP) address;
+</dd><dt>&bull;
+</dt><dd>port - Port number;</dd></dl>
 
 <h3>3.1 Available options</h3>
 
@@ -135,13 +135,13 @@ Server options are:
 sockperf supports different scenarios to run itself as a client. There are under-load, ping-pong, playback and throughput subcommands to select one of the scenarios. 
 
 <dl><dt>&bull;
-<dd>under-load - run sockperf client for latency under load test;
-<dt>&bull;
-<dd>ping-pong - run sockperf client for latency test in ping pong mode;
-<dt>&bull;
-<dd>playback - run sockperf client for latency test using playback of predefined traffic, based on timeline and message size;
-<dt>&bull;
-<dd>throughput - run sockperf client for one way throughput test;</dl>
+</dt><dd>under-load - run sockperf client for latency under load test;
+</dd><dt>&bull;
+</dt><dd>ping-pong - run sockperf client for latency test in ping pong mode;
+</dd><dt>&bull;
+</dt><dd>playback - run sockperf client for latency test using playback of predefined traffic, based on timeline and message size;
+</dd><dt>&bull;
+</dt><dd>throughput - run sockperf client for one way throughput test;</dd></dl>
  
 
  
@@ -163,11 +163,11 @@ sockperf supports different scenarios to run itself as a client. There are under
 
 SockPerf package contains few scripts that allow to generate special formatted file to launch tool in different configurations.
 <dl><dt>&bull;
-<dd>filter.awk - can be used for filtering lines from the full log file based on given latency range;
-<dt>&bull;
-<dd>gen1.awk - this awk script generates playback files (it is for stable PPS playback file);
-<dt>&bull;
-<dd>gen2.awk - this awk script generates playback files using the input for this script is file with lines of the format: startTime; duration; startPPS; endPPS; msgSize (it is for linear increased and decreased PPS playback file);</dl>
+</dt><dd>filter.awk - can be used for filtering lines from the full log file based on given latency range;
+</dd><dt>&bull;
+</dt><dd>gen1.awk - this awk script generates playback files (it is for stable PPS playback file);
+</dd><dt>&bull;
+</dt><dd>gen2.awk - this awk script generates playback files using the input for this script is file with lines of the format: startTime; duration; startPPS; endPPS; msgSize (it is for linear increased and decreased PPS playback file);</dd></dl>
  
 
  
@@ -208,12 +208,12 @@ SockPerf package contains few scripts that allow to generate special formatted f
 <h3>3.5.1 Running over IPoIB</h3>
 
 <dl><dt>&bull;
-<dd>Configure the routing table to map multicast addresses to the IPoIB interface on both client and server machines, as follows:</dl>
+</dt><dd>Configure the routing table to map multicast addresses to the IPoIB interface on both client and server machines, as follows:</dd></dl>
  
 
  <pre>route add -net 224.0.0.0 netmask 240.0.0.0 dev ib0</pre>&nbsp;<wbr>In this case, ib0 is the IPoIB interface.
 <dl><dt>&bull;
-<dd>Run the server as follows:</dl>
+</dt><dd>Run the server as follows:</dd></dl>
  
 
  <pre>$sockperf server -i 224.18.7.81 -p 5001
@@ -222,7 +222,7 @@ sockperf: No VMA version info
 sockperf: [SERVER] listen on: IP = 224.18.7.81 PORT = 5001
 sockperf: Warmup stage (sending a few dummy packets)...
 sockperf: [tid 14325] using recvfrom() to block on socket(s)</pre><dl><dt>&bull;
-<dd>Run the client as follows:</dl>
+</dt><dd>Run the client as follows:</dd></dl>
  
 
  <pre>$sockperf ping-pong -i 224.18.7.81 -p 5001 -m 16384 -t 10 --pps=max
@@ -255,12 +255,12 @@ sockperf: ---&gt; &lt;MIN&gt; observation = 36.438</pre>
 <h3>3.5.2 Running over 1 Gb Ethernet</h3>
 
 <dl><dt>&bull;
-<dd>Configure the routing table to map multicast addresses to the Ethernet interface on both client and server machines, as follows:</dl>
+</dt><dd>Configure the routing table to map multicast addresses to the Ethernet interface on both client and server machines, as follows:</dd></dl>
  
 
  <pre>route add -net 224.0.0.0 netmask 240.0.0.0 dev eth2</pre>&nbsp;<wbr>In this case, eth2 is the Ethernet interface.
 <dl><dt>&bull;
-<dd>Run the server as follows:</dl>
+</dt><dd>Run the server as follows:</dd></dl>
  
 
  <pre>$sockperf server -i 224.18.7.81 -p 5001
@@ -269,7 +269,7 @@ sockperf: No VMA version info
 sockperf: [SERVER] listen on: IP = 224.18.7.81 PORT = 5001
 sockperf: Warmup stage (sending a few dummy packets)...
 sockperf: [tid 14325] using recvfrom() to block on socket(s)</pre><dl><dt>&bull;
-<dd>Run the client as follows:</dl>
+</dt><dd>Run the client as follows:</dd></dl>
  
 
  <pre>$sockperf ping-pong -i 224.18.7.81 -p 5001 -m 16384 -t 10 --pps=max
@@ -302,12 +302,12 @@ sockperf: ---&gt; &lt;MIN&gt; observation = 36.438</pre>
 <h3>3.5.3 Running over VMA InfiniBand</h3>
 
 <dl><dt>&bull;
-<dd>Configure the routing table to map multicast addresses to the IPoIB interface on both client and server machines, as follows:</dl>
+</dt><dd>Configure the routing table to map multicast addresses to the IPoIB interface on both client and server machines, as follows:</dd></dl>
  
 
  <pre>route add -net 224.0.0.0 netmask 240.0.0.0 dev ib0</pre>&nbsp;<wbr>In this case, ib0 is the IPoIB interface.
 <dl><dt>&bull;
-<dd>Run the server as follows:</dl>
+</dt><dd>Run the server as follows:</dd></dl>
  
 
  <pre>$LD_PRELOAD=libvma.so sockperf server -i 224.18.7.81 -p 5001 --dontwarmup --mc-loopback-enable
@@ -388,7 +388,7 @@ sockperf: No VMA version info
 sockperf: [SERVER] listen on:
 [ 0] IP = 224.18.7.81 PORT = 5001 # UDP
 sockperf: [tid 29483] using recvfrom() to block on socket(s)</pre><dl><dt>&bull;
-<dd>Run the client as follows:</dl>
+</dt><dd>Run the client as follows:</dd></dl>
  
 
  <pre>$$LD_PRELOAD=libvma.so sockperf ping-pong -i 224.18.7.81 -p 5001 -t 10 -m 14 --pps=max --dontwarmup --mc-loopback-enable
@@ -500,15 +500,15 @@ Read 'copying' file in the root place.
 What you will need to compile sockperf on Unix systems 
 
 <dl><dt>&bull;
-<dd>perl 5.8+ (used by the automake tools)
-<dt>&bull;
-<dd>GNU make tools: automake 1.7+, autoconf 2.57+, m4 1.4+ and libtool 1.4+
-<dt>&bull;
-<dd>A Compiler, among those tested are:
-<dt> &bull;
-<dd>gcc4 (Ubuntu 9)
-<dt> &bull;
-<dd>gcc4 (Red Hat 4.x)</dl>
+</dt><dd>perl 5.8+ (used by the automake tools)
+</dd><dt>&bull;
+</dt><dd>GNU make tools: automake 1.7+, autoconf 2.57+, m4 1.4+ and libtool 1.4+
+</dd><dt>&bull;
+</dt><dd>A Compiler, among those tested are:
+</dd><dt> &bull;
+</dt><dd>gcc4 (Ubuntu 9)
+</dd><dt> &bull;
+</dt><dd>gcc4 (Red Hat 4.x)</dd></dl>
 
 <h3>5.2 Options to compile</h3>
 
@@ -534,7 +534,7 @@ tar -xf ./sockperf-&lt;version&gt;.tar</pre>The sockperf package uses the GNU au
  The simplest way to compile this package is: 
 
 <dl><dt>1.
-<dd>`cd' to the directory containing the package's source code and type `./configure' to configure the package for your system. If you're using `csh' on an old version of System V, you might need to type `sh ./configure' instead to prevent `csh' from trying to execute `configure' itself.</dl>
+</dt><dd>`cd' to the directory containing the package's source code and type `./configure' to configure the package for your system. If you're using `csh' on an old version of System V, you might need to type `sh ./configure' instead to prevent `csh' from trying to execute `configure' itself.</dd></dl>
  
 
  Running `configure' takes awhile. While running, it prints some messages telling which features it is checking for. 
@@ -556,14 +556,14 @@ tar -xf ./sockperf-&lt;version&gt;.tar</pre>The sockperf package uses the GNU au
  Type './configure --help' for a list of all the configure options. Some of the options are generic autoconf options, while the SockPerf specific options are prefixed with 'SOCKPERF:' in the help text. 
 
 <dl><dt>2.
-<dd>Type `make' to compile the package.</dl>
+</dt><dd>Type `make' to compile the package.</dd></dl>
  
 
  <pre>$ make</pre><dl><dt>3.
-<dd>Optionally, type `make check' to run any self-tests that come with the package.
-<dt>4.
-<dd>Type `make install' to install the programs and any data files and documentation.</dl>
+</dt><dd>Optionally, type `make check' to run any self-tests that come with the package.
+</dd><dt>4.
+</dt><dd>Type `make install' to install the programs and any data files and documentation.</dd></dl>
  
 
  <pre>$ make install</pre><dl><dt>5.
-<dd>You can remove the program binaries and object files from the source code directory by typing `make clean'. To also remove the files that `configure' created (so you can compile the package for a different kind of computer), type `make distclean'. There is also a `make maintainer-clean' target, but that is intended mainly for the package's developers. If you use it, you may have to get all sorts of other programs in order to regenerate files that came with the distribution.</dl>
+</dt><dd>You can remove the program binaries and object files from the source code directory by typing `make clean'. To also remove the files that `configure' created (so you can compile the package for a different kind of computer), type `make distclean'. There is also a `make maintainer-clean' target, but that is intended mainly for the package's developers. If you use it, you may have to get all sorts of other programs in order to regenerate files that came with the distribution.</dd></dl>

@@ -32,13 +32,13 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> A GSI Proxy handle to use for the assemble operation.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the assemble operation.<br />
  <i>proxy_credential</i> This parameter will contain the assembled credential upon successful return.<br />
- <i>input_bio</i> A BIO to read a signed certificate and corresponding certificate chain from.</dl>
+ <i>input_bio</i> A BIO to read a signed certificate and corresponding certificate chain from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if no error occurred, an error object ID otherwise</dl>
+</dt><dd> GLOBUS_SUCCESS if no error occurred, an error object ID otherwise</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_create_req (<code>globus_gsi_proxy_handle_t</code>handle, BIO *output_bio)</h3>
 <p> Create a proxy credential request. This function creates a proxy credential request, an unsigned certificate and the corresponding private key, based on the handle that is passed in. </p>
 <p> The public part of the request is written to the BIO supplied in the output_bio parameter. After the request is written, the PROXYCERTINFO extension contained in the handle is written to the BIO. </p>
@@ -46,62 +46,62 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> A GSI Proxy handle to use for the request operation.<br />
- <i>output_bio</i> A BIO to write the resulting request structure to.</dl>
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the request operation.<br />
+ <i>output_bio</i> A BIO to write the resulting request structure to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_create_signed (<code>globus_gsi_proxy_handle_t</code>handle, globus_gsi_cred_handle_tissuer, globus_gsi_cred_handle_t *proxy_credential)</h3>
 <p> Create Signed Proxy Certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The proxy handle used to create and sign the proxy certificate<br />
+</dt><dd> <i>handle</i> The proxy handle used to create and sign the proxy certificate<br />
  <i>issuer</i> The issuing credential, used for signing the proxy certificate<br />
- <i>proxy_credential</i> The new proxy credential, containing the signed cert, private key, etc.</dl>
+ <i>proxy_credential</i> The new proxy credential, containing the signed cert, private key, etc.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if no error occurred, an error object ID otherwise</dl>
+</dt><dd> GLOBUS_SUCCESS if no error occurred, an error object ID otherwise</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_inquire_req (<code>globus_gsi_proxy_handle_t</code>handle, BIO *input_bio)</h3>
 <p> Inquire a proxy credential request. This function reads the public part of a proxy credential request from input_bio and if the request contains a ProxyCertInfo extension, updates the handle with the information contained in the extension. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> A GSI Proxy handle to use for the inquire operation.<br />
- <i>input_bio</i> A BIO to read a request structure from.</dl>
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the inquire operation.<br />
+ <i>input_bio</i> A BIO to read a request structure from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_resign_cert (<code>globus_gsi_proxy_handle_t</code>handle, globus_gsi_cred_handle_tissuer_credential, globus_gsi_cred_handle_tpeer_credential, globus_gsi_cred_handle_t *resigned_credential)</h3>
 <p> Resign an existing certificate into a proxy. This function use the public key in a existing certificate to create a new proxy certificate chained to the issuers credentials. This operation will add a ProxyCertInfo extension to the proxy certificate if values contained in the extension are specified in the handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br />
  <i>issuer_credential</i> The credential structure to be used for signing the proxy certificate.<br />
  <i>peer_credential</i> The credential structure that contains the certificate to be resigned.<br />
- <i>resigned_credential</i> A credential structure that upon return will contain the resigned certificate and associated certificate chain.</dl>
+ <i>resigned_credential</i> A credential structure that upon return will contain the resigned certificate and associated certificate chain.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_sign_req (<code>globus_gsi_proxy_handle_t</code>handle, globus_gsi_cred_handle_tissuer_credential, BIO *output_bio)</h3>
 <p> Sign a proxy certificate request. This function signs the public part of a proxy credential request, i.e. the unsigned certificate, previously read by <code>globus_gsi_proxy_inquire_req()</code> using the supplied issuer_credential. This operation will add a ProxyCertInfo extension to the proxy certificate if values contained in the extension are specified in the handle. The resulting signed certificate is written to the output_bio. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br />
  <i>issuer_credential</i> The credential structure to be used for signing the proxy certificate.<br />
- <i>output_bio</i> A BIO to write the resulting certificate to.</dl>
+ <i>output_bio</i> A BIO to write the resulting certificate to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

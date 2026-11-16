@@ -14,22 +14,22 @@ description: "futex_wait_requeue_pi – Wait on uaddr and take uaddr2"
 <p><i>uaddr</i></p>
 <dl>
 <dd>
-<dd>the futex we initially wait on (non-pi)</dl>
+</dd><dd>the futex we initially wait on (non-pi)</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>futex flags (FLAGS_SHARED, FLAGS_CLOCKRT, etc.), they must be the same type, no requeueing from private to shared, etc.</dl>
+<dd>futex flags (FLAGS_SHARED, FLAGS_CLOCKRT, etc.), they must be the same type, no requeueing from private to shared, etc.</dd></dl>
 <p> <i>val</i></p>
 <dl>
-<dd>the expected value of uaddr</dl>
+<dd>the expected value of uaddr</dd></dl>
 <p> <i>abs_time</i></p>
 <dl>
-<dd>absolute timeout</dl>
+<dd>absolute timeout</dd></dl>
 <p> <i>bitset</i></p>
 <dl>
-<dd>32 bit wakeup bitset set by userspace, defaults to all</dl>
+<dd>32 bit wakeup bitset set by userspace, defaults to all</dd></dl>
 <p> <i>uaddr2</i></p>
 <dl>
-<dd>the pi futex we will take prior to returning to user-space</dl>
+<dd>the pi futex we will take prior to returning to user-space</dd></dl>
 <h2>Description</h2>
 <p>The caller will wait on uaddr and will be requeued by <code>futex_requeue</code> to uaddr2 which must be PI aware and unique from uaddr. Normal wakeup will wake on uaddr2 and complete the acquisition of the rt_mutex prior to returning to userspace. This ensures the rt_mutex maintains an owner when it has waiters; without one, the pi logic would not know which task to boost/deboost, if there was a need to. </p>
 <p> We call schedule in <code>futex_wait_queue_me</code> when we enqueue and return there via the following&#8211; 1) wakeup on uaddr2 after an atomic lock acquisition by <code>futex_requeue</code> 2) wakeup on uaddr2 after a requeue 3) signal 4) timeout </p>
@@ -42,5 +42,5 @@ description: "futex_wait_requeue_pi – Wait on uaddr and take uaddr2"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

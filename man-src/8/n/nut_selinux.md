@@ -28,8 +28,8 @@ description: "nut_selinux – Security Enhanced Linux Policy for the nut process
 <p> <code>nut_upsdrvctl_exec_t </code> </p>
 <p> &#8211; Set files with the nut_upsdrvctl_exec_t type, if you want to transition an executable to the nut_upsdrvctl_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/upsdrvctl, /sbin/upsdrvctl </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/upsdrvctl, /sbin/upsdrvctl </dd>
 </dl>
 <p> <code>nut_upsmon_exec_t </code> </p>
 <p> &#8211; Set files with the nut_upsmon_exec_t type, if you want to transition an executable to the nut_upsmon_t domain. </p>

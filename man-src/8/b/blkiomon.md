@@ -16,39 +16,39 @@ description: "blkiomon – monitor block device I/O based o blktrace data"
 <p>-I <i>interval</i><br />
  &#8211;interval=<i>interval</i></p>
 <dl>
-<dd>Set sample interval</dl>
+<dd>Set sample interval</dd></dl>
 <p> -h <i>file</i><br />
  &#8211;human-readable=<i>file</i></p>
 <dl>
-<dd>Human-readable output file. Use &#8216;-&#8216; for stdout.</dl>
+<dd>Human-readable output file. Use &#8216;-&#8216; for stdout.</dd></dl>
 <p> -b <i>file</i><br />
  &#8211;binary=<i>file</i></p>
 <dl>
-<dd>Binary output file. Use &#8216;-&#8216; for stdout.</dl>
+<dd>Binary output file. Use &#8216;-&#8216; for stdout.</dd></dl>
 <p> -d <i>file</i><br />
  &#8211;dump-lldd=<i>file</i></p>
 <dl>
-<dd>Output file for data emitted by low level device driver.</dl>
+<dd>Output file for data emitted by low level device driver.</dd></dl>
 <p> -D <i>file</i><br />
  &#8211;debug=<i>file</i></p>
 <dl>
-<dd>Output file for debugging data. Use &#8216;-&#8216; for stdout.</dl>
+<dd>Output file for debugging data. Use &#8216;-&#8216; for stdout.</dd></dl>
 <p> -Q <i>path_name</i><br />
  &#8211;msg-queue=<i>path_name</i></p>
 <dl>
-<dd>Sets <i>path_name</i> as path name for existing message queue to be used for binary output.</dl>
+<dd>Sets <i>path_name</i> as path name for existing message queue to be used for binary output.</dd></dl>
 <p> -q <i>msg_queue_id</i><br />
  &#8211;msg-queue-id=<i>msg_queue_id</i></p>
 <dl>
-<dd>Sets <i>msg_queue_id</i> as ID for an existing message queue to be used for binary output.</dl>
+<dd>Sets <i>msg_queue_id</i> as ID for an existing message queue to be used for binary output.</dd></dl>
 <p> -m <i>msg_id</i><br />
  &#8211;msg-id=<i>msg_id</i></p>
 <dl>
-<dd>Sets <i>msg_id</i> as message identifier to be used for binary output messages written to an existing message queue.</dl>
+<dd>Sets <i>msg_id</i> as message identifier to be used for binary output messages written to an existing message queue.</dd></dl>
 <p> -V<br />
  &#8211;version</p>
 <dl>
-<dd>Print program version.</dl>
+<dd>Print program version.</dd></dl>
 <h2>Examples</h2>
 <p>To get I/O statistics for /dev/sdw every 10 seconds for a period of one hour, use the following command:<br />
 &nbsp;<wbr>%&nbsp;<wbr>blktrace&nbsp;<wbr>/dev/sdw -a issue -a complete -w 3600 -o &#8211; | blkiomon -I 10 -h &#8211; </p>

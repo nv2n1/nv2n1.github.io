@@ -15,63 +15,64 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <h2>Changes</h2>
 <p> This is just a selected list of some of the more notable changes. The numbers refer to the Perl repository change numbers; see Changes58 (or Changes in Perl 5.8.1). In addition to these changes, lots of work took place in integrating threads, PerlIO, and Unicode; general code cleanup; and last but not least porting to non-Unix lands such as Win32, <font SIZE="-1">VMS</font>, Cygwin, <font SIZE="-1">DJGPP</font>, <font SIZE="-1">VOS</font>, MacOS Classic, and <font SIZE="-1">EBCDIC</font>.</p>
 <dl>
-<dt>11362</p>
-<dd> add <font SIZE="-1">LC_MESSAGES</font> to <font SIZE="-1">POSIX</font> :locale_h export tag</p>
-<dt>11371</p>
-<dd> add <font SIZE="-1">DEL</font> to [:cntrl:]</p>
-<dt>11375</p>
-<dd> make h2ph understand constants like 1234L and 5678LL</p>
-<dt>11405</p>
-<dd> Win32: fix bugs in handling of the virtualized environment</p>
-<dt>11410</p>
-<dd> fix a bug in the security taint checking of <i>open()</i></p>
-<dt>11423</p>
-<dd> make perl <i>fork()</i> safe even on platforms that don&#8217;t have <i>pthread_atfork()</i></p>
-<dt>11459</p>
-<dd> make switching optimization and debugging levels during Perl builds easier via the <font SIZE="-1">OPTIMIZE</font> environment variable</p>
-<dt>11475</p>
-<dd> make <i>split()</i>&#8216;s unused captures to be undef, not &#8221;</p>
-<dt>11485</p>
-<dd> Search::Dict: allow transforming lines before comparing</p>
-<dt>11490</p>
-<dd> allow installing extra modules or bundles when building Perl</p>
-<dt>11516</p>
-<dd> add -Wall in cflags when compiling with gcc to weed out dubious C practices</p>
-<dt>11541</p>
-<dd> pluggable optimizer</p>
-<dt>11549</p>
-<dd> WinCE: integrate the port</p>
-<dt>11589</p>
-<dd> Win32: 4-arg select was broken</p>
-<dt>11594</p>
-<dd> introduce the perlivp utility for verifying the Perl installation (<font SIZE="-1">IVP</font> = Installation Verification Procedure)</p>
-<dt>11623</p>
-<dd> rename lib/unicode to lib/unicore to avoid case-insensitivity problems with lib/Unicode</p>
-<dt>111631</p>
-<dd> remove Time::Piece</p>
-<dt>11643</p>
-<dd> document that use utf8 is not the right way most of the time</p>
-<dt>11656</p>
-<dd> allow building perl with -DUSE_UTF8_SCRIPTS which makes <font SIZE="-1">UTF-8</font> the default script encoding (not the default since that would break all scripts having legacy eight-bit data in them)</p>
-<dt>11725</p>
-<dd> division preserving 64-bit integers</p>
-<dt>11743</p>
-<dd> document the coderef-in-@INC feature</p>
-<dt>11794</p>
-<dd> modulo (%) preserving 64-bit integers</p>
-<dt>11825</p>
-<dd> update to Unicode 3.1.1</p>
-<dt>11865</p>
-<dd> add the \[$@%&amp;*] prototype support</p>
-<dt>11874</p>
-<dd> <i>oct()</i> and <i>hex()</i> in glorious 64 bit</p>
-<dt>11877</p>
-<dd> Class::Struct: allow recursive classes</p>
-<dt>11993</p>
-<dd> fix unpack U to be the reverse of pack U</p>
-<dt>12056</p>
-<dd> <font SIZE="-1">VMS:</font> waitpid enhancements</p>
-<dt>12180</p>
-<dd> unpack(&#8220;Z*Z*&#8221;, pack(&#8220;Z*Z*&#8221;, ..)) was broken</p>
-<dt>12243</p>
+<dt>11362</dt>
+<dd> add <font SIZE="-1">LC_MESSAGES</font> to <font SIZE="-1">POSIX</font> :locale_h export tag</dd>
+<dt>11371</dt>
+<dd> add <font SIZE="-1">DEL</font> to [:cntrl:]</dd>
+<dt>11375</dt>
+<dd> make h2ph understand constants like 1234L and 5678LL</dd>
+<dt>11405</dt>
+<dd> Win32: fix bugs in handling of the virtualized environment</dd>
+<dt>11410</dt>
+<dd> fix a bug in the security taint checking of <i>open()</i></dd>
+<dt>11423</dt>
+<dd> make perl <i>fork()</i> safe even on platforms that don&#8217;t have <i>pthread_atfork()</i></dd>
+<dt>11459</dt>
+<dd> make switching optimization and debugging levels during Perl builds easier via the <font SIZE="-1">OPTIMIZE</font> environment variable</dd>
+<dt>11475</dt>
+<dd> make <i>split()</i>&#8216;s unused captures to be undef, not &#8221;</dd>
+<dt>11485</dt>
+<dd> Search::Dict: allow transforming lines before comparing</dd>
+<dt>11490</dt>
+<dd> allow installing extra modules or bundles when building Perl</dd>
+<dt>11516</dt>
+<dd> add -Wall in cflags when compiling with gcc to weed out dubious C practices</dd>
+<dt>11541</dt>
+<dd> pluggable optimizer</dd>
+<dt>11549</dt>
+<dd> WinCE: integrate the port</dd>
+<dt>11589</dt>
+<dd> Win32: 4-arg select was broken</dd>
+<dt>11594</dt>
+<dd> introduce the perlivp utility for verifying the Perl installation (<font SIZE="-1">IVP</font> = Installation Verification Procedure)</dd>
+<dt>11623</dt>
+<dd> rename lib/unicode to lib/unicore to avoid case-insensitivity problems with lib/Unicode</dd>
+<dt>111631</dt>
+<dd> remove Time::Piece</dd>
+<dt>11643</dt>
+<dd> document that use utf8 is not the right way most of the time</dd>
+<dt>11656</dt>
+<dd> allow building perl with -DUSE_UTF8_SCRIPTS which makes <font SIZE="-1">UTF-8</font> the default script encoding (not the default since that would break all scripts having legacy eight-bit data in them)</dd>
+<dt>11725</dt>
+<dd> division preserving 64-bit integers</dd>
+<dt>11743</dt>
+<dd> document the coderef-in-@INC feature</dd>
+<dt>11794</dt>
+<dd> modulo (%) preserving 64-bit integers</dd>
+<dt>11825</dt>
+<dd> update to Unicode 3.1.1</dd>
+<dt>11865</dt>
+<dd> add the \[$@%&amp;*] prototype support</dd>
+<dt>11874</dt>
+<dd> <i>oct()</i> and <i>hex()</i> in glorious 64 bit</dd>
+<dt>11877</dt>
+<dd> Class::Struct: allow recursive classes</dd>
+<dt>11993</dt>
+<dd> fix unpack U to be the reverse of pack U</dd>
+<dt>12056</dt>
+<dd> <font SIZE="-1">VMS:</font> waitpid enhancements</dd>
+<dt>12180</dt>
+<dd> unpack(&#8220;Z*Z*&#8221;, pack(&#8220;Z*Z*&#8221;, ..)) was broken</dd>
+<dt>12243</dt>
 <dd> Devel::Peek: display <font SIZE="-1">UTF-8</font> SVs also as 
+</dd></dl>

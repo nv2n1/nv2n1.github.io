@@ -15,11 +15,11 @@ truncate_setsize - update inode and pagecache for a new file size
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode</dl>
+<dl><dd></dd><dd>inode</dd></dl>
  
 
  <i>newsize</i>
-<dl><dd>new file size</dl>
+<dl><dd>new file size</dd></dl>
 
 <h2>Description</h2>
 

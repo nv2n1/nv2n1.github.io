@@ -72,3 +72,4 @@ struct utmp {<br />
 #endif<br />
 #define ut_xtime ut_tv.tv_sec<br />
 #define ut_addr ut_addr_v6[0] This structure gives the name of the special file associated with the user&#8217;s terminal, the user&#8217;s login name, and the time of login in the form of <code><a href="/docs/linux/man/2-time/">time</a></code>(2). String fields are terminated by a null byte (&#8216;
+</p>

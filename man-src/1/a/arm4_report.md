@@ -20,18 +20,18 @@ description: "arm4_report – report on ARM 4 transactions"
 <p> The <code>arm4_report</code> program is a simple reporting interface to the <i>ARM 4</i> transaction database. Two types of reports are available. The summary report shows response time statistics for all instances of a transaction instead of individual instances. The detailed report shows the results of individual transactions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display the command line options.</p>
-<dt><code>-V</code>, <code>&#8211;Version</code></p>
-<dd> display the program version and exit.</p>
-<dt><code>-s</code>, <code>&#8211;summary</code></p>
-<dd> display summary information for each of the transaction types in the database. This is the default if neither summary nor detailed reports are specified.</p>
-<dt><code>-d</code>, <code>&#8211;detailed</code></p>
-<dd> show detailed information for each transaction instance.</p>
-<dt><code>-C</code>, <code>&#8211;Config</code> <i>config_file</i></p>
-<dd> specifies a configuration file for this instance instead of using the default configuration file. The default configuration file <i>/etc/arm4.conf</i> is used if none is specified.</p>
-<dt><code>-a</code>, <code>&#8211;archive</code> <i>archive_directory</i></p>
-<dd> read an archive created using the <code>arm4_control</code> <i>&#8211;archive</i> command.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display the command line options.</dd>
+<dt><code>-V</code>, <code>&#8211;Version</code></dt>
+<dd> display the program version and exit.</dd>
+<dt><code>-s</code>, <code>&#8211;summary</code></dt>
+<dd> display summary information for each of the transaction types in the database. This is the default if neither summary nor detailed reports are specified.</dd>
+<dt><code>-d</code>, <code>&#8211;detailed</code></dt>
+<dd> show detailed information for each transaction instance.</dd>
+<dt><code>-C</code>, <code>&#8211;Config</code> <i>config_file</i></dt>
+<dd> specifies a configuration file for this instance instead of using the default configuration file. The default configuration file <i>/etc/arm4.conf</i> is used if none is specified.</dd>
+<dt><code>-a</code>, <code>&#8211;archive</code> <i>archive_directory</i></dt>
+<dd> read an archive created using the <code>arm4_control</code> <i>&#8211;archive</i> command.</dd></dl>
 <h2>KNOWN BUGS</h2>
 <p> Although intended to be used as a user space program, the current implementation accesses the database directly. This means that the program must be run by the database owner or as root.</p>
 <h2>REPORTING BUGS</h2>

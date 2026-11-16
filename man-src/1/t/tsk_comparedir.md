@@ -15,22 +15,22 @@ description: "tsk_comparedir – compare the contents of a directory with the co
 <p> <code>tsk_comparedir </code> compares the contents of <i>image</i> to the contents of <i>comparison_directory.</i> This can be useful for detecting rootkits and when testing. Rootkits can be detected by comparing the contents of a local directory and a local raw device. The rootkits typically don&#8217;t hide data when it is read directly from the raw device. </p>
 <p> The arguments are as follows:</p>
 <dl>
-<dt>-o sector_offset</p>
-<dd> Sector offset for a partition in the image or device to compare with.</p>
-<dt>-n start_inum</p>
-<dd> Starting inum for a directory in the image to start the comparison at.</p>
-<dt>-v</p>
-<dd> verbose output to stderr</p>
-<dt>-V</p>
-<dd> Print version</p>
-<dt>-f fstype</p>
-<dd> Specify the file system type. Use &#8216;-f list&#8217; to list the supported file system types. If not given, autodetection methods are used.</p>
-<dt>-i imgtype</p>
-<dd> The format of the image file, such as raw. Use &#8216;-i list&#8217; to list the supported types. If not given, autodetection methods are used.</p>
-<dt>-b dev_sector_size</p>
-<dd> The size (in bytes) of the device sectors. If not given, autodetection methods are used.</p>
-<dt>image [images]</p>
-<dd> The disk or partition image to read, whose format is given with &#8216;-i&#8217;. Multiple image file names can be given if the image is split into multiple segments. If only one image file is given, and its name is the first in a sequence (e.g., as indicated by ending in &#8216;.001&#8217;), subsequent image segments will be included automatically. </p>
+<dt>-o sector_offset</dt>
+<dd> Sector offset for a partition in the image or device to compare with.</dd>
+<dt>-n start_inum</dt>
+<dd> Starting inum for a directory in the image to start the comparison at.</dd>
+<dt>-v</dt>
+<dd> verbose output to stderr</dd>
+<dt>-V</dt>
+<dd> Print version</dd>
+<dt>-f fstype</dt>
+<dd> Specify the file system type. Use &#8216;-f list&#8217; to list the supported file system types. If not given, autodetection methods are used.</dd>
+<dt>-i imgtype</dt>
+<dd> The format of the image file, such as raw. Use &#8216;-i list&#8217; to list the supported types. If not given, autodetection methods are used.</dd>
+<dt>-b dev_sector_size</dt>
+<dd> The size (in bytes) of the device sectors. If not given, autodetection methods are used.</dd>
+<dt>image [images]</dt>
+<dd> The disk or partition image to read, whose format is given with &#8216;-i&#8217;. Multiple image file names can be given if the image is split into multiple segments. If only one image file is given, and its name is the first in a sequence (e.g., as indicated by ending in &#8216;.001&#8217;), subsequent image segments will be included automatically. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To compare the directories in image.dd to those in directory: </p>

@@ -14,8 +14,8 @@ description: "gnutls_register_md5_handler – API function"
 <p> <code>int gnutls_register_md5_handler( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Register a non-libgcrypt based MD5 and HMAC-MD5 handler. This is useful if you run Libgcrypt in FIPS-mode. Normally TLS requires use of MD5, so without this you cannot use GnuTLS with libgcrypt in FIPS mode.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_register_md5_handler – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

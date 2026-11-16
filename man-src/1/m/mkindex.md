@@ -15,14 +15,11 @@ description: "mkindex – script to process LaTeX index and glossary files"
 <p> <code>mkindex</code> runs <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1) on any index (<tt>.idx</tt>) or glossary (<tt>.glo</tt>) files created by TeXing the file <i>BASENAME</i>.tex. </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>gind.ist</i></p>
-<dd> MakeIndex index style file</p>
-<dt>
-<dd>
-<dt><i>gglo.ist</i></p>
-<dd> MakeIndex glossary style file</p>
-<dt>
-<dd></dl>
+<dt><i>gind.ist</i></dt>
+<dd> MakeIndex index style file</dd>
+<dt><i>gglo.ist</i></dt>
+<dd> MakeIndex glossary style file</dd>
+</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1) </p>
 <h2>BUGS</h2>

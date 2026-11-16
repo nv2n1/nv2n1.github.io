@@ -19,7 +19,7 @@ description: "cmew – create Mew’s database file"
 <p> <i>target_folder</i> is a target folder. Information about messages contained in this folder only are updated. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-f</code></p>
-<dd> Full update. Unless this option is specified, incremental update is used. </p>
+<dt><code>-f</code></dt>
+<dd> Full update. Unless this option is specified, incremental update is used. </dd>
 </dl>
 <h2>Index</h2>

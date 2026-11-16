@@ -21,36 +21,36 @@ description: "regexp_table – format of Postfix regular expression tables"
 <h2>Table Format</h2>
 <p>The general form of a Postfix regular expression table is:</p>
 <dl>
-<dt><code>/</code><i>pattern</i><code>/</code><i>flags result</i></p>
-<dd>When <i>pattern</i> matches the input string, use the corresponding <i>result</i> value.</p>
-<dt><code>!/</code><i>pattern</i><code>/</code><i>flags result</i></p>
-<dd>When <i>pattern</i> does <code>not</code> match the input string, use the corresponding <i>result</i> value.</p>
-<dt><code>if /</code><i>pattern</i><code>/</code><i>flags</i></p>
+<dt><code>/</code><i>pattern</i><code>/</code><i>flags result</i></dt>
+<dd>When <i>pattern</i> matches the input string, use the corresponding <i>result</i> value.</dd>
+<dt><code>!/</code><i>pattern</i><code>/</code><i>flags result</i></dt>
+<dd>When <i>pattern</i> does <code>not</code> match the input string, use the corresponding <i>result</i> value.</dd>
+<dt><code>if /</code><i>pattern</i><code>/</code><i>flags</i></dt>
 <dd>
-<dt><code>endif</code></p>
-<dd>If the input string matches /<i>pattern</i>/, then match that input string against the patterns between <code>if</code> and <code>endif</code>. The <code>if</code>..<code>endif</code> can nest. </p>
+</dd><dt><code>endif</code></dt>
+<dd>If the input string matches /<i>pattern</i>/, then match that input string against the patterns between <code>if</code> and <code>endif</code>. The <code>if</code>..<code>endif</code> can nest. </dd>
 <p> Note: do not prepend whitespace to patterns inside <code>if</code>..<code>endif</code>. </p>
 <p> This feature is available in Postfix 2.1 and later.</p>
-<dt><code>if !/</code><i>pattern</i><code>/</code><i>flags</i></p>
+<dt><code>if !/</code><i>pattern</i><code>/</code><i>flags</i></dt>
 <dd>
-<dt><code>endif</code></p>
-<dd>If the input string does not match /<i>pattern</i>/, then match that input string against the patterns between <code>if</code> and <code>endif</code>. The <code>if</code>..<code>endif</code> can nest. </p>
+</dd><dt><code>endif</code></dt>
+<dd>If the input string does not match /<i>pattern</i>/, then match that input string against the patterns between <code>if</code> and <code>endif</code>. The <code>if</code>..<code>endif</code> can nest. </dd>
 <p> Note: do not prepend whitespace to patterns inside <code>if</code>..<code>endif</code>. </p>
 <p> This feature is available in Postfix 2.1 and later.</p>
-<dt>blank lines and comments</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>multi-line text</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
+<dt>blank lines and comments</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>multi-line text</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd></dl>
 <p> Each pattern is a POSIX regular expression enclosed by a pair of delimiters. The regular expression syntax is documented in <code><a href="/docs/linux/man/7-re_format/">re_format</a></code>(7) with 4.4BSD, in <code>regex</code>(5) with Solaris, and in <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7) with Linux. Other systems may use other document names. </p>
 <p> The expression delimiter can be any non-alphanumerical character, except whitespace or characters that have special meaning (traditionally the forward slash is used). The regular expression can contain whitespace. </p>
 <p> By default, matching is case-insensitive, and newlines are not treated as special characters. The behavior is controlled by flags, which are toggled by appending one or more of the following characters after the pattern:</p>
 <dl>
-<dt><code>i</code> (default: on)</p>
-<dd>Toggles the case sensitivity flag. By default, matching is case insensitive.</p>
-<dt><code>m</code> (default: off)</p>
-<dd>Toggle the multi-line mode flag. When this flag is on, the <code>^</code> and <code>$</code> metacharacters match immediately after and immediately before a newline character, respectively, in addition to matching at the start and end of the input string.</p>
-<dt><code>x</code> (default: on)</p>
-<dd>Toggles the extended expression syntax flag. By default, support for extended expression syntax is enabled.</dl>
+<dt><code>i</code> (default: on)</dt>
+<dd>Toggles the case sensitivity flag. By default, matching is case insensitive.</dd>
+<dt><code>m</code> (default: off)</dt>
+<dd>Toggle the multi-line mode flag. When this flag is on, the <code>^</code> and <code>$</code> metacharacters match immediately after and immediately before a newline character, respectively, in addition to matching at the start and end of the input string.</dd>
+<dt><code>x</code> (default: on)</dt>
+<dd>Toggles the extended expression syntax flag. By default, support for extended expression syntax is enabled.</dd></dl>
 <h2>Table Search Order</h2>
 <p>Patterns are applied in the order as specified in the table, until a pattern is found that matches the input string. </p>
 <p> Each pattern is applied to the entire input string. Depending on the application, that string is an entire client hostname, an entire client IP address, or an entire mail address. Thus, no parent domain or parent network search is done, and <i>user [at] domain</i> mail addresses are not broken up into their <i>user</i> and <i>domain</i> constituent parts, nor is <i>user+foo</i> broken up into <i>user</i> and <i>foo</i>.</p>

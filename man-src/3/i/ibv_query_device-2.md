@@ -64,5 +64,5 @@ uint8_t phys_port_cnt; /* Number of physical ports */
 <p><code>ibv_open_device</code>(3), <code>ibv_query_port</code>(3), <code>ibv_query_pkey</code>(3), <code>ibv_query_gid</code>(3)</p>
 <h2>Authors</h2>
 <dl COMPACT>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
-<dd></dl>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
+<dd></dd></dl>

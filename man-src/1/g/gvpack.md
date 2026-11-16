@@ -18,33 +18,33 @@ description: "gvpack – merge and pack disjoint graphs"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-g</code></p>
-<dd> Combines the graphs at the graph level. This uses more space, but prevents parts of one graph from occurring between parts of another.</p>
-<dt><code>-array</code><i>[_flags][n]</i></p>
-<dd> Combines the graphs at the graph level, placing them in an array. By default, the layout is done in row-major order. The number of columns used is roughly the square root of the number of graphs. If the optional integer <i>n</i> is supplied, this indicates the number of columns to use.</p>
+<dt><code>-g</code></dt>
+<dd> Combines the graphs at the graph level. This uses more space, but prevents parts of one graph from occurring between parts of another.</dd>
+<dt><code>-array</code><i>[_flags][n]</i></dt>
+<dd> Combines the graphs at the graph level, placing them in an array. By default, the layout is done in row-major order. The number of columns used is roughly the square root of the number of graphs. If the optional integer <i>n</i> is supplied, this indicates the number of columns to use.</dd>
 <dt>
-<dd> If optional flags are supplied, these consist of an underscore followed by any of the letters &quot;c&quot;, &quot;t&quot;, &quot;b&quot;, &quot;l&quot;, &quot;r&quot;, &quot;u&quot; or &quot;i&quot;. If &quot;c&quot; is supplied, the graphs are packed in column-major order, in which case a final integer specifies the number of rows. The flags &quot;t&quot;, &quot;b&quot;, &quot;l&quot;, &quot;r&quot; indicate that components are aligned along the top, bottom, left or right, respectively. By default, the insertion order is determined by sorting the graphs by size, largest to smallest. If the &quot;u&quot; flag is set, the graphs are sorted based on the non-negative integer <i>sortv</i> attribute attached to each graph. The &quot;i&quot; flag indicates that no sorting is done, with the graphs inserted in input order.</p>
-<dt><code>-G</code><i>name</i><code>=</code>value</p>
-<dd> Specifies attributes to be added to the resulting union graph. For example, this can be used to specify a graph label.</p>
-<dt><code>-m</code><i>margin</i></p>
-<dd> Packs the graphs allowing a margin of <i>output</i> points around the parts.</p>
-<dt><code>-n</code></p>
-<dd> Combines the graphs at the node level. Clusters are ignored in the packing.</p>
-<dt><code>-o</code><i>output</i></p>
-<dd> Prints output to the file <i>output</i>. If not given, <code>gvpack</code> uses stdout.</p>
-<dt><code>-s</code><i>graph_name</i></p>
-<dd> Use <i>graph_name</i> as the name of the root graph. By default, &quot;root&quot; is used.</p>
-<dt><code>-u</code></p>
-<dd> Don&#8217;t pack the graphs. Just combine them into a single graph.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode.</p>
-<dt><code>-?</code></p>
-<dd> Prints usage information and exit.</dl>
+</dt><dd> If optional flags are supplied, these consist of an underscore followed by any of the letters &quot;c&quot;, &quot;t&quot;, &quot;b&quot;, &quot;l&quot;, &quot;r&quot;, &quot;u&quot; or &quot;i&quot;. If &quot;c&quot; is supplied, the graphs are packed in column-major order, in which case a final integer specifies the number of rows. The flags &quot;t&quot;, &quot;b&quot;, &quot;l&quot;, &quot;r&quot; indicate that components are aligned along the top, bottom, left or right, respectively. By default, the insertion order is determined by sorting the graphs by size, largest to smallest. If the &quot;u&quot; flag is set, the graphs are sorted based on the non-negative integer <i>sortv</i> attribute attached to each graph. The &quot;i&quot; flag indicates that no sorting is done, with the graphs inserted in input order.</dd>
+<dt><code>-G</code><i>name</i><code>=</code>value</dt>
+<dd> Specifies attributes to be added to the resulting union graph. For example, this can be used to specify a graph label.</dd>
+<dt><code>-m</code><i>margin</i></dt>
+<dd> Packs the graphs allowing a margin of <i>output</i> points around the parts.</dd>
+<dt><code>-n</code></dt>
+<dd> Combines the graphs at the node level. Clusters are ignored in the packing.</dd>
+<dt><code>-o</code><i>output</i></dt>
+<dd> Prints output to the file <i>output</i>. If not given, <code>gvpack</code> uses stdout.</dd>
+<dt><code>-s</code><i>graph_name</i></dt>
+<dd> Use <i>graph_name</i> as the name of the root graph. By default, &quot;root&quot; is used.</dd>
+<dt><code>-u</code></dt>
+<dd> Don&#8217;t pack the graphs. Just combine them into a single graph.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-?</code></dt>
+<dd> Prints usage information and exit.</dd></dl>
 <h2>OPERANDS</h2>
 <p> The following operand is supported:</p>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>RETURN CODES</h2>
 <p> <code>gvpack</code> returns <code>0</code> if there were no problems, and non-zero otherwise.</p>
 <h2>EXAMPLES</h2>

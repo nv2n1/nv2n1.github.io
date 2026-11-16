@@ -38,13 +38,13 @@ description: "Performance Marker Plugin –"
  <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
  <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br />
  <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)<br />
- <i>restart</i> boolean indicating whether this callback is result of a restart</dl>
+ <i>restart</i> boolean indicating whether this callback is result of a restart</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>n/a</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>n/a</dd></dl>
 </dl>
 <h3>typedef void(* globus_ftp_client_perf_plugin_complete_cb_t)(void *user_specific, <code>globus_ftp_client_handle_t</code> *handle, globus_bool_t success)</h3>
 <p>Transfer complete callback </p>
@@ -53,13 +53,13 @@ description: "Performance Marker Plugin –"
 <dl COMPACT>
 <dd><i>handle</i> this the client handle that this transfer was occurring on<br />
  <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
- <i>success</i> indicates whether this transfer completed successfully or was interrupted (by error or abort)</dl>
+ <i>success</i> indicates whether this transfer completed successfully or was interrupted (by error or abort)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>n/a</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>n/a</dd></dl>
 </dl>
 <h3>typedef void(* globus_ftp_client_perf_plugin_marker_cb_t)(void *user_specific, <code>globus_ftp_client_handle_t</code> *handle, long time_stamp_int, char time_stamp_tength, int stripe_ndx, int num_stripes, globus_off_t nbytes)</h3>
 <p>Performance marker received callback </p>
@@ -71,41 +71,41 @@ description: "Performance Marker Plugin –"
  <i>time_stamp</i> the timestamp at which the number of bytes is valid<br />
  <i>stripe_ndx</i> the stripe index this data refers to<br />
  <i>num_stripes</i> total number of stripes involved in this transfer<br />
- <i>nbytes</i> the total bytes transferred on this stripe</dl>
+ <i>nbytes</i> the total bytes transferred on this stripe</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>n/a</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>n/a</dd></dl>
 </dl>
 <h3>typedef void*(* globus_ftp_client_perf_plugin_user_copy_cb_t)(void *user_specific)</h3>
 <p>Copy constructor </p>
 <p> This callback will be called when a copy of this plugin is made, it is intended to allow initialization of a new user_specific data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>user_specific</i> this is user specific data either created by this copy method, or the value passed to init</dl>
+<dd><i>user_specific</i> this is user specific data either created by this copy method, or the value passed to init</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>a pointer to a user specific piece of data</p>
-<dt>&bull;</p>
-<dd>GLOBUS_NULL (does not indicate error)</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>a pointer to a user specific piece of data</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_NULL (does not indicate error)</dd></dl>
 </dl>
 <h3>typedef void(* globus_ftp_client_perf_plugin_user_destroy_cb_t)(void *user_specific)</h3>
 <p>Destructor </p>
 <p> This callback will be called when a copy of this plugin is destroyed, it is intended to allow the user to free up any memory associated with the user specific data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>user_specific</i> this is user specific data created by the copy method</dl>
+<dd><i>user_specific</i> this is user specific data created by the copy method</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>n/a</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>n/a</dd></dl>
 </dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_ftp_client_perf_plugin_destroy (<code>globus_ftp_client_plugin_t</code> *plugin)</h3>
@@ -113,32 +113,32 @@ description: "Performance Marker Plugin –"
 <p> Frees up memory associated with plugin </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> plugin previously initialized with init (above)</dl>
+<dd><i>plugin</i> plugin previously initialized with init (above)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>GLOBUS_SUCCESS</p>
-<dt>&bull;</p>
-<dd>Error on NULL plugin</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>GLOBUS_SUCCESS</dd>
+<dt>&bull;</dt>
+<dd>Error on NULL plugin</dd></dl>
 </dl>
 <h3>globus_result_t globus_ftp_client_perf_plugin_get_user_specific (<code>globus_ftp_client_plugin_t</code> *plugin, void **user_specific)</h3>
 <p>Retrieve user specific pointer </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>plugin</i> plugin previously initialized with init (above)<br />
- <i>user_specific</i> pointer to storage for user_specific pointer</dl>
+ <i>user_specific</i> pointer to storage for user_specific pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>GLOBUS_SUCCESS</p>
-<dt>&bull;</p>
-<dd>Error on NULL plugin</p>
-<dt>&bull;</p>
-<dd>Error on NULL user_specific</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>GLOBUS_SUCCESS</dd>
+<dt>&bull;</dt>
+<dd>Error on NULL plugin</dd>
+<dt>&bull;</dt>
+<dd>Error on NULL user_specific</dd></dl>
 </dl>
 <h3>globus_result_t globus_ftp_client_perf_plugin_init (<code>globus_ftp_client_plugin_t</code> *plugin, <code>globus_ftp_client_perf_plugin_begin_cb_t</code>begin_cb, <code>globus_ftp_client_perf_plugin_marker_cb_t</code>marker_cb, <code>globus_ftp_client_perf_plugin_complete_cb_t</code>complete_cb, void *user_specific)</h3>
 <p>Initialize a perf plugin </p>
@@ -149,17 +149,17 @@ description: "Performance Marker Plugin –"
  <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks<br />
  <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
  <i>marker_cb</i> the callback to be called with every performance marker received<br />
- <i>complete_cb</i> the callback to be called to indicate transfer completion</dl>
+ <i>complete_cb</i> the callback to be called to indicate transfer completion</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>GLOBUS_SUCCESS</p>
-<dt>&bull;</p>
-<dd>Error on NULL plugin</p>
-<dt>&bull;</p>
-<dd>Error on init internal plugin</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>GLOBUS_SUCCESS</dd>
+<dt>&bull;</dt>
+<dd>Error on NULL plugin</dd>
+<dt>&bull;</dt>
+<dd>Error on init internal plugin</dd></dl>
 </dl>
 <h3>globus_result_t globus_ftp_client_perf_plugin_set_copy_destroy (<code>globus_ftp_client_plugin_t</code> *plugin, <code>globus_ftp_client_perf_plugin_user_copy_cb_t</code>copy_cb, <code>globus_ftp_client_perf_plugin_user_destroy_cb_t</code>destroy_cb)</h3>
 <p>Set user copy and destroy callbacks </p>
@@ -168,15 +168,15 @@ description: "Performance Marker Plugin –"
 <dl COMPACT>
 <dd><i>plugin</i> plugin previously initialized with init (above)<br />
  <i>copy_cb</i> func to be called when a copy is needed<br />
- <i>destroy_cb</i> func to be called when a copy is to be destroyed</dl>
+ <i>destroy_cb</i> func to be called when a copy is to be destroyed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>Error on NULL arguments</p>
-<dt>&bull;</p>
-<dd>GLOBUS_SUCCESS</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>Error on NULL arguments</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_SUCCESS</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_ftp_client from the source code.</p>

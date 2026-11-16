@@ -29,17 +29,17 @@ description: "Image Object Fill Rectangle Functions – Functions that deal with
 <p> See <code>evas_object_image_fill_set</code> for more details. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.</dl>
+<dd><i>obj</i> The given image object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>If the center is to be drawn or not.</dl>
+<dd>If the center is to be drawn or not.</dd></dl>
 <h3>EAPI void evas_object_image_border_center_fill_set (<code>Evas_Object</code> * obj, Evas_Bool fill)</h3>
 <p>Sets if the center part of the given image object (not the border) should be drawn. </p>
 <p> When rendering, the image may be scaled to fit the size of the image object. This function sets if the center part of the scaled image is to be drawn or left completely blank. Very useful for frames and decorations. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>fill</i> Whether the center should be drawn.</dl>
+ <i>fill</i> Whether the center should be drawn.</dd></dl>
 <h3>EAPI void evas_object_image_fill_get (const <code>Evas_Object</code> * obj, Evas_Coord * x, Evas_Coord * y, Evas_Coord * w, Evas_Coord * h)</h3>
 <p>Retrieves the dimensions of the rectangle of the given image object that the image will be drawn to. </p>
 <p> See <code>evas_object_image_fill_set</code> for more details. </p>
@@ -49,7 +49,7 @@ description: "Image Object Fill Rectangle Functions – Functions that deal with
  <i>x</i> Location to store the X coordinate for the top left corner of the image in, or NULL.<br />
  <i>y</i> Location to store the Y coordinate for the top left corner of the image in, or NULL.<br />
  <i>w</i> Location to store the width of the image in, or NULL.<br />
- <i>h</i> Location to store the height of the image in, or NULL.</dl>
+ <i>h</i> Location to store the height of the image in, or NULL.</dd></dl>
 <h3>EAPI void evas_object_image_fill_set (<code>Evas_Object</code> * obj, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h)</h3>
 <p>Sets the rectangle of the given image object that the image will be drawn to. </p>
 <p> Note that the image will be tiled around this one rectangle. To have only one copy of the image drawn, x and y must be 0 and w and h need to be the width and height of the image object respectively. </p>
@@ -60,21 +60,21 @@ description: "Image Object Fill Rectangle Functions – Functions that deal with
  <i>x</i> The X coordinate for the top left corner of the image.<br />
  <i>y</i> The Y coordinate for the top left corner of the image.<br />
  <i>w</i> The width of the image.<br />
- <i>h</i> The height of the image.</dl>
+ <i>h</i> The height of the image.</dd></dl>
 <h3>EAPI int evas_object_image_fill_spread_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Retrieves the spread (tiling mode) for the given image object&#8217;s fill. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas image object.</dl>
+<dd><i>obj</i> The given evas image object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The current spread mode of the image object.</dl>
+<dd>The current spread mode of the image object.</dd></dl>
 <p> References EVAS_TEXTURE_REPEAT.</p>
 <h3>EAPI void evas_object_image_fill_spread_set (<code>Evas_Object</code> * obj, int spread)</h3>
 <p>Sets the tiling mode for the given evas image object&#8217;s fill. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given evas image object.<br />
- <i>spread</i> One of EVAS_TEXTURE_REFLECT, EVAS_TEXTURE_REPEAT, EVAS_TEXTURE_RESTRICT, or EVAS_TEXTURE_PAD.</dl>
+ <i>spread</i> One of EVAS_TEXTURE_REFLECT, EVAS_TEXTURE_REPEAT, EVAS_TEXTURE_RESTRICT, or EVAS_TEXTURE_PAD.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

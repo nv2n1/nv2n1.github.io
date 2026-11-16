@@ -11,9 +11,7 @@ std::move_iterator - std::move_iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class Iter &gt;        (since C++11)
-
 class move_iterator;</code></pre> 
 std::move_iterator is an iterator adaptor which behaves exactly like the underlying iterator (which must be at least an LegacyInputIterator), except that dereferencing converts the value returned by the underlying iterator into an rvalue. If this iterator is used as an input iterator, the effect is that the values are moved from, rather than copied from. 
 
@@ -80,18 +78,12 @@ operator- <i>(function template)</i>
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::vector&lt;std::string&gt; v{&quot;this&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;};
     std::cout &lt;&lt; &quot;Old contents of the vector: &quot;;

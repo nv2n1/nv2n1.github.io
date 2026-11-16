@@ -10,7 +10,6 @@ description: "pbs_statserver – obtain status of a pbs batch server"
 <p>pbs_statserver &#8211; obtain status of a pbs batch server</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre><code>struct batch_status *pbs_statserver(int/ connect, struct/ attrl/ *attrib,
 char/ *extend)

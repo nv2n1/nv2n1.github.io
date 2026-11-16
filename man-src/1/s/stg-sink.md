@@ -21,15 +21,15 @@ stg sink[-t&lt;target patch&gt;][-n][--][&lt;patches&gt;]
 <p> -n, &#8211;nopush</p>
 <dl>
 <dt>
-<dd> Do not push back on the stack the formerly-applied patches. Only the patches to sink are pushed.</dl>
+</dt><dd> Do not push back on the stack the formerly-applied patches. Only the patches to sink are pushed.</dd></dl>
 <p> -t TARGET, &#8211;to TARGET</p>
 <dl>
 <dt>
-<dd> Specify a target patch to place the patches below, instead of sinking them to the bottom of the stack.</dl>
+</dt><dd> Specify a target patch to place the patches below, instead of sinking them to the bottom of the stack.</dd></dl>
 <p> -k, &#8211;keep</p>
 <dl>
 <dt>
-<dd> Keep the local changes.</dl>
+</dt><dd> Keep the local changes.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

@@ -18,21 +18,21 @@ description: "pktsetup – set up and tear down packet device associations"
 <p><code>Pktsetup</code> returns 0 on success, nonzero on failure.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d </code><i>packet-device</i></p>
-<dd>Delete the association between the specified <i>packet-device</i> and its block device.</p>
-<dt><code>-s</p>
-<dd>Show device mappings. </p>
+<dt><code>-d </code><i>packet-device</i></dt>
+<dd>Delete the association between the specified <i>packet-device</i> and its block device.</dd>
+<dt><code>-s</dt>
+<dd>Show device mappings. </dd>
 </dl>
 <p> </code></p>
 <h2>Example</h2>
 <p>The following commands provide an example of using the packet device. </p>
-<pre><dl><dt><dd>cdrwtool -d /dev/sr0 -q
+<pre><dl><dt></dt><dd>cdrwtool -d /dev/sr0 -q
 pktsetup /dev/pktcdvd0 /dev/sr0
 mount -t udf /dev/pktcdvd0 /mnt
  ...
 umount /dev/pktcdvd0
 pktsetup -d /dev/pktcdvd0</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <pre>/dev/pktcdvd0,/dev/pktcdvd1,... CD/DVD packet devices (block major=97)</pre>
 <h2>Author</h2>

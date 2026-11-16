@@ -12,21 +12,18 @@ rdma_create_srq - Allocate a shared receive queue.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 int rdma_create_srq
-
     (struct rdma_cm_id *id,
-
      struct ibv_pd *pd,
-
      struct ibv_srq_init_attr *attr);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>pd
-<dd>Optional protection domain for the SRQ.
-<dt>attr
-<dd>Initial SRQ attributes.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>pd
+</dt><dd>Optional protection domain for the SRQ.
+</dd><dt>attr
+</dt><dd>Initial SRQ attributes.</dd></dl>
 
 <h2>Description</h2>
 

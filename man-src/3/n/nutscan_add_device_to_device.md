@@ -21,7 +21,7 @@ char * port;
 nutscan_options_t opt;
 struct nutscan_device * prev;
 struct nutscan_device * next;</pre>
-</dl>
+</dd></dl>
 <p> This is a double linked list of device. Each device is described by its type, its driver name, its port and any number of optional data. </p>
 <p> The <code>nutscan_add_device_to_device()</code> concatenates <i>first</i> and <i>second</i> devices to a unique device. No new device is created, the two linked list are simply linked to each other. So <i>first</i> and <i>second</i> devices are likely to be modified by this function.</p>
 <h2>Return Value</h2>

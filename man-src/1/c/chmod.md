@@ -29,24 +29,24 @@ description: "chmod – change file mode bits"
 <h2>OPTIONS</h2>
 <p> Change the mode of each FILE to MODE. With <code>&#8211;reference</code>, change the mode of each FILE to that of RFILE.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;changes</code></p>
-<dd> like verbose but report only when a change is made</p>
-<dt><code>-f</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd> suppress most error messages</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> output a diagnostic for every file processed</p>
-<dt><code>&#8211;no-preserve-root</code></p>
-<dd> do not treat &#8216;/&#8217; specially (the default)</p>
-<dt><code>&#8211;preserve-root</code></p>
-<dd> fail to operate recursively on &#8216;/&#8217;</p>
-<dt><code>&#8211;reference</code>=<i>,RFILE/</i></p>
-<dd> use RFILE&#8217;s mode instead of MODE values</p>
-<dt><code>-R</code>, <code>&#8211;recursive</code></p>
-<dd> change files and directories recursively</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;changes</code></dt>
+<dd> like verbose but report only when a change is made</dd>
+<dt><code>-f</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd> suppress most error messages</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> output a diagnostic for every file processed</dd>
+<dt><code>&#8211;no-preserve-root</code></dt>
+<dd> do not treat &#8216;/&#8217; specially (the default)</dd>
+<dt><code>&#8211;preserve-root</code></dt>
+<dd> fail to operate recursively on &#8216;/&#8217;</dd>
+<dt><code>&#8211;reference</code>=<i>,RFILE/</i></dt>
+<dd> use RFILE&#8217;s mode instead of MODE values</dd>
+<dt><code>-R</code>, <code>&#8211;recursive</code></dt>
+<dd> change files and directories recursively</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Each MODE is of the form &#8216;[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+&#8217;.</p>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Jim Meyering.</p>

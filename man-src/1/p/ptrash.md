@@ -8,25 +8,25 @@ url: "/docs/linux/man/1-ptrash/"
 
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>ptrash</code> [<i>Option</i>] file-name-1 [file-name-2 &#8230;]</p>
-<dd></dl>
+<dt><code>ptrash</code> [<i>Option</i>] file-name-1 [file-name-2 &#8230;]</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ptrash</code> is a console based simple application. <code>ptrash</code> moves the named file(s) to trash directory located under the home directory of a user. In case if ~/.trash is non-existent, <code>ptrash</code> creates it for you and then moves the file(s) to this directory. By default, ptrash runs in non-interactive mode, which means it does not ask user if she is sure to move the file to ~/.trash even when the named file already exists in trash and proceeds with overwriting that file.</p>
 <h2>OPTIONS</h2>
 <p> <code>ptrash</code> supports the following options</p>
 <dl>
-<dt><code>-d &#8211;delete</code></p>
-<dd> Delete file(s) from trash</p>
-<dt><code>-h &#8211;help</code></p>
-<dd> Prints this short usage help</p>
-<dt><code>-i</code></p>
-<dd> Enables an interactive moving of files to trash, that is ask for confirmation before over writing an existing file in trash</p>
-<dt><code>-r &#8211;restore</code></p>
-<dd> Restore a file from trash to it&#8217;s original location</p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd> Verbose operation mode</p>
-<dt><code>-V &#8211;version</code></p>
-<dd> Displays the version information</dl>
+<dt><code>-d &#8211;delete</code></dt>
+<dd> Delete file(s) from trash</dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Prints this short usage help</dd>
+<dt><code>-i</code></dt>
+<dd> Enables an interactive moving of files to trash, that is ask for confirmation before over writing an existing file in trash</dd>
+<dt><code>-r &#8211;restore</code></dt>
+<dd> Restore a file from trash to it&#8217;s original location</dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd> Verbose operation mode</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd> Displays the version information</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cp/">cp</a>(1) <a href="/docs/linux/man/1-mv/">mv</a>(1) <a href="/docs/linux/man/1-rm/">rm</a>(1) <a href="/docs/linux/man/1-shred/">shred</a>(1)</p>
 <h2>BUG(s)</h2>

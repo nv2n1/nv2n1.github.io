@@ -19,14 +19,14 @@ description: "gopen – open files"
 <p> As with most other GNUstep software, it is easily possible to attach the process to a remote window server using the <code>-NXHost</code> flag. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a </code><i>application</p>
-<dd> use application</i> to open <i>filename</i></p>
-<dt><code>-o</p>
-<dd> open </code><i>filename</i> (may be used in conjunction with <code>-p</code> ).</p>
-<dt><code>-p</p>
-<dd> print </code><i>filename</i> instead of opening.</p>
-<dt><code>-NXHost </code><i>hostname</p>
-<dd> attach to remote window server on hostname</i></dl>
+<dt><code>-a </code><i>application</dt>
+<dd> use application</i> to open <i>filename</i></dd>
+<dt><code>-o</dt>
+<dd> open </code><i>filename</i> (may be used in conjunction with <code>-p</code> ).</dd>
+<dt><code>-p</dt>
+<dd> print </code><i>filename</i> instead of opening.</dd>
+<dt><code>-NXHost </code><i>hostname</dt>
+<dd> attach to remote window server on hostname</i></dd></dl>
 <h2>EXAMPLES</h2>
 <p> Open all files with a .txt extension in the current directory: </p>
 <p> <i>gopen *.txt</i> </p>

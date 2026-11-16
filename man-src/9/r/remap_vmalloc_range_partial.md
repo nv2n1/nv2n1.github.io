@@ -14,16 +14,16 @@ description: "remap_vmalloc_range_partial – map vmalloc pages to userspace"
 <p><i>vma</i></p>
 <dl>
 <dd>
-<dd>vma to cover</dl>
+</dd><dd>vma to cover</dd></dl>
 <p> <i>uaddr</i></p>
 <dl>
-<dd>target user address to start at</dl>
+<dd>target user address to start at</dd></dl>
 <p> <i>kaddr</i></p>
 <dl>
-<dd>virtual address of vmalloc kernel memory</dl>
+<dd>virtual address of vmalloc kernel memory</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of map area</dl>
+<dd>size of map area</dd></dl>
 <h2>Return</h2>
 <p>0 for success, -Exxx on failure </p>
 <p> This function checks that <i>kaddr</i> is a valid vmalloc&#8217;ed area, and that it is big enough to cover the range starting at <i>uaddr</i> in <i>vma</i>. Will return failure if that criteria isn&#8217;t met. </p>

@@ -67,49 +67,47 @@ Target Backend Description == == == == == == = == == == == == =
 
 <dl>
 <dt>&quot;RAKUDOLIB&quot;, &quot;PERL6LIB&quot; (<i>Str</i>; <i>src/core/Inc.pm</i>)
-<dd> Appends a comma-delimited list of paths to <tt>@INC</tt>. <tt>&quot;RAKUDOLIB&quot;</tt> is evaluated first.
-<dt>&quot;RAKUDO_MODULE_DEBUG&quot; (<i>Bool</i>; <i>src/Perl6/ModuleLoader.pm</i>)
-<dd> Causes the module loader to print debugging information to standard error.</dl>
+</dt><dd> Appends a comma-delimited list of paths to <tt>@INC</tt>. <tt>&quot;RAKUDOLIB&quot;</tt> is evaluated first.
+</dd><dt>&quot;RAKUDO_MODULE_DEBUG&quot; (<i>Bool</i>; <i>src/Perl6/ModuleLoader.pm</i>)
+</dt><dd> Causes the module loader to print debugging information to standard error.</dd></dl>
 
 <h3>Error Message Verbosity and Strictness</h3>
 
 <dl>
 <dt>&quot;RAKUDO_NO_DEPRECATIONS&quot; (<i>Bool</i>; <i>src/core/Deprecations.pm</i>)
-<dd> If true, suppresses deprecation warnings triggered by the <tt>&quot;is DEPRECATED&quot;</tt> trait.
-<dt>&quot;RAKUDO_DEPRECATIONS_FATAL&quot; (<i>Bool</i>; <i>src/core/Deprecations.pm</i>)
-<dd> If true, deprecation warnings become thrown exceptions.
-<dt>&quot;RAKUDO_VERBOSE_STACKFRAME&quot; (<i>UInt</i>; <i>src/core/Backtrace.pm</i>)
-<dd> Displays source code in stack frames surrounded by the specified number of lines of context.
-<dt>&quot;RAKUDO_BACKTRACE_SETTING&quot; (<i>Bool</i>; <i>src/core/Backtrace.pm</i>)
-<dd> Controls whether .setting files are included in backtraces.</dl>
+</dt><dd> If true, suppresses deprecation warnings triggered by the <tt>&quot;is DEPRECATED&quot;</tt> trait.
+</dd><dt>&quot;RAKUDO_DEPRECATIONS_FATAL&quot; (<i>Bool</i>; <i>src/core/Deprecations.pm</i>)
+</dt><dd> If true, deprecation warnings become thrown exceptions.
+</dd><dt>&quot;RAKUDO_VERBOSE_STACKFRAME&quot; (<i>UInt</i>; <i>src/core/Backtrace.pm</i>)
+</dt><dd> Displays source code in stack frames surrounded by the specified number of lines of context.
+</dd><dt>&quot;RAKUDO_BACKTRACE_SETTING&quot; (<i>Bool</i>; <i>src/core/Backtrace.pm</i>)
+</dt><dd> Controls whether .setting files are included in backtraces.</dd></dl>
 
 <h3>Affecting Precompilation</h3>
 
 <dl>
 <dt>&quot;RAKUDO_PREFIX&quot; (<i>Str</i>; <i>src/core/CompUnit/RepositoryRegistry.pm</i>)
-<dd> When this is set, Rakudo will look for the standard repositories (perl, vendor, site) in the specified directory. This is intended as an escape hatch for build-time bootstrapping issues, where Rakudo may be built as an unprivileged user without write access to the runtime paths in <font SIZE="-1">NQP</font>'s config.
-<dt>&quot;RAKUDO_PRECOMP_DIST&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
-<dd>
-<dt>&quot;RAKUDO_PRECOMP_LOADING&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
-<dd>
-<dt>&quot;RAKUDO_PRECOMP_WITH&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
-<dd> These are internal variables for passing serialized state to precompilation jobs in child processes. Please do not set them manually.</dl>
+</dt><dd> When this is set, Rakudo will look for the standard repositories (perl, vendor, site) in the specified directory. This is intended as an escape hatch for build-time bootstrapping issues, where Rakudo may be built as an unprivileged user without write access to the runtime paths in <font SIZE="-1">NQP</font>'s config.
+</dd><dt>&quot;RAKUDO_PRECOMP_DIST&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
+</dt><dd>
+</dd><dt>&quot;RAKUDO_PRECOMP_LOADING&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
+</dt><dd>
+</dd><dt>&quot;RAKUDO_PRECOMP_WITH&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
+</dt><dd> These are internal variables for passing serialized state to precompilation jobs in child processes. Please do not set them manually.</dd></dl>
 
 <h3>Other</h3>
 
 <dl>
 <dt>&quot;RAKUDO_ERROR_COLOR&quot; (<i>Bool</i>; <i>src/core/Exception.pm</i>)
-<dd> Controls whether to emit <font SIZE="-1">ANSI</font> codes for error highlighting. Defaults to true if unset, except on Win32.
-<dt>&quot;RAKUDO_MAX_THREADS&quot; (<i>UInt</i>; <i>src/core/ThreadPoolScheduler.pm</i>)
-<dd> Override the default maximum number of threads used by a thread pool.
-<dt>&quot;TMPDIR&quot;, &quot;TEMP&quot;, &quot;TMP&quot; (<i>Str</i>; <i>src/core/IO/Spec/</i>)
-<dd> The <tt>&quot;IO::Spec::Unix.tmpdir&quot;</tt> method will return <tt>$TMPDIR</tt> if it points to a directory with full access permissions for the current user, with a fallback default of <tt>'/tmp'</tt>. 
-
+</dt><dd> Controls whether to emit <font SIZE="-1">ANSI</font> codes for error highlighting. Defaults to true if unset, except on Win32.
+</dd><dt>&quot;RAKUDO_MAX_THREADS&quot; (<i>UInt</i>; <i>src/core/ThreadPoolScheduler.pm</i>)
+</dt><dd> Override the default maximum number of threads used by a thread pool.
+</dd><dt>&quot;TMPDIR&quot;, &quot;TEMP&quot;, &quot;TMP&quot; (<i>Str</i>; <i>src/core/IO/Spec/</i>)
+</dt><dd> The <tt>&quot;IO::Spec::Unix.tmpdir&quot;</tt> method will return <tt>$TMPDIR</tt> if it points to a directory with full access permissions for the current user, with a fallback default of <tt>'/tmp'</tt>. 
  <tt>&quot;IO::Spec::Cygwin&quot;</tt> and <tt>&quot;IO::Spec::Win32&quot;</tt> use more Win32-appropriate lists which also include the <tt>&quot;%TEMP%&quot;</tt> and <tt>&quot;%TMP%&quot;</tt> environment variables.
-<dt>&quot;PATH&quot;, &quot;Path&quot; (<i>Str</i>; <i>src/core/IO/Spec/</i>)
-<dd> The <tt>&quot;IO::Spec::Unix.path&quot;</tt> method splits <tt>$PATH</tt> as a shell would; i.e. as a colon-separated list. <tt>&quot;IO::Spec::Cygwin&quot;</tt> inherits this from <tt>&quot;IO::Spec::Unix&quot;</tt>. 
-
- <tt>&quot;IO::Spec::Win32.path&quot;</tt> will read the first defined of either <tt>&quot;%PATH%&quot;</tt> or <tt>&quot;%Path%&quot;</tt> as a semicolon-delimited list.</dl>
+</dd><dt>&quot;PATH&quot;, &quot;Path&quot; (<i>Str</i>; <i>src/core/IO/Spec/</i>)
+</dt><dd> The <tt>&quot;IO::Spec::Unix.path&quot;</tt> method splits <tt>$PATH</tt> as a shell would; i.e. as a colon-separated list. <tt>&quot;IO::Spec::Cygwin&quot;</tt> inherits this from <tt>&quot;IO::Spec::Unix&quot;</tt>. 
+ <tt>&quot;IO::Spec::Win32.path&quot;</tt> will read the first defined of either <tt>&quot;%PATH%&quot;</tt> or <tt>&quot;%Path%&quot;</tt> as a semicolon-delimited list.</dd></dl>
 
 <h2>AUTHORS</h2>
 

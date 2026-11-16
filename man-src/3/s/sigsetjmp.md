@@ -10,10 +10,8 @@ description: "setjmp, sigsetjmp, longjmp, siglongjmp – performing a nonlocal g
 <p>setjmp, sigsetjmp, longjmp, siglongjmp &#8211; performing a nonlocal goto</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;setjmp.h&gt;
-
 int setjmp(jmp_buf env);
 int sigsetjmp(sigjmp_buf env, int savesigs);
-
 void longjmp(jmp_buf env, int val);
 void siglongjmp(sigjmp_buf env, int val);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>setjmp</code>(): see NOTES. <code>sigsetjmp</code>(): _POSIX_C_SOURCE</p>
@@ -58,12 +56,12 @@ void siglongjmp(sigjmp_buf env, int val);</code></pre>
 <p> <code>setjmp</code>() and <code>longjmp</code>() can be useful for dealing with errors inside deeply nested function calls or to allow a signal handler to pass control to a specific point in the program, rather than returning to the point where the handler interrupted the main program. In the latter case, if you want to portably save and restore signal masks, use <code>sigsetjmp</code>() and <code>siglongjmp</code>(). See also the discussion of program readability below. </p>
 <p> The compiler may optimize variables into registers, and <code>longjmp</code>() may restore the values of other registers in addition to the stack pointer and program counter. Consequently, the values of automatic variables are unspecified after a call to <code>longjmp</code>() if they meet all the following criteria:</p>
 <dl>
-<dt>&bull;</p>
-<dd>they are local to the function that made the corresponding <code>setjmp</code>() call;</p>
-<dt>&bull;</p>
-<dd>their values are changed between the calls to <code>setjmp</code>() and <code>longjmp</code>(); and</p>
-<dt>&bull;</p>
-<dd>they are not declared as <i>volatile</i>.</dl>
+<dt>&bull;</dt>
+<dd>they are local to the function that made the corresponding <code>setjmp</code>() call;</dd>
+<dt>&bull;</dt>
+<dd>their values are changed between the calls to <code>setjmp</code>() and <code>longjmp</code>(); and</dd>
+<dt>&bull;</dt>
+<dd>they are not declared as <i>volatile</i>.</dd></dl>
 <p> Analogous remarks apply for <code>siglongjmp</code>().</p>
 <h3>Nonlocal gotos and program readability</h3>
 <p>While it can be abused, the traditional C &quot;goto&quot; statement at least has the benefit that lexical cues (the goto statement and the target label) allow the programmer to easily perceive the flow of control. Nonlocal gotos provide no such cues: multiple <code>setjmp</code>() calls might employ the same <i>jmp_buf</i> variable so that the content of the variable may change over the lifetime of the application. Consequently, the programmer may be forced to perform detailed reading of the code to determine the dynamic target of a particular <code>longjmp</code>() call. (To make the programmer&#8217;s life easier, each <code>setjmp</code>() call should employ a unique <i>jmp_buf</i> variable.) </p>
@@ -74,10 +72,10 @@ void siglongjmp(sigjmp_buf env, int val);</code></pre>
 <p> If, in a multithreaded program, a <code>longjmp</code>() call employs an <i>env</i> buffer that was initialized by a call to <code>setjmp</code>() in a different thread, the behavior is undefined. </p>
 <p> POSIX.1-2008 Technical Corrigendum 2 adds <code>longjmp</code>() and <code>siglongjmp</code>() to the list of async-signal-safe functions. However, the standard recommends avoiding the use of these functions from signal handlers and goes on to point out that if these functions are called from a signal handler that interrupted a call to a non-async-signal-safe function (or some equivalent, such as the steps equivalent to <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) that occur upon a return from the initial call to <i>main</i>()), the behavior is undefined if the program subsequently makes a call to a non-async-signal-safe function. The only way of avoiding undefined behavior is to ensure one of the following:</p>
 <dl>
-<dt>*</p>
-<dd>After long jumping from the signal handler, the program does not call any non-async-signal-safe functions and does not return from the initial call to <i>main</i>().</p>
-<dt>*</p>
-<dd>Any signal whose handler performs a long jump must be blocked during <i>every</i> call to a non-async-signal-safe function and no non-async-signal-safe functions are called after returning from the initial call to <i>main</i>().</dl>
+<dt>*</dt>
+<dd>After long jumping from the signal handler, the program does not call any non-async-signal-safe functions and does not return from the initial call to <i>main</i>().</dd>
+<dt>*</dt>
+<dd>Any signal whose handler performs a long jump must be blocked during <i>every</i> call to a non-async-signal-safe function and no non-async-signal-safe functions are called after returning from the initial call to <i>main</i>().</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-signal/">signal</a></code>(7), <code><a href="/docs/linux/man/7-signal-safety/">signal-safety</a></code>(7)</p>
 <h2>Colophon</h2>

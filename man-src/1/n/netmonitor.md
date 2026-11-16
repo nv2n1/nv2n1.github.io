@@ -15,27 +15,27 @@ description: "netmonitor – Network Bandwidth Monitor"
 <p> <code>netmonitor </code> is a console application that monitors network interfaces. It displays the transfer rate (upload and download) for each device and the data consumed by each device. The main features of netmon are low resource usage, a simple yet effective design, and an easy to understand tabular output. It displays values whose units change dynamically to scale with the value. Its compact display fits in a 9&#215;66 size terminal window. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>
-<dt>&#8211;config</p>
-<dd> Starts the configuration program.</p>
-<dt>&#8211;compact</p>
-<dd> Removes the spacing lines between each devices.</p>
-<dt>&#8211;help</p>
-<dd> Displays the help menu. </p>
+<dt>&#8211;config</dt>
+<dd> Starts the configuration program.</dd>
+<dt>&#8211;compact</dt>
+<dd> Removes the spacing lines between each devices.</dd>
+<dt>&#8211;help</dt>
+<dd> Displays the help menu. </dd>
 </dl>
 <h2>FORCE UNIT OPTIONS</h2>
 <dl>
-<dt>&#8211;forceTKB</p>
-<dd> Forces the total units to Kilobytes</p>
-<dt>&#8211;forceTMB</p>
-<dd> Forces the total units to Megabytes</p>
-<dt>&#8211;forceTGB</p>
-<dd> Forces the total units to Gigabytes</p>
-<dt>&#8211;forceRKB</p>
-<dd> Forces the data rate units to Kilobytes</p>
-<dt>&#8211;forceRMB</p>
-<dd> Forces the data rate units to Megabytes</p>
-<dt>&#8211;forceRGB</p>
-<dd> Forces the data rate units to Gigabytes </p>
+<dt>&#8211;forceTKB</dt>
+<dd> Forces the total units to Kilobytes</dd>
+<dt>&#8211;forceTMB</dt>
+<dd> Forces the total units to Megabytes</dd>
+<dt>&#8211;forceTGB</dt>
+<dd> Forces the total units to Gigabytes</dd>
+<dt>&#8211;forceRKB</dt>
+<dd> Forces the data rate units to Kilobytes</dd>
+<dt>&#8211;forceRMB</dt>
+<dd> Forces the data rate units to Megabytes</dd>
+<dt>&#8211;forceRGB</dt>
+<dd> Forces the data rate units to Gigabytes </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Forcing a data rate that is to low for the data values will cause destortion to the display. </p>

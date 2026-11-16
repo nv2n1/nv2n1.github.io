@@ -17,10 +17,10 @@ description: "gfm – a program to manipulate files for TI’s handhelds"
 <p> The command line of gfm can be used for loading files. </p>
 <p> <code>gfm</code> accepts the following options: </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a list of all command line options. </p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Output the version info. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a list of all command line options. </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output the version info. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2006-2007, Tyler Cassidy &amp; Romain Lievin. Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>

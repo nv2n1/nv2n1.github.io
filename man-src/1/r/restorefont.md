@@ -17,10 +17,10 @@ description: "restorefont – save or restore the SVGA font for textmode."
 <p> The VGA font file <i>filename</i> has the following format: </p>
 <dl>
 <dt>
-<dd> <code>Offset:</code><br />
+</dt><dd> <code>Offset:</code><br />
  <code> 0 &#8211; 31 </code>Character 0<br />
  <code> &#8230; </code> &#8230;<br />
- <code>8164 &#8211; 8195 </code>Character 255</dl>
+ <code>8164 &#8211; 8195 </code>Character 255</dd></dl>
 <p> Each row of a character bitmap is stored as a byte (8 pixels). The space that is left from the 32-byte buffer for each character is ignored, e.g. a 16 line font uses only offsets 0 &#8211; 15 of each character. </p>
 <p> Linux textmode screen resolutions: </p>
 <p> <code>80&#215;25</code> 16 line font 400 scanlines<br />
@@ -39,10 +39,10 @@ description: "restorefont – save or restore the SVGA font for textmode."
 <p> Recent kernels support up to 2 fonts with 512 chars each. Recent versions of svgalib take this into account and extend the size of the datafile accordingly. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-w </code><i>filename</i></p>
-<dd> write the font to the file <i>filename</i>.</p>
-<dt><code>-r </code><i>filename</i></p>
-<dd> restore the font from the file <i>filename</i>. </p>
+<dt><code>-w </code><i>filename</i></dt>
+<dd> write the font to the file <i>filename</i>.</dd>
+<dt><code>-r </code><i>filename</i></dt>
+<dd> restore the font from the file <i>filename</i>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code><a href="/docs/linux/man/7-vgagl/">vgagl</a></code>(7), <code>libvga.config</code>(5), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8), <code>vga_gettextfont</code>(3), <code>vga_puttextfont</code>(3), <code><a href="/docs/linux/man/1-dumpreg/">dumpreg</a></code>(1), <code><a href="/docs/linux/man/1-convfont/">convfont</a></code>(1), <code><a href="/docs/linux/man/1-fix132x43/">fix132x43</a></code>(1), <code><a href="/docs/linux/man/1-restoretextmode/">restoretextmode</a></code>(1), <code><a href="/docs/linux/man/1-restorepalette/">restorepalette</a></code>(1), <code><a href="/docs/linux/man/1-runx/">runx</a></code>(1), <code><a href="/docs/linux/man/1-savetextmode/">savetextmode</a></code>(1), <code><a href="/docs/linux/man/1-setmclk/">setmclk</a></code>(1), <code><a href="/docs/linux/man/1-textmode/">textmode</a></code>(1).</p>

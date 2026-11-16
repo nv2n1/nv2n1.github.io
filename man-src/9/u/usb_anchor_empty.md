@@ -15,7 +15,7 @@ usb_anchor_empty - is an anchor empty
 <h2>Arguments</h2>
 
 <i>anchor</i>
-<dl><dd><dd>the anchor you want to query</dl>
+<dl><dd></dd><dd>the anchor you want to query</dd></dl>
 
 <h2>Return</h2>
 

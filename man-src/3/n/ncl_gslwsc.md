@@ -12,9 +12,8 @@ GSLWSC (Set linewidth scale factor) - sets the linewidth scale factor, or relati
 
  void gset_linewidth(Gdouble linewidth);
 <h2>Description</h2><dl COMPACT><dt>LWIDTH
-<dd>(Real, Input) - A scale factor to control the linewidth of the polyline to be drawn. It must be greater than or equal to 0. LWIDTH is applied to the nominal linewidth on a given device and the linewidths are mapped to the nearest available linewidth representable on that device. 
-
- By default LWIDTH = 1.0, so setting LWIDTH = 2.0 will double line width on most devices.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Real, Input) - A scale factor to control the linewidth of the polyline to be drawn. It must be greater than or equal to 0. LWIDTH is applied to the nominal linewidth on a given device and the linewidths are mapped to the nearest available linewidth representable on that device. 
+ By default LWIDTH = 1.0, so setting LWIDTH = 2.0 will double line width on most devices.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gpl, gsln, gscr, gsplci, gqln, gqlwsc, gqplci, dashline, gset_linewidth 
 
  Hardcopy: User's Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version

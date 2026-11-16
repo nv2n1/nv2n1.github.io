@@ -15,12 +15,12 @@ description: "DEALLOCATE – deallocate a prepared statement"
 <p> For more information on prepared statements, see PREPARE [<code><a href="/docs/linux/man/7-prepare/">prepare</a></code>(7)].</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>PREPARE</code></p>
-<dd>This key word is ignored.</p>
-<dt><i>name</i></p>
-<dd>The name of the prepared statement to deallocate.</p>
-<dt><code>ALL</code></p>
-<dd>Deallocate all prepared statements.</dl>
+<dt><code>PREPARE</code></dt>
+<dd>This key word is ignored.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the prepared statement to deallocate.</dd>
+<dt><code>ALL</code></dt>
+<dd>Deallocate all prepared statements.</dd></dl>
 <h2>Compatibility</h2>
 <p>The SQL standard includes a <code>DEALLOCATE</code> statement, but it is only for use in embedded SQL.</p>
 <h2>See Also</h2>

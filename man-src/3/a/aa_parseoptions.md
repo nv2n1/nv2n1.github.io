@@ -20,14 +20,14 @@ description: "aa_parseoptions – parse the standard command line options used b
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>struct aa_hardware_params *p</code></p>
-<dd> Hardware parameters structure to alter. It is expected that this structure only with necessary modifications will be later used to initialize the AA-lib context.</p>
-<dt><code>aa_renderparams *r</code></p>
-<dd> Rendering prameters structure to alter. It is expected that this structure only with necessary modifications will be later used to render images.</p>
-<dt><code>int *argc</code></p>
-<dd> Pointer to argc parameter passed to function &quot;main&quot;.</p>
-<dt><code>char **argv</code></p>
-<dd> Pointer to argv parameter passed to function &quot;main&quot;.</dl>
+<dt><code>struct aa_hardware_params *p</code></dt>
+<dd> Hardware parameters structure to alter. It is expected that this structure only with necessary modifications will be later used to initialize the AA-lib context.</dd>
+<dt><code>aa_renderparams *r</code></dt>
+<dd> Rendering prameters structure to alter. It is expected that this structure only with necessary modifications will be later used to render images.</dd>
+<dt><code>int *argc</code></dt>
+<dd> Pointer to argc parameter passed to function &quot;main&quot;.</dd>
+<dt><code>char **argv</code></dt>
+<dd> Pointer to argv parameter passed to function &quot;main&quot;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Use this function to parse the standard command line options used by AA-lib. Every AA-lib program ought to call this function to let user specify some extra parameters. The function alters the aa_hardware_params and aa_renderparams structures and removes known options from the argc/argv lists. It also parse the AAOPTS environment variable. When called with NULL for the argc/argv parameters, it parses AAOPTS only. At least this call ought to be in every AA-lib program.</p>
 <h2>RETURNS</h2>

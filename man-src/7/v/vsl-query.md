@@ -24,24 +24,18 @@ When grouping transactions, there is a hierarchy structure showing which transac
 
  The grouping modes are:
 <dl><dt>&bull;
-<dd>Session 
-
+</dt><dd>Session 
  All transactions initiated by a client connection are reported together. All log data is buffered until the client connection is closed, which can cause session grouping mode to potentially consume a lot of memory.
-<dt>&bull;
-<dd>Request 
-
+</dd><dt>&bull;
+</dt><dd>Request 
  Transactions are grouped by request, where the set will include the request itself as well as any backend requests or ESI-subrequests. Session data is not reported. This is the default.
-<dt>&bull;
-<dd>VXID 
-
+</dd><dt>&bull;
+</dt><dd>VXID 
  Transactions are not grouped, so each VXID is reported in it's entirety. Sessions, requests, ESI-requests and backend requests are all reported individually. Non-transactional data is not reported (VXID == 0).
-<dt>&bull;
-<dd>Raw 
-
+</dd><dt>&bull;
+</dt><dd>Raw 
  Every log record will make up a transaction of it's own. All data, including non-transactional data will be reported. 
-
  Example transaction hierarchy 
-
  <pre>Lvl 1: Client request (cache miss)
  Lvl 2: Backend request
  Lvl 2: ESI subrequest (cache miss)
@@ -49,7 +43,7 @@ When grouping transactions, there is a hierarchy structure showing which transac
  Lvl 3: Backend request (VCL restart)
  Lvl 3: ESI subrequest (cache miss)
  Lvl 4: Backend request
- Lvl 2: ESI subrequest (cache hit)</pre></dl>
+ Lvl 2: ESI subrequest (cache hit)</pre></dd></dl>
 
 <h2>Query Language</h2>
 
@@ -77,17 +71,14 @@ The record selection criteria determines what kind records from the transaction 
 
 The following matching operators are available:
 <dl><dt>&bull;
-<dd>== != &lt; &lt;= &gt; &gt;= 
-
+</dt><dd>== != &lt; &lt;= &gt; &gt;= 
  Numerical comparison. The record contents will be converted to either an integer or a float before comparison, depending on the type of the operand.
-<dt>&bull;
-<dd>eq ne 
-
+</dd><dt>&bull;
+</dt><dd>eq ne 
  String comparison. 'eq' tests string equality, 'ne' tests for not equality.
-<dt>&bull;
-<dd>~ !~ 
-
- Regular expression matching. '~' is a positive match, '!~' is a non-match.</dl>
+</dd><dt>&bull;
+</dt><dd>~ !~ 
+ Regular expression matching. '~' is a positive match, '!~' is a non-match.</dd></dl>
 
 <h3>Operand</h3>
 
@@ -99,64 +90,49 @@ The operand is the value the selected records will be matched against.
 
  <pre>a-z A-Z 0-9 + - _ . *</pre>The following types of operands are available:
 <dl><dt>&bull;
-<dd>Integer 
-
+</dt><dd>Integer 
  A number without any fractional part, valid for the numerical comparison operators. The integer type is used when the operand does not contain any period (.) characters.
-<dt>&bull;
-<dd>Float 
-
+</dd><dt>&bull;
+</dt><dd>Float 
  A number with a fractional part, valid for the numerical comparison operators. The float type is used when the operand does contain a period (.) character.
-<dt>&bull;
-<dd>String 
-
+</dd><dt>&bull;
+</dt><dd>String 
  A sequence of characters, valid for the string equality operators.
-<dt>&bull;
-<dd>Regular expression 
-
- A PCRE regular expression. Valid for the regular expression operators.</dl>
+</dd><dt>&bull;
+</dt><dd>Regular expression 
+ A PCRE regular expression. Valid for the regular expression operators.</dd></dl>
 
 <h3>Boolean functions</h3>
 
 Query expressions can be linked together using boolean functions. The following are available, in decreasing precedence:
 <dl><dt>&bull;
-<dd>not &lt;expr&gt; 
-
+</dt><dd>not &lt;expr&gt; 
  Inverts the result of &lt;expr&gt;
-<dt>&bull;
-<dd>&lt;expr1&gt; and &lt;expr2&gt; 
-
+</dd><dt>&bull;
+</dt><dd>&lt;expr1&gt; and &lt;expr2&gt; 
  True only if both expr1 and expr2 are true
-<dt>&bull;
-<dd>&lt;expr1&gt; or &lt;expr2&gt; 
-
+</dd><dt>&bull;
+</dt><dd>&lt;expr1&gt; or &lt;expr2&gt; 
  True if either of expr1 or expr2 is true 
-
- Expressions can be grouped using parenthesis.</dl>
+ Expressions can be grouped using parenthesis.</dd></dl>
 
 <h2>Query Expression Examples</h2>
 
 <dl><dt>&bull;
-<dd>Transaction group contains a request URL that equals to &quot;/foo&quot; 
-
- <pre>ReqURL eq &quot;/foo&quot;</pre><dt>&bull;
-<dd>Transaction group contains a request cookie header 
-
- <pre>ReqHeader:cookie</pre><dt>&bull;
-<dd>Transaction group doesn't contain a request cookie header 
-
- <pre>not ReqHeader:cookie</pre><dt>&bull;
-<dd>Transaction group contains a request user-agent header that contains &quot;iPod&quot; and the request delivery time exceeds 1 second 
-
- <pre>ReqHeader:user-agent ~ &quot;iPod&quot; and ReqEnd[5] &gt; 1.</pre><dt>&bull;
-<dd>Transaction group contains a backend response status larger than or equal to 500 
-
- <pre>BerespStatus &gt;= 500</pre><dt>&bull;
-<dd>Transaction group contains a request response status of 304, but where the request did not contain an if-modified-since header 
-
- <pre>ReqStatus == 304 and not ReqHeader:if-modified-since</pre><dt>&bull;
-<dd>Transactions that have had backend failures or long delivery time on their ESI subrequests. (Assumes request grouping mode). 
-
- <pre>BerespStatus &gt;= 500 or {2+}ReqEnd[5] &gt; 1.</pre></dl>
+</dt><dd>Transaction group contains a request URL that equals to &quot;/foo&quot; 
+ <pre>ReqURL eq &quot;/foo&quot;</pre></dd><dt>&bull;
+</dt><dd>Transaction group contains a request cookie header 
+ <pre>ReqHeader:cookie</pre></dd><dt>&bull;
+</dt><dd>Transaction group doesn't contain a request cookie header 
+ <pre>not ReqHeader:cookie</pre></dd><dt>&bull;
+</dt><dd>Transaction group contains a request user-agent header that contains &quot;iPod&quot; and the request delivery time exceeds 1 second 
+ <pre>ReqHeader:user-agent ~ &quot;iPod&quot; and ReqEnd[5] &gt; 1.</pre></dd><dt>&bull;
+</dt><dd>Transaction group contains a backend response status larger than or equal to 500 
+ <pre>BerespStatus &gt;= 500</pre></dd><dt>&bull;
+</dt><dd>Transaction group contains a request response status of 304, but where the request did not contain an if-modified-since header 
+ <pre>ReqStatus == 304 and not ReqHeader:if-modified-since</pre></dd><dt>&bull;
+</dt><dd>Transactions that have had backend failures or long delivery time on their ESI subrequests. (Assumes request grouping mode). 
+ <pre>BerespStatus &gt;= 500 or {2+}ReqEnd[5] &gt; 1.</pre></dd></dl>
 
 <h2>History</h2>
 

@@ -13,12 +13,12 @@ description: "mongoc_collection_destroy() – This function shall destroy a mong
 mongoc_collection_destroy (mongoc_collection_t *collection);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall destroy a <code>mongoc_collection_t</code> and its associated resources. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Always destroy a <code>mongoc_cursor_t</code> created from a collection before destroying the collection.</dl>
+<dd>Always destroy a <code>mongoc_cursor_t</code> created from a collection before destroying the collection.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

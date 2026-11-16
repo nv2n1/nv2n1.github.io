@@ -14,16 +14,16 @@ description: "rpc_clnt_setup_test_and_add_xprt –"
 <p><i>clnt</i></p>
 <dl>
 <dd>
-<dd>struct rpc_clnt to get the new transport</dl>
+</dd><dd>struct rpc_clnt to get the new transport</dd></dl>
 <p> <i>xps</i></p>
 <dl>
-<dd>the rpc_xprt_switch to hold the new transport</dl>
+<dd>the rpc_xprt_switch to hold the new transport</dd></dl>
 <p> <i>xprt</i></p>
 <dl>
-<dd>the rpc_xprt to test</dl>
+<dd>the rpc_xprt to test</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>a struct rpc_add_xprt_test pointer that holds the test function and test function call data</dl>
+<dd>a struct rpc_add_xprt_test pointer that holds the test function and test function call data</dd></dl>
 <h2>Description</h2>
 <p>This is an rpc_clnt_add_xprt <code>setup</code> function which returns 1 so: 1) caller of the test function must dereference the rpc_xprt_switch and the rpc_xprt. 2) test function must call rpc_xprt_switch_add_xprt, usually in the rpc_call_done routine. </p>
 <p> Upon success (return of 1), the test function adds the new transport to the rpc_clnt xprt switch</p>

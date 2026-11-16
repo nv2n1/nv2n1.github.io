@@ -14,10 +14,10 @@ description: "dev_get_by_name_rcu – find a device by its name"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>the applicable net namespace</dl>
+</dd><dd>the applicable net namespace</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>name to find</dl>
+<dd>name to find</dd></dl>
 <h2>Description</h2>
 <p>Find an interface by name. If the name is found a pointer to the device is returned. If the name is not found then <code>NULL</code> is returned. The reference counters are not incremented so the caller must be careful with locks. The caller must hold RCU lock.</p>
 <h2>Copyright</h2>

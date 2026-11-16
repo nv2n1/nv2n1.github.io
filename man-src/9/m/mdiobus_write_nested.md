@@ -14,16 +14,16 @@ description: "mdiobus_write_nested – Nested version of the mdiobus_write funct
 <p><i>bus</i></p>
 <dl>
 <dd>
-<dd>the mii_bus struct</dl>
+</dd><dd>the mii_bus struct</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>the phy address</dl>
+<dd>the phy address</dd></dl>
 <p> <i>regnum</i></p>
 <dl>
-<dd>register number to write</dl>
+<dd>register number to write</dd></dl>
 <p> <i>val</i></p>
 <dl>
-<dd>value to write to <i>regnum</i></dl>
+<dd>value to write to <i>regnum</i></dd></dl>
 <h2>Description</h2>
 <p>In case of nested MDIO bus access avoid lockdep false positives by using <code>mutex_lock_nested</code>.</p>
 <h2>Note</h2>

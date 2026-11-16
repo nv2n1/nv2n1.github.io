@@ -18,16 +18,16 @@ description: "mm-config – OSSP mm library configuration/build utility"
 <h2>OPTIONS</h2>
 <p> <code>mm-config</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Prints the short usage information.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the version number and date of the installed <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Prints the C compiler flags which are needed to compile the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3)-based application. The output is usually added to the <tt>&quot;CFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</p>
-<dt><code>&#8211;ldflags</code></p>
-<dd> Prints the linker flags (<tt>&quot;-L&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. The output is usually added to the <tt>&quot;LDFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Prints the library flags (<tt>&quot;-l&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. The output is usually added to the <tt>&quot;LIBS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints the short usage information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the version number and date of the installed <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Prints the C compiler flags which are needed to compile the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3)-based application. The output is usually added to the <tt>&quot;CFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd>
+<dt><code>&#8211;ldflags</code></dt>
+<dd> Prints the linker flags (<tt>&quot;-L&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. The output is usually added to the <tt>&quot;LDFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Prints the library flags (<tt>&quot;-l&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. The output is usually added to the <tt>&quot;LIBS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  CC=cc

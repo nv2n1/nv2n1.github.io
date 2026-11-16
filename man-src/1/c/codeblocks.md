@@ -15,26 +15,26 @@ description: "Code::Blocks – The open-source, cross-platform IDE"
 <p> <code>codeblocks</code> launches the Code::Blocks IDE. Its various command-line arguments are listed below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Displays the list of accepted command-line arguments.</p>
-<dt><code>-ns</code></p>
-<dd> Do not display a splash screen on startup. The splash screen can be completely disabled in the program&#8217;s environment options.</p>
-<dt><code>-d</code></p>
-<dd> Enable the debugging log.</p>
-<dt><code>&#8211;prefix</code></p>
-<dd> Specify an alternate path for Code::Blocks to find its shared files.</p>
-<dt><code>-p, &#8211;profile</code></p>
-<dd> Set which profile to use. If you set the profile to <code>ask</code> , Code::Blocks will display a list with all the known profiles to choose from.</p>
-<dt><code>&#8211;rebuild</code></p>
-<dd> Start a batch rebuild (i.e. &quot;clean&quot; and &quot;build&quot;) job on the filenames passed as arguments. The filenames can be either projects or workspaces.</p>
-<dt><code>&#8211;build</code></p>
-<dd> Start a batch build (i.e. no &quot;clean&quot;) job on the filenames passed as arguments. The filenames can be either projects or workspaces.</p>
-<dt><code>&#8211;target</code></p>
-<dd> Specify a single build target to build in the batch build (or rebuild) job.</p>
-<dt><code>&#8211;no-batch-window-close</code></p>
-<dd> When the batch job ends, the log window closes too. This option keeps it open until you manually close it.</p>
-<dt><code>&#8211;batch-build-notify</code></p>
-<dd> Display a message when the batch job finishes. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Displays the list of accepted command-line arguments.</dd>
+<dt><code>-ns</code></dt>
+<dd> Do not display a splash screen on startup. The splash screen can be completely disabled in the program&#8217;s environment options.</dd>
+<dt><code>-d</code></dt>
+<dd> Enable the debugging log.</dd>
+<dt><code>&#8211;prefix</code></dt>
+<dd> Specify an alternate path for Code::Blocks to find its shared files.</dd>
+<dt><code>-p, &#8211;profile</code></dt>
+<dd> Set which profile to use. If you set the profile to <code>ask</code> , Code::Blocks will display a list with all the known profiles to choose from.</dd>
+<dt><code>&#8211;rebuild</code></dt>
+<dd> Start a batch rebuild (i.e. &quot;clean&quot; and &quot;build&quot;) job on the filenames passed as arguments. The filenames can be either projects or workspaces.</dd>
+<dt><code>&#8211;build</code></dt>
+<dd> Start a batch build (i.e. no &quot;clean&quot;) job on the filenames passed as arguments. The filenames can be either projects or workspaces.</dd>
+<dt><code>&#8211;target</code></dt>
+<dd> Specify a single build target to build in the batch build (or rebuild) job.</dd>
+<dt><code>&#8211;no-batch-window-close</code></dt>
+<dd> When the batch job ends, the log window closes too. This option keeps it open until you manually close it.</dd>
+<dt><code>&#8211;batch-build-notify</code></dt>
+<dd> Display a message when the batch job finishes. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Batch build myproject.cpp, only the &quot;Debug&quot; target and keep the batch job window open when finished: </p>

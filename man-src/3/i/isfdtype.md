@@ -18,13 +18,11 @@ int isfdtype(int fd, int fdtype);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>isfdtype</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.20:</p>
-<dd> _DEFAULT_SOURCE</p>
-<dt>Before glibc 2.20:</p>
-<dd> _BSD_SOURCE || _SVID_SOURCE</dl>
+<dt>Since glibc 2.20:</dt>
+<dd> _DEFAULT_SOURCE</dd>
+<dt>Before glibc 2.20:</dt>
+<dd> _BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>isfdtype</code>() function tests whether the file descriptor <i>fd</i> refers to a file of type <i>fdtype</i>. The <i>fdtype</i> argument specifies one of the <code>S_IF*</code> constants defined in <i>&lt;sys/stat.h&gt;</i> and documented in <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) (e.g., <code>S_IFREG</code>).</p>

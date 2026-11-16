@@ -28,40 +28,40 @@ description: "docker-plugin-ls – List plugins"
 <h2>Display all plugins</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker plugin ls
 ID                  NAME                                    DESCRIPTION                         ENABLED
 869080b57404        tiborvass/sample-volume-plugin:latest   A sample volume plugin for Docker   true
 141bf6c02ddd        vieux/sshfs:latest                      sshFS plugin for Docker             false
 </pre>
-</dl>
+</dd></dl>
 <h2>Display plugins with their ID and names</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker plugin ls-- format "&#123;&#123;.ID}}: &#123;&#123;.Name}}" 869080b57404 : tiborvass / sample - volume - plugin : latest
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Display enabled plugins</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker plugin ls --filter enabled=true
 ID                  NAME                                    DESCRIPTION                         ENABLED
 869080b57404        tiborvass/sample-volume-plugin:latest   A sample volume plugin for Docker   true
 </pre>
-</dl>
+</dd></dl>
 <h2>Display plugins with volumedriver capability</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker plugin ls-- filter capability = volumedriver-- format "table &#123;&#123;.ID}}	&#123;&#123;.Name}}" ID Name 869080b57404 tiborvass / sample - volume - plugin : latest
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Provide filter values (e.g. &#8216;enabled=true&#8217;)</p>
 <p> <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Pretty-print plugins using a Go template</p>

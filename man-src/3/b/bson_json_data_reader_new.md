@@ -17,11 +17,11 @@ bson_json_data_reader_new (bool   allow_multiple,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>allow_multiple</code></p>
-<dd> A boolean denoting if more than one document may be allowed in the stream.</dl>
+<dt><code>allow_multiple</code></dt>
+<dd> A boolean denoting if more than one document may be allowed in the stream.</dd></dl>
 <dl>
-<dt><code>size</code></p>
-<dd> A requested buffer size.</dl>
+<dt><code>size</code></dt>
+<dd> A requested buffer size.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a new streaming JSON reader that will convert JSON documents to BSON. </p>
 <h2>RETURNS</h2>

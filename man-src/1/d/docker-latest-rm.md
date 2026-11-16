@@ -27,39 +27,39 @@ Remove the volumes associated with the container. The default is&nbsp;<wbr><i>fa
 <p> To remove a container using its ID, find either from a <code>docker ps -a</code> command, or use the ID returned from the <code>docker run</code> command, or retrieve it from a file used to store it using the <code>docker run &#8211;cidfile</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker rm abebf7571666
 </pre>
-</dl>
+</dd></dl>
 <h2>Removing a container using the container name</h2>
 <p> The name of the container can be found using the <code>docker ps -a</code> command. The use that name as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker rm hopeful_morse
 </pre>
-</dl>
+</dd></dl>
 <h2>Removing a container and all associated volumes</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker rm -v redis
 redis
 </pre>
-</dl>
+</dd></dl>
 <p> This command will remove the container and any volumes associated with it. Note that if a volume was specified with a name, it will not be removed. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker create -v awesome:/foo -v /bar --name hello redis
 hello
 $ docker rm -v hello
 </pre>
-</dl>
+</dd></dl>
 <p> In this example, the volume for /foo will remain in tact, but the volume for /bar will be removed. The same behavior holds for volumes inherited with &#8211;volumes-from. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; August 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>

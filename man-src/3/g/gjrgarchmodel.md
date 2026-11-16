@@ -30,6 +30,6 @@ description: "QuantLib::GJRGARCHModel – GJR-GARCH model for the stochastic vol
 <p> Glosten, L., Jagannathan, R., Runkle, D., 1993. Relationship between the expected value and the volatility of the nominal excess return on stocks. Journal of Finance 48, 1779-1801 </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calibration is not implemented for GJR-GARCH</dl>
+<dd>calibration is not implemented for GJR-GARCH</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

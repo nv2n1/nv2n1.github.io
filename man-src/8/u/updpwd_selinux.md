@@ -83,8 +83,8 @@ description: "updpwd_selinux – Security Enhanced Linux Policy for the updpwd p
 <p> <code>updpwd_exec_t</code> </p>
 <p> &#8211; Set files with the updpwd_exec_t type, if you want to transition an executable to the updpwd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/unix_update, /usr/sbin/unix_update, /usr/sbin/pwhistory_helper </p>
+<dt>Paths:</dt>
+<dd>/sbin/unix_update, /usr/sbin/unix_update, /usr/sbin/pwhistory_helper </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

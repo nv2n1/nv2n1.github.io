@@ -16,22 +16,22 @@ description: "gnubiff – a mail notification program supporting GTK+ and GNOME"
 <h2>OPTIONS</h2>
 <p> gnubiff accepts the following command line options:</p>
 <dl>
-<dt><code>-c </code><i>filename,</i><code> &#8211;config </code><i>filename</i></p>
-<dd> Use the specified file as configuration file (default is ~/.gnubiffrc)</p>
-<dt><code>-n, &#8211;noconfigure</code></p>
-<dd> Skip the configure process</p>
-<dt><code>&#8211;nogui</code></p>
-<dd> Start gnubiff without GUI</p>
-<dt><code>&#8211;systemtray</code></p>
-<dd> Start gnubiff in the system tray</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show summary of options</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Print version information</dl>
+<dt><code>-c </code><i>filename,</i><code> &#8211;config </code><i>filename</i></dt>
+<dd> Use the specified file as configuration file (default is ~/.gnubiffrc)</dd>
+<dt><code>-n, &#8211;noconfigure</code></dt>
+<dd> Skip the configure process</dd>
+<dt><code>&#8211;nogui</code></dt>
+<dd> Start gnubiff without GUI</dd>
+<dt><code>&#8211;systemtray</code></dt>
+<dd> Start gnubiff in the system tray</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of options</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Print version information</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.gnubiffrc</i></p>
-<dd> user specific options file</dl>
+<dt><i>~/.gnubiffrc</i></dt>
+<dd> user specific options file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> More documentation about gnubiff can be found in the info pages with the command <code>info gnubiff</code></p>
 <h2>BUGS</h2>

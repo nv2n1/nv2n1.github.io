@@ -15,13 +15,13 @@ description: "SPI_cursor_fetch – fetch some rows from a cursor"
 <h2>Arguments</h2>
 <p>Portal <i>portal</i></p>
 <dl COMPACT>
-<dd>portal containing the cursor</dl>
+<dd>portal containing the cursor</dd></dl>
 <p> bool <i>forward</i></p>
 <dl COMPACT>
-<dd>true for fetch forward, false for fetch backward</dl>
+<dd>true for fetch forward, false for fetch backward</dd></dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>maximum number of rows to fetch</dl>
+<dd>maximum number of rows to fetch</dd></dl>
 <h2>Return Value</h2>
 <p><i>SPI_processed</i> and <i>SPI_tuptable</i> are set as in <code>SPI_execute</code> if successful.</p>
 <h2>Notes</h2>

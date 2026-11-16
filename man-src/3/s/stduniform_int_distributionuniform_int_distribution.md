@@ -11,11 +11,8 @@ description: "std::uniform_int_distribution<IntType>::uniform_int_distribution â
 <h2>Synopsis</h2>
 <pre><code>uniform_int_distribution()
     : uniform_int_distribution(0){}(1)(since C++ 11)
-
           explicit uniform_int_distribution(IntType a, (2)(since C++ 11)
-
                                                            IntType b = std::numeric_limits&lt;IntType&gt;::max());
-
 explicit uniform_int_distribution(const param_type &amp;params);
 (3)(since C++ 11)</code></pre>
 <p>Constructs new distribution object. <code>(2)</code> uses a and b as the distribution parameters, <code>(3)</code> uses params as the distribution parameters.<br />

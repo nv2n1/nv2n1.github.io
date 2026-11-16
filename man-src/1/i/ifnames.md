@@ -14,10 +14,10 @@ description: "ifnames – Extract CPP conditionals from a set of files"
 <h2>DESCRIPTION</h2>
 <p> Scan all of the C source FILES (or the standard input, if none are given) and write to the standard output a sorted list of all the identifiers that appear in those files in &#8216;#if&#8217;, &#8216;#elif&#8217;, &#8216;#ifdef&#8217;, or &#8216;#ifndef&#8217; directives. Print each identifier on a line, followed by a space-separated list of the files in which that identifier occurs.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number, then exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David J. MacKenzie and Paul Eggert.</p>
 <h2>REPORTING BUGS</h2>
@@ -32,6 +32,6 @@ description: "ifnames – Extract CPP conditionals from a set of files"
 <p> The full documentation for <code>ifnames</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>ifnames</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info ifnames</code></dl>
+</dt><dd> <code>info ifnames</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

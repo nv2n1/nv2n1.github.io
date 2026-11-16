@@ -15,8 +15,8 @@ description: "XmTextGetLastPosition — A Text function that accesses the last p
 <h2>Description</h2>
 <p><code>XmTextGetLastPosition</code> accesses the last position in the text buffer of the Text widget. This is an integer number of characters from the beginning of the buffer, and represents the position that text added to the end of the buffer is placed after. The first character position is 0 (zero). The last character position is equal to the number of characters in the text buffer.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns an <code>XmTextPosition</code> value that indicates the last position in the text buffer.</p>

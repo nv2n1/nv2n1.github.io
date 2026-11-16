@@ -10,7 +10,6 @@ description: "set_leds – Sets the state of the keyboard LED indicators. Allegr
 <p>set_leds &#8211; Sets the state of the keyboard LED indicators. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_leds(int leds);</code></pre>
 <h2>Description</h2>
 <p>Overrides the state of the keyboard LED indicators. The parameter is a bitmask containing any of the values KB_SCROLOCK_FLAG, KB_NUMLOCK_FLAG, and KB_CAPSLOCK_FLAG, or -1 to restore the default behavior. Example: </p>

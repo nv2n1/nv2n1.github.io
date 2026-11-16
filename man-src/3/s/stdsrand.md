@@ -10,7 +10,6 @@ description: "std::srand – std::srand"
 <p>std::srand &#8211; std::srand</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     void srand(unsigned seed);</code></pre>
 <p>Seeds the pseudo-random number generator used by std::rand() with the value seed.<br />
 If rand() is used before any calls to srand(), rand() behaves as if it was seeded with srand<code>(1)</code>.<br />
@@ -26,12 +25,9 @@ Standard practice is to use the result of a call to time<code>(0)</code> as the 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cstdlib&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     std::srand(std::time(0)); // use current time as seed for random generator
     int random_variable = std::rand();

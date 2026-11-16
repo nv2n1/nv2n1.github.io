@@ -23,14 +23,14 @@ int sigqueue(pid_t pid, int sig, const union sigval value);</code></pre>
 <p>On success, <code>sigqueue</code>() returns 0, indicating that the signal was successfully queued to the receiving process. Otherwise, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd>The limit of signals which may be queued has been reached. (See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for further information.)</p>
-<dt><code>EINVAL</code></p>
-<dd><i>sig</i> was invalid.</p>
-<dt><code>EPERM</code></p>
-<dd>The process does not have permission to send the signal to the receiving process. For the required permissions, see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</p>
-<dt><code>ESRCH</code></p>
-<dd>No process has a PID matching <i>pid</i>.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd>The limit of signals which may be queued has been reached. (See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for further information.)</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>sig</i> was invalid.</dd>
+<dt><code>EPERM</code></dt>
+<dd>The process does not have permission to send the signal to the receiving process. For the required permissions, see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</dd>
+<dt><code>ESRCH</code></dt>
+<dd>No process has a PID matching <i>pid</i>.</dd></dl>
 <h2>Versions</h2>
 <p><code>sigqueue</code>() and the underlying <code>rt_sigqueueinfo</code>() system call first appeared in Linux 2.2.</p>
 <h2>Attributes</h2>

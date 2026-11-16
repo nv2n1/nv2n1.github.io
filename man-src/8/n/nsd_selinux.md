@@ -55,9 +55,9 @@ description: "nsd_selinux – Security Enhanced Linux Policy for the nsd process
 <p> Policy governs the access confined processes have to these ports. SELinux nsd policy is very flexible allowing users to setup their nsd processes in as secure a method as possible. </p>
 <p> The following port types are defined for nsd: </p>
 <dl>
-<dt><code>nsd_control_port_t</code></p>
+<dt><code>nsd_control_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8952</dl>
+</dd><dd>Default Defined Ports: tcp 8952</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type nsd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -112,8 +112,8 @@ description: "nsd_selinux – Security Enhanced Linux Policy for the nsd process
 <p> <code>nsd_exec_t</code> </p>
 <p> &#8211; Set files with the nsd_exec_t type, if you want to transition an executable to the nsd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/nsd, /usr/sbin/nsdc, /usr/sbin/zonec, /usr/sbin/nsd-notify, /usr/sbin/nsd-control, /usr/sbin/nsd-checkconf, /usr/sbin/nsd-checkzone, /usr/sbin/nsd-control-setup </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/nsd, /usr/sbin/nsdc, /usr/sbin/zonec, /usr/sbin/nsd-notify, /usr/sbin/nsd-control, /usr/sbin/nsd-checkconf, /usr/sbin/nsd-checkzone, /usr/sbin/nsd-control-setup </dd>
 </dl>
 <p> <code>nsd_log_t</code> </p>
 <p> &#8211; Set files with the nsd_log_t type, if you want to treat the data as nsd log data, usually stored under the /var/log directory. </p>
@@ -124,8 +124,8 @@ description: "nsd_selinux – Security Enhanced Linux Policy for the nsd process
 <p> <code>nsd_zone_t</code> </p>
 <p> &#8211; Set files with the nsd_zone_t type, if you want to treat the files as nsd zone data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/nsd(/.*)?, /etc/nsd/primary(/.*)?, /etc/nsd/secondary(/.*)?, /etc/nsd/nsd.db </p>
+<dt>Paths:</dt>
+<dd>/var/lib/nsd(/.*)?, /etc/nsd/primary(/.*)?, /etc/nsd/secondary(/.*)?, /etc/nsd/nsd.db </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

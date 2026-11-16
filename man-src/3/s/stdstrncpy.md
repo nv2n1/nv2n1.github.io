@@ -11,7 +11,6 @@ std::strncpy - std::strncpy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     char *strncpy(char *dest, const char *src, std::size_t count);</code></pre> 
 Copies at most count characters of the byte string pointed to by src (including the terminating null character) to character array pointed to by dest. 
 If count is reached before the entire string src was copied, the resulting character array is not null-terminated. 
@@ -31,10 +30,8 @@ dest
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     const char *src = &quot;hi&quot;;
     char dest[6] = {'a', 'b', 'c', 'd', 'e', 'f'};

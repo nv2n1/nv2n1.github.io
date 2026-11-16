@@ -12,12 +12,9 @@ std::as_bytes,std::as_writable_bytes - std::as_bytes,std::as_writable_bytes
 
 <pre><code>template &lt;class T, std::size_t N&gt;
 (1)
-
     std::span&lt;const std::byte, S /* see below */&gt; as_bytes(std::span&lt;T, N&gt; s) noexcept;
-
 template &lt;class T, std::size_t N&gt;
 (2)
-
     std::span&lt;std::byte, S /* see below */&gt; as_writable_bytes(std::span&lt;T, N&gt; s) noexcept;</code></pre> 
 Obtains a view to the object representation of the elements of the span s. 
 If N is std::dynamic_extent, the extent of the returned span S is also std::dynamic_extent; otherwise it is sizeof(T) * N. 

@@ -11,10 +11,10 @@ description: "kalzium – A KDE based chemistry teaching tool"
 <p> kalzium &#8211; A KDE based chemistry teaching tool</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>kalzium</code> [<code>KDE Generic Options</code>] [<code>Qt Generic Options</code>] </p>
+<dt> <code>kalzium</code> [<code>KDE Generic Options</code>] [<code>Qt Generic Options</code>] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>Kalzium is a program which shows you the Periodic System of the Elements (PSE). You can use Kalzium to search for information about the elements or to learn facts about the PSE. </p>
+<dd>Kalzium is a program which shows you the Periodic System of the Elements (PSE). You can use Kalzium to search for information about the elements or to learn facts about the PSE. </dd>
 <p> Kalzium provides you with all kinds of information about the PSE. You can look up lots of information about the elements and also use visualisations to show them. </p>
 <p> This package is part of the official KDE edutainment module. </p>
 <h2>SEE ALSO</h2>

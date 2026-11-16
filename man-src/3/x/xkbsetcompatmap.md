@@ -11,18 +11,18 @@ description: "XkbSetCompatMap – Modify the server’s compatibility map"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetCompatMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>Bool </code><i>update_actions</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of compat map components to set</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>source for compat map components</p>
-<dt><i>&#8211; update_actions</i></p>
-<dd>True =&gt; apply to server&#8217;s keyboard map</dl>
+</dd><dd>connection to server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of compat map components to set</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>source for compat map components</dd>
+<dt><i>&#8211; update_actions</i></dt>
+<dd>True =&gt; apply to server&#8217;s keyboard map</dd></dl>
 <h2>Description</h2>
 <p>To modify the server&#8217;s compatibility map, first modify a local copy of the Xkb compatibility map, then call <i>XkbSetCompatMap. </i> You may allocate a new compatibility map for this purpose using <i>XkbAllocCompatMap. </i> You may also use a compatibility map from another server, although you need to adjust the <i>device_spec </i> field in the XkbDescRec accordingly. Note that symbol interpretations in a compatibility map ( <i>sym_interpret, </i> the vector of XkbSymInterpretRec structures) are also allocated using this same function. </p>
 <p> <i>XkbSetCompatMap </i> copies compatibility map information from the keyboard description in <i>xkb </i> to the server specified in <i>display</i> <i>device_spec </i> field of <i>xkb. </i> Unless you have specifically modified this field, it is the default keyboard device. <i>which </i> specifies the compatibility map components to be set, and is an inclusive OR of the bits shown in Table 1. </p>
@@ -70,10 +70,10 @@ description: "XkbSetCompatMap – Modify the server’s compatibility map"
 <p> <i>XkbSetCompatMap </i> returns True if successful and False if unsuccessful. The server may report problems it encounters when processing the request subsequently via protocol errors.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSetCompatMap </i> function returns True if successful.</p>
-<dt>False</p>
-<dd>The <i>XkbSetCompatMap </i> function returns False if unsuccessful.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSetCompatMap </i> function returns True if successful.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetCompatMap </i> function returns False if unsuccessful.</dd></dl>
 <h2>Structures</h2>
 <p>The complete description of an Xkb keyboard is given by an XkbDescRec. The component structures in the XkbDescRec represent the major Xkb components. </p>
 <pre>typedef struct {

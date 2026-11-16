@@ -15,11 +15,11 @@ mdio_bus_match - determine if given MDIO driver supports the given MDIO device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>target MDIO device</dl>
+<dl><dd></dd><dd>target MDIO device</dd></dl>
  
 
  <i>drv</i>
-<dl><dd>given MDIO driver</dl>
+<dl><dd>given MDIO driver</dd></dl>
 
 <h2>Description</h2>
 

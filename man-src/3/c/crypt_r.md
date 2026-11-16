@@ -41,16 +41,16 @@ struct crypt_data {
 <p> All four functions set <i>errno</i> when they fail.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>Er </code>EINVAL</p>
-<dd> Fa setting is invalid, or requests a hashing method that is not supported.</p>
-<dt><code>Er </code>ERANGE</p>
+<dt><code>Er </code>EINVAL</dt>
+<dd> Fa setting is invalid, or requests a hashing method that is not supported.</dd>
+<dt><code>Er </code>ERANGE</dt>
 <dd> Fa phrase is too long (more than <code>CRYPT_MAX_PASSPHRASE_SIZE</code> characters; some hashing methods may have lower limits).<br />
- <code>crypt_rn</code> only: Fa size is too small for the hashing method requested by Fa setting .</p>
-<dt><code>Er </code>ENOMEM</p>
+ <code>crypt_rn</code> only: Fa size is too small for the hashing method requested by Fa setting .</dd>
+<dt><code>Er </code>ENOMEM</dt>
 <dd> Failed to allocate internal scratch memory.<br />
- <code>crypt_ra</code> only: failed to allocate memory for Fa data .</p>
-<dt><code>Er </code>ENOSYS <code>or Er </code>EOPNOTSUPP</p>
-<dd> Hashing passphrases is not supported at all on this installation, or the hashing method requested by Fa setting is not supported. These error codes are not used by this version of libcrypt, but may be encountered on other systems.</dl>
+ <code>crypt_ra</code> only: failed to allocate memory for Fa data .</dd>
+<dt><code>Er </code>ENOSYS <code>or Er </code>EOPNOTSUPP</dt>
+<dd> Hashing passphrases is not supported at all on this installation, or the hashing method requested by Fa setting is not supported. These error codes are not used by this version of libcrypt, but may be encountered on other systems.</dd></dl>
 <h2>PORTABILITY NOTES</h2>
 <p> <code>crypt</code> is included in POSIX, but <code>crypt_r</code> <code>crypt_rn</code> and <code>crypt_ra</code> are not part of any standard. </p>
 <p> POSIX does not specify any hashing methods, and does not require hashed passphrases to be portable between systems. In practice, hashed passphrases are portable as long as both systems support the hashing method that was used. However, the set of supported hashing methods varies considerably from system to system. </p>

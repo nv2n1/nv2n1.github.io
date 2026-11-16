@@ -160,8 +160,8 @@ description: "mozilla_plugin_selinux – Security Enhanced Linux Policy for the 
 <p> <code>mozilla_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the mozilla_plugin_exec_t type, if you want to transition an executable to the mozilla_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/xulrunner[^/]*/plugin-container, /usr/lib/nspluginwrapper/npviewer.bin, /usr/bin/nspluginscan, /usr/bin/nspluginviewer, /usr/libexec/WebKitPluginProcess, /usr/lib/firefox/plugin-container </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/xulrunner[^/]*/plugin-container, /usr/lib/nspluginwrapper/npviewer.bin, /usr/bin/nspluginscan, /usr/bin/nspluginviewer, /usr/libexec/WebKitPluginProcess, /usr/lib/firefox/plugin-container </dd>
 </dl>
 <p> <code>mozilla_plugin_rw_t</code> </p>
 <p> &#8211; Set files with the mozilla_plugin_rw_t type, if you want to treat the files as mozilla plugin read/write content. </p>

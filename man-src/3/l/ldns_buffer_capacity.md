@@ -24,33 +24,33 @@ description: "ldns_buffer_limit, ldns_buffer_set_limit, ldns_buffer_capacity, ld
 <p> uint8_t * ldns_buffer_current(ldns_buffer *buffer); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_buffer_limit</i>()</p>
-<dd>returns the maximum size of the buffer \param[in] buffer .br Returns the size</dl>
+<dt> <i>ldns_buffer_limit</i>()</dt>
+<dd>returns the maximum size of the buffer \param[in] buffer .br Returns the size</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_set_limit</i>()</p>
-<dd>changes the buffer&#8217;s limit. If the buffer&#8217;s position is greater than the new limit the position is set to the limit. .br <code>buffer</code>: the buffer .br <code>limit</code>: the new limit</dl>
+<dt> <i>ldns_buffer_set_limit</i>()</dt>
+<dd>changes the buffer&#8217;s limit. If the buffer&#8217;s position is greater than the new limit the position is set to the limit. .br <code>buffer</code>: the buffer .br <code>limit</code>: the new limit</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_capacity</i>()</p>
-<dd>returns the number of bytes the buffer can hold. .br <code>buffer</code>: the buffer .br Returns the number of bytes</dl>
+<dt> <i>ldns_buffer_capacity</i>()</dt>
+<dd>returns the number of bytes the buffer can hold. .br <code>buffer</code>: the buffer .br Returns the number of bytes</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_set_capacity</i>()</p>
-<dd>changes the buffer&#8217;s capacity. The data is reallocated so any pointers to the data may become invalid. The buffer&#8217;s limit is set to the buffer&#8217;s new capacity. .br <code>buffer</code>: the buffer .br <code>capacity</code>: the capacity to use .br Returns whether this failed or succeeded</dl>
+<dt> <i>ldns_buffer_set_capacity</i>()</dt>
+<dd>changes the buffer&#8217;s capacity. The data is reallocated so any pointers to the data may become invalid. The buffer&#8217;s limit is set to the buffer&#8217;s new capacity. .br <code>buffer</code>: the buffer .br <code>capacity</code>: the capacity to use .br Returns whether this failed or succeeded</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_reserve</i>()</p>
-<dd>ensures BUFFER can contain at least AMOUNT more bytes. The buffer&#8217;s capacity is increased if necessary using buffer_set_capacity(). </p>
+<dt> <i>ldns_buffer_reserve</i>()</dt>
+<dd>ensures BUFFER can contain at least AMOUNT more bytes. The buffer&#8217;s capacity is increased if necessary using buffer_set_capacity(). </dd>
 <p> The buffer&#8217;s limit is always set to the (possibly increased) capacity. .br <code>buffer</code>: the buffer .br <code>amount</code>: amount to use .br Returns whether this failed or succeeded</dl>
 <dl>
-<dt> <i>ldns_buffer_at</i>()</p>
-<dd>returns a pointer to the data at the indicated position. .br <code>buffer</code>: the buffer .br <code>at</code>: position .br Returns the pointer to the data</dl>
+<dt> <i>ldns_buffer_at</i>()</dt>
+<dd>returns a pointer to the data at the indicated position. .br <code>buffer</code>: the buffer .br <code>at</code>: position .br Returns the pointer to the data</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_begin</i>()</p>
-<dd>returns a pointer to the beginning of the buffer (the data at position 0). .br <code>buffer</code>: the buffer .br Returns the pointer</dl>
+<dt> <i>ldns_buffer_begin</i>()</dt>
+<dd>returns a pointer to the beginning of the buffer (the data at position 0). .br <code>buffer</code>: the buffer .br Returns the pointer</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_end</i>()</p>
-<dd>returns a pointer to the end of the buffer (the data at the buffer&#8217;s limit). .br <code>buffer</code>: the buffer .br Returns the pointer</dl>
+<dt> <i>ldns_buffer_end</i>()</dt>
+<dd>returns a pointer to the end of the buffer (the data at the buffer&#8217;s limit). .br <code>buffer</code>: the buffer .br Returns the pointer</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_current</i>()</p>
-<dd>returns a pointer to the data at the buffer&#8217;s current position. .br <code>buffer</code>: the buffer .br Returns the pointer</dl>
+<dt> <i>ldns_buffer_current</i>()</dt>
+<dd>returns a pointer to the data at the buffer&#8217;s current position. .br <code>buffer</code>: the buffer .br Returns the pointer</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

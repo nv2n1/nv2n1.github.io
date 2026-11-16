@@ -11,23 +11,14 @@ description: "ql/math/interpolations/sabrinterpolation.hpp – SABR interpolatio
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/math/interpolation.hpp&gt;
-
 #include &lt;ql/math/optimization/method.hpp&gt;
-
 #include &lt;ql/math/optimization/simplex.hpp&gt;
-
 #include &lt;ql/math/optimization/levenbergmarquardt.hpp&gt;
-
 #include &lt;ql/pricingengines/blackformula.hpp&gt;
-
 #include &lt;ql/utilities/null.hpp&gt;
-
 #include &lt;ql/utilities/dataformatters.hpp&gt;
-
 #include &lt;ql/termstructures/volatility/sabr.hpp&gt;
-
 #include &lt;ql/math/optimization/projectedcostfunction.hpp&gt;
-
 #include &lt;ql/math/optimization/constraint.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>SABRInterpolation</code><br />

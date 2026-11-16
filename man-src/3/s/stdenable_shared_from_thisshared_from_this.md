@@ -25,7 +25,6 @@ std::bad_weak_ptr is thrown (by the shared_ptr constructor from a default-constr
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 struct Foo : public std::enable_shared_from_this&lt;Foo&gt; {
     Foo()

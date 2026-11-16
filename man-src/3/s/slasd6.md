@@ -19,7 +19,7 @@ description: "slasd6.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SLASD6 computes the SVD of an updated upper bidiagonal matrix B
  obtained by merging two smaller ones by appending a row. This
@@ -41,11 +41,11 @@ description: "slasd6.f –"
  and the entry b is empty if SQRE = 0. The singular values of B can be computed using D1, D2, the first components of all the right singular vectors of the lower block, and the last components of all the right singular vectors of the upper block.These components are stored and updated in VF and VL,
                              respectively, in SLASD6.Hence U and VT are not explicitly referenced.The singular values are stored in D.The algorithm consists of two stages : The first stage consists of deflating the size of the problem when there are multiple singular values or if there is a zero in the Z vector.For each such occurence the dimension of the secular equation problem is reduced by one.This stage is performed by the routine SLASD7.The second stage consists of calculating the updated singular values.This is done by finding the roots of the secular equation via the routine SLASD4(as called by SLASD8).This routine also updates VF and VL and computes the distances between the updated singular values and the old singular values.SLASD6 is called from SLASDA.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ICOMPQ</i> </p>
+</dt><dd> <i>ICOMPQ</i> </dd>
 <pre>
           ICOMPQ is INTEGER
          Specifies whether singular vectors are to be computed in
@@ -218,18 +218,18 @@ DIFR is REAL array,
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 312 of file slasd6.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

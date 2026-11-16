@@ -14,8 +14,8 @@ description: "gnutls_x509_crq_deinit – API function"
 <p> <code>void gnutls_x509_crq_deinit(gnutls_x509_crq_t </code><i>crq</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> The structure to be initialized</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> The structure to be initialized</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will deinitialize a PKCS<code>10</code> certificate request structure.</p>
 <h2>REPORTING BUGS</h2>
@@ -27,6 +27,6 @@ description: "gnutls_x509_crq_deinit – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

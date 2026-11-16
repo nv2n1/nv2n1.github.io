@@ -14,7 +14,7 @@ description: "blk_start_request – start request processing on the driver"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>request to dequeue</dl>
+</dd><dd>request to dequeue</dd></dl>
 <h2>Description</h2>
 <p>Dequeue <i>req</i> and start timeout timer on it. This hands off the request to the driver. </p>
 <p> Block internal functions which don&#8217;t want to start timer should call <code>blk_dequeue_request</code>.</p>

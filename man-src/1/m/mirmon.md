@@ -15,16 +15,16 @@ mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Be verbose ; <code>mirmon</code> normally only reports errors and changes in the mirror list.</p>
-<dt><code>-q</code></p>
-<dd> Be quiet.</p>
-<dt><code>-t</code> <i>timeout</i></p>
-<dd> Set the timeout ; the default is <i>300</i>.</p>
-<dt><code>-get</code> all | update | url &lt;url&gt;</p>
-<dd> With <code>all</code>, probe all sites. With <code>update</code>, probe a selection of the sites ; see option <tt>&quot;max_poll&quot;</tt> below. With <code>url</code>, probe only the given <i>url</i>, which must appear in the mirror-list.</p>
-<dt><code>-c</code> <i>name</i></p>
-<dd> Use config file <i>name</i>. The default list is </p>
+<dt><code>-v</code></dt>
+<dd> Be verbose ; <code>mirmon</code> normally only reports errors and changes in the mirror list.</dd>
+<dt><code>-q</code></dt>
+<dd> Be quiet.</dd>
+<dt><code>-t</code> <i>timeout</i></dt>
+<dd> Set the timeout ; the default is <i>300</i>.</dd>
+<dt><code>-get</code> all | update | url &lt;url&gt;</dt>
+<dd> With <code>all</code>, probe all sites. With <code>update</code>, probe a selection of the sites ; see option <tt>&quot;max_poll&quot;</tt> below. With <code>url</code>, probe only the given <i>url</i>, which must appear in the mirror-list.</dd>
+<dt><code>-c</code> <i>name</i></dt>
+<dd> Use config file <i>name</i>. The default list is </dd>
 <pre>
   ./mirmon.conf $HOME/.mirmon.conf /etc/mirmon.conf
 </pre>
@@ -46,13 +46,13 @@ mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
 <p> <code>location</code> </p>
 <p> A config file can be specified with the -c option. If -c is not used, the program looks for a config file in</p>
 <dl>
-<dt>* <code>./mirmon.conf</code></p>
+<dt>* <code>./mirmon.conf</code></dt>
 <dd>
-<dt>* <code>$HOME/.mirmon.conf</code></p>
+</dd><dt>* <code>$HOME/.mirmon.conf</code></dt>
 <dd>
-<dt>* <code>/etc/mirmon.conf</code></p>
+</dd><dt>* <code>/etc/mirmon.conf</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <p> <code>syntax</code> </p>
 <p> A config file looks like this : </p>
 <p>+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; | #lines that start with &#8216;#&#8217; are comment | #blank lines are ignored too | #tabs are replaced by a space |<br />
@@ -65,19 +65,19 @@ mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
  part3&#8221; | somekey part1 |.part2 |.part3 + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;</p>
 <p> <code>required entries</code> </p>
 <dl>
-<dt>project_name <i>name</i></p>
-<dd> Specify a short plaintext name for the project. </p>
+<dt>project_name <i>name</i></dt>
+<dd> Specify a short plaintext name for the project. </dd>
 <pre>
   project_name Apache
   project_name CTAN
 </pre>
-<dt>project_url <i>url</i></p>
-<dd> Specify an url pointing to the &#8216;home&#8217; of the project. </p>
+<dt>project_url <i>url</i></dt>
+<dd> Specify an url pointing to the &#8216;home&#8217; of the project. </dd>
 <pre>
   project_url <a rel="nofollow" href="http://www.apache.org/">http://www.apache.org/</a>
 </pre>
-<dt>mirror_list <i>file-name</i></p>
-<dd> Specify the file containing the mirrors to probe. </p>
+<dt>mirror_list <i>file-name</i></dt>
+<dd> Specify the file containing the mirrors to probe. </dd>
 <pre>
   mirror_list /path/to/mirror-list
 </pre>
@@ -87,29 +87,27 @@ mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
 </pre>
 <p> Two formats are supported :</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>* plain : lines like</p>
+<dt>* plain : lines like</dt>
 <dd>
 us http :                     // www.tux.org/ [email] &#8230;<br />
           nl http :           // apache.cs.uu.nl/dist/ [email] &#8230;<br />
-                    nl rsync: // archive.cs.uu.nl/apache-dist/ [email] &#8230;</p>
-<dt>* apache : lines like those in the apache mirrors.list</p>
+                    nl rsync: // archive.cs.uu.nl/apache-dist/ [email] &#8230;</dd>
+<dt>* apache : lines like those in the apache mirrors.list</dt>
 <dd>
 ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org &#8230;<br />
              http nl http: // apache.cs.uu.nl/dist/ user [at] cs.uu.nl &#8230;
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Note that in style &#8216;plain&#8217; the third item is reserved for an optional email address : the site&#8217;s contact address. </p>
-<p> Specify the required format with option <tt>&quot;list_style&quot;</tt> (see below). The default style is &#8216;plain&#8217;.</dl>
-<dt>web_page <i>file-name</i></p>
-<dd> Specify where the html report page is written.</p>
-<dt>icons <i>directory-name</i></p>
-<dd> Specify the directory where the icons can be found, relative to the <i>web_page</i>, or relative to the <font SIZE="-1">DOCUMENTROOT</font> of the web server. </p>
+<p> Specify the required format with option <tt>&quot;list_style&quot;</tt> (see below). The default style is &#8216;plain&#8217;.</dd></dl>
+<dt>web_page <i>file-name</i></dt>
+<dd> Specify where the html report page is written.</dd>
+<dt>icons <i>directory-name</i></dt>
+<dd> Specify the directory where the icons can be found, relative to the <i>web_page</i>, or relative to the <font SIZE="-1">DOCUMENTROOT</font> of the web server. </dd>
 <p> If/when the <i>web_page</i> lives in directory <tt>&quot;.../mirmon/&quot;</tt> and the icons live in directory <tt>&quot;.../mirmon/icons/&quot;</tt>, specify </p>
 <pre>
   icons icons
@@ -118,8 +116,8 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
 <pre>
   icons /icons/mirmon
 </pre>
-<dt>probe <i>program + arguments</i></p>
-<dd> Specify the program+args to probe the mirrors. Example: </p>
+<dt>probe <i>program + arguments</i></dt>
+<dd> Specify the program+args to probe the mirrors. Example: </dd>
 <pre>
   probe /usr/bin/wget -q -O - -T %TIMEOUT% -t 1 %URL%TIME.txt
 </pre>
@@ -136,11 +134,11 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
   1043625600 <a rel="nofollow" href="http://www.apache.org">www.apache.org</a> Mon Jan 27 00:00:00 2003
 </pre>
 <p> Mirmon is distributed with a program <tt>&quot;probe&quot;</tt> that handles ftp, http and rsync urls.</p>
-<dt>state <i>file-name</i></p>
-<dd> Specify where the file containing the state is written. </p>
+<dt>state <i>file-name</i></dt>
+<dd> Specify where the file containing the state is written. </dd>
 <p> The program reads this file on startup and writes the file when mirrors are probed (-get is specified).</p>
-<dt>countries <i>file-name</i></p>
-<dd> Specify the file containing the country codes; The file should contain lines like </p>
+<dt>countries <i>file-name</i></dt>
+<dd> Specify the file containing the country codes; The file should contain lines like </dd>
 <pre>
   us - United States
   nl - Netherlands
@@ -150,140 +148,138 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
 </dl>
 <p> <code>optional entries</code> </p>
 <dl>
-<dt>max_probes <i>number</i></p>
-<dd> Optionally specify the number of parallel probes (default 25).</p>
-<dt>timeout <i>seconds</i></p>
-<dd> Optionally specify the timeout for the probes (default 300). </p>
+<dt>max_probes <i>number</i></dt>
+<dd> Optionally specify the number of parallel probes (default 25).</dd>
+<dt>timeout <i>seconds</i></dt>
+<dd> Optionally specify the timeout for the probes (default 300). </dd>
 <p> After the last probe is started, the program waits for &lt;timeout&gt; + 10 seconds, cleans up and exits.</p>
-<dt>project_logo <i>logo</i></p>
-<dd> Optionally specify (the <font SIZE="-1">SRC</font> of the <font SIZE="-1">IMG</font> of) a logo to be placed top right on the page. </p>
+<dt>project_logo <i>logo</i></dt>
+<dd> Optionally specify (the <font SIZE="-1">SRC</font> of the <font SIZE="-1">IMG</font> of) a logo to be placed top right on the page. </dd>
 <pre>
   project_logo /icons/apache.gif
   project_logo <a rel="nofollow" href="http://www.apache.org/icons/...">http://www.apache.org/icons/...</a>
 </pre>
-<dt>htm_head <i>html</i></p>
-<dd> Optionally specify some <font SIZE="-1">HTML</font> to be placed before &lt;/HEAD&gt;. </p>
+<dt>htm_head <i>html</i></dt>
+<dd> Optionally specify some <font SIZE="-1">HTML</font> to be placed before &lt;/HEAD&gt;. </dd>
 <pre>
   htm_head
     &lt;link REL=StyleSheet href=&quot;/style.css&quot; TYPE=&quot;text/css&quot;&gt;
 </pre>
-<dt>htm_top <i>html</i></p>
-<dd> Optionally specify some <font SIZE="-1">HTML</font> to be placed near the top of the page. </p>
+<dt>htm_top <i>html</i></dt>
+<dd> Optionally specify some <font SIZE="-1">HTML</font> to be placed near the top of the page. </dd>
 <pre>
   htm_top testing 1, 2, 3
 </pre>
-<dt>htm_foot <i>html</i></p>
-<dd> Optionally specify <font SIZE="-1">HTML</font> to be placed near the bottom of the page. </p>
+<dt>htm_foot <i>html</i></dt>
+<dd> Optionally specify <font SIZE="-1">HTML</font> to be placed near the bottom of the page. </dd>
 <pre>
   htm_foot
     &lt;HR&gt;
     &lt;A href=&quot;...&quot;&gt;&lt;IMG SRC=&quot;...&quot; BORDER=0&gt;&lt;/A&gt;
     &lt;HR&gt;
 </pre>
-<dt>put_histo top|bottom|nowhere</p>
-<dd> Optionally specify where the age histogram must be placed. The default is &#8216;top&#8217;.</p>
-<dt>min_poll <i>time-spec</i></p>
-<dd> For &#8216;min_poll&#8217; see next item. A <i>time-spec</i> is a number followed by a unit &#8216;s&#8217; (seconds), or &#8216;m&#8217; (minutes), or &#8216;h&#8217; (hours), or &#8216;d&#8217; (days). For example &#8216;3d&#8217; (three days) or &#8217;36h&#8217; (36 hours).</p>
-<dt>max_poll <i>time-spec</i></p>
-<dd> Optionally specify the maximum probe interval. When the program is called with option &#8216;-get update&#8217;, all sites are probed which are :</p>
+<dt>put_histo top|bottom|nowhere</dt>
+<dd> Optionally specify where the age histogram must be placed. The default is &#8216;top&#8217;.</dd>
+<dt>min_poll <i>time-spec</i></dt>
+<dd> For &#8216;min_poll&#8217; see next item. A <i>time-spec</i> is a number followed by a unit &#8216;s&#8217; (seconds), or &#8216;m&#8217; (minutes), or &#8216;h&#8217; (hours), or &#8216;d&#8217; (days). For example &#8216;3d&#8217; (three days) or &#8217;36h&#8217; (36 hours).</dd>
+<dt>max_poll <i>time-spec</i></dt>
+<dd> Optionally specify the maximum probe interval. When the program is called with option &#8216;-get update&#8217;, all sites are probed which are :</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>* new</p>
-<dd> the site appears in the list, but there is no known state</p>
-<dt>* bad</p>
-<dd> the last probe of the site was unsuccessful</p>
-<dt>* old</p>
-<dd> the last probe was more than &#8216;max_poll&#8217; ago.</dl>
+<dt>* new</dt>
+<dd> the site appears in the list, but there is no known state</dd>
+<dt>* bad</dt>
+<dd> the last probe of the site was unsuccessful</dd>
+<dt>* old</dt>
+<dd> the last probe was more than &#8216;max_poll&#8217; ago.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Sites are not probed if the last probe was less than &#8216;min_poll&#8217; ago. So, if you specify </p>
 <pre>
   min_poll 4h
   max_poll 12h
 </pre>
 <p> the &#8216;reachable&#8217; sites are probed twice daily and the &#8216;unreachable&#8217; sites are probed at most six times a day. </p>
-<p> The default &#8216;min_poll&#8217; is &#8216;1h&#8217; (1 hour). The default &#8216;max_poll&#8217; is &#8216;4h&#8217; (4 hours).</dl>
-<dt>min_sync <i>time-spec</i></p>
-<dd> Optionally specify how often the mirrors are required to make an update. </p>
+<p> The default &#8216;min_poll&#8217; is &#8216;1h&#8217; (1 hour). The default &#8216;max_poll&#8217; is &#8216;4h&#8217; (4 hours).</dd></dl>
+<dt>min_sync <i>time-spec</i></dt>
+<dd> Optionally specify how often the mirrors are required to make an update. </dd>
 <p> The default &#8216;min_sync&#8217; is &#8216;1d&#8217; (1 day).</p>
-<dt>max_sync <i>time-spec</i></p>
-<dd> Optionally specify the maximum allowable sync interval. </p>
+<dt>max_sync <i>time-spec</i></dt>
+<dd> Optionally specify the maximum allowable sync interval. </dd>
 <p> Sites exceeding the limit will be considered &#8216;old&#8217;. The default &#8216;max_sync&#8217; is &#8216;2d&#8217; (2 days).</p>
-<dt>always_get <i>region &#8230;</i></p>
-<dd> Optionally specify a list of regions that must be probed always. </p>
+<dt>always_get <i>region &#8230;</i></dt>
+<dd> Optionally specify a list of regions that must be probed always. </dd>
 <pre>
   always_get Master Tier1
 </pre>
 <p> This is intended for <i>fake regions</i> like <i>Master</i> etc.</p>
-<dt>no_randomize</p>
-<dd> Mirmon tries to balance the probe load over the hourly mirmon runs. If the current run has a below average number of mirrors to probe, mirmon probes a few extra, randomly chosen mirrors, picked from the runs that have the highest load. </p>
+<dt>no_randomize</dt>
+<dd> Mirmon tries to balance the probe load over the hourly mirmon runs. If the current run has a below average number of mirrors to probe, mirmon probes a few extra, randomly chosen mirrors, picked from the runs that have the highest load. </dd>
 <p> If you don&#8217;t want this behaviour, use <code>no_randomize</code>.</p>
-<dt>no_add_slash</p>
-<dd> If the url part of a line in the mirror_list doesn&#8217;t end in a slash (&#8216;/&#8217;), mirmon adds a slash and issues a warning unless it is in quiet mode. </p>
+<dt>no_add_slash</dt>
+<dd> If the url part of a line in the mirror_list doesn&#8217;t end in a slash (&#8216;/&#8217;), mirmon adds a slash and issues a warning unless it is in quiet mode. </dd>
 <p> If you don&#8217;t want this behaviour, use <code>no_add_slash</code>.</p>
-<dt>list_style plain|apache</p>
-<dd> Optionally specify the format (&#8216;plain&#8217; or &#8216;apache&#8217;) of the mirror-list. </p>
+<dt>list_style plain|apache</dt>
+<dd> Optionally specify the format (&#8216;plain&#8217; or &#8216;apache&#8217;) of the mirror-list. </dd>
 <p> See the description of &#8216;mirror_list&#8217; above. The default list_style is &#8216;plain&#8217;.</p>
-<dt>site_url <i>site</i> <i>url</i></p>
-<dd> Optionally specify a substitute url for a site. </p>
+<dt>site_url <i>site</i> <i>url</i></dt>
+<dd> Optionally specify a substitute url for a site. </dd>
 <p> When access to a site is restricted (in Australia, for instance), another (sometimes secret) url can be used to probe the site. The &lt;site&gt; of an url is the part between &#8216;://&#8217; and the first &#8216;/&#8217;.</p>
-<dt>env <i>key</i> <i>value</i></p>
-<dd> Optionally specify an environment variable.</p>
-<dt>include <i>file-name</i></p>
-<dd> Optionally specify a file to include. </p>
+<dt>env <i>key</i> <i>value</i></dt>
+<dd> Optionally specify an environment variable.</dd>
+<dt>include <i>file-name</i></dt>
+<dd> Optionally specify a file to include. </dd>
 <p> The specified file is processed &#8216;in situ&#8217;. After the specified file is read and processed, config processing is resumed in the file where the <tt>&quot;include&quot;</tt> was encountered. The include depth is unlimited. However, it is a fatal error to include a file twice under the same name.</p>
-<dt>show</p>
-<dd> When the config processor encounters the &#8216;show&#8217; command, it dumps the content of the current config to standout, if option <tt>&quot;-v&quot;</tt> is specified. This is intented for debugging.</p>
-<dt>exit</p>
-<dd> When the config processor encounters the &#8216;exit&#8217; command, it terminates the program. This is intented for debugging.</dl>
+<dt>show</dt>
+<dd> When the config processor encounters the &#8216;show&#8217; command, it dumps the content of the current config to standout, if option <tt>&quot;-v&quot;</tt> is specified. This is intented for debugging.</dd>
+<dt>exit</dt>
+<dd> When the config processor encounters the &#8216;exit&#8217; command, it terminates the program. This is intented for debugging.</dd></dl>
 <h2>STATE FILE FORMAT</h2>
 <p> The state file consists of lines; one line per site. Each line consists of white space separated fields. The seven fields are :</p>
 <dl>
-<dt>* field 1 : url</p>
-<dd> The url as given in the mirror list.</p>
-<dt>* field 2 : age</p>
-<dd> The mirror&#8217;s timestamp found by the last successful probe, or &#8216;undef&#8217; if no probe was ever successful.</p>
-<dt>* field 3 : status last probe</p>
-<dd> The status of the last probe, or &#8216;undef&#8217; if the mirror was never probed.</p>
-<dt>* field 4 : time last successful probe</p>
-<dd> The timestamp of the last successful probe or &#8216;undef&#8217; if the mirror was never successfully probed.</p>
-<dt>* field 5 : probe history</p>
-<dd> The probe history is a list of &#8216;s&#8217; (for success) and &#8216;f&#8217; (for failure) characters indicating the result of the probe. New results are appended whenever the mirror is probed.</p>
-<dt>* field 6 : state history</p>
-<dd> The state history consists of a timestamp, a &#8216;-&#8216; char, and a list of chars indicating a past status: &#8216;s&#8217; (fresh), &#8216;b&#8217; (oldish), &#8216;f&#8217; (old), &#8216;z&#8217; (bad) or &#8216;x&#8217; (skip). The timestamp indicates when the state history was last updated. The current status of the mirror is determined by the mirror&#8217;s age and a few configuration parameters (min_sync, max_sync, max_poll). The state history is updated when the mirror is probed. If the last update of the history was less than 24 hours ago, the last status is replaced by the current status. If the last update of the history was more than 24 hours ago, the current status is appended to the history. One or more &#8216;skip&#8217;s is inserted, if the timestamp is two or more days old (when mirmon hasn&#8217;t run for more than two days).</p>
-<dt>* field 7 : last probe</p>
-<dd> The timestamp of the last probe, or &#8216;undef&#8217; if the mirror was never probed.</dl>
+<dt>* field 1 : url</dt>
+<dd> The url as given in the mirror list.</dd>
+<dt>* field 2 : age</dt>
+<dd> The mirror&#8217;s timestamp found by the last successful probe, or &#8216;undef&#8217; if no probe was ever successful.</dd>
+<dt>* field 3 : status last probe</dt>
+<dd> The status of the last probe, or &#8216;undef&#8217; if the mirror was never probed.</dd>
+<dt>* field 4 : time last successful probe</dt>
+<dd> The timestamp of the last successful probe or &#8216;undef&#8217; if the mirror was never successfully probed.</dd>
+<dt>* field 5 : probe history</dt>
+<dd> The probe history is a list of &#8216;s&#8217; (for success) and &#8216;f&#8217; (for failure) characters indicating the result of the probe. New results are appended whenever the mirror is probed.</dd>
+<dt>* field 6 : state history</dt>
+<dd> The state history consists of a timestamp, a &#8216;-&#8216; char, and a list of chars indicating a past status: &#8216;s&#8217; (fresh), &#8216;b&#8217; (oldish), &#8216;f&#8217; (old), &#8216;z&#8217; (bad) or &#8216;x&#8217; (skip). The timestamp indicates when the state history was last updated. The current status of the mirror is determined by the mirror&#8217;s age and a few configuration parameters (min_sync, max_sync, max_poll). The state history is updated when the mirror is probed. If the last update of the history was less than 24 hours ago, the last status is replaced by the current status. If the last update of the history was more than 24 hours ago, the current status is appended to the history. One or more &#8216;skip&#8217;s is inserted, if the timestamp is two or more days old (when mirmon hasn&#8217;t run for more than two days).</dd>
+<dt>* field 7 : last probe</dt>
+<dd> The timestamp of the last probe, or &#8216;undef&#8217; if the mirror was never probed.</dd></dl>
 <h2>INSTALLATION</h2>
 <p> <code>general</code> </p>
 <dl>
-<dt>* Note: The (empty) state file must exist before mirmon runs.</p>
+<dt>* Note: The (empty) state file must exist before mirmon runs.</dt>
 <dd>
-<dt>* The mirmon repository is here :</p>
+</dd><dt>* The mirmon repository is here :</dt>
 <dd>
 <pre>
   <a rel="nofollow" href="https://svn.science.uu.nl/repos/project.mirmon/trunk/">https://svn.science.uu.nl/repos/project.mirmon/trunk/</a>
 </pre>
-<dt>* The mirmon tarball is here :</p>
+</dd><dt>* The mirmon tarball is here :</dt>
 <dd>
 <pre>
   <a rel="nofollow" href="http://www.staff.science.uu.nl/~penni101/mirmon/mirmon.tar.gz">http://www.staff.science.uu.nl/~penni101/mirmon/mirmon.tar.gz</a>
 </pre>
-</dl>
+</dd></dl>
 <p> <code>installation suggestions</code> </p>
 <p> To install and configure mirmon, take the following steps :</p>
 <dl>
-<dt>* First, make the webdir :</p>
+<dt>* First, make the webdir :</dt>
 <dd>
 <pre>
   cd DOCUMENTROOT
   mkdir mirmon
 </pre>
 <p> For <i></i><font SIZE="-1"><i>DOCUMENTROOT</i></font><i></i>, substitute the full pathname of the document root of your webserver.</p>
-<dt>* Check out the mirmon repository :</p>
+</dd><dt>* Check out the mirmon repository :</dt>
 <dd>
 <pre>
   cd /usr/local/src
@@ -294,29 +290,29 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
   REPO = <a rel="nofollow" href="https://svn.science.uu.nl/repos/project.mirmon/trunk/">https://svn.science.uu.nl/repos/project.mirmon/trunk/</a>
 </pre>
 <p> or download the package and unpack it.</p>
-<dt>* Chdir to directory mirmon :</p>
+</dd><dt>* Chdir to directory mirmon :</dt>
 <dd>
 <pre>
   cd mirmon
 </pre>
-<dt>* Create the (empty) state file :</p>
+</dd><dt>* Create the (empty) state file :</dt>
 <dd>
 <pre>
   touch state.txt
 </pre>
-<dt>* Install the icons in the webdir :</p>
+</dd><dt>* Install the icons in the webdir :</dt>
 <dd>
 <pre>
   mkdir DOCUMENTROOT/mirmon/icons
   cp icons/* DOCUMENTROOT/mirmon/icons
 </pre>
-<dt>* Create a mirror list &quot;mirror_list&quot; ;</p>
-<dd> Use your favorite editor, or genererate the list from an existing database. </p>
+</dd><dt>* Create a mirror list &quot;mirror_list&quot; ;</dt>
+<dd> Use your favorite editor, or genererate the list from an existing database. </dd>
 <p>nl http :                    // archive.cs.uu.nl/your-project/ contact [at] cs.uu.nl<br />
           uk http :          // mirrors.this.org/your-project/ mirrors [at] this.org<br />
                     us http: // mirrors.that.org/your-project/ mirrors [at] that.org</p>
 <p> The email addresses are optional.</p>
-<dt>* Create a mirmon config file &quot;mirmon.conf&quot; with your favorite editor.</p>
+<dt>* Create a mirmon config file &quot;mirmon.conf&quot; with your favorite editor.</dt>
 <dd>
 <pre>
   # lines must start in the first column ; no leading white space
@@ -330,12 +326,12 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
   probe /usr/bin/wget -q -O - -T %TIMEOUT% -t 1 %URL%TIME.txt
 </pre>
 <p> This assumes the project&#8217;s timestamp is in file <tt>&quot;TIME.txt&quot;</tt>.</p>
-<dt>* If you have rsync urls, change the probe line to :</p>
+</dd><dt>* If you have rsync urls, change the probe line to :</dt>
 <dd>
 <pre>
   probe perl /usr/local/src/mirmon/probe -t %TIMEOUT% %URL%TIME.txt
 </pre>
-<dt>* Run mirmon :</p>
+</dd><dt>* Run mirmon :</dt>
 <dd>
 <pre>
   perl mirmon -v -get all
@@ -344,14 +340,14 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
 <pre>
   <a rel="nofollow" href="http://www.your.project.org/mirmon/">http://www.your.project.org/mirmon/</a>
 </pre>
-<dt>* If/when, at a later date, you want to upgrade mirmon :</p>
+</dd><dt>* If/when, at a later date, you want to upgrade mirmon :</dt>
 <dd>
 <pre>
   cd /usr/local/src/mirmon
   svn status -u
   svn up
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> mirmon.pm(3) </p>
 <h2>AUTHOR</h2>

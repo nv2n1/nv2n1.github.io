@@ -10,16 +10,16 @@ description: "XSetCloseDownMode, XKillClient – control clients"
 <p>XSetCloseDownMode, XKillClient &#8211; control clients </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XSetCloseDownMode(Display *<i>display</i>, int <i>close_mode</i>);</p>
-<dd>int XKillClient(Display *<i>display</i>, XID <i>resource</i>);</dl>
+<dd>int XSetCloseDownMode(Display *<i>display</i>, int <i>close_mode</i>);</dd>
+<dd>int XKillClient(Display *<i>display</i>, XID <i>resource</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>close_mode</i></p>
-<dd>Specifies the client close-down mode. You can pass <code>DestroyAll</code>, <code>RetainPermanent</code>, or <code>RetainTemporary</code>.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>resource</i></p>
-<dd>Specifies any resource associated with the client that you want to destroy or <code>AllTemporary</code>.</dl>
+<dt><i>close_mode</i></dt>
+<dd>Specifies the client close-down mode. You can pass <code>DestroyAll</code>, <code>RetainPermanent</code>, or <code>RetainTemporary</code>.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>resource</i></dt>
+<dd>Specifies any resource associated with the client that you want to destroy or <code>AllTemporary</code>.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetCloseDownMode</code> defines what will happen to the client&#8217;s resources at connection close. A connection starts in <code>DestroyAll</code> mode. For information on what happens to the client&#8217;s resources when the close_mode argument is <code>RetainPermanent</code> or <code>RetainTemporary</code>, see section 2.6. </p>
 <p> <code>XSetCloseDownMode</code> can generate a <code>BadValue</code> error. </p>
@@ -27,7 +27,7 @@ description: "XSetCloseDownMode, XKillClient – control clients"
 <p> <code>XKillClient</code> can generate a <code>BadValue</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><i>Xlib &#8211; C Language X Interface</i></p>

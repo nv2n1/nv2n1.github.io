@@ -23,10 +23,10 @@ description: "dlae2.f –"
  [ B C ].
  On return, RT1 is the eigenvalue of larger absolute value, and RT2
  is the eigenvalue of smaller absolute value.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>A</i> </p>
+<dd><i>A</i> </dd>
 <pre> A is DOUBLE PRECISION
  The (1,1) element of the 2-by-2 matrix.</pre>
 <p><i>B</i> </p>
@@ -44,13 +44,13 @@ description: "dlae2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -62,7 +62,8 @@ description: "dlae2.f –"
  Overflow is possible only if RT1 is within a factor of 5 of overflow.
  Underflow is harmless if the input data is 0 or exceeds
  underflow_threshold / macheps.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 103 of file dlae2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

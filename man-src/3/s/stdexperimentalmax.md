@@ -11,9 +11,7 @@ std::experimental::max - std::experimental::max
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / simd&gt;
-
     template &lt;class T, class Abi&gt;
-
     simd&lt;T, Abi&gt; max(const simd&lt;T, Abi&gt; &amp;a, const simd&lt;T, Abi&gt; &amp;b) noexcept;
 </code></pre>
 

@@ -15,12 +15,12 @@ description: "dbsessmgr – session state database manager"
 <p> dbsessmgr allows you to manage the ASP.NET session state database.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&#8211;clean</i></p>
-<dd> Remove all expired sessions.</p>
-<dt><i>&#8211;remove</i></p>
-<dd> Delete all sessions.</p>
-<dt><i>&#8211;show</i></p>
-<dd> Display session data.</dl>
+<dt><i>&#8211;clean</i></dt>
+<dd> Remove all expired sessions.</dd>
+<dt><i>&#8211;remove</i></dt>
+<dd> Delete all sessions.</dd>
+<dt><i>&#8211;show</i></dt>
+<dd> Display session data.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> You can choose the assembly and type used to connect to your database backend and also set the connection string and the SQL parameter prefix through the configuration file, named dbsessmgr.exe.config. The configuration shipped by default is: </p>
 <pre>

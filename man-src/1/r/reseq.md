@@ -17,16 +17,16 @@ description: "reseq – manual page for reseq 1.0.0"
 <h2>DESCRIPTION</h2>
 <p> Reverse the translations made by teseq.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print usage information (this message).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version and warrantee</p>
-<dt><code>&#8211;replay</code></p>
-<dd> Obey delay lines for video-style playback.</p>
-<dt><code>-d</code> DIVISOR</p>
-<dd> Play back at DIVISOR times the normal speed.</p>
-<dt><code>-t</code>, <code>&#8211;timings</code>=<i>FILE</i></p>
-<dd> Output timing data to FILE, in the format used by script <code>-t</code> and scriptreplay.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print usage information (this message).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version and warrantee</dd>
+<dt><code>&#8211;replay</code></dt>
+<dd> Obey delay lines for video-style playback.</dd>
+<dt><code>-d</code> DIVISOR</dt>
+<dd> Play back at DIVISOR times the normal speed.</dd>
+<dt><code>-t</code>, <code>&#8211;timings</code>=<i>FILE</i></dt>
+<dd> Output timing data to FILE, in the format used by script <code>-t</code> and scriptreplay.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to bug-teseq [at] gnu.org</p>
 <h2>COPYRIGHT</h2>
@@ -35,6 +35,6 @@ description: "reseq – manual page for reseq 1.0.0"
 <p> The full documentation for <code>reseq</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>reseq</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info reseq</code></dl>
+</dt><dd> <code>info reseq</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

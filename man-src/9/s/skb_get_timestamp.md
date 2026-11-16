@@ -15,11 +15,11 @@ skb_get_timestamp - get timestamp from a skb
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>skb to get stamp from</dl>
+<dl><dd></dd><dd>skb to get stamp from</dd></dl>
  
 
  <i>stamp</i>
-<dl><dd>pointer to struct timeval to store stamp in</dl>
+<dl><dd>pointer to struct timeval to store stamp in</dd></dl>
 
 <h2>Description</h2>
 

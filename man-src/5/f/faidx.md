@@ -59,7 +59,7 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
  &gt;<i>name</i> [<i>description</i>&#8230;]<br />
  ATGCATGCATGCAT<br />
  GCATGCATGCATGC<br />
- [&#8230;]</dl>
+ [&#8230;]</dd></dl>
 <p> In particular, each reference sequence must be &quot;well-formatted&quot;, i.e., all of its sequence lines must be the same length, apart from the final sequence line which may be shorter. (While this sequence line length must be the same within each sequence, it may vary between different reference sequences in the same FASTA file.) </p>
 <p> This also means that although the FASTA file may have Unix- or Windows-style or other line termination, the newline characters present must be consistent, at least within each reference sequence. </p>
 <p> The <code>samtools</code> implementation uses the first word of the &quot;<code>&gt;</code>&quot; header line text (i.e., up to the first whitespace character, having skipped any initial whitespace after the &quot;&gt;&quot;) as the <code>NAME</code> column.</p>
@@ -80,7 +80,7 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
  +<br />
  IIA94445EEII==<br />
  =&gt;IIIIIIIIICCC<br />
- [&#8230;]</dl>
+ [&#8230;]</dd></dl>
 <p> Quality lines must be wrapped at the same length as the corresponding sequence lines.</p>
 <h2>Example</h2>
 <p>For example, given this FASTA file </p>
@@ -92,7 +92,7 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
  &gt;two another chromosome<br />
  ATGCATGCATGCAT<br />
  GCATGCATGCATGC
-</dl>
+</dd></dl>
 <p> formatted with Unix-style (LF) line termination, the corresponding fai index would be</p>
 <dl>
 <dd>
@@ -114,7 +114,7 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> If the FASTA file were formatted with Windows-style (CR-LF) line termination, the fai index would be</p>
 <dl>
 <dd>
@@ -136,7 +136,7 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> An example FASTQ file </p>
 <dl>
 <dd>@fastq1<br />
@@ -153,7 +153,7 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
  +<br />
  IIA94445EEII==<br />
  =&gt;IIIIIIIIICCC
-</dl>
+</dd></dl>
 <p> Formatted with Unix-style line termination would give this fai index</p>
 <dl>
 <dd>
@@ -177,11 +177,12 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-samtools/">samtools</a></i>(1)</p>
 <dl>
-<dt><a rel="nofollow" href="https://en.wikipedia.org/wiki/FASTA_format">https://en.wikipedia.org/wiki/FASTA_format</a></p>
+<dt><a rel="nofollow" href="https://en.wikipedia.org/wiki/FASTA_format">https://en.wikipedia.org/wiki/FASTA_format</a></dt>
 <dd>
-<dt><a rel="nofollow" href="https://en.wikipedia.org/wiki/FASTQ_format">https://en.wikipedia.org/wiki/FASTQ_format</a></p>
-<dd>Further description of the FASTA and FASTQ formats </p>
+</dd><dt><a rel="nofollow" href="https://en.wikipedia.org/wiki/FASTQ_format">https://en.wikipedia.org/wiki/FASTQ_format</a></dt>
+<dd>Further description of the FASTA and FASTQ formats </dd>
+</dl>

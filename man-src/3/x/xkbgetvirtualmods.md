@@ -11,16 +11,16 @@ description: "XkbGetVirtualMods – Obtain a subset of the virtual modifier bind
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbGetVirtualMods</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask indicating virtual modifier bindings to get</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>Xkb description where results will be placed</dl>
+</dd><dd>connection to server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask indicating virtual modifier bindings to get</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>Xkb description where results will be placed</dd></dl>
 <h2>Description</h2>
 <p><i>XkbGetVirtualMods </i> sends a request to the server to obtain the <i>vmods </i> entries for the virtual modifiers specified in the mask, <i>which, </i> and waits for a reply. </p>
 <p> Virtual modifiers are named by converting their string name to an X Atom and storing the Atom in the <i>names.vmods </i> array in an XkbDescRec structure. The position of a name Atom in the <i>names.vmods </i> array defines the bit position used to represent the virtual modifier and also the index used when accessing virtual modifier information in arrays: the name in the i-th (0 relative) entry of <i>names.vmods </i> is the i-th virtual modifier, represented by the mask (1&lt;&lt;i). Throughout Xkb, various functions have a parameter that is a mask representing virtual modifier choices. In each case, the i-th bit (0 relative) of the mask represents the i-th virtual modifier. </p>
@@ -33,8 +33,8 @@ description: "XkbGetVirtualMods – Obtain a subset of the virtual modifier bind
 <p> If the server does not have a compatible version of Xkb, or the Xkb extension has not been properly initialized, <i>XkbGetVirtualMods </i> returns BadMatch. Any errors in allocation cause <i>XkbGetVirtualMods </i> to return BadAlloc.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>Success</p>
-<dd>The <i>XkbGetVirtualMods </i> function returns Success when it successfully updates the corresponding virtual modifier definition in the <i>server-&gt;vmods </i> array of <i>xkb. </i></dl>
+<dt>Success</dt>
+<dd>The <i>XkbGetVirtualMods </i> function returns Success when it successfully updates the corresponding virtual modifier definition in the <i>server-&gt;vmods </i> array of <i>xkb. </i></dd></dl>
 <h2>Structures</h2>
 <p>The complete description of an Xkb keyboard is given by an XkbDescRec. The component structures in the XkbDescRec represent the major Xkb components. </p>
 <pre>typedef struct {
@@ -125,9 +125,9 @@ description: "XkbGetVirtualMods – Obtain a subset of the virtual modifier bind
 </table>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbgetnames/">XkbGetNames</a></code>(3), <code><a href="/docs/linux/man/3-xkbsetnames/">XkbSetNames</a></code>(3)</p>

@@ -11,59 +11,32 @@ std::regex_constants::match_flag_type - std::regex_constants::match_flag_type
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;regex&gt;
-
 typedef /*unspecified*/ match_flag_type;                               (since C++11)
-
 constexpr match_flag_type match_default = 0;
-
 constexpr match_flag_type match_not_bol = /*unspecified*/;
-
 constexpr match_flag_type match_not_eol = /*unspecified*/;
-
 constexpr match_flag_type match_not_bow = /*unspecified*/;
-
 constexpr match_flag_type match_not_eow = /*unspecified*/;
-
 constexpr match_flag_type match_any = /*unspecified*/;                 (since C++11)
-
 constexpr match_flag_type match_not_null = /*unspecified*/;            (until C++17)
-
 constexpr match_flag_type match_continuous = /*unspecified*/;
-
 constexpr match_flag_type match_prev_avail = /*unspecified*/;
-
 constexpr match_flag_type format_default = 0;
-
 constexpr match_flag_type format_sed = /*unspecified*/;
-
 constexpr match_flag_type format_no_copy = /*unspecified*/;
-
 constexpr match_flag_type format_first_only = /*unspecified*/;
-
 inline constexpr match_flag_type match_default = 0;
-
 inline constexpr match_flag_type match_not_bol = /*unspecified*/;
-
 inline constexpr match_flag_type match_not_eol = /*unspecified*/;
-
 inline constexpr match_flag_type match_not_bow = /*unspecified*/;
-
 inline constexpr match_flag_type match_not_eow = /*unspecified*/;
-
 inline constexpr match_flag_type match_any = /*unspecified*/;
-
 inline constexpr match_flag_type match_not_null = /*unspecified*/;     (since C++17)
-
 inline constexpr match_flag_type match_continuous = /*unspecified*/;
-
 inline constexpr match_flag_type match_prev_avail = /*unspecified*/;
-
 inline constexpr match_flag_type format_default = 0;
-
 inline constexpr match_flag_type format_sed = /*unspecified*/;
-
 inline constexpr match_flag_type format_no_copy = /*unspecified*/;
-
 inline constexpr match_flag_type format_first_only = /*unspecified*/;</code></pre> 
 match_flag_type is a BitmaskType that specifies additional regular expression matching options. 
 

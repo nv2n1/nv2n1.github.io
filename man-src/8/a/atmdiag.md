@@ -15,22 +15,22 @@ description: "atmdiag – show ATM device driver diagnostics"
 <p> The following counters are shown for each AAL:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>TX_okay</code></p>
-<dd>number of successfully sent PDUs.</p>
-<dt><code>TX_err</code></p>
-<dd>number of PDUs not sent because of errors.</p>
-<dt><code>RX_okay</code></p>
-<dd>number of successfully received PDUs.</p>
-<dt><code>RX_err</code></p>
-<dd>number of PDUs discarded because of errors.</p>
-<dt><code>RX_drop</code></p>
-<dd>number of PDUs dropped because of lack of memory.</dl>
+</dd><dl>
+<dt><code>TX_okay</code></dt>
+<dd>number of successfully sent PDUs.</dd>
+<dt><code>TX_err</code></dt>
+<dd>number of PDUs not sent because of errors.</dd>
+<dt><code>RX_okay</code></dt>
+<dd>number of successfully received PDUs.</dd>
+<dt><code>RX_err</code></dt>
+<dd>number of PDUs discarded because of errors.</dd>
+<dt><code>RX_drop</code></dt>
+<dd>number of PDUs dropped because of lack of memory.</dd></dl>
 </dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-z</code></p>
-<dd>zero all counters after showing them.</dl>
+<dt><code>-z</code></dt>
+<dd>zero all counters after showing them.</dd></dl>
 <h2>Author</h2>
 <p>Werner Almesberger, EPFL ICA &lt;Werner.Almesberger [at] epfl.ch&gt;</p>
 <h2>See Also</h2>

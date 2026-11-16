@@ -11,7 +11,6 @@ description: "ql/experimental/callablebonds/treecallablebondengine.hpp – Numer
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/experimental/callablebonds/callablebond.hpp&gt;
-
 #include &lt;ql/pricingengines/latticeshortratemodelengine.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>TreeCallableFixedRateBondEngine</code><br />

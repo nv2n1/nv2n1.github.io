@@ -81,19 +81,19 @@ $days #the simple scalar value "days" $days[28] #the 29th element of array @days
  /x</p>
 <p> Meanwhile, special identifiers don&#8217;t follow the above rules; For the most part, all of the identifiers in this category have a special meaning given by Perl. Because they have special parsing rules, these generally can&#8217;t be fully-qualified. They come in six forms (but don&#8217;t use forms 5 and 6):</p>
 <dl>
-<dt>1.</p>
-<dd> A sigil, followed solely by digits matching <tt>&quot;\p{POSIX_Digit}&quot;</tt>, like <tt>$0</tt>, <tt>$1</tt>, or <tt>$10000</tt>.</p>
-<dt>2.</p>
-<dd> A sigil followed by a single character matching the <tt>&quot;\p{POSIX_Punct}&quot;</tt> property, like <tt>$!</tt> or <tt>&quot;%+&quot;</tt>, except the character <tt>&quot;{&quot;</tt> doesn&#8217;t work.</p>
-<dt>3.</p>
-<dd> A sigil, followed by a caret and any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>, like <tt>$^V</tt> or <tt>$^]</tt>.</p>
-<dt>4.</p>
-<dd> Similar to the above, a sigil, followed by bareword text in braces, where the first character is a caret. The next character is any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>, followed by <font SIZE="-1">ASCII</font> word characters. An example is <tt>&quot;${^GLOBAL_PHASE}&quot;</tt>.</p>
-<dt>5.</p>
-<dd> A sigil, followed by any single character in the range <tt>&quot;[�-��-�]&quot;</tt> when not under <tt>&quot;use utf8&quot;</tt>. (Under <tt>&quot;use utf8&quot;</tt>, the normal identifier rules given earlier in this section apply.) Use of non-graphic characters (the C1 controls, the NO-BREAK <font SIZE="-1">SPACE,</font> and the <font SIZE="-1">SOFT HYPHEN</font>) has been disallowed since v5.26.0. The use of the other characters is unwise, as these are all reserved to have special meaning to Perl, and none of them currently do have special meaning, though this could change without notice. </p>
+<dt>1.</dt>
+<dd> A sigil, followed solely by digits matching <tt>&quot;\p{POSIX_Digit}&quot;</tt>, like <tt>$0</tt>, <tt>$1</tt>, or <tt>$10000</tt>.</dd>
+<dt>2.</dt>
+<dd> A sigil followed by a single character matching the <tt>&quot;\p{POSIX_Punct}&quot;</tt> property, like <tt>$!</tt> or <tt>&quot;%+&quot;</tt>, except the character <tt>&quot;{&quot;</tt> doesn&#8217;t work.</dd>
+<dt>3.</dt>
+<dd> A sigil, followed by a caret and any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>, like <tt>$^V</tt> or <tt>$^]</tt>.</dd>
+<dt>4.</dt>
+<dd> Similar to the above, a sigil, followed by bareword text in braces, where the first character is a caret. The next character is any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>, followed by <font SIZE="-1">ASCII</font> word characters. An example is <tt>&quot;${^GLOBAL_PHASE}&quot;</tt>.</dd>
+<dt>5.</dt>
+<dd> A sigil, followed by any single character in the range <tt>&quot;[�-��-�]&quot;</tt> when not under <tt>&quot;use utf8&quot;</tt>. (Under <tt>&quot;use utf8&quot;</tt>, the normal identifier rules given earlier in this section apply.) Use of non-graphic characters (the C1 controls, the NO-BREAK <font SIZE="-1">SPACE,</font> and the <font SIZE="-1">SOFT HYPHEN</font>) has been disallowed since v5.26.0. The use of the other characters is unwise, as these are all reserved to have special meaning to Perl, and none of them currently do have special meaning, though this could change without notice. </dd>
 <p> Note that an implication of this form is that there are identifiers only legal under <tt>&quot;use utf8&quot;</tt>, and vice-versa, for example the identifier <tt>&quot;$état&quot;</tt> is legal under <tt>&quot;use utf8&quot;</tt>, but is otherwise considered to be the single character variable <tt>$é</tt> followed by the bareword <tt>&quot;tat&quot;</tt>, the combination of which is a syntax error.</p>
-<dt>6.</p>
-<dd> This is a combination of the previous two forms. It is valid only when not under <tt>&quot;use utf8&quot;</tt> (normal identifier rules apply when under <tt>&quot;use utf8&quot;</tt>). The form is a sigil, followed by text in braces, where the first character is any one of the characters in the range <tt>&quot;[�-�]&quot;</tt> followed by <font SIZE="-1">ASCII</font> word characters up to the trailing brace. </p>
+<dt>6.</dt>
+<dd> This is a combination of the previous two forms. It is valid only when not under <tt>&quot;use utf8&quot;</tt> (normal identifier rules apply when under <tt>&quot;use utf8&quot;</tt>). The form is a sigil, followed by text in braces, where the first character is any one of the characters in the range <tt>&quot;[�-�]&quot;</tt> followed by <font SIZE="-1">ASCII</font> word characters up to the trailing brace. </dd>
 <p> The same caveats as the previous form apply: The non-graphic characters are no longer allowed with &#8220;use utf8&#8221;, it is unwise to use this form at all, and utf8ness makes a big difference.</dl>
 <p> Prior to Perl v5.24, non-graphical <font SIZE="-1">ASCII</font> control characters were also allowed in some situations; this had been deprecated since v5.20.</p>
 <h3>Context</h3>
@@ -193,3 +193,4 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
 <p> Note that on input (string to number) Perl accepts <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt> in many forms. Case is ignored, and the Win32-specific forms like <tt>&quot;1.#INF&quot;</tt> are understood, but on output the values are normalized to <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt>. </p>
 <p> <i>Version Strings</i> </p>
 <p> A literal of the form <tt>&quot;v1.20.300.4000&quot;</tt> is parsed as a string composed of characters with the specified ordinals. This form, known as v-strings, provides an alternative, more readable way to construct strings, rather than use the somewhat less readable interpolation form <tt>&quot;
+</p></p>

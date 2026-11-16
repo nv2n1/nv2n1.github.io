@@ -14,11 +14,11 @@ description: "sh64_teardown_tlb_slot – Teardown a translation."
 <p><i>config_addr</i></p>
 <dl>
 <dd>
-<dd>Address of TLB slot.</dl>
+</dd><dd>Address of TLB slot.</dd></dl>
 <h2>Description</h2>
 <p>Teardown any existing mapping in the TLB slot <i>config_addr</i>.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

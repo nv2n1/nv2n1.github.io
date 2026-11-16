@@ -23,29 +23,29 @@ description: "ldns_rdf_new, ldns_rdf_clone, ldns_rdf_new_frm_data, ldns_rdf_new_
 <p> void ldns_rdf_print(FILE *output, const ldns_rdf *rdf); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rdf_new</i>()</p>
-<dd>allocates a new rdf structure and fills it. This function DOES NOT copy the contents from the buffer, unlinke ldns_rdf_new_frm_data() .br <code>type</code>: type of the rdf .br <code>size</code>: size of the buffer .br <code>data</code>: pointer to the buffer to be copied .br Returns the new rdf structure or NULL on failure</dl>
+<dt> <i>ldns_rdf_new</i>()</dt>
+<dd>allocates a new rdf structure and fills it. This function DOES NOT copy the contents from the buffer, unlinke ldns_rdf_new_frm_data() .br <code>type</code>: type of the rdf .br <code>size</code>: size of the buffer .br <code>data</code>: pointer to the buffer to be copied .br Returns the new rdf structure or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_clone</i>()</p>
-<dd>clones a rdf structure. The data is copied. .br <code>rd</code>: rdf to be copied .br Returns a new rdf structure</dl>
+<dt> <i>ldns_rdf_clone</i>()</dt>
+<dd>clones a rdf structure. The data is copied. .br <code>rd</code>: rdf to be copied .br Returns a new rdf structure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_new_frm_data</i>()</p>
-<dd>allocates a new rdf structure and fills it. This function _does_ copy the contents from the buffer, unlinke ldns_rdf_new() .br <code>type</code>: type of the rdf .br <code>size</code>: size of the buffer .br <code>data</code>: pointer to the buffer to be copied .br Returns the new rdf structure or NULL on failure</dl>
+<dt> <i>ldns_rdf_new_frm_data</i>()</dt>
+<dd>allocates a new rdf structure and fills it. This function _does_ copy the contents from the buffer, unlinke ldns_rdf_new() .br <code>type</code>: type of the rdf .br <code>size</code>: size of the buffer .br <code>data</code>: pointer to the buffer to be copied .br Returns the new rdf structure or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_new_frm_str</i>()</p>
-<dd>creates a new rdf from a string. .br <code>type</code>: type to use .br <code>str</code>: string to use .br Returns ldns_rdf* or NULL in case of an error</dl>
+<dt> <i>ldns_rdf_new_frm_str</i>()</dt>
+<dd>creates a new rdf from a string. .br <code>type</code>: type to use .br <code>str</code>: string to use .br Returns ldns_rdf* or NULL in case of an error</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_new_frm_fp</i>()</p>
-<dd>creates a new rdf from a file containing a string. .br <code>r</code>: the new rdf .br <code>type</code>: type to use .br <code>fp</code>: the file pointer to use .br Returns LDNS_STATUS_OK or the error</dl>
+<dt> <i>ldns_rdf_new_frm_fp</i>()</dt>
+<dd>creates a new rdf from a file containing a string. .br <code>r</code>: the new rdf .br <code>type</code>: type to use .br <code>fp</code>: the file pointer to use .br Returns LDNS_STATUS_OK or the error</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_free</i>()</p>
-<dd>frees a rdf structure, leaving the data pointer intact. .br <code>rd</code>: the pointer to be freed .br Returns void</dl>
+<dt> <i>ldns_rdf_free</i>()</dt>
+<dd>frees a rdf structure, leaving the data pointer intact. .br <code>rd</code>: the pointer to be freed .br Returns void</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_deep_free</i>()</p>
-<dd>frees a rdf structure _and_ frees the data. rdf should be created with _new_frm_data .br <code>rd</code>: the rdf structure to be freed .br Returns void</dl>
+<dt> <i>ldns_rdf_deep_free</i>()</dt>
+<dd>frees a rdf structure _and_ frees the data. rdf should be created with _new_frm_data .br <code>rd</code>: the rdf structure to be freed .br Returns void</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_print</i>()</p>
-<dd>Prints the data in the rdata field to the given file stream (in presentation format) </p>
+<dt> <i>ldns_rdf_print</i>()</dt>
+<dd>Prints the data in the rdata field to the given file stream (in presentation format) </dd>
 <p> .br <code>output</code>: the file stream to print to .br <code>rdf</code>: the rdata field to print .br Returns void</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -59,3 +59,4 @@ description: "ldns_rdf_new, ldns_rdf_clone, ldns_rdf_new_frm_data, ldns_rdf_new_
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

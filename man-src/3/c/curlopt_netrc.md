@@ -18,14 +18,14 @@ description: "CURLOPT_NETRC – request that .netrc is used"
 <p> libcurl does not verify that the file has the correct properties set (as the standard Unix ftp client does). It should only be readable by user. </p>
 <p> <i>level</i> should be set to one of the values described below. </p>
 <dl COMPACT>
-<dt>CURL_NETRC_OPTIONAL</p>
-<dd>The use of your <i>~/.netrc</i> file is optional, and information in the URL is to be preferred. The file will be scanned for the host and user name (to find the password only) or for the host only, to find the first user name and password after that <i>machine</i>, which ever information is not specified in the URL. </p>
+<dt>CURL_NETRC_OPTIONAL</dt>
+<dd>The use of your <i>~/.netrc</i> file is optional, and information in the URL is to be preferred. The file will be scanned for the host and user name (to find the password only) or for the host only, to find the first user name and password after that <i>machine</i>, which ever information is not specified in the URL. </dd>
 <p> Undefined values of the option will have this effect.</p>
-<dt>CURL_NETRC_IGNORED</p>
-<dd>The library will ignore the file and use only the information in the URL. </p>
+<dt>CURL_NETRC_IGNORED</dt>
+<dd>The library will ignore the file and use only the information in the URL. </dd>
 <p> This is the default.</p>
-<dt>CURL_NETRC_REQUIRED</p>
-<dd>This value tells the library that use of the file is required, to ignore the information in the URL, and to search the file for the host only.</dl>
+<dt>CURL_NETRC_REQUIRED</dt>
+<dd>This value tells the library that use of the file is required, to ignore the information in the URL, and to search the file for the host only.</dd></dl>
 <h2>Default</h2>
 <p>CURL_NETRC_IGNORED</p>
 <h2>Protocols</h2>

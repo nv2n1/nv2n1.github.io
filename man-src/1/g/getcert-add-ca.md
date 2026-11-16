@@ -15,12 +15,12 @@ description: "getcert"
 <p> Adds a CA configuration to <i>certmonger</i>, which can subsequently be used to enroll certificates. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> NAME</p>
-<dd> The nickname to give to this CA configuration. This same value can later be passed in to <i>getcert</i>&#8216;s <i>request</i>, <i>resubmit</i>, and <i>start-tracking</i> commands using the <code>-c</code> flag.</p>
-<dt><code>-e</code> COMMAND</p>
-<dd> The helper command to run for communicating with the CA. The helper will be used to pass signing requests to the CA, relay the CA&#8217;s responses back to the <i>certmonger</i> service, and to read information about the CA.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </p>
+<dt><code>-c</code> NAME</dt>
+<dd> The nickname to give to this CA configuration. This same value can later be passed in to <i>getcert</i>&#8216;s <i>request</i>, <i>resubmit</i>, and <i>start-tracking</i> commands using the <code>-c</code> flag.</dd>
+<dt><code>-e</code> COMMAND</dt>
+<dd> The helper command to run for communicating with the CA. The helper will be used to pass signing requests to the CA, relay the CA&#8217;s responses back to the <i>certmonger</i> service, and to read information about the CA.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

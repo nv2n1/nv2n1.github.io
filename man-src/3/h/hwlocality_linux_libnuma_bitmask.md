@@ -20,7 +20,7 @@ description: "hwlocality_linux_libnuma_bitmask – Interoperability with Linux l
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Topology topology must match the current machine. </p>
+</dt><dd> Topology topology must match the current machine. </dd>
 <p> The behavior of libnuma is undefined if the kernel is not NUMA-aware. (when CONFIG_NUMA is not set in the kernel configuration). This helper and libnuma may thus not be strictly compatible in this case, which may be detected by checking whether numa_available() returns -1.</dl>
 <h2>Function Documentation</h2>
 <h3>static int hwloc_cpuset_from_linux_libnuma_bitmask (<code>hwloc_topology_t</code> topology, <code>hwloc_cpuset_t</code> cpuset, const struct bitmask * bitmask) [inline], [static]</h3>
@@ -31,7 +31,7 @@ description: "hwlocality_linux_libnuma_bitmask – Interoperability with Linux l
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> newly allocated struct bitmask.</dl>
+</dt><dd> newly allocated struct bitmask.</dd></dl>
 <h3>static int hwloc_nodeset_from_linux_libnuma_bitmask (<code>hwloc_topology_t</code> topology, <code>hwloc_nodeset_t</code> nodeset, const struct bitmask * bitmask) [inline], [static]</h3>
 <p> Convert libnuma bitmask bitmask into hwloc NUMA node set nodeset. This function may be used after calling many numa_ functions that use a struct bitmask as an output parameter.</p>
 <h3>static struct bitmask * hwloc_nodeset_to_linux_libnuma_bitmask (<code>hwloc_topology_t</code> topology, <code>hwloc_const_nodeset_t</code> nodeset) [static]</h3>
@@ -40,9 +40,9 @@ description: "hwlocality_linux_libnuma_bitmask – Interoperability with Linux l
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> newly allocated struct bitmask.</dl>
+</dt><dd> newly allocated struct bitmask.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

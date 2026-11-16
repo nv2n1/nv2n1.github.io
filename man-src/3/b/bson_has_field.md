@@ -16,11 +16,11 @@ bool bson_has_field(const bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> A string containing the name of the field to check for.</dl>
+<dt><code>key</code></dt>
+<dd> A string containing the name of the field to check for.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Checks to see if key contains an element named <code>key</code> \&amp;. This also accepts &quot;dotkey&quot; notation such as &quot;a.b.c.d&quot;. </p>
 <h2>RETURNS</h2>

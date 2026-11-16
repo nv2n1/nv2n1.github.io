@@ -11,7 +11,6 @@ std::dynamic_extent - std::dynamic_extent
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;span&gt;
-
 inline constexpr std::size_t dynamic_extent = std::numeric_limits&lt;std::size_t&gt;::max();  (since C++20)</code></pre> 
 std::dynamic_extent is a constant of type std::size_t that is used to differentiate std::span of static and dynamic extent. 
 

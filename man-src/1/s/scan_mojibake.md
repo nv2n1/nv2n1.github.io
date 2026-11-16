@@ -56,7 +56,7 @@ $ scan_mojibake bin / lib / t/*.t
 
 <dl>
 <dt>&bull;
-<dd> Test::Mojibake</dl>
+</dt><dd> Test::Mojibake</dd></dl>
 
 <h2>AUTHOR</h2>
 

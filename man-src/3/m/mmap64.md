@@ -21,69 +21,69 @@ description: "mmap, munmap – map or unmap files or devices into memory"
 <p> After the <code>mmap</code>() call has returned, the file descriptor, <i>fd</i>, can be closed immediately without invalidating the mapping. </p>
 <p> The <i>prot</i> argument describes the desired memory protection of the mapping (and must not conflict with the open mode of the file). It is either <code>PROT_NONE</code> or the bitwise OR of one or more of the following flags:</p>
 <dl COMPACT>
-<dt><code>PROT_EXEC</code></p>
-<dd>Pages may be executed.</p>
-<dt><code>PROT_READ</code></p>
-<dd>Pages may be read.</p>
-<dt><code>PROT_WRITE</code></p>
-<dd>Pages may be written.</p>
-<dt><code>PROT_NONE</code></p>
-<dd>Pages may not be accessed.</dl>
+<dt><code>PROT_EXEC</code></dt>
+<dd>Pages may be executed.</dd>
+<dt><code>PROT_READ</code></dt>
+<dd>Pages may be read.</dd>
+<dt><code>PROT_WRITE</code></dt>
+<dd>Pages may be written.</dd>
+<dt><code>PROT_NONE</code></dt>
+<dd>Pages may not be accessed.</dd></dl>
 <h3>The flags argument</h3>
 <p>The <i>flags</i> argument determines whether updates to the mapping are visible to other processes mapping the same region, and whether updates are carried through to the underlying file. This behavior is determined by including exactly one of the following values in <i>flags</i>:</p>
 <dl COMPACT>
-<dt><code>MAP_SHARED</code></p>
-<dd>Share this mapping. Updates to the mapping are visible to other processes mapping the same region, and (in the case of file-backed mappings) are carried through to the underlying file. (To precisely control when updates are carried through to the underlying file requires the use of <code><a href="/docs/linux/man/2-msync/">msync</a></code>(2).)</p>
-<dt><code>MAP_SHARED_VALIDATE</code> (since Linux 4.15)</p>
-<dd>This flag provides the same behavior as <code>MAP_SHARED</code> except that <code>MAP_SHARED</code> mappings ignore unknown flags in <i>flags</i>. By contrast, when creating a mapping using <code>MAP_SHARED_VALIDATE</code>, the kernel verifies all passed flags are known and fails the mapping with the error <code>EOPNOTSUPP</code> for unknown flags. This mapping type is also required to be able to use some mapping flags (e.g., <code>MAP_SYNC</code>).</p>
-<dt><code>MAP_PRIVATE</code></p>
-<dd>Create a private copy-on-write mapping. Updates to the mapping are not visible to other processes mapping the same file, and are not carried through to the underlying file. It is unspecified whether changes made to the file after the <code>mmap</code>() call are visible in the mapped region.</dl>
+<dt><code>MAP_SHARED</code></dt>
+<dd>Share this mapping. Updates to the mapping are visible to other processes mapping the same region, and (in the case of file-backed mappings) are carried through to the underlying file. (To precisely control when updates are carried through to the underlying file requires the use of <code><a href="/docs/linux/man/2-msync/">msync</a></code>(2).)</dd>
+<dt><code>MAP_SHARED_VALIDATE</code> (since Linux 4.15)</dt>
+<dd>This flag provides the same behavior as <code>MAP_SHARED</code> except that <code>MAP_SHARED</code> mappings ignore unknown flags in <i>flags</i>. By contrast, when creating a mapping using <code>MAP_SHARED_VALIDATE</code>, the kernel verifies all passed flags are known and fails the mapping with the error <code>EOPNOTSUPP</code> for unknown flags. This mapping type is also required to be able to use some mapping flags (e.g., <code>MAP_SYNC</code>).</dd>
+<dt><code>MAP_PRIVATE</code></dt>
+<dd>Create a private copy-on-write mapping. Updates to the mapping are not visible to other processes mapping the same file, and are not carried through to the underlying file. It is unspecified whether changes made to the file after the <code>mmap</code>() call are visible in the mapped region.</dd></dl>
 <p> Both <code>MAP_SHARED</code> and <code>MAP_PRIVATE</code> are described in POSIX.1-2001 and POSIX.1-2008. <code>MAP_SHARED_VALIDATE</code> is a Linux extension. </p>
 <p> In addition, zero or more of the following values can be ORed in <i>flags</i>:</p>
 <dl COMPACT>
-<dt><code>MAP_32BIT</code> (since Linux 2.4.20, 2.6)</p>
-<dd>Put the mapping into the first 2 Gigabytes of the process address space. This flag is supported only on x86-64, for 64-bit programs. It was added to allow thread stacks to be allocated somewhere in the first 2 GB of memory, so as to improve context-switch performance on some early 64-bit processors. Modern x86-64 processors no longer have this performance problem, so use of this flag is not required on those systems. The <code>MAP_32BIT</code> flag is ignored when <code>MAP_FIXED</code> is set.</p>
-<dt><code>MAP_ANON</code></p>
-<dd>Synonym for <code>MAP_ANONYMOUS</code>; provided for compatibility with other implementations.</p>
-<dt><code>MAP_ANONYMOUS</code></p>
-<dd>The mapping is not backed by any file; its contents are initialized to zero. The <i>fd</i> argument is ignored; however, some implementations require <i>fd</i> to be -1 if <code>MAP_ANONYMOUS</code> (or <code>MAP_ANON</code>) is specified, and portable applications should ensure this. The <i>offset</i> argument should be zero. The use of <code>MAP_ANONYMOUS</code> in conjunction with <code>MAP_SHARED</code> is supported on Linux only since kernel 2.4.</p>
-<dt><code>MAP_DENYWRITE</code></p>
-<dd>This flag is ignored. (Long ago&#8212;Linux 2.0 and earlier&#8212;it signaled that attempts to write to the underlying file should fail with <code>ETXTBSY</code>. But this was a source of denial-of-service attacks.)</p>
-<dt><code>MAP_EXECUTABLE</code></p>
-<dd>This flag is ignored.</p>
-<dt><code>MAP_FILE</code></p>
-<dd>Compatibility flag. Ignored.</p>
-<dt><code>MAP_FIXED</code></p>
-<dd>Don&#8217;t interpret <i>addr</i> as a hint: place the mapping at exactly that address. <i>addr</i> must be suitably aligned: for most architectures a multiple of the page size is sufficient; however, some architectures may impose additional restrictions. If the memory region specified by <i>addr</i> and <i>len</i> overlaps pages of any existing mapping(s), then the overlapped part of the existing mapping(s) will be discarded. If the specified address cannot be used, <code>mmap</code>() will fail.</p>
-<dd>Software that aspires to be portable should use the <code>MAP_FIXED</code> flag with care, keeping in mind that the exact layout of a process&#8217;s memory mappings is allowed to change significantly between kernel versions, C library versions, and operating system releases. <i>Carefully read the discussion of this flag in NOTES!</i></p>
-<dt><code>MAP_FIXED_NOREPLACE</code> (since Linux 4.17)</p>
-<dd>This flag provides behavior that is similar to <code>MAP_FIXED</code> with respect to the <i>addr</i> enforcement, but differs in that <code>MAP_FIXED_NOREPLACE</code> never clobbers a preexisting mapped range. If the requested range would collide with an existing mapping, then this call fails with the error <code>EEXIST.</code> This flag can therefore be used as a way to atomically (with respect to other threads) attempt to map an address range: one thread will succeed; all others will report failure.</p>
-<dd>Note that older kernels which do not recognize the <code>MAP_FIXED_NOREPLACE</code> flag will typically (upon detecting a collision with a preexisting mapping) fall back to a &quot;non-<code>MAP_FIXED</code>&quot; type of behavior: they will return an address that is different from the requested address. Therefore, backward-compatible software should check the returned address against the requested address.</p>
-<dt><code>MAP_GROWSDOWN</code></p>
-<dd>This flag is used for stacks. It indicates to the kernel virtual memory system that the mapping should extend downward in memory. The return address is one page lower than the memory area that is actually created in the process&#8217;s virtual address space. Touching an address in the &quot;guard&quot; page below the mapping will cause the mapping to grow by a page. This growth can be repeated until the mapping grows to within a page of the high end of the next lower mapping, at which point touching the &quot;guard&quot; page will result in a <code>SIGSEGV</code> signal.</p>
-<dt><code>MAP_HUGETLB</code> (since Linux 2.6.32)</p>
-<dd>Allocate the mapping using &quot;huge pages.&quot; See the Linux kernel source file <i>Documentation/admin-guide/mm/hugetlbpage.rst</i> for further information, as well as NOTES, below.</p>
-<dt><code>MAP_HUGE_2MB</code>, <code>MAP_HUGE_1GB</code> (since Linux 3.8)</p>
-<dd>Used in conjunction with <code>MAP_HUGETLB</code> to select alternative hugetlb page sizes (respectively, 2 MB and 1 GB) on systems that support multiple hugetlb page sizes.</p>
-<dd>More generally, the desired huge page size can be configured by encoding the base-2 logarithm of the desired page size in the six bits at the offset <code>MAP_HUGE_SHIFT</code>. (A value of zero in this bit field provides the default huge page size; the default huge page size can be discovered via the <i>Hugepagesize</i> field exposed by <i>/proc/meminfo</i>.) Thus, the above two constants are defined as:</p>
-<dd>#define MAP_HUGE_2MB (21 &lt;&lt; MAP_HUGE_SHIFT) #define MAP_HUGE_1GB (30 &lt;&lt; MAP_HUGE_SHIFT)</p>
-<dd>The range of huge page sizes that are supported by the system can be discovered by listing the subdirectories in <i>/sys/kernel/mm/hugepages</i>.</p>
-<dt><code>MAP_LOCKED</code> (since Linux 2.5.37)</p>
-<dd>Mark the mapped region to be locked in the same way as <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2). This implementation will try to populate (prefault) the whole range but the <code>mmap</code>() call doesn&#8217;t fail with <code>ENOMEM</code> if this fails. Therefore major faults might happen later on. So the semantic is not as strong as <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2). One should use <code>mmap</code>() plus <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2) when major faults are not acceptable after the initialization of the mapping. The <code>MAP_LOCKED</code> flag is ignored in older kernels.</p>
-<dt><code>MAP_NONBLOCK</code> (since Linux 2.5.46)</p>
-<dd>This flag is meaningful only in conjunction with <code>MAP_POPULATE</code>. Don&#8217;t perform read-ahead: create page tables entries only for pages that are already present in RAM. Since Linux 2.6.23, this flag causes <code>MAP_POPULATE</code> to do nothing. One day, the combination of <code>MAP_POPULATE</code> and <code>MAP_NONBLOCK</code> may be reimplemented.</p>
-<dt><code>MAP_NORESERVE</code></p>
-<dd>Do not reserve swap space for this mapping. When swap space is reserved, one has the guarantee that it is possible to modify the mapping. When swap space is not reserved one might get <code>SIGSEGV</code> upon a write if no physical memory is available. See also the discussion of the file <i>/proc/sys/vm/overcommit_memory</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5). In kernels before 2.6, this flag had effect only for private writable mappings.</p>
-<dt><code>MAP_POPULATE</code> (since Linux 2.5.46)</p>
-<dd>Populate (prefault) page tables for a mapping. For a file mapping, this causes read-ahead on the file. This will help to reduce blocking on page faults later. <code>MAP_POPULATE</code> is supported for private mappings only since Linux 2.6.23.</p>
-<dt><code>MAP_STACK</code> (since Linux 2.6.27)</p>
-<dd>Allocate the mapping at an address suitable for a process or thread stack.</p>
-<dd>This flag is currently a no-op on Linux. However, by employing this flag, applications can ensure that they transparently obtain support if the flag is implemented in the future. Thus, it is used in the glibc threading implementation to allow for the fact that some architectures may (later) require special treatment for stack allocations. A further reason to employ this flag is portability: <code>MAP_STACK</code> exists (and has an effect) on some other systems (e.g., some of the BSDs).</p>
-<dt><code>MAP_SYNC</code> (since Linux 4.15)</p>
-<dd>This flag is available only with the <code>MAP_SHARED_VALIDATE</code> mapping type; mappings of type <code>MAP_SHARED</code> will silently ignore this flag. This flag is supported only for files supporting DAX (direct mapping of persistent memory). For other files, creating a mapping with this flag results in an <code>EOPNOTSUPP</code> error.</p>
-<dd>Shared file mappings with this flag provide the guarantee that while some memory is mapped writable in the address space of the process, it will be visible in the same file at the same offset even after the system crashes or is rebooted. In conjunction with the use of appropriate CPU instructions, this provides users of such mappings with a more efficient way of making data modifications persistent.</p>
-<dt><code>MAP_UNINITIALIZED</code> (since Linux 2.6.33)</p>
-<dd>Don&#8217;t clear anonymous pages. This flag is intended to improve performance on embedded devices. This flag is honored only if the kernel was configured with the <code>CONFIG_MMAP_ALLOW_UNINITIALIZED</code> option. Because of the security implications, that option is normally enabled only on embedded devices (i.e., devices where one has complete control of the contents of user memory).</dl>
+<dt><code>MAP_32BIT</code> (since Linux 2.4.20, 2.6)</dt>
+<dd>Put the mapping into the first 2 Gigabytes of the process address space. This flag is supported only on x86-64, for 64-bit programs. It was added to allow thread stacks to be allocated somewhere in the first 2 GB of memory, so as to improve context-switch performance on some early 64-bit processors. Modern x86-64 processors no longer have this performance problem, so use of this flag is not required on those systems. The <code>MAP_32BIT</code> flag is ignored when <code>MAP_FIXED</code> is set.</dd>
+<dt><code>MAP_ANON</code></dt>
+<dd>Synonym for <code>MAP_ANONYMOUS</code>; provided for compatibility with other implementations.</dd>
+<dt><code>MAP_ANONYMOUS</code></dt>
+<dd>The mapping is not backed by any file; its contents are initialized to zero. The <i>fd</i> argument is ignored; however, some implementations require <i>fd</i> to be -1 if <code>MAP_ANONYMOUS</code> (or <code>MAP_ANON</code>) is specified, and portable applications should ensure this. The <i>offset</i> argument should be zero. The use of <code>MAP_ANONYMOUS</code> in conjunction with <code>MAP_SHARED</code> is supported on Linux only since kernel 2.4.</dd>
+<dt><code>MAP_DENYWRITE</code></dt>
+<dd>This flag is ignored. (Long ago&#8212;Linux 2.0 and earlier&#8212;it signaled that attempts to write to the underlying file should fail with <code>ETXTBSY</code>. But this was a source of denial-of-service attacks.)</dd>
+<dt><code>MAP_EXECUTABLE</code></dt>
+<dd>This flag is ignored.</dd>
+<dt><code>MAP_FILE</code></dt>
+<dd>Compatibility flag. Ignored.</dd>
+<dt><code>MAP_FIXED</code></dt>
+<dd>Don&#8217;t interpret <i>addr</i> as a hint: place the mapping at exactly that address. <i>addr</i> must be suitably aligned: for most architectures a multiple of the page size is sufficient; however, some architectures may impose additional restrictions. If the memory region specified by <i>addr</i> and <i>len</i> overlaps pages of any existing mapping(s), then the overlapped part of the existing mapping(s) will be discarded. If the specified address cannot be used, <code>mmap</code>() will fail.</dd>
+<dd>Software that aspires to be portable should use the <code>MAP_FIXED</code> flag with care, keeping in mind that the exact layout of a process&#8217;s memory mappings is allowed to change significantly between kernel versions, C library versions, and operating system releases. <i>Carefully read the discussion of this flag in NOTES!</i></dd>
+<dt><code>MAP_FIXED_NOREPLACE</code> (since Linux 4.17)</dt>
+<dd>This flag provides behavior that is similar to <code>MAP_FIXED</code> with respect to the <i>addr</i> enforcement, but differs in that <code>MAP_FIXED_NOREPLACE</code> never clobbers a preexisting mapped range. If the requested range would collide with an existing mapping, then this call fails with the error <code>EEXIST.</code> This flag can therefore be used as a way to atomically (with respect to other threads) attempt to map an address range: one thread will succeed; all others will report failure.</dd>
+<dd>Note that older kernels which do not recognize the <code>MAP_FIXED_NOREPLACE</code> flag will typically (upon detecting a collision with a preexisting mapping) fall back to a &quot;non-<code>MAP_FIXED</code>&quot; type of behavior: they will return an address that is different from the requested address. Therefore, backward-compatible software should check the returned address against the requested address.</dd>
+<dt><code>MAP_GROWSDOWN</code></dt>
+<dd>This flag is used for stacks. It indicates to the kernel virtual memory system that the mapping should extend downward in memory. The return address is one page lower than the memory area that is actually created in the process&#8217;s virtual address space. Touching an address in the &quot;guard&quot; page below the mapping will cause the mapping to grow by a page. This growth can be repeated until the mapping grows to within a page of the high end of the next lower mapping, at which point touching the &quot;guard&quot; page will result in a <code>SIGSEGV</code> signal.</dd>
+<dt><code>MAP_HUGETLB</code> (since Linux 2.6.32)</dt>
+<dd>Allocate the mapping using &quot;huge pages.&quot; See the Linux kernel source file <i>Documentation/admin-guide/mm/hugetlbpage.rst</i> for further information, as well as NOTES, below.</dd>
+<dt><code>MAP_HUGE_2MB</code>, <code>MAP_HUGE_1GB</code> (since Linux 3.8)</dt>
+<dd>Used in conjunction with <code>MAP_HUGETLB</code> to select alternative hugetlb page sizes (respectively, 2 MB and 1 GB) on systems that support multiple hugetlb page sizes.</dd>
+<dd>More generally, the desired huge page size can be configured by encoding the base-2 logarithm of the desired page size in the six bits at the offset <code>MAP_HUGE_SHIFT</code>. (A value of zero in this bit field provides the default huge page size; the default huge page size can be discovered via the <i>Hugepagesize</i> field exposed by <i>/proc/meminfo</i>.) Thus, the above two constants are defined as:</dd>
+<dd>#define MAP_HUGE_2MB (21 &lt;&lt; MAP_HUGE_SHIFT) #define MAP_HUGE_1GB (30 &lt;&lt; MAP_HUGE_SHIFT)</dd>
+<dd>The range of huge page sizes that are supported by the system can be discovered by listing the subdirectories in <i>/sys/kernel/mm/hugepages</i>.</dd>
+<dt><code>MAP_LOCKED</code> (since Linux 2.5.37)</dt>
+<dd>Mark the mapped region to be locked in the same way as <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2). This implementation will try to populate (prefault) the whole range but the <code>mmap</code>() call doesn&#8217;t fail with <code>ENOMEM</code> if this fails. Therefore major faults might happen later on. So the semantic is not as strong as <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2). One should use <code>mmap</code>() plus <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2) when major faults are not acceptable after the initialization of the mapping. The <code>MAP_LOCKED</code> flag is ignored in older kernels.</dd>
+<dt><code>MAP_NONBLOCK</code> (since Linux 2.5.46)</dt>
+<dd>This flag is meaningful only in conjunction with <code>MAP_POPULATE</code>. Don&#8217;t perform read-ahead: create page tables entries only for pages that are already present in RAM. Since Linux 2.6.23, this flag causes <code>MAP_POPULATE</code> to do nothing. One day, the combination of <code>MAP_POPULATE</code> and <code>MAP_NONBLOCK</code> may be reimplemented.</dd>
+<dt><code>MAP_NORESERVE</code></dt>
+<dd>Do not reserve swap space for this mapping. When swap space is reserved, one has the guarantee that it is possible to modify the mapping. When swap space is not reserved one might get <code>SIGSEGV</code> upon a write if no physical memory is available. See also the discussion of the file <i>/proc/sys/vm/overcommit_memory</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5). In kernels before 2.6, this flag had effect only for private writable mappings.</dd>
+<dt><code>MAP_POPULATE</code> (since Linux 2.5.46)</dt>
+<dd>Populate (prefault) page tables for a mapping. For a file mapping, this causes read-ahead on the file. This will help to reduce blocking on page faults later. <code>MAP_POPULATE</code> is supported for private mappings only since Linux 2.6.23.</dd>
+<dt><code>MAP_STACK</code> (since Linux 2.6.27)</dt>
+<dd>Allocate the mapping at an address suitable for a process or thread stack.</dd>
+<dd>This flag is currently a no-op on Linux. However, by employing this flag, applications can ensure that they transparently obtain support if the flag is implemented in the future. Thus, it is used in the glibc threading implementation to allow for the fact that some architectures may (later) require special treatment for stack allocations. A further reason to employ this flag is portability: <code>MAP_STACK</code> exists (and has an effect) on some other systems (e.g., some of the BSDs).</dd>
+<dt><code>MAP_SYNC</code> (since Linux 4.15)</dt>
+<dd>This flag is available only with the <code>MAP_SHARED_VALIDATE</code> mapping type; mappings of type <code>MAP_SHARED</code> will silently ignore this flag. This flag is supported only for files supporting DAX (direct mapping of persistent memory). For other files, creating a mapping with this flag results in an <code>EOPNOTSUPP</code> error.</dd>
+<dd>Shared file mappings with this flag provide the guarantee that while some memory is mapped writable in the address space of the process, it will be visible in the same file at the same offset even after the system crashes or is rebooted. In conjunction with the use of appropriate CPU instructions, this provides users of such mappings with a more efficient way of making data modifications persistent.</dd>
+<dt><code>MAP_UNINITIALIZED</code> (since Linux 2.6.33)</dt>
+<dd>Don&#8217;t clear anonymous pages. This flag is intended to improve performance on embedded devices. This flag is honored only if the kernel was configured with the <code>CONFIG_MMAP_ALLOW_UNINITIALIZED</code> option. Because of the security implications, that option is normally enabled only on embedded devices (i.e., devices where one has complete control of the contents of user memory).</dd></dl>
 <p> Of the above flags, only <code>MAP_FIXED</code> is specified in POSIX.1-2001 and POSIX.1-2008. However, most systems also support <code>MAP_ANONYMOUS</code> (or its synonym <code>MAP_ANON</code>).</p>
 <h3>munmap()</h3>
 <p>The <code>munmap</code>() system call deletes the mappings for the specified address range, and causes further references to addresses within the range to generate invalid memory references. The region is also automatically unmapped when the process is terminated. On the other hand, closing the file descriptor does not unmap the region. </p>
@@ -93,44 +93,44 @@ description: "mmap, munmap – map or unmap files or devices into memory"
 <p> On success, <code>munmap</code>() returns 0. On failure, it returns -1, and <i>errno</i> is set to indicate the cause of the error (probably to <code>EINVAL</code>).</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EACCES</code></p>
-<dd>A file descriptor refers to a non-regular file. Or a file mapping was requested, but <i>fd</i> is not open for reading. Or <code>MAP_SHARED</code> was requested and <code>PROT_WRITE</code> is set, but <i>fd</i> is not open in read/write (<code>O_RDWR</code>) mode. Or <code>PROT_WRITE</code> is set, but the file is append-only.</p>
-<dt><code>EAGAIN</code></p>
-<dd>The file has been locked, or too much memory has been locked (see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)).</p>
-<dt><code>EBADF</code></p>
-<dd><i>fd</i> is not a valid file descriptor (and <code>MAP_ANONYMOUS</code> was not set).</p>
-<dt><code>EEXIST</code></p>
-<dd><code>MAP_FIXED_NOREPLACE</code> was specified in <i>flags</i>, and the range covered by <i>addr</i> and <i>length</i> clashes with an existing mapping.</p>
-<dt><code>EINVAL</code></p>
-<dd>We don&#8217;t like <i>addr</i>, <i>length</i>, or <i>offset</i> (e.g., they are too large, or not aligned on a page boundary).</p>
-<dt><code>EINVAL</code></p>
-<dd>(since Linux 2.6.12) <i>length</i> was 0.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>flags</i> contained none of <code>MAP_PRIVATE</code>, <code>MAP_SHARED</code> or <code>MAP_SHARED_VALIDATE</code>.</p>
-<dt><code>ENFILE</code></p>
-<dd>The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENODEV</code></p>
-<dd>The underlying filesystem of the specified file does not support memory mapping.</p>
-<dt><code>ENOMEM</code></p>
-<dd>No memory is available.</p>
-<dt><code>ENOMEM</code></p>
-<dd>The process&#8217;s maximum number of mappings would have been exceeded. This error can also occur for <code>munmap</code>(), when unmapping a region in the middle of an existing mapping, since this results in two smaller mappings on either side of the region being unmapped.</p>
-<dt><code>ENOMEM</code></p>
-<dd>(since Linux 4.7) The process&#8217;s <code>RLIMIT_DATA</code> limit, described in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2), would have been exceeded.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd>On 32-bit architecture together with the large file extension (i.e., using 64-bit <i>off_t</i>): the number of pages used for <i>length</i> plus number of pages used for <i>offset</i> would overflow <i>unsigned long</i> (32 bits).</p>
-<dt><code>EPERM</code></p>
-<dd>The <i>prot</i> argument asks for <code>PROT_EXEC</code> but the mapped area belongs to a file on a filesystem that was mounted no-exec.</p>
-<dt><code>EPERM</code></p>
-<dd>The operation was prevented by a file seal; see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</p>
-<dt><code>ETXTBSY</code></p>
-<dd><code>MAP_DENYWRITE</code> was set but the object specified by <i>fd</i> is open for writing.</dl>
+<dt><code>EACCES</code></dt>
+<dd>A file descriptor refers to a non-regular file. Or a file mapping was requested, but <i>fd</i> is not open for reading. Or <code>MAP_SHARED</code> was requested and <code>PROT_WRITE</code> is set, but <i>fd</i> is not open in read/write (<code>O_RDWR</code>) mode. Or <code>PROT_WRITE</code> is set, but the file is append-only.</dd>
+<dt><code>EAGAIN</code></dt>
+<dd>The file has been locked, or too much memory has been locked (see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)).</dd>
+<dt><code>EBADF</code></dt>
+<dd><i>fd</i> is not a valid file descriptor (and <code>MAP_ANONYMOUS</code> was not set).</dd>
+<dt><code>EEXIST</code></dt>
+<dd><code>MAP_FIXED_NOREPLACE</code> was specified in <i>flags</i>, and the range covered by <i>addr</i> and <i>length</i> clashes with an existing mapping.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>We don&#8217;t like <i>addr</i>, <i>length</i>, or <i>offset</i> (e.g., they are too large, or not aligned on a page boundary).</dd>
+<dt><code>EINVAL</code></dt>
+<dd>(since Linux 2.6.12) <i>length</i> was 0.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>flags</i> contained none of <code>MAP_PRIVATE</code>, <code>MAP_SHARED</code> or <code>MAP_SHARED_VALIDATE</code>.</dd>
+<dt><code>ENFILE</code></dt>
+<dd>The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENODEV</code></dt>
+<dd>The underlying filesystem of the specified file does not support memory mapping.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>No memory is available.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>The process&#8217;s maximum number of mappings would have been exceeded. This error can also occur for <code>munmap</code>(), when unmapping a region in the middle of an existing mapping, since this results in two smaller mappings on either side of the region being unmapped.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>(since Linux 4.7) The process&#8217;s <code>RLIMIT_DATA</code> limit, described in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2), would have been exceeded.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd>On 32-bit architecture together with the large file extension (i.e., using 64-bit <i>off_t</i>): the number of pages used for <i>length</i> plus number of pages used for <i>offset</i> would overflow <i>unsigned long</i> (32 bits).</dd>
+<dt><code>EPERM</code></dt>
+<dd>The <i>prot</i> argument asks for <code>PROT_EXEC</code> but the mapped area belongs to a file on a filesystem that was mounted no-exec.</dd>
+<dt><code>EPERM</code></dt>
+<dd>The operation was prevented by a file seal; see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</dd>
+<dt><code>ETXTBSY</code></dt>
+<dd><code>MAP_DENYWRITE</code> was set but the object specified by <i>fd</i> is open for writing.</dd></dl>
 <p> Use of a mapped region can result in these signals:</p>
 <dl COMPACT>
-<dt><code>SIGSEGV</code></p>
-<dd>Attempted write into a region mapped as read-only.</p>
-<dt><code>SIGBUS</code></p>
-<dd>Attempted access to a page of the buffer that lies beyond the end of the mapped file. For an explanation of the treatment of the bytes in the page that corresponds to the end of a mapped file that is not a multiple of the page size, see NOTES.</dl>
+<dt><code>SIGSEGV</code></dt>
+<dd>Attempted write into a region mapped as read-only.</dd>
+<dt><code>SIGBUS</code></dt>
+<dd>Attempted access to a page of the buffer that lies beyond the end of the mapped file. For an explanation of the treatment of the bytes in the page that corresponds to the end of a mapped file that is not a multiple of the page size, see NOTES.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

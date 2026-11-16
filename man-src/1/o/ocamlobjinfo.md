@@ -16,7 +16,7 @@ description: "ocamlobjinfo – dump information about OCaml compiled objects"
 <p> <code>ocamlobjinfo</code> is able to show information regarding: </p>
 <dl>
 <dt>
-<dd> module names </p>
+</dt><dd> module names </dd>
 <p> unit names </p>
 <p> declared primitives </p>
 <p> imported interfaces </p>
@@ -31,3 +31,4 @@ description: "ocamlobjinfo – dump information about OCaml compiled objects"
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefano Zacchiroli &lt;zack [at] debian.org&gt; and Stéphane Glondu &lt;glondu [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
 <h2>Index</h2>
+</p>

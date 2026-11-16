@@ -11,33 +11,19 @@ std::atomic_fetch_add,std::atomic_fetch_add_explicit - std::atomic_fetch_add,std
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;atomic&gt;
-
 template&lt; class T &gt;
-
 T atomic_fetch_add( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg ) noexcept;
-
 template&lt; class T &gt;
-
 T atomic_fetch_add( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg ) noexcept;
-
 template&lt; class T &gt;                                        (1)
-
 T atomic_fetch_add_explicit( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg,
-
 std::memory_order order ) noexcept;                            (2)
-
 template&lt; class T &gt;
-
 T atomic_fetch_add_explicit( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg,
-
 std::memory_order order ) noexcept;</code></pre> 
 Performs atomic addition. Atomically adds arg to the value pointed to by obj and returns the value obj held previously. The operation is performed as if the following was executed: 
 1) obj-&gt;fetch_add(arg) 
@@ -65,32 +51,20 @@ The value immediately preceding the effects of this function in the modification
 
 Single-writer/multiple-reader lock can be made with fetch_add. Note that this simplistic implementation is not lockout-free 
  // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;atomic&gt;
-
 #include &lt;chrono&gt;
 // meaning of cnt:
-
 // 5: there are no active readers or writers.
-
 // 1...4: there are 4...1 readers active, The writer is blocked
-
 // 0: temporary value between fetch_sub and fetch_add in reader lock
-
 // -1: there is a writer active. The readers are blocked.
-
 const int N = 5; // four concurrent readers are allowed
-
 std::atomic&lt;int&gt; cnt(N);
 std::vector&lt;int&gt; data;
 void reader(int id)
-
 {
     for (;;) {
         // lock
@@ -108,7 +82,6 @@ void reader(int id)
     }
 }
 void writer()
-
 {
     for (int n = 0; n &lt; 25; ++n) {
         // lock
@@ -124,7 +97,6 @@ void writer()
     }
 }
 int main()
-
 {
     std::vector&lt;std::thread&gt; v;
     for (int n = 0; n &lt; N; ++n) {

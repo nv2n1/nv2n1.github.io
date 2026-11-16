@@ -15,6 +15,6 @@ description: "SPI_copytuple – make a copy of a row in the upper executor conte
 <h2>Arguments</h2>
 <p>HeapTuple <i>row</i></p>
 <dl COMPACT>
-<dd>row to be copied</dl>
+<dd>row to be copied</dd></dl>
 <h2>Return Value</h2>
 <p>the copied row; NULL only if <i>tuple</i> is NULL</p>

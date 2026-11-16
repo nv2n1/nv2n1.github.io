@@ -30,7 +30,7 @@ description: "src/antlr3treeparser.c –"
 <h3>ANTLR3_API void antlr3MTNExceptionNew (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)</h3>
 <p>Creates a new Mismatched Tree Nde Exception and inserts in the recognizer exception stack. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>recognizer</i> Context pointer for this recognizer</dl>
+<dd><i>recognizer</i> Context pointer for this recognizer</dd></dl>
 <p> References ANTLR3_MISMATCHED_TREE_NODE_EXCEPTION, ANTLR3_MISMATCHED_TREE_NODE_NAME, antlr3RecognitionExceptionNew(), ANTLR3_RECOGNIZER_SHARED_STATE_struct::exception, ANTLR3_EXCEPTION_struct::name, ANTLR3_BASE_RECOGNIZER_struct::state, and ANTLR3_EXCEPTION_struct::type. </p>
 <p> Referenced by antlr3TreeParserNewStream().</p>
 <h3>ANTLR3_API <code>pANTLR3_TREE_PARSER</code> antlr3TreeParserNewStream (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctnstream, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state)</h3>

@@ -14,12 +14,12 @@ description: "gnutls_dh_params_import_raw – API function"
 <p> <code>int gnutls_dh_params_import_raw(gnutls_dh_params_t </code><i>dh_params</i><code>, const gnutls_datum_t * </code><i>prime</i><code>, const gnutls_datum_t * </code><i>generator</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_dh_params_t dh_params</p>
-<dd> Is a structure that will hold the prime numbers</p>
-<dt>const gnutls_datum_t * prime</p>
-<dd> holds the new prime</p>
-<dt>const gnutls_datum_t * generator</p>
-<dd> holds the new generator</dl>
+<dt>gnutls_dh_params_t dh_params</dt>
+<dd> Is a structure that will hold the prime numbers</dd>
+<dt>const gnutls_datum_t * prime</dt>
+<dd> holds the new prime</dd>
+<dt>const gnutls_datum_t * generator</dt>
+<dd> holds the new generator</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will replace the pair of prime and generator for use in the Diffie-Hellman key exchange. The new parameters should be stored in the appropriate gnutls_datum.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_dh_params_import_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

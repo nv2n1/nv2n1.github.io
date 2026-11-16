@@ -12,7 +12,6 @@ std::initializer_list&lt;T&gt;::begin - std::initializer_list&lt;T&gt;::begin
 
 <pre><code>const T *begin() const noexcept;
 (since C++ 11)(until C++ 14)
-
     constexpr const T *begin() const noexcept;
 (since C++ 14)</code></pre> 
 Returns a pointer to the first element in the initializer list. 

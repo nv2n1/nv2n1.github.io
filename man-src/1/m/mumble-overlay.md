@@ -16,13 +16,13 @@ description: "mumble-overlay – load OpenGL overlay for Mumble."
 <p> Nothing will be shown unless you have Mumble running and it is currently connected to a server.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>MUMBLE_OVERLAY_DEBUG</code></p>
-<dd> If this environment variable is set, extended debugging will be output to standard output. Only useful for debugging.</dl>
+<dt><code>MUMBLE_OVERLAY_DEBUG</code></dt>
+<dd> If this environment variable is set, extended debugging will be output to standard output. Only useful for debugging.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> To run glxgears with the mumble-overlay active:</p>
 <dl>
 <dt>
-<dd> mumble-overlay glxgears</dl>
+</dt><dd> mumble-overlay glxgears</dd></dl>
 <h2>NOTES</h2>
 <p> This will only work with OpenGL drivers which support the full OpenGL and GLX specifications.</p>
 <h2>SEE ALSO</h2>

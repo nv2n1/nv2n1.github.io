@@ -17,8 +17,8 @@ description: "fanotify – monitoring filesystem events"
 <h3>Reading fanotify events</h3>
 <p>Calling <code><a href="/docs/linux/man/2-read/">read</a></code>(2) for the file descriptor returned by <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2) blocks (if the flag <code>FAN_NONBLOCK</code> is not specified in the call to <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2)) until either a file event occurs or the call is interrupted by a signal (see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)). The use of one of the flags <code>FAN_REPORT_FID</code>, <code>FAN_REPORT_DIR_FID</code> in <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2) influences what data structures are returned to the event listener for each event. Events reported to a group initialized with one of these flags will use file handles to identify filesystem objects instead of file descriptors.</p>
 <dl>
-<dt>After a successful</p>
-<dd><code><a href="/docs/linux/man/2-read/">read</a></code>(2), the read buffer contains one or more of the following structures:</dl>
+<dt>After a successful</dt>
+<dd><code><a href="/docs/linux/man/2-read/">read</a></code>(2), the read buffer contains one or more of the following structures:</dd></dl>
 <pre><code>struct fanotify_event_metadata {
     __u32 event_len;
     __u8 vers;
@@ -39,89 +39,89 @@ struct fanotify_event_info_fid {<br />
     unsigned char file_handle[0];<br />
 }; For performance reasons, it is recommended to use a large buffer size (for example, 4096 bytes), so that multiple events can be retrieved by a single <code><a href="/docs/linux/man/2-read/">read</a></code>(2). The return value of <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is the number of bytes placed in the buffer, or -1 in case of an error (but see BUGS). The fields of the <i>fanotify_event_metadata</i> structure are as follows:</p>
 <dl>
-<dt><i>event_len</i></p>
-<dd>This is the length of the data for the current event and the offset to the next event in the buffer. Unless the group identifies filesystem objects by file handles, the value of <i>event_len</i> is always <code>FAN_EVENT_METADATA_LEN</code>. For a group that identifies filesystem objects by file handles, <i>event_len</i> also includes the variable length file identifier records.</p>
-<dt><i>vers</i></p>
-<dd>This field holds a version number for the structure. It must be compared to <code>FANOTIFY_METADATA_VERSION</code> to verify that the structures returned at run time match the structures defined at compile time. In case of a mismatch, the application should abandon trying to use the fanotify file descriptor.</p>
-<dt><i>reserved</i></p>
-<dd>This field is not used.</p>
-<dt><i>metadata_len</i></p>
-<dd>This is the length of the structure. The field was introduced to facilitate the implementation of optional headers per event type. No such optional headers exist in the current implementation.</p>
-<dt><i>mask</i></p>
-<dd>This is a bit mask describing the event (see below).</p>
-<dt><i>fd</i></p>
-<dd>This is an open file descriptor for the object being accessed, or <code>FAN_NOFD</code> if a queue overflow occurred. With an fanotify group that identifies filesystem objects by file handles, applications should expect this value to be set to <code>FAN_NOFD</code> for each event that is received. The file descriptor can be used to access the contents of the monitored file or directory. The reading application is responsible for closing this file descriptor.</p>
-<dd>When calling <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2), the caller may specify (via the <i>event_f_flags</i> argument) various file status flags that are to be set on the open file description that corresponds to this file descriptor. In addition, the (kernel-internal) <code>FMODE_NONOTIFY</code> file status flag is set on the open file description. This flag suppresses fanotify event generation. Hence, when the receiver of the fanotify event accesses the notified file or directory using this file descriptor, no additional events will be created.</p>
-<dt><i>pid</i></p>
-<dd>If flag <code>FAN_REPORT_TID</code> was set in <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2), this is the TID of the thread that caused the event. Otherwise, this the PID of the process that caused the event.</dl>
+<dt><i>event_len</i></dt>
+<dd>This is the length of the data for the current event and the offset to the next event in the buffer. Unless the group identifies filesystem objects by file handles, the value of <i>event_len</i> is always <code>FAN_EVENT_METADATA_LEN</code>. For a group that identifies filesystem objects by file handles, <i>event_len</i> also includes the variable length file identifier records.</dd>
+<dt><i>vers</i></dt>
+<dd>This field holds a version number for the structure. It must be compared to <code>FANOTIFY_METADATA_VERSION</code> to verify that the structures returned at run time match the structures defined at compile time. In case of a mismatch, the application should abandon trying to use the fanotify file descriptor.</dd>
+<dt><i>reserved</i></dt>
+<dd>This field is not used.</dd>
+<dt><i>metadata_len</i></dt>
+<dd>This is the length of the structure. The field was introduced to facilitate the implementation of optional headers per event type. No such optional headers exist in the current implementation.</dd>
+<dt><i>mask</i></dt>
+<dd>This is a bit mask describing the event (see below).</dd>
+<dt><i>fd</i></dt>
+<dd>This is an open file descriptor for the object being accessed, or <code>FAN_NOFD</code> if a queue overflow occurred. With an fanotify group that identifies filesystem objects by file handles, applications should expect this value to be set to <code>FAN_NOFD</code> for each event that is received. The file descriptor can be used to access the contents of the monitored file or directory. The reading application is responsible for closing this file descriptor.</dd>
+<dd>When calling <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2), the caller may specify (via the <i>event_f_flags</i> argument) various file status flags that are to be set on the open file description that corresponds to this file descriptor. In addition, the (kernel-internal) <code>FMODE_NONOTIFY</code> file status flag is set on the open file description. This flag suppresses fanotify event generation. Hence, when the receiver of the fanotify event accesses the notified file or directory using this file descriptor, no additional events will be created.</dd>
+<dt><i>pid</i></dt>
+<dd>If flag <code>FAN_REPORT_TID</code> was set in <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2), this is the TID of the thread that caused the event. Otherwise, this the PID of the process that caused the event.</dd></dl>
 <p> A program listening to fanotify events can compare this PID to the PID returned by <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2), to determine whether the event is caused by the listener itself, or is due to a file access by another process. The bit mask in <i>mask</i> indicates which events have occurred for a single filesystem object. Multiple bits may be set in this mask, if more than one event occurred for the monitored filesystem object. In particular, consecutive events for the same filesystem object and originating from the same process may be merged into a single event, with the exception that two permission events are never merged into one queue entry. The bits that may appear in <i>mask</i> are as follows:</p>
 <dl>
-<dt><code>FAN_ACCESS</code></p>
-<dd>A file or a directory (but see BUGS) was accessed (read).</p>
-<dt><code>FAN_OPEN</code></p>
-<dd>A file or a directory was opened.</p>
-<dt><code>FAN_OPEN_EXEC</code></p>
-<dd>A file was opened with the intent to be executed. See NOTES in <code><a href="/docs/linux/man/2-fanotify_mark/">fanotify_mark</a></code>(2) for additional details.</p>
-<dt><code>FAN_ATTRIB</code></p>
-<dd>A file or directory metadata was changed.</p>
-<dt><code>FAN_CREATE</code></p>
-<dd>A child file or directory was created in a watched parent.</p>
-<dt><code>FAN_DELETE</code></p>
-<dd>A child file or directory was deleted in a watched parent.</p>
-<dt><code>FAN_DELETE_SELF</code></p>
-<dd>A watched file or directory was deleted.</p>
-<dt><code>FAN_MOVED_FROM</code></p>
-<dd>A file or directory has been moved from a watched parent directory.</p>
-<dt><code>FAN_MOVED_TO</code></p>
-<dd>A file or directory has been moved to a watched parent directory.</p>
-<dt><code>FAN_MOVE_SELF</code></p>
-<dd>A watched file or directory was moved.</p>
-<dt><code>FAN_MODIFY</code></p>
-<dd>A file was modified.</p>
-<dt><code>FAN_CLOSE_WRITE</code></p>
-<dd>A file that was opened for writing (<code>O_WRONLY</code> or <code>O_RDWR</code>) was closed.</p>
-<dt><code>FAN_CLOSE_NOWRITE</code></p>
-<dd>A file or directory that was opened read-only (<code>O_RDONLY</code>) was closed.</p>
-<dt><code>FAN_Q_OVERFLOW</code></p>
-<dd>The event queue exceeded the limit of 16384 entries. This limit can be overridden by specifying the <code>FAN_UNLIMITED_QUEUE</code> flag when calling <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2).</p>
-<dt><code>FAN_ACCESS_PERM</code></p>
-<dd>An application wants to read a file or directory, for example using <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-readdir/">readdir</a></code>(2). The reader must write a response (as described below) that determines whether the permission to access the filesystem object shall be granted.</p>
-<dt><code>FAN_OPEN_PERM</code></p>
-<dd>An application wants to open a file or directory. The reader must write a response that determines whether the permission to open the filesystem object shall be granted.</p>
-<dt><code>FAN_OPEN_EXEC_PERM</code></p>
-<dd>An application wants to open a file for execution. The reader must write a response that determines whether the permission to open the filesystem object for execution shall be granted. See NOTES in <code><a href="/docs/linux/man/2-fanotify_mark/">fanotify_mark</a></code>(2) for additional details.</dl>
+<dt><code>FAN_ACCESS</code></dt>
+<dd>A file or a directory (but see BUGS) was accessed (read).</dd>
+<dt><code>FAN_OPEN</code></dt>
+<dd>A file or a directory was opened.</dd>
+<dt><code>FAN_OPEN_EXEC</code></dt>
+<dd>A file was opened with the intent to be executed. See NOTES in <code><a href="/docs/linux/man/2-fanotify_mark/">fanotify_mark</a></code>(2) for additional details.</dd>
+<dt><code>FAN_ATTRIB</code></dt>
+<dd>A file or directory metadata was changed.</dd>
+<dt><code>FAN_CREATE</code></dt>
+<dd>A child file or directory was created in a watched parent.</dd>
+<dt><code>FAN_DELETE</code></dt>
+<dd>A child file or directory was deleted in a watched parent.</dd>
+<dt><code>FAN_DELETE_SELF</code></dt>
+<dd>A watched file or directory was deleted.</dd>
+<dt><code>FAN_MOVED_FROM</code></dt>
+<dd>A file or directory has been moved from a watched parent directory.</dd>
+<dt><code>FAN_MOVED_TO</code></dt>
+<dd>A file or directory has been moved to a watched parent directory.</dd>
+<dt><code>FAN_MOVE_SELF</code></dt>
+<dd>A watched file or directory was moved.</dd>
+<dt><code>FAN_MODIFY</code></dt>
+<dd>A file was modified.</dd>
+<dt><code>FAN_CLOSE_WRITE</code></dt>
+<dd>A file that was opened for writing (<code>O_WRONLY</code> or <code>O_RDWR</code>) was closed.</dd>
+<dt><code>FAN_CLOSE_NOWRITE</code></dt>
+<dd>A file or directory that was opened read-only (<code>O_RDONLY</code>) was closed.</dd>
+<dt><code>FAN_Q_OVERFLOW</code></dt>
+<dd>The event queue exceeded the limit of 16384 entries. This limit can be overridden by specifying the <code>FAN_UNLIMITED_QUEUE</code> flag when calling <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2).</dd>
+<dt><code>FAN_ACCESS_PERM</code></dt>
+<dd>An application wants to read a file or directory, for example using <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-readdir/">readdir</a></code>(2). The reader must write a response (as described below) that determines whether the permission to access the filesystem object shall be granted.</dd>
+<dt><code>FAN_OPEN_PERM</code></dt>
+<dd>An application wants to open a file or directory. The reader must write a response that determines whether the permission to open the filesystem object shall be granted.</dd>
+<dt><code>FAN_OPEN_EXEC_PERM</code></dt>
+<dd>An application wants to open a file for execution. The reader must write a response that determines whether the permission to open the filesystem object for execution shall be granted. See NOTES in <code><a href="/docs/linux/man/2-fanotify_mark/">fanotify_mark</a></code>(2) for additional details.</dd></dl>
 <p> To check for any close event, the following bit mask may be used:</p>
 <dl>
-<dt><code>FAN_CLOSE</code></p>
-<dd>A file was closed. This is a synonym for:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FAN_CLOSE_WRITE | FAN_CLOSE_NOWRITE</dl>
+<dt><code>FAN_CLOSE</code></dt>
+<dd>A file was closed. This is a synonym for:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FAN_CLOSE_WRITE | FAN_CLOSE_NOWRITE</dd></dl>
 <p> To check for any move event, the following bit mask may be used:</p>
 <dl>
-<dt><code>FAN_MOVE</code></p>
-<dd>A file or directory was moved. This is a synonym for:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FAN_MOVED_FROM | FAN_MOVED_TO</dl>
+<dt><code>FAN_MOVE</code></dt>
+<dd>A file or directory was moved. This is a synonym for:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FAN_MOVED_FROM | FAN_MOVED_TO</dd></dl>
 <p> The following bits may appear in <i>mask</i> only in conjunction with other event type bits:</p>
 <dl>
-<dt><code>FAN_ONDIR</code></p>
-<dd>The events described in the <i>mask</i> have occurred on a directory object. Reporting events on directories requires setting this flag in the mark mask. See <code><a href="/docs/linux/man/2-fanotify_mark/">fanotify_mark</a></code>(2) for additional details. The <code>FAN_ONDIR</code> flag is reported in an event mask only if the fanotify group identifies filesystem objects by file handles.</dl>
+<dt><code>FAN_ONDIR</code></dt>
+<dd>The events described in the <i>mask</i> have occurred on a directory object. Reporting events on directories requires setting this flag in the mark mask. See <code><a href="/docs/linux/man/2-fanotify_mark/">fanotify_mark</a></code>(2) for additional details. The <code>FAN_ONDIR</code> flag is reported in an event mask only if the fanotify group identifies filesystem objects by file handles.</dd></dl>
 <p> The fields of the <i>fanotify_event_info_fid</i> structure are as follows:</p>
 <dl>
-<dt><i>hdr</i></p>
-<dd>This is a structure of type <i>fanotify_event_info_header</i>. It is a generic header that contains information used to describe an additional information record attached to the event. For example, when an fanotify file descriptor is created using <code>FAN_REPORT_FID</code>, a single information record is expected to be attached to the event with <i>info_type</i> field value of <code>FAN_EVENT_INFO_TYPE_FID</code>. When an fanotify file descriptor is created using the combination of <code>FAN_REPORT_FID</code> and <code>FAN_REPORT_DIR_FID</code>, there may be two information records attached to the event: one with <i>info_type</i> field value of <code>FAN_EVENT_INFO_TYPE_DFID</code>, identifying a parent directory object, and one with <i>info_type</i> field value of <code>FAN_EVENT_INFO_TYPE_FID</code>, identifying a non-directory object. The <i>fanotify_event_info_header</i> contains a <i>len</i> field. The value of <i>len</i> is the size of the additional information record including the <i>fanotify_event_info_header</i> itself. The total size of all additional information records is not expected to be bigger than ( <i>event_len</i> &#8211; <i>metadata_len</i> ).</p>
-<dt><i>fsid</i></p>
-<dd>This is a unique identifier of the filesystem containing the object associated with the event. It is a structure of type <i>__kernel_fsid_t</i> and contains the same value as <i>f_fsid</i> when calling <code><a href="/docs/linux/man/2-statfs/">statfs</a></code>(2).</p>
-<dt><i>file_handle</i></p>
-<dd>This is a variable length structure of type struct file_handle. It is an opaque handle that corresponds to a specified object on a filesystem as returned by <code><a href="/docs/linux/man/2-name_to_handle_at/">name_to_handle_at</a></code>(2). It can be used to uniquely identify a file on a filesystem and can be passed as an argument to <code><a href="/docs/linux/man/2-open_by_handle_at/">open_by_handle_at</a></code>(2). Note that for the directory entry modification events <code>FAN_CREATE</code>, <code>FAN_DELETE</code>, and <code>FAN_MOVE</code>, the <i>file_handle</i> identifies the modified directory and not the created/deleted/moved child object. If the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_DFID_NAME</code>, the file handle is followed by a null terminated string that identifies the created/deleted/moved directory entry name. For other events such as <code>FAN_OPEN</code>, <code>FAN_ATTRIB</code>, <code>FAN_DELETE_SELF</code>, and <code>FAN_MOVE_SELF</code>, if the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_FID</code>, the <i>file_handle</i> identifies the object correlated to the event. If the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_DFID</code>, the <i>file_handle</i> identifies the directory object correlated to the event or the parent directory of a non-directory object correlated to the event. If the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_DFID_NAME</code>, the <i>file_handle</i> identifies the same directory object that would be reported with <code>FAN_EVENT_INFO_TYPE_DFID</code> and the file handle is followed by a null terminated string that identifies the name of a directory entry in that directory, or &#8216;.&#8217; to identify the directory object itself.</dl>
+<dt><i>hdr</i></dt>
+<dd>This is a structure of type <i>fanotify_event_info_header</i>. It is a generic header that contains information used to describe an additional information record attached to the event. For example, when an fanotify file descriptor is created using <code>FAN_REPORT_FID</code>, a single information record is expected to be attached to the event with <i>info_type</i> field value of <code>FAN_EVENT_INFO_TYPE_FID</code>. When an fanotify file descriptor is created using the combination of <code>FAN_REPORT_FID</code> and <code>FAN_REPORT_DIR_FID</code>, there may be two information records attached to the event: one with <i>info_type</i> field value of <code>FAN_EVENT_INFO_TYPE_DFID</code>, identifying a parent directory object, and one with <i>info_type</i> field value of <code>FAN_EVENT_INFO_TYPE_FID</code>, identifying a non-directory object. The <i>fanotify_event_info_header</i> contains a <i>len</i> field. The value of <i>len</i> is the size of the additional information record including the <i>fanotify_event_info_header</i> itself. The total size of all additional information records is not expected to be bigger than ( <i>event_len</i> &#8211; <i>metadata_len</i> ).</dd>
+<dt><i>fsid</i></dt>
+<dd>This is a unique identifier of the filesystem containing the object associated with the event. It is a structure of type <i>__kernel_fsid_t</i> and contains the same value as <i>f_fsid</i> when calling <code><a href="/docs/linux/man/2-statfs/">statfs</a></code>(2).</dd>
+<dt><i>file_handle</i></dt>
+<dd>This is a variable length structure of type struct file_handle. It is an opaque handle that corresponds to a specified object on a filesystem as returned by <code><a href="/docs/linux/man/2-name_to_handle_at/">name_to_handle_at</a></code>(2). It can be used to uniquely identify a file on a filesystem and can be passed as an argument to <code><a href="/docs/linux/man/2-open_by_handle_at/">open_by_handle_at</a></code>(2). Note that for the directory entry modification events <code>FAN_CREATE</code>, <code>FAN_DELETE</code>, and <code>FAN_MOVE</code>, the <i>file_handle</i> identifies the modified directory and not the created/deleted/moved child object. If the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_DFID_NAME</code>, the file handle is followed by a null terminated string that identifies the created/deleted/moved directory entry name. For other events such as <code>FAN_OPEN</code>, <code>FAN_ATTRIB</code>, <code>FAN_DELETE_SELF</code>, and <code>FAN_MOVE_SELF</code>, if the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_FID</code>, the <i>file_handle</i> identifies the object correlated to the event. If the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_DFID</code>, the <i>file_handle</i> identifies the directory object correlated to the event or the parent directory of a non-directory object correlated to the event. If the value of <i>info_type</i> field is <code>FAN_EVENT_INFO_TYPE_DFID_NAME</code>, the <i>file_handle</i> identifies the same directory object that would be reported with <code>FAN_EVENT_INFO_TYPE_DFID</code> and the file handle is followed by a null terminated string that identifies the name of a directory entry in that directory, or &#8216;.&#8217; to identify the directory object itself.</dd></dl>
 <p> The following macros are provided to iterate over a buffer containing fanotify event metadata returned by a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) from an fanotify file descriptor:</p>
 <dl>
-<dt><code>FAN_EVENT_OK(meta, len)</code></p>
-<dd>This macro checks the remaining length <i>len</i> of the buffer <i>meta</i> against the length of the metadata structure and the <i>event_len</i> field of the first metadata structure in the buffer.</p>
-<dt><code>FAN_EVENT_NEXT(meta, len)</code></p>
-<dd>This macro uses the length indicated in the <i>event_len</i> field of the metadata structure pointed to by <i>meta</i> to calculate the address of the next metadata structure that follows <i>meta</i>. <i>len</i> is the number of bytes of metadata that currently remain in the buffer. The macro returns a pointer to the next metadata structure that follows <i>meta</i>, and reduces <i>len</i> by the number of bytes in the metadata structure that has been skipped over (i.e., it subtracts <i>meta-&gt;event_len</i> from <i>len</i>).</dl>
+<dt><code>FAN_EVENT_OK(meta, len)</code></dt>
+<dd>This macro checks the remaining length <i>len</i> of the buffer <i>meta</i> against the length of the metadata structure and the <i>event_len</i> field of the first metadata structure in the buffer.</dd>
+<dt><code>FAN_EVENT_NEXT(meta, len)</code></dt>
+<dd>This macro uses the length indicated in the <i>event_len</i> field of the metadata structure pointed to by <i>meta</i> to calculate the address of the next metadata structure that follows <i>meta</i>. <i>len</i> is the number of bytes of metadata that currently remain in the buffer. The macro returns a pointer to the next metadata structure that follows <i>meta</i>, and reduces <i>len</i> by the number of bytes in the metadata structure that has been skipped over (i.e., it subtracts <i>meta-&gt;event_len</i> from <i>len</i>).</dd></dl>
 <p> In addition, there is:</p>
 <dl>
-<dt><code>FAN_EVENT_METADATA_LEN</code></p>
-<dd>This macro returns the size (in bytes) of the structure <i>fanotify_event_metadata</i>. This is the minimum size (and currently the only size) of any event metadata.</dl>
+<dt><code>FAN_EVENT_METADATA_LEN</code></dt>
+<dd>This macro returns the size (in bytes) of the structure <i>fanotify_event_metadata</i>. This is the minimum size (and currently the only size) of any event metadata.</dd></dl>
 <h3>Monitoring an fanotify file descriptor for events</h3>
 <p>When an fanotify event occurs, the fanotify file descriptor indicates as readable when passed to <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), or <code><a href="/docs/linux/man/2-select/">select</a></code>(2).</p>
 <h3>Dealing with permission events</h3>
@@ -130,10 +130,10 @@ struct fanotify_event_info_fid {<br />
     __u32 response;<br />
 }; The fields of this structure are as follows:</p>
 <dl>
-<dt><i>fd</i></p>
-<dd>This is the file descriptor from the structure <i>fanotify_event_metadata</i>.</p>
-<dt><i>response</i></p>
-<dd>This field indicates whether or not the permission is to be granted. Its value must be either <code>FAN_ALLOW</code> to allow the file operation or <code>FAN_DENY</code> to deny the file operation.</dl>
+<dt><i>fd</i></dt>
+<dd>This is the file descriptor from the structure <i>fanotify_event_metadata</i>.</dd>
+<dt><i>response</i></dt>
+<dd>This field indicates whether or not the permission is to be granted. Its value must be either <code>FAN_ALLOW</code> to allow the file operation or <code>FAN_DENY</code> to deny the file operation.</dd></dl>
 <p> If access is denied, the requesting application call will receive an <code>EPERM</code> error.</p>
 <h3>Closing the fanotify file descriptor</h3>
 <p>When all file descriptors referring to the fanotify notification group are closed, the fanotify group is released and its resources are freed for reuse by the kernel. Upon <code><a href="/docs/linux/man/2-close/">close</a></code>(2), outstanding permission events will be set to allowed.</p>
@@ -142,20 +142,20 @@ struct fanotify_event_info_fid {<br />
 <h2>Errors</h2>
 <p>In addition to the usual errors for <code><a href="/docs/linux/man/2-read/">read</a></code>(2), the following errors can occur when reading from the fanotify file descriptor:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>The buffer is too small to hold the event.</p>
-<dt><code>EMFILE</code></p>
-<dd>The per-process limit on the number of open files has been reached. See the description of <code>RLIMIT_NOFILE</code> in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2).</p>
-<dt><code>ENFILE</code></p>
-<dd>The system-wide limit on the total number of open files has been reached. See <i>/proc/sys/fs/file-max</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5).</p>
-<dt><code>ETXTBSY</code></p>
-<dd>This error is returned by <code><a href="/docs/linux/man/2-read/">read</a></code>(2) if <code>O_RDWR</code> or <code>O_WRONLY</code> was specified in the <i>event_f_flags</i> argument when calling <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2) and an event occurred for a monitored file that is currently being executed.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>The buffer is too small to hold the event.</dd>
+<dt><code>EMFILE</code></dt>
+<dd>The per-process limit on the number of open files has been reached. See the description of <code>RLIMIT_NOFILE</code> in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2).</dd>
+<dt><code>ENFILE</code></dt>
+<dd>The system-wide limit on the total number of open files has been reached. See <i>/proc/sys/fs/file-max</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5).</dd>
+<dt><code>ETXTBSY</code></dt>
+<dd>This error is returned by <code><a href="/docs/linux/man/2-read/">read</a></code>(2) if <code>O_RDWR</code> or <code>O_WRONLY</code> was specified in the <i>event_f_flags</i> argument when calling <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2) and an event occurred for a monitored file that is currently being executed.</dd></dl>
 <p> In addition to the usual errors for <code><a href="/docs/linux/man/2-write/">write</a></code>(2), the following errors can occur when writing to the fanotify file descriptor:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>Fanotify access permissions are not enabled in the kernel configuration or the value of <i>response</i> in the response structure is not valid.</p>
-<dt><code>ENOENT</code></p>
-<dd>The file descriptor <i>fd</i> in the response structure is not valid. This may occur when a response for the permission event has already been written.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>Fanotify access permissions are not enabled in the kernel configuration or the value of <i>response</i> in the response structure is not valid.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>The file descriptor <i>fd</i> in the response structure is not valid. This may occur when a response for the permission event has already been written.</dd></dl>
 <h2>Versions</h2>
 <p>The fanotify API was introduced in version 2.6.36 of the Linux kernel and enabled in version 2.6.37. Fdinfo support was added in version 3.8.</p>
 <h2>Conforming To</h2>
@@ -172,12 +172,12 @@ struct fanotify_event_info_fid {<br />
 <p>Before Linux 3.19, <code><a href="/docs/linux/man/2-fallocate/">fallocate</a></code>(2) did not generate fanotify events. Since Linux 3.19, calls to <code><a href="/docs/linux/man/2-fallocate/">fallocate</a></code>(2) generate <code>FAN_MODIFY</code> events. </p>
 <p> As of Linux 3.17, the following bugs exist:</p>
 <dl>
-<dt>*</p>
-<dd>On Linux, a filesystem object may be accessible through multiple paths, for example, a part of a filesystem may be remounted using the <i>&#8211;bind</i> option of <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). A listener that marked a mount will be notified only of events that were triggered for a filesystem object using the same mount. Any other event will pass unnoticed.</p>
-<dt>*</p>
-<dd>When an event is generated, no check is made to see whether the user ID of the receiving process has authorization to read or write the file before passing a file descriptor for that file. This poses a security risk, when the <code>CAP_SYS_ADMIN</code> capability is set for programs executed by unprivileged users.</p>
-<dt>*</p>
-<dd>If a call to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) processes multiple events from the fanotify queue and an error occurs, the return value will be the total length of the events successfully copied to the user-space buffer before the error occurred. The return value will not be -1, and <i>errno</i> will not be set. Thus, the reading application has no way to detect the error.</dl>
+<dt>*</dt>
+<dd>On Linux, a filesystem object may be accessible through multiple paths, for example, a part of a filesystem may be remounted using the <i>&#8211;bind</i> option of <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). A listener that marked a mount will be notified only of events that were triggered for a filesystem object using the same mount. Any other event will pass unnoticed.</dd>
+<dt>*</dt>
+<dd>When an event is generated, no check is made to see whether the user ID of the receiving process has authorization to read or write the file before passing a file descriptor for that file. This poses a security risk, when the <code>CAP_SYS_ADMIN</code> capability is set for programs executed by unprivileged users.</dd>
+<dt>*</dt>
+<dd>If a call to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) processes multiple events from the fanotify queue and an error occurs, the return value will be the total length of the events successfully copied to the user-space buffer before the error occurred. The return value will not be -1, and <i>errno</i> will not be set. Thus, the reading application has no way to detect the error.</dd></dl>
 <h2>Examples</h2>
 <p>The two example programs below demonstrate the usage of the fanotify API.</p>
 <h3>Example program: fanotify_example.c</h3>
@@ -250,3 +250,4 @@ handle_events(int fd)<br />
                     exit(EXIT_FAILURE);<br />
                 }<br />
                 path[path_len] = &#8216;
+</p>

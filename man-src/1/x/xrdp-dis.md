@@ -15,19 +15,19 @@ description: "xrdp-dis – xrdp disconnect utility"
 <p> <code>xrdp-dis</code> is run with no parameters to disconnect your xrdp session. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to get the default host and display number. </p>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display number. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/tmp/.xrdp/xrdp_disconnect_display_*</i></p>
-<dd> UNIX socket used to communicate with the <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8) session manager. </p>
+<dt><i>/tmp/.xrdp/xrdp_disconnect_display_*</i></dt>
+<dd> UNIX socket used to communicate with the <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8) session manager. </dd>
 </dl>
 <h2>KNOWN ISSUES</h2>
 <dl>
-<dt>This utility doesn&#8217;t support disconnecting xorgxrdp sessions so far.</p>
+<dt>This utility doesn&#8217;t support disconnecting xorgxrdp sessions so far.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8). </p>
 <h2>Index</h2>

@@ -11,29 +11,25 @@ description: "tgamma, tgammaf, tgammal – true gamma function"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
 double tgamma(double x);
-
-
 float tgammaf(float x);
-
-
 long double tgammal(long double x);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>tgamma</code>(), <code>tgammaf</code>(), <code>tgammal</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>These functions calculate the Gamma function of <i>x</i>. </p>
 <p> The Gamma function is defined by </p>
 <dl>
-<dd>Gamma(x) = integral from 0 to infinity of t^(x-1) e^-t dt</dl>
+<dd>Gamma(x) = integral from 0 to infinity of t^(x-1) e^-t dt</dd></dl>
 <p> It is defined for every real number except for nonpositive integers. For nonnegative integral <i>m</i> one has </p>
 <dl>
-<dd>Gamma(m+1) = m!</dl>
+<dd>Gamma(m+1) = m!</dd></dl>
 <p> and, more generally, for all <i>x</i>: </p>
 <dl>
-<dd>Gamma(x+1) = x * Gamma(x)</dl>
+<dd>Gamma(x+1) = x * Gamma(x)</dd></dl>
 <p> Furthermore, the following is valid for all values of <i>x</i> outside the poles: </p>
 <dl>
-<dd>Gamma(x) * Gamma(1 &#8211; x) = PI / sin(PI * x)</dl>
+<dd>Gamma(x) * Gamma(1 &#8211; x) = PI / sin(PI * x)</dd></dl>
 <h2>Return Value</h2>
 <p>On success, these functions return Gamma(x). </p>
 <p> If <i>x</i> is a NaN, a NaN is returned. </p>
@@ -46,16 +42,16 @@ long double tgammal(long double x);</code></pre>
 <p>See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Domain error: <i>x</i> is a negative integer, or negative infinity</p>
-<dd><i>errno</i> is set to <code>EDOM</code>. An invalid floating-point exception (<code>FE_INVALID</code>) is raised (but see BUGS).</p>
-<dt>Pole error: <i>x</i> is +0 or -0</p>
-<dd><i>errno</i> is set to <code>ERANGE</code>. A divide-by-zero floating-point exception (<code>FE_DIVBYZERO</code>) is raised.</p>
-<dt>Range error: result overflow</p>
-<dd><i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dl>
+<dt>Domain error: <i>x</i> is a negative integer, or negative infinity</dt>
+<dd><i>errno</i> is set to <code>EDOM</code>. An invalid floating-point exception (<code>FE_INVALID</code>) is raised (but see BUGS).</dd>
+<dt>Pole error: <i>x</i> is +0 or -0</dt>
+<dd><i>errno</i> is set to <code>ERANGE</code>. A divide-by-zero floating-point exception (<code>FE_DIVBYZERO</code>) is raised.</dd>
+<dt>Range error: result overflow</dt>
+<dd><i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dd></dl>
 <p> glibc also gives the following error which is not specified in C99 or POSIX.1-2001.</p>
 <dl>
-<dt>Range error: result underflow</p>
-<dd>An underflow floating-point exception (<code>FE_UNDERFLOW</code>) is raised, and <i>errno</i> is set to <code>ERANGE</code>.</dl>
+<dt>Range error: result underflow</dt>
+<dd>An underflow floating-point exception (<code>FE_UNDERFLOW</code>) is raised, and <i>errno</i> is set to <code>ERANGE</code>.</dd></dl>
 <h2>Versions</h2>
 <p>These functions first appeared in glibc in version 2.1.</p>
 <h2>Attributes</h2>

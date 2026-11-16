@@ -107,8 +107,8 @@ description: "mailman_mail_selinux – Security Enhanced Linux Policy for the ma
 <p> <code>mailman_mail_exec_t</code> </p>
 <p> &#8211; Set files with the mailman_mail_exec_t type, if you want to transition an executable to the mailman_mail_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/mailman.*/mail/wrapper, /usr/lib/mailman.*/mail/mailman, /usr/lib/mailman.*/mail/wrapper, /usr/lib/mailman.*/bin/mailmanctl, /usr/lib/mailman.*/scripts/mailman, /usr/lib/mailman.*/bin/mm-handler.*, /usr/share/doc/mailman.*/mm-handler.*, /usr/lib/mailman/bin/mm-handler.*, /usr/lib/mailman/bin/mailmanctl </p>
+<dt>Paths:</dt>
+<dd>/usr/mailman.*/mail/wrapper, /usr/lib/mailman.*/mail/mailman, /usr/lib/mailman.*/mail/wrapper, /usr/lib/mailman.*/bin/mailmanctl, /usr/lib/mailman.*/scripts/mailman, /usr/lib/mailman.*/bin/mm-handler.*, /usr/share/doc/mailman.*/mm-handler.*, /usr/lib/mailman/bin/mm-handler.*, /usr/lib/mailman/bin/mailmanctl </dd>
 </dl>
 <p> <code>mailman_mail_tmp_t</code> </p>
 <p> &#8211; Set files with the mailman_mail_tmp_t type, if you want to store mailman mail temporary files in the /tmp directories. </p>

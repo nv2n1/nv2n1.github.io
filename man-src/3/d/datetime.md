@@ -44,14 +44,14 @@ description: "Date and time calculations –"
 <h2>Detailed Description</h2>
 <p> The concrete class <code>QuantLib::Date</code> implements the concept of date. Its functionalities include: </p>
 <dl>
-<dt>*</p>
-<dd> providing basic information such as weekday, day of the month, day of the year, month, and year;</dl>
+<dt>*</dt>
+<dd> providing basic information such as weekday, day of the month, day of the year, month, and year;</dd></dl>
 <dl>
-<dt>*</p>
-<dd> comparing two dates to determine whether they are equal, or which one is the earlier or later, or the difference between them expressed in days;</dl>
+<dt>*</dt>
+<dd> comparing two dates to determine whether they are equal, or which one is the earlier or later, or the difference between them expressed in days;</dd></dl>
 <dl>
-<dt>*</p>
-<dd> incrementing or decrementing a date of a given number of days, or of a given period expressed in weeks, months, or years.</dl>
+<dt>*</dt>
+<dd> incrementing or decrementing a date of a given number of days, or of a given period expressed in weeks, months, or years.</dd></dl>
 <h2>Typedef Documentation</h2>
 <h3>typedef Integer Day</h3>
 <p> Day number. </p>
@@ -63,48 +63,48 @@ description: "Date and time calculations –"
 <p> These conventions specify the algorithm used to adjust a date in case it is not a valid business day. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>Following </i></p>
-<dd> Choose the first business day after the given holiday.</p>
-<dt><i>ModifiedFollowing </i></p>
-<dd> Choose the first business day after the given holiday unless it belongs to a different month, in which case choose the first business day before the holiday.</p>
-<dt><i>Preceding </i></p>
-<dd> Choose the first business day before the given holiday.</p>
-<dt><i>ModifiedPreceding </i></p>
-<dd> Choose the first business day before the given holiday unless it belongs to a different month, in which case choose the first business day after the holiday.</p>
-<dt><i>Unadjusted </i></p>
-<dd> Do not adjust.</dl>
+<dt><i>Following </i></dt>
+<dd> Choose the first business day after the given holiday.</dd>
+<dt><i>ModifiedFollowing </i></dt>
+<dd> Choose the first business day after the given holiday unless it belongs to a different month, in which case choose the first business day before the holiday.</dd>
+<dt><i>Preceding </i></dt>
+<dd> Choose the first business day before the given holiday.</dd>
+<dt><i>ModifiedPreceding </i></dt>
+<dd> Choose the first business day before the given holiday unless it belongs to a different month, in which case choose the first business day after the holiday.</dd>
+<dt><i>Unadjusted </i></dt>
+<dd> Do not adjust.</dd></dl>
 <h3>enum Month</h3>
 <p> Month names. </p>
 <h3>enum Frequency</h3>
 <p> Frequency of events. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>NoFrequency </i></p>
-<dd> null frequency</p>
-<dt><i>Once </i></p>
-<dd> only once, e.g., a zero-coupon</p>
-<dt><i>Annual </i></p>
-<dd> once a year</p>
-<dt><i>Semiannual </i></p>
-<dd> twice a year</p>
-<dt><i>EveryFourthMonth </i></p>
-<dd> every fourth month</p>
-<dt><i>Quarterly </i></p>
-<dd> every third month</p>
-<dt><i>Bimonthly </i></p>
-<dd> every second month</p>
-<dt><i>Monthly </i></p>
-<dd> once a month</p>
-<dt><i>EveryFourthWeek </i></p>
-<dd> every fourth week</p>
-<dt><i>Biweekly </i></p>
-<dd> every second week</p>
-<dt><i>Weekly </i></p>
-<dd> once a week</p>
-<dt><i>Daily </i></p>
-<dd> once a day</p>
-<dt><i>OtherFrequency </i></p>
-<dd> some other unknown frequency</dl>
+<dt><i>NoFrequency </i></dt>
+<dd> null frequency</dd>
+<dt><i>Once </i></dt>
+<dd> only once, e.g., a zero-coupon</dd>
+<dt><i>Annual </i></dt>
+<dd> once a year</dd>
+<dt><i>Semiannual </i></dt>
+<dd> twice a year</dd>
+<dt><i>EveryFourthMonth </i></dt>
+<dd> every fourth month</dd>
+<dt><i>Quarterly </i></dt>
+<dd> every third month</dd>
+<dt><i>Bimonthly </i></dt>
+<dd> every second month</dd>
+<dt><i>Monthly </i></dt>
+<dd> once a month</dd>
+<dt><i>EveryFourthWeek </i></dt>
+<dd> every fourth week</dd>
+<dt><i>Biweekly </i></dt>
+<dd> every second week</dd>
+<dt><i>Weekly </i></dt>
+<dd> once a week</dd>
+<dt><i>Daily </i></dt>
+<dd> once a day</dd>
+<dt><i>OtherFrequency </i></dt>
+<dd> some other unknown frequency</dd></dl>
 <h3>enum TimeUnit</h3>
 <p> Units used to describe time periods. </p>
 <h3>enum Weekday</h3>

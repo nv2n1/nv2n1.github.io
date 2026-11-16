@@ -12,29 +12,29 @@ description: "memcached_server_list_free – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_server_instance_st</code></p>
+<dt><code>memcached_server_instance_st</code></dt>
 <dd>
-<dt><code>memcached_server_list_st</code></p>
+</dd><dt><code>memcached_server_list_st</code></dt>
 <dd>
-<dt><code>memcached_server_st</code></p>
+</dd><dt><code>memcached_server_st</code></dt>
 <dd>
-<dt><code>const </code><i>memcached_server_instance_st</i> memcached_server_list(memcached_st<i>&nbsp;<wbr>*ptr</i>)</p>
+</dd><dt><code>const </code><i>memcached_server_instance_st</i> memcached_server_list(memcached_st<i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<dt><code>void memcached_server_list_free(</code><i>memcached_server_list_st</i><i>&nbsp;<wbr>list</i>)</p>
+</dd><dt><code>void memcached_server_list_free(</code><i>memcached_server_list_st</i><i>&nbsp;<wbr>list</i>)</dt>
 <dd>
-<dt><i>memcached_server_list_st</i> memcached_server_list_append(<i>memcached_server_list_st</i><i>&nbsp;<wbr>list</i>, const char<i>&nbsp;<wbr>*hostname</i>, in_port_t<i>&nbsp;<wbr>port</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+</dd><dt><i>memcached_server_list_st</i> memcached_server_list_append(<i>memcached_server_list_st</i><i>&nbsp;<wbr>list</i>, const char<i>&nbsp;<wbr>*hostname</i>, in_port_t<i>&nbsp;<wbr>port</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<dt><code>uint32_t memcached_server_list_count(</code><i>memcached_server_list_st</i><i>&nbsp;<wbr>list</i>)</p>
+</dd><dt><code>uint32_t memcached_server_list_count(</code><i>memcached_server_list_st</i><i>&nbsp;<wbr>list</i>)</dt>
 <dd>
-<dt><code>const char *memcached_server_error(</code><i>memcached_server_instance_st</i><i>&nbsp;<wbr>instance</i>)</p>
+</dd><dt><code>const char *memcached_server_error(</code><i>memcached_server_instance_st</i><i>&nbsp;<wbr>instance</i>)</dt>
 <dd>
-<dt><code>void memcached_server_error_reset(</code><i>memcached_server_instance_st</i><i>&nbsp;<wbr>list</i>)</p>
+</dd><dt><code>void memcached_server_error_reset(</code><i>memcached_server_instance_st</i><i>&nbsp;<wbr>list</i>)</dt>
 <dd>
 <p> Deprecated since version 0.39.</p>
-<dt><code>void memcached_servers_parse()</code></p>
+</dd><dt><code>void memcached_servers_parse()</code></dt>
 <dd>
 <p> Deprecated since version 0.39. </p>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) operates on a list of hosts which are stored in <i>memcached_server_st</i> structures. You should not modify these structures directly. Functions are provided to modify these structures (and more can be added, just ask!). </p>
 <p> <i>memcached_server_list()</i> is used to provide an array of all defined hosts. This was incorrectly documented as &quot;requiring free&quot; up till version 0.39. </p>
@@ -54,3 +54,4 @@ description: "memcached_server_list_free – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

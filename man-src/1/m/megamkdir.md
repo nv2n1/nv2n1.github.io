@@ -35,84 +35,79 @@ url: "/docs/linux/man/1-megamkdir/"
  -u &lt;email&gt;, --username &lt;email&gt;
 <dl>
 <dt>
-<dd> Account username (email)</dl>
+</dt><dd> Account username (email)</dd></dl>
  
 
  -p &lt;password&gt;, --password &lt;password&gt;
 <dl>
 <dt>
-<dd> Account password</dl>
+</dt><dd> Account password</dd></dl>
  
 
  --config &lt;path&gt;
 <dl>
 <dt>
-<dd> Load configuration from a file</dl>
+</dt><dd> Load configuration from a file</dd></dl>
  
 
  --ignore-config-file
 <dl>
 <dt>
-<dd> Disable loading .megarc</dl>
+</dt><dd> Disable loading .megarc</dd></dl>
  
 
  --no-ask-password
 <dl>
 <dt>
-<dd> Never ask interactively for a password</dl>
+</dt><dd> Never ask interactively for a password</dd></dl>
  
 
  --reload
 <dl>
 <dt>
-<dd> Reload filesystem cache</dl>
+</dt><dd> Reload filesystem cache</dd></dl>
  
 
  --debug [&lt;options&gt;]
 <dl>
 <dt>
-<dd> Enable debugging of various aspects of the megatools operation. You may enable multiple debugging options separated by commas. (eg. --debug api,fs) 
-
+</dt><dd> Enable debugging of various aspects of the megatools operation. You may enable multiple debugging options separated by commas. (eg. --debug api,fs) 
  Available options are: 
-
-<dl>
+</dd><dl>
 <dt>
-<dd> &bull; 
-
- api: Dump Mega.co.nz API calls</dl>
+</dt><dd> &bull; 
+ api: Dump Mega.co.nz API calls</dd></dl>
  
 
 <dl>
 <dt>
-<dd> &bull; 
-
- fs: Dump Mega.co.nz filesystem (may require --reload to actually print something)</dl>
+</dt><dd> &bull; 
+ fs: Dump Mega.co.nz filesystem (may require --reload to actually print something)</dd></dl>
  
 
 <dl>
 <dt>
-<dd> &bull; 
-
- cache: Dump cache contents</dl>
+</dt><dd> &bull; 
+ cache: Dump cache contents</dd></dl>
 </dl>
  
 
  --version
 <dl>
 <dt>
-<dd> Show version information</dl>
+</dt><dd> Show version information</dd></dl>
  
 
  &lt;remotepaths&gt;
 <dl>
 <dt>
-<dd> One or more remote directories to create.</dl>
+</dt><dd> One or more remote directories to create.</dd></dl>
  
 
  &lt;contactemail&gt;
 <dl>
 <dt>
-<dd> Valid email address of a contact you want to add.</dl>
+</dt><dd> Valid email address of a contact you want to add.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -120,28 +115,26 @@ url: "/docs/linux/man/1-megamkdir/"
 
 <dl>
 <dt>
-<dd> &bull; Create new folder: 
-
-<dl>
+</dt><dd> &bull; Create new folder: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 $ megamkdir /Root/MyNewFolder
 $ megals /Root
 /Root
 /Root/MyNewFolder
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; Add new contact to your contacts list: 
-
-<dl>
+</dt><dd> &bull; Add new contact to your contacts list: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 $ megamkdir /Contacts/some [at] email.com
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>REMOTE FILESYSTEM</h2>
@@ -156,11 +149,11 @@ $ megamkdir /Contacts/some [at] email.com
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 /Root/conflictingfile
 /Root/conflictingfile.7Fdi3ZjC
 /Root/conflictingfile.mEU23aSD
-</pre></dl>
+</pre></dd></dl>
  
 
  You need to be aware of several special folders: 
@@ -168,31 +161,31 @@ $ megamkdir /Contacts/some [at] email.com
  /Root
 <dl>
 <dt>
-<dd> Writable directory representing the root of the filesystem.</dl>
+</dt><dd> Writable directory representing the root of the filesystem.</dd></dl>
  
 
  /Trash
 <dl>
 <dt>
-<dd> Trash directory where Mega.co.nz web client moves deleted files. This directory is not used by megatools when removing files.</dl>
+</dt><dd> Trash directory where Mega.co.nz web client moves deleted files. This directory is not used by megatools when removing files.</dd></dl>
  
 
  /Inbox
 <dl>
 <dt>
-<dd> Not sure.</dl>
+</dt><dd> Not sure.</dd></dl>
  
 
  /Contacts
 <dl>
 <dt>
-<dd> Directory containing subdirectories representing your contacts list. If you want to add contacts to the list, simply create subdirectory named after the contact you want to add.</dl>
+</dt><dd> Directory containing subdirectories representing your contacts list. If you want to add contacts to the list, simply create subdirectory named after the contact you want to add.</dd></dl>
  
 
  /Contacts/&lt;email&gt;
 <dl>
 <dt>
-<dd> Directories representing individual contacts in your contacts list. These directories contain folders that others shared with you. All shared files are read-only, at the moment.</dl>
+</dt><dd> Directories representing individual contacts in your contacts list. These directories contain folders that others shared with you. All shared files are read-only, at the moment.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

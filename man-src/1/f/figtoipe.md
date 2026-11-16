@@ -19,7 +19,9 @@ description: "figtoipe – Convert FIG figures into Ipe format"
 <h2>OPTIONS</h2>
 <p> <code>-g</code> group the figure in the output XML</p>
 <dl>
-<dt><code>-p </code><i>latex</i></p>
-<dd> add <i>latex</i> as a preamble to the generated XML file, e.g. </p>
+<dt><code>-p </code><i>latex</i></dt>
+<dd> add <i>latex</i> as a preamble to the generated XML file, e.g. </dd>
 <pre>
 '
+</dl>
+</pre>

@@ -14,7 +14,7 @@ description: "deb-extra-override – Debian archive extra override file"
 <p>While most information about a binary/source package can be found in the control/.dsc file, all of it can be overridden when it&#8217;s exported to Packages/Sources files. The extra override file contains those overrides. </p>
 <p> The extra override file has a simple whitespace-delimited format. Comments are allowed (denoted with a <code>#</code>). </p>
 <dl>
-<dd><i>package</i> <i>field-name</i> <i>value</i></dl>
+<dd><i>package</i> <i>field-name</i> <i>value</i></dd></dl>
 <p> <i>package</i> is the name of the binary/source package. </p>
 <p> <i>field-name</i> is the name of the field that is overridden. </p>
 <p> <i>value</i> is the value to put in the field. It can contain spaces as the line is split in no more than 3 columns when it&#8217;s parsed. </p>

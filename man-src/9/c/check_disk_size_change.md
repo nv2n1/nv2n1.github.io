@@ -15,11 +15,11 @@ check_disk_size_change - checks for disk size change and adjusts bdev size.
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>struct gendisk to check</dl>
+<dl><dd></dd><dd>struct gendisk to check</dd></dl>
  
 
  <i>bdev</i>
-<dl><dd>struct bdev to adjust.</dl>
+<dl><dd>struct bdev to adjust.</dd></dl>
 
 <h2>Description</h2>
 

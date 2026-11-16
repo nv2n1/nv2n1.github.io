@@ -72,34 +72,34 @@ description: "QuantLib::DigitalCoupon – Digital-payoff coupon."
 <p>Digital-payoff coupon. </p>
 <p> Implementation of a floating-rate coupon with digital call/put option. Payoffs:</p>
 <dl>
-<dt>*</p>
-<dd><code>Coupon</code> with cash-or-nothing Digital Call rate + csi * payoffRate * Heaviside(rate-strike)</p>
-<dt>*</p>
-<dd><code>Coupon</code> with cash-or-nothing Digital Put rate + csi * payoffRate * Heaviside(strike-rate) where csi=+1 or csi=-1.</p>
-<dt>*</p>
-<dd><code>Coupon</code> with asset-or-nothing Digital Call rate + csi * rate * Heaviside(rate-strike)</p>
-<dt>*</p>
-<dd><code>Coupon</code> with asset-or-nothing Digital Put rate + csi * rate * Heaviside(strike-rate) where csi=+1 or csi=-1. The evaluation of the coupon is made using the call/put spread replication method.</dl>
+<dt>*</dt>
+<dd><code>Coupon</code> with cash-or-nothing Digital Call rate + csi * payoffRate * Heaviside(rate-strike)</dd>
+<dt>*</dt>
+<dd><code>Coupon</code> with cash-or-nothing Digital Put rate + csi * payoffRate * Heaviside(strike-rate) where csi=+1 or csi=-1.</dd>
+<dt>*</dt>
+<dd><code>Coupon</code> with asset-or-nothing Digital Call rate + csi * rate * Heaviside(rate-strike)</dd>
+<dt>*</dt>
+<dd><code>Coupon</code> with asset-or-nothing Digital Put rate + csi * rate * Heaviside(strike-rate) where csi=+1 or csi=-1. The evaluation of the coupon is made using the call/put spread replication method.</dd></dl>
 <p> <code>Tests</code></p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>the correctness of the returned value in case of Asset-or-nothing embedded option is tested by pricing the digital option with Cox-Rubinstein formula.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of deep-in-the-money Asset-or-nothing embedded option is tested vs the expected values of coupon and option.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of deep-out-of-the-money Asset-or-nothing embedded option is tested vs the expected values of coupon and option.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of Cash-or-nothing embedded option is tested by pricing the digital option with Reiner-Rubinstein formula.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of deep-in-the-money Cash-or-nothing embedded option is tested vs the expected values of coupon and option.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of deep-out-of-the-money Cash-or-nothing embedded option is tested vs the expected values of coupon and option.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested checking the correctness of the call-put parity relation.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by the relationship between prices in case of different replication types.</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of Asset-or-nothing embedded option is tested by pricing the digital option with Cox-Rubinstein formula.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of deep-in-the-money Asset-or-nothing embedded option is tested vs the expected values of coupon and option.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of deep-out-of-the-money Asset-or-nothing embedded option is tested vs the expected values of coupon and option.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of Cash-or-nothing embedded option is tested by pricing the digital option with Reiner-Rubinstein formula.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of deep-in-the-money Cash-or-nothing embedded option is tested vs the expected values of coupon and option.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of deep-out-of-the-money Cash-or-nothing embedded option is tested vs the expected values of coupon and option.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested checking the correctness of the call-put parity relation.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by the relationship between prices in case of different replication types.</dd></dl>
 </dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Rate</code> callOptionRate () const</h3>

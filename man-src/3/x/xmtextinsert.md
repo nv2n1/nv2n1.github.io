@@ -19,12 +19,12 @@ description: "XmTextInsert — A Text function that inserts a character string i
 <p> This routine calls the widget&#8217;s <code>XmNvalueChangedCallback</code> and verification callbacks, either <code>XmNmodifyVerifyCallback</code> or <code>XmNmodifyVerifyCallbackWcs</code>, or both. If both verification callback lists are registered, the procedures of the <code>XmNmodifyVerifyCallback</code> list are executed first and the resulting data is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callbacks. If the <code>XmNcursorPosition</code> resource is greater than or is the same value as <i>position</i>, the <code>XmNmotionVerifyCallback</code> is called. </p>
 <p> Note that, if <i>value</i> is a null string, no callbacks will be generated, since no modifications will have been made.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID.</p>
-<dt><i>position</i></p>
-<dd>Specifies the position in the text string where the character string is to be inserted.</p>
-<dt><i>value</i></p>
-<dd>Specifies the character string value to be added to the text widget.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID.</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position in the text string where the character string is to be inserted.</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the character string value to be added to the text widget.</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextinsertwcs/">XmTextInsertWcs</a></code>(3).</p>

@@ -10,15 +10,15 @@ description: "skb_needs_linearize – check if we need to linearize a given skb 
 <p>skb_needs_linearize &#8211; check if we need to linearize a given skb depending on the given device features.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool skb_needs_linearize(struct sk_buff&nbsp;<wbr>*&nbsp;<wbr></code><i>skb</i><code>, netdev_features_t&nbsp;<wbr></code><i>features</i><code>);</code></dl>
+<dt> <code>bool skb_needs_linearize(struct sk_buff&nbsp;<wbr>*&nbsp;<wbr></code><i>skb</i><code>, netdev_features_t&nbsp;<wbr></code><i>features</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>socket buffer to check</dl>
+</dd><dd>socket buffer to check</dd></dl>
 <p> <i>features</i></p>
 <dl>
-<dd>net device features</dl>
+<dd>net device features</dd></dl>
 <h2>Description</h2>
 <p>Returns true if either: 1. skb has frag_list and the device doesn&#8217;t support FRAGLIST, or 2. skb is fragmented and the device does not support SG.</p>
 <h2>Copyright</h2>

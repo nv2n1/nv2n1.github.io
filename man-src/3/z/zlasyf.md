@@ -31,10 +31,10 @@ description: "zlasyf.f –"
  ZLASYF is an auxiliary routine called by ZSYTRF. It uses blocked code
  (calling Level 3 BLAS) to update the submatrix A11 (if UPLO = 'U') or
  A22 (if UPLO = 'L').</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  Specifies whether the upper or lower triangular part of the
  symmetric matrix A is stored:
@@ -96,20 +96,21 @@ description: "zlasyf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2013</dl>
+<dd>November 2013</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dd>
 <pre> November 2013, Igor Kozachenko,
  Computer Science Division,
  University of California, Berkeley</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 178 of file zlasyf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

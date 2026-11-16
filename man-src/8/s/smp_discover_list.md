@@ -17,42 +17,42 @@ description: "smp_discover_list – invoke DISCOVER LIST SMP function"
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-A</code>, <code>&#8211;adn</code></p>
-<dd>causes the &quot;attached device name&quot; field to be output when the <i>&#8211;one</i> or <i>&#8211;summary</i> option is also given. See the section below on SINGLE LINE PER PHY FORMAT. Note the &quot;attached device name&quot; field is not available in the short format (e.g. <i>&#8211;descriptor=1</i>).</p>
-<dt><code>-b</code>, <code>&#8211;brief</code></p>
-<dd>reduce the decoded response output.</p>
-<dt><code>-c</code>, <code>&#8211;cap</code></p>
-<dd>decode and print phy capabilities bits fields (see SNW-3 in draft). Each expander phy has three of these fields: programmed, current and attached. By default these fields are only printed out in hex, or not at all if the <i>&#8211;brief</i> option is given or implied. Of the three the attached phy capability field is probably the most interesting. If the <i>&#8211;verbose</i> option is given, then the various &quot;G&quot; identifiers are expanded (e.g. instead of &quot;G4:&quot; it prints &quot;G4 (12 Gbps):&quot;).</p>
-<dt><code>-d</code>, <code>&#8211;descriptor</code>=<i>TY</i></p>
-<dd>set the &quot;descriptor type&quot; field in the request. When <i>TY</i> is 0 then the 120 byte response defined by the DISCOVER function response (less its CRC field) is placed in the descriptors of this function&#8217;s response. When <i>TY</i> is 1 the short format (i.e. 24 byte per descriptor) information is placed in the descriptors of this function&#8217;s response.</p>
-<dt><code>-f</code>, <code>&#8211;filter</code>=<i>FI</i></p>
-<dd>set the filter field in the request. When <i>FI</i> is 0 (default) fetch descriptors for all phys. When <i>FI</i> is 1 only fetch descriptors for phys attached to (other) expanders. When <i>FI</i> is 2 only fetch descriptors for phys attached to expanders, SAS or SATA devices. When <i>FI</i> is 1 or 2, expander phys that would yield &quot;phy vacant&quot; (indicating they are hidden by zoning) are filtered out.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;ignore</code></p>
-<dd>sets the Ignore Zone Group bit in the SMP Discover list request.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></p>
-<dd>maximum number of descriptors fetch. If any descriptors are in the response the first phy id will be greater than or equal to the argument of <i>&#8211;phy=ID</i>. Note that maximum SMP frame size is 1032 bytes (including a trailing 4 byte CRC) which may limit the number of descriptors that can be fetched by a single DISCOVER LIST function (especially when &#8216;&#8211;descriptor=0&#8217;).</p>
-<dt><code>-o</code>, <code>&#8211;one</code></p>
-<dd>use one line (summarized) format for each descriptor in the response. The default action when this option is not given is to output multiple indented lines for each descriptor in the response. See the section below on SINGLE LINE PER PHY FORMAT.</p>
-<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></p>
-<dd>phy identifier. <i>ID</i> is a value between 0 and 254. This is the starting (lowest numbered) phy id to fetch in the response. Note that due to the filter field setting, the first phy id in the response may be greater than the argument to this option.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-S</code>, <code>&#8211;summary</code></p>
-<dd>output a multi line summary, with one line per active phy. Checks up to 254 phys starting at phy identifier <i>ID</i> (which defaults to 0). Equivalent to &#8216;-o -d 1 -n 254 -b&#8217; unless the <i>&#8211;adn</i> option was also given, in which case it is equivalent to &#8216;-o -d 0 -n 254 -b&#8217; . See the section below on SINGLE LINE PER PHY FORMAT.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</p>
-<dt><code>-Z</code>, <code>&#8211;zpi</code>=<i>FN</i></p>
-<dd><i>FN</i> is a file that will be created or truncated then have zone phy information written to it in a format suitable for input to the smp_conf_zone_phy_info utility&#8217;s <i>&#8211;pconf=FN</i> option. If <i>&#8211;num=NUM</i> is not given it is set to 254. The output will start from phy_id 0 unless <i>&#8211;phy=ID</i> is given.</dl>
+<dt><code>-A</code>, <code>&#8211;adn</code></dt>
+<dd>causes the &quot;attached device name&quot; field to be output when the <i>&#8211;one</i> or <i>&#8211;summary</i> option is also given. See the section below on SINGLE LINE PER PHY FORMAT. Note the &quot;attached device name&quot; field is not available in the short format (e.g. <i>&#8211;descriptor=1</i>).</dd>
+<dt><code>-b</code>, <code>&#8211;brief</code></dt>
+<dd>reduce the decoded response output.</dd>
+<dt><code>-c</code>, <code>&#8211;cap</code></dt>
+<dd>decode and print phy capabilities bits fields (see SNW-3 in draft). Each expander phy has three of these fields: programmed, current and attached. By default these fields are only printed out in hex, or not at all if the <i>&#8211;brief</i> option is given or implied. Of the three the attached phy capability field is probably the most interesting. If the <i>&#8211;verbose</i> option is given, then the various &quot;G&quot; identifiers are expanded (e.g. instead of &quot;G4:&quot; it prints &quot;G4 (12 Gbps):&quot;).</dd>
+<dt><code>-d</code>, <code>&#8211;descriptor</code>=<i>TY</i></dt>
+<dd>set the &quot;descriptor type&quot; field in the request. When <i>TY</i> is 0 then the 120 byte response defined by the DISCOVER function response (less its CRC field) is placed in the descriptors of this function&#8217;s response. When <i>TY</i> is 1 the short format (i.e. 24 byte per descriptor) information is placed in the descriptors of this function&#8217;s response.</dd>
+<dt><code>-f</code>, <code>&#8211;filter</code>=<i>FI</i></dt>
+<dd>set the filter field in the request. When <i>FI</i> is 0 (default) fetch descriptors for all phys. When <i>FI</i> is 1 only fetch descriptors for phys attached to (other) expanders. When <i>FI</i> is 2 only fetch descriptors for phys attached to expanders, SAS or SATA devices. When <i>FI</i> is 1 or 2, expander phys that would yield &quot;phy vacant&quot; (indicating they are hidden by zoning) are filtered out.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;ignore</code></dt>
+<dd>sets the Ignore Zone Group bit in the SMP Discover list request.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></dt>
+<dd>maximum number of descriptors fetch. If any descriptors are in the response the first phy id will be greater than or equal to the argument of <i>&#8211;phy=ID</i>. Note that maximum SMP frame size is 1032 bytes (including a trailing 4 byte CRC) which may limit the number of descriptors that can be fetched by a single DISCOVER LIST function (especially when &#8216;&#8211;descriptor=0&#8217;).</dd>
+<dt><code>-o</code>, <code>&#8211;one</code></dt>
+<dd>use one line (summarized) format for each descriptor in the response. The default action when this option is not given is to output multiple indented lines for each descriptor in the response. See the section below on SINGLE LINE PER PHY FORMAT.</dd>
+<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></dt>
+<dd>phy identifier. <i>ID</i> is a value between 0 and 254. This is the starting (lowest numbered) phy id to fetch in the response. Note that due to the filter field setting, the first phy id in the response may be greater than the argument to this option.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-S</code>, <code>&#8211;summary</code></dt>
+<dd>output a multi line summary, with one line per active phy. Checks up to 254 phys starting at phy identifier <i>ID</i> (which defaults to 0). Equivalent to &#8216;-o -d 1 -n 254 -b&#8217; unless the <i>&#8211;adn</i> option was also given, in which case it is equivalent to &#8216;-o -d 0 -n 254 -b&#8217; . See the section below on SINGLE LINE PER PHY FORMAT.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd>
+<dt><code>-Z</code>, <code>&#8211;zpi</code>=<i>FN</i></dt>
+<dd><i>FN</i> is a file that will be created or truncated then have zone phy information written to it in a format suitable for input to the smp_conf_zone_phy_info utility&#8217;s <i>&#8211;pconf=FN</i> option. If <i>&#8211;num=NUM</i> is not given it is set to 254. The output will start from phy_id 0 unless <i>&#8211;phy=ID</i> is given.</dd></dl>
 <h2>Single Line Per Phy Format</h2>
 <p>The <i>&#8211;summary</i> (or <i>&#8211;one</i>) option causes SMP DISCOVER LIST descriptors to be compressed to one line per phy. To save space SAS addresses are shown in hex without a &#8216;0x&#8217; prefix or &#8216;h&#8217; suffix. The header section outputs information found in the DISCOVER LIST response&#8217;s header section. </p>
 <p> For each descriptor in the DISCOVER LIST response, one line is output starting with &quot; phy &lt;n&gt;:&quot; where &lt;n&gt; is the phy identifier (and they are origin zero). That is followed by the routing attribute represented by a single letter which is either &quot;D&quot; for direct routing, &quot;S&quot; for subtractive routing, &quot;T&quot; or &quot;U&quot;. Both &quot;T&quot; and &quot;U&quot; imply table routing, the difference is that if REPORT GENERAL indicates &quot;table to table supported&quot; then &quot;U&quot; is output to indicate that phy can be part of an enclosure <code>universal</code> port; otherwise &quot;T&quot; is used. Next comes the negotiated physical link rate which is either &quot;disabled&quot;, &quot;reset problem&quot; or &quot;spinup hold&quot;. Other states are mapped to &quot;attached&quot;. This includes enabled phys with nothing connected which appear as &quot;attached:[0000000000000000:00]&quot;. </p>

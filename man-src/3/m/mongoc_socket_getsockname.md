@@ -15,14 +15,14 @@ mongoc_socket_getsockname (mongoc_socket_t *sock,
  socklen_t *addrlen);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>addr</code></p>
-<dd>A struct sockaddr.</dl>
+<dt><code>addr</code></dt>
+<dd>A struct sockaddr.</dd></dl>
 <dl COMPACT>
-<dt><code>addrlen</code></p>
-<dd>A socklen_t.</dl>
+<dt><code>addrlen</code></dt>
+<dd>A socklen_t.</dd></dl>
 <h2>Description</h2>
 <p>Retrieves the socket name for <code>sock</code> \&amp;. The result is stored in <code>addr</code> \&amp;. <code>addrlen</code> should be the size of the <code>addr</code> when calling this. </p>
 <h2>Returns</h2>

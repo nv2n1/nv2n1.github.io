@@ -192,50 +192,43 @@ PDL::API - making piddles from Perl and C/XS code
 
  <pre> pdl *p = PDL_Corep-&gt;pdlnew();</pre><h3>Some selected core routines explained</h3>The full definition of the <tt>&quot;Core&quot;</tt> struct can be found in the file <i>pdlcore.h</i>. In the following the most frequently used member functions of this struct are briefly explained.
 <dl><dt>&bull;
-<dd><tt>&quot;pdl *SvPDLV(SV *sv)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;pdl *SetSV_PDL(SV *sv, pdl *it)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;pdl *pdlnew()&quot;</tt> 
-
+</dt><dd><tt>&quot;pdl *SvPDLV(SV *sv)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;pdl *SetSV_PDL(SV *sv, pdl *it)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;pdl *pdlnew()&quot;</tt> 
  <tt>&quot;pdlnew&quot;</tt> returns an empty pdl object that needs further initialization to turn it into a proper piddle. Example: 
-
  <pre> pdl *p = PDL-&gt;pdlnew();
  PDL-&gt;setdims(p,dims,ndims);
- p-&gt;datatype = PDL_B;</pre><dt>&bull;
-<dd><tt>&quot;pdl *null()&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;SV *copy(pdl* p, char* )&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;void *smalloc(STRLEN nbytes)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;int howbig(int pdl_datatype)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;void add_deletedata_magic(pdl *p, void (*func)(pdl*, int), int param)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;void allocdata(pdl *p)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;void make_physical(pdl *p)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;void make_physdims(pdl *p)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;void make_physvaffine(pdl *p)&quot;</tt>
-<dt>&bull;
-<dd><tt>&quot;void qsort_X(PDL_Xtype *data, PDL_Indx a, PDL_Indx b)&quot;</tt> and <tt>&quot;void qsort_ind_X(PDL_Xtype *data, PDL_Indx *ix, PDL_Indx a, PDL_Indx b)&quot;</tt> 
-
+ p-&gt;datatype = PDL_B;</pre></dd><dt>&bull;
+</dt><dd><tt>&quot;pdl *null()&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;SV *copy(pdl* p, char* )&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void *smalloc(STRLEN nbytes)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;int howbig(int pdl_datatype)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void add_deletedata_magic(pdl *p, void (*func)(pdl*, int), int param)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void allocdata(pdl *p)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void make_physical(pdl *p)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void make_physdims(pdl *p)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void make_physvaffine(pdl *p)&quot;</tt>
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void qsort_X(PDL_Xtype *data, PDL_Indx a, PDL_Indx b)&quot;</tt> and <tt>&quot;void qsort_ind_X(PDL_Xtype *data, PDL_Indx *ix, PDL_Indx a, PDL_Indx b)&quot;</tt> 
  where X is one of B,S,U,L,F,D and Xtype is one of Byte, Short, Ushort, Long, Float or Double. PDL_Indx is the C integer type corresponding to appropriate indexing size for the perl configuration (ivsize and ivtype). It can be either 'long' or 'long long' depending on whether your perl is 32bit or 64bit enabled.
-<dt>&bull;
-<dd><tt>&quot;float NaN_float&quot;</tt> and <tt>&quot;double NaN_double&quot;</tt> 
-
+</dd><dt>&bull;
+</dt><dd><tt>&quot;float NaN_float&quot;</tt> and <tt>&quot;double NaN_double&quot;</tt> 
  These are constants to produce the required NaN values.
-<dt>&bull;
-<dd><tt>&quot;void pdl_barf(const char* pat,...)&quot;</tt> and <tt>&quot;void pdl_warn(const char* pat,...)&quot;</tt> 
-
+</dd><dt>&bull;
+</dt><dd><tt>&quot;void pdl_barf(const char* pat,...)&quot;</tt> and <tt>&quot;void pdl_warn(const char* pat,...)&quot;</tt> 
  These are C-code equivalents of <tt>&quot;barf&quot;</tt> and <tt>&quot;warn&quot;</tt>. They include special handling of error or warning messages during pthreading (i.e. processor multi-threading) that defer the messages until after pthreading is completed. When pthreading is complete, perl's <tt>&quot;barf&quot;</tt> or <tt>&quot;warn&quot;</tt> is called with the deferred messages. This is needed to keep from calling perl's <tt>&quot;barf&quot;</tt> or <tt>&quot;warn&quot;</tt> during pthreading, which can cause segfaults. 
-
  Note that <tt>&quot;barf&quot;</tt> and <tt>&quot;warn&quot;</tt> have been redefined (using c-preprocessor macros) in pdlcore.h to <tt>&quot;PDL-&gt;barf&quot;</tt> and <tt>&quot;PDL-&gt;warn&quot;</tt>. This is to keep any <font SIZE="-1">XS</font> or <font SIZE="-1">PP</font> code from calling perl's <tt>&quot;barf&quot;</tt> or <tt>&quot;warn&quot;</tt> directly, which can cause segfaults during pthreading. 
-
- See PDL::ParallelCPU for more information on pthreading.</dl><h2>See Also</h2><font SIZE="-1">PDL</font> 
+ See PDL::ParallelCPU for more information on pthreading.</dd></dl><h2>See Also</h2><font SIZE="-1">PDL</font> 
 
  Inline
 <h2>Bugs</h2>This manpage is still under development. Feedback and corrections are welcome.

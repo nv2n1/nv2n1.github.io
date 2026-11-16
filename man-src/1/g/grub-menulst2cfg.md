@@ -17,6 +17,6 @@ description: "grub-menulst2cfg – transform legacy menu.lst into grub.cfg"
 <p> The full documentation for <code>grub-menulst2cfg</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-menulst2cfg</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info grub-menulst2cfg</code></dl>
+</dt><dd> <code>info grub-menulst2cfg</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

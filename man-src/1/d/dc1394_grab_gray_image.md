@@ -15,8 +15,8 @@ description: "grab_gray_image – grab an image using libdc1394"
 <p> Get one gray image using libdc1394 and store it in portable grayscale map format in Image.pgm</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>none</p>
-<dd></dl>
+<dt>none</dt>
+<dd></dd></dl>
 <h2>BUGS</h2>
 <p> The filename should be a commandline argument</p>
 <h2>AUTHOR</h2>

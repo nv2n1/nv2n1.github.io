@@ -47,9 +47,9 @@ description: "swat_selinux – Security Enhanced Linux Policy for the swat proce
 <p> Policy governs the access confined processes have to these ports. SELinux swat policy is very flexible allowing users to setup their swat processes in as secure a method as possible. </p>
 <p> The following port types are defined for swat: </p>
 <dl>
-<dt><code>swat_port_t</code></p>
+<dt><code>swat_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 901</dl>
+</dd><dd>Default Defined Ports: tcp 901</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type swat_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>faillog_t</code> </p>

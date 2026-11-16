@@ -15,11 +15,11 @@ arch_phys_wc_add - add a WC MTRR and handle errors if PAT is unavailable
 <h2>Arguments</h2>
 
 <i>base</i>
-<dl><dd><dd>Physical base address</dl>
+<dl><dd></dd><dd>Physical base address</dd></dl>
  
 
  <i>size</i>
-<dl><dd>Size of region</dl>
+<dl><dd>Size of region</dd></dl>
 
 <h2>Description</h2>
 

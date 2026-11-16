@@ -26,14 +26,14 @@ description: "sisusb – SiS USB video driver"
 <p> Please note that this driver requires a Linux kernel driver as well which is included in Linux 2.6.12 and later, as well as available at the aforementioned website. </p>
 <p> The following driver <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option &#34;HWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable the hardware cursor. It is not recommended to disable the hardware cursor as this will increase the amount of data transferred over the USB. Default: HWCursor is on.</p>
-<dt><code>Option &#34;SWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>The opposite of HWCursor. This enables or disables the software cursor. This sort of cursor is slower because the pointer must be painted into the graphics display. This increases the amount of data transferred over the USB significantly. Default: SWCursor is off.</p>
-<dt><code>Option &#34;CRT1Gamma&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable gamma correction. Default: Gamma correction is on.</p>
-<dt><code>Option &#34;DisconnectTimeout&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option determines how the driver will react to a disconnection of the USB device. If the integer supplied is -1, the driver will abort the X server immediately upon disconnection. If the value given is 0, the driver will probe for a re-connection every 2 seconds and in case the device is detected, re-establish the display. If the value is greater than 0, the driver will do this re-probing within the given number of seconds and abort the server if it does not detect the device within this time-out. Default: 0 (probe forever for device reconnection).</dl>
+<dt><code>Option &#34;HWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable the hardware cursor. It is not recommended to disable the hardware cursor as this will increase the amount of data transferred over the USB. Default: HWCursor is on.</dd>
+<dt><code>Option &#34;SWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>The opposite of HWCursor. This enables or disables the software cursor. This sort of cursor is slower because the pointer must be painted into the graphics display. This increases the amount of data transferred over the USB significantly. Default: SWCursor is off.</dd>
+<dt><code>Option &#34;CRT1Gamma&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable gamma correction. Default: Gamma correction is on.</dd>
+<dt><code>Option &#34;DisconnectTimeout&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option determines how the driver will react to a disconnection of the USB device. If the integer supplied is -1, the driver will abort the X server immediately upon disconnection. If the value given is 0, the driver will probe for a re-connection every 2 seconds and in case the device is detected, re-establish the display. If the value is greater than 0, the driver will do this re-probing within the given number of seconds and abort the server if it does not detect the device within this time-out. Default: 0 (probe forever for device reconnection).</dd></dl>
 <h2>Known Bugs</h2>
 <p>none.</p>
 <h2>See Also</h2>

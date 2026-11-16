@@ -10,7 +10,6 @@ description: "std::char_traits<CharT>::not_eof – std::char_traits<CharT>::not_
 <p>std::char_traits&lt;CharT&gt;::not_eof &#8211; std::char_traits&lt;CharT&gt;::not_eof</p>
 <h2>Synopsis</h2>
 <pre><code>static int_type not_eof( int_type e );                     (until C++11)
-
 static constexpr int_type not_eof( int_type e ) noexcept;  (since C++11)</code></pre>
 <p>Checks whether e is not equivalent to eof value.<br />
 Formally<br />

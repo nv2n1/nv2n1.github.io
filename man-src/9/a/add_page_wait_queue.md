@@ -15,11 +15,11 @@ add_page_wait_queue - Add an arbitrary waiter to a page's wait queue
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>Page defining the wait queue of interest</dl>
+<dl><dd></dd><dd>Page defining the wait queue of interest</dd></dl>
  
 
  <i>waiter</i>
-<dl><dd>Waiter to add to the queue</dl>
+<dl><dd>Waiter to add to the queue</dd></dl>
 
 <h2>Description</h2>
 

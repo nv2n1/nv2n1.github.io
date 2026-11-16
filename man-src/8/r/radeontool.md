@@ -17,25 +17,25 @@ description: "radeontool — utility to get/set registers and to control backlig
 <h2>Commands</h2>
 <p>You can specify one of the following commands:</p>
 <dl>
-<dt><code>dac [on|off]</code></p>
-<dd>Power down the external video output</p>
-<dt><code>light [on|off]</code></p>
-<dd>Power down the backlight</p>
-<dt><code>stretch [on|off|vert|horiz|auto|manual]</code></p>
-<dd>Adjusts stretching for resolution mismatch</p>
-<dt><code>regs</code></p>
-<dd>Show a listing of some random registers</p>
-<dt><code>regmatch [pattern]</code></p>
-<dd>Show registers matching wildcard pattern</p>
-<dt><code>regset [pattern] [value]</code></p>
-<dd>Set registers matching wildcard pattern</dl>
+<dt><code>dac [on|off]</code></dt>
+<dd>Power down the external video output</dd>
+<dt><code>light [on|off]</code></dt>
+<dd>Power down the backlight</dd>
+<dt><code>stretch [on|off|vert|horiz|auto|manual]</code></dt>
+<dd>Adjusts stretching for resolution mismatch</dd>
+<dt><code>regs</code></dt>
+<dd>Show a listing of some random registers</dd>
+<dt><code>regmatch [pattern]</code></dt>
+<dd>Show registers matching wildcard pattern</dd>
+<dt><code>regset [pattern] [value]</code></dt>
+<dd>Set registers matching wildcard pattern</dd></dl>
 <h2>Options</h2>
 <p>These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd>Show a little debug info</p>
-<dt><code>&#8211;skip=n</code></p>
-<dd>Skips the first n cards and acts on the n+1</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd>Show a little debug info</dd>
+<dt><code>&#8211;skip=n</code></dt>
+<dd>Skips the first n cards and acts on the n+1</dd></dl>
 <h2>Author</h2>
 <p>This manual page was written by Luigi Gangitano luigi [at] debian.org for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br />
 &nbsp;<wbr> </p>

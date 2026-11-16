@@ -24,11 +24,9 @@ int adime_dialogf(char *title, int x, int y, int edit_w,
 {
     int ret;
     va_list ap;
-
     va_start(ap, format);
     ret = adime_vdialogf(title, x, y, edit_w, format, ap);
     va_end(ap);
-
     return ret;
 }
 </code></pre>

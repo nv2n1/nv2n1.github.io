@@ -37,26 +37,20 @@ url: "/docs/linux/man/3-sgbmv/"
  <b>SGBMV</b> <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
  SGBMV  performs one of the matrix-vector operations
     y := alpha*A*x + beta*y,   or   y := alpha*A**T*x + beta*y,
  where alpha and beta are scalars, x and y are vectors and A is an
  m by n band matrix, with kl sub-diagonals and ku super-diagonals.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>TRANS</i> 
-
+</dt><dd> <i>TRANS</i> 
  <pre>
           TRANS is CHARACTER*1
            On entry, TRANS specifies the operation to be performed as
@@ -65,54 +59,36 @@ url: "/docs/linux/man/3-sgbmv/"
               TRANS = 'T' or 't'   y := alpha*A**T*x + beta*y.
               TRANS = 'C' or 'c'   y := alpha*A**T*x + beta*y.
 </pre> 
-
- 
  <i>M</i> 
-
  <pre>
           M is INTEGER
            On entry, M specifies the number of rows of the matrix A.
            M must be at least zero.
 </pre> 
-
- 
  <i>N</i> 
-
  <pre>
           N is INTEGER
            On entry, N specifies the number of columns of the matrix A.
            N must be at least zero.
 </pre> 
-
- 
  <i>KL</i> 
-
  <pre>
           KL is INTEGER
            On entry, KL specifies the number of sub-diagonals of the
            matrix A. KL must satisfy  0 .le. KL.
 </pre> 
-
- 
  <i>KU</i> 
-
  <pre>
           KU is INTEGER
            On entry, KU specifies the number of super-diagonals of the
            matrix A. KU must satisfy  0 .le. KU.
 </pre> 
-
- 
  <i>ALPHA</i> 
-
  <pre>
           ALPHA is REAL
            On entry, ALPHA specifies the scalar alpha.
 </pre> 
-
- 
  <i>A</i> 
-
  <pre>
           A is REAL array of DIMENSION ( LDA, n ).
            Before entry, the leading ( kl + ku + 1 ) by n part of the
@@ -133,20 +109,14 @@ url: "/docs/linux/man/3-sgbmv/"
               10    CONTINUE
               20 CONTINUE
 </pre> 
-
- 
  <i>LDA</i> 
-
  <pre>
           LDA is INTEGER
            On entry, LDA specifies the first dimension of A as declared
            in the calling (sub) program. LDA must be at least
            ( kl + ku + 1 ).
 </pre> 
-
- 
  <i>X</i> 
-
  <pre>
           X is REAL array of DIMENSION at least
            ( 1 + ( n - 1 )*abs( INCX ) ) when TRANS = 'N' or 'n'
@@ -155,28 +125,19 @@ url: "/docs/linux/man/3-sgbmv/"
            Before entry, the incremented array X must contain the
            vector x.
 </pre> 
-
- 
  <i>INCX</i> 
-
  <pre>
           INCX is INTEGER
            On entry, INCX specifies the increment for the elements of
            X. INCX must not be zero.
 </pre> 
-
- 
  <i>BETA</i> 
-
  <pre>
           BETA is REAL
            On entry, BETA specifies the scalar beta. When BETA is
            supplied as zero then Y need not be set on input.
 </pre> 
-
- 
  <i>Y</i> 
-
  <pre>
           Y is REAL array of DIMENSION at least
            ( 1 + ( m - 1 )*abs( INCY ) ) when TRANS = 'N' or 'n'
@@ -185,45 +146,34 @@ url: "/docs/linux/man/3-sgbmv/"
            Before entry, the incremented array Y must contain the
            vector y. On exit, Y is overwritten by the updated vector y.
 </pre> 
-
- 
  <i>INCY</i> 
-
  <pre>
           INCY is INTEGER
            On entry, INCY specifies the increment for the elements of
            Y. INCY must not be zero.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  <b>Further Details: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
   Level 2 Blas routine.
   The vector and matrix arguments are not referenced when N = 0, or M = 0
@@ -233,9 +183,7 @@ url: "/docs/linux/man/3-sgbmv/"
      Sven Hammarling, Nag Central Office.
      Richard Hanson, Sandia National Labs.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  

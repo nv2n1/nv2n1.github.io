@@ -13,8 +13,8 @@ description: "rlm_acct_unique – FreeRADIUS Module"
 <p> Many NAS vendors have their equipment supply an Acct-Session-Id attribute which is not unique over reboots. This makes accounting difficult, as there will be many independent sessions with the same Acct-Session-Id attribute. This module uses the Acct-Session-Id attribute, along with other attributes in the request, to create a more unique session ID, called Acct-Unique-Session-Id. </p>
 <p> The main configuration items to be aware of are:</p>
 <dl>
-<dt>key</p>
-<dd>A list of the attributes used in calculating an MD5 hash which is used as the value for the unique session id.</dl>
+<dt>key</dt>
+<dd>A list of the attributes used in calculating an MD5 hash which is used as the value for the unique session id.</dd></dl>
 <h2>Configuration</h2>
 <dl>
 <dd>
@@ -40,12 +40,12 @@ preacct {
  ...
 <br>
 }</pre>
-</dl>
+</dd></dl>
 <p> After generating the MD5 hash, the module adds it to the accounting request packet received from the client. It will look something like this in your detail file: </p>
 <dl>
 <dd>
 <pre> Acct-Unique-Session-Id = &quot;c66ef57e480b9d26&quot;</pre>
-</dl>
+</dd></dl>
 <p> NOTE: Any attribute you specify that is not found in the &#8216;dictionary&#8217; file will cause the server to fail and exit with an error. </p>
 <p> NOTE: If you want the Acct-Unique-Session-Id of the Start and the Stop packet of a particular session to match, you must use values for the key that will stay the same for the Start and Stop. The above example is a good start. Adding &#8216;Acct-Session-Time&#8217;, for example, would cause a mismatch because that value is not the same on the Start and Stop accounting packets.</p>
 <h2>Sections</h2>

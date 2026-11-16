@@ -13,10 +13,10 @@ description: "pyacc – Pascal Yacc compiler compiler."
 <p> <code>yacc [options] yacc-file[.y] [output-file[.pas]]</code> </p>
 <p> SH OPTIONS </p>
 <dl>
-<dt><code>-v</code></p>
-<dd> <i>Verbose:</i> Pascal Yacc generates a readable description of the generated parser, written to yacc-file with new extension <i>.lst.</i></p>
-<dt><code>-d</code></p>
-<dd> <i>Debug:</i> TP Yacc generates a parser with debugging output. </p>
+<dt><code>-v</code></dt>
+<dd> <i>Verbose:</i> Pascal Yacc generates a readable description of the generated parser, written to yacc-file with new extension <i>.lst.</i></dd>
+<dt><code>-d</code></dt>
+<dd> <i>Debug:</i> TP Yacc generates a parser with debugging output. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>TP Yacc</code> is a program that lets you prepare parsers from the description of input languages by BNF-like grammars. You simply specify the grammar for your target language, augmented with the Turbo Pascal code necessary to process the syntactic constructs, and TP Yacc translates your grammar into the Turbo Pascal code for a corresponding parser subroutine named yyparse. </p>

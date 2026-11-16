@@ -11,18 +11,18 @@ description: "XtError, XtSetErrorHandler, XtSetWarningHandler, XtWarning – low
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtError(const char *<i>message</i>);</p>
-<dd>void XtSetErrorHandler(XtErrorHandler <i>handler</i>);</p>
-<dd>void XtSetWarningHandler(XtErrorHandler <i>handler</i>);</p>
-<dd>void XtWarning(const char *<i>message</i>);</dl>
+<dd>void XtError(const char *<i>message</i>);</dd>
+<dd>void XtSetErrorHandler(XtErrorHandler <i>handler</i>);</dd>
+<dd>void XtSetWarningHandler(XtErrorHandler <i>handler</i>);</dd>
+<dd>void XtWarning(const char *<i>message</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>message</i></p>
-<dd>Specifies the nonfatal error message that is to be reported.</p>
-<dt><i>handler</i></p>
-<dd>Specifies the new fatal error procedure, which should not return, or the nonfatal error procedure, which usually returns.</p>
-<dt><i>message</i></p>
-<dd>Specifies the message that is to be reported.</dl>
+<dt><i>message</i></dt>
+<dd>Specifies the nonfatal error message that is to be reported.</dd>
+<dt><i>handler</i></dt>
+<dd>Specifies the new fatal error procedure, which should not return, or the nonfatal error procedure, which usually returns.</dd>
+<dt><i>message</i></dt>
+<dd>Specifies the message that is to be reported.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtError</code> function has been superceded by <code>XtAppError</code>. </p>
 <p> The <code>XtSetErrorHandler</code> function has been superceded by <code>XtAppSetErrorHandler</code>. </p>

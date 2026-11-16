@@ -14,12 +14,12 @@ description: "perlcall – Perl calling conventions from C"
 <p> Apart from discussing the C interface provided by Perl for writing callbacks the document uses a series of examples to show how the interface actually works in practice. In addition some techniques for coding callbacks are covered. </p>
 <p> Examples where callbacks are necessary include</p>
 <dl>
-<dt>&bull;</p>
-<dd> An Error Handler </p>
+<dt>&bull;</dt>
+<dd> An Error Handler </dd>
 <p> You have created an <font SIZE="-1">XSUB</font> interface to an application&#8217;s C <font SIZE="-1">API.</font> </p>
 <p> A fairly common feature in applications is to allow you to define a C function that will be called whenever something nasty occurs. What we would like is to be able to specify a Perl subroutine that will be called instead.</p>
-<dt>&bull;</p>
-<dd> An Event-Driven Program </p>
+<dt>&bull;</dt>
+<dd> An Event-Driven Program </dd>
 <p> The classic example of where callbacks are used is when writing an event driven program, such as for an X11 application. In this case you register functions to be called whenever specific events occur, e.g., a mouse button is pressed, the cursor moves into a window or a menu item is selected.</dl>
 <p> Although the techniques described here are applicable when embedding Perl in a C program, this is not the primary goal of this document. There are other details that must be considered and are specific to embedding Perl. For details on embedding Perl in C refer to perlembed. </p>
 <p> Before you launch yourself head first into the rest of this document, it would be a good idea to have read the following two documents&#8212;perlxs and perlguts.</p>
@@ -36,14 +36,14 @@ I32 call_argv(char *subname, I32 flags, char **argv);
 <p> All the <i>call_*</i> functions have a <tt>&quot;flags&quot;</tt> parameter which is used to pass a bit mask of options to Perl. This bit mask operates identically for each of the functions. The settings available in the bit mask are discussed in &#8220;<font SIZE="-1">FLAG VALUES&#8221;</font>. </p>
 <p> Each of the functions will now be discussed in turn.</p>
 <dl>
-<dt>call_sv</p>
-<dd> <i>call_sv</i> takes two parameters. The first, <tt>&quot;sv&quot;</tt>, is an SV*. This allows you to specify the Perl subroutine to be called either as a C string (which has first been converted to an <font SIZE="-1">SV</font>) or a reference to a subroutine. The section, &#8220;Using call_sv&#8221;, shows how you can make use of <i>call_sv</i>.</p>
-<dt>call_pv</p>
-<dd> The function, <i>call_pv</i>, is similar to <i>call_sv</i> except it expects its first parameter to be a C char* which identifies the Perl subroutine you want to call, e.g., <tt>&quot;call_pv(&quot;fred&quot;, 0)&quot;</tt>. If the subroutine you want to call is in another package, just include the package name in the string, e.g., <tt>&quot;pkg::fred&quot;</tt>.</p>
-<dt>call_method</p>
-<dd> The function <i>call_method</i> is used to call a method from a Perl class. The parameter <tt>&quot;methname&quot;</tt> corresponds to the name of the method to be called. Note that the class that the method belongs to is passed on the Perl stack rather than in the parameter list. This class can be either the name of the class (for a static method) or a reference to an object (for a virtual method). See perlobj for more information on static and virtual methods and &#8220;Using call_method&#8221; for an example of using <i>call_method</i>.</p>
-<dt>call_argv</p>
-<dd> <i>call_argv</i> calls the Perl subroutine specified by the C string stored in the <tt>&quot;subname&quot;</tt> parameter. It also takes the usual <tt>&quot;flags&quot;</tt> parameter. The final parameter, <tt>&quot;argv&quot;</tt>, consists of a NULL-terminated list of C strings to be passed as parameters to the Perl subroutine. See &#8220;Using call_argv&#8221;.</dl>
+<dt>call_sv</dt>
+<dd> <i>call_sv</i> takes two parameters. The first, <tt>&quot;sv&quot;</tt>, is an SV*. This allows you to specify the Perl subroutine to be called either as a C string (which has first been converted to an <font SIZE="-1">SV</font>) or a reference to a subroutine. The section, &#8220;Using call_sv&#8221;, shows how you can make use of <i>call_sv</i>.</dd>
+<dt>call_pv</dt>
+<dd> The function, <i>call_pv</i>, is similar to <i>call_sv</i> except it expects its first parameter to be a C char* which identifies the Perl subroutine you want to call, e.g., <tt>&quot;call_pv(&quot;fred&quot;, 0)&quot;</tt>. If the subroutine you want to call is in another package, just include the package name in the string, e.g., <tt>&quot;pkg::fred&quot;</tt>.</dd>
+<dt>call_method</dt>
+<dd> The function <i>call_method</i> is used to call a method from a Perl class. The parameter <tt>&quot;methname&quot;</tt> corresponds to the name of the method to be called. Note that the class that the method belongs to is passed on the Perl stack rather than in the parameter list. This class can be either the name of the class (for a static method) or a reference to an object (for a virtual method). See perlobj for more information on static and virtual methods and &#8220;Using call_method&#8221; for an example of using <i>call_method</i>.</dd>
+<dt>call_argv</dt>
+<dd> <i>call_argv</i> calls the Perl subroutine specified by the C string stored in the <tt>&quot;subname&quot;</tt> parameter. It also takes the usual <tt>&quot;flags&quot;</tt> parameter. The final parameter, <tt>&quot;argv&quot;</tt>, consists of a NULL-terminated list of C strings to be passed as parameters to the Perl subroutine. See &#8220;Using call_argv&#8221;.</dd></dl>
 <p> All the functions return an integer. This is a count of the number of items returned by the Perl subroutine. The actual items returned by the subroutine are stored on the Perl stack. </p>
 <p> As a general rule you should <i>always</i> check the return value from these functions. Even if you are expecting only a particular number of values to be returned from the Perl subroutine, there is nothing to stop someone from doing something unexpected&#8212;don&#8217;t say you haven&#8217;t been warned.</p>
 <h2>FLAG VALUES</h2>
@@ -52,19 +52,19 @@ I32 call_argv(char *subname, I32 flags, char **argv);
 <p> Calls the Perl subroutine in a void context. </p>
 <p> This flag has 2 effects:</p>
 <dl>
-<dt>1.</p>
-<dd> It indicates to the subroutine being called that it is executing in a void context (if it executes <i>wantarray</i> the result will be the undefined value).</p>
-<dt>2.</p>
-<dd> It ensures that nothing is actually returned from the subroutine.</dl>
+<dt>1.</dt>
+<dd> It indicates to the subroutine being called that it is executing in a void context (if it executes <i>wantarray</i> the result will be the undefined value).</dd>
+<dt>2.</dt>
+<dd> It ensures that nothing is actually returned from the subroutine.</dd></dl>
 <p> The value returned by the <i>call_*</i> function indicates how many items have been returned by the Perl subroutine&#8212;in this case it will be 0.</p>
 <h3>G_SCALAR</h3>
 <p> Calls the Perl subroutine in a scalar context. This is the default context flag setting for all the <i>call_*</i> functions. </p>
 <p> This flag has 2 effects:</p>
 <dl>
-<dt>1.</p>
-<dd> It indicates to the subroutine being called that it is executing in a scalar context (if it executes <i>wantarray</i> the result will be false).</p>
-<dt>2.</p>
-<dd> It ensures that only a scalar is actually returned from the subroutine. The subroutine can, of course, ignore the <i>wantarray</i> and return a list anyway. If so, then only the last element of the list will be returned.</dl>
+<dt>1.</dt>
+<dd> It indicates to the subroutine being called that it is executing in a scalar context (if it executes <i>wantarray</i> the result will be false).</dd>
+<dt>2.</dt>
+<dd> It ensures that only a scalar is actually returned from the subroutine. The subroutine can, of course, ignore the <i>wantarray</i> and return a list anyway. If so, then only the last element of the list will be returned.</dd></dl>
 <p> The value returned by the <i>call_*</i> function indicates how many items have been returned by the Perl subroutine &#8211; in this case it will be either 0 or 1. </p>
 <p> If 0, then you have specified the G_DISCARD flag. </p>
 <p> If 1, then the item actually returned by the Perl subroutine will be stored on the Perl stack &#8211; the section &#8220;Returning a Scalar&#8221; shows how to access this value on the stack. Remember that regardless of how many items the Perl subroutine returns, only the last one will be accessible from the stack &#8211; think of the case where only one value is returned as being a list with only one element. Any other items that were returned will not exist by the time control returns from the <i>call_*</i> function. The section &#8220;Returning a List in Scalar Context&#8221; shows an example of this behavior.</p>
@@ -72,10 +72,10 @@ I32 call_argv(char *subname, I32 flags, char **argv);
 <p> Calls the Perl subroutine in a list context. </p>
 <p> As with G_SCALAR, this flag has 2 effects:</p>
 <dl>
-<dt>1.</p>
-<dd> It indicates to the subroutine being called that it is executing in a list context (if it executes <i>wantarray</i> the result will be true).</p>
-<dt>2.</p>
-<dd> It ensures that all items returned from the subroutine will be accessible when control returns from the <i>call_*</i> function.</dl>
+<dt>1.</dt>
+<dd> It indicates to the subroutine being called that it is executing in a list context (if it executes <i>wantarray</i> the result will be true).</dd>
+<dt>2.</dt>
+<dd> It ensures that all items returned from the subroutine will be accessible when control returns from the <i>call_*</i> function.</dd></dl>
 <p> The value returned by the <i>call_*</i> function indicates how many items have been returned by the Perl subroutine. </p>
 <p> If 0, then you have specified the G_DISCARD flag. </p>
 <p> If not 0, then it will be a count of the number of items returned by the subroutine. These items will be stored on the Perl stack. The section &#8220;Returning a List of Values&#8221; gives an example of using the G_ARRAY flag and the mechanics of accessing the returned items from the Perl stack.</p>
@@ -98,14 +98,14 @@ I32 call_argv(char *subname, I32 flags, char **argv);
 <p> Whenever control returns from the <i>call_*</i> function you need to check the <tt>$@</tt> variable as you would in a normal Perl script. </p>
 <p> The value returned from the <i>call_*</i> function is dependent on what other flags have been specified and whether an error has occurred. Here are all the different cases that can occur:</p>
 <dl>
-<dt>&bull;</p>
-<dd> If the <i>call_*</i> function returns normally, then the value returned is as specified in the previous sections.</p>
-<dt>&bull;</p>
-<dd> If G_DISCARD is specified, the return value will always be 0.</p>
-<dt>&bull;</p>
-<dd> If G_ARRAY is specified <i>and</i> an error has occurred, the return value will always be 0.</p>
-<dt>&bull;</p>
-<dd> If G_SCALAR is specified <i>and</i> an error has occurred, the return value will be 1 and the value on the top of the stack will be <i>undef</i>. This means that if you have already detected the error by checking <tt>$@</tt> and you want the program to continue, you must remember to pop the <i>undef</i> from the stack.</dl>
+<dt>&bull;</dt>
+<dd> If the <i>call_*</i> function returns normally, then the value returned is as specified in the previous sections.</dd>
+<dt>&bull;</dt>
+<dd> If G_DISCARD is specified, the return value will always be 0.</dd>
+<dt>&bull;</dt>
+<dd> If G_ARRAY is specified <i>and</i> an error has occurred, the return value will always be 0.</dd>
+<dt>&bull;</dt>
+<dd> If G_SCALAR is specified <i>and</i> an error has occurred, the return value will be 1 and the value on the top of the stack will be <i>undef</i>. This means that if you have already detected the error by checking <tt>$@</tt> and you want the program to continue, you must remember to pop the <i>undef</i> from the stack.</dd></dl>
 <p> See &#8220;Using G_EVAL&#8221; for details on using G_EVAL.</p>
 <h3>G_KEEPERR</h3>
 <p> Using the G_EVAL flag described above will always set <tt>$@</tt>: clearing it if there was no error, and setting it to describe the error if there was an error in the called code. This is what you want if your intention is to handle possible errors, but sometimes you just want to trap errors and stop them interfering with the rest of the program. </p>
@@ -141,16 +141,16 @@ call_PrintUID()<br />
 <p> Simple, eh? </p>
 <p> A few points to note about this example:</p>
 <dl>
-<dt>1.</p>
-<dd> Ignore <tt>&quot;dSP&quot;</tt> and <tt>&quot;PUSHMARK(SP)&quot;</tt> for now. They will be discussed in the next example.</p>
-<dt>2.</p>
-<dd> We aren&#8217;t passing any parameters to <i>PrintUID</i> so G_NOARGS can be specified.</p>
-<dt>3.</p>
-<dd> We aren&#8217;t interested in anything returned from <i>PrintUID</i>, so G_DISCARD is specified. Even if <i>PrintUID</i> was changed to return some value(s), having specified G_DISCARD will mean that they will be wiped by the time control returns from <i>call_pv</i>.</p>
-<dt>4.</p>
-<dd> As <i>call_pv</i> is being used, the Perl subroutine is specified as a C string. In this case the subroutine name has been &#8216;hard-wired&#8217; into the code.</p>
-<dt>5.</p>
-<dd> Because we specified G_DISCARD, it is not necessary to check the value returned from <i>call_pv</i>. It will always be 0.</dl>
+<dt>1.</dt>
+<dd> Ignore <tt>&quot;dSP&quot;</tt> and <tt>&quot;PUSHMARK(SP)&quot;</tt> for now. They will be discussed in the next example.</dd>
+<dt>2.</dt>
+<dd> We aren&#8217;t passing any parameters to <i>PrintUID</i> so G_NOARGS can be specified.</dd>
+<dt>3.</dt>
+<dd> We aren&#8217;t interested in anything returned from <i>PrintUID</i>, so G_DISCARD is specified. Even if <i>PrintUID</i> was changed to return some value(s), having specified G_DISCARD will mean that they will be wiped by the time control returns from <i>call_pv</i>.</dd>
+<dt>4.</dt>
+<dd> As <i>call_pv</i> is being used, the Perl subroutine is specified as a C string. In this case the subroutine name has been &#8216;hard-wired&#8217; into the code.</dd>
+<dt>5.</dt>
+<dd> Because we specified G_DISCARD, it is not necessary to check the value returned from <i>call_pv</i>. It will always be 0.</dd></dl>
 <h3>Passing Parameters</h3>
 <p> Now let&#8217;s make a slightly more complex example. This time we want to call a Perl subroutine, <tt>&quot;LeftString&quot;</tt>, which will take 2 parameters&#8212;a string ($s) and an integer ($n). The subroutine will simply print the first <tt>$n</tt> characters of the string. </p>
 <p> So the Perl subroutine would look like this: </p>
@@ -179,22 +179,22 @@ int b;<br />
 }</p>
 <p> Here are a few notes on the C function <i>call_LeftString</i>.</p>
 <dl>
-<dt>1.</p>
-<dd> Parameters are passed to the Perl subroutine using the Perl stack. This is the purpose of the code beginning with the line <tt>&quot;dSP&quot;</tt> and ending with the line <tt>&quot;PUTBACK&quot;</tt>. The <tt>&quot;dSP&quot;</tt> declares a local copy of the stack pointer. This local copy should <code>always</code> be accessed as <tt>&quot;SP&quot;</tt>.</p>
-<dt>2.</p>
-<dd> If you are going to put something onto the Perl stack, you need to know where to put it. This is the purpose of the macro <tt>&quot;dSP&quot;</tt>&#8211;it declares and initializes a <i>local</i> copy of the Perl stack pointer. </p>
+<dt>1.</dt>
+<dd> Parameters are passed to the Perl subroutine using the Perl stack. This is the purpose of the code beginning with the line <tt>&quot;dSP&quot;</tt> and ending with the line <tt>&quot;PUTBACK&quot;</tt>. The <tt>&quot;dSP&quot;</tt> declares a local copy of the stack pointer. This local copy should <code>always</code> be accessed as <tt>&quot;SP&quot;</tt>.</dd>
+<dt>2.</dt>
+<dd> If you are going to put something onto the Perl stack, you need to know where to put it. This is the purpose of the macro <tt>&quot;dSP&quot;</tt>&#8211;it declares and initializes a <i>local</i> copy of the Perl stack pointer. </dd>
 <p> All the other macros which will be used in this example require you to have used this macro. </p>
 <p> The exception to this rule is if you are calling a Perl subroutine directly from an <font SIZE="-1">XSUB</font> function. In this case it is not necessary to use the <tt>&quot;dSP&quot;</tt> macro explicitly&#8212;it will be declared for you automatically.</p>
-<dt>3.</p>
-<dd> Any parameters to be pushed onto the stack should be bracketed by the <tt>&quot;PUSHMARK&quot;</tt> and <tt>&quot;PUTBACK&quot;</tt> macros. The purpose of these two macros, in this context, is to count the number of parameters you are pushing automatically. Then whenever Perl is creating the <tt>@_</tt> array for the subroutine, it knows how big to make it. </p>
+<dt>3.</dt>
+<dd> Any parameters to be pushed onto the stack should be bracketed by the <tt>&quot;PUSHMARK&quot;</tt> and <tt>&quot;PUTBACK&quot;</tt> macros. The purpose of these two macros, in this context, is to count the number of parameters you are pushing automatically. Then whenever Perl is creating the <tt>@_</tt> array for the subroutine, it knows how big to make it. </dd>
 <p> The <tt>&quot;PUSHMARK&quot;</tt> macro tells Perl to make a mental note of the current stack pointer. Even if you aren&#8217;t passing any parameters (like the example shown in the section &#8220;No Parameters, Nothing Returned&#8221;) you must still call the <tt>&quot;PUSHMARK&quot;</tt> macro before you can call any of the <i>call_*</i> functions&#8212;Perl still needs to know that there are no parameters. </p>
 <p> The <tt>&quot;PUTBACK&quot;</tt> macro sets the global copy of the stack pointer to be the same as our local copy. If we didn&#8217;t do this, <i>call_pv</i> wouldn&#8217;t know where the two parameters we pushed were&#8212;remember that up to now all the stack pointer manipulation we have done is with our local copy, <i>not</i> the global copy.</p>
-<dt>4.</p>
-<dd> Next, we come to <font SIZE="-1">EXTEND</font> and PUSHs. This is where the parameters actually get pushed onto the stack. In this case we are pushing a string and an integer. </p>
+<dt>4.</dt>
+<dd> Next, we come to <font SIZE="-1">EXTEND</font> and PUSHs. This is where the parameters actually get pushed onto the stack. In this case we are pushing a string and an integer. </dd>
 <p> Alternatively you can use the <code>XPUSHs()</code> macro, which combines a <tt>&quot;EXTEND(SP, 1)&quot;</tt> and <tt>&quot;PUSHs()&quot;</tt>. This is less efficient if you&#8217;re pushing multiple values. </p>
 <p> See &#8220;XSUBs and the Argument Stack&#8221; in perlguts for details on how the <font SIZE="-1">PUSH</font> macros work.</p>
-<dt>5.</p>
-<dd> Because we created temporary values (by means of <code>sv_2mortal()</code> calls) we will have to tidy up the Perl stack and dispose of mortal SVs. </p>
+<dt>5.</dt>
+<dd> Because we created temporary values (by means of <code>sv_2mortal()</code> calls) we will have to tidy up the Perl stack and dispose of mortal SVs. </dd>
 <p> This is the purpose of </p>
 <pre>
     ENTER;
@@ -209,8 +209,8 @@ int b;<br />
 <p> The <tt>&quot;FREETMPS&quot;</tt>/<tt>&quot;LEAVE&quot;</tt> pair will get rid of any values returned by the Perl subroutine (see next example), plus it will also dump the mortal SVs we have created. Having <tt>&quot;ENTER&quot;</tt>/<tt>&quot;SAVETMPS&quot;</tt> at the beginning of the code makes sure that no other mortals are destroyed. </p>
 <p> Think of these macros as working a bit like <tt>&quot;{&quot;</tt> and <tt>&quot;}&quot;</tt> in Perl to limit the scope of local variables. </p>
 <p> See the section &#8220;Using Perl to Dispose of Temporaries&#8221; for details of an alternative to using these macros.</p>
-<dt>6.</p>
-<dd> Finally, <i>LeftString</i> can now be called via the <i>call_pv</i> function. The only flag specified this time is G_DISCARD. Because we are passing 2 parameters to the Perl subroutine this time, we have not specified G_NOARGS.</dl>
+<dt>6.</dt>
+<dd> Finally, <i>LeftString</i> can now be called via the <i>call_pv</i> function. The only flag specified this time is G_DISCARD. Because we are passing 2 parameters to the Perl subroutine this time, we have not specified G_NOARGS.</dd></dl>
 <h3>Returning a Scalar</h3>
 <p> Now for an example of dealing with the items returned from a Perl subroutine. </p>
 <p> Here is a Perl subroutine, <i>Adder</i>, that takes 2 integer parameters and simply returns their sum. </p>
@@ -246,16 +246,16 @@ int b;<br />
 }</p>
 <p> Points to note this time are</p>
 <dl>
-<dt>1.</p>
-<dd> The only flag specified this time was G_SCALAR. That means that the <tt>@_</tt> array will be created and that the value returned by <i>Adder</i> will still exist after the call to <i>call_pv</i>.</p>
-<dt>2.</p>
-<dd> The purpose of the macro <tt>&quot;SPAGAIN&quot;</tt> is to refresh the local copy of the stack pointer. This is necessary because it is possible that the memory allocated to the Perl stack has been reallocated during the <i>call_pv</i> call. </p>
+<dt>1.</dt>
+<dd> The only flag specified this time was G_SCALAR. That means that the <tt>@_</tt> array will be created and that the value returned by <i>Adder</i> will still exist after the call to <i>call_pv</i>.</dd>
+<dt>2.</dt>
+<dd> The purpose of the macro <tt>&quot;SPAGAIN&quot;</tt> is to refresh the local copy of the stack pointer. This is necessary because it is possible that the memory allocated to the Perl stack has been reallocated during the <i>call_pv</i> call. </dd>
 <p> If you are making use of the Perl stack pointer in your code you must always refresh the local copy using <font SIZE="-1">SPAGAIN</font> whenever you make use of the <i>call_*</i> functions or any other Perl internal function.</p>
-<dt>3.</p>
-<dd> Although only a single value was expected to be returned from <i>Adder</i>, it is still good practice to check the return code from <i>call_pv</i> anyway. </p>
+<dt>3.</dt>
+<dd> Although only a single value was expected to be returned from <i>Adder</i>, it is still good practice to check the return code from <i>call_pv</i> anyway. </dd>
 <p> Expecting a single value is not quite the same as knowing that there will be one. If someone modified <i>Adder</i> to return a list and we didn&#8217;t check for that possibility and take appropriate action the Perl stack would end up in an inconsistent state. That is something you <i>really</i> don&#8217;t want to happen ever.</p>
-<dt>4.</p>
-<dd> The <tt>&quot;POPi&quot;</tt> macro is used here to pop the return value from the stack. In this case we wanted an integer, so <tt>&quot;POPi&quot;</tt> was used. </p>
+<dt>4.</dt>
+<dd> The <tt>&quot;POPi&quot;</tt> macro is used here to pop the return value from the stack. In this case we wanted an integer, so <tt>&quot;POPi&quot;</tt> was used. </dd>
 <p> Here is the complete list of <font SIZE="-1">POP</font> macros available, along with the types they return. </p>
 <p>POPs SV<br />
     POPp<br />
@@ -277,8 +277,8 @@ const char *s = SvPV(sv, len);</p>
 <p> or a macro that guarantees it will evaluate its arguments only once: </p>
 <p>STRLEN len;<br />
 const char *s = SvPVx(POPs, len);</p>
-<dt>5.</p>
-<dd> The final <tt>&quot;PUTBACK&quot;</tt> is used to leave the Perl stack in a consistent state before exiting the function. This is necessary because when we popped the return value from the stack with <tt>&quot;POPi&quot;</tt> it updated only our local copy of the stack pointer. Remember, <tt>&quot;PUTBACK&quot;</tt> sets the global stack pointer to be the same as our local copy.</dl>
+<dt>5.</dt>
+<dd> The final <tt>&quot;PUTBACK&quot;</tt> is used to leave the Perl stack in a consistent state before exiting the function. This is necessary because when we popped the return value from the stack with <tt>&quot;POPi&quot;</tt> it updated only our local copy of the stack pointer. Remember, <tt>&quot;PUTBACK&quot;</tt> sets the global stack pointer to be the same as our local copy.</dd></dl>
 <h3>Returning a List of Values</h3>
 <p> Now, let&#8217;s extend the previous example to return both the sum of the parameters and the difference. </p>
 <p> Here is the Perl subroutine </p>
@@ -325,10 +325,10 @@ int b;<br />
 </pre>
 <p> Notes</p>
 <dl>
-<dt>1.</p>
-<dd> We wanted list context, so G_ARRAY was used.</p>
-<dt>2.</p>
-<dd> Not surprisingly <tt>&quot;POPi&quot;</tt> is used twice this time because we were retrieving 2 values from the stack. The important thing to note is that when using the <tt>&quot;POP*&quot;</tt> macros they come off the stack in <i>reverse</i> order.</dl>
+<dt>1.</dt>
+<dd> We wanted list context, so G_ARRAY was used.</dd>
+<dt>2.</dt>
+<dd> Not surprisingly <tt>&quot;POPi&quot;</tt> is used twice this time because we were retrieving 2 values from the stack. The important thing to note is that when using the <tt>&quot;POP*&quot;</tt> macros they come off the stack in <i>reverse</i> order.</dd></dl>
 <h3>Returning a List in Scalar Context</h3>
 <p> Say the Perl subroutine in the previous section was called in a scalar context, like this </p>
 <p>static void<br />
@@ -460,10 +460,10 @@ int b;<br />
 </pre>
 <p> Notes</p>
 <dl>
-<dt>1.</p>
-<dd> We want to be able to catch the <i>die</i> so we have used the G_EVAL flag. Not specifying this flag would mean that the program would terminate immediately at the <i>die</i> statement in the subroutine <i>Subtract</i>.</p>
-<dt>2.</p>
-<dd> The code </p>
+<dt>1.</dt>
+<dd> We want to be able to catch the <i>die</i> so we have used the G_EVAL flag. Not specifying this flag would mean that the program would terminate immediately at the <i>die</i> statement in the subroutine <i>Subtract</i>.</dd>
+<dt>2.</dt>
+<dd> The code </dd>
 <p>err_tmp = ERRSV;<br />
 if (SvTRUE(err_tmp)) {<br />
     printf(&#8220;Uh oh &#8211; %s
@@ -476,8 +476,8 @@ if (SvTRUE(err_tmp)) {<br />
 &quot; if $@;
 </pre>
 <p> <tt>&quot;PL_errgv&quot;</tt> is a perl global of type <tt>&quot;GV *&quot;</tt> that points to the symbol table entry containing the error. <tt>&quot;ERRSV&quot;</tt> therefore refers to the C equivalent of <tt>$@</tt>. We use a local temporary, <tt>&quot;err_tmp&quot;</tt>, since <tt>&quot;ERRSV&quot;</tt> is a macro that calls a function, and <tt>&quot;SvTRUE(ERRSV)&quot;</tt> would end up calling that function multiple times.</p>
-<dt>3.</p>
-<dd> Note that the stack is popped using <tt>&quot;POPs&quot;</tt> in the block where <tt>&quot;SvTRUE(err_tmp)&quot;</tt> is true. This is necessary because whenever a <i>call_*</i> function invoked with G_EVAL|G_SCALAR returns an error, the top of the stack holds the value <i>undef</i>. Because we want the program to continue after detecting this error, it is essential that the stack be tidied up by removing the <i>undef</i>.</dl>
+<dt>3.</dt>
+<dd> Note that the stack is popped using <tt>&quot;POPs&quot;</tt> in the block where <tt>&quot;SvTRUE(err_tmp)&quot;</tt> is true. This is necessary because whenever a <i>call_*</i> function invoked with G_EVAL|G_SCALAR returns an error, the top of the stack holds the value <i>undef</i>. Because we want the program to continue after detecting this error, it is essential that the stack be tidied up by removing the <i>undef</i>.</dd></dl>
 <h3>Using G_KEEPERR</h3>
 <p> Consider this rather facetious example, where we have used an <font SIZE="-1">XS</font> version of the call_Subtract example above inside a destructor: </p>
 <p>package Foo;<br />
@@ -644,12 +644,12 @@ Mine-&gt;PrintID;</p>
 </pre>
 <p> Calling a Perl method from C is fairly straightforward. The following things are required:</p>
 <dl>
-<dt>&bull;</p>
-<dd> A reference to the object for a virtual method or the name of the class for a static method</p>
-<dt>&bull;</p>
-<dd> The name of the method</p>
-<dt>&bull;</p>
-<dd> Any other parameters specific to the method</dl>
+<dt>&bull;</dt>
+<dd> A reference to the object for a virtual method or the name of the class for a static method</dd>
+<dt>&bull;</dt>
+<dd> The name of the method</dd>
+<dt>&bull;</dt>
+<dd> Any other parameters specific to the method</dd></dl>
 <p> Here is a simple <font SIZE="-1">XSUB</font> which illustrates the mechanics of calling both the <tt>&quot;PrintID&quot;</tt> and <tt>&quot;Display&quot;</tt> methods from C. </p>
 <p>void<br />
     call_Method(ref, method, index)<br />
@@ -702,10 +702,10 @@ else<br />
 <h3>Using Perl to Dispose of Temporaries</h3>
 <p> In the examples given to date, any temporaries created in the callback (i.e., parameters passed on the stack to the <i>call_*</i> function or values returned via the stack) have been freed by one of these methods:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Specifying the G_DISCARD flag with <i>call_*</i></p>
-<dt>&bull;</p>
-<dd> Explicitly using the <tt>&quot;ENTER&quot;</tt>/<tt>&quot;SAVETMPS&quot;</tt>&#8212;<tt>&quot;FREETMPS&quot;</tt>/<tt>&quot;LEAVE&quot;</tt> pairing</dl>
+<dt>&bull;</dt>
+<dd> Specifying the G_DISCARD flag with <i>call_*</i></dd>
+<dt>&bull;</dt>
+<dd> Explicitly using the <tt>&quot;ENTER&quot;</tt>/<tt>&quot;SAVETMPS&quot;</tt>&#8212;<tt>&quot;FREETMPS&quot;</tt>/<tt>&quot;LEAVE&quot;</tt> pairing</dd></dl>
 <p> There is another method which can be used, namely letting Perl do it for you automatically whenever it regains control after the callback has terminated. This is done by simply not using the </p>
 <p>ENTER;<br />
 SAVETMPS;<br />
@@ -936,12 +936,12 @@ asynch_close(fh);</p>
 <p> Secondly, there is a hard-wired limit (in this case 3) to the number of callbacks that can exist simultaneously. The only way to increase the limit is by modifying the code to add more functions and then recompiling. None the less, as long as the number of functions is chosen with some care, it is still a workable solution and in some cases is the only one available. </p>
 <p> To summarize, here are a number of possible methods for you to consider for storing the mapping between C and the Perl callback</p>
 <dl>
-<dt>1. Ignore the problem &#8211; Allow only 1 callback</p>
-<dd> For a lot of situations, like interfacing to an error handler, this may be a perfectly adequate solution.</p>
-<dt>2. Create a sequence of callbacks &#8211; hard wired limit</p>
-<dd> If it is impossible to tell from the parameters passed back from the C callback what the context is, then you may need to create a sequence of C callback interface functions, and store pointers to each in an array.</p>
-<dt>3. Use a parameter to map to the Perl callback</p>
-<dd> A hash is an ideal mechanism to store the mapping between C and Perl.</dl>
+<dt>1. Ignore the problem &#8211; Allow only 1 callback</dt>
+<dd> For a lot of situations, like interfacing to an error handler, this may be a perfectly adequate solution.</dd>
+<dt>2. Create a sequence of callbacks &#8211; hard wired limit</dt>
+<dd> If it is impossible to tell from the parameters passed back from the C callback what the context is, then you may need to create a sequence of C callback interface functions, and store pointers to each in an array.</dd>
+<dt>3. Use a parameter to map to the Perl callback</dt>
+<dd> A hash is an ideal mechanism to store the mapping between C and Perl.</dd></dl>
 <h3>Alternate Stack Manipulation</h3>
 <p> Although I have made use of only the <tt>&quot;POP*&quot;</tt> macros to access values returned from Perl subroutines, it is also possible to bypass these macros and read the stack using the <tt>&quot;ST&quot;</tt> macro (See perlxs for a full description of the <tt>&quot;ST&quot;</tt> macro). </p>
 <p> Most of the time the <tt>&quot;POP*&quot;</tt> macros should be adequate; the main problem with them is that they force you to process the returned values in sequence. This may not be the most suitable way to process the values in some cases. What we want is to be able to access the stack in a random order. The <tt>&quot;ST&quot;</tt> macro as used when coding an <font SIZE="-1">XSUB</font> is ideal for this purpose. </p>
@@ -977,16 +977,16 @@ int b;<br />
 }</p>
 <p> Notes</p>
 <dl>
-<dt>1.</p>
-<dd> Notice that it was necessary to define the variable <tt>&quot;ax&quot;</tt>. This is because the <tt>&quot;ST&quot;</tt> macro expects it to exist. If we were in an <font SIZE="-1">XSUB</font> it would not be necessary to define <tt>&quot;ax&quot;</tt> as it is already defined for us.</p>
-<dt>2.</p>
-<dd> The code </p>
+<dt>1.</dt>
+<dd> Notice that it was necessary to define the variable <tt>&quot;ax&quot;</tt>. This is because the <tt>&quot;ST&quot;</tt> macro expects it to exist. If we were in an <font SIZE="-1">XSUB</font> it would not be necessary to define <tt>&quot;ax&quot;</tt> as it is already defined for us.</dd>
+<dt>2.</dt>
+<dd> The code </dd>
 <p>SPAGAIN;<br />
 SP -= count;<br />
 ax = (SP &#8211; PL_stack_base) + 1;</p>
 <p> sets the stack up so that we can use the <tt>&quot;ST&quot;</tt> macro.</p>
-<dt>3.</p>
-<dd> Unlike the original coding of this example, the returned values are not accessed in reverse order. So <tt>ST(0)</tt> refers to the first value returned by the Perl subroutine and <tt>&quot;ST(count-1)&quot;</tt> refers to the last.</dl>
+<dt>3.</dt>
+<dd> Unlike the original coding of this example, the returned values are not accessed in reverse order. So <tt>ST(0)</tt> refers to the first value returned by the Perl subroutine and <tt>&quot;ST(count-1)&quot;</tt> refers to the last.</dd></dl>
 <h3>Creating and Calling an Anonymous Subroutine in C</h3>
 <p> As we&#8217;ve already shown, <tt>&quot;call_sv&quot;</tt> can be used to invoke an anonymous subroutine. However, our example showed a Perl script invoking an <font SIZE="-1">XSUB</font> to perform this operation. Let&#8217;s see how it can be done inside our C code: </p>
 <p> &#8230;<br />
@@ -1024,11 +1024,11 @@ POP_MULTICALL; /* Tear down the calling context */
 <h2>DATE</h2>
 <p> Last updated for perl 5.23.1. </p>
 <h2>Index</h2>
-<dt><a href="#lbBE">LIGHTWEIGHT CALLBACKS</a></p>
+<dt><a href="#lbBE">LIGHTWEIGHT CALLBACKS</a></dt>
 <dd>
-<dt><a href="#lbBF">SEE ALSO</a></p>
+</dd><dt><a href="#lbBF">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBG">AUTHOR</a></p>
+</dd><dt><a href="#lbBG">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbBH">DATE</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBH">DATE</a></dt>
+<dd></dd></dl>

@@ -19,303 +19,301 @@ description: "makeindex – a general purpose, formatter-independent index proce
 <p> For important notes on how to select index keywords, see the document by Lamport cited below. As an issue separate from selecting index keywords, a systematic mechanism for placing index terms in a document is suggested in <i>Index Preparation and Processing</i>, a paper cited below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Compress intermediate blanks (ignoring leading and trailing blanks and tabs). By default, blanks in the index key are retained.</p>
-<dt><code>-g</code></p>
-<dd> Employ German word ordering in the index, in accord with rules set forth in DIN 5007. By default, <i>makeindex</i> employs a word ordering in which precedence is: symbols, numbers, uppercase letters, lowercase letters. The sequence in German word ordering is: symbols, lowercase letters, uppercase letters, numbers. Additionally, this option enables <i>makeindex</i> to recognize the German TeX-commands {&quot;a, &quot;o, &quot;u and &quot;s} as {ae, oe, ue and ss} during the sorting of the entries. The quote character must be redefined in a style file (for example, redefine quote as &#8216;+&#8217;). If the quote character is not redefined, <i>makeindex</i> will produce an error message and abort.</p>
-<dt><code>-i</code></p>
-<dd> Take input from <i>stdin</i>. When this option is specified and <code>-o</code> is not, output is written to <i>stdout</i>.</p>
-<dt><code>-l</code></p>
-<dd> Letter ordering; by default, word ordering is used (see the <font SIZE="-2">ORDERING</font> section).</p>
-<dt><code>-o</code><i> ind</i></p>
-<dd> Employ <i>ind</i> as the output index file. By default, the file name is created by appending the extension <i>.ind</i> to the base name of the first input file (<i>idx0</i>).</p>
-<dt><code>-p</code><i> num</i></p>
-<dd> Set the starting page number of the output index file to be <i>num</i> (useful when the index file is to be formatted separately). The argument <i>num</i> may be numerical or one of the following:</p>
+<dt><code>-c</code></dt>
+<dd> Compress intermediate blanks (ignoring leading and trailing blanks and tabs). By default, blanks in the index key are retained.</dd>
+<dt><code>-g</code></dt>
+<dd> Employ German word ordering in the index, in accord with rules set forth in DIN 5007. By default, <i>makeindex</i> employs a word ordering in which precedence is: symbols, numbers, uppercase letters, lowercase letters. The sequence in German word ordering is: symbols, lowercase letters, uppercase letters, numbers. Additionally, this option enables <i>makeindex</i> to recognize the German TeX-commands {&quot;a, &quot;o, &quot;u and &quot;s} as {ae, oe, ue and ss} during the sorting of the entries. The quote character must be redefined in a style file (for example, redefine quote as &#8216;+&#8217;). If the quote character is not redefined, <i>makeindex</i> will produce an error message and abort.</dd>
+<dt><code>-i</code></dt>
+<dd> Take input from <i>stdin</i>. When this option is specified and <code>-o</code> is not, output is written to <i>stdout</i>.</dd>
+<dt><code>-l</code></dt>
+<dd> Letter ordering; by default, word ordering is used (see the <font SIZE="-2">ORDERING</font> section).</dd>
+<dt><code>-o</code><i> ind</i></dt>
+<dd> Employ <i>ind</i> as the output index file. By default, the file name is created by appending the extension <i>.ind</i> to the base name of the first input file (<i>idx0</i>).</dd>
+<dt><code>-p</code><i> num</i></dt>
+<dd> Set the starting page number of the output index file to be <i>num</i> (useful when the index file is to be formatted separately). The argument <i>num</i> may be numerical or one of the following:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>any</i></p>
-<dd> The starting page is the last source page number plus 1.</p>
-<dt><i>odd</i></p>
-<dd> The starting page is the first odd page following the last source page number.</p>
-<dt><i>even</i></p>
-<dd> The starting page is the first even page following the last source page number.</dl>
+<dt><i>any</i></dt>
+<dd> The starting page is the last source page number plus 1.</dd>
+<dt><i>odd</i></dt>
+<dd> The starting page is the first odd page following the last source page number.</dd>
+<dt><i>even</i></dt>
+<dd> The starting page is the first even page following the last source page number.</dd></dl>
 </dl>
 <dt>
-<dd> The last source page is obtained by searching backward in the log file for the first instance of a number included within paired square brackets (<code>[</code>&#8230;<code>]</code>). If a page number is missing or the log file is not found, no attempt will be made to set the starting page number. The source log file name is determined by appending the extension <i>.log</i> to the base name of the first input file (<i>idx0</i>).</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode; send no messages to <i>stderr</i>. By default, progress and error messages are sent to <i>stderr</i> as well as to the transcript file.</p>
-<dt><code>-r</code></p>
-<dd> Disable implicit page range formation; page ranges must be created by using explicit range operators; see <font SIZE="-2">SPECIAL EFFECTS</font> below. By default, three or more successive pages are automatically abbreviated as a range (e.g. 1&#8212;5).</p>
-<dt><code>-s</code><i> sty</i></p>
-<dd> Employ <i>sty</i> as the style file (no default). The environment variable <font SIZE="-2">INDEXSTYLE</font> defines the path where the style file should be found.</p>
-<dt><code>-t</code><i> log</i></p>
-<dd> Employ <i>log</i> as the transcript file. By default, the file name is created by appending the extension <i>.ilg</i> to the base name of the first input file (<i>idx0</i>).</p>
-<dt><code>-L</code></p>
-<dd> sort based on locale settings. Not available on all systems.</p>
-<dt><code>-T</code></p>
-<dd> special support for Thai documents. Not available on all systems.</dl>
+</dt><dd> The last source page is obtained by searching backward in the log file for the first instance of a number included within paired square brackets (<code>[</code>&#8230;<code>]</code>). If a page number is missing or the log file is not found, no attempt will be made to set the starting page number. The source log file name is determined by appending the extension <i>.log</i> to the base name of the first input file (<i>idx0</i>).</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode; send no messages to <i>stderr</i>. By default, progress and error messages are sent to <i>stderr</i> as well as to the transcript file.</dd>
+<dt><code>-r</code></dt>
+<dd> Disable implicit page range formation; page ranges must be created by using explicit range operators; see <font SIZE="-2">SPECIAL EFFECTS</font> below. By default, three or more successive pages are automatically abbreviated as a range (e.g. 1&#8212;5).</dd>
+<dt><code>-s</code><i> sty</i></dt>
+<dd> Employ <i>sty</i> as the style file (no default). The environment variable <font SIZE="-2">INDEXSTYLE</font> defines the path where the style file should be found.</dd>
+<dt><code>-t</code><i> log</i></dt>
+<dd> Employ <i>log</i> as the transcript file. By default, the file name is created by appending the extension <i>.ilg</i> to the base name of the first input file (<i>idx0</i>).</dd>
+<dt><code>-L</code></dt>
+<dd> sort based on locale settings. Not available on all systems.</dd>
+<dt><code>-T</code></dt>
+<dd> special support for Thai documents. Not available on all systems.</dd></dl>
 <h2>STYLE FILE</h2>
 <p> The style file informs <i>makeindex</i> about the format of the <i>.idx</i> input files and the intended format of the final output file; examples appear below. This file can reside anywhere in the path defined by the environment variable <font SIZE="-2">INDEXSTYLE</font>. The style file contains a list of &lt;<i>specifier</i>,<i> attribute</i>&gt; pairs. There are two types of specifiers: input and output. Pairs do not have to appear in any particular order. A line begun by `%&#8217; is a comment. In the following list of specifiers and arguments, &lt;string&gt; is an arbitrary string delimited by double quotes (&quot;&#8230;&quot;), &lt;char&gt; is a single letter embraced by single quotes (&#8216;&#8230;&#8217;), and &lt;number&gt; is a nonnegative integer. The maximum length of a &lt;string&gt; is 2048. A literal backslash or quote must be escaped (by a backslash). Anything not specified in the style file will be assigned a default value, which is shown at the head of the rightmost column.</p>
 <h3>INPUT STYLE SPECIFIERS</h3>
 <dl>
-<dt><code>actual</code> &lt;char&gt;</p>
-<dd> &#8216;@&#8217;</p>
+<dt><code>actual</code> &lt;char&gt;</dt>
+<dd> &#8216;@&#8217;</dd>
 <dl>
 <dt>
-<dd> Symbol indicating that the next entry is to appear in the output file.</dl>
-<dt><code>arg_close</code> &lt;char&gt;</p>
-<dd> &#8216;}&#8217;</p>
+</dt><dd> Symbol indicating that the next entry is to appear in the output file.</dd></dl>
+<dt><code>arg_close</code> &lt;char&gt;</dt>
+<dd> &#8216;}&#8217;</dd>
 <dl>
 <dt>
-<dd> Closing delimiter for the index entry argument.</dl>
-<dt><code>arg_open</code> &lt;char&gt;</p>
-<dd> &#8216;{&#8216;</p>
+</dt><dd> Closing delimiter for the index entry argument.</dd></dl>
+<dt><code>arg_open</code> &lt;char&gt;</dt>
+<dd> &#8216;{&#8216;</dd>
 <dl>
 <dt>
-<dd> Opening delimiter for the index entry argument.</dl>
-<dt><code>encap</code> &lt;char&gt;</p>
-<dd> &#8216;|&#8217;</p>
+</dt><dd> Opening delimiter for the index entry argument.</dd></dl>
+<dt><code>encap</code> &lt;char&gt;</dt>
+<dd> &#8216;|&#8217;</dd>
 <dl>
 <dt>
-<dd> Symbol indicating that the rest of the argument list is to be used as the encapsulating command for the page number.</dl>
-<dt><code>escape</code> &lt;char&gt;</p>
-<dd> &#8216;\&#8217;</p>
+</dt><dd> Symbol indicating that the rest of the argument list is to be used as the encapsulating command for the page number.</dd></dl>
+<dt><code>escape</code> &lt;char&gt;</dt>
+<dd> &#8216;\&#8217;</dd>
 <dl>
 <dt>
-<dd> Symbol which escapes the following letter, unless its preceding letter is <code>escape</code>. Note: <code>quote</code> is used to escape the letter which immediately follows it, but if it is preceded by <code>escape</code>, it is treated as a ordinary character. These two symbols <i>must</i> be distinct.</dl>
-<dt><code>keyword</code> &lt;string&gt;</p>
-<dd> &quot;\indexentry&quot;</p>
+</dt><dd> Symbol which escapes the following letter, unless its preceding letter is <code>escape</code>. Note: <code>quote</code> is used to escape the letter which immediately follows it, but if it is preceded by <code>escape</code>, it is treated as a ordinary character. These two symbols <i>must</i> be distinct.</dd></dl>
+<dt><code>keyword</code> &lt;string&gt;</dt>
+<dd> &quot;\indexentry&quot;</dd>
 <dl>
 <dt>
-<dd> Command which tells <i>makeindex</i> that its argument is an index entry.</dl>
-<dt><code>level</code> &lt;char&gt;</p>
-<dd> &#8216;!&#8217;</p>
+</dt><dd> Command which tells <i>makeindex</i> that its argument is an index entry.</dd></dl>
+<dt><code>level</code> &lt;char&gt;</dt>
+<dd> &#8216;!&#8217;</dd>
 <dl>
 <dt>
-<dd> Delimiter denoting a new level of subitem.</dl>
-<dt><code>page_compositor</code> &lt;string&gt;</p>
-<dd> &quot;-&quot;</p>
+</dt><dd> Delimiter denoting a new level of subitem.</dd></dl>
+<dt><code>page_compositor</code> &lt;string&gt;</dt>
+<dd> &quot;-&quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter separating parts of a composite page number (see <font SIZE="-2">SPECIAL EFFECTS</font> below).</dl>
-<dt><code>quote</code> &lt;char&gt;</p>
-<dd> &#8216;&quot;&#8217;</p>
+</dt><dd> Delimiter separating parts of a composite page number (see <font SIZE="-2">SPECIAL EFFECTS</font> below).</dd></dl>
+<dt><code>quote</code> &lt;char&gt;</dt>
+<dd> &#8216;&quot;&#8217;</dd>
 <dl>
 <dt>
-<dd> Note: <code>quote</code> is used to escape the letter which immediately follows it, but if it is preceded by <code>escape</code>, it is treated as a ordinary character. These two symbols <i>must</i> be distinct.</dl>
-<dt><code>range_close</code> &lt;char&gt;</p>
-<dd> &#8216;)&#8217;</p>
+</dt><dd> Note: <code>quote</code> is used to escape the letter which immediately follows it, but if it is preceded by <code>escape</code>, it is treated as a ordinary character. These two symbols <i>must</i> be distinct.</dd></dl>
+<dt><code>range_close</code> &lt;char&gt;</dt>
+<dd> &#8216;)&#8217;</dd>
 <dl>
 <dt>
-<dd> Closing delimiter indicating the end of an explicit page range.</dl>
-<dt><code>range_open</code> &lt;char&gt;</p>
-<dd> &#8216;(&#8216;</p>
+</dt><dd> Closing delimiter indicating the end of an explicit page range.</dd></dl>
+<dt><code>range_open</code> &lt;char&gt;</dt>
+<dd> &#8216;(&#8216;</dd>
 <dl>
 <dt>
-<dd> Opening delimiter indicating the beginning of an explicit page range.</dl>
+</dt><dd> Opening delimiter indicating the beginning of an explicit page range.</dd></dl>
 </dl>
 <h3>OUTPUT STYLE SPECIFIERS</h3>
 <dl>
-<dt><code>preamble</code> &lt;string&gt;</p>
+<dt><code>preamble</code> &lt;string&gt;</dt>
 <dd> &quot;\begin{theindex}
-&quot;</p>
+&quot;</dd>
 <dl>
 <dt>
-<dd> Preamble of output file.</dl>
-<dt><code>postamble</code> &lt;string&gt;</p>
+</dt><dd> Preamble of output file.</dd></dl>
+<dt><code>postamble</code> &lt;string&gt;</dt>
 <dd> &quot;
 
 \end{theindex}
-&quot;</p>
+&quot;</dd>
 <dl>
 <dt>
-<dd> Postamble of output file.</dl>
-<dt><code>setpage_prefix</code> &lt;string&gt;</p>
+</dt><dd> Postamble of output file.</dd></dl>
+<dt><code>setpage_prefix</code> &lt;string&gt;</dt>
 <dd> &quot;
- \setcounter{page}{&quot;</p>
+ \setcounter{page}{&quot;</dd>
 <dl>
 <dt>
-<dd> Prefix of command which sets the starting page number.</dl>
-<dt><code>setpage_suffix</code> &lt;string&gt;</p>
+</dt><dd> Prefix of command which sets the starting page number.</dd></dl>
+<dt><code>setpage_suffix</code> &lt;string&gt;</dt>
 <dd> &quot;}
-&quot;</p>
+&quot;</dd>
 <dl>
 <dt>
-<dd> Suffix of command which sets the starting page number.</dl>
-<dt><code>group_skip</code> &lt;string&gt;</p>
+</dt><dd> Suffix of command which sets the starting page number.</dd></dl>
+<dt><code>group_skip</code> &lt;string&gt;</dt>
 <dd> &quot;
 
  \indexspace
-&quot;</p>
+&quot;</dd>
 <dl>
 <dt>
-<dd> Vertical space to be inserted before a new group begins.</dl>
-<dt><code>headings_flag</code> &lt;string&gt;</p>
-<dd> 0</p>
+</dt><dd> Vertical space to be inserted before a new group begins.</dd></dl>
+<dt><code>headings_flag</code> &lt;string&gt;</dt>
+<dd> 0</dd>
 <dl>
 <dt>
-<dd> Flag indicating treatment of new group headers, which are inserted when before a new group (symbols, numbers, and the 26 letters): positive values cause an uppercase letter to be inserted between prefix and suffix, and negative values cause a lowercase letter to be inserted (default is 0, which produces no header).</dl>
-<dt><code>heading_prefix</code> &lt;string&gt;</p>
-<dd> &quot;&quot;</p>
+</dt><dd> Flag indicating treatment of new group headers, which are inserted when before a new group (symbols, numbers, and the 26 letters): positive values cause an uppercase letter to be inserted between prefix and suffix, and negative values cause a lowercase letter to be inserted (default is 0, which produces no header).</dd></dl>
+<dt><code>heading_prefix</code> &lt;string&gt;</dt>
+<dd> &quot;&quot;</dd>
 <dl>
 <dt>
-<dd> Letter heading prefix to be inserted before a new letter begins.</dl>
-<dt><code>heading_suffix</code> &lt;string&gt;</p>
-<dd> &quot;&quot;</p>
+</dt><dd> Letter heading prefix to be inserted before a new letter begins.</dd></dl>
+<dt><code>heading_suffix</code> &lt;string&gt;</dt>
+<dd> &quot;&quot;</dd>
 <dl>
 <dt>
-<dd> Letter heading suffix to be inserted when a new letter begins.</dl>
-<dt><code>symhead_positive</code> &lt;string&gt;</p>
-<dd> &quot;Symbols&quot;</p>
+</dt><dd> Letter heading suffix to be inserted when a new letter begins.</dd></dl>
+<dt><code>symhead_positive</code> &lt;string&gt;</dt>
+<dd> &quot;Symbols&quot;</dd>
 <dl>
 <dt>
-<dd> Heading for symbols to be inserted if <code>headings_flag</code> is positive.</dl>
-<dt><code>symhead_negative</code> &lt;string&gt;</p>
-<dd> &quot;symbols&quot;</p>
+</dt><dd> Heading for symbols to be inserted if <code>headings_flag</code> is positive.</dd></dl>
+<dt><code>symhead_negative</code> &lt;string&gt;</dt>
+<dd> &quot;symbols&quot;</dd>
 <dl>
 <dt>
-<dd> Heading for symbols to be inserted if <code>headings_flag</code> is negative.</dl>
-<dt><code>numhead_positive</code> &lt;string&gt;</p>
-<dd> &quot;Numbers&quot;</p>
+</dt><dd> Heading for symbols to be inserted if <code>headings_flag</code> is negative.</dd></dl>
+<dt><code>numhead_positive</code> &lt;string&gt;</dt>
+<dd> &quot;Numbers&quot;</dd>
 <dl>
 <dt>
-<dd> Heading for numbers to be inserted if <code>headings_flag</code> is positive.</dl>
-<dt><code>numhead_negative</code> &lt;string&gt;</p>
-<dd> &quot;numbers&quot;</p>
+</dt><dd> Heading for numbers to be inserted if <code>headings_flag</code> is positive.</dd></dl>
+<dt><code>numhead_negative</code> &lt;string&gt;</dt>
+<dd> &quot;numbers&quot;</dd>
 <dl>
 <dt>
-<dd> Heading for numbers to be inserted if <code>headings_flag</code> is negative.</dl>
-<dt><code>item_0</code> &lt;string&gt;</p>
+</dt><dd> Heading for numbers to be inserted if <code>headings_flag</code> is negative.</dd></dl>
+<dt><code>item_0</code> &lt;string&gt;</dt>
 <dd> &quot;
- \item &quot;</p>
+ \item &quot;</dd>
 <dl>
 <dt>
-<dd> Command to be inserted between two primary (level 0) items.</dl>
-<dt><code>item_1</code> &lt;string&gt;</p>
+</dt><dd> Command to be inserted between two primary (level 0) items.</dd></dl>
+<dt><code>item_1</code> &lt;string&gt;</dt>
 <dd> &quot;
- \subitem &quot;</p>
+ \subitem &quot;</dd>
 <dl>
 <dt>
-<dd> Command to be inserted between two secondary (level 1) items.</dl>
-<dt><code>item_2</code> &lt;string&gt;</p>
+</dt><dd> Command to be inserted between two secondary (level 1) items.</dd></dl>
+<dt><code>item_2</code> &lt;string&gt;</dt>
 <dd> &quot;
- \subsubitem &quot;</p>
+ \subsubitem &quot;</dd>
 <dl>
 <dt>
-<dd> Command to be inserted between two level 2 items.</dl>
-<dt><code>item_01 &lt;string&gt;</code></p>
+</dt><dd> Command to be inserted between two level 2 items.</dd></dl>
+<dt><code>item_01 &lt;string&gt;</code></dt>
 <dd> &quot;
- \subitem &quot;</p>
+ \subitem &quot;</dd>
 <dl>
 <dt>
-<dd> Command to be inserted between a level 0 item and a level 1 item.</dl>
-<dt><code>item_x1</code> &lt;string&gt;</p>
+</dt><dd> Command to be inserted between a level 0 item and a level 1 item.</dd></dl>
+<dt><code>item_x1</code> &lt;string&gt;</dt>
 <dd> &quot;
- \subitem &quot;</p>
+ \subitem &quot;</dd>
 <dl>
 <dt>
-<dd> Command to be inserted between a level 0 item and a level 1 item, where the level 0 item does not have associated page numbers.</dl>
-<dt><code>item_12</code> &lt;string&gt;</p>
+</dt><dd> Command to be inserted between a level 0 item and a level 1 item, where the level 0 item does not have associated page numbers.</dd></dl>
+<dt><code>item_12</code> &lt;string&gt;</dt>
 <dd> &quot;
- \subsubitem &quot;</p>
+ \subsubitem &quot;</dd>
 <dl>
 <dt>
-<dd> Command to be inserted between a level 1 item and a level 2 item.</dl>
-<dt><code>item_x2</code> &lt;string&gt;</p>
+</dt><dd> Command to be inserted between a level 1 item and a level 2 item.</dd></dl>
+<dt><code>item_x2</code> &lt;string&gt;</dt>
 <dd> &quot;
- \subsubitem &quot;</p>
+ \subsubitem &quot;</dd>
 <dl>
 <dt>
-<dd> Command to be inserted between a level 1 item and a level 2 item, where the level 1 item does not have associated page numbers.</dl>
-<dt><code>delim_0</code> &lt;string&gt;</p>
-<dd> &quot;, &quot;</p>
+</dt><dd> Command to be inserted between a level 1 item and a level 2 item, where the level 1 item does not have associated page numbers.</dd></dl>
+<dt><code>delim_0</code> &lt;string&gt;</dt>
+<dd> &quot;, &quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to be inserted between a level 0 key and its first page number (default: comma followed by a blank).</dl>
-<dt><code>delim_1</code> &lt;string&gt;</p>
-<dd> &quot;, &quot;</p>
+</dt><dd> Delimiter to be inserted between a level 0 key and its first page number (default: comma followed by a blank).</dd></dl>
+<dt><code>delim_1</code> &lt;string&gt;</dt>
+<dd> &quot;, &quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to be inserted between a level 1 key and its first page number (default: comma followed by a blank).</dl>
-<dt><code>delim_2</code> &lt;string&gt;</p>
-<dd> &quot;, &quot;</p>
+</dt><dd> Delimiter to be inserted between a level 1 key and its first page number (default: comma followed by a blank).</dd></dl>
+<dt><code>delim_2</code> &lt;string&gt;</dt>
+<dd> &quot;, &quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to be inserted between a level 2 key and its first page number (default: comma followed by a blank).</dl>
-<dt><code>delim_n</code> &lt;string&gt;</p>
-<dd> &quot;, &quot;</p>
+</dt><dd> Delimiter to be inserted between a level 2 key and its first page number (default: comma followed by a blank).</dd></dl>
+<dt><code>delim_n</code> &lt;string&gt;</dt>
+<dd> &quot;, &quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to be inserted between two page numbers for the same key in any level (default: comma followed by a blank).</dl>
-<dt><code>delim_r</code> &lt;string&gt;</p>
-<dd> &quot;&#8211;&quot;</p>
+</dt><dd> Delimiter to be inserted between two page numbers for the same key in any level (default: comma followed by a blank).</dd></dl>
+<dt><code>delim_r</code> &lt;string&gt;</dt>
+<dd> &quot;&#8211;&quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to be inserted between the starting and ending page numbers of a range.</dl>
-<dt><code>delim_t</code> &lt;string&gt;</p>
-<dd> &quot;&quot;</p>
+</dt><dd> Delimiter to be inserted between the starting and ending page numbers of a range.</dd></dl>
+<dt><code>delim_t</code> &lt;string&gt;</dt>
+<dd> &quot;&quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to be inserted at the end of a page list. This delimiter has no effect on entries which have no associated page list.</dl>
-<dt><code>encap_prefix</code> &lt;string&gt;</p>
-<dd> &quot;\&quot;</p>
+</dt><dd> Delimiter to be inserted at the end of a page list. This delimiter has no effect on entries which have no associated page list.</dd></dl>
+<dt><code>encap_prefix</code> &lt;string&gt;</dt>
+<dd> &quot;\&quot;</dd>
 <dl>
 <dt>
-<dd> First part of prefix for the command which encapsulates the page number.</dl>
-<dt><code>encap_infix</code> &lt;string&gt;</p>
-<dd> &quot;{&quot;</p>
+</dt><dd> First part of prefix for the command which encapsulates the page number.</dd></dl>
+<dt><code>encap_infix</code> &lt;string&gt;</dt>
+<dd> &quot;{&quot;</dd>
 <dl>
 <dt>
-<dd> Second part of prefix for the command which encapsulates the page number.</dl>
-<dt><code>encap_suffix</code> &lt;string&gt;</p>
-<dd> &quot;}&quot;.</p>
+</dt><dd> Second part of prefix for the command which encapsulates the page number.</dd></dl>
+<dt><code>encap_suffix</code> &lt;string&gt;</dt>
+<dd> &quot;}&quot;.</dd>
 <dl>
 <dt>
-<dd> Suffix for the command which encapsulates the page number.</dl>
-<dt><code>page_precedence</code> &lt;string&gt;</p>
-<dd> &quot;rnaRA&quot;.</p>
+</dt><dd> Suffix for the command which encapsulates the page number.</dd></dl>
+<dt><code>page_precedence</code> &lt;string&gt;</dt>
+<dd> &quot;rnaRA&quot;.</dd>
 <dl>
 <dt>
-<dd> Page type precedence order. The default specifies: lowercase roman, numeric/arabic, lowercase alphabetic, uppercase roman, uppercase alphabetic.</dl>
-<dt><code>line_max</code> &lt;number&gt;</p>
-<dd> 72</p>
+</dt><dd> Page type precedence order. The default specifies: lowercase roman, numeric/arabic, lowercase alphabetic, uppercase roman, uppercase alphabetic.</dd></dl>
+<dt><code>line_max</code> &lt;number&gt;</dt>
+<dd> 72</dd>
 <dl>
 <dt>
-<dd> Maximum length of a line in the output, beyond which a line wraps.</dl>
-<dt><code>indent_space</code> &lt;string&gt;</p>
-<dd> &quot;		&quot;</p>
+</dt><dd> Maximum length of a line in the output, beyond which a line wraps.</dd></dl>
+<dt><code>indent_space</code> &lt;string&gt;</dt>
+<dd> &quot;		&quot;</dd>
 <dl>
 <dt>
-<dd> Space to be inserted in front of a wrapped line (default: two tabs).</dl>
-<dt><code>indent_length</code> &lt;number&gt;</p>
-<dd> 16</p>
+</dt><dd> Space to be inserted in front of a wrapped line (default: two tabs).</dd></dl>
+<dt><code>indent_length</code> &lt;number&gt;</dt>
+<dd> 16</dd>
 <dl>
 <dt>
-<dd> Length of <code>indent_space</code> (default: 16, equivalent to 2 tabs).</dl>
-<dt><code>suffix_2p</code> &lt;string&gt;</p>
-<dd> &quot;&quot;</p>
+</dt><dd> Length of <code>indent_space</code> (default: 16, equivalent to 2 tabs).</dd></dl>
+<dt><code>suffix_2p</code> &lt;string&gt;</dt>
+<dd> &quot;&quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to replace the range delimiter and the second page number of a two page list. When present, it overrides <code>delim_r</code>. Example: &quot;f.&quot;.</dl>
-<dt><code>suffix_3p</code> &lt;string&gt;</p>
-<dd> &quot;&quot;</p>
+</dt><dd> Delimiter to replace the range delimiter and the second page number of a two page list. When present, it overrides <code>delim_r</code>. Example: &quot;f.&quot;.</dd></dl>
+<dt><code>suffix_3p</code> &lt;string&gt;</dt>
+<dd> &quot;&quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to replace the range delimiter and the second page number of a three page list. When present, it overrides <code>delim_r</code> and <code>suffix_mp</code>. Example: &quot;ff.&quot;.</dl>
-<dt><code>suffix_mp</code> &lt;string&gt;</p>
-<dd> &quot;&quot;</p>
+</dt><dd> Delimiter to replace the range delimiter and the second page number of a three page list. When present, it overrides <code>delim_r</code> and <code>suffix_mp</code>. Example: &quot;ff.&quot;.</dd></dl>
+<dt><code>suffix_mp</code> &lt;string&gt;</dt>
+<dd> &quot;&quot;</dd>
 <dl>
 <dt>
-<dd> Delimiter to replace the range delimiter and the second page number of a multiple page list (three or more pages). When present, it overrides <code>delim_r</code>. Example: &quot;f.&quot;.</dl>
+</dt><dd> Delimiter to replace the range delimiter and the second page number of a multiple page list (three or more pages). When present, it overrides <code>delim_r</code>. Example: &quot;f.&quot;.</dd></dl>
 </dl>
 <h2>EXAMPLES</h2>
 <h3>TeX EXAMPLE</h3>
 <p> The following example shows a style file called <i>book.ist</i>, which defines an index for a book which can be formatted independently of the main source: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 preamble
     "\documentstyle[12pt]{book}
@@ -329,7 +327,6 @@ preamble
  "
         postamble
               "
-
 }
 \end
     {
@@ -339,20 +336,19 @@ preamble
     {
         document
     }
-    
  "
 </code></pre>
-</dl>
+</dd></dl>
 <p> Assuming that a particular book style requires the index (as well as any chapters) to start from an odd page number, and that the input file is named <i>foo.idx</i>, the following command line produces output in file <i>footmp.ind</i>: </p>
 <dl>
 <dt>
-<dd> makeindex -s book.ist -o footmp.ind -p odd foo</dl>
+</dt><dd> makeindex -s book.ist -o footmp.ind -p odd foo</dd></dl>
 <p> Here a non-default output file name is used to avoid clobbering the output for the book itself (presumably <i>foo.dvi</i>, which would have been the default name for the index output file!).</p>
 <h3>TROFF EXAMPLE</h3>
 <p> A sample control file for creating an index, which we will assume resides in the file <i>sample.ist</i>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 keyword &quot;IX:&quot;
 preamble
@@ -420,20 +416,20 @@ encap_suffix &quot;\fP&quot;
 indent_space &quot;&quot;
 indent_length 0
 </pre>
-</dl>
+</dd></dl>
 <p> The local macro package may require modification, as in this example of an extension to the <code>-ms</code> macros (note that at some sites, this macro should <i>replace</i> a pre-existing macro of the same name): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 ..de IX<br />
 .ie &#8216;\n(.z&#8221; .tm IX: \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 {\n(PN}<br />
 .el \!.IX \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 {\n(PN}<br />
 ..
-</dl>
+</dd></dl>
 <p> (note that the string {\n(PN} is separated from the rest of the line by a tab. If your local macro package does not contain this extension, just include those lines at the beginning of your file. Here is a simple <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1) input file, which we will assume is named <i>sample.txt</i>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 This is a sample file to test the ImakeindexP(1L)<br />
     program,<br />
     and see<br />
@@ -446,7 +442,7 @@ This is a sample file to test the ImakeindexP(1L)<br />
     .rs<br />
     .IX{Knuth}<br />
     .IX{typesetting !computer &#8211; aided} how well it functions in the ItroffP(1) environment.
-</dl>
+</dd></dl>
 <p> Note that index entries are indicated by the <code>.IX</code> macro, which causes the following text to be written to <i>stdout</i> along with the current page number.</p>
 <h3>CREATING THE INDEX FILE IN THE BOURNE SHELL</h3>
 <p> To create an input file for <i>makeindex</i>, <code>in the Bourne shell</code> environment, do the equivalent at your site of the command: </p>
@@ -456,45 +452,45 @@ psroff -ms -Tpsc -t sample.txt &gt; /dev/null 2&gt; sample.tmp
 <p> Some sites will require <i>ditroff</i> instead of <i>psroff</i>. To filter out any genuine error messages, invoke <i><a href="/docs/linux/man/1-grep/">grep</a></i>(1): </p>
 <dl>
 <dt>
-<dd> grep &#8216;^IX: &#8216; sample.tmp &gt; sample.idx</dl>
+</dt><dd> grep &#8216;^IX: &#8216; sample.tmp &gt; sample.idx</dd></dl>
 <h3>CREATING THE INDEX FILE USING UCSF ENHANCED TROFF/T<font SIZE="-2">RAN</font>S<font SIZE="-2">CRIPT</font></h3>
 <p> With UCSF Enhanced troff/T<font SIZE="-2">RAN</font>S<font SIZE="-2">CRIPT</font>, the <code>-I</code> option of <i>psroff</i>(1L) can produce both formatter output and an index file: </p>
 <dl>
 <dt>
-<dd> psroff -ms -I sample.inp -Tpsc sample.txt</dl>
+</dt><dd> psroff -ms -I sample.inp -Tpsc sample.txt</dd></dl>
 <p> If it is wished to suppress the formatter output:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 </pre>
-</dl>
+</dd></dl>
 <h3>COMPLETING THE INDEX</h3>
 <p> Any of the above procedures leaves the input for <i>makeindex</i> in <i>sample.inp</i>. The next step is to invoke <i>makeindex</i>: </p>
 <dl>
 <dt>
-<dd> makeindex -s sample.ist sample.idx</dl>
+</dt><dd> makeindex -s sample.ist sample.idx</dd></dl>
 <p> This leaves <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1)-ready output in the file <i>sample.ind</i>.</p>
 <h2>ORDERING</h2>
 <p> By default, <i>makeindex</i> assumes <i>word ordering</i>; if the <code>-l</code> option is in effect, <i>letter ordering</i> is used. In word ordering, a blank precedes any letter in the alphabet, whereas in letter ordering, it does not count at all. This is illustrated by the following example: </p>
 <dl>
 <dt>
-<dd> <i>word order letter order</i><br />
+</dt><dd> <i>word order letter order</i><br />
  sea lion seal<br />
- seal sea lion</dl>
+ seal sea lion</dd></dl>
 <p> Numbers are always sorted in numeric order. For instance, </p>
 <dl>
 <dt>
-<dd> 9 (nine), 123<br />
- 10 (ten), see Derek, Bo</dl>
+</dt><dd> 9 (nine), 123<br />
+ 10 (ten), see Derek, Bo</dd></dl>
 <p> Letters are first sorted without regard to case; when words are identical, the uppercase version precedes its lowercase counterpart. </p>
 <p> A special symbol is defined here to be any character not appearing in the union of digits and the English alphabetic characters. Patterns starting with special symbols precede numbers, which precede patterns starting with letters. As a special case, a string starting with a digit but mixed with non-digits is considered to be a pattern starting with a special character.</p>
 <h2>SPECIAL EFFECTS</h2>
 <p> Entries such as </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \indexentry{alpha}<br />
 {<br />
     1<br />
@@ -507,11 +503,11 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 {<br />
     10<br />
 }
-</dl>
+</dd></dl>
 <p> in the input file will be converted to </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \item alpha, 1 &amp; nbsp;<br />
 &amp;nbsp;<br />
 &amp;nbsp;<br />
@@ -522,21 +518,21 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 &amp;nbsp;<br />
 &amp;nbsp;<br />
 \subsubitem gamma, 10
-</dl>
+</dd></dl>
 <p> in the output index file. Notice that the <code>level</code> symbol (`!&#8217;) is used above to delimit hierarchical levels. </p>
 <p> It is possible to make an item appear in a designated form by using the <code>actual</code> (`@&#8217;) operator. For instance, </p>
 <dl>
 <dt>
-<dd> \indexentry{alpha@{\it alpha\/}}{1}</dl>
+</dt><dd> \indexentry{alpha@{\it alpha\/}}{1}</dd></dl>
 <p> will become </p>
 <dl>
 <dt>
-<dd> \item {\it alpha\/}, 1</dl>
+</dt><dd> \item {\it alpha\/}, 1</dd></dl>
 <p> after processing. The pattern preceding `@&#8217; is used as sort key, whereas the one following it is written to the output file. Note that two appearances of the same key, one with and one without the <code>actual</code> operator, are regarded as <i>distinct</i> entries. </p>
 <p> The item, subitem, and subsubitem fields may have individual sort keys: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \indexentry<br />
 {<br />
     aa @{\it aa\/<br />
@@ -547,11 +543,11 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 {<br />
     1<br />
 }
-</dl>
+</dd></dl>
 <p> This will be converted to </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \item{\it aa}, 1 &amp; nbsp;<br />
 &amp;nbsp;<br />
 &amp;nbsp;<br />
@@ -562,37 +558,37 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 &amp;nbsp;<br />
 &amp;nbsp;<br />
 \subsubitem{\it cc}, 10
-</dl>
+</dd></dl>
 <p> It is possible to encapsulate a page number with a designated command using the <code>encap</code> (`|&#8217;) operator: </p>
 <dl>
 <dt>
-<dd> \indexentry{alpha|bold}{1}</dl>
+</dt><dd> \indexentry{alpha|bold}{1}</dd></dl>
 <p> will be converted to </p>
 <dl>
 <dt>
-<dd> \item alpha, old{1}</dl>
+</dt><dd> \item alpha, old{1}</dd></dl>
 <p> where, with a suitable definition for TeX, old{n} will expand to {f n}. In this example, the three output attributes associated with page encapsulation <code>encap_prefix</code>, <code>encap_infix</code>, and <code>encap_suffix</code>, correspond to backslash, left brace, and right brace, respectively. This mechanism allows page numbers to be set in different fonts. For example, the page where the definition of a keyword appears can be in one font, the location of a primary example can be in another font, and other appearances in yet a third font. </p>
 <p> The <code>encap</code> operator can also be used to create cross references in the index: </p>
 <dl>
 <dt>
-<dd> \indexentry{alpha|see{beta}}{1}</dl>
+</dt><dd> \indexentry{alpha|see{beta}}{1}</dd></dl>
 <p> will become </p>
 <dl>
 <dt>
-<dd> \item alpha, \see{beta}{1}</dl>
+</dt><dd> \item alpha, \see{beta}{1}</dd></dl>
 <p> in the output file, where </p>
 <dl>
 <dt>
-<dd> \see{beta}{1}</dl>
+</dt><dd> \see{beta}{1}</dd></dl>
 <p> will expand to </p>
 <dl>
 <dt>
-<dd> {\it see\/} beta</dl>
+</dt><dd> {\it see\/} beta</dd></dl>
 <p> Note that in a cross reference like this the page number disappears. </p>
 <p> A pair of <code>encap</code> concatenated with <code>range_open</code> (`|(&#8216;) and <code>range_close</code> (`|)&#8217;) creates an explicit page range: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \indexentry{alpha|(}<br />
 {<br />
     1<br />
@@ -601,15 +597,15 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 {<br />
     5<br />
 }
-</dl>
+</dd></dl>
 <p> will become </p>
 <dl>
 <dt>
-<dd> \item alpha, 1&#8212;5</dl>
+</dt><dd> \item alpha, 1&#8212;5</dd></dl>
 <p> Intermediate pages indexed by the same key will be merged into the range implicitly. This is especially useful when an entire section about a particular subject is to be indexed, in which case only the range opening and closing operators need to be inserted at the beginning and end of the section. Explicit page range formation can also include an extra command to set the page range in a designated font: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \indexentry{alpha|(bold}<br />
 {<br />
     1<br />
@@ -618,15 +614,15 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 {<br />
     5<br />
 }
-</dl>
+</dd></dl>
 <p> will become </p>
 <dl>
 <dt>
-<dd> \item alpha, old{1&#8211;5}</dl>
+</dt><dd> \item alpha, old{1&#8211;5}</dd></dl>
 <p> Several potential problems are worth mentioning. First, entries like </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \indexentry{alpha|(}<br />
 {<br />
     1<br />
@@ -639,15 +635,15 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 {<br />
     5<br />
 }
-</dl>
+</dd></dl>
 <p> will be interpreted as </p>
 <dl>
 <dt>
-<dd> \item alpha, old{3}, 1&#8211;5</dl>
+</dt><dd> \item alpha, old{3}, 1&#8211;5</dd></dl>
 <p> but with a warning message in the transcript about encountering an inconsistent page encapsulator. An explicit range beginning in a Roman page number and ending in Arabic is also considered an error. In this instance, (if possible) the range is broken into two subranges, one in Roman and the other in Arabic. For instance, </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \indexentry{alpha|(}<br />
 {<br />
     i<br />
@@ -664,34 +660,34 @@ psroff -ms -I sample.inp -Tpsc -t sample.txt &gt; /dev/null
 {<br />
     7<br />
 }
-</dl>
+</dd></dl>
 <p> will be turned into </p>
 <dl>
 <dt>
-<dd> \item alpha, i&#8211;iv, 3&#8211;7</dl>
+</dt><dd> \item alpha, i&#8211;iv, 3&#8211;7</dd></dl>
 <p> with a warning message in the transcript file complaining about an illegal range formation. </p>
 <p> Every special symbol mentioned in this section may be escaped by the <code>quote</code> operator (`&quot;&#8217;). Thus </p>
 <dl>
 <dt>
-<dd> \indexentry{alpha&quot;@beta}{1}</dl>
+</dt><dd> \indexentry{alpha&quot;@beta}{1}</dd></dl>
 <p> will actually become </p>
 <dl>
 <dt>
-<dd> \item alpha [at] beta, 1</dl>
+</dt><dd> \item alpha [at] beta, 1</dd></dl>
 <p> as a result of executing <i>makeindex</i>. The quoting power of <code>quote</code> is eliminated if it is immediately preceded by <code>escape</code> (`\&#8217;). For example, </p>
 <dl>
 <dt>
-<dd> \indexentry{f\&quot;ur}{1}</dl>
+</dt><dd> \indexentry{f\&quot;ur}{1}</dd></dl>
 <p> becomes </p>
 <dl>
 <dt>
-<dd> \item f\&quot;ur, 1</dl>
+</dt><dd> \item f\&quot;ur, 1</dd></dl>
 <p> which represents an umlaut-accented `u&#8217; to the TeX family of processors. </p>
 <p> A page number can be a composite of one or more fields separated by the delimiter bound to <code>page_compositor</code> (`-&#8216;), e.g., II-12 for page 12 of Chapter II. Page numbers may contain up to ten fields. </p>
 <p> Since version 2.11 of <i>makeindex</i>, the <code>quote</code> operator may quote <i>any</i> character in the range 1 &#8230; 255. Character 0 is excluded because it is used internally in the <i>makeindex</i> source code as a string terminator. With this change, sort keys can be created for all eight-bit characters except 0. The sorting order is</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 punctuation characters (in ASCII order),
 digits,
@@ -700,11 +696,11 @@ space (32),
 letters (ignoring case),
 characters 127 ... 255.
 </pre>
-</dl>
+</dd></dl>
 <p> Here is an example showing the indexing of all printable ASCII characters other than letters and digits, assuming the default TeX format. For convenience, the page number references are the corresponding ASCII ordinal values.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 \indexentry{&#8221; @&#8221;(space)}<br />
 {<br />
     32<br />
@@ -794,11 +790,11 @@ characters 127 ... 255.
             {<br />
                 126<br />
             }
-</dl>
+</dd></dl>
 <p> Characters in the actual fields following the `@&#8217; character which have special significance to TeX must be represented as control sequences, or as math mode characters. Note particularly how the entries for the at sign, left and right braces, and the vertical bar, are coded. The index file output by <i>makeindex</i> for this example looks like this:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 egin
 {
@@ -832,15 +828,15 @@ characters 127 ... 255.
     theindex
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>makeindex</i></p>
-<dd> executable file</p>
-<dt><i>$TEXMFMAIN/tex/plain/makeindex/idxmac.tex</i></p>
-<dd> TeX macro file used by <i>makeindex</i></p>
-<dt><i>$TEXMFMAIN/tex/latex/base/makeidx.sty</i></p>
-<dd> TeX macro file used by <i>makeindex</i></dl>
+<dt><i>makeindex</i></dt>
+<dd> executable file</dd>
+<dt><i>$TEXMFMAIN/tex/plain/makeindex/idxmac.tex</i></dt>
+<dd> TeX macro file used by <i>makeindex</i></dd>
+<dt><i>$TEXMFMAIN/tex/latex/base/makeidx.sty</i></dt>
+<dd> TeX macro file used by <i>makeindex</i></dd></dl>
 <h2>SEE ALSO</h2>
 <p> ditroff(1L), latex(1L), make.index (1L), <a href="/docs/linux/man/3-qsort/">qsort</a>(3), tex(1L), troff(1L) </p>
 <p> <i>UCSF Enhanced troff/T<font SIZE="-2">RAN</font>S<font SIZE="-2">CRIPT</font> &#8212; An Overview</i>, R. P. C. Rodgers and Conrad Huang, LSMB Technical Report 90-2, UCSF School of Pharmacy, San Francisco, 1990. </p>
@@ -855,15 +851,15 @@ characters 127 ... 255.
 <p> Leslie Lamport contributed significantly to the design of MakeIndex. Michael Harrison provided valuable comments and suggestions. Nelson Beebe improved on the portable version, and maintained the source distribution for the TeX Users Group for many years. Andreas Brosig contributed to the German word ordering. The modification to the <code>-ms</code> macros was derived from a method proposed by Ravi Sethi of AT&amp;T Bell Laboratories. The <i>LOG</i> and <i>CONTRIB</i> files in the <i>makeindex</i> source distribution record other contributions. </p>
 <p> <i>makeindex</i> is currently maintained as part of the TeX Live distribution (<a rel="nofollow" href="http://tug.org/texlive">http://tug.org/texlive</a>); please send bug reports to tex-k [at] tug.org. </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">ORDERING</a></p>
+<dt><a href="#lbAO">ORDERING</a></dt>
 <dd>
-<dt><a href="#lbAP">SPECIAL EFFECTS</a></p>
+</dd><dt><a href="#lbAP">SPECIAL EFFECTS</a></dt>
 <dd>
-<dt><a href="#lbAQ">FILES</a></p>
+</dd><dt><a href="#lbAQ">FILES</a></dt>
 <dd>
-<dt><a href="#lbAR">SEE ALSO</a></p>
+</dd><dt><a href="#lbAR">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAS">AUTHOR</a></p>
+</dd><dt><a href="#lbAS">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAT">ACKNOWLEDGMENTS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAT">ACKNOWLEDGMENTS</a></dt>
+<dd></dd></dl>

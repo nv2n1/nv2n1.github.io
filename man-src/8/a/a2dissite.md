@@ -17,24 +17,24 @@ description: "a2ensite, a2dissite – enable or disable an apache2 site / virtua
 <p> Apache treats the very first virtual host enabled specially as every request not matching any actual directive is being redirected there. Thus it should be called <code>000-default</code> in order to sort before the remaining hosts to be loaded first.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>Don&#8217;t show informative messages.</p>
-<dt><code>-m, &#8211;maintmode</code></p>
-<dd>Enables the maintainer mode, that is the program invocation is effectuated automatically by a maintainer script. This switch should not be used by end users.</p>
-<dt><code>-p, &#8211;purge</code></p>
-<dd>When disabling a module, purge all traces of the module in the internal state data base.</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>Don&#8217;t show informative messages.</dd>
+<dt><code>-m, &#8211;maintmode</code></dt>
+<dd>Enables the maintainer mode, that is the program invocation is effectuated automatically by a maintainer script. This switch should not be used by end users.</dd>
+<dt><code>-p, &#8211;purge</code></dt>
+<dd>When disabling a module, purge all traces of the module in the internal state data base.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>a2ensite</code> and <code>a2dissite</code> exit with status 0 if all <i>site</i>s are processed successfully, 1 if errors occur, 2 if an invalid option was used.</p>
 <h2>Examples</h2>
 <dl>
-<dd><code>a2dissite 000-default</code></dl>
+<dd><code>a2dissite 000-default</code></dd></dl>
 <p> Disables the <code>default</code> site.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/apache2/sites-available</code></p>
-<dd>Directory with files giving information on available sites.</p>
-<dt><code>/etc/apache2/sites-enabled</code></p>
-<dd>Directory with links to the files in <code>sites-available</code> for enabled sites.</dl>
+<dt><code>/etc/apache2/sites-available</code></dt>
+<dd>Directory with files giving information on available sites.</dd>
+<dt><code>/etc/apache2/sites-enabled</code></dt>
+<dd>Directory with links to the files in <code>sites-available</code> for enabled sites.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apache2ctl/">apache2ctl</a></code>(8), <code><a href="/docs/linux/man/8-a2enmod/">a2enmod</a></code>(8), <code><a href="/docs/linux/man/8-a2dismod/">a2dismod</a></code>(8), <code><a href="/docs/linux/man/8-a2enconf/">a2enconf</a></code>(8), <code><a href="/docs/linux/man/8-a2disconf/">a2disconf</a></code>(8).</p>
 <h2>Author</h2>

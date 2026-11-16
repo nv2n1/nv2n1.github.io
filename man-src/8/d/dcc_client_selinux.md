@@ -66,8 +66,8 @@ description: "dcc_client_selinux – Security Enhanced Linux Policy for the dcc_
 <p> <code>dcc_client_map_t</code> </p>
 <p> &#8211; Set files with the dcc_client_map_t type, if you want to treat the files as dcc client map data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/dcc/map, /var/dcc/map, /var/lib/dcc/map, /var/run/dcc/map </p>
+<dt>Paths:</dt>
+<dd>/etc/dcc/map, /var/dcc/map, /var/lib/dcc/map, /var/run/dcc/map </dd>
 </dl>
 <p> <code>dcc_client_tmp_t</code> </p>
 <p> &#8211; Set files with the dcc_client_tmp_t type, if you want to store dcc client temporary files in the /tmp directories. </p>

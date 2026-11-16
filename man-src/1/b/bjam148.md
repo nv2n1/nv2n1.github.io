@@ -42,25 +42,25 @@ description: "bjam – Command-line utility to build Boost-related C++ projects 
 <p> This section provides the information necessary to create your own projects using <i>Boost.Build</i> The information provided here is relatively high-level, and Chapter 6, Reference as well as the on-line help system must be used to obtain low-level documentation (see &#8211;help) </p>
 <p> <i>Boost.Build</i> actually consists of two parts &#8211; <i>Boost.Jam</i>, a build engine with its own interpreted language, and <i>Boost.Build</i> itself, implemented in <i>Boost.Jam&#8217;s</i> language. The chain of events when you type bjam on the command line is as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Boost.Jam</i> tries to find <i>Boost.Build</i> and loads the top-level module. The exact process is described in the section called “Initialization”</dl>
+<dt>&bull;</dt>
+<dd> <i>Boost.Jam</i> tries to find <i>Boost.Build</i> and loads the top-level module. The exact process is described in the section called “Initialization”</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> The top-level module loads user-defined configuration files, <i>user-config.jam</i> and <i>site-config.jam</i>, which define available toolsets</dl>
+<dt>&bull;</dt>
+<dd> The top-level module loads user-defined configuration files, <i>user-config.jam</i> and <i>site-config.jam</i>, which define available toolsets</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> The <i>Jamfile</i> in the current directory is read That in turn might cause reading of further Jamfiles. As a result, a tree of projects is created, with targets inside projects</dl>
+<dt>&bull;</dt>
+<dd> The <i>Jamfile</i> in the current directory is read That in turn might cause reading of further Jamfiles. As a result, a tree of projects is created, with targets inside projects</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> Finally, using the build request specified on the command line, <i>Boost.Build</i> decides which targets should be built and how. That information is passed back to <i>Boost.Jam</i>, which takes care of actually running the scheduled build action commands</dl>
+<dt>&bull;</dt>
+<dd> Finally, using the build request specified on the command line, <i>Boost.Build</i> decides which targets should be built and how. That information is passed back to <i>Boost.Jam</i>, which takes care of actually running the scheduled build action commands</dd></dl>
 <p> So, to be able to successfully use <i>Boost.Build</i>, you need to know only four things:</p>
 <dl>
-<dt>&bull;</p>
-<dd> How to configure <i>Boost.Build</i> (<a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/configuration.html)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/configuration.html)</a></p>
-<dt>&bull;</p>
-<dd> How to declare targets in Jamfiles (<a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/targets.html)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/targets.html)</a></p>
-<dt>&bull;</p>
-<dd> How the build process works (<a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/build_process.html)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/build_process.html)</a></dl>
+<dt>&bull;</dt>
+<dd> How to configure <i>Boost.Build</i> (<a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/configuration.html)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/configuration.html)</a></dd>
+<dt>&bull;</dt>
+<dd> How to declare targets in Jamfiles (<a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/targets.html)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/targets.html)</a></dd>
+<dt>&bull;</dt>
+<dd> How the build process works (<a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/build_process.html)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/build_process.html)</a></dd></dl>
 <p> Some Basics about the <i>Boost.Jam</i> language. See the section called “Boost.Jam Language” (<a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/jam_language.html)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/jam_language.html)</a></p>
 <h2>CONCEPTS</h2>
 <p> <i>Boost.Build</i> has a few unique concepts that are introduced in this section. The best way to explain the concepts is by comparison with more classical build tools </p>

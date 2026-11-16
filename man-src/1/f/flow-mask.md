@@ -15,20 +15,20 @@ description: "flow-mask – Apply tags to flow files."
 <p> The <code>flow-mask</code> utility is used to modify the source and destination mask length&#8217;s in flow records.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-k</code></p>
-<dd> Keep time from input.</p>
-<dt><code>-m</code><i> mask_fname</i></p>
-<dd> Load masks from <i>mask_name</i>. Defaults to <i>/etc/flow-tools/cfg/mask</i></p>
-<dt><code>-M</code><i> mask_def</i></p>
-<dd> Use <i>active_def</i> as the active tag definition(s).</dl>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-k</code></dt>
+<dd> Keep time from input.</dd>
+<dt><code>-m</code><i> mask_fname</i></dt>
+<dd> Load masks from <i>mask_name</i>. Defaults to <i>/etc/flow-tools/cfg/mask</i></dd>
+<dt><code>-M</code><i> mask_def</i></dt>
+<dd> Use <i>active_def</i> as the active tag definition(s).</dd></dl>
 <p> The configuration file is a collection of definitions. A definition lists a sequence of prefixes and the mask length to replace the matching prefix with. Lines begining with # are treated as comments and ignored. </p>
 <pre><code>
 mask - definition command Description-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --mask - definition Begin mask - definition section mask - definition foo prefix List the prefix to match on and the replacement mask.prefix 128.146 / 16 24

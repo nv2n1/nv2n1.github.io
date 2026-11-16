@@ -19,138 +19,138 @@ description: "gbak — backup /restore Firebird database"
 <h2>COMMON OPTIONS</h2>
 <p> Most options can be abbreviated. Below are given the shortest abbreviations as well as the full versions.</p>
 <dl>
-<dt><code>-user</code> <i>string</i></p>
-<dd> User name to use when connecting to the database.</p>
-<dt><code>-ro</code> <i>string</i></p>
+<dt><code>-user</code> <i>string</i></dt>
+<dd> User name to use when connecting to the database.</dd>
+<dt><code>-ro</code> <i>string</i></dt>
 <dd>
-<dt><code>-role</code> <i>string</i></p>
-<dd> <font SIZE="-1">SQL</font> role to use when connecting to theh database.</p>
-<dt><code>-pas</code> <i>string</i></p>
+</dd><dt><code>-role</code> <i>string</i></dt>
+<dd> <font SIZE="-1">SQL</font> role to use when connecting to theh database.</dd>
+<dt><code>-pas</code> <i>string</i></dt>
 <dd>
-<dt><code>-password</code> <i>string</i></p>
-<dd> Password to use when connecting to the database.</p>
-<dt><code>-se</code></p>
+</dd><dt><code>-password</code> <i>string</i></dt>
+<dd> Password to use when connecting to the database.</dd>
+<dt><code>-se</code></dt>
 <dd>
-<dt><code>-service</code></p>
-<dd> Use services manager when talking to the database.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>-service</code></dt>
+<dd> Use services manager when talking to the database.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>-verify</code></p>
-<dd> Report each action. </p>
+</dd><dt><code>-verify</code></dt>
+<dd> Report each action. </dd>
 <p> Displays verbose information about what metadata is being processed, what table is being backed up/restored and how many records are processed.</p>
-<dt><code>-y</code> <i>string</i></p>
-<dd> Redirects status/error messages to the given path.</p>
-<dt><code>-z</code></p>
-<dd> Prints full program version number before doing anything else. Prints server and database version information after connecting to the database.</dl>
+<dt><code>-y</code> <i>string</i></dt>
+<dd> Redirects status/error messages to the given path.</dd>
+<dt><code>-z</code></dt>
+<dd> Prints full program version number before doing anything else. Prints server and database version information after connecting to the database.</dd></dl>
 <h2>BACKUP OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
+<dt><code>-b</code></dt>
 <dd>
-<dt><code>-backup_database</code></p>
-<dd> Turns on backup mode.</p>
-<dt><code>-co</code></p>
+</dd><dt><code>-backup_database</code></dt>
+<dd> Turns on backup mode.</dd>
+<dt><code>-co</code></dt>
 <dd>
-<dt><code>-convert</code></p>
-<dd> Converts external tables into tables. </p>
+</dd><dt><code>-convert</code></dt>
+<dd> Converts external tables into tables. </dd>
 <p> Normally external tables are ignored during backup and restore. With the <code>-convert</code> option external tables are included in the backup as any other regular table. When such a backup is restored, these previously external tables are created as regular tables.</p>
-<dt><code>-fa</code> <i>number</i></p>
+<dt><code>-fa</code> <i>number</i></dt>
 <dd>
-<dt><code>-factor</code> <i>number</i></p>
-<dd> Blocking factor. Output is written in block of <i>number</i> bytes. Useful when backing up to a tape.</p>
-<dt><code>-g</code></p>
+</dd><dt><code>-factor</code> <i>number</i></dt>
+<dd> Blocking factor. Output is written in block of <i>number</i> bytes. Useful when backing up to a tape.</dd>
+<dt><code>-g</code></dt>
 <dd>
-<dt><code>-garbage_collect</code></p>
-<dd> Inhibits garbage collection. </p>
+</dd><dt><code>-garbage_collect</code></dt>
+<dd> Inhibits garbage collection. </dd>
 <p> Normally Firebird runs a garbage collector when reading through the tables. Since the backup process reads all the tables, this forces garbage collection of the whole database. Using this switch speeds up the backup process and also can help in some cases of backing up damaged databases.</p>
-<dt><code>-ig</code></p>
+<dt><code>-ig</code></dt>
 <dd>
-<dt><code>-ignore</code></p>
-<dd> Ignores records with bad checksums. </p>
+</dd><dt><code>-ignore</code></dt>
+<dd> Ignores records with bad checksums. </dd>
 <p> This option should be used only when backing up damaged databases.</p>
-<dt><code>-l</code></p>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>-limbo</code></p>
-<dd> Ignores transactions in limbo.</p>
-<dt><code>-m</code></p>
+</dd><dt><code>-limbo</code></dt>
+<dd> Ignores transactions in limbo.</dd>
+<dt><code>-m</code></dt>
 <dd>
-<dt><code>-metadata_only</code></p>
-<dd> Backs up metadata only. No table content is included in the backup.</p>
-<dt><code>-nt</code></p>
-<dd> Uses non-transportable backup format. </p>
+</dd><dt><code>-metadata_only</code></dt>
+<dd> Backs up metadata only. No table content is included in the backup.</dd>
+<dt><code>-nt</code></dt>
+<dd> Uses non-transportable backup format. </dd>
 <p> Non-transportable backups can be restored only on machines using the same byte order.</p>
-<dt><code>-o</code></p>
+<dt><code>-o</code></dt>
 <dd>
-<dt><code>-old_descriptions</code></p>
-<dd> Saves old-style metadata descriptions.</dl>
+</dd><dt><code>-old_descriptions</code></dt>
+<dd> Saves old-style metadata descriptions.</dd></dl>
 <h2>RESTORE OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
+<dt><code>-c</code></dt>
 <dd>
-<dt><code>-create</code></p>
-<dd> Turns on restore mode. </p>
+</dd><dt><code>-create</code></dt>
+<dd> Turns on restore mode. </dd>
 <p> <i>target</i> database will be created and must not exist.</p>
-<dt><code>-r</code> [<code>o</code>]</p>
+<dt><code>-r</code> [<code>o</code>]</dt>
 <dd>
-<dt><code>-recreate_database</code> [<code>overwrite</code>]</p>
-<dd> Like <code>-create_database</code>, but by adding <tt>&quot;overwrite&quot;</tt> any existing database is overwritten.</p>
-<dt><code>-rep</code></p>
+</dd><dt><code>-recreate_database</code> [<code>overwrite</code>]</dt>
+<dd> Like <code>-create_database</code>, but by adding <tt>&quot;overwrite&quot;</tt> any existing database is overwritten.</dd>
+<dt><code>-rep</code></dt>
 <dd>
-<dt><code>-replace_database</code></p>
-<dd> Turns on restore mode. Target database is overwritten if it exists.</p>
-<dt><code>-bu</code> <i>number</i></p>
+</dd><dt><code>-replace_database</code></dt>
+<dd> Turns on restore mode. Target database is overwritten if it exists.</dd>
+<dt><code>-bu</code> <i>number</i></dt>
 <dd>
-<dt><code>-buffers</code> <i>number</i></p>
-<dd> When creating target database, ignore information about database buffers stored in the backup and use specified number.</p>
-<dt><code>-e</code></p>
+</dd><dt><code>-buffers</code> <i>number</i></dt>
+<dd> When creating target database, ignore information about database buffers stored in the backup and use specified number.</dd>
+<dt><code>-e</code></dt>
 <dd>
-<dt><code>-expand</code></p>
-<dd> Normally, Firebird uses <font SIZE="-1">RLE</font> compression for strings when storing them on disk. This option turns this compression off.</p>
-<dt><code>-i</code></p>
+</dd><dt><code>-expand</code></dt>
+<dd> Normally, Firebird uses <font SIZE="-1">RLE</font> compression for strings when storing them on disk. This option turns this compression off.</dd>
+<dt><code>-i</code></dt>
 <dd>
-<dt><code>-inactive</code></p>
-<dd> Restore indexes in inactive state. This can be used to restore a backup, containing data inconsistent with foreign key/unique constraints. </p>
+</dd><dt><code>-inactive</code></dt>
+<dd> Restore indexes in inactive state. This can be used to restore a backup, containing data inconsistent with foreign key/unique constraints. </dd>
 <p> Note that since version 3.0 gbak leaves any problematic indices in inactive state automatically.</p>
-<dt><code>-k</code></p>
+<dt><code>-k</code></dt>
 <dd>
-<dt><code>-kill</code></p>
-<dd> Does not restore database shadow files.</p>
-<dt><code>-mo</code> <i>access</i></p>
+</dd><dt><code>-kill</code></dt>
+<dd> Does not restore database shadow files.</dd>
+<dt><code>-mo</code> <i>access</i></dt>
 <dd>
-<dt><code>-mode</code> <i>access</i></p>
-<dd> Restores the database with given <i>access</i>. </p>
+</dd><dt><code>-mode</code> <i>access</i></dt>
+<dd> Restores the database with given <i>access</i>. </dd>
 <p> Valid values for <i>access</i> are <tt>&quot;read_only&quot;</tt> and <tt>&quot;read_write&quot;</tt>. The default is to restore the database with its original access mode.</p>
-<dt><code>-n</code></p>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>-no_validity</code></p>
-<dd> Restores the database without its validity constraints. This includes foreign key, unique and check constraints. Useful for restoring a backup, containing inconsistent data.</p>
-<dt><code>-o</code></p>
+</dd><dt><code>-no_validity</code></dt>
+<dd> Restores the database without its validity constraints. This includes foreign key, unique and check constraints. Useful for restoring a backup, containing inconsistent data.</dd>
+<dt><code>-o</code></dt>
 <dd>
-<dt><code>-one_at_a_time</code></p>
-<dd> Commits restoring transaction after each table.</p>
-<dt><code>-p</code> <i>number</i></p>
+</dd><dt><code>-one_at_a_time</code></dt>
+<dd> Commits restoring transaction after each table.</dd>
+<dt><code>-p</code> <i>number</i></dt>
 <dd>
-<dt><code>-page_size</code> <i>number</i></p>
-<dd> Override page size stored in the backup. Valid values are 1024, 2048, 4096, 8192, 16384 and 32768.</p>
-<dt><code>-use_</code></p>
+</dd><dt><code>-page_size</code> <i>number</i></dt>
+<dd> Override page size stored in the backup. Valid values are 1024, 2048, 4096, 8192, 16384 and 32768.</dd>
+<dt><code>-use_</code></dt>
 <dd>
-<dt><code>-use_all_space</code></p>
-<dd> Normally, Fireburd reserves some space on each data page for further use. This reserved space is used for newly inserted data and for keeping older versions of the data. Having space reserved for this purpose &#8220;near&#8221; to the data speeds up modifications. If the database will be used mainly for read operations, specifying this option will save disk space.</p>
-<dt><code>-fix_fss_metadata</code> <i>string</i></p>
-<dd> When restoring metadata, in case it is not valid <font SIZE="-1">UTF8,</font> try to convert it from the specified character set. Useful when table descriptions are given in some national non-UTF8 encoding, which was possible with Firebird before version 2.5.</p>
-<dt><code>-fix_fss_data</code> <i>string</i></p>
-<dd> When restoring table data, in case a column defined with <font SIZE="-1">UNICODE_FSS</font> character set contains no valid <font SIZE="-1">UTF8</font> (which was possible with versions of Firebird prior to 2.5), try to convert the data from the specified character set.</dl>
+</dd><dt><code>-use_all_space</code></dt>
+<dd> Normally, Fireburd reserves some space on each data page for further use. This reserved space is used for newly inserted data and for keeping older versions of the data. Having space reserved for this purpose &#8220;near&#8221; to the data speeds up modifications. If the database will be used mainly for read operations, specifying this option will save disk space.</dd>
+<dt><code>-fix_fss_metadata</code> <i>string</i></dt>
+<dd> When restoring metadata, in case it is not valid <font SIZE="-1">UTF8,</font> try to convert it from the specified character set. Useful when table descriptions are given in some national non-UTF8 encoding, which was possible with Firebird before version 2.5.</dd>
+<dt><code>-fix_fss_data</code> <i>string</i></dt>
+<dd> When restoring table data, in case a column defined with <font SIZE="-1">UNICODE_FSS</font> character set contains no valid <font SIZE="-1">UTF8</font> (which was possible with versions of Firebird prior to 2.5), try to convert the data from the specified character set.</dd></dl>
 <h3><font SIZE="-1">RESTORING TO</font> MULTIPLE-FILE <font SIZE="-1">DATABASE</font></h3>
 <p> When the <i>target</i> argument is in the form <i>file_1</i> <i>pages_1</i> &#8230; <i>file_N</i>, the restored database is written in several files with <i>file_i</i> not bigger than <i>pages_i</i> pages. This may be useful if the file system that holds the database file can&#8217;t handle files above certain size. </p>
 <p> <code>Note 1</code>: the file size limit is in <code>pages</code>. </p>
 <p> <code>Note 1</code>: there is no limit on the size of the last file.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>ISC_USER</code></font></p>
-<dd> Default value for the -user option.</p>
-<dt><font SIZE="-1"><code>ISC_ROLE</code></font></p>
-<dd> Default value for the -role option.</p>
-<dt><font SIZE="-1"><code>ISC_PASSWORD</code></font></p>
-<dd> Default value for the -password option.</dl>
+<dt><font SIZE="-1"><code>ISC_USER</code></font></dt>
+<dd> Default value for the -user option.</dd>
+<dt><font SIZE="-1"><code>ISC_ROLE</code></font></dt>
+<dd> Default value for the -role option.</dd>
+<dt><font SIZE="-1"><code>ISC_PASSWORD</code></font></dt>
+<dd> Default value for the -password option.</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Backup a database into a compressed format</h3>
 <p> gbak -b srv:/database.fdb stdout | gzip &gt; database.fbk.gz</p>
@@ -162,11 +162,11 @@ description: "gbak — backup /restore Firebird database"
 <h2>AUTHOR</h2>
 <p> This manual page was written by Damyan Ivanov dmn [at] debian.org for the Debian project. Permission is granted to use this document, with or without modifications, provided that this notice is retained. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">ENVIRONMENT</a></p>
+<dt><a href="#lbAI">ENVIRONMENT</a></dt>
 <dd>
-<dt><a href="#lbAJ">EXAMPLES</a></p>
+</dd><dt><a href="#lbAJ">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAM">SEE ALSO</a></p>
+</dd><dt><a href="#lbAM">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAN">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAN">AUTHOR</a></dt>
+<dd></dd></dl>

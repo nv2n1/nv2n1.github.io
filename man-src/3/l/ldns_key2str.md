@@ -20,24 +20,24 @@ description: "ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_ke
 <p> char* ldns_key2str(const ldns_key *k); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr2str</i>()</p>
-<dd>Converts the data in the resource record to presentation format and returns that as a char *. Remember to free it. </p>
+<dt> <i>ldns_rr2str</i>()</dt>
+<dd>Converts the data in the resource record to presentation format and returns that as a char *. Remember to free it. </dd>
 <p> .br <code>rr</code>: The rdata field to convert .br Returns null terminated char * data, or NULL on error</dl>
 <dl>
-<dt> <i>ldns_pkt2str</i>()</p>
-<dd>Converts the data in the DNS packet to presentation format and returns that as a char *. Remember to free it. </p>
+<dt> <i>ldns_pkt2str</i>()</dt>
+<dd>Converts the data in the DNS packet to presentation format and returns that as a char *. Remember to free it. </dd>
 <p> .br <code>pkt</code>: The rdata field to convert .br Returns null terminated char * data, or NULL on error</dl>
 <dl>
-<dt> <i>ldns_rdf2str</i>()</p>
-<dd>Converts the data in the rdata field to presentation format and returns that as a char *. Remember to free it. </p>
+<dt> <i>ldns_rdf2str</i>()</dt>
+<dd>Converts the data in the rdata field to presentation format and returns that as a char *. Remember to free it. </dd>
 <p> .br <code>rdf</code>: The rdata field to convert .br Returns null terminated char * data, or NULL on error</dl>
 <dl>
-<dt> <i>ldns_rr_list2str</i>()</p>
-<dd>Converts a list of resource records to presentation format and returns that as a char *. Remember to free it. </p>
+<dt> <i>ldns_rr_list2str</i>()</dt>
+<dd>Converts a list of resource records to presentation format and returns that as a char *. Remember to free it. </dd>
 <p> .br <code>rr_list</code>: the rr_list to convert to text .br Returns null terminated char * data, or NULL on error</dl>
 <dl>
-<dt> <i>ldns_key2str</i>()</p>
-<dd>Converts a private key to the test presentation fmt and returns that as a char *. Remember to free it. </p>
+<dt> <i>ldns_key2str</i>()</dt>
+<dd>Converts a private key to the test presentation fmt and returns that as a char *. Remember to free it. </dd>
 <p> .br <code>k</code>: the key to convert to text .br Returns null terminated char * data, or NULL on error</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -51,3 +51,4 @@ description: "ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_ke
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

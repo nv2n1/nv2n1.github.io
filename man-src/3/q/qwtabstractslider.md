@@ -77,123 +77,123 @@ description: "QwtAbstractSlider –"
 <p> The initial value is invalid. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtAbstractSlider::incrementedValue (doublevalue, intstepCount) const [protected]</h3>
 <p>Increment a value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>value</i> Value<br />
- <i>stepCount</i> Number of steps</dl>
+ <i>stepCount</i> Number of steps</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Incremented value</dl>
+<dd>Incremented value</dd></dl>
 <h3>void QwtAbstractSlider::incrementValue (intstepCount) [protected]</h3>
 <p>Increment the slider </p>
 <p> The step size depends on the number of <code>totalSteps()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>stepCount</i> Number of steps</dl>
+<dd><i>stepCount</i> Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTotalSteps()</code>, <code>incrementedValue()</code></dl>
+<dd><code>setTotalSteps()</code>, <code>incrementedValue()</code></dd></dl>
 <h3>bool QwtAbstractSlider::invertedControls () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the controls are inverted</dl>
+<dd>True, when the controls are inverted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setInvertedControls()</code></dl>
+<dd><code>setInvertedControls()</code></dd></dl>
 <h3>bool QwtAbstractSlider::isReadOnly () const</h3>
 <p>In read only mode the slider can&#8217;t be controlled by mouse or keyboard. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if read only</dl>
+<dd>true if read only</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setReadOnly()</code></dl>
+<dd><code>setReadOnly()</code></dd></dl>
 <h3>virtual bool QwtAbstractSlider::isScrollPosition (const QPoint &amp;pos) const [protected], [pure virtual]</h3>
 <p>Determine what to do when the user presses a mouse button. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>True,when</i> pos is a valid scroll position</dl>
+<dd><i>True,when</i> pos is a valid scroll position</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scrolledTo()</code></dl>
+<dd><code>scrolledTo()</code></dd></dl>
 <p> Implemented in <code>QwtKnob</code>, <code>QwtDial</code>, and <code>QwtSlider</code>.</p>
 <h3>bool QwtAbstractSlider::isTracking () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when tracking has been enabled</dl>
+<dd>True, when tracking has been enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTracking()</code></dl>
+<dd><code>setTracking()</code></dd></dl>
 <h3>bool QwtAbstractSlider::isValid () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the value is invalid</dl>
+<dd>True, when the value is invalid</dd></dl>
 <h3>void QwtAbstractSlider::keyPressEvent (QKeyEvent *event) [protected], [virtual]</h3>
 <p>Handles key events </p>
 <p> <code>QwtAbstractSlider</code> handles the following keys: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Qt::Key_Left </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_Left </dd>
 <p>&nbsp;<wbr>Add/Subtract&nbsp;<wbr><code>singleSteps()</code>&nbsp;<wbr>in direction to&nbsp;<wbr><code>lowerBound()</code>;</p>
-<dt>&bull;</p>
-<dd>Qt::Key_Right </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_Right </dd>
 <p>&nbsp;<wbr>Add/Subtract&nbsp;<wbr><code>singleSteps()</code>&nbsp;<wbr>in direction to&nbsp;<wbr><code>upperBound()</code>;</p>
-<dt>&bull;</p>
-<dd>Qt::Key_Down </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_Down </dd>
 <p>&nbsp;<wbr>Subtract&nbsp;<wbr><code>singleSteps()</code>, when&nbsp;<wbr><code>invertedControls()</code>&nbsp;<wbr>is false</p>
-<dt>&bull;</p>
-<dd>Qt::Key_Up </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_Up </dd>
 <p>&nbsp;<wbr>Add&nbsp;<wbr><code>singleSteps()</code>, when&nbsp;<wbr><code>invertedControls()</code>&nbsp;<wbr>is false</p>
-<dt>&bull;</p>
-<dd>Qt::Key_PageDown </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_PageDown </dd>
 <p>&nbsp;<wbr>Subtract&nbsp;<wbr><code>pageSteps()</code>, when&nbsp;<wbr><code>invertedControls()</code>&nbsp;<wbr>is false</p>
-<dt>&bull;</p>
-<dd>Qt::Key_PageUp </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_PageUp </dd>
 <p>&nbsp;<wbr>Add&nbsp;<wbr><code>pageSteps()</code>, when&nbsp;<wbr><code>invertedControls()</code>&nbsp;<wbr>is false</p>
-<dt>&bull;</p>
-<dd>Qt::Key_Home </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_Home </dd>
 <p>&nbsp;<wbr>Set the value to the&nbsp;<wbr><code>minimum()</code></p>
-<dt>&bull;</p>
-<dd>Qt::Key_End </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_End </dd>
 <p>&nbsp;<wbr>Set the value to the&nbsp;<wbr><code>maximum()</code></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Key event</dl>
+<dd><i>event</i> Key event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isReadOnly()</code></dl>
+<dd><code>isReadOnly()</code></dd></dl>
 <p> Reimplemented in <code>QwtCompass</code>.</p>
 <h3>void QwtAbstractSlider::mouseMoveEvent (QMouseEvent *event) [protected], [virtual]</h3>
 <p>Mouse Move Event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Mouse event</dl>
+<dd><i>event</i> Mouse event</dd></dl>
 <h3>void QwtAbstractSlider::mousePressEvent (QMouseEvent *event) [protected], [virtual]</h3>
 <p>Mouse press event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Mouse event</dl>
+<dd><i>event</i> Mouse event</dd></dl>
 <p> Reimplemented in <code>QwtSlider</code>.</p>
 <h3>void QwtAbstractSlider::mouseReleaseEvent (QMouseEvent *event) [protected], [virtual]</h3>
 <p>Mouse Release Event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Mouse event</dl>
+<dd><i>event</i> Mouse event</dd></dl>
 <p> Reimplemented in <code>QwtSlider</code>.</p>
 <h3>uint QwtAbstractSlider::pageSteps () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of steps</dl>
+<dd>Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPageSteps()</code>, <code>totalSteps()</code>, <code>singleSteps()</code></dl>
+<dd><code>setPageSteps()</code>, <code>totalSteps()</code>, <code>singleSteps()</code></dd></dl>
 <h3>void QwtAbstractSlider::scaleChange () [protected], [virtual]</h3>
 <p>Update the slider according to modifications of the scale </p>
 <p> Reimplemented from <code>QwtAbstractScale</code>. </p>
@@ -202,13 +202,13 @@ description: "QwtAbstractSlider –"
 <p>Determine the value for a new position of the movable part of the slider. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value for the mouse position</dl>
+<dd>Value for the mouse position</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isScrollPosition()</code></dl>
+<dd><code>isScrollPosition()</code></dd></dl>
 <p> Implemented in <code>QwtKnob</code>, <code>QwtDial</code>, and <code>QwtSlider</code>.</p>
 <h3>void QwtAbstractSlider::setInvertedControls (boolon)</h3>
 <p>Invert wheel and key events </p>
@@ -216,103 +216,103 @@ description: "QwtAbstractSlider –"
 <p> Inverting the controls might be f.e. useful for a vertical slider with an inverted scale ( decreasing from top to bottom ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Invert controls, when true</dl>
+<dd><i>on</i> Invert controls, when true</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invertedControls()</code>, keyEvent(), <code>wheelEvent()</code></dl>
+<dd><code>invertedControls()</code>, keyEvent(), <code>wheelEvent()</code></dd></dl>
 <h3>void QwtAbstractSlider::setPageSteps (uintstepCount)</h3>
 <p>Set the number of steps for a page increment. The range of the slider is divided into a number of steps from which the value increments according to user inputs depend. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>stepCount</i> Number of steps</dl>
+<dd><i>stepCount</i> Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pageSteps()</code>, <code>setTotalSteps()</code>, <code>setSingleSteps()</code></dl>
+<dd><code>pageSteps()</code>, <code>setTotalSteps()</code>, <code>setSingleSteps()</code></dd></dl>
 <h3>void QwtAbstractSlider::setReadOnly (boolon)</h3>
 <p>En/Disable read only mode </p>
 <p> In read only mode the slider can&#8217;t be controlled by mouse or keyboard. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Enables in case of true</dl>
+<dd><i>on</i> Enables in case of true</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isReadOnly()</code></dl>
+<dd><code>isReadOnly()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The focus policy is set to Qt::StrongFocus or Qt::NoFocus</dl>
+<dd>The focus policy is set to Qt::StrongFocus or Qt::NoFocus</dd></dl>
 <h3>void QwtAbstractSlider::setSingleSteps (uintstepCount)</h3>
 <p>Set the number of steps for a single increment. The range of the slider is divided into a number of steps from which the value increments according to user inputs depend. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>stepCount</i> Number of steps</dl>
+<dd><i>stepCount</i> Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>singleSteps()</code>, <code>setTotalSteps()</code>, <code>setPageSteps()</code></dl>
+<dd><code>singleSteps()</code>, <code>setTotalSteps()</code>, <code>setPageSteps()</code></dd></dl>
 <h3>void QwtAbstractSlider::setStepAlignment (boolon)</h3>
 <p>Enable step alignment. When step alignment is enabled values resulting from slider movements are aligned to the step size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Enable step alignment when true</dl>
+<dd><i>on</i> Enable step alignment when true</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>stepAlignment()</code></dl>
+<dd><code>stepAlignment()</code></dd></dl>
 <h3>void QwtAbstractSlider::setTotalSteps (uintstepCount)</h3>
 <p>Set the number of steps. The range of the slider is divided into a number of steps from which the value increments according to user inputs depend. </p>
 <p> The default setting is 100. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>stepCount</i> Number of steps</dl>
+<dd><i>stepCount</i> Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>totalSteps()</code>, <code>setSingleSteps()</code>, <code>setPageSteps()</code></dl>
+<dd><code>totalSteps()</code>, <code>setSingleSteps()</code>, <code>setPageSteps()</code></dd></dl>
 <h3>void QwtAbstractSlider::setTracking (boolon)</h3>
 <p>Enables or disables tracking. If tracking is enabled, the slider emits the <code>valueChanged()</code> signal while the movable part of the slider is being dragged. If tracking is disabled, the slider emits the <code>valueChanged()</code> signal only when the user releases the slider. </p>
 <p> Tracking is enabled by default. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> true (enable) or false (disable) tracking.</dl>
+<dd><i>on</i> true (enable) or false (disable) tracking.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isTracking()</code>, <code>sliderMoved()</code></dl>
+<dd><code>isTracking()</code>, <code>sliderMoved()</code></dd></dl>
 <h3>void QwtAbstractSlider::setValid (boolon)</h3>
 <p>Set the value to be valid/invalid </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> When true, the value is invalidated</dl>
+<dd><i>on</i> When true, the value is invalidated</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setValue()</code></dl>
+<dd><code>setValue()</code></dd></dl>
 <h3>void QwtAbstractSlider::setValue (doublevalue) [slot]</h3>
 <p>Set the slider to the specified value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> New value</dl>
+<dd><i>value</i> New value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setValid()</code>, <code>sliderChange()</code>, <code>valueChanged()</code></dl>
+<dd><code>setValid()</code>, <code>sliderChange()</code>, <code>valueChanged()</code></dd></dl>
 <h3>void QwtAbstractSlider::setWrapping (boolon)</h3>
 <p>If wrapping is true stepping up from <code>upperBound()</code> value will take you to the <code>minimum()</code> value and vice versa. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> En/Disable wrapping</dl>
+<dd><i>on</i> En/Disable wrapping</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>wrapping()</code></dl>
+<dd><code>wrapping()</code></dd></dl>
 <h3>uint QwtAbstractSlider::singleSteps () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of steps</dl>
+<dd>Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSingleSteps()</code>, <code>totalSteps()</code>, <code>pageSteps()</code></dl>
+<dd><code>setSingleSteps()</code>, <code>totalSteps()</code>, <code>pageSteps()</code></dd></dl>
 <h3>void QwtAbstractSlider::sliderMoved (doublevalue) [signal]</h3>
 <p>This signal is emitted when the user moves the slider with the mouse. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> New value</dl>
+<dd><i>value</i> New value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>valueChanged()</code></dl>
+<dd><code>valueChanged()</code></dd></dl>
 <h3>void QwtAbstractSlider::sliderPressed () [signal]</h3>
 <p>This signal is emitted when the user presses the movable part of the slider.</p>
 <h3>void QwtAbstractSlider::sliderReleased () [signal]</h3>
@@ -320,39 +320,39 @@ description: "QwtAbstractSlider –"
 <h3>bool QwtAbstractSlider::stepAlignment () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when step alignment is enabled</dl>
+<dd>True, when step alignment is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStepAlignment()</code></dl>
+<dd><code>setStepAlignment()</code></dd></dl>
 <h3>uint QwtAbstractSlider::totalSteps () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of steps</dl>
+<dd>Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTotalSteps()</code>, <code>singleSteps()</code>, <code>pageSteps()</code></dl>
+<dd><code>setTotalSteps()</code>, <code>singleSteps()</code>, <code>pageSteps()</code></dd></dl>
 <h3>void QwtAbstractSlider::valueChanged (doublevalue) [signal]</h3>
 <p>Notify a change of value. When tracking is enabled (default setting), this signal will be emitted every time the value changes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> New value</dl>
+<dd><i>value</i> New value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTracking()</code>, <code>sliderMoved()</code></dl>
+<dd><code>setTracking()</code>, <code>sliderMoved()</code></dd></dl>
 <h3>void QwtAbstractSlider::wheelEvent (QWheelEvent *event) [protected], [virtual]</h3>
 <p>Wheel Event handler </p>
 <p> In/decreases the value by s number of steps. The direction depends on the <code>invertedControls()</code> property. </p>
 <p> When the control or shift modifier is pressed the wheel delta ( divided by 120 ) is mapped to an increment according to <code>pageSteps()</code>. Otherwise it is mapped to <code>singleSteps()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Wheel event</dl>
+<dd><i>event</i> Wheel event</dd></dl>
 <p> Reimplemented in <code>QwtDial</code>.</p>
 <h3>bool QwtAbstractSlider::wrapping () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when wrapping is set</dl>
+<dd>True, when wrapping is set</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWrapping()</code></dl>
+<dd><code>setWrapping()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

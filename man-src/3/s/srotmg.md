@@ -18,7 +18,7 @@ description: "srotmg.f –"
 <p> <code>SROTMG</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     CONSTRUCT THE MODIFIED GIVENS TRANSFORMATION MATRIX H WHICH ZEROS
     THE SECOND COMPONENT OF THE 2-VECTOR  (SQRT(SD1)*SX1,SQRT(SD2)*&gt;    SY2)**T.
@@ -34,11 +34,11 @@ description: "srotmg.f –"
     INEXACT.  THIS IS OK AS THEY ARE ONLY USED FOR TESTING THE SIZE
     OF SD1 AND SD2.  ALL ACTUAL SCALING OF DATA IS DONE USING GAM.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SD1</i> </p>
+</dt><dd> <i>SD1</i> </dd>
 <pre>
           SD1 is REAL
 </pre>
@@ -67,14 +67,14 @@ description: "srotmg.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 91 of file srotmg.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

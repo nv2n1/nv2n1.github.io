@@ -10,7 +10,6 @@ description: "play_looped_midi – Starts playing a MIDI file with a user-define
 <p>play_looped_midi &#8211; Starts playing a MIDI file with a user-defined loop position. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int play_looped_midi(MIDI *midi, int loop_start, int loop_end);</code></pre>
 <h2>Description</h2>
 <p>Starts playing a MIDI file with a user-defined loop position. When the player reaches the loop end position or the end of the file (loop_end may be -1 to only loop at EOF), it will wind back to the loop start point. Both positions are specified in the same beat number format as the midi_pos variable.</p>

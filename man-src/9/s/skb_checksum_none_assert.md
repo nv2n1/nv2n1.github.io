@@ -15,7 +15,7 @@ skb_checksum_none_assert - make sure skb ip_summed is CHECKSUM_NONE
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>skb to check</dl>
+<dl><dd></dd><dd>skb to check</dd></dl>
 
 <h2>Description</h2>
 

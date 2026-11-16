@@ -25,44 +25,44 @@ description: "rdfind – finds duplicate files"
 <h2>OPTIONS</h2>
 <p> <code>Searching options etc:</code></p>
 <dl>
-<dt>-ignoreempty true|false</p>
-<dd> Ignore empty files. (default)</p>
-<dt>-followsymlinks true|false</p>
-<dd> Follow symlinks. Default is false.</p>
-<dt>-removeidentinode true|false</p>
-<dd> removes items found which have identical inode and device ID. Default is true.</p>
-<dt>-checksum md5|sha1</p>
-<dd> what type of checksum to be used: md5 or sha1. Default is md5.</dl>
+<dt>-ignoreempty true|false</dt>
+<dd> Ignore empty files. (default)</dd>
+<dt>-followsymlinks true|false</dt>
+<dd> Follow symlinks. Default is false.</dd>
+<dt>-removeidentinode true|false</dt>
+<dd> removes items found which have identical inode and device ID. Default is true.</dd>
+<dt>-checksum md5|sha1</dt>
+<dd> what type of checksum to be used: md5 or sha1. Default is md5.</dd></dl>
 <p> <code>Action options:</code></p>
 <dl>
-<dt>-makesymlinks true|false</p>
-<dd> Replace duplicate files with symbolic links</p>
-<dt>-makehardlinks true|false</p>
-<dd> Replace duplicate files with hard links</p>
-<dt>-makeresultsfile true|false</p>
-<dd> Make a results file results.txt (default) in the current directory.</p>
-<dt>-outputname name</p>
-<dd> Make the results file name to be &quot;name&quot; instead of the default results.txt.</p>
-<dt>-deleteduplicates true|false</p>
-<dd> Delete (unlink) files.</dl>
+<dt>-makesymlinks true|false</dt>
+<dd> Replace duplicate files with symbolic links</dd>
+<dt>-makehardlinks true|false</dt>
+<dd> Replace duplicate files with hard links</dd>
+<dt>-makeresultsfile true|false</dt>
+<dd> Make a results file results.txt (default) in the current directory.</dd>
+<dt>-outputname name</dt>
+<dd> Make the results file name to be &quot;name&quot; instead of the default results.txt.</dd>
+<dt>-deleteduplicates true|false</dt>
+<dd> Delete (unlink) files.</dd></dl>
 <p> <code>General options:</code></p>
 <dl>
-<dt>-sleep Xms</p>
-<dd> sleeps X milliseconds between reading each file, to reduce load. Default is 0 (no sleep). Note that only a few values are supported at present: 0,1-5,10,25,50,100 milliseconds.</p>
-<dt>-n, -dryrun true|(false)</p>
-<dd> displays what should have been done, don&#8217;t actually delete or link anything.</p>
-<dt>-h, -help, &#8211;help</p>
-<dd> displays brief help message.</p>
-<dt>-v, -version, &#8211;version</p>
-<dd> displays version number.</dl>
+<dt>-sleep Xms</dt>
+<dd> sleeps X milliseconds between reading each file, to reduce load. Default is 0 (no sleep). Note that only a few values are supported at present: 0,1-5,10,25,50,100 milliseconds.</dd>
+<dt>-n, -dryrun true|(false)</dt>
+<dd> displays what should have been done, don&#8217;t actually delete or link anything.</dd>
+<dt>-h, -help, &#8211;help</dt>
+<dd> displays brief help message.</dd>
+<dt>-v, -version, &#8211;version</dt>
+<dd> displays version number.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Search for duplicate files in home directory and a backup directory:</p>
-<dd> <code>rdfind ~ /mnt/backup</code></p>
-<dt>Delete duplicate in a backup directory:</p>
-<dd> <code>rdfind -deleteduplicates true /mnt/backup</code></p>
-<dt>Search for duplicate files in directories called foo:</p>
-<dd> <code>find . -type d -name foo -print0 |xargs -0 rdfind</code></dl>
+<dt>Search for duplicate files in home directory and a backup directory:</dt>
+<dd> <code>rdfind ~ /mnt/backup</code></dd>
+<dt>Delete duplicate in a backup directory:</dt>
+<dd> <code>rdfind -deleteduplicates true /mnt/backup</code></dd>
+<dt>Search for duplicate files in directories called foo:</dt>
+<dd> <code>find . -type d -name foo -print0 |xargs -0 rdfind</code></dd></dl>
 <h2>FILES</h2>
 <p> <i>results.txt</i> (the default name is results.txt and can be changed with option outputname, see above) The results file results.txt will contain one row per duplicate file found, along with a header row explaining the columns. A text describes why the file is considered a duplicate: </p>
 <p> DUPTYPE_UNKNOWN some internal error </p>

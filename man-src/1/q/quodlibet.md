@@ -18,68 +18,68 @@ quodlibet[--print - playing | control] exfalso[directory]
 <p> This manual page is only a short reference for Quod Libet. Complete documentation is available at <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide">http://code.google.com/p/quodlibet/wiki/Guide</a></i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;enqueue filename|query</code></p>
-<dd> Enqueue a filename or query results</p>
-<dt><code>&#8211;filter tag=value</code></p>
-<dd> Filter on a tag value</p>
-<dt><code>&#8211;focus</code></p>
-<dd> Focus the running player</p>
-<dt><code>&#8211;hide-window</code></p>
-<dd> Hide main window</p>
-<dt><code>&#8211;next</code></p>
-<dd> Jump to next song</p>
-<dt><code>&#8211;list-browsers</code></p>
-<dd> List available browsers</p>
-<dt><code>&#8211;open-browser=</code><i>BrowserName</i></p>
-<dd> Open a new browser</p>
-<dt><code>&#8211;order=inorder|shuffle|weighted|onesong|toggle</code></p>
-<dd> Set or toggle the playback order</p>
-<dt><code>&#8211;pause</code></p>
-<dd> Pause playback</p>
-<dt><code>&#8211;play</code></p>
-<dd> Start playback</p>
-<dt><code>&#8211;play-file=</code><i>filename</i></p>
-<dd> Play a file</p>
-<dt><code>&#8211;play-pause</code></p>
-<dd> Toggle play/pause mode</p>
-<dt><code>&#8211;previous</code></p>
-<dd> Jump to previous song or restart if near the beginning</p>
-<dt><code>&#8211;force-previous</code></p>
-<dd> Jump to previous song</p>
-<dt><code>&#8211;print-playlist</code></p>
-<dd> Print the current playlist</p>
-<dt><code>&#8211;print-queue</code></p>
-<dd> Print the contents of the queue</p>
-<dt><code>&#8211;print-playing</code></p>
-<dd> Print out information about the currently playing song. You may provide in a string like the kind described in the RENAMING FILES section below.</p>
-<dt><code>&#8211;query=</code><i>search-string</i></p>
-<dd> Search your audio library</p>
-<dt><code>&#8211;quit</code></p>
-<dd> Exit Quod Libet</p>
-<dt><code>&#8211;random=</code><i>tag</i></p>
-<dd> Filter on a random value</p>
-<dt><code>&#8211;repeat=off|on|t</code></p>
-<dd> Turn repeat off, on, or toggle</p>
-<dt><code>&#8211;seek=[+|-][HH:]MM:SS</code></p>
-<dd> Seek within the playing song</p>
-<dt><code>&#8211;set-browser=</code><i>BrowserName</i></p>
-<dd> Set the current browser</p>
-<dt><code>&#8211;set-rating=0.0..1.0</code></p>
-<dd> Rate the playing song</p>
-<dt><code>&#8211;show-window</code></p>
-<dd> Hide main window</p>
-<dt><code>&#8211;start-playing</code></p>
-<dd> Begin playing immediately</p>
-<dt><code>&#8211;status</code></p>
-<dd> Print playing status</p>
-<dt><code>&#8211;toggle-window</code></p>
-<dd> Toggle main window visibility</p>
-<dt><code>&#8211;unfilter</code></p>
-<dd> Remove active browser filters</p>
-<dt><code>&#8211;unqueue=filename|query</code></p>
-<dd> Unqueue a file or query</p>
-<dt><code>&#8211;volume=(+|-|)0..100</code></p>
-<dd> Set the volume</dl>
+<dt><code>&#8211;enqueue filename|query</code></dt>
+<dd> Enqueue a filename or query results</dd>
+<dt><code>&#8211;filter tag=value</code></dt>
+<dd> Filter on a tag value</dd>
+<dt><code>&#8211;focus</code></dt>
+<dd> Focus the running player</dd>
+<dt><code>&#8211;hide-window</code></dt>
+<dd> Hide main window</dd>
+<dt><code>&#8211;next</code></dt>
+<dd> Jump to next song</dd>
+<dt><code>&#8211;list-browsers</code></dt>
+<dd> List available browsers</dd>
+<dt><code>&#8211;open-browser=</code><i>BrowserName</i></dt>
+<dd> Open a new browser</dd>
+<dt><code>&#8211;order=inorder|shuffle|weighted|onesong|toggle</code></dt>
+<dd> Set or toggle the playback order</dd>
+<dt><code>&#8211;pause</code></dt>
+<dd> Pause playback</dd>
+<dt><code>&#8211;play</code></dt>
+<dd> Start playback</dd>
+<dt><code>&#8211;play-file=</code><i>filename</i></dt>
+<dd> Play a file</dd>
+<dt><code>&#8211;play-pause</code></dt>
+<dd> Toggle play/pause mode</dd>
+<dt><code>&#8211;previous</code></dt>
+<dd> Jump to previous song or restart if near the beginning</dd>
+<dt><code>&#8211;force-previous</code></dt>
+<dd> Jump to previous song</dd>
+<dt><code>&#8211;print-playlist</code></dt>
+<dd> Print the current playlist</dd>
+<dt><code>&#8211;print-queue</code></dt>
+<dd> Print the contents of the queue</dd>
+<dt><code>&#8211;print-playing</code></dt>
+<dd> Print out information about the currently playing song. You may provide in a string like the kind described in the RENAMING FILES section below.</dd>
+<dt><code>&#8211;query=</code><i>search-string</i></dt>
+<dd> Search your audio library</dd>
+<dt><code>&#8211;quit</code></dt>
+<dd> Exit Quod Libet</dd>
+<dt><code>&#8211;random=</code><i>tag</i></dt>
+<dd> Filter on a random value</dd>
+<dt><code>&#8211;repeat=off|on|t</code></dt>
+<dd> Turn repeat off, on, or toggle</dd>
+<dt><code>&#8211;seek=[+|-][HH:]MM:SS</code></dt>
+<dd> Seek within the playing song</dd>
+<dt><code>&#8211;set-browser=</code><i>BrowserName</i></dt>
+<dd> Set the current browser</dd>
+<dt><code>&#8211;set-rating=0.0..1.0</code></dt>
+<dd> Rate the playing song</dd>
+<dt><code>&#8211;show-window</code></dt>
+<dd> Hide main window</dd>
+<dt><code>&#8211;start-playing</code></dt>
+<dd> Begin playing immediately</dd>
+<dt><code>&#8211;status</code></dt>
+<dd> Print playing status</dd>
+<dt><code>&#8211;toggle-window</code></dt>
+<dd> Toggle main window visibility</dd>
+<dt><code>&#8211;unfilter</code></dt>
+<dd> Remove active browser filters</dd>
+<dt><code>&#8211;unqueue=filename|query</code></dt>
+<dd> Unqueue a file or query</dd>
+<dt><code>&#8211;volume=(+|-|)0..100</code></dt>
+<dd> Set the volume</dd></dl>
 <h2>ALBUM COVERS</h2>
 <p> Album covers should be put in the same directory as the songs they apply to, and have &quot;folder&quot;, &quot;front&quot;, or &quot;cover&quot; in their filenames. If you want to store multiple albums in the same directory but keep distinct cover images, the name of the appropriate image file must contain the labelid tag value, e.g. COCX-32760 cover.jpg.</p>
 <h2>TIED TAGS</h2>
@@ -117,18 +117,18 @@ tag = |(value1, value2)
 <p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_AudioBackends">http://code.google.com/p/quodlibet/wiki/Guide_AudioBackends</a></i>.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.quodlibet/songs</code></p>
-<dd> A pickled Python dict of cached metadata. Deleting this file will remove all songs from your library.</p>
-<dt><code>~/.quodlibet/config</code></p>
-<dd> Quod Libet&#8217;s configuration file. This file is overwritten when Quod Libet exits.</p>
-<dt><code>~/.quodlibet/current</code></p>
-<dd> A &quot;key=value&quot; file containing information about the currently playing song.</p>
-<dt><code>~/.quodlibet/control</code></p>
-<dd> A FIFO connected to the most-recently-started instance of the program. &#8211;next, &#8211;previous, etc., use this to control the player.</p>
-<dt><code>~/.quodlibet/plugins/</code></p>
-<dd> Put plugins (from <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_Plugins">http://code.google.com/p/quodlibet/wiki/Guide_Plugins</a></i>) here.</p>
-<dt><code>~/.quodlibet/browsers/</code></p>
-<dd> Put custom library browsers here. </p>
+<dt><code>~/.quodlibet/songs</code></dt>
+<dd> A pickled Python dict of cached metadata. Deleting this file will remove all songs from your library.</dd>
+<dt><code>~/.quodlibet/config</code></dt>
+<dd> Quod Libet&#8217;s configuration file. This file is overwritten when Quod Libet exits.</dd>
+<dt><code>~/.quodlibet/current</code></dt>
+<dd> A &quot;key=value&quot; file containing information about the currently playing song.</dd>
+<dt><code>~/.quodlibet/control</code></dt>
+<dd> A FIFO connected to the most-recently-started instance of the program. &#8211;next, &#8211;previous, etc., use this to control the player.</dd>
+<dt><code>~/.quodlibet/plugins/</code></dt>
+<dd> Put plugins (from <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_Plugins">http://code.google.com/p/quodlibet/wiki/Guide_Plugins</a></i>) here.</dd>
+<dt><code>~/.quodlibet/browsers/</code></dt>
+<dd> Put custom library browsers here. </dd>
 <p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_Extending">http://code.google.com/p/quodlibet/wiki/Guide_Extending</a></i>.</dl>
 <h2>BUGS</h2>
 <p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/issues/list">http://code.google.com/p/quodlibet/issues/list</a></i> for a list of all currently open bugs and feature requests.</p>
@@ -141,3 +141,4 @@ tag = |(value1, value2)
 <code><a href="//www.systutorials.com/docs/linux/man/7-regex/">regex</a></code>(7), <code>gst-launch</code>(1)
 </pre>
 <h2>Index</h2>
+</p>

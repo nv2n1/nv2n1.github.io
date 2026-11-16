@@ -30,52 +30,52 @@ void ibv_ack_async_event(struct ibv_async_event *event);
 <p> One member of the element union will be valid, depending on the event_type member of the structure. event_type will be one of the following events: </p>
 <p> <i>QP events:</i></p>
 <dl>
-<dt><code>IBV_EVENT_QP_FATAL </code> Error occurred on a QP and it transitioned to error state</p>
+<dt><code>IBV_EVENT_QP_FATAL </code> Error occurred on a QP and it transitioned to error state</dt>
 <dd>
-<dt><code>IBV_EVENT_QP_REQ_ERR </code> Invalid Request Local Work Queue Error</p>
+</dd><dt><code>IBV_EVENT_QP_REQ_ERR </code> Invalid Request Local Work Queue Error</dt>
 <dd>
-<dt><code>IBV_EVENT_QP_ACCESS_ERR </code> Local access violation error</p>
+</dd><dt><code>IBV_EVENT_QP_ACCESS_ERR </code> Local access violation error</dt>
 <dd>
-<dt><code>IBV_EVENT_COMM_EST </code> Communication was established on a QP</p>
+</dd><dt><code>IBV_EVENT_COMM_EST </code> Communication was established on a QP</dt>
 <dd>
-<dt><code>IBV_EVENT_SQ_DRAINED </code> Send Queue was drained of outstanding messages in progress</p>
+</dd><dt><code>IBV_EVENT_SQ_DRAINED </code> Send Queue was drained of outstanding messages in progress</dt>
 <dd>
-<dt><code>IBV_EVENT_PATH_MIG </code> A connection has migrated to the alternate path</p>
+</dd><dt><code>IBV_EVENT_PATH_MIG </code> A connection has migrated to the alternate path</dt>
 <dd>
-<dt><code>IBV_EVENT_PATH_MIG_ERR </code> A connection failed to migrate to the alternate path</p>
+</dd><dt><code>IBV_EVENT_PATH_MIG_ERR </code> A connection failed to migrate to the alternate path</dt>
 <dd>
-<dt><code>IBV_EVENT_QP_LAST_WQE_REACHED </code> Last WQE Reached on a QP associated with an SRQ</p>
-<dd></dl>
+</dd><dt><code>IBV_EVENT_QP_LAST_WQE_REACHED </code> Last WQE Reached on a QP associated with an SRQ</dt>
+<dd></dd></dl>
 <p> <i>CQ events:</i></p>
 <dl>
-<dt><code>IBV_EVENT_CQ_ERR </code> CQ is in error (CQ overrun)</p>
-<dd></dl>
+<dt><code>IBV_EVENT_CQ_ERR </code> CQ is in error (CQ overrun)</dt>
+<dd></dd></dl>
 <p> <i>SRQ events:</i></p>
 <dl>
-<dt><code>IBV_EVENT_SRQ_ERR </code> Error occurred on an SRQ</p>
+<dt><code>IBV_EVENT_SRQ_ERR </code> Error occurred on an SRQ</dt>
 <dd>
-<dt><code>IBV_EVENT_SRQ_LIMIT_REACHED </code> SRQ limit was reached</p>
-<dd></dl>
+</dd><dt><code>IBV_EVENT_SRQ_LIMIT_REACHED </code> SRQ limit was reached</dt>
+<dd></dd></dl>
 <p> <i>Port events:</i></p>
 <dl>
-<dt><code>IBV_EVENT_PORT_ACTIVE </code> Link became active on a port</p>
+<dt><code>IBV_EVENT_PORT_ACTIVE </code> Link became active on a port</dt>
 <dd>
-<dt><code>IBV_EVENT_PORT_ERR </code> Link became unavailable on a port</p>
+</dd><dt><code>IBV_EVENT_PORT_ERR </code> Link became unavailable on a port</dt>
 <dd>
-<dt><code>IBV_EVENT_LID_CHANGE </code> LID was changed on a port</p>
+</dd><dt><code>IBV_EVENT_LID_CHANGE </code> LID was changed on a port</dt>
 <dd>
-<dt><code>IBV_EVENT_PKEY_CHANGE </code> P_Key table was changed on a port</p>
+</dd><dt><code>IBV_EVENT_PKEY_CHANGE </code> P_Key table was changed on a port</dt>
 <dd>
-<dt><code>IBV_EVENT_SM_CHANGE </code> SM was changed on a port</p>
+</dd><dt><code>IBV_EVENT_SM_CHANGE </code> SM was changed on a port</dt>
 <dd>
-<dt><code>IBV_EVENT_CLIENT_REREGISTER </code> SM sent a CLIENT_REREGISTER request to a port</p>
+</dd><dt><code>IBV_EVENT_CLIENT_REREGISTER </code> SM sent a CLIENT_REREGISTER request to a port</dt>
 <dd>
-<dt><code>IBV_EVENT_GID_CHANGE </code> GID table was changed on a port</p>
-<dd></dl>
+</dd><dt><code>IBV_EVENT_GID_CHANGE </code> GID table was changed on a port</dt>
+<dd></dd></dl>
 <p> <i>CA events:</i></p>
 <dl>
-<dt><code>IBV_EVENT_DEVICE_FATAL </code> CA is in FATAL state</p>
-<dd></dl>
+<dt><code>IBV_EVENT_DEVICE_FATAL </code> CA is in FATAL state</dt>
+<dd></dd></dl>
 <p> <code>ibv_ack_async_event()</code> acknowledge the async event <i>event</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_get_async_event()</code> returns 0 on success, and -1 on error. </p>
@@ -125,7 +125,7 @@ ibv_ack_async_event(&amp;async_event);
 <p> <code>ibv_open_device</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -17,8 +17,8 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 <p> Ubuntu Pro is a collection of services offered by Canonical to Ubuntu users. The Ubuntu Pro command line tool is used to attach a system to an Ubuntu Pro contract to then enable and disable services from Canonical. The available commands and services are described in more detail below. </p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>attach</code> [&#8211;no-auto-enable] [&#8211;attach-config=/path/to/file.yaml] &lt;token&gt;</p>
-<dd> Connect an Ubuntu Pro support contract to this machine. </p>
+<dt><code>attach</code> [&#8211;no-auto-enable] [&#8211;attach-config=/path/to/file.yaml] &lt;token&gt;</dt>
+<dd> Connect an Ubuntu Pro support contract to this machine. </dd>
 <p> The <i>token</i> parameter can be obtained from <a rel="nofollow" href="https://auth.contracts.canonical.com/.">https://auth.contracts.canonical.com/.</a> </p>
 <p> The <i>&#8211;attach-config</i> option can be used to provide a file with the token and optionally, a list of services to enable after attaching. The <i>token</i> parameter should not be used if this option is provided. An attach config file looks like the following:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;token: YOUR_TOKEN_HERE&nbsp;<wbr>&nbsp;#&nbsp;required<br />
@@ -31,28 +31,28 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: on successful attach<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: in case of any error while trying to attach<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2: if the machine is already attached </p>
-<dt><code>collect-logs [-o &lt;file&gt;| &#8211;output &lt;file&gt;]</code></p>
-<dd> Create a tarball with all relevant logs and debug data. </p>
+<dt><code>collect-logs [-o &lt;file&gt;| &#8211;output &lt;file&gt;]</code></dt>
+<dd> Create a tarball with all relevant logs and debug data. </dd>
 <p> The <i>&#8211;output</i> parameter defines the path to the tarball. If not provided, the file is saved as <code>ua_logs.tar.gz</code> in the current directory. </p>
-<dt><code>detach</code></p>
-<dd> Remove the Ubuntu Pro support contract from this machine. This also disables all enabled services that can be. </p>
-<dt><code>disable</code> [cc-eal|cis|esm|fips|fips-updates|livepatch|ros|ros-updates]</p>
-<dd> Disable this machine&#8217;s access to an Ubuntu Pro service. </p>
-<dt><code>enable</code> [cc-eal|cis|esm|fips|fips-updates|livepatch|ros|ros-updates]</p>
-<dd> Activate and configure this machine&#8217;s access to an Ubuntu Pro service. </p>
-<dt><code>fix</code> &lt;security_issue&gt;</p>
-<dd> Fix a CVE or USN on the system by upgrading the appropriate package(s). </p>
+<dt><code>detach</code></dt>
+<dd> Remove the Ubuntu Pro support contract from this machine. This also disables all enabled services that can be. </dd>
+<dt><code>disable</code> [cc-eal|cis|esm|fips|fips-updates|livepatch|ros|ros-updates]</dt>
+<dd> Disable this machine&#8217;s access to an Ubuntu Pro service. </dd>
+<dt><code>enable</code> [cc-eal|cis|esm|fips|fips-updates|livepatch|ros|ros-updates]</dt>
+<dd> Activate and configure this machine&#8217;s access to an Ubuntu Pro service. </dd>
+<dt><code>fix</code> &lt;security_issue&gt;</dt>
+<dd> Fix a CVE or USN on the system by upgrading the appropriate package(s). </dd>
 <p> &lt;security_issue&gt; can be any of the following formats: CVE-yyyy-nnnn, CVE-yyyy-nnnnnnn, or USN-nnnn-dd. </p>
 <p> The exit code can be 0, 1, or 2.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: the fix was successfully applied<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: the fix cannot be applied<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2: the fix was applied but requires a reboot before it takes effect </p>
-<dt><code>refresh</code></p>
-<dd> Refresh contract and service details from Canonical. </p>
-<dt><code>security-status</code></p>
-<dd> Show security updates for packages in the system, including all available ESM related content. </p>
-<dt><code>status</code> [&#8211;format=tabular|json|yaml] [&#8211;simulate-with-token TOKEN] [&#8211;all]</p>
-<dd> Report current status of Ubuntu Pro services on system. </p>
+<dt><code>refresh</code></dt>
+<dd> Refresh contract and service details from Canonical. </dd>
+<dt><code>security-status</code></dt>
+<dd> Show security updates for packages in the system, including all available ESM related content. </dd>
+<dt><code>status</code> [&#8211;format=tabular|json|yaml] [&#8211;simulate-with-token TOKEN] [&#8211;all]</dt>
+<dd> Report current status of Ubuntu Pro services on system. </dd>
 <p> This shows whether this machine is attached to an Ubuntu Pro support contract. When attached, the report includes the specific support contract details including contract name, expiry dates, and the status of each service on this system. </p>
 <p> The attached status output has four columns: </p>
 <p> <code>SERVICE</code>: name of the service </p>
@@ -63,8 +63,8 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 <p> <code>AVAILABLE</code>: whether this service would be available if this machine were attached. The possible values are <i>yes</i> or <i>no</i>. </p>
 <p> If &#8211;simulate-with-token is used, then the output has five columns. <code>SERVICE</code>, <code>AVAILABLE</code>, <code>ENTITLED</code> and <code>DESCRIPTION</code> are the same as mentioned above, and <code>AUTO_ENABLED</code> shows whether the service is set to be enabled when that token is attached. </p>
 <p> If the &#8211;all flag is set, beta and unavailable services are also listed in the output. </p>
-<dt><code>version</code></p>
-<dd> Show version of the Ubuntu Pro package. </p>
+<dt><code>version</code></dt>
+<dd> Show version of the Ubuntu Pro package. </dd>
 </dl>
 <h2>PRO UPGRADE DAEMON</h2>
 <p> Ubuntu Pro client sets up a daemon on supported platforms (currently GCP only) to detect if an Ubuntu Pro license is purchased for the machine. If an Ubuntu Pro license is detected, then the machine is automatically attached. If you are uninterested in Ubuntu Pro services, you can safely stop and disable the daemon using systemctl: </p>
@@ -74,48 +74,48 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 <p> Jobs are executed by the timer script if the script has not yet run successfully, or their interval since last successful run is already exceeded. There is a random delay applied to the timer, to desynchronize job execution time on machines spinned at the same time, avoiding multiple synchronized calls to the same service. </p>
 <p> Current jobs being checked and executed are:</p>
 <dl>
-<dt><code>update_messaging</code></p>
-<dd> Makes sure that the MOTD and APT messages match the available/enabled services on the system, showing information about available packages or security updates. </p>
+<dt><code>update_messaging</code></dt>
+<dd> Makes sure that the MOTD and APT messages match the available/enabled services on the system, showing information about available packages or security updates. </dd>
 </dl>
 <h2>CONFIGURATION</h2>
 <p> By default, Ubuntu Pro client configuration options are read from <code>/etc/ubuntu-advantage/uaclient.conf. </p>
 <p> The following configuration options are available:</p>
 <dl>
-<dt>contract_url</code></p>
-<dd> The Ubuntu Pro contract server URL</p>
-<dt><code>security_url</code></p>
-<dd> The Ubuntu Pro security server URL</p>
-<dt><code>data_dir</code></p>
-<dd> Where Ubuntu Pro client stores its data files</p>
-<dt><code>log_level</code></p>
-<dd> The logging level used when writing to <code>log_file</code></p>
-<dt><code>log_file</code></p>
-<dd> The log file for the Ubuntu Pro client cli</p>
-<dt><code>timer_log_file</code></p>
-<dd> The log file for the Ubuntu Pro timer and timer jobs</p>
-<dt><code>daemon_log_file</code></p>
-<dd> The log file for the Ubuntu Pro daemon </p>
+<dt>contract_url</code></dt>
+<dd> The Ubuntu Pro contract server URL</dd>
+<dt><code>security_url</code></dt>
+<dd> The Ubuntu Pro security server URL</dd>
+<dt><code>data_dir</code></dt>
+<dd> Where Ubuntu Pro client stores its data files</dd>
+<dt><code>log_level</code></dt>
+<dd> The logging level used when writing to <code>log_file</code></dd>
+<dt><code>log_file</code></dt>
+<dd> The log file for the Ubuntu Pro client cli</dd>
+<dt><code>timer_log_file</code></dt>
+<dd> The log file for the Ubuntu Pro timer and timer jobs</dd>
+<dt><code>daemon_log_file</code></dt>
+<dd> The log file for the Ubuntu Pro daemon </dd>
 </dl>
 <p> <code>The following options must be nested under the &quot;ua_config&quot; key:</code> </p>
 <dl>
-<dt><code>http_proxy</code></p>
-<dd> If set, pro will use the specified http proxy when making any http requests</p>
-<dt><code>https_proxy</code></p>
-<dd> If set, pro will use the specified https proxy when making any https requests</p>
-<dt><code>apt_http_proxy</code></p>
-<dd> <code>[DEPRECATED]</code> If set, pro will configure apt to use the specified http proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. (Please use <code>global_apt_http_proxy</code>)</p>
-<dt><code>apt_https_proxy</code></p>
-<dd> <code>[DEPRECATED]</code> If set, pro will configure apt to use the specified https proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. (Please use <code>global_apt_https_proxy</code>)</p>
-<dt><code>global_apt_http_proxy</code></p>
-<dd> If set, pro will configure apt to use the specified http proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. Set this if you prefer a global proxy for all resources, not just the ones from <i>esm.ubuntu.com</i><code></p>
-<dt>global_apt_https_proxy</code></p>
-<dd> If set, pro will configure apt to use the specified https proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. Set this if you prefer a global proxy for all resources, not just the ones from <i>esm.ubuntu.com</i><code></p>
-<dt>ua_apt_http_proxy</code></p>
-<dd> If set, pro will configure apt to use the specified http proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. This proxy is limited to accessing resources from <i>esm.ubuntu.com</i><code></p>
-<dt>ua_apt_https_proxy</code></p>
-<dd> If set, pro will configure apt to use the specified https proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. This proxy is limited to accessing resources from <i>esm.ubuntu.com</i><code></p>
-<dt>&lt;job_name&gt;_timer</code></p>
-<dd> Sets the timer running interval for a specific job. Those intervals are checked every time the systemd timer runs. </p>
+<dt><code>http_proxy</code></dt>
+<dd> If set, pro will use the specified http proxy when making any http requests</dd>
+<dt><code>https_proxy</code></dt>
+<dd> If set, pro will use the specified https proxy when making any https requests</dd>
+<dt><code>apt_http_proxy</code></dt>
+<dd> <code>[DEPRECATED]</code> If set, pro will configure apt to use the specified http proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. (Please use <code>global_apt_http_proxy</code>)</dd>
+<dt><code>apt_https_proxy</code></dt>
+<dd> <code>[DEPRECATED]</code> If set, pro will configure apt to use the specified https proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. (Please use <code>global_apt_https_proxy</code>)</dd>
+<dt><code>global_apt_http_proxy</code></dt>
+<dd> If set, pro will configure apt to use the specified http proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. Set this if you prefer a global proxy for all resources, not just the ones from <i>esm.ubuntu.com</i><code></dd>
+<dt>global_apt_https_proxy</code></dt>
+<dd> If set, pro will configure apt to use the specified https proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. Set this if you prefer a global proxy for all resources, not just the ones from <i>esm.ubuntu.com</i><code></dd>
+<dt>ua_apt_http_proxy</code></dt>
+<dd> If set, pro will configure apt to use the specified http proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. This proxy is limited to accessing resources from <i>esm.ubuntu.com</i><code></dd>
+<dt>ua_apt_https_proxy</code></dt>
+<dd> If set, pro will configure apt to use the specified https proxy by writing a apt config file to /etc/apt/apt.conf.d/90ubuntu-advantage-aptproxy. This proxy is limited to accessing resources from <i>esm.ubuntu.com</i><code></dd>
+<dt>&lt;job_name&gt;_timer</code></dt>
+<dd> Sets the timer running interval for a specific job. Those intervals are checked every time the systemd timer runs. </dd>
 </dl>
 <p> If needed, authentication to the proxy server can be performed by setting username and password in the URL itself, as in: </p>
 <pre>
@@ -128,30 +128,30 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 </pre>
 <h2>SERVICES</h2>
 <dl>
-<dt><code>Common Criteria EAL2 Provisioning (cc-eal)</code></p>
-<dd> Enables and install the Common Criteria artifacts. </p>
+<dt><code>Common Criteria EAL2 Provisioning (cc-eal)</code></dt>
+<dd> Enables and install the Common Criteria artifacts. </dd>
 <p> The artifacts include a configure script, a tarball with additional packages, and post install scripts. The artifacts will be installed in /usr/lib/common-criteria directory and the README and configuration guide are available in /usr/share/doc/ubuntu-commoncriteria directory. </p>
-<dt><code>CIS Audit (cis)</code></p>
-<dd> Enables and installs the CIS Audit artifacts. </p>
-<dt><code>Expanded Security Maintenance (esm)</code></p>
-<dd> Expanded Security Maintenance ensures the ongoing security and integrity of systems running Ubuntu Long Term Support (LTS) releases through Ubuntu Pro for Infrastructure. </p>
+<dt><code>CIS Audit (cis)</code></dt>
+<dd> Enables and installs the CIS Audit artifacts. </dd>
+<dt><code>Expanded Security Maintenance (esm)</code></dt>
+<dd> Expanded Security Maintenance ensures the ongoing security and integrity of systems running Ubuntu Long Term Support (LTS) releases through Ubuntu Pro for Infrastructure. </dd>
 <p> See <a rel="nofollow" href="https://ubuntu.com/esm">https://ubuntu.com/esm</a> for more information. </p>
-<dt><code>FIPS 140-2 certified modules (fips)</code></p>
-<dd> Install, configure, and enable FIPS 140-2 certified modules. </p>
+<dt><code>FIPS 140-2 certified modules (fips)</code></dt>
+<dd> Install, configure, and enable FIPS 140-2 certified modules. </dd>
 <p> After successfully enabling FIPS, the system MUST be rebooted. Failing to reboot will result in the system not running the updated FIPS kernel. </p>
 <p> Disabling FIPS is not currently supported. </p>
-<dt><code>FIPS 140-2 certified modules with updates (fips-updates)</code></p>
-<dd> Install, configure, and enable FIPS 140-2 certified modules with updates. Enabling FIPS with updates will take the system out of FIPS compliance as the updated modules are not FIPS certified. </p>
+<dt><code>FIPS 140-2 certified modules with updates (fips-updates)</code></dt>
+<dd> Install, configure, and enable FIPS 140-2 certified modules with updates. Enabling FIPS with updates will take the system out of FIPS compliance as the updated modules are not FIPS certified. </dd>
 <p> After successfully enabling FIPS with updates, the system MUST be rebooted. Failing to reboot will result in the system not running the updated FIPS kernel. </p>
 <p> Disabling FIPS with updates is not currently supported. </p>
-<dt><code>Livepatch Service (livepatch)</code></p>
-<dd> Automatically apply critical kernel patches without rebooting. Reduces downtime, keeping your Ubuntu LTS systems secure and compliant. </p>
+<dt><code>Livepatch Service (livepatch)</code></dt>
+<dd> Automatically apply critical kernel patches without rebooting. Reduces downtime, keeping your Ubuntu LTS systems secure and compliant. </dd>
 <p> See <a rel="nofollow" href="https://ubuntu.com/livepatch">https://ubuntu.com/livepatch</a> for more information. </p>
-<dt><code>ROS ESM Security Updates (ros)</code></p>
-<dd> Robot Operating System Expanded Security Maintenance &#8211; Only Security Updates provides security fixes for ROS packages to ensure the ongoing integrity of ROS based applications. </p>
+<dt><code>ROS ESM Security Updates (ros)</code></dt>
+<dd> Robot Operating System Expanded Security Maintenance &#8211; Only Security Updates provides security fixes for ROS packages to ensure the ongoing integrity of ROS based applications. </dd>
 <p> See <a rel="nofollow" href="https://ubuntu.com/robotics/ros-esm">https://ubuntu.com/robotics/ros-esm</a> for more information. </p>
-<dt><code>ROS ESM All Updates (ros-updates)</code></p>
-<dd> Robot Operating System Expanded Security Maintenance &#8211; All Updates provides additional bug fixes in addition to security fixes for ROS packages to ensure the ongoing integrity of ROS based applications. </p>
+<dt><code>ROS ESM All Updates (ros-updates)</code></dt>
+<dd> Robot Operating System Expanded Security Maintenance &#8211; All Updates provides additional bug fixes in addition to security fixes for ROS packages to ensure the ongoing integrity of ROS based applications. </dd>
 <p> See <a rel="nofollow" href="https://ubuntu.com/robotics/ros-esm">https://ubuntu.com/robotics/ros-esm</a> for more information. </p>
 </dl>
 <h2>REPORTING BUGS</h2>

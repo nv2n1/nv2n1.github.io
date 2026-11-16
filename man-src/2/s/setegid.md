@@ -18,8 +18,8 @@ description: "seteuid, setegid – set effective user or group ID"
 <p> <code>seteuid</code>(), <code>setegid</code>():</p>
 <dl>
 <dt>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+</dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>seteuid</code>() sets the effective user ID of the calling process. Unprivileged processes may only set the effective user ID to the real user ID, the effective user ID or the saved set-user-ID. </p>
 <p> Precisely the same holds for <code>setegid</code>() with &quot;group&quot; instead of &quot;user&quot;.</p>
@@ -28,12 +28,12 @@ description: "seteuid, setegid – set effective user or group ID"
 <p> <i>Note</i>: there are cases where <code>seteuid</code>() can fail even when the caller is UID 0; it is a grave security error to omit checking for a failure return from <code>seteuid</code>().</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The target user or group ID is not valid in this user namespace.</p>
-<dt><code>EPERM</code></p>
-<dd> In the case of <code>seteuid</code>(): the calling process is not privileged (does not have the <code>CAP_SETUID</code> capability in its user namespace) and <i>euid</i> does not match the current real user ID, current effective user ID, or current saved set-user-ID.</p>
+<dt><code>EINVAL</code></dt>
+<dd> The target user or group ID is not valid in this user namespace.</dd>
+<dt><code>EPERM</code></dt>
+<dd> In the case of <code>seteuid</code>(): the calling process is not privileged (does not have the <code>CAP_SETUID</code> capability in its user namespace) and <i>euid</i> does not match the current real user ID, current effective user ID, or current saved set-user-ID.</dd>
 <dt>
-<dd> In the case of <code>setegid</code>(): the calling process is not privileged (does not have the <code>CAP_SETGID</code> capability in its user namespace) and <i>egid</i> does not match the current real group ID, current effective group ID, or current saved set-group-ID.</dl>
+</dt><dd> In the case of <code>setegid</code>(): the calling process is not privileged (does not have the <code>CAP_SETGID</code> capability in its user namespace) and <i>egid</i> does not match the current real group ID, current effective group ID, or current saved set-group-ID.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.3BSD.</p>
 <h2>NOTES</h2>

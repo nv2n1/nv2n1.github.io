@@ -15,7 +15,7 @@ usb_hub_clear_tt_buffer - clear control/bulk TT state in high speed hub
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>an URB associated with the failed or incomplete split transaction</dl>
+<dl><dd></dd><dd>an URB associated with the failed or incomplete split transaction</dd></dl>
 
 <h2>Description</h2>
 

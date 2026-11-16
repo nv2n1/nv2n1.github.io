@@ -20,10 +20,10 @@ description: "ausyscall – a program that allows mapping syscall names and numb
 <p>For more information about a specific syscall, use the man program and pass the number 2 as an argument to make sure that you get the syscall information rather than a shell script program or glibc function call of the same name. For example, if you wanted to learn about the open syscall, type: man 2 open.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;dump</code></p>
-<dd>Print all syscalls for the given arch</p>
-<dt><code>&#8211;exact</code></p>
-<dd>Instead of doing a partial word match, match the given syscall name exactly. </p>
+<dt><code>&#8211;dump</code></dt>
+<dd>Print all syscalls for the given arch</dd>
+<dt><code>&#8211;exact</code></dt>
+<dd>Instead of doing a partial word match, match the given syscall name exactly. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ausearch/">ausearch</a></code>(8), <code><a href="/docs/linux/man/8-auditctl/">auditctl</a></code>(8). </p>

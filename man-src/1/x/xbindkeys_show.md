@@ -16,10 +16,10 @@ description: "xbindkeys_show – a program to show the grabbing keys used in xbi
 <h2>COMMAND LINE OPTIONS</h2>
 <p> Available command line options are as follows:</p>
 <dl>
-<dt><code>-f, &#8211;file</code></p>
-<dd> Use an alternative rc file</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Short help on options plus version/author info. </p>
+<dt><code>-f, &#8211;file</code></dt>
+<dd> Use an alternative rc file</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Short help on options plus version/author info. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> If you find a bug, please send a mail to &lt;hocwp [at] free.fr&gt; </p>

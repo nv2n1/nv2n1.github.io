@@ -17,24 +17,24 @@ description: "MPD – A daemon for playing music"
 <p> Read more about MPD at &lt;<code><a rel="nofollow" href="http://www.musicpd.org/">http://www.musicpd.org/</a></code>&gt;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Output a brief help message.</p>
-<dt><code>&#8211;kill</code></p>
-<dd> Kill the currently running mpd session. The pid_file parameter must be specified in the config file for this to work.</p>
-<dt><code>&#8211;no-daemon</code></p>
-<dd> Don&#8217;t detach from console.</p>
-<dt><code>&#8211;stderr</code></p>
-<dd> Print messages stderr.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Verbose logging.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Output a brief help message.</dd>
+<dt><code>&#8211;kill</code></dt>
+<dd> Kill the currently running mpd session. The pid_file parameter must be specified in the config file for this to work.</dd>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd> Don&#8217;t detach from console.</dd>
+<dt><code>&#8211;stderr</code></dt>
+<dd> Print messages stderr.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Verbose logging.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.mpdconf</code></p>
-<dd> User configuration file.</p>
-<dt><code>/etc/mpd.conf</code></p>
-<dd> Global configuration file.</dl>
+<dt><code>~/.mpdconf</code></dt>
+<dd> User configuration file.</dd>
+<dt><code>/etc/mpd.conf</code></dt>
+<dd> Global configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-mpd-conf/">mpd.conf</a>(5), <a href="/docs/linux/man/1-mpc/">mpc</a>(1)</p>
 <h2>BUGS</h2>

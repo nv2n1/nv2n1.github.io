@@ -14,22 +14,22 @@ description: "gnutls_prf – API function"
 <p> <code>int gnutls_prf(gnutls_session_t </code><i>session</i><code>, size_t </code><i>label_size</i><code>, const char * </code><i>label</i><code>, int </code><i>server_random_first</i><code>, size_t </code><i>extra_size</i><code>, const char * </code><i>extra</i><code>, size_t </code><i>outsize</i><code>, char * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>size_t label_size</p>
-<dd> length of the <i>label</i> variable.</p>
-<dt>const char * label</p>
-<dd> label used in PRF computation, typically a short string.</p>
-<dt>int server_random_first</p>
-<dd> non-zero if server random field should be first in seed</p>
-<dt>size_t extra_size</p>
-<dd> length of the <i>extra</i> variable.</p>
-<dt>const char * extra</p>
-<dd> optional extra data to seed the PRF with.</p>
-<dt>size_t outsize</p>
-<dd> size of pre-allocated output buffer to hold the output.</p>
-<dt>char * out</p>
-<dd> pre-allocated buffer to hold the generated data.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>size_t label_size</dt>
+<dd> length of the <i>label</i> variable.</dd>
+<dt>const char * label</dt>
+<dd> label used in PRF computation, typically a short string.</dd>
+<dt>int server_random_first</dt>
+<dd> non-zero if server random field should be first in seed</dd>
+<dt>size_t extra_size</dt>
+<dd> length of the <i>extra</i> variable.</dd>
+<dt>const char * extra</dt>
+<dd> optional extra data to seed the PRF with.</dd>
+<dt>size_t outsize</dt>
+<dd> size of pre-allocated output buffer to hold the output.</dd>
+<dt>char * out</dt>
+<dd> pre-allocated buffer to hold the generated data.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Applies the TLS Pseudo-Random-Function (PRF) on the master secret and the provided data, seeded with the client and server random fields. </p>
 <p> The output of this function is identical to RFC5705 extractor if <i>extra</i> and <i>extra_size</i> are set to zero. Otherwise, <i>extra</i> should contain the context value prefixed by a two-byte length. </p>
@@ -47,6 +47,6 @@ description: "gnutls_prf – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

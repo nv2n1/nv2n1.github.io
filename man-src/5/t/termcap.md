@@ -11,18 +11,12 @@ description: "termcap – terminal capability database"
 <h2>Description</h2>
 <p>The termcap database is an obsolete facility for describing the capabilities of character-cell terminals and printers. It is retained only for compatibility with old programs; new programs should use the <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5) database and associated libraries. <i>/etc/termcap</i> is an ASCII file (the database master) that lists the capabilities of many different types of terminals. Programs can read termcap to find the particular escape codes needed to control the visual attributes of the terminal actually in use. (Other aspects of the terminal are handled by <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1).) The termcap database is indexed on the <code>TERM</code> environment variable. Termcap entries must be defined on a single logical line, with &#8216;\&#8217; used to suppress the newline. Fields are separated by &#8216;:&#8217;. The first field of each entry starts at the left-hand margin, and contains a list of names for the terminal, separated by &#8216;|&#8217;. The first subfield may (in BSD termcap entries from versions 4.3 and earlier) contain a short name consisting of two characters. This short name may consist of capital or small letters. In 4.4BSD, termcap entries this field is omitted. The second subfield (first, in the newer 4.4BSD format) contains the name used by the environment variable <code>TERM</code>. It should be spelled in lowercase letters. Selectable hardware capabilities should be marked by appending a hyphen and a suffix to this name. See below for an example. Usual suffixes are w (more than 80 characters wide), am (automatic margins), nam (no automatic margins), and rv (reverse video display). The third subfield contains a long and descriptive name for this termcap entry. Subsequent fields contain the terminal capabilities; any continued capability lines must be indented one tab from the left margin. Although there is no defined order, it is suggested to write first boolean, then numeric, and then string capabilities, each sorted alphabetically without looking at lower or upper spelling. Capabilities of similar functions can be written in one line. </p>
 <pre><code>Example for:
-
 Head line: vt|vt101|DEC VT 101 terminal in 80 character mode:\
 Head line: Vt|vt101-w|DEC VT 101 terminal in (wide) 132 character mode:\
 Boolean: :bs:\
 Numeric: :co#80:\
 String: :sr=\E[H:\
-
-
-
 Boolean capabilities
-
-
 5i      Printer will not echo on screen
 am      Automatic margins which means automatic line wrap
 bs      Control-H (8 dec.) performs a backspace
@@ -50,12 +44,7 @@ xn      Newline/wraparound glitch
 xo      Terminal uses xon/xoff protocol
 xs      Text typed over standout text will be displayed in standout
 xt      Teleray glitch, destructive tabs and odd standout mode
-
-
-
 Numeric capabilities
-
-
 co      Number of columns
 dB      Delay in milliseconds for backspace on hardcopy terminals
 dC      Delay in milliseconds for carriage return on hardcopy terminals
@@ -75,12 +64,7 @@ sg      Standout glitch
 ug      Underline glitch
 vt      virtual terminal number
 ws      Width of status line if different from screen width
-
-
-
 String capabilities
-
-
 !1      shifted save key
 !2      shifted suspend key
 !3      shifted undo key
@@ -311,3 +295,4 @@ vs      Standout cursor
 wi      Set window from line %1 to %2 and column %3 to %4
 XF      XOFF character if not haS</code></pre>
 <p> There are several ways of defining the control codes for string capabilities: Every normal character represents itself, except &#8216;ha&#8217;, &#8216;\&#8217;, and &#8216;%&#8217;. A <code>hax</code> means Control-x. Control-A equals 1 decimal. 
+</p>

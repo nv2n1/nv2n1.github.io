@@ -15,12 +15,12 @@ description: "bluetooth-sendto – GTK application for transferring files over B
 <p> <i>bluetooth-sendto</i> will display a dialog for transferring files over Bluetooth. <i>bluetooth-sendto</i> is part of gnome-bluetooth, see also <a rel="nofollow" href="http://live.gnome.org/GnomeBluetooth">http://live.gnome.org/GnomeBluetooth</a></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;device</p>
-<dd> Define the device address to send the file(s) to. If omitted a chooser will be displayed.</p>
-<dt>&#8211;name</p>
-<dd> Define the device name to send the file(s) to. If omitted it will be auto detected.</p>
-<dt>file</p>
-<dd> The file(s) to send to the device. If omitted a chooser will be displayed.</dl>
+<dt>&#8211;device</dt>
+<dd> Define the device address to send the file(s) to. If omitted a chooser will be displayed.</dd>
+<dt>&#8211;name</dt>
+<dd> Define the device name to send the file(s) to. If omitted it will be auto detected.</dd>
+<dt>file</dt>
+<dd> The file(s) to send to the device. If omitted a chooser will be displayed.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Marcel Holtmann &lt;marcel [at] holtmann.org&gt;</p>
 <h2>LICENSE</h2>

@@ -15,18 +15,18 @@ description: "docker-network-inspect – Display detailed information on one or 
 <p> Returns information about one or more networks. By default, this command renders all results in a JSON object. For example, if you connect two containers to the default bridge network: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ sudo docker run -itd --name=container1 busybox
 f2870c98fd504370fb86e59f32cd0753b1ac9b69b7d80566ffc7192a82b3ed27
 $ sudo docker run -itd --name=container2 busybox
 bda12f8922785d1f160be70736f26c1e331ab8aaf8ed8d56728508f2e2fd4727
 </pre>
-</dl>
+</dd></dl>
 <p> The network inspect command shows the containers, by id, in its results. You can specify an alternate format to execute a given template for each result. Go&#8217;s text/template &lt;<a rel="nofollow" href="http://golang.org/pkg/text/template/">http://golang.org/pkg/text/template/</a>&gt; package describes all the details of the format. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ sudo docker network inspect bridge
     [{
@@ -71,11 +71,11 @@ $ sudo docker network inspect bridge
         }
     }]
 </code></pre>
-</dl>
+</dd></dl>
 <p> Returns the information about the user-defined network: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker network create simple &#8211; network 69568e6336d8c96bbf57869030919f7c69524f71183b44d80948bd3927c87f6a $ docker network inspect simple &#8211; network[{<br />
     &#8220;Name&#8221; : &#8220;simple-network&#8221;,<br />
     &#8220;Id&#8221; : &#8220;69568e6336d8c96bbf57869030919f7c69524f71183b44d80948bd3927c87f6a&#8221;,<br />
@@ -93,12 +93,12 @@ $ sudo docker network inspect bridge
     &#8220;Containers&#8221; : {},<br />
     &#8220;Options&#8221; : {}<br />
 }]
-</dl>
+</dd></dl>
 <p> docker network inspect &#8211;verbose for swarm mode overlay networks shows service-specific details such as the service&#8217;s VIP and port mappings. It also shows IPs of service tasks, and the IPs of the nodes where the tasks are running. </p>
 <p> Following is an example output for an overlay network ov1 that has one service s1 attached to. service s1 in this case has three replicas. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker network inspect-- verbose ov1
     [{
@@ -183,7 +183,7 @@ $ docker network inspect-- verbose ov1
         }
     }]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Format the output using the given Go template</p>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for inspect</p>

@@ -12,13 +12,10 @@ std::promise&lt;R&gt;::set_value_at_thread_exit - std::promise&lt;R&gt;::set_val
 
 <pre><code>void set_value_at_thread_exit(const R &amp;value);
 (1)(member only of generic promise template)(since C++ 11)
-
     void set_value_at_thread_exit(R &amp;&amp;value);
 (2)(member only of generic promise template)(since C++ 11)
-
     void set_value_at_thread_exit(R &amp;value);
 (3)(member only of promise&lt;R &amp;&gt; template specialization)(since C++ 11)
-
     void set_value_at_thread_exit()(4)(member only of promise&lt;void&gt; template specialization)(since C++ 11)</code></pre> 
 Stores the value into the shared state without making the state ready immediately. The state is made ready when the current thread exits, after all variables with thread-local storage duration have been destroyed. 
 The operation behaves as though set_value, set_exception, set_value_at_thread_exit, and set_exception_at_thread_exit acquire a single mutex associated with the promise object while updating the promise object. 
@@ -53,12 +50,9 @@ Additionally:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;future&gt;
-
 #include &lt;thread&gt;
 int main()
-
 {
     using namespace std::chrono_literals;
     std::promise&lt;int&gt; p;

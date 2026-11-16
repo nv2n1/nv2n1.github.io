@@ -23,19 +23,19 @@ description: "gfalFS – Filesystem client for the GFAL 2.0 toolkit"
 <h2>Options</h2>
 <p><code>-d</code></p>
 <dl>
-<dd>debug mode &#8211; does not act anymore like a daemon and print usefull information about the current operations.</dl>
+<dd>debug mode &#8211; does not act anymore like a daemon and print usefull information about the current operations.</dd></dl>
 <p> <code>-g</code></p>
 <dl>
-<dd>guid mode &#8211; access directly to the file by the guid name on the current lfc.</dl>
+<dd>guid mode &#8211; access directly to the file by the guid name on the current lfc.</dd></dl>
 <p> <code>-s</code></p>
 <dl>
-<dd>single thread mode &#8211; Use only one thread to execute the operations, this cause a major slowdown of the execution but guarantee a protection against thread safety problems.</dl>
+<dd>single thread mode &#8211; Use only one thread to execute the operations, this cause a major slowdown of the execution but guarantee a protection against thread safety problems.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
-<dd>enable verbose mode &#8211; print more informations about the current execution, can be use with <code>-d</code> in case of problems .</dl>
+<dd>enable verbose mode &#8211; print more informations about the current execution, can be use with <code>-d</code> in case of problems .</dd></dl>
 <p> <code>-V</code></p>
 <dl>
-<dd>print the version number.</dl>
+<dd>print the version number.</dd></dl>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <h2>Examples</h2>
 <p><code> Mount an WebDav over https directory and execute a directory listing </p>

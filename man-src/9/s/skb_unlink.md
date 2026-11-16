@@ -15,11 +15,11 @@ skb_unlink - remove a buffer from a list
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to remove</dl>
+<dl><dd></dd><dd>buffer to remove</dd></dl>
  
 
  <i>list</i>
-<dl><dd>list to use</dl>
+<dl><dd>list to use</dd></dl>
 
 <h2>Description</h2>
 

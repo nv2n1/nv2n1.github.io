@@ -10,31 +10,31 @@ description: "XmbTextPerCharExtents, XwcTextPerCharExtents, Xutf8TextPerCharExte
 <p>XmbTextPerCharExtents, XwcTextPerCharExtents, Xutf8TextPerCharExtents &#8211; obtain per-character information for a text string </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XmbTextPerCharExtents(XFontSet <i>font_set</i>, char *<i>string</i>, int <i>num_bytes</i>, XRectangle *<i>ink_array_return</i>, XRectangle *<i>logical_array_return</i>, int <i>array_size</i>, int *<i>num_chars_return</i>, XRectangle *<i>overall_ink_return</i>, XRectangle *<i>overall_logical_return</i>);</p>
-<dd>Status XwcTextPerCharExtents(XFontSet <i>font_set</i>, wchar_t *<i>string</i>, int <i>num_wchars</i>, XRectangle *<i>ink_array_return</i>, XRectangle *<i>logical_array_return</i>, int <i>array_size</i>, int *<i>num_chars_return</i>, XRectangle *<i>overall_ink_return</i>, XRectangle *<i>overall_logical_return</i>);</p>
-<dd>Status Xutf8TextPerCharExtents(XFontSet <i>font_set</i>, char *<i>string</i>, int <i>num_bytes</i>, XRectangle *<i>ink_array_return</i>, XRectangle *<i>logical_array_return</i>, int <i>array_size</i>, int *<i>num_chars_return</i>, XRectangle *<i>overall_ink_return</i>, XRectangle *<i>overall_logical_return</i>);</dl>
+<dd>Status XmbTextPerCharExtents(XFontSet <i>font_set</i>, char *<i>string</i>, int <i>num_bytes</i>, XRectangle *<i>ink_array_return</i>, XRectangle *<i>logical_array_return</i>, int <i>array_size</i>, int *<i>num_chars_return</i>, XRectangle *<i>overall_ink_return</i>, XRectangle *<i>overall_logical_return</i>);</dd>
+<dd>Status XwcTextPerCharExtents(XFontSet <i>font_set</i>, wchar_t *<i>string</i>, int <i>num_wchars</i>, XRectangle *<i>ink_array_return</i>, XRectangle *<i>logical_array_return</i>, int <i>array_size</i>, int *<i>num_chars_return</i>, XRectangle *<i>overall_ink_return</i>, XRectangle *<i>overall_logical_return</i>);</dd>
+<dd>Status Xutf8TextPerCharExtents(XFontSet <i>font_set</i>, char *<i>string</i>, int <i>num_bytes</i>, XRectangle *<i>ink_array_return</i>, XRectangle *<i>logical_array_return</i>, int <i>array_size</i>, int *<i>num_chars_return</i>, XRectangle *<i>overall_ink_return</i>, XRectangle *<i>overall_logical_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>array_size</i></p>
-<dd>Specifies the size of ink_array_return and logical_array_return. The caller must pass in arrays of this size.</p>
-<dt><i>font_set</i></p>
-<dd>Specifies the font set.</p>
-<dt><i>ink_array_return</i></p>
-<dd>Returns the ink dimensions for each character.</p>
-<dt><i>logical_array_return</i></p>
-<dd>Returns the logical dimensions for each character.</p>
-<dt><i>num_bytes</i></p>
-<dd>Specifies the number of bytes in the string argument.</p>
-<dt><i>num_chars_return</i></p>
-<dd>Returns the number of characters in the string argument.</p>
-<dt><i>num_wchars</i></p>
-<dd>Specifies the number of characters in the string argument.</p>
-<dt><i>overall_ink_return</i></p>
-<dd>Returns the overall ink extents of the entire string.</p>
-<dt><i>overall_logical_return</i></p>
-<dd>Returns the overall logical extents of the entire string.</p>
-<dt><i>string</i></p>
-<dd>Specifies the character string.</dl>
+<dt><i>array_size</i></dt>
+<dd>Specifies the size of ink_array_return and logical_array_return. The caller must pass in arrays of this size.</dd>
+<dt><i>font_set</i></dt>
+<dd>Specifies the font set.</dd>
+<dt><i>ink_array_return</i></dt>
+<dd>Returns the ink dimensions for each character.</dd>
+<dt><i>logical_array_return</i></dt>
+<dd>Returns the logical dimensions for each character.</dd>
+<dt><i>num_bytes</i></dt>
+<dd>Specifies the number of bytes in the string argument.</dd>
+<dt><i>num_chars_return</i></dt>
+<dd>Returns the number of characters in the string argument.</dd>
+<dt><i>num_wchars</i></dt>
+<dd>Specifies the number of characters in the string argument.</dd>
+<dt><i>overall_ink_return</i></dt>
+<dd>Returns the overall ink extents of the entire string.</dd>
+<dt><i>overall_logical_return</i></dt>
+<dd>Returns the overall logical extents of the entire string.</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the character string.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XmbTextPerCharExtents</code>, <code>XwcTextPerCharExtents</code> and <code>Xutf8TextPerCharExtents</code> functions return the text dimensions of each character of the specified text, using the fonts loaded for the specified font set. Each successive element of ink_array_return and logical_array_return is set to the successive character&#8217;s drawn metrics, relative to the drawing origin of the string and one rectangle for each character in the supplied text string. The number of elements of ink_array_return and logical_array_return that have been set is returned to num_chars_return. </p>
 <p> Each element of ink_array_return is set to the bounding box of the corresponding character&#8217;s drawn foreground color. Each element of logical_array_return is set to the bounding box that provides minimum spacing to other graphical features for the corresponding character. Other graphical features should not intersect any of the logical_array_return rectangles. </p>

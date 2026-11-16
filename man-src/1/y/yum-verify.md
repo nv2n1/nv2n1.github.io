@@ -19,42 +19,37 @@ description: "yum verify plugin"
  <i></i> * verify-all </p>
 <p> all of which take the same arguments as the list yum command, obviously you can only verify packages that are installed on the system. </p>
 <dl>
-<dt><code>verify</code></p>
-<dd> Is the generic verification command, and is intended to give the most useful output. It removes all false matches due to multilib and ignores changes to configuration files by default.</p>
-<dt>
-<dd>
-<dt><code>verify-rpm</code></p>
-<dd> Is meant to be 100% compatible with rpm -V output, and any differences should be considered as bugs.</p>
-<dt>
-<dd>
-<dt><code>verify-all</code></p>
-<dd> Is used to list all the differences, including some that rpm itself will ignore.</p>
-<dt>
-<dd></dl>
+<dt><code>verify</code></dt>
+<dd> Is the generic verification command, and is intended to give the most useful output. It removes all false matches due to multilib and ignores changes to configuration files by default.</dd>
+<dt><code>verify-rpm</code></dt>
+<dd> Is meant to be 100% compatible with rpm -V output, and any differences should be considered as bugs.</dd>
+<dt><code>verify-all</code></dt>
+<dd> Is used to list all the differences, including some that rpm itself will ignore.</dd>
+</dl>
 <h2>GENERAL OPTIONS</h2>
 <p> These are the options added to yum that are available in the verify commands. They are: </p>
 <dl>
-<dt><code>&#8211;verify-filenames</code></p>
-<dd> This option is used to limit the filenames that the packages will perform verification.</p>
-<dt><code>&#8211;verify-configuration-files</code></p>
-<dd> This option is only useful in the generic verify command, and will enable/disable verification of files that are tagged as configuration files.</dl>
+<dt><code>&#8211;verify-filenames</code></dt>
+<dd> This option is used to limit the filenames that the packages will perform verification.</dd>
+<dt><code>&#8211;verify-configuration-files</code></dt>
+<dd> This option is only useful in the generic verify command, and will enable/disable verification of files that are tagged as configuration files.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To do the same as rpm -Va, use:</p>
 <dl>
 <dt>
-<dd> yum verify-rpm</dl>
+</dt><dd> yum verify-rpm</dd></dl>
 <p> To verify the packages starting with the name yum, use:</p>
 <dl>
 <dt>
-<dd> yum verify &#8216;yum*&#8217;</dl>
+</dt><dd> yum verify &#8216;yum*&#8217;</dd></dl>
 <p> To verify the binaries that are in a bin directory, use:</p>
 <dl>
 <dt>
-<dd> yum verify &#8211;verify-filenames=&#8217;*bin/*&#8217;</dl>
+</dt><dd> yum verify &#8211;verify-filenames=&#8217;*bin/*&#8217;</dd></dl>
 <p> To verify all include files, Eg. for multilib problems, use:</p>
 <dl>
 <dt>
-<dd> yum verify-all &#8211;verify-filenames=&#8217;/usr/include/*&#8217; </p>
+</dt><dd> yum verify-all &#8211;verify-filenames=&#8217;/usr/include/*&#8217; </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

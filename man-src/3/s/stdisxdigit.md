@@ -11,7 +11,6 @@ std::isxdigit - std::isxdigit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int isxdigit(int ch);</code></pre> 
 Checks if the given character is a hexadecimal numeric character (0123456789abcdefABCDEF). 
 The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF. 
@@ -33,7 +32,6 @@ Like all other functions from &lt;cctype&gt;, the behavior of std::isxdigit is u
     return std::isxdigit(static_cast&lt;unsigned char&gt;(ch));
 } 
 Similarly, they should not be directly used with standard algorithms when the iterator's value type is char or signed char. Instead, convert the value to unsigned char first: <pre><code>int count_xdigits(const std::string &amp;s)
-
 {
     return std::count_if(s.begin(), s.end(),
                          // static_cast&lt;int(*)(int)&gt;(std::isxdigit)         // wrong

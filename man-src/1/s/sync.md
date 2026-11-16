@@ -15,14 +15,14 @@ description: "sync – Synchronize cached writes to persistent storage"
 <p> Synchronize cached writes to persistent storage </p>
 <p> If one or more files are specified, sync only them, or their containing file systems.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;data</code></p>
-<dd> sync only file data, no unneeded metadata</p>
-<dt><code>-f</code>, <code>&#8211;file-system</code></p>
-<dd> sync the file systems that contain the files</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-d</code>, <code>&#8211;data</code></dt>
+<dd> sync only file data, no unneeded metadata</dd>
+<dt><code>-f</code>, <code>&#8211;file-system</code></dt>
+<dd> sync the file systems that contain the files</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>BUGS</h2>
 <p> Persistence guarantees vary per system. See the system calls below for more details.</p>
 <h2>AUTHOR</h2>

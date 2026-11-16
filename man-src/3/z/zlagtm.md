@@ -11,8 +11,6 @@ description: "zlagtm.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zlagtm (TRANS, N, NRHS, ALPHA, DL, D, DU, X, LDX, BETA, B, LDB)
-
-
 ZLAGTM performs a matrix-matrix product of the form C = αAB+βC, where A is a tridiagonal matrix, B and C are rectangular matrices, and α and β are scalars, which may be 0, 1, or -1.</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlagtm (characterTRANS, integerN, integerNRHS, double precisionALPHA, complex*16, dimension( * )DL, complex*16, dimension( * )D, complex*16, dimension( * )DU, complex*16, dimension( ldx, * )X, integerLDX, double precisionBETA, complex*16, dimension( ldb, * )B, integerLDB)</h3>
@@ -25,10 +23,10 @@ ZLAGTM performs a matrix-matrix product of the form C = αAB+βC, where A is a t
  where A is a tridiagonal matrix of order N, B and X are N by NRHS
  matrices, and alpha and beta are real scalars, each of which may be
  0., 1., or -1.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  Specifies the operation applied to A.
  = 'N': No transpose, B := alpha * A * X + beta * B
@@ -75,13 +73,13 @@ ZLAGTM performs a matrix-matrix product of the form C = αAB+βC, where A is a t
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 145 of file zlagtm.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

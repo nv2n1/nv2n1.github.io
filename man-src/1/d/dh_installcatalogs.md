@@ -18,12 +18,12 @@ description: "dh_installcatalogs – install and register SGML Catalogs"
 <p> A dependency on <code>sgml-base</code> will be added to <code>${misc:Depends}</code>, so be sure your package uses that variable in <i>debian/control</i>.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.sgmlcatalogs</p>
-<dd> Lists the catalogs to be installed per package. Each line in that file should be of the form <tt>&quot;</tt>source<tt> </tt>dest<tt>&quot;</tt>, where <i>source</i> indicates where the catalog resides in the source tree, and <i>dest</i> indicates the destination location for the catalog under the package build area. <i>dest</i> should start with <i>/usr/share/sgml/</i>.</dl>
+<dt>debian/<i>package</i>.sgmlcatalogs</dt>
+<dd> Lists the catalogs to be installed per package. Each line in that file should be of the form <tt>&quot;</tt>source<tt> </tt>dest<tt>&quot;</tt>, where <i>source</i> indicates where the catalog resides in the source tree, and <i>dest</i> indicates the destination location for the catalog under the package build area. <i>dest</i> should start with <i>/usr/share/sgml/</i>.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;no-scripts</code></p>
-<dd> Do not modify <i>postinst</i>/<i>postrm</i>/<i>prerm</i> scripts nor add an activation trigger.</dl>
+<dt><code>-n</code>, <code>&#8211;no-scripts</code></dt>
+<dd> Do not modify <i>postinst</i>/<i>postrm</i>/<i>prerm</i> scripts nor add an activation trigger.</dd></dl>
 <h2>NOTES</h2>
 <p> Note that this command is not idempotent. <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) should be called between invocations of this command. Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts.</p>
 <h2>SEE ALSO</h2>

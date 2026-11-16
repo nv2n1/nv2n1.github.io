@@ -14,12 +14,12 @@ description: "ata_scsi_media_change_notify – send media change event"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Pointer to the disk device with media change event</dl>
+</dd><dd>Pointer to the disk device with media change event</dd></dl>
 <h2>Description</h2>
 <p>Tell the block layer to send a media change notification event. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

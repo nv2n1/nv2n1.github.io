@@ -14,7 +14,7 @@ description: "disable_irq_nosync – disable an irq without waiting"
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>Interrupt to disable</dl>
+</dd><dd>Interrupt to disable</dd></dl>
 <h2>Description</h2>
 <p>Disable the selected interrupt line. Disables and Enables are nested. Unlike <code>disable_irq</code>, this function does not ensure existing instances of the IRQ handler have completed before returning. </p>
 <p> This function may be called from IRQ context.</p>

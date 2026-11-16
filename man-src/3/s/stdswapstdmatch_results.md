@@ -11,11 +11,8 @@ std::swap(std::match_results) - std::swap(std::match_results)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;regex&gt;
-
     template &lt;class BidirIt, class Alloc&gt;
-
     void swap(match_results&lt;BidirIt, Alloc&gt; &amp;x1, (since C++ 11)
-
                                                      match_results&lt;BidirIt, Alloc&gt; &amp;x2) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::match_results. Exchanges the contents of x1 with those of x2. Effectively calls x1.swap(x2). 
 

@@ -65,7 +65,7 @@ int PAPI_remove_event( int EventSet, int EventCode );
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_cleanup_eventset</code> </p>
+<dd><code>PAPI_cleanup_eventset</code> </dd>
 <p> <code>PAPI_destroy_eventset</code> </p>
 <p> <code>PAPI_event_name_to_code</code> </p>
 <p> PAPI_presets </p>
@@ -73,3 +73,4 @@ int PAPI_remove_event( int EventSet, int EventCode );
 <p> <code>PAPI_add_events</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

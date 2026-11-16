@@ -13,36 +13,36 @@ description: "sched – overview of CPU scheduling"
 <h3>API summary</h3>
 <p>Linux provides the following system calls for controlling the CPU scheduling behavior, policy, and priority of processes (or, more precisely, threads).</p>
 <dl>
-<dt><code><a href="/docs/linux/man/2-nice/">nice</a></code>(2)</p>
-<dd>Set a new nice value for the calling thread, and return the new nice value.</p>
-<dt><code><a href="/docs/linux/man/2-getpriority/">getpriority</a></code>(2)</p>
-<dd>Return the nice value of a thread, a process group, or the set of threads owned by a specified user.</p>
-<dt><code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2)</p>
-<dd>Set the nice value of a thread, a process group, or the set of threads owned by a specified user.</p>
-<dt><code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2)</p>
-<dd>Set the scheduling policy and parameters of a specified thread.</p>
-<dt><code><a href="/docs/linux/man/2-sched_getscheduler/">sched_getscheduler</a></code>(2)</p>
-<dd>Return the scheduling policy of a specified thread.</p>
-<dt><code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2)</p>
-<dd>Set the scheduling parameters of a specified thread.</p>
-<dt><code><a href="/docs/linux/man/2-sched_getparam/">sched_getparam</a></code>(2)</p>
-<dd>Fetch the scheduling parameters of a specified thread.</p>
-<dt><code><a href="/docs/linux/man/2-sched_get_priority_max/">sched_get_priority_max</a></code>(2)</p>
-<dd>Return the maximum priority available in a specified scheduling policy.</p>
-<dt><code><a href="/docs/linux/man/2-sched_get_priority_min/">sched_get_priority_min</a></code>(2)</p>
-<dd>Return the minimum priority available in a specified scheduling policy.</p>
-<dt><code><a href="/docs/linux/man/2-sched_rr_get_interval/">sched_rr_get_interval</a></code>(2)</p>
-<dd>Fetch the quantum used for threads that are scheduled under the &quot;round-robin&quot; scheduling policy.</p>
-<dt><code><a href="/docs/linux/man/2-sched_yield/">sched_yield</a></code>(2)</p>
-<dd>Cause the caller to relinquish the CPU, so that some other thread be executed.</p>
-<dt><code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2)</p>
-<dd>(Linux-specific) Set the CPU affinity of a specified thread.</p>
-<dt><code><a href="/docs/linux/man/2-sched_getaffinity/">sched_getaffinity</a></code>(2)</p>
-<dd>(Linux-specific) Get the CPU affinity of a specified thread.</p>
-<dt><code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2)</p>
-<dd>Set the scheduling policy and parameters of a specified thread. This (Linux-specific) system call provides a superset of the functionality of <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2) and <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2).</p>
-<dt><code><a href="/docs/linux/man/2-sched_getattr/">sched_getattr</a></code>(2)</p>
-<dd>Fetch the scheduling policy and parameters of a specified thread. This (Linux-specific) system call provides a superset of the functionality of <code><a href="/docs/linux/man/2-sched_getscheduler/">sched_getscheduler</a></code>(2) and <code><a href="/docs/linux/man/2-sched_getparam/">sched_getparam</a></code>(2).</dl>
+<dt><code><a href="/docs/linux/man/2-nice/">nice</a></code>(2)</dt>
+<dd>Set a new nice value for the calling thread, and return the new nice value.</dd>
+<dt><code><a href="/docs/linux/man/2-getpriority/">getpriority</a></code>(2)</dt>
+<dd>Return the nice value of a thread, a process group, or the set of threads owned by a specified user.</dd>
+<dt><code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2)</dt>
+<dd>Set the nice value of a thread, a process group, or the set of threads owned by a specified user.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2)</dt>
+<dd>Set the scheduling policy and parameters of a specified thread.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_getscheduler/">sched_getscheduler</a></code>(2)</dt>
+<dd>Return the scheduling policy of a specified thread.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2)</dt>
+<dd>Set the scheduling parameters of a specified thread.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_getparam/">sched_getparam</a></code>(2)</dt>
+<dd>Fetch the scheduling parameters of a specified thread.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_get_priority_max/">sched_get_priority_max</a></code>(2)</dt>
+<dd>Return the maximum priority available in a specified scheduling policy.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_get_priority_min/">sched_get_priority_min</a></code>(2)</dt>
+<dd>Return the minimum priority available in a specified scheduling policy.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_rr_get_interval/">sched_rr_get_interval</a></code>(2)</dt>
+<dd>Fetch the quantum used for threads that are scheduled under the &quot;round-robin&quot; scheduling policy.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_yield/">sched_yield</a></code>(2)</dt>
+<dd>Cause the caller to relinquish the CPU, so that some other thread be executed.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2)</dt>
+<dd>(Linux-specific) Set the CPU affinity of a specified thread.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_getaffinity/">sched_getaffinity</a></code>(2)</dt>
+<dd>(Linux-specific) Get the CPU affinity of a specified thread.</dd>
+<dt><code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2)</dt>
+<dd>Set the scheduling policy and parameters of a specified thread. This (Linux-specific) system call provides a superset of the functionality of <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2) and <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2).</dd>
+<dt><code><a href="/docs/linux/man/2-sched_getattr/">sched_getattr</a></code>(2)</dt>
+<dd>Fetch the scheduling policy and parameters of a specified thread. This (Linux-specific) system call provides a superset of the functionality of <code><a href="/docs/linux/man/2-sched_getscheduler/">sched_getscheduler</a></code>(2) and <code><a href="/docs/linux/man/2-sched_getparam/">sched_getparam</a></code>(2).</dd></dl>
 <h3>Scheduling policies</h3>
 <p>The scheduler is the kernel component that decides which runnable thread will be executed by the CPU next. Each thread has an associated scheduling policy and a <i>static</i> scheduling priority, <i>sched_priority</i>. The scheduler makes its decisions based on knowledge of the scheduling policy and static priority of all threads on the system. </p>
 <p> For threads scheduled under one of the normal scheduling policies (<code>SCHED_OTHER</code>, <code>SCHED_IDLE</code>, <code>SCHED_BATCH</code>), <i>sched_priority</i> is not used in scheduling decisions (it must be specified as 0). </p>
@@ -53,25 +53,25 @@ description: "sched – overview of CPU scheduling"
 <h3>SCHED_FIFO: First in-first out scheduling</h3>
 <p><code>SCHED_FIFO</code> can be used only with static priorities higher than 0, which means that when a <code>SCHED_FIFO</code> thread becomes runnable, it will always immediately preempt any currently running <code>SCHED_OTHER</code>, <code>SCHED_BATCH</code>, or <code>SCHED_IDLE</code> thread. <code>SCHED_FIFO</code> is a simple scheduling algorithm without time slicing. For threads scheduled under the <code>SCHED_FIFO</code> policy, the following rules apply:</p>
 <dl>
-<dt>1)</p>
-<dd>A running <code>SCHED_FIFO</code> thread that has been preempted by another thread of higher priority will stay at the head of the list for its priority and will resume execution as soon as all threads of higher priority are blocked again.</p>
-<dt>2)</p>
-<dd>When a blocked <code>SCHED_FIFO</code> thread becomes runnable, it will be inserted at the end of the list for its priority.</p>
-<dt>3)</p>
-<dd>If a call to <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2), <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2), <code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2), <code><a href="/docs/linux/man/3-pthread_setschedparam/">pthread_setschedparam</a></code>(3), or <code><a href="/docs/linux/man/3-pthread_setschedprio/">pthread_setschedprio</a></code>(3) changes the priority of the running or runnable <code>SCHED_FIFO</code> thread identified by <i>pid</i> the effect on the thread&#8217;s position in the list depends on the direction of the change to threads priority:</p>
+<dt>1)</dt>
+<dd>A running <code>SCHED_FIFO</code> thread that has been preempted by another thread of higher priority will stay at the head of the list for its priority and will resume execution as soon as all threads of higher priority are blocked again.</dd>
+<dt>2)</dt>
+<dd>When a blocked <code>SCHED_FIFO</code> thread becomes runnable, it will be inserted at the end of the list for its priority.</dd>
+<dt>3)</dt>
+<dd>If a call to <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2), <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2), <code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2), <code><a href="/docs/linux/man/3-pthread_setschedparam/">pthread_setschedparam</a></code>(3), or <code><a href="/docs/linux/man/3-pthread_setschedprio/">pthread_setschedprio</a></code>(3) changes the priority of the running or runnable <code>SCHED_FIFO</code> thread identified by <i>pid</i> the effect on the thread&#8217;s position in the list depends on the direction of the change to threads priority:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>If the thread&#8217;s priority is raised, it is placed at the end of the list for its new priority. As a consequence, it may preempt a currently running thread with the same priority.</p>
-<dt>&bull;</p>
-<dd>If the thread&#8217;s priority is unchanged, its position in the run list is unchanged.</p>
-<dt>&bull;</p>
-<dd>If the thread&#8217;s priority is lowered, it is placed at the front of the list for its new priority.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>If the thread&#8217;s priority is raised, it is placed at the end of the list for its new priority. As a consequence, it may preempt a currently running thread with the same priority.</dd>
+<dt>&bull;</dt>
+<dd>If the thread&#8217;s priority is unchanged, its position in the run list is unchanged.</dd>
+<dt>&bull;</dt>
+<dd>If the thread&#8217;s priority is lowered, it is placed at the front of the list for its new priority.</dd></dl>
 </dl>
-<dd>According to POSIX.1-2008, changes to a thread&#8217;s priority (or policy) using any mechanism other than <code><a href="/docs/linux/man/3-pthread_setschedprio/">pthread_setschedprio</a></code>(3) should result in the thread being placed at the end of the list for its priority.</p>
-<dt>4)</p>
-<dd>A thread calling <code><a href="/docs/linux/man/2-sched_yield/">sched_yield</a></code>(2) will be put at the end of the list.</dl>
+<dd>According to POSIX.1-2008, changes to a thread&#8217;s priority (or policy) using any mechanism other than <code><a href="/docs/linux/man/3-pthread_setschedprio/">pthread_setschedprio</a></code>(3) should result in the thread being placed at the end of the list for its priority.</dd>
+<dt>4)</dt>
+<dd>A thread calling <code><a href="/docs/linux/man/2-sched_yield/">sched_yield</a></code>(2) will be put at the end of the list.</dd></dl>
 <p> No other events will move a thread scheduled under the <code>SCHED_FIFO</code> policy in the wait list of runnable threads with equal static priority. </p>
 <p> A <code>SCHED_FIFO</code> thread runs until either it is blocked by an I/O request, it is preempted by a higher priority thread, or it calls <code><a href="/docs/linux/man/2-sched_yield/">sched_yield</a></code>(2).</p>
 <h3>SCHED_RR: Round-robin scheduling</h3>
@@ -126,42 +126,42 @@ description: "sched – overview of CPU scheduling"
 <h3>Resetting scheduling policy for child processes</h3>
 <p>Each thread has a reset-on-fork scheduling flag. When this flag is set, children created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) do not inherit privileged scheduling policies. The reset-on-fork flag can be set by either:</p>
 <dl>
-<dt>*</p>
-<dd>ORing the <code>SCHED_RESET_ON_FORK</code> flag into the <i>policy</i> argument when calling <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2) (since Linux 2.6.32); or</p>
-<dt>*</p>
-<dd>specifying the <code>SCHED_FLAG_RESET_ON_FORK</code> flag in <i>attr.sched_flags</i> when calling <code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2).</dl>
+<dt>*</dt>
+<dd>ORing the <code>SCHED_RESET_ON_FORK</code> flag into the <i>policy</i> argument when calling <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2) (since Linux 2.6.32); or</dd>
+<dt>*</dt>
+<dd>specifying the <code>SCHED_FLAG_RESET_ON_FORK</code> flag in <i>attr.sched_flags</i> when calling <code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2).</dd></dl>
 <p> Note that the constants used with these two APIs have different names. The state of the reset-on-fork flag can analogously be retrieved using <code><a href="/docs/linux/man/2-sched_getscheduler/">sched_getscheduler</a></code>(2) and <code><a href="/docs/linux/man/2-sched_getattr/">sched_getattr</a></code>(2). </p>
 <p> The reset-on-fork feature is intended for media-playback applications, and can be used to prevent applications evading the <code>RLIMIT_RTTIME</code> resource limit (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)) by creating multiple child processes. </p>
 <p> More precisely, if the reset-on-fork flag is set, the following rules apply for subsequently created children:</p>
 <dl>
-<dt>*</p>
-<dd>If the calling thread has a scheduling policy of <code>SCHED_FIFO</code> or <code>SCHED_RR</code>, the policy is reset to <code>SCHED_OTHER</code> in child processes.</p>
-<dt>*</p>
-<dd>If the calling process has a negative nice value, the nice value is reset to zero in child processes.</dl>
+<dt>*</dt>
+<dd>If the calling thread has a scheduling policy of <code>SCHED_FIFO</code> or <code>SCHED_RR</code>, the policy is reset to <code>SCHED_OTHER</code> in child processes.</dd>
+<dt>*</dt>
+<dd>If the calling process has a negative nice value, the nice value is reset to zero in child processes.</dd></dl>
 <p> After the reset-on-fork flag has been enabled, it can be reset only if the thread has the <code>CAP_SYS_NICE</code> capability. This flag is disabled in child processes created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2).</p>
 <h3>Privileges and resource limits</h3>
 <p>In Linux kernels before 2.6.12, only privileged (<code>CAP_SYS_NICE</code>) threads can set a nonzero static priority (i.e., set a real-time scheduling policy). The only change that an unprivileged thread can make is to set the <code>SCHED_OTHER</code> policy, and this can be done only if the effective user ID of the caller matches the real or effective user ID of the target thread (i.e., the thread specified by <i>pid</i>) whose policy is being changed. </p>
 <p> A thread must be privileged (<code>CAP_SYS_NICE</code>) in order to set or modify a <code>SCHED_DEADLINE</code> policy. </p>
 <p> Since Linux 2.6.12, the <code>RLIMIT_RTPRIO</code> resource limit defines a ceiling on an unprivileged thread&#8217;s static priority for the <code>SCHED_RR</code> and <code>SCHED_FIFO</code> policies. The rules for changing scheduling policy and priority are as follows:</p>
 <dl>
-<dt>*</p>
-<dd>If an unprivileged thread has a nonzero <code>RLIMIT_RTPRIO</code> soft limit, then it can change its scheduling policy and priority, subject to the restriction that the priority cannot be set to a value higher than the maximum of its current priority and its <code>RLIMIT_RTPRIO</code> soft limit.</p>
-<dt>*</p>
-<dd>If the <code>RLIMIT_RTPRIO</code> soft limit is 0, then the only permitted changes are to lower the priority, or to switch to a non-real-time policy.</p>
-<dt>*</p>
-<dd>Subject to the same rules, another unprivileged thread can also make these changes, as long as the effective user ID of the thread making the change matches the real or effective user ID of the target thread.</p>
-<dt>*</p>
-<dd>Special rules apply for the <code>SCHED_IDLE</code> policy. In Linux kernels before 2.6.39, an unprivileged thread operating under this policy cannot change its policy, regardless of the value of its <code>RLIMIT_RTPRIO</code> resource limit. In Linux kernels since 2.6.39, an unprivileged thread can switch to either the <code>SCHED_BATCH</code> or the <code>SCHED_OTHER</code> policy so long as its nice value falls within the range permitted by its <code>RLIMIT_NICE</code> resource limit (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</dl>
+<dt>*</dt>
+<dd>If an unprivileged thread has a nonzero <code>RLIMIT_RTPRIO</code> soft limit, then it can change its scheduling policy and priority, subject to the restriction that the priority cannot be set to a value higher than the maximum of its current priority and its <code>RLIMIT_RTPRIO</code> soft limit.</dd>
+<dt>*</dt>
+<dd>If the <code>RLIMIT_RTPRIO</code> soft limit is 0, then the only permitted changes are to lower the priority, or to switch to a non-real-time policy.</dd>
+<dt>*</dt>
+<dd>Subject to the same rules, another unprivileged thread can also make these changes, as long as the effective user ID of the thread making the change matches the real or effective user ID of the target thread.</dd>
+<dt>*</dt>
+<dd>Special rules apply for the <code>SCHED_IDLE</code> policy. In Linux kernels before 2.6.39, an unprivileged thread operating under this policy cannot change its policy, regardless of the value of its <code>RLIMIT_RTPRIO</code> resource limit. In Linux kernels since 2.6.39, an unprivileged thread can switch to either the <code>SCHED_BATCH</code> or the <code>SCHED_OTHER</code> policy so long as its nice value falls within the range permitted by its <code>RLIMIT_NICE</code> resource limit (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</dd></dl>
 <p> Privileged (<code>CAP_SYS_NICE</code>) threads ignore the <code>RLIMIT_RTPRIO</code> limit; as with older kernels, they can make arbitrary changes to scheduling policy and priority. See <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2) for further information on <code>RLIMIT_RTPRIO</code>.</p>
 <h3>Limiting the CPU usage of real-time and deadline processes</h3>
 <p>A nonblocking infinite loop in a thread scheduled under the <code>SCHED_FIFO</code>, <code>SCHED_RR</code>, or <code>SCHED_DEADLINE</code> policy can potentially block all other threads from accessing the CPU forever. Prior to Linux 2.6.25, the only way of preventing a runaway real-time process from freezing the system was to run (at the console) a shell scheduled under a higher static priority than the tested application. This allows an emergency kill of tested real-time applications that do not block or terminate as expected. </p>
 <p> Since Linux 2.6.25, there are other techniques for dealing with runaway real-time and deadline processes. One of these is to use the <code>RLIMIT_RTTIME</code> resource limit to set a ceiling on the CPU time that a real-time process may consume. See <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2) for details. </p>
 <p> Since version 2.6.25, Linux also provides two <i>/proc</i> files that can be used to reserve a certain amount of CPU time to be used by non-real-time processes. Reserving CPU time in this fashion allows some CPU time to be allocated to (say) a root shell that can be used to kill a runaway process. Both of these files specify time values in microseconds:</p>
 <dl>
-<dt><i>/proc/sys/kernel/sched_rt_period_us</i></p>
-<dd>This file specifies a scheduling period that is equivalent to 100% CPU bandwidth. The value in this file can range from 1 to <code>INT_MAX</code>, giving an operating range of 1 microsecond to around 35 minutes. The default value in this file is 1,000,000 (1 second).</p>
-<dt><i>/proc/sys/kernel/sched_rt_runtime_us</i></p>
-<dd>The value in this file specifies how much of the &quot;period&quot; time can be used by all real-time and deadline scheduled processes on the system. The value in this file can range from -1 to <code>INT_MAX</code>-1. Specifying -1 makes the run time the same as the period; that is, no CPU time is set aside for non-real-time processes (which was the Linux behavior before kernel 2.6.25). The default value in this file is 950,000 (0.95 seconds), meaning that 5% of the CPU time is reserved for processes that don&#8217;t run under a real-time or deadline scheduling policy.</dl>
+<dt><i>/proc/sys/kernel/sched_rt_period_us</i></dt>
+<dd>This file specifies a scheduling period that is equivalent to 100% CPU bandwidth. The value in this file can range from 1 to <code>INT_MAX</code>, giving an operating range of 1 microsecond to around 35 minutes. The default value in this file is 1,000,000 (1 second).</dd>
+<dt><i>/proc/sys/kernel/sched_rt_runtime_us</i></dt>
+<dd>The value in this file specifies how much of the &quot;period&quot; time can be used by all real-time and deadline scheduled processes on the system. The value in this file can range from -1 to <code>INT_MAX</code>-1. Specifying -1 makes the run time the same as the period; that is, no CPU time is set aside for non-real-time processes (which was the Linux behavior before kernel 2.6.25). The default value in this file is 950,000 (0.95 seconds), meaning that 5% of the CPU time is reserved for processes that don&#8217;t run under a real-time or deadline scheduling policy.</dd></dl>
 <h3>Response time</h3>
 <p>A blocked high priority thread waiting for I/O has a certain response time before it is scheduled again. The device driver writer can greatly reduce this response time by using a &quot;slow interrupt&quot; interrupt handler.</p>
 <h3>Miscellaneous</h3>
@@ -183,16 +183,16 @@ description: "sched – overview of CPU scheduling"
 <p>When scheduling non-real-time processes (i.e., those scheduled under the <code>SCHED_OTHER</code>, <code>SCHED_BATCH</code>, and <code>SCHED_IDLE</code> policies), the CFS scheduler employs a technique known as &quot;group scheduling&quot;, if the kernel was configured with the <code>CONFIG_FAIR_GROUP_SCHED</code> option (which is typical). </p>
 <p> Under group scheduling, threads are scheduled in &quot;task groups&quot;. Task groups have a hierarchical relationship, rooted under the initial task group on the system, known as the &quot;root task group&quot;. Task groups are formed in the following circumstances:</p>
 <dl>
-<dt>*</p>
-<dd>All of the threads in a CPU cgroup form a task group. The parent of this task group is the task group of the corresponding parent cgroup.</p>
-<dt>*</p>
-<dd>If autogrouping is enabled, then all of the threads that are (implicitly) placed in an autogroup (i.e., the same session, as created by <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2)) form a task group. Each new autogroup is thus a separate task group. The root task group is the parent of all such autogroups.</p>
-<dt>*</p>
-<dd>If autogrouping is enabled, then the root task group consists of all processes in the root CPU cgroup that were not otherwise implicitly placed into a new autogroup.</p>
-<dt>*</p>
-<dd>If autogrouping is disabled, then the root task group consists of all processes in the root CPU cgroup.</p>
-<dt>*</p>
-<dd>If group scheduling was disabled (i.e., the kernel was configured without <code>CONFIG_FAIR_GROUP_SCHED</code>), then all of the processes on the system are notionally placed in a single task group.</dl>
+<dt>*</dt>
+<dd>All of the threads in a CPU cgroup form a task group. The parent of this task group is the task group of the corresponding parent cgroup.</dd>
+<dt>*</dt>
+<dd>If autogrouping is enabled, then all of the threads that are (implicitly) placed in an autogroup (i.e., the same session, as created by <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2)) form a task group. Each new autogroup is thus a separate task group. The root task group is the parent of all such autogroups.</dd>
+<dt>*</dt>
+<dd>If autogrouping is enabled, then the root task group consists of all processes in the root CPU cgroup that were not otherwise implicitly placed into a new autogroup.</dd>
+<dt>*</dt>
+<dd>If autogrouping is disabled, then the root task group consists of all processes in the root CPU cgroup.</dd>
+<dt>*</dt>
+<dd>If group scheduling was disabled (i.e., the kernel was configured without <code>CONFIG_FAIR_GROUP_SCHED</code>), then all of the processes on the system are notionally placed in a single task group.</dd></dl>
 <p> Under group scheduling, a thread&#8217;s nice value has an effect for scheduling decisions <i>only relative to other threads in the same task group</i>. This has some surprising consequences in terms of the traditional semantics of the nice value on UNIX systems. In particular, if autogrouping is enabled (which is the default in various distributions), then employing <code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2) or <code><a href="/docs/linux/man/1-nice/">nice</a></code>(1) on a process has an effect only for scheduling relative to other processes executed in the same session (typically: the same terminal window). </p>
 <p> Conversely, for two processes that are (for example) the sole CPU-bound processes in different sessions (e.g., different terminal windows, each of whose jobs are tied to different autogroups), <i>modifying the nice value of the process in one of the sessions</i> <i>has no effect</i> in terms of the scheduler&#8217;s decisions relative to the process in the other session. A possibly useful workaround here is to use a command such as the following to modify the autogroup nice value for <i>all</i> of the processes in a terminal session: </p>
 <p> $ <code>echo 10 &gt; /proc/self/autogroup</code></p>

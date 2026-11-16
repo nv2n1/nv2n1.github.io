@@ -10,8 +10,6 @@ description: "sasl_authorize_t – The SASL authorization callback"
 <p>sasl_authorize_t &#8211; The SASL authorization callback </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_authorize_t(void *context,
 const char *requested_user, unsigned alen,
 const char *auth_identity, unsigned alen,

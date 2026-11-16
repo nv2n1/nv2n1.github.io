@@ -14,10 +14,10 @@ description: "ata_scsi_qc_new – acquire new ata_queued_cmd reference"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>ATA device to which the new command is attached</dl>
+</dd><dd>ATA device to which the new command is attached</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>SCSI command that originated this ATA command</dl>
+<dd>SCSI command that originated this ATA command</dd></dl>
 <h2>Description</h2>
 <p>Obtain a reference to an unused ata_queued_cmd structure, which is the basic libata structure representing a single ATA command sent to the hardware. </p>
 <p> If a command was available, fill in the SCSI-specific portions of the structure with information on the current command. </p>
@@ -27,5 +27,5 @@ description: "ata_scsi_qc_new – acquire new ata_queued_cmd reference"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

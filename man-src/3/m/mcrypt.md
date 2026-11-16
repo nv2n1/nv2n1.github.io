@@ -221,9 +221,9 @@ main()
 <p> Questions about libmcrypt should be sent to:</p>
 <dl>
 <dt>
-<dd> mcrypt-dev [at] lists.hellug.gr or, if this fails, to the author addresses given below. The mcrypt home page is:</p>
+</dt><dd> mcrypt-dev [at] lists.hellug.gr or, if this fails, to the author addresses given below. The mcrypt home page is:</dd>
 <dt>
-<dd> <a rel="nofollow" href="http://mcrypt.hellug.gr">http://mcrypt.hellug.gr</a></dl>
+</dt><dd> <a rel="nofollow" href="http://mcrypt.hellug.gr">http://mcrypt.hellug.gr</a></dd></dl>
 <h2>AUTHORS</h2>
 <p> Version 2.4 Copyright (C) 1998-1999 Nikos Mavroyanopoulos (nmav [at] hellug.gr). </p>
 <p> Thanks to all the people who reported problems and suggested various improvements for mcrypt; who are too numerous to cite here. </p>

@@ -17,11 +17,11 @@ void bson_string_append_printf(bson_string_t *string,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>string</code></p>
-<dd> A <code>bson_string_t</code> \&amp;.</dl>
+<dt><code>string</code></dt>
+<dd> A <code>bson_string_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>format</code></p>
-<dd> A printf style format string.</dl>
+<dt><code>format</code></dt>
+<dd> A printf style format string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Like bson_string_append() but formats a printf style string and then appends that to <code>string</code> \&amp;. </p>
 <h2>COLOPHON</h2>

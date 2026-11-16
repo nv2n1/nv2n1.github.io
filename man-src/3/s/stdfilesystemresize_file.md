@@ -11,15 +11,10 @@ std::filesystem::resize_file - std::filesystem::resize_file
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     void resize_file(const std::filesystem::path &amp;p,
-
                      std::uintmax_t new_size);
-
 void resize_file(const std::filesystem::path &amp;p, (since C++ 17)
-
                                                      std::uintmax_t new_size,
-
                  std::error_code &amp;ec) noexcept;</code></pre> 
 Changes the size of the regular file named by p as if by POSIX truncate: if the file size was previously larger than new_size, the remainder of the file is discarded. If the file was previously smaller than new_size, the file size is increased and the new area appears as if zero-filled. 
 
@@ -45,17 +40,11 @@ On systems that support sparse files, increasing the file size does not increase
 
 demonstrates the effect of creating a sparse file on the free space 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;example.bin&quot;;
     std::ofstream(p).put('a');

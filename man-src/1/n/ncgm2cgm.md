@@ -17,10 +17,10 @@ description: "cgm2ncgm ncgm2cgm – filter NCAR CGM to/from vanilla CGM"
 <p> <code>ncgm2cgm</code> and <code>cgm2ncgm</code> are filters for converting back and forth between <code>NCAR Computer Graphics Metafile</code> (CGM) and vanilla CGM. <code>ncgm2cgm</code> strips the wrapper from NCAR CGM records while cgm2ncgm restores it. I/O is done from standard in/out respectively. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code><i>&nbsp;<wbr>size</i></p>
-<dd> Set block size in bytes for reads/writes of vanilla CGM. The default blocking factor is 1024.</p>
-<dt><code>-V</code></p>
-<dd> Print the version number and then exit.</dl>
+<dt><code>-s</code><i>&nbsp;<wbr>size</i></dt>
+<dd> Set block size in bytes for reads/writes of vanilla CGM. The default blocking factor is 1024.</dd>
+<dt><code>-V</code></dt>
+<dd> Print the version number and then exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <i>ISO/DIS 8632 CGM Functional Specification</i> (Nov. 1985)

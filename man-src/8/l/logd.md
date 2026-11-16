@@ -15,8 +15,8 @@ description: "logd – job output logging daemon"
 <p> Output is timestamped and written, with the job name, to <i>/var/log/boot</i> or stored in memory until the file is writable.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;daemon</code></p>
-<dd>Detaches from the terminal and runs in the background.</dl>
+<dt><code>&#8211;daemon</code></dt>
+<dd>Detaches from the terminal and runs in the background.</dd></dl>
 <h2>Startup</h2>
 <p>To eliminate race conditions on startup, such as not being ready to receive connections when the first job is started, the following procedure is used. </p>
 <p> Once ready to receive connections, <code>logd</code> raises the <i>SIGSTOP</i> signal, putting itself to sleep until continued by another process. </p>

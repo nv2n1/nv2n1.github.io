@@ -20,12 +20,12 @@ description: "bundle-list – List all the gems in the bundle"
 <p> bundle list &#8211;only-group dev &#8211;paths</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;name-only</code></p>
-<dd>Print only the name of each gem.</p>
-<dt><code>&#8211;paths</code></p>
-<dd>Print the path to each gem in the bundle.</p>
-<dt><code>&#8211;without-group</code></p>
-<dd>Print all gems expect from a group.</p>
-<dt><code>&#8211;only-group</code></p>
-<dd>Print gems from a particular group. </p>
+<dt><code>&#8211;name-only</code></dt>
+<dd>Print only the name of each gem.</dd>
+<dt><code>&#8211;paths</code></dt>
+<dd>Print the path to each gem in the bundle.</dd>
+<dt><code>&#8211;without-group</code></dt>
+<dd>Print all gems expect from a group.</dd>
+<dt><code>&#8211;only-group</code></dt>
+<dd>Print gems from a particular group. </dd>
 </dl>

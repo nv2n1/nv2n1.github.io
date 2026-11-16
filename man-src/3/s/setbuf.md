@@ -10,13 +10,9 @@ description: "setbuf, setbuffer, setlinebuf, setvbuf – stream buffering operat
 <p>setbuf, setbuffer, setlinebuf, setvbuf &#8211; stream buffering operations</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
-
 void setbuf(FILE *stream, char *buf);
-
 void setbuffer(FILE *stream, char *buf, size_t size);
-
 void setlinebuf(FILE *stream);
-
 int setvbuf(FILE *stream, char *buf, int mode, size_t size);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>setbuffer</code>(), <code>setlinebuf</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
@@ -29,13 +25,13 @@ int setvbuf(FILE *stream, char *buf, int mode, size_t size);</code></pre>
 <p> The <code>setvbuf</code>() function may be used on any open stream to change its buffer. The <i>mode</i> argument must be one of the following three macros:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>_IONBF</code></p>
-<dd>unbuffered</p>
-<dt><code>_IOLBF</code></p>
-<dd>line buffered</p>
-<dt><code>_IOFBF</code></p>
-<dd>fully buffered</dl>
+</dd><dl>
+<dt><code>_IONBF</code></dt>
+<dd>unbuffered</dd>
+<dt><code>_IOLBF</code></dt>
+<dd>line buffered</dd>
+<dt><code>_IOFBF</code></dt>
+<dd>fully buffered</dd></dl>
 </dl>
 <p> Except for unbuffered files, the <i>buf</i> argument should point to a buffer at least <i>size</i> bytes long; this buffer will be used instead of the current buffer. If the argument <i>buf</i> is NULL, only the mode is affected; a new buffer will be allocated on the next read or write operation. The <code>setvbuf</code>() function may be used only after opening a stream and before any other operations have been performed on it. </p>
 <p> The other three calls are, in effect, simply aliases for calls to <code>setvbuf</code>(). The <code>setbuf</code>() function is exactly equivalent to the call </p>

@@ -40,18 +40,12 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;cstring&gt;
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;asin(1.0) = &quot; &lt;&lt; asin(1) &lt;&lt; '
 '

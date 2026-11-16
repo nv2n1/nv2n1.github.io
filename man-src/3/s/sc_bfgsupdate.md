@@ -11,7 +11,6 @@ description: "sc::BFGSUpdate –"
 <p> The <code>DFPUpdate</code> class is used to specify a Broyden, Fletcher, Goldfarb, and Shanno hessian update scheme.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;update.h&gt;</code></pre>
 <p> Inherits <code>sc::DFPUpdate</code>.</p>
 <h3>Public Member Functions</h3>

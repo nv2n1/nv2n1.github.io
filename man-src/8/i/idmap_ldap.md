@@ -14,16 +14,16 @@ description: "idmap_ldap – Samba’s idmap_ldap Backend for Winbind"
 <h2>Idmap Options</h2>
 <p>ldap_base_dn = DN</p>
 <dl>
-<dd>Defines the directory base suffix to use for SID/uid/gid mapping entries. If not defined, idmap_ldap will default to using the &quot;ldap idmap suffix&quot; option from smb.conf.</dl>
+<dd>Defines the directory base suffix to use for SID/uid/gid mapping entries. If not defined, idmap_ldap will default to using the &quot;ldap idmap suffix&quot; option from smb.conf.</dd></dl>
 <p> ldap_user_dn = DN</p>
 <dl>
-<dd>Defines the user DN to be used for authentication. The secret for authenticating this user should be stored with net idmap secret (see <code><a href="/docs/linux/man/8-net/">net</a></code>(8)). If absent, the ldap credentials from the ldap passdb configuration are used, and if these are also absent, an anonymous bind will be performed as last fallback.</dl>
+<dd>Defines the user DN to be used for authentication. The secret for authenticating this user should be stored with net idmap secret (see <code><a href="/docs/linux/man/8-net/">net</a></code>(8)). If absent, the ldap credentials from the ldap passdb configuration are used, and if these are also absent, an anonymous bind will be performed as last fallback.</dd></dl>
 <p> ldap_url = <a href="ldap://server/">ldap://server/</a></p>
 <dl>
-<dd>Specifies the LDAP server to use for SID/uid/gid map entries. If not defined, idmap_ldap will assume that <a href="ldap://localhost/">ldap://localhost/</a> should be used.</dl>
+<dd>Specifies the LDAP server to use for SID/uid/gid map entries. If not defined, idmap_ldap will assume that <a href="ldap://localhost/">ldap://localhost/</a> should be used.</dd></dl>
 <p> range = low &#8211; high</p>
 <dl>
-<dd>Defines the available matching uid and gid range for which the backend is authoritative.</dl>
+<dd>Defines the available matching uid and gid range for which the backend is authoritative.</dd></dl>
 <h2>Examples</h2>
 <p>The following example shows how an ldap directory is used as the default idmap backend. It also configures the idmap range and base directory suffix. The secret for the ldap_user_dn has to be set with &quot;net idmap secret &#8216;*&#8217; password&quot;. </p>
 <dl>
@@ -34,7 +34,7 @@ description: "idmap_ldap – Samba’s idmap_ldap Backend for Winbind"
  idmap config * : ldap_url = <a href="ldap://localhost/">ldap://localhost/</a>
  idmap config * : ldap_base_dn = ou=idmap,dc=example,dc=com
  idmap config * : ldap_user_dn = cn=idmap_admin,dc=example,dc=com</pre>
-</dl>
+</dd></dl>
 <p> This example shows how ldap can be used as a readonly backend while tdb is the default backend used to store the mappings. It adds an explicit configuration for some domain DOM1, that uses the ldap idmap backend. Note that a range disjoint from the default range is used. </p>
 <dl>
 <dd>
@@ -48,7 +48,7 @@ description: "idmap_ldap – Samba’s idmap_ldap Backend for Winbind"
  idmap config DOM1 : ldap_url = <a href="ldap://server/">ldap://server/</a>
  idmap config DOM1 : ldap_base_dn = ou=idmap,dc=dom1,dc=example,dc=com
  idmap config DOM1 : ldap_user_dn = cn=idmap_admin,dc=dom1,dc=example,dc=com</pre>
-</dl>
+</dd></dl>
 <h2>Note</h2>
 <p>In order to use authentication against ldap servers you may need to provide a DN and a password. To avoid exposing the password in plain text in the configuration file we store it into a security store. The &quot;net idmap &quot; command is used to store a secret for the DN specified in a specific idmap domain.</p>
 <h2>Author</h2>

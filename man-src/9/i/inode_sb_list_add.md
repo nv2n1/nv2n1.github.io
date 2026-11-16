@@ -15,7 +15,7 @@ inode_sb_list_add - add inode to the superblock list of inodes
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode to add</dl>
+<dl><dd></dd><dd>inode to add</dd></dl>
 
 <h2>Copyright</h2>
 

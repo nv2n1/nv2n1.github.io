@@ -10,16 +10,11 @@ description: "std::hermite,std::hermitef,std::hermitel – std::hermite,std::her
 <p>std::hermite,std::hermitef,std::hermitel &#8211; std::hermite,std::hermitef,std::hermitel</p>
 <h2>Synopsis</h2>
 <pre><code>double hermite(unsigned int n, double x);
-
 float hermite(unsigned int n, float x);
-
 long double hermite(unsigned int n, long double x);
 (1)(since C++ 17)
-
     float hermitef(unsigned int n, float x);
-
 long double hermitel(unsigned int n, long double x);
-
 double hermite(unsigned int n, IntegralType x);
 (2)(since C++ 17)</code></pre>
 <p>1) Computes the (physicist&#8217;s) Hermite_polynomials of the degree n and argument x<br />
@@ -58,21 +53,16 @@ e-x2<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 double H3(double x)
 {
     return 8 * std::pow(x, 3) - 12 * x;
 }
-
 double H4(double x)
 {
     return 16 * std::pow(x, 4) - 48 * x * x + 12;
 }
-
 int main()
-
 {
     // spot-checks
     std::cout &lt;&lt; std::hermite(3, 10) &lt;&lt; '=' &lt;&lt; H3(10) &lt;&lt; '

@@ -15,23 +15,23 @@ skb_append_datato_frags - append the user data to a skb
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>sock structure</dl>
+<dl><dd></dd><dd>sock structure</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>skb structure to be appended with user data.</dl>
+<dl><dd>skb structure to be appended with user data.</dd></dl>
  
 
  <i>getfrag</i>
-<dl><dd>call back function to be used for getting the user data</dl>
+<dl><dd>call back function to be used for getting the user data</dd></dl>
  
 
  <i>from</i>
-<dl><dd>pointer to user message iov</dl>
+<dl><dd>pointer to user message iov</dd></dl>
  
 
  <i>length</i>
-<dl><dd>length of the iov message</dl>
+<dl><dd>length of the iov message</dd></dl>
 
 <h2>Description</h2>
 

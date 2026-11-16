@@ -16,8 +16,8 @@ description: "ldns_init_random"
 <p> int ldns_init_random(FILE *fd, unsigned int size); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_init_random</i>()</p>
-<dd>Seed the random function. If the file descriptor is specified, the random generator is seeded with data from that file. If not, /dev/urandom is used. </p>
+<dt> <i>ldns_init_random</i>()</dt>
+<dd>Seed the random function. If the file descriptor is specified, the random generator is seeded with data from that file. If not, /dev/urandom is used. </dd>
 <p> applications should call this if they need entropy data within ldns If openSSL is available, it is automatically seeded from /dev/urandom or /dev/random. </p>
 <p> If you need more entropy, or have no openssl available, this function MUST be called at the start of the program </p>
 <p> If openssl *is* available, this function just adds more entropy </p>
@@ -34,3 +34,4 @@ description: "ldns_init_random"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

@@ -16,14 +16,14 @@ description: "icepatch2client – The IcePatch2 client."
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Running+the+IcePatch2+Client">http://doc.zeroc.com/display/Ice/Running+the+IcePatch2+Client</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Displays help message. </p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Displays the Ice version. </p>
-<dt><code>-t</code>, <code>&#8211;thorough</code></p>
+ Displays help message. </dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Displays the Ice version. </dd>
+<dt><code>-t</code>, <code>&#8211;thorough</code></dt>
 <dd>
- Do a thorough patch, recomputing all checksums. </p>
+ Do a thorough patch, recomputing all checksums. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icepatch2calc/">icepatch2calc</a></code>(1), <code><a href="/docs/linux/man/1-icepatch2server/">icepatch2server</a></code>(1) </p>

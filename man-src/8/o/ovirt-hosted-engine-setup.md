@@ -15,21 +15,21 @@ description: "ovirt-hosted-engine-setup – Tool for deploying hosted engine VM"
 <h2>Options</h2>
 <p>The following are general options you can use with this command:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Show the help message and exit.</p>
-<dt><code>&#8211;config-append=file</code></p>
-<dd>Load extra configuration files. The format of the files is the same used in generated answer files.</p>
-<dt><code>&#8211;generate-answer=file</code></p>
-<dd>Generate answer file to the specified path instead of using the default location: /etc/ovirt-hosted-engine/answers.conf</p>
-<dt><code>&#8211;upgrade-appliance</code></p>
-<dd>Upgrade the engine appliance.</p>
-<dt><code>&#8211;rollback-upgrade</code></p>
-<dd>Rollback using a backup saved in a previous upgrade attempt. </p>
+<dt><code>&#8211;help</code></dt>
+<dd>Show the help message and exit.</dd>
+<dt><code>&#8211;config-append=file</code></dt>
+<dd>Load extra configuration files. The format of the files is the same used in generated answer files.</dd>
+<dt><code>&#8211;generate-answer=file</code></dt>
+<dd>Generate answer file to the specified path instead of using the default location: /etc/ovirt-hosted-engine/answers.conf</dd>
+<dt><code>&#8211;upgrade-appliance</code></dt>
+<dd>Upgrade the engine appliance.</dd>
+<dt><code>&#8211;rollback-upgrade</code></dt>
+<dd>Rollback using a backup saved in a previous upgrade attempt. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/ovirt-hosted-engine/answers.conf</i></p>
-<dd>Default location for generated answer file. The file must be used on additional hosts using the option &#8211;config-append </p>
+<dt><i>/etc/ovirt-hosted-engine/answers.conf</i></dt>
+<dd>Default location for generated answer file. The file must be used on additional hosts using the option &#8211;config-append </dd>
 </dl>
 <h2>Example</h2>
 <p>This is an answers.conf example file: </p>

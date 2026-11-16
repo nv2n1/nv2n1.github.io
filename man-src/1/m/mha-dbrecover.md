@@ -17,11 +17,11 @@ description: "mha-dbrecover – rebuild a MHonArc archive database"
 <h2>OPTIONS</h2>
 <p> <code>mha-dbrecover</code> takes all the options available to <code>mhonarc</code> along with the following additional options:</p>
 <dl>
-<dt>&quot;-dbr-startnum&quot; <i>#</i></p>
-<dd> The starting message number to recover data from. This option is useful if you have many message files in a directory, but you only want to recover a subset of the files. </p>
+<dt>&quot;-dbr-startnum&quot; <i>#</i></dt>
+<dd> The starting message number to recover data from. This option is useful if you have many message files in a directory, but you only want to recover a subset of the files. </dd>
 <p> If this option is not specified, the starting number is 0.</p>
-<dt>&quot;-dbr-endnum&quot; <i>#</i></p>
-<dd> The ending message number to recover data from. This option is useful if you have many message files in a directory, but you only want to recover a subset of the files. </p>
+<dt>&quot;-dbr-endnum&quot; <i>#</i></dt>
+<dd> The ending message number to recover data from. This option is useful if you have many message files in a directory, but you only want to recover a subset of the files. </dd>
 <p> If this option is not specified, all messages starting from <tt>&quot;-dbr-startnum&quot;</tt> will be recovered.</dl>
 <p> <font SIZE="-1"><code>NOTE:</code></font> Only a subset of the options available to <code>mhonarc</code> are actually supported since many options are not applicable for recovering operations.</p>
 <h2>AVAILABILITY</h2>
@@ -30,3 +30,4 @@ description: "mha-dbrecover – rebuild a MHonArc archive database"
 <p> Earl Hood, mhonarc [at] mhonarc.org </p>
 <p> MHonArc comes with <font SIZE="-1">ABSOLUTELY</font> <font SIZE="-1">NO</font> <font SIZE="-1">WARRANTY</font> and MHonArc may be copied only under the terms of the <font SIZE="-1">GNU</font> General Public License, which may be found in the MHonArc distribution. </p>
 <h2>Index</h2>
+</p>

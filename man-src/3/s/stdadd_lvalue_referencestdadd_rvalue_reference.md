@@ -10,15 +10,11 @@ description: "std::add_lvalue_reference,std::add_rvalue_reference – std::add_l
 <p>std::add_lvalue_reference,std::add_rvalue_reference &#8211; std::add_lvalue_reference,std::add_rvalue_reference</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct add_lvalue_reference;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct add_rvalue_reference;</code></pre>
 <p>Creates a lvalue or rvalue reference type of T.<br />
 1) If T is an object type or a function type that has no cv- or ref- qualifier, provides a member typedef type which is T&amp;. If T is an rvalue reference to some type U, then type is U&amp;. Otherwise, type is T.<br />
@@ -57,7 +53,6 @@ std::add_rvalue_reference&lt;T&amp;&amp;&gt;::type is T&amp;&amp; </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
 {

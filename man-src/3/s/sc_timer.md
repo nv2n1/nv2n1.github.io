@@ -11,9 +11,7 @@ description: "sc::Timer –"
 <p> The <code>Timer</code> class uses <code>RegionTimer</code> to time intervals in an exception safe manner.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;regtime.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>Timer</code> (const char *name)<br />
  <i>Start timing a region using the default </i><code>RegionTimer</code> and activate the timer.<br />

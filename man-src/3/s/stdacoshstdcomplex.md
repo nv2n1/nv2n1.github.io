@@ -11,10 +11,8 @@ std::acosh(std::complex) - std::acosh(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         complex&lt;T&gt; acosh(const complex&lt;T&gt; &amp;z);</code></pre> 
 Computes complex arc hyperbolic cosine of a complex value z with branch cut at values less than 1 along the real axis. 
 
@@ -60,10 +58,8 @@ acos(z), or simply i acos(z) in the upper half of the complex plane.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::fixed;
     std::complex&lt;double&gt; z1(0.5, 0);

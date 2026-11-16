@@ -14,7 +14,7 @@ description: "sys_acct – enable/disable process accounting"
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>file name for accounting records or NULL to shutdown accounting</dl>
+</dd><dd>file name for accounting records or NULL to shutdown accounting</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 for success or negative errno values for failure. </p>
 <p> <code>sys_acct</code> is the only system call needed to implement process accounting. It takes the name of the file where accounting records should be written. If the filename is NULL, accounting will be shutdown.</p>

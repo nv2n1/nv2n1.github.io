@@ -24,10 +24,10 @@ All arguments are in plotter address units (PAUs). By default, one PAU is 1/1023
 
  Note: A call to the SPPS routine SETI will change the definition of a PAU. Such calls are no longer recommended, but the possibility still exists.
 <dl><dt>LMJX and LMNX
-<dd>(input expressions of type INTEGER) are the lengths, in plotter address units, of major and minor ticks on the X axis. The default values are 12 and 8.
-<dt>LMJY and LMNY
-<dd>(input expressions of type INTEGER) are the lengths, in plotter address units, of major and minor ticks on the Y axis. The default values are 12 and 8.
-<dd>By default, tick marks point inward. Negative values of LMJX, LMNX, LMJY, and LMNY may be used to create outward-pointing tick marks.</dl>
+</dt><dd>(input expressions of type INTEGER) are the lengths, in plotter address units, of major and minor ticks on the X axis. The default values are 12 and 8.
+</dd><dt>LMJY and LMNY
+</dt><dd>(input expressions of type INTEGER) are the lengths, in plotter address units, of major and minor ticks on the Y axis. The default values are 12 and 8.
+</dd><dd>By default, tick marks point inward. Negative values of LMJX, LMNX, LMJY, and LMNY may be used to create outward-pointing tick marks.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

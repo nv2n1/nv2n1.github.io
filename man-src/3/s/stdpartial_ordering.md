@@ -58,9 +58,7 @@ u &#8211; an unused parameter of any type that accepts literal zero argument</p>
 <p>true if v is equivalent, false if v is less, greater, or unordered<br />
 &nbsp;operator!= </p>
 <pre><code>friend constexpr bool operator!=(partial_ordering v, /*unspecified*/ u) noexcept;
-
 friend constexpr bool operator!=(/*unspecified*/ u, partial_ordering v) noexcept;
-
 </code></pre>
 <h2>Parameters</h2>
 <p>v &#8211; a std::partial_ordering value to check<br />

@@ -18,12 +18,12 @@ const char *
 <code>Tk_NameOfAnchor(</code><i>anchor</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting, or NULL.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) String value contains name of anchor point: &#8220;n&#8221;, &#8220;ne&#8221;, &#8220;e&#8221;, &#8220;se&#8221;, &#8220;s&#8221;, &#8220;sw&#8221;, &#8220;w&#8221;, &#8220;nw&#8221;, or &#8220;center&#8221;; internal rep will be modified to cache corresponding Tk_Anchor.</p>
-<dd>const char <i>*string</i> (in) Same as <i>objPtr</i> except description of anchor point is passed as a string.</p>
-<dd>int <i>*anchorPtr</i> (out) Pointer to location in which to store anchor position corresponding to <i>objPtr</i> or <i>string</i>.</p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting, or NULL.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) String value contains name of anchor point: &#8220;n&#8221;, &#8220;ne&#8221;, &#8220;e&#8221;, &#8220;se&#8221;, &#8220;s&#8221;, &#8220;sw&#8221;, &#8220;w&#8221;, &#8220;nw&#8221;, or &#8220;center&#8221;; internal rep will be modified to cache corresponding Tk_Anchor.</dd>
+<dd>const char <i>*string</i> (in) Same as <i>objPtr</i> except description of anchor point is passed as a string.</dd>
+<dd>int <i>*anchorPtr</i> (out) Pointer to location in which to store anchor position corresponding to <i>objPtr</i> or <i>string</i>.</dd>
 <dd>Tk_Anchor <i>anchor</i> (in) Anchor position, e.g. <code>TCL_ANCHOR_CENTER</code>.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p><code>Tk_GetAnchorFromObj</code> places in <i>*anchorPtr</i> an anchor position (enumerated type <code>Tk_Anchor</code>) corresponding to <i>objPtr</i>&#8216;s value. The result will be one of <code>TK_ANCHOR_N</code>, <code>TK_ANCHOR_NE</code>, <code>TK_ANCHOR_E</code>, <code>TK_ANCHOR_SE</code>, <code>TK_ANCHOR_S</code>, <code>TK_ANCHOR_SW</code>, <code>TK_ANCHOR_W</code>, <code>TK_ANCHOR_NW</code>, or <code>TK_ANCHOR_CENTER</code>. Anchor positions are typically used for indicating a point on an object that will be used to position the object, e.g. <code>TK_ANCHOR_N</code> means position the top center point of the object at a particular place. </p>
 <p> Under normal circumstances the return value is <code>TCL_OK</code> and <i>interp</i> is unused. If <i>string</i> does not contain a valid anchor position or an abbreviation of one of these names, <code>TCL_ERROR</code> is returned, <i>*anchorPtr</i> is unmodified, and an error message is stored in <i>interp</i>&#8216;s result if <i>interp</i> is not NULL. <code>Tk_GetAnchorFromObj</code> caches information about the return value in <i>objPtr</i>, which speeds up future calls to <code>Tk_GetAnchorFromObj</code> with the same <i>objPtr</i>. </p>

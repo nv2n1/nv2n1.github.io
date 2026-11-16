@@ -13,46 +13,46 @@ description: "PZSTD – parallelised Zstandard compression, al la pigz"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> pzstd [args] [FILE(s)]</dl>
+</dt><dd> pzstd [args] [FILE(s)]</dd></dl>
 <h3>Parallel ZSTD options:</h3>
 <dl>
-<dt><code>-p</code>, <code>&#8211;processes</code></p>
-<dd> # : number of threads to use for (de)compression (default:&lt;numcpus&gt;)</dl>
+<dt><code>-p</code>, <code>&#8211;processes</code></dt>
+<dd> # : number of threads to use for (de)compression (default:&lt;numcpus&gt;)</dd></dl>
 <h3>ZSTD options:</h3>
 <dl>
-<dt>-#</p>
-<dd> : # compression level (1-19, default:&lt;numcpus&gt;)</p>
-<dt><code>-d</code>, <code>&#8211;decompress</code></p>
-<dd> : decompression</p>
-<dt><code>-o</code></p>
-<dd> file : result stored into `file` (only if 1 input file)</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> : overwrite output without prompting, (de)compress links</p>
-<dt><code>&#8211;rm</code></p>
-<dd> : remove source file(s) after successful (de)compression</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> : preserve source file(s) (default)</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> : display help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> : display version number and exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> : verbose mode; specify multiple times to increase log level (default:2)</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> : suppress warnings; specify twice to suppress errors too</p>
-<dt><code>-c</code>, <code>&#8211;stdout</code></p>
-<dd> : force write to standard output, even if it is the console</p>
-<dt><code>-r</code></p>
-<dd> : operate recursively on directories</p>
-<dt><code>&#8211;ultra</code></p>
-<dd> : enable levels beyond 19, up to 22 (requires more memory)</p>
-<dt><code>-C</code>, <code>&#8211;check</code></p>
-<dd> : integrity check (default)</p>
-<dt><code>&#8211;no-check</code></p>
-<dd> : no integrity check</p>
-<dt><code>-t</code>, <code>&#8211;test</code></p>
-<dd> : test compressed file integrity</p>
-<dt><code>&#8212;</code></p>
-<dd> : all arguments after &quot;&#8211;&quot; are treated as files </p>
+<dt>-#</dt>
+<dd> : # compression level (1-19, default:&lt;numcpus&gt;)</dd>
+<dt><code>-d</code>, <code>&#8211;decompress</code></dt>
+<dd> : decompression</dd>
+<dt><code>-o</code></dt>
+<dd> file : result stored into `file` (only if 1 input file)</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> : overwrite output without prompting, (de)compress links</dd>
+<dt><code>&#8211;rm</code></dt>
+<dd> : remove source file(s) after successful (de)compression</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> : preserve source file(s) (default)</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> : display help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> : display version number and exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> : verbose mode; specify multiple times to increase log level (default:2)</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> : suppress warnings; specify twice to suppress errors too</dd>
+<dt><code>-c</code>, <code>&#8211;stdout</code></dt>
+<dd> : force write to standard output, even if it is the console</dd>
+<dt><code>-r</code></dt>
+<dd> : operate recursively on directories</dd>
+<dt><code>&#8211;ultra</code></dt>
+<dd> : enable levels beyond 19, up to 22 (requires more memory)</dd>
+<dt><code>-C</code>, <code>&#8211;check</code></dt>
+<dd> : integrity check (default)</dd>
+<dt><code>&#8211;no-check</code></dt>
+<dd> : no integrity check</dd>
+<dt><code>-t</code>, <code>&#8211;test</code></dt>
+<dd> : test compressed file integrity</dd>
+<dt><code>&#8212;</code></dt>
+<dd> : all arguments after &quot;&#8211;&quot; are treated as files </dd>
 </dl>
 <h2>Index</h2>

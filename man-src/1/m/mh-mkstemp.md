@@ -11,10 +11,10 @@ description: "mkstemp – create a temporary file"
 <p> mkstemp &#8211; create a temporary file </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>/usr/libexec/nmh/mkstemp</code> [<code>-directory</code> <i>directory</i>] [<code>-prefix</code> <i>prefix</i>] [<code>-suffix</code> <i>suffix</i>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>/usr/libexec/nmh/mkstemp</code> [<code>-directory</code> <i>directory</i>] [<code>-prefix</code> <i>prefix</i>] [<code>-suffix</code> <i>suffix</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mkstemp</code></p>
-<dd>creates a temporary file using <i><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></i>(3), or if the <code>-suffix</code> switch is available and used, <i><a href="/docs/linux/man/3-mkstemps/">mkstemps</a></i>(3). The file name identifies a unique, newly created file, and always contains 6 characters that appear to be random. </p>
+<dd>creates a temporary file using <i><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></i>(3), or if the <code>-suffix</code> switch is available and used, <i><a href="/docs/linux/man/3-mkstemps/">mkstemps</a></i>(3). The file name identifies a unique, newly created file, and always contains 6 characters that appear to be random. </dd>
 <p> The <code>-directory</code> switch specifies a <i>directory</i> in which to create the file. </p>
 <p> The <code>-prefix</code> switch specifies an initial part, before the 6 characters, of the file name. </p>
 <p> The <code>-suffix</code> switch is only supported on platforms that provide the <i><a href="/docs/linux/man/3-mkstemps/">mkstemps</a></i>(3) library function. It specifies a <i>suffix</i> to appear after the 6 characters; if it should begin with a special character such as a period, that must be explicit in <i>suffix</i>. </p>
@@ -27,11 +27,11 @@ description: "mkstemp – create a temporary file"
 <p> <i><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></i>(3), <i><a href="/docs/linux/man/3-mkstemps/">mkstemps</a></i>(3)</p>
 <h2>DEFAULTS</h2>
 <dl>
-<dt>-directory</p>
-<dd> current directory</p>
-<dt>-prefix</p>
-<dd> none</p>
-<dt>-suffix</p>
-<dd> none </p>
+<dt>-directory</dt>
+<dd> current directory</dd>
+<dt>-prefix</dt>
+<dd> none</dd>
+<dt>-suffix</dt>
+<dd> none </dd>
 </dl>
 <h2>Index</h2>

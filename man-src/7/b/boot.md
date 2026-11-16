@@ -11,24 +11,24 @@ description: "boot – System bootup process based on UNIX System V Release 4"
 <h2>Description</h2>
 <p>The <code>bootup process</code> (or &quot;<code>boot sequence</code>&quot;) varies in details among systems, but can be roughly divided into phases controlled by the following components:</p>
 <dl>
-<dt>1.</p>
-<dd>hardware</p>
-<dt>2.</p>
-<dd>operating system (OS) loader</p>
-<dt>3.</p>
-<dd>kernel</p>
-<dt>4.</p>
-<dd>root user-space process (<i>init</i> and <i>inittab</i>)</p>
-<dt>5.</p>
-<dd>boot scripts</dl>
+<dt>1.</dt>
+<dd>hardware</dd>
+<dt>2.</dt>
+<dd>operating system (OS) loader</dd>
+<dt>3.</dt>
+<dd>kernel</dd>
+<dt>4.</dt>
+<dd>root user-space process (<i>init</i> and <i>inittab</i>)</dd>
+<dt>5.</dt>
+<dd>boot scripts</dd></dl>
 <p> Each of these is described below in more detail.</p>
 <h3>Hardware</h3>
 <p>After power-on or hard reset, control is given to a program stored in read-only memory (normally PROM); for historical reasons involving the personal computer, this program is often called &quot;the <code>BIOS</code>&quot;. </p>
 <p> This program normally performs a basic self-test of the machine and accesses nonvolatile memory to read further parameters. This memory in the PC is battery-backed CMOS memory, so most people refer to it as &quot;the <code>CMOS</code>&quot;; outside of the PC world, it is usually called &quot;the <code>NVRAM</code>&quot; (nonvolatile RAM). </p>
 <p> The parameters stored in the NVRAM vary among systems, but as a minimum, they should specify which device can supply an OS loader, or at least which devices may be probed for one; such a device is known as &quot;the <code>boot device</code>&quot;. The hardware boot stage loads the OS loader from a fixed position on the boot device, and then transfers control to it.</p>
 <dl>
-<dt>Note:</p>
-<dd>The device from which the OS loader is read may be attached via a network, in which case the details of booting are further specified by protocols such as DHCP, TFTP, PXE, Etherboot, etc.</dl>
+<dt>Note:</dt>
+<dd>The device from which the OS loader is read may be attached via a network, in which case the details of booting are further specified by protocols such as DHCP, TFTP, PXE, Etherboot, etc.</dd></dl>
 <h3>OS loader</h3>
 <p>The main job of the OS loader is to locate the kernel on some device, load it, and run it. Most OS loaders allow interactive use, in order to enable specification of an alternative kernel (maybe a backup in case the one last compiled isn&#8217;t functioning) and to pass optional parameters to the kernel. </p>
 <p> In a traditional PC, the OS loader is located in the initial 512-byte block of the boot device; this block is known as &quot;the <code>MBR</code>&quot; (Master Boot Record). </p>
@@ -41,15 +41,15 @@ description: "boot – System bootup process based on UNIX System V Release 4"
 <p> Only then does the kernel create the initial userland process, which is given the number 1 as its <code>PID</code> (process ID). Traditionally, this process executes the program <i>/sbin/init</i>, to which are passed the parameters that haven&#8217;t already been handled by the kernel.</p>
 <h3>Root user-space process</h3>
 <dl>
-<dt>Note:</p>
-<dd>The following description applies to an OS based on UNIX System V Release 4. However, a number of widely used systems have adopted a related but fundamentally different approach known as <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), for which the bootup process is detailed in its associated <code><a href="/docs/linux/man/7-bootup/">bootup</a></code>(7).</dl>
+<dt>Note:</dt>
+<dd>The following description applies to an OS based on UNIX System V Release 4. However, a number of widely used systems have adopted a related but fundamentally different approach known as <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), for which the bootup process is detailed in its associated <code><a href="/docs/linux/man/7-bootup/">bootup</a></code>(7).</dd></dl>
 <p> When <i>/sbin/init</i> starts, it reads <i>/etc/inittab</i> for further instructions. This file defines what should be run when the <i>/sbin/init</i> program is instructed to enter a particular <i>run-level</i>, giving the administrator an easy way to establish an environment for some usage; each run-level is associated with a set of services (for example, run-level <code>S</code> is <i>single-user</i> mode, and run-level <code>2</code> entails running most network services). </p>
 <p> The administrator may change the current run-level via <code><a href="/docs/linux/man/1-init/">init</a></code>(1), and query the current run-level via <code><a href="/docs/linux/man/8-runlevel/">runlevel</a></code>(8). </p>
 <p> However, since it is not convenient to manage individual services by editing this file, <i>/etc/inittab</i> only bootstraps a set of scripts that actually start/stop the individual services.</p>
 <h3>Boot scripts</h3>
 <dl>
-<dt>Note:</p>
-<dd>The following description applies to an OS based on UNIX System V Release 4. However, a number of widely used systems (Slackware Linux, FreeBSD, OpenBSD) have a somewhat different scheme for boot scripts.</dl>
+<dt>Note:</dt>
+<dd>The following description applies to an OS based on UNIX System V Release 4. However, a number of widely used systems (Slackware Linux, FreeBSD, OpenBSD) have a somewhat different scheme for boot scripts.</dd></dl>
 <p> For each managed service (mail, nfs server, cron, etc.), there is a single startup script located in a specific directory (<i>/etc/init.d</i> in most versions of Linux). Each of these scripts accepts as a single argument the word &quot;start&quot; (causing it to start the service) or the word &quot;stop&quot; (causing it to stop the service). The script may optionally accept other &quot;convenience&quot; parameters (e.g., &quot;restart&quot; to stop and then start, &quot;status&quot; to display the service status, etc.). Running the script without parameters displays the possible arguments.</p>
 <h3>Sequencing directories</h3>
 <p>To make specific scripts start/stop at specific run-levels and in a specific order, there are <i>sequencing directories</i>, normally of the form <i>/etc/rc[0-6S].d</i>. In each of these directories, there are links (usually symbolic) to the scripts in the <i>/etc/init.d</i> directory. </p>

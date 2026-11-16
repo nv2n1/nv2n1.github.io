@@ -48,46 +48,46 @@ description: "FvwmWindowMenu – open configurable fvwm menu listing current win
 <p>will cause the menu to ignore windows with name beginning with Fvwm or class gkrellm. </p>
 <p> Other options:</p>
 <dl>
-<dt>*FvwmWindowMenu: <i>OnlyIconified</i> {on|off}</p>
-<dd>show only iconified windows</p>
-<dt>*FvwmWindowMenu: <i>AllDesks</i> {on|off}</p>
-<dd>show windows from all desks</p>
-<dt>*FvwmWindowMenu: <i>AllPages</i> {on|off}</p>
-<dd>show windows from all pages</p>
-<dt>*FvwmWindowMenu: <i>MaxLen</i> 32</p>
-<dd>max length in chars of entry</p>
-<dt>*FvwmWindowMenu: <i>MenuName</i> MyMenu</p>
-<dd>name of menu to popup</p>
-<dt>*FvwmWindowMenu: <i>MenuStyle</i> MyMenuStyle</p>
-<dd>name of MenuStyle to apply</p>
-<dt>*FvwmWindowMenu: <i>Debug</i> {0,1,2,3}</p>
-<dd>level of debug info output, 0 means no debug</p>
-<dt>*FvwmWindowMenu: <i>Function</i> MyWindowListFunc</p>
-<dd>function to invoke on menu entries; defaults to WindowListFunc</p>
-<dt>*FvwmWindowMenu: <i>ItemFormat</i> formatstring</p>
-<dd>how to format menu entries; substitutions are made as follows:</p>
+<dt>*FvwmWindowMenu: <i>OnlyIconified</i> {on|off}</dt>
+<dd>show only iconified windows</dd>
+<dt>*FvwmWindowMenu: <i>AllDesks</i> {on|off}</dt>
+<dd>show windows from all desks</dd>
+<dt>*FvwmWindowMenu: <i>AllPages</i> {on|off}</dt>
+<dd>show windows from all pages</dd>
+<dt>*FvwmWindowMenu: <i>MaxLen</i> 32</dt>
+<dd>max length in chars of entry</dd>
+<dt>*FvwmWindowMenu: <i>MenuName</i> MyMenu</dt>
+<dd>name of menu to popup</dd>
+<dt>*FvwmWindowMenu: <i>MenuStyle</i> MyMenuStyle</dt>
+<dd>name of MenuStyle to apply</dd>
+<dt>*FvwmWindowMenu: <i>Debug</i> {0,1,2,3}</dt>
+<dd>level of debug info output, 0 means no debug</dd>
+<dt>*FvwmWindowMenu: <i>Function</i> MyWindowListFunc</dt>
+<dd>function to invoke on menu entries; defaults to WindowListFunc</dd>
+<dt>*FvwmWindowMenu: <i>ItemFormat</i> formatstring</dt>
+<dd>how to format menu entries; substitutions are made as follows:</dd>
 <dl>
 <dd>
-<dl>
-<dt>%n, <tt>%i</tt>, <tt>%c</tt>, <tt>%r</p>
-<dd>the window name, icon name, class or resource</p>
-<dt>%x</tt>, <tt>%y</p>
-<dd>the window x or y coordinates w.r.t. the page the window is on.</p>
-<dt>%X</tt>, <tt>%Y</p>
-<dd>the window x or y coordinates w.r.t. the desk the window is on.</p>
-<dt>%d</p>
-<dd>the window desk number</p>
-<dt>%m</p>
-<dd>the window's mini-icon</p>
-<dt>%M</p>
-<dd>the window's mini-icon only for iconified windows, otherwise empty</p>
-<dt>%t</p>
-<dd>a tab</p>
-<dt>%%</p>
-<dd>a literal %</dl>
+</dd><dl>
+<dt>%n, <tt>%i</tt>, <tt>%c</tt>, <tt>%r</dt>
+<dd>the window name, icon name, class or resource</dd>
+<dt>%x</tt>, <tt>%y</dt>
+<dd>the window x or y coordinates w.r.t. the page the window is on.</dd>
+<dt>%X</tt>, <tt>%Y</dt>
+<dd>the window x or y coordinates w.r.t. the desk the window is on.</dd>
+<dt>%d</dt>
+<dd>the window desk number</dd>
+<dt>%m</dt>
+<dd>the window's mini-icon</dd>
+<dt>%M</dt>
+<dd>the window's mini-icon only for iconified windows, otherwise empty</dd>
+<dt>%t</dt>
+<dd>a tab</dd>
+<dt>%%</dt>
+<dd>a literal %</dd></dl>
 </dl>
 <dl>
-<dd>The format string must be quoted. The default string is ``%m%n%t%t(+%x+%y) - Desk %d</tt>&#8221;.</dl>
+<dd>The format string must be quoted. The default string is ``%m%n%t%t(+%x+%y) - Desk %d</tt>&#8221;.</dd></dl>
 </dl>
 <h2>More Examples</h2>
 <p>Fancy binding of the window menu to the right windows key on some keyboards. Hold this button while navigating using cursor keys, then release it. </p>

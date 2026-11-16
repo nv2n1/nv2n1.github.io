@@ -67,19 +67,19 @@ description: "sane-test – SANE backend for testing frontends"
 <p>Option <code>button</code> (1/1) is a Button test option. Prints some text&#8230;</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/test.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below). The initial values of most of the basic SANE options can be configured in this file. A template containing all the default values is provided together with this backend. One of the more interesting values may be <code>number_of_devices</code>. It can be used to check the frontend&#8217;s ability to show a long list of devices. The config values concerning resolution and geometry can be useful to test the handling of big file sizes. </p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-test.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-test.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/etc/sane.d/test.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below). The initial values of most of the basic SANE options can be configured in this file. A template containing all the default values is provided together with this backend. One of the more interesting values may be <code>number_of_devices</code>. It can be used to check the frontend&#8217;s ability to show a long list of devices. The config values concerning resolution and geometry can be useful to test the handling of big file sizes. </dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-test.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-test.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_TEST</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_TEST</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_TEST=4 </p>
 </dl>
 <h2>See Also</h2>

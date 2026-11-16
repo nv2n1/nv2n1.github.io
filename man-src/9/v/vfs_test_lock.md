@@ -15,11 +15,11 @@ vfs_test_lock - test file byte range lock
 <h2>Arguments</h2>
 
 <i>filp</i>
-<dl><dd><dd>The file to test lock for</dl>
+<dl><dd></dd><dd>The file to test lock for</dd></dl>
  
 
  <i>fl</i>
-<dl><dd>The lock to test; also used to hold result</dl>
+<dl><dd>The lock to test; also used to hold result</dd></dl>
 
 <h2>Description</h2>
 

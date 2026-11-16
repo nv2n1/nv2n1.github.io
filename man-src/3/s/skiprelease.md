@@ -10,7 +10,6 @@ description: "skipRelease – release lock on value."
 <p>skipRelease &#8211; release lock on value.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;util/skiplist.h&gt;
-
 void skipRelease(skipList list, void *lock);
 </code></pre>
 <h2>Arguments</h2>

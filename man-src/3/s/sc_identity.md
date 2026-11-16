@@ -11,7 +11,6 @@ description: "sc::Identity –"
 <p> <code>Identity</code> gives objects a unique identity and ordering relationship relative to all other objects.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;identity.h&gt;</code></pre>
 <p> Inherited by <code>sc::ClassDesc</code>, and <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>

@@ -28,22 +28,22 @@ description: "wminput – an event driver for the wiimote"
 <p> wminput tracking plugins are, by default, installed to /usr/lib/CWiid/plugins. Plugins may also be placed in ~/.CWiid/plugins, and plugins placed here will take precedence. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>-c, &#8211;config [file]</code></p>
-<dd> Choose config file to use.</p>
-<dt><code>-d, &#8211;daemon</code></p>
-<dd> Implies -q, -r, and -w.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Reduce output to errors</p>
-<dt><code>-r, &#8211;reconnect [wait]</code></p>
-<dd> Automatically try reconnect after wiimote disconnect.</p>
-<dt><code>-w, &#8211;wait</code></p>
-<dd> Wait indefinitely for wiimote to connect.</p>
-<dt><code>bdaddr</code></p>
-<dd> Specify the wiimote bluetooth address. The bluetooth device address (bdaddr) of the wiimote can be specified on the command-line, or through the WIIMOTE_BDADDR environment variable, in the that order of precedence. If neither is given, the first wiimote found by hci_inquiry will be used. </p>
+<dt><code>-h</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>-c, &#8211;config [file]</code></dt>
+<dd> Choose config file to use.</dd>
+<dt><code>-d, &#8211;daemon</code></dt>
+<dd> Implies -q, -r, and -w.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Reduce output to errors</dd>
+<dt><code>-r, &#8211;reconnect [wait]</code></dt>
+<dd> Automatically try reconnect after wiimote disconnect.</dd>
+<dt><code>-w, &#8211;wait</code></dt>
+<dd> Wait indefinitely for wiimote to connect.</dd>
+<dt><code>bdaddr</code></dt>
+<dd> Specify the wiimote bluetooth address. The bluetooth device address (bdaddr) of the wiimote can be specified on the command-line, or through the WIIMOTE_BDADDR environment variable, in the that order of precedence. If neither is given, the first wiimote found by hci_inquiry will be used. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wmgui/">wmgui</a></code>(1), </p>

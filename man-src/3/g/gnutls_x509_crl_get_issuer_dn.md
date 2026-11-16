@@ -14,12 +14,12 @@ description: "gnutls_x509_crl_get_issuer_dn – API function"
 <p> <code>int gnutls_x509_crl_get_issuer_dn(const gnutls_x509_crl_t </code><i>crl</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>sizeof_buf</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const gnutls_x509_crl_t crl</p>
-<dd> should contain a gnutls_x509_crl_t structure</p>
-<dt>char * buf</p>
-<dd> a pointer to a structure to hold the peer&#8217;s name (may be null)</p>
-<dt>size_t * sizeof_buf</p>
-<dd> initially holds the size of <i>buf</i></dl>
+<dt>const gnutls_x509_crl_t crl</dt>
+<dd> should contain a gnutls_x509_crl_t structure</dd>
+<dt>char * buf</dt>
+<dd> a pointer to a structure to hold the peer&#8217;s name (may be null)</dd>
+<dt>size_t * sizeof_buf</dt>
+<dd> initially holds the size of <i>buf</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will copy the name of the CRL issuer in the provided buffer. The name will be in the form &quot;C=xxxx,O=yyyy,CN=zzzz&quot; as described in RFC4514. The output string will be ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> If buf is <code>NULL</code> then only the size will be filled.</p>
@@ -34,6 +34,6 @@ description: "gnutls_x509_crl_get_issuer_dn – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

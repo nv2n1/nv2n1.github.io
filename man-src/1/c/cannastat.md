@@ -23,41 +23,41 @@ description: "cannastat – Display information about the Kana-Kanji conversion 
 </pre>
 <p> The items represent the following:</p>
 <dl>
-<dt>USER_NAME</p>
-<dd> User name</p>
-<dt>ID</p>
-<dd> Socket number</p>
-<dt>NO</p>
-<dd> User number</p>
-<dt>U_CX</p>
-<dd> Context number</p>
-<dt>C_TIME</p>
-<dd> Time of connection (h:min)</p>
-<dt>U_TIME</p>
-<dd> User time (h:min:s)</p>
-<dt>I_TIME</p>
-<dd> Idle time (h:min)</p>
-<dt>HOST_NAME</p>
-<dd> Name of the host under which the client exists</dl>
+<dt>USER_NAME</dt>
+<dd> User name</dd>
+<dt>ID</dt>
+<dd> Socket number</dd>
+<dt>NO</dt>
+<dd> User number</dd>
+<dt>U_CX</dt>
+<dd> Context number</dd>
+<dt>C_TIME</dt>
+<dd> Time of connection (h:min)</dd>
+<dt>U_TIME</dt>
+<dd> User time (h:min:s)</dd>
+<dt>I_TIME</dt>
+<dd> Idle time (h:min)</dd>
+<dt>HOST_NAME</dt>
+<dd> Name of the host under which the client exists</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</p>
-<dd> Specifies the Kana-Kanji conversion server.</p>
-<dt>-p</p>
-<dd> Displays the frequency of using the protocol.</p>
-<dt>-t</p>
-<dd> Displays information about the user who started cannastat. It includes the frequency of using the protocol, as well as ID, NO, U_CX, C_TIME, U_TIME, I_TIME, and HOST_NAME.</p>
-<dt>-a</p>
-<dd> Displays all information about all users.</dl>
+<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</dt>
+<dd> Specifies the Kana-Kanji conversion server.</dd>
+<dt>-p</dt>
+<dd> Displays the frequency of using the protocol.</dd>
+<dt>-t</dt>
+<dd> Displays information about the user who started cannastat. It includes the frequency of using the protocol, as well as ID, NO, U_CX, C_TIME, U_TIME, I_TIME, and HOST_NAME.</dd>
+<dt>-a</dt>
+<dd> Displays all information about all users.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/canna/cannahost</p>
-<dd> Name of the host under which cannaserver is in operation.</dl>
+<dt>/etc/canna/cannahost</dt>
+<dd> Name of the host under which cannaserver is in operation.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cannaserver(1M), cannakill(1M), <a href="/docs/linux/man/1-cannacheck/">cannacheck</a>(1) </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>CANNAHOST</p>
-<dd> Specifies the name of the host under which <i>cannaserver(1M)</i> is in operation. </p>
+<dt>CANNAHOST</dt>
+<dd> Specifies the name of the host under which <i>cannaserver(1M)</i> is in operation. </dd>
 </dl>
 <h2>Index</h2>

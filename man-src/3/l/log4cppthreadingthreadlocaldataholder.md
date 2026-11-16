@@ -87,82 +87,82 @@ description: "log4cpp::threading::ThreadLocalDataHolder< T > –"
 <p>Obtains the Object held for the current thread. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dl>
+<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dd></dl>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::get () const [inline]</h3>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::get () const [inline]</h3>
 <p>Obtains the Object held for the current thread. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dl>
+<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dd></dl>
 <h3>template&lt;typename T &gt; T&amp; <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator* () const [inline]</h3>
 <h3>template&lt;typename T &gt; T&amp; <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator* () const [inline]</h3>
 <h3>template&lt;typename T &gt; T&amp; <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator* () const [inline]</h3>
 <p>Obtains the Object held for the current thread. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd><code>get()</code> != NULL</dl>
+<dd><code>get()</code> != NULL</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a reference to the held Object.</dl>
+<dd>a reference to the held Object.</dd></dl>
 <h3>template&lt;typename T &gt; T&amp; <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator* () const [inline]</h3>
 <h3>template&lt;typename T &gt; T&amp; <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator* () const [inline]</h3>
 <p>Obtains the Object held for the current thread. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd><code>get()</code> != NULL</dl>
+<dd><code>get()</code> != NULL</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a reference to the held Object.</dl>
+<dd>a reference to the held Object.</dd></dl>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator-&gt; () const [inline]</h3>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator-&gt; () const [inline]</h3>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator-&gt; () const [inline]</h3>
 <p>Obtains the Object held for the current thread. Initially each thread holds NULL. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dl>
+<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dd></dl>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator-&gt; () const [inline]</h3>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::operator-&gt; () const [inline]</h3>
 <p>Obtains the Object held for the current thread. Initially each thread holds NULL. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dl>
+<dd>a pointer to the held Object or NULL if no Object has been set for the current thread.</dd></dl>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::release () [inline]</h3>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::release () [inline]</h3>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::release () [inline]</h3>
 <p>Releases the Object held for the current thread. </p>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd><code>get()</code> == NULL</dl>
+<dd><code>get()</code> == NULL</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the Object thas was held for the current thread or NULL if no Object was held.</dl>
+<dd>a pointer to the Object thas was held for the current thread or NULL if no Object was held.</dd></dl>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::release () [inline]</h3>
 <h3>template&lt;typename T &gt; T* <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::release () [inline]</h3>
 <p>Releases the Object held for the current thread. </p>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd><code>get()</code> == NULL</dl>
+<dd><code>get()</code> == NULL</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the Object thas was held for the current thread or NULL if no Object was held.</dl>
+<dd>a pointer to the Object thas was held for the current thread or NULL if no Object was held.</dd></dl>
 <h3>template&lt;typename T &gt; void <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::reset (T *p = NULL) [inline]</h3>
 <h3>template&lt;typename T &gt; void <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::reset (T *p = NULL) [inline]</h3>
 <h3>template&lt;typename T &gt; void <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::reset (T *p = NULL) [inline]</h3>
 <p>Sets a new Object to be held for the current thread. A previously set Object will be deleted. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> the new object to hold.</dl>
+<dd><i>p</i> the new object to hold.</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd><code>get()</code> == p</dl>
+<dd><code>get()</code> == p</dd></dl>
 <h3>template&lt;typename T &gt; void <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::reset (T *p = NULL) [inline]</h3>
 <h3>template&lt;typename T &gt; void <code>log4cpp::threading::ThreadLocalDataHolder</code>&lt; T &gt;::reset (T *p = NULL) [inline]</h3>
 <p>Sets a new Object to be held for the current thread. A previously set Object will be deleted. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> the new object to hold.</dl>
+<dd><i>p</i> the new object to hold.</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd><code>get()</code> == p</dl>
+<dd><code>get()</code> == p</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

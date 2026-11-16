@@ -13,14 +13,14 @@ description: "gai.conf – getaddrinfo(3) configuration file"
 <p> Each line in the configuration file consists of a keyword and its parameters. White spaces in any place are ignored. Lines starting with &#8216;#&#8217; are comments and are ignored. </p>
 <p> The keywords currently recognized are:</p>
 <dl>
-<dt><code>label</code> <i>netmask</i> <i>precedence</i></p>
-<dd>The value is added to the label table used in the RFC 3484 sorting. If any <code>label</code> definition is present in the configuration file is present, the default table is not used. All the label definitions of the default table which are to be maintained have to be duplicated. Following the keyword, the line has to contain a network mask and a label value.</p>
-<dt><code>precedence</code> <i>netmask</i> <i>precedence</i></p>
-<dd>This keyword is similar to <code>label</code>, but instead the value is added to the precedence table as specified in RFC 3484. Once again, the presence of a single <code>precedence</code> line in the configuration file causes the default table to not be used.</p>
-<dt><code>reload</code> &lt;<code>yes</code>|<code>no</code>&gt;</p>
-<dd>This keyword controls whether a process checks whether the configuration file has been changed since the last time it was read. If the value is &quot;<code>yes</code>&quot;, the file is reread. This might cause problems in multithreaded applications and is generally a bad idea. The default is &quot;<code>no</code>&quot;.</p>
-<dt><code>scopev4</code> <i>mask</i> <i>value</i></p>
-<dd>Add another rule to the RFC 3484 scope table for IPv4 address. By default, the scope IDs described in section 3.2 in RFC 3438 are used. Changing these defaults should hardly ever be necessary.</dl>
+<dt><code>label</code> <i>netmask</i> <i>precedence</i></dt>
+<dd>The value is added to the label table used in the RFC 3484 sorting. If any <code>label</code> definition is present in the configuration file is present, the default table is not used. All the label definitions of the default table which are to be maintained have to be duplicated. Following the keyword, the line has to contain a network mask and a label value.</dd>
+<dt><code>precedence</code> <i>netmask</i> <i>precedence</i></dt>
+<dd>This keyword is similar to <code>label</code>, but instead the value is added to the precedence table as specified in RFC 3484. Once again, the presence of a single <code>precedence</code> line in the configuration file causes the default table to not be used.</dd>
+<dt><code>reload</code> &lt;<code>yes</code>|<code>no</code>&gt;</dt>
+<dd>This keyword controls whether a process checks whether the configuration file has been changed since the last time it was read. If the value is &quot;<code>yes</code>&quot;, the file is reread. This might cause problems in multithreaded applications and is generally a bad idea. The default is &quot;<code>no</code>&quot;.</dd>
+<dt><code>scopev4</code> <i>mask</i> <i>value</i></dt>
+<dd>Add another rule to the RFC 3484 scope table for IPv4 address. By default, the scope IDs described in section 3.2 in RFC 3438 are used. Changing these defaults should hardly ever be necessary.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/gai.conf</i></p>
 <h2>Example</h2>

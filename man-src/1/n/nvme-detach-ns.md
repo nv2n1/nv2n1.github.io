@@ -33,13 +33,13 @@ nvme detach-ns &lt;device&gt; [--namespace-id=&lt;nsid&gt; | -n &lt;nsid&gt;]
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> The namespace identifier to detach.</dl>
+</dt><dd> The namespace identifier to detach.</dd></dl>
  
 
  -c &lt;ctrl-list,&gt;, -controllers=&lt;ctrl-list,&gt;
 <dl>
 <dt>
-<dd> The comma separated list of controller identifiers to detach the namespace from.</dl>
+</dt><dd> The comma separated list of controller identifiers to detach the namespace from.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

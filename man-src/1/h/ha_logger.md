@@ -14,12 +14,12 @@ description: "ha_logger – Log a message to files/syslog through the HA Logging
 <h2>DESCRIPTION</h2>
 <p> <code>ha_logger </code> is used to log a message to files/syslog through the HA Logging Daemon </p>
 <dl>
-<dt><code>-D</code> <i>ha-log/ha-debug</i></p>
-<dd> Log the message to different files. Ha-log will log the message to the log file and the debug file, while ha-debug will log the message to the debug file only.</p>
-<dt><code>-t</code> <i>tag</i></p>
-<dd> Mark every line in the log with the specified</p>
-<dt><code>message</code></p>
-<dd> The message you want to log on.</dl>
+<dt><code>-D</code> <i>ha-log/ha-debug</i></dt>
+<dd> Log the message to different files. Ha-log will log the message to the log file and the debug file, while ha-debug will log the message to the debug file only.</dd>
+<dt><code>-t</code> <i>tag</i></dt>
+<dd> Mark every line in the log with the specified</dd>
+<dt><code>message</code></dt>
+<dd> The message you want to log on.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-ha_logd/">ha_logd</a>(8) <a href="/docs/linux/man/8-heartbeat/">heartbeat</a>(8) </p>
 <h2>DOCUMENTATION</h2>

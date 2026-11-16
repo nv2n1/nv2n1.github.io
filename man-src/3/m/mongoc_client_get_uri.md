@@ -14,8 +14,8 @@ mongoc_client_get_uri (const mongoc_client_t *client);</pre>
 <p>Fetches the <code>mongoc_uri_t</code> used to create the client. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>A <code>mongoc_uri_t</code> that should not be modified or freed. </p>
 <h2>Colophon</h2>

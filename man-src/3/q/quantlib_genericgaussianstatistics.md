@@ -46,3 +46,4 @@ description: "QuantLib::GenericGaussianStatistics – Statistics tool for gaussi
 <h3>Real gaussianPercentile (Real percentile) const</h3>
 <p> gaussian-assumption y-th percentile, defined as the value x such that [ y = ac{1}{qrt{2<br />
  i}} int_{-infty}^{x} 
+</p>

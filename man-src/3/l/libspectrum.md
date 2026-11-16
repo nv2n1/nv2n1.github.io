@@ -18,19 +18,19 @@ url: "/docs/linux/man/3-libspectrum/"
  The file formats currently supported by <i>libspectrum</i> are:
 <dl>
 <dt>*
-<dd> Snapshots: .z80, .szx, .sna (all read/write), .zxs, .sp., .snp and +D snapshots (read only).
-<dt>*
-<dd> Tape images: .tzx, .tap, .spc, .sta, .ltp (read/write) and Warajevo .tap, Z80Em and CSW version 1 (read only).
-<dt>*
-<dd> Input recordings: .rzx (read/write).
-<dt>*
-<dd> Disk images: .dsk (both plain and extended), .fdi, .sad, .scl, .td0, .trd and .udi (identification only).
-<dt>*
-<dd> Timex cartridges: .dck (read only).
-<dt>*
-<dd> IDE hard disk images: .hdf (read/write).
-<dt>*
-<dd> Microdrive cartridge images: .mdr (read/write).</dl>
+</dt><dd> Snapshots: .z80, .szx, .sna (all read/write), .zxs, .sp., .snp and +D snapshots (read only).
+</dd><dt>*
+</dt><dd> Tape images: .tzx, .tap, .spc, .sta, .ltp (read/write) and Warajevo .tap, Z80Em and CSW version 1 (read only).
+</dd><dt>*
+</dt><dd> Input recordings: .rzx (read/write).
+</dd><dt>*
+</dt><dd> Disk images: .dsk (both plain and extended), .fdi, .sad, .scl, .td0, .trd and .udi (identification only).
+</dd><dt>*
+</dt><dd> Timex cartridges: .dck (read only).
+</dd><dt>*
+</dt><dd> IDE hard disk images: .hdf (read/write).
+</dd><dt>*
+</dt><dd> Microdrive cartridge images: .mdr (read/write).</dd></dl>
  
 
  Additionally, any files compressed with <i><a HREF="/docs/linux/man/3-bzip2/">bzip2</a></i>(3) or <i><a HREF="/docs/linux/man/3-gzip/">gzip</a></i>(3) can be read and will be transparently decompressed. 

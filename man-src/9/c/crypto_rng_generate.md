@@ -14,19 +14,19 @@ description: "crypto_rng_generate – get random number"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>Input buffer holding additional data, may be NULL</dl>
+<dd>Input buffer holding additional data, may be NULL</dd></dl>
 <p> <i>slen</i></p>
 <dl>
-<dd>Length of additional data</dl>
+<dd>Length of additional data</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>output buffer holding the random numbers</dl>
+<dd>output buffer holding the random numbers</dd></dl>
 <p> <i>dlen</i></p>
 <dl>
-<dd>length of the output buffer</dl>
+<dd>length of the output buffer</dd></dl>
 <h2>Description</h2>
 <p>This function fills the caller-allocated buffer with random numbers using the random number generator referenced by the cipher handle.</p>
 <h2>Return</h2>
@@ -34,8 +34,8 @@ description: "crypto_rng_generate – get random number"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -13,8 +13,8 @@ description: "mongoc_server_description_destroy() – This function cleans up al
 mongoc_server_description_destroy(mongoc_server_description_t *description);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>description</code></p>
-<dd>A <code>The description to destroy.</code> \&amp;.</dl>
+<dt><code>description</code></dt>
+<dd>A <code>The description to destroy.</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function cleans up all memory associated with the given server description. </p>
 <h2>Returns</h2>

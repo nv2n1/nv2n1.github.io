@@ -14,12 +14,12 @@ description: "gnutls_priority_init – API function"
 <p> <code>int gnutls_priority_init(gnutls_priority_t * </code><i>priority_cache</i><code>, const char * </code><i>priorities</i><code>, const char ** </code><i>err_pos</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_priority_t * priority_cache</p>
-<dd> is a <code>gnutls_prioritity_t</code> structure.</p>
-<dt>const char * priorities</p>
-<dd> is a string describing priorities (may be <code>NULL</code>)</p>
-<dt>const char ** err_pos</p>
-<dd> In case of an error this will have the position in the string the error occurred</dl>
+<dt>gnutls_priority_t * priority_cache</dt>
+<dd> is a <code>gnutls_prioritity_t</code> structure.</dd>
+<dt>const char * priorities</dt>
+<dd> is a string describing priorities (may be <code>NULL</code>)</dd>
+<dt>const char ** err_pos</dt>
+<dd> In case of an error this will have the position in the string the error occurred</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Sets priorities for the ciphers, key exchange methods, macs and compression methods. </p>
 <p> The <code>priorities</code> option allows you to specify a colon separated list of the cipher priorities to enable. Some keywords are defined to provide quick access to common preferences. </p>
@@ -57,6 +57,6 @@ description: "gnutls_priority_init – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

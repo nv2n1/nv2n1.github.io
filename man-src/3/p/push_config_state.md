@@ -10,7 +10,6 @@ description: "push_config_state – Pushes the current configuration state. Alle
 <p>push_config_state &#8211; Pushes the current configuration state. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void push_config_state();</code></pre>
 <h2>Description</h2>
 <p>Pushes the current configuration state (filename, variable values, etc). onto an internal stack, allowing you to select some other config source and later restore the current settings by calling pop_config_state(). This function is mostly intended for internal use by other library functions, for example when you specify a config filename to the save_joystick_data() function, it pushes the config state before switching to the file you specified. </p>

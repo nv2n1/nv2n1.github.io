@@ -10,18 +10,16 @@ description: "pthread_attr_setscope, pthread_attr_getscope – set/get contentio
 <p>pthread_attr_setscope, pthread_attr_getscope &#8211; set/get contention scope attribute in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setscope(pthread_attr_t *attr, int scope);
 int pthread_attr_getscope(const pthread_attr_t *attr, int *scope);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_attr_setscope</code>() function sets the contention scope attribute of the thread attributes object referred to by <i>attr</i> to the value specified in <i>scope</i>. The contention scope attribute defines the set of threads against which a thread competes for resources such as the CPU. POSIX.1 specifies two possible values for <i>scope</i>:</p>
 <dl>
-<dt><code>PTHREAD_SCOPE_SYSTEM</code></p>
-<dd>The thread competes for resources with all other threads in all processes on the system that are in the same scheduling allocation domain (a group of one or more processors). <code>PTHREAD_SCOPE_SYSTEM</code> threads are scheduled relative to one another according to their scheduling policy and priority.</p>
-<dt><code>PTHREAD_SCOPE_PROCESS</code></p>
-<dd>The thread competes for resources with all other threads in the same process that were also created with the <code>PTHREAD_SCOPE_PROCESS</code> contention scope. <code>PTHREAD_SCOPE_PROCESS</code> threads are scheduled relative to other threads in the process according to their scheduling policy and priority. POSIX.1 leaves it unspecified how these threads contend with other threads in other process on the system or with other threads in the same process that were created with the <code>PTHREAD_SCOPE_SYSTEM</code> contention scope.</dl>
+<dt><code>PTHREAD_SCOPE_SYSTEM</code></dt>
+<dd>The thread competes for resources with all other threads in all processes on the system that are in the same scheduling allocation domain (a group of one or more processors). <code>PTHREAD_SCOPE_SYSTEM</code> threads are scheduled relative to one another according to their scheduling policy and priority.</dd>
+<dt><code>PTHREAD_SCOPE_PROCESS</code></dt>
+<dd>The thread competes for resources with all other threads in the same process that were also created with the <code>PTHREAD_SCOPE_PROCESS</code> contention scope. <code>PTHREAD_SCOPE_PROCESS</code> threads are scheduled relative to other threads in the process according to their scheduling policy and priority. POSIX.1 leaves it unspecified how these threads contend with other threads in other process on the system or with other threads in the same process that were created with the <code>PTHREAD_SCOPE_SYSTEM</code> contention scope.</dd></dl>
 <p> POSIX.1 requires that an implementation support at least one of these contention scopes. Linux supports <code>PTHREAD_SCOPE_SYSTEM</code>, but not <code>PTHREAD_SCOPE_PROCESS</code>. </p>
 <p> On systems that support multiple contention scopes, then, in order for the parameter setting made by <code>pthread_attr_setscope</code>() to have effect when calling <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3), the caller must use <code><a href="/docs/linux/man/3-pthread_attr_setinheritsched/">pthread_attr_setinheritsched</a></code>(3) to set the inherit-scheduler attribute of the attributes object <i>attr</i> to <code>PTHREAD_EXPLICIT_SCHED</code>. </p>
 <p> The <code>pthread_attr_getscope</code>() function returns the contention scope attribute of the thread attributes object referred to by <i>attr</i> in the buffer pointed to by <i>scope</i>.</p>
@@ -30,10 +28,10 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_attr_setscope</code>() can fail with the following errors:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>An invalid value was specified in <i>scope</i>.</p>
-<dt><code>ENOTSUP</code></p>
-<dd><i>scope</i> specified the value <code>PTHREAD_SCOPE_PROCESS</code>, which is not supported on Linux.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>An invalid value was specified in <i>scope</i>.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd><i>scope</i> specified the value <code>PTHREAD_SCOPE_PROCESS</code>, which is not supported on Linux.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -17,7 +17,7 @@ description: "fedora-create-review – Automatically create RPM review request f
 <p> This program creates RPM review request for Fedora.</p>
 <dl>
 <dt>
-<dd>fedora-create-review &lt;specfile&gt; &lt;srpmfile&gt; </p>
+</dt><dd>fedora-create-review &lt;specfile&gt; &lt;srpmfile&gt; </dd>
 <p> This will start a build on koji using the given srpmfile. If the build is successful, both file will be uploaded onto fedorapeople. Finally, the review request is generated and a comment is added on the bug about the successful scratch-build. </p>
 </dl>
 <h2>OPTIONS</h2>
@@ -38,7 +38,7 @@ description: "fedora-create-review – Automatically create RPM review request f
 <p> <i>$HOME/.config/fedora-create-review</i></p>
 <dl>
 <dt>
-<dd> User configuration files for fedora-create-review</dl>
+</dt><dd> User configuration files for fedora-create-review</dd></dl>
 <h2>AUTHORS</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>Original author: Pierre-Yves Chibon&nbsp;<wbr>&lt;pingou [at] pingoured.fr&gt; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Developers:<br />

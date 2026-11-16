@@ -11,8 +11,8 @@ description: "compare – mathematically and visually annotate the difference be
 <p> compare &#8211; mathematically and visually annotate the difference between an image and its reconstruction. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>compare-im6.q16</code> <i>input-file</i> <i>input-file</i> [<i>options</i>] <i>output-file</i></p>
-<dd></dl>
+<dt><code>compare-im6.q16</code> <i>input-file</i> <i>input-file</i> [<i>options</i>] <i>output-file</i></dt>
+<dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> The <code>compare-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to mathematically and visually annotate the difference between an image and its reconstruction. </p>
 <p> For more information about the compare command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/compare.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="http://imagemagick.org/script/compare.php.">http://imagemagick.org/script/compare.php.</a></p>

@@ -26,105 +26,105 @@ description: "php – PHP Command Line Interface ‘CLI’"
 <p> If none of -r -f -B -R -F -E or -S is present but a single parameter is given then this parameter is taken as the filename to parse and execute (same as with -f). If no parameter is present then the standard input is read and executed.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dd><code>&#8211;interactive</code></p>
-<dd><code>-a</code> Run PHP interactively. This lets you enter snippets of PHP code that directly get executed. When readline support is enabled you can edit the lines and also have history support.</p>
-<dd><code>&#8211;bindpath </code><i>address:port</i>|<i>port</i></p>
-<dd><code>-b </code><i>address:port</i>|<i>port</i> Bind Path for external FASTCGI Server mode (CGI only).</p>
-<dd><code>&#8211;no-chdir</code></p>
-<dd><code>-C</code> Do not chdir to the script&#8217;s directory (CGI only).</p>
-<dd><code>&#8211;no-header</code></p>
-<dd><code>-q</code> Quiet-mode. Suppress HTTP header output (CGI only).</p>
-<dd><code>&#8211;timing </code><i>count</i></p>
-<dd><code>-T </code><i>count</i> Measure execution time of script repeated count times (CGI only).</p>
-<dd><code>&#8211;php-ini </code><i>path</i>|<i>file</i></p>
-<dd><code>-c </code><i>path</i>|<i>file</i> Look for <code>php.ini</code> file in the directory <i>path</i> or use the specified <i>file</i></p>
-<dd><code>&#8211;no-php-ini</code></p>
-<dd><code>-n</code> No <code>php.ini</code> file will be used</p>
-<dd><code>&#8211;define </code><i>foo</i>[=<i>bar</i>]</p>
-<dd><code>-d </code><i>foo</i>[=<i>bar</i>] Define INI entry <i>foo</i> with value <i>bar</i></p>
-<dt><code>-e</code></p>
-<dd>Generate extended information for debugger/profiler</p>
-<dd><code>&#8211;file </code><i>file</i></p>
-<dd><code>-f </code><i>file</i> Parse and execute <i>file</i></p>
-<dd><code>&#8211;help</code></p>
-<dd><code>-h</code> This help</p>
-<dd><code>&#8211;hide-args</code></p>
-<dd><code>-H</code> Hide script name (<i>file</i>) and parameters (<i>args&#8230;</i>) from external tools. For example you may want to use this when a php script is started as a daemon and the command line contains sensitive data such as passwords.</p>
-<dd><code>&#8211;info</code></p>
-<dd><code>-i</code> PHP information and configuration</p>
-<dd><code>&#8211;syntax-check</code></p>
-<dd><code>-l</code> Syntax check only (lint)</p>
-<dd><code>&#8211;modules</code></p>
-<dd><code>-m</code> Show compiled in modules</p>
-<dd><code>&#8211;run </code><i>code</i></p>
-<dd><code>-r </code><i>code</i> Run PHP <i>code</i> without using script tags <code>&#8216;&lt;?..?&gt;&#8217;</code></p>
-<dd><code>&#8211;process-begin </code><i>code</i></p>
-<dd><code>-B </code><i>begin_code</i> Run PHP <i>begin_code</i> before processing input lines</p>
-<dd><code>&#8211;process-code </code><i>code</i></p>
-<dd><code>-R </code><i>code</i> Run PHP <i>code</i> for every input line</p>
-<dd><code>&#8211;process-file </code><i>file</i></p>
-<dd><code>-F </code><i>file</i> Parse and execute <i>file</i> for every input line</p>
-<dd><code>&#8211;process-end </code><i>code</i></p>
-<dd><code>-E </code><i>end_code</i> Run PHP <i>end_code</i> after processing all input lines</p>
-<dd><code>&#8211;syntax-highlight</code></p>
-<dd><code>-s</code> Output HTML syntax highlighted source</p>
-<dd><code>&#8211;server </code><i>addr:port</i></p>
-<dd><code>-S </code><i>addr:port</i> Start built-in web server on the given local address and port</p>
-<dd><code>&#8211;docroot </code><i>docroot</i></p>
-<dd><code>-t </code><i>docroot</i> Specify the document root to be used by the built-in web server</p>
-<dd><code>&#8211;version</code></p>
-<dd><code>-v</code> Version number</p>
-<dd><code>&#8211;strip</code></p>
-<dd><code>-w</code> Output source with stripped comments and whitespace</p>
-<dd><code>&#8211;zend-extension </code><i>file</i></p>
-<dd><code>-z </code><i>file</i> Load Zend extension <i>file</i></p>
-<dt><i>args&#8230;</i></p>
-<dd>Arguments passed to script. Use <code>&#8216;&#8211;&#8216;</code> <i>args</i> when first argument starts with <code>&#8216;-&#8216;</code> or script is read from stdin</p>
-<dd><code>&#8211;rfunction</code> <i>name</i></p>
-<dd><code>&#8211;rf</code> <i>name</i> Shows information about function <code>name</code></p>
-<dd><code>&#8211;rclass</code> <i>name</i></p>
-<dd><code>&#8211;rc</code> <i>name</i> Shows information about class <code>name</code></p>
-<dd><code>&#8211;rextension</code> <i>name</i></p>
-<dd><code>&#8211;re</code> <i>name</i> Shows information about extension <code>name</code></p>
-<dd><code>&#8211;rzendextension</code> <i>name</i></p>
-<dd><code>&#8211;rz</code> <i>name</i> Shows information about Zend extension <code>name</code></p>
-<dd><code>&#8211;rextinfo</code> <i>name</i></p>
-<dd><code>&#8211;ri</code> <i>name</i> Shows configuration for extension <code>name</code></p>
-<dt><code>&#8211;ini</code></p>
-<dd>Show configuration file names</dl>
+<dd><code>&#8211;interactive</code></dd>
+<dd><code>-a</code> Run PHP interactively. This lets you enter snippets of PHP code that directly get executed. When readline support is enabled you can edit the lines and also have history support.</dd>
+<dd><code>&#8211;bindpath </code><i>address:port</i>|<i>port</i></dd>
+<dd><code>-b </code><i>address:port</i>|<i>port</i> Bind Path for external FASTCGI Server mode (CGI only).</dd>
+<dd><code>&#8211;no-chdir</code></dd>
+<dd><code>-C</code> Do not chdir to the script&#8217;s directory (CGI only).</dd>
+<dd><code>&#8211;no-header</code></dd>
+<dd><code>-q</code> Quiet-mode. Suppress HTTP header output (CGI only).</dd>
+<dd><code>&#8211;timing </code><i>count</i></dd>
+<dd><code>-T </code><i>count</i> Measure execution time of script repeated count times (CGI only).</dd>
+<dd><code>&#8211;php-ini </code><i>path</i>|<i>file</i></dd>
+<dd><code>-c </code><i>path</i>|<i>file</i> Look for <code>php.ini</code> file in the directory <i>path</i> or use the specified <i>file</i></dd>
+<dd><code>&#8211;no-php-ini</code></dd>
+<dd><code>-n</code> No <code>php.ini</code> file will be used</dd>
+<dd><code>&#8211;define </code><i>foo</i>[=<i>bar</i>]</dd>
+<dd><code>-d </code><i>foo</i>[=<i>bar</i>] Define INI entry <i>foo</i> with value <i>bar</i></dd>
+<dt><code>-e</code></dt>
+<dd>Generate extended information for debugger/profiler</dd>
+<dd><code>&#8211;file </code><i>file</i></dd>
+<dd><code>-f </code><i>file</i> Parse and execute <i>file</i></dd>
+<dd><code>&#8211;help</code></dd>
+<dd><code>-h</code> This help</dd>
+<dd><code>&#8211;hide-args</code></dd>
+<dd><code>-H</code> Hide script name (<i>file</i>) and parameters (<i>args&#8230;</i>) from external tools. For example you may want to use this when a php script is started as a daemon and the command line contains sensitive data such as passwords.</dd>
+<dd><code>&#8211;info</code></dd>
+<dd><code>-i</code> PHP information and configuration</dd>
+<dd><code>&#8211;syntax-check</code></dd>
+<dd><code>-l</code> Syntax check only (lint)</dd>
+<dd><code>&#8211;modules</code></dd>
+<dd><code>-m</code> Show compiled in modules</dd>
+<dd><code>&#8211;run </code><i>code</i></dd>
+<dd><code>-r </code><i>code</i> Run PHP <i>code</i> without using script tags <code>&#8216;&lt;?..?&gt;&#8217;</code></dd>
+<dd><code>&#8211;process-begin </code><i>code</i></dd>
+<dd><code>-B </code><i>begin_code</i> Run PHP <i>begin_code</i> before processing input lines</dd>
+<dd><code>&#8211;process-code </code><i>code</i></dd>
+<dd><code>-R </code><i>code</i> Run PHP <i>code</i> for every input line</dd>
+<dd><code>&#8211;process-file </code><i>file</i></dd>
+<dd><code>-F </code><i>file</i> Parse and execute <i>file</i> for every input line</dd>
+<dd><code>&#8211;process-end </code><i>code</i></dd>
+<dd><code>-E </code><i>end_code</i> Run PHP <i>end_code</i> after processing all input lines</dd>
+<dd><code>&#8211;syntax-highlight</code></dd>
+<dd><code>-s</code> Output HTML syntax highlighted source</dd>
+<dd><code>&#8211;server </code><i>addr:port</i></dd>
+<dd><code>-S </code><i>addr:port</i> Start built-in web server on the given local address and port</dd>
+<dd><code>&#8211;docroot </code><i>docroot</i></dd>
+<dd><code>-t </code><i>docroot</i> Specify the document root to be used by the built-in web server</dd>
+<dd><code>&#8211;version</code></dd>
+<dd><code>-v</code> Version number</dd>
+<dd><code>&#8211;strip</code></dd>
+<dd><code>-w</code> Output source with stripped comments and whitespace</dd>
+<dd><code>&#8211;zend-extension </code><i>file</i></dd>
+<dd><code>-z </code><i>file</i> Load Zend extension <i>file</i></dd>
+<dt><i>args&#8230;</i></dt>
+<dd>Arguments passed to script. Use <code>&#8216;&#8211;&#8216;</code> <i>args</i> when first argument starts with <code>&#8216;-&#8216;</code> or script is read from stdin</dd>
+<dd><code>&#8211;rfunction</code> <i>name</i></dd>
+<dd><code>&#8211;rf</code> <i>name</i> Shows information about function <code>name</code></dd>
+<dd><code>&#8211;rclass</code> <i>name</i></dd>
+<dd><code>&#8211;rc</code> <i>name</i> Shows information about class <code>name</code></dd>
+<dd><code>&#8211;rextension</code> <i>name</i></dd>
+<dd><code>&#8211;re</code> <i>name</i> Shows information about extension <code>name</code></dd>
+<dd><code>&#8211;rzendextension</code> <i>name</i></dd>
+<dd><code>&#8211;rz</code> <i>name</i> Shows information about Zend extension <code>name</code></dd>
+<dd><code>&#8211;rextinfo</code> <i>name</i></dd>
+<dd><code>&#8211;ri</code> <i>name</i> Shows configuration for extension <code>name</code></dd>
+<dt><code>&#8211;ini</code></dt>
+<dd>Show configuration file names</dd></dl>
 <h2>Files</h2>
 <dl COMPACT>
-<dt><code>/etc/php/@PHP_MAJOR_VERSION@.@PHP_MINOR_VERSION@/cli/php.ini</code></p>
-<dd>The configuration file for the CLI version of PHP.</p>
-<dt><code>/etc/php/@PHP_MAJOR_VERSION@.@PHP_MINOR_VERSION@/cgi/php.ini</code></p>
-<dd>The configuration file for the CGI version of PHP.</p>
-<dt><code>/etc/php/@PHP_MAJOR_VERSION@.@PHP_MINOR_VERSION@/apache2/php.ini</code></p>
-<dd>The configuration file for the version of PHP that apache2 uses.</dl>
+<dt><code>/etc/php/@PHP_MAJOR_VERSION@.@PHP_MINOR_VERSION@/cli/php.ini</code></dt>
+<dd>The configuration file for the CLI version of PHP.</dd>
+<dt><code>/etc/php/@PHP_MAJOR_VERSION@.@PHP_MINOR_VERSION@/cgi/php.ini</code></dt>
+<dd>The configuration file for the CGI version of PHP.</dd>
+<dt><code>/etc/php/@PHP_MAJOR_VERSION@.@PHP_MINOR_VERSION@/apache2/php.ini</code></dt>
+<dd>The configuration file for the version of PHP that apache2 uses.</dd></dl>
 <h2>Examples</h2>
 <dl COMPACT>
 <dt><i>php -r &#8216;echo &quot;Hello World
-&quot;;&#8217;</i></p>
-<dd>This command simply writes the text &quot;Hello World&quot; to standard out.</p>
-<dt><i>php -r &#8216;print_r(gd_info());&#8217;</i></p>
-<dd>This shows the configuration of your gd extension. You can use this to easily check which image formats you can use. If you have any dynamic modules you may want to use the same ini file that php uses when executed from your webserver. There are more extensions which have such a function. For dba use:</p>
+&quot;;&#8217;</i></dt>
+<dd>This command simply writes the text &quot;Hello World&quot; to standard out.</dd>
+<dt><i>php -r &#8216;print_r(gd_info());&#8217;</i></dt>
+<dd>This shows the configuration of your gd extension. You can use this to easily check which image formats you can use. If you have any dynamic modules you may want to use the same ini file that php uses when executed from your webserver. There are more extensions which have such a function. For dba use:</dd>
 <dl COMPACT>
-<dd><i>php -r &#8216;print_r(dba_handlers(1));&#8217;</i></dl>
+<dd><i>php -r &#8216;print_r(dba_handlers(1));&#8217;</i></dd></dl>
 <dt><i>php -R &#8216;echo strip_tags($argn).&quot;
-&quot;;&#8217;</i></p>
-<dd>This PHP command strips off the HTML tags line by line and outputs the result. To see how it works you can first look at the following PHP command &#8216;<i>php -d html_errors=1 -i</i>&#8216; which uses PHP to output HTML formatted configuration information. If you then combine those two &#8216;<i>php &#8230;|php &#8230;</i>&#8216; you&#8217;ll see what happens.</p>
+&quot;;&#8217;</i></dt>
+<dd>This PHP command strips off the HTML tags line by line and outputs the result. To see how it works you can first look at the following PHP command &#8216;<i>php -d html_errors=1 -i</i>&#8216; which uses PHP to output HTML formatted configuration information. If you then combine those two &#8216;<i>php &#8230;|php &#8230;</i>&#8216; you&#8217;ll see what happens.</dd>
 <dt><i>php -E &#8216;echo &quot;Lines: $argi
-&quot;;&#8217;</i></p>
-<dd>Using this PHP command you can count the lines being input.</p>
+&quot;;&#8217;</i></dt>
+<dd>Using this PHP command you can count the lines being input.</dd>
 <dt><i>php -R &#8216;@$l+=count(file($argn));&#8217; -E &#8216;echo &quot;Lines:$l
-&quot;;&#8217;</i></p>
-<dd>In this example PHP expects each input line being a file. It counts all lines of the files specified by each input line and shows the summarized result. You may combine this with tools like find and change the php scriptlet.</p>
+&quot;;&#8217;</i></dt>
+<dd>In this example PHP expects each input line being a file. It counts all lines of the files specified by each input line and shows the summarized result. You may combine this with tools like find and change the php scriptlet.</dd>
 <dt><i>php -R &#8216;echo &quot;$argn
-&quot;; fgets(STDIN);&#8217;</i></p>
-<dd>Since you have access to STDIN from within -B -R -F and -E you can skip certain input lines with your code. But note that in such cases $argi only counts the lines being processed by php itself. Having read this you will guess what the above program does: skipping every second input line.</dl>
+&quot;; fgets(STDIN);&#8217;</i></dt>
+<dd>Since you have access to STDIN from within -B -R -F and -E you can skip certain input lines with your code. But note that in such cases $argi only counts the lines being processed by php itself. Having read this you will guess what the above program does: skipping every second input line.</dd></dl>
 <h2>Tips</h2>
 <p>You can use a shebang line to automatically invoke php from scripts. Only the CLI version of PHP will ignore such a first line as shown below: </p>
 <dl COMPACT>
-<dd>#!/bin/php </p>
+<dd>#!/bin/php </dd>
 <p> &lt;?php </p>
 <p>&nbsp;//&nbsp;your script </p>
 <p> ?&gt;</dl>
@@ -147,3 +147,4 @@ description: "php – PHP Command Line Interface ‘CLI’"
 <p> This source file is subject to version 3.01 of the PHP license, that is bundled with this package in the file LICENSE, and is available through the world-wide-web at the following url: </p>
 <p> <code><a rel="nofollow" href="http://www.php.net/license/3_01.txt">http://www.php.net/license/3_01.txt</a></code> </p>
 <p> If you did not receive a copy of the PHP license and are unable to obtain it through the world-wide-web, please send a note to <code>license [at] php.net</code> so we can mail you a copy immediately.</p>
+</p>

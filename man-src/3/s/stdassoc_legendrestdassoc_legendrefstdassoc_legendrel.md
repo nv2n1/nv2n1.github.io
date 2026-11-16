@@ -10,16 +10,11 @@ description: "std::assoc_legendre,std::assoc_legendref,std::assoc_legendrel – 
 <p>std::assoc_legendre,std::assoc_legendref,std::assoc_legendrel &#8211; std::assoc_legendre,std::assoc_legendref,std::assoc_legendrel</p>
 <h2>Synopsis</h2>
 <pre><code>double assoc_legendre(unsigned int n, unsigned int m, double x);
-
 float assoc_legendre(unsigned int n, unsigned int m, float x);
-
 long double assoc_legendre(unsigned int n, unsigned int m, long double x);
 (1)(since C++ 17)
-
     float assoc_legendref(unsigned int n, unsigned int m, float x);
-
 long double assoc_legendrel(unsigned int n, unsigned int m, long double x);
-
 double assoc_legendre(unsigned int n, unsigned int m, IntegralType x);
 (2)(since C++ 17)</code></pre>
 <p>1) Computes the associated_Legendre_polynomials of the degree n, order m, and argument x<br />
@@ -63,26 +58,20 @@ The first few associated Legendre polynomials are: * assoc_legendre(0, 0, x) = 1
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 double P20(double x)
 {
     return 0.5 * (3 * x * x - 1);
 }
-
 double P21(double x)
 {
     return 3.0 * x * std::sqrt(1 - x * x);
 }
-
 double P22(double x)
 {
     return 3 * (1 - x * x);
 }
-
 int main()
-
 {
     // spot-checks
     std::cout &lt;&lt; std::assoc_legendre(2, 0, 0.5) &lt;&lt; '=' &lt;&lt; P20(0.5) &lt;&lt; '

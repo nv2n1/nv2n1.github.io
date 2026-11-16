@@ -11,44 +11,44 @@ description: "pgm – portable graymap file format"
 <h2>Description</h2>
 <p>The PGM format is a lowest common denominator grayscale file format. It is designed to be extremely easy to learn and write programs for. (It&#8217;s so simple that most people will simply reverse engineer it because it&#8217;s easier than reading this specification). A PGM image represents a grayscale graphic image. There are many psueudo-PGM formats in use where everything is as specified herein except for the meaning of individual pixel values. For most purposes, a PGM image can just be thought of an array of arbitrary integers, and all the programs in the world that think they&#8217;re processing a grayscale image can easily be tricked into processing something else. One official variant of PGM is the transparency mask. A transparency mask in Netpbm is represented by a PGM image, except that in place of pixel intensities, there are opaqueness values. See below. The format definition is as follows. A PGM file consists of a sequence of one or more PGM images. There are no data, delimiters, or padding before, after, or between images. Each PGM image consists of the following:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>A &quot;magic number&quot; for identifying the file type. A pgm image&#8217;s magic number is the two characters &quot;P5&quot;.</p>
-<dt>&#8211;</p>
-<dd>Whitespace (blanks, TABs, CRs, LFs).</p>
-<dt>&#8211;</p>
-<dd>A width, formatted as ASCII characters in decimal.</p>
-<dt>&#8211;</p>
-<dd>Whitespace.</p>
-<dt>&#8211;</p>
-<dd>A height, again in ASCII decimal.</p>
-<dt>&#8211;</p>
-<dd>Whitespace.</p>
-<dt>&#8211;</p>
-<dd>The maximum gray value (Maxval), again in ASCII decimal. Must be less than 65536.</p>
-<dt>&#8211;</p>
-<dd>Newline or other single whitespace character.</p>
-<dt>&#8211;</p>
-<dd>A raster of Width * Height gray values, proceeding through the image in normal English reading order. Each gray value is a number from 0 through Maxval, with 0 being black and Maxval being white. Each gray value is represented in pure binary by either 1 or 2 bytes. If the Maxval is less than 256, it is 1 byte. Otherwise, it is 2 bytes. The most significant byte is first.</p>
-<dt>&#8211;</p>
-<dd>Each gray value is a number proportional to the intensity of the pixel, adjusted by the CIE Rec. 709 gamma transfer function. (That transfer function specifies a gamma number of 2.2 and has a linear section for small intensities). A value of zero is therefore black. A value of Maxval represents CIE D65 white and the most intense value in the image and any other image to which the image might be compared.</p>
-<dt>&#8211;</p>
-<dd>Note that a common variation on the PGM format is to have the gray value be &quot;linear,&quot; i.e. as specified above except without the gamma adjustment. <code>pnmgamma</code> takes such a PGM variant as input and produces a true PGM as output.</p>
-<dt>&#8211;</p>
-<dd>In the transparency mask variation on PGM, the value represents opaqueness. It is proportional to the fraction of intensity of a pixel that would show in place of an underlying pixel, with the same gamma transfer function mentioned above applied. So what normally means white represents total opaqueness and what normally means black represents total transparency. In between, you would compute the intensity of a composite pixel of an &quot;under&quot; and &quot;over&quot; pixel as under * (1-(alpha/alpha_maxval)) + over * (alpha/alpha_maxval).&lt;</p>
-<dt>&#8211;</p>
-<dd>Characters from a &quot;#&quot; to the next end-of-line, before the maxval line, are comments and are ignored.</dl>
+<dt>&#8211;</dt>
+<dd>A &quot;magic number&quot; for identifying the file type. A pgm image&#8217;s magic number is the two characters &quot;P5&quot;.</dd>
+<dt>&#8211;</dt>
+<dd>Whitespace (blanks, TABs, CRs, LFs).</dd>
+<dt>&#8211;</dt>
+<dd>A width, formatted as ASCII characters in decimal.</dd>
+<dt>&#8211;</dt>
+<dd>Whitespace.</dd>
+<dt>&#8211;</dt>
+<dd>A height, again in ASCII decimal.</dd>
+<dt>&#8211;</dt>
+<dd>Whitespace.</dd>
+<dt>&#8211;</dt>
+<dd>The maximum gray value (Maxval), again in ASCII decimal. Must be less than 65536.</dd>
+<dt>&#8211;</dt>
+<dd>Newline or other single whitespace character.</dd>
+<dt>&#8211;</dt>
+<dd>A raster of Width * Height gray values, proceeding through the image in normal English reading order. Each gray value is a number from 0 through Maxval, with 0 being black and Maxval being white. Each gray value is represented in pure binary by either 1 or 2 bytes. If the Maxval is less than 256, it is 1 byte. Otherwise, it is 2 bytes. The most significant byte is first.</dd>
+<dt>&#8211;</dt>
+<dd>Each gray value is a number proportional to the intensity of the pixel, adjusted by the CIE Rec. 709 gamma transfer function. (That transfer function specifies a gamma number of 2.2 and has a linear section for small intensities). A value of zero is therefore black. A value of Maxval represents CIE D65 white and the most intense value in the image and any other image to which the image might be compared.</dd>
+<dt>&#8211;</dt>
+<dd>Note that a common variation on the PGM format is to have the gray value be &quot;linear,&quot; i.e. as specified above except without the gamma adjustment. <code>pnmgamma</code> takes such a PGM variant as input and produces a true PGM as output.</dd>
+<dt>&#8211;</dt>
+<dd>In the transparency mask variation on PGM, the value represents opaqueness. It is proportional to the fraction of intensity of a pixel that would show in place of an underlying pixel, with the same gamma transfer function mentioned above applied. So what normally means white represents total opaqueness and what normally means black represents total transparency. In between, you would compute the intensity of a composite pixel of an &quot;under&quot; and &quot;over&quot; pixel as under * (1-(alpha/alpha_maxval)) + over * (alpha/alpha_maxval).&lt;</dd>
+<dt>&#8211;</dt>
+<dd>Characters from a &quot;#&quot; to the next end-of-line, before the maxval line, are comments and are ignored.</dd></dl>
 <p> Note that you can use <code>pnmdepth</code> To convert between a the format with 1 byte per gray value and the one with 2 bytes per gray value. There is actually another version of the PGM format that is fairly rare: &quot;plain&quot; PGM format. The format above, which generally considered the normal one, is known as the &quot;raw&quot; PGM format. See <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) for some commentary on how plain and raw formats relate to one another. The difference in the plain format is:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>There is exactly one image in a file.</p>
-<dt>&#8211;</p>
-<dd>The magic number is P2 instead of P5.</p>
-<dt>&#8211;</p>
-<dd>Each pixel in the raster is represented as an ASCII decimal number (of arbitrary size).</p>
-<dt>&#8211;</p>
-<dd>Each pixel in the raster has white space before and after it. There must be at least one character of white space between any two pixels, but there is no maximum.</p>
-<dt>&#8211;</p>
-<dd>No line should be longer than 70 characters.</dl>
+<dt>&#8211;</dt>
+<dd>There is exactly one image in a file.</dd>
+<dt>&#8211;</dt>
+<dd>The magic number is P2 instead of P5.</dd>
+<dt>&#8211;</dt>
+<dd>Each pixel in the raster is represented as an ASCII decimal number (of arbitrary size).</dd>
+<dt>&#8211;</dt>
+<dd>Each pixel in the raster has white space before and after it. There must be at least one character of white space between any two pixels, but there is no maximum.</dd>
+<dt>&#8211;</dt>
+<dd>No line should be longer than 70 characters.</dd></dl>
 <p> Here is an example of a small graymap in this format: </p>
 <pre>P2
 # feep.pgm

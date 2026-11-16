@@ -14,8 +14,8 @@ description: "Lintian::Processable::Binary::Copyright – collect copyright info
 <p>Lintian::Processable::Binary::Copyright collects copyright information.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>add_copyright</p>
-<dd></dl>
+<dt>add_copyright</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Richard Braakman &lt;dark [at] xs4all.nl&gt; for Lintian.</p>
 <h2>See Also</h2>

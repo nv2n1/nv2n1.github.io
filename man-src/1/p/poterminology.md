@@ -15,51 +15,51 @@ description: "poterminology – Create a terminology file by reading a set of .p
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poterminology.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poterminology.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h/&#8211;help</p>
-<dd> show this help message and exit</p>
-<dt>&#8211;manpage</p>
-<dd> output a manpage based on the help</p>
-<dt>&#8211;progress</p>
-<dd> show progress as: dots, none, bar, names, verbose</p>
-<dt>&#8211;errorlevel</p>
-<dd> show errorlevel as: none, message, exception, traceback</p>
-<dt>-i/&#8211;input</p>
-<dd> read from INPUT in pot, po formats</p>
-<dt>-x/&#8211;exclude</p>
-<dd> exclude names matching EXCLUDE from input paths</p>
-<dt>-o/&#8211;output</p>
-<dd> write to OUTPUT in po, pot formats</p>
-<dt>-u/&#8211;update</p>
-<dd> update terminology in UPDATEFILE</p>
-<dt>-S/&#8211;stopword-list</p>
-<dd> read stopword (term exclusion) list from STOPFILE (default /builddir/build/BUILD/translate-toolkit-1.11.0/translate/misc/../../share/stoplist-en)</p>
-<dt>-F/&#8211;fold-titlecase</p>
-<dd> fold &quot;Title Case&quot; to lowercase (default)</p>
-<dt>-C/&#8211;preserve-case</p>
-<dd> preserve all uppercase/lowercase</p>
-<dt>-I/&#8211;ignore-case</p>
-<dd> make all terms lowercase</p>
-<dt>&#8211;accelerator</p>
-<dd> ignore the given accelerator characters when matching</p>
-<dt>-t/&#8211;term-words</p>
-<dd> generate terms of up to LENGTH words (default 3)</p>
-<dt>&#8211;nonstop-needed</p>
-<dd> omit terms with less than MIN nonstop words (default 1)</p>
-<dt>&#8211;inputs-needed</p>
-<dd> omit terms appearing in less than MIN input files (default 2, or 1 if only one input file)</p>
-<dt>&#8211;fullmsg-needed</p>
-<dd> omit full message terms appearing in less than MIN different messages (default 1)</p>
-<dt>&#8211;substr-needed</p>
-<dd> omit substring-only terms appearing in less than MIN different messages (default 2)</p>
-<dt>&#8211;locs-needed</p>
-<dd> omit terms appearing in less than MIN different original source files (default 2)</p>
-<dt>&#8211;sort</p>
-<dd> output sort order(s): frequency, dictionary, length (may repeat option, default is all in above order)</p>
-<dt>&#8211;source-language</p>
-<dd> the source language code (default &#8216;en&#8217;)</p>
-<dt>-v/&#8211;invert</p>
-<dd> invert the source and target languages for terminology </p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h/&#8211;help</dt>
+<dd> show this help message and exit</dd>
+<dt>&#8211;manpage</dt>
+<dd> output a manpage based on the help</dd>
+<dt>&#8211;progress</dt>
+<dd> show progress as: dots, none, bar, names, verbose</dd>
+<dt>&#8211;errorlevel</dt>
+<dd> show errorlevel as: none, message, exception, traceback</dd>
+<dt>-i/&#8211;input</dt>
+<dd> read from INPUT in pot, po formats</dd>
+<dt>-x/&#8211;exclude</dt>
+<dd> exclude names matching EXCLUDE from input paths</dd>
+<dt>-o/&#8211;output</dt>
+<dd> write to OUTPUT in po, pot formats</dd>
+<dt>-u/&#8211;update</dt>
+<dd> update terminology in UPDATEFILE</dd>
+<dt>-S/&#8211;stopword-list</dt>
+<dd> read stopword (term exclusion) list from STOPFILE (default /builddir/build/BUILD/translate-toolkit-1.11.0/translate/misc/../../share/stoplist-en)</dd>
+<dt>-F/&#8211;fold-titlecase</dt>
+<dd> fold &quot;Title Case&quot; to lowercase (default)</dd>
+<dt>-C/&#8211;preserve-case</dt>
+<dd> preserve all uppercase/lowercase</dd>
+<dt>-I/&#8211;ignore-case</dt>
+<dd> make all terms lowercase</dd>
+<dt>&#8211;accelerator</dt>
+<dd> ignore the given accelerator characters when matching</dd>
+<dt>-t/&#8211;term-words</dt>
+<dd> generate terms of up to LENGTH words (default 3)</dd>
+<dt>&#8211;nonstop-needed</dt>
+<dd> omit terms with less than MIN nonstop words (default 1)</dd>
+<dt>&#8211;inputs-needed</dt>
+<dd> omit terms appearing in less than MIN input files (default 2, or 1 if only one input file)</dd>
+<dt>&#8211;fullmsg-needed</dt>
+<dd> omit full message terms appearing in less than MIN different messages (default 1)</dd>
+<dt>&#8211;substr-needed</dt>
+<dd> omit substring-only terms appearing in less than MIN different messages (default 2)</dd>
+<dt>&#8211;locs-needed</dt>
+<dd> omit terms appearing in less than MIN different original source files (default 2)</dd>
+<dt>&#8211;sort</dt>
+<dd> output sort order(s): frequency, dictionary, length (may repeat option, default is all in above order)</dd>
+<dt>&#8211;source-language</dt>
+<dd> the source language code (default &#8216;en&#8217;)</dd>
+<dt>-v/&#8211;invert</dt>
+<dd> invert the source and target languages for terminology </dd>
 </dl>
 <h2>Index</h2>

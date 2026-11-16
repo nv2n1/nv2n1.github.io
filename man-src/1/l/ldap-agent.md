@@ -15,18 +15,18 @@ description: "ldap-agent – SNMP agent for Directory Server"
 <p> ldap-agent is an SNMP subagent for Directory Server </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enable debugging</p>
-<dt><code>&lt;configfile&gt;</code></p>
-<dd> Configuration file for the ldap agent</dl>
+<dt><code>-D</code></dt>
+<dd> Enable debugging</dd>
+<dt><code>&lt;configfile&gt;</code></dt>
+<dd> Configuration file for the ldap agent</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-snmpd/">snmpd</a>(8)</code> </p>
 <h2>USAGE</h2>
 <p> Sample usage:</p>
 <dl>
-<dt><code>ldap-agent /etc/dirsrv/config/ldap-agent.conf</code></p>
+<dt><code>ldap-agent /etc/dirsrv/config/ldap-agent.conf</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> ldap-agent was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>

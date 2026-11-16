@@ -10,10 +10,8 @@ description: "std::is_const – std::is_const"
 <p>std::is_const &#8211; std::is_const</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_const;</code></pre>
 <p>If T is a const-qualified type (that is, const, or const volatile), provides the member constant value equal true. For any other type, value is false. </p>
 <h2>Template parameters</h2>
@@ -44,10 +42,8 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_const&lt;int&gt;::value &lt;&lt; '

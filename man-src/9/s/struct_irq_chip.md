@@ -48,111 +48,111 @@ description: "struct_irq_chip – hardware interrupt chip descriptor"
 <h2>Members</h2>
 <p>parent_device</p>
 <dl>
-<dd>pointer to parent device for irqchip</dl>
+<dd>pointer to parent device for irqchip</dd></dl>
 <p> name</p>
 <dl>
-<dd>name for /proc/interrupts</dl>
+<dd>name for /proc/interrupts</dd></dl>
 <p> irq_startup</p>
 <dl>
-<dd>start up the interrupt (defaults to -&gt;enable if NULL)</dl>
+<dd>start up the interrupt (defaults to -&gt;enable if NULL)</dd></dl>
 <p> irq_shutdown</p>
 <dl>
-<dd>shut down the interrupt (defaults to -&gt;disable if NULL)</dl>
+<dd>shut down the interrupt (defaults to -&gt;disable if NULL)</dd></dl>
 <p> irq_enable</p>
 <dl>
-<dd>enable the interrupt (defaults to chip-&gt;unmask if NULL)</dl>
+<dd>enable the interrupt (defaults to chip-&gt;unmask if NULL)</dd></dl>
 <p> irq_disable</p>
 <dl>
-<dd>disable the interrupt</dl>
+<dd>disable the interrupt</dd></dl>
 <p> irq_ack</p>
 <dl>
-<dd>start of a new interrupt</dl>
+<dd>start of a new interrupt</dd></dl>
 <p> irq_mask</p>
 <dl>
-<dd>mask an interrupt source</dl>
+<dd>mask an interrupt source</dd></dl>
 <p> irq_mask_ack</p>
 <dl>
-<dd>ack and mask an interrupt source</dl>
+<dd>ack and mask an interrupt source</dd></dl>
 <p> irq_unmask</p>
 <dl>
-<dd>unmask an interrupt source</dl>
+<dd>unmask an interrupt source</dd></dl>
 <p> irq_eoi</p>
 <dl>
-<dd>end of interrupt</dl>
+<dd>end of interrupt</dd></dl>
 <p> irq_set_affinity</p>
 <dl>
-<dd>set the CPU affinity on SMP machines</dl>
+<dd>set the CPU affinity on SMP machines</dd></dl>
 <p> irq_retrigger</p>
 <dl>
-<dd>resend an IRQ to the CPU</dl>
+<dd>resend an IRQ to the CPU</dd></dl>
 <p> irq_set_type</p>
 <dl>
-<dd>set the flow type (IRQ_TYPE_LEVEL/etc.) of an IRQ</dl>
+<dd>set the flow type (IRQ_TYPE_LEVEL/etc.) of an IRQ</dd></dl>
 <p> irq_set_wake</p>
 <dl>
-<dd>enable/disable power-management wake-on of an IRQ</dl>
+<dd>enable/disable power-management wake-on of an IRQ</dd></dl>
 <p> irq_bus_lock</p>
 <dl>
-<dd>function to lock access to slow bus (i2c) chips</dl>
+<dd>function to lock access to slow bus (i2c) chips</dd></dl>
 <p> irq_bus_sync_unlock</p>
 <dl>
-<dd>function to sync and unlock slow bus (i2c) chips</dl>
+<dd>function to sync and unlock slow bus (i2c) chips</dd></dl>
 <p> irq_cpu_online</p>
 <dl>
-<dd>configure an interrupt source for a secondary CPU</dl>
+<dd>configure an interrupt source for a secondary CPU</dd></dl>
 <p> irq_cpu_offline</p>
 <dl>
-<dd>un-configure an interrupt source for a secondary CPU</dl>
+<dd>un-configure an interrupt source for a secondary CPU</dd></dl>
 <p> irq_suspend</p>
 <dl>
-<dd>function called from core code on suspend once per chip, when one or more interrupts are installed</dl>
+<dd>function called from core code on suspend once per chip, when one or more interrupts are installed</dd></dl>
 <p> irq_resume</p>
 <dl>
-<dd>function called from core code on resume once per chip, when one ore more interrupts are installed</dl>
+<dd>function called from core code on resume once per chip, when one ore more interrupts are installed</dd></dl>
 <p> irq_pm_shutdown</p>
 <dl>
-<dd>function called from core code on shutdown once per chip</dl>
+<dd>function called from core code on shutdown once per chip</dd></dl>
 <p> irq_calc_mask</p>
 <dl>
-<dd>Optional function to set irq_data.mask for special cases</dl>
+<dd>Optional function to set irq_data.mask for special cases</dd></dl>
 <p> irq_print_chip</p>
 <dl>
-<dd>optional to print special chip info in show_interrupts</dl>
+<dd>optional to print special chip info in show_interrupts</dd></dl>
 <p> irq_request_resources</p>
 <dl>
-<dd>optional to request resources before calling any other callback related to this irq</dl>
+<dd>optional to request resources before calling any other callback related to this irq</dd></dl>
 <p> irq_release_resources</p>
 <dl>
-<dd>optional to release resources acquired with irq_request_resources</dl>
+<dd>optional to release resources acquired with irq_request_resources</dd></dl>
 <p> irq_compose_msi_msg</p>
 <dl>
-<dd>optional to compose message content for MSI</dl>
+<dd>optional to compose message content for MSI</dd></dl>
 <p> irq_write_msi_msg</p>
 <dl>
-<dd>optional to write message content for MSI</dl>
+<dd>optional to write message content for MSI</dd></dl>
 <p> irq_get_irqchip_state</p>
 <dl>
-<dd>return the internal state of an interrupt</dl>
+<dd>return the internal state of an interrupt</dd></dl>
 <p> irq_set_irqchip_state</p>
 <dl>
-<dd>set the internal state of a interrupt</dl>
+<dd>set the internal state of a interrupt</dd></dl>
 <p> irq_set_vcpu_affinity</p>
 <dl>
-<dd>optional to target a vCPU in a virtual machine</dl>
+<dd>optional to target a vCPU in a virtual machine</dd></dl>
 <p> ipi_send_single</p>
 <dl>
-<dd>send a single IPI to destination cpus</dl>
+<dd>send a single IPI to destination cpus</dd></dl>
 <p> ipi_send_mask</p>
 <dl>
-<dd>send an IPI to destination cpus in cpumask</dl>
+<dd>send an IPI to destination cpus in cpumask</dd></dl>
 <p> flags</p>
 <dl>
-<dd>chip specific flags</dl>
+<dd>chip specific flags</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

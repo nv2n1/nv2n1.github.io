@@ -37,13 +37,12 @@ url: "/docs/linux/man/1-nvme-help/"
 
 <dl>
 <dt>
-<dd> &bull; Show help for nvme smart log: 
-
-<dl>
+</dt><dd> &bull; Show help for nvme smart log: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme help smart-log
-</pre></dl>
+</pre></dd></dl>
  
 
  Not much to it</dl>

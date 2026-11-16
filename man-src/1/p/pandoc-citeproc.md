@@ -33,9 +33,9 @@ url: "/docs/linux/man/1-pandoc-citeproc/"
  To process citations with pandoc, call pandoc-citeproc as a filter:
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 pandoc --filter pandoc-citeproc input.md -s -o output.html
-</pre></dl>
+</pre></dd></dl>
  
 
  The bibliography will be put into a pandoc Div container with class references. 
@@ -45,7 +45,7 @@ pandoc --filter pandoc-citeproc input.md -s -o output.html
  bibliography: A path, or YAML list of paths, of bibliography files to use. These may be in any of the formats supported by bibutils.
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 Format &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -187,13 +187,13 @@ File extension-- -- -- -- -- --&amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
 .json
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  references: A YAML list of references. Each reference is a YAML object. The format is essentially CSL JSON format. Here is an example:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 - id:doe2006
          &amp;nbsp;
 &amp;nbsp;
@@ -226,7 +226,7 @@ type : article - journal
 volume : 6 &amp; nbsp;
 &amp;nbsp;
 container - title : Journal of Generic Studies
-</dl>
+</dd></dl>
  
 
  The contents of fields will be interpreted as markdown when appropriate: so, for example, emphasis and strong emphasis can be used in title fileds. Simple tex math will also be parsed and rendered appropriately. 
@@ -236,7 +236,7 @@ container - title : Journal of Generic Studies
  citation-abbreviations: Path to a CSL abbreviations JSON file. The format is described here (<a rel="nofollow" HREF="http://citationstylist.org/2011/10/19/abbreviations-for-zotero-test-release">http://citationstylist.org/2011/10/19/abbreviations-for-zotero-test-release</a>). Here is a short example:
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 {
     &amp;nbsp;
     "default" : &amp;nbsp;
@@ -297,7 +297,7 @@ container - title : Journal of Generic Studies
         &amp;nbsp;
     }
 }
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  The metadata must contain either references or bibliography or both as a source of references. csl and citation-abbreviations are optional. If csl is not provided, chicago-author-date.csl will be used by default.
@@ -316,34 +316,29 @@ container - title : Journal of Generic Studies
 
 <dl>
 <dt>-h, --help
-<dd> Print usage information.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Print usage information.
+</dd><dl>
+</dl>
 
 <dt>-V, --version
-<dd> Print version.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Print version.
+</dd><dl>
+</dl>
 
 <dt>-y, --bib2yaml
-<dd> Convert bibliography to YAML suitable for inclusion in pandoc metadata.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Convert bibliography to YAML suitable for inclusion in pandoc metadata.
+</dd><dl>
+</dl>
 
 <dt>-j, --bib2json
-<dd> Convert bibliography to CSL JSON suitable for import into Zotero.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Convert bibliography to CSL JSON suitable for import into Zotero.
+</dd><dl>
+</dl>
 
 <dt>-f FORMAT, --format=FORMAT
-<dd> Specify format of bibliography to be converted. Legal values are biblatex, bibtex, ris, endnote, endnotexml, isi, medline, copac, and json.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Specify format of bibliography to be converted. Legal values are biblatex, bibtex, ris, endnote, endnotexml, isi, medline, copac, and json.
+</dd><dl>
+</dl>
 </dl>
 
 <h2>AUTHORS</h2>

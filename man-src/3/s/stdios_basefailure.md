@@ -10,7 +10,6 @@ description: "std::ios_base::failure – std::ios_base::failure"
 <p>std::ios_base::failure &#8211; std::ios_base::failure</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;ios&gt;
-
 class failure;</code></pre>
 <p>The class std::ios_base::failure defines an exception object that is thrown on failure by the functions in the Input/Output library.<br />
 std::ios_base::failure may be defined either as a member class of std::ios_base or as a synonym <i>(typedef)</i> for another class with equivalent functionality.<br />
@@ -50,11 +49,8 @@ code <i>(public member function of std::system_error)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 int main()
-
 {
     std::ifstream f(&quot;doesn't exist&quot;);
     try {

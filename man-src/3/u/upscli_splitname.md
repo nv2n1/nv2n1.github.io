@@ -19,7 +19,7 @@ description: "upscli_splitname – split a UPS definition into its components"
 <dl>
 <dd>
 <pre>&lt;upsname&gt;[@&lt;hostname&gt;[:&lt;port&gt;]]</pre>
-</dl>
+</dd></dl>
 <p> When the UPS name is not given, this function will print an error to stderr and return -1 without changing anything. </p>
 <p> Definitions without an explicit port value receive the default value of 3493. The default hostname is &quot;localhost&quot;.</p>
 <h2>Memory Usage</h2>

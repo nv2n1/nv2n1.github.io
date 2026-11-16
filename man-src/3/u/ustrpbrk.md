@@ -10,7 +10,6 @@ description: "ustrpbrk – Finds the first character that matches any in a set. 
 <p>ustrpbrk &#8211; Finds the first character that matches any in a set. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrpbrk(const char *s, const char *set);</code></pre>
 <h2>Description</h2>
 <p>This function finds the first character in `s&#8217; that matches any character in `set&#8217;. Example: </p>

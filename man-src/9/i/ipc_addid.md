@@ -15,15 +15,15 @@ ipc_addid - add an ipc identifier
 <h2>Arguments</h2>
 
 <i>ids</i>
-<dl><dd><dd>ipc identifier set</dl>
+<dl><dd></dd><dd>ipc identifier set</dd></dl>
  
 
  <i>new</i>
-<dl><dd>new ipc permission set</dl>
+<dl><dd>new ipc permission set</dd></dl>
  
 
  <i>size</i>
-<dl><dd>limit for the number of used ids</dl>
+<dl><dd>limit for the number of used ids</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,13 +14,13 @@ description: "gnet_stats_copy_rate_est – copy rate estimator statistics into s
 <p><i>d</i></p>
 <dl>
 <dd>
-<dd>dumping handle</dl>
+</dd><dd>dumping handle</dd></dl>
 <p> <i>b</i></p>
 <dl>
-<dd>basic statistics</dl>
+<dd>basic statistics</dd></dl>
 <p> <i>r</i></p>
 <dl>
-<dd>rate estimator statistics</dl>
+<dd>rate estimator statistics</dd></dl>
 <h2>Description</h2>
 <p>Appends the rate estimator statistics to the top level TLV created by <code>gnet_stats_start_copy</code>. </p>
 <p> Returns 0 on success or -1 with the statistic lock released if the room in the socket buffer was not sufficient.</p>

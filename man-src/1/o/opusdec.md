@@ -17,46 +17,46 @@ description: "opusdec – decode audio from Opus format to WAV (or simple audio 
 <p> If no output is specified <code>opusdec</code> will attempt to play the audio in realtime if it supports audio playback on your system. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Print help message</p>
-<dt>-V, &#8211;version</p>
-<dd> Display version information</p>
-<dt>&#8211;quiet</p>
-<dd> Suppresses program output</p>
-<dt>&#8211;rate</p>
+<dt>-h, &#8211;help</dt>
+<dd> Print help message</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Display version information</dd>
+<dt>&#8211;quiet</dt>
+<dd> Suppresses program output</dd>
+<dt>&#8211;rate</dt>
 <dd>
- Force decoding at sampling rate n Hz</p>
-<dt>&#8211;gain</p>
+ Force decoding at sampling rate n Hz</dd>
+<dt>&#8211;gain</dt>
 <dd>
- Adjust the output volume n dB, negative values make the signal quieter.</p>
-<dt>&#8211;no-dither</p>
-<dd> Do not dither 16-bit output</p>
-<dt>&#8211;force-wav</p>
-<dd> Force including a wav header on output (e.g. for non-wav extensions and stdout)</p>
-<dt>&#8211;packet-loss</p>
-<dd> Simulate n % random Opus packet loss</p>
-<dt>&#8211;save-range</p>
-<dd> Saves check values for every frame to a file </p>
+ Adjust the output volume n dB, negative values make the signal quieter.</dd>
+<dt>&#8211;no-dither</dt>
+<dd> Do not dither 16-bit output</dd>
+<dt>&#8211;force-wav</dt>
+<dd> Force including a wav header on output (e.g. for non-wav extensions and stdout)</dd>
+<dt>&#8211;packet-loss</dt>
+<dd> Simulate n % random Opus packet loss</dd>
+<dt>&#8211;save-range</dt>
+<dd> Saves check values for every frame to a file </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Decode a file <code>input.opus</code> to <code>output.wav</code></p>
 <dl>
 <dt>
-<dd> opusdec input.opus output.wav</dl>
+</dt><dd> opusdec input.opus output.wav</dd></dl>
 <p> Play a file <code>input.opus</code> and force output at 48000 regardless of the original sampling rate<br />
  <i>(48kHz output may be faster, due to avoiding resampling and some sound hardware produces higher quality output when run at 48kHz)</i></p>
 <dl>
 <dt>
-<dd> opusdec &#8211;rate 48000 input.opus</dl>
+</dt><dd> opusdec &#8211;rate 48000 input.opus</dd></dl>
 <p> Re-encode a high bitrate Opus file to a lower rate</p>
 <dl>
 <dt>
-<dd> opusdec &#8211;force-wav input.opus &#8211; | opusenc &#8211;bitrate 64 &#8211; output.opus</dl>
+</dt><dd> opusdec &#8211;force-wav input.opus &#8211; | opusenc &#8211;bitrate 64 &#8211; output.opus</dd></dl>
 <p> Play an http stream <code><a rel="nofollow" href="http://icecast.somwhere.org:8000/stream.opus">http://icecast.somwhere.org:8000/stream.opus</a></code> with the help of curl on a system with pulseaudio<br />
  <i>(press ctrl-c to quit)</i></p>
 <dl>
 <dt>
-<dd> curl <a rel="nofollow" href="http://icecast.somwhere.org:8000/stream.opus">http://icecast.somwhere.org:8000/stream.opus</a> | padsp opusdec &#8211;</dl>
+</dt><dd> curl <a rel="nofollow" href="http://icecast.somwhere.org:8000/stream.opus">http://icecast.somwhere.org:8000/stream.opus</a> | padsp opusdec &#8211;</dd></dl>
 <h2>AUTHORS</h2>
 <p> Jean-Marc Valin &lt;jmvalin [at] jmvalin.ca&gt;<br />
  Gregory Maxwell &lt;greg [at] xiph.org&gt; </p>

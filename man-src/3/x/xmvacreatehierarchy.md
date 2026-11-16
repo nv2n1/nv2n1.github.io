@@ -23,12 +23,12 @@ description: "XmVaCreateHierarchy, XmVaCreateManagedHierarchy — A Hierarchy wi
 <p> The <code>XmVaCreateHierarchy</code> function is a convenience routine that calls <code>XtCreateWidget</code>. </p>
 <p> The <code>XmVaCreateManagedHierarchy</code> function is a convenience routine that calls <code>XtCreateManagedWidget</code>. </p>
 <dl COMPACT>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID.</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget.</p>
-<dt><i>&#8230;</i></p>
-<dd>Specifies the variable argument list to override the resource defaults.</dl>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget.</dd>
+<dt><i>&#8230;</i></dt>
+<dd>Specifies the variable argument list to override the resource defaults.</dd></dl>
 <p> For a complete definition of Hierarchy and its associated resources, see <code><a href="/docs/linux/man/3-xmhierarchy/">XmHierarchy</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the Hierarchy widget ID.</p>

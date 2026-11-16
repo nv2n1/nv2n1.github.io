@@ -15,36 +15,36 @@ description: "vmstat – Report virtual memory statistics"
 <p> The first report produced gives averages since the last reboot. Additional reports give information on a sampling period of length <i>delay</i>. The process and memory reports are instantaneous in either case.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>delay</i></p>
-<dd>The <i>delay</i> between updates in seconds. If no <i>delay</i> is specified, only one report is printed with the average values since boot.</p>
-<dt><i>count</i></p>
-<dd>Number of updates. In absence of <i>count</i>, when <i>delay</i> is defined, default is infinite.</p>
-<dt><code>-a</code>, <code>&#8211;active</code></p>
-<dd>Display active and inactive memory, given a 2.5.41 kernel or better.</p>
-<dt><code>-f</code>, <code>&#8211;forks</code></p>
-<dd>The <code>-f</code> switch displays the number of forks since boot. This includes the fork, vfork, and clone system calls, and is equivalent to the total number of tasks created. Each process is represented by one or more tasks, depending on thread usage. This display does not repeat.</p>
-<dt><code>-m</code>, <code>&#8211;slabs</code></p>
-<dd>Displays slabinfo.</p>
-<dt><code>-n</code>, <code>&#8211;one-header</code></p>
-<dd>Display the header only once rather than periodically.</p>
-<dt><code>-s</code>, <code>&#8211;stats</code></p>
-<dd>Displays a table of various event counters and memory statistics. This display does not repeat.</p>
-<dt><code>-d</code>, <code>&#8211;disk</code></p>
-<dd>Report disk statistics (2.5.70 or above required).</p>
-<dt><code>-D</code>, <code>&#8211;disk-sum</code></p>
-<dd>Report some summary statistics about disk activity.</p>
-<dt><code>-p</code>, <code>&#8211;partition</code> <i>device</i></p>
-<dd>Detailed statistics about partition (2.5.70 or above required).</p>
-<dt><code>-S</code>, <code>&#8211;unit</code> <i>character</i></p>
-<dd>Switches outputs between 1000 (<i>k</i>), 1024 (<i>K</i>), 1000000 (<i>m</i>), or 1048576 (<i>M</i>) bytes. Note this does not change the block (bi/bo) fields, which are always measured in blocks.</p>
-<dt><code>-t</code>, <code>&#8211;timestamp</code></p>
-<dd>Append timestamp to each line</p>
-<dt><code>-w</code>, <code>&#8211;wide</code></p>
-<dd>Wide output mode (useful for systems with higher amount of memory, where the default output mode suffers from unwanted column breakage). The output is wider than 80 characters per line.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display version information and exit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display help and exit.</dl>
+<dt><i>delay</i></dt>
+<dd>The <i>delay</i> between updates in seconds. If no <i>delay</i> is specified, only one report is printed with the average values since boot.</dd>
+<dt><i>count</i></dt>
+<dd>Number of updates. In absence of <i>count</i>, when <i>delay</i> is defined, default is infinite.</dd>
+<dt><code>-a</code>, <code>&#8211;active</code></dt>
+<dd>Display active and inactive memory, given a 2.5.41 kernel or better.</dd>
+<dt><code>-f</code>, <code>&#8211;forks</code></dt>
+<dd>The <code>-f</code> switch displays the number of forks since boot. This includes the fork, vfork, and clone system calls, and is equivalent to the total number of tasks created. Each process is represented by one or more tasks, depending on thread usage. This display does not repeat.</dd>
+<dt><code>-m</code>, <code>&#8211;slabs</code></dt>
+<dd>Displays slabinfo.</dd>
+<dt><code>-n</code>, <code>&#8211;one-header</code></dt>
+<dd>Display the header only once rather than periodically.</dd>
+<dt><code>-s</code>, <code>&#8211;stats</code></dt>
+<dd>Displays a table of various event counters and memory statistics. This display does not repeat.</dd>
+<dt><code>-d</code>, <code>&#8211;disk</code></dt>
+<dd>Report disk statistics (2.5.70 or above required).</dd>
+<dt><code>-D</code>, <code>&#8211;disk-sum</code></dt>
+<dd>Report some summary statistics about disk activity.</dd>
+<dt><code>-p</code>, <code>&#8211;partition</code> <i>device</i></dt>
+<dd>Detailed statistics about partition (2.5.70 or above required).</dd>
+<dt><code>-S</code>, <code>&#8211;unit</code> <i>character</i></dt>
+<dd>Switches outputs between 1000 (<i>k</i>), 1024 (<i>K</i>), 1000000 (<i>m</i>), or 1048576 (<i>M</i>) bytes. Note this does not change the block (bi/bo) fields, which are always measured in blocks.</dd>
+<dt><code>-t</code>, <code>&#8211;timestamp</code></dt>
+<dd>Append timestamp to each line</dd>
+<dt><code>-w</code>, <code>&#8211;wide</code></dt>
+<dd>Wide output mode (useful for systems with higher amount of memory, where the default output mode suffers from unwanted column breakage). The output is wider than 80 characters per line.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display version information and exit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display help and exit.</dd></dl>
 <h2>Field Description For Vm Mode</h2>
 <h3><code>Procs</code></h3>
 <pre>r: The number of runnable processes (running or waiting for run time).

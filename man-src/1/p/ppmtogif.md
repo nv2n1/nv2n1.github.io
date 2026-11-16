@@ -20,33 +20,33 @@ description: "ppmtogif – convert a portable pixmap into a GIF file"
 <p> <code>ppmtogif</code> creates either an original GIF87 format GIF file or the newer GIF89 format. It creates GIF89 when you request features that were new with GIF89, to wit the <code>-transparent</code> or <code>-comment</code> options. Otherwise, it creates GIF87. Really old GIF readers conceivably could not recognize GIF89. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-interlace</code></p>
-<dd> Produce an interlaced GIF file.</p>
-<dt><code>-sort</code></p>
-<dd> Produces a GIF file with a sorted color map.</p>
-<dt><code>-map </code></p>
-<dd> <i>mapfile</i> </p>
+<dt><code>-interlace</code></dt>
+<dd> Produce an interlaced GIF file.</dd>
+<dt><code>-sort</code></dt>
+<dd> Produces a GIF file with a sorted color map.</dd>
+<dt><code>-map </code></dt>
+<dd> <i>mapfile</i> </dd>
 <p> Uses the colors found in the <i>mapfile</i> to create the colormap in the GIF file, instead of the colors from <i>ppmfile.</i> The <i>mapfile</i> can be any <i>ppm</i> file; all that matters is the colors in it. If the colors in <i>ppmfile</i> do not match those in <i>mapfile</i> , they are matched to a &quot;best match.&quot; A (much) better result can be obtained by using the following filter in advance: </p>
 <p> <i>ppmquant</i> -floyd -map <i>mapfile</i></p>
-<dt><code>-transparent </code><i>color</i></p>
-<dd> <code>ppmtogif</code> marks the specified color as transparent in the GIF image. </p>
+<dt><code>-transparent </code><i>color</i></dt>
+<dd> <code>ppmtogif</code> marks the specified color as transparent in the GIF image. </dd>
 <p> If you don&#8217;t specify <code>-transparent</code>, <code>ppmtogif</code> does not mark any color transparent (except as indicated by the <code>-alpha</code> option). </p>
 <p> You specify the color as in <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1).<code>E.g.</code> <code>red</code> or <code>rgb:ff/00/0d</code>. If the color you specify is not present in the image, <code>ppmtogif</code> selects instead the color in the image that is closest to the one you specify. Closeness is measured as a cartesian distance between colors in RGB space. If multiple colors are equidistant, <code>ppmtogif</code> chooses one of them arbitrarily. </p>
 <p> However, if you prefix your color specification with &quot;=&quot;, e.g. </p>
 <p> <code>-transparent==red</code> </p>
 <p> Only the exact color you specify will be transparent. If that color does not appear in the image, there will be no transparency. <code>ppmtogif</code> issues an information message when this is the case. </p>
 <p> You cannot specify both <code>-transparent</code> and <code>-alpha</code>. </p>
-<dt><code>-alpha= </code><i>pgmfile</i></p>
-<dd> This option names a PGM file that contains an alpha mask for the image. <code>ppmtogif</code> Creates fully transparent pixels wherever the alpha mask indicates transparency greater than 50%. The color of those pixels is that specified by the <code>-alphacolor</code> option, or black by default. </p>
+<dt><code>-alpha= </code><i>pgmfile</i></dt>
+<dd> This option names a PGM file that contains an alpha mask for the image. <code>ppmtogif</code> Creates fully transparent pixels wherever the alpha mask indicates transparency greater than 50%. The color of those pixels is that specified by the <code>-alphacolor</code> option, or black by default. </dd>
 <p> To do this, <code>ppmtogif</code> creates an entry in the GIF colormap in addition to the entries for colors that are actually in the image. It marks that colormap entry as transparent and uses that colormap index in the output image to create a transparent pixel. </p>
 <p> The alpha image must be the same dimensions as the input image, but may have any maxval. White means opaque and black means transparent. </p>
 <p> You cannot specify both <code>-transparent</code> and <code>-alpha</code>. </p>
-<dt><code>-alphacolor</code></p>
-<dd> See <code>-alpha</code>. </p>
-<dt><code>-comment </code><i>text</i></p>
-<dd> Include a comment in the GIF output with comment text <i>text</i>. Without this option, there are no comments in the output. </p>
-<dt><code>-nolzw </code></p>
-<dd> This option causes the GIF output, and thus <code>ppmtogif</code>, not to use LZW (Lempel-Ziv) compression. As a result, the image file is larger and no royalties are owed to the holder of the patent on LZW. See the section LICENSE below. </p>
+<dt><code>-alphacolor</code></dt>
+<dd> See <code>-alpha</code>. </dd>
+<dt><code>-comment </code><i>text</i></dt>
+<dd> Include a comment in the GIF output with comment text <i>text</i>. Without this option, there are no comments in the output. </dd>
+<dt><code>-nolzw </code></dt>
+<dd> This option causes the GIF output, and thus <code>ppmtogif</code>, not to use LZW (Lempel-Ziv) compression. As a result, the image file is larger and no royalties are owed to the holder of the patent on LZW. See the section LICENSE below. </dd>
 <p> LZW is a method for combining the information from multiple pixels into a single GIF code. With the <code>-nolzw</code> option, <code>ppmtogif</code> creates one GIF code per pixel, so it is not doing any compression and not using LZW. However, any GIF decoder, whether it uses an LZW decompressor or not, will correctly decode this uncompressed format. An LZW decompressor would see this as a particular case of LZW compression. </p>
 <p> Note that if someone uses an LZW decompressor such as the one in <code>ppmtogif</code> or pretty much any graphics display program to process the output of <code>ppmtogif -nolzw </code> he is then using the LZW patent. But the patent holder has expressed far less interest in enforcing the patent on decoding than on encoding. </p>
 </dl>

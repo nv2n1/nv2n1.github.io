@@ -10,58 +10,58 @@ description: "ipsec_eroute – manipulate IPSEC extended routing tables"
 <p>ipsec_eroute &#8211; manipulate IPSEC extended routing tables</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec eroute</code> <i>&#8211;add</i>&nbsp;<wbr><code>&#8211;eraf</code>&nbsp;<wbr><i>(inet | inet6)</i>&nbsp;<wbr><code>&#8211;src</code>&nbsp;<wbr><i>src/srcmaskbits|srcmask</i>&nbsp;<wbr><code>&#8211;dst</code>&nbsp;<wbr><i>dst/dstmaskbits|dstmask</i>&nbsp;<wbr>[[<code>&#8211;transport-proto</code>&nbsp;<wbr><i>transport-protocol</i>]]&nbsp;<wbr>[<code>&#8211;src-port&nbsp;<wbr></code><i>source-port</i>]&nbsp;<wbr>[<code>&#8211;dst-port&nbsp;<wbr></code><i>dest-port</i>]&nbsp;<wbr>[&lt;SAID&gt;]</p>
-<dt> <code>ipsec eroute</code> <i>&#8211;replace</i>&nbsp;<wbr><code>&#8211;eraf</code>&nbsp;<wbr><i>(inet | inet6)</i>&nbsp;<wbr><code>&#8211;src</code>&nbsp;<wbr><i>src/srcmaskbits|srcmask</i>&nbsp;<wbr><code>&#8211;dst</code>&nbsp;<wbr><i>dst/dstmaskbits|dstmask</i>&nbsp;<wbr>[[<code>&#8211;transport-proto</code>&nbsp;<wbr><i>transport-protocol</i>]]&nbsp;<wbr>[<code>&#8211;src-port&nbsp;<wbr></code><i>source-port</i>]&nbsp;<wbr>[<code>&#8211;dst-port&nbsp;<wbr></code><i>dest-port</i>]&nbsp;<wbr>[&lt;SAID&gt;]</p>
-<dt> <code>ipsec eroute</code> <i>&#8211;del</i>&#8211;del<code>&#8211;eraf</code>&nbsp;<wbr><i>(inet | inet6)</i>&nbsp;<wbr><code>&#8211;src</code><i>src/srcmaskbits|srcmask</i><code>&#8211;dst</code><i>dst/dstmaskbits|dstmask</i>&nbsp;<wbr>[[<code>&#8211;transport-proto</code>&nbsp;<wbr><i>transport-protocol</i>]]&nbsp;<wbr>[<code>&#8211;src-port&nbsp;<wbr></code><i>source-port</i>]&nbsp;<wbr>[<code>&#8211;dst-port&nbsp;<wbr></code><i>dest-port</i>]&nbsp;<wbr>[&lt;SAID&gt;]</p>
-<dt> <code>ipsec eroute</code> &#8211;clear</p>
-<dt> <code>ipsec eroute</code> &#8211;help</p>
-<dt> <code>ipsec eroute</code> &#8211;version</dl>
+<dt> <code>ipsec eroute</code> <i>&#8211;add</i>&nbsp;<wbr><code>&#8211;eraf</code>&nbsp;<wbr><i>(inet | inet6)</i>&nbsp;<wbr><code>&#8211;src</code>&nbsp;<wbr><i>src/srcmaskbits|srcmask</i>&nbsp;<wbr><code>&#8211;dst</code>&nbsp;<wbr><i>dst/dstmaskbits|dstmask</i>&nbsp;<wbr>[[<code>&#8211;transport-proto</code>&nbsp;<wbr><i>transport-protocol</i>]]&nbsp;<wbr>[<code>&#8211;src-port&nbsp;<wbr></code><i>source-port</i>]&nbsp;<wbr>[<code>&#8211;dst-port&nbsp;<wbr></code><i>dest-port</i>]&nbsp;<wbr>[&lt;SAID&gt;]</dt>
+<dt> <code>ipsec eroute</code> <i>&#8211;replace</i>&nbsp;<wbr><code>&#8211;eraf</code>&nbsp;<wbr><i>(inet | inet6)</i>&nbsp;<wbr><code>&#8211;src</code>&nbsp;<wbr><i>src/srcmaskbits|srcmask</i>&nbsp;<wbr><code>&#8211;dst</code>&nbsp;<wbr><i>dst/dstmaskbits|dstmask</i>&nbsp;<wbr>[[<code>&#8211;transport-proto</code>&nbsp;<wbr><i>transport-protocol</i>]]&nbsp;<wbr>[<code>&#8211;src-port&nbsp;<wbr></code><i>source-port</i>]&nbsp;<wbr>[<code>&#8211;dst-port&nbsp;<wbr></code><i>dest-port</i>]&nbsp;<wbr>[&lt;SAID&gt;]</dt>
+<dt> <code>ipsec eroute</code> <i>&#8211;del</i>&#8211;del<code>&#8211;eraf</code>&nbsp;<wbr><i>(inet | inet6)</i>&nbsp;<wbr><code>&#8211;src</code><i>src/srcmaskbits|srcmask</i><code>&#8211;dst</code><i>dst/dstmaskbits|dstmask</i>&nbsp;<wbr>[[<code>&#8211;transport-proto</code>&nbsp;<wbr><i>transport-protocol</i>]]&nbsp;<wbr>[<code>&#8211;src-port&nbsp;<wbr></code><i>source-port</i>]&nbsp;<wbr>[<code>&#8211;dst-port&nbsp;<wbr></code><i>dest-port</i>]&nbsp;<wbr>[&lt;SAID&gt;]</dt>
+<dt> <code>ipsec eroute</code> &#8211;clear</dt>
+<dt> <code>ipsec eroute</code> &#8211;help</dt>
+<dt> <code>ipsec eroute</code> &#8211;version</dt></dl>
 <h2>Said Description</h2>
-<dd>Where &lt;SAID&gt; is &#8211;af (inet | inet6) &#8211;edst edst &#8211;spi spi &#8211;proto proto OR &#8211;said said OR &#8211;said (%passthrough | %passthrough4 | %passthrough6 | %drop | %reject | %trap | %hold | %pass )</p>
+<dd>Where &lt;SAID&gt; is &#8211;af (inet | inet6) &#8211;edst edst &#8211;spi spi &#8211;proto proto OR &#8211;said said OR &#8211;said (%passthrough | %passthrough4 | %passthrough6 | %drop | %reject | %trap | %hold | %pass )</dd>
 <h2>Description</h2>
 <p><i>Eroute</i> manages the IPSEC extended routing tables, which control what (if any) processing is applied to non-encrypted packets arriving for IPSEC processing and forwarding. The form with no additional arguments lists the contents of /proc/net/ipsec_eroute. The <code>&#8211;add</code> form adds a table entry, the <code>&#8211;replace</code> form replaces a table entry, while the <code>&#8211;del</code> form deletes one. The <code>&#8211;clear</code> form deletes the entire table. </p>
 <p> A table entry consists of: </p>
 <p> +</p>
 <dl>
-<dd>source and destination addresses, with masks, source and destination ports and protocol for selection of packets. The source and destination ports are only legal if the transport protocol is <code>TCP</code> or <code>UDP.</code> A port can be specified as either decimal, hexadecimal (leading 0x), octal (leading 0) or a name listed in the first column of /etc/services. A transport protocol can be specified as either decimal, hexadecimal (leading 0x), octal (leading 0) or a name listed in the first column of /etc/protocols. If a transport protocol or port is not specified then it defaults to 0 which means all protocols or all ports respectively.</dl>
+<dd>source and destination addresses, with masks, source and destination ports and protocol for selection of packets. The source and destination ports are only legal if the transport protocol is <code>TCP</code> or <code>UDP.</code> A port can be specified as either decimal, hexadecimal (leading 0x), octal (leading 0) or a name listed in the first column of /etc/services. A transport protocol can be specified as either decimal, hexadecimal (leading 0x), octal (leading 0) or a name listed in the first column of /etc/protocols. If a transport protocol or port is not specified then it defaults to 0 which means all protocols or all ports respectively.</dd></dl>
 <p> +</p>
 <dl>
-<dd>Security Association IDentifier, comprised of:</dl>
+<dd>Security Association IDentifier, comprised of:</dd></dl>
 <p> +</p>
 <dl>
-<dd>protocol (<i>proto</i>), indicating (together with the effective destination and the security parameters index) which Security Association should be used to process the packet</dl>
+<dd>protocol (<i>proto</i>), indicating (together with the effective destination and the security parameters index) which Security Association should be used to process the packet</dd></dl>
 <p> +</p>
 <dl>
-<dd>address family (<i>af</i>),</dl>
+<dd>address family (<i>af</i>),</dd></dl>
 <p> +</p>
 <dl>
-<dd>Security Parameters Index (<i>spi</i>), indicating (together with the effective destination and protocol) which Security Association should be used to process the packet (must be larger than or equal to 0x100)</dl>
+<dd>Security Parameters Index (<i>spi</i>), indicating (together with the effective destination and protocol) which Security Association should be used to process the packet (must be larger than or equal to 0x100)</dd></dl>
 <p> +</p>
 <dl>
-<dd>effective destination (<i>edst</i>), where the packet should be forwarded after processing (normally the other security gateway)</dl>
+<dd>effective destination (<i>edst</i>), where the packet should be forwarded after processing (normally the other security gateway)</dd></dl>
 <p> +</p>
 <dl>
-<dd>OR</dl>
+<dd>OR</dd></dl>
 <p> +</p>
 <dl>
-<dd>SAID (<i>said</i>), indicating which Security Association should be used to process the packet</dl>
+<dd>SAID (<i>said</i>), indicating which Security Association should be used to process the packet</dd></dl>
 <p> Addresses are written as IPv4 dotted quads or IPv6 coloned hex, protocol is one of &quot;ah&quot;, &quot;esp&quot;, &quot;comp&quot; or &quot;tun&quot; and SPIs are prefixed hexadecimal numbers where &#8216;.&#8217; represents IPv4 and &#8216;:&#8217; stands for IPv6. </p>
 <p> SAIDs are written as &quot;protoafSPI [at] address&quot;. There are also 5 &quot;magic&quot; SAIDs which have special meaning: </p>
 <p> +</p>
 <dl>
-<dd><code>%drop</code> means that matches are to be dropped</dl>
+<dd><code>%drop</code> means that matches are to be dropped</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%reject</code> means that matches are to be dropped and an ICMP returned, if possible to inform</dl>
+<dd><code>%reject</code> means that matches are to be dropped and an ICMP returned, if possible to inform</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%trap</code> means that matches are to trigger an ACQUIRE message to the Key Management daemon(s) and a hold eroute will be put in place to prevent subsequent packets also triggering ACQUIRE messages.</dl>
+<dd><code>%trap</code> means that matches are to trigger an ACQUIRE message to the Key Management daemon(s) and a hold eroute will be put in place to prevent subsequent packets also triggering ACQUIRE messages.</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%hold</code> means that matches are to stored until the eroute is replaced or until that eroute gets reaped</dl>
+<dd><code>%hold</code> means that matches are to stored until the eroute is replaced or until that eroute gets reaped</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%pass</code> means that matches are to allowed to pass without IPSEC processing</dl>
+<dd><code>%pass</code> means that matches are to allowed to pass without IPSEC processing</dd></dl>
 <p> The format of /proc/net/ipsec_eroute is listed in <a href="/docs/linux/man/5-ipsec_eroute/">ipsec_eroute</a>(5).</p>
 <h2>Examples</h2>
 <p><code>ipsec eroute &#8211;add &#8211;eraf inet &#8211;src 192.168.0.1/32 \</code><code> &#8211;dst 192.168.2.0/24 &#8211;af inet &#8211;edst 192.168.0.2 \</code><code> &#8211;spi 0x135 &#8211;proto tun</code> </p>
@@ -84,4 +84,4 @@ description: "ipsec_eroute – manipulate IPSEC extended routing tables"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

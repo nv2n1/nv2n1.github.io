@@ -15,15 +15,15 @@ snd_rawmidi_transmit - copy from the buffer to the device
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the rawmidi substream</dl>
+<dl><dd></dd><dd>the rawmidi substream</dd></dl>
  
 
  <i>buffer</i>
-<dl><dd>the buffer pointer</dl>
+<dl><dd>the buffer pointer</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the data size to transfer</dl>
+<dl><dd>the data size to transfer</dd></dl>
 
 <h2>Description</h2>
 

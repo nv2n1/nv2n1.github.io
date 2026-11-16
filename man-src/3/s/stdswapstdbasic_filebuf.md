@@ -11,9 +11,7 @@ std::swap(std::basic_filebuf) - std::swap(std::basic_filebuf)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits&gt;
-
 void swap(std::basic_filebuf&lt;CharT, Traits&gt; &amp;lhs, (since C++ 11)
-
                                                       std::basic_filebuf&lt;CharT, Traits&gt; &amp;rhs);</code></pre> 
 Overloads the std::swap algorithm for std::basic_filebuf. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

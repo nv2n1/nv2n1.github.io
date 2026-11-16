@@ -15,10 +15,10 @@ description: "CLOSE – close a cursor"
 <p> Every non-holdable open cursor is implicitly closed when a transaction is terminated by <code>COMMIT</code> or <code>ROLLBACK</code>. A holdable cursor is implicitly closed if the transaction that created it aborts via <code>ROLLBACK</code>. If the creating transaction successfully commits, the holdable cursor remains open until an explicit <code>CLOSE</code> is executed, or the client disconnects.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of an open cursor to close.</p>
-<dt><code>ALL</code></p>
-<dd>Close all open cursors.</dl>
+<dt><i>name</i></dt>
+<dd>The name of an open cursor to close.</dd>
+<dt><code>ALL</code></dt>
+<dd>Close all open cursors.</dd></dl>
 <h2>Notes</h2>
 <p>PostgreSQL does not have an explicit <code>OPEN</code> cursor statement; a cursor is considered open when it is declared. Use the DECLARE [<code><a href="/docs/linux/man/7-declare/">declare</a></code>(7)] statement to declare a cursor. </p>
 <p> You can see all available cursors by querying the <code>pg_cursors</code> system view. </p>

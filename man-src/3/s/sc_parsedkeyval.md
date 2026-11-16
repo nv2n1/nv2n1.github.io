@@ -11,7 +11,6 @@ description: "sc::ParsedKeyVal –"
 <p> Converts textual information into keyword/value assocations.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::StringKeyVal</code>.</p>
 <h3>Public Member Functions</h3>
@@ -35,49 +34,19 @@ description: "sc::ParsedKeyVal –"
  <i>Read input data from the given string. </i> <code>Overrides of parent members.</code><br />
  See parent class documentation. </p>
 <pre><code>const char * stringrep (const char *)
-
-
 Returns the string representation of the value assigned to key.
-
-
 const char * classname (const char *)
-
-
 Returns the name of the exact class of the object at the keyword.
-
-
 const char * truekeyword (const char *)
-
-
 Returns a string which is the actual keyword if some sort of variable substitution takes place (needed to make multiple references to the same object work in input files).
-
-
 void errortrace (std::ostream &amp;fp=ExEnv::err0())
-
-
 Write a message to fp describing the error.
-
-
 void dump (std::ostream &amp;fp=ExEnv::err0())
-
-
 Write a message to fp describing the error.
-
-
 void print_unseen (std::ostream &amp;fp=ExEnv::out0())
-
-
 Print keywords that were never looked at, if possible.
-
-
 int have_unseen ()
-
-
 Return 1 if there were unseen keywords, 0 if there are none, or -1 this keyval doesn't keep track of unseen keywords.
-
-
-
-
 Static Public Member Functions</code></pre>
 <p> static void <code>cat_files</code> (const char *, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, std::ostream &amp;o)<br />
  <i>This is like the </i><code>ParsedKeyVal(const char*,const Ref&lt;KeyVal&gt;&amp;)</code> ctor, but writes the contents of the files to the given ostream.</p>

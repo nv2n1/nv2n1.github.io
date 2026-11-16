@@ -10,7 +10,6 @@ description: "play_fli – Plays a FLI or FLC animation from disk. Allegro game 
 <p>play_fli &#8211; Plays a FLI or FLC animation from disk. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int play_fli(const char *filename, BITMAP *bmp, int loop, int (*callback)());</code></pre>
 <h2>Description</h2>
 <p>Plays an Autodesk Animator FLI or FLC animation file on the specified BITMAP, reading the data from disk as it is required. If `loop&#8217; is not zero, the player will cycle when it reaches the end of the file, otherwise it will play through the animation once and then return. Read the beginning of chapter &quot;FLIC routines&quot; for a description of the callback parameter. Example: </p>

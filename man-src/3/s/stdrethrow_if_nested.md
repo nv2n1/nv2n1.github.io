@@ -11,10 +11,8 @@ std::rethrow_if_nested - std::rethrow_if_nested
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;exception&gt;
-
     template &lt;class E&gt;
     (since C++ 11)
-
         void rethrow_if_nested(const E &amp;e);</code></pre> 
 If E is not a polymorphic class type, or if std::nested_exception is an inaccessible or ambiguous base class of E, there is no effect. 
 Otherwise, performs if (auto p = dynamic_cast&lt;const std::nested_exception *&gt;(std::addressof(e)))
@@ -67,20 +65,13 @@ Unlike many related functions, this function is not intended to be called with a
 
 Demonstrates construction and recursion through a nested exception object 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;stdexcept&gt;
-
 #include &lt;exception&gt;
-
 #include &lt;string&gt;
-
 #include &lt;fstream&gt;
 // prints the explanatory string of an exception. If the exception is nested,
-
 // recurses to print the explanatory of the exception it holds
-
 void print_exception(const std::exception &amp;e, int level = 0)
-
 {
     std::cerr &lt;&lt; std::string(level, ' ') &lt;&lt; &quot;exception: &quot; &lt;&lt; e.what() &lt;&lt; '\n';
     try {
@@ -91,9 +82,7 @@ void print_exception(const std::exception &amp;e, int level = 0)
     }
 }
 // sample function that catches an exception and wraps it in a nested exception
-
 void open_file(const std::string &amp;s)
-
 {
     try {
         std::ifstream file(s);
@@ -103,9 +92,7 @@ void open_file(const std::string &amp;s)
     }
 }
 // sample function that catches an exception and wraps it in a nested exception
-
 void run()
-
 {
     try {
         open_file(&quot;nonexistent.file&quot;);
@@ -114,9 +101,7 @@ void run()
     }
 }
 // runs the sample function above and prints the caught exception
-
 int main()
-
 {
     try {
         run();

@@ -11,14 +11,14 @@ description: "XtSessionGetToken, XtSessionReturnToken – token management for c
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>XtCheckpointToken XtSessionGetToken(Widget <i>w</i>);</p>
-<dd>void XtSessionReturnToken(XtCheckpointToken <i>token</i>);</dl>
+<dd>XtCheckpointToken XtSessionGetToken(Widget <i>w</i>);</dd>
+<dd>void XtSessionReturnToken(XtCheckpointToken <i>token</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the session widget.</p>
-<dt><i>token</i></p>
-<dd>Specifies the token to be returned.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the session widget.</dd>
+<dt><i>token</i></dt>
+<dd>Specifies the token to be returned.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtSessionGetToken</code> function will return NULL if the checkpoint operation instigated by the session manager is not currently under way. </p>
 <p> To indicate the completion of a deferred save operation and to return the checkpoint token use <code>XtSessionReturnToken</code>.</p>

@@ -32,45 +32,45 @@ description: "QuantLib::CubicInterpolation – Cubic interpolation between discr
 <p> See R. L. Dougherty, A. Edelman, and J. M. Hyman, &#8216;Nonnegativity-, Monotonicity-, or Convexity-Preserving CubicSpline and Quintic Hermite Interpolation&#8217; Mathematics Of Computation, v. 52, n. 186, April 1989, pp. 471-494. </p>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>implement missing schemes (FourthOrder and ModifiedParabolic) and missing boundary conditions (Periodic and Lagrange).</dl>
+<dd>implement missing schemes (FourthOrder and ModifiedParabolic) and missing boundary conditions (Periodic and Lagrange).</dd></dl>
 <p> <code>Tests</code></p>
 <dl>
-<dd>to be adapted from old ones.</dl>
+<dd>to be adapted from old ones.</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>DerivativeApprox</code></h3>
 <p><code>Enumerator: </code></p>
 <dl>
-<dt><i>Spline </i></p>
-<dd>Spline approximation (non-local, non-monotone, linear[?]). Different boundary conditions can be used on the left and right boundaries: see <code>BoundaryCondition</code>.</p>
-<dt><i>FourthOrder </i></p>
-<dd>Fourth-order approximation (local, non-monotone, linear).</p>
-<dt><i>Parabolic </i></p>
-<dd>Parabolic approximation (local, non-monotone, linear).</p>
-<dt><i>ModifiedParabolic </i></p>
-<dd>Modified-Parabolic approximation (local, monotone, non-linear).</p>
-<dt><i>FritschButland </i></p>
-<dd>Fritsch-Butland approximation (local, monotone, non-linear).</p>
-<dt><i>Akima </i></p>
-<dd>Akima approximation (local, non-monotone, non-linear).</p>
-<dt><i>Kruger </i></p>
-<dd>Kruger approximation (local, monotone, non-linear).</dl>
+<dt><i>Spline </i></dt>
+<dd>Spline approximation (non-local, non-monotone, linear[?]). Different boundary conditions can be used on the left and right boundaries: see <code>BoundaryCondition</code>.</dd>
+<dt><i>FourthOrder </i></dt>
+<dd>Fourth-order approximation (local, non-monotone, linear).</dd>
+<dt><i>Parabolic </i></dt>
+<dd>Parabolic approximation (local, non-monotone, linear).</dd>
+<dt><i>ModifiedParabolic </i></dt>
+<dd>Modified-Parabolic approximation (local, monotone, non-linear).</dd>
+<dt><i>FritschButland </i></dt>
+<dd>Fritsch-Butland approximation (local, monotone, non-linear).</dd>
+<dt><i>Akima </i></dt>
+<dd>Akima approximation (local, non-monotone, non-linear).</dd>
+<dt><i>Kruger </i></dt>
+<dd>Kruger approximation (local, monotone, non-linear).</dd></dl>
 <h3>enum <code>BoundaryCondition</code></h3>
 <p><code>Enumerator: </code></p>
 <dl>
-<dt><i>NotAKnot </i></p>
-<dd>Make second(-last) point an inactive knot.</p>
-<dt><i>FirstDerivative </i></p>
-<dd>Match value of end-slope.</p>
-<dt><i>SecondDerivative </i></p>
-<dd>Match value of second derivative at end.</p>
-<dt><i>Periodic </i></p>
-<dd>Match first and second derivative at either end.</p>
-<dt><i>Lagrange </i></p>
-<dd>Match end-slope to the slope of the cubic that matches the first four data at the respective end</dl>
+<dt><i>NotAKnot </i></dt>
+<dd>Make second(-last) point an inactive knot.</dd>
+<dt><i>FirstDerivative </i></dt>
+<dd>Match value of end-slope.</dd>
+<dt><i>SecondDerivative </i></dt>
+<dd>Match value of second derivative at end.</dd>
+<dt><i>Periodic </i></dt>
+<dd>Match first and second derivative at either end.</dd>
+<dt><i>Lagrange </i></dt>
+<dd>Match end-slope to the slope of the cubic that matches the first four data at the respective end</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>CubicInterpolation</code> (const I1 &amp; xBegin, const I1 &amp; xEnd, const I2 &amp; yBegin, <code>CubicInterpolation::DerivativeApprox</code> da, bool monotonic, <code>CubicInterpolation::BoundaryCondition</code> leftCond, <code>Real</code> leftConditionValue, <code>CubicInterpolation::BoundaryCondition</code> rightCond, <code>Real</code> rightConditionValue)</h3>
 <p><code>Precondition:</code></p>
 <dl>
-<dd>the $ x $ values must be sorted.</dl>
+<dd>the $ x $ values must be sorted.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

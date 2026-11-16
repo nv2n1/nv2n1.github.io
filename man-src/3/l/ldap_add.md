@@ -22,7 +22,6 @@ int ldap_add_ext(
     LDAPControl **sctrls,
     LDAPControl **cctrls,
     int *msgidp);
-
 int ldap_add_ext_s(
     LDAP *ld,
     const char *dn,

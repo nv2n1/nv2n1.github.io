@@ -17,22 +17,22 @@ description: "cacaview – ASCII image browser"
 <p> You can zoom and scroll the image around for more details, and choose four different dithering modes. All commands are accessible through a single key press.</p>
 <h2>KEYS</h2>
 <dl>
-<dt><code>?</code></p>
-<dd> show the help screen</p>
-<dt><code>n, p</code></p>
-<dd> switch to next image, previous image</p>
-<dt><code>Left, Right, Up, Down or h, l, k, j</code></p>
-<dd> scroll the image around</p>
-<dt><code>+, &#8211;</code></p>
-<dd> zoom in and out</p>
-<dt><code>z</code></p>
-<dd> reset the zoom level to normal</p>
-<dt><code>f</code></p>
-<dd> switch fullscreen mode (hide/show menu and status bars)</p>
-<dt><code>d</code></p>
-<dd> toggle the dithering mode (no dithering, 4&#215;4 ordered dithering, 8&#215;8 ordered dithering and random dithering)</p>
-<dt><code>q</code></p>
-<dd> exit the program</dl>
+<dt><code>?</code></dt>
+<dd> show the help screen</dd>
+<dt><code>n, p</code></dt>
+<dd> switch to next image, previous image</dd>
+<dt><code>Left, Right, Up, Down or h, l, k, j</code></dt>
+<dd> scroll the image around</dd>
+<dt><code>+, &#8211;</code></dt>
+<dd> zoom in and out</dd>
+<dt><code>z</code></dt>
+<dd> reset the zoom level to normal</dd>
+<dt><code>f</code></dt>
+<dd> switch fullscreen mode (hide/show menu and status bars)</dd>
+<dt><code>d</code></dt>
+<dd> toggle the dithering mode (no dithering, 4&#215;4 ordered dithering, 8&#215;8 ordered dithering and random dithering)</dd>
+<dt><code>q</code></dt>
+<dd> exit the program</dd></dl>
 <h2>EXAMPLE</h2>
 <p> cacaview /usr/share/pixmaps/*.*</p>
 <h2>BUGS</h2>

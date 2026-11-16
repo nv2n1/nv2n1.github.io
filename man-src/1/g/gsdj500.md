@@ -32,40 +32,38 @@ description: "gslp – Format and print text using ghostscript gsbj – Format a
 <p> By default the current date is formatted as the center header.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Standard switches implemented:</p>
-<dd> -12BclqRr -b&lt;header&gt; -f&lt;font&gt; -F&lt;hfont&gt; -L&lt;lines&gt; -p&lt;outfile&gt;</p>
-<dt>Sun switches implemented:</p>
-<dd> -T&lt;n&gt;<tt>&nbsp;<wbr>&nbsp;</tt>set tab width</p>
-<dt>Switches ignored:</p>
-<dd> -GghKkmow -# -C -d -J -n -P -S -s -t -v</p>
-<dt>Switches added:</p>
+<dt>Standard switches implemented:</dt>
+<dd> -12BclqRr -b&lt;header&gt; -f&lt;font&gt; -F&lt;hfont&gt; -L&lt;lines&gt; -p&lt;outfile&gt;</dd>
+<dt>Sun switches implemented:</dt>
+<dd> -T&lt;n&gt;<tt>&nbsp;<wbr>&nbsp;</tt>set tab width</dd>
+<dt>Switches ignored:</dt>
+<dd> -GghKkmow -# -C -d -J -n -P -S -s -t -v</dd>
+<dt>Switches added:</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>&#8211;add-to-space &lt;units&gt;</p>
-<dd> add the given number of 1/72&quot; units to the width of each space (may be negative)</p>
-<dt>&#8211;add-to-width &lt;units&gt;</p>
-<dd> add the given number of 1/72&quot; units to the width of each character (may be negative)</p>
-<dt>&#8211;columns &lt;n&gt;</p>
-<dd> print in &lt;n&gt; columns</p>
-<dt>&#8211;detect</p>
-<dd> treat the file as PostScript if it starts with %!</p>
-<dt>&#8211;first-page &lt;n&gt;</p>
-<dd> start printing at page &lt;n&gt;</p>
-<dt>&#8211;kern &lt;file.afm&gt;</p>
-<dd> kern using information from the given .AFM file</p>
-<dt>&#8211;last-page &lt;n&gt;</p>
-<dd> stop printing after page &lt;n&gt;</p>
-<dt>&#8211;(heading|footing)-(left|center|right) &lt;string&gt;</p>
-<dd> set the heading/footing fields; use -B first to clear</p>
-<dt>&#8211;margin-(top|bottom|left|right) &lt;inches&gt;</p>
-<dd> set a margin</p>
-<dt>&#8211;no-eject-(file|formfeed)</p>
-<dd> end-of-file/FF only starts a new column, not a new sheet</p>
-<dt>&#8211;spacing &lt;n&gt;</p>
-<dd> use double (n=2), triple (n=3), etc. spacing</dl>
+<dt>&#8211;add-to-space &lt;units&gt;</dt>
+<dd> add the given number of 1/72&quot; units to the width of each space (may be negative)</dd>
+<dt>&#8211;add-to-width &lt;units&gt;</dt>
+<dd> add the given number of 1/72&quot; units to the width of each character (may be negative)</dd>
+<dt>&#8211;columns &lt;n&gt;</dt>
+<dd> print in &lt;n&gt; columns</dd>
+<dt>&#8211;detect</dt>
+<dd> treat the file as PostScript if it starts with %!</dd>
+<dt>&#8211;first-page &lt;n&gt;</dt>
+<dd> start printing at page &lt;n&gt;</dd>
+<dt>&#8211;kern &lt;file.afm&gt;</dt>
+<dd> kern using information from the given .AFM file</dd>
+<dt>&#8211;last-page &lt;n&gt;</dt>
+<dd> stop printing after page &lt;n&gt;</dd>
+<dt>&#8211;(heading|footing)-(left|center|right) &lt;string&gt;</dt>
+<dd> set the heading/footing fields; use -B first to clear</dd>
+<dt>&#8211;margin-(top|bottom|left|right) &lt;inches&gt;</dt>
+<dd> set a margin</dd>
+<dt>&#8211;no-eject-(file|formfeed)</dt>
+<dd> end-of-file/FF only starts a new column, not a new sheet</dd>
+<dt>&#8211;spacing &lt;n&gt;</dt>
+<dd> use double (n=2), triple (n=3), etc. spacing</dd></dl>
 </dl>
 <p> Also, the string %# in a heading or footing is replaced with the page #.</dl>
 <h2>SEE ALSO</h2>
@@ -75,3 +73,4 @@ description: "gslp – Format and print text using ghostscript gsbj – Format a
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. This manpage by George Ferguson. </p>
 <h2>Index</h2>
+</p>

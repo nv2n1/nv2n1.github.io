@@ -21,14 +21,14 @@ description: "sshmenu – GNOME applet for connecting to hosts using SSH."
 <h2>OPTIONS</h2>
 <p> The applet is not invoked from the command-line however the standalone versions recognise the following options and can be extended to recognise more:</p>
 <dl>
-<dt><code>-c</code><i> FILE</i>, &#8211;config-file <i>FILE</i></p>
-<dd> read and write config information to <i>FILE</i> instead of the default <code>$HOME/.sshmenu</code></p>
-<dt><code>-d</code><i> NUM</i>, &#8211;debug <i>NUM</i></p>
-<dd> set debug level to <i>NUM</i> (default: 0)</p>
-<dt><code>-s</code><i> NUM</i>, &#8211;socket-window-id <i>NUM</i></p>
-<dd> use the XEmbed protocol to embed the SSHMenu user interface in the window identified by <i>NUM</i> instead of creating a new, top-level window,</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code><i> FILE</i>, &#8211;config-file <i>FILE</i></dt>
+<dd> read and write config information to <i>FILE</i> instead of the default <code>$HOME/.sshmenu</code></dd>
+<dt><code>-d</code><i> NUM</i>, &#8211;debug <i>NUM</i></dt>
+<dd> set debug level to <i>NUM</i> (default: 0)</dd>
+<dt><code>-s</code><i> NUM</i>, &#8211;socket-window-id <i>NUM</i></dt>
+<dd> use the XEmbed protocol to embed the SSHMenu user interface in the window identified by <i>NUM</i> instead of creating a new, top-level window,</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> sshmenu-applet was written by Grant McLean &lt;grant [at] mclean.net.nz&gt; </p>
 <h2>Index</h2>

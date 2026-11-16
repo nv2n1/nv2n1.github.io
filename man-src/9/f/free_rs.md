@@ -14,9 +14,9 @@ description: "free_rs – Free the rs control structure, if it is no longer used
 <p><i>rs</i></p>
 <dl>
 <dd>
-<dd>the control structure which is not longer used by the caller</dl>
+</dd><dd>the control structure which is not longer used by the caller</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

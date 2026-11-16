@@ -15,120 +15,120 @@ description: "stat – display file or file system status"
 <p> Display file or file system status. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-L</code>, <code>&#8211;dereference</code></p>
-<dd> follow links</p>
-<dt><code>-f</code>, <code>&#8211;file-system</code></p>
-<dd> display file system status instead of file status</p>
-<dt><code>&#8211;cached</code>=<i>,MODE/</i></p>
-<dd> specify how to use cached attributes; useful on remote file systems. See MODE below</p>
-<dt><code>-c</code> <code>&#8211;format</code>=<i>,FORMAT/</i></p>
-<dd> use the specified FORMAT instead of the default; output a newline after each use of FORMAT</p>
-<dt><code>&#8211;printf</code>=<i>,FORMAT/</i></p>
+<dt><code>-L</code>, <code>&#8211;dereference</code></dt>
+<dd> follow links</dd>
+<dt><code>-f</code>, <code>&#8211;file-system</code></dt>
+<dd> display file system status instead of file status</dd>
+<dt><code>&#8211;cached</code>=<i>,MODE/</i></dt>
+<dd> specify how to use cached attributes; useful on remote file systems. See MODE below</dd>
+<dt><code>-c</code> <code>&#8211;format</code>=<i>,FORMAT/</i></dt>
+<dd> use the specified FORMAT instead of the default; output a newline after each use of FORMAT</dd>
+<dt><code>&#8211;printf</code>=<i>,FORMAT/</i></dt>
 <dd> like <code>&#8211;format</code>, but interpret backslash escapes, and do not output a mandatory trailing newline; if you want a newline, include 
- in FORMAT</p>
-<dt><code>-t</code>, <code>&#8211;terse</code></p>
-<dd> print the information in terse form</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+ in FORMAT</dd>
+<dt><code>-t</code>, <code>&#8211;terse</code></dt>
+<dd> print the information in terse form</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> The <code>&#8211;cached</code> MODE argument can be; always, never, or default. `always` will use cached attributes if available, while `never` will try to synchronize with the latest attributes, and `default` will leave it up to the underlying file system. </p>
 <p> The valid format sequences for files (without <code>&#8211;file-system</code>):</p>
 <dl>
-<dt>%a</p>
-<dd> permission bits in octal (note &#8216;#&#8217; and &#8216;0&#8217; printf flags)</p>
-<dt>%A</p>
-<dd> permission bits and file type in human readable form</p>
-<dt>%b</p>
-<dd> number of blocks allocated (see %B)</p>
-<dt>%B</p>
-<dd> the size in bytes of each block reported by %b</p>
-<dt>%C</p>
-<dd> SELinux security context string</p>
-<dt>%d</p>
-<dd> device number in decimal</p>
-<dt>%D</p>
-<dd> device number in hex</p>
-<dt>%f</p>
-<dd> raw mode in hex</p>
-<dt>%F</p>
-<dd> file type</p>
-<dt>%g</p>
-<dd> group ID of owner</p>
-<dt>%G</p>
-<dd> group name of owner</p>
-<dt>%h</p>
-<dd> number of hard links</p>
-<dt>%i</p>
-<dd> inode number</p>
-<dt>%m</p>
-<dd> mount point</p>
-<dt>%n</p>
-<dd> file name</p>
-<dt>%N</p>
-<dd> quoted file name with dereference if symbolic link</p>
-<dt>%o</p>
-<dd> optimal I/O transfer size hint</p>
-<dt>%s</p>
-<dd> total size, in bytes</p>
-<dt>%t</p>
-<dd> major device type in hex, for character/block device special files</p>
-<dt>%T</p>
-<dd> minor device type in hex, for character/block device special files</p>
-<dt>%u</p>
-<dd> user ID of owner</p>
-<dt>%U</p>
-<dd> user name of owner</p>
-<dt>%w</p>
-<dd> time of file birth, human-readable; &#8211; if unknown</p>
-<dt>%W</p>
-<dd> time of file birth, seconds since Epoch; 0 if unknown</p>
-<dt>%x</p>
-<dd> time of last access, human-readable</p>
-<dt>%X</p>
-<dd> time of last access, seconds since Epoch</p>
-<dt>%y</p>
-<dd> time of last data modification, human-readable</p>
-<dt>%Y</p>
-<dd> time of last data modification, seconds since Epoch</p>
-<dt>%z</p>
-<dd> time of last status change, human-readable</p>
-<dt>%Z</p>
-<dd> time of last status change, seconds since Epoch</dl>
+<dt>%a</dt>
+<dd> permission bits in octal (note &#8216;#&#8217; and &#8216;0&#8217; printf flags)</dd>
+<dt>%A</dt>
+<dd> permission bits and file type in human readable form</dd>
+<dt>%b</dt>
+<dd> number of blocks allocated (see %B)</dd>
+<dt>%B</dt>
+<dd> the size in bytes of each block reported by %b</dd>
+<dt>%C</dt>
+<dd> SELinux security context string</dd>
+<dt>%d</dt>
+<dd> device number in decimal</dd>
+<dt>%D</dt>
+<dd> device number in hex</dd>
+<dt>%f</dt>
+<dd> raw mode in hex</dd>
+<dt>%F</dt>
+<dd> file type</dd>
+<dt>%g</dt>
+<dd> group ID of owner</dd>
+<dt>%G</dt>
+<dd> group name of owner</dd>
+<dt>%h</dt>
+<dd> number of hard links</dd>
+<dt>%i</dt>
+<dd> inode number</dd>
+<dt>%m</dt>
+<dd> mount point</dd>
+<dt>%n</dt>
+<dd> file name</dd>
+<dt>%N</dt>
+<dd> quoted file name with dereference if symbolic link</dd>
+<dt>%o</dt>
+<dd> optimal I/O transfer size hint</dd>
+<dt>%s</dt>
+<dd> total size, in bytes</dd>
+<dt>%t</dt>
+<dd> major device type in hex, for character/block device special files</dd>
+<dt>%T</dt>
+<dd> minor device type in hex, for character/block device special files</dd>
+<dt>%u</dt>
+<dd> user ID of owner</dd>
+<dt>%U</dt>
+<dd> user name of owner</dd>
+<dt>%w</dt>
+<dd> time of file birth, human-readable; &#8211; if unknown</dd>
+<dt>%W</dt>
+<dd> time of file birth, seconds since Epoch; 0 if unknown</dd>
+<dt>%x</dt>
+<dd> time of last access, human-readable</dd>
+<dt>%X</dt>
+<dd> time of last access, seconds since Epoch</dd>
+<dt>%y</dt>
+<dd> time of last data modification, human-readable</dd>
+<dt>%Y</dt>
+<dd> time of last data modification, seconds since Epoch</dd>
+<dt>%z</dt>
+<dd> time of last status change, human-readable</dd>
+<dt>%Z</dt>
+<dd> time of last status change, seconds since Epoch</dd></dl>
 <p> Valid format sequences for file systems:</p>
 <dl>
-<dt>%a</p>
-<dd> free blocks available to non-superuser</p>
-<dt>%b</p>
-<dd> total data blocks in file system</p>
-<dt>%c</p>
-<dd> total file nodes in file system</p>
-<dt>%d</p>
-<dd> free file nodes in file system</p>
-<dt>%f</p>
-<dd> free blocks in file system</p>
-<dt>%i</p>
-<dd> file system ID in hex</p>
-<dt>%l</p>
-<dd> maximum length of filenames</p>
-<dt>%n</p>
-<dd> file name</p>
-<dt>%s</p>
-<dd> block size (for faster transfers)</p>
-<dt>%S</p>
-<dd> fundamental block size (for block counts)</p>
-<dt>%t</p>
-<dd> file system type in hex</p>
-<dt>%T</p>
-<dd> file system type in human readable form</dl>
+<dt>%a</dt>
+<dd> free blocks available to non-superuser</dd>
+<dt>%b</dt>
+<dd> total data blocks in file system</dd>
+<dt>%c</dt>
+<dd> total file nodes in file system</dd>
+<dt>%d</dt>
+<dd> free file nodes in file system</dd>
+<dt>%f</dt>
+<dd> free blocks in file system</dd>
+<dt>%i</dt>
+<dd> file system ID in hex</dd>
+<dt>%l</dt>
+<dd> maximum length of filenames</dd>
+<dt>%n</dt>
+<dd> file name</dd>
+<dt>%s</dt>
+<dd> block size (for faster transfers)</dd>
+<dt>%S</dt>
+<dd> fundamental block size (for block counts)</dd>
+<dt>%t</dt>
+<dd> file system type in hex</dd>
+<dt>%T</dt>
+<dd> file system type in human readable form</dd></dl>
 <h3>&#8211;terse is equivalent to the following FORMAT:</h3>
 <dl>
 <dt>
-<dd> %n %s %b %f %u %g %D %i %h %t %T %X %Y %Z %W %o %C</dl>
+</dt><dd> %n %s %b %f %u %g %D %i %h %t %T %X %Y %Z %W %o %C</dd></dl>
 <h3>&#8211;terse &#8211;file-system is equivalent to the following FORMAT:</h3>
 <dl>
 <dt>
-<dd> %n %i %l %t %s %S %b %f %a %c %d</dl>
+</dt><dd> %n %i %l %t %s %S %b %f %a %c %d</dd></dl>
 <p> NOTE: your shell may have its own version of stat, which usually supersedes the version described here. Please refer to your shell&#8217;s documentation for details about the options it supports.</p>
 <h2>AUTHOR</h2>
 <p> Written by Michael Meskes.</p>

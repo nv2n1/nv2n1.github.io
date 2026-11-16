@@ -17,7 +17,7 @@ description: "sane-canon – SANE backend for Canon SCSI scanners"
  CanoScan FB1200S<br />
  CanoScan FS2700F<br />
  CanoScan FS2710S
-</dl>
+</dd></dl>
 <p> Parallel port and USB scanners are not supported by this backend; see the manual pages for <code><a href="/docs/linux/man/5-sane-canon_pp/">sane-canon_pp</a></code>(5) and <code><a href="/docs/linux/man/5-sane-canon630u/">sane-canon630u</a></code>(5) for further information. IMPORTANT: This is beta code. We tested the code on the scanners listed above, using the computers and operating systems available to us, but we cannot guarantee that the backend will work smoothly with future operating systems, SCSI adapters, SANE frontend programs, or Canon scanners not contained in the list above. In some cases your computer might even hang. It cannot be excluded (although we consider it extremely unlikely) that your scanner will be damaged. That said, TESTERS ARE WELCOME. Send your bug reports and comments to Manuel Panea <i>&lt;mpd [at] rzg.mpg.de&gt;</i>; for questions concerning the FB620 and FB1200S contact Mitsuru Okaniwa <i>&lt;m-okaniwa [at] bea.hi-ho.ne.jp&gt;</i>, for the FS2710S Ulrich Deiters <i>&lt;ukd [at] xenon.pc.uni-koeln.de&gt;</i>. </p>
 <h2>Tips (Fs2700F)</h2>
 <p>Scanning either slides or negatives has been found to require rather large gamma corrections of about 2.2 to 2.4 (same value for red, green, and blue). It is recommended to use the automatic exposure controls of the frontend <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) for best results. </p>
@@ -28,14 +28,14 @@ description: "sane-canon – SANE backend for Canon SCSI scanners"
 <p> Negatives are handled by simple color inversion and will require manual removal of blue discoloration.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_CANON</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_DEBUG_CANON</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_CANON=4 </p>
 </dl>
 <h2>See Also</h2>

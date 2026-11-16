@@ -11,15 +11,10 @@ std::chrono::to_stream(std::chrono::local_time) - std::chrono::to_stream(std::ch
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Duration&gt;
-
 std::basic_ostream&lt;CharT, Traits&gt; &amp;
-
 to_stream(std::basic_ostream&lt;CharT, Traits&gt; &amp;os, const CharT *fmt, (since C++ 20)
-
                                                                        const std::chrono::local_time&lt;Duration&gt; &amp;tp,
-
           const std::string *abbrev = nullptr,
-
           const std::chrono::seconds *offset_sec = nullptr);</code></pre> 
 Outputs tp to the stream os, formatted according to the null-terminated format string fmt. If %Z is used, it is replaced with *abbrev widened to CharT if abbrev is not null; otherwise os.setstate(std::ios_base::failbit) is called. If %z or a modified variant thereof is used, an offset of *offset_sec will be formatted if offset_sec is not null; otherwise os.setstate(std::ios_base::failbit) is called. 
 Format string 

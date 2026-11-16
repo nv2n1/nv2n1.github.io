@@ -14,7 +14,7 @@ description: "wimax_dev_rm – Unregister an existing WiMAX device"
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor</dl>
+</dd><dd>WiMAX device descriptor</dd></dl>
 <h2>Description</h2>
 <p>Unregisters a WiMAX device previously registered for use with <code>wimax_add_rm</code>. </p>
 <p> IMPORTANT! Must call before calling <code>unregister_netdev</code>. </p>

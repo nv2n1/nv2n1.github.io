@@ -11,18 +11,12 @@ std::atomic_flag_clear,std::atomic_flag_clear_explicit - std::atomic_flag_clear,
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;atomic&gt;
-
     void atomic_flag_clear(volatile std::atomic_flag *p) noexcept;
-
 void atomic_flag_clear(std::atomic_flag *p) noexcept;
-
 void atomic_flag_clear_explicit(volatile std::atomic_flag *p, (1)(since C++ 11)
-
                                                                   std::memory_order order) noexcept;
 (2)(since C++ 11)
-
     void atomic_flag_clear_explicit(std::atomic_flag *p,
-
                                     std::memory_order order) noexcept;</code></pre> 
 Atomically changes the state of a std::atomic_flag pointed to by p to clear (false). 
 

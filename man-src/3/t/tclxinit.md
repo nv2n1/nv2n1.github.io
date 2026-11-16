@@ -38,28 +38,28 @@ TclX_SetAppInfo (int defaultValues,
 <p>Initializes Extended Tcl, adding the extended command set to the interpreter. This is called from <code>Tcl_AppInit</code>. This function must be called after the <code>Tcl_Init</code> function. In addition to the standard command set, it enables use of tlib packages libraries and makes the standard TclX library available. </p>
 <p> Parameters</p>
 <dl COMPACT>
-<dd><code>o </code><i>interp</i> &#8211; A pointer to the interpreter to add the commands to.</dl>
+<dd><code>o </code><i>interp</i> &#8211; A pointer to the interpreter to add the commands to.</dd></dl>
 <p> Returns:</p>
 <dl COMPACT>
-<dd><code>TCL_OK</code> if all is ok, <code>TCL_ERROR</code> if an error occurred.</dl>
+<dd><code>TCL_OK</code> if all is ok, <code>TCL_ERROR</code> if an error occurred.</dd></dl>
 <h3>Tclxcmd_Init</h3>
 <p>Add the TclX command set to the interpreter, with the exception of the TclX library management commands. This is normally called by <code>Tclx_Init</code> and should only be used if you don&#8217;t want the TclX library handling. </p>
 <p> Parameters</p>
 <dl COMPACT>
-<dd><code>o </code><i>interp</i> &#8211; A pointer to the interpreter to add the commands to.</dl>
+<dd><code>o </code><i>interp</i> &#8211; A pointer to the interpreter to add the commands to.</dd></dl>
 <p> Returns:</p>
 <dl COMPACT>
-<dd><code>TCL_OK</code> if all is ok, <code>TCL_ERROR</code> if an error occurred.</dl>
+<dd><code>TCL_OK</code> if all is ok, <code>TCL_ERROR</code> if an error occurred.</dd></dl>
 <h3>TclX_Main</h3>
 <p>This function parses the command line according to the TclX shell specification (Unix shell compatible). It creates an interpreter and calls the specified function <code>appInitProc</code> to initialize any application specific commands. It then either evaluates the command of script specified on the command line or enters an interactive command loop. This procedure never returns, it exits the process when it&#8217;s done. Using the TclX shell also gives you SIGINT handling in interactive shells.</p>
 <h3>Tkx_Init</h3>
 <p>Initializes Extended Tcl Tk environment. This is called from <code>Tcl_AppInit</code> after the <code>Tk_Init</code> function. </p>
 <p> Parameters</p>
 <dl COMPACT>
-<dd><code>o </code><i>interp</i> &#8211; A pointer to the interpreter to add the commands to.</dl>
+<dd><code>o </code><i>interp</i> &#8211; A pointer to the interpreter to add the commands to.</dd></dl>
 <p> Returns:</p>
 <dl COMPACT>
-<dd><code>TCL_OK</code> if all is ok, <code>TCL_ERROR</code> if an error occurred.</dl>
+<dd><code>TCL_OK</code> if all is ok, <code>TCL_ERROR</code> if an error occurred.</dd></dl>
 <h3>TkX_Main</h3>
 <p>This function parses the command line according to the wish shell specification. It creates an interpreter and calls the specified function <code>appInitProc</code> to initialize any application specific commands. It then either evaluates the command of script specified on the command line or enters an interactive command loop. This procedure never returns, it exits the process when it&#8217;s done. Using the TclX wish shell gives you SIGINT handling in interactive shells, otherwise it is identical to standard wish.</p>
 <h3>TclX_SetAppInfo</h3>
@@ -70,12 +70,12 @@ TclX_SetAppInfo (int defaultValues,
  <code>o </code><i>appName</i> &#8211; Application symbolic name.<br />
  <code>o </code><i>appLongName</i> &#8211; Long, natural language application name.<br />
  <code>o </code><i>appVersion</i> &#8211; Version number of the application.<br />
- <code>o </code><i>appPatchlevel</i> &#8211; Patch level of the application. If less than zero, don&#8217;t change.</dl>
+ <code>o </code><i>appPatchlevel</i> &#8211; Patch level of the application. If less than zero, don&#8217;t change.</dd></dl>
 <p> String pointers are saved without copying, don&#8217;t release the memory. If the arguments are NULL, don&#8217;t change the values.</p>
 <h2>Dynamic Loading Of Tclx</h2>
 <p>TclX can be dynamically loaded on systems that support shared libraries and the load command. This can be done using either the <code>load</code> or the <code>package require</code> commands. If <code>package require</code> is to be used, a <code>pkgIndex,tcl</code> must be constructed. The <code>pkg_mkIndex</code> does not generate a pkgIndex.tcl file that works with TclX. Instead a command similar to </p>
 <dl COMPACT>
-<dd>package ifneeded Tclx 7.5.0 &quot;load $dir/libtclx.so&quot;</dl>
+<dd>package ifneeded Tclx 7.5.0 &quot;load $dir/libtclx.so&quot;</dd></dl>
 <p> should be placed in the directory containing the TclX shared library. A prototype <code>pkgIndex,tcl</code> file is build by TclX and is installed in the run time directory under the name <code>pkgIndex,proto</code>. This file can&#8217;t be used as-is, but should be renamed and copied or combined with an existing <code>pkgIndex,tcl</code> in the directory containing the shared library. </p>
 <p> There is no need to dynamically load <code>libtkx.so</code>, since it only contains support for <code>wishx</code>. </p>
 <h2>Integrating Tclx With Other Extensions And Applications</h2>

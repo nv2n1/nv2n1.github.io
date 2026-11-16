@@ -13,7 +13,7 @@ description: "unicharambigs – Tesseract unicharset ambiguities"
 <dl>
 <dd>
 <pre>[num] &lt;TAB&gt; [char(s)] &lt;TAB&gt; [num] &lt;TAB&gt; [char(s)] &lt;TAB&gt; [num]</pre>
-</dl>
+</dd></dl>
 <p>  Field one </td>
 <td> the number of characters contained in field two
 </td>
@@ -46,7 +46,7 @@ description: "unicharambigs – Tesseract unicharset ambiguities"
 <pre>2 ' ' 1 &quot; 1
 1 m 2 r n 0
 3 i i i 1 m 0</pre>
-</dl>
+</dd></dl>
 <p> In this example, all instances of the <i>2</i> character sequence <i>&#8216;</i>&#8216; will <code>always</code> be replaced by the <i>1</i> character sequence <i>&quot;</i>; a <i>1</i> character sequence <i>m</i> <code>may</code> be replaced by the <i>2</i> character sequence <i>rn</i>, and the <i>3</i> character sequence <code>may</code> be replaced by the <i>1</i> character sequence <i>m</i>.</p>
 <h2>History</h2>
 <p>The unicharambigs file first appeared in Tesseract 3.00; prior to that, a similar format, called DangAmbigs (<i>dangerous ambiguities</i>) was used: the format was almost identical, except only mandatory replacements could be specified, and field 5 was absent.</p>

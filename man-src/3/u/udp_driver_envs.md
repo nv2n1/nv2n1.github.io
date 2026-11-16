@@ -10,21 +10,21 @@ Env Variables -
 
  The udp driver uses the following environment variables
 <dl><dt>*
-<dd>GLOBUS_HOSTNAME Used when setting the hostname in the contact string
-<dt>*
-<dd>GLOBUS_UDP_PORT_RANGE Used to restrict the port the udp socket binds to
-<dt>*
-<dd>GLOBUS_XIO_SYSTEM_DEBUG Available if using a debug build.</dl>
+</dt><dd>GLOBUS_HOSTNAME Used when setting the hostname in the contact string
+</dd><dt>*
+</dt><dd>GLOBUS_UDP_PORT_RANGE Used to restrict the port the udp socket binds to
+</dd><dt>*
+</dt><dd>GLOBUS_XIO_SYSTEM_DEBUG Available if using a debug build.</dd></dl>
  
 
  
 &nbsp;<wbr> The udp driver uses the following environment variables
 <dl><dt>*
-<dd>GLOBUS_HOSTNAME Used when setting the hostname in the contact string
-<dt>*
-<dd>GLOBUS_UDP_PORT_RANGE Used to restrict the port the udp socket binds to
-<dt>*
-<dd>GLOBUS_XIO_SYSTEM_DEBUG Available if using a debug build.</dl>
+</dt><dd>GLOBUS_HOSTNAME Used when setting the hostname in the contact string
+</dd><dt>*
+</dt><dd>GLOBUS_UDP_PORT_RANGE Used to restrict the port the udp socket binds to
+</dd><dt>*
+</dt><dd>GLOBUS_XIO_SYSTEM_DEBUG Available if using a debug build.</dd></dl>
  
 
  

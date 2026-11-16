@@ -14,17 +14,17 @@ description: "sdev_evt_send – send asserted event to uevent thread"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi_device event occurred on</dl>
+</dd><dd>scsi_device event occurred on</dd></dl>
 <p> <i>evt</i></p>
 <dl>
-<dd>event to send</dl>
+<dd>event to send</dd></dl>
 <h2>Description</h2>
 <p>Assert scsi device event asynchronously.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

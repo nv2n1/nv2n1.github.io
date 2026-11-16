@@ -23,32 +23,32 @@ description: "Error Handling Helpers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to perform the check<br />
+</dt><dd> <i>error</i> The error object for which to perform the check<br />
  <i>module</i> The module descriptor to check for<br />
- <i>system_errno</i> The errno to check for</dl>
+ <i>system_errno</i> The errno to check for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_TRUE &#8211; the error matched the module and errno GLOBUS_FALSE &#8211; the error failed to match the module and errno</dl>
+</dt><dd> GLOBUS_TRUE &#8211; the error matched the module and errno GLOBUS_FALSE &#8211; the error failed to match the module and errno</dd></dl>
 <h3>globus_object_t* globus_error_wrap_errno_error (<code>globus_module_descriptor_t</code> *base_source, intsystem_errno, inttype, const char *source_file, const char *source_func, intsource_line, const char *short_desc_format, &#8230;)</h3>
 <p> Allocate and initialize an error of type GLOBUS_ERROR_TYPE_GLOBUS which contains a causal error of type GLOBUS_ERROR_TYPE_ERRNO. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>base_source</i> Pointer to the originating module.<br />
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
  <i>system_errno</i> The errno to use when generating the causal error.<br />
  <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br />
  <i>source_file</i> Name of file. Use <code>FILE</code><br />
  <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br />
  <i>source_line</i> Line number. Use <code>LINE</code><br />
  <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
- <i>&#8230;</i> Arguments for the format string.</dl>
+ <i>&#8230;</i> Arguments for the format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dl>
+</dt><dd> The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

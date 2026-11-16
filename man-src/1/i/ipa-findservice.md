@@ -17,8 +17,8 @@ description: "ipa-findservice – Find a service principal"
 <p> All entries that match are displayed.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display the XML-RPC request and response for more verbose debugging output.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display the XML-RPC request and response for more verbose debugging output.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Find all ldap service principals issued by the IPA KDC: </p>
 <p>&nbsp;<wbr>#&nbsp;<wbr>ipa-findservice ldap </p>

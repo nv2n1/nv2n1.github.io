@@ -14,15 +14,15 @@ description: "pki –dn – Extract the subject DN of an X.509 certificate"
 <p>This sub-command of <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1) extracts the ASN.1-encoded subject DistinguishedName (DN) of an X.509 certificate and exports it in different formats. This may be useful when strongSwan&#8217;s identity parser is unable to produce the correct binary encoding from a string.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print usage information with a summary of the available options.</p>
-<dt><code>-v, &#8211;debug </code><i>level</i></p>
-<dd>Set debug level, default: 1.</p>
-<dt><code>-+, &#8211;options </code><i>file</i></p>
-<dd>Read command line options from <i>file</i>.</p>
-<dt><code>-i, &#8211;in </code><i>file</i></p>
-<dd>Input file. If not given the input is read from <i>STDIN</i>.</p>
-<dt><code>-t, &#8211;format </code><i>format</i></p>
-<dd>Output format. One of <i>config</i> (strongSwan configuration compatible), <i>hex</i> (hexadecimal encoding, no prefix), <i>base64</i> (Base64 encoding, no prefix), <i>bin</i> (raw binary data), defaults to <i>config</i>.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print usage information with a summary of the available options.</dd>
+<dt><code>-v, &#8211;debug </code><i>level</i></dt>
+<dd>Set debug level, default: 1.</dd>
+<dt><code>-+, &#8211;options </code><i>file</i></dt>
+<dd>Read command line options from <i>file</i>.</dd>
+<dt><code>-i, &#8211;in </code><i>file</i></dt>
+<dd>Input file. If not given the input is read from <i>STDIN</i>.</dd>
+<dt><code>-t, &#8211;format </code><i>format</i></dt>
+<dd>Output format. One of <i>config</i> (strongSwan configuration compatible), <i>hex</i> (hexadecimal encoding, no prefix), <i>base64</i> (Base64 encoding, no prefix), <i>bin</i> (raw binary data), defaults to <i>config</i>.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pki/">pki</a></code>(1)</p>

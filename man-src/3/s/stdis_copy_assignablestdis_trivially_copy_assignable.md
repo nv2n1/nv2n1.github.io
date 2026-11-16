@@ -10,20 +10,14 @@ description: "std::is_copy_assignable,std::is_trivially_copy_assignable, – std
 <p>std::is_copy_assignable,std::is_trivially_copy_assignable, &#8211; std::is_copy_assignable,std::is_trivially_copy_assignable,</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct is_copy_assignable;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct is_trivially_copy_assignable;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct is_nothrow_copy_assignable;</code></pre>
 <p>1)&nbsp;<wbr>If T is not a referenceable type&nbsp;<wbr>(i.e., possibly cv-qualified void or a function<br />
 type with a cv-qualifier-seq or a ref-qualifier), provides a member constant value<br />
@@ -76,15 +70,11 @@ MoveAssignable, which is required of all CopyAssignable types. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;type_traits&gt;
-
 struct Foo {
     int n;
 };
-
 int main()
 {
     std::cout &lt;&lt; std::boolalpha

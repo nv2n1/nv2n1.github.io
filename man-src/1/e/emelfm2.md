@@ -16,64 +16,64 @@ description: "emelFM2 – a GTK+2 file manager"
 <p> A built-in command-line, toolbar buttons or assigned keys can be used to initiate commands. A flexible filetyping mechanism provides user-determined actions for desired filetypes.</p>
 <h2>COMMAND LINE OPTIONS</h2>
 <dl>
-<dt><code>-1</code>,<code>&#8211;one</code>=<i> DIR</i></p>
-<dd> At session-start, show DIR in the first filelist pane.</p>
-<dt><code>-2</code>,<code>&#8211;two</code>=<i> DIR</i></p>
-<dd> At session-start, show DIR in the second filelist pane.</p>
-<dt><code>-c</code>,<code>&#8211;config</code>=<i> DIR</i></p>
-<dd> Set the configuration-data directory to DIR (default: ~/.config/emelfm2).</p>
-<dt><code>-e</code>,<code>&#8211;encoding</code>=<i> TYPE</i></p>
-<dd> Set the filesystem character encoding to TYPE.</p>
-<dt><code>-f</code>,<code>&#8211;fallback-encoding=</code><i> TYPE</i></p>
-<dd> Set the fallback encoding to TYPE (default: ISO-8859-1).</p>
-<dt><code>-i</code>,<code>&#8211;ignore-problems</code></p>
-<dd> Ignore the encoding/locale problems (use at your own risk!).</p>
-<dt><code>-l</code>,<code>&#8211;log-all</code></p>
-<dd> Maximise GTK+2 error logging.</p>
-<dt><code>-m</code>,<code>&#8211;daemon</code></p>
-<dd> Detach the emelFM2 session from its controlling terminal. Will not work when emelFM2 is compiled with debug support.</p>
-<dt><code>-r</code>,<code>&#8211;run-at</code>-start=<i> COMMAND</i></p>
-<dd> Run COMMAND immediately after session start.</p>
-<dt><code>-s</code>,<code>&#8211;set-option OPTION_NAME=string-value</code></p>
-<dd> Set one-line config option. &quot;OPTION_NAME=string-value&quot; is a string in the format used in the config file.</p>
-<dt><code>-t</code>,<code>&#8211;trash</code>=<i> DIR</i></p>
-<dd> Set the trash directory to DIR (default: ~/.local/share/Trash/files).</dl>
+<dt><code>-1</code>,<code>&#8211;one</code>=<i> DIR</i></dt>
+<dd> At session-start, show DIR in the first filelist pane.</dd>
+<dt><code>-2</code>,<code>&#8211;two</code>=<i> DIR</i></dt>
+<dd> At session-start, show DIR in the second filelist pane.</dd>
+<dt><code>-c</code>,<code>&#8211;config</code>=<i> DIR</i></dt>
+<dd> Set the configuration-data directory to DIR (default: ~/.config/emelfm2).</dd>
+<dt><code>-e</code>,<code>&#8211;encoding</code>=<i> TYPE</i></dt>
+<dd> Set the filesystem character encoding to TYPE.</dd>
+<dt><code>-f</code>,<code>&#8211;fallback-encoding=</code><i> TYPE</i></dt>
+<dd> Set the fallback encoding to TYPE (default: ISO-8859-1).</dd>
+<dt><code>-i</code>,<code>&#8211;ignore-problems</code></dt>
+<dd> Ignore the encoding/locale problems (use at your own risk!).</dd>
+<dt><code>-l</code>,<code>&#8211;log-all</code></dt>
+<dd> Maximise GTK+2 error logging.</dd>
+<dt><code>-m</code>,<code>&#8211;daemon</code></dt>
+<dd> Detach the emelFM2 session from its controlling terminal. Will not work when emelFM2 is compiled with debug support.</dd>
+<dt><code>-r</code>,<code>&#8211;run-at</code>-start=<i> COMMAND</i></dt>
+<dd> Run COMMAND immediately after session start.</dd>
+<dt><code>-s</code>,<code>&#8211;set-option OPTION_NAME=string-value</code></dt>
+<dd> Set one-line config option. &quot;OPTION_NAME=string-value&quot; is a string in the format used in the config file.</dd>
+<dt><code>-t</code>,<code>&#8211;trash</code>=<i> DIR</i></dt>
+<dd> Set the trash directory to DIR (default: ~/.local/share/Trash/files).</dd></dl>
 <p> Help options:</p>
 <dl>
-<dt><code>-h</code>,<code>&#8211;help</code></p>
-<dd> Display a brief help message.</p>
-<dt><code>-u</code>,<code>&#8211;usage</code></p>
-<dd> Display a brief usage message.</p>
-<dt><code>-v</code>,<code>&#8211;version</code></p>
-<dd> Display the version and build information. </p>
+<dt><code>-h</code>,<code>&#8211;help</code></dt>
+<dd> Display a brief help message.</dd>
+<dt><code>-u</code>,<code>&#8211;usage</code></dt>
+<dd> Display a brief usage message.</dd>
+<dt><code>-v</code>,<code>&#8211;version</code></dt>
+<dd> Display the version and build information. </dd>
 </dl>
 <p> These only work when emelFM2 is compiled with debug support:</p>
 <dl>
-<dt><code>-d</code>,<code>&#8211;debug</code>=<i> N</i></p>
-<dd> Set the debug level. N = digit from 1 (lowest) to 5 (highest). Default is 5.</p>
-<dt><code>-x</code>,<code>&#8211;verbose</code></p>
-<dd> Display time and location information in debug messages. Only works when emelFM2 is compiled with debug support. </p>
+<dt><code>-d</code>,<code>&#8211;debug</code>=<i> N</i></dt>
+<dd> Set the debug level. N = digit from 1 (lowest) to 5 (highest). Default is 5.</dd>
+<dt><code>-x</code>,<code>&#8211;verbose</code></dt>
+<dd> Display time and location information in debug messages. Only works when emelFM2 is compiled with debug support. </dd>
 </dl>
 <h2>FILES AND DIRECTORIES</h2>
 <dl>
-<dt><i>[PREFIX]/bin</i></p>
-<dd> Location for the emelFM2 binary. Default PREFIX is /usr/local, which may be modified at compilation time.</p>
-<dt><i>[PREFIX]/lib/emelfm2/plugins</i></p>
-<dd> Default location for emelFM2 plugin files, named like e2p*.so.</p>
-<dt><i>[PREFIX]/share/doc/emelfm2</i></p>
-<dd> Default documentation files&#8217; location.</p>
-<dt><i>[PREFIX]/share/pixmaps/emelfm2</i></p>
-<dd> Default location of application-specific icon files.</p>
-<dt><i>~/.config/emelfm2</i></p>
-<dd> Default location for configuration files, named &quot;config&quot; and &quot;cache&quot;.</p>
-<dt><i>~/.local/share/Trash/files</i></p>
-<dd> Default trash directory. </p>
+<dt><i>[PREFIX]/bin</i></dt>
+<dd> Location for the emelFM2 binary. Default PREFIX is /usr/local, which may be modified at compilation time.</dd>
+<dt><i>[PREFIX]/lib/emelfm2/plugins</i></dt>
+<dd> Default location for emelFM2 plugin files, named like e2p*.so.</dd>
+<dt><i>[PREFIX]/share/doc/emelfm2</i></dt>
+<dd> Default documentation files&#8217; location.</dd>
+<dt><i>[PREFIX]/share/pixmaps/emelfm2</i></dt>
+<dd> Default location of application-specific icon files.</dd>
+<dt><i>~/.config/emelfm2</i></dt>
+<dd> Default location for configuration files, named &quot;config&quot; and &quot;cache&quot;.</dd>
+<dt><i>~/.local/share/Trash/files</i></dt>
+<dd> Default trash directory. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> These are directly used:</p>
 <dl>
-<dt><i>G_BROKEN_FILENAMES, G_FILENAME_ENCODING, HOSTNAME, LC_ALL, LC_MESSAGES, LANGUAGE or LANG, PATH</i></p>
-<dd></dl>
+<dt><i>G_BROKEN_FILENAMES, G_FILENAME_ENCODING, HOSTNAME, LC_ALL, LC_MESSAGES, LANGUAGE or LANG, PATH</i></dt>
+<dd></dd></dl>
 <h2>SUGGESTIONS AND BUG REPORTS</h2>
 <p> Please send bug reports, comments or feature requests to the mailing list &lt;emelfm2 [at] freelists.org&gt;. You do not need to be a subscriber.<br />
  For known bugs refer to <a rel="nofollow" href="http://emelfm2.net/TODO.">http://emelfm2.net/TODO.</a> </p>

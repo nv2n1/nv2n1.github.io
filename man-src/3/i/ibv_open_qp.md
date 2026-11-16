@@ -34,7 +34,7 @@ struct ibv_qp_open_attr {
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_create_qp</code>(3), <code>ibv_create_qp_ex</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_query_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Sean Hefty &lt;sean.hefty [at] intel.com&gt;</p>
+<dt>Sean Hefty &lt;sean.hefty [at] intel.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

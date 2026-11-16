@@ -58,53 +58,53 @@ BrightScan OpticPro OpticPro P12</pre>
 <h2>Device Names</h2>
 <p>This backend works in two modes, the so called &quot;direct-mode&quot; and the &quot;kernel-mode&quot;. In direct-mode, the user-space backend is used, in kernel-mode, you should have a kernel-module named pt_drv loaded. This backends default device is: </p>
 <dl>
-<dd><i>0x378</i></dl>
+<dd><i>0x378</i></dd></dl>
 <p> This &quot;default device&quot; will be used, if no configuration file can be found. It is rather the base address of the parallel port on i386 machines. </p>
 <p> As the backend supports up to four devices, it is possible to specify them in the configuration file </p>
 <dl>
-<dd><i>/etc/sane.d/plustek_pp.conf</i></dl>
+<dd><i>/etc/sane.d/plustek_pp.conf</i></dd></dl>
 <p> See this file for examples.</p>
 <h2>Configuration</h2>
 <p>This section describes the backend&#8217;s configuration file entries. The file is located at: <i>/etc/sane.d/plustek_pp.conf</i> </p>
 <p> For a proper setup, you will need at least two entries:</p>
 <dl>
 <dd><i>[direct]</i><br />
- <i>device 0x378</i></dl>
+ <i>device 0x378</i></dd></dl>
 <p> or</p>
 <dl>
 <dd><i>[kernel]</i><br />
- <i>device /dev/pt_drv</i></dl>
+ <i>device /dev/pt_drv</i></dd></dl>
 <p> <i>direct</i> tells the backend, that the following devicename (here <i>0x378</i>) has to be interpreted as parallel port scanner device. In fact it is the address to use, alternatively you can use <i>/dev/parport0</i> if the backend has been compiled with libieee1284 support. <i>kernel</i> should only be used, when a kernel-module has been built out of the backend sources. See below for more instructions about this. </p>
 <p> Further options: </p>
 <p> option warmup t</p>
 <dl>
-<dd><i>t</i> specifies the warmup period in seconds</dl>
+<dd><i>t</i> specifies the warmup period in seconds</dd></dl>
 <p> option lampOff t</p>
 <dl>
-<dd><i>t</i> is the time in seconds for switching off the lamps in standby mode</dl>
+<dd><i>t</i> is the time in seconds for switching off the lamps in standby mode</dd></dl>
 <p> option lOffonEnd b</p>
 <dl>
-<dd><i>b</i> specifies the behaviour when closing the backend, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dl>
+<dd><i>b</i> specifies the behaviour when closing the backend, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dd></dl>
 <p> option mov m</p>
 <dl>
-<dd><i>m</i> is the model override switch, which only works in direct mode.</p>
+<dd><i>m</i> is the model override switch, which only works in direct mode.</dd>
 <dl>
-<dt><i>m</i> = 0</p>
-<dd>default: no override</p>
-<dt><i>m</i> = 1</p>
-<dd>OpticPro 9630PL override (works if OP9630 has been detected) forces legal size (14&quot;)</p>
-<dt><i>m</i> = 2</p>
-<dd>Primax 4800Direct override (works if OP600 has been detected) swaps red/green color</p>
-<dt><i>m</i> = 3</p>
-<dd>OpticPro 9636 override (works if OP9636 has been detected) disables backends transparency/negative capabilities</p>
-<dt><i>m</i> = 4</p>
-<dd>OpticPro 9636P override (works if OP9636 has been detected) disables backends transparency/negative capabilities</p>
-<dt><i>m</i> = 5</p>
-<dd>OpticPro A3I override (works if OP12000 has been detected) enables A3 scanning</p>
-<dt><i>m</i> = 6</p>
-<dd>OpticPro 4800P override (works if OP600 has been detected) swaps red/green color</p>
-<dt><i>m</i> = 7</p>
-<dd>Primax 4800Direct 30bit override (works if OP4830 has been detected)</dl>
+<dt><i>m</i> = 0</dt>
+<dd>default: no override</dd>
+<dt><i>m</i> = 1</dt>
+<dd>OpticPro 9630PL override (works if OP9630 has been detected) forces legal size (14&quot;)</dd>
+<dt><i>m</i> = 2</dt>
+<dd>Primax 4800Direct override (works if OP600 has been detected) swaps red/green color</dd>
+<dt><i>m</i> = 3</dt>
+<dd>OpticPro 9636 override (works if OP9636 has been detected) disables backends transparency/negative capabilities</dd>
+<dt><i>m</i> = 4</dt>
+<dd>OpticPro 9636P override (works if OP9636 has been detected) disables backends transparency/negative capabilities</dd>
+<dt><i>m</i> = 5</dt>
+<dd>OpticPro A3I override (works if OP12000 has been detected) enables A3 scanning</dd>
+<dt><i>m</i> = 6</dt>
+<dd>OpticPro 4800P override (works if OP600 has been detected) swaps red/green color</dd>
+<dt><i>m</i> = 7</dt>
+<dd>Primax 4800Direct 30bit override (works if OP4830 has been detected)</dd></dl>
 </dl>
 <p> See the <i>plustek_pp.conf</i> file for examples.</p>
 <h2>Building The Kernel Module</h2>
@@ -118,51 +118,51 @@ BrightScan OpticPro OpticPro P12</pre>
  lampoff=lll</p>
 <dl>
 <dd>The value <i>lll</i> tells the driver, after how many seconds to switch-off the lamp(s). The default value is 180. 0 will disable this feature.<br />
- <code>HINT:</code> Do not use a value that is too small, because often switching on/off the lamps will reduce their lifetime.</dl>
+ <code>HINT:</code> Do not use a value that is too small, because often switching on/off the lamps will reduce their lifetime.</dd></dl>
 <p> port=ppp</p>
 <dl>
-<dd><i>ppp</i> specifies the port base address, where the scanner is connected to. The default value is 0x378, which is normally a standard.</dl>
+<dd><i>ppp</i> specifies the port base address, where the scanner is connected to. The default value is 0x378, which is normally a standard.</dd></dl>
 <p> warmup=www</p>
 <dl>
-<dd><i>www</i> specifies the time in seconds, how long a lamp has to be on, until the driver will start to scan. The default value is 30.</dl>
+<dd><i>www</i> specifies the time in seconds, how long a lamp has to be on, until the driver will start to scan. The default value is 30.</dd></dl>
 <p> lOffonEnd=e</p>
 <dl>
-<dd><i>e</i> specifies the behaviour when unloading the driver, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dl>
+<dd><i>e</i> specifies the behaviour when unloading the driver, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dd></dl>
 <p> slowIO=s</p>
 <dl>
-<dd><i>s</i> specifies which I/O functions the driver should use, 1 &#8211;&gt; use delayed functions, 0 &#8211;&gt; use the non-delayed ones</dl>
+<dd><i>s</i> specifies which I/O functions the driver should use, 1 &#8211;&gt; use delayed functions, 0 &#8211;&gt; use the non-delayed ones</dd></dl>
 <p> forceMode=fm</p>
 <dl>
-<dd><i>fm</i> specifies port mode which should be used, 0 &#8211;&gt; autodetection, 1 &#8211;&gt; use SPP mode and 2 &#8211;&gt; use EPP mode</dl>
+<dd><i>fm</i> specifies port mode which should be used, 0 &#8211;&gt; autodetection, 1 &#8211;&gt; use SPP mode and 2 &#8211;&gt; use EPP mode</dd></dl>
 <p> mov=m</p>
 <dl>
 <dd>
-<dl>
-<dt><i>m</i> = 0</p>
-<dd>default: no override</p>
-<dt><i>m</i> = 1</p>
-<dd>OpticPro 9630PL override (works if OP9630 has been detected) forces legal size (14&quot;)</p>
-<dt><i>m</i> = 2</p>
-<dd>Primax 4800Direct override (works if OP600 has been detected) swaps red/green color</p>
-<dt><i>m</i> = 3</p>
-<dd>OpticPro 9636 override (works if OP9636 has been detected) disables backends transparency/negative capabilities</p>
-<dt><i>m</i> = 4</p>
-<dd>OpticPro 9636P override (works if OP9636 has been detected) disables backends transparency/negative capabilities</p>
-<dt><i>m</i> = 5</p>
-<dd>OpticPro A3I override (works if OP12000 has been detected) enables A3 scanning</p>
-<dt><i>m</i> = 6</p>
-<dd>OpticPro 4800P override (works if OP600 has been detected) swaps red/green color</p>
-<dt><i>m</i> = 7</p>
-<dd>Primax 4800Direct 30bit override (works if OP4830 has been detected)</dl>
+</dd><dl>
+<dt><i>m</i> = 0</dt>
+<dd>default: no override</dd>
+<dt><i>m</i> = 1</dt>
+<dd>OpticPro 9630PL override (works if OP9630 has been detected) forces legal size (14&quot;)</dd>
+<dt><i>m</i> = 2</dt>
+<dd>Primax 4800Direct override (works if OP600 has been detected) swaps red/green color</dd>
+<dt><i>m</i> = 3</dt>
+<dd>OpticPro 9636 override (works if OP9636 has been detected) disables backends transparency/negative capabilities</dd>
+<dt><i>m</i> = 4</dt>
+<dd>OpticPro 9636P override (works if OP9636 has been detected) disables backends transparency/negative capabilities</dd>
+<dt><i>m</i> = 5</dt>
+<dd>OpticPro A3I override (works if OP12000 has been detected) enables A3 scanning</dd>
+<dt><i>m</i> = 6</dt>
+<dd>OpticPro 4800P override (works if OP600 has been detected) swaps red/green color</dd>
+<dt><i>m</i> = 7</dt>
+<dd>Primax 4800Direct 30bit override (works if OP4830 has been detected)</dd></dl>
 </dl>
 <p> Sample entry for file <i>/etc/modules.conf</i>: </p>
 <dl>
 <dd>alias char-major-40 pt_drv<br />
  pre-install pt_drv modprobe -k parport<br />
- options pt_drv lampoff=180 warmup=15 port=0x378 lOffonEnd=0 mov=0 slowIO=0 forceMode=0</dl>
+ options pt_drv lampoff=180 warmup=15 port=0x378 lOffonEnd=0 mov=0 slowIO=0 forceMode=0</dd></dl>
 <p> For multidevice support, simply add values separated by commas to the different options </p>
 <dl>
-<dd>options pt_drv port=0x378,0x278 mov=0,4 slowIO=0,1 forceMode=0,1</dl>
+<dd>options pt_drv port=0x378,0x278 mov=0,4 slowIO=0,1 forceMode=0,1</dd></dl>
 <p> Remember to call <code><a href="/docs/linux/man/8-depmod/">depmod</a></code>(8) after changing <i>/etc/conf.modules</i>.</p>
 <h2>Parallel Port Modes</h2>
 <p>The current driver works best, when the parallel port has been set to EPP-mode. When detecting any other mode such as ECP or PS/2 the driver tries to set to a faster, supported mode. If this fails, it will use the SPP mode, as this mode should work with all Linux supported parallel ports. If in doubt, enter your BIOS and set it to any mode except ECP. </p>
@@ -171,22 +171,22 @@ BrightScan OpticPro OpticPro P12</pre>
 <p> See the <i>plustek_pp.conf</i> file for examples.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/plustek_pp.conf</i></p>
-<dd>The backend configuration file</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek_pp.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek_pp.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</p>
-<dt><i>/lib/modules/&lt;Kernel-Version&gt;/kernel/drivers/parport/pt_drv.o</i></p>
-<dd>The Linux kernelmodule for kernels &lt; 2.6.x.</p>
-<dt><i>/lib/modules/&lt;Kernel-Version&gt;/kernel/drivers/parport/pt_drv.ko</i></p>
-<dd>The Linux kernelmodule for kernels &gt;= 2.6.x.</dl>
+<dt><i>/etc/sane.d/plustek_pp.conf</i></dt>
+<dd>The backend configuration file</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek_pp.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek_pp.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd>
+<dt><i>/lib/modules/&lt;Kernel-Version&gt;/kernel/drivers/parport/pt_drv.o</i></dt>
+<dd>The Linux kernelmodule for kernels &lt; 2.6.x.</dd>
+<dt><i>/lib/modules/&lt;Kernel-Version&gt;/kernel/drivers/parport/pt_drv.ko</i></dt>
+<dd>The Linux kernelmodule for kernels &gt;= 2.6.x.</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_PLUSTEK_PP</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_PLUSTEK_PP</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_PLUSTEK_PP=10 </p>
 </dl>
 <h2>See Also</h2>

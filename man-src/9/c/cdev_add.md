@@ -14,13 +14,13 @@ description: "cdev_add – add a char device to the system"
 <p><i>p</i></p>
 <dl>
 <dd>
-<dd>the cdev structure for the device</dl>
+</dd><dd>the cdev structure for the device</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>the first device number for which this device is responsible</dl>
+<dd>the first device number for which this device is responsible</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>the number of consecutive minor numbers corresponding to this device</dl>
+<dd>the number of consecutive minor numbers corresponding to this device</dd></dl>
 <h2>Description</h2>
 <p><code>cdev_add</code> adds the device represented by <i>p</i> to the system, making it live immediately. A negative error code is returned on failure.</p>
 <h2>Copyright</h2>

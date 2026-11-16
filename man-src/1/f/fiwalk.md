@@ -18,77 +18,67 @@ description: "fiwalk – print the filesystem statistics and exit"
 <p> This application uses SleuthKit to generate a report of all of the files and orphaned inodes found in a disk image. It can optionally compute the MD5 of any objects, save those objects into a directory, or both.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> config.txt</p>
-<dd> read config.txt for metadata extraction tools</p>
-<dt><code>-C</code> nn</p>
-<dd> only process nn files, then do a clean exit</dl>
+<dt><code>-c</code> config.txt</dt>
+<dd> read config.txt for metadata extraction tools</dd>
+<dt><code>-C</code> nn</dt>
+<dd> only process nn files, then do a clean exit</dd></dl>
 <p> Include/exclude parameters; may be repeated:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-n</code> pattern</p>
-<dd> only match files for which the filename matches the pattern. Example: <code>-n</code> .jpeg <code>-n</code> .jpg will find all JPEG files. Case is ignored. Will not match orphan files.</dl>
+<dt><code>-n</code> pattern</dt>
+<dd> only match files for which the filename matches the pattern. Example: <code>-n</code> .jpeg <code>-n</code> .jpg will find all JPEG files. Case is ignored. Will not match orphan files.</dd></dl>
 </dl>
 <p> Ways to make this program run faster:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-I</code></p>
-<dd> ignore NTFS system files</p>
-<dt><code>-g</code></p>
-<dd> just report the file objects &#8211; don&#8217;t get the data</p>
-<dt><code>-O</code></p>
-<dd> only walk allocated files</p>
-<dt><code>-b</code></p>
-<dd> do not report byte runs if data not accessed</p>
-<dt><code>-z</code></p>
-<dd> do not calculate MD5 or SHA1 values</p>
-<dt><code>-Gnn</code></p>
-<dd> Only process the contents of files smaller than nn gigabytes (default 2). Use <code>-G0</code> to remove space restrictions.</dl>
+<dt><code>-I</code></dt>
+<dd> ignore NTFS system files</dd>
+<dt><code>-g</code></dt>
+<dd> just report the file objects &#8211; don&#8217;t get the data</dd>
+<dt><code>-O</code></dt>
+<dd> only walk allocated files</dd>
+<dt><code>-b</code></dt>
+<dd> do not report byte runs if data not accessed</dd>
+<dt><code>-z</code></dt>
+<dd> do not calculate MD5 or SHA1 values</dd>
+<dt><code>-Gnn</code></dt>
+<dd> Only process the contents of files smaller than nn gigabytes (default 2). Use <code>-G0</code> to remove space restrictions.</dd></dl>
 </dl>
 <p> Ways to make this program run slower:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-M</code></p>
-<dd> Report MD5 for each file (default on)</p>
-<dt><code>-1</code></p>
-<dd> Report SHA1 for each file (default on)</p>
-<dt><code>-f</code></p>
-<dd> Report the output of the &#8216;file&#8217; command for each</dl>
+<dt><code>-M</code></dt>
+<dd> Report MD5 for each file (default on)</dd>
+<dt><code>-1</code></dt>
+<dd> Report SHA1 for each file (default on)</dd>
+<dt><code>-f</code></dt>
+<dd> Report the output of the &#8216;file&#8217; command for each</dd></dl>
 </dl>
 <p> Output <i>options</i>: <code>-m</code> = Output in SleuthKit &#8216;Body file&#8217; format</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-A</code>&lt;file&gt;</p>
-<dd> ARFF output to &lt;file&gt;</p>
-<dt><code>-X</code>&lt;file&gt;</p>
-<dd> XML output to a &lt;file&gt; (full DTD)</p>
-<dt><code>-X0</code></p>
-<dd> Write output to filename.xml</p>
-<dt><code>-Z</code></p>
-<dd> zap (erase) the output file</p>
-<dt><code>-x</code></p>
-<dd> XML output to stdout (no DTD)</p>
-<dt><code>-T</code>&lt;file&gt;</p>
-<dd> Walkfile output to &lt;file&gt;</p>
-<dt><code>-a</code> &lt;audit.txt&gt;</p>
-<dd> Read the scalpel audit.txt file</dl>
+<dt><code>-A</code>&lt;file&gt;</dt>
+<dd> ARFF output to &lt;file&gt;</dd>
+<dt><code>-X</code>&lt;file&gt;</dt>
+<dd> XML output to a &lt;file&gt; (full DTD)</dd>
+<dt><code>-X0</code></dt>
+<dd> Write output to filename.xml</dd>
+<dt><code>-Z</code></dt>
+<dd> zap (erase) the output file</dd>
+<dt><code>-x</code></dt>
+<dd> XML output to stdout (no DTD)</dd>
+<dt><code>-T</code>&lt;file&gt;</dt>
+<dd> Walkfile output to &lt;file&gt;</dd>
+<dt><code>-a</code> &lt;audit.txt&gt;</dt>
+<dd> Read the scalpel audit.txt file</dd></dl>
 </dl>
 <p> Misc:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-d</code></p>
-<dd> debug this program</p>
-<dt><code>-v</code></p>
-<dd> Enable SleuthKit verbose flag</dl>
+<dt><code>-d</code></dt>
+<dd> debug this program</dd>
+<dt><code>-v</code></dt>
+<dd> Enable SleuthKit verbose flag</dd></dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> The Sleuth Kit was written by Brian Carrier &lt;carrier [at] sleuthkit.org&gt;. </p>

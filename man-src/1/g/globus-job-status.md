@@ -17,59 +17,59 @@ description: "globus-job-status – Check the status of a GRAM5 job"
 <p> <code>PENDING</code></p>
 <dl>
 <dt>
-<dd> The job has been submitted to the LRM but has not yet begun execution.</dl>
+</dt><dd> The job has been submitted to the LRM but has not yet begun execution.</dd></dl>
 <p> <code>ACTIVE</code></p>
 <dl>
 <dt>
-<dd> The job has begun execution.</dl>
+</dt><dd> The job has begun execution.</dd></dl>
 <p> <code>FAILED</code></p>
 <dl>
 <dt>
-<dd> The job has failed.</dl>
+</dt><dd> The job has failed.</dd></dl>
 <p> <code>SUSPENDED</code></p>
 <dl>
 <dt>
-<dd> The job is currently suspended by the LRM.</dl>
+</dt><dd> The job is currently suspended by the LRM.</dd></dl>
 <p> <code>DONE</code></p>
 <dl>
 <dt>
-<dd> The job has completed.</dl>
+</dt><dd> The job has completed.</dd></dl>
 <p> <code>UNSUBMITTED</code></p>
 <dl>
 <dt>
-<dd> The job has been accepted by GRAM, but not yet submitted to the LRM.</dl>
+</dt><dd> The job has been accepted by GRAM, but not yet submitted to the LRM.</dd></dl>
 <p> <code>STAGE_IN</code></p>
 <dl>
 <dt>
-<dd> The job has been accepted by GRAM and is currently staging files prior to being submitted to the LRM.</dl>
+</dt><dd> The job has been accepted by GRAM and is currently staging files prior to being submitted to the LRM.</dd></dl>
 <p> <code>STAGE_OUT</code></p>
 <dl>
 <dt>
-<dd> The job has completed execution and is currently staging files from the service node to other http, GASS, or GridFTP servers.</dl>
+</dt><dd> The job has completed execution and is currently staging files from the service node to other http, GASS, or GridFTP servers.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The full set of options to <code>globus-job-status</code> are: </p>
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display a help message to standard error and exit.</dl>
+</dt><dd> Display a help message to standard error and exit.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the <code>globus-job-status</code> program to standard output.</dl>
+</dt><dd> Display the software version of the <code>globus-job-status</code> program to standard output.</dd></dl>
 <p> <code>-versions</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the <code>globus-job-status</code> program including DiRT information to standard output.</dl>
+</dt><dd> Display the software version of the <code>globus-job-status</code> program including DiRT information to standard output.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> If the following variables affect the execution of <code>globus-job-status</code>. </p>
 <p> <code>X509_USER_PROXY</code></p>
 <dl>
 <dt>
-<dd> Path to proxy credential.</dl>
+</dt><dd> Path to proxy credential.</dd></dl>
 <p> <code>X509_CERT_DIR</code></p>
 <dl>
 <dt>
-<dd> Path to trusted certificate directory.</dl>
+</dt><dd> Path to trusted certificate directory.</dd></dl>
 <h2>BUGS</h2>
 <p> The <code>globus-job-status</code> program can not distinguish between the case of the job manager terminating for any reason and the job being in the DONE state.</p>
 <h2>SEE ALSO</h2>

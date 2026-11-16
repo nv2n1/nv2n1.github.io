@@ -16,10 +16,10 @@ description: "ttx2xgf – extracts instructions from a TTX file and creates an X
 <p> If <i>infile</i> lacks the <i>.ttx</i> extension, it is assumed. If <i>outfile</i> is not given, output is written to <i>infile.xgf.</i></p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/share/xgridfit/util/convert-ttx.xsl</i></p>
-<dd> An XSLT script that performs the initial conversion.</p>
-<dt><i>/usr/share/xgridfit/util/convert-asm.sed</i></p>
-<dd> A Sed script that completes the conversion.</dl>
+<dt><i>/usr/share/xgridfit/util/convert-ttx.xsl</i></dt>
+<dd> An XSLT script that performs the initial conversion.</dd>
+<dt><i>/usr/share/xgridfit/util/convert-asm.sed</i></dt>
+<dd> A Sed script that completes the conversion.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xgridfit/">xgridfit</a></code>(1), <code><a href="/docs/linux/man/1-ttx/">ttx</a></code>(1)</p>
 <h2>AUTHOR</h2>

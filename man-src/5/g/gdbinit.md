@@ -18,14 +18,14 @@ description: "gdbinit – GDB initialization scripts"
 <p>These files contain <font SIZE="-1">GDB</font> commands to automatically execute during <font SIZE="-1">GDB</font> startup. The lines of contents are canned sequences of commands, described in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;Sequences&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n Sequences&quot;</tt>. </p>
 <p> Please read more in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;Startup&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n Startup&quot;</tt>.</p>
 <dl>
-<dt><code>/etc/gdb/gdbinit</code></p>
-<dd>System-wide initialization file. It is executed unless user specified <font SIZE="-1">GDB</font> option <tt>&quot;-nx&quot;</tt> or <tt>&quot;-n&quot;</tt>. See more in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;System-wide configuration&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n 'System-wide configuration'&quot;</tt>.</p>
-<dt><code>/etc/gdb/gdbinit.d</code></p>
-<dd>System-wide initialization directory. All files in this directory are executed on startup unless user specified <font SIZE="-1">GDB</font> option <tt>&quot;-nx&quot;</tt> or <tt>&quot;-n&quot;</tt>, as long as they have a recognized file extension. See more in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;System-wide configuration&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n 'System-wide configuration'&quot;</tt>.</p>
-<dt>~/.config/gdb/gdbinit<code> or </code>~/.gdbinit</p>
-<dd>User initialization file. It is executed unless user specified <font SIZE="-1">GDB</font> options <tt>&quot;-nx&quot;</tt>, <tt>&quot;-n&quot;</tt> or <tt>&quot;-nh&quot;</tt>.</p>
-<dt>.gdbinit</p>
-<dd>Initialization file for current directory. It may need to be enabled with <font SIZE="-1">GDB</font> security command <tt>&quot;set auto-load local-gdbinit&quot;</tt>. See more in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;Init File in the Current Directory&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n 'Init File in the Current Directory'&quot;</tt>.</dl>
+<dt><code>/etc/gdb/gdbinit</code></dt>
+<dd>System-wide initialization file. It is executed unless user specified <font SIZE="-1">GDB</font> option <tt>&quot;-nx&quot;</tt> or <tt>&quot;-n&quot;</tt>. See more in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;System-wide configuration&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n 'System-wide configuration'&quot;</tt>.</dd>
+<dt><code>/etc/gdb/gdbinit.d</code></dt>
+<dd>System-wide initialization directory. All files in this directory are executed on startup unless user specified <font SIZE="-1">GDB</font> option <tt>&quot;-nx&quot;</tt> or <tt>&quot;-n&quot;</tt>, as long as they have a recognized file extension. See more in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;System-wide configuration&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n 'System-wide configuration'&quot;</tt>.</dd>
+<dt>~/.config/gdb/gdbinit<code> or </code>~/.gdbinit</dt>
+<dd>User initialization file. It is executed unless user specified <font SIZE="-1">GDB</font> options <tt>&quot;-nx&quot;</tt>, <tt>&quot;-n&quot;</tt> or <tt>&quot;-nh&quot;</tt>.</dd>
+<dt>.gdbinit</dt>
+<dd>Initialization file for current directory. It may need to be enabled with <font SIZE="-1">GDB</font> security command <tt>&quot;set auto-load local-gdbinit&quot;</tt>. See more in the <font SIZE="-1">GDB</font> manual in node <tt>&quot;Init File in the Current Directory&quot;</tt> &#8212; shell command <tt>&quot;info -f gdb -n 'Init File in the Current Directory'&quot;</tt>.</dd></dl>
 <h2>Options</h2>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <tt>&quot;info -f gdb -n Startup&quot;</tt> </p>

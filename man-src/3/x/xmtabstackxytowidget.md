@@ -18,12 +18,12 @@ int y);
 <h2>Description</h2>
 <p><code>XmTabStackXYToWidget</code> converts an X/Y pixel coordinate in the window if TabStack to the widget ID of the tab occupying that space.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TabStack widget ID</p>
-<dt><i>x</i></p>
-<dd>Specifies X coordinate to convert</p>
-<dt><i>y</i></p>
-<dd>Specifies Y coordinate to convert</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TabStack widget ID</dd>
+<dt><i>x</i></dt>
+<dd>Specifies X coordinate to convert</dd>
+<dt><i>y</i></dt>
+<dd>Specifies Y coordinate to convert</dd></dl>
 <h2>Return</h2>
 <p>Returns the widget ID of the tab occuring in the cpecified coordinate.</p>
 <h2>Related</h2>

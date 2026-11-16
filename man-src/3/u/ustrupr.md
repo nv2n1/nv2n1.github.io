@@ -10,7 +10,6 @@ description: "ustrupr – Replaces all letters with upper case. Allegro game pro
 <p>ustrupr &#8211; Replaces all letters with upper case. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrupr(char *s);</code></pre>
 <h2>Description</h2>
 <p>This function replaces all lower case letters in `s&#8217; with upper case letters. Example: </p>

@@ -19,28 +19,28 @@ description: "ilasm, ilasm2 – Mono IL assembler"
 <p> The Mono ILAsm assembler generates images (.exe and .dll files) that contain CIL byte code that can be executed by any system that implemented a Common Language Infrastructure virtual machine.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>//output:&lt;file_name&gt;</code></p>
-<dd> Specify the output file name.</p>
-<dt><code>//exe </code></p>
-<dd> Generate an exe</p>
-<dt><code>//dll</code></p>
-<dd> Generate a library</p>
-<dt><code>//scan_only</code></p>
-<dd> Just scan the IL code and display tokens.</p>
-<dt><code>//show_tokens</code></p>
-<dd> Show tokens as they are parsed.</p>
-<dt><code>//show_method_def </code></p>
-<dd> Display method information when a method is defined.</p>
-<dt><code>//show_method_ref</code></p>
-<dd> Display method information when a method is referenced</p>
-<dt><code>//key:KEYFILE</code></p>
-<dd> Strongname (sign) the output assembly using the key pair present in the specified strong name key file (snk). A full key pair is required (i.e. delay signing is done using a .publickey directive in the sources).</p>
-<dt><code>//key:@CONTAINER</code></p>
-<dd> Strongname (sign) the output assembly using the key pair present in the specified container.</p>
-<dt><code>&#8211;about</code></p>
-<dd> Display information about ilasm</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display ilasm version</dl>
+<dt><code>//output:&lt;file_name&gt;</code></dt>
+<dd> Specify the output file name.</dd>
+<dt><code>//exe </code></dt>
+<dd> Generate an exe</dd>
+<dt><code>//dll</code></dt>
+<dd> Generate a library</dd>
+<dt><code>//scan_only</code></dt>
+<dd> Just scan the IL code and display tokens.</dd>
+<dt><code>//show_tokens</code></dt>
+<dd> Show tokens as they are parsed.</dd>
+<dt><code>//show_method_def </code></dt>
+<dd> Display method information when a method is defined.</dd>
+<dt><code>//show_method_ref</code></dt>
+<dd> Display method information when a method is referenced</dd>
+<dt><code>//key:KEYFILE</code></dt>
+<dd> Strongname (sign) the output assembly using the key pair present in the specified strong name key file (snk). A full key pair is required (i.e. delay signing is done using a .publickey directive in the sources).</dd>
+<dt><code>//key:@CONTAINER</code></dt>
+<dd> Strongname (sign) the output assembly using the key pair present in the specified container.</dd>
+<dt><code>&#8211;about</code></dt>
+<dd> Display information about ilasm</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display ilasm version</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mono/">mono</a>(1),</code><a href="/docs/linux/man/1-mcs/">mcs</a>(1)</p>
 <h2>COPYRIGHT</h2>

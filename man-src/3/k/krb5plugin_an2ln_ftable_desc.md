@@ -20,25 +20,25 @@ description: "krb5plugin_an2ln_ftable_desc –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br />
+</dt><dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br />
  <i>minor_version</i> The plugin minor version number (0)<br />
  <i>fini</i> Plugin finalization function<br />
- <i>an2ln</i> Plugin aname_to_lname function</dl>
+ <i>an2ln</i> Plugin aname_to_lname function</dd></dl>
 <p> The an2ln field is the plugin entry point that performs the traditional aname_to_lname operation however the plugin desires. It is invoked in no particular order relative to other an2ln plugins, but it has a &#8216;rule&#8217; argument that indicates which plugin is intended to act on the rule. The plugin an2ln function must return KRB5_PLUGIN_NO_HANDLE if the rule is not applicable to it. </p>
 <p> The plugin an2ln function has the following arguments, in this order: </p>
 <dl>
-<dt>1.</p>
-<dd> plug_ctx, the context value output by the plugin&#8217;s init function</p>
-<dt>2.</p>
-<dd> context, a krb5_context</p>
-<dt>3.</p>
-<dd> rule, the aname_to_lname rule being evaluated (from <a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5))</p>
-<dt>4.</p>
-<dd> aname, the krb5_principal to be mapped to an lname</p>
-<dt>5.</p>
-<dd> set_res_f, a function the plugin must call to set its result</p>
-<dt>6.</p>
-<dd> set_res_ctx, the first argument to set_res_f (the second is the result lname string)</dl>
+<dt>1.</dt>
+<dd> plug_ctx, the context value output by the plugin&#8217;s init function</dd>
+<dt>2.</dt>
+<dd> context, a krb5_context</dd>
+<dt>3.</dt>
+<dd> rule, the aname_to_lname rule being evaluated (from <a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5))</dd>
+<dt>4.</dt>
+<dd> aname, the krb5_principal to be mapped to an lname</dd>
+<dt>5.</dt>
+<dd> set_res_f, a function the plugin must call to set its result</dd>
+<dt>6.</dt>
+<dd> set_res_ctx, the first argument to set_res_f (the second is the result lname string)</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
 <h2>Index</h2>

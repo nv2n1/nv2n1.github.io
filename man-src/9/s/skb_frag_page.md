@@ -15,7 +15,7 @@ skb_frag_page - retrieve the page referred to by a paged fragment
 <h2>Arguments</h2>
 
 <i>frag</i>
-<dl><dd><dd>the paged fragment</dl>
+<dl><dd></dd><dd>the paged fragment</dd></dl>
 
 <h2>Description</h2>
 

@@ -12,10 +12,10 @@ description: "nut-ipmipsu – Driver for IPMI Power Supply Units (PSU)"
 <p><code>nut-ipmipsu</code> -h <code>nut-ipmipsu</code> -a <i>PSU_NAME</i> [<i>OPTIONS</i>]</p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- This driver is experimental, and still a work-in-progress. Feedback is encouraged. </p>
+ This driver is experimental, and still a work-in-progress. Feedback is encouraged. </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- This man page only documents the hardware-specific features of the nut-ipmipsu driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </p>
+ This man page only documents the hardware-specific features of the nut-ipmipsu driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>This driver should support a wide range of PSUs through local IPMI interface. </p>
 <p> nut-ipmipsu currently use the GNU FreeIPMI project, for IPMI implementation.</p>
@@ -34,24 +34,24 @@ description: "nut-ipmipsu – Driver for IPMI Power Supply Units (PSU)"
 <pre>[pdu]
  driver = nut-ipmipsu
  port = id2</pre>
-</dl>
+</dd></dl>
 <p> This driver will report various information related to a PSU, including: </p>
 <dl>
-<dd>&bull; manufacturer, model, serial and part numbers,</dl>
+<dd>&bull; manufacturer, model, serial and part numbers,</dd></dl>
 <dl>
-<dd>&bull; nominal voltage and frequency,</dl>
+<dd>&bull; nominal voltage and frequency,</dd></dl>
 <dl>
-<dd>&bull; actual current and voltage,</dl>
+<dd>&bull; actual current and voltage,</dd></dl>
 <dl>
-<dd>&bull; status of the PSU: </p>
+<dd>&bull; status of the PSU: </dd>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <i>OL</i> means that the PSU is present and providing power,</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <i>OFF</i> means that the PSU is present but not providing power (power cable removed),</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <i>stale</i> (no data) means that the PSU is not present (ie physically removed).</dl>
 </dl>
 <p> Here is an example output for a Dell r610 server: </p>
@@ -79,7 +79,7 @@ ups.id: 2
 ups.realpower.nominal: 717
 ups.status: OL
 ups.voltage: 12</pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>Arnaud Quette &lt;arnaud.quette [at] free.fr&gt;</p>
 <h2>See Also</h2>
@@ -87,3 +87,4 @@ ups.voltage: 12</pre>
 <p><code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> GNU FreeIPMI home page: <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>
+</dl></dl>

@@ -11,7 +11,7 @@ ldbrename - Edit LDB databases using your favorite editor
 <h2>Synopsis</h2>
 
 <dl>
-<dt> FCldbrenameF[] [-h] [-o options] {olddn} {newdb}</dl>
+<dt> FCldbrenameF[] [-h] [-o options] {olddn} {newdb}</dt></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -24,21 +24,21 @@ ldbrename - Edit LDB databases using your favorite editor
  
 
  -h
-<dl>
+</dd><dl>
 <dt>
-<dd> Show list of available options.</dl>
+</dt><dd> Show list of available options.</dd></dl>
  
 
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. See ldb(7) for details.</dl>
+</dt><dd> LDB URL to connect to. See ldb(7) for details.</dd></dl>
  
 
  -o options
 <dl>
 <dt>
-<dd> Extra ldb options, such as modules.</dl>
+</dt><dd> Extra ldb options, such as modules.</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -47,7 +47,7 @@ ldbrename - Edit LDB databases using your favorite editor
  LDB_URL
 <dl>
 <dt>
-<dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dl>
+</dt><dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dd></dl>
 
 <h2>VERSION</h2>
 

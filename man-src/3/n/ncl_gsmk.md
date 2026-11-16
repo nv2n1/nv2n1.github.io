@@ -12,21 +12,21 @@ GSMK (Set marker type) - sets the type of polymarker to be used in subsequent GP
 
  void gset_marker_type(Gint marker_type);
 <h2>Description</h2><dl COMPACT><dt>MTYPE
-<dd>(Integer, Input) - Selects the type of marker to be drawn. Options are:
-<dl COMPACT><dd><dl COMPACT><dt>&lt; 0
-<dd>implementation dependent (not used in NCAR GKS-0A)
-<dt> 1
-<dd>&nbsp;<wbr>.&nbsp;<wbr>(dot)
-<dt> 2
-<dd>&nbsp;<wbr>+&nbsp;<wbr>(plus)
-<dt> 3
-<dd>&nbsp;<wbr>*&nbsp;<wbr>(asterisk)&nbsp;<wbr>This is the default
-<dt> 4
-<dd>&nbsp;<wbr>o&nbsp;<wbr>(circle)
-<dt> 5
-<dd>&nbsp;<wbr>X&nbsp;<wbr>(cross)
-<dt>&ge; 6
-<dd>&nbsp;<wbr>reserved for registration or future standardization</dl></dl>
+</dt><dd>(Integer, Input) - Selects the type of marker to be drawn. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&lt; 0
+</dt><dd>implementation dependent (not used in NCAR GKS-0A)
+</dd><dt> 1
+</dt><dd>&nbsp;<wbr>.&nbsp;<wbr>(dot)
+</dd><dt> 2
+</dt><dd>&nbsp;<wbr>+&nbsp;<wbr>(plus)
+</dd><dt> 3
+</dt><dd>&nbsp;<wbr>*&nbsp;<wbr>(asterisk)&nbsp;<wbr>This is the default
+</dd><dt> 4
+</dt><dd>&nbsp;<wbr>o&nbsp;<wbr>(circle)
+</dd><dt> 5
+</dt><dd>&nbsp;<wbr>X&nbsp;<wbr>(cross)
+</dd><dt>&ge; 6
+</dt><dd>&nbsp;<wbr>reserved for registration or future standardization</dd></dl></dl>
 </dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gpm, gsmksc, gscr, gspmci, gqmk, gqmksc, gqpmci, point, points, ngdots, gset_marker_type 
 

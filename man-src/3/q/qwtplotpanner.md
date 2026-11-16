@@ -40,62 +40,62 @@ description: "QwtPlotPanner –"
 <p> Together with <code>QwtPlotZoomer</code> and <code>QwtPlotMagnifier</code> powerful ways of navigating on a <code>QwtPlot</code> widget can be implemented easily. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The axes are not updated, while dragging the canvas</dl>
+<dd>The axes are not updated, while dragging the canvas</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotZoomer</code>, <code>QwtPlotMagnifier</code></dl>
+<dd><code>QwtPlotZoomer</code>, <code>QwtPlotMagnifier</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotPanner::QwtPlotPanner (QWidget *canvas) [explicit]</h3>
 <p>A panner for the canvas of a <code>QwtPlot</code>. The panner is enabled for all axes </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>canvas</i> Plot canvas to pan, also the parent object</dl>
+<dd><i>canvas</i> Plot canvas to pan, also the parent object</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAxisEnabled()</code></dl>
+<dd><code>setAxisEnabled()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QBitmap QwtPlotPanner::contentsMask () const [protected], [virtual]</h3>
 <p>Calculate a mask from the border path of the canvas </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mask as bitmap</dl>
+<dd>Mask as bitmap</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCanvas::borderPath()</code></dl>
+<dd><code>QwtPlotCanvas::borderPath()</code></dd></dl>
 <p> Reimplemented from <code>QwtPanner</code>.</p>
 <h3>QPixmap QwtPlotPanner::grab () const [protected], [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pixmap with the content of the canvas</dl>
+<dd>Pixmap with the content of the canvas</dd></dl>
 <p> Reimplemented from <code>QwtPanner</code>.</p>
 <h3>bool QwtPlotPanner::isAxisEnabled (intaxis) const</h3>
 <p>Test if an axis is enabled </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code></dl>
+<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, if the axis is enabled</dl>
+<dd>True, if the axis is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAxisEnabled()</code>, <code>moveCanvas()</code></dl>
+<dd><code>setAxisEnabled()</code>, <code>moveCanvas()</code></dd></dl>
 <h3>void QwtPlotPanner::moveCanvas (intdx, intdy) [protected], [virtual], [slot]</h3>
 <p>Adjust the enabled axes according to dx/dy </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>dx</i> Pixel offset in x direction<br />
- <i>dy</i> Pixel offset in y direction</dl>
+ <i>dy</i> Pixel offset in y direction</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPanner::panned()</code></dl>
+<dd><code>QwtPanner::panned()</code></dd></dl>
 <h3>void QwtPlotPanner::setAxisEnabled (intaxis, boolon)</h3>
 <p>En/Disable an axis. Axes that are enabled will be synchronized to the result of panning. All other axes will remain unchanged. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isAxisEnabled()</code>, <code>moveCanvas()</code></dl>
+<dd><code>isAxisEnabled()</code>, <code>moveCanvas()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

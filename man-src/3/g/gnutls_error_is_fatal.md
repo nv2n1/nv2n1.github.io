@@ -14,8 +14,8 @@ description: "gnutls_error_is_fatal – API function"
 <p> <code>int gnutls_error_is_fatal(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>int error</p>
-<dd> is a GnuTLS error code, a negative error code</dl>
+<dt>int error</dt>
+<dd> is a GnuTLS error code, a negative error code</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> If a GnuTLS function returns a negative error code you may feed that value to this function to see if the error condition is fatal to a TLS session (i.e., must be terminated). </p>
 <p> Note that you may also want to check the error code manually, since some non-fatal errors to the protocol (such as a warning alert or a rehandshake request) may be fatal for your program. </p>
@@ -31,6 +31,6 @@ description: "gnutls_error_is_fatal – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

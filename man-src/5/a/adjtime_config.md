@@ -19,21 +19,21 @@ description: "adjtime_config – information about hardware clock setting and dr
 <p>Three numbers, separated by blanks: </p>
 <p> <code>drift factor</code></p>
 <dl>
-<dd>the systematic drift rate in seconds per day (floating point decimal)</dl>
+<dd>the systematic drift rate in seconds per day (floating point decimal)</dd></dl>
 <p> <code>last adjust time</code></p>
 <dl>
-<dd>the resulting number of seconds since 1969 UTC of most recent adjustment or calibration (decimal integer)</dl>
+<dd>the resulting number of seconds since 1969 UTC of most recent adjustment or calibration (decimal integer)</dd></dl>
 <p> <code>adjustment status</code></p>
 <dl>
-<dd>zero (for compatibility with <code><a href="/docs/linux/man/8-clock/">clock</a></code>(8)) as a floating point decimal</dl>
+<dd>zero (for compatibility with <code><a href="/docs/linux/man/8-clock/">clock</a></code>(8)) as a floating point decimal</dd></dl>
 <h3>Second line</h3>
 <p><code>last calibration time</code></p>
 <dl>
-<dd>The resulting number of seconds since 1969 UTC of most recent calibration. Zero if there has been no calibration yet or it is known that any previous calibration is moot (for example, because the Hardware Clock has been found, since that calibration, not to contain a valid time). This is a decimal integer.</dl>
+<dd>The resulting number of seconds since 1969 UTC of most recent calibration. Zero if there has been no calibration yet or it is known that any previous calibration is moot (for example, because the Hardware Clock has been found, since that calibration, not to contain a valid time). This is a decimal integer.</dd></dl>
 <h3>Third line</h3>
 <p><code>clock mode</code></p>
 <dl>
-<dd>Supported values are <code>UTC</code> or <code>LOCAL</code>. Tells whether the Hardware Clock is set to Coordinated Universal Time or local time. You can always override this value with options on the <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) command line.</dl>
+<dd>Supported values are <code>UTC</code> or <code>LOCAL</code>. Tells whether the Hardware Clock is set to Coordinated Universal Time or local time. You can always override this value with options on the <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) command line.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/adjtime</i></p>
 <h2>See Also</h2>

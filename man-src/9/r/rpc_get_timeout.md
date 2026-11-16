@@ -15,7 +15,7 @@ rpc_get_timeout - Get timeout for transport in units of HZ
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client to query</dl>
+<dl><dd></dd><dd>RPC client to query</dd></dl>
 
 <h2>Copyright</h2>
 

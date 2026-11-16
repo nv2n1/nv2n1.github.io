@@ -15,7 +15,7 @@ snd_pcm_format_name - Return a name string for the given PCM format
 <h2>Arguments</h2>
 
 <i>format</i>
-<dl><dd><dd>PCM format</dl>
+<dl><dd></dd><dd>PCM format</dd></dl>
 
 <h2>Copyright</h2>
 

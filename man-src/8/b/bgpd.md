@@ -15,36 +15,36 @@ description: "bgpd – a BGPv4, BGPv4+, BGPv4- routing engine for use with Quagg
 <h2>Options</h2>
 <p>Options available for the <code>bgpd</code> command:</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;daemon</code></p>
-<dd>Runs in daemon mode, forking and exiting from tty.</p>
-<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></p>
-<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/bgpd.conf</i>.</p>
-<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></p>
-<dd>Specify the group to run as. Default is <i>quagga</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>A brief message.</p>
-<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></p>
-<dd>When bgpd starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart bgpd. The likely default is <i>/var/run/bgpd.pid</i>.</p>
-<dt><code>-p</code>, <code>&#8211;bgp_port </code><i>bgp-port-number</i></p>
-<dd>Set the port that bgpd will listen to for bgp data.</p>
-<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></p>
-<dd>Specify the port that the bgpd VTY will listen on. This defaults to 2605, as specified in <i>/etc/services</i>.</p>
-<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></p>
-<dd>Specify the address that the bgpd VTY will listen on. Default is all interfaces.</p>
-<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></p>
-<dd>Specify the user to run as. Default is <i>quagga</i>.</p>
-<dt><code>-r</code>, <code>&#8211;retain</code></p>
-<dd>When the program terminates, retain routes added by <code>bgpd</code>.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Print the version and exit.</dl>
+<dt><code>-d</code>, <code>&#8211;daemon</code></dt>
+<dd>Runs in daemon mode, forking and exiting from tty.</dd>
+<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></dt>
+<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/bgpd.conf</i>.</dd>
+<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></dt>
+<dd>Specify the group to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>A brief message.</dd>
+<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></dt>
+<dd>When bgpd starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart bgpd. The likely default is <i>/var/run/bgpd.pid</i>.</dd>
+<dt><code>-p</code>, <code>&#8211;bgp_port </code><i>bgp-port-number</i></dt>
+<dd>Set the port that bgpd will listen to for bgp data.</dd>
+<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></dt>
+<dd>Specify the port that the bgpd VTY will listen on. This defaults to 2605, as specified in <i>/etc/services</i>.</dd>
+<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></dt>
+<dd>Specify the address that the bgpd VTY will listen on. Default is all interfaces.</dd>
+<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></dt>
+<dd>Specify the user to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-r</code>, <code>&#8211;retain</code></dt>
+<dd>When the program terminates, retain routes added by <code>bgpd</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Print the version and exit.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/usr/local/sbin/bgpd</code></p>
-<dd>The default location of the <code>bgpd</code> binary.</p>
-<dt><code>/usr/local/etc/bgpd.conf</code></p>
-<dd>The default location of the <code>bgpd</code> config file.</p>
-<dt><code>$(PWD)/bgpd.log</code></p>
-<dd>If the <code>bgpd</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>bgpd</code>.</dl>
+<dt><code>/usr/local/sbin/bgpd</code></dt>
+<dd>The default location of the <code>bgpd</code> binary.</dd>
+<dt><code>/usr/local/etc/bgpd.conf</code></dt>
+<dd>The default location of the <code>bgpd</code> config file.</dd>
+<dt><code>$(PWD)/bgpd.log</code></dt>
+<dd>If the <code>bgpd</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>bgpd</code>.</dd></dl>
 <h2>Warning</h2>
 <p>This man page is intended to be a quick reference for command line options. The definitive document is the Info file <code>Quagga</code>.</p>
 <h2>Diagnostics</h2>

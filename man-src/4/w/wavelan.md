@@ -16,12 +16,12 @@ description: "wavelan – AT&T GIS WaveLAN ISA device driver"
 <h3>Parameters</h3>
 <p>This section applies to the module form (parameters passed on the <code><a href="/docs/linux/man/8-insmod/">insmod</a></code>(8) command line). If the driver is included in the kernel, use the <i>ether=IRQ,IO,NAME</i> syntax on the kernel command line.</p>
 <dl>
-<dt><code>io</code></p>
-<dd>Specify the list of base addresses where to search for wavelan cards (setting by dip switch on the card). If you don&#8217;t specify any io address, the driver will scan 0x390 and 0x3E0 addresses, which might conflict with other hardware&#8230;</p>
-<dt><code>irq</code></p>
-<dd>Set the list of IRQs that each wavelan card should use (the value is saved in permanent storage for future use).</p>
-<dt><code>name</code></p>
-<dd>Set the list of names to be used for each wavelan card device (name used by <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8)).</dl>
+<dt><code>io</code></dt>
+<dd>Specify the list of base addresses where to search for wavelan cards (setting by dip switch on the card). If you don&#8217;t specify any io address, the driver will scan 0x390 and 0x3E0 addresses, which might conflict with other hardware&#8230;</dd>
+<dt><code>irq</code></dt>
+<dd>Set the list of IRQs that each wavelan card should use (the value is saved in permanent storage for future use).</dd>
+<dt><code>name</code></dt>
+<dd>Set the list of names to be used for each wavelan card device (name used by <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8)).</dd></dl>
 <h3>Wireless extensions</h3>
 <p>Use <code><a href="/docs/linux/man/8-iwconfig/">iwconfig</a></code>(8) to manipulate wireless extensions.</p>
 <h3>NWID (or domain)</h3>

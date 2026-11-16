@@ -17,7 +17,7 @@ url: "/docs/linux/man/3-defined/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &amp;nbsp; &lt; maxminddb.h&gt;
 int MMDB_open(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const char &amp;nbsp; *const filename,
@@ -260,7 +260,7 @@ typedef struct MMDB_entry_data_list_s &amp;nbsp;
 }
 &amp;nbsp;
 MMDB_entry_data_list_s;
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -289,7 +289,7 @@ MMDB_entry_data_list_s;
  This is the handle for a MaxMind DB file. We only document some of this structure's fields intended for public use. All other fields are subject to change and are intended only for internal use.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 typedef struct MMDB_s &amp;nbsp;
 {
     &amp;nbsp;
@@ -316,13 +316,12 @@ typedef struct MMDB_s &amp;nbsp;
 }
 &amp;nbsp;
 MMDB_s;
-
-<dt>&bull;
-<dd> uint32_t flags - the flags this database was opened with. See the MMDB_open() documentation for more details.
-<dt>&bull;
-<dd> const char&nbsp;*filename - the name of the file which was opened, as passed to MMDB_open().
-<dt>&bull;
-<dd> MMDB_metadata_s metadata - the metadata for the database.</dl>
+</dd><dt>&bull;
+</dt><dd> uint32_t flags - the flags this database was opened with. See the MMDB_open() documentation for more details.
+</dd><dt>&bull;
+</dt><dd> const char&nbsp;*filename - the name of the file which was opened, as passed to MMDB_open().
+</dd><dt>&bull;
+</dt><dd> MMDB_metadata_s metadata - the metadata for the database.</dd></dl>
 
 <h3>MMDB_metadata_s and MMDB_description_s</h3>
 
@@ -331,7 +330,7 @@ MMDB_s;
  This structure can be retrieved from the MMDB_s structure. It contains the metadata read from the database file. Note that you may find it more convenient to access this metadata by calling MMDB_get_metadata_as_entry_data_list() instead.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 typedef struct MMDB_metadata_s &amp;nbsp;
 {
     &amp;nbsp;
@@ -454,7 +453,7 @@ typedef struct MMDB_description_s &amp;nbsp;
 }
 &amp;nbsp;
 MMDB_description_s;
-</dl>
+</dd></dl>
  
 
  These structures should be mostly self-explanatory. 
@@ -470,7 +469,7 @@ MMDB_description_s;
  This structure is returned as the result of looking up an IP address.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 typedef struct MMDB_lookup_result_s &amp;nbsp;
 {
     &amp;nbsp;
@@ -491,7 +490,7 @@ typedef struct MMDB_lookup_result_s &amp;nbsp;
 }
 &amp;nbsp;
 MMDB_lookup_result_s;
-</dl>
+</dd></dl>
  
 
  If the found_entry member is false then the other members of this structure do not contain meaningful values. Always check that found_entry is true first. 
@@ -515,7 +514,7 @@ MMDB_lookup_result_s;
  This structure is used to return a single data section entry for an IP. These entries can in turn point to other entries, as is the case for things like maps and arrays. Some members of this structure are not documented as they are only for internal use.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 typedef struct MMDB_entry_data_s &amp;nbsp;
 {
     &amp;nbsp;
@@ -654,7 +653,7 @@ typedef struct MMDB_entry_data_s &amp;nbsp;
 }
 &amp;nbsp;
 MMDB_entry_data_s;
-</dl>
+</dd></dl>
  
 
  The has_data member is true if data was found for a given lookup. See MMDB_get_value() for more details. If this member is false then none of the other values in the structure are meaningful. 
@@ -684,41 +683,41 @@ MMDB_entry_data_s;
  This library provides a macro for every data type defined by the MaxMind DB spec.
 <dl>
 <dt>&bull;
-<dd> MMDB_DATA_TYPE_UTF8_STRING
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_DOUBLE
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_BYTES
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_UINT16
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_UINT32
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_MAP
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_INT32
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_UINT64
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_UINT128
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_ARRAY
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_BOOLEAN
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_FLOAT</dl>
+</dt><dd> MMDB_DATA_TYPE_UTF8_STRING
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_DOUBLE
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_BYTES
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_UINT16
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_UINT32
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_MAP
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_INT32
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_UINT64
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_UINT128
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_ARRAY
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_BOOLEAN
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_FLOAT</dd></dl>
  
 
  There are also a few types that are for internal use only:
 <dl>
 <dt>&bull;
-<dd> MMDB_DATA_TYPE_EXTENDED
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_POINTER
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_CONTAINER
-<dt>&bull;
-<dd> MMDB_DATA_TYPE_END_MARKER</dl>
+</dt><dd> MMDB_DATA_TYPE_EXTENDED
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_POINTER
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_CONTAINER
+</dd><dt>&bull;
+</dt><dd> MMDB_DATA_TYPE_END_MARKER</dd></dl>
  
 
  If you see one of these in returned data then something has gone very wrong. The database is damaged or was generated incorrectly or there is a bug in the libmaxminddb code.
@@ -738,7 +737,7 @@ MMDB_entry_data_s;
  This structure encapsulates a linked list of MMDB_entry_data_s structures.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 typedef struct MMDB_entry_data_list_s &amp;nbsp;
 {
     &amp;nbsp;
@@ -755,7 +754,7 @@ typedef struct MMDB_entry_data_list_s &amp;nbsp;
 }
 &amp;nbsp;
 MMDB_entry_data_list_s;
-</dl>
+</dd></dl>
  
 
  This structure lets you look at entire map or array data entry by iterating over the linked list.
@@ -767,7 +766,7 @@ MMDB_entry_data_list_s;
  This structure encapsulates the two records in a search node. This is really only useful if you want to write code that iterates over the entire search tree as opposed to looking up a specific IP address.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 typedef struct MMDB_search_node_s &amp;nbsp;
 {
     &amp;nbsp;
@@ -803,19 +802,19 @@ typedef struct MMDB_search_node_s &amp;nbsp;
 }
 &amp;nbsp;
 MMDB_search_node_s;
-</dl>
+</dd></dl>
  
 
  The two record types will take one of the following values:
 <dl>
 <dt>&bull;
-<dd> MMDB_RECORD_TYPE_SEARCH_NODE - The record points to the next search node.
-<dt>&bull;
-<dd> MMDB_RECORD_TYPE_EMPTY - The record is a placeholder that indicates there is no data for the IP address. The search should end here.
-<dt>&bull;
-<dd> MMDB_RECORD_TYPE_DATA - The record is for data in the data section of the database. Use the entry for the record when looking up the data for the record.
-<dt>&bull;
-<dd> MMDB_RECORD_TYPE_INVALID - The record is invalid. Either an invalid node was looked up or the database is corrupt.</dl>
+</dt><dd> MMDB_RECORD_TYPE_SEARCH_NODE - The record points to the next search node.
+</dd><dt>&bull;
+</dt><dd> MMDB_RECORD_TYPE_EMPTY - The record is a placeholder that indicates there is no data for the IP address. The search should end here.
+</dd><dt>&bull;
+</dt><dd> MMDB_RECORD_TYPE_DATA - The record is for data in the data section of the database. Use the entry for the record when looking up the data for the record.
+</dd><dt>&bull;
+</dt><dd> MMDB_RECORD_TYPE_INVALID - The record is invalid. Either an invalid node was looked up or the database is corrupt.</dd></dl>
  
 
  The MMDB_entry_s for the record is only valid if the type is MMDB_RECORD_TYPE_DATA. Attempts to use an entry for other record types will result in an error or invalid data.
@@ -827,25 +826,25 @@ MMDB_search_node_s;
  This library returns (or populates) status codes for many functions. These status codes are:
 <dl>
 <dt>&bull;
-<dd> MMDB_SUCCESS - everything worked
-<dt>&bull;
-<dd> MMDB_FILE_OPEN_ERROR - there was an error trying to open the MaxMind DB file.
-<dt>&bull;
-<dd> MMDB_IO_ERROR - an IO operation failed. Check errno for more details.
-<dt>&bull;
-<dd> MMDB_CORRUPT_SEARCH_TREE_ERROR - looking up an IP address in the search tree gave us an impossible result. The database is damaged or was generated incorrectly or there is a bug in the libmaxminddb code.
-<dt>&bull;
-<dd> MMDB_INVALID_METADATA_ERROR - something in the database is wrong. This includes missing metadata keys as well as impossible values (like an ip_version of 7).
-<dt>&bull;
-<dd> MMDB_UNKNOWN_DATABASE_FORMAT_ERROR - The database metadata indicates that it's major version is not 2. This library can only handle major version 2.
-<dt>&bull;
-<dd> MMDB_OUT_OF_MEMORY_ERROR - a memory allocation call (malloc, etc.) failed.
-<dt>&bull;
-<dd> MMDB_INVALID_DATA_ERROR - an entry in the data section contains invalid data. For example, a uint16 field is claiming to be more than 2 bytes long. The database is probably damaged or was generated incorrectly.
-<dt>&bull;
-<dd> MMDB_INVALID_LOOKUP_PATH_ERROR - The lookup path passed to MMDB_get_value, MMDB_vget_value, or MMDB_aget_value contains an array offset that is larger than LONG_MAX or smaller than LONG_MIN.
-<dt>&bull;
-<dd> MMDB_LOOKUP_PATH_DOES_NOT_MATCH_DATA_ERROR - The lookup path passed to MMDB_get_value,MMDB_vget_value, or MMDB_aget_value does not match the data structure for the entry. There are number of reasons this can happen. The lookup path could include a key not in a map. The lookup path could include an array index larger than an array or smaller than the minimum offset from the end of an array. It can also happen when the path expects to find a map or array where none exist.</dl>
+</dt><dd> MMDB_SUCCESS - everything worked
+</dd><dt>&bull;
+</dt><dd> MMDB_FILE_OPEN_ERROR - there was an error trying to open the MaxMind DB file.
+</dd><dt>&bull;
+</dt><dd> MMDB_IO_ERROR - an IO operation failed. Check errno for more details.
+</dd><dt>&bull;
+</dt><dd> MMDB_CORRUPT_SEARCH_TREE_ERROR - looking up an IP address in the search tree gave us an impossible result. The database is damaged or was generated incorrectly or there is a bug in the libmaxminddb code.
+</dd><dt>&bull;
+</dt><dd> MMDB_INVALID_METADATA_ERROR - something in the database is wrong. This includes missing metadata keys as well as impossible values (like an ip_version of 7).
+</dd><dt>&bull;
+</dt><dd> MMDB_UNKNOWN_DATABASE_FORMAT_ERROR - The database metadata indicates that it's major version is not 2. This library can only handle major version 2.
+</dd><dt>&bull;
+</dt><dd> MMDB_OUT_OF_MEMORY_ERROR - a memory allocation call (malloc, etc.) failed.
+</dd><dt>&bull;
+</dt><dd> MMDB_INVALID_DATA_ERROR - an entry in the data section contains invalid data. For example, a uint16 field is claiming to be more than 2 bytes long. The database is probably damaged or was generated incorrectly.
+</dd><dt>&bull;
+</dt><dd> MMDB_INVALID_LOOKUP_PATH_ERROR - The lookup path passed to MMDB_get_value, MMDB_vget_value, or MMDB_aget_value contains an array offset that is larger than LONG_MAX or smaller than LONG_MIN.
+</dd><dt>&bull;
+</dt><dd> MMDB_LOOKUP_PATH_DOES_NOT_MATCH_DATA_ERROR - The lookup path passed to MMDB_get_value,MMDB_vget_value, or MMDB_aget_value does not match the data structure for the entry. There are number of reasons this can happen. The lookup path could include a key not in a map. The lookup path could include an array index larger than an array or smaller than the minimum offset from the end of an array. It can also happen when the path expects to find a map or array where none exist.</dd></dl>
  
 
  All status codes should be treated as int values.
@@ -854,10 +853,10 @@ MMDB_search_node_s;
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 const char &amp;nbsp;
 *MMDB_strerror(int error_code)
-</dl>
+</dd></dl>
  
 
  This function takes a status code and returns an English string explaining the status.
@@ -872,20 +871,20 @@ const char &amp;nbsp;
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int MMDB_open(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const char &amp;nbsp; *const filename,
                                                   &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; uint32_t flags,
                          &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_s &amp; nbsp; *const mmdb);
-</dl>
+</dd></dl>
  
 
  This function opens a handle to a MaxMind DB file. Its return value is a status code as defined above. Always check this call's return value.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 MMDB_s mmdb;
 int status &amp;nbsp;
 =
@@ -902,7 +901,7 @@ if
     ... &amp;nbsp;
 }
 ... MMDB_close(&amp;mmdb);
-</dl>
+</dd></dl>
  
 
  filename must be encoded as UTF-8 on Windows. 
@@ -912,7 +911,7 @@ if
  The flags currently provided are:
 <dl>
 <dt>&bull;
-<dd> MMDB_MODE_MMAP - open the database with mmap().</dl>
+</dt><dd> MMDB_MODE_MMAP - open the database with mmap().</dd></dl>
  
 
  Passing in other values for flags may yield unpredictable results. In the future we may add additional flags that you can bitwise-or together with the mode, as well as additional modes. 
@@ -923,9 +922,9 @@ if
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 void MMDB_close(MMDB_s &amp;nbsp; *const mmdb);
-</dl>
+</dd></dl>
  
 
  This frees any allocated or mmap'd memory that is held from the MMDB_s structure. It does not free the memory allocated for the structure itself! If you allocated the structure from the heap then you are responsible for freeing it.
@@ -934,7 +933,7 @@ void MMDB_close(MMDB_s &amp;nbsp; *const mmdb);
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 MMDB_lookup_result_s MMDB_lookup_string(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_s &amp; nbsp; *const mmdb,
                                                &amp;nbsp;
@@ -943,13 +942,13 @@ MMDB_lookup_result_s MMDB_lookup_string(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; int &amp;nbsp; *const gai_error,
                                     &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; int &amp;nbsp; *const mmdb_error);
-</dl>
+</dd></dl>
  
 
  This function looks up an IP address that is passed in as a null-terminated string. Internally it calls getaddrinfo() to resolve the address into a binary form. It then calls MMDB_lookup_sockaddr() to look the address up in the database. If you have already resolved an address you can call MMDB_lookup_sockaddr() directly, rather than resolving the address twice.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int gai_error, mmdb_error;
 MMDB_lookup_result_s result &amp;nbsp;
 =
@@ -979,7 +978,7 @@ if
     &amp;nbsp;
     ... &amp;nbsp;
 }
-</dl>
+</dd></dl>
  
 
  This function always returns an MMDB_lookup_result_s structure, but you should also check the gai_error and mmdb_error parameters. If either of these indicates an error then the returned structure is meaningless. 
@@ -994,14 +993,14 @@ if
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 MMDB_lookup_result_s MMDB_lookup_sockaddr(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_s &amp; nbsp; *const mmdb,
                                                &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; const struct sockaddr &amp;nbsp; *const sockaddr,
                                                       &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; int &amp;nbsp; *const mmdb_error);
-</dl>
+</dd></dl>
  
 
  This function looks up an IP address that has already been resolved by getaddrinfo(). 
@@ -1009,7 +1008,7 @@ MMDB_lookup_result_s MMDB_lookup_sockaddr(
  Other than not calling getaddrinfo() itself, this function is identical to the MMDB_lookup_string() function.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int mmdb_error;
 MMDB_lookup_result_s result &amp;nbsp;
 =
@@ -1032,7 +1031,7 @@ if
     &amp;nbsp;
     ... &amp;nbsp;
 }
-</dl>
+</dd></dl>
 
 <h3>Data Lookup Functions</h3>
 
@@ -1041,7 +1040,7 @@ if
  There are three functions for looking up data associated with an IP address.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int MMDB_get_value(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_entry_s &amp; nbsp; *const start,
                                                      &amp;nbsp;
@@ -1060,7 +1059,7 @@ int MMDB_aget_value(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_entry_data_s &amp; nbsp; *const entry_data,
                                                    &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; const char &amp;nbsp; *const &amp;nbsp; *const path);
-</dl>
+</dd></dl>
  
 
  The three functions allow three slightly different calling styles, but they all do the same thing. 
@@ -1076,7 +1075,7 @@ int MMDB_aget_value(
  The lookup path allows you to navigate a complex data structure. For example, given this data:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 {
     &amp;nbsp;
     &amp;nbsp;
@@ -1116,13 +1115,13 @@ int MMDB_aget_value(
     "cities" : &amp;nbsp;
     [&amp;nbsp; "Berlin", &amp;nbsp; "Frankfurt" &amp; nbsp; ]
 }
-</dl>
+</dd></dl>
  
 
  We could look up the English name with this code:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 MMDB_lookup_result_s result &amp;nbsp;
 =
     &amp;nbsp;
@@ -1154,7 +1153,7 @@ if
     &amp;nbsp;
     ... &amp;nbsp;
 }
-</dl>
+</dd></dl>
  
 
  If we wanted to find the first city the lookup path would be &quot;cities&quot;,&nbsp;&quot;0&quot;. If you don't provide a lookup path at all, you'll get the entry which corresponds to the top level map. The lookup path must always end with NULL, regardless of which function you call. 
@@ -1173,18 +1172,18 @@ if
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int MMDB_get_entry_data_list(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_entry_s &amp; nbsp; *start,
                                                      &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_entry_data_list_s &amp; nbsp; **const entry_data_list);
-</dl>
+</dd></dl>
  
 
  This function allows you to get all of the data for a complex data structure at once, rather than looking up each piece using repeated calls to MMDB_get_value().
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 MMDB_lookup_result_s result &amp;nbsp;
 =
     &amp;nbsp;
@@ -1301,13 +1300,13 @@ while
     }
 }
 MMDB_free_entry_data_list(first);
-</dl>
+</dd></dl>
  
 
  It's up to you to interpret the entry_data_list data structure. The list is linked in a depth-first traversal. Let's use this structure as an example:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 {
     &amp;nbsp;
     &amp;nbsp;
@@ -1347,33 +1346,33 @@ MMDB_free_entry_data_list(first);
     "cities" : &amp;nbsp;
     [&amp;nbsp; "Berlin", &amp;nbsp; "Frankfurt" &amp; nbsp; ]
 }
-</dl>
+</dd></dl>
  
 
  The list will consist of the following items:
 <dl>
 <dt> 1.
-<dd> MAP - top level map
-<dt> 2.
-<dd> UTF8_STRING - &quot;names&quot; key
-<dt> 3.
-<dd> MAP - map for &quot;names&quot; key
-<dt> 4.
-<dd> UTF8_STRING - &quot;en&quot; key
-<dt> 5.
-<dd> UTF8_STRING - value for &quot;en&quot; key
-<dt> 6.
-<dd> UTF8_STRING - &quot;de&quot; key
-<dt> 7.
-<dd> UTF8_STRING - value for &quot;de&quot; key
-<dt> 8.
-<dd> UTF8_STRING - &quot;cities&quot; key
-<dt> 9.
-<dd> ARRAY - value for &quot;cities&quot; key
-<dt>10.
-<dd> UTF8_STRING - array[0]
-<dt>11.
-<dd> UTF8_STRING - array[1]</dl>
+</dt><dd> MAP - top level map
+</dd><dt> 2.
+</dt><dd> UTF8_STRING - &quot;names&quot; key
+</dd><dt> 3.
+</dt><dd> MAP - map for &quot;names&quot; key
+</dd><dt> 4.
+</dt><dd> UTF8_STRING - &quot;en&quot; key
+</dd><dt> 5.
+</dt><dd> UTF8_STRING - value for &quot;en&quot; key
+</dd><dt> 6.
+</dt><dd> UTF8_STRING - &quot;de&quot; key
+</dd><dt> 7.
+</dt><dd> UTF8_STRING - value for &quot;de&quot; key
+</dd><dt> 8.
+</dt><dd> UTF8_STRING - &quot;cities&quot; key
+</dd><dt> 9.
+</dt><dd> ARRAY - value for &quot;cities&quot; key
+</dd><dt>10.
+</dt><dd> UTF8_STRING - array[0]
+</dd><dt>11.
+</dt><dd> UTF8_STRING - array[1]</dd></dl>
  
 
  The return value of the function is a status code as defined above.
@@ -1382,10 +1381,10 @@ MMDB_free_entry_data_list(first);
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 void MMDB_free_entry_data_list(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_entry_data_list_s &amp; nbsp; *const entry_data_list);
-</dl>
+</dd></dl>
  
 
  The MMDB_get_entry_data_list() and MMDB_get_metadata_as_entry_data_list() functions will allocate the linked list structure from the heap. Call this function to free the MMDB_entry_data_list_s structure.
@@ -1394,18 +1393,18 @@ void MMDB_free_entry_data_list(
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int MMDB_get_metadata_as_entry_data_list(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_s &amp; nbsp; *const mmdb,
                                                &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_entry_data_list_s &amp; nbsp; **const entry_data_list);
-</dl>
+</dd></dl>
  
 
  This function allows you to retrieve the database metadata as a linked list of MMDB_entry_data_list_s structures. This can be a more convenient way to deal with the metadata than using the metadata structure directly.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -1456,7 +1455,7 @@ entry_data_list;
 &amp;nbsp;
 &amp;nbsp;
 MMDB_free_entry_data_list(first);
-</dl>
+</dd></dl>
  
 
  The return value of the function is a status code as defined above.
@@ -1465,14 +1464,14 @@ MMDB_free_entry_data_list(first);
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int MMDB_dump_entry_data_list(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; FILE &amp; nbsp; *const stream,
                                              &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_entry_data_list_s &amp; nbsp; *const entry_data_list,
                                                         &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; int indent);
-</dl>
+</dd></dl>
  
 
  This function takes a linked list of MMDB_entry_data_list_s structures and stringifies it to the given stream. The indent parameter is the starting indent level for the generated output. It is incremented for nested data structures (maps, array, etc.). 
@@ -1489,14 +1488,14 @@ int MMDB_dump_entry_data_list(
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 int MMDB_read_node(
     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_s &amp; nbsp; *const mmdb,
                                                &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; uint32_t node_number,
                          &amp;nbsp;
     &amp;nbsp; &amp;nbsp; &amp;nbsp; MMDB_search_node_s &amp; nbsp; *const node);
-</dl>
+</dd></dl>
  
 
  This reads a specific node in the search tree. The third argument is a reference to an MMDB_search_node_s structure that will be populated by this function. 
@@ -1509,10 +1508,10 @@ int MMDB_read_node(
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 const char &amp;nbsp;
 *MMDB_lib_version(void)
-</dl>
+</dd></dl>
  
 
  This function returns the library version as a string, something like &quot;2.0.0&quot;.
@@ -1521,7 +1520,7 @@ const char &amp;nbsp;
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &amp;nbsp; &lt; errno.h&gt;
 #include &amp;nbsp; &lt; maxminddb.h&gt;
 #include &amp;nbsp; &lt; stdlib.h&gt;
@@ -1921,7 +1920,7 @@ end:
     &amp;nbsp;
     exit(exit_code);
 }
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>THREAD SAFETY</h2>
 
@@ -1958,9 +1957,9 @@ end:
  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 <a rel="nofollow" HREF="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
-</pre></dl>
+</pre></dd></dl>
  
 
  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

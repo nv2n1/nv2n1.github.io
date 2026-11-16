@@ -147,22 +147,22 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNfontList</code></p>
-<dd>Specifies the font of the text used in the caption label. If this value is <font SIZE="-1">NULL</font> at initialization, it is initialized by looking up the parent hierarchy of the widget for an ancestor that is a subclass of the <code>XmBulletinBoard</code>, <code>VendorShell</code> or <code>XmMenuShell</code> widget class. If such an ancestor is found, the font list is initialized to the appropriate default font list of the ancestor widget <code>XmNdefaultFontList for</code> <code>VendorShell</code> and <code>XmMenuShell</code>, <code>XmNlabelFontList</code> or <code>XmNbuttonFontList</code> for <code>XmBulletinBoard.</code> Refer to <code>XmFontList(3X)</code> for more information on the creation and structure of a font list. This resource is copied.</p>
-<dt><code>XmNlabelAlignment</code></p>
-<dd>Specifies the alignment of the caption label along the side of the caption child. Must be one of the enumerated <code>XbaeLabelAlignment</code> types: <code>XbaeAlignmentTopOrLeft</code>, <code>XbaeAlignmentCenter</code>, <code>XbaeAlignmentBottomOrRight</code>.</p>
-<dt><code>XmNlabelOffset</code></p>
-<dd>Specifies the offset, in pixels, of the caption label from the caption child. If the offset is negative, then the caption label will overlap the caption child by that many pixels.</p>
-<dt><code>XmNlabelPixmap</code></p>
-<dd>Specifies the caption label pixmap when <code>XmNlabelType</code> is <code>XmPIXMAP</code>.</p>
-<dt><code>XmNlabelPosition</code></p>
-<dd>Specifies on which side of the caption child the caption label should be placed. Must be one of the enumerated <code>XbaeLabelPosition</code> types: <code>XbaePositionLeft</code>, <code>XbaePositionRight</code>, <code>XbaePositionTop</code>, <code>XbaePositionBottom</code>.</p>
-<dt><code>XmNlabelString</code></p>
-<dd>Specifies the compound string when the <code>XmNlabelType is</code> <code>XmSTRING</code>. If this value is <font SIZE="-1">NULL,</font> it is initialized by converting the name of the widget to a compound string. Refer to <code>XmString(3X)</code> for more information on the creation and structure of compound strings.</p>
-<dt><code>XmNlabelTextAlignment</code></p>
-<dd>Specifies the text alignment for the caption label. This resource is only useful for multi line caption labels. Valid values are: <code>XmALIGNMENT_BEGINNING</code> left alignment causes the left sides of the lines of text to be vertically aligned. <code>XmALIGNMENT_CENTER</code> center alignment causes the centers of the lines of text to be vertically aligned. <code>XmALIGNMENT_END</code> right alignment causes the right sides of the lines of text to be vertically aligned.</p>
-<dt><code>XmNlabelType</code></p>
-<dd>Specifies the caption label type. Valid values are: <code>XmSTRING</code> &#8211; the caption label will display the <code>XmNlabelString</code>. <code>XmPIXMAP</code> &#8211; the caption label will display the <code>XmNlabelPixmap</code>.</dl>
+<dt><code>XmNfontList</code></dt>
+<dd>Specifies the font of the text used in the caption label. If this value is <font SIZE="-1">NULL</font> at initialization, it is initialized by looking up the parent hierarchy of the widget for an ancestor that is a subclass of the <code>XmBulletinBoard</code>, <code>VendorShell</code> or <code>XmMenuShell</code> widget class. If such an ancestor is found, the font list is initialized to the appropriate default font list of the ancestor widget <code>XmNdefaultFontList for</code> <code>VendorShell</code> and <code>XmMenuShell</code>, <code>XmNlabelFontList</code> or <code>XmNbuttonFontList</code> for <code>XmBulletinBoard.</code> Refer to <code>XmFontList(3X)</code> for more information on the creation and structure of a font list. This resource is copied.</dd>
+<dt><code>XmNlabelAlignment</code></dt>
+<dd>Specifies the alignment of the caption label along the side of the caption child. Must be one of the enumerated <code>XbaeLabelAlignment</code> types: <code>XbaeAlignmentTopOrLeft</code>, <code>XbaeAlignmentCenter</code>, <code>XbaeAlignmentBottomOrRight</code>.</dd>
+<dt><code>XmNlabelOffset</code></dt>
+<dd>Specifies the offset, in pixels, of the caption label from the caption child. If the offset is negative, then the caption label will overlap the caption child by that many pixels.</dd>
+<dt><code>XmNlabelPixmap</code></dt>
+<dd>Specifies the caption label pixmap when <code>XmNlabelType</code> is <code>XmPIXMAP</code>.</dd>
+<dt><code>XmNlabelPosition</code></dt>
+<dd>Specifies on which side of the caption child the caption label should be placed. Must be one of the enumerated <code>XbaeLabelPosition</code> types: <code>XbaePositionLeft</code>, <code>XbaePositionRight</code>, <code>XbaePositionTop</code>, <code>XbaePositionBottom</code>.</dd>
+<dt><code>XmNlabelString</code></dt>
+<dd>Specifies the compound string when the <code>XmNlabelType is</code> <code>XmSTRING</code>. If this value is <font SIZE="-1">NULL,</font> it is initialized by converting the name of the widget to a compound string. Refer to <code>XmString(3X)</code> for more information on the creation and structure of compound strings.</dd>
+<dt><code>XmNlabelTextAlignment</code></dt>
+<dd>Specifies the text alignment for the caption label. This resource is only useful for multi line caption labels. Valid values are: <code>XmALIGNMENT_BEGINNING</code> left alignment causes the left sides of the lines of text to be vertically aligned. <code>XmALIGNMENT_CENTER</code> center alignment causes the centers of the lines of text to be vertically aligned. <code>XmALIGNMENT_END</code> right alignment causes the right sides of the lines of text to be vertically aligned.</dd>
+<dt><code>XmNlabelType</code></dt>
+<dd>Specifies the caption label type. Valid values are: <code>XmSTRING</code> &#8211; the caption label will display the <code>XmNlabelString</code>. <code>XmPIXMAP</code> &#8211; the caption label will display the <code>XmNlabelPixmap</code>.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>The following table lists the resources which <code>XbaeCaption</code> inherits from it&#8217;s superclasses <code>XmManager</code>, <code>Compositeand</code> <code>Core</code>. For a complete description of each resource, refer to the man page for that superclass. The codes in the &quot;Access&quot; column indicate whether the given resource can be set at creation time (C), or set by using XtSetValues (S), or retrieved by using XtGetValues (G). </p>
 <table BORDER>
@@ -710,10 +710,10 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <h3>Type Converters</h3>
 <p>In addition to the standard type converters registered by Xt and Motif, <code>XbaeCaption</code> registers the following additional type converters:</p>
 <dl COMPACT>
-<dt>CvtStringToLabelAlignment()</p>
-<dd>Converts a String to the enumerated <code>XbaeLabelAlignment</code> type. The Strings <code>TopOrLeft</code>, <code>Top </code> and <code>Left</code> are converted to <code>XbaeAlignmentTopOrLeft</code>. The String <code>Center</code> is converted to <code>XbaeAlignmentCenter</code>. The Strings <code>BottomOrRight</code>, <code>Bottom</code> and <code>Right</code> are converted to <code>XbaeAlignmentBottomOrRight</code>. This converter allows the <code>XmNlabelAlignment</code> resource to be specified in a resource file. The converter is case insensitive.</p>
-<dt>CvtStringToLabelPosition()</p>
-<dd>Converts a String to the enumerated <code>XbaeLabelPosition</code> type. The String <code>Left</code> is converted to <code>XbaePositionLeft</code>. The String <code>Right</code> is converted to <code>XbaePositionRight</code>. The String <code>Top is converted to</code> <code>XbaePositionTop</code>. The String <code>Bottom is converted to</code> <code>XbaePositionBottom</code>. This converter allows the <code>XmNlabelPosition</code> resource to be specified in a resource file. The converter is case insensitive. </p>
+<dt>CvtStringToLabelAlignment()</dt>
+<dd>Converts a String to the enumerated <code>XbaeLabelAlignment</code> type. The Strings <code>TopOrLeft</code>, <code>Top </code> and <code>Left</code> are converted to <code>XbaeAlignmentTopOrLeft</code>. The String <code>Center</code> is converted to <code>XbaeAlignmentCenter</code>. The Strings <code>BottomOrRight</code>, <code>Bottom</code> and <code>Right</code> are converted to <code>XbaeAlignmentBottomOrRight</code>. This converter allows the <code>XmNlabelAlignment</code> resource to be specified in a resource file. The converter is case insensitive.</dd>
+<dt>CvtStringToLabelPosition()</dt>
+<dd>Converts a String to the enumerated <code>XbaeLabelPosition</code> type. The String <code>Left</code> is converted to <code>XbaePositionLeft</code>. The String <code>Right</code> is converted to <code>XbaePositionRight</code>. The String <code>Top is converted to</code> <code>XbaePositionTop</code>. The String <code>Bottom is converted to</code> <code>XbaePositionBottom</code>. This converter allows the <code>XmNlabelPosition</code> resource to be specified in a resource file. The converter is case insensitive. </dd>
 </dl>
 <h3>Public Functions</h3>
 <p>The following external entry points to <code>XbaeCaption</code> class methods are defined: </p>
@@ -750,15 +750,15 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 </table>
-<dl COMPACT>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID.</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (arglist)</dl>
+</dd><dl COMPACT>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (arglist)</dd></dl>
 <p> <code>XbaeCreateCaption()</code> creates an instance of an XbaeCaption widget and returns the associated widget ID. </p>
 </dl>
 <h3>Virtual Bindings</h3>

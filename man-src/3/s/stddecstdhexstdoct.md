@@ -25,11 +25,8 @@ This is an I/O manipulator. It may be called with an expression such as out &lt;
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;The number 42 in octal:   &quot; &lt;&lt; std::oct &lt;&lt; 42 &lt;&lt; '
 '

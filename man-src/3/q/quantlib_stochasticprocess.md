@@ -63,7 +63,7 @@ description: "QuantLib::StochasticProcess – multi-dimensional stochastic proce
 <p>returns the time value corresponding to the given date in the reference system of the stochastic process. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dl>
+<dd>As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dd></dl>
 <p> Reimplemented in <code>GeneralizedBlackScholesProcess</code>, <code>GJRGARCHProcess</code>, <code>HestonProcess</code>, <code>Merton76Process</code>, and <code>StochasticProcessArray</code>.</p>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

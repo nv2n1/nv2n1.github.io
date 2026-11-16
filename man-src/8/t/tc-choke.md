@@ -19,10 +19,10 @@ description: "choke – choose and keep scheduler"
 <p>The parameters are the same as for RED, except that RED uses bytes whereas choke counts packets. See <code><a href="/docs/linux/man/8-tc-red/">tc-red</a></code>(8) for a description.</p>
 <h2>Source</h2>
 <dl>
-<dt>o</p>
-<dd>R. Pan, B. Prabhakar, and K. Psounis, &quot;CHOKe, A Stateless Active Queue Management Scheme for Approximating Fair Bandwidth Allocation&quot;, IEEE INFOCOM, 2000.</p>
-<dt>o</p>
-<dd>A. Tang, J. Wang, S. Low, &quot;Understanding CHOKe: Throughput and Spatial Characteristics&quot;, IEEE/ACM Transactions on Networking, 2004 </p>
+<dt>o</dt>
+<dd>R. Pan, B. Prabhakar, and K. Psounis, &quot;CHOKe, A Stateless Active Queue Management Scheme for Approximating Fair Bandwidth Allocation&quot;, IEEE INFOCOM, 2000.</dd>
+<dt>o</dt>
+<dd>A. Tang, J. Wang, S. Low, &quot;Understanding CHOKe: Throughput and Spatial Characteristics&quot;, IEEE/ACM Transactions on Networking, 2004 </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-red/">tc-red</a></code>(8) </p>

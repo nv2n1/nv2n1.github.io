@@ -17,10 +17,10 @@ description: "XmCvtXmStringToByteStream — A compound string function that conv
 <p><code>XmCvtXmStringToByteStream</code> converts a compound string to a string of bytes representing the compound string in Byte Stream format. This routine is typically used by the source of a data transfer operation to produce a Byte Stream representation for transferring a compound string to a destination. </p>
 <p> If <i>prop_return</i> is not NULL, this function creates a string of characters in Byte Stream format and returns it in <i>prop_return</i>. The function also returns the number of bytes in <i>prop_return</i>. If <i>prop_return</i> is NULL, the function does not return the Byte Stream format string, but it does calculate and return the number of bytes that would appear in the Byte Stream format string.</p>
 <dl COMPACT>
-<dt><i>string</i></p>
-<dd>Specifies a compound string to be converted to Byte Stream format</p>
-<dt><i>prop_return</i></p>
-<dd>Specifies a pointer to a string in Byte Stream format that is created and returned by this function. If <i>prop_return</i> is NULL, no Byte Stream format string is returned. When a Byte Stream format string is returned, the function allocates space to hold it. The application is responsible for managing this allocated space. The application can recover the allocated space by calling <code>XtFree</code>.</dl>
+<dt><i>string</i></dt>
+<dd>Specifies a compound string to be converted to Byte Stream format</dd>
+<dt><i>prop_return</i></dt>
+<dd>Specifies a pointer to a string in Byte Stream format that is created and returned by this function. If <i>prop_return</i> is NULL, no Byte Stream format string is returned. When a Byte Stream format string is returned, the function allocates space to hold it. The application is responsible for managing this allocated space. The application can recover the allocated space by calling <code>XtFree</code>.</dd></dl>
 <h2>Return</h2>
 <p>Returns the number of bytes in the Byte Stream representation (whether or not the Byte Stream representation is returned).</p>
 <h2>Related</h2>

@@ -16,8 +16,8 @@ description: "ldns_key_print"
 <p> void ldns_key_print(FILE *output, const ldns_key *k); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_print</i>()</p>
-<dd>print a private key to the file ouput </p>
+<dt> <i>ldns_key_print</i>()</dt>
+<dd>print a private key to the file ouput </dd>
 <p> .br <code>output</code>: the FILE descriptor where to print to .br <code>k</code>: the ldns_key to print</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -31,3 +31,4 @@ description: "ldns_key_print"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

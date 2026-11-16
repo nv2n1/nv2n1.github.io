@@ -15,24 +15,24 @@ description: "ppmshadow – add simulated shadows to a portable pixmap image"
 <p> <code>ppmshadow</code> adds a simulated shadow to an image, giving the appearance that the contents of the image float above the page, casting a diffuse shadow on the background. Shadows can either be black, as cast by opaque objects, or translucent, where the shadow takes on the colour of the object which casts it. You can specify the extent of the shadow and its displacement from the image with command line options. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> blur_size</i></p>
+<dt><code>-b</code><i> blur_size</i></dt>
 <dd>
 <p> Sets the distance of the light source from the image. Larger values move the light source closer, casting a more diffuse shadow, while smaller settings move the light further away, yielding a sharper shadow. <i>blur_size</i> defaults to 11 pixels.<br />
 &nbsp;</p>
-<dt><code>-k</code></p>
+</dd><dt><code>-k</code></dt>
 <dd> Keep the intermediate temporary image files. When debugging, these intermediate files provide many clues as to the source of an error. See <code>FILES </code> below for a list of the contents of each file.<br />
-&nbsp;</p>
-<dt><code>-t</code></p>
+&nbsp;</dd>
+<dt><code>-t</code></dt>
 <dd> Consider the non-background material in the image translucent &#8212; it casts shadows of its own colour rather than a black shadow, which is default. This often results in fuzzy, difficult-to-read images but in some circumstances may look better.<br />
-&nbsp;</p>
-<dt><code>-u</code></p>
+&nbsp;</dd>
+<dt><code>-u</code></dt>
 <dd> Print command syntax and a summary of options.<br />
-&nbsp;</p>
-<dt><code>-x</code><i> xoffset</i></p>
+&nbsp;</dd>
+<dt><code>-x</code><i> xoffset</i></dt>
 <dd> Specifies the displacement of the light source to the left of the image. Larger settings of <code>xoffset</code> displace the shadow to the right, as would be cast by a light further to the left. If not specified, the horizontal offset is half of <i>blur_size </i> (above), to the left.<br />
-&nbsp;</p>
-<dt><code>-y</code><i> yoffset</i></p>
-<dd> Specifies the displacement of the light source above the top of the image. Larger settings displace the shadow downward, corresponding to moving the light further above the top of the image. If you don&#8217;t specify <code>-y</code>, the vertical offset defaults to the same as the horizontal offset (above), upward. </p>
+&nbsp;</dd>
+<dt><code>-y</code><i> yoffset</i></dt>
+<dd> Specifies the displacement of the light source above the top of the image. Larger settings displace the shadow downward, corresponding to moving the light further above the top of the image. If you don&#8217;t specify <code>-y</code>, the vertical offset defaults to the same as the horizontal offset (above), upward. </dd>
 </dl>
 <h2>FILES</h2>
 <p> Input is an anymap named by the <i>pnmfile</i> command line argument; if you don&#8217;t specify <i>pnmfile</i>, the input is the Standard Input file. </p>
@@ -42,26 +42,26 @@ description: "ppmshadow – add simulated shadows to a portable pixmap image"
 <p> where <i>pid</i> is the process number of the <code>ppmshadow</code> process and <i>N </i> is a number identifying the file as described below. In normal operation, <code>ppmshadow</code> deletes temporary files as soon as it is done with them and leaves no debris around after it completes. To preserve the intermediate files for debugging, use the <code>-k </code> command line option. </p>
 <p> <i>N</i> in the filename means:</p>
 <dl>
-<dt><code>1</code></p>
-<dd> Positive binary mask</p>
-<dt><code>2</code></p>
-<dd> Convolution kernel for blurring shadow</p>
-<dt><code>3</code></p>
-<dd> Blurred shadow image</p>
-<dt><code>4</code></p>
-<dd> Clipped shadow image, offset as requested</p>
-<dt><code>5</code></p>
-<dd> Blank image with background of source image</p>
-<dt><code>6</code></p>
-<dd> Offset shadow</p>
-<dt><code>7</code></p>
-<dd> Inverse mask file</p>
-<dt><code>8</code></p>
-<dd> Original image times inverse mask</p>
-<dt><code>9</code></p>
-<dd> Generated shadow times positive mask</p>
-<dt><code>10</code></p>
-<dd> Shadow times background colour </p>
+<dt><code>1</code></dt>
+<dd> Positive binary mask</dd>
+<dt><code>2</code></dt>
+<dd> Convolution kernel for blurring shadow</dd>
+<dt><code>3</code></dt>
+<dd> Blurred shadow image</dd>
+<dt><code>4</code></dt>
+<dd> Clipped shadow image, offset as requested</dd>
+<dt><code>5</code></dt>
+<dd> Blank image with background of source image</dd>
+<dt><code>6</code></dt>
+<dd> Offset shadow</dd>
+<dt><code>7</code></dt>
+<dd> Inverse mask file</dd>
+<dt><code>8</code></dt>
+<dd> Original image times inverse mask</dd>
+<dt><code>9</code></dt>
+<dd> Generated shadow times positive mask</dd>
+<dt><code>10</code></dt>
+<dd> Shadow times background colour </dd>
 </dl>
 <h2>LIMITATIONS</h2>
 <p> The source image must contain sufficient space on the edges in the direction in which the shadow is cast to contain the shadow &#8212; if it doesn&#8217;t some of the internal steps may fail. You can usually expand the border of a too-tightly-cropped image with <code>pnmmargin</code> before processing it with <code>ppmshadow</code>. </p>

@@ -13,8 +13,8 @@ description: "pskc_get_device_devicebinding – API function"
 const char *pskc_get_device_devicebinding(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage DeviceInfo DeviceBinding value. This element allows a provisioning server to ensure that the key is going to be loaded into the device for which the key provisioning request was approved. The device is bound to the request using a device identifier, e.g., an International Mobile Equipment Identity (IMEI) for the phone, or an identifier for a class of identifiers, e.g., those for which the keys are protected by a Trusted Platform Module (TPM).</p>
 <h2>Returns</h2>

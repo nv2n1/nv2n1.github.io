@@ -22,7 +22,6 @@ description: "drawing_mode – Sets the graphics drawing mode. Allegro game prog
    DRAW_MODE_SOLID_PATTERN       - single color pattern fill
    DRAW_MODE_MASKED_PATTERN      - masked pattern fill
    DRAW_MODE_TRANS               - translucent color blending
-   
 </pre>
 <p> In DRAW_MODE_SOLID, pixels of the bitmap being drawn onto are simply replaced by those produced by the drawing function. </p>
 <p> In DRAW_MODE_XOR, pixels are written to the bitmap with an exclusive-or operation rather than a simple copy, so drawing the same shape twice will erase it. Because it involves reading as well as writing the bitmap memory, xor drawing is a lot slower than the normal replace mode. </p>

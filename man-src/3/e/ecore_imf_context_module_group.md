@@ -35,61 +35,61 @@ description: "Ecore Input Method Context Module Functions – Functions that sho
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ctx</i> An Ecore_IMF_Context.<br />
- <i>str</i> The committed string.</dl>
+ <i>str</i> The committed string.</dd></dl>
 <p> References ecore_event_add().</p>
 <h3>EAPI void* ecore_imf_context_data_get (Ecore_IMF_Context * ctx)</h3>
 <p>Get the Input Method Context specific data. </p>
 <p> See <code>ecore_imf_context_data_set</code> for more details. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> An Ecore_IMF_Context.</dl>
+<dd><i>ctx</i> An Ecore_IMF_Context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Input Method Context specific data.</dl>
+<dd>The Input Method Context specific data.</dd></dl>
 <h3>EAPI void ecore_imf_context_data_set (Ecore_IMF_Context * ctx, void * data)</h3>
 <p>Set the Input Method Context specific data. </p>
 <p> Note that this method should be used by modules to set the Input Method Context specific data and it&#8217;s not meant to be used by applications to store application specific data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ctx</i> An Ecore_IMF_Context.<br />
- <i>data</i> The Input Method Context specific data.</dl>
+ <i>data</i> The Input Method Context specific data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new Ecore_IMF_Context; on failure it returns NULL.</dl>
+<dd>A new Ecore_IMF_Context; on failure it returns NULL.</dd></dl>
 <h3>EAPI void ecore_imf_context_delete_surrounding_event_add (Ecore_IMF_Context * ctx, int offset, int n_chars)</h3>
 <p>Adds ECORE_IMF_EVENT_DELETE_SURROUNDING to the event queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ctx</i> An Ecore_IMF_Context.<br />
  <i>offset</i> The start offset of surrounding to be deleted.<br />
- <i>n_chars</i> The number of characters to be deleted.</dl>
+ <i>n_chars</i> The number of characters to be deleted.</dd></dl>
 <p> References ecore_event_add().</p>
 <h3>EAPI Ecore_IMF_Context* ecore_imf_context_new (const Ecore_IMF_Context_Class * ctxc)</h3>
 <p>Creates a new Input Method Context with klass specified by ctxc. </p>
 <p> This method should be used by modules implementing the Input Method Context interface. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctxc</i> An Ecore_IMF_Context_Class.</dl>
+<dd><i>ctxc</i> An Ecore_IMF_Context_Class.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new Ecore_IMF_Context; on failure it returns NULL.</dl>
+<dd>A new Ecore_IMF_Context; on failure it returns NULL.</dd></dl>
 <h3>EAPI void ecore_imf_context_preedit_changed_event_add (Ecore_IMF_Context * ctx)</h3>
 <p>Adds ECORE_IMF_EVENT_PREEDIT_CHANGED to the event queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> An Ecore_IMF_Context.</dl>
+<dd><i>ctx</i> An Ecore_IMF_Context.</dd></dl>
 <p> References ecore_event_add().</p>
 <h3>EAPI void ecore_imf_context_preedit_end_event_add (Ecore_IMF_Context * ctx)</h3>
 <p>Adds ECORE_IMF_EVENT_PREEDIT_END to the event queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> An Ecore_IMF_Context.</dl>
+<dd><i>ctx</i> An Ecore_IMF_Context.</dd></dl>
 <p> References ecore_event_add().</p>
 <h3>EAPI void ecore_imf_context_preedit_start_event_add (Ecore_IMF_Context * ctx)</h3>
 <p>Adds ECORE_IMF_EVENT_PREEDIT_START to the event queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> An Ecore_IMF_Context.</dl>
+<dd><i>ctx</i> An Ecore_IMF_Context.</dd></dl>
 <p> References ecore_event_add().</p>
 <h3>EAPI int ecore_imf_context_surrounding_get (Ecore_IMF_Context * ctx, char ** text, int * cursor_pos)</h3>
 <p>Retrieve context around insertion point. </p>
@@ -99,9 +99,9 @@ description: "Ecore Input Method Context Module Functions – Functions that sho
 <dl COMPACT>
 <dd><i>ctx</i> An Ecore_IMF_Context.<br />
  <i>text</i> Location to store a UTF-8 encoded string of text holding context around the insertion point. If the function returns 1, then you must free the result stored in this location with free().<br />
- <i>cursor_pos</i> Location to store the position in characters of the insertion cursor within .</dl>
+ <i>cursor_pos</i> Location to store the position in characters of the insertion cursor within .</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if surrounding text was provided; otherwise 0.</dl>
+<dd>1 if surrounding text was provided; otherwise 0.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

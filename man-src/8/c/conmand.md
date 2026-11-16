@@ -14,35 +14,35 @@ description: "conmand – ConMan daemon"
 <p><code>conmand</code> is the daemon responsible for managing consoles defined by its configuration file as well as listening for connections from clients. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c </code><i>file</i></p>
-<dd>Specify a configuration file, overriding the default location [/etc/conman.conf].</p>
-<dt><code>-F</code></p>
-<dd>Run the daemon in the foreground.</p>
-<dt><code>-h</code></p>
-<dd>Display a summary of the command-line options.</p>
-<dt><code>-k</code></p>
-<dd>Send a SIGTERM to the <code>conmand</code> process associated with the specified configuration, thereby killing the daemon. Returns 0 if the daemon was successfully signaled; otherwise, returns 1.</p>
-<dt><code>-L</code></p>
-<dd>Display license information.</p>
-<dt><code>-p </code><i>port</i></p>
-<dd>Specify the port on which <code>conmand</code> will listen for clients, overriding both the default port [7890] and the port specified in the configuration file.</p>
-<dt><code>-q</code></p>
-<dd>Displays the PID of the <code>conmand</code> process associated with the specified configuration if it appears active. Returns 0 if the configuration appears active; otherwise, returns 1.</p>
-<dt><code>-r</code></p>
-<dd>Send a SIGHUP to the <code>conmand</code> process associated with the specified configuration, thereby re-opening both that daemon&#8217;s log file and individual console log files. Returns 0 if the daemon was successfully signaled; otherwise, returns 1.</p>
-<dt><code>-v</code></p>
-<dd>Enable verbose mode.</p>
-<dt><code>-V</code></p>
-<dd>Display version information.</p>
-<dt><code>-z</code></p>
-<dd>Truncate both the daemon&#8217;s log file and individual console log files at start-up. </p>
+<dt><code>-c </code><i>file</i></dt>
+<dd>Specify a configuration file, overriding the default location [/etc/conman.conf].</dd>
+<dt><code>-F</code></dt>
+<dd>Run the daemon in the foreground.</dd>
+<dt><code>-h</code></dt>
+<dd>Display a summary of the command-line options.</dd>
+<dt><code>-k</code></dt>
+<dd>Send a SIGTERM to the <code>conmand</code> process associated with the specified configuration, thereby killing the daemon. Returns 0 if the daemon was successfully signaled; otherwise, returns 1.</dd>
+<dt><code>-L</code></dt>
+<dd>Display license information.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd>Specify the port on which <code>conmand</code> will listen for clients, overriding both the default port [7890] and the port specified in the configuration file.</dd>
+<dt><code>-q</code></dt>
+<dd>Displays the PID of the <code>conmand</code> process associated with the specified configuration if it appears active. Returns 0 if the configuration appears active; otherwise, returns 1.</dd>
+<dt><code>-r</code></dt>
+<dd>Send a SIGHUP to the <code>conmand</code> process associated with the specified configuration, thereby re-opening both that daemon&#8217;s log file and individual console log files. Returns 0 if the daemon was successfully signaled; otherwise, returns 1.</dd>
+<dt><code>-v</code></dt>
+<dd>Enable verbose mode.</dd>
+<dt><code>-V</code></dt>
+<dd>Display version information.</dd>
+<dt><code>-z</code></dt>
+<dd>Truncate both the daemon&#8217;s log file and individual console log files at start-up. </dd>
 </dl>
 <h2>Signals</h2>
 <dl>
-<dt><code>SIGHUP</code></p>
-<dd>Close and re-open both the daemon&#8217;s log file and the individual console log files. Conversion specifiers within filenames will be re-evaluated. This is useful for <code>logrotate</code> configurations.</p>
-<dt><code>SIGTERM</code></p>
-<dd>Terminate the daemon. </p>
+<dt><code>SIGHUP</code></dt>
+<dd>Close and re-open both the daemon&#8217;s log file and the individual console log files. Conversion specifiers within filenames will be re-evaluated. This is useful for <code>logrotate</code> configurations.</dd>
+<dt><code>SIGTERM</code></dt>
+<dd>Terminate the daemon. </dd>
 </dl>
 <h2>Security</h2>
 <p>Connections to the server are not authenticated, and communications between client and server are not encrypted. When time allows, this will be addressed in a future release. Until then, the recommendation is to bind the server&#8217;s listen socket to the loopback address (by specifying &quot;<code>server loopback=on</code>&quot; in conman.conf) and restrict access to the server host.</p>

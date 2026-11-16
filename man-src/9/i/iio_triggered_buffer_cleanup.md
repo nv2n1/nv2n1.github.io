@@ -14,9 +14,9 @@ description: "iio_triggered_buffer_cleanup – Free resources allocated by iio_t
 <p><i>indio_dev</i></p>
 <dl>
 <dd>
-<dd>IIO device structure</dl>
+</dd><dd>IIO device structure</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

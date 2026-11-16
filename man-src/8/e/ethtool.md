@@ -10,197 +10,197 @@ description: "ethtool – query or control network driver and hardware settings"
 <p>ethtool &#8211; query or control network driver and hardware settings</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ethtool</code> <i>devname</i></p>
-<dt> <code>ethtool -h|&#8211;help</code></p>
-<dt> <code>ethtool &#8211;version</code></p>
-<dt> <code>ethtool -a|&#8211;show-pause</code> <i>devname</i></p>
-<dt> <code>ethtool -A|&#8211;pause</code> <i>devname</i> [<code></p>
-<dd>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>rx</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>tx</code>&nbsp;<wbr><code>on</code>|<code>off</code>]</p>
-<dt> <code>ethtool -c|&#8211;show-coalesce</code> <i>devname</i></p>
-<dt> <code>ethtool -C|&#8211;coalesce</code> <i>devname</i> [<code></p>
-<dd>adaptive-rx</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>adaptive-tx</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>rx-usecs</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames</code>&nbsp;<wbr><i>N</i>] [<code>rx-usecs-irq</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames-irq</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs-irq</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames-irq</code>&nbsp;<wbr><i>N</i>] [<code>stats-block-usecs</code>&nbsp;<wbr><i>N</i>] [<code>pkt-rate-low</code>&nbsp;<wbr><i>N</i>] [<code>rx-usecs-low</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames-low</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs-low</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames-low</code>&nbsp;<wbr><i>N</i>] [<code>pkt-rate-high</code>&nbsp;<wbr><i>N</i>] [<code>rx-usecs-high</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames-high</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs-high</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames-high</code>&nbsp;<wbr><i>N</i>] [<code>sample-interval</code>&nbsp;<wbr><i>N</i>]</p>
-<dt> <code>ethtool -g|&#8211;show-ring</code> <i>devname</i></p>
-<dt> <code>ethtool -G|&#8211;set-ring</code> <i>devname</i> [<code></p>
-<dd>rx</code>&nbsp;<wbr><i>N</i>] [<code>rx-mini</code>&nbsp;<wbr><i>N</i>] [<code>rx-jumbo</code>&nbsp;<wbr><i>N</i>] [<code>tx</code>&nbsp;<wbr><i>N</i>]</p>
-<dt> <code>ethtool -i|&#8211;driver</code> <i>devname</i></p>
-<dt> <code>ethtool -d|&#8211;register-dump</code> <i>devname</i> [<code></p>
-<dd>raw</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>hex</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>file</code> <i>name</i>]</p>
-<dt> <code>ethtool -e|&#8211;eeprom-dump</code> <i>devname</i> [<code></p>
-<dd>raw</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>offset</code>&nbsp;<wbr><i>N</i>] [<code>length</code>&nbsp;<wbr><i>N</i>]</p>
-<dt> <code>ethtool -E|&#8211;change-eeprom</code> <i>devname</i> [<code></p>
-<dd>magic</code>&nbsp;<wbr><i>N</i>] [<code>offset</code>&nbsp;<wbr><i>N</i>] [<code>length</code>&nbsp;<wbr><i>N</i>] [<code>value</code>&nbsp;<wbr><i>N</i>]</p>
-<dt> <code>ethtool -k|&#8211;show-features|&#8211;show-offload</code> <i>devname</i></p>
-<dt> <code>ethtool -K|&#8211;features|&#8211;offload</code> <i>devname feature</i> <code></p>
-<dd>on</code>|<code>off</code> &#8230;</p>
-<dt> <code>ethtool -p|&#8211;identify</code> <i>devname</i> [<i>N</i>]</p>
-<dt> <code>ethtool -P|&#8211;show-permaddr</code> <i>devname</i></p>
-<dt> <code>ethtool -r|&#8211;negotiate</code> <i>devname</i></p>
-<dt> <code>ethtool -S|&#8211;statistics</code> <i>devname</i></p>
-<dt> <code>ethtool &#8211;phy-statistics</code> <i>devname</i></p>
-<dt> <code>ethtool -t|&#8211;test</code> <i>devname</i> [<code>offline</code>|<code>online</code>|<code>external_lb</code>]</p>
-<dt> <code>ethtool -s</code> <i>devname</i> [<code></p>
-<dd>speed</code>&nbsp;<wbr><i>N</i>] [<code>duplex</code>&nbsp;<wbr><code>half</code>|<code>full</code>] [<code>port</code>&nbsp;<wbr><code>tp</code>|<code>aui</code>|<code>bnc</code>|<code>mii</code>] [<code>mdix</code>&nbsp;<wbr><code>auto</code>|<code>on</code>|<code>off</code>] [<code>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>advertise</code>&nbsp;<wbr><i>N</i>] [<code>phyad</code>&nbsp;<wbr><i>N</i>] [<code>xcvr</code>&nbsp;<wbr><code>internal</code>|<code>external</code>] [<code>wol</code>&nbsp;<wbr><code>p</code>|<code>u</code>|<code>m</code>|<code>b</code>|<code>a</code>|<code>g</code>|<code>s</code>|<code>d</code>&#8230;] [<code>sopass</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>] [<code>msglvl</code> <i>N</i>&nbsp;<wbr>| <code>msglvl</code><i>&nbsp;<wbr>type</i> <code>on</code>|<code>off</code> &#8230;]</p>
-<dt> <code>ethtool -n|-u|&#8211;show-nfc|&#8211;show-ntuple</code> <i>devname</i> [&nbsp;<wbr><code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code><code>&nbsp;<wbr>|</code></p>
-<dd><code>rule</code><i>&nbsp;<wbr>N</i> ]</p>
-<dt> <code>ethtool -N|-U|&#8211;config-nfc|&#8211;config-ntuple</code> <i>devname</i> <code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code><code>&nbsp;<wbr>:</code><code>m</code>|<code>v</code>|<code>t</code>|<code>s</code>|<code>d</code>|<code>f</code>|<code>n</code>|<code>r</code>&#8230;<code>&nbsp;<wbr>|</code></p>
-<dd><code>flow-type <code>ether</code>|<code>ip4</code>|<code>tcp4</code>|<code>udp4</code>|<code>sctp4</code>|<code>ah4</code>|<code>esp4</code>|<code>ip6</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code></code> [<code>src</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]] [<code>dst</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]] [<code></p>
+<dt> <code>ethtool</code> <i>devname</i></dt>
+<dt> <code>ethtool -h|&#8211;help</code></dt>
+<dt> <code>ethtool &#8211;version</code></dt>
+<dt> <code>ethtool -a|&#8211;show-pause</code> <i>devname</i></dt>
+<dt> <code>ethtool -A|&#8211;pause</code> <i>devname</i> [<code></dt>
+<dd>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>rx</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>tx</code>&nbsp;<wbr><code>on</code>|<code>off</code>]</dd>
+<dt> <code>ethtool -c|&#8211;show-coalesce</code> <i>devname</i></dt>
+<dt> <code>ethtool -C|&#8211;coalesce</code> <i>devname</i> [<code></dt>
+<dd>adaptive-rx</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>adaptive-tx</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>rx-usecs</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames</code>&nbsp;<wbr><i>N</i>] [<code>rx-usecs-irq</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames-irq</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs-irq</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames-irq</code>&nbsp;<wbr><i>N</i>] [<code>stats-block-usecs</code>&nbsp;<wbr><i>N</i>] [<code>pkt-rate-low</code>&nbsp;<wbr><i>N</i>] [<code>rx-usecs-low</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames-low</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs-low</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames-low</code>&nbsp;<wbr><i>N</i>] [<code>pkt-rate-high</code>&nbsp;<wbr><i>N</i>] [<code>rx-usecs-high</code>&nbsp;<wbr><i>N</i>] [<code>rx-frames-high</code>&nbsp;<wbr><i>N</i>] [<code>tx-usecs-high</code>&nbsp;<wbr><i>N</i>] [<code>tx-frames-high</code>&nbsp;<wbr><i>N</i>] [<code>sample-interval</code>&nbsp;<wbr><i>N</i>]</dd>
+<dt> <code>ethtool -g|&#8211;show-ring</code> <i>devname</i></dt>
+<dt> <code>ethtool -G|&#8211;set-ring</code> <i>devname</i> [<code></dt>
+<dd>rx</code>&nbsp;<wbr><i>N</i>] [<code>rx-mini</code>&nbsp;<wbr><i>N</i>] [<code>rx-jumbo</code>&nbsp;<wbr><i>N</i>] [<code>tx</code>&nbsp;<wbr><i>N</i>]</dd>
+<dt> <code>ethtool -i|&#8211;driver</code> <i>devname</i></dt>
+<dt> <code>ethtool -d|&#8211;register-dump</code> <i>devname</i> [<code></dt>
+<dd>raw</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>hex</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>file</code> <i>name</i>]</dd>
+<dt> <code>ethtool -e|&#8211;eeprom-dump</code> <i>devname</i> [<code></dt>
+<dd>raw</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>offset</code>&nbsp;<wbr><i>N</i>] [<code>length</code>&nbsp;<wbr><i>N</i>]</dd>
+<dt> <code>ethtool -E|&#8211;change-eeprom</code> <i>devname</i> [<code></dt>
+<dd>magic</code>&nbsp;<wbr><i>N</i>] [<code>offset</code>&nbsp;<wbr><i>N</i>] [<code>length</code>&nbsp;<wbr><i>N</i>] [<code>value</code>&nbsp;<wbr><i>N</i>]</dd>
+<dt> <code>ethtool -k|&#8211;show-features|&#8211;show-offload</code> <i>devname</i></dt>
+<dt> <code>ethtool -K|&#8211;features|&#8211;offload</code> <i>devname feature</i> <code></dt>
+<dd>on</code>|<code>off</code> &#8230;</dd>
+<dt> <code>ethtool -p|&#8211;identify</code> <i>devname</i> [<i>N</i>]</dt>
+<dt> <code>ethtool -P|&#8211;show-permaddr</code> <i>devname</i></dt>
+<dt> <code>ethtool -r|&#8211;negotiate</code> <i>devname</i></dt>
+<dt> <code>ethtool -S|&#8211;statistics</code> <i>devname</i></dt>
+<dt> <code>ethtool &#8211;phy-statistics</code> <i>devname</i></dt>
+<dt> <code>ethtool -t|&#8211;test</code> <i>devname</i> [<code>offline</code>|<code>online</code>|<code>external_lb</code>]</dt>
+<dt> <code>ethtool -s</code> <i>devname</i> [<code></dt>
+<dd>speed</code>&nbsp;<wbr><i>N</i>] [<code>duplex</code>&nbsp;<wbr><code>half</code>|<code>full</code>] [<code>port</code>&nbsp;<wbr><code>tp</code>|<code>aui</code>|<code>bnc</code>|<code>mii</code>] [<code>mdix</code>&nbsp;<wbr><code>auto</code>|<code>on</code>|<code>off</code>] [<code>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>advertise</code>&nbsp;<wbr><i>N</i>] [<code>phyad</code>&nbsp;<wbr><i>N</i>] [<code>xcvr</code>&nbsp;<wbr><code>internal</code>|<code>external</code>] [<code>wol</code>&nbsp;<wbr><code>p</code>|<code>u</code>|<code>m</code>|<code>b</code>|<code>a</code>|<code>g</code>|<code>s</code>|<code>d</code>&#8230;] [<code>sopass</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>] [<code>msglvl</code> <i>N</i>&nbsp;<wbr>| <code>msglvl</code><i>&nbsp;<wbr>type</i> <code>on</code>|<code>off</code> &#8230;]</dd>
+<dt> <code>ethtool -n|-u|&#8211;show-nfc|&#8211;show-ntuple</code> <i>devname</i> [&nbsp;<wbr><code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code><code>&nbsp;<wbr>|</code></dt>
+<dd><code>rule</code><i>&nbsp;<wbr>N</i> ]</dd>
+<dt> <code>ethtool -N|-U|&#8211;config-nfc|&#8211;config-ntuple</code> <i>devname</i> <code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code><code>&nbsp;<wbr>:</code><code>m</code>|<code>v</code>|<code>t</code>|<code>s</code>|<code>d</code>|<code>f</code>|<code>n</code>|<code>r</code>&#8230;<code>&nbsp;<wbr>|</code></dt>
+<dd><code>flow-type <code>ether</code>|<code>ip4</code>|<code>tcp4</code>|<code>udp4</code>|<code>sctp4</code>|<code>ah4</code>|<code>esp4</code>|<code>ip6</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code></code> [<code>src</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]] [<code>dst</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]] [<code></dd>
 <dd>proto</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>src-ip</code>&nbsp;<wbr><i>ip-address</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>ip-address</i>]] [<code>dst-ip</code>&nbsp;<wbr><i>ip-address</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>ip-address</i>]] [<code>tos</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>tclass</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>l4proto</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>src-port</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>dst-port</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>spi</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>l4data</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>vlan-etype</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>vlan</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>user-def</code>&nbsp;<wbr><i>N</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>N</i>]] [<code>dst-mac</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]] [<code>action</code>&nbsp;<wbr><i>N</i>] [<code>loc</code>&nbsp;<wbr><i>N</i>] |<br />
- <code>delete</code><i>&nbsp;<wbr>N</i></p>
-<dt> <code>ethtool -w|&#8211;get-dump</code> <i>devname</i> [<code>data</code> <i>filename</i>]</p>
-<dt> <code>ethtool -W|&#8211;set-dump</code> <i>devname N</i></p>
-<dt> <code>ethtool -T|&#8211;show-time-stamping</code> <i>devname</i></p>
-<dt> <code>ethtool -x|&#8211;show-rxfh-indir|&#8211;show-rxfh</code> <i>devname</i></p>
-<dt> <code>ethtool -X|&#8211;set-rxfh-indir|&#8211;rxfh</code> <i>devname</i> [<code>hkey</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>:&#8230;] [&nbsp;<wbr><code>equal</code> <i>N</i>&nbsp;<wbr>| <code>weight&nbsp;<wbr></code><i>W0</i> <i>W1</i> &#8230; |<code>&nbsp;<wbr>default</code>&nbsp;<wbr>]</p>
-<dt> <code>ethtool -f|&#8211;flash</code> <i>devname file</i> [<i>N</i>]</p>
-<dt> <code>ethtool -l|&#8211;show-channels</code> <i>devname</i></p>
-<dt> <code>ethtool -L|&#8211;set-channels</code> <i>devname</i> [<code></p>
-<dd>rx</code>&nbsp;<wbr><i>N</i>] [<code>tx</code>&nbsp;<wbr><i>N</i>] [<code>other</code>&nbsp;<wbr><i>N</i>] [<code>combined</code>&nbsp;<wbr><i>N</i>]</p>
-<dt> <code>ethtool -m|&#8211;dump-module-eeprom|&#8211;module-info</code> <i>devname</i> [<code></p>
-<dd>raw</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>hex</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>offset</code>&nbsp;<wbr><i>N</i>] [<code>length</code>&nbsp;<wbr><i>N</i>]</p>
-<dt> <code>ethtool &#8211;show-priv-flags</code> <i>devname</i></p>
-<dt> <code>ethtool &#8211;set-priv-flags</code> <i>devname flag</i> <code></p>
-<dd>on</code>|<code>off</code> &#8230;</p>
-<dt> <code>ethtool &#8211;show-eee</code> <i>devname</i></p>
-<dt> <code>ethtool &#8211;set-eee</code> <i>devname</i> [<code></p>
-<dd>eee</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>tx-lpi</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>tx-timer</code>&nbsp;<wbr><i>N</i>] [<code>advertise</code>&nbsp;<wbr><i>N</i>] </p>
+ <code>delete</code><i>&nbsp;<wbr>N</i></dd>
+<dt> <code>ethtool -w|&#8211;get-dump</code> <i>devname</i> [<code>data</code> <i>filename</i>]</dt>
+<dt> <code>ethtool -W|&#8211;set-dump</code> <i>devname N</i></dt>
+<dt> <code>ethtool -T|&#8211;show-time-stamping</code> <i>devname</i></dt>
+<dt> <code>ethtool -x|&#8211;show-rxfh-indir|&#8211;show-rxfh</code> <i>devname</i></dt>
+<dt> <code>ethtool -X|&#8211;set-rxfh-indir|&#8211;rxfh</code> <i>devname</i> [<code>hkey</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>:&#8230;] [&nbsp;<wbr><code>equal</code> <i>N</i>&nbsp;<wbr>| <code>weight&nbsp;<wbr></code><i>W0</i> <i>W1</i> &#8230; |<code>&nbsp;<wbr>default</code>&nbsp;<wbr>]</dt>
+<dt> <code>ethtool -f|&#8211;flash</code> <i>devname file</i> [<i>N</i>]</dt>
+<dt> <code>ethtool -l|&#8211;show-channels</code> <i>devname</i></dt>
+<dt> <code>ethtool -L|&#8211;set-channels</code> <i>devname</i> [<code></dt>
+<dd>rx</code>&nbsp;<wbr><i>N</i>] [<code>tx</code>&nbsp;<wbr><i>N</i>] [<code>other</code>&nbsp;<wbr><i>N</i>] [<code>combined</code>&nbsp;<wbr><i>N</i>]</dd>
+<dt> <code>ethtool -m|&#8211;dump-module-eeprom|&#8211;module-info</code> <i>devname</i> [<code></dt>
+<dd>raw</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>hex</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>offset</code>&nbsp;<wbr><i>N</i>] [<code>length</code>&nbsp;<wbr><i>N</i>]</dd>
+<dt> <code>ethtool &#8211;show-priv-flags</code> <i>devname</i></dt>
+<dt> <code>ethtool &#8211;set-priv-flags</code> <i>devname flag</i> <code></dt>
+<dd>on</code>|<code>off</code> &#8230;</dd>
+<dt> <code>ethtool &#8211;show-eee</code> <i>devname</i></dt>
+<dt> <code>ethtool &#8211;set-eee</code> <i>devname</i> [<code></dt>
+<dd>eee</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>tx-lpi</code>&nbsp;<wbr><code>on</code>|<code>off</code>] [<code>tx-timer</code>&nbsp;<wbr><i>N</i>] [<code>advertise</code>&nbsp;<wbr><i>N</i>] </dd>
 <h2>Description</h2>
 <p><code>ethtool</code> is used to query and control network device driver and hardware settings, particularly for wired Ethernet devices. <i>devname</i> is the name of the network device on which ethtool should operate. </p>
 <h2>Options</h2>
 <p><code>ethtool</code> with a single argument specifying the device name prints current settings of the specified device.</p>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd>Shows a short help message.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Shows the ethtool version number.</p>
-<dt><code>-a &#8211;show-pause</code></p>
-<dd>Queries the specified Ethernet device for pause parameter information.</p>
-<dt><code>-A &#8211;pause</code></p>
-<dd>Changes the pause parameters of the specified Ethernet device.</p>
+<dt><code>-h &#8211;help</code></dt>
+<dd>Shows a short help message.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Shows the ethtool version number.</dd>
+<dt><code>-a &#8211;show-pause</code></dt>
+<dd>Queries the specified Ethernet device for pause parameter information.</dd>
+<dt><code>-A &#8211;pause</code></dt>
+<dd>Changes the pause parameters of the specified Ethernet device.</dd>
 <dl>
 <dd>
-<dl>
-<dt> <code>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether pause autonegotiation should be enabled.</p>
-<dt> <code>rx</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether RX pause should be enabled.</p>
-<dt> <code>tx</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether TX pause should be enabled.</dl>
+</dd><dl>
+<dt> <code>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether pause autonegotiation should be enabled.</dd>
+<dt> <code>rx</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether RX pause should be enabled.</dd>
+<dt> <code>tx</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether TX pause should be enabled.</dd></dl>
 </dl>
-<dt><code>-c &#8211;show-coalesce</code></p>
-<dd>Queries the specified network device for coalescing information.</p>
-<dt><code>-C &#8211;coalesce</code></p>
-<dd>Changes the coalescing settings of the specified network device.</p>
-<dt><code>-g &#8211;show-ring</code></p>
-<dd>Queries the specified network device for rx/tx ring parameter information.</p>
-<dt><code>-G &#8211;set-ring</code></p>
-<dd>Changes the rx/tx ring parameters of the specified network device.</p>
+<dt><code>-c &#8211;show-coalesce</code></dt>
+<dd>Queries the specified network device for coalescing information.</dd>
+<dt><code>-C &#8211;coalesce</code></dt>
+<dd>Changes the coalescing settings of the specified network device.</dd>
+<dt><code>-g &#8211;show-ring</code></dt>
+<dd>Queries the specified network device for rx/tx ring parameter information.</dd>
+<dt><code>-G &#8211;set-ring</code></dt>
+<dd>Changes the rx/tx ring parameters of the specified network device.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>rx</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of ring entries for the Rx ring.</p>
-<dt><code>rx-mini</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of ring entries for the Rx Mini ring.</p>
-<dt><code>rx-jumbo</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of ring entries for the Rx Jumbo ring.</p>
-<dt><code>tx</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of ring entries for the Tx ring.</dl>
+</dd><dl>
+<dt><code>rx</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of ring entries for the Rx ring.</dd>
+<dt><code>rx-mini</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of ring entries for the Rx Mini ring.</dd>
+<dt><code>rx-jumbo</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of ring entries for the Rx Jumbo ring.</dd>
+<dt><code>tx</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of ring entries for the Tx ring.</dd></dl>
 </dl>
-<dt><code>-i &#8211;driver</code></p>
-<dd>Queries the specified network device for associated driver information.</p>
-<dt><code>-d &#8211;register-dump</code></p>
-<dd>Retrieves and prints a register dump for the specified network device. The register format for some devices is known and decoded others are printed in hex. When <i>raw </i> is enabled, then ethtool dumps the raw register data to stdout. If <i>file</i> is specified, then use contents of previous raw register dump, rather than reading from the device.</p>
-<dt><code>-e &#8211;eeprom-dump</code></p>
-<dd>Retrieves and prints an EEPROM dump for the specified network device. When raw is enabled, then it dumps the raw EEPROM data to stdout. The length and offset parameters allow dumping certain portions of the EEPROM. Default is to dump the entire EEPROM.</p>
+<dt><code>-i &#8211;driver</code></dt>
+<dd>Queries the specified network device for associated driver information.</dd>
+<dt><code>-d &#8211;register-dump</code></dt>
+<dd>Retrieves and prints a register dump for the specified network device. The register format for some devices is known and decoded others are printed in hex. When <i>raw </i> is enabled, then ethtool dumps the raw register data to stdout. If <i>file</i> is specified, then use contents of previous raw register dump, rather than reading from the device.</dd>
+<dt><code>-e &#8211;eeprom-dump</code></dt>
+<dd>Retrieves and prints an EEPROM dump for the specified network device. When raw is enabled, then it dumps the raw EEPROM data to stdout. The length and offset parameters allow dumping certain portions of the EEPROM. Default is to dump the entire EEPROM.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>raw</code><i>&nbsp;<wbr>on|off</i></p>
+</dd><dl>
+<dt><code>raw</code><i>&nbsp;<wbr>on|off</i></dt>
 <dd>
-<dt><code>offset</code><i>&nbsp;<wbr>N</i></p>
+</dd><dt><code>offset</code><i>&nbsp;<wbr>N</i></dt>
 <dd>
-<dt><code>length</code><i>&nbsp;<wbr>N</i></p>
-<dd></dl>
+</dd><dt><code>length</code><i>&nbsp;<wbr>N</i></dt>
+<dd></dd></dl>
 </dl>
-<dt><code>-E &#8211;change-eeprom</code></p>
-<dd>If value is specified, changes EEPROM byte for the specified network device. offset and value specify which byte and it&#8217;s new value. If value is not specified, stdin is read and written to the EEPROM. The length and offset parameters allow writing to certain portions of the EEPROM. Because of the persistent nature of writing to the EEPROM, a device-specific magic key must be specified to prevent the accidental writing to the EEPROM.</p>
-<dt><code>-k &#8211;show-features &#8211;show-offload</code></p>
-<dd>Queries the specified network device for the state of protocol offload and other features.</p>
-<dt><code>-K &#8211;features &#8211;offload</code></p>
-<dd>Changes the offload parameters and other features of the specified network device. The following feature names are built-in and others may be defined by the kernel.</p>
+<dt><code>-E &#8211;change-eeprom</code></dt>
+<dd>If value is specified, changes EEPROM byte for the specified network device. offset and value specify which byte and it&#8217;s new value. If value is not specified, stdin is read and written to the EEPROM. The length and offset parameters allow writing to certain portions of the EEPROM. Because of the persistent nature of writing to the EEPROM, a device-specific magic key must be specified to prevent the accidental writing to the EEPROM.</dd>
+<dt><code>-k &#8211;show-features &#8211;show-offload</code></dt>
+<dd>Queries the specified network device for the state of protocol offload and other features.</dd>
+<dt><code>-K &#8211;features &#8211;offload</code></dt>
+<dd>Changes the offload parameters and other features of the specified network device. The following feature names are built-in and others may be defined by the kernel.</dd>
 <dl>
 <dd>
-<dl>
-<dt> <code>rx</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether RX checksumming should be enabled.</p>
-<dt> <code>tx</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether TX checksumming should be enabled.</p>
-<dt> <code>sg</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether scatter-gather should be enabled.</p>
-<dt> <code>tso</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether TCP segmentation offload should be enabled.</p>
-<dt> <code>ufo</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether UDP fragmentation offload should be enabled</p>
-<dt> <code>gso</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether generic segmentation offload should be enabled</p>
-<dt> <code>gro</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether generic receive offload should be enabled</p>
-<dt> <code>lro</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether large receive offload should be enabled</p>
-<dt> <code>rxvlan</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether RX VLAN acceleration should be enabled</p>
-<dt> <code>txvlan</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether TX VLAN acceleration should be enabled</p>
-<dt> <code>ntuple</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether Rx ntuple filters and actions should be enabled</p>
-<dt> <code>rxhash</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether receive hashing offload should be enabled</dl>
+</dd><dl>
+<dt> <code>rx</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether RX checksumming should be enabled.</dd>
+<dt> <code>tx</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether TX checksumming should be enabled.</dd>
+<dt> <code>sg</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether scatter-gather should be enabled.</dd>
+<dt> <code>tso</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether TCP segmentation offload should be enabled.</dd>
+<dt> <code>ufo</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether UDP fragmentation offload should be enabled</dd>
+<dt> <code>gso</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether generic segmentation offload should be enabled</dd>
+<dt> <code>gro</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether generic receive offload should be enabled</dd>
+<dt> <code>lro</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether large receive offload should be enabled</dd>
+<dt> <code>rxvlan</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether RX VLAN acceleration should be enabled</dd>
+<dt> <code>txvlan</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether TX VLAN acceleration should be enabled</dd>
+<dt> <code>ntuple</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether Rx ntuple filters and actions should be enabled</dd>
+<dt> <code>rxhash</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether receive hashing offload should be enabled</dd></dl>
 </dl>
-<dt><code>-p &#8211;identify</code></p>
-<dd>Initiates adapter-specific action intended to enable an operator to easily identify the adapter by sight. Typically this involves blinking one or more LEDs on the specific network port.</p>
+<dt><code>-p &#8211;identify</code></dt>
+<dd>Initiates adapter-specific action intended to enable an operator to easily identify the adapter by sight. Typically this involves blinking one or more LEDs on the specific network port.</dd>
 <dl>
 <dd>
-<dl>
-<dt> [&nbsp;<wbr><i>N</i>]</p>
-<dd>Length of time to perform phys-id, in seconds.</dl>
+</dd><dl>
+<dt> [&nbsp;<wbr><i>N</i>]</dt>
+<dd>Length of time to perform phys-id, in seconds.</dd></dl>
 </dl>
-<dt><code>-P &#8211;show-permaddr</code></p>
-<dd>Queries the specified network device for permanent hardware address.</p>
-<dt><code>-r &#8211;negotiate</code></p>
-<dd>Restarts auto-negotiation on the specified Ethernet device, if auto-negotiation is enabled.</p>
-<dt><code>-S &#8211;statistics</code></p>
-<dd>Queries the specified network device for NIC- and driver-specific statistics.</p>
-<dt><code>&#8211;phy-statistics</code></p>
-<dd>Queries the specified network device for PHY specific statistics.</p>
-<dt><code>-t &#8211;test</code></p>
-<dd>Executes adapter selftest on the specified network device. Possible test modes are:</p>
+<dt><code>-P &#8211;show-permaddr</code></dt>
+<dd>Queries the specified network device for permanent hardware address.</dd>
+<dt><code>-r &#8211;negotiate</code></dt>
+<dd>Restarts auto-negotiation on the specified Ethernet device, if auto-negotiation is enabled.</dd>
+<dt><code>-S &#8211;statistics</code></dt>
+<dd>Queries the specified network device for NIC- and driver-specific statistics.</dd>
+<dt><code>&#8211;phy-statistics</code></dt>
+<dd>Queries the specified network device for PHY specific statistics.</dd>
+<dt><code>-t &#8211;test</code></dt>
+<dd>Executes adapter selftest on the specified network device. Possible test modes are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>offline</code></p>
-<dd>Perform full set of tests, possibly interrupting normal operation during the tests,</p>
-<dt><code>online</code></p>
-<dd>Perform limited set of tests, not interrupting normal operation,</p>
-<dt><code>external_lb</code></p>
-<dd>Perform full set of tests, as for <code>offline</code>, and additionally an external-loopback test.</dl>
+</dd><dl>
+<dt><code>offline</code></dt>
+<dd>Perform full set of tests, possibly interrupting normal operation during the tests,</dd>
+<dt><code>online</code></dt>
+<dd>Perform limited set of tests, not interrupting normal operation,</dd>
+<dt><code>external_lb</code></dt>
+<dd>Perform full set of tests, as for <code>offline</code>, and additionally an external-loopback test.</dd></dl>
 </dl>
-<dt><code>-s &#8211;change</code></p>
-<dd>Allows changing some or all settings of the specified network device. All following options only apply if <code>-s</code> was specified.</p>
+<dt><code>-s &#8211;change</code></dt>
+<dd>Allows changing some or all settings of the specified network device. All following options only apply if <code>-s</code> was specified.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>speed</code><i>&nbsp;<wbr>N</i></p>
-<dd>Set speed in Mb/s. <code>ethtool</code> with just the device name as an argument will show you the supported device speeds.</p>
-<dt> <code>duplex</code>&nbsp;<wbr><code>half</code>|<code>full</code></p>
-<dd>Sets full or half duplex mode.</p>
-<dt> <code>port</code>&nbsp;<wbr><code>tp</code>|<code>aui</code>|<code>bnc</code>|<code>mii</code></p>
-<dd>Selects device port.</p>
-<dt> <code>mdix</code>&nbsp;<wbr><code>auto</code>|<code>on</code>|<code>off</code></p>
-<dd>Selects MDI-X mode for port. May be used to override the automatic detection feature of most adapters. An argument of <code>auto</code> means automatic detection of MDI status, <code>on</code> forces MDI-X (crossover) mode, while <code>off</code> means MDI (straight through) mode. The driver should guarantee that this command takes effect immediately, and if necessary may reset the link to cause the change to take effect.</p>
-<dt> <code>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Specifies whether autonegotiation should be enabled. Autonegotiation is enabled by default, but in some network devices may have trouble with it, so you can disable it if really necessary.</p>
-<dt><code>advertise</code><i>&nbsp;<wbr>N</i></p>
-<dd>Sets the speed and duplex advertised by autonegotiation. The argument is a hexadecimal value using one or a combination of the following values: </p>
+</dd><dl>
+<dt><code>speed</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Set speed in Mb/s. <code>ethtool</code> with just the device name as an argument will show you the supported device speeds.</dd>
+<dt> <code>duplex</code>&nbsp;<wbr><code>half</code>|<code>full</code></dt>
+<dd>Sets full or half duplex mode.</dd>
+<dt> <code>port</code>&nbsp;<wbr><code>tp</code>|<code>aui</code>|<code>bnc</code>|<code>mii</code></dt>
+<dd>Selects device port.</dd>
+<dt> <code>mdix</code>&nbsp;<wbr><code>auto</code>|<code>on</code>|<code>off</code></dt>
+<dd>Selects MDI-X mode for port. May be used to override the automatic detection feature of most adapters. An argument of <code>auto</code> means automatic detection of MDI status, <code>on</code> forces MDI-X (crossover) mode, while <code>off</code> means MDI (straight through) mode. The driver should guarantee that this command takes effect immediately, and if necessary may reset the link to cause the change to take effect.</dd>
+<dt> <code>autoneg</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Specifies whether autonegotiation should be enabled. Autonegotiation is enabled by default, but in some network devices may have trouble with it, so you can disable it if really necessary.</dd>
+<dt><code>advertise</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Sets the speed and duplex advertised by autonegotiation. The argument is a hexadecimal value using one or a combination of the following values: </dd>
 <table>
 <tr VALIGN=top>
 <td><code>0x001</code></td>
@@ -401,12 +401,12 @@ description: "ethtool – query or control network driver and hardware settings"
 </td>
 </tr>
 </table>
-<dt><code>phyad</code><i>&nbsp;<wbr>N</i></p>
-<dd>PHY address.</p>
-<dt> <code>xcvr</code>&nbsp;<wbr><code>internal</code>|<code>external</code></p>
-<dd>Selects transceiver type. Currently only internal and external can be specified, in the future further types might be added.</p>
-<dt><code>wol</code>&nbsp;<wbr><code>p</code>|<code>u</code>|<code>m</code>|<code>b</code>|<code>a</code>|<code>g</code>|<code>s</code>|<code>d</code>&#8230;</p>
-<dd>Sets Wake-on-LAN options. Not all devices support this. The argument to this option is a string of characters specifying which options to enable. </p>
+<dt><code>phyad</code><i>&nbsp;<wbr>N</i></dt>
+<dd>PHY address.</dd>
+<dt> <code>xcvr</code>&nbsp;<wbr><code>internal</code>|<code>external</code></dt>
+<dd>Selects transceiver type. Currently only internal and external can be specified, in the future further types might be added.</dd>
+<dt><code>wol</code>&nbsp;<wbr><code>p</code>|<code>u</code>|<code>m</code>|<code>b</code>|<code>a</code>|<code>g</code>|<code>s</code>|<code>d</code>&#8230;</dt>
+<dd>Sets Wake-on-LAN options. Not all devices support this. The argument to this option is a string of characters specifying which options to enable. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>p</code></td>
@@ -449,12 +449,12 @@ description: "ethtool – query or control network driver and hardware settings"
 </td>
 </tr>
 </table>
-<dt><code>sopass <i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i></code></p>
-<dd>Sets the SecureOn&trade; password. The argument to this option must be 6 bytes in Ethernet MAC hex format (<i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>).</dl>
+<dt><code>sopass <i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i></code></dt>
+<dd>Sets the SecureOn&trade; password. The argument to this option must be 6 bytes in Ethernet MAC hex format (<i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>).</dd></dl>
 <p> <code>msglvl</code><i>&nbsp;<wbr>N</i><br />
  <code>msglvl</code><i>&nbsp;<wbr>type</i> <code>on</code>|<code>off</code> &#8230;</p>
 <dl>
-<dd>Sets the driver message type flags by name or number. <i>type</i> names the type of message to enable or disable; <i>N</i> specifies the new flags numerically. The defined type names and numbers are: </p>
+<dd>Sets the driver message type flags by name or number. <i>type</i> names the type of message to enable or disable; <i>N</i> specifies the new flags numerically. The defined type names and numbers are: </dd>
 <table>
 <tr VALIGN=top>
 <td><code>drv</code></td>
@@ -549,13 +549,13 @@ description: "ethtool – query or control network driver and hardware settings"
 </table>
 <p> The precise meanings of these type flags differ between drivers.</dl>
 </dl>
-<dt><code>-n -u &#8211;show-nfc &#8211;show-ntuple</code></p>
-<dd>Retrieves receive network flow classification options or rules.</p>
+<dt><code>-n -u &#8211;show-nfc &#8211;show-ntuple</code></dt>
+<dd>Retrieves receive network flow classification options or rules.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code></p>
-<dd>Retrieves the hash options for the specified flow type. </p>
+</dd><dl>
+<dt><code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code></dt>
+<dd>Retrieves the hash options for the specified flow type. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>tcp4</code></td>
@@ -608,16 +608,16 @@ description: "ethtool – query or control network driver and hardware settings"
 </td>
 </tr>
 </table>
-<dt><code>rule</code><i>&nbsp;<wbr>N</i></p>
-<dd>Retrieves the RX classification rule with the given ID.</dl>
+<dt><code>rule</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Retrieves the RX classification rule with the given ID.</dd></dl>
 </dl>
-<dt><code>-N -U &#8211;config-nfc &#8211;config-ntuple</code></p>
-<dd>Configures receive network flow classification options or rules.</p>
+<dt><code>-N -U &#8211;config-nfc &#8211;config-ntuple</code></dt>
+<dd>Configures receive network flow classification options or rules.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code><code>:</code><code>m</code>|<code>v</code>|<code>t</code>|<code>s</code>|<code>d</code>|<code>f</code>|<code>n</code>|<code>r</code>&#8230;</p>
-<dd>Configures the hash options for the specified flow type. </p>
+</dd><dl>
+<dt><code>rx-flow-hash</code>&nbsp;<wbr><code>tcp4</code>|<code>udp4</code>|<code>ah4</code>|<code>esp4</code>|<code>sctp4</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code><code>:</code><code>m</code>|<code>v</code>|<code>t</code>|<code>s</code>|<code>d</code>|<code>f</code>|<code>n</code>|<code>r</code>&#8230;</dt>
+<dd>Configures the hash options for the specified flow type. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>m</code></td>
@@ -660,8 +660,8 @@ description: "ethtool – query or control network driver and hardware settings"
 </td>
 </tr>
 </table>
-<dt><code>flow-type <code>ether</code>|<code>ip4</code>|<code>tcp4</code>|<code>udp4</code>|<code>sctp4</code>|<code>ah4</code>|<code>esp4</code>|<code>ip6</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code></code></p>
-<dd>Inserts or updates a classification rule for the specified flow type. </p>
+<dt><code>flow-type <code>ether</code>|<code>ip4</code>|<code>tcp4</code>|<code>udp4</code>|<code>sctp4</code>|<code>ah4</code>|<code>esp4</code>|<code>ip6</code>|<code>tcp6</code>|<code>udp6</code>|<code>ah6</code>|<code>esp6</code>|<code>sctp6</code></code></dt>
+<dd>Inserts or updates a classification rule for the specified flow type. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>ether</code></td>
@@ -732,40 +732,40 @@ description: "ethtool – query or control network driver and hardware settings"
 </dl>
 <p> For all fields that allow both a value and a mask to be specified, the mask may be specified immediately after the value using the <code>m</code> keyword, or separately using the field name keyword with <code>-mask</code> appended, e.g. <code>src-mask</code>.</p>
 <dl>
-<dt><code>src</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]</p>
-<dd>Includes the source MAC address, specified as 6 bytes in hexadecimal separated by colons, along with an optional mask. Valid only for flow-type ether.</p>
-<dt><code>dst</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]</p>
-<dd>Includes the destination MAC address, specified as 6 bytes in hexadecimal separated by colons, along with an optional mask. Valid only for flow-type ether.</p>
-<dt><code>proto</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Includes the Ethernet protocol number (ethertype) and an optional mask. Valid only for flow-type ether.</p>
-<dt><code>src-ip</code>&nbsp;<wbr><i>ip-address</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>ip-address</i>]</p>
-<dd>Specify the source IP address of the incoming packet to match along with an optional mask. Valid for all IP based flow-types.</p>
-<dt><code>dst-ip</code>&nbsp;<wbr><i>ip-address</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>ip-address</i>]</p>
-<dd>Specify the destination IP address of the incoming packet to match along with an optional mask. Valid for all IP based flow-types.</p>
-<dt><code>tos</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Specify the value of the Type of Service field in the incoming packet to match along with an optional mask. Applies to all IPv4 based flow-types.</p>
-<dt><code>tclass</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Specify the value of the Traffic Class field in the incoming packet to match along with an optional mask. Applies to all IPv6 based flow-types.</p>
-<dt><code>l4proto</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Includes the layer 4 protocol number and optional mask. Valid only for flow-types ip4 and ip6.</p>
-<dt><code>src-port</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Specify the value of the source port field (applicable to TCP/UDP packets) in the incoming packet to match along with an optional mask. Valid for flow-types ip4, tcp4, udp4, and sctp4 and their IPv6 equivalents.</p>
-<dt><code>dst-port</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Specify the value of the destination port field (applicable to TCP/UDP packets)in the incoming packet to match along with an optional mask. Valid for flow-types ip4, tcp4, udp4, and sctp4 and their IPv6 equivalents.</p>
-<dt><code>spi</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Specify the value of the security parameter index field (applicable to AH/ESP packets)in the incoming packet to match along with an optional mask. Valid for flow-types ip4, ah4, and esp4 and their IPv6 equivalents.</p>
-<dt><code>l4data</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Specify the value of the first 4 Bytes of Layer 4 in the incoming packet to match along with an optional mask. Valid for ip4 and ip6 flow-types.</p>
-<dt><code>vlan-etype</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Includes the VLAN tag Ethertype and an optional mask.</p>
-<dt><code>vlan</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Includes the VLAN tag and an optional mask.</p>
-<dt><code>user-def</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></p>
-<dd>Includes 64-bits of user-specific data and an optional mask.</p>
-<dt><code>dst-mac</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]</p>
-<dd>Includes the destination MAC address, specified as 6 bytes in hexadecimal separated by colons, along with an optional mask. Valid for all IP based flow-types.</p>
-<dt><code>action</code><i>&nbsp;<wbr>N</i></p>
-<dd>Specifies the Rx queue to send packets to, or some other action. </p>
+<dt><code>src</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]</dt>
+<dd>Includes the source MAC address, specified as 6 bytes in hexadecimal separated by colons, along with an optional mask. Valid only for flow-type ether.</dd>
+<dt><code>dst</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]</dt>
+<dd>Includes the destination MAC address, specified as 6 bytes in hexadecimal separated by colons, along with an optional mask. Valid only for flow-type ether.</dd>
+<dt><code>proto</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Includes the Ethernet protocol number (ethertype) and an optional mask. Valid only for flow-type ether.</dd>
+<dt><code>src-ip</code>&nbsp;<wbr><i>ip-address</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>ip-address</i>]</dt>
+<dd>Specify the source IP address of the incoming packet to match along with an optional mask. Valid for all IP based flow-types.</dd>
+<dt><code>dst-ip</code>&nbsp;<wbr><i>ip-address</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>ip-address</i>]</dt>
+<dd>Specify the destination IP address of the incoming packet to match along with an optional mask. Valid for all IP based flow-types.</dd>
+<dt><code>tos</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Specify the value of the Type of Service field in the incoming packet to match along with an optional mask. Applies to all IPv4 based flow-types.</dd>
+<dt><code>tclass</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Specify the value of the Traffic Class field in the incoming packet to match along with an optional mask. Applies to all IPv6 based flow-types.</dd>
+<dt><code>l4proto</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Includes the layer 4 protocol number and optional mask. Valid only for flow-types ip4 and ip6.</dd>
+<dt><code>src-port</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Specify the value of the source port field (applicable to TCP/UDP packets) in the incoming packet to match along with an optional mask. Valid for flow-types ip4, tcp4, udp4, and sctp4 and their IPv6 equivalents.</dd>
+<dt><code>dst-port</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Specify the value of the destination port field (applicable to TCP/UDP packets)in the incoming packet to match along with an optional mask. Valid for flow-types ip4, tcp4, udp4, and sctp4 and their IPv6 equivalents.</dd>
+<dt><code>spi</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Specify the value of the security parameter index field (applicable to AH/ESP packets)in the incoming packet to match along with an optional mask. Valid for flow-types ip4, ah4, and esp4 and their IPv6 equivalents.</dd>
+<dt><code>l4data</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Specify the value of the first 4 Bytes of Layer 4 in the incoming packet to match along with an optional mask. Valid for ip4 and ip6 flow-types.</dd>
+<dt><code>vlan-etype</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Includes the VLAN tag Ethertype and an optional mask.</dd>
+<dt><code>vlan</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Includes the VLAN tag and an optional mask.</dd>
+<dt><code>user-def</code><i>&nbsp;<wbr>N</i><code>R&nbsp;<wbr>[Pm</code><i>&nbsp;<wbr>N</i><code>R]P</code></dt>
+<dd>Includes 64-bits of user-specific data and an optional mask.</dd>
+<dt><code>dst-mac</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>&nbsp;<wbr>[<code>m</code>&nbsp;<wbr><i>xx</i><code>:</code><i>yy</i><code>:</code><i>zz</i><code>:</code><i>aa</i><code>:</code><i>bb</i><code>:</code><i>cc</i>]</dt>
+<dd>Includes the destination MAC address, specified as 6 bytes in hexadecimal separated by colons, along with an optional mask. Valid for all IP based flow-types.</dd>
+<dt><code>action</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Specifies the Rx queue to send packets to, or some other action. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>-1</code></td>
@@ -778,82 +778,82 @@ description: "ethtool – query or control network driver and hardware settings"
 </td>
 </tr>
 </table>
-<dt><code>loc</code><i>&nbsp;<wbr>N</i></p>
-<dd>Specify the location/ID to insert the rule. This will overwrite any rule present in that location and will not go through any of the rule ordering process.</p>
-<dt><code>delete</code><i>&nbsp;<wbr>N</i></p>
-<dd>Deletes the RX classification rule with the given ID.</dl>
+<dt><code>loc</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Specify the location/ID to insert the rule. This will overwrite any rule present in that location and will not go through any of the rule ordering process.</dd>
+<dt><code>delete</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Deletes the RX classification rule with the given ID.</dd></dl>
 </dl>
-<dt><code>-w &#8211;get-dump</code></p>
-<dd>Retrieves and prints firmware dump for the specified network device. By default, it prints out the dump flag, version and length of the dump data. When <i>data</i> is indicated, then ethtool fetches the dump data and directs it to a <i>file.</i></p>
-<dt><code>-W &#8211;set-dump</code></p>
-<dd>Sets the dump flag for the device.</p>
-<dt><code>-T &#8211;show-time-stamping</code></p>
-<dd>Show the device&#8217;s time stamping capabilities and associated PTP hardware clock.</p>
-<dt><code>-x &#8211;show-rxfh-indir &#8211;show-rxfh</code></p>
-<dd>Retrieves the receive flow hash indirection table and/or RSS hash key.</p>
-<dt><code>-X &#8211;set-rxfh-indir &#8211;rxfh</code></p>
-<dd>Configures the receive flow hash indirection table and/or RSS hash key.</p>
+<dt><code>-w &#8211;get-dump</code></dt>
+<dd>Retrieves and prints firmware dump for the specified network device. By default, it prints out the dump flag, version and length of the dump data. When <i>data</i> is indicated, then ethtool fetches the dump data and directs it to a <i>file.</i></dd>
+<dt><code>-W &#8211;set-dump</code></dt>
+<dd>Sets the dump flag for the device.</dd>
+<dt><code>-T &#8211;show-time-stamping</code></dt>
+<dd>Show the device&#8217;s time stamping capabilities and associated PTP hardware clock.</dd>
+<dt><code>-x &#8211;show-rxfh-indir &#8211;show-rxfh</code></dt>
+<dd>Retrieves the receive flow hash indirection table and/or RSS hash key.</dd>
+<dt><code>-X &#8211;set-rxfh-indir &#8211;rxfh</code></dt>
+<dd>Configures the receive flow hash indirection table and/or RSS hash key.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>hkey</code></p>
-<dd>Sets RSS hash key of the specified network device. RSS hash key should be of device supported length. Hash key format must be in xx:yy:zz:aa:bb:cc format meaning both the nibbles of a byte should be mentioned even if a nibble is zero.</p>
-<dt><code>equal&nbsp;<wbr></code><i>N</i></p>
-<dd>Sets the receive flow hash indirection table to spread flows evenly between the first <i>N</i> receive queues.</p>
-<dt><code>weight</code> <i>W0 W1</i> &#8230;</p>
-<dd>Sets the receive flow hash indirection table to spread flows between receive queues according to the given weights. The sum of the weights must be non-zero and must not exceed the size of the indirection table.</p>
-<dt><code>default</code></p>
-<dd>Sets the receive flow hash indirection table to its default value.</dl>
+</dd><dl>
+<dt><code>hkey</code></dt>
+<dd>Sets RSS hash key of the specified network device. RSS hash key should be of device supported length. Hash key format must be in xx:yy:zz:aa:bb:cc format meaning both the nibbles of a byte should be mentioned even if a nibble is zero.</dd>
+<dt><code>equal&nbsp;<wbr></code><i>N</i></dt>
+<dd>Sets the receive flow hash indirection table to spread flows evenly between the first <i>N</i> receive queues.</dd>
+<dt><code>weight</code> <i>W0 W1</i> &#8230;</dt>
+<dd>Sets the receive flow hash indirection table to spread flows between receive queues according to the given weights. The sum of the weights must be non-zero and must not exceed the size of the indirection table.</dd>
+<dt><code>default</code></dt>
+<dd>Sets the receive flow hash indirection table to its default value.</dd></dl>
 </dl>
-<dt><code>-f &#8211;flash</code></p>
-<dd>Write a firmware image to flash or other non-volatile memory on the device.</p>
+<dt><code>-f &#8211;flash</code></dt>
+<dd>Write a firmware image to flash or other non-volatile memory on the device.</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>file</i></p>
-<dd>Specifies the filename of the firmware image. The firmware must first be installed in one of the directories where the kernel firmware loader or firmware agent will look, such as /lib/firmware.</p>
-<dt><i>N</i></p>
-<dd>If the device stores multiple firmware images in separate regions of non-volatile memory, this parameter may be used to specify which region is to be written. The default is 0, requesting that all regions are written. All other values are driver-dependent.</dl>
+</dd><dl>
+<dt><i>file</i></dt>
+<dd>Specifies the filename of the firmware image. The firmware must first be installed in one of the directories where the kernel firmware loader or firmware agent will look, such as /lib/firmware.</dd>
+<dt><i>N</i></dt>
+<dd>If the device stores multiple firmware images in separate regions of non-volatile memory, this parameter may be used to specify which region is to be written. The default is 0, requesting that all regions are written. All other values are driver-dependent.</dd></dl>
 </dl>
-<dt><code>-l &#8211;show-channels</code></p>
-<dd>Queries the specified network device for the numbers of channels it has. A channel is an IRQ and the set of queues that can trigger that IRQ.</p>
-<dt><code>-L &#8211;set-channels</code></p>
-<dd>Changes the numbers of channels of the specified network device.</p>
+<dt><code>-l &#8211;show-channels</code></dt>
+<dd>Queries the specified network device for the numbers of channels it has. A channel is an IRQ and the set of queues that can trigger that IRQ.</dd>
+<dt><code>-L &#8211;set-channels</code></dt>
+<dd>Changes the numbers of channels of the specified network device.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>rx</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of channels with only receive queues.</p>
-<dt><code>tx</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of channels with only transmit queues.</p>
-<dt><code>other</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of channels used only for other purposes e.g. link interrupts or SR-IOV co-ordination.</p>
-<dt><code>combined</code><i>&nbsp;<wbr>N</i></p>
-<dd>Changes the number of multi-purpose channels.</dl>
+</dd><dl>
+<dt><code>rx</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of channels with only receive queues.</dd>
+<dt><code>tx</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of channels with only transmit queues.</dd>
+<dt><code>other</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of channels used only for other purposes e.g. link interrupts or SR-IOV co-ordination.</dd>
+<dt><code>combined</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Changes the number of multi-purpose channels.</dd></dl>
 </dl>
-<dt><code>-m &#8211;dump-module-eeprom &#8211;module-info</code></p>
-<dd>Retrieves and if possible decodes the EEPROM from plugin modules, e.g SFP+, QSFP. If the driver and module support it, the optical diagnostic information is also read and decoded.</p>
-<dt><code>&#8211;show-priv-flags</code></p>
-<dd>Queries the specified network device for its private flags. The names and meanings of private flags (if any) are defined by each network device driver.</p>
-<dt><code>&#8211;set-priv-flags</code></p>
-<dd>Sets the device&#8217;s private flags as specified.</p>
+<dt><code>-m &#8211;dump-module-eeprom &#8211;module-info</code></dt>
+<dd>Retrieves and if possible decodes the EEPROM from plugin modules, e.g SFP+, QSFP. If the driver and module support it, the optical diagnostic information is also read and decoded.</dd>
+<dt><code>&#8211;show-priv-flags</code></dt>
+<dd>Queries the specified network device for its private flags. The names and meanings of private flags (if any) are defined by each network device driver.</dd>
+<dt><code>&#8211;set-priv-flags</code></dt>
+<dd>Sets the device&#8217;s private flags as specified.</dd>
 <dl>
-<dd><i>flag</i> <code>on</code>|<code>off</code> Sets the state of the named private flag.</dl>
-<dt><code>&#8211;show-eee</code></p>
-<dd>Queries the specified network device for its support of Energy-Efficient Ethernet (according to the IEEE 802.3az specifications)</p>
-<dt><code>&#8211;set-eee</code></p>
-<dd>Sets the device EEE behaviour.</p>
+<dd><i>flag</i> <code>on</code>|<code>off</code> Sets the state of the named private flag.</dd></dl>
+<dt><code>&#8211;show-eee</code></dt>
+<dd>Queries the specified network device for its support of Energy-Efficient Ethernet (according to the IEEE 802.3az specifications)</dd>
+<dt><code>&#8211;set-eee</code></dt>
+<dd>Sets the device EEE behaviour.</dd>
 <dl>
 <dd>
-<dl>
-<dt> <code>eee</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Enables/disables the device support of EEE.</p>
-<dt> <code>tx-lpi</code>&nbsp;<wbr><code>on</code>|<code>off</code></p>
-<dd>Determines whether the device should assert its Tx LPI.</p>
-<dt><code>advertise</code><i>&nbsp;<wbr>N</i></p>
-<dd>Sets the speeds for which the device should advertise EEE capabilities. Values are as for <code>&#8211;change advertise</code></p>
-<dt><code>tx-timer</code><i>&nbsp;<wbr>N</i></p>
-<dd>Sets the amount of time the device should stay in idle mode prior to asserting its Tx LPI (in microseconds). This has meaning only when Tx LPI is enabled.</dl>
+</dd><dl>
+<dt> <code>eee</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Enables/disables the device support of EEE.</dd>
+<dt> <code>tx-lpi</code>&nbsp;<wbr><code>on</code>|<code>off</code></dt>
+<dd>Determines whether the device should assert its Tx LPI.</dd>
+<dt><code>advertise</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Sets the speeds for which the device should advertise EEE capabilities. Values are as for <code>&#8211;change advertise</code></dd>
+<dt><code>tx-timer</code><i>&nbsp;<wbr>N</i></dt>
+<dd>Sets the amount of time the device should stay in idle mode prior to asserting its Tx LPI (in microseconds). This has meaning only when Tx LPI is enabled.</dd></dl>
 </dl>
 </dl>
 <h2>Bugs</h2>
@@ -863,3 +863,4 @@ description: "ethtool – query or control network driver and hardware settings"
 <p> Modifications by Jeff Garzik, Tim Hockin, Jakub Jelinek, Andre Majorel, Eli Kupermann, Scott Feldman, Andi Kleen, Alexander Duyck, Sucheta Chakraborty, Jesse Brandeburg, Ben Hutchings.</p>
 <h2>Availability</h2>
 <p><code>ethtool</code> is available from <a rel="nofollow" href="http://www.kernel.org/pub/software/network/ethtool/">http://www.kernel.org/pub/software/network/ethtool/</a> �e�?</p>
+</dl>

@@ -12,11 +12,11 @@ description: "npm-logout – Log out of the registry"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm logout[--registry = &lt;url&gt;][--scope = &lt;@scope&gt;]
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> When logged into a registry that supports token-based authentication, tell the server to end this token&#8217;s session. This will invalidate the token everywhere you&#8217;re using it, not just for the current environment. </p>
 <p> When logged into a legacy registry that uses username and password authentication, this will clear the credentials in your user configuration. In this case, it will <i>only</i> affect the current environment. </p>
@@ -30,24 +30,22 @@ npm logout[--registry = &lt;url&gt;][--scope = &lt;@scope&gt;]
 <p> If specified, you will be logged out of the specified scope. See npm help <code>scope</code>. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm logout --scope=@myco
 </pre>
-</dl>
+</dd></dl>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help adduser</p>
-<dt>&bull;</p>
-<dd> npm help registry</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help whoami </p>
+<dt>&bull;</dt>
+<dd> npm help adduser</dd>
+<dt>&bull;</dt>
+<dd> npm help registry</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help whoami </dd>
 </dl>
 </dl>
 <h2>Index</h2>

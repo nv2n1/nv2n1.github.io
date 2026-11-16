@@ -56,7 +56,7 @@ description: "io.h –"
 <p>C wrapper for I/O interfaces. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dl>
+<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dd></dl>
 <h2>Macro Definition Documentation</h2>
 <h3>#define O_INSECURE 010</h3>
 <p>Use this flag in addition to the standard ones to skip any security check (i.e. token validation)</p>
@@ -69,56 +69,56 @@ description: "io.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>loc</i> The location as returned by dmlite_put.</dl>
+ <i>loc</i> The location as returned by dmlite_put.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_fclose (<code>dmlite_fd</code> *fd)</h3>
 <p>Closes a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor as returned by dmlite_open.</dl>
+<dd><i>fd</i> The file descriptor as returned by dmlite_open.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_feof (<code>dmlite_fd</code> *fd)</h3>
 <p>Returns 1 if EOF. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.</dl>
+<dd><i>fd</i> The file descriptor.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 if there is more to read. 1 if EOF.</dl>
+<dd>0 if there is more to read. 1 if EOF.</dd></dl>
 <h3>int dmlite_ferrno (<code>dmlite_fd</code> *fd)</h3>
 <p>Returns the last errror code. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.</dl>
+<dd><i>fd</i> The file descriptor.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The last error code.</dl>
+<dd>The last error code.</dd></dl>
 <h3>const char* dmlite_ferror (<code>dmlite_fd</code> *fd)</h3>
 <p>Returns the last error message. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.</dl>
+<dd><i>fd</i> The file descriptor.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to an internal buffer with the last error message.</dl>
+<dd>A pointer to an internal buffer with the last error message.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This buffer is specific to each file descriptor.</dl>
+<dd>This buffer is specific to each file descriptor.</dd></dl>
 <h3>int dmlite_fileno (<code>dmlite_fd</code> *fd)</h3>
 <p>Returns the system file descriptor if available. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.</dl>
+<dd><i>fd</i> The file descriptor.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The file descriptor, -1 if it can not be retrieved.</dl>
+<dd>The file descriptor, -1 if it can not be retrieved.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Support depends on the plugin providing the file. </p>
+<dd>Support depends on the plugin providing the file. </dd>
 <p> Calling dmlite_fclose <i>will</i> close the file descriptor returned by this.</dl>
 <h3><code>dmlite_fd</code>* dmlite_fopen (<code>dmlite_context</code> *context, const char *path, intflags, const <code>dmlite_any_dict</code> *extra, &#8230;)</h3>
 <p>Opens a file. </p>
@@ -128,10 +128,10 @@ description: "io.h –"
  <i>path</i> The path to open.<br />
  <i>flags</i> See open()<br />
  <i>extra</i> The key-value pairs.<br />
- <i>&#8230;</i> Should be mode_t when called with O_CREAT.</dl>
+ <i>&#8230;</i> Should be mode_t when called with O_CREAT.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An opaque handler for the file, NULL on failure.</dl>
+<dd>An opaque handler for the file, NULL on failure.</dd></dl>
 <h3>ssize_t dmlite_fpread (<code>dmlite_fd</code> *fd, void *buffer, size_tcount, off_toffset)</h3>
 <p>Reads up to count bytes starting at the given offset. Does not change internal offset. </p>
 <p> <code>Parameters:</code></p>
@@ -139,10 +139,10 @@ description: "io.h –"
 <dd><i>fd</i> File descriptor.<br />
  <i>buffer</i> Buffer where to put the data.<br />
  <i>count</i> Number of bytes to read.<br />
- <i>offset</i> Read offset.</dl>
+ <i>offset</i> Read offset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of bytes actually read on success. -1 on failure.</dl>
+<dd>Number of bytes actually read on success. -1 on failure.</dd></dl>
 <h3>ssize_t dmlite_fpwrite (<code>dmlite_fd</code> *fd, const void *buffer, size_tcount, off_toffset)</h3>
 <p>Writes count bytes starting at the given offset. Does not change internal offset. </p>
 <p> <code>Parameters:</code></p>
@@ -150,79 +150,79 @@ description: "io.h –"
 <dd><i>fd</i> File descriptor.<br />
  <i>buffer</i> Data to write.<br />
  <i>count</i> Number of bytes to read.<br />
- <i>offset</i> Write offset.</dl>
+ <i>offset</i> Write offset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of bytes actually write on success. -1 on failure.</dl>
+<dd>Number of bytes actually write on success. -1 on failure.</dd></dl>
 <h3>ssize_t dmlite_fread (<code>dmlite_fd</code> *fd, void *buffer, size_tcount)</h3>
 <p>Reads from a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd</i> The file descriptor.<br />
  <i>buffer</i> Where to put the data.<br />
- <i>count</i> Number of bytes to read.</dl>
+ <i>count</i> Number of bytes to read.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of bytes actually read on success. -1 on failure.</dl>
+<dd>Number of bytes actually read on success. -1 on failure.</dd></dl>
 <h3>ssize_t dmlite_freadv (<code>dmlite_fd</code> *fd, const struct iovec *vector, size_tcount)</h3>
 <p>Reads from a file into multiple buffers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd</i> The file descriptor.<br />
  <i>vector</i> Array of buffers.<br />
- <i>count</i> Number of elements in the array of buffers.</dl>
+ <i>count</i> Number of elements in the array of buffers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of bytes actually read on success. -1 on failure.</dl>
+<dd>Number of bytes actually read on success. -1 on failure.</dd></dl>
 <h3>int dmlite_fseek (<code>dmlite_fd</code> *fd, off_toffset, intwhence)</h3>
 <p>Sets the file position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd</i> The file descriptor.<br />
  <i>offset</i> The offset.<br />
- <i>whence</i> See fseek()</dl>
+ <i>whence</i> See fseek()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_fstat (<code>dmlite_fd</code> *fd, struct stat *buf)</h3>
 <p>Gets information about a file descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd</i> The file descriptor.<br />
- <i>buf</i> Where to put the information.</dl>
+ <i>buf</i> Where to put the information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Not all plug-ins will fill all the fields, but st_size is a reasonable expectation.</dl>
+<dd>Not all plug-ins will fill all the fields, but st_size is a reasonable expectation.</dd></dl>
 <h3>off_t dmlite_ftell (<code>dmlite_fd</code> *fd)</h3>
 <p>Returns the cursor position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.</dl>
+<dd><i>fd</i> The file descriptor.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The cursor position, or -1 on error.</dl>
+<dd>The cursor position, or -1 on error.</dd></dl>
 <h3>ssize_t dmlite_fwrite (<code>dmlite_fd</code> *fd, const void *buffer, size_tcount)</h3>
 <p>Writes to a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd</i> The file descriptor.<br />
  <i>buffer</i> A pointer to the data.<br />
- <i>count</i> Number of bytes to write.</dl>
+ <i>count</i> Number of bytes to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of bytes actually written. -1 on failure.</dl>
+<dd>Number of bytes actually written. -1 on failure.</dd></dl>
 <h3>ssize_t dmlite_fwritev (<code>dmlite_fd</code> *fd, const struct iovec *vector, size_tcount)</h3>
 <p>Reads from a file into multiple buffers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd</i> The file descriptor.<br />
  <i>vector</i> Array of buffers.<br />
- <i>count</i> Number of elements in the array of buffers.</dl>
+ <i>count</i> Number of elements in the array of buffers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of bytes actually read on success. -1 on failure.</dl>
+<dd>Number of bytes actually read on success. -1 on failure.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for dmlite from the source code.</p>

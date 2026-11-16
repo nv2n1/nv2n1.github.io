@@ -11,7 +11,6 @@ description: "__fbufsize, __flbf, __fpending, __fpurge, __freadable, __freading,
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdio_ext.h&gt;
-
 size_t __fbufsize(FILE *stream);
 size_t __fpending(FILE *stream);
 int __flbf(FILE *stream);
@@ -33,12 +32,12 @@ void __fpurge(FILE *stream);</code></pre>
 <p> The <code>__fwriting</code>() function returns a nonzero value if the stream is write-only (or append-only), or if the last operation on the stream was a write operation, and zero otherwise. </p>
 <p> The <code>__fsetlocking</code>() function can be used to select the desired type of locking on the stream. It returns the current type. The <i>type</i> argument can take the following three values:</p>
 <dl>
-<dt><code>FSETLOCKING_INTERNAL</code></p>
-<dd>Perform implicit locking around every operation on the given stream (except for the *_unlocked ones). This is the default.</p>
-<dt><code>FSETLOCKING_BYCALLER</code></p>
-<dd>The caller will take care of the locking (possibly using <code><a href="/docs/linux/man/3-flockfile/">flockfile</a></code>(3) in case there is more than one thread), and the stdio routines will not do locking until the state is reset to <code>FSETLOCKING_INTERNAL</code>.</p>
-<dt><code>FSETLOCKING_QUERY</code></p>
-<dd>Don&#8217;t change the type of locking. (Only return it.)</dl>
+<dt><code>FSETLOCKING_INTERNAL</code></dt>
+<dd>Perform implicit locking around every operation on the given stream (except for the *_unlocked ones). This is the default.</dd>
+<dt><code>FSETLOCKING_BYCALLER</code></dt>
+<dd>The caller will take care of the locking (possibly using <code><a href="/docs/linux/man/3-flockfile/">flockfile</a></code>(3) in case there is more than one thread), and the stdio routines will not do locking until the state is reset to <code>FSETLOCKING_INTERNAL</code>.</dd>
+<dt><code>FSETLOCKING_QUERY</code></dt>
+<dd>Don&#8217;t change the type of locking. (Only return it.)</dd></dl>
 <p> The <code>_flushlbf</code>() function flushes all line-buffered streams. (Presumably so that output to a terminal is forced out, say before reading keyboard input.) </p>
 <p> The <code>__fpurge</code>() function discards the contents of the stream&#8217;s buffer.</p>
 <h2>Attributes</h2>

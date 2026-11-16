@@ -16,16 +16,16 @@ description: "addpart – tell the kernel about the existence of a partition"
 <h2>Parameters</h2>
 <p><i>device</i></p>
 <dl>
-<dd>The disk device.</dl>
+<dd>The disk device.</dd></dl>
 <p> <i>partition</i></p>
 <dl>
-<dd>The partition number.</dl>
+<dd>The partition number.</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>The beginning of the partition (in 512-byte sectors).</dl>
+<dd>The beginning of the partition (in 512-byte sectors).</dd></dl>
 <p> <i>length</i></p>
 <dl>
-<dd>The length of the partition (in 512-byte sectors).</dl>
+<dd>The length of the partition (in 512-byte sectors).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-delpart/">delpart</a></code>(8), <code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-parted/">parted</a></code>(8), <code><a href="/docs/linux/man/8-partprobe/">partprobe</a></code>(8), <code><a href="/docs/linux/man/8-partx/">partx</a></code>(8)</p>
 <h2>Reporting Bugs</h2>

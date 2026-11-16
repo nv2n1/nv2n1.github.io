@@ -16,16 +16,16 @@ description: "nntpsend – Send Usenet articles to remote sites"
 <p> An alternative to <code>nntpsend</code> can be <code>innduct</code>, mentioned in the <i><a href="/docs/linux/man/8-innfeed/">innfeed</a></i>(8) man page.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-D</code>, <code>-d</code></p>
-<dd>The <code>-D</code> flag causes <code>nntpsend</code> to send output to stdout rather than the log file <i>nntpsend.log</i> in <i>pathlog</i>. The <code>-d</code> flag does the same and it passes <code>-d</code> to all <code>innxmit</code> invocations, which in turn causes <code>innxmit</code> to go into debug mode.</p>
-<dt><code>-n</code></p>
-<dd>If the <code>-n</code> flag is used, then <code>nntpsend</code> does not use <code>shlock</code> to lock the use of <code>nntpsend</code>. Batch files will still be locked.</p>
-<dt><code>-s</code> <i>size</i></p>
-<dd>If the <code>-s</code> flag is used, then <code>shrinkfile</code> will be invoked to perform a head truncation of <i>size</i> bytes on the batch file and the flag will be passed to it.</p>
-<dt><code>-w</code> <i>delay</i></p>
-<dd>If the <code>-w</code> flag is used, then <code>nntpsend</code> waits for <i>delay</i> seconds after flushing the site before launching <code>innxmit</code>.</p>
-<dt><code>-a</code>, <code>-c</code>, <code>-l</code>, <code>-N</code>, <code>-P</code> <i>portnum</i>, <code>-p</code>, <code>-r</code>, <code>-T</code> <i>timelimit</i>, <code>-t</code> <i>timeout</i></p>
-<dd>The <code>-a</code>, <code>-c</code>, <code>-l</code>, <code>-P</code> <i>portnum</i>, <code>-p</code>, <code>-r</code>, <code>-T</code> <i>timelimit</i> and <code>-t</code> <i>timeout</i> flags are passed on to the child <code>innxmit</code> program. The <code>-N</code> flag is passed as <code>-s</code> flag to the child <code>innxmit</code> program. See <i><a href="/docs/linux/man/8-innxmit/">innxmit</a></i>(8) for more details. </p>
+<dt><code>-D</code>, <code>-d</code></dt>
+<dd>The <code>-D</code> flag causes <code>nntpsend</code> to send output to stdout rather than the log file <i>nntpsend.log</i> in <i>pathlog</i>. The <code>-d</code> flag does the same and it passes <code>-d</code> to all <code>innxmit</code> invocations, which in turn causes <code>innxmit</code> to go into debug mode.</dd>
+<dt><code>-n</code></dt>
+<dd>If the <code>-n</code> flag is used, then <code>nntpsend</code> does not use <code>shlock</code> to lock the use of <code>nntpsend</code>. Batch files will still be locked.</dd>
+<dt><code>-s</code> <i>size</i></dt>
+<dd>If the <code>-s</code> flag is used, then <code>shrinkfile</code> will be invoked to perform a head truncation of <i>size</i> bytes on the batch file and the flag will be passed to it.</dd>
+<dt><code>-w</code> <i>delay</i></dt>
+<dd>If the <code>-w</code> flag is used, then <code>nntpsend</code> waits for <i>delay</i> seconds after flushing the site before launching <code>innxmit</code>.</dd>
+<dt><code>-a</code>, <code>-c</code>, <code>-l</code>, <code>-N</code>, <code>-P</code> <i>portnum</i>, <code>-p</code>, <code>-r</code>, <code>-T</code> <i>timelimit</i>, <code>-t</code> <i>timeout</i></dt>
+<dd>The <code>-a</code>, <code>-c</code>, <code>-l</code>, <code>-P</code> <i>portnum</i>, <code>-p</code>, <code>-r</code>, <code>-T</code> <i>timelimit</i> and <code>-t</code> <i>timeout</i> flags are passed on to the child <code>innxmit</code> program. The <code>-N</code> flag is passed as <code>-s</code> flag to the child <code>innxmit</code> program. See <i><a href="/docs/linux/man/8-innxmit/">innxmit</a></i>(8) for more details. </dd>
 <p> Note that if the <code>-p</code> flag is used, then no connection is made and no articles are fed to the remote site. It is useful to have <i><a href="/docs/linux/man/8-cron/">cron</a></i>(8) invoke <code>nntpsend</code> with this flag in case a site cannot be reached for an extended period of time.</dl>
 <h2>Examples</h2>
 <p>With the following <i>nntpsend.ctl</i> config file: </p>
@@ -55,3 +55,4 @@ description: "nntpsend – Send Usenet articles to remote sites"
 <p> <tt>$Id:</tt> nntpsend.pod 9590 2013-12-19 17:48:22Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i>innxmit</i>(1), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/5-nntpsend-ctl/">nntpsend.ctl</a></i>(5), <i><a href="/docs/linux/man/1-shlock/">shlock</a></i>(1), <i><a href="/docs/linux/man/1-shrinkfile/">shrinkfile</a></i>(1). </p>
+</p>

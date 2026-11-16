@@ -51,9 +51,9 @@ description: "ping_selinux – Security Enhanced Linux Policy for the ping proce
 <p> Policy governs the access confined processes have to these ports. SELinux ping policy is very flexible allowing users to setup their ping processes in as secure a method as possible. </p>
 <p> The following port types are defined for ping: </p>
 <dl>
-<dt><code>pingd_port_t</code></p>
+<dt><code>pingd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 9125</dl>
+</dd><dd>Default Defined Ports: tcp 9125</dd></dl>
 <h2>File Contexts</h2>
 <p>SELinux requires files to have an extended attribute to define the file type. </p>
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux ping policy is very flexible allowing users to setup their ping processes in as secure a method as possible. </p>
@@ -66,8 +66,8 @@ description: "ping_selinux – Security Enhanced Linux Policy for the ping proce
 <p> <code>ping_exec_t</code> </p>
 <p> &#8211; Set files with the ping_exec_t type, if you want to transition an executable to the ping_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/ping.*, /usr/bin/ping.*, /usr/sbin/fping.*, /usr/sbin/hping2, /usr/sbin/send_arp, /usr/lib/heartbeat/send_arp </p>
+<dt>Paths:</dt>
+<dd>/bin/ping.*, /usr/bin/ping.*, /usr/sbin/fping.*, /usr/sbin/hping2, /usr/sbin/send_arp, /usr/lib/heartbeat/send_arp </dd>
 </dl>
 <p> <code>pingd_etc_t</code> </p>
 <p> &#8211; Set files with the pingd_etc_t type, if you want to store pingd files in the /etc directories. </p>

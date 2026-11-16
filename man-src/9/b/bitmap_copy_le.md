@@ -15,15 +15,15 @@ bitmap_copy_le - copy a bitmap, putting the bits into little-endian order.
 <h2>Arguments</h2>
 
 <i>dst</i>
-<dl><dd><dd>destination buffer</dl>
+<dl><dd></dd><dd>destination buffer</dd></dl>
  
 
  <i>src</i>
-<dl><dd>bitmap to copy</dl>
+<dl><dd>bitmap to copy</dd></dl>
  
 
  <i>nbits</i>
-<dl><dd>number of bits in the bitmap</dl>
+<dl><dd>number of bits in the bitmap</dd></dl>
 
 <h2>Description</h2>
 

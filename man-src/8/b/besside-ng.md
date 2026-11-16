@@ -13,20 +13,20 @@ description: "besside-ng – crack a WEP or WPA key without user intervention an
 <h2>Description</h2>
 <p><code>besside-ng</code> is a tool wich will crack all the WEP networks in range and log all the WPA handshakes. WPA handshakes can be uploaded to the online cracking service at wpa.darkircop.org. Wpa.darkircop.com also provides useful statistics based on user-submitted capture files about the feaseability of WPA cracking.</p>
 <dl>
-<dt><i>-b &lt;target mac&gt;</i></p>
-<dd>Specifies the target&#8217;s BSSID</p>
-<dt><i>-s &lt;WPA server&gt;</i></p>
-<dd>Where to upload capture file for cracking. A good choice is wpa.darkircop.org</p>
-<dt><i>-c &lt;chan&gt;</i></p>
-<dd>Channel lock</p>
-<dt><i>-p &lt;pps&gt;</i></p>
-<dd>Packages per second to send (flood rate).</p>
-<dt><i>-W</i></p>
-<dd>Crack only WPA networks</p>
-<dt><i>-v</i></p>
-<dd>Verbos mode. Use -vv for more verbose, -vv for even more and so on.</p>
-<dt><i>-h</i></p>
-<dd>Help screen </p>
+<dt><i>-b &lt;target mac&gt;</i></dt>
+<dd>Specifies the target&#8217;s BSSID</dd>
+<dt><i>-s &lt;WPA server&gt;</i></dt>
+<dd>Where to upload capture file for cracking. A good choice is wpa.darkircop.org</dd>
+<dt><i>-c &lt;chan&gt;</i></dt>
+<dd>Channel lock</dd>
+<dt><i>-p &lt;pps&gt;</i></dt>
+<dd>Packages per second to send (flood rate).</dd>
+<dt><i>-W</i></dt>
+<dd>Crack only WPA networks</dd>
+<dt><i>-v</i></dt>
+<dd>Verbos mode. Use -vv for more verbose, -vv for even more and so on.</dd>
+<dt><i>-h</i></dt>
+<dd>Help screen </dd>
 <h2>Author</h2>
 <p>This manual page was written by David Francos Cuartero. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>See Also</h2>
@@ -51,3 +51,4 @@ description: "besside-ng – crack a WEP or WPA key without user intervention an
  <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>
+</dl>

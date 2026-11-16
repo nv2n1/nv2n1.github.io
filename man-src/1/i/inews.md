@@ -36,20 +36,20 @@ description: "inews – Post a Usenet article to the local news server"
 </pre>
 <p> The <code>-x</code> argument will be added to the beginning of the normal Path header; it will not replace it.</p>
 <dl>
-<dt><code>-A</code>, <code>-V</code>, <code>-W</code></p>
-<dd> Accepted for compatibility with C News. These options have no affect.</p>
-<dt><code>-D</code>, <code>-N</code></p>
-<dd> Perform the consistency checks and add headers where appropriate, but then print the article to standard output rather than sending it to the server. <code>-N</code> is accepted as as synonym for compatibility with C News.</p>
-<dt><code>-h</code></p>
-<dd> Normally, this flag should always be given. It indicates that the article consists of headers, a blank line, and then the message body. If it is omitted, the input is taken to be just the body of the message, and any desired headers have to be specified with command-line options as described above.</p>
-<dt><code>-O</code></p>
-<dd> By default, an Organization header will be added if none is present in the article. To prevent adding the default (from <i>organization</i> in <i>inn.conf</i>), use this flag.</p>
-<dt><code>-p</code> <i>port</i></p>
-<dd> Connect to the specified port on the server rather than to the default (port 119).</p>
-<dt><code>-R</code></p>
-<dd> Reject all control messages.</p>
-<dt><code>-S</code></p>
-<dd> Do not attempt to append <i>~/.signature</i> to the message, even if it exists.</dl>
+<dt><code>-A</code>, <code>-V</code>, <code>-W</code></dt>
+<dd> Accepted for compatibility with C News. These options have no affect.</dd>
+<dt><code>-D</code>, <code>-N</code></dt>
+<dd> Perform the consistency checks and add headers where appropriate, but then print the article to standard output rather than sending it to the server. <code>-N</code> is accepted as as synonym for compatibility with C News.</dd>
+<dt><code>-h</code></dt>
+<dd> Normally, this flag should always be given. It indicates that the article consists of headers, a blank line, and then the message body. If it is omitted, the input is taken to be just the body of the message, and any desired headers have to be specified with command-line options as described above.</dd>
+<dt><code>-O</code></dt>
+<dd> By default, an Organization header will be added if none is present in the article. To prevent adding the default (from <i>organization</i> in <i>inn.conf</i>), use this flag.</dd>
+<dt><code>-p</code> <i>port</i></dt>
+<dd> Connect to the specified port on the server rather than to the default (port 119).</dd>
+<dt><code>-R</code></dt>
+<dd> Reject all control messages.</dd>
+<dt><code>-S</code></dt>
+<dd> Do not attempt to append <i>~/.signature</i> to the message, even if it exists.</dd></dl>
 <h2>NOTES</h2>
 <p> If the <font SIZE="-1">NNTP</font> server requests authentication, <code>inews</code> will try to read <i>passwd.nntp</i> to get the username and password to use and will therefore need read access to that file. This is typically done by making that file group-readable and adding all users who should be able to use <code>inews</code> to post to that server to the appropriate group. </p>
 <p> <code>inews</code> used to do even more than it does now, and all of the remaining checks that are not dependent on the user running <code>inews</code> should probably be removed in favor of letting the news server handle them. </p>

@@ -14,12 +14,12 @@ description: "gnutls_x509_crq_get_dn – API function"
 <p> <code>int gnutls_x509_crq_get_dn(gnutls_x509_crq_t </code><i>crq</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a <code>gnutls_x509_crq_t</code> structure</p>
-<dt>char * buf</p>
-<dd> a pointer to a structure to hold the name (may be <code>NULL</code>)</p>
-<dt>size_t * buf_size</p>
-<dd> initially holds the size of <i>buf</i></dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a <code>gnutls_x509_crq_t</code> structure</dd>
+<dt>char * buf</dt>
+<dd> a pointer to a structure to hold the name (may be <code>NULL</code>)</dd>
+<dt>size_t * buf_size</dt>
+<dd> initially holds the size of <i>buf</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will copy the name of the Certificate request subject to the provided buffer. The name will be in the form &quot;C=xxxx,O=yyyy,CN=zzzz&quot; as described in RFC 2253. The output string<br />
 &nbsp;<wbr><i>buf</i>&nbsp;<wbr>will be ASCII or UTF-8 encoded, depending on the certificate data.</p>
@@ -34,6 +34,6 @@ description: "gnutls_x509_crq_get_dn – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

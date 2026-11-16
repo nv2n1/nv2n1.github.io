@@ -14,14 +14,14 @@ description: "z8530_sync_open – Open a Z8530 channel for PIO"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>The network interface we are using</dl>
+</dd><dd>The network interface we are using</dd></dl>
 <p> <i>c</i></p>
 <dl>
-<dd>The Z8530 channel to open in synchronous PIO mode</dl>
+<dd>The Z8530 channel to open in synchronous PIO mode</dd></dl>
 <h2>Description</h2>
 <p>Switch a Z8530 into synchronous mode without DMA assist. We raise the RTS/DTR and commence network operation.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

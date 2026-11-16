@@ -11,17 +11,11 @@ std::for_each_n - std::for_each_n
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt, class Size, class UnaryFunction &gt;                                           (since C++17)
-
 InputIt for_each_n( InputIt first, Size n, UnaryFunction f );                                        (until C++20)
-
 template&lt; class InputIt, class Size, class UnaryFunction &gt;                                   (1)     (since C++20)
-
 constexpr InputIt for_each_n( InputIt first, Size n, UnaryFunction f );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class Size, class UnaryFunction2 &gt;             (2) (since C++17)
-
 ForwardIt for_each_n( ExecutionPolicy&amp;&amp; policy, ForwardIt first, Size n, UnaryFunction2 f );</code></pre> 
 1) Applies the given function object f to the result of dereferencing every iterator in the range [first, first + n), in order. 
 2) Applies the given function object f to the result of dereferencing every iterator in the range [first, first + n) (not necessarily in order). The algorithm is executed according to policy. This overload does not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true. 
@@ -80,12 +74,9 @@ The overload with a template parameter named ExecutionPolicy reports errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; ns{1, 2, 3, 4, 5};
     for (auto n : ns)

@@ -14,7 +14,7 @@ description: "crypto_shash_init – (re)initialize message digest"
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>operational state handle that is already filled</dl>
+</dd><dd>operational state handle that is already filled</dd></dl>
 <h2>Description</h2>
 <p>The call (re-)initializes the message digest referenced by the operational state handle. Any potentially existing state created by previous operations is discarded.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_shash_init – (re)initialize message digest"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

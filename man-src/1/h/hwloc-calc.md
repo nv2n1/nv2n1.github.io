@@ -14,50 +14,50 @@ description: "hwloc-calc – Operate on cpu mask strings and objects"
 <p> Note that <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) provides a detailed explanation of the hwloc system and of valid &lt;location&gt; formats; it should be read before reading this man page. </i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code> <code>&#8211;physical</code></p>
-<dd> Use OS/physical indexes instead of logical indexes for both input and output.</p>
-<dt><code>-l</code> <code>&#8211;logical</code></p>
-<dd> Use logical indexes instead of physical/OS indexes for both input and output (default).</p>
-<dt><code>&#8211;pi</code> <code>&#8211;physical-input</code></p>
-<dd> Use OS/physical indexes instead of logical indexes for input.</p>
-<dt><code>&#8211;li</code> <code>&#8211;logical-input</code></p>
-<dd> Use logical indexes instead of physical/OS indexes for input (default).</p>
-<dt><code>&#8211;po</code> <code>&#8211;physical-output</code></p>
-<dd> Use OS/physical indexes instead of logical indexes for output.</p>
-<dt><code>&#8211;lo</code> <code>&#8211;logical-output</code></p>
-<dd> Use logical indexes instead of physical/OS indexes for output (default, except for cpusets which are always physical).</p>
-<dt><code>-N &#8211;number-of &lt;type|depth&gt;</code></p>
-<dd> Report the number of objects of the given type or depth that intersect the CPU set. This is convenient for finding how many cores, NUMA nodes or PUs are available in a machine.</p>
-<dt><code>-I &#8211;intersect &lt;type|depth&gt;</code></p>
-<dd> Find the list of objects of the given type or depth that intersect the CPU set and report the comma-separated list of their indexes instead of the cpu mask string. This may be used for determining the list of objects above or below the input objects. When combined with <code>&#8211;physical</code>, the list is convenient to pass to external tools such as taskset or numactl <code>&#8211;physcpubind</code> or <code>&#8211;membind</code>. This is different from &#8211;largest since the latter requires that all reported objects are strictly included inside the input objects.</p>
-<dt><code>-H &#8211;hierarchical &lt;type1&gt;.&lt;type2&gt;&#8230;</code></p>
-<dd> Find the list of objects of type &lt;type2&gt; that intersect the CPU set and report the space-separated list of their hierarchical indexes with respect to &lt;type1&gt;, &lt;type2&gt;, etc. For instance, if <i>package.core</i> is given, the output would be <i>Package:1.Core:2 Package:2.Core:3</i> if the input contains the third core of the second package and the fourth core of the third package.</p>
-<dt><code>&#8211;largest</code></p>
-<dd> Report (in a human readable format) the list of largest objects which exactly include all input objects. None of these output objects intersect each other, and the sum of them is exactly equivalent to the input. No largest object is included in the input This is different from &#8211;intersect where reported objects may not be strictly included in the input.</p>
-<dt><code>&#8211;sep &lt;sep&gt;</code></p>
-<dd> Change the field separator in the output. By default, a space is used to separate output objects (for instance when <code>&#8211;hierarchical</code> or <code>&#8211;largest</code> is given) while a comma is used to separate indexes (for instance when <code>&#8211;intersect</code> is given).</p>
-<dt><code>&#8211;single</code></p>
-<dd> Singlify the output to a single CPU.</p>
-<dt><code>&#8211;taskset</code></p>
-<dd> Display CPU set strings in the format recognized by the taskset command-line program instead of hwloc-specific CPU set string format. This option has no impact on the format of input CPU set strings, both formats are always accepted.</p>
-<dt><code>&#8211;restrict</code> &lt;cpuset&gt;</p>
-<dd> Restrict the topology to the given cpuset.</p>
-<dt><code>&#8211;whole-system</code></p>
-<dd> Do not consider administration limitations.</p>
-<dt><code>-i</code> &lt;file&gt;, <code>&#8211;input</code> &lt;file&gt;</p>
-<dd> Read topology from XML file &lt;file&gt; (instead of discovering the topology on the local machine). If &lt;file&gt; is &quot;-&quot;, the standard input is used. XML support must have been compiled in to hwloc for this option to be usable.</p>
-<dt><code>-i</code> &lt;directory&gt;, <code>&#8211;input</code> &lt;directory&gt;</p>
-<dd> Read topology from the chroot specified by &lt;directory&gt; (instead of discovering the topology on the local machine). This option is generally only available on Linux. The chroot was usually created by gathering another machine topology with hwloc-gather-topology.</p>
-<dt><code>-i</code> &lt;specification&gt;, <code>&#8211;input</code> &lt;specification&gt;</p>
-<dd> Simulate a fake hierarchy (instead of discovering the topology on the local machine). If &lt;specification&gt; is &quot;node:2 pu:3&quot;, the topology will contain two NUMA nodes with 3 processing units in each of them. The &lt;specification&gt; string must end with a number of PUs.</p>
-<dt><code>&#8211;if</code> &lt;format&gt;, <code>&#8211;input-format</code> &lt;format&gt;</p>
-<dd> Enforce the input in the given format, among <code>xml</code>, <code>fsroot</code> and <code>synthetic</code>.</p>
-<dt><code>-q</code> <code>&#8211;quiet</code></p>
-<dd> Hide non-fatal error messages. It mostly includes locations pointing to non-existing objects.</p>
-<dt><code>-v</code> <code>&#8211;verbose</code></p>
-<dd> Verbose output.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Report version and exit.</dl>
+<dt><code>-p</code> <code>&#8211;physical</code></dt>
+<dd> Use OS/physical indexes instead of logical indexes for both input and output.</dd>
+<dt><code>-l</code> <code>&#8211;logical</code></dt>
+<dd> Use logical indexes instead of physical/OS indexes for both input and output (default).</dd>
+<dt><code>&#8211;pi</code> <code>&#8211;physical-input</code></dt>
+<dd> Use OS/physical indexes instead of logical indexes for input.</dd>
+<dt><code>&#8211;li</code> <code>&#8211;logical-input</code></dt>
+<dd> Use logical indexes instead of physical/OS indexes for input (default).</dd>
+<dt><code>&#8211;po</code> <code>&#8211;physical-output</code></dt>
+<dd> Use OS/physical indexes instead of logical indexes for output.</dd>
+<dt><code>&#8211;lo</code> <code>&#8211;logical-output</code></dt>
+<dd> Use logical indexes instead of physical/OS indexes for output (default, except for cpusets which are always physical).</dd>
+<dt><code>-N &#8211;number-of &lt;type|depth&gt;</code></dt>
+<dd> Report the number of objects of the given type or depth that intersect the CPU set. This is convenient for finding how many cores, NUMA nodes or PUs are available in a machine.</dd>
+<dt><code>-I &#8211;intersect &lt;type|depth&gt;</code></dt>
+<dd> Find the list of objects of the given type or depth that intersect the CPU set and report the comma-separated list of their indexes instead of the cpu mask string. This may be used for determining the list of objects above or below the input objects. When combined with <code>&#8211;physical</code>, the list is convenient to pass to external tools such as taskset or numactl <code>&#8211;physcpubind</code> or <code>&#8211;membind</code>. This is different from &#8211;largest since the latter requires that all reported objects are strictly included inside the input objects.</dd>
+<dt><code>-H &#8211;hierarchical &lt;type1&gt;.&lt;type2&gt;&#8230;</code></dt>
+<dd> Find the list of objects of type &lt;type2&gt; that intersect the CPU set and report the space-separated list of their hierarchical indexes with respect to &lt;type1&gt;, &lt;type2&gt;, etc. For instance, if <i>package.core</i> is given, the output would be <i>Package:1.Core:2 Package:2.Core:3</i> if the input contains the third core of the second package and the fourth core of the third package.</dd>
+<dt><code>&#8211;largest</code></dt>
+<dd> Report (in a human readable format) the list of largest objects which exactly include all input objects. None of these output objects intersect each other, and the sum of them is exactly equivalent to the input. No largest object is included in the input This is different from &#8211;intersect where reported objects may not be strictly included in the input.</dd>
+<dt><code>&#8211;sep &lt;sep&gt;</code></dt>
+<dd> Change the field separator in the output. By default, a space is used to separate output objects (for instance when <code>&#8211;hierarchical</code> or <code>&#8211;largest</code> is given) while a comma is used to separate indexes (for instance when <code>&#8211;intersect</code> is given).</dd>
+<dt><code>&#8211;single</code></dt>
+<dd> Singlify the output to a single CPU.</dd>
+<dt><code>&#8211;taskset</code></dt>
+<dd> Display CPU set strings in the format recognized by the taskset command-line program instead of hwloc-specific CPU set string format. This option has no impact on the format of input CPU set strings, both formats are always accepted.</dd>
+<dt><code>&#8211;restrict</code> &lt;cpuset&gt;</dt>
+<dd> Restrict the topology to the given cpuset.</dd>
+<dt><code>&#8211;whole-system</code></dt>
+<dd> Do not consider administration limitations.</dd>
+<dt><code>-i</code> &lt;file&gt;, <code>&#8211;input</code> &lt;file&gt;</dt>
+<dd> Read topology from XML file &lt;file&gt; (instead of discovering the topology on the local machine). If &lt;file&gt; is &quot;-&quot;, the standard input is used. XML support must have been compiled in to hwloc for this option to be usable.</dd>
+<dt><code>-i</code> &lt;directory&gt;, <code>&#8211;input</code> &lt;directory&gt;</dt>
+<dd> Read topology from the chroot specified by &lt;directory&gt; (instead of discovering the topology on the local machine). This option is generally only available on Linux. The chroot was usually created by gathering another machine topology with hwloc-gather-topology.</dd>
+<dt><code>-i</code> &lt;specification&gt;, <code>&#8211;input</code> &lt;specification&gt;</dt>
+<dd> Simulate a fake hierarchy (instead of discovering the topology on the local machine). If &lt;specification&gt; is &quot;node:2 pu:3&quot;, the topology will contain two NUMA nodes with 3 processing units in each of them. The &lt;specification&gt; string must end with a number of PUs.</dd>
+<dt><code>&#8211;if</code> &lt;format&gt;, <code>&#8211;input-format</code> &lt;format&gt;</dt>
+<dd> Enforce the input in the given format, among <code>xml</code>, <code>fsroot</code> and <code>synthetic</code>.</dd>
+<dt><code>-q</code> <code>&#8211;quiet</code></dt>
+<dd> Hide non-fatal error messages. It mostly includes locations pointing to non-existing objects.</dd>
+<dt><code>-v</code> <code>&#8211;verbose</code></dt>
+<dd> Verbose output.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Report version and exit.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> hwloc-calc generates and manipulates CPU mask strings or objects. Both input and output may be either objects (with physical or logical indexes), CPU lists (with physical or logical indexes), or CPU mask strings (always physically indexed). </p>
 <p> If objects or CPU mask strings are given on the command-line, they are combined and a single output is printed. If no object or CPU mask strings are given on the command-line, the program will read the standard input. It will combine multiple objects or CPU mask strings that are given on the same line of the standard input line with spaces as separators. Different input lines will be processed separately. </p>

@@ -14,12 +14,12 @@ description: "semanage-dontaudit – SELinux Policy Management dontaudit tool"
 <p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. semanage dontaudit toggles whether or not dontaudit rules will be in the policy. Policy writers use dontaudit rules to cause confined applications to use alternative paths. Dontaudit rules are denied but not reported in the logs. Some times dontaudit rules can cause bugs in applications but policy writers will not realize it since the AVC is not audited. Turning off dontaudit rules with this command to see if the kernel is blocking an access. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd>show this help message and exit</p>
-<dt><i>-S STORE, &#8211;store STORE</i></p>
-<dd>Select an alternate SELinux Policy Store to manage</p>
-<dt><i>-N, &#8211;noreload</i></p>
-<dd>Do not reload the policy after commit </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>show this help message and exit</dd>
+<dt><i>-S STORE, &#8211;store STORE</i></dt>
+<dd>Select an alternate SELinux Policy Store to manage</dd>
+<dt><i>-N, &#8211;noreload</i></dt>
+<dd>Do not reload the policy after commit </dd>
 </dl>
 <h2>Example</h2>
 <pre>Turn off dontaudit rules

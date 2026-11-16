@@ -20,13 +20,13 @@ description: "zerofree — zero free blocks from ext2, ext3 and ext4 file-system
 &nbsp; </p>
 <p> The usual way to achieve the same result (zeroing the unallocated blocks) is to run <code>dd</code> (1) to create a file full of zeroes that takes up the entire free space on the drive, and then delete this file. This has many disadvantages, which zerofree alleviates:</p>
 <dl>
-<dt> &bull;</p>
-<dd>it is slow;</p>
-<dt> &bull;</p>
-<dd>it makes the disk image (temporarily) grow to its maximal extent;</p>
-<dt> &bull;</p>
+<dt> &bull;</dt>
+<dd>it is slow;</dd>
+<dt> &bull;</dt>
+<dd>it makes the disk image (temporarily) grow to its maximal extent;</dd>
+<dt> &bull;</dt>
 <dd>it (temporarily) uses all free space on the disk, so other concurrent write actions may fail.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <p> <i>filesystem</i> has to be unmounted or mounted read-only for <code>zerofree</code> to work. It will exit with an error message if the <i>filesystem</i> is mounted writable. To remount the root file-system readonly, you can first switch to single user runlevel (<code>telinit 1</code>) then use <code>mount -o remount,ro </code><i>filesystem</i>.<br />
 &nbsp; </p>
 <p> <code>zerofree</code> has been written to be run from GNU/Linux systems installed as guest OSes inside a virtual machine. In this case, it is typically run from within the guest system, and a utility is then run from the host system to shrink disk image (<code>VBoxManage modifyhd &#8211;compact</code>, provided with virtualbox, is able to do that for some disk image formats).<br />
@@ -35,12 +35,12 @@ description: "zerofree — zero free blocks from ext2, ext3 and ext4 file-system
 &nbsp;</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd>Perform a dry run (do not modify the file-system);</p>
-<dt><code>-v</code></p>
-<dd>Be verbose: show the number of blocks modified by <code>zerofree</code> (or that would be modified, in case the <code>-n</code> is used), the number of free blocks and the total number of blocks on the filesystem;</p>
-<dt><code>-f value</code></p>
-<dd>Specify the octet value to fill empty blocks with (defaults to 0). Argument must be within the range 0 to 255.</dl>
+<dt><code>-n</code></dt>
+<dd>Perform a dry run (do not modify the file-system);</dd>
+<dt><code>-v</code></dt>
+<dd>Be verbose: show the number of blocks modified by <code>zerofree</code> (or that would be modified, in case the <code>-n</code> is used), the number of free blocks and the total number of blocks on the filesystem;</dd>
+<dt><code>-f value</code></dt>
+<dd>Specify the octet value to fill empty blocks with (defaults to 0). Argument must be within the range 0 to 255.</dd></dl>
 <h2>See Also</h2>
 <p>dd (1).</p>
 <h2>Author</h2>

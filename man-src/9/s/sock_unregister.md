@@ -15,7 +15,7 @@ sock_unregister - remove a protocol handler
 <h2>Arguments</h2>
 
 <i>family</i>
-<dl><dd><dd>protocol family to remove</dl>
+<dl><dd></dd><dd>protocol family to remove</dd></dl>
 
 <h2>Description</h2>
 

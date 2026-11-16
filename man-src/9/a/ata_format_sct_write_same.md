@@ -14,13 +14,13 @@ description: "ata_format_sct_write_same – SATL Write Same to ATA SCT Write Sam
 <p><i>cmd</i></p>
 <dl>
 <dd>
-<dd>SCSI command being translated</dl>
+</dd><dd>SCSI command being translated</dd></dl>
 <p> <i>lba</i></p>
 <dl>
-<dd>Starting sector</dl>
+<dd>Starting sector</dd></dl>
 <p> <i>num</i></p>
 <dl>
-<dd>Number of sectors to be zero&#8217;d.</dl>
+<dd>Number of sectors to be zero&#8217;d.</dd></dl>
 <h2>Description</h2>
 <p>Rewrite the WRITE SAME payload to be an SCT Write Same formatted descriptor.</p>
 <h2>Note</h2>
@@ -30,5 +30,5 @@ description: "ata_format_sct_write_same – SATL Write Same to ATA SCT Write Sam
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -11,7 +11,6 @@ std::bad_exception::bad_exception - std::bad_exception::bad_exception
 <h2>Synopsis</h2>
 
 <pre><code>bad_exception() noexcept;
-
 bad_exception(const bad_exception &amp;other) noexcept;</code></pre> 
 Constructs new bad_exception object. 
 1) Default constructor. 

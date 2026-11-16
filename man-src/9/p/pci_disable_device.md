@@ -14,7 +14,7 @@ description: "pci_disable_device – Disable PCI device after use"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device to be disabled</dl>
+</dd><dd>PCI device to be disabled</dd></dl>
 <h2>Description</h2>
 <p>Signal to the system that the PCI device is not in use by the system anymore. This only involves disabling PCI bus-mastering, if active. </p>
 <p> Note we don&#8217;t actually disable the device until all callers of <code>pci_enable_device</code> have called <code>pci_disable_device</code>.</p>

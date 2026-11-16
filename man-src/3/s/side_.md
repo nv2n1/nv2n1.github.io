@@ -52,11 +52,11 @@ description: "QuantLib::CreditDefaultSwap – Credit default swap."
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> This instrument currently assumes that the issuer did not default until today&#8217;s date.</dl>
+</dt><dd> This instrument currently assumes that the issuer did not default until today&#8217;s date.</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
 <dt>
-<dd> if QL_TODAYS_PAYMENTS was defined (in userconfig.hpp or when calling ./configure; it is undefined by default) payments occurring at the settlement date of the swap are included in the NPV, and therefore affect the fair-spread calculation. This might not be what you want.</dl>
+</dt><dd> if QL_TODAYS_PAYMENTS was defined (in userconfig.hpp or when calling ./configure; it is undefined by default) payments occurring at the settlement date of the swap are included in the NPV, and therefore affect the fair-spread calculation. This might not be what you want.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>CDS.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

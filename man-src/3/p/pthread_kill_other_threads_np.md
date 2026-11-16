@@ -10,7 +10,6 @@ description: "pthread_kill_other_threads_np – terminate all other threads in p
 <p>pthread_kill_other_threads_np &#8211; terminate all other threads in process</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 void pthread_kill_other_threads_np(void);</code></pre>
 <h2>Description</h2>
 <p><code>pthread_kill_other_threads_np</code>() has an effect only in the LinuxThreads threading implementation. On that implementation, calling this function causes the immediate termination of all threads in the application, except the calling thread. The cancellation state and cancellation type of the to-be-terminated threads are ignored, and the cleanup handlers are not called in those threads.</p>

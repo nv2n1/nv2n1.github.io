@@ -12,41 +12,39 @@ description: "npm-dist-tag – Modify package distribution tags"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm dist - tag add&lt;pkg&gt; @&lt;version&gt;[&lt;tag&gt;] npm dist - tag rm&lt;pkg&gt;&lt;tag&gt; npm dist - tag ls[&lt;pkg&gt;] aliases : dist - tags
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Add, remove, and enumerate distribution tags on a package:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> add: Tags the specified version of the package with the specified tag, or the <code>&#8211;tag</code> config if not specified. If you have two-factor authentication on auth-and-writes then you’ll need to include a one-time password on the command line with <code>&#8211;otp &lt;one-time password&gt;</code>.</p>
-<dt>&bull;</p>
-<dd> rm: Clear a tag that is no longer in use from the package.</p>
-<dt>&bull;</p>
-<dd> ls: Show all of the dist-tags for a package, defaulting to the package in the current prefix. This is the default action if none is specified. </p>
+<dt>&bull;</dt>
+<dd> add: Tags the specified version of the package with the specified tag, or the <code>&#8211;tag</code> config if not specified. If you have two-factor authentication on auth-and-writes then you’ll need to include a one-time password on the command line with <code>&#8211;otp &lt;one-time password&gt;</code>.</dd>
+<dt>&bull;</dt>
+<dd> rm: Clear a tag that is no longer in use from the package.</dd>
+<dt>&bull;</dt>
+<dd> ls: Show all of the dist-tags for a package, defaulting to the package in the current prefix. This is the default action if none is specified. </dd>
 </dl>
 </dl>
 <p> A tag can be used when installing packages as a reference to a version instead of using a specific version number: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm install &lt;name&gt;@&lt;tag&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> When installing dependencies, a preferred tagged version may be specified: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm install --tag &lt;tag&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> This also applies to <code>npm dedupe</code>. </p>
 <p> Publishing a package sets the <code>latest</code> tag to the published version unless the <code>&#8211;tag</code> option is used. For example, <code>npm publish &#8211;tag=beta</code>. </p>
 <p> By default, <code>npm install &lt;pkg&gt;</code> (without any <code>@&lt;version&gt;</code> or <code>@&lt;tag&gt;</code> specifier) installs the <code>latest</code> tag.</p>
@@ -63,21 +61,19 @@ npm install --tag &lt;tag&gt;
 <p> The simplest way to avoid semver problems with tags is to use tags that do not begin with a number or the letter <code>v</code>.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help publish</p>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help dedupe</p>
-<dt>&bull;</p>
-<dd> npm help registry</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc </p>
+<dt>&bull;</dt>
+<dd> npm help publish</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help dedupe</dd>
+<dt>&bull;</dt>
+<dd> npm help registry</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc </dd>
 </dl>
 </dl>
 <h2>Index</h2>

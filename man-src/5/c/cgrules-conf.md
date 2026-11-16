@@ -52,10 +52,10 @@ description: "cgrules.conf – libcgroup configuration file"
 <p>Processes in cpu and cpuacct subsystems started by anybody from students group belong to group students/name. Where &quot;name&quot; is user name of owner of the process. </p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/cgrules.conf</code></p>
+<dt><code>/etc/cgrules.conf</code></dt>
 <dd>
-<dt>default libcgroup configuration file</p>
-<dd></dl>
+</dd><dt>default libcgroup configuration file</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p>cgconfig.conf (5), cgclassify (1), cgred.conf (5) </p>
 <h2>Bugs</h2>

@@ -21,56 +21,56 @@ description: "slowhttptest – Denial Of Service attacks simulator"
 <li> Slow Read </ul>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-g</code></p>
-<dd> Forces <code>slowhttptest</code> to generate CSV and HTML files when test finishes with timestamp in filename.</p>
-<dt><code>-H</code></p>
-<dd> Starts <code>slowhttptest</code> in SlowLoris mode, sending unfinished HTTP requests.</p>
-<dt><code>-B</code></p>
-<dd> Starts <code>slowhttptest</code> in Slow POST mode, sending unfinished HTTP message bodies.</p>
-<dt><code>-R</code></p>
-<dd> Starts <code>slowhttptest</code> in Range Header mode, sending malicious Range Request header data.</p>
-<dt><code>-X</code></p>
-<dd> Starts <code>slowhttptest</code> in Slow Read mode, reading HTTP responses slowly.</p>
-<dt><code>-a </code><i>start</i></p>
-<dd> Sets the start value of range-specifier for Range Header attack.</p>
-<dt><code>-b </code><i>bytes</i></p>
-<dd> Sets the limit value of range-specifier for Range Header attack.</p>
-<dt><code>-c </code><i>number of connections</i></p>
-<dd> Specifies the target number of connections to establish during the test.</p>
-<dt><code>-d </code><i>HTTP proxy host:port</i></p>
-<dd> Specifies HTTP proxy server to connect to for all connections.</p>
-<dt><code>-e </code><i>HTTP proxy host:port</i></p>
-<dd> Specifies HTTP proxy server to connect to for probe connections.</p>
-<dt><code>-i </code><i>seconds</i></p>
-<dd> Specifies the interval between follow up data for slowrois and Slow POST tests.</p>
-<dt><code>-k </code><i>pipeline factor</i></p>
-<dd> Specifies number of times the resource would be requested per socket in Slow Read test.</p>
-<dt><code>-l </code><i>seconds</i></p>
-<dd> Specifies test duration in seconds.</p>
-<dt><code>-n </code><i>seconds</i></p>
-<dd> Specifies the interval between read operations for Slow Read test.</p>
-<dt><code>-o </code><i>file name</i></p>
-<dd> Specifies custom file name, effective with -g.</p>
-<dt><code>-p </code><i>seconds</i></p>
-<dd> Specifies the interval to wait for HTTP response onprobe connection, before marking the server as DoSed.</p>
-<dt><code>-r </code><i>connections per second</i></p>
-<dd> Specifies the connection rate.</p>
-<dt><code>-s </code><i>bytes</i></p>
-<dd> Specifies the value of Content-Length header for Slow POST test.</p>
-<dt><code>-t </code><i>HTTP verb</i></p>
-<dd> Specifies the verb to use in HTTP request.</p>
-<dt><code>-u </code><i>URL</i></p>
-<dd> Specifies the URL.</p>
-<dt><code>-v </code><i>level</i></p>
-<dd> Specifies the verbosity level of logging.</p>
-<dt><code>-w </code><i>bytes</i></p>
-<dd> Specifies the start of the range the TCP advertised window size would be picked from in Slow Read test.</p>
-<dt><code>-x </code><i>bytes</i></p>
-<dd> Specifies the maximum length of follow up data for slowloris and Slow POST tests.</p>
-<dt><code>-y </code><i>bytes</i></p>
-<dd> Specifies the end of the range the TCP advertised window size would be picked from in Slow Read test.</p>
-<dt><code>-z </code><i>bytes</i></p>
-<dd> Specifies the number of bytes to read from receive buffer with each read() operation.</dl>
+<dt><code>-g</code></dt>
+<dd> Forces <code>slowhttptest</code> to generate CSV and HTML files when test finishes with timestamp in filename.</dd>
+<dt><code>-H</code></dt>
+<dd> Starts <code>slowhttptest</code> in SlowLoris mode, sending unfinished HTTP requests.</dd>
+<dt><code>-B</code></dt>
+<dd> Starts <code>slowhttptest</code> in Slow POST mode, sending unfinished HTTP message bodies.</dd>
+<dt><code>-R</code></dt>
+<dd> Starts <code>slowhttptest</code> in Range Header mode, sending malicious Range Request header data.</dd>
+<dt><code>-X</code></dt>
+<dd> Starts <code>slowhttptest</code> in Slow Read mode, reading HTTP responses slowly.</dd>
+<dt><code>-a </code><i>start</i></dt>
+<dd> Sets the start value of range-specifier for Range Header attack.</dd>
+<dt><code>-b </code><i>bytes</i></dt>
+<dd> Sets the limit value of range-specifier for Range Header attack.</dd>
+<dt><code>-c </code><i>number of connections</i></dt>
+<dd> Specifies the target number of connections to establish during the test.</dd>
+<dt><code>-d </code><i>HTTP proxy host:port</i></dt>
+<dd> Specifies HTTP proxy server to connect to for all connections.</dd>
+<dt><code>-e </code><i>HTTP proxy host:port</i></dt>
+<dd> Specifies HTTP proxy server to connect to for probe connections.</dd>
+<dt><code>-i </code><i>seconds</i></dt>
+<dd> Specifies the interval between follow up data for slowrois and Slow POST tests.</dd>
+<dt><code>-k </code><i>pipeline factor</i></dt>
+<dd> Specifies number of times the resource would be requested per socket in Slow Read test.</dd>
+<dt><code>-l </code><i>seconds</i></dt>
+<dd> Specifies test duration in seconds.</dd>
+<dt><code>-n </code><i>seconds</i></dt>
+<dd> Specifies the interval between read operations for Slow Read test.</dd>
+<dt><code>-o </code><i>file name</i></dt>
+<dd> Specifies custom file name, effective with -g.</dd>
+<dt><code>-p </code><i>seconds</i></dt>
+<dd> Specifies the interval to wait for HTTP response onprobe connection, before marking the server as DoSed.</dd>
+<dt><code>-r </code><i>connections per second</i></dt>
+<dd> Specifies the connection rate.</dd>
+<dt><code>-s </code><i>bytes</i></dt>
+<dd> Specifies the value of Content-Length header for Slow POST test.</dd>
+<dt><code>-t </code><i>HTTP verb</i></dt>
+<dd> Specifies the verb to use in HTTP request.</dd>
+<dt><code>-u </code><i>URL</i></dt>
+<dd> Specifies the URL.</dd>
+<dt><code>-v </code><i>level</i></dt>
+<dd> Specifies the verbosity level of logging.</dd>
+<dt><code>-w </code><i>bytes</i></dt>
+<dd> Specifies the start of the range the TCP advertised window size would be picked from in Slow Read test.</dd>
+<dt><code>-x </code><i>bytes</i></dt>
+<dd> Specifies the maximum length of follow up data for slowloris and Slow POST tests.</dd>
+<dt><code>-y </code><i>bytes</i></dt>
+<dd> Specifies the end of the range the TCP advertised window size would be picked from in Slow Read test.</dd>
+<dt><code>-z </code><i>bytes</i></dt>
+<dd> Specifies the number of bytes to read from receive buffer with each read() operation.</dd></dl>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Start a slowloris test of host.example.com with 1000 connections, statistics goes into my_header_stats, interval between follow up headers is 10 seconds and connection rate is 200 connections per second: </p>

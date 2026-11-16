@@ -26,13 +26,13 @@ double result = average(products.begin(),products.end());
  sequence2.end(),
  std::multiplies&lt;double()));</pre>The call to make_coupling_iterator creates an iterator which is really a reference to the two iterators and the operation we passed. Dereferencing such iterator returns the result of applying such operation to the values pointed to by the two contained iterators. Advancing the coupling iterator advances the two underlying ones. One can see how iterating on such iterator generates the products one by one so that they can be processed by average(), but does not need allocating memory for storing the results. The product sequence is generated on the fly. The other iterators share the same principle but have different functionalities:
 <dl><dt>*
-<dd>combining_iterator is the same as coupling_iterator, but works on $ N $ sequences while the latter works on 2;
-<dt>*
-<dd>filtering_iterator generates the elements of a given sequence which satisfy a given predicate, i.e., it takes a sequence $ [x_0,x_1,ots] $ and a predicate $ p $ and generates the sequence of those $ x_i $ for which $ p(x_i) $ returns true;
-<dt>*
-<dd>processing_iterator takes a sequence $ [x_0,x_1,ots] $ and a function $ f $ and generates the sequence $ [f(x_0),f(x_1),ots] $;
-<dt>*
-<dd>stepping_iterator takes a sequence $ [x_0,x_1,ots] $ and a step $ m $ and generates the sequence $ [x_0,x_m,x_{2m},ots] $</dl>
+</dt><dd>combining_iterator is the same as coupling_iterator, but works on $ N $ sequences while the latter works on 2;
+</dd><dt>*
+</dt><dd>filtering_iterator generates the elements of a given sequence which satisfy a given predicate, i.e., it takes a sequence $ [x_0,x_1,ots] $ and a predicate $ p $ and generates the sequence of those $ x_i $ for which $ p(x_i) $ returns true;
+</dd><dt>*
+</dt><dd>processing_iterator takes a sequence $ [x_0,x_1,ots] $ and a function $ f $ and generates the sequence $ [f(x_0),f(x_1),ots] $;
+</dd><dt>*
+</dt><dd>stepping_iterator takes a sequence $ [x_0,x_1,ots] $ and a step $ m $ and generates the sequence $ [x_0,x_m,x_{2m},ots] $</dd></dl>
  
 
 <h2>Author</h2>

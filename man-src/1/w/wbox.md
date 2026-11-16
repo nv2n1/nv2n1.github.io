@@ -20,40 +20,40 @@ description: "wbox – HTTP testing tool and configuration-less HTTP server"
 <p> &#8211; Use it as a <code>configuration-less HTTP server</code> to share files!</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&lt;number&gt;</i></p>
-<dd> Stop after &lt;number&gt; requests</p>
-<dt><i>compr</i></p>
-<dd> Send Accept-Encoding: gzip,deflate in request</p>
-<dt><i>showhdr </i></p>
-<dd> Show the HTTP reply header</p>
-<dt><i>dump</i></p>
-<dd> Show the HTTP reply header + body</p>
-<dt><i>silent</i></p>
-<dd> Don&#8217;t show status lines</p>
-<dt><i>head</i></p>
-<dd> Use the HEAD method instead of GET</p>
-<dt><i>http10</i></p>
-<dd> Use HTTP/1.0 instead of HTTP/1.1</p>
-<dt><i>close</i></p>
-<dd> Close the connection after reading few bytes</p>
-<dt><i>host<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;hostname&gt;</i></p>
-<dd> Use &lt;hostname&gt; as Host: field in HTTP request</p>
-<dt><i>timesplit</i></p>
-<dd> Show transfer times for different data chunks</p>
-<dt><i>wait<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;number&gt; </i></p>
-<dd> Wait &lt;number&gt; seconds between requests. Default 1.</p>
-<dt><i>clients &lt;number&gt;</i></p>
-<dd> Spawn &lt;number&gt; concurrent clients (via fork()).</p>
-<dt><i>referer &lt;url&gt;</i></p>
-<dd> Send the specified referer header.</p>
-<dt><i>cookie &lt;name&gt; &lt;val&gt;</i></p>
-<dd> Set cookie name=val, can be used multiple times.</p>
-<dt><i>maxclients &lt;number&gt;</i></p>
-<dd> Max concurrent clients in <code>server mode</code><i> (default 20).</p>
-<dt>-h or &#8211;help</i></p>
-<dd> Show this help.</p>
-<dt><i>-v</i></p>
-<dd> Show version.</dl>
+<dt><i>&lt;number&gt;</i></dt>
+<dd> Stop after &lt;number&gt; requests</dd>
+<dt><i>compr</i></dt>
+<dd> Send Accept-Encoding: gzip,deflate in request</dd>
+<dt><i>showhdr </i></dt>
+<dd> Show the HTTP reply header</dd>
+<dt><i>dump</i></dt>
+<dd> Show the HTTP reply header + body</dd>
+<dt><i>silent</i></dt>
+<dd> Don&#8217;t show status lines</dd>
+<dt><i>head</i></dt>
+<dd> Use the HEAD method instead of GET</dd>
+<dt><i>http10</i></dt>
+<dd> Use HTTP/1.0 instead of HTTP/1.1</dd>
+<dt><i>close</i></dt>
+<dd> Close the connection after reading few bytes</dd>
+<dt><i>host<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;hostname&gt;</i></dt>
+<dd> Use &lt;hostname&gt; as Host: field in HTTP request</dd>
+<dt><i>timesplit</i></dt>
+<dd> Show transfer times for different data chunks</dd>
+<dt><i>wait<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;number&gt; </i></dt>
+<dd> Wait &lt;number&gt; seconds between requests. Default 1.</dd>
+<dt><i>clients &lt;number&gt;</i></dt>
+<dd> Spawn &lt;number&gt; concurrent clients (via fork()).</dd>
+<dt><i>referer &lt;url&gt;</i></dt>
+<dd> Send the specified referer header.</dd>
+<dt><i>cookie &lt;name&gt; &lt;val&gt;</i></dt>
+<dd> Set cookie name=val, can be used multiple times.</dd>
+<dt><i>maxclients &lt;number&gt;</i></dt>
+<dd> Max concurrent clients in <code>server mode</code><i> (default 20).</dd>
+<dt>-h or &#8211;help</i></dt>
+<dd> Show this help.</dd>
+<dt><i>-v</i></dt>
+<dd> Show version.</dd></dl>
 <h2>USAGE EXAMPLES</h2>
 <p> wbox wikipedia.org (simplest, basic usage) </p>
 <p> wbox wikipedia.org 3 compr wait 0 (three requests, compression, no delay) </p>

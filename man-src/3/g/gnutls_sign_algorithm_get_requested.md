@@ -14,12 +14,12 @@ description: "gnutls_sign_algorithm_get_requested – API function"
 <p> <code>int gnutls_sign_algorithm_get_requested(gnutls_session_t </code><i>session</i><code>, size_t </code><i>indx</i><code>, gnutls_sign_algorithm_t * </code><i>algo</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>size_t indx</p>
-<dd> is an index of the signature algorithm to return</p>
-<dt>gnutls_sign_algorithm_t * algo</p>
-<dd> the returned certificate type will be stored there</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>size_t indx</dt>
+<dd> is an index of the signature algorithm to return</dd>
+<dt>gnutls_sign_algorithm_t * algo</dt>
+<dd> the returned certificate type will be stored there</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns the signature algorithm specified by index that was requested by the peer. If the specified index has no data available this function returns <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code>. If the negotiated TLS version does not support signature algorithms then <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned even for the first index. The first index is 0. </p>
 <p> This function is useful in the certificate callback functions to assist in selecting the correct certificate.</p>
@@ -36,6 +36,6 @@ description: "gnutls_sign_algorithm_get_requested – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

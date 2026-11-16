@@ -55,9 +55,9 @@ description: "isnsd_selinux – Security Enhanced Linux Policy for the isnsd pro
 <p> Policy governs the access confined processes have to these ports. SELinux isnsd policy is very flexible allowing users to setup their isnsd processes in as secure a method as possible. </p>
 <p> The following port types are defined for isnsd: </p>
 <dl>
-<dt><code>isns_port_t</code></p>
+<dt><code>isns_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 3205 udp 3205</dl>
+</dd><dd>Default Defined Ports: tcp 3205 udp 3205</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type isnsd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -109,8 +109,8 @@ description: "isnsd_selinux – Security Enhanced Linux Policy for the isnsd pro
 <p> <code>isnsd_var_run_t</code> </p>
 <p> &#8211; Set files with the isnsd_var_run_t type, if you want to store the isnsd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/isnsctl, /var/run/isnsd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/isnsctl, /var/run/isnsd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

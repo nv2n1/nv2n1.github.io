@@ -15,25 +15,25 @@ description: "connmark – netfilter connmark retriever action"
 <p>The connmark action is used to restore the connection&#8217;s mark value into the packet&#8217;s fwmark.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>zone</code><i> u16_zone_index</i></p>
-<dd>Specify the conntrack zone when doing conntrack lookups for packets. <i>u16_zone_index</i> is a 16bit unsigned decimal value.</p>
-<dt><i>CONTROL</i></p>
-<dd>How to continue after executing this action.</p>
+<dt><code>zone</code><i> u16_zone_index</i></dt>
+<dd>Specify the conntrack zone when doing conntrack lookups for packets. <i>u16_zone_index</i> is a 16bit unsigned decimal value.</dd>
+<dt><i>CONTROL</i></dt>
+<dd>How to continue after executing this action.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>reclassify</code></p>
-<dd>Restarts classification by jumping back to the first filter attached to this action&#8217;s parent.</p>
-<dt><code>pipe</code></p>
-<dd>Continue with the next action, this is the default.</p>
-<dt><code>drop</code></p>
-<dd><code>shot</code> Packet will be dropped without running further actions.</p>
-<dt><code>continue</code></p>
-<dd>Continue classification with next filter in line.</p>
-<dt><code>pass</code></p>
-<dd>Return to calling qdisc for packet processing. This ends the classification process.</dl>
+</dd><dl>
+<dt><code>reclassify</code></dt>
+<dd>Restarts classification by jumping back to the first filter attached to this action&#8217;s parent.</dd>
+<dt><code>pipe</code></dt>
+<dd>Continue with the next action, this is the default.</dd>
+<dt><code>drop</code></dt>
+<dd><code>shot</code> Packet will be dropped without running further actions.</dd>
+<dt><code>continue</code></dt>
+<dd>Continue classification with next filter in line.</dd>
+<dt><code>pass</code></dt>
+<dd>Return to calling qdisc for packet processing. This ends the classification process.</dd></dl>
 </dl>
-<dt><code>index</code><i> u32_index </i></p>
-<dd>Specify an index for this action in order to being able to identify it in later commands. <i>u32_index</i> is a 32bit unsigned decimal value.</dl>
+<dt><code>index</code><i> u32_index </i></dt>
+<dd>Specify an index for this action in order to being able to identify it in later commands. <i>u32_index</i> is a 32bit unsigned decimal value.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8) </p>

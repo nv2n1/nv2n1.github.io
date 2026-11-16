@@ -19,25 +19,25 @@ description: "cimreparchive – create an archive copy of the CIM Server reposit
 <p><code>cimreparchive </code> recognizes the following options:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>&#8211;help</code></p>
-<dd>Displays the command help message.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Displays the CIM Server version number.</dl>
+</dd><dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Displays the command help message.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Displays the CIM Server version number.</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p>When an error occurs, an error message is written to the standard error stream and a non-zero exit status value is returned. The following exit status values are defined:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>0</code></p>
-<dd>Success</p>
-<dt><code>1</code></p>
-<dd>General error</p>
-<dt><code>2</code></p>
-<dd>Failed to initiate archive operation</p>
-<dt><code>3</code></p>
-<dd>Archive operation failed</dl>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>Success</dd>
+<dt><code>1</code></dt>
+<dd>General error</dd>
+<dt><code>2</code></dt>
+<dd>Failed to initiate archive operation</dd>
+<dt><code>3</code></dt>
+<dd>Archive operation failed</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-cimserver/">cimserver</a>(8), <a href="/docs/linux/man/1-tar/">tar</a>(1). </p>

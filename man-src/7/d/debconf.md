@@ -23,26 +23,26 @@ description: "debconf – Debian package configuration system"
 <h2>Frontends</h2>
 <p>One of debconf&#8217;s unique features is that the interface it presents to you is only one of many, that can be swapped in at will. There are many debconf frontends available:</p>
 <dl>
-<dt><code>dialog</code></p>
-<dd>The default frontend, this uses the <code><a href="/docs/linux/man/1-whiptail/">whiptail</a></code>(1) or <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1) programs to display questions to you. It works in text mode.</p>
-<dt><code>readline</code></p>
+<dt><code>dialog</code></dt>
+<dd>The default frontend, this uses the <code><a href="/docs/linux/man/1-whiptail/">whiptail</a></code>(1) or <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1) programs to display questions to you. It works in text mode.</dd>
+<dt><code>readline</code></dt>
 <dd>
-<dl>
-<dd>The most traditional frontend, this looks quite similar to how Debian configuration always has been: a series of questions, printed out at the console using plain text, and prompts done using the readline library. It even supports tab completion. The libterm-readline-gnu-perl package is strongly recommended if you chose to use this frontend; the default readline module does not support prompting with default values. At the minimum, you&#8217;ll need the perl-modules package installed to use this frontend. </p>
+</dd><dl>
+<dd>The most traditional frontend, this looks quite similar to how Debian configuration always has been: a series of questions, printed out at the console using plain text, and prompts done using the readline library. It even supports tab completion. The libterm-readline-gnu-perl package is strongly recommended if you chose to use this frontend; the default readline module does not support prompting with default values. At the minimum, you&#8217;ll need the perl-modules package installed to use this frontend. </dd>
 <p> This frontend has some special hotkeys. Pageup (or ctrl-u) will go back to the previous question (if that is supported by the package that is using debconf), and pagedown (or ctrl-v) will skip forward to the next question. </p>
 <p> This is the best frontend for remote admin work over a slow connection, or for those who are comfortable with unix.</dl>
-<dt><code>noninteractive</code></p>
-<dd>This is the anti-frontend. It never interacts with you at all, and makes the default answers be used for all questions. It might mail error messages to root, but that&#8217;s it; otherwise it is completely silent and unobtrusive, a perfect frontend for automatic installs. If you are using this front-end, and require non-default answers to questions, you will need to preseed the debconf database; see the section below on Unattended Package Installation for more details.</p>
-<dt><code>gnome</code></p>
-<dd>This is a modern X GUI using the gtk and gnome libraries. Of course, it requires a valid DISPLAY to work; debconf will fall back to other frontends if it can&#8217;t work. Note that this frontend requires you have the libgnome2-perl package installed.</p>
-<dt><code>kde</code></p>
-<dd>This frontend provides a simple X GUI written with the Qt library. It fits well the KDE desktop. You of course need a DISPLAY to use this frontend and must install libqt-perl. The frontend will fall back to dialog if some of the prerequisites are not met.</p>
-<dt><code>editor</code></p>
-<dd>This is for those fanatics who have to do everything in a text editor. It runs your editor on a file that looks something like a typical unix config file, and you edit the file to communicate with debconf. Debconf&#8217;s author prefers to not comment regarding the circumstances that led to this frontend being written.</p>
-<dt><code>web</code></p>
+<dt><code>noninteractive</code></dt>
+<dd>This is the anti-frontend. It never interacts with you at all, and makes the default answers be used for all questions. It might mail error messages to root, but that&#8217;s it; otherwise it is completely silent and unobtrusive, a perfect frontend for automatic installs. If you are using this front-end, and require non-default answers to questions, you will need to preseed the debconf database; see the section below on Unattended Package Installation for more details.</dd>
+<dt><code>gnome</code></dt>
+<dd>This is a modern X GUI using the gtk and gnome libraries. Of course, it requires a valid DISPLAY to work; debconf will fall back to other frontends if it can&#8217;t work. Note that this frontend requires you have the libgnome2-perl package installed.</dd>
+<dt><code>kde</code></dt>
+<dd>This frontend provides a simple X GUI written with the Qt library. It fits well the KDE desktop. You of course need a DISPLAY to use this frontend and must install libqt-perl. The frontend will fall back to dialog if some of the prerequisites are not met.</dd>
+<dt><code>editor</code></dt>
+<dd>This is for those fanatics who have to do everything in a text editor. It runs your editor on a file that looks something like a typical unix config file, and you edit the file to communicate with debconf. Debconf&#8217;s author prefers to not comment regarding the circumstances that led to this frontend being written.</dd>
+<dt><code>web</code></dt>
 <dd>
-<dl>
-<dd>This frontend acts as a web server, that you connect to with your web browser, to browse the questions and answer them. It has a lot of promise, but is a little rough so far. When this frontend starts up, it will print out the location you should point your web browser to. You have to run the web browser on the same machine you are configuring, for security reasons. </p>
+</dd><dl>
+<dd>This frontend acts as a web server, that you connect to with your web browser, to browse the questions and answer them. It has a lot of promise, but is a little rough so far. When this frontend starts up, it will print out the location you should point your web browser to. You have to run the web browser on the same machine you are configuring, for security reasons. </dd>
 <p> Do keep in mind that this is not a very secure frontend. Anyone who has access to the computer being configured can currently access the web server and configure things while this frontend is running. So this is more of a proof of concept than anything.</dl>
 </dl>
 <p> You can change the default frontend debconf uses by reconfiguring debconf. On the other hand, if you just want to change the frontend for a minute, you can set the DEBIAN_FRONTEND environment variable to the name of the frontend to use. For example:<br />
@@ -52,14 +52,14 @@ description: "debconf – Debian package configuration system"
 <h2>Priorities</h2>
 <p>Another nice feature of debconf is that the questions it asks you are prioritized. If you don&#8217;t want to be bothered about every little thing, you can set up debconf to only ask you the most important questions. On the other hand, if you are a control freak, you can make it show you all questions. Each question has a priority. In increasing order of importance:</p>
 <dl>
-<dt><code>low</code></p>
-<dd>Very trivial questions that have defaults that will work in the vast majority of cases.</p>
-<dt><code>medium</code></p>
-<dd>Normal questions that have reasonable defaults.</p>
-<dt><code>high</code></p>
-<dd>Questions that don&#8217;t have a reasonable default.</p>
-<dt><code>critical</code></p>
-<dd>Questions that you really, really need to see (or else).</dl>
+<dt><code>low</code></dt>
+<dd>Very trivial questions that have defaults that will work in the vast majority of cases.</dd>
+<dt><code>medium</code></dt>
+<dd>Normal questions that have reasonable defaults.</dd>
+<dt><code>high</code></dt>
+<dd>Questions that don&#8217;t have a reasonable default.</dd>
+<dt><code>critical</code></dt>
+<dd>Questions that you really, really need to see (or else).</dd></dl>
 <p> Only questions with a priority equal to or greater than the priority you choose will be shown to you. You can set the priority value by reconfiguring debconf, or temporarily by passing <i>&#8211;priority=</i> followed by the value to the <code><a href="/docs/linux/man/8-dpkg-reconfigure/">dpkg-reconfigure</a></code>(8) and <code><a href="/docs/linux/man/8-dpkg-preconfigure/">dpkg-preconfigure</a></code>(8) commands, or by setting the DEBIAN_PRIORITY environment variable.</p>
 <h2>Backend Database</h2>
 <p>Debconf uses a rather flexible and potentially complicated backend database for storing data such as the answers to questions. The file <code>/etc/debconf.conf</code> is used to configure this database. If you need to set up something complicated, like make debconf read a remote database to get defaults, with local overrides, read the <code><a href="/docs/linux/man/5-debconf-conf/">debconf.conf</a></code>(5) man page for all the gory details. Generally, the backend database is located in <code>/var/cache/debconf/</code><br />
@@ -91,28 +91,28 @@ ssh root [at] target&nbsp;<wbr>&quot;DEBIAN_FRONTEND=noninteractive&nbsp;<wbr>\<
 <p> Debian packages which use debconf typically provide both a templates file and a &quot;config&quot; script (run to preconfigure the package) in the control metadata section of the package.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>DEBIAN_FRONTEND</code></p>
-<dd>Used to temporarily change the frontend debconf uses. See above.</p>
-<dt><code>DEBIAN_PRIORITY</code></p>
-<dd>Used to temporarily change the minimum priority of question debconf will display. See above.</p>
-<dt><code>DEBCONF_DEBUG</code></p>
+<dt><code>DEBIAN_FRONTEND</code></dt>
+<dd>Used to temporarily change the frontend debconf uses. See above.</dd>
+<dt><code>DEBIAN_PRIORITY</code></dt>
+<dd>Used to temporarily change the minimum priority of question debconf will display. See above.</dd>
+<dt><code>DEBCONF_DEBUG</code></dt>
 <dd>
+</dd><dl>
+<dd>Turns on debugging output on standard error. May be set to a facility name or a regular expression which matches a facility name (such as &#8216;.*&#8217; to output all debug info). The facility names include:</dd>
 <dl>
-<dd>Turns on debugging output on standard error. May be set to a facility name or a regular expression which matches a facility name (such as &#8216;.*&#8217; to output all debug info). The facility names include:</p>
-<dl>
-<dt><code>user</code></p>
-<dd>Debugging info of interest to a debconf user.</p>
-<dt><code>developer</code></p>
-<dd>Debugging info of interest to a package developer.</p>
-<dt><code>db</code></p>
-<dd>Debugging info about the backend database.</dl>
+<dt><code>user</code></dt>
+<dd>Debugging info of interest to a debconf user.</dd>
+<dt><code>developer</code></dt>
+<dd>Debugging info of interest to a package developer.</dd>
+<dt><code>db</code></dt>
+<dd>Debugging info about the backend database.</dd></dl>
 </dl>
-<dt><code>DEBCONF_NOWARNINGS</code></p>
-<dd>Set to &quot;yes&quot; to disable some warnings that debconf may display. Does not suppress display of fatal errors.</p>
-<dt><code>DEBCONF_TERSE</code></p>
-<dd>Set to &quot;yes&quot; to enable terse mode, in which debconf frontends cut down on the verbiage as much as possible.</p>
-<dt><code>DEBCONF_DB_FALLBACK</code></p>
-<dd>Stack a database after the normally used databases, so that it is used as a fallback to get configuration information from. See &quot;Unattended Package Installation&quot; above. If the value of the variable is the name of an existing database in debconf.conf, then that database will be used. Otherwise, the environment variable can be used to configure a database on the fly, by telling the type of database, and optionally passing field:value settings, inside curly braces after the type. Spaces are used to separate fields, so you cannot specify a field value containing whitespace.</dl>
+<dt><code>DEBCONF_NOWARNINGS</code></dt>
+<dd>Set to &quot;yes&quot; to disable some warnings that debconf may display. Does not suppress display of fatal errors.</dd>
+<dt><code>DEBCONF_TERSE</code></dt>
+<dd>Set to &quot;yes&quot; to enable terse mode, in which debconf frontends cut down on the verbiage as much as possible.</dd>
+<dt><code>DEBCONF_DB_FALLBACK</code></dt>
+<dd>Stack a database after the normally used databases, so that it is used as a fallback to get configuration information from. See &quot;Unattended Package Installation&quot; above. If the value of the variable is the name of an existing database in debconf.conf, then that database will be used. Otherwise, the environment variable can be used to configure a database on the fly, by telling the type of database, and optionally passing field:value settings, inside curly braces after the type. Spaces are used to separate fields, so you cannot specify a field value containing whitespace.</dd></dl>
 <p> Thus, this uses the fallbackdb in debconf.conf:<br />
 &nbsp;<wbr>&nbsp;<wbr>DEBCONF_DB_FALLBACK=fallbackdb </p>
 <p> While this sets up a new database of type File, and tells it a filename to use and turns off backups:<br />
@@ -121,28 +121,28 @@ ssh root [at] target&nbsp;<wbr>&quot;DEBIAN_FRONTEND=noninteractive&nbsp;<wbr>\<
 &nbsp;<wbr>&nbsp;<wbr>DEBCONF_DB_FALLBACK=File{/root/config.dat} </p>
 <p> Note that if a fallback database is set up on the fly, it will be read-only by default.</p>
 <dl>
-<dt><code>DEBCONF_DB_OVERRIDE</code></p>
-<dd>Stack a database before the normally used databases, so that it can override values from them. The value of the variable works the same as does the value of DEBCONF_DB_FALLBACK.</p>
-<dt><code>DEBCONF_DB_REPLACE</code></p>
-<dd>Use a given database instead of the normally used databases. This may be useful for testing with a separate database without having to create a separate debconf.conf, or to avoid locking the normal databases.</p>
-<dt><code>DEBCONF_SYSTEMRC</code></p>
-<dd>If this environment variable is set, debconf will ignore a user&#8217;s ~/.debconfrc file, and use the system one instead. If it is set to the name of a regular file, debconf will use that file in preference to the system configuration files.</p>
-<dt><code>DEBCONF_FORCE_DIALOG</code></p>
-<dd>If this environment variable is set, debconf will use dialog in preference to whiptail for the dialog frontend.</p>
-<dt><code>DEBCONF_FORCE_XDIALOG</code></p>
-<dd>If this environment variable is set, debconf will use Xdialog in preference to whiptail for the dialog frontend.</p>
-<dt><code>DEBCONF_NONINTERACTIVE_SEEN</code></p>
-<dd>Set to &quot;true&quot; to cause the seen flag to be set for questions asked in the noninteractive frontend.</dl>
+<dt><code>DEBCONF_DB_OVERRIDE</code></dt>
+<dd>Stack a database before the normally used databases, so that it can override values from them. The value of the variable works the same as does the value of DEBCONF_DB_FALLBACK.</dd>
+<dt><code>DEBCONF_DB_REPLACE</code></dt>
+<dd>Use a given database instead of the normally used databases. This may be useful for testing with a separate database without having to create a separate debconf.conf, or to avoid locking the normal databases.</dd>
+<dt><code>DEBCONF_SYSTEMRC</code></dt>
+<dd>If this environment variable is set, debconf will ignore a user&#8217;s ~/.debconfrc file, and use the system one instead. If it is set to the name of a regular file, debconf will use that file in preference to the system configuration files.</dd>
+<dt><code>DEBCONF_FORCE_DIALOG</code></dt>
+<dd>If this environment variable is set, debconf will use dialog in preference to whiptail for the dialog frontend.</dd>
+<dt><code>DEBCONF_FORCE_XDIALOG</code></dt>
+<dd>If this environment variable is set, debconf will use Xdialog in preference to whiptail for the dialog frontend.</dd>
+<dt><code>DEBCONF_NONINTERACTIVE_SEEN</code></dt>
+<dd>Set to &quot;true&quot; to cause the seen flag to be set for questions asked in the noninteractive frontend.</dd></dl>
 <h2>Bugs</h2>
 <p>Probably quite a few, there&#8217;s a lot of code here. </p>
 <p> If you do file a bug report, be sure to include the following information:</p>
 <dl>
-<dt><code>*</code></p>
-<dd>The debconf frontend you were using when the problem occurred</p>
-<dt><code>*</code></p>
-<dd>What you did to trigger the problem.</p>
-<dt><code>*</code></p>
-<dd>The full text of any error messages. If you can reproduce the bug, do so with DEBCONF_DEBUG=&#8217;.*&#8217; set and exported. This speeds up debugging a lot.</dl>
+<dt><code>*</code></dt>
+<dd>The debconf frontend you were using when the problem occurred</dd>
+<dt><code>*</code></dt>
+<dd>What you did to trigger the problem.</dd>
+<dt><code>*</code></dt>
+<dd>The full text of any error messages. If you can reproduce the bug, do so with DEBCONF_DEBUG=&#8217;.*&#8217; set and exported. This speeds up debugging a lot.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-debconf-conf/">debconf.conf</a></code>(5), <code><a href="/docs/linux/man/7-debconf-devel/">debconf-devel</a></code>(7), <code><a href="/docs/linux/man/8-dpkg-preconfigure/">dpkg-preconfigure</a></code>(8), <code><a href="/docs/linux/man/8-dpkg-reconfigure/">dpkg-reconfigure</a></code>(8), <code><a href="/docs/linux/man/1-debconf/">debconf</a></code>(1),</p>
 <h2>Author</h2>

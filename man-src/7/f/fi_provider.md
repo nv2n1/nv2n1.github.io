@@ -46,52 +46,52 @@ Libfabric provides a general framework for supporting multiple types of fabric o
 
  Note that the instantiation of a specific fabric object is subject to application configuration parameters and need not meet these requirements.
 <dl><dt>&bull;
-<dd>A fabric provider must support at least one endpoint type.
-<dt>&bull;
-<dd>All endpoints must support the message queue data transfer interface (fi_ops_msg).
-<dt>&bull;
-<dd>An endpoint that advertises support for a specific endpoint capability must support the corresponding data transfer interface.
-<dt>&bull;
-<dd>FI_ATOMIC - fi_ops_atomic
-<dt>&bull;
-<dd>FI_RMA - fi_ops_rma
-<dt>&bull;
-<dd>FI_TAGGED - fi_ops_tagged
-<dt>&bull;
-<dd>Endpoints must support all transmit and receive operations for any data transfer interface that they support.
-<dt>&bull;
-<dd>Exception: If an operation is only usable for an operation that the provider does not support, and support for that operation is conveyed using some other mechanism, the operation may return
-<dl><dd><dl><dt>&bull;
-<dd>FI_ENOSYS. For example, if the provider does not support injected data, it can set the attribute inject_size = 0, and fail all fi_inject operations.</dl></dl><dt>&bull;
-<dd>The framework supplies wrappers around the 'msg' operations that can be used. For example, the framework implements the sendv() msg operation by calling sendmsg(). Providers may reference the general operation, and supply on the sendmsg() implementation.
-<dt>&bull;
-<dd>Providers must set all operations to an implementation. Function pointers may not be left NULL or uninitialized. The framework supplies empty functions that return -FI_ENOSYS which can be used for this purpose.
-<dt>&bull;
-<dd>Endpoints must support the CM interface as follows:
-<dt>&bull;
-<dd>FI_EP_MSG endpoints must support all CM operations.
-<dt>&bull;
-<dd>FI_EP_DGRAM endpoints must support CM getname and setname.
-<dt>&bull;
-<dd>FI_EP_RDM endpoints must support CM getname and setname.
-<dt>&bull;
-<dd>Providers that support connectionless endpoints must support all AV operations (fi_ops_av).
-<dt>&bull;
-<dd>Providers that support memory registration, must support all MR operations (fi_ops_mr).
-<dt>&bull;
-<dd>Providers should support both completion queues and counters.
-<dt>&bull;
-<dd>If FI_RMA_EVENT is not supported, counter support is limited to local events only.
-<dt>&bull;
-<dd>Completion queues must support the FI_CQ_FORMAT_CONTEXT and FI_CQ_FORMAT_MSG.
-<dt>&bull;
-<dd>Providers that support FI_REMOTE_CQ_DATA shall support FI_CQ_FORMAT_DATA.
-<dt>&bull;
-<dd>Providers that support FI_TAGGED shall support FI_CQ_FORMAT_TAGGED.
-<dt>&bull;
-<dd>A provider is expected to be forward compatible, and must be able to be compiled against expanded fi_xxx_ops structures that define new functions added after the provider was written. Any unknown functions must be set to NULL.
-<dt>&bull;
-<dd>Providers shall document in their man page which features they support, and any missing requirements.</dl>
+</dt><dd>A fabric provider must support at least one endpoint type.
+</dd><dt>&bull;
+</dt><dd>All endpoints must support the message queue data transfer interface (fi_ops_msg).
+</dd><dt>&bull;
+</dt><dd>An endpoint that advertises support for a specific endpoint capability must support the corresponding data transfer interface.
+</dd><dt>&bull;
+</dt><dd>FI_ATOMIC - fi_ops_atomic
+</dd><dt>&bull;
+</dt><dd>FI_RMA - fi_ops_rma
+</dd><dt>&bull;
+</dt><dd>FI_TAGGED - fi_ops_tagged
+</dd><dt>&bull;
+</dt><dd>Endpoints must support all transmit and receive operations for any data transfer interface that they support.
+</dd><dt>&bull;
+</dt><dd>Exception: If an operation is only usable for an operation that the provider does not support, and support for that operation is conveyed using some other mechanism, the operation may return
+</dd><dl><dd></dd><dl><dt>&bull;
+</dt><dd>FI_ENOSYS. For example, if the provider does not support injected data, it can set the attribute inject_size = 0, and fail all fi_inject operations.</dd></dl></dl><dt>&bull;
+</dt><dd>The framework supplies wrappers around the 'msg' operations that can be used. For example, the framework implements the sendv() msg operation by calling sendmsg(). Providers may reference the general operation, and supply on the sendmsg() implementation.
+</dd><dt>&bull;
+</dt><dd>Providers must set all operations to an implementation. Function pointers may not be left NULL or uninitialized. The framework supplies empty functions that return -FI_ENOSYS which can be used for this purpose.
+</dd><dt>&bull;
+</dt><dd>Endpoints must support the CM interface as follows:
+</dd><dt>&bull;
+</dt><dd>FI_EP_MSG endpoints must support all CM operations.
+</dd><dt>&bull;
+</dt><dd>FI_EP_DGRAM endpoints must support CM getname and setname.
+</dd><dt>&bull;
+</dt><dd>FI_EP_RDM endpoints must support CM getname and setname.
+</dd><dt>&bull;
+</dt><dd>Providers that support connectionless endpoints must support all AV operations (fi_ops_av).
+</dd><dt>&bull;
+</dt><dd>Providers that support memory registration, must support all MR operations (fi_ops_mr).
+</dd><dt>&bull;
+</dt><dd>Providers should support both completion queues and counters.
+</dd><dt>&bull;
+</dt><dd>If FI_RMA_EVENT is not supported, counter support is limited to local events only.
+</dd><dt>&bull;
+</dt><dd>Completion queues must support the FI_CQ_FORMAT_CONTEXT and FI_CQ_FORMAT_MSG.
+</dd><dt>&bull;
+</dt><dd>Providers that support FI_REMOTE_CQ_DATA shall support FI_CQ_FORMAT_DATA.
+</dd><dt>&bull;
+</dt><dd>Providers that support FI_TAGGED shall support FI_CQ_FORMAT_TAGGED.
+</dd><dt>&bull;
+</dt><dd>A provider is expected to be forward compatible, and must be able to be compiled against expanded fi_xxx_ops structures that define new functions added after the provider was written. Any unknown functions must be set to NULL.
+</dd><dt>&bull;
+</dt><dd>Providers shall document in their man page which features they support, and any missing requirements.</dd></dl>
  
 
  Future versions of libfabric will automatically enable a more complete set of features for providers that focus their implementation on a narrow subset of libfabric capabilities.
@@ -104,7 +104,7 @@ Logging is performed using the FI_ERR, FI_LOG, and FI_DEBUG macros.
 
 <dl><dd><pre>#define FI_ERR(prov_name, subsystem, ...)
 #define FI_LOG(prov_name, prov, level, subsystem, ...)
-#define FI_DEBUG(prov_name, subsystem, ...)</pre></dl>
+#define FI_DEBUG(prov_name, subsystem, ...)</pre></dd></dl>
 
 <h3>Arguments</h3>
 

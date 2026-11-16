@@ -16,16 +16,16 @@ description: "tilestache-server – seed a single layer in your TileStache confi
 <p> <code>tilestache-server</code> serves tiles through Werkzeug, using a tilestache configuration file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;config</code> <i>file</i></p>
-<dd> Path to configuration file. Defaults to <i>tilestache.cfg</i>.</p>
-<dt><code>-i</code>, <code>&#8211;ip</code> <i>address</i></p>
-<dd> IP address to listen to. Defaults to <i>127.0.0.1</i>.</p>
-<dt><code>-p</code>, <code>&#8211;port</code> <i>port</i></p>
-<dd> Port number to listen to. Defaults to <i>8080</i>.</p>
-<dt><code>&#8211;include-path</code> <i>paths</i></p>
-<dd> Add the following colon-separated list of paths to Python&#8217;s include path (aka sys.path).</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</dl>
+<dt><code>-c</code>, <code>&#8211;config</code> <i>file</i></dt>
+<dd> Path to configuration file. Defaults to <i>tilestache.cfg</i>.</dd>
+<dt><code>-i</code>, <code>&#8211;ip</code> <i>address</i></dt>
+<dd> IP address to listen to. Defaults to <i>127.0.0.1</i>.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code> <i>port</i></dt>
+<dd> Port number to listen to. Defaults to <i>8080</i>.</dd>
+<dt><code>&#8211;include-path</code> <i>paths</i></dt>
+<dd> Add the following colon-separated list of paths to Python&#8217;s include path (aka sys.path).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tilestache-render/">tilestache-render</a></code>(1) <code><a href="/docs/linux/man/1-tilestache-seed/">tilestache-seed</a></code>(1)</p>
 <h2>AUTHOR</h2>

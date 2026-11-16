@@ -16,39 +16,39 @@ description: "llvm-nm – list LLVM bitcode file’s symbol table"
 <p> <code>llvm-nm</code>&#8216;s default output format is the traditional <font SIZE="-1">BSD</font> <code>nm</code> output format. Each such output record consists of an (optional) 8-digit hexadecimal address, followed by a type code character, followed by a name, for each symbol. One record is printed per line; fields are separated by spaces. When the address is omitted, it is replaced by 8 spaces. </p>
 <p> Type code characters currently supported, and their meanings, are as follows:</p>
 <dl>
-<dt>U</p>
-<dd> Named object is referenced but undefined in this bitcode file</p>
-<dt>C</p>
-<dd> Common (multiple definitions link together into one def)</p>
-<dt>W</p>
-<dd> Weak reference (multiple definitions link together into zero or one definitions)</p>
-<dt>t</p>
-<dd> Local function (text) object</p>
-<dt>T</p>
-<dd> Global function (text) object</p>
-<dt>d</p>
-<dd> Local data object</p>
-<dt>D</p>
-<dd> Global data object</p>
-<dt>?</p>
-<dd> Something unrecognizable</dl>
+<dt>U</dt>
+<dd> Named object is referenced but undefined in this bitcode file</dd>
+<dt>C</dt>
+<dd> Common (multiple definitions link together into one def)</dd>
+<dt>W</dt>
+<dd> Weak reference (multiple definitions link together into zero or one definitions)</dd>
+<dt>t</dt>
+<dd> Local function (text) object</dd>
+<dt>T</dt>
+<dd> Global function (text) object</dd>
+<dt>d</dt>
+<dd> Local data object</dd>
+<dt>D</dt>
+<dd> Global data object</dd>
+<dt>?</dt>
+<dd> Something unrecognizable</dd></dl>
 <p> Because <font SIZE="-1">LLVM</font> bitcode files typically contain objects that are not considered to have addresses until they are linked into an executable image or dynamically compiled &#8220;just-in-time&#8221;, <code>llvm-nm</code> does not print an address for any symbol, even symbols which are defined in the bitcode file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-P</code></p>
-<dd> Use <font SIZE="-1">POSIX</font>.2 output format. Alias for <code>&#8211;format=posix</code>.</p>
-<dt><code>-B</code> (default)</p>
-<dd> Use <font SIZE="-1">BSD</font> output format. Alias for <code>&#8211;format=bsd</code>.</p>
-<dt><code>-help</code></p>
-<dd> Print a summary of command-line options and their meanings.</p>
-<dt><code>&#8211;defined-only</code></p>
-<dd> Print only symbols defined in this bitcode file (as opposed to symbols which may be referenced by objects in this file, but not defined in this file.)</p>
-<dt><code>&#8211;extern-only</code>, <code>-g</code></p>
-<dd> Print only symbols whose definitions are external; that is, accessible from other bitcode files.</p>
-<dt><code>&#8211;undefined-only</code>, <code>-u</code></p>
-<dd> Print only symbols referenced but not defined in this bitcode file.</p>
-<dt><code>&#8211;format=</code><i>fmt</i>, <code>-f</code></p>
-<dd> Select an output format; <i>fmt</i> may be <i>sysv</i>, <i>posix</i>, or <i>bsd</i>. The default is <i>bsd</i>.</dl>
+<dt><code>-P</code></dt>
+<dd> Use <font SIZE="-1">POSIX</font>.2 output format. Alias for <code>&#8211;format=posix</code>.</dd>
+<dt><code>-B</code> (default)</dt>
+<dd> Use <font SIZE="-1">BSD</font> output format. Alias for <code>&#8211;format=bsd</code>.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a summary of command-line options and their meanings.</dd>
+<dt><code>&#8211;defined-only</code></dt>
+<dd> Print only symbols defined in this bitcode file (as opposed to symbols which may be referenced by objects in this file, but not defined in this file.)</dd>
+<dt><code>&#8211;extern-only</code>, <code>-g</code></dt>
+<dd> Print only symbols whose definitions are external; that is, accessible from other bitcode files.</dd>
+<dt><code>&#8211;undefined-only</code>, <code>-u</code></dt>
+<dd> Print only symbols referenced but not defined in this bitcode file.</dd>
+<dt><code>&#8211;format=</code><i>fmt</i>, <code>-f</code></dt>
+<dd> Select an output format; <i>fmt</i> may be <i>sysv</i>, <i>posix</i>, or <i>bsd</i>. The default is <i>bsd</i>.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>llvm-nm</code> cannot demangle C<font SIZE="-2">++</font> mangled names, like <font SIZE="-1">GNU</font> <code>nm</code> can.</p>
 <h2>EXIT STATUS</h2>

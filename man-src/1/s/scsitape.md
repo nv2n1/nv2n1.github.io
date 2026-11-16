@@ -18,29 +18,29 @@ description: "scsitape – control SCSI tape devices"
 <p> The first argument, given following <code>-f</code> , is the SCSI generic device corresponding to your tape drive. Consult your operating system&#8217;s documentation for more information (for example, under Linux these are generally /dev/sg0 through /dev/sg15, under FreeBSD these are /dev/pass0 through /dev/passX. Under Solaris this is usually the same as your tape drive (Solaris has a SCSI passthrough ioctl). You can set the STAPE or TAPE environment variable rather than use -f. </p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>setblk &lt;n&gt;</code></p>
-<dd> Set the tape drive&#8217;s SCSI block size to &lt;n&gt; bytes. (NOTE: if you are using your OS&#8217;s native tape driver, THIS IS EVIL!). </p>
-<dt><code>fsf &lt;n&gt;</code></p>
-<dd> Go forward by &lt;n&gt; tapemarks.</p>
-<dt><code>bsf &lt;n&gt;</code></p>
-<dd> Go to immediately previous the &lt;n&gt;th previous tapemark. (WARNING: This probably doesn&#8217;t do what you expect &#8212; e.g. if you are immediately after a tapemark and type &#8216;bfs 1&#8217;, it moves to immediately *before* that tape mark, for a sum total of zero effective movement!).</p>
-<dt><code>eod</code></p>
-<dd> Go to end of data.</p>
-<dt><code>rewind</code></p>
-<dd> Rewind the tape drive.</p>
-<dt><code>eject</code></p>
-<dd> Eject the tape currently in the drive.</p>
-<dt><code>erase</code></p>
-<dd> Does a *short* erase (warning: does NOT work on all drives!).</p>
-<dt><code>mark &lt;n&gt;</code></p>
+<dt><code>setblk &lt;n&gt;</code></dt>
+<dd> Set the tape drive&#8217;s SCSI block size to &lt;n&gt; bytes. (NOTE: if you are using your OS&#8217;s native tape driver, THIS IS EVIL!). </dd>
+<dt><code>fsf &lt;n&gt;</code></dt>
+<dd> Go forward by &lt;n&gt; tapemarks.</dd>
+<dt><code>bsf &lt;n&gt;</code></dt>
+<dd> Go to immediately previous the &lt;n&gt;th previous tapemark. (WARNING: This probably doesn&#8217;t do what you expect &#8212; e.g. if you are immediately after a tapemark and type &#8216;bfs 1&#8217;, it moves to immediately *before* that tape mark, for a sum total of zero effective movement!).</dd>
+<dt><code>eod</code></dt>
+<dd> Go to end of data.</dd>
+<dt><code>rewind</code></dt>
+<dd> Rewind the tape drive.</dd>
+<dt><code>eject</code></dt>
+<dd> Eject the tape currently in the drive.</dd>
+<dt><code>erase</code></dt>
+<dd> Does a *short* erase (warning: does NOT work on all drives!).</dd>
+<dt><code>mark &lt;n&gt;</code></dt>
 <dd>
-&nbsp;<wbr>write&nbsp;<wbr>&lt;n&gt;&nbsp;<wbr>filemarks&nbsp;<wbr>(&nbsp;<wbr>&#8216;mark 0&#8217;&nbsp;<wbr>flushes the drive&#8217;s buffers&nbsp;<wbr>).&nbsp;<wbr></p>
-<dt><code>seek &lt;n&gt;</code></p>
-<dd> Seek to a logical position &lt;n&gt; that was reported by a previous &#8216;tapeinfo&#8217; command.</p>
-<dt><code>write &lt;blocksize&gt; </code></p>
-<dd> write blocks from stdin to the tape. Chunk the data into &lt;blocksize&gt;-sized chunks. *DOES NOT WRITE OUT A TAPEMARK!* (you will need to use a subsequent <code>mark 1</code> command to write out a tape mark).</p>
-<dt><code>read [&lt;blocksize&gt;] [ &lt;#blocks/#bytes&gt; ]</code></p>
-<dd> read blocks from the tape, write them to stdout. If we are in variable block mode, &lt;blocksize&gt; should be zero (note: The maximum block size we currently support in variable block mode is 128K, MAX_READ_SIZE will need to be turned into a settable variable to allow bigger reads). If &lt;blocksize&gt; is ommitted, we assume that we&#8217;re in variable block mode, and that we are going to read from tape until we hit a tapemark or end of partition or end of tape. </p>
+&nbsp;<wbr>write&nbsp;<wbr>&lt;n&gt;&nbsp;<wbr>filemarks&nbsp;<wbr>(&nbsp;<wbr>&#8216;mark 0&#8217;&nbsp;<wbr>flushes the drive&#8217;s buffers&nbsp;<wbr>).&nbsp;<wbr></dd>
+<dt><code>seek &lt;n&gt;</code></dt>
+<dd> Seek to a logical position &lt;n&gt; that was reported by a previous &#8216;tapeinfo&#8217; command.</dd>
+<dt><code>write &lt;blocksize&gt; </code></dt>
+<dd> write blocks from stdin to the tape. Chunk the data into &lt;blocksize&gt;-sized chunks. *DOES NOT WRITE OUT A TAPEMARK!* (you will need to use a subsequent <code>mark 1</code> command to write out a tape mark).</dd>
+<dt><code>read [&lt;blocksize&gt;] [ &lt;#blocks/#bytes&gt; ]</code></dt>
+<dd> read blocks from the tape, write them to stdout. If we are in variable block mode, &lt;blocksize&gt; should be zero (note: The maximum block size we currently support in variable block mode is 128K, MAX_READ_SIZE will need to be turned into a settable variable to allow bigger reads). If &lt;blocksize&gt; is ommitted, we assume that we&#8217;re in variable block mode, and that we are going to read from tape until we hit a tapemark or end of partition or end of tape. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> This program was written by Eric Lee Green &lt;eric [at] badtux.org&gt;. Major portions of the &#8216;mtxl.c&#8217; library used herein were written by Leonard Zubkoff. </p>

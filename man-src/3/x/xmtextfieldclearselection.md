@@ -16,10 +16,10 @@ description: "XmTextFieldClearSelection — A TextField function that clears the
 <h2>Description</h2>
 <p><code>XmTextFieldClearSelection</code> clears the primary selection in the TextField widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID.</p>
-<dt><i>time</i></p>
-<dd>Specifies the time at which the selection value is desired. This should be the time of the event that triggered this request.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID.</dd>
+<dt><i>time</i></dt>
+<dd>Specifies the time at which the selection value is desired. This should be the time of the event that triggered this request.</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>

@@ -15,11 +15,11 @@ bio_copy_data - copy contents of data buffers from one chain of bios to another
 <h2>Arguments</h2>
 
 <i>dst</i>
-<dl><dd><dd>destination bio list</dl>
+<dl><dd></dd><dd>destination bio list</dd></dl>
  
 
  <i>src</i>
-<dl><dd>source bio list</dl>
+<dl><dd>source bio list</dd></dl>
 
 <h2>Description</h2>
 

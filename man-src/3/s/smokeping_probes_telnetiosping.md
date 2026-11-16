@@ -35,60 +35,44 @@ Smokeping::probes::TelnetIOSPing - Cisco IOS Probe for SmokePing
  source = 192.168.2.1 # mandatory</pre><h2>Description</h2>Integrates Cisco <font SIZE="-1">IOS</font> as a probe into smokeping. Uses the telnet protocol to run a ping from an <font SIZE="-1">IOS</font> device (source) to another device (host). This probe basically uses the ``extended ping'' of the Cisco <font SIZE="-1">IOS. </font> You have the option to specify which interface the ping is sourced from as well.
 <h2>Variables</h2>Supported probe-specific variables:
 <dl COMPACT><dt>forks
-<dd>Run this many concurrent processes at maximum 
-
+</dt><dd>Run this many concurrent processes at maximum 
  Example value: 5 
-
  Default value: 5
-<dt>offset
-<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
-
+</dd><dt>offset
+</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 50%
-<dt>packetsize
-<dd>The (optional) packetsize option lets you configure the packetsize for the pings sent. 
-
+</dd><dt>packetsize
+</dt><dd>The (optional) packetsize option lets you configure the packetsize for the pings sent. 
  Default value: 56
-<dt>step
-<dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
-
+</dd><dt>step
+</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 300
-<dt>timeout
-<dd>How long a single 'ping' takes at maximum 
-
+</dd><dt>timeout
+</dt><dd>How long a single 'ping' takes at maximum 
  Example value: 15 
-
- Default value: 5</dl>
+ Default value: 5</dd></dl>
  
 
  Supported target-specific variables:
 <dl COMPACT><dt>iospass
-<dd>The iospass option allows you to specify the password for the username specified with the option iosuser. 
-
+</dt><dd>The iospass option allows you to specify the password for the username specified with the option iosuser. 
  Example value: password 
-
  This setting is mandatory.
-<dt>iosuser
-<dd>The iosuser option allows you to specify a username that has ping capability on the <font SIZE="-1">IOS</font> Device. 
-
+</dd><dt>iosuser
+</dt><dd>The iosuser option allows you to specify a username that has ping capability on the <font SIZE="-1">IOS</font> Device. 
  Example value: user 
-
  This setting is mandatory.
-<dt>pings
-<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. 
-
+</dd><dt>pings
+</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. 
  Example value: 5
-<dt>psource
-<dd>The (optional) psource option specifies an alternate <font SIZE="-1">IP</font> address or Interface from which you wish to source your pings from. Routers can have many many <font SIZE="-1">IP</font> addresses, and interfaces. When you ping from a router you have the ability to choose which interface and/or which <font SIZE="-1">IP</font> address the ping is sourced from. Specifying an IP/interface does not necessarily specify the interface from which the ping will leave, but will specify which address the packet(s) appear to come from. If this option is left out the <font SIZE="-1">IOS</font> Device will source the packet automatically based on routing and/or metrics. If this doesn't make sense to you then just leave it out. 
-
+</dd><dt>psource
+</dt><dd>The (optional) psource option specifies an alternate <font SIZE="-1">IP</font> address or Interface from which you wish to source your pings from. Routers can have many many <font SIZE="-1">IP</font> addresses, and interfaces. When you ping from a router you have the ability to choose which interface and/or which <font SIZE="-1">IP</font> address the ping is sourced from. Specifying an IP/interface does not necessarily specify the interface from which the ping will leave, but will specify which address the packet(s) appear to come from. If this option is left out the <font SIZE="-1">IOS</font> Device will source the packet automatically based on routing and/or metrics. If this doesn't make sense to you then just leave it out. 
  Example value: 192.168.2.129
-<dt>source
-<dd>The source option specifies the <font SIZE="-1">IOS</font> device to which we telnet. This is an <font SIZE="-1">IP</font> address of an <font SIZE="-1">IOS</font> Device that you/your server: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1) Have the ability to telnet to
+</dd><dt>source
+</dt><dd>The source option specifies the <font SIZE="-1">IOS</font> device to which we telnet. This is an <font SIZE="-1">IP</font> address of an <font SIZE="-1">IOS</font> Device that you/your server: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1) Have the ability to telnet to
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2) Have a valid username and password for
- 
-
  Example value: 192.168.2.1 
-
- This setting is mandatory.</dl><h2>Authors</h2>John A Jackson &lt;geonjay [at] infoave.net&gt; 
+ This setting is mandatory.</dd></dl><h2>Authors</h2>John A Jackson &lt;geonjay [at] infoave.net&gt; 
 
  based <font SIZE="-1">HEAVILY</font> on Smokeping::probes::IOSPing by 
 

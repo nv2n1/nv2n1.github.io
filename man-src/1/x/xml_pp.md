@@ -23,31 +23,27 @@ url: "/docs/linux/man/1-xml_pp/"
 
 <dl>
 <dt>-i[&lt;extension&gt;]
-<dd> edits the file(s) in place, if an extension is provided (no space between <tt>&quot;-i&quot;</tt> and the extension) then the original file is backed-up with that extension 
-
+</dt><dd> edits the file(s) in place, if an extension is provided (no space between <tt>&quot;-i&quot;</tt> and the extension) then the original file is backed-up with that extension 
  The rules for the extension are the same as Perl's (see perldoc perlrun): if the extension includes no ``*'' then it is appended to the original file name, If the extension does contain one or more ``*'' characters, then each ``*'' is replaced with the current filename.
-<dt>-s &lt;style&gt;
-<dd> the style to use for pretty printing: none, nsgmls, nice, indented, record, or record_c (see XML::Twig docs for the exact description of those styles), 'indented' by default
-<dt>-p &lt;tag(s)&gt;
-<dd> preserves white spaces in tags. You can use several <tt>&quot;-p&quot;</tt> options or quote the tags if you need more than one
-<dt>-e &lt;encoding&gt;
-<dd> use XML::Twig output_encoding (based on Text::Iconv or Unicode::Map8 and Unicode::String) to set the output encoding. By default the original encoding is preserved. 
-
+</dd><dt>-s &lt;style&gt;
+</dt><dd> the style to use for pretty printing: none, nsgmls, nice, indented, record, or record_c (see XML::Twig docs for the exact description of those styles), 'indented' by default
+</dd><dt>-p &lt;tag(s)&gt;
+</dt><dd> preserves white spaces in tags. You can use several <tt>&quot;-p&quot;</tt> options or quote the tags if you need more than one
+</dd><dt>-e &lt;encoding&gt;
+</dt><dd> use XML::Twig output_encoding (based on Text::Iconv or Unicode::Map8 and Unicode::String) to set the output encoding. By default the original encoding is preserved. 
  If this option is used the <font SIZE="-1">XML</font> declaration is updated (and created if there was none). 
-
  Make sure that the encoding is supported by the parser you use if you want to be able to process the pretty_printed file (XML::Parser does not support 'latin1' for example, you have to use 'iso-8859-1')
-<dt>-l
-<dd> loads the documents in memory instead of outputing them as they are being parsed. 
-
+</dd><dt>-l
+</dt><dd> loads the documents in memory instead of outputing them as they are being parsed. 
  This prevents a bug (see <font SIZE="-1">BUGS</font>) but uses more memory
-<dt>-f &lt;file&gt;
-<dd> read the list of files to process from &lt;file&gt;, one per line
-<dt>-v
-<dd> verbose (list the current file being processed)
-<dt>--
-<dd> stop argument processing (to process files that start with -)
-<dt>-h
-<dd> display help</dl>
+</dd><dt>-f &lt;file&gt;
+</dt><dd> read the list of files to process from &lt;file&gt;, one per line
+</dd><dt>-v
+</dt><dd> verbose (list the current file being processed)
+</dd><dt>--
+</dt><dd> stop argument processing (to process files that start with -)
+</dd><dt>-h
+</dt><dd> display help</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -57,14 +53,12 @@ url: "/docs/linux/man/1-xml_pp/"
   xml_pp -v -i.bak *.xml                # pretty print .xml files, with backups
   xml_pp -v -i'orig_*' *.xml            # backups are named orig_&lt;filename&gt;
   xml_pp -i -p pre foo.xhtml            # preserve spaces in pre tags
-  
   xml_pp -i.bak -p 'pre code' foo.xml   # preserve spaces in pre and code tags
   xml_pp -i.bak -p pre -p code foo.xml  # same
   xml_pp -i -s record mydb_export.xml   # pretty print using the record style
   xml_pp -e utf8 -i foo.xml             # output will be in utf8
   xml_pp -e iso-8859-1 -i foo.xml       # output will be in iso-8859-1
   xml_pp -v -i.bak -f lof               # pretty print in place files from lof
-  
   xml_pp -- -i.xml                      # pretty print the -i.xml file
   xml_pp -l foo.xml                     # loads the entire file in memory 
                                         # before pretty printing it

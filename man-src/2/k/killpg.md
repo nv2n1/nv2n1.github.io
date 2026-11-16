@@ -14,10 +14,10 @@ description: "killpg – send signal to a process group"
 <p> <code>int killpg(int </code><i>pgrp</i><code>, int </code><i>sig</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)):</p>
 <dl>
-<dt><code>killpg</code>():</p>
+<dt><code>killpg</code>():</dt>
 <dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>killpg</code>() sends the signal <i>sig</i> to the process group <i>pgrp</i>. See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for a list of signals. </p>
 <p> If <i>pgrp</i> is 0, <code>killpg</code>() sends the signal to the calling process&#8217;s process group. (POSIX says: if <i>pgrp</i> is less than or equal to 1, the behavior is undefined.) </p>
@@ -26,14 +26,14 @@ description: "killpg – send signal to a process group"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>sig</i> is not a valid signal number.</p>
-<dt><code>EPERM</code></p>
-<dd> The process does not have permission to send the signal to any of the target processes. For the required permissions, see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</p>
-<dt><code>ESRCH</code></p>
-<dd> No process can be found in the process group specified by <i>pgrp</i>.</p>
-<dt><code>ESRCH</code></p>
-<dd> The process group was given as 0 but the sending process does not have a process group.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>sig</i> is not a valid signal number.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The process does not have permission to send the signal to any of the target processes. For the required permissions, see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No process can be found in the process group specified by <i>pgrp</i>.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The process group was given as 0 but the sending process does not have a process group.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD (<code>killpg</code>() first appeared in 4BSD).</p>
 <h2>NOTES</h2>

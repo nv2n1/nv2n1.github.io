@@ -41,14 +41,14 @@ description: "log4cpp::SyslogAppender –"
 <dl COMPACT>
 <dd><i>name</i> The name of the <code>Appender</code><br />
  <i>syslogName</i> The ident parameter in the openlog(3) call.<br />
- <i>facility</i> The syslog facility to log to. Defaults to LOG_USER.</dl>
+ <i>facility</i> The syslog facility to log to. Defaults to LOG_USER.</dd></dl>
 <h3>virtual log4cpp::SyslogAppender::~SyslogAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>
 <h3>virtual void log4cpp::SyslogAppender::_append (const <code>LoggingEvent</code> &amp;event) [protected], [virtual]</h3>
 <p>Sends a <code>LoggingEvent</code> to syslog. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> the <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> the <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>virtual void log4cpp::SyslogAppender::close () [virtual]</h3>
 <p>Calls <a href="/docs/linux/man/3-closelog/">closelog</a>(3) to close the syslog file descriptor. </p>
@@ -62,10 +62,10 @@ description: "log4cpp::SyslogAppender –"
 <p>Translates a <code>log4cpp</code> priority to a syslog priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The <code>log4cpp</code> priority.</dl>
+<dd><i>priority</i> The <code>log4cpp</code> priority.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the syslog priority.</dl>
+<dd>the syslog priority.</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3>int log4cpp::SyslogAppender::_facility [protected]</h3>
 <h3>const std::string log4cpp::SyslogAppender::_syslogName [protected]</h3>

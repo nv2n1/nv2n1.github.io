@@ -11,10 +11,8 @@ std::multiplies&lt;void&gt; - std::multiplies&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class multiplies&lt;void&gt;;</code></pre> 
 std::multiplies&lt;&gt; is a specialization of std::multiplies with parameter and return type deduced. 
 

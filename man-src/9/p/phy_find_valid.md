@@ -15,11 +15,11 @@ phy_find_valid - find a PHY setting that matches the requested features mask
 <h2>Arguments</h2>
 
 <i>idx</i>
-<dl><dd><dd>The first index in settings[] to search</dl>
+<dl><dd></dd><dd>The first index in settings[] to search</dd></dl>
  
 
  <i>features</i>
-<dl><dd>A mask of the valid settings</dl>
+<dl><dd>A mask of the valid settings</dd></dl>
 
 <h2>Description</h2>
 

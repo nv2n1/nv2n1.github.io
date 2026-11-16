@@ -10,12 +10,7 @@ description: "xcb_xkb_get_controls –"
 <p>xcb_xkb_get_controls &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_xkb_get_controls_cookie_t xcb_xkb_get_controls(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xkb_get_controls_reply_t {
@@ -55,75 +50,75 @@ xcb_xkb_get_controls_cookie_t xcb_xkb_get_controls(xcb_connection_t *conn, xcb_x
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_xkb_get_controls_reply_t *<code>xcb_xkb_get_controls_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_controls_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_GET_CONTROLS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>deviceID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysDfltBtn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>numGroups</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groupsWrap</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>internalModsMask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ignoreLockModsMask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>internalModsRealMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ignoreLockModsRealMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>internalModsVmods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ignoreLockModsVmods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>repeatDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>repeatInterval</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>slowKeysDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>debounceDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysInterval</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysTimeToMax</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysMaxSpeed</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysCurve</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXOption</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeout</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutOptionsMask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutOptionsValues</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutMask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutValues</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>enabledControls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>perKeyRepeat</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_GET_CONTROLS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>deviceID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysDfltBtn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>numGroups</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groupsWrap</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>internalModsMask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ignoreLockModsMask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>internalModsRealMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ignoreLockModsRealMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>internalModsVmods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ignoreLockModsVmods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>repeatDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>repeatInterval</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>slowKeysDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>debounceDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysInterval</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysTimeToMax</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysMaxSpeed</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysCurve</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXOption</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeout</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutOptionsMask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutOptionsValues</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutMask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutValues</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>enabledControls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>perKeyRepeat</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_get_controls_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_get_controls_reply</i>. </p>

@@ -39,54 +39,54 @@ description: "xcb_xkb_state_notify_event_t –"
 } <code>xcb_xkb_state_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_XKB_STATE_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>xkbType</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>time</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>deviceID</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>mods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>baseMods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>latchedMods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>lockedMods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>group</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>baseGroup</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>latchedGroup</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>lockedGroup</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>compatState</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>grabMods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>compatGrabMods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>lookupMods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>compatLoockupMods</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>ptrBtnState</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>changed</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>keycode</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>eventType</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>requestMajor</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>requestMinor</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_XKB_STATE_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>xkbType</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>time</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>deviceID</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>mods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>baseMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>latchedMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>lockedMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>group</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>baseGroup</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>latchedGroup</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>lockedGroup</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>compatState</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>grabMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>compatGrabMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>lookupMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>compatLoockupMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>ptrBtnState</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>changed</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>keycode</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>eventType</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>requestMajor</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>requestMinor</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

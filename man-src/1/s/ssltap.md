@@ -11,28 +11,28 @@ description: "ssltap – Tap into SSL connections and display the data going by"
 <p> ssltap &#8211; Tap into SSL connections and display the data going by </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ssltap</code> [-fhlsvx] [-p port] [hostname:port]</dl>
+<dt> <code>ssltap</code> [-fhlsvx] [-p port] [hostname:port]</dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></p>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
 <h2>DESCRIPTION</h2>
 <p> The SSL Debugging Tool <code>ssltap</code> is an SSL-aware command-line proxy. It watches TCP connections and displays the data going by. If a connection is SSL, the data display includes interpreted SSL records and handshaking</p>
 <h2>OPTIONS</h2>
 <p> -f</p>
 <dl>
 <dt>
-<dd> Turn on fancy printing. Output is printed in colored HTML. Data sent from the client to the server is in blue; the server&#8217;s reply is in red. When used with looping mode, the different connections are separated with horizontal lines. You can use this option to upload the output into a browser.</dl>
+</dt><dd> Turn on fancy printing. Output is printed in colored HTML. Data sent from the client to the server is in blue; the server&#8217;s reply is in red. When used with looping mode, the different connections are separated with horizontal lines. You can use this option to upload the output into a browser.</dd></dl>
 <p> -h</p>
 <dl>
 <dt>
-<dd> Turn on hex/ASCII printing. Instead of outputting raw data, the command interprets each record as a numbered line of hex values, followed by the same data as ASCII characters. The two parts are separated by a vertical bar. Nonprinting characters are replaced by dots.</dl>
+</dt><dd> Turn on hex/ASCII printing. Instead of outputting raw data, the command interprets each record as a numbered line of hex values, followed by the same data as ASCII characters. The two parts are separated by a vertical bar. Nonprinting characters are replaced by dots.</dd></dl>
 <p> -l prefix</p>
 <dl>
 <dt>
-<dd> Turn on looping; that is, continue to accept connections rather than stopping after the first connection is complete.</dl>
+</dt><dd> Turn on looping; that is, continue to accept connections rather than stopping after the first connection is complete.</dd></dl>
 <p> -p port</p>
 <dl>
 <dt>
-<dd> Change the default rendezvous port (1924) to another port. </p>
+</dt><dd> Change the default rendezvous port (1924) to another port. </dd>
 <p> The following are well-known port numbers: </p>
 <p> * HTTP 80 </p>
 <p> * HTTPS 443 </p>
@@ -45,39 +45,39 @@ description: "ssltap – Tap into SSL connections and display the data going by"
 <p> -s</p>
 <dl>
 <dt>
-<dd> Turn on SSL parsing and decoding. The tool does not automatically detect SSL sessions. If you are intercepting an SSL connection, use this option so that the tool can detect and decode SSL structures. </p>
+</dt><dd> Turn on SSL parsing and decoding. The tool does not automatically detect SSL sessions. If you are intercepting an SSL connection, use this option so that the tool can detect and decode SSL structures. </dd>
 <p> If the tool detects a certificate chain, it saves the DER-encoded certificates into files in the current directory. The files are named cert.0x, where x is the sequence number of the certificate. </p>
 <p> If the -s option is used with -h, two separate parts are printed for each record: the plain hex/ASCII output, and the parsed SSL output.</dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Print a version string for the tool.</dl>
+</dt><dd> Print a version string for the tool.</dd></dl>
 <p> -x</p>
 <dl>
 <dt>
-<dd> Turn on extra SSL hex dumps.</dl>
+</dt><dd> Turn on extra SSL hex dumps.</dd></dl>
 <h2>USAGE AND EXAMPLES</h2>
 <p> You can use the SSL Debugging Tool to intercept any connection information. Although you can run the tool at its most basic by issuing the ssltap command with no options other than hostname:port, the information you get in this way is not very useful. For example, assume your development machine is called intercept. The simplest way to use the debugging tool is to execute the following command from a command shell: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ssltap <a rel="nofollow" href="http://www.netscape.com">www.netscape.com</a>
 </pre>
-</dl>
+</dd></dl>
 <p> The program waits for an incoming connection on the default port 1924. In your browser window, enter the URL <a rel="nofollow" href="http://intercept:1924.">http://intercept:1924.</a> The browser retrieves the requested page from the server at <a href="http://www.netscape.com">www.netscape.com</a>, but the page is intercepted and passed on to the browser by the debugging tool on intercept. On its way to the browser, the data is printed to the command shell from which you issued the command. Data sent from the client to the server is surrounded by the following symbols: &#8211;&gt; [ data ] Data sent from the server to the client is surrounded by the following symbols: &quot;left arrow&quot;&#8211; [ data ] The raw data stream is sent to standard output and is not interpreted in any way. This can result in peculiar effects, such as sounds, flashes, and even crashes of the command shell window. To output a basic, printable interpretation of the data, use the -h option, or, if you are looking at an SSL connection, the -s option. You will notice that the page you retrieved looks incomplete in the browser. This is because, by default, the tool closes down after the first connection is complete, so the browser is not able to load images. To make the tool continue to accept connections, switch on looping mode with the -l option. The following examples show the output from commonly used combinations of options. </p>
 <p> Example 1 </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ssltap.exe -sx -p 444 interzone.mcom.com:443 &gt; sx.txt
 </pre>
-</dl>
+</dd></dl>
 <p> Output </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Connected to interzone.mcom.com : 443 -- &gt; ; [
 alloclen = 66 bytes
@@ -238,20 +238,20 @@ SSLRecord {
 ]
 Server socket closed.
 </code></pre>
-</dl>
+</dd></dl>
 <p> Example 2 </p>
 <p> The -s option turns on SSL parsing. Because the -x option is not used in this example, undecoded values are output as raw data. The output is routed to a text file. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ssltap -s  -p 444 interzone.mcom.com:443 &gt; s.txt
 </pre>
-</dl>
+</dd></dl>
 <p> Output </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Connected to interzone.mcom.com:443<br />
 &#8211;&gt; [<br />
 alloclen = 63 bytes<br />
@@ -383,20 +383,20 @@ SSLRecord {<br />
 }<br />
 ]<br />
 Server socket closed.
-</dl>
+</dd></dl>
 <p> Example 3 </p>
 <p> In this example, the -h option turns hex/ASCII format. There is no SSL parsing or decoding. The output is routed to a text file. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ssltap -h  -p 444 interzone.mcom.com:443 &gt; h.txt
 </pre>
-</dl>
+</dd></dl>
 <p> Output </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Connected to interzone.mcom.com:443<br />
 &#8211;&gt; [<br />
    0: 80 40 01 03  00 00 27 00  00 00 10 01  00 80 02 00  | .@&#8230;.&#8217;&#8230;&#8230;&#8230;<br />
@@ -426,20 +426,20 @@ Connected to interzone.mcom.com:443<br />
 ]<br />
 &lt;additional records in same format&gt;<br />
 Server socket closed.
-</dl>
+</dd></dl>
 <p> Example 4 </p>
 <p> In this example, the -s option turns on SSL parsing, and the -h option turns on hex/ASCII format. Both formats are shown for each record. The output is routed to a text file. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ssltap -hs -p 444 interzone.mcom.com:443 &gt; hs.txt
 </pre>
-</dl>
+</dd></dl>
 <p> Output </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Connected to interzone.mcom.com : 443 -- &gt; [0:80 3d 01 03 00 00 24 00 00 00 10 01 00 80 02 00 |.= ....$.........
                                                10:80 03 00 80 04 00 80 06 00 40 07 00 c0 00 00 04 | .........[at]......
@@ -476,7 +476,7 @@ alloclen = 63 bytes
 &lt;additional records in same formats&gt;
 Server socket closed.
 </code></pre>
-</dl>
+</dd></dl>
 <h2>USAGE TIPS</h2>
 <p> When SSL restarts a previous session, it makes use of cached information to do a partial handshake. If you wish to capture a full SSL handshake, restart the browser to clear the session id cache. </p>
 <p> If you run the tool on a machine other than the SSL server to which you are trying to connect, the browser will complain that the host name you are trying to connect to is different from the certificate. If you are using the default BadCert callback, you can still connect through a dialog. If you are not using the default BadCert callback, the one you supply must allow for this possibility.</p>
@@ -493,15 +493,15 @@ Server socket closed.
 <p> Licensed under the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a rel="nofollow" href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a></p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Mozilla NSS bug 836477</p>
+<dt> 1.</dt>
+<dd> Mozilla NSS bug 836477</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a></dl>
-<dt> 2.</p>
-<dd> <a rel="nofollow" href="http://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></p>
+</dt><dd> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a></dd></dl>
+<dt> 2.</dt>
+<dd> <a rel="nofollow" href="http://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.mozilla.org/projects/security/pki/nss/tools">http://www.mozilla.org/projects/security/pki/nss/tools</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.mozilla.org/projects/security/pki/nss/tools">http://www.mozilla.org/projects/security/pki/nss/tools</a></dd></dl>
 </dl>
 <h2>Index</h2>

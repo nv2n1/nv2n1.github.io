@@ -10,10 +10,8 @@ description: "std::is_same – std::is_same"
 <p>std::is_same &#8211; std::is_same</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T, class U&gt;
     (since C++ 11)
-
         struct is_same;</code></pre>
 <p>If T and U name the same type (including const/volatile qualifications), provides the member constant value equal to true. Otherwise value is false.<br />
 Commutativity is satisfied, i.e. for any two types T and U, is_same&lt;T, U&gt;::value == true if and only if is_same&lt;U, T&gt;::value == true.<br />
@@ -42,18 +40,14 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;cstdint&gt;
 void print_separator()
-
 {
     std::cout &lt;&lt; &quot;-----
 &quot;;
 }
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     // some implementation-defined facts

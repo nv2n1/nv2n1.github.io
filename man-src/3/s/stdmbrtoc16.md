@@ -10,13 +10,9 @@ description: "std::mbrtoc16 – std::mbrtoc16"
 <p>std::mbrtoc16 &#8211; std::mbrtoc16</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cuchar&gt;
-
     std::size_t mbrtoc16(char16_t *pc16,
-
                          const char *s, (since C++ 11)
-
                                             std::size_t n,
-
                          std::mbstate_t *ps);</code></pre>
 <p>Converts a narrow multibyte character to UTF-16 character representation.<br />
 If s is not a null pointer, inspects at most n bytes of the multibyte character string, beginning with the byte pointed to by s to determine the number of bytes necessary to complete the next multibyte character (including any shift sequences). If the function determines that the next multibyte character in s is complete and valid, converts it to the corresponding 16-bit character and stores it in *pc16 (if pc16 is not null).<br />
@@ -39,18 +35,12 @@ ps &#8211; pointer to the conversion state object used when interpreting the mul
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;cuchar&gt;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::string str = u8&quot;zß水&#x1f34c;&quot;; // or u8&quot;zß水&#x1f34c;&quot;

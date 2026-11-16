@@ -39,34 +39,34 @@ description: "bzip2, bunzip2 â€“ a block-sorting file compressor, v1.0.6 bzcat â
 <p> Return values: 0 for a normal exit, 1 for environmental problems (file not found, invalid flags, I/O errors, &amp;c), 2 to indicate a corrupt compressed file, 3 for an internal consistency error (eg, bug) which caused <i>bzip2</i> to panic. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c &#8211;stdout</code></p>
-<dd> Compress or decompress to standard output.</p>
-<dt><code>-d &#8211;decompress</code></p>
-<dd> Force decompression. <i>bzip2, </i> <i>bunzip2 </i> and <i>bzcat </i> are really the same program, and the decision about what actions to take is done on the basis of which name is used. This flag overrides that mechanism, and forces <i>bzip2</i> to decompress.</p>
-<dt><code>-z &#8211;compress</code></p>
-<dd> The complement to -d: forces compression, regardless of the invocation name.</p>
-<dt><code>-t &#8211;test</code></p>
-<dd> Check integrity of the specified file(s), but don&#8217;t decompress them. This really performs a trial decompression and throws away the result.</p>
-<dt><code>-f &#8211;force</code></p>
-<dd> Force overwrite of output files. Normally, <i>bzip2 </i> will not overwrite existing output files. Also forces <i>bzip2 </i> to break hard links to files, which it otherwise wouldn&#8217;t do. </p>
+<dt><code>-c &#8211;stdout</code></dt>
+<dd> Compress or decompress to standard output.</dd>
+<dt><code>-d &#8211;decompress</code></dt>
+<dd> Force decompression. <i>bzip2, </i> <i>bunzip2 </i> and <i>bzcat </i> are really the same program, and the decision about what actions to take is done on the basis of which name is used. This flag overrides that mechanism, and forces <i>bzip2</i> to decompress.</dd>
+<dt><code>-z &#8211;compress</code></dt>
+<dd> The complement to -d: forces compression, regardless of the invocation name.</dd>
+<dt><code>-t &#8211;test</code></dt>
+<dd> Check integrity of the specified file(s), but don&#8217;t decompress them. This really performs a trial decompression and throws away the result.</dd>
+<dt><code>-f &#8211;force</code></dt>
+<dd> Force overwrite of output files. Normally, <i>bzip2 </i> will not overwrite existing output files. Also forces <i>bzip2 </i> to break hard links to files, which it otherwise wouldn&#8217;t do. </dd>
 <p> bzip2 normally declines to decompress files which don&#8217;t have the correct magic header bytes. If forced (-f), however, it will pass such files through unmodified. This is how GNU gzip behaves.</p>
-<dt><code>-k &#8211;keep</code></p>
-<dd> Keep (don&#8217;t delete) input files during compression or decompression.</p>
-<dt><code>-s &#8211;small</code></p>
-<dd> Reduce memory usage, for compression, decompression and testing. Files are decompressed and tested using a modified algorithm which only requires 2.5 bytes per block byte. This means any file can be decompressed in 2300k of memory, albeit at about half the normal speed. </p>
+<dt><code>-k &#8211;keep</code></dt>
+<dd> Keep (don&#8217;t delete) input files during compression or decompression.</dd>
+<dt><code>-s &#8211;small</code></dt>
+<dd> Reduce memory usage, for compression, decompression and testing. Files are decompressed and tested using a modified algorithm which only requires 2.5 bytes per block byte. This means any file can be decompressed in 2300k of memory, albeit at about half the normal speed. </dd>
 <p> During compression, -s selects a block size of 200k, which limits memory use to around the same figure, at the expense of your compression ratio. In short, if your machine is low on memory (8 megabytes or less), use -s for everything. See MEMORY MANAGEMENT below.</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> Suppress non-essential warning messages. Messages pertaining to I/O errors and other critical events will not be suppressed.</p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd> Verbose mode &#8212; show the compression ratio for each file processed. Further -v&#8217;s increase the verbosity level, spewing out lots of information which is primarily of interest for diagnostic purposes.</p>
-<dt><code>-L &#8211;license -V &#8211;version</code></p>
-<dd> Display the software version, license terms and conditions.</p>
-<dt><code>-1 (or &#8211;fast) to -9 (or &#8211;best)</code></p>
-<dd> Set the block size to 100 k, 200 k .. 900 k when compressing. Has no effect when decompressing. See MEMORY MANAGEMENT below. The &#8211;fast and &#8211;best aliases are primarily for GNU gzip compatibility. In particular, &#8211;fast doesn&#8217;t make things significantly faster. And &#8211;best merely selects the default behaviour.</p>
-<dt><code>&#8212;</code></p>
-<dd> Treats all subsequent arguments as file names, even if they start with a dash. This is so you can handle files with names beginning with a dash, for example: bzip2 &#8212; -myfilename.</p>
-<dt><code>&#8211;repetitive-fast &#8211;repetitive-best</code></p>
-<dd> These flags are redundant in versions 0.9.5 and above. They provided some coarse control over the behaviour of the sorting algorithm in earlier versions, which was sometimes useful. 0.9.5 and above have an improved algorithm which renders these flags irrelevant. </p>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> Suppress non-essential warning messages. Messages pertaining to I/O errors and other critical events will not be suppressed.</dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd> Verbose mode &#8212; show the compression ratio for each file processed. Further -v&#8217;s increase the verbosity level, spewing out lots of information which is primarily of interest for diagnostic purposes.</dd>
+<dt><code>-L &#8211;license -V &#8211;version</code></dt>
+<dd> Display the software version, license terms and conditions.</dd>
+<dt><code>-1 (or &#8211;fast) to -9 (or &#8211;best)</code></dt>
+<dd> Set the block size to 100 k, 200 k .. 900 k when compressing. Has no effect when decompressing. See MEMORY MANAGEMENT below. The &#8211;fast and &#8211;best aliases are primarily for GNU gzip compatibility. In particular, &#8211;fast doesn&#8217;t make things significantly faster. And &#8211;best merely selects the default behaviour.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> Treats all subsequent arguments as file names, even if they start with a dash. This is so you can handle files with names beginning with a dash, for example: bzip2 &#8212; -myfilename.</dd>
+<dt><code>&#8211;repetitive-fast &#8211;repetitive-best</code></dt>
+<dd> These flags are redundant in versions 0.9.5 and above. They provided some coarse control over the behaviour of the sorting algorithm in earlier versions, which was sometimes useful. 0.9.5 and above have an improved algorithm which renders these flags irrelevant. </dd>
 </dl>
 <h2>MEMORY MANAGEMENT</h2>
 <p> <i>bzip2 </i> compresses large files in blocks. The block size affects both the compression ratio achieved, and the amount of memory needed for compression and decompression. The flags -1 through -9 specify the block size to be 100,000 bytes through 900,000 bytes (the default) respectively. At decompression time, the block size used for compression is read from the header of the compressed file, and <i>bunzip2</i> then allocates itself just enough memory to decompress the file. Since block sizes are stored in compressed files, it follows that the flags -1 to -9 are irrelevant to and so ignored during decompression. </p>

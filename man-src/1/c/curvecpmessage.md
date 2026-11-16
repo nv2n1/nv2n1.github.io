@@ -19,20 +19,20 @@ description: "CurveCP — Message-handling programs"
 <h2>OPTIONS</h2>
 <p> How to use <code>curvecpmessage</code>:</p>
 <dl>
-<dt><code>-q</code> <code>optional</code></p>
-<dd> no error messages</p>
-<dt><code>-Q</code> <code>optional</code></p>
-<dd> print error messages (default)</p>
-<dt><code>-v</code> <code>optional</code></p>
-<dd> print extra information</p>
-<dt><code>-c</code> <code>optional</code></p>
-<dd> program is a client; server starts first</p>
-<dt><code>-C</code> <code>optional</code></p>
-<dd> program is a client that starts first</p>
-<dt><code>-s</code> <code>optional</code></p>
-<dd> program is a server (default)</p>
-<dt><code>prog</code></p>
-<dd> run this server</dl>
+<dt><code>-q</code> <code>optional</code></dt>
+<dd> no error messages</dd>
+<dt><code>-Q</code> <code>optional</code></dt>
+<dd> print error messages (default)</dd>
+<dt><code>-v</code> <code>optional</code></dt>
+<dd> print extra information</dd>
+<dt><code>-c</code> <code>optional</code></dt>
+<dd> program is a client; server starts first</dd>
+<dt><code>-C</code> <code>optional</code></dt>
+<dd> program is a client that starts first</dd>
+<dt><code>-s</code> <code>optional</code></dt>
+<dd> program is a server (default)</dd>
+<dt><code>prog</code></dt>
+<dd> run this server</dd></dl>
 <h2>SEE ALSO</h2>
 <p> curvecpserver (1), curvecpclient (1), inetd (8), tcpserver (1).</p>
 <h2>AUTHOR</h2>

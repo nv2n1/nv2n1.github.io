@@ -15,22 +15,22 @@ description: "gettextize – install or upgrade gettext infrastructure"
 <p> Prepares a source package to use gettext.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> print this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> print version information and exit</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> force writing of new files even if old exist</p>
-<dt><code>&#8211;intl</code></p>
-<dd> install libintl in a subdirectory (deprecated)</p>
-<dt><code>&#8211;po-dir</code>=<i>DIR</i></p>
-<dd> specify directory with PO files</p>
-<dt><code>&#8211;no-changelog</code></p>
-<dd> don&#8217;t update or create ChangeLog files</p>
-<dt><code>&#8211;symlink</code></p>
-<dd> make symbolic links instead of copying files</p>
-<dt><code>-n</code>, <code>&#8211;dry-run</code></p>
-<dd> print modifications but don&#8217;t perform them</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> print this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> print version information and exit</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> force writing of new files even if old exist</dd>
+<dt><code>&#8211;intl</code></dt>
+<dd> install libintl in a subdirectory (deprecated)</dd>
+<dt><code>&#8211;po-dir</code>=<i>DIR</i></dt>
+<dd> specify directory with PO files</dd>
+<dt><code>&#8211;no-changelog</code></dt>
+<dd> don&#8217;t update or create ChangeLog files</dd>
+<dt><code>&#8211;symlink</code></dt>
+<dd> make symbolic links instead of copying files</dd>
+<dt><code>-n</code>, <code>&#8211;dry-run</code></dt>
+<dd> print modifications but don&#8217;t perform them</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Ulrich Drepper</p>
 <h2>REPORTING BUGS</h2>
@@ -42,6 +42,6 @@ description: "gettextize – install or upgrade gettext infrastructure"
 <p> The full documentation for <code>gettextize</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gettextize</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gettextize</code></dl>
+</dt><dd> <code>info gettextize</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

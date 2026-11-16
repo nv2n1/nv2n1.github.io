@@ -11,7 +11,6 @@ std::feof - std::feof
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int feof(std::FILE *stream);</code></pre> 
 Checks if the end of the given file stream has been reached. 
 
@@ -31,10 +30,8 @@ In typical usage, input stream processing stops on any error; feof and std::ferr
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     FILE *fp = std::fopen(&quot;test.txt&quot;, &quot;r&quot;);
     if (!fp) {

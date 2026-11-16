@@ -13,7 +13,6 @@ std::future&lt;T&gt;::~future - std::future&lt;T&gt;::~future
 ~future(); <i>(since C++11)</i> 
 Releases any shared state. This means <pre><code>*if the return object or provider holds the last reference to its shared state, the shared state is destroyed;
 and
-
     *the return object or
     provider gives up its reference to its shared state;
 and

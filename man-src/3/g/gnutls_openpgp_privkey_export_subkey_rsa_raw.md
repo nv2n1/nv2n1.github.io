@@ -14,22 +14,22 @@ description: "gnutls_openpgp_privkey_export_subkey_rsa_raw – API function"
 <p> <code>int gnutls_openpgp_privkey_export_subkey_rsa_raw(gnutls_openpgp_privkey_t </code><i>pkey</i><code>, unsigned int </code><i>idx</i><code>, gnutls_datum_t * </code><i>m</i><code>, gnutls_datum_t * </code><i>e</i><code>, gnutls_datum_t * </code><i>d</i><code>, gnutls_datum_t * </code><i>p</i><code>, gnutls_datum_t * </code><i>q</i><code>, gnutls_datum_t * </code><i>u</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_privkey_t pkey</p>
-<dd> Holds the certificate</p>
-<dt>unsigned int idx</p>
-<dd> Is the subkey index</p>
-<dt>gnutls_datum_t * m</p>
-<dd> will hold the modulus</p>
-<dt>gnutls_datum_t * e</p>
-<dd> will hold the public exponent</p>
-<dt>gnutls_datum_t * d</p>
-<dd> will hold the private exponent</p>
-<dt>gnutls_datum_t * p</p>
-<dd> will hold the first prime (p)</p>
-<dt>gnutls_datum_t * q</p>
-<dd> will hold the second prime (q)</p>
-<dt>gnutls_datum_t * u</p>
-<dd> will hold the coefficient</dl>
+<dt>gnutls_openpgp_privkey_t pkey</dt>
+<dd> Holds the certificate</dd>
+<dt>unsigned int idx</dt>
+<dd> Is the subkey index</dd>
+<dt>gnutls_datum_t * m</dt>
+<dd> will hold the modulus</dd>
+<dt>gnutls_datum_t * e</dt>
+<dd> will hold the public exponent</dd>
+<dt>gnutls_datum_t * d</dt>
+<dd> will hold the private exponent</dd>
+<dt>gnutls_datum_t * p</dt>
+<dd> will hold the first prime (p)</dd>
+<dt>gnutls_datum_t * q</dt>
+<dd> will hold the second prime (q)</dd>
+<dt>gnutls_datum_t * u</dt>
+<dd> will hold the coefficient</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the RSA private key&#8217;s parameters found in the given structure. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
@@ -45,6 +45,6 @@ description: "gnutls_openpgp_privkey_export_subkey_rsa_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

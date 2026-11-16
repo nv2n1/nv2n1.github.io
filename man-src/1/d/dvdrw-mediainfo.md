@@ -15,8 +15,8 @@ description: "dvd+rw-mediainfo – display information about dvd drive and disk"
 <p> </i></p>
 <h2>Options</h2>
 <dl>
-<dt>This program does not accept any command line options.</p>
-<dd></dl>
+<dt>This program does not accept any command line options.</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p>Most up-to-date information on dvd+rw-tools is available at <a rel="nofollow" href="http://fy.chalmers.se/~appro/linux/DVD+RW/.">http://fy.chalmers.se/~appro/linux/DVD+RW/.</a> </p>
 <p> The manpage for <code>genisofs</code>(8), <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1), <code>dvd+rw-format</code>(1), <code>dvd+rw-booktype</code>(1). </p>

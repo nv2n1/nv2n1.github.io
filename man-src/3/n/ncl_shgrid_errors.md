@@ -12,35 +12,35 @@ shgrid_errors - This document briefly describes all the errors reported from Shg
 
 Each entry below includes the error number and its meaning.
 <dl><dt> 0
-<dd>No error.
-<dt> 1
-<dd>number of input data must be &gt; 9
-<dt> 2
-<dd>NLS must be .GT. 9
-<dt> 3
-<dd>number of data points used in least squares fit must be &gt; 9
-<dt> 4
-<dd>NFL (number of points used to calculate weights) must be at least 1
-<dt> 5
-<dd>number of points used in least squares fit too large
-<dt> 6
-<dd>number of points used in calculating weights too large
-<dt> 7
-<dd>cell grid dimensions must be positive
-<dt> 8
-<dd>duplicate input points encountered
-<dt> 9
-<dd>collinear input, no unique solution
-<dt> 10
-<dd>at least two points must have different X coordinates
-<dt> 11
-<dd>at least two points must have different Y coordinates
-<dt> 12
-<dd>at least two points must have different Z coordinates
-<dt> 13
-<dd>no cells contain a point within the radius of influence of the input point
-<dt> 14
-<dd>negative search radius in calculating least squares fit</dl>
+</dt><dd>No error.
+</dd><dt> 1
+</dt><dd>number of input data must be &gt; 9
+</dd><dt> 2
+</dt><dd>NLS must be .GT. 9
+</dd><dt> 3
+</dt><dd>number of data points used in least squares fit must be &gt; 9
+</dd><dt> 4
+</dt><dd>NFL (number of points used to calculate weights) must be at least 1
+</dd><dt> 5
+</dt><dd>number of points used in least squares fit too large
+</dd><dt> 6
+</dt><dd>number of points used in calculating weights too large
+</dd><dt> 7
+</dt><dd>cell grid dimensions must be positive
+</dd><dt> 8
+</dt><dd>duplicate input points encountered
+</dd><dt> 9
+</dt><dd>collinear input, no unique solution
+</dd><dt> 10
+</dt><dd>at least two points must have different X coordinates
+</dd><dt> 11
+</dt><dd>at least two points must have different Y coordinates
+</dd><dt> 12
+</dt><dd>at least two points must have different Z coordinates
+</dd><dt> 13
+</dt><dd>no cells contain a point within the radius of influence of the input point
+</dd><dt> 14
+</dt><dd>negative search radius in calculating least squares fit</dd></dl>
 
 <h2>See Also</h2>
 

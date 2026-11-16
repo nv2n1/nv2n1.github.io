@@ -15,19 +15,19 @@ bio_split - split a bio
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>bio to split</dl>
+<dl><dd></dd><dd>bio to split</dd></dl>
  
 
  <i>sectors</i>
-<dl><dd>number of sectors to split from the front of <i>bio</i></dl>
+<dl><dd>number of sectors to split from the front of <i>bio</i></dd></dl>
  
 
  <i>gfp</i>
-<dl><dd>gfp mask</dl>
+<dl><dd>gfp mask</dd></dl>
  
 
  <i>bs</i>
-<dl><dd>bio set to allocate from</dl>
+<dl><dd>bio set to allocate from</dd></dl>
 
 <h2>Description</h2>
 

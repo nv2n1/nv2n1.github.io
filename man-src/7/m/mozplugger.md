@@ -30,20 +30,20 @@ description: "mozplugger – a streaming multimedia plugin for UNIX mozilla"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
  <code>mime type</code> : <code>extensions</code> : <code>description</code> </p>
 <dl>
-<dt><code>mime type</code></p>
-<dd>The mime type is the standardized name for the content type you want MozPlugger to handle. This must be the same type as the web server claims the file to be, or MozPlugger will not be used for that file, regardless of the extension. Note: Some web servers incorrectly report the wrong mime type, blame the web server adminstrator not mozplugger.</p>
-<dt><code>extensions</code></p>
-<dd>This is a comma separated list of extensions that should be associated with this particular mime type. The extensions are only used when a web server does not report what type of file it is, or when loading files directly from disk.</p>
-<dt><code>description</code></p>
-<dd>This is the description that shows up in about:plugins and in the application preferences section in Mozilla. </p>
-<dt>Lines that describe what command to use for a mime type must begin</p>
-<dd>with a whitespace and have two fields: </p>
+<dt><code>mime type</code></dt>
+<dd>The mime type is the standardized name for the content type you want MozPlugger to handle. This must be the same type as the web server claims the file to be, or MozPlugger will not be used for that file, regardless of the extension. Note: Some web servers incorrectly report the wrong mime type, blame the web server adminstrator not mozplugger.</dd>
+<dt><code>extensions</code></dt>
+<dd>This is a comma separated list of extensions that should be associated with this particular mime type. The extensions are only used when a web server does not report what type of file it is, or when loading files directly from disk.</dd>
+<dt><code>description</code></dt>
+<dd>This is the description that shows up in about:plugins and in the application preferences section in Mozilla. </dd>
+<dt>Lines that describe what command to use for a mime type must begin</dt>
+<dd>with a whitespace and have two fields: </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
  <code>flags</code> : <code>command</code> </p>
-<dt><code>flags</code></p>
-<dd>This is a space separated list of flags associated with the command and tells mozplugger how to handle this command. See below for further details.</p>
-<dt><code>command</code></p>
-<dd>This is a command which is sent to /bin/sh when handling this mime type. Mozplugger assumes the command line starts with the name of an application followed by various arguments passed to that application. </p>
+<dt><code>flags</code></dt>
+<dd>This is a space separated list of flags associated with the command and tells mozplugger how to handle this command. See below for further details.</dd>
+<dt><code>command</code></dt>
+<dd>This is a command which is sent to /bin/sh when handling this mime type. Mozplugger assumes the command line starts with the name of an application followed by various arguments passed to that application. </dd>
 </dl>
 <h2>Using M4</h2>
 <p>When loading, MozPlugger will pass the mozpluggerrc file through m4, a general purpose macro processor (assuming m4 is installed). This provides the ablity to use macros within mozpluggerrc especially for those commonly used command lines. m4 brings text replacement, parameter substitution, file inclusion, string manipulation, conditional evaluation, arthemtic expressions, etc to mozpluggerrc. Please see m4 documentation for more details.</p>
@@ -60,64 +60,64 @@ description: "mozplugger – a streaming multimedia plugin for UNIX mozilla"
 <p> This should allow any output from the application to be visible at the shell and hopefully lead to a diagnosis of the fault.</p>
 <h2>Flags</h2>
 <dl>
-<dt><code>autostart</code></p>
-<dd>This flag indicates that the command uses the $autostart environment variable. That is mozplugger will run the command on the assumption that the command/application will check the value of the $autostart environment variable. If this flag is not present and the HTML code for the embedded object indicates autostart is false, mozplugger will not run the command but instead draw a single start button.</p>
-<dt><code>repeat</code></p>
-<dd>This flag indicates that the command uses the $repeats environment variable. That is mozplugger will run the command on the assumption that the command/application will check the value of the $repeats environment variable and perform the repeats. If this flag is not set, mozplugger will perform the required number of repeats as indicated in the HTML code by calling the command $repeats times.</p>
-<dt><code>loop</code></p>
-<dd>This indicates that the command loops forever. If the HTML code for the embedded object indicates don&#8217;t loop/repeat forever (e.g. the loop attribute is not present or not set to true), the command on this line will not be used.</p>
-<dt><code>stream</code></p>
-<dd>This indicates that this command can take an url. In this case, the environment variable $file contains the URL of the file to play and the browser does not download it. It is assumed that the command can handle the URL. Note: if a username and password is required for this URL, the command/application will have to obtain this as it is not passed to it from the browser.</p>
-<dt><code>ignore_errors</code></p>
-<dd>This flag tells MozPlugger to ignore the exit status of the command. For example is mozplugger is repeating the command &#8216;n&#8217; times and the command exits with an error, normally mozplugger would terminate at this time. With this flag set, mozplugger continues the repeats.</p>
-<dt><code>noisy</code></p>
-<dd>This flag tells MozPlugger to redirect the stdout and stderr of the command to /dev/null.</p>
-<dt><code>swallow (name)</code></p>
-<dd>This flag tells mozplugger that the command will open a window with the specified name and that Mozplugger will then move this window inside your browser. If name is prefixed with &#8216;=&#8217; then mozplugger looks for an exact match with the window name, if the prefix is &#8216;~&#8217; then mozplugger looks for a case insensitive match, if prefixed with &#8216;*&#8217; then mozplugger looks for a window name that starts with &#8216;name&#8217; and is case insensitive. If none of these prefixes then, mozplugger checks if name occurs anywhere in the window name, but is case sensitive. Note any spaces between the brackets are counted as part of the window name. The window name to use in mozpluggerrc can be obtained by using the utility xprop(). Run the command in question, type &quot;xprop WM_CLASS&quot; at a shell prompt and then click on the application window.</p>
-<dt><code>fmatch (string)</code></p>
-<dd>This flag defines a command that will be used only if the filename or url (i.e. $file) contains &#8216;string&#8217;. If &#8216;string&#8217; is prefixed with &#8216;*&#8217; then mozplugger defines a match when the file starts with &#8216;string&#8217; (the check is case insensitive). If &#8216;string&#8217; is prefixed with &#8216;%&#8217; then mozplugger defines a match when the file ends with &#8216;string&#8217; (the check is case insenstive and ignores any parameters at the end of a url {i.e. &#8216;?xxx=yyy&#8217;}). If none of these prefixes then mozplugger defines a match when the &#8216;string&#8217; is found somewhere in the file (but this time match is case sensitive). Note any spaces between the brackets are counted as part of the &#8216;string&#8217;.</p>
-<dt><code>nokill</code></p>
-<dd>This flag tells MozPlugger to not try to kill the command when leaving the page, and to not start the command in a loop. This is normally used for applications that are not swallowed and can play multiple files, such as xmms.</p>
-<dt><code>exits</code></p>
-<dd>This flag tells MozPlugger that the command will exits straight away and hence does not need to be killed when leaving the page, and to not start the command in a loop. This is normally used for applications that just display an image in the $window and then exit.</p>
-<dt><code>fill</code></p>
-<dd>This flag tells MozPlugger to maximize a swallowed window.</p>
-<dt><code>maxaspect</code></p>
-<dd>This flag tells Mozplugger to maximize a swallowed window while keeping the width/height ratio constant.</p>
-<dt><code>controls</code></p>
-<dd>This flag tells MozPlugger to draw controls and is typically used with audio files to display a controller with the buttons play, pause and stop. Be aware if the embedded object has no sub-window defined within the browser&#8217;s window (e.g. if the HTML uses the tag hidden = true) then the controls will not appear.</p>
-<dt><code>embed</code></p>
-<dd>This flags tells Mozplugger to only use this command if the associated HTML refers to an embedded object that is a small part of a HTML page.</p>
-<dt><code>noembed</code></p>
-<dd>This flags tells Mozplugger to only use this command if the associated HTML refers to a separate window that only contains the object.</p>
-<dt><code>links</code></p>
-<dd>This flag tells Mozplugger to only use this command for embedded objects that are really links to external applications (such objects typically use the target and href variables to indicate a clickable link). Embedded Quicktime objects sometimes use this mechanism.</p>
-<dt><code>hidden</code></p>
-<dd>In conjunction with the swallow keyword, this tells the plugin to swallow windows which are not visible yet. </p>
+<dt><code>autostart</code></dt>
+<dd>This flag indicates that the command uses the $autostart environment variable. That is mozplugger will run the command on the assumption that the command/application will check the value of the $autostart environment variable. If this flag is not present and the HTML code for the embedded object indicates autostart is false, mozplugger will not run the command but instead draw a single start button.</dd>
+<dt><code>repeat</code></dt>
+<dd>This flag indicates that the command uses the $repeats environment variable. That is mozplugger will run the command on the assumption that the command/application will check the value of the $repeats environment variable and perform the repeats. If this flag is not set, mozplugger will perform the required number of repeats as indicated in the HTML code by calling the command $repeats times.</dd>
+<dt><code>loop</code></dt>
+<dd>This indicates that the command loops forever. If the HTML code for the embedded object indicates don&#8217;t loop/repeat forever (e.g. the loop attribute is not present or not set to true), the command on this line will not be used.</dd>
+<dt><code>stream</code></dt>
+<dd>This indicates that this command can take an url. In this case, the environment variable $file contains the URL of the file to play and the browser does not download it. It is assumed that the command can handle the URL. Note: if a username and password is required for this URL, the command/application will have to obtain this as it is not passed to it from the browser.</dd>
+<dt><code>ignore_errors</code></dt>
+<dd>This flag tells MozPlugger to ignore the exit status of the command. For example is mozplugger is repeating the command &#8216;n&#8217; times and the command exits with an error, normally mozplugger would terminate at this time. With this flag set, mozplugger continues the repeats.</dd>
+<dt><code>noisy</code></dt>
+<dd>This flag tells MozPlugger to redirect the stdout and stderr of the command to /dev/null.</dd>
+<dt><code>swallow (name)</code></dt>
+<dd>This flag tells mozplugger that the command will open a window with the specified name and that Mozplugger will then move this window inside your browser. If name is prefixed with &#8216;=&#8217; then mozplugger looks for an exact match with the window name, if the prefix is &#8216;~&#8217; then mozplugger looks for a case insensitive match, if prefixed with &#8216;*&#8217; then mozplugger looks for a window name that starts with &#8216;name&#8217; and is case insensitive. If none of these prefixes then, mozplugger checks if name occurs anywhere in the window name, but is case sensitive. Note any spaces between the brackets are counted as part of the window name. The window name to use in mozpluggerrc can be obtained by using the utility xprop(). Run the command in question, type &quot;xprop WM_CLASS&quot; at a shell prompt and then click on the application window.</dd>
+<dt><code>fmatch (string)</code></dt>
+<dd>This flag defines a command that will be used only if the filename or url (i.e. $file) contains &#8216;string&#8217;. If &#8216;string&#8217; is prefixed with &#8216;*&#8217; then mozplugger defines a match when the file starts with &#8216;string&#8217; (the check is case insensitive). If &#8216;string&#8217; is prefixed with &#8216;%&#8217; then mozplugger defines a match when the file ends with &#8216;string&#8217; (the check is case insenstive and ignores any parameters at the end of a url {i.e. &#8216;?xxx=yyy&#8217;}). If none of these prefixes then mozplugger defines a match when the &#8216;string&#8217; is found somewhere in the file (but this time match is case sensitive). Note any spaces between the brackets are counted as part of the &#8216;string&#8217;.</dd>
+<dt><code>nokill</code></dt>
+<dd>This flag tells MozPlugger to not try to kill the command when leaving the page, and to not start the command in a loop. This is normally used for applications that are not swallowed and can play multiple files, such as xmms.</dd>
+<dt><code>exits</code></dt>
+<dd>This flag tells MozPlugger that the command will exits straight away and hence does not need to be killed when leaving the page, and to not start the command in a loop. This is normally used for applications that just display an image in the $window and then exit.</dd>
+<dt><code>fill</code></dt>
+<dd>This flag tells MozPlugger to maximize a swallowed window.</dd>
+<dt><code>maxaspect</code></dt>
+<dd>This flag tells Mozplugger to maximize a swallowed window while keeping the width/height ratio constant.</dd>
+<dt><code>controls</code></dt>
+<dd>This flag tells MozPlugger to draw controls and is typically used with audio files to display a controller with the buttons play, pause and stop. Be aware if the embedded object has no sub-window defined within the browser&#8217;s window (e.g. if the HTML uses the tag hidden = true) then the controls will not appear.</dd>
+<dt><code>embed</code></dt>
+<dd>This flags tells Mozplugger to only use this command if the associated HTML refers to an embedded object that is a small part of a HTML page.</dd>
+<dt><code>noembed</code></dt>
+<dd>This flags tells Mozplugger to only use this command if the associated HTML refers to a separate window that only contains the object.</dd>
+<dt><code>links</code></dt>
+<dd>This flag tells Mozplugger to only use this command for embedded objects that are really links to external applications (such objects typically use the target and href variables to indicate a clickable link). Embedded Quicktime objects sometimes use this mechanism.</dd>
+<dt><code>hidden</code></dt>
+<dd>In conjunction with the swallow keyword, this tells the plugin to swallow windows which are not visible yet. </dd>
 </dl>
 <h2>Variables</h2>
 <p>MozPlugger gives some variables to /bin/sh when running the command, these variables are: </p>
 <dl>
-<dt><code>$autostart</code></p>
-<dd>This variable contains 1 or 0. When set to 1 it indicates that the command should start playing/showing the associated media. By default it is 0 if controls flag is present and 1 otherwise, but it is overridden if the associated HTML contains the attribute autostart or autoplay. Command/applications that use this environment variable should also have the <code>autostart </code> flag set.</p>
-<dt><code>$repeats</code></p>
-<dd>This variable contains how many times the file should be played. By default it is once, but it is overridden if the associated HTML contains the attribute loop, numloop or playcount. Command/applications which use this environment variable should also have the <code>repeat</code> flag set.</p>
-<dt><code>$window</code></p>
-<dd>This is the X window Mozilla has given the plugin. This can be used with applications such as MPlayer to display graphics inside the mozilla window. Be aware if the embedded object has no sub-window defined within the browser&#8217;s window (e.g. if the HTML uses the tag hidden = true) then the variable will have the value zero (null).</p>
-<dt><code>$hexwindow</code></p>
-<dd>Same as $window except the value is expressed as an hexidecimal string in the form 0xNNNNNN where NNNNNN is the hexadecimal digits.</p>
-<dt><code>$width</code></p>
-<dd>This is the horizontal resolution in pixels and is taken from the width attribute in the HTML code.</p>
-<dt><code>$height</code></p>
-<dd>This is the vertical resolution in pixels and is taken from the height attribute in the HTML code.</p>
-<dt><code>$file</code></p>
-<dd>This is the file to play. If the command has the <code>stream</code> flag set, this variable contains the URL of the file to play. This is taken from the associated HTML code. The value is that of the attribute src, data, href, qtsrc, filename, url or location depending on which is present and whether the &lt;EMBED&gt; or &lt;OBJECT&gt; tag is used. If the <code>stream</code> is not set, this variable contains a local temporary file that the browser has created.</p>
-<dt><code>$fragment</code></p>
-<dd>This is the part of the original URL that appears after the # if it exists. Sometimes this contains additional information that could be useful for the application e.g. starting page number in a pdf document</p>
-<dt><code>$mimetype</code></p>
-<dd>This variable contains the mime type of $file.</p>
-<dt><code>$VAR_&lt;parameter_name&gt;</code></p>
-<dd>All the parameters of the &lt;EMBED&gt; or &lt;OBJECT&gt; tags are made available in mozpluggerrc through environment variables. For example the parameter loop=&quot;1&quot; in an &lt;EMBED&gt; tag defines the variable VAR_loop=1. </p>
+<dt><code>$autostart</code></dt>
+<dd>This variable contains 1 or 0. When set to 1 it indicates that the command should start playing/showing the associated media. By default it is 0 if controls flag is present and 1 otherwise, but it is overridden if the associated HTML contains the attribute autostart or autoplay. Command/applications that use this environment variable should also have the <code>autostart </code> flag set.</dd>
+<dt><code>$repeats</code></dt>
+<dd>This variable contains how many times the file should be played. By default it is once, but it is overridden if the associated HTML contains the attribute loop, numloop or playcount. Command/applications which use this environment variable should also have the <code>repeat</code> flag set.</dd>
+<dt><code>$window</code></dt>
+<dd>This is the X window Mozilla has given the plugin. This can be used with applications such as MPlayer to display graphics inside the mozilla window. Be aware if the embedded object has no sub-window defined within the browser&#8217;s window (e.g. if the HTML uses the tag hidden = true) then the variable will have the value zero (null).</dd>
+<dt><code>$hexwindow</code></dt>
+<dd>Same as $window except the value is expressed as an hexidecimal string in the form 0xNNNNNN where NNNNNN is the hexadecimal digits.</dd>
+<dt><code>$width</code></dt>
+<dd>This is the horizontal resolution in pixels and is taken from the width attribute in the HTML code.</dd>
+<dt><code>$height</code></dt>
+<dd>This is the vertical resolution in pixels and is taken from the height attribute in the HTML code.</dd>
+<dt><code>$file</code></dt>
+<dd>This is the file to play. If the command has the <code>stream</code> flag set, this variable contains the URL of the file to play. This is taken from the associated HTML code. The value is that of the attribute src, data, href, qtsrc, filename, url or location depending on which is present and whether the &lt;EMBED&gt; or &lt;OBJECT&gt; tag is used. If the <code>stream</code> is not set, this variable contains a local temporary file that the browser has created.</dd>
+<dt><code>$fragment</code></dt>
+<dd>This is the part of the original URL that appears after the # if it exists. Sometimes this contains additional information that could be useful for the application e.g. starting page number in a pdf document</dd>
+<dt><code>$mimetype</code></dt>
+<dd>This variable contains the mime type of $file.</dd>
+<dt><code>$VAR_&lt;parameter_name&gt;</code></dt>
+<dd>All the parameters of the &lt;EMBED&gt; or &lt;OBJECT&gt; tags are made available in mozpluggerrc through environment variables. For example the parameter loop=&quot;1&quot; in an &lt;EMBED&gt; tag defines the variable VAR_loop=1. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>You have to remove ~/.netscape/plugin-list or ~/.mozilla/firefox/pluginreg.dat after changing the configuration, or nothing will happen. This is a Netscape/Mozilla/Firefox bug, not a MozPlugger bug. </p>

@@ -15,19 +15,19 @@ snd_soc_component_test_bits - Test register for change
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>component</dl>
+<dl><dd></dd><dd>component</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>Register to test</dl>
+<dl><dd>Register to test</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>Mask that specifies which bits to test</dl>
+<dl><dd>Mask that specifies which bits to test</dd></dl>
  
 
  <i>value</i>
-<dl><dd>Value to test against</dl>
+<dl><dd>Value to test against</dd></dl>
 
 <h2>Description</h2>
 

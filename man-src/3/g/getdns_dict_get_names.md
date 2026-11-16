@@ -17,46 +17,46 @@ description: "getdns_dict_get, getdns_dict_get_bindata, getdns_dict_get_data_typ
  <code>getdns_dict_get_bindata</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-<dd> char *name,<br />
- getdns_bindata **answer)</dl>
+</dt><dd> char *name,<br />
+ getdns_bindata **answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_dict_get_data_type</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-<dd> char *name,<br />
- getdns_data_type *answer)</dl>
+</dt><dd> char *name,<br />
+ getdns_data_type *answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_dict_get_dict</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-<dd> char *name,<br />
- getdns_dict **answer)</dl>
+</dt><dd> char *name,<br />
+ getdns_dict **answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_dict_get_int</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-<dd> char *name,<br />
- uint32_t *answer)</dl>
+</dt><dd> char *name,<br />
+ uint32_t *answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_dict_get_list</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-<dd> char *name,<br />
- getdns_list **answer)</dl>
+</dt><dd> char *name,<br />
+ getdns_list **answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_dict_get_names</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-<dd> getdns_list **answer)</dl>
+</dt><dd> getdns_list **answer)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The getdns_dict type is used to manage name/value pairs in which the names are strings and the data types of the values are heterogeneous and include</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  getdns_bindata<br />
  getdns_dict<br />
  getdns_list<br />
- uint32_t</dl>
+ uint32_t</dd></dl>
 <p> <i>this_dict</i> the dictionary from which to retrieve the list of names </p>
 <p> <i>name</i> the name whose associated value is to be returned in answer </p>
 <p> <i>answer</i> the list of all names in the dictionary, note that the caller must free storage allocated to the list via a call to <code><a href="/docs/linux/man/3-getdns_list_destroy/">getdns_list_destroy</a>(3)</code> </p>

@@ -16,8 +16,8 @@ bson_context_new (bson_context_flags_t flags);
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>flags</code></p>
-<dd> A <code>bson_context_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd> A <code>bson_context_flags_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a new <code>bson_context_t</code> \&amp;. This is rarely needed as <code><a href="/docs/linux/man/3-bson_context_get_default/">bson_context_get_default</a>(3)</code> serves most use-cases. </p>
 <h2>RETURNS</h2>

@@ -16,16 +16,16 @@ description: "ntfsfix – fix common errors and force Windows to check NTFS"
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfsfix</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;clear-bad-sectors</code></p>
-<dd>Clear the list of bad sectors. This is useful after cloning an old disk with bad sectors to a new disk.</p>
-<dt><code>-d</code>, <code>&#8211;clear-dirty</code></p>
-<dd>Clear the volume dirty flag if the volume can be fixed and mounted. If the option is not present or the volume cannot be fixed, the dirty volume flag is set to request a volume checking at next mount.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a list of options with a brief description of each one.</p>
-<dt><code>-n</code>, <code>&#8211;no-action</code></p>
-<dd>Do not write anything, just show what would have been done.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license</dl>
+<dt><code>-b</code>, <code>&#8211;clear-bad-sectors</code></dt>
+<dd>Clear the list of bad sectors. This is useful after cloning an old disk with bad sectors to a new disk.</dd>
+<dt><code>-d</code>, <code>&#8211;clear-dirty</code></dt>
+<dd>Clear the volume dirty flag if the volume can be fixed and mounted. If the option is not present or the volume cannot be fixed, the dirty volume flag is set to request a volume checking at next mount.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a list of options with a brief description of each one.</dd>
+<dt><code>-n</code>, <code>&#8211;no-action</code></dt>
+<dd>Do not write anything, just show what would have been done.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license</dd></dl>
 <h2>Bugs</h2>
 <p>There are no known problems with <code>ntfsfix</code>. If you find a bug please send an email describing the problem to the development team:<br />
  ntfs-3g-devel [at] lists.sf.net</p>

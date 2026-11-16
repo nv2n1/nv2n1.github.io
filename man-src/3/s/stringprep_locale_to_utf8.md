@@ -13,8 +13,8 @@ description: "stringprep_locale_to_utf8 – API function"
 char *stringprep_locale_to_utf8(const char *str);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * str</p>
-<dd>input zero terminated string.</dl>
+<dt>const char * str</dt>
+<dd>input zero terminated string.</dd></dl>
 <h2>Description</h2>
 <p>Convert string encoded in the locale&#8217;s character set into UTF-8 by using <code>stringprep_convert()</code>.</p>
 <h2>Return Value</h2>
@@ -27,5 +27,5 @@ char *stringprep_locale_to_utf8(const char *str);</code></pre>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

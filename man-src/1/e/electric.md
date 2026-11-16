@@ -16,10 +16,10 @@ description: "electric – a VLSI design system"
 <p> In addition to the text terminal used to invoke the program, Electric uses a color display with a mouse as a work station. Separate windows are used for text and graphics. </p>
 <p> If a <i>library</i> disk file is mentioned on the command line, that file is read as the initial design for editing. In addition, the following switches are recognized:</p>
 <dl>
-<dt>-t</p>
-<dd> specifies an initial technology. The argument must be a technology name such as &quot;nmos&quot;, &quot;cmos&quot;, &quot;mocmos&quot; (MOSIS CMOS), &quot;mocmossub&quot; (MOSIS CMOS Submicron), &quot;bipolar&quot; (simple Bipolar), &quot;schematic&quot; (Schematic capture), or &quot;artwork&quot; (sketchpad mode).</p>
-<dt>-m</p>
-<dd> specifies there may be multiple monitors and that Electric should look for them. </p>
+<dt>-t</dt>
+<dd> specifies an initial technology. The argument must be a technology name such as &quot;nmos&quot;, &quot;cmos&quot;, &quot;mocmos&quot; (MOSIS CMOS), &quot;mocmossub&quot; (MOSIS CMOS Submicron), &quot;bipolar&quot; (simple Bipolar), &quot;schematic&quot; (Schematic capture), or &quot;artwork&quot; (sketchpad mode).</dd>
+<dt>-m</dt>
+<dd> specifies there may be multiple monitors and that Electric should look for them. </dd>
 </dl>
 <h2>REPRESENTATION</h2>
 <p> Circuits are represented as networks that contain <i>nodes</i> and connecting <i>arcs</i>. The nodes are electrical components such as transistors, logic gates, and contacts. The arcs are simply wires that connect the nodes. In addition, each node has a set of <i>ports</i> which are the sites of arc connection. A <i>technology</i>, then, is simply a set of primitive nodes and arcs that are the building blocks of circuits designed in that environment. </p>

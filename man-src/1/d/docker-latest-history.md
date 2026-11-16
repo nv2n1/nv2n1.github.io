@@ -25,7 +25,7 @@ Only show numeric IDs. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker history fedora
 IMAGE          CREATED          CREATED BY                                      SIZE                COMMENT
@@ -33,12 +33,12 @@ IMAGE          CREATED          CREATED BY                                      
 73bd853d2ea5   13 days ago      /bin/sh -c #(nop) MAINTAINER Lokesh Mandvekar   0 B
 511136ea3c5a   10 months ago                                                    0 B                 Imported from -
 </pre>
-</dl>
+</dd></dl>
 <h2>Display comments in the image history</h2>
 <p> The docker commit command has a <code>-m</code> flag for adding comments to the image. These comments will be displayed in the image history. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ sudo docker history docker:scm
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
@@ -47,7 +47,7 @@ IMAGE               CREATED             CREATED BY                              
 c69cab00d6ef        5 months ago        /bin/sh -c #(nop) MAINTAINER Lokesh Mandvekar   0 B                 
 511136ea3c5a        19 months ago                                                       0 B                 Imported from -
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
 <h2>Index</h2>

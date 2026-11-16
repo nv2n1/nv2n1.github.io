@@ -16,8 +16,8 @@ description: "gajim-remote – a remote control utility for"
 <p> is a script to control and communicate with a running instance of <a href="/docs/linux/man/1-gajim/">gajim</a>(1) by D-Bus.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>Available commands</code></p>
-<dd></dl>
+<dt><code>Available commands</code></dt>
+<dd></dd></dl>
 <h3>account_info Aq account</h3>
 <p> Gets detailed info on a account</p>
 <h3>add_contact Ao jid Ac Bq account</h3>

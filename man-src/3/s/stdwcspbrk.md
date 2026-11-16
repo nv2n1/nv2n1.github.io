@@ -11,9 +11,7 @@ std::wcspbrk - std::wcspbrk
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     const wchar_t *wcspbrk(const wchar_t *dest, const wchar_t *str);
-
 wchar_t *wcspbrk(wchar_t *dest, const wchar_t *str);</code></pre> 
 Finds the first character in wide string pointed to by dest, that is also in wide string pointed to by str. 
 

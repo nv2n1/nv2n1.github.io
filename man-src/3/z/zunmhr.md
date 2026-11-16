@@ -26,10 +26,10 @@ description: "zunmhr.f –"
  SIDE = 'L' and nq = n if SIDE = 'R'. Q is defined as the product of
  IHI-ILO elementary reflectors, as returned by ZGEHRD:
  Q = H(ilo) H(ilo+1) . . . H(ihi-1).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'L': apply Q or Q**H from the Left;
  = 'R': apply Q or Q**H from the Right.</pre>
@@ -99,13 +99,13 @@ description: "zunmhr.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 178 of file zunmhr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

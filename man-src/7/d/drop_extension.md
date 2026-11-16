@@ -16,22 +16,22 @@ description: "DROP_EXTENSION – remove an extension"
 <h2>Parameters</h2>
 <p>IF EXISTS</p>
 <dl>
-<dd>Do not throw an error if the extension does not exist. A notice is issued in this case.</dl>
+<dd>Do not throw an error if the extension does not exist. A notice is issued in this case.</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>The name of an installed extension.</dl>
+<dd>The name of an installed extension.</dd></dl>
 <p> CASCADE</p>
 <dl>
-<dd>Automatically drop objects that depend on the extension.</dl>
+<dd>Automatically drop objects that depend on the extension.</dd></dl>
 <p> RESTRICT</p>
 <dl>
-<dd>Refuse to drop the extension if any objects depend on it (other than its own member objects and other extensions listed in the same <code>DROP</code> command). This is the default.</dl>
+<dd>Refuse to drop the extension if any objects depend on it (other than its own member objects and other extensions listed in the same <code>DROP</code> command). This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>To remove the extension hstore from the current database: </p>
 <dl>
 <dd>
 <pre>DROP EXTENSION hstore;</pre>
-</dl>
+</dd></dl>
 <p> This command will fail if any of hstore&#8217;s objects are in use in the database, for example if any tables have columns of the hstore type. Add the CASCADE option to forcibly remove those dependent objects as well.</p>
 <h2>Compatibility</h2>
 <p><code>DROP EXTENSION</code> is a PostgreSQL extension.</p>

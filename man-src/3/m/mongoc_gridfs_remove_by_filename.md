@@ -15,14 +15,14 @@ mongoc_gridfs_remove_by_filename (mongoc_gridfs_t *gridfs,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>gridfs</code></p>
-<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dl>
+<dt><code>gridfs</code></dt>
+<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>filename</code></p>
-<dd>A UTF-8 encoded string containing the filename.</dl>
+<dt><code>filename</code></dt>
+<dd>A UTF-8 encoded string containing the filename.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Removes all files matching <code>filename</code> and their data chunks from the MongoDB server. </p>
 <h2>Returns</h2>

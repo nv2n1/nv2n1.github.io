@@ -11,13 +11,9 @@ description: "ql/cashflows/rangeaccrual.hpp – range-accrual coupon"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/volatility/smilesection.hpp&gt;
-
 #include &lt;ql/cashflows/couponpricer.hpp&gt;
-
 #include &lt;ql/cashflows/floatingratecoupon.hpp&gt;
-
 #include &lt;ql/time/schedule.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>RangeAccrualLeg</code><br />

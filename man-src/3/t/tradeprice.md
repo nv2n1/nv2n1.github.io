@@ -10,9 +10,6 @@ description: "QuantLib::EnergyFuture – Energy future."
 <p>QuantLib::EnergyFuture &#8211; Energy future. </p>
 <h2>Synopsis</h2>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::EnergyCommodity</code>.</p>
 <h3>Public Member Functions</h3>
@@ -24,9 +21,6 @@ Protected Attributes</code></pre>
 <p> const boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; <code>index</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Integer</code> <code>buySell_</code> </p>
 <p> <code>Quantity</code> <code>quantity_</code> </p>

@@ -10,10 +10,8 @@ description: "std::is_error_condition_enum<std::errc> – std::is_error_conditio
 <p>std::is_error_condition_enum&lt;std::errc&gt; &#8211; std::is_error_condition_enum&lt;std::errc&gt;</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;system_error&gt;
-
     template &lt;&gt;
     (since C++ 11)
-
         struct is_error_condition_enum&lt;std::errc&gt; : std::true_type;</code></pre>
 <p>Specifies that std::errc is an error condition enum. This enables implicit conversion to std::error_condition.<br />
 Inherited from std::integral_constant </p>

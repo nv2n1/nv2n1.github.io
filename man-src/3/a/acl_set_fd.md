@@ -21,19 +21,19 @@ description: "acl_set_fd – set an ACL by file descriptor"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_set_fd function returns the value <code>-1</code> and and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EBADF</p>
-<dd> The <i>fd</i> argument is not a valid file descriptor.</p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> does not point to a valid ACL. </p>
+<dt><code>Bq </code>Er EBADF</dt>
+<dd> The <i>fd</i> argument is not a valid file descriptor.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> does not point to a valid ACL. </dd>
 <p> The ACL has more entries than the file referred to by <i>fd</i> can obtain.</p>
-<dt><code>Bq </code>Er ENOSPC</p>
-<dd> The directory or file system that would contain the new ACL cannot be extended or the file system is out of file allocation resources.</p>
-<dt><code>Bq </code>Er ENOTSUP</p>
-<dd> The file identified by <i>fd </i> cannot be associated with the ACL because the file system on which the file is located does not support this.</p>
-<dt><code>Bq </code>Er EPERM</p>
-<dd> The process does not have appropriate privilege to perform the operation to set the ACL.</p>
-<dt><code>Bq </code>Er EROFS</p>
-<dd> This function requires modification of a file system which is currently read-only.</dl>
+<dt><code>Bq </code>Er ENOSPC</dt>
+<dd> The directory or file system that would contain the new ACL cannot be extended or the file system is out of file allocation resources.</dd>
+<dt><code>Bq </code>Er ENOTSUP</dt>
+<dd> The file identified by <i>fd </i> cannot be associated with the ACL because the file system on which the file is located does not support this.</dd>
+<dt><code>Bq </code>Er EPERM</dt>
+<dd> The process does not have appropriate privilege to perform the operation to set the ACL.</dd>
+<dt><code>Bq </code>Er EROFS</dt>
+<dd> This function requires modification of a file system which is currently read-only.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

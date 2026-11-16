@@ -10,7 +10,6 @@ description: "set_trans_blender – Enables a truecolor blender. Allegro game pr
 <p>set_trans_blender &#8211; Enables a truecolor blender. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_trans_blender(int r, int g, int b, int a);</code></pre>
 <h2>Description</h2>
 <p>Enables a linear interpolator blender mode for combining translucent or lit truecolor pixels. </p>

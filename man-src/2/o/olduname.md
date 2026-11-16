@@ -24,3 +24,4 @@ description: "uname – get name and information about current kernel"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char machine[];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Hardware identifier&nbsp;*/ #ifdef _GNU_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char domainname[];&nbsp;/*&nbsp;NIS or YP domain name&nbsp;*/ #endif }; </p>
 <p> The length of the arrays in a <i>struct utsname</i> is unspecified (see NOTES); the fields are terminated by a null byte (&#8216;
+</p>

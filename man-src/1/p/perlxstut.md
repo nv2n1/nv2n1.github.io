@@ -217,10 +217,10 @@ is($i, 1.0);</p>
 <p> Run &quot;<tt>&quot;make test&quot;</tt>&quot; and notice that Perl dies with a fatal error. Perl won&#8217;t let you change the value of constants!</p>
 <h3>What&#8217;s new here?</h3>
 <dl>
-<dt>&bull;</p>
-<dd> We&#8217;ve made some changes to Makefile.PL. In this case, we&#8217;ve specified an extra library to be linked into the extension&#8217;s shared library, the math library libm in this case. We&#8217;ll talk later about how to write XSUBs that can call every routine in a library.</p>
-<dt>&bull;</p>
-<dd> The value of the function is not being passed back as the function&#8217;s return value, but by changing the value of the variable that was passed into the function. You might have guessed that when you saw that the return value of round is of type &#8220;void&#8221;.</dl>
+<dt>&bull;</dt>
+<dd> We&#8217;ve made some changes to Makefile.PL. In this case, we&#8217;ve specified an extra library to be linked into the extension&#8217;s shared library, the math library libm in this case. We&#8217;ll talk later about how to write XSUBs that can call every routine in a library.</dd>
+<dt>&bull;</dt>
+<dd> The value of the function is not being passed back as the function&#8217;s return value, but by changing the value of the variable that was passed into the function. You might have guessed that when you saw that the return value of round is of type &#8220;void&#8221;.</dd></dl>
 <h3>Input and Output Parameters</h3>
 <p> You specify the parameters that will be passed into the <font SIZE="-1">XSUB</font> on the line(s) after you declare the function&#8217;s return value and name. Each input parameter line starts with optional whitespace, and may have an optional terminating semicolon. </p>
 <p> The list of output parameters occurs at the very end of the function, just after the <font SIZE="-1">OUTPUT:</font> directive. The use of <font SIZE="-1">RETVAL</font> tells Perl that you wish to send this value back as the return value of the <font SIZE="-1">XSUB</font> function. In Example 3, we wanted the &#8220;return value&#8221; placed in the original variable which we passed in, so we listed it (and not <font SIZE="-1">RETVAL</font>) in the <font SIZE="-1">OUTPUT:</font> section.</p>
@@ -333,16 +333,16 @@ ok(abs(&amp;Mytest2::foo(0, 0, &#8220;-3.4&#8221;) &#8211; 0.6) &lt;= 0.01);</p>
 <h3>What has happened here?</h3>
 <p> Unlike previous examples, we&#8217;ve now run h2xs on a real include file. This has caused some extra goodies to appear in both the .pm and .xs files.</p>
 <dl>
-<dt>&bull;</p>
-<dd> In the .xs file, there&#8217;s now a #include directive with the absolute path to the mylib.h header file. We changed this to a relative path so that we could move the extension directory if we wanted to.</p>
-<dt>&bull;</p>
-<dd> There&#8217;s now some new C code that&#8217;s been added to the .xs file. The purpose of the <tt>&quot;constant&quot;</tt> routine is to make the values that are #define&#8217;d in the header file accessible by the Perl script (by calling either <tt>&quot;TESTVAL&quot;</tt> or <tt>&amp;Mytest2::TESTVAL</tt>). There&#8217;s also some <font SIZE="-1">XS</font> code to allow calls to the <tt>&quot;constant&quot;</tt> routine.</p>
-<dt>&bull;</p>
-<dd> The .pm file originally exported the name <tt>&quot;TESTVAL&quot;</tt> in the <tt>@EXPORT</tt> array. This could lead to name clashes. A good rule of thumb is that if the #define is only going to be used by the C routines themselves, and not by the user, they should be removed from the <tt>@EXPORT</tt> array. Alternately, if you don&#8217;t mind using the &#8220;fully qualified name&#8221; of a variable, you could move most or all of the items from the <tt>@EXPORT</tt> array into the <tt>@EXPORT_OK</tt> array.</p>
-<dt>&bull;</p>
-<dd> If our include file had contained #include directives, these would not have been processed by h2xs. There is no good solution to this right now.</p>
-<dt>&bull;</p>
-<dd> We&#8217;ve also told Perl about the library that we built in the mylib subdirectory. That required only the addition of the <tt>&quot;MYEXTLIB&quot;</tt> variable to the WriteMakefile call and the replacement of the postamble subroutine to cd into the subdirectory and run make. The Makefile.PL for the library is a bit more complicated, but not excessively so. Again we replaced the postamble subroutine to insert our own code. This code simply specified that the library to be created here was a static archive library (as opposed to a dynamically loadable library) and provided the commands to build it.</dl>
+<dt>&bull;</dt>
+<dd> In the .xs file, there&#8217;s now a #include directive with the absolute path to the mylib.h header file. We changed this to a relative path so that we could move the extension directory if we wanted to.</dd>
+<dt>&bull;</dt>
+<dd> There&#8217;s now some new C code that&#8217;s been added to the .xs file. The purpose of the <tt>&quot;constant&quot;</tt> routine is to make the values that are #define&#8217;d in the header file accessible by the Perl script (by calling either <tt>&quot;TESTVAL&quot;</tt> or <tt>&amp;Mytest2::TESTVAL</tt>). There&#8217;s also some <font SIZE="-1">XS</font> code to allow calls to the <tt>&quot;constant&quot;</tt> routine.</dd>
+<dt>&bull;</dt>
+<dd> The .pm file originally exported the name <tt>&quot;TESTVAL&quot;</tt> in the <tt>@EXPORT</tt> array. This could lead to name clashes. A good rule of thumb is that if the #define is only going to be used by the C routines themselves, and not by the user, they should be removed from the <tt>@EXPORT</tt> array. Alternately, if you don&#8217;t mind using the &#8220;fully qualified name&#8221; of a variable, you could move most or all of the items from the <tt>@EXPORT</tt> array into the <tt>@EXPORT_OK</tt> array.</dd>
+<dt>&bull;</dt>
+<dd> If our include file had contained #include directives, these would not have been processed by h2xs. There is no good solution to this right now.</dd>
+<dt>&bull;</dt>
+<dd> We&#8217;ve also told Perl about the library that we built in the mylib subdirectory. That required only the addition of the <tt>&quot;MYEXTLIB&quot;</tt> variable to the WriteMakefile call and the replacement of the postamble subroutine to cd into the subdirectory and run make. The Makefile.PL for the library is a bit more complicated, but not excessively so. Again we replaced the postamble subroutine to insert our own code. This code simply specified that the library to be created here was a static archive library (as opposed to a dynamically loadable library) and provided the commands to build it.</dd></dl>
 <h3>Anatomy of .xs file</h3>
 <p> The .xs file of &#8220;<font SIZE="-1">EXAMPLE 4&#8221;</font> contained some new elements. To understand the meaning of these elements, pay attention to the line which reads </p>
 <pre>
@@ -467,18 +467,18 @@ is(scalar(@a), 7);</p>
 <h3>New Things in this Example</h3>
 <p> This example added quite a few new concepts. We&#8217;ll take them one at a time.</p>
 <dl>
-<dt>&bull;</p>
-<dd> The <font SIZE="-1">INIT:</font> directive contains code that will be placed immediately after the argument stack is decoded. C does not allow variable declarations at arbitrary locations inside a function, so this is usually the best way to declare local variables needed by the <font SIZE="-1">XSUB.</font> (Alternatively, one could put the whole <tt>&quot;PPCODE:&quot;</tt> section into braces, and put these declarations on top.)</p>
-<dt>&bull;</p>
-<dd> This routine also returns a different number of arguments depending on the success or failure of the call to statfs. If there is an error, the error number is returned as a single-element array. If the call is successful, then a 7-element array is returned. Since only one argument is passed into this function, we need room on the stack to hold the 7 values which may be returned. </p>
+<dt>&bull;</dt>
+<dd> The <font SIZE="-1">INIT:</font> directive contains code that will be placed immediately after the argument stack is decoded. C does not allow variable declarations at arbitrary locations inside a function, so this is usually the best way to declare local variables needed by the <font SIZE="-1">XSUB.</font> (Alternatively, one could put the whole <tt>&quot;PPCODE:&quot;</tt> section into braces, and put these declarations on top.)</dd>
+<dt>&bull;</dt>
+<dd> This routine also returns a different number of arguments depending on the success or failure of the call to statfs. If there is an error, the error number is returned as a single-element array. If the call is successful, then a 7-element array is returned. Since only one argument is passed into this function, we need room on the stack to hold the 7 values which may be returned. </dd>
 <p> We do this by using the <font SIZE="-1">PPCODE:</font> directive, rather than the <font SIZE="-1">CODE:</font> directive. This tells <code>xsubpp</code> that we will be managing the return values that will be put on the argument stack by ourselves.</p>
-<dt>&bull;</p>
-<dd> When we want to place values to be returned to the caller onto the stack, we use the series of macros that begin with &#8220;<font SIZE="-1">XPUSH&#8221;.</font> There are five different versions, for placing integers, unsigned integers, doubles, strings, and Perl scalars on the stack. In our example, we placed a Perl scalar onto the stack. (In fact this is the only macro which can be used to return multiple values.) </p>
+<dt>&bull;</dt>
+<dd> When we want to place values to be returned to the caller onto the stack, we use the series of macros that begin with &#8220;<font SIZE="-1">XPUSH&#8221;.</font> There are five different versions, for placing integers, unsigned integers, doubles, strings, and Perl scalars on the stack. In our example, we placed a Perl scalar onto the stack. (In fact this is the only macro which can be used to return multiple values.) </dd>
 <p> The XPUSH* macros will automatically extend the return stack to prevent it from being overrun. You push values onto the stack in the order you want them seen by the calling program.</p>
-<dt>&bull;</p>
-<dd> The values pushed onto the return stack of the <font SIZE="-1">XSUB</font> are actually mortal <font SIZE="-1">SV</font>&#8216;s. They are made mortal so that once the values are copied by the calling program, the <font SIZE="-1">SV</font>&#8216;s that held the returned values can be deallocated. If they were not mortal, then they would continue to exist after the <font SIZE="-1">XSUB</font> routine returned, but would not be accessible. This is a memory leak.</p>
-<dt>&bull;</p>
-<dd> If we were interested in performance, not in code compactness, in the success branch we would not use <tt>&quot;XPUSHs&quot;</tt> macros, but <tt>&quot;PUSHs&quot;</tt> macros, and would pre-extend the stack before pushing the return values: </p>
+<dt>&bull;</dt>
+<dd> The values pushed onto the return stack of the <font SIZE="-1">XSUB</font> are actually mortal <font SIZE="-1">SV</font>&#8216;s. They are made mortal so that once the values are copied by the calling program, the <font SIZE="-1">SV</font>&#8216;s that held the returned values can be deallocated. If they were not mortal, then they would continue to exist after the <font SIZE="-1">XSUB</font> routine returned, but would not be accessible. This is a memory leak.</dd>
+<dt>&bull;</dt>
+<dd> If we were interested in performance, not in code compactness, in the success branch we would not use <tt>&quot;XPUSHs&quot;</tt> macros, but <tt>&quot;PUSHs&quot;</tt> macros, and would pre-extend the stack before pushing the return values: </dd>
 <pre>
         EXTEND(SP, 7);
 </pre>
@@ -528,23 +528,23 @@ ok(!ref $results-&gt;[1]);</p>
 <h3>New Things in this Example</h3>
 <p> There are a number of new concepts introduced here, described below:</p>
 <dl>
-<dt>&bull;</p>
-<dd> This function does not use a typemap. Instead, we declare it as accepting one SV* (scalar) parameter, and returning an SV* value, and we take care of populating these scalars within the code. Because we are only returning one value, we don&#8217;t need a <tt>&quot;PPCODE:&quot;</tt> directive &#8211; instead, we use <tt>&quot;CODE:&quot;</tt> and <tt>&quot;OUTPUT:&quot;</tt> directives.</p>
-<dt>&bull;</p>
-<dd> When dealing with references, it is important to handle them with caution. The <tt>&quot;INIT:&quot;</tt> block first calls SvGETMAGIC(paths), in case paths is a tied variable. Then it checks that <tt>&quot;SvROK&quot;</tt> returns true, which indicates that paths is a valid reference. (Simply checking <tt>&quot;SvROK&quot;</tt> won&#8217;t trigger <font SIZE="-1">FETCH</font> on a tied variable.) It then verifies that the object referenced by paths is an array, using <tt>&quot;SvRV&quot;</tt> to dereference paths, and <tt>&quot;SvTYPE&quot;</tt> to discover its type. As an added test, it checks that the array referenced by paths is non-empty, using the <tt>&quot;av_top_index&quot;</tt> function (which returns -1 if the array is empty). The <font SIZE="-1">XSRETURN_UNDEF</font> macro is used to abort the <font SIZE="-1">XSUB</font> and return the undefined value whenever all three of these conditions are not met.</p>
-<dt>&bull;</p>
-<dd> We manipulate several arrays in this <font SIZE="-1">XSUB.</font> Note that an array is represented internally by an AV* pointer. The functions and macros for manipulating arrays are similar to the functions in Perl: <tt>&quot;av_top_index&quot;</tt> returns the highest index in an AV*, much like $#array; <tt>&quot;av_fetch&quot;</tt> fetches a single scalar value from an array, given its index; <tt>&quot;av_push&quot;</tt> pushes a scalar value onto the end of the array, automatically extending the array as necessary. </p>
+<dt>&bull;</dt>
+<dd> This function does not use a typemap. Instead, we declare it as accepting one SV* (scalar) parameter, and returning an SV* value, and we take care of populating these scalars within the code. Because we are only returning one value, we don&#8217;t need a <tt>&quot;PPCODE:&quot;</tt> directive &#8211; instead, we use <tt>&quot;CODE:&quot;</tt> and <tt>&quot;OUTPUT:&quot;</tt> directives.</dd>
+<dt>&bull;</dt>
+<dd> When dealing with references, it is important to handle them with caution. The <tt>&quot;INIT:&quot;</tt> block first calls SvGETMAGIC(paths), in case paths is a tied variable. Then it checks that <tt>&quot;SvROK&quot;</tt> returns true, which indicates that paths is a valid reference. (Simply checking <tt>&quot;SvROK&quot;</tt> won&#8217;t trigger <font SIZE="-1">FETCH</font> on a tied variable.) It then verifies that the object referenced by paths is an array, using <tt>&quot;SvRV&quot;</tt> to dereference paths, and <tt>&quot;SvTYPE&quot;</tt> to discover its type. As an added test, it checks that the array referenced by paths is non-empty, using the <tt>&quot;av_top_index&quot;</tt> function (which returns -1 if the array is empty). The <font SIZE="-1">XSRETURN_UNDEF</font> macro is used to abort the <font SIZE="-1">XSUB</font> and return the undefined value whenever all three of these conditions are not met.</dd>
+<dt>&bull;</dt>
+<dd> We manipulate several arrays in this <font SIZE="-1">XSUB.</font> Note that an array is represented internally by an AV* pointer. The functions and macros for manipulating arrays are similar to the functions in Perl: <tt>&quot;av_top_index&quot;</tt> returns the highest index in an AV*, much like $#array; <tt>&quot;av_fetch&quot;</tt> fetches a single scalar value from an array, given its index; <tt>&quot;av_push&quot;</tt> pushes a scalar value onto the end of the array, automatically extending the array as necessary. </dd>
 <p> Specifically, we read pathnames one at a time from the input array, and store the results in an output array (results) in the same order. If statfs fails, the element pushed onto the return array is the value of errno after the failure. If statfs succeeds, though, the value pushed onto the return array is a reference to a hash containing some of the information in the statfs structure. </p>
 <p> As with the return stack, it would be possible (and a small performance win) to pre-extend the return array before pushing data into it, since we know how many elements we will return: </p>
 <pre>
         av_extend(results, numpaths);
 </pre>
-<dt>&bull;</p>
-<dd> We are performing only one hash operation in this function, which is storing a new scalar under a key using <tt>&quot;hv_store&quot;</tt>. A hash is represented by an HV* pointer. Like arrays, the functions for manipulating hashes from an <font SIZE="-1">XSUB</font> mirror the functionality available from Perl. See perlguts and perlapi for details.</p>
-<dt>&bull;</p>
-<dd> To create a reference, we use the <tt>&quot;newRV_inc&quot;</tt> function. Note that you can cast an AV* or an HV* to type SV* in this case (and many others). This allows you to take references to arrays, hashes and scalars with the same function. Conversely, the <tt>&quot;SvRV&quot;</tt> function always returns an SV*, which may need to be cast to the appropriate type if it is something other than a scalar (check with <tt>&quot;SvTYPE&quot;</tt>).</p>
-<dt>&bull;</p>
-<dd> At this point, xsubpp is doing very little work &#8211; the differences between Mytest.xs and Mytest.c are minimal.</dl>
+<dt>&bull;</dt>
+<dd> We are performing only one hash operation in this function, which is storing a new scalar under a key using <tt>&quot;hv_store&quot;</tt>. A hash is represented by an HV* pointer. Like arrays, the functions for manipulating hashes from an <font SIZE="-1">XSUB</font> mirror the functionality available from Perl. See perlguts and perlapi for details.</dd>
+<dt>&bull;</dt>
+<dd> To create a reference, we use the <tt>&quot;newRV_inc&quot;</tt> function. Note that you can cast an AV* or an HV* to type SV* in this case (and many others). This allows you to take references to arrays, hashes and scalars with the same function. Conversely, the <tt>&quot;SvRV&quot;</tt> function always returns an SV*, which may need to be cast to the appropriate type if it is something other than a scalar (check with <tt>&quot;SvTYPE&quot;</tt>).</dd>
+<dt>&bull;</dt>
+<dd> At this point, xsubpp is doing very little work &#8211; the differences between Mytest.xs and Mytest.c are minimal.</dd></dl>
 <h3><font SIZE="-1">EXAMPLE 7</font> (Coming Soon)</h3>
 <p> <font SIZE="-1">XPUSH</font> args <font SIZE="-1">AND</font> set <font SIZE="-1">RETVAL AND</font> assign return value to array</p>
 <h3><font SIZE="-1">EXAMPLE 8</font> (Coming Soon)</h3>
@@ -600,23 +600,23 @@ OUTPUT : RETVAL
 <h3>Troubleshooting these Examples</h3>
 <p> As mentioned at the top of this document, if you are having problems with these example extensions, you might see if any of these help you.</p>
 <dl>
-<dt>&bull;</p>
-<dd> In versions of 5.002 prior to the gamma version, the test script in Example 1 will not function properly. You need to change the &#8220;use lib&#8221; line to read: </p>
+<dt>&bull;</dt>
+<dd> In versions of 5.002 prior to the gamma version, the test script in Example 1 will not function properly. You need to change the &#8220;use lib&#8221; line to read: </dd>
 <pre>
         use lib './blib';
 </pre>
-<dt>&bull;</p>
-<dd> In versions of 5.002 prior to version 5.002b1h, the test.pl file was not automatically created by h2xs. This means that you cannot say &#8220;make test&#8221; to run the test script. You will need to add the following line before the &#8220;use extension&#8221; statement: </p>
+<dt>&bull;</dt>
+<dd> In versions of 5.002 prior to version 5.002b1h, the test.pl file was not automatically created by h2xs. This means that you cannot say &#8220;make test&#8221; to run the test script. You will need to add the following line before the &#8220;use extension&#8221; statement: </dd>
 <pre>
         use lib './blib';
 </pre>
-<dt>&bull;</p>
-<dd> In versions 5.000 and 5.001, instead of using the above line, you will need to use the following line: </p>
+<dt>&bull;</dt>
+<dd> In versions 5.000 and 5.001, instead of using the above line, you will need to use the following line: </dd>
 <pre>
         BEGIN { unshift(@INC, &quot;./blib&quot;) }
 </pre>
-<dt>&bull;</p>
-<dd> This document assumes that the executable named &#8220;perl&#8221; is Perl version 5. Some systems may have installed Perl version 5 as &#8220;perl5&#8221;.</dl>
+<dt>&bull;</dt>
+<dd> This document assumes that the executable named &#8220;perl&#8221; is Perl version 5. Some systems may have installed Perl version 5 as &#8220;perl5&#8221;.</dd></dl>
 <h2>See also</h2>
 <p> For more information, consult perlguts, perlapi, perlxs, perlmod, and perlpod.</p>
 <h2>Author</h2>
@@ -627,10 +627,10 @@ OUTPUT : RETVAL
 <h3>Last Changed</h3>
 <p> 2012-01-20 </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">TUTORIAL</a></p>
+<dt><a href="#lbAI">TUTORIAL</a></dt>
 <dd>
-<dt><a href="#lbBK">See also</a></p>
+</dd><dt><a href="#lbBK">See also</a></dt>
 <dd>
-<dt><a href="#lbBL">Author</a></p>
+</dd><dt><a href="#lbBL">Author</a></dt>
 <dd>
-</dl>
+</dd></dl>

@@ -10,9 +10,9 @@ description: "goa-daemon – GNOME Online Accounts Daemon"
 <p>goa-daemon &#8211; GNOME Online Accounts Daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>goa-daemon</code> [<code>&#8211;help</code>] [<code>&#8211;replace</code>]</dl>
+<dt> <code>goa-daemon</code> [<code>&#8211;help</code>] [<code>&#8211;replace</code>]</dt></dl>
 <h2>Description</h2>
-<dd>The <code>goa-daemon</code> program provides the <i>org.gnome.OnlineAccounts</i> name on the session message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application sends a D-Bus message to the <i>org.gnome.OnlineAccounts</i> name on the session bus.</p>
+<dd>The <code>goa-daemon</code> program provides the <i>org.gnome.OnlineAccounts</i> name on the session message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application sends a D-Bus message to the <i>org.gnome.OnlineAccounts</i> name on the session bus.</dd>
 <h2>Configuration File</h2>
 <p>The <code>goa-daemon</code> program stores configuration in the $XDG_CONFIG_HOME/goa-1.0/accounts.conf (typically ~/.config/goa-1.0/accounts.conf) file. The format of this file is private and 3rd party programs or libraries should never read it. This file does not contain any passwords or secrets. </p>
 <p> See the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[1]</font> for more information about $XDG_CONFIG_HOME.</p>
@@ -21,10 +21,10 @@ description: "goa-daemon – GNOME Online Accounts Daemon"
 <h2>Options</h2>
 <p><code>&#8211;replace</code></p>
 <dl>
-<dd>Replace existing instance.</dl>
+<dd>Replace existing instance.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>Show help options.</dl>
+<dd>Show help options.</dd></dl>
 <h2>Author</h2>
 <p>Written by David Zeuthen &lt;zeuthen [at] gmail.com&gt; with a lot of help from many others.</p>
 <h2>Bugs</h2>
@@ -33,11 +33,12 @@ description: "goa-daemon – GNOME Online Accounts Daemon"
 <p><code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>XDG Base Directory Specification</p>
+<dt> 1.</dt>
+<dd>XDG Base Directory Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></dl>
-<dt> 2.</p>
-<dd>GNOME Keyring</p>
+<dd><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></dd></dl>
+<dt> 2.</dt>
+<dd>GNOME Keyring</dd>
 <dl>
-<dd><a rel="nofollow" href="https://live.gnome.org/GnomeKeyring">https://live.gnome.org/GnomeKeyring</a></dl>
+<dd><a rel="nofollow" href="https://live.gnome.org/GnomeKeyring">https://live.gnome.org/GnomeKeyring</a></dd></dl>
+</dl>

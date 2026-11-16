@@ -22,126 +22,126 @@ description: "bmc-watchdog – BMC watchdog timer daemon and control utility"
 <h2>Commands</h2>
 <p>The following commands are available to <code>bmc-watchdog.</code></p>
 <dl>
-<dt><code>-s</code>, <code>&#8211;set</code></p>
-<dd>Set BMC Watchdog Configuration. BMC watchdog timer configuration values can be set using the set command options listed below under SET OPTIONS. If a particular configuration parameter is not specified on the command line, the current configuration of that parameter will not be changed.</p>
-<dt><code>-g</code>, <code>&#8211;get</code></p>
-<dd>Get BMC Watchdog Configuration and State. The current configuration and state is printed to standard output.</p>
-<dt><code>-r</code>, <code>&#8211;reset</code></p>
-<dd>Reset BMC Watchdog Timer.</p>
-<dt><code>-t</code>, <code>&#8211;start</code></p>
-<dd>Start BMC Watchdog Timer. Does nothing if the timer is currently running. Identical to <code>&#8211;reset</code> command when the timer is stopped with the exception of the start command options listed below under START OPTIONS.</p>
-<dt><code>-y</code>, <code>&#8211;stop</code></p>
-<dd>Stop BMC Watchdog Timer. Stops the current timer.</p>
-<dt><code>-c</code>, <code>&#8211;clear</code></p>
-<dd>Clear BMC Watchdog Configuration. Clears all configuration values for the watchdog timer, except for timer use, which is kept at its current value.</p>
-<dt><code>-d</code>, <code>&#8211;daemon</code></p>
-<dd>Run <code>bmc-watchdog</code> as a daemon. Configurable BMC watchdog timer options are listed below under DAEMON OPTIONS. The configuration values are set once, then the daemon will reset the timer at specified periodic intervals. The daemon can be stopped using the <code>&#8211;stop</code> command, <code>&#8211;clear</code> command, or by setting the stop_timer flag on the <code>&#8211;set</code> command.</dl>
+<dt><code>-s</code>, <code>&#8211;set</code></dt>
+<dd>Set BMC Watchdog Configuration. BMC watchdog timer configuration values can be set using the set command options listed below under SET OPTIONS. If a particular configuration parameter is not specified on the command line, the current configuration of that parameter will not be changed.</dd>
+<dt><code>-g</code>, <code>&#8211;get</code></dt>
+<dd>Get BMC Watchdog Configuration and State. The current configuration and state is printed to standard output.</dd>
+<dt><code>-r</code>, <code>&#8211;reset</code></dt>
+<dd>Reset BMC Watchdog Timer.</dd>
+<dt><code>-t</code>, <code>&#8211;start</code></dt>
+<dd>Start BMC Watchdog Timer. Does nothing if the timer is currently running. Identical to <code>&#8211;reset</code> command when the timer is stopped with the exception of the start command options listed below under START OPTIONS.</dd>
+<dt><code>-y</code>, <code>&#8211;stop</code></dt>
+<dd>Stop BMC Watchdog Timer. Stops the current timer.</dd>
+<dt><code>-c</code>, <code>&#8211;clear</code></dt>
+<dd>Clear BMC Watchdog Configuration. Clears all configuration values for the watchdog timer, except for timer use, which is kept at its current value.</dd>
+<dt><code>-d</code>, <code>&#8211;daemon</code></dt>
+<dd>Run <code>bmc-watchdog</code> as a daemon. Configurable BMC watchdog timer options are listed below under DAEMON OPTIONS. The configuration values are set once, then the daemon will reset the timer at specified periodic intervals. The daemon can be stopped using the <code>&#8211;stop</code> command, <code>&#8211;clear</code> command, or by setting the stop_timer flag on the <code>&#8211;set</code> command.</dd></dl>
 <h2>General Options</h2>
 <p>The following options are general options for configuring IPMI communication and executing general tool commands. These options are generic and can be used by any command.</p>
 <dl>
-<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></p>
-<dd>Specify the driver type to use instead of doing an auto selection. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</p>
-<dt><code>&#8211;disable-auto-probe</code></p>
-<dd>Do not probe in-band IPMI devices for default settings.</p>
-<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></p>
-<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</p>
-<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></p>
-<dd>Specify the in-band driver device path to be used instead of the probed path.</p>
-<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></p>
-<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</p>
-<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</p>
-<dd>Specify the in-band driver target channel number to send IPMI requests to.</p>
-<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</p>
-<dd>Specify the in-band driver target slave number to send IPMI requests to.</p>
-<dt></i><code>-v</code>, <code>&#8211;verbose-logging</code></p>
-<dd>Increase verbosity of logging.</p>
-<dt><code>-n</code>, <code>&#8211;no-logging</code></p>
-<dd>Turns off all logging done by <code>bmc-watchdog.</code></p>
-<dt><code>&#8211;config-file</code>=<i>FILE</i></p>
-<dd>Specify an alternate configuration file.</p>
-<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></p>
-<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Turn on debugging.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Output a help list and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Output a usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output the program version and exit.</dl>
+<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></dt>
+<dd>Specify the driver type to use instead of doing an auto selection. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</dd>
+<dt><code>&#8211;disable-auto-probe</code></dt>
+<dd>Do not probe in-band IPMI devices for default settings.</dd>
+<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></dt>
+<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</dd>
+<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></dt>
+<dd>Specify the in-band driver device path to be used instead of the probed path.</dd>
+<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></dt>
+<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</dd>
+<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</dt>
+<dd>Specify the in-band driver target channel number to send IPMI requests to.</dd>
+<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</dt>
+<dd>Specify the in-band driver target slave number to send IPMI requests to.</dd>
+<dt></i><code>-v</code>, <code>&#8211;verbose-logging</code></dt>
+<dd>Increase verbosity of logging.</dd>
+<dt><code>-n</code>, <code>&#8211;no-logging</code></dt>
+<dd>Turns off all logging done by <code>bmc-watchdog.</code></dd>
+<dt><code>&#8211;config-file</code>=<i>FILE</i></dt>
+<dd>Specify an alternate configuration file.</dd>
+<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></dt>
+<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Output a help list and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Output a usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output the program version and exit.</dd></dl>
 <h2>Set Options</h2>
 <p>The following options can be used by the set command to set or clear various BMC watchdog configuration parameters.</p>
 <dl>
-<dt><code>-u</code> <i>INT</i>, <code>&#8211;timer-use</code>=<i>INT</i></p>
-<dd>Set timer use. The timer use value can be set to one of the following: 1 = BIOS FRB2, 2 = BIOS POST, 3 = OS_LOAD, 4 = SMS OS, 5 = OEM.</p>
-<dt><code>-m</code> <i>INT</i>, <code>&#8211;stop-timer</code>=<i>INT</i></p>
-<dd>Set Stop Timer Flag. A flag value of 0 stops the current BMC watchdog timer. A value of 1 doesn&#8217;t turn off the current watchdog timer.</p>
-<dt><code>-l</code> <i>INT</i>, <code>&#8211;log</code>=<i>INT</i></p>
-<dd>Set Log Flag. A flag value of 0 turns logging on. A value of 1 turns logging off.</p>
-<dt><code>-a</code> <i>INT</i>, <code>&#8211;timeout-action</code>=<i>INT</i></p>
-<dd>Set timeout action. The timeout action can be set to one of the following: 0 = No action, 1 = Hard Reset, 2 = Power Down, 3 = Power Cycle.</p>
-<dt><code>-p</code> <i>INT</i>, <code>&#8211;pre-timeout-interrupt</code>=<i>INT</i></p>
-<dd>Set pre-timeout interrupt. The pre timeout interrupt can be set to one of the following: 0 = None, 1 = SMI, 2 = NMI, 3 = Messaging Interrupt.</p>
-<dt><code>-z</code> <i>SECONDS</i>, <code>&#8211;pre-timeout-interval=</code><i>SECONDS</i></p>
-<dd>Set pre-timeout interval in seconds.</p>
-<dt><code>-F</code>, <code>&#8211;clear-bios-frb2</code></p>
-<dd>Clear BIOS FRB2 Timer Use Flag.</p>
-<dt><code>-P</code>, <code>&#8211;clear-bios-post</code></p>
-<dd>Clear BIOS POST Timer Use Flag.</p>
-<dt><code>-L</code>, <code>&#8211;clear-os-load</code></p>
-<dd>Clear OS Load Timer Use Flag.</p>
-<dt><code>-S</code>, <code>&#8211;clear-sms-os</code></p>
-<dd>Clear SMS/OS Timer Use Flag.</p>
-<dt><code>-O</code>, <code>&#8211;clear-oem</code></p>
-<dd>Clear OEM Timer Use Flag.</p>
-<dt><code>-i</code> <i>SECONDS</i>, <code>&#8211;initial-countdown</code>=<i>SECONDS</i></p>
-<dd>Set initial countdown in seconds.</p>
-<dt><code>-w</code>, <code>&#8211;start-after-set</code></p>
-<dd>Start timer after set command if timer is stopped. This is typically used when <code>bmc-watchdog</code> is used as a cronjob. This can be used to automatically start the timer after it has been set the first time.</p>
-<dt><code>-x</code>, <code>&#8211;reset-after-set</code></p>
-<dd>Reset timer after set command if timer is running.</p>
-<dt><code>-j</code>, <code>&#8211;start-if-stopped</code></p>
-<dd>Don&#8217;t execute set command if timer is stopped, just start timer.</p>
-<dt><code>-k</code>, <code>&#8211;reset-if-running</code></p>
-<dd>Don&#8217;t execute set command if timer is running, just reset timer. This is typically used when <code>bmc-watchdog</code> is used as a cronjob. This can be used to reset the timer after it has been initially started.</dl>
+<dt><code>-u</code> <i>INT</i>, <code>&#8211;timer-use</code>=<i>INT</i></dt>
+<dd>Set timer use. The timer use value can be set to one of the following: 1 = BIOS FRB2, 2 = BIOS POST, 3 = OS_LOAD, 4 = SMS OS, 5 = OEM.</dd>
+<dt><code>-m</code> <i>INT</i>, <code>&#8211;stop-timer</code>=<i>INT</i></dt>
+<dd>Set Stop Timer Flag. A flag value of 0 stops the current BMC watchdog timer. A value of 1 doesn&#8217;t turn off the current watchdog timer.</dd>
+<dt><code>-l</code> <i>INT</i>, <code>&#8211;log</code>=<i>INT</i></dt>
+<dd>Set Log Flag. A flag value of 0 turns logging on. A value of 1 turns logging off.</dd>
+<dt><code>-a</code> <i>INT</i>, <code>&#8211;timeout-action</code>=<i>INT</i></dt>
+<dd>Set timeout action. The timeout action can be set to one of the following: 0 = No action, 1 = Hard Reset, 2 = Power Down, 3 = Power Cycle.</dd>
+<dt><code>-p</code> <i>INT</i>, <code>&#8211;pre-timeout-interrupt</code>=<i>INT</i></dt>
+<dd>Set pre-timeout interrupt. The pre timeout interrupt can be set to one of the following: 0 = None, 1 = SMI, 2 = NMI, 3 = Messaging Interrupt.</dd>
+<dt><code>-z</code> <i>SECONDS</i>, <code>&#8211;pre-timeout-interval=</code><i>SECONDS</i></dt>
+<dd>Set pre-timeout interval in seconds.</dd>
+<dt><code>-F</code>, <code>&#8211;clear-bios-frb2</code></dt>
+<dd>Clear BIOS FRB2 Timer Use Flag.</dd>
+<dt><code>-P</code>, <code>&#8211;clear-bios-post</code></dt>
+<dd>Clear BIOS POST Timer Use Flag.</dd>
+<dt><code>-L</code>, <code>&#8211;clear-os-load</code></dt>
+<dd>Clear OS Load Timer Use Flag.</dd>
+<dt><code>-S</code>, <code>&#8211;clear-sms-os</code></dt>
+<dd>Clear SMS/OS Timer Use Flag.</dd>
+<dt><code>-O</code>, <code>&#8211;clear-oem</code></dt>
+<dd>Clear OEM Timer Use Flag.</dd>
+<dt><code>-i</code> <i>SECONDS</i>, <code>&#8211;initial-countdown</code>=<i>SECONDS</i></dt>
+<dd>Set initial countdown in seconds.</dd>
+<dt><code>-w</code>, <code>&#8211;start-after-set</code></dt>
+<dd>Start timer after set command if timer is stopped. This is typically used when <code>bmc-watchdog</code> is used as a cronjob. This can be used to automatically start the timer after it has been set the first time.</dd>
+<dt><code>-x</code>, <code>&#8211;reset-after-set</code></dt>
+<dd>Reset timer after set command if timer is running.</dd>
+<dt><code>-j</code>, <code>&#8211;start-if-stopped</code></dt>
+<dd>Don&#8217;t execute set command if timer is stopped, just start timer.</dd>
+<dt><code>-k</code>, <code>&#8211;reset-if-running</code></dt>
+<dd>Don&#8217;t execute set command if timer is running, just reset timer. This is typically used when <code>bmc-watchdog</code> is used as a cronjob. This can be used to reset the timer after it has been initially started.</dd></dl>
 <h2>Start Options</h2>
 <p>The following options can be used by the start command.</p>
 <dl>
-<dt><code>-G</code> <i>INT</i>, <code>&#8211;gratuitous-arp</code>=<i>INT</i></p>
-<dd>Suspend or don&#8217;t suspend gratuitous ARPs while the BMC timer is running. A flag value of 1 suspends gratuitous ARPs. A value of 0 will not suspend gratuitous ARPs. If this option is not specified, gratuitous ARPs will not be suspended.</p>
-<dt><code>-A</code> <i>INT</i>, <code>&#8211;arp-response</code>=<i>INT</i></p>
-<dd>Suspend or don&#8217;t suspend BMC-generated ARP responses while the BMC timer is running. A flag value of 1 suspends ARP responses. A value of 0 will not suspend ARP responses. If this option is not specified, ARP responses will not be suspended.</dl>
+<dt><code>-G</code> <i>INT</i>, <code>&#8211;gratuitous-arp</code>=<i>INT</i></dt>
+<dd>Suspend or don&#8217;t suspend gratuitous ARPs while the BMC timer is running. A flag value of 1 suspends gratuitous ARPs. A value of 0 will not suspend gratuitous ARPs. If this option is not specified, gratuitous ARPs will not be suspended.</dd>
+<dt><code>-A</code> <i>INT</i>, <code>&#8211;arp-response</code>=<i>INT</i></dt>
+<dd>Suspend or don&#8217;t suspend BMC-generated ARP responses while the BMC timer is running. A flag value of 1 suspends ARP responses. A value of 0 will not suspend ARP responses. If this option is not specified, ARP responses will not be suspended.</dd></dl>
 <h2>Daemon Options</h2>
 <p>The following options can be used by the daemon command to set the initial BMC watchdog configuration parameters.</p>
 <dl>
-<dt><code>-u</code> <i>INT</i>, <code>&#8211;timer-use</code>=<i>INT</i></p>
-<dd>Set timer use. The timer use value can be set to one of the following: 1 = BIOS FRB2, 2 = BIOS POST, 3 = OS_LOAD, 4 = SMS OS, 5 = OEM.</p>
-<dt><code>-l</code> <i>INT</i>, <code>&#8211;log</code>=<i>INT</i></p>
-<dd>Set Log Flag. A flag value of 0 turns logging on. A value of 1 turns logging off.</p>
-<dt><code>-a</code> <i>INT</i>, <code>&#8211;timeout-action</code>=<i>INT</i></p>
-<dd>Set timeout action. The timeout action can be set to one of the following: 0 = No action, 1 = Hard Reset, 2 = Power Down, 3 = Power Cycle.</p>
-<dt><code>-p</code> <i>INT</i>, <code>&#8211;pre-timeout-interrupt</code>=<i>INT</i></p>
-<dd>Set pre-timeout interrupt. The pre timeout interrupt can be set to one of the following: 0 = None, 1 = SMI, 2 = NMI, 3 = Messaging Interrupt.</p>
-<dt><code>-z</code> <i>SECONDS</i>, <code>&#8211;pre-timeout-interval</code>=<i>SECONDS</i></p>
-<dd>Set pre-timeout interval in seconds.</p>
-<dt><code>-F</code>, <code>&#8211;clear-bios-frb2</code></p>
-<dd>Clear BIOS FRB2 Timer Use Flag.</p>
-<dt><code>-P</code>, <code>&#8211;clear-bios-post</code></p>
-<dd>Clear BIOS POST Timer Use Flag.</p>
-<dt><code>-L</code>, <code>&#8211;clear-os-load</code></p>
-<dd>Clear OS Load Timer Use Flag.</p>
-<dt><code>-S</code>, <code>&#8211;clear-sms-os</code></p>
-<dd>Clear SMS/OS Timer Use Flag.</p>
-<dt><code>-O</code>, <code>&#8211;clear-oem</code></p>
-<dd>Clear OEM Timer Use Flag.</p>
-<dt><code>-i</code> <i>SECONDS</i>, <code>&#8211;initial-countdown</code>=<i>SECONDS</i></p>
-<dd>Set initial countdown in seconds.</p>
-<dt><code>-G</code> <i>INT</i>, <code>&#8211;gratuitous-arp</code>=<i>INT</i></p>
-<dd>Suspend or don&#8217;t suspend gratuitous ARPs while the BMC timer is running. A flag value of 1 suspends gratuitous ARPs. A value of 0 will not suspend gratuitous ARPs. If this option is not specified, gratuitous ARPs will not be suspended.</p>
-<dt><code>-A</code> <i>INT</i>, <code>&#8211;arp-response</code>=<i>INT</i></p>
-<dd>Suspend or don&#8217;t suspend BMC-generated ARP responses while the BMC timer is running. A flag value of 1 suspends ARP responses. A value of 0 will not suspend ARP responses. If this option is not specified, ARP responses will not be suspended.</p>
-<dt><code>-e</code>, <code>&#8211;reset-period</code></p>
-<dd>Time interval to wait before resetting timer. The default is 60 seconds.</dl>
+<dt><code>-u</code> <i>INT</i>, <code>&#8211;timer-use</code>=<i>INT</i></dt>
+<dd>Set timer use. The timer use value can be set to one of the following: 1 = BIOS FRB2, 2 = BIOS POST, 3 = OS_LOAD, 4 = SMS OS, 5 = OEM.</dd>
+<dt><code>-l</code> <i>INT</i>, <code>&#8211;log</code>=<i>INT</i></dt>
+<dd>Set Log Flag. A flag value of 0 turns logging on. A value of 1 turns logging off.</dd>
+<dt><code>-a</code> <i>INT</i>, <code>&#8211;timeout-action</code>=<i>INT</i></dt>
+<dd>Set timeout action. The timeout action can be set to one of the following: 0 = No action, 1 = Hard Reset, 2 = Power Down, 3 = Power Cycle.</dd>
+<dt><code>-p</code> <i>INT</i>, <code>&#8211;pre-timeout-interrupt</code>=<i>INT</i></dt>
+<dd>Set pre-timeout interrupt. The pre timeout interrupt can be set to one of the following: 0 = None, 1 = SMI, 2 = NMI, 3 = Messaging Interrupt.</dd>
+<dt><code>-z</code> <i>SECONDS</i>, <code>&#8211;pre-timeout-interval</code>=<i>SECONDS</i></dt>
+<dd>Set pre-timeout interval in seconds.</dd>
+<dt><code>-F</code>, <code>&#8211;clear-bios-frb2</code></dt>
+<dd>Clear BIOS FRB2 Timer Use Flag.</dd>
+<dt><code>-P</code>, <code>&#8211;clear-bios-post</code></dt>
+<dd>Clear BIOS POST Timer Use Flag.</dd>
+<dt><code>-L</code>, <code>&#8211;clear-os-load</code></dt>
+<dd>Clear OS Load Timer Use Flag.</dd>
+<dt><code>-S</code>, <code>&#8211;clear-sms-os</code></dt>
+<dd>Clear SMS/OS Timer Use Flag.</dd>
+<dt><code>-O</code>, <code>&#8211;clear-oem</code></dt>
+<dd>Clear OEM Timer Use Flag.</dd>
+<dt><code>-i</code> <i>SECONDS</i>, <code>&#8211;initial-countdown</code>=<i>SECONDS</i></dt>
+<dd>Set initial countdown in seconds.</dd>
+<dt><code>-G</code> <i>INT</i>, <code>&#8211;gratuitous-arp</code>=<i>INT</i></dt>
+<dd>Suspend or don&#8217;t suspend gratuitous ARPs while the BMC timer is running. A flag value of 1 suspends gratuitous ARPs. A value of 0 will not suspend gratuitous ARPs. If this option is not specified, gratuitous ARPs will not be suspended.</dd>
+<dt><code>-A</code> <i>INT</i>, <code>&#8211;arp-response</code>=<i>INT</i></dt>
+<dd>Suspend or don&#8217;t suspend BMC-generated ARP responses while the BMC timer is running. A flag value of 1 suspends ARP responses. A value of 0 will not suspend ARP responses. If this option is not specified, ARP responses will not be suspended.</dd>
+<dt><code>-e</code>, <code>&#8211;reset-period</code></dt>
+<dd>Time interval to wait before resetting timer. The default is 60 seconds.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are logged to syslog.</p>
 <h2>Workarounds</h2>

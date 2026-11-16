@@ -17,9 +17,9 @@ description: "telepathy-salut – Telepathy connection manager for link-local XM
 <p>There are no command-line options.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>SALUT_LOGFILE</code>=<i>filename</i></p>
-<dd>If set, debug output will go to the given file rather than to stderr.</p>
-<dt><code>SALUT_DEBUG</code>=<i>type</i></p>
-<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output. <code>GIBBER_DEBUG</code>=<i>type</i> May be set to &quot;all&quot; for full debug output from the Gibber XMPP library used by Salut, or various undocumented options (which may change from release to release) to filter the output.</dl>
+<dt><code>SALUT_LOGFILE</code>=<i>filename</i></dt>
+<dd>If set, debug output will go to the given file rather than to stderr.</dd>
+<dt><code>SALUT_DEBUG</code>=<i>type</i></dt>
+<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output. <code>GIBBER_DEBUG</code>=<i>type</i> May be set to &quot;all&quot; for full debug output from the Gibber XMPP library used by Salut, or various undocumented options (which may change from release to release) to filter the output.</dd></dl>
 <h2>See Also</h2>
 <p><i><a rel="nofollow" href="http://telepathy.freedesktop.org/">http://telepathy.freedesktop.org/</a></i>, <i><a rel="nofollow" href="http://telepathy.freedesktop.org/wiki/CategorySalut">http://telepathy.freedesktop.org/wiki/CategorySalut</a></i>, <i><a rel="nofollow" href="http://www.xmpp.org/extensions/xep-0174.html">http://www.xmpp.org/extensions/xep-0174.html</a></i>, <code><a href="/docs/linux/man/1-empathy/">empathy</a></code>(1) </p>

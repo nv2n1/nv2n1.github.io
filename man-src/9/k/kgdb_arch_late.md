@@ -14,11 +14,11 @@ description: "kgdb_arch_late – Perform any architecture specific initalization
 <p><i>void</i></p>
 <dl>
 <dd>
-<dd>no arguments</dl>
+</dd><dd>no arguments</dd></dl>
 <h2>Description</h2>
 <p>This function will handle the late initalization of any architecture specific callbacks. This is an optional function for handling things like late initialization of hw breakpoints. The default implementation does nothing.</p>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

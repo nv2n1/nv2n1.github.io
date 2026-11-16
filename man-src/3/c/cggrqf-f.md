@@ -36,10 +36,10 @@ description: "cggrqf.f –"
  A*inv(B) = (R*inv(T))*Z**H
  where inv(B) denotes the inverse of the matrix B, and Z**H denotes the
  conjugate transpose of the matrix Z.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= 0.</pre>
 <p><i>P</i> </p>
@@ -102,13 +102,13 @@ description: "cggrqf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -130,7 +130,8 @@ description: "cggrqf.f –"
  and taub in TAUB(i).
  To form Z explicitly, use LAPACK subroutine CUNGQR.
  To use Z to update another matrix, use LAPACK subroutine CUNMQR.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 214 of file cggrqf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

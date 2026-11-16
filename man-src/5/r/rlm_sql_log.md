@@ -18,12 +18,12 @@ description: "rlm_sql_log – FreeRADIUS Module"
 <h2>Configuration</h2>
 <p>The main configuration items to be aware of are the path of the log file and the different SQL queries.</p>
 <dl>
-<dt>path</p>
-<dd>An entry named &quot;path&quot; sets the full path of the file where the SQL queries are recorded. (this variable is run through dynamic string expansion, and can include FreeRADIUS variables to create a dynamic filename)</p>
-<dt>Accounting queries</p>
-<dd>When a accounting record is processed, the module searches a config entry keyed by the Acct-Status-Type attribute present in the packet. For example, the SQL to be run on an accounting start must be named &quot;Start&quot; in the configuration for the module. Other usual values for Acct-Status-Type are &quot;Stop&quot;, &quot;Alive&quot;, &quot;Accounting-On&quot;, etc. See the VALUEs for Acct-Status-Type in the dictionary.rfc2866 file.</p>
-<dt>Post-Auth query</p>
-<dd>An entry named &quot;Post-Auth&quot; sets the query to run during the post-authentication stage. This query is mainly used to log sessions where there may not be a later accounting packet.</dl>
+<dt>path</dt>
+<dd>An entry named &quot;path&quot; sets the full path of the file where the SQL queries are recorded. (this variable is run through dynamic string expansion, and can include FreeRADIUS variables to create a dynamic filename)</dd>
+<dt>Accounting queries</dt>
+<dd>When a accounting record is processed, the module searches a config entry keyed by the Acct-Status-Type attribute present in the packet. For example, the SQL to be run on an accounting start must be named &quot;Start&quot; in the configuration for the module. Other usual values for Acct-Status-Type are &quot;Stop&quot;, &quot;Alive&quot;, &quot;Accounting-On&quot;, etc. See the VALUEs for Acct-Status-Type in the dictionary.rfc2866 file.</dd>
+<dt>Post-Auth query</dt>
+<dd>An entry named &quot;Post-Auth&quot; sets the query to run during the post-authentication stage. This query is mainly used to log sessions where there may not be a later accounting packet.</dd></dl>
 <dl>
 <dd>
 <pre>modules {
@@ -71,7 +71,7 @@ post-auth {
  ...
 <br>
 }</pre>
-</dl>
+</dd></dl>
 <h2>Sections</h2>
 <p><code>accounting,</code> <code>post-auth</code></p>
 <h2>Files</h2>

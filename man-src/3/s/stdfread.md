@@ -11,7 +11,6 @@ std::fread - std::fread
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     std::size_t fread(void *buffer, std::size_t size, std::size_t count, std::FILE *stream);</code></pre> 
 Reads up to count objects into the array buffer from the given input stream stream as if by calling std::fgetc size times for each object, and storing the results, in the order obtained, into the successive positions of buffer, which is reinterpreted as an array of unsigned char. The file position indicator for the stream is advanced by the number of characters read. 
 If the objects are not TriviallyCopyable, the behavior is undefined. 
@@ -32,15 +31,10 @@ If size or count is zero, fread returns zero and performs no other action.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;vector&gt;
-
 int main()
-
 {
     // prepare file
     std::ofstream(&quot;test.txt&quot;) &lt;&lt; 1 &lt;&lt; ' ' &lt;&lt; 2 &lt;&lt; '\n';
@@ -50,9 +44,7 @@ int main()
     for (char n : buf)
         std::cout &lt;&lt; n;
     std::vector&lt;std::string&gt; buf2; // string is not trivially copyable
-
     // this would result in undefined behavior
-
     //    std::fread(&amp;buf2[0], sizeof buf2[0], buf2.size(), f);
 }
 </code></pre>

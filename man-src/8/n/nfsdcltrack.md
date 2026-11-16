@@ -16,25 +16,25 @@ description: "nfsdcltrack – NFSv4 Client Tracking Callout Program"
 <p> In order to prevent these problems, the server must track a small amount of per-client information on stable storage. This program provides the userspace piece of that functionality. When the kernel needs to manipulate the database that stores this info, it will execute this program to handle it.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Enable debug level logging.</p>
-<dt><code>-f</code>, <code>&#8211;foreground</code></p>
-<dd>Log to stderr instead of syslog.</p>
-<dt><code>-s</code> <i>storagedir</i>, <code>&#8211;storagedir</code>=<i>storage_dir</i></p>
-<dd>Directory where stable storage information should be kept. The default value is <i>/var/lib/nfs/nfsdcltrack</i>.</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Enable debug level logging.</dd>
+<dt><code>-f</code>, <code>&#8211;foreground</code></dt>
+<dd>Log to stderr instead of syslog.</dd>
+<dt><code>-s</code> <i>storagedir</i>, <code>&#8211;storagedir</code>=<i>storage_dir</i></dt>
+<dd>Directory where stable storage information should be kept. The default value is <i>/var/lib/nfs/nfsdcltrack</i>.</dd></dl>
 <h2>Commands</h2>
 <p>nfsdcltrack requires a command for each invocation. Supported commands are:</p>
 <dl>
-<dt><code>init</code></p>
-<dd>Initialize the database. This command requires no argument.</p>
-<dt><code>create</code></p>
-<dd>Create a new client record (or update the timestamp on an existing one). This command requires a hex-encoded nfs_client_id4 as an argument.</p>
-<dt><code>remove</code></p>
-<dd>Remove a client record from the database. This command requires a hex-encoded nfs_client_id4 as an argument.</p>
-<dt><code>check</code></p>
-<dd>Check to see if a nfs_client_id4 is allowed to reclaim. This command requires a hex-encoded nfs_client_id4 as an argument.</p>
-<dt><code>gracedone</code></p>
-<dd>Remove any unreclaimed client records from the database. This command requires a epoch boot time as an argument.</dl>
+<dt><code>init</code></dt>
+<dd>Initialize the database. This command requires no argument.</dd>
+<dt><code>create</code></dt>
+<dd>Create a new client record (or update the timestamp on an existing one). This command requires a hex-encoded nfs_client_id4 as an argument.</dd>
+<dt><code>remove</code></dt>
+<dd>Remove a client record from the database. This command requires a hex-encoded nfs_client_id4 as an argument.</dd>
+<dt><code>check</code></dt>
+<dd>Check to see if a nfs_client_id4 is allowed to reclaim. This command requires a hex-encoded nfs_client_id4 as an argument.</dd>
+<dt><code>gracedone</code></dt>
+<dd>Remove any unreclaimed client records from the database. This command requires a epoch boot time as an argument.</dd></dl>
 <h2>External Configuration</h2>
 <p>The directory for stable storage information can be set via the file <code>/etc/nfs.conf</code> by setting the <code>storagedir</code> value in the <code>nfsdcltrack</code> section. For example: [nfsdcltrack] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>storagedir&nbsp;<wbr>=&nbsp;<wbr>/shared/nfs/nfsdcltrack Debuging to syslog can also be enabled by setting &quot;debug = 1&quot; in this file.</p>

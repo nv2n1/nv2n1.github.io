@@ -13,45 +13,45 @@ description: "from.mailutils – display from and subject."
 <h2>Description</h2>
 <p>GNU from <code>&#8212;</code> display from and subject.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;[no-]count</code></p>
-<dd>just print a count of messages and exit</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>enable debugging output</p>
-<dt><code>-f</code>, <code>&#8211;file</code>=<i>,FILE/</i></p>
-<dd>read mail from FILE</p>
-<dt><code>-s</code>, <code>&#8211;sender</code>=<i>,ADDRESS/</i></p>
-<dd>print only mail from addresses containing the supplied string</p>
-<dd>Global debugging settings</p>
-<dt><code>&#8211;debug-level</code>=<i>,LEVEL/</i></p>
-<dd>set Mailutils debugging level</p>
-<dt> <code>&#8211;[no-]debug-line-info</code> show source info with debugging messages</p>
+<dt><code>-c</code>, <code>&#8211;[no-]count</code></dt>
+<dd>just print a count of messages and exit</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>enable debugging output</dd>
+<dt><code>-f</code>, <code>&#8211;file</code>=<i>,FILE/</i></dt>
+<dd>read mail from FILE</dd>
+<dt><code>-s</code>, <code>&#8211;sender</code>=<i>,ADDRESS/</i></dt>
+<dd>print only mail from addresses containing the supplied string</dd>
+<dd>Global debugging settings</dd>
+<dt><code>&#8211;debug-level</code>=<i>,LEVEL/</i></dt>
+<dd>set Mailutils debugging level</dd>
+<dt> <code>&#8211;[no-]debug-line-info</code> show source info with debugging messages</dt>
 <dd>
-<dd>Configuration handling</p>
-<dt><code>&#8211;config-file</code>=<i>,FILE/</i></p>
-<dd>load this configuration file; implies <code>&#8211;no-config</code></p>
-<dt><code>&#8211;config-lint</code></p>
-<dd>check configuration file syntax and exit</p>
-<dt><code>&#8211;config-verbose</code></p>
-<dd>verbosely log parsing of the configuration files</p>
-<dt><code>&#8211;no-config</code></p>
-<dd>do not load site and user configuration files</p>
-<dt><code>&#8211;no-site-config</code></p>
-<dd>do not load site-wide configuration file</p>
-<dt><code>&#8211;no-user-config</code></p>
-<dd>do not load user configuration file</p>
-<dt><code>&#8211;set</code>=<i>,PARAM=VALUE/</i></p>
-<dd>set configuration parameter</p>
-<dd>Informational options</p>
-<dt><code>&#8211;config-help</code></p>
-<dd>show configuration file summary</p>
-<dt><code>&#8211;show-config-options</code></p>
-<dd>show compilation options</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd>give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd>give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print program version</dl>
+</dd><dd>Configuration handling</dd>
+<dt><code>&#8211;config-file</code>=<i>,FILE/</i></dt>
+<dd>load this configuration file; implies <code>&#8211;no-config</code></dd>
+<dt><code>&#8211;config-lint</code></dt>
+<dd>check configuration file syntax and exit</dd>
+<dt><code>&#8211;config-verbose</code></dt>
+<dd>verbosely log parsing of the configuration files</dd>
+<dt><code>&#8211;no-config</code></dt>
+<dd>do not load site and user configuration files</dd>
+<dt><code>&#8211;no-site-config</code></dt>
+<dd>do not load site-wide configuration file</dd>
+<dt><code>&#8211;no-user-config</code></dt>
+<dd>do not load user configuration file</dd>
+<dt><code>&#8211;set</code>=<i>,PARAM=VALUE/</i></dt>
+<dd>set configuration parameter</dd>
+<dd>Informational options</dd>
+<dt><code>&#8211;config-help</code></dt>
+<dd>show configuration file summary</dd>
+<dt><code>&#8211;show-config-options</code></dt>
+<dd>show compilation options</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print program version</dd></dl>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;bug-mailutils [at] gnu.org&gt;.<br />
@@ -63,7 +63,7 @@ description: "from.mailutils – display from and subject."
 <h2>See Also</h2>
 <p>The complete GNU mailutils documentation is maintained as a Texinfo manual. If the <code>mailutils-doc</code> package is installed, the command</p>
 <dl>
-<dd><code>info mailutils</code></dl>
+<dd><code>info mailutils</code></dd></dl>
 <p> should give you access to the complete manual.<br />
  You can also find this manual online in the GNU mailutils webpage:<br />
  <a rel="nofollow" href="https://www.gnu.org/software/mailutils/manual/index.html.">https://www.gnu.org/software/mailutils/manual/index.html.</a><br />

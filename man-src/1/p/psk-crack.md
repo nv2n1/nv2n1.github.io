@@ -19,26 +19,26 @@ description: "psk-crack – Crack IKE Aggressive Mode Pre-Shared Keys"
 <p> <code>psk-crack</code> attempts to crack IKE Aggressive Mode pre-shared keys that have previously been gathered using <code>ike-scan</code> with the <code>&#8211;pskcrack</code> option. </p>
 <p> <code>psk-crack</code> can operate in two different modes:</p>
 <dl>
-<dt>1)</p>
-<dd> Dictionary cracking mode: this is the default mode in which <code>psk-crack</code> tries each candidate word from the dictionary file in turn until it finds a match, or all the words in the dictionary have been tried.</p>
-<dt>2)</p>
-<dd> Brute-force cracking mode: in this mode, <code>psk-crack</code> tries all possible combinations of a specified character set up to a given length.</dl>
+<dt>1)</dt>
+<dd> Dictionary cracking mode: this is the default mode in which <code>psk-crack</code> tries each candidate word from the dictionary file in turn until it finds a match, or all the words in the dictionary have been tried.</dd>
+<dt>2)</dt>
+<dd> Brute-force cracking mode: in this mode, <code>psk-crack</code> tries all possible combinations of a specified character set up to a given length.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help or -h</code></p>
-<dd> Display this usage message and exit.</p>
-<dt><code>&#8211;version or -V</code></p>
-<dd> Display program version and exit.</p>
-<dt><code>&#8211;verbose or -v</code></p>
-<dd> Display verbose progress messages.</p>
-<dt><code>&#8211;dictionary=&lt;f&gt; or -d &lt;f&gt;</code></p>
-<dd> Set dictionary file to &lt;f&gt;. The default is /usr/local/share/ike-scan/psk-crack-dictionary.</p>
-<dt><code>&#8211;norteluser=&lt;u&gt; or -u &lt;u&gt;</code></p>
-<dd> Specify the username for Nortel Contivity cracking. This option is required when cracking pre-shared keys on Nortel Contivity / VPN Router systems. These systems use a proprietary method to calculate the hash that includes the username. This option is only needed when cracking Nortel format hashes, and should not be used for standard format hashes.</p>
-<dt><code>&#8211;bruteforce=&lt;n&gt; or -B &lt;n&gt;</code></p>
-<dd> Select bruteforce cracking up to &lt;n&gt; characters.</p>
-<dt><code>&#8211;charset=&lt;s&gt; or -c &lt;s&gt;</code></p>
-<dd> Set bruteforce character set to &lt;s&gt; Default is &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;</dl>
+<dt><code>&#8211;help or -h</code></dt>
+<dd> Display this usage message and exit.</dd>
+<dt><code>&#8211;version or -V</code></dt>
+<dd> Display program version and exit.</dd>
+<dt><code>&#8211;verbose or -v</code></dt>
+<dd> Display verbose progress messages.</dd>
+<dt><code>&#8211;dictionary=&lt;f&gt; or -d &lt;f&gt;</code></dt>
+<dd> Set dictionary file to &lt;f&gt;. The default is /usr/local/share/ike-scan/psk-crack-dictionary.</dd>
+<dt><code>&#8211;norteluser=&lt;u&gt; or -u &lt;u&gt;</code></dt>
+<dd> Specify the username for Nortel Contivity cracking. This option is required when cracking pre-shared keys on Nortel Contivity / VPN Router systems. These systems use a proprietary method to calculate the hash that includes the username. This option is only needed when cracking Nortel format hashes, and should not be used for standard format hashes.</dd>
+<dt><code>&#8211;bruteforce=&lt;n&gt; or -B &lt;n&gt;</code></dt>
+<dd> Select bruteforce cracking up to &lt;n&gt; characters.</dd>
+<dt><code>&#8211;charset=&lt;s&gt; or -c &lt;s&gt;</code></dt>
+<dd> Set bruteforce character set to &lt;s&gt; Default is &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Roy Hills &lt;Roy.Hills [at] nta-monitor.com&gt; </p>
 <h2>Index</h2>

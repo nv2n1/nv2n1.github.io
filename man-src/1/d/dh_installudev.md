@@ -15,14 +15,14 @@ description: "dh_installudev – install udev rules files"
 <p> <code>dh_installudev</code> is a debhelper program that is responsible for installing <code>udev</code> rules files.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.udev</p>
-<dd> Installed into <i>lib/udev/rules.d/</i> in the package build directory.</dl>
+<dt>debian/<i>package</i>.udev</dt>
+<dd> Installed into <i>lib/udev/rules.d/</i> in the package build directory.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;name=</code><i>name</i></p>
-<dd> When this parameter is used, <code>dh_installudev</code> looks for and installs files named debian/<i>package</i>.<i>name</i>.udev instead of the usual debian/<i>package</i>.udev.</p>
-<dt><code>&#8211;priority=</code><i>priority</i></p>
-<dd> Sets the priority the file. Default is 60.</dl>
+<dt><code>&#8211;name=</code><i>name</i></dt>
+<dd> When this parameter is used, <code>dh_installudev</code> looks for and installs files named debian/<i>package</i>.<i>name</i>.udev instead of the usual debian/<i>package</i>.udev.</dd>
+<dt><code>&#8211;priority=</code><i>priority</i></dt>
+<dd> Sets the priority the file. Default is 60.</dd></dl>
 <h2>NOTES</h2>
 <p> Note that this command is not idempotent. <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) should be called between invocations of this command. Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts.</p>
 <h2>SEE ALSO</h2>

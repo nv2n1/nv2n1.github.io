@@ -10,7 +10,6 @@ description: "sasl_setpass – Check a plaintext password"
 <p>sasl_setpass &#8211; Check a plaintext password</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_setpass(sasl_conn_t *conn,
 const char *user,
 const char *pass, unsigned passlen,

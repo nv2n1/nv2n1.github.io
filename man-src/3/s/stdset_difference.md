@@ -11,59 +11,32 @@ std::set_difference - std::set_difference
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 OutputIt set_difference( InputIt1 first1, InputIt1 last1,                                         (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 constexpr OutputIt set_difference( InputIt1 first1, InputIt1 last1,                               (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3 &gt;
-
 ForwardIt3 set_difference( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,     (2) (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first );
-
 template&lt; class InputIt1, class InputIt2,
-
 class OutputIt, class Compare &gt;                                                           (1)
-
 OutputIt set_difference( InputIt1 first1, InputIt1 last1,                                                       (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first, Compare comp );
-
 template&lt; class InputIt1, class InputIt2,
-
 class OutputIt, class Compare &gt;
-
 constexpr OutputIt set_difference( InputIt1 first1, InputIt1 last1,                           (3)               (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
-
 class ForwardIt3, class Compare &gt;
-
 ForwardIt3 set_difference( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,         (4)           (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first, Compare comp );</code></pre> 
 Copies the elements from the sorted range [first1, last1) which are not found in the sorted range [first2, last2) to the range beginning at d_first. 
 The resulting range is also sorted. Equivalent elements are treated individually, that is, if some element is found m times in [first1, last1) and n times in [first2, last2), it will be copied to d_first exactly std::max(m-n, 0) times. The resulting range cannot overlap with either of the input ranges. 
@@ -161,11 +134,8 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
 int main()
 {

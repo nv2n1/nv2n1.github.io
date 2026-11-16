@@ -29,12 +29,9 @@ std::overflow_error if the value can not be represented in unsigned long long.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
-
 #include &lt;limits&gt;
 int main()
-
 {
     std::bitset&lt;std::numeric_limits&lt;unsigned long long&gt;::digits&gt; b(
         0x123456789abcdef0LL);

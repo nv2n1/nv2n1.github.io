@@ -14,13 +14,13 @@ description: "vm_iomap_memory – remap memory to userspace"
 <p><i>vma</i></p>
 <dl>
 <dd>
-<dd>user vma to map to</dl>
+</dd><dd>user vma to map to</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>start of area</dl>
+<dd>start of area</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>size of area</dl>
+<dd>size of area</dd></dl>
 <h2>Description</h2>
 <p>This is a simplified <code>io_remap_pfn_range</code> for common driver use. The driver just needs to give us the physical memory range to be mapped, we&#8217;ll figure out the rest from the vma information. </p>
 <p> NOTE! Some drivers might want to tweak vma-&gt;vm_page_prot first to get whatever write-combining details or similar.</p>

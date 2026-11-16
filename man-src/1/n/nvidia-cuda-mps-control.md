@@ -27,41 +27,41 @@ description: "nvidia-cuda-mps-control – NVIDIA CUDA Multi Process Service mana
 <p> Start the front-end management user interface to the MPS control daemon, which needs to be started first. The front-end UI keeps reading commands from stdin until EOF. Commands are separated by the newline character. If an invalid command is issued and rejected, an error message will be printed to stdout. The exit status of the front-end UI is zero if communication with the daemon is successful. A non-zero value is returned if the daemon is not found or connection to the daemon is broken unexpectedly. See the &quot;quit&quot; command below for more information about the exit status. </p>
 <p> Commands supported by the MPS control daemon:</p>
 <dl>
-<dt><code>get_server_list</code></p>
-<dd> Print out a list of PIDs of all MPS servers.</p>
-<dt><code>start_server</code> <code>-uid</code> <i>UID</i></p>
-<dd> Start a new MPS server for the specified user (<i>UID</i>).</p>
-<dt><code>shutdown_server</code> <i>PID</i> [<code>-f</code>]</p>
-<dd> Shutdown the MPS server with given <i>PID</i>. The MPS server will not accept any new client connections and it exits when all current clients disconnect. <code>-f</code> is forced immediate shutdown. If a client launches a faulty kernel that runs forever, a forced shutdown of the MPS server may be required, since the MPS server creates and issues GPU work on behalf of its clients.</p>
-<dt><code>get_client_list</code> <i>PID</i></p>
-<dd> Print out a list of PIDs of all clients connected to the MPS server with given <i>PID</i>.</p>
-<dt><code>quit</code> [<code>-t</code> <i>TIMEOUT</i>]</p>
-<dd> Shutdown the MPS control daemon process and all MPS servers. The MPS control daemon stops accepting new clients while waiting for current MPS servers and MPS clients to finish. If <i>TIMEOUT</i> is specified (in seconds), the daemon will force MPS servers to shutdown if they are still running after <i>TIMEOUT</i> seconds. </p>
+<dt><code>get_server_list</code></dt>
+<dd> Print out a list of PIDs of all MPS servers.</dd>
+<dt><code>start_server</code> <code>-uid</code> <i>UID</i></dt>
+<dd> Start a new MPS server for the specified user (<i>UID</i>).</dd>
+<dt><code>shutdown_server</code> <i>PID</i> [<code>-f</code>]</dt>
+<dd> Shutdown the MPS server with given <i>PID</i>. The MPS server will not accept any new client connections and it exits when all current clients disconnect. <code>-f</code> is forced immediate shutdown. If a client launches a faulty kernel that runs forever, a forced shutdown of the MPS server may be required, since the MPS server creates and issues GPU work on behalf of its clients.</dd>
+<dt><code>get_client_list</code> <i>PID</i></dt>
+<dd> Print out a list of PIDs of all clients connected to the MPS server with given <i>PID</i>.</dd>
+<dt><code>quit</code> [<code>-t</code> <i>TIMEOUT</i>]</dt>
+<dd> Shutdown the MPS control daemon process and all MPS servers. The MPS control daemon stops accepting new clients while waiting for current MPS servers and MPS clients to finish. If <i>TIMEOUT</i> is specified (in seconds), the daemon will force MPS servers to shutdown if they are still running after <i>TIMEOUT</i> seconds. </dd>
 <p> This command is synchronous. The front-end UI waits for the daemon to shutdown, then returns the daemon&#8217;s exit status. The exit status is zero iff all MPS servers have exited gracefully.</p>
-<dt>Commands available to Volta MPS control daemon:</p>
+<dt>Commands available to Volta MPS control daemon:</dt>
 <dd>
-<dt><code>get_device_client_list</code> <i>PID</i></p>
-<dd> List the devices and PIDs of client applications that enumerated this device. It optionally takes the server instance PID.</p>
-<dt><code>set_default_active_thread_percentage</code> <i>percentage</i></p>
-<dd> Set the default active thread percentage for MPS servers. If there is already a server spawned, this command will only affect the next server. The set value is lost if a quit command is executed. The default is 100.</p>
-<dt><code>get_default_active_thread_percentage</code></p>
-<dd> Query the current default available thread percentage.</p>
-<dt><code>set_active_thread_percentage</code> <i>PID</i> <i>percentage</i></p>
-<dd> Set the active thread percentage for the MPS server instance of the given PID. All clients created with that server afterwards will observe the new limit. Existing clients are not affected.</p>
-<dt><code>get_active_thread_percentage</code> <i>PID</i></p>
-<dd> Query the current available thread percentage of the MPS server instance of the given PID.</dl>
+</dd><dt><code>get_device_client_list</code> <i>PID</i></dt>
+<dd> List the devices and PIDs of client applications that enumerated this device. It optionally takes the server instance PID.</dd>
+<dt><code>set_default_active_thread_percentage</code> <i>percentage</i></dt>
+<dd> Set the default active thread percentage for MPS servers. If there is already a server spawned, this command will only affect the next server. The set value is lost if a quit command is executed. The default is 100.</dd>
+<dt><code>get_default_active_thread_percentage</code></dt>
+<dd> Query the current default available thread percentage.</dd>
+<dt><code>set_active_thread_percentage</code> <i>PID</i> <i>percentage</i></dt>
+<dd> Set the active thread percentage for the MPS server instance of the given PID. All clients created with that server afterwards will observe the new limit. Existing clients are not affected.</dd>
+<dt><code>get_active_thread_percentage</code> <i>PID</i></dt>
+<dd> Query the current available thread percentage of the MPS server instance of the given PID.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>CUDA_MPS_PIPE_DIRECTORY</code></p>
-<dd> Specify the directory that contains the named pipes and UNIX domain sockets used for communication among the MPS control, MPS server, and MPS clients. The value of this environment variable should be consistent in the MPS control daemon and all MPS client processes. Default directory is /tmp/nvidia-mps</p>
-<dt><code>CUDA_MPS_LOG_DIRECTORY</code></p>
-<dd> Specify the directory that contains the MPS log files. This variable is used by the MPS control daemon only. Default directory is /var/log/nvidia-mps</dl>
+<dt><code>CUDA_MPS_PIPE_DIRECTORY</code></dt>
+<dd> Specify the directory that contains the named pipes and UNIX domain sockets used for communication among the MPS control, MPS server, and MPS clients. The value of this environment variable should be consistent in the MPS control daemon and all MPS client processes. Default directory is /tmp/nvidia-mps</dd>
+<dt><code>CUDA_MPS_LOG_DIRECTORY</code></dt>
+<dd> Specify the directory that contains the MPS log files. This variable is used by the MPS control daemon only. Default directory is /var/log/nvidia-mps</dd></dl>
 <h2>FILES</h2>
 <p> Log files created by the MPS control daemon in the specified directory</p>
 <dl>
-<dt><code>control.log</code></p>
-<dd> Record startup and shutdown of MPS control daemon, user commands issued with their results, and status of MPS servers.</p>
-<dt><code>server.log</code></p>
-<dd> Record startup and shutdown of MPS servers, and status of MPS clients. </p>
+<dt><code>control.log</code></dt>
+<dd> Record startup and shutdown of MPS control daemon, user commands issued with their results, and status of MPS servers.</dd>
+<dt><code>server.log</code></dt>
+<dd> Record startup and shutdown of MPS servers, and status of MPS clients. </dd>
 </dl>
 <h2>Index</h2>

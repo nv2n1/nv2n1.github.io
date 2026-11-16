@@ -20,94 +20,94 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <h2>PARAMETERS</h2>
 <p> Most of the command line switch names are the same as in <code>afm2tfm</code> for convenience. One or more space characters between an option and its value is mandatory; options can&#8217;t be concatenated. For historical reasons, the first parameter can <i>not</i> be a switch but must be the font name.</p>
 <dl>
-<dt><code>-c</code><i>&nbsp;caps-height-factor</i></p>
-<dd> The height of small caps made with the <code>-V</code> switch. Default value of this real number is 0.8 times the height of uppercase glyphs.</p>
+<dt><code>-c</code><i>&nbsp;caps-height-factor</i></dt>
+<dd> The height of small caps made with the <code>-V</code> switch. Default value of this real number is 0.8 times the height of uppercase glyphs.</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-e</code><i>&nbsp;extension-factor</i></p>
-<dd> The extension factor to stretch the characters horizontally. Default value of this real number is 1.0; if less than 1.0, you get a condensed font.</p>
-<dt><code>-E</code><i>&nbsp;encoding-id</i></p>
-<dd> The TrueType encoding ID. Default value of this non-negative integer is 1.</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-e</code><i>&nbsp;extension-factor</i></dt>
+<dd> The extension factor to stretch the characters horizontally. Default value of this real number is 1.0; if less than 1.0, you get a condensed font.</dd>
+<dt><code>-E</code><i>&nbsp;encoding-id</i></dt>
+<dd> The TrueType encoding ID. Default value of this non-negative integer is 1.</dd>
 <dt>
-<dd> Will be ignored if <code>-N</code> is used.</p>
-<dt><code>-f</code><i>&nbsp;font-index</i></p>
-<dd> The font index in a TrueType Collection. Default is the first font (index 0). [TrueType collections are usually found in some CJK fonts; e.g. the first font index specifies glyphs and metrics for horizontal writing, and the second font index does the same for vertical writing. TrueType collections usually have the extension `</p>
+</dt><dd> Will be ignored if <code>-N</code> is used.</dd>
+<dt><code>-f</code><i>&nbsp;font-index</i></dt>
+<dd> The font index in a TrueType Collection. Default is the first font (index 0). [TrueType collections are usually found in some CJK fonts; e.g. the first font index specifies glyphs and metrics for horizontal writing, and the second font index does the same for vertical writing. TrueType collections usually have the extension `</dd>
 <dt>
-<dd> Will be ignored for ordinary TrueType fonts.</p>
-<dt><code>-l</code></p>
-<dd> Create ligatures in subfonts between first and second bytes of all the original character codes. Example: Character code 0xABCD maps to character position 123 in subfont 45. Then a ligature in subfont 45 between position 0xAB and 0xCD pointing to character 123 will be produced. The fonts of the Korean HLaTeX package use this feature. Note that this option generates correct ligatures only for TrueType fonts where the input cmap is identical to the output encoding. In case of HLaTeX, TTFs must have platform ID 3 and encoding ID 5.</p>
+</dt><dd> Will be ignored for ordinary TrueType fonts.</dd>
+<dt><code>-l</code></dt>
+<dd> Create ligatures in subfonts between first and second bytes of all the original character codes. Example: Character code 0xABCD maps to character position 123 in subfont 45. Then a ligature in subfont 45 between position 0xAB and 0xCD pointing to character 123 will be produced. The fonts of the Korean HLaTeX package use this feature. Note that this option generates correct ligatures only for TrueType fonts where the input cmap is identical to the output encoding. In case of HLaTeX, TTFs must have platform ID 3 and encoding ID 5.</dd>
 <dt>
-<dd> Will be ignored if not in subfont mode.</p>
-<dt><code>-L</code><i>&nbsp;ligature-file</i></p>
-<dd> Same as <code>-l</code>, but character codes for ligatures are specified in <i>ligature-file</i>. For example, ` generates correct ligatures for the Korean HLaTeX package regardless of the platform and encoding ID of the used TrueType font (the file is part of the ttf2pk package).</p>
+</dt><dd> Will be ignored if not in subfont mode.</dd>
+<dt><code>-L</code><i>&nbsp;ligature-file</i></dt>
+<dd> Same as <code>-l</code>, but character codes for ligatures are specified in <i>ligature-file</i>. For example, ` generates correct ligatures for the Korean HLaTeX package regardless of the platform and encoding ID of the used TrueType font (the file is part of the ttf2pk package).</dd>
 <dt>
-<dd> Ligature files have the same format and extension as files. This option will be ignored if not in subfont mode.</p>
-<dt><code>-n</code></p>
-<dd> Use PS names (of glyphs) of the TrueType font. Only glyphs with a valid entry in the selected cmap are used.</p>
+</dt><dd> Ligature files have the same format and extension as files. This option will be ignored if not in subfont mode.</dd>
+<dt><code>-n</code></dt>
+<dd> Use PS names (of glyphs) of the TrueType font. Only glyphs with a valid entry in the selected cmap are used.</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-N</code></p>
-<dd> Use only PS names of the TrueType font. No cmap is used, thus the switches <code>-E</code> and <code>-P</code> have no effect, causing a warning message.</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-N</code></dt>
+<dd> Use only PS names of the TrueType font. No cmap is used, thus the switches <code>-E</code> and <code>-P</code> have no effect, causing a warning message.</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-O</code></p>
-<dd> Use octal values for all character codes in the file rather than names; this is useful for symbol or CJK fonts where character names such as `A&#8217; are meaningless.</p>
-<dt><code>-p</code><i>&nbsp;inencfile</i></p>
-<dd> The input encoding file name for the TTF&rarr;raw TeX mapping. This parameter has to be specified in a map file (default: recorded in for successive <code>ttf2pk</code> calls.</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-O</code></dt>
+<dd> Use octal values for all character codes in the file rather than names; this is useful for symbol or CJK fonts where character names such as `A&#8217; are meaningless.</dd>
+<dt><code>-p</code><i>&nbsp;inencfile</i></dt>
+<dd> The input encoding file name for the TTF&rarr;raw TeX mapping. This parameter has to be specified in a map file (default: recorded in for successive <code>ttf2pk</code> calls.</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-P</code><i>&nbsp;platform-id</i></p>
-<dd> The TrueType platform ID. Default value of this non-negative integer is 3.</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-P</code><i>&nbsp;platform-id</i></dt>
+<dd> The TrueType platform ID. Default value of this non-negative integer is 3.</dd>
 <dt>
-<dd> Will be ignored if <code>-N</code> is used.</p>
-<dt><code>-q</code></p>
-<dd> Make <code>ttf2tfm</code> quiet. It suppresses any informational output except warning and error messages. For CJK fonts, the output can get quite large if you don&#8217;t specify this switch.</p>
-<dt><code>-r</code><i>&nbsp;old-glyphname new-glyphname</i></p>
-<dd> Replaces <i>old-glyphname</i> with <i>new-glyphname</i>. This switch is useful if you want to give an unnamed glyph (i.e., a glyph which can be represented with `.gXXX&#8217; or `.cXXX&#8217; only) a name or if you want to rename an already existing glyph name. You can&#8217;t use the `.gXXX&#8217; or `.cXXX&#8217; glyph name constructs for <i>new-glyphname</i>; multiple occurrences of <code>-r</code> are possible.</p>
+</dt><dd> Will be ignored if <code>-N</code> is used.</dd>
+<dt><code>-q</code></dt>
+<dd> Make <code>ttf2tfm</code> quiet. It suppresses any informational output except warning and error messages. For CJK fonts, the output can get quite large if you don&#8217;t specify this switch.</dd>
+<dt><code>-r</code><i>&nbsp;old-glyphname new-glyphname</i></dt>
+<dd> Replaces <i>old-glyphname</i> with <i>new-glyphname</i>. This switch is useful if you want to give an unnamed glyph (i.e., a glyph which can be represented with `.gXXX&#8217; or `.cXXX&#8217; only) a name or if you want to rename an already existing glyph name. You can&#8217;t use the `.gXXX&#8217; or `.cXXX&#8217; glyph name constructs for <i>new-glyphname</i>; multiple occurrences of <code>-r</code> are possible.</dd>
 <dt>
-<dd> If in subfont mode or if no encoding file is specified, this switch is ignored.</p>
-<dt><code>-R</code><i>&nbsp;replacement-file</i></p>
-<dd> Use this switch if you have many replacement pairs; they can be collected in a file which should have ` as extension. The syntax used in such replacement files is simple: Each non-empty line must contain a pair `<i>old-glyphname new-glyphname</i>&#8216; separated by whitespace (without the quotation marks). A percent sign starts a line comment; you can continue a line on the next line with a backslash as the last character.</p>
+</dt><dd> If in subfont mode or if no encoding file is specified, this switch is ignored.</dd>
+<dt><code>-R</code><i>&nbsp;replacement-file</i></dt>
+<dd> Use this switch if you have many replacement pairs; they can be collected in a file which should have ` as extension. The syntax used in such replacement files is simple: Each non-empty line must contain a pair `<i>old-glyphname new-glyphname</i>&#8216; separated by whitespace (without the quotation marks). A percent sign starts a line comment; you can continue a line on the next line with a backslash as the last character.</dd>
 <dt>
-<dd> If in subfont mode or if no encoding file is specified, this switch is ignored.</p>
-<dt><code>-s</code><i>&nbsp;slant-factor</i></p>
-<dd> The obliqueness factor to slant the font, usually much smaller than 1. Default of this real number is 0.0; if the value is larger than zero, the characters slope to the right, otherwise to the left.</p>
-<dt><code>-t</code><i>&nbsp;outencfile</i></p>
-<dd> The output encoding file name for the virtual font(s). Only characters in the raw TeX font are used.</p>
+</dt><dd> If in subfont mode or if no encoding file is specified, this switch is ignored.</dd>
+<dt><code>-s</code><i>&nbsp;slant-factor</i></dt>
+<dd> The obliqueness factor to slant the font, usually much smaller than 1. Default of this real number is 0.0; if the value is larger than zero, the characters slope to the right, otherwise to the left.</dd>
+<dt><code>-t</code><i>&nbsp;outencfile</i></dt>
+<dd> The output encoding file name for the virtual font(s). Only characters in the raw TeX font are used.</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-T</code><i>&nbsp;inoutencfile</i></p>
-<dd> This is equivalent to `<code>-p</code> <i>inoutencfile</i> <code>-t</code> <i>inoutencfile</i>&#8216;.</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-T</code><i>&nbsp;inoutencfile</i></dt>
+<dd> This is equivalent to `<code>-p</code> <i>inoutencfile</i> <code>-t</code> <i>inoutencfile</i>&#8216;.</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-u</code></p>
-<dd> Use only those characters specified in the output encoding, and no others. By default, <code>ttf2tfm</code> tries to include all characters in the virtual font, even those not present in the encoding for the virtual font (it puts them into otherwise-unused positions, rather arbitrarily).</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-u</code></dt>
+<dd> Use only those characters specified in the output encoding, and no others. By default, <code>ttf2tfm</code> tries to include all characters in the virtual font, even those not present in the encoding for the virtual font (it puts them into otherwise-unused positions, rather arbitrarily).</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-v</code><i>&nbsp;vplfile</i></p>
-<dd> Output a file in addition to the file. If no output encoding file is specified, <code>ttf2tfm</code> uses a default font encoding (cmtt10). <code>Note:</code> Be careful to use different names for the virtual font and the raw font!</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-v</code><i>&nbsp;vplfile</i></dt>
+<dd> Output a file in addition to the file. If no output encoding file is specified, <code>ttf2tfm</code> uses a default font encoding (cmtt10). <code>Note:</code> Be careful to use different names for the virtual font and the raw font!</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-V</code><i>&nbsp;scvplfile</i></p>
-<dd> Same as <code>-v</code>, but the virtual font generated is a pseudo small caps font obtained by scaling uppercase letters by 0.8 (resp. the value specified with <code>-c</code>) to typeset lowercase. This font handles accented letters and retains proper kerning.</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-V</code><i>&nbsp;scvplfile</i></dt>
+<dd> Same as <code>-v</code>, but the virtual font generated is a pseudo small caps font obtained by scaling uppercase letters by 0.8 (resp. the value specified with <code>-c</code>) to typeset lowercase. This font handles accented letters and retains proper kerning.</dd>
 <dt>
-<dd> Will be ignored in subfont mode.</p>
-<dt><code>-w</code></p>
-<dd> Generate PostScript encoding vectors containing glyph indices, primarily used to embed TrueType fonts in pdfTeX. <code>ttf2tfm</code> takes the names and replaces the suffix with that is, for files it creates at the same place.</p>
+</dt><dd> Will be ignored in subfont mode.</dd>
+<dt><code>-w</code></dt>
+<dd> Generate PostScript encoding vectors containing glyph indices, primarily used to embed TrueType fonts in pdfTeX. <code>ttf2tfm</code> takes the names and replaces the suffix with that is, for files it creates at the same place.</dd>
 <dt>
-<dd> Will be ignored if not in subfont mode.</p>
-<dt><code>-x</code></p>
-<dd> Rotate all glyphs by 90 degrees counter-clockwise. If no <code>-y</code> parameter is given, the rotated glyphs are shifted down vertically by 0.25em.</p>
+</dt><dd> Will be ignored if not in subfont mode.</dd>
+<dt><code>-x</code></dt>
+<dd> Rotate all glyphs by 90 degrees counter-clockwise. If no <code>-y</code> parameter is given, the rotated glyphs are shifted down vertically by 0.25em.</dd>
 <dt>
-<dd> Will be ignored if not in subfont mode.</p>
-<dt><code>-y</code><i>&nbsp;vertical-shift-factor</i></p>
-<dd> Shift down rotated glyphs by the given amount (the unit is <i>em</i>).</p>
+</dt><dd> Will be ignored if not in subfont mode.</dd>
+<dt><code>-y</code><i>&nbsp;vertical-shift-factor</i></dt>
+<dd> Shift down rotated glyphs by the given amount (the unit is <i>em</i>).</dd>
 <dt>
-<dd> Ignored if not in subfont mode or glyphs are not rotated.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Shows the current version of <code>ttf2tfm</code> and the used file search library (e.g. <code>kpathsea</code>).</p>
-<dt><code>&#8211;help</code></p>
-<dd> Shows usage information.</dl>
+</dt><dd> Ignored if not in subfont mode or glyphs are not rotated.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows the current version of <code>ttf2tfm</code> and the used file search library (e.g. <code>kpathsea</code>).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Shows usage information.</dd></dl>
 <p> If no file name is given, the name of the file is used, including the full path and replacing the extension with `</p>
 <h2>CMAPS</h2>
 <p> Contrary to Type 1 PostScript fonts (but similar to the new CID PostScript font format), most TrueType fonts have more than one native mapping table, also called `cmap&#8217;, which maps the (internal) TTF glyph indices to the (external) TTF character codes. Common examples are a mapping table to Unicode encoded character positions, and the standard Macintosh mapping. </p>
@@ -147,7 +147,7 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <p> The encoding ID depends on the platform. For pid=0, we ignore the <code>-E</code> parameter (setting it to zero) since the mapping table is always Unicode version 2.0. For pid=1, the following table lists the defined values: </p>
 <dl>
 <dt>
-<dd> platform ID = 1</dl>
+</dt><dd> platform ID = 1</dd></dl>
 <table>
 <tr VALIGN=top>
 <td><i>script</i></td>
@@ -328,7 +328,7 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <p> Here are the ISO encoding IDs: </p>
 <dl>
 <dt>
-<dd> platform ID = 2</dl>
+</dt><dd> platform ID = 2</dd></dl>
 <table>
 <tr VALIGN=top>
 <td><i>encoding</i></td>
@@ -354,7 +354,7 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <p> And finally, the Microsoft encoding IDs: </p>
 <dl>
 <dt>
-<dd> platform ID = 3</dl>
+</dt><dd> platform ID = 3</dd></dl>
 <table>
 <tr VALIGN=top>
 <td><i>encoding</i></td>
@@ -425,24 +425,24 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <p> ntukai23 &rarr; prefix: ntukai, infix: 23, postfix: (empty) </p>
 <p> Here the syntax of a line in an file, describing one subfont:</p>
 <dl>
-<dt><i>&lt;whitespace&gt; &lt;infix&gt; &lt;whitespace&gt; &lt;ranges&gt; &lt;whitespace&gt;</i></p>
+<dt><i>&lt;whitespace&gt; &lt;infix&gt; &lt;whitespace&gt; &lt;ranges&gt; &lt;whitespace&gt;</i></dt>
 <dd>
-<dt><i>&lt;infix&gt;</i>&nbsp;:=</p>
-<dd> anything except whitespace. It is best to use only alphanumerical characters.</p>
-<dt><i>&lt;whitespace&gt;</i>&nbsp;:=</p>
-<dd> space, formfeed, carriage return, horizontal and vertical tabs &#8212; no newline characters.</p>
-<dt><i>&lt;ranges&gt;</i>&nbsp;:=</p>
+</dd><dt><i>&lt;infix&gt;</i>&nbsp;:=</dt>
+<dd> anything except whitespace. It is best to use only alphanumerical characters.</dd>
+<dt><i>&lt;whitespace&gt;</i>&nbsp;:=</dt>
+<dd> space, formfeed, carriage return, horizontal and vertical tabs &#8212; no newline characters.</dd>
+<dt><i>&lt;ranges&gt;</i>&nbsp;:=</dt>
 <dd> <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;codepoint&gt;</i>&nbsp;|<br />
  <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;range&gt;</i>&nbsp;|<br />
- <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;offset&gt; &lt;whitespace&gt; &lt;range&gt;</i></p>
-<dt><i>&lt;codepoint&gt;</i>&nbsp;:=</p>
-<dd> <i>&lt;number&gt;</i> </p>
-<dt><i>&lt;range&gt;</i>&nbsp;:=</p>
-<dd> <i>&lt;number&gt;</i>&nbsp;`_&#8217;<i>&nbsp;&lt;number&gt;</i> </p>
-<dt><i>&lt;offset&gt;</i>&nbsp;:=</p>
-<dd> <i>&lt;number&gt;</i>&nbsp;`:&#8217;</p>
-<dt><i>&lt;number&gt;</i>&nbsp;:=</p>
-<dd> hexadecimal (prefix `0x&#8217;), decimal, or octal (prefix `0&#8242;)</dl>
+ <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;offset&gt; &lt;whitespace&gt; &lt;range&gt;</i></dd>
+<dt><i>&lt;codepoint&gt;</i>&nbsp;:=</dt>
+<dd> <i>&lt;number&gt;</i> </dd>
+<dt><i>&lt;range&gt;</i>&nbsp;:=</dt>
+<dd> <i>&lt;number&gt;</i>&nbsp;`_&#8217;<i>&nbsp;&lt;number&gt;</i> </dd>
+<dt><i>&lt;offset&gt;</i>&nbsp;:=</dt>
+<dd> <i>&lt;number&gt;</i>&nbsp;`:&#8217;</dd>
+<dt><i>&lt;number&gt;</i>&nbsp;:=</dt>
+<dd> hexadecimal (prefix `0x&#8217;), decimal, or octal (prefix `0&#8242;)</dd></dl>
 <p> A line can be continued on the next line with a backslash ending the line. The ranges must not overlap; offsets have to be in the range 0-255. </p>
 <p> Example: </p>
 <p> The line </p>
@@ -465,7 +465,7 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <p> Here is a table of the file type and the corresponding <code>kpathsea</code> variables. and are program specific environment variables introduced in <code>kpathsea</code> version 3.2: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>.ttf and .ttc</td>
@@ -503,13 +503,12 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> Please consult the info files of <code>kpathsea</code> for details on these variables. </p>
 <p> You should set the variable to the directory where your configuration file resides. </p>
 <p> Here is the proper command to find out to which value a <code>kpathsea</code> variable is set (we use as an example). This is especially useful if a variable isn&#8217;t set in or in the environment, thus pointing to the default value which is hard-coded into the <code>kpathsea</code> library. </p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> We select the program name also since it is possible to specify variables which are searched only for a certain program &#8212; in our example it would be </p>
 <p> A similar but not identical method is to say </p>
 <p> [A full list of format types can be obtained by saying ` on the command line prompt.] This is exactly how <code>ttf2tfm</code> (and <code>ttf2pk</code>) searches for files; the disadvantage is that all variables are expanded which can cause very long strings.</p>
@@ -517,7 +516,7 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <p> Here the list of suffixes and their related environment variables to be set in (resp. in for OS/2): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>.ttf and .ttc</td>
@@ -555,7 +554,7 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> If one of the variables isn&#8217;t set, a warning message is emitted. The current directory will always be searched. As usual, one exclamation mark appended to a directory path causes subdirectories one level deep to be searched, two exclamation marks cause all subdirectories to be searched. Example: </p>
 <p> Constructions like ` aren&#8217;t possible.</p>
 <h3>MiKTeX</h3>

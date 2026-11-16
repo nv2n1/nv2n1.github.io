@@ -13,13 +13,13 @@ description: "vpIdentityMatrix – load the identity matrix into the current tra
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpIdentityMatrix(</code><i>vpc</i><code>)</code></p>
+<dt> <code>vpIdentityMatrix(</code><i>vpc</i><code>)</code></dt>
 <dd>
-<dd>vpContext <i>*vpc;</i></dl>
+</dd><dd>vpContext <i>*vpc;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd></dl>
 <h2>Description</h2>
 <p><code>vpIdentityMatrix</code> is used to load a 4-by-4 identity matrix into the current transformation matrix. Use <code>vpCurrentMatrix</code> to set the current transformation matrix.</p>
 <h2>Errors</h2>

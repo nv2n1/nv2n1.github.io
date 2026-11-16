@@ -16,14 +16,14 @@ description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 <p> If <i>filename</i> is omitted or is <code>&#8211;</code>, then <code>llvm-bcanalyzer</code> reads its input from standard input. This is useful for combining the tool into a pipeline. Output is written to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-nodetails</code></p>
-<dd> Causes <code>llvm-bcanalyzer</code> to abbreviate its output by writing out only a module level summary. The details for individual functions are not displayed.</p>
-<dt><code>-dump</code></p>
-<dd> Causes <code>llvm-bcanalyzer</code> to dump the bitcode in a human readable format. This format is significantly different from LLVM assembly and provides details about the encoding of the bitcode file.</p>
-<dt><code>-verify</code></p>
-<dd> Causes <code>llvm-bcanalyzer</code> to verify the module produced by reading the bitcode. This ensures that the statistics generated are based on a consistent module.</p>
-<dt><code>-help</code></p>
-<dd> Print a summary of command line options.</dl>
+<dt><code>-nodetails</code></dt>
+<dd> Causes <code>llvm-bcanalyzer</code> to abbreviate its output by writing out only a module level summary. The details for individual functions are not displayed.</dd>
+<dt><code>-dump</code></dt>
+<dd> Causes <code>llvm-bcanalyzer</code> to dump the bitcode in a human readable format. This format is significantly different from LLVM assembly and provides details about the encoding of the bitcode file.</dd>
+<dt><code>-verify</code></dt>
+<dd> Causes <code>llvm-bcanalyzer</code> to verify the module produced by reading the bitcode. This ensures that the statistics generated are based on a consistent module.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a summary of command line options.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If <code>llvm-bcanalyzer</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value, usually 1.</p>
 <h2>SUMMARY OUTPUT DEFINITIONS</h2>

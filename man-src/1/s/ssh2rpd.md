@@ -15,8 +15,8 @@ description: "ssh2rpd – ROOT utility to help in authentication"
 <p> Do know what to write here.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Gives a short list of options available, and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Gives a short list of options available, and exit</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i><a href="/docs/linux/man/1-rootd/">rootd</a></i>(1) </p>
 <p> See also the <code>ROOT</code> webpages: <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i></p>
@@ -24,7 +24,7 @@ description: "ssh2rpd – ROOT utility to help in authentication"
 <p> The ROOT team (see web page above):</p>
 <dl>
 <dt>
-<dd> <code>Rene Brun</code> and <code>Fons Rademakers</code></dl>
+</dt><dd> <code>Rene Brun</code> and <code>Fons Rademakers</code></dd></dl>
 <h2>COPYRIGHT</h2>
 <p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version. </p>
 <p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </p>

@@ -10,32 +10,13 @@ description: "QuantLib::TreeLattice – Tree-based lattice-method base class."
 <p>QuantLib::TreeLattice &#8211; Tree-based lattice-method base class. </p>
 <h2>Synopsis</h2>
 <pre><code>void initialize (DiscretizedAsset &amp;, Time t) const
-
-
 initialize an asset at the given time.
-
-
 void rollback (DiscretizedAsset &amp;, Time to) const
-
-
-
 void partialRollback (DiscretizedAsset &amp;, Time to) const
-
-
-
 Real presentValue (DiscretizedAsset &amp;) const
-
-
 Computes the present value of an asset using Arrow-Debrew prices.
-
-
-
-
 Protected Member Functions
 void computeStatePrices (Size until) const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Lattice</code>, and <code>CuriouslyRecurringTemplate&lt; Impl &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -44,32 +25,13 @@ Protected Attributes</code></pre>
 <p> void <code>stepback</code> (Size i, const <code>Array</code> &amp;values, <code>Array</code> &amp;newValues) const<br />
  <code>Lattice interface</code> </p>
 <pre><code>void initialize (DiscretizedAsset &amp;, Time t) const
-
-
 initialize an asset at the given time.
-
-
 void rollback (DiscretizedAsset &amp;, Time to) const
-
-
-
 void partialRollback (DiscretizedAsset &amp;, Time to) const
-
-
-
 Real presentValue (DiscretizedAsset &amp;) const
-
-
 Computes the present value of an asset using Arrow-Debrew prices.
-
-
-
-
 Protected Member Functions
 void computeStatePrices (Size until) const
-
-
-
 Protected Attributes</code></pre>
 <p> std::vector&lt; <code>Array</code> &gt; <code>statePrices_</code></p>
 <h2>Detailed Description</h2>
@@ -96,7 +58,7 @@ Protected Attributes</code></pre>
 <p>Roll back an asset until the given time, but do not perform the final adjustment. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dl>
+<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dd></dl>
 <pre> method-&gt;rollAlmostBack(asset,t);</pre>
 <p>&nbsp;<wbr>with the two statements:&nbsp;<wbr> </p>
 <pre> method-&gt;partialRollback(asset,t);

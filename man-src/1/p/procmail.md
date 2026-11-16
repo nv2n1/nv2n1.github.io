@@ -53,28 +53,28 @@ description: "procmail – autonomous mail processor"
 <p> Skip the rest of this EXAMPLES section unless you are a system administrator who is vaguely familiar with sendmail.cf syntax. </p>
 <p> The <code>-m</code> option is typically used when procmail is called from within a rule in the sendmail.cf file. In order to be able to do this it is convenient to create an extra `procmail&#8217; mailer in your sendmail.cf file (in addition to the perhaps already present `local&#8217; mailer that starts up procmail). To create such a `procmail&#8217; mailer I&#8217;d suggest something like: </p>
 <pre>
-<dl><dt><dd>Mprocmail, P=/usr/bin/procmail, F=mSDFMhun, S=11, R=21,
+<dl><dt></dt><dd>Mprocmail, P=/usr/bin/procmail, F=mSDFMhun, S=11, R=21,
         A=procmail -m $h $g $u
-</dl>
+</dd></dl>
 </pre>
 <p> This enables you to use rules like the following (most likely in ruleset 0) to filter mail through the procmail mailer (please note the leading tab to continue the rule, and the tab to separate the comments): </p>
 <pre>
-<dl><dt><dd>R$*&lt;@some.where&gt;$*
+<dl><dt></dt><dd>R$*&lt;@some.where&gt;$*
         $#procmail $@/etc/procmailrcs/some.rc $:$1@some.where.procmail$2
 R$*&lt;@$*.procmail&gt;$*
         $1&lt;@$2&gt;$3       Already filtered, map back
-</dl>
+</dd></dl>
 </pre>
 <p> And /etc/procmailrcs/some.rc could be as simple as: </p>
 <pre>
-<dl><dt><dd>SENDER = &quot;&lt;$1&gt;&quot;                 # fix for empty sender addresses
+<dl><dt></dt><dd>SENDER = &quot;&lt;$1&gt;&quot;                 # fix for empty sender addresses
 SHIFT = 1                       # remove it from $@
 :0                              # sink all junk mail
 * ^Subject:.*junk
 /dev/null
 :0 w                            # pass along all other mail
 ! -oi -f &quot;$SENDER&quot; &quot;$@&quot;
-</dl>
+</dd></dl>
 </pre>
 <p> Do watch out when sending mail from within the /etc/procmailrcs/some.rc file, if you send mail to addresses which match the first rule again, you could be creating an endless mail loop. </p>
 <h2>FILES</h2>
@@ -185,9 +185,9 @@ SHIFT = 1                       # remove it from $@
 <p> If there is an existing <code>Content-Length:</code> field in the header of the mail and the <code>-Y</code> option is not specified, procmail will trim the field to report the correct size. Procmail does not change the fieldwidth. </p>
 <p> If there is no <code>Content-Length:</code> field or the <code>-Y</code> option has been specified and procmail appends to regular mailfolders, any lines in the body of the message that look like postmarks are prepended with `&gt;&#8217; (disarms bogus mailheaders). The regular expression that is used to search for these postmarks is: </p>
 <pre>
-<dl><dt><dd>`
+<dl><dt></dt><dd>`
 From '
-</dl>
+</dd></dl>
 </pre>
 <p> If the destination name used in explicit delivery mode is not in /etc/passwd, procmail will proceed as if explicit delivery mode was not in effect. If not in explicit delivery mode and should the uid procmail is running under, have no corresponding /etc/passwd entry, then HOME will default to /, LOGNAME will default to #uid, SHELL will default to /bin/sh, and ORGMAIL will default to /tmp/dead.letter. </p>
 <p> When in explicit delivery mode, procmail will generate a leading `From &#8216; line if none is present. If one is already present procmail will leave it intact. If procmail is not invoked with one of the following user or group ids : root, daemon, uucp, mail, x400, network, list, slist, lists or news, but still has to generate or accept a new `From &#8216; line, it will generate an additional `&gt;From &#8216; line to help distinguish fake mails. </p>
@@ -201,8 +201,8 @@ From '
 <p> If procmail is called under a name not starting with `procmail&#8217; (e.g., if it is linked to another name and invoked as such), it comes up in explicit delivery mode, and expects the recipients&#8217; names as command line arguments (as if -d had been specified). </p>
 <p> Comsat/biff notifications are done using udp. They are sent off once when procmail generates the regular logfile entry. The notification messages have the following extended format (or as close as you can get when final delivery was not to a file): </p>
 <pre>
-<dl><dt><dd>$LOGNAME [at] offset_of_message_in_mailbox :absolute_path_to_mailbox
-</dl>
+<dl><dt></dt><dd>$LOGNAME [at] offset_of_message_in_mailbox :absolute_path_to_mailbox
+</dd></dl>
 </pre>
 <p> Whenever procmail itself opens a file to deliver to, it consistently uses the following kernel locking strategies : <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2). </p>
 <p> Procmail is NFS-resistant and eight-bit clean. </p>
@@ -210,8 +210,8 @@ From '
 <p> Calling up procmail with the -h or -? options will cause it to display a command-line help and recipe flag quick-reference page. </p>
 <p> There exists an excellent newbie FAQ about mailfilters (and procmail in particular); it is maintained by Nancy McGough &lt;nancym [at] ii.com&gt; and can be obtained by sending a mail to mail-server [at] rtfm.mit.edu with the following in the body: </p>
 <pre>
-<dl><dt><dd>send usenet/news.answers/mail/filtering-faq
-</dl>
+<dl><dt></dt><dd>send usenet/news.answers/mail/filtering-faq
+</dd></dl>
 </pre>
 <p> If procmail is <i>not</i> installed globally as the default mail delivery agent (ask your system administrator), you have to make sure it is invoked when your mail arrives. In this case your $HOME/.forward (beware, it <code>has</code> to be world readable) file should contain the line below. Be sure to include the single and double quotes, and unless you know your site to be running smrsh (the SendMail Restricted SHell), it must be an <i>absolute</i> path. </p>
 <pre>
@@ -261,31 +261,31 @@ from_me
 <h2>MAILINGLIST</h2>
 <p> There exists a mailinglist for questions relating to any program in the procmail package: </p>
 <pre>
-<dl><dt><dd>&lt;procmail-users [at] procmail.org&gt;
-<dl><dt><dd>for submitting questions/answers.
-</dl>
+<dl><dt></dt><dd>&lt;procmail-users [at] procmail.org&gt;
+</dd><dl><dt></dt><dd>for submitting questions/answers.
+</dd></dl>
 </pre>
 <p> &lt;procmail-users-request [at] procmail.org&gt; </p>
 <pre>
-<dl><dt><dd>for subscription requests.
-</dl>
+<dl><dt></dt><dd>for subscription requests.
+</dd></dl>
 </pre>
 </dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to </p>
 <pre>
-<dl><dt><dd>procmail-announce-request [at] procmail.org
-</dl>
+<dl><dt></dt><dd>procmail-announce-request [at] procmail.org
+</dd></dl>
 </pre>
 <p> (this is a readonly list). </p>
 <h2>AUTHORS</h2>
 <p> Stephen R. van den Berg </p>
 <pre>
-<dl><dt><dd>&lt;srb [at] cuci.nl&gt;
-</dl>
+<dl><dt></dt><dd>&lt;srb [at] cuci.nl&gt;
+</dd></dl>
 </pre>
 <p> Philip A. Guenther </p>
 <pre>
-<dl><dt><dd>&lt;guenther [at] sendmail.com&gt;
-</dl>
+<dl><dt></dt><dd>&lt;guenther [at] sendmail.com&gt;
+</dd></dl>
 </pre>
 <h2>Index</h2>

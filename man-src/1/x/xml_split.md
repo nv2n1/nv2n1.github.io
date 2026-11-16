@@ -27,47 +27,38 @@ url: "/docs/linux/man/1-xml_split/"
 
 <dl>
 <dt>-l &lt;level&gt;
-<dd> level to cut at: 1 generates a file for each child of the root, 2 for each grand child 
-
+</dt><dd> level to cut at: 1 generates a file for each child of the root, 2 for each grand child 
  defaults to 1
-<dt>-c &lt;condition&gt;
-<dd> generate a file for each element that passes the condition 
-
+</dd><dt>-c &lt;condition&gt;
+</dt><dd> generate a file for each element that passes the condition 
  xml_split -c &lt;section&gt; will put each <tt>&quot;section&quot;</tt> element in its own file (nested sections are handled too) 
-
  Note that at the moment this option is a lot slower than using <tt>&quot;-l&quot;</tt>
-<dt>-s &lt;size&gt;
-<dd> generates files of (approximately) &lt;size&gt;. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed <font SIZE="-1">XML.</font> The size can be given in bytes, Kb, Mb or Gb.
-<dt>-g &lt;nb&gt;
-<dd> groups &lt;nb&gt; elements in a single file. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed <font SIZE="-1">XML.</font>
-<dt>-b &lt;name&gt;
-<dd> base name for the output, files will be named &lt;base&gt;-&lt;nb&gt;&lt;.ext&gt; 
-
+</dd><dt>-s &lt;size&gt;
+</dt><dd> generates files of (approximately) &lt;size&gt;. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed <font SIZE="-1">XML.</font> The size can be given in bytes, Kb, Mb or Gb.
+</dd><dt>-g &lt;nb&gt;
+</dt><dd> groups &lt;nb&gt; elements in a single file. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed <font SIZE="-1">XML.</font>
+</dd><dt>-b &lt;name&gt;
+</dt><dd> base name for the output, files will be named &lt;base&gt;-&lt;nb&gt;&lt;.ext&gt; 
  &lt;nb&gt; is a sequence number, see below <tt>&quot;--nb_digits&quot;</tt> &lt;ext&gt; is an extension, see below <tt>&quot;--extension&quot;</tt> 
-
  defaults to the original file name (if available) or <tt>&quot;out&quot;</tt> (if input comes from the standard input)
-<dt>-n &lt;nb&gt;
-<dd> number of digits in the sequence number for each file 
-
+</dd><dt>-n &lt;nb&gt;
+</dt><dd> number of digits in the sequence number for each file 
  if more digits than &lt;nb&gt; are needed, then they are used: if <tt>&quot;--nb_digits 2&quot;</tt> is used and 112 files are generated they will be named <tt>&quot;&lt;file&gt;-01.xml&quot;</tt> to <tt>&quot;&lt;file&gt;-112.xml&quot;</tt> 
-
  defaults to 2
-<dt>-e &lt;ext&gt;
-<dd> extension to use for generated files 
-
+</dd><dt>-e &lt;ext&gt;
+</dt><dd> extension to use for generated files 
  defaults to the original file extension or <tt>&quot;.xml&quot;</tt>
-<dt>-i
-<dd> use XInclude elements instead of Processing Instructions to mark where sub files need to be included
-<dt>-v
-<dd> verbose output 
-
+</dd><dt>-i
+</dt><dd> use XInclude elements instead of Processing Instructions to mark where sub files need to be included
+</dd><dt>-v
+</dt><dd> verbose output 
  Note that this option can slow down processing considerably (by an order of magnitude) when generating lots of small documents
-<dt>-V
-<dd> outputs version and exit
-<dt>-h
-<dd> short help
-<dt>-m
-<dd> man (requires pod2text to be in the path)</dl>
+</dd><dt>-V
+</dt><dd> outputs version and exit
+</dd><dt>-h
+</dt><dd> short help
+</dd><dt>-m
+</dt><dd> man (requires pod2text to be in the path)</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -86,11 +77,10 @@ url: "/docs/linux/man/1-xml_split/"
 
 <dl>
 <dt>optimize the code
-<dd> any idea welcome! I have already implemented most of what I thought would improve performances.
-<dt>provide other methods that PIs to keep merge information
-<dd> XInclude is a good candidate (alpha support added in 0.04). 
-
- using entities, which would seem the natural way to do it, doesn't work, as they make it impossible to have both the main document and the sub docs to be well-formed if the sub docs include sub-sub docs (you can't have entity declarations in an entity)</dl>
+</dt><dd> any idea welcome! I have already implemented most of what I thought would improve performances.
+</dd><dt>provide other methods that PIs to keep merge information
+</dt><dd> XInclude is a good candidate (alpha support added in 0.04). 
+ using entities, which would seem the natural way to do it, doesn't work, as they make it impossible to have both the main document and the sub docs to be well-formed if the sub docs include sub-sub docs (you can't have entity declarations in an entity)</dd></dl>
 
 <h2>AUTHOR</h2>
 

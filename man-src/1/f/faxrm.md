@@ -21,8 +21,8 @@ description: "faxrm – remove fax jobs queued by"
 <p> faxrm F000005 F000033 </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd> (interactive mode) Tells <i>faxrm</i> to ask for confirmation before removing the job (UNIMPLEMENTED). </p>
+<dt><code>-i</code></dt>
+<dd> (interactive mode) Tells <i>faxrm</i> to ask for confirmation before removing the job (UNIMPLEMENTED). </dd>
 </dl>
 <h2>BUGS</h2>
 <p> <i>faxrm</i> doesn&#8217;t return diagnostic exit codes yet. </p>

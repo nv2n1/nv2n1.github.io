@@ -14,12 +14,12 @@ description: "gnutls_pubkey_export2 – API function"
 <p> <code>int gnutls_pubkey_export2(gnutls_pubkey_t </code><i>key</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t key</p>
-<dd> Holds the certificate</p>
-<dt>gnutls_x509_crt_fmt_t format</p>
-<dd> the format of output params. One of PEM or DER.</p>
-<dt>gnutls_datum_t * out</p>
-<dd> will contain a certificate PEM or DER encoded</dl>
+<dt>gnutls_pubkey_t key</dt>
+<dd> Holds the certificate</dd>
+<dt>gnutls_x509_crt_fmt_t format</dt>
+<dd> the format of output params. One of PEM or DER.</dd>
+<dt>gnutls_datum_t * out</dt>
+<dd> will contain a certificate PEM or DER encoded</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the public key to DER or PEM format. The contents of the exported data is the SubjectPublicKeyInfo X.509 structure. </p>
 <p> The output buffer will be allocated using <code>gnutls_malloc()</code>. </p>
@@ -37,6 +37,6 @@ description: "gnutls_pubkey_export2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

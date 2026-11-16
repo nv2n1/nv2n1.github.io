@@ -104,14 +104,14 @@ struct ibv_pci_atomic_caps {
 </code></pre>
 <p> Extended device capability flags (device_cap_flags_ex): </p>
 <dl>
-<dt>IBV_DEVICE_PCI_WRITE_END_PADDING</p>
+<dt>IBV_DEVICE_PCI_WRITE_END_PADDING</dt>
 <dd>
 <p> Indicates the device has support for padding PCI writes to a full cache line. </p>
 <p> Padding packets to full cache lines reduces the amount of traffic required at the memory controller at the expense of creating more traffic on the PCI-E port. </p>
 <p> Workloads that have a high CPU memory load and low PCI-E utilization will benefit from this feature, while workloads that have a high PCI-E utilization and small packets will be harmed. </p>
 <p> For instance, with a 128 byte cache line size, the transfer of any packets less than 128 bytes will require a full 128 transfer on PCI, potentially doubling the required PCI-E bandwidth. </p>
 <p> This feature can be enabled on a QP or WQ basis via the IBV_QP_CREATE_PCI_WRITE_END_PADDING or IBV_WQ_FLAGS_PCI_WRITE_END_PADDING flags. </p>
-</dl>
+</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_query_device_ex()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>NOTES</h2>
@@ -120,7 +120,7 @@ struct ibv_pci_atomic_caps {
 <p> <code>ibv_query_device</code>(3), <code>ibv_open_device</code>(3), <code>ibv_query_port</code>(3), <code>ibv_query_pkey</code>(3), <code>ibv_query_gid</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</p>
+<dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -20,31 +20,29 @@ description: "smispy_lsmplugin — LibstorageMgmt SMI-S Plugin"
     <code>smispy+ssl://&lt;username&gt;@&lt;smis_provder_host&gt;:&lt;port&gt;?&lt;uri_parameters&gt;</code>
 </pre>
 <dl>
-<dt><code>username</code></p>
+<dt><code>username</code></dt>
 <dd>
 <p> The <code>username</code> is the SMI-S provider user account. </p>
-<dt><code>smis_provder_host</code></p>
+</dd><dt><code>smis_provder_host</code></dt>
 <dd>
 <p> The <code>smis_provder_host</code> is the SMI-S provider&#8217;s IP address or DNS name. </p>
-<dt><code>port</code></p>
+</dd><dt><code>port</code></dt>
 <dd>
 <p> By default, SMI-S plugin will use port <code>5988</code> for HTTP connection and port <code>5989</code> for HTTPS connection. You can skip this in URI if your SMI-S provider is using default ports. </p>
 <p> For non-default ports, SELinux will likely prevent the SMI-S plugin from making a network connection. </p>
-<dt><code>URI parameters</code></p>
-<dd> These URI parameters are supported by this plugin: </p>
+</dd><dt><code>URI parameters</code></dt>
+<dd> These URI parameters are supported by this plugin: </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>namespace=&lt;name_space&gt;</code></p>
-<dd> This URI parameter is for LSI MegaRAID and NetApp E-Series only. </p>
-<dt><code>system=&lt;system_id&gt;</code></p>
+<dt><code>namespace=&lt;name_space&gt;</code></dt>
+<dd> This URI parameter is for LSI MegaRAID and NetApp E-Series only. </dd>
+<dt><code>system=&lt;system_id&gt;</code></dt>
 <dd> For those SMI-S providers which support multi-systems(Example EMC ECIM), this URI parameter can be used to limit network communication for specified system only. The <code>system_id</code> is the ID of the system:<br />
 &nbsp;<wbr>*&nbsp;<wbr><code>lsm.System.id</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Python API)<br />
 &nbsp;<wbr>*&nbsp;<wbr><code>lsm_system_id_get()</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(C API)<br />
-&nbsp;<wbr>*&nbsp;<wbr><code>lsmcli list &#8211;systems</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(lsmcli command line) </p>
-<dt><code>no_ssl_verify=yes</code></p>
-<dd> This URI parameter is for HTTPS connections only. With this URI parameter, the SMI-S plugin will not validate SMI-S provider&#8217;s server SSL certificate. It&#8217;s often used for self-signed CA environment, but it&#8217;s strongly suggested to remove this URI parameter and install self-signed CA properly. </p>
+&nbsp;<wbr>*&nbsp;<wbr><code>lsmcli list &#8211;systems</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(lsmcli command line) </dd>
+<dt><code>no_ssl_verify=yes</code></dt>
+<dd> This URI parameter is for HTTPS connections only. With this URI parameter, the SMI-S plugin will not validate SMI-S provider&#8217;s server SSL certificate. It&#8217;s often used for self-signed CA environment, but it&#8217;s strongly suggested to remove this URI parameter and install self-signed CA properly. </dd>
 </dl>
 </dl>
 </dl>

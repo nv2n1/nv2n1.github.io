@@ -15,25 +15,10 @@ wl_interface -
 <h3>Public Attributes</h3>
 
 <pre><code>const char * name
-
-
-
 int version
-
-
-
 int method_count
-
-
-
 struct wl_message * methods
-
-
-
 int event_count
-
-
-
 struct wl_message * events
 </code></pre>
 

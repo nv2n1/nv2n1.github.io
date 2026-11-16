@@ -23,8 +23,8 @@ description: "sched_get_priority_max, sched_get_priority_min – get static prio
 <p> On success, <code>sched_get_priority_max</code>() and <code>sched_get_priority_min</code>() return the maximum/minimum priority value for the named scheduling policy. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The argument <i>policy</i> does not identify a defined scheduling policy.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The argument <i>policy</i> does not identify a defined scheduling policy.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>SEE ALSO</h2>

@@ -11,34 +11,34 @@ description: "ndptool — Neighbor Discovery Protocol tool"
 <h2>Synopsis</h2>
 <p><code>ndptool</code> <code>-h</code></p>
 <dl>
-<dt><code>ndptool [OPTIONS] COMMAND</code></p>
+<dt><code>ndptool [OPTIONS] COMMAND</code></dt>
 <dd>
-<dt></dl>
+</dd><dt></dt></dl>
 <h2>Description</h2>
 <p> ndptool is a tool which provides wrapper over Neighbor Discovery Protocol messages. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print help text to console and exit. </p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Increase output verbosity. </p>
-<dt><code>-t type, &#8211;msg-type type</code></p>
-<dd>Specified message type. Following are supported: </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print help text to console and exit. </dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Increase output verbosity. </dd>
+<dt><code>-t type, &#8211;msg-type type</code></dt>
+<dd>Specified message type. Following are supported: </dd>
 <p> <code>rs &#8211;</code> Router Solicitation. </p>
 <p> <code>ra &#8211;</code> Router Advertisement. </p>
 <p> <code>ns &#8211;</code> Neighbor Solicitation. </p>
 <p> <code>na &#8211;</code> Neighbor Advertisement. </p>
-<dt><code>-i ifname, &#8211;ifname ifname</code></p>
-<dd>Specified interface name. </p>
-<dt><code>-U, &#8211;unsolicited</code></p>
-<dd>Send Unsolicited NA. </p>
+<dt><code>-i ifname, &#8211;ifname ifname</code></dt>
+<dd>Specified interface name. </dd>
+<dt><code>-U, &#8211;unsolicited</code></dt>
+<dd>Send Unsolicited NA. </dd>
 </dl>
 <h2>Command</h2>
 <dl>
-<dt><code>monitor</code></p>
-<dd>Monitor incoming NDP messages and print them out. </p>
-<dt><code>send</code></p>
-<dd>Send NDP message of specified type. </p>
+<dt><code>monitor</code></dt>
+<dd>Monitor incoming NDP messages and print them out. </dd>
+<dt><code>send</code></dt>
+<dd>Send NDP message of specified type. </dd>
 </dl>
 <h2>Author</h2>
 <p>Jiri Pirko is the original author and current maintainer of libndp.</p>

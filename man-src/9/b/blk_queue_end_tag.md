@@ -14,10 +14,10 @@ description: "blk_queue_end_tag – end tag operations for a request"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>the request queue for the device</dl>
+</dd><dd>the request queue for the device</dd></dl>
 <p> <i>rq</i></p>
 <dl>
-<dd>the request that has completed</dl>
+<dd>the request that has completed</dd></dl>
 <h2>Description</h2>
 <p>Typically called when <code>end_that_request_first</code> returns <code>0</code>, meaning all transfers have been done for a request. It&#8217;s important to call this function before <code>end_that_request_last</code>, as that will put the request back on the free list thus corrupting the internal tag list.</p>
 <h2>Notes</h2>

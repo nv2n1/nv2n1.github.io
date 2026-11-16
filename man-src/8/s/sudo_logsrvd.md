@@ -20,16 +20,16 @@ description: "sudo_logsrvd – sudo event and I/O log server"
 <p> <code>sudo_logsrvd</code> rereads its configuration file when it receives SIGHUP and writes server state to the debug file (if one is configured) when it receives SIGUSR1. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-f </code><i>file , &#8211;</i><code>-file = </code><i>file</i></p>
-<dd>Read configuration from <i>file</i> instead of the default, /etc/sudo_logsrvd.conf</p>
-<dt><code>-h , -help</code></p>
-<dd>Display a short help message to the standard output and exit.</p>
-<dt><code>-n , -no-fork</code></p>
-<dd>Run <code>sudo_logsrvd</code> in the foreground instead of detaching from the terminal and becoming a daemon.</p>
-<dt><code>-R </code><i>percentage , &#8211;</i><code>-random-drop = </code><i>percentage</i></p>
-<dd>For each message, there is a <i>percentage</i> chance that the server will drop the connection. This is only intended for debugging the ability of a client to restart a connection.</p>
-<dt><code>-V , -version</code></p>
-<dd>Print the <code>sudo_logsrvd</code> version and exit.</dl>
+<dt><code>-f </code><i>file , &#8211;</i><code>-file = </code><i>file</i></dt>
+<dd>Read configuration from <i>file</i> instead of the default, /etc/sudo_logsrvd.conf</dd>
+<dt><code>-h , -help</code></dt>
+<dd>Display a short help message to the standard output and exit.</dd>
+<dt><code>-n , -no-fork</code></dt>
+<dd>Run <code>sudo_logsrvd</code> in the foreground instead of detaching from the terminal and becoming a daemon.</dd>
+<dt><code>-R </code><i>percentage , &#8211;</i><code>-random-drop = </code><i>percentage</i></dt>
+<dd>For each message, there is a <i>percentage</i> chance that the server will drop the connection. This is only intended for debugging the ability of a client to restart a connection.</dd>
+<dt><code>-V , -version</code></dt>
+<dd>Print the <code>sudo_logsrvd</code> version and exit.</dd></dl>
 <h3>Securing server connections</h3>
 <p>The I/O log data sent to <code>sudo_logsrvd</code> may contain sensitive information such as passwords and should be secured using Transport Layer Security (TLS). Doing so requires having a signed certificate on the server and, if <i>tls_checkpeer</i> is enabled in sudo_logsrvd.conf5, a signed certificate on the client as well. </p>
 <p> The certificates can either be signed by a well-known Certificate Authority (CA), or a private CA can be used. Instructions for creating a private CA are included below in the Sx EXAMPLES section.</p>
@@ -38,18 +38,18 @@ description: "sudo_logsrvd – sudo event and I/O log server"
 <p> For more information on configuring sudo.conf5, please refer to its manual.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/sudo.conf </code></p>
-<dd>Sudo front-end configuration</p>
-<dt><code>/etc/sudo_logsrvd.conf </code></p>
-<dd>Sudo log server configuration file</p>
-<dt><code>/var/log/sudo_logsrvd/incoming </code></p>
-<dd>Directory where new journals are stored when the <i>store_first relay</i> setting is enabled.</p>
-<dt><code>/var/log/sudo_logsrvd/outgoing </code></p>
-<dd>Directory where completed journals are stored when the <i>store_first relay</i> setting is enabled.</p>
-<dt><code>/var/log/sudo-io </code></p>
-<dd>Default I/O log file location</p>
-<dt><code>/run/sudo/sudo_logsrvd.pid </code></p>
-<dd>Process ID file for <code>sudo_logsrvd</code></dl>
+<dt><code>/etc/sudo.conf </code></dt>
+<dd>Sudo front-end configuration</dd>
+<dt><code>/etc/sudo_logsrvd.conf </code></dt>
+<dd>Sudo log server configuration file</dd>
+<dt><code>/var/log/sudo_logsrvd/incoming </code></dt>
+<dd>Directory where new journals are stored when the <i>store_first relay</i> setting is enabled.</dd>
+<dt><code>/var/log/sudo_logsrvd/outgoing </code></dt>
+<dd>Directory where completed journals are stored when the <i>store_first relay</i> setting is enabled.</dd>
+<dt><code>/var/log/sudo-io </code></dt>
+<dd>Default I/O log file location</dd>
+<dt><code>/run/sudo/sudo_logsrvd.pid </code></dt>
+<dd>Process ID file for <code>sudo_logsrvd</code></dd></dl>
 <h2>Examples</h2>
 <h3>Creating self-signed certificates</h3>
 <p>Unless you are using certificates signed by a well-known Certificate Authority (or a local enterprise CA), you will need to create your own CA that can sign the certificates used by <code>sudo_logsrvd,</code> <code>sudo_sendlog</code> and the <code>sudoers</code> plugin. The following steps use the openssl(1) command to create keys and certificates.</p>

@@ -23,33 +23,33 @@ url: "/docs/linux/man/1-fdupes/"
 
 <dl>
 <dt><b>-r --recurse</b>
-<dd> for every directory given follow subdirectories encountered within
-<dt><b>-R --recurse:</b>
-<dd> for each directory given after this option follow subdirectories encountered within
-<dt><b>-s --symlinks</b>
-<dd> follow symlinked directories
-<dt><b>-H --hardlinks</b>
-<dd> normally, when two or more files point to the same disk area they are treated as non-duplicates; this option will change this behavior
-<dt><b>-n --noempty</b>
-<dd> exclude zero-length files from consideration
-<dt><b>-f --omitfirst</b>
-<dd> omit the first file in each set of matches
-<dt><b>-1 --sameline</b>
-<dd> list each set of matches on a single line
-<dt><b>-S --size</b>
-<dd> show size of duplicate files
-<dt><b>-q --quiet</b>
-<dd> hide progress indicator
-<dt><b>-d --delete</b>
-<dd> prompt user for files to preserve, deleting all others (see <b>CAVEATS</b> below)
-<dt><b>-N --noprompt</b>
-<dd> when used together with --delete, preserve the first file in each set of duplicates and delete the others without prompting the user
-<dt><b>-p --permissions</b>
-<dd> don't consider files with different owner/group or permission bits as duplicates
-<dt><b>-v --version</b>
-<dd> display fdupes version
-<dt><b>-h --help</b>
-<dd> displays help</dl>
+</dt><dd> for every directory given follow subdirectories encountered within
+</dd><dt><b>-R --recurse:</b>
+</dt><dd> for each directory given after this option follow subdirectories encountered within
+</dd><dt><b>-s --symlinks</b>
+</dt><dd> follow symlinked directories
+</dd><dt><b>-H --hardlinks</b>
+</dt><dd> normally, when two or more files point to the same disk area they are treated as non-duplicates; this option will change this behavior
+</dd><dt><b>-n --noempty</b>
+</dt><dd> exclude zero-length files from consideration
+</dd><dt><b>-f --omitfirst</b>
+</dt><dd> omit the first file in each set of matches
+</dd><dt><b>-1 --sameline</b>
+</dt><dd> list each set of matches on a single line
+</dd><dt><b>-S --size</b>
+</dt><dd> show size of duplicate files
+</dd><dt><b>-q --quiet</b>
+</dt><dd> hide progress indicator
+</dd><dt><b>-d --delete</b>
+</dt><dd> prompt user for files to preserve, deleting all others (see <b>CAVEATS</b> below)
+</dd><dt><b>-N --noprompt</b>
+</dt><dd> when used together with --delete, preserve the first file in each set of duplicates and delete the others without prompting the user
+</dd><dt><b>-p --permissions</b>
+</dt><dd> don't consider files with different owner/group or permission bits as duplicates
+</dd><dt><b>-v --version</b>
+</dt><dd> display fdupes version
+</dd><dt><b>-h --help</b>
+</dt><dd> displays help</dd></dl>
 
 <h2>SEE ALSO</h2>
 

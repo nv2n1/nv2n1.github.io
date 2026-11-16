@@ -17,13 +17,9 @@ long double remainder ( long double x, long double y ); <code>(3)</code> <i>(sin
 long double remainderl( long double x, long double y );<br />
 Promoted remainder ( Arithmetic1 x, Arithmetic2 y ); <code>(4)</code> <i>(since C++11)</i> </p>
 <pre><code>1-3) Computes the IEEE remainder of the floating point division operation x/y.
-
 4) A set of overloads or a function template for all combinations of arguments of arithmetic_type not covered by (1-3). If any argument has integral_type, it is cast to double. If any other argument is long double, then the return type is long double, otherwise it is double.
-
 The IEEE floating-point remainder of the division operation x/y calculated by this function is exactly the value x - n*y, where the value n is the integral value nearest the exact value x/y. When |n-x/y| = ½, the value n is chosen to be even.
-
 In contrast to std::fmod(), the returned value is not guaranteed to have the same sign as x.
-
 If the returned value is 0, it will have the same sign as x.
 </code></pre>
 <h2>Parameters</h2>
@@ -48,14 +44,10 @@ std::fmod, but not std::remainder is useful for doing silent wrapping of floatin
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;remainder(+5.1, +3.0) = &quot; &lt;&lt; std::remainder(5.1, 3) &lt;&lt; '
 '

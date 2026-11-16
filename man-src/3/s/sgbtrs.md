@@ -39,26 +39,20 @@ url: "/docs/linux/man/3-sgbtrs/"
  <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
  SGBTRS solves a system of linear equations
     A * X = B  or  A**T * X = B
  with a general band matrix A using the LU factorization computed
  by SGBTRF.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>TRANS</i> 
-
+</dt><dd> <i>TRANS</i> 
  <pre>
           TRANS is CHARACTER*1
           Specifies the form of the system of equations.
@@ -66,43 +60,28 @@ url: "/docs/linux/man/3-sgbtrs/"
           = 'T':  A**T* X = B  (Transpose)
           = 'C':  A**T* X = B  (Conjugate transpose = Transpose)
 </pre> 
-
- 
  <i>N</i> 
-
  <pre>
           N is INTEGER
           The order of the matrix A.  N &gt;= 0.
 </pre> 
-
- 
  <i>KL</i> 
-
  <pre>
           KL is INTEGER
           The number of subdiagonals within the band of A.  KL &gt;= 0.
 </pre> 
-
- 
  <i>KU</i> 
-
  <pre>
           KU is INTEGER
           The number of superdiagonals within the band of A.  KU &gt;= 0.
 </pre> 
-
- 
  <i>NRHS</i> 
-
  <pre>
           NRHS is INTEGER
           The number of right hand sides, i.e., the number of columns
           of the matrix B.  NRHS &gt;= 0.
 </pre> 
-
- 
  <i>AB</i> 
-
  <pre>
           AB is REAL array, dimension (LDAB,N)
           Details of the LU factorization of the band matrix A, as
@@ -111,18 +90,12 @@ url: "/docs/linux/man/3-sgbtrs/"
           the multipliers used during the factorization are stored in
           rows KL+KU+2 to 2*KL+KU+1.
 </pre> 
-
- 
  <i>LDAB</i> 
-
  <pre>
           LDAB is INTEGER
           The leading dimension of the array AB.  LDAB &gt;= 2*KL+KU+1.
 </pre> 
-
- 
  <i>IPIV</i> 
-
  <pre><code>
 IPIV is INTEGER array, dimension(N)
                            The pivot indices; for
@@ -131,53 +104,39 @@ IPIV is INTEGER array, dimension(N)
                  IPIV(i)
                      .
 </code></pre> 
-
- 
  <i>B</i> 
-
  <pre>
           B is REAL array, dimension (LDB,NRHS)
           On entry, the right hand side matrix B.
           On exit, the solution matrix X.
 </pre> 
-
- 
  <i>LDB</i> 
-
  <pre>
           LDB is INTEGER
           The leading dimension of the array B.  LDB &gt;= max(1,N).
 </pre> 
-
- 
  <i>INFO</i> 
-
  <pre>
           INFO is INTEGER
           = 0:  successful exit
           &lt; 0: if INFO = -i, the i-th argument had an illegal value
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  

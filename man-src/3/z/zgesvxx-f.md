@@ -11,8 +11,6 @@ description: "zgesvxx.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zgesvxx (FACT, TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, RWORK, INFO)
-
-
 ZGESVXX computes the solution to system of linear equations A * X = B for GE matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgesvxx (characterFACT, characterTRANS, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, characterEQUED, double precision, dimension( * )R, double precision, dimension( * )C, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx , * )X, integerLDX, double precisionRCOND, double precisionRPVGRW, double precision, dimension( * )BERR, integerN_ERR_BNDS, double precision, dimension( nrhs, * )ERR_BNDS_NORM, double precision, dimension( nrhs, * )ERR_BNDS_COMP, integerNPARAMS, double precision, dimension( * )PARAMS, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>
@@ -36,7 +34,7 @@ ZGESVXX computes the solution to system of linear equations A * X = B for GE mat
  errors or warnings, but we cannot make that claim for general
  user-provided factorizations and equilibration factors if they
  differ from what ZGESVXX would itself produce.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dd>
@@ -76,10 +74,10 @@ ZGESVXX computes the solution to system of linear equations A * X = B for GE mat
  defaults are acceptable. If the defaults are acceptable, users
  can pass NPARAMS = 0 which prevents the source code from accessing
  the PARAMS argument.</pre>
-</dl>
+</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>FACT</i> </p>
+<dd><i>FACT</i> </dd>
 <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of the matrix A is
  supplied on entry, and if not, whether the matrix A should be
@@ -377,13 +375,13 @@ ZGESVXX computes the solution to system of linear equations A * X = B for GE mat
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 537 of file zgesvxx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

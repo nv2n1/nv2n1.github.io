@@ -61,6 +61,6 @@ description: "QuantLib::TridiagonalOperator – Base implementation for tridiago
 <p>Base implementation for tridiagonal operator. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>to use real time-dependant algebra, you must overload the corresponding operators in the inheriting time-dependent class.</dl>
+<dd>to use real time-dependant algebra, you must overload the corresponding operators in the inheriting time-dependent class.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

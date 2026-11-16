@@ -14,8 +14,8 @@ description: "SDL_ExposeEvent – Quit requested event"
 } SDL_ExposeEvent;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>type</code></p>
-<dd><code>SDL_VIDEOEXPOSE</code></dl>
+<dt><code>type</code></dt>
+<dd><code>SDL_VIDEOEXPOSE</code></dd></dl>
 <h2>Description</h2>
 <p><code>SDL_ExposeEvent</code> is a member of the <i></i><code>SDL_Event</code> union and is used whan an event of type <code>SDL_VIDEOEXPOSE</code> is reported. </p>
 <p> A VIDEOEXPOSE event is triggered when the screen has been modified outside of the application, usually by the window manager and needs to be redrawn.</p>

@@ -20,17 +20,17 @@ description: "targetd_lsmplugin — libStorageMgmt targetd plugin"
     <code>targetd+ssl://&lt;username&gt;@&lt;targetd_server&gt;:&lt;port number&gt;</code>
 </pre>
 <dl>
-<dt><code>username</code></p>
+<dt><code>username</code></dt>
 <dd>
 <p> The <code>username</code> is the user account configured in targetd configuration file. </p>
-<dt><code>targetd_server</code></p>
+</dd><dt><code>targetd_server</code></dt>
 <dd>
 <p> The <code>targetd_server</code> is the IP address or DNS name of server running targetd daemon. </p>
-<dt><code>port number</code></p>
+</dd><dt><code>port number</code></dt>
 <dd>
 <p> The <code>port number</code> is the listening port of the targetd daemon. The default port of 18700 is used if none is supplied on the URI. </p>
-<dt><code>URI parameters</code></p>
-<dd> No additional URI parameters are supported by this plugin. </p>
+</dd><dt><code>URI parameters</code></dt>
+<dd> No additional URI parameters are supported by this plugin. </dd>
 </dl>
 <h2>SUPPORTED SOFTWARE</h2>
 <p> Linux targetd 0.7.1 or later version. Detailed support status can be queried via: </p>

@@ -10,13 +10,9 @@ description: "htonl, htons, ntohl, ntohs – convert values between host and net
 <p>htonl, htons, ntohl, ntohs &#8211; convert values between host and network byte order</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;arpa/inet.h&gt;
-
 uint32_t htonl(uint32_t hostlong);
-
 uint16_t htons(uint16_t hostshort);
-
 uint32_t ntohl(uint32_t netlong);
-
 uint16_t ntohs(uint16_t netshort);</code></pre>
 <h2>Description</h2>
 <p>The <code>htonl</code>() function converts the unsigned integer <i>hostlong</i> from host byte order to network byte order. </p>

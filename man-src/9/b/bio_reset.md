@@ -14,7 +14,7 @@ description: "bio_reset – reinitialize a bio"
 <p><i>bio</i></p>
 <dl>
 <dd>
-<dd>bio to reset</dl>
+</dd><dd>bio to reset</dd></dl>
 <h2>Description</h2>
 <p>After calling <code>bio_reset</code>, <i>bio</i> will be in the same state as a freshly allocated bio returned bio <code>bio_alloc_bioset</code> &#8211; the only fields that are preserved are the ones that are initialized by <code>bio_alloc_bioset</code>. See comment in struct bio.</p>
 <h2>Copyright</h2>

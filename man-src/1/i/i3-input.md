@@ -29,9 +29,9 @@ url: "/docs/linux/man/1-i3-input/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 i3-input -p 'mark ' -l 1 -P 'Mark: '
-</pre></dl>
+</pre></dd></dl>
 
 <h2>SEE ALSO</h2>
 

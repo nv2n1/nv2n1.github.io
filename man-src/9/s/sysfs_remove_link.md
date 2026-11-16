@@ -15,11 +15,11 @@ sysfs_remove_link - remove symlink in object's directory.
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object we're acting for.</dl>
+<dl><dd></dd><dd>object we're acting for.</dd></dl>
  
 
  <i>name</i>
-<dl><dd>name of the symlink to remove.</dl>
+<dl><dd>name of the symlink to remove.</dd></dl>
 
 <h2>Copyright</h2>
 

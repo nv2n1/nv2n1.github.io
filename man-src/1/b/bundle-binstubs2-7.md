@@ -16,13 +16,13 @@ description: "bundle-binstubs – Install the binstubs of the listed gems"
 <p> This command generates binstubs for executables in <code>GEM_NAME</code>. Binstubs are put into <code>bin</code>, or the <code>&#8211;path</code> directory if one has been set. Calling binstubs with [GEM [GEM]] will create binstubs for all given gems.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;force</code></p>
-<dd>Overwrite existing binstubs if they exist.</p>
-<dt><code>&#8211;path</code></p>
-<dd>The location to install the specified binstubs to. This defaults to <code>bin</code>.</p>
-<dt><code>&#8211;standalone</code></p>
-<dd>Makes binstubs that can work without depending on Rubygems or Bundler at runtime.</p>
-<dt><code>&#8211;shebang</code></p>
-<dd>Specify a different shebang executable name than the default (default &#8216;ruby&#8217;)</dl>
+<dt><code>&#8211;force</code></dt>
+<dd>Overwrite existing binstubs if they exist.</dd>
+<dt><code>&#8211;path</code></dt>
+<dd>The location to install the specified binstubs to. This defaults to <code>bin</code>.</dd>
+<dt><code>&#8211;standalone</code></dt>
+<dd>Makes binstubs that can work without depending on Rubygems or Bundler at runtime.</dd>
+<dt><code>&#8211;shebang</code></dt>
+<dd>Specify a different shebang executable name than the default (default &#8216;ruby&#8217;)</dd></dl>
 <h2>Bundle Install &#8211;Binstubs</h2>
 <p>To create binstubs for all the gems in the bundle you can use the <code>&#8211;binstubs</code> flag in bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i>.</p>

@@ -15,7 +15,7 @@ description: "intel_reg_read – Reads an Intel GPU register value"
 <p> <code>intel_reg_read</code> is a tool to read Intel GPU registers, for use in debugging. The <i>register</i> argument is given as hexadecimal.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>intel_reg_read 0x61230</p>
-<dd> Shows the register value for the first internal panel fitter. </p>
+<dt>intel_reg_read 0x61230</dt>
+<dd> Shows the register value for the first internal panel fitter. </dd>
 </dl>
 <h2>Index</h2>

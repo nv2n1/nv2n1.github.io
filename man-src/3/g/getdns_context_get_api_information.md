@@ -23,31 +23,31 @@ url: "/docs/linux/man/3-getdns_context_get_api_information/"
  <b>getdns_context_create</b> (getdns_context ** context,
 <dl>
 <dt>
-<dd> 
- int set_from_os)</dl>
+</dt><dd> 
+ int set_from_os)</dd></dl>
  
 
  getdns_return_t 
  <b>getdns_context_create_with_memory_functions</b> (getdns_context ** context,
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
  int set_from_os, 
  void *(*malloc) (size_t), 
  void *(*realloc) (void *, size_t), 
- void (*free) (void *))</dl>
+ void (*free) (void *))</dd></dl>
  
 
  getdns_return_t 
  <b>getdns_context_create_with_extended_memory_functions</b> (getdns_context **context,
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
  int set_from_os, 
  void *userarg, 
  void *(*malloc) (void *userarg, size_t), 
  void *(*realloc) (void *userarg, void *, size_t), 
- void (*free) (void *userarg, void *))</dl>
+ void (*free) (void *userarg, void *))</dd></dl>
  
 
  void 
@@ -69,8 +69,8 @@ url: "/docs/linux/man/3-getdns_context_get_api_information/"
  To create a new DNS context, use the function:
 <dl>
 <dt>
-<dd> 
- getdns_return_t <b>getdns_context_create</b> (getdns_context_t *context, bool set_from_os)</dl>
+</dt><dd> 
+ getdns_return_t <b>getdns_context_create</b> (getdns_context_t *context, bool set_from_os)</dd></dl>
  
 
  
@@ -82,8 +82,8 @@ url: "/docs/linux/man/3-getdns_context_get_api_information/"
  To clean up the context, including cleaning up all outstanding transactions that were called using this context, use the function:
 <dl>
 <dt>
-<dd> 
- void <b>getdns_context_destroy</b> (getdns_context_t context)</dl>
+</dt><dd> 
+ void <b>getdns_context_destroy</b> (getdns_context_t context)</dd></dl>
  
 
  
@@ -92,26 +92,18 @@ url: "/docs/linux/man/3-getdns_context_get_api_information/"
 
 <dl>
 <dt> <i>context</i>
-<dd>Used to return the pointer to an opaque structure. The caller passes the address of a pointer (decl: getdns_context *context; passed as &amp;context) which will be populated as a result of returning from the function. The result is a newly allocated and initialized context (if there are no errors). In the getdns_destroy_context function this is the context whose associated memory will be released. 
-
-<dt> <i>set_from_os</i>
-<dd>If set_from_os is 0 then the caller must provide forwarding name servers if running in stub mode. If set_from_os is 1 then the system files are used to initialize the context. /etc/resolv.conf is used to populate forwarders when running as a stub resolver (only &quot;nameserver&quot; lines are recognized). If set_from_os is 1 /etc/hosts entries are preferred before resorting to a DNS query. Errors in the system files will not prevent the context form being constructed. 
-
-<dt> <i>userarg</i>
-<dd>In the extended use case this argument is passed unchanged to each of the memory management functions each time they are called. 
-
-<dt> <i>malloc</i>
-<dd>The function that will be used for creating response dicts (and the members within the response dicts). By default the system malloc is used. 
-
-<dt> <i>realloc</i>
-<dd>The function that will be used for creating response dicts (and the members within the response dicts). By default the system realloc is used. 
-
-<dt> <i>free</i>
-<dd>The function that will be used for releasing storage for response dicts (and the members within the response dicts). By default the system free is used. 
-
- 
-
-</dl>
+</dt><dd>Used to return the pointer to an opaque structure. The caller passes the address of a pointer (decl: getdns_context *context; passed as &amp;context) which will be populated as a result of returning from the function. The result is a newly allocated and initialized context (if there are no errors). In the getdns_destroy_context function this is the context whose associated memory will be released. 
+</dd><dt> <i>set_from_os</i>
+</dt><dd>If set_from_os is 0 then the caller must provide forwarding name servers if running in stub mode. If set_from_os is 1 then the system files are used to initialize the context. /etc/resolv.conf is used to populate forwarders when running as a stub resolver (only &quot;nameserver&quot; lines are recognized). If set_from_os is 1 /etc/hosts entries are preferred before resorting to a DNS query. Errors in the system files will not prevent the context form being constructed. 
+</dd><dt> <i>userarg</i>
+</dt><dd>In the extended use case this argument is passed unchanged to each of the memory management functions each time they are called. 
+</dd><dt> <i>malloc</i>
+</dt><dd>The function that will be used for creating response dicts (and the members within the response dicts). By default the system malloc is used. 
+</dd><dt> <i>realloc</i>
+</dt><dd>The function that will be used for creating response dicts (and the members within the response dicts). By default the system realloc is used. 
+</dd><dt> <i>free</i>
+</dt><dd>The function that will be used for releasing storage for response dicts (and the members within the response dicts). By default the system free is used. 
+</dd></dl>
 
 <h2>DESCRIPTION (LONG)</h2>
 
@@ -134,7 +126,7 @@ url: "/docs/linux/man/3-getdns_context_get_api_information/"
  When the context is used in the API for the first time and set_from_os is 1, the API starts replacing some of the values with values from the OS, such as those that would be found in <a HREF="/docs/linux/man/3-res_query/">res_query</a>(3), /etc/resolv.conf, and so on, then proceeds with the new function. Some advanced users will not want the API to change the values to the OS's defaults; if set_from_os is 0, the API will not do any updates to the initial values based on changes in the OS. For example, this might be useful if the API is acting as a stub resolver that is using a specific upstream recursive resolver chosen by the application, not the one that might come back from DHCP. 
 
 <dl>
-<dt></dl>
+<dt></dt></dl>
 
 <h2>RETURN VALUES</h2>
 
@@ -154,20 +146,16 @@ url: "/docs/linux/man/3-getdns_context_get_api_information/"
 
  The getdns_dict returned by getdns_context_get_api_information must be destroyed by the called and includes the following name/value pairs: 
 
-<dl>
+</dd><dl>
 <dt>version_string
-<dd> a bindata containing a printable string of the version of the DNS API implemented by this library 
-
-<dt>implementation_string
-<dd> a bindata containing a printable string set by the implementation 
-
-<dt>resolution_type
-<dd> an int equal to GETDNS_RESOLUTION_RECURSING or GETDNS_RESOLUTION_STUB 
-
-<dt>all_context
-<dd> a getdns_dict with names for all the types of context, feed it to getdns_pretty_print_dict (3) for something easily readable 
-
-</dl>
+</dt><dd> a bindata containing a printable string of the version of the DNS API implemented by this library 
+</dd><dt>implementation_string
+</dt><dd> a bindata containing a printable string set by the implementation 
+</dd><dt>resolution_type
+</dt><dd> an int equal to GETDNS_RESOLUTION_RECURSING or GETDNS_RESOLUTION_STUB 
+</dd><dt>all_context
+</dt><dd> a getdns_dict with names for all the types of context, feed it to getdns_pretty_print_dict (3) for something easily readable 
+</dd></dl>
 
 <h2>EXAMPLES</h2>
 

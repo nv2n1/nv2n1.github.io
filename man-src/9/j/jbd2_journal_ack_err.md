@@ -14,14 +14,14 @@ description: "jbd2_journal_ack_err – Ack journal err."
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>journal to act on.</dl>
+</dd><dd>journal to act on.</dd></dl>
 <h2>Description</h2>
 <p>An error must be cleared or acked to take a FS out of readonly mode.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

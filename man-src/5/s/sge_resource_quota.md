@@ -29,27 +29,27 @@ description: "xxqs_name_sxx_resource_quota – xxQS_NAMExx resource quota file f
 <p> A resource quota rule consists of an optional name, the filters for a specific job request, and the resource quota limit. </p>
 <p> The tags for expressing a resource quota rule are:</p>
 <dl>
-<dt>name</p>
-<dd>The name of the rule (optional). The rule name must be unique within a resource quota set.</p>
-<dt>users</p>
-<dd>Contains a comma-separated list of user names or ACLs (see This parameter filters jobs by user or ACL in the list. Any user not in the list will not be considered for the resource quota rule. The default value is &#8216;*&#8217;, which means all users. An ACL is differentiated from a user name by prefixing the ACL name with &#8216;@&#8217;. To exclude a user or ACL from the rule, the name can be prefixed with &#8216;!&#8217;. The defined user or ACL names need not exist in the xxQS_NAMExx configuration.</p>
-<dt>projects</p>
-<dd>Contains a comma-separated list of projects (see This parameter filters jobs requesting a project in the list. Any project not in the list will not be considered for the resource quota rule. If no project filter is specified, all projects, and jobs with no requested project, match the rule. The value &#8216;*&#8217; means all jobs with requested projects. To exclude a project from the rule, the name can be prefixed with &#8216;!&#8217;. The value &#8216;!*&#8217; means only jobs with no project requested.</p>
-<dt>pes</p>
-<dd>Contains a comma-separated list of PEs (see This parameter filters jobs requesting a PE in the list. Any PE not in the list will not be considered for the resource quota rule. If no PE filter is specified, all PEs, and jobs with no requested PE, match the rule. The value &#8216;*&#8217; means all jobs requesting a PE. To exclude a PE from the rule, the name can be prefixed with &#8216;!&#8217;. The value &#8216;!*&#8217; means only jobs with no PE requested.</p>
-<dt>queues</p>
-<dd>Contains a comma-separated list of cluster queues (see This parameter filters jobs that may be scheduled in a queue in the list. Any queue not in the list will not be considered for the resource quota rule. The default value is &#8216;*&#8217;, which means all queues. To exclude a queue from the rule, the name can be prefixed with &#8216;!&#8217;.</p>
-<dt>hosts</p>
-<dd>Contains a comma-separated list of hosts or hostgroups (see and This parameter filters jobs that may be scheduled to a host in the list or a host contained in a hostgroup in the list. Any host not in the list will not be considered for the resource quota rule. The default value is &#8216;*&#8217;, which means all hosts. To exclude a host or hostgroup from the rule, the name can be prefixed with &#8216;!&#8217;.</p>
-<dt>to</p>
-<dd>This mandatory field defines the quota for resource attributes for this rule. The quota is expressed by one or more comma-separated limit definitions referring to fixed or consumable resources (not load values). Two kinds of limit definition may be used:</p>
+<dt>name</dt>
+<dd>The name of the rule (optional). The rule name must be unique within a resource quota set.</dd>
+<dt>users</dt>
+<dd>Contains a comma-separated list of user names or ACLs (see This parameter filters jobs by user or ACL in the list. Any user not in the list will not be considered for the resource quota rule. The default value is &#8216;*&#8217;, which means all users. An ACL is differentiated from a user name by prefixing the ACL name with &#8216;@&#8217;. To exclude a user or ACL from the rule, the name can be prefixed with &#8216;!&#8217;. The defined user or ACL names need not exist in the xxQS_NAMExx configuration.</dd>
+<dt>projects</dt>
+<dd>Contains a comma-separated list of projects (see This parameter filters jobs requesting a project in the list. Any project not in the list will not be considered for the resource quota rule. If no project filter is specified, all projects, and jobs with no requested project, match the rule. The value &#8216;*&#8217; means all jobs with requested projects. To exclude a project from the rule, the name can be prefixed with &#8216;!&#8217;. The value &#8216;!*&#8217; means only jobs with no project requested.</dd>
+<dt>pes</dt>
+<dd>Contains a comma-separated list of PEs (see This parameter filters jobs requesting a PE in the list. Any PE not in the list will not be considered for the resource quota rule. If no PE filter is specified, all PEs, and jobs with no requested PE, match the rule. The value &#8216;*&#8217; means all jobs requesting a PE. To exclude a PE from the rule, the name can be prefixed with &#8216;!&#8217;. The value &#8216;!*&#8217; means only jobs with no PE requested.</dd>
+<dt>queues</dt>
+<dd>Contains a comma-separated list of cluster queues (see This parameter filters jobs that may be scheduled in a queue in the list. Any queue not in the list will not be considered for the resource quota rule. The default value is &#8216;*&#8217;, which means all queues. To exclude a queue from the rule, the name can be prefixed with &#8216;!&#8217;.</dd>
+<dt>hosts</dt>
+<dd>Contains a comma-separated list of hosts or hostgroups (see and This parameter filters jobs that may be scheduled to a host in the list or a host contained in a hostgroup in the list. Any host not in the list will not be considered for the resource quota rule. The default value is &#8216;*&#8217;, which means all hosts. To exclude a host or hostgroup from the rule, the name can be prefixed with &#8216;!&#8217;.</dd>
+<dt>to</dt>
+<dd>This mandatory field defines the quota for resource attributes for this rule. The quota is expressed by one or more comma-separated limit definitions referring to fixed or consumable resources (not load values). Two kinds of limit definition may be used:</dd>
 <dl>
 <dd>
-<dl>
-<dt>static limits</p>
-<dd>Static limits set static values as quotas. Each limit consists of a complex attribute followed by an &quot;=&quot; sign and a value specification consistent with the complex attribute&#8217;s type (see</p>
-<dt>dynamic limits</p>
-<dd>A dynamic limit is a simple algebraic expression used to derive the limit value. The formula can reference complex attributes, whose value is used for the calculation of the resulting limit. The formula expression syntax is that of a sum of weighted complex values, that is: </p>
+</dd><dl>
+<dt>static limits</dt>
+<dd>Static limits set static values as quotas. Each limit consists of a complex attribute followed by an &quot;=&quot; sign and a value specification consistent with the complex attribute&#8217;s type (see</dd>
+<dt>dynamic limits</dt>
+<dd>A dynamic limit is a simple algebraic expression used to derive the limit value. The formula can reference complex attributes, whose value is used for the calculation of the resulting limit. The formula expression syntax is that of a sum of weighted complex values, that is: </dd>
 <pre>{<i>w1</i>|<code>$</code><i>complex1</i>[<code>*</code><i>w1</i>]}[{<code>+</code>|<code>-</code>}{<i>w2</i>|<code>$</code><i>complex2</i>[<code>*</code><i>w2</i>]}[{<code>+</code>|<code>-</code>}...]]</pre>
 <p>The weighting factors (<i>w1</i>, &#8230;) are positive integers or floating point numbers in double precision. The complex values (<i>complex1</i>, &#8230;) must be of numerical type (INT, DOUBLE, MEMORY, or TIME), as specified by the complex&#8217;s type in the complex list (see and defined either on global, queue, or host level to resolve the value.<br />
  <code>Note:</code> Dynamic limits can only be configured for a host-specific rule, and must be defined for an expanded host list (or individual host). Also, if a load value corresponding to a complex used is not available, a large value is used for it to suggest an overloaded condition. Dynamic limits may slow the scheduler significantly.</dl>
@@ -57,32 +57,32 @@ description: "xxqs_name_sxx_resource_quota – xxQS_NAMExx resource quota file f
 </dl>
 <p> A complex form of limit may be used: &quot;expanded&quot; filters with the consumer list enclosed in braces (&#8216;{&#8216; &#8216;}&#8217;). This may be thought of as applying for each member of the list individually, as opposed to for all elements of a non-braced list in total. Alternatively, it is equivalent to an expansion into multiple instances of the rule, per the syntax which inspired it in shells such as <i><a href="/docs/linux/man/1-bash/">bash</a></i>(1). Thus</p>
 <dl>
-<dd>limit users {a, b} &#8230; to &#8230;</dl>
+<dd>limit users {a, b} &#8230; to &#8230;</dd></dl>
 <p> is equivalent to</p>
 <dl>
 <dd>
 <pre>limit users a ... to ...
 limit users b ... to ...</pre>
-</dl>
+</dd></dl>
 <p> where the text represented by the ellipses in each position is carried over to the expansion, and could be expanded itself. &#8216;{*}&#8217; represents a limit for each consumer of that type, as opposed to &#8216;*&#8217;, which limits all the consumers together. E.g.</p>
 <dl>
-<dd>limit users * to slots=100</dl>
+<dd>limit users * to slots=100</dd></dl>
 <p> limits the total number of slots in use to 100, whereas</p>
 <dl>
-<dd>limit users {*} to slots=100</dl>
+<dd>limit users {*} to slots=100</dd></dl>
 <p> limits each user to 100 slots. ACLs and hostgroups in expanded lists are treated as if they are expanded into a list of their constituents before expanding the whole list. A &#8216;!&#8217; prefix is distributed through the expansion of ACLs or hostgroups, i.e.</p>
 <dl>
-<dd>limit users {!@acl,&#8230;} &#8230;</dl>
+<dd>limit users {!@acl,&#8230;} &#8230;</dd></dl>
 <p> where @acl has members user1, user2, &#8230;, expands to</p>
 <dl>
-<dd>limit users {!user1,!user2,&#8230;} &#8230;</dl>
+<dd>limit users {!user1,!user2,&#8230;} &#8230;</dd></dl>
 <p> and thus</p>
 <dl>
 <dd>
 <pre> limit users !user1 ...
  limit users !user2 ...
  ...</pre>
-</dl>
+</dd></dl>
 <h3>Formal Syntax</h3>
 <table>
 <tr VALIGN=top>
@@ -248,7 +248,7 @@ limit users b ... to ...</pre>
 <h2>Notes</h2>
 <p>Please note that resource quotas are not enforced as job resource limits. Limiting, for example, h_vmem in a resource quota set does not result in a memory limit being set for job execution; it is necessary to specify such a limit on the job request, or as the complex&#8217;s default value. Thus</p>
 <dl>
-<dd>limit users {*} to h_vmem=2G</dl>
+<dd>limit users {*} to h_vmem=2G</dd></dl>
 <p> will not restrict the memory a job can actually allocate to 2G, only what it can request, with the request actually enforcing the allocation. </p>
 <p> The most restrictive rule in a set should be first in the <code>limit</code> List so that the scheduler can dispatch jobs efficiently by rejecting queues to consider as early as possible since subsequent rules in the list are not considered after one matches. This can be important in large clusters, in which RQS can significantly slow down scheduling.</p>
 <h2>Examples</h2>

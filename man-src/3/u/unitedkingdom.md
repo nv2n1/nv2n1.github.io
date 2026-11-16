@@ -20,85 +20,85 @@ description: "QuantLib::UnitedKingdom – United Kingdom calendars."
 <p>United Kingdom calendars. </p>
 <p> Public holidays (data from <a rel="nofollow" href="http://www.dti.gov.uk/er/bankhol.htm">http://www.dti.gov.uk/er/bankhol.htm</a>): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Easter Monday</p>
-<dt>*</p>
-<dd>Early May Bank Holiday, first Monday of May</p>
-<dt>*</p>
-<dd>Spring Bank Holiday, last Monday of May</p>
-<dt>*</p>
-<dd>Summer Bank Holiday, last Monday of August</p>
-<dt>*</p>
-<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</p>
-<dt>*</p>
-<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>Early May Bank Holiday, first Monday of May</dd>
+<dt>*</dt>
+<dd>Spring Bank Holiday, last Monday of May</dd>
+<dt>*</dt>
+<dd>Summer Bank Holiday, last Monday of August</dd>
+<dt>*</dt>
+<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</dd>
+<dt>*</dt>
+<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dd></dl>
 <p> Holidays for the stock exchange: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Easter Monday</p>
-<dt>*</p>
-<dd>Early May Bank Holiday, first Monday of May</p>
-<dt>*</p>
-<dd>Spring Bank Holiday, last Monday of May</p>
-<dt>*</p>
-<dd>Summer Bank Holiday, last Monday of August</p>
-<dt>*</p>
-<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</p>
-<dt>*</p>
-<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>Early May Bank Holiday, first Monday of May</dd>
+<dt>*</dt>
+<dd>Spring Bank Holiday, last Monday of May</dd>
+<dt>*</dt>
+<dd>Summer Bank Holiday, last Monday of August</dd>
+<dt>*</dt>
+<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</dd>
+<dt>*</dt>
+<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dd></dl>
 <p> Holidays for the metals exchange: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Easter Monday</p>
-<dt>*</p>
-<dd>Early May Bank Holiday, first Monday of May</p>
-<dt>*</p>
-<dd>Spring Bank Holiday, last Monday of May</p>
-<dt>*</p>
-<dd>Summer Bank Holiday, last Monday of August</p>
-<dt>*</p>
-<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</p>
-<dt>*</p>
-<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>Early May Bank Holiday, first Monday of May</dd>
+<dt>*</dt>
+<dd>Spring Bank Holiday, last Monday of May</dd>
+<dt>*</dt>
+<dd>Summer Bank Holiday, last Monday of August</dd>
+<dt>*</dt>
+<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</dd>
+<dt>*</dt>
+<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add LIFFE</dl>
+<dd>add LIFFE</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned results is tested against a list of known holidays.</dl>
+<dd>the correctness of the returned results is tested against a list of known holidays.</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p>UK calendars. </p>
 <p> <code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>Settlement </i></p>
-<dd>generic settlement calendar</p>
-<dt><i>Exchange </i></p>
-<dd>London stock-exchange calendar. </p>
+<dt><i>Settlement </i></dt>
+<dd>generic settlement calendar</dd>
+<dt><i>Exchange </i></dt>
+<dd>London stock-exchange calendar. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

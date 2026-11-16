@@ -13,22 +13,22 @@ mlx5dv_alloc_var - Allocates a VAR
 <h2>Synopsis</h2><dl COMPACT><dd><pre>#include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_var *
 mlx5dv_alloc_var(struct ibv_context *context, uint32_t flags);
-void mlx5dv_free_var(struct mlx5dv_var *dv_var);</pre></dl><h2>Description</h2>Create / free a VAR which can be used for some device commands over the DEVX interface. 
+void mlx5dv_free_var(struct mlx5dv_var *dv_var);</pre></dd></dl><h2>Description</h2>Create / free a VAR which can be used for some device commands over the DEVX interface. 
 
  The DEVX API enables direct access from the user space area to the mlx5 device driver, the VAR information is needed for few commands related to Virtio.
 <h2>Arguments</h2><dl COMPACT><dt>context
-<dd>RDMA device context to work on.
-<dt>flags
-<dd>Allocation flags for the UAR.</dl><h3>dv_var</h3><dl COMPACT><dd><pre>struct mlx5dv_var {
+</dt><dd>RDMA device context to work on.
+</dd><dt>flags
+</dt><dd>Allocation flags for the UAR.</dd></dl><h3>dv_var</h3><dl COMPACT><dd><pre>struct mlx5dv_var {
  uint32_t page_id;
  uint32_t length;
  off_t mmap_off;
  uint64_t comp_mask;
-};</pre><dt>page_id
-<dd>The device page id to be used.
-<dt>length
-<dd>The mmap length parameter to be used for mapping a VA to the allocated VAR entry.
-<dt>mmap_off
-<dd>The mmap offset parameter to be used for mapping a VA to the allocated VAR entry.</dl><h2>Return Value</h2>Upon success mlx5dv_alloc_var returns a pointer to the created VAR ,on error NULL will be returned and errno will be set.
+};</pre></dd><dt>page_id
+</dt><dd>The device page id to be used.
+</dd><dt>length
+</dt><dd>The mmap length parameter to be used for mapping a VA to the allocated VAR entry.
+</dd><dt>mmap_off
+</dt><dd>The mmap offset parameter to be used for mapping a VA to the allocated VAR entry.</dd></dl><h2>Return Value</h2>Upon success mlx5dv_alloc_var returns a pointer to the created VAR ,on error NULL will be returned and errno will be set.
 <h2>See Also</h2>mlx5dv_open_device, mlx5dv_devx_obj_create
 <h2>Author</h2>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

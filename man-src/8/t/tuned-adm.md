@@ -14,19 +14,19 @@ description: "tuned-adm – commandline tool for switching between different tun
 <p>This command line utility allows you to switch between user definable tuning profiles. Several predefined profiles are already included. You can even create your own profile, either based on one of the existing ones by copying it or make a completely new one. The distribution provided profiles are stored in subdirectories below <i>/usr/lib/tuned</i> and the user defined profiles in subdirectories below <i>/etc/tuned</i>. If there are same profiles on both places, user defined profiles have precedence. </p>
 <h2>Options</h2>
 <h3>
-<dt><code>list</code></p>
+<dt><code>list</code></dt>
 <dd></h3>
 <p>List all available profiles. </p>
-<dt><code>active</code></p>
-<dd>Show current active profile. </p>
-<dt><code>profile </code><i>PROFILE</i></p>
-<dd>Switches to the given profilename. If none is given or no valid one is given the command gracefully exits without performing any operation. </p>
-<dt><code>verify</code></p>
-<dd>Verifies current profile against system settings. Outputs information whether system settings matches current profile or not (e.g. somebody modified sysfs/sysctl value by hand). Detailed information what is checked, what value is set and what value is expected can be found in the log. </p>
-<dt><code>recommend</code></p>
-<dd>Recommend profile suitable for your system. Currently only static detection is implemented &#8211; it decides according to data in /etc/system-release-cpe and virt-what output. The rules for autodetection are defined in recommend.conf in profile directory. They can be overriden by user by putting the recommend.conf into /etc/tuned. The default rules recommend profiles targeted to the best performance or balanced profile if unsure. </p>
-<dt><code>off</code></p>
-<dd>Unload tunings. </p>
+</dd><dt><code>active</code></dt>
+<dd>Show current active profile. </dd>
+<dt><code>profile </code><i>PROFILE</i></dt>
+<dd>Switches to the given profilename. If none is given or no valid one is given the command gracefully exits without performing any operation. </dd>
+<dt><code>verify</code></dt>
+<dd>Verifies current profile against system settings. Outputs information whether system settings matches current profile or not (e.g. somebody modified sysfs/sysctl value by hand). Detailed information what is checked, what value is set and what value is expected can be found in the log. </dd>
+<dt><code>recommend</code></dt>
+<dd>Recommend profile suitable for your system. Currently only static detection is implemented &#8211; it decides according to data in /etc/system-release-cpe and virt-what output. The rules for autodetection are defined in recommend.conf in profile directory. They can be overriden by user by putting the recommend.conf into /etc/tuned. The default rules recommend profiles targeted to the best performance or balanced profile if unsure. </dd>
+<dt><code>off</code></dt>
+<dd>Unload tunings. </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/tuned/* /usr/lib/tuned/*</p>

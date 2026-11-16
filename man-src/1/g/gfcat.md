@@ -14,24 +14,24 @@ description: "gfcat – manual page for gfcat (glusterfs-coreutils) 0.2.0"
 <h2>DESCRIPTION</h2>
 <p> Read a file on a remote Gluster volume and write it to standard output.</p>
 <dl>
-<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></p>
-<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify the port on which to connect</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
+<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gfcat <a href="glfs://localhost/groot/path/to/file">glfs://localhost/groot/path/to/file</a></p>
+</dt><dd> gfcat <a href="glfs://localhost/groot/path/to/file">glfs://localhost/groot/path/to/file</a></dd>
 <dt>
-<dd> Write the contents of /path/to/file on the Gluster volume of groot on host localhost to standard output.</p>
+</dt><dd> Write the contents of /path/to/file on the Gluster volume of groot on host localhost to standard output.</dd>
 <dt>
-<dd> gfcli (localhost/groot)&gt; cat /file</p>
+</dt><dd> gfcli (localhost/groot)&gt; cat /file</dd>
 <dt>
-<dd> In the context of a shell with a connection established, cat the file on the root of the Gluster volume groot on localhost.</dl>
+</dt><dd> In the context of a shell with a connection established, cat the file on the root of the Gluster volume groot on localhost.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

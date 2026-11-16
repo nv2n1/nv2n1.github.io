@@ -21,18 +21,18 @@ description: "mate-dictionary – Look up words on dictionaries"
 <p> For full documentation see the <code>MATE Dictionary</code> online help. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;look-up</code><i> word</i></p>
-<dd> Looks up the specified word using the pre-defined dictionary source.</p>
-<dt><code>&#8211;match</code><i> word</i></p>
-<dd> Matches one or more words using the pre-defined dictionary source.</p>
-<dt><code>-s</code><i> source</i> or <code>&#8211;source</code><i> source</i></p>
-<dd> Uses the specified source for looking up words. This does not affect the global settings.</p>
-<dt><code>-n</code> or <code>&#8211;no-window</code></p>
-<dd> Using this switch with the &#8211;look-up will print the definitions found on the console without launching the GUI.</p>
-<dt><code>-D</code><i> database</i> or <code>&#8211;database</code><i> database</i></p>
-<dd> Use the specified database for looking up words. This does not affect the global settings.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help information.</dl>
+<dt><code>&#8211;look-up</code><i> word</i></dt>
+<dd> Looks up the specified word using the pre-defined dictionary source.</dd>
+<dt><code>&#8211;match</code><i> word</i></dt>
+<dd> Matches one or more words using the pre-defined dictionary source.</dd>
+<dt><code>-s</code><i> source</i> or <code>&#8211;source</code><i> source</i></dt>
+<dd> Uses the specified source for looking up words. This does not affect the global settings.</dd>
+<dt><code>-n</code> or <code>&#8211;no-window</code></dt>
+<dd> Using this switch with the &#8211;look-up will print the definitions found on the console without launching the GUI.</dd>
+<dt><code>-D</code><i> database</i> or <code>&#8211;database</code><i> database</i></dt>
+<dd> Use the specified database for looking up words. This does not affect the global settings.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help information.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> All the configuration is handled using GSettings.</p>
 <h2>AUTHOR</h2>

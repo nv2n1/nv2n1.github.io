@@ -10,21 +10,21 @@ AGCHCU - Provides a way for the user to change the color, intensity, line style,
 
 <h2>Synopsis</h2>SUBROUTINE AGCHCU (IFLG,KDSH)
 <h2>Description</h2><dl COMPACT><dt>IFLG
-<dd>(an input expression of type INTEGER) is zero if a particular object is about to be drawn, non-zero if it has just been drawn.
-<dt>KDSH
-<dd>(an input expression of type INTEGER) is the value of AGCURV's last argument, as follows:
-<dl COMPACT><dd><dl COMPACT><dt>AGCURV called by
-<dd>Value of KDSH
-<dt>EZY
-<dd>1
-<dt>EZXY
-<dd>1
-<dt>EZMY
-<dd>&quot;n&quot; or &quot;-n&quot;, where &quot;n &quot; is the curve number
-<dt>EZMXY
-<dd>&quot;n&quot; or &quot;-n&quot;, where &quot;n&quot; is the curve number
-<dt>the user program
-<dd>a user-specified value</dl></dl>
+</dt><dd>(an input expression of type INTEGER) is zero if a particular object is about to be drawn, non-zero if it has just been drawn.
+</dd><dt>KDSH
+</dt><dd>(an input expression of type INTEGER) is the value of AGCURV's last argument, as follows:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>AGCURV called by
+</dt><dd>Value of KDSH
+</dd><dt>EZY
+</dt><dd>1
+</dd><dt>EZXY
+</dt><dd>1
+</dd><dt>EZMY
+</dt><dd>&quot;n&quot; or &quot;-n&quot;, where &quot;n &quot; is the curve number
+</dd><dt>EZMXY
+</dt><dd>&quot;n&quot; or &quot;-n&quot;, where &quot;n&quot; is the curve number
+</dd><dt>the user program
+</dt><dd>a user-specified value</dd></dl></dl>
 </dl><h2>Usage</h2>This routine is not called by the user program, but by Autograph itself, just before and just after each curve is drawn. The default version does nothing. The user may supply his own version to change the color, intensity, line style, etc. of selected curves. 
 
  Note: A user version of AGCHCU should not call any other Autograph routine.

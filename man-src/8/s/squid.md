@@ -19,73 +19,73 @@ description: "squid – HTTP web proxy caching server"
 <p> This manual page only lists the command line arguments. For details on how to configure Squid see the file <code>/etc/squid/squid.conf.documented,</code> the Squid wiki FAQ and examples at <a rel="nofollow" href="http://wiki.squid-cache.org/">http://wiki.squid-cache.org/</a> , or the configuration manual on the Squid home page <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a port</code></p>
-<dd>Specify HTTP port number where Squid should listen for requests, in addition to any <code>http_port</code> specifications in <code>squid.conf</code></p>
-<dt><code>-C</code></p>
-<dd>Do not catch fatal signals.</p>
-<dt><code>-d level</code></p>
-<dd>Write debugging to stderr also.</p>
-<dt><code>-f file</code></p>
-<dd>Use the given config-file instead of <code>/etc/squid/squid.conf .</code> If the file name starts with a <code>!</code> or <code>|</code> then it is assumed to be an external command or command line. Can for example be used to pre-process the configuration before it is being read by Squid. To facilitate this Squid also understands the common #line notion to indicate the real source file.</p>
-<dt><code>-F</code></p>
-<dd>Don&#8217;t serve any requests until store is rebuilt.</p>
-<dt><code>-h</code></p>
-<dd>Print help message.</p>
-<dt><code>-i</code></p>
-<dd>Install as a Windows Service (see <code>-n</code> option).</p>
-<dt><code>-k reconfigure | rotate | shutdown | interrupt | kill | debug | check | parse</code></p>
-<dd>Parse configuration file, then send signal to running copy (except <code>-k parse</code> ) and exit.</p>
-<dt><code>-l facility</code></p>
-<dd>Use specified syslog facility. Implies <code>-s</code></p>
-<dt><code>-n name</code></p>
-<dd>Specify Windows Service name to use for service operations, default is: <code>Squid</code></p>
-<dt><code>-N</code></p>
-<dd>No daemon mode.</p>
-<dt><code>-O options</code></p>
-<dd>Set Windows Service Command line options in Registry.</p>
-<dt><code>-r</code></p>
-<dd>Remove a Windows Service (see <code>-n</code> option).</p>
-<dt><code>-R</code></p>
-<dd>Do not set <code>REUSEADDR</code> on port.</p>
-<dt><code>-s</code></p>
-<dd>Enable logging to syslog. Also configurable in <code>/etc/squid/squid.conf</code></p>
-<dt><code>-S</code></p>
-<dd>Double-check swap during rebuild.</p>
-<dt><code>-u port</code></p>
-<dd>Specify ICP port number (default: 3130), disable with 0.</p>
-<dt><code>-v</code></p>
-<dd>Print version and build details.</p>
-<dt><code>-X</code></p>
-<dd>Force full debugging.</p>
-<dt><code>-Y</code></p>
-<dd>Only return <code>UDP_HIT</code> or <code>UDP_MISS_NOFETCH</code> during fast reload.</p>
-<dt><code>-z</code></p>
-<dd>Create missing swap directories and other missing cache_dir structures, then exit. All cache_dir types create the configured top-level directory if it is missing. Other actions are type-specific. For example, ufs-based storage systems create missing L1 and L2 directories while Rock creates the missing database file.</p>
-<dd>This option does not enable validation of any present swap structures. Its focus is on creation of missing pieces. If nothing is missing, squid -z just exits. If you suspect cache_dir corruption, you must delete the top-level cache_dir directory before running squid -z.</p>
-<dd>By default, squid -z runs in daemon mode (so that configuration macros and other SMP features work as expected). Use <code>-N</code> option to overwrite this.</dl>
+<dt><code>-a port</code></dt>
+<dd>Specify HTTP port number where Squid should listen for requests, in addition to any <code>http_port</code> specifications in <code>squid.conf</code></dd>
+<dt><code>-C</code></dt>
+<dd>Do not catch fatal signals.</dd>
+<dt><code>-d level</code></dt>
+<dd>Write debugging to stderr also.</dd>
+<dt><code>-f file</code></dt>
+<dd>Use the given config-file instead of <code>/etc/squid/squid.conf .</code> If the file name starts with a <code>!</code> or <code>|</code> then it is assumed to be an external command or command line. Can for example be used to pre-process the configuration before it is being read by Squid. To facilitate this Squid also understands the common #line notion to indicate the real source file.</dd>
+<dt><code>-F</code></dt>
+<dd>Don&#8217;t serve any requests until store is rebuilt.</dd>
+<dt><code>-h</code></dt>
+<dd>Print help message.</dd>
+<dt><code>-i</code></dt>
+<dd>Install as a Windows Service (see <code>-n</code> option).</dd>
+<dt><code>-k reconfigure | rotate | shutdown | interrupt | kill | debug | check | parse</code></dt>
+<dd>Parse configuration file, then send signal to running copy (except <code>-k parse</code> ) and exit.</dd>
+<dt><code>-l facility</code></dt>
+<dd>Use specified syslog facility. Implies <code>-s</code></dd>
+<dt><code>-n name</code></dt>
+<dd>Specify Windows Service name to use for service operations, default is: <code>Squid</code></dd>
+<dt><code>-N</code></dt>
+<dd>No daemon mode.</dd>
+<dt><code>-O options</code></dt>
+<dd>Set Windows Service Command line options in Registry.</dd>
+<dt><code>-r</code></dt>
+<dd>Remove a Windows Service (see <code>-n</code> option).</dd>
+<dt><code>-R</code></dt>
+<dd>Do not set <code>REUSEADDR</code> on port.</dd>
+<dt><code>-s</code></dt>
+<dd>Enable logging to syslog. Also configurable in <code>/etc/squid/squid.conf</code></dd>
+<dt><code>-S</code></dt>
+<dd>Double-check swap during rebuild.</dd>
+<dt><code>-u port</code></dt>
+<dd>Specify ICP port number (default: 3130), disable with 0.</dd>
+<dt><code>-v</code></dt>
+<dd>Print version and build details.</dd>
+<dt><code>-X</code></dt>
+<dd>Force full debugging.</dd>
+<dt><code>-Y</code></dt>
+<dd>Only return <code>UDP_HIT</code> or <code>UDP_MISS_NOFETCH</code> during fast reload.</dd>
+<dt><code>-z</code></dt>
+<dd>Create missing swap directories and other missing cache_dir structures, then exit. All cache_dir types create the configured top-level directory if it is missing. Other actions are type-specific. For example, ufs-based storage systems create missing L1 and L2 directories while Rock creates the missing database file.</dd>
+<dd>This option does not enable validation of any present swap structures. Its focus is on creation of missing pieces. If nothing is missing, squid -z just exits. If you suspect cache_dir corruption, you must delete the top-level cache_dir directory before running squid -z.</dd>
+<dd>By default, squid -z runs in daemon mode (so that configuration macros and other SMP features work as expected). Use <code>-N</code> option to overwrite this.</dd></dl>
 <h2>Files</h2>
 <p>Squid configuration files located in /etc/squid/:</p>
 <dl>
-<dt>squid.conf</p>
-<dd>The main configuration file. You must initially make changes to this file for <code>squid</code> to work. For example, the default configuration only allows access from RFC private LAN networks. Some packaging distributions block even that.</p>
-<dt>squid.conf.default</p>
-<dd>Reference copy of the configuration file. Always kept up to date with the version of Squid you are using.</p>
-<dd>Use this to look up the default configuration settings and syntax after upgrading.</p>
-<dt>squid.conf.documented</p>
-<dd>Reference copy of the configuration file. Always kept up to date with the version of Squid you are using.</p>
-<dd>Use this to read the documentation for configuration options available in your build of Squid. The online configuration manual is also available for a full reference of options. <code>see</code><a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a></p>
-<dt>cachemgr.conf</p>
-<dd>The main configuration file for the web <code>cachemgr.cgi</code> tools.</p>
-<dt>msntauth.conf</p>
-<dd>The main configuration file for the Sample MSNT authenticator.</p>
-<dt>errorpage.css</p>
-<dd>CSS Stylesheet to control the display of generated error pages. Use this to set any company branding you need, it will apply to every language Squid provides error pages for.</dl>
+<dt>squid.conf</dt>
+<dd>The main configuration file. You must initially make changes to this file for <code>squid</code> to work. For example, the default configuration only allows access from RFC private LAN networks. Some packaging distributions block even that.</dd>
+<dt>squid.conf.default</dt>
+<dd>Reference copy of the configuration file. Always kept up to date with the version of Squid you are using.</dd>
+<dd>Use this to look up the default configuration settings and syntax after upgrading.</dd>
+<dt>squid.conf.documented</dt>
+<dd>Reference copy of the configuration file. Always kept up to date with the version of Squid you are using.</dd>
+<dd>Use this to read the documentation for configuration options available in your build of Squid. The online configuration manual is also available for a full reference of options. <code>see</code><a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a></dd>
+<dt>cachemgr.conf</dt>
+<dd>The main configuration file for the web <code>cachemgr.cgi</code> tools.</dd>
+<dt>msntauth.conf</dt>
+<dd>The main configuration file for the Sample MSNT authenticator.</dd>
+<dt>errorpage.css</dt>
+<dd>CSS Stylesheet to control the display of generated error pages. Use this to set any company branding you need, it will apply to every language Squid provides error pages for.</dd></dl>
 <p> Some files also located elsewhere:</p>
 <dl>
-<dt>/etc/squid/mime.conf (mime_table)</p>
-<dd>MIME type mappings for FTP gatewaying</p>
-<dt>/usr/share/squid/errors</p>
-<dd>Location of Squid error pages and templates.</dl>
+<dt>/etc/squid/mime.conf (mime_table)</dt>
+<dd>MIME type mappings for FTP gatewaying</dd>
+<dt>/usr/share/squid/errors</dt>
+<dd>Location of Squid error pages and templates.</dd></dl>
 <h2>Author</h2>
 <p>Squid was written over many years by a changing team of developers and maintained in turn by <i>Duane Wessels &lt;duane [at] squid-cache.org&gt;</i> <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i> <i>Amos Jeffries &lt;amosjeffries [at] squid-cache.org&gt;</i> </p>
 <p> With contributions from many others in the Squid community. see CONTRIBUTORS for a full list of individuals who contributed code. see CREDITS for a list of major code contributing copyright holders.</p>

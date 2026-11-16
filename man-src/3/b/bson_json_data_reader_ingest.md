@@ -17,14 +17,14 @@ void bson_json_data_reader_ingest(bson_json_reader_t *reader,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>reader</code></p>
-<dd> A <code>bson_json_reader_t</code> \&amp;.</dl>
+<dt><code>reader</code></dt>
+<dd> A <code>bson_json_reader_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>data</code></p>
-<dd> A uint8_t containing data to feed.</dl>
+<dt><code>data</code></dt>
+<dd> A uint8_t containing data to feed.</dd></dl>
 <dl>
-<dt><code>len</code></p>
-<dd> A size_t containing the length of <code>data</code> \&amp;.</dl>
+<dt><code>len</code></dt>
+<dd> A size_t containing the length of <code>data</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Feed data to a memory based json reader. </p>
 <h2>COLOPHON</h2>

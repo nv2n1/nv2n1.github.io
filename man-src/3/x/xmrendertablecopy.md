@@ -17,12 +17,12 @@ description: "XmRenderTableCopy — A render table function that copies renditio
 <h2>Description</h2>
 <p><code>XmRenderTableCopy</code> creates a new render table which will contain the renditions of the <i>table</i> whose tags match those in <i>tags</i>.</p>
 <dl COMPACT>
-<dt><i>table</i></p>
-<dd>Specifies the table containing the renditions to be copied.</p>
-<dt><i>tags</i></p>
-<dd>Specifies an array of tags, whose corresponding renditions are to be copied. NULL indicates that the complete table should be copied.</p>
-<dt><i>tag_count</i></p>
-<dd>Specifies the number of tags in <i>tags</i>.</dl>
+<dt><i>table</i></dt>
+<dd>Specifies the table containing the renditions to be copied.</dd>
+<dt><i>tags</i></dt>
+<dd>Specifies an array of tags, whose corresponding renditions are to be copied. NULL indicates that the complete table should be copied.</dd>
+<dt><i>tag_count</i></dt>
+<dd>Specifies the number of tags in <i>tags</i>.</dd></dl>
 <h2>Return</h2>
 <p>Returns NULL if <i>table</i> is NULL. Otherwise, this function returns the new render table. This function allocates space to hold the new render table. The application is responsible for managing this allocated space. The application can recover this allocated space by calling <code>XmRenderTableFree</code>.</p>
 <h2>Related</h2>

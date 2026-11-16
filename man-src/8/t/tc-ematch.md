@@ -25,8 +25,8 @@ description: "ematch – extended matches for use with \"basic\", \"cgroup\" or 
 <p> <i>OBJECT</i> := { <i>META_ID</i> | <i>VALUE</i> } </p>
 <p> <i>META_ID</i> := <i>id</i> [ shift <i>SHIFT</i> ] [ mask <i>MASK</i> ] </p>
 <dl>
-<dt>meta attributes:</p>
-<dd><code>random</code> 32 bit random value </p>
+<dt>meta attributes:</dt>
+<dd><code>random</code> 32 bit random value </dd>
 <p> <code>loadavg_1</code> Load average in last 5 minutes </p>
 <p> <code>nf_mark</code> Netfilter mark </p>
 <p> <code>vlan</code> Vlan tag </p>

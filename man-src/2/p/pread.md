@@ -17,8 +17,8 @@ description: "pread, pwrite – read from or write to a file descriptor at a giv
 <p> <code>pread</code>(), <code>pwrite</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
- || /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dl>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+ || /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>pread</code>() reads up to <i>count</i> bytes from file descriptor <i>fd</i> at offset <i>offset</i> (from the start of the file) into the buffer starting at <i>buf</i>. The file offset is not changed. </p>
 <p> <code>pwrite</code>() writes up to <i>count</i> bytes from the buffer starting at <i>buf</i> to the file descriptor <i>fd</i> at offset <i>offset</i>. The file offset is not changed. </p>

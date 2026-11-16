@@ -18,18 +18,18 @@ description: "lavtrans – Convert MJPEG videos to other MJPEG video formats"
 <h2>OPTIONS</h2>
 <p> <code>lavtrans</code> accepts the following options: </p>
 <dl>
-<dt><code>-f</code> [<code>a</code>|<code>q</code>|<code>m</code>|<code>i</code>|<code>w</code>]</p>
+<dt><code>-f</code> [<code>a</code>|<code>q</code>|<code>m</code>|<code>i</code>|<code>w</code>]</dt>
 <dd> Specifies the output format that should be saved.<br />
 &nbsp;<wbr>&nbsp;<wbr>a &#8211; output to AVI file<br />
 &nbsp;<wbr>&nbsp;<wbr>q &#8211; output to Qicktime file<br />
 &nbsp;<wbr>&nbsp;<wbr>i &#8211; output single JPEG images,<br />
-&nbsp;<wbr>&nbsp;<wbr>w &#8211; output WAV file&nbsp;<wbr>(sound only!) </p>
-<dt><code>-i</code><i> num</i></p>
-<dd> Convert a single frame to a JPEG file. </p>
-<dt><code>-o</code><i> outputfile</i></p>
-<dd> Specifies the name of the output file If you want as output single JPEG images the output file string must be a valid format string </p>
-<dt><i>filename</i></p>
-<dd> Multiple filenames as input are acceped, also mixing of edit list files and other in video files. </p>
+&nbsp;<wbr>&nbsp;<wbr>w &#8211; output WAV file&nbsp;<wbr>(sound only!) </dd>
+<dt><code>-i</code><i> num</i></dt>
+<dd> Convert a single frame to a JPEG file. </dd>
+<dt><code>-o</code><i> outputfile</i></dt>
+<dd> Specifies the name of the output file If you want as output single JPEG images the output file string must be a valid format string </dd>
+<dt><i>filename</i></dt>
+<dd> Multiple filenames as input are acceped, also mixing of edit list files and other in video files. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> There seem to be problems with the transoding of large Quicktime movies. One other thing is that with interlaced movies only one field is extracted. So you get pictures with the full horizontal size and half vertical size. </p>
@@ -38,8 +38,8 @@ description: "lavtrans – Convert MJPEG videos to other MJPEG video formats"
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
-<dt>For more info, see our website at</p>
-<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </p>
+<dt>For more info, see our website at</dt>
+<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-lavplay/">lavplay</a></code>(1) </p>

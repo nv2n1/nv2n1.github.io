@@ -82,13 +82,13 @@ url: "/docs/linux/man/1-perlbeos/"
 
 <dl>
 <dt>&bull;
-<dd> Network socket support is disabled for BeOS R5 net server. I didn't dare yet to try enabling it and see what problems occur.
-<dt>&bull;
-<dd> The <font SIZE="-1">LFS</font> (large file support) tests (<i>t/op/lfs</i> and <i>xt/Fcntl/t/syslfs</i>) are disabled as seeking beyond 2 <font SIZE="-1">GB</font> is broken according to jhi [at] iki.fi who was the last one checking the BeOS port and updating this file before me. Haven't checked this myself.
-<dt>&bull;
-<dd> The <i>t/io/fflush</i> test fails at #6. As far as I can tell, this is caused by a bug in the BeOS pipes implementation that occurs when starting other child processes. In the particular test case a <tt>&quot;system(&quot;perl -e 0&quot;)&quot;</tt> flushes the stdout pipe of another child process.
-<dt>&bull;
-<dd> The <i>ext/POSIX/t/waitpid</i> test fails at #1. After all child processes are gone BeOS' waitpid(-1,...) returns 0 instead of -1 (as it should). No idea how to fix this.</dl>
+</dt><dd> Network socket support is disabled for BeOS R5 net server. I didn't dare yet to try enabling it and see what problems occur.
+</dd><dt>&bull;
+</dt><dd> The <font SIZE="-1">LFS</font> (large file support) tests (<i>t/op/lfs</i> and <i>xt/Fcntl/t/syslfs</i>) are disabled as seeking beyond 2 <font SIZE="-1">GB</font> is broken according to jhi [at] iki.fi who was the last one checking the BeOS port and updating this file before me. Haven't checked this myself.
+</dd><dt>&bull;
+</dt><dd> The <i>t/io/fflush</i> test fails at #6. As far as I can tell, this is caused by a bug in the BeOS pipes implementation that occurs when starting other child processes. In the particular test case a <tt>&quot;system(&quot;perl -e 0&quot;)&quot;</tt> flushes the stdout pipe of another child process.
+</dd><dt>&bull;
+</dt><dd> The <i>ext/POSIX/t/waitpid</i> test fails at #1. After all child processes are gone BeOS' waitpid(-1,...) returns 0 instead of -1 (as it should). No idea how to fix this.</dd></dl>
 
 <h2>CONTACT</h2>
 

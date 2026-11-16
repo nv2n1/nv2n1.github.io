@@ -27,19 +27,19 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p>Try to find EGL. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>EGL_FOUND</code></p>
-<dd>True if (the requested version of) EGL is available</p>
-<dt><code>EGL_VERSION</code></p>
-<dd>The version of EGL; note that this is the API version defined in the headers, rather than the version of the implementation (eg: Mesa)</p>
-<dt><code>EGL_LIBRARIES</code></p>
-<dd>This can be passed to target_link_libraries() instead of the <code>EGL::EGL</code> target</p>
-<dt><code>EGL_INCLUDE_DIRS</code></p>
-<dd>This should be passed to target_include_directories() if the target is not used for linking</p>
-<dt><code>EGL_DEFINITIONS</code></p>
-<dd>This should be passed to target_compile_options() if the target is not used for linking </p>
+<dt><code>EGL_FOUND</code></dt>
+<dd>True if (the requested version of) EGL is available</dd>
+<dt><code>EGL_VERSION</code></dt>
+<dd>The version of EGL; note that this is the API version defined in the headers, rather than the version of the implementation (eg: Mesa)</dd>
+<dt><code>EGL_LIBRARIES</code></dt>
+<dd>This can be passed to target_link_libraries() instead of the <code>EGL::EGL</code> target</dd>
+<dt><code>EGL_INCLUDE_DIRS</code></dt>
+<dd>This should be passed to target_include_directories() if the target is not used for linking</dd>
+<dt><code>EGL_DEFINITIONS</code></dt>
+<dd>This should be passed to target_compile_options() if the target is not used for linking </dd>
 <p> If <code>EGL_FOUND</code> is TRUE, it will also define the following imported target:</p>
-<dt><code>EGL::EGL</code></p>
-<dd>The EGL library </p>
+<dt><code>EGL::EGL</code></dt>
+<dd>The EGL library </dd>
 <p> In general we recommend using the imported target, as it is easier to use. Bear in mind, however, that if the target is in the link interface of an exported library, it must be made available by the package config file. </p>
 <p> Since pre-1.0.0.</dl>
 <h3>FindKF5</h3>
@@ -52,36 +52,36 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p>Try to find libgit2 on a Unix system. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>LIBGIT2_FOUND</code></p>
-<dd>True if (the requested version of) libgit2 is available</p>
-<dt><code>LIBGIT2_VERSION</code></p>
-<dd>The version of libgit2</p>
-<dt><code>LIBGIT2_LIBRARIES</code></p>
-<dd>This can be passed to target_link_libraries() instead of the <code>LibGit2::LibGit2</code> target</p>
-<dt><code>LIBGIT2_INCLUDE_DIRS</code></p>
-<dd>This should be passed to target_include_directories() if the target is not used for linking</p>
-<dt><code>LIBGIT2_DEFINITIONS</code></p>
-<dd>This should be passed to target_compile_options() if the target is not used for linking </p>
+<dt><code>LIBGIT2_FOUND</code></dt>
+<dd>True if (the requested version of) libgit2 is available</dd>
+<dt><code>LIBGIT2_VERSION</code></dt>
+<dd>The version of libgit2</dd>
+<dt><code>LIBGIT2_LIBRARIES</code></dt>
+<dd>This can be passed to target_link_libraries() instead of the <code>LibGit2::LibGit2</code> target</dd>
+<dt><code>LIBGIT2_INCLUDE_DIRS</code></dt>
+<dd>This should be passed to target_include_directories() if the target is not used for linking</dd>
+<dt><code>LIBGIT2_DEFINITIONS</code></dt>
+<dd>This should be passed to target_compile_options() if the target is not used for linking </dd>
 <p> If <code>LIBGIT2_FOUND</code> is TRUE, it will also define the following imported target:</p>
-<dt><code>LibGit2::LibGit2</code></p>
-<dd>The libgit2 library </p>
+<dt><code>LibGit2::LibGit2</code></dt>
+<dd>The libgit2 library </dd>
 <p> In general we recommend using the imported target, as it is easier to use. Bear in mind, however, that if the target is in the link interface of an exported library, it must be made available by the package config file. </p>
 <p> Since 1.3.0.</dl>
 <h3>FindOpenEXR</h3>
 <p>Try to find the OpenEXR libraries. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>OpenEXR_FOUND</code></p>
-<dd>True if OpenEXR is available</p>
-<dt><code>OpenEXR_LIBRARIES</code></p>
-<dd>Link to these to use OpenEXR</p>
-<dt><code>OpenEXR_INCLUDE_DIRS</code></p>
-<dd>Include directory for OpenEXR</p>
-<dt><code>OpenEXR_DEFINITIONS</code></p>
-<dd>Compiler flags required to link against OpenEXR </p>
+<dt><code>OpenEXR_FOUND</code></dt>
+<dd>True if OpenEXR is available</dd>
+<dt><code>OpenEXR_LIBRARIES</code></dt>
+<dd>Link to these to use OpenEXR</dd>
+<dt><code>OpenEXR_INCLUDE_DIRS</code></dt>
+<dd>Include directory for OpenEXR</dd>
+<dt><code>OpenEXR_DEFINITIONS</code></dt>
+<dd>Compiler flags required to link against OpenEXR </dd>
 <p> and the following imported targets:</p>
-<dt><code>OpenEXR::IlmImf</code></p>
-<dd>The OpenEXR core library </p>
+<dt><code>OpenEXR::IlmImf</code></dt>
+<dd>The OpenEXR core library </dd>
 <p> In general we recommend using the imported target, as it is easier to use. Bear in mind, however, that if the target is in the link interface of an exported library, it must be made available by the package config file. </p>
 <p> Since pre-1.0.0.</dl>
 <h3>FindPng2Ico</h3>
@@ -89,18 +89,18 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p> If the png2ico executable is not in your PATH, you can provide an alternative name or full path location with the <code>Png2Ico_EXECUTABLE</code> variable. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>Png2Ico_FOUND</code></p>
-<dd>True if png2ico is available.</p>
-<dt><code>Png2Ico_EXECUTABLE</code></p>
-<dd>The png2ico executable. </p>
+<dt><code>Png2Ico_FOUND</code></dt>
+<dd>True if png2ico is available.</dd>
+<dt><code>Png2Ico_EXECUTABLE</code></dt>
+<dd>The png2ico executable. </dd>
 <p> If <code>Png2Ico_FOUND</code> is TRUE, it will also define the following imported target:</p>
-<dt><code>Png2Ico::Png2Ico</code></p>
-<dd>The png2ico executable. </p>
+<dt><code>Png2Ico::Png2Ico</code></dt>
+<dd>The png2ico executable. </dd>
 <p> and the following variables:</p>
-<dt><code>Png2Ico_HAS_COLORS_ARGUMENT</code></p>
-<dd>Whether png2ico accepts a <code>&#8211;colors</code> argument. <i>Matthias Benkmann&#8217;s tool</i> does, while the version of png2ico from the <i>&quot;KDE On Windows&quot; (kdewin)</i> project does not.</p>
-<dt><code>Png2Ico_HAS_RCFILE_ARGUMENT</code></p>
-<dd>Whether png2ico accepts an <code>&#8211;rcfile</code> argument. The version of png2ico from the <i>&quot;KDE On Windows&quot; (kdewin)</i> project does, while <i>Matthias Benkmann&#8217;s tool</i> does not. </p>
+<dt><code>Png2Ico_HAS_COLORS_ARGUMENT</code></dt>
+<dd>Whether png2ico accepts a <code>&#8211;colors</code> argument. <i>Matthias Benkmann&#8217;s tool</i> does, while the version of png2ico from the <i>&quot;KDE On Windows&quot; (kdewin)</i> project does not.</dd>
+<dt><code>Png2Ico_HAS_RCFILE_ARGUMENT</code></dt>
+<dd>Whether png2ico accepts an <code>&#8211;rcfile</code> argument. The version of png2ico from the <i>&quot;KDE On Windows&quot; (kdewin)</i> project does, while <i>Matthias Benkmann&#8217;s tool</i> does not. </dd>
 <p> Since 1.7.0.</dl>
 <h3>FindPoppler</h3>
 <p>Try to find Poppler. </p>
@@ -109,18 +109,18 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p>If no components are specified, this module will act as though all components were passed to OPTIONAL_COMPONENTS. </p>
 <p> This module will define the following variables, independently of the components searched for or found:</p>
 <dl>
-<dt><code>Poppler_FOUND</code></p>
-<dd>TRUE if (the requested version of) Poppler is available</p>
-<dt><code>Poppler_VERSION</code></p>
-<dd>Found Poppler version</p>
-<dt><code>Poppler_TARGETS</code></p>
-<dd>A list of all targets imported by this module (note that there may be more than the components that were requested)</p>
-<dt><code>Poppler_LIBRARIES</code></p>
-<dd>This can be passed to target_link_libraries() instead of the imported targets</p>
-<dt><code>Poppler_INCLUDE_DIRS</code></p>
-<dd>This should be passed to target_include_directories() if the targets are not used for linking</p>
-<dt><code>Poppler_DEFINITIONS</code></p>
-<dd>This should be passed to target_compile_options() if the targets are not used for linking </p>
+<dt><code>Poppler_FOUND</code></dt>
+<dd>TRUE if (the requested version of) Poppler is available</dd>
+<dt><code>Poppler_VERSION</code></dt>
+<dd>Found Poppler version</dd>
+<dt><code>Poppler_TARGETS</code></dt>
+<dd>A list of all targets imported by this module (note that there may be more than the components that were requested)</dd>
+<dt><code>Poppler_LIBRARIES</code></dt>
+<dd>This can be passed to target_link_libraries() instead of the imported targets</dd>
+<dt><code>Poppler_INCLUDE_DIRS</code></dt>
+<dd>This should be passed to target_include_directories() if the targets are not used for linking</dd>
+<dt><code>Poppler_DEFINITIONS</code></dt>
+<dd>This should be passed to target_compile_options() if the targets are not used for linking </dd>
 <p> For each searched-for components, <code>Poppler_&lt;component&gt;_FOUND</code> will be set to TRUE if the corresponding Poppler library was found, and FALSE otherwise. If <code>Poppler_&lt;component&gt;_FOUND</code> is TRUE, the imported target <code>Poppler::&lt;component&gt;</code> will be defined. This module will also attempt to determine <code>Poppler_*_VERSION</code> variables for each imported target, although <code>Poppler_VERSION</code> should normally be sufficient. </p>
 <p> In general we recommend using the imported targets, as they are easier to use and provide more control. Bear in mind, however, that if any target is in the link interface of an exported library, it must be made available by the package config file. </p>
 <p> Since 5.19</dl>
@@ -129,18 +129,18 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p> If the qtwaylandscanner executable is not in your PATH, you can provide an alternative name or full path location with the <code>QtWaylandScanner_EXECUTABLE</code> variable. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>QtWaylandScanner_FOUND</code></p>
-<dd>True if qtwaylandscanner is available</p>
-<dt><code>QtWaylandScanner_EXECUTABLE</code></p>
-<dd>The qtwaylandscanner executable. </p>
+<dt><code>QtWaylandScanner_FOUND</code></dt>
+<dd>True if qtwaylandscanner is available</dd>
+<dt><code>QtWaylandScanner_EXECUTABLE</code></dt>
+<dd>The qtwaylandscanner executable. </dd>
 <p> If <code>QtWaylandScanner_FOUND</code> is TRUE, it will also define the following imported target:</p>
-<dt><code>Wayland::QtScanner</code></p>
-<dd>The qtwaylandscanner executable. </p>
+<dt><code>Wayland::QtScanner</code></dt>
+<dd>The qtwaylandscanner executable. </dd>
 <p> This module provides the following functions to generate C++ protocol implementations:</p>
-<dt>&bull;</p>
-<dd><code>ecm_add_qtwayland_client_protocol</code></p>
-<dt>&bull;</p>
-<dd><code>ecm_add_qtwayland_server_protocol</code> </p>
+<dt>&bull;</dt>
+<dd><code>ecm_add_qtwayland_client_protocol</code></dd>
+<dt>&bull;</dt>
+<dd><code>ecm_add_qtwayland_server_protocol</code> </dd>
 <pre>ecm_add_qtwayland_client_protocol(&lt;source_files_var&gt;
  PROTOCOL &lt;xmlfile&gt;
  BASENAME &lt;basename&gt;
@@ -158,13 +158,13 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p>Try to find the shared-mime-info package. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>SharedMimeInfo_FOUND</code></p>
-<dd>True if system has the shared-mime-info package</p>
-<dt><code>UPDATE_MIME_DATABASE_EXECUTABLE</code></p>
-<dd>The update-mime-database executable </p>
+<dt><code>SharedMimeInfo_FOUND</code></dt>
+<dd>True if system has the shared-mime-info package</dd>
+<dt><code>UPDATE_MIME_DATABASE_EXECUTABLE</code></dt>
+<dd>The update-mime-database executable </dd>
 <p> and the following imported targets:</p>
-<dt><code>SharedMimeInfo::UpdateMimeDatabase</code></p>
-<dd>The update-mime-database executable </p>
+<dt><code>SharedMimeInfo::UpdateMimeDatabase</code></dt>
+<dd>The update-mime-database executable </dd>
 <p> The follow macro is available: </p>
 <pre>update_xdg_mimetypes(&lt;path&gt;)</pre>
 <p>Updates the XDG mime database at install time (unless the <code>$DESTDIR</code> environment variable is set, in which case it is up to package managers to perform this task). </p>
@@ -176,18 +176,18 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p>If no components are specified, this module will act as though all components were passed to OPTIONAL_COMPONENTS. </p>
 <p> This module will define the following variables, independently of the components searched for or found:</p>
 <dl>
-<dt><code>Wayland_FOUND</code></p>
-<dd>TRUE if (the requested version of) Wayland is available</p>
-<dt><code>Wayland_VERSION</code></p>
-<dd>Found Wayland version</p>
-<dt><code>Wayland_TARGETS</code></p>
-<dd>A list of all targets imported by this module (note that there may be more than the components that were requested)</p>
-<dt><code>Wayland_LIBRARIES</code></p>
-<dd>This can be passed to target_link_libraries() instead of the imported targets</p>
-<dt><code>Wayland_INCLUDE_DIRS</code></p>
-<dd>This should be passed to target_include_directories() if the targets are not used for linking</p>
-<dt><code>Wayland_DEFINITIONS</code></p>
-<dd>This should be passed to target_compile_options() if the targets are not used for linking </p>
+<dt><code>Wayland_FOUND</code></dt>
+<dd>TRUE if (the requested version of) Wayland is available</dd>
+<dt><code>Wayland_VERSION</code></dt>
+<dd>Found Wayland version</dd>
+<dt><code>Wayland_TARGETS</code></dt>
+<dd>A list of all targets imported by this module (note that there may be more than the components that were requested)</dd>
+<dt><code>Wayland_LIBRARIES</code></dt>
+<dd>This can be passed to target_link_libraries() instead of the imported targets</dd>
+<dt><code>Wayland_INCLUDE_DIRS</code></dt>
+<dd>This should be passed to target_include_directories() if the targets are not used for linking</dd>
+<dt><code>Wayland_DEFINITIONS</code></dt>
+<dd>This should be passed to target_compile_options() if the targets are not used for linking </dd>
 <p> For each searched-for components, <code>Wayland_&lt;component&gt;_FOUND</code> will be set to TRUE if the corresponding Wayland library was found, and FALSE otherwise. If <code>Wayland_&lt;component&gt;_FOUND</code> is TRUE, the imported target <code>Wayland::&lt;component&gt;</code> will be defined. This module will also attempt to determine <code>Wayland_*_VERSION</code> variables for each imported target, although <code>Wayland_VERSION</code> should normally be sufficient. </p>
 <p> In general we recommend using the imported targets, as they are easier to use and provide more control. Bear in mind, however, that if any target is in the link interface of an exported library, it must be made available by the package config file. </p>
 <p> Since pre-1.0.0.</dl>
@@ -196,18 +196,18 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p> If the wayland-scanner executable is not in your PATH, you can provide an alternative name or full path location with the <code>WaylandScanner_EXECUTABLE</code> variable. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>WaylandScanner_FOUND</code></p>
-<dd>True if wayland-scanner is available.</p>
-<dt><code>WaylandScanner_EXECUTABLE</code></p>
-<dd>The wayland-scanner executable. </p>
+<dt><code>WaylandScanner_FOUND</code></dt>
+<dd>True if wayland-scanner is available.</dd>
+<dt><code>WaylandScanner_EXECUTABLE</code></dt>
+<dd>The wayland-scanner executable. </dd>
 <p> If <code>WaylandScanner_FOUND</code> is TRUE, it will also define the following imported target:</p>
-<dt><code>Wayland::Scanner</code></p>
-<dd>The wayland-scanner executable. </p>
+<dt><code>Wayland::Scanner</code></dt>
+<dd>The wayland-scanner executable. </dd>
 <p> This module provides the following functions to generate C protocol implementations:</p>
-<dt>&bull;</p>
-<dd><code>ecm_add_wayland_client_protocol</code></p>
-<dt>&bull;</p>
-<dd><code>ecm_add_wayland_server_protocol</code> </p>
+<dt>&bull;</dt>
+<dd><code>ecm_add_wayland_client_protocol</code></dd>
+<dt>&bull;</dt>
+<dd><code>ecm_add_wayland_server_protocol</code> </dd>
 <pre>ecm_add_wayland_client_protocol(&lt;source_files_var&gt;
  PROTOCOL &lt;xmlfile&gt;
  BASENAME &lt;basename&gt;)</pre>
@@ -221,19 +221,19 @@ set(CMAKE_MODULE_PATH &quot;${CMAKE_BINARY_DIR}/cmake&quot;)</pre>
 <p>Try to find the X11 XCB compatibility library. </p>
 <p> This will define the following variables:</p>
 <dl>
-<dt><code>X11_XCB_FOUND</code></p>
-<dd>True if (the requested version of) libX11-xcb is available</p>
-<dt><code>X11_XCB_VERSION</code></p>
-<dd>The version of libX11-xcb (this is not guaranteed to be set even when X11_XCB_FOUND is true)</p>
-<dt><code>X11_XCB_LIBRARIES</code></p>
-<dd>This can be passed to target_link_libraries() instead of the <code>EGL::EGL</code> target</p>
-<dt><code>X11_XCB_INCLUDE_DIR</code></p>
-<dd>This should be passed to target_include_directories() if the target is not used for linking</p>
-<dt><code>X11_XCB_DEFINITIONS</code></p>
-<dd>This should be passed to target_compile_options() if the target is not used for linking </p>
+<dt><code>X11_XCB_FOUND</code></dt>
+<dd>True if (the requested version of) libX11-xcb is available</dd>
+<dt><code>X11_XCB_VERSION</code></dt>
+<dd>The version of libX11-xcb (this is not guaranteed to be set even when X11_XCB_FOUND is true)</dd>
+<dt><code>X11_XCB_LIBRARIES</code></dt>
+<dd>This can be passed to target_link_libraries() instead of the <code>EGL::EGL</code> target</dd>
+<dt><code>X11_XCB_INCLUDE_DIR</code></dt>
+<dd>This should be passed to target_include_directories() if the target is not used for linking</dd>
+<dt><code>X11_XCB_DEFINITIONS</code></dt>
+<dd>This should be passed to target_compile_options() if the target is not used for linking </dd>
 <p> If <code>X11_XCB_FOUND</code> is TRUE, it will also define the following imported target:</p>
-<dt><code>X11::XCB</code></p>
-<dd>The X11 XCB compatibility library </p>
+<dt><code>X11::XCB</code></dt>
+<dd>The X11 XCB compatibility library </dd>
 <p> In general we recommend using the imported target, as it is easier to use. Bear in mind, however, that if the target is in the link interface of an exported library, it must be made available by the package config file. </p>
 <p> Since pre-1.0.0.</dl>
 <h3>FindXCB</h3>
@@ -250,20 +250,21 @@ XKB XPRINT XTEST XV XVMC</pre>
 <p>If no components are specified, this module will act as though all components except XINPUT (which is considered unstable) were passed to OPTIONAL_COMPONENTS. </p>
 <p> This module will define the following variables, independently of the components searched for or found:</p>
 <dl>
-<dt><code>XCB_FOUND</code></p>
-<dd>True if (the requestion version of) xcb is available</p>
-<dt><code>XCB_VERSION</code></p>
-<dd>Found xcb version</p>
-<dt><code>XCB_TARGETS</code></p>
-<dd>A list of all targets imported by this module (note that there may be more than the components that were requested)</p>
-<dt><code>XCB_LIBRARIES</code></p>
-<dd>This can be passed to target_link_libraries() instead of the imported targets</p>
-<dt><code>XCB_INCLUDE_DIRS</code></p>
-<dd>This should be passed to target_include_directories() if the targets are not used for linking</p>
-<dt><code>XCB_DEFINITIONS</code></p>
-<dd>This should be passed to target_compile_options() if the targets are not used for linking </p>
+<dt><code>XCB_FOUND</code></dt>
+<dd>True if (the requestion version of) xcb is available</dd>
+<dt><code>XCB_VERSION</code></dt>
+<dd>Found xcb version</dd>
+<dt><code>XCB_TARGETS</code></dt>
+<dd>A list of all targets imported by this module (note that there may be more than the components that were requested)</dd>
+<dt><code>XCB_LIBRARIES</code></dt>
+<dd>This can be passed to target_link_libraries() instead of the imported targets</dd>
+<dt><code>XCB_INCLUDE_DIRS</code></dt>
+<dd>This should be passed to target_include_directories() if the targets are not used for linking</dd>
+<dt><code>XCB_DEFINITIONS</code></dt>
+<dd>This should be passed to target_compile_options() if the targets are not used for linking </dd>
 <p> For each searched-for components, <code>XCB_&lt;component&gt;_FOUND</code> will be set to true if the corresponding xcb library was found, and false otherwise. If <code>XCB_&lt;component&gt;_FOUND</code> is true, the imported target <code>XCB::&lt;component&gt;</code> will be defined. This module will also attempt to determine <code>XCB_*_VERSION</code> variables for each imported target, although <code>XCB_VERSION</code> should normally be sufficient. </p>
 <p> In general we recommend using the imported targets, as they are easier to use and provide more control. Bear in mind, however, that if any target is in the link interface of an exported library, it must be made available by the package config file. </p>
 <p> Since pre-1.0.0.</dl>
 <h2>Copyright</h2>
 <p>KDE Developers</p>
+</p>

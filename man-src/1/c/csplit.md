@@ -16,36 +16,36 @@ description: "csplit – split a file into sections determined by context lines"
 <p> Read standard input if FILE is &#8211; </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;suffix-format</code>=<i>,FORMAT/</i></p>
-<dd> use sprintf FORMAT instead of %02d</p>
-<dt><code>-f</code>, <code>&#8211;prefix</code>=<i>,PREFIX/</i></p>
-<dd> use PREFIX instead of &#8216;xx&#8217;</p>
-<dt><code>-k</code>, <code>&#8211;keep-files</code></p>
-<dd> do not remove output files on errors</p>
-<dt><code>&#8211;suppress-matched</code></p>
-<dd> suppress the lines matching PATTERN</p>
-<dt><code>-n</code>, <code>&#8211;digits</code>=<i>,DIGITS/</i></p>
-<dd> use specified number of digits instead of 2</p>
-<dt><code>-s</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></p>
-<dd> do not print counts of output file sizes</p>
-<dt><code>-z</code>, <code>&#8211;elide-empty-files</code></p>
-<dd> remove empty output files</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-b</code>, <code>&#8211;suffix-format</code>=<i>,FORMAT/</i></dt>
+<dd> use sprintf FORMAT instead of %02d</dd>
+<dt><code>-f</code>, <code>&#8211;prefix</code>=<i>,PREFIX/</i></dt>
+<dd> use PREFIX instead of &#8216;xx&#8217;</dd>
+<dt><code>-k</code>, <code>&#8211;keep-files</code></dt>
+<dd> do not remove output files on errors</dd>
+<dt><code>&#8211;suppress-matched</code></dt>
+<dd> suppress the lines matching PATTERN</dd>
+<dt><code>-n</code>, <code>&#8211;digits</code>=<i>,DIGITS/</i></dt>
+<dd> use specified number of digits instead of 2</dd>
+<dt><code>-s</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
+<dd> do not print counts of output file sizes</dd>
+<dt><code>-z</code>, <code>&#8211;elide-empty-files</code></dt>
+<dd> remove empty output files</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h3>Each PATTERN may be:</h3>
 <dl>
-<dt>INTEGER</p>
-<dd> copy up to but not including specified line number</p>
-<dt>/REGEXP/[OFFSET]</p>
-<dd> copy up to but not including a matching line</p>
-<dt>%REGEXP%[OFFSET]</p>
-<dd> skip to, but not including a matching line</p>
-<dt>{INTEGER}</p>
-<dd> repeat the previous pattern specified number of times</p>
-<dt>{*}</p>
-<dd> repeat the previous pattern as many times as possible</dl>
+<dt>INTEGER</dt>
+<dd> copy up to but not including specified line number</dd>
+<dt>/REGEXP/[OFFSET]</dt>
+<dd> copy up to but not including a matching line</dd>
+<dt>%REGEXP%[OFFSET]</dt>
+<dd> skip to, but not including a matching line</dd>
+<dt>{INTEGER}</dt>
+<dd> repeat the previous pattern specified number of times</dd>
+<dt>{*}</dt>
+<dd> repeat the previous pattern as many times as possible</dd></dl>
 <p> A line OFFSET is a required &#8216;+&#8217; or &#8216;-&#8216; followed by a positive integer.</p>
 <h2>AUTHOR</h2>
 <p> Written by Stuart Kemp and David MacKenzie.</p>

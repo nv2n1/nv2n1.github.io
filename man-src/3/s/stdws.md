@@ -11,9 +11,7 @@ std::ws - std::ws
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;istream&gt;
-
 template&lt; class CharT, class Traits &gt;
-
 std::basic_istream&lt;CharT,Traits&gt;&amp; ws( std::basic_istream&lt;CharT, Traits&gt;&amp; is );</code></pre> 
 Discards leading whitespace from an input stream. 
 Behaves as an UnformattedInputFunction, except that is.gcount() is not modified. After constructing and checking the sentry object, extracts characters from the stream and discards them until any one of the following conditions occurs: 
@@ -36,14 +34,10 @@ If eofbit is set on the stream prior to the call, the construction of the sentry
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;istream&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::istringstream s(&quot;     this is a test&quot;);
     std::string line;

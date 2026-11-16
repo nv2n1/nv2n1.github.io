@@ -16,37 +16,37 @@ description: "xisdnload – ISDN load average display for X"
 <h2>OPTIONS</h2>
 <p> <i>Xisdnload</i> accepts all of the standard X Toolkit command line options (see <i>X(1)</i>). The order of the options in unimportant. <i>xisdnload also accepts the following additional options: </p>
 <dl>
-<dt></i><code>-hl </code><i>color</i> or -highlight <i>color</i></p>
-<dd> This option specifies the color of the scale lines.</p>
-<dt><code>-online </code><i>color</i></p>
-<dd> This option specifies the background color when one or more ISDN channels are online.</p>
-<dt><code>-active </code><i>color</i></p>
-<dd> This option specifies the background color when any route is found that is directed to an interface named isdn* or ippp*.</p>
-<dt><code>-trying </code><i>color</i></p>
-<dd> This option specifies the background color when at least one attempt to setup a cennection is pending.</p>
-<dt><code>-jumpscroll </code>number of pixels</p>
-<dd> The number of pixels to shift the graph to the left when the graph reaches the right edge of the window. The default value is 1/2 the width of the current window. Smooth scrolling can be achieved by setting it to 1.</p>
-<dt><code>-label </code><i>string</i></p>
-<dd> The string to put into the label above the load average when beeing online. It is interpreted as a standard format string and may contain the dialed number (%s), the minutes (%d) and seconds (%d) being online, the actual cps rate (%f), the amount of kbytes transfered (%d) and a connection history (%s) in this sequence.</p>
-<dt><code>-nolabel</code></p>
-<dd> If this command line option is specified then no label will be displayed above the load graph.</p>
-<dt><code>-scale </code><i>integer</i></p>
-<dd> This option specifies the minimum number of tick marks in the histogram, where one division represents one load average point. If the load goes above this number, <i>xisdnload</i> will create more divisions, but it will never use fewer than this number. The default is 1.</dl>
+<dt></i><code>-hl </code><i>color</i> or -highlight <i>color</i></dt>
+<dd> This option specifies the color of the scale lines.</dd>
+<dt><code>-online </code><i>color</i></dt>
+<dd> This option specifies the background color when one or more ISDN channels are online.</dd>
+<dt><code>-active </code><i>color</i></dt>
+<dd> This option specifies the background color when any route is found that is directed to an interface named isdn* or ippp*.</dd>
+<dt><code>-trying </code><i>color</i></dt>
+<dd> This option specifies the background color when at least one attempt to setup a cennection is pending.</dd>
+<dt><code>-jumpscroll </code>number of pixels</dt>
+<dd> The number of pixels to shift the graph to the left when the graph reaches the right edge of the window. The default value is 1/2 the width of the current window. Smooth scrolling can be achieved by setting it to 1.</dd>
+<dt><code>-label </code><i>string</i></dt>
+<dd> The string to put into the label above the load average when beeing online. It is interpreted as a standard format string and may contain the dialed number (%s), the minutes (%d) and seconds (%d) being online, the actual cps rate (%f), the amount of kbytes transfered (%d) and a connection history (%s) in this sequence.</dd>
+<dt><code>-nolabel</code></dt>
+<dd> If this command line option is specified then no label will be displayed above the load graph.</dd>
+<dt><code>-scale </code><i>integer</i></dt>
+<dd> This option specifies the minimum number of tick marks in the histogram, where one division represents one load average point. If the load goes above this number, <i>xisdnload</i> will create more divisions, but it will never use fewer than this number. The default is 1.</dd></dl>
 <dl>
-<dt><code>-update </code><i>seconds</i></p>
-<dd> This option specifies the interval in seconds at which <i>xisdnload</i> updates its display. The minimum amount of time allowed between updates is 1 second. The default is 10.</dl>
+<dt><code>-update </code><i>seconds</i></dt>
+<dd> This option specifies the interval in seconds at which <i>xisdnload</i> updates its display. The minimum amount of time allowed between updates is 1 second. The default is 10.</dd></dl>
 <dl>
-<dt><code>-activate </code><i>command</i></p>
-<dd> This option specifies a command to be executed when dial-on-demand is not active and you clicked on the xisdnload stripchart. A typical command might be something like `sudo /etc/init.d/isdn start&#8217; to start up your connection.</dl>
+<dt><code>-activate </code><i>command</i></dt>
+<dd> This option specifies a command to be executed when dial-on-demand is not active and you clicked on the xisdnload stripchart. A typical command might be something like `sudo /etc/init.d/isdn start&#8217; to start up your connection.</dd></dl>
 <dl>
-<dt><code>-deactivate </code><i>command</i></p>
-<dd> This option specifies a command to be executed when dial-on-demand is active and you clicked on the xisdnload stripchart. A typical command might be something like `sudo /etc/init.d/isdn stop&#8217; to shut down your connection.</dl>
+<dt><code>-deactivate </code><i>command</i></dt>
+<dd> This option specifies a command to be executed when dial-on-demand is active and you clicked on the xisdnload stripchart. A typical command might be something like `sudo /etc/init.d/isdn stop&#8217; to shut down your connection.</dd></dl>
 <dl>
-<dt><code>-manual</code></p>
-<dd> With this option the interface is assumed to be active and in manual dial mode. The activate/deactive commands are selected depending on the connection state. A typical activate command might be `isdnctrl dial ippp0&#8242;, and to deactivate `isdnctrl hangup ippp0&#8242;.</dl>
+<dt><code>-manual</code></dt>
+<dd> With this option the interface is assumed to be active and in manual dial mode. The activate/deactive commands are selected depending on the connection state. A typical activate command might be `isdnctrl dial ippp0&#8242;, and to deactivate `isdnctrl hangup ippp0&#8242;.</dd></dl>
 <dl>
-<dt><code>-number </code><i>regexp</i></p>
-<dd> The supplied regular expression is used to limit the set numbers to be observed by <i>xisdnload</i>.</dl>
+<dt><code>-number </code><i>regexp</i></dt>
+<dd> The supplied regular expression is used to limit the set numbers to be observed by <i>xisdnload</i>.</dd></dl>
 <h2>RESOURCES</h2>
 <p> See the resource file for the available resources.</p>
 <h2>WIDGETS</h2>
@@ -59,10 +59,10 @@ XISDNLoad  xisdnload
 </pre>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to get the default host and display number.</p>
-<dt><code>XENVIRONMENT</code></p>
-<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display number.</dd>
+<dt><code>XENVIRONMENT</code></dt>
+<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dd></dl>
 <h2>FILES</h2>
 <p> &lt;XRoot&gt;/lib/X11/app-defaults/XISDNLoad &#8211; specifies required resources.<br />
  /proc/net/route &#8211; kernel routing table. The proc filesystem is needed by xisdnload to detect wheather a dial-on-demand is active. </p>

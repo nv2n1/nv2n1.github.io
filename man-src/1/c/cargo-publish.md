@@ -15,46 +15,38 @@ description: "cargo-publish – Upload a package to the registry."
 <p> Upload a package to the registry.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this message.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this message.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;host </code>HOST</p>
-<dd> Host to upload the package to.</p>
+</dl>
+<dt><code>&#8211;host </code>HOST</dt>
+<dd> Host to upload the package to.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;token </code>TOKEN</p>
-<dd> Token to use when uploading.</p>
+</dl>
+<dt><code>&#8211;token </code>TOKEN</dt>
+<dd> Token to use when uploading.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;no-verify</code></p>
-<dd> Don&#8217;t verify package tarball before publish.</p>
+</dl>
+<dt><code>&#8211;no-verify</code></dt>
+<dd> Don&#8217;t verify package tarball before publish.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;manifest-path </code>PATH</p>
-<dd> Path to the manifest of the package to publish.</p>
+</dl>
+<dt><code>&#8211;manifest-path </code>PATH</dt>
+<dd> Path to the manifest of the package to publish.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Use verbose output.</p>
+</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Use verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> No output printed to stdout.</p>
+</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> No output printed to stdout.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;color </code>WHEN</p>
-<dd> Coloring: auto, always, never.</p>
+</dl>
+<dt><code>&#8211;color </code>WHEN</dt>
+<dd> Coloring: auto, always, never.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1), <a href="/docs/linux/man/1-cargo-install/">cargo-install</a>(1), <a href="/docs/linux/man/1-cargo-search/">cargo-search</a>(1)</p>

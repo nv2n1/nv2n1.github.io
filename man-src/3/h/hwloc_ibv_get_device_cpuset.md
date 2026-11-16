@@ -27,16 +27,16 @@ description: "hwlocality_openfabrics – Interoperability with OpenFabrics"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dl>
+</dt><dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_ibv_get_device_osdev_by_name (<code>hwloc_topology_t</code> topology, const char * ibname) [inline], [static]</h3>
 <p> Get the hwloc OS device object corresponding to the OpenFabrics device named ibname. Return the OS device object describing the OpenFabrics device whose name is ibname. Returns NULL if there is none. The name ibname is usually obtained from ibv_get_device_name(). </p>
 <p> The topology topology does not necessarily have to match the current machine. For instance the topology may be an XML import of a remote host. I/O devices detection must be enabled in the topology. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dl>
+</dt><dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

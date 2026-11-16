@@ -19,8 +19,8 @@ description: "dh_installmanpages – old-style man page installer (deprecated)"
 <p> After the man page installation step, <code>dh_installmanpages</code> will check to see if any of the man pages are <i>.so</i> links. If so, it changes them to symlinks.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>file</i> &#8230;</p>
-<dd> Do not install these files as man pages, even if they look like valid man pages.</dl>
+<dt><i>file</i> &#8230;</dt>
+<dd> Do not install these files as man pages, even if they look like valid man pages.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>dh_installmanpages</code> will install the man pages it finds into <code>all</code> packages you tell it to act on, since it can&#8217;t tell what package the man pages belong in. This is almost never what you really want (use <code>-p</code> to work around this, or use the much better <i><a href="/docs/linux/man/1-dh_installman/">dh_installman</a></i>(1) program instead). </p>
 <p> Files ending in <i>.man</i> will be ignored. </p>

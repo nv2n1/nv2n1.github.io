@@ -15,7 +15,6 @@ url: "/docs/linux/man/1-mimeexplode/"
 
  <pre>
     mimeexplode &lt;mime-msg-file&gt; &lt;mime-msg-file&gt; ...
-    
     someprocess | mimeexplode -
 </pre>
 

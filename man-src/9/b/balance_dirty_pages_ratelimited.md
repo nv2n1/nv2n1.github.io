@@ -15,7 +15,7 @@ balance_dirty_pages_ratelimited - balance dirty memory state
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>address_space which was dirtied</dl>
+<dl><dd></dd><dd>address_space which was dirtied</dd></dl>
 
 <h2>Description</h2>
 

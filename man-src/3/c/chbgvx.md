@@ -19,7 +19,7 @@ description: "chbgvx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHBGVX computes all the eigenvalues, and optionally, the eigenvectors
  of a complex generalized Hermitian-definite banded eigenproblem, of
@@ -28,11 +28,11 @@ description: "chbgvx.f –"
  eigenvectors can be selected by specifying either all eigenvalues,
  a range of values or a range of indices for the desired eigenvalues.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBZ</i> </p>
+</dt><dd> <i>JOBZ</i> </dd>
 <pre>
           JOBZ is CHARACTER*1
           = 'N':  Compute eigenvalues only;
@@ -218,18 +218,18 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dl>
+</dt><dd> Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dd></dl>
 <p> Definition at line 290 of file chbgvx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -15,7 +15,7 @@ snd_ac97_get_short_name - retrieve codec name
 <h2>Arguments</h2>
 
 <i>ac97</i>
-<dl><dd><dd>the codec instance</dl>
+<dl><dd></dd><dd>the codec instance</dd></dl>
 
 <h2>Return</h2>
 

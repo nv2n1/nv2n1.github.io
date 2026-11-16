@@ -35,65 +35,65 @@ description: "ldns_pkt_set_flags, ldns_pkt_set_id, ldns_pkt_set_qr, ldns_pkt_set
 <p> void ldns_pkt_set_tsig(ldns_pkt *p, ldns_rr *t); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_pkt_set_flags</i>()</p>
-<dd>sets the flags in a packet. .br <code>pkt</code>: the packet to operate on .br <code>flags</code>: ORed values: LDNS_QR| LDNS_AR for instance .br Returns true on success otherwise false</dl>
+<dt> <i>ldns_pkt_set_flags</i>()</dt>
+<dd>sets the flags in a packet. .br <code>pkt</code>: the packet to operate on .br <code>flags</code>: ORed values: LDNS_QR| LDNS_AR for instance .br Returns true on success otherwise false</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_id</i>()</p>
-<dd>Set the packet&#8217;s id .br <code>p</code>: the packet .br <code>id</code>: the id to set</dl>
+<dt> <i>ldns_pkt_set_id</i>()</dt>
+<dd>Set the packet&#8217;s id .br <code>p</code>: the packet .br <code>id</code>: the id to set</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_qr</i>()</p>
-<dd>Set the packet&#8217;s qr bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dl>
+<dt> <i>ldns_pkt_set_qr</i>()</dt>
+<dd>Set the packet&#8217;s qr bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_aa</i>()</p>
-<dd>Set the packet&#8217;s aa bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dl>
+<dt> <i>ldns_pkt_set_aa</i>()</dt>
+<dd>Set the packet&#8217;s aa bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_tc</i>()</p>
-<dd>Set the packet&#8217;s tc bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dl>
+<dt> <i>ldns_pkt_set_tc</i>()</dt>
+<dd>Set the packet&#8217;s tc bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_rd</i>()</p>
-<dd>Set the packet&#8217;s rd bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dl>
+<dt> <i>ldns_pkt_set_rd</i>()</dt>
+<dd>Set the packet&#8217;s rd bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_cd</i>()</p>
-<dd>Set the packet&#8217;s cd bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dl>
+<dt> <i>ldns_pkt_set_cd</i>()</dt>
+<dd>Set the packet&#8217;s cd bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_ra</i>()</p>
-<dd>Set the packet&#8217;s ra bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dl>
+<dt> <i>ldns_pkt_set_ra</i>()</dt>
+<dd>Set the packet&#8217;s ra bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_ad</i>()</p>
-<dd>Set the packet&#8217;s ad bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dl>
+<dt> <i>ldns_pkt_set_ad</i>()</dt>
+<dd>Set the packet&#8217;s ad bit .br <code>p</code>: the packet .br <code>b</code>: the value to set (boolean)</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_opcode</i>()</p>
-<dd>Set the packet&#8217;s opcode .br <code>p</code>: the packet .br <code>c</code>: the opcode</dl>
+<dt> <i>ldns_pkt_set_opcode</i>()</dt>
+<dd>Set the packet&#8217;s opcode .br <code>p</code>: the packet .br <code>c</code>: the opcode</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_rcode</i>()</p>
-<dd>Set the packet&#8217;s respons code .br <code>p</code>: the packet .br <code>c</code>: the rcode</dl>
+<dt> <i>ldns_pkt_set_rcode</i>()</dt>
+<dd>Set the packet&#8217;s respons code .br <code>p</code>: the packet .br <code>c</code>: the rcode</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_qdcount</i>()</p>
-<dd>Set the packet&#8217;s qd count .br <code>p</code>: the packet .br <code>c</code>: the count</dl>
+<dt> <i>ldns_pkt_set_qdcount</i>()</dt>
+<dd>Set the packet&#8217;s qd count .br <code>p</code>: the packet .br <code>c</code>: the count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_ancount</i>()</p>
-<dd>Set the packet&#8217;s an count .br <code>p</code>: the packet .br <code>c</code>: the count</dl>
+<dt> <i>ldns_pkt_set_ancount</i>()</dt>
+<dd>Set the packet&#8217;s an count .br <code>p</code>: the packet .br <code>c</code>: the count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_nscount</i>()</p>
-<dd>Set the packet&#8217;s ns count .br <code>p</code>: the packet .br <code>c</code>: the count</dl>
+<dt> <i>ldns_pkt_set_nscount</i>()</dt>
+<dd>Set the packet&#8217;s ns count .br <code>p</code>: the packet .br <code>c</code>: the count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_arcount</i>()</p>
-<dd>Set the packet&#8217;s arcount .br <code>p</code>: the packet .br <code>c</code>: the count</dl>
+<dt> <i>ldns_pkt_set_arcount</i>()</dt>
+<dd>Set the packet&#8217;s arcount .br <code>p</code>: the packet .br <code>c</code>: the count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_answerfrom</i>()</p>
-<dd>Set the packet&#8217;s answering server .br <code>p</code>: the packet .br <code>r</code>: the address</dl>
+<dt> <i>ldns_pkt_set_answerfrom</i>()</dt>
+<dd>Set the packet&#8217;s answering server .br <code>p</code>: the packet .br <code>r</code>: the address</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_querytime</i>()</p>
-<dd>Set the packet&#8217;s query time .br <code>p</code>: the packet .br <code>t</code>: the querytime in msec</dl>
+<dt> <i>ldns_pkt_set_querytime</i>()</dt>
+<dd>Set the packet&#8217;s query time .br <code>p</code>: the packet .br <code>t</code>: the querytime in msec</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_size</i>()</p>
-<dd>Set the packet&#8217;s size .br <code>p</code>: the packet .br <code>s</code>: the size</dl>
+<dt> <i>ldns_pkt_set_size</i>()</dt>
+<dd>Set the packet&#8217;s size .br <code>p</code>: the packet .br <code>s</code>: the size</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_section_count</i>()</p>
-<dd>Set a packet&#8217;s section count to x .br <code>p</code>: the packet .br <code>s</code>: the section .br <code>x</code>: the section count</dl>
+<dt> <i>ldns_pkt_set_section_count</i>()</dt>
+<dd>Set a packet&#8217;s section count to x .br <code>p</code>: the packet .br <code>s</code>: the section .br <code>x</code>: the section count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_tsig</i>()</p>
-<dd>Set the packet&#8217;s tsig rr .br <code>p</code>: the packet .br <code>t</code>: the tsig rr</dl>
+<dt> <i>ldns_pkt_set_tsig</i>()</dt>
+<dd>Set the packet&#8217;s tsig rr .br <code>p</code>: the packet .br <code>t</code>: the tsig rr</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

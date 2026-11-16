@@ -18,41 +18,41 @@ description: "lsns – list namespaces"
 <h2>Options</h2>
 <p><code>-J</code>, <code>&#8211;json</code></p>
 <dl>
-<dd>Use JSON output format.</dl>
+<dd>Use JSON output format.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;list</code></p>
 <dl>
-<dd>Use list output format.</dl>
+<dd>Use list output format.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
-<dd>Do not print a header line.</dl>
+<dd>Do not print a header line.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code> <i>list</i></p>
 <dl>
-<dd>Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns. </p>
+<dd>Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns. </dd>
 <p> The default list of columns may be extended if <i>list</i> is specified in the format <code>+</code><i>list</i> (e.g., <code>lsns -o +PATH</code>).</dl>
 <p> <code>&#8211;output-all</code></p>
 <dl>
-<dd>Output all available columns.</dl>
+<dd>Output all available columns.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;task</code> <i>PID</i></p>
 <dl>
-<dd>Display only the namespaces held by the process with this <i>PID</i>.</dl>
+<dd>Display only the namespaces held by the process with this <i>PID</i>.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;raw</code></p>
 <dl>
-<dd>Use the raw output format.</dl>
+<dd>Use the raw output format.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;type</code> <i>type</i></p>
 <dl>
-<dd>Display the specified <i>type</i> of namespaces only. The supported types are <code>mnt</code>, <code>net</code>, <code>ipc</code>, <code>user</code>, <code>pid</code>, <code>uts</code>, <code>cgroup</code> and <code>time</code>. This option may be given more than once.</dl>
+<dd>Display the specified <i>type</i> of namespaces only. The supported types are <code>mnt</code>, <code>net</code>, <code>ipc</code>, <code>user</code>, <code>pid</code>, <code>uts</code>, <code>cgroup</code> and <code>time</code>. This option may be given more than once.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;notruncate</code></p>
 <dl>
-<dd>Do not truncate text in columns.</dl>
+<dd>Do not truncate text in columns.</dd></dl>
 <p> <code>-W</code>, <code>&#8211;nowrap</code></p>
 <dl>
-<dd>Do not use multi-line text in columns.</dl>
+<dd>Do not use multi-line text in columns.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Authors</h2>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-nsenter/">nsenter</a></code>(1), <code><a href="/docs/linux/man/1-unshare/">unshare</a></code>(1), <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2), <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7), <code><a href="/docs/linux/man/2-ioctl_ns/">ioctl_ns</a>(2)</code></p>

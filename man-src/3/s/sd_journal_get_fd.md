@@ -10,17 +10,11 @@ description: "sd_journal_get_fd, sd_journal_get_events, sd_journal_get_timeout, 
 <p>sd_journal_get_fd, sd_journal_get_events, sd_journal_get_timeout, sd_journal_process, sd_journal_wait, sd_journal_reliable_fd, SD_JOURNAL_NOP, SD_JOURNAL_APPEND, SD_JOURNAL_INVALIDATE &#8211; Journal change notification interface</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-journal.h&gt;
-
 int sd_journal_get_fd(sd_journal *j);
-
 int sd_journal_get_events(sd_journal *j);
-
 int sd_journal_get_timeout(sd_journal *j, uint64_t *timeout_usec);
-
 int sd_journal_process(sd_journal *j);
-
 int sd_journal_wait(sd_journal *j, uint64_t timeout_usec);
-
 int sd_journal_reliable_fd(sd_journal *j);</code></pre>
 <h2>Description</h2>
 <p><code>sd_journal_get_fd()</code></p>
@@ -35,7 +29,7 @@ else {<br />
     clock_getttime(CLOCK_MONOTONIC, &amp;ts);<br />
     n = (uint64_t)ts.tv_sec * 1000000 + ts.tv_nsec / 1000;<br />
     msec = t &gt; n ? (int)((t &#8211; n + 999) / 1000) : 0;<br />
-} The code above does not do any error checking for brevity&#8217;s sake. The calculated <i>msec</i> integer can be passed directly as <code>poll()</code>&#8216;s timeout parameter. After each <code>poll()</code> wake-up <code>sd_journal_process()</code> needs to be called to process events. This call will also indicate what kind of change has been detected (see below; note that spurious wake-ups are possible). A synchronous alternative for using <code>sd_journal_get_fd()</code>, <code>sd_journal_get_events()</code>, <code>sd_journal_get_timeout()</code> and <code>sd_journal_process()</code> is <code>sd_journal_wait()</code>. It will synchronously wait until the journal gets changed. The maximum time this call sleeps may be controlled with the <i>timeout_usec</i> parameter. Pass <code>(uint64_t) -1</code> to wait indefinitely. Internally this call simply combines <code>sd_journal_get_fd()</code>, <code>sd_journal_get_events()</code>, <code>sd_journal_get_timeout()</code>, <code>poll()</code> and <code>sd_journal_process()</code> into one. <code>sd_journal_reliable_fd()</code> may be used to check whether the wakeup events from the file descriptor returned by <code>sd_journal_get_fd()</code> are known to be immediately triggered. On certain file systems where file change events from the OS are not available (such as NFS) changes need to be polled for repeatedly, and hence are detected only with a certain latency. This call will return a positive value if the journal changes are detected immediately and zero when they need to be polled for and hence might be noticed only with a certain latency. Note that there&#8217;s usually no need to invoke this function directly as <code>sd_journal_get_timeout()</code> on these file systems will ask for timeouts explicitly anyway.</p>
+} The code above does not do any error checking for brevity&#8217;s sake. The calculated <i>msec</i> integer can be passed directly as <code>poll()</code>&#8216;s timeout parameter. After each <code>poll()</code> wake-up <code>sd_journal_process()</code> needs to be called to process events. This call will also indicate what kind of change has been detected (see below; note that spurious wake-ups are possible). A synchronous alternative for using <code>sd_journal_get_fd()</code>, <code>sd_journal_get_events()</code>, <code>sd_journal_get_timeout()</code> and <code>sd_journal_process()</code> is <code>sd_journal_wait()</code>. It will synchronously wait until the journal gets changed. The maximum time this call sleeps may be controlled with the <i>timeout_usec</i> parameter. Pass <code>(uint64_t) -1</code> to wait indefinitely. Internally this call simply combines <code>sd_journal_get_fd()</code>, <code>sd_journal_get_events()</code>, <code>sd_journal_get_timeout()</code>, <code>poll()</code> and <code>sd_journal_process()</code> into one. <code>sd_journal_reliable_fd()</code> may be used to check whether the wakeup events from the file descriptor returned by <code>sd_journal_get_fd()</code> are known to be immediately triggered. On certain file systems where file change events from the OS are not available (such as NFS) changes need to be polled for repeatedly, and hence are detected only with a certain latency. This call will return a positive value if the journal changes are detected immediately and zero when they need to be polled for and hence might be noticed only with a certain latency. Note that there&#8217;s usually no need to invoke this function directly as <code>sd_journal_get_timeout()</code> on these file systems will ask for timeouts explicitly anyway.</dd>
 <h2>Return Value</h2>
 <p><code>sd_journal_get_fd()</code> returns a valid file descriptor on success or a negative errno-style error code. </p>
 <p> <code>sd_journal_get_events()</code> returns a combination of <code>POLLIN</code>, <code>POLLOUT</code> and suchlike on success or a negative errno-style error code. </p>
@@ -90,12 +84,10 @@ else {<br />
 } Waiting with <code>poll()</code> (this example lacks all error checking for the sake of simplicity): </p>
 <pre><code>#include &lt;poll.h&gt;
 #include &lt;systemd/sd-journal.h&gt;
-
 int wait_for_changes(sd_journal *j)
 {
     struct pollfd pollfd;
     int msec;
-
     sd_journal_get_timeout(m, &amp;t);
     if (t == (uint64_t)-1)
         msec = -1;
@@ -106,7 +98,6 @@ int wait_for_changes(sd_journal *j)
         n = (uint64_t)ts.tv_sec * 1000000 + ts.tv_nsec / 1000;
         msec = t &gt; n ? (int)((t - n + 999) / 1000) : 0;
     }
-
     pollfd.fd = sd_journal_get_fd(j);
     pollfd.events = sd_journal_get_events(j);
     poll(&amp;pollfd, 1, msec);

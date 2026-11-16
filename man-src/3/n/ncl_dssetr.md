@@ -10,9 +10,9 @@ DSSETR - Sets the value of an internal parameter of type REAL.
 
 <h2>Synopsis</h2>CALL DSSETR (PNAM, RVAL);
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be set.
-<dt>RVAL
-<dd>A REAL value that is the value to be assigned to the internal parameter specified by pnam.</dl><h2>Usage</h2>This routine allows you to set the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
+</dt><dd>A character string that specifies the name of the parameter to be set.
+</dd><dt>RVAL
+</dt><dd>A REAL value that is the value to be assigned to the internal parameter specified by pnam.</dd></dl><h2>Usage</h2>This routine allows you to set the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
 <h2>Access</h2>To use DSSETR, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>dsgrid, dsgrid_params, dsgrid2s, dsgrid3s, dsgrid2d, dsgrid3d, dspnt2s, dspnt2d, dspnt3s, dspnt3d dsgetr. 
 

@@ -135,7 +135,6 @@ assert(file);
 assert(streq(zfile_filename(file, &quot;.&quot;), &quot;bilbo&quot;));
 assert(zfile_is_readable(file) == false);
 zfile_destroy(&amp;file);
-
 //  Create a test file in some random subdirectory
 file = zfile_new(&quot;./this/is/a/test&quot;, &quot;bilbo&quot;);
 assert(file);
@@ -144,7 +143,6 @@ assert(rc == 0);
 zchunk_t *chunk = zchunk_new(NULL, 100);
 assert(chunk);
 zchunk_fill(chunk, 0, 100);
-
 //  Write 100 bytes at position 1,000,000 in the file
 rc = zfile_write(file, chunk, 1000000);
 assert(rc == 0);
@@ -154,7 +152,6 @@ assert(zfile_is_readable(file));
 assert(zfile_cursize(file) == 1000100);
 assert(!zfile_is_stable(file));
 assert(zfile_digest(file));
-
 //  Now truncate file from outside
 int handle = open(&quot;./this/is/a/test/bilbo&quot;, O_WRONLY | O_TRUNC | O_BINARY, 0);
 assert(handle &gt;= 0);
@@ -165,12 +162,10 @@ close(handle);
 assert(zfile_has_changed(file));
 zclock_sleep(1001);
 assert(zfile_has_changed(file));
-
 assert(!zfile_is_stable(file));
 zfile_restat(file);
 assert(zfile_is_stable(file));
 assert(streq(zfile_digest(file), &quot;4AB299C8AD6ED14F31923DD94F8B5F5CB89DFB54&quot;));
-
 //  Check we can read from file
 rc = zfile_input(file);
 assert(rc == 0);
@@ -179,7 +174,6 @@ assert(chunk);
 assert(zchunk_size(chunk) == 13);
 zchunk_destroy(&amp;chunk);
 zfile_close(file);
-
 //  Check we can read lines from file
 rc = zfile_input(file);
 assert(rc == 0);
@@ -188,7 +182,6 @@ assert(streq(line, &quot;Hello, World&quot;));
 line = zfile_readln(file);
 assert(line == NULL);
 zfile_close(file);
-
 //  Try some fun with symbolic links
 zfile_t *link = zfile_new(&quot;./this/is/a/test&quot;, &quot;bilbo.ln&quot;);
 assert(link);
@@ -197,7 +190,6 @@ assert(rc == 0);
 fprintf(zfile_handle(link), &quot;./this/is/a/test/bilbo
 &quot;);
 zfile_destroy(&amp;link);
-
 link = zfile_new(&quot;./this/is/a/test&quot;, &quot;bilbo.ln&quot;);
 assert(link);
 rc = zfile_input(link);
@@ -207,7 +199,6 @@ assert(chunk);
 assert(zchunk_size(chunk) == 13);
 zchunk_destroy(&amp;chunk);
 zfile_destroy(&amp;link);
-
 //  Remove file and directory
 zdir_t *dir = zdir_new(&quot;./this&quot;, NULL);
 assert(dir);
@@ -215,7 +206,6 @@ assert(zdir_cursize(dir) == 26);
 zdir_remove(dir, true);
 assert(zdir_cursize(dir) == 0);
 zdir_destroy(&amp;dir);
-
 //  Check we can no longer read from file
 assert(zfile_is_readable(file));
 zfile_restat(file);
@@ -233,7 +223,8 @@ zfile_destroy(&amp;file);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

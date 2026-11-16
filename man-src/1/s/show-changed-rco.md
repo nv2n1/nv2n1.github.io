@@ -16,27 +16,27 @@ description: "show-changed-rco – show changes in an RPM package"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-h, &#8211;help</code></p>
+</dt><dt><code>-h, &#8211;help</code></dt>
 <dd>
-<dd> show this help message and exit</p>
-<dt><code>-C, &#8211;cache</code></p>
-<dd> Tells repoquery to run entirely from YUM cache &#8211; does not download any metadata or update the cache. Queries in this mode can fail or give partial/incorrect results if the cache isn&#8217;t fully populated beforehand with eg &quot;yum makecache&quot;.</p>
-<dt><code>-c &lt;config file&gt;, &#8211;config=&lt;config file&gt;</code></p>
-<dd> Use alternative config file (default is /etc/yum.conf). </p>
-<dt><code>&#8211;repoid=&lt;repo&gt;</code></p>
-<dd> Specify which repository to query. Using this option disables all repositories not explicitly enabled with &#8211;repoid option (can be used multiple times). By default repoquery uses whatever repositories are enabled in YUM configuration.</p>
-<dt><code>&#8211;enablerepo=&lt;repo&gt;</code></p>
-<dd> In addition to the default set, query the given additional repository, even if it is disabled in YUM configuration. Can be used multiple times.</p>
-<dt><code>&#8211;disablerepo=&lt;repo&gt;</code></p>
-<dd> Do not query the given repository, even if it is enabled in YUM configuration. Can be used multiple times.</p>
-<dt><code>&#8211;repofrompath=&lt;repoid&gt;,&lt;path/url&gt;</code></p>
-<dd> Specify a path or url to a repository (same path as in a baseurl) to add to the repositories for this query. This option can be used multiple times. If you want to view only the pkgs from this repository combine this with &#8211;repoid. The repoid for the repository is specified by &lt;repoid&gt;. </p>
-<dt><code>&#8211;old-packages=&lt;pkg&gt;</code></p>
-<dd> Explicitly list the valid old packages to match the new packages against.</p>
-<dt><code>&#8211;ignore-arch</code></p>
-<dd> Ignore arch. so you can compare foo-2.i686 to foo-1.x86_64.</p>
-<dt><code>&#8211;skip-new</code></p>
-<dd> Only give output for packages which we&#8217;ve found an old package for. </p>
+</dd><dd> show this help message and exit</dd>
+<dt><code>-C, &#8211;cache</code></dt>
+<dd> Tells repoquery to run entirely from YUM cache &#8211; does not download any metadata or update the cache. Queries in this mode can fail or give partial/incorrect results if the cache isn&#8217;t fully populated beforehand with eg &quot;yum makecache&quot;.</dd>
+<dt><code>-c &lt;config file&gt;, &#8211;config=&lt;config file&gt;</code></dt>
+<dd> Use alternative config file (default is /etc/yum.conf). </dd>
+<dt><code>&#8211;repoid=&lt;repo&gt;</code></dt>
+<dd> Specify which repository to query. Using this option disables all repositories not explicitly enabled with &#8211;repoid option (can be used multiple times). By default repoquery uses whatever repositories are enabled in YUM configuration.</dd>
+<dt><code>&#8211;enablerepo=&lt;repo&gt;</code></dt>
+<dd> In addition to the default set, query the given additional repository, even if it is disabled in YUM configuration. Can be used multiple times.</dd>
+<dt><code>&#8211;disablerepo=&lt;repo&gt;</code></dt>
+<dd> Do not query the given repository, even if it is enabled in YUM configuration. Can be used multiple times.</dd>
+<dt><code>&#8211;repofrompath=&lt;repoid&gt;,&lt;path/url&gt;</code></dt>
+<dd> Specify a path or url to a repository (same path as in a baseurl) to add to the repositories for this query. This option can be used multiple times. If you want to view only the pkgs from this repository combine this with &#8211;repoid. The repoid for the repository is specified by &lt;repoid&gt;. </dd>
+<dt><code>&#8211;old-packages=&lt;pkg&gt;</code></dt>
+<dd> Explicitly list the valid old packages to match the new packages against.</dd>
+<dt><code>&#8211;ignore-arch</code></dt>
+<dd> Ignore arch. so you can compare foo-2.i686 to foo-1.x86_64.</dd>
+<dt><code>&#8211;skip-new</code></dt>
+<dd> Only give output for packages which we&#8217;ve found an old package for. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

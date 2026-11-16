@@ -17,7 +17,7 @@ description: "globus_list –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> structure representing a node containing a single datum and a reference to additional elements in the list.</dl>
+</dt><dd> <i>A</i> structure representing a node containing a single datum and a reference to additional elements in the list.</dd></dl>
 <p> The special value NULL is used to represent a list with zero elements, also called an empty list. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>

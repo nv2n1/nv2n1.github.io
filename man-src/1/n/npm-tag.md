@@ -19,21 +19,19 @@ description: "npm-tag – Tag a published version"
 <p> A tag can be used when installing packages as a reference to a version instead of using a specific version number:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm install &lt;name&gt;@&lt;tag&gt;
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> When installing dependencies, a preferred tagged version may be specified:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm install --tag &lt;tag&gt;
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> This also applies to <code>npm dedupe</code>. </p>
 <p> Publishing a package always sets the &quot;latest&quot; tag to the published version.</p>
 <h2>PURPOSE</h2>
@@ -45,23 +43,21 @@ npm install --tag &lt;tag&gt;
 <p> The simplest way to avoid semver problems with tags is to use tags that do not begin with a number or the letter <code>v</code>.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> npm help publish</p>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help dedupe</p>
-<dt>&bull;</p>
-<dd> npm help 7 registry</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help 7 config</p>
-<dt>&bull;</p>
-<dd> npm apihelp tag</p>
-<dt>&bull;</p>
-<dd> npm help 5 npmrc</p>
-<dt>
-<dd>
+<dt>&bull;</dt>
+<dd> npm help publish</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help dedupe</dd>
+<dt>&bull;</dt>
+<dd> npm help 7 registry</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help 7 config</dd>
+<dt>&bull;</dt>
+<dd> npm apihelp tag</dd>
+<dt>&bull;</dt>
+<dd> npm help 5 npmrc</dd>
 </dl>
 <h2>Index</h2>

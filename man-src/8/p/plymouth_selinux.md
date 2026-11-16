@@ -44,14 +44,14 @@ description: "plymouth_selinux – Security Enhanced Linux Policy for the plymou
 <p> <code>plymouth_exec_t</code> </p>
 <p> &#8211; Set files with the plymouth_exec_t type, if you want to transition an executable to the plymouth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/plymouth, /usr/bin/plymouth </p>
+<dt>Paths:</dt>
+<dd>/bin/plymouth, /usr/bin/plymouth </dd>
 </dl>
 <p> <code>plymouthd_exec_t</code> </p>
 <p> &#8211; Set files with the plymouthd_exec_t type, if you want to transition an executable to the plymouthd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/plymouthd, /usr/sbin/plymouthd </p>
+<dt>Paths:</dt>
+<dd>/sbin/plymouthd, /usr/sbin/plymouthd </dd>
 </dl>
 <p> <code>plymouthd_spool_t</code> </p>
 <p> &#8211; Set files with the plymouthd_spool_t type, if you want to store the plymouthd files under the /var/spool directory. </p>

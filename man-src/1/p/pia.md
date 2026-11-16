@@ -16,24 +16,24 @@ description: "pia – play media files"
 <h2>OPTIONS</h2>
 <p> <code>pia</code> understands the usual toolkit options (-geometry + friends). Additional options are:</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> display help text</p>
-<dt><code>-v</code></p>
-<dd> be verbose.</p>
-<dt><code>-debug</code></p>
-<dd> enable debug messages.</p>
-<dt><code>-dsp &lt;dev&gt;</code></p>
-<dd> Use OSS device &lt;dev&gt; for sound.</p>
-<dt><code>-noxv</code></p>
-<dd> Disable Xvideo extension.</p>
-<dt><code>-nogl</code></p>
-<dd> Disable OpenGL.</p>
-<dt><code>-noaudio</code></p>
-<dd> Don&#8217;t play sound.</p>
-<dt><code>-novideo</code></p>
-<dd> Don&#8217;t play video.</p>
-<dt><code>-slow n</code></p>
-<dd> Slowdown video playback by factor n. n=2 doubles playback time, &#8230; This also turns off audio playback.</dl>
+<dt><code>-h</code></dt>
+<dd> display help text</dd>
+<dt><code>-v</code></dt>
+<dd> be verbose.</dd>
+<dt><code>-debug</code></dt>
+<dd> enable debug messages.</dd>
+<dt><code>-dsp &lt;dev&gt;</code></dt>
+<dd> Use OSS device &lt;dev&gt; for sound.</dd>
+<dt><code>-noxv</code></dt>
+<dd> Disable Xvideo extension.</dd>
+<dt><code>-nogl</code></dt>
+<dd> Disable OpenGL.</dd>
+<dt><code>-noaudio</code></dt>
+<dd> Don&#8217;t play sound.</dd>
+<dt><code>-novideo</code></dt>
+<dd> Don&#8217;t play video.</dd>
+<dt><code>-slow n</code></dt>
+<dd> Slowdown video playback by factor n. n=2 doubles playback time, &#8230; This also turns off audio playback.</dd></dl>
 <h2>SUPPORTED MOVIE FORMATS</h2>
 <p> Main purpose of this utility is to playback movie files recorded by xawtv, motv and streamer. It should be able to playback every AVI or QuickTime movie written by one of the mentioned utilities. Feel free to submit a bug report if this doesn&#8217;t work for some file.</p>
 <h3>QuickTime</h3>

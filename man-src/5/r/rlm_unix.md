@@ -14,8 +14,8 @@ description: "rlm_unix – FreeRADIUS Module"
 <p> As of FreeRADIUS 1.1.0, the module no longer reads, or caches /etc/passwd, /etc/shadow, or /etc/group. If you wish to cache those files, see <i>rlm_passwd</i>. Most, if not all, configurations should not need those files to be cached. </p>
 <p> The main configuration items to be aware of are:</p>
 <dl>
-<dt>radwtmp</p>
-<dd>The path to the system wtmp file to be used for keeping the database of online users as read by the &#8216;radlast&#8217; program.</dl>
+<dt>radwtmp</dt>
+<dd>The path to the system wtmp file to be used for keeping the database of online users as read by the &#8216;radlast&#8217; program.</dd></dl>
 <h2>Configuration</h2>
 <dl>
 <dd>
@@ -31,7 +31,7 @@ description: "rlm_unix – FreeRADIUS Module"
  ...
 <br>
 }</pre>
-</dl>
+</dd></dl>
 <h2>Sections</h2>
 <p><code>authentication,</code> <code>accounting</code></p>
 <h2>Files</h2>

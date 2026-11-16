@@ -15,7 +15,7 @@ netif_tx_lock - grab network device transmit lock
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
 
 <h2>Description</h2>
 

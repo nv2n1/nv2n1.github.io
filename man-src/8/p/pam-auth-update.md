@@ -16,21 +16,21 @@ description: "pam-auth-update – manage PAM configuration using packaged profil
 <p> If the user specifies that <code>pam-auth-update</code> should override local configuration changes, the locally-modified files will be saved in <i>/etc/pam.d/</i> with a suffix of <i>.pam-old</i>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;package</code></p>
-<dd>Indicate that the caller is a package maintainer script; lowers the priority of debconf questions to `medium&#8217; so that the user is not prompted by default.</p>
-<dt><code>&#8211;enable </code><i>profile </i>[<i>profile</i>&#8230;]</p>
-<dd>Enable the specified profiles in system configuration. This is used to enable profiles that are not on by default.</p>
-<dt><code>&#8211;remove </code><i>profile </i>[<i>profile</i>&#8230;]</p>
-<dd>Remove the specified profiles from the system configuration. <code>pam-auth-update &#8211;remove</code> should be used to remove profiles from the configuration before the modules they reference are removed from disk, to ensure that PAM is in a consistent and usable state at all times during package upgrades or removals.</p>
-<dt><code>&#8211;force</code></p>
-<dd>Overwrite the current PAM configuration, without prompting. This option <code>must not</code> be used by package maintainer scripts; it is intended for use by administrators only.</dl>
+<dt><code>&#8211;package</code></dt>
+<dd>Indicate that the caller is a package maintainer script; lowers the priority of debconf questions to `medium&#8217; so that the user is not prompted by default.</dd>
+<dt><code>&#8211;enable </code><i>profile </i>[<i>profile</i>&#8230;]</dt>
+<dd>Enable the specified profiles in system configuration. This is used to enable profiles that are not on by default.</dd>
+<dt><code>&#8211;remove </code><i>profile </i>[<i>profile</i>&#8230;]</dt>
+<dd>Remove the specified profiles from the system configuration. <code>pam-auth-update &#8211;remove</code> should be used to remove profiles from the configuration before the modules they reference are removed from disk, to ensure that PAM is in a consistent and usable state at all times during package upgrades or removals.</dd>
+<dt><code>&#8211;force</code></dt>
+<dd>Overwrite the current PAM configuration, without prompting. This option <code>must not</code> be used by package maintainer scripts; it is intended for use by administrators only.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/pam.d/common-*</i></p>
 <dl>
-<dd>Global configuration of PAM, affecting all installed services.</dl>
+<dd>Global configuration of PAM, affecting all installed services.</dd></dl>
 <p> <i>/usr/share/pam-configs/</i></p>
 <dl>
-<dd>Package-supplied authentication profiles.</dl>
+<dd>Package-supplied authentication profiles.</dd></dl>
 <h2>Author</h2>
 <p>Steve Langasek &lt;steve.langasek [at] canonical.com&gt;</p>
 <h2>Copyright</h2>

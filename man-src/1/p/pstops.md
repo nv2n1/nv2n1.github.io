@@ -15,15 +15,13 @@ description: "pstops – shuffle pages in a PostScript file"
 <p> <i>Pstops</i> rearranges pages from a PostScript document, creating a new PostScript file. The input PostScript file should follow the Adobe Document Structuring Conventions. <i>Pstops</i> can be used to perform a large number of arbitrary re-arrangements of Documents, including arranging for printing 2-up, 4-up, booklets, reversing, selecting front or back sides of documents, scaling, etc. </p>
 <p> <i>pagespecs</i> follow the syntax:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>pagespecs</i></p>
-<dd> <i>= [modulo:]specs</i></p>
-<dt><i>specs</i></p>
-<dd> <i>= spec[+specs][,specs]</i></p>
-<dt><i>spec</i></p>
-<dd> <i>= [-]pageno[L][R][U][H][V][@scale][(xoff,yoff)]</i></dl>
+<dt><i>pagespecs</i></dt>
+<dd> <i>= [modulo:]specs</i></dd>
+<dt><i>specs</i></dt>
+<dd> <i>= spec[+specs][,specs]</i></dd>
+<dt><i>spec</i></dt>
+<dd> <i>= [-]pageno[L][R][U][H][V][@scale][(xoff,yoff)]</i></dd></dl>
 </dl>
 <p> <i>modulo</i> is the number of pages in each block. The value of <i>modulo</i> should be greater than 0; the default value is 1. <i>specs</i> are the page specifications for the pages in each block. The value of the <i>pageno</i> in each <i>spec</i> should be between 0 (for the first page in the block) and <i>modulo</i>-1 (for the last page in each block) inclusive. The optional dimensions <i>xoff</i> and <i>yoff</i> shift the page by the specified amount. <i>xoff</i> and <i>yoff</i> are in PostScript&#8217;s points, but may be followed by the units <code>cm</code> or <code>in</code> to convert to centimetres or inches, or the flag <code>w</code> or <code>h</code> to specify as a multiple of the width or height. The optional parameters <i>L</i>, <i>R</i>, <i>U</i>, <i>H</i> and <i>V</i> rotate the page left, right, or upside-down, and flip (mirror) page horizontally or vertically. The optional <i>scale</i> parameter scales the page by the fraction specified. If the optional minus sign is specified, the page is relative to the end of the document, instead of the start. </p>
 <p> If page <i>spec</i>s are separated by <code>+</code> the pages will be merged into one page; if they are separated by <code>,</code> they will be on separate pages. If there is only one page specification, with <i>pageno</i> zero, the <i>pageno</i> may be omitted. </p>

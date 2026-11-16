@@ -134,7 +134,6 @@ description: "libppm – functions for PPM programs"
 <h3>COLOR</h3>
 <p> <code>Luminance, Chrominance (YcbCr)</code> </p>
 <pre><code>
-
 float PPM_LUMIN(pixel p);
 float PPM_CHROM_B(pixel p);
 float PPM_CHROM_R(pixel p);
@@ -164,28 +163,28 @@ ppm_saturation(pixel const p,<br />
 <p> <code>Berlin-Kay Color</code> </p>
 <p> Brent Berlin and Paul Kay in 1969 did a study which identified a set of 11 basic colors people universally recognize. They are: </p>
 <dl>
-<dt>&bull;</p>
-<dd> black</p>
-<dt>&bull;</p>
-<dd> gray</p>
-<dt>&bull;</p>
-<dd> white</p>
-<dt>&bull;</p>
-<dd> red</p>
-<dt>&bull;</p>
-<dd> orange</p>
-<dt>&bull;</p>
-<dd> yellow</p>
-<dt>&bull;</p>
-<dd> green</p>
-<dt>&bull;</p>
-<dd> blue</p>
-<dt>&bull;</p>
-<dd> violet</p>
-<dt>&bull;</p>
-<dd> purple</p>
-<dt>&bull;</p>
-<dd> brown </p>
+<dt>&bull;</dt>
+<dd> black</dd>
+<dt>&bull;</dt>
+<dd> gray</dd>
+<dt>&bull;</dt>
+<dd> white</dd>
+<dt>&bull;</dt>
+<dd> red</dd>
+<dt>&bull;</dt>
+<dd> orange</dd>
+<dt>&bull;</dt>
+<dd> yellow</dd>
+<dt>&bull;</dt>
+<dd> green</dd>
+<dt>&bull;</dt>
+<dd> blue</dd>
+<dt>&bull;</dt>
+<dd> violet</dd>
+<dt>&bull;</dt>
+<dd> purple</dd>
+<dt>&bull;</dt>
+<dd> brown </dd>
 </dl>
 <p> The <code>bk_color</code> type represents a color from this set: </p>
 <p>typedef enum {<br />
@@ -204,10 +203,8 @@ ppm_saturation(pixel const p,<br />
 <p> You can use this as an index of an array, in which case you might also want macro <code>BKCOLOR_COUNT</code>, which is the number of colors in the set (11). </p>
 <p> To translate between the <code>bk_color</code> type and the English names of the colors, use <code>ppm_bk_color_from_name()</code> and <code>ppm_name_from_bk_color()</code>: </p>
 <pre><code>
-
 bk_color
 ppm_bk_color_from_name(const char *name);
-
 const char *
 ppm_name_from_bk_color(bk_color bkColor);
 </code></pre>
@@ -235,12 +232,12 @@ ppm_name_from_bk_color(bk_color bkColor);
 <p> Netpbm uses the system&#8217;s X11 color dictionary (usually in <code>/usr/lib/X11/rgb.txt</code>). This is the same file the X Window System typically uses to associate colors with their names. </p>
 <p> The color dictionary that Netpbm uses is in the file whose name is the value of the <code>RGBDEF</code> environment variable. If <code>RGBDEF</code> is not set, Netpbm defaults to the first existing file from this list: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>/usr/lib/X11/rgb.txt</code></p>
-<dt>&bull;</p>
-<dd> <code>/usr/openwinlib/rgb.txt</code></p>
-<dt>&bull;</p>
-<dd> <code>/usr/X11R6/lib/X11/rgb.txt</code> </p>
+<dt>&bull;</dt>
+<dd> <code>/usr/lib/X11/rgb.txt</code></dd>
+<dt>&bull;</dt>
+<dd> <code>/usr/openwinlib/rgb.txt</code></dd>
+<dt>&bull;</dt>
+<dd> <code>/usr/X11R6/lib/X11/rgb.txt</code> </dd>
 </dl>
 <p> You can see the color names from a typical X11 color dictionary, which is probably very close to what is on your system, along with the colors, here . <code>This</code> website (1)<br />
 &nbsp;<wbr>shows a bunch of other versions you could use. </p>
@@ -248,18 +245,18 @@ ppm_name_from_bk_color(bk_color bkColor);
 <p> <code>ppm_parsecolor</code> </p>
 <p> <code>ppm_parsecolor()</code> interprets a color specification and returns a pixel of the color that it indicates. The color specification is ASCII text, in one of these formats: </p>
 <dl>
-<dt>&bull;</p>
-<dd> a name, as defined in the system color dictionary . </p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd> a name, as defined in the system color dictionary . </dd>
+<dt>&bull;</dt>
 <dd>
-&nbsp;<wbr>An X11-style hexadecimal specifier: <tt>rgb:</tt><i>r</i>/<i>g</i>/<i>b</i>, where <i>r</i>, <i>g</i>, and <i>b</i> are each 1- to 4-digit hexadecimal numbers. For each, the maxval is the maximum number that can be represented in the number of hexadecimal digits given. Example: <tt>rgb:01/ff/8000</tt> specifies 1/255 red intensity, maximum green intensity, and about half blue intensity. </p>
-<dt>&bull;</p>
+&nbsp;<wbr>An X11-style hexadecimal specifier: <tt>rgb:</tt><i>r</i>/<i>g</i>/<i>b</i>, where <i>r</i>, <i>g</i>, and <i>b</i> are each 1- to 4-digit hexadecimal numbers. For each, the maxval is the maximum number that can be represented in the number of hexadecimal digits given. Example: <tt>rgb:01/ff/8000</tt> specifies 1/255 red intensity, maximum green intensity, and about half blue intensity. </dd>
+<dt>&bull;</dt>
 <dd>
-&nbsp;<wbr>An X11-style decimal specifier: <tt>rgbi:</tt><i>r</i>/<i>g</i>/<i>b</i>, where <i>r</i>, <i>g</i>, and <i>b</i> are floating point numbers from 0 to 1. </p>
-<dt>&bull;</p>
-<dd> an old-X11-style hexadecimal triple: <tt>#rgb</tt>, <tt>#rrggbb</tt>, <tt>#rrrgggbbb</tt>, or <tt>#rrrrggggbbbb</tt>. </p>
-<dt>&bull;</p>
-<dd> A triplet of decimal floating point numbers from 0.0 to 1.0, representing red, green, and blue intensities respectively, separated by commas. E.g. <tt>1.0,0.5,.25</tt>. This is for backwards compatibility; it was in use before MIT came up with the similar and preferred rgbi style). </p>
+&nbsp;<wbr>An X11-style decimal specifier: <tt>rgbi:</tt><i>r</i>/<i>g</i>/<i>b</i>, where <i>r</i>, <i>g</i>, and <i>b</i> are floating point numbers from 0 to 1. </dd>
+<dt>&bull;</dt>
+<dd> an old-X11-style hexadecimal triple: <tt>#rgb</tt>, <tt>#rrggbb</tt>, <tt>#rrrgggbbb</tt>, or <tt>#rrrrggggbbbb</tt>. </dd>
+<dt>&bull;</dt>
+<dd> A triplet of decimal floating point numbers from 0.0 to 1.0, representing red, green, and blue intensities respectively, separated by commas. E.g. <tt>1.0,0.5,.25</tt>. This is for backwards compatibility; it was in use before MIT came up with the similar and preferred rgbi style). </dd>
 </dl>
 <p> If the color specification does not conform to any of these formats, including the case that it is a name, but is not in the system color dictionary, <code>ppm_parsecolor()</code> <code>throws</code>an<code>error</code>(1) </p>
 <p> <code>ppm_colorname</code> </p>

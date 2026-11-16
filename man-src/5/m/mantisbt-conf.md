@@ -18,4 +18,4 @@ This configuration file provides default configuration for <i>reporter-mantisbt<
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

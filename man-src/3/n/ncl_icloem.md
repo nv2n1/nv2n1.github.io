@@ -17,7 +17,7 @@ ICLOEM - Called to get the length of the non-blank portion of an error message.
  The argument of ICLOEM is as follows: 
 
 <dl COMPACT><dt>MESSG
-<dd>(an input variable or constant of type CHARACTER) - Most likely an error message returned by a reference to the function SEMESS.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input variable or constant of type CHARACTER) - Most likely an error message returned by a reference to the function SEMESS.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: tseter, arex02.
 <h2>Access</h2>To use ICLOEM or c_icloem, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: entsr, eprin, errof, error_handling, fdum, icfell, nerro, retsr, semess, seter, ncarg_cbind

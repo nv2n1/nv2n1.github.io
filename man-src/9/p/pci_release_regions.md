@@ -15,7 +15,7 @@ pci_release_regions - Release reserved PCI I/O and memory resources
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>PCI device whose resources were previously reserved by pci_request_regions</dl>
+<dl><dd></dd><dd>PCI device whose resources were previously reserved by pci_request_regions</dd></dl>
 
 <h2>Description</h2>
 

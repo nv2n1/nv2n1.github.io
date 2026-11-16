@@ -19,20 +19,20 @@ description: "mktexpk – create a PK file for a font"
 <h2>OPTIONS</h2>
 <p> <code>mktexpk</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;bdpi</code><i>&nbsp;num</i></p>
-<dd> Set the base device resolution.</p>
-<dt><code>&#8211;dpi</code><i>&nbsp;num</i></p>
-<dd> Generate the font at resolution <i>num</i>.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;mag</code><i>&nbsp;mag</i></p>
-<dd> The Metafont magnification that corresponds to the combination of <i>bdpi</i> and <i>dpi</i> that has been specified.</p>
-<dt><code>&#8211;mfmode</code><i>&nbsp;mode</i></p>
-<dd> The Metafont mode to use.</p>
-<dt><code>&#8211;destdir</code><i>&nbsp;dir</i></p>
-<dd> A directory name. If the directory is absolute, it is used as-is. Otherwise, it is appended to the root destination directory set in the script.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>&#8211;bdpi</code><i>&nbsp;num</i></dt>
+<dd> Set the base device resolution.</dd>
+<dt><code>&#8211;dpi</code><i>&nbsp;num</i></dt>
+<dd> Generate the font at resolution <i>num</i>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;mag</code><i>&nbsp;mag</i></dt>
+<dd> The Metafont magnification that corresponds to the combination of <i>bdpi</i> and <i>dpi</i> that has been specified.</dd>
+<dt><code>&#8211;mfmode</code><i>&nbsp;mode</i></dt>
+<dd> The Metafont mode to use.</dd>
+<dt><code>&#8211;destdir</code><i>&nbsp;dir</i></dt>
+<dd> A directory name. If the directory is absolute, it is used as-is. Otherwise, it is appended to the root destination directory set in the script.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> If the <i>mode</i> is not specified, <code>mktexpk</code> tries to determine it from <i>bdpi</i>. The manner in which this is done is primitive. Since <i>bpdi</i> doesn&#8217;t provide sufficient information to uniquely determine a <i>mode</i> it is strongly recommended that it be specified explicitly. </p>
 <p> If the <i>mode</i> and <i>bpdi</i> don&#8217;t match, the <i>mode</i> is discarded. </p>

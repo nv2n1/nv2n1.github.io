@@ -28,17 +28,10 @@ description: "pkeys – overview of Memory Protection Keys"
 <h2>Examples</h2>
 <p>The program below allocates a page of memory with read and write permissions. It then writes some data to the memory and successfully reads it back. After that, it attempts to allocate a protection key and disallows access to the page by using the WRPKRU instruction. It then tries to access the page, which we now expect to cause a fatal signal to the application. </p>
 <pre><code>$ ./a.out
-
 buffer contains: 73
 about to read buffer again...
 Segmentation fault (core dumped)
-
-
-
 Program source
-
-
-
 #define _GNU_SOURCE
 #include &lt;unistd.h&gt;
 #include &lt;sys/syscall.h&gt;

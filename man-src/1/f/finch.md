@@ -11,81 +11,81 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
 <p> Finch &#8211; A Pimpin&#8217; Penguin console frontend to libpurple. Instant Messaging client.</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>finch </code><i>[options]</i></p>
+<dt><code>finch </code><i>[options]</i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>finch</code> is a console-based modular messaging client based on libpurple which is capable of connecting to AIM, MSN, Yahoo!, XMPP, ICQ, IRC, SILC, Novell GroupWise, Lotus Sametime, Zephyr, Gadu-Gadu, and QQ all at once. It has many common features found in other clients, as well as many unique features. Finch is not endorsed by or affiliated with America Online, ICQ, Microsoft, or Yahoo. </p>
 <h2>OPTIONS</h2>
 <p> The following options are provided by <code>finch</code> using the standard GNU command line syntax:</p>
 <dl>
-<dt><code>-c, &#8211;config=</code><i>DIR</i></p>
-<dd> Use <i>DIR</i> as the directory for config files instead of <i>~/.purple</i>.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Print debugging messages to stderr and start with the <code>Debug</code> window. The messages shown in the <code>Debug</code> window are the same as the ones printed in stderr.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this help and exit.</p>
-<dt><code>-n, &#8211;nologin</code></p>
-<dd> Don&#8217;t automatically login when <code>finch</code> starts. Sets all accounts to Offline.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display the version information window. </p>
+<dt><code>-c, &#8211;config=</code><i>DIR</i></dt>
+<dd> Use <i>DIR</i> as the directory for config files instead of <i>~/.purple</i>.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Print debugging messages to stderr and start with the <code>Debug</code> window. The messages shown in the <code>Debug</code> window are the same as the ones printed in stderr.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this help and exit.</dd>
+<dt><code>-n, &#8211;nologin</code></dt>
+<dd> Don&#8217;t automatically login when <code>finch</code> starts. Sets all accounts to Offline.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display the version information window. </dd>
 </dl>
 <h2>GNT Shortcuts</h2>
 <p> You can use the following shortcuts (see the &quot;Widget Actions&quot; section for a more complete list):</p>
 <dl>
-<dt><code>Alt + a</code></p>
-<dd> Bring up a list of available actions. You can use this list to access the accounts window, plugins window, preference window etc.</p>
-<dt><code>Alt + n</code></p>
-<dd> Go to the next window.</p>
-<dt><code>Alt + p</code></p>
-<dd> Go to the previous window.</p>
-<dt><code>Alt + w</code></p>
-<dd> Show the list of windows. You can select and jump to any window from the list.</p>
-<dt><code>Alt + c</code></p>
-<dd> Close the current window.</p>
-<dt><code>Alt + q</code></p>
-<dd> Quit.</p>
-<dt><code>Alt + m</code></p>
-<dd> Start moving a window. Press the cursor keys to move the window. When you are done, press <code>Enter</code> or <code>Escape</code>.</p>
-<dt><code>Alt + r</code></p>
-<dd> Start resizing a window. Press the cursor keys to resize the window. When you are done, press <code>Enter</code> or <code>Escape</code>.</p>
-<dt><code>Alt + D</code></p>
-<dd> Dump the contents of the screen in HTML format.</p>
-<dt><code>Alt + .</code></p>
-<dd> Move the position of the current window in the window list one place to the right.</p>
-<dt><code>Alt + ,</code></p>
-<dd> Move the position of the current window in the window list one place to the left.</p>
-<dt><code>Alt + l</code></p>
-<dd> Refresh the windows. This is useful after resizing the terminal window.</p>
-<dt><code>Alt + 1 2 &#8230; 0</code></p>
-<dd> Jump to the 1st, 2nd &#8230; 10th window.</p>
-<dt><code>Alt + Tab</code></p>
-<dd> Jump to the next URGENT (highlighted) window.</p>
-<dt><code>Alt + Shift + Tab</code></p>
-<dd> Jump to the previous URGENT (highlighted) window.</p>
-<dt><code>Ctrl + o </code> or <code> F10</code></p>
-<dd> Bring up the menu (if there is one) for a window.</p>
-<dt><code>F11 </code> or <code> Ctrl + x</code></p>
-<dd> Popup the context menu (if there is one) for the selected widget.</p>
-<dt><code>Alt + /</code></p>
-<dd> Show a list of available key-bindings for the current widget in focus.</p>
-<dt><code>Alt + &gt;</code></p>
-<dd> Switch to the next workspace</p>
-<dt><code>Alt + &lt;</code></p>
-<dd> Switch to the previous workspace</p>
-<dt><code>Alt + t</code></p>
-<dd> Tag (or untag) the current window</p>
-<dt><code>Alt + T</code></p>
-<dd> Attached all the tagged windows to the current workspace</p>
-<dt><code>Alt + s</code></p>
-<dd> Show the workspace list</p>
-<dt><code>F9</code></p>
-<dd> Create a new workspace and switch to it </p>
+<dt><code>Alt + a</code></dt>
+<dd> Bring up a list of available actions. You can use this list to access the accounts window, plugins window, preference window etc.</dd>
+<dt><code>Alt + n</code></dt>
+<dd> Go to the next window.</dd>
+<dt><code>Alt + p</code></dt>
+<dd> Go to the previous window.</dd>
+<dt><code>Alt + w</code></dt>
+<dd> Show the list of windows. You can select and jump to any window from the list.</dd>
+<dt><code>Alt + c</code></dt>
+<dd> Close the current window.</dd>
+<dt><code>Alt + q</code></dt>
+<dd> Quit.</dd>
+<dt><code>Alt + m</code></dt>
+<dd> Start moving a window. Press the cursor keys to move the window. When you are done, press <code>Enter</code> or <code>Escape</code>.</dd>
+<dt><code>Alt + r</code></dt>
+<dd> Start resizing a window. Press the cursor keys to resize the window. When you are done, press <code>Enter</code> or <code>Escape</code>.</dd>
+<dt><code>Alt + D</code></dt>
+<dd> Dump the contents of the screen in HTML format.</dd>
+<dt><code>Alt + .</code></dt>
+<dd> Move the position of the current window in the window list one place to the right.</dd>
+<dt><code>Alt + ,</code></dt>
+<dd> Move the position of the current window in the window list one place to the left.</dd>
+<dt><code>Alt + l</code></dt>
+<dd> Refresh the windows. This is useful after resizing the terminal window.</dd>
+<dt><code>Alt + 1 2 &#8230; 0</code></dt>
+<dd> Jump to the 1st, 2nd &#8230; 10th window.</dd>
+<dt><code>Alt + Tab</code></dt>
+<dd> Jump to the next URGENT (highlighted) window.</dd>
+<dt><code>Alt + Shift + Tab</code></dt>
+<dd> Jump to the previous URGENT (highlighted) window.</dd>
+<dt><code>Ctrl + o </code> or <code> F10</code></dt>
+<dd> Bring up the menu (if there is one) for a window.</dd>
+<dt><code>F11 </code> or <code> Ctrl + x</code></dt>
+<dd> Popup the context menu (if there is one) for the selected widget.</dd>
+<dt><code>Alt + /</code></dt>
+<dd> Show a list of available key-bindings for the current widget in focus.</dd>
+<dt><code>Alt + &gt;</code></dt>
+<dd> Switch to the next workspace</dd>
+<dt><code>Alt + &lt;</code></dt>
+<dd> Switch to the previous workspace</dd>
+<dt><code>Alt + t</code></dt>
+<dd> Tag (or untag) the current window</dd>
+<dt><code>Alt + T</code></dt>
+<dd> Attached all the tagged windows to the current workspace</dd>
+<dt><code>Alt + s</code></dt>
+<dd> Show the workspace list</dd>
+<dt><code>F9</code></dt>
+<dd> Create a new workspace and switch to it </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>~/.gntrc</i>: configuration file for gnt applications. </p>
 <dl>
-<dt>A sample file looks like:</p>
+<dt>A sample file looks like:</dt>
 <dd>
  [Finch]<br />
  color-available = green; black<br />
@@ -97,7 +97,7 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
  color-message-highlight = black; green<br />
  color-message-action = yellow; default<br />
  color-timestamp = blue; default<br />
- #See below for details on color </p>
+ #See below for details on color </dd>
 <p> [general]<br />
  shadow = 0<br />
  # There is experimental mouse support<br />
@@ -272,18 +272,18 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
 <h2>Conversation Commands</h2>
 <p> There are a few helpful commands in addition to the regular commands. You can use these from any conversation to access other windows. </p>
 <dl>
-<dt><code>accounts</code></p>
-<dd> for the accounts window. </p>
-<dt><code>buddylist</code></p>
-<dd> for the buddylist. </p>
-<dt><code>debugwin</code></p>
-<dd> for the debug window. </p>
-<dt><code>plugins</code></p>
-<dd> for the plugins window. </p>
-<dt><code>prefs</code></p>
-<dd> for the preferences window. </p>
-<dt><code>status</code></p>
-<dd> for the status window. </p>
+<dt><code>accounts</code></dt>
+<dd> for the accounts window. </dd>
+<dt><code>buddylist</code></dt>
+<dd> for the buddylist. </dd>
+<dt><code>debugwin</code></dt>
+<dd> for the debug window. </dd>
+<dt><code>plugins</code></dt>
+<dd> for the plugins window. </dd>
+<dt><code>prefs</code></dt>
+<dd> for the preferences window. </dd>
+<dt><code>status</code></dt>
+<dd> for the status window. </dd>
 </dl>
 <h2>FAQ</h2>
 <p> FAQ for <code>finch</code> is located at<br />

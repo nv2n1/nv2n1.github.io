@@ -12,7 +12,6 @@ std::filesystem::directory_entry::replace_filename - std::filesystem::directory_
 
 <pre><code>void replace_filename(const std::filesystem::path &amp;p);
 (since C++ 17)
-
     void replace_filename(const std::filesystem::path &amp;p, std::error_code &amp;ec);</code></pre> 
 Changes the filename of the directory entry. 
 Effectively modifies the path member by path.replace_filename(p) and calls refresh to update the cached attributes. If an error occurs, the values of the cached attributes are unspecified. 

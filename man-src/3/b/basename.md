@@ -25,7 +25,7 @@ char *basename(char *path);
 <p> The following list of examples (taken from SUSv2) shows the strings returned by <code>dirname</code>() and <code>basename</code>() for different paths:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td><code>path </code></td>
@@ -82,7 +82,7 @@ char *basename(char *path);
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Both <code>dirname</code>() and <code>basename</code>() return pointers to null-terminated strings. (Do not pass these pointers to <code><a href="/docs/linux/man/3-free/">free</a></code>(3).)</p>
 <h2>ATTRIBUTES</h2>

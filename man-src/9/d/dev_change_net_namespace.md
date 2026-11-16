@@ -15,15 +15,15 @@ dev_change_net_namespace - move device to different nethost namespace
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>net</i>
-<dl><dd>network namespace</dl>
+<dl><dd>network namespace</dd></dl>
  
 
  <i>pat</i>
-<dl><dd>If not NULL name pattern to try if the current device name is already taken in the destination network namespace.</dl>
+<dl><dd>If not NULL name pattern to try if the current device name is already taken in the destination network namespace.</dd></dl>
 
 <h2>Description</h2>
 

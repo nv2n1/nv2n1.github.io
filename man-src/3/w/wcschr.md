@@ -10,7 +10,6 @@ description: "wcschr – search a wide character in a wide-character string"
 <p>wcschr &#8211; search a wide character in a wide-character string</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wchar_t *wcschr(const wchar_t *wcs, wchar_t wc);</code></pre>
 <h2>Description</h2>
 <p>The <code>wcschr</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-strchr/">strchr</a></code>(3) function. It searches the first occurrence of <i>wc</i> in the wide-character string pointed to by <i>wcs</i>.</p>

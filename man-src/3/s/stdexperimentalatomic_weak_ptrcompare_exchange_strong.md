@@ -11,38 +11,23 @@ std::experimental::atomic_weak_ptr&lt;T&gt;::compare_exchange_strong,std::experi
 <h2>Synopsis</h2>
 
 <pre><code>bool compare_exchange_weak(std::weak_ptr&lt;T&gt; &amp;expected, const std::weak_ptr&lt;T&gt; &amp;desired, (1)
-
                                                                                             std::memory_order success,
                            std::memory_order failure) noexcept;
-
 bool compare_exchange_weak(std::weak_ptr&lt;T&gt; &amp;expected, std::weak_ptr&lt;T&gt; &amp;&amp;desired, (2)
-
                                                                                        std::memory_order success,
                            std::memory_order failure) noexcept;
-
 bool compare_exchange_weak(std::weak_ptr&lt;T&gt; &amp;expected, const std::weak_ptr&lt;T&gt; &amp;desired, (3)
-
                                                                                             std::memory_order order = std::memory_order_seq_cst) noexcept;
-
 bool compare_exchange_weak(std::weak_ptr&lt;T&gt; &amp;expected, std::weak_ptr&lt;T&gt; &amp;&amp;desired, (4)
-
                                                                                        std::memory_order order = std::memory_order_seq_cst) noexcept;
-
 bool compare_exchange_strong(std::weak_ptr&lt;T&gt; &amp;expected, const std::weak_ptr&lt;T&gt; &amp;desired, (5)
-
                                                                                               std::memory_order success,
                              std::memory_order failure) noexcept;
-
 bool compare_exchange_strong(std::weak_ptr&lt;T&gt; &amp;expected, std::weak_ptr&lt;T&gt; &amp;&amp;desired, (6)
-
                                                                                          std::memory_order success std::memory_order failure) noexcept;
-
 bool compare_exchange_strong(std::weak_ptr&lt;T&gt; &amp;expected, const std::weak_ptr&lt;T&gt; &amp;desired, (7)
-
                                                                                               std::memory_order order = std::memory_order_seq_cst) noexcept;
-
 bool compare_exchange_strong(std::weak_ptr&lt;T&gt; &amp;expected, std::weak_ptr&lt;T&gt; &amp;&amp;desired, (8)
-
                                                                                          std::memory_order order = std::memory_order_seq_cst) noexcept;</code></pre> 
 Atomically compares the underlying weak_ptr in *this with expected, and if they are equivalent, replaces the former with desired (performs read-modify-write operation). Otherwise, loads the actual value stored in *this into expected (performs load operation). The replacement is performed as if by the copy or move assignment operator of weak_ptr, as appropriate. 
 Two weak_ptrs are equivalent if and only if they store the same pointer value and share ownership. 

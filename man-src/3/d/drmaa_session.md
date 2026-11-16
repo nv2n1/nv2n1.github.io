@@ -20,9 +20,9 @@ size_t&amp;nbsp;error_diag_len
 <p> <code>);</code> </p>
 <pre>
 <code>int drmaa_exit(</code>
-<dl><dt><dd><code>char *</code><i>error_diagnosis</i><code>,</code>
+<dl><dt></dt><dd><code>char *</code><i>error_diagnosis</i><code>,</code>
 <code>size_t&nbsp;</code><i>error_diag_len</i>
-</dl>
+</dd></dl>
 </pre>
 <p> <code>);</code></p>
 <h2>DESCRIPTION</h2>
@@ -34,53 +34,51 @@ size_t&amp;nbsp;error_diag_len
 <p> Submitted jobs are not affected by the drmaa_exit() function. </p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which the xxqs_name_sxx_qmaster is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which the xxqs_name_sxx_qmaster is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, drmaa_init() and drmaa_exit() return DRMAA_ERRNO_SUCCESS. Other values indicate an error. Up to <i>error_diag_len</i> characters of error related diagnosis information is then provided in the buffer <i>error_diagnosis</i>. </p>
 <h2>ERRORS</h2>
 <p> The drmaa_init() and drmaa_exit() functions can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></p>
-<dd> Unexpected or internal DRMAA error, like system call failure, etc.</p>
-<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></p>
-<dd> Could not contact DRM system for this request.</p>
-<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></p>
-<dd> The specified request is not processed successfully due to authorization failure.</p>
-<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></p>
-<dd> The input value for an argument is invalid.</dl>
+<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></dt>
+<dd> Unexpected or internal DRMAA error, like system call failure, etc.</dd>
+<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></dt>
+<dd> Could not contact DRM system for this request.</dd>
+<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></dt>
+<dd> The specified request is not processed successfully due to authorization failure.</dd>
+<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></dt>
+<dd> The input value for an argument is invalid.</dd></dl>
 <p> The drmaa_init() function can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_INVALID_CONTACT_STRING</code></p>
-<dd> Initialization failed due to invalid contact string.</p>
-<dt><code>DRMAA_ERRNO_DEFAULT_CONTACT_STRING_ERROR</code></p>
-<dd> Could not use the default contact string to connect to DRM system.</p>
-<dt><code>DRMAA_ERRNO_DRMS_INIT_FAILED</code></p>
-<dd> Initialization failed due to failure to init DRM system.</p>
-<dt><code>DRMAA_ERRNO_ALREADY_ACTIVE_SESSION</code></p>
-<dd> Initialization failed due to existing DRMAA session.</p>
-<dt><code>DRMAA_ERRNO_NO_MEMORY</code></p>
-<dd> Failed allocating memory.</dl>
+<dt><code>DRMAA_ERRNO_INVALID_CONTACT_STRING</code></dt>
+<dd> Initialization failed due to invalid contact string.</dd>
+<dt><code>DRMAA_ERRNO_DEFAULT_CONTACT_STRING_ERROR</code></dt>
+<dd> Could not use the default contact string to connect to DRM system.</dd>
+<dt><code>DRMAA_ERRNO_DRMS_INIT_FAILED</code></dt>
+<dd> Initialization failed due to failure to init DRM system.</dd>
+<dt><code>DRMAA_ERRNO_ALREADY_ACTIVE_SESSION</code></dt>
+<dd> Initialization failed due to existing DRMAA session.</dd>
+<dt><code>DRMAA_ERRNO_NO_MEMORY</code></dt>
+<dd> Failed allocating memory.</dd></dl>
 <p> The drmaa_exit() function can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></p>
-<dd> Failed because there is no active session.</p>
-<dt><code>DRMAA_ERRNO_DRMS_EXIT_ERROR</code></p>
-<dd> DRM system disengagement failed.</dl>
+<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></dt>
+<dd> Failed because there is no active session.</dd>
+<dt><code>DRMAA_ERRNO_DRMS_EXIT_ERROR</code></dt>
+<dd> DRM system disengagement failed.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>Index</h2>

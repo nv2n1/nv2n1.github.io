@@ -11,60 +11,60 @@ description: "mysql_convert_table_format – convert tables to use a given stora
 <p> mysql_convert_table_format &#8211; convert tables to use a given storage engine </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysql_convert_table_format [</code><i>options</i><code>] </code><i>db_name</i></dl>
+<dt> <code>mysql_convert_table_format [</code><i>options</i><code>] </code><i>db_name</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mysql_convert_table_format</code></p>
-<dd>converts the tables in a database to use a particular storage engine (MyISAM by default). <code>mysql_convert_table_format</code> is written in Perl and requires that the DBI and DBD::mysql Perl modules be installed (see Section 2.15, &#8220;Perl Installation Notes&#8221;). </p>
+<dd>converts the tables in a database to use a particular storage engine (MyISAM by default). <code>mysql_convert_table_format</code> is written in Perl and requires that the DBI and DBD::mysql Perl modules be installed (see Section 2.15, &#8220;Perl Installation Notes&#8221;). </dd>
 <p> Invoke <code>mysql_convert_table_format</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>mysql_convert_table_format [</code><i>options</i><code>]</code><i>db_name</i>
 </pre>
-</dl>
+</dd></dl>
 <p> The <i>db_name</i> argument indicates the database containing the tables to be converted. </p>
 <p> <code>mysql_convert_table_format</code> supports the options described in the following list. </p>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;help</code> </p>
+</dt><dd> &bull; <code>&#8211;help</code> </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;force</code> </p>
+</dt><dd> &bull; <code>&#8211;force</code> </dd>
 <p> Continue even if errors occur.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;host=</code><i>host_name</i> </p>
+</dt><dd> &bull; <code>&#8211;host=</code><i>host_name</i> </dd>
 <p> Connect to the MariaDB server on the given host.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;password=</code><i>password</i> </p>
+</dt><dd> &bull; <code>&#8211;password=</code><i>password</i> </dd>
 <p> The password to use when connecting to the server. Note that the password value is not optional for this option, unlike for other MariaDB programs. </p>
 <p> Specifying a password on the command line should be considered insecure. You can use an option file to avoid giving the password on the command line.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;port=</code><i>port_num</i> </p>
+</dt><dd> &bull; <code>&#8211;port=</code><i>port_num</i> </dd>
 <p> The TCP/IP port number to use for the connection.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;socket=</code><i>path</i> </p>
+</dt><dd> &bull; <code>&#8211;socket=</code><i>path</i> </dd>
 <p> For connections to localhost, the Unix socket file to use.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;type=</code><i>engine_name</i> </p>
+</dt><dd> &bull; <code>&#8211;type=</code><i>engine_name</i> </dd>
 <p> Specify the storage engine that the tables should be converted to use. The default is MyISAM if this option is not given.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;user=</code><i>user_name</i> </p>
+</dt><dd> &bull; <code>&#8211;user=</code><i>user_name</i> </dd>
 <p> The MariaDB user name to use when connecting to the server.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;verbose</code> </p>
+</dt><dd> &bull; <code>&#8211;verbose</code> </dd>
 <p> Verbose mode. Print more information about what the program does.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;version</code> </p>
+</dt><dd> &bull; <code>&#8211;version</code> </dd>
 <p> Display version information and exit.</dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2008 MySQL AB, 2008-2010 Sun Microsystems, Inc., 2010-2015 MariaDB Foundation </p>
@@ -76,3 +76,4 @@ shell&gt; <code>mysql_convert_table_format [</code><i>options</i><code>]</code><
 <h2>AUTHOR</h2>
 <p> MariaDB Foundation (<a rel="nofollow" href="http://www.mariadb.org/">http://www.mariadb.org/</a>). </p>
 <h2>Index</h2>
+</p>

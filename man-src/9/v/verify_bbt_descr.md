@@ -14,14 +14,14 @@ description: "verify_bbt_descr – verify the bad block description"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>bd</i></p>
 <dl>
-<dd>the table to verify</dl>
+<dd>the table to verify</dd></dl>
 <h2>Description</h2>
 <p>This functions performs a few sanity checks on the bad block description table.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

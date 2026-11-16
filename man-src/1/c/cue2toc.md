@@ -20,18 +20,18 @@ description: "cue2toc – convert CUE to TOC format"
 <p> <code>Cue2toc</code> normally displays warning messages for unsupported commands and constructs. The <code>-q</code> option disables these warnings. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> print a short help message </p>
-<dt><code>-n</code></p>
-<dd> no CD-Text; disable output of CD-Text information </p>
-<dt><code>-o </code><i>tocfile</i></p>
-<dd> write result to <i>tocfile</i> instead of standard ouput </p>
-<dt><code>-q</code></p>
-<dd> quiet mode; do not print warnings </p>
-<dt><code>-v</code></p>
-<dd> print version number </p>
-<dt><code>-w </code><i>wavefile</i></p>
-<dd> use <i>wavefile</i> for all audio tracks </p>
+<dt><code>-h</code></dt>
+<dd> print a short help message </dd>
+<dt><code>-n</code></dt>
+<dd> no CD-Text; disable output of CD-Text information </dd>
+<dt><code>-o </code><i>tocfile</i></dt>
+<dd> write result to <i>tocfile</i> instead of standard ouput </dd>
+<dt><code>-q</code></dt>
+<dd> quiet mode; do not print warnings </dd>
+<dt><code>-v</code></dt>
+<dd> print version number </dd>
+<dt><code>-w </code><i>wavefile</i></dt>
+<dd> use <i>wavefile</i> for all audio tracks </dd>
 </dl>
 <h2>CUE FORMAT</h2>
 <p> What follows is a description of the CUE format expected by <code>cue2toc</code>. For information about the TOC format please consult the <code><a href="/docs/linux/man/1-cdrdao/">cdrdao</a></code>(1) manual page. </p>
@@ -47,20 +47,20 @@ description: "cue2toc – convert CUE to TOC format"
  <code>SONGWRITER</code> <i>string</i><br />
  <code>FILE</code> <i>string</i> <code>BINARY</code>|<code>MOTOROLA</code>|<code>AIFF</code>|<code>WAVE</code>|<code>MP3</code> </p>
 <dl>
-<dt><code>REM</code></p>
-<dd> Optional. Introduces a comment. Anything from there on up to and including the next newline character is ignored. Comments can appear anywhere in the file but not between a command and its arguments. </p>
-<dt><code>CATALOG</code></p>
-<dd> Optional. The Media Catalog Number of the disc. Must be exactly 13 characters. </p>
-<dt><code>CDTEXTFILE</code></p>
-<dd> Optional. Specifies an external file containing CD-Text data. Ignored. </p>
-<dt><code>TITLE</code></p>
-<dd> Optional. The CD-Text title of the disc. </p>
-<dt><code>PERFORMER</code></p>
-<dd> Optional. The CD-Text performer of the disc. </p>
-<dt><code>SONGWRITER</code></p>
-<dd> Optional. The CD-Text songwriter of the disc. </p>
-<dt><code>FILE</code></p>
-<dd> Required. The name and type of the file to be used for all following tracks. The <i>string</i> contains the name of the file followed by one of <code>BINARY</code>, <code>MOTOROLA</code>, <code>AIFF</code>, <code>WAVE</code> or <code>MP3</code>. As far as <code>cue2toc</code> is concerned the type of the file is effectively ignored. Nonetheless <code>MOTOROLA</code>, <code>AIFF</code> and <code>MP3</code> cause printing of a warning message since these file types can not be used directly with cdrdao. </p>
+<dt><code>REM</code></dt>
+<dd> Optional. Introduces a comment. Anything from there on up to and including the next newline character is ignored. Comments can appear anywhere in the file but not between a command and its arguments. </dd>
+<dt><code>CATALOG</code></dt>
+<dd> Optional. The Media Catalog Number of the disc. Must be exactly 13 characters. </dd>
+<dt><code>CDTEXTFILE</code></dt>
+<dd> Optional. Specifies an external file containing CD-Text data. Ignored. </dd>
+<dt><code>TITLE</code></dt>
+<dd> Optional. The CD-Text title of the disc. </dd>
+<dt><code>PERFORMER</code></dt>
+<dd> Optional. The CD-Text performer of the disc. </dd>
+<dt><code>SONGWRITER</code></dt>
+<dd> Optional. The CD-Text songwriter of the disc. </dd>
+<dt><code>FILE</code></dt>
+<dd> Required. The name and type of the file to be used for all following tracks. The <i>string</i> contains the name of the file followed by one of <code>BINARY</code>, <code>MOTOROLA</code>, <code>AIFF</code>, <code>WAVE</code> or <code>MP3</code>. As far as <code>cue2toc</code> is concerned the type of the file is effectively ignored. Nonetheless <code>MOTOROLA</code>, <code>AIFF</code> and <code>MP3</code> cause printing of a warning message since these file types can not be used directly with cdrdao. </dd>
 </dl>
 <p> The first appearance of a <code>TRACK</code> command causes leaving of the global section and entering the track section. </p>
 <h3>Track Section</h3>
@@ -76,26 +76,26 @@ description: "cue2toc – convert CUE to TOC format"
  <code>POSTGAP</code> <i>timecode</i><br />
  <code>FILE</code> <i>string</i> <code>BINARY</code>|<code>MOTOROLA</code>|<code>AIFF</code>|<code>WAVE</code>|<code>MP3</code> </p>
 <dl>
-<dt><code>TRACK</code></p>
-<dd> Required. Starts a new track definition. The <i>number</i> is ignored. The <i>mode</i> must be one of <code>AUDIO</code>, <code>MODE1/2048</code>, <code>MODE1/2352</code>, <code>MODE2/2336</code> or <code>MODE2/2352</code>. </p>
-<dt><code>FLAGS</code></p>
-<dd> Optional. Defines the flags for this track. Must be followed by one or more of the following commands: <code>DCP</code> (digital copy permitted), <code>4CH</code> (four channel audio), <code>PRE</code> (pre-emphasis enabled) and <code>SCMS</code> (serial copy management system). <code>SCMS</code> is ignored because there is no corresponding option in the TOC format. </p>
-<dt><code>ISRC</code></p>
-<dd> Optional. The International Standard Recording Code for this track. Must be exactly 12 characters long. </p>
-<dt><code>TITLE</code></p>
-<dd> Optional. The CD-Text title of this track. </p>
-<dt><code>PERFORMER</code></p>
-<dd> Optional. The CD-Text performer of this track. </p>
-<dt><code>SONWRITER</code></p>
-<dd> Optional. The CD-Text songwriter of this track. </p>
-<dt><code>PREGAP</code></p>
-<dd> Optional. The length of the track pregap to be filled with zero data. Mutually exclusive with <code>INDEX 0</code>. </p>
-<dt><code>POSTGAP</code></p>
-<dd> Optional. The length of the track postgap to be filled with zero data. </p>
-<dt><code>INDEX</code></p>
-<dd> Optional. The <i>number</i> must be in the range 0 &lt;= <i>number</i> &lt;= 99. Index number 1 specifies the start of the track. Index number 0 is the start of the track pregap filled with data from the file, i.e. the difference between index 0 and index 1 is the length of the pregap. Index 0 is mutually exclusive with <code>PREGAP</code>. Index numbers greater than 1 specify subindexes for this track and must be sequential. </p>
-<dt><code>FILE</code></p>
-<dd> Optional in track section. The syntax is the same as described above and if it appears inside a track specification it takes effect on the next <code>TRACK</code> command. </p>
+<dt><code>TRACK</code></dt>
+<dd> Required. Starts a new track definition. The <i>number</i> is ignored. The <i>mode</i> must be one of <code>AUDIO</code>, <code>MODE1/2048</code>, <code>MODE1/2352</code>, <code>MODE2/2336</code> or <code>MODE2/2352</code>. </dd>
+<dt><code>FLAGS</code></dt>
+<dd> Optional. Defines the flags for this track. Must be followed by one or more of the following commands: <code>DCP</code> (digital copy permitted), <code>4CH</code> (four channel audio), <code>PRE</code> (pre-emphasis enabled) and <code>SCMS</code> (serial copy management system). <code>SCMS</code> is ignored because there is no corresponding option in the TOC format. </dd>
+<dt><code>ISRC</code></dt>
+<dd> Optional. The International Standard Recording Code for this track. Must be exactly 12 characters long. </dd>
+<dt><code>TITLE</code></dt>
+<dd> Optional. The CD-Text title of this track. </dd>
+<dt><code>PERFORMER</code></dt>
+<dd> Optional. The CD-Text performer of this track. </dd>
+<dt><code>SONWRITER</code></dt>
+<dd> Optional. The CD-Text songwriter of this track. </dd>
+<dt><code>PREGAP</code></dt>
+<dd> Optional. The length of the track pregap to be filled with zero data. Mutually exclusive with <code>INDEX 0</code>. </dd>
+<dt><code>POSTGAP</code></dt>
+<dd> Optional. The length of the track postgap to be filled with zero data. </dd>
+<dt><code>INDEX</code></dt>
+<dd> Optional. The <i>number</i> must be in the range 0 &lt;= <i>number</i> &lt;= 99. Index number 1 specifies the start of the track. Index number 0 is the start of the track pregap filled with data from the file, i.e. the difference between index 0 and index 1 is the length of the pregap. Index 0 is mutually exclusive with <code>PREGAP</code>. Index numbers greater than 1 specify subindexes for this track and must be sequential. </dd>
+<dt><code>FILE</code></dt>
+<dd> Optional in track section. The syntax is the same as described above and if it appears inside a track specification it takes effect on the next <code>TRACK</code> command. </dd>
 </dl>
 <h2>LIMITATIONS</h2>
 <p> The command <code>CDTEXTFILE</code> and the flag <code>SCMS</code> have no equivalent in the TOC format and are ignored. </p>

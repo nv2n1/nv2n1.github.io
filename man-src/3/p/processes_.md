@@ -36,6 +36,6 @@ description: "QuantLib::MCBasketEngine – Pricing engine for basket options usi
 <p>Pricing engine for basket options using Monte Carlo simulation. </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -14,10 +14,10 @@ description: "gnutls_x509_crt_cpy_crl_dist_points – API function"
 <p> <code>int gnutls_x509_crt_cpy_crl_dist_points(gnutls_x509_crt_t </code><i>dst</i><code>, gnutls_x509_crt_t </code><i>src</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t dst</p>
-<dd> a certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>gnutls_x509_crt_t src</p>
-<dd> the certificate where the dist points will be copied from</dl>
+<dt>gnutls_x509_crt_t dst</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>gnutls_x509_crt_t src</dt>
+<dd> the certificate where the dist points will be copied from</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will copy the CRL distribution points certificate extension, from the source to the destination certificate. This may be useful to copy from a CA certificate to issued ones.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_x509_crt_cpy_crl_dist_points – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

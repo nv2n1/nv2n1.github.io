@@ -14,12 +14,12 @@ description: "ata_qc_free – free unused ata_queued_cmd"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Command to complete</dl>
+</dd><dd>Command to complete</dd></dl>
 <h2>Description</h2>
 <p>Designed to free unused ata_queued_cmd object in case something prevents using it. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

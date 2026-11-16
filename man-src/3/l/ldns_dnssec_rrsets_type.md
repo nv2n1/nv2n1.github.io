@@ -21,27 +21,27 @@ description: "ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrset
 <p> void ldns_dnssec_rrsets_print(FILE *out, ldns_dnssec_rrsets *rrsets, bool follow); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dnssec_rrsets_new</i>()</p>
-<dd>Creates a new list (entry) of RRsets .br Returns the newly allocated structure</dl>
+<dt> <i>ldns_dnssec_rrsets_new</i>()</dt>
+<dd>Creates a new list (entry) of RRsets .br Returns the newly allocated structure</dd></dl>
 <dl>
-<dt> <i>ldns_dnssec_rrsets_free</i>()</p>
-<dd>Frees the list of rrsets and their rrs, but *not* the ldns_rr records in the sets </p>
+<dt> <i>ldns_dnssec_rrsets_free</i>()</dt>
+<dd>Frees the list of rrsets and their rrs, but *not* the ldns_rr records in the sets </dd>
 <p> .br <code>rrsets</code>: the data structure to free</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrsets_type</i>()</p>
-<dd>Returns the rr type of the rrset (that is head of the given list) </p>
+<dt> <i>ldns_dnssec_rrsets_type</i>()</dt>
+<dd>Returns the rr type of the rrset (that is head of the given list) </dd>
 <p> .br <code>rrsets</code>: the rrset to get the type of .br Returns the rr type</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrsets_set_type</i>()</p>
-<dd>Sets the RR type of the rrset (that is head of the given list) </p>
+<dt> <i>ldns_dnssec_rrsets_set_type</i>()</dt>
+<dd>Sets the RR type of the rrset (that is head of the given list) </dd>
 <p> .br <code>rrsets</code>: the rrset to set the type of .br <code>type</code>: the type to set .br Returns LDNS_STATUS_OK on success</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrsets_add_rr</i>()</p>
-<dd>Add an ldns_rr to the corresponding RRset in the given list of RRsets. If it is not present, add it as a new RRset with 1 record. </p>
+<dt> <i>ldns_dnssec_rrsets_add_rr</i>()</dt>
+<dd>Add an ldns_rr to the corresponding RRset in the given list of RRsets. If it is not present, add it as a new RRset with 1 record. </dd>
 <p> .br <code>rrsets</code>: the list of rrsets to add the RR to .br <code>rr</code>: the rr to add to the list of rrsets .br Returns LDNS_STATUS_OK on success</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrsets_print</i>()</p>
-<dd>Print the given list of rrsets to the fiven file descriptor </p>
+<dt> <i>ldns_dnssec_rrsets_print</i>()</dt>
+<dd>Print the given list of rrsets to the fiven file descriptor </dd>
 <p> .br <code>out</code>: the file descriptor to print to .br <code>rrsets</code>: the list of RRsets to print .br <code>follow</code>: if set to false, only print the first RRset</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -55,3 +55,4 @@ description: "ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrset
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

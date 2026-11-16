@@ -17,44 +17,44 @@ description: "GSI Callback Constants –"
 <p> GSI Callback Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_SUCCESS </i></p>
-<dd> Success &#8211; never used</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_VERIFY_CRED </i></p>
-<dd> Error verifying credential</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_NOT_YET_VALID </i></p>
-<dd> The certificate is not yet valid</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CANT_GET_LOCAL_CA_CERT </i></p>
-<dd> Unable to discover a local trusted CA for a given certificate</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_HAS_EXPIRED </i></p>
-<dd> The certificate has expired</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_INVALID_PROXY </i></p>
-<dd> The proxy format is invalid</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_LIMITED_PROXY </i></p>
-<dd> Limited proxies are not accepted</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_INVALID_CRL </i></p>
-<dd> Invalid CRL</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_REVOKED_CERT </i></p>
-<dd> The certificate has been revoked</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_MIXING_DIFFERENT_PROXY_TYPES </i></p>
-<dd> The cert chain contains both legacy on RFC compliant proxies</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_WITH_SIGNING_POLICY </i></p>
-<dd> Could not verify certificate chain against the signing policy for the issuing CA</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_OLD_GAA </i></p>
-<dd> OldGAA error</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CALLBACK_DATA </i></p>
-<dd> Error with the callback data structure</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_ERRNO </i></p>
-<dd> System error</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_CHAIN </i></p>
-<dd> Error setting or getting the cert chain from callback data</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_WITH_CALLBACK_DATA_INDEX </i></p>
-<dd> Error getting callback data index</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_PROXY_PATH_LENGTH_EXCEEDED </i></p>
-<dd> Exceeded the path length specified in the proxy cert info extension</p>
-<dt><i>GLOBUS_GSI_CALLBACK_ERROR_LAST </i></p>
-<dd> Last marker &#8211; never used</dl>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_SUCCESS </i></dt>
+<dd> Success &#8211; never used</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_VERIFY_CRED </i></dt>
+<dd> Error verifying credential</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_NOT_YET_VALID </i></dt>
+<dd> The certificate is not yet valid</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CANT_GET_LOCAL_CA_CERT </i></dt>
+<dd> Unable to discover a local trusted CA for a given certificate</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_HAS_EXPIRED </i></dt>
+<dd> The certificate has expired</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_INVALID_PROXY </i></dt>
+<dd> The proxy format is invalid</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_LIMITED_PROXY </i></dt>
+<dd> Limited proxies are not accepted</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_INVALID_CRL </i></dt>
+<dd> Invalid CRL</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_REVOKED_CERT </i></dt>
+<dd> The certificate has been revoked</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_MIXING_DIFFERENT_PROXY_TYPES </i></dt>
+<dd> The cert chain contains both legacy on RFC compliant proxies</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_WITH_SIGNING_POLICY </i></dt>
+<dd> Could not verify certificate chain against the signing policy for the issuing CA</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_OLD_GAA </i></dt>
+<dd> OldGAA error</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CALLBACK_DATA </i></dt>
+<dd> Error with the callback data structure</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_ERRNO </i></dt>
+<dd> System error</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_CHAIN </i></dt>
+<dd> Error setting or getting the cert chain from callback data</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_WITH_CALLBACK_DATA_INDEX </i></dt>
+<dd> Error getting callback data index</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_PROXY_PATH_LENGTH_EXCEEDED </i></dt>
+<dd> Exceeded the path length specified in the proxy cert info extension</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_LAST </i></dt>
+<dd> Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_callback from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>

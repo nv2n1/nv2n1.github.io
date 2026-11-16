@@ -19,7 +19,7 @@ description: "Sound_AudioInfo – Information about an existing sample’s forma
 <p> These are the basics of a decoded sample&#8217;s data structure: data format (see AUDIO_U8 and friends in SDL_audio.h), number of channels, and sample rate. If you need more explanation than that, you should stop developing sound code right now. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd>Sound_SampleNew </p>
+<dd>Sound_SampleNew </dd>
 <p> Sound_SampleNewFromFile</dl>
 <h2>Field Documentation</h2>
 <h3>Uint8 <code>Sound_AudioInfo::channels</code></h3>
@@ -30,3 +30,4 @@ description: "Sound_AudioInfo – Information about an existing sample’s forma
 <p>Sample rate; frequency of sample points per second. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for SDL_sound from the source code.</p>
+</p>

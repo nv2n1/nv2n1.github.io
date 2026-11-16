@@ -31,7 +31,7 @@ size_t&amp;nbsp;error_diag_len
 <p> The drmaa_job_ps() function returns the status of the xxQS_NAMExx job <i>job_id</i> into the integer pointed to by <i>remote_ps</i>. Possible return values are listed below. See for the correspondence between them and the xxQS_NAMExx status. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>DRMAA_PS_UNDETERMINED </td>
@@ -84,13 +84,13 @@ size_t&amp;nbsp;error_diag_len
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> Jobs&#8217; user hold and user suspend states can be controlled via For affecting system hold and system suspend states the appropriate xxQS_NAMExx interfaces must be used.</p>
 <h3>drmaa_control()</h3>
 <p> The drmaa_control() function applies control operations on xxQS_NAMExx jobs. <i>jobid</i> may contain either an xxQS_NAMExx jobid or `DRMAA_JOB_IDS_SESSION_ALL&#8217; to refer to all jobs submitted during the DRMAA session opened using Legal values for <i>action</i> and their meanings are: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>DRMAA_CONTROL_SUSPEND </td>
@@ -118,55 +118,53 @@ size_t&amp;nbsp;error_diag_len
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> The DRMAA suspend/resume operations are equivalent to the use of <code>-sj&nbsp;</code><i>jobid</i> and <code>-usj&nbsp;</code><i>jobid</i> options with xxQS_NAMExx The DRMAA hold/release operations are equivalent to the use of xxQS_NAMExx and The DRMAA terminate operation is equivalent to the use of xxQS_NAMExx Only user hold and user suspend can be controlled via For affecting system hold and system suspend states the appropriate xxQS_NAMExx interfaces must be used. </p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, drmaa_job_ps(), and drmaa_control() return DRMAA_ERRNO_SUCCESS. Other values indicate an error. Up to <i>error_diag_len</i> characters of error related diagnosis information is then provided in the buffer, <i>error_diagnosis</i>. </p>
 <h2>ERRORS</h2>
 <p> The drmaa_job_ps() and drmaa_control() functions may fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></p>
-<dd> Unexpected or internal DRMAA error, like system call failure, etc.</p>
-<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></p>
-<dd> Could not contact DRM system for this request.</p>
-<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></p>
-<dd> The specified request was not processed successfully due to authorization failure.</p>
-<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></p>
-<dd> The input value for an argument is invalid.</p>
-<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></p>
-<dd> Failed because there is no active session.</p>
-<dt><code>DRMAA_ERRNO_NO_MEMORY</code></p>
-<dd> Failed allocating memory.</p>
-<dt><code>DRMAA_ERRNO_INVALID_JOB</code></p>
-<dd> The specified job does not exist.</dl>
+<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></dt>
+<dd> Unexpected or internal DRMAA error, like system call failure, etc.</dd>
+<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></dt>
+<dd> Could not contact DRM system for this request.</dd>
+<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></dt>
+<dd> The specified request was not processed successfully due to authorization failure.</dd>
+<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></dt>
+<dd> The input value for an argument is invalid.</dd>
+<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></dt>
+<dd> Failed because there is no active session.</dd>
+<dt><code>DRMAA_ERRNO_NO_MEMORY</code></dt>
+<dd> Failed allocating memory.</dd>
+<dt><code>DRMAA_ERRNO_INVALID_JOB</code></dt>
+<dd> The specified job does not exist.</dd></dl>
 <p> The drmaa_control() function may fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_RESUME_INCONSISTENT_STATE</code></p>
-<dd> The job is not suspended. The resume request will not be processed.</p>
-<dt><code>DRMAA_ERRNO_SUSPEND_INCONSISTENT_STATE</code></p>
-<dd> The job is not running and thus cannot be suspended.</p>
-<dt><code>DRMAA_ERRNO_HOLD_INCONSISTENT_STATE</code></p>
-<dd> The job cannot be moved to a hold state.</p>
-<dt><code>DRMAA_ERRNO_RELEASE_INCONSISTENT_STATE</code></p>
-<dd> The job is not in a hold state.</dl>
+<dt><code>DRMAA_ERRNO_RESUME_INCONSISTENT_STATE</code></dt>
+<dd> The job is not suspended. The resume request will not be processed.</dd>
+<dt><code>DRMAA_ERRNO_SUSPEND_INCONSISTENT_STATE</code></dt>
+<dd> The job is not running and thus cannot be suspended.</dd>
+<dt><code>DRMAA_ERRNO_HOLD_INCONSISTENT_STATE</code></dt>
+<dd> The job cannot be moved to a hold state.</dd>
+<dt><code>DRMAA_ERRNO_RELEASE_INCONSISTENT_STATE</code></dt>
+<dd> The job is not in a hold state.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>Index</h2>

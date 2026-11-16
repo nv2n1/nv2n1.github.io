@@ -14,15 +14,15 @@ description: "scsi_block_when_processing_errors – Prevent cmds from being queu
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>Device on which we are performing recovery.</dl>
+</dd><dd>Device on which we are performing recovery.</dd></dl>
 <h2>Description</h2>
 <p>We block until the host is out of error recovery, and then check to see whether the host or the device is offline. </p>
 <p> Return value: 0 when dev was taken offline by error recovery. 1 OK to proceed.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,18 +15,18 @@ description: "secutil – Extract X.509 certificates and strongnames from assemb
 <p> Extract X.509 certificates and strongnames from assemblies in a format that can be easily re-used in source code (C# or VB.NET syntax).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-s assembly, -strongname assembly</i></p>
-<dd> Display strongname informations about the assembly.</p>
-<dt><i>-x assembly, -x509certificate assembly</i></p>
-<dd> Display the X509 Authenticode certificate for the assembly.</p>
-<dt><i>-a, -array</i></p>
-<dd> Display data in a decimal array (default).</p>
-<dt><i>-v, -vbmode</i></p>
-<dd> Display data in a VisualBasic friendly format.</p>
-<dt><i>-c, -cmode</i></p>
-<dd> Display data in a C/C++/C# friendly format (default).</p>
-<dt><i>-help, -h, -?</i></p>
-<dd> Display help about this tool.</dl>
+<dt><i>-s assembly, -strongname assembly</i></dt>
+<dd> Display strongname informations about the assembly.</dd>
+<dt><i>-x assembly, -x509certificate assembly</i></dt>
+<dd> Display the X509 Authenticode certificate for the assembly.</dd>
+<dt><i>-a, -array</i></dt>
+<dd> Display data in a decimal array (default).</dd>
+<dt><i>-v, -vbmode</i></dt>
+<dd> Display data in a VisualBasic friendly format.</dd>
+<dt><i>-c, -cmode</i></dt>
+<dd> Display data in a C/C++/C# friendly format (default).</dd>
+<dt><i>-help, -h, -?</i></dt>
+<dd> Display help about this tool.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Sebastien Pouliot</p>
 <h2>COPYRIGHT</h2>

@@ -11,11 +11,9 @@ std::piecewise_construct_t - std::piecewise_construct_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;utility&gt;
-
     struct piecewise_construct_t {
 };
 (since C++ 11)(until C++ 17)
-
     struct piecewise_construct_t {
     explicit piecewise_construct_t() = default;
 };
@@ -26,9 +24,7 @@ The overloads that do not use std::piecewise_construct_t assume that each tuple 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;tuple&gt;
 struct Foo {
     Foo(std::tuple&lt;int, float&gt;)
@@ -41,7 +37,6 @@ struct Foo {
     }
 };
 int main()
-
 {
     std::tuple&lt;int, float&gt; t(1, 3.14);
     std::pair&lt;Foo, Foo&gt; p1(t, t);

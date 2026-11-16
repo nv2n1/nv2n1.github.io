@@ -25,20 +25,20 @@ Plugin sudoers_io sudoers.so</pre>
 </blockquote>
 <p> The following plugin arguments are supported:</p>
 <dl>
-<dt><code>error_recovery=bool</code></p>
-<dd>The <i>error_recovery</i> argument can be used to control whether <code>sudoers</code> should attempt to recover from syntax errors in the <i>sudoers</i> file. If set to <i>true</i> (the default), <code>sudoers</code> will try to recover from a syntax error by discarding the portion of the line that contains the error until the end of the line. A value of <i>false</i> will disable error recovery. Prior to version 1.9.3, no error recovery was performed.</p>
-<dt><code>ldap_conf=pathname</code></p>
-<dd>The <i>ldap_conf</i> argument can be used to override the default path to the ldap.conf file.</p>
-<dt><code>ldap_secret=pathname</code></p>
-<dd>The <i>ldap_secret</i> argument can be used to override the default path to the ldap.secret file.</p>
-<dt><code>sudoers_file=pathname</code></p>
-<dd>The <i>sudoers_file</i> argument can be used to override the default path to the <i>sudoers</i> file.</p>
-<dt><code>sudoers_uid=user-ID</code></p>
-<dd>The <i>sudoers_uid</i> argument can be used to override the default owner of the sudoers file. It should be specified as a numeric user-ID.</p>
-<dt><code>sudoers_gid=group-ID</code></p>
-<dd>The <i>sudoers_gid</i> argument can be used to override the default group of the sudoers file. It must be specified as a numeric group-ID (not a group name).</p>
-<dt><code>sudoers_mode=mode</code></p>
-<dd>The <i>sudoers_mode</i> argument can be used to override the default file mode for the sudoers file. It should be specified as an octal value.</dl>
+<dt><code>error_recovery=bool</code></dt>
+<dd>The <i>error_recovery</i> argument can be used to control whether <code>sudoers</code> should attempt to recover from syntax errors in the <i>sudoers</i> file. If set to <i>true</i> (the default), <code>sudoers</code> will try to recover from a syntax error by discarding the portion of the line that contains the error until the end of the line. A value of <i>false</i> will disable error recovery. Prior to version 1.9.3, no error recovery was performed.</dd>
+<dt><code>ldap_conf=pathname</code></dt>
+<dd>The <i>ldap_conf</i> argument can be used to override the default path to the ldap.conf file.</dd>
+<dt><code>ldap_secret=pathname</code></dt>
+<dd>The <i>ldap_secret</i> argument can be used to override the default path to the ldap.secret file.</dd>
+<dt><code>sudoers_file=pathname</code></dt>
+<dd>The <i>sudoers_file</i> argument can be used to override the default path to the <i>sudoers</i> file.</dd>
+<dt><code>sudoers_uid=user-ID</code></dt>
+<dd>The <i>sudoers_uid</i> argument can be used to override the default owner of the sudoers file. It should be specified as a numeric user-ID.</dd>
+<dt><code>sudoers_gid=group-ID</code></dt>
+<dd>The <i>sudoers_gid</i> argument can be used to override the default group of the sudoers file. It must be specified as a numeric group-ID (not a group name).</dd>
+<dt><code>sudoers_mode=mode</code></dt>
+<dd>The <i>sudoers_mode</i> argument can be used to override the default file mode for the sudoers file. It should be specified as an octal value.</dd></dl>
 <p> For more information on configuring sudo.conf5, please refer to its manual.</p>
 <h3>User Authentication</h3>
 <p>The <code>sudoers</code> security policy requires that most users authenticate themselves before they can use <code>sudo</code> A password is not required if the invoking user is root, if the target user is the same as the invoking user, or if the policy has disabled authentication for the user or command. Unlike <a href="/docs/linux/man/1-su/">su</a>(1), when <code>sudoers</code> requires authentication, it validates the invoking user&#8217;s credentials, not the target user&#8217;s (or root&#8217;s) credentials. This can be changed via the <i>rootpw</i> <i>targetpw</i> and <i>runaspw</i> flags, described later. If a user who is not listed in the policy tries to run a command via <code>sudo</code> mail is sent to the proper authorities. The address used for such mail is configurable via the <i>mailto</i> Defaults entry (described later) and defaults to <code>root</code> Note that no mail will be sent if an unauthorized user tries to run <code>sudo</code> with the &#8211;<code>l</code> or &#8211;<code>v</code> option unless there is an authentication error and either the <i>mail_always</i> or <i>mail_badpass</i> flags are enabled. This allows users to determine for themselves whether or not they are allowed to use <code>sudo</code> By default, all attempts to run <code>sudo</code> (successful or not) are logged, regardless of whether or not mail is sent. If <code>sudo</code> is run by root and the <code>SUDO_USER</code> environment variable is set, the <code>sudoers</code> policy will use this value to determine who the actual user is. This can be used by a user to log commands through sudo even when a root shell has been invoked. It also allows the &#8211;<code>e</code> option to remain useful even when invoked via a sudo-run script or program. Note, however, that the <i>sudoers</i> file lookup is still done for root, not the user specified by <code>SUDO_USER</code> <code>sudoers</code> uses per-user time stamp files for credential caching. Once a user has been authenticated, a record is written containing the user-ID that was used to authenticate, the terminal session ID, the start time of the session leader (or parent process) and a time stamp (using a monotonic clock if one is available). The user may then use <code>sudo</code> without a password for a short period of time Po <code>15</code> minutes unless overridden by the <i>timestamp_timeout</i> option Pc . By default, <code>sudoers</code> uses a separate record for each terminal, which means that a user&#8217;s login sessions are authenticated separately. The <i>timestamp_type</i> option can be used to select the type of time stamp record <code>sudoers</code> will use.</p>
@@ -49,17 +49,11 @@ Plugin sudoers_io sudoers.so</pre>
 <pre><code>By default, environment variables are matched by name.
 However, if the pattern includes an equal sign
 (`='
-
 )
-
-
 both the variables name and value must match.
 For example, a
 bash
-
 shell function could be matched as follows:
-
-
 env_keep += &quot;BASH_FUNC_my_func%%=()*&quot;</code></pre>
 <p> Without the &#8220;<code>=()*</code> &#8221; suffix, this would not match, as <code>bash</code> shell functions are not preserved by default. The complete list of environment variables that are preserved or removed, as modified by global Defaults parameters in <i>sudoers</i> is displayed when <code>sudo</code> is run by root with the &#8211;<code>V</code> option. Please note that the list of environment variables to remove varies based on the operating system <code>sudo</code> is running on. Other <code>sudoers</code> options may influence the command environment, such as <i>always_set_home</i> <i>secure_path</i> <i>set_logname</i> and <i>set_home</i> On systems that support PAM where the <code>pam_env</code> module is enabled for <code>sudo</code> variables in the PAM environment may be merged in to the environment. If a variable in the PAM environment is already present in the user&#8217;s environment, the value will only be overridden if the variable was not preserved by <code>sudoers.</code> When <i>env_reset</i> is enabled, variables preserved from the invoking user&#8217;s environment by the <i>env_keep</i> list take precedence over those in the PAM environment. When <i>env_reset</i> is disabled, variables present the invoking user&#8217;s environment take precedence over those in the PAM environment unless they match a pattern in the <i>env_delete</i> list. Note that the dynamic linker on most operating systems will remove variables that can control dynamic linking from the environment of set-user-ID executables, including <code>sudo</code> Depending on the operating system this may include <code>_RLD*</code> <code>DYLD_*</code> <code>LD_*</code> <code>LDR_*</code> <code>LIBPATH</code> <code>SHLIB_PATH</code> and others. These type of variables are removed from the environment before <code>sudo</code> even begins execution and, as such, it is not possible for <code>sudo</code> to preserve them. As a special case, if the &#8211;<code>i</code> option (initial login) is specified, <code>sudoers</code> will initialize the environment regardless of the value of <i>env_reset</i> The <code>DISPLAY</code> <code>PATH</code> and <code>TERM</code> variables remain unchanged; <code>HOME</code> <code>MAIL</code> <code>SHELL</code> <code>USER</code> and <code>LOGNAME</code> are set based on the target user. On AIX (and Linux systems without PAM), the contents of /etc/environment are also included. All other environment variables are removed unless permitted by <i>env_keep</i> or <i>env_check</i> described above. Finally, the <i>restricted_env_file</i> and <i>env_file</i> files are applied, if present. The variables in <i>restricted_env_file</i> are applied first and are subject to the same restrictions as the invoking user&#8217;s environment, as detailed above. The variables in <i>env_file</i> are applied last and are not subject to these restrictions. In both cases, variables present in the files will only be set to their specified values if they would not conflict with an existing environment variable.</p>
 <h2>Sudoers File Format</h2>
@@ -70,14 +64,14 @@ env_keep += &quot;BASH_FUNC_my_func%%=()*&quot;</code></pre>
 <p>By default, <code>sudoers</code> uses the operating system&#8217;s native method of setting resource limits for the target user. On Linux systems, resource limits are usually set by the <code>pam_limits.so</code> PAM module. On some BSD systems, the /etc/login.conf file specifies resource limits for the user. On AIX systems, resource limits are configured in the /etc/security/limits file. If there is no system mechanism to set per-user resource limits, the command will run with the same limits as the invoking user. The one exception to this is the core dump file size, which is set by <code>sudoers</code> to 0 by default. Disabling core dumps by default makes it possible to avoid potential security problems where the core file is treated as trusted input. </p>
 <p> Resource limits may also be set in the <i>sudoers</i> file itself, in which case they override those set by the system. See the <i>rlimit_as,</i> <i>rlimit_core,</i> <i>rlimit_cpu,</i> <i>rlimit_data,</i> <i>rlimit_fsize,</i> <i>rlimit_locks,</i> <i>rlimit_memlock,</i> <i>rlimit_nofile,</i> <i>rlimit_nproc,</i> <i>rlimit_rss,</i> <i>rlimit_stack</i> options described below. Resource limits in <code>sudoers</code> may be specified in one of the following formats:</p>
 <dl>
-<dt><code>&#8220;value&#8221; </code></p>
-<dd>Both the soft and hard resource limits are set to the same value. The special value &#8220;infinity&#8221; can be used to indicate that the value is unlimited.</p>
-<dt><code>&#8220;soft,hard&#8221; </code></p>
-<dd>Two comma-separated values. The soft limit is set to the first value and the hard limit is set to the second. Both values must either be enclosed in a set of double quotes, or the comma must be escaped with a backslash (`\&#8217; ) The special value &#8220;infinity&#8221; may be used in place of either value.</p>
-<dt><code>&#8220;default&#8221; </code></p>
-<dd>The default resource limit for the user will be used. This may be a user-specific value (see above) or the value of the resource limit when <code>sudo</code> was invoked for systems that don&#8217;t support per-user limits.</p>
-<dt><code>&#8220;user&#8221; </code></p>
-<dd>The invoking user&#8217;s resource limits will be preserved when running the command.</dl>
+<dt><code>&#8220;value&#8221; </code></dt>
+<dd>Both the soft and hard resource limits are set to the same value. The special value &#8220;infinity&#8221; can be used to indicate that the value is unlimited.</dd>
+<dt><code>&#8220;soft,hard&#8221; </code></dt>
+<dd>Two comma-separated values. The soft limit is set to the first value and the hard limit is set to the second. Both values must either be enclosed in a set of double quotes, or the comma must be escaped with a backslash (`\&#8217; ) The special value &#8220;infinity&#8221; may be used in place of either value.</dd>
+<dt><code>&#8220;default&#8221; </code></dt>
+<dd>The default resource limit for the user will be used. This may be a user-specific value (see above) or the value of the resource limit when <code>sudo</code> was invoked for systems that don&#8217;t support per-user limits.</dd>
+<dt><code>&#8220;user&#8221; </code></dt>
+<dd>The invoking user&#8217;s resource limits will be preserved when running the command.</dd></dl>
 <p> For example, to restore the historic core dump file size behavior, a line like the following may be used. </p>
 <blockquote><p><tt>Defaults rlimit_core=default</tt></p></blockquote>
 <p> Resource limits in <code>sudoers</code> are only supported by version 1.8.7 or higher.</p>
@@ -86,12 +80,12 @@ env_keep += &quot;BASH_FUNC_my_func%%=()*&quot;</code></pre>
 <p> <code>symbol ::= definition | alternate1 | alternate2 &#8230;</code> </p>
 <p> Each <i>production rule</i> references others and thus makes up a grammar for the language. EBNF also contains the following operators, which many readers will recognize from regular expressions. Do not, however, confuse them with &#8220;wildcard&#8221; characters, which have different meanings.</p>
 <dl>
-<dt><code>?</code></p>
-<dd>Means that the preceding symbol (or group of symbols) is optional. That is, it may appear once or not at all.</p>
-<dt><code>*</code></p>
-<dd>Means that the preceding symbol (or group of symbols) may appear zero or more times.</p>
-<dt><code>+</code></p>
-<dd>Means that the preceding symbol (or group of symbols) may appear one or more times.</dl>
+<dt><code>?</code></dt>
+<dd>Means that the preceding symbol (or group of symbols) is optional. That is, it may appear once or not at all.</dd>
+<dt><code>*</code></dt>
+<dd>Means that the preceding symbol (or group of symbols) may appear zero or more times.</dd>
+<dt><code>+</code></dt>
+<dd>Means that the preceding symbol (or group of symbols) may appear one or more times.</dd></dl>
 <p> Parentheses may be used to group symbols together. For clarity, we will use single quotes (&#8221;) to designate what is a verbatim character string (as opposed to a symbol name).</p>
 <h3>Aliases</h3>
 <p>There are four kinds of aliases: <code>User_Alias</code> <code>Runas_Alias</code> <code>Host_Alias</code> and <code>Cmnd_Alias</code> Beginning with <code>sudo</code> 1.9.0, <code>Cmd_Alias</code> may be used in place of <code>Cmnd_Alias</code> if desired. </p>
@@ -271,42 +265,44 @@ $ sudo -g operator /bin/ls</pre>
 <h3>Tag_Spec</h3>
 <p>A command may have zero or more tags associated with it. The following tag values are supported: <code>EXEC</code> <code>NOEXEC</code> <code>FOLLOW</code> <code>NOFOLLOW</code> <code>LOG_INPUT</code> <code>NOLOG_INPUT</code> <code>LOG_OUTPUT</code> <code>NOLOG_OUTPUT</code> <code>MAIL</code> <code>NOMAIL</code> <code>INTERCEPT</code> <code>NOINTERCEPT</code> <code>PASSWD</code> <code>NOPASSWD</code> <code>SETENV</code> and <code>NOSETENV</code> Once a tag is set on a <code>Cmnd</code> subsequent <code>Cmnd s</code> in the <code>Cmnd_Spec_List</code> inherit the tag unless it is overridden by the opposite tag (in other words, <code>PASSWD</code> overrides <code>NOPASSWD</code> and <code>NOEXEC</code> overrides <code>EXEC )</code></p>
 <dl>
-<dt><i>EXEC </i><code>and </code><i>NOEXEC</i></p>
-<dd>If <code>sudo</code> has been compiled with <i>noexec</i> support and the underlying operating system supports it, the <code>NOEXEC</code> tag can be used to prevent a dynamically-linked executable from running further commands itself. </p>
+<dt><i>EXEC </i><code>and </code><i>NOEXEC</i></dt>
+<dd>If <code>sudo</code> has been compiled with <i>noexec</i> support and the underlying operating system supports it, the <code>NOEXEC</code> tag can be used to prevent a dynamically-linked executable from running further commands itself. </dd>
 <p> In the following example, user <code>aaron</code> may run /usr/bin/more and /usr/bin/vi but shell escapes will be disabled. </p>
 <pre>aaron shanty = NOEXEC: /usr/bin/more, /usr/bin/vi</pre>
 <p>See the Sx Preventing shell escapes section below for more details on how <code>NOEXEC</code> works and whether or not it will work on your system.</p>
-<dt><i>FOLLOW </i><code>and </code><i>NOFOLLOW</i></p>
-<dd>Starting with version 1.8.15, <code>sudoedit</code> will not open a file that is a symbolic link unless the <i>sudoedit_follow</i> flag is enabled. The <i>FOLLOW</i> and <i>NOFOLLOW</i> tags override the value of <i>sudoedit_follow</i> and can be used to permit (or deny) the editing of symbolic links on a per-command basis. These tags are only effective for the <i>sudoedit</i> command and are ignored for all other commands.</p>
-<dt><i>LOG_INPUT </i><code>and </code><i>NOLOG_INPUT</i></p>
-<dd>These tags override the value of the <i>log_input</i> flag on a per-command basis. For more information, see the description of <i>log_input</i> in the Sx SUDOERS OPTIONS section below.</p>
-<dt><i>LOG_OUTPUT </i><code>and </code><i>NOLOG_OUTPUT</i></p>
-<dd>These tags override the value of the <i>log_output</i> flag on a per-command basis. For more information, see the description of <i>log_output</i> in the Sx SUDOERS OPTIONS section below.</p>
-<dt><i>MAIL </i><code>and </code><i>NOMAIL</i></p>
-<dd>These tags provide fine-grained control over whether mail will be sent when a user runs a command by overriding the value of the <i>mail_all_cmnds</i> flag on a per-command basis. They have no effect when <code>sudo</code> is run with the &#8211;<code>l</code> or &#8211;<code>v</code> options. A <i>NOMAIL</i> tag will also override the <i>mail_always</i> and <i>mail_no_perms</i> options. For more information, see the descriptions of <i>mail_all_cmnds</i> <i>mail_always</i> and <i>mail_no_perms</i> in the Sx SUDOERS OPTIONS section below.</p>
-<dt><i>PASSWD </i><code>and </code><i>NOPASSWD</i></p>
-<dd>By default, <code>sudo</code> requires that a user authenticate before running a command. This behavior can be modified via the <code>NOPASSWD</code> tag. Like a <code>Runas_Spec</code> the <code>NOPASSWD</code> tag sets a default for the commands that follow it in the <code>Cmnd_Spec_List</code> Conversely, the <code>PASSWD</code> tag can be used to reverse things. For example: </p>
+<dt><i>FOLLOW </i><code>and </code><i>NOFOLLOW</i></dt>
+<dd>Starting with version 1.8.15, <code>sudoedit</code> will not open a file that is a symbolic link unless the <i>sudoedit_follow</i> flag is enabled. The <i>FOLLOW</i> and <i>NOFOLLOW</i> tags override the value of <i>sudoedit_follow</i> and can be used to permit (or deny) the editing of symbolic links on a per-command basis. These tags are only effective for the <i>sudoedit</i> command and are ignored for all other commands.</dd>
+<dt><i>LOG_INPUT </i><code>and </code><i>NOLOG_INPUT</i></dt>
+<dd>These tags override the value of the <i>log_input</i> flag on a per-command basis. For more information, see the description of <i>log_input</i> in the Sx SUDOERS OPTIONS section below.</dd>
+<dt><i>LOG_OUTPUT </i><code>and </code><i>NOLOG_OUTPUT</i></dt>
+<dd>These tags override the value of the <i>log_output</i> flag on a per-command basis. For more information, see the description of <i>log_output</i> in the Sx SUDOERS OPTIONS section below.</dd>
+<dt><i>MAIL </i><code>and </code><i>NOMAIL</i></dt>
+<dd>These tags provide fine-grained control over whether mail will be sent when a user runs a command by overriding the value of the <i>mail_all_cmnds</i> flag on a per-command basis. They have no effect when <code>sudo</code> is run with the &#8211;<code>l</code> or &#8211;<code>v</code> options. A <i>NOMAIL</i> tag will also override the <i>mail_always</i> and <i>mail_no_perms</i> options. For more information, see the descriptions of <i>mail_all_cmnds</i> <i>mail_always</i> and <i>mail_no_perms</i> in the Sx SUDOERS OPTIONS section below.</dd>
+<dt><i>PASSWD </i><code>and </code><i>NOPASSWD</i></dt>
+<dd>By default, <code>sudo</code> requires that a user authenticate before running a command. This behavior can be modified via the <code>NOPASSWD</code> tag. Like a <code>Runas_Spec</code> the <code>NOPASSWD</code> tag sets a default for the commands that follow it in the <code>Cmnd_Spec_List</code> Conversely, the <code>PASSWD</code> tag can be used to reverse things. For example: </dd>
 <pre>ray rushmore = NOPASSWD: /bin/kill, /bin/ls, /usr/bin/lprm</pre>
 <p>would allow the user <code>ray</code> to run /bin/kill /bin/ls and /usr/bin/lprm as <code>root</code> on the machine &#8220;rushmore&#8221; without authenticating himself. If we only want <code>ray</code> to be able to run /bin/kill without a password the entry would be: </p>
 <pre>ray rushmore = NOPASSWD: /bin/kill, PASSWD: /bin/ls, /usr/bin/lprm</pre>
 <p>Note, however, that the <code>PASSWD</code> tag has no effect on users who are in the group specified by the <i>exempt_group</i> setting. </p>
 <p> By default, if the <code>NOPASSWD</code> tag is applied to any of a user&#8217;s entries for the current host, the user will be able to run &#8220;<code>sudo -l</code> &#8221; without a password. Additionally, a user may only run &#8220;<code>sudo -v</code> &#8221; without a password if all of the user&#8217;s entries for the current host have the <code>NOPASSWD</code> tag. This behavior may be overridden via the <i>verifypw</i> and <i>listpw</i> options.</p>
-<dt><i>SETENV </i><code>and </code><i>NOSETENV</i></p>
-<dd>These tags override the value of the <i>setenv</i> flag on a per-command basis. Note that if <code>SETENV</code> has been set for a command, the user may disable the <i>env_reset</i> flag from the command line via the &#8211;<code>E</code> option. Additionally, environment variables set on the command line are not subject to the restrictions imposed by <i>env_check</i> <i>env_delete</i> or <i>env_keep</i> As such, only trusted users should be allowed to set variables in this manner. If the command matched is <code>ALL</code> the <code>SETENV</code> tag is implied for that command; this default may be overridden by use of the <code>NOSETENV</code> tag.</p>
-<dt><i>INTERCEPT </i><code>and </code><i>NOINTERCEPT</i></p>
-<dd>If <code>sudo</code> has been compiled with <i>intercept</i> support and the underlying operating system supports it, the <code>INTERCEPT</code> tag can be used to cause programs spawned by a command to be validated against <i>sudoers</i> and logged just like they would be if run through <code>sudo</code> directly. This is useful in conjunction with commands that allow shell escapes such as editors, shells, and paginators. </p>
+<dt><i>SETENV </i><code>and </code><i>NOSETENV</i></dt>
+<dd>These tags override the value of the <i>setenv</i> flag on a per-command basis. Note that if <code>SETENV</code> has been set for a command, the user may disable the <i>env_reset</i> flag from the command line via the &#8211;<code>E</code> option. Additionally, environment variables set on the command line are not subject to the restrictions imposed by <i>env_check</i> <i>env_delete</i> or <i>env_keep</i> As such, only trusted users should be allowed to set variables in this manner. If the command matched is <code>ALL</code> the <code>SETENV</code> tag is implied for that command; this default may be overridden by use of the <code>NOSETENV</code> tag.</dd>
+<dt><i>INTERCEPT </i><code>and </code><i>NOINTERCEPT</i></dt>
+<dd>If <code>sudo</code> has been compiled with <i>intercept</i> support and the underlying operating system supports it, the <code>INTERCEPT</code> tag can be used to cause programs spawned by a command to be validated against <i>sudoers</i> and logged just like they would be if run through <code>sudo</code> directly. This is useful in conjunction with commands that allow shell escapes such as editors, shells, and paginators. </dd>
 <p> In the following example, user <code>chuck</code> may run any command on the machine &#8220;research&#8221; in intercept mode. </p>
 <pre>chuck research = INTERCEPT: ALL</pre>
 <p>See the Sx Preventing shell escapes section below for more details on how <code>INTERCEPT</code> works and whether or not it will work on your system.</dl>
 <h3>Wildcards</h3>
 <p><code>sudo</code> allows shell-style <i>wildcards</i> (aka meta or glob characters) to be used in host names, path names, and command line arguments in the <i>sudoers</i> file. Wildcard matching is done via the <a href="/docs/linux/man/3-glob/">glob</a>(3) and <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3) functions as specified by St -p1003.1 .</p>
 <dl>
-<dt><code>*</code></p>
-<dd>Matches any set of zero or more characters (including white space).</p>
-<dt><code>?</code></p>
-<dd>Matches any single character (including white space).</p>
-<dt><code>[&#8230;]</code></p>
-<dd>Matches any character in the specified range.</p>
-<dt><code>[!&#8230;]</code></p>
-<dd>Matches any character <i>not</i> in the specified range.</p>
+<dt><code>*</code></dt>
+<dd>Matches any set of zero or more characters (including white space).</dd>
+<dt><code>?</code></dt>
+<dd>Matches any single character (including white space).</dd>
+<dt><code>[&#8230;]</code></dt>
+<dd>Matches any character in the specified range.</dd>
+<dt><code>[!&#8230;]</code></dt>
+<dd>Matches any character <i>not</i> in the specified range.</dd>
 <dt><code>
+</dt></dl>
+</code>

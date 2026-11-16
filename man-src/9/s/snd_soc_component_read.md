@@ -15,15 +15,15 @@ snd_soc_component_read - Read register value
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>Component to read from</dl>
+<dl><dd></dd><dd>Component to read from</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>Register to read</dl>
+<dl><dd>Register to read</dd></dl>
  
 
  <i>val</i>
-<dl><dd>Pointer to where the read value is stored</dl>
+<dl><dd>Pointer to where the read value is stored</dd></dl>
 
 <h2>Return</h2>
 

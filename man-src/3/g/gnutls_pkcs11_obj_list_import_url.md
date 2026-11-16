@@ -14,16 +14,16 @@ description: "gnutls_pkcs11_obj_list_import_url – API function"
 <p> <code>int gnutls_pkcs11_obj_list_import_url(gnutls_pkcs11_obj_t * </code><i>p_list</i><code>, unsigned int * </code><i>n_list</i><code>, const char * </code><i>url</i><code>, gnutls_pkcs11_obj_attr_t </code><i>attrs</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs11_obj_t * p_list</p>
-<dd> An uninitialized object list (may be NULL)</p>
-<dt>unsigned int * n_list</p>
-<dd> initially should hold the maximum size of the list. Will contain the actual size.</p>
-<dt>const char * url</p>
-<dd> A PKCS 11 url identifying a set of objects</p>
-<dt>gnutls_pkcs11_obj_attr_t attrs</p>
-<dd> Attributes of type <code>gnutls_pkcs11_obj_attr_t</code> that can be used to limit output</p>
-<dt>unsigned int flags</p>
-<dd> Or sequence of GNUTLS_PKCS11_OBJ_* flags</dl>
+<dt>gnutls_pkcs11_obj_t * p_list</dt>
+<dd> An uninitialized object list (may be NULL)</dd>
+<dt>unsigned int * n_list</dt>
+<dd> initially should hold the maximum size of the list. Will contain the actual size.</dd>
+<dt>const char * url</dt>
+<dd> A PKCS 11 url identifying a set of objects</dd>
+<dt>gnutls_pkcs11_obj_attr_t attrs</dt>
+<dd> Attributes of type <code>gnutls_pkcs11_obj_attr_t</code> that can be used to limit output</dd>
+<dt>unsigned int flags</dt>
+<dd> Or sequence of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will initialize and set values to an object list by using all objects identified by a PKCS 11 URL.</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_pkcs11_obj_list_import_url – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

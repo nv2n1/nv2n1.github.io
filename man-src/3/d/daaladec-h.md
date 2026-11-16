@@ -61,7 +61,7 @@ description: "daala/daaladec.h –"
 <p>Copy the motion compensated reference into a user supplied <code>daala_image</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>&lt;tt&gt;daala_image*&lt;/tt&gt;,:</i> Pointer to the user supplied <code>daala_image</code>. Image must be allocated by the caller, and must be the same format as the decoder output images.</dl>
+<dd><i>&lt;tt&gt;daala_image*&lt;/tt&gt;,:</i> Pointer to the user supplied <code>daala_image</code>. Image must be allocated by the caller, and must be the same format as the decoder output images.</dd></dl>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>daala_dec_ctx</code> <code>daala_dec_ctx</code></h3>
 <p>The decoder context.</p>

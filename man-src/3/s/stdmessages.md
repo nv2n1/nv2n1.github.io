@@ -10,9 +10,7 @@ description: "std::messages – std::messages"
 <p>std::messages &#8211; std::messages</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT &gt;
-
 class messages;</code></pre>
 <p>Class template std::messages is a standard locale facet that encapsulates retrieval of strings from message catalogs, such as the ones provided by GNU gettext or by POSIX catgets.<br />
 The source of the messages is implementation-defined.<br />

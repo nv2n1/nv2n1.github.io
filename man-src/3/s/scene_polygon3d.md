@@ -10,7 +10,6 @@ description: "scene_polygon3d, scene_polygon3d_f – Puts a polygon in the scene
 <p>scene_polygon3d, scene_polygon3d_f &#8211; Puts a polygon in the scene rendering list. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int scene_polygon3d(int type, BITMAP *texture, int vc, V3D *vtx[]);
 int scene_polygon3d_f(int type, BITMAP *texture, int vc, V3D_f *vtx[]);</code></pre>
 <h2>Description</h2>

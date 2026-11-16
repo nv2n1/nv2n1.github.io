@@ -19,17 +19,17 @@ description: "doveadm-log – Locate, test or reopen Dovecot’s log files"
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <h2>COMMANDS</h2>
 <h3>log errors</h3>
 <p> <code>doveadm log errors</code> [<code>-s</code> <i>min_timestamp</i>] </p>
 <p> The <code>log errors</code> command is used to show the last &#8211; up to 1,000 &#8211; errors and warnings. If no output is generated, no errors have occurred since the last start. </p>
 <dl>
-<dt><code>-s</code><i>&nbsp;<wbr>min_timestamp</i></p>
-<dd> An integer value, representing seconds since the epoch &#8211; also known as Unix timestamp. When a min_timestamp was given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will only show errors occurred since that point in time.</dl>
+<dt><code>-s</code><i>&nbsp;<wbr>min_timestamp</i></dt>
+<dd> An integer value, representing seconds since the epoch &#8211; also known as Unix timestamp. When a min_timestamp was given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will only show errors occurred since that point in time.</dd></dl>
 <h3>log find</h3>
 <p> <code>doveadm log find</code> [<i>directory</i>] </p>
 <p> The <code>log find</code> command is used to show the location of the log files, to which <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1) sends its log messages. If <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1) logs its messages through <code>syslogd</code>(8) and <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) could not find any log files, you can specify the <i>directory</i> where your syslogd writes its log files.</p>

@@ -64,10 +64,10 @@ description: "globus_gss_assist.h – GSS Assist Header."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hostname</i> The host name or numerical address to be resolved and transform into a GSS Name<br />
- <i>authorization_hostname</i> The resulting GSS Name</dl>
+ <i>authorization_hostname</i> The resulting GSS Name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>GLOBUS_SUCCESS on successful completion, a error object otherwise</dl>
+<dd>GLOBUS_SUCCESS on successful completion, a error object otherwise</dd></dl>
 <h3>OM_uint32 globus_gss_assist_wrap_send (OM_uint32 *minor_status, const gss_ctx_id_tcontext_handle, char *data, size_tlength, int *token_status, int(*)(void *, void *, size_t)gss_assist_send_token, void *gss_assist_send_context, FILE *fperr)</h3>
 <p>Wrap. </p>
 <p> <code>Parameters:</code></p>
@@ -79,12 +79,12 @@ description: "globus_gss_assist.h – GSS Assist Header."
  <i>token_status</i> assist routine get/send token status<br />
  <i>gss_assist_send_token</i> a send_token routine<br />
  <i>gss_assist_send_context</i> first arg for the send_token<br />
- <i>fperr</i> file handle to write error message to.</dl>
+ <i>fperr</i> file handle to write error message to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>GSS_S_COMPLETE on success Other GSSAPI errors on failure.</dl>
+<dd>GSS_S_COMPLETE on success Other GSSAPI errors on failure.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>gss_wrap()</dl>
+<dd>gss_wrap()</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gss_assist from the source code.</p>

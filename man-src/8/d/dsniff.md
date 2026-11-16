@@ -16,37 +16,37 @@ description: "dsniff – password sniffer"
 <p> I wrote <code>dsniff</code> with honest intentions &#8211; to audit my own network, and to demonstrate the insecurity of cleartext network protocols. Please do not abuse this software.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Perform half-duplex TCP stream reassembly, to handle asymmetrically routed traffic (such as when using <a href="/docs/linux/man/8-arpspoof/">arpspoof</a>(8) to intercept client traffic bound for the local gateway).</p>
-<dt><code>-d</code></p>
-<dd>Enable debugging mode.</p>
-<dt><code>-m</code></p>
-<dd>Enable automatic protocol detection.</p>
-<dt><code>-n</code></p>
-<dd>Do not resolve IP addresses to hostnames.</p>
-<dt><code>-i </code><i>interface</i></p>
-<dd>Specify the interface to listen on.</p>
-<dt><code>-p </code><i>pcapfile</i></p>
-<dd>Rather than processing the contents of packets observed upon the network process the given PCAP capture file.</p>
-<dt><code>-s </code><i>snaplen</i></p>
-<dd>Analyze at most the first <i>snaplen</i> bytes of each TCP connection, rather than the default of 1024.</p>
-<dt><code>-f </code><i>services</i></p>
-<dd>Load triggers from a <i>services</i> file.</p>
-<dt><code> -t </code><i>trigger</i>[,&#8230;]</p>
-<dd>Load triggers from a comma-separated list, specified as <i>port</i>/<i>proto</i>=<i>service</i> (e.g. 80/tcp=http).</p>
-<dt><code>-r </code><i>savefile</i></p>
-<dd>Read sniffed sessions from a <i>savefile</i> created with the <code>-w</code> option.</p>
-<dt><code>-w </code><i>file</i></p>
-<dd>Write sniffed sessions to <i>savefile</i> rather than parsing and printing them out.</p>
-<dt><i>expression</i></p>
-<dd>Specify a <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8) filter expression to select traffic to sniff.</dl>
+<dt><code>-c</code></dt>
+<dd>Perform half-duplex TCP stream reassembly, to handle asymmetrically routed traffic (such as when using <a href="/docs/linux/man/8-arpspoof/">arpspoof</a>(8) to intercept client traffic bound for the local gateway).</dd>
+<dt><code>-d</code></dt>
+<dd>Enable debugging mode.</dd>
+<dt><code>-m</code></dt>
+<dd>Enable automatic protocol detection.</dd>
+<dt><code>-n</code></dt>
+<dd>Do not resolve IP addresses to hostnames.</dd>
+<dt><code>-i </code><i>interface</i></dt>
+<dd>Specify the interface to listen on.</dd>
+<dt><code>-p </code><i>pcapfile</i></dt>
+<dd>Rather than processing the contents of packets observed upon the network process the given PCAP capture file.</dd>
+<dt><code>-s </code><i>snaplen</i></dt>
+<dd>Analyze at most the first <i>snaplen</i> bytes of each TCP connection, rather than the default of 1024.</dd>
+<dt><code>-f </code><i>services</i></dt>
+<dd>Load triggers from a <i>services</i> file.</dd>
+<dt><code> -t </code><i>trigger</i>[,&#8230;]</dt>
+<dd>Load triggers from a comma-separated list, specified as <i>port</i>/<i>proto</i>=<i>service</i> (e.g. 80/tcp=http).</dd>
+<dt><code>-r </code><i>savefile</i></dt>
+<dd>Read sniffed sessions from a <i>savefile</i> created with the <code>-w</code> option.</dd>
+<dt><code>-w </code><i>file</i></dt>
+<dd>Write sniffed sessions to <i>savefile</i> rather than parsing and printing them out.</dd>
+<dt><i>expression</i></dt>
+<dd>Specify a <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8) filter expression to select traffic to sniff.</dd></dl>
 <p> On a hangup signal <code>dsniff</code> will dump its current trigger table to <i>dsniff.services</i>.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/dsniff/dsniff.services</i></p>
-<dd>Default trigger table</p>
-<dt><i>/etc/dsniff/dsniff.magic</i></p>
-<dd>Network protocol magic</dl>
+<dt><i>/etc/dsniff/dsniff.services</i></dt>
+<dd>Default trigger table</dd>
+<dt><i>/etc/dsniff/dsniff.magic</i></dt>
+<dd>Network protocol magic</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-arpspoof/">arpspoof</a>(8), libnids(3), <a href="/docs/linux/man/5-services/">services</a>(5), <a href="/docs/linux/man/5-magic/">magic</a>(5)</p>
 <h2>Author</h2>

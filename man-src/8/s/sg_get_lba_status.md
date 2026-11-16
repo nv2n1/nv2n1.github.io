@@ -16,22 +16,22 @@ description: "sg_get_lba_status – send SCSI GET LBA STATUS command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;brief</code></p>
-<dd>when use once then one LBA status descriptor per line is output to stdout. Each line has this format: &quot;0x&lt;descriptor_LBA&gt; 0x&lt;blocks&gt; &lt;provisioning_status&gt;&quot;. So the descriptor LBA and blocks are output in hex and the provisioning status in decimal. When used twice (e.g. &#8216;-bb&#8217; or &#8216;&#8211;brief &#8211;brief&#8217;) the provisioning status of the given <i>LBA</i> (or LBA 0 if the <i>&#8211;lba</i> option is not given) is output to stdout. A check is made that the given <i>LBA</i> lies on the range of the first returned LBA status descriptor (as it should according to SBC-3 revision 20) and warnings are sent to stderr if it doesn&#8217;t.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output response to this command in ASCII hex.</p>
-<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></p>
-<dd>where <i>LBA</i> is the starting Logical Block Address (LBA) to check the provisioning status for. Note that the <i>DEVICE</i> chooses how many following blocks that it will return provisioning status for.</p>
-<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></p>
-<dd>where <i>LEN</i> is the (maximum) response length in bytes. It is placed in the cdb&#8217;s &quot;allocation length&quot; field. If not given then 24 is used. 24 is enough space for the response header and one LBA status descriptor. <i>LEN</i> should be 8 plus a multiple of 16 (e.g. 24, 40, and 56 are suitable).</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>output response in binary (to stdout).</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output). Additional output caused by this option is sent to stderr.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-b</code>, <code>&#8211;brief</code></dt>
+<dd>when use once then one LBA status descriptor per line is output to stdout. Each line has this format: &quot;0x&lt;descriptor_LBA&gt; 0x&lt;blocks&gt; &lt;provisioning_status&gt;&quot;. So the descriptor LBA and blocks are output in hex and the provisioning status in decimal. When used twice (e.g. &#8216;-bb&#8217; or &#8216;&#8211;brief &#8211;brief&#8217;) the provisioning status of the given <i>LBA</i> (or LBA 0 if the <i>&#8211;lba</i> option is not given) is output to stdout. A check is made that the given <i>LBA</i> lies on the range of the first returned LBA status descriptor (as it should according to SBC-3 revision 20) and warnings are sent to stderr if it doesn&#8217;t.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output response to this command in ASCII hex.</dd>
+<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></dt>
+<dd>where <i>LBA</i> is the starting Logical Block Address (LBA) to check the provisioning status for. Note that the <i>DEVICE</i> chooses how many following blocks that it will return provisioning status for.</dd>
+<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></dt>
+<dd>where <i>LEN</i> is the (maximum) response length in bytes. It is placed in the cdb&#8217;s &quot;allocation length&quot; field. If not given then 24 is used. 24 is enough space for the response header and one LBA status descriptor. <i>LEN</i> should be 8 plus a multiple of 16 (e.g. 24, 40, and 56 are suitable).</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>output response in binary (to stdout).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output). Additional output caused by this option is sent to stderr.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>In SBC-3 revision 25 the calculation associated with the Parameter Data Length field in the response was modified. Prior to that the byte offset was 8 and in revision 25 it was changed to 4. </p>
 <p> For a discussion of logical block provisioning see section 4.7 of sbc3r29.pdf at <a rel="nofollow" href="http://www.t10.org">http://www.t10.org</a> (or the corresponding section of a later draft).</p>

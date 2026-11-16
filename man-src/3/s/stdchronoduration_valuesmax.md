@@ -10,7 +10,6 @@ description: "std::chrono::duration_values<Rep>::max – std::chrono::duration_v
 <p>std::chrono::duration_values&lt;Rep&gt;::max &#8211; std::chrono::duration_values&lt;Rep&gt;::max</p>
 <h2>Synopsis</h2>
 <pre><code>static constexpr Rep max();           (until C++20)
-
 static constexpr Rep max() noexcept;  (since C++20)</code></pre>
 <p>Returns the largest possible representation. </p>
 <h2>Parameters</h2>

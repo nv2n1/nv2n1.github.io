@@ -24,12 +24,12 @@ description: "pmStore – modify values of performance metrics"
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3) and <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_GENERIC</code></p>
-<dd>At least one of the modifications was rejected. No other status is available from below the PMAPI (this is the lightweight part of the functionality!). In cases where the outcome of <code>pmStore</code> for individual metrics is important, the caller should make one call to <code>pmStore</code> for each metric. On the other hand, a bulk modification can be performed in a single <code>pmStore</code> call for situations in which the outcome is not critical.</p>
-<dt><code>PM_ERR_NOTHOST</code></p>
-<dd>The current PMAPI context is an archive rather than a host, or it is a host that is not set to the current time, i.e. has been &#8220;rewound&#8221; to the recent past using <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3).</p>
-<dt><code>PM_ERR_TOOSMALL</code></p>
-<dd>The number of metrics specified in <i>result</i> is less than one.</p>
-<dt><code>PM_ERR_VALUE</code></p>
-<dd>One or more of the <i>pmValueSet</i>s in <i>result</i> has a <i>numval</i> field with a value less than one. </p>
+<dt><code>PM_ERR_GENERIC</code></dt>
+<dd>At least one of the modifications was rejected. No other status is available from below the PMAPI (this is the lightweight part of the functionality!). In cases where the outcome of <code>pmStore</code> for individual metrics is important, the caller should make one call to <code>pmStore</code> for each metric. On the other hand, a bulk modification can be performed in a single <code>pmStore</code> call for situations in which the outcome is not critical.</dd>
+<dt><code>PM_ERR_NOTHOST</code></dt>
+<dd>The current PMAPI context is an archive rather than a host, or it is a host that is not set to the current time, i.e. has been &#8220;rewound&#8221; to the recent past using <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3).</dd>
+<dt><code>PM_ERR_TOOSMALL</code></dt>
+<dd>The number of metrics specified in <i>result</i> is less than one.</dd>
+<dt><code>PM_ERR_VALUE</code></dt>
+<dd>One or more of the <i>pmValueSet</i>s in <i>result</i> has a <i>numval</i> field with a value less than one. </dd>
 </dl>

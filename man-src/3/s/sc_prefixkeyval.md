@@ -11,7 +11,6 @@ description: "sc::PrefixKeyVal –"
 <p> <code>PrefixKeyVal</code> is a <code>KeyVal</code> that searches a different <code>KeyVal</code> using modified keys.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::KeyVal</code>.</p>
 <h3>Public Member Functions</h3>

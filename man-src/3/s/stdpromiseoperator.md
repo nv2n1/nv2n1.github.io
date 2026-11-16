@@ -12,7 +12,6 @@ std::promise&lt;R&gt;::operator= - std::promise&lt;R&gt;::operator=
 
 <pre><code>promise &amp;operator=(promise &amp;&amp;other) noexcept;
 (1)(since C++ 11)
-
     promise &amp;
     operator=(const promise &amp;rhs) = delete;
 (2)(since C++ 11)</code></pre> 

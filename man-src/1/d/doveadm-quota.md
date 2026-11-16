@@ -18,41 +18,39 @@ description: "doveadm-quota – Initialize/recalculate or show current quota usa
 <p> In the second form, the <i>command</i> will be performed for all users. </p>
 <p> In the third form, the <i>command</i> will affect only the matching <i>user</i>(s).</p>
 <dl>
-<dt>Note:</p>
-<dd> The <code>quota get</code> and <code>quota recalc</code> commands are only available when the global <i>mail_plugins</i> setting contains the <code>quota</code> plugin.</dl>
+<dt>Note:</dt>
+<dd> The <code>quota get</code> and <code>quota recalc</code> commands are only available when the global <i>mail_plugins</i> setting contains the <code>quota</code> plugin.</dd></dl>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-f&nbsp;<wbr></code><i>formatter</i></p>
-<dd> Specifies the <i>formatter</i> for formatting the output. Supported formatters are:</p>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-f&nbsp;<wbr></code><i>formatter</i></dt>
+<dd> Specifies the <i>formatter</i> for formatting the output. Supported formatters are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>flow</code></p>
-<dd> prints each line with <i>key</i><code>=</code><i>value</i> pairs.</p>
-<dt><code>pager</code></p>
-<dd> prints each <i>key</i>:&nbsp;<wbr><i>value</i> pair on its own line and separates records with form feed character (<code>^L</code>).</p>
-<dt><code>tab</code></p>
-<dd> prints a table header followed by tab separated value lines.</p>
-<dt><code>table</code></p>
-<dd> prints a table header followed by adjusted value lines.</dl>
+<dt><code>flow</code></dt>
+<dd> prints each line with <i>key</i><code>=</code><i>value</i> pairs.</dd>
+<dt><code>pager</code></dt>
+<dd> prints each <i>key</i>:&nbsp;<wbr><i>value</i> pair on its own line and separates records with form feed character (<code>^L</code>).</dd>
+<dt><code>tab</code></dt>
+<dd> prints a table header followed by tab separated value lines.</dd>
+<dt><code>table</code></dt>
+<dd> prints a table header followed by adjusted value lines.</dd></dl>
 </dl>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> If the <code>-A</code> option is present, the <i>command</i> will be performed for all users. Using this option in combination with system users from <code>userdb { driver = passwd }</code> is not recommended, because it contains also users with a lower UID than the one configured with the <i>first_valid_uid</i> setting. </p>
+<dt><code>-A</code></dt>
+<dd> If the <code>-A</code> option is present, the <i>command</i> will be performed for all users. Using this option in combination with system users from <code>userdb { driver = passwd }</code> is not recommended, because it contains also users with a lower UID than the one configured with the <i>first_valid_uid</i> setting. </dd>
 <p> When the SQL userdb module is used make sure that the <i>iterate_query</i> setting in <i>/etc/dovecot/dovecot-sql.conf.ext</i> matches your database layout. When using the LDAP userdb module, make sure that the <i>iterate_attrs</i> and <i>iterate_filter</i> settings in <i>/etc/dovecot/dovecot-ldap.conf.ext</i> match your LDAP schema. Otherwise <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will be unable to iterate over all users.</p>
-<dt><code>-S&nbsp;<wbr></code><i>socket_path</i></p>
-<dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </p>
+<dt><code>-S&nbsp;<wbr></code><i>socket_path</i></dt>
+<dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
-<dt><code>-u&nbsp;<wbr></code><i>user/mask</i></p>
+<dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
 <dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
- When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dl>
+ When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>COMMANDS</h2>
 <h3>quota get</h3>
 <p> <code>doveadm</code> [<code>-f</code> <i>formatter</i>] <code>quota get</code> [<code>-A</code>|<code>-u</code> <i>user</i>] </p>
@@ -63,14 +61,14 @@ description: "doveadm-quota – Initialize/recalculate or show current quota usa
 <p> The <code>quota recalc</code> command is used to recalculate the current quota usage.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/dovecot/dovecot.conf</i></p>
-<dd> Dovecot&#8217;s main configuration file, including the <i>dict</i> section.</p>
-<dt><i>/etc/dovecot/dovecot-dict-sql.conf.ext</i></p>
-<dd> SQL dictionary proxy settings.</p>
-<dt><i>/etc/dovecot/conf.d/10-mail.conf</i></p>
-<dd> Mailbox locations and namespaces, including global <i>mail_location</i></p>
-<dt><i>/etc/dovecot/conf.d/90-quota.conf</i></p>
-<dd> Quota configuration.</dl>
+<dt><i>/etc/dovecot/dovecot.conf</i></dt>
+<dd> Dovecot&#8217;s main configuration file, including the <i>dict</i> section.</dd>
+<dt><i>/etc/dovecot/dovecot-dict-sql.conf.ext</i></dt>
+<dd> SQL dictionary proxy settings.</dd>
+<dt><i>/etc/dovecot/conf.d/10-mail.conf</i></dt>
+<dd> Mailbox locations and namespaces, including global <i>mail_location</i></dd>
+<dt><i>/etc/dovecot/conf.d/90-quota.conf</i></dt>
+<dd> Quota configuration.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Get the current quota usage of user jane. </p>
 <pre>

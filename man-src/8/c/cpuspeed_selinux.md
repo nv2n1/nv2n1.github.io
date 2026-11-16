@@ -54,8 +54,8 @@ description: "cpuspeed_selinux – Security Enhanced Linux Policy for the cpuspe
 <p> <code>cpuspeed_exec_t</code> </p>
 <p> &#8211; Set files with the cpuspeed_exec_t type, if you want to transition an executable to the cpuspeed_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/cpufreqd, /usr/sbin/cpuspeed, /usr/sbin/powernowd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/cpufreqd, /usr/sbin/cpuspeed, /usr/sbin/powernowd </dd>
 </dl>
 <p> <code>cpuspeed_var_run_t</code> </p>
 <p> &#8211; Set files with the cpuspeed_var_run_t type, if you want to store the cpuspeed files under the /run or /var/run directory. </p>

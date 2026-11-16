@@ -15,11 +15,11 @@ snd_rawmidi_transmit_ack - acknowledge the transmission
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the rawmidi substream</dl>
+<dl><dd></dd><dd>the rawmidi substream</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the transferred count</dl>
+<dl><dd>the transferred count</dd></dl>
 
 <h2>Description</h2>
 

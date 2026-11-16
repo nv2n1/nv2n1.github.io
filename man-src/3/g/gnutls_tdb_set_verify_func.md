@@ -14,10 +14,10 @@ description: "gnutls_tdb_set_verify_func – API function"
 <p> <code>void gnutls_tdb_set_verify_func(gnutls_tdb_t </code><i>tdb</i><code>, gnutls_tdb_verify_func </code><i>verify</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_tdb_t tdb</p>
-<dd> The trust storage</p>
-<dt>gnutls_tdb_verify_func verify</p>
-<dd> The verification function</dl>
+<dt>gnutls_tdb_t tdb</dt>
+<dd> The trust storage</dd>
+<dt>gnutls_tdb_verify_func verify</dt>
+<dd> The verification function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will associate a retrieval function with the trust storage structure. The function is of the following form. </p>
 <p> int gnutls_tdb_verify_func(const char* db_name, const char* host, const char* service, const gnutls_datum_t* pubkey); </p>
@@ -32,6 +32,6 @@ description: "gnutls_tdb_set_verify_func – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

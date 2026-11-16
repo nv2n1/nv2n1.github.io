@@ -11,15 +11,10 @@ std::swap(std::queue) - std::swap(std::queue)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class T, class Container&gt;
-
 void swap(queue&lt;T, Container&gt; &amp;lhs, (until C++ 17)
-
                                         queue&lt;T, Container&gt; &amp;rhs);
-
 template &lt;class T, class Container&gt;
-
 void swap(queue&lt;T, Container&gt; &amp;lhs, (since C++ 17)
-
                                         queue&lt;T, Container&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::queue. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 This overload only participates in overload resolution if std::is_swappable&lt;Container&gt;::value is true. <i>(since C++17)</i> 

@@ -16,16 +16,16 @@ description: "gsl-config – script to get version number and compiler flags of 
 <h2>OPTIONS</h2>
 <p> <i>gsl-config</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the currently installed version of <i>GSL</i> on the standard output.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Print the linker flags that are necessary to link a <i>GSL</i> program, with cblas</p>
-<dt><code>&#8211;libs-without-cblas</code></p>
-<dd> Print the linker flags that are necessary to link a <i>GSL</i> program, without cblas</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Print the compiler flags that are necessary to compile a <i>GSL</i> program.</p>
-<dt><code>&#8211;prefix</code></p>
-<dd> Show the GSL installation prefix.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the currently installed version of <i>GSL</i> on the standard output.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print the linker flags that are necessary to link a <i>GSL</i> program, with cblas</dd>
+<dt><code>&#8211;libs-without-cblas</code></dt>
+<dd> Print the linker flags that are necessary to link a <i>GSL</i> program, without cblas</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Print the compiler flags that are necessary to compile a <i>GSL</i> program.</dd>
+<dt><code>&#8211;prefix</code></dt>
+<dd> Show the GSL installation prefix.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gtk-config/">gtk-config</a></code>(1), <code>gnome-config</code>(1)</p>
 <h2>COPYRIGHT</h2>

@@ -19,54 +19,54 @@ description: "QuantLib::Indonesia – Indonesian calendars"
 <p>Indonesian calendars </p>
 <p> Holidays for the Jakarta stock exchange (data from &lt;<a rel="nofollow" href="http://www.jsx.co.id/">http://www.jsx.co.id/</a>&gt;): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Ascension of Jesus Christ</p>
-<dt>*</p>
-<dd>Independence Day, August 17th</p>
-<dt>*</p>
-<dd>Christmas, December 25th</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Ascension of Jesus Christ</dd>
+<dt>*</dt>
+<dd>Independence Day, August 17th</dd>
+<dt>*</dt>
+<dd>Christmas, December 25th</dd></dl>
 <p> Other holidays for which no rule is given (data available for 2005-2008 only:) </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Idul Adha</p>
-<dt>*</p>
-<dd>Ied Adha</p>
-<dt>*</p>
-<dd>Imlek</p>
-<dt>*</p>
-<dd>Moslem&#8217;s New Year Day</p>
-<dt>*</p>
-<dd>Chinese New Year</p>
-<dt>*</p>
-<dd>Nyepi (Saka&#8217;s New Year)</p>
-<dt>*</p>
-<dd>Birthday of Prophet Muhammad SAW</p>
-<dt>*</p>
-<dd>Waisak</p>
-<dt>*</p>
-<dd>Ascension of Prophet Muhammad SAW</p>
-<dt>*</p>
-<dd>Idul Fitri</p>
-<dt>*</p>
-<dd>Ied Fitri</p>
-<dt>*</p>
-<dd>Other national leaves</dl>
+<dt>*</dt>
+<dd>Idul Adha</dd>
+<dt>*</dt>
+<dd>Ied Adha</dd>
+<dt>*</dt>
+<dd>Imlek</dd>
+<dt>*</dt>
+<dd>Moslem&#8217;s New Year Day</dd>
+<dt>*</dt>
+<dd>Chinese New Year</dd>
+<dt>*</dt>
+<dd>Nyepi (Saka&#8217;s New Year)</dd>
+<dt>*</dt>
+<dd>Birthday of Prophet Muhammad SAW</dd>
+<dt>*</dt>
+<dd>Waisak</dd>
+<dt>*</dt>
+<dd>Ascension of Prophet Muhammad SAW</dd>
+<dt>*</dt>
+<dd>Idul Fitri</dd>
+<dt>*</dt>
+<dd>Ied Fitri</dd>
+<dt>*</dt>
+<dd>Other national leaves</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>BEJ </i></p>
-<dd>Jakarta stock exchange.</p>
-<dt><i>JSX </i></p>
-<dd>Jakarta stock exchange. </p>
+<dt><i>BEJ </i></dt>
+<dd>Jakarta stock exchange.</dd>
+<dt><i>JSX </i></dt>
+<dd>Jakarta stock exchange. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

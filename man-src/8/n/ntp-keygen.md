@@ -31,43 +31,43 @@ description: "ntp-keygen – generate public and private keys"
 <h2>Command Line Options</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>-b </code><i>modulus</i></p>
-<dd>Set the modulus for generating identity keys to <i>modulus</i> bits. The modulus defaults to 256, but can be set from 256 (32 octets) to 2048 (256 octets). Use the larger moduli with caution, as this can consume considerable computing resources and increases the size of authenticated packets.</p>
-<dt><code>-c [ RSA-MD2 | RSA-MD5 | RSA-SHA | RSA-SHA1 | RSA-MDC2 | RSA-RIPEMD160 | DSA-SHA | DSA-SHA1 ]</code></p>
-<dd>Select certificate and message digest/signature encryption scheme. Note that RSA schemes must be used with a RSA sign key and DSA schemes must be used with a DSA sign key. The default without this option is <code>RSA-MD5</code>46 If compatibility with FIPS 140-2 is required, either the <code>DSA-SHA</code> or <code>DSA-SHA1</code> scheme must be used.</p>
-<dt><code>-C </code><i>cipher</i></p>
-<dd>Select the cipher which is used to encrypt the files containing private keys. The default is three-key triple DES in CBC mode, equivalent to &quot;-C des-ede3-cbc&quot;. The openssl tool lists ciphers available in &quot;openssl -h&quot; output.</p>
-<dt><code>-d</code></p>
-<dd>Enable debugging. This option displays the cryptographic data produced for eye-friendly billboards.</p>
-<dt><code>-e</code></p>
-<dd>Extract the IFF or GQ public parameters from the <code>IFFkey</code> or <code>GQkey</code> keys file previously specified. Send the unencrypted data to the standard output stream <code>stdout</code>46 While the IFF parameters do not reveal the private group key, the GQ parameters should be used with caution, as they include the group key. Use the <code>-q</code> option with password instead. Note: a new certificate is not generated when this option is present. This allows multiple commands with this option but without disturbing existing media.</p>
-<dt><code>-G</code></p>
-<dd>Generate a new encrypted GQ key file and link for the Guillou-Quisquater (GQ) identity scheme.</p>
-<dt><code>-H</code></p>
-<dd>Generate a new encrypted RSA public/private host key file and link46 Note that if the sign key is the same as the host key, generating a new host key invalidates all certificates signed with the old host key.</p>
-<dt><code>-i </code><i>group</i></p>
-<dd>Set the group name to <i>group</i>46 This is used in the identity file names. It must match the group name specified in the <code>ident</code> option of the <code>crypto</code> configuration command.</p>
-<dt><code>-I</code></p>
-<dd>Generate a new encrypted IFF key fileand linkfor the Schnorr (IFF) identity scheme.</p>
-<dt><code>-m </code><i>modulus</i></p>
-<dd>Set the modulus for generating files to <i>modulus</i> bits. The modulus defaults to 512, but can be set from 256 (32 octets) to 2048 (256 octets).</p>
-<dt><code>-M</code></p>
-<dd>Generate a new MD5 key file containing 16, 128-bit pseudo-random keys for symmetric cryptography..</p>
-<dt><code>-P</code></p>
-<dd>Generate a new private certificate used by the PC identity scheme. By default, the program generates public certificates. Note: the PC identity scheme is not recommended for new installations.</p>
-<dt><code>-p </code><i>passwd</i></p>
-<dd>Set the password for reading and writing encrypted files to <i>passwd</i>46 By default, the password is the host name.</p>
-<dt><code>-q </code><i>passwd</i></p>
-<dd>Extract the encrypted IFF or GQ server keys from the <code>IFFkey</code> or <code>GQkey</code> key file previously generated. The data are sent to the standard output stream <code>stdout</code>46 Set the password for writing the data, which is also the password to read the data file in another host. By default, the password is the host name. Note: a new certificate is not generated when this option is present. This allows multiple commands with this option but without disturbing existing media.</p>
-<dt><code>-S [ RSA | DSA ]</code></p>
-<dd>Generate a new sign key of the specified type. By default, the sign key is the host key and has the same type. If compatibly with FIPS 140-2 is required, the sign key type must be <code>DSA</code>46 Note that generating a new sign key invalidates all certificates signed with the old sign key.</p>
-<dt><code>-s </code><i>host</i></p>
-<dd>Set the host name to <i>host</i>46 This is used in the host and sign key file names. It must match the host name specified in the <code>host</code> option of the <code>crypto</code> configuration command.</p>
-<dt><code>-T</code></p>
-<dd>Generate a trusted certificate. By default, the program generates nontrusted certificates.</p>
-<dt><code>-V </code><i>nkeys</i></p>
-<dd>Generate server parameters <code>MV</code> and <i>nkeys</i> client keys for the Mu-Varadharajan (MV) identity scheme. Note: support for this option should be considered a work in progress.</dl>
+</dd><dl>
+<dt><code>-b </code><i>modulus</i></dt>
+<dd>Set the modulus for generating identity keys to <i>modulus</i> bits. The modulus defaults to 256, but can be set from 256 (32 octets) to 2048 (256 octets). Use the larger moduli with caution, as this can consume considerable computing resources and increases the size of authenticated packets.</dd>
+<dt><code>-c [ RSA-MD2 | RSA-MD5 | RSA-SHA | RSA-SHA1 | RSA-MDC2 | RSA-RIPEMD160 | DSA-SHA | DSA-SHA1 ]</code></dt>
+<dd>Select certificate and message digest/signature encryption scheme. Note that RSA schemes must be used with a RSA sign key and DSA schemes must be used with a DSA sign key. The default without this option is <code>RSA-MD5</code>46 If compatibility with FIPS 140-2 is required, either the <code>DSA-SHA</code> or <code>DSA-SHA1</code> scheme must be used.</dd>
+<dt><code>-C </code><i>cipher</i></dt>
+<dd>Select the cipher which is used to encrypt the files containing private keys. The default is three-key triple DES in CBC mode, equivalent to &quot;-C des-ede3-cbc&quot;. The openssl tool lists ciphers available in &quot;openssl -h&quot; output.</dd>
+<dt><code>-d</code></dt>
+<dd>Enable debugging. This option displays the cryptographic data produced for eye-friendly billboards.</dd>
+<dt><code>-e</code></dt>
+<dd>Extract the IFF or GQ public parameters from the <code>IFFkey</code> or <code>GQkey</code> keys file previously specified. Send the unencrypted data to the standard output stream <code>stdout</code>46 While the IFF parameters do not reveal the private group key, the GQ parameters should be used with caution, as they include the group key. Use the <code>-q</code> option with password instead. Note: a new certificate is not generated when this option is present. This allows multiple commands with this option but without disturbing existing media.</dd>
+<dt><code>-G</code></dt>
+<dd>Generate a new encrypted GQ key file and link for the Guillou-Quisquater (GQ) identity scheme.</dd>
+<dt><code>-H</code></dt>
+<dd>Generate a new encrypted RSA public/private host key file and link46 Note that if the sign key is the same as the host key, generating a new host key invalidates all certificates signed with the old host key.</dd>
+<dt><code>-i </code><i>group</i></dt>
+<dd>Set the group name to <i>group</i>46 This is used in the identity file names. It must match the group name specified in the <code>ident</code> option of the <code>crypto</code> configuration command.</dd>
+<dt><code>-I</code></dt>
+<dd>Generate a new encrypted IFF key fileand linkfor the Schnorr (IFF) identity scheme.</dd>
+<dt><code>-m </code><i>modulus</i></dt>
+<dd>Set the modulus for generating files to <i>modulus</i> bits. The modulus defaults to 512, but can be set from 256 (32 octets) to 2048 (256 octets).</dd>
+<dt><code>-M</code></dt>
+<dd>Generate a new MD5 key file containing 16, 128-bit pseudo-random keys for symmetric cryptography..</dd>
+<dt><code>-P</code></dt>
+<dd>Generate a new private certificate used by the PC identity scheme. By default, the program generates public certificates. Note: the PC identity scheme is not recommended for new installations.</dd>
+<dt><code>-p </code><i>passwd</i></dt>
+<dd>Set the password for reading and writing encrypted files to <i>passwd</i>46 By default, the password is the host name.</dd>
+<dt><code>-q </code><i>passwd</i></dt>
+<dd>Extract the encrypted IFF or GQ server keys from the <code>IFFkey</code> or <code>GQkey</code> key file previously generated. The data are sent to the standard output stream <code>stdout</code>46 Set the password for writing the data, which is also the password to read the data file in another host. By default, the password is the host name. Note: a new certificate is not generated when this option is present. This allows multiple commands with this option but without disturbing existing media.</dd>
+<dt><code>-S [ RSA | DSA ]</code></dt>
+<dd>Generate a new sign key of the specified type. By default, the sign key is the host key and has the same type. If compatibly with FIPS 140-2 is required, the sign key type must be <code>DSA</code>46 Note that generating a new sign key invalidates all certificates signed with the old sign key.</dd>
+<dt><code>-s </code><i>host</i></dt>
+<dd>Set the host name to <i>host</i>46 This is used in the host and sign key file names. It must match the host name specified in the <code>host</code> option of the <code>crypto</code> configuration command.</dd>
+<dt><code>-T</code></dt>
+<dd>Generate a trusted certificate. By default, the program generates nontrusted certificates.</dd>
+<dt><code>-V </code><i>nkeys</i></dt>
+<dd>Generate server parameters <code>MV</code> and <i>nkeys</i> client keys for the Mu-Varadharajan (MV) identity scheme. Note: support for this option should be considered a work in progress.</dd></dl>
 </dl>
 <h2>Random Seed File</h2>
 <p>All cryptographically sound key generation schemes must have means to randomize the entropy seed used to initialize the internal pseudo-random number generator used by the OpenSSL library routines. If a site supports <code>ssh</code>, it is very likely that means to do this are already available. The entropy seed used by the OpenSSL library is contained in a file, usually called <code>46rnd</code>, which must be available when starting the <code>ntp-keygen</code> program or <code>ntpd</code> daemon. </p>

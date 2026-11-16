@@ -22,9 +22,9 @@ CALL TDLINE (UCP1, VCP1, WCP1, UCP2, VCP2, WCP2)
 
 The arguments of TDLINE are as follows:
 <dl><dt>UCP1, VCP1, and WCP1
-<dd>(input expressions of type REAL) - the coordinates of a point in 3-space.
-<dt>UCP2, VCP2, and WCP2
-<dd>(input expressions of type REAL) - the coordinates of another point in 3-space.</dl>
+</dt><dd>(input expressions of type REAL) - the coordinates of a point in 3-space.
+</dd><dt>UCP2, VCP2, and WCP2
+</dt><dd>(input expressions of type REAL) - the coordinates of another point in 3-space.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

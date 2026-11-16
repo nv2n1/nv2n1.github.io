@@ -14,14 +14,14 @@ description: "jbd2_journal_load – Read journal from disk."
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>Journal to act on.</dl>
+</dd><dd>Journal to act on.</dd></dl>
 <h2>Description</h2>
 <p>Given a journal_t structure which tells us which disk blocks contain a journal, read the journal from disk to initialise the in-memory structures.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

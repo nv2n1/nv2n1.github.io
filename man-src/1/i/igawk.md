@@ -17,9 +17,9 @@ description: "igawk – gawk with include files"
 <p> AWK programs for <i>igawk</i> are the same as for <i>gawk</i>, except that, in addition, you may have lines like</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code> @include getopt.awk </code> </p>
-</dl>
+</dd></dl>
 <p> in your program to include the file <code>getopt.awk</code> from either the current directory or one of the other directories in the search path.</p>
 <h2>OPTIONS</h2>
 <p> See <i><a href="/docs/linux/man/1-gawk/">gawk</a></i>(1) for a full description of the AWK language and the options that <i>gawk</i> supports.</p>

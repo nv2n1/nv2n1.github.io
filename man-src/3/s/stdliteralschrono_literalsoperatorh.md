@@ -11,11 +11,8 @@ std::literals::chrono_literals::operator&quot;&quot;h - std::literals::chrono_li
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;chrono&gt;
-
 constexpr chrono::hours operator &quot;&quot; h(unsigned long long hrs);  (1) (since C++14)
-
 constexpr chrono::duration&lt;/*unspecified*/, std::ratio&lt;3600,1&gt;&gt; (2) (since C++14)
-
 operator &quot;&quot; h(long double hrs);</code></pre> 
 Forms a std::chrono::duration literal representing hours. 
 1) integer literal, returns exactly std::chrono::hours(hrs) 
@@ -48,10 +45,8 @@ In addition, within the namespace std::chrono, the directive using namespace lit
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     using namespace std::chrono_literals;
     auto day = 24h;

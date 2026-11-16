@@ -10,7 +10,6 @@ description: "pbs_movejob – move a pbs batch job to a new destination"
 <p>pbs_movejob &#8211; move a pbs batch job to a new destination</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre><code>int pbs_movejob(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*destination, 
 char&nbsp;<wbr>*extend)

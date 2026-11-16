@@ -30,12 +30,12 @@ description: "Tspi_Key_CertifyKey – sign a public key."
 <h2>Return Codes</h2>
 <p><code>Tspi_Key_CertifyKey</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; Either <i>hKey</i> or <i>hCertifyingKey</i> are invalid handles.</font></p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; Either <i>hKey</i> or <i>hCertifyingKey</i> are invalid handles.</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
+</dd><dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></p>
-<dd></dl>
+</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+<dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Key_CertifyKey</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
 <h2>See Also</h2>

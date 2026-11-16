@@ -29,20 +29,13 @@ implementation defined handle type representing the thread.
 
 Uses native_handle to enable realtime scheduling of C++ threads on a POSIX system 
  // Run this code <pre><code>#include &lt;thread&gt;
-
 #include &lt;mutex&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;pthread.h&gt;
 std::mutex iomutex;
-
 void f(int num)
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     sched_param sch;
@@ -53,7 +46,6 @@ void f(int num)
               &lt;&lt; sch.sched_priority &lt;&lt; '\n';
 }
 int main()
-
 {
     std::thread t1(f, 1), t2(f, 2);
     sched_param sch;

@@ -15,24 +15,24 @@ description: "basic_getpwnam_auth – Local Users auth helper for Squid"
 <p> It uses <code>getpwnam()</code> and <code>getspnam()</code> routines for authentication. </p>
 <p> This has the following advantages over the NCSA module:</p>
 <dl>
-<dt>&#8211; Allows authentication of all known local users</p>
+<dt>&#8211; Allows authentication of all known local users</dt>
 <dd>
-<dt>&#8211; Allows authentication through nsswitch.conf</p>
+</dd><dt>&#8211; Allows authentication through nsswitch.conf</dt>
 <dd>
-<dt>&#8211; Can handle NIS(+) requests</p>
+</dd><dt>&#8211; Can handle NIS(+) requests</dt>
 <dd>
-<dt>&#8211; Can handle LDAP requests</p>
+</dd><dt>&#8211; Can handle LDAP requests</dt>
 <dd>
-<dt>&#8211; Can handle PAM requests</p>
-<dd></dl>
+</dd><dt>&#8211; Can handle PAM requests</dt>
+<dd></dd></dl>
 <h2>Configuration</h2>
 <dl>
 <dd><code>auth_param basic program /path/to/basic_getpwnam_auth</code><br />
- <code>auth_param basic children concurrency=1</code></dl>
+ <code>auth_param basic children concurrency=1</code></dd></dl>
 <p> When used for authenticating to local UNIX shadow password databases the program must be running as root or else it won&#8217;t have sufficient permissions to access the user password database. Such use of this program is not recommended, but if you absolutely need to then make the program <code>setuid</code> <code>root</code></p>
 <dl>
 <dd><code>chown root basic_getpwnam_auth</code><br />
- <code>chmod u+s basic_getpwnam_auth</code></dl>
+ <code>chmod u+s basic_getpwnam_auth</code></dd></dl>
 <p> Please note that in such configurations it is also strongly recommended that the program is moved into a directory where normal users cannot access it, as this mode of operation will allow any local user to brute-force other users passwords. Also note the program has not been fully audited and the author cannot be held responsible for any security issues due to such installations.</p>
 <h2>Author</h2>
 <p>This program was written by <i>Erik Hofman &lt;erik.hofman [at] a1.nl&gt;</i> <i>Robin Elfrink &lt;robin [at] a1.nl&gt;</i> <i>Giancarlo Razzolini &lt;linux-fan [at] onda.com.br&gt;</i> </p>

@@ -14,28 +14,28 @@ description: "uname – print system information"
 <h2>DESCRIPTION</h2>
 <p> Print certain system information. With no OPTION, same as <code>-s</code>.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> print all information, in the following order, except omit <code>-p</code> and <code>-i</code> if unknown:</p>
-<dt><code>-s</code>, <code>&#8211;kernel-name</code></p>
-<dd> print the kernel name</p>
-<dt><code>-n</code>, <code>&#8211;nodename</code></p>
-<dd> print the network node hostname</p>
-<dt><code>-r</code>, <code>&#8211;kernel-release</code></p>
-<dd> print the kernel release</p>
-<dt><code>-v</code>, <code>&#8211;kernel-version</code></p>
-<dd> print the kernel version</p>
-<dt><code>-m</code>, <code>&#8211;machine</code></p>
-<dd> print the machine hardware name</p>
-<dt><code>-p</code>, <code>&#8211;processor</code></p>
-<dd> print the processor type (non-portable)</p>
-<dt><code>-i</code>, <code>&#8211;hardware-platform</code></p>
-<dd> print the hardware platform (non-portable)</p>
-<dt><code>-o</code>, <code>&#8211;operating-system</code></p>
-<dd> print the operating system</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> print all information, in the following order, except omit <code>-p</code> and <code>-i</code> if unknown:</dd>
+<dt><code>-s</code>, <code>&#8211;kernel-name</code></dt>
+<dd> print the kernel name</dd>
+<dt><code>-n</code>, <code>&#8211;nodename</code></dt>
+<dd> print the network node hostname</dd>
+<dt><code>-r</code>, <code>&#8211;kernel-release</code></dt>
+<dd> print the kernel release</dd>
+<dt><code>-v</code>, <code>&#8211;kernel-version</code></dt>
+<dd> print the kernel version</dd>
+<dt><code>-m</code>, <code>&#8211;machine</code></dt>
+<dd> print the machine hardware name</dd>
+<dt><code>-p</code>, <code>&#8211;processor</code></dt>
+<dd> print the processor type (non-portable)</dd>
+<dt><code>-i</code>, <code>&#8211;hardware-platform</code></dt>
+<dd> print the hardware platform (non-portable)</dd>
+<dt><code>-o</code>, <code>&#8211;operating-system</code></dt>
+<dd> print the operating system</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

@@ -14,21 +14,21 @@ description: "bundle-doctor – Checks the bundle for common problems"
 <p>Checks your Gemfile and gem environment for common problems. If issues are detected, Bundler prints them and exits status 1. Otherwise, Bundler prints a success message and exits status 0. </p>
 <p> Examples of common problems caught by bundle-doctor include:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Invalid Bundler settings</p>
-<dt>&bull;</p>
-<dd>Mismatched Ruby versions</p>
-<dt>&bull;</p>
-<dd>Mismatched platforms</p>
-<dt>&bull;</p>
-<dd>Uninstalled gems</p>
-<dt>&bull;</p>
-<dd>Missing dependencies</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>Invalid Bundler settings</dd>
+<dt>&bull;</dt>
+<dd>Mismatched Ruby versions</dd>
+<dt>&bull;</dt>
+<dd>Mismatched platforms</dd>
+<dt>&bull;</dt>
+<dd>Uninstalled gems</dd>
+<dt>&bull;</dt>
+<dd>Missing dependencies</dd>
+<dd></dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;quiet</code></p>
-<dd>Only output warnings and errors.</p>
-<dt><code>&#8211;gemfile=&lt;gemfile&gt;</code></p>
-<dd>The location of the Gemfile(5) which Bundler should use. This defaults to a Gemfile(5) in the current working directory. In general, Bundler will assume that the location of the Gemfile(5) is also the project&#8217;s root and will try to find <code>Gemfile.lock</code> and <code>vendor/cache</code> relative to this location. </p>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Only output warnings and errors.</dd>
+<dt><code>&#8211;gemfile=&lt;gemfile&gt;</code></dt>
+<dd>The location of the Gemfile(5) which Bundler should use. This defaults to a Gemfile(5) in the current working directory. In general, Bundler will assume that the location of the Gemfile(5) is also the project&#8217;s root and will try to find <code>Gemfile.lock</code> and <code>vendor/cache</code> relative to this location. </dd>
 </dl>

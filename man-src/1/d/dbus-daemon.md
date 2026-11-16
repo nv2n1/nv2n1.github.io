@@ -11,13 +11,13 @@ description: "dbus-daemon – Message bus daemon"
 <p> dbus-daemon &#8211; Message bus daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>dbus-daemon</code></p>
-<dt> <code>dbus-daemon</code> [&#8211;version] [&#8211;session] [&#8211;system] [&#8211;config-file=<i>FILE</i>] [&#8211;print-address&nbsp;[<i>=DESCRIPTOR</i>]] [&#8211;print-pid&nbsp;[<i>=DESCRIPTOR</i>]] [&#8211;fork] [&#8211;nosyslog] [&#8211;syslog] [&#8211;syslog-only]</p>
+<dt> <code>dbus-daemon</code></dt>
+<dt> <code>dbus-daemon</code> [&#8211;version] [&#8211;session] [&#8211;system] [&#8211;config-file=<i>FILE</i>] [&#8211;print-address&nbsp;[<i>=DESCRIPTOR</i>]] [&#8211;print-pid&nbsp;[<i>=DESCRIPTOR</i>]] [&#8211;fork] [&#8211;nosyslog] [&#8211;syslog] [&#8211;syslog-only]</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>dbus-daemon</code></p>
-<dd>is the D-Bus message bus daemon. See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about the big picture. D-Bus is first a library that provides one-to-one communication between any two applications; <code>dbus-daemon</code> is an application that uses this library to implement a message bus daemon. Multiple programs connect to the message bus daemon and can exchange messages with one another. </p>
+<dd>is the D-Bus message bus daemon. See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about the big picture. D-Bus is first a library that provides one-to-one communication between any two applications; <code>dbus-daemon</code> is an application that uses this library to implement a message bus daemon. Multiple programs connect to the message bus daemon and can exchange messages with one another. </dd>
 <p> There are two standard message bus instances: the systemwide message bus (installed on many systems as the &quot;messagebus&quot; init service) and the per-user-login-session message bus (started each time a user logs in). <code>dbus-daemon</code> is used for both of these instances, but with a different configuration file. </p>
 <p> The &#8211;session option is equivalent to &quot;&#8211;config-file=/usr/share/dbus-1/session.conf&quot; and the &#8211;system option is equivalent to &quot;&#8211;config-file=/usr/share/dbus-1/system.conf&quot;. By creating additional configuration files and using the &#8211;config-file option, additional special-purpose message bus daemons could be created. </p>
 <p> The systemwide daemon is normally launched by an init script, standardly called simply &quot;messagebus&quot;. </p>
@@ -29,63 +29,63 @@ description: "dbus-daemon – Message bus daemon"
 <p> <code>&#8211;config-file=FILE</code></p>
 <dl>
 <dt>
-<dd> Use the given configuration file.</dl>
+</dt><dd> Use the given configuration file.</dd></dl>
 <p> <code>&#8211;fork</code></p>
 <dl>
 <dt>
-<dd> Force the message bus to fork and become a daemon, even if the configuration file does not specify that it should. In most contexts the configuration file already gets this right, though. This option is not supported on Windows.</dl>
+</dt><dd> Force the message bus to fork and become a daemon, even if the configuration file does not specify that it should. In most contexts the configuration file already gets this right, though. This option is not supported on Windows.</dd></dl>
 <p> <code>&#8211;nofork</code></p>
 <dl>
 <dt>
-<dd> Force the message bus not to fork and become a daemon, even if the configuration file specifies that it should. On Windows, the dbus-daemon never forks, so this option is allowed but does nothing.</dl>
+</dt><dd> Force the message bus not to fork and become a daemon, even if the configuration file specifies that it should. On Windows, the dbus-daemon never forks, so this option is allowed but does nothing.</dd></dl>
 <p> <code>&#8211;print-address[=DESCRIPTOR]</code></p>
 <dl>
 <dt>
-<dd> Print the address of the message bus to standard output, or to the given file descriptor. This is used by programs that launch the message bus.</dl>
+</dt><dd> Print the address of the message bus to standard output, or to the given file descriptor. This is used by programs that launch the message bus.</dd></dl>
 <p> <code>&#8211;print-pid[=DESCRIPTOR]</code></p>
 <dl>
 <dt>
-<dd> Print the process ID of the message bus to standard output, or to the given file descriptor. This is used by programs that launch the message bus.</dl>
+</dt><dd> Print the process ID of the message bus to standard output, or to the given file descriptor. This is used by programs that launch the message bus.</dd></dl>
 <p> <code>&#8211;session</code></p>
 <dl>
 <dt>
-<dd> Use the standard configuration file for the per-login-session message bus.</dl>
+</dt><dd> Use the standard configuration file for the per-login-session message bus.</dd></dl>
 <p> <code>&#8211;system</code></p>
 <dl>
 <dt>
-<dd> Use the standard configuration file for the systemwide message bus.</dl>
+</dt><dd> Use the standard configuration file for the systemwide message bus.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the version of the daemon.</dl>
+</dt><dd> Print the version of the daemon.</dd></dl>
 <p> <code>&#8211;introspect</code></p>
 <dl>
 <dt>
-<dd> Print the introspection information for all D-Bus internal interfaces.</dl>
+</dt><dd> Print the introspection information for all D-Bus internal interfaces.</dd></dl>
 <p> <code>&#8211;address[=ADDRESS]</code></p>
 <dl>
 <dt>
-<dd> Set the address to listen on. This option overrides the address configured in the configuration file via the &lt;listen&gt; directive. See the documentation of that directive for more details.</dl>
+</dt><dd> Set the address to listen on. This option overrides the address configured in the configuration file via the &lt;listen&gt; directive. See the documentation of that directive for more details.</dd></dl>
 <p> <code>&#8211;systemd-activation</code></p>
 <dl>
 <dt>
-<dd> Enable systemd-style service activation. Only useful in conjunction with the systemd system and session manager on Linux.</dl>
+</dt><dd> Enable systemd-style service activation. Only useful in conjunction with the systemd system and session manager on Linux.</dd></dl>
 <p> <code>&#8211;nopidfile</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t write a PID file even if one is configured in the configuration files.</dl>
+</dt><dd> Don&#8217;t write a PID file even if one is configured in the configuration files.</dd></dl>
 <p> <code>&#8211;syslog</code></p>
 <dl>
 <dt>
-<dd> Force the message bus to use the system log for messages, in addition to writing to standard error, even if the configuration file does not specify that it should. On Unix, this uses the syslog; on Windows, this uses OutputDebugString().</dl>
+</dt><dd> Force the message bus to use the system log for messages, in addition to writing to standard error, even if the configuration file does not specify that it should. On Unix, this uses the syslog; on Windows, this uses OutputDebugString().</dd></dl>
 <p> <code>&#8211;syslog-only</code></p>
 <dl>
 <dt>
-<dd> Force the message bus to use the system log for messages, and <i>not</i> duplicate them to standard error. On Unix, this uses the syslog; on Windows, this uses OutputDebugString().</dl>
+</dt><dd> Force the message bus to use the system log for messages, and <i>not</i> duplicate them to standard error. On Unix, this uses the syslog; on Windows, this uses OutputDebugString().</dd></dl>
 <p> <code>&#8211;nosyslog</code></p>
 <dl>
 <dt>
-<dd> Force the message bus to use only standard error for messages, even if the configuration file specifies that it should use the system log.</dl>
+</dt><dd> Force the message bus to use only standard error for messages, even if the configuration file specifies that it should use the system log.</dd></dl>
 <h2>CONFIGURATION FILE</h2>
 <p> A message bus daemon has a configuration file that specializes it for a particular application. For example, one configuration file might set up the message bus to be a systemwide message bus, while another might set it up to be a per-user-login-session bus. </p>
 <p> The configuration file also establishes resource limits, security parameters, and so forth. </p>
@@ -94,63 +94,63 @@ description: "dbus-daemon – Message bus daemon"
 <p> The configuration file is an XML document. It must have the following doctype declaration: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
    &lt;!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
     "m[blue]http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtdm[]"&gt;
 </code></pre>
-</dl>
+</dd></dl>
 <p> The following elements may be present in the configuration file. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;busconfig&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;busconfig&gt;</i></dd></dl>
 <p> Root element. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;type&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;type&gt;</i></dd></dl>
 <p> The well-known type of the message bus. Currently known values are &quot;system&quot; and &quot;session&quot;; if other values are set, they should be either added to the D-Bus specification, or namespaced. The last &lt;type&gt; element &quot;wins&quot; (previous values are ignored). This element only controls which message bus specific environment variables are set in activated clients. Most of the policy that distinguishes a session bus from the system bus is controlled from the other elements in the configuration file. </p>
 <p> If the well-known type of the message bus is &quot;session&quot;, then the DBUS_STARTER_BUS_TYPE environment variable will be set to &quot;session&quot; and the DBUS_SESSION_BUS_ADDRESS environment variable will be set to the address of the session bus. Likewise, if the type of the message bus is &quot;system&quot;, then the DBUS_STARTER_BUS_TYPE environment variable will be set to &quot;system&quot; and the DBUS_SYSTEM_BUS_ADDRESS environment variable will be set to the address of the system bus (which is normally well known anyway). </p>
 <p> Example: &lt;type&gt;session&lt;/type&gt; </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;include&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;include&gt;</i></dd></dl>
 <p> Include a file &lt;include&gt;filename.conf&lt;/include&gt; at this point. If the filename is relative, it is located relative to the configuration file doing the including. </p>
 <p> &lt;include&gt; has an optional attribute &quot;ignore_missing=(yes|no)&quot; which defaults to &quot;no&quot; if not provided. This attribute controls whether it&#8217;s a fatal error for the included file to be absent. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;includedir&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;includedir&gt;</i></dd></dl>
 <p> Include all files in &lt;includedir&gt;foo.d&lt;/includedir&gt; at this point. Files in the directory are included in undefined order. Only files ending in &quot;.conf&quot; are included. </p>
 <p> This is intended to allow extension of the system bus by particular packages. For example, if CUPS wants to be able to send out notification of printer queue changes, it could install a file to /usr/share/dbus-1/system.d or /etc/dbus-1/system.d that allowed all apps to receive this message and allowed the printer daemon user to send it. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;user&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;user&gt;</i></dd></dl>
 <p> The user account the daemon should run as, as either a username or a UID. If the daemon cannot change to this UID on startup, it will exit. If this element is not present, the daemon will not change or care about its UID. </p>
 <p> The last &lt;user&gt; entry in the file &quot;wins&quot;, the others are ignored. </p>
 <p> The user is changed after the bus has completed initialization. So sockets etc. will be created before changing user, but no data will be read from clients before changing user. This means that sockets and PID files can be created in a location that requires root privileges for writing. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;fork&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;fork&gt;</i></dd></dl>
 <p> If present, the bus daemon becomes a real daemon (forks into the background, etc.). This is generally used rather than the &#8211;fork command line option. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;keep_umask&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;keep_umask&gt;</i></dd></dl>
 <p> If present, the bus daemon keeps its original umask when forking. This may be useful to avoid affecting the behavior of child processes. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;syslog&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;syslog&gt;</i></dd></dl>
 <p> If present, the bus daemon will log to syslog. The &#8211;syslog, &#8211;syslog-only and &#8211;nosyslog command-line options take precedence over this setting. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;pidfile&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;pidfile&gt;</i></dd></dl>
 <p> If present, the bus daemon will write its pid to the specified file. The &#8211;nopidfile command-line option takes precedence over this setting. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;allow_anonymous&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;allow_anonymous&gt;</i></dd></dl>
 <p> If present, connections that authenticated using the ANONYMOUS mechanism will be authorized to connect. This option has no practical effect unless the ANONYMOUS mechanism has also been enabled using the <i>&lt;auth&gt;</i> element, described below. </p>
 <p> Using this directive in the configuration of the well-known system bus or the well-known session bus will make that bus insecure and should never be done. Similarly, on custom bus types, using this directive will usually make the custom bus insecure, unless its configuration has been specifically designed to prevent anonymous users from causing damage or escalating privileges. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;listen&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;listen&gt;</i></dd></dl>
 <p> Add an address that the bus should listen on. The address is in the standard D-Bus format that contains a transport name plus possible parameters/options. </p>
 <p> On platforms other than Windows, unix-based transports (unix, systemd, launchd) are the default for both the well-known system bus and the well-known session bus, and are strongly recommended. </p>
 <p> On Windows, unix-based transports are not available, so TCP-based transports must be used. Similar to remote X11, the tcp and nonce-tcp transports have no integrity or confidentiality protection, so they should normally only be used across the local loopback interface, for example using an address like tcp:host=127.0.0.1 or nonce-tcp:host=localhost. In particular, configuring the well-known system bus or the well-known session bus to listen on a non-loopback TCP address is insecure. </p>
@@ -167,85 +167,85 @@ description: "dbus-daemon – Message bus daemon"
 <p> Example: &lt;listen&gt;tcp:host=localhost,bind=0.0.0.0,port=0&lt;/listen&gt; </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;auth&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;auth&gt;</i></dd></dl>
 <p> Lists permitted authorization mechanisms. If this element doesn&#8217;t exist, then all known mechanisms are allowed. If there are multiple &lt;auth&gt; elements, all the listed mechanisms are allowed. The order in which mechanisms are listed is not meaningful. </p>
 <p> On non-Windows operating systems, allowing only the EXTERNAL authentication mechanism is strongly recommended. This is the default for the well-known system bus and for the well-known session bus. </p>
 <p> Example: &lt;auth&gt;EXTERNAL&lt;/auth&gt; </p>
 <p> Example: &lt;auth&gt;DBUS_COOKIE_SHA1&lt;/auth&gt; </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;servicedir&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;servicedir&gt;</i></dd></dl>
 <p> Adds a directory to search for .service files, which tell the dbus-daemon how to start a program to provide a particular well-known bus name. See the D-Bus Specification for more details about the contents of .service files. </p>
 <p> If a particular service is found in more than one &lt;servicedir&gt;, the first directory listed in the configuration file takes precedence. If two service files providing the same well-known bus name are found in the same directory, it is arbitrary which one will be chosen (this can only happen if at least one of the service files does not have the recommended name, which is its well-known bus name followed by &quot;.service&quot;). </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;standard_session_servicedirs/&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;standard_session_servicedirs/&gt;</i></dd></dl>
 <p> &lt;standard_session_servicedirs/&gt; requests a standard set of session service directories. Its effect is similar to specifying a series of &lt;servicedir/&gt; elements for each of the data directories, in the order given here. It is not exactly equivalent, because there is currently no way to disable directory monitoring or enforce strict service file naming for a &lt;servicedir/&gt;. </p>
 <p> As with &lt;servicedir/&gt; elements, if a particular service is found in more than one service directory, the first directory takes precedence. If two service files providing the same well-known bus name are found in the same directory, it is arbitrary which one will be chosen (this can only happen if at least one of the service files does not have the recommended name, which is its well-known bus name followed by &quot;.service&quot;). </p>
 <p> On Unix, the standard session service directories are: </p>
 <dl>
 <dt>
-<dd> &bull; <i>$XDG_RUNTIME_DIR</i>/dbus-1/services, if XDG_RUNTIME_DIR is set (see the XDG Base Directory Specification for details of XDG_RUNTIME_DIR): this location is suitable for transient services created at runtime by systemd generators (see <code><a href="/docs/linux/man/7-systemd-generator/">systemd.generator</a></code>(7)), session managers or other session infrastructure. It is an extension provided by the reference implementation of dbus-daemon, and is not standardized in the D-Bus Specification. </p>
+</dt><dd> &bull; <i>$XDG_RUNTIME_DIR</i>/dbus-1/services, if XDG_RUNTIME_DIR is set (see the XDG Base Directory Specification for details of XDG_RUNTIME_DIR): this location is suitable for transient services created at runtime by systemd generators (see <code><a href="/docs/linux/man/7-systemd-generator/">systemd.generator</a></code>(7)), session managers or other session infrastructure. It is an extension provided by the reference implementation of dbus-daemon, and is not standardized in the D-Bus Specification. </dd>
 <p> Unlike the other standard session service directories, this directory enforces strict naming for the service files: the filename must be exactly the well-known bus name of the service, followed by &quot;.service&quot;. </p>
 <p> Also unlike the other standard session service directories, this directory is never monitored with <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) or similar APIs. Programs that create service files in this directory while a dbus-daemon is running are expected to call the dbus-daemon&#8217;s ReloadConfig() method after they have made changes.</dl>
 <dl>
 <dt>
-<dd> &bull; <i>$XDG_DATA_HOME</i>/dbus-1/services, where XDG_DATA_HOME defaults to ~/.local/share (see the XDG Base Directory Specification): this location is specified by the D-Bus Specification, and is suitable for per-user, locally-installed software.</dl>
+</dt><dd> &bull; <i>$XDG_DATA_HOME</i>/dbus-1/services, where XDG_DATA_HOME defaults to ~/.local/share (see the XDG Base Directory Specification): this location is specified by the D-Bus Specification, and is suitable for per-user, locally-installed software.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>directory</i>/dbus-1/services for each directory in XDG_DATA_DIRS, where XDG_DATA_DIRS defaults to /usr/local/share:/usr/share (see the XDG Base Directory Specification): these locations are specified by the D-Bus Specification. The defaults are suitable for software installed locally by a system administrator (/usr/local/share) or for software installed from operating system packages (/usr/share). Per-user or system-wide configuration that sets the XDG_DATA_DIRS environment variable can extend this search path to cover installations in other locations, for example ~/.local/share/flatpak/exports/share/ and /var/lib/flatpak/exports/share/ when <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1) is used.</dl>
+</dt><dd> &bull; <i>directory</i>/dbus-1/services for each directory in XDG_DATA_DIRS, where XDG_DATA_DIRS defaults to /usr/local/share:/usr/share (see the XDG Base Directory Specification): these locations are specified by the D-Bus Specification. The defaults are suitable for software installed locally by a system administrator (/usr/local/share) or for software installed from operating system packages (/usr/share). Per-user or system-wide configuration that sets the XDG_DATA_DIRS environment variable can extend this search path to cover installations in other locations, for example ~/.local/share/flatpak/exports/share/ and /var/lib/flatpak/exports/share/ when <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1) is used.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>${datadir}</i>/dbus-1/services for the <i>${datadir}</i> that was specified when dbus was compiled, typically /usr/share: this location is an extension provided by the reference dbus-daemon implementation, and is suitable for software stacks installed alongside dbus-daemon.</dl>
+</dt><dd> &bull; <i>${datadir}</i>/dbus-1/services for the <i>${datadir}</i> that was specified when dbus was compiled, typically /usr/share: this location is an extension provided by the reference dbus-daemon implementation, and is suitable for software stacks installed alongside dbus-daemon.</dd></dl>
 <p> The &quot;XDG Base Directory Specification&quot; can be found at m[blue]<code><a rel="nofollow" href="http://freedesktop.org/wiki/Standards/basedir-spec">http://freedesktop.org/wiki/Standards/basedir-spec</a></code>m[] if it hasn&#8217;t moved, otherwise try your favorite search engine. </p>
 <p> On Windows, the standard session service directories are: </p>
 <dl>
 <dt>
-<dd> &bull; <i>%CommonProgramFiles%</i>/dbus-1/services if %CommonProgramFiles% is set: this location is suitable for system-wide installed software packages</dl>
+</dt><dd> &bull; <i>%CommonProgramFiles%</i>/dbus-1/services if %CommonProgramFiles% is set: this location is suitable for system-wide installed software packages</dd></dl>
 <dl>
 <dt>
-<dd> &bull; A share/dbus-1/services directory found in the same directory hierarchy (prefix) as the dbus-daemon: this location is suitable for software stacks installed alongside dbus-daemon</dl>
+</dt><dd> &bull; A share/dbus-1/services directory found in the same directory hierarchy (prefix) as the dbus-daemon: this location is suitable for software stacks installed alongside dbus-daemon</dd></dl>
 <p> The &lt;standard_session_servicedirs/&gt; option is only relevant to the per-user-session bus daemon defined in /etc/dbus-1/session.conf. Putting it in any other configuration file would probably be nonsense. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;standard_system_servicedirs/&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;standard_system_servicedirs/&gt;</i></dd></dl>
 <p> &lt;standard_system_servicedirs/&gt; specifies the standard system-wide activation directories that should be searched for service files. As with session services, the first directory listed has highest precedence. </p>
 <p> On Unix, the standard session service directories are: </p>
 <dl>
 <dt>
-<dd> &bull; /usr/local/share/dbus-1/system-services: this location is specified by the D-Bus Specification, and is suitable for software installed locally by the system administrator</dl>
+</dt><dd> &bull; /usr/local/share/dbus-1/system-services: this location is specified by the D-Bus Specification, and is suitable for software installed locally by the system administrator</dd></dl>
 <dl>
 <dt>
-<dd> &bull; /usr/share/dbus-1/system-services: this location is specified by the D-Bus Specification, and is suitable for software installed by operating system packages</dl>
+</dt><dd> &bull; /usr/share/dbus-1/system-services: this location is specified by the D-Bus Specification, and is suitable for software installed by operating system packages</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>${datadir}</i>/dbus-1/system-services for the <i>${datadir}</i> that was specified when dbus was compiled, typically /usr/share: this location is an extension provided by the reference dbus-daemon implementation, and is suitable for software stacks installed alongside dbus-daemon</dl>
+</dt><dd> &bull; <i>${datadir}</i>/dbus-1/system-services for the <i>${datadir}</i> that was specified when dbus was compiled, typically /usr/share: this location is an extension provided by the reference dbus-daemon implementation, and is suitable for software stacks installed alongside dbus-daemon</dd></dl>
 <dl>
 <dt>
-<dd> &bull; /lib/dbus-1/system-services: this location is specified by the D-Bus Specification, and was intended for software installed by operating system packages and used during early boot (but it should be considered deprecated, because the reference dbus-daemon is not designed to be available during early boot)</dl>
+</dt><dd> &bull; /lib/dbus-1/system-services: this location is specified by the D-Bus Specification, and was intended for software installed by operating system packages and used during early boot (but it should be considered deprecated, because the reference dbus-daemon is not designed to be available during early boot)</dd></dl>
 <p> On Windows, there is no standard system bus, so there are no standard system bus directories either. </p>
 <p> The &lt;standard_system_servicedirs/&gt; option is only relevant to the per-system bus daemon defined in /usr/share/dbus-1/system.conf. Putting it in any other configuration file would probably be nonsense. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;servicehelper/&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;servicehelper/&gt;</i></dd></dl>
 <p> &lt;servicehelper/&gt; specifies the setuid helper that is used to launch system daemons with an alternate user. Typically this should be the dbus-daemon-launch-helper executable in located in libexec. </p>
 <p> The &lt;servicehelper/&gt; option is only relevant to the per-system bus daemon defined in /usr/share/dbus-1/system.conf. Putting it in any other configuration file would probably be nonsense. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;limit&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;limit&gt;</i></dd></dl>
 <p> &lt;limit&gt; establishes a resource limit. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   &lt;limit name=&quot;max_message_size&quot;&gt;64&lt;/limit&gt;
   &lt;limit name=&quot;max_completed_connections&quot;&gt;512&lt;/limit&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> The name attribute is mandatory. Available limit names are: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       &quot;max_incoming_bytes&quot;         : total size in bytes of messages
                                      incoming from a single connection
@@ -284,31 +284,31 @@ description: "dbus-daemon – Message bus daemon"
       &quot;reply_timeout&quot;              : milliseconds (thousandths)
                                      until a method call times out
 </pre>
-</dl>
+</dd></dl>
 <p> The max incoming/outgoing queue sizes allow a new message to be queued if one byte remains below the max. So you can in fact exceed the max by max_message_size. </p>
 <p> max_completed_connections divided by max_connections_per_user is the number of users that can work together to denial-of-service all other users by using up all connections on the systemwide bus. </p>
 <p> Limits are normally only of interest on the systemwide bus, not the user session buses. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;policy&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;policy&gt;</i></dd></dl>
 <p> The &lt;policy&gt; element defines a security policy to be applied to a particular set of connections to the bus. A policy is made up of &lt;allow&gt; and &lt;deny&gt; elements. Policies are normally used with the systemwide bus; they are analogous to a firewall in that they allow expected traffic and prevent unexpected traffic. </p>
 <p> Currently, the system bus has a default-deny policy for sending method calls and owning bus names, and a default-allow policy for receiving messages, sending signals, and sending a single success or error reply for each method call that does not have the NO_REPLY flag. Sending more than the expected number of replies is not allowed. </p>
 <p> In general, it is best to keep system services as small, targeted programs which run in their own process and provide a single bus name. Then, all that is needed is an &lt;allow&gt; rule for the &quot;own&quot; permission to let the process claim the bus name, and a &quot;send_destination&quot; rule to allow traffic from some or all uids to your service. </p>
 <p> The &lt;policy&gt; element has one of four attributes: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   context=&quot;(default|mandatory)&quot;
   at_console=&quot;(true|false)&quot;
   user=&quot;username or userid&quot;
   group=&quot;group name or gid&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> Policies are applied to a connection as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    - all context=&quot;default&quot; policies are applied
    - all group=&quot;connection's user's group&quot; policies are applied
@@ -319,17 +319,17 @@ description: "dbus-daemon – Message bus daemon"
    - all at_console=&quot;false&quot; policies are applied
    - all context=&quot;mandatory&quot; policies are applied
 </pre>
-</dl>
+</dd></dl>
 <p> Policies applied later will override those applied earlier, when the policies overlap. Multiple policies with the same user/group/context are applied in the order they appear in the config file. </p>
 <p> <i>&lt;deny&gt;</i></p>
 <dl>
 <dt>
-<dd> <i>&lt;allow&gt;</i></dl>
+</dt><dd> <i>&lt;allow&gt;</i></dd></dl>
 <p> A &lt;deny&gt; element appears below a &lt;policy&gt; element and prohibits some action. The &lt;allow&gt; element makes an exception to previous &lt;deny&gt; statements, and works just like &lt;deny&gt; but with the inverse meaning. </p>
 <p> The possible attributes of these elements are: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    send_interface=&quot;interface_name&quot; | &quot;*&quot;
    send_member=&quot;method_or_signal_name&quot; | &quot;*&quot;
@@ -352,11 +352,11 @@ description: "dbus-daemon – Message bus daemon"
    user=&quot;username&quot; | &quot;*&quot;
    group=&quot;groupname&quot; | &quot;*&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> Examples: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    &lt;deny send_destination=&quot;org.freedesktop.Service&quot; send_interface=&quot;org.freedesktop.System&quot; send_member=&quot;Reboot&quot;/&gt;
    &lt;deny send_destination=&quot;org.freedesktop.System&quot;/&gt;
@@ -364,7 +364,7 @@ description: "dbus-daemon – Message bus daemon"
    &lt;deny user=&quot;john&quot;/&gt;
    &lt;deny group=&quot;enemies&quot;/&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> The &lt;deny&gt; element&#8217;s attributes determine whether the deny &quot;matches&quot; a particular action. If it matches, the action is denied (unless later rules in the config file allow it). </p>
 <p> Rules with one or more of the send_* family of attributes are checked in order when a connection attempts to send a message. The last rule that matches the message determines whether it may be sent. The well-known session bus normally allows sending any message. The well-known system bus normally allows sending any signal, selected method calls to the <code>dbus-daemon</code>, and exactly one reply to each previously-sent method call (either success or an error). Either of these can be overridden by configuration; on the system bus, services that will receive method calls must install configuration that allows them to do so, usually via rules of the form &lt;policy context=&quot;default&quot;&gt;&lt;allow send_destination=&quot;&#8230;&quot;/&gt;&lt;policy&gt;. </p>
 <p> Rules with one or more of the receive_* family of attributes, or with the eavesdrop attribute and no others, are checked for each recipient of a message (there might be more than one recipient if the message is a broadcast or a connection is eavesdropping). The last rule that matches the message determines whether it may be received. The well-known session bus normally allows receiving any message, including eavesdropping. The well-known system bus normally allows receiving any message that was not eavesdropped (any unicast message addressed to the recipient, and any broadcast message). </p>
@@ -387,42 +387,42 @@ description: "dbus-daemon – Message bus daemon"
 <p> Be careful with send_interface/receive_interface, because the interface field in messages is optional. In particular, do NOT specify &lt;deny send_interface=&quot;org.foo.Bar&quot;/&gt;! This will cause no-interface messages to be blocked for all services, which is almost certainly not what you intended. Always use rules of the form: &lt;deny send_interface=&quot;org.foo.Bar&quot; send_destination=&quot;org.foo.Service&quot;/&gt; </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;selinux&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;selinux&gt;</i></dd></dl>
 <p> The &lt;selinux&gt; element contains settings related to Security Enhanced Linux. More details below. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;associate&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;associate&gt;</i></dd></dl>
 <p> An &lt;associate&gt; element appears below an &lt;selinux&gt; element and creates a mapping. Right now only one kind of association is possible: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    &lt;associate own=&quot;org.freedesktop.Foobar&quot; context=&quot;foo_t&quot;/&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> This means that if a connection asks to own the name &quot;org.freedesktop.Foobar&quot; then the source context will be the context of the connection and the target context will be &quot;foo_t&quot; &#8211; see the short discussion of SELinux below. </p>
 <p> Note, the context here is the target context when requesting a name, NOT the context of the connection owning the name. </p>
 <p> There&#8217;s currently no way to set a default for owning any name, if we add this syntax it will look like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    &lt;associate own=&quot;*&quot; context=&quot;foo_t&quot;/&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> If you find a reason this is useful, let the developers know. Right now the default will be the security context of the bus itself. </p>
 <p> If two &lt;associate&gt; elements specify the same name, the element appearing later in the configuration file will be used. </p>
 <dl>
 <dt>
-<dd> &bull; <i>&lt;apparmor&gt;</i></dl>
+</dt><dd> &bull; <i>&lt;apparmor&gt;</i></dd></dl>
 <p> The &lt;apparmor&gt; element is used to configure AppArmor mediation on the bus. It can contain one attribute that specifies the mediation mode: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    &lt;apparmor mode=&quot;(enabled|disabled|required)&quot;/&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> The default mode is &quot;enabled&quot;. In &quot;enabled&quot; mode, AppArmor mediation will be performed if AppArmor support is available in the kernel. If it is not available, dbus-daemon will start but AppArmor mediation will not occur. In &quot;disabled&quot; mode, AppArmor mediation is disabled. In &quot;required&quot; mode, AppArmor mediation will be enabled if AppArmor support is available, otherwise dbus-daemon will refuse to start. </p>
 <p> The AppArmor mediation mode of the bus cannot be changed after the bus starts. Modifying the mode in the configuration file and sending a SIGHUP signal to the daemon has no effect on the mediation mode.</p>
 <h2>SELINUX</h2>
@@ -451,11 +451,11 @@ description: "dbus-daemon – Message bus daemon"
 <p> To run a separate test copy of the daemon, for example you might open a terminal and type: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   DBUS_VERBOSE=1 dbus-daemon --session --print-address
 </pre>
-</dl>
+</dd></dl>
 <p> The test daemon address will be printed when the daemon starts. You will need to copy-and-paste this address and use it as the value of the DBUS_SESSION_BUS_ADDRESS environment variable when you launch the applications you want to test. This will cause those applications to connect to your test bus instead of the DBUS_SESSION_BUS_ADDRESS of your real session bus. </p>
 <p> DBUS_VERBOSE=1 will have NO EFFECT unless your copy of D-Bus was compiled with verbose mode enabled. This is not recommended in production builds due to performance impact. You may need to rebuild D-Bus if your copy was not built with debugging in mind. (DBUS_VERBOSE also affects the D-Bus library and thus applications using D-Bus; it may be useful to see verbose output on both the client side and from the daemon.) </p>
 <p> If you want to get fancy, you can create a custom bus configuration for your test bus (see the session.conf and system.conf files that define the two default configurations for example). This would allow you to specify a different directory for .service files, for example.</p>
@@ -465,10 +465,10 @@ description: "dbus-daemon – Message bus daemon"
 <p> Please send bug reports to the D-Bus mailing list or bug tracker, see m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[]</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> relay connections via Secure Shell or a similar protocol</p>
+<dt> 1.</dt>
+<dd> relay connections via Secure Shell or a similar protocol</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://lists.freedesktop.org/archives/dbus/2018-April/017447.html">https://lists.freedesktop.org/archives/dbus/2018-April/017447.html</a></dl>
+</dt><dd> <a rel="nofollow" href="https://lists.freedesktop.org/archives/dbus/2018-April/017447.html">https://lists.freedesktop.org/archives/dbus/2018-April/017447.html</a></dd></dl>
 </dl>
 <h2>Index</h2>

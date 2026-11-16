@@ -22,10 +22,8 @@ BITMAP *bmp;
     cspr = get_compiled_sprite(bmp, 0);
 if (!cspr)
     abort_on_error("Couldn't create compiled sprite!");
-
 /* We don't need the bitmap any more.*/
 destroy_bitmap(bmp);
-
 /* Use the compiled sprite. */
 ...
     /* Destroy it when we don't need it any more. */

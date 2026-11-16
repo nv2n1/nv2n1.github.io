@@ -19,11 +19,11 @@ url: "/docs/linux/man/3-mbps_to_ibv_rate/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_rate_to_mbps(enum ibv_rate rate);
 enum ibv_rate mbps_to_ibv_rate(int mbps);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

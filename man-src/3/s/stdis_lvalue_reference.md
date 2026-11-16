@@ -10,10 +10,8 @@ description: "std::is_lvalue_reference – std::is_lvalue_reference"
 <p>std::is_lvalue_reference &#8211; std::is_lvalue_reference</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_lvalue_reference;</code></pre>
 <p>Checks whether T is a lvalue reference type. Provides the member constant value which is equal to true, if T is a lvalue reference type. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -42,13 +40,11 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_lvalue_reference&lt;A&gt;::value &lt;&lt; '

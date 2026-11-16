@@ -16,10 +16,10 @@ description: "XmTextFieldSetMaxLength — A TextField function that sets the val
 <h2>Description</h2>
 <p><code>XmTextFieldSetMaxLength</code> sets the value of the current maximum allowable length of the text string in the TextField widget. The maximum allowable length prevents the user from entering a text string from the keyboard that is larger than this limit. Strings that are entered using the <code>XmNvalue</code> (or <code>XmNvalueWcs</code>) resource, or the <code>XmTextFieldSetString</code> (or <code>XmTextFieldSetStringWcs</code>) function ignore this resource.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</p>
-<dt><i>max_length</i></p>
-<dd>Specifies the maximum allowable length of the text string</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd>
+<dt><i>max_length</i></dt>
+<dd>Specifies the maximum allowable length of the text string</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3), <code><a href="/docs/linux/man/3-xmtextfieldsetstring/">XmTextFieldSetString</a></code>(3), and <code><a href="/docs/linux/man/3-xmtextfieldsetstringwcs/">XmTextFieldSetStringWcs</a></code>(3).</p>

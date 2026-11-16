@@ -15,23 +15,23 @@ snd_pcm_lib_preallocate_pages_for_all - pre-allocation for continuous memory typ
 <h2>Arguments</h2>
 
 <i>pcm</i>
-<dl><dd><dd>the pcm instance</dl>
+<dl><dd></dd><dd>the pcm instance</dd></dl>
  
 
  <i>type</i>
-<dl><dd>DMA type (SNDRV_DMA_TYPE_*)</dl>
+<dl><dd>DMA type (SNDRV_DMA_TYPE_*)</dd></dl>
  
 
  <i>data</i>
-<dl><dd>DMA type dependent data</dl>
+<dl><dd>DMA type dependent data</dd></dl>
  
 
  <i>size</i>
-<dl><dd>the requested pre-allocation size in bytes</dl>
+<dl><dd>the requested pre-allocation size in bytes</dd></dl>
  
 
  <i>max</i>
-<dl><dd>the max. allowed pre-allocation size</dl>
+<dl><dd>the max. allowed pre-allocation size</dd></dl>
 
 <h2>Description</h2>
 

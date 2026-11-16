@@ -11,19 +11,13 @@ std::atexit - std::atexit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     int atexit(/*c-atexit-handler*/ *func);
 (until C++ 11)
-
     int atexit(/*atexit-handler*/ *func);
-
 int atexit(/*c-atexit-handler*/ *func) noexcept;
 (1)(since C++ 11)
-
     int atexit(/*atexit-handler*/ *func) noexcept;
-
 extern &quot;C++&quot; using /*atexit-handler*/ = void(); // exposition-only     (2)
-
 extern &quot;C&quot; using /*c-atexit-handler*/ = void(); // exposition-only</code></pre> 
 Registers the function pointed to by func to be called on normal program termination (via std::exit() or returning from the main_function) 
 The functions will be called during the destruction of the static objects, in reverse order: if A was registered before B, then the call to B is made before the call to A. Same applies to the ordering between static object constructors and the calls to atexit: see std::exit <i>(until C++11)</i> 
@@ -48,20 +42,16 @@ The two overloads are distinct because the types of the parameter func are disti
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
 void atexit_handler_1()
-
 {
     std::cout &lt;&lt; &quot;at exit #1\n&quot;;
 }
 void atexit_handler_2()
-
 {
     std::cout &lt;&lt; &quot;at exit #2\n&quot;;
 }
 int main()
-
 {
     const int result_1 = std::atexit(atexit_handler_1);
     const int result_2 = std::atexit(atexit_handler_2);

@@ -10,53 +10,51 @@ description: "devlink – Devlink tool"
 <p>devlink &#8211; Devlink tool</p>
 <h2>Synopsis</h2>
 <pre><code>devlink
-
 [ OPTIONS ] { dev|port|monitor|sb|resource|region|health|trap } { COMMAND |
-
     help }
 </code></pre>
 <p> <code>devlink</code> [ <code>-force</code> ] <code>-batch </code><i>filename</i> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-V</code>,<code> &#8211;Version</code></p>
-<dd>Print the version of the <code>devlink</code> utility and exit. </p>
-<dt><code>-b,</code> -batch <code>&lt;FILENAME&gt;</code></p>
-<dd>Read commands from provided file or standard input and invoke them. First failure will cause termination of devlink. </p>
-<dt><code>-force</code></p>
-<dd>Don&#8217;t terminate devlink on errors in batch mode. If there were any errors during execution of the commands, the application return code will be non zero. </p>
-<dt><code>-n</code>,<code> &#8211;no-nice-names</code></p>
-<dd>Turn off printing out nice names, for example netdevice ifnames instead of devlink port identification. </p>
-<dt><code>-j</code>,<code> &#8211;json</code></p>
-<dd>Generate JSON output. </p>
-<dt><code>-p</code>,<code> &#8211;pretty</code></p>
-<dd>When combined with -j generate a pretty JSON output. </p>
-<dt><code>-v</code>,<code> &#8211;verbose</code></p>
-<dd>Turn on verbose output. </p>
-<dt><code>-s</code>,<code> &#8211;statistics</code></p>
-<dd>Output statistics. </p>
-<dt><code>-N,</code> -Netns <code>&lt;NETNSNAME&gt;</code></p>
-<dd>Switches to the specified network namespace. </p>
-<dt><code>-i,</code> &#8211;iec</p>
-<dd>Print human readable rates in IEC units (e.g. 1Ki = 1024). </p>
+<dt><code>-V</code>,<code> &#8211;Version</code></dt>
+<dd>Print the version of the <code>devlink</code> utility and exit. </dd>
+<dt><code>-b,</code> -batch <code>&lt;FILENAME&gt;</code></dt>
+<dd>Read commands from provided file or standard input and invoke them. First failure will cause termination of devlink. </dd>
+<dt><code>-force</code></dt>
+<dd>Don&#8217;t terminate devlink on errors in batch mode. If there were any errors during execution of the commands, the application return code will be non zero. </dd>
+<dt><code>-n</code>,<code> &#8211;no-nice-names</code></dt>
+<dd>Turn off printing out nice names, for example netdevice ifnames instead of devlink port identification. </dd>
+<dt><code>-j</code>,<code> &#8211;json</code></dt>
+<dd>Generate JSON output. </dd>
+<dt><code>-p</code>,<code> &#8211;pretty</code></dt>
+<dd>When combined with -j generate a pretty JSON output. </dd>
+<dt><code>-v</code>,<code> &#8211;verbose</code></dt>
+<dd>Turn on verbose output. </dd>
+<dt><code>-s</code>,<code> &#8211;statistics</code></dt>
+<dd>Output statistics. </dd>
+<dt><code>-N,</code> -Netns <code>&lt;NETNSNAME&gt;</code></dt>
+<dd>Switches to the specified network namespace. </dd>
+<dt><code>-i,</code> &#8211;iec</dt>
+<dd>Print human readable rates in IEC units (e.g. 1Ki = 1024). </dd>
 </dl>
 <h3><i>OBJECT</i></h3>
 <dl>
-<dt><code>dev</code></p>
-<dd>&#8211; devlink device. </p>
-<dt><code>port</code></p>
-<dd>&#8211; devlink port. </p>
-<dt><code>monitor</code></p>
-<dd>&#8211; watch for netlink messages. </p>
-<dt><code>sb</code></p>
-<dd>&#8211; devlink shared buffer configuration. </p>
-<dt><code>resource</code></p>
-<dd>&#8211; devlink device resource configuration. </p>
-<dt><code>region</code></p>
-<dd>&#8211; devlink address region access </p>
-<dt><code>health</code></p>
-<dd>&#8211; devlink reporting and recovery </p>
-<dt><code>trap</code></p>
-<dd>&#8211; devlink trap configuration </p>
+<dt><code>dev</code></dt>
+<dd>&#8211; devlink device. </dd>
+<dt><code>port</code></dt>
+<dd>&#8211; devlink port. </dd>
+<dt><code>monitor</code></dt>
+<dd>&#8211; watch for netlink messages. </dd>
+<dt><code>sb</code></dt>
+<dd>&#8211; devlink shared buffer configuration. </dd>
+<dt><code>resource</code></dt>
+<dd>&#8211; devlink device resource configuration. </dd>
+<dt><code>region</code></dt>
+<dd>&#8211; devlink address region access </dd>
+<dt><code>health</code></dt>
+<dd>&#8211; devlink reporting and recovery </dd>
+<dt><code>trap</code></dt>
+<dd>&#8211; devlink trap configuration </dd>
 </dl>
 <h3><i>COMMAND</i></h3>
 <p>Specifies the action to perform on the object. The set of possible actions depends on the object type. As a rule, it is possible to <code>show</code> (or <code>list</code> ) objects, but some objects do not allow all of these operations or have some additional commands. The <code>help</code> command is available for all objects. It prints out a list of available commands and argument syntax conventions. </p>

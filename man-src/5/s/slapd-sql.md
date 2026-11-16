@@ -21,76 +21,76 @@ description: "slapd-sql – SQL backend to slapd"
 <p>These <code>slapd.conf</code> options apply to the SQL backend database, which means that they must follow a &quot;database sql&quot; line and come before any subsequent &quot;backend&quot; or &quot;database&quot; lines. Other database options not specific to this backend are described in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) manual page.</p>
 <h2>Data Source Configuration</h2>
 <dl>
-<dt><code>dbname &lt;datasource name&gt;</code></p>
-<dd>The name of the ODBC datasource to use.</dl>
+<dt><code>dbname &lt;datasource name&gt;</code></dt>
+<dd>The name of the ODBC datasource to use.</dd></dl>
 <p> <code>dbhost &lt;hostname&gt;</code><br />
  <code>dbpasswd &lt;password&gt;</code><br />
  <code>dbuser &lt;username&gt;</code></p>
 <dl>
-<dd>The three above options are generally unneeded, because this information is taken from the datasource specified by the <code>dbname</code> directive. They allow to override datasource settings. Also, several RDBMS&#8217; drivers tend to require explicit passing of user/password, even if those are given in datasource (Note: <code>dbhost</code> is currently ignored).</dl>
+<dd>The three above options are generally unneeded, because this information is taken from the datasource specified by the <code>dbname</code> directive. They allow to override datasource settings. Also, several RDBMS&#8217; drivers tend to require explicit passing of user/password, even if those are given in datasource (Note: <code>dbhost</code> is currently ignored).</dd></dl>
 <h2>Scoping Configuration</h2>
 <p>These options specify SQL query templates for scoping searches. </p>
 <dl>
-<dt><code>subtree_cond &lt;SQL expression&gt;</code></p>
-<dd>Specifies a where-clause template used to form a subtree search condition (dn=&quot;(.+,)?&lt;dn&gt;$&quot;). It may differ from one SQL dialect to another (see samples). By default, it is constructed based on the knowledge about how to normalize DN values (e.g. <code>&quot;&lt;upper_func&gt;(ldap_entries.dn) LIKE CONCAT(&#8216;%&#8217;,?)&quot;</code>); see <code>upper_func</code>, <code>upper_needs_cast</code>, <code>concat_pattern</code> and <code>strcast_func</code> in &quot;HELPER CONFIGURATION&quot; for details. </p>
-<dt><code>children_cond &lt;SQL expression&gt;</code></p>
-<dd>Specifies a where-clause template used to form a children search condition (dn=&quot;.+,&lt;dn&gt;$&quot;). It may differ from one SQL dialect to another (see samples). By default, it is constructed based on the knowledge about how to normalize DN values (e.g. <code>&quot;&lt;upper_func&gt;(ldap_entries.dn) LIKE CONCAT(&#8216;%,&#8217;,?)&quot;</code>); see <code>upper_func</code>, <code>upper_needs_cast</code>, <code>concat_pattern</code> and <code>strcast_func</code> in &quot;HELPER CONFIGURATION&quot; for details. </p>
-<dt><code>use_subtree_shortcut { YES | no }</code></p>
-<dd>Do not use the subtree condition when the searchBase is the database suffix, and the scope is subtree; rather collect all entries. </p>
+<dt><code>subtree_cond &lt;SQL expression&gt;</code></dt>
+<dd>Specifies a where-clause template used to form a subtree search condition (dn=&quot;(.+,)?&lt;dn&gt;$&quot;). It may differ from one SQL dialect to another (see samples). By default, it is constructed based on the knowledge about how to normalize DN values (e.g. <code>&quot;&lt;upper_func&gt;(ldap_entries.dn) LIKE CONCAT(&#8216;%&#8217;,?)&quot;</code>); see <code>upper_func</code>, <code>upper_needs_cast</code>, <code>concat_pattern</code> and <code>strcast_func</code> in &quot;HELPER CONFIGURATION&quot; for details. </dd>
+<dt><code>children_cond &lt;SQL expression&gt;</code></dt>
+<dd>Specifies a where-clause template used to form a children search condition (dn=&quot;.+,&lt;dn&gt;$&quot;). It may differ from one SQL dialect to another (see samples). By default, it is constructed based on the knowledge about how to normalize DN values (e.g. <code>&quot;&lt;upper_func&gt;(ldap_entries.dn) LIKE CONCAT(&#8216;%,&#8217;,?)&quot;</code>); see <code>upper_func</code>, <code>upper_needs_cast</code>, <code>concat_pattern</code> and <code>strcast_func</code> in &quot;HELPER CONFIGURATION&quot; for details. </dd>
+<dt><code>use_subtree_shortcut { YES | no }</code></dt>
+<dd>Do not use the subtree condition when the searchBase is the database suffix, and the scope is subtree; rather collect all entries. </dd>
 </dl>
 <h2>Statement Configuration</h2>
 <p>These options specify SQL query templates for loading schema mapping meta-information, adding and deleting entries to ldap_entries, etc. All these and subtree_cond should have the given default values. For the current value it is recommended to look at the sources, or in the log output when slapd starts with &quot;-d 5&quot; or greater. Note that the parameter number and order must not be changed. </p>
 <dl>
-<dt><code>oc_query &lt;SQL expression&gt;</code></p>
-<dd>The query that is used to collect the objectClass mapping data from table <i>ldap_oc_mappings</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;SELECT id, name, keytbl, keycol, create_proc, delete_proc, expect_return FROM ldap_oc_mappings&quot;</code>. </p>
-<dt><code>at_query &lt;SQL expression&gt;</code></p>
-<dd>The query that is used to collect the attributeType mapping data from table <i>ldap_attr_mappings</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;SELECT name, sel_expr, from_tbls, join_where, add_proc, delete_proc, param_order, expect_return FROM ldap_attr_mappings WHERE oc_map_id=?&quot;</code>. </p>
-<dt><code>id_query &lt;SQL expression&gt;</code></p>
-<dd>The query that is used to map a DN to an entry in table <i>ldap_entries</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;SELECT id,keyval,oc_map_id,dn FROM ldap_entries WHERE &lt;DN match expr&gt;&quot;</code>, where <code>&lt;DN match expr&gt;</code> is constructed based on the knowledge about how to normalize DN values (e.g. <code>&quot;dn=?&quot;</code> if no means to uppercase strings are available; typically, <code>&quot;&lt;upper_func&gt;(dn)=?&quot;</code> is used); see <code>upper_func</code>, <code>upper_needs_cast</code>, <code>concat_pattern</code> and <code>strcast_func</code> in &quot;HELPER CONFIGURATION&quot; for details. </p>
-<dt><code>insentry_stmt &lt;SQL expression&gt;</code></p>
-<dd>The statement that is used to insert a new entry in table <i>ldap_entries</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;INSERT INTO ldap_entries (dn, oc_map_id, parent, keyval) VALUES (?, ?, ?, ?)&quot;</code>. </p>
-<dt><code>delentry_stmt &lt;SQL expression&gt;</code></p>
-<dd>The statement that is used to delete an existing entry from table <i>ldap_entries</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;DELETE FROM ldap_entries WHERE id=?&quot;</code>. </p>
-<dt><code>delobjclasses_stmt &lt;SQL expression&gt;</code></p>
-<dd>The statement that is used to delete an existing entry&#8217;s ID from table <i>ldap_objclasses</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;DELETE FROM ldap_entry_objclasses WHERE entry_id=?&quot;</code>. </p>
+<dt><code>oc_query &lt;SQL expression&gt;</code></dt>
+<dd>The query that is used to collect the objectClass mapping data from table <i>ldap_oc_mappings</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;SELECT id, name, keytbl, keycol, create_proc, delete_proc, expect_return FROM ldap_oc_mappings&quot;</code>. </dd>
+<dt><code>at_query &lt;SQL expression&gt;</code></dt>
+<dd>The query that is used to collect the attributeType mapping data from table <i>ldap_attr_mappings</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;SELECT name, sel_expr, from_tbls, join_where, add_proc, delete_proc, param_order, expect_return FROM ldap_attr_mappings WHERE oc_map_id=?&quot;</code>. </dd>
+<dt><code>id_query &lt;SQL expression&gt;</code></dt>
+<dd>The query that is used to map a DN to an entry in table <i>ldap_entries</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;SELECT id,keyval,oc_map_id,dn FROM ldap_entries WHERE &lt;DN match expr&gt;&quot;</code>, where <code>&lt;DN match expr&gt;</code> is constructed based on the knowledge about how to normalize DN values (e.g. <code>&quot;dn=?&quot;</code> if no means to uppercase strings are available; typically, <code>&quot;&lt;upper_func&gt;(dn)=?&quot;</code> is used); see <code>upper_func</code>, <code>upper_needs_cast</code>, <code>concat_pattern</code> and <code>strcast_func</code> in &quot;HELPER CONFIGURATION&quot; for details. </dd>
+<dt><code>insentry_stmt &lt;SQL expression&gt;</code></dt>
+<dd>The statement that is used to insert a new entry in table <i>ldap_entries</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;INSERT INTO ldap_entries (dn, oc_map_id, parent, keyval) VALUES (?, ?, ?, ?)&quot;</code>. </dd>
+<dt><code>delentry_stmt &lt;SQL expression&gt;</code></dt>
+<dd>The statement that is used to delete an existing entry from table <i>ldap_entries</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;DELETE FROM ldap_entries WHERE id=?&quot;</code>. </dd>
+<dt><code>delobjclasses_stmt &lt;SQL expression&gt;</code></dt>
+<dd>The statement that is used to delete an existing entry&#8217;s ID from table <i>ldap_objclasses</i>; see &quot;METAINFORMATION USED&quot; for details. The default is <code>&quot;DELETE FROM ldap_entry_objclasses WHERE entry_id=?&quot;</code>. </dd>
 </dl>
 <h2>Helper Configuration</h2>
 <p>These statements are used to modify the default behavior of the backend according to issues of the dialect of the RDBMS. The first options essentially refer to string and DN normalization when building filters. LDAP normalization is more than upper- (or lower-)casing everything; however, as a reasonable trade-off, for case-sensitive RDBMSes the backend can be instructed to uppercase strings and DNs by providing the <code>upper_func</code> directive. Some RDBMSes, to use functions on arbitrary data types, e.g. string constants, requires a cast, which is triggered by the <code>upper_needs_cast</code> directive. If required, a string cast function can be provided as well, by using the <code>strcast_func</code> directive. Finally, a custom string concatenation pattern may be required; it is provided by the <code>concat_pattern</code> directive. </p>
 <dl>
-<dt><code>upper_func &lt;SQL function name&gt;</code></p>
-<dd>Specifies the name of a function that converts a given value to uppercase. This is used for case insensitive matching when the RDBMS is case sensitive. It may differ from one SQL dialect to another (e.g. <code>UCASE</code>, <code>UPPER</code> or whatever; see samples). By default, none is used, i.e. strings are not uppercased, so matches may be case sensitive. </p>
-<dt><code>upper_needs_cast { NO | yes }</code></p>
-<dd>Set this directive to <code>yes</code> if <code>upper_func</code> needs an explicit cast when applied to literal strings. A cast in the form <code>CAST (&lt;arg&gt; AS VARCHAR(&lt;max DN length&gt;))</code> is used, where <code>&lt;max DN length&gt;</code> is builtin in back-sql; see macro <code>BACKSQL_MAX_DN_LEN</code> (currently 255; note that slapd&#8217;s builtin limit, in macro <code>SLAP_LDAPDN_MAXLEN</code>, is set to 8192). This is <i>experimental</i> and may change in future releases. </p>
-<dt><code>strcast_func &lt;SQL function name&gt;</code></p>
-<dd>Specifies the name of a function that converts a given value to a string for appropriate ordering. This is used in &quot;SELECT DISTINCT&quot; statements for strongly typed RDBMSes with little implicit casting (like PostgreSQL), when a literal string is specified. This is <i>experimental</i> and may change in future releases. </p>
-<dt><code>concat_pattern &lt;pattern&gt;</code></p>
-<dd>This statement defines the <code>pattern </code> that is used to concatenate strings. The <code>pattern</code> MUST contain two question marks, &#8216;?&#8217;, that will be replaced by the two strings that must be concatenated. The default value is <code>CONCAT(?,?);</code> a form that is known to be highly portable (IBM db2, PostgreSQL) is <code>?||?,</code> but an explicit cast may be required when operating on literal strings: <code>CAST(?||? AS VARCHAR(&lt;length&gt;)).</code> On some RDBMSes (IBM db2, MSSQL) the form <code>?+?</code> is known to work as well. Carefully check the documentation of your RDBMS or stay with the examples for supported ones. This is <i>experimental</i> and may change in future releases. </p>
-<dt><code>aliasing_keyword &lt;string&gt;</code></p>
-<dd>Define the aliasing keyword. Some RDBMSes use the word &quot;<i>AS</i>&quot; (the default), others don&#8217;t use any. </p>
-<dt><code>aliasing_quote &lt;string&gt;</code></p>
-<dd>Define the quoting char of the aliasing keyword. Some RDBMSes don&#8217;t require any (the default), others may require single or double quotes. </p>
-<dt><code>has_ldapinfo_dn_ru { NO | yes }</code></p>
-<dd>Explicitly inform the backend whether the dn_ru column (DN in reverse uppercased form) is present in table <i>ldap_entries</i>. Overrides automatic check (this is required, for instance, by PostgreSQL/unixODBC). This is <i>experimental</i> and may change in future releases. </p>
-<dt><code>fail_if_no_mapping { NO | yes }</code></p>
-<dd>When set to <code>yes</code> it forces <i>attribute</i> write operations to fail if no appropriate mapping between LDAP attributes and SQL data is available. The default behavior is to ignore those changes that cannot be mapped. It has no impact on objectClass mapping, i.e. if the <i>structuralObjectClass</i> of an entry cannot be mapped to SQL by looking up its name in ldap_oc_mappings, an <i>add</i> operation will fail regardless of the <code>fail_if_no_mapping</code> switch; see section &quot;METAINFORMATION USED&quot; for details. This is <i>experimental</i> and may change in future releases. </p>
-<dt><code>allow_orphans { NO | yes }</code></p>
-<dd>When set to <code>yes</code> orphaned entries (i.e. without the parent entry in the database) can be added. This option should be used with care, possibly in conjunction with some special rule on the RDBMS side that dynamically creates the missing parent. </p>
-<dt><code>baseObject [ &lt;filename&gt; ]</code></p>
-<dd>Instructs the database to create and manage an in-memory baseObject entry instead of looking for one in the RDBMS. If the (optional) <code>&lt;filename&gt;</code> argument is given, the entry is read from that file in <code><a href="/docs/linux/man/5-ldif/">LDIF</a></code>(5) format; otherwise, an entry with objectClass <code>extensibleObject</code> is created based on the contents of the RDN of the <i>baseObject</i>. This is particularly useful when <i>ldap_entries</i> information is stored in a view rather than in a table, and <code>union</code> is not supported for views, so that the view can only specify one rule to compute the entry structure for one objectClass. This topic is discussed further in section &quot;METAINFORMATION USED&quot;. This is <i>experimental</i> and may change in future releases. </p>
-<dt><code>create_needs_select { NO | yes }</code></p>
-<dd>Instructs the database whether or not entry creation in table <i>ldap_entries</i> needs a subsequent select to collect the automatically assigned ID, instead of being returned by a stored procedure. </p>
+<dt><code>upper_func &lt;SQL function name&gt;</code></dt>
+<dd>Specifies the name of a function that converts a given value to uppercase. This is used for case insensitive matching when the RDBMS is case sensitive. It may differ from one SQL dialect to another (e.g. <code>UCASE</code>, <code>UPPER</code> or whatever; see samples). By default, none is used, i.e. strings are not uppercased, so matches may be case sensitive. </dd>
+<dt><code>upper_needs_cast { NO | yes }</code></dt>
+<dd>Set this directive to <code>yes</code> if <code>upper_func</code> needs an explicit cast when applied to literal strings. A cast in the form <code>CAST (&lt;arg&gt; AS VARCHAR(&lt;max DN length&gt;))</code> is used, where <code>&lt;max DN length&gt;</code> is builtin in back-sql; see macro <code>BACKSQL_MAX_DN_LEN</code> (currently 255; note that slapd&#8217;s builtin limit, in macro <code>SLAP_LDAPDN_MAXLEN</code>, is set to 8192). This is <i>experimental</i> and may change in future releases. </dd>
+<dt><code>strcast_func &lt;SQL function name&gt;</code></dt>
+<dd>Specifies the name of a function that converts a given value to a string for appropriate ordering. This is used in &quot;SELECT DISTINCT&quot; statements for strongly typed RDBMSes with little implicit casting (like PostgreSQL), when a literal string is specified. This is <i>experimental</i> and may change in future releases. </dd>
+<dt><code>concat_pattern &lt;pattern&gt;</code></dt>
+<dd>This statement defines the <code>pattern </code> that is used to concatenate strings. The <code>pattern</code> MUST contain two question marks, &#8216;?&#8217;, that will be replaced by the two strings that must be concatenated. The default value is <code>CONCAT(?,?);</code> a form that is known to be highly portable (IBM db2, PostgreSQL) is <code>?||?,</code> but an explicit cast may be required when operating on literal strings: <code>CAST(?||? AS VARCHAR(&lt;length&gt;)).</code> On some RDBMSes (IBM db2, MSSQL) the form <code>?+?</code> is known to work as well. Carefully check the documentation of your RDBMS or stay with the examples for supported ones. This is <i>experimental</i> and may change in future releases. </dd>
+<dt><code>aliasing_keyword &lt;string&gt;</code></dt>
+<dd>Define the aliasing keyword. Some RDBMSes use the word &quot;<i>AS</i>&quot; (the default), others don&#8217;t use any. </dd>
+<dt><code>aliasing_quote &lt;string&gt;</code></dt>
+<dd>Define the quoting char of the aliasing keyword. Some RDBMSes don&#8217;t require any (the default), others may require single or double quotes. </dd>
+<dt><code>has_ldapinfo_dn_ru { NO | yes }</code></dt>
+<dd>Explicitly inform the backend whether the dn_ru column (DN in reverse uppercased form) is present in table <i>ldap_entries</i>. Overrides automatic check (this is required, for instance, by PostgreSQL/unixODBC). This is <i>experimental</i> and may change in future releases. </dd>
+<dt><code>fail_if_no_mapping { NO | yes }</code></dt>
+<dd>When set to <code>yes</code> it forces <i>attribute</i> write operations to fail if no appropriate mapping between LDAP attributes and SQL data is available. The default behavior is to ignore those changes that cannot be mapped. It has no impact on objectClass mapping, i.e. if the <i>structuralObjectClass</i> of an entry cannot be mapped to SQL by looking up its name in ldap_oc_mappings, an <i>add</i> operation will fail regardless of the <code>fail_if_no_mapping</code> switch; see section &quot;METAINFORMATION USED&quot; for details. This is <i>experimental</i> and may change in future releases. </dd>
+<dt><code>allow_orphans { NO | yes }</code></dt>
+<dd>When set to <code>yes</code> orphaned entries (i.e. without the parent entry in the database) can be added. This option should be used with care, possibly in conjunction with some special rule on the RDBMS side that dynamically creates the missing parent. </dd>
+<dt><code>baseObject [ &lt;filename&gt; ]</code></dt>
+<dd>Instructs the database to create and manage an in-memory baseObject entry instead of looking for one in the RDBMS. If the (optional) <code>&lt;filename&gt;</code> argument is given, the entry is read from that file in <code><a href="/docs/linux/man/5-ldif/">LDIF</a></code>(5) format; otherwise, an entry with objectClass <code>extensibleObject</code> is created based on the contents of the RDN of the <i>baseObject</i>. This is particularly useful when <i>ldap_entries</i> information is stored in a view rather than in a table, and <code>union</code> is not supported for views, so that the view can only specify one rule to compute the entry structure for one objectClass. This topic is discussed further in section &quot;METAINFORMATION USED&quot;. This is <i>experimental</i> and may change in future releases. </dd>
+<dt><code>create_needs_select { NO | yes }</code></dt>
+<dd>Instructs the database whether or not entry creation in table <i>ldap_entries</i> needs a subsequent select to collect the automatically assigned ID, instead of being returned by a stored procedure. </dd>
 </dl>
 <p> <code>fetch_attrs &lt;attrlist&gt;</code><br />
  <code>fetch_all_attrs { NO | yes }</code></p>
 <dl>
-<dd>The first statement allows to provide a list of attributes that must always be fetched in addition to those requested by any specific operation, because they are required for the proper usage of the backend. For instance, all attributes used in ACLs should be listed here. The second statement is a shortcut to require all attributes to be always loaded. Note that the dynamically generated attributes, e.g. <i>hasSubordinates</i>, <i>entryDN</i> and other implementation dependent attributes are <code>NOT</code> generated at this point, for consistency with the rest of slapd. This may change in the future.</dl>
+<dd>The first statement allows to provide a list of attributes that must always be fetched in addition to those requested by any specific operation, because they are required for the proper usage of the backend. For instance, all attributes used in ACLs should be listed here. The second statement is a shortcut to require all attributes to be always loaded. Note that the dynamically generated attributes, e.g. <i>hasSubordinates</i>, <i>entryDN</i> and other implementation dependent attributes are <code>NOT</code> generated at this point, for consistency with the rest of slapd. This may change in the future.</dd></dl>
 <dl>
-<dt><code>check_schema { YES | no }</code></p>
-<dd>Instructs the database to check schema adherence of entries after modifications, and structural objectClass chain when entries are built. By default it is set to <code>yes</code>. </p>
-<dt><code>sqllayer &lt;name&gt; [&#8230;]</code></p>
-<dd>Loads the layer <code>&lt;name&gt;</code> onto a stack of helpers that are used to map DNs from LDAP to SQL representation and vice-versa. Subsequent args are passed to the layer configuration routine. This is <i>highly experimental</i> and should be used with extreme care. The API of the layers is not frozen yet, so it is unpublished. </p>
-<dt><code>autocommit { NO | yes }</code></p>
-<dd>Activates autocommit; by default, it is off. </p>
+<dt><code>check_schema { YES | no }</code></dt>
+<dd>Instructs the database to check schema adherence of entries after modifications, and structural objectClass chain when entries are built. By default it is set to <code>yes</code>. </dd>
+<dt><code>sqllayer &lt;name&gt; [&#8230;]</code></dt>
+<dd>Loads the layer <code>&lt;name&gt;</code> onto a stack of helpers that are used to map DNs from LDAP to SQL representation and vice-versa. Subsequent args are passed to the layer configuration routine. This is <i>highly experimental</i> and should be used with extreme care. The API of the layers is not frozen yet, so it is unpublished. </dd>
+<dt><code>autocommit { NO | yes }</code></dt>
+<dd>Activates autocommit; by default, it is off. </dd>
 </dl>
 <h2>Metainformation Used</h2>
 <p>Almost everything mentioned later is illustrated in examples located in the <code>servers/slapd/back-sql/rdbms_depend/</code> directory in the OpenLDAP source tree, and contains scripts for generating sample database for Oracle, MS SQL Server, mySQL and more (including PostgreSQL and IBM db2). </p>
@@ -210,7 +210,7 @@ description: "slapd-sql – SQL backend to slapd"
 <p>The <code>sql</code> backend honors access control semantics as indicated in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5) (including the <code>disclose</code> access privilege when enabled at compile time).</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8). </p>

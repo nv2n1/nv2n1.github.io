@@ -10,29 +10,29 @@ description: "XSetWMProperties, XmbSetWMProperties, Xutf8SetWMProperties – set
 <p>XSetWMProperties, XmbSetWMProperties, Xutf8SetWMProperties &#8211; set standard window properties </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>void XSetWMProperties(Display *<i>display</i>, Window <i>w</i>, XTextProperty *<i>window_name</i>, XTextProperty *<i>icon_name</i>, char **<i>argv</i>, int <i>argc</i>, XSizeHints *<i>normal_hints</i>, XWMHints *<i>wm_hints</i>, XClassHint *<i>class_hints</i>);</p>
-<dd>void XmbSetWMProperties(Display *<i>display</i>, Window <i>w</i>, char *<i>window_name</i>, char *<i>icon_name</i>, char *<i>argv</i>[], int <i>argc</i>, XSizeHints *<i>normal_hints</i>, XWMHints *<i>wm_hints</i>, XClassHint *<i>class_hints</i>);</p>
-<dd>void Xutf8SetWMProperties(Display *<i>display</i>, Window <i>w</i>, char *<i>window_name</i>, char *<i>icon_name</i>, char *<i>argv</i>[], int <i>argc</i>, XSizeHints *<i>normal_hints</i>, XWMHints *<i>wm_hints</i>, XClassHint *<i>class_hints</i>);</dl>
+<dd>void XSetWMProperties(Display *<i>display</i>, Window <i>w</i>, XTextProperty *<i>window_name</i>, XTextProperty *<i>icon_name</i>, char **<i>argv</i>, int <i>argc</i>, XSizeHints *<i>normal_hints</i>, XWMHints *<i>wm_hints</i>, XClassHint *<i>class_hints</i>);</dd>
+<dd>void XmbSetWMProperties(Display *<i>display</i>, Window <i>w</i>, char *<i>window_name</i>, char *<i>icon_name</i>, char *<i>argv</i>[], int <i>argc</i>, XSizeHints *<i>normal_hints</i>, XWMHints *<i>wm_hints</i>, XClassHint *<i>class_hints</i>);</dd>
+<dd>void Xutf8SetWMProperties(Display *<i>display</i>, Window <i>w</i>, char *<i>window_name</i>, char *<i>icon_name</i>, char *<i>argv</i>[], int <i>argc</i>, XSizeHints *<i>normal_hints</i>, XWMHints *<i>wm_hints</i>, XClassHint *<i>class_hints</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>argc</i></p>
-<dd>Specifies the number of arguments.</p>
-<dt><i>argv</i></p>
-<dd>Specifies the application&#8217;s argument list.</p>
-<dt><i>class_hints</i></p>
-<dd>Specifies the <code>XClassHint</code> structure to be used.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>icon_name</i></p>
-<dd>Specifies the icon name, which should be a null-terminated string.</p>
-<dt><i>normal_hints</i></p>
-<dd>Specifies the size hints for the window in its normal state.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</p>
-<dt><i>window_name</i></p>
-<dd>Specifies the window name, which should be a null-terminated string.</p>
-<dt><i>wm_hints</i></p>
-<dd>Specifies the <code>XWMHints</code> structure to be used.</dl>
+<dt><i>argc</i></dt>
+<dd>Specifies the number of arguments.</dd>
+<dt><i>argv</i></dt>
+<dd>Specifies the application&#8217;s argument list.</dd>
+<dt><i>class_hints</i></dt>
+<dd>Specifies the <code>XClassHint</code> structure to be used.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>icon_name</i></dt>
+<dd>Specifies the icon name, which should be a null-terminated string.</dd>
+<dt><i>normal_hints</i></dt>
+<dd>Specifies the size hints for the window in its normal state.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd>
+<dt><i>window_name</i></dt>
+<dd>Specifies the window name, which should be a null-terminated string.</dd>
+<dt><i>wm_hints</i></dt>
+<dd>Specifies the <code>XWMHints</code> structure to be used.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetWMProperties</code> convenience function provides a single programming interface for setting those essential window properties that are used for communicating with other clients (particularly window and session managers). </p>
 <p> If the window_name argument is non-NULL, <code>XSetWMProperties</code> calls <code>XSetWMName</code>, which in turn, sets the WM_NAME property (see section 14.1.4). If the icon_name argument is non-NULL, <code>XSetWMProperties</code> calls <code>XSetWMIconName</code>, which sets the WM_ICON_NAME property (see section 14.1.5). If the argv argument is non-NULL, <code>XSetWMProperties</code> calls <code>XSetCommand</code>, which sets the WM_COMMAND property (see section 14.2.1). Note that an argc of zero is allowed to indicate a zero-length command. Note also that the hostname of this machine is stored using <code>XSetWMClientMachine</code> (see section 14.2.2). </p>
@@ -50,26 +50,26 @@ description: "XSetWMProperties, XmbSetWMProperties, Xutf8SetWMProperties – set
 <p> The function <code>Xutf8SetWMProperties</code> is an extension introduced by The XFree86 Project, Inc., in their 4.0.2 release. Its presence is indicated by the macro <code>X_HAVE_UTF8_STRING</code>.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_CLASS</font></p>
-<dd>Set by application programs to allow window and session managers to obtain the application&#8217;s resources from the resource database.</p>
-<dt><font SIZE="-1">WM_CLIENT_MACHINE</font></p>
-<dd>The string name of the machine on which the client application is running.</p>
-<dt><font SIZE="-1">WM_COMMAND</font></p>
-<dd>The command and arguments, null-separated, used to invoke the application.</p>
-<dt><font SIZE="-1">WM_HINTS</font></p>
-<dd>Additional hints set by the client for use by the window manager. The C type of this property is <code>XWMHints</code>.</p>
-<dt><font SIZE="-1">WM_ICON_NAME</font></p>
-<dd>The name to be used in an icon.</p>
-<dt><font SIZE="-1">WM_NAME</font></p>
-<dd>The name of the application.</p>
-<dt><font SIZE="-1">WM_NORMAL_HINTS</font></p>
-<dd>Size hints for a window in its normal state. The C type of this property is <code>XSizeHints</code>.</dl>
+<dt><font SIZE="-1">WM_CLASS</font></dt>
+<dd>Set by application programs to allow window and session managers to obtain the application&#8217;s resources from the resource database.</dd>
+<dt><font SIZE="-1">WM_CLIENT_MACHINE</font></dt>
+<dd>The string name of the machine on which the client application is running.</dd>
+<dt><font SIZE="-1">WM_COMMAND</font></dt>
+<dd>The command and arguments, null-separated, used to invoke the application.</dd>
+<dt><font SIZE="-1">WM_HINTS</font></dt>
+<dd>Additional hints set by the client for use by the window manager. The C type of this property is <code>XWMHints</code>.</dd>
+<dt><font SIZE="-1">WM_ICON_NAME</font></dt>
+<dd>The name to be used in an icon.</dd>
+<dt><font SIZE="-1">WM_NAME</font></dt>
+<dd>The name of the application.</dd>
+<dt><font SIZE="-1">WM_NORMAL_HINTS</font></dt>
+<dd>Size hints for a window in its normal state. The C type of this property is <code>XSizeHints</code>.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xparsegeometry/">XParseGeometry</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3), XTextListToTextProperty(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

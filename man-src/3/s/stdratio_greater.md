@@ -10,15 +10,12 @@ description: "std::ratio_greater – std::ratio_greater"
 <p>std::ratio_greater &#8211; std::ratio_greater</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;ratio&gt;
-
     template &lt;class R1, class R2&gt;
     (since C++ 11)
-
         struct ratio_greater : std::integral_constant;</code></pre>
 <p>If the ratio R1 is greater than than the ratio R2, provides the member constant value equal true. Otherwise, value is false.<br />
 Helper variable template </p>
 <pre><code>template&lt; class R1, class R2 &gt;                                         (since C++17)
-
 inline constexpr bool ratio_greater_v = ratio_greater&lt;R1, R2&gt;::value;
 </code></pre>
 <p>Inherited from std::integral_constant </p>

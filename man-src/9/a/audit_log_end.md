@@ -14,7 +14,7 @@ description: "audit_log_end – end one audit record"
 <p><i>ab</i></p>
 <dl>
 <dd>
-<dd>the audit_buffer</dl>
+</dd><dd>the audit_buffer</dd></dl>
 <h2>Description</h2>
 <p><code>netlink_unicast</code> cannot be called inside an irq context because it blocks (last arg, flags, is not set to MSG_DONTWAIT), so the audit buffer is placed on a queue and a tasklet is scheduled to remove them from the queue outside the irq context. May be called in any context.</p>
 <h2>Copyright</h2>

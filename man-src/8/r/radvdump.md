@@ -15,16 +15,16 @@ description: "radvdump – dump router advertisements"
 <h2>Options</h2>
 <p>For every one character option there is also a long option, which is listed right next to the &quot;short&quot; option name: </p>
 <dl>
-<dt><code>-v</code>,<code> &#8211;version</code></p>
-<dd>Displays the version of <i>radvdump</i> and then aborts.</p>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd>Displays a short usage description and then aborts.</p>
-<dt><code>-f</code>,<code> &#8211;file-format</code></p>
-<dd>Output received router advertisements in the format of the <code>radvd</code> configuration file. Since radvd 0.9, this is the default and the switch is provided for backward compatibility only.</p>
-<dt><code>-e</code>,<code> &#8211;exclude-defaults</code></p>
-<dd>Exclude default valued options from configuration file format. This option is ignored if option <code>-f</code> is not set.</p>
-<dt><code>-d </code>debuglevel,<code> &#8211;debug </code>debuglevel</p>
-<dd>With this option you turn on debugging information. The debugging level is an integer in the range from 1 to 4, from quiet to very verbose. A debugging level of 0 completely turns off debugging. </p>
+<dt><code>-v</code>,<code> &#8211;version</code></dt>
+<dd>Displays the version of <i>radvdump</i> and then aborts.</dd>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd>Displays a short usage description and then aborts.</dd>
+<dt><code>-f</code>,<code> &#8211;file-format</code></dt>
+<dd>Output received router advertisements in the format of the <code>radvd</code> configuration file. Since radvd 0.9, this is the default and the switch is provided for backward compatibility only.</dd>
+<dt><code>-e</code>,<code> &#8211;exclude-defaults</code></dt>
+<dd>Exclude default valued options from configuration file format. This option is ignored if option <code>-f</code> is not set.</dd>
+<dt><code>-d </code>debuglevel,<code> &#8211;debug </code>debuglevel</dt>
+<dd>With this option you turn on debugging information. The debugging level is an integer in the range from 1 to 4, from quiet to very verbose. A debugging level of 0 completely turns off debugging. </dd>
 <p> The default debugging level is 0. </p>
 </dl>
 <h2>Files</h2>

@@ -27,40 +27,40 @@ description: "MagneticField — compute the earth’s magnetic field"
 <p> The <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd>use magnetic field model <i>name</i> instead of the default <tt>&quot;wmm2015&quot;</tt>. See &#8220;<font SIZE="-1">MODELS&#8221;</font>.</p>
-<dt><code>-d</code></p>
-<dd>read magnetic models from <i>dir</i> instead of the default. See &#8220;<font SIZE="-1">MODELS&#8221;</font>.</p>
-<dt><code>-t</code></p>
-<dd>evaluate the field at <i>time</i> instead of reading the time from the input lines.</p>
-<dt><code>-c</code></p>
-<dd>evaluate the field on a circle of latitude given by <i>time</i>, <i>lat</i>, <i>h</i> instead of reading these quantities from the input lines. In this case, <code>MagneticField</code> can calculate the field considerably more quickly.</p>
-<dt><code>-r</code></p>
-<dd>toggle whether to report the rates of change of the field.</p>
-<dt><code>-T</code></p>
-<dd>signal an error if <i>time</i> lies <i>tguard</i> years (default 50 yr) beyond the range for the model.</p>
-<dt><code>-H</code></p>
-<dd>signal an error if <i>h</i> lies <i>hguard</i> meters (default 500000 m) beyond the range for the model.</p>
-<dt><code>-p</code></p>
-<dd>set the output precision to <i>prec</i> (default 1). Fields are printed with precision with <i>prec</i> decimal places; angles use <i>prec</i> + 1 places.</p>
-<dt><code>-v</code></p>
-<dd>print information about the magnetic model on standard error before processing the input.</p>
-<dt><code>&#8211;comment-delimiter</code></p>
-<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</p>
-<dt><code>&#8211;version</code></p>
-<dd>print version and exit.</p>
-<dt><code>-h</code></p>
-<dd>print usage, the default magnetic path and name, and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd>print full documentation and exit.</p>
-<dt><code>&#8211;input-file</code></p>
-<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</p>
-<dt><code>&#8211;input-string</code></p>
-<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</p>
-<dt><code>&#8211;line-separator</code></p>
-<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</p>
-<dt><code>&#8211;output-file</code></p>
-<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dl>
+<dt><code>-n</code></dt>
+<dd>use magnetic field model <i>name</i> instead of the default <tt>&quot;wmm2015&quot;</tt>. See &#8220;<font SIZE="-1">MODELS&#8221;</font>.</dd>
+<dt><code>-d</code></dt>
+<dd>read magnetic models from <i>dir</i> instead of the default. See &#8220;<font SIZE="-1">MODELS&#8221;</font>.</dd>
+<dt><code>-t</code></dt>
+<dd>evaluate the field at <i>time</i> instead of reading the time from the input lines.</dd>
+<dt><code>-c</code></dt>
+<dd>evaluate the field on a circle of latitude given by <i>time</i>, <i>lat</i>, <i>h</i> instead of reading these quantities from the input lines. In this case, <code>MagneticField</code> can calculate the field considerably more quickly.</dd>
+<dt><code>-r</code></dt>
+<dd>toggle whether to report the rates of change of the field.</dd>
+<dt><code>-T</code></dt>
+<dd>signal an error if <i>time</i> lies <i>tguard</i> years (default 50 yr) beyond the range for the model.</dd>
+<dt><code>-H</code></dt>
+<dd>signal an error if <i>h</i> lies <i>hguard</i> meters (default 500000 m) beyond the range for the model.</dd>
+<dt><code>-p</code></dt>
+<dd>set the output precision to <i>prec</i> (default 1). Fields are printed with precision with <i>prec</i> decimal places; angles use <i>prec</i> + 1 places.</dd>
+<dt><code>-v</code></dt>
+<dd>print information about the magnetic model on standard error before processing the input.</dd>
+<dt><code>&#8211;comment-delimiter</code></dt>
+<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>print usage, the default magnetic path and name, and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print full documentation and exit.</dd>
+<dt><code>&#8211;input-file</code></dt>
+<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</dd>
+<dt><code>&#8211;input-string</code></dt>
+<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</dd>
+<dt><code>&#8211;line-separator</code></dt>
+<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</dd>
+<dt><code>&#8211;output-file</code></dt>
+<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dd></dl>
 <h2>Models</h2>
 <p><code>MagneticField</code> computes the geomagnetic field using one of the following models </p>
 <pre> wmm2010, the World Magnetic Model 2010, which approximates the
@@ -89,12 +89,12 @@ description: "MagneticField — compute the earth’s magnetic field"
 <p> Instructions for downloading and installing magnetic models are available at &lt;<a rel="nofollow" href="http://geographiclib.sf.net/html/magnetic.html#magneticinst">http://geographiclib.sf.net/html/magnetic.html#magneticinst</a>&gt;.</p>
 <h2>Environment</h2>
 <dl>
-<dt><font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_NAME</code></font></p>
-<dd>Override the compile-time default magnetic name of <tt>&quot;wmm2015&quot;</tt>. The <code>-h</code> option reports the value of <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_NAME</code></font>, if defined, otherwise it reports the compile-time value. If the <code>-n</code> <i>name</i> option is used, then <i>name</i> takes precedence.</p>
-<dt><font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font></p>
-<dd>Override the compile-time default magnetic path. This is typically <tt>&quot;/usr/local/share/GeographicLib/magnetic&quot;</tt> on Unix-like systems and <tt>&quot;C:/ProgramData/GeographicLib/magnetic&quot;</tt> on Windows systems. The <code>-h</code> option reports the value of <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font>, if defined, otherwise it reports the compile-time value. If the <code>-d</code> <i>dir</i> option is used, then <i>dir</i> takes precedence.</p>
-<dt><font SIZE="-1"><code>GEOGRAPHICLIB_DATA</code></font></p>
-<dd>Another way of overriding the compile-time default magnetic path. If it is set (and if <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font> is not set), then $<font SIZE="-1"><code>GEOGRAPHICLIB_DATA</code></font>/magnetic is used.</dl>
+<dt><font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_NAME</code></font></dt>
+<dd>Override the compile-time default magnetic name of <tt>&quot;wmm2015&quot;</tt>. The <code>-h</code> option reports the value of <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_NAME</code></font>, if defined, otherwise it reports the compile-time value. If the <code>-n</code> <i>name</i> option is used, then <i>name</i> takes precedence.</dd>
+<dt><font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font></dt>
+<dd>Override the compile-time default magnetic path. This is typically <tt>&quot;/usr/local/share/GeographicLib/magnetic&quot;</tt> on Unix-like systems and <tt>&quot;C:/ProgramData/GeographicLib/magnetic&quot;</tt> on Windows systems. The <code>-h</code> option reports the value of <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font>, if defined, otherwise it reports the compile-time value. If the <code>-d</code> <i>dir</i> option is used, then <i>dir</i> takes precedence.</dd>
+<dt><font SIZE="-1"><code>GEOGRAPHICLIB_DATA</code></font></dt>
+<dd>Another way of overriding the compile-time default magnetic path. If it is set (and if <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font> is not set), then $<font SIZE="-1"><code>GEOGRAPHICLIB_DATA</code></font>/magnetic is used.</dd></dl>
 <h2>Errors</h2>
 <p>An illegal line of input will print an error message to standard output beginning with <tt>&quot;ERROR:&quot;</tt> and causes <code>MagneticField</code> to return an exit code of 1. However, an error does not cause <code>MagneticField</code> to terminate; following lines will be converted. If <i>time</i> or <i>h</i> are outside the recommended ranges for the model (but inside the ranges increase by <i>tguard</i> and <i>hguard</i>), a warning is printed on standard error and the field (which may be inaccurate) is returned in the normal way.</p>
 <h2>Examples</h2>

@@ -15,30 +15,30 @@ description: "repodiff – list differences between two or more Yum repositories
 <p> <code>repodiff</code> is a program which will list differences between two sets of repositories. <code>Note</code> that by default only source packages are compared. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>
-<dt><code>&#8211;old, -o</code></p>
-<dd> Add a repo. as an old repo. Note that if you prefix the url with &quot;mirror:&quot; then the following url is treated as a mirror and not a baseurl.</p>
-<dt><code>&#8211;new, -n</code></p>
-<dd> Add a repo. as an new repo. Note that if you prefix the url with &quot;mirror:&quot; then the following url is treated as a mirror and not a baseurl.</p>
-<dt><code>&#8211;archlist, -a</code></p>
-<dd> Add architectures to change the default from just comparing source packages. Note that if you want the same as a native &quot;x86_64&quot; architecture machine you just need to pass &quot;x86_64&quot; (this is different from earlier versions where you needed to specify &quot;x86_64,athlon,i686,i586,i486,i386,noarch&quot; and you still got &quot;src&quot;).</p>
-<dt><code>&#8211;size, -s</code></p>
-<dd> Output additional data about the size of the changes.</p>
-<dt><code>&#8211;compare-arch</code></p>
-<dd> Normally packages are just compared based on their name, this flag makes the comparison also use the arch. So foo.i386 and foo.x86_64 are different.</p>
-<dt><code>&#8211;simple</code></p>
-<dd> Output a simple one line message for modified packages.</p>
-<dt><code>&#8211;downgrade</code></p>
-<dd> Split the data for modified packages between upgraded and downgraded packages.</dl>
+<dt><code>&#8211;old, -o</code></dt>
+<dd> Add a repo. as an old repo. Note that if you prefix the url with &quot;mirror:&quot; then the following url is treated as a mirror and not a baseurl.</dd>
+<dt><code>&#8211;new, -n</code></dt>
+<dd> Add a repo. as an new repo. Note that if you prefix the url with &quot;mirror:&quot; then the following url is treated as a mirror and not a baseurl.</dd>
+<dt><code>&#8211;archlist, -a</code></dt>
+<dd> Add architectures to change the default from just comparing source packages. Note that if you want the same as a native &quot;x86_64&quot; architecture machine you just need to pass &quot;x86_64&quot; (this is different from earlier versions where you needed to specify &quot;x86_64,athlon,i686,i586,i486,i386,noarch&quot; and you still got &quot;src&quot;).</dd>
+<dt><code>&#8211;size, -s</code></dt>
+<dd> Output additional data about the size of the changes.</dd>
+<dt><code>&#8211;compare-arch</code></dt>
+<dd> Normally packages are just compared based on their name, this flag makes the comparison also use the arch. So foo.i386 and foo.x86_64 are different.</dd>
+<dt><code>&#8211;simple</code></dt>
+<dd> Output a simple one line message for modified packages.</dd>
+<dt><code>&#8211;downgrade</code></dt>
+<dd> Split the data for modified packages between upgraded and downgraded packages.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Compare source pkgs in two local repos:</p>
-<dd> <code>repodiff &#8211;old=/tmp/repo-old &#8211;new=/tmp/repo-new</code></p>
-<dt>Compare x86_64 compat. binary pkgs in two remote repos, and two local one:</p>
-<dd> <code>repodiff -a x86_64 &#8211;old=<a rel="nofollow" href="http://example.com/repo1-old">http://example.com/repo1-old</a> &#8211;old=/tmp/repo-old &#8211;new=<a href="http://example.com/repo1-new">http://example.com/repo1-new</a> &#8211;new=/tmp/repo-new</code></p>
-<dt>Compare x86_64 compat. binary pkgs, but also compare arch:</p>
-<dd> <code>repodiff -a x86_64 &#8211;compare-arch &#8211;old=<a rel="nofollow" href="http://example.com/repo1-old">http://example.com/repo1-old</a> &#8211;old=/tmp/repo-old &#8211;new=<a href="http://example.com/repo1-new">http://example.com/repo1-new</a> &#8211;new=/tmp/repo-new</code></p>
-<dt>Compare two releases of Fedora (15 =&gt; 16):</p>
-<dd> <code>repodiff &#8211;old=&#8217;mirror:<a rel="nofollow" href="https://mirrors.fedoraproject.org/metalink?repo=fedora-source-15">https://mirrors.fedoraproject.org/metalink?repo=fedora-source-15</a>&amp;arch=i386&#8242; &#8211;new=&#8217;mirror:<a href="https://mirrors.fedoraproject.org/metalink?repo=fedora-source-16">https://mirrors.fedoraproject.org/metalink?repo=fedora-source-16</a>&amp;arch=i386&#8242; &#8211;size &#8211;simple &#8211;downgrade</code></dl>
+<dt>Compare source pkgs in two local repos:</dt>
+<dd> <code>repodiff &#8211;old=/tmp/repo-old &#8211;new=/tmp/repo-new</code></dd>
+<dt>Compare x86_64 compat. binary pkgs in two remote repos, and two local one:</dt>
+<dd> <code>repodiff -a x86_64 &#8211;old=<a rel="nofollow" href="http://example.com/repo1-old">http://example.com/repo1-old</a> &#8211;old=/tmp/repo-old &#8211;new=<a href="http://example.com/repo1-new">http://example.com/repo1-new</a> &#8211;new=/tmp/repo-new</code></dd>
+<dt>Compare x86_64 compat. binary pkgs, but also compare arch:</dt>
+<dd> <code>repodiff -a x86_64 &#8211;compare-arch &#8211;old=<a rel="nofollow" href="http://example.com/repo1-old">http://example.com/repo1-old</a> &#8211;old=/tmp/repo-old &#8211;new=<a href="http://example.com/repo1-new">http://example.com/repo1-new</a> &#8211;new=/tmp/repo-new</code></dd>
+<dt>Compare two releases of Fedora (15 =&gt; 16):</dt>
+<dd> <code>repodiff &#8211;old=&#8217;mirror:<a rel="nofollow" href="https://mirrors.fedoraproject.org/metalink?repo=fedora-source-15">https://mirrors.fedoraproject.org/metalink?repo=fedora-source-15</a>&amp;arch=i386&#8242; &#8211;new=&#8217;mirror:<a href="https://mirrors.fedoraproject.org/metalink?repo=fedora-source-16">https://mirrors.fedoraproject.org/metalink?repo=fedora-source-16</a>&amp;arch=i386&#8242; &#8211;size &#8211;simple &#8211;downgrade</code></dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <i>yum.conf (5)</i>

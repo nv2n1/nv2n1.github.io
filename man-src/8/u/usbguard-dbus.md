@@ -19,12 +19,12 @@ The usbguard-dbus component exposes a D-Bus interface to a running instance of t
 <h2>Options</h2>
 
 <dl><dt>-s, --system
-<dd>Listen on the system bus.
-<dl><dd></dl><dt>-S, --session
-<dd>Listen on the session bus.
-<dl><dd></dl><dt>-h, --help
-<dd>Show the help/usage screen.
-<dl><dd></dl></dl>
+</dt><dd>Listen on the system bus.
+</dd><dl><dd></dd></dl><dt>-S, --session
+</dt><dd>Listen on the session bus.
+</dd><dl><dd></dd></dl><dt>-h, --help
+</dt><dd>Show the help/usage screen.
+</dd><dl><dd></dd></dl></dl>
 
 <h2>Bugs</h2>
 

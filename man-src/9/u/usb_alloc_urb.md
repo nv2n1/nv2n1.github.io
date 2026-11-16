@@ -14,10 +14,10 @@ description: "usb_alloc_urb – creates a new urb for a USB driver to use"
 <p><i>iso_packets</i></p>
 <dl>
 <dd>
-<dd>number of iso packets for this urb</dl>
+</dd><dd>number of iso packets for this urb</dd></dl>
 <p> <i>mem_flags</i></p>
 <dl>
-<dd>the type of memory to allocate, see <code>kmalloc</code> for a list of valid options for this.</dl>
+<dd>the type of memory to allocate, see <code>kmalloc</code> for a list of valid options for this.</dd></dl>
 <h2>Description</h2>
 <p>Creates an urb for the USB driver to use, initializes a few internal structures, increments the usage counter, and returns a pointer to it. </p>
 <p> If the driver want to use this urb for interrupt, control, or bulk endpoints, pass &#8216;0&#8217; as the number of iso packets. </p>

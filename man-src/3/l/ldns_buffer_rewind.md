@@ -20,21 +20,21 @@ description: "ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_b
 <p> void ldns_buffer_skip(ldns_buffer *buffer, ssize_t count); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_buffer_flip</i>()</p>
-<dd>makes the buffer ready for reading the data that has been written to the buffer. The buffer&#8217;s limit is set to the current position and the position is set to 0. </p>
+<dt> <i>ldns_buffer_flip</i>()</dt>
+<dd>makes the buffer ready for reading the data that has been written to the buffer. The buffer&#8217;s limit is set to the current position and the position is set to 0. </dd>
 <p> .br <code>buffer</code>: the buffer to flip .br Returns void</dl>
 <dl>
-<dt> <i>ldns_buffer_rewind</i>()</p>
-<dd>make the buffer ready for re-reading the data. The buffer&#8217;s position is reset to 0. .br <code>buffer</code>: the buffer to rewind</dl>
+<dt> <i>ldns_buffer_rewind</i>()</dt>
+<dd>make the buffer ready for re-reading the data. The buffer&#8217;s position is reset to 0. .br <code>buffer</code>: the buffer to rewind</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_position</i>()</p>
-<dd>returns the current position in the buffer (as a number of bytes) .br <code>buffer</code>: the buffer .br Returns the current position</dl>
+<dt> <i>ldns_buffer_position</i>()</dt>
+<dd>returns the current position in the buffer (as a number of bytes) .br <code>buffer</code>: the buffer .br Returns the current position</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_set_position</i>()</p>
-<dd>sets the buffer&#8217;s position to MARK. The position must be less than or equal to the buffer&#8217;s limit. .br <code>buffer</code>: the buffer .br <code>mark</code>: the mark to use</dl>
+<dt> <i>ldns_buffer_set_position</i>()</dt>
+<dd>sets the buffer&#8217;s position to MARK. The position must be less than or equal to the buffer&#8217;s limit. .br <code>buffer</code>: the buffer .br <code>mark</code>: the mark to use</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_skip</i>()</p>
-<dd>changes the buffer&#8217;s position by COUNT bytes. The position must not be moved behind the buffer&#8217;s limit or before the beginning of the buffer. .br <code>buffer</code>: the buffer .br <code>count</code>: the count to use</dl>
+<dt> <i>ldns_buffer_skip</i>()</dt>
+<dd>changes the buffer&#8217;s position by COUNT bytes. The position must not be moved behind the buffer&#8217;s limit or before the beginning of the buffer. .br <code>buffer</code>: the buffer .br <code>count</code>: the count to use</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

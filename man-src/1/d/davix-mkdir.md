@@ -19,167 +19,167 @@ description: "davix-mkdir – Directory creation tool based on libdavix."
 <p> <code>Common Options:</code> </p>
 <dl>
 <dt>
-<dd> <code>&#8211;debug</code></dl>
+</dt><dd> <code>&#8211;debug</code></dd></dl>
 <dl>
 <dt>
-<dd> Debug mode</dl>
+</dt><dd> Debug mode</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;header, -H</code></dl>
+</dt><dd> <code>&#8211;header, -H</code></dd></dl>
 <dl>
 <dt>
-<dd> Add a header field to the request (eg: -H &quot;Depth: 1&quot; )</dl>
+</dt><dd> Add a header field to the request (eg: -H &quot;Depth: 1&quot; )</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;help, -h</code></dl>
+</dt><dd> <code>&#8211;help, -h</code></dd></dl>
 <dl>
 <dt>
-<dd> Display this help message</dl>
+</dt><dd> Display this help message</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;metalink OPT </code></dl>
+</dt><dd> <code>&#8211;metalink OPT </code></dd></dl>
 <dl>
 <dt>
-<dd> Metalink support. (OPT=failover[default]|no)</dl>
+</dt><dd> Metalink support. (OPT=failover[default]|no)</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;module, -P PLUGIN_NAME</code></dl>
+</dt><dd> <code>&#8211;module, -P PLUGIN_NAME</code></dd></dl>
 <dl>
 <dt>
-<dd> Load a plugin or profile by name</dl>
+</dt><dd> Load a plugin or profile by name</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;redirection OPT </code></dl>
+</dt><dd> <code>&#8211;redirection OPT </code></dd></dl>
 <dl>
 <dt>
-<dd> Transparent redirection support. (OPT=yes[default]|no)</dl>
+</dt><dd> Transparent redirection support. (OPT=yes[default]|no)</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;proxy, -x URL</code></dl>
+</dt><dd> <code>&#8211;proxy, -x URL</code></dd></dl>
 <dl>
 <dt>
-<dd> SOCKS5 proxy server URL. (ex: socks5://login:pass [at] socks.example.org)</dl>
+</dt><dd> SOCKS5 proxy server URL. (ex: socks5://login:pass [at] socks.example.org)</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;trace</code></dl>
+</dt><dd> <code>&#8211;trace</code></dd></dl>
 <dl>
 <dt>
-<dd> Traces specific scope(s), options include:</dl>
+</dt><dd> Traces specific scope(s), options include:</dd></dl>
 <dl>
 <dt>
-<dd> file &#8211; Davix file interface</dl>
+</dt><dd> file &#8211; Davix file interface</dd></dl>
 <dl>
 <dt>
-<dd> posix &#8211; Davix POSIX interface</dl>
+</dt><dd> posix &#8211; Davix POSIX interface</dd></dl>
 <dl>
 <dt>
-<dd> xml &#8211; XML parser output</dl>
+</dt><dd> xml &#8211; XML parser output</dd></dl>
 <dl>
 <dt>
-<dd> ssl &#8211; SSL and certs details</dl>
+</dt><dd> ssl &#8211; SSL and certs details</dd></dl>
 <dl>
 <dt>
-<dd> header &#8211; HTTP queries headers</dl>
+</dt><dd> header &#8211; HTTP queries headers</dd></dl>
 <dl>
 <dt>
-<dd> body &#8211; HTTP bodies</dl>
+</dt><dd> body &#8211; HTTP bodies</dd></dl>
 <dl>
 <dt>
-<dd> chain &#8211; IO chains info</dl>
+</dt><dd> chain &#8211; IO chains info</dd></dl>
 <dl>
 <dt>
-<dd> core &#8211; Config and misc info</dl>
+</dt><dd> core &#8211; Config and misc info</dd></dl>
 <dl>
 <dt>
-<dd> grid &#8211; Misc info from 3rd parties</dl>
+</dt><dd> grid &#8211; Misc info from 3rd parties</dd></dl>
 <dl>
 <dt>
-<dd> socket &#8211; Socket info</dl>
+</dt><dd> socket &#8211; Socket info</dd></dl>
 <dl>
 <dt>
-<dd> locks &#8211; WebDAV locking info</dl>
+</dt><dd> locks &#8211; WebDAV locking info</dd></dl>
 <dl>
 <dt>
-<dd> all &#8211; Traces everything</dl>
+</dt><dd> all &#8211; Traces everything</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;version</code></dl>
+</dt><dd> <code>&#8211;version</code></dd></dl>
 <dl>
 <dt>
-<dd> Display version</dl>
+</dt><dd> Display version</dd></dl>
 <p> <code>Security Options:</code> </p>
 <dl>
 <dt>
-<dd> <code>&#8211;capath CA_path</code></dl>
+</dt><dd> <code>&#8211;capath CA_path</code></dd></dl>
 <dl>
 <dt>
-<dd> Add an additional certificate authority directory</dl>
+</dt><dd> Add an additional certificate authority directory</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;cert, -E cred_path</code></dl>
+</dt><dd> <code>&#8211;cert, -E cred_path</code></dd></dl>
 <dl>
 <dt>
-<dd> Client Certificate in PEM format</dl>
+</dt><dd> Client Certificate in PEM format</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;key priv_path</code></dl>
+</dt><dd> <code>&#8211;key priv_path</code></dd></dl>
 <dl>
 <dt>
-<dd> Private key in PEM format</dl>
+</dt><dd> Private key in PEM format</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;insecure, -k</code></dl>
+</dt><dd> <code>&#8211;insecure, -k</code></dd></dl>
 <dl>
 <dt>
-<dd> Disable SSL credential checks</dl>
+</dt><dd> Disable SSL credential checks</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;userlogin</code></dl>
+</dt><dd> <code>&#8211;userlogin</code></dd></dl>
 <dl>
 <dt>
-<dd> User login for login/password authentication</dl>
+</dt><dd> User login for login/password authentication</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;userpass</code></dl>
+</dt><dd> <code>&#8211;userpass</code></dd></dl>
 <dl>
 <dt>
-<dd> User password for login/password authentication</dl>
+</dt><dd> User password for login/password authentication</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;s3secretkey</code></dl>
+</dt><dd> <code>&#8211;s3secretkey</code></dd></dl>
 <dl>
 <dt>
-<dd> AWS S3 authentication: secret key</dl>
+</dt><dd> AWS S3 authentication: secret key</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;s3accesskey</code></dl>
+</dt><dd> <code>&#8211;s3accesskey</code></dd></dl>
 <dl>
 <dt>
-<dd> AWS S3 authentication: access key</dl>
+</dt><dd> AWS S3 authentication: access key</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;s3region</code></dl>
+</dt><dd> <code>&#8211;s3region</code></dd></dl>
 <dl>
 <dt>
-<dd> AWS S3 authentication: region</dl>
+</dt><dd> AWS S3 authentication: region</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;s3token</code></dl>
+</dt><dd> <code>&#8211;s3token</code></dd></dl>
 <dl>
 <dt>
-<dd> AWS S3 security token &#8211; used along with STS temporary credentials</dl>
+</dt><dd> AWS S3 security token &#8211; used along with STS temporary credentials</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;s3alternate</code></dl>
+</dt><dd> <code>&#8211;s3alternate</code></dd></dl>
 <dl>
 <dt>
-<dd> Specify this flag if you need to use a path-based S3 URL</dl>
+</dt><dd> Specify this flag if you need to use a path-based S3 URL</dd></dl>
 <dl>
 <dt>
-<dd> <code>&#8211;azurekey</code></dl>
+</dt><dd> <code>&#8211;azurekey</code></dd></dl>
 <dl>
 <dt>
-<dd> Azure authentication key</dl>
+</dt><dd> Azure authentication key</dd></dl>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <h2>EXAMPLES</h2>
 <p> <code>Creat a directory over WebDav<br />

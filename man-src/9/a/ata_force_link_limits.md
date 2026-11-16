@@ -14,12 +14,12 @@ description: "ata_force_link_limits – force link limits according to libata.fo
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link of interest</dl>
+</dd><dd>ATA link of interest</dd></dl>
 <h2>Description</h2>
 <p>Force link flags and SATA spd limit according to libata.force and whine about it. When only the port part is specified (e.g. 1:), the limit applies to all links connected to both the host link and all fan-out ports connected via PMP. If the device part is specified as 0 (e.g. 1.00:), it specifies the first fan-out link not the host link. Device number 15 always points to the host link whether PMP is attached or not. If the controller has slave link, device number 16 points to it. </p>
 <p> LOCKING: EH context.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,74 +15,74 @@ description: "htload – reads in an ASCII-text version of the document database
 <p> Htload reads in an ASCII-text version of the document database in the same form as the -t option of htdig and htdump. Note that this will overwrite data in your databases, so this should be used with great care.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Use alternate work files. Tells htload to append <i>.work</i> to database files, allowing it to operate on a second set of databases.</p>
-<dt><code>-c </code><i>configfile</i></p>
-<dd> Use the specified <i>configfile</i> instead of the default.</p>
-<dt><code>-i</code></p>
-<dd> Initial. Do not use any old databases. This is accomplished by first erasing the databases.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. This doesn&#8217;t have much effect.</dl>
+<dt><code>-a</code></dt>
+<dd> Use alternate work files. Tells htload to append <i>.work</i> to database files, allowing it to operate on a second set of databases.</dd>
+<dt><code>-c </code><i>configfile</i></dt>
+<dd> Use the specified <i>configfile</i> instead of the default.</dd>
+<dt><code>-i</code></dt>
+<dd> Initial. Do not use any old databases. This is accomplished by first erasing the databases.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. This doesn&#8217;t have much effect.</dd></dl>
 <h2>File Formats</h2>
 <dl>
-<dt><code>Document Database</code></p>
-<dd> Each line in the file starts with the document id followed by a list of <i>fieldname</i> : <i>value</i> separated by tabs. The fields always appear in the order listed below:</p>
-<dt><code>u</code></p>
-<dd> URL</p>
-<dt><code>t</code></p>
-<dd> Title</p>
-<dt><code>a</code></p>
-<dd> State (0 = normal, 1 = not found, 2 = not indexed, 3 = obsolete)</p>
-<dt><code>m</code></p>
-<dd> Last modification time as reported by the server</p>
-<dt><code>s</code></p>
-<dd> Size in bytes</p>
-<dt><code>H</code></p>
-<dd> Excerpt</p>
-<dt><code>h</code></p>
-<dd> Meta description</p>
-<dt><code>l</code></p>
-<dd> Time of last retrieval</p>
-<dt><code>L</code></p>
-<dd> Count of the links in the document (outgoing links)</p>
-<dt><code>b</code></p>
-<dd> Count of the links to the document (incoming links or backlinks)</p>
-<dt><code>c</code></p>
-<dd> HopCount of this document</p>
-<dt><code>g</code></p>
-<dd> Signature of the document used for duplicate-detection</p>
-<dt><code>e</code></p>
-<dd> E-mail address to use for a notification message from htnotify</p>
-<dt><code>n</code></p>
-<dd> Date to send out a notification e-mail message</p>
-<dt><code>S</code></p>
-<dd> Subject for a notification e-mail message</p>
-<dt><code>d</code></p>
-<dd> The text of links pointing to this document. (e.g. &lt;a href=&quot;docURL&quot;&gt;description&lt;/a&gt;)</p>
-<dt><code>A</code></p>
-<dd> Anchors in the document (i.e. &lt;A NAME=&#8230;)</p>
-<dt><code>Word Database</code></p>
-<dd> While htdump and htload don&#8217;t deal with the word database directly, it&#8217;s worth mentioning it here because you need to deal with it when copying the ASCII databases from one system to another. The initial word database produced by htdig is already in ASCII format, and a binary version of it is produced by htmerge, for use by htsearch. So, when you copy over the ASCII version of the document database produced by htdump, you need to copy over the wordlist as well, then run htload to make the binary document database on the target system, followed by running htmerge to make the word index.</p>
-<dt>Each line in the word list file starts with the word</p>
-<dd> followed by a list of <i>fieldname</i> : <i>value</i> separated by tabs. The fields always appear in the order listed below, with the last two being optional:</p>
-<dt><code>i</code></p>
-<dd> Document ID</p>
-<dt><code>l</code></p>
-<dd> Location of word in document (1 to 1000)</p>
-<dt><code>w</code></p>
-<dd> Weight of word based on scoring factors</p>
-<dt><code>c</code></p>
-<dd> Count of word&#8217;s appearances in document, if more than 1</p>
-<dt><code>a</code></p>
-<dd> Anchor number if word occurred after a named anchor</dl>
+<dt><code>Document Database</code></dt>
+<dd> Each line in the file starts with the document id followed by a list of <i>fieldname</i> : <i>value</i> separated by tabs. The fields always appear in the order listed below:</dd>
+<dt><code>u</code></dt>
+<dd> URL</dd>
+<dt><code>t</code></dt>
+<dd> Title</dd>
+<dt><code>a</code></dt>
+<dd> State (0 = normal, 1 = not found, 2 = not indexed, 3 = obsolete)</dd>
+<dt><code>m</code></dt>
+<dd> Last modification time as reported by the server</dd>
+<dt><code>s</code></dt>
+<dd> Size in bytes</dd>
+<dt><code>H</code></dt>
+<dd> Excerpt</dd>
+<dt><code>h</code></dt>
+<dd> Meta description</dd>
+<dt><code>l</code></dt>
+<dd> Time of last retrieval</dd>
+<dt><code>L</code></dt>
+<dd> Count of the links in the document (outgoing links)</dd>
+<dt><code>b</code></dt>
+<dd> Count of the links to the document (incoming links or backlinks)</dd>
+<dt><code>c</code></dt>
+<dd> HopCount of this document</dd>
+<dt><code>g</code></dt>
+<dd> Signature of the document used for duplicate-detection</dd>
+<dt><code>e</code></dt>
+<dd> E-mail address to use for a notification message from htnotify</dd>
+<dt><code>n</code></dt>
+<dd> Date to send out a notification e-mail message</dd>
+<dt><code>S</code></dt>
+<dd> Subject for a notification e-mail message</dd>
+<dt><code>d</code></dt>
+<dd> The text of links pointing to this document. (e.g. &lt;a href=&quot;docURL&quot;&gt;description&lt;/a&gt;)</dd>
+<dt><code>A</code></dt>
+<dd> Anchors in the document (i.e. &lt;A NAME=&#8230;)</dd>
+<dt><code>Word Database</code></dt>
+<dd> While htdump and htload don&#8217;t deal with the word database directly, it&#8217;s worth mentioning it here because you need to deal with it when copying the ASCII databases from one system to another. The initial word database produced by htdig is already in ASCII format, and a binary version of it is produced by htmerge, for use by htsearch. So, when you copy over the ASCII version of the document database produced by htdump, you need to copy over the wordlist as well, then run htload to make the binary document database on the target system, followed by running htmerge to make the word index.</dd>
+<dt>Each line in the word list file starts with the word</dt>
+<dd> followed by a list of <i>fieldname</i> : <i>value</i> separated by tabs. The fields always appear in the order listed below, with the last two being optional:</dd>
+<dt><code>i</code></dt>
+<dd> Document ID</dd>
+<dt><code>l</code></dt>
+<dd> Location of word in document (1 to 1000)</dd>
+<dt><code>w</code></dt>
+<dd> Weight of word based on scoring factors</dd>
+<dt><code>c</code></dt>
+<dd> Count of word&#8217;s appearances in document, if more than 1</dd>
+<dt><code>a</code></dt>
+<dd> Anchor number if word occurred after a named anchor</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/htdig/htdig.conf</code></p>
-<dd> The default configuration file.</p>
-<dt><code>/var/lib/htdig/db.docs</code></p>
-<dd> The default ASCII document database file.</p>
-<dt><code>/var/lib/htdig/db.wordlist</code></p>
-<dd> The default ASCII word database file.</dl>
+<dt><code>/etc/htdig/htdig.conf</code></dt>
+<dd> The default configuration file.</dd>
+<dt><code>/var/lib/htdig/db.docs</code></dt>
+<dd> The default ASCII document database file.</dd>
+<dt><code>/var/lib/htdig/db.wordlist</code></dt>
+<dd> The default ASCII word database file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i><a href="/docs/linux/man/1-htdig/">htdig</a>(1)</i> , <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> and <i><a href="/docs/linux/man/1-htdump/">htdump</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
 <h2>AUTHOR</h2>

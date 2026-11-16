@@ -29,16 +29,16 @@ description: "calendar_conf – xxQS_NAMExx calendar configuration file format"
  | <i>state</i></pre>
 <p>Where</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>NONE</code> means no definition is made on the year basis;</p>
-<dt>&bull;</p>
-<dd>If a definition is made on the year basis, at least one of <i>year_day_range_list</i>, <i>daytime_range_list</i> and <i>state</i> always have to be present;</p>
-<dt>&bull;</p>
-<dd>All day long is assumed if <i>daytime_range_list</i> is omitted;</p>
-<dt>&bull;</p>
-<dd>Switching the queue to &quot;off&quot; (i.e. disabling it) is assumed if <i>state</i> is omitted;</p>
-<dt>&bull;</p>
-<dd>The queue is assumed to be enabled for days neither referenced implicitly (by omitting the <i>year_day_range_list</i>) nor explicitly.</dl>
+<dt>&bull;</dt>
+<dd><code>NONE</code> means no definition is made on the year basis;</dd>
+<dt>&bull;</dt>
+<dd>If a definition is made on the year basis, at least one of <i>year_day_range_list</i>, <i>daytime_range_list</i> and <i>state</i> always have to be present;</dd>
+<dt>&bull;</dt>
+<dd>All day long is assumed if <i>daytime_range_list</i> is omitted;</dd>
+<dt>&bull;</dt>
+<dd>Switching the queue to &quot;off&quot; (i.e. disabling it) is assumed if <i>state</i> is omitted;</dd>
+<dt>&bull;</dt>
+<dd>The queue is assumed to be enabled for days neither referenced implicitly (by omitting the <i>year_day_range_list</i>) nor explicitly.</dd></dl>
 <p> The syntactical components are defined as follows: </p>
 <pre> <i>year_day_range_list</i> := {<i>yearday</i><code>-</code><i>yearday</i> | <i>yearday</i>},...
  <i>daytime_range_list</i> := <i>hour</i>[<code>:</code><i>minute</i>][<code>:</code><i>second</i>]<code>-</code><i>hour</i>[<code>:</code><i>minute</i>][<code>:</code><i>second</i>],...
@@ -56,16 +56,16 @@ description: "calendar_conf – xxQS_NAMExx calendar configuration file format"
  | [<i>week_day_range_list</i><code>=</code>][<i>daytime_range_list</i><code>=</code>]<i>state</i> ...</pre>
 <p>where</p>
 <dl>
-<dt>&bull;</p>
-<dd>NONE means, no definition is made on the week basis;</p>
-<dt>&bull;</p>
-<dd>If a definition is made on the week basis, at least one of <i>week_day_range_list</i>, <i>daytime_range_list</i> and <i>state</i> always have to be present;</p>
-<dt>&bull;</p>
-<dd>Every day in the week is assumed if <i>week_day_range_list</i> is omitted;</p>
-<dt>&bull;</p>
-<dd>Syntax and semantics of <i>daytime_range_list</i> and <i>state</i> are identical to the definition given for the year field above;</p>
-<dt>&bull;</p>
-<dd>The queue is assumed to be enabled for days neither referenced implicitly (by omitting the <i>week_day_range_list</i>) nor explicitly.</dl>
+<dt>&bull;</dt>
+<dd>NONE means, no definition is made on the week basis;</dd>
+<dt>&bull;</dt>
+<dd>If a definition is made on the week basis, at least one of <i>week_day_range_list</i>, <i>daytime_range_list</i> and <i>state</i> always have to be present;</dd>
+<dt>&bull;</dt>
+<dd>Every day in the week is assumed if <i>week_day_range_list</i> is omitted;</dd>
+<dt>&bull;</dt>
+<dd>Syntax and semantics of <i>daytime_range_list</i> and <i>state</i> are identical to the definition given for the year field above;</dd>
+<dt>&bull;</dt>
+<dd>The queue is assumed to be enabled for days neither referenced implicitly (by omitting the <i>week_day_range_list</i>) nor explicitly.</dd></dl>
 <p> and where <i>week_day_range_list</i> is defined as </p>
 <pre> <i>week_day_range_list</i> := {<i>weekday</i><code>-</code><i>weekday</i> | <i>weekday</i>},...
  <i>week_day</i> := <code>mon</code> | <code>tue</code> | <code>wed</code> | <code>thu</code> | <code>fri</code> | <code>sat</code> | <code>sun</code></pre>
@@ -73,54 +73,55 @@ description: "calendar_conf – xxQS_NAMExx calendar configuration file format"
 <h2>Semantics</h2>
 <p>Successive entries to the <i>year</i> and <i>week</i> fields (separated by blanks) are combined in accordance with the following rule:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>off</code> areas are overridden by overlapping <code>on</code> and <code>suspended</code> areas and <code>suspended</code> areas are overridden by <code>on</code> areas.</dl>
+<dt>&bull;</dt>
+<dd><code>off</code> areas are overridden by overlapping <code>on</code> and <code>suspended</code> areas and <code>suspended</code> areas are overridden by <code>on</code> areas.</dd></dl>
 <p> Hence an entry of the form </p>
 <pre> week 12-18 tue=13-17=on</pre>
 <p>means that queues referencing the corresponding calendar are disabled for the entire week from 12.00-18.00, with the exception of Tuesday between 13.00-17.00, when the queues are available. </p>
 <dl>
-<dt>&bull;</p>
-<dd>Area overriding occurs only within a year/week basis. If a year entry exists for a day, then only the year calendar is taken into account, and no area overriding is done with a possibly conflicting week area. </p>
-<dt>&bull;</p>
-<dd>The second time specification in a <i>daytime_range_list</i> may be before the first one and treated as expected. Thus an entry of the form </p>
+<dt>&bull;</dt>
+<dd>Area overriding occurs only within a year/week basis. If a year entry exists for a day, then only the year calendar is taken into account, and no area overriding is done with a possibly conflicting week area. </dd>
+<dt>&bull;</dt>
+<dd>The second time specification in a <i>daytime_range_list</i> may be before the first one and treated as expected. Thus an entry of the form </dd>
 <pre> year 12.03.2004=12-11=off </pre>
 <p>causes the queue(s) be disabled on 12.03.2004 from 00:00:00 &#8211; 10:59:59 and 12:00:00 &#8211; 23:59:59.</dl>
 <h2>Examples</h2>
 <p>(The following examples are contained in the directory <i>$xxQS_NAME_Sxx_ROOT/util/resources/calendars</i>.)</p>
 <dl>
-<dt>&bull;</p>
-<dd>Night, weekend and public holiday calendar: On public holidays &quot;night&quot; queues are explicitly enabled. On working days queues are disabled between 6.00 and 20.00. Saturday and Sunday are implicitly handled as enabled times: </p>
+<dt>&bull;</dt>
+<dd>Night, weekend and public holiday calendar: On public holidays &quot;night&quot; queues are explicitly enabled. On working days queues are disabled between 6.00 and 20.00. Saturday and Sunday are implicitly handled as enabled times: </dd>
 <pre> calendar_name night
  year 1.1.1999,6.1.1999,28.3.1999,30.3.1999-
  31.3.1999,18.5.1999-19.5.1999,3.10.1999,25.12.1999,26
  .12.1999=on
  week mon-fri=6-20</pre>
-<dt>&bull;</p>
-<dd>Day calendar: On public holidays &quot;day&quot;-queues are disabled. On working days such queues are closed during the night between 20.00 and 6.00, i.e. the queues are also closed on Monday from 0.00 to 6.00 and on Friday from 20.00 to 24.00. On Saturday and Sunday the queues are disabled. </p>
+<dt>&bull;</dt>
+<dd>Day calendar: On public holidays &quot;day&quot;-queues are disabled. On working days such queues are closed during the night between 20.00 and 6.00, i.e. the queues are also closed on Monday from 0.00 to 6.00 and on Friday from 20.00 to 24.00. On Saturday and Sunday the queues are disabled. </dd>
 <pre> calendar_name day
  year 1.1.1999,6.1.1999,28.3.1999,30.3.1999-
  31.3.1999,18.5.1999-19.5.1999,3.10.1999,25.12.1999,26
  .12.1999
  week mon-fri=20-6 sat-sun</pre>
-<dt>&bull;</p>
-<dd>Night, weekend and public holiday calendar with suspension: Essentially the same scenario as the first example but queues are suspended instead of switching them &quot;off&quot;. </p>
+<dt>&bull;</dt>
+<dd>Night, weekend and public holiday calendar with suspension: Essentially the same scenario as the first example but queues are suspended instead of switching them &quot;off&quot;. </dd>
 <pre> calendar_name night_s
  year 1.1.1999,6.1.1999,28.3.1999,30.3.1999-
  31.3.1999,18.5.1999-19.5.1999,3.10.1999,25.12.1999,26
  .12.1999=on
  week mon-fri=6-20=suspended</pre>
-<dt>&bull;</p>
-<dd>Day calendar with suspension: Essentially the same scenario as the second example, but queues are suspended instead of switching them &quot;off&quot;. </p>
+<dt>&bull;</dt>
+<dd>Day calendar with suspension: Essentially the same scenario as the second example, but queues are suspended instead of switching them &quot;off&quot;. </dd>
 <pre> calendar_name day_s
  year 1.1.1999,6.1.1999,28.3.1999,30.3.1999-
  31.3.1999,18.5.1999-19.5.1999,3.10.1999,25.12.1999,26
  .12.1999=suspended
  week mon-fri=20-6=suspended sat-sun=suspended</pre>
-<dt>&bull;</p>
-<dd>Weekend calendar with suspension, ignoring public holidays: Settings are only done on the week basis, with no settings on the year basis (keyword &quot;NONE&quot;). </p>
+<dt>&bull;</dt>
+<dd>Weekend calendar with suspension, ignoring public holidays: Settings are only done on the week basis, with no settings on the year basis (keyword &quot;NONE&quot;). </dd>
 <pre> calendar_name weekend_s
  year NONE
  week sat-sun=suspended</pre>
 <h2>See Also</h2>
 <h2>Copyright</h2>
 <p>See for a full statement of rights and permissions.</p>
+</dl>

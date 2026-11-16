@@ -18,14 +18,14 @@ description: "randpkt – Random Packet Generator"
 <p> For example, if you choose to create random <font SIZE="-1">ARP</font> packets, <code>randpkt</code> will create a packet which contains a predetermined Ethernet <font SIZE="-1">II</font> header, with the Type field set to <font SIZE="-1">ARP.</font> After the Ethernet <font SIZE="-1">II</font> header, it will put a random number of bytes with random values.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-b &lt;maxbytes&gt;</p>
-<dd> Default 5000. </p>
+<dt>-b &lt;maxbytes&gt;</dt>
+<dd> Default 5000. </dd>
 <p> Defines the maximum number of bytes added to the sample packet. If you choose a <code>maxbytes</code> value that is less than the size of the sample packet, then your packets would contain only the sample packet&#8230; not much variance there! <code>randpkt</code> exits on that condition.</p>
-<dt>-c &lt;count&gt;</p>
-<dd> Default 1000. </p>
+<dt>-c &lt;count&gt;</dt>
+<dd> Default 1000. </dd>
 <p> Defines the number of packets to generate.</p>
-<dt>-t &lt;type&gt;</p>
-<dd> Default Ethernet <font SIZE="-1">II</font> frame. </p>
+<dt>-t &lt;type&gt;</dt>
+<dd> Default Ethernet <font SIZE="-1">II</font> frame. </dd>
 <p> Defines the type of packet to generate: </p>
 <pre>
         arp             Address Resolution Protocol

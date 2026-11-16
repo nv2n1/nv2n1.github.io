@@ -16,18 +16,18 @@ description: "obgrep – an advanced molecular search program using SMARTS"
 <h2>OPTIONS</h2>
 <p> If only a filename is given, obgrep will attempt to guess the file type from the filename extension.</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Print the number of matches</p>
-<dt><code>-f</code></p>
-<dd> Full match, print matching-molecules only when the number of heavy atoms is also equal to the number of atoms in the SMARTS pattern</p>
-<dt><code>-i </code><i>format</i></p>
-<dd> Specifies input and output format, see <a href="/docs/linux/man/1-babel/">babel</a>(1) for available formats</p>
-<dt><code>-n</code></p>
-<dd> Only print the name of the molecules</p>
-<dt><code>-t </code><i>file &#8230;</i></p>
-<dd> Print a molecule only if the pattern occurs # times inside the molecule</p>
-<dt><code>-v</code></p>
-<dd> Invert the matching, print non-matching molecules</dl>
+<dt><code>-c</code></dt>
+<dd> Print the number of matches</dd>
+<dt><code>-f</code></dt>
+<dd> Full match, print matching-molecules only when the number of heavy atoms is also equal to the number of atoms in the SMARTS pattern</dd>
+<dt><code>-i </code><i>format</i></dt>
+<dd> Specifies input and output format, see <a href="/docs/linux/man/1-babel/">babel</a>(1) for available formats</dd>
+<dt><code>-n</code></dt>
+<dd> Only print the name of the molecules</dd>
+<dt><code>-t </code><i>file &#8230;</i></dt>
+<dd> Print a molecule only if the pattern occurs # times inside the molecule</dd>
+<dt><code>-v</code></dt>
+<dd> Invert the matching, print non-matching molecules</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Note that in all examples, the SMARTS pattern is enclosed in single quotes &#8216;&#8230;&#8217; to ensure it is not changed by the shell. </p>
 <p> Print all the molecules with a methylamine group: </p>

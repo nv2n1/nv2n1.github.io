@@ -22,12 +22,12 @@ description: "rpl8 – Firmware loader for DVD drives"
 <p> To run <code>rpl8</code> correctly, make sure you have no media in drive. Optionally go to single user mode and reboot after uploading the new firmware.</p>
 <h2>Options</h2>
 <dl>
-<dt>-[<code>dump-only</code>]</p>
-<dd>Only backs up the firmware. Note that you might have to reboot even after this.</dl>
+<dt>-[<code>dump-only</code>]</dt>
+<dd>Only backs up the firmware. Note that you might have to reboot even after this.</dd></dl>
 <h2>Bugs</h2>
 <p>Getting messages like this is &quot;normal&quot;</p>
 <dl>
-<dd>ide-scsi: Strange, packet command initiated yet DRQ isn&#8217;t asserted</dl>
+<dd>ide-scsi: Strange, packet command initiated yet DRQ isn&#8217;t asserted</dd></dl>
 <h2>Author</h2>
 <p><code>rpl8</code> is in public domain. </p>
 <p> This manual page was written by Elias Kunnas &lt;elias_kunnas [at] welho.com&gt;, for the Debian project (but may be used by others).</p>

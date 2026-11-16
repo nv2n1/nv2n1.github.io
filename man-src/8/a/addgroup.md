@@ -29,12 +29,12 @@ description: "adduser, addgroup – add a user or group to the system"
  username uid gid home-directory<br />
  The environment variable VERBOSE is set according to the following rule:</p>
 <dl>
-<dt>0 if</p>
-<dd><code>&#8211;quiet</code> is specified</p>
-<dt>1 if neither</p>
-<dd><code>&#8211;quiet </code> nor <code>&#8211;debug </code> is specified</p>
-<dt>2 if</p>
-<dd><code>&#8211;debug</code> is specified </p>
+<dt>0 if</dt>
+<dd><code>&#8211;quiet</code> is specified</dd>
+<dt>1 if neither</dt>
+<dd><code>&#8211;quiet </code> nor <code>&#8211;debug </code> is specified</dd>
+<dt>2 if</dt>
+<dd><code>&#8211;debug</code> is specified </dd>
 <p> (The same applies to the variable DEBUG, but DEBUG is deprecated and will be removed in a later version of <code>adduser</code>.) </p>
 </dl>
 <h3>Add a system user</h3>
@@ -54,61 +54,61 @@ description: "adduser, addgroup – add a user or group to the system"
 <p>If called with two non-option arguments, <code>adduser</code> will add an existing user to an existing group.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;conf FILE</code></p>
-<dd>Use FILE instead of <i>/etc/adduser.conf</i>.</p>
-<dt><code>&#8211;disabled-login</code></p>
-<dd>Do not run passwd to set the password. The user won&#8217;t be able to use her account until the password is set.</p>
-<dt><code>&#8211;disabled-password</code></p>
-<dd>Like &#8211;disabled-login, but logins are still possible (for example using SSH RSA keys) but not using password authentication.</p>
-<dt><code>&#8211;force-badname</code></p>
-<dd>By default, user and group names are checked against the configurable regular expression <code>NAME_REGEX</code> (or <code>NAME_REGEX_SYSTEM</code> if <code>&#8211;system</code> is specified) specified in the configuration file. This option forces <code>adduser</code> and <code>addgroup</code> to apply only a weak check for validity of the name. <code>NAME_REGEX</code> is described in <code><a href="/docs/linux/man/5-adduser-conf/">adduser.conf</a></code>(5).</p>
-<dt><code>&#8211;gecos GECOS</code></p>
-<dd>Set the gecos field for the new entry generated. <code>adduser </code> will not ask for finger information if this option is given.</p>
-<dt><code>&#8211;gid ID</code></p>
-<dd>When creating a group, this option forces the new groupid to be the given number. When creating a user, this option will put the user in that group.</p>
-<dt><code>&#8211;group</code></p>
-<dd>When combined with <code>&#8211;system</code>, a group with the same name and ID as the system user is created. If not combined with <code>&#8211;system</code>, a group with the given name is created. This is the default action if the program is invoked as <code>addgroup</code>.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display brief instructions.</p>
-<dt><code>&#8211;home DIR</code></p>
-<dd>Use DIR as the user&#8217;s home directory, rather than the default specified by the configuration file. If the directory does not exist, it is created and skeleton files are copied.</p>
-<dt><code>&#8211;shell SHELL</code></p>
-<dd>Use SHELL as the user&#8217;s login shell, rather than the default specified by the configuration file.</p>
-<dt><code>&#8211;ingroup GROUP</code></p>
-<dd>Add the new user to GROUP instead of a usergroup or the default group defined by <code>USERS_GID </code> in the configuration file. This affects the users primary group. To add additional groups, see the <code>add_extra_groups</code> option.</p>
-<dt><code>&#8211;no-create-home</code></p>
-<dd>Do not create the home directory, even if it doesn&#8217;t exist.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Suppress informational messages, only show warnings and errors.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Be verbose, most useful if you want to nail down a problem with adduser.</p>
-<dt><code>&#8211;system</code></p>
-<dd>Create a system user or group.</p>
-<dt><code>&#8211;uid ID</code></p>
-<dd>Force the new userid to be the given number. <code>adduser </code> will fail if the userid is already taken.</p>
-<dt><code>&#8211;firstuid ID</code></p>
-<dd>Override the first uid in the range that the uid is chosen from (overrides <code>FIRST_UID</code> specified in the configuration file).</p>
-<dt><code>&#8211;lastuid ID</code></p>
-<dd>Override the last uid in the range that the uid is chosen from ( <code>LAST_UID</code> )</p>
-<dt><code>&#8211;add_extra_groups</code></p>
-<dd>Add new user to extra groups defined in the configuration file.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display version and copyright information. </p>
+<dt><code>&#8211;conf FILE</code></dt>
+<dd>Use FILE instead of <i>/etc/adduser.conf</i>.</dd>
+<dt><code>&#8211;disabled-login</code></dt>
+<dd>Do not run passwd to set the password. The user won&#8217;t be able to use her account until the password is set.</dd>
+<dt><code>&#8211;disabled-password</code></dt>
+<dd>Like &#8211;disabled-login, but logins are still possible (for example using SSH RSA keys) but not using password authentication.</dd>
+<dt><code>&#8211;force-badname</code></dt>
+<dd>By default, user and group names are checked against the configurable regular expression <code>NAME_REGEX</code> (or <code>NAME_REGEX_SYSTEM</code> if <code>&#8211;system</code> is specified) specified in the configuration file. This option forces <code>adduser</code> and <code>addgroup</code> to apply only a weak check for validity of the name. <code>NAME_REGEX</code> is described in <code><a href="/docs/linux/man/5-adduser-conf/">adduser.conf</a></code>(5).</dd>
+<dt><code>&#8211;gecos GECOS</code></dt>
+<dd>Set the gecos field for the new entry generated. <code>adduser </code> will not ask for finger information if this option is given.</dd>
+<dt><code>&#8211;gid ID</code></dt>
+<dd>When creating a group, this option forces the new groupid to be the given number. When creating a user, this option will put the user in that group.</dd>
+<dt><code>&#8211;group</code></dt>
+<dd>When combined with <code>&#8211;system</code>, a group with the same name and ID as the system user is created. If not combined with <code>&#8211;system</code>, a group with the given name is created. This is the default action if the program is invoked as <code>addgroup</code>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display brief instructions.</dd>
+<dt><code>&#8211;home DIR</code></dt>
+<dd>Use DIR as the user&#8217;s home directory, rather than the default specified by the configuration file. If the directory does not exist, it is created and skeleton files are copied.</dd>
+<dt><code>&#8211;shell SHELL</code></dt>
+<dd>Use SHELL as the user&#8217;s login shell, rather than the default specified by the configuration file.</dd>
+<dt><code>&#8211;ingroup GROUP</code></dt>
+<dd>Add the new user to GROUP instead of a usergroup or the default group defined by <code>USERS_GID </code> in the configuration file. This affects the users primary group. To add additional groups, see the <code>add_extra_groups</code> option.</dd>
+<dt><code>&#8211;no-create-home</code></dt>
+<dd>Do not create the home directory, even if it doesn&#8217;t exist.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Suppress informational messages, only show warnings and errors.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Be verbose, most useful if you want to nail down a problem with adduser.</dd>
+<dt><code>&#8211;system</code></dt>
+<dd>Create a system user or group.</dd>
+<dt><code>&#8211;uid ID</code></dt>
+<dd>Force the new userid to be the given number. <code>adduser </code> will fail if the userid is already taken.</dd>
+<dt><code>&#8211;firstuid ID</code></dt>
+<dd>Override the first uid in the range that the uid is chosen from (overrides <code>FIRST_UID</code> specified in the configuration file).</dd>
+<dt><code>&#8211;lastuid ID</code></dt>
+<dd>Override the last uid in the range that the uid is chosen from ( <code>LAST_UID</code> )</dd>
+<dt><code>&#8211;add_extra_groups</code></dt>
+<dd>Add new user to extra groups defined in the configuration file.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display version and copyright information. </dd>
 </dl>
 <h2>Exit Values</h2>
 <dl>
-<dt><code>0 </code></p>
-<dd>The user exists as specified. This can have 2 causes: The user was created by adduser or the user was already present on the system before adduser was invoked. If adduser was returning 0 , invoking adduser a second time with the same parameters as before also returns 0.</p>
-<dt><code>1</code></p>
+<dt><code>0 </code></dt>
+<dd>The user exists as specified. This can have 2 causes: The user was created by adduser or the user was already present on the system before adduser was invoked. If adduser was returning 0 , invoking adduser a second time with the same parameters as before also returns 0.</dd>
+<dt><code>1</code></dt>
 <dd>Creating the user or group failed because it was already present with other UID/GID than specified. The username or groupname was rejected because of a mismatch with the configured regular expressions, see <a href="/docs/linux/man/5-adduser-conf/">adduser.conf</a>(5). Adduser has been aborted by a signal.<br />
- Or for many other yet undocumented reasons which are printed to console then. You may then consider to remove <code>&#8211;quiet</code> to make adduser more verbose. </p>
+ Or for many other yet undocumented reasons which are printed to console then. You may then consider to remove <code>&#8211;quiet</code> to make adduser more verbose. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/adduser.conf</p>
-<dd>Default configuration file for adduser and addgroup</p>
-<dt>/usr/local/sbin/adduser.local</p>
-<dd>Optional custom add-ons. </p>
+<dt>/etc/adduser.conf</dt>
+<dd>Default configuration file for adduser and addgroup</dd>
+<dt>/usr/local/sbin/adduser.local</dt>
+<dd>Optional custom add-ons. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-adduser-conf/">adduser.conf</a></code>(5), <code><a href="/docs/linux/man/8-deluser/">deluser</a></code>(8), <code><a href="/docs/linux/man/8-groupadd/">groupadd</a></code>(8), <code><a href="/docs/linux/man/8-useradd/">useradd</a></code>(8), <code><a href="/docs/linux/man/8-usermod/">usermod</a></code>(8), Debian Policy 9.2.2. </p>

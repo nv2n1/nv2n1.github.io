@@ -18,24 +18,24 @@ description: "shuf – generate random permutations"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-e</code>, <code>&#8211;echo</code></p>
-<dd> treat each ARG as an input line</p>
-<dt><code>-i</code>, <code>&#8211;input-range</code>=<i>,LO-HI/</i></p>
-<dd> treat each number LO through HI as an input line</p>
-<dt><code>-n</code>, <code>&#8211;head-count</code>=<i>,COUNT/</i></p>
-<dd> output at most COUNT lines</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></p>
-<dd> write result to FILE instead of standard output</p>
-<dt><code>&#8211;random-source</code>=<i>,FILE/</i></p>
-<dd> get random bytes from FILE</p>
-<dt><code>-r</code>, <code>&#8211;repeat</code></p>
-<dd> output lines can be repeated</p>
-<dt><code>-z</code>, <code>&#8211;zero-terminated</code></p>
-<dd> line delimiter is NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-e</code>, <code>&#8211;echo</code></dt>
+<dd> treat each ARG as an input line</dd>
+<dt><code>-i</code>, <code>&#8211;input-range</code>=<i>,LO-HI/</i></dt>
+<dd> treat each number LO through HI as an input line</dd>
+<dt><code>-n</code>, <code>&#8211;head-count</code>=<i>,COUNT/</i></dt>
+<dd> output at most COUNT lines</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></dt>
+<dd> write result to FILE instead of standard output</dd>
+<dt><code>&#8211;random-source</code>=<i>,FILE/</i></dt>
+<dd> get random bytes from FILE</dd>
+<dt><code>-r</code>, <code>&#8211;repeat</code></dt>
+<dd> output lines can be repeated</dd>
+<dt><code>-z</code>, <code>&#8211;zero-terminated</code></dt>
+<dd> line delimiter is NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Paul Eggert.</p>
 <h2>REPORTING BUGS</h2>

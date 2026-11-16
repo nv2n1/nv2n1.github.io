@@ -17,10 +17,10 @@ int
 <code>Tcl_GetBooleanFromObj</code>(<i>interp, objPtr, boolPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>boolValue</i> (in) Integer value to be stored as a boolean value in a Tcl_Obj.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) Points to the Tcl_Obj in which to store, or from which to retrieve a boolean value.</p>
-<dd>Tcl_Interp <i>*interp</i> (in/out) If a boolean value cannot be retrieved, an error message is left in the interpreter&#8217;s result object unless <i>interp</i> is NULL.</p>
-<dd>int <i>*boolPtr</i> (out) Points to place where <code>Tcl_GetBooleanFromObj</code> stores the boolean value (0 or 1) obtained from <i>objPtr</i>. </p>
+<dd>int <i>boolValue</i> (in) Integer value to be stored as a boolean value in a Tcl_Obj.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) Points to the Tcl_Obj in which to store, or from which to retrieve a boolean value.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in/out) If a boolean value cannot be retrieved, an error message is left in the interpreter&#8217;s result object unless <i>interp</i> is NULL.</dd>
+<dd>int <i>*boolPtr</i> (out) Points to place where <code>Tcl_GetBooleanFromObj</code> stores the boolean value (0 or 1) obtained from <i>objPtr</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are used to pass boolean values to and from Tcl as Tcl_Obj&#8217;s. When storing a boolean value into a Tcl_Obj, any non-zero integer value in <i>boolValue</i> is taken to be the boolean value <code>1</code>, and the integer value <code>0</code> is taken to be the boolean value <code>0</code>. </p>

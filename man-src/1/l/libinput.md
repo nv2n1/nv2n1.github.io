@@ -18,26 +18,26 @@ description: "libinput – tool to interface with libinput"
 <p> The man page for the X.Org xf86-input-libinput driver is <code><a href="/docs/linux/man/4-libinput/">libinput</a>(4).</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version and exit</dd></dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/1-libinput-debug-events/">libinput-debug-events</a>(1)</code></p>
-<dd> Print all events as seen by libinput</p>
-<dt><code>libinput-debug-gui(1)</code></p>
-<dd> Show a GUI to visualize libinput&#8217;s events</p>
-<dt><code><a href="/docs/linux/man/1-libinput-debug-tablet/">libinput-debug-tablet</a>(1)</code></p>
-<dd> A commandline tool to debug tablet axis values</p>
-<dt><code><a href="/docs/linux/man/1-libinput-list-devices/">libinput-list-devices</a>(1)</code></p>
-<dd> List all devices recognized by libinput</p>
-<dt><code><a href="/docs/linux/man/1-libinput-measure/">libinput-measure</a>(1)</code></p>
-<dd> Measure various properties of devices</p>
-<dt><code><a href="/docs/linux/man/1-libinput-record/">libinput-record</a>(1)</code></p>
-<dd> Record the events from a device</p>
-<dt><code><a href="/docs/linux/man/1-libinput-replay/">libinput-replay</a>(1)</code></p>
-<dd> Replay the events from a device</dl>
+<dt><code><a href="/docs/linux/man/1-libinput-debug-events/">libinput-debug-events</a>(1)</code></dt>
+<dd> Print all events as seen by libinput</dd>
+<dt><code>libinput-debug-gui(1)</code></dt>
+<dd> Show a GUI to visualize libinput&#8217;s events</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-debug-tablet/">libinput-debug-tablet</a>(1)</code></dt>
+<dd> A commandline tool to debug tablet axis values</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-list-devices/">libinput-list-devices</a>(1)</code></dt>
+<dd> List all devices recognized by libinput</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-measure/">libinput-measure</a>(1)</code></dt>
+<dd> Measure various properties of devices</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-record/">libinput-record</a>(1)</code></dt>
+<dd> Record the events from a device</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-replay/">libinput-replay</a>(1)</code></dt>
+<dd> Replay the events from a device</dd></dl>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
 <h2>SEE ALSO</h2>

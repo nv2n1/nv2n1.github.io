@@ -47,8 +47,8 @@ description: "nagios_system_plugin_selinux – Security Enhanced Linux Policy fo
 <p> <code>nagios_system_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_system_plugin_exec_t type, if you want to transition an executable to the nagios_system_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/nagios/plugins/check_log, /usr/lib/nagios/plugins/check_load, /usr/lib/nagios/plugins/check_mrtg, /usr/lib/nagios/plugins/check_swap, /usr/lib/nagios/plugins/check_wave, /usr/lib/nagios/plugins/check_procs, /usr/lib/nagios/plugins/check_users, /usr/lib/nagios/plugins/check_flexlm, /usr/lib/nagios/plugins/check_nagios, /usr/lib/nagios/plugins/check_nwstat, /usr/lib/nagios/plugins/check_overcr, /usr/lib/nagios/plugins/check_sensors, /usr/lib/nagios/plugins/check_ifstatus, /usr/lib/nagios/plugins/check_mrtgtraf, /usr/lib/nagios/plugins/check_ifoperstatus </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/nagios/plugins/check_log, /usr/lib/nagios/plugins/check_load, /usr/lib/nagios/plugins/check_mrtg, /usr/lib/nagios/plugins/check_swap, /usr/lib/nagios/plugins/check_wave, /usr/lib/nagios/plugins/check_procs, /usr/lib/nagios/plugins/check_users, /usr/lib/nagios/plugins/check_flexlm, /usr/lib/nagios/plugins/check_nagios, /usr/lib/nagios/plugins/check_nwstat, /usr/lib/nagios/plugins/check_overcr, /usr/lib/nagios/plugins/check_sensors, /usr/lib/nagios/plugins/check_ifstatus, /usr/lib/nagios/plugins/check_mrtgtraf, /usr/lib/nagios/plugins/check_ifoperstatus </dd>
 </dl>
 <p> <code>nagios_system_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the nagios_system_plugin_tmp_t type, if you want to store nagios system plugin temporary files in the /tmp directories. </p>

@@ -20,31 +20,31 @@ description: "struct_regulator_init_data – regulator platform initialisation d
 <h2>Members</h2>
 <p>supply_regulator</p>
 <dl>
-<dd>Parent regulator. Specified using the regulator name as it appears in the name field in sysfs, which can be explicitly set using the constraints field &#8216;name&#8217;.</dl>
+<dd>Parent regulator. Specified using the regulator name as it appears in the name field in sysfs, which can be explicitly set using the constraints field &#8216;name&#8217;.</dd></dl>
 <p> constraints</p>
 <dl>
-<dd>Constraints. These must be specified for the regulator to be usable.</dl>
+<dd>Constraints. These must be specified for the regulator to be usable.</dd></dl>
 <p> num_consumer_supplies</p>
 <dl>
-<dd>Number of consumer device supplies.</dl>
+<dd>Number of consumer device supplies.</dd></dl>
 <p> consumer_supplies</p>
 <dl>
-<dd>Consumer device supply configuration.</dl>
+<dd>Consumer device supply configuration.</dd></dl>
 <p> regulator_init</p>
 <dl>
-<dd>Callback invoked when the regulator has been registered.</dl>
+<dd>Callback invoked when the regulator has been registered.</dd></dl>
 <p> driver_data</p>
 <dl>
-<dd>Data passed to regulator_init.</dl>
+<dd>Data passed to regulator_init.</dd></dl>
 <h2>Description</h2>
 <p>Initialisation constraints, our supply and consumers supplies.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

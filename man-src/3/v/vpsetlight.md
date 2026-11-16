@@ -13,22 +13,22 @@ description: "vpSetLight – set lighting properties"
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpSetLight(</code><i>vpc, light_num, property, n0, n1, n2</i><code>)</code></p>
+<dt> <code>vpSetLight(</code><i>vpc, light_num, property, n0, n1, n2</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>light_num;</i></p>
-<dd>int <i>property;</i></p>
-<dd>double <i>n0, n1, n2;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>light_num;</i></dd>
+<dd>int <i>property;</i></dd>
+<dd>double <i>n0, n1, n2;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>light_num</i></p>
-<dd>A constant specifying a particular light source (VP_LIGHT0, VP_LIGHT1, &#8230;, VP_LIGHT5).</p>
-<dt><i>property</i></p>
-<dd>A constant specifying one lighting property (VP_COLOR or VP_DIRECTION).</p>
-<dt><i>n0, n1, n2</i></p>
-<dd>Components of an RGB color (for VP_COLOR) or a direction vector (for VP_DIRECTION).</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>light_num</i></dt>
+<dd>A constant specifying a particular light source (VP_LIGHT0, VP_LIGHT1, &#8230;, VP_LIGHT5).</dd>
+<dt><i>property</i></dt>
+<dd>A constant specifying one lighting property (VP_COLOR or VP_DIRECTION).</dd>
+<dt><i>n0, n1, n2</i></dt>
+<dd>Components of an RGB color (for VP_COLOR) or a direction vector (for VP_DIRECTION).</dd></dl>
 <h2>Description</h2>
 <p><code>vpSetLight</code> is used to set the properties of a light source. VolPack currently only supports directional light sources: each light is infinitely distant, so it can be fully characterized by a direction vector and a color. The lighting properties are used by <code>vpShadeTable</code> to compute the shading lookup table, which is then used to compute a color for each voxel. </p>
 <p> To initialize the lighting environment, call <code>vpSetLight</code> twice for each light source which will be enabled. One call should set the RGB components of the light color (by using the VP_COLOR code for the <i>property</i> parameter), and one call should set the XYZ components of the light direction vector (by using the VP_DIRECTION code for the <i>property</i> parameter). The particular light source is specified with one of the light source codes defined in volpack.h: VP_LIGHT0, VP_LIGHT1, &#8230;, VP_LIGHT5. In the current implementation, at most six light sources may be specified. </p>
@@ -41,13 +41,13 @@ description: "vpSetLight – set lighting properties"
 <h2>Errors</h2>
 <p>The normal return value is VP_OK. The following error return values are possible:</p>
 <dl>
-<dt>VPERROR_LIMIT_EXCEEDED</p>
-<dd>The light number is invalid or exceeds an implementation limit.</p>
-<dt>VPERROR_SINGULAR</p>
-<dd>The light direction vector is a zero vector.</p>
-<dt>VPERROR_BAD_VALUE</p>
-<dd>The RGB color components are out of range.</p>
-<dt>VPERROR_BAD_OPTION</p>
-<dd>The <i>property</i> argument is invalid.</dl>
+<dt>VPERROR_LIMIT_EXCEEDED</dt>
+<dd>The light number is invalid or exceeds an implementation limit.</dd>
+<dt>VPERROR_SINGULAR</dt>
+<dd>The light direction vector is a zero vector.</dd>
+<dt>VPERROR_BAD_VALUE</dt>
+<dd>The RGB color components are out of range.</dd>
+<dt>VPERROR_BAD_OPTION</dt>
+<dd>The <i>property</i> argument is invalid.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vpsetlookupshader/">vpSetLookupShader</a>(3), <a href="/docs/linux/man/3-vpshadetable/">vpShadeTable</a>(3), <a href="/docs/linux/man/3-vpgetlight/">vpGetLight</a>(3) </p>

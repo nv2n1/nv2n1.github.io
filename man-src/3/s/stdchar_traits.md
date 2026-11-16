@@ -10,11 +10,8 @@ description: "std::char_traits – std::char_traits"
 <p>std::char_traits &#8211; std::char_traits</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;string&gt;
-
 template&lt;
-
 class CharT
-
 &gt; class char_traits;</code></pre>
 <p>The char_traits class is a traits class template that abstracts basic character and string operations for a given character type. The defined operation set is such that generic algorithms almost always can be implemented in terms of it. It is thus possible to use such algorithms with almost any possible character or string type, just by supplying a customized char_traits class.<br />
 The char_traits class template serves as a basis for explicit instantiations. The user can provide_a_specialization for any custom character types. Several specializations are defined for the standard character types.<br />
@@ -81,9 +78,7 @@ lt <i>(public static member function)</i> </p>
 <p>User-defined character traits may be used to provide case-insensitive_comparison<br />
  // Run this code </p>
 <pre><code>#include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
 struct ci_char_traits : public std::char_traits&lt;char&gt; {
     static char to_upper(char ch)
@@ -127,7 +122,6 @@ std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const ci_string &amp;st
     return os.write(str.data(), str.size());
 }
 int main()
-
 {
     ci_string s1 = &quot;Hello&quot;;
     ci_string s2 = &quot;heLLo&quot;;

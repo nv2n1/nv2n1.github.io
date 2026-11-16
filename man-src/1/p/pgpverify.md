@@ -18,25 +18,25 @@ description: "pgpverify – Cryptographically verify Usenet control messages"
 <p> <font SIZE="-1">INN</font>, when using GnuPG, configures <code>pgpverify</code> to use <code>gpgv</code>, which by default expects keys to be in a keyring named <i>trustedkeys.gpg</i>, since it doesn&#8217;t implement trust checking directly. <code>pgpverify</code> uses that file if present but falls back to <i>pubring.gpg</i> if it&#8217;s not found. This bypasses the trust model for checking keys, but is compatible with the way that <code>pgpverify</code> used to behave. Of course, if a keyring is found in <i>pathetc</i>/pgp or configured at the top of the script, that overrides all of this behavior.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;findid</code>=<i>string</i></p>
-<dd> The <code>&#8211;findid</code> flag causes <code>pgpverify</code> to explicitly search for <i>string</i> in the output from <font SIZE="-1">PGP</font>&#8216;s analysis of the message. This option is useful when several UIDs are defined on a single <font SIZE="-1">PGP</font> key, and the caller to <code>pgpverify</code> needs checking whether a given one is defined on this key. In case the signature is valid but does not contain <i>string</i>, <code>pgpverify</code> exits with exit status 4.</p>
-<dt><code>&#8211;test</code></p>
-<dd> The <code>&#8211;test</code> flag causes <code>pgpverify</code> to print out the input that it is passing to <font SIZE="-1">PGP</font> (which is a reconstructed version of the input that supposedly created the control message) as well as the output from <font SIZE="-1">PGP</font>&#8216;s analysis of the message.</dl>
+<dt><code>&#8211;findid</code>=<i>string</i></dt>
+<dd> The <code>&#8211;findid</code> flag causes <code>pgpverify</code> to explicitly search for <i>string</i> in the output from <font SIZE="-1">PGP</font>&#8216;s analysis of the message. This option is useful when several UIDs are defined on a single <font SIZE="-1">PGP</font> key, and the caller to <code>pgpverify</code> needs checking whether a given one is defined on this key. In case the signature is valid but does not contain <i>string</i>, <code>pgpverify</code> exits with exit status 4.</dd>
+<dt><code>&#8211;test</code></dt>
+<dd> The <code>&#8211;test</code> flag causes <code>pgpverify</code> to print out the input that it is passing to <font SIZE="-1">PGP</font> (which is a reconstructed version of the input that supposedly created the control message) as well as the output from <font SIZE="-1">PGP</font>&#8216;s analysis of the message.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>pgpverify</code> may exit with the following statuses:</p>
 <dl>
-<dt>0</p>
-<dd> The control message had a good <font SIZE="-1">PGP</font> signature.</p>
-<dt>1</p>
-<dd> The control message had no <font SIZE="-1">PGP</font> signature.</p>
-<dt>2</p>
-<dd> The control message had an unknown <font SIZE="-1">PGP</font> signature.</p>
-<dt>3</p>
-<dd> The control message had a bad <font SIZE="-1">PGP</font> signature.</p>
-<dt>4</p>
-<dd> The control message had a good <font SIZE="-1">PGP</font> signature but the argument given to the <code>&#8211;findid</code> flag had non been found in the output from <font SIZE="-1">PGP</font>&#8216;s analysis of the message.</p>
-<dt>255</p>
-<dd> A problem occurred not directly related to <font SIZE="-1">PGP</font> analysis of signature.</dl>
+<dt>0</dt>
+<dd> The control message had a good <font SIZE="-1">PGP</font> signature.</dd>
+<dt>1</dt>
+<dd> The control message had no <font SIZE="-1">PGP</font> signature.</dd>
+<dt>2</dt>
+<dd> The control message had an unknown <font SIZE="-1">PGP</font> signature.</dd>
+<dt>3</dt>
+<dd> The control message had a bad <font SIZE="-1">PGP</font> signature.</dd>
+<dt>4</dt>
+<dd> The control message had a good <font SIZE="-1">PGP</font> signature but the argument given to the <code>&#8211;findid</code> flag had non been found in the output from <font SIZE="-1">PGP</font>&#8216;s analysis of the message.</dd>
+<dt>255</dt>
+<dd> A problem occurred not directly related to <font SIZE="-1">PGP</font> analysis of signature.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>pgpverify</code> does not modify or otherwise alter the environment before invoking the <code>pgp</code> or <code>gpgv</code> program. It is the responsibility of the person who installs <code>pgpverify</code> to ensure that when <code>pgp</code> or <code>gpgv</code> runs, it has the ability to locate and read a <font SIZE="-1">PGP</font> key file that contains the <font SIZE="-1">PGP</font> public keys for the appropriate Usenet hierarchy administrators. <code>pgpverify</code> can be pointed to an appropriate key ring by editing variables at the beginning of this script.</p>
 <h2>NOTES</h2>
@@ -51,17 +51,17 @@ description: "pgpverify – Cryptographically verify Usenet control messages"
 <p> Copyright (c) 1996 <font SIZE="-1">UUNET</font> Technologies, Inc. All rights reserved. </p>
 <p> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
 <dl>
-<dt>1.</p>
-<dd> Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p>
-<dt>2.</p>
-<dd> Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
-<dt>3.</p>
-<dd> All advertising materials mentioning features or use of this software must display the following acknowledgement: </p>
+<dt>1.</dt>
+<dd> Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</dd>
+<dt>2.</dt>
+<dd> Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</dd>
+<dt>3.</dt>
+<dd> All advertising materials mentioning features or use of this software must display the following acknowledgement: </dd>
 <pre>
   This product includes software developed by UUNET Technologies, Inc.
 </pre>
-<dt>4.</p>
-<dd> The name of <font SIZE="-1">UUNET</font> Technologies (&#8220;<font SIZE="-1">UUNET</font>&#8221;) may not be used to endorse or promote products derived from this software without specific prior written permission.</dl>
+<dt>4.</dt>
+<dd> The name of <font SIZE="-1">UUNET</font> Technologies (&#8220;<font SIZE="-1">UUNET</font>&#8221;) may not be used to endorse or promote products derived from this software without specific prior written permission.</dd></dl>
 <p> <font SIZE="-1">THIS</font> <font SIZE="-1">SOFTWARE</font> <font SIZE="-1">IS</font> <font SIZE="-1">PROVIDED</font> <font SIZE="-1">BY</font> <font SIZE="-1">UUNET</font> &#8220;<font SIZE="-1">AS</font> <font SIZE="-1">IS</font>&#8221; <font SIZE="-1">AND</font> <font SIZE="-1">ANY</font> <font SIZE="-1">EXPRESS</font> <font SIZE="-1">OR</font> <font SIZE="-1">IMPLIED</font> <font SIZE="-1">WARRANTIES</font>, <font SIZE="-1">INCLUDING</font>, <font SIZE="-1">BUT</font> <font SIZE="-1">NOT</font> <font SIZE="-1">LIMITED</font> <font SIZE="-1">TO</font>, <font SIZE="-1">THE</font> <font SIZE="-1">IMPLIED</font> <font SIZE="-1">WARRANTIES</font> <font SIZE="-1">OF</font> <font SIZE="-1">MERCHANTABILITY</font> <font SIZE="-1">AND</font> <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font> <font SIZE="-1">ARE</font> <font SIZE="-1">DISCLAIMED</font>. <font SIZE="-1">IN</font> <font SIZE="-1">NO</font> <font SIZE="-1">EVENT</font> <font SIZE="-1">SHALL</font> <font SIZE="-1">UUNET</font> <font SIZE="-1">BE</font> <font SIZE="-1">LIABLE</font> <font SIZE="-1">FOR</font> <font SIZE="-1">ANY</font> <font SIZE="-1">DIRECT</font>, <font SIZE="-1">INDIRECT</font>, <font SIZE="-1">INCIDENTAL</font>, <font SIZE="-1">SPECIAL</font>, <font SIZE="-1">EXEMPLARY</font>, <font SIZE="-1">OR</font> <font SIZE="-1">CONSEQUENTIAL</font> <font SIZE="-1">DAMAGES</font> (<font SIZE="-1">INCLUDING</font>, <font SIZE="-1">BUT</font> <font SIZE="-1">NOT</font> <font SIZE="-1">LIMITED</font> <font SIZE="-1">TO</font>, <font SIZE="-1">PROCUREMENT</font> <font SIZE="-1">OF</font> <font SIZE="-1">SUBSTITUTE</font> <font SIZE="-1">GOODS</font> <font SIZE="-1">OR</font> <font SIZE="-1">SERVICES</font>; <font SIZE="-1">LOSS</font> <font SIZE="-1">OF</font> <font SIZE="-1">USE</font>, <font SIZE="-1">DATA</font>, <font SIZE="-1">OR</font> <font SIZE="-1">PROFITS</font>; <font SIZE="-1">OR</font> <font SIZE="-1">BUSINESS</font> <font SIZE="-1">INTERRUPTION</font>) <font SIZE="-1">HOWEVER</font> <font SIZE="-1">CAUSED</font> <font SIZE="-1">AND</font> <font SIZE="-1">ON</font> <font SIZE="-1">ANY</font> <font SIZE="-1">THEORY</font> <font SIZE="-1">OF</font> <font SIZE="-1">LIABILITY</font>, <font SIZE="-1">WHETHER</font> <font SIZE="-1">IN</font> <font SIZE="-1">CONTRACT</font>, <font SIZE="-1">STRICT</font> <font SIZE="-1">LIABILITY</font>, <font SIZE="-1">OR</font> <font SIZE="-1">TORT</font> (<font SIZE="-1">INCLUDING</font> <font SIZE="-1">NEGLIGENCE</font> <font SIZE="-1">OR</font> <font SIZE="-1">OTHERWISE</font>) <font SIZE="-1">ARISING</font> <font SIZE="-1">IN</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WAY</font> <font SIZE="-1">OUT</font> <font SIZE="-1">OF</font> <font SIZE="-1">THE</font> <font SIZE="-1">USE</font> <font SIZE="-1">OF</font> <font SIZE="-1">THIS</font> <font SIZE="-1">SOFTWARE</font>, <font SIZE="-1">EVEN</font> <font SIZE="-1">IF</font> <font SIZE="-1">ADVISED</font> <font SIZE="-1">OF</font> <font SIZE="-1">THE</font> <font SIZE="-1">POSSIBILITY</font> <font SIZE="-1">OF</font> <font SIZE="-1">SUCH</font> <font SIZE="-1">DAMAGE</font>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gpgv/">gpgv</a></i>(1), <i>pgp</i>(1). </p>

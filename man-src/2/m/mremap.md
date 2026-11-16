@@ -22,66 +22,62 @@ void *mremap(void *old_address, size_t old_size,
 <p> If the value of <i>old_size</i> is zero, and <i>old_address</i> refers to a shareable mapping (see <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code>MAP_SHARED</code>), then <code>mremap</code>() will create a new mapping of the same pages. <i>new_size</i> will be the size of the new mapping and the location of the new mapping may be specified with <i>new_address</i>; see the description of <code>MREMAP_FIXED</code> below. If a new mapping is requested via this method, then the <code>MREMAP_MAYMOVE</code> flag must also be specified. </p>
 <p> The <i>flags</i> bit-mask argument may be 0, or include the following flags:</p>
 <dl>
-<dt><code>MREMAP_MAYMOVE</code></p>
-<dd> By default, if there is not sufficient space to expand a mapping at its current location, then <code>mremap</code>() fails. If this flag is specified, then the kernel is permitted to relocate the mapping to a new virtual address, if necessary. If the mapping is relocated, then absolute pointers into the old mapping location become invalid (offsets relative to the starting address of the mapping should be employed).</p>
-<dt><code>MREMAP_FIXED</code> (since Linux 2.3.31)</p>
-<dd> This flag serves a similar purpose to the <code>MAP_FIXED</code> flag of <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). If this flag is specified, then <code>mremap</code>() accepts a fifth argument, <i>void&nbsp;*new_address</i>, which specifies a page-aligned address to which the mapping must be moved. Any previous mapping at the address range specified by <i>new_address</i> and <i>new_size</i> is unmapped.</p>
+<dt><code>MREMAP_MAYMOVE</code></dt>
+<dd> By default, if there is not sufficient space to expand a mapping at its current location, then <code>mremap</code>() fails. If this flag is specified, then the kernel is permitted to relocate the mapping to a new virtual address, if necessary. If the mapping is relocated, then absolute pointers into the old mapping location become invalid (offsets relative to the starting address of the mapping should be employed).</dd>
+<dt><code>MREMAP_FIXED</code> (since Linux 2.3.31)</dt>
+<dd> This flag serves a similar purpose to the <code>MAP_FIXED</code> flag of <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). If this flag is specified, then <code>mremap</code>() accepts a fifth argument, <i>void&nbsp;*new_address</i>, which specifies a page-aligned address to which the mapping must be moved. Any previous mapping at the address range specified by <i>new_address</i> and <i>new_size</i> is unmapped.</dd>
 <dt>
-<dd> If <code>MREMAP_FIXED</code> is specified, then <code>MREMAP_MAYMOVE</code> must also be specified.</p>
-<dt><code>MREMAP_DONTUNMAP</code> (since Linux 5.7)</p>
-<dd> This flag, which must be used in conjunction with <code>MREMAP_MAYMOVE</code>, remaps a mapping to a new address but does not unmap the mapping at <i>old_address</i>.</p>
+</dt><dd> If <code>MREMAP_FIXED</code> is specified, then <code>MREMAP_MAYMOVE</code> must also be specified.</dd>
+<dt><code>MREMAP_DONTUNMAP</code> (since Linux 5.7)</dt>
+<dd> This flag, which must be used in conjunction with <code>MREMAP_MAYMOVE</code>, remaps a mapping to a new address but does not unmap the mapping at <i>old_address</i>.</dd>
 <dt>
-<dd> The <code>MREMAP_DONTUNMAP</code> flag can be used only with private anonymous mappings (see the description of <code>MAP_PRIVATE</code> and <code>MAP_ANONYMOUS</code> in <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)).</p>
+</dt><dd> The <code>MREMAP_DONTUNMAP</code> flag can be used only with private anonymous mappings (see the description of <code>MAP_PRIVATE</code> and <code>MAP_ANONYMOUS</code> in <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)).</dd>
 <dt>
-<dd> After completion, any access to the range specified by <i>old_address</i> and <i>old_size</i> will result in a page fault. The page fault will be handled by a <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2) handler if the address is in a range previously registered with <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2). Otherwise, the kernel allocates a zero-filled page to handle the fault.</p>
+</dt><dd> After completion, any access to the range specified by <i>old_address</i> and <i>old_size</i> will result in a page fault. The page fault will be handled by a <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2) handler if the address is in a range previously registered with <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2). Otherwise, the kernel allocates a zero-filled page to handle the fault.</dd>
 <dt>
-<dd> The <code>MREMAP_DONTUNMAP</code> flag may be used to atomically move a mapping while leaving the source mapped. See NOTES for some possible applications of <code>MREMAP_DONTUNMAP</code>.</dl>
+</dt><dd> The <code>MREMAP_DONTUNMAP</code> flag may be used to atomically move a mapping while leaving the source mapped. See NOTES for some possible applications of <code>MREMAP_DONTUNMAP</code>.</dd></dl>
 <p> If the memory segment specified by <i>old_address</i> and <i>old_size</i> is locked (using <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2) or similar), then this lock is maintained when the segment is resized and/or relocated. As a consequence, the amount of memory locked by the process may change.</p>
 <h2>RETURN VALUE</h2>
 <p> On success <code>mremap</code>() returns a pointer to the new virtual memory area. On error, the value <code>MAP_FAILED</code> (that is, <i>(void&nbsp;*)&nbsp;-1</i>) is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The caller tried to expand a memory segment that is locked, but this was not possible without exceeding the <code>RLIMIT_MEMLOCK</code> resource limit.</p>
-<dt><code>EFAULT</code></p>
-<dd> Some address in the range <i>old_address</i> to <i>old_address</i>+<i>old_size</i> is an invalid virtual memory address for this process. You can also get <code>EFAULT</code> even if there exist mappings that cover the whole address space requested, but those mappings are of different types.</p>
-<dt><code>EINVAL</code></p>
-<dd> An invalid argument was given. Possible causes are:</p>
+<dt><code>EAGAIN</code></dt>
+<dd> The caller tried to expand a memory segment that is locked, but this was not possible without exceeding the <code>RLIMIT_MEMLOCK</code> resource limit.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Some address in the range <i>old_address</i> to <i>old_address</i>+<i>old_size</i> is an invalid virtual memory address for this process. You can also get <code>EFAULT</code> even if there exist mappings that cover the whole address space requested, but those mappings are of different types.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid argument was given. Possible causes are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> <i>old_address</i> was not page aligned;</p>
-<dt>*</p>
-<dd> a value other than <code>MREMAP_MAYMOVE</code> or <code>MREMAP_FIXED</code> or <code>MREMAP_DONTUNMAP</code> was specified in <i>flags</i>;</p>
-<dt>*</p>
-<dd> <i>new_size</i> was zero;</p>
-<dt>*</p>
-<dd> <i>new_size</i> or <i>new_address</i> was invalid;</p>
-<dt>*</p>
-<dd> the new address range specified by <i>new_address</i> and <i>new_size</i> overlapped the old address range specified by <i>old_address</i> and <i>old_size</i>;</p>
-<dt>*</p>
-<dd> <code>MREMAP_FIXED</code> or <code>MREMAP_DONTUNMAP</code> was specified without also specifying <code>MREMAP_MAYMOVE</code>;</p>
-<dt>*</p>
-<dd> <code>MREMAP_DONTUNMAP</code> was specified, but one or more pages in the range specified by <i>old_address</i> and <i>old_size</i> were not private anonymous;</p>
-<dt>*</p>
-<dd> <code>MREMAP_DONTUNMAP</code> was specified and <i>old_size</i> was not equal to <i>new_size</i>;</p>
-<dt>*</p>
-<dd> <i>old_size</i> was zero and <i>old_address</i> does not refer to a shareable mapping (but see BUGS);</p>
-<dt>*</p>
-<dd> <i>old_size</i> was zero and the <code>MREMAP_MAYMOVE</code> flag was not specified.</dl>
+<dt>*</dt>
+<dd> <i>old_address</i> was not page aligned;</dd>
+<dt>*</dt>
+<dd> a value other than <code>MREMAP_MAYMOVE</code> or <code>MREMAP_FIXED</code> or <code>MREMAP_DONTUNMAP</code> was specified in <i>flags</i>;</dd>
+<dt>*</dt>
+<dd> <i>new_size</i> was zero;</dd>
+<dt>*</dt>
+<dd> <i>new_size</i> or <i>new_address</i> was invalid;</dd>
+<dt>*</dt>
+<dd> the new address range specified by <i>new_address</i> and <i>new_size</i> overlapped the old address range specified by <i>old_address</i> and <i>old_size</i>;</dd>
+<dt>*</dt>
+<dd> <code>MREMAP_FIXED</code> or <code>MREMAP_DONTUNMAP</code> was specified without also specifying <code>MREMAP_MAYMOVE</code>;</dd>
+<dt>*</dt>
+<dd> <code>MREMAP_DONTUNMAP</code> was specified, but one or more pages in the range specified by <i>old_address</i> and <i>old_size</i> were not private anonymous;</dd>
+<dt>*</dt>
+<dd> <code>MREMAP_DONTUNMAP</code> was specified and <i>old_size</i> was not equal to <i>new_size</i>;</dd>
+<dt>*</dt>
+<dd> <i>old_size</i> was zero and <i>old_address</i> does not refer to a shareable mapping (but see BUGS);</dd>
+<dt>*</dt>
+<dd> <i>old_size</i> was zero and the <code>MREMAP_MAYMOVE</code> flag was not specified.</dd></dl>
 </dl>
-<dt><code>ENOMEM</code></p>
-<dd> Not enough memory was available to complete the operation. Possible causes are:</p>
+<dt><code>ENOMEM</code></dt>
+<dd> Not enough memory was available to complete the operation. Possible causes are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> The memory area cannot be expanded at the current virtual address, and the <code>MREMAP_MAYMOVE</code> flag is not set in <i>flags</i>. Or, there is not enough (virtual) memory available.</p>
-<dt>*</p>
-<dd> <code>MREMAP_DONTUNMAP</code> was used causing a new mapping to be created that would exceed the (virtual) memory available. Or, it would exceed the maximum number of allowed mappings.</dl>
+<dt>*</dt>
+<dd> The memory area cannot be expanded at the current virtual address, and the <code>MREMAP_MAYMOVE</code> flag is not set in <i>flags</i>. Or, there is not enough (virtual) memory available.</dd>
+<dt>*</dt>
+<dd> <code>MREMAP_DONTUNMAP</code> was used causing a new mapping to be created that would exceed the (virtual) memory available. Or, it would exceed the maximum number of allowed mappings.</dd></dl>
 </dl>
 </dl>
 <h2>CONFORMING TO</h2>
@@ -94,10 +90,10 @@ void *mremap(void *old_address, size_t old_size,
 <h3>MREMAP_DONTUNMAP use cases</h3>
 <p> Possible applications for <code>MREMAP_DONTUNMAP</code> include:</p>
 <dl>
-<dt>*</p>
-<dd> Non-cooperative <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2): an application can yank out a virtual address range using <code>MREMAP_DONTUNMAP</code> and then employ a <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2) handler to handle the page faults that subsequently occur as other threads in the process touch pages in the yanked range.</p>
-<dt>*</p>
-<dd> Garbage collection: <code>MREMAP_DONTUNMAP</code> can be used in conjunction with <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2) to implement garbage collection algorithms (e.g., in a Java virtual machine). Such an implementation can be cheaper (and simpler) than conventional garbage collection techniques that involve marking pages with protection <code>PROT_NONE</code> in conjunction with the of a <code>SIGSEGV</code> handler to catch accesses to those pages.</dl>
+<dt>*</dt>
+<dd> Non-cooperative <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2): an application can yank out a virtual address range using <code>MREMAP_DONTUNMAP</code> and then employ a <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2) handler to handle the page faults that subsequently occur as other threads in the process touch pages in the yanked range.</dd>
+<dt>*</dt>
+<dd> Garbage collection: <code>MREMAP_DONTUNMAP</code> can be used in conjunction with <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2) to implement garbage collection algorithms (e.g., in a Java virtual machine). Such an implementation can be cheaper (and simpler) than conventional garbage collection techniques that involve marking pages with protection <code>PROT_NONE</code> in conjunction with the of a <code>SIGSEGV</code> handler to catch accesses to those pages.</dd></dl>
 <h2>BUGS</h2>
 <p> Before Linux 4.14, if <i>old_size</i> was zero and the mapping referred to by <i>old_address</i> was a private mapping (<code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code>MAP_PRIVATE</code>), <code>mremap</code>() created a new private mapping unrelated to the original mapping. This behavior was unintended and probably unexpected in user-space applications (since the intention of <code>mremap</code>() is to create a new mapping based on the original mapping). Since Linux 4.14, <code>mremap</code>() fails with the error <code>EINVAL</code> in this scenario.</p>
 <h2>SEE ALSO</h2>

@@ -17,22 +17,22 @@ description: "cifscreds – manage NTLM credentials in kernel keyring"
 <p> The first non-option argument to cifscreds is a command (see the <font SIZE="-1"><code>COMMANDS</code></font> section below). The second non-option argument is a hostname or address, or an <font SIZE="-1">NT</font> domain name.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>add</code></p>
-<dd> Add credentials to the kernel to be used for connecting to the given server, or servers in the given domain.</p>
-<dt><code>clear</code></p>
-<dd> Clear credentials for a particular host or domain from the kernel.</p>
-<dt><code>clearall</code></p>
-<dd> Clear all cifs credentials from the kernel.</p>
-<dt><code>update</code></p>
-<dd> Update stored credentials in the kernel with a new username and password.</dl>
+<dt><code>add</code></dt>
+<dd> Add credentials to the kernel to be used for connecting to the given server, or servers in the given domain.</dd>
+<dt><code>clear</code></dt>
+<dd> Clear credentials for a particular host or domain from the kernel.</dd>
+<dt><code>clearall</code></dt>
+<dd> Clear all cifs credentials from the kernel.</dd>
+<dt><code>update</code></dt>
+<dd> Update stored credentials in the kernel with a new username and password.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;domain</code></p>
-<dd> The provided host/domain argument is a <font SIZE="-1">NT</font> domainname. </p>
+<dt><code>-d</code>, <code>&#8211;domain</code></dt>
+<dd> The provided host/domain argument is a <font SIZE="-1">NT</font> domainname. </dd>
 <p> Ordinarily the second argument provided to cifscreds is treated as a hostname or <font SIZE="-1">IP</font> address. This option causes the cifscreds program to treat that argument as an <font SIZE="-1">NT</font> domainname instead. </p>
 <p> If there are not host specific credentials for the mounted server, then the kernel will next look for a set of domain credentials equivalent to the domain= option provided at mount time.</p>
-<dt><code>-u</code>, <code>&#8211;username</code></p>
-<dd> Ordinarily, the username is derived from the unix username of the user adding the credentials. This option allows the user to substitute a different username.</dl>
+<dt><code>-u</code>, <code>&#8211;username</code></dt>
+<dd> Ordinarily, the username is derived from the unix username of the user adding the credentials. This option allows the user to substitute a different username.</dd></dl>
 <h2>NOTES</h2>
 <p> The cifscreds utility requires a kernel built with support for the <code>login</code> key type. That key type was added in v3.3 in mainline Linux kernels. </p>
 <p> Since <code>cifscreds</code> adds keys to the session keyring, it is highly recommended that one use <code>pam_keyinit</code> to ensure that a session keyring is established at login time.</p>

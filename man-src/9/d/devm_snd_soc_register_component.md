@@ -15,19 +15,19 @@ devm_snd_soc_register_component - resource managed component registration
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Device used to manage component</dl>
+<dl><dd></dd><dd>Device used to manage component</dd></dl>
  
 
  <i>cmpnt_drv</i>
-<dl><dd>Component driver</dl>
+<dl><dd>Component driver</dd></dl>
  
 
  <i>dai_drv</i>
-<dl><dd>DAI driver</dl>
+<dl><dd>DAI driver</dd></dl>
  
 
  <i>num_dai</i>
-<dl><dd>Number of DAIs to register</dl>
+<dl><dd>Number of DAIs to register</dd></dl>
 
 <h2>Description</h2>
 

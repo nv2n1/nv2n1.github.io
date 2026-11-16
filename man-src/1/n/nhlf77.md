@@ -17,17 +17,17 @@ description: "nhlf77 – Command for compiling Fortran code that uses the NCAR G
 <p> Note that, on some systems, if you supply your own binary libraries in addition to the ones automatically referenced by <i>nhlf77</i>, all the libraries must have been created in a similar fashion. </p>
 <p> <i>OPTIONS</i></p>
 <dl>
-<dt>-ngmath</p>
-<dd> Links in the NCAR Graphics ngmath library. </p>
-<dt>-ncarbd</p>
-<dd> Use this option for compilers that appear to be having trouble initializing blockdata variables. It will cause a small subroutine to be linked in that helps force the loading of blockdata initialization routines. </p>
-<dt>-ngmathbd</p>
-<dd> Just like with the <code>-ncarbd</code> option, use this option for compilers that appear to be having trouble initializing Ngmath-related blockdata variables. It will cause a small subroutine to be linked in that helps force the loading of Ngmath blockdata initialization routines. </p>
+<dt>-ngmath</dt>
+<dd> Links in the NCAR Graphics ngmath library. </dd>
+<dt>-ncarbd</dt>
+<dd> Use this option for compilers that appear to be having trouble initializing blockdata variables. It will cause a small subroutine to be linked in that helps force the loading of blockdata initialization routines. </dd>
+<dt>-ngmathbd</dt>
+<dd> Just like with the <code>-ncarbd</code> option, use this option for compilers that appear to be having trouble initializing Ngmath-related blockdata variables. It will cause a small subroutine to be linked in that helps force the loading of Ngmath blockdata initialization routines. </dd>
 <p> Note: this option doesn&#8217;t need to be specified separately if you are already including the <code>-ncarbd</code> and <code>-ngmath</code> options. </p>
-<dt>-netcdf</p>
-<dd> Links in the netCDF library. This library is not part of NCAR Graphics, so check with your system administrator if you need it installed. You can obtain a copy of it by doing an anonymous ftp to unidata.ucar.edu. </p>
-<dt>-hdf</p>
-<dd> Links in the HDF library. This library is not part of NCAR Graphics, so check with your system administrator if you need it installed. You can obtain a copy of it by doing an anonymous ftp to <a href="ftp://ftp.ncsa.uiuc.edu">ftp.ncsa.uiuc.edu</a>. </p>
+<dt>-netcdf</dt>
+<dd> Links in the netCDF library. This library is not part of NCAR Graphics, so check with your system administrator if you need it installed. You can obtain a copy of it by doing an anonymous ftp to unidata.ucar.edu. </dd>
+<dt>-hdf</dt>
+<dd> Links in the HDF library. This library is not part of NCAR Graphics, so check with your system administrator if you need it installed. You can obtain a copy of it by doing an anonymous ftp to <a href="ftp://ftp.ncsa.uiuc.edu">ftp.ncsa.uiuc.edu</a>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Online: <code>nhlcc(1NCARG),</code> <code>ncargf77(1NCARG),</code> <code>ncargcc(1NCARG),</code> <code>ncargintro(5NCARG)</code> </p>

@@ -10,12 +10,12 @@ description: "XSetICFocus, XUnsetICFocus – set and unset input context focus"
 <p>XSetICFocus, XUnsetICFocus &#8211; set and unset input context focus </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>void XSetICFocus(XIC <i>ic</i>);</p>
-<dd>void XUnsetICFocus(XIC <i>ic</i>);</dl>
+<dd>void XSetICFocus(XIC <i>ic</i>);</dd>
+<dd>void XUnsetICFocus(XIC <i>ic</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>ic</i></p>
-<dd>Specifies the input context.</dl>
+<dt><i>ic</i></dt>
+<dd>Specifies the input context.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetICFocus</code> function allows a client to notify an input method that the focus window attached to the specified input context has received keyboard focus. The input method should take action to provide appropriate feedback. Complete feedback specification is a matter of user interface policy. </p>
 <p> Calling <code>XSetICFocus</code> does not affect the focus window value. </p>

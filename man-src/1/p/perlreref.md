@@ -24,7 +24,6 @@ description: "perlreref – Perl Regular Expressions Reference"
 <pre><code>
     m  Multiline mode - ^ and $ match internal lines
     s  match as a Single line - . matches 
-
     i  case-Insensitive
     x  eXtended legibility - free whitespace and comments
     p  Preserve a copy of the matched string -
@@ -76,9 +75,11 @@ description: "perlreref – Perl Regular Expressions Reference"
     Formfeed<br />
    
  Newline<br />
-    Carriage return<br />
+   
+ Carriage return<br />
    	 Tab<br />
     Char whose ordinal is the 3 octal digits, max \777<br />
    \o{2307} Char whose ordinal is the octal number, unrestricted<br />
     Char whose ordinal is the 2 hex digits, max �<br />
    
+</p>

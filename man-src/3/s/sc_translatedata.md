@@ -11,7 +11,6 @@ description: "sc::TranslateData –"
 <p> Generic data translation.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;translate.h&gt;</code></pre>
 <p> Inherited by <code>sc::TranslateDataByteSwap</code>.</p>
 <h3>Public Member Functions</h3>

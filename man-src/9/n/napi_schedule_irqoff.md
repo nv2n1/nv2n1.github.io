@@ -14,7 +14,7 @@ description: "napi_schedule_irqoff – schedule NAPI poll"
 <p><i>n</i></p>
 <dl>
 <dd>
-<dd>NAPI context</dl>
+</dd><dd>NAPI context</dd></dl>
 <h2>Description</h2>
 <p>Variant of <code>napi_schedule</code>, assuming hard irqs are masked.</p>
 <h2>Copyright</h2>

@@ -18,10 +18,10 @@ iconv_t iconv_open(const char *tocode, const char *fromcode);
 <p> The <code>iconv_open</code>() function allocates a conversion descriptor suitable for converting byte sequences from character encoding <i>fromcode</i> to character encoding <i>tocode</i>. </p>
 <p> The values permitted for <i>fromcode</i> and <i>tocode</i> and the supported combinations are system-dependent. For the GNU C library, the permitted values are listed by the <i>iconv &#8211;list</i> command, and all combinations of the listed values are supported. Furthermore the GNU C library and the GNU libiconv library support the following two suffixes:</p>
 <dl>
-<dt>//TRANSLIT</p>
-<dd> When the string &quot;//TRANSLIT&quot; is appended to <i>tocode</i>, transliteration is activated. This means that when a character cannot be represented in the target character set, it can be approximated through one or several similarly looking characters.</p>
-<dt>//IGNORE</p>
-<dd> When the string &quot;//IGNORE&quot; is appended to <i>tocode</i>, characters that cannot be represented in the target character set will be silently discarded.</dl>
+<dt>//TRANSLIT</dt>
+<dd> When the string &quot;//TRANSLIT&quot; is appended to <i>tocode</i>, transliteration is activated. This means that when a character cannot be represented in the target character set, it can be approximated through one or several similarly looking characters.</dd>
+<dt>//IGNORE</dt>
+<dd> When the string &quot;//IGNORE&quot; is appended to <i>tocode</i>, characters that cannot be represented in the target character set will be silently discarded.</dd></dl>
 <p> The resulting conversion descriptor can be used with <code>iconv</code>(3) any number of times. It remains valid until deallocated using <code>iconv_close</code>(3). </p>
 <p> A conversion descriptor contains a conversion state. After creation using <code>iconv_open</code>(), the state is in the initial state. Using <code>iconv</code>(3) modifies the descriptor&#8217;s conversion state. To bring the state back to the initial state, use <code>iconv</code>(3) with NULL as <i>inbuf</i> argument.</p>
 <h2>RETURN VALUE</h2>
@@ -29,8 +29,8 @@ iconv_t iconv_open(const char *tocode, const char *fromcode);
 <h2>ERRORS</h2>
 <p> The following error can occur, among others:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The conversion from <i>fromcode</i> to <i>tocode</i> is not supported by the implementation.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The conversion from <i>fromcode</i> to <i>tocode</i> is not supported by the implementation.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This function is available in glibc since version 2.1.</p>
 <h2>ATTRIBUTES</h2>

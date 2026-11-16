@@ -19,11 +19,11 @@ description: "extcheck – A utility to detect jar conflicts"
 <h2>Options</h2>
 <dl>
 <dd>
-<dl>
-<dt>-verbose</p>
-<dd>Lists Jar files in the extension directory as they are checked. Additionally, manifest attributes of the target jar file and any conflicting jar files are also reported.</p>
-<dt>-Joption</p>
-<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the <a href="/docs/linux/man/1-java/">java</a>(1). For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes.</dl>
+</dd><dl>
+<dt>-verbose</dt>
+<dd>Lists Jar files in the extension directory as they are checked. Additionally, manifest attributes of the target jar file and any conflicting jar files are also reported.</dd>
+<dt>-Joption</dt>
+<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the <a href="/docs/linux/man/1-java/">java</a>(1). For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-jar/">jar</a>(1) </p>

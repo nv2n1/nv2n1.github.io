@@ -10,7 +10,6 @@ description: "pack_fwrite – Writes n bytes to the stream. Allegro game program
 <p>pack_fwrite &#8211; Writes n bytes to the stream. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 long pack_fwrite(const void *p, long n, PACKFILE *f);</code></pre>
 <h2>Description</h2>
 <p>Writes `n&#8217; bytes to the stream `f&#8217; from memory location pointed to by `p&#8217;.</p>

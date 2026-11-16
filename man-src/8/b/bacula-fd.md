@@ -15,30 +15,30 @@ description: "bacula-fd – Bacula’s File Daemon"
  Bacula&#8217;s File Daemon acts as the interface between the Bacula network backup system and the filesystems to be backed up: it is responsible for reading/writing/verifying the files to be backup&#8217;d/verified/restored. Network transfer can optionally be compressed.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c&nbsp;<wbr></code><i>file</i></p>
-<dd>Specify the configuration file to use.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>Set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd>Print timestamp in debug output.</p>
-<dt><code>-f</code></p>
-<dd>Run in foreground (for debugging).</p>
-<dt><code>-g&nbsp;<wbr></code><i>group</i></p>
-<dd>Set the group/gid to run as.</p>
-<dt><code>-k</code></p>
-<dd>Keep readall permission when dropping privileges.</p>
-<dt><code>-m</code></p>
-<dd>Print kaboom output (for debugging)</p>
-<dt><code>-s</code></p>
-<dd>No signals (for debugging).</p>
-<dt><code>-t</code></p>
-<dd>Test the configuration file and report errors.</p>
-<dt><code>-u&nbsp;<wbr></code><i>user</i></p>
-<dd>Set the username/uid to run as.</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode.</p>
-<dt><code>-?</code></p>
-<dd>Show version and usage of program.</dl>
+<dt><code>-c&nbsp;<wbr></code><i>file</i></dt>
+<dd>Specify the configuration file to use.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>Set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd>Print timestamp in debug output.</dd>
+<dt><code>-f</code></dt>
+<dd>Run in foreground (for debugging).</dd>
+<dt><code>-g&nbsp;<wbr></code><i>group</i></dt>
+<dd>Set the group/gid to run as.</dd>
+<dt><code>-k</code></dt>
+<dd>Keep readall permission when dropping privileges.</dd>
+<dt><code>-m</code></dt>
+<dd>Print kaboom output (for debugging)</dd>
+<dt><code>-s</code></dt>
+<dd>No signals (for debugging).</dd>
+<dt><code>-t</code></dt>
+<dd>Test the configuration file and report errors.</dd>
+<dt><code>-u&nbsp;<wbr></code><i>user</i></dt>
+<dd>Set the username/uid to run as.</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode.</dd>
+<dt><code>-?</code></dt>
+<dd>Show version and usage of program.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8), <code><a href="/docs/linux/man/8-bacula-sd/">bacula-sd</a></code>(8).</p>
 <h2>Author</h2>

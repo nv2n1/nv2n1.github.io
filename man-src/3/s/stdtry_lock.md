@@ -11,10 +11,8 @@ std::try_lock - std::try_lock
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;mutex&gt;
-
     template &lt;class Lockable1, class Lockable2, class... LockableN&gt;
     (since C++ 11)
-
         int try_lock(Lockable1 &amp;lock1, Lockable2 &amp;lock2, LockableN &amp;...lockn);</code></pre> 
 Tries to lock each of the given Lockable objects lock1, lock2, ..., lockn by calling try_lock in order beginning with the first. 
 If a call to try_lock fails, no further call to try_lock is performed, unlock is called for any locked objects and a 0-based index of the object that failed to lock is returned. 
@@ -32,18 +30,12 @@ lock1, lock2, ... , lockn - the Lockable objects to lock
 
 The following example uses std::try_lock to periodically tally and reset counters running in separate threads. 
  // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     int foo_count = 0;
     std::mutex foo_count_mutex;

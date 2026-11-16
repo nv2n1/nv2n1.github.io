@@ -21,41 +21,14 @@ description: "sc::GDIISOpt –"
  <i>Take a step. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>int nsave
-
-
-
 int diis_iter
-
-
-
 double maxabs_gradient
-
-
-
 double convergence_
-
-
-
 double accuracy_
-
-
-
 RefSCVector * coords_
-
-
-
 RefSCVector * grad_
-
-
-
 RefSCVector * error_
-
-
-
 RefSymmSCMatrix ihessian_
-
-
-
 Ref&lt; HessianUpdate &gt; update_</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>void sc::GDIISOpt::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

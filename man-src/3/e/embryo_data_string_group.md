@@ -25,10 +25,10 @@ description: "Embryo Data String Functions – Functions that operate on strings
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The program whose virtual machine address is being queried.<br />
- <i>addr</i> The given cell.</dl>
+ <i>addr</i> The given cell.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to the cell at the given address.</dl>
+<dd>A pointer to the cell at the given address.</dd></dl>
 <p> Referenced by embryo_program_run().</p>
 <h3>EAPI void embryo_data_string_get (Embryo_Program * ep, Embryo_Cell * str_cell, char * dst)</h3>
 <p>Copies the string starting at the given cell to the given buffer. </p>
@@ -36,23 +36,23 @@ description: "Embryo Data String Functions – Functions that operate on strings
 <dl COMPACT>
 <dd><i>ep</i> The program the cell is part of.<br />
  <i>str_cell</i> Pointer to the first cell of the string.<br />
- <i>dst</i> The given buffer.</dl>
+ <i>dst</i> The given buffer.</dd></dl>
 <h3>EAPI int embryo_data_string_length_get (Embryo_Program * ep, Embryo_Cell * str_cell)</h3>
 <p>Retrieves the length of the string starting at the given cell. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The program the cell is part of.<br />
- <i>str_cell</i> Pointer to the first cell of the string.</dl>
+ <i>str_cell</i> Pointer to the first cell of the string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The length of the string. 0 is returned if there is an error.</dl>
+<dd>The length of the string. 0 is returned if there is an error.</dd></dl>
 <h3>EAPI void embryo_data_string_set (Embryo_Program * ep, const char * src, Embryo_Cell * str_cell)</h3>
 <p>Copies string in the given buffer into the virtual machine memory starting at the given cell. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The program the cell is part of.<br />
  <i>src</i> The given buffer.<br />
- <i>str_cell</i> Pointer to the first cell to copy the string to.</dl>
+ <i>str_cell</i> Pointer to the first cell to copy the string to.</dd></dl>
 <p> Referenced by embryo_program_run().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

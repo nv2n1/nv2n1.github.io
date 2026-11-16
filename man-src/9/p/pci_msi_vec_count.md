@@ -15,7 +15,7 @@ pci_msi_vec_count - Return the number of MSI vectors a device can send
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to report about</dl>
+<dl><dd></dd><dd>device to report about</dd></dl>
 
 <h2>Description</h2>
 

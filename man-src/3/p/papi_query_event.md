@@ -13,16 +13,16 @@ description: "PAPI_query_event –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_query_event(int EventCode)</code>;</dl>
 <p> <code>PAPI_query_event()</code> asks the PAPI library if the PAPI Preset event can be counted on this architecture. If the event CAN be counted, the function returns PAPI_OK. If the event CANNOT be counted, the function returns an error code. This function also can be used to check the syntax of native and user events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventCode</i> &#8212; a defined event such as PAPI_TOT_INS.</dl>
+<dd><i>EventCode</i> &#8212; a defined event such as PAPI_TOT_INS.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ENOEVNT</i> The PAPI preset is not available on the underlying hardware.</dl>
+ <i>PAPI_ENOEVNT</i> The PAPI preset is not available on the underlying hardware.</dd></dl>
 <p> <code>Examples</code></p>
 <dl COMPACT>
 <dd>
@@ -36,12 +36,13 @@ description: "PAPI_query_event –"
 * fprintf(stderr,* <a href="//www.systutorials.com/docs/linux/man/1-exit/">exit</a>(1);
 * }
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_remove_event</code> </p>
+<dd><code>PAPI_remove_event</code> </dd>
 <p> <code>PAPI_remove_events</code> </p>
 <p> PAPI_presets </p>
 <p> PAPI_native</dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

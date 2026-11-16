@@ -18,30 +18,30 @@ description: "kml2gmt – Extract GMT table data from Google Earth KML files"
 <p> None.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>kmlfiles</i></p>
-<dd> Name of one or more KML files to work on. If not are given, then standard input is read.</p>
-<dt><code>-F</code><code>s</code>|<code>l</code>|<code>p</code></p>
-<dd> Specify a particular feature type to output. Choose from points (<code>s</code>), <code>l</code>ine, or <code>p</code>olygon. By default we output all geometries.</p>
-<dt><code>-Z</code></p>
-<dd> Output the altitude coordinates as GMT z coordinates [Default will output just longitude and latitude].</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output.</p>
-<dt><code>-do</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace output columns that equal NaN with <i>nodata</i>.</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>kmlfiles</i></dt>
+<dd> Name of one or more KML files to work on. If not are given, then standard input is read.</dd>
+<dt><code>-F</code><code>s</code>|<code>l</code>|<code>p</code></dt>
+<dd> Specify a particular feature type to output. Choose from points (<code>s</code>), <code>l</code>ine, or <code>p</code>olygon. By default we output all geometries.</dd>
+<dt><code>-Z</code></dt>
+<dd> Output the altitude coordinates as GMT z coordinates [Default will output just longitude and latitude].</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output.</dd>
+<dt><code>-do</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace output columns that equal NaN with <i>nodata</i>.</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To extract the lon,lat values from the KML file google.kml, try gmt kml2gmt google.kml -V &gt; google.txt </p>
 <p> To separate the point and polygon geometries from the KML file google.kml, try gmt kml2gmt google.kml -Fp -V &gt; polygons.txt gmt kml2gmt google.kml -Fs -V &gt; points.txt</p>

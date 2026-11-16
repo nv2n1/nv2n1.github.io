@@ -18,31 +18,31 @@ description: "wt – WiredTiger command line utility WiredTiger includes a comma
 <p> <code>-C config</code></p>
 <dl>
 <dt>
-<dd> Specify configuration strings for the <code>wiredtiger_open</code> function.</dl>
+</dt><dd> Specify configuration strings for the <code>wiredtiger_open</code> function.</dd></dl>
 <p> <code>-E secretkey</code></p>
 <dl>
 <dt>
-<dd> Specify an encryption secret key for the <code>wiredtiger_open</code> function.</dl>
+</dt><dd> Specify an encryption secret key for the <code>wiredtiger_open</code> function.</dd></dl>
 <p> <code>-h directory</code></p>
 <dl>
 <dt>
-<dd> Specify a database home directory.</dl>
+</dt><dd> Specify a database home directory.</dd></dl>
 <p> <code>-L</code></p>
 <dl>
 <dt>
-<dd> Forcibly turn off logging subsystem for debugging purposes.</dl>
+</dt><dd> Forcibly turn off logging subsystem for debugging purposes.</dd></dl>
 <p> <code>-R</code></p>
 <dl>
 <dt>
-<dd> Run recovery if the underlying database is configured to do so.</dl>
+</dt><dd> Run recovery if the underlying database is configured to do so.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
 <dt>
-<dd> Display WiredTiger version and exit.</dl>
+</dt><dd> Display WiredTiger version and exit.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Set verbose output.</dl>
+</dt><dd> Set verbose output.</dd></dl>
 <p> Unless otherwise described by a wt command, the wt tool exits zero on success and non-zero on error. </p>
 <p> The wt tool supports several commands. If configured in the underlying database, some commands will run recovery when opening the database. If the user wants to force recovery on any command, use the -r option. In general, commands that modify the database or tables will run recovery by default and commands that only read data will not run recovery. </p>
 <p>&nbsp;<wbr></p>
@@ -56,7 +56,7 @@ description: "wt – WiredTiger command line utility WiredTiger includes a comma
 <p> <code>-t uri</code></p>
 <dl>
 <dt>
-<dd> By default, the backup command does a backup of the entire database; the -t option changes the backup command to do a backup of only the named data sources.</dl>
+</dt><dd> By default, the backup command does a backup of the entire database; the -t option changes the backup command to do a backup of only the named data sources.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt compact</h2>
 <p> Compact a table or file. </p>
@@ -76,7 +76,7 @@ description: "wt – WiredTiger command line utility WiredTiger includes a comma
 <p> <code>-c</code></p>
 <dl>
 <dt>
-<dd> Include a configuration string to be passed to <code>WT_SESSION::create</code>.</dl>
+</dt><dd> Include a configuration string to be passed to <code>WT_SESSION::create</code>.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt drop</h2>
 <p> Drop a table or file. </p>
@@ -97,23 +97,23 @@ description: "wt – WiredTiger command line utility WiredTiger includes a comma
 <p> <code>-c</code></p>
 <dl>
 <dt>
-<dd> By default, the dump command opens the most recent version of the data source; the -c option changes the dump command to open the named checkpoint.</dl>
+</dt><dd> By default, the dump command opens the most recent version of the data source; the -c option changes the dump command to open the named checkpoint.</dd></dl>
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> By default, the dump command output is written to the standard output; the -f option re-directs the output to the specified file.</dl>
+</dt><dd> By default, the dump command output is written to the standard output; the -f option re-directs the output to the specified file.</dd></dl>
 <p> <code>-j</code></p>
 <dl>
 <dt>
-<dd> Dump in JSON (JavaScript Object Notation) format.</dl>
+</dt><dd> Dump in JSON (JavaScript Object Notation) format.</dd></dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> Dump in reverse order, from largest key to smallest.</dl>
+</dt><dd> Dump in reverse order, from largest key to smallest.</dd></dl>
 <p> <code>-x</code></p>
 <dl>
 <dt>
-<dd> Dump all characters in a hexadecimal encoding (the default is to leave printable characters unencoded).</dl>
+</dt><dd> Dump all characters in a hexadecimal encoding (the default is to leave printable characters unencoded).</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt list</h2>
 <p> List the tables and files in the database. </p>
@@ -125,11 +125,11 @@ description: "wt – WiredTiger command line utility WiredTiger includes a comma
 <p> <code>-c</code></p>
 <dl>
 <dt>
-<dd> If the -c option is specified, the data source&#8217;s checkpoints are printed in a human-readable format.</dl>
+</dt><dd> If the -c option is specified, the data source&#8217;s checkpoints are printed in a human-readable format.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> If the -v option is specified, the data source&#8217;s complete schema table value is printed.</dl>
+</dt><dd> If the -v option is specified, the data source&#8217;s complete schema table value is printed.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt load</h2>
 <p> Load a table or file from dump output. </p>
@@ -142,23 +142,23 @@ description: "wt – WiredTiger command line utility WiredTiger includes a comma
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> If the -a option is specified, record number keys in the input are ignored and the data is appended to the data source and assigned new record number keys. The -a option is only applicable when loading into a column store.</dl>
+</dt><dd> If the -a option is specified, record number keys in the input are ignored and the data is appended to the data source and assigned new record number keys. The -a option is only applicable when loading into a column store.</dd></dl>
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> By default, the load command reads from the standard input; the -f option reads the input from the specified file.</dl>
+</dt><dd> By default, the load command reads from the standard input; the -f option reads the input from the specified file.</dd></dl>
 <p> <code>-j</code></p>
 <dl>
 <dt>
-<dd> Load input in the JSON (JavaScript Object Notation) format that was created by the dump -j command.</dl>
+</dt><dd> Load input in the JSON (JavaScript Object Notation) format that was created by the dump -j command.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> By default, input data will overwrite existing data where the key/value pair already exists in the data source; the -n option causes the load command to fail if there&#8217;s an attempt to overwrite already existing data.</dl>
+</dt><dd> By default, input data will overwrite existing data where the key/value pair already exists in the data source; the -n option causes the load command to fail if there&#8217;s an attempt to overwrite already existing data.</dd></dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> By default, the load command uses the table or file name taken from the input; the -r option renames the data source.</dl>
+</dt><dd> By default, the load command uses the table or file name taken from the input; the -r option renames the data source.</dd></dl>
 <p> Additionally, uri and configuration pairs may be specified to the load command. These configuration pairs can be used to modify the configuration values from the dump header passed to the <code>WT_SESSION::create</code> call. </p>
 <p> The uri part of the configuration pair should match only one of the objects being loaded, but may be a prefix of the object being matched. For example, the following two sets of configuration pairs are equivalent in the case of loading a single table named xxx. </p>
 <pre>
@@ -184,7 +184,7 @@ table:xxx block_allocation=first table:xxx prefix_compress=false
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> By default, the loadtext command reads from the standard input; the -f option reads the input from the specified file.</dl>
+</dt><dd> By default, the loadtext command reads from the standard input; the -f option reads the input from the specified file.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt printlog</h2>
 <p> Display the database log. </p>
@@ -196,11 +196,11 @@ table:xxx block_allocation=first table:xxx prefix_compress=false
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> By default, the printlog command output is written to the standard output; the -f option re-directs the output to the specified file.</dl>
+</dt><dd> By default, the printlog command output is written to the standard output; the -f option re-directs the output to the specified file.</dd></dl>
 <p> <code>-p</code></p>
 <dl>
 <dt>
-<dd> Display the log in a printable format.</dl>
+</dt><dd> Display the log in a printable format.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt read</h2>
 <p> Read records from a table or file. </p>
@@ -229,7 +229,7 @@ table:xxx block_allocation=first table:xxx prefix_compress=false
 <p> <code>-F</code></p>
 <dl>
 <dt>
-<dd> By default, salvage will refuse to salvage files that fail basic tests (for example, files that don&#8217;t appear to be in a WiredTiger format). The -F option forces the salvage of the file, regardless.</dl>
+</dt><dd> By default, salvage will refuse to salvage files that fail basic tests (for example, files that don&#8217;t appear to be in a WiredTiger format). The -F option forces the salvage of the file, regardless.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt stat</h2>
 <p> Display database or data source statistics. </p>
@@ -241,7 +241,7 @@ table:xxx block_allocation=first table:xxx prefix_compress=false
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> Include only &#8216;fast&#8217; statistics in the output (equivalent to passing statistics=(fast)) to <code>WT_SESSION::open_cursor</code>.</dl>
+</dt><dd> Include only &#8216;fast&#8217; statistics in the output (equivalent to passing statistics=(fast)) to <code>WT_SESSION::open_cursor</code>.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>wt upgrade</h2>
 <p> Upgrade a table or file. </p>
@@ -272,9 +272,9 @@ table:xxx block_allocation=first table:xxx prefix_compress=false
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> Append each value as a new record in the data source.</dl>
+</dt><dd> Append each value as a new record in the data source.</dd></dl>
 <p> <code>-o</code></p>
 <dl>
 <dt>
-<dd> By default, attempting to overwrite an already existing record will fail. The -o option changes write to overwrite previously existing records.</dl>
+</dt><dd> By default, attempting to overwrite an already existing record will fail. The -o option changes write to overwrite previously existing records.</dd></dl>
 <h2>Index</h2>

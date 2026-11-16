@@ -1332,7 +1332,7 @@ description: "XmDialogShell — The DialogShell widget class"
 </table>
 </table>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> If values for XmNminWidth</code> and <code>XmNminHeight</code> are present, and values for <code>XmNbaseWidth</code> and <code>XmNbaseHeight</code> are absent, <code>XmNminWidth</code> and <code>XmNminHeight</code> will be used as default values for <code>XmNbaseWidth</code> and <code>XmNbaseHeight</code>, and these values will be added to the shell size specified by the user. To work around this, add arguments during widget creation to explicitly set <code>XmNbaseWidth</code> and <code>XmNbaseHeight</code> to zero.</dl>
 <table BORDER>
 <tr>
@@ -2193,3 +2193,4 @@ description: "XmDialogShell — The DialogShell widget class"
 <p>There are no translations for XmDialogShell.</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-shell/">Shell</a></code>(3), <code><a href="/docs/linux/man/3-transientshell/">TransientShell</a></code>(3), <code><a href="/docs/linux/man/3-wmshell/">WMShell</a></code>(3), <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), and <code><a href="/docs/linux/man/3-xmcreatedialogshell/">XmCreateDialogShell</a></code>(3).</p>
+</p>

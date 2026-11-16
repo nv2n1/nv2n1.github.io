@@ -14,16 +14,16 @@ description: "usb_get_status – issues a GET_STATUS call"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device whose status is being checked</dl>
+</dd><dd>the device whose status is being checked</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>USB_RECIP_*; for device, interface, or endpoint</dl>
+<dd>USB_RECIP_*; for device, interface, or endpoint</dd></dl>
 <p> <i>target</i></p>
 <dl>
-<dd>zero (for device), else interface or endpoint number</dl>
+<dd>zero (for device), else interface or endpoint number</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>pointer to two bytes of bitmap data</dl>
+<dd>pointer to two bytes of bitmap data</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

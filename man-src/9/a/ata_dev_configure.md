@@ -14,7 +14,7 @@ description: "ata_dev_configure – Configure the specified ATA/ATAPI device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Target device to configure</dl>
+</dd><dd>Target device to configure</dd></dl>
 <h2>Description</h2>
 <p>Configure <i>dev</i> according to <i>dev</i>-&gt;id. Generic and low-level driver specific fixups are also applied. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
@@ -23,5 +23,5 @@ description: "ata_dev_configure – Configure the specified ATA/ATAPI device"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

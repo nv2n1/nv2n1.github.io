@@ -15,11 +15,11 @@ d_hash_and_lookup - hash the qstr then search for a dentry
 <h2>Arguments</h2>
 
 <i>dir</i>
-<dl><dd><dd>Directory to search in</dl>
+<dl><dd></dd><dd>Directory to search in</dd></dl>
  
 
  <i>name</i>
-<dl><dd>qstr of name we wish to find</dl>
+<dl><dd>qstr of name we wish to find</dd></dl>
 
 <h2>Description</h2>
 

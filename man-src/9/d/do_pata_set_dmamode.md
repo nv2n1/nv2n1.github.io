@@ -14,18 +14,18 @@ description: "do_pata_set_dmamode – Initialize host controller PATA PIO timing
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>Port whose timings we are configuring</dl>
+</dd><dd>Port whose timings we are configuring</dd></dl>
 <p> <i>adev</i></p>
 <dl>
-<dd>Drive in question</dl>
+<dd>Drive in question</dd></dl>
 <p> <i>isich</i></p>
 <dl>
-<dd>set if the chip is an ICH device</dl>
+<dd>set if the chip is an ICH device</dd></dl>
 <h2>Description</h2>
 <p>Set UDMA mode for device, in host controller PCI config space. </p>
 <p> LOCKING: None (inherited from caller).</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

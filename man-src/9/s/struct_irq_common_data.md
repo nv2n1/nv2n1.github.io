@@ -24,27 +24,27 @@ description: "struct_irq_common_data – per irq data shared by all irqchips"
 <h2>Members</h2>
 <p>state_use_accessors</p>
 <dl>
-<dd>status information for irq chip functions. Use accessor functions to deal with it</dl>
+<dd>status information for irq chip functions. Use accessor functions to deal with it</dd></dl>
 <p> node</p>
 <dl>
-<dd>node index useful for balancing</dl>
+<dd>node index useful for balancing</dd></dl>
 <p> handler_data</p>
 <dl>
-<dd>per-IRQ data for the irq_chip methods</dl>
+<dd>per-IRQ data for the irq_chip methods</dd></dl>
 <p> msi_desc</p>
 <dl>
-<dd>MSI descriptor</dl>
+<dd>MSI descriptor</dd></dl>
 <p> affinity</p>
 <dl>
-<dd>IRQ affinity on SMP. If this is an IPI related irq, then this is the mask of the CPUs to which an IPI can be sent.</dl>
+<dd>IRQ affinity on SMP. If this is an IPI related irq, then this is the mask of the CPUs to which an IPI can be sent.</dd></dl>
 <p> ipi_offset</p>
 <dl>
-<dd>Offset of first IPI target cpu in <i>affinity</i>. Optional.</dl>
+<dd>Offset of first IPI target cpu in <i>affinity</i>. Optional.</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

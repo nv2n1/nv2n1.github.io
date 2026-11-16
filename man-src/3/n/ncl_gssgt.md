@@ -12,9 +12,9 @@ GSSGT (Set segment transformation) - Associates a segment transformation with a 
 
  void gset_seg_tran(Gint seg_name, const Gtran_matrix tran_matrix);
 <h2>Description</h2><dl COMPACT><dt>SGNA
-<dd>(Integer, Input) - A segment name as used in a previous GCRSG call.
-<dt>M
-<dd>(Real, Input) - A 2x3 array giving the GKS segment transformation to be associated with the segment specified in SGNA.</dl><h2>Usage</h2>When the segment named in SGNA is displayed, the coordinates of its primitives are transformed by the matrix specified in M. 
+</dt><dd>(Integer, Input) - A segment name as used in a previous GCRSG call.
+</dd><dt>M
+</dt><dd>(Real, Input) - A 2x3 array giving the GKS segment transformation to be associated with the segment specified in SGNA.</dd></dl><h2>Usage</h2>When the segment named in SGNA is displayed, the coordinates of its primitives are transformed by the matrix specified in M. 
 
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gactm, gevtm, gclsg, gcrsg, gcsgwk, gdsg, gqopsg, gqsgus., gset_seg_tran 

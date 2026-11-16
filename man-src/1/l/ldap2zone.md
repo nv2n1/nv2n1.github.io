@@ -16,19 +16,19 @@ description: "ldap2zone – Creates zone file from LDAP dnszone information"
 <p> <code>zone-name</code></p>
 <dl>
 <dt>
-<dd> Name of the zone, eg &quot;mydomain.net.&quot;</dl>
+</dt><dd> Name of the zone, eg &quot;mydomain.net.&quot;</dd></dl>
 <p> <code>LDAP-URL</code></p>
 <dl>
 <dt>
-<dd> LDAP URL to dnszone information</dl>
+</dt><dd> LDAP URL to dnszone information</dd></dl>
 <p> <code>default-ttl</code></p>
 <dl>
 <dt>
-<dd> Default TTL value to be used in zone</dl>
+</dt><dd> Default TTL value to be used in zone</dd></dl>
 <p> <code>serial</code></p>
 <dl>
 <dt>
-<dd> (optional) Program checks this number to be different than SOA serial number.</dl>
+</dt><dd> (optional) Program checks this number to be different than SOA serial number.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Exits with 0 on success or 1 on failure.</p>
 <h2>SEE ALSO</h2>

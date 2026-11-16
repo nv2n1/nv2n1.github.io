@@ -26,23 +26,20 @@ description: "dtgevc.f –"
  as computed by DGGHRD + DHGEQZ.
  The right eigenvector x and the left eigenvector y of (S,P)
  corresponding to an eigenvalue w are defined by:
- 
  S*x = w*P*x, (y**H)*S = w*(y**H)*P,
- 
  where y**H denotes the conjugate tranpose of y.
  The eigenvalues are not input to this routine, but are computed
  directly from the diagonal blocks of S and P.
- 
  This routine returns the matrices X and/or Y of right and left
  eigenvectors of (S,P), or the products Z*X and/or Q*Y,
  where Z and Q are input matrices.
  If Q and Z are the orthogonal factors from the generalized Schur
  factorization of a matrix pair (A,B), then Z*X and Q*Y
  are the matrices of right and left eigenvectors of (A,B).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'R': compute right eigenvectors only;
  = 'L': compute left eigenvectors only;
@@ -118,7 +115,6 @@ description: "dtgevc.f –"
  A complex eigenvector corresponding to a complex eigenvalue
  is stored in two consecutive columns, the first holding the
  real part and the second the imaginary part.
- 
  Not referenced if SIDE = 'L'.</pre>
 <p><i>LDVR</i> </p>
 <pre> LDVR is INTEGER
@@ -145,13 +141,13 @@ description: "dtgevc.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -195,7 +191,8 @@ description: "dtgevc.f –"
  transpose of the one in storage, so the rowwise method then
  actually accesses columns of A and B at each step, and so is the
  preferred method.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 295 of file dtgevc.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

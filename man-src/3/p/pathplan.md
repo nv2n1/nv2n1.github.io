@@ -10,39 +10,28 @@ description: "libpathplan – finds and smooths shortest paths"
 <p><code>libpathplan</code> &#8211; finds and smooths shortest paths</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;graphviz/pathplan.h&gt;
-
 typedef struct Pxy_t {
     double x, y;
 } Pxy_t;
-
 typedef struct Pxy_t Ppoint_t;
 typedef struct Pxy_t Pvector_t;
-
 typedef struct Ppoly_t {
     Ppoint_t *ps;
     int pn;
 } Ppoly_t;
-
 typedef Ppoly_t Ppolyline_t;
-
 typedef struct Pedge_t {
     Ppoint_t a, b;
 } Pedge_t;
-
 typedef struct vconfig_s vconfig_t;
-
 #define POLYID_NONE
 #define POLYID_UNKNOWN
-
 int Pshortestpath(Ppoly_t *boundary, Ppoint_t endpoints[2], Ppolyline_t *output_route);
-
 vconfig_t *Pobsopen(Ppoly_t **obstacles, int n_obstacles);
 int Pobspath(vconfig_t *config, Ppoint_t p0, int poly0, Ppoint_t p1, int poly1, Ppolyline_t *output_route);
 void Pobsclose(vconfig_t *config);
-
 int Proutespline(Pedge_t *barriers, int n_barriers, Ppolyline_t input_route, Pvector_t endpoint_slopes[2],
                  Ppolyline_t *output_route);
-
 int Ppolybarriers(Ppoly_t **polys, int n_polys, Pedge_t **barriers, int *n_barriers);</code></pre>
 <h2>Description</h2>
 <p><code>libpathplan</code> provides functions for creating spline paths in the plane that are constrained by a polygonal boundary or obstacles to avoid. All polygons must be simple, but need not be convex. int Proutespline(Pedge_t *barriers, int n_barriers, Ppolyline_t input_route, Pvector_t endpoint_slopes[2], Ppolyline_t *output_route);</p>
@@ -65,7 +54,6 @@ a return value of &#8211; 1 indicates<br />
 <h3> void Pobsclose(vconfig_t *config);</h3>
 <p>These functions find a shortest path between two points in the plane that contains polygonal obstacles (holes). <i>Pobsopen</i> creates a configuration (an opaque struct of type vconfig_t) on a set of obstacles. The <i>n_obstacles</i> obstacles are given in the array <i>obstacles</i>; the points of each polygon should be in clockwise order. The function <i>Pobsclose</i> frees the data allocated in <i>Pobsopen</i>. Pobspath finds a shortest path between the endpoints that remains outside the obstacles. If the endpoints are known to lie inside obstacles, poly0 or poly1 should be set to the index in the obstacles array. If an endpoint is definitely not inside an obstacle, then POLYID_NONE should be passed. If the caller has not checked, then POLYID_UNKNOWN should be passed, and the path library will perform the test. The resulting shortest path is returned in <i>output_route</i>. Note that this function does not provide for a boundary polygon. The array of points stored in <i>output_route</i> are allocated by the library, but should be freed by the user. </p>
 <pre><code>int Proutespline(Pedge_t *barriers, int n_barriers, Ppolyline_t input_route, Pvector_t endpoint_slopes[2], Ppolyline_t *output_route);
-
 This function fits a cubic B-spline curve to a polyline path.
 The curve is constructed to avoid a set of n_barriers barrier line segments
 specified in the array barriers. If you start with polygonal obstacles, you

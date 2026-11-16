@@ -15,10 +15,10 @@ description: "prunehistory – Remove tokens from Usenet history file"
 <p> <code>prunehistory</code> reads the standard input. The input is taken as a set of lines. Blank lines and lines starting with a number sign (<tt>&quot;#&quot;</tt>) are ignored. All other lines should consist of a message-ID followed by zero or more other fields (which are ignored). The message-ID is used as the <i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3) key to get an offset into the text file. Since <code>innd</code> only appends to the text file, <code>prunehistory</code> does not need to have any interaction with it.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-p</code></p>
-<dd><code>prunehistory</code> will normally complain about lines that do not follow the correct format. If the <code>-p</code> flag is used, then the program will silently print any invalid lines on its standard output. (Blank lines and comment lines are also passed through.)</p>
-<dt><code>-f</code> <i>filename</i></p>
-<dd>The default name of the <i>history</i> file is <i>pathdb</i>/history; to specify a different name, use the <code>-f</code> flag.</dl>
+<dt><code>-p</code></dt>
+<dd><code>prunehistory</code> will normally complain about lines that do not follow the correct format. If the <code>-p</code> flag is used, then the program will silently print any invalid lines on its standard output. (Blank lines and comment lines are also passed through.)</dd>
+<dt><code>-f</code> <i>filename</i></dt>
+<dd>The default name of the <i>history</i> file is <i>pathdb</i>/history; to specify a different name, use the <code>-f</code> flag.</dd></dl>
 <h2>History</h2>
 <p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> prunehistory.pod 9448 2012-12-07 19:01:58Z eagle $</p>

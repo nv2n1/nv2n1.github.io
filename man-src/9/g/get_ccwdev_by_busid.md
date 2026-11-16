@@ -14,10 +14,10 @@ description: "get_ccwdev_by_busid – obtain device from a bus id"
 <p><i>cdrv</i></p>
 <dl>
 <dd>
-<dd>driver the device is owned by</dl>
+</dd><dd>driver the device is owned by</dd></dl>
 <p> <i>bus_id</i></p>
 <dl>
-<dd>bus id of the device to be searched</dl>
+<dd>bus id of the device to be searched</dd></dl>
 <h2>Description</h2>
 <p>This function searches all devices owned by <i>cdrv</i> for a device with a bus id matching <i>bus_id</i>.</p>
 <h2>Return</h2>
@@ -25,5 +25,5 @@ description: "get_ccwdev_by_busid – obtain device from a bus id"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

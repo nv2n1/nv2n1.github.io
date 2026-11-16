@@ -10,7 +10,6 @@ description: "uwidth – Low level helper function for testing Unicode text data
 <p>uwidth &#8211; Low level helper function for testing Unicode text data. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uwidth(const char *s);</code></pre>
 <h2>Description</h2>
 <p>Low level helper function for testing Unicode text data.</p>

@@ -17,7 +17,7 @@ description: "puppet-device – Manage remote network devices"
 <dd>
 <pre> [-h|--help] [-l|--logdest syslog|&lt;file&gt;|console]
  [-v|--verbose] [-w|--waitforcert &lt;seconds&gt;]</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Description</h2>
 <p>Once the client has a signed certificate for a given remote device, it will retrieve its configuration and apply it.</p>
 <h2>Usage Notes</h2>
@@ -29,18 +29,18 @@ description: "puppet-device – Manage remote network devices"
 <h2>Options</h2>
 <p>Note that any configuration parameter that&#8217;s valid in the configuration file is also a valid long argument. For example, &#8216;server&#8217; is a valid configuration parameter, so you can specify &#8216;&#8211;server <i>servername</i>&#8216; as an argument.</p>
 <dl>
-<dt>&#8211;debug</p>
-<dd>Enable full debugging.</p>
-<dt>&#8211;detailed-exitcodes</p>
-<dd>Provide transaction information via exit codes. If this is enabled, an exit code of &#8216;2&#8217; means there were changes, an exit code of &#8216;4&#8217; means there were failures during the transaction, and an exit code of &#8216;6&#8217; means there were both changes and failures.</p>
-<dt>&#8211;help</p>
-<dd>Print this help message</p>
-<dt>&#8211;logdest</p>
-<dd>Where to send messages. Choose between syslog, the console, and a log file. Defaults to sending messages to syslog, or the console if debugging or verbosity is enabled.</p>
-<dt>&#8211;verbose</p>
-<dd>Turn on verbose reporting.</p>
-<dt>&#8211;waitforcert</p>
-<dd>This option only matters for daemons that do not yet have certificates and it is enabled by default, with a value of 120 (seconds). This causes +puppet agent+ to connect to the server every 2 minutes and ask it to sign a certificate request. This is useful for the initial setup of a puppet client. You can turn off waiting for certificates by specifying a time of 0.</dl>
+<dt>&#8211;debug</dt>
+<dd>Enable full debugging.</dd>
+<dt>&#8211;detailed-exitcodes</dt>
+<dd>Provide transaction information via exit codes. If this is enabled, an exit code of &#8216;2&#8217; means there were changes, an exit code of &#8216;4&#8217; means there were failures during the transaction, and an exit code of &#8216;6&#8217; means there were both changes and failures.</dd>
+<dt>&#8211;help</dt>
+<dd>Print this help message</dd>
+<dt>&#8211;logdest</dt>
+<dd>Where to send messages. Choose between syslog, the console, and a log file. Defaults to sending messages to syslog, or the console if debugging or verbosity is enabled.</dd>
+<dt>&#8211;verbose</dt>
+<dd>Turn on verbose reporting.</dd>
+<dt>&#8211;waitforcert</dt>
+<dd>This option only matters for daemons that do not yet have certificates and it is enabled by default, with a value of 120 (seconds). This causes +puppet agent+ to connect to the server every 2 minutes and ask it to sign a certificate request. This is useful for the initial setup of a puppet client. You can turn off waiting for certificates by specifying a time of 0.</dd></dl>
 <h2>Example</h2>
 <pre> $ puppet device --server puppet.domain.com</pre>
 <h2>Author</h2>

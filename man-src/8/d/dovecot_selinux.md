@@ -147,30 +147,30 @@ description: "dovecot_selinux – Security Enhanced Linux Policy for the dovecot
 <p> <code>dovecot_auth_exec_t</code> </p>
 <p> &#8211; Set files with the dovecot_auth_exec_t type, if you want to transition an executable to the dovecot_auth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/dovecot/auth, /usr/libexec/dovecot/dovecot-auth </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/dovecot/auth, /usr/libexec/dovecot/dovecot-auth </dd>
 </dl>
 <p> <code>dovecot_auth_tmp_t</code> </p>
 <p> &#8211; Set files with the dovecot_auth_tmp_t type, if you want to store dovecot auth temporary files in the /tmp directories. </p>
 <p> <code>dovecot_cert_t</code> </p>
 <p> &#8211; Set files with the dovecot_cert_t type, if you want to treat the files as dovecot certificate data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pki/dovecot(/.*)?, /usr/share/ssl/certs/dovecot.pem, /usr/share/ssl/private/dovecot.pem </p>
+<dt>Paths:</dt>
+<dd>/etc/pki/dovecot(/.*)?, /usr/share/ssl/certs/dovecot.pem, /usr/share/ssl/private/dovecot.pem </dd>
 </dl>
 <p> <code>dovecot_deliver_exec_t</code> </p>
 <p> &#8211; Set files with the dovecot_deliver_exec_t type, if you want to transition an executable to the dovecot_deliver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/dovecot/deliver, /usr/libexec/dovecot/dovecot-lda </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/dovecot/deliver, /usr/libexec/dovecot/dovecot-lda </dd>
 </dl>
 <p> <code>dovecot_deliver_tmp_t</code> </p>
 <p> &#8211; Set files with the dovecot_deliver_tmp_t type, if you want to store dovecot deliver temporary files in the /tmp directories. </p>
 <p> <code>dovecot_etc_t</code> </p>
 <p> &#8211; Set files with the dovecot_etc_t type, if you want to store dovecot files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/dovecot(/.*)?, /etc/dovecot.conf.* </p>
+<dt>Paths:</dt>
+<dd>/etc/dovecot(/.*)?, /etc/dovecot.conf.* </dd>
 </dl>
 <p> <code>dovecot_exec_t</code> </p>
 <p> &#8211; Set files with the dovecot_exec_t type, if you want to transition an executable to the dovecot_t domain. </p>
@@ -187,14 +187,14 @@ description: "dovecot_selinux – Security Enhanced Linux Policy for the dovecot
 <p> <code>dovecot_var_lib_t</code> </p>
 <p> &#8211; Set files with the dovecot_var_lib_t type, if you want to store the dovecot files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/dovecot(/.*)?, /var/run/dovecot/login/ssl-parameters.dat </p>
+<dt>Paths:</dt>
+<dd>/var/lib/dovecot(/.*)?, /var/run/dovecot/login/ssl-parameters.dat </dd>
 </dl>
 <p> <code>dovecot_var_log_t</code> </p>
 <p> &#8211; Set files with the dovecot_var_log_t type, if you want to treat the data as dovecot var log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/dovecot(/.*)?, /var/log/dovecot.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/dovecot(/.*)?, /var/log/dovecot.log.* </dd>
 </dl>
 <p> <code>dovecot_var_run_t</code> </p>
 <p> &#8211; Set files with the dovecot_var_run_t type, if you want to store the dovecot files under the /run or /var/run directory. </p>

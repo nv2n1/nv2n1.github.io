@@ -23,42 +23,42 @@ description: "ipmiutil_getevt – wait for IPMI events"
 <h2>Options</h2>
 <p>Command line options are described below. </p>
 <dl>
-<dt>-a</p>
-<dd>Use the Async request method, which receives SMS OS requests from the BMC using the IMB or OpenIPMI driver interface. This services remote SMS bridge agent requests, like remote OS shutdown and get software_id.</p>
-<dt>-b</p>
-<dd>Run in Background as a daemon. If this option is specified, normal output will be redirected to /var/log/ipmiutil_getevt.log. The default is to run in foreground.</p>
-<dt>-c</p>
-<dd>Show output in a canonical format, with a delimiter of &#8216;|&#8217;.</p>
-<dt>-e N</p>
-<dd>Wait for a specific event sensor type N. The parameter can be in hex (0x23) or decimal (35). The default is 0xFF which means wait for any event.</p>
-<dt>-r F</p>
-<dd>Run script file F when an event occurs. The filename can include a full path. The script will be passed the event description as a parameter. A sample evt.sh script is included with the ipmiutil package.</p>
-<dt>-o</p>
-<dd>Only run one pass to wait for the first event. Default is to loop for multiple events for the timeout period.</p>
-<dt>-s</p>
-<dd>Use the SEL method to get events. This polls the SEL once a second for new events. The last SEL record read is saved in /usr/share/ipmiutil/evt.idx. Otherwise, the default is to use the ReadEventMessageBuffer method to get new events.</p>
-<dt>-t N</p>
-<dd>Set the timeout period to N seconds. Default is 120 seconds. A timeout of 0 means an infinite period.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-a</dt>
+<dd>Use the Async request method, which receives SMS OS requests from the BMC using the IMB or OpenIPMI driver interface. This services remote SMS bridge agent requests, like remote OS shutdown and get software_id.</dd>
+<dt>-b</dt>
+<dd>Run in Background as a daemon. If this option is specified, normal output will be redirected to /var/log/ipmiutil_getevt.log. The default is to run in foreground.</dd>
+<dt>-c</dt>
+<dd>Show output in a canonical format, with a delimiter of &#8216;|&#8217;.</dd>
+<dt>-e N</dt>
+<dd>Wait for a specific event sensor type N. The parameter can be in hex (0x23) or decimal (35). The default is 0xFF which means wait for any event.</dd>
+<dt>-r F</dt>
+<dd>Run script file F when an event occurs. The filename can include a full path. The script will be passed the event description as a parameter. A sample evt.sh script is included with the ipmiutil package.</dd>
+<dt>-o</dt>
+<dd>Only run one pass to wait for the first event. Default is to loop for multiple events for the timeout period.</dd>
+<dt>-s</dt>
+<dd>Use the SEL method to get events. This polls the SEL once a second for new events. The last SEL record read is saved in /usr/share/ipmiutil/evt.idx. Otherwise, the default is to use the ReadEventMessageBuffer method to get new events.</dd>
+<dt>-t N</dt>
+<dd>Set the timeout period to N seconds. Default is 120 seconds. A timeout of 0 means an infinite period.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-icmd/">icmd</a>(8) <a href="/docs/linux/man/8-idiscover/">idiscover</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ilan/">ilan</a>(8) <a href="/docs/linux/man/8-ireset/">ireset</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-isensor/">isensor</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) </p>

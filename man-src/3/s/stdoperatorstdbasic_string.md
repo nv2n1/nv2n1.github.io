@@ -11,99 +11,52 @@ std::operator+(std::basic_string) - std::operator+(std::basic_string)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(1)
-
 operator+(const basic_string&lt;CharT, Traits, Alloc&gt; &amp;lhs,
-
           const basic_string&lt;CharT, Traits, Alloc&gt; &amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(2)
-
 operator+(const basic_string&lt;CharT, Traits, Alloc&gt; &amp;lhs,
-
           const CharT *rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(3)
-
 operator+(const basic_string&lt;CharT, Traits, Alloc&gt; &amp;lhs,
-
           CharT rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(4)
-
 operator+(const CharT *lhs,
-
           const basic_string&lt;CharT, Traits, Alloc&gt; &amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(5)
-
 operator+(CharT lhs,
-
           const basic_string&lt;CharT, Traits, Alloc&gt; &amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(6)(since C++ 11)
-
 operator+(basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;lhs,
-
           basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(7)(since C++ 11)
-
 operator+(basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;lhs,
-
           const basic_string&lt;CharT, Traits, Alloc&gt; &amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(8)(since C++ 11)
-
 operator+(basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;lhs,
-
           const CharT *rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(9)(since C++ 11)
-
 operator+(basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;lhs,
-
           CharT rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(10)(since C++ 11)
-
 operator+(const basic_string&lt;CharT, Traits, Alloc&gt; &amp;lhs,
-
           basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(11)(since C++ 11)
-
 operator+(const CharT *lhs,
-
           basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 basic_string&lt;CharT, Traits, Alloc&gt;(12)(since C++ 11)
-
 operator+(CharT lhs,
-
           basic_string&lt;CharT, Traits, Alloc&gt; &amp;&amp;rhs);</code></pre> 
 Returns a string containing characters from lhs followed by the characters from rhs. 
 The allocator used for the result is: 
@@ -187,16 +140,9 @@ P1165R1 C++11 allocator propagation is haphazard and inconsistent made more cons
 <h2>See also</h2>
 
 <pre><code>appends characters to the end
-
 operator+= (public member function)
 appends characters to the end
-
 append     (public member function)
 inserts characters
-
 insert     (public member function)
-
-
-
-
 </code></pre>

@@ -16,19 +16,19 @@ description: "wcsware – Extract WCS keywords for an image"
 <p> The FITS file may be specified according to the syntax understood by cfitsio, for example &quot;file.fits.gz+1&quot; refers to the first extension of a gzip&#8217;d FITS file. Use &quot;-&quot; or omit the file name for input from stdin.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>&lt;alt&gt;</p>
-<dd> Specify an alternate coordinate representation to be used (ignored if there is only one).</p>
-<dt><code>-f</code></p>
-<dd> Apply wcsfix() to the header.</p>
-<dt><code>-h</code>&lt;hdu&gt;</p>
-<dd> Move to HDU number (1-relative) which is expected to contain an image array. (Useful for input from stdin.)</p>
-<dt><code>-p</code></p>
-<dd> Print the struct(s) using wcsprt() (default operation).</p>
-<dt><code>-P</code></p>
-<dd> Same as <code>-p</code> but don&#8217;t print a default struct.</p>
-<dt><code>-x</code></p>
-<dd> Convert pixel coordinates, obtained from stdin, to world coordinates using wcsp2s().</p>
-<dt><code>-w</code></p>
-<dd> Convert world coordinates, obtained from stdin, to pixel coordinates using wcss2p(). </p>
+<dt><code>-a</code>&lt;alt&gt;</dt>
+<dd> Specify an alternate coordinate representation to be used (ignored if there is only one).</dd>
+<dt><code>-f</code></dt>
+<dd> Apply wcsfix() to the header.</dd>
+<dt><code>-h</code>&lt;hdu&gt;</dt>
+<dd> Move to HDU number (1-relative) which is expected to contain an image array. (Useful for input from stdin.)</dd>
+<dt><code>-p</code></dt>
+<dd> Print the struct(s) using wcsprt() (default operation).</dd>
+<dt><code>-P</code></dt>
+<dd> Same as <code>-p</code> but don&#8217;t print a default struct.</dd>
+<dt><code>-x</code></dt>
+<dd> Convert pixel coordinates, obtained from stdin, to world coordinates using wcsp2s().</dd>
+<dt><code>-w</code></dt>
+<dd> Convert world coordinates, obtained from stdin, to pixel coordinates using wcss2p(). </dd>
 </dl>
 <h2>Index</h2>

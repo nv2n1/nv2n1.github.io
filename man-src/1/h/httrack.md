@@ -15,337 +15,337 @@ description: "httrack – offline browser : copy websites to a local directory"
 <p> <code>httrack</code> allows you to download a World Wide Web site from the Internet to a local directory, building recursively all directories, getting HTML, images, and other files from the server to your computer. HTTrack arranges the original site&#8217;s relative link-structure. Simply open a page of the &quot;mirrored&quot; website in your browser, and you can browse the site from link to link, as if you were viewing it online. HTTrack can also update an existing mirrored site, and resume interrupted downloads.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/</code></p>
+<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/</code></dt>
 <dd>
-&nbsp;<wbr>mirror site&nbsp;<wbr><a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/&nbsp;<wbr>and only this site</p>
-<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/ <a href="http://www.anothertest.com">www.anothertest.com</a>/mike/ +*.com/*.jpg -mime:application/*</code></p>
+&nbsp;<wbr>mirror site&nbsp;<wbr><a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/&nbsp;<wbr>and only this site</dd>
+<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/ <a href="http://www.anothertest.com">www.anothertest.com</a>/mike/ +*.com/*.jpg -mime:application/*</code></dt>
 <dd>
-&nbsp;<wbr>mirror the two sites together&nbsp;<wbr>(with shared links)&nbsp;<wbr>and accept any .jpg files on .com sites</p>
-<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/bobby.html +* -r6</code></p>
-<dd> means get all files starting from bobby.html, with 6 link-depth, and possibility of going everywhere on the web</p>
-<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/bobby.html &#8211;spider -P proxy.myhost.com:8080</code></p>
-<dd> runs the spider on <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/bobby.html using a proxy</p>
-<dt><code>httrack &#8211;update</code></p>
-<dd> updates a mirror in the current folder</p>
-<dt><code>httrack</code></p>
-<dd> will bring you to the interactive mode</p>
-<dt><code>httrack &#8211;continue</code></p>
-<dd> continues a mirror in the current folder</dl>
+&nbsp;<wbr>mirror the two sites together&nbsp;<wbr>(with shared links)&nbsp;<wbr>and accept any .jpg files on .com sites</dd>
+<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/bobby.html +* -r6</code></dt>
+<dd> means get all files starting from bobby.html, with 6 link-depth, and possibility of going everywhere on the web</dd>
+<dt><code>httrack <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/bobby.html &#8211;spider -P proxy.myhost.com:8080</code></dt>
+<dd> runs the spider on <a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>/bob/bobby.html using a proxy</dd>
+<dt><code>httrack &#8211;update</code></dt>
+<dd> updates a mirror in the current folder</dd>
+<dt><code>httrack</code></dt>
+<dd> will bring you to the interactive mode</dd>
+<dt><code>httrack &#8211;continue</code></dt>
+<dd> continues a mirror in the current folder</dd></dl>
 <h2>OPTIONS</h2>
 <h3>General options:</h3>
 <dl>
-<dt>-O</p>
-<dd> path for mirror/logfiles+cache (-O path mirror[,path cache and logfiles]) (&#8211;path &lt;param&gt;) </p>
+<dt>-O</dt>
+<dd> path for mirror/logfiles+cache (-O path mirror[,path cache and logfiles]) (&#8211;path &lt;param&gt;) </dd>
 </dl>
 <h3>Action options:</h3>
 <dl>
-<dt>-w</p>
-<dd> *mirror web sites (&#8211;mirror)</p>
-<dt>-W</p>
-<dd> mirror web sites, semi-automatic (asks questions) (&#8211;mirror-wizard)</p>
-<dt>-g</p>
-<dd> just get files (saved in the current directory) (&#8211;get-files)</p>
-<dt>-i</p>
-<dd> continue an interrupted mirror using the cache (&#8211;continue)</p>
-<dt>-Y</p>
-<dd> mirror ALL links located in the first level pages (mirror links) (&#8211;mirrorlinks) </p>
+<dt>-w</dt>
+<dd> *mirror web sites (&#8211;mirror)</dd>
+<dt>-W</dt>
+<dd> mirror web sites, semi-automatic (asks questions) (&#8211;mirror-wizard)</dd>
+<dt>-g</dt>
+<dd> just get files (saved in the current directory) (&#8211;get-files)</dd>
+<dt>-i</dt>
+<dd> continue an interrupted mirror using the cache (&#8211;continue)</dd>
+<dt>-Y</dt>
+<dd> mirror ALL links located in the first level pages (mirror links) (&#8211;mirrorlinks) </dd>
 </dl>
 <h3>Proxy options:</h3>
 <dl>
-<dt>-P</p>
-<dd> proxy use (-P proxy:port or -P user:pass [at] proxy:port) (&#8211;proxy &lt;param&gt;)</p>
-<dt>-%f</p>
-<dd> *use proxy for ftp (f0 don t use) (&#8211;httpproxy-ftp[=N])</p>
-<dt>-%b</p>
-<dd> use this local hostname to make/send requests (-%b hostname) (&#8211;bind &lt;param&gt;) </p>
+<dt>-P</dt>
+<dd> proxy use (-P proxy:port or -P user:pass [at] proxy:port) (&#8211;proxy &lt;param&gt;)</dd>
+<dt>-%f</dt>
+<dd> *use proxy for ftp (f0 don t use) (&#8211;httpproxy-ftp[=N])</dd>
+<dt>-%b</dt>
+<dd> use this local hostname to make/send requests (-%b hostname) (&#8211;bind &lt;param&gt;) </dd>
 </dl>
 <h3>Limits options:</h3>
 <dl>
-<dt>-rN</p>
-<dd> set the mirror depth to N (* r9999) (&#8211;depth[=N])</p>
-<dt>-%eN</p>
-<dd> set the external links depth to N (* %e0) (&#8211;ext-depth[=N])</p>
-<dt>-mN</p>
-<dd> maximum file length for a non-html file (&#8211;max-files[=N])</p>
-<dt>-mN,N2</p>
-<dd> maximum file length for non html (N) and html (N2)</p>
-<dt>-MN</p>
-<dd> maximum overall size that can be uploaded/scanned (&#8211;max-size[=N])</p>
-<dt>-EN</p>
-<dd> maximum mirror time in seconds (60=1 minute, 3600=1 hour) (&#8211;max-time[=N])</p>
-<dt>-AN</p>
-<dd> maximum transfer rate in bytes/seconds (1000=1KB/s max) (&#8211;max-rate[=N])</p>
-<dt>-%cN</p>
-<dd> maximum number of connections/seconds (*%c10) (&#8211;connection-per-second[=N])</p>
-<dt>-GN</p>
-<dd> pause transfer if N bytes reached, and wait until lock file is deleted (&#8211;max-pause[=N]) </p>
+<dt>-rN</dt>
+<dd> set the mirror depth to N (* r9999) (&#8211;depth[=N])</dd>
+<dt>-%eN</dt>
+<dd> set the external links depth to N (* %e0) (&#8211;ext-depth[=N])</dd>
+<dt>-mN</dt>
+<dd> maximum file length for a non-html file (&#8211;max-files[=N])</dd>
+<dt>-mN,N2</dt>
+<dd> maximum file length for non html (N) and html (N2)</dd>
+<dt>-MN</dt>
+<dd> maximum overall size that can be uploaded/scanned (&#8211;max-size[=N])</dd>
+<dt>-EN</dt>
+<dd> maximum mirror time in seconds (60=1 minute, 3600=1 hour) (&#8211;max-time[=N])</dd>
+<dt>-AN</dt>
+<dd> maximum transfer rate in bytes/seconds (1000=1KB/s max) (&#8211;max-rate[=N])</dd>
+<dt>-%cN</dt>
+<dd> maximum number of connections/seconds (*%c10) (&#8211;connection-per-second[=N])</dd>
+<dt>-GN</dt>
+<dd> pause transfer if N bytes reached, and wait until lock file is deleted (&#8211;max-pause[=N]) </dd>
 </dl>
 <h3>Flow control:</h3>
 <dl>
-<dt>-cN</p>
-<dd> number of multiple connections (*c8) (&#8211;sockets[=N])</p>
-<dt>-TN</p>
-<dd> timeout, number of seconds after a non-responding link is shutdown (&#8211;timeout[=N])</p>
-<dt>-RN</p>
-<dd> number of retries, in case of timeout or non-fatal errors (*R1) (&#8211;retries[=N])</p>
-<dt>-JN</p>
-<dd> traffic jam control, minimum transfert rate (bytes/seconds) tolerated for a link (&#8211;min-rate[=N])</p>
-<dt>-HN</p>
-<dd> host is abandonned if: 0=never, 1=timeout, 2=slow, 3=timeout or slow (&#8211;host-control[=N]) </p>
+<dt>-cN</dt>
+<dd> number of multiple connections (*c8) (&#8211;sockets[=N])</dd>
+<dt>-TN</dt>
+<dd> timeout, number of seconds after a non-responding link is shutdown (&#8211;timeout[=N])</dd>
+<dt>-RN</dt>
+<dd> number of retries, in case of timeout or non-fatal errors (*R1) (&#8211;retries[=N])</dd>
+<dt>-JN</dt>
+<dd> traffic jam control, minimum transfert rate (bytes/seconds) tolerated for a link (&#8211;min-rate[=N])</dd>
+<dt>-HN</dt>
+<dd> host is abandonned if: 0=never, 1=timeout, 2=slow, 3=timeout or slow (&#8211;host-control[=N]) </dd>
 </dl>
 <h3>Links options:</h3>
 <dl>
-<dt>-%P</p>
-<dd> *extended parsing, attempt to parse all links, even in unknown tags or Javascript (%P0 don t use) (&#8211;extended-parsing[=N])</p>
-<dt>-n</p>
-<dd> get non-html files near an html file (ex: an image located outside) (&#8211;near)</p>
-<dt>-t</p>
-<dd> test all URLs (even forbidden ones) (&#8211;test)</p>
-<dt>-%L</p>
-<dd> &lt;file&gt; add all URL located in this text file (one URL per line) (&#8211;list &lt;param&gt;)</p>
-<dt>-%S</p>
-<dd> &lt;file&gt; add all scan rules located in this text file (one scan rule per line) (&#8211;urllist &lt;param&gt;) </p>
+<dt>-%P</dt>
+<dd> *extended parsing, attempt to parse all links, even in unknown tags or Javascript (%P0 don t use) (&#8211;extended-parsing[=N])</dd>
+<dt>-n</dt>
+<dd> get non-html files near an html file (ex: an image located outside) (&#8211;near)</dd>
+<dt>-t</dt>
+<dd> test all URLs (even forbidden ones) (&#8211;test)</dd>
+<dt>-%L</dt>
+<dd> &lt;file&gt; add all URL located in this text file (one URL per line) (&#8211;list &lt;param&gt;)</dd>
+<dt>-%S</dt>
+<dd> &lt;file&gt; add all scan rules located in this text file (one scan rule per line) (&#8211;urllist &lt;param&gt;) </dd>
 </dl>
 <h3>Build options:</h3>
 <dl>
-<dt>-NN</p>
-<dd> structure type (0 *original structure, 1+: see below) (&#8211;structure[=N])</p>
-<dt>-or</p>
-<dd> user defined structure (-N &quot;%h%p/%n%q.%t&quot;)</p>
-<dt>-%N</p>
-<dd> delayed type check, don t make any link test but wait for files download to start instead (experimental) (%N0 don t use, %N1 use for unknown extensions, * %N2 always use)</p>
-<dt>-%D</p>
-<dd> cached delayed type check, don t wait for remote type during updates, to speedup them (%D0 wait, * %D1 don t wait) (&#8211;cached-delayed-type-check)</p>
-<dt>-%M</p>
-<dd> generate a RFC MIME-encapsulated full-archive (.mht) (&#8211;mime-html)</p>
-<dt>-LN</p>
-<dd> long names (L1 *long names / L0 8-3 conversion / L2 ISO9660 compatible) (&#8211;long-names[=N])</p>
-<dt>-KN</p>
-<dd> keep original links (e.g. <a rel="nofollow" href="http://www.adr/link)">http://www.adr/link)</a> (K0 *relative link, K absolute links, K4 original links, K3 absolute URI links, K5 transparent proxy link) (&#8211;keep-links[=N])</p>
-<dt>-x</p>
-<dd> replace external html links by error pages (&#8211;replace-external)</p>
-<dt>-%x</p>
-<dd> do not include any password for external password protected websites (%x0 include) (&#8211;disable-passwords)</p>
-<dt>-%q</p>
-<dd> *include query string for local files (useless, for information purpose only) (%q0 don t include) (&#8211;include-query-string)</p>
-<dt>-o</p>
-<dd> *generate output html file in case of error (404..) (o0 don t generate) (&#8211;generate-errors)</p>
-<dt>-X</p>
-<dd> *purge old files after update (X0 keep delete) (&#8211;purge-old[=N])</p>
-<dt>-%p</p>
-<dd> preserve html files as is (identical to -K4 -%F &quot;&quot; ) (&#8211;preserve)</p>
-<dt>-%T</p>
-<dd> links conversion to UTF-8 (&#8211;utf8-conversion) </p>
+<dt>-NN</dt>
+<dd> structure type (0 *original structure, 1+: see below) (&#8211;structure[=N])</dd>
+<dt>-or</dt>
+<dd> user defined structure (-N &quot;%h%p/%n%q.%t&quot;)</dd>
+<dt>-%N</dt>
+<dd> delayed type check, don t make any link test but wait for files download to start instead (experimental) (%N0 don t use, %N1 use for unknown extensions, * %N2 always use)</dd>
+<dt>-%D</dt>
+<dd> cached delayed type check, don t wait for remote type during updates, to speedup them (%D0 wait, * %D1 don t wait) (&#8211;cached-delayed-type-check)</dd>
+<dt>-%M</dt>
+<dd> generate a RFC MIME-encapsulated full-archive (.mht) (&#8211;mime-html)</dd>
+<dt>-LN</dt>
+<dd> long names (L1 *long names / L0 8-3 conversion / L2 ISO9660 compatible) (&#8211;long-names[=N])</dd>
+<dt>-KN</dt>
+<dd> keep original links (e.g. <a rel="nofollow" href="http://www.adr/link)">http://www.adr/link)</a> (K0 *relative link, K absolute links, K4 original links, K3 absolute URI links, K5 transparent proxy link) (&#8211;keep-links[=N])</dd>
+<dt>-x</dt>
+<dd> replace external html links by error pages (&#8211;replace-external)</dd>
+<dt>-%x</dt>
+<dd> do not include any password for external password protected websites (%x0 include) (&#8211;disable-passwords)</dd>
+<dt>-%q</dt>
+<dd> *include query string for local files (useless, for information purpose only) (%q0 don t include) (&#8211;include-query-string)</dd>
+<dt>-o</dt>
+<dd> *generate output html file in case of error (404..) (o0 don t generate) (&#8211;generate-errors)</dd>
+<dt>-X</dt>
+<dd> *purge old files after update (X0 keep delete) (&#8211;purge-old[=N])</dd>
+<dt>-%p</dt>
+<dd> preserve html files as is (identical to -K4 -%F &quot;&quot; ) (&#8211;preserve)</dd>
+<dt>-%T</dt>
+<dd> links conversion to UTF-8 (&#8211;utf8-conversion) </dd>
 </dl>
 <h3>Spider options:</h3>
 <dl>
-<dt>-bN</p>
-<dd> accept cookies in cookies.txt (0=do not accept,* 1=accept) (&#8211;cookies[=N])</p>
-<dt>-u</p>
-<dd> check document type if unknown (cgi,asp..) (u0 don t check, * u1 check but /, u2 check always) (&#8211;check-type[=N])</p>
-<dt>-j</p>
-<dd> *parse Java Classes (j0 don t parse, bitmask: |1 parse default, |2 don t parse .class |4 don t parse .js |8 don t be aggressive) (&#8211;parse-java[=N])</p>
-<dt>-sN</p>
-<dd> follow robots.txt and meta robots tags (0=never,1=sometimes,* 2=always, 3=always (even strict rules)) (&#8211;robots[=N])</p>
-<dt>-%h</p>
-<dd> force HTTP/1.0 requests (reduce update features, only for old servers or proxies) (&#8211;http-10)</p>
-<dt>-%k</p>
-<dd> use keep-alive if possible, greately reducing latency for small files and test requests (%k0 don t use) (&#8211;keep-alive)</p>
-<dt>-%B</p>
-<dd> tolerant requests (accept bogus responses on some servers, but not standard!) (&#8211;tolerant)</p>
-<dt>-%s</p>
-<dd> update hacks: various hacks to limit re-transfers when updating (identical size, bogus response..) (&#8211;updatehack)</p>
-<dt>-%u</p>
-<dd> url hacks: various hacks to limit duplicate URLs (strip //, <a rel="nofollow" href="http://www.foo.com">www.foo.com</a>==foo.com..) (&#8211;urlhack)</p>
-<dt>-%A</p>
-<dd> assume that a type (cgi,asp..) is always linked with a mime type (-%A php3,cgi=text/html;dat,bin=application/x-zip) (&#8211;assume &lt;param&gt;)</p>
-<dt>-can</p>
-<dd> also be used to force a specific file type: &#8211;assume foo.cgi=text/html</p>
-<dt>-@iN</p>
-<dd> internet protocol (0=both ipv6+ipv4, 4=ipv4 only, 6=ipv6 only) (&#8211;protocol[=N])</p>
-<dt>-%w</p>
-<dd> disable a specific external mime module (-%w htsswf -%w htsjava) (&#8211;disable-module &lt;param&gt;) </p>
+<dt>-bN</dt>
+<dd> accept cookies in cookies.txt (0=do not accept,* 1=accept) (&#8211;cookies[=N])</dd>
+<dt>-u</dt>
+<dd> check document type if unknown (cgi,asp..) (u0 don t check, * u1 check but /, u2 check always) (&#8211;check-type[=N])</dd>
+<dt>-j</dt>
+<dd> *parse Java Classes (j0 don t parse, bitmask: |1 parse default, |2 don t parse .class |4 don t parse .js |8 don t be aggressive) (&#8211;parse-java[=N])</dd>
+<dt>-sN</dt>
+<dd> follow robots.txt and meta robots tags (0=never,1=sometimes,* 2=always, 3=always (even strict rules)) (&#8211;robots[=N])</dd>
+<dt>-%h</dt>
+<dd> force HTTP/1.0 requests (reduce update features, only for old servers or proxies) (&#8211;http-10)</dd>
+<dt>-%k</dt>
+<dd> use keep-alive if possible, greately reducing latency for small files and test requests (%k0 don t use) (&#8211;keep-alive)</dd>
+<dt>-%B</dt>
+<dd> tolerant requests (accept bogus responses on some servers, but not standard!) (&#8211;tolerant)</dd>
+<dt>-%s</dt>
+<dd> update hacks: various hacks to limit re-transfers when updating (identical size, bogus response..) (&#8211;updatehack)</dd>
+<dt>-%u</dt>
+<dd> url hacks: various hacks to limit duplicate URLs (strip //, <a rel="nofollow" href="http://www.foo.com">www.foo.com</a>==foo.com..) (&#8211;urlhack)</dd>
+<dt>-%A</dt>
+<dd> assume that a type (cgi,asp..) is always linked with a mime type (-%A php3,cgi=text/html;dat,bin=application/x-zip) (&#8211;assume &lt;param&gt;)</dd>
+<dt>-can</dt>
+<dd> also be used to force a specific file type: &#8211;assume foo.cgi=text/html</dd>
+<dt>-@iN</dt>
+<dd> internet protocol (0=both ipv6+ipv4, 4=ipv4 only, 6=ipv6 only) (&#8211;protocol[=N])</dd>
+<dt>-%w</dt>
+<dd> disable a specific external mime module (-%w htsswf -%w htsjava) (&#8211;disable-module &lt;param&gt;) </dd>
 </dl>
 <h3>Browser ID:</h3>
 <dl>
-<dt>-F</p>
-<dd> user-agent field sent in HTTP headers (-F &quot;user-agent name&quot;) (&#8211;user-agent &lt;param&gt;)</p>
-<dt>-%R</p>
-<dd> default referer field sent in HTTP headers (&#8211;referer &lt;param&gt;)</p>
-<dt>-%E</p>
-<dd> from email address sent in HTTP headers (&#8211;from &lt;param&gt;)</p>
-<dt>-%F</p>
-<dd> footer string in Html code (-%F &quot;Mirrored [from host %s [file %s [at %s]]]&quot; (&#8211;footer &lt;param&gt;)</p>
-<dt>-%l</p>
-<dd> preffered language (-%l &quot;fr, en, jp, *&quot; (&#8211;language &lt;param&gt;)</p>
-<dt>-%a</p>
-<dd> accepted formats (-%a &quot;text/html,image/png;q=0.9,*/*;q=0.1&quot; (&#8211;accept &lt;param&gt;)</p>
-<dt>-%X</p>
-<dd> additional HTTP header line (-%X &quot;X-Magic: 42&quot; (&#8211;headers &lt;param&gt;) </p>
+<dt>-F</dt>
+<dd> user-agent field sent in HTTP headers (-F &quot;user-agent name&quot;) (&#8211;user-agent &lt;param&gt;)</dd>
+<dt>-%R</dt>
+<dd> default referer field sent in HTTP headers (&#8211;referer &lt;param&gt;)</dd>
+<dt>-%E</dt>
+<dd> from email address sent in HTTP headers (&#8211;from &lt;param&gt;)</dd>
+<dt>-%F</dt>
+<dd> footer string in Html code (-%F &quot;Mirrored [from host %s [file %s [at %s]]]&quot; (&#8211;footer &lt;param&gt;)</dd>
+<dt>-%l</dt>
+<dd> preffered language (-%l &quot;fr, en, jp, *&quot; (&#8211;language &lt;param&gt;)</dd>
+<dt>-%a</dt>
+<dd> accepted formats (-%a &quot;text/html,image/png;q=0.9,*/*;q=0.1&quot; (&#8211;accept &lt;param&gt;)</dd>
+<dt>-%X</dt>
+<dd> additional HTTP header line (-%X &quot;X-Magic: 42&quot; (&#8211;headers &lt;param&gt;) </dd>
 </dl>
 <h3>Log, index, cache</h3>
 <dl>
-<dt>-C</p>
-<dd> create/use a cache for updates and retries (C0 no cache,C1 cache is prioritary,* C2 test update before) (&#8211;cache[=N])</p>
-<dt>-k</p>
-<dd> store all files in cache (not useful if files on disk) (&#8211;store-all-in-cache)</p>
-<dt>-%n</p>
-<dd> do not re-download locally erased files (&#8211;do-not-recatch)</p>
-<dt>-%v</p>
-<dd> display on screen filenames downloaded (in realtime) &#8211; * %v1 short version &#8211; %v2 full animation (&#8211;display)</p>
-<dt>-Q</p>
-<dd> no log &#8211; quiet mode (&#8211;do-not-log)</p>
-<dt>-q</p>
-<dd> no questions &#8211; quiet mode (&#8211;quiet)</p>
-<dt>-z</p>
-<dd> log &#8211; extra infos (&#8211;extra-log)</p>
-<dt>-Z</p>
-<dd> log &#8211; debug (&#8211;debug-log)</p>
-<dt>-v</p>
-<dd> log on screen (&#8211;verbose)</p>
-<dt>-f</p>
-<dd> *log in files (&#8211;file-log)</p>
-<dt>-f2</p>
-<dd> one single log file (&#8211;single-log)</p>
-<dt>-I</p>
-<dd> *make an index (I0 don t make) (&#8211;index)</p>
-<dt>-%i</p>
-<dd> make a top index for a project folder (* %i0 don t make) (&#8211;build-top-index)</p>
-<dt>-%I</p>
-<dd> make an searchable index for this mirror (* %I0 don t make) (&#8211;search-index) </p>
+<dt>-C</dt>
+<dd> create/use a cache for updates and retries (C0 no cache,C1 cache is prioritary,* C2 test update before) (&#8211;cache[=N])</dd>
+<dt>-k</dt>
+<dd> store all files in cache (not useful if files on disk) (&#8211;store-all-in-cache)</dd>
+<dt>-%n</dt>
+<dd> do not re-download locally erased files (&#8211;do-not-recatch)</dd>
+<dt>-%v</dt>
+<dd> display on screen filenames downloaded (in realtime) &#8211; * %v1 short version &#8211; %v2 full animation (&#8211;display)</dd>
+<dt>-Q</dt>
+<dd> no log &#8211; quiet mode (&#8211;do-not-log)</dd>
+<dt>-q</dt>
+<dd> no questions &#8211; quiet mode (&#8211;quiet)</dd>
+<dt>-z</dt>
+<dd> log &#8211; extra infos (&#8211;extra-log)</dd>
+<dt>-Z</dt>
+<dd> log &#8211; debug (&#8211;debug-log)</dd>
+<dt>-v</dt>
+<dd> log on screen (&#8211;verbose)</dd>
+<dt>-f</dt>
+<dd> *log in files (&#8211;file-log)</dd>
+<dt>-f2</dt>
+<dd> one single log file (&#8211;single-log)</dd>
+<dt>-I</dt>
+<dd> *make an index (I0 don t make) (&#8211;index)</dd>
+<dt>-%i</dt>
+<dd> make a top index for a project folder (* %i0 don t make) (&#8211;build-top-index)</dd>
+<dt>-%I</dt>
+<dd> make an searchable index for this mirror (* %I0 don t make) (&#8211;search-index) </dd>
 </dl>
 <h3>Expert options:</h3>
 <dl>
-<dt>-pN</p>
-<dd> priority mode: (* p3) (&#8211;priority[=N])</p>
-<dt>-p0</p>
-<dd> just scan, don t save anything (for checking links)</p>
-<dt>-p1</p>
-<dd> save only html files</p>
-<dt>-p2</p>
-<dd> save only non html files</p>
-<dt>-*p3</p>
-<dd> save all files</p>
-<dt>-p7</p>
-<dd> get html files before, then treat other files</p>
-<dt>-S</p>
-<dd> stay on the same directory (&#8211;stay-on-same-dir)</p>
-<dt>-D</p>
-<dd> *can only go down into subdirs (&#8211;can-go-down)</p>
-<dt>-U</p>
-<dd> can only go to upper directories (&#8211;can-go-up)</p>
-<dt>-B</p>
-<dd> can both go up&amp;down into the directory structure (&#8211;can-go-up-and-down)</p>
-<dt>-a</p>
-<dd> *stay on the same address (&#8211;stay-on-same-address)</p>
-<dt>-d</p>
-<dd> stay on the same principal domain (&#8211;stay-on-same-domain)</p>
-<dt>-l</p>
-<dd> stay on the same TLD (eg: .com) (&#8211;stay-on-same-tld)</p>
-<dt>-e</p>
-<dd> go everywhere on the web (&#8211;go-everywhere)</p>
-<dt>-%H</p>
-<dd> debug HTTP headers in logfile (&#8211;debug-headers) </p>
+<dt>-pN</dt>
+<dd> priority mode: (* p3) (&#8211;priority[=N])</dd>
+<dt>-p0</dt>
+<dd> just scan, don t save anything (for checking links)</dd>
+<dt>-p1</dt>
+<dd> save only html files</dd>
+<dt>-p2</dt>
+<dd> save only non html files</dd>
+<dt>-*p3</dt>
+<dd> save all files</dd>
+<dt>-p7</dt>
+<dd> get html files before, then treat other files</dd>
+<dt>-S</dt>
+<dd> stay on the same directory (&#8211;stay-on-same-dir)</dd>
+<dt>-D</dt>
+<dd> *can only go down into subdirs (&#8211;can-go-down)</dd>
+<dt>-U</dt>
+<dd> can only go to upper directories (&#8211;can-go-up)</dd>
+<dt>-B</dt>
+<dd> can both go up&amp;down into the directory structure (&#8211;can-go-up-and-down)</dd>
+<dt>-a</dt>
+<dd> *stay on the same address (&#8211;stay-on-same-address)</dd>
+<dt>-d</dt>
+<dd> stay on the same principal domain (&#8211;stay-on-same-domain)</dd>
+<dt>-l</dt>
+<dd> stay on the same TLD (eg: .com) (&#8211;stay-on-same-tld)</dd>
+<dt>-e</dt>
+<dd> go everywhere on the web (&#8211;go-everywhere)</dd>
+<dt>-%H</dt>
+<dd> debug HTTP headers in logfile (&#8211;debug-headers) </dd>
 </dl>
 <h3>Guru options: (do NOT use if possible)</h3>
 <dl>
-<dt>-#X</p>
-<dd> *use optimized engine (limited memory boundary checks) (&#8211;fast-engine)</p>
-<dt>-#0</p>
-<dd> filter test (-#0 *.gif <a rel="nofollow" href="http://www.bar.com">www.bar.com</a>/foo.gif ) (&#8211;debug-testfilters &lt;param&gt;)</p>
-<dt>-#1</p>
-<dd> simplify test (-#1 ./foo/bar/../foobar)</p>
-<dt>-#2</p>
-<dd> type test (-#2 /foo/bar.php)</p>
-<dt>-#C</p>
-<dd> cache list (-#C *.com/spider*.gif (&#8211;debug-cache &lt;param&gt;)</p>
-<dt>-#R</p>
-<dd> cache repair (damaged cache) (&#8211;repair-cache)</p>
-<dt>-#d</p>
-<dd> debug parser (&#8211;debug-parsing)</p>
-<dt>-#E</p>
-<dd> extract new.zip cache meta-data in meta.zip</p>
-<dt>-#f</p>
-<dd> always flush log files (&#8211;advanced-flushlogs)</p>
-<dt>-#FN</p>
-<dd> maximum number of filters (&#8211;advanced-maxfilters[=N])</p>
-<dt>-#h</p>
-<dd> version info (&#8211;version)</p>
-<dt>-#K</p>
-<dd> scan stdin (debug) (&#8211;debug-scanstdin)</p>
-<dt>-#L</p>
-<dd> maximum number of links (-#L1000000) (&#8211;advanced-maxlinks)</p>
-<dt>-#p</p>
-<dd> display ugly progress information (&#8211;advanced-progressinfo)</p>
-<dt>-#P</p>
-<dd> catch URL (&#8211;catch-url)</p>
-<dt>-#R</p>
-<dd> old FTP routines (debug) (&#8211;repair-cache)</p>
-<dt>-#T</p>
-<dd> generate transfer ops. log every minutes (&#8211;debug-xfrstats)</p>
-<dt>-#u</p>
-<dd> wait time (&#8211;advanced-wait)</p>
-<dt>-#Z</p>
-<dd> generate transfer rate statictics every minutes (&#8211;debug-ratestats) </p>
+<dt>-#X</dt>
+<dd> *use optimized engine (limited memory boundary checks) (&#8211;fast-engine)</dd>
+<dt>-#0</dt>
+<dd> filter test (-#0 *.gif <a rel="nofollow" href="http://www.bar.com">www.bar.com</a>/foo.gif ) (&#8211;debug-testfilters &lt;param&gt;)</dd>
+<dt>-#1</dt>
+<dd> simplify test (-#1 ./foo/bar/../foobar)</dd>
+<dt>-#2</dt>
+<dd> type test (-#2 /foo/bar.php)</dd>
+<dt>-#C</dt>
+<dd> cache list (-#C *.com/spider*.gif (&#8211;debug-cache &lt;param&gt;)</dd>
+<dt>-#R</dt>
+<dd> cache repair (damaged cache) (&#8211;repair-cache)</dd>
+<dt>-#d</dt>
+<dd> debug parser (&#8211;debug-parsing)</dd>
+<dt>-#E</dt>
+<dd> extract new.zip cache meta-data in meta.zip</dd>
+<dt>-#f</dt>
+<dd> always flush log files (&#8211;advanced-flushlogs)</dd>
+<dt>-#FN</dt>
+<dd> maximum number of filters (&#8211;advanced-maxfilters[=N])</dd>
+<dt>-#h</dt>
+<dd> version info (&#8211;version)</dd>
+<dt>-#K</dt>
+<dd> scan stdin (debug) (&#8211;debug-scanstdin)</dd>
+<dt>-#L</dt>
+<dd> maximum number of links (-#L1000000) (&#8211;advanced-maxlinks)</dd>
+<dt>-#p</dt>
+<dd> display ugly progress information (&#8211;advanced-progressinfo)</dd>
+<dt>-#P</dt>
+<dd> catch URL (&#8211;catch-url)</dd>
+<dt>-#R</dt>
+<dd> old FTP routines (debug) (&#8211;repair-cache)</dd>
+<dt>-#T</dt>
+<dd> generate transfer ops. log every minutes (&#8211;debug-xfrstats)</dd>
+<dt>-#u</dt>
+<dd> wait time (&#8211;advanced-wait)</dd>
+<dt>-#Z</dt>
+<dd> generate transfer rate statictics every minutes (&#8211;debug-ratestats) </dd>
 </dl>
 <h3>Dangerous options: (do NOT use unless you exactly know what you are doing)</h3>
 <dl>
-<dt>-%!</p>
-<dd> bypass built-in security limits aimed to avoid bandwidth abuses (bandwidth, simultaneous connections) (&#8211;disable-security-limits)</p>
-<dt>-IMPORTANT</p>
-<dd> NOTE: DANGEROUS OPTION, ONLY SUITABLE FOR EXPERTS</p>
-<dt>-USE</p>
-<dd> IT WITH EXTREME CARE </p>
+<dt>-%!</dt>
+<dd> bypass built-in security limits aimed to avoid bandwidth abuses (bandwidth, simultaneous connections) (&#8211;disable-security-limits)</dd>
+<dt>-IMPORTANT</dt>
+<dd> NOTE: DANGEROUS OPTION, ONLY SUITABLE FOR EXPERTS</dd>
+<dt>-USE</dt>
+<dd> IT WITH EXTREME CARE </dd>
 </dl>
 <h3>Command-line specific options:</h3>
 <dl>
-<dt>-V</p>
-<dd> execute system command after each files ($0 is the filename: -V &quot;rm \$0&quot;) (&#8211;userdef-cmd &lt;param&gt;)</p>
-<dt>-%W</p>
-<dd> use an external library function as a wrapper (-%W myfoo.so[,myparameters]) (&#8211;callback &lt;param&gt;) </p>
+<dt>-V</dt>
+<dd> execute system command after each files ($0 is the filename: -V &quot;rm \$0&quot;) (&#8211;userdef-cmd &lt;param&gt;)</dd>
+<dt>-%W</dt>
+<dd> use an external library function as a wrapper (-%W myfoo.so[,myparameters]) (&#8211;callback &lt;param&gt;) </dd>
 </dl>
 <h3>Details: Option N</h3>
 <dl>
-<dt>-N0</p>
-<dd> Site-structure (default)</p>
-<dt>-N1</p>
-<dd> HTML in web/, images/other files in web/images/</p>
-<dt>-N2</p>
-<dd> HTML in web/HTML, images/other in web/images</p>
-<dt>-N3</p>
-<dd> HTML in web/, images/other in web/</p>
-<dt>-N4</p>
-<dd> HTML in web/, images/other in web/xxx, where xxx is the file extension (all gif will be placed onto web/gif, for example)</p>
-<dt>-N5</p>
-<dd> Images/other in web/xxx and HTML in web/HTML</p>
-<dt>-N99</p>
-<dd> All files in web/, with random names (gadget !)</p>
-<dt>-N100</p>
-<dd> Site-structure, without <a rel="nofollow" href="http://www.domain.xxx">www.domain.xxx</a>/</p>
-<dt>-N101</p>
-<dd> Identical to N1 exept that &quot;web&quot; is replaced by the site s name</p>
-<dt>-N102</p>
-<dd> Identical to N2 exept that &quot;web&quot; is replaced by the site s name</p>
-<dt>-N103</p>
-<dd> Identical to N3 exept that &quot;web&quot; is replaced by the site s name</p>
-<dt>-N104</p>
-<dd> Identical to N4 exept that &quot;web&quot; is replaced by the site s name</p>
-<dt>-N105</p>
-<dd> Identical to N5 exept that &quot;web&quot; is replaced by the site s name</p>
-<dt>-N199</p>
-<dd> Identical to N99 exept that &quot;web&quot; is replaced by the site s name</p>
-<dt>-N1001</p>
-<dd> Identical to N1 exept that there is no &quot;web&quot; directory</p>
-<dt>-N1002</p>
-<dd> Identical to N2 exept that there is no &quot;web&quot; directory</p>
-<dt>-N1003</p>
-<dd> Identical to N3 exept that there is no &quot;web&quot; directory (option set for g option)</p>
-<dt>-N1004</p>
-<dd> Identical to N4 exept that there is no &quot;web&quot; directory</p>
-<dt>-N1005</p>
-<dd> Identical to N5 exept that there is no &quot;web&quot; directory</p>
-<dt>-N1099</p>
-<dd> Identical to N99 exept that there is no &quot;web&quot; directory</dl>
+<dt>-N0</dt>
+<dd> Site-structure (default)</dd>
+<dt>-N1</dt>
+<dd> HTML in web/, images/other files in web/images/</dd>
+<dt>-N2</dt>
+<dd> HTML in web/HTML, images/other in web/images</dd>
+<dt>-N3</dt>
+<dd> HTML in web/, images/other in web/</dd>
+<dt>-N4</dt>
+<dd> HTML in web/, images/other in web/xxx, where xxx is the file extension (all gif will be placed onto web/gif, for example)</dd>
+<dt>-N5</dt>
+<dd> Images/other in web/xxx and HTML in web/HTML</dd>
+<dt>-N99</dt>
+<dd> All files in web/, with random names (gadget !)</dd>
+<dt>-N100</dt>
+<dd> Site-structure, without <a rel="nofollow" href="http://www.domain.xxx">www.domain.xxx</a>/</dd>
+<dt>-N101</dt>
+<dd> Identical to N1 exept that &quot;web&quot; is replaced by the site s name</dd>
+<dt>-N102</dt>
+<dd> Identical to N2 exept that &quot;web&quot; is replaced by the site s name</dd>
+<dt>-N103</dt>
+<dd> Identical to N3 exept that &quot;web&quot; is replaced by the site s name</dd>
+<dt>-N104</dt>
+<dd> Identical to N4 exept that &quot;web&quot; is replaced by the site s name</dd>
+<dt>-N105</dt>
+<dd> Identical to N5 exept that &quot;web&quot; is replaced by the site s name</dd>
+<dt>-N199</dt>
+<dd> Identical to N99 exept that &quot;web&quot; is replaced by the site s name</dd>
+<dt>-N1001</dt>
+<dd> Identical to N1 exept that there is no &quot;web&quot; directory</dd>
+<dt>-N1002</dt>
+<dd> Identical to N2 exept that there is no &quot;web&quot; directory</dd>
+<dt>-N1003</dt>
+<dd> Identical to N3 exept that there is no &quot;web&quot; directory (option set for g option)</dd>
+<dt>-N1004</dt>
+<dd> Identical to N4 exept that there is no &quot;web&quot; directory</dd>
+<dt>-N1005</dt>
+<dd> Identical to N5 exept that there is no &quot;web&quot; directory</dd>
+<dt>-N1099</dt>
+<dd> Identical to N99 exept that there is no &quot;web&quot; directory</dd></dl>
 <h3>Details: User-defined option N</h3>
 <p>%n&nbsp;<wbr>&nbsp;<wbr>Name of file without file type&nbsp;<wbr>(ex: image)<br />
 %N&nbsp;<wbr>&nbsp;<wbr>Name of file, including file type&nbsp;<wbr>(ex: image.gif)<br />
@@ -363,72 +363,72 @@ description: "httrack – offline browser : copy websites to a local directory"
 <h3>Details: User-defined option N and advanced variable extraction</h3>
 <p>%[param:before:after:empty:notfound]</p>
 <dl>
-<dt>-param</p>
-<dd> : parameter name</p>
-<dt>-before</p>
-<dd> : string to prepend if the parameter was found</p>
-<dt>-after</p>
-<dd> : string to append if the parameter was found</p>
-<dt>-notfound</p>
-<dd> : string replacement if the parameter could not be found</p>
-<dt>-empty</p>
-<dd> : string replacement if the parameter was empty</p>
-<dt>-all</p>
-<dd> fields, except the first one (the parameter name), can be empty </p>
+<dt>-param</dt>
+<dd> : parameter name</dd>
+<dt>-before</dt>
+<dd> : string to prepend if the parameter was found</dd>
+<dt>-after</dt>
+<dd> : string to append if the parameter was found</dd>
+<dt>-notfound</dt>
+<dd> : string replacement if the parameter could not be found</dd>
+<dt>-empty</dt>
+<dd> : string replacement if the parameter was empty</dd>
+<dt>-all</dt>
+<dd> fields, except the first one (the parameter name), can be empty </dd>
 </dl>
 <h3>Details: Option K</h3>
 <dl>
-<dt>-K0</p>
-<dd> foo.cgi?q=45 -&gt; foo4B54.html?q=45 (relative URI, default)</p>
-<dt>-K</p>
-<dd> -&gt; <a rel="nofollow" href="http://www.foobar.com/folder/foo.cgi?q=45">http://www.foobar.com/folder/foo.cgi?q=45</a> (absolute URL) (&#8211;keep-links[=N])</p>
-<dt>-K3</p>
-<dd> -&gt; /folder/foo.cgi?q=45 (absolute URI)</p>
-<dt>-K4</p>
-<dd> -&gt; foo.cgi?q=45 (original URL)</p>
-<dt>-K5</p>
-<dd> -&gt; <a rel="nofollow" href="http://www.foobar.com/folder/foo4B54.html?q=45">http://www.foobar.com/folder/foo4B54.html?q=45</a> (transparent proxy URL) </p>
+<dt>-K0</dt>
+<dd> foo.cgi?q=45 -&gt; foo4B54.html?q=45 (relative URI, default)</dd>
+<dt>-K</dt>
+<dd> -&gt; <a rel="nofollow" href="http://www.foobar.com/folder/foo.cgi?q=45">http://www.foobar.com/folder/foo.cgi?q=45</a> (absolute URL) (&#8211;keep-links[=N])</dd>
+<dt>-K3</dt>
+<dd> -&gt; /folder/foo.cgi?q=45 (absolute URI)</dd>
+<dt>-K4</dt>
+<dd> -&gt; foo.cgi?q=45 (original URL)</dd>
+<dt>-K5</dt>
+<dd> -&gt; <a rel="nofollow" href="http://www.foobar.com/folder/foo4B54.html?q=45">http://www.foobar.com/folder/foo4B54.html?q=45</a> (transparent proxy URL) </dd>
 </dl>
 <h3>Shortcuts:</h3>
 <dl>
-<dt>&#8211;mirror</p>
+<dt>&#8211;mirror</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>*make a mirror of site(s)&nbsp;<wbr>(default)</p>
-<dt>&#8211;get</p>
+&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>*make a mirror of site(s)&nbsp;<wbr>(default)</dd>
+<dt>&#8211;get</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>get the files indicated, do not seek other URLs&nbsp;<wbr>(-qg)</p>
-<dt>&#8211;list</p>
+&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>get the files indicated, do not seek other URLs&nbsp;<wbr>(-qg)</dd>
+<dt>&#8211;list</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&lt;text file&gt;&nbsp;<wbr>&nbsp;<wbr>add all URL located in this text file&nbsp;<wbr>(-%L)</p>
-<dt>&#8211;mirrorlinks</p>
-<dd> &lt;URLs&gt; mirror all links in 1st level pages (-Y)</p>
-<dt>&#8211;testlinks</p>
+&nbsp;<wbr>&nbsp;<wbr>&lt;text file&gt;&nbsp;<wbr>&nbsp;<wbr>add all URL located in this text file&nbsp;<wbr>(-%L)</dd>
+<dt>&#8211;mirrorlinks</dt>
+<dd> &lt;URLs&gt; mirror all links in 1st level pages (-Y)</dd>
+<dt>&#8211;testlinks</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>test links in pages&nbsp;<wbr>(-r1p0C0I0t)</p>
-<dt>&#8211;spider</p>
+&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>test links in pages&nbsp;<wbr>(-r1p0C0I0t)</dd>
+<dt>&#8211;spider</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>spider site(s), to test links: reports Errors&nbsp;<wbr>&amp;&nbsp;<wbr>Warnings&nbsp;<wbr>(-p0C0I0t)</p>
-<dt>&#8211;testsite</p>
+&nbsp;<wbr>&nbsp;<wbr>&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>spider site(s), to test links: reports Errors&nbsp;<wbr>&amp;&nbsp;<wbr>Warnings&nbsp;<wbr>(-p0C0I0t)</dd>
+<dt>&#8211;testsite</dt>
 <dd>
-&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>identical to &#8211;spider</p>
-<dt>&#8211;skeleton</p>
+&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>identical to &#8211;spider</dd>
+<dt>&#8211;skeleton</dt>
 <dd>
-&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>make a mirror, but gets only html files&nbsp;<wbr>(-p1)</p>
-<dt>&#8211;update</p>
+&lt;URLs&gt;&nbsp;<wbr>&nbsp;<wbr>make a mirror, but gets only html files&nbsp;<wbr>(-p1)</dd>
+<dt>&#8211;update</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>update a mirror, without confirmation&nbsp;<wbr>(-iC2)</p>
-<dt>&#8211;continue</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>update a mirror, without confirmation&nbsp;<wbr>(-iC2)</dd>
+<dt>&#8211;continue</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>continue a mirror, without confirmation&nbsp;<wbr>(-iC1) </p>
-<dt>&#8211;catchurl</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>continue a mirror, without confirmation&nbsp;<wbr>(-iC1) </dd>
+<dt>&#8211;catchurl</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>create a temporary proxy to capture an URL or a form post URL</p>
-<dt>&#8211;clean</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>create a temporary proxy to capture an URL or a form post URL</dd>
+<dt>&#8211;clean</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>erase cache&nbsp;<wbr>&amp;&nbsp;<wbr>log files </p>
-<dt>&#8211;http10</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>erase cache&nbsp;<wbr>&amp;&nbsp;<wbr>log files </dd>
+<dt>&#8211;http10</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>force http/1.0 requests&nbsp;<wbr>(-%h) </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>force http/1.0 requests&nbsp;<wbr>(-%h) </dd>
 </dl>
 <h3>Details: Option %W: External callbacks prototypes</h3>
 <h3>see htsdefines.h</h3>
@@ -436,11 +436,11 @@ description: "httrack – offline browser : copy websites to a local directory"
 <p> <i>/etc/httrack.conf</i></p>
 <dl>
 <dt>
-<dd> The system wide configuration file.</dl>
+</dt><dd> The system wide configuration file.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>HOME</p>
-<dd> Is being used if you defined in /etc/httrack.conf the line <i>path ~/websites/# </i></dl>
+<dt>HOME</dt>
+<dd> Is being used if you defined in /etc/httrack.conf the line <i>path ~/websites/# </i></dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Errors/Warnings are reported to <i>hts-log.txt</i> by default, or to stderr if the <i>-v</i> option was specified.</p>
 <h2>LIMITS</h2>

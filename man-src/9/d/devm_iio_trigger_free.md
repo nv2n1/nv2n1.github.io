@@ -14,14 +14,14 @@ description: "devm_iio_trigger_free – Resource-managed iio_trigger_free"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device this iio_dev belongs to</dl>
+</dd><dd>Device this iio_dev belongs to</dd></dl>
 <p> <i>iio_trig</i></p>
 <dl>
-<dd>the iio_trigger associated with the device</dl>
+<dd>the iio_trigger associated with the device</dd></dl>
 <h2>Description</h2>
 <p>Free iio_trigger allocated with <code>devm_iio_trigger_alloc</code>.</p>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,10 +14,10 @@ description: "ABORT – abort the current transaction"
 <p><code>ABORT</code> rolls back the current transaction and causes all the updates made by the transaction to be discarded. This command is identical in behavior to the standard SQL command ROLLBACK [<code><a href="/docs/linux/man/7-rollback/">rollback</a></code>(7)], and is present only for historical reasons.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>WORK</code></p>
+<dt><code>WORK</code></dt>
 <dd>
-<dt><code>TRANSACTION</code></p>
-<dd>Optional key words. They have no effect.</dl>
+</dd><dt><code>TRANSACTION</code></dt>
+<dd>Optional key words. They have no effect.</dd></dl>
 <h2>Notes</h2>
 <p>Use COMMIT [<code><a href="/docs/linux/man/7-commit/">commit</a></code>(7)] to successfully terminate a transaction. </p>
 <p> Issuing <code>ABORT</code> when not inside a transaction does no harm, but it will provoke a warning message.</p>

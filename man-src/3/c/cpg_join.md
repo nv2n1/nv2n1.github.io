@@ -19,20 +19,17 @@ description: "cpg_join – Joins one or more groups in the CPG library"
 <p> The argument <i>group</i> is used to specify the group to join. </p>
 <p> The <i>groups</i> argument is of the type struct cpg_name which is defined by the structure: </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct cpg_name {
     int length;
     char value[128];
 };
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, CS_ERR_INVALID_PARAM if the handle is already joined to a group. </p>
 <h2>ERRORS</h2>

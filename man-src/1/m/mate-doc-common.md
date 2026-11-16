@@ -19,12 +19,12 @@ description: "mate-doc-common – include the standard user documentation build 
 <p> When porting applications across to use this feature, ensure that all of the references to xmldocs.make are to $(top_srcdir)/xmldocs.make in the appropriate Makefile.am files. Some modules assume that xmldocs.make is in another directory (like docs/ or something).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display the help of the script.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the script version.</p>
-<dt><code>&#8211;copy</code></p>
-<dd> Copy files instead of make symlinks.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display the help of the script.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the script version.</dd>
+<dt><code>&#8211;copy</code></dt>
+<dd> Copy files instead of make symlinks.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mate-autogen/">mate-autogen</a></code>(1)</p>
 <h2>AUTHOR</h2>

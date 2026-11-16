@@ -48,22 +48,15 @@ In any case, if U is an incomplete type, the program is ill-formed. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;memory&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
-
     //    {
-
     //        std::shared_ptr&lt;int&gt; shared_bad(new int[10]);
-
     //    } // the destructor calls delete, undefined behavior
     {
         std::shared_ptr&lt;int&gt; shared_good(new int[10], std::default_delete&lt;int[]&gt;
-
                                          ());
     } // the destructor calls delete[], ok
     {

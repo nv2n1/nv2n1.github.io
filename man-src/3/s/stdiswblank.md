@@ -30,12 +30,9 @@ ISO_30112 defines POSIX blank characters as Unicode characters U+0009, U+0020, U
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     wchar_t c = L'\u3000'; // Ideographic space ('　')
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; std::boolalpha;

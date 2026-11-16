@@ -18,58 +18,58 @@ description: "triangulate – Do optimal (Delaunay) triangulation and gridding o
 <p> None.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</p>
-<dt><code>-Dx</code>|<code>y</code></p>
-<dd> Take either the <i>x</i>&#8211; or <i>y</i>-derivatives of surface represented by the planar facets (only used when <code>-G</code> is set).</p>
-<dt><code>-E</code><i>empty</i></p>
-<dd> Set the value assigned to empty nodes when <code>-G</code> is set [NaN].</p>
-<dt><code>-G</code><i>grdfile</i></p>
-<dd> Use triangulation to grid the data onto an even grid (specified with <code>-R</code> <code>-I</code>). Append the name of the output grid file. The interpolation is performed in the original coordinates, so if your triangles are close to the poles you are better off projecting all data to a local coordinate system before using <code>triangulate</code> (this is true of all gridding routines).</p>
-<dt><code>-I</code></p>
-<dd> <i>x_inc</i> [and optionally <i>y_inc</i>] sets the grid size for optional grid output (see <code>-G</code>). Append <code>m</code> to indicate arc minutes or <code>s</code> to indicate arc seconds.</p>
-<dt><code>-J</code><i>parameters</i> <i>(more &#8230;)</i></p>
-<dd> Select map projection.</p>
-<dt><code>-M</code></p>
-<dd> Output triangulation network as multiple line segments separated by a segment header record.</p>
-<dt><code>-N</code></p>
-<dd> Used in conjunction with <code>-G</code> to also write the triplets of the ids of all the Delaunay vertices [Default only writes the grid].</p>
-<dt><code>-Q</code></p>
-<dd> Output the edges of the Voronoi cells instead [Default is Delaunay triangle edges]. Requires <code>-R</code> and is only available if linked with the Shewchuk [1996] library. Note that <code>-Z</code> is ignored on output.</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest.</p>
-<dt><code>-S</code></p>
-<dd> Output triangles as polygon segments separated by a segment header record. Requires Delaunay triangulation.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-Z</code></p>
-<dd> Controls whether we read (x,y) or (x,y,z) data and if z should be output when <code>-M</code> or <code>-S</code> are used [Read (x,y) only].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is same as input]. Node ids are stored as double triplets.</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-r</code> <i>(more &#8230;)</i></p>
-<dd> Set pixel node registration [gridline]. (Only valid with <code>-G</code>).</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</dd>
+<dt><code>-Dx</code>|<code>y</code></dt>
+<dd> Take either the <i>x</i>&#8211; or <i>y</i>-derivatives of surface represented by the planar facets (only used when <code>-G</code> is set).</dd>
+<dt><code>-E</code><i>empty</i></dt>
+<dd> Set the value assigned to empty nodes when <code>-G</code> is set [NaN].</dd>
+<dt><code>-G</code><i>grdfile</i></dt>
+<dd> Use triangulation to grid the data onto an even grid (specified with <code>-R</code> <code>-I</code>). Append the name of the output grid file. The interpolation is performed in the original coordinates, so if your triangles are close to the poles you are better off projecting all data to a local coordinate system before using <code>triangulate</code> (this is true of all gridding routines).</dd>
+<dt><code>-I</code></dt>
+<dd> <i>x_inc</i> [and optionally <i>y_inc</i>] sets the grid size for optional grid output (see <code>-G</code>). Append <code>m</code> to indicate arc minutes or <code>s</code> to indicate arc seconds.</dd>
+<dt><code>-J</code><i>parameters</i> <i>(more &#8230;)</i></dt>
+<dd> Select map projection.</dd>
+<dt><code>-M</code></dt>
+<dd> Output triangulation network as multiple line segments separated by a segment header record.</dd>
+<dt><code>-N</code></dt>
+<dd> Used in conjunction with <code>-G</code> to also write the triplets of the ids of all the Delaunay vertices [Default only writes the grid].</dd>
+<dt><code>-Q</code></dt>
+<dd> Output the edges of the Voronoi cells instead [Default is Delaunay triangle edges]. Requires <code>-R</code> and is only available if linked with the Shewchuk [1996] library. Note that <code>-Z</code> is ignored on output.</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest.</dd>
+<dt><code>-S</code></dt>
+<dd> Output triangles as polygon segments separated by a segment header record. Requires Delaunay triangulation.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-Z</code></dt>
+<dd> Controls whether we read (x,y) or (x,y,z) data and if z should be output when <code>-M</code> or <code>-S</code> are used [Read (x,y) only].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is same as input]. Node ids are stored as double triplets.</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-r</code> <i>(more &#8230;)</i></dt>
+<dd> Set pixel node registration [gridline]. (Only valid with <code>-G</code>).</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your <code>gmt.conf</code> file. Longitude and latitude are formatted according to <i>FORMAT_GEO_OUT</i>, whereas other values are formatted according to <i>FORMAT_FLOAT_OUT</i>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <i>FORMAT_FLOAT_OUT</i> setting.</p>
 <h2>GRID VALUES PRECISION</h2>

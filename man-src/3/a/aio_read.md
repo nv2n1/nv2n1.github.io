@@ -26,16 +26,16 @@ description: "aio_read – asynchronous read"
 <p> On success, 0 is returned. On error, the request is not enqueued, -1 is returned, and <i>errno</i> is set appropriately. If an error is detected only later, it will be reported via <code><a href="/docs/linux/man/3-aio_return/">aio_return</a></code>(3) (returns status -1) and <code><a href="/docs/linux/man/3-aio_error/">aio_error</a></code>(3) (error status&#8212;whatever one would have gotten in <i>errno</i>, such as <code>EBADF</code>).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> Out of resources.</p>
-<dt><code>EBADF</code></p>
-<dd> <i>aio_fildes</i> is not a valid file descriptor open for reading.</p>
-<dt><code>EINVAL</code></p>
-<dd> One or more of <i>aio_offset</i>, <i>aio_reqprio</i>, or <i>aio_nbytes</i> are invalid.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>aio_read</code>() is not implemented.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd> The file is a regular file, we start reading before end-of-file and want at least one byte, but the starting position is past the maximum offset for this file.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> Out of resources.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>aio_fildes</i> is not a valid file descriptor open for reading.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> One or more of <i>aio_offset</i>, <i>aio_reqprio</i>, or <i>aio_nbytes</i> are invalid.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>aio_read</code>() is not implemented.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd> The file is a regular file, we start reading before end-of-file and want at least one byte, but the starting position is past the maximum offset for this file.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>aio_read</code>() function is available since glibc 2.1.</p>
 <h2>ATTRIBUTES</h2>

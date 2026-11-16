@@ -36,33 +36,33 @@ description: "cupsd-logs – cupsd log files (access_log, error_log, and page_lo
 <p> The <i>status</i> field contains the HTTP result status of the request, as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt>200</p>
-<dd>Successful operation.</p>
-<dt>201</p>
-<dd>File created/modified successfully.</p>
-<dt>304</p>
-<dd>The requested file has not changed.</p>
-<dt>400</p>
-<dd>Bad HTTP request; typically this means that you have a malicious program trying to access your server.</p>
-<dt>401</p>
-<dd>Unauthorized, authentication (username + password) is required.</p>
-<dt>403</p>
-<dd>Access is forbidden; typically this means that a client tried to access a file or resource they do not have permission to access.</p>
-<dt>404</p>
-<dd>The file or resource does not exist.</p>
-<dt>405</p>
-<dd>URL access method is not allowed; typically this means you have a web browser using your server as a proxy.</p>
-<dt>413</p>
-<dd>Request too large; typically this means that a client tried to print a file larger than the MaxRequestSize allows.</p>
-<dt>426</p>
-<dd>Upgrading to TLS-encrypted connection.</p>
-<dt>500</p>
-<dd>Server error; typically this happens when the server is unable to open/create a file &#8211; consult the error_log file for details.</p>
-<dt>501</p>
-<dd>The client requested encryption but encryption support is not enabled/compiled in.</p>
-<dt>505</p>
-<dd>HTTP version number not supported; typically this means that you have a malicious program trying to access your server.</dl>
+</dd><dl>
+<dt>200</dt>
+<dd>Successful operation.</dd>
+<dt>201</dt>
+<dd>File created/modified successfully.</dd>
+<dt>304</dt>
+<dd>The requested file has not changed.</dd>
+<dt>400</dt>
+<dd>Bad HTTP request; typically this means that you have a malicious program trying to access your server.</dd>
+<dt>401</dt>
+<dd>Unauthorized, authentication (username + password) is required.</dd>
+<dt>403</dt>
+<dd>Access is forbidden; typically this means that a client tried to access a file or resource they do not have permission to access.</dd>
+<dt>404</dt>
+<dd>The file or resource does not exist.</dd>
+<dt>405</dt>
+<dd>URL access method is not allowed; typically this means you have a web browser using your server as a proxy.</dd>
+<dt>413</dt>
+<dd>Request too large; typically this means that a client tried to print a file larger than the MaxRequestSize allows.</dd>
+<dt>426</dt>
+<dd>Upgrading to TLS-encrypted connection.</dd>
+<dt>500</dt>
+<dd>Server error; typically this happens when the server is unable to open/create a file &#8211; consult the error_log file for details.</dd>
+<dt>501</dt>
+<dd>The client requested encryption but encryption support is not enabled/compiled in.</dd>
+<dt>505</dt>
+<dd>HTTP version number not supported; typically this means that you have a malicious program trying to access your server.</dd></dl>
 </dl>
 <p> The <i>bytes</i> field contains the number of bytes in the request. For POST requests the bytes field contains the number of bytes of non-IPP data that is received from the client. </p>
 <p> The <i>ipp-operation</i> field contains either &quot;-&quot; for non-IPP requests or the IPP operation name for POST requests containing an IPP request. </p>
@@ -85,24 +85,24 @@ description: "cupsd-logs – cupsd log files (access_log, error_log, and page_lo
  I [20/May/1999:19:22:24 +0000] [Job 2] Canceled by 'mike'.</pre>
 <p>The <i>level</i> field contains the type of message:</p>
 <dl>
-<dt>A</p>
-<dd>Alert message (LogLevel alert)</p>
-<dt>C</p>
-<dd>Critical error message (LogLevel crit)</p>
-<dt>D</p>
-<dd>Debugging message (LogLevel debug)</p>
-<dt>d</p>
-<dd>Detailed debugging message (LogLevel debug2)</p>
-<dt>E</p>
-<dd>Normal error message (LogLevel error)</p>
-<dt>I</p>
-<dd>Informational message (LogLevel info)</p>
-<dt>N</p>
-<dd>Notice message (LogLevel notice)</p>
-<dt>W</p>
-<dd>Warning message (LogLevel warn)</p>
-<dt>X</p>
-<dd>Emergency error message (LogLevel emerg)</dl>
+<dt>A</dt>
+<dd>Alert message (LogLevel alert)</dd>
+<dt>C</dt>
+<dd>Critical error message (LogLevel crit)</dd>
+<dt>D</dt>
+<dd>Debugging message (LogLevel debug)</dd>
+<dt>d</dt>
+<dd>Detailed debugging message (LogLevel debug2)</dd>
+<dt>E</dt>
+<dd>Normal error message (LogLevel error)</dd>
+<dt>I</dt>
+<dd>Informational message (LogLevel info)</dd>
+<dt>N</dt>
+<dd>Notice message (LogLevel notice)</dd>
+<dt>W</dt>
+<dd>Warning message (LogLevel warn)</dd>
+<dt>X</dt>
+<dd>Emergency error message (LogLevel emerg)</dd></dl>
 <p> The <i>date-time</i> field contains the date and time of when the page started printing. The format of this field is identical to the data-time field in the <i>access_log</i> file. </p>
 <p> The <i>message</i> field contains a free-form textual message. Messages from job filters are prefixed with &quot;[Job NNN]&quot; where &quot;NNN&quot; is the job ID.</p>
 <h3>Page Log File Format</h3>

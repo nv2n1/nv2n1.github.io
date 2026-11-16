@@ -16,57 +16,52 @@ description: "cargo-pkgid – Print a fully qualified package specification"
 <p> This command requires that a lockfile is available and dependencies have been fetched.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this message.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this message.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;manifest-path </code>PATH</p>
-<dd> Path to the manifest to the package to clean.</p>
+</dl>
+<dt><code>&#8211;manifest-path </code>PATH</dt>
+<dd> Path to the manifest to the package to clean.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Use verbose output.</p>
+</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Use verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> No output printed to stdout.</p>
+</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> No output printed to stdout.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;color </code>WHEN</p>
-<dd> Coloring: auto, always, never.</p>
+</dl>
+<dt><code>&#8211;color </code>WHEN</dt>
+<dd> Coloring: auto, always, never.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Retrive package specification for foo package</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $&nbsp;<wbr>cargo pkgid foo
 </pre>
-</dl>
+</dd></dl>
 <p> Retrieve package specification for version 1.0.0 of foo</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $&nbsp;<wbr>cargo pkgid foo:1.0.0
 </pre>
-</dl>
+</dd></dl>
 <p> Retrive package specification for foo from crates.io</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $&nbsp;<wbr>cargo pkgid crates.io/foo
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1), <a href="/docs/linux/man/1-cargo-generate-lockfile/">cargo-generate-lockfile</a>(1), <a href="/docs/linux/man/1-cargo-search/">cargo-search</a>(1), <a href="/docs/linux/man/1-cargo-metadata/">cargo-metadata</a>(1)</p>
 <h2>COPYRIGHT</h2>

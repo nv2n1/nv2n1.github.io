@@ -23,6 +23,6 @@ description: "QuantLib::BatesModel – Bates stochastic-volatility model."
 <p> References: A. Sepp, Pricing European-Style Options under Jump Diffusion Processes with Stochastic Volatility: Applications of Fourier Transform (&lt;<a rel="nofollow" href="http://math.ut.ee/~spartak/papers/stochjumpvols.pdf">http://math.ut.ee/~spartak/papers/stochjumpvols.pdf</a>&gt;) </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calibration is tested against known values.</dl>
+<dd>calibration is tested against known values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

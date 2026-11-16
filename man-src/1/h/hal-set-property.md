@@ -16,32 +16,32 @@ description: "hal-set-property – set a property on a device object"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;udi</i></p>
-<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</p>
-<dt><i>&#8211;key</i></p>
-<dd> The name of the property.</p>
-<dt><i>&#8211;int</i></p>
-<dd> Set value property of the property to a 32-bit signed integer. The value passed is assumed to be decimal unless it&#8217;s prefixed with <code>0x</code> or <code>x</code> for hexadecimal values.</p>
-<dt><i>&#8211;uint64</i></p>
-<dd> Set value property of the property to a 64-bit unsigned integer. The value passed is assumed to be decimal unless it&#8217;s prefixed with <code>0x</code> or <code>x</code> for hexadecimal values.</p>
-<dt><i>&#8211;string</i></p>
-<dd> Set value property of the property to a string.</p>
-<dt><i>&#8211;double</i></p>
-<dd> Set value property of the property to a floating point number.</p>
-<dt><i>&#8211;bool</i></p>
-<dd> Set value property of the property to boolean, e.g. <code>true </code> or <code>false.</code></p>
-<dt><i>&#8211;strlist-pre</i></p>
-<dd> Prepend an item to a string list.</p>
-<dt><i>&#8211;strlist-post</i></p>
-<dd> Append an item to a string list.</p>
-<dt><i>&#8211;strlist-rem</i></p>
-<dd> Remove an item from a string list.</p>
-<dt><i>&#8211;remove</i></p>
-<dd> Remove a property.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Print out usage.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print the version. </p>
+<dt><i>&#8211;udi</i></dt>
+<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</dd>
+<dt><i>&#8211;key</i></dt>
+<dd> The name of the property.</dd>
+<dt><i>&#8211;int</i></dt>
+<dd> Set value property of the property to a 32-bit signed integer. The value passed is assumed to be decimal unless it&#8217;s prefixed with <code>0x</code> or <code>x</code> for hexadecimal values.</dd>
+<dt><i>&#8211;uint64</i></dt>
+<dd> Set value property of the property to a 64-bit unsigned integer. The value passed is assumed to be decimal unless it&#8217;s prefixed with <code>0x</code> or <code>x</code> for hexadecimal values.</dd>
+<dt><i>&#8211;string</i></dt>
+<dd> Set value property of the property to a string.</dd>
+<dt><i>&#8211;double</i></dt>
+<dd> Set value property of the property to a floating point number.</dd>
+<dt><i>&#8211;bool</i></dt>
+<dd> Set value property of the property to boolean, e.g. <code>true </code> or <code>false.</code></dd>
+<dt><i>&#8211;strlist-pre</i></dt>
+<dd> Prepend an item to a string list.</dd>
+<dt><i>&#8211;strlist-post</i></dt>
+<dd> Append an item to a string list.</dd>
+<dt><i>&#8211;strlist-rem</i></dt>
+<dd> Remove an item from a string list.</dd>
+<dt><i>&#8211;remove</i></dt>
+<dd> Remove a property.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Print out usage.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print the version. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> If setting the property succeeds, this program will exit with exit code 0. On errors a non-zero the program will exit with a non-zero exit code. Note that setting properties on the <code>HAL</code> device database usually requires super user privileges. </p>

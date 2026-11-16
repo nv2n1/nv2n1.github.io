@@ -21,39 +21,40 @@ description: "rigctld – Hamlib TCP rig control daemon"
 <p>This program follows the usual GNU command line syntax, with long options starting with two dashes (&#8216;-&#8216;). </p>
 <p> Here is a summary of the supported options:</p>
 <dl>
-<dt><code>-m, &#8211;model=id</code></p>
-<dd>Select radio model number. See the -l, &#8211;list option below.</p>
-<dt><code>-r, &#8211;rig-file=device</code></p>
-<dd>Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter or USB port device. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc. on Linux or COM1, COM2, etc. on Win32.</p>
-<dt><code>-p, &#8211;ptt-file=device</code></p>
-<dd>Use <i>device</i> as the file name of the Push-To-Talk device using a device file as described above.</p>
-<dt><code>-d, &#8211;dcd-file=device</code></p>
-<dd>Use <i>device</i> as the file name of the Data Carrier Detect device using a device file as described above.</p>
-<dt><code>-P, &#8211;ptt-type=type</code></p>
-<dd>Use <i>type</i> of Push-To-Talk device. Supported types are RIG (CAT command), DTR, RTS, PARALLEL, NONE.</p>
-<dt><code>-D, &#8211;dcd-type=type</code></p>
-<dd>Use <i>type</i> of Data Carrier Detect device. Supported types are RIG (CAT command), DSR, CTS, CD, PARALLEL, NONE.</p>
-<dt><code>-s, &#8211;serial-speed=baud</code></p>
-<dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities (set by -m above) as the default.</p>
-<dt><code>-c, &#8211;civaddr=id</code></p>
-<dd>Use <i>id</i> as the CI-V address to communicate with the rig. Only useful for Icom rigs. </p>
+<dt><code>-m, &#8211;model=id</code></dt>
+<dd>Select radio model number. See the -l, &#8211;list option below.</dd>
+<dt><code>-r, &#8211;rig-file=device</code></dt>
+<dd>Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter or USB port device. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc. on Linux or COM1, COM2, etc. on Win32.</dd>
+<dt><code>-p, &#8211;ptt-file=device</code></dt>
+<dd>Use <i>device</i> as the file name of the Push-To-Talk device using a device file as described above.</dd>
+<dt><code>-d, &#8211;dcd-file=device</code></dt>
+<dd>Use <i>device</i> as the file name of the Data Carrier Detect device using a device file as described above.</dd>
+<dt><code>-P, &#8211;ptt-type=type</code></dt>
+<dd>Use <i>type</i> of Push-To-Talk device. Supported types are RIG (CAT command), DTR, RTS, PARALLEL, NONE.</dd>
+<dt><code>-D, &#8211;dcd-type=type</code></dt>
+<dd>Use <i>type</i> of Data Carrier Detect device. Supported types are RIG (CAT command), DSR, CTS, CD, PARALLEL, NONE.</dd>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities (set by -m above) as the default.</dd>
+<dt><code>-c, &#8211;civaddr=id</code></dt>
+<dd>Use <i>id</i> as the CI-V address to communicate with the rig. Only useful for Icom rigs. </dd>
 <p> <code>N.B.</code>: The <i>id</i> is in decimal notation, unless prefixed by <i>0x</i> for a hexadecimal value.</p>
-<dt><code>-T, &#8211;listen-addr=IPADDR</code></p>
-<dd>Use <i>IPADDR</i> as the listening IP address. The default is ANY. </p>
+<dt><code>-T, &#8211;listen-addr=IPADDR</code></dt>
+<dd>Use <i>IPADDR</i> as the listening IP address. The default is ANY. </dd>
 <p> N.B.: This option seems mandatory on Win32, eg: -T 127.0.0.1</p>
-<dt><code>-t, &#8211;port=number</code></p>
-<dd>Use <i>number</i> as the TCP listening port. The default is 4532. </p>
+<dt><code>-t, &#8211;port=number</code></dt>
+<dd>Use <i>number</i> as the TCP listening port. The default is 4532. </dd>
 <p> <code>N.B.</code>: As <code>rotctld</code>&#8216;s default port is 4533, it is advisable to use even numbered ports for <code>rigctld</code>, e.g. 4532, 4534, 4536, etc. </p>
 <p> N.B.: This option seems mandatory on Win32, eg: -t 4532</p>
-<dt><code>-L, &#8211;show-conf</code></p>
-<dd>List all config parameters for the radio defined with -m above.</p>
-<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></p>
-<dd>Set config parameter. e.g. &#8211;set-conf=stop_bits=2 </p>
+<dt><code>-L, &#8211;show-conf</code></dt>
+<dd>List all config parameters for the radio defined with -m above.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
+<dd>Set config parameter. e.g. &#8211;set-conf=stop_bits=2 </dd>
 <p> Use -L option for a list.</p>
-<dt><code>-l, &#8211;list</code></p>
-<dd>List all model numbers defined in <code>Hamlib</code> and exit. As of 1.2.15.1 the list is sorted by model number. </p>
+<dt><code>-l, &#8211;list</code></dt>
+<dd>List all model numbers defined in <code>Hamlib</code> and exit. As of 1.2.15.1 the list is sorted by model number. </dd>
 <p> <code>N.B.</code> In Linux the list can be scrolled back using Shift-PageUp/ Shift-PageDown, or using the scrollbars of a virtual terminal in X or the cmd window in Windows. The output can be piped to &#8216;more&#8217; or &#8216;less&#8217;, e.g. &#8216;rigctld -l | more&#8217;.</p>
-<dt><code>-u, &#8211;dump-caps</code></p>
-<dd>Dump capabilities for the radio defined with -m above and exit.</p>
-<dt><code>-o, &#8211;vfo</code></p>
+<dt><code>-u, &#8211;dump-caps</code></dt>
+<dd>Dump capabilities for the radio defined with -m above and exit.</dd>
+<dt><code>-o, &#8211;vfo</code></dt>
 <dd>Set vfo mode, requiring an extra VFO argument in front of each appropriate command (except <i>\set_vfo</i>!). Otherwise, &#8216;currVFO&#8217; is assumed when this option is not set and an extra VFO argument is not used. See <i>
+</dd></dl>

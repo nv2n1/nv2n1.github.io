@@ -15,19 +15,19 @@ bprintf - Parse a format string and place args' binary value in a buffer
 <h2>Arguments</h2>
 
 <i>bin_buf</i>
-<dl><dd><dd>The buffer to place args' binary value</dl>
+<dl><dd></dd><dd>The buffer to place args' binary value</dd></dl>
  
 
  <i>size</i>
-<dl><dd>The size of the buffer(by words(32bits), not characters)</dl>
+<dl><dd>The size of the buffer(by words(32bits), not characters)</dd></dl>
  
 
  <i>fmt</i>
-<dl><dd>The format string to use</dl>
+<dl><dd>The format string to use</dd></dl>
  
 
  <i>...</i>
-<dl><dd>Arguments for the format string</dl>
+<dl><dd>Arguments for the format string</dd></dl>
 
 <h2>Description</h2>
 

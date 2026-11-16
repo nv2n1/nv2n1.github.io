@@ -16,42 +16,42 @@ description: "virt-viewer – display the graphical console for a virtual machin
 <h2>OPTIONS</h2>
 <p> The following options are accepted when running <tt>&quot;virt-viewer&quot;</tt>:</p>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display command line help summary</p>
-<dt>-V, &#8211;version</p>
-<dd> Display program version number</p>
-<dt>-v, &#8211;verbose</p>
-<dd> Display information about the connection</p>
-<dt>-c <font SIZE="-1">URI,</font> &#8211;connect=URI</p>
-<dd> Specify the hypervisor connection <font SIZE="-1">URI</font></p>
-<dt>-w, &#8211;wait</p>
-<dd> Wait for the domain to start up before attempting to connect to the console</p>
-<dt>-r, &#8211;reconnect</p>
-<dd> Automatically reconnect to the domain if it shuts down and restarts</p>
-<dt>-z <font SIZE="-1">PCT,</font> &#8211;zoom=PCT</p>
-<dd> Zoom level of the display window in percentage. Range 10-400.</p>
-<dt>-d, &#8211;direct</p>
-<dd> Do not attempt to tunnel the console over <font SIZE="-1">SSH,</font> even if the main connection <font SIZE="-1">URI</font> used <font SIZE="-1">SSH.</font></p>
-<dt>-a, &#8211;attach</p>
-<dd> Instead of making a direct <font SIZE="-1">TCP/UNIX</font> socket connection to the remote display, ask libvirt to provide a pre-connected socket for the display. This avoids the need to authenticate with the remote display server directly. This option will only work when connecting to a guest that is running on the same host as the virt-viewer program. If attaching to the guest via libvirt fails, virt-viewer will automatically fallback to trying a regular direct <font SIZE="-1">TCP/UNIX</font> socket connection.</p>
-<dt>-f, &#8211;full-screen</p>
-<dd> Start with the window maximised to fullscreen </p>
+<dt>-h, &#8211;help</dt>
+<dd> Display command line help summary</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Display program version number</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> Display information about the connection</dd>
+<dt>-c <font SIZE="-1">URI,</font> &#8211;connect=URI</dt>
+<dd> Specify the hypervisor connection <font SIZE="-1">URI</font></dd>
+<dt>-w, &#8211;wait</dt>
+<dd> Wait for the domain to start up before attempting to connect to the console</dd>
+<dt>-r, &#8211;reconnect</dt>
+<dd> Automatically reconnect to the domain if it shuts down and restarts</dd>
+<dt>-z <font SIZE="-1">PCT,</font> &#8211;zoom=PCT</dt>
+<dd> Zoom level of the display window in percentage. Range 10-400.</dd>
+<dt>-d, &#8211;direct</dt>
+<dd> Do not attempt to tunnel the console over <font SIZE="-1">SSH,</font> even if the main connection <font SIZE="-1">URI</font> used <font SIZE="-1">SSH.</font></dd>
+<dt>-a, &#8211;attach</dt>
+<dd> Instead of making a direct <font SIZE="-1">TCP/UNIX</font> socket connection to the remote display, ask libvirt to provide a pre-connected socket for the display. This avoids the need to authenticate with the remote display server directly. This option will only work when connecting to a guest that is running on the same host as the virt-viewer program. If attaching to the guest via libvirt fails, virt-viewer will automatically fallback to trying a regular direct <font SIZE="-1">TCP/UNIX</font> socket connection.</dd>
+<dt>-f, &#8211;full-screen</dt>
+<dd> Start with the window maximised to fullscreen </dd>
 <p> If supported, the remote display will be reconfigured to match the physical client monitor configuration, by enabling or disabling extra monitors as necessary. This is currently implemented by the Spice backend only. </p>
 <p> To specify which client monitors are used in fullscreen mode, see the <font SIZE="-1">CONFIGURATION</font> section below.</p>
-<dt>&#8211;debug</p>
-<dd> Print debugging information</p>
-<dt>-H <font SIZE="-1">HOTKEYS,</font> &#8211;hotkeys <font SIZE="-1">HOTKEYS</font></p>
-<dd> Set global hotkey bindings. By default, keyboard shortcuts only work when the guest display widget does not have focus. Any actions specified in <font SIZE="-1"><code>HOTKEYS</code></font> will be effective even when the guest display widget has input focus. The format for <font SIZE="-1"><code>HOTKEYS</code></font> is &lt;action1&gt;=&lt;key1&gt;[+&lt;key2&gt;][,&lt;action2&gt;=&lt;key3&gt;[+&lt;key4&gt;]]. Key-names are case-insensitive. Valid actions are: toggle-fullscreen, release-cursor, secure-attention, smartcard-insert and smartcard-remove. The <tt>&quot;secure-attention&quot;</tt> action sends a secure attention sequence (Ctrl+Alt+Del) to the guest. Examples: </p>
+<dt>&#8211;debug</dt>
+<dd> Print debugging information</dd>
+<dt>-H <font SIZE="-1">HOTKEYS,</font> &#8211;hotkeys <font SIZE="-1">HOTKEYS</font></dt>
+<dd> Set global hotkey bindings. By default, keyboard shortcuts only work when the guest display widget does not have focus. Any actions specified in <font SIZE="-1"><code>HOTKEYS</code></font> will be effective even when the guest display widget has input focus. The format for <font SIZE="-1"><code>HOTKEYS</code></font> is &lt;action1&gt;=&lt;key1&gt;[+&lt;key2&gt;][,&lt;action2&gt;=&lt;key3&gt;[+&lt;key4&gt;]]. Key-names are case-insensitive. Valid actions are: toggle-fullscreen, release-cursor, secure-attention, smartcard-insert and smartcard-remove. The <tt>&quot;secure-attention&quot;</tt> action sends a secure attention sequence (Ctrl+Alt+Del) to the guest. Examples: </dd>
 <pre>
   --hotkeys=toggle-fullscreen=shift+f11,release-cursor=shift+f12
   --hotkeys=release-cursor=ctrl+alt
 </pre>
 <p> Note that hotkeys for which no binding is given are disabled. Although the hotkeys specified here are handled by the client, it is still possible to send these key combinations to the guest via a menu item.</p>
-<dt>-k, &#8211;kiosk</p>
-<dd> Start in kiosk mode. In this mode, the application will start in fullscreen with minimal <font SIZE="-1">UI.</font> It will prevent the user from quitting or performing any interaction outside of usage of the remote desktop session. </p>
+<dt>-k, &#8211;kiosk</dt>
+<dd> Start in kiosk mode. In this mode, the application will start in fullscreen with minimal <font SIZE="-1">UI.</font> It will prevent the user from quitting or performing any interaction outside of usage of the remote desktop session. </dd>
 <p> Note that it can&#8217;t offer a complete secure solution by itself. Your kiosk system must have additional configuration and security settings to lock down the <font SIZE="-1">OS.</font> In particular, you must configure or disable the window manager, limit the session capabilities, use some restart/watchdog mechanism, disable <font SIZE="-1">VT</font> switching etc.</p>
-<dt>&#8211;kiosk-quit &lt;never|on-disconnect&gt;</p>
-<dd> By default, when kiosk mode is enabled, virt-viewer will remain open when the connection to the remote server is terminated. By setting kiosk-quit option to &#8220;on-disconnect&#8221; value, virt-viewer will quit instead. Please note that &#8211;reconnect takes precedence over this option, and will attempt to do a reconnection before it quits.</dl>
+<dt>&#8211;kiosk-quit &lt;never|on-disconnect&gt;</dt>
+<dd> By default, when kiosk mode is enabled, virt-viewer will remain open when the connection to the remote server is terminated. By setting kiosk-quit option to &#8220;on-disconnect&#8221; value, virt-viewer will quit instead. Please note that &#8211;reconnect takes precedence over this option, and will attempt to do a reconnection before it quits.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> A small number of configuration options can be controlled by editing the settings file located in the user configuration directory: </p>
 <pre>

@@ -15,18 +15,18 @@ description: "autotrust – automated updates of DNSSEC trust anchors."
 <h2>Options</h2>
 <p>All the configurations need to be set in the configuration file. For more information, see the autotrust.conf.sample. </p>
 <dl>
-<dt><code>-c</code><i> configfile</i></p>
-<dd>Use this configfile.</p>
-<dt><code>-d</code></p>
-<dd>Run as daemon.</p>
-<dt><code>-h</code></p>
-<dd>Print help information and exit.</p>
-<dt><code>-v</code><i> verbosity</i></p>
-<dd>Specify a verbosity level. Setting it to zero will produce no output. Default verbosity level is 1. If verbosity is given in the configfile, the commandline value will be overrided.</dl>
+<dt><code>-c</code><i> configfile</i></dt>
+<dd>Use this configfile.</dd>
+<dt><code>-d</code></dt>
+<dd>Run as daemon.</dd>
+<dt><code>-h</code></dt>
+<dd>Print help information and exit.</dd>
+<dt><code>-v</code><i> verbosity</i></dt>
+<dd>Specify a verbosity level. Setting it to zero will produce no output. Default verbosity level is 1. If verbosity is given in the configfile, the commandline value will be overrided.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/autotrust/autotrust.conf</p>
-<dd>default configuration file. /var/lib/autotrust/autotrust.state default file to store trust anchor state.</dl>
+<dt>/etc/autotrust/autotrust.conf</dt>
+<dd>default configuration file. /var/lib/autotrust/autotrust.state default file to store trust anchor state.</dd></dl>
 <h2>Diagnostics</h2>
 <p><code>autotrust</code> will log all notifications and problems to the specified logfile. If no logfile was specified, output is directed to stderr. If autotrust is not daemonized, it will perform a single active refresh and will return zero code if the refresh was successfull, 1 otherwise.</p>
 <h2>Authors</h2>

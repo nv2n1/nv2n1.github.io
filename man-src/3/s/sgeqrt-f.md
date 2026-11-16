@@ -20,10 +20,10 @@ description: "sgeqrt.f –"
 <dd>
 <pre> SGEQRT computes a blocked QR factorization of a real M-by-N matrix A
  using the compact WY representation of Q. </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -59,13 +59,13 @@ description: "sgeqrt.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -84,7 +84,8 @@ description: "sgeqrt.f –"
  reflector factor is computed: T1, T2, ..., TB. The NB-by-NB (and IB-by-IB 
  for the last block) T's are stored in the NB-by-N matrix T as
  T = (T1 T2 ... TB).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 142 of file sgeqrt.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

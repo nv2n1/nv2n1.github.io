@@ -11,7 +11,6 @@ description: "sc::R12IntEvalInfo –"
 <p> Class <code>R12IntEvalInfo</code> contains information necessary for R12 intermediate evaluators.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;vxb_eval_info.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Types</h3>
@@ -87,32 +86,14 @@ description: "sc::R12IntEvalInfo –"
  <i>Returns the </i><code>MOIntsTransformFactory</code> object.</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static Ref&lt; MOIndexSpace &gt; orthog_comp (const Ref&lt; MOIndexSpace &gt; &amp;space1, const Ref&lt; MOIndexSpace &gt; &amp;space2, const std::string &amp;name, double lindep_tol)
-
-
 Compute subspace of space2 which is orthogonal complement to space1.
-
-
 static Ref&lt; MOIndexSpace &gt; orthogonalize (const std::string &amp;name, const Ref&lt; GaussianBasisSet &gt; &amp;bs, const Ref&lt; Integral &gt; &amp;integral, OverlapOrthog::OrthogMethod orthog_method, double lindep_tol, int &amp;nlindep)
-
-
 Compute span of bs and create corresponding mospace referred to by name.
-
-
 static Ref&lt; MOIndexSpace &gt; gen_project (const Ref&lt; MOIndexSpace &gt; &amp;space1, const Ref&lt; MOIndexSpace &gt; &amp;space2, const std::string &amp;name, double lindep_tol)
-
-
 Project space1 on space2.
-
-
 static void compute_overlap_ints (const Ref&lt; MOIndexSpace &gt; &amp;space1, const Ref&lt; MOIndexSpace &gt; &amp;space2, RefSCMatrix &amp;S)
-
-
 Compute overlap matrices in the basis of space1 and space2.
-
-
 static void compute_multipole_ints (const Ref&lt; MOIndexSpace &gt; &amp;space1, const Ref&lt; MOIndexSpace &gt; &amp;space2, RefSCMatrix &amp;MX, RefSCMatrix &amp;MY, RefSCMatrix &amp;MZ, RefSCMatrix &amp;MXX, RefSCMatrix &amp;MYY, RefSCMatrix &amp;MZZ)
-
-
 Compute electric dipole and quadrupole moment matrices in the basis of space1 and space2.</code></pre>
 <h2>Detailed Description</h2>
 <p>Class <code>R12IntEvalInfo</code> contains information necessary for R12 intermediate evaluators.</p>

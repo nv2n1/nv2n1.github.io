@@ -16,32 +16,32 @@ description: "mate-calc – (mate-calculator) – The MATE Desktop Environment C
 <p> This manual page briefly documents the <code>mate-calc</code> command.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s, &#8211;solve</code> &lt;equation&gt;</p>
-<dd> Solve the equation provided following this option.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>-h, -?, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>-s, &#8211;solve</code> &lt;equation&gt;</dt>
+<dd> Solve the equation provided following this option.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>-h, -?, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <p> This program also accepts the standard GTK options.</p>
 <h2>EXAMPLES</h2>
 <p> <code>mate-calc -s 4*10.5</code></p>
 <dl>
 <dt>
-<dd> Multiply 4 by 10.5</dl>
+</dt><dd> Multiply 4 by 10.5</dd></dl>
 <p> <code>mate-calc -s 21+21</code></p>
 <dl>
 <dt>
-<dd> Add 21 plus 21</dl>
+</dt><dd> Add 21 plus 21</dd></dl>
 <p> <code>mate-calc &#8211;solve &#8216;((5.25×4)×2)&#8217;</code></p>
 <dl>
 <dt>
-<dd> Multiply 5.25 by 4 and their product by 2</dl>
+</dt><dd> Multiply 5.25 by 4 and their product by 2</dd></dl>
 <p> <code>mate-calc</p>
 <dl>
 <dt>
-<dd> Open the Calculator GUI.</dl>
+</dt><dd> Open the Calculator GUI.</dd></dl>
 <p> </code></p>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>

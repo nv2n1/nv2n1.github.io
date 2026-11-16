@@ -18,7 +18,6 @@ url: "/docs/linux/man/1-pdl2/"
  <pre>
   %&gt; pdl2
   pdl&gt; $a = sequence(10)  # or any other perl or PDL command
-  
   pdl&gt; print &quot;\$a = $a\n&quot;; 
   $a = [0 1 2 3 4 5 6 7 8 9]
 </pre>
@@ -53,7 +52,7 @@ url: "/docs/linux/man/1-pdl2/"
 
 <dl>
 <dt>$PDL::toolongtoprint
-<dd> The maximal size pdls to print (defaults to 10000 elements). This is not just a <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt> variable but it is something that is usually needed in an interactive debugging session.</dl>
+</dt><dd> The maximal size pdls to print (defaults to 10000 elements). This is not just a <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt> variable but it is something that is usually needed in an interactive debugging session.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

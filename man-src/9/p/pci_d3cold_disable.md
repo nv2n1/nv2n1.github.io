@@ -15,7 +15,7 @@ pci_d3cold_disable - Disable D3cold for device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to handle</dl>
+<dl><dd></dd><dd>PCI device to handle</dd></dl>
 
 <h2>Description</h2>
 

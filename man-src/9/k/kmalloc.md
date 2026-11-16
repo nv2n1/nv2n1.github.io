@@ -14,10 +14,10 @@ description: "kmalloc – allocate memory"
 <p><i>size</i></p>
 <dl>
 <dd>
-<dd>how many bytes of memory are required.</dl>
+</dd><dd>how many bytes of memory are required.</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>the type of memory to allocate.</dl>
+<dd>the type of memory to allocate.</dd></dl>
 <h2>Description</h2>
 <p>kmalloc is the normal method of allocating memory for objects smaller than page size in the kernel. </p>
 <p> The <i>flags</i> argument may be one of: </p>

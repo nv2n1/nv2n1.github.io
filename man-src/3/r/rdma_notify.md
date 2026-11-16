@@ -12,17 +12,15 @@ rdma_notify - Notifies the librdmacm of an asynchronous event.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_notify
-
     (struct rdma_cm_id *id,
-
      enum ibv_event_type event);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>event
-<dd>Asynchronous event.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>event
+</dt><dd>Asynchronous event.</dd></dl>
 
 <h2>Description</h2>
 

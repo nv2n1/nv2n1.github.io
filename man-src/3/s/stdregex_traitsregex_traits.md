@@ -24,10 +24,8 @@ Default-constructs the std::regex_traits object, including default-constructing 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;regex&gt;
 int main()
-
 {
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));
     std::regex_traits&lt;char&gt; r1;

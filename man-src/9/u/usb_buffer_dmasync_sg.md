@@ -15,19 +15,19 @@ usb_buffer_dmasync_sg - synchronize DMA and CPU view of scatterlist buffer(s)
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to which the scatterlist will be mapped</dl>
+<dl><dd></dd><dd>device to which the scatterlist will be mapped</dd></dl>
  
 
  <i>is_in</i>
-<dl><dd>mapping transfer direction</dl>
+<dl><dd>mapping transfer direction</dd></dl>
  
 
  <i>sg</i>
-<dl><dd>the scatterlist to synchronize</dl>
+<dl><dd>the scatterlist to synchronize</dd></dl>
  
 
  <i>n_hw_ents</i>
-<dl><dd>the positive return value from usb_buffer_map_sg</dl>
+<dl><dd>the positive return value from usb_buffer_map_sg</dd></dl>
 
 <h2>Description</h2>
 

@@ -458,7 +458,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p>Note that many of the methods exist twice: once on the Manager object and once on the respective unit objects. This is to optimize access times so that methods that belong to unit objects do not have to be called with a resolved unit path, but can be called with only the unit id, too. </p>
 <p> <code>GetUnit()</code> may be used to get the unit object path for a unit name. It takes the unit name and returns the object path. If a unit has not been loaded yet by this name this method will fail. </p>
@@ -479,38 +479,38 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
 <p> <code>ResetFailed()</code> resets the &quot;failed&quot; state of all units. </p>
 <p> <code>ListUnits()</code> returns an array of all currently loaded units. Note that units may be known by multiple names at the same name, and hence there might be more unit names loaded than actual units behind them. The array consists of structures with the following elements: </p>
 <dl>
-<dd>&bull; The primary unit name as string</dl>
+<dd>&bull; The primary unit name as string</dd></dl>
 <dl>
-<dd>&bull; The human readable description string</dl>
+<dd>&bull; The human readable description string</dd></dl>
 <dl>
-<dd>&bull; The load state (i.e. whether the unit file has been loaded successfully)</dl>
+<dd>&bull; The load state (i.e. whether the unit file has been loaded successfully)</dd></dl>
 <dl>
-<dd>&bull; The active state (i.e. whether the unit is currently started or not)</dl>
+<dd>&bull; The active state (i.e. whether the unit is currently started or not)</dd></dl>
 <dl>
-<dd>&bull; The sub state (a more fine-grained version of the active state that is specific to the unit type, which the active state is not)</dl>
+<dd>&bull; The sub state (a more fine-grained version of the active state that is specific to the unit type, which the active state is not)</dd></dl>
 <dl>
-<dd>&bull; A unit that is being followed in its state by this unit, if there is any, otherwise the empty string.</dl>
+<dd>&bull; A unit that is being followed in its state by this unit, if there is any, otherwise the empty string.</dd></dl>
 <dl>
-<dd>&bull; The unit object path</dl>
+<dd>&bull; The unit object path</dd></dl>
 <dl>
-<dd>&bull; If there is a job queued for the job unit, the numeric job id, 0 otherwise</dl>
+<dd>&bull; If there is a job queued for the job unit, the numeric job id, 0 otherwise</dd></dl>
 <dl>
-<dd>&bull; The job type as string</dl>
+<dd>&bull; The job type as string</dd></dl>
 <dl>
-<dd>&bull; The job object path</dl>
+<dd>&bull; The job object path</dd></dl>
 <p> <code>ListJobs()</code> returns an array with all currently queued jobs. Returns an array consisting of structures with the following elements: </p>
 <dl>
-<dd>&bull; The numeric job id</dl>
+<dd>&bull; The numeric job id</dd></dl>
 <dl>
-<dd>&bull; The primary unit name for this job</dl>
+<dd>&bull; The primary unit name for this job</dd></dl>
 <dl>
-<dd>&bull; The job type as string</dl>
+<dd>&bull; The job type as string</dd></dl>
 <dl>
-<dd>&bull; The job state as string</dl>
+<dd>&bull; The job state as string</dd></dl>
 <dl>
-<dd>&bull; The job object path</dl>
+<dd>&bull; The job object path</dd></dl>
 <dl>
-<dd>&bull; The unit object path</dl>
+<dd>&bull; The unit object path</dd></dl>
 <p> <code>Subscribe()</code> enables most bus signals to be sent out. Clients which are interested in signals need to call this method. Signals are only sent out if at least one client invoked this method. <code>Unsubscribe()</code> reverts the signal subscription that <code>Subscribe()</code> implements. It is not necessary to invoke <code>Unsubscribe()</code> as clients are tracked. Signals are no longer sent out as soon as all clients which previously asked for <code>Subscribe()</code> either closed their connection to the bus or invoked <code>Unsubscribe()</code>. </p>
 <p> <code>Reload()</code> may be invoked to reload all unit files. </p>
 <p> <code>Reexecute()</code> may be invoked to reexecute the main manager process. It will serialize its state, reexecute, and deserizalize the state again. This is useful for upgrades and is a more comprehensive version of <code>Reload()</code>. </p>
@@ -530,7 +530,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
 <pre>#define SD_SYSTEMD_UNIT_RUNTIME (UINT64_C(1) &lt;&lt; 0)
 #define SD_SYSTEMD_UNIT_FORCE (UINT64_C(1) &lt;&lt; 1)
 #define SD_SYSTEMD_UNIT_PORTABLE (UINT64_C(1) &lt;&lt; 2)</pre>
-</dl>
+</dd></dl>
 <p> <i>SD_SYSTEMD_UNIT_RUNTIME</i> will enable or disable the unit for runtime only, <i>SD_SYSTEMD_UNIT_FORCE</i> controls whether symlinks pointing to other units shall be replaced if necessary. <i>SD_SYSTEMD_UNIT_PORTABLE</i> will add or remove the symlinks in /etc/systemd/system.attached and /run/systemd/system.attached. </p>
 <p> Similarly, <code>ReenableUnitFiles()</code> applies the changes to one or more units that would result from disabling and enabling the unit quickly one after the other in an atomic fashion. This is useful to apply updated [Install] information contained in unit files. </p>
 <p> Similarly, <code>LinkUnitFiles()</code> links unit files (that are located outside of the usual unit search paths) into the unit search path. </p>
@@ -778,7 +778,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>Start()</code>, <code>Stop()</code>, <code>Reload()</code>, <code>Restart()</code>, <code>TryRestart()</code>, <code>ReloadOrRestart()</code>, <code>ReloadOrTryRestart()</code>, <code>Kill()</code>, <code>ResetFailed()</code>, and <code>SetProperties()</code> implement the same operation as the respective methods on the Manager object (see above). However, these methods operate on the unit object and hence do not take a unit name parameter. Invoking the methods directly on the Manager object has the advantage of not requiring a <code>GetUnit()</code> call to get the unit object for a specific unit name. Calling the methods on the Manager object is hence a round trip optimization.</p>
 <h3>Properties</h3>
@@ -1391,7 +1391,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>BindMount()</code> and <code>MountImage()</code> implement the same operations as the respective methods on the Manager object (see above). However, these methods operate on the service object and hence do not take a unit name parameter. Invoking the methods directly on the Manager object has the advantage of not requiring a <code>GetUnit()</code> call to get the unit object for a specific unit name. Calling the methods on the Manager object is hence a round trip optimization.</p>
 <h3>Properties</h3>
@@ -1995,7 +1995,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p>Most of the properties map directly to the corresponding settings in socket unit files. As socket units can include <i>ExecStartPre</i> (and similar) fields which contain information about processes to execute. They also share most of the fields related to the execution context that Service objects expose (see above). </p>
 <p> In addition to these properties there are the following: </p>
@@ -2014,7 +2014,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <p> Target units have neither type-specific methods nor properties.</p>
 <h2>Device Unit Objects</h2>
 <p>All device unit objects implement the org.freedesktop.systemd1.Device interface (described here) in addition to the generic org.freedesktop.systemd1.Unit interface (see above). </p>
@@ -2030,7 +2030,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p>Device units only expose a single type-specific property: </p>
 <p> <i>SysFSPath</i> contains the sysfs path of the kernel device this object corresponds to.</p>
@@ -2536,7 +2536,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p>Most of the properties map directly to the corresponding settings in mount unit files. As mount units invoke the /usr/bin/mount command, their bus objects include implicit <i>ExecMount</i> (and similar) fields which contain information about processes to execute. They also share most of the fields related to the execution context that Service objects expose (see above). In addition to these properties there are the following: </p>
 <p> <i>ControlPID</i> contains the PID of the currently running /usr/bin/mount or /usr/bin/umount command if there is one running, otherwise 0. </p>
@@ -2561,7 +2561,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p>Most of the properties map directly to the corresponding settings in the automount unit files. </p>
 <p> <i>Result</i> knows the values &quot;success&quot; and &quot;resources&quot; at this time. They have the same meanings as the corresponding values of the corresponding field of the Service object.</p>
@@ -2605,7 +2605,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p><i>Unit</i> contains the name of the unit to activate when the timer elapses. </p>
 <p> <i>TimersMonotonic</i> contains an array of structs that contain information about all monotonic timers of this timer unit. The structs contain a string identifying the timer base, which is one of &quot;OnActiveUSec&quot;, &quot;OnBootUSec&quot;, &quot;OnStartupUSec&quot;, &quot;OnUnitActiveUSec&quot;, or &quot;OnUnitInactiveUSec&quot; which correspond to the settings of the same names in the timer unit files; the microsecond offset from this timer base in monotonic time; the next elapsation point on the <code>CLOCK_MONOTONIC</code> clock, relative to its epoch. </p>
@@ -3101,7 +3101,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p>Most of the properties map directly to the corresponding settings in swap unit files. As mount units invoke the <code><a href="/docs/linux/man/8-swapon/">swapon</a></code>(8) command, their bus objects include implicit <i>ExecActivate</i> (and similar) fields which contain information about processes to execute. They also share most of the fields related to the execution context that Service objects expose (see above). In addition to these properties there are the following: </p>
 <p> <i>ControlPID</i> contains the PID of the currently running <code><a href="/docs/linux/man/8-swapon/">swapon</a></code>(8) or <code><a href="/docs/linux/man/8-swapoff/">swapoff</a></code>(8) command if there is one running, otherwise 0. </p>
@@ -3127,7 +3127,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p>Most properties correspond directly with the matching settings in path unit files. </p>
 <p> The others: </p>
@@ -3286,7 +3286,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p>Most properties correspond directly with the matching settings in slice unit files.</p>
 <h2>Scope Unit Objects</h2>
@@ -3465,7 +3465,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Properties { ... };
  interface org.freedesktop.systemd1.Unit { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>Abandon()</code> may be used to place a scope unit in the &quot;abandoned&quot; state. This may be used to inform the system manager that the manager that created the scope lost interest in the scope (for example, because it is terminating), without wanting to shut down the scope entirely.</p>
 <h3>Signals</h3>
@@ -3496,7 +3496,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>Cancel()</code> cancels the job. Note that this will remove a job from the queue if it is not yet executed but generally will not cause a job that is already in the process of being executed to be aborted. This operation may also be requested via the <code>CancelJob()</code> method of the Manager object (see above), which is sometimes useful to reduce roundtrips.</p>
 <h3>Properties</h3>
@@ -3511,7 +3511,7 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.systemd1 \
  --object-path /org/freedesktop/systemd1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Introspect a unit on the bus</code> </p>
 <dl>
 <dd>
@@ -3520,30 +3520,31 @@ description: "org.freedesktop.systemd1 – The D-Bus interface of systemd"
  /org/freedesktop/systemd1 \
  org.freedesktop.systemd1.Manager \
  GetUnit s systemd-resolved.service | cut -d'&quot;' -f2)</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 3. Introspect org.freedesktop.systemd1.Job on the bus</code> </p>
 <dl>
 <dd>
 <pre>$ gdbus introspect --system --dest org.freedesktop.systemd1 \
  --object-path /org/freedesktop/systemd1/job/1292</pre>
-</dl>
+</dd></dl>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[4]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>polkit</p>
+<dt> 1.</dt>
+<dd>polkit</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dl>
-<dt> 2.</p>
-<dd>New Control Group Interface</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dd></dl>
+<dt> 2.</dt>
+<dd>New Control Group Interface</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/">https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/</a></dl>
-<dt> 3.</p>
-<dd>Booting Without /usr is Broken</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/">https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/</a></dd></dl>
+<dt> 3.</dt>
+<dd>Booting Without /usr is Broken</dd>
 <dl>
-<dd><a rel="nofollow" href="http://freedesktop.org/wiki/Software/systemd/separate-usr-is-broken">http://freedesktop.org/wiki/Software/systemd/separate-usr-is-broken</a></dl>
-<dt> 4.</p>
-<dd>the usual interface versioning guidelines</p>
+<dd><a rel="nofollow" href="http://freedesktop.org/wiki/Software/systemd/separate-usr-is-broken">http://freedesktop.org/wiki/Software/systemd/separate-usr-is-broken</a></dd></dl>
+<dt> 4.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+</dl>

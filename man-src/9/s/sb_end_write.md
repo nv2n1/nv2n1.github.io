@@ -15,7 +15,7 @@ sb_end_write - drop write access to a superblock
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>the super we wrote to</dl>
+<dl><dd></dd><dd>the super we wrote to</dd></dl>
 
 <h2>Description</h2>
 

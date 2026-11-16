@@ -21,27 +21,27 @@ description: "enum_w1_netlink_message_types – message type"
 <h2>Constants</h2>
 <p>W1_SLAVE_ADD</p>
 <dl>
-<dd>notification that a slave device was added</dl>
+<dd>notification that a slave device was added</dd></dl>
 <p> W1_SLAVE_REMOVE</p>
 <dl>
-<dd>notification that a slave device was removed</dl>
+<dd>notification that a slave device was removed</dd></dl>
 <p> W1_MASTER_ADD</p>
 <dl>
-<dd>notification that a new bus master was added</dl>
+<dd>notification that a new bus master was added</dd></dl>
 <p> W1_MASTER_REMOVE</p>
 <dl>
-<dd>notification that a bus masterwas removed</dl>
+<dd>notification that a bus masterwas removed</dd></dl>
 <p> W1_MASTER_CMD</p>
 <dl>
-<dd>initiate operations on a specific master</dl>
+<dd>initiate operations on a specific master</dd></dl>
 <p> W1_SLAVE_CMD</p>
 <dl>
-<dd>sends reset, selects the slave, then does a read/write/touch operation</dl>
+<dd>sends reset, selects the slave, then does a read/write/touch operation</dd></dl>
 <p> W1_LIST_MASTERS</p>
 <dl>
-<dd>used to determine the bus master identifiers</dl>
+<dd>used to determine the bus master identifiers</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

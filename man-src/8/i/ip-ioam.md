@@ -10,9 +10,7 @@ description: "ip-ioam – IPv6 In-situ OAM (IOAM)"
 <p>ip-ioam &#8211; IPv6 In-situ OAM (IOAM)</p>
 <h2>Synopsis</h2>
 <pre><code>ip ioam
-
 { COMMAND |
-
     help }
 </code></pre>
 <p> <code>ip ioam namespace show</code><br />
@@ -22,13 +20,9 @@ description: "ip-ioam – IPv6 In-situ OAM (IOAM)"
  <code>ip ioam schema add</code> <i>ID DATA</i><br />
  <code>ip ioam schema del</code> <i>ID</i> </p>
 <pre><code>ip ioam namespace set
-
 ID
-
 schema
-
 { ID |
-
     none }
 </code></pre>
 <h2>Description</h2>

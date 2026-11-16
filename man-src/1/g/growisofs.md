@@ -15,22 +15,22 @@ description: "growisofs – combined genisoimage frontend/DVD recording program.
 <p> <code>growisofs</code> was originally designed as a frontend to <code>genisoimage</code> to facilitate appending of data to ISO9660 volumes residing on random-access media such as DVD+RW, DVD-RAM, plain files, hard disk partitions. In the course of development general purpose DVD recording support was implemented, and as of now <code>growisofs</code> supports not only random-access media, but even mastering of multisession DVD media such as DVD+R and DVD-R/-RW, as well as Blu-ray Disc. In addition <code>growisofs</code> supports first-/single-session recording of <i>arbitrary pre-mastered image</i> (formatted as UDF, ISO9660 or any other file system, if formatted at all) to all supported DVD media types. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-Z&nbsp;/dev/dvd</code></p>
-<dd> Burn an initial session to the selected device. A special form of this option is recognized to support burning of pre-mastered images. See EXAMPLES section for further details.</p>
-<dt><code>-M&nbsp;/dev/dvd</code></p>
-<dd> Merge a new session to an existing one.</p>
-<dt><code>-version</code></p>
-<dd> Print version information and invoke <code>genisoimage</code>, also with -version option.</p>
-<dt><code>-dvd-compat</code></p>
-<dd> Provide maximum media compatibility with DVD-ROM/-Video. In write-once DVD+R or DVD-R context this results in unappendable recording (closed disk). In DVD+RW context it instructs the logical unit to explicitly burn [otherwise optional] lead-out.</p>
-<dt><code>-dry-run</code></p>
-<dd> At dry-run <code>growisofs</code> performs all the steps till, but not including the first write operation. Most notably check for &quot;overburn&quot; condition is performed, which implies that genisoimage is invoked and terminated prematurely.</p>
-<dt><code>-overburn</code></p>
-<dd> Normally single layer DVD media can accommodate up to approximately 4.700.000.000 bytes (in marketing speech 4.7GB). In other words a DVD can contain about 4.377 GiB or 4482 MiB. Same kind of arithmetics applies to Blu-ray Disc capacity of 25.000.000.000 bytes. Anyway, growisofs won&#8217;t start without this option, if &quot;overburn&quot; condition appears to be unavoidable.</p>
-<dt><code>-speed=N</code></p>
-<dd> An option to control recording velocity. Most commonly you&#8217;ll use <code>-speed=1</code> with &quot;no-name&quot; media, if default speed setting messes up the media. Keep in mind that <code>N</code> essentially denotes speed <i>closest</i> to N*1385KBps in DVD or N*4496KBps in Blu-ray Disc case among those offered by unit for currently mounted media. The list can be found in <code>dvd+rw-mediainfo</code> output. Note that Blu-ray Disc recordings are commonly performed at ~1/2 of advertised speed, because of defect management being in effect.</p>
-<dt><code>&lt;genisoimage-options&gt;</code></p>
-<dd> More options can be found in the manpage for <code>genisoimage</code>. </p>
+<dt><code>-Z&nbsp;/dev/dvd</code></dt>
+<dd> Burn an initial session to the selected device. A special form of this option is recognized to support burning of pre-mastered images. See EXAMPLES section for further details.</dd>
+<dt><code>-M&nbsp;/dev/dvd</code></dt>
+<dd> Merge a new session to an existing one.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version information and invoke <code>genisoimage</code>, also with -version option.</dd>
+<dt><code>-dvd-compat</code></dt>
+<dd> Provide maximum media compatibility with DVD-ROM/-Video. In write-once DVD+R or DVD-R context this results in unappendable recording (closed disk). In DVD+RW context it instructs the logical unit to explicitly burn [otherwise optional] lead-out.</dd>
+<dt><code>-dry-run</code></dt>
+<dd> At dry-run <code>growisofs</code> performs all the steps till, but not including the first write operation. Most notably check for &quot;overburn&quot; condition is performed, which implies that genisoimage is invoked and terminated prematurely.</dd>
+<dt><code>-overburn</code></dt>
+<dd> Normally single layer DVD media can accommodate up to approximately 4.700.000.000 bytes (in marketing speech 4.7GB). In other words a DVD can contain about 4.377 GiB or 4482 MiB. Same kind of arithmetics applies to Blu-ray Disc capacity of 25.000.000.000 bytes. Anyway, growisofs won&#8217;t start without this option, if &quot;overburn&quot; condition appears to be unavoidable.</dd>
+<dt><code>-speed=N</code></dt>
+<dd> An option to control recording velocity. Most commonly you&#8217;ll use <code>-speed=1</code> with &quot;no-name&quot; media, if default speed setting messes up the media. Keep in mind that <code>N</code> essentially denotes speed <i>closest</i> to N*1385KBps in DVD or N*4496KBps in Blu-ray Disc case among those offered by unit for currently mounted media. The list can be found in <code>dvd+rw-mediainfo</code> output. Note that Blu-ray Disc recordings are commonly performed at ~1/2 of advertised speed, because of defect management being in effect.</dd>
+<dt><code>&lt;genisoimage-options&gt;</code></dt>
+<dd> More options can be found in the manpage for <code>genisoimage</code>. </dd>
 </dl>
 <p> There are several undocumented options commonly denoted with <code>-use-the-force-luke</code> prefix. Some of them serve debugging purposes. Some require certain knowledge about recording process or even OS kernel internals and as being such can induce confusing behaviour. Some are to be used in very specific situations better recognized by front-ends or automated scripts. Rationale behind leaving these options undocumented is that those few users who would actually need to use them directly can as well consult the source code or obtain specific instructions elsewhere. </p>
 <h2>DIFFERENCES WITH RUNNING GENISOIMAGE DIRECTLY</h2>
@@ -64,10 +64,10 @@ description: "growisofs – combined genisoimage frontend/DVD recording program.
 <p> Playback of re-writable DVD media, both DVD+RW and DVD-RW, might be limited in legacy DVD-ROM/-Video units. In most cases this is due to lower reflectivity of such media. </p>
 <p> Even though growisofs supports it, playback of multisession write-once DVD might be limited to the first session for two reasons: </p>
 <dl>
-<dt>&bull;</p>
-<dd> not all DVD-ROM players are capable of multi-border DVD-R playback, even less are aware of DVD+R multisessioning, burner unit therefore might be the only one in your vicinity capable of accessing files written at different occasions;</p>
-<dt>&bull;</p>
-<dd> OS might fail to mount multisession DVD for various reasons;</dl>
+<dt>&bull;</dt>
+<dd> not all DVD-ROM players are capable of multi-border DVD-R playback, even less are aware of DVD+R multisessioning, burner unit therefore might be the only one in your vicinity capable of accessing files written at different occasions;</dd>
+<dt>&bull;</dt>
+<dd> OS might fail to mount multisession DVD for various reasons;</dd></dl>
 <p> The above is not applicable to DVD+RW, DVD-RW Restricted Overwrite, DVD-RAM or Blu-ray Disc, as volumes are grown within a single session. </p>
 <p> When growisofs &quot;runs into&quot; blank Blu-ray Disc media, BD-RE or BD-R, it gets pre-formatted with minimal spare area size of 256MB. </p>
 <h2>SEE ALSO</h2>

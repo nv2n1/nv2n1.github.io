@@ -42,14 +42,14 @@ void
 <code>Tcl_LimitRemoveHandler</code>(<i>interp, type, handlerProc, clientData</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter that the limit being managed applies to or that will have its limits checked.</p>
-<dd>int <i>type</i> (in) The type of limit that the operation refers to. This must be either <code>TCL_LIMIT_COMMANDS</code> or <code>TCL_LIMIT_TIME</code>.</p>
-<dd>int <i>commandLimit</i> (in) The maximum number of commands (as reported by <code>info cmdcount</code>) that may be executed in the interpreter.</p>
-<dd>Tcl_Time <i>*timeLimitPtr</i> (in/out) A pointer to a structure that will either have the new time limit read from (<code>Tcl_LimitSetTime</code>) or the current time limit written to (<code>Tcl_LimitGetTime</code>).</p>
-<dd>int <i>granularity</i> (in) Divisor that indicates how often a particular limit should really be checked. Must be at least 1.</p>
-<dd>Tcl_LimitHandlerProc <i>*handlerProc</i> (in) Function to call when a particular limit is exceeded. If the <i>handlerProc</i> removes or raises the limit during its processing, the limited interpreter will be permitted to continue to process after the handler returns. Many handlers may be attached to the same interpreter limit; their order of execution is not defined, and they must be identified by <i>handlerProc</i> and <i>clientData</i> when they are deleted.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary pointer-sized word used to pass some context to the <i>handlerProc</i> function.</p>
-<dd>Tcl_LimitHandlerDeleteProc <i>*deleteProc</i> (in) Function to call whenever a handler is deleted. May be NULL if the <i>clientData</i> requires no deletion. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter that the limit being managed applies to or that will have its limits checked.</dd>
+<dd>int <i>type</i> (in) The type of limit that the operation refers to. This must be either <code>TCL_LIMIT_COMMANDS</code> or <code>TCL_LIMIT_TIME</code>.</dd>
+<dd>int <i>commandLimit</i> (in) The maximum number of commands (as reported by <code>info cmdcount</code>) that may be executed in the interpreter.</dd>
+<dd>Tcl_Time <i>*timeLimitPtr</i> (in/out) A pointer to a structure that will either have the new time limit read from (<code>Tcl_LimitSetTime</code>) or the current time limit written to (<code>Tcl_LimitGetTime</code>).</dd>
+<dd>int <i>granularity</i> (in) Divisor that indicates how often a particular limit should really be checked. Must be at least 1.</dd>
+<dd>Tcl_LimitHandlerProc <i>*handlerProc</i> (in) Function to call when a particular limit is exceeded. If the <i>handlerProc</i> removes or raises the limit during its processing, the limited interpreter will be permitted to continue to process after the handler returns. Many handlers may be attached to the same interpreter limit; their order of execution is not defined, and they must be identified by <i>handlerProc</i> and <i>clientData</i> when they are deleted.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary pointer-sized word used to pass some context to the <i>handlerProc</i> function.</dd>
+<dd>Tcl_LimitHandlerDeleteProc <i>*deleteProc</i> (in) Function to call whenever a handler is deleted. May be NULL if the <i>clientData</i> requires no deletion. </dd>
 </dl>
 <h2>Description</h2>
 <p>Tcl&#8217;s interpreter resource limit subsystem allows for close control over how much computation time a script may use, and is useful for cases where a program is divided into multiple pieces where some parts are more trusted than others (e.g. web application servers). </p>
@@ -70,14 +70,14 @@ void
 <pre>typedef void Tcl_LimitHandlerProc(
  ClientData <i>clientData</i>,
  Tcl_Interp *<i>interp</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> argument to the handler will be whatever is passed to the <i>clientData</i> argument to <code>Tcl_LimitAddHandler</code>, and the <i>interp</i> is the interpreter that had its limit exceeded. </p>
 <p> The <i>deleteProc</i> argument to <code>Tcl_LimitAddHandler</code> is a function to call to delete the <i>clientData</i> value. It may be <code>TCL_STATIC</code> or NULL if no deletion action is necessary, or <code>TCL_DYNAMIC</code> if all that is necessary is to free the structure with <code>Tcl_Free</code>. Otherwise, it should refer to a function with the following prototype: </p>
 <dl COMPACT>
 <dd>
 <pre>typedef void Tcl_LimitHandlerDeleteProc(
  ClientData <i>clientData</i>);</pre>
-</dl>
+</dd></dl>
 <p> A limit handler may be deleted using <code>Tcl_LimitRemoveHandler</code>; the handler removed will be the first one found (out of the handlers added with <code>Tcl_LimitAddHandler</code>) with exactly matching <i>type</i>, <i>handlerProc</i> and <i>clientData</i> arguments. This function always invokes the <i>deleteProc</i> on the <i>clientData</i> (unless the <i>deleteProc</i> was NULL or <code>TCL_STATIC</code>). </p>
 <h2>Keywords</h2>
 <p>interpreter, resource, limit, commands, time, callback</p>

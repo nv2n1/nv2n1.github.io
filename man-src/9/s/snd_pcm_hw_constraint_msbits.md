@@ -15,19 +15,19 @@ snd_pcm_hw_constraint_msbits - add a hw constraint msbits rule
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>cond</i>
-<dl><dd>condition bits</dl>
+<dl><dd>condition bits</dd></dl>
  
 
  <i>width</i>
-<dl><dd>sample bits width</dl>
+<dl><dd>sample bits width</dd></dl>
  
 
  <i>msbits</i>
-<dl><dd>msbits width</dl>
+<dl><dd>msbits width</dd></dl>
 
 <h2>Description</h2>
 

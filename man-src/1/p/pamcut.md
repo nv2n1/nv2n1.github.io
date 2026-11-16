@@ -23,23 +23,23 @@ description: "pamcut – cut a rectangle out of a PAM, PBM, PGM, or PPM image"
 <p> If you are splitting a single image into multiple same-size images, <code>pamdice</code> is faster than running <code>pamcut</code> multiple times. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-left</code></p>
-<dd> The column number of the leftmost column to be in the output. If a nonnegative number, it refers to columns numbered from 0 at the left, increasing to the right. If negative, it refers to columns numbered -1 at the right, decreasing to the left.</p>
-<dt><code>-right</code></p>
-<dd> The column number of the rightmost column to be in the output, numbered the same as for <code>-left.</code></p>
-<dt><code>-top</code></p>
-<dd> The row number of the topmost row to be in the output. If a nonnegative number it refers to rows numbered from 0 at the top, increasing downward. If negative, it refers to columns numbered -1 at the bottom, decreasing upward.</p>
-<dt><code>-bottom</code></p>
-<dd> The row number of the bottom-most row to be in the output, numbered the same as for <code>-top</code>.</p>
-<dt><code>-width</code></p>
-<dd> The number of columns to be in the output. Must be positive.</p>
-<dt><code>-height</code></p>
-<dd> The number of rows to be in the output. Must be positive.</p>
-<dt><code>-pad</code></p>
-<dd> If the rectangle you specify is not entirely within the input image, <code>pamcut</code> fails unless you also specify <code>-pad</code>. In that case, it pads the output with black up to the edges you specify. You can use this option if you need to have an image of certain dimensions and have an image of arbitrary dimensions. </p>
+<dt><code>-left</code></dt>
+<dd> The column number of the leftmost column to be in the output. If a nonnegative number, it refers to columns numbered from 0 at the left, increasing to the right. If negative, it refers to columns numbered -1 at the right, decreasing to the left.</dd>
+<dt><code>-right</code></dt>
+<dd> The column number of the rightmost column to be in the output, numbered the same as for <code>-left.</code></dd>
+<dt><code>-top</code></dt>
+<dd> The row number of the topmost row to be in the output. If a nonnegative number it refers to rows numbered from 0 at the top, increasing downward. If negative, it refers to columns numbered -1 at the bottom, decreasing upward.</dd>
+<dt><code>-bottom</code></dt>
+<dd> The row number of the bottom-most row to be in the output, numbered the same as for <code>-top</code>.</dd>
+<dt><code>-width</code></dt>
+<dd> The number of columns to be in the output. Must be positive.</dd>
+<dt><code>-height</code></dt>
+<dd> The number of rows to be in the output. Must be positive.</dd>
+<dt><code>-pad</code></dt>
+<dd> If the rectangle you specify is not entirely within the input image, <code>pamcut</code> fails unless you also specify <code>-pad</code>. In that case, it pads the output with black up to the edges you specify. You can use this option if you need to have an image of certain dimensions and have an image of arbitrary dimensions. </dd>
 <p> <code>pnmpad</code> also adds borders to an image, but you specify their width directly. </p>
-<dt><code>-verbose</code></p>
-<dd> Print information about the processing to Standard Error. </p>
+<dt><code>-verbose</code></dt>
+<dd> Print information about the processing to Standard Error. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmcrop/">pnmcrop</a></code>(1), <code><a href="/docs/linux/man/1-pnmpad/">pnmpad</a></code>(1), <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1), <code><a href="/docs/linux/man/1-pgmslice/">pgmslice</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5)</p>

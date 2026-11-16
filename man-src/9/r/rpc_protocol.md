@@ -15,7 +15,7 @@ rpc_protocol - Get transport protocol number for an RPC client
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client to query</dl>
+<dl><dd></dd><dd>RPC client to query</dd></dl>
 
 <h2>Copyright</h2>
 

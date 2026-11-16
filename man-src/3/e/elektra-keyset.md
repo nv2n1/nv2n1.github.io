@@ -66,17 +66,17 @@ ksDel(myConfig); // delete keyset and all keys appended
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the size of the KeySet after transfer </p>
+</dt><dd> the size of the KeySet after transfer </dd>
 <p> -1 on NULL pointers</dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the KeySet that will receive the keys<br />
- <i>toAppend</i> the KeySet that provides the keys that will be transfered</dl>
+</dt><dd> <i>ks</i> the KeySet that will receive the keys<br />
+ <i>toAppend</i> the KeySet that provides the keys that will be transfered</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksAppendKey()</code>, ksInsert(), ksInsertKeys()</dl>
+</dt><dd> <code>ksAppendKey()</code>, ksInsert(), ksInsertKeys()</dd></dl>
 <h3>ssize_t ksAppendKey (KeySet * ks, Key * toAppend)Appends a Key to the end of ks.</h3>
 <p> A pointer to the key will be stored, and not a private copy. So a future <code>ksDel()</code> on ks may <code>keyDel()</code> the toAppend object, see <code>keyGetRef()</code>. </p>
 <p> The reference counter of the key will be incremented, and thus toAppend is not const. </p>
@@ -85,17 +85,17 @@ ksDel(myConfig); // delete keyset and all keys appended
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the size of the KeySet after insertion </p>
+</dt><dd> the size of the KeySet after insertion </dd>
 <p> -1 on NULL pointers</dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> KeySet that will receive the key<br />
- <i>toAppend</i> Key that will be appended to ks</dl>
+</dt><dd> <i>ks</i> KeySet that will receive the key<br />
+ <i>toAppend</i> Key that will be appended to ks</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> ksInsert(), ksInsertKeys(), <code>ksAppend()</code>, <code>keyNew()</code>, <code>ksDel()</code> </p>
+</dt><dd> ksInsert(), ksInsertKeys(), <code>ksAppend()</code>, <code>keyNew()</code>, <code>ksDel()</code> </dd>
 <p> <code>keyIncRef()</code></dl>
 <h3>int ksCopy (KeySet * dest, const KeySet * source)Copy a keyset.</h3>
 <p> Most often you may want a duplicate of a keyset, see <code>ksDup()</code> or append keys, see <code>ksAppend()</code>. But in some situations you need to copy a keyset to a existing keyset, for that this function exists. </p>
@@ -112,54 +112,54 @@ ksDel(myConfig); // delete keyset and all keys appended
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>source</i> has to be an initialized source KeySet or NULL<br />
- <i>dest</i> has to be an initialized KeySet where to write the keys</dl>
+</dt><dd> <i>source</i> has to be an initialized source KeySet or NULL<br />
+ <i>dest</i> has to be an initialized KeySet where to write the keys</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 1 on success </p>
+</dt><dd> 1 on success </dd>
 <p> 0 if dest was cleared successfully (source is NULL) </p>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksNew()</code>, <code>ksDel()</code>, <code>ksDup()</code> </p>
+</dt><dd> <code>ksNew()</code>, <code>ksDel()</code>, <code>ksDup()</code> </dd>
 <p> <code>keyCopy()</code> for copying keys</dl>
 <h3>Key* ksCurrent (const KeySet * ks)Return the current Key.</h3>
 <p> The pointer is NULL if you reached the end or after <code>ksRewind()</code>. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> You must not delete the key or change the key, use <code>ksPop()</code> if you want to delete it.</dl>
+</dt><dd> You must not delete the key or change the key, use <code>ksPop()</code> if you want to delete it.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> pointer to the Key pointed by ks&#8217;s cursor </p>
+</dt><dd> pointer to the Key pointed by ks&#8217;s cursor </dd>
 <p> 0 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksNext()</code>, <code>ksRewind()</code> </p>
+</dt><dd> <code>ksNext()</code>, <code>ksRewind()</code> </dd>
 <p> kdbMonitorKeys() for a usage example</dl>
 <h3>int ksDel (KeySet * ks)A destructor for KeySet objects.</h3>
 <p> Cleans all internal dynamic attributes, decrement all reference pointers to all keys and then <code>keyDel()</code> all contained Keys, and free()s the release the KeySet object memory (that was previously allocated by <code>ksNew()</code>). </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 when the keyset was freed </p>
+</dt><dd> 0 when the keyset was freed </dd>
 <p> -1 on null pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksNew()</code></dl>
+</dt><dd> <code>ksNew()</code></dd></dl>
 <h3>KeySet* ksDup (const KeySet * source)Return a duplicate of a keyset.</h3>
 <p> Objects created with <code>ksDup()</code> must be destroyed with <code>ksDel()</code>. </p>
 <p> Memory will be allocated as needed for dynamic properties, so you need to <code>ksDel()</code> the returned pointer. </p>
@@ -167,23 +167,23 @@ ksDel(myConfig); // delete keyset and all keys appended
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>source</i> has to be an initializised source KeySet</dl>
+</dt><dd> <i>source</i> has to be an initializised source KeySet</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> a flat copy of source on success </p>
+</dt><dd> a flat copy of source on success </dd>
 <p> 0 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksNew()</code>, <code>ksDel()</code> </p>
+</dt><dd> <code>ksNew()</code>, <code>ksDel()</code> </dd>
 <p> <code>keyDup()</code> for <code>Key :: Basic Methods</code> duplication</dl>
 <h3>cursor_t ksGetCursor (const KeySet * ks)Get the KeySet internal cursor.</h3>
 <p> Use it to get the cursor of the actual position. </p>
 <p> <code>Warning:</code></p>
 <dl>
 <dt>
-<dd> Cursors are getting invalid when the key was <code>ksPop()</code>ed or <code>ksLookup()</code> with KDB_O_POP was used.</dl>
+</dt><dd> Cursors are getting invalid when the key was <code>ksPop()</code>ed or <code>ksLookup()</code> with KDB_O_POP was used.</dd></dl>
 <h2>Read ahead</h2>
 <p> With the cursors it is possible to read ahead in a keyset: </p>
 <p>cursor_t jump;<br />
@@ -212,50 +212,50 @@ while ((key = keyNext(ks)) != 0) {<br />
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Only use a cursor for the same keyset which it was made for.</dl>
+</dt><dd> Only use a cursor for the same keyset which it was made for.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> a valid cursor on success </p>
+</dt><dd> a valid cursor on success </dd>
 <p> an invalid cursor on NULL pointer or after <code>ksRewind()</code></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksNext()</code>, <code>ksSetCursor()</code></dl>
+</dt><dd> <code>ksNext()</code>, <code>ksSetCursor()</code></dd></dl>
 <h3>ssize_t ksGetSize (const KeySet * ks)Return the number of keys that ks contains.</h3>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of keys that ks contains. </p>
+</dt><dd> the number of keys that ks contains. </dd>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> ksNew(0), <code>ksDel()</code></dl>
+</dt><dd> ksNew(0), <code>ksDel()</code></dd></dl>
 <h3>Key* ksHead (const KeySet * ks)Return the first key in the KeySet.</h3>
 <p> The KeySets cursor will not be effected. </p>
 <p> If <code>ksCurrent()</code>==ksHead() you know you are on the first key. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the first Key of a keyset </p>
+</dt><dd> the first Key of a keyset </dd>
 <p> 0 on NULL pointer or empty keyset</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksTail()</code> for the last <code>Key :: Basic Methods</code> </p>
+</dt><dd> <code>ksTail()</code> for the last <code>Key :: Basic Methods</code> </dd>
 <p> <code>ksRewind()</code>, <code>ksCurrent()</code> and <code>ksNext()</code> for iterating over the <code>KeySet :: Class Methods</code></dl>
 <h3>Key* ksLookup (KeySet * ks, Key * key, option_t options)Look for a Key contained in ks that matches the name of the key.</h3>
 <h2>Introduction</h2>
@@ -280,16 +280,16 @@ if ((myKey = ksLookup(myConfig, key, 0)) == NULL)<br />
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Note that <code>keyRemove()</code> keys won&#8217;t be found after the first time the keyset is resorted. Lookup automatically sorts the keyset, if needed, but it can&#8217;t find it out when only keys are changed, not the keyset. </p>
+</dt><dd> Note that <code>keyRemove()</code> keys won&#8217;t be found after the first time the keyset is resorted. Lookup automatically sorts the keyset, if needed, but it can&#8217;t find it out when only keys are changed, not the keyset. </dd>
 <p> Like in <code>ksPop()</code> the popped key always needs to be <code>keyDel()</code> afterwards, even if it is appended to another keyset.</dl>
 <p> <code>Warning:</code></p>
 <dl>
 <dt>
-<dd> All cursors on the keyset will be invalid iff you use KDB_O_POP, so don&#8217;t use this if you rely on a cursor, see <code>ksGetCursor()</code>.</dl>
+</dt><dd> All cursors on the keyset will be invalid iff you use KDB_O_POP, so don&#8217;t use this if you rely on a cursor, see <code>ksGetCursor()</code>.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Never use <code>ksLookup()</code> with KDB_O_POP and <code>ksAppendKey()</code> or <code>ksAppend()</code> together in a loop. Otherwise <code>ksLookup()</code> will need to resort the keyset every iteration and spend 99.96% of the time in <code>ksSort()</code> (benchmarked with above 500k iterations).</dl>
+</dt><dd> Never use <code>ksLookup()</code> with KDB_O_POP and <code>ksAppendKey()</code> or <code>ksAppend()</code> together in a loop. Otherwise <code>ksLookup()</code> will need to resort the keyset every iteration and spend 99.96% of the time in <code>ksSort()</code> (benchmarked with above 500k iterations).</dd></dl>
 <p> You can solve this problem by using KDB_O_NOALL, risking you have to iterate n^2 instead of n. </p>
 <p> The more elegant way is to separate the keyset you use for <code>ksLookup()</code> and <code>ksAppendKey()</code>: </p>
 <p>int f(KeySet *iterator, KeySet *lookup)<br />
@@ -311,35 +311,35 @@ if ((myKey = ksLookup(myConfig, key, 0)) == NULL)<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> where to look for<br />
+</dt><dd> <i>ks</i> where to look for<br />
  <i>key</i> the key object you are looking for<br />
- <i>options</i> some KDB_O_* option bits:</p>
+ <i>options</i> some KDB_O_* option bits:</dd>
 <dl>
-<dt>*</p>
-<dd> KDB_O_NOCASE </p>
+<dt>*</dt>
+<dd> KDB_O_NOCASE </dd>
 <p>&nbsp;<wbr>Lookup ignoring case.</p>
-<dt>*</p>
-<dd> KDB_O_WITHOWNER </p>
+<dt>*</dt>
+<dd> KDB_O_WITHOWNER </dd>
 <p>&nbsp;<wbr>Also consider correct owner.</p>
-<dt>*</p>
-<dd> KDB_O_NOALL </p>
+<dt>*</dt>
+<dd> KDB_O_NOALL </dd>
 <p>&nbsp;<wbr>Only search from&nbsp;<wbr><code>ksCurrent()</code>&nbsp;<wbr>to end of keyset, see above text.</p>
-<dt>*</p>
-<dd> KDB_O_POP </p>
+<dt>*</dt>
+<dd> KDB_O_POP </dd>
 <p>&nbsp;<wbr>Pop the key which was found.</p>
-<dt>*</p>
-<dd> KDB_O_SORT </p>
+<dt>*</dt>
+<dd> KDB_O_SORT </dd>
 <p>&nbsp;<wbr>Force sorting before searching, see&nbsp;<wbr><code>ksSort()</code>. Together with KDB_O_NOALL the search will start from beginning.&nbsp;<wbr></dl>
 </dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> pointer to the Key found, 0 otherwise </p>
+</dt><dd> pointer to the Key found, 0 otherwise </dd>
 <p> 0 on NULL pointers</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksLookupByName()</code> to search by a name given by a string </p>
+</dt><dd> <code>ksLookupByName()</code> to search by a name given by a string </dd>
 <p> <code>ksCurrent()</code>, <code>ksRewind()</code>, <code>ksNext()</code> for iterating over a <code>KeySet :: Class Methods</code> </p>
 <p> <code>ksSort()</code> to understand how <code>KeySet :: Class Methods</code> sort themself</dl>
 <h3>Key* ksLookupByName (KeySet * ks, const char * name, option_t options)Look for a Key contained in ks that matches name.</h3>
@@ -359,36 +359,36 @@ if ((myKey = ksLookupByName(myConfig, &#8216;/myapp/current/key&#8217;, 0)) == N
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> where to look for<br />
+</dt><dd> <i>ks</i> where to look for<br />
  <i>name</i> key name you are looking for<br />
- <i>options</i> some KDB_O_* option bits:</p>
+ <i>options</i> some KDB_O_* option bits:</dd>
 <dl>
-<dt>*</p>
-<dd> KDB_O_NOCASE </p>
+<dt>*</dt>
+<dd> KDB_O_NOCASE </dd>
 <p>&nbsp;<wbr>Lookup ignoring case.</p>
-<dt>*</p>
-<dd> KDB_O_WITHOWNER </p>
+<dt>*</dt>
+<dd> KDB_O_WITHOWNER </dd>
 <p>&nbsp;<wbr>Also consider correct owner.</p>
-<dt>*</p>
-<dd> KDB_O_NOALL </p>
+<dt>*</dt>
+<dd> KDB_O_NOALL </dd>
 <p>&nbsp;<wbr>Only search from&nbsp;<wbr><code>ksCurrent()</code>&nbsp;<wbr>to end of keyset, see above text.</p>
-<dt>*</p>
-<dd> KDB_O_POP </p>
+<dt>*</dt>
+<dd> KDB_O_POP </dd>
 <p>&nbsp;<wbr>Pop the key which was found.</p>
-<dt>*</p>
-<dd> KDB_O_SORT </p>
+<dt>*</dt>
+<dd> KDB_O_SORT </dd>
 <p>&nbsp;<wbr>Force sorting before searching, see&nbsp;<wbr><code>ksSort()</code>. Together with KDB_O_NOALL the search will start from beginning.</dl>
 </dl>
 <p> Currently no options supported. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> pointer to the Key found, 0 otherwise </p>
+</dt><dd> pointer to the Key found, 0 otherwise </dd>
 <p> 0 on NULL pointers</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> keyCompare() for very powerfull Key lookups in KeySets </p>
+</dt><dd> keyCompare() for very powerfull Key lookups in KeySets </dd>
 <p> <code>ksCurrent()</code>, <code>ksRewind()</code>, <code>ksNext()</code></dl>
 <h3>KeySet* ksNew (size_t alloc, &#8230;)Allocate, initialize and return a new KeySet object.</h3>
 <p> Objects created with <code>ksNew()</code> must be destroyed with <code>ksDel()</code>. </p>
@@ -417,16 +417,16 @@ ksDel(config);</p>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksDel()</code> to free the <code>KeySet :: Class Methods</code> afterwards </p>
+</dt><dd> <code>ksDel()</code> to free the <code>KeySet :: Class Methods</code> afterwards </dd>
 <p> <code>ksDup()</code> to duplicate an existing <code>KeySet :: Class Methods</code></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>alloc</i> gives a hint for the size how many Keys may be stored initially</dl>
+</dt><dd> <i>alloc</i> gives a hint for the size how many Keys may be stored initially</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> a ready to use KeySet object </p>
+</dt><dd> a ready to use KeySet object </dd>
 <p> 0 on memory error</dl>
 <h3>Key* ksNext (KeySet * ks)Returns the next Key in a KeySet.</h3>
 <p> KeySets have an internal cursor that can be reset with <code>ksRewind()</code>. Every time <code>ksNext()</code> is called the cursor is incremented and the new current Key is returned. </p>
@@ -435,28 +435,28 @@ ksDel(config);</p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> You must not delete or change the key, use <code>ksPop()</code> if you want to delete it.</dl>
+</dt><dd> You must not delete or change the key, use <code>ksPop()</code> if you want to delete it.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the new current Key </p>
+</dt><dd> the new current Key </dd>
 <p> 0 when the end is reached </p>
 <p> 0 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksRewind()</code>, <code>ksCurrent()</code></dl>
+</dt><dd> <code>ksRewind()</code>, <code>ksCurrent()</code></dd></dl>
 <h3>Key* ksPop (KeySet * ks)Remove and return the last key of ks.</h3>
 <p> The reference counter will be decremented by one. </p>
 <p> The KeySets cursor will not be effected if it did not point to the popped key. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> You need to <code>keyDel()</code> the key afterwards, if you don&#8217;t append it to another keyset. It has the same semantics like a key allocated with <code>keyNew()</code> or <code>keyDup()</code>.</dl>
+</dt><dd> You need to <code>keyDel()</code> the key afterwards, if you don&#8217;t append it to another keyset. It has the same semantics like a key allocated with <code>keyNew()</code> or <code>keyDup()</code>.</dd></dl>
 <p>ks1 = ksNew(0);<br />
 ks2 = ksNew(0);<br />
 k1 = keyNew(0);       // ref counter 0<br />
@@ -471,16 +471,16 @@ ksDel(ks2);<br />
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the last key of ks </p>
+</dt><dd> the last key of ks </dd>
 <p> NULL if ks is empty or on NULL pointer</dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> KeySet to work with</dl>
+</dt><dd> <i>ks</i> KeySet to work with</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksAppendKey()</code>, <code>ksAppend()</code> </p>
+</dt><dd> <code>ksAppendKey()</code>, <code>ksAppend()</code> </dd>
 <p> commandList() for an example</dl>
 <h3>int ksRewind (KeySet * ks)Rewinds the KeySet internal cursor.</h3>
 <p> Use it to set the cursor to the beginning of the KeySet. <code>ksCurrent()</code> will then always return NULL afterwards. So you want to <code>ksNext()</code> first. </p>
@@ -490,22 +490,22 @@ while ((key = keyNext(ks)) != 0) {<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksNext()</code>, <code>ksCurrent()</code></dl>
+</dt><dd> <code>ksNext()</code>, <code>ksCurrent()</code></dd></dl>
 <h3>int ksSetCursor (KeySet * ks, cursor_t cursor)Set the KeySet internal cursor.</h3>
 <p> Use it to set the cursor to a stored position. <code>ksCurrent()</code> will then be the position which you got with. </p>
 <p> <code>Warning:</code></p>
 <dl>
 <dt>
-<dd> Cursors may get invalid when the key was <code>ksPop()</code>ed or <code>ksLookup()</code> was used together with KDB_O_POP.</dl>
+</dt><dd> Cursors may get invalid when the key was <code>ksPop()</code>ed or <code>ksLookup()</code> was used together with KDB_O_POP.</dd></dl>
 <p>cursor_t cursor;<br />
 // key now in any position here<br />
 cursor = ksGetCursor(ks);<br />
@@ -517,18 +517,18 @@ ksCurrent(ks);           // in same position as before</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>cursor</i> the cursor to use<br />
- <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>cursor</i> the cursor to use<br />
+ <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 when the keyset is <code>ksRewind()</code>ed </p>
+</dt><dd> 0 when the keyset is <code>ksRewind()</code>ed </dd>
 <p> 1 otherwise </p>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksNext()</code>, <code>ksGetCursor()</code></dl>
+</dt><dd> <code>ksNext()</code>, <code>ksGetCursor()</code></dd></dl>
 <h3>void ksSort (KeySet * ks)Sorts a KeySet alphabetically by Key name.</h3>
 <p> You need <code>ksSort()</code> only in few cases directly.</p>
 <h2>Don&#8217;t need to sort before using ksLookup</h2>
@@ -553,19 +553,19 @@ ksRewind(ks);
 <p> <code>Warning:</code></p>
 <dl>
 <dt>
-<dd> You should not use <code>keySetName()</code> or <code>keyRemove()</code> when a key belongs to a keyset. When you are doing this, you always need to manually sort all keysets where the key was before using <code>ksLookup()</code> (otherwise <code>ksLookup()</code> won&#8217;t find that keys), <code>kdbGet()</code> or <code>kdbSet()</code> methods.</dl>
+</dt><dd> You should not use <code>keySetName()</code> or <code>keyRemove()</code> when a key belongs to a keyset. When you are doing this, you always need to manually sort all keysets where the key was before using <code>ksLookup()</code> (otherwise <code>ksLookup()</code> won&#8217;t find that keys), <code>kdbGet()</code> or <code>kdbSet()</code> methods.</dd></dl>
 <p> When you change a key&#8217;s name or its remove status the order which was previously correctly is then wrong. The keyset does not recognize this, so the programmer has to take care that <code>ksSort()</code> is called before any operation which needs a sorted keyset (which are all <code>ksLookup()</code>, all <code>kdbGet()</code> and all <code>kdbSet()</code> functions). </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> You can remember that easily that all functions which get options require one of the following:</p>
+</dt><dd> You can remember that easily that all functions which get options require one of the following:</dd>
 <dl>
-<dt>*</p>
-<dd> that you did not manipulate a keys name or a remove status</p>
-<dt>*</p>
-<dd> that you pass KDB_O_SORT when you know that you manipulated at least one key</p>
-<dt>*</p>
-<dd> that you <code>ksSort()</code> yourself after manipulating keys</dl>
+<dt>*</dt>
+<dd> that you did not manipulate a keys name or a remove status</dd>
+<dt>*</dt>
+<dd> that you pass KDB_O_SORT when you know that you manipulated at least one key</dd>
+<dt>*</dt>
+<dd> that you <code>ksSort()</code> yourself after manipulating keys</dd></dl>
 </dl>
 <h2>Dirty KeySet</h2>
 <p> When you use <code>ksAppend()</code>, <code>ksAppendKey()</code>, <code>ksPop()</code> the keyset is dirty afterwards, which means that it needs to be sorted. This is done automatically using a <code>ksLookup()</code> method and in ksGet() or ksSet() (All methods which accept options). </p>
@@ -573,11 +573,11 @@ ksRewind(ks);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> KeySet to be sorted</dl>
+</dt><dd> <i>ks</i> KeySet to be sorted</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbGet()</code>, <code>kdbSet()</code>, <code>ksLookup()</code> for some functions which may need sorting before they are called. (All functions which take options as arguments) </p>
+</dt><dd> <code>kdbGet()</code>, <code>kdbSet()</code>, <code>ksLookup()</code> for some functions which may need sorting before they are called. (All functions which take options as arguments) </dd>
 <p> <code>keySetName()</code>, <code>keySetBaseName()</code>, <code>keyAddBaseName()</code> and <code>keyRemove()</code> for all methods which change the sorting state where the <code>KeySet :: Class Methods</code> can&#8217;t track the change. </p>
 <p> <code>ksAppend()</code>, <code>ksAppendKey()</code>, <code>ksPop()</code> for all methods which make a <code>KeySet :: Class Methods</code> dirty.</dl>
 <h3>Key* ksTail (const KeySet * ks)Return the last key in the KeySet.</h3>
@@ -586,17 +586,18 @@ ksRewind(ks);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ks</i> the keyset object to work with</dl>
+</dt><dd> <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the last Key of a keyset </p>
+</dt><dd> the last Key of a keyset </dd>
 <p> 0 on NULL pointer or empty keyset</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksHead()</code> for the first <code>Key :: Basic Methods</code> </p>
+</dt><dd> <code>ksHead()</code> for the first <code>Key :: Basic Methods</code> </dd>
 <p> <code>ksRewind()</code>, <code>ksCurrent()</code> and <code>ksNext()</code> for iterating over the <code>KeySet :: Class Methods</code></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
 <h2>Index</h2>
+</p>

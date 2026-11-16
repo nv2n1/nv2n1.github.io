@@ -12,11 +12,9 @@ std::gslice_array&lt;T&gt;::operator= - std::gslice_array&lt;T&gt;::operator=
 
 <pre><code>void operator=(const T &amp;value) const;
 (1)
-
     void
     operator=(const std::valarray&lt;T&gt; &amp;val_arr) const;
 (2)
-
     const gslice_array &amp;
     operator=(const gslice_array &amp;sl_arr) const;
 (3)(since C++ 11)</code></pre> 

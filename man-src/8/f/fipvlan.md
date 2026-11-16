@@ -20,34 +20,34 @@ description: "fipvlan – Fibre Channel over Ethernet VLAN Discovery"
 <h2>Options</h2>
 <p><code>-a</code>, <code>&#8211;auto</code></p>
 <dl>
-<dd>Use all Ethernet interfaces currently available</dl>
+<dd>Use all Ethernet interfaces currently available</dd></dl>
 <p> <code>-c</code>, <code>&#8211;create</code></p>
 <dl>
-<dd>Create network interfaces for discovered FCoE VLANs. If a VLAN device already exists for a discovered VLAN, a new VLAN device will not be created.</dl>
+<dd>Create network interfaces for discovered FCoE VLANs. If a VLAN device already exists for a discovered VLAN, a new VLAN device will not be created.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;debug</code></p>
 <dl>
-<dd>Enable debugging output</dl>
+<dd>Enable debugging output</dd></dl>
 <p> <code>-s</code>, <code>&#8211;start</code></p>
 <dl>
-<dd>Start the <i>Open-FCoE</i> initiator on discovered FCoE VLANs</dl>
+<dd>Start the <i>Open-FCoE</i> initiator on discovered FCoE VLANs</dd></dl>
 <p> <code>-m</code>, <code>&#8211;mode</code></p>
 <dl>
-<dd>fabric|vn2vn Specify whether VLAN discovery is performed in the default fabric mode, or in VN2VN mode.</dl>
+<dd>fabric|vn2vn Specify whether VLAN discovery is performed in the default fabric mode, or in VN2VN mode.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;suffix</code> <i>suffix</i></p>
 <dl>
-<dd>Append the specified string <i>suffix</i> to VLAN interface names.</dl>
+<dd>Append the specified string <i>suffix</i> to VLAN interface names.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;link-retry</code> <i>count</i></p>
 <dl>
-<dd>Retry check for link up to <i>count</i> times. The link state is checked every 1000 ms. The default number of retries is 20.</dl>
+<dd>Retry check for link up to <i>count</i> times. The link state is checked every 1000 ms. The default number of retries is 20.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;link-up</code></p>
 <dl>
-<dd>Leave link up if a FIP response has been received.</dl>
+<dd>Leave link up if a FIP response has been received.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display a help message with basic usage instructions</dl>
+<dd>Display a help message with basic usage instructions</dd></dl>
 <p> <code>-v</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display the <code>fipvlan</code> version string</dl>
+<dd>Display the <code>fipvlan</code> version string</dd></dl>
 <h2>Vlan Naming Conventions</h2>
 <p>If a new VLAN device is created, it will have the name <i>dev</i>.<i>vlan</i>; where <i>dev</i> is the name of the Ethernet parent device and <i>vlan</i> is the discovered VLAN ID number. An optional suffix may be appended to this with the the <code>-f</code> command line option.</p>
 <h2>Examples</h2>
@@ -55,12 +55,12 @@ description: "fipvlan – Fibre Channel over Ethernet VLAN Discovery"
 <dl>
 <dd>
 <pre>fipvlan --auto</pre>
-</dl>
+</dd></dl>
 <p> Discover FCoE VLANs on interface eth2, create VLAN devices and start the <i>Open-FCoE</i> initiator </p>
 <dl>
 <dd>
 <pre>fipvlan --create --start eth2</pre>
-</dl>
+</dd></dl>
 <p> In this example if FCoE services were available on VLAN 101 of network interface eth2, then a VLAN interface eth2.101 would be created and used as the parent device for the initiator.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fcoeadm/">fcoeadm</a></code>(8) <code><a href="/docs/linux/man/8-fcoemon/">fcoemon</a></code>(8)</p>

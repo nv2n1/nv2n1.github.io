@@ -11,22 +11,15 @@ std::filesystem::canonical,std::filesystem::weakly_canonical - std::filesystem::
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     path canonical(const std::filesystem::path &amp;p);
 (1)(since C++ 17)
-
     path canonical(const std::filesystem::path &amp;p, (2)(since C++ 17)
-
                                                        std::error_code &amp;ec);
-
 path weakly_canonical(const std::filesystem::path &amp;p);
 (3)(since C++ 17)
-
     path weakly_canonical(const std::filesystem::path &amp;p, (4)(since C++ 17)
-
                                                               std::error_code &amp;ec);
 1-2) Converts path p to a canonical absolute path, i.e. an absolute path that has no dot, dot-dot elements or symbolic links in its generic format representation. If p is not an absolute path, the function behaves as if it is first made absolute by std::filesystem::absolute(p). The path p must exist.
-
 3-4) Returns a path composed by operator/= from the result of calling canonical() with a path argument composed of the leading elements of p that exist (as determined by status(p) or status(p, ec)), if any, followed by the elements of p that do not exist, if any. The resulting path is in normal_form.
 </code></pre>
 
@@ -56,13 +49,9 @@ LWG_2956 C++17 canonical has a spurious base parameter removed
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     fs::path p = fs::path(&quot;..&quot;) / &quot;..&quot; / &quot;AppData&quot;;
     std::cout &lt;&lt; &quot;Current path is &quot; &lt;&lt; fs::current_path() &lt;&lt; '\n'

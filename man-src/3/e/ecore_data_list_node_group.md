@@ -21,16 +21,16 @@ description: "List Node Functions – Functions that are used in the creation, m
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>node</i> Node to destroy.<br />
- <i>free_func</i> Function to call if node points to data to free.</dl>
+ <i>free_func</i> Function to call if node points to data to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE.</dl>
+<dd>TRUE.</dd></dl>
 <p> Referenced by ecore_dlist_last_remove().</p>
 <h3>EAPI Ecore_List_Node* ecore_list_node_new (void)</h3>
 <p>Allocates and initializes a new list node. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new Ecore_List_Node on success, NULL otherwise.</dl>
+<dd>A new Ecore_List_Node on success, NULL otherwise.</dd></dl>
 <p> Referenced by ecore_list_append(), ecore_list_insert(), and ecore_list_prepend().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

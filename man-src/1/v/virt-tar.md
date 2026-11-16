@@ -35,21 +35,21 @@ virt - tar[--options] - x domname directory tarball virt - tar[--options] - u do
 <p> <tt>&quot;virt-tar&quot;</tt> can only handle tar (optionally gzipped) format tarballs. For example it cannot do PKZip files or bzip2 compression. If you want that then you&#8217;ll have to rebuild the tarballs yourself. (This is a limitation of the <i>libguestfs</i>(3) <font SIZE="-1">API</font>).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font> | <code>-c </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font> | <code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly, then libvirt is not used at all.</p>
-<dt><code>-x</code> | <code>&#8211;extract</code> | <code>&#8211;download</code></p>
+<dt><code>-x</code> | <code>&#8211;extract</code> | <code>&#8211;download</code></dt>
 <dd>
-<dt><code>-u</code> | <code>&#8211;upload</code></p>
-<dd> Use <tt>&quot;-x&quot;</tt> to extract (download) a directory from a virtual machine to a local tarball. </p>
+</dd><dt><code>-u</code> | <code>&#8211;upload</code></dt>
+<dd> Use <tt>&quot;-x&quot;</tt> to extract (download) a directory from a virtual machine to a local tarball. </dd>
 <p> Use <tt>&quot;-u&quot;</tt> to upload and unpack from a local tarball into a virtual machine. Please read the &#8220;<font SIZE="-1">WARNING</font>&#8221; section above before using this option. </p>
 <p> You must specify exactly one of these options.</p>
-<dt><code>-z</code> | <code>&#8211;gzip</code></p>
-<dd> Specify that the input or output tarball is gzip-compressed.</dl>
+<dt><code>-z</code> | <code>&#8211;gzip</code></dt>
+<dd> Specify that the input or output tarball is gzip-compressed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i>Sys::Guestfs</i>(3), <i>Sys::Guestfs::Lib</i>(3), <i>Sys::Virt</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHOR</h2>

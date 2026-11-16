@@ -11,9 +11,7 @@ description: "sc::BcastState –"
 <p> This creates and forwards/retrieves data from either a <code>BcastStateRecv</code> or a <code>BcastStateSend</code> depending on the value of the argument to constructor.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mstate.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>BcastState</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;, int source=0)<br />
  <i>Create a </i><code>BcastState</code> object. The default source is node 0.<br />

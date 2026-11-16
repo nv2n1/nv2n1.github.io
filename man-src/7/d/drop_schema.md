@@ -15,14 +15,14 @@ description: "DROP SCHEMA – remove a schema"
 <p> A schema can only be dropped by its owner or a superuser. Note that the owner can drop the schema (and thereby all contained objects) even if he does not own some of the objects within the schema.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the schema does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name of a schema.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects (tables, functions, etc.) that are contained in the schema.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the schema if it contains any objects. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the schema does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name of a schema.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects (tables, functions, etc.) that are contained in the schema.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the schema if it contains any objects. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>To remove schema mystuff from the database, along with everything it contains: </p>
 <pre>DROP SCHEMA mystuff CASCADE;</pre>

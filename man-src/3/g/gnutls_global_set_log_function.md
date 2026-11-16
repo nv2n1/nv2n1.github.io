@@ -14,8 +14,8 @@ description: "gnutls_global_set_log_function – API function"
 <p> <code>void gnutls_global_set_log_function(gnutls_log_func </code><i>log_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_log_func log_func</p>
-<dd> it&#8217;s a log function</dl>
+<dt>gnutls_log_func log_func</dt>
+<dd> it&#8217;s a log function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is the function where you set the logging function gnutls is going to use. This function only accepts a character array. Normally you may not use this function since it is only used for debugging purposes. </p>
 <p>&nbsp;<wbr><i>gnutls_log_func</i>&nbsp;<wbr>is of the form, void (*gnutls_log_func)( int level, const char*);</p>
@@ -28,6 +28,6 @@ description: "gnutls_global_set_log_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

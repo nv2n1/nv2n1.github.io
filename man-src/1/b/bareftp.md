@@ -16,8 +16,8 @@ description: "bareftp – graphical file transfer client"
 <h2>OPTIONS</h2>
 <p> bareFTP does currently not use much command line options.</p>
 <dl>
-<dt><code>&#8211;verision</code></p>
-<dd> Show program version</dl>
+<dt><code>&#8211;verision</code></dt>
+<dd> Show program version</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs, please report them at <a rel="nofollow" href="http://www.bareftp.org/devel">http://www.bareftp.org/devel</a></p>
 <h2>AUTHOR</h2>

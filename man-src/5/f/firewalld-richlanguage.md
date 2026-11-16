@@ -19,7 +19,7 @@ description: "firewalld.richlanguage – Rich Language Documentation"
  [log]
  [audit]
  [accept|reject|drop|mark]</pre>
-</dl>
+</dd></dl>
 <p> The complete rule is provided as a single line string. A destination is allowed here as long as it does not conflict with the destination of a service. <code>Rule structure for source black or white listing</code></p>
 <dl>
 <dd>
@@ -28,13 +28,13 @@ description: "firewalld.richlanguage – Rich Language Documentation"
  [log]
  [audit]
  accept|reject|drop|mark</pre>
-</dl>
+</dd></dl>
 <p> This is used to grant or limit access from a source to this machine or machines that are reachable by this machine. A destination is not allowed here. <code>Important information about element options:</code> Options for elements in a rule need to be added exactly after the element. If the option is placed somewhere else it might be used for another element as far as it matches the options of the other element or will result in a rule error.</p>
 <h3>Rule</h3>
 <dl>
 <dd>
 <pre>rule [family=&quot;ipv4|ipv6&quot;]</pre>
-</dl>
+</dd></dl>
 <p> If the rule family is provided, it can be either &quot;ipv4&quot; or &quot;ipv6&quot;, which limits the rule to IPv4 or IPv6. If the rule family is not provided, the rule will be added for IPv4 and IPv6. If source or destination addresses are used in a rule, then the rule family need to be provided. This is also the case for port/packet forwarding.</p>
 <h3>Source</h3>
 <pre><code>source [not] address=&quot;address[/mask]&quot;|mac=&quot;mac-address&quot;|ipset=&quot;ipset&quot;</code></pre>
@@ -53,7 +53,7 @@ description: "firewalld.richlanguage – Rich Language Documentation"
 <dl>
 <dd>
 <pre>masquerade</pre>
-</dl>
+</dd></dl>
 <p> Turn on masquerading in the rule. A source and also a destination address can be provided to limit masquerading to this area. It is not allowed to specify an action here.</p>
 <h3>ICMP-Type</h3>
 <p>icmp-type name=&quot;icmptype name&quot; The icmptype is the one of the icmp types firewalld supports. To get a listing of supported icmp types: <code>firewall-cmd &#8211;get-icmptypes</code></p>
@@ -65,32 +65,32 @@ description: "firewalld.richlanguage – Rich Language Documentation"
 <dl>
 <dd>
 <pre>log [prefix=&quot;prefix text&quot;] [level=&quot;log level&quot;] [limit value=&quot;rate/duration&quot;]</pre>
-</dl>
+</dd></dl>
 <p> Log new connection attempts to the rule with kernel logging for example in syslog. You can define a prefix text that will be added to the log message as a prefix. Log level can be one of &quot;<code>emerg</code>&quot;, &quot;<code>alert</code>&quot;, &quot;<code>crit</code>&quot;, &quot;<code>error</code>&quot;, &quot;<code>warning</code>&quot;, &quot;<code>notice</code>&quot;, &quot;<code>info</code>&quot; or &quot;<code>debug</code>&quot;, where default (i.e. if there&#8217;s no one specified) is &quot;<code>warning</code>&quot;. See <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) for description of levels. See Limit section for description of <code>limit</code> tag.</p>
 <h3>Audit</h3>
 <dl>
 <dd>
 <pre>audit [limit value=&quot;rate/duration&quot;]</pre>
-</dl>
+</dd></dl>
 <p> Audit provides an alternative way for logging using audit records sent to the service auditd. Audit type will be discovered from the rule action automatically. Use of audit is optional. See Limit section for description of <code>limit</code> tag.</p>
 <h3>Action</h3>
 <p>An action can be one of <code>accept</code>, <code>reject</code>, <code>drop</code> or <code>mark</code>. The rule can either contain an element or also a source only. If the rule contains an element, then new connection matching the element will be handled with the action. If the rule does not contain an element, then everything from the source address will be handled with the action.</p>
 <dl>
 <dd>
 <pre>accept [limit value=&quot;rate/duration&quot;]</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>reject [type=&quot;reject type&quot;] [limit value=&quot;rate/duration&quot;]</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>drop [limit value=&quot;rate/duration&quot;]</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>mark set=&quot;mark[/mask]&quot; [limit value=&quot;rate/duration&quot;]</pre>
-</dl>
+</dd></dl>
 <p> With <code>accept</code> all new connection attempts will be granted. With <code>reject</code> they will not be accepted and their source will get a reject ICMP(v6) message. The reject type can be set to specify appropriate ICMP(v6) error message. For valid reject types see <code>&#8211;reject-with type</code> in <code><a href="/docs/linux/man/8-iptables-extensions/">iptables-extensions</a></code>(8) man page. Because reject types are different for IPv4 and IPv6 you have to specify rule family when using reject type. With <code>drop</code> all packets will be dropped immediately, there is no information sent to the source. With <code>mark</code> all packets will be marked in the <code>PREROUTING</code> chain in the <code>mangle</code> table with the mark and mask combination. See Limit section for description of <code>limit</code> tag.</p>
 <h3>Limit</h3>
 <p>limit value=&quot;rate/duration&quot; It is possible to limit Log, Audit and Action. A rule using this tag will match until this limit is reached. The rate is a natural positive number [1, ..] The duration is of &quot;s&quot;, &quot;m&quot;, &quot;h&quot;, &quot;d&quot;. &quot;s&quot; means seconds, &quot;m&quot; minutes, &quot;h&quot; hours and &quot;d&quot; days. Maximum limit value is &quot;2/d&quot;, which means at maximum two matches per day.</p>
@@ -101,7 +101,7 @@ description: "firewalld.richlanguage – Rich Language Documentation"
 <pre><i>zone</i>_log
 <i>zone</i>_deny
 <i>zone</i>_allow</pre>
-</dl>
+</dd></dl>
 <p> Then all logging rules will be placed in the zone_log chain, which will be walked first. All reject and drop rules will be placed in the zone_deny chain, which will be walked after the log chain. All accept rules will be placed in the zone_allow chain, which will be walked after the deny chain. If a rule contains log and also deny or allow actions, the parts are placed in the matching chains.</p>
 <h2>Examples</h2>
 <p>These are examples of how to specify rich language rules. This format (i.e. one string that specifies whole rule) uses for example <code>firewall-cmd &#8211;add-rich-rule</code> (see <code><a href="/docs/linux/man/1-firewall-cmd/">firewall-cmd</a></code>(1)) as well as D-Bus interface.</p>
@@ -110,26 +110,26 @@ description: "firewalld.richlanguage – Rich Language Documentation"
 <dl>
 <dd>
 <pre>rule protocol value=&quot;ah&quot; accept</pre>
-</dl>
+</dd></dl>
 <h3>Example 2</h3>
 <p>Allow new IPv4 and IPv6 connections for service ftp and log 1 per minute using audit</p>
 <dl>
 <dd>
 <pre>rule service name=&quot;ftp&quot; log limit value=&quot;1/m&quot; audit accept</pre>
-</dl>
+</dd></dl>
 <h3>Example 3</h3>
 <p>Allow new IPv4 connections from address 192.168.0.0/24 for service tftp and log 1 per minutes using syslog</p>
 <dl>
 <dd>
 <pre>rule family=&quot;ipv4&quot; source address=&quot;192.168.0.0/24&quot; service name=&quot;tftp&quot; log prefix=&quot;tftp&quot; level=&quot;info&quot; limit value=&quot;1/m&quot; accept</pre>
-</dl>
+</dd></dl>
 <h3>Example 4</h3>
 <p>New IPv6 connections from 1:2:3:4:6:: to service radius are all rejected and logged at a rate of 3 per minute. New IPv6 connections from other sources are accepted.</p>
 <dl>
 <dd>
 <pre>rule family=&quot;ipv6&quot; source address=&quot;1:2:3:4:6::&quot; service name=&quot;radius&quot; log prefix=&quot;dns&quot; level=&quot;info&quot; limit value=&quot;3/m&quot; reject
 rule family=&quot;ipv6&quot; service name=&quot;radius&quot; accept</pre>
-</dl>
+</dd></dl>
 <h3>Example 5</h3>
 <p>Forward IPv6 port/packets receiving from 1:2:3:4:6:: on port 4011 with protocol tcp to 1::2:3:4:7 on port 4012 rule family=&quot;ipv6&quot; source address=&quot;1:2:3:4:6::&quot; forward-port to-addr=&quot;1::2:3:4:7&quot; to-port=&quot;4012&quot; protocol=&quot;tcp&quot; port=&quot;4011&quot;</p>
 <h3>Example 6</h3>
@@ -137,7 +137,7 @@ rule family=&quot;ipv6&quot; service name=&quot;radius&quot; accept</pre>
 <dl>
 <dd>
 <pre>rule family=&quot;ipv4&quot; source address=&quot;192.168.2.2&quot; accept</pre>
-</dl>
+</dd></dl>
 <h3>Example 7</h3>
 <p>Black-list source address to reject all connections from 192.168.2.3 </p>
 <pre><code>rule family=&quot;ipv4&quot; source address=&quot;192.168.2.3&quot; reject type=&quot;icmp-admin-prohibited&quot;</code></pre>
@@ -146,20 +146,20 @@ rule family=&quot;ipv6&quot; service name=&quot;radius&quot; accept</pre>
 <dl>
 <dd>
 <pre>rule family=&quot;ipv4&quot; source address=&quot;192.168.2.4&quot; drop</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-firewall-applet/">firewall-applet</a></code>(1), <code><a href="/docs/linux/man/1-firewalld/">firewalld</a></code>(1), <code><a href="/docs/linux/man/1-firewall-cmd/">firewall-cmd</a></code>(1), <code><a href="/docs/linux/man/1-firewall-config/">firewall-config</a></code>(1), <code><a href="/docs/linux/man/5-firewalld-conf/">firewalld.conf</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-dbus/">firewalld.dbus</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-icmptype/">firewalld.icmptype</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-lockdown-whitelist/">firewalld.lockdown-whitelist</a></code>(5), <code><a href="/docs/linux/man/1-firewall-offline-cmd/">firewall-offline-cmd</a></code>(1), <code><a href="/docs/linux/man/5-firewalld-richlanguage/">firewalld.richlanguage</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-service/">firewalld.service</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-zones/">firewalld.zones</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-ipset/">firewalld.ipset</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-helper/">firewalld.helper</a></code>(5)</p>
 <h2>Notes</h2>
 <p>firewalld home page:</p>
 <dl>
-<dd>m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dl>
+<dd>m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dd></dl>
 <p> More documentation with examples:</p>
 <dl>
-<dd>m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dl>
+<dd>m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Woerner</code> &lt;twoerner [at] redhat.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>
 <p> <code>Jiri Popelka</code> &lt;jpopelka [at] redhat.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>

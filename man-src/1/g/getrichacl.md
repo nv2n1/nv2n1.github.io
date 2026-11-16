@@ -16,11 +16,11 @@ description: "getrichacl – Get Rich Access Control Lists"
 <p> The output format of <code>getrichacl</code> is as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 1 : file : 2 : flags : a 3 : owner : rwp-- -- -- -- -- -- -::mask 4 : group : r - p-- -- -- -- -- -- -::mask 5 : other : r-- -- -- -- -- -- -- -::mask 6 : owner @ : rwp-- -- -- -- -- -- -::allow 7 : user : foo : r - p-- -- -- -- -- -- -::allow 8 : group @ : r - p-- -- -- -- -- -- -::allow 9 : group : bar : r - p-- -- -- -- -- -- -::allow 10 : everyone @ : r-- -- -- -- -- -- -- -::allow 11:
 </code></pre>
-</dl>
+</dd></dl>
 <p> Line 1 contains the file name, followed by a colon. </p>
 <p> Line 2 contains the ACL flags. This line is omitted if no flags are set. </p>
 <p> Lines 3&#8211;5 indicate the owner, group, and other file masks, which are only shown if the <code>&#8211;raw</code> option is specified. </p>
@@ -31,22 +31,22 @@ description: "getrichacl – Get Rich Access Control Lists"
 <p> When <code>getrichacl</code> is used on a file that does not have a RichACL or on a filesystem that does not support RichACLs, it displays the access permissions defined by the traditional file permission bits as a RichACL. When <code>getrichacl</code> is used on a file that has a POSIX ACL (see <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5)), it prints an error message.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;long</code>, <code>-l</code></p>
-<dd> Display access masks and flags in their long form.</p>
-<dt><code>&#8211;full</code></p>
-<dd> Also show permissions which are always implicitly allowed.</p>
-<dt><code>&#8211;raw</code></p>
-<dd> Show ACLs as stored on the file system, including the file masks. Implies <code>&#8211;full</code>.</p>
-<dt><code>&#8211;unaligned</code></p>
-<dd> Do not align ACL entries or pad missing permissions with &#8220;-&#8220;.</p>
-<dt><code>&#8211;numeric-ids</code></p>
-<dd> Display numeric user and group IDs instead of names.</p>
-<dt><code>&#8211;access</code> [=<i>user</i>[:<i>group</i>:&#8230;]}, <code>-a</code>[<i>user</i>[:<i>group</i>:&#8230;]}</p>
-<dd> Instead of showing the ACL, show which permissions the user running the command has for the specified file(s). When <i>user</i> is specified, show which permissions the specified user has instead. If <i>user</i> is followed by a colon and a (possibly empty) list of groups, assume that <i>user</i> is a member in the specified groups; otherwise, <code><a href="/docs/linux/man/3-getgrouplist/">getgrouplist</a></code>(3) is used to determine the groups <i>user</i> is a member of.</p>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd> Display the version of <code>getrichacl</code> and exit.</p>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> Display command-line usage help text.</dl>
+<dt><code>&#8211;long</code>, <code>-l</code></dt>
+<dd> Display access masks and flags in their long form.</dd>
+<dt><code>&#8211;full</code></dt>
+<dd> Also show permissions which are always implicitly allowed.</dd>
+<dt><code>&#8211;raw</code></dt>
+<dd> Show ACLs as stored on the file system, including the file masks. Implies <code>&#8211;full</code>.</dd>
+<dt><code>&#8211;unaligned</code></dt>
+<dd> Do not align ACL entries or pad missing permissions with &#8220;-&#8220;.</dd>
+<dt><code>&#8211;numeric-ids</code></dt>
+<dd> Display numeric user and group IDs instead of names.</dd>
+<dt><code>&#8211;access</code> [=<i>user</i>[:<i>group</i>:&#8230;]}, <code>-a</code>[<i>user</i>[:<i>group</i>:&#8230;]}</dt>
+<dd> Instead of showing the ACL, show which permissions the user running the command has for the specified file(s). When <i>user</i> is specified, show which permissions the specified user has instead. If <i>user</i> is followed by a colon and a (possibly empty) list of groups, assume that <i>user</i> is a member in the specified groups; otherwise, <code><a href="/docs/linux/man/3-getgrouplist/">getgrouplist</a></code>(3) is used to determine the groups <i>user</i> is a member of.</dd>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd> Display the version of <code>getrichacl</code> and exit.</dd>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Display command-line usage help text.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Andreas Grünbacher &lt;agruenba [at] redhat.com&gt;. </p>
 <p> Please send your bug reports, suggested features and comments to the above address.</p>

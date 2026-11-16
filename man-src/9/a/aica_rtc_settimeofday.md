@@ -14,11 +14,11 @@ description: "aica_rtc_settimeofday – Set the AICA RTC to the current time"
 <p><i>secs</i></p>
 <dl>
 <dd>
-<dd>contains the time_t to set</dl>
+</dd><dd>contains the time_t to set</dd></dl>
 <h2>Description</h2>
 <p>Adjusts the given <i>tv</i> to the AICA Epoch and sets the RTC seconds counter.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

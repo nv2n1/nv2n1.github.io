@@ -15,26 +15,26 @@ description: "environ – user environment"
 <p>The variable <i>environ</i> points to an array of pointers to strings called the &quot;environment&quot;. The last pointer in this array has the value NULL. (This variable must be declared in the user program, but is declared in the header file <i>&lt;unistd.h&gt;</i> in case the header files came from libc4 or libc5, and in case they came from glibc and <code>_GNU_SOURCE</code> was defined.) This array of strings is made available to the process by the <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) call that started the process. </p>
 <p> By convention the strings in <i>environ</i> have the form &quot;<i>name</i><code>=</code><i>value</i>&quot;. Common examples are:</p>
 <dl>
-<dt><code>USER</code></p>
-<dd>The name of the logged-in user (used by some BSD-derived programs).</p>
-<dt><code>LOGNAME</code></p>
-<dd>The name of the logged-in user (used by some System-V derived programs).</p>
-<dt><code>HOME</code></p>
-<dd>A user&#8217;s login directory, set by <code><a href="/docs/linux/man/1-login/">login</a></code>(1) from the password file <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5).</p>
-<dt><code>LANG</code></p>
-<dd>The name of a locale to use for locale categories when not overridden by <code>LC_ALL</code> or more specific environment variables like <code>LC_COLLATE</code>, <code>LC_CTYPE</code>, <code>LC_MESSAGES</code>, <code>LC_MONETARY</code>, <code>LC_NUMERIC</code>, <code>LC_TIME</code>, cf. <code><a href="/docs/linux/man/5-locale/">locale</a></code>(5).</p>
-<dt><code>PATH</code></p>
-<dd>The sequence of directory prefixes that <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) and many other programs apply in searching for a file known by an incomplete pathname. The prefixes are separated by &#8216;<code>:</code>&#8216;. (Similarly one has <code>CDPATH</code> used by some shells to find the target of a change directory command, <code>MANPATH</code> used by <code><a href="/docs/linux/man/1-man/">man</a></code>(1) to find manual pages, etc.)</p>
-<dt><code>PWD</code></p>
-<dd>The current working directory. Set by some shells.</p>
-<dt><code>SHELL</code></p>
-<dd>The pathname of the user&#8217;s login shell.</p>
-<dt><code>TERM</code></p>
-<dd>The terminal type for which output is to be prepared.</p>
-<dt><code>PAGER</code></p>
-<dd>The user&#8217;s preferred utility to display text files.</p>
-<dt><code>EDITOR</code>/<code>VISUAL</code></p>
-<dd>The user&#8217;s preferred utility to edit text files.</dl>
+<dt><code>USER</code></dt>
+<dd>The name of the logged-in user (used by some BSD-derived programs).</dd>
+<dt><code>LOGNAME</code></dt>
+<dd>The name of the logged-in user (used by some System-V derived programs).</dd>
+<dt><code>HOME</code></dt>
+<dd>A user&#8217;s login directory, set by <code><a href="/docs/linux/man/1-login/">login</a></code>(1) from the password file <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5).</dd>
+<dt><code>LANG</code></dt>
+<dd>The name of a locale to use for locale categories when not overridden by <code>LC_ALL</code> or more specific environment variables like <code>LC_COLLATE</code>, <code>LC_CTYPE</code>, <code>LC_MESSAGES</code>, <code>LC_MONETARY</code>, <code>LC_NUMERIC</code>, <code>LC_TIME</code>, cf. <code><a href="/docs/linux/man/5-locale/">locale</a></code>(5).</dd>
+<dt><code>PATH</code></dt>
+<dd>The sequence of directory prefixes that <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) and many other programs apply in searching for a file known by an incomplete pathname. The prefixes are separated by &#8216;<code>:</code>&#8216;. (Similarly one has <code>CDPATH</code> used by some shells to find the target of a change directory command, <code>MANPATH</code> used by <code><a href="/docs/linux/man/1-man/">man</a></code>(1) to find manual pages, etc.)</dd>
+<dt><code>PWD</code></dt>
+<dd>The current working directory. Set by some shells.</dd>
+<dt><code>SHELL</code></dt>
+<dd>The pathname of the user&#8217;s login shell.</dd>
+<dt><code>TERM</code></dt>
+<dd>The terminal type for which output is to be prepared.</dd>
+<dt><code>PAGER</code></dt>
+<dd>The user&#8217;s preferred utility to display text files.</dd>
+<dt><code>EDITOR</code>/<code>VISUAL</code></dt>
+<dd>The user&#8217;s preferred utility to edit text files.</dd></dl>
 <p> Further names may be placed in the environment by the <i>export</i> command and &quot;name=value&quot; in <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), or by the <i>setenv</i> command if you use <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1). Arguments may also be placed in the environment at the point of an <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3). A C program can manipulate its environment using the functions <code><a href="/docs/linux/man/3-getenv/">getenv</a></code>(3), <code><a href="/docs/linux/man/3-putenv/">putenv</a></code>(3), <code><a href="/docs/linux/man/3-setenv/">setenv</a></code>(3), and <code><a href="/docs/linux/man/3-unsetenv/">unsetenv</a></code>(3). </p>
 <p> Note that the behavior of many programs and library routines is influenced by the presence or value of certain environment variables. A random collection: </p>
 <p> The variables <code>LANG</code>, <code>LANGUAGE</code>, <code>NLSPATH</code>, <code>LOCPATH</code>, <code>LC_ALL</code>, <code>LC_MESSAGES</code>, etc. influence locale handling, cf. <code><a href="/docs/linux/man/5-locale/">locale</a></code>(5). </p>

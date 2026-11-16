@@ -16,8 +16,8 @@ description: "dh_icons – Update caches of Freedesktop icons"
 <p> It takes care of adding maintainer script fragments to call <code>update-icon-caches</code> for icon directories. (This is not done for gnome and hicolor icons, as those are handled by triggers.) These commands are inserted into the maintainer scripts by <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;no-scripts</code></p>
-<dd> Do not modify maintainer scripts.</dl>
+<dt><code>-n</code>, <code>&#8211;no-scripts</code></dt>
+<dd> Do not modify maintainer scripts.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> debhelper </p>
 <p> This program is a part of debhelper.</p>

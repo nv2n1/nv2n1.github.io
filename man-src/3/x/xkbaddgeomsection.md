@@ -11,20 +11,20 @@ description: "XkbAddGeomSection – Add one section to an existing keyboard geom
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbSectionPtr XkbAddGeomSection</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int </code><i>sz_rows</i><code>,</code> <code>int </code><i>sz_doodads</i><code>,</code> <code>int </code><i>sz_overlays</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; geom</i></p>
+<dt><i>&#8211; geom</i></dt>
 <dd>
-<dd>geometry to be updated</p>
-<dt><i>&#8211; name</i></p>
-<dd>name of the new section</p>
-<dt><i>&#8211; sz_rows</i></p>
-<dd>number of rows to reserve in the section</p>
-<dt><i>&#8211; sz_doodads</i></p>
-<dd>number of doodads to reserve in the section</p>
-<dt><i>&#8211; sz_overlays</i></p>
-<dd>number of overlays to reserve in the section</dl>
+</dd><dd>geometry to be updated</dd>
+<dt><i>&#8211; name</i></dt>
+<dd>name of the new section</dd>
+<dt><i>&#8211; sz_rows</i></dt>
+<dd>number of rows to reserve in the section</dd>
+<dt><i>&#8211; sz_doodads</i></dt>
+<dd>number of doodads to reserve in the section</dd>
+<dt><i>&#8211; sz_overlays</i></dt>
+<dd>number of overlays to reserve in the section</dd></dl>
 <h2>Description</h2>
 <p>Xkb provides functions to add a single new element to the top-level keyboard geometry. In each case the <i>num_ * </i> fields of the corresponding structure is incremented by 1. These functions do not change <i>sz_* </i> unless there is no more room in the array. Some of these functions fill in the values of the element&#8217;s structure from the arguments. For other functions, you must explicitly write code to fill the structure&#8217;s elements. </p>
 <p> The top-level geometry description includes a list of <i>geometry properties. </i> A geometry property associates an arbitrary string with an equally arbitrary name. Programs that display images of keyboards can use geometry properties as hints, but they are not interpreted by Xkb. No other geometry structures refer to geometry properties. </p>

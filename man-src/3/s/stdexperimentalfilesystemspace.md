@@ -11,10 +11,8 @@ std::experimental::filesystem::space - std::experimental::filesystem::space
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     space_info space(const path &amp;p);
 (filesystem TS)
-
     space_info space(const path &amp;p, error_code &amp;ec) noexcept;</code></pre> 
 Determines the information about the filesystem on which the pathname p is located, as if by POSIX statvfs 
 Populates and returns an object of type space_info, set from the members of the POSIX struct statvfs as follows 
@@ -46,13 +44,9 @@ space_info.available may be less than space_info.free
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::space_info devi = fs::space(&quot;/dev/null&quot;);
     fs::space_info tmpi = fs::space(&quot;/tmp&quot;);

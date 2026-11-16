@@ -14,10 +14,10 @@ description: "xxqs_name_sxx_request – xxQS_NAMExx default request definition f
 <p> <code>Note</code>, that the <i>-clear</i> option to can be used to discard any previous settings at any time in a default request file, in the embedded script flags or in a command-line option. </p>
 <p> The format of the default request definition files is:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The default request files may contain an arbitrary number of lines. Blank lines, and lines with a &#8216;#&#8217; sign in the first column, are skipped.</p>
-<dt>&bull;</p>
-<dd>Each line not to be skipped may contain any option. More than one option per line is allowed. The batch script file and argument options to the batch script are not considered as options and thus are not allowed in a default request file.</dl>
+<dt>&bull;</dt>
+<dd>The default request files may contain an arbitrary number of lines. Blank lines, and lines with a &#8216;#&#8217; sign in the first column, are skipped.</dd>
+<dt>&bull;</dt>
+<dd>Each line not to be skipped may contain any option. More than one option per line is allowed. The batch script file and argument options to the batch script are not considered as options and thus are not allowed in a default request file.</dd></dl>
 <h2>Examples</h2>
 <p>The following is a simple example of a default request definition file: </p>
 <pre>=====================================================

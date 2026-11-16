@@ -27,84 +27,84 @@ description: "dhclient – Dynamic Host Configuration Protocol Client"
 <p> The client normally prints no output during its startup sequence. It can be made to emit verbose messages displaying the startup sequence events until it has acquired an address by supplying the <code>-v</code> command line argument. In either case, the client logs messages using the <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code> facility.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-4</code></p>
-<dd>Use the DHCPv4 protocol to obtain an IPv4 address and configuration parameters. This is the default and cannot be combined with <code>-6</code>.</p>
-<dt><code>-6</code></p>
-<dd>Use the DHCPv6 protocol to obtain whatever IPv6 addresses are available along with configuration parameters. It cannot be combined with <code>-4</code>. The <code>-S -T -P -N</code> and <code>-D</code> arguments provide more control over aspects of the DHCPv6 processing. Note: it is not recommended to mix queries of different types together or even to share the lease file between them.</p>
-<dt><code>-4o6</code><i>&nbsp;port</i></p>
-<dd>Participate in the DHCPv4 over DHCPv6 protocol specified by RFC 7341. This associates a DHCPv4 and a DHCPv6 client to allow the v4 client to send v4 requests encapsulated in a v6 packet. Communication between the two clients is done on a pair of UDP sockets bound to ::1 <i>port</i> and <i>port + 1</i>. Both clients must be launched using the same <i>port</i> argument.</p>
-<dt><code>-1</code></p>
-<dd>Try to get a lease once. On failure exit with code 2. In DHCPv6 this sets the maximum duration of the initial exchange to <i>timeout</i> (from dhclient.conf with a default of sixty seconds).</p>
-<dt><code>-d</code></p>
-<dd>Force <code>dhclient</code> to run as a foreground process. Normally the DHCP client will run in the foreground until is has configured an interface at which time it will revert to running in the background. This option is useful when running the client under a debugger, or when running it out of inittab on System V systems. This implies <code>-v</code>.</p>
-<dt><code>-nw</code></p>
-<dd>Become a daemon immediately (nowait) rather than waiting until an IP address has been acquired.</p>
-<dt><code>-q</code></p>
-<dd>Be quiet at startup, this is the default.</p>
-<dt><code>-v</code></p>
-<dd>Enable verbose log messages.</p>
-<dt><code>-w</code></p>
-<dd>Continue running even if no broadcast interfaces were found. Normally DHCP client will exit if it isn&#8217;t able to identify any network interfaces to configure. On laptop computers and other computers with hot-swappable I/O buses, it is possible that a broadcast interface may be added after system startup. This flag can be used to cause the client not to exit when it doesn&#8217;t find any such interfaces. The <code><a href="/docs/linux/man/1-omshell/">omshell</a>(1)</code> program can then be used to notify the client when a network interface has been added or removed, so that the client can attempt to configure an IP address on that interface.</p>
-<dt><code>-n</code></p>
-<dd>Do not configure any interfaces. This is most likely to be useful in combination with the <code>-w</code> flag.</p>
-<dt><code>-e</code><i>&nbsp;VAR=value</i></p>
-<dd>Define additional environment variables for the environment where <code>dhclient-script</code> executes. You may specify multiple <code>-e</code> options on the command line.</p>
-<dt><code>-r</code></p>
-<dd>Release the current lease and stop the running DHCP client as previously recorded in the PID file. When shutdown via this method <code>dhclient-script</code> will be executed with the specific reason for calling the script set. The client normally doesn&#8217;t release the current lease as this is not required by the DHCP protocol but some cable ISPs require their clients to notify the server if they wish to release an assigned IP address.</p>
-<dt><code>-x</code></p>
-<dd>Stop the running DHCP client without releasing the current lease. Kills existing <code>dhclient</code> process as previously recorded in the PID file. When shutdown via this method <code>dhclient-script</code> will be executed with the specific reason for calling the script set.</p>
-<dt><code>-p</code><i>&nbsp;port-number</i></p>
-<dd>The UDP port number on which the DHCP client should listen and transmit. If unspecified, <code>dhclient</code> uses the default port of 68. This is mostly useful for debugging purposes. If a different port is specified on which the client should listen and transmit, the client will also use a different destination port &#8211; one less than the specified port.</p>
-<dt><code>-s</code><i>&nbsp;server-addr</i></p>
-<dd>Specify the server IP address or fully qualified domain name to use as a destination for DHCP protocol messages before <code>dhclient</code> has acquired an IP address. Normally, <code>dhclient</code> transmits these messages to 255.255.255.255 (the IP limited broadcast address). Overriding this is mostly useful for debugging purposes. This feature is not supported in DHCPv6 (<code>-6</code>) mode.</p>
-<dt><code>-g</code><i>&nbsp;relay</i></p>
-<dd>Set the giaddr field of all packets to the <i>relay</i> IP address simulating a relay agent. This is for testing purposes only and should not be expected to work in any consistent or useful way.</p>
-<dt><code>-i</code></p>
-<dd>Use a DUID with DHCPv4 clients. If no DUID is available in the lease file one will be constructed and saved. The DUID will be used to construct a RFC4361 style client id that will be included in the client&#8217;s messages. This client id can be overridden by setting a client id in the configuration file. Overriding the client id in this fashion is discouraged.</p>
-<dt><code>-I</code></p>
-<dd>Use the standard DDNS scheme from RFCs 4701 &amp; 4702.</p>
+<dt><code>-4</code></dt>
+<dd>Use the DHCPv4 protocol to obtain an IPv4 address and configuration parameters. This is the default and cannot be combined with <code>-6</code>.</dd>
+<dt><code>-6</code></dt>
+<dd>Use the DHCPv6 protocol to obtain whatever IPv6 addresses are available along with configuration parameters. It cannot be combined with <code>-4</code>. The <code>-S -T -P -N</code> and <code>-D</code> arguments provide more control over aspects of the DHCPv6 processing. Note: it is not recommended to mix queries of different types together or even to share the lease file between them.</dd>
+<dt><code>-4o6</code><i>&nbsp;port</i></dt>
+<dd>Participate in the DHCPv4 over DHCPv6 protocol specified by RFC 7341. This associates a DHCPv4 and a DHCPv6 client to allow the v4 client to send v4 requests encapsulated in a v6 packet. Communication between the two clients is done on a pair of UDP sockets bound to ::1 <i>port</i> and <i>port + 1</i>. Both clients must be launched using the same <i>port</i> argument.</dd>
+<dt><code>-1</code></dt>
+<dd>Try to get a lease once. On failure exit with code 2. In DHCPv6 this sets the maximum duration of the initial exchange to <i>timeout</i> (from dhclient.conf with a default of sixty seconds).</dd>
+<dt><code>-d</code></dt>
+<dd>Force <code>dhclient</code> to run as a foreground process. Normally the DHCP client will run in the foreground until is has configured an interface at which time it will revert to running in the background. This option is useful when running the client under a debugger, or when running it out of inittab on System V systems. This implies <code>-v</code>.</dd>
+<dt><code>-nw</code></dt>
+<dd>Become a daemon immediately (nowait) rather than waiting until an IP address has been acquired.</dd>
+<dt><code>-q</code></dt>
+<dd>Be quiet at startup, this is the default.</dd>
+<dt><code>-v</code></dt>
+<dd>Enable verbose log messages.</dd>
+<dt><code>-w</code></dt>
+<dd>Continue running even if no broadcast interfaces were found. Normally DHCP client will exit if it isn&#8217;t able to identify any network interfaces to configure. On laptop computers and other computers with hot-swappable I/O buses, it is possible that a broadcast interface may be added after system startup. This flag can be used to cause the client not to exit when it doesn&#8217;t find any such interfaces. The <code><a href="/docs/linux/man/1-omshell/">omshell</a>(1)</code> program can then be used to notify the client when a network interface has been added or removed, so that the client can attempt to configure an IP address on that interface.</dd>
+<dt><code>-n</code></dt>
+<dd>Do not configure any interfaces. This is most likely to be useful in combination with the <code>-w</code> flag.</dd>
+<dt><code>-e</code><i>&nbsp;VAR=value</i></dt>
+<dd>Define additional environment variables for the environment where <code>dhclient-script</code> executes. You may specify multiple <code>-e</code> options on the command line.</dd>
+<dt><code>-r</code></dt>
+<dd>Release the current lease and stop the running DHCP client as previously recorded in the PID file. When shutdown via this method <code>dhclient-script</code> will be executed with the specific reason for calling the script set. The client normally doesn&#8217;t release the current lease as this is not required by the DHCP protocol but some cable ISPs require their clients to notify the server if they wish to release an assigned IP address.</dd>
+<dt><code>-x</code></dt>
+<dd>Stop the running DHCP client without releasing the current lease. Kills existing <code>dhclient</code> process as previously recorded in the PID file. When shutdown via this method <code>dhclient-script</code> will be executed with the specific reason for calling the script set.</dd>
+<dt><code>-p</code><i>&nbsp;port-number</i></dt>
+<dd>The UDP port number on which the DHCP client should listen and transmit. If unspecified, <code>dhclient</code> uses the default port of 68. This is mostly useful for debugging purposes. If a different port is specified on which the client should listen and transmit, the client will also use a different destination port &#8211; one less than the specified port.</dd>
+<dt><code>-s</code><i>&nbsp;server-addr</i></dt>
+<dd>Specify the server IP address or fully qualified domain name to use as a destination for DHCP protocol messages before <code>dhclient</code> has acquired an IP address. Normally, <code>dhclient</code> transmits these messages to 255.255.255.255 (the IP limited broadcast address). Overriding this is mostly useful for debugging purposes. This feature is not supported in DHCPv6 (<code>-6</code>) mode.</dd>
+<dt><code>-g</code><i>&nbsp;relay</i></dt>
+<dd>Set the giaddr field of all packets to the <i>relay</i> IP address simulating a relay agent. This is for testing purposes only and should not be expected to work in any consistent or useful way.</dd>
+<dt><code>-i</code></dt>
+<dd>Use a DUID with DHCPv4 clients. If no DUID is available in the lease file one will be constructed and saved. The DUID will be used to construct a RFC4361 style client id that will be included in the client&#8217;s messages. This client id can be overridden by setting a client id in the configuration file. Overriding the client id in this fashion is discouraged.</dd>
+<dt><code>-I</code></dt>
+<dd>Use the standard DDNS scheme from RFCs 4701 &amp; 4702.</dd>
 <dt>
-<dt><code>&#8211;decline-wait-time</code><i>&nbsp;seconds</i></p>
+</dt><dt><code>&#8211;decline-wait-time</code><i>&nbsp;seconds</i></dt>
 <dd>
-<dd>Specify the time (in seconds) that an IPv4 client should wait after declining an address before issuing a discover. The default is 10 seconds as recommended by RFC 2131, Section 3.1.5. A value of zero equates to no wait at all.</dl>
+</dd><dd>Specify the time (in seconds) that an IPv4 client should wait after declining an address before issuing a discover. The default is 10 seconds as recommended by RFC 2131, Section 3.1.5. A value of zero equates to no wait at all.</dd></dl>
 <p> <code>&#8211;version</code> Print version number and exit. </p>
 <p> <i>Options available for DHCPv6 mode:</i></p>
 <dl>
-<dt><code>-S</code></p>
-<dd>Use Information-request to get only stateless configuration parameters (i.e., without address). This implies <code>-6</code>. It also doesn&#8217;t rewrite the lease database.</p>
-<dt><code>-T</code></p>
-<dd>Ask for IPv6 temporary addresses, one set per <code>-T</code> flag. This implies <code>-6</code> and also disables the normal address query. See <code>-N</code> to restore it.</p>
-<dt><code>-P</code></p>
-<dd>Enable IPv6 prefix delegation. This implies <code>-6</code> and also disables the normal address query. See <code>-N</code> to restore it. Multiple prefixes can be requested with multiple <code>-P</code> flags. Note only one requested interface is allowed.</p>
-<dt><code>-R</code></p>
-<dd>Require that responses include all of the items requested by any <code>-N</code>, <code>-T</code>, or <code>-P</code> options. Normally even if the command line includes a number of these the client will be willing to accept the best lease it can even if the lease doesn&#8217;t include all of the requested items. This option causes the client to only accept leases that include all of the requested items. </p>
+<dt><code>-S</code></dt>
+<dd>Use Information-request to get only stateless configuration parameters (i.e., without address). This implies <code>-6</code>. It also doesn&#8217;t rewrite the lease database.</dd>
+<dt><code>-T</code></dt>
+<dd>Ask for IPv6 temporary addresses, one set per <code>-T</code> flag. This implies <code>-6</code> and also disables the normal address query. See <code>-N</code> to restore it.</dd>
+<dt><code>-P</code></dt>
+<dd>Enable IPv6 prefix delegation. This implies <code>-6</code> and also disables the normal address query. See <code>-N</code> to restore it. Multiple prefixes can be requested with multiple <code>-P</code> flags. Note only one requested interface is allowed.</dd>
+<dt><code>-R</code></dt>
+<dd>Require that responses include all of the items requested by any <code>-N</code>, <code>-T</code>, or <code>-P</code> options. Normally even if the command line includes a number of these the client will be willing to accept the best lease it can even if the lease doesn&#8217;t include all of the requested items. This option causes the client to only accept leases that include all of the requested items. </dd>
 <p> Note well: enabling this may prevent the client from using any leases it receives if the servers aren&#8217;t configured to supply all of the items.</p>
-<dt><code>-D</code><i>&nbsp;LL or LLT</i></p>
-<dd>Override the default when selecting the type of DUID to use. By default, DHCPv6 <code>dhclient</code> creates an identifier based on the link-layer address (DUID-LL) if it is running in stateless mode (with <code>-S</code>, not requesting an address), or it creates an identifier based on the link-layer address plus a timestamp (DUID-LLT) if it is running in stateful mode (without <code>-S</code>, requesting an address). When DHCPv4 is configured to use a DUID using <code>-i</code> option the default is to use a DUID-LLT. <code>-D</code> overrides these default, with a value of either <i>LL</i> or <i>LLT</i>.</p>
-<dt><code>-N</code></p>
-<dd>Restore normal address query for IPv6. This implies <code>-6</code>. It is used to restore normal operation after using <code>-T</code> or <code>-P</code>. Multiple addresses can be requested with multiple <code>-N</code> flags.</p>
-<dt><code>&#8211;address-prefix-len</code><i>&nbsp;length</i></p>
-<dd>Specify the length of the prefix for IPv6 addresses. This value is passed by dhclient into the client script via the environment variable, ip6_prefixlen, when binding IPv6 addresses. The default value is 128. Alternatively you may change the default at compile time by setting DHCLIENT_DEFAULT_PREFIX_LEN in includes/site.h.</dl>
+<dt><code>-D</code><i>&nbsp;LL or LLT</i></dt>
+<dd>Override the default when selecting the type of DUID to use. By default, DHCPv6 <code>dhclient</code> creates an identifier based on the link-layer address (DUID-LL) if it is running in stateless mode (with <code>-S</code>, not requesting an address), or it creates an identifier based on the link-layer address plus a timestamp (DUID-LLT) if it is running in stateful mode (without <code>-S</code>, requesting an address). When DHCPv4 is configured to use a DUID using <code>-i</code> option the default is to use a DUID-LLT. <code>-D</code> overrides these default, with a value of either <i>LL</i> or <i>LLT</i>.</dd>
+<dt><code>-N</code></dt>
+<dd>Restore normal address query for IPv6. This implies <code>-6</code>. It is used to restore normal operation after using <code>-T</code> or <code>-P</code>. Multiple addresses can be requested with multiple <code>-N</code> flags.</dd>
+<dt><code>&#8211;address-prefix-len</code><i>&nbsp;length</i></dt>
+<dd>Specify the length of the prefix for IPv6 addresses. This value is passed by dhclient into the client script via the environment variable, ip6_prefixlen, when binding IPv6 addresses. The default value is 128. Alternatively you may change the default at compile time by setting DHCLIENT_DEFAULT_PREFIX_LEN in includes/site.h.</dd></dl>
 <dl>
-<dt><code>&#8211;dad-wait-time</code><i>&nbsp;seconds</i></p>
-<dd>Specify maximum time (in seconds) that the client should wait for the duplicate address detection (DAD) to complete on an interface. This value is propagated to the dhclient script in a dad_wait_time environment variable. If any of the IPv6 addresses on the interface are tentative (DAD is in progress), the script will wait for the specified number of seconds for DAD to complete. If the script ignores this variable the parameter has no effect.</dl>
+<dt><code>&#8211;dad-wait-time</code><i>&nbsp;seconds</i></dt>
+<dd>Specify maximum time (in seconds) that the client should wait for the duplicate address detection (DAD) to complete on an interface. This value is propagated to the dhclient script in a dad_wait_time environment variable. If any of the IPv6 addresses on the interface are tentative (DAD is in progress), the script will wait for the specified number of seconds for DAD to complete. If the script ignores this variable the parameter has no effect.</dd></dl>
 <dl>
-<dt><code>&#8211;prefix-len-hint</code><i>&nbsp;length</i></p>
-<dd>When used in conjunction with -P, it directs the client to use the given length to use a prefix hint of, &quot;::/length&quot;, when requesting new prefixes.</dl>
+<dt><code>&#8211;prefix-len-hint</code><i>&nbsp;length</i></dt>
+<dd>When used in conjunction with -P, it directs the client to use the given length to use a prefix hint of, &quot;::/length&quot;, when requesting new prefixes.</dd></dl>
 <p> <i>Modifying default file locations:</i> The following options can be used to modify the locations a client uses for its files. They can be particularly useful if, for example, <code>/var/lib/dhcp</code> or <code>/var/run</code> have not been mounted when the DHCP client is started.</p>
 <dl>
-<dt><code>-cf</code><i>&nbsp;config-file</i></p>
-<dd>Path to the client configuration file. If unspecified, the default <code>/etc/dhcp/dhclient.conf</code> is used. See <code><a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a>(5)</code> for a description of this file.</p>
-<dt><code>-df</code><i>&nbsp;duid-lease-file</i></p>
-<dd>Path to a secondary lease file. If the primary lease file doesn&#8217;t contain a DUID this file will be searched. The DUID read from the secondary will be written to the primary. This option can be used to allow an IPv4 instance of the client to share a DUID with an IPv6 instance. After starting one of the instances the second can be started with this option pointing to the lease file of the first instance. There is no default. If no file is specified no search is made for a DUID should one not be found in the main lease file.</p>
-<dt><code>-lf</code><i>&nbsp;lease-file</i></p>
-<dd>Path to the lease database file. If unspecified, the default <code>/var/lib/dhcp/dhclient.leases</code> is used. See <code><a href="/docs/linux/man/5-dhclient-leases/">dhclient.leases</a>(5)</code> for a description of this file.</p>
-<dt><code>-pf</code><i>&nbsp;pid-file</i></p>
-<dd>Path to the process ID file. If unspecified, the default <code>/var/run/dhclient.pid</code> is used.</p>
-<dt><code>&#8211;no-pid</code></p>
-<dd>Option to disable writing pid files. By default the program will write a pid file. If the program is invoked with this option it will not attempt to kill any existing client processes even if invoked with <code>-r</code> or <code>-x</code>.</p>
-<dt><code>-sf</code><i>&nbsp;script-file</i></p>
-<dd>Path to the network configuration script invoked by <code>dhclient</code> when it gets a lease. If unspecified, the default <code>/sbin/dhclient-script</code> is used. See <code><a href="/docs/linux/man/8-dhclient-script/">dhclient-script</a>(8)</code> for a description of this file.</dl>
+<dt><code>-cf</code><i>&nbsp;config-file</i></dt>
+<dd>Path to the client configuration file. If unspecified, the default <code>/etc/dhcp/dhclient.conf</code> is used. See <code><a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a>(5)</code> for a description of this file.</dd>
+<dt><code>-df</code><i>&nbsp;duid-lease-file</i></dt>
+<dd>Path to a secondary lease file. If the primary lease file doesn&#8217;t contain a DUID this file will be searched. The DUID read from the secondary will be written to the primary. This option can be used to allow an IPv4 instance of the client to share a DUID with an IPv6 instance. After starting one of the instances the second can be started with this option pointing to the lease file of the first instance. There is no default. If no file is specified no search is made for a DUID should one not be found in the main lease file.</dd>
+<dt><code>-lf</code><i>&nbsp;lease-file</i></dt>
+<dd>Path to the lease database file. If unspecified, the default <code>/var/lib/dhcp/dhclient.leases</code> is used. See <code><a href="/docs/linux/man/5-dhclient-leases/">dhclient.leases</a>(5)</code> for a description of this file.</dd>
+<dt><code>-pf</code><i>&nbsp;pid-file</i></dt>
+<dd>Path to the process ID file. If unspecified, the default <code>/var/run/dhclient.pid</code> is used.</dd>
+<dt><code>&#8211;no-pid</code></dt>
+<dd>Option to disable writing pid files. By default the program will write a pid file. If the program is invoked with this option it will not attempt to kill any existing client processes even if invoked with <code>-r</code> or <code>-x</code>.</dd>
+<dt><code>-sf</code><i>&nbsp;script-file</i></dt>
+<dd>Path to the network configuration script invoked by <code>dhclient</code> when it gets a lease. If unspecified, the default <code>/sbin/dhclient-script</code> is used. See <code><a href="/docs/linux/man/8-dhclient-script/">dhclient-script</a>(8)</code> for a description of this file.</dd></dl>
 <h2>Ports</h2>
 <p>During operations the client may use multiple UDP ports to provide different functions. Which ports are opened depends on both the way you compiled your code and the configuration you supply. The following should provide you an idea of what ports may be in use. </p>
 <p> Normally a DHCPv4 client will open a raw UDP socket to receive and send most DHCPv4 packets. It also opens a fallback UDP socket for use in sending unicast packets. Normally these will both use the well known port number for BOOTPC. </p>
@@ -122,14 +122,14 @@ description: "dhclient – Dynamic Host Configuration Protocol Client"
 <h2>Environment Variables</h2>
 <p>The following environment variables may be defined to override the builtin defaults for file locations. Note that use of the related command-line options will ignore the corresponding environment variable settings.</p>
 <dl>
-<dt><code>PATH_DHCLIENT_CONF</code></p>
-<dd>The dhclient.conf configuration file.</p>
-<dt><code>PATH_DHCLIENT_DB</code></p>
-<dd>The dhclient.leases database.</p>
-<dt><code>PATH_DHCLIENT_PID</code></p>
-<dd>The dhclient PID file.</p>
-<dt><code>PATH_DHCLIENT_SCRIPT</code></p>
-<dd>The dhclient-script file.</dl>
+<dt><code>PATH_DHCLIENT_CONF</code></dt>
+<dd>The dhclient.conf configuration file.</dd>
+<dt><code>PATH_DHCLIENT_DB</code></dt>
+<dd>The dhclient.leases database.</dd>
+<dt><code>PATH_DHCLIENT_PID</code></dt>
+<dd>The dhclient PID file.</dd>
+<dt><code>PATH_DHCLIENT_SCRIPT</code></dt>
+<dd>The dhclient-script file.</dd></dl>
 <h2>Files</h2>
 <p><code>/sbin/dhclient-script,</code> <code>/etc/dhcp/dhclient.conf, /var/lib/dhcp/dhclient.leases, /var/run/dhclient.pid,</code> <code>/var/lib/dhcp/dhclient.leases~.</code></p>
 <h2>See Also</h2>

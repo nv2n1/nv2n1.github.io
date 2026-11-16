@@ -15,18 +15,18 @@ description: "pmdate – display an offset date"
 <p> <code>pmdate</code> displays the current date and/or time, with an optional offset. </p>
 <p> An <i>offset</i> is specified with a leading sign (&#8220;+&#8221; or &#8220;-&#8221;), followed by an integer value, followed by one of the following &#8220;scale&#8221; specifiers;</p>
 <dl>
-<dt>S</p>
-<dd> seconds</p>
-<dt>M</p>
-<dd> minutes</p>
-<dt>H</p>
-<dd> hours</p>
-<dt>d</p>
-<dd> days</p>
-<dt>m</p>
-<dd> months</p>
-<dt>y</p>
-<dd> years</dl>
+<dt>S</dt>
+<dd> seconds</dd>
+<dt>M</dt>
+<dd> minutes</dd>
+<dt>H</dt>
+<dd> hours</dd>
+<dt>d</dt>
+<dd> days</dd>
+<dt>m</dt>
+<dd> months</dd>
+<dt>y</dt>
+<dd> years</dd></dl>
 <p> The output <i>format</i> follows the same rules as for <code><a href="/docs/linux/man/1-date/">date</a></code>(1) and <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3). </p>
 <p> For example, the following will display the date a week ago as DDMMYYYY; pmdate -7d %d%m%Y</p>
 <h2>PCP ENVIRONMENT</h2>

@@ -15,11 +15,11 @@ blk_queue_stack_limits - inherit underlying queue limits for stacked drivers
 <h2>Arguments</h2>
 
 <i>t</i>
-<dl><dd><dd>the stacking driver (top)</dl>
+<dl><dd></dd><dd>the stacking driver (top)</dd></dl>
  
 
  <i>b</i>
-<dl><dd>the underlying device (bottom)</dl>
+<dl><dd>the underlying device (bottom)</dd></dl>
 
 <h2>Copyright</h2>
 

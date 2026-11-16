@@ -55,9 +55,9 @@ description: "rwho_selinux – Security Enhanced Linux Policy for the rwho proce
 <p> Policy governs the access confined processes have to these ports. SELinux rwho policy is very flexible allowing users to setup their rwho processes in as secure a method as possible. </p>
 <p> The following port types are defined for rwho: </p>
 <dl>
-<dt><code>rwho_port_t</code></p>
+<dt><code>rwho_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 513</dl>
+</dd><dd>Default Defined Ports: udp 513</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type rwho_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

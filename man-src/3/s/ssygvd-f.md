@@ -29,10 +29,10 @@ description: "ssygvd.f –"
  digits which subtract like the Cray X-MP, Cray Y-MP, Cray C-90, or
  Cray-2. It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ITYPE</i> </p>
+<dd><i>ITYPE</i> </dd>
 <pre> ITYPE is INTEGER
  Specifies the problem type to be solved:
  = 1: A*x = (lambda)*B*x
@@ -131,13 +131,13 @@ description: "ssygvd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -145,10 +145,10 @@ description: "ssygvd.f –"
  converge (NEIG in old code could be greater than N causing out of
  bounds reference to A - reported by Ralf Meyer). Also corrected the
  description of INFO and the test on ITYPE. Sven, 16 Feb 05.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dl>
+<dd>Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dd></dl>
 <p> Definition at line 227 of file ssygvd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

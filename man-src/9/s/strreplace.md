@@ -15,15 +15,15 @@ strreplace - Replace all occurrences of character in string.
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>The string to operate on.</dl>
+<dl><dd></dd><dd>The string to operate on.</dd></dl>
  
 
  <i>old</i>
-<dl><dd>The character being replaced.</dl>
+<dl><dd>The character being replaced.</dd></dl>
  
 
  <i>new</i>
-<dl><dd>The character <i>old</i> is replaced with.</dl>
+<dl><dd>The character <i>old</i> is replaced with.</dd></dl>
 
 <h2>Description</h2>
 

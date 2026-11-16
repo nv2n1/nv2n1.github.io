@@ -40,9 +40,7 @@ u &#8211; an unused parameter of any type that accepts literal zero argument</p>
 <p>true if v is equivalent, false if v is nonequivalent<br />
 &nbsp;operator!= </p>
 <pre><code>friend constexpr bool operator!=(weak_equality v, /*unspecified*/ u) noexcept;
-
 friend constexpr bool operator!=(/*unspecified*/ u, weak_equality v) noexcept;
-
 </code></pre>
 <h2>Parameters</h2>
 <p>v &#8211; a std::weak_equality value to check<br />
@@ -51,9 +49,7 @@ u &#8211; an unused parameter of any type that accepts literal zero argument</p>
 <p>false if v is equivalent, and true if v is nonequivalent<br />
 &nbsp;operator&lt;=&gt; </p>
 <pre><code>friend constexpr weak_equality operator&lt;=&gt;(weak_equality v, /*unspecified*/ u) noexcept;
-
 friend constexpr weak_equality operator&lt;=&gt;(/*unspecified*/ u, weak_equality v) noexcept;
-
 </code></pre>
 <h2>Parameters</h2>
 <p>v &#8211; a std::weak_equality value to check<br />

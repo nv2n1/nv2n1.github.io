@@ -15,19 +15,19 @@ skb_copy_datagram_from_iter - Copy a datagram from an iov_iter.
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to copy</dl>
+<dl><dd></dd><dd>buffer to copy</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>offset in the buffer to start copying to</dl>
+<dl><dd>offset in the buffer to start copying to</dd></dl>
  
 
  <i>from</i>
-<dl><dd>the copy source</dl>
+<dl><dd>the copy source</dd></dl>
  
 
  <i>len</i>
-<dl><dd>amount of data to copy to buffer from iovec</dl>
+<dl><dd>amount of data to copy to buffer from iovec</dd></dl>
 
 <h2>Description</h2>
 

@@ -17,14 +17,14 @@ typedef ssize_t (*bson_reader_read_func_t)(void *handle,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>handle</code></p>
-<dd> The handle to read from.</dl>
+<dt><code>handle</code></dt>
+<dd> The handle to read from.</dd></dl>
 <dl>
-<dt><code>buf</code></p>
-<dd> The buffer to read into.</dl>
+<dt><code>buf</code></dt>
+<dd> The buffer to read into.</dd></dl>
 <dl>
-<dt><code>count</code></p>
-<dd> The number of bytes to read.</dl>
+<dt><code>count</code></dt>
+<dd> The number of bytes to read.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> A callback function that will be called by <code>bson_reader_t</code> to read the next chunk of data from the underlying opaque file descriptor. </p>
 <p> This function is meant to operate similar to the <code><a href="/docs/linux/man/2-read/">read</a>(2)</code> function as part of libc on UNIX-like systems. </p>

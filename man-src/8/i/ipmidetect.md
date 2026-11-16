@@ -15,26 +15,26 @@ description: "ipmidetect – list detected and/or undetected IPMI interfaces in 
 <p> <code>ipmidetect</code> will output the status of each IPMI node configured with <code><a href="/docs/linux/man/8-ipmidetectd/">ipmidetectd</a>(8)</code> unless they are specified on the command line. If the first node listed is &quot;-&quot;, nodes will be read in from standard input. The nodes can be listed in hostrange format, comma separated lists, or space separated lists. See the section below on HOSTRANGED SUPPORT for instructions on how to list hosts in range format. The hostnames listed must be the shortened names of hostnames.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Print version and exit</p>
-<dt><code>-o</code> <i>STRING</i>, <code>&#8211;hostname</code>=<i>STRING</i></p>
-<dd>server hostname (default=localhost)</p>
-<dt><code>-p</code> <i>INT</i>, <code>&#8211;port</code>=<i>INT</i></p>
-<dd>server port (default=8649)</p>
-<dt><code>-d</code>, <code>&#8211;detected</code></p>
-<dd>List only detected nodes</p>
-<dt><code>-u</code>, <code>&#8211;undetected</code></p>
-<dd>List only undetected nodes</p>
-<dt><code>-q</code>, <code>&#8211;hostrange</code></p>
-<dd>List nodes in hostrange format (default)</p>
-<dt><code>-c</code>, <code>&#8211;comma</code></p>
-<dd>List nodes in comma separated list</p>
-<dt><code>-n</code>, <code>&#8211;newline</code></p>
-<dd>List nodes in newline separated list</p>
-<dt><code>-s</code>, <code>&#8211;space</code></p>
-<dd>List nodes in space separated list</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Print version and exit</dd>
+<dt><code>-o</code> <i>STRING</i>, <code>&#8211;hostname</code>=<i>STRING</i></dt>
+<dd>server hostname (default=localhost)</dd>
+<dt><code>-p</code> <i>INT</i>, <code>&#8211;port</code>=<i>INT</i></dt>
+<dd>server port (default=8649)</dd>
+<dt><code>-d</code>, <code>&#8211;detected</code></dt>
+<dd>List only detected nodes</dd>
+<dt><code>-u</code>, <code>&#8211;undetected</code></dt>
+<dd>List only undetected nodes</dd>
+<dt><code>-q</code>, <code>&#8211;hostrange</code></dt>
+<dd>List nodes in hostrange format (default)</dd>
+<dt><code>-c</code>, <code>&#8211;comma</code></dt>
+<dd>List nodes in comma separated list</dd>
+<dt><code>-n</code>, <code>&#8211;newline</code></dt>
+<dd>List nodes in newline separated list</dd>
+<dt><code>-s</code>, <code>&#8211;space</code></dt>
+<dd>List nodes in space separated list</dd></dl>
 <h2>Hostranged Support</h2>
 <p>Multiple hosts can be input either as an explicit comma separated lists of hosts or a range of hostnames in the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc. The later form should not be confused with regular expression character classes (also denoted by []). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>

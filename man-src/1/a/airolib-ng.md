@@ -15,26 +15,26 @@ description: "airolib-ng – manage and create a WPA/WPA2 pre-computed hashes ta
 <p> <code>airolib-ng</code> is a tool for the aircrack-ng suite to store and manage essid and password lists, compute their Pairwise Master Keys (PMKs) and use them in WPA/WPA2 cracking. The program uses the lightweight SQLite3 database as the storage mechanism which is available on most platforms. The SQLite3 database was selected taking in consideration platform availability plus management, memory and disk overhead.</p>
 <h2>DATABASE</h2>
 <dl>
-<dt><i>database</i></p>
-<dd> It is name of the database file. Optionally specify the full path.</dl>
+<dt><i>database</i></dt>
+<dd> It is name of the database file. Optionally specify the full path.</dd></dl>
 <h2>OPERATION</h2>
 <dl>
-<dt><i>&#8211;stats</i></p>
-<dd> Output information about the database.</p>
-<dt><i>&#8211;sql &lt;sql&gt;</i></p>
-<dd> Execute specified SQL statement.</p>
-<dt><i>&#8211;clean [all]</i></p>
-<dd> Clean the database from old junk. When specifying &#8216;all&#8217;, it will also reduce filesize if possible and run an integrity check.</p>
-<dt><i>&#8211;batch</i></p>
-<dd> Start batch-processing all combinations of ESSIDs and passwords.</p>
-<dt><i>&#8211;verify [all]</i></p>
-<dd> Verify a set of randomly chosen PMKs. If &#8216;all&#8217; is given, all invalid PMK in the database will be deleted.</p>
-<dt><i>&#8211;import [essid|passwd] &lt;file&gt;</i></p>
-<dd> Import a flat file as a list of ESSIDs or passwords.</p>
-<dt><i>import cowpatty &lt;file&gt;</i></p>
-<dd> Import a coWPAtty file.</p>
-<dt><i>&#8211;export cowpatty &lt;essid&gt; &lt;file&gt;</i></p>
-<dd> Export to a cowpatty file.</dl>
+<dt><i>&#8211;stats</i></dt>
+<dd> Output information about the database.</dd>
+<dt><i>&#8211;sql &lt;sql&gt;</i></dt>
+<dd> Execute specified SQL statement.</dd>
+<dt><i>&#8211;clean [all]</i></dt>
+<dd> Clean the database from old junk. When specifying &#8216;all&#8217;, it will also reduce filesize if possible and run an integrity check.</dd>
+<dt><i>&#8211;batch</i></dt>
+<dd> Start batch-processing all combinations of ESSIDs and passwords.</dd>
+<dt><i>&#8211;verify [all]</i></dt>
+<dd> Verify a set of randomly chosen PMKs. If &#8216;all&#8217; is given, all invalid PMK in the database will be deleted.</dd>
+<dt><i>&#8211;import [essid|passwd] &lt;file&gt;</i></dt>
+<dd> Import a flat file as a list of ESSIDs or passwords.</dd>
+<dt><i>import cowpatty &lt;file&gt;</i></dt>
+<dd> Import a coWPAtty file.</dd>
+<dt><i>&#8211;export cowpatty &lt;essid&gt; &lt;file&gt;</i></dt>
+<dd> Export to a cowpatty file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

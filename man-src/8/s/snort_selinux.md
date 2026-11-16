@@ -98,8 +98,8 @@ description: "snort_selinux – Security Enhanced Linux Policy for the snort pro
 <p> <code>snort_exec_t</code> </p>
 <p> &#8211; Set files with the snort_exec_t type, if you want to transition an executable to the snort_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/snort, /usr/sbin/snort, /usr/sbin/snort-plain </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/snort, /usr/sbin/snort, /usr/sbin/snort-plain </dd>
 </dl>
 <p> <code>snort_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the snort_initrc_exec_t type, if you want to transition an executable to the snort_initrc_t domain. </p>

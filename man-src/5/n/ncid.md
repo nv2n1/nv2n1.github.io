@@ -13,23 +13,23 @@ description: "ncid.conf – ncid configuration file"
 <p> The <i>ncid.conf</i> file is a tcl/tk configuration file used to set options. </p>
 <p> The <i>ncid.conf</i> file understands 3 types of lines:</p>
 <dl>
-<dt><code>blank line</code></p>
-<dd>skip it</p>
-<dt><code>comment line, beginning with &#8216;#&#8217;</code></p>
-<dd>skip it</p>
-<dt><code>command lines, beginning with &#8216;set&#8217;</code></p>
-<dd></dl>
+<dt><code>blank line</code></dt>
+<dd>skip it</dd>
+<dt><code>comment line, beginning with &#8216;#&#8217;</code></dt>
+<dd>skip it</dd>
+<dt><code>command lines, beginning with &#8216;set&#8217;</code></dt>
+<dd></dd></dl>
 <p> See ncid.conf for a complete list of variables to set and what the default values are.</p>
 <h2>Examples</h2>
 <p>Set ncid to use the page output module:</p>
 <dl>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>set EXTPROG <i>ncid-page</i>
-</dl>
+</dd></dl>
 <p> Set ncid to format its output for the US and include the 1. The number output display will be 1-XXX-XXX-XXXX instead of XXX-XXX-XXXX:</p>
 <dl>
-<dd>&nbsp;<wbr>set NoOne&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0</dl>
+<dd>&nbsp;<wbr>set NoOne&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0</dd></dl>
 <p> Set ncid to format its number output display for Sweden: The number output display will be 0X-XXXXXXXX, 0XX-XXXXXXX, 0XXX-XXXXX, etc:</p>
 <dl>
-<dd>&nbsp;<wbr>set Country&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;SE&quot;</dl>
+<dd>&nbsp;<wbr>set Country&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;SE&quot;</dd></dl>
 <h2>See Also</h2>
 <p>ncid.1, ncidtools.1, lcdncid.1, out2osd.1, ncidd.8 ncidd.alias.5, ncidd.conf.5 </p>

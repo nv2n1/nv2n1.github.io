@@ -15,14 +15,14 @@ description: "nrsdrv – KISS to NET/ROM serial converter"
 <p> Typically <code>nrsdrv</code> will be attached to one end of a pseudo-tty of which the other end has been attached to a KISS capable program. The NET/ROM device will probably be a real serial port attached to a TNC or a Hexipus. The full specification of the NET/ROM serial protocol can be found in the original Software 2000 documentation that accompanied NET/ROMs.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Flow control enabled for use with a Hexipus, the default is disabled. See the file hexipus.txt in the source distribution for wiring details. </p>
-<dt><code>-l</code></p>
-<dd>Log messages to the system log, the default is not to.</p>
-<dt><code>-s speed</code></p>
-<dd>Sets the speed of both interfaces. If no value is specified then no speed will be set.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-f</code></dt>
+<dd>Flow control enabled for use with a Hexipus, the default is disabled. See the file hexipus.txt in the source distribution for wiring details. </dd>
+<dt><code>-l</code></dt>
+<dd>Log messages to the system log, the default is not to.</dd>
+<dt><code>-s speed</code></dt>
+<dd>Sets the speed of both interfaces. If no value is specified then no speed will be set.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>Bugs</h2>
 <p>None known.</p>
 <h2>See Also</h2>

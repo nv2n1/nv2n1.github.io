@@ -11,7 +11,6 @@ description: "sc::R12Amplitudes –"
 <p> <code>R12Amplitudes</code> gives the amplitudes of some linear-R12-ansatz-related terms in wave function.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;r12_amps.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>

@@ -16,32 +16,32 @@ description: "arara – a TeX automation tool based on rules and directives."
 <p> arara takes a list of documents as input. They will be processed according to their directives. Options apply to the execution of all documents.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;log</code></p>
-<dd> Generate a log output.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print or suppress command output.</p>
-<dt><code>&#8211;dry-run</code></p>
-<dd> Go through all the motions of running a command but with no actual calls.</p>
-<dt><code>&#8211;safe-run</code></p>
-<dd> Run in safe mode and disable potentially harmful features.</p>
-<dt><code>&#8211;header</code></p>
-<dd> Extract directives only in the file header.</p>
-<dt><code>&#8211;preamble</code></p>
-<dd> Set the file preamble as named based on the configuration file.</p>
-<dt><code>&#8211;timeout</code></p>
-<dd> Sets an execution timeout for spawned processes.</p>
-<dt><code>&#8211;language</code></p>
-<dd> Set the localization to the language specified by code.</p>
-<dt><code>&#8211;max-loops</code></p>
-<dd> Set the number &gt; 0 of loops for looping directives.</p>
-<dt><code>&#8211;working-directory</code></p>
-<dd> Set the working directory for the whole execution.</p>
-<dt><code>&#8211;call-property</code></p>
-<dd> Pass a property as key=value parameter into the application to be used within the session.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show a help message and exit.</dl>
+<dt><code>&#8211;log</code></dt>
+<dd> Generate a log output.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print or suppress command output.</dd>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> Go through all the motions of running a command but with no actual calls.</dd>
+<dt><code>&#8211;safe-run</code></dt>
+<dd> Run in safe mode and disable potentially harmful features.</dd>
+<dt><code>&#8211;header</code></dt>
+<dd> Extract directives only in the file header.</dd>
+<dt><code>&#8211;preamble</code></dt>
+<dd> Set the file preamble as named based on the configuration file.</dd>
+<dt><code>&#8211;timeout</code></dt>
+<dd> Sets an execution timeout for spawned processes.</dd>
+<dt><code>&#8211;language</code></dt>
+<dd> Set the localization to the language specified by code.</dd>
+<dt><code>&#8211;max-loops</code></dt>
+<dd> Set the number &gt; 0 of loops for looping directives.</dd>
+<dt><code>&#8211;working-directory</code></dt>
+<dd> Set the working directory for the whole execution.</dd>
+<dt><code>&#8211;call-property</code></dt>
+<dd> Pass a property as key=value parameter into the application to be used within the session.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show a help message and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> Issue tracker at </p>
 <h2>Index</h2>

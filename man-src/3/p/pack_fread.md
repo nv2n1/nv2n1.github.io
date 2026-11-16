@@ -10,7 +10,6 @@ description: "pack_fread – Reads n bytes from the stream. Allegro game program
 <p>pack_fread &#8211; Reads n bytes from the stream. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 long pack_fread(void *p, long n, PACKFILE *f);</code></pre>
 <h2>Description</h2>
 <p>Reads `n&#8217; bytes from the stream `f&#8217;, storing them at the memory location pointed to by `p&#8217;. Example: </p>

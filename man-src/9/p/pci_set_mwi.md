@@ -14,7 +14,7 @@ description: "pci_set_mwi – enables memory-write-invalidate PCI transaction"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the PCI device for which MWI is enabled</dl>
+</dd><dd>the PCI device for which MWI is enabled</dd></dl>
 <h2>Description</h2>
 <p>Enables the Memory-Write-Invalidate transaction in <code>PCI_COMMAND</code>.</p>
 <h2>Return</h2>

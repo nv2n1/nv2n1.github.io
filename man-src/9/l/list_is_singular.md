@@ -15,7 +15,7 @@ list_is_singular - tests whether a list has just one entry.
 <h2>Arguments</h2>
 
 <i>head</i>
-<dl><dd><dd>the list to test.</dl>
+<dl><dd></dd><dd>the list to test.</dd></dl>
 
 <h2>Copyright</h2>
 

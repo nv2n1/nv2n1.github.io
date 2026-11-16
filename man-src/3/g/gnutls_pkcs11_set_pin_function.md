@@ -14,10 +14,10 @@ description: "gnutls_pkcs11_set_pin_function – API function"
 <p> <code>void gnutls_pkcs11_set_pin_function(gnutls_pin_callback_t </code><i>fn</i><code>, void * </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pin_callback_t fn</p>
-<dd> The PIN callback, a <code>gnutls_pin_callback_t()</code> function.</p>
-<dt>void * userdata</p>
-<dd> data to be supplied to callback</dl>
+<dt>gnutls_pin_callback_t fn</dt>
+<dd> The PIN callback, a <code>gnutls_pin_callback_t()</code> function.</dd>
+<dt>void * userdata</dt>
+<dd> data to be supplied to callback</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set a callback function to be used when a PIN is required for PKCS 11 operations. See <code>gnutls_pin_callback_t()</code> on how the callback should behave.</p>
 <h2>SINCE</h2>
@@ -31,6 +31,6 @@ description: "gnutls_pkcs11_set_pin_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

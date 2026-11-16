@@ -11,14 +11,14 @@ description: "XtReservePropertyAtom, XtReleasePropertyAtom – maintain a cache 
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>Atom XtReservePropertyAtom(Widget <i>w</i>);</p>
-<dd>void XtReleasePropertyAtom(Widget <i>w</i>, Atom <i>atom</i>);</dl>
+<dd>Atom XtReservePropertyAtom(Widget <i>w</i>);</dd>
+<dd>void XtReleasePropertyAtom(Widget <i>w</i>, Atom <i>atom</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the widget used to reserve the atom.</p>
-<dt><i>atom</i></p>
-<dd>Specifies the atom whose reservation is to be released.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the widget used to reserve the atom.</dd>
+<dt><i>atom</i></dt>
+<dd>Specifies the atom whose reservation is to be released.</dd></dl>
 <h2>Description</h2>
 <p><code>XtReservePropertyAtom</code> returns an atom that may be used for properties in conjunction with conversion requests from widget <i>w</i>. The atom returned will be unique for the display of the widget specified.</p>
 <h2>See Also</h2>

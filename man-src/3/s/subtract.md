@@ -10,34 +10,16 @@ description: "QuantLib::CompositeInstrument – Composite instrument"
 <p>QuantLib::CompositeInstrument &#8211; Composite instrument </p>
 <h2>Synopsis</h2>
 <pre><code>void add (const boost::shared_ptr&lt; Instrument &gt; &amp;instrument, Real multiplier=1.0)
-
-
 adds an instrument to the composite
-
-
 void subtract (const boost::shared_ptr&lt; Instrument &gt; &amp;instrument, Real multiplier=1.0)
-
-
 shorts an instrument from the composite
-
-
-
 Instrument interface</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void add (const boost::shared_ptr&lt; Instrument &gt; &amp;instrument, Real multiplier=1.0)
-
-
 adds an instrument to the composite
-
-
 void subtract (const boost::shared_ptr&lt; Instrument &gt; &amp;instrument, Real multiplier=1.0)
-
-
 shorts an instrument from the composite
-
-
-
 Instrument interface</code></pre>
 <p> bool <code>isExpired</code> () const<br />
  <i>returns whether the instrument is still tradable. </i><br />
@@ -48,7 +30,7 @@ Instrument interface</code></pre>
 <p> <code>Example: </code> <code>static replication of a down-and-out barrier option </code> </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>Methods that drive the calculation directly (such as <code>recalculate()</code>, <code>freeze()</code> and others) might not work correctly.</dl>
+<dd>Methods that drive the calculation directly (such as <code>recalculate()</code>, <code>freeze()</code> and others) might not work correctly.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Replication.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

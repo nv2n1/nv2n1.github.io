@@ -14,23 +14,23 @@ description: "rmcp – remove NILFS2 checkpoints"
 <p><code>rmcp</code> is a utility for removing checkpoints from the NILFS2 file system found in <i>device</i>. The checkpoints which user wants to remove are specified with one or more <i>checkpoint-ranges</i>. When <i>device</i> is omitted, rmcp tries to find a NILFS2 file system from <i>/proc/mounts</i>. </p>
 <p> The <i>checkpoint-range</i> must be provided with one or two integers in one of the following way:</p>
 <dl>
-<dt><code>cno</code></p>
-<dd>single checkpoint number</p>
-<dt><code>start..end</code></p>
-<dd>every checkpoint number between <code>start</code> and <code>end</code></p>
-<dt><code>..end</code></p>
-<dd>every checkpoint number equal or younger than <code>end</code></p>
-<dt><code>start..</code></p>
-<dd>every checkpoint number equal or greater than <code>start</code></dl>
+<dt><code>cno</code></dt>
+<dd>single checkpoint number</dd>
+<dt><code>start..end</code></dt>
+<dd>every checkpoint number between <code>start</code> and <code>end</code></dd>
+<dt><code>..end</code></dt>
+<dd>every checkpoint number equal or younger than <code>end</code></dd>
+<dt><code>start..</code></dt>
+<dd>every checkpoint number equal or greater than <code>start</code></dd></dl>
 <p> This command is valid only for mounted NILFS2 file systems, and will fail if the <i>device</i> has no active mounts.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Ignore snapshots or nonexistent checkpoints.</p>
-<dt><code>-i</code></p>
-<dd>Prompt before any removal.</p>
-<dt><code>-h</code></p>
-<dd>Display help message and exit.</dl>
+<dt><code>-f</code></dt>
+<dd>Ignore snapshots or nonexistent checkpoints.</dd>
+<dt><code>-i</code></dt>
+<dd>Prompt before any removal.</dd>
+<dt><code>-h</code></dt>
+<dd>Display help message and exit.</dd></dl>
 <h2>Author</h2>
 <p>Koji Sato &lt;koji [at] osrg.net&gt;, Ryusuke Konishi &lt;ryusuke [at] osrg.net&gt;.</p>
 <h2>Availability</h2>

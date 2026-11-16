@@ -12,15 +12,10 @@ std::swap(std::unordered_multiset) - std::swap(std::unordered_multiset)
 
 <pre><code>template &lt;class Key, class Hash, class KeyEqual, class Alloc&gt;
 (since C++ 11)
-
     void swap(unordered_multiset&lt;Key, Hash, KeyEqual, Alloc&gt; &amp;lhs, (until C++ 17)
-
                                                                        unordered_multiset&lt;Key, Hash, KeyEqual, Alloc&gt; &amp;rhs);
-
 template &lt;class Key, class Hash, class KeyEqual, class Alloc&gt;
-
 void swap(unordered_multiset&lt;Key, Hash, KeyEqual, Alloc&gt; &amp;lhs, (since C++ 17)
-
                                                                    unordered_multiset&lt;Key, Hash, KeyEqual, Alloc&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::unordered_multiset. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 

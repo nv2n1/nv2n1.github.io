@@ -23,27 +23,27 @@ description: "wpa_priv – wpa_supplicant privilege separation helper"
 <pre>mkdir /var/run/wpa_priv
 chown root:wpapriv /var/run/wpa_priv
 chmod 0750 /var/run/wpa_priv</pre>
-</dl>
+</dd></dl>
 <p> Start <code>wpa_priv</code> as root (e.g., from system startup scripts) with the enabled interfaces configured on the command line: </p>
 <dl>
 <dd>
 <pre>wpa_priv -B -c /var/run/wpa_priv -P /var/run/wpa_priv.pid wext:wlan0</pre>
-</dl>
+</dd></dl>
 <p> Run <code>wpa_supplicant</code> as non-root with a user that is in the wpapriv group: </p>
 <dl>
 <dd>
 <pre>wpa_supplicant -i ath0 -c wpa_supplicant.conf</pre>
-</dl>
+</dd></dl>
 <h2>Command Arguments</h2>
 <dl>
-<dt><code>-c ctrl path</code></p>
-<dd>Specify the path to wpa_priv control directory (Default: /var/run/wpa_priv/).</p>
-<dt><code>-B</code></p>
-<dd>Run as a daemon in the background.</p>
-<dt><code>-P file</code></p>
-<dd>Set the location of the PID file.</p>
-<dt><code>driver:ifname [driver:ifname &#8230;]</code></p>
-<dd>The &lt;driver&gt; string dictates which of the supported <code>wpa_supplicant</code> driver backends is to be used. To get a list of supported driver types see wpa_supplicant help (e.g, wpa_supplicant -h). The driver backend supported by most good drivers is <code>wext</code>. </p>
+<dt><code>-c ctrl path</code></dt>
+<dd>Specify the path to wpa_priv control directory (Default: /var/run/wpa_priv/).</dd>
+<dt><code>-B</code></dt>
+<dd>Run as a daemon in the background.</dd>
+<dt><code>-P file</code></dt>
+<dd>Set the location of the PID file.</dd>
+<dt><code>driver:ifname [driver:ifname &#8230;]</code></dt>
+<dd>The &lt;driver&gt; string dictates which of the supported <code>wpa_supplicant</code> driver backends is to be used. To get a list of supported driver types see wpa_supplicant help (e.g, wpa_supplicant -h). The driver backend supported by most good drivers is <code>wext</code>. </dd>
 <p> The &lt;ifname&gt; string specifies which network interface is to be managed by <code>wpa_supplicant</code> (e.g., wlan0 or ath0). </p>
 <p> <code>wpa_priv</code> does not use the network interface before <code>wpa_supplicant</code> is started, so it is fine to include network interfaces that are not available at the time wpa_priv is started. wpa_priv can control multiple interfaces with one process, but it is also possible to run multiple <code>wpa_priv</code> processes at the same time, if desired.</dl>
 <h2>See Also</h2>
@@ -51,3 +51,4 @@ chmod 0750 /var/run/wpa_priv</pre>
 <h2>Legal</h2>
 <p>wpa_supplicant is copyright (c) 2003-2016, Jouni Malinen &lt;j@w1.fi&gt; and contributors. All Rights Reserved. </p>
 <p> This program is licensed under the BSD license (the one with advertisement clause removed).</p>
+</p>

@@ -19,16 +19,16 @@ description: "crypt_checksalt – validate a crypt setting string"
 <h2>RETURN VALUES</h2>
 <p> The return value is 0 if there is nothing wrong with this setting. Otherwise, it is one of the following constants:</p>
 <dl>
-<dt><code>CRYPT_SALT_OK</code></p>
-<dd> <i>setting</i> is a fully correct setting string. This constant is guaranteed to equal 0.</p>
-<dt><code>CRYPT_SALT_INVALID</code></p>
-<dd> <i>setting</i> is not a valid setting string; either it specifies a hashing method that is not known to this version of libxcrypt, or it specifies invalid parameters for the method.</p>
-<dt><code>CRYPT_SALT_METHOD_DISABLED (Not implemented, yet)</code></p>
-<dd> <i>setting</i> specifies a hashing method that is no longer allowed to be used at all; <code>crypt</code> will fail if passed this <i>setting</i> Manual intervention will be required to reactivate the user&#8217;s account.</p>
-<dt><code>CRYPT_SALT_METHOD_LEGACY</code></p>
-<dd> <i>setting</i> specifies a hashing method that is no longer considered strong enough for use with new passphrases. <code>crypt</code> will still authenticate a passphrase against this setting, but if authentication succeeds, the passphrase should be re-hashed using the currently preferred method.</p>
-<dt><code>CRYPT_SALT_TOO_CHEAP (Not implemented, yet)</code></p>
-<dd> <i>setting</i> specifies cost parameters that are considered too cheap for use with new passphrases. <code>crypt</code> will still authenticate a passphrase against this setting, but if authentication succeeds, the passphrase should be re-hashed using the currently preferred method.</dl>
+<dt><code>CRYPT_SALT_OK</code></dt>
+<dd> <i>setting</i> is a fully correct setting string. This constant is guaranteed to equal 0.</dd>
+<dt><code>CRYPT_SALT_INVALID</code></dt>
+<dd> <i>setting</i> is not a valid setting string; either it specifies a hashing method that is not known to this version of libxcrypt, or it specifies invalid parameters for the method.</dd>
+<dt><code>CRYPT_SALT_METHOD_DISABLED (Not implemented, yet)</code></dt>
+<dd> <i>setting</i> specifies a hashing method that is no longer allowed to be used at all; <code>crypt</code> will fail if passed this <i>setting</i> Manual intervention will be required to reactivate the user&#8217;s account.</dd>
+<dt><code>CRYPT_SALT_METHOD_LEGACY</code></dt>
+<dd> <i>setting</i> specifies a hashing method that is no longer considered strong enough for use with new passphrases. <code>crypt</code> will still authenticate a passphrase against this setting, but if authentication succeeds, the passphrase should be re-hashed using the currently preferred method.</dd>
+<dt><code>CRYPT_SALT_TOO_CHEAP (Not implemented, yet)</code></dt>
+<dd> <i>setting</i> specifies cost parameters that are considered too cheap for use with new passphrases. <code>crypt</code> will still authenticate a passphrase against this setting, but if authentication succeeds, the passphrase should be re-hashed using the currently preferred method.</dd></dl>
 <h2>FEATURE TEST MACROS</h2>
 <p> In crypt.h will define the macro <code>CRYPT_CHECKSALT_AVAILABLE</code> if <code>crypt_checksalt</code> is available in the current version of libxcrypt.</p>
 <h2>BUGS</h2>

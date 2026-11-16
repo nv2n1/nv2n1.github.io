@@ -23,11 +23,11 @@ description: "atomic-images – operations on container images"
 <p> The help file can be written using the middleman markup and the converted using the go-md2man utility as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 go-md2man -in image_help.1.md -out image_help.1
 </pre>
-</dl>
+</dd></dl>
 <p> You can also use any of the many options to create the help file including using native man tagging. </p>
 <p> <code>info</code> </p>
 <p> Displays the LABEL fields within an image. By default, it will check first for a local image and then all configured registries. </p>
@@ -109,16 +109,16 @@ Will output the status of each base image that makes up the image being verified
 <p> Verify the Red Hat rsyslog image </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # atomic images verify registry.access.redhat.com/rhel7/rsyslog
 #
 </pre>
-</dl>
+</dd></dl>
 <p> Verify the Red Hat rsyslog image and show status of each image layer </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # atomic images verify -v registry.access.redhat.com/rhel7/rsyslog
 registry.access.redhat.com/rhel7/rsyslog contains the following images:
@@ -126,11 +126,11 @@ registry.access.redhat.com/rhel7/rsyslog contains the following images:
  redhat/rhel7-7.1-24            redhat/rhel7-7.1-24
  * = version difference
 </pre>
-</dl>
+</dd></dl>
 <p> Verify a system image </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 #sudo atomic images verify busybox
 validation output for layer a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4:
@@ -140,7 +140,7 @@ validation output for layer 8ddc19f16526912237dd8af81971d5e4dd0587907234be2b83e2
 got 268 "etc/shadow" : keyword "sha256digest" : expected 22d9cee21ee808c52af44ac...;
 got 7a07ac69054c2a3533569874c2...
 </code></pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> July 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) July 2016, Updated to reflect images sub-command changes (jhonce at redhat dot com) July 2016, Added sub-commands all, filter and quiet to list (jerzhang at redhat dot com) </p>
 <h2>Index</h2>

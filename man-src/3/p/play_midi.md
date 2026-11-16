@@ -10,7 +10,6 @@ description: "play_midi – Starts playing the specified MIDI file. Allegro game
 <p>play_midi &#8211; Starts playing the specified MIDI file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int play_midi(MIDI *midi, int loop);</code></pre>
 <h2>Description</h2>
 <p>Starts playing the specified MIDI file, first stopping whatever music was previously playing. If the loop flag is set to non-zero, the data will be repeated until replaced with something else, otherwise it will stop at the end of the file. Passing a NULL pointer will stop whatever music is currently playing.</p>

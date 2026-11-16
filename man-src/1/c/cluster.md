@@ -16,14 +16,14 @@ description: "cluster – find clusters in a graph and augment the graph with th
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-C</code><i>k</i></p>
-<dd> specifies a targeted number of clusters that should be generated. The specified number <i>k</i> is only a suggestion and may not be realisable. If <i>k == 0</i>, the default, the number of clusters that approximately optimizes the modularity is returned.</p>
-<dt><code>-c</code><i>k</i></p>
-<dd> specifies clustering method. If <i>k == 0</i>, the default, modularity clustering will be used. If <i>k == 1</i> modularity quality will be used.</p>
-<dt><code>-o</code><i>outfile</i></p>
-<dd> Specifies that output should go into the file <i>outfile</i>. By default, <i>stdout</i> is used.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode.</dl>
+<dt><code>-C</code><i>k</i></dt>
+<dd> specifies a targeted number of clusters that should be generated. The specified number <i>k</i> is only a suggestion and may not be realisable. If <i>k == 0</i>, the default, the number of clusters that approximately optimizes the modularity is returned.</dd>
+<dt><code>-c</code><i>k</i></dt>
+<dd> specifies clustering method. If <i>k == 0</i>, the default, modularity clustering will be used. If <i>k == 1</i> modularity quality will be used.</dd>
+<dt><code>-o</code><i>outfile</i></dt>
+<dd> Specifies that output should go into the file <i>outfile</i>. By default, <i>stdout</i> is used.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Applying <code>cluster</code> to the following graph, </p>
 <pre><code>

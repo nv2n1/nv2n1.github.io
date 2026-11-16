@@ -19,46 +19,46 @@ description: "sane-artec_eplus48u – SANE backend for the scanner Artec E+ 48U 
 <p>The contents of the <i>artec_eplus48u.conf</i> file is a list of usb lines containing vendor and product ids that correspond to USB scanners. The file can also contain option lines. Empty lines and lines starting with a hash mark (#) are ignored. The scanners are autodetected by <i>usb vendor_id product_id</i> statements which are already included into <i>artec_eplus48u.conf .</i> &quot;vendor_id&quot; and &quot;product_id&quot; are hexadecimal numbers that identify the scanner. </p>
 <p> Every usb section can have additional options.</p>
 <dl>
-<dt><code>artecFirmwareFile /usr/share/sane/artec_eplus48u/Artec48.usb</code></p>
-<dd>The path to the firmware file. This option is required.</p>
-<dt><code>redGamma 1.0</code></p>
+<dt><code>artecFirmwareFile /usr/share/sane/artec_eplus48u/Artec48.usb</code></dt>
+<dd>The path to the firmware file. This option is required.</dd>
+<dt><code>redGamma 1.0</code></dt>
 <dd>
-<dt><code>greenGamma 1.0</code></p>
+</dd><dt><code>greenGamma 1.0</code></dt>
 <dd>
-<dt><code>blueGamma 1.0</code></p>
+</dd><dt><code>blueGamma 1.0</code></dt>
 <dd>
-<dt><code>masterGamma 1.9</code></p>
-<dd>These are the default gamma values. If you set the &quot;Defaults&quot; option with a frontend, then the gamma options are reset to the values specified here.</p>
-<dt><code>redOffset 0x28</code></p>
+</dd><dt><code>masterGamma 1.9</code></dt>
+<dd>These are the default gamma values. If you set the &quot;Defaults&quot; option with a frontend, then the gamma options are reset to the values specified here.</dd>
+<dt><code>redOffset 0x28</code></dt>
 <dd>
-<dt><code>greenOffset 0x2f</code></p>
+</dd><dt><code>greenOffset 0x2f</code></dt>
 <dd>
-<dt><code>blueOffset 0x2f</code></p>
+</dd><dt><code>blueOffset 0x2f</code></dt>
 <dd>
-<dt><code>redExposure 0xa7</code></p>
+</dd><dt><code>redExposure 0xa7</code></dt>
 <dd>
-<dt><code>greenExposure 0x116</code></p>
+</dd><dt><code>greenExposure 0x116</code></dt>
 <dd>
-<dt><code>blueExposure 0xdc</code></p>
-<dd>These are the default values for offset and exposure time. You can change them (e.g. to speed up calibration) if you don&#8217;t want to save the calibration data permanently.</p>
-<dt><code>vendorString Artec</code></p>
+</dd><dt><code>blueExposure 0xdc</code></dt>
+<dd>These are the default values for offset and exposure time. You can change them (e.g. to speed up calibration) if you don&#8217;t want to save the calibration data permanently.</dd>
+<dt><code>vendorString Artec</code></dt>
 <dd>
-<dt><code>modelString E+ 48U</code></p>
-<dd>By default, the scanner is reported as &quot;Artec E+ 48U&quot;. If you don&#8217;t like this, e.g. because you have an Tevion MD 9693, then change the options accordingly.</dl>
+</dd><dt><code>modelString E+ 48U</code></dt>
+<dd>By default, the scanner is reported as &quot;Artec E+ 48U&quot;. If you don&#8217;t like this, e.g. because you have an Tevion MD 9693, then change the options accordingly.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/local/etc/sane.d/artec_eplus48u.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</p>
-<dt><i>/usr/local/lib/sane/libsane-artec_eplus48u.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/local/lib/sane/libsane-artec_eplus48u.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/usr/local/etc/sane.d/artec_eplus48u.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</dd>
+<dt><i>/usr/local/lib/sane/libsane-artec_eplus48u.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/local/lib/sane/libsane-artec_eplus48u.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_ARTEC_EPLUS48U</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_ARTEC_EPLUS48U</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_ARTEC_EPLUS48U=3 </p>
 </dl>
 <h2>See Also</h2>

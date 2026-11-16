@@ -80,10 +80,10 @@ description: "ztgsja.f –"
  The computation of the unitary transformation matrices U, V or Q
  is optional. These matrices may either be formed explicitly, or they
  may be postmultiplied into input matrices U1, V1, or Q1.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBU</i> </p>
+<dd><i>JOBU</i> </dd>
 <pre> JOBU is CHARACTER*1
  = 'U': U must contain a unitary matrix U1 on entry, and
  the product U1*U is returned;
@@ -217,16 +217,16 @@ description: "ztgsja.f –"
  MAXIT specifies the total loops that the iterative procedure
  may take. If after MAXIT cycles, the routine fails to
  converge, we return INFO = 1.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -238,7 +238,8 @@ description: "ztgsja.f –"
  C1 and S1 are diagonal matrices satisfying
  C1**2 + S1**2 = I,
  and R1 is an L-by-L nonsingular upper triangular matrix.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 378 of file ztgsja.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

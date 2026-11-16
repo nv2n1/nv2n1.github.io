@@ -17,15 +17,15 @@ description: "CREATE VIEW – define a new view"
 <p> If a schema name is given (for example, CREATE VIEW myschema.myview &#8230;) then the view is created in the specified schema. Otherwise it is created in the current schema. Temporary views exist in a special schema, so a schema name cannot be given when creating a temporary view. The name of the view must be distinct from the name of any other view, table, sequence, or index in the same schema.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>TEMPORARY or TEMP</code></p>
-<dd>If specified, the view is created as a temporary view. Temporary views are automatically dropped at the end of the current session. Existing permanent relations with the same name are not visible to the current session while the temporary view exists, unless they are referenced with schema-qualified names. </p>
+<dt><code>TEMPORARY or TEMP</code></dt>
+<dd>If specified, the view is created as a temporary view. Temporary views are automatically dropped at the end of the current session. Existing permanent relations with the same name are not visible to the current session while the temporary view exists, unless they are referenced with schema-qualified names. </dd>
 <p> If any of the tables referenced by the view are temporary, the view is created as a temporary view (whether TEMPORARY is specified or not).</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of a view to be created.</p>
-<dt><i>column_name</i></p>
-<dd>An optional list of names to be used for columns of the view. If not given, the column names are deduced from the query.</p>
-<dt><i>query</i></p>
-<dd>A SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] or VALUES [<code><a href="/docs/linux/man/7-values/">values</a></code>(7)] command which will provide the columns and rows of the view.</dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of a view to be created.</dd>
+<dt><i>column_name</i></dt>
+<dd>An optional list of names to be used for columns of the view. If not given, the column names are deduced from the query.</dd>
+<dt><i>query</i></dt>
+<dd>A SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] or VALUES [<code><a href="/docs/linux/man/7-values/">values</a></code>(7)] command which will provide the columns and rows of the view.</dd></dl>
 <h2>Notes</h2>
 <p>Currently, views are read only: the system will not allow an insert, update, or delete on a view. You can get the effect of an updatable view by creating rules that rewrite inserts, etc. on the view into appropriate actions on other tables. For more information see CREATE RULE [<code><a href="/docs/linux/man/7-create_rule/">create_rule</a></code>(7)]. </p>
 <p> Use the DROP VIEW [<code><a href="/docs/linux/man/7-drop_view/">drop_view</a></code>(7)] statement to drop views. </p>
@@ -48,12 +48,12 @@ WHERE kind = 'Comedy';</code></pre>
  [ WITH [ CASCADED | LOCAL ] CHECK OPTION ]</pre>
 <p>The optional clauses for the full SQL command are:</p>
 <dl>
-<dt><code>CHECK OPTION</code></p>
-<dd>This option has to do with updatable views. All <code>INSERT</code> and <code>UPDATE</code> commands on the view will be checked to ensure data satisfy the view-defining condition (that is, the new data would be visible through the view). If they do not, the update will be rejected.</p>
-<dt><code>LOCAL</code></p>
-<dd>Check for integrity on this view.</p>
-<dt><code>CASCADED</code></p>
-<dd>Check for integrity on this view and on any dependent view. CASCADED is assumed if neither CASCADED nor LOCAL is specified.</dl>
+<dt><code>CHECK OPTION</code></dt>
+<dd>This option has to do with updatable views. All <code>INSERT</code> and <code>UPDATE</code> commands on the view will be checked to ensure data satisfy the view-defining condition (that is, the new data would be visible through the view). If they do not, the update will be rejected.</dd>
+<dt><code>LOCAL</code></dt>
+<dd>Check for integrity on this view.</dd>
+<dt><code>CASCADED</code></dt>
+<dd>Check for integrity on this view and on any dependent view. CASCADED is assumed if neither CASCADED nor LOCAL is specified.</dd></dl>
 <p> <code>CREATE OR REPLACE VIEW</code> is a PostgreSQL language extension. So is the concept of a temporary view.</p>
 <h2>See Also</h2>
 <p>ALTER VIEW [<code><a href="/docs/linux/man/7-alter_view/">alter_view</a></code>(7)], DROP VIEW [<code><a href="/docs/linux/man/7-drop_view/">drop_view</a></code>(7)] </p>

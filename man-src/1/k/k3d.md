@@ -18,125 +18,125 @@ description: "k3d – 3D modeling and animation system"
 <p> <code>&#8211;add-path</code> [path]</p>
 <dl>
 <dt>
-<dd> Prepends a filesystem path to the PATH environment variable.</dl>
+</dt><dd> Prepends a filesystem path to the PATH environment variable.</dd></dl>
 <p> <code>&#8211;color</code></p>
 <dl>
 <dt>
-<dd> Color-codes log messages based on their priority. Requires an ANSI color-capable terminal.</dl>
+</dt><dd> Color-codes log messages based on their priority. Requires an ANSI color-capable terminal.</dd></dl>
 <p> <code>&#8211;disable-gl-extension</code> [extension]</p>
 <dl>
 <dt>
-<dd> Disables the given OpenGL extension.</dl>
+</dt><dd> Disables the given OpenGL extension.</dd></dl>
 <p> <code>&#8211;exit</code></p>
 <dl>
 <dt>
-<dd> Exits the program (useful after running scripts in batch mode).</dl>
+</dt><dd> Exits the program (useful after running scripts in batch mode).</dd></dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Prints this help information and exits.</dl>
+</dt><dd> Prints this help information and exits.</dd></dl>
 <p> <code>&#8211;log-level</code> [level]</p>
 <dl>
 <dt>
-<dd> Specifies the minimum message priority to log (valid values are &quot;warning&quot;, &quot;information&quot;, or &quot;debug&quot;).</dl>
+</dt><dd> Specifies the minimum message priority to log (valid values are &quot;warning&quot;, &quot;information&quot;, or &quot;debug&quot;).</dd></dl>
 <p> <code>&#8211;options</code> [path]</p>
 <dl>
 <dt>
-<dd> Overrides the filepath for storing user options (this overrides both defaults and the K3D_OPTIONS_PATH environment variable, below).</dl>
+</dt><dd> Overrides the filepath for storing user options (this overrides both defaults and the K3D_OPTIONS_PATH environment variable, below).</dd></dl>
 <p> <code>&#8211;plugins</code> [path]</p>
 <dl>
 <dt>
-<dd> Overrides the path(s) for loading plugin libraries (this overrides both defaults and the K3D_PLUGIN_PATHS environment variable, below). Multiple colon-delimited paths are allowed. Use &quot;&amp;&quot; as a synonym for the default paths.</dl>
+</dt><dd> Overrides the path(s) for loading plugin libraries (this overrides both defaults and the K3D_PLUGIN_PATHS environment variable, below). Multiple colon-delimited paths are allowed. Use &quot;&amp;&quot; as a synonym for the default paths.</dd></dl>
 <p> <code>&#8211;script </code> [file]</p>
 <dl>
 <dt>
-<dd> Play the given script after startup (use &#8211; for stdin).</dl>
+</dt><dd> Play the given script after startup (use &#8211; for stdin).</dd></dl>
 <p> <code>&#8211;shadercache</code> [path]</p>
 <dl>
 <dt>
-<dd> Overrides the path where compiled shaders will be cached (this overrides both defaults and the K3D_SHADER_CACHE_PATH environment variable, below).</dl>
+</dt><dd> Overrides the path where compiled shaders will be cached (this overrides both defaults and the K3D_SHADER_CACHE_PATH environment variable, below).</dd></dl>
 <p> <code>&#8211;share</code> [path]</p>
 <dl>
 <dt>
-<dd> Overrides the path for loading shared data files (this overrides both defaults and the K3D_SHARE_PATH environment variable, below).</dl>
+</dt><dd> Overrides the path for loading shared data files (this overrides both defaults and the K3D_SHARE_PATH environment variable, below).</dd></dl>
 <p> <code>&#8211;show-process</code></p>
 <dl>
 <dt>
-<dd> Prints the process name next to log messages.</dl>
+</dt><dd> Prints the process name next to log messages.</dd></dl>
 <p> <code>&#8211;show-timestamps</code></p>
 <dl>
 <dt>
-<dd> Prints timestamps next to log messages.</dl>
+</dt><dd> Prints timestamps next to log messages.</dd></dl>
 <p> <code>&#8211;syslog</code></p>
 <dl>
 <dt>
-<dd> Logs messages to syslog.</dl>
+</dt><dd> Logs messages to syslog.</dd></dl>
 <p> <code>-u, &#8211;ui</code> [ui path]</p>
 <dl>
 <dt>
-<dd> Specifies the path to a user interface plugin (this overrides both the default and the K3D_USER_INTERFACE_PATH environment variable, below). As a special-case the string &quot;none&quot; can be used as a synonym for the Null (no gui) User Interface.</dl>
+</dt><dd> Specifies the path to a user interface plugin (this overrides both the default and the K3D_USER_INTERFACE_PATH environment variable, below). As a special-case the string &quot;none&quot; can be used as a synonym for the Null (no gui) User Interface.</dd></dl>
 <p> <code>-H, &#8211;user-interface-help</code></p>
 <dl>
 <dt>
-<dd> Prints a user-interface specific help message and exits.</dl>
+</dt><dd> Prints a user-interface specific help message and exits.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Prints program version information and exits.</dl>
+</dt><dd> Prints program version information and exits.</dd></dl>
 <h2>USER INTERFACE OPTIONS</h2>
 <p> <code>&#8211;batch</code></p>
 <dl>
 <dt>
-<dd> Operate in batch (no user intervention) mode.</dl>
+</dt><dd> Operate in batch (no user intervention) mode.</dd></dl>
 <p> <code>-n, &#8211;new</code></p>
 <dl>
 <dt>
-<dd> Creates a new document after startup.</dl>
+</dt><dd> Creates a new document after startup.</dd></dl>
 <p> <code>&#8211;no-custom-layouts</code></p>
 <dl>
 <dt>
-<dd> Disable custom user interface layouts (useful when playing-back recorded tutorials, which rely on the default layout).</dl>
+</dt><dd> Disable custom user interface layouts (useful when playing-back recorded tutorials, which rely on the default layout).</dd></dl>
 <p> <code>&#8211;no-splash</code></p>
 <dl>
 <dt>
-<dd> Disables the startup splash screen.</dl>
+</dt><dd> Disables the startup splash screen.</dd></dl>
 <p> <code>-o, &#8211;open </code> [file]</p>
 <dl>
 <dt>
-<dd> Opens the given file after startup.</dl>
+</dt><dd> Opens the given file after startup.</dd></dl>
 <p> <code>&#8211;show-tutorials</code></p>
 <dl>
 <dt>
-<dd> Opens the tutorials menu immediately following startup.</dl>
+</dt><dd> Opens the tutorials menu immediately following startup.</dd></dl>
 <p> <code>&#8211;tutorials</code> [path]</p>
 <dl>
 <dt>
-<dd> Overrides the path for loading interactive tutorials (this overrides both defaults and the K3D_TUTORIALS_PATH environment variable, below).</dl>
+</dt><dd> Overrides the path for loading interactive tutorials (this overrides both defaults and the K3D_TUTORIALS_PATH environment variable, below).</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>K3D_EXTRA_OPTIONS</code></p>
 <dl>
 <dt>
-<dd> Provides additional options that are appended to the command-line at startup. Note that unlike other K-3D environment variables, options specified via K3D_EXTRA_OPTIONS will override options specified on the command line.</dl>
+</dt><dd> Provides additional options that are appended to the command-line at startup. Note that unlike other K-3D environment variables, options specified via K3D_EXTRA_OPTIONS will override options specified on the command line.</dd></dl>
 <p> <code>K3D_OPTIONS_PATH</code></p>
 <dl>
 <dt>
-<dd> Overrides the path for storing user options (this overrides the default, but can be overridden by the &#8211;options option, above).</dl>
+</dt><dd> Overrides the path for storing user options (this overrides the default, but can be overridden by the &#8211;options option, above).</dd></dl>
 <p> <code>K3D_PLUGIN_PATHS</code></p>
 <dl>
 <dt>
-<dd> Overrides the path(s) for loading plugin libraries (this overrides the default, but can be overridden by the &#8211;plugins option, above). Multiple colon-delimited paths are allowed. Use &quot;&amp;&quot; as a synonym for the default paths.</dl>
+</dt><dd> Overrides the path(s) for loading plugin libraries (this overrides the default, but can be overridden by the &#8211;plugins option, above). Multiple colon-delimited paths are allowed. Use &quot;&amp;&quot; as a synonym for the default paths.</dd></dl>
 <p> <code>K3D_SHADER_CACHE_PATH</code></p>
 <dl>
 <dt>
-<dd> Overrides the path where compiled shaders are cached (this overrides the default, but can be overridden by the &#8211;shadercache option, above).</dl>
+</dt><dd> Overrides the path where compiled shaders are cached (this overrides the default, but can be overridden by the &#8211;shadercache option, above).</dd></dl>
 <p> <code>K3D_SHARE_PATH</code></p>
 <dl>
 <dt>
-<dd> Overrides the path for loading shared data files (this overrides the default, but can be overridden by the &#8211;share option, above).</dl>
+</dt><dd> Overrides the path for loading shared data files (this overrides the default, but can be overridden by the &#8211;share option, above).</dd></dl>
 <p> <code>K3D_USER_INTERFACE_PATH</code></p>
 <dl>
 <dt>
-<dd> Overrides the path to the user interface plugin (this overrides the default, but can be overridden by the &#8211;ui option, above).</dl>
+</dt><dd> Overrides the path to the user interface plugin (this overrides the default, but can be overridden by the &#8211;ui option, above).</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Timothy M. Shead &lt;tshead [at] k-3d.com&gt;, and many others. </p>
 <h2>REPORTING BUGS</h2>

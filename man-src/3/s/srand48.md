@@ -10,23 +10,14 @@ description: "drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48, see
 <p>drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48, seed48, lcong48 &#8211; generate uniformly distributed pseudo-random numbers</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 double drand48(void);
-
 double erand48(unsigned short xsubi[3]);
-
 long lrand48(void);
-
 long nrand48(unsigned short xsubi[3]);
-
 long mrand48(void);
-
 long jrand48(unsigned short xsubi[3]);
-
 void srand48(long seedval);
-
 unsigned short *seed48(unsigned short seed16v[3]);
-
 void lcong48(unsigned short param[7]);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): All functions shown above: _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />

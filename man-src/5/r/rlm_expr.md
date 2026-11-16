@@ -20,25 +20,25 @@ description: "rlm_expr – FreeRADIUS Module"
 <br>
  Vendor-Port = `%{expr: %{NAS-Port} %% 256}`
 <br></pre>
-</dl>
+</dd></dl>
 <p> where the attributes Vendor-Interface, Vendor-Card, and Vendor-Port are attributes created by either you or a vendor-supplied dictionary. The methematical operators supported by the expression module are:</p>
 <dl>
-<dt><code>+</code></p>
-<dd>addition</p>
-<dt><code>&#8211;</code></p>
-<dd>subtraction</p>
-<dt><code>/</code></p>
-<dd>division</p>
-<dt><code>%%</code></p>
-<dd>modulo remainder</p>
-<dt><code>*</code></p>
-<dd>multiplication</p>
-<dt><code>&amp;</code></p>
-<dd>boolean AND</p>
-<dt><code>|</code></p>
-<dd>boolean OR</p>
-<dt><code>()</code></p>
-<dd>grouping of sub-expressions</dl>
+<dt><code>+</code></dt>
+<dd>addition</dd>
+<dt><code>&#8211;</code></dt>
+<dd>subtraction</dd>
+<dt><code>/</code></dt>
+<dd>division</dd>
+<dt><code>%%</code></dt>
+<dd>modulo remainder</dd>
+<dt><code>*</code></dt>
+<dd>multiplication</dd>
+<dt><code>&amp;</code></dt>
+<dd>boolean AND</dd>
+<dt><code>|</code></dt>
+<dd>boolean OR</dd>
+<dt><code>()</code></dt>
+<dd>grouping of sub-expressions</dd></dl>
 <p> NOTE: The modulo remainder operator is &#8216;%%&#8217;, and not &#8216;%&#8217;. This is due to the &#8216;%&#8217; character being used as a special character for dynamic translation. NOTE: These operators do NOT have precedence. The parsing of the input string, and the calculation of the answer, is done strictly left to right. If you wish to order the expressions, you MUST group them into sub-expression, as shown in the previous example. All of the calculations are performed as unsigned 32-bit integers. </p>
 <h2>Configuration</h2>
 <dl>
@@ -63,7 +63,7 @@ instantiate {
  ...
 <br>
 }
-</dl></pre>
+</dd></dl></pre>
 <h2>Sections</h2>
 <p><code>instantiate</code></p>
 <h2>Files</h2>

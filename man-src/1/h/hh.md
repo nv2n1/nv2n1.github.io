@@ -13,60 +13,60 @@ description: "hh – easily view, navigate, sort and use your command history wi
 <p> <code>hh [option] [arg1] [arg2]&#8230; </code></p>
 <dl>
 <dt>
-<dd> <code>hstr [option] [arg1] [arg2]&#8230;</code></dl>
+</dt><dd> <code>hstr [option] [arg1] [arg2]&#8230;</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>hh</code> uses shell history to provide suggest box like functionality for commands used in the past. By default it parses .bash-history file that is filtered as you type a command substring. Commands are not just filtered, but also ordered by a ranking algorithm that considers number of occurences, length and timestamp. Favorite and frequently used commands can be bookmarked. In addition <code>hh</code> allows removal of commands from history &#8211; for instance with a typo or with a sensitive content.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show help</p>
-<dt><code>-n &#8211;non-interactive</code></p>
-<dd> Print filtered history on standard output and exit</p>
-<dt><code>-f &#8211;favorites</code></p>
-<dd> Show favorites view immediately</p>
-<dt><code>-s &#8211;show-configuration</code></p>
-<dd> Show configuration that can be added to ~/.bashrc</p>
-<dt><code>-b &#8211;show-blacklist</code></p>
-<dd> Show blacklist of commands to be filtered out before history processing</p>
-<dt><code>-V &#8211;version</code></p>
-<dd> Show version information</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show help</dd>
+<dt><code>-n &#8211;non-interactive</code></dt>
+<dd> Print filtered history on standard output and exit</dd>
+<dt><code>-f &#8211;favorites</code></dt>
+<dd> Show favorites view immediately</dd>
+<dt><code>-s &#8211;show-configuration</code></dt>
+<dd> Show configuration that can be added to ~/.bashrc</dd>
+<dt><code>-b &#8211;show-blacklist</code></dt>
+<dd> Show blacklist of commands to be filtered out before history processing</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd> Show version information</dd></dl>
 <h2>KEYS</h2>
 <dl>
-<dt><code>pattern</code></p>
-<dd> Type to filter shell history.</p>
-<dt><code>Ctrl-e</code></p>
-<dd> Toggle regular expression and substring search.</p>
-<dt><code>Ctrl-t</code></p>
-<dd> Toggle case sensitive search.</p>
-<dt><code>Ctrl-/</code>, <code>Ctrl-7</code></p>
-<dd> Rotate view of history as provided by Bash, ranked history ordered by the number of occurences/length/timestamp and favorites.</p>
-<dt><code>Ctrl-f</code></p>
-<dd> Add currently selected command to favorites.</p>
-<dt><code>Ctrl-l</code></p>
-<dd> Make search pattern lowercase or uppercase.</p>
-<dt><code>Ctrl-r</code>, <code>UP</code> arrow, <code>DOWN</code> arrow, <code>Ctrl-n</code>, <code>Ctrl-p</code></p>
-<dd> Navigate in the history list.</p>
-<dt><code>TAB</code>, <code>RIGHT</code> arrow</p>
-<dd> Choose currently selected item for completion and let user to edit it on the command prompt.</p>
-<dt><code>LEFT</code> arrow</p>
-<dd> Choose currently selected item for completion and let user to edit it in editor (fix command).</p>
-<dt><code>ENTER</code></p>
-<dd> Choose currently selected item for completion and execute it.</p>
-<dt><code>DEL</code></p>
-<dd> Remove currently selected item from the shell history.</p>
-<dt><code>BACSKSPACE</code>, <code>Ctrl-h</code></p>
-<dd> Delete last pattern character.</p>
-<dt><code>Ctrl-u</code>, <code>Ctrl-w</code></p>
-<dd> Delete pattern and search again.</p>
-<dt><code>Ctrl-x</code></p>
-<dd> Write changes to shell history and exit.</p>
-<dt><code>Ctrl-g</code></p>
-<dd> Exit with empty prompt.</dl>
+<dt><code>pattern</code></dt>
+<dd> Type to filter shell history.</dd>
+<dt><code>Ctrl-e</code></dt>
+<dd> Toggle regular expression and substring search.</dd>
+<dt><code>Ctrl-t</code></dt>
+<dd> Toggle case sensitive search.</dd>
+<dt><code>Ctrl-/</code>, <code>Ctrl-7</code></dt>
+<dd> Rotate view of history as provided by Bash, ranked history ordered by the number of occurences/length/timestamp and favorites.</dd>
+<dt><code>Ctrl-f</code></dt>
+<dd> Add currently selected command to favorites.</dd>
+<dt><code>Ctrl-l</code></dt>
+<dd> Make search pattern lowercase or uppercase.</dd>
+<dt><code>Ctrl-r</code>, <code>UP</code> arrow, <code>DOWN</code> arrow, <code>Ctrl-n</code>, <code>Ctrl-p</code></dt>
+<dd> Navigate in the history list.</dd>
+<dt><code>TAB</code>, <code>RIGHT</code> arrow</dt>
+<dd> Choose currently selected item for completion and let user to edit it on the command prompt.</dd>
+<dt><code>LEFT</code> arrow</dt>
+<dd> Choose currently selected item for completion and let user to edit it in editor (fix command).</dd>
+<dt><code>ENTER</code></dt>
+<dd> Choose currently selected item for completion and execute it.</dd>
+<dt><code>DEL</code></dt>
+<dd> Remove currently selected item from the shell history.</dd>
+<dt><code>BACSKSPACE</code>, <code>Ctrl-h</code></dt>
+<dd> Delete last pattern character.</dd>
+<dt><code>Ctrl-u</code>, <code>Ctrl-w</code></dt>
+<dd> Delete pattern and search again.</dd>
+<dt><code>Ctrl-x</code></dt>
+<dd> Write changes to shell history and exit.</dd>
+<dt><code>Ctrl-g</code></dt>
+<dd> Exit with empty prompt.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>hh</code> defines the following environment variables:</p>
 <dl>
-<dt><code>HH_CONFIG</code></p>
-<dd> Configuration options: </p>
+<dt><code>HH_CONFIG</code></dt>
+<dd> Configuration options: </dd>
 <p> <i>hicolor</i><br />
 &nbsp;<wbr>&nbsp;<wbr>Get more colors with this option&nbsp;<wbr>(default is monochromatic). </p>
 <p> <i>monochromatic</i><br />
@@ -97,19 +97,19 @@ description: "hh – easily view, navigate, sort and use your command history wi
 &nbsp;<wbr>&nbsp;<wbr>Show debug information. </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr><code>export HH_CONFIG=hicolor,regexp,rawhistory</code> </p>
-<dt><code>HH_PROMPT</code></p>
-<dd> Change prompt string which is <code>user [at] host$</code> by default. </p>
+<dt><code>HH_PROMPT</code></dt>
+<dd> Change prompt string which is <code>user [at] host$</code> by default. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr><code>export HH_PROMPT=&quot;$&nbsp;<wbr>&quot;</code> </p>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.hh_favorites</code></p>
+<dt><code>~/.hh_favorites</code></dt>
 <dd>
-&nbsp;<wbr>Bookmarked favorite commands.</p>
-<dt><code>~/.hh_blacklist</code></p>
+&nbsp;<wbr>Bookmarked favorite commands.</dd>
+<dt><code>~/.hh_blacklist</code></dt>
 <dd>
-&nbsp;<wbr>Command blacklist. </p>
+&nbsp;<wbr>Command blacklist. </dd>
 </dl>
 <h2>BASH CONFIGURATION</h2>
 <p> Optionally add the following lines to ~/.bashrc: </p>
@@ -137,18 +137,18 @@ bindkey -s &quot;\C-r&quot; &quot;qhh
 </pre>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>hh git</code></p>
+<dt><code>hh git</code></dt>
 <dd>
-&nbsp;<wbr>Start&nbsp;<wbr>`hh`&nbsp;<wbr>and show only history items containing&nbsp;<wbr>&#8216;git&#8217;.</p>
-<dt><code>hh &#8211;non-interactive git</code></p>
+&nbsp;<wbr>Start&nbsp;<wbr>`hh`&nbsp;<wbr>and show only history items containing&nbsp;<wbr>&#8216;git&#8217;.</dd>
+<dt><code>hh &#8211;non-interactive git</code></dt>
 <dd>
-&nbsp;<wbr>Print history items containing&nbsp;<wbr>&#8216;git&#8217;&nbsp;<wbr>to standard output and exit.</p>
-<dt><code>hh &#8211;show-configuration &gt;&gt; ~/.bashrc</code></p>
+&nbsp;<wbr>Print history items containing&nbsp;<wbr>&#8216;git&#8217;&nbsp;<wbr>to standard output and exit.</dd>
+<dt><code>hh &#8211;show-configuration &gt;&gt; ~/.bashrc</code></dt>
 <dd>
-&nbsp;<wbr>Append default&nbsp;<wbr><code>hh</code>&nbsp;<wbr>configuration to your Bash profile.</p>
-<dt><code>hh &#8211;show-blacklist</code></p>
+&nbsp;<wbr>Append default&nbsp;<wbr><code>hh</code>&nbsp;<wbr>configuration to your Bash profile.</dd>
+<dt><code>hh &#8211;show-blacklist</code></dt>
 <dd>
-&nbsp;<wbr>Show blacklist configured for history processing.</dl>
+&nbsp;<wbr>Show blacklist configured for history processing.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Martin Dvorak &lt;martin.dvorak [at] mindforger.com&gt;</p>
 <h2>BUGS</h2>

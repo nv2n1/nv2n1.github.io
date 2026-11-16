@@ -21,14 +21,14 @@ description: "mosh-client – client-side helper for mosh"
 <p> With the -c option, <code>mosh-client</code> instead prints the number of colors of the terminal given by the TERM environment variable. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>MOSH_KEY</code></p>
-<dd> This variable must be set, and must contain a Base64-encoded cryptographic key from <code><a href="/docs/linux/man/1-mosh-server/">mosh-server</a></code>(1). </p>
-<dt><code>MOSH_ESCAPE_KEY</code></p>
-<dd> See <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1). </p>
-<dt><code>MOSH_PREDICTION_DISPLAY</code></p>
-<dd> Controls local echo as described in <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1). </p>
-<dt><code>MOSH_TITLE_NOPREFIX</code></p>
-<dd> See <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1). </p>
+<dt><code>MOSH_KEY</code></dt>
+<dd> This variable must be set, and must contain a Base64-encoded cryptographic key from <code><a href="/docs/linux/man/1-mosh-server/">mosh-server</a></code>(1). </dd>
+<dt><code>MOSH_ESCAPE_KEY</code></dt>
+<dd> See <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1). </dd>
+<dt><code>MOSH_PREDICTION_DISPLAY</code></dt>
+<dd> Controls local echo as described in <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1). </dd>
+<dt><code>MOSH_TITLE_NOPREFIX</code></dt>
+<dd> See <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1). </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1), <code><a href="/docs/linux/man/1-mosh-server/">mosh-server</a></code>(1). </p>

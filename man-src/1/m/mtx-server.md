@@ -15,18 +15,18 @@ description: "mtx-server – Simple Webserver For Helpers"
 <p> <code>Simple Webserver For Helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;start</code></p>
-<dd> start server</p>
-<dt><code>&#8211;port</code></p>
-<dd> port to listen to</p>
-<dt><code>&#8211;root</code></p>
-<dd> server root</p>
-<dt><code>&#8211;scripts</code></p>
-<dd> scripts sub path</p>
-<dt><code>&#8211;index</code></p>
-<dd> index file</p>
-<dt><code>&#8211;auto</code></p>
-<dd> start on own path</dl>
+<dt><code>&#8211;start</code></dt>
+<dd> start server</dd>
+<dt><code>&#8211;port</code></dt>
+<dd> port to listen to</dd>
+<dt><code>&#8211;root</code></dt>
+<dd> server root</dd>
+<dt><code>&#8211;scripts</code></dt>
+<dd> scripts sub path</dd>
+<dt><code>&#8211;index</code></dt>
+<dd> index file</dd>
+<dt><code>&#8211;auto</code></dt>
+<dd> start on own path</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

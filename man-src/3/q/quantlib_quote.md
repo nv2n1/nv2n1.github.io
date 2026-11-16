@@ -21,6 +21,6 @@ description: "QuantLib::Quote – purely virtual base class for market observabl
 <p>purely virtual base class for market observables </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the observability of class instances is tested.</dl>
+<dd>the observability of class instances is tested.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

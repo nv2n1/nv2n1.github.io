@@ -10,11 +10,8 @@ description: "std::optional<T>::emplace – std::optional<T>::emplace"
 <p>std::optional&lt;T&gt;::emplace &#8211; std::optional&lt;T&gt;::emplace</p>
 <h2>Synopsis</h2>
 <pre><code>template&lt; class... Args &gt;                                      (since C++17)
-
 T&amp; emplace( Args&amp;&amp;... args );
-
 template&lt; class U, class... Args &gt;                             (since C++17)
-
 T&amp; emplace( std::initializer_list&lt;U&gt; ilist, Args&amp;&amp;... args );</code></pre>
 <p>Constructs the contained value in-place. If *this already contains a value before the call, the contained value is destroyed by calling its destructor.<br />
 1) Initializes the contained value by direct-initializing (but not direct-list-initializing) with std::forward&lt;Args&gt;(args)&#8230; as parameters.<br />
@@ -33,10 +30,5 @@ T must be constructible from std::initializer_list and Args&#8230; for overload 
 <p>Any exception thrown by the selected constructor of T. If an exception is thrown, *this does not contain a value after this call (the previously contained value, if any, had been destroyed).</p>
 <h2>See also</h2>
 <pre><code>assigns contents
-
 operator= (public member function)
-
-
-
-
 </code></pre>

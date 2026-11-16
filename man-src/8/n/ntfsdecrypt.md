@@ -20,29 +20,29 @@ description: "ntfsdecrypt – decrypt or update NTFS files encrypted according t
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfsdecrypt</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-i</code>, <code>&#8211;inode</code> NUM</p>
-<dd>Display or update the contents of a file designated through its inode number instead of its name.</p>
-<dt><code>-e</code>, <code>&#8211;encrypt</code></p>
-<dd>Update an existing encrypted file and get the new contents from the standard input. The full public and private key file has to be designated, as the symmetric key is kept unchanged, so the private key is needed to extract it.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</p>
-<dt><code>-k</code>, <code>&#8211;keyfile-name</code> key.pfx</p>
-<dd>Define the file which contains the public and private keys in PKCS#12 format. This file obviously contains the keys of one of the users allowed to decrypt or update the file. It has to be extracted from Windows in PKCS#12 format (its usual suffix is .p12 or .pfx), and it is protected by a passphrase which has to be typed in for the keys to be extracted. This can be the key file of any user allowed to read the file, including the one of the recovery manager.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a list of options with a brief description of each one.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress some debug/warning/error messages.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license of <code>ntfsdecrypt</code>.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Display more debug/warning/error messages.</dl>
+<dt><code>-i</code>, <code>&#8211;inode</code> NUM</dt>
+<dd>Display or update the contents of a file designated through its inode number instead of its name.</dd>
+<dt><code>-e</code>, <code>&#8211;encrypt</code></dt>
+<dd>Update an existing encrypted file and get the new contents from the standard input. The full public and private key file has to be designated, as the symmetric key is kept unchanged, so the private key is needed to extract it.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</dd>
+<dt><code>-k</code>, <code>&#8211;keyfile-name</code> key.pfx</dt>
+<dd>Define the file which contains the public and private keys in PKCS#12 format. This file obviously contains the keys of one of the users allowed to decrypt or update the file. It has to be extracted from Windows in PKCS#12 format (its usual suffix is .p12 or .pfx), and it is protected by a passphrase which has to be typed in for the keys to be extracted. This can be the key file of any user allowed to read the file, including the one of the recovery manager.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a list of options with a brief description of each one.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress some debug/warning/error messages.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license of <code>ntfsdecrypt</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display more debug/warning/error messages.</dd></dl>
 <h2>Examples</h2>
 <p>Display the contents of the file hamlet.doc in the directory Documents of the root of the NTFS file system on the device /dev/sda1</p>
 <dl>
-<dd><code>ntfsdecrypt -k foo.key /dev/sda1 Documents/hamlet.doc</code></dl>
+<dd><code>ntfsdecrypt -k foo.key /dev/sda1 Documents/hamlet.doc</code></dd></dl>
 <p> Update the file hamlet.doc</p>
 <dl>
-<dd><code>ntfsdecrypt -k foo.key /dev/sda1 Documents/hamlet.doc &lt; new.doc</code> </p>
+<dd><code>ntfsdecrypt -k foo.key /dev/sda1 Documents/hamlet.doc &lt; new.doc</code> </dd>
 <h2>Bugs</h2>
 <p>There are no known problems with <code>ntfsdecrypt</code>. If you find a bug please send an email describing the problem to the development team:<br />
  ntfs-3g-devel [at] lists.sf.net</p>
@@ -53,3 +53,4 @@ description: "ntfsdecrypt – decrypt or update NTFS files encrypted according t
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p>Read <code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8) for details on option efs_raw, <code><a href="/docs/linux/man/8-ntfscat/">ntfscat</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>
+</dl>

@@ -19,7 +19,7 @@ description: "dlaqr2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     DLAQR2 is identical to DLAQR3 except that it avoids
     recursion by calling DLAHQR instead of DLAQR4.
@@ -33,11 +33,11 @@ description: "dlaqr2.f –"
     hoped that the final version of H has many zero subdiagonal
     entries.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>WANTT</i> </p>
+</dt><dd> <i>WANTT</i> </dd>
 <pre>
           WANTT is LOGICAL
           If .TRUE., then the Hessenberg matrix H is fully updated
@@ -212,18 +212,18 @@ description: "dlaqr2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dl>
+</dt><dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dd></dl>
 <p> Definition at line 277 of file dlaqr2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

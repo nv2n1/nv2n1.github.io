@@ -19,18 +19,18 @@ description: "ctgsna.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CTGSNA estimates reciprocal condition numbers for specified
  eigenvalues and/or eigenvectors of a matrix pair (A, B).
  (A, B) must be in generalized Schur canonical form, that is, A and
  B are both upper triangular.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre><code>
           JOB is CHARACTER*1
           Specifies whether condition numbers are required for
@@ -169,18 +169,18 @@ description: "ctgsna.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>The reciprocal of the condition number of the i &#8211; th generalized<br />
                                                       eigenvalue w = (a, b)is defined as S(I) = (| v * *HAu | **2 + | v * *HBu | **2) * *(1 / 2) / (norm(u) * norm(v)) where u and v are the right and left eigenvectors of(A, B)<br />
 corresponding to w;<br />
@@ -213,15 +213,15 @@ corresponds to an eigenvalue w = a / b(= v * *HAu / v * *HBu) of the<br />
   VR(i) is given by<br />
                       EPS * norm(A, B) / DIF(i).<br />
   See ref. [2-3] for more details and further references.</p>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+</dt><dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [1] B.Kagstrom; A Direct Method for Reordering Eigenvalues in the
       Generalized Real Schur Form of a Regular Matrix Pair (A, B), in
@@ -241,8 +241,9 @@ corresponds to an eigenvalue w = a / b(= v * *HAu / v * *HBu) of the<br />
       Note 75.
       To appear in ACM Trans. on Math. Software, Vol 22, No 1, 1996.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 310 of file ctgsna.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

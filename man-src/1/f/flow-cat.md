@@ -15,32 +15,32 @@ description: "flow-cat – Concatenate flow files"
 <p> The <code>flow-cat</code> utility processes files and/or directories of files in the flow-tools format. The resulting concatenated data set is written to the standard output or <i>file</i> specified by <code>-o</code>. If <i>file</i> is a single dash (`-&#8216;) or absent, flow-cat will read from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Do not ignore filenames that begin with <i>tmp</i>.</p>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-g</code></p>
-<dd> Sort file list by capture start time before processing.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-m</code></p>
-<dd> Disable the use of mmap().</p>
-<dt><code>-p</code></p>
-<dd> Preload headers. Use to preserve meta information such as lost flows.</p>
-<dt><code>-o</code><i> file</i></p>
-<dd> Write to <i>file</i> instead of the standard out.</p>
-<dt><code>-t</code><i> start_time</i></p>
-<dd> Select flow files up to <i>start_time</i>. If used with -T select files between <i>start_time</i> and <i>end_time</i>.</p>
-<dt><code>-T</code><i> end_time</i></p>
-<dd> Select flow files after <i>end_time</i>. If used with -t select files between <i>start_time</i> and <i>end_time</i>.</p>
-<dt><code>-z</code><i> z_level</i></p>
-<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</p>
-<dt><i>file</i><code>|</code><i>directory&#8230;</i></p>
-<dd> Process the files and/or directory.</dl>
+<dt><code>-a</code></dt>
+<dd> Do not ignore filenames that begin with <i>tmp</i>.</dd>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-g</code></dt>
+<dd> Sort file list by capture start time before processing.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-m</code></dt>
+<dd> Disable the use of mmap().</dd>
+<dt><code>-p</code></dt>
+<dd> Preload headers. Use to preserve meta information such as lost flows.</dd>
+<dt><code>-o</code><i> file</i></dt>
+<dd> Write to <i>file</i> instead of the standard out.</dd>
+<dt><code>-t</code><i> start_time</i></dt>
+<dd> Select flow files up to <i>start_time</i>. If used with -T select files between <i>start_time</i> and <i>end_time</i>.</dd>
+<dt><code>-T</code><i> end_time</i></dt>
+<dd> Select flow files after <i>end_time</i>. If used with -t select files between <i>start_time</i> and <i>end_time</i>.</dd>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd>
+<dt><i>file</i><code>|</code><i>directory&#8230;</i></dt>
+<dd> Process the files and/or directory.</dd></dl>
 <h2>TIME/DATE PARSING</h2>
 <p> start_time and end_time parsing is implemented with <i>getdate.y</i>, a commonly used function to process free-form time date specifications. Example usage borrowed from <code>cvs</code>: 1 month ago 2 hours ago 400000 seconds ago last year last Monday yesterday a fortnight ago 3/31/92 10:00:07 PST January 23, 1987 10:05pm 22:00 GMT</p>
 <h2>EXAMPLES</h2>

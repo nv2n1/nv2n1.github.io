@@ -24,6 +24,6 @@ description: "QuantLib::MultiProductComposite – Composition of one or more mar
 <p> Instances of this class build a multiple market-model product by composing two or more subproducts. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>All subproducts must have the same rate times.</dl>
+<dd>All subproducts must have the same rate times.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -11,33 +11,19 @@ std::atomic_fetch_sub,std::atomic_fetch_sub_explicit - std::atomic_fetch_sub,std
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;atomic&gt;
-
 template&lt; class T &gt;
-
 T atomic_fetch_sub( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg ) noexcept;
-
 template&lt; class T &gt;
-
 T atomic_fetch_sub( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg ) noexcept;
-
 template&lt; class T &gt;                                        (1)
-
 T atomic_fetch_sub_explicit( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg,
-
 std::memory_order order ) noexcept;                            (2)
-
 template&lt; class T &gt;
-
 T atomic_fetch_sub_explicit( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::difference_type arg,
-
 std::memory_order order ) noexcept;</code></pre> 
 Performs atomic subtraction. Atomically subtracts arg from the value pointed to by obj and returns the value obj held previously. The operation is performed as if the following was executed: 
 1) obj-&gt;fetch_sub(arg) 
@@ -66,23 +52,15 @@ The value immediately preceding the effects of this function in the modification
 
 Multiple threads may use fetch_sub to concurrently process an indexed container 
  // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;atomic&gt;
-
 #include &lt;numeric&gt;
 const int N = 50;
-
 std::atomic&lt;int&gt; cnt;
-
 std::vector&lt;int&gt; data(N);
 void reader(int id)
-
 {
     for (;;) {
         int idx = atomic_fetch_sub_explicit(&amp;cnt, 1, std::memory_order_relaxed);
@@ -96,7 +74,6 @@ void reader(int id)
     }
 }
 int main()
-
 {
     std::iota(data.begin(), data.end(), 1);
     cnt = data.size() - 1;

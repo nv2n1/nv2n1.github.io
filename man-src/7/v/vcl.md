@@ -13,18 +13,18 @@ description: "VCL – Varnish Configuration Language"
 <h3>Operators</h3>
 <p>The following operators are available in VCL:</p>
 <dl>
-<dt><code>=</code></p>
-<dd>Assignment operator.</p>
-<dt><code>==</code></p>
-<dd>Comparison.</p>
-<dt><code>~</code></p>
-<dd>Match. Can either be used with regular expressions or ACLs.</p>
-<dt><code>!</code></p>
-<dd>Negation.</p>
-<dt><code>&amp;&amp;</code></p>
-<dd>Logical and.</p>
-<dt><code>||</code></p>
-<dd>Logical or.</dl>
+<dt><code>=</code></dt>
+<dd>Assignment operator.</dd>
+<dt><code>==</code></dt>
+<dd>Comparison.</dd>
+<dt><code>~</code></dt>
+<dd>Match. Can either be used with regular expressions or ACLs.</dd>
+<dt><code>!</code></dt>
+<dd>Negation.</dd>
+<dt><code>&amp;&amp;</code></dt>
+<dd>Logical and.</dd>
+<dt><code>||</code></dt>
+<dd>Logical or.</dd></dl>
 <h3>Conditionals</h3>
 <p>VCL has <i>if</i> and <i>else</i> statements. Nested logic can be implemented with the <i>elseif</i> statement. (<i>elsif</i>/<i>elif</i>/<i>else if</i> is equivalent.) Note that are no loops or iterators of any kind in VCL.</p>
 <h3>Strings, booleans, time, duration and integers</h3>
@@ -40,20 +40,20 @@ unset req.http.Range;</pre>
 <h3>Durations</h3>
 <p>Durations are defined by a number and a designation. The number can be a real so 1.5w is allowed.</p>
 <dl>
-<dt><code>ms</code></p>
-<dd>milliseconds</p>
-<dt><code>s</code></p>
-<dd>seconds</p>
-<dt><code>m</code></p>
-<dd>minutes</p>
-<dt><code>h</code></p>
-<dd>hours</p>
-<dt><code>d</code></p>
-<dd>days</p>
-<dt><code>w</code></p>
-<dd>weeks</p>
-<dt><code>y</code></p>
-<dd>years</dl>
+<dt><code>ms</code></dt>
+<dd>milliseconds</dd>
+<dt><code>s</code></dt>
+<dd>seconds</dd>
+<dt><code>m</code></dt>
+<dd>minutes</dd>
+<dt><code>h</code></dt>
+<dd>hours</dd>
+<dt><code>d</code></dt>
+<dd>days</dd>
+<dt><code>w</code></dt>
+<dd>weeks</dd>
+<dt><code>y</code></dt>
+<dd>years</dd></dl>
 <h3>Integers</h3>
 <p>Certain fields are integers, used as expected. In string context they return a string.</p>
 <h3>Real numbers</h3>
@@ -89,43 +89,43 @@ sub vcl_recv {
 }</code></pre>
 <p> The only mandatory attribute is <i>host</i>. The attributes will inherit their defaults from the global parameters. The following attributes are available:</p>
 <dl>
-<dt><code>host (mandatory)</code></p>
-<dd>The host to be used. IP address or a hostname that resolves to a single IP address.</p>
-<dt><code>port</code></p>
-<dd>The port on the backend that Varnish should connect to.</p>
-<dt><code>host_header</code></p>
-<dd>A host header to add.</p>
-<dt><code>connect_timeout</code></p>
-<dd>Timeout for connections.</p>
-<dt><code>first_byte_timeout</code></p>
-<dd>Timeout for first byte.</p>
-<dt><code>between_bytes_timeout</code></p>
-<dd>Timeout between bytes.</p>
-<dt><code>probe</code></p>
-<dd>Attach a probe to the backend. See Probes.</p>
-<dt><code>max_connections</code></p>
-<dd>Maximum number of open connections towards this backend. If Varnish reaches the maximum Varnish it will start failing connections. Backends can be used with <i>directors</i>. Please see the <a href="/docs/linux/man/3-vmod_directors/">vmod_directors</a>(3) man page for more information.</dl>
+<dt><code>host (mandatory)</code></dt>
+<dd>The host to be used. IP address or a hostname that resolves to a single IP address.</dd>
+<dt><code>port</code></dt>
+<dd>The port on the backend that Varnish should connect to.</dd>
+<dt><code>host_header</code></dt>
+<dd>A host header to add.</dd>
+<dt><code>connect_timeout</code></dt>
+<dd>Timeout for connections.</dd>
+<dt><code>first_byte_timeout</code></dt>
+<dd>Timeout for first byte.</dd>
+<dt><code>between_bytes_timeout</code></dt>
+<dd>Timeout between bytes.</dd>
+<dt><code>probe</code></dt>
+<dd>Attach a probe to the backend. See Probes.</dd>
+<dt><code>max_connections</code></dt>
+<dd>Maximum number of open connections towards this backend. If Varnish reaches the maximum Varnish it will start failing connections. Backends can be used with <i>directors</i>. Please see the <a href="/docs/linux/man/3-vmod_directors/">vmod_directors</a>(3) man page for more information.</dd></dl>
 <h3>Probes</h3>
 <p>Probes will query the backend for status on a regular basis and mark the backend as down it they fail. A probe is defined as this:: probe name {<br />
     .attribute = &quot;value&quot;;<br />
 } There are no mandatory options. These are the options you can set:</p>
 <dl>
-<dt><code>url</code></p>
-<dd>The URL to query. Defaults to &quot;/&quot;.</p>
-<dt><code>request</code></p>
-<dd>Specify a full HTTP request using multiple strings. .request will have rn automatically inserted after every string. If specified,</p>
-<dt><code>expected_response</code></p>
-<dd>The expected HTTP response code. Defaults to 200.</p>
-<dt><code>timeout</code></p>
-<dd>The timeout for the probe. Default is 2s.</p>
-<dt><code>interval</code></p>
-<dd>How often the probe is run. Default is 5s.</p>
-<dt><code>initial</code></p>
-<dd>How many of the polls in .window are considered good when Varnish starts. Defaults to the value of threshold &#8211; 1. In this case, the backend starts as sick and requires one single poll to be considered healthy.</p>
-<dt><code>window</code></p>
-<dd>How many of the latest polls we examine to determine backend health. Defaults to 8.</p>
-<dt><code>threshold</code></p>
-<dd>How many of the polls in .window must have succeeded for us to consider the backend healthy. Defaults to 3.</dl>
+<dt><code>url</code></dt>
+<dd>The URL to query. Defaults to &quot;/&quot;.</dd>
+<dt><code>request</code></dt>
+<dd>Specify a full HTTP request using multiple strings. .request will have rn automatically inserted after every string. If specified,</dd>
+<dt><code>expected_response</code></dt>
+<dd>The expected HTTP response code. Defaults to 200.</dd>
+<dt><code>timeout</code></dt>
+<dd>The timeout for the probe. Default is 2s.</dd>
+<dt><code>interval</code></dt>
+<dd>How often the probe is run. Default is 5s.</dd>
+<dt><code>initial</code></dt>
+<dd>How many of the polls in .window are considered good when Varnish starts. Defaults to the value of threshold &#8211; 1. In this case, the backend starts as sick and requires one single poll to be considered healthy.</dd>
+<dt><code>window</code></dt>
+<dd>How many of the latest polls we examine to determine backend health. Defaults to 8.</dd>
+<dt><code>threshold</code></dt>
+<dd>How many of the polls in .window must have succeeded for us to consider the backend healthy. Defaults to 3.</dd></dl>
 <h3>Access Control List (ACL)</h3>
 <p>An Access Control List (ACL) declaration creates and initialises a named access control list which can later be used to match client addresses: </p>
 <pre>acl localnetwork {
@@ -180,19 +180,20 @@ sub vcl_recv {
 <h3>Functions</h3>
 <p>The following built-in functions are available:</p>
 <dl>
-<dt><code>ban(expression)</code></p>
-<dd>Invalidates all objects in cache that match the expression with the ban mechanism.</p>
-<dt><code>call(subroutine)</code></p>
-<dd>Run a VCL subroutine within the current scope.</p>
-<dt><code>hash_data(input)</code></p>
-<dd>Adds an input to the hash input. In the built-in VCL hash_data() is called on the host and URL of the <i>request</i>. Available in vcl_hash.</p>
-<dt><code>new()</code></p>
-<dd>Instanciate a new VCL object. Available in vcl_init.</p>
-<dt><code>return()</code></p>
-<dd>End execution of the current VCL subroutine, and continue to the next step in the request handling state machine.</p>
-<dt><code>rollback()</code></p>
-<dd>Restore <i>req</i> HTTP headers to their original state. This function is deprecated. Use std.rollback() instead.</p>
-<dt><code>synthetic(STRING)</code></p>
-<dd>Prepare a synthetic response body containing the STRING. Available in vcl_synth and vcl_backend_error.</p>
-<dt><code>regsub(str, regex, sub)</code></p>
+<dt><code>ban(expression)</code></dt>
+<dd>Invalidates all objects in cache that match the expression with the ban mechanism.</dd>
+<dt><code>call(subroutine)</code></dt>
+<dd>Run a VCL subroutine within the current scope.</dd>
+<dt><code>hash_data(input)</code></dt>
+<dd>Adds an input to the hash input. In the built-in VCL hash_data() is called on the host and URL of the <i>request</i>. Available in vcl_hash.</dd>
+<dt><code>new()</code></dt>
+<dd>Instanciate a new VCL object. Available in vcl_init.</dd>
+<dt><code>return()</code></dt>
+<dd>End execution of the current VCL subroutine, and continue to the next step in the request handling state machine.</dd>
+<dt><code>rollback()</code></dt>
+<dd>Restore <i>req</i> HTTP headers to their original state. This function is deprecated. Use std.rollback() instead.</dd>
+<dt><code>synthetic(STRING)</code></dt>
+<dd>Prepare a synthetic response body containing the STRING. Available in vcl_synth and vcl_backend_error.</dd>
+<dt><code>regsub(str, regex, sub)</code></dt>
 <dd>Returns a copy of str with the first occurrence of the regular expression regex replaced with sub. Within sub, 
+</dd></dl>

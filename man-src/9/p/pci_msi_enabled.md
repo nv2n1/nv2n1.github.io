@@ -15,7 +15,7 @@ pci_msi_enabled - is MSI enabled?
 <h2>Arguments</h2>
 
 <i>void</i>
-<dl><dd><dd>no arguments</dl>
+<dl><dd></dd><dd>no arguments</dd></dl>
 
 <h2>Description</h2>
 

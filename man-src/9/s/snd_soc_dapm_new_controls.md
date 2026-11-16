@@ -15,15 +15,15 @@ snd_soc_dapm_new_controls - create new dapm controls
 <h2>Arguments</h2>
 
 <i>dapm</i>
-<dl><dd><dd>DAPM context</dl>
+<dl><dd></dd><dd>DAPM context</dd></dl>
  
 
  <i>widget</i>
-<dl><dd>widget array</dl>
+<dl><dd>widget array</dd></dl>
  
 
  <i>num</i>
-<dl><dd>number of widgets</dl>
+<dl><dd>number of widgets</dd></dl>
 
 <h2>Description</h2>
 

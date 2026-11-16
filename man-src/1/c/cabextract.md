@@ -18,28 +18,28 @@ description: "cabextract – program to extract files from Microsoft cabinet (.c
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-d </code><i>dir</i></p>
-<dd> Extracts all files into the directory <i>dir</i>.</p>
-<dt><code>-f</code></p>
-<dd> When testing or extracting cabinet files, corrupted MSZIP blocks will be ignored. A warning will be printed if a corrupted MSZIP block is encountered.</p>
-<dt><code>-F </code><i>pattern</i></p>
-<dd> Only files with names that match the shell pattern <i>pattern</i> shall be listed, tested or extracted. On non-GNU systems, this match may be case-sensitive.</p>
-<dt><code>-h</code></p>
-<dd> Prints a page of help and exits.</p>
-<dt><code>-l</code></p>
-<dd> Lists the contents of the given cabinet files, rather than extracting them.</p>
-<dt><code>-L</code></p>
-<dd> When extracting cabinet files, makes each extracted file&#8217;s name lowercase.</p>
-<dt><code>-p</code></p>
-<dd> Files shall be extracted to standard output.</p>
-<dt><code>-q</code></p>
-<dd> When extracting cabinet files, suppresses all messages except errors and warnings.</p>
-<dt><code>-s</code></p>
-<dd> When testing, listing or extracting cabinets which span multiple files, only cabinet files given on the command line shall be used.</p>
-<dt><code>-t</code></p>
-<dd> Tests the integrity of the cabinet. Files are decompressed, but not written to disk or standard output. If the file successfully decompresses, the MD5 checksum of the file is printed.</p>
-<dt><code>-v</code></p>
-<dd> If given alone on the command line, prints the version of <code>cabextract</code> and exits. Given with a list of cabinet files, it will list the contents of the cabinet files.</dl>
+<dt><code>-d </code><i>dir</i></dt>
+<dd> Extracts all files into the directory <i>dir</i>.</dd>
+<dt><code>-f</code></dt>
+<dd> When testing or extracting cabinet files, corrupted MSZIP blocks will be ignored. A warning will be printed if a corrupted MSZIP block is encountered.</dd>
+<dt><code>-F </code><i>pattern</i></dt>
+<dd> Only files with names that match the shell pattern <i>pattern</i> shall be listed, tested or extracted. On non-GNU systems, this match may be case-sensitive.</dd>
+<dt><code>-h</code></dt>
+<dd> Prints a page of help and exits.</dd>
+<dt><code>-l</code></dt>
+<dd> Lists the contents of the given cabinet files, rather than extracting them.</dd>
+<dt><code>-L</code></dt>
+<dd> When extracting cabinet files, makes each extracted file&#8217;s name lowercase.</dd>
+<dt><code>-p</code></dt>
+<dd> Files shall be extracted to standard output.</dd>
+<dt><code>-q</code></dt>
+<dd> When extracting cabinet files, suppresses all messages except errors and warnings.</dd>
+<dt><code>-s</code></dt>
+<dd> When testing, listing or extracting cabinets which span multiple files, only cabinet files given on the command line shall be used.</dd>
+<dt><code>-t</code></dt>
+<dd> Tests the integrity of the cabinet. Files are decompressed, but not written to disk or standard output. If the file successfully decompresses, the MD5 checksum of the file is printed.</dd>
+<dt><code>-v</code></dt>
+<dd> If given alone on the command line, prints the version of <code>cabextract</code> and exits. Given with a list of cabinet files, it will list the contents of the cabinet files.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stuart Caie &lt;kyzer [at] 4u.net&gt;, based on the one written by Eric Sharkey &lt;sharkey [at] debian.org&gt;, for the Debian GNU/Linux system.</p>
 <h2>SEE ALSO</h2>

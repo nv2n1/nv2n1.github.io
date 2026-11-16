@@ -14,14 +14,14 @@ description: "handle_percpu_irq – Per CPU local irq handler"
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>the interrupt description structure for this irq</dl>
+</dd><dd>the interrupt description structure for this irq</dd></dl>
 <h2>Description</h2>
 <p>Per CPU interrupts on SMP machines without locking requirements</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

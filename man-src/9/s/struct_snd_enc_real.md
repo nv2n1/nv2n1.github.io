@@ -19,15 +19,15 @@ struct_snd_enc_real -
 <h2>Members</h2>
 
 quant_bits
-<dl><dd>number of coupling quantization bits in the stream</dl>
+<dl><dd>number of coupling quantization bits in the stream</dd></dl>
  
 
  start_region
-<dl><dd>coupling start region in the stream</dl>
+<dl><dd>coupling start region in the stream</dd></dl>
  
 
  num_regions
-<dl><dd>number of regions value</dl>
+<dl><dd>number of regions value</dd></dl>
 
 <h2>Description</h2>
 

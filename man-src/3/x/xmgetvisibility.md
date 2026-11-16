@@ -17,16 +17,16 @@ description: "XmGetVisibility — A function that determines if a widget is visi
 <p> <code>XmGetVisibility</code> does not check to see if <i>widget</i> is obscured by its siblings or by siblings of its ancestors. Consequently, <code>XmGetVisibility</code> returns <code>XmVISIBILITY_UNOBSCURED</code> for widgets which are completely or partially covered by one or more siblings of <i>widget</i> by one or more siblings of ancestors of <i>widget</i>. </p>
 <p> When a widget which is unrealized is being queried, it is indicated that the widget is fully obscured. If an application unmaps a <i>widget</i> that has its <code>XmNmappedWhenManaged</code> resource set to True, the return value is undefined. When a widget which is unmanaged is being queried, it is indicated that the widget is fully obscured.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget</dd></dl>
 <h2>Return</h2>
 <p>Returns one of the following values:</p>
 <dl COMPACT>
-<dt><code>XmVISIBILITY_UNOBSCURED</code></p>
-<dd>Indicates that the widget is mapped, not obscured, and is completely visible on the screen.</p>
-<dt><code>XmVISIBILITY_PARTIALLY_OBSCURED</code></p>
-<dd>Indicates that the widget is mapped, and is not completely visible on the screen (partially obscured).</p>
-<dt><code>XmVISIBILITY_FULLY_OBSCURED</code></p>
-<dd>Indicates that the widget is not at all visible on the screen.</dl>
+<dt><code>XmVISIBILITY_UNOBSCURED</code></dt>
+<dd>Indicates that the widget is mapped, not obscured, and is completely visible on the screen.</dd>
+<dt><code>XmVISIBILITY_PARTIALLY_OBSCURED</code></dt>
+<dd>Indicates that the widget is mapped, and is not completely visible on the screen (partially obscured).</dd>
+<dt><code>XmVISIBILITY_FULLY_OBSCURED</code></dt>
+<dd>Indicates that the widget is not at all visible on the screen.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmistraversable/">XmIsTraversable</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), and <code><a href="/docs/linux/man/3-xmprocesstraversal/">XmProcessTraversal</a></code>(3).</p>

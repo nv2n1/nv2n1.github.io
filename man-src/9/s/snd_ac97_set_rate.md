@@ -15,15 +15,15 @@ snd_ac97_set_rate - change the rate of the given input/output.
 <h2>Arguments</h2>
 
 <i>ac97</i>
-<dl><dd><dd>the ac97 instance</dl>
+<dl><dd></dd><dd>the ac97 instance</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>the register to change</dl>
+<dl><dd>the register to change</dd></dl>
  
 
  <i>rate</i>
-<dl><dd>the sample rate to set</dl>
+<dl><dd>the sample rate to set</dd></dl>
 
 <h2>Description</h2>
 

@@ -18,66 +18,66 @@ description: "ldapsearch – LDAP search tool"
 <p> The search results are displayed using an extended version of LDIF. Option <i>-L</i> controls the format of the output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code>[<code>V</code>]</p>
-<dd> Print version info. If <code>-VV</code> is given, only the version information is printed.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></p>
-<dd> Set the LDAP debugging level to <i>debuglevel</i>. <code>ldapsearch</code> must be compiled with LDAP_DEBUG defined for this option to have any effect.</p>
-<dt><code>-n</code></p>
-<dd> Show what would be done, but don&#8217;t actually perform the search. Useful for debugging in conjunction with <code>-v</code>.</p>
-<dt><code>-v</code></p>
-<dd> Run in verbose mode, with many diagnostics written to standard output.</p>
-<dt><code>-c</code></p>
-<dd> Continuous operation mode. Errors are reported, but ldapsearch will continue with searches. The default is to exit after reporting an error. Only useful in conjunction with <code>-f</code>.</p>
-<dt><code>-u</code></p>
-<dd> Include the User Friendly Name form of the Distinguished Name (DN) in the output.</p>
-<dt><code>-t</code>[<code>t</code>]</p>
-<dd> A single <code>-t</code> writes retrieved non-printable values to a set of temporary files. This is useful for dealing with values containing non-character data such as jpegPhoto or audio. A second <code>-t</code> writes all retrieved values to files.</p>
-<dt><code>-T</code><i>&nbsp;<wbr>path</i></p>
-<dd> Write temporary files to directory specified by <i>path</i> (default: <code>/var/tmp/</code>)</p>
-<dt><code>-F</code><i>&nbsp;<wbr>prefix</i></p>
-<dd> URL prefix for temporary files. Default is <code>file://</code><i>path</i> where <i>path</i> is <code>/var/tmp/</code> or specified with <code>-T</code>.</p>
-<dt><code>-A</code></p>
-<dd> Retrieve attributes only (no values). This is useful when you just want to see if an attribute is present in an entry and are not interested in the specific values.</p>
-<dt><code>-L</code></p>
+<dt><code>-V</code>[<code>V</code>]</dt>
+<dd> Print version info. If <code>-VV</code> is given, only the version information is printed.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></dt>
+<dd> Set the LDAP debugging level to <i>debuglevel</i>. <code>ldapsearch</code> must be compiled with LDAP_DEBUG defined for this option to have any effect.</dd>
+<dt><code>-n</code></dt>
+<dd> Show what would be done, but don&#8217;t actually perform the search. Useful for debugging in conjunction with <code>-v</code>.</dd>
+<dt><code>-v</code></dt>
+<dd> Run in verbose mode, with many diagnostics written to standard output.</dd>
+<dt><code>-c</code></dt>
+<dd> Continuous operation mode. Errors are reported, but ldapsearch will continue with searches. The default is to exit after reporting an error. Only useful in conjunction with <code>-f</code>.</dd>
+<dt><code>-u</code></dt>
+<dd> Include the User Friendly Name form of the Distinguished Name (DN) in the output.</dd>
+<dt><code>-t</code>[<code>t</code>]</dt>
+<dd> A single <code>-t</code> writes retrieved non-printable values to a set of temporary files. This is useful for dealing with values containing non-character data such as jpegPhoto or audio. A second <code>-t</code> writes all retrieved values to files.</dd>
+<dt><code>-T</code><i>&nbsp;<wbr>path</i></dt>
+<dd> Write temporary files to directory specified by <i>path</i> (default: <code>/var/tmp/</code>)</dd>
+<dt><code>-F</code><i>&nbsp;<wbr>prefix</i></dt>
+<dd> URL prefix for temporary files. Default is <code>file://</code><i>path</i> where <i>path</i> is <code>/var/tmp/</code> or specified with <code>-T</code>.</dd>
+<dt><code>-A</code></dt>
+<dd> Retrieve attributes only (no values). This is useful when you just want to see if an attribute is present in an entry and are not interested in the specific values.</dd>
+<dt><code>-L</code></dt>
 <dd> Search results are display in LDAP Data Interchange Format detailed in <code><a href="/docs/linux/man/5-ldif/">ldif</a></code>(5). A single <code>-L</code> restricts the output to LDIFv1.<br />
-&nbsp;<wbr>A second&nbsp;<wbr><code>-L</code>&nbsp;<wbr>disables comments. A third <code>-L</code> disables printing of the LDIF version. The default is to use an extended version of LDIF.</p>
-<dt><code>-S</code><i>&nbsp;<wbr>attribute</i></p>
-<dd> Sort the entries returned based on <i>attribute</i>. The default is not to sort entries returned. If <i>attribute</i> is a zero-length string (&quot;&quot;), the entries are sorted by the components of their Distinguished Name. See <code><a href="/docs/linux/man/3-ldap_sort/">ldap_sort</a></code>(3) for more details. Note that <code>ldapsearch</code> normally prints out entries as it receives them. The use of the <code>-S</code> option defeats this behavior, causing all entries to be retrieved, then sorted, then printed.</p>
-<dt><code>-b</code><i>&nbsp;<wbr>searchbase</i></p>
-<dd> Use <i>searchbase</i> as the starting point for the search instead of the default.</p>
-<dt><code>-s</code>&nbsp;<wbr>{<code>base</code>|<code>one</code>|<code>sub</code>|<code>children</code>}</p>
-<dd> Specify the scope of the search to be one of <code>base</code>, <code>one</code>, <code>sub</code>, or <code>children</code> to specify a base object, one-level, subtree, or children search. The default is <code>sub</code>. Note: <i>children</i> scope requires LDAPv3 subordinate feature extension.</p>
-<dt><code>-a</code>&nbsp;<wbr>{<code>never</code>|<code>always</code>|<code>search</code>|<code>find</code>}</p>
-<dd> Specify how aliases dereferencing is done. Should be one of <code>never</code>, <code>always</code>, <code>search</code>, or <code>find</code> to specify that aliases are never dereferenced, always dereferenced, dereferenced when searching, or dereferenced only when locating the base object for the search. The default is to never dereference aliases.</p>
-<dt><code>-l</code><i>&nbsp;<wbr>timelimit</i></p>
-<dd> wait at most <i>timelimit</i> seconds for a search to complete. A timelimit of <i>0</i> (zero) or <i>none</i> means no limit. A timelimit of <i>max</i> means the maximum integer allowable by the protocol. A server may impose a maximal timelimit which only the root user may override.</p>
-<dt><code>-z</code><i>&nbsp;<wbr>sizelimit</i></p>
-<dd> retrieve at most <i>sizelimit</i> entries for a search. A sizelimit of <i>0</i> (zero) or <i>none</i> means no limit. A sizelimit of <i>max</i> means the maximum integer allowable by the protocol. A server may impose a maximal sizelimit which only the root user may override.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>file</i></p>
-<dd> Read a series of lines from <i>file</i>, performing one LDAP search for each line. In this case, the <i>filter</i> given on the command line is treated as a pattern where the first and only occurrence of <code>%s</code> is replaced with a line from <i>file</i>. Any other occurrence of the the <code>%</code> character in the pattern will be regarded as an error. Where it is desired that the search filter include a <code>%</code> character, the character should be encoded as <code>\25</code> (see RFC 4515). If <i>file</i> is a single <code>&#8211;</code> character, then the lines are read from standard input. <code>ldapsearch</code> will exit when the first non-successful search result is returned, unless <code>-c</code> is used.</p>
-<dt><code>-M</code>[<code>M</code>]</p>
-<dd> Enable manage DSA IT control. <code>-MM</code> makes control critical.</p>
-<dt><code>-x </code></p>
-<dd> Use simple authentication instead of SASL.</p>
-<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></p>
-<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory. For SASL binds, the server is expected to ignore this value.</p>
-<dt><code>-W</code></p>
-<dd> Prompt for simple authentication. This is used instead of specifying the password on the command line.</p>
-<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></p>
-<dd> Use <i>passwd</i> as the password for simple authentication.</p>
-<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></p>
-<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</p>
-<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></p>
-<dd> Specify URI(s) referring to the ldap server(s); a list of URI, separated by whitespace or commas is expected; only the protocol/host/port fields are allowed. As an exception, if no host/port is specified, but a DN is, the DN is used to look up the corresponding host(s) using the DNS SRV records, according to RFC 2782. The DN must be a non-empty sequence of AVAs whose attribute type is &quot;dc&quot; (domain component), and must be escaped according to RFC 2396.</p>
-<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></p>
-<dd> Specify an alternate host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></p>
-<dd> Specify an alternate TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}</p>
-<dd> Specify the LDAP protocol version to use.</p>
-<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
+&nbsp;<wbr>A second&nbsp;<wbr><code>-L</code>&nbsp;<wbr>disables comments. A third <code>-L</code> disables printing of the LDIF version. The default is to use an extended version of LDIF.</dd>
+<dt><code>-S</code><i>&nbsp;<wbr>attribute</i></dt>
+<dd> Sort the entries returned based on <i>attribute</i>. The default is not to sort entries returned. If <i>attribute</i> is a zero-length string (&quot;&quot;), the entries are sorted by the components of their Distinguished Name. See <code><a href="/docs/linux/man/3-ldap_sort/">ldap_sort</a></code>(3) for more details. Note that <code>ldapsearch</code> normally prints out entries as it receives them. The use of the <code>-S</code> option defeats this behavior, causing all entries to be retrieved, then sorted, then printed.</dd>
+<dt><code>-b</code><i>&nbsp;<wbr>searchbase</i></dt>
+<dd> Use <i>searchbase</i> as the starting point for the search instead of the default.</dd>
+<dt><code>-s</code>&nbsp;<wbr>{<code>base</code>|<code>one</code>|<code>sub</code>|<code>children</code>}</dt>
+<dd> Specify the scope of the search to be one of <code>base</code>, <code>one</code>, <code>sub</code>, or <code>children</code> to specify a base object, one-level, subtree, or children search. The default is <code>sub</code>. Note: <i>children</i> scope requires LDAPv3 subordinate feature extension.</dd>
+<dt><code>-a</code>&nbsp;<wbr>{<code>never</code>|<code>always</code>|<code>search</code>|<code>find</code>}</dt>
+<dd> Specify how aliases dereferencing is done. Should be one of <code>never</code>, <code>always</code>, <code>search</code>, or <code>find</code> to specify that aliases are never dereferenced, always dereferenced, dereferenced when searching, or dereferenced only when locating the base object for the search. The default is to never dereference aliases.</dd>
+<dt><code>-l</code><i>&nbsp;<wbr>timelimit</i></dt>
+<dd> wait at most <i>timelimit</i> seconds for a search to complete. A timelimit of <i>0</i> (zero) or <i>none</i> means no limit. A timelimit of <i>max</i> means the maximum integer allowable by the protocol. A server may impose a maximal timelimit which only the root user may override.</dd>
+<dt><code>-z</code><i>&nbsp;<wbr>sizelimit</i></dt>
+<dd> retrieve at most <i>sizelimit</i> entries for a search. A sizelimit of <i>0</i> (zero) or <i>none</i> means no limit. A sizelimit of <i>max</i> means the maximum integer allowable by the protocol. A server may impose a maximal sizelimit which only the root user may override.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>file</i></dt>
+<dd> Read a series of lines from <i>file</i>, performing one LDAP search for each line. In this case, the <i>filter</i> given on the command line is treated as a pattern where the first and only occurrence of <code>%s</code> is replaced with a line from <i>file</i>. Any other occurrence of the the <code>%</code> character in the pattern will be regarded as an error. Where it is desired that the search filter include a <code>%</code> character, the character should be encoded as <code>\25</code> (see RFC 4515). If <i>file</i> is a single <code>&#8211;</code> character, then the lines are read from standard input. <code>ldapsearch</code> will exit when the first non-successful search result is returned, unless <code>-c</code> is used.</dd>
+<dt><code>-M</code>[<code>M</code>]</dt>
+<dd> Enable manage DSA IT control. <code>-MM</code> makes control critical.</dd>
+<dt><code>-x </code></dt>
+<dd> Use simple authentication instead of SASL.</dd>
+<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></dt>
+<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory. For SASL binds, the server is expected to ignore this value.</dd>
+<dt><code>-W</code></dt>
+<dd> Prompt for simple authentication. This is used instead of specifying the password on the command line.</dd>
+<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></dt>
+<dd> Use <i>passwd</i> as the password for simple authentication.</dd>
+<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></dt>
+<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</dd>
+<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></dt>
+<dd> Specify URI(s) referring to the ldap server(s); a list of URI, separated by whitespace or commas is expected; only the protocol/host/port fields are allowed. As an exception, if no host/port is specified, but a DN is, the DN is used to look up the corresponding host(s) using the DNS SRV records, according to RFC 2782. The DN must be a non-empty sequence of AVAs whose attribute type is &quot;dc&quot; (domain component), and must be escaped according to RFC 2396.</dd>
+<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></dt>
+<dd> Specify an alternate host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></dt>
+<dd> Specify an alternate TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}</dt>
+<dd> Specify the LDAP protocol version to use.</dd>
+<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
 <dd>
-<dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
+</dd><dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
 <dd>
 <p> Specify general extensions with <code>-e</code> and search extensions with <code>-E</code>. &#8216;<code>!</code>&#8216; indicates criticality. </p>
 <p> General extensions: </p>
@@ -108,7 +108,7 @@ description: "ldapsearch – LDAP search tool"
                                                      : &lt;value&gt;)(virtual list view)<br />
                                                  [!] deref = derefAttr : attr[, attr[&#8230;]] [; derefAttr:attr[, attr[&#8230;]]]<br />
                                                                              [!]&lt;oid&gt;[=&lt;value&gt;]</p>
-<dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]</p>
+</dd><dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]</dt>
 <dd>
 <p> Specify general options. </p>
 <p> General options: </p>
@@ -116,24 +116,24 @@ description: "ldapsearch – LDAP search tool"
   nettimeout=&lt;timeout&gt;  (in seconds, or &quot;none&quot; or &quot;max&quot;)
   ldif-wrap=&lt;width&gt;     (in columns, or &quot;no&quot; for no wrapping)
 </pre>
-<dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></p>
-<dd> Specify SASL security properties.</p>
-<dt><code>-I</code></p>
-<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</p>
-<dt><code>-Q</code></p>
-<dd> Enable SASL Quiet mode. Never prompt.</p>
-<dt><code>-N</code></p>
-<dd> Do not use reverse DNS to canonicalize SASL host name.</p>
-<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></p>
-<dd> Specify the authentication ID for SASL bind. The form of the ID depends on the actual SASL mechanism used.</p>
-<dt><code>-R</code><i>&nbsp;<wbr>realm</i></p>
-<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</p>
-<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></p>
-<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i></p>
-<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></p>
-<dd> Specify the SASL mechanism to be used for authentication. If it&#8217;s not specified, the program will choose the best mechanism the server knows.</p>
-<dt><code>-Z</code>[<code>Z</code>]</p>
-<dd> Issue StartTLS (Transport Layer Security) extended operation. If you use <code>-ZZ</code>, the command will require the operation to be successful.</dl>
+</dd><dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></dt>
+<dd> Specify SASL security properties.</dd>
+<dt><code>-I</code></dt>
+<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</dd>
+<dt><code>-Q</code></dt>
+<dd> Enable SASL Quiet mode. Never prompt.</dd>
+<dt><code>-N</code></dt>
+<dd> Do not use reverse DNS to canonicalize SASL host name.</dd>
+<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></dt>
+<dd> Specify the authentication ID for SASL bind. The form of the ID depends on the actual SASL mechanism used.</dd>
+<dt><code>-R</code><i>&nbsp;<wbr>realm</i></dt>
+<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</dd>
+<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></dt>
+<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i></dd>
+<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></dt>
+<dd> Specify the SASL mechanism to be used for authentication. If it&#8217;s not specified, the program will choose the best mechanism the server knows.</dd>
+<dt><code>-Z</code>[<code>Z</code>]</dt>
+<dd> Issue StartTLS (Transport Layer Security) extended operation. If you use <code>-ZZ</code>, the command will require the operation to be successful.</dd></dl>
 <h2>OUTPUT FORMAT</h2>
 <p> If one or more entries are found, each entry is written to standard output in LDAP Data Interchange Format or <code><a href="/docs/linux/man/5-ldif/">ldif</a></code>(5): </p>
 <pre>

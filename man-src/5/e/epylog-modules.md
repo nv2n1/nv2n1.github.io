@@ -17,11 +17,11 @@ description: "epylog-modules – epylog module cofiguration."
 <p> The config file for each module is separated into two parts: [module] and [conf].</p>
 <h2>[module]</h2>
 <dl>
-<dt><code>desc</code></p>
-<dd>The description of the module. It will be shown in the final report.</p>
-<dt><code>exec</code></p>
-<dd>This is where the &quot;body&quot; of the module is located. Most modules that come with the distribution will be placed in /usr/share/epylog/modules, but depending on your setup, you may place them elsewhere.</p>
-<dt><code>files</code></p>
+<dt><code>desc</code></dt>
+<dd>The description of the module. It will be shown in the final report.</dd>
+<dt><code>exec</code></dt>
+<dd>This is where the &quot;body&quot; of the module is located. Most modules that come with the distribution will be placed in /usr/share/epylog/modules, but depending on your setup, you may place them elsewhere.</dd>
+<dt><code>files</code></dt>
 <dd>List the logfiles requested by this module in this field. Separate multiple entries by comma. Epylog will handle rotated files, but you need to specify the mask appropriately. E.g. the most common logrotate setup will place rotated files in the same directory and add .0, .1, .2, etc to the end of the file. Therefore, a file entry would look like so:<br />
  <code>/var/log/filename[.#]</code><br />
  If you have compression turned on, your entry will look like so:<br />
@@ -30,15 +30,15 @@ description: "epylog-modules – epylog module cofiguration."
  <code>/var/log/[rotate/]filename[.#.gz]</code><br />
  This will work, too:<br />
  <code>/var/log/filename[/var/rotate/filename.#.gz]</code><br />
- In any case, &quot;#&quot; will be where the increments will go.</p>
-<dt><code>enabled</code></p>
-<dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;no&quot; is specified, Epylog will completely ignore this module.</p>
-<dt><code>internal</code></p>
-<dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;yes&quot;, then the module is handled as an internal module, and if &quot;no&quot;, then the external module API is used. See doc/modules.txt for more information about the module APIs.</p>
-<dt><code>outhtml</code></p>
-<dd>Specifies whether the output produced by the module is HTML or not. Can be either &quot;yes&quot; or &quot;no&quot;.</p>
-<dt><code>priority</code></p>
-<dd>An unsigned int. Most commonly a number from 0 to 10. Modules with the lowest number will be considered the highest prioroty and will be both invoked and presented in the final report before the others. </p>
+ In any case, &quot;#&quot; will be where the increments will go.</dd>
+<dt><code>enabled</code></dt>
+<dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;no&quot; is specified, Epylog will completely ignore this module.</dd>
+<dt><code>internal</code></dt>
+<dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;yes&quot;, then the module is handled as an internal module, and if &quot;no&quot;, then the external module API is used. See doc/modules.txt for more information about the module APIs.</dd>
+<dt><code>outhtml</code></dt>
+<dd>Specifies whether the output produced by the module is HTML or not. Can be either &quot;yes&quot; or &quot;no&quot;.</dd>
+<dt><code>priority</code></dt>
+<dd>An unsigned int. Most commonly a number from 0 to 10. Modules with the lowest number will be considered the highest prioroty and will be both invoked and presented in the final report before the others. </dd>
 </dl>
 <h2>[conf]</h2>
 <p>This is where per-module configuration directives go. Some modules have these, some don&#8217;t. Look in the module config file &#8212; the available values should be listed and described there.</p>

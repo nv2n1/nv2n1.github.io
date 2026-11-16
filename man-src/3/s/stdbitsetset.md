@@ -11,9 +11,7 @@ std::bitset&lt;N&gt;::set - std::bitset&lt;N&gt;::set
 <h2>Synopsis</h2>
 
 <pre><code>bitset&lt;N&gt;&amp; set();                                             (until C++11)
-
 bitset&lt;N&gt;&amp; set() noexcept;                            (1)     (since C++11)
-
 bitset&lt;N&gt;&amp; set( std::size_t pos, bool value = true );     (2)</code></pre> 
 Sets all bits to true or to specified value. 
 1) Sets all bits to true. 
@@ -35,10 +33,8 @@ value - the value to set the bit to
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     std::bitset&lt;8&gt; b;
     for (size_t i = 1; i &lt; b.size(); i += 2) {

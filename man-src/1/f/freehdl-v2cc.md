@@ -16,32 +16,32 @@ description: "FreeHDL-V2CC – A VHDL to C++ converter."
 <p> <code>FreeHDL-V2CC</code> translates the original VHDL source FILEs into C++. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> FILE</p>
-<dd> Write C++ generated code to FILE.</p>
-<dt><code>-n</code></p>
-<dd> Dry run.</p>
-<dt><code>-R</code></p>
-<dd> Emit register code.</p>
-<dt><code>-v</code></p>
-<dd> Enable verbosity.</p>
-<dt><code>-g</code></p>
-<dd> Emit debugging code.</p>
-<dt><code>-D</code></p>
-<dd> Emit CDFG code.</p>
-<dt><code>-l</code> LIBNAME</p>
-<dd> Use LIBNAME as the WORK library, default is the &quot;.&quot; library directory.</p>
-<dt><code>&#8211;relaxed-component-visibility</code></p>
-<dd> Allows invisible default bindings from <i>WORK</i>.</p>
-<dt><code>&#8211;depend</code> FILE</p>
-<dd> Write dependency information to FILE.</p>
-<dt><code>-m</code> FILE</p>
-<dd> Emit the main() file C++ code to FILE.</p>
-<dt><code>-L</code> VHDLLIB</p>
-<dd> Path to VHDL library root directory. Within this directory the compiler search for a file named <i>v2cc.libs</i>. The mapping file <i>v2cc.libs</i> translates library unit names to directories. Note that more than one VHDLLIB may be provided.</dl>
+<dt><code>-o</code> FILE</dt>
+<dd> Write C++ generated code to FILE.</dd>
+<dt><code>-n</code></dt>
+<dd> Dry run.</dd>
+<dt><code>-R</code></dt>
+<dd> Emit register code.</dd>
+<dt><code>-v</code></dt>
+<dd> Enable verbosity.</dd>
+<dt><code>-g</code></dt>
+<dd> Emit debugging code.</dd>
+<dt><code>-D</code></dt>
+<dd> Emit CDFG code.</dd>
+<dt><code>-l</code> LIBNAME</dt>
+<dd> Use LIBNAME as the WORK library, default is the &quot;.&quot; library directory.</dd>
+<dt><code>&#8211;relaxed-component-visibility</code></dt>
+<dd> Allows invisible default bindings from <i>WORK</i>.</dd>
+<dt><code>&#8211;depend</code> FILE</dt>
+<dd> Write dependency information to FILE.</dd>
+<dt><code>-m</code> FILE</dt>
+<dd> Emit the main() file C++ code to FILE.</dd>
+<dt><code>-L</code> VHDLLIB</dt>
+<dd> Path to VHDL library root directory. Within this directory the compiler search for a file named <i>v2cc.libs</i>. The mapping file <i>v2cc.libs</i> translates library unit names to directories. Note that more than one VHDLLIB may be provided.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>V2CC_LIBRARY_PATH</p>
-<dd> The variable V2CC_LIBRARY_PATH consists of &quot;:&quot; separated filenames. In addition to the environment variable, you can use the &quot;-L libdir&quot; command line option with v2cc. The directories specified with &quot;-L&quot; are added in front of the ones specified by V2CC_LIBRARY_PATH. In the final library path, they appear in the same order as on the command line.</dl>
+<dt>V2CC_LIBRARY_PATH</dt>
+<dd> The variable V2CC_LIBRARY_PATH consists of &quot;:&quot; separated filenames. In addition to the environment variable, you can use the &quot;-L libdir&quot; command line option with v2cc. The directories specified with &quot;-L&quot; are added in front of the ones specified by V2CC_LIBRARY_PATH. In the final library path, they appear in the same order as on the command line.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gvhdl/">gvhdl</a>(1), <a href="/docs/linux/man/1-freehdl-config/">freehdl-config</a>(1), v2cc.libs(5)</p>
 <h2>AVAILABILITY</h2>

@@ -17,40 +17,40 @@ description: "pq2-put – Register one or more datasets in a dataset meta-reposi
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>datasetfile</i></p>
-<dd> Path to the file with the list of files in the dataset or directory with the files containing the file lists of the datasets to be registered; in the first case wildcards &#8216;*&#8217; can be specified in the file name, i.e. &#8216;&lt;dir&gt;/fil*&#8217; is ok but &#8216;&lt;dir&gt;/*/file&#8217; is not. In all cases the name of the dataset is the name of the file finally used. The format of the file is described below.</dl>
+<dt><i>datasetfile</i></dt>
+<dd> Path to the file with the list of files in the dataset or directory with the files containing the file lists of the datasets to be registered; in the first case wildcards &#8216;*&#8217; can be specified in the file name, i.e. &#8216;&lt;dir&gt;/fil*&#8217; is ok but &#8216;&lt;dir&gt;/*/file&#8217; is not. In all cases the name of the dataset is the name of the file finally used. The format of the file is described below.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep the temporary files created during the analysis under $TMPDIR</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>-d</code> &lt;<i>datasetfile</i>&gt;, <code>&#8211;dataset</code> &lt;<i>datasetfile</i>&gt;</p>
-<dd> Alternative way to define path to the file with the list of files.</p>
-<dt><code>-o</code> &lt;<i>options</i>&gt;</p>
-<dd> Options for registering datasets; a combination of: </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep the temporary files created during the analysis under $TMPDIR</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>-d</code> &lt;<i>datasetfile</i>&gt;, <code>&#8211;dataset</code> &lt;<i>datasetfile</i>&gt;</dt>
+<dd> Alternative way to define path to the file with the list of files.</dd>
+<dt><code>-o</code> &lt;<i>options</i>&gt;</dt>
+<dd> Options for registering datasets; a combination of: </dd>
 <pre>
      O   overwrite existing dataset
      U   add information to existing dataset, if any or create a new one
      T   Trust the information already present in the dataset
      V   verify (scan) information in the dataset (can be very slow)
 </pre>
-<dt><code>&#8211;overwrite</code></p>
-<dd> Alternative to &#8216;-o O&#8217;.</p>
-<dt><code>&#8211;update</code></p>
-<dd> Alternative to &#8216;-o U&#8217;.</p>
-<dt><code>&#8211;trust</code></p>
-<dd> Alternative to &#8216;-o T&#8217;.</p>
-<dt><code>&#8211;tree=</code>&lt;<i>default-tree-name</i>&gt;</p>
-<dd> Set the name of the default tree name to &#8216;default-tree-name&#8217; (option &#8216;T&#8217; or &#8211;trust only); this allows to skip the tree name specification during Process when more TTree (or derivative) objects are available in the files.</p>
-<dt><code>&#8211;staged</code></p>
-<dd> Assume all files online or staged (option &#8216;T&#8217; or &#8211;trust only).</p>
-<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</p>
-<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dl>
+<dt><code>&#8211;overwrite</code></dt>
+<dd> Alternative to &#8216;-o O&#8217;.</dd>
+<dt><code>&#8211;update</code></dt>
+<dd> Alternative to &#8216;-o U&#8217;.</dd>
+<dt><code>&#8211;trust</code></dt>
+<dd> Alternative to &#8216;-o T&#8217;.</dd>
+<dt><code>&#8211;tree=</code>&lt;<i>default-tree-name</i>&gt;</dt>
+<dd> Set the name of the default tree name to &#8216;default-tree-name&#8217; (option &#8216;T&#8217; or &#8211;trust only); this allows to skip the tree name specification during Process when more TTree (or derivative) objects are available in the files.</dd>
+<dt><code>&#8211;staged</code></dt>
+<dd> Assume all files online or staged (option &#8216;T&#8217; or &#8211;trust only).</dd>
+<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</dt>
+<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dd></dl>
 <h2>FORMAT OF THE FILES</h2>
 <p> The name of the file defining the dataset is the name of the dataset. The files must contain one line per each file in the dataset with the full file URL. If available, additional information can be specified on the same line with the following keywords: </p>
 <pre><code>
@@ -77,8 +77,8 @@ the should be in
 <h2>EXAMPLES</h2>
 <p> The following examples show how to register information corresponding to the H1 example of the ROOT tutorials.</p>
 <dl>
-<dt><code>Minimal information</code></p>
-<dd> In this example the files are read from the ROOT HTTP server. Detailed information about the content of the files is not available, so only the URLs are given. If the file is called h1-http, we get </p>
+<dt><code>Minimal information</code></dt>
+<dd> In this example the files are read from the ROOT HTTP server. Detailed information about the content of the files is not available, so only the URLs are given. If the file is called h1-http, we get </dd>
 <pre>
    $ cat h1-http
    <a rel="nofollow" href="http://root.cern.ch/files/h1/dstarmb.root">http://root.cern.ch/files/h1/dstarmb.root</a>
@@ -91,8 +91,8 @@ the should be in
    $ pq2-put -o &quot;V&quot; h1-http
    pq2-put: 1 dataset(s) registered
 </pre>
-<dt><code>Full information</code></p>
-<dd> In this example the files are read from the local /data/h1 directory. Detailed information about the content of the files is available. If the file is called h1-local, we get </p>
+<dt><code>Full information</code></dt>
+<dd> In this example the files are read from the local /data/h1 directory. Detailed information about the content of the files is available. If the file is called h1-local, we get </dd>
 <pre>
    $ cat h1-local
    file:/data/h1/dstarmb.root  sz:21330730 md5:0a60055370e16d954f90fb50c2d1a801 tree:h42,21920,0,-1

@@ -11,29 +11,17 @@ std::is_heap_until - std::is_heap_until
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class RandomIt &gt;                                                                               (since C++11)
-
 RandomIt is_heap_until( RandomIt first, RandomIt last );                                                 (until C++20)
-
 template&lt; class RandomIt &gt;                                                                               (since C++20)
-
 constexpr RandomIt is_heap_until( RandomIt first, RandomIt last );
-
 template&lt; class ExecutionPolicy, class RandomIt &gt;                                                    (2) (since C++17)
-
 RandomIt is_heap_until( ExecutionPolicy&amp;&amp; policy, RandomIt first, RandomIt last );               (1)
-
 template&lt; class RandomIt, class Compare &gt;                                                                               (since C++11)
-
 RandomIt is_heap_until( RandomIt first, RandomIt last, Compare comp );                                                  (until C++20)
-
 template&lt; class RandomIt, class Compare &gt;                                                            (3)                (since C++20)
-
 constexpr RandomIt is_heap_until( RandomIt first, RandomIt last, Compare comp );
-
 template&lt; class ExecutionPolicy, class RandomIt, class Compare &gt;                                         (4)            (since C++17)
-
 RandomIt is_heap_until( ExecutionPolicy&amp;&amp; policy, RandomIt first, RandomIt last, Compare comp );</code></pre> 
 Examines the range [first, last) and finds the largest range beginning at first which is a max heap. 
 1) Elements are compared using operator&lt;. 
@@ -80,12 +68,9 @@ A max heap is a range of elements [f,l) that has the following properties:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4, 1, 5, 9};
     std::make_heap(v.begin(), v.end());

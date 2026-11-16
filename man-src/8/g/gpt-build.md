@@ -40,38 +40,38 @@ description: "gpt-build – Builds and installs GPT source packages and bundles.
 <p>Installed files such as executables that are found in pgm and ptm_static packages will overwrite one another when multiple flavors of the same package are built. Thus only the files from the last flavor built will be present after a gpt-build run. To preserve multiple flavors of these files, they are automatically copied into flavored subdirectories. For example, the program <tt>$GLOBUS_LOCATION</tt>/bin/foo will be copied into the location <tt>$GLOBUS_LOCATION</tt>/bin/gcc32/shared if it was built with dynamically with the gcc32 flavor. These files are retrieved by <i>gpt-pkg</i>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-srcdir</code></p>
-<dd>Specifies the where the source directory is. This is used by developers to build out of a repository..</p>
-<dt><code>-installdir</code></p>
-<dd>Specifies the where the install directory is. This directory will be where the targets are installed before being archived. Note that this directory needs contain the installation targets of all of the packages which satisfy build dependencies in addition to the installation targets of the package being built. Because of this, installation targets are not removed after the package is archived. Because different flavors of program packages conflict with each other, the last flavor built is the flavor of the installed files. For each flavor, gpt-build makes a copy of each installed file in a program package and puts the copy in a flavored subdirectory.</p>
-<dt><code>-builddir</code></p>
-<dd>Specifies the where the source tar files should be untarred and the code is built.</p>
-<dt><code>-force</code></p>
-<dd>Tells <code>gpt-build</code> to rebuild a package even if it is already installed. The default behavior is to skip any packages that have been built before.</p>
-<dt><code>-update</code></p>
-<dd>Tells <code>gpt-build</code> to build even if an older version is installed.</p>
-<dt><code>-verbose</code></p>
-<dd>Prints out all of the build messages.</p>
-<dt><code>-std-flavors</code></p>
-<dd>Build the globus_core package with all of the flavor choices marked as standard in the flavor configuration file. All of the other packages will be built with all of the flavors sucessfully installed by globus_core.</p>
-<dt><code>-all-flavors</code></p>
-<dd>Build the globus_core package with all of the flavor choices marked as standard in the flavor configuration file. All of the other packages will be built with all of the flavors sucessfully installed by globus_core.</p>
-<dt><code>-nosrc</code></p>
-<dd>Just install the listed flavors. Don&#8217;t build any source code.</p>
-<dt><code>-coresrc</code></p>
-<dd>Use this version of globus_core source rather than the one found in <tt>$GPT_LOCATION</tt>/share/globus/globus_core-src.tar.gz.</p>
-<dt><code>-disable-version-checking</code></p>
-<dd><font SIZE="-1">GPT</font> 1.x scripts neglected to check the version numbers of packages during dependency checks. Because of this <font SIZE="-1">GPT</font> bundles were released that have errors in their dependency data. This flag is provided so that these packages can still be used. <font SIZE="-1"><code>NOTE</code></font> that once this flag is used, the version checking is disabled <code>permanently</code> for the installation pointed to by <tt>$GLOBUS_LOCATION</tt>. This condition can only be removed by deleting the file <tt>$GLOBUS_LOCATION</tt>/share/globus/disable_version_checking.</p>
-<dt><code>-flavor-cfg=FILE</code></p>
-<dd>Use the flavor configurations found in <font SIZE="-1">FILE</font>. The default configuration file is <tt>$GPT_LOCATION</tt>/share/globus/globus_flavor_labels.conf</p>
-<dt><code>-logdir=DIRECTORY</code></p>
-<dd>Store package logs of build messages in <font SIZE="-1">DIRECTORY</font>. This option also sets -verbose. The default directory is ./logs.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dl>
+<dt><code>-srcdir</code></dt>
+<dd>Specifies the where the source directory is. This is used by developers to build out of a repository..</dd>
+<dt><code>-installdir</code></dt>
+<dd>Specifies the where the install directory is. This directory will be where the targets are installed before being archived. Note that this directory needs contain the installation targets of all of the packages which satisfy build dependencies in addition to the installation targets of the package being built. Because of this, installation targets are not removed after the package is archived. Because different flavors of program packages conflict with each other, the last flavor built is the flavor of the installed files. For each flavor, gpt-build makes a copy of each installed file in a program package and puts the copy in a flavored subdirectory.</dd>
+<dt><code>-builddir</code></dt>
+<dd>Specifies the where the source tar files should be untarred and the code is built.</dd>
+<dt><code>-force</code></dt>
+<dd>Tells <code>gpt-build</code> to rebuild a package even if it is already installed. The default behavior is to skip any packages that have been built before.</dd>
+<dt><code>-update</code></dt>
+<dd>Tells <code>gpt-build</code> to build even if an older version is installed.</dd>
+<dt><code>-verbose</code></dt>
+<dd>Prints out all of the build messages.</dd>
+<dt><code>-std-flavors</code></dt>
+<dd>Build the globus_core package with all of the flavor choices marked as standard in the flavor configuration file. All of the other packages will be built with all of the flavors sucessfully installed by globus_core.</dd>
+<dt><code>-all-flavors</code></dt>
+<dd>Build the globus_core package with all of the flavor choices marked as standard in the flavor configuration file. All of the other packages will be built with all of the flavors sucessfully installed by globus_core.</dd>
+<dt><code>-nosrc</code></dt>
+<dd>Just install the listed flavors. Don&#8217;t build any source code.</dd>
+<dt><code>-coresrc</code></dt>
+<dd>Use this version of globus_core source rather than the one found in <tt>$GPT_LOCATION</tt>/share/globus/globus_core-src.tar.gz.</dd>
+<dt><code>-disable-version-checking</code></dt>
+<dd><font SIZE="-1">GPT</font> 1.x scripts neglected to check the version numbers of packages during dependency checks. Because of this <font SIZE="-1">GPT</font> bundles were released that have errors in their dependency data. This flag is provided so that these packages can still be used. <font SIZE="-1"><code>NOTE</code></font> that once this flag is used, the version checking is disabled <code>permanently</code> for the installation pointed to by <tt>$GLOBUS_LOCATION</tt>. This condition can only be removed by deleting the file <tt>$GLOBUS_LOCATION</tt>/share/globus/disable_version_checking.</dd>
+<dt><code>-flavor-cfg=FILE</code></dt>
+<dd>Use the flavor configurations found in <font SIZE="-1">FILE</font>. The default configuration file is <tt>$GPT_LOCATION</tt>/share/globus/globus_flavor_labels.conf</dd>
+<dt><code>-logdir=DIRECTORY</code></dt>
+<dd>Store package logs of build messages in <font SIZE="-1">DIRECTORY</font>. This option also sets -verbose. The default directory is ./logs.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
 <h2>Macros</h2>
 <p>Build macros are perl routines and variables that are used by gpt-build while building packages. These macros are embedded in the build instructions part of the package&#8217;s metadata file. Some of these macros can be set from the command line using the following format: </p>
 <pre> &lt;NAME&gt;_GPTMACRO='new value'</pre>

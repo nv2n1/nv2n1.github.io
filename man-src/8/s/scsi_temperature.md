@@ -15,10 +15,10 @@ description: "scsi_temperature – fetch the temperature of a SCSI device"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level or verbosity.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level or verbosity.</dd></dl>
 <h2>Exit Status</h2>
 <p>The exit status of this script is 0 when it is successful. Otherwise the exit status is that of the last sg_logs utility called. See the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
 <h2>Authors</h2>

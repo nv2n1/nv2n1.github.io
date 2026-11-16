@@ -14,17 +14,17 @@ description: "airq_iv_scan – scan interrupt vector for non-zero bits"
 <p><i>iv</i></p>
 <dl>
 <dd>
-<dd>pointer to interrupt vector structure</dl>
+</dd><dd>pointer to interrupt vector structure</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>bit number to start the search</dl>
+<dd>bit number to start the search</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>bit number to end the search</dl>
+<dd>bit number to end the search</dd></dl>
 <h2>Description</h2>
 <p>Returns the bit number of the next non-zero interrupt bit, or -1UL if the scan completed without finding any more any non-zero bits.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

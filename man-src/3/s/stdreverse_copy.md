@@ -11,27 +11,18 @@ std::reverse_copy - std::reverse_copy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class BidirIt, class OutputIt&gt;
     (until C++ 20)
-
         OutputIt reverse_copy(BidirIt first, BidirIt last, OutputIt d_first);
-
 template &lt;class BidirIt, class OutputIt&gt;
 (1)(since C++ 20)
-
     constexpr OutputIt reverse_copy(BidirIt first, BidirIt last, OutputIt d_first);
-
 template &lt;class ExecutionPolicy, class BidirIt, class ForwardIt&gt;
 (2)(since C++ 17)
-
     ForwardIt reverse_copy(ExecutionPolicy &amp;&amp;policy, BidirIt first, BidirIt last, ForwardIt d_first);
 1) Copies the elements from the range [first, last) to another range beginning at d_first in such a way that the elements in the new range are in reverse order.
-
 Behaves as if by executing the assignment *(d_first + (last - first) - 1 - i) = *(first + i) once for each non-negative i &lt; (last - first)
-
 If the source and destination ranges (that is, [first, last) and [d_first, d_first+(last-first)) respectively) overlap, the behavior is undefined.
-
 2) Same as (1), but executed according to policy. This overload does not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true
 </code></pre>
 
@@ -80,12 +71,9 @@ See also the implementations in libstdc++ and libc++.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v({1, 2, 3});
     for (const auto &amp;value : v) {

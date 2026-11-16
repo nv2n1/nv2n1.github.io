@@ -77,14 +77,10 @@ format &#8211;<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstdarg&gt;
-
 #include &lt;stdexcept&gt;
 void checked_sscanf(int count, const char *buf, const char *fmt, ...)
-
 {
     va_list ap;
     va_start(ap, fmt);
@@ -93,7 +89,6 @@ void checked_sscanf(int count, const char *buf, const char *fmt, ...)
     va_end(ap);
 }
 int main()
-
 {
     try {
         int n, m;

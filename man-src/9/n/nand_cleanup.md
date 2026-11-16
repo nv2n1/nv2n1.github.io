@@ -14,9 +14,9 @@ description: "nand_cleanup – [NAND Interface] Free resources held by the NAND 
 <p><i>chip</i></p>
 <dl>
 <dd>
-<dd>NAND chip object</dl>
+</dd><dd>NAND chip object</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ pcie_get_mps - get PCI Express maximum payload size
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to query</dl>
+<dl><dd></dd><dd>PCI device to query</dd></dl>
 
 <h2>Description</h2>
 

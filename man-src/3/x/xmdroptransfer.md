@@ -22,10 +22,10 @@ description: "XmDropTransfer — The DropTransfer widget class"
  Atom</code> <i>target</i><code>;
 } XmDropTransferEntryRec, *XmDropTransferEntry;</code></pre>
 <dl COMPACT>
-<dt><i>client_data</i></p>
-<dd>Specifies any additional information required by this selection target</p>
-<dt><i>target</i></p>
-<dd>Specifies a selection target associated with the drop operation</dl>
+<dt><i>client_data</i></dt>
+<dd>Specifies any additional information required by this selection target</dd>
+<dt><i>target</i></dt>
+<dd>Specifies a selection target associated with the drop operation</dd></dl>
 <h3>Classes</h3>
 <p>DropTransfer inherits behavior and a resource from <code>Object</code>. </p>
 <p> The class pointer is <code>xmDropTransferObjectClass</code>. </p>
@@ -193,23 +193,23 @@ description: "XmDropTransfer — The DropTransfer widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNdropTransfers</code></p>
-<dd>Specifies the address of an array of drop transfer entry records. The drop transfer is complete when all the entries in the list have been processed.</p>
-<dt><code>XmNincremental</code></p>
-<dd>Specifies a Boolean value that indicates whether the transfer on the receiver side uses the Xt incremental selection transfer mechanism described in <i>X Toolkit Intrinsics&#8212;C Language Interface</i>. If the value is True, the receiver uses incremental transfer; if the value is False, the receiver uses atomic transfer.</p>
-<dt><code>XmNnumDropTransfers</code></p>
-<dd>Specifies the number of entries in <code>XmNdropTransfers</code>. If this resource is set to 0 at any time, the transfer is considered complete. The value of <code>XmNtransferStatus</code> determines the completion handshaking process.</p>
-<dt><code>XmNtransferProc</code></p>
-<dd>Specifies a procedure of type <code>XtSelectionCallbackProc</code> that delivers the requested selection values. The <i>widget</i> argument passed to this procedure is the DropTransfer widget. The selection atom passed is _MOTIF_DROP. For additional information on selection callback procedures, see <i>X Toolkit Intrinsics&#8212;C Language Interface</i>.</p>
-<dt><code>XmNtransferStatus</code></p>
-<dd>Specifies the current status of the drop transfer. The client updates this value when the transfer ends and communicates the value to the initiator. The possible values are</p>
+<dt><code>XmNdropTransfers</code></dt>
+<dd>Specifies the address of an array of drop transfer entry records. The drop transfer is complete when all the entries in the list have been processed.</dd>
+<dt><code>XmNincremental</code></dt>
+<dd>Specifies a Boolean value that indicates whether the transfer on the receiver side uses the Xt incremental selection transfer mechanism described in <i>X Toolkit Intrinsics&#8212;C Language Interface</i>. If the value is True, the receiver uses incremental transfer; if the value is False, the receiver uses atomic transfer.</dd>
+<dt><code>XmNnumDropTransfers</code></dt>
+<dd>Specifies the number of entries in <code>XmNdropTransfers</code>. If this resource is set to 0 at any time, the transfer is considered complete. The value of <code>XmNtransferStatus</code> determines the completion handshaking process.</dd>
+<dt><code>XmNtransferProc</code></dt>
+<dd>Specifies a procedure of type <code>XtSelectionCallbackProc</code> that delivers the requested selection values. The <i>widget</i> argument passed to this procedure is the DropTransfer widget. The selection atom passed is _MOTIF_DROP. For additional information on selection callback procedures, see <i>X Toolkit Intrinsics&#8212;C Language Interface</i>.</dd>
+<dt><code>XmNtransferStatus</code></dt>
+<dd>Specifies the current status of the drop transfer. The client updates this value when the transfer ends and communicates the value to the initiator. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmTRANSFER_SUCCESS</code></p>
-<dd>The transfer succeeded.</p>
-<dt><code>XmTRANSFER_FAILURE</code></p>
-<dd>The transfer failed.</dl>
+</dd><dl COMPACT>
+<dt><code>XmTRANSFER_SUCCESS</code></dt>
+<dd>The transfer succeeded.</dd>
+<dt><code>XmTRANSFER_FAILURE</code></dt>
+<dd>The transfer failed.</dd></dl>
 </dl>
 </dl>
 <h3>Inherited Resources</h3>

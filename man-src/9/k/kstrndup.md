@@ -14,11 +14,11 @@ description: "kstrndup – allocate space for and copy an existing string"
 <p><i>s</i></p>
 <dl>
 <dd>
-<dd>the string to duplicate</dl>
+</dd><dd>the string to duplicate</dd></dl>
 <p> <i>max</i></p>
 <dl>
-<dd>read at most <i>max</i> chars from <i>s</i></dl>
+<dd>read at most <i>max</i> chars from <i>s</i></dd></dl>
 <p> <i>gfp</i></p>
 <dl>
-<dd>the GFP mask used in the <code>kmalloc</code> call when allocating memory</dl>
+<dd>the GFP mask used in the <code>kmalloc</code> call when allocating memory</dd></dl>
 <h2>Copyright</h2>

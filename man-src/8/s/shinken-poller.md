@@ -14,30 +14,30 @@ description: "shinken-poller – Shinken poller daemon"
 <p>The shinken-poller daemon is in charge of launching plugins as requested by schedulers. When the check is finished it returns the result to the schedulers.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd>Show version number and exit</p>
+<dt><code>&#8211;version</code></dt>
+<dd>Show version number and exit</dd>
 <dl>
-<dd></dl>
-<dt><code>-c </code>CONFIGFILE, &#8211;config CONFIGFILE</p>
-<dd>Config file</p>
+<dd></dd></dl>
+<dt><code>-c </code>CONFIGFILE, &#8211;config CONFIGFILE</dt>
+<dd>Config file</dd>
 <dl>
-<dd></dl>
-<dt><code>-d, &#8211;daemon</code></p>
-<dd>Run in daemon mode.</p>
+<dd></dd></dl>
+<dt><code>-d, &#8211;daemon</code></dt>
+<dd>Run in daemon mode.</dd>
 <dl>
-<dd></dl>
-<dt><code>-r, &#8211;replace</code></p>
-<dd>Replace previous running poller.</p>
+<dd></dd></dl>
+<dt><code>-r, &#8211;replace</code></dt>
+<dd>Replace previous running poller.</dd>
 <dl>
-<dd></dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print detailed help screen.</p>
+<dd></dd></dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print detailed help screen.</dd>
 <dl>
-<dd></dl>
-<dt><code>&#8211;debugfile </code>DEBUGFILE</p>
-<dd>Enable debug logging to DEBUGFILE</p>
+<dd></dd></dl>
+<dt><code>&#8211;debugfile </code>DEBUGFILE</dt>
+<dd>Enable debug logging to DEBUGFILE</dd>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>Authors</h2>
 <p>Arthur Gautier. David Hannequin Michael Leinartas.</p>

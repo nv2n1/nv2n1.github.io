@@ -14,10 +14,10 @@ description: "d_lookup – search for a dentry"
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>parent dentry</dl>
+</dd><dd>parent dentry</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>qstr of name we wish to find</dl>
+<dd>qstr of name we wish to find</dd></dl>
 <h2>Return</h2>
 <p>dentry, or NULL </p>
 <p> d_lookup searches the children of the parent dentry for the name in question. If the dentry is found its reference count is incremented and the dentry is returned. The caller must use dput to free the entry when it has finished using it. <code>NULL</code> is returned if the dentry does not exist.</p>

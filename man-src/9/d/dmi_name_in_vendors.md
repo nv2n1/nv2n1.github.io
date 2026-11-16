@@ -15,7 +15,7 @@ dmi_name_in_vendors - Check if string is in the DMI system or board vendor name
 <h2>Arguments</h2>
 
 <i>str</i>
-<dl><dd><dd>Case sensitive Name</dl>
+<dl><dd></dd><dd>Case sensitive Name</dd></dl>
 
 <h2>Copyright</h2>
 

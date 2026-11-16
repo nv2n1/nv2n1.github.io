@@ -13,12 +13,12 @@ description: "mongoc_stream_uncork() – This function shall allow a previously 
 mongoc_stream_uncork (mongoc_stream_t *stream);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <p> This function shall allow a previously corked socket to pass bytes to the underlying socket. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Not all streams implement this function. Buffering generally works better.</dl>
+<dd>Not all streams implement this function. Buffering generally works better.</dd></dl>
 <h2>Returns</h2>
 <p><code>0</code> on success, <code>-1</code> on failure and <code>errno</code> is set. </p>
 <h2>See Also</h2>

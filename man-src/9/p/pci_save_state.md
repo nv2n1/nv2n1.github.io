@@ -15,8 +15,9 @@ pci_save_state - save the PCI configuration space of a device before suspending
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd>- PCI device that we're dealing with</dl>
+<dl><dd>- PCI device that we're dealing with</dd></dl>
 
 <h2>Copyright</h2>
 
 <dd>
+</dd>

@@ -24,12 +24,12 @@ virt - make - fs[--options] input.tar output.img virt - make - fs[--options] inp
 <h3><font SIZE="-1">FILESYSTEM TYPE</font></h3>
 <p> The default filesystem type is <tt>&quot;ext2&quot;</tt>. Just about any filesystem type that libguestfs supports can be used (but <i>not</i> read-only formats like <font SIZE="-1">ISO9660</font>). Here are some of the more common choices:</p>
 <dl>
-<dt><i>ext3</i></p>
-<dd> Note that ext3 filesystems contain a journal, typically 1-32 <font SIZE="-1">MB</font> in size. If you are not going to use the filesystem in a way that requires the journal, then this is just wasted overhead.</p>
-<dt><i>ntfs</i> or <i>vfat</i></p>
-<dd> Useful if exporting data to a Windows guest.</p>
-<dt><i>minix</i></p>
-<dd> Lower overhead than <tt>&quot;ext2&quot;</tt>, but certain limitations on filename length and total filesystem size.</dl>
+<dt><i>ext3</i></dt>
+<dd> Note that ext3 filesystems contain a journal, typically 1-32 <font SIZE="-1">MB</font> in size. If you are not going to use the filesystem in a way that requires the journal, then this is just wasted overhead.</dd>
+<dt><i>ntfs</i> or <i>vfat</i></dt>
+<dd> Useful if exporting data to a Windows guest.</dd>
+<dt><i>minix</i></dt>
+<dd> Lower overhead than <tt>&quot;ext2&quot;</tt>, but certain limitations on filename length and total filesystem size.</dd></dl>
 <p> <i></i><font SIZE="-1"><i>EXAMPLE</i></font><i></i> </p>
 <pre>
  virt-make-fs --type=minix input minixfs.img
@@ -57,52 +57,52 @@ virt - make - fs[--options] input.tar output.img virt - make - fs[--options] inp
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>&#8211;floppy</code></p>
-<dd> Create a virtual floppy disk. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>&#8211;floppy</code></dt>
+<dd> Create a virtual floppy disk. </dd>
 <p> Currently this preselects the size (1440K), partition type (<font SIZE="-1">MBR</font>) and filesystem type (<font SIZE="-1">VFAT</font>). In future it may also choose the geometry.</p>
-<dt><code>&#8211;size=&lt;N&gt;</code></p>
+<dt><code>&#8211;size=&lt;N&gt;</code></dt>
 <dd>
-<dt><code>&#8211;size=+&lt;N&gt;</code></p>
+</dd><dt><code>&#8211;size=+&lt;N&gt;</code></dt>
 <dd>
-<dt><code>-s &lt;N&gt;</code></p>
+</dd><dt><code>-s &lt;N&gt;</code></dt>
 <dd>
-<dt><code>-s +&lt;N&gt;</code></p>
-<dd> Use the <i>&#8211;size</i> (or <i>-s</i>) option to choose the size of the output image. </p>
+</dd><dt><code>-s +&lt;N&gt;</code></dt>
+<dd> Use the <i>&#8211;size</i> (or <i>-s</i>) option to choose the size of the output image. </dd>
 <p> If this option is <i>not</i> given, then the output image will be just large enough to contain all the files, with not much wasted space. </p>
 <p> To choose a fixed size output disk, specify an absolute number followed by b/K/M/G/T/P/E to mean bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Petabytes or Exabytes. This must be large enough to contain all the input files, else you will get an error. </p>
 <p> To leave extra space, specify <tt>&quot;+&quot;</tt> (plus sign) and a number followed by b/K/M/G/T/P/E to mean bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Petabytes or Exabytes. For example: <i>&#8211;size=+200M</i> means enough space for the input files, and (approximately) an extra 200 <font SIZE="-1">MB</font> free space. </p>
 <p> Note that virt-make-fs estimates free space, and therefore will not produce filesystems containing precisely the free space requested. (It is much more expensive and time-consuming to produce a filesystem which has precisely the desired free space).</p>
-<dt><code>&#8211;format=&lt;fmt&gt;</code></p>
+<dt><code>&#8211;format=&lt;fmt&gt;</code></dt>
 <dd>
-<dt><code>-F &lt;fmt&gt;</code></p>
-<dd> Choose the output disk image format. </p>
+</dd><dt><code>-F &lt;fmt&gt;</code></dt>
+<dd> Choose the output disk image format. </dd>
 <p> The default is <tt>&quot;raw&quot;</tt> (raw sparse disk image).</p>
-<dt><code>&#8211;type=&lt;fs&gt;</code></p>
+<dt><code>&#8211;type=&lt;fs&gt;</code></dt>
 <dd>
-<dt><code>-t &lt;fs&gt;</code></p>
-<dd> Choose the output filesystem type. </p>
+</dd><dt><code>-t &lt;fs&gt;</code></dt>
+<dd> Choose the output filesystem type. </dd>
 <p> The default is <tt>&quot;ext2&quot;</tt>. </p>
 <p> Any filesystem which is supported read-write by libguestfs can be used here.</p>
-<dt><code>&#8211;label=&lt;</code><font SIZE="-1"><code>LABEL</code></font><code>&gt;</code></p>
-<dd> Set the filesystem label.</p>
-<dt><code>&#8211;partition</code></p>
+<dt><code>&#8211;label=&lt;</code><font SIZE="-1"><code>LABEL</code></font><code>&gt;</code></dt>
+<dd> Set the filesystem label.</dd>
+<dt><code>&#8211;partition</code></dt>
 <dd>
-<dt><code>&#8211;partition=&lt;parttype&gt;</code></p>
-<dd> If specified, this flag adds an <font SIZE="-1">MBR</font> partition table to the output disk image. </p>
+</dd><dt><code>&#8211;partition=&lt;parttype&gt;</code></dt>
+<dd> If specified, this flag adds an <font SIZE="-1">MBR</font> partition table to the output disk image. </dd>
 <p> You can change the partition table type, eg. <i>&#8211;partition=gpt</i> for large disks. </p>
 <p> For <font SIZE="-1">MBR,</font> virt-make-fs sets the partition type byte automatically.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable debugging information.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable debugging information.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable libguestfs trace.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable libguestfs trace.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-format/">virt-format</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar-in/">virt-tar-in</a></i>(1), <i><a href="/docs/linux/man/1-mkisofs/">mkisofs</a></i>(1), <i><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></i>(1), <i><a href="/docs/linux/man/1-mksquashfs/">mksquashfs</a></i>(1), <i><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></i>(8), <i><a href="/docs/linux/man/8-resize2fs/">resize2fs</a></i>(8), <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
@@ -118,25 +118,25 @@ virt - make - fs[--options] input.tar output.img virt - make - fs[--options] inp
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAH">OPTIONS</a></p>
+<dt><a href="#lbAH">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAI">SEE ALSO</a></p>
+</dd><dt><a href="#lbAI">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAJ">AUTHOR</a></p>
+</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAK">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAK">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAL">LICENSE</a></p>
+</dd><dt><a href="#lbAL">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAM">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAM">BUGS</a></dt>
+<dd></dd></dl>

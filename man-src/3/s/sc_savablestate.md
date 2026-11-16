@@ -11,60 +11,25 @@ description: "sc::SavableState –"
 <p> Base class for objects that can save/restore state.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;state.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::AccumH</code> [virtual], <code>sc::AngularIntegrator</code> [virtual], <code>sc::AtomInfo</code>, <code>sc::Convergence</code> [virtual], <code>sc::Debugger</code>, <code>sc::DenFunctional</code> [virtual], <code>sc::DenIntegrator</code> [virtual], <code>sc::Function</code> [virtual], <code>sc::GaussianBasisSet</code>, <code>sc::GaussianShell</code>, <code>sc::HessianUpdate</code> [virtual], <code>sc::IntCoor</code>, <code>sc::IntCoorGen</code>, <code>sc::Integral</code>, <code>sc::IntegrationWeight</code> [virtual], <code>sc::MOIndexSpace</code> [virtual], <code>sc::MOIntsTransformFactory</code> [virtual], <code>sc::MolecularCoor</code>, <code>sc::MolecularFrequencies</code>, <code>sc::MolecularHessian</code> [virtual], <code>sc::Molecule</code>, <code>sc::MP2R12Energy</code> [virtual], <code>sc::Optimize</code> [virtual], <code>sc::OverlapOrthog</code> [virtual], <code>sc::PointGroup</code>, <code>sc::R12IntEval</code> [virtual], <code>sc::R12IntEvalInfo</code> [virtual], <code>sc::R12IntsAcc</code> [virtual], <code>sc::RadialIntegrator</code> [virtual], <code>sc::SCBlockInfo</code>, <code>sc::SCDimension</code>, <code>sc::SCElementOp</code>, <code>sc::SCElementOp2</code>, <code>sc::SCElementOp3</code>, <code>sc::SCExtrapData</code>, <code>sc::SCExtrapError</code>, <code>sc::SCMatrixBlock</code>, <code>sc::SCMatrixBlockList</code>, <code>sc::SelfConsistentExtrapolation</code>, <code>sc::SetIntCoor</code>, <code>sc::ShellPairCints</code> [virtual], <code>sc::ShellPairsCints</code> [virtual], <code>sc::TwoBodyGrid</code> [virtual], <code>sc::TwoBodyMOIntsTransform</code> [virtual], and <code>sc::Units</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SavableState &amp; operator= (const SavableState &amp;)
-
-
-
 void save_state (StateOut &amp;)
-
-
 Save the state of the object as specified by the StateOut object.
-
-
 void save_object_state (StateOut &amp;)
-
-
 This can be used for saving state when the exact type of the object is known for both the save and the restore.
-
-
 virtual void save_vbase_state (StateOut &amp;)
-
-
 Save the virtual bases for the object.
-
-
 virtual void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
-
 Static Public Member Functions
 static void save_state (SavableState *s, StateOut &amp;)
-
-
-
 static SavableState * restore_state (StateIn &amp;si)
-
-
 Restores objects saved with save_state.
-
-
 static SavableState * key_restore_state (StateIn &amp;si, const char *keyword)
-
-
 Like restore_state, but keyword is used to override values while restoring.
-
-
 static SavableState * dir_restore_state (StateIn &amp;si, const char *objectname, const char *keyword=0)
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>SavableState</code> (const <code>SavableState</code> &amp;) </p>
 <p> <code>SavableState</code> (<code>StateIn</code> &amp;)<br />

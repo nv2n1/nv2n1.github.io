@@ -15,15 +15,15 @@ snd_soc_add_codec_controls - add an array of controls to a codec. Convenience fu
 <h2>Arguments</h2>
 
 <i>codec</i>
-<dl><dd><dd>codec to add controls to</dl>
+<dl><dd></dd><dd>codec to add controls to</dd></dl>
  
 
  <i>controls</i>
-<dl><dd>array of controls to add</dl>
+<dl><dd>array of controls to add</dd></dl>
  
 
  <i>num_controls</i>
-<dl><dd>number of elements in the array</dl>
+<dl><dd>number of elements in the array</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,28 +15,28 @@ description: "globus-fork-starter – Start and monitor a fork job"
 <p> The <code>globus-fork-starter</code> program expects its input to be a series of task definitions, separated by the newline character, each representing a separate job. Each task definition contains a number of fields, separated by the colon character. The first field is always the literal string 100 indicating the message format, the second field is a unique job tag that will be distinguish the reply from this program when multiple jobs are submitted. The rest of fields contain attribute bindings. The supported attributes are: </p>
 <p> <code>directory</code></p>
 <dl>
-<dd>Working directory of the job</dl>
+<dd>Working directory of the job</dd></dl>
 <p> <code>environment</code></p>
 <dl>
-<dd>Comma-separated list of strings defining environment variables. The form of these strings is var=value.</dl>
+<dd>Comma-separated list of strings defining environment variables. The form of these strings is var=value.</dd></dl>
 <p> <code>count</code></p>
 <dl>
-<dd>Number of processes to start.</dl>
+<dd>Number of processes to start.</dd></dl>
 <p> <code>executable</code></p>
 <dl>
-<dd>Full path to the executable to run.</dl>
+<dd>Full path to the executable to run.</dd></dl>
 <p> <code>arguments</code></p>
 <dl>
-<dd>Comma-separated list of command-line arguments for the job</dl>
+<dd>Comma-separated list of command-line arguments for the job</dd></dl>
 <p> <code>stdin</code></p>
 <dl>
-<dd>Full path to a file containing the input of the job.</dl>
+<dd>Full path to a file containing the input of the job.</dd></dl>
 <p> <code>stdout</code></p>
 <dl>
-<dd>Full path to a file to write the output of the job to.</dl>
+<dd>Full path to a file to write the output of the job to.</dd></dl>
 <p> <code>stderr</code></p>
 <dl>
-<dd>Full path to a file to write the error stream of the job.</dl>
+<dd>Full path to a file to write the error stream of the job.</dd></dl>
 <p> Within each field, the following characters may be escaped by preceding them with the backslash character: &#8211; backslash (\) &#8211; semicolor (;) &#8211; comma (,) &#8211; equal (=) </p>
 <p> Additionally, newline can be represented within a field by using the escape sequence 
 . </p>
@@ -47,11 +47,11 @@ description: "globus-fork-starter – Start and monitor a fork job"
 <p>The following variables affect the execution of <code>globus-fork-starter</code> </p>
 <p> <code>GLOBUS_LOCATION</code></p>
 <dl>
-<dd>Path to Globus Toolkit installation. This is used to locate the globus-fork.conf configuration file.</dl>
+<dd>Path to Globus Toolkit installation. This is used to locate the globus-fork.conf configuration file.</dd></dl>
 <h2>Files</h2>
 <p>The following files affect the execution of <code>globus-fork-starter</code> </p>
 <p> <code>/etc/globus-fork.conf</code></p>
 <dl>
-<dd>Path to fork SEG configuration file.</dl>
+<dd>Path to fork SEG configuration file.</dd></dl>
 <h2>Author</h2>
 <p>Copyright &#169; 1999-2016 University of Chicago</p>

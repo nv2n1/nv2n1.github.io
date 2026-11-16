@@ -16,40 +16,40 @@ description: "lnst-ctl – Linux Network Stack Test controller"
 <p> <code>lnst-ctl</code> is a script used for managing slaves. It reads a recipe XML file as an input and executes tests on the specified slave machines.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A, &#8211;override-alias name=value</code></p>
-<dd> Define top-level alias that will override any other definitions in the recipe</p>
-<dt><code>-a, &#8211;define-alias name=value</code></p>
-<dd> Define top-level alias</p>
-<dt><code>-c, &#8211;config</code><i>=file</i></p>
-<dd> Load a custom configuration file in addition to <i>/etc/lnst-ctl.conf</i> and <i>~/lnst/lnst-ctl.conf</i> that are loaded by default.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Toggle emitting debugging messages.</p>
-<dt><code>&#8211;dump-config</code></p>
-<dd> Dumps the join of all loaded configuration files on stdout and exits</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display usage of this command.</p>
-<dt><code>-m, &#8211;no-colours</code></p>
-<dd> Disable coloured terminal output.</p>
-<dt><code>-o, &#8211;disable-pool-checks</code></p>
-<dd> Skip the pool machine availability checks.</p>
-<dt><code>-p, &#8211;packet-capture</code></p>
-<dd> Capture and log all ongoing network communication between the slaves during the test.</p>
-<dt><code>&#8211;pools</code><i>=name[,&#8230;]</i></p>
-<dd> Restricts which pools to use for matching, value is a comma separated list of values</p>
-<dt><code>&#8211;pools=</code><i>path</i></p>
-<dd> Restrict which pool to use for matching, value is single path to a pool directory</p>
-<dt><code>-r, &#8211;reduce-sync</code></p>
-<dd> Disable synchronization of module and tool resources to slave machines, when python tasks are used in the recipe. Instead the user can manually synchronize resources from the python task itself. This option has no effect if the recipe only contains xml tasks.</p>
-<dt><code>-s, &#8211;xslt-url</code><i>=URL</i></p>
-<dd> URL to a XSLT document that will be used when transforming the xml result file, only useful when -t is used as well</p>
-<dt><code>-t, &#8211;html</code><i>=file</i></p>
-<dd> Generate a formatted result html</p>
-<dt><code>-u, &#8211;multi-match</code></p>
-<dd> Run each recipe with every pool match possible</p>
-<dt><code>-x, &#8211;result</code><i>=file</i></p>
-<dd> Write results in XML format to the specified <i>file</i>.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Extends output of list_pools action</dl>
+<dt><code>-A, &#8211;override-alias name=value</code></dt>
+<dd> Define top-level alias that will override any other definitions in the recipe</dd>
+<dt><code>-a, &#8211;define-alias name=value</code></dt>
+<dd> Define top-level alias</dd>
+<dt><code>-c, &#8211;config</code><i>=file</i></dt>
+<dd> Load a custom configuration file in addition to <i>/etc/lnst-ctl.conf</i> and <i>~/lnst/lnst-ctl.conf</i> that are loaded by default.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Toggle emitting debugging messages.</dd>
+<dt><code>&#8211;dump-config</code></dt>
+<dd> Dumps the join of all loaded configuration files on stdout and exits</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display usage of this command.</dd>
+<dt><code>-m, &#8211;no-colours</code></dt>
+<dd> Disable coloured terminal output.</dd>
+<dt><code>-o, &#8211;disable-pool-checks</code></dt>
+<dd> Skip the pool machine availability checks.</dd>
+<dt><code>-p, &#8211;packet-capture</code></dt>
+<dd> Capture and log all ongoing network communication between the slaves during the test.</dd>
+<dt><code>&#8211;pools</code><i>=name[,&#8230;]</i></dt>
+<dd> Restricts which pools to use for matching, value is a comma separated list of values</dd>
+<dt><code>&#8211;pools=</code><i>path</i></dt>
+<dd> Restrict which pool to use for matching, value is single path to a pool directory</dd>
+<dt><code>-r, &#8211;reduce-sync</code></dt>
+<dd> Disable synchronization of module and tool resources to slave machines, when python tasks are used in the recipe. Instead the user can manually synchronize resources from the python task itself. This option has no effect if the recipe only contains xml tasks.</dd>
+<dt><code>-s, &#8211;xslt-url</code><i>=URL</i></dt>
+<dd> URL to a XSLT document that will be used when transforming the xml result file, only useful when -t is used as well</dd>
+<dt><code>-t, &#8211;html</code><i>=file</i></dt>
+<dd> Generate a formatted result html</dd>
+<dt><code>-u, &#8211;multi-match</code></dt>
+<dd> Run each recipe with every pool match possible</dd>
+<dt><code>-x, &#8211;result</code><i>=file</i></dt>
+<dd> Write results in XML format to the specified <i>file</i>.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Extends output of list_pools action</dd></dl>
 <p> <i>RECIPE</i> can be either a LNST recipe file or a directory containing recipe files. One or more files/directories can be passed at the same time. Each recipe is a XML file. The format is described in detail in the online documentation available at LNST wiki (link is listed on <code>INTERNET RESOURCES</code> bellow). </p>
 <p> <i>ACTION</i> can be one of <code>run,</code> <code>config_only,</code> <code>deconfigure</code>, <code>match_setup, and</code> <code>list_pools.</code> </p>
 <p> When it is set to <code>run,</code> all provided recipe files will be sequentially executed. The network will be configured accordingly to each recipe file and clean up afterwards. </p>

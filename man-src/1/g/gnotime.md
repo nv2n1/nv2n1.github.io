@@ -19,10 +19,10 @@ description: "gnotime – GnoTime – a time tracker"
 <p> Custom reports can be created using standard <i>HTML </i> enhanced with embedded <i>Scheme </i> (a <i>LISP</i> -like programming language). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;display</code></p>
-<dd> specifies the X server that gnotime should connect to. Refer to the X(1x) manual page for more info.</p>
-<dt><code>&#8211;geometry</code></p>
-<dd> specifies the <i>geometry</i> of the main window. The syntax <code>[WIDTHxHEIGHT][(+|-)X(+|-)Y]</code> is just like the X toolkit option <i>geometry.</i> See X(1x) for more info.</dl>
+<dt><code>&#8211;display</code></dt>
+<dd> specifies the X server that gnotime should connect to. Refer to the X(1x) manual page for more info.</dd>
+<dt><code>&#8211;geometry</code></dt>
+<dd> specifies the <i>geometry</i> of the main window. The syntax <code>[WIDTHxHEIGHT][(+|-)X(+|-)Y]</code> is just like the X toolkit option <i>geometry.</i> See X(1x) for more info.</dd></dl>
 <h2>OTHER TYPES OF DOCUMENTATION</h2>
 <p> You can find more information about <i>GnoTime</i> and its functions in the <i>Gnome help system.</i> Just select <code>Contents</code> from the <code>Help</code> menu to get there.</p>
 <h2>SEE ALSO</h2>

@@ -34,61 +34,59 @@ description: "srcredact – a program for redaction of text files"
 <p> Exactly one of the options <code>-e</code> (extract) or <code>-u</code> (unextract) must be present. In the extract mode the non-option argument is the name of the full file. If it is absent, or is <tt>&quot;-&quot;</tt>, standard input is used. In the unextract mode the first non-option argument</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>list of comment patterns</i></p>
-<dd> Use the given pattern for comment lines to search for guards instead of the default <tt>&quot;TeX&quot;</tt> pattern. The recognized patterns are:</p>
+<dt><code>-c</code> <i>list of comment patterns</i></dt>
+<dd> Use the given pattern for comment lines to search for guards instead of the default <tt>&quot;TeX&quot;</tt> pattern. The recognized patterns are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>c</code></p>
+<dt><code>c</code></dt>
 <dd>
 <pre>
   /*&lt;guard&gt;*/
 </pre>
-<dt><code>cpp</code></p>
+</dd><dt><code>cpp</code></dt>
 <dd>
 <pre>
   //&lt;guard&gt;
 </pre>
-<dt><code>fortran</code></p>
+</dd><dt><code>fortran</code></dt>
 <dd>
 <pre>
   C&lt;guard&gt;
 </pre>
-<dt><code>shell</code></p>
+</dd><dt><code>shell</code></dt>
 <dd>
 <pre>
   #&lt;guard&gt;
 </pre>
-<dt><code>TeX</code></p>
+</dd><dt><code>TeX</code></dt>
 <dd>
 <pre>
   %&lt;guard&gt;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> The pattern names should be separated by commas, and the list may be enclosed in quotes to prevent shell expansion, e.g </p>
 <pre>
   -c &quot;TeX, c, shell&quot;
 </pre>
-</dl>
-<dt><code>-d</code></p>
-<dd> Debug mode on.</p>
-<dt><code>-e</code> <i>audience</i></p>
-<dd> Extract the contents for the current audience into the file <i>file</i>. The cuurent audience is guessed from the <i>file</i> name, if the latter has the structure <i>base</i>&#8211;<i>audience</i>.<i>extension</i>, e.g. <tt>&quot;report-unclassified.tex&quot;</tt>. The key <code>-a</code> overrides this guess and should be used if the file name does not follow this pattern. The file name <tt>&quot;-&quot;</tt> means the standard output.</p>
-<dt><code>-h</code></p>
-<dd> Print help information and exit.</p>
-<dt><code>-l</code></p>
-<dd> List all audiences set in the file (one per line) and exit.</p>
-<dt><code>-u</code> <i>audience</i></p>
-<dd> Take a edited file intended for the <i>audience</i> (the second non-option argument) and incorporate the changes in it into the full file (the first non-option argument). If the second argument is missing, standard input is used instead. As usual, <tt>&quot;-&quot;</tt> also means standard input. Note that only one of the two file arguments in this case can be standard input.</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</p>
-<dt><code>-w</code> <i>on|off|1|0|true|false</i></p>
-<dd> If <tt>&quot;on&quot;</tt>, <tt>1</tt> or <tt>&quot;true&quot;</tt> (the deafult), implicitly wrap the full document into the guards </p>
+</dd></dl>
+<dt><code>-d</code></dt>
+<dd> Debug mode on.</dd>
+<dt><code>-e</code> <i>audience</i></dt>
+<dd> Extract the contents for the current audience into the file <i>file</i>. The cuurent audience is guessed from the <i>file</i> name, if the latter has the structure <i>base</i>&#8211;<i>audience</i>.<i>extension</i>, e.g. <tt>&quot;report-unclassified.tex&quot;</tt>. The key <code>-a</code> overrides this guess and should be used if the file name does not follow this pattern. The file name <tt>&quot;-&quot;</tt> means the standard output.</dd>
+<dt><code>-h</code></dt>
+<dd> Print help information and exit.</dd>
+<dt><code>-l</code></dt>
+<dd> List all audiences set in the file (one per line) and exit.</dd>
+<dt><code>-u</code> <i>audience</i></dt>
+<dd> Take a edited file intended for the <i>audience</i> (the second non-option argument) and incorporate the changes in it into the full file (the first non-option argument). If the second argument is missing, standard input is used instead. As usual, <tt>&quot;-&quot;</tt> also means standard input. Note that only one of the two file arguments in this case can be standard input.</dd>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd>
+<dt><code>-w</code> <i>on|off|1|0|true|false</i></dt>
+<dd> If <tt>&quot;on&quot;</tt>, <tt>1</tt> or <tt>&quot;true&quot;</tt> (the deafult), implicitly wrap the full document into the guards </dd>
 <pre>
  %&lt;*ALL&gt;
  ...

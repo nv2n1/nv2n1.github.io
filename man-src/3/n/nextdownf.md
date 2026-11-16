@@ -11,11 +11,9 @@ description: "nextup, nextupf, nextupl, nextdown, nextdownf, nextdownl – retur
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE     /* See feature_test_macros(7) */
 #include &lt;math.h&gt;
-
 double nextup(double x);
 float nextupf(float x);
 long double nextupl(long double x);
-
 double nextdown(double x);
 float nextdownf(float x);
 long double nextdownl(long double x);</code></pre>

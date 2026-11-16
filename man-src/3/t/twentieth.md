@@ -22,18 +22,18 @@ description: "QuantLib::DateGeneration – Date-generation rule."
 <h3>enum <code>Rule</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>Backward </i></p>
-<dd>Backward from termination date to effective date.</p>
-<dt><i>Forward </i></p>
-<dd><code>Forward</code> from effective date to termination date.</p>
-<dt><i>Zero </i></p>
-<dd>No intermediate dates between effective date and termination date.</p>
-<dt><i>ThirdWednesday </i></p>
-<dd>All dates but effective date and termination date are taken to be on the third wednesday of their month (with forward calculation.)</p>
-<dt><i>Twentieth </i></p>
-<dd>All dates but the effective date are taken to be the twentieth of their month (used for CDS schedules in emerging markets.) The termination date is also modified.</p>
-<dt><i>TwentiethIMM </i></p>
-<dd>All dates but the effective date are taken to be the twentieth of an <code>IMM</code> month (used for CDS schedules.) The termination date is also modified.</dl>
+<dt><i>Backward </i></dt>
+<dd>Backward from termination date to effective date.</dd>
+<dt><i>Forward </i></dt>
+<dd><code>Forward</code> from effective date to termination date.</dd>
+<dt><i>Zero </i></dt>
+<dd>No intermediate dates between effective date and termination date.</dd>
+<dt><i>ThirdWednesday </i></dt>
+<dd>All dates but effective date and termination date are taken to be on the third wednesday of their month (with forward calculation.)</dd>
+<dt><i>Twentieth </i></dt>
+<dd>All dates but the effective date are taken to be the twentieth of their month (used for CDS schedules in emerging markets.) The termination date is also modified.</dd>
+<dt><i>TwentiethIMM </i></dt>
+<dd>All dates but the effective date are taken to be the twentieth of an <code>IMM</code> month (used for CDS schedules.) The termination date is also modified.</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, <code>DateGeneration::Rule</code>) [related]</h3>
 <h2>Author</h2>

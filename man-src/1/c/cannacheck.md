@@ -14,32 +14,32 @@ description: "cannacheck – Display information about Japanese input system Can
 <h2>DESCRIPTION</h2>
 <p> cannacheck displays the problems concerning use of Canna and the related information. It examines the following items:</p>
 <dl>
-<dt>&#8211;</p>
-<dd> Customize file to be used</p>
-<dt>&#8211;</p>
-<dd> Romaji-to-Kana conversion dictionary to be used</p>
-<dt>&#8211;</p>
-<dd> Destination to which the server is to be connected. Is it connectable?</p>
-<dt>&#8211;</p>
-<dd> Dictionaries to be mounted. Are they mountable?</p>
-<dt>&#8211;</p>
-<dd> Errors in the customize file</dl>
+<dt>&#8211;</dt>
+<dd> Customize file to be used</dd>
+<dt>&#8211;</dt>
+<dd> Romaji-to-Kana conversion dictionary to be used</dd>
+<dt>&#8211;</dt>
+<dd> Destination to which the server is to be connected. Is it connectable?</dd>
+<dt>&#8211;</dt>
+<dd> Dictionaries to be mounted. Are they mountable?</dd>
+<dt>&#8211;</dt>
+<dd> Errors in the customize file</dd></dl>
 <p> The problem(s) are displayed on the standard output if found.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-v</p>
-<dd> Displays all the above information including items that contain no problem.</dl>
+<dt>-v</dt>
+<dd> Displays all the above information including items that contain no problem.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/canna/cannahost</p>
-<dd> Name of the host under which <i>cannaserver(1M)</i> is in operation.</dl>
+<dt>/etc/canna/cannahost</dt>
+<dd> Name of the host under which <i>cannaserver(1M)</i> is in operation.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cannaserver(1M), cannakill(1M), <a href="/docs/linux/man/1-cannastat/">cannastat</a>(1)</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>CANNAHOST</p>
-<dd> Specifies the name of the host under which <i>cannaserver(1M)</i> is in operation.</p>
-<dt>CANNAFILE</p>
-<dd> Specifies the initialize file (.canna). </p>
+<dt>CANNAHOST</dt>
+<dd> Specifies the name of the host under which <i>cannaserver(1M)</i> is in operation.</dd>
+<dt>CANNAFILE</dt>
+<dd> Specifies the initialize file (.canna). </dd>
 </dl>
 <h2>Index</h2>

@@ -31,12 +31,12 @@ url: "/docs/linux/man/1-fedpkg-copr/"
 
 <dl>
 <dt>
-<dd> &bull; COPR repo URLs take form of /&lt;username&gt;/&lt;projectname&gt;/&lt;packagename&gt;.git</dl>
+</dt><dd> &bull; COPR repo URLs take form of /&lt;username&gt;/&lt;projectname&gt;/&lt;packagename&gt;.git</dd></dl>
  
 
 <dl>
 <dt>
-<dd> &bull; Other than just default branches are supported: mga6, cauldron, and custom</dl>
+</dt><dd> &bull; Other than just default branches are supported: mga6, cauldron, and custom</dd></dl>
 
 <h2>AUTHORS</h2>
 

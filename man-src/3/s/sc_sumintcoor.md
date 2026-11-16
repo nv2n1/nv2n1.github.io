@@ -11,89 +11,35 @@ description: "sc::SumIntCoor –"
 <p> <code>SumIntCoor</code> is used to construct linear combinations of internal coordinates.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;coor.h&gt;</code></pre>
 <p> Inherits <code>sc::IntCoor</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SumIntCoor (StateIn &amp;)
-
-
-
 SumIntCoor (const char *)
-
-
 This constructor takes a string containing a label for this coordinate.
-
-
 SumIntCoor (const Ref&lt; KeyVal &gt; &amp;)
-
-
 The KeyVal constructor.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 int n ()
-
-
 Returns the number of coordinates in this linear combination.
-
-
 void add (Ref&lt; IntCoor &gt; &amp;, double coef)
-
-
 Add a coordinate to the linear combination.
-
-
 void normalize ()
-
-
 This function normalizes all the coefficients.
-
-
 double preferred_value () const
-
-
 Returns the value of the coordinate in a.u. and radians.
-
-
 const char * ctype () const
-
-
 Always returns ``SUM''.
-
-
 void print_details (const Ref&lt; Molecule &gt; &amp;, std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the individual coordinates in the sum with their coefficients.
-
-
 double force_constant (Ref&lt; Molecule &gt; &amp;)
-
-
 Returns the weighted sum of the individual force constants.
-
-
 void update_value (const Ref&lt; Molecule &gt; &amp;)
-
-
 Recalculate the value of the coordinate.
-
-
 void bmat (const Ref&lt; Molecule &gt; &amp;, RefSCVector &amp;bmat, double coef=1.0)
-
-
 Fill in a row the the B matrix.
-
-
 int equivalent (Ref&lt; IntCoor &gt; &amp;)
-
-
 Always returns 0.</code></pre>
 <h2>Detailed Description</h2>
 <p><code>SumIntCoor</code> is used to construct linear combinations of internal coordinates. </p>
@@ -112,8 +58,8 @@ Always returns 0.</code></pre>
 <h3>sc::SumIntCoor::SumIntCoor (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. .IP &quot;coor&quot; 1c A vector of <code>IntCoor</code> objects that define the summed coordinates. </p>
 <dl>
-<dt>coef</p>
-<dd>A vector of floating <code>point</code> numbers that gives the coefficients of the summed coordinates.</dl>
+<dt>coef</dt>
+<dd>A vector of floating <code>point</code> numbers that gives the coefficients of the summed coordinates.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void sc::SumIntCoor::add (<code>Ref</code>&lt; <code>IntCoor</code> &gt; &amp;, double coef)</h3>
 <p>Add a coordinate to the linear combination. coef is the coefficient for the added coordinate.</p>

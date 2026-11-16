@@ -26,7 +26,7 @@ description: "QuantLib::CompositeInstrument – Composite instrument"
 <p> <code>Example: </code> <code>static replication of a down-and-out barrier option </code> </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Methods that drive the calculation directly (such as <code>recalculate()</code>, <code>freeze()</code> and others) might not work correctly.</dl>
+<dd>Methods that drive the calculation directly (such as <code>recalculate()</code>, <code>freeze()</code> and others) might not work correctly.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Replication.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

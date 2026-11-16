@@ -18,12 +18,12 @@ description: "perlcompile – Introduction to the Perl Compiler-Translator"
 <p> The compiler back ends are in the <tt>&quot;B::&quot;</tt> hierarchy, and the front-end (the module that you, the user of the compiler, will sometimes interact with) is the O module. </p>
 <p> Here are the important back ends to know about, with their status expressed as a number from 0 (outline for later implementation) to 10 (if there&#8217;s a bug in it, we&#8217;re very surprised):</p>
 <dl>
-<dt>B::Lint</p>
-<dd> Complains if it finds dubious constructs in your source code. Status: 6 (it works adequately, but only has a very limited number of areas that it checks).</p>
-<dt>B::Deparse</p>
-<dd> Recreates the Perl source, making an attempt to format it coherently. Status: 8 (it works nicely, but a few obscure things are missing).</p>
-<dt>B::Xref</p>
-<dd> Reports on the declaration and use of subroutines and variables. Status: 8 (it works nicely, but still has a few lingering bugs).</dl>
+<dt>B::Lint</dt>
+<dd> Complains if it finds dubious constructs in your source code. Status: 6 (it works adequately, but only has a very limited number of areas that it checks).</dd>
+<dt>B::Deparse</dt>
+<dd> Recreates the Perl source, making an attempt to format it coherently. Status: 8 (it works nicely, but a few obscure things are missing).</dd>
+<dt>B::Xref</dt>
+<dd> Reports on the declaration and use of subroutines and variables. Status: 8 (it works nicely, but still has a few lingering bugs).</dd></dl>
 <h2>Using The Back Ends</h2>
 <p> The following sections describe how to use the various compiler back ends. They&#8217;re presented roughly in order of maturity, so that the most stable and proven back ends are described first, and the most experimental and incomplete back ends are described last. </p>
 <p> The O module automatically enabled the <code>-c</code> flag to Perl, which prevents Perl from executing your code once it has been compiled. This is why all the back ends print: </p>
@@ -50,14 +50,14 @@ description: "perlcompile – Introduction to the Perl Compiler-Translator"
 <p> This shows the variables used in the subroutine <tt>&quot;clear_noremap&quot;</tt>. The variable <tt>$ready_to_print</tt> is a <i>my()</i> (lexical) variable, <code>i</code>ntroduced (first declared with <i>my()</i>) on line 1069, and used on line 1079. The variable <tt>$&amp;</tt> from the main package is used on 1086, and so on. </p>
 <p> A line number may be prefixed by a single letter:</p>
 <dl>
-<dt>i</p>
-<dd> Lexical variable introduced (declared with <i>my()</i>) for the first time.</p>
-<dt>&amp;</p>
-<dd> Subroutine or method call.</p>
-<dt>s</p>
-<dd> Subroutine defined.</p>
-<dt>r</p>
-<dd> Format defined.</dl>
+<dt>i</dt>
+<dd> Lexical variable introduced (declared with <i>my()</i>) for the first time.</dd>
+<dt>&amp;</dt>
+<dd> Subroutine or method call.</dd>
+<dt>s</dt>
+<dd> Subroutine defined.</dd>
+<dt>r</dt>
+<dd> Format defined.</dd></dl>
 <p> The most useful option the cross referencer has is to save the report to a separate file. For instance, to save the report on <i>myperlprogram</i> to the file <i>report</i>: </p>
 <pre>
   $ perl -MO=Xref,-oreport myperlprogram
@@ -112,24 +112,24 @@ $ perl - MO = Deparse, -p - e 'print "Hello, world
 <p> See B::Lint for information on the options.</p>
 <h2>Module List for the Compiler Suite</h2>
 <dl>
-<dt>B</p>
-<dd> This module is the introspective (&#8220;reflective&#8221; in Java terms) module, which allows a Perl program to inspect its innards. The back end modules all use this module to gain access to the compiled parse tree. You, the user of a back end module, will not need to interact with B.</p>
-<dt>O</p>
-<dd> This module is the front-end to the compiler&#8217;s back ends. Normally called something like this: </p>
+<dt>B</dt>
+<dd> This module is the introspective (&#8220;reflective&#8221; in Java terms) module, which allows a Perl program to inspect its innards. The back end modules all use this module to gain access to the compiled parse tree. You, the user of a back end module, will not need to interact with B.</dd>
+<dt>O</dt>
+<dd> This module is the front-end to the compiler&#8217;s back ends. Normally called something like this: </dd>
 <pre>
   $ perl -MO=Deparse myperlprogram
 </pre>
 <p> This is like saying <tt>&quot;use O 'Deparse'&quot;</tt> in your Perl program.</p>
-<dt>B::Concise</p>
-<dd> This module prints a concise (but complete) version of the Perl parse tree. Its output is more customizable than the one of B::Terse or B::Debug (and it can emulate them). This module is useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</p>
-<dt>B::Debug</p>
-<dd> This module dumps the Perl parse tree in verbose detail to <font SIZE="-1">STDOUT</font>. It&#8217;s useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</p>
-<dt>B::Deparse</p>
-<dd> This module produces Perl source code from the compiled parse tree. It is useful in debugging and deconstructing other people&#8217;s code, also as a pretty-printer for your own source. See &#8220;The Decompiling Back End&#8221; for details about usage.</p>
-<dt>B::Lint</p>
-<dd> This module inspects the compiled form of your source code for things which, while some people frown on them, aren&#8217;t necessarily bad enough to justify a warning. For instance, use of an array in scalar context without explicitly saying <tt>&quot;scalar(@array)&quot;</tt> is something that Lint can identify. See &#8220;The Lint Back End&#8221; for details about usage.</p>
-<dt>B::Showlex</p>
-<dd> This module prints out the <i>my()</i> variables used in a function or a file. To get a list of the <i>my()</i> variables used in the subroutine <i>mysub()</i> defined in the file myperlprogram: </p>
+<dt>B::Concise</dt>
+<dd> This module prints a concise (but complete) version of the Perl parse tree. Its output is more customizable than the one of B::Terse or B::Debug (and it can emulate them). This module is useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</dd>
+<dt>B::Debug</dt>
+<dd> This module dumps the Perl parse tree in verbose detail to <font SIZE="-1">STDOUT</font>. It&#8217;s useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</dd>
+<dt>B::Deparse</dt>
+<dd> This module produces Perl source code from the compiled parse tree. It is useful in debugging and deconstructing other people&#8217;s code, also as a pretty-printer for your own source. See &#8220;The Decompiling Back End&#8221; for details about usage.</dd>
+<dt>B::Lint</dt>
+<dd> This module inspects the compiled form of your source code for things which, while some people frown on them, aren&#8217;t necessarily bad enough to justify a warning. For instance, use of an array in scalar context without explicitly saying <tt>&quot;scalar(@array)&quot;</tt> is something that Lint can identify. See &#8220;The Lint Back End&#8221; for details about usage.</dd>
+<dt>B::Showlex</dt>
+<dd> This module prints out the <i>my()</i> variables used in a function or a file. To get a list of the <i>my()</i> variables used in the subroutine <i>mysub()</i> defined in the file myperlprogram: </dd>
 <pre>
   $ perl -MO=Showlex,mysub myperlprogram
 </pre>
@@ -138,11 +138,11 @@ $ perl - MO = Deparse, -p - e 'print "Hello, world
   $ perl -MO=Showlex myperlprogram
 </pre>
 <p> [<font SIZE="-1">BROKEN</font>]</p>
-<dt>B::Terse</p>
-<dd> This module prints the contents of the parse tree, but without as much information as B::Debug. For comparison, <tt>&quot;print &quot;Hello, world.&quot;&quot;</tt> produced 96 lines of output from B::Debug, but only 6 from B::Terse. </p>
+<dt>B::Terse</dt>
+<dd> This module prints the contents of the parse tree, but without as much information as B::Debug. For comparison, <tt>&quot;print &quot;Hello, world.&quot;&quot;</tt> produced 96 lines of output from B::Debug, but only 6 from B::Terse. </dd>
 <p> This module is useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</p>
-<dt>B::Xref</p>
-<dd> This module prints a report on where the variables, subroutines, and formats are defined and used within a program and the modules it loads. See &#8220;The Cross-Referencing Back End&#8221; for details about usage.</dl>
+<dt>B::Xref</dt>
+<dd> This module prints a report on where the variables, subroutines, and formats are defined and used within a program and the modules it loads. See &#8220;The Cross-Referencing Back End&#8221; for details about usage.</dd></dl>
 <h2>KNOWN PROBLEMS</h2>
 <p> BEGIN{} blocks are executed while compiling your code. Any external state that is initialized in BEGIN{}, such as opening files, initiating database connections etc., do not behave properly. To work around this, Perl has an INIT{} block that corresponds to code being executed before your program begins running but after your program has finished being compiled. Execution order: BEGIN{}, (possible save of state through compiler back-end), INIT{}, program runs, END{}.</p>
 <h2>AUTHOR</h2>

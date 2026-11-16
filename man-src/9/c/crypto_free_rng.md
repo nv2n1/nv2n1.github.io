@@ -14,12 +14,12 @@ description: "crypto_free_rng – zeroize and free RNG handle"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle to be freed</dl>
+</dd><dd>cipher handle to be freed</dd></dl>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,17 +14,17 @@ description: "nand_read_oob – [MTD Interface] NAND read data and/or out-of-ban
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>offset to read from</dl>
+<dd>offset to read from</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>oob operation description structure</dl>
+<dd>oob operation description structure</dd></dl>
 <h2>Description</h2>
 <p>NAND read data and/or out-of-band data.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

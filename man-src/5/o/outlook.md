@@ -10,9 +10,9 @@ description: "outlook.pst – format of MS Outlook .pst file"
 <p>outlook.pst &#8211; format of MS Outlook .pst file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>outlook.pst</code> </p>
+<dt> <code>outlook.pst</code> </dt>
 <h2>Overview</h2>
-<dd>Low level or primitive items in a .pst file are identified by an I_ID value. Higher level or composite items in a .pst file are identified by a D_ID value. There are two separate b-trees indexed by these I_ID and D_ID values. Starting with Outlook 2003, the file format changed from one with 32 bit pointers, to one with 64 bit pointers. We describe both formats here.</p>
+<dd>Low level or primitive items in a .pst file are identified by an I_ID value. Higher level or composite items in a .pst file are identified by a D_ID value. There are two separate b-trees indexed by these I_ID and D_ID values. Starting with Outlook 2003, the file format changed from one with 32 bit pointers, to one with 64 bit pointers. We describe both formats here.</dd>
 <h2>32 Bit File Header</h2>
 <p>The 32 bit file header is located at offset 0 in the .pst file. </p>
 <pre>0000 21 42 44 4e 49 f8 64 d9 53 4d 0e 00 13 00 01 01
@@ -905,3 +905,4 @@ description: "outlook.pst – format of MS Outlook .pst file"
  repeating
 0008 i_id [8 bytes] 0x008310 in this case
 0010 i_id [8 bytes] 0x00831c in this case</pre>
+</dl>

@@ -11,13 +11,9 @@ std::move_backward - std::move_backward
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class BidirIt1, class BidirIt2 &gt;                                           (since C++11)
-
 BidirIt2 move_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last );            (until C++20)
-
 template&lt; class BidirIt1, class BidirIt2 &gt;                                           (since C++20)
-
 constexpr BidirIt2 move_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last );</code></pre> 
 Moves the elements from the range [first, last), to another range ending at d_last. The elements are moved in reverse order (the last element is moved first), but their relative order is preserved. 
 The behavior is undefined if d_last is within (first, last]. std::move must be used instead of std::move_backward in that case. 
@@ -60,14 +56,10 @@ When moving overlapping ranges, std::move is appropriate when moving to the left
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;std::string&gt; src{&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;};
     std::vector&lt;std::string&gt; dest(src.size());

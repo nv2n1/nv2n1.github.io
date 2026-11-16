@@ -27,11 +27,11 @@ url: "/docs/linux/man/1-perl5181delta/"
 
 <dl>
 <dt>&bull;
-<dd> B has been upgraded from 1.42 to 1.42_01, fixing bugs related to lexical subroutines.
-<dt>&bull;
-<dd> Digest::SHA has been upgraded from 5.84 to 5.84_01, fixing a crashing bug. [<font SIZE="-1">RT</font> #118649]
-<dt>&bull;
-<dd> Module::CoreList has been upgraded from 2.89 to 2.96.</dl>
+</dt><dd> B has been upgraded from 1.42 to 1.42_01, fixing bugs related to lexical subroutines.
+</dd><dt>&bull;
+</dt><dd> Digest::SHA has been upgraded from 5.84 to 5.84_01, fixing a crashing bug. [<font SIZE="-1">RT</font> #118649]
+</dd><dt>&bull;
+</dt><dd> Module::CoreList has been upgraded from 2.89 to 2.96.</dd></dl>
 
 <h2>Platform Support</h2>
 
@@ -39,51 +39,49 @@ url: "/docs/linux/man/1-perl5181delta/"
 
 <dl>
 <dt><font SIZE="-1">AIX</font>
-<dd> A rarely-encountered configuration bug in the <font SIZE="-1">AIX</font> hints file has been corrected.
-<dt>MidnightBSD
-<dd> After a patch to the relevant hints file, perl should now build correctly on MidnightBSD 0.4-RELEASE.</dl>
+</dt><dd> A rarely-encountered configuration bug in the <font SIZE="-1">AIX</font> hints file has been corrected.
+</dd><dt>MidnightBSD
+</dt><dd> After a patch to the relevant hints file, perl should now build correctly on MidnightBSD 0.4-RELEASE.</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> Starting in v5.18.0, a construct like <tt>&quot;/[#](?{})/x&quot;</tt> would have its <tt>&quot;#&quot;</tt> incorrectly interpreted as a comment. The code block would be skipped, unparsed. This has been corrected.
-<dt>&bull;
-<dd> A number of memory leaks related to the new, experimental regexp bracketed character class feature have been plugged.
-<dt>&bull;
-<dd> The <font SIZE="-1">OP</font> allocation code now returns correctly aligned memory in all cases for <tt>&quot;struct pmop&quot;</tt>. Previously it could return memory only aligned to a 4-byte boundary, which is not correct for an ithreads build with 64 bit IVs on some 32 bit platforms. Notably, this caused the build to fail completely on sparc GNU/Linux. [<font SIZE="-1">RT</font> #118055]
-<dt>&bull;
-<dd> The debugger's <tt>&quot;man&quot;</tt> command been fixed. It was broken in the v5.18.0 release. The <tt>&quot;man&quot;</tt> command is aliased to the names <tt>&quot;doc&quot;</tt> and <tt>&quot;perldoc&quot;</tt> - all now work again.
-<dt>&bull;
-<dd> <tt>@_</tt> is now correctly visible in the debugger, fixing a regression introduced in v5.18.0's debugger. [<font SIZE="-1">RT</font> #118169]
-<dt>&bull;
-<dd> Fixed a small number of regexp constructions that could either fail to match or crash perl when the string being matched against was allocated above the 2GB line on 32-bit systems. [<font SIZE="-1">RT</font> #118175]
-<dt>&bull;
-<dd> Perl v5.16 inadvertently introduced a bug whereby calls to XSUBs that were not visible at compile time were treated as lvalues and could be assigned to, even when the subroutine was not an lvalue sub. This has been fixed. [perl #117947]
-<dt>&bull;
-<dd> Perl v5.18 inadvertently introduced a bug whereby dual-vars (i.e. variables with both string and numeric values, such as <tt>$!</tt> ) where the truthness of the variable was determined by the numeric value rather than the string value. [<font SIZE="-1">RT</font> #118159]
-<dt>&bull;
-<dd> Perl v5.18 inadvertently introduced a bug whereby interpolating mixed up- and down-graded <font SIZE="-1">UTF-8</font> strings in a regex could result in malformed <font SIZE="-1">UTF-8</font> in the pattern: specifically if a downgraded character in the range <tt>&quot;\x80..\xff&quot;</tt> followed a <font SIZE="-1">UTF-8</font> string, e.g. 
-
+</dt><dd> Starting in v5.18.0, a construct like <tt>&quot;/[#](?{})/x&quot;</tt> would have its <tt>&quot;#&quot;</tt> incorrectly interpreted as a comment. The code block would be skipped, unparsed. This has been corrected.
+</dd><dt>&bull;
+</dt><dd> A number of memory leaks related to the new, experimental regexp bracketed character class feature have been plugged.
+</dd><dt>&bull;
+</dt><dd> The <font SIZE="-1">OP</font> allocation code now returns correctly aligned memory in all cases for <tt>&quot;struct pmop&quot;</tt>. Previously it could return memory only aligned to a 4-byte boundary, which is not correct for an ithreads build with 64 bit IVs on some 32 bit platforms. Notably, this caused the build to fail completely on sparc GNU/Linux. [<font SIZE="-1">RT</font> #118055]
+</dd><dt>&bull;
+</dt><dd> The debugger's <tt>&quot;man&quot;</tt> command been fixed. It was broken in the v5.18.0 release. The <tt>&quot;man&quot;</tt> command is aliased to the names <tt>&quot;doc&quot;</tt> and <tt>&quot;perldoc&quot;</tt> - all now work again.
+</dd><dt>&bull;
+</dt><dd> <tt>@_</tt> is now correctly visible in the debugger, fixing a regression introduced in v5.18.0's debugger. [<font SIZE="-1">RT</font> #118169]
+</dd><dt>&bull;
+</dt><dd> Fixed a small number of regexp constructions that could either fail to match or crash perl when the string being matched against was allocated above the 2GB line on 32-bit systems. [<font SIZE="-1">RT</font> #118175]
+</dd><dt>&bull;
+</dt><dd> Perl v5.16 inadvertently introduced a bug whereby calls to XSUBs that were not visible at compile time were treated as lvalues and could be assigned to, even when the subroutine was not an lvalue sub. This has been fixed. [perl #117947]
+</dd><dt>&bull;
+</dt><dd> Perl v5.18 inadvertently introduced a bug whereby dual-vars (i.e. variables with both string and numeric values, such as <tt>$!</tt> ) where the truthness of the variable was determined by the numeric value rather than the string value. [<font SIZE="-1">RT</font> #118159]
+</dd><dt>&bull;
+</dt><dd> Perl v5.18 inadvertently introduced a bug whereby interpolating mixed up- and down-graded <font SIZE="-1">UTF-8</font> strings in a regex could result in malformed <font SIZE="-1">UTF-8</font> in the pattern: specifically if a downgraded character in the range <tt>&quot;\x80..\xff&quot;</tt> followed a <font SIZE="-1">UTF-8</font> string, e.g. 
  <pre><code>
 utf8::upgrade(my $u = "\x{e5}");
 utf8::downgrade(my $d = "\x{e5}");
 / $u$d /
 </code></pre> 
-
  [perl #118297].
-<dt>&bull;
-<dd> Lexical constants (<tt>&quot;my sub a() { 42 }&quot;</tt>) no longer crash when inlined.
-<dt>&bull;
-<dd> Parameter prototypes attached to lexical subroutines are now respected when compiling sub calls without parentheses. Previously, the prototypes were honoured only for calls <i>with</i> parentheses. [<font SIZE="-1">RT</font> #116735]
-<dt>&bull;
-<dd> Syntax errors in lexical subroutines in combination with calls to the same subroutines no longer cause crashes at compile time.
-<dt>&bull;
-<dd> The dtrace sub-entry probe now works with lexical subs, instead of crashing [perl #118305].
-<dt>&bull;
-<dd> Undefining an inlinable lexical subroutine (<tt>&quot;my sub foo() { 42 } undef &amp;foo&quot;</tt>) would result in a crash if warnings were turned on.
-<dt>&bull;
-<dd> Deep recursion warnings no longer crash lexical subroutines. [<font SIZE="-1">RT</font> #118521]</dl>
+</dd><dt>&bull;
+</dt><dd> Lexical constants (<tt>&quot;my sub a() { 42 }&quot;</tt>) no longer crash when inlined.
+</dd><dt>&bull;
+</dt><dd> Parameter prototypes attached to lexical subroutines are now respected when compiling sub calls without parentheses. Previously, the prototypes were honoured only for calls <i>with</i> parentheses. [<font SIZE="-1">RT</font> #116735]
+</dd><dt>&bull;
+</dt><dd> Syntax errors in lexical subroutines in combination with calls to the same subroutines no longer cause crashes at compile time.
+</dd><dt>&bull;
+</dt><dd> The dtrace sub-entry probe now works with lexical subs, instead of crashing [perl #118305].
+</dd><dt>&bull;
+</dt><dd> Undefining an inlinable lexical subroutine (<tt>&quot;my sub foo() { 42 } undef &amp;foo&quot;</tt>) would result in a crash if warnings were turned on.
+</dd><dt>&bull;
+</dt><dd> Deep recursion warnings no longer crash lexical subroutines. [<font SIZE="-1">RT</font> #118521]</dd></dl>
 
 <h2>Acknowledgements</h2>
 

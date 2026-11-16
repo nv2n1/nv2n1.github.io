@@ -15,8 +15,8 @@ description: "glite-lb-state_history – utility to show job state changes store
 <p> <code>glite-lb-state_history</code> shows the job state changes from the events stored in Logging and Bookkeeping. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code> <i>FIELDS</i></p>
-<dd> Job status fields to show in the history listing. </p>
+<dt><code>-f</code> <i>FIELDS</i></dt>
+<dd> Job status fields to show in the history listing. </dd>
 <p> Basic information always shown:<br />
 &nbsp;<wbr>&nbsp;<wbr><code>event name</code><br />
 &nbsp;<wbr>&nbsp;<wbr><code>jobid</code><br />

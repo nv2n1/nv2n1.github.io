@@ -14,13 +14,13 @@ description: "usb_alloc_dev – usb device constructor (usbcore-internal)"
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>hub to which device is connected; null to allocate a root hub</dl>
+</dd><dd>hub to which device is connected; null to allocate a root hub</dd></dl>
 <p> <i>bus</i></p>
 <dl>
-<dd>bus used to access the device</dl>
+<dd>bus used to access the device</dd></dl>
 <p> <i>port1</i></p>
 <dl>
-<dd>one-based index of port; ignored for root hubs</dl>
+<dd>one-based index of port; ignored for root hubs</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

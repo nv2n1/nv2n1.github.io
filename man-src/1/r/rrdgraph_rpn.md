@@ -20,23 +20,23 @@ description: "rrdgraph_rpn – About RPN Math in rrdtool graph"
 <p> This means: push variable <i>mydata</i>, push the number 8, execute the operator <i>*</i>. The operator needs two elements and uses those to return one value. This value is then stored in <i>mydatabits</i>. As you may have guessed, this instruction means nothing more than <i>mydatabits = mydata * 8</i>. The real power of <font SIZE="-1"><code>RPN</code></font> lies in the fact that it is always clear in which order to process the input. For expressions like <tt>&quot;a = b + 3 * 5&quot;</tt> you need to multiply 3 with 5 first before you add <i>b</i> to get <i>a</i>. However, with parentheses you could change this order: <tt>&quot;a = (b + 3) * 5&quot;</tt>. In <font SIZE="-1"><code>RPN</code></font>, you would do <tt>&quot;a = b, 3, +, 5, *&quot;</tt> without the need for parentheses.</p>
 <h2>OPERATORS</h2>
 <dl>
-<dt>Boolean operators</p>
-<dd> <font SIZE="-1"><code>LT</code></font><code>, </code><font SIZE="-1"><code>LE</code></font><code>, </code><font SIZE="-1"><code>GT</code></font><code>, </code><font SIZE="-1"><code>GE</code></font><code>, </code><font SIZE="-1"><code>EQ</code></font><code>, </code><font SIZE="-1"><code>NE</code></font> </p>
+<dt>Boolean operators</dt>
+<dd> <font SIZE="-1"><code>LT</code></font><code>, </code><font SIZE="-1"><code>LE</code></font><code>, </code><font SIZE="-1"><code>GT</code></font><code>, </code><font SIZE="-1"><code>GE</code></font><code>, </code><font SIZE="-1"><code>EQ</code></font><code>, </code><font SIZE="-1"><code>NE</code></font> </dd>
 <p> Pop two elements from the stack, compare them for the selected condition and return 1 for true or 0 for false. Comparing an <i>unknown</i> or an <i>infinite</i> value will result in <i>unknown</i> returned &#8230; which will also be treated as false by the <font SIZE="-1"><code>IF</code></font> call. </p>
 <p> <font SIZE="-1"><code>UN</code></font><code>, </code><font SIZE="-1"><code>ISINF</code></font> </p>
 <p> Pop one element from the stack, compare this to <i>unknown</i> respectively to <i>positive or negative infinity</i>. Returns 1 for true or 0 for false. </p>
 <p> <font SIZE="-1"><code>IF</code></font> </p>
 <p> Pops three elements from the stack. If the element popped last is 0 (false), the value popped first is pushed back onto the stack, otherwise the value popped second is pushed back. This does, indeed, mean that any value other than 0 is considered to be true. </p>
 <p> Example: <tt>&quot;A,B,C,IF&quot;</tt> should be read as <tt>&quot;if (A) then (B) else (C)&quot;</tt> </p>
-<dt>Comparing values</p>
-<dd> <font SIZE="-1"><code>MIN</code></font><code>, </code><font SIZE="-1"><code>MAX</code></font> </p>
+<dt>Comparing values</dt>
+<dd> <font SIZE="-1"><code>MIN</code></font><code>, </code><font SIZE="-1"><code>MAX</code></font> </dd>
 <p> Pops two elements from the stack and returns the smaller or larger, respectively. Note that <i>infinite</i> is larger than anything else. If one of the input numbers is <i>unknown</i> then the result of the operation will be <i>unknown</i> too. </p>
 <p> <font SIZE="-1"><code>LIMIT</code></font> </p>
 <p> Pops two elements from the stack and uses them to define a range. Then it pops another element and if it falls inside the range, it is pushed back. If not, an <i>unknown</i> is pushed. </p>
 <p> The range defined includes the two boundaries (so: a number equal to one of the boundaries will be pushed back). If any of the three numbers involved is either <i>unknown</i> or <i>infinite</i> this function will always return an <i>unknown</i> </p>
 <p> Example: <tt>&quot;CDEF:a=alpha,0,100,LIMIT&quot;</tt> will return <i>unknown</i> if alpha is lower than 0 or if it is higher than 100. </p>
-<dt>Arithmetics</p>
-<dd> <code>+, -, *, /, %</code> </p>
+<dt>Arithmetics</dt>
+<dd> <code>+, -, *, /, %</code> </dd>
 <p> Add, subtract, multiply, divide, modulo </p>
 <p> <font SIZE="-1"><code>ADDNAN</code></font> </p>
 <p> NAN-safe addition. If one parameter is <font SIZE="-1">NAN/UNKNOWN</font> it&#8217;ll be treated as zero. If both parameters are <font SIZE="-1">NAN/UNKNOWN</font>, <font SIZE="-1">NAN/UNKNOWN</font> will be returned. </p>
@@ -53,8 +53,8 @@ description: "rrdgraph_rpn – About RPN Math in rrdtool graph"
 <p> Convert angle in degrees to radians, or radians to degrees. </p>
 <p> <font SIZE="-1"><code>ABS</code></font> </p>
 <p> Take the absolute value.</p>
-<dt>Set Operations</p>
-<dd> <font SIZE="-1"><code>SORT</code></font><code>, </code><font SIZE="-1"><code>REV</code></font> </p>
+<dt>Set Operations</dt>
+<dd> <font SIZE="-1"><code>SORT</code></font><code>, </code><font SIZE="-1"><code>REV</code></font> </dd>
 <p> Pop one element from the stack. This is the <i>count</i> of items to be sorted (or reversed). The top <i>count</i> of the remaining elements are then sorted (or reversed) in place on the stack. </p>
 <p> Example: <tt>&quot;CDEF:x=v1,v2,v3,v4,v5,v6,6,SORT,POP,5,REV,POP,+,+,+,4,/&quot;</tt> will compute the average of the values v1 to v6 after removing the smallest and largest. </p>
 <p> <font SIZE="-1"><code>AVG</code></font> </p>
@@ -103,8 +103,8 @@ will be the average between(t1 - shift1 - window) and (t1 - shift1) and between(
 &nbsp;<wbr>TICK:exceeds#aa000080:1 </p>
 <p> Note: Experience has shown that a factor between 3 and 5 to scale sigma is a good discriminator to detect abnormal behavior. This obviously depends also on the type of data and how &#8220;noisy&#8221; the data series is. </p>
 <p> This prediction can only be used for short term extrapolations &#8211; say a few days into the future-</p>
-<dt>Special values</p>
-<dd> <font SIZE="-1"><code>UNKN</code></font> </p>
+<dt>Special values</dt>
+<dd> <font SIZE="-1"><code>UNKN</code></font> </dd>
 <p> Pushes an unknown value on the stack </p>
 <p> <font SIZE="-1"><code>INF</code></font><code>, </code><font SIZE="-1"><code>NEGINF</code></font> </p>
 <p> Pushes a positive or negative infinite value on the stack. When such a value is graphed, it appears at the top or bottom of the graph, no matter what the actual value on the y-axis is. </p>
@@ -114,39 +114,39 @@ will be the average between(t1 - shift1 - window) and (t1 - shift1) and between(
 <p> Pushes an <i>unknown</i> value if this is the first value of a data set or otherwise the result of the vname variable at the previous time step. This allows you to do calculations across the data. This function cannot be used in <font SIZE="-1"><code>VDEF</code></font> instructions. </p>
 <p> <font SIZE="-1"><code>COUNT</code></font> </p>
 <p> Pushes the number 1 if this is the first value of the data set, the number 2 if it is the second, and so on. This special value allows you to make calculations based on the position of the value within the data set. This function cannot be used in <font SIZE="-1"><code>VDEF</code></font> instructions.</p>
-<dt>Time</p>
-<dd> Time inside RRDtool is measured in seconds since the epoch. The epoch is defined to be <tt>&quot;Thu Jan&nbsp;<wbr>&nbsp;<wbr>1 00:00:00 UTC 1970&quot;</tt>. </p>
+<dt>Time</dt>
+<dd> Time inside RRDtool is measured in seconds since the epoch. The epoch is defined to be <tt>&quot;Thu Jan&nbsp;<wbr>&nbsp;<wbr>1 00:00:00 UTC 1970&quot;</tt>. </dd>
 <p> <font SIZE="-1"><code>NOW</code></font> </p>
 <p> Pushes the current time on the stack. </p>
 <p> <font SIZE="-1"><code>TIME</code></font> </p>
 <p> Pushes the time the currently processed value was taken at onto the stack. </p>
 <p> <font SIZE="-1"><code>LTIME</code></font> </p>
 <p> Takes the time as defined by <font SIZE="-1"><code>TIME</code></font>, applies the time zone offset valid at that time including daylight saving time if your <font SIZE="-1">OS</font> supports it, and pushes the result on the stack. There is an elaborate example in the examples section below on how to use this.</p>
-<dt>Processing the stack directly</p>
-<dd> <font SIZE="-1"><code>DUP</code></font><code>, </code><font SIZE="-1"><code>POP</code></font><code>, </code><font SIZE="-1"><code>EXC</code></font> </p>
+<dt>Processing the stack directly</dt>
+<dd> <font SIZE="-1"><code>DUP</code></font><code>, </code><font SIZE="-1"><code>POP</code></font><code>, </code><font SIZE="-1"><code>EXC</code></font> </dd>
 <p> Duplicate the top element, remove the top element, exchange the two top elements. </p>
 </dl>
 <h2>VARIABLES</h2>
 <p> These operators work only on <font SIZE="-1"><code>VDEF</code></font> statements. Note that currently <font SIZE="-1">ONLY</font> these work for <font SIZE="-1"><code>VDEF</code></font>.</p>
 <dl>
-<dt><font SIZE="-1">MAXIMUM</font>, <font SIZE="-1">MINIMUM</font>, <font SIZE="-1">AVERAGE</font></p>
-<dd> Return the corresponding value, <font SIZE="-1">MAXIMUM</font> and <font SIZE="-1">MINIMUM</font> also return the first occurrence of that value in the time component. </p>
+<dt><font SIZE="-1">MAXIMUM</font>, <font SIZE="-1">MINIMUM</font>, <font SIZE="-1">AVERAGE</font></dt>
+<dd> Return the corresponding value, <font SIZE="-1">MAXIMUM</font> and <font SIZE="-1">MINIMUM</font> also return the first occurrence of that value in the time component. </dd>
 <p> Example: <tt>&quot;VDEF:avg=mydata,AVERAGE&quot;</tt></p>
-<dt><font SIZE="-1">STDEV</font></p>
-<dd> Returns the standard deviation of the values. </p>
+<dt><font SIZE="-1">STDEV</font></dt>
+<dd> Returns the standard deviation of the values. </dd>
 <p> Example: <tt>&quot;VDEF:stdev=mydata,STDEV&quot;</tt></p>
-<dt><font SIZE="-1">LAST</font>, <font SIZE="-1">FIRST</font></p>
-<dd> Return the last/first non-nan or infinite value for the selected data stream, including its timestamp. </p>
+<dt><font SIZE="-1">LAST</font>, <font SIZE="-1">FIRST</font></dt>
+<dd> Return the last/first non-nan or infinite value for the selected data stream, including its timestamp. </dd>
 <p> Example: <tt>&quot;VDEF:first=mydata,FIRST&quot;</tt></p>
-<dt><font SIZE="-1">TOTAL</font></p>
-<dd> Returns the rate from each defined time slot multiplied with the step size. This can, for instance, return total bytes transferred when you have logged bytes per second. The time component returns the number of seconds. </p>
+<dt><font SIZE="-1">TOTAL</font></dt>
+<dd> Returns the rate from each defined time slot multiplied with the step size. This can, for instance, return total bytes transferred when you have logged bytes per second. The time component returns the number of seconds. </dd>
 <p> Example: <tt>&quot;VDEF:total=mydata,TOTAL&quot;</tt></p>
-<dt><font SIZE="-1">PERCENT</font>, <font SIZE="-1">PERCENTNAN</font></p>
-<dd> This should follow a <font SIZE="-1"><code>DEF</code></font> or <font SIZE="-1"><code>CDEF</code></font> <i>vname</i>. The <i>vname</i> is popped, another number is popped which is a certain percentage (0..100). The data set is then sorted and the value returned is chosen such that <i>percentage</i> percent of the values is lower or equal than the result. For <font SIZE="-1">PERCENTNAN</font> <i>Unknown</i> values are ignored, but for <font SIZE="-1">PERCENT</font> <i>Unknown</i> values are considered lower than any finite number for this purpose so if this operator returns an <i>unknown</i> you have quite a lot of them in your data. <code>Inf</code>inite numbers are lesser, or more, than the finite numbers and are always more than the <i>Unknown</i> numbers. (NaN &lt; -INF &lt; finite values &lt; <font SIZE="-1">INF</font>) </p>
+<dt><font SIZE="-1">PERCENT</font>, <font SIZE="-1">PERCENTNAN</font></dt>
+<dd> This should follow a <font SIZE="-1"><code>DEF</code></font> or <font SIZE="-1"><code>CDEF</code></font> <i>vname</i>. The <i>vname</i> is popped, another number is popped which is a certain percentage (0..100). The data set is then sorted and the value returned is chosen such that <i>percentage</i> percent of the values is lower or equal than the result. For <font SIZE="-1">PERCENTNAN</font> <i>Unknown</i> values are ignored, but for <font SIZE="-1">PERCENT</font> <i>Unknown</i> values are considered lower than any finite number for this purpose so if this operator returns an <i>unknown</i> you have quite a lot of them in your data. <code>Inf</code>inite numbers are lesser, or more, than the finite numbers and are always more than the <i>Unknown</i> numbers. (NaN &lt; -INF &lt; finite values &lt; <font SIZE="-1">INF</font>) </dd>
 <p> Example: <tt>&quot;VDEF:perc95=mydata,95,PERCENT&quot;</tt><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><tt>&quot;VDEF:percnan95=mydata,95,PERCENTNAN&quot;</tt></p>
-<dt><font SIZE="-1">LSLSLOPE</font>, <font SIZE="-1">LSLINT</font>, <font SIZE="-1">LSLCORREL</font></p>
-<dd> Return the parameters for a <code>L</code>east <code>S</code>quares <code>L</code>ine <i>(y = mx +b)</i> which approximate the provided dataset. <font SIZE="-1">LSLSLOPE</font> is the slope <i>(m)</i> of the line related to the <font SIZE="-1">COUNT</font> position of the data. <font SIZE="-1">LSLINT</font> is the y-intercept <i>(b)</i>, which happens also to be the first data point on the graph. <font SIZE="-1">LSLCORREL</font> is the Correlation Coefficient (also know as Pearson&#8217;s Product Moment Correlation Coefficient). It will range from 0 to +/-1 and represents the quality of fit for the approximation. </p>
+<dt><font SIZE="-1">LSLSLOPE</font>, <font SIZE="-1">LSLINT</font>, <font SIZE="-1">LSLCORREL</font></dt>
+<dd> Return the parameters for a <code>L</code>east <code>S</code>quares <code>L</code>ine <i>(y = mx +b)</i> which approximate the provided dataset. <font SIZE="-1">LSLSLOPE</font> is the slope <i>(m)</i> of the line related to the <font SIZE="-1">COUNT</font> position of the data. <font SIZE="-1">LSLINT</font> is the y-intercept <i>(b)</i>, which happens also to be the first data point on the graph. <font SIZE="-1">LSLCORREL</font> is the Correlation Coefficient (also know as Pearson&#8217;s Product Moment Correlation Coefficient). It will range from 0 to +/-1 and represents the quality of fit for the approximation. </dd>
 <p> Example: <tt>&quot;VDEF:slope=mydata,LSLSLOPE&quot;</tt></dl>
 <h2>SEE ALSO</h2>
 <p> rrdgraph gives an overview of how <code>rrdtool graph</code> works. rrdgraph_data describes <font SIZE="-1"><code>DEF</code></font>,<font SIZE="-1"><code>CDEF</code></font> and <font SIZE="-1"><code>VDEF</code></font> in detail. rrdgraph_rpn describes the <font SIZE="-1"><code>RPN</code></font> language used in the <code>?DEF</code> statements. rrdgraph_graph page describes all of the graph and print functions. </p>
@@ -155,3 +155,4 @@ will be the average between(t1 - shift1 - window) and (t1 - shift1) and between(
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>
 <h2>Index</h2>
+</p>

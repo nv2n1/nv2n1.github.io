@@ -11,7 +11,6 @@ std::tolower - std::tolower
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int tolower(int ch);</code></pre> 
 Converts the given character to lowercase according to the character conversion rules defined by the currently installed C locale. 
 In the default &quot;C&quot; locale, the following uppercase letters ABCDEFGHIJKLMNOPQRSTUVWXYZ are replaced with respective lowercase letters abcdefghijklmnopqrstuvwxyz. 
@@ -46,12 +45,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\xb4'; // the character Ž in ISO-8859-15
                               // but ´ (acute accent) in ISO-8859-1

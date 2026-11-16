@@ -23,16 +23,16 @@ description: "derrick — a simple network stream recorder"
 </pre>
 <p> The different fields of the output are defined as follows</p>
 <dl>
-<dt>&lt;<font SIZE="-1">TIME</font>&gt;</p>
-<dd> This field specifies the time at which the payload has been monitored. The time is given as standard <font SIZE="-1">UNIX</font> time and encoded as a floating-point number of seconds.</p>
-<dt>&lt;<font SIZE="-1">FLAG</font>&gt;</p>
-<dd> This field indicates the type of payload that has been recorded. <code>U</code> refers to a <font SIZE="-1">UDP</font> payload and <code>T</code> refers to a <font SIZE="-1">TCP</font> payload. Additionally, the beginning and end of <font SIZE="-1">TCP</font> streams are marked by <code>T+</code> and <code>T-</code>, respectively.</p>
-<dt>&lt;<font SIZE="-1">SRC</font>&gt;</p>
-<dd> This field specifies the source of the payload. It is a tuple of an <font SIZE="-1">IP</font> address and a port number in form of <font SIZE="-1"><code>IP:PORT</code></font>.</p>
-<dt>&lt;<font SIZE="-1">DST</font>&gt;</p>
-<dd> This field specifies the destination of the payload. It is a tuple of an <font SIZE="-1">IP</font> address and a port number in form of <font SIZE="-1"><code>IP:PORT</code></font>.</p>
-<dt>&lt;<font SIZE="-1">PAYLOAD</font>&gt;</p>
-<dd> The last field is the monitored payload. Non-printable characters are escaped using standard <font SIZE="-1">URI</font> encoding. Each non-printable characters is replaced by <tt>%XX</tt> where <font SIZE="-1">XX</font> is the character&#8217;s hexadecimal <font SIZE="-1">ASCII</font> number.</dl>
+<dt>&lt;<font SIZE="-1">TIME</font>&gt;</dt>
+<dd> This field specifies the time at which the payload has been monitored. The time is given as standard <font SIZE="-1">UNIX</font> time and encoded as a floating-point number of seconds.</dd>
+<dt>&lt;<font SIZE="-1">FLAG</font>&gt;</dt>
+<dd> This field indicates the type of payload that has been recorded. <code>U</code> refers to a <font SIZE="-1">UDP</font> payload and <code>T</code> refers to a <font SIZE="-1">TCP</font> payload. Additionally, the beginning and end of <font SIZE="-1">TCP</font> streams are marked by <code>T+</code> and <code>T-</code>, respectively.</dd>
+<dt>&lt;<font SIZE="-1">SRC</font>&gt;</dt>
+<dd> This field specifies the source of the payload. It is a tuple of an <font SIZE="-1">IP</font> address and a port number in form of <font SIZE="-1"><code>IP:PORT</code></font>.</dd>
+<dt>&lt;<font SIZE="-1">DST</font>&gt;</dt>
+<dd> This field specifies the destination of the payload. It is a tuple of an <font SIZE="-1">IP</font> address and a port number in form of <font SIZE="-1"><code>IP:PORT</code></font>.</dd>
+<dt>&lt;<font SIZE="-1">PAYLOAD</font>&gt;</dt>
+<dd> The last field is the monitored payload. Non-printable characters are escaped using standard <font SIZE="-1">URI</font> encoding. Each non-printable characters is replaced by <tt>%XX</tt> where <font SIZE="-1">XX</font> is the character&#8217;s hexadecimal <font SIZE="-1">ASCII</font> number.</dd></dl>
 <p> An example output of <code>derrick</code> looks as follows </p>
 <pre>
   05.80 T 10.100.163.103:58445 91.198.174.233:80 GET /index.html ...
@@ -41,26 +41,26 @@ description: "derrick — a simple network stream recorder"
 <h2>OPTIONS</h2>
 <p> <code>derrick</code> supports the following command-line <i>options</i> which can be used to control the recording of network traffic.</p>
 <dl>
-<dt><code>-i</code> <i>interface</i></p>
-<dd> Record network traffic from this <i>interface</i>. On Linux systems with 2.2 or later kernels, an interface argument of &#8220;any&#8221; can be used to capture packets from all interfaces.</p>
-<dt><code>-r</code> <i>file</i></p>
-<dd> Read network traffic from a dump <i>file</i> in pcap format. Dump files can be created using <code>tcpdump</code>.</p>
-<dt><code>-f</code> <i>expression</i></p>
-<dd> Filter network traffic using a filter <i>expression</i>. Only packets that match the expression will be recorded. Consult the man page of <code>tcpdump</code> for a description of filter expressions.</p>
-<dt><code>-l</code> <i>file</i></p>
-<dd> Write output to a compressed log <i>file</i> instead of stdout. This option can be used when <code>derrick</code> runs in the background. The log file will be rotated if a certain number of lines have been logged, see <code>-t</code>.</p>
-<dt><code>-b</code> <i>bytes</i></p>
-<dd> Record only the first <i>bytes</i> of each <font SIZE="-1">TCP</font> stream. The number of bytes is computed from incoming and outgoing <font SIZE="-1">TCP</font> payloads.</p>
-<dt><code>-m</code></p>
-<dd> Merge consecutive <font SIZE="-1">TCP</font> payloads in the same direction. This options comes handy if protocol messages are split over multiple <font SIZE="-1">TCP</font> payloads.</p>
-<dt><code>-t</code> <i>lines</i></p>
-<dd> Rotate the log file after the given number of <i>lines</i>.</p>
-<dt><code>-v</code></p>
-<dd> Increase the verbosity of <code>derrick</code> during recording.</p>
-<dt><code>-h</code></p>
-<dd> Print a brief help screen.</p>
-<dt><code>-V</code></p>
-<dd> Print a version and copyright string.</dl>
+<dt><code>-i</code> <i>interface</i></dt>
+<dd> Record network traffic from this <i>interface</i>. On Linux systems with 2.2 or later kernels, an interface argument of &#8220;any&#8221; can be used to capture packets from all interfaces.</dd>
+<dt><code>-r</code> <i>file</i></dt>
+<dd> Read network traffic from a dump <i>file</i> in pcap format. Dump files can be created using <code>tcpdump</code>.</dd>
+<dt><code>-f</code> <i>expression</i></dt>
+<dd> Filter network traffic using a filter <i>expression</i>. Only packets that match the expression will be recorded. Consult the man page of <code>tcpdump</code> for a description of filter expressions.</dd>
+<dt><code>-l</code> <i>file</i></dt>
+<dd> Write output to a compressed log <i>file</i> instead of stdout. This option can be used when <code>derrick</code> runs in the background. The log file will be rotated if a certain number of lines have been logged, see <code>-t</code>.</dd>
+<dt><code>-b</code> <i>bytes</i></dt>
+<dd> Record only the first <i>bytes</i> of each <font SIZE="-1">TCP</font> stream. The number of bytes is computed from incoming and outgoing <font SIZE="-1">TCP</font> payloads.</dd>
+<dt><code>-m</code></dt>
+<dd> Merge consecutive <font SIZE="-1">TCP</font> payloads in the same direction. This options comes handy if protocol messages are split over multiple <font SIZE="-1">TCP</font> payloads.</dd>
+<dt><code>-t</code> <i>lines</i></dt>
+<dd> Rotate the log file after the given number of <i>lines</i>.</dd>
+<dt><code>-v</code></dt>
+<dd> Increase the verbosity of <code>derrick</code> during recording.</dd>
+<dt><code>-h</code></dt>
+<dd> Print a brief help screen.</dd>
+<dt><code>-V</code></dt>
+<dd> Print a version and copyright string.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2011-2012 Konrad Rieck (konrad [at] mlsec.org) </p>
 <p> Derrick is licensed under the new <font SIZE="-1">BSD</font> License. See the file <i></i><font SIZE="-1"><i>COPYING</i></font><i></i> in the source distribution for more information. </p>

@@ -14,10 +14,10 @@ description: "change_bit – Toggle a bit in memory"
 <p><i>nr</i></p>
 <dl>
 <dd>
-<dd>Bit to change</dl>
+</dd><dd>Bit to change</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>Address to start counting from</dl>
+<dd>Address to start counting from</dd></dl>
 <h2>Description</h2>
 <p><code>change_bit</code> is atomic and may not be reordered. Note that <i>nr</i> may be almost arbitrarily large; this function is not restricted to acting on a single-word quantity.</p>
 <h2>Copyright</h2>

@@ -14,12 +14,12 @@ description: "gnutls_crypto_bigint_register2 – register a bigint interface"
 <p> <code>int gnutls_crypto_bigint_register2(int </code><i>priority</i><code>, int </code><i>version</i><code>, gnutls_crypto_bigint_st * </code><i>s</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>int priority</p>
-<dd> is the priority of the interface</p>
-<dt>int version</p>
-<dd> should be set to <code>GNUTLS_CRYPTO_API_VERSION</code></p>
-<dt>gnutls_crypto_bigint_st * s</p>
-<dd> is a structure holding new interface&#8217;s data</dl>
+<dt>int priority</dt>
+<dd> is the priority of the interface</dd>
+<dt>int version</dt>
+<dd> should be set to <code>GNUTLS_CRYPTO_API_VERSION</code></dd>
+<dt>gnutls_crypto_bigint_st * s</dt>
+<dd> is a structure holding new interface&#8217;s data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will register an interface for gnutls to operate on big integers. Any interface registered will override the included interface. The interface with the lowest priority will be used by gnutls. </p>
 <p> Note that the bigint interface must interoperate with the public key interface. Thus if this interface is updated the <code>gnutls_crypto_pk_register()</code> should also be used. </p>
@@ -38,6 +38,6 @@ description: "gnutls_crypto_bigint_register2 – register a bigint interface"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

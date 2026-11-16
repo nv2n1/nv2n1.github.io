@@ -16,11 +16,11 @@ description: "mate-appearance-properties — is a control center applet."
 <p> It allows one to change: GTK theme, window manager theme, icon theme, cursor theme, desktop background and font settings. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i,</code> <code>&#8211;install-theme=</code><i>FILENAME</i></p>
-<dd> Specify the filename of a theme to install</dl>
+<dt><code>-i,</code> <code>&#8211;install-theme=</code><i>FILENAME</i></dt>
+<dd> Specify the filename of a theme to install</dd></dl>
 <dl>
-<dt><code>-p,</code> <code>&#8211;show-page=</code><i>PAGE</i></p>
-<dd> Specify the name of the page to show (theme|background|fonts|interface) </p>
+<dt><code>-p,</code> <code>&#8211;show-page=</code><i>PAGE</i></dt>
+<dd> Specify the name of the page to show (theme|background|fonts|interface) </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefano Karapetsas &lt;stefano [at] karapetsas.com&gt;. </p>

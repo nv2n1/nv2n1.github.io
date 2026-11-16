@@ -484,87 +484,87 @@ description: "XmToggleButton — The ToggleButton widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNarmCallback</code></p>
-<dd>Specifies the list of callbacks called when the ToggleButton is armed. To arm this widget, press the active mouse button while the pointer is inside the ToggleButton. For this callback, the reason is <code>XmCR_ARM</code>.</p>
-<dt><code>XmNdetailShadowThickness</code></p>
-<dd>Specifies the thickness of the indicator shadow. The default thickness is 2 pixels.</p>
-<dt><code>XmNdisarmCallback</code></p>
-<dd>Specifies the list of callbacks called when ToggleButton is disarmed. To disarm this widget, press and release the active mouse button while the pointer is inside the ToggleButton. This widget is also disarmed when the user moves out of the widget and releases the mouse button when the pointer is outside the widget. For this callback, the reason is <code>XmCR_DISARM</code>.</p>
-<dt><code>XmNfillOnSelect</code></p>
-<dd>Fills the indicator with the color specified in <code>XmNselectColor</code> and switches the top and bottom shadow colors when set to True. If unset, fills the indicator with the unselect color. If indeterminate, fills the indicator with half select color and half unselect color. Otherwise, it switches only the top and bottom shadow colors. The default is True only if a box type of indicator (such as a check box) is specified, or if the <code>XmNindicatorType</code> is a <code>1-of</code> type and a toggle indicator is drawn.</p>
-<dd>If <code>XmNfillOnSelect</code> is True, <code>XmNset</code> is <code>XmSET</code>, and <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code> the ToggleButton&#8217;s background is set to <code>XmNselectColor</code>. For the other <code>XmNindicatorOn</code> values, only the indicator is filled with <code>XmNselectColor</code>.</p>
-<dt><code>XmNindeterminateInsensitivePixmap</code></p>
-<dd>Specifies the pixmap to be displayed as the button face when the Label <code>XmNlableType</code> resource is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the ToggleButton <code>XmNset</code> resource is <code>XmINDETERMINATE</code>, and the <code>Core</code> <code>XmNsensitive</code> resource is False.</p>
-<dt><code>XmNindeterminatePixmap</code></p>
-<dd>Specifies the pixmap to be displayed as the button face when the Label <code>XmNlableType</code> resource is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the ToggleButton <code>XmNset</code> resource is <code>XmINDETERMINATE</code>, and the <code>Core</code> <code>XmNsensitive</code> resource is True.</p>
-<dt><code>XmNindicatorOn</code></p>
-<dd>Specifies that if a toggle indicator is to be drawn, it will be drawn to one side of the toggle text or pixmap, depending on the <code>XmNlayoutDirection</code> resource of the widget. The default value is <code>XmINDICATOR_FILL</code>. Toggles accept the following values:</p>
+<dt><code>XmNarmCallback</code></dt>
+<dd>Specifies the list of callbacks called when the ToggleButton is armed. To arm this widget, press the active mouse button while the pointer is inside the ToggleButton. For this callback, the reason is <code>XmCR_ARM</code>.</dd>
+<dt><code>XmNdetailShadowThickness</code></dt>
+<dd>Specifies the thickness of the indicator shadow. The default thickness is 2 pixels.</dd>
+<dt><code>XmNdisarmCallback</code></dt>
+<dd>Specifies the list of callbacks called when ToggleButton is disarmed. To disarm this widget, press and release the active mouse button while the pointer is inside the ToggleButton. This widget is also disarmed when the user moves out of the widget and releases the mouse button when the pointer is outside the widget. For this callback, the reason is <code>XmCR_DISARM</code>.</dd>
+<dt><code>XmNfillOnSelect</code></dt>
+<dd>Fills the indicator with the color specified in <code>XmNselectColor</code> and switches the top and bottom shadow colors when set to True. If unset, fills the indicator with the unselect color. If indeterminate, fills the indicator with half select color and half unselect color. Otherwise, it switches only the top and bottom shadow colors. The default is True only if a box type of indicator (such as a check box) is specified, or if the <code>XmNindicatorType</code> is a <code>1-of</code> type and a toggle indicator is drawn.</dd>
+<dd>If <code>XmNfillOnSelect</code> is True, <code>XmNset</code> is <code>XmSET</code>, and <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code> the ToggleButton&#8217;s background is set to <code>XmNselectColor</code>. For the other <code>XmNindicatorOn</code> values, only the indicator is filled with <code>XmNselectColor</code>.</dd>
+<dt><code>XmNindeterminateInsensitivePixmap</code></dt>
+<dd>Specifies the pixmap to be displayed as the button face when the Label <code>XmNlableType</code> resource is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the ToggleButton <code>XmNset</code> resource is <code>XmINDETERMINATE</code>, and the <code>Core</code> <code>XmNsensitive</code> resource is False.</dd>
+<dt><code>XmNindeterminatePixmap</code></dt>
+<dd>Specifies the pixmap to be displayed as the button face when the Label <code>XmNlableType</code> resource is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the ToggleButton <code>XmNset</code> resource is <code>XmINDETERMINATE</code>, and the <code>Core</code> <code>XmNsensitive</code> resource is True.</dd>
+<dt><code>XmNindicatorOn</code></dt>
+<dd>Specifies that if a toggle indicator is to be drawn, it will be drawn to one side of the toggle text or pixmap, depending on the <code>XmNlayoutDirection</code> resource of the widget. The default value is <code>XmINDICATOR_FILL</code>. Toggles accept the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmINDICATOR_NONE</code></p>
-<dd>No space is allocated for the indicator, and it is not displayed. Any shadows around the entire widget are switched when the toggle is selected or unselected.</p>
-<dt><code>XmINDICATOR_BOX</code></p>
-<dd>The toggle indicator is in the shape of a shadowed box.</p>
-<dt><code>XmINDICATOR_FILL</code></p>
-<dd>If the value of the <code>XmDisplay XmNenableToggleVisual</code> resource is <code>True</code> , the visuals are those of <code>XmINDICATOR_CHECK_BOX</code> ; if <code>False</code> , the indicator visuals are those of <code>XmINDICATOR_BOX</code>.</p>
-<dt><code>XmINDICATOR_CHECK</code></p>
-<dd>The toggle indicator is in the shape of a checkmark in the foreground color.</p>
-<dt><code>XmINDICATOR_CHECK_BOX</code></p>
-<dd>The toggle indicator is in the shape of a checkmark enclosed in a box. This is the default if the <code>XmDisplay XmNenableToggleVisual</code> resource is set.</p>
-<dt><code>XmINDICATOR_CROSS_BOX</code></p>
-<dd>The toggle indicator is in the shape of a cross enclosed in a box.</p>
-<dt><code>XmINDICATOR_CROSS</code></p>
-<dd>The toggle indicator is in the shape of a cross.</dl>
+</dd><dl COMPACT>
+<dt><code>XmINDICATOR_NONE</code></dt>
+<dd>No space is allocated for the indicator, and it is not displayed. Any shadows around the entire widget are switched when the toggle is selected or unselected.</dd>
+<dt><code>XmINDICATOR_BOX</code></dt>
+<dd>The toggle indicator is in the shape of a shadowed box.</dd>
+<dt><code>XmINDICATOR_FILL</code></dt>
+<dd>If the value of the <code>XmDisplay XmNenableToggleVisual</code> resource is <code>True</code> , the visuals are those of <code>XmINDICATOR_CHECK_BOX</code> ; if <code>False</code> , the indicator visuals are those of <code>XmINDICATOR_BOX</code>.</dd>
+<dt><code>XmINDICATOR_CHECK</code></dt>
+<dd>The toggle indicator is in the shape of a checkmark in the foreground color.</dd>
+<dt><code>XmINDICATOR_CHECK_BOX</code></dt>
+<dd>The toggle indicator is in the shape of a checkmark enclosed in a box. This is the default if the <code>XmDisplay XmNenableToggleVisual</code> resource is set.</dd>
+<dt><code>XmINDICATOR_CROSS_BOX</code></dt>
+<dd>The toggle indicator is in the shape of a cross enclosed in a box.</dd>
+<dt><code>XmINDICATOR_CROSS</code></dt>
+<dd>The toggle indicator is in the shape of a cross.</dd></dl>
 </dl>
-<dd>All ToggleButton checks and crosses should be drawn in the foreground color.</p>
-<dd>If this resource is not <code>XmINDICATOR_NONE</code>, it will control the appearance of the toggle visual. If <code>XmNset</code> is <code>XmINDETERMINATE</code> and <code>XmNindicatorOn</code> is not <code>XmINDICATOR_NONE</code>, this resource shows a stippled flat box. If <code>XmNset</code> is <code>XmINDETERMINATE</code>, <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code>, and <code>XmNtoggleMode</code> is <code>XmTOGGLE_INDETERMINATE</code>, the label and the ToggleButton are stippled with a combination of the <code>XmNselectColor</code> and the <code>XmNunselectColor</code> color, and the border is flat.</p>
-<dt><code>XmNindicatorSize</code></p>
-<dd>Sets the size of the indicator. If no value is specified, the size of the indicator is based on the size of the label string or pixmap. If the label string or pixmap changes, the size of the indicator is recomputed based on the size of the label string or pixmap. Once a value has been specified for <code>XmNindicatorSize</code>, the indicator has that size, regardless of the size of the label string or pixmap, until a new value is specified. The size of indicators inside menus may differ from those outside of menus. Note that a change in this resource may also cause a change in the values of the inherited resources <code>XmNmarginTop</code>, <code>XmNmarginBottom</code>, and <code>XmNmarginLeft</code>.</p>
-<dt><code>XmNindicatorType</code></p>
-<dd>Specifies if the indicator is a <code>1-of</code> or <code>N-of</code> indicator. For the <code>1-of</code> indicator, the value can be <code>XmONE_OF_MANY</code>, <code>XmONE_OF_MANY_ROUND</code>, or <code>XmONE_OF_MANY_DIAMOND</code>. For the <code>N-of</code> indicator, the value is <code>XmN_OF_MANY</code>. This value specifies only the visuals and does not enforce the behavior. When the ToggleButton is in a radio box, the default is <code>XmONE_OF_MANY</code>; otherwise, the default is <code>XmN_OF_MANY</code>. Legal values are:</p>
+<dd>All ToggleButton checks and crosses should be drawn in the foreground color.</dd>
+<dd>If this resource is not <code>XmINDICATOR_NONE</code>, it will control the appearance of the toggle visual. If <code>XmNset</code> is <code>XmINDETERMINATE</code> and <code>XmNindicatorOn</code> is not <code>XmINDICATOR_NONE</code>, this resource shows a stippled flat box. If <code>XmNset</code> is <code>XmINDETERMINATE</code>, <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code>, and <code>XmNtoggleMode</code> is <code>XmTOGGLE_INDETERMINATE</code>, the label and the ToggleButton are stippled with a combination of the <code>XmNselectColor</code> and the <code>XmNunselectColor</code> color, and the border is flat.</dd>
+<dt><code>XmNindicatorSize</code></dt>
+<dd>Sets the size of the indicator. If no value is specified, the size of the indicator is based on the size of the label string or pixmap. If the label string or pixmap changes, the size of the indicator is recomputed based on the size of the label string or pixmap. Once a value has been specified for <code>XmNindicatorSize</code>, the indicator has that size, regardless of the size of the label string or pixmap, until a new value is specified. The size of indicators inside menus may differ from those outside of menus. Note that a change in this resource may also cause a change in the values of the inherited resources <code>XmNmarginTop</code>, <code>XmNmarginBottom</code>, and <code>XmNmarginLeft</code>.</dd>
+<dt><code>XmNindicatorType</code></dt>
+<dd>Specifies if the indicator is a <code>1-of</code> or <code>N-of</code> indicator. For the <code>1-of</code> indicator, the value can be <code>XmONE_OF_MANY</code>, <code>XmONE_OF_MANY_ROUND</code>, or <code>XmONE_OF_MANY_DIAMOND</code>. For the <code>N-of</code> indicator, the value is <code>XmN_OF_MANY</code>. This value specifies only the visuals and does not enforce the behavior. When the ToggleButton is in a radio box, the default is <code>XmONE_OF_MANY</code>; otherwise, the default is <code>XmN_OF_MANY</code>. Legal values are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmONE_OF_MANY</code></p>
-<dd>When the Display <code>XmNenableToggleVisual</code> resource is set, indicators are drawn with the same appearance as <code>XmONE_OF_MANY_ROUND</code>; otherwise, they appear the same as <code>XmONE_OF_MANY_DIAMOND</code>.</p>
-<dt><code>XmN_OF_MANY</code></p>
-<dd>The indicators are drawn as specified by the <code>XmNindicatorOn</code> resource.</p>
-<dt><code>XmONE_OF_MANY_ROUND</code></p>
-<dd>A shadowed circle.</p>
-<dt><code>XmONE_OF_MANY_DIAMOND</code></p>
-<dd>A shadowed diamond.</dl>
+</dd><dl COMPACT>
+<dt><code>XmONE_OF_MANY</code></dt>
+<dd>When the Display <code>XmNenableToggleVisual</code> resource is set, indicators are drawn with the same appearance as <code>XmONE_OF_MANY_ROUND</code>; otherwise, they appear the same as <code>XmONE_OF_MANY_DIAMOND</code>.</dd>
+<dt><code>XmN_OF_MANY</code></dt>
+<dd>The indicators are drawn as specified by the <code>XmNindicatorOn</code> resource.</dd>
+<dt><code>XmONE_OF_MANY_ROUND</code></dt>
+<dd>A shadowed circle.</dd>
+<dt><code>XmONE_OF_MANY_DIAMOND</code></dt>
+<dd>A shadowed diamond.</dd></dl>
 </dl>
-<dt><code>XmNselectColor</code></p>
-<dd>Allows the application to specify what color fills the center of the square, diamond-shaped, or round indicator when it is set. If this color is the same as either the top or the bottom shadow color of the indicator, a one-pixel-wide margin is left between the shadows and the fill; otherwise, it is filled completely. The results of this resource depend on the value of the Display resource <code>XmNenableToggleColor</code>. A value of True causes the fill color to use the <code>XmHIGHLIGHT_COLOR</code> color by default. A value of False causes the fill color to use the background color. This resource&#8217;s default for a color display is a color between the background and the bottom shadow color. For a monochrome display, the default is set to the foreground color. To set the background of the button to <code>XmNselectColor</code> when <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code>, the value of <code>XmNfillOnSelect</code> must be explicitly set to True.</p>
-<dd>This resource is also used as the background color when all of the following conditions are met: the button is armed in a menu, the <code>XmNenableEtchedInMenu</code> resource is <code>True</code>, the <code>XmNindicatorOn</code> resource is <code>False</code>, and the <code>XmNfillOnSelect</code> resource is <code>True</code>.</p>
-<dd>This resource can take the following values:</p>
+<dt><code>XmNselectColor</code></dt>
+<dd>Allows the application to specify what color fills the center of the square, diamond-shaped, or round indicator when it is set. If this color is the same as either the top or the bottom shadow color of the indicator, a one-pixel-wide margin is left between the shadows and the fill; otherwise, it is filled completely. The results of this resource depend on the value of the Display resource <code>XmNenableToggleColor</code>. A value of True causes the fill color to use the <code>XmHIGHLIGHT_COLOR</code> color by default. A value of False causes the fill color to use the background color. This resource&#8217;s default for a color display is a color between the background and the bottom shadow color. For a monochrome display, the default is set to the foreground color. To set the background of the button to <code>XmNselectColor</code> when <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code>, the value of <code>XmNfillOnSelect</code> must be explicitly set to True.</dd>
+<dd>This resource is also used as the background color when all of the following conditions are met: the button is armed in a menu, the <code>XmNenableEtchedInMenu</code> resource is <code>True</code>, the <code>XmNindicatorOn</code> resource is <code>False</code>, and the <code>XmNfillOnSelect</code> resource is <code>True</code>.</dd>
+<dd>This resource can take the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDEFAULT_SELECT_COLOR</code></p>
-<dd>Is the same as the current dynamic default, which is a color between the background and the bottom shadow color.</p>
-<dt><code>XmREVERSED_GROUND_COLORS</code></p>
-<dd>Forces the select color to the foreground color and causes the default color of any text rendered over the select color to be in the background color.</p>
-<dt><code>XmHIGHLIGHT_COLOR</code></p>
-<dd>Forces the fill color to use the highlight color.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDEFAULT_SELECT_COLOR</code></dt>
+<dd>Is the same as the current dynamic default, which is a color between the background and the bottom shadow color.</dd>
+<dt><code>XmREVERSED_GROUND_COLORS</code></dt>
+<dd>Forces the select color to the foreground color and causes the default color of any text rendered over the select color to be in the background color.</dd>
+<dt><code>XmHIGHLIGHT_COLOR</code></dt>
+<dd>Forces the fill color to use the highlight color.</dd></dl>
 </dl>
-<dt><code>XmNselectInsensitivePixmap</code></p>
-<dd>Specifies a pixmap used as the button face when the ToggleButton is selected, the button is insensitive, and the Label resource <code>XmNlabelType</code> is set to <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>. If the ToggleButton is unselected and the button is insensitive, the pixmap in <code>XmNlabelInsensitivePixmap</code> is used as the button face. If no value is specified for <code>XmNlabelInsensitivePixmap</code>, that resource is set to the value specified for <code>XmNselectInsensitivePixmap</code>.</p>
-<dt><code>XmNselectPixmap</code></p>
-<dd>Specifies the pixmap to be used as the button face when <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, and the ToggleButton is selected. When the ToggleButton is unselected, the pixmap specified in the Label&#8217;s <code>XmNlabelPixmap</code> is used. If no value is specified for <code>XmNlabelPixmap</code>, that resource is set to the value specified for <code>XmNselectPixmap</code>.</p>
-<dt><code>XmNset</code></p>
-<dd>Represents the state of the ToggleButton. A value of <code>XmUNSET</code> indicates that the ToggleButton is not set. A value of <code>XmSET</code> indicates that the ToggleButton is set. A value of <code>XmINDETERMINATE</code> indicates that the ToggleButton is in an indeterminate state (neither set nor unset). The ToggleButton states cycle through in the order of <code>XmSET</code>, <code>XmINDETERMINATE</code> (if <code>XmNtoggleMode</code> is set to <code>XmTOGGLE_INDETERMINATE</code>), and <code>XmUNSET</code>, and then back around to <code>XmSET</code>. If <code>XmNtoggleMode</code> is set to <code>XmTOGGLE_BOOLEAN</code>, then the ToggleButton states cycle through in the order of <code>XmSET</code>, then <code>XmUNSET</code>, and then back around to <code>XmSET</code>. Setting this resource sets the state of the ToggleButton.</p>
-<dt><code>XmNspacing</code></p>
-<dd>Specifies the amount of spacing between the toggle indicator and the toggle label (text or pixmap).</p>
-<dt><code>XmNtoggleMode</code></p>
-<dd>Specifies the mode of the ToggleButton as either <code>XmTOGGLE_BOOLEAN</code> or <code>XmTOGGLE_INDETERMINATE</code>. The <code>XmTOGGLE_INDETERMINATE</code> value allows the <code>XmNset</code> resource to be able to accept the values <code>XmINDETERMINATE</code>, <code>XmSET</code>, and <code>XmUNSET</code>. The <code>XmNtoggleMode</code> resource is forced to <code>XmTOGGLE_BOOLEAN</code> if the toggle is in an <code>XmRowColumn</code> widget whose radio behavior is <code>XmONE_OF_MANY</code>. In <code>XmTOGGLE_BOOLEAN</code> mode, the <code>XmNset</code> resource can only accept <code>XmSET</code> and <code>XmUNSET</code>.</p>
-<dt><code>XmNunselectColor</code></p>
-<dd>Allows the application to specify what color fills the center of the square, diamond-shaped, or round indicator when it is not set. If this color is the same as either the top or the bottom shadow color of the indicator, a one-pixel-wide margin is left between the shadows and the fill; otherwise, it is filled completely. This resource&#8217;s default for a color display is <code>XmNbackground</code>. For a monochrome display, the default is set to the background color. To set the background of the button to <code>XmNunselectColor</code> when <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code>, the value of <code>XmNfillOnSelect</code> must be explicitly set to True. This resource acts like the <code>XmNselectColor</code> resource, but for the case when <code>XmNset</code> is <code>XmUNSET</code>.</p>
-<dt><code>XmNvalueChangedCallback</code></p>
-<dd>Specifies the list of callbacks called when the ToggleButton value is changed. To change the value, press and release the active mouse button while the pointer is inside the ToggleButton. This action also causes this widget to be disarmed. For this callback, the reason is <code>XmCR_VALUE_CHANGED</code>.</p>
-<dt><code>XmNvisibleWhenOff</code></p>
-<dd>Indicates that the toggle indicator is visible in the unselected state when the Boolean value is True. When the ToggleButton is in a menu, the default value is False. When the ToggleButton is in a RadioBox, the default value is True.</dl>
+<dt><code>XmNselectInsensitivePixmap</code></dt>
+<dd>Specifies a pixmap used as the button face when the ToggleButton is selected, the button is insensitive, and the Label resource <code>XmNlabelType</code> is set to <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>. If the ToggleButton is unselected and the button is insensitive, the pixmap in <code>XmNlabelInsensitivePixmap</code> is used as the button face. If no value is specified for <code>XmNlabelInsensitivePixmap</code>, that resource is set to the value specified for <code>XmNselectInsensitivePixmap</code>.</dd>
+<dt><code>XmNselectPixmap</code></dt>
+<dd>Specifies the pixmap to be used as the button face when <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, and the ToggleButton is selected. When the ToggleButton is unselected, the pixmap specified in the Label&#8217;s <code>XmNlabelPixmap</code> is used. If no value is specified for <code>XmNlabelPixmap</code>, that resource is set to the value specified for <code>XmNselectPixmap</code>.</dd>
+<dt><code>XmNset</code></dt>
+<dd>Represents the state of the ToggleButton. A value of <code>XmUNSET</code> indicates that the ToggleButton is not set. A value of <code>XmSET</code> indicates that the ToggleButton is set. A value of <code>XmINDETERMINATE</code> indicates that the ToggleButton is in an indeterminate state (neither set nor unset). The ToggleButton states cycle through in the order of <code>XmSET</code>, <code>XmINDETERMINATE</code> (if <code>XmNtoggleMode</code> is set to <code>XmTOGGLE_INDETERMINATE</code>), and <code>XmUNSET</code>, and then back around to <code>XmSET</code>. If <code>XmNtoggleMode</code> is set to <code>XmTOGGLE_BOOLEAN</code>, then the ToggleButton states cycle through in the order of <code>XmSET</code>, then <code>XmUNSET</code>, and then back around to <code>XmSET</code>. Setting this resource sets the state of the ToggleButton.</dd>
+<dt><code>XmNspacing</code></dt>
+<dd>Specifies the amount of spacing between the toggle indicator and the toggle label (text or pixmap).</dd>
+<dt><code>XmNtoggleMode</code></dt>
+<dd>Specifies the mode of the ToggleButton as either <code>XmTOGGLE_BOOLEAN</code> or <code>XmTOGGLE_INDETERMINATE</code>. The <code>XmTOGGLE_INDETERMINATE</code> value allows the <code>XmNset</code> resource to be able to accept the values <code>XmINDETERMINATE</code>, <code>XmSET</code>, and <code>XmUNSET</code>. The <code>XmNtoggleMode</code> resource is forced to <code>XmTOGGLE_BOOLEAN</code> if the toggle is in an <code>XmRowColumn</code> widget whose radio behavior is <code>XmONE_OF_MANY</code>. In <code>XmTOGGLE_BOOLEAN</code> mode, the <code>XmNset</code> resource can only accept <code>XmSET</code> and <code>XmUNSET</code>.</dd>
+<dt><code>XmNunselectColor</code></dt>
+<dd>Allows the application to specify what color fills the center of the square, diamond-shaped, or round indicator when it is not set. If this color is the same as either the top or the bottom shadow color of the indicator, a one-pixel-wide margin is left between the shadows and the fill; otherwise, it is filled completely. This resource&#8217;s default for a color display is <code>XmNbackground</code>. For a monochrome display, the default is set to the background color. To set the background of the button to <code>XmNunselectColor</code> when <code>XmNindicatorOn</code> is <code>XmINDICATOR_NONE</code>, the value of <code>XmNfillOnSelect</code> must be explicitly set to True. This resource acts like the <code>XmNselectColor</code> resource, but for the case when <code>XmNset</code> is <code>XmUNSET</code>.</dd>
+<dt><code>XmNvalueChangedCallback</code></dt>
+<dd>Specifies the list of callbacks called when the ToggleButton value is changed. To change the value, press and release the active mouse button while the pointer is inside the ToggleButton. This action also causes this widget to be disarmed. For this callback, the reason is <code>XmCR_VALUE_CHANGED</code>.</dd>
+<dt><code>XmNvisibleWhenOff</code></dt>
+<dd>Indicates that the toggle indicator is visible in the unselected state when the Boolean value is True. When the ToggleButton is in a menu, the default value is False. When the ToggleButton is in a RadioBox, the default value is True.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>ToggleButton inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -2131,98 +2131,98 @@ description: "XmToggleButton — The ToggleButton widget class"
  int <i>set</i>;
 } XmToggleButtonCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><i>set</i></p>
-<dd>Reflects the ToggleButton&#8217;s state, either <code>XmSET</code> (selected), <code>XmUNSET</code> (unselected), or <code>XmINDETERMINATE</code> (neither). Note that the reported state is the state that the ToggleButton is in after the <i>event</i> has been processed. For example, suppose that a user clicks on a ToggleButton to change it from the unselected state to the selected state. In this case, ToggleButton changes the value of <i>set</i> from <code>XmUNSET</code> to <code>XmSET</code> prior to calling the callback.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><i>set</i></dt>
+<dd>Reflects the ToggleButton&#8217;s state, either <code>XmSET</code> (selected), <code>XmUNSET</code> (unselected), or <code>XmINDETERMINATE</code> (neither). Note that the reported state is the state that the ToggleButton is in after the <i>event</i> has been processed. For example, suppose that a user clicks on a ToggleButton to change it from the unselected state to the selected state. In this case, ToggleButton changes the value of <i>set</i> from <code>XmUNSET</code> to <code>XmSET</code> prior to calling the callback.</dd></dl>
 <h3>Translations</h3>
 <p><code>XmToggleButton</code> includes translations from <i>Primitive</i>. Additional <code>XmToggleButton</code> translations for buttons not in a menu system are described in the following list. </p>
 <p> Note that altering translations in <code>#override</code> or <code>#augment</code> mode is undefined. </p>
 <p> The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>c&lt;Btn1Down&gt;</code>:</p>
-<dd>ButtonTakeFocus()</p>
-<dt><code>&asymp;c</code><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>Arm()</p>
-<dt><code>&asymp;c</code><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>Select() Disarm()</p>
-<dt><code>&lt;Btn2Down&gt;</code>:</p>
-<dd>ProcessDrag()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>PrimitiveParentActivate()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>PrimitiveParentCancel()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>ArmAndActivate()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Help()</p>
-<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>PrimitiveParentActivate()</p>
-<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>ArmAndActivate()</dl>
+<dt><code>c&lt;Btn1Down&gt;</code>:</dt>
+<dd>ButtonTakeFocus()</dd>
+<dt><code>&asymp;c</code><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>Arm()</dd>
+<dt><code>&asymp;c</code><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>Select() Disarm()</dd>
+<dt><code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>ProcessDrag()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>PrimitiveParentActivate()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>PrimitiveParentCancel()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>ArmAndActivate()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Help()</dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>PrimitiveParentActivate()</dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>ArmAndActivate()</dd></dl>
 <p> <code>XmToggleButton</code> inherits menu traversal translations from <code>XmLabel</code>. Additional <code>XmToggleButton</code> translations for <code>ToggleButtons</code> in a menu system are described in the following list. In a Popup menu system, <code>&lt;Btn3&gt;</code> also performs the <code>&lt;Btn1&gt;</code> actions.</p>
 <dl COMPACT>
-<dt><code>&lt;Btn2Down&gt;</code>:</p>
-<dd>ProcessDrag()</p>
-<dt><code>c&lt;Btn1Down&gt;</code>:</p>
-<dd>MenuButtonTakeFocus()</p>
-<dt><code>c&lt;Btn1Up&gt;</code>:</p>
-<dd>MenuButtonTakeFocusUp()</p>
-<dt><code>&asymp;c</code><code>&lt;BtnDown&gt;</code>:</p>
-<dd>BtnDown()</p>
-<dt><code>&asymp;c</code><code>&lt;BtnUp&gt;</code>:</p>
-<dd>BtnUp()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>ArmAndActivate()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>ArmAndActivate()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Help()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>MenuEscape()</p>
-<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>ArmAndActivate()</p>
-<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>ArmAndActivate()</dl>
+<dt><code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>ProcessDrag()</dd>
+<dt><code>c&lt;Btn1Down&gt;</code>:</dt>
+<dd>MenuButtonTakeFocus()</dd>
+<dt><code>c&lt;Btn1Up&gt;</code>:</dt>
+<dd>MenuButtonTakeFocusUp()</dd>
+<dt><code>&asymp;c</code><code>&lt;BtnDown&gt;</code>:</dt>
+<dd>BtnDown()</dd>
+<dt><code>&asymp;c</code><code>&lt;BtnUp&gt;</code>:</dt>
+<dd>BtnUp()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>ArmAndActivate()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>ArmAndActivate()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Help()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>MenuEscape()</dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>ArmAndActivate()</dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>ArmAndActivate()</dd></dl>
 <h3>Action Routines</h3>
 <p>The <code>XmToggleButton</code> action routines are</p>
 <dl COMPACT>
-<dt>Arm():</p>
-<dd>If the button was previously unset, this action does the following: if <code>XmNindicatorOn</code> is True, it draws the indicator shadow so that the indicator looks pressed; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the color specified by <code>XmNselectColor</code>. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks pressed. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNselectPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code> callbacks.</p>
-<dd>If the button was previously set, this action does the following: if both <code>XmNindicatorOn</code> and <code>XmNvisibleWhenOff</code> are True, it draws the indicator shadow so that the indicator looks raised; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the background color. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks raised. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code> callbacks.</p>
-<dt>ArmAndActivate():</p>
-<dd>If the ToggleButton was previously set, unsets it; if the ToggleButton was previously unset, sets it.</p>
-<dd>In a menu, this action unposts all menus in the menu hierarchy. Unless the button is already armed, it calls the <code>XmNarmCallback</code> callbacks. This action calls the <code>XmNvalueChangedCallback</code> and <code>XmNdisarmCallback</code> callbacks.</p>
-<dd>Outside a menu, if the button was previously unset, this action does the following: if <code>XmNindicatorOn</code> is True, it draws the indicator shadow so that the indicator looks pressed; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the color specified by <code>XmNselectColor</code>. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks pressed. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNselectPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code>, <code>XmNvalueChangedCallback</code>, and <code>XmNdisarmCallback</code> callbacks.</p>
-<dd>Outside a menu, if the button was previously set, this action does the following: if both <code>XmNindicatorOn</code> and <code>XmNvisibleWhenOff</code> are True, it draws the indicator shadow so that the indicator looks raised; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the background color. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks raised. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code>, <code>XmNvalueChangedCallback</code>, and <code>XmNdisarmCallback</code> callbacks.</p>
-<dt>BtnDown():</p>
-<dd>This action unposts any menus posted by the ToggleButton&#8217;s parent menu, disables keyboard traversal for the menu, and enables mouse traversal for the menu. It draws the shadow in the armed state and, unless the button is already armed, calls the <code>XmNarmCallback</code> callbacks.</p>
-<dt>BtnUp():</p>
-<dd>This action unposts all menus in the menu hierarchy. If the ToggleButton was previously set, unsets it; if the ToggleButton was previously unset, sets it. It calls the <code>XmNvalueChangedCallback</code> callbacks and then the <code>XmNdisarmCallback</code> callbacks.</p>
-<dt>ButtonTakeFocus():</p>
-<dd>Causes the ToggleButton to take keyboard focus when <code>Ctrl&lt;Btn1Down&gt;</code> is pressed, without activating the widget.</p>
-<dt>Disarm():</p>
-<dd>Calls the callbacks for <code>XmNdisarmCallback</code>.</p>
-<dt>Help():</p>
-<dd>In a Pulldown or Popup MenuPane, unposts all menus in the menu hierarchy and restores keyboard focus to the widget that had the focus before the menu system was entered. Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt>MenuShellPopdownOne():</p>
-<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</p>
-<dd>In a Popup MenuPane, unposts the menu and restores keyboard focus to the widget from which the menu was posted.</p>
-<dt>ProcessDrag():</p>
-<dd>Drags the contents of a ToggleButton label, identified when <code>BTransfer</code> is pressed. This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>_MOTIF_DROP</code> selection. This action is undefined for ToggleButtons used in a menu system.</p>
-<dt>Select():</p>
-<dd>If the pointer is within the button, takes the following actions: If the button was previously unset, sets it; if the button was previously set, unsets it. This action calls the <code>XmNvalueChangedCallback</code> callbacks.</dl>
+<dt>Arm():</dt>
+<dd>If the button was previously unset, this action does the following: if <code>XmNindicatorOn</code> is True, it draws the indicator shadow so that the indicator looks pressed; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the color specified by <code>XmNselectColor</code>. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks pressed. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNselectPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dd>If the button was previously set, this action does the following: if both <code>XmNindicatorOn</code> and <code>XmNvisibleWhenOff</code> are True, it draws the indicator shadow so that the indicator looks raised; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the background color. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks raised. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dt>ArmAndActivate():</dt>
+<dd>If the ToggleButton was previously set, unsets it; if the ToggleButton was previously unset, sets it.</dd>
+<dd>In a menu, this action unposts all menus in the menu hierarchy. Unless the button is already armed, it calls the <code>XmNarmCallback</code> callbacks. This action calls the <code>XmNvalueChangedCallback</code> and <code>XmNdisarmCallback</code> callbacks.</dd>
+<dd>Outside a menu, if the button was previously unset, this action does the following: if <code>XmNindicatorOn</code> is True, it draws the indicator shadow so that the indicator looks pressed; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the color specified by <code>XmNselectColor</code>. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks pressed. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNselectPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code>, <code>XmNvalueChangedCallback</code>, and <code>XmNdisarmCallback</code> callbacks.</dd>
+<dd>Outside a menu, if the button was previously set, this action does the following: if both <code>XmNindicatorOn</code> and <code>XmNvisibleWhenOff</code> are True, it draws the indicator shadow so that the indicator looks raised; if <code>XmNfillOnSelect</code> is True, it fills the indicator with the background color. If <code>XmNindicatorOn</code> is False, it draws the button shadow so that the button looks raised. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used as the button face. This action calls the <code>XmNarmCallback</code>, <code>XmNvalueChangedCallback</code>, and <code>XmNdisarmCallback</code> callbacks.</dd>
+<dt>BtnDown():</dt>
+<dd>This action unposts any menus posted by the ToggleButton&#8217;s parent menu, disables keyboard traversal for the menu, and enables mouse traversal for the menu. It draws the shadow in the armed state and, unless the button is already armed, calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dt>BtnUp():</dt>
+<dd>This action unposts all menus in the menu hierarchy. If the ToggleButton was previously set, unsets it; if the ToggleButton was previously unset, sets it. It calls the <code>XmNvalueChangedCallback</code> callbacks and then the <code>XmNdisarmCallback</code> callbacks.</dd>
+<dt>ButtonTakeFocus():</dt>
+<dd>Causes the ToggleButton to take keyboard focus when <code>Ctrl&lt;Btn1Down&gt;</code> is pressed, without activating the widget.</dd>
+<dt>Disarm():</dt>
+<dd>Calls the callbacks for <code>XmNdisarmCallback</code>.</dd>
+<dt>Help():</dt>
+<dd>In a Pulldown or Popup MenuPane, unposts all menus in the menu hierarchy and restores keyboard focus to the widget that had the focus before the menu system was entered. Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt>MenuShellPopdownOne():</dt>
+<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</dd>
+<dd>In a Popup MenuPane, unposts the menu and restores keyboard focus to the widget from which the menu was posted.</dd>
+<dt>ProcessDrag():</dt>
+<dd>Drags the contents of a ToggleButton label, identified when <code>BTransfer</code> is pressed. This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>_MOTIF_DROP</code> selection. This action is undefined for ToggleButtons used in a menu system.</dd>
+<dt>Select():</dt>
+<dd>If the pointer is within the button, takes the following actions: If the button was previously unset, sets it; if the button was previously set, unsets it. This action calls the <code>XmNvalueChangedCallback</code> callbacks.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>This widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;EnterWindow&gt;</code>:</p>
-<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the armed state and calls the <code>XmNarmCallback</code> callbacks.</p>
-<dd>If the ToggleButton is not in a menu and the cursor leaves and then reenters the ToggleButton&#8217;s window while the button is pressed, this action restores the button&#8217;s armed appearance.</p>
-<dt><code>&lt;LeaveWindow&gt;</code>:</p>
-<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the unarmed state and calls the <code>XmNdisarmCallback</code> callbacks.</p>
-<dd>If the ToggleButton is not in a menu and the cursor leaves the ToggleButton&#8217;s window while the button is pressed, this action restores the button&#8217;s unarmed appearance.</dl>
+<dt><code>&lt;EnterWindow&gt;</code>:</dt>
+<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the armed state and calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dd>If the ToggleButton is not in a menu and the cursor leaves and then reenters the ToggleButton&#8217;s window while the button is pressed, this action restores the button&#8217;s armed appearance.</dd>
+<dt><code>&lt;LeaveWindow&gt;</code>:</dt>
+<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the unarmed state and calls the <code>XmNdisarmCallback</code> callbacks.</dd>
+<dd>If the ToggleButton is not in a menu and the cursor leaves the ToggleButton&#8217;s window while the button is pressed, this action restores the button&#8217;s unarmed appearance.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

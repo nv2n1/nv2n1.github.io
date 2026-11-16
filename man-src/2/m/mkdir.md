@@ -21,13 +21,11 @@ int mkdirat(int dirfd, const char *pathname, mode_t mode);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>mkdirat</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _ATFILE_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _ATFILE_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mkdir</code>() attempts to create a directory named <i>pathname</i>. </p>
@@ -44,42 +42,42 @@ int mkdirat(int dirfd, const char *pathname, mode_t mode);
 <p> <code>mkdir</code>() and <code>mkdirat</code>() return zero on success, or -1 if an error occurred (in which case, <i>errno</i> is set appropriately).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The parent directory does not allow write permission to the process, or one of the directories in <i>pathname</i> did not allow search permission. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EDQUOT</code></p>
-<dd> The user&#8217;s quota of disk blocks or inodes on the filesystem has been exhausted.</p>
-<dt><code>EEXIST</code></p>
-<dd> <i>pathname</i> already exists (not necessarily as a directory). This includes the case where <i>pathname</i> is a symbolic link, dangling or not.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The final component (&quot;basename&quot;) of the new directory&#8217;s <i>pathname</i> is invalid (e.g., it contains characters not permitted by the underlying filesystem).</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</p>
-<dt><code>EMLINK</code></p>
-<dd> The number of links to the parent directory would exceed <code>LINK_MAX</code>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> was too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The device containing <i>pathname</i> has no room for the new directory.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The new directory cannot be created because the user&#8217;s disk quota is exhausted.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> The filesystem containing <i>pathname</i> does not support the creation of directories.</p>
-<dt><code>EROFS</code></p>
-<dd> <i>pathname</i> refers to a file on a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The parent directory does not allow write permission to the process, or one of the directories in <i>pathname</i> did not allow search permission. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The user&#8217;s quota of disk blocks or inodes on the filesystem has been exhausted.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <i>pathname</i> already exists (not necessarily as a directory). This includes the case where <i>pathname</i> is a symbolic link, dangling or not.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The final component (&quot;basename&quot;) of the new directory&#8217;s <i>pathname</i> is invalid (e.g., it contains characters not permitted by the underlying filesystem).</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</dd>
+<dt><code>EMLINK</code></dt>
+<dd> The number of links to the parent directory would exceed <code>LINK_MAX</code>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> was too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The device containing <i>pathname</i> has no room for the new directory.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The new directory cannot be created because the user&#8217;s disk quota is exhausted.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The filesystem containing <i>pathname</i> does not support the creation of directories.</dd>
+<dt><code>EROFS</code></dt>
+<dd> <i>pathname</i> refers to a file on a read-only filesystem.</dd></dl>
 <p> The following additional errors can occur for <code>mkdirat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>mkdirat</code>() was added to Linux in kernel 2.6.16; library support was added to glibc in version 2.4.</p>
 <h2>CONFORMING TO</h2>

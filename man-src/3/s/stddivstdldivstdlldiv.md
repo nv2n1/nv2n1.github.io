@@ -40,14 +40,10 @@ On many platforms, a single CPU instruction obtains both the quotient and the re
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;string&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;iostream&gt;
 std::string itoa(int n, int base)
-
 {
     std::string buf;
     std::div_t dv{};
@@ -61,7 +57,6 @@ std::string itoa(int n, int base)
     return {buf.rbegin(), buf.rend()};
 }
 int main()
-
 {
     std::cout &lt;&lt; itoa(12345, 10) &lt;&lt; '
 '

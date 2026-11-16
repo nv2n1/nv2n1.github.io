@@ -15,4 +15,4 @@ description: "applygnupgdefaults – Run gpgconf –apply-defaults for all users
 <dl>
 <dd>
 <pre>applygnupgdefaults</pre>
-</dl>
+</dd></dl>

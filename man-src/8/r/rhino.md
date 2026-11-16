@@ -13,28 +13,28 @@ description: "rhino – Driver for Brazilian Microsol RHINO UPS equipment"
 <h2>Supported Hardware</h2>
 <p>This driver has been tested with : </p>
 <dl>
-<dd>&bull; Rhino 6000 VA</dl>
+<dd>&bull; Rhino 6000 VA</dd></dl>
 <dl>
-<dd>&bull; Rhino 7500 VA</dl>
+<dd>&bull; Rhino 7500 VA</dd></dl>
 <dl>
-<dd>&bull; Rhino 10000 VA</dl>
+<dd>&bull; Rhino 10000 VA</dd></dl>
 <dl>
-<dd>&bull; Rhino 20000 VA</dl>
+<dd>&bull; Rhino 20000 VA</dd></dl>
 <p> All Rhino models are sinusoidal on-line.</p>
 <h2>Extra Arguments</h2>
 <p>This driver support the following extra optional settings in <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>battext = n</code> &#8211; (default = 0, no extra battery, where n = Ampere*hour )</p>
 <h2>Commands</h2>
 <dl>
-<dd>&bull; load.on &#8211; Turn on the load immediately</dl>
+<dd>&bull; load.on &#8211; Turn on the load immediately</dd></dl>
 <dl>
-<dd>&bull; load.off &#8211; Turn off the load immediately</dl>
+<dd>&bull; load.off &#8211; Turn off the load immediately</dd></dl>
 <dl>
-<dd>&bull; bypass.start &#8211; Put the UPS in bypass mode</dl>
+<dd>&bull; bypass.start &#8211; Put the UPS in bypass mode</dd></dl>
 <dl>
-<dd>&bull; bypass.stop &#8211; Put the UPS out of bypass mode</dl>
+<dd>&bull; bypass.stop &#8211; Put the UPS out of bypass mode</dd></dl>
 <dl>
-<dd>&bull; shutdown.stayoff &#8211; Shut down in 3 minutes and do not return</dl>
+<dd>&bull; shutdown.stayoff &#8211; Shut down in 3 minutes and do not return</dd></dl>
 <h2>Author</h2>
 <p>Silvino B. Magalhães &lt;sbm2yk [at] gmail.com&gt;</p>
 <h2>See Also</h2>

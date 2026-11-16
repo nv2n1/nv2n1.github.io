@@ -14,17 +14,17 @@ description: "scsi_eh_finish_cmd – Handle a cmd that eh is finished with."
 <p><i>scmd</i></p>
 <dl>
 <dd>
-<dd>Original SCSI cmd that eh has finished.</dl>
+</dd><dd>Original SCSI cmd that eh has finished.</dd></dl>
 <p> <i>done_q</i></p>
 <dl>
-<dd>Queue for processed commands.</dl>
+<dd>Queue for processed commands.</dd></dl>
 <h2>Notes</h2>
 <p>We don&#8217;t want to use the normal command completion while we are are still handling errors &#8211; it may cause other commands to be queued, and that would disturb what we are doing. Thus we really want to keep a list of pending commands for final completion, and once we are ready to leave error handling we handle completion for real.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

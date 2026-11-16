@@ -33,7 +33,7 @@ description: "slamchf77.f –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>BETA</i> </p>
+</dt><dd> <i>BETA</i> </dd>
 <pre>
           The base of the machine.
 </pre>
@@ -57,11 +57,11 @@ description: "slamchf77.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dl>
+</dt><dd> LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dd></dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Further</code> <code>Details</code> </p>
 <pre>
   The routine is based on the routine  ENVRON  by Malcolm and
@@ -84,15 +84,15 @@ description: "slamchf77.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dl>
+</dt><dd> LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dd></dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>BETA</i> </p>
+</dt><dd> <i>BETA</i> </dd>
 <pre>
           The base of the machine.
 </pre>
@@ -151,8 +151,8 @@ description: "slamchf77.f –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i><br />
- <i>B</i> </p>
+</dt><dd> <i>A</i><br />
+ <i>B</i> </dd>
 <pre>
           The values A and B.
 </pre>
@@ -166,7 +166,7 @@ description: "slamchf77.f –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>EMIN</i> </p>
+</dt><dd> <i>EMIN</i> </dd>
 <pre>
           The minimum exponent before (gradual) underflow, computed by
           setting A = START and dividing by BASE until the previous A
@@ -195,7 +195,7 @@ description: "slamchf77.f –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>BETA</i> </p>
+</dt><dd> <i>BETA</i> </dd>
 <pre>
           The base of floating-point arithmetic.
 </pre>
@@ -227,15 +227,15 @@ description: "slamchf77.f –"
 <p> <code>SLAMCHF77</code> deprecated <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAMCH determines single precision machine parameters.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>CMACH</i> </p>
+</dt><dd> <i>CMACH</i> </dd>
 <pre>
           Specifies the value to be returned by SLAMCH:
           = 'E' or 'e',   SLAMCH := eps
@@ -264,14 +264,14 @@ description: "slamchf77.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> Definition at line 68 of file slamchf77.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -14,14 +14,14 @@ description: "gnutls_x509_othername_to_virtual – API function"
 <p> <code>int gnutls_x509_othername_to_virtual(const char * </code><i>oid</i><code>, const gnutls_datum_t * </code><i>othername</i><code>, unsigned int * </code><i>virt_type</i><code>, gnutls_datum_t * </code><i>virt</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * oid</p>
-<dd> The othername object identifier</p>
-<dt>const gnutls_datum_t * othername</p>
-<dd> &#8212; undescribed &#8212;</p>
-<dt>unsigned int * virt_type</p>
-<dd> GNUTLS_SAN_OTHERNAME_XXX</p>
-<dt>gnutls_datum_t * virt</p>
-<dd> allocated printable data</dl>
+<dt>const char * oid</dt>
+<dd> The othername object identifier</dd>
+<dt>const gnutls_datum_t * othername</dt>
+<dd> &#8212; undescribed &#8212;</dd>
+<dt>unsigned int * virt_type</dt>
+<dd> GNUTLS_SAN_OTHERNAME_XXX</dd>
+<dt>gnutls_datum_t * virt</dt>
+<dd> allocated printable data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will parse and convert the othername data to a virtual type supported by gnutls.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_x509_othername_to_virtual – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -31,9 +31,9 @@ description: "Atlas::Objects::ObjectsDecoder – Objects hierarchy decoder."
 <p> This decoder can be bound to a codec, will assemble incoming messages, check their type, convert them into the appropriate instance in the <code>Objects</code> hierarchy and call the relevant member functions, which subclasses can conveniently override to pick up the object. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd>Atlas::Objects::Encoder</dl>
+<dd>Atlas::Objects::Encoder</dd></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dl>
+<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

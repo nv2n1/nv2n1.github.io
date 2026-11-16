@@ -19,7 +19,7 @@ description: "cuncsd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CUNCSD computes the CS decomposition of an M - by - M partitioned unitary matrix X : [I 0 0 | 0 0 0][0 C 0 | 0 - S 0][X11 | X12][U1 | ][0 0 0 | 0 0 - I][V1 | ] **H X = [-- -- -- -- -- -] = [-- -- -- -- -][-- -- -- -- -- -- -- -- -- -- -][-- -- -- -- -].
                                                                                                                                                                                                  [X21 | X22][| U2][0 0 0 | I 0 0][| V2]
@@ -29,11 +29,11 @@ CUNCSD computes the CS decomposition of an M - by - M partitioned unitary matrix
                                                                                                                                                                     U2, V1, and V2 are P - by - P,
                                                                                                                                                                     (M - P) - by - (M - P), Q - by - Q, and(M - Q) - by - (M - Q), respectively.C and S are R - by - R nonnegative diagonal matrices satisfying C ^ 2 + S ^ 2 = I, in which R = MIN(P, M - P, Q, M - Q).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBU1</i> </p>
+</dt><dd> <i>JOBU1</i> </dd>
 <pre>
           JOBU1 is CHARACTER
           = 'Y':      U1 is computed;
@@ -231,18 +231,18 @@ CUNCSD computes the CS decomposition of an M - by - M partitioned unitary matrix
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+</dt><dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> Definition at line 316 of file cuncsd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

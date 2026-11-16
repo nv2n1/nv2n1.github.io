@@ -14,7 +14,7 @@ description: "new_inode – obtain an inode"
 <p><i>sb</i></p>
 <dl>
 <dd>
-<dd>superblock</dl>
+</dd><dd>superblock</dd></dl>
 <h2>Description</h2>
 <p>Allocates a new inode for given superblock. The default gfp_mask for allocations related to inode-&gt;i_mapping is GFP_HIGHUSER_MOVABLE. If HIGHMEM pages are unsuitable or it is known that pages allocated for the page cache are not reclaimable or migratable, <code>mapping_set_gfp_mask</code> must be called with suitable flags on the newly created inode&#8217;s mapping</p>
 <h2>Copyright</h2>

@@ -15,36 +15,36 @@ description: "sgen – Mono XML Serializer GENerator"
 <p> Generates pre-compilable custom XML serializer classes for specific types.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&#8211;assembly[:filename], -a</i></p>
-<dd> Specifies the assembly filename to process.</p>
-<dt><i>&#8211;type[:typefullname], -t</i></p>
-<dd> Explicitly specifies the runtime type to process.</p>
-<dt><i>&#8211;reference:[filename], -r</i></p>
-<dd> Specifies an assembly filename, which is referenced by the target assembly and thus required to process it.</p>
-<dt><i>&#8211;compiler:[options], -c</i></p>
-<dd> Specifies compiler options.</p>
-<dt><i>&#8211;proxytypes, -p</i></p>
-<dd> (Not supported yet.)</p>
-<dt><i>&#8211;debug, -d</i></p>
-<dd> Indicates the compiler to generate debug information.</p>
-<dt><i>&#8211;keep, -k</i></p>
-<dd> Indicates the compiler to keep generated temporary source files.</p>
-<dt><i>&#8211;force, -f</i></p>
-<dd> Indicates the generator to force overwriting existing assembly.</p>
-<dt><i>&#8211;out:[output-directory], -o</i></p>
-<dd> Specifies the output directory for resulting files. By default, it is current directory.</p>
-<dt><i>&#8211;nologo, -n</i></p>
-<dd> Indicates to not print the logo for this tool.</p>
-<dt><i>&#8211;silent, -s</i></p>
-<dd> Indicates the tool to run silently.</p>
-<dt><i>&#8211;verbose, -v</i></p>
-<dd> Indicates the tool to be more verbose on its progress.</p>
-<dt><i>&#8211;help, -?</i></p>
-<dd> Display command line help.</dl>
+<dt><i>&#8211;assembly[:filename], -a</i></dt>
+<dd> Specifies the assembly filename to process.</dd>
+<dt><i>&#8211;type[:typefullname], -t</i></dt>
+<dd> Explicitly specifies the runtime type to process.</dd>
+<dt><i>&#8211;reference:[filename], -r</i></dt>
+<dd> Specifies an assembly filename, which is referenced by the target assembly and thus required to process it.</dd>
+<dt><i>&#8211;compiler:[options], -c</i></dt>
+<dd> Specifies compiler options.</dd>
+<dt><i>&#8211;proxytypes, -p</i></dt>
+<dd> (Not supported yet.)</dd>
+<dt><i>&#8211;debug, -d</i></dt>
+<dd> Indicates the compiler to generate debug information.</dd>
+<dt><i>&#8211;keep, -k</i></dt>
+<dd> Indicates the compiler to keep generated temporary source files.</dd>
+<dt><i>&#8211;force, -f</i></dt>
+<dd> Indicates the generator to force overwriting existing assembly.</dd>
+<dt><i>&#8211;out:[output-directory], -o</i></dt>
+<dd> Specifies the output directory for resulting files. By default, it is current directory.</dd>
+<dt><i>&#8211;nologo, -n</i></dt>
+<dd> Indicates to not print the logo for this tool.</dd>
+<dt><i>&#8211;silent, -s</i></dt>
+<dd> Indicates the tool to run silently.</dd>
+<dt><i>&#8211;verbose, -v</i></dt>
+<dd> Indicates the tool to be more verbose on its progress.</dd>
+<dt><i>&#8211;help, -?</i></dt>
+<dd> Display command line help.</dd></dl>
 <h2>FEATURES</h2>
 <dl>
-<dt>It generates a file which contains a set of classes for custom XML serialization. The resulting classes enable xml serialization faster since it does not have to generate serialization classes dynamically at run time.</p>
-<dd></dl>
+<dt>It generates a file which contains a set of classes for custom XML serialization. The resulting classes enable xml serialization faster since it does not have to generate serialization classes dynamically at run time.</dt>
+<dd></dd></dl>
 <p> Generated classes are supported only after 2.0 profile.</p>
 <h2>AUTHOR</h2>
 <p> Written by Lluis Sanchez Gual</p>

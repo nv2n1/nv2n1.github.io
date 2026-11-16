@@ -21,7 +21,7 @@ description: "docker-system-info – Display system-wide information"
 <p> Here is a sample output for a daemon running on Ubuntu, using the overlay2 storage driver: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker -D info
 Client:
@@ -102,12 +102,12 @@ Server:
    <a rel="nofollow" href="http://registry-mirror.example.com:5000/">http://registry-mirror.example.com:5000/</a>
  Live Restore Enabled: false
 </pre>
-</dl>
+</dd></dl>
 <p> The global -D option tells all docker commands to output debug information. </p>
 <p> The example below shows the output for a daemon running on Red Hat Enterprise Linux, using the devicemapper storage driver. As can be seen in the output, additional information about the devicemapper storage driver is shown: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker info
 Client:
@@ -160,18 +160,18 @@ Server:
   myinsecurehost:5000
   127.0.0.0/8
 </pre>
-</dl>
+</dd></dl>
 <p> You can also specify the output format: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker info-- format '&#123;&#123;json .}}'
 {
     "ID" : "I54V:OLXT:HVMM:TPKO:JPHQ:CQCD:JNLC:O3BZ:4ZVJ:43XJ:PFHZ:6N2S", "Containers" : 14, ...
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Format the output using the given Go template</p>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for info</p>

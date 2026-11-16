@@ -13,8 +13,8 @@ description: "mongoc_cursor_is_alive() – Checks to see if a cursor is in a sta
 mongoc_cursor_is_alive (const mongoc_cursor_t *cursor);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Checks to see if a cursor is in a state that allows for more documents to be queried. </p>
 <p> This is primarily useful with tailable cursors. </p>

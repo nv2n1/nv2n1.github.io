@@ -10,12 +10,7 @@ description: "xcb_get_geometry – Get current window geometry"
 <p>xcb_get_geometry &#8211; Get current window geometry</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_get_geometry_cookie_t xcb_get_geometry(xcb_connection_t *conn, xcb_drawable_t drawable);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_get_geometry_reply_t {
@@ -34,35 +29,35 @@ xcb_get_geometry_cookie_t xcb_get_geometry(xcb_connection_t *conn, xcb_drawable_
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_get_geometry_reply_t *<code>xcb_get_geometry_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_get_geometry_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>drawable</i></p>
-<dd>The drawable (<i>Window</i> or <i>Pixmap</i>) of which the geometry will be received.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>drawable</i></dt>
+<dd>The drawable (<i>Window</i> or <i>Pixmap</i>) of which the geometry will be received.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_GET_GEOMETRY</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>depth</i></p>
-<dd>The depth of the drawable (bits per pixel for the object).</p>
-<dt><i>root</i></p>
-<dd>Root window of the screen containing <i>drawable</i>.</p>
-<dt><i>x</i></p>
-<dd>The X coordinate of <i>drawable</i>. If <i>drawable</i> is a window, the coordinate specifies the upper-left outer corner relative to its parent&#8217;s origin. If <i>drawable</i> is a pixmap, the X coordinate is always 0.</p>
-<dt><i>y</i></p>
-<dd>The Y coordinate of <i>drawable</i>. If <i>drawable</i> is a window, the coordinate specifies the upper-left outer corner relative to its parent&#8217;s origin. If <i>drawable</i> is a pixmap, the Y coordinate is always 0.</p>
-<dt><i>width</i></p>
-<dd>The width of <i>drawable</i>.</p>
-<dt><i>height</i></p>
-<dd>The height of <i>drawable</i>.</p>
-<dt><i>border_width</i></p>
-<dd>The border width (in pixels).</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_GET_GEOMETRY</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>depth</i></dt>
+<dd>The depth of the drawable (bits per pixel for the object).</dd>
+<dt><i>root</i></dt>
+<dd>Root window of the screen containing <i>drawable</i>.</dd>
+<dt><i>x</i></dt>
+<dd>The X coordinate of <i>drawable</i>. If <i>drawable</i> is a window, the coordinate specifies the upper-left outer corner relative to its parent&#8217;s origin. If <i>drawable</i> is a pixmap, the X coordinate is always 0.</dd>
+<dt><i>y</i></dt>
+<dd>The Y coordinate of <i>drawable</i>. If <i>drawable</i> is a window, the coordinate specifies the upper-left outer corner relative to its parent&#8217;s origin. If <i>drawable</i> is a pixmap, the Y coordinate is always 0.</dd>
+<dt><i>width</i></dt>
+<dd>The width of <i>drawable</i>.</dd>
+<dt><i>height</i></dt>
+<dd>The height of <i>drawable</i>.</dd>
+<dt><i>border_width</i></dt>
+<dd>The border width (in pixels).</dd></dl>
 <h2>Description</h2>
 <p>Gets the current geometry of the specified drawable (either <i>Window</i> or <i>Pixmap</i>).</p>
 <h2>Return Value</h2>
@@ -70,10 +65,10 @@ xcb_get_geometry_cookie_t xcb_get_geometry(xcb_connection_t *conn, xcb_drawable_
 <p> If you want to handle errors in the event loop instead, use <i>xcb_get_geometry_unchecked</i>. See <code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a>(3)</code> for details.</p>
 <h2>Errors</h2>
 <dl>
-<dt><i>xcb_drawable_error_t</i></p>
-<dd>TODO: reasons?</p>
-<dt><i>xcb_window_error_t</i></p>
-<dd>TODO: reasons?</dl>
+<dt><i>xcb_drawable_error_t</i></dt>
+<dd>TODO: reasons?</dd>
+<dt><i>xcb_window_error_t</i></dt>
+<dd>TODO: reasons?</dd></dl>
 <h2>Example</h2>
 <pre><code>/*
  * Displays the x and y position of the given window.
@@ -83,7 +78,6 @@ void my_example(xcb_connection_t *c, xcb_window_t window)
 {
     xcb_get_geometry_cookie_t cookie;
     xcb_get_geometry_reply_t *reply;
-
     cookie = xcb_get_geometry(c, window);
     /* ... do other work here if possible ... */
     if ((reply = xcb_get_geometry_reply(c, cookie, NULL))) {

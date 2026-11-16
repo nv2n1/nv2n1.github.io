@@ -119,52 +119,52 @@ description: "nagios_selinux – Security Enhanced Linux Policy for the nagios p
 <p> <code>nagios_checkdisk_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_checkdisk_plugin_exec_t type, if you want to transition an executable to the nagios_checkdisk_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/nagios/plugins/check_disk, /usr/lib/nagios/plugins/check_disk_smb, /usr/lib/nagios/plugins/check_ide_smart, /usr/lib/nagios/plugins/check_linux_raid </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/nagios/plugins/check_disk, /usr/lib/nagios/plugins/check_disk_smb, /usr/lib/nagios/plugins/check_ide_smart, /usr/lib/nagios/plugins/check_linux_raid </dd>
 </dl>
 <p> <code>nagios_content_t</code> </p>
 <p> &#8211; Set files with the nagios_content_t type, if you want to treat the files as nagios content. </p>
 <p> <code>nagios_etc_t</code> </p>
 <p> &#8211; Set files with the nagios_etc_t type, if you want to store nagios files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/nagios(/.*)?, /etc/icinga(/.*)?, /etc/pnp4nagios(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/nagios(/.*)?, /etc/icinga(/.*)?, /etc/pnp4nagios(/.*)? </dd>
 </dl>
 <p> <code>nagios_eventhandler_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_eventhandler_plugin_exec_t type, if you want to transition an executable to the nagios_eventhandler_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/nagios/plugins/eventhandlers(/.*), /usr/lib/icinga/plugins/eventhandlers(/.*) </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/nagios/plugins/eventhandlers(/.*), /usr/lib/icinga/plugins/eventhandlers(/.*) </dd>
 </dl>
 <p> <code>nagios_eventhandler_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the nagios_eventhandler_plugin_tmp_t type, if you want to store nagios eventhandler plugin temporary files in the /tmp directories. </p>
 <p> <code>nagios_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_exec_t type, if you want to transition an executable to the nagios_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/nagios, /usr/bin/icinga, /usr/sbin/nagios, /usr/sbin/icinga </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/nagios, /usr/bin/icinga, /usr/sbin/nagios, /usr/sbin/icinga </dd>
 </dl>
 <p> <code>nagios_htaccess_t</code> </p>
 <p> &#8211; Set files with the nagios_htaccess_t type, if you want to treat the file as a nagios access file. </p>
 <p> <code>nagios_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_initrc_exec_t type, if you want to transition an executable to the nagios_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/nrpe, /etc/rc.d/init.d/nagios </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/nrpe, /etc/rc.d/init.d/nagios </dd>
 </dl>
 <p> <code>nagios_log_t</code> </p>
 <p> &#8211; Set files with the nagios_log_t type, if you want to treat the data as nagios log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/nagios(/.*)?, /var/log/icinga(/.*)?, /var/log/netsaint(/.*)?, /var/log/pnp4nagios(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/nagios(/.*)?, /var/log/icinga(/.*)?, /var/log/netsaint(/.*)?, /var/log/pnp4nagios(/.*)? </dd>
 </dl>
 <p> <code>nagios_mail_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_mail_plugin_exec_t type, if you want to transition an executable to the nagios_mail_plugin_t domain. </p>
 <p> <code>nagios_openshift_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_openshift_plugin_exec_t type, if you want to transition an executable to the nagios_openshift_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib64/nagios/plugins/check_node_accept_status, /usr/lib64/nagios/plugins/check_number_openshift_apps </p>
+<dt>Paths:</dt>
+<dd>/usr/lib64/nagios/plugins/check_node_accept_status, /usr/lib64/nagios/plugins/check_number_openshift_apps </dd>
 </dl>
 <p> <code>nagios_openshift_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the nagios_openshift_plugin_tmp_t type, if you want to store nagios openshift plugin temporary files in the /tmp directories. </p>
@@ -175,26 +175,26 @@ description: "nagios_selinux – Security Enhanced Linux Policy for the nagios p
 <p> <code>nagios_script_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_script_exec_t type, if you want to transition an executable to the nagios_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/nagios/cgi(/.*)?, /usr/lib/icinga/cgi(/.*)?, /usr/lib/cgi-bin/nagios(/.+)?, /usr/lib/nagios/cgi-bin(/.*)?, /usr/lib/cgi-bin/netsaint(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/nagios/cgi(/.*)?, /usr/lib/icinga/cgi(/.*)?, /usr/lib/cgi-bin/nagios(/.+)?, /usr/lib/nagios/cgi-bin(/.*)?, /usr/lib/cgi-bin/netsaint(/.*)? </dd>
 </dl>
 <p> <code>nagios_services_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_services_plugin_exec_t type, if you want to transition an executable to the nagios_services_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/nagios/plugins/check_ntp.*, /usr/lib/nagios/plugins/check_snmp.*, /usr/lib/nagios/plugins/check_nt, /usr/lib/nagios/plugins/check_dig, /usr/lib/nagios/plugins/check_dns, /usr/lib/nagios/plugins/check_rpc, /usr/lib/nagios/plugins/check_tcp, /usr/lib/nagios/plugins/check_sip, /usr/lib/nagios/plugins/check_ssh, /usr/lib/nagios/plugins/check_ups, /usr/lib/nagios/plugins/check_dhcp, /usr/lib/nagios/plugins/check_game, /usr/lib/nagios/plugins/check_hpjd, /usr/lib/nagios/plugins/check_http, /usr/lib/nagios/plugins/check_icmp, /usr/lib/nagios/plugins/check_ircd, /usr/lib/nagios/plugins/check_ldap, /usr/lib/nagios/plugins/check_nrpe, /usr/lib/nagios/plugins/check_ping, /usr/lib/nagios/plugins/check_real, /usr/lib/nagios/plugins/check_time, /usr/lib/nagios/plugins/check_smtp, /usr/lib/nagios/plugins/check_dummy, /usr/lib/nagios/plugins/check_fping, /usr/lib/nagios/plugins/check_mysql, /usr/lib/nagios/plugins/check_pgsql, /usr/lib/nagios/plugins/check_breeze, /usr/lib/nagios/plugins/check_oracle, /usr/lib/nagios/plugins/check_radius, /usr/lib/nagios/plugins/check_cluster, /usr/lib/nagios/plugins/check_mysql_query </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/nagios/plugins/check_ntp.*, /usr/lib/nagios/plugins/check_snmp.*, /usr/lib/nagios/plugins/check_nt, /usr/lib/nagios/plugins/check_dig, /usr/lib/nagios/plugins/check_dns, /usr/lib/nagios/plugins/check_rpc, /usr/lib/nagios/plugins/check_tcp, /usr/lib/nagios/plugins/check_sip, /usr/lib/nagios/plugins/check_ssh, /usr/lib/nagios/plugins/check_ups, /usr/lib/nagios/plugins/check_dhcp, /usr/lib/nagios/plugins/check_game, /usr/lib/nagios/plugins/check_hpjd, /usr/lib/nagios/plugins/check_http, /usr/lib/nagios/plugins/check_icmp, /usr/lib/nagios/plugins/check_ircd, /usr/lib/nagios/plugins/check_ldap, /usr/lib/nagios/plugins/check_nrpe, /usr/lib/nagios/plugins/check_ping, /usr/lib/nagios/plugins/check_real, /usr/lib/nagios/plugins/check_time, /usr/lib/nagios/plugins/check_smtp, /usr/lib/nagios/plugins/check_dummy, /usr/lib/nagios/plugins/check_fping, /usr/lib/nagios/plugins/check_mysql, /usr/lib/nagios/plugins/check_pgsql, /usr/lib/nagios/plugins/check_breeze, /usr/lib/nagios/plugins/check_oracle, /usr/lib/nagios/plugins/check_radius, /usr/lib/nagios/plugins/check_cluster, /usr/lib/nagios/plugins/check_mysql_query </dd>
 </dl>
 <p> <code>nagios_spool_t</code> </p>
 <p> &#8211; Set files with the nagios_spool_t type, if you want to store the nagios files under the /var/spool directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/spool/nagios(/.*)?, /var/spool/icinga(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/spool/nagios(/.*)?, /var/spool/icinga(/.*)? </dd>
 </dl>
 <p> <code>nagios_system_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_system_plugin_exec_t type, if you want to transition an executable to the nagios_system_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/nagios/plugins/check_log, /usr/lib/nagios/plugins/check_load, /usr/lib/nagios/plugins/check_mrtg, /usr/lib/nagios/plugins/check_swap, /usr/lib/nagios/plugins/check_wave, /usr/lib/nagios/plugins/check_procs, /usr/lib/nagios/plugins/check_users, /usr/lib/nagios/plugins/check_flexlm, /usr/lib/nagios/plugins/check_nagios, /usr/lib/nagios/plugins/check_nwstat, /usr/lib/nagios/plugins/check_overcr, /usr/lib/nagios/plugins/check_sensors, /usr/lib/nagios/plugins/check_ifstatus, /usr/lib/nagios/plugins/check_mrtgtraf, /usr/lib/nagios/plugins/check_ifoperstatus </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/nagios/plugins/check_log, /usr/lib/nagios/plugins/check_load, /usr/lib/nagios/plugins/check_mrtg, /usr/lib/nagios/plugins/check_swap, /usr/lib/nagios/plugins/check_wave, /usr/lib/nagios/plugins/check_procs, /usr/lib/nagios/plugins/check_users, /usr/lib/nagios/plugins/check_flexlm, /usr/lib/nagios/plugins/check_nagios, /usr/lib/nagios/plugins/check_nwstat, /usr/lib/nagios/plugins/check_overcr, /usr/lib/nagios/plugins/check_sensors, /usr/lib/nagios/plugins/check_ifstatus, /usr/lib/nagios/plugins/check_mrtgtraf, /usr/lib/nagios/plugins/check_ifoperstatus </dd>
 </dl>
 <p> <code>nagios_system_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the nagios_system_plugin_tmp_t type, if you want to store nagios system plugin temporary files in the /tmp directories. </p>
@@ -205,8 +205,8 @@ description: "nagios_selinux – Security Enhanced Linux Policy for the nagios p
 <p> <code>nagios_var_lib_t</code> </p>
 <p> &#8211; Set files with the nagios_var_lib_t type, if you want to store the nagios files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/pnp4nagios(/.*)?, /usr/lib/pnp4nagios(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/pnp4nagios(/.*)?, /usr/lib/pnp4nagios(/.*)? </dd>
 </dl>
 <p> <code>nagios_var_run_t</code> </p>
 <p> &#8211; Set files with the nagios_var_run_t type, if you want to store the nagios files under the /run or /var/run directory. </p>

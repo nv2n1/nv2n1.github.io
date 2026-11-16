@@ -15,19 +15,19 @@ phy_connect_direct - connect an ethernet device to a specific phy_device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the network device to connect</dl>
+<dl><dd></dd><dd>the network device to connect</dd></dl>
  
 
  <i>phydev</i>
-<dl><dd>the pointer to the phy device</dl>
+<dl><dd>the pointer to the phy device</dd></dl>
  
 
  <i>handler</i>
-<dl><dd>callback function for state change notifications</dl>
+<dl><dd>callback function for state change notifications</dd></dl>
  
 
  <i>interface</i>
-<dl><dd>PHY device's interface</dl>
+<dl><dd>PHY device's interface</dd></dl>
 
 <h2>Copyright</h2>
 

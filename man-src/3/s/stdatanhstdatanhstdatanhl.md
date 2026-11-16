@@ -41,21 +41,13 @@ POSIX_specifies that in case of underflow, arg is returned unmodified, and if th
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfloat&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;cstring&gt;
-
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;atanh(0) = &quot; &lt;&lt; std::atanh(0) &lt;&lt; '
 '

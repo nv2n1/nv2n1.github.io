@@ -22,27 +22,22 @@ dlasq1.f -
  Fernando and B. N. Parlett, Numer. Math., Vol-67, No. 2, pp. 191-230,
  1994,
  and the present implementation is described in &quot;An implementation of
- the dqds Algorithm (Positive Case)&quot;, LAPACK Working Note.</pre>&nbsp;<wbr></dl>
+ the dqds Algorithm (Positive Case)&quot;, LAPACK Working Note.</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl COMPACT><dd><i>N</i> 
-
  <pre> N is INTEGER
  The number of rows and columns in the matrix. N &gt;= 0.</pre><i>D</i> 
-
  <pre> D is DOUBLE PRECISION array, dimension (N)
  On entry, D contains the diagonal elements of the
  bidiagonal matrix whose SVD is desired. On normal exit,
  D contains the singular values in decreasing order.</pre><i>E</i> 
-
  <pre> E is DOUBLE PRECISION array, dimension (N)
  On entry, elements E(1:N-1) contain the off-diagonal elements
  of the bidiagonal matrix whose SVD is desired.
  On exit, E is overwritten.</pre><i>WORK</i> 
-
  <pre> WORK is DOUBLE PRECISION array, dimension (4*N)</pre><i>INFO</i> 
-
  <pre> INFO is INTEGER
  = 0: successful exit
  &lt; 0: if INFO = -i, the i-th argument had an illegal value
@@ -54,21 +49,18 @@ dlasq1.f -
  which the calling subroutine could use to finish the
  computation, or even feed back into DLASQ1
  = 3, termination criterion of outer while loop not met 
- (program created more than N unreduced blocks)</pre>&nbsp;<wbr></dl>
+ (program created more than N unreduced blocks)</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl COMPACT><dd>Univ. of Tennessee 
-
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
-<dl COMPACT><dd>September 2012</dl>
+<dl COMPACT><dd>September 2012</dd></dl>
  
 
  

@@ -14,12 +14,12 @@ description: "gnutls_pkcs11_obj_export3 – API function"
 <p> <code>int gnutls_pkcs11_obj_export3(gnutls_pkcs11_obj_t </code><i>obj</i><code>, gnutls_x509_crt_fmt_t </code><i>fmt</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs11_obj_t obj</p>
-<dd> Holds the object</p>
-<dt>gnutls_x509_crt_fmt_t fmt</p>
-<dd> The format of the exported data</p>
-<dt>gnutls_datum_t * out</p>
-<dd> will contain the object data</dl>
+<dt>gnutls_pkcs11_obj_t obj</dt>
+<dd> Holds the object</dd>
+<dt>gnutls_x509_crt_fmt_t fmt</dt>
+<dd> The format of the exported data</dd>
+<dt>gnutls_datum_t * out</dt>
+<dd> will contain the object data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the PKCS11 object data. It is normal for data to be inaccesible and in that case <code>GNUTLS_E_INVALID_REQUEST</code> will be returned. </p>
 <p> The output buffer is allocated using <code>gnutls_malloc()</code>.</p>
@@ -36,6 +36,6 @@ description: "gnutls_pkcs11_obj_export3 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

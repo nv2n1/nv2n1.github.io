@@ -15,22 +15,22 @@ description: "negotiate_kerberos_auth – Squid kerberos based authentication he
 <p><code>negotiate_kerberos_auth</code> is an installed binary and allows Squid to authenticate users via the Negotiate protocol and Kerberos. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Display the binary help and command line syntax info using stderr.</p>
-<dt><code>-d</code></p>
-<dd>Write debug messages to stderr.</p>
-<dt><code>-i</code></p>
-<dd>Write informational messages to stderr.</p>
-<dt><code>-r </code></p>
-<dd>Remove realm from username before returning the username to squid.</p>
-<dt><code>-s Service-Principal-name</code></p>
-<dd>Provide Service Principal Name.</p>
-<dt><code>-k Keytab-Name</code></p>
-<dd>Provide Kerberos Keytab Name (Default: /etc/krb5.keytab)</p>
-<dt><code>-c Replay-Cache-Directory</code></p>
-<dd>Provide Replay Cache Directory (Default: /var/tmp)</p>
-<dt><code>-t Replay-Cache-Type</code></p>
-<dd>Provide Replay Cache Type (Default: dfl)</dl>
+<dt><code>-h</code></dt>
+<dd>Display the binary help and command line syntax info using stderr.</dd>
+<dt><code>-d</code></dt>
+<dd>Write debug messages to stderr.</dd>
+<dt><code>-i</code></dt>
+<dd>Write informational messages to stderr.</dd>
+<dt><code>-r </code></dt>
+<dd>Remove realm from username before returning the username to squid.</dd>
+<dt><code>-s Service-Principal-name</code></dt>
+<dd>Provide Service Principal Name.</dd>
+<dt><code>-k Keytab-Name</code></dt>
+<dd>Provide Kerberos Keytab Name (Default: /etc/krb5.keytab)</dd>
+<dt><code>-c Replay-Cache-Directory</code></dt>
+<dd>Provide Replay Cache Directory (Default: /var/tmp)</dd>
+<dt><code>-t Replay-Cache-Type</code></dt>
+<dd>Provide Replay Cache Type (Default: dfl)</dd></dl>
 <h2>Configuration</h2>
 <p>This helper is intended to be used as an <code>authentication</code> helper in <code>squid.conf.</code> </p>
 <pre>auth_param negotiate program /path/to/negotiate_kerberos_auth<br>

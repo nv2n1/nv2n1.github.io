@@ -29,7 +29,7 @@ description: "Writing on the braille display –"
 <p>After <code>brlapi_enterTtyMode()</code> has been called, the application can call one of these functions to write things on the braille display. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Be sure to call <code>brlapi_enterTtyMode()</code> <i>before</i> calling <code>brlapi_write()</code>, or else you&#8217;ll get an error. This is particularly not always trivial when writing multithreaded applications. </p>
+<dd>Be sure to call <code>brlapi_enterTtyMode()</code> <i>before</i> calling <code>brlapi_write()</code>, or else you&#8217;ll get an error. This is particularly not always trivial when writing multithreaded applications. </dd>
 <p> Dots are coded as described in ISO/TR 11548-1: a dot pattern is coded by a byte in which bit 0 is set iff dot 1 is up, bit 1 is set iff dot 2 is up, &#8230; bit 7 is set iff dot 8 is up. This also corresponds to the low-order byte of the coding of unicode&#8217;s braille row U+2800. </p>
 <p> Text is translated by the server one to one, by just using a simple wchar_t to pattern table, i.e. no contraction/expansion is performed, because the client would then have no way to know how wide the output would be and thus the quantity of text to feed. If contraction/expansion is desired, the client should perform it itself (e.g. thanks to liblouis or gnome-braille) and send the resulting dot patterns. This is actually exactly the same problem as font rendering on a graphical display: for better control, nowadays all font rasterization is performed on the client side, and mere pixmaps are sent to the X server.</dl>
 <h2>Macro Definition Documentation</h2>
@@ -37,17 +37,17 @@ description: "Writing on the braille display –"
 <p>Do not change the cursor&#8217;s state or position. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brlapi_writeText()</code> <code>brlapi_write()</code> <code>brlapi_writeArguments_t</code></dl>
+<dd><code>brlapi_writeText()</code> <code>brlapi_write()</code> <code>brlapi_writeArguments_t</code></dd></dl>
 <h3>#define BRLAPI_CURSOR_OFF 0</h3>
 <p>Do not display the cursor. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brlapi_writeText()</code> <code>brlapi_write()</code> <code>brlapi_writeArguments_t</code></dl>
+<dd><code>brlapi_writeText()</code> <code>brlapi_write()</code> <code>brlapi_writeArguments_t</code></dd></dl>
 <h3>#define BRLAPI_DISPLAY_DEFAULT -1</h3>
 <p>Write to the default display on the braille device. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brlapi_write()</code> <code>brlapi_writeArguments_t</code></dl>
+<dd><code>brlapi_write()</code> <code>brlapi_writeArguments_t</code></dd></dl>
 <h3>#define BRLAPI_WRITEARGUMENTS_INITIALIZER { <code>BRLAPI_DISPLAY_DEFAULT</code>, 0, 0, NULL, -1, NULL, NULL, <code>BRLAPI_CURSOR_LEAVE</code>, NULL }</h3>
 <p>Allows to initialize a structure of type <i></i><code>brlapi_writeArguments_t</code> * with default values: displayNumber = <code>BRLAPI_DISPLAY_DEFAULT</code>; (unspecified) regionBegin = regionSize = 0; (update the whole display, DEPRECATED and will be forbidden in next release. You must always express the region you wish to update) text = andMask = orMask = NULL; (no text, no attribute) cursor = <code>BRLAPI_CURSOR_LEAVE</code>; (don&#8217;t touch cursor)</p>
 <h2>Function Documentation</h2>
@@ -59,7 +59,7 @@ description: "Writing on the braille display –"
 <p>Update a specific region of the braille display and apply and/or masks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>arguments</i> gives information necessary for the update</dl>
+<dd><i>arguments</i> gives information necessary for the update</dd></dl>
 <p> regionBegin and regionSize must be filled for specifying which part of the display will be updated, as well as the size (in characters, not bytes) of the text, andMask and orMask members. </p>
 <p> If given, the &#8216;text&#8217; field holds the text that will be displayed in the region. The char string must hold exactly as many characters as the region fields express. For multibyte text, this is the number of <i>multibyte</i> caracters. Notably, combining and double-width caracters count for 1. </p>
 <p> The actual length of the text in <i>bytes</i> may be specified thanks to textSize. If -1 is given, it will be computed thanks to strlen(), so &#8216;text&#8217; must then be a NUL-terminated string. </p>
@@ -68,14 +68,15 @@ description: "Writing on the braille display –"
 <p> A special invocation is with an unmodified initialized structure: this clears the client&#8217;s whole display, letting the display of other applications on the same tty or of applications &#8216;under&#8217; the tty appear. See Concurrency management section of the BrlAPI documentation for more details. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, -1 on error.</dl>
+<dd>0 on success, -1 on error.</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_writeDots (const unsigned char *dots)</h3>
 <p>Write the given dots array to the display </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dots</i> points on an array of dot information, one per character. Its size must hence be the same as what <code>brlapi_getDisplaySize()</code> returns.</dl>
+<dd><i>dots</i> points on an array of dot information, one per character. Its size must hence be the same as what <code>brlapi_getDisplaySize()</code> returns.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, -1 on error.</dl>
+<dd>0 on success, -1 on error.</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_writeText (intcursor, const char *text)</h3>
 <p>Write the given 
+</p>

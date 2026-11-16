@@ -14,10 +14,10 @@ description: "gnutls_record_recv_packet – API function"
 <p> <code>ssize_t gnutls_record_recv_packet(gnutls_session_t </code><i>session</i><code>, gnutls_packet_t * </code><i>packet</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_packet_t * packet</p>
-<dd> the structure that will hold the packet data</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_packet_t * packet</dt>
+<dd> the structure that will hold the packet data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is a lower-level function thatn <code>gnutls_record_recv()</code> and allows to directly receive the whole decrypted packet. That avoids a memory copy, and is mostly applicable to applications seeking high performance. </p>
 <p> The received packet is accessed using <code>gnutls_packet_get()</code> and must be deinitialized using <code>gnutls_packet_deinit()</code>. The returned packet will be <code>NULL</code> if the return value is zero (EOF).</p>
@@ -34,6 +34,6 @@ description: "gnutls_record_recv_packet – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

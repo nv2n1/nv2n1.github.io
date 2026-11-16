@@ -22,6 +22,6 @@ description: "PAPI_get_real_cyc –"
 <p>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>PAPIF PAPI <code>PAPI_get_virt_usec</code> <code>PAPI_get_virt_cyc</code> <code>PAPI_library_init</code></dl>
+<dd>PAPIF PAPI <code>PAPI_get_virt_usec</code> <code>PAPI_get_virt_cyc</code> <code>PAPI_library_init</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

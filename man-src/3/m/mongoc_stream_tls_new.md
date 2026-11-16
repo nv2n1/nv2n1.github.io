@@ -15,14 +15,14 @@ mongoc_stream_tls_new (mongoc_stream_t *base_stream,
  int client);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>base_stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>base_stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>opt</code></p>
-<dd>A <code>mongoc_ssl_opt_t</code> \&amp;.</dl>
+<dt><code>opt</code></dt>
+<dd>A <code>mongoc_ssl_opt_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>1 for client, 0 for server TLS.</dl>
+<dt><code>client</code></dt>
+<dd>1 for client, 0 for server TLS.</dd></dl>
 <p> Creates a new <code>mongoc_stream_tls_t</code> using the parameters supplied. </p>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_stream_tls_t</code> \&amp;. </p>

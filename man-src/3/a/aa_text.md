@@ -14,8 +14,8 @@ description: "aa_text – returns pointer to the text output buffer used by AA-l
 <p> char *aa_text(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *a</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *a</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The text output buffer is simple array of characters specifying the ascii-value of the characters. The array is organizated in the aa_scrheight (a) rows of aa_scrwidth(a) characters.</p>
 <h2>RETURNS</h2>

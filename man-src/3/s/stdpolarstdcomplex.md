@@ -11,9 +11,7 @@ std::polar(std::complex) - std::polar(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
-
     complex&lt;T&gt; polar(const T &amp;r, const T &amp;theta = T());</code></pre> 
 Returns a complex number with magnitude r and phase angle theta. 
 The behavior is undefined if r is negative or NaN, or if theta is infinite. 

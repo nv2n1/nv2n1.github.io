@@ -10,19 +10,18 @@ description: "pthread_mutex_consistent – make a robust mutex consistent"
 <p>pthread_mutex_consistent &#8211; make a robust mutex consistent</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_mutex_consistent(pthread_mutex_t *mutex);</code></pre>
 <p> Compile and link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_mutex_consistent</code>(): </p>
 <dl>
-<dd>_POSIX_C_SOURCE &gt;= 200809L</dl>
+<dd>_POSIX_C_SOURCE &gt;= 200809L</dd></dl>
 <h2>Description</h2>
 <p>This function makes a robust mutex consistent if it is in an inconsistent state. A mutex can be left in an inconsistent state if its owner terminates while holding the mutex, in which case the next owner who acquires the mutex will succeed and be notified by a return value of <code>EOWNERDEAD</code> from a call to <code>pthread_mutex_lock</code>().</p>
 <h2>Return Value</h2>
 <p>On success, <i>pthread_mutex_consistent</i>() returns 0. Otherwise, it returns a positive error number to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>The mutex is either not robust or is not in an inconsistent state.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>The mutex is either not robust or is not in an inconsistent state.</dd></dl>
 <h2>Versions</h2>
 <p><code>pthread_mutex_consistent</code>() was added to glibc in version 2.12.</p>
 <h2>Conforming To</h2>

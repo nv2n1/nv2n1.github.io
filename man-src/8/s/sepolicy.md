@@ -30,10 +30,10 @@ description: "sepolicy – SELinux Policy Inspection tool"
 <p>sepolicy is a tools set that will query the installed SELinux policy and generate useful reports, man pages, or even new policy modules. See the argument specific man pages for options and descriptions. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-P, &#8211;policy</i></p>
-<dd>Alternate policy to analyze. (Defaults to currently installed policy /sys/fs/selinux/policy)</p>
-<dt><i>-h, &#8211;help </i></p>
-<dd>Display help message </p>
+<dt><i>-P, &#8211;policy</i></dt>
+<dd>Alternate policy to analyze. (Defaults to currently installed policy /sys/fs/selinux/policy)</dd>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>

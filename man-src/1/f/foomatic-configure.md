@@ -24,44 +24,44 @@ description: "foomatic-configure – the main configuration program of the fooma
 <p> It also comprises half of a programatic API for user tools: you can learn and control everything about the static properties of print queues here. With the sister program <code><a href="/docs/linux/man/1-foomatic-printjob/">foomatic-printjob</a>(1)</code>, you can do everything related to the print queue&#8217;s dynamic state: submit jobs, and query, cancel, reorder, and redirect them. </p>
 <h3>Options</h3>
 <dl>
-<dt><code>-n</code><i>&nbsp;<wbr>queuename</i></p>
-<dd> Configure this print queue</p>
-<dt><code>-N</code><i>&nbsp;<wbr>Name/Description</i></p>
-<dd> Use this proper human-readable name/description</p>
-<dt><code>-L</code><i>&nbsp;<wbr>Location</i></p>
-<dd> Short phrase describing this printer&#8217;s location</p>
-<dt><code>-c</code><i>&nbsp;<wbr>connection</i></p>
-<dd> Printer is connected thusly (ex file:/dev/lp0)</p>
-<dt><code>-d</code><i>&nbsp;<wbr>driver</i></p>
-<dd> Foomatic database name for desired printer driver</p>
-<dt><code>-p</code><i>&nbsp;<wbr>printer</i></p>
-<dd> Foomatic id for printer</p>
-<dt><code>&#8211;ppd</code><i>&nbsp;<wbr>ppdfile</i></p>
-<dd> PPD file, for example the one supplied by the manufacturer of a PostScript printer</p>
-<dt><code>-s</code><i>&nbsp;<wbr>spooler</i></p>
-<dd> Explicit spooler type (cups, lpd, lprng, pdq, ppr, direct)</p>
-<dt><code>-o</code><i>&nbsp;<wbr>option=value</i></p>
-<dd> Set the default of option to value</p>
-<dt><code>-o</code><i>&nbsp;<wbr>option</i></p>
-<dd> Turn on option by default</p>
-<dt><code>-D</code></p>
-<dd> Set this queue as the default queue (just give <code>-n</code> <i>queuename</i>)</p>
-<dt><code>-R</code></p>
-<dd> Remove this whole queue entirely (just give <code>-n</code> <i>queuename</i>)</p>
-<dt><code>-C</code><i>&nbsp;<wbr>[</i><code>&nbsp;<wbr>sourcespooler</code><i>&nbsp;<wbr>]</i><code>&nbsp;<wbr>sourcequeue</code></p>
-<dd> Copy sourcequeue from sourcespooler (or the current one if sourcespooler is not given) into the queue given by <code>-n</code> <i>queuename</i> (of the current spooler).</p>
-<dt><code>-Q</code></p>
-<dd> Query existing configuration (gives XML summary)</p>
-<dt><code>-r</code></p>
-<dd> List also remotely defined queues (CUPS only)</p>
-<dt><code>-P</code><i>&nbsp;<wbr>[</i><code>&nbsp;<wbr>index</code><i>&nbsp;<wbr>]</i></p>
-<dd> Get Perl dump of current configuration (as a Perl array named QUEUES, the first index is index, or zero if index is not given)</p>
-<dt><code>-O</code></p>
-<dd> Print XML Overview of all known printer/drivers (this shows also the Foomatic IDs of the printers)</p>
-<dt><code>-X</code></p>
-<dd> Print XML data for <code>-p</code> <i>printer</i> and/or <code>-d</code> <i>driver</i> object</p>
-<dt><code>-q</code></p>
-<dd> Run quietly </p>
+<dt><code>-n</code><i>&nbsp;<wbr>queuename</i></dt>
+<dd> Configure this print queue</dd>
+<dt><code>-N</code><i>&nbsp;<wbr>Name/Description</i></dt>
+<dd> Use this proper human-readable name/description</dd>
+<dt><code>-L</code><i>&nbsp;<wbr>Location</i></dt>
+<dd> Short phrase describing this printer&#8217;s location</dd>
+<dt><code>-c</code><i>&nbsp;<wbr>connection</i></dt>
+<dd> Printer is connected thusly (ex file:/dev/lp0)</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>driver</i></dt>
+<dd> Foomatic database name for desired printer driver</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>printer</i></dt>
+<dd> Foomatic id for printer</dd>
+<dt><code>&#8211;ppd</code><i>&nbsp;<wbr>ppdfile</i></dt>
+<dd> PPD file, for example the one supplied by the manufacturer of a PostScript printer</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>spooler</i></dt>
+<dd> Explicit spooler type (cups, lpd, lprng, pdq, ppr, direct)</dd>
+<dt><code>-o</code><i>&nbsp;<wbr>option=value</i></dt>
+<dd> Set the default of option to value</dd>
+<dt><code>-o</code><i>&nbsp;<wbr>option</i></dt>
+<dd> Turn on option by default</dd>
+<dt><code>-D</code></dt>
+<dd> Set this queue as the default queue (just give <code>-n</code> <i>queuename</i>)</dd>
+<dt><code>-R</code></dt>
+<dd> Remove this whole queue entirely (just give <code>-n</code> <i>queuename</i>)</dd>
+<dt><code>-C</code><i>&nbsp;<wbr>[</i><code>&nbsp;<wbr>sourcespooler</code><i>&nbsp;<wbr>]</i><code>&nbsp;<wbr>sourcequeue</code></dt>
+<dd> Copy sourcequeue from sourcespooler (or the current one if sourcespooler is not given) into the queue given by <code>-n</code> <i>queuename</i> (of the current spooler).</dd>
+<dt><code>-Q</code></dt>
+<dd> Query existing configuration (gives XML summary)</dd>
+<dt><code>-r</code></dt>
+<dd> List also remotely defined queues (CUPS only)</dd>
+<dt><code>-P</code><i>&nbsp;<wbr>[</i><code>&nbsp;<wbr>index</code><i>&nbsp;<wbr>]</i></dt>
+<dd> Get Perl dump of current configuration (as a Perl array named QUEUES, the first index is index, or zero if index is not given)</dd>
+<dt><code>-O</code></dt>
+<dd> Print XML Overview of all known printer/drivers (this shows also the Foomatic IDs of the printers)</dd>
+<dt><code>-X</code></dt>
+<dd> Print XML data for <code>-p</code> <i>printer</i> and/or <code>-d</code> <i>driver</i> object</dd>
+<dt><code>-q</code></dt>
+<dd> Run quietly </dd>
 </dl>
 <h3>Commands</h3>
 <p> No commands, just options </p>

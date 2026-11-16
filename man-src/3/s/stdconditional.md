@@ -11,10 +11,8 @@ std::conditional - std::conditional
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;bool B, class T, class F&gt;
     (since C++ 11)
-
         struct conditional;</code></pre> 
 Provides member typedef type, which is defined as T if B is true at compile time, or as F if B is false. 
 
@@ -40,12 +38,9 @@ using conditional_t = typename conditional&lt;B,T,F&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;typeinfo&gt;
 int main()
-
 {
     typedef std::conditional&lt;true, int, double&gt;::type Type1;
     typedef std::conditional&lt;false, int, double&gt;::type Type2;

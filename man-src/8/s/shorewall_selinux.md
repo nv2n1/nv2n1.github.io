@@ -106,14 +106,14 @@ description: "shorewall_selinux – Security Enhanced Linux Policy for the shore
 <p> <code>shorewall_etc_t</code> </p>
 <p> &#8211; Set files with the shorewall_etc_t type, if you want to store shorewall files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/shorewall(/.*)?, /etc/shorewall-lite(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/shorewall(/.*)?, /etc/shorewall-lite(/.*)? </dd>
 </dl>
 <p> <code>shorewall_exec_t</code> </p>
 <p> &#8211; Set files with the shorewall_exec_t type, if you want to transition an executable to the shorewall_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/shorewall6?, /usr/sbin/shorewall6?, /sbin/shorewall-lite, /usr/sbin/shorewall-lite </p>
+<dt>Paths:</dt>
+<dd>/sbin/shorewall6?, /usr/sbin/shorewall6?, /sbin/shorewall-lite, /usr/sbin/shorewall-lite </dd>
 </dl>
 <p> <code>shorewall_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the shorewall_initrc_exec_t type, if you want to transition an executable to the shorewall_initrc_t domain. </p>
@@ -126,8 +126,8 @@ description: "shorewall_selinux – Security Enhanced Linux Policy for the shore
 <p> <code>shorewall_var_lib_t</code> </p>
 <p> &#8211; Set files with the shorewall_var_lib_t type, if you want to store the shorewall files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/shorewall(/.*)?, /var/lib/shorewall6(/.*)?, /var/lib/shorewall-lite(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/shorewall(/.*)?, /var/lib/shorewall6(/.*)?, /var/lib/shorewall-lite(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

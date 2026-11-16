@@ -40,10 +40,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>val</i> Default color value of key, as a hexadecimal string.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ECORE_CONFIG_RGB, and ecore_config_typed_create().</p>
 <h3>int ecore_config_boolean_create (const char * key, int val, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new boolean property, if it does not already exist, and sets its attributes to those given. </p>
@@ -53,10 +53,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>val</i> Default boolean value of key.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ECORE_CONFIG_BLN, and ecore_config_typed_create().</p>
 <h3>int ecore_config_create (const char * key, void * val, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new property, if it does not already exist, and sets its attributes to those given. </p>
@@ -67,10 +67,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>val</i> Pointer to default value of key.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ecore_config_typed_create().</p>
 <h3>int ecore_config_float_create (const char * key, float val, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new float property, if it does not already exist, and sets its attributes to those given. </p>
@@ -80,10 +80,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>val</i> Default float value of key.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ECORE_CONFIG_FLT, and ecore_config_typed_create().</p>
 <h3>int ecore_config_float_create_bound (const char * key, float val, float low, float high, float step, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new float property, if it does not already exist, and sets its attributes to those given. </p>
@@ -96,10 +96,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>step</i> Increment value for the property.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ECORE_CONFIG_FLT, ecore_config_get(), and ecore_config_typed_create().</p>
 <h3>int ecore_config_int_create (const char * key, int val, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new integer property, if it does not already exist, and sets its attributes to those given. </p>
@@ -109,10 +109,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>val</i> Default integer value of key.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ECORE_CONFIG_INT, and ecore_config_typed_create().</p>
 <h3>int ecore_config_int_create_bound (const char * key, int val, int low, int high, int step, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new integer property, if it does not already exist, and sets its attributes to those given. </p>
@@ -125,10 +125,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>step</i> Increment value for the property.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ecore_config_get(), ECORE_CONFIG_INT, and ecore_config_typed_create().</p>
 <h3>int ecore_config_string_create (const char * key, char * val, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new string property, if it does not already exist, and sets its attributes to those given. </p>
@@ -138,10 +138,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>val</i> Default value of key.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ECORE_CONFIG_STR, and ecore_config_typed_create().</p>
 <h3>int ecore_config_theme_create (const char * key, char * val, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new theme property, if it does not already exist, and sets its attributes to those given. </p>
@@ -151,10 +151,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>val</i> Default theme name for the property.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ECORE_CONFIG_THM, and ecore_config_typed_create().</p>
 <h3>int ecore_config_typed_create (const char * key, void * val, int type, char short_opt, char * long_opt, char * desc)</h3>
 <p>Creates a new property, if it does not already exist, and sets its attributes to those given. </p>
@@ -165,10 +165,10 @@ description: "Ecore Config Create Functions – Convenience functions that set d
  <i>type</i> Type of the property.<br />
  <i>short_opt</i> Short option used to set the property from command line.<br />
  <i>long_opt</i> Long option used to set the property from command line.<br />
- <i>desc</i> String description of property.</dl>
+ <i>desc</i> String description of property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ecore_config_describe(), ecore_config_long_opt_set(), and ecore_config_short_opt_set(). </p>
 <p> Referenced by ecore_config_argb_create(), ecore_config_boolean_create(), ecore_config_create(), ecore_config_float_create(), ecore_config_float_create_bound(), ecore_config_int_create(), ecore_config_int_create_bound(), ecore_config_string_create(), and ecore_config_theme_create().</p>
 <h2>Author</h2>

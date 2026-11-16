@@ -21,92 +21,88 @@ description: "ratop – display and update sorted network flow data"
 <p> Command line option specifications are processed from left to right. Options can be specified more than once. If conflicting options are specified, later specifications override earlier ones. This makes it viable to create a shell alias for <code>ratop</code> with preferred defaults specified, then override those preferred defaults as desired on the command line. </p>
 <p> <code>ratop</code>, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression, and the ability to specify the output style, format and contents for printing data. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-ratop/">ratop</a>(1)</code> specific options are: </p>
 <dl>
-<dt><code>-m</code><i> aggregation object</i></p>
-<dd> Supported aggregation objects are:</dl>
+<dt><code>-m</code><i> aggregation object</i></dt>
+<dd> Supported aggregation objects are:</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>none</code></p>
-<dd> use a null flow key.</p>
-<dt><code>srcid</code></p>
-<dd> argus source identifier.</p>
-<dt><code>smac</code></p>
-<dd> source mac(ether) addr.</p>
-<dt><code>dmac</code></p>
-<dd> destination mac(ether) addr.</p>
-<dt><code>soui</code></p>
-<dd> oui portion of the source mac(ether) addr.</p>
-<dt><code>doui</code></p>
-<dd> oui portion of the destination mac(ether) addr.</p>
-<dt><code>smpls</code></p>
-<dd> source mpls label.</p>
-<dt><code>dmpls</code></p>
-<dd> destination label addr.</p>
-<dt><code>svlan</code></p>
-<dd> source vlan label.</p>
-<dt><code>dvlan</code></p>
-<dd> destination vlan addr.</p>
-<dt><code>saddr/[l|m]</code></p>
-<dd> source IP addr/[cidr len | m.a.s.k].</p>
-<dt><code>daddr/[l|m]</code></p>
-<dd> destination IP addr/[cidr len | m.a.s.k].</p>
-<dt><code>matrix/l</code></p>
-<dd> sorted src and dst IP addr/cidr len.</p>
-<dt><code>proto</code></p>
-<dd> transaction protocol.</p>
-<dt><code>sport</code></p>
-<dd> source port number. Implies use of &#8216;proto&#8217;.</p>
-<dt><code>dport</code></p>
-<dd> destination port number. Implies use of &#8216;proto&#8217;.</p>
-<dt><code>stos</code></p>
-<dd> source TOS byte value.</p>
-<dt><code>dtos</code></p>
-<dd> destination TOS byte value.</p>
-<dt><code>sttl</code></p>
-<dd> src -&gt; dst TTL value.</p>
-<dt><code>dttl</code></p>
-<dd> dst -&gt; src TTL value.</p>
-<dt><code>stcpb</code></p>
-<dd> src -&gt; dst TCP base sequence number.</p>
-<dt><code>dtcpb</code></p>
-<dd> dst -&gt; src TCP base sequence number.</p>
-<dt><code>inode[/l|m]]</code></p>
-<dd> intermediate node IP addr/[cidr len | m.a.s.k], source of ICMP mapped events.</p>
-<dt><code>sco</code></p>
-<dd> source ARIN country code, if present.</p>
-<dt><code>dco</code></p>
-<dd> destination ARIN country code, if present.</p>
-<dt><code>sas</code></p>
-<dd> source node origin AS number, if available.</p>
-<dt><code>das</code></p>
-<dd> destination node origin AS number, if available.</p>
-<dt><code>ias</code></p>
-<dd> intermediate node origin AS number, if available. </p>
-<dt></dl>
+<dt><code>none</code></dt>
+<dd> use a null flow key.</dd>
+<dt><code>srcid</code></dt>
+<dd> argus source identifier.</dd>
+<dt><code>smac</code></dt>
+<dd> source mac(ether) addr.</dd>
+<dt><code>dmac</code></dt>
+<dd> destination mac(ether) addr.</dd>
+<dt><code>soui</code></dt>
+<dd> oui portion of the source mac(ether) addr.</dd>
+<dt><code>doui</code></dt>
+<dd> oui portion of the destination mac(ether) addr.</dd>
+<dt><code>smpls</code></dt>
+<dd> source mpls label.</dd>
+<dt><code>dmpls</code></dt>
+<dd> destination label addr.</dd>
+<dt><code>svlan</code></dt>
+<dd> source vlan label.</dd>
+<dt><code>dvlan</code></dt>
+<dd> destination vlan addr.</dd>
+<dt><code>saddr/[l|m]</code></dt>
+<dd> source IP addr/[cidr len | m.a.s.k].</dd>
+<dt><code>daddr/[l|m]</code></dt>
+<dd> destination IP addr/[cidr len | m.a.s.k].</dd>
+<dt><code>matrix/l</code></dt>
+<dd> sorted src and dst IP addr/cidr len.</dd>
+<dt><code>proto</code></dt>
+<dd> transaction protocol.</dd>
+<dt><code>sport</code></dt>
+<dd> source port number. Implies use of &#8216;proto&#8217;.</dd>
+<dt><code>dport</code></dt>
+<dd> destination port number. Implies use of &#8216;proto&#8217;.</dd>
+<dt><code>stos</code></dt>
+<dd> source TOS byte value.</dd>
+<dt><code>dtos</code></dt>
+<dd> destination TOS byte value.</dd>
+<dt><code>sttl</code></dt>
+<dd> src -&gt; dst TTL value.</dd>
+<dt><code>dttl</code></dt>
+<dd> dst -&gt; src TTL value.</dd>
+<dt><code>stcpb</code></dt>
+<dd> src -&gt; dst TCP base sequence number.</dd>
+<dt><code>dtcpb</code></dt>
+<dd> dst -&gt; src TCP base sequence number.</dd>
+<dt><code>inode[/l|m]]</code></dt>
+<dd> intermediate node IP addr/[cidr len | m.a.s.k], source of ICMP mapped events.</dd>
+<dt><code>sco</code></dt>
+<dd> source ARIN country code, if present.</dd>
+<dt><code>dco</code></dt>
+<dd> destination ARIN country code, if present.</dd>
+<dt><code>sas</code></dt>
+<dd> source node origin AS number, if available.</dd>
+<dt><code>das</code></dt>
+<dd> destination node origin AS number, if available.</dd>
+<dt><code>ias</code></dt>
+<dd> intermediate node origin AS number, if available. </dd>
+<dt></dt></dl>
 </dl>
 <dd>
+</dd><dl>
+<dt><code>-M</code><i> modes</i></dt>
+<dd> Supported modes are:</dd></dl>
 <dl>
-<dt><code>-M</code><i> modes</i></p>
-<dd> Supported modes are:</dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt><code>correct</code></p>
-<dd> Attempt to correct the direction of flows by also searching the reverse flow key, if a match isn&#8217;t found in the cache. This mode is on by default when using the default full 5-tuple flow key definitions.</p>
-<dt><code>nocorrect</code></p>
-<dd> Turn off flow correction for direction. This mode is used by default if the flow key has been changed.</p>
-<dt><code>preserve</code></p>
-<dd> Preserve fields when aggregating matching flow data.</p>
-<dt><code>nopreserve</code></p>
-<dd> Do not preserve fields when aggregating matching flow data.</p>
-<dt><code>norep</code></p>
-<dd> Do not generate an aggregate statistic for each flow. This is used primarily when the output represents a single object. Primarily used when merging status records to generate single flows that represent single transactions.</p>
-<dt><code>rmon</code></p>
-<dd> Generate data suitable for producing RMON types of metrics.</p>
-<dt><code>nocurses</code></p>
-<dd> Do not use the curses interface to present data. This option is primarily used when debugging ratop, to get around the issues of screen maniuplation within a debugger like gdb or lldb.</dl>
+<dt><code>correct</code></dt>
+<dd> Attempt to correct the direction of flows by also searching the reverse flow key, if a match isn&#8217;t found in the cache. This mode is on by default when using the default full 5-tuple flow key definitions.</dd>
+<dt><code>nocorrect</code></dt>
+<dd> Turn off flow correction for direction. This mode is used by default if the flow key has been changed.</dd>
+<dt><code>preserve</code></dt>
+<dd> Preserve fields when aggregating matching flow data.</dd>
+<dt><code>nopreserve</code></dt>
+<dd> Do not preserve fields when aggregating matching flow data.</dd>
+<dt><code>norep</code></dt>
+<dd> Do not generate an aggregate statistic for each flow. This is used primarily when the output represents a single object. Primarily used when merging status records to generate single flows that represent single transactions.</dd>
+<dt><code>rmon</code></dt>
+<dd> Generate data suitable for producing RMON types of metrics.</dd>
+<dt><code>nocurses</code></dt>
+<dd> Do not use the curses interface to present data. This option is primarily used when debugging ratop, to get around the issues of screen maniuplation within a debugger like gdb or lldb.</dd></dl>
 </dl>
 <h2>DISPLAY</h2>
 <p> The first several lines of the <code>ratop</code> display show global state. The top line shows how ratop is running, with the list of command line options that are in effect. In the upper most right corner is the current time. The next line is the column title line, that labels each column. The bottom line is the command line, where you will see and prepare &#8216;:&#8217; commands. The line above the bottom line is the status line, showing the number of flows that are in the <code>ratop</code> process queue, display queue, the total number of flows read, the rate of flow records read, and the current status, whether it is Active, reading records, or Idle, when all input is complete. This line can be toggled on or off using ^G. </p>
@@ -120,11 +116,11 @@ description: "ratop – display and update sorted network flow data"
 <p> Introduced in argus-3.0.8, <code>ratop</code> supports correlating specific ARGUS_EVENT data with flow data, which can be turned on through the use of the RA_CORRELATE_EVENTS rarc variable. <code>ratop</code> will process argus-lsof event data generated by host bourne argi, and label flow data with user, pid and process name metadata. While experimental, it is production level functionality, and can be used with other ra* programs to enhance flow data with host os process information. See argus-3.0.8 documentation on ARGUS_EVENTS. </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>ratop -r argus.file -s rank stime dur:14 saddr daddr proto pkts bytes</p>
+<dt>ratop -r argus.file -s rank stime dur:14 saddr daddr proto pkts bytes</dt>
 <dd>
 <p> Read the file argus.file, and display the resulting aggregated and sorted list of flow records, using the default sorting methods. </p>
-<dt>ratop -S localhost</p>
-<dd> Run ratop as a live display of realtime flow traffic. </p>
+</dd><dt>ratop -S localhost</dt>
+<dd> Run ratop as a live display of realtime flow traffic. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-rarc/">rarc</a>(5) <a href="/docs/linux/man/1-racluster/">racluster</a>(1) racluster.conf(5) </p>

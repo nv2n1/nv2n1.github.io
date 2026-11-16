@@ -14,7 +14,7 @@ description: "skb_dequeue_tail – remove from the tail of the queue"
 <p><i>list</i></p>
 <dl>
 <dd>
-<dd>list to dequeue from</dl>
+</dd><dd>list to dequeue from</dd></dl>
 <h2>Description</h2>
 <p>Remove the tail of the list. The list lock is taken so the function may be used safely with other locking list functions. The tail item is returned or <code>NULL</code> if the list is empty.</p>
 <h2>Copyright</h2>

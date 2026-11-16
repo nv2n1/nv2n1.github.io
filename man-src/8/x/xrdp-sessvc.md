@@ -15,10 +15,10 @@ description: "xrdp-sessvc – xrdp session supervisor"
  This program is only executed internally by <code><a href="/docs/linux/man/8-xrdp-sesman/">xrdp-sesman</a></code>(8). </p>
 <h2>Options</h2>
 <dl>
-<dt><i>x_pid</i></p>
-<dd>The process ID of the forked X server to monitor.</p>
-<dt><i>wm_pid</i></p>
-<dd>The process ID of the forked Window Manager to monitor. </p>
+<dt><i>x_pid</i></dt>
+<dd>The process ID of the forked X server to monitor.</dd>
+<dt><i>wm_pid</i></dt>
+<dd>The process ID of the forked Window Manager to monitor. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-xrdp-sesrun/">xrdp-sesrun</a></code>(8). for more info on <code>xrdp</code> see <a rel="nofollow" href="http://www.xrdp.org/">http://www.xrdp.org/</a> </p>

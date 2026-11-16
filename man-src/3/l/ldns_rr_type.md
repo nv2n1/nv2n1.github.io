@@ -15,9 +15,9 @@ description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_li
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr</i></p>
+<dt> <i>ldns_rr</i></dt>
 <dd>
-<dd>Resource Record </p>
+</dd><dd>Resource Record </dd>
 <p> This is the basic DNS element that contains actual data </p>
 <p> From RFC1035:<br />
  &lt;pre&gt;<br />
@@ -63,7 +63,8 @@ description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_li
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>according to the TYPE and CLASS of the resource record.<br />
  &lt;/pre&gt; </p>
 <p> The actual amount and type of rdata fields depend on the RR type of the<br />
- RR, and can be found by using ef ldns_rr_descriptor functions.<br />
+ RR, and can be found by using 
+ef ldns_rr_descriptor functions.<br />
  struct ldns_struct_rr<br />
  {<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>Owner name, uncompressed:</code></p>
@@ -86,13 +87,13 @@ description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_li
 <p> };<br />
  typedef struct ldns_struct_rr ldns_rr;</dl>
 <dl>
-<dt> <i>ldns_rr_class</i></p>
+<dt> <i>ldns_rr_class</i></dt>
 <dd>
-&nbsp;<wbr>The different RR classes.</p>
+&nbsp;<wbr>The different RR classes.</dd>
 <dd>
-<dd>enum ldns_enum_rr_class<br />
+</dd><dd>enum ldns_enum_rr_class<br />
  {<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>the Internet:</code></p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>the Internet:</code></dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RR_CLASS_IN <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>= 1,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>Chaos class:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RR_CLASS_CH<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>= 3,</p>
@@ -108,12 +109,12 @@ description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_li
 <p> };<br />
  typedef enum ldns_enum_rr_class ldns_rr_class;</dl>
 <dl>
-<dt> <i>ldns_rr_type</i></p>
+<dt> <i>ldns_rr_type</i></dt>
 <dd>
-<dd>The different RR types.<br />
+</dd><dd>The different RR types.<br />
  enum ldns_enum_rr_type<br />
  {<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>a host address:</code></p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>a host address:</code></dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RR_TYPE_A = 1,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>an authoritative name server:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RR_TYPE_NS = 2,</p>
@@ -241,21 +242,21 @@ description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_li
 <p> };<br />
  typedef enum ldns_enum_rr_type ldns_rr_type;</dl>
 <dl>
-<dt> <i>ldns_rr_compress</i></p>
+<dt> <i>ldns_rr_compress</i></dt>
 <dd>
-&nbsp;<wbr>Used to specify whether compression is allowed.</p>
+&nbsp;<wbr>Used to specify whether compression is allowed.</dd>
 <dd>
-<dd>enum ldns_enum_rr_compress<br />
+</dd><dd>enum ldns_enum_rr_compress<br />
  {<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>compression is allowed:</code></p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>compression is allowed:</code></dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RR_COMPRESS,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RR_NO_COMPRESS</p>
 <p> };<br />
  typedef enum ldns_enum_rr_compress ldns_rr_compress;</dl>
 <dl>
-<dt> <i>ldns_rr_list</i></p>
+<dt> <i>ldns_rr_list</i></dt>
 <dd>
-<dd>List or Set of Resource Records </p>
+</dd><dd>List or Set of Resource Records </dd>
 <p> Contains a list of rr&#8217;s &lt;br&gt;<br />
  No official RFC-like checks are made<br />
  struct ldns_struct_rr_list<br />
@@ -277,3 +278,4 @@ description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_li
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

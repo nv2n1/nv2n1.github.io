@@ -11,15 +11,15 @@ url: "/docs/linux/man/1-rasterintro/"
 <p> The geographic boundaries of the raster map are described by the north, south, east, and west fields. These values describe the lines which bound the map at its edges. These lines do NOT pass through the center of the grid cells at the edge of the map, but along the edge of the map itself. </p>
 <p> As a general rule in GRASS:</p>
 <dl>
-<dt><code>1</code></p>
+<dt><code>1</code></dt>
 <dd>
-&nbsp;<wbr>Raster output maps have their bounds and resolution equal to those of the current region.</p>
-<dt><code>2</code></p>
+&nbsp;<wbr>Raster output maps have their bounds and resolution equal to those of the current region.</dd>
+<dt><code>2</code></dt>
 <dd>
-&nbsp;<wbr>Raster input maps are automatically cropped/padded and rescaled (using nearest-neighbour resampling) to match the current region.</p>
-<dt><code>3</code></p>
+&nbsp;<wbr>Raster input maps are automatically cropped/padded and rescaled (using nearest-neighbour resampling) to match the current region.</dd>
+<dt><code>3</code></dt>
 <dd>
-&nbsp;<wbr>Raster input maps are automatically masked if a raster map named MASK exists.</dl>
+&nbsp;<wbr>Raster input maps are automatically masked if a raster map named MASK exists.</dd></dl>
 <p> There are a few exceptions to this: r.in.* programs read the data cell-for-cell, with no resampling. When reading non-georeferenced data, the imported map will usually have its lower-left corner at (0,0) in the location&#8217;s coordinate system; the user needs to use r.region to &quot;place&quot; the imported map. </p>
 <p> Some programs which need to perform specific types of resampling (e.g. r.resamp.rst) read the input maps at their original resolution then do the resampling themselves. </p>
 <p> r.proj has to deal with two regions (source and destination) simultaneously; both will have an impact upon the final result.</p>
@@ -39,24 +39,22 @@ url: "/docs/linux/man/1-rasterintro/"
 <h3>Raster map resampling and interpolation methods</h3>
 <p> GRASS offers various raster resampling and interpolation methods:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>Resampling with nearest neighbor, bilinear, and bicubic method (r.resamp.interp)</p>
+</dt><dd>
+&nbsp;<wbr>Resampling with nearest neighbor, bilinear, and bicubic method (r.resamp.interp)</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Inverse distance weighted average&nbsp;<wbr>(IDW)&nbsp;<wbr>interpolation (r.surf.idw2)</p>
+</dt><dd>
+&nbsp;<wbr>Inverse distance weighted average&nbsp;<wbr>(IDW)&nbsp;<wbr>interpolation (r.surf.idw2)</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Regularized spline with tension&nbsp;<wbr>(RST)&nbsp;<wbr>interpolation 2D (r.resamp.rst)</p>
+</dt><dd>
+&nbsp;<wbr>Regularized spline with tension&nbsp;<wbr>(RST)&nbsp;<wbr>interpolation 2D (r.resamp.rst)</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Bilinear interpolation&nbsp;<wbr>(r.bilinear)</p>
+</dt><dd>
+&nbsp;<wbr>Bilinear interpolation&nbsp;<wbr>(r.bilinear)</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Interpolating from contour lines&nbsp;<wbr>(r.contour)</dl>
+</dt><dd>
+&nbsp;<wbr>Interpolating from contour lines&nbsp;<wbr>(r.contour)</dd></dl>
 </dl>
 <h3>Hydrologic modeling toolbox</h3>
 <p> Watershed modeling related modules are r.basins.fill, r.water.outlet, r.watershed, and r.terraflow. Water flow related modules are r.carve, r.drain, r.fill.dir, r.fillnulls, r.flow, and r.topidx. Flooding can be simulated with r.lake. Hydrologic simulation model are available as r.sim.sediment, r.sim.water, and r.topmodel.</p>
@@ -65,13 +63,11 @@ url: "/docs/linux/man/1-rasterintro/"
 <p> GRASS distinguishes NULL and zero. When working with NULL data, it is important to know that operations on NULL cells lead to NULL cells.</p>
 <h3>See also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> Introduction to GRASS vector map processing</p>
+</dt><dd> Introduction to GRASS vector map processing</dd>
 <dt>
-<dd> Introduction to GRASS 3D raster map (voxel) processing</dl>
+</dt><dd> Introduction to GRASS 3D raster map (voxel) processing</dd></dl>
 </dl>
 <p> raster index &#8211; full index </p>
 <h2>Index</h2>

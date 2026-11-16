@@ -12,69 +12,69 @@ description: "npm-hook – Manage registry hooks"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm hook ls[pkg] npm hook add&lt;entity&gt;&lt;url&gt;&lt;secret&gt;
     npm hook update&lt;id&gt;&lt;url&gt;[secret] npm hook rm&lt;id&gt;
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Example</h3>
 <p> Add a hook to watch a package for changes: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm hook add lodash <a rel="nofollow" href="https://example.com/">https://example.com/</a> my-shared-secret
 </pre>
-</dl>
+</dd></dl>
 <p> Add a hook to watch packages belonging to the user <code>substack</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm hook add ~substack <a rel="nofollow" href="https://example.com/">https://example.com/</a> my-shared-secret
 </pre>
-</dl>
+</dd></dl>
 <p> Add a hook to watch packages in the scope <code>@npm</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm hook add @npm <a rel="nofollow" href="https://example.com/">https://example.com/</a> my-shared-secret
 </pre>
-</dl>
+</dd></dl>
 <p> List all your active hooks: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm hook ls
 </pre>
-</dl>
+</dd></dl>
 <p> List your active hooks for the <code>lodash</code> package: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm hook ls lodash
 </pre>
-</dl>
+</dd></dl>
 <p> Update an existing hook&#8217;s url: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm hook update id-deadbeef <a rel="nofollow" href="https://my-new-website.here/">https://my-new-website.here/</a>
 </pre>
-</dl>
+</dd></dl>
 <p> Remove a hook: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm hook rm id-deadbeef
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Allows you to manage npm hooks <i><a rel="nofollow" href="https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm">https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm</a></i>, including adding, removing, listing, and updating. </p>
 <p> Hooks allow you to configure URL endpoints that will be notified whenever a change happens to any of the supported entity types. Three different types of entities can be watched by hooks: packages, owners, and scopes. </p>
@@ -85,11 +85,9 @@ $ npm hook rm id-deadbeef
 <p> The shared secret will be sent along to the URL endpoint so you can verify the request came from your own configured hook.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> &quot;Introducing Hooks&quot; blog post <i><a rel="nofollow" href="https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm">https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm</a></i> </p>
+<dt>&bull;</dt>
+<dd> &quot;Introducing Hooks&quot; blog post <i><a rel="nofollow" href="https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm">https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm</a></i> </dd>
 </dl>
 </dl>
 <h2>Index</h2>

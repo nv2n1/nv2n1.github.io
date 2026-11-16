@@ -36,14 +36,14 @@ description: "system_selinux – Security Enhanced Linux Policy for the system p
 <p> system_conf_t </code> </p>
 <p> &#8211; Set files with the system_conf_t type, if you want to treat the files as system configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/sysctl.conf(.old)?, /etc/sysconfig/ipvsadm.*, /etc/sysconfig/ebtables.*, /etc/sysconfig/ip6?tables.*, /etc/sysconfig/system-config-firewall.* </p>
+<dt>Paths:</dt>
+<dd>/etc/sysctl.conf(.old)?, /etc/sysconfig/ipvsadm.*, /etc/sysconfig/ebtables.*, /etc/sysconfig/ip6?tables.*, /etc/sysconfig/system-config-firewall.* </dd>
 </dl>
 <p> <code>system_cron_spool_t </code> </p>
 <p> &#8211; Set files with the system_cron_spool_t type, if you want to store the system cron files under the /var/spool directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/crontab, /var/spool/anacron(/.*)?, /etc/cron.d(/.*)?, /var/spool/fcron/systab.orig, /var/spool/fcron/new.systab, /var/spool/fcron/systab </p>
+<dt>Paths:</dt>
+<dd>/etc/crontab, /var/spool/anacron(/.*)?, /etc/cron.d(/.*)?, /var/spool/fcron/systab.orig, /var/spool/fcron/new.systab, /var/spool/fcron/systab </dd>
 </dl>
 <p> <code>system_cronjob_lock_t </code> </p>
 <p> &#8211; Set files with the system_cronjob_lock_t type, if you want to treat the files as system cronjob lock data, stored under the /var/lock directory </p>
@@ -60,22 +60,22 @@ description: "system_selinux – Security Enhanced Linux Policy for the system p
 <p> <code>system_dbusd_var_run_t </code> </p>
 <p> &#8211; Set files with the system_dbusd_var_run_t type, if you want to store the system dbusd files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/named/chroot/var/run/dbus(/.*)?, /var/run/dbus(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/named/chroot/var/run/dbus(/.*)?, /var/run/dbus(/.*)? </dd>
 </dl>
 <p> <code>system_mail_tmp_t </code> </p>
 <p> &#8211; Set files with the system_mail_tmp_t type, if you want to store system mail temporary files in the /tmp directories. </p>
 <p> <code>system_map_t </code> </p>
 <p> &#8211; Set files with the system_map_t type, if you want to treat the files as system map data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/boot/System.map(-.*)?, /boot/efi(/.*)?/System.map(-.*)? </p>
+<dt>Paths:</dt>
+<dd>/boot/System.map(-.*)?, /boot/efi(/.*)?/System.map(-.*)? </dd>
 </dl>
 <p> <code>system_munin_plugin_exec_t </code> </p>
 <p> &#8211; Set files with the system_munin_plugin_exec_t type, if you want to transition an executable to the system_munin_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/munin/plugins/proc_pri, /usr/share/munin/plugins/swap, /usr/share/munin/plugins/interrupts, /usr/share/munin/plugins/cpu.*, /usr/share/munin/plugins/yum, /usr/share/munin/plugins/load, /usr/share/munin/plugins/irqstats, /usr/share/munin/plugins/processes, /usr/share/munin/plugins/iostat.*, /usr/share/munin/plugins/nfs.*, /usr/share/munin/plugins/munin_.*, /usr/share/munin/plugins/memory, /usr/share/munin/plugins/threads, /usr/share/munin/plugins/netstat, /usr/share/munin/plugins/acpi, /usr/share/munin/plugins/forks, /usr/share/munin/plugins/uptime, /usr/share/munin/plugins/users, /usr/share/munin/plugins/if_.*, /usr/share/munin/plugins/open_files </p>
+<dt>Paths:</dt>
+<dd>/usr/share/munin/plugins/proc_pri, /usr/share/munin/plugins/swap, /usr/share/munin/plugins/interrupts, /usr/share/munin/plugins/cpu.*, /usr/share/munin/plugins/yum, /usr/share/munin/plugins/load, /usr/share/munin/plugins/irqstats, /usr/share/munin/plugins/processes, /usr/share/munin/plugins/iostat.*, /usr/share/munin/plugins/nfs.*, /usr/share/munin/plugins/munin_.*, /usr/share/munin/plugins/memory, /usr/share/munin/plugins/threads, /usr/share/munin/plugins/netstat, /usr/share/munin/plugins/acpi, /usr/share/munin/plugins/forks, /usr/share/munin/plugins/uptime, /usr/share/munin/plugins/users, /usr/share/munin/plugins/if_.*, /usr/share/munin/plugins/open_files </dd>
 </dl>
 <p> <code>system_munin_plugin_tmp_t </code> </p>
 <p> &#8211; Set files with the system_munin_plugin_tmp_t type, if you want to store system munin plugin temporary files in the /tmp directories. </p>
@@ -88,38 +88,38 @@ description: "system_selinux – Security Enhanced Linux Policy for the system p
 <p> <code>systemd_logind_var_run_t </code> </p>
 <p> &#8211; Set files with the systemd_logind_var_run_t type, if you want to store the systemd logind files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/nologin, /var/run/systemd/users(/.*)?, /var/run/systemd/seats(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/nologin, /var/run/systemd/users(/.*)?, /var/run/systemd/seats(/.*)? </dd>
 </dl>
 <p> <code>systemd_notify_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_notify_exec_t type, if you want to transition an executable to the systemd_notify_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/systemd-notify, /bin/systemd-notify </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/systemd-notify, /bin/systemd-notify </dd>
 </dl>
 <p> <code>systemd_passwd_agent_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_passwd_agent_exec_t type, if you want to transition an executable to the systemd_passwd_agent_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/systemd-tty-ask-password-agent, /usr/bin/systemd-gnome-ask-password-agent, /usr/bin/systemd-tty-ask-password-agent </p>
+<dt>Paths:</dt>
+<dd>/bin/systemd-tty-ask-password-agent, /usr/bin/systemd-gnome-ask-password-agent, /usr/bin/systemd-tty-ask-password-agent </dd>
 </dl>
 <p> <code>systemd_passwd_var_run_t </code> </p>
 <p> &#8211; Set files with the systemd_passwd_var_run_t type, if you want to store the systemd passwd files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/systemd/ask-password(/.*)?, /var/run/systemd/ask-password-block(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/systemd/ask-password(/.*)?, /var/run/systemd/ask-password-block(/.*)? </dd>
 </dl>
 <p> <code>systemd_systemctl_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_systemctl_exec_t type, if you want to transition an executable to the systemd_systemctl_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/systemctl, /bin/systemctl </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/systemctl, /bin/systemctl </dd>
 </dl>
 <p> <code>systemd_tmpfiles_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_tmpfiles_exec_t type, if you want to transition an executable to the systemd_tmpfiles_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/systemd-tmpfiles, /bin/systemd-tmpfiles, /usr/lib/systemd/systemd-tmpfiles </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/systemd-tmpfiles, /bin/systemd-tmpfiles, /usr/lib/systemd/systemd-tmpfiles </dd>
 </dl>
 <p> <code>systemd_unit_file_t </code> </p>
 <p> &#8211; Set files with the systemd_unit_file_t type, if you want to treat the files as systemd unit content. </p>

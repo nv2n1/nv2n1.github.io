@@ -43,18 +43,18 @@ int fputws_unlocked(const wchar_t *ws, FILE *stream);
 <p> <code>getc_unlocked</code>(), <code>getchar_unlocked</code>(), <code>putc_unlocked</code>(), <code>putchar_unlocked</code>():</p>
 <dl>
 <dt>
-<dd> /* Since glibc 2.24: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L<br />
+</dt><dd> /* Since glibc 2.24: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.23:&nbsp;*/&nbsp;_POSIX_C_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>clearerr_unlocked</code>(), <code>feof_unlocked</code>(), <code>ferror_unlocked</code>(), <code>fileno_unlocked</code>(), <code>fflush_unlocked</code>(), <code>fgetc_unlocked</code>(), <code>fputc_unlocked</code>(), <code>fread_unlocked</code>(), <code>fwrite_unlocked</code>():</p>
 <dl>
 <dt>
-<dd> /* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+</dt><dd> /* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>fgets_unlocked</code>(), <code>fputs_unlocked</code>(), <code>getwc_unlocked</code>(), <code>getwchar_unlocked</code>(), <code>fgetwc_unlocked</code>(), <code>fputwc_unlocked</code>(), <code>putwchar_unlocked</code>(), <code>fgetws_unlocked</code>(), <code>fputws_unlocked</code>():</p>
 <dl>
 <dt>
-<dd> _GNU_SOURCE</dl>
+</dt><dd> _GNU_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Each of these functions has the same behavior as its counterpart without the &quot;_unlocked&quot; suffix, except that they do not use locking (they do not set locks themselves, and do not test for the presence of locks set by others) and hence are thread-unsafe. See <code><a href="/docs/linux/man/3-flockfile/">flockfile</a></code>(3).</p>
 <h2>ATTRIBUTES</h2>

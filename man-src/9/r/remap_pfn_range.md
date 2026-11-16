@@ -15,23 +15,23 @@ remap_pfn_range - remap kernel memory to userspace
 <h2>Arguments</h2>
 
 <i>vma</i>
-<dl><dd><dd>user vma to map to</dl>
+<dl><dd></dd><dd>user vma to map to</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>target user address to start at</dl>
+<dl><dd>target user address to start at</dd></dl>
  
 
  <i>pfn</i>
-<dl><dd>physical address of kernel memory</dl>
+<dl><dd>physical address of kernel memory</dd></dl>
  
 
  <i>size</i>
-<dl><dd>size of map area</dl>
+<dl><dd>size of map area</dd></dl>
  
 
  <i>prot</i>
-<dl><dd>page protection flags for this mapping</dl>
+<dl><dd>page protection flags for this mapping</dd></dl>
 
 <h2>Note</h2>
 

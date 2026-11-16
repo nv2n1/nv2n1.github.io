@@ -12,3 +12,4 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p>The full syntax and semantics of the regular expressions that are supported by PCRE2 are described in the <code>pcre2pattern</code> documentation. This document contains a quick-reference summary of the syntax.</p>
 <h2>Quoting</h2>
 <p>&nbsp;<wbr>&nbsp;
+</p>

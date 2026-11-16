@@ -15,44 +15,44 @@ description: "mtx-update – ConTeXt Minimals Updater"
 <p> <code>ConTeXt Minimals Updater</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;platform=string</code></p>
-<dd> platform (windows, linux, linux-64, osx-intel, osx-ppc, linux-ppc)</p>
-<dt><code>&#8211;server=string</code></p>
-<dd> repository url (<a href="rsync://contextgarden.net)">rsync://contextgarden.net)</a></p>
-<dt><code>&#8211;module=string</code></p>
-<dd> repository url (minimals)</p>
-<dt><code>&#8211;repository=string</code></p>
-<dd> specify version (current, experimental)</p>
-<dt><code>&#8211;context=string</code></p>
-<dd> specify version (current, latest, beta, yyyy.mm.dd)</p>
-<dt><code>&#8211;rsync=string</code></p>
-<dd> rsync binary (rsync)</p>
-<dt><code>&#8211;texroot=string</code></p>
-<dd> installation directory (not guessed for the moment)</p>
-<dt><code>&#8211;engine=string</code></p>
-<dd> tex engine (luatex, pdftex, xetex)</p>
-<dt><code>&#8211;modules=string</code></p>
-<dd> extra modules (can be list or &#8216;all&#8217;)</p>
-<dt><code>&#8211;fonts=string</code></p>
-<dd> additional fonts (can be list or &#8216;all&#8217;)</p>
-<dt><code>&#8211;goodies=string</code></p>
-<dd> extra binaries (like scite and texworks)</p>
-<dt><code>&#8211;force</code></p>
-<dd> instead of a dryrun, do the real thing</p>
-<dt><code>&#8211;update</code></p>
-<dd> update minimal tree</p>
-<dt><code>&#8211;make</code></p>
-<dd> also make formats and generate file databases</p>
-<dt><code>&#8211;keep</code></p>
-<dd> don&#8217;t delete unused or obsolete files</p>
-<dt><code>&#8211;state</code></p>
-<dd> update tree using saved state</p>
-<dt><code>&#8211;cygwin</code></p>
-<dd> adapt drive specs to cygwin</p>
-<dt><code>&#8211;mingw</code></p>
-<dd> assume mingw binaries being used</p>
-<dt><code>&#8211;silent</code></p>
-<dd> less (or no) logging</dl>
+<dt><code>&#8211;platform=string</code></dt>
+<dd> platform (windows, linux, linux-64, osx-intel, osx-ppc, linux-ppc)</dd>
+<dt><code>&#8211;server=string</code></dt>
+<dd> repository url (<a href="rsync://contextgarden.net)">rsync://contextgarden.net)</a></dd>
+<dt><code>&#8211;module=string</code></dt>
+<dd> repository url (minimals)</dd>
+<dt><code>&#8211;repository=string</code></dt>
+<dd> specify version (current, experimental)</dd>
+<dt><code>&#8211;context=string</code></dt>
+<dd> specify version (current, latest, beta, yyyy.mm.dd)</dd>
+<dt><code>&#8211;rsync=string</code></dt>
+<dd> rsync binary (rsync)</dd>
+<dt><code>&#8211;texroot=string</code></dt>
+<dd> installation directory (not guessed for the moment)</dd>
+<dt><code>&#8211;engine=string</code></dt>
+<dd> tex engine (luatex, pdftex, xetex)</dd>
+<dt><code>&#8211;modules=string</code></dt>
+<dd> extra modules (can be list or &#8216;all&#8217;)</dd>
+<dt><code>&#8211;fonts=string</code></dt>
+<dd> additional fonts (can be list or &#8216;all&#8217;)</dd>
+<dt><code>&#8211;goodies=string</code></dt>
+<dd> extra binaries (like scite and texworks)</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> instead of a dryrun, do the real thing</dd>
+<dt><code>&#8211;update</code></dt>
+<dd> update minimal tree</dd>
+<dt><code>&#8211;make</code></dt>
+<dd> also make formats and generate file databases</dd>
+<dt><code>&#8211;keep</code></dt>
+<dd> don&#8217;t delete unused or obsolete files</dd>
+<dt><code>&#8211;state</code></dt>
+<dd> update tree using saved state</dd>
+<dt><code>&#8211;cygwin</code></dt>
+<dd> adapt drive specs to cygwin</dd>
+<dt><code>&#8211;mingw</code></dt>
+<dd> assume mingw binaries being used</dd>
+<dt><code>&#8211;silent</code></dt>
+<dd> less (or no) logging</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

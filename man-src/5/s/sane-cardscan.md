@@ -13,25 +13,25 @@ description: "sane-cardscan – SANE backend for Corex CardScan usb scanners"
 <h2>Options</h2>
 <p>The cardscan backend supports the following options: </p>
 <dl>
-<dt><code>&#8211;mode Gray|Color</code></p>
-<dd>Selects the mode for the scan. </p>
+<dt><code>&#8211;mode Gray|Color</code></dt>
+<dd>Selects the mode for the scan. </dd>
 </dl>
 <h2>Configuration File</h2>
 <p>The configuration file <i>cardscan.conf</i> is used to tell the backend how to look for scanners, and provide options controlling the operation of the backend. This file is read each time the frontend asks the backend for a list of scanners, generally only when the frontend starts. If the configuration file is missing, the backend will use a set of compiled defaults, which are identical to the default configuration file shipped with SANE. </p>
 <p> Scanners can be specified in the configuration file in 2 ways: </p>
 <p> &quot;usb 0x04c5 0x1042&quot; (or other vendor/product ids)</p>
 <dl>
-<dd>Requests backend to search all usb buses in the system for a device which uses that vendor and product id. The device will then be queried to determine if it is a cardscan scanner.</dl>
+<dd>Requests backend to search all usb buses in the system for a device which uses that vendor and product id. The device will then be queried to determine if it is a cardscan scanner.</dd></dl>
 <p> &quot;usb /dev/usb/scanner0&quot; (or other device file)</p>
 <dl>
-<dd>Some systems use a kernel driver to access usb scanners. This method is untested.</dl>
+<dd>Some systems use a kernel driver to access usb scanners. This method is untested.</dd></dl>
 <p> Additionally, there are two configuration options that control the protocol used by the backend: </p>
 <p> &quot;lines_per_block 16&quot; (or other number from 1 to 32)</p>
 <dl>
-<dd>Controls the number of lines of image data which will be acquired in each pass. Older scanners will require this number set lower, often 1.</dl>
+<dd>Controls the number of lines of image data which will be acquired in each pass. Older scanners will require this number set lower, often 1.</dd></dl>
 <p> &quot;has_cal_buffer 1&quot; (1 or 0)</p>
 <dl>
-<dd>Causes the backend to get calibration data from scanner during initialization. Older scanners do not support this request, and must be set to 0.</dl>
+<dd>Causes the backend to get calibration data from scanner during initialization. Older scanners do not support this request, and must be set to 0.</dd></dl>
 <h2>Environment</h2>
 <p>The backend uses a single environment variable, <code>SANE_DEBUG_CARDSCAN,</code> which enables debugging output to stderr. Valid values are: </p>
 <dl>
@@ -41,10 +41,10 @@ description: "sane-cardscan – SANE backend for Corex CardScan usb scanners"
  20 Option commands<br />
  25 SCSI/USB trace<br />
  30 SCSI/USB detail<br />
- 35 Useless noise</dl>
+ 35 Useless noise</dd></dl>
 <h2>Known Issues</h2>
 <dl>
-<dd>The scanner does not seem to have much control possible, so the backend cannot set x/y coordinate values, resolutions, etc. These things could be simulated in the backend, but there are plenty of command line tools. </p>
+<dd>The scanner does not seem to have much control possible, so the backend cannot set x/y coordinate values, resolutions, etc. These things could be simulated in the backend, but there are plenty of command line tools. </dd>
 <p> The backend also does not send all the commands that the windows driver does, so it may not function the same. </p>
 <p> The backend does not have the calibration or ejection options of the windows driver. </p>
 </dl>

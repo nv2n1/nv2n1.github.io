@@ -15,7 +15,7 @@ list_rotate_left - rotate the list to the left
 <h2>Arguments</h2>
 
 <i>head</i>
-<dl><dd><dd>the head of the list</dl>
+<dl><dd></dd><dd>the head of the list</dd></dl>
 
 <h2>Copyright</h2>
 

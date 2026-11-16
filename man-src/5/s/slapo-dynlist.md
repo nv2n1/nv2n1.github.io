@@ -15,13 +15,13 @@ description: "slapo-dynlist – Dynamic List overlay to slapd"
 <h2>Configuration</h2>
 <p>The config directives that are specific to the <code>dynlist</code> overlay must be prefixed by <code>dynlist-</code>, to avoid potential conflicts with directives specific to the underlying database or to other stacked overlays. </p>
 <dl>
-<dt><code>overlay dynlist</code></p>
-<dd>This directive adds the dynlist overlay to the current database, or to the frontend, if used before any database instantiation; see <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) for details. </p>
+<dt><code>overlay dynlist</code></dt>
+<dd>This directive adds the dynlist overlay to the current database, or to the frontend, if used before any database instantiation; see <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) for details. </dd>
 </dl>
 <p> This <code>slapd.conf</code> configuration option is defined for the dynlist overlay. It may have multiple occurrences, and it must appear after the <code>overlay</code> directive.</p>
 <dl>
-<dt><code>dynlist-attrset &lt;group-oc&gt; [&lt;URI&gt;] &lt;URL-ad&gt; [[&lt;mapped-ad&gt;:]&lt;member-ad&gt; &#8230;]</code></p>
-<dd>The value <code>group-oc</code> is the name of the objectClass that triggers the dynamic expansion of the data. </p>
+<dt><code>dynlist-attrset &lt;group-oc&gt; [&lt;URI&gt;] &lt;URL-ad&gt; [[&lt;mapped-ad&gt;:]&lt;member-ad&gt; &#8230;]</code></dt>
+<dd>The value <code>group-oc</code> is the name of the objectClass that triggers the dynamic expansion of the data. </dd>
 <p> The optional <code>URI</code> restricts expansion only to entries matching the <i>DN</i>, the <i>scope</i> and the <i>filter</i> portions of the URI. </p>
 <p> The value <code>URL-ad</code> is the name of the attributeDescription that contains the URI that is expanded by the overlay; if none is present, no expansion occurs. If the intersection of the attributes requested by the search operation (or the asserted attribute for compares) and the attributes listed in the URI is empty, no expansion occurs for that specific URI. It must be a subtype of <i>labeledURI</i>. </p>
 <p> The value <code>member-ad</code> is optional; if present, the overlay behaves as a dynamic group: this attribute will list the DN of the entries resulting from the internal search. In this case, the <i>attrs</i> portion of the URIs in the <code>URL-ad</code> attribute must be absent, and the <i>DN</i>s of all the entries resulting from the expansion of the URIs are listed as values of this attribute. Compares that assert the value of the <code>member-ad</code> attribute of entries with <code>group-oc</code> objectClass apply as if the DN of the entries resulting from the expansion of the URI were present in the <code>group-oc </code> entry as values of the <code>member-ad</code> attribute. </p>
@@ -59,8 +59,8 @@ description: "slapo-dynlist – Dynamic List overlay to slapd"
  dgIdentity: cn=Group Proxy,ou=Services,dc=example,dc=com</pre>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8). The <code><a href="/docs/linux/man/5-slapo-dynlist/">slapo-dynlist</a></code>(5) overlay supports dynamic configuration via <code>back-config</code>.</p>
 <h2>Acknowledgements</h2>

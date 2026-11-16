@@ -15,55 +15,45 @@ description: "opacapture"
 <p> opacapture [-d <i>detail</i>] <i>output_tgz_file</i></p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd> Shows full help text. </p>
-<dt>-d <i>detail</i></p>
-<dd> Captures level of detail:</p>
+<dt>&#8211;help</dt>
+<dd> Shows full help text. </dd>
+<dt>-d <i>detail</i></dt>
+<dd> Captures level of detail:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> 1 (Local) Obtains local information from host. Default if no options are entered. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 2 (Fabric) In addition to <i>Local</i>, also obtains basic fabric information by queries to the SM and fabric error analysis using <code>opareport</code>. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 3 (Fabric+FDB) In addition to <i>Fabric</i>, also obtains the Forwarding Database (FDB), which includes the switch forwarding tables from the SM and the server multicast membership. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 4 (Analysis) In addition to <i>Fabric+FDB</i>, also obtains opaallanalysis results. If opaallanalysis has not yet been run, it is run as part of the capture. </p>
+</dd></dl>
 </dl>
-</dl>
-<dt>
-<dd>
 </dl>
 <p> <code>NOTE:</code> Detail levels 2 #8217#8211; 4 can be used when fabric operational problems occur. If the problem is node-specific, detail level 1 should be sufficient. Detail levels 2 &#8211; 4 require an operational Fabric Manager. Typically your support representative requests a given detail level. If a given detail level takes excessively long or fails to be gathered, try a lower detail level. </p>
 <p> For detail levels 2 #8217#8211; 4, the additional information is only available on a node with Intel(R) Omni-Path Fabric Suite FastFabric Toolset installed. The information is gathered for every fabric specified in the /etc/sysconfig/opa/ports file. </p>
 <dl>
 <dt>
-&nbsp;<wbr><i>output_tgz_file</i>&nbsp;<wbr></p>
-<dd> The name of a file to be created by opacapture. The file name specified is overwritten if it already exists. Intel recommends using the .tgz suffix in the file name supplied. If the filename given does not have a .tgz suffix, the .tgz suffix is added. </p>
+&nbsp;<wbr><i>output_tgz_file</i>&nbsp;<wbr></dt>
+<dd> The name of a file to be created by opacapture. The file name specified is overwritten if it already exists. Intel recommends using the .tgz suffix in the file name supplied. If the filename given does not have a .tgz suffix, the .tgz suffix is added. </dd>
 </dl>
 <h2>Examples</h2>
 <p> opacapture mycapture.tgz<br />

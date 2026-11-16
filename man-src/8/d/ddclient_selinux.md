@@ -90,14 +90,14 @@ description: "ddclient_selinux – Security Enhanced Linux Policy for the ddclie
 <p> <code>ddclient_etc_t</code> </p>
 <p> &#8211; Set files with the ddclient_etc_t type, if you want to store ddclient files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ddtcd.conf, /etc/ddclient.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/ddtcd.conf, /etc/ddclient.conf </dd>
 </dl>
 <p> <code>ddclient_exec_t</code> </p>
 <p> &#8211; Set files with the ddclient_exec_t type, if you want to transition an executable to the ddclient_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ddtcd, /usr/sbin/ddclient </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ddtcd, /usr/sbin/ddclient </dd>
 </dl>
 <p> <code>ddclient_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the ddclient_initrc_exec_t type, if you want to transition an executable to the ddclient_initrc_t domain. </p>
@@ -110,8 +110,8 @@ description: "ddclient_selinux – Security Enhanced Linux Policy for the ddclie
 <p> <code>ddclient_var_run_t</code> </p>
 <p> &#8211; Set files with the ddclient_var_run_t type, if you want to store the ddclient files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/ddtcd.pid, /var/run/ddclient.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/ddtcd.pid, /var/run/ddclient.pid </dd>
 </dl>
 <p> <code>ddclient_var_t</code> </p>
 <p> &#8211; Set files with the ddclient_var_t type, if you want to store the ddcl files under the /var directory. </p>

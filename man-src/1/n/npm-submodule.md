@@ -19,11 +19,9 @@ npm submodule &lt;pkg&gt;
 <p> This command also does not install missing dependencies, if the package does not include them in its git repository. If <code>npm ls</code> reports that things are missing, you can either install, link, or submodule them yourself, or you can do <code>npm explore &lt;pkgname&gt; &#8212; npm install</code> to install the dependencies into the submodule folder.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> npm help package.json</p>
-<dt>&bull;</p>
-<dd> git help submodule</p>
-<dt>
-<dd>
+<dt>&bull;</dt>
+<dd> npm help package.json</dd>
+<dt>&bull;</dt>
+<dd> git help submodule</dd>
 </dl>
 <h2>Index</h2>

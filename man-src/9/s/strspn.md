@@ -15,11 +15,11 @@ strspn - Calculate the length of the initial substring of <i>s</i> which only co
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>The string to be searched</dl>
+<dl><dd></dd><dd>The string to be searched</dd></dl>
  
 
  <i>accept</i>
-<dl><dd>The string to search for</dl>
+<dl><dd>The string to search for</dd></dl>
 
 <h2>Copyright</h2>
 

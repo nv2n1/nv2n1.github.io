@@ -16,14 +16,14 @@ description: "itaka — On-demand screenshooting server"
 <h2>OPTIONS</h2>
 <p> Itaka follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version of program.</p>
-<dt><code>-r, &#8211;revision</code></p>
-<dd> Show the revision of program.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Start in debug mode.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>-r, &#8211;revision</code></dt>
+<dd> Show the revision of program.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Start in debug mode.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> README file in source or in your distribution&#8217;s documents directory.</p>
 <h2>AUTHOR</h2>

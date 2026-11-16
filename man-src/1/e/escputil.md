@@ -16,42 +16,42 @@ description: "escputil – maintain Epson Stylus inkjet printers"
 <h2>OPTIONS</h2>
 <p> <code>escputil</code> accepts the following options:</p>
 <dl>
-<dt><code>-P, &#8211;printer-name=</code><i>printer</i></p>
-<dd> Specify the name of the printer to operate on. The default is the default system printer.</p>
-<dt><code>-r, &#8211;raw-device=</code><i>device</i></p>
-<dd> Specify the name of the device to write to directly rather than going through a printer queue. You must use this (rather than specifying a printer) when retrieving ink levels or identifying the printer, or if you wish to perform head alignment without specifying the printer model.</p>
-<dt><code>-m, &#8211;model=</code><i>model</i></p>
-<dd> Specify the precise printer model for head alignment.</p>
-<dt><code>-u, &#8211;new</code></p>
-<dd> The printer is a new printer (Stylus Color 740 or newer).</p>
-<dt><code>-S, &#8211;short-name</code></p>
-<dd> Print the short name of the printer with &#8211;identify.</p>
-<dt><code>-C, &#8211;choices</code></p>
-<dd> Specify the number of pattern choices for alignment.</p>
-<dt><code>-p, &#8211;patterns</code></p>
-<dd> Specify the number of sets of patterns for alignment.</p>
-<dt><code>-c, &#8211;clean-head</code></p>
-<dd> Clean the print head. This can also be performed from the printer front panel.</p>
-<dt><code>-n, &#8211;nozzle-check</code></p>
-<dd> Print a nozzle test pattern. Dirty or clogged nozzles will show as gaps in the pattern. If you see any gaps, you should run a head cleaning pass or two.</p>
-<dt><code>-a, &#8211;align-head</code></p>
-<dd> Align the print head. CAUTION: Misuse of this option may result in poor print quality and/or damage to the printer. You must either specify the printer model with the -m option, or use the raw printer device to allow escputil to detect the printer model.</p>
-<dt><code>-i, &#8211;ink-level</code></p>
-<dd> Obtain the ink level from the printer. This requires read/write access to the raw printer device.</p>
-<dt><code>-d, &#8211;identify</code></p>
-<dd> Query the printer for make and model information. This requires read/write access to the raw printer device.</p>
-<dt><code>-o, &#8211;align-color</code></p>
-<dd> Align the color print head (used by Stylus Color 480 and 580 only). CAUTION: Misuse of this option may result in poor print quality and/or damage to the printer.</p>
-<dt><code>-s, &#8211;status</code></p>
-<dd> Retrieve printer status.</p>
-<dt><code>-l, &#8211;license</code></p>
-<dd> Display the license/warranty terms of this program.</p>
-<dt><code>-M, &#8211;list-models</code></p>
-<dd> List the supported printer models.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a list of all command line options.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Suppress the banner.</dl>
+<dt><code>-P, &#8211;printer-name=</code><i>printer</i></dt>
+<dd> Specify the name of the printer to operate on. The default is the default system printer.</dd>
+<dt><code>-r, &#8211;raw-device=</code><i>device</i></dt>
+<dd> Specify the name of the device to write to directly rather than going through a printer queue. You must use this (rather than specifying a printer) when retrieving ink levels or identifying the printer, or if you wish to perform head alignment without specifying the printer model.</dd>
+<dt><code>-m, &#8211;model=</code><i>model</i></dt>
+<dd> Specify the precise printer model for head alignment.</dd>
+<dt><code>-u, &#8211;new</code></dt>
+<dd> The printer is a new printer (Stylus Color 740 or newer).</dd>
+<dt><code>-S, &#8211;short-name</code></dt>
+<dd> Print the short name of the printer with &#8211;identify.</dd>
+<dt><code>-C, &#8211;choices</code></dt>
+<dd> Specify the number of pattern choices for alignment.</dd>
+<dt><code>-p, &#8211;patterns</code></dt>
+<dd> Specify the number of sets of patterns for alignment.</dd>
+<dt><code>-c, &#8211;clean-head</code></dt>
+<dd> Clean the print head. This can also be performed from the printer front panel.</dd>
+<dt><code>-n, &#8211;nozzle-check</code></dt>
+<dd> Print a nozzle test pattern. Dirty or clogged nozzles will show as gaps in the pattern. If you see any gaps, you should run a head cleaning pass or two.</dd>
+<dt><code>-a, &#8211;align-head</code></dt>
+<dd> Align the print head. CAUTION: Misuse of this option may result in poor print quality and/or damage to the printer. You must either specify the printer model with the -m option, or use the raw printer device to allow escputil to detect the printer model.</dd>
+<dt><code>-i, &#8211;ink-level</code></dt>
+<dd> Obtain the ink level from the printer. This requires read/write access to the raw printer device.</dd>
+<dt><code>-d, &#8211;identify</code></dt>
+<dd> Query the printer for make and model information. This requires read/write access to the raw printer device.</dd>
+<dt><code>-o, &#8211;align-color</code></dt>
+<dd> Align the color print head (used by Stylus Color 480 and 580 only). CAUTION: Misuse of this option may result in poor print quality and/or damage to the printer.</dd>
+<dt><code>-s, &#8211;status</code></dt>
+<dd> Retrieve printer status.</dd>
+<dt><code>-l, &#8211;license</code></dt>
+<dd> Display the license/warranty terms of this program.</dd>
+<dt><code>-M, &#8211;list-models</code></dt>
+<dd> List the supported printer models.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a list of all command line options.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Suppress the banner.</dd></dl>
 <h2>BUGS</h2>
 <p> USB-connected printers sometimes fail to identify or return ink levels. You may have to repeat the command. This is probably a timing issue in escputil, not a flaw in the printer. </p>
 <p> Anything requiring bidirectional communication with the printer (identify, ink levels, or head alignment without specifying the printer model) requires read/write access to the printer port (for example /dev/lp0). This may require these operations to be performed as root. In addition, kernel support is required for bidirectional communication. For Linux version 2.2, <i>CONFIG_PRINTER_READBACK</i> should be enabled; this is called <i>CONFIG_PARPORT_1284</i> on 2.4 and later kernels. </p>

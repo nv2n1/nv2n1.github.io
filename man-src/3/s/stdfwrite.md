@@ -11,7 +11,6 @@ std::fwrite - std::fwrite
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     std::size_t fwrite(const void *buffer, std::size_t size, std::size_t count, std::FILE *stream);</code></pre> 
 Writes up to count binary objects from the given array buffer to the output stream stream. The objects are written as if by reinterpreting each object as an array of unsigned char and calling std::fputc size times for each object to write those unsigned chars into stream, in order. The file position indicator for the stream is advanced by the number of characters written. 
 If the objects are not TriviallyCopyable, the behavior is undefined. 
@@ -32,12 +31,9 @@ If size or count is zero, fwrite returns zero and performs no other action.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;array&gt;
 int main()
-
 {
     // write buffer to file
     if (std::FILE *f1 = std::fopen(&quot;file.bin&quot;, &quot;wb&quot;)) {

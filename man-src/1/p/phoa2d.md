@@ -17,8 +17,8 @@ description: "phoa2d, phod2a – gcin’s Bopomofo tools"
 <p> <code>phod2a</code> converts $HOME/.gcin/pho.tab to $HOME/.gcin/pho.tab.src, which may be edited by users.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>GCIN_NO_RELOAD</p>
-<dd> Tell gcin server do not reload data after execution of phoa2d.</dl>
+<dt>GCIN_NO_RELOAD</dt>
+<dd> Tell gcin server do not reload data after execution of phoa2d.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1).</p>
 <h2>AUTHOR</h2>

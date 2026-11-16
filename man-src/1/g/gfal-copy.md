@@ -15,68 +15,68 @@ description: "gfal-copy – Copy files"
 <p> <code>gfal-copy</code> Copies files from source to destination(s). If several destinations are specified, the file will be copy in a chain: src -&gt; dst1, dst1 -&gt; dst2, &#8230; If used in an interactive console, transfer information will be giving during the copy, which varies depending on the available information. This command can be used to upload local files to remote file systems and to register files in the file catalog (see examples). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show help about the command.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> output version information and exit.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> verbose mode. Repeat up to 3 times for the most verbose mode.</p>
-<dt><code>-D, &#8211;definition</code></p>
-<dd> define properties for gfal2.</p>
-<dt><code>-C, &#8211;client-info</code></p>
-<dd> provide custom client-side information</p>
-<dt><code>-t, &#8211;timeout </code><i>TIMEOUT</i></p>
-<dd> maximum time for the operation to terminate &#8211; default is 1800 seconds. This timeout is enforced by gfal2-util, so it applies to the overall operation. It should be greater or equal than &#8211;transfer-timeout.</p>
-<dt><code>-E, &#8211;cert </code><i>CERT</i></p>
-<dd> user certificate</p>
-<dt><code>&#8211;key </code><i>KEY</i></p>
-<dd> user private key</p>
-<dt><code>-4</code></p>
-<dd> Forces gfal2-util to use IPv4 addresses only</p>
-<dt><code>-6</code></p>
-<dd> Forces gfal2-util to use IPv6 addresses only</p>
-<dt><code>-f, &#8211;force</code></p>
-<dd> if destination file(s) cannot be overwritten, delete it and try again</p>
-<dt><code>-p, &#8211;parent</code></p>
-<dd> if the destination directory does not exist, create it</p>
-<dt><code>-n, &#8211;nbstreams </code><i>NBSTREAMS</i></p>
-<dd> specify the maximum number of parallel streams to use for the copy</p>
-<dt><code>&#8211;tcp-buffersize </code><i>TCP_BUFFERSIZE</i></p>
-<dd> specify the TCP buffersize</p>
-<dt><code>-s, &#8211;src-spacetoken </code><i>SRC_SPACETOKEN</i></p>
-<dd> source spacetoken to use for the transfer</p>
-<dt><code>-S, &#8211;dst-spacetoken </code><i>DST_SPACETOKEN</i></p>
-<dd> destination spacetoken to use for the transfer</p>
-<dt><code>-T, &#8211;transfer-timeout </code><i>TRANSFER_TIMEOUT</i></p>
-<dd> timeout for the transfer operation. This timeout is enforced by each plugin, so it applies to the transfer operation only.</p>
-<dt><code>-K, &#8211;checksum </code><i>CHECKSUM</i></p>
-<dd> checksum algorithm to use, or algorithm:value</p>
-<dt><code>&#8211;from-file </code><i>FROM_FILE</i></p>
-<dd> read sources from a file</p>
-<dt><code>&#8211;just-copy</code></p>
-<dd> just do the copy and skip any preparation (i.e. checksum, overwrite, etc.) </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show help about the command.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> output version information and exit.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> verbose mode. Repeat up to 3 times for the most verbose mode.</dd>
+<dt><code>-D, &#8211;definition</code></dt>
+<dd> define properties for gfal2.</dd>
+<dt><code>-C, &#8211;client-info</code></dt>
+<dd> provide custom client-side information</dd>
+<dt><code>-t, &#8211;timeout </code><i>TIMEOUT</i></dt>
+<dd> maximum time for the operation to terminate &#8211; default is 1800 seconds. This timeout is enforced by gfal2-util, so it applies to the overall operation. It should be greater or equal than &#8211;transfer-timeout.</dd>
+<dt><code>-E, &#8211;cert </code><i>CERT</i></dt>
+<dd> user certificate</dd>
+<dt><code>&#8211;key </code><i>KEY</i></dt>
+<dd> user private key</dd>
+<dt><code>-4</code></dt>
+<dd> Forces gfal2-util to use IPv4 addresses only</dd>
+<dt><code>-6</code></dt>
+<dd> Forces gfal2-util to use IPv6 addresses only</dd>
+<dt><code>-f, &#8211;force</code></dt>
+<dd> if destination file(s) cannot be overwritten, delete it and try again</dd>
+<dt><code>-p, &#8211;parent</code></dt>
+<dd> if the destination directory does not exist, create it</dd>
+<dt><code>-n, &#8211;nbstreams </code><i>NBSTREAMS</i></dt>
+<dd> specify the maximum number of parallel streams to use for the copy</dd>
+<dt><code>&#8211;tcp-buffersize </code><i>TCP_BUFFERSIZE</i></dt>
+<dd> specify the TCP buffersize</dd>
+<dt><code>-s, &#8211;src-spacetoken </code><i>SRC_SPACETOKEN</i></dt>
+<dd> source spacetoken to use for the transfer</dd>
+<dt><code>-S, &#8211;dst-spacetoken </code><i>DST_SPACETOKEN</i></dt>
+<dd> destination spacetoken to use for the transfer</dd>
+<dt><code>-T, &#8211;transfer-timeout </code><i>TRANSFER_TIMEOUT</i></dt>
+<dd> timeout for the transfer operation. This timeout is enforced by each plugin, so it applies to the transfer operation only.</dd>
+<dt><code>-K, &#8211;checksum </code><i>CHECKSUM</i></dt>
+<dd> checksum algorithm to use, or algorithm:value</dd>
+<dt><code>&#8211;from-file </code><i>FROM_FILE</i></dt>
+<dd> read sources from a file</dd>
+<dt><code>&#8211;just-copy</code></dt>
+<dd> just do the copy and skip any preparation (i.e. checksum, overwrite, etc.) </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Copy a file to <a href="srm://endpoint.cern.ch/path/group,">srm://endpoint.cern.ch/path/group,</a> preferring a protocol as specified in the configuration file:</p>
-<dd> <code>gfal-copy file:///etc/group <a href="srm://endpoint.cern.ch/path/">srm://endpoint.cern.ch/path/</a></code></dl>
+<dt>Copy a file to <a href="srm://endpoint.cern.ch/path/group,">srm://endpoint.cern.ch/path/group,</a> preferring a protocol as specified in the configuration file:</dt>
+<dd> <code>gfal-copy file:///etc/group <a href="srm://endpoint.cern.ch/path/">srm://endpoint.cern.ch/path/</a></code></dd></dl>
 <dl>
-<dt>You can specify directly a protocol, if you know that it is supported by the end point:</p>
-<dd> <code>gfal-copy file:///tmp/test <a href="gsiftp://endpoint.cern.ch/path/test">gsiftp://endpoint.cern.ch/path/test</a></code></dl>
+<dt>You can specify directly a protocol, if you know that it is supported by the end point:</dt>
+<dd> <code>gfal-copy file:///tmp/test <a href="gsiftp://endpoint.cern.ch/path/test">gsiftp://endpoint.cern.ch/path/test</a></code></dd></dl>
 <dl>
 <dt>
-<dt>Do a chained copy:</p>
+</dt><dt>Do a chained copy:</dt>
 <dd>
-<dd> <code>gfal-copy file:///tmp/test <a href="gsiftp://endpoint.cern.ch/path/test">gsiftp://endpoint.cern.ch/path/test</a> file:///tmp/test2</code></dl>
+</dd><dd> <code>gfal-copy file:///tmp/test <a href="gsiftp://endpoint.cern.ch/path/test">gsiftp://endpoint.cern.ch/path/test</a> file:///tmp/test2</code></dd></dl>
 <dl>
-<dt>Registration of a file in the LFC:</p>
-<dd> <code>gfal-copy file:///tmp/source <a href="gsiftp://endpoint.cern.ch/path/test">gsiftp://endpoint.cern.ch/path/test</a> <a href="lfc://lfc-host.cern.ch/lfn">lfc://lfc-host.cern.ch/lfn</a></code> </p>
+<dt>Registration of a file in the LFC:</dt>
+<dd> <code>gfal-copy file:///tmp/source <a href="gsiftp://endpoint.cern.ch/path/test">gsiftp://endpoint.cern.ch/path/test</a> <a href="lfc://lfc-host.cern.ch/lfn">lfc://lfc-host.cern.ch/lfn</a></code> </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>/etc/gfal2.d/*</i></p>
 <dl>
 <dt>
-<dd> All configuration files in this directory affect the behavior of the underlying gfal2, in particular, the default choice of transfer protocols. </p>
+</dt><dd> All configuration files in this directory affect the behavior of the underlying gfal2, in particular, the default choice of transfer protocols. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Duarte Meneses &lt;duarte.meneses [at] cern.ch&gt;<br />

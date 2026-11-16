@@ -19,14 +19,14 @@ description: "iwpriv – configure optionals (private) parameters of a wireless 
 <p> In theory, the documentation of each device driver should indicate how to use those interface specific commands and their effect.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>private-command</i> [<i>private-parameters</i>]</p>
+<dt><i>private-command</i> [<i>private-parameters</i>]</dt>
 <dd>Execute the specified <i>private-command</i> on the interface.<br />
  The command may optionally take or require arguments, and may display information. Therefore, the command line parameters may or may not be needed and should match the command expectations. The list of commands that <code>iwpriv</code> displays (when called without argument) should give you some hints about those parameters.<br />
- However you should refer to the device driver documentation for information on how to properly use the command and the effect.</p>
-<dt><i>private-command </i>[<i>I</i>] [<i>private-parameters</i>]</p>
-<dd>Idem, except that <i>I</i> (an integer) is passed to the command as a <i>Token Index</i>. Only some command will use the Token Index (most will ignore it), and the driver documentation should tell you when it&#8217;s needed.</p>
-<dt><code>-a</code>/<code>&#8211;all</code></p>
-<dd>Execute and display all the private commands that don&#8217;t take any arguments (i.e. read only).</dl>
+ However you should refer to the device driver documentation for information on how to properly use the command and the effect.</dd>
+<dt><i>private-command </i>[<i>I</i>] [<i>private-parameters</i>]</dt>
+<dd>Idem, except that <i>I</i> (an integer) is passed to the command as a <i>Token Index</i>. Only some command will use the Token Index (most will ignore it), and the driver documentation should tell you when it&#8217;s needed.</dd>
+<dt><code>-a</code>/<code>&#8211;all</code></dt>
+<dd>Execute and display all the private commands that don&#8217;t take any arguments (i.e. read only).</dd></dl>
 <h2>Display</h2>
 <p>For each device which support private commands, <i>iwpriv</i> will display the list of private commands available. </p>
 <p> This include the name of the private command, the number or arguments that may be set and their type, and the number or arguments that may be display and their type. </p>

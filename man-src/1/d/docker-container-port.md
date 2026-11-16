@@ -16,43 +16,43 @@ description: "docker-container-port – List port mappings or a specific mapping
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                            NAMES
 b650456536c7        busybox:latest      top                 54 minutes ago      Up 54 minutes       0.0.0.0:1234-&gt;9876/tcp, 0.0.0.0:4321-&gt;7890/tcp   test
 </pre>
-</dl>
+</dd></dl>
 <h2>Find out all the ports mapped</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container port test
 7890/tcp -&gt; 0.0.0.0:4321
 9876/tcp -&gt; 0.0.0.0:1234
 </pre>
-</dl>
+</dd></dl>
 <h2>Find out a specific mapping</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container port test 7890/tcp
 0.0.0.0:4321
 $ docker container port test 7890
 0.0.0.0:4321
 </pre>
-</dl>
+</dd></dl>
 <h2>An example showing error for non-existent mapping</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container port test 7890/udp
 2014/06/24 11:53:36 Error: No public port '7890/udp' published for test
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for port</p>
 <h2>SEE ALSO</h2>

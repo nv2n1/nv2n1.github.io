@@ -16,16 +16,16 @@ description: "gpgsplit – Split an OpenPGP message into packets"
 <p> <code>gpgsplit</code> splits an OpenPGP message into packets. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>,<code>&#8211;verbose</code></p>
-<dd> Verbose.</p>
-<dt><code>-p</code>,<code>&#8211;prefix </code><i>STRING</i></p>
-<dd> Prepend filenames with <i>STRING</i>.</p>
-<dt><code>&#8211;uncompress</code></p>
-<dd> Uncompress a packet.</p>
-<dt><code>&#8211;secret-to-public</code></p>
-<dd> Convert secret keys to public keys.</p>
-<dt><code>&#8211;no-split</code></p>
-<dd> Write to stdout and don&#8217;t actually split. </p>
+<dt><code>-v</code>,<code>&#8211;verbose</code></dt>
+<dd> Verbose.</dd>
+<dt><code>-p</code>,<code>&#8211;prefix </code><i>STRING</i></dt>
+<dd> Prepend filenames with <i>STRING</i>.</dd>
+<dt><code>&#8211;uncompress</code></dt>
+<dd> Uncompress a packet.</dd>
+<dt><code>&#8211;secret-to-public</code></dt>
+<dd> Convert secret keys to public keys.</dd>
+<dt><code>&#8211;no-split</code></dt>
+<dd> Write to stdout and don&#8217;t actually split. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2002 Free Software Foundation, Inc. Please report bugs to &lt;bug-gnupg [at] gnu.org&gt;. </p>

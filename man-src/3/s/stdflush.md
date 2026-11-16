@@ -11,9 +11,7 @@ std::flush - std::flush
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ostream&gt;
-
 template&lt; class CharT, class Traits &gt;
-
 std::basic_ostream&lt;CharT, Traits&gt;&amp; flush( std::basic_ostream&lt;CharT, Traits&gt;&amp; os );</code></pre> 
 Flushes the output sequence os as if by calling os.flush(). 
 This is an output-only I/O manipulator, it may be called with an expression such as out &lt;&lt; std::flush for any out of type std::basic_ostream. 
@@ -36,21 +34,15 @@ os (reference to the stream after manipulation)
 
 Without std::flush, the output would be the same, but may not appear in real time. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 template &lt;typename Diff&gt;
-
 void log_progress(Diff d)
-
 {
     std::cout &lt;&lt; &quot;..(&quot;
               &lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(d).count()
               &lt;&lt; &quot; ms)..&quot; &lt;&lt; std::flush;
 }
-
 int main()
-
 {
     volatile int sink = 0;
     auto t1 = std::chrono::high_resolution_clock::now();

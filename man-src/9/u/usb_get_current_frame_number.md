@@ -15,7 +15,7 @@ usb_get_current_frame_number - return current bus frame number
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the device whose bus is being queried</dl>
+<dl><dd></dd><dd>the device whose bus is being queried</dd></dl>
 
 <h2>Return</h2>
 

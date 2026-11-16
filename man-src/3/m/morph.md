@@ -32,7 +32,7 @@ description: "morphinit, re_morphinit, morphstr, morphword – WordNet morpholog
 <code>3</code> ADJECTIVE
 <code>4</code> ADVERB
 <code>5</code> ADJECTIVE_SATELLITE</pre>
-</dl>
+</dd></dl>
 <p> If <font SIZE="-1"><code>ADJECTIVE_SATELLITE </code></font> is passed, it is treated by <code>morphstr()</code> as <font SIZE="-1"><code>ADJECTIVE.</code></font></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-wnintro/">wnintro</a></code>(3), <code><a href="/docs/linux/man/3-wnsearch/">wnsearch</a></code>(3), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/7-morphy/">morphy</a></code>(7). </p>

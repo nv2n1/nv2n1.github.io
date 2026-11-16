@@ -12,13 +12,10 @@ std::promise&lt;R&gt;::set_value - std::promise&lt;R&gt;::set_value
 
 <pre><code>void set_value(const R &amp;value);
 (1)(member only of generic promise template)(since C++ 11)
-
     void set_value(R &amp;&amp;value);
 (2)(member only of generic promise template)(since C++ 11)
-
     void set_value(R &amp;value);
 (3)(member only of promise&lt;R &amp;&gt; template specialization)(since C++ 11)
-
     void set_value();
 (4)(member only of promise&lt;void&gt; template specialization)(since C++ 11)</code></pre> 
 1-3) Atomically stores the value into the shared state and makes the state ready. 
@@ -56,22 +53,14 @@ Additionally:
 
 This example shows how promise&lt;void&gt; can be used as signals between threads. 
  // Run this code <pre><code>#include &lt;thread&gt;
-
 #include &lt;future&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
 int main()
-
 {
     std::istringstream iss_numbers{&quot;3 4 1 42 23 -23 93 2 -289 93&quot;};
     std::istringstream iss_letters{&quot; a 23 b,e a2 k k?a;si,ksa c&quot;};
@@ -94,7 +83,6 @@ int main()
         // Notify for letters.
         letters_promise.set_value();
     });
-
     numbers_ready.wait();
     std::sort(numbers.begin(), numbers.end());
     if (letter_ready.wait_for(std::chrono::seconds(1)) ==

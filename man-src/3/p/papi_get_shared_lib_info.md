@@ -14,13 +14,14 @@ description: "PAPI_get_shared_lib_info –"
 <p>In C, this function returns a pointer to a structure containing information about the shared library used by the program. There is no Fortran equivalent call. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This data will be incorporated into the <code>PAPI_get_executable_info</code> call in the future. <code>PAPI_get_shared_lib_info</code> will be deprecated and should be used with caution.</dl>
+<dd>This data will be incorporated into the <code>PAPI_get_executable_info</code> call in the future. <code>PAPI_get_shared_lib_info</code> will be deprecated and should be used with caution.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_shlib_info_t</code> </p>
+<dd><code>PAPI_shlib_info_t</code> </dd>
 <p> <code>PAPI_get_hardware_info</code> </p>
 <p> <code>PAPI_get_executable_info</code> </p>
 <p> <code>PAPI_get_dmem_info</code> </p>
 <p> <code>PAPI_get_opt</code> <code>PAPI_library_init</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

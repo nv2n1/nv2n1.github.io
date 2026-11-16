@@ -15,11 +15,11 @@ dev_get_stats - get network device statistics
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to get statistics from</dl>
+<dl><dd></dd><dd>device to get statistics from</dd></dl>
  
 
  <i>storage</i>
-<dl><dd>place to store stats</dl>
+<dl><dd>place to store stats</dd></dl>
 
 <h2>Description</h2>
 

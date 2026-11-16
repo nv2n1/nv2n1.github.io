@@ -34,12 +34,12 @@ extern int daylight;
 <p> The <i>dst</i> string and <i>offset</i> specify the name and offset for the corresponding daylight saving timezone. If the offset is omitted, it defaults to one hour ahead of standard time. </p>
 <p> The <i>start</i> field specifies when daylight saving time goes into effect and the <i>end</i> field specifies when the change is made back to standard time. These fields may have the following formats:</p>
 <dl>
-<dt>J<i>n</i></p>
-<dd> This specifies the Julian day with <i>n</i> between 1 and 365. Leap days are not counted. In this format, February 29 can&#8217;t be represented; February 28 is day 59, and March 1 is always day 60.</p>
-<dt><i>n</i></p>
-<dd> This specifies the zero-based Julian day with <i>n</i> between 0 and 365. February 29 is counted in leap years.</p>
-<dt>M<i>m</i>.<i>w</i>.<i>d</i></p>
-<dd> This specifies day <i>d</i> (0 &lt;= <i>d</i> &lt;= 6) of week <i>w</i> (1 &lt;= <i>w</i> &lt;= 5) of month <i>m</i> (1 &lt;= <i>m</i> &lt;= 12). Week 1 is the first week in which day <i>d</i> occurs and week 5 is the last week in which day <i>d</i> occurs. Day 0 is a Sunday.</dl>
+<dt>J<i>n</i></dt>
+<dd> This specifies the Julian day with <i>n</i> between 1 and 365. Leap days are not counted. In this format, February 29 can&#8217;t be represented; February 28 is day 59, and March 1 is always day 60.</dd>
+<dt><i>n</i></dt>
+<dd> This specifies the zero-based Julian day with <i>n</i> between 0 and 365. February 29 is counted in leap years.</dd>
+<dt>M<i>m</i>.<i>w</i>.<i>d</i></dt>
+<dd> This specifies day <i>d</i> (0 &lt;= <i>d</i> &lt;= 6) of week <i>w</i> (1 &lt;= <i>w</i> &lt;= 5) of month <i>m</i> (1 &lt;= <i>m</i> &lt;= 12). Week 1 is the first week in which day <i>d</i> occurs and week 5 is the last week in which day <i>d</i> occurs. Day 0 is a Sunday.</dd></dl>
 <p> The <i>time</i> fields specify when, in the local time currently in effect, the change to the other time occurs. If omitted, the default is 02:00:00. </p>
 <p> Here is an example for New Zealand, where the standard time (NZST) is 12 hours ahead of UTC, and daylight saving time (NZDT), 13 hours ahead of UTC, runs from the first Sunday in October to the third Sunday in March, and the changeovers happen at the default time of 02:00:00: </p>
 <p> TZ=&quot;NZST-12:00:00NZDT-13:00:00,M10.1.0,M3.3.0&quot; </p>
@@ -50,18 +50,18 @@ extern int daylight;
 <p> TZ=&quot;:Pacific/Auckland&quot;</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>TZ</code></p>
-<dd> If this variable is set its value takes precedence over the system configured timezone.</p>
-<dt><code>TZDIR</code></p>
-<dd> If this variable is set its value takes precedence over the system configured timezone database directory path.</dl>
+<dt><code>TZ</code></dt>
+<dd> If this variable is set its value takes precedence over the system configured timezone.</dd>
+<dt><code>TZDIR</code></dt>
+<dd> If this variable is set its value takes precedence over the system configured timezone database directory path.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/localtime</i></p>
-<dd> The system timezone file.</p>
-<dt><i>/usr/share/zoneinfo/</i></p>
-<dd> The system timezone database directory.</p>
-<dt><i>/usr/share/zoneinfo/posixrules</i></p>
-<dd> When a TZ string includes a dst timezone without anything following it, then this file is used for the start/end rules. It is in the <code><a href="/docs/linux/man/5-tzfile/">tzfile</a></code>(5) format. By default, the zoneinfo Makefile hard links it to the <i>America/New_York</i> tzfile.</dl>
+<dt><i>/etc/localtime</i></dt>
+<dd> The system timezone file.</dd>
+<dt><i>/usr/share/zoneinfo/</i></dt>
+<dd> The system timezone database directory.</dd>
+<dt><i>/usr/share/zoneinfo/posixrules</i></dt>
+<dd> When a TZ string includes a dst timezone without anything following it, then this file is used for the start/end rules. It is in the <code><a href="/docs/linux/man/5-tzfile/">tzfile</a></code>(5) format. By default, the zoneinfo Makefile hard links it to the <i>America/New_York</i> tzfile.</dd></dl>
 <p> Above are the current standard file locations, but they are configurable when glibc is compiled.</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

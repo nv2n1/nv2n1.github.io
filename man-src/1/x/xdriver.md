@@ -15,29 +15,27 @@ description: "XDRIVER – GRASS Monitor – driver to display GRASS maps in X11 
 <h2>Usage in details</h2>
 <p> Variables:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> GRASS_WIDTH </p>
+</dt><dd> GRASS_WIDTH </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>set the x size in pixel for the XDRIVER&nbsp;<wbr>(default: 640)</p>
 <dt>
-<dd> GRASS_HEIGHT </p>
+</dt><dd> GRASS_HEIGHT </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>set the y size in pixel for the XDRIVER&nbsp;<wbr>(default: 480)</p>
 <dt>
-<dd> XDRIVER_TRUECOLOR=[TRUE|FALSE] </p>
+</dt><dd> XDRIVER_TRUECOLOR=[TRUE|FALSE] </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>Look for a TrueColor visual&nbsp;<wbr>(?)</p>
 <dt>
-<dd> XDRIVER_WINDOW </p>
+</dt><dd> XDRIVER_WINDOW </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>?</p>
 <dt>
-<dd> XDRIVER_PRIVATE_CMAP </p>
+</dt><dd> XDRIVER_PRIVATE_CMAP </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>Private color map&nbsp;<wbr>(?)</p>
 <dt>
-<dd> XDRIVER_LEFT </p>
+</dt><dd> XDRIVER_LEFT </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>defines the left position of GRASS monitor&nbsp;<wbr>(<i>removed?</i>)</p>
 <dt>
-<dd> XDRIVER_TOP </p>
+</dt><dd> XDRIVER_TOP </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>define the upper position of GRASS monitor&nbsp;<wbr>(<i>removed?</i>)</dl>
 </dl>
 <h3>Set the XDRIVER size</h3>
@@ -58,3 +56,4 @@ description: "XDRIVER – GRASS Monitor – driver to display GRASS maps in X11 
  Rewritten 2001 by Glynn Clements </p>
 <p> <i>Last changed: $Date: 2007-05-14 08:26:06 +0200 (Mon, 14 May 2007) $</i> </p>
 <h2>Index</h2>
+</p>

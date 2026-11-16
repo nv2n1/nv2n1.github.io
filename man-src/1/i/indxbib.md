@@ -18,40 +18,40 @@ description: "indxbib – make inverted index for bibliographic databases"
 <h2>OPTIONS</h2>
 <p> Whitespace is permitted between a command-line option and its argument.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Print the version number.</p>
-<dt><code>-w</code></p>
-<dd> Index whole files. Each file is a separate record.</p>
-<dt><code>-c</code><i>file</i></p>
-<dd> Read the list of common words from <i>file</i> instead of <i>/usr/:share/:groff/:1.22.4/:eign</i>.</p>
-<dt><code>-d</code><i>dir</i></p>
-<dd> Use <i>dir</i> as the pathname of the current working directory to store in the index, instead of the path printed by <code><a href="/docs/linux/man/1-pwd/">pwd</a></code>(1). Usually <i>dir</i> will be a symbolic link that points to the directory printed by <code><a href="/docs/linux/man/1-pwd/">pwd</a></code>(1).</p>
-<dt><code>-f</code><i>file</i></p>
-<dd> Read the files to be indexed from <i>file</i>. If <i>file</i> is <code>&#8211;</code>, files will be read from the standard input. The <code>-f</code> option can be given at most once.</p>
-<dt><code>-i</code><i>string</i></p>
-<dd> Don&#8217;t index the contents of fields whose names are in <i>string</i>. Initially <i>string</i> is <code>XYZ</code>.</p>
-<dt><code>-h</code><i>n</i></p>
-<dd> Use the first prime greater than or equal to <i>n</i> for the size of the hash table. Larger values of <i>n</i> will usually make searching faster, but will make the index larger and <code>indxbib</code> use more memory. Initially <i>n</i> is 997.</p>
-<dt><code>-k</code><i>n</i></p>
-<dd> Use at most <i>n</i> keys per input record. Initially <i>n</i> is 100.</p>
-<dt><code>-l</code><i>n</i></p>
-<dd> Discard keys that are shorter than <i>n</i>. Initially <i>n</i> is 3.</p>
-<dt><code>-n</code><i>n</i></p>
-<dd> Discard the <i>n</i> most common words. Initially <i>n</i> is 100.</p>
-<dt><code>-o</code><i>basename</i></p>
-<dd> The index should be named basename<i>.i</i>.</p>
-<dt><code>-t</code><i>n</i></p>
-<dd> Truncate keys to <i>n</i>. Initially <i>n</i> is 6.</dl>
+<dt><code>-v</code></dt>
+<dd> Print the version number.</dd>
+<dt><code>-w</code></dt>
+<dd> Index whole files. Each file is a separate record.</dd>
+<dt><code>-c</code><i>file</i></dt>
+<dd> Read the list of common words from <i>file</i> instead of <i>/usr/:share/:groff/:1.22.4/:eign</i>.</dd>
+<dt><code>-d</code><i>dir</i></dt>
+<dd> Use <i>dir</i> as the pathname of the current working directory to store in the index, instead of the path printed by <code><a href="/docs/linux/man/1-pwd/">pwd</a></code>(1). Usually <i>dir</i> will be a symbolic link that points to the directory printed by <code><a href="/docs/linux/man/1-pwd/">pwd</a></code>(1).</dd>
+<dt><code>-f</code><i>file</i></dt>
+<dd> Read the files to be indexed from <i>file</i>. If <i>file</i> is <code>&#8211;</code>, files will be read from the standard input. The <code>-f</code> option can be given at most once.</dd>
+<dt><code>-i</code><i>string</i></dt>
+<dd> Don&#8217;t index the contents of fields whose names are in <i>string</i>. Initially <i>string</i> is <code>XYZ</code>.</dd>
+<dt><code>-h</code><i>n</i></dt>
+<dd> Use the first prime greater than or equal to <i>n</i> for the size of the hash table. Larger values of <i>n</i> will usually make searching faster, but will make the index larger and <code>indxbib</code> use more memory. Initially <i>n</i> is 997.</dd>
+<dt><code>-k</code><i>n</i></dt>
+<dd> Use at most <i>n</i> keys per input record. Initially <i>n</i> is 100.</dd>
+<dt><code>-l</code><i>n</i></dt>
+<dd> Discard keys that are shorter than <i>n</i>. Initially <i>n</i> is 3.</dd>
+<dt><code>-n</code><i>n</i></dt>
+<dd> Discard the <i>n</i> most common words. Initially <i>n</i> is 100.</dd>
+<dt><code>-o</code><i>basename</i></dt>
+<dd> The index should be named basename<i>.i</i>.</dd>
+<dt><code>-t</code><i>n</i></dt>
+<dd> Truncate keys to <i>n</i>. Initially <i>n</i> is 6.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>filename<i>.i</i></p>
-<dd> Index.</p>
-<dt><i>Ind.i</i></p>
-<dd> Default index name.</p>
-<dt><i>/usr/:share/:groff/:1.22.4/:eign</i></p>
-<dd> List of common words.</p>
-<dt><i>indxbib</i>XXXXXX</p>
-<dd> Temporary file.</dl>
+<dt>filename<i>.i</i></dt>
+<dd> Index.</dd>
+<dt><i>Ind.i</i></dt>
+<dd> Default index name.</dd>
+<dt><i>/usr/:share/:groff/:1.22.4/:eign</i></dt>
+<dd> List of common words.</dd>
+<dt><i>indxbib</i>XXXXXX</dt>
+<dd> Temporary file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-refer/">refer</a></code>(1), <code><a href="/docs/linux/man/1-lkbib/">lkbib</a></code>(1), <code><a href="/docs/linux/man/1-lookbib/">lookbib</a></code>(1) </p>
 <h2>Index</h2>

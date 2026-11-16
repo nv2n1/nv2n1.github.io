@@ -108,7 +108,7 @@ local-fs-pre.target dracut-pre-trigger.service
  |
  v
  switch-root</pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>Harald Hoyer</p>
 <h2>See Also</h2>

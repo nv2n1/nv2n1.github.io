@@ -14,7 +14,7 @@ description: "dma_pool_destroy – destroys a pool of dma memory blocks."
 <p><i>pool</i></p>
 <dl>
 <dd>
-<dd>dma pool that will be destroyed</dl>
+</dd><dd>dma pool that will be destroyed</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

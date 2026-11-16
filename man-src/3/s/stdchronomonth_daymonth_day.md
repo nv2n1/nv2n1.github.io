@@ -12,7 +12,6 @@ std::chrono::month_day::month_day - std::chrono::month_day::month_day
 
 <pre><code>month_day() = default;
 (1)(since C++ 20)
-
     constexpr month_day(const std::chrono::month &amp;m, const std::chrono::day &amp;d) noexcept;
 (2)(since C++ 20)</code></pre> 
 Constructs a month_day. 

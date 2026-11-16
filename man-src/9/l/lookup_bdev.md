@@ -15,7 +15,7 @@ lookup_bdev - lookup a struct block_device by name
 <h2>Arguments</h2>
 
 <i>pathname</i>
-<dl><dd><dd>special file representing the block device</dl>
+<dl><dd></dd><dd>special file representing the block device</dd></dl>
 
 <h2>Description</h2>
 

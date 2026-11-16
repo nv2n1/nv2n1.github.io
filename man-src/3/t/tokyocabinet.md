@@ -24,7 +24,7 @@ description: "tokyocabinet – a modern implementation of DBM"
  improves usability : simplified API.<br />
  improves robustness : database file is not corrupted even under catastrophic situation.<br />
  supports 64-bit architecture : enormous memory space and database file are available.
-</dl>
+</dd></dl>
 <p> As with QDBM, the following three restrictions of traditional DBM: a process can handle only one database, the size of a key and a value is bounded, a database file is sparse, are cleared. Moreover, the following three restrictions of QDBM: the size of a database file is limited to 2GB, environments with different byte orders can not share a database file, only one thread can search a database at the same time, are cleared. </p>
 <p> Tokyo Cabinet runs very fast. For example, elapsed time to store 1 million records is 0.7 seconds for hash database, and 1.6 seconds for B+ tree database. Moreover, the size of database of Tokyo Cabinet is very small. For example, overhead for a record is 16 bytes for hash database, and 5 bytes for B+ tree database. Furthermore, scalability of Tokyo Cabinet is great. The database size can be up to 8EB (9.22e18 bytes).</p>
 <h2>Effective Implementation Of Hash Database</h2>
@@ -58,7 +58,7 @@ description: "tokyocabinet – a modern implementation of DBM"
 <h2>How To Use The Library</h2>
 <p>Tokyo Cabinet provides API of the C language and it is available by programs conforming to the C89 (ANSI C) standard or the C99 standard. As the header files of Tokyo Cabinet are provided as `<code>tcutil.h</code>&#8216;, `<code>tchdb.h</code>&#8216;, and `<code>tcbdb.h</code>&#8216;, applications should include one or more of them accordingly to use the API. As the library is provided as `<code>libtokyocabinet.a</code>&#8216; and `<code>libtokyocabinet.so</code>&#8216; and they depends `<code>libz.so</code>&#8216;, `<code>librt.so</code>&#8216;, `<code>libpthread.so</code>&#8216;, `<code>libm.so</code>&#8216;, and `<code>libc.so</code>&#8216;, linker options `<code>-ltokyocabinet</code>&#8216;, `<code>-lz</code>&#8216;, `<code>-lbz2</code>&#8216;, `<code>-lrt</code>&#8216;, `<code>-lpthread</code>&#8216;, `<code>-lm</code>&#8216;, and `<code>-lc</code>&#8216; are required for build command. A typical build command is the following. </p>
 <dl>
-<dd>gcc -I/usr/local/include tc_example.c -o tc_example \ </p>
+<dd>gcc -I/usr/local/include tc_example.c -o tc_example \ </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>-L/usr/local/lib -ltokyocabinet -lz -lbz2 -lrt -lpthread -lm -lc</dl>
 <p> You can also use Tokyo Cabinet in programs written in C++. Because each header is wrapped in C linkage (`<code>extern &quot;C&quot;</code>&#8216; block), you can simply include them into your C++ programs.</p>
 <h2>License</h2>
@@ -68,3 +68,4 @@ description: "tokyocabinet – a modern implementation of DBM"
 <p> Tokyo Cabinet was written by FAL Labs. You can contact the author by e-mail to `<code>info [at] fallabs.com</code>&#8216;.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-tcutil/">tcutil</a></code>(3), <code><a href="/docs/linux/man/3-tchdb/">tchdb</a></code>(3), <code><a href="/docs/linux/man/3-tcbdb/">tcbdb</a></code>(3), <code><a href="/docs/linux/man/3-tcfdb/">tcfdb</a></code>(3), <code><a href="/docs/linux/man/3-tctdb/">tctdb</a></code>(3), <code><a href="/docs/linux/man/3-tcadb/">tcadb</a></code>(3) Please see <i><a rel="nofollow" href="http://1978th.net/tokyocabinet/">http://1978th.net/tokyocabinet/</a></i> for detail. </p>
+</p>

@@ -10,9 +10,6 @@ description: "QuantLib::OneAssetOption – Base class for options on a single as
 <p>QuantLib::OneAssetOption &#8211; Base class for options on a single asset. </p>
 <h2>Synopsis</h2>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Option</code>. Inherited by <code>BarrierOption</code>, <code>CliquetOption</code>, <code>ContinuousAveragingAsianOption</code>, <code>ContinuousFixedLookbackOption</code>, <code>ContinuousFloatingLookbackOption</code>, option, <code>DiscreteAveragingAsianOption</code>, <code>DividendVanillaOption</code>, <code>ForwardVanillaOption</code>, <code>QuantoVanillaOption</code>, and <code>VanillaOption</code>.</p>
 <h3>Classes</h3>
@@ -37,9 +34,6 @@ Protected Attributes</code></pre>
 <p> <code>Real</code> <code>itmCashProbability</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Real</code> <code>delta_</code> </p>
 <p> <code>Real</code> <code>deltaForward_</code> </p>

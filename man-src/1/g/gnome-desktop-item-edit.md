@@ -15,10 +15,10 @@ description: "gnome-desktop-item-edit — tool to edit .desktop file"
 <p> <code>gnome-desktop-item-edit</code> allows you to edit .desktop file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;create-new</code></p>
-<dd> Create new file in the given directory.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help</dl>
+<dt><code>&#8211;create-new</code></dt>
+<dd> Create new file in the given directory.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-gnome-options/">gnome-options</a>(7)</p>
 <h2>AUTHOR</h2>

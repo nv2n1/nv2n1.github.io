@@ -19,7 +19,7 @@ description: "slaisnan.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  This routine is not for general use.  It exists solely to avoid
  over-optimization in SISNAN.
@@ -33,11 +33,11 @@ description: "slaisnan.f –"
  test.  The ISNAN functions will be replaced by the correct
  Fortran 03 intrinsic once the intrinsic is widely available.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIN1</i> </p>
+</dt><dd> <i>SIN1</i> </dd>
 <pre>
           SIN1 is REAL
 </pre>
@@ -50,14 +50,14 @@ description: "slaisnan.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 75 of file slaisnan.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

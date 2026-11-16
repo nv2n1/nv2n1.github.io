@@ -15,7 +15,7 @@ pci_try_reset_function - quiesce and reset a PCI device function
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to reset</dl>
+<dl><dd></dd><dd>PCI device to reset</dd></dl>
 
 <h2>Description</h2>
 

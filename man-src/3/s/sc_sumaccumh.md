@@ -21,9 +21,6 @@ description: "sc::SumAccumH –"
 <p> double <code>e</code> ()</p>
 <h3>Protected Attributes</h3>
 <pre><code>int n_
-
-
-
 Ref&lt; AccumH &gt; * accums_</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>void sc::SumAccumH::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

@@ -20,10 +20,10 @@ description: "pbmtoescp2 – convert a PBM image to a ESC/P2 printer file"
 <h2>OPTIONS</h2>
 <p> Input is read from file <i>pbmfile</i> if specified, otherwise from stdin. Output is written to stdout. </p>
 <dl>
-<dt><code>-compress=</code><i>compressionmode</i></p>
-<dd> This determines the compression mode that <code>pbmtoescp2</code> uses in its output. Valid values for <i>compressionmode</i> are <code>0</code> and <code>1</code>. <code>-compress=0</code> results in a printer control stream with uncompressed raster graphic data. <code>-compress=1</code> results in a printer control stream with RLE compressed raster graphic data (RLE means Run Length Encoding). The default is <code>-compress=1</code>. </p>
-<dt><code>-resolution=</code><i>dpi</i></p>
-<dd> This determines the horizontal and the vertical print resolution set in the printer control stream. Another way of looking at it is a declaration of what the resolution of the input image is (PBM images don&#8217;t have inherent resolution). Valid values for <i>dpi</i> are <code>180</code> and <code>360</code>. See hints for more information on this. </p>
+<dt><code>-compress=</code><i>compressionmode</i></dt>
+<dd> This determines the compression mode that <code>pbmtoescp2</code> uses in its output. Valid values for <i>compressionmode</i> are <code>0</code> and <code>1</code>. <code>-compress=0</code> results in a printer control stream with uncompressed raster graphic data. <code>-compress=1</code> results in a printer control stream with RLE compressed raster graphic data (RLE means Run Length Encoding). The default is <code>-compress=1</code>. </dd>
+<dt><code>-resolution=</code><i>dpi</i></dt>
+<dd> This determines the horizontal and the vertical print resolution set in the printer control stream. Another way of looking at it is a declaration of what the resolution of the input image is (PBM images don&#8217;t have inherent resolution). Valid values for <i>dpi</i> are <code>180</code> and <code>360</code>. See hints for more information on this. </dd>
 <p> The default is <code>-resolution=360</code>. </p>
 </dl>
 <h2>HINTS</h2>

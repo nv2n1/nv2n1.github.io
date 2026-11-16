@@ -24,43 +24,43 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> <code>-display</code> <i>display</i></p>
 <dl>
 <dt>
-<dd> Start fluxbox on the specified display. Programs started by fluxbox will share the DISPLAY environment variable also.</dl>
+</dt><dd> Start fluxbox on the specified display. Programs started by fluxbox will share the DISPLAY environment variable also.</dd></dl>
 <p> <code>-h</code>, <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display command line options.</dl>
+</dt><dd> Display command line options.</dd></dl>
 <p> <code>-i</code>, <code>-info</code></p>
 <dl>
 <dt>
-<dd> Display useful information concerning the defaults and compiled-in options.</dl>
+</dt><dd> Display useful information concerning the defaults and compiled-in options.</dd></dl>
 <p> <code>-log</code> <i>logfile</i></p>
 <dl>
 <dt>
-<dd> Starting fluxbox with this option will designate a file in which you want to log events to.</dl>
+</dt><dd> Starting fluxbox with this option will designate a file in which you want to log events to.</dd></dl>
 <p> <code>-rc</code> <i>rcfile</i></p>
 <dl>
 <dt>
-<dd> Use a different config file other than the default <code>~/.fluxbox/init</code>.</dl>
+</dt><dd> Use a different config file other than the default <code>~/.fluxbox/init</code>.</dd></dl>
 <p> <code>-v</code>, <code>-version</code></p>
 <dl>
 <dt>
-<dd> The version of fluxbox installed.</dl>
+</dt><dd> The version of fluxbox installed.</dd></dl>
 <p> <code>-screen</code> all|<i>scr</i>,<i>scr</i>&#8230;</p>
 <dl>
 <dt>
-<dd> Run on specified screens only or all (by default).</dl>
+</dt><dd> Run on specified screens only or all (by default).</dd></dl>
 <p> <code>-verbose</code></p>
 <dl>
 <dt>
-<dd> Print more information in process.</dl>
+</dt><dd> Print more information in process.</dd></dl>
 <p> <code>-sync</code></p>
 <dl>
 <dt>
-<dd> Synchronize with the X server for debugging.</dl>
+</dt><dd> Synchronize with the X server for debugging.</dd></dl>
 <p> <code>-list-commands</code></p>
 <dl>
 <dt>
-<dd> Lists all available internal commands.</dl>
+</dt><dd> Lists all available internal commands.</dd></dl>
 <h2>STARTING FLUXBOX</h2>
 <p> <code><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</code> comes with a program called <code><a href="/docs/linux/man/1-startfluxbox/">startfluxbox</a>(1)</code> usually located wherever you installed fluxbox. This script provides you with many options and variables that can be set when starting fluxbox. To actually call fluxbox and begin using it, you should place &#8220;exec startfluxbox&#8221; in your <code>~/.xinitrc</code> as the last executed command. This is assuming that the location of <code><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</code> and <code><a href="/docs/linux/man/1-startfluxbox/">startfluxbox</a>(1)</code> are in your shell&#8217;s $PATH. Also note that you may need to create the <code>~/.xinitrc</code> file or your setup may use <code>~/.xsession</code> instead, depending on your X setup. Some X login managers like <code>gdm(1)</code> or <code>kdm(1)</code> may simply provide a &#8220;Fluxbox&#8221; session for you without having to alter any settings. </p>
 <p> By using fluxbox -i you&#8217;ll see the defaults used by <code><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</code>. These are what fluxbox looks for upon startup. In the list of &#8220;Defaults:&#8221; you&#8217;ll see a menu file location, this is where you can provide a system-wide menu file for your users. </p>
@@ -76,22 +76,22 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> The toolbar contains any combination of the following tools, by default in this order: </p>
 <dl>
 <dt>
-<dd> &bull; <code>Workspace Name</code>: Name of the current visible workspace</dl>
+</dt><dd> &bull; <code>Workspace Name</code>: Name of the current visible workspace</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Workspace Arrows</code>: Previous/Next Workspace</dl>
+</dt><dd> &bull; <code>Workspace Arrows</code>: Previous/Next Workspace</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Iconbar</code>: List of windows managed by fluxbox</dl>
+</dt><dd> &bull; <code>Iconbar</code>: List of windows managed by fluxbox</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Window Arrows</code>: Previous/Next Application Window</dl>
+</dt><dd> &bull; <code>Window Arrows</code>: Previous/Next Application Window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>System Tray</code>: Area for applets</dl>
+</dt><dd> &bull; <code>System Tray</code>: Area for applets</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Clock</code>: Date and Time</dl>
+</dt><dd> &bull; <code>Clock</code>: Date and Time</dd></dl>
 <p> The contents and behavior of the toolbar can be configured, see the <code>TOOLBAR</code> section for details.</p>
 <h3>Slit</h3>
 <p> Initially you won&#8217;t be able to see the slit. It is there, but it isn&#8217;t being used yet, which confuses some people initially. Think of it as a dock where you can place smaller programs. If you&#8217;ve looked at any screenshots on the official fluxbox web site, you will have noticed some small programs on the edge of some of the screens. These were more than likely docked programs in the slit. To learn more about the slit, we have an entire <code>SLIT</code> section below that goes into detail about the options you have.</p>
@@ -99,22 +99,22 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> fluxbox manages the following layers (from highest to lowest): </p>
 <dl>
 <dt>
-<dd> &bull; Above Dock</dl>
+</dt><dd> &bull; Above Dock</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Dock</dl>
+</dt><dd> &bull; Dock</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Top</dl>
+</dt><dd> &bull; Top</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Normal</dl>
+</dt><dd> &bull; Normal</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Bottom</dl>
+</dt><dd> &bull; Bottom</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Desktop</dl>
+</dt><dd> &bull; Desktop</dd></dl>
 <p> Windows on a higher layer will always appear above those on a lower one. These layers can be used on application windows, the slit or the toolbar. You can assign applications to a certain layer by specifying it in the &#8216;apps&#8217; file or through the WindowMenu. We discuss the &#8216;apps&#8217; file in <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code>. We discuss the WindowMenu in the <code>MENUS</code> section. We discuss layers in more detail in the <code>LAYERS</code> section.</p>
 <h3>Focus Model</h3>
 <p> The window that has the focus is the one that receives key and mouse events. The focus model is selectable via the Configuration menu located in the root menu. We&#8217;ll discuss the different types of focus below in the <code>FOCUS MODEL</code> section.</p>
@@ -129,98 +129,98 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> Mouse clicks on the empty desktop: </p>
 <dl>
 <dt>
-<dd> &bull; <code>Left-click</code> (Button 1): hides all fluxbox menus</dl>
+</dt><dd> &bull; <code>Left-click</code> (Button 1): hides all fluxbox menus</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Middle-click</code> (Button 2): shows the Workspace Menu</dl>
+</dt><dd> &bull; <code>Middle-click</code> (Button 2): shows the Workspace Menu</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Right-click</code> (Button 3): shows the Root Menu</dl>
+</dt><dd> &bull; <code>Right-click</code> (Button 3): shows the Root Menu</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Scroll wheel</code> (Buttons 4 and 5): jump to the previous/next workspace</dl>
+</dt><dd> &bull; <code>Scroll wheel</code> (Buttons 4 and 5): jump to the previous/next workspace</dd></dl>
 <p> Mouse gestures on a window: </p>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+Drag Left-click</code> anywhere on a window moves the window.</dl>
+</dt><dd> &bull; <code>ALT+Drag Left-click</code> anywhere on a window moves the window.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+Drag Right-click</code> anywhere on a window resizes the window.</dl>
+</dt><dd> &bull; <code>ALT+Drag Right-click</code> anywhere on a window resizes the window.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+Middle-click</code> anywhere on a window lowers the current window.</dl>
+</dt><dd> &bull; <code>ALT+Middle-click</code> anywhere on a window lowers the current window.</dd></dl>
 <p> Mouse gestures on a window&#8217;s titlebar: </p>
 <dl>
 <dt>
-<dd> &bull; <code>CTRL+Drag Left-click</code> on a window&#8217;s titlebar lets you drag to attach the window to another&#8217;s tab group</dl>
+</dt><dd> &bull; <code>CTRL+Drag Left-click</code> on a window&#8217;s titlebar lets you drag to attach the window to another&#8217;s tab group</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Double Left-click</code> on a window&#8217;s titlebar shades the window</dl>
+</dt><dd> &bull; <code>Double Left-click</code> on a window&#8217;s titlebar shades the window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Middle-click</code> on a window&#8217;s titlebar lowers the window</dl>
+</dt><dd> &bull; <code>Middle-click</code> on a window&#8217;s titlebar lowers the window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Right-click</code> on a window&#8217;s titlebar pops up the <code>Window Menu</code></dl>
+</dt><dd> &bull; <code>Right-click</code> on a window&#8217;s titlebar pops up the <code>Window Menu</code></dd></dl>
 <p> Mouse gestures on the toolbar: </p>
 <dl>
 <dt>
-<dd> &bull; <code>Scroll wheel</code> on the toolbar cycles through windows</dl>
+</dt><dd> &bull; <code>Scroll wheel</code> on the toolbar cycles through windows</dd></dl>
 <p> Keyboard bindings: </p>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+Tab</code> / <code>ALT+Shift+Tab</code>: Cycle through windows</dl>
+</dt><dd> &bull; <code>ALT+Tab</code> / <code>ALT+Shift+Tab</code>: Cycle through windows</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>WIN+Tab</code> / <code>WIN+Shift+Tab</code>: Cycle through tabs</dl>
+</dt><dd> &bull; <code>WIN+Tab</code> / <code>WIN+Shift+Tab</code>: Cycle through tabs</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>WIN+1</code> &#8211; <code>WIN+9</code>: Select the 1st &rarr; 9th tab in the current window</dl>
+</dt><dd> &bull; <code>WIN+1</code> &#8211; <code>WIN+9</code>: Select the 1st &rarr; 9th tab in the current window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+F1</code>: Run <code><a href="/docs/linux/man/1-xterm/">xterm</a>(1)</code> to open a new terminal</dl>
+</dt><dd> &bull; <code>ALT+F1</code>: Run <code><a href="/docs/linux/man/1-xterm/">xterm</a>(1)</code> to open a new terminal</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+F2</code>: Run <code><a href="/docs/linux/man/1-fbrun/">fbrun</a>(1)</code> for a small &#8220;run program&#8221; dialog</dl>
+</dt><dd> &bull; <code>ALT+F2</code>: Run <code><a href="/docs/linux/man/1-fbrun/">fbrun</a>(1)</code> for a small &#8220;run program&#8221; dialog</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+F4</code>: Close the current window</dl>
+</dt><dd> &bull; <code>ALT+F4</code>: Close the current window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+F5</code>: Kill the current window (like <code><a href="/docs/linux/man/1-xkill/">xkill</a>(1)</code>)</dl>
+</dt><dd> &bull; <code>ALT+F5</code>: Kill the current window (like <code><a href="/docs/linux/man/1-xkill/">xkill</a>(1)</code>)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+F9</code>: Minimize (iconify) the current window</dl>
+</dt><dd> &bull; <code>ALT+F9</code>: Minimize (iconify) the current window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+F10</code>: Maximize the current window</dl>
+</dt><dd> &bull; <code>ALT+F10</code>: Maximize the current window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+F11</code>: Full-screen the current window</dl>
+</dt><dd> &bull; <code>ALT+F11</code>: Full-screen the current window</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>ALT+Space</code>: Open the <code>Window Menu</code></dl>
+</dt><dd> &bull; <code>ALT+Space</code>: Open the <code>Window Menu</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>CTRL+ALT+Del</code>: Exit fluxbox (log out)</dl>
+</dt><dd> &bull; <code>CTRL+ALT+Del</code>: Exit fluxbox (log out)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>CTRL+ALT+Left</code> / <code>CTRL+ALT+Right</code>: Go to the previous/next workspace</dl>
+</dt><dd> &bull; <code>CTRL+ALT+Left</code> / <code>CTRL+ALT+Right</code>: Go to the previous/next workspace</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>WIN+Left</code> / <code>WIN+Right</code>: Send the current window to the previous/next workspace, but remain on this workspace</dl>
+</dt><dd> &bull; <code>WIN+Left</code> / <code>WIN+Right</code>: Send the current window to the previous/next workspace, but remain on this workspace</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>CTRL+WIN+Left</code> / <code>CTRL+WIN+Right</code>: Take the current window to the previous/next workspace, and switch to that workspace</dl>
+</dt><dd> &bull; <code>CTRL+WIN+Left</code> / <code>CTRL+WIN+Right</code>: Take the current window to the previous/next workspace, and switch to that workspace</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>CTRL+F1</code> &#8211; <code>CTRL+F12</code>: Switch to the 1st &rarr; 12th workspace</dl>
+</dt><dd> &bull; <code>CTRL+F1</code> &#8211; <code>CTRL+F12</code>: Switch to the 1st &rarr; 12th workspace</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>WIN+F1</code> &#8211; <code>WIN+F12</code>: Send the current window to a specific workspace</dl>
+</dt><dd> &bull; <code>WIN+F1</code> &#8211; <code>WIN+F12</code>: Send the current window to a specific workspace</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>CTRL+WIN+F1</code> &#8211; <code>CTRL+WIN+F12</code>: Take the current window to a specific workspace</dl>
+</dt><dd> &bull; <code>CTRL+WIN+F1</code> &#8211; <code>CTRL+WIN+F12</code>: Take the current window to a specific workspace</dd></dl>
 <h2>MENUS</h2>
 <p> fluxbox provides a popup menu facility that is used by a few different types of native menus. </p>
 <p> When a menu is open, you can click on items with the mouse to activate them. Some special menu items react slightly differently depending on the mouse button you use, but normally you will want to use a left-click (button 1). </p>
@@ -233,47 +233,47 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> <code>Configure</code></p>
 <dl>
 <dt>
-<dd> The next level under this menu is where you can set certain resources and really begin to customize the look and feel of your desktop. See the <code>Configure Menu</code> section below for more details.</dl>
+</dt><dd> The next level under this menu is where you can set certain resources and really begin to customize the look and feel of your desktop. See the <code>Configure Menu</code> section below for more details.</dd></dl>
 <p> <code>System Styles</code></p>
 <dl>
 <dt>
-<dd> This is where the standard styles are listed. You can select one of these by clicking on it, and it will be applied immediately. System styles are located in <code>/usr/local/share/fluxbox/styles/</code> upon a default install. Remember that you can confirm this with fluxbox -i. </p>
+</dt><dd> This is where the standard styles are listed. You can select one of these by clicking on it, and it will be applied immediately. System styles are located in <code>/usr/local/share/fluxbox/styles/</code> upon a default install. Remember that you can confirm this with fluxbox -i. </dd>
 <p> <code>User Styles</code></p>
 <dl>
 <dt>
-<dd> This is where your custom styles are listed. It will list any styles from <code>~/.fluxbox/styles/</code>, which may be styles you grab from the Internet, or your own custom styles, provided you follow the standards described in <code><a href="/docs/linux/man/5-fluxbox-style/">fluxbox-style</a>(5)</code>.</dl>
+</dt><dd> This is where your custom styles are listed. It will list any styles from <code>~/.fluxbox/styles/</code>, which may be styles you grab from the Internet, or your own custom styles, provided you follow the standards described in <code><a href="/docs/linux/man/5-fluxbox-style/">fluxbox-style</a>(5)</code>.</dd></dl>
 <p> <code>Workspace List</code></p>
 <dl>
 <dt>
-<dd> This is the same as the <code>Workspace Menu</code> detailed below.</dl>
+</dt><dd> This is the same as the <code>Workspace Menu</code> detailed below.</dd></dl>
 <p> <code>Tools</code></p>
 <dl>
 <dt>
-<dd> Listed here are different tools that you can use. You can rename your workspace, run programs from a command line or regenerate your menu.</dl>
+</dt><dd> Listed here are different tools that you can use. You can rename your workspace, run programs from a command line or regenerate your menu.</dd></dl>
 <p> <code>Window Managers</code></p>
 <dl>
 <dt>
-<dd> Allows you to switch your window manager. (Only listed if you have other window managers/desktop environments installed.)</dl>
+</dt><dd> Allows you to switch your window manager. (Only listed if you have other window managers/desktop environments installed.)</dd></dl>
 <p> <code>Lock Screen</code></p>
 <dl>
 <dt>
-<dd> Locks the screen, if a suitable locking program has been detected.</dl>
+</dt><dd> Locks the screen, if a suitable locking program has been detected.</dd></dl>
 <p> <code>Fluxbox Command</code></p>
 <dl>
 <dt>
-<dd> A little Commandline will popup where you can enter a fluxbox command. These commands are the same as those detailed in <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code>.</dl>
+</dt><dd> A little Commandline will popup where you can enter a fluxbox command. These commands are the same as those detailed in <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code>.</dd></dl>
 <p> <code>Reload config</code></p>
 <dl>
 <dt>
-<dd> Use this to reload the fluxbox configuration files. You must do this after editing the &#8216;keys&#8217; file, &#8216;init&#8217; file, or the current style.</dl>
+</dt><dd> Use this to reload the fluxbox configuration files. You must do this after editing the &#8216;keys&#8217; file, &#8216;init&#8217; file, or the current style.</dd></dl>
 <p> <code>Restart</code></p>
 <dl>
 <dt>
-<dd> Restart the whole darn thing. This starts a completely new fluxbox process, rereads files and redraws all graphical elements. Running applications will remain open, however, and restored to the same workspaces they were previously in once fluxbox returns.</dl>
+</dt><dd> Restart the whole darn thing. This starts a completely new fluxbox process, rereads files and redraws all graphical elements. Running applications will remain open, however, and restored to the same workspaces they were previously in once fluxbox returns.</dd></dl>
 <p> <code>Exit</code></p>
 <dl>
 <dt>
-<dd> Exits fluxbox, which in turn either shuts down the X Window server or returns you to the graphical login screen.</dl>
+</dt><dd> Exits fluxbox, which in turn either shuts down the X Window server or returns you to the graphical login screen.</dd></dl>
 </dl>
 <h3>Configuration Menu</h3>
 <p> This menu offers the opportunity to set up fluxbox. It contains many options which can be altered manually in the &#8216;init&#8217; file, but this is an easier and faster way to change the most common settings. </p>
@@ -281,50 +281,50 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> <code>Focus Model</code></p>
 <dl>
 <dt>
-<dd> Lets you configure the window focus model. For details, see <code>FOCUS MODEL</code>, below.</dl>
+</dt><dd> Lets you configure the window focus model. For details, see <code>FOCUS MODEL</code>, below.</dd></dl>
 <p> <code>Maximize Options</code></p>
 <dl>
 <dt>
-<dd> Lets you configure what happens when you maximize a window. The four options are: </p>
+</dt><dd> Lets you configure what happens when you maximize a window. The four options are: </dd>
 <p> <code>Full Maximization</code>:</p>
 <dl>
 <dt>
-<dd> Normally, a maximized window will not overlap the toolbar, slit, or any docked windows (like panels). Enabling this option allows maximized windows to be as large as the actual screen resolution.</dl>
+</dt><dd> Normally, a maximized window will not overlap the toolbar, slit, or any docked windows (like panels). Enabling this option allows maximized windows to be as large as the actual screen resolution.</dd></dl>
 <p> <code>Ignore Resize Increment</code>:</p>
 <dl>
 <dt>
-<dd> Normally, terminal windows specify a &#8220;resize increment&#8221; which mean fluxbox will only resize the window to an even multiple of the character size. Enabling this option will ignore this specification when maximizing.</dl>
+</dt><dd> Normally, terminal windows specify a &#8220;resize increment&#8221; which mean fluxbox will only resize the window to an even multiple of the character size. Enabling this option will ignore this specification when maximizing.</dd></dl>
 <p> <code>Disable Moving</code> / <code>Disable Resizing</code>:</p>
 <dl>
 <dt>
-<dd> Normally, maximized windows can still be moved and resized. Enabling these options prevents these behaviour.</dl>
+</dt><dd> Normally, maximized windows can still be moved and resized. Enabling these options prevents these behaviour.</dd></dl>
 </dl>
 <p> <code>Tab Options</code></p>
 <dl>
 <dt>
-<dd> Lets you configure the properties of tabs. Detailed in <code>TAB OPTIONS</code>, below.</dl>
+</dt><dd> Lets you configure the properties of tabs. Detailed in <code>TAB OPTIONS</code>, below.</dd></dl>
 <p> <code>Slit</code></p>
 <dl>
 <dt>
-<dd> This menu can also be found by right-clicking the slit (if visible). Find more information about this menu&#8217;s options in the <code>Slit Menu</code> section, below.</dl>
+</dt><dd> This menu can also be found by right-clicking the slit (if visible). Find more information about this menu&#8217;s options in the <code>Slit Menu</code> section, below.</dd></dl>
 <p> <code>Toolbar</code></p>
 <dl>
 <dt>
-<dd> This menu can also be found by right-clicking any non-icon part of the toolbar. Find more information about this menu&#8217;s options in the <code>Toolbar Menu</code> section, below.</dl>
+</dt><dd> This menu can also be found by right-clicking any non-icon part of the toolbar. Find more information about this menu&#8217;s options in the <code>Toolbar Menu</code> section, below.</dd></dl>
 <p> <code>Transparency</code></p>
 <dl>
 <dt>
-<dd> This sets the default transparency for a focused windows, unfocused window and the menu. Use the left mouse button to decrease and the right mouse button to increase the value. 0 is invisible, 255 is not transparent at all. </p>
+</dt><dd> This sets the default transparency for a focused windows, unfocused window and the menu. Use the left mouse button to decrease and the right mouse button to increase the value. 0 is invisible, 255 is not transparent at all. </dd>
 <p> The transparency of individual application windows can be overridden in the &#8216;apps&#8217; file (<code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code>). </p>
 <p> The <code>Force Pseudo Transparency</code> option will force fluxbox to ignore the xcomposite extension and use pseudo-transparency instead of true transparency. Note: When pseudo-transparency is on, the transparency values here only affect titlebars, not window contents.</dl>
 <p> <code>Opaque Window Moving</code></p>
 <dl>
 <dt>
-<dd> If enabled, you will see the window content while dragging it. Otherwise only an outline of the window will be shown.</dl>
+</dt><dd> If enabled, you will see the window content while dragging it. Otherwise only an outline of the window will be shown.</dd></dl>
 <p> <code>Workspace Warping</code></p>
 <dl>
 <dt>
-<dd> If enabled, you can drag windows from one workspace to another. The previous workspace is to the left, the next workspace is to the right.</dl>
+</dt><dd> If enabled, you can drag windows from one workspace to another. The previous workspace is to the left, the next workspace is to the right.</dd></dl>
 <h3>Window Menu</h3>
 <p> The Window menu is displayed when you right click on the titlebar of a window. </p>
 <p> To customize this menu, see the <code>WINDOW MENU</code> section of <code><a href="/docs/linux/man/5-fluxbox-menu/">fluxbox-menu</a>(5)</code>. </p>
@@ -332,141 +332,141 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> <code>Shade</code></p>
 <dl>
 <dt>
-<dd> Shade the window (display the titlebar only).</dl>
+</dt><dd> Shade the window (display the titlebar only).</dd></dl>
 <p> <code>Stick</code></p>
 <dl>
 <dt>
-<dd> (Un)Stick window. A &#8216;stuck&#8217; window will always be displayed on all workspaces.</dl>
+</dt><dd> (Un)Stick window. A &#8216;stuck&#8217; window will always be displayed on all workspaces.</dd></dl>
 <p> <code>Send To&#8230;</code></p>
 <dl>
 <dt>
-<dd> Send window to another workspace. When you select the workspace with a middle click, fluxbox will send you along with the application to the selected workspace.</dl>
+</dt><dd> Send window to another workspace. When you select the workspace with a middle click, fluxbox will send you along with the application to the selected workspace.</dd></dl>
 <p> <code>Maximize</code></p>
 <dl>
 <dt>
-<dd> (Un)Maximize window. Depending on your toolbar and slit configuration, maximize may cover them. You can use the different mouse buttons for different aspects of maximize function. </p>
+</dt><dd> (Un)Maximize window. Depending on your toolbar and slit configuration, maximize may cover them. You can use the different mouse buttons for different aspects of maximize function. </dd>
 <dl>
 <dt>
-<dd> &bull; Button 1 (Un)Maximize as normal.</dl>
+</dt><dd> &bull; Button 1 (Un)Maximize as normal.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Button 2 (Un)Maximize window vertically.</dl>
+</dt><dd> &bull; Button 2 (Un)Maximize window vertically.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Button 3 (Un)Maximize window horizontally.</dl>
+</dt><dd> &bull; Button 3 (Un)Maximize window horizontally.</dd></dl>
 </dl>
 <p> <code>Iconify</code></p>
 <dl>
 <dt>
-<dd> Iconify (or minimize) a window. The &#8216;icon&#8217; can be found in the Icons submenu of the workspace menu as well as in the toolbar (if a Toolbar mode showing Icons is selected).</dl>
+</dt><dd> Iconify (or minimize) a window. The &#8216;icon&#8217; can be found in the Icons submenu of the workspace menu as well as in the toolbar (if a Toolbar mode showing Icons is selected).</dd></dl>
 <p> <code>Raise</code></p>
 <dl>
 <dt>
-<dd> Raise the window above all others in the same layer.</dl>
+</dt><dd> Raise the window above all others in the same layer.</dd></dl>
 <p> <code>Lower</code></p>
 <dl>
 <dt>
-<dd> Lower the window below all others in the same layer.</dl>
+</dt><dd> Lower the window below all others in the same layer.</dd></dl>
 <p> <code>Layer&#8230;</code></p>
 <dl>
 <dt>
-<dd> Change the layer of this window. See <code>LAYERS</code> for more details.</dl>
+</dt><dd> Change the layer of this window. See <code>LAYERS</code> for more details.</dd></dl>
 <p> <code>Transparency</code></p>
 <dl>
 <dt>
-<dd> Change this window&#8217;s transparency, overriding the defaults from the <code>Configuration Menu</code>.</dl>
+</dt><dd> Change this window&#8217;s transparency, overriding the defaults from the <code>Configuration Menu</code>.</dd></dl>
 <p> <code>Remember&#8230;</code></p>
 <dl>
 <dt>
-<dd> Specify which window settings should be stored in the &#8216;apps&#8217; file and resumed the next time this window is opened. </p>
+</dt><dd> Specify which window settings should be stored in the &#8216;apps&#8217; file and resumed the next time this window is opened. </dd>
 <p> Specifically the setting you may store are: </p>
 <p> <code>Workpace:</code></p>
 <dl>
 <dt>
-<dd> Open this in the same workspace as where the window currently resides.</dl>
+</dt><dd> Open this in the same workspace as where the window currently resides.</dd></dl>
 <p> <code>Jump to workspace:</code></p>
 <dl>
 <dt>
-<dd> When <code>Workspace</code> is selected, fluxbox will jump to the appropriate workspace when this window is opened there. If not selected, the window will open in the background.</dl>
+</dt><dd> When <code>Workspace</code> is selected, fluxbox will jump to the appropriate workspace when this window is opened there. If not selected, the window will open in the background.</dd></dl>
 <p> <code>Head</code>:</p>
 <dl>
 <dt>
-<dd> For xinerama users only, start this window on the current head (or screen).</dl>
+</dt><dd> For xinerama users only, start this window on the current head (or screen).</dd></dl>
 <p> <code>Dimensions</code>:</p>
 <dl>
 <dt>
-<dd> Record the current window height and width.</dl>
+</dt><dd> Record the current window height and width.</dd></dl>
 <p> <code>Position</code>:</p>
 <dl>
 <dt>
-<dd> Record the current X and Y coordinates of the window.</dl>
+</dt><dd> Record the current X and Y coordinates of the window.</dd></dl>
 <p> <code>Sticky</code>:</p>
 <dl>
 <dt>
-<dd> Record whether the window is on all desktops, or not.</dl>
+</dt><dd> Record whether the window is on all desktops, or not.</dd></dl>
 <p> <code>Decorations</code>:</p>
 <dl>
 <dt>
-<dd> Record the current set of decorations (title bar, grips, tabs, etc) on the window.</dl>
+</dt><dd> Record the current set of decorations (title bar, grips, tabs, etc) on the window.</dd></dl>
 <p> <code>Shaded</code>:</p>
 <dl>
 <dt>
-<dd> Record whether the window is shaded (or rolled-up) or not.</dl>
+</dt><dd> Record whether the window is shaded (or rolled-up) or not.</dd></dl>
 <p> <code>Minimized</code>:</p>
 <dl>
 <dt>
-<dd> Record whether the window is iconified (or minimized) or not.</dl>
+</dt><dd> Record whether the window is iconified (or minimized) or not.</dd></dl>
 <p> <code>Maximized</code>:</p>
 <dl>
 <dt>
-<dd> Record whether the window is maximized or not.</dl>
+</dt><dd> Record whether the window is maximized or not.</dd></dl>
 <p> <code>Fullscreen</code>:</p>
 <dl>
 <dt>
-<dd> Record whether the window is in fullscreen mode or not.</dl>
+</dt><dd> Record whether the window is in fullscreen mode or not.</dd></dl>
 <p> <code>Transparency</code>:</p>
 <dl>
 <dt>
-<dd> Record the current <code>Transparency</code> settings.</dl>
+</dt><dd> Record the current <code>Transparency</code> settings.</dd></dl>
 <p> <code>Layer</code>:</p>
 <dl>
 <dt>
-<dd> Record the current layer.</dl>
+</dt><dd> Record the current layer.</dd></dl>
 <p> <code>Save on close</code>:</p>
 <dl>
 <dt>
-<dd> If selected, any of the above items which are also selected will be updated with the window&#8217;s current values as it is closed.</dl>
+</dt><dd> If selected, any of the above items which are also selected will be updated with the window&#8217;s current values as it is closed.</dd></dl>
 <p> These are is covered in more detail in <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code>.</dl>
 <p> <code>Close</code></p>
 <dl>
 <dt>
-<dd> Close the application softly.</dl>
+</dt><dd> Close the application softly.</dd></dl>
 <p> <code>Kill</code></p>
 <dl>
 <dt>
-<dd> Kill the window&#8217;s parent process, like <code><a href="/docs/linux/man/1-xkill/">xkill</a>(1)</code>.</dl>
+</dt><dd> Kill the window&#8217;s parent process, like <code><a href="/docs/linux/man/1-xkill/">xkill</a>(1)</code>.</dd></dl>
 <h3>Workspace Menu</h3>
 <p> The workspace menu can be found, by default, by middle-clicking on the background. This menu contains entries to explore the currently defined workspaces, windows, and add/remove/rename workspaces. </p>
 <p> <code>Icons</code></p>
 <dl>
 <dt>
-<dd> This menu shows any iconified (or, minimized) windows. Clicking on a window in this menu will raise it on the current workspace.</dl>
+</dt><dd> This menu shows any iconified (or, minimized) windows. Clicking on a window in this menu will raise it on the current workspace.</dd></dl>
 <p> <i>Workspaces</i></p>
 <dl>
 <dt>
-<dd> The next section provides one submenu per workspace. Middle-clicking on a workspace name will take you to that workspace. The submenu contains a list of all open windows on that workspace. Clicking on a window name will take you to that window and raise it, changing the active workspace if necessary.</dl>
+</dt><dd> The next section provides one submenu per workspace. Middle-clicking on a workspace name will take you to that workspace. The submenu contains a list of all open windows on that workspace. Clicking on a window name will take you to that window and raise it, changing the active workspace if necessary.</dd></dl>
 <p> <code>New Workspace</code></p>
 <dl>
 <dt>
-<dd> This entry adds a new workspace to the end of the list of current workspaces.</dl>
+</dt><dd> This entry adds a new workspace to the end of the list of current workspaces.</dd></dl>
 <p> <code>Edit current workspace name</code></p>
 <dl>
 <dt>
-<dd> Pops up a dialog to enter a new name for the current workspace.</dl>
+</dt><dd> Pops up a dialog to enter a new name for the current workspace.</dd></dl>
 <p> <code>Remove Last</code></p>
 <dl>
 <dt>
-<dd> Remove the last workspace in the list. Any windows currently open there will be sent to the next-to-last workspace.</dl>
+</dt><dd> Remove the last workspace in the list. Any windows currently open there will be sent to the next-to-last workspace.</dd></dl>
 <h2>TOOLBAR</h2>
 <p> The toolbar is a small area to display information like a clock, workspace name, a system tray or a taskbar (iconbar) that can contain the running programs. The color, look, font etc. is defined in the <code>STYLE</code>. </p>
 <p> The tools in the toolbar can be enabled/disabled in the &#8216;init&#8217; file with the <code>session.screen0.toolbar.tools</code> resource. See the <code>RESOURCES</code> section for details on how to alter this value. </p>
@@ -474,35 +474,35 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> <code>Clock</code></p>
 <dl>
 <dt>
-<dd> This will show an area to display a clock and the date according to the format specification listed in &quot;man strtftime&quot;</dl>
+</dt><dd> This will show an area to display a clock and the date according to the format specification listed in &quot;man strtftime&quot;</dd></dl>
 <p> <code>Iconbar</code></p>
 <dl>
 <dt>
-<dd> This is the area that contains all windows (all running applications, all minimized windows or maybe no window, all depending on the Toolbar Settings).</dl>
+</dt><dd> This is the area that contains all windows (all running applications, all minimized windows or maybe no window, all depending on the Toolbar Settings).</dd></dl>
 <p> <code>Systemtray</code></p>
 <dl>
 <dt>
-<dd> The Systemtray can hold applications that are made to use it.</dl>
+</dt><dd> The Systemtray can hold applications that are made to use it.</dd></dl>
 <p> <code>WorkspaceName</code></p>
 <dl>
 <dt>
-<dd> This displays the name of the current workspace. Also, one is able to switch to the workspace left of the current one with a left click and to the workspace right of the current one with a right click.</dl>
+</dt><dd> This displays the name of the current workspace. Also, one is able to switch to the workspace left of the current one with a left click and to the workspace right of the current one with a right click.</dd></dl>
 <p> <code>PrevWorkspace</code></p>
 <dl>
 <dt>
-<dd> This displays an arrow that allows one to switch to the workspace left of the current one.</dl>
+</dt><dd> This displays an arrow that allows one to switch to the workspace left of the current one.</dd></dl>
 <p> <code>NextWorkspace</code></p>
 <dl>
 <dt>
-<dd> This displays an arrow that allows one to switch to the workspace right of the current one.</dl>
+</dt><dd> This displays an arrow that allows one to switch to the workspace right of the current one.</dd></dl>
 <p> <code>PrevWindow</code></p>
 <dl>
 <dt>
-<dd> This displays an arrow that switches focus to the previous visible window on the current workspace.</dl>
+</dt><dd> This displays an arrow that switches focus to the previous visible window on the current workspace.</dd></dl>
 <p> <code>NextWindow</code></p>
 <dl>
 <dt>
-<dd> This displays an arrow that switches focus to the next visible window on the current workspace.</dl>
+</dt><dd> This displays an arrow that switches focus to the next visible window on the current workspace.</dd></dl>
 <p> Other aspects of the toolbar can be configured in two ways: through the toolbar menu, which is accessible in the Configuration part of the RootMenu or with a middle click on the edge the toolbar, or by editing the init file (see the <code>RESOURCES</code> section for more information about that).</p>
 <h3>Toolbar Menu</h3>
 <p> This menu can be opened by right-clicking on the toolbar (though not on a window&#8217;s name in the iconbar), or from the <code>Configuration Menu</code>. </p>
@@ -510,91 +510,91 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> <code>Visible</code></p>
 <dl>
 <dt>
-<dd> Sets the toolbar either to visible or invisible.</dl>
+</dt><dd> Sets the toolbar either to visible or invisible.</dd></dl>
 <p> <code>Auto hide</code></p>
 <dl>
 <dt>
-<dd> If this is enabled the toolbar will disappear after a defined time when the mouse pointer leaves the toolbar. It will slide in when the cursor hits the remaining edge of the toolbar. See the <code>session.autoRaiseDelay</code> resource for the delay time.</dl>
+</dt><dd> If this is enabled the toolbar will disappear after a defined time when the mouse pointer leaves the toolbar. It will slide in when the cursor hits the remaining edge of the toolbar. See the <code>session.autoRaiseDelay</code> resource for the delay time.</dd></dl>
 <p> <code>Toolbar width percentage</code></p>
 <dl>
 <dt>
-<dd> Sets the width of the toolbar in a percentage of your total screen size. Use the left mouse button to decrease and the right mouse-button to increase the value. The value can be from 1-100.</dl>
+</dt><dd> Sets the width of the toolbar in a percentage of your total screen size. Use the left mouse button to decrease and the right mouse-button to increase the value. The value can be from 1-100.</dd></dl>
 <p> <code>Maximize Over</code></p>
 <dl>
 <dt>
-<dd> Enabling this option will allow windows to maximize over the toolbar. With this switched on they will only expand to the edge of the bar. This option may be overridden by the &#8220;Full Maximization&#8221; from the <code>Configuration Menu</code>. If that option is enabled, this option will have no effect..</dl>
+</dt><dd> Enabling this option will allow windows to maximize over the toolbar. With this switched on they will only expand to the edge of the bar. This option may be overridden by the &#8220;Full Maximization&#8221; from the <code>Configuration Menu</code>. If that option is enabled, this option will have no effect..</dd></dl>
 <p> <code>Layer&#8230;</code></p>
 <dl>
 <dt>
-<dd> This sets the layer on which the toolbar is set. With this you can set the toolbar to &quot;Always on top&quot;.</dl>
+</dt><dd> This sets the layer on which the toolbar is set. With this you can set the toolbar to &quot;Always on top&quot;.</dd></dl>
 <p> <code>Placement</code></p>
 <dl>
 <dt>
-<dd> Sets the toolbar to any edge of the screen, either centered or aligned with a corner.</dl>
+</dt><dd> Sets the toolbar to any edge of the screen, either centered or aligned with a corner.</dd></dl>
 <p> <code>Alpha</code></p>
 <dl>
 <dt>
-<dd> This sets the alpha value for the toolbar. Use the left mouse button to decrease and the right mouse button to increase the value. 0 is invisible, 255 is not transparent at all.</dl>
+</dt><dd> This sets the alpha value for the toolbar. Use the left mouse button to decrease and the right mouse button to increase the value. 0 is invisible, 255 is not transparent at all.</dd></dl>
 <p> <code>Iconbar Mode</code></p>
 <dl>
 <dt>
-<dd> Specifies various modes of the iconbar&#8217;s operation. </p>
+</dt><dd> Specifies various modes of the iconbar&#8217;s operation. </dd>
 <p> The first section outlines what types of windows will be shown in the iconbar: </p>
 <p> <code>None</code>:</p>
 <dl>
 <dt>
-<dd> Will not show any windows</dl>
+</dt><dd> Will not show any windows</dd></dl>
 <p> <code>Icons</code>:</p>
 <dl>
 <dt>
-<dd> Shows windows from all workspaces that are iconified (or, minimized)</dl>
+</dt><dd> Shows windows from all workspaces that are iconified (or, minimized)</dd></dl>
 <p> <code>NoIcons</code>:</p>
 <dl>
 <dt>
-<dd> Shows windows from all workspaces that are not iconified</dl>
+</dt><dd> Shows windows from all workspaces that are not iconified</dd></dl>
 <p> <code>WorkspaceIcons</code>:</p>
 <dl>
 <dt>
-<dd> Shows windows from the current workspace that are iconified</dl>
+</dt><dd> Shows windows from the current workspace that are iconified</dd></dl>
 <p> <code>WorkspaceNoIcons</code>:</p>
 <dl>
 <dt>
-<dd> Shows windows from the current workspace that are not iconified</dl>
+</dt><dd> Shows windows from the current workspace that are not iconified</dd></dl>
 <p> <code>Workspace</code>:</p>
 <dl>
 <dt>
-<dd> Shows all windows (iconified or not) from the current workspace</dl>
+</dt><dd> Shows all windows (iconified or not) from the current workspace</dd></dl>
 <p> <code>All Windows</code>:</p>
 <dl>
 <dt>
-<dd> Shows all windows (iconified or not) from all workspaces</dl>
+</dt><dd> Shows all windows (iconified or not) from all workspaces</dd></dl>
 <p> The next section specifies the alignment of the window names shown in the iconbar. The width is specified via the <code>session.screen0.iconbar.iconWidth</code> resource: </p>
 <p> <code>Left</code>:</p>
 <dl>
 <dt>
-<dd> All icons will be left-aligned with the width set in the &#8216;init&#8217; file</dl>
+</dt><dd> All icons will be left-aligned with the width set in the &#8216;init&#8217; file</dd></dl>
 <p> <code>Relative</code>:</p>
 <dl>
 <dt>
-<dd> All icons will be sized evenly to fill the iconbar completely</dl>
+</dt><dd> All icons will be sized evenly to fill the iconbar completely</dd></dl>
 <p> <code>Right</code>:</p>
 <dl>
 <dt>
-<dd> All icons will be right-aligned with the width set in the &#8216;init&#8217; file</dl>
+</dt><dd> All icons will be right-aligned with the width set in the &#8216;init&#8217; file</dd></dl>
 <p> The last option in this submenu is: </p>
 <p> <code>Show Pictures</code>:</p>
 <dl>
 <dt>
-<dd> If enabled the iconbar will show the application&#8217;s icon (if provided by the application)</dl>
+</dt><dd> If enabled the iconbar will show the application&#8217;s icon (if provided by the application)</dd></dl>
 </dl>
 <p> <code>Clock</code></p>
 <dl>
 <dt>
-<dd> Lets you switch between the 00:00am &#8211; 11:59pm and 00:00 &#8211; 23:59 notation</dl>
+</dt><dd> Lets you switch between the 00:00am &#8211; 11:59pm and 00:00 &#8211; 23:59 notation</dd></dl>
 <p> <code>Edit Clock Format</code></p>
 <dl>
 <dt>
-<dd> clicking this entry will pop up a dialog window in which the clock format can be set according to <i>man strftime</i> (or <i>man date</i>).</dl>
+</dt><dd> clicking this entry will pop up a dialog window in which the clock format can be set according to <i>man strftime</i> (or <i>man date</i>).</dd></dl>
 <h2>FOCUS MODEL</h2>
 <p> The Focus Model defines how windows gain focus (i.e. become the active window, which receives keyboard and mouse events). The focus model can be changed in the configuration menu (usually located under <i>fluxbox menu</i> in the Root Menu. </p>
 <p> There are two main aspects of the focus model: how windows gain focus and how tabs gain focus. Each of these has two options: focus follows mouse and click to focus. Focus follows mouse means that windows will gain focus when the mouse hovers over them. Click to focus means that windows will gain focus when the mouse clicks on them. </p>
@@ -602,51 +602,51 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> <code>Click To Focus</code></p>
 <dl>
 <dt>
-<dd> Click to focus windows.</dl>
+</dt><dd> Click to focus windows.</dd></dl>
 <p> <code>Mouse Focus</code></p>
 <dl>
 <dt>
-<dd> Window focus follows mouse.</dl>
+</dt><dd> Window focus follows mouse.</dd></dl>
 <p> <code>ClickTabFocus</code></p>
 <dl>
 <dt>
-<dd> Click to focus tabs.</dl>
+</dt><dd> Click to focus tabs.</dd></dl>
 <p> <code>MouseTabFocus</code></p>
 <dl>
 <dt>
-<dd> Tab focus follows mouse.</dl>
+</dt><dd> Tab focus follows mouse.</dd></dl>
 <p> There are three more settings in the &#8220;Focus Model&#8221; menu: </p>
 <p> <code>Focus New Windows</code></p>
 <dl>
 <dt>
-<dd> If enabled, a new window will grab X focus as soon as it is opened. </p>
+</dt><dd> If enabled, a new window will grab X focus as soon as it is opened. </dd>
 <p> <code>Auto Raise</code></p>
 <dl>
 <dt>
-<dd> If enabled, focusing on a new window will automatically raise that window above all others within its layer. When disabled, you must explicitly raise a focused window using the window menu, keybinding, or <code>Click Raises</code>.</dl>
+</dt><dd> If enabled, focusing on a new window will automatically raise that window above all others within its layer. When disabled, you must explicitly raise a focused window using the window menu, keybinding, or <code>Click Raises</code>.</dd></dl>
 <p> <code>Click Raises</code></p>
 <dl>
 <dt>
-<dd> If enabled, clicking anywhere on a window will raise it above all others within its layer.</dl>
+</dt><dd> If enabled, clicking anywhere on a window will raise it above all others within its layer.</dd></dl>
 </dl>
 <h2>TAB OPTIONS</h2>
 <p> This section of fluxbox configuration menu lets you configure many features of tabs. Inside of it there are three main options: </p>
 <p> <code>Placement</code></p>
 <dl>
 <dt>
-<dd> You can choose where the external tabs will be positioned relative to the window. For these options to work, <i>Tabs in Titlebar</i> must be off.</dl>
+</dt><dd> You can choose where the external tabs will be positioned relative to the window. For these options to work, <i>Tabs in Titlebar</i> must be off.</dd></dl>
 <p> <code>Tabs in Titlebar</code></p>
 <dl>
 <dt>
-<dd> When this option is on, tabs are fixed in window titlebar and the width varies according to the amount of windows grouped.</dl>
+</dt><dd> When this option is on, tabs are fixed in window titlebar and the width varies according to the amount of windows grouped.</dd></dl>
 <p> <code>Maximize Over</code></p>
 <dl>
 <dt>
-<dd> When this option is on, maximizing a window will disregard the size and location of external tabs, which means they may be pushed out of the screen entirely.</dl>
+</dt><dd> When this option is on, maximizing a window will disregard the size and location of external tabs, which means they may be pushed out of the screen entirely.</dd></dl>
 <p> <code>External Tab Width</code></p>
 <dl>
 <dt>
-<dd> This specifies in pixels the width of external tabs.</dl>
+</dt><dd> This specifies in pixels the width of external tabs.</dd></dl>
 <h2>STYLES</h2>
 <p> fluxbox enables you to use specialized files that contain <code>X(1)</code> resources to specify colors, textures, pixmaps and fonts, and thus the overall look of your window borders, menus and the toolbar. </p>
 <p> The default installation of fluxbox provides some of these style files. See <code><a href="/docs/linux/man/5-fluxbox-style/">fluxbox-style</a>(5)</code> to accommodate the growing number of style components.</p>
@@ -658,14 +658,14 @@ description: "fluxbox – A lightweight window manager for the X Windowing Syste
 <p> Most dockable applications use the -w option to run in the slit. For example, you could put in your <code>~/.fluxbox/startup</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 bbmail -w &amp;
 bbpager -w &amp;
 wmdrawer &amp;
 exec fluxbox
 </pre>
-</dl>
+</dd></dl>
 <p> To use the slit you must have it compiled into fluxbox. This is the default setting.</p>
 <h3>Slit Menu</h3>
 <p> This menu can be opened by right-clicking on the slit (though not on an application running within the slit), or from the <code>Configuration Menu</code>. </p>
@@ -673,27 +673,27 @@ exec fluxbox
 <p> <code>Placement</code></p>
 <dl>
 <dt>
-<dd> This lets you set the position of the slit.</dl>
+</dt><dd> This lets you set the position of the slit.</dd></dl>
 <p> <code>Layer</code></p>
 <dl>
 <dt>
-<dd> See <code>LAYERS</code> for details on the layer order.</dl>
+</dt><dd> See <code>LAYERS</code> for details on the layer order.</dd></dl>
 <p> <code>Auto hide</code></p>
 <dl>
 <dt>
-<dd> If this is enabled the slit will disappear after a defined time when the mouse pointer leaves the slit. It will slide in when the cursor hits the remaining edge of the slit. See the <code>session.autoRaiseDelay</code> resource for the delay time.</dl>
+</dt><dd> If this is enabled the slit will disappear after a defined time when the mouse pointer leaves the slit. It will slide in when the cursor hits the remaining edge of the slit. See the <code>session.autoRaiseDelay</code> resource for the delay time.</dd></dl>
 <p> <code>Maximize Over</code></p>
 <dl>
 <dt>
-<dd> Enabling this option will allow windows to maximizing over the slit. With this switched off they will only expand to the edge of the slit. This option may be overridden by the &#8220;Full Maximization&#8221; from the <code>Configuration Menu</code>. If that option is enabled, this option will have no effect..</dl>
+</dt><dd> Enabling this option will allow windows to maximizing over the slit. With this switched off they will only expand to the edge of the slit. This option may be overridden by the &#8220;Full Maximization&#8221; from the <code>Configuration Menu</code>. If that option is enabled, this option will have no effect..</dd></dl>
 <p> <code>Alpha</code></p>
 <dl>
 <dt>
-<dd> This sets the alpha value for the slit. Use the left mouse button to decrease and the right mouse button to increase the value. 0 is invisible, 255 is not transparent at all.</dl>
+</dt><dd> This sets the alpha value for the slit. Use the left mouse button to decrease and the right mouse button to increase the value. 0 is invisible, 255 is not transparent at all.</dd></dl>
 <p> <code>Clients</code></p>
 <dl>
 <dt>
-<dd> This submenu lets you reorder the the applications running in the slit. You are able to hide apps from the slit by unselecting them in the list showing. This will not kill the app. You can make them re-appear by selecting them in the list. The &quot;Save SlitList&quot; option saves the new order to you slitlist located in <code>~/.fluxbox/slitlist</code>. See the next section for details.</dl>
+</dt><dd> This submenu lets you reorder the the applications running in the slit. You are able to hide apps from the slit by unselecting them in the list showing. This will not kill the app. You can make them re-appear by selecting them in the list. The &quot;Save SlitList&quot; option saves the new order to you slitlist located in <code>~/.fluxbox/slitlist</code>. See the next section for details.</dd></dl>
 <h3>Slitlist File</h3>
 <p> fluxbox&#8217;s slitlist file is available for those that use dockapps in the slit. This file helps fluxbox keep track of the <code>order</code> of the dockapps when in the slit. The file is generally located at <code>~/.fluxbox/slitlist</code>. </p>
 <p> A simple procedure for getting the slit sequences the way you like it is: 1. Run fluxbox with no pre-loaded dockapps 2. Run dockapps individually in the order you want them 3. Add dockapps to your <code><a href="/docs/linux/man/1-startfluxbox/">startfluxbox</a>(1)</code> script </p>
@@ -705,22 +705,22 @@ exec fluxbox
 <p> There are two ways to assign a window to a different layer. When the window is open, you may select the layer in the &#8216;Layer &#8230;&#8217; submenu of the window menu. The menu gives six choices for the layer, which fluxbox manages by name. The names are (from highest to lowest layer): </p>
 <dl>
 <dt>
-<dd> &bull; 2 &#8211; Above Dock</dl>
+</dt><dd> &bull; 2 &#8211; Above Dock</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 4 &#8211; Dock</dl>
+</dt><dd> &bull; 4 &#8211; Dock</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 6 &#8211; Top</dl>
+</dt><dd> &bull; 6 &#8211; Top</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 8 &#8211; Normal</dl>
+</dt><dd> &bull; 8 &#8211; Normal</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 10 &#8211; Bottom</dl>
+</dt><dd> &bull; 10 &#8211; Bottom</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 12 &#8211; Desktop</dl>
+</dt><dd> &bull; 12 &#8211; Desktop</dd></dl>
 <p> The other way to set the layer for a window is through the &#8216;apps&#8217; file. This method is described in <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code>.</p>
 <h2>RESOURCES</h2>
 <p> Usually the <code>~/.fluxbox/init</code> resource file is created and maintained by fluxbox itself. You can use the <code>Configure Menu</code>, mentioned above, to set most of these options. However, we&#8217;ll cover all of the resource options that are available to the user. If you edit this file while fluxbox is running, you must &#8220;reconfigure&#8221; to reload the resource options. </p>
@@ -728,275 +728,271 @@ exec fluxbox
 <p> <code>session.screen0.window.{focus|unfocus}.alpha</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> These resources are available to the user to set different levels of transparency for different components of fluxbox. Each one accepts a value between 0-255, 255 being opaque and 0 being completely transparent. </p>
+</dt><dd> These resources are available to the user to set different levels of transparency for different components of fluxbox. Each one accepts a value between 0-255, 255 being opaque and 0 being completely transparent. </dd>
 <p> Default: <code>255</code></dl>
 <p> <code>session.screen0.{slit|toolbar}.autoHide</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> The autoHide resources allow the user to set the behavior of the toolbar and slit. This behavior can be that they disappear when they are not being used actively by the user, or they remain visible at all times. </p>
+</dt><dd> The autoHide resources allow the user to set the behavior of the toolbar and slit. This behavior can be that they disappear when they are not being used actively by the user, or they remain visible at all times. </dd>
 <p> Default: <code>False</code></dl>
 <p> <code>session.screen0.{slit|toolbar}.layer</code>: <i>layer</i></p>
 <dl>
 <dt>
-<dd> With these two resources, you can set the layer you want the toolbar and the slit to appear on. Please read the LAYER section for more information. </p>
+</dt><dd> With these two resources, you can set the layer you want the toolbar and the slit to appear on. Please read the LAYER section for more information. </dd>
 <p> Default: <code>Dock</code></dl>
 <p> <code>session.screen0.{slit|toolbar}.placement</code>: <i>placement</i></p>
 <dl>
 <dt>
-<dd> These allow users to place the slit and toolbar where they like. </p>
+</dt><dd> These allow users to place the slit and toolbar where they like. </dd>
 <p> Possible options are:</p>
 <dl>
 <dt>
-<dd> <code>BottomLeft BottomCenter BottomRight LeftBottom LeftCenter LeftTop RightBottom RightCenter RightTop TopLeft TopCenter TopRight</code></dl>
+</dt><dd> <code>BottomLeft BottomCenter BottomRight LeftBottom LeftCenter LeftTop RightBottom RightCenter RightTop TopLeft TopCenter TopRight</code></dd></dl>
 <p> Slit default: <code>RightBottom</code> </p>
 <p> Toolbar default: <code>BottomCenter</code></dl>
 <p> <code>session.screen0.{slit|toolbar|tabs}.maxOver</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> Setting these to True will allow application windows to maximize over the complete screen. Setting to False allows the slit, toolbar, and external tabs to hold their territory and will always be visible when an application is maximized. </p>
+</dt><dd> Setting these to True will allow application windows to maximize over the complete screen. Setting to False allows the slit, toolbar, and external tabs to hold their territory and will always be visible when an application is maximized. </dd>
 <p> Default: <code>False</code></dl>
 <p> <code>session.screen0.toolbar.height</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> Set the height of the toolbar. If the value is set to 0, the style file will gain control over the toolbar height. It is possible to set a fixed height by changing this value to something greater than 0. </p>
+</dt><dd> Set the height of the toolbar. If the value is set to 0, the style file will gain control over the toolbar height. It is possible to set a fixed height by changing this value to something greater than 0. </dd>
 <p> Default: <code>0</code></dl>
 <p> <code>session.screen0.toolbar.visible</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> The user can set whether they want to have a toolbar on screen at all. Setting to False removes the toolbar from the screen. </p>
+</dt><dd> The user can set whether they want to have a toolbar on screen at all. Setting to False removes the toolbar from the screen. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.screen0.toolbar.widthPercent</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> This resource sets the width percentage of the toolbar on the screen. </p>
+</dt><dd> This resource sets the width percentage of the toolbar on the screen. </dd>
 <p> Default: <code>100</code></dl>
 <p> <code>session.screen0.toolbar.tools</code>: <i>tools</i></p>
 <dl>
 <dt>
-<dd> This resource specifies the tools plugged into the toolbar. Read the TOOLBAR section in this manual for a description of each of these. They may be specified in any order, delimited by the <code>,</code> character. They will appear in the order given. </p>
+</dt><dd> This resource specifies the tools plugged into the toolbar. Read the TOOLBAR section in this manual for a description of each of these. They may be specified in any order, delimited by the <code>,</code> character. They will appear in the order given. </dd>
 <p> Possible tools:</p>
 <dl>
 <dt>
-<dd> <code>clock iconbar nextwindow prevwindow nextworkspace prevworkspace systemtray workspacename</code></dl>
+</dt><dd> <code>clock iconbar nextwindow prevwindow nextworkspace prevworkspace systemtray workspacename</code></dd></dl>
 <p> Default:</p>
 <dl>
 <dt>
-<dd> <code>workspacename, prevworkspace, nextworkspace, iconbar, prevwindow, nextwindow, systemtray, clock</code></dl>
+</dt><dd> <code>workspacename, prevworkspace, nextworkspace, iconbar, prevwindow, nextwindow, systemtray, clock</code></dd></dl>
 </dl>
 <p> <code>session.screen0.{slit|toolbar}.onhead</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> For those that use xinerama, users can set this value to the number of the head where they would like to see the slit and toolbar, starting from 1. Setting this to 0 will ignore xinerama information. </p>
+</dt><dd> For those that use xinerama, users can set this value to the number of the head where they would like to see the slit and toolbar, starting from 1. Setting this to 0 will ignore xinerama information. </dd>
 <p> Default: <code>0</code> for slit, <code>1</code> for toolbar</dl>
 <p> <code>session.screen0.iconbar.mode</code>: <i>pattern</i></p>
 <dl>
 <dt>
-<dd> This determines which windows will be displayed in the iconbar. Any window pattern is acceptable. See the section <code>CLIENT PATTERNS</code> in either <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code> or <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code> for details. </p>
+</dt><dd> This determines which windows will be displayed in the iconbar. Any window pattern is acceptable. See the section <code>CLIENT PATTERNS</code> in either <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code> or <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code> for details. </dd>
 <p> Default: <code>{static groups} (workspace)</code></dl>
 <p> <code>session.screen0.iconbar.usePixmap</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> This is also set in the Iconbar Mode menu. When set to True, this will show the native icon of applications. </p>
+</dt><dd> This is also set in the Iconbar Mode menu. When set to True, this will show the native icon of applications. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.screen0.iconbar.iconTextPadding</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> This specifies the space between the window title and the edge of the button. </p>
+</dt><dd> This specifies the space between the window title and the edge of the button. </dd>
 <p> Default: <code>10</code></dl>
 <p> <code>session.screen0.iconbar.alignment</code>: <i>position</i></p>
 <dl>
 <dt>
-<dd> This value should be changed in the Iconbar Mode menu. </p>
+</dt><dd> This value should be changed in the Iconbar Mode menu. </dd>
 <p> Available options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; <code>Left</code>: Fixed width, aligned left</dl>
+</dt><dd> &bull; <code>Left</code>: Fixed width, aligned left</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Relative</code>: Width varies to fill the iconbar</dl>
+</dt><dd> &bull; <code>Relative</code>: Width varies to fill the iconbar</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Right</code>: Fixed width, aligned right</dl>
+</dt><dd> &bull; <code>Right</code>: Fixed width, aligned right</dd></dl>
 </dl>
 <p> Default: <code>Relative</code></dl>
 <p> <code>session.screen0.iconbar.iconWidth</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> Used to specify the iconbar button width for Left/Right alignment. </p>
+</dt><dd> Used to specify the iconbar button width for Left/Right alignment. </dd>
 <p> Default: <code>128</code></dl>
 <p> <code>session.screen0.strftimeFormat</code>: <i>date</i></p>
 <dl>
 <dt>
-<dd> This adjusts the way the current time is displayed in the toolbar. The <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> format is used. </p>
+</dt><dd> This adjusts the way the current time is displayed in the toolbar. The <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> format is used. </dd>
 <p> Default: <code>%k:%M</code></dl>
 <p> <code>session.screen0.tabs.intitlebar</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> This specifies whether tabs should be embedded in the titlebar or placed outside the window. </p>
+</dt><dd> This specifies whether tabs should be embedded in the titlebar or placed outside the window. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.screen0.tab.placement</code>: <i>placement</i></p>
 <dl>
 <dt>
-<dd> This specifies where external tabs will appear on the window. It has the same possible values as <code>sesion.screen0.{slit|toolbar}.placement</code>. </p>
+</dt><dd> This specifies where external tabs will appear on the window. It has the same possible values as <code>sesion.screen0.{slit|toolbar}.placement</code>. </dd>
 <p> Default: <code>TopLeft</code></dl>
 <p> <code>session.screen0.tab.width</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> This specifies the width of external tabs in pixels. </p>
+</dt><dd> This specifies the width of external tabs in pixels. </dd>
 <p> Default: <code>64</code></dl>
 <p> <code>session.screen0.focusModel</code>: <code>ClickToFocus|MouseFocus|StrictMouseFocus</code></p>
 <dl>
 <dt>
-<dd> This controls how windows gain focus via the mouse. With &#8216;ClickToFocus&#8217;, the user must click on the window. With &#8216;MouseFocus&#8217;, windows gain focus whenever the mouse moves over them, but only when the mouse is moving. With &#8216;StrictMouseFocus&#8217;, windows gain focus whenever the mouse enters any exposed area, even if this is due to layer changes, window movement, changing desktops, closing windows, etc. </p>
+</dt><dd> This controls how windows gain focus via the mouse. With &#8216;ClickToFocus&#8217;, the user must click on the window. With &#8216;MouseFocus&#8217;, windows gain focus whenever the mouse moves over them, but only when the mouse is moving. With &#8216;StrictMouseFocus&#8217;, windows gain focus whenever the mouse enters any exposed area, even if this is due to layer changes, window movement, changing desktops, closing windows, etc. </dd>
 <p> Default: <code>ClickToFocus</code></dl>
 <p> <code>session.screen0.autoRaise</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> When True, this setting automatically raises any window that gains focus. </p>
+</dt><dd> When True, this setting automatically raises any window that gains focus. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.autoRaiseDelay</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> Adjusts the delay (in milli-sec) before focused windows will raise when using the Autoraise option. </p>
+</dt><dd> Adjusts the delay (in milli-sec) before focused windows will raise when using the Autoraise option. </dd>
 <p> Default: <code>250</code></dl>
 <p> <code>session.screen0.clickRaises</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> This setting allows a user to click anywhere on a window to bring it on top of other windows. Otherwise, only the titlebar will work. </p>
+</dt><dd> This setting allows a user to click anywhere on a window to bring it on top of other windows. Otherwise, only the titlebar will work. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.screen0.workspacewarping</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> This setting enables a user to change workspaces by dragging a window across the edge of the screen. </p>
+</dt><dd> This setting enables a user to change workspaces by dragging a window across the edge of the screen. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.screen0.showwindowposition</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> Setting this resource to True shows the user, in a little window, the exact position of the application window while the user is dragging it. Allows a precise placement of windows on a screen. </p>
+</dt><dd> Setting this resource to True shows the user, in a little window, the exact position of the application window while the user is dragging it. Allows a precise placement of windows on a screen. </dd>
 <p> Default: <code>False</code></dl>
 <p> <code>session.screen0.defaultDeco</code>: <i>string</i></p>
 <dl>
 <dt>
-<dd> This specifies the default window decorations, according to the same options available to the <code>[Deco]</code> option in the &#8216;apps&#8217; file, described in <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code>. </p>
+</dt><dd> This specifies the default window decorations, according to the same options available to the <code>[Deco]</code> option in the &#8216;apps&#8217; file, described in <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code>. </dd>
 <p> Default: <code>NORMAL</code></dl>
 <p> <code>session.screen0.menuDelay</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> This sets the delay in milliseconds for submenus to open when you hover over them or to close when you hover over another item. </p>
+</dt><dd> This sets the delay in milliseconds for submenus to open when you hover over them or to close when you hover over another item. </dd>
 <p> Default: <code>200</code></dl>
 <p> <code>session.screen0.focusNewWindows</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> This sets whether or not new windows will become focused automatically. </p>
+</dt><dd> This sets whether or not new windows will become focused automatically. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.screen0.workspaceNames</code>: <i>names</i></p>
 <dl>
 <dt>
-<dd> Here is where the user can name their workspaces, in a comma-delimited list. However it is recommended to use the tool available in the Workspace Menu to set these. </p>
+</dt><dd> Here is where the user can name their workspaces, in a comma-delimited list. However it is recommended to use the tool available in the Workspace Menu to set these. </dd>
 <p> Default: <code>Workspace 1, Workspace 2, Workspace 3, Workspace 4</code></dl>
 <p> <code>session.screen0.edgeSnapThreshold</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> When moving a window across your screen, fluxbox is able to have it &#8216;snap&#8217; to the edges of the screen and other windows for easy placement. This variable tells fluxbox the distance (in pixels) at which the window will jump to the edge. </p>
+</dt><dd> When moving a window across your screen, fluxbox is able to have it &#8216;snap&#8217; to the edges of the screen and other windows for easy placement. This variable tells fluxbox the distance (in pixels) at which the window will jump to the edge. </dd>
 <p> Default: <code>10</code></dl>
 <p> <code>session.screen0.windowPlacement</code>: <i>strategy</i></p>
 <dl>
 <dt>
-<dd> This resource specifies where to place new windows when not otherwise specified (by the program or the &#8216;apps&#8217; file, for example). </p>
+</dt><dd> This resource specifies where to place new windows when not otherwise specified (by the program or the &#8216;apps&#8217; file, for example). </dd>
 <p> Available strategies:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; RowSmartPlacement: tries to place windows in rows without overlapping</dl>
+</dt><dd> &bull; RowSmartPlacement: tries to place windows in rows without overlapping</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ColSmartPlacement: tries to place windows in columns without overlapping</dl>
+</dt><dd> &bull; ColSmartPlacement: tries to place windows in columns without overlapping</dd></dl>
 <dl>
 <dt>
-<dd> &bull; CascadePlacement: places windows below the titlebar of the previous one</dl>
+</dt><dd> &bull; CascadePlacement: places windows below the titlebar of the previous one</dd></dl>
 <dl>
 <dt>
-<dd> &bull; UnderMousePlacement: places new windows underneath the mouse</dl>
+</dt><dd> &bull; UnderMousePlacement: places new windows underneath the mouse</dd></dl>
 </dl>
 <p> Default: <code>RowSmartPlacement</code></dl>
 <p> <code>session.screen0.rowPlacementDirection</code>: <code>LeftToRight</code>|<code>RightToLeft</code></p>
 <dl>
 <dt>
-<dd> These settings control the direction in which windows are tiled using the RowSmartPlacement and ColSmartPlacement strategies described above. </p>
+</dt><dd> These settings control the direction in which windows are tiled using the RowSmartPlacement and ColSmartPlacement strategies described above. </dd>
 <p> Default: <code>LeftToRight</code></dl>
 <p> <code>session.screen0.colPlacementDirection</code>: <code>TopToBottom</code>|<code>BottomToTop</code></p>
 <dl>
 <dt>
-<dd> These settings control the direction in which windows are tiled using the RowSmartPlacement and ColSmartPlacement strategies described above. </p>
+</dt><dd> These settings control the direction in which windows are tiled using the RowSmartPlacement and ColSmartPlacement strategies described above. </dd>
 <p> Default: <code>TopToBottom</code></dl>
 <p> <code>session.screen0.fullMaximization</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> If this setting is enabled, windows will maximize over the toolbar, slit, and any other window that creates a strut, no matter what their individual settings are. </p>
+</dt><dd> If this setting is enabled, windows will maximize over the toolbar, slit, and any other window that creates a strut, no matter what their individual settings are. </dd>
 <p> Default: <code>False</code></dl>
 <p> <code>session.screen0.opaqueMove</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> When moving a window, setting this to True will draw the window contents as it moves (this is nasty on slow systems). If False, it will only draw an outline of the window border. </p>
+</dt><dd> When moving a window, setting this to True will draw the window contents as it moves (this is nasty on slow systems). If False, it will only draw an outline of the window border. </dd>
 <p> Default: <code>True</code></dl>
 <p> <code>session.screen0.workspaces</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> Set this to the number of workspaces the users wants. </p>
+</dt><dd> Set this to the number of workspaces the users wants. </dd>
 <p> Default: <code>4</code></dl>
 <p> <code>session.cacheLife</code>: <i>minutes</i></p>
 <dl>
 <dt>
-<dd> This tells fluxbox how long unused pixmaps may stay in the X server&#8217;s memory. </p>
+</dt><dd> This tells fluxbox how long unused pixmaps may stay in the X server&#8217;s memory. </dd>
 <p> Default: <code>5</code></dl>
 <p> <code>session.cacheMax</code>: <i>KbSize</i></p>
 <dl>
 <dt>
-<dd> This tells fluxbox how much memory it may use to store cached pixmaps on the X server. If your machine runs short of memory, you may lower this value. </p>
+</dt><dd> This tells fluxbox how much memory it may use to store cached pixmaps on the X server. If your machine runs short of memory, you may lower this value. </dd>
 <p> Default: <code>200</code></dl>
 <p> <code>session.colorsPerChannel</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> This tells fluxbox how many colors to take from the X server on pseudo-color displays. A channel would be red, green, or blue. fluxbox will allocate this variable ^ 3 and make them always available. Value must be between 2-6. When you run fluxbox on an 8bpp display, you must set this resource to 4. </p>
+</dt><dd> This tells fluxbox how many colors to take from the X server on pseudo-color displays. A channel would be red, green, or blue. fluxbox will allocate this variable ^ 3 and make them always available. Value must be between 2-6. When you run fluxbox on an 8bpp display, you must set this resource to 4. </dd>
 <p> Default: <code>4</code></dl>
 <p> <code>session.doubleClickInterval</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> Adjust the delay in milliseconds between mouse clicks for fluxbox to consider a double click. </p>
+</dt><dd> Adjust the delay in milliseconds between mouse clicks for fluxbox to consider a double click. </dd>
 <p> Default: <code>250</code></dl>
 <p> <code>session.forcePseudoTransparency</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> If you have Xorg&#8217;s composite extension enabled, this setting will force the menu, windows, toolbar, and slit to use pseudo-transparency instead of true transparency. </p>
+</dt><dd> If you have Xorg&#8217;s composite extension enabled, this setting will force the menu, windows, toolbar, and slit to use pseudo-transparency instead of true transparency. </dd>
 <p> Default: <code>False</code></dl>
 <p> <code>session.ignoreBorder</code>: <i>boolean</i></p>
 <dl>
 <dt>
-<dd> This configures the ability to move windows by dragging the border. </p>
+</dt><dd> This configures the ability to move windows by dragging the border. </dd>
 <p> Default: <code>False</code></dl>
 <p> <code>session.tabPadding</code>: <i>integer</i></p>
 <dl>
 <dt>
-<dd> This specifies the spacing between tabs. </p>
+</dt><dd> This specifies the spacing between tabs. </dd>
 <p> Default: <code>0</code></dl>
 <p> <code>session.tabsAttachArea</code>: <code>Window|Titlebar</code></p>
 <dl>
 <dt>
-<dd> With this set to &#8216;Window&#8217;, windows may be grouped by dragging one tab with the middle mouse button and dropping it anywhere on another window. With &#8216;Titlebar&#8217;, the user must drop the tab on the target window&#8217;s titlebar. </p>
+</dt><dd> With this set to &#8216;Window&#8217;, windows may be grouped by dragging one tab with the middle mouse button and dropping it anywhere on another window. With &#8216;Titlebar&#8217;, the user must drop the tab on the target window&#8217;s titlebar. </dd>
 <p> Default: <code>Window</code></dl>
 <p> <code>session.titlebar.{left|right}</code>: <i>buttons</i></p>
 <dl>
 <dt>
-<dd> The buttons or icons to place in the titlebar of decorated windows. You may specify any number, space-delimited. </p>
+</dt><dd> The buttons or icons to place in the titlebar of decorated windows. You may specify any number, space-delimited. </dd>
 <p> The available options are:</p>
 <dl>
 <dt>
-<dd> <code>Close Maximize MenuIcon Minimize Shade Stick LHalf RHalf</code></dl>
+</dt><dd> <code>Close Maximize MenuIcon Minimize Shade Stick LHalf RHalf</code></dd></dl>
 <p> Default left: <code>Stick</code> </p>
 <p> Default right: <code>Shade Minimize Maximize Close</code> </p>
 <p> <i>LHalf</i> and <i>RHalf</i> are buttons to quickly place a window into the left and right half of the current monitor.</dl>
@@ -1004,45 +1000,45 @@ exec fluxbox
 <p> <code>session.appsFile</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> Location of persistent application settings, or the &#8216;apps&#8217; file. See the <code>Remember&#8230;</code> item in the <code>Window Menu</code> section above or <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code> for details.</dl>
+</dt><dd> Location of persistent application settings, or the &#8216;apps&#8217; file. See the <code>Remember&#8230;</code> item in the <code>Window Menu</code> section above or <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code> for details.</dd></dl>
 <p> <code>session.groupFile</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> Deprecated, auto-grouping is now done in the &#8216;apps&#8217; file, see <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code> for details.</dl>
+</dt><dd> Deprecated, auto-grouping is now done in the &#8216;apps&#8217; file, see <code><a href="/docs/linux/man/5-fluxbox-apps/">fluxbox-apps</a>(5)</code> for details.</dd></dl>
 <p> <code>session.keyFile</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> Location of the keyboard mapping settings, or the &#8216;keys&#8217; file. See <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code> for details.</dl>
+</dt><dd> Location of the keyboard mapping settings, or the &#8216;keys&#8217; file. See <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code> for details.</dd></dl>
 <p> <code>session.menuFile</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> Location of the Root Menu file. See <code><a href="/docs/linux/man/5-fluxbox-menu/">fluxbox-menu</a>(5)</code> for details.</dl>
+</dt><dd> Location of the Root Menu file. See <code><a href="/docs/linux/man/5-fluxbox-menu/">fluxbox-menu</a>(5)</code> for details.</dd></dl>
 <p> <code>session.slitlistFile</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> Location of the file used to remember slit client ordering. See <code>SLIT</code> above for details.</dl>
+</dt><dd> Location of the file used to remember slit client ordering. See <code>SLIT</code> above for details.</dd></dl>
 <p> <code>session.styleFile</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> Location of the currently selected style. See <code><a href="/docs/linux/man/5-fluxbox-style/">fluxbox-style</a>(5)</code> for details.</dl>
+</dt><dd> Location of the currently selected style. See <code><a href="/docs/linux/man/5-fluxbox-style/">fluxbox-style</a>(5)</code> for details.</dd></dl>
 <p> <code>session.styleOverlay</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> Location of the style overlay file. See <code><a href="/docs/linux/man/5-fluxbox-style/">fluxbox-style</a>(5)</code> for details.</dl>
+</dt><dd> Location of the style overlay file. See <code><a href="/docs/linux/man/5-fluxbox-style/">fluxbox-style</a>(5)</code> for details.</dd></dl>
 <p> <code>session.screen0.windowMenu</code>: <i>location</i></p>
 <dl>
 <dt>
-<dd> This optionally specifies the location of a user-defined window menu. If left blank, it will use <code>~/.fluxbox/windowmenu</code>. </p>
+</dt><dd> This optionally specifies the location of a user-defined window menu. If left blank, it will use <code>~/.fluxbox/windowmenu</code>. </dd>
 <p> Default: <code>blank</code></dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>HOME</code></p>
 <dl>
 <dt>
-<dd> fluxbox uses <code>$HOME</code> to find the .fluxbox/init file and to resolve style file and -directory names.</dl>
+</dt><dd> fluxbox uses <code>$HOME</code> to find the .fluxbox/init file and to resolve style file and -directory names.</dd></dl>
 <p> <code>DISPLAY</code></p>
 <dl>
 <dt>
-<dd> When no other display was given on the command line, fluxbox will start on the display specified by this variable.</dl>
+</dt><dd> When no other display was given on the command line, fluxbox will start on the display specified by this variable.</dd></dl>
 <p> fluxbox can also take advantage of other environment variables if they are set before fluxbox is started. For example, if $TERM is set, then it will be available whenever fluxbox uses the shell, such as the &#8216;keys&#8217; file <code>ExecCommand</code> or the root menu&#8217;s <code>[exec]</code> tag. See <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code> and <code><a href="/docs/linux/man/5-fluxbox-menu/">fluxbox-menu</a>(5)</code> for details. </p>
 <p> The &#8216;keys&#8217; file also provides two commands that can alter the current environment of fluxbox: <code>SetEnv</code> and <code>Export</code>. Any changes made by these commands will also affect the environment as seen by fluxbox and all child processes started after that point. See <code><a href="/docs/linux/man/5-fluxbox-keys/">fluxbox-keys</a>(5)</code> for details. </p>
 <p> For more information about environment variables in general, see your shell&#8217;s manual.</p>
@@ -1050,35 +1046,35 @@ exec fluxbox
 <p> fluxbox responds to the following signals: </p>
 <dl>
 <dt>
-<dd> &bull; SIGUSR1 restarts fluxbox.</dl>
+</dt><dd> &bull; SIGUSR1 restarts fluxbox.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; SIGUSR2 Forces reloading of configuration.</dl>
+</dt><dd> &bull; SIGUSR2 Forces reloading of configuration.</dd></dl>
 <h2>AUTHORS</h2>
 <p> fluxbox is written and maintained by Henrik Kinnunen &lt;fluxgen at fluxbox org&gt;, Simon Bowden &lt;rathnor at fluxbox org&gt;, Mathias Gumz &lt;akira at fluxbox org&gt;, and Mark Tiefenbruck &lt;mark at fluxbox org&gt;, with contributions and patches merged from many individuals around the world. </p>
 <p> Blackbox was written and maintained by Brad Hughes &lt;blackbox at alug org&gt; and Jeff Raven &lt;jraven at psu edu&gt;. </p>
 <p> This manpage is the combined work of: </p>
 <dl>
 <dt>
-<dd> &bull; Jim Ramsay &lt;i.am at jimramsay com&gt; (&gt;fluxbox-1.0.0)</dl>
+</dt><dd> &bull; Jim Ramsay &lt;i.am at jimramsay com&gt; (&gt;fluxbox-1.0.0)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Curt Micol &lt;asenchi at asenchi com&gt; (&gt;fluxbox-0.9.11)</dl>
+</dt><dd> &bull; Curt Micol &lt;asenchi at asenchi com&gt; (&gt;fluxbox-0.9.11)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Tobias Klausmann &lt;klausman at users sourceforge net&gt; (&lt;fluxbox-0.9.11)</dl>
+</dt><dd> &bull; Tobias Klausmann &lt;klausman at users sourceforge net&gt; (&lt;fluxbox-0.9.11)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Grubert &lt;grubert at users sourceforge net&gt; (fluxbox)</dl>
+</dt><dd> &bull; Grubert &lt;grubert at users sourceforge net&gt; (fluxbox)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Matthew Hawkins &lt;matt at mh dropbear id au&gt; (blackbox)</dl>
+</dt><dd> &bull; Matthew Hawkins &lt;matt at mh dropbear id au&gt; (blackbox)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Wilbert Berendsen &lt;wbsoft at xs4all nl&gt; (blackbox)</dl>
+</dt><dd> &bull; Wilbert Berendsen &lt;wbsoft at xs4all nl&gt; (blackbox)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Numerous other languages could be available if someone jumps in.</dl>
+</dt><dd> &bull; Numerous other languages could be available if someone jumps in.</dd></dl>
 <h2>ONLINE DOCUMENTATION</h2>
 <p> The Official fluxbox website: m[blue]<code><a rel="nofollow" href="http://www.fluxbox.org">http://www.fluxbox.org</a></code>m[] </p>
 <p> The Official fluxbox wiki: m[blue]<code><a rel="nofollow" href="http://www.fluxbox-wiki.org">http://www.fluxbox-wiki.org</a></code>m[] </p>
@@ -1091,5 +1087,5 @@ exec fluxbox
 <p> <code>Henrik Kinnunen</code> &lt;fluxgen [at] fluxbox.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

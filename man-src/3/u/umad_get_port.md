@@ -10,7 +10,6 @@ description: "umad_get_port, umad_release_port – open and close an InfiniBand 
 <p>umad_get_port, umad_release_port &#8211; open and close an InfiniBand port</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_get_port(char *ca_name, int portnum, umad_port_t *port);
 int umad_release_port(umad_port_t *port);</code></pre>
 <h2>Description</h2>
@@ -34,7 +33,7 @@ uint64_t port_guid; /* GUID of this port */
 <p><code>umad_get_port()</code> and <code>umad_release_port()</code> return 0 on success, and a negative value on error.</p>
 <h2>Authors</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
 <dd>
-<dt>Dotan Barak &lt;dotanb [at] mellanox.co.il&gt;</p>
-<dd></dl>
+</dd><dt>Dotan Barak &lt;dotanb [at] mellanox.co.il&gt;</dt>
+<dd></dd></dl>

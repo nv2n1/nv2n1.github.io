@@ -14,8 +14,8 @@ description: "bundle-remove – Removes gems from the Gemfile"
 <p>Removes the given gems from the Gemfile while ensuring that the resulting Gemfile is still valid. If a gem cannot be removed, a warning is printed. If a gem is already absent from the Gemfile, and error is raised.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;install</code></p>
-<dd>Runs <code>bundle install</code> after the given gems have been removed from the Gemfile, which ensures that both the lockfile and the installed gems on disk are also updated to remove the given gem(s).</dl>
+<dt><code>&#8211;install</code></dt>
+<dd>Runs <code>bundle install</code> after the given gems have been removed from the Gemfile, which ensures that both the lockfile and the installed gems on disk are also updated to remove the given gem(s).</dd></dl>
 <p> Example: </p>
 <p> bundle remove rails </p>
 <p> bundle remove rails rack </p>

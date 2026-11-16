@@ -15,8 +15,8 @@ description: "panel-test-applets — display installed applets"
 <p> <code>panel-test-applets</code> display installed applets in a dialog box and does nothing else.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-gnome-options/">gnome-options</a>(7)</p>
 <h2>AUTHOR</h2>

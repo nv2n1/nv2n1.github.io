@@ -16,31 +16,31 @@ description: "night_temperature – a camera temperature"
 <p> options </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> get:</p>
 <dl>
-<dt><code>-t</code></p>
+<dt><code>-t</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>print ccd current temperature in degrees of Celsius</p>
-<dt><code>-ta</code></p>
+&nbsp;<wbr>&nbsp;<wbr>print ccd current temperature in degrees of Celsius</dd>
+<dt><code>-ta</code></dt>
 <dd>
-&nbsp;<wbr>print air current temperature in degrees of Celsius</p>
-<dt><code>-ts</code></p>
+&nbsp;<wbr>print air current temperature in degrees of Celsius</dd>
+<dt><code>-ts</code></dt>
 <dd>
-&nbsp;<wbr>print temperature setpoint in degrees of Celsius</p>
-<dt><code>-r</code></p>
+&nbsp;<wbr>print temperature setpoint in degrees of Celsius</dd>
+<dt><code>-r</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>print current cooling power&nbsp;<wbr>(relatively, in percents)</p>
-<dt><code>-f</code></p>
+&nbsp;<wbr>&nbsp;<wbr>print current cooling power&nbsp;<wbr>(relatively, in percents)</dd>
+<dt><code>-f</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>print current status of fan, on or off</dl>
+&nbsp;<wbr>&nbsp;<wbr>print current status of fan, on or off</dd></dl>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> without switches print all available cooling information</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> set:</p>
 <dl>
-<dt><code>-t</code></p>
-<dd> temperature set temperature of a cooler</p>
-<dt><code>-off</code></p>
+<dt><code>-t</code></dt>
+<dd> temperature set temperature of a cooler</dd>
+<dt><code>-off</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>set regulation of temperature to off</p>
-<dt><code>-host</code></p>
-<dd> address:port internet address server, local connect is default</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>set regulation of temperature to off</dd>
+<dt><code>-host</code></dt>
+<dd> address:port internet address server, local connect is default</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Setting of environment variable NIGHTVIEW_HOST is equivalent to -host option.</p>
 <h2>REPORTING BUGS</h2>

@@ -15,15 +15,15 @@ sock_poll_wait - place memory barrier behind the poll_wait call.
 <h2>Arguments</h2>
 
 <i>filp</i>
-<dl><dd><dd>file</dl>
+<dl><dd></dd><dd>file</dd></dl>
  
 
  <i>wait_address</i>
-<dl><dd>socket wait queue</dl>
+<dl><dd>socket wait queue</dd></dl>
  
 
  <i>p</i>
-<dl><dd>poll_table</dl>
+<dl><dd>poll_table</dd></dl>
 
 <h2>Description</h2>
 

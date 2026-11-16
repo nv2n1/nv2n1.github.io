@@ -15,24 +15,24 @@ description: "vboxputty – a self-dialing/-calling vboxgetty"
 <p><i>vboxputty</i> is a vboxgetty, not waiting for, but triggering a call. After connect, vboxputty is acting exactly like vboxgetty. <i>vboxputty</i> exits with 0 if a connection was established, 99 on BUSY. </p>
 <h2>Options</h2>
 <dl>
-<dt>-h</p>
-<dd>display a short help</p>
-<dt>-v</p>
-<dd>display the version information</p>
-<dt>-f config-file</p>
-<dd>use <i>config-file</i> instead of the default vboxgetty.conf</p>
-<dt>-d device</p>
-<dd>use <i>device</i> (/dev/ttyI*) for dialout</p>
-<dt>-c phonenumber</p>
-<dd>the phonenumber to be called</p>
-<dt>-s ring-timeout</p>
-<dd>vboxputty will dial the <i>phonenumber</i> and wait <i>ring-timeout</i> seconds for the called party to accept the call, if <i>ring-timeout</i> seconds are ellapsed before connect, vboxputty will hangup.</p>
-<dt>-w wait</p>
-<dd>after the connection is established, vboxputty will wait <i>wait</i> seconds before starting the tcl-script</p>
-<dt>-t redial</p>
-<dd>if the called party is BUSY, vboxputty will try <i>redial</i> times to get a connect</p>
-<dt>-r redial-pause</p>
-<dd>vboxputty waits <i>redial-pause</i> seconds between BUSY-redials</dl>
+<dt>-h</dt>
+<dd>display a short help</dd>
+<dt>-v</dt>
+<dd>display the version information</dd>
+<dt>-f config-file</dt>
+<dd>use <i>config-file</i> instead of the default vboxgetty.conf</dd>
+<dt>-d device</dt>
+<dd>use <i>device</i> (/dev/ttyI*) for dialout</dd>
+<dt>-c phonenumber</dt>
+<dd>the phonenumber to be called</dd>
+<dt>-s ring-timeout</dt>
+<dd>vboxputty will dial the <i>phonenumber</i> and wait <i>ring-timeout</i> seconds for the called party to accept the call, if <i>ring-timeout</i> seconds are ellapsed before connect, vboxputty will hangup.</dd>
+<dt>-w wait</dt>
+<dd>after the connection is established, vboxputty will wait <i>wait</i> seconds before starting the tcl-script</dd>
+<dt>-t redial</dt>
+<dd>if the called party is BUSY, vboxputty will try <i>redial</i> times to get a connect</dd>
+<dt>-r redial-pause</dt>
+<dd>vboxputty waits <i>redial-pause</i> seconds between BUSY-redials</dd></dl>
 <h2>Files</h2>
 <p><i>/usr/local/vbox/etc/vboxgetty.conf</i></p>
 <h2>Author</h2>

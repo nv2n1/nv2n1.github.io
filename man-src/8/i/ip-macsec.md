@@ -17,30 +17,17 @@ description: "ip-macsec – MACsec device configuration"
  <code>ip macsec set </code><i>DEV</i><code> rx </code><i>SCI</i><code> sa</code> { <i>0..3</i> } [ <i>OPTS</i> ]<br />
  <code>ip macsec del </code><i>DEV</i><code> rx </code><i>SCI</i><code> sa</code> { <i>0..3</i> } <code>ip macsec offload </code><i>DEV</i> { <code>off</code> | <code>phy</code> | <code>mac</code> } <code>ip macsec show</code> [<i> DEV </i>] </p>
 <pre><code>OPTS := [
-
 pn {
-
     1..2^32-1 } ] [
-
 on | off ]
-
-
 SCI := {
-
     sci
-
     &lt;u64&gt; |
-
     port
-
     PORT
-
     address &lt;lladdr&gt;
-
 }
-
 PORT := { 1..2^16-1 }
-
 </code></pre>
 <h2>Description</h2>
 <p>The <code>ip macsec</code> commands are used to configure transmit secure associations and receive secure channels and their secure associations on a MACsec device created with the <code>ip link add</code> command using the <i>macsec</i> type. </p>

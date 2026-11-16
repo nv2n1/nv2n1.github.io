@@ -39,11 +39,8 @@ long double -LDBL_MAX </p>
 <p>Demonstrates min, max, and lowest for floating-point types<br />
  // Run this code </p>
 <pre><code>#include &lt;limits&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;std::numeric_limits&lt;T&gt;::min():
 &quot;

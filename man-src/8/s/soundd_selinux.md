@@ -47,9 +47,9 @@ description: "soundd_selinux – Security Enhanced Linux Policy for the soundd p
 <p> Policy governs the access confined processes have to these ports. SELinux soundd policy is very flexible allowing users to setup their soundd processes in as secure a method as possible. </p>
 <p> The following port types are defined for soundd: </p>
 <dl>
-<dt><code>soundd_port_t</code></p>
+<dt><code>soundd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8000,9433,16001</dl>
+</dd><dd>Default Defined Ports: tcp 8000,9433,16001</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type soundd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -97,14 +97,14 @@ description: "soundd_selinux – Security Enhanced Linux Policy for the soundd p
 <p> <code>soundd_etc_t</code> </p>
 <p> &#8211; Set files with the soundd_etc_t type, if you want to store soundd files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/nas(/.*)?, /etc/yiff(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/nas(/.*)?, /etc/yiff(/.*)? </dd>
 </dl>
 <p> <code>soundd_exec_t</code> </p>
 <p> &#8211; Set files with the soundd_exec_t type, if you want to transition an executable to the soundd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/nasd, /usr/sbin/yiff, /usr/bin/gpe-soundserver </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/nasd, /usr/sbin/yiff, /usr/bin/gpe-soundserver </dd>
 </dl>
 <p> <code>soundd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the soundd_initrc_exec_t type, if you want to transition an executable to the soundd_initrc_t domain. </p>
@@ -117,8 +117,8 @@ description: "soundd_selinux – Security Enhanced Linux Policy for the soundd p
 <p> <code>soundd_var_run_t</code> </p>
 <p> &#8211; Set files with the soundd_var_run_t type, if you want to store the soundd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/nasd(/.*)?, /var/run/yiff-[0-9]+.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/nasd(/.*)?, /var/run/yiff-[0-9]+.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

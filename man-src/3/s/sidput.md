@@ -10,7 +10,6 @@ description: "avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid – ob
 <p>avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid &#8211; obtain and manipulate SELinux security ID&#8217;s</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/selinux.h&gt;
-
 #include &lt;selinux/avc.h&gt;
 int avc_context_to_sid(char *ctx, security_id_t *sid);
 int avc_sid_to_context(security_id_t sid, char **ctx);
@@ -24,8 +23,8 @@ int avc_get_initial_sid(const char *name, security_id_t *sid);</code></pre>
 <p><code>avc_context_to_sid</code>() and <code>avc_sid_to_context</code>() return zero on success. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>An attempt to allocate memory failed.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>An attempt to allocate memory failed.</dd></dl>
 <h2>Notes</h2>
 <p>As of libselinux version 2.0.86, SID&#8217;s are no longer reference counted. A SID will be valid from the time it is first obtained until the next call to <code><a href="/docs/linux/man/3-avc_destroy/">avc_destroy</a></code>(3). The <code><a href="/docs/linux/man/3-sidget/">sidget</a></code>(3) and <code><a href="/docs/linux/man/3-sidput/">sidput</a></code>(3) functions, formerly used to adjust the reference count, are no-ops and are deprecated.</p>
 <h2>Author</h2>

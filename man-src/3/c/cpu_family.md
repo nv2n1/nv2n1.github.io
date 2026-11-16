@@ -25,7 +25,6 @@ description: "cpu_family – Contains the CPU type. Allegro game programming lib
    CPU_FAMILY_POWERPC  - The processor is a PowerPC processor
    CPU_FAMILY_EXTENDED - The processor type needs to be read
                          from the cpu_model
-   
 </pre>
 <p> You can read this variable after you have called check_cpu() (which is automatically called by allegro_init()). </p>
 <h2>SEE ALSO</h2>

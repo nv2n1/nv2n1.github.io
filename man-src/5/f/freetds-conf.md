@@ -17,136 +17,136 @@ description: "freetds.conf – configuration file for FreeTDS"
 <p> where <i>name</i> is the connection property to be described. Servernames and properties are not case sensitive. Values are case-preserving i.e., copied literally. Comments begin with either a semicolon (So ; Sc or pound sign ) (So # Sc and continue to end of line. Blank lines are ignored. Whitespace surrounding the ) So = Sc is ignored.</p>
 <h2>Properties</h2>
 <dl>
-<dt><code>client charset</code></p>
-<dd>encoding of client data; overrides <a href="/docs/linux/man/1-locale/">locale</a>(1) settings</p>
+<dt><code>client charset</code></dt>
+<dd>encoding of client data; overrides <a href="/docs/linux/man/1-locale/">locale</a>(1) settings</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>iconv character set names</p>
-<dt><code>Default:</code></p>
-<dd>ISO-8859-1</dl>
-<dt><code>connect timeout</code></p>
-<dd>seconds to wait for response from connect request</p>
+<dt><code>Domain:</code></dt>
+<dd>iconv character set names</dd>
+<dt><code>Default:</code></dt>
+<dd>ISO-8859-1</dd></dl>
+<dt><code>connect timeout</code></dt>
+<dd>seconds to wait for response from connect request</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>0 to MAX_INT</p>
-<dt><code>Default:</code></p>
-<dd>none</dl>
-<dt><code>debug flags</code></p>
-<dd>logging granularity</p>
+<dt><code>Domain:</code></dt>
+<dd>0 to MAX_INT</dd>
+<dt><code>Default:</code></dt>
+<dd>none</dd></dl>
+<dt><code>debug flags</code></dt>
+<dd>logging granularity</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>32-bit integer</p>
-<dt><code>Default:</code></p>
-<dd>0x4fff</dl>
-<dt><code>dump file</code></p>
-<dd>specifies location of a logfile and turns on logging</p>
+<dt><code>Domain:</code></dt>
+<dd>32-bit integer</dd>
+<dt><code>Default:</code></dt>
+<dd>0x4fff</dd></dl>
+<dt><code>dump file</code></dt>
+<dd>specifies location of a logfile and turns on logging</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>valid file name</p>
-<dt><code>Default:</code></p>
-<dd>none</dl>
-<dt><code>dump file append</code></p>
-<dd>log data appended to file instead of re-writing for each connection</p>
+<dt><code>Domain:</code></dt>
+<dd>valid file name</dd>
+<dt><code>Default:</code></dt>
+<dd>none</dd></dl>
+<dt><code>dump file append</code></dt>
+<dd>log data appended to file instead of re-writing for each connection</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>yes/no</p>
-<dt><code>Default:</code></p>
-<dd>no</dl>
-<dt><code>emulate little endian</code></p>
-<dd>forces big endian machines to act as little endian to communicate with Microsoft Servers</p>
+<dt><code>Domain:</code></dt>
+<dd>yes/no</dd>
+<dt><code>Default:</code></dt>
+<dd>no</dd></dl>
+<dt><code>emulate little endian</code></dt>
+<dd>forces big endian machines to act as little endian to communicate with Microsoft Servers</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>yes/no</p>
-<dt><code>Default:</code></p>
-<dd>no</dl>
-<dt><code>encryption</code></p>
+<dt><code>Domain:</code></dt>
+<dd>yes/no</dd>
+<dt><code>Default:</code></dt>
+<dd>no</dd></dl>
+<dt><code>encryption</code></dt>
 <dd>
+</dd><dl>
+<dt><i>off</i></dt>
+<dd>disables encryption (default)</dd>
+<dt><i>request</i></dt>
+<dd>use if available</dd>
+<dt><i>required</i></dt>
+<dd>allow encrypted connections only</dd></dl>
+<dt><code>host</code></dt>
+<dd>Name of the host the server is running on.</dd>
 <dl>
-<dt><i>off</i></p>
-<dd>disables encryption (default)</p>
-<dt><i>request</i></p>
-<dd>use if available</p>
-<dt><i>required</i></p>
-<dd>allow encrypted connections only</dl>
-<dt><code>host</code></p>
-<dd>Name of the host the server is running on.</p>
+<dt><code>Domain:</code></dt>
+<dd>host name or IP address</dd>
+<dt><code>Default:</code></dt>
+<dd>SYBASE</dd></dl>
+<dt><code>initial block size</code></dt>
+<dd>maximum size of a protocol block</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>host name or IP address</p>
-<dt><code>Default:</code></p>
-<dd>SYBASE</dl>
-<dt><code>initial block size</code></p>
-<dd>maximum size of a protocol block</p>
+<dt><code>Domain:</code></dt>
+<dd>multiple of 512</dd>
+<dt><code>Default:</code></dt>
+<dd>512</dd></dl>
+<dt><code>instance</code></dt>
+<dd>name of Microsoft SQL Server instance to connect to (supersedes <i>port</i></dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>multiple of 512</p>
-<dt><code>Default:</code></p>
-<dd>512</dl>
-<dt><code>instance</code></p>
-<dd>name of Microsoft SQL Server instance to connect to (supersedes <i>port</i></p>
+<dt><code>Domain:</code></dt>
+<dd>instance name</dd>
+<dt><code>Default:</code></dt>
+<dd>none</dd></dl>
+<dt><code>port</code></dt>
+<dd>port number that the server is listening to</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>instance name</p>
-<dt><code>Default:</code></p>
-<dd>none</dl>
-<dt><code>port</code></p>
-<dd>port number that the server is listening to</p>
+<dt><code>Domain:</code></dt>
+<dd>any valid port</dd>
+<dt><code>Default:</code></dt>
+<dd>TDS 5.0, 5000; TDS 7.0 and up, 1433</dd></dl>
+<dt><code>tds version</code></dt>
+<dd>TDS protocol version to use</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>any valid port</p>
-<dt><code>Default:</code></p>
-<dd>TDS 5.0, 5000; TDS 7.0 and up, 1433</dl>
-<dt><code>tds version</code></p>
-<dd>TDS protocol version to use</p>
+<dt><code>Domain:</code></dt>
+<dd>4.2, 5.0, 7.0, 7.1, 7.2</dd>
+<dt><code>Default:</code></dt>
+<dd>&#8211;<code>-with-tdsver</code> value (5.0 if unspecified)</dd></dl>
+<dt><code>text size</code></dt>
+<dd>default value of TEXTSIZE, in bytes</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>4.2, 5.0, 7.0, 7.1, 7.2</p>
-<dt><code>Default:</code></p>
-<dd>&#8211;<code>-with-tdsver</code> value (5.0 if unspecified)</dl>
-<dt><code>text size</code></p>
-<dd>default value of TEXTSIZE, in bytes</p>
+<dt><code>Domain:</code></dt>
+<dd>0 to 4,294,967,295</dd>
+<dt><code>Default:</code></dt>
+<dd>4,294,967,295</dd></dl>
+<dt><code>timeout</code></dt>
+<dd>seconds to wait for response to a query</dd>
 <dl>
-<dt><code>Domain:</code></p>
-<dd>0 to 4,294,967,295</p>
-<dt><code>Default:</code></p>
-<dd>4,294,967,295</dl>
-<dt><code>timeout</code></p>
-<dd>seconds to wait for response to a query</p>
-<dl>
-<dt><code>Domain:</code></p>
-<dd>0 to MAX_INT</p>
-<dt><code>Default:</code></p>
-<dd>none (wait forever)</dl>
+<dt><code>Domain:</code></dt>
+<dd>0 to MAX_INT</dd>
+<dt><code>Default:</code></dt>
+<dd>none (wait forever)</dd></dl>
 </dl>
 <p> Do not define both Fa port and Fa instance Ns . One implies the other. </p>
 <p> Boolean property values may be denoted as on/off, true/false, or 1/0.</p>
 <h3>Debug Flags</h3>
 <p>The log&#8217;s granularity can be controlled with the <i>debug flags</i> property.</p>
 <dl>
-<dt><code>Value Ta </code><code>Meaning</code></p>
+<dt><code>Value Ta </code><code>Meaning</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>&nbsp;<wbr>0x02<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>severe error</code></p>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x02<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>severe error</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>&nbsp;<wbr>0x04<tt>&nbsp;<wbr>&nbsp;<wbr></tt>error</code></p>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x04<tt>&nbsp;<wbr>&nbsp;<wbr></tt>error</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>&nbsp;<wbr>0x08<tt>&nbsp;<wbr></tt>warning</code></p>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x08<tt>&nbsp;<wbr></tt>warning</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>&nbsp;<wbr>0x10<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>network</code></p>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x10<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>network</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>&nbsp;<wbr>0x20information level 1</code></p>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x20information level 1</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>&nbsp;<wbr>0x40information level 2</code></p>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x40information level 2</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>&nbsp;<wbr>0x80function trace and info</code></p>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x80function trace and info</code></dt>
 <dd>
-<dt><code>0x1000show pid</code></p>
+</dd><dt><code>0x1000show pid</code></dt>
 <dd>
-<dt><code>0x2000show time</code></p>
+</dd><dt><code>0x2000show time</code></dt>
 <dd>
-<dt><code>0x4000show source level info (source file and line)</code></p>
+</dd><dt><code>0x4000show source level info (source file and line)</code></dt>
 <dd>
-<dt><code>0x8000thread id (not implemented).</code></p>
-<dd></dl>
+</dd><dt><code>0x8000thread id (not implemented).</code></dt>
+<dd></dd></dl>
 <h2>Names And Locations</h2>
 <p>The file is normally named<br />
  /etc/freetds.conf or ${HOME}/.freetds.conf That name can be overridden with the FREETDSCONF environment variable. </p>
@@ -169,20 +169,20 @@ description: "freetds.conf – configuration file for FreeTDS"
 <li> attempt to look up the literal name &#8220;SYBASE&#8221; </ol>
 <h2>Environment</h2>
 <dl>
-<dt><code>FREETDSCONF</code></p>
-<dd>overrides name and location of the system-wide conf file</p>
-<dt><code>TDSDUMP</code></p>
-<dd>overrides the name and location of the FreeTDS log file</p>
-<dt><code>TDSDUMPCONFIG</code></p>
-<dd>specifies a name and location of a file that logs the search of configuration files</p>
-<dt><code>TDSHOST</code></p>
-<dd>overrides the host property</p>
-<dt><code>TDSPORT</code></p>
-<dd>overrides the port property</p>
-<dt><code>TDSQUERY</code></p>
-<dd>synonym for DSQUERY, the default servername</p>
-<dt><code>TDSVER</code></p>
-<dd>overrides the version specified in the freetds.conf</dl>
+<dt><code>FREETDSCONF</code></dt>
+<dd>overrides name and location of the system-wide conf file</dd>
+<dt><code>TDSDUMP</code></dt>
+<dd>overrides the name and location of the FreeTDS log file</dd>
+<dt><code>TDSDUMPCONFIG</code></dt>
+<dd>specifies a name and location of a file that logs the search of configuration files</dd>
+<dt><code>TDSHOST</code></dt>
+<dd>overrides the host property</dd>
+<dt><code>TDSPORT</code></dt>
+<dd>overrides the port property</dd>
+<dt><code>TDSQUERY</code></dt>
+<dd>synonym for DSQUERY, the default servername</dd>
+<dt><code>TDSVER</code></dt>
+<dd>overrides the version specified in the freetds.conf</dd></dl>
 <p> The environment variables <code>TDSVER, TDSDUMP, TDSPORT, TDSQUERY, and TDSHOST</code> override values set by a .conf or interfaces file.</p>
 <h2>Files</h2>
 <p>/etc/freetds.conf , ${HOME}/.freetds.conf</p>

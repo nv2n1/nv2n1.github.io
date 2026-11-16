@@ -13,8 +13,8 @@ description: "ld.hugetlbfs – link a program for huge pages"
 <h2>Description</h2>
 <p><code>ld.hugetlbfs</code> replaces the normal <code>ld</code> command for linking programs to use hugepages. Under gcc, you should use the option <code>-B /usr/share/libhugetlbfs</code> which tells gcc to look in a non-standard location for the linker. This could be set in the <code>CFLAGS</code> environment variable. </p>
 <dl>
-<dt><code>-Wl,&#8211;hugetlbfs-align</code></p>
-<dd>This method of linking an application permits greater flexibility at runtime. Using HUGETLB_ELFMAP, it is possible to control which program segments are placed in hugepages. The following four settings will cause the indicated segments to be placed in hugepages: </p>
+<dt><code>-Wl,&#8211;hugetlbfs-align</code></dt>
+<dd>This method of linking an application permits greater flexibility at runtime. Using HUGETLB_ELFMAP, it is possible to control which program segments are placed in hugepages. The following four settings will cause the indicated segments to be placed in hugepages: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=R&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Read-only segments&nbsp;<wbr>(text)<br />
 &nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=W&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Writable segments&nbsp;<wbr>(data/BSS)<br />
 &nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=RW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>All segments&nbsp;<wbr>(text/data/BSS)<br />

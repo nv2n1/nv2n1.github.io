@@ -49,24 +49,24 @@ description: "afs_selinux – Security Enhanced Linux Policy for the afs process
 <p> Policy governs the access confined processes have to these ports. SELinux afs policy is very flexible allowing users to setup their afs processes in as secure a method as possible. </p>
 <p> The following port types are defined for afs: </p>
 <dl>
-<dt><code>afs3_callback_port_t</code></p>
+<dt><code>afs3_callback_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 7001 udp 7001 </p>
-<dt><code>afs_bos_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 7001 udp 7001 </dd>
+<dt><code>afs_bos_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 7007 </p>
-<dt><code>afs_fs_port_t</code></p>
+</dd><dd>Default Defined Ports: udp 7007 </dd>
+<dt><code>afs_fs_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2040 udp 7000,7005 </p>
-<dt><code>afs_ka_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 2040 udp 7000,7005 </dd>
+<dt><code>afs_ka_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 7004 </p>
-<dt><code>afs_pt_port_t</code></p>
+</dd><dd>Default Defined Ports: udp 7004 </dd>
+<dt><code>afs_pt_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 7002 udp 7002 </p>
-<dt><code>afs_vl_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 7002 udp 7002 </dd>
+<dt><code>afs_vl_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 7003</dl>
+</dd><dd>Default Defined Ports: udp 7003</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type afs_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>afs_cache_t</code> </p>
@@ -139,54 +139,54 @@ description: "afs_selinux – Security Enhanced Linux Policy for the afs process
 <p> <code>afs_bosserver_exec_t</code> </p>
 <p> &#8211; Set files with the afs_bosserver_exec_t type, if you want to transition an executable to the afs_bosserver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/bosserver, /usr/afs/bin/bosserver </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/bosserver, /usr/afs/bin/bosserver </dd>
 </dl>
 <p> <code>afs_cache_t</code> </p>
 <p> &#8211; Set files with the afs_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/cache/(open)?afs(/.*)?, /usr/vice/cache(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/cache/(open)?afs(/.*)?, /usr/vice/cache(/.*)? </dd>
 </dl>
 <p> <code>afs_config_t</code> </p>
 <p> &#8211; Set files with the afs_config_t type, if you want to treat the files as afs configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/(open)?afs(/.*)?, /usr/afs/etc(/.*)?, /usr/afs/local(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/(open)?afs(/.*)?, /usr/afs/etc(/.*)?, /usr/afs/local(/.*)? </dd>
 </dl>
 <p> <code>afs_dbdir_t</code> </p>
 <p> &#8211; Set files with the afs_dbdir_t type, if you want to treat the files as afs dbdir data. </p>
 <p> <code>afs_exec_t</code> </p>
 <p> &#8211; Set files with the afs_exec_t type, if you want to transition an executable to the afs_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/afsd, /usr/vice/etc/afsd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/afsd, /usr/vice/etc/afsd </dd>
 </dl>
 <p> <code>afs_files_t</code> </p>
 <p> &#8211; Set files with the afs_files_t type, if you want to treat the files as afs content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/afs(/.*)?, /vicepa, /vicepb, /vicepc </p>
+<dt>Paths:</dt>
+<dd>/usr/afs(/.*)?, /vicepa, /vicepb, /vicepc </dd>
 </dl>
 <p> <code>afs_fsserver_exec_t</code> </p>
 <p> &#8211; Set files with the afs_fsserver_exec_t type, if you want to transition an executable to the afs_fsserver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/afs/bin/salvager, /usr/afs/bin/volserver, /usr/afs/bin/fileserver, /usr/afs/bin/dasalvager, /usr/afs/bin/davolserver, /usr/afs/bin/dafileserver, /usr/afs/bin/salvageserver, /usr/libexec/openafs/salvager, /usr/libexec/openafs/volserver, /usr/libexec/openafs/fileserver </p>
+<dt>Paths:</dt>
+<dd>/usr/afs/bin/salvager, /usr/afs/bin/volserver, /usr/afs/bin/fileserver, /usr/afs/bin/dasalvager, /usr/afs/bin/davolserver, /usr/afs/bin/dafileserver, /usr/afs/bin/salvageserver, /usr/libexec/openafs/salvager, /usr/libexec/openafs/volserver, /usr/libexec/openafs/fileserver </dd>
 </dl>
 <p> <code>afs_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the afs_initrc_exec_t type, if you want to transition an executable to the afs_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/(open)?afs, /etc/rc.d/init.d/openafs-client </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/(open)?afs, /etc/rc.d/init.d/openafs-client </dd>
 </dl>
 <p> <code>afs_ka_db_t</code> </p>
 <p> &#8211; Set files with the afs_ka_db_t type, if you want to treat the files as afs ka database content. </p>
 <p> <code>afs_kaserver_exec_t</code> </p>
 <p> &#8211; Set files with the afs_kaserver_exec_t type, if you want to transition an executable to the afs_kaserver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/afs/bin/kaserver, /usr/libexec/openafs/kaserver </p>
+<dt>Paths:</dt>
+<dd>/usr/afs/bin/kaserver, /usr/libexec/openafs/kaserver </dd>
 </dl>
 <p> <code>afs_logfile_t</code> </p>
 <p> &#8211; Set files with the afs_logfile_t type, if you want to treat the files as afs logfile data. </p>
@@ -195,16 +195,16 @@ description: "afs_selinux – Security Enhanced Linux Policy for the afs process
 <p> <code>afs_ptserver_exec_t</code> </p>
 <p> &#8211; Set files with the afs_ptserver_exec_t type, if you want to transition an executable to the afs_ptserver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/afs/bin/ptserver, /usr/libexec/openafs/ptserver </p>
+<dt>Paths:</dt>
+<dd>/usr/afs/bin/ptserver, /usr/libexec/openafs/ptserver </dd>
 </dl>
 <p> <code>afs_vl_db_t</code> </p>
 <p> &#8211; Set files with the afs_vl_db_t type, if you want to treat the files as afs vl database content. </p>
 <p> <code>afs_vlserver_exec_t</code> </p>
 <p> &#8211; Set files with the afs_vlserver_exec_t type, if you want to transition an executable to the afs_vlserver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/afs/bin/vlserver, /usr/libexec/openafs/vlserver </p>
+<dt>Paths:</dt>
+<dd>/usr/afs/bin/vlserver, /usr/libexec/openafs/vlserver </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

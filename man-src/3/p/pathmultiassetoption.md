@@ -11,11 +11,8 @@ description: "ql/experimental/mcbasket/pathmultiassetoption.hpp – Option on mu
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/instrument.hpp&gt;
-
 #include &lt;ql/stochasticprocess.hpp&gt;
-
 #include &lt;ql/math/matrix.hpp&gt;
-
 #include &lt;ql/experimental/mcbasket/pathpayoff.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>PathMultiAssetOption</code><br />

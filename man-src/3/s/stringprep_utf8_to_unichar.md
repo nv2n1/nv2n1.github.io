@@ -13,8 +13,8 @@ description: "stringprep_utf8_to_unichar – API function"
 <p> <code>uint32_t stringprep_utf8_to_unichar(const char * </code><i>p</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * p</p>
-<dd>a pointer to Unicode character encoded as UTF-8</dl>
+<dt>const char * p</dt>
+<dd>a pointer to Unicode character encoded as UTF-8</dd></dl>
 <h2>Description</h2>
 <p>Converts a sequence of bytes encoded as UTF-8 to a Unicode character. If <i>p</i> does not point to a valid UTF-8 encoded character, results are undefined.</p>
 <h2>Return Value</h2>
@@ -27,5 +27,5 @@ description: "stringprep_utf8_to_unichar – API function"
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

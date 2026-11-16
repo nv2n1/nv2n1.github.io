@@ -19,17 +19,17 @@ description: "dtpmqrt.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DTPMQRT applies a real orthogonal matrix Q obtained from a 
  &quot;triangular-pentagonal&quot; real block reflector H to a general
  real matrix C, which consists of two blocks A and B.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
           = 'L': apply Q or Q**T from the Left;
@@ -138,18 +138,18 @@ If SIDE = &#8216;R&#8217;, LDC &gt;= max(1, M).</p>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 The columns of the pentagonal matrix V contain the elementary reflectors
     H(1),
@@ -162,12 +162,12 @@ V is composed of a rectangular block V1 and a
 V2 is upper trapezoidal, consisting of the first L rows of a K - by - K upper triangular matrix.If L = K, V2 is upper triangular;
 if L
 = 0, there is no trapezoidal block, hence V = V1 is rectangular.If SIDE = 'L' : C = [A] where A is K - by - N, B is M - by - N and V is M - by - K.[B]
-
                                                                                                                                                  If SIDE = 'R' : C = [A B] where A is M - by - K,
                                           B is M - by - N and V is N - by - K.The real orthogonal matrix Q is formed from V and T.If TRANS = 'N' and SIDE = 'L', C is on exit replaced with Q *C.If TRANS = 'T' and SIDE = 'L', C is on exit replaced with Q **T *C.If TRANS = 'N' and SIDE = 'R', C is on exit replaced with C *Q.If TRANS = 'T' and SIDE = 'R', C is on exit replaced with C *Q **T.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 216 of file dtpmqrt.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

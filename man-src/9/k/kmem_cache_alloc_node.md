@@ -14,13 +14,13 @@ description: "kmem_cache_alloc_node – Allocate an object on the specified node
 <p><i>cachep</i></p>
 <dl>
 <dd>
-<dd>The cache to allocate from.</dl>
+</dd><dd>The cache to allocate from.</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>See <code>kmalloc</code>.</dl>
+<dd>See <code>kmalloc</code>.</dd></dl>
 <p> <i>nodeid</i></p>
 <dl>
-<dd>node number of the target node.</dl>
+<dd>node number of the target node.</dd></dl>
 <h2>Description</h2>
 <p>Identical to kmem_cache_alloc but it will allocate memory on the given node, which can improve the performance for cpu bound structures. </p>
 <p> Fallback to other node is possible if __GFP_THISNODE is not set.</p>

@@ -15,31 +15,27 @@ description: "ausearch_add_item – build up search rule"
 <h2>DESCRIPTION</h2>
 <p> ausearch_add_item adds one search condition to the current audit search expression. The search conditions can then be used to scan logs, files, or buffers for something of interest. The field value is the field name that the value will be checked for. The op variable describes what kind of check is to be done. Legal op values are: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>exists</i></p>
+<dt><i>exists</i></dt>
 <dd>
-&nbsp;<wbr>just check that a field name exists</p>
-<dt><i>=</i></p>
+&nbsp;<wbr>just check that a field name exists</dd>
+<dt><i>=</i></dt>
 <dd>
-&nbsp;<wbr>locate the field name and check that the value associated with it is equal to the value given in this rule.</p>
-<dt><i>!=</i></p>
+&nbsp;<wbr>locate the field name and check that the value associated with it is equal to the value given in this rule.</dd>
+<dt><i>!=</i></dt>
 <dd>
-&nbsp;<wbr>locate the field name and check that the value associated with it is NOT equal to the value given in this rule.</dl>
+&nbsp;<wbr>locate the field name and check that the value associated with it is NOT equal to the value given in this rule.</dd></dl>
 </dl>
 <p> The value parameter is compared to the uninterpreted field value. If you are trying to match against a field who&#8217;s type is AUPARSE_TYPE_ESCAPED, you will want to use the ausearch_add_interpreted_item() function instead. </p>
 <p> The how value determines how this search condition will affect the existing search expression if one is already defined. The possible values are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>AUSEARCH_RULE_CLEAR</i></p>
-<dd> Clear the current search expression, if any, and use only this search condition.</p>
-<dt><i>AUSEARCH_RULE_OR</i></p>
-<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> || </code><i>this_search_condition</i><code>)</code>.</p>
-<dt><i>AUSEARCH_RULE_AND</i></p>
-<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> &amp;&amp; </code><i>this_search_condition</i><code>)</code>.</dl>
+<dt><i>AUSEARCH_RULE_CLEAR</i></dt>
+<dd> Clear the current search expression, if any, and use only this search condition.</dd>
+<dt><i>AUSEARCH_RULE_OR</i></dt>
+<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> || </code><i>this_search_condition</i><code>)</code>.</dd>
+<dt><i>AUSEARCH_RULE_AND</i></dt>
+<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> &amp;&amp; </code><i>this_search_condition</i><code>)</code>.</dd></dl>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> Returns -1 if an error occurs; otherwise, 0 for success. </p>

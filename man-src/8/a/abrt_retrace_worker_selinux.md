@@ -47,8 +47,8 @@ description: "abrt_retrace_worker_selinux – Security Enhanced Linux Policy for
 <p> <code>abrt_retrace_worker_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_retrace_worker_exec_t type, if you want to transition an executable to the abrt_retrace_worker_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/abrt-retrace-worker, /usr/bin/retrace-server-worker </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/abrt-retrace-worker, /usr/bin/retrace-server-worker </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -58,40 +58,40 @@ description: "globus_gass_transfer.h – GASS transfer."
 <p>GASS error codes </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_BAD_PORT </i></p>
-<dd>Invalid port in URL</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR </i></p>
-<dd>Something bad occurred while processing the request</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL </i></p>
-<dd>Unparsable URL</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_SUPPORTED </i></p>
-<dd>Invalid file open mode in the GASS File library</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED </i></p>
-<dd>Operation not supported by GASS for this type of URL</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_MALLOC_FAILED </i></p>
-<dd>Out of memory</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_INITIALIZED </i></p>
-<dd>Uninitialized or invalid handle</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER </i></p>
-<dd>NULL pointer passed as parameter</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_REGISTERED </i></p>
-<dd>GASS Server not yet registered</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_FOUND </i></p>
-<dd>URL not in cache</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE </i></p>
-<dd>Invalid use of a GASS handle</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_TOO_LARGE </i></p>
-<dd>Bytes array exceeds GASS request size</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_REQUEST_FAILED </i></p>
-<dd>GASS Transfer request did not complete successfully</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_DONE </i></p>
-<dd>GASS handle already closed before this operation began</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_ALREADY_REGISTERED </i></p>
-<dd>GASS handle already registered for processing</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_OPEN_FAILED </i></p>
-<dd>Could not open local file</p>
-<dt><i>GLOBUS_GASS_TRANSFER_ERROR_TRANSFER_FAILED </i></p>
-<dd>A protocol error or client-initiated failure has occurred</dl>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_BAD_PORT </i></dt>
+<dd>Invalid port in URL</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR </i></dt>
+<dd>Something bad occurred while processing the request</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL </i></dt>
+<dd>Unparsable URL</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_SUPPORTED </i></dt>
+<dd>Invalid file open mode in the GASS File library</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED </i></dt>
+<dd>Operation not supported by GASS for this type of URL</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_MALLOC_FAILED </i></dt>
+<dd>Out of memory</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_INITIALIZED </i></dt>
+<dd>Uninitialized or invalid handle</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER </i></dt>
+<dd>NULL pointer passed as parameter</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_REGISTERED </i></dt>
+<dd>GASS Server not yet registered</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_NOT_FOUND </i></dt>
+<dd>URL not in cache</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE </i></dt>
+<dd>Invalid use of a GASS handle</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_TOO_LARGE </i></dt>
+<dd>Bytes array exceeds GASS request size</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_REQUEST_FAILED </i></dt>
+<dd>GASS Transfer request did not complete successfully</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_DONE </i></dt>
+<dd>GASS handle already closed before this operation began</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_ALREADY_REGISTERED </i></dt>
+<dd>GASS handle already registered for processing</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_OPEN_FAILED </i></dt>
+<dd>Could not open local file</dd>
+<dt><i>GLOBUS_GASS_TRANSFER_ERROR_TRANSFER_FAILED </i></dt>
+<dd>A protocol error or client-initiated failure has occurred</dd></dl>
 <h3>anonymous enum</h3>
 <p>Default buffer length for the globus_gass_transfer_assist library.</p>
 <h2>Author</h2>

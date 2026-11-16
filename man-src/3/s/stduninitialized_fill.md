@@ -10,15 +10,11 @@ description: "std::uninitialized_fill – std::uninitialized_fill"
 <p>std::uninitialized_fill &#8211; std::uninitialized_fill</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class ForwardIt, class T&gt;
     (1)
-
         void uninitialized_fill(ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
 (2)(since C++ 17)
-
     void uninitialized_fill(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, const T &amp;value);</code></pre>
 <p>1) Copies the given value to an uninitialized memory area, defined by the range [first, last) as if by for (; first != last; ++first)<br />
     ::new (static_cast&lt;void *&gt;(std::addressof(*first)))<br />
@@ -62,16 +58,11 @@ No increment, assignment, comparison, or indirection through valid instances of 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;string&gt;
-
 #include &lt;tuple&gt;
 int main()
-
 {
     std::string *p;
     std::size_t sz;

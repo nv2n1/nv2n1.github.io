@@ -12,7 +12,6 @@ std::shared_lock&lt;Mutex&gt;::swap - std::shared_lock&lt;Mutex&gt;::swap
 
 <pre><code>template &lt;class Mutex&gt;
 (since C++ 14)
-
     void swap(shared_lock&lt;Mutex&gt; &amp;other) noexcept;</code></pre> 
 Exchanges the internal states of the lock objects. 
 

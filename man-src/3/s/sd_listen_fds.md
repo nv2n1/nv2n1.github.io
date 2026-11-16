@@ -16,10 +16,10 @@ description: "sd_listen_fds, SD_LISTEN_FDS_START – Check for file descriptors 
 #define SD_LISTEN_FDS_START 3
 </pre>
 <dl COMPACT>
-<dt> <code>int sd_listen_fds(int&nbsp;<wbr></code><i>unset_environment</i><code>);</code></dl>
+<dt> <code>int sd_listen_fds(int&nbsp;<wbr></code><i>unset_environment</i><code>);</code></dt></dl>
 <h2>Description</h2>
 <p> <code>sd_listen_fds()</code></p>
-<dd>shall be called by a daemon to check for file descriptors passed by the init system as part of the socket-based activation logic. </p>
+<dd>shall be called by a daemon to check for file descriptors passed by the init system as part of the socket-based activation logic. </dd>
 <p> If the <i>unset_environment</i> parameter is non-zero, <code>sd_listen_fds()</code> will unset the <i>$LISTEN_FDS</i> and <i>$LISTEN_PID</i> environment variables before returning (regardless of whether the function call itself succeeded or not). Further calls to <code>sd_listen_fds()</code> will then fail, but the variables are no longer inherited by child processes. </p>
 <p> If a daemon receives more than one file descriptor, they will be passed in the same order as configured in the systemd socket unit file (see <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5) for details). Nonetheless, it is recommended to verify the correct socket types before using them. To simplify this checking, the functions <code><a href="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_socket/">sd_is_socket</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_socket_inet/">sd_is_socket_inet</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_socket_unix/">sd_is_socket_unix</a></code>(3) are provided. In order to maximize flexibility, it is recommended to make these checks as loose as possible without allowing incorrect setups. i.e. often, the actual port number a socket is bound to matters little for the service to work, hence it should not be verified. On the other hand, whether a socket is a datagram or stream socket matters a lot for the most common program logics and should be checked. </p>
 <p> This function call will set the FD_CLOEXEC flag for all passed file descriptors to avoid further inheritance to children of the calling process. </p>
@@ -33,6 +33,6 @@ description: "sd_listen_fds, SD_LISTEN_FDS_START – Check for file descriptors 
 <p> <i>$LISTEN_PID</i>, <i>$LISTEN_FDS</i></p>
 <dl COMPACT>
 <dt>
-<dd> Set by the init system for supervised processes that use socket-based activation. This environment variable specifies the data <code>sd_listen_fds()</code> parses. See above for details.</dl>
+</dt><dd> Set by the init system for supervised processes that use socket-based activation. This environment variable specifies the data <code>sd_listen_fds()</code> parses. See above for details.</dd></dl>
 <h2>See Also</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/3-sd-daemon/">sd-daemon</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_socket/">sd_is_socket</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_socket_inet/">sd_is_socket_inet</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_socket_unix/">sd_is_socket_unix</a></code>(3), <code><a href="/docs/linux/man/7-daemon/">daemon</a></code>(7), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5)</p>

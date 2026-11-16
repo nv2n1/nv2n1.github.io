@@ -15,22 +15,22 @@ description: "dh_installlogcheck – install logcheck rulefiles into etc/logchec
 <p> <code>dh_installlogcheck</code> is a debhelper program that is responsible for installing logcheck rule files.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.logcheck.cracking</p>
+<dt>debian/<i>package</i>.logcheck.cracking</dt>
 <dd>
-<dt>debian/<i>package</i>.logcheck.violations</p>
+</dd><dt>debian/<i>package</i>.logcheck.violations</dt>
 <dd>
-<dt>debian/<i>package</i>.logcheck.violations.ignore</p>
+</dd><dt>debian/<i>package</i>.logcheck.violations.ignore</dt>
 <dd>
-<dt>debian/<i>package</i>.logcheck.ignore.workstation</p>
+</dd><dt>debian/<i>package</i>.logcheck.ignore.workstation</dt>
 <dd>
-<dt>debian/<i>package</i>.logcheck.ignore.server</p>
+</dd><dt>debian/<i>package</i>.logcheck.ignore.server</dt>
 <dd>
-<dt>debian/<i>package</i>.logcheck.ignore.paranoid</p>
-<dd> Each of these files, if present, are installed into corresponding subdirectories of <i>etc/logcheck/</i> in package build directories.</dl>
+</dd><dt>debian/<i>package</i>.logcheck.ignore.paranoid</dt>
+<dd> Each of these files, if present, are installed into corresponding subdirectories of <i>etc/logcheck/</i> in package build directories.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;name=</code><i>name</i></p>
-<dd> Look for files named <i>debian/package.name.logcheck.*</i> and install them into the corresponding subdirectories of <i>etc/logcheck/</i>, but use the specified name instead of that of the package.</dl>
+<dt><code>&#8211;name=</code><i>name</i></dt>
+<dd> Look for files named <i>debian/package.name.logcheck.*</i> and install them into the corresponding subdirectories of <i>etc/logcheck/</i>, but use the specified name instead of that of the package.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

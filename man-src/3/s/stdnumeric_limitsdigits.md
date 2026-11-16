@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::digits – std::numeric_limits<T>::digits"
 <h2>Synopsis</h2>
 <pre><code>static const int digits;
 (until C++ 11)
-
     static constexpr int digits;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::digits is the number of digits in base-radix that can be represented by the type T without change. For integer types, this is the number of bits not counting the sign bit and the padding bits (if any). For floating-point types, this is the number of digits in the mantissa. </p>

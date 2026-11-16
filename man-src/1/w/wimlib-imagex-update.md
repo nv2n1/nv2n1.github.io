@@ -28,71 +28,69 @@ description: "wimlib-imagex-update – Update a WIM image"
 <p> Delete a file or directory tree from the WIM image. <i>PATH</i> must specify the path inside the WIM image of the file or directory tree to delete. </p>
 <p> The available options for the <code>delete</code> command are:</p>
 <dl>
-<dt><code>&#8211;force</code></p>
-<dd> Do not issue an error if the path to delete does not exist.</p>
-<dt><code>&#8211;recursive</code></p>
-<dd> Delete the file or directory tree recursively; if not specified, an error is issued if the path to delete is a directory.</dl>
+<dt><code>&#8211;force</code></dt>
+<dd> Do not issue an error if the path to delete does not exist.</dd>
+<dt><code>&#8211;recursive</code></dt>
+<dd> Delete the file or directory tree recursively; if not specified, an error is issued if the path to delete is a directory.</dd></dl>
 <h3><code>rename</code> <i>OLD_PATH</i> <i>NEW_PATH</i></h3>
 <p> Rename a file or directory tree inside the WIM image. <i>OLD_PATH</i> must specify the old path of the file or directory tree inside the WIM image, and <i>NEW_PATH</i> must specify the new path for the file or directory tree. This command follows the semantics of the POSIX <code>rename</code> (3) function; in particular, a pre-existing file at <i>NEW_PATH</i> will be deleted if present, except in certain cases such as attempting to rename a directory to a non-directory, which is not allowed. </p>
 <p> There are no options available for the <code>rename</code> command.</p>
 <h2>OPTIONS</h2>
 <p> The following options are accepted on the command line by <code>wimlib-imagex update</code> itself:</p>
 <dl>
-<dt><code>&#8211;dereference</code></p>
-<dd> Use <code>&#8211;dereference</code> for all <code>add</code> commands.</p>
-<dt><code>&#8211;unix-data</code></p>
-<dd> Use <code>&#8211;unix-data</code> for all <code>add</code> commands.</p>
-<dt><code>&#8211;no-acls</code></p>
-<dd> Use <code>&#8211;no-acls</code> for all <code>add</code> commands.</p>
-<dt><code>&#8211;strict-acls</code></p>
-<dd> Use <code>&#8211;strict-acls</code> for all <code>add</code> commands.</p>
-<dt><code>&#8211;no-replace</code></p>
-<dd> Use <code>&#8211;no-replace</code> for all <code>add</code> commands.</p>
-<dt><code>&#8211;config</code>=<i>FILE</i></p>
-<dd> Set the capture configuration file for all <code>add</code> commands. See the description of this option in <code>wimlib-imagex-capture</code> (1).</p>
-<dt><code>&#8211;force</code></p>
-<dd> Use <code>&#8211;force</code> for all <code>delete</code> commands.</p>
-<dt><code>&#8211;recursive</code></p>
-<dd> Use <code>&#8211;recursive</code> for all <code>delete</code> commands.</p>
-<dt><code>&#8211;check</code></p>
-<dd> When reading <i>WIMFILE</i>, verify its integrity if the integrity table is present; in addition, include an integrity table in the updated WIM. If this option is not specified, an integrity table will be included in the updated WIM if and only if one was present before.</p>
-<dt><code>&#8211;threads</code>=<i>NUM_THREADS</i></p>
-<dd> Number of threads to use for compressing newly added files. Default: autodetect (number of processors).</p>
-<dt><code>&#8211;rebuild</code></p>
-<dd> Rebuild the entire WIM rather than appending the updated data to the end of it. Rebuilding the WIM is slower, but will save a little bit of space that would otherwise be left as a hole in the WIM file.</p>
+<dt><code>&#8211;dereference</code></dt>
+<dd> Use <code>&#8211;dereference</code> for all <code>add</code> commands.</dd>
+<dt><code>&#8211;unix-data</code></dt>
+<dd> Use <code>&#8211;unix-data</code> for all <code>add</code> commands.</dd>
+<dt><code>&#8211;no-acls</code></dt>
+<dd> Use <code>&#8211;no-acls</code> for all <code>add</code> commands.</dd>
+<dt><code>&#8211;strict-acls</code></dt>
+<dd> Use <code>&#8211;strict-acls</code> for all <code>add</code> commands.</dd>
+<dt><code>&#8211;no-replace</code></dt>
+<dd> Use <code>&#8211;no-replace</code> for all <code>add</code> commands.</dd>
+<dt><code>&#8211;config</code>=<i>FILE</i></dt>
+<dd> Set the capture configuration file for all <code>add</code> commands. See the description of this option in <code>wimlib-imagex-capture</code> (1).</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> Use <code>&#8211;force</code> for all <code>delete</code> commands.</dd>
+<dt><code>&#8211;recursive</code></dt>
+<dd> Use <code>&#8211;recursive</code> for all <code>delete</code> commands.</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> When reading <i>WIMFILE</i>, verify its integrity if the integrity table is present; in addition, include an integrity table in the updated WIM. If this option is not specified, an integrity table will be included in the updated WIM if and only if one was present before.</dd>
+<dt><code>&#8211;threads</code>=<i>NUM_THREADS</i></dt>
+<dd> Number of threads to use for compressing newly added files. Default: autodetect (number of processors).</dd>
+<dt><code>&#8211;rebuild</code></dt>
+<dd> Rebuild the entire WIM rather than appending the updated data to the end of it. Rebuilding the WIM is slower, but will save a little bit of space that would otherwise be left as a hole in the WIM file.</dd>
 <dt>
-<dd> See <code>wimlib-imagex-optimize</code> (1) for a more customizable way of rebuilding (and optionally recompressing) a WIM file. If running <code>wimlib-imagex optimize</code> after <code>wimlib-imagex update</code>, there is no need to specify <code>&#8211;rebuild</code> to <code>wimlib-imagex update</code>.</p>
-<dt><code>&#8211;command</code>=<i>STRING</i></p>
-<dd> Instead of reading update commands from standard input, read a single update command directly from the string <i>STRING</i> specified on the command line. This option cannot be provided more than one time and cannot be used to specify more than one update command. Note that the <i>STRING</i>, as well as any paths containing spaces within the <i>STRING</i> must be appropriately quoted. If running from cmd.exe on Windows, you should use double quotes for the outer quotes and single quotes for the inner quotes. Example:</p>
+</dt><dd> See <code>wimlib-imagex-optimize</code> (1) for a more customizable way of rebuilding (and optionally recompressing) a WIM file. If running <code>wimlib-imagex optimize</code> after <code>wimlib-imagex update</code>, there is no need to specify <code>&#8211;rebuild</code> to <code>wimlib-imagex update</code>.</dd>
+<dt><code>&#8211;command</code>=<i>STRING</i></dt>
+<dd> Instead of reading update commands from standard input, read a single update command directly from the string <i>STRING</i> specified on the command line. This option cannot be provided more than one time and cannot be used to specify more than one update command. Note that the <i>STRING</i>, as well as any paths containing spaces within the <i>STRING</i> must be appropriately quoted. If running from cmd.exe on Windows, you should use double quotes for the outer quotes and single quotes for the inner quotes. Example:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <pre>
 wimlib-imagex update boot.wim 1 \
 <br>
-<dl><dt><dd>--command=&quot;add 'C:\My Dir' '\My Dir'&quot;
-</dl>
+</dd><dl><dt></dt><dd>--command=&quot;add 'C:\My Dir' '\My Dir'&quot;
+</dd></dl>
 </dl>
 </dl>
 </pre>
 <dt>
-<dd> This option is provided for convenience only. Do not execute <code>wimlib-imagex update</code> multiple consecutive times, each time passing the <code>&#8211;command</code> option! This is inefficient. Instead, generate an update command file and provide it (on standard input) to a single invocation of <code>wimlib-imagex update</code>, as explained in this document.</p>
-<dt><code>&#8211;wimboot-config</code>=<i>FILE</i></p>
-<dd> If this option is specified, no commands shall be read from standard input, and instead the following command shall be executed:</p>
+</dt><dd> This option is provided for convenience only. Do not execute <code>wimlib-imagex update</code> multiple consecutive times, each time passing the <code>&#8211;command</code> option! This is inefficient. Instead, generate an update command file and provide it (on standard input) to a single invocation of <code>wimlib-imagex update</code>, as explained in this document.</dd>
+<dt><code>&#8211;wimboot-config</code>=<i>FILE</i></dt>
+<dd> If this option is specified, no commands shall be read from standard input, and instead the following command shall be executed:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
-<dl><dt><dd><dl><dt><dd><code>add</code> <i>FILE</i> /Windows/System32/WimBootCompress.ini
-</dl>
+</dd><dl><dl><dt></dt><dd><code>add</code> <i>FILE</i> /Windows/System32/WimBootCompress.ini
+</dd></dl>
 </dl>
 </pre>
 <dt>
-<dd> This sets <i>FILE</i> as the WIMBoot configuration file for the image. The [PrepopulateList] section of this file specifies path globs that shall not be extracted as WIMBoot pointer files (perhaps due to being needed early in the boot process). See the documentation for the <code>&#8211;wimboot</code> option of <code>wimlib-imagex apply</code> (1) for more information.</p>
-<dt><code>&#8211;unsafe-compact</code></p>
-<dd> Compact the WIM archive in-place and append any new data, eliminating &quot;holes&quot;. In general, this option should <i>not</i> be used because a failed or interrupted compaction will corrupt the WIM archive. For more information, see the documentation for this option in <code>wimlib-imagex-optimize</code> (1).</dl>
+</dt><dd> This sets <i>FILE</i> as the WIMBoot configuration file for the image. The [PrepopulateList] section of this file specifies path globs that shall not be extracted as WIMBoot pointer files (perhaps due to being needed early in the boot process). See the documentation for the <code>&#8211;wimboot</code> option of <code>wimlib-imagex apply</code> (1) for more information.</dd>
+<dt><code>&#8211;unsafe-compact</code></dt>
+<dd> Compact the WIM archive in-place and append any new data, eliminating &quot;holes&quot;. In general, this option should <i>not</i> be used because a failed or interrupted compaction will corrupt the WIM archive. For more information, see the documentation for this option in <code>wimlib-imagex-optimize</code> (1).</dd></dl>
 <h2>NOTES</h2>
 <p> <code>wimlib-imagex update</code> is partly redundant with <code>wimlib-imagex mountrw</code>, since if a WIM image can be mounted read-write, then there theoretically is no need for <code>wimlib-imagex update</code>. The main advantage of <code>wimlib-imagex update</code> is that it works on both UNIX-like systems and Windows, whereas <code>wimlib-imagex mountrw</code> is only available on UNIX-like systems, and even then it only works on those with a compatible FUSE implementation. </p>
 <p> Symbolic links inside a WIM image are not dereferenced when being interpreted. So, for example, if you have a WIM image that contains a symbolic link &quot;/Documents and Settings&quot; -&gt; &quot;/Users&quot; where &quot;/Users&quot; is a directory, then a subdirectory named &quot;Public&quot; in this directory must be specified as &quot;/Users/Public&quot; rather than &quot;/Documents and Settings/Public&quot;. </p>
@@ -105,57 +103,57 @@ wimlib-imagex update boot.wim 1 \
 <p> Delete two files from a WIM image: </p>
 <dl>
 <dt>
-<dd> <i>update_commands.txt</i>:</p>
+</dt><dd> <i>update_commands.txt</i>:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 delete /setup.exe
 delete /sources/setup.exe
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> $ wimlib-imagex update boot.wim 2 &lt; update_commands.txt</dl>
+</dt><dd> $ wimlib-imagex update boot.wim 2 &lt; update_commands.txt</dd></dl>
 <p> Add some files and directories to a WIM image. Note that the first path of each <code>add</code> command specifies the files to add, while the second path of each <code>add</code> command specify the locations at which to to add them inside the WIM image: </p>
 <dl>
 <dt>
-<dd> <i>update_commands.txt</i>:</p>
+</dt><dd> <i>update_commands.txt</i>:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 add somedir     /dir
 add somefile    /dir/file
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> $ wimlib-imagex update boot.wim 2 &lt; update_commands.txt</dl>
+</dt><dd> $ wimlib-imagex update boot.wim 2 &lt; update_commands.txt</dd></dl>
 <p> Rename a file inside a WIM image. </p>
 <dl>
 <dt>
-<dd> <i>update_commands.txt</i>:</p>
+</dt><dd> <i>update_commands.txt</i>:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 rename /dir_in_wim/oldfile.txt /dir_in_wim/newfile.txt
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> $ wimlib-imagex update boot.wim 2 &lt; update_commands.txt</dl>
+</dt><dd> $ wimlib-imagex update boot.wim 2 &lt; update_commands.txt</dd></dl>
 <p> Using additional features, such as comments, options, and overlays, and including an integrity table in the updated WIM: </p>
 <dl>
 <dt>
-<dd> <i>update_commands.txt</i>:</p>
+</dt><dd> <i>update_commands.txt</i>:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 #
 # This file specifies some changes to make to a WIM image.
@@ -174,19 +172,19 @@ rename /dir_in_wim/oldfile.txt /dir_in_wim/newfile.txt
 # Delete an unwanted directory.
 delete --recursive /Users/Me/Documents/Junk
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> $ wimlib-imagex update boot.wim 2 &#8211;check &lt; update_commands.txt</dl>
+</dt><dd> $ wimlib-imagex update boot.wim 2 &#8211;check &lt; update_commands.txt</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-capture/">wimlib-imagex-capture</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-mountrw/">wimlib-imagex-mountrw</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-optimize/">wimlib-imagex-optimize</a></code>(1) </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">OPTIONS</a></p>
+<dt><a href="#lbAI">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAJ">NOTES</a></p>
+</dd><dt><a href="#lbAJ">NOTES</a></dt>
 <dd>
-<dt><a href="#lbAK">EXAMPLES</a></p>
+</dd><dt><a href="#lbAK">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAL">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
+<dd></dd></dl>

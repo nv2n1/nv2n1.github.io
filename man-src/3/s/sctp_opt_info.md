@@ -12,7 +12,6 @@ description: "sctp_optinfo – Get options on a SCTP socket."
 <pre><code>#include &lt;netinet/sctp.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
-
 int sctp_opt_info(int sd, sctp_assoc_t id, int opt,
                   void *arg, socklen_t *size);</code></pre>
 <h2>Description</h2>

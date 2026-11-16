@@ -18,30 +18,30 @@ description: "innxmit – Send Usenet articles to a remote NNTP server"
 <p> An alternative to <code>innxmit</code> can be <code>innduct</code>, mentioned in the <i><a href="/docs/linux/man/8-innfeed/">innfeed</a></i>(8) man page.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>If all articles were sent successfully, <code>innxmit</code> will remove the batch file; otherwise it will rewrite it to contain the list of unsent articles. If no articles were sent or rejected, the file is left untouched. This can cause the batch file to grow excessively large if many articles have been expired and there are communication problems. To always rewrite the batch file, use the <code>-a</code> flag.</p>
-<dt><code>-c</code></p>
-<dd>In streaming mode, a check of each message-ID is still made to avoid sending articles already on the server. The <code>-c</code> flag will, if streaming mode is supported, result in sending articles without checking. This results in slightly greater throughput and may be appropriate when it is known that the site could not already have the articles such as in the case of a &#8220;leaf&#8221; site.</p>
-<dt><code>-d</code></p>
-<dd>Use the <code>-d</code> flag to print debugging information on standard error. This will show the protocol transactions between <code>innxmit</code> and the <font SIZE="-1">NNTP</font> server on the remote host.</p>
-<dt><code>-H</code></p>
-<dd>If the <code>-H</code> flag is given, then only headers are sent to <i>host</i> for all articles except control messages. And the Bytes: header is also included even if it does not exist in the original article. The <code>-H</code> flag is useful for Diablo reader.</p>
-<dt><code>-l</code></p>
-<dd>The <code>-l</code> flag is used to turn on logging of reasons the remote gives for rejecting an article.</p>
-<dt><code>-P</code> <i>portnum</i></p>
-<dd>To specify a port number other than the default, use the <code>-P</code> flag.</p>
-<dt><code>-p</code></p>
-<dd>If the <code>-p</code> flag is given, then no connection is made and the batch file is purged of entries that refer to files that no longer exist. This implies the <code>-a</code> flag.</p>
-<dt><code>-r</code></p>
-<dd>If the remote server sends an unexpected reply code, <code>innxmit</code> will requeue the article and proceed. Use the <code>-r</code> flag if the article should not be requeued.</p>
-<dt><code>-s</code></p>
-<dd><code>innxmit</code> will attempt to negotiate a streaming mode extension of the <font SIZE="-1">NNTP</font> protocol with the server at connect time. If successful, it will use a slightly different protocol that enhances throughput. If the server does not recognize the streaming mode negotiation, <code>innxmit</code> will revert to normal <font SIZE="-1">NNTP</font> transfer mode. Use the <code>-s</code> flag to disable the attempt to negotiate the streaming mode extension.</p>
-<dt><code>-T</code> <i>seconds</i></p>
-<dd>To specify the total amount of time that should be allowed for article transfers, use the <code>-T</code> flag. The default is to wait until an I/O error occurs, or all the articles have been transferred. If the <code>-T</code> flag is used, the time is checked just before each article is started; it will not abort a transfer that is in progress.</p>
-<dt><code>-t</code> <i>seconds</i></p>
-<dd><code>innxmit</code> normally blocks until the connection is made. To specify a timeout on how long to try to make the connection, use the <code>-t</code> flag.</p>
-<dt><code>-v</code></p>
-<dd>Upon exit, <code>innxmit</code> reports transfer and <font SIZE="-1">CPU</font> usage statistics via syslog. If the <code>-v</code> flag is used, they will also be printed on the standard output.</dl>
+<dt><code>-a</code></dt>
+<dd>If all articles were sent successfully, <code>innxmit</code> will remove the batch file; otherwise it will rewrite it to contain the list of unsent articles. If no articles were sent or rejected, the file is left untouched. This can cause the batch file to grow excessively large if many articles have been expired and there are communication problems. To always rewrite the batch file, use the <code>-a</code> flag.</dd>
+<dt><code>-c</code></dt>
+<dd>In streaming mode, a check of each message-ID is still made to avoid sending articles already on the server. The <code>-c</code> flag will, if streaming mode is supported, result in sending articles without checking. This results in slightly greater throughput and may be appropriate when it is known that the site could not already have the articles such as in the case of a &#8220;leaf&#8221; site.</dd>
+<dt><code>-d</code></dt>
+<dd>Use the <code>-d</code> flag to print debugging information on standard error. This will show the protocol transactions between <code>innxmit</code> and the <font SIZE="-1">NNTP</font> server on the remote host.</dd>
+<dt><code>-H</code></dt>
+<dd>If the <code>-H</code> flag is given, then only headers are sent to <i>host</i> for all articles except control messages. And the Bytes: header is also included even if it does not exist in the original article. The <code>-H</code> flag is useful for Diablo reader.</dd>
+<dt><code>-l</code></dt>
+<dd>The <code>-l</code> flag is used to turn on logging of reasons the remote gives for rejecting an article.</dd>
+<dt><code>-P</code> <i>portnum</i></dt>
+<dd>To specify a port number other than the default, use the <code>-P</code> flag.</dd>
+<dt><code>-p</code></dt>
+<dd>If the <code>-p</code> flag is given, then no connection is made and the batch file is purged of entries that refer to files that no longer exist. This implies the <code>-a</code> flag.</dd>
+<dt><code>-r</code></dt>
+<dd>If the remote server sends an unexpected reply code, <code>innxmit</code> will requeue the article and proceed. Use the <code>-r</code> flag if the article should not be requeued.</dd>
+<dt><code>-s</code></dt>
+<dd><code>innxmit</code> will attempt to negotiate a streaming mode extension of the <font SIZE="-1">NNTP</font> protocol with the server at connect time. If successful, it will use a slightly different protocol that enhances throughput. If the server does not recognize the streaming mode negotiation, <code>innxmit</code> will revert to normal <font SIZE="-1">NNTP</font> transfer mode. Use the <code>-s</code> flag to disable the attempt to negotiate the streaming mode extension.</dd>
+<dt><code>-T</code> <i>seconds</i></dt>
+<dd>To specify the total amount of time that should be allowed for article transfers, use the <code>-T</code> flag. The default is to wait until an I/O error occurs, or all the articles have been transferred. If the <code>-T</code> flag is used, the time is checked just before each article is started; it will not abort a transfer that is in progress.</dd>
+<dt><code>-t</code> <i>seconds</i></dt>
+<dd><code>innxmit</code> normally blocks until the connection is made. To specify a timeout on how long to try to make the connection, use the <code>-t</code> flag.</dd>
+<dt><code>-v</code></dt>
+<dd>Upon exit, <code>innxmit</code> reports transfer and <font SIZE="-1">CPU</font> usage statistics via syslog. If the <code>-v</code> flag is used, they will also be printed on the standard output.</dd></dl>
 <h2>History</h2>
 <p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> innxmit.pod 9590 2013-12-19 17:48:22Z iulius $</p>

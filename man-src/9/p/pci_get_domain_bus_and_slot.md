@@ -14,13 +14,13 @@ description: "pci_get_domain_bus_and_slot – locate PCI device for a given PCI 
 <p><i>domain</i></p>
 <dl>
 <dd>
-<dd>PCI domain/segment on which the PCI device resides.</dl>
+</dd><dd>PCI domain/segment on which the PCI device resides.</dd></dl>
 <p> <i>bus</i></p>
 <dl>
-<dd>PCI bus on which desired PCI device resides</dl>
+<dd>PCI bus on which desired PCI device resides</dd></dl>
 <p> <i>devfn</i></p>
 <dl>
-<dd>encodes number of PCI slot in which the desired PCI device resides and the logical device number within that slot in case of multi-function devices.</dl>
+<dd>encodes number of PCI slot in which the desired PCI device resides and the logical device number within that slot in case of multi-function devices.</dd></dl>
 <h2>Description</h2>
 <p>Given a PCI domain, bus, and slot/function number, the desired PCI device is located in the list of PCI devices. If the device is found, its reference count is increased and this function returns a pointer to its data structure. The caller must decrement the reference count by calling <code>pci_dev_put</code>. If no device is found, <code>NULL</code> is returned.</p>
 <h2>Copyright</h2>

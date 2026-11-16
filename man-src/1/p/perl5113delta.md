@@ -25,14 +25,14 @@ description: "perl5113delta – what is new for perl v5.11.3"
 <p> All the Unicode-defined synonyms for properties and property values are now accepted. </p>
 <p> <tt>&quot;qr/\X/&quot;</tt>, which matches a Unicode logical character, has been expanded to work better with various Asian languages. It now is defined as an <tt>&quot;extended grapheme cluster&quot;</tt>. (See &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr29/">http://www.unicode.org/reports/tr29/</a>&gt;). Anything matched previously that made sense will continue to be matched. But in addition:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;\X&quot;</tt> will now not break apart a <tt>&quot;CR LF&quot;</tt> sequence.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;\X&quot;</tt> will now match a sequence including the <tt>&quot;ZWJ&quot;</tt> and <tt>&quot;ZWNJ&quot;</tt> characters.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;\X&quot;</tt> will now always match at least one character, including an initial mark. Marks generally come after a base character, but it is possible in Unicode to have them in isolation, and <tt>&quot;\X&quot;</tt> will now handle that case, for example at the beginning of a line or after a <tt>&quot;ZWSP&quot;</tt>. And this is the part where <tt>&quot;\X&quot;</tt> doesn&#8217;t match the things that it used to that don&#8217;t make sense. Formerly, for example, you could have the nonsensical case of an accented <font SIZE="-1">LF</font>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;\X&quot;</tt> will now match a (Korean) Hangul syllable sequence, and the Thai and Lao exception cases.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;\X&quot;</tt> will now not break apart a <tt>&quot;CR LF&quot;</tt> sequence.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;\X&quot;</tt> will now match a sequence including the <tt>&quot;ZWJ&quot;</tt> and <tt>&quot;ZWNJ&quot;</tt> characters.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;\X&quot;</tt> will now always match at least one character, including an initial mark. Marks generally come after a base character, but it is possible in Unicode to have them in isolation, and <tt>&quot;\X&quot;</tt> will now handle that case, for example at the beginning of a line or after a <tt>&quot;ZWSP&quot;</tt>. And this is the part where <tt>&quot;\X&quot;</tt> doesn&#8217;t match the things that it used to that don&#8217;t make sense. Formerly, for example, you could have the nonsensical case of an accented <font SIZE="-1">LF</font>.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;\X&quot;</tt> will now match a (Korean) Hangul syllable sequence, and the Thai and Lao exception cases.</dd></dl>
 <p> Otherwise, this change should be transparent for the non-affected languages. </p>
 <p> <tt>&quot;\p{...}&quot;</tt> matches using the Canonical_Combining_Class property were completely broken in previous Perls. This is now fixed. </p>
 <p> In previous Perls, the Unicode <tt>&quot;Decomposition_Type=Compat&quot;</tt> property and a Perl extension had the same name, which led to neither matching all the correct values (with more than 100 mistakes in one, and several thousand in the other). The Perl extension has now been renamed to be <tt>&quot;Decomposition_Type=Noncanonical&quot;</tt> (short: <tt>&quot;dt=noncanon&quot;</tt>). It has the same meaning as was previously intended, namely the union of all the non-canonical Decomposition types, with Unicode <tt>&quot;Compat&quot;</tt> being just one of those. </p>
@@ -54,161 +54,152 @@ description: "perl5113delta – what is new for perl v5.11.3"
 <h2>Modules and Pragmata</h2>
 <h3>Pragmata Changes</h3>
 <dl>
-<dt>&quot;constant&quot;</p>
-<dd> Upgraded from version 1.19 to 1.20.</p>
-<dt>&quot;diagnostics&quot;</p>
-<dd> This pragma no longer suppresses <tt>&quot;Use of uninitialized value in range (or flip)&quot;</tt> warnings. [perl #71204]</p>
-<dt>&quot;feature&quot;</p>
-<dd> Upgraded from 1.13 to 1.14. Added the <tt>&quot;unicode_strings&quot;</tt> feature: </p>
+<dt>&quot;constant&quot;</dt>
+<dd> Upgraded from version 1.19 to 1.20.</dd>
+<dt>&quot;diagnostics&quot;</dt>
+<dd> This pragma no longer suppresses <tt>&quot;Use of uninitialized value in range (or flip)&quot;</tt> warnings. [perl #71204]</dd>
+<dt>&quot;feature&quot;</dt>
+<dd> Upgraded from 1.13 to 1.14. Added the <tt>&quot;unicode_strings&quot;</tt> feature: </dd>
 <pre>
     use feature &quot;unicode_strings&quot;;
 </pre>
 <p> This pragma turns on Unicode semantics for the case-changing operations (uc/lc/ucfirst/lcfirst) on strings that don&#8217;t have the internal <font SIZE="-1">UTF-8</font> flag set, but that contain single-byte characters between 128 and 255.</p>
-<dt>&quot;legacy&quot;</p>
-<dd> The experimental <tt>&quot;legacy&quot;</tt> pragma, introduced in 5.11.2, has been removed, and its functionality replaced by the new feature pragma, <tt>&quot;use feature &quot;unicode_strings&quot;&quot;</tt>.</p>
-<dt>&quot;threads&quot;</p>
-<dd> Upgraded from version 1.74 to 1.75.</p>
-<dt>&quot;warnings&quot;</p>
-<dd> Upgraded from 1.07 to 1.08. Added new <tt>&quot;warnings::fatal_enabled()&quot;</tt> function.</dl>
+<dt>&quot;legacy&quot;</dt>
+<dd> The experimental <tt>&quot;legacy&quot;</tt> pragma, introduced in 5.11.2, has been removed, and its functionality replaced by the new feature pragma, <tt>&quot;use feature &quot;unicode_strings&quot;&quot;</tt>.</dd>
+<dt>&quot;threads&quot;</dt>
+<dd> Upgraded from version 1.74 to 1.75.</dd>
+<dt>&quot;warnings&quot;</dt>
+<dd> Upgraded from 1.07 to 1.08. Added new <tt>&quot;warnings::fatal_enabled()&quot;</tt> function.</dd></dl>
 <h3>Updated Modules</h3>
 <dl>
-<dt>&quot;Archive::Extract&quot;</p>
-<dd> Upgraded from version 0.34 to 0.36.</p>
-<dt>&quot;CPAN&quot;</p>
-<dd> Upgraded from version 1.94_51 to 1.94_5301, which is 1.94_53 on <font SIZE="-1">CPAN</font> plus some local fixes for bleadperl. </p>
+<dt>&quot;Archive::Extract&quot;</dt>
+<dd> Upgraded from version 0.34 to 0.36.</dd>
+<dt>&quot;CPAN&quot;</dt>
+<dd> Upgraded from version 1.94_51 to 1.94_5301, which is 1.94_53 on <font SIZE="-1">CPAN</font> plus some local fixes for bleadperl. </dd>
 <p> Includes better bzip2 support, improved FirstTime experience with auto-selection of <font SIZE="-1">CPAN</font> mirrors, proper handling of modules removed from the Perl core, and an updated &#8216;cpan&#8217; utility script</p>
-<dt>&quot;CPANPLUS&quot;</p>
-<dd> Upgraded from version 0.89_09 to 0.90.</p>
-<dt>&quot;Encode&quot;</p>
-<dd> Upgraded from version 2.38 to 2.39.</p>
-<dt>&quot;ExtUtils::MakeMaker&quot;</p>
-<dd> Upgraded from version 6.55_02 to 6.56. Adds new <font SIZE="-1">BUILD_REQUIRES</font> key to indicate build-only prerequisites. Also adds support for mingw64 and the new &#8220;package <font SIZE="-1">NAME</font> <font SIZE="-1">VERSION</font>&#8221; syntax.</p>
-<dt>&quot;File::Path&quot;</p>
-<dd> Upgraded from version 2.08 to 2.08_01.</p>
-<dt>&quot;Module::Build&quot;</p>
-<dd> Upgraded from version 0.35_09 to 0.36. Compared to 0.35, this version has a new &#8216;installdeps&#8217; action, supports the <font SIZE="-1">PERL_MB_OPT</font> environment variable, adds a &#8216;share_dir&#8217; property for File::ShareDir support, support the &#8220;package <font SIZE="-1">NAME</font> <font SIZE="-1">VERSION</font>&#8221; syntax and has many other enhancements and bug fixes. The &#8216;passthrough&#8217; style of Module::Build::Compat has been deprecated.</p>
-<dt>&quot;Module::CoreList&quot;</p>
-<dd> Upgraded from version 2.23 to 2.24.</p>
-<dt>&quot;POSIX&quot;</p>
-<dd> Upgraded from version 1.18 to 1.19. Error codes for <tt>&quot;getaddrinfo()&quot;</tt> and <tt>&quot;getnameinfo()&quot;</tt> are now available.</p>
-<dt>&quot;Pod::Simple&quot;</p>
-<dd> Upgraded from version 3.10 to 3.13.</p>
-<dt>&quot;Safe&quot;</p>
-<dd> Upgraded from version 2.19 to 2.20.</dl>
+<dt>&quot;CPANPLUS&quot;</dt>
+<dd> Upgraded from version 0.89_09 to 0.90.</dd>
+<dt>&quot;Encode&quot;</dt>
+<dd> Upgraded from version 2.38 to 2.39.</dd>
+<dt>&quot;ExtUtils::MakeMaker&quot;</dt>
+<dd> Upgraded from version 6.55_02 to 6.56. Adds new <font SIZE="-1">BUILD_REQUIRES</font> key to indicate build-only prerequisites. Also adds support for mingw64 and the new &#8220;package <font SIZE="-1">NAME</font> <font SIZE="-1">VERSION</font>&#8221; syntax.</dd>
+<dt>&quot;File::Path&quot;</dt>
+<dd> Upgraded from version 2.08 to 2.08_01.</dd>
+<dt>&quot;Module::Build&quot;</dt>
+<dd> Upgraded from version 0.35_09 to 0.36. Compared to 0.35, this version has a new &#8216;installdeps&#8217; action, supports the <font SIZE="-1">PERL_MB_OPT</font> environment variable, adds a &#8216;share_dir&#8217; property for File::ShareDir support, support the &#8220;package <font SIZE="-1">NAME</font> <font SIZE="-1">VERSION</font>&#8221; syntax and has many other enhancements and bug fixes. The &#8216;passthrough&#8217; style of Module::Build::Compat has been deprecated.</dd>
+<dt>&quot;Module::CoreList&quot;</dt>
+<dd> Upgraded from version 2.23 to 2.24.</dd>
+<dt>&quot;POSIX&quot;</dt>
+<dd> Upgraded from version 1.18 to 1.19. Error codes for <tt>&quot;getaddrinfo()&quot;</tt> and <tt>&quot;getnameinfo()&quot;</tt> are now available.</dd>
+<dt>&quot;Pod::Simple&quot;</dt>
+<dd> Upgraded from version 3.10 to 3.13.</dd>
+<dt>&quot;Safe&quot;</dt>
+<dd> Upgraded from version 2.19 to 2.20.</dd></dl>
 <h2>Utility Changes</h2>
 <dl>
-<dt><i>perlbug</i></p>
-<dd> No longer reports &#8220;Message sent&#8221; when it hasn&#8217;t actually sent the message</dl>
+<dt><i>perlbug</i></dt>
+<dd> No longer reports &#8220;Message sent&#8221; when it hasn&#8217;t actually sent the message</dd></dl>
 <h2>Changes to Existing Documentation</h2>
 <p> The Pod specification (perlpodspec) has been updated to bring the specification in line with modern usage already supported by most Pod systems. A parameter string may now follow the format name in a &#8220;begin/end&#8221; region. Links to URIs with a text description are now allowed. The usage of <tt>&quot;L&lt;&quot;section&quot;&gt;&quot;</tt> has been marked as deprecated. </p>
 <p> if.pm has been documented in &#8220;use&#8221; in perlfunc as a means to get conditional loading of modules despite the implicit <font SIZE="-1">BEGIN</font> block around <tt>&quot;use&quot;</tt>.</p>
 <h2>Installation and Configuration Improvements</h2>
 <h3>Testing improvements</h3>
 <dl>
-<dt>It&#8217;s now possible to override &quot;PERL5OPT&quot; and friends in <i>t/TEST</i></p>
-<dd></dl>
+<dt>It&#8217;s now possible to override &quot;PERL5OPT&quot; and friends in <i>t/TEST</i></dt>
+<dd></dd></dl>
 <h3>Platform Specific Changes</h3>
 <dl>
-<dt>Win32</p>
+<dt>Win32</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>&bull;</p>
-<dd> Always add a manifest resource to <tt>&quot;perl.exe&quot;</tt> to specify the <tt>&quot;trustInfo&quot;</tt> settings for Windows Vista and later. Without this setting Windows will treat <tt>&quot;perl.exe&quot;</tt> as a legacy application and apply various heuristics like redirecting access to protected file system areas (like the &#8220;Program Files&#8221; folder) to the users &#8220;VirtualStore&#8221; instead of generating a proper &#8220;permission denied&#8221; error. </p>
+<dt>&bull;</dt>
+<dd> Always add a manifest resource to <tt>&quot;perl.exe&quot;</tt> to specify the <tt>&quot;trustInfo&quot;</tt> settings for Windows Vista and later. Without this setting Windows will treat <tt>&quot;perl.exe&quot;</tt> as a legacy application and apply various heuristics like redirecting access to protected file system areas (like the &#8220;Program Files&#8221; folder) to the users &#8220;VirtualStore&#8221; instead of generating a proper &#8220;permission denied&#8221; error. </dd>
 <p> For <font SIZE="-1">VC8</font> and <font SIZE="-1">VC9</font> this manifest setting is automatically generated by the compiler/linker (together with the binding information for their respective runtime libraries); for all other compilers we need to embed the manifest resource explicitly in the external resource file. </p>
 <p> This change also requests the Microsoft Common-Controls version 6.0 (themed controls introduced in Windows <font SIZE="-1">XP</font>) via the dependency list in the assembly manifest. For <font SIZE="-1">VC8</font> and <font SIZE="-1">VC9</font> this is specified using the <tt>&quot;/manifestdependency&quot;</tt> linker commandline option instead.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>cygwin</p>
+</dl>
+<dt>cygwin</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>Enable IPv6 support on cygwin 1.7 and newer</p>
-<dd></dl>
+<dt>Enable IPv6 support on cygwin 1.7 and newer</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>OpenVMS</p>
+</dl>
+<dt>OpenVMS</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>Make -UDEBUGGING the default on <font SIZE="-1">VMS</font> for 5.12.0.</p>
-<dd> Like it has been everywhere else for ages and ages. Also make command-line selection of -UDEBUGGING and -DDEBUGGING work in configure.com; before the only way to turn it off was by saying no in answer to the interactive question.</dl>
+<dt>Make -UDEBUGGING the default on <font SIZE="-1">VMS</font> for 5.12.0.</dt>
+<dd> Like it has been everywhere else for ages and ages. Also make command-line selection of -UDEBUGGING and -DDEBUGGING work in configure.com; before the only way to turn it off was by saying no in answer to the interactive question.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Ensure that pp_qr returns a new regexp <font SIZE="-1">SV</font> each time. Resolves <font SIZE="-1">RT</font> #69852. </p>
+<dt>&bull;</dt>
+<dd> Ensure that pp_qr returns a new regexp <font SIZE="-1">SV</font> each time. Resolves <font SIZE="-1">RT</font> #69852. </dd>
 <p> Instead of returning a(nother) reference to the (pre-compiled) regexp in the optree, use <i>reg_temp_copy()</i> to create a copy of it, and return a reference to that. This resolves issues about Regexp::DESTROY not being called in a timely fashion (the original bug tracked by <font SIZE="-1">RT</font> #69852), as well as bugs related to blessing regexps, and of assigning to regexps, as described in correspondence added to the ticket. </p>
 <p> It transpires that we also need to undo the <i>SvPVX()</i> sharing when ithreads cloning a Regexp <font SIZE="-1">SV</font>, because mother_re is set to <font SIZE="-1">NULL</font>, instead of a cloned copy of the mother_re. This change might fix bugs with regexps and threads in certain other situations, but as yet neither tests nor bug reports have indicated any problems, so it might not actually be an edge case that it&#8217;s possible to reach.</p>
-<dt>&bull;</p>
-<dd> Several compilation errors and segfaults when perl was built with <tt>&quot;-Dmad&quot;</tt> were fixed.</p>
-<dt>&bull;</p>
-<dd> Fixes for lexer <font SIZE="-1">API</font> changes in 5.11.2 which broke NYTProf&#8217;s savesrc option.</p>
-<dt>&bull;</p>
-<dd> <i>-t</i> should only return <font SIZE="-1">TRUE</font> for file handles connected to a <font SIZE="-1">TTY</font> </p>
+<dt>&bull;</dt>
+<dd> Several compilation errors and segfaults when perl was built with <tt>&quot;-Dmad&quot;</tt> were fixed.</dd>
+<dt>&bull;</dt>
+<dd> Fixes for lexer <font SIZE="-1">API</font> changes in 5.11.2 which broke NYTProf&#8217;s savesrc option.</dd>
+<dt>&bull;</dt>
+<dd> <i>-t</i> should only return <font SIZE="-1">TRUE</font> for file handles connected to a <font SIZE="-1">TTY</font> </dd>
 <p> The Microsoft C version of <i>isatty()</i> returns <font SIZE="-1">TRUE</font> for all character mode devices, including the /dev/null style &#8220;nul&#8221; device and printers like &#8220;lpt1&#8221;.</p>
-<dt>&bull;</p>
-<dd> Fixed a regression caused by commit fafafbaf which caused a panic during parameter passing [perl #70171]</p>
-<dt>&bull;</p>
-<dd> On systems which in-place edits without backup files, -i&#8217;*&#8217; now works as the documentation says it does [perl #70802]</p>
-<dt>&bull;</p>
-<dd> Saving and restoring magic flags no longer loses readonly flag.</p>
-<dt>&bull;</p>
-<dd> The malformed syntax <tt>&quot;grep EXPR LIST&quot;</tt> (note the missing comma) no longer causes abrupt and total failure.</p>
-<dt>&bull;</p>
-<dd> Regular expressions compiled with <tt>&quot;qr{}&quot;</tt> literals properly set <tt>&quot;$'&quot;</tt> when matching again.</p>
-<dt>&bull;</p>
-<dd> Using named subroutines with <tt>&quot;sort&quot;</tt> should no longer lead to bus errors [perl #71076]</p>
-<dt>&bull;</p>
-<dd> Numerous bugfixes catch small issues caused by the recently-added Lexer <font SIZE="-1">API</font>.</p>
-<dt>&bull;</p>
-<dd> Smart match against <tt>@_</tt> sometimes gave false negatives. [perl #71078]</p>
-<dt>&bull;</p>
-<dd> <tt>$@</tt> may now be assigned a read-only value (without error or busting the stack).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;sort&quot;</tt> called recursively from within an active comparison subroutine no longer causes a bus error if run multiple times. [perl #71076]</dl>
+<dt>&bull;</dt>
+<dd> Fixed a regression caused by commit fafafbaf which caused a panic during parameter passing [perl #70171]</dd>
+<dt>&bull;</dt>
+<dd> On systems which in-place edits without backup files, -i&#8217;*&#8217; now works as the documentation says it does [perl #70802]</dd>
+<dt>&bull;</dt>
+<dd> Saving and restoring magic flags no longer loses readonly flag.</dd>
+<dt>&bull;</dt>
+<dd> The malformed syntax <tt>&quot;grep EXPR LIST&quot;</tt> (note the missing comma) no longer causes abrupt and total failure.</dd>
+<dt>&bull;</dt>
+<dd> Regular expressions compiled with <tt>&quot;qr{}&quot;</tt> literals properly set <tt>&quot;$'&quot;</tt> when matching again.</dd>
+<dt>&bull;</dt>
+<dd> Using named subroutines with <tt>&quot;sort&quot;</tt> should no longer lead to bus errors [perl #71076]</dd>
+<dt>&bull;</dt>
+<dd> Numerous bugfixes catch small issues caused by the recently-added Lexer <font SIZE="-1">API</font>.</dd>
+<dt>&bull;</dt>
+<dd> Smart match against <tt>@_</tt> sometimes gave false negatives. [perl #71078]</dd>
+<dt>&bull;</dt>
+<dd> <tt>$@</tt> may now be assigned a read-only value (without error or busting the stack).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;sort&quot;</tt> called recursively from within an active comparison subroutine no longer causes a bus error if run multiple times. [perl #71076]</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;split&quot;</tt> now warns when called in void context</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;printf&quot;</tt>-style functions called with too few arguments will now issue the warning <tt>&quot;Missing argument in %s&quot;</tt> [perl #71000]</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;split&quot;</tt> now warns when called in void context</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;printf&quot;</tt>-style functions called with too few arguments will now issue the warning <tt>&quot;Missing argument in %s&quot;</tt> [perl #71000]</dd></dl>
 <h2>New Tests</h2>
 <p> Many modules updated from <font SIZE="-1">CPAN</font> incorporate new tests.</p>
 <dl>
-<dt>t/comp/final_line_num.t</p>
-<dd> See if line numbers are correct at <font SIZE="-1">EOF</font></p>
-<dt>t/comp/form_scope.t</p>
-<dd> See if format scoping works</p>
-<dt>t/comp/line_debug.t</p>
-<dd> See if @{&#8220;_&lt;$file&#8221;} works</p>
-<dt>t/op/filetest_t.t</p>
-<dd> See if -t file test works</p>
-<dt>t/op/qr.t</p>
-<dd> See if qr works</p>
-<dt>t/op/utf8cache.t</p>
-<dd> Tests malfunctions of utf8 cache</p>
-<dt>t/re/uniprops.t</p>
-<dd> Test unicode \p{} regex constructs</dl>
+<dt>t/comp/final_line_num.t</dt>
+<dd> See if line numbers are correct at <font SIZE="-1">EOF</font></dd>
+<dt>t/comp/form_scope.t</dt>
+<dd> See if format scoping works</dd>
+<dt>t/comp/line_debug.t</dt>
+<dd> See if @{&#8220;_&lt;$file&#8221;} works</dd>
+<dt>t/op/filetest_t.t</dt>
+<dd> See if -t file test works</dd>
+<dt>t/op/qr.t</dt>
+<dd> See if qr works</dd>
+<dt>t/op/utf8cache.t</dt>
+<dd> Tests malfunctions of utf8 cache</dd>
+<dt>t/re/uniprops.t</dt>
+<dd> Test unicode \p{} regex constructs</dd></dl>
 <h2>Deprecations</h2>
 <p> The following items are now deprecated.</p>
 <dl>
-<dt>Use of &quot;goto&quot; to jump into a construct is deprecated</p>
-<dd> Using <tt>&quot;goto&quot;</tt> to jump from an outer scope into an inner scope is now deprecated. This rare use case was causing problems in the implementation of scopes.</dl>
+<dt>Use of &quot;goto&quot; to jump into a construct is deprecated</dt>
+<dd> Using <tt>&quot;goto&quot;</tt> to jump from an outer scope into an inner scope is now deprecated. This rare use case was causing problems in the implementation of scopes.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.11.3 represents approximately one month of development since Perl 5.11.2 and contains 61407 lines of changes across 396 files from 40 authors and committers: </p>
 <p> Abigail, Alex Davies, Alexandr Ciornii, Andrew Rodland, Andy Dougherty, Bram, brian d foy, Chip Salzenberg, Chris Williams, Craig A. Berry, Daniel Frederick Crisman, David Golden, Dennis Kaarsemaker, Eric Brine, Father Chrysostomos, Gene Sullivan, Gerard Goossen, H. Merijn Brand, Hugo van der Sanden, Jan Dubois, Jerry D. Hedden, Jesse Vincent, Jim Cromie, Karl Williamson, Leon Brocard, Max Maischein, Michael Breen, Moritz Lenz, Nicholas Clark, Rafael Garcia-Suarez, Reini Urban, Ricardo Signes, Stepan Kasal, Steve Hay, Steve Peters, Tim Bunce, Tony Cook, Vincent Pit and Zefram. </p>

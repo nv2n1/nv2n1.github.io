@@ -25,48 +25,48 @@ description: "texconfig – configures teTeX or TeX Live"
 <p> Commands that accept further options usually display available options if called without them. For example, <code>texconfig dvipdfm paper</code> will inform about valid paper settings. </p>
 <p> <code></p>
 <dl>
-<dt>conf</p>
-<dd> </code> Display the system configuration.</dl>
+<dt>conf</dt>
+<dd> </code> Display the system configuration.</dd></dl>
 <dl>
-<dt><code>dvipdfm paper [letter|legal|ledger|tabloid|a4|a3]</code></p>
-<dd> Set up dvipdfm to use papersize PAPER by default.</p>
-<dt><code>dvips add PRINTERNAME</code></p>
-<dd> Create a new (empty) configuration file <i>TEXMFCONFIG/dvips/config/config.PRINTERNAME.</i> This file can later be filled with the <code>mode, offset</code> or <code>printcmd</code> options</p>
-<dt><code>dvips del PRINTERNAME</code></p>
-<dd> Remove <i>config.PRINTERNAME</i></p>
-<dt><code>dvips mode</code></p>
-<dd> List available MetaFont modes.</p>
-<dt><code>dvips [-P PRINTER] mode MODE</code></p>
-<dd> Change the MetaFont mode to <i>MODE</i> for <i>PRINTER</i> or for all output files <i>(config.ps),</i> if no <code>-P</code> option is given.</p>
-<dt><code>dvips [-P PRINTER] offset x-OFFSET,y-OFFSET</code></p>
-<dd> Set printer offset for <i>PRINTER</i> or for all output files <i>(config.ps),</i> if no <code>-P</code> option is given. Offsets must be given with units, e.g. <i>0pt,10pt</i> You can use testpage.tex from the LaTeX distribution to find these numbers.</p>
-<dt><code>dvips [-P PRINTER] printcmd CMD</code></p>
-<dd> Set the printing command for <i>PRINTER</i> or for all output files <i>(config.ps),</i> if no <code>-P</code> option is given. Commands might be <code>lp</code> or <code>lpr.</code> See the description of the <i>o</i> option in <code>info dvips</code> or the <i>-O</i> option in <code><a href="/docs/linux/man/1-dvips/">dvips</a>(1).</code></p>
-<dt><code>faq</code></p>
-<dd> Display the list of Frequently Asked Questions about <code>teTeX</code> (and their answers).</p>
-<dt><code>font vardir DIR, font ro, font rw</code></p>
+<dt><code>dvipdfm paper [letter|legal|ledger|tabloid|a4|a3]</code></dt>
+<dd> Set up dvipdfm to use papersize PAPER by default.</dd>
+<dt><code>dvips add PRINTERNAME</code></dt>
+<dd> Create a new (empty) configuration file <i>TEXMFCONFIG/dvips/config/config.PRINTERNAME.</i> This file can later be filled with the <code>mode, offset</code> or <code>printcmd</code> options</dd>
+<dt><code>dvips del PRINTERNAME</code></dt>
+<dd> Remove <i>config.PRINTERNAME</i></dd>
+<dt><code>dvips mode</code></dt>
+<dd> List available MetaFont modes.</dd>
+<dt><code>dvips [-P PRINTER] mode MODE</code></dt>
+<dd> Change the MetaFont mode to <i>MODE</i> for <i>PRINTER</i> or for all output files <i>(config.ps),</i> if no <code>-P</code> option is given.</dd>
+<dt><code>dvips [-P PRINTER] offset x-OFFSET,y-OFFSET</code></dt>
+<dd> Set printer offset for <i>PRINTER</i> or for all output files <i>(config.ps),</i> if no <code>-P</code> option is given. Offsets must be given with units, e.g. <i>0pt,10pt</i> You can use testpage.tex from the LaTeX distribution to find these numbers.</dd>
+<dt><code>dvips [-P PRINTER] printcmd CMD</code></dt>
+<dd> Set the printing command for <i>PRINTER</i> or for all output files <i>(config.ps),</i> if no <code>-P</code> option is given. Commands might be <code>lp</code> or <code>lpr.</code> See the description of the <i>o</i> option in <code>info dvips</code> or the <i>-O</i> option in <code><a href="/docs/linux/man/1-dvips/">dvips</a>(1).</code></dd>
+<dt><code>faq</code></dt>
+<dd> Display the list of Frequently Asked Questions about <code>teTeX</code> (and their answers).</dd>
+<dt><code>font vardir DIR, font ro, font rw</code></dt>
 <dd>
-<dt><code>formats</code></p>
-<dd> This command allows to edit <code><a href="/docs/linux/man/5-fmtutil-cnf/">fmtutil.cnf</a>(5)</code> and (re)creates any new or changed formats afterwards.</p>
-<dt><code>hyphen FORMAT</code></p>
-<dd> This command allows to edit the hyphenation configuration file for formats that support this, and recreates the formats afterwards to enable the new languages. Available formats are shown when no <i>FORMAT</i> is given.</p>
+</dd><dt><code>formats</code></dt>
+<dd> This command allows to edit <code><a href="/docs/linux/man/5-fmtutil-cnf/">fmtutil.cnf</a>(5)</code> and (re)creates any new or changed formats afterwards.</dd>
+<dt><code>hyphen FORMAT</code></dt>
+<dd> This command allows to edit the hyphenation configuration file for formats that support this, and recreates the formats afterwards to enable the new languages. Available formats are shown when no <i>FORMAT</i> is given.</dd>
 <dt>
-<dd> Note that for formats that use LaTeX&#8217;s <i>language.dat,</i><br />
-&nbsp;<wbr>e.g. <i>(pdf)jadetex</i> and <i>latex</i> itself, this change is not persistent, since this file is a generated file. You should not use this command in these cases, read <code>update-language(1)</code> for alternatives.</p>
-<dt><code>init [format]</code></p>
-<dd> Recreate <i>format</i> or all formats if none is given, and the font information. This is the same as calling <code>fmtutil &#8211;byfmt format</code> or <code>fmtutil &#8211;all,</code> respectively, followed by <code>updmap.</code></p>
-<dt><code>mode-list</code></p>
-<dd> List available printer modes, together with the printers they were developed for, and their DPI resolution</p>
-<dt><code>mode MODE</code></p>
-<dd> Set the default printer mode in <i>/etc/texmf/web2c/mktex.cnf</i> or the respective user file in <i>$TEXMFCONFIG/web2c</i> to <code>MODE.</code></p>
-<dt><code>paper [a4|letter]</code></p>
-<dd> Set the default papersize for <code>dvips, dvipdfm, pdftex</code> and <code>xdvi.</code> The set is restricted because not all programs understand all sizes.</p>
-<dt><code>pdftex paper [a4|letter]</code></p>
-<dd> Set the default paper size for <code>pdftex.</code></p>
-<dt><code>rehash</code></p>
-<dd> Call <code>mktexlsr.</code></p>
-<dt><code>xdvi paper PAPER</code></p>
-<dd> Set the default paper size for <code>xdvi.</code> The (long) list is available with <code>texconfig xdvi paper.</code> </p>
+</dt><dd> Note that for formats that use LaTeX&#8217;s <i>language.dat,</i><br />
+&nbsp;<wbr>e.g. <i>(pdf)jadetex</i> and <i>latex</i> itself, this change is not persistent, since this file is a generated file. You should not use this command in these cases, read <code>update-language(1)</code> for alternatives.</dd>
+<dt><code>init [format]</code></dt>
+<dd> Recreate <i>format</i> or all formats if none is given, and the font information. This is the same as calling <code>fmtutil &#8211;byfmt format</code> or <code>fmtutil &#8211;all,</code> respectively, followed by <code>updmap.</code></dd>
+<dt><code>mode-list</code></dt>
+<dd> List available printer modes, together with the printers they were developed for, and their DPI resolution</dd>
+<dt><code>mode MODE</code></dt>
+<dd> Set the default printer mode in <i>/etc/texmf/web2c/mktex.cnf</i> or the respective user file in <i>$TEXMFCONFIG/web2c</i> to <code>MODE.</code></dd>
+<dt><code>paper [a4|letter]</code></dt>
+<dd> Set the default papersize for <code>dvips, dvipdfm, pdftex</code> and <code>xdvi.</code> The set is restricted because not all programs understand all sizes.</dd>
+<dt><code>pdftex paper [a4|letter]</code></dt>
+<dd> Set the default paper size for <code>pdftex.</code></dd>
+<dt><code>rehash</code></dt>
+<dd> Call <code>mktexlsr.</code></dd>
+<dt><code>xdvi paper PAPER</code></dt>
+<dd> Set the default paper size for <code>xdvi.</code> The (long) list is available with <code>texconfig xdvi paper.</code> </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> To let you change files, <code>texconfig</code> will open the editor specified in the VISUAL or EDITOR variables, or <code>sensible-editor</code> if both are unset.</p>

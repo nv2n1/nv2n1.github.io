@@ -34,6 +34,6 @@ description: "QuantLib::Settings – global repository for run-time library sett
 <p>&nbsp;<wbr>to be notified when it is set to a new value.&nbsp;<wbr> </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>a notification is not sent when the evaluation date changes for natural causes&#8212;i.e., a date was not explicitly set (which results in today&#8217;s date being used for pricing) and the current date changes as the clock strikes midnight.</dl>
+<dd>a notification is not sent when the evaluation date changes for natural causes&#8212;i.e., a date was not explicitly set (which results in today&#8217;s date being used for pricing) and the current date changes as the clock strikes midnight.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

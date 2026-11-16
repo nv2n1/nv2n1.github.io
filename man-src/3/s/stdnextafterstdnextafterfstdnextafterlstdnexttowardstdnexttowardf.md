@@ -24,21 +24,13 @@ long double nexttowardl(&nbsp;<wbr>long double from, long double to&nbsp;<wbr>);
 double nexttoward&nbsp;<wbr>(&nbsp;<wbr>IntegralType from, long double to&nbsp;<wbr>);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>(8)</code>&nbsp;<wbr><i>(since C++11)</i><br />
 Returns the next representable value of from in the direction of to. </p>
 <pre><code>1-3) If from equals to to, to is returned.
-
 5-7) If from equals to to, to is returned, converted from long double to the return
-
 type of the function without loss of range or precision.
-
 4) A set of overloads or a function template for all combinations of arguments of
-
 arithmetic type not covered by (1-3). If any argument has integral type, it is cast
-
 to double. If any argument is long double, then the return type Promoted is also
-
 long double, otherwise the return type is always double.
-
 8) A set of overloads or a function template accepting the from argument of any
-
 integral type. Equivalent to (6) (the argument is cast to double).
 </code></pre>
 <h2>Parameters</h2>
@@ -67,16 +59,11 @@ to instead, which makes the behavior around zero consistent: std::nextafter(-0.0
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cfloat&gt;
-
 #include &lt;cfenv&gt;
 int main()
-
 {
     float from1 = 0, to1 = std::nextafter(from1, 1.f);
     std::cout &lt;&lt; &quot;The next representable float after &quot; &lt;&lt; std::setprecision(20) &lt;&lt; from1
@@ -108,24 +95,18 @@ and &quot; &lt;&lt; to3 &lt;&lt; std::hexfloat &lt;&lt; &quot; (&quot; &lt;&lt; 
 ';
     // special values
     {
-
 #pragma STDC FENV_ACCESS ON
-
         std::feclearexcept(FE_ALL_EXCEPT);
-
         double from4 = DBL_MAX, to4 = std::nextafter(from4, INFINITY);
-
         std::cout &lt;&lt; &quot;The next representable double after &quot; &lt;&lt; std::setprecision(6)
                   &lt;&lt; from4 &lt;&lt; std::hexfloat &lt;&lt; &quot; (&quot; &lt;&lt; from4 &lt;&lt; ')'
                   &lt;&lt; std::defaultfloat &lt;&lt; &quot; is &quot; &lt;&lt; to4
                   &lt;&lt; std::hexfloat &lt;&lt; &quot; (&quot; &lt;&lt; to4 &lt;&lt; &quot;)
 &quot;
                   &lt;&lt; std::defaultfloat;
-
         if (std::fetestexcept(FE_OVERFLOW))
             std::cout &lt;&lt; &quot;   raised FE_OVERFLOW
 &quot;;
-
         if (std::fetestexcept(FE_INEXACT))
             std::cout &lt;&lt; &quot;   raised FE_INEXACT
 &quot;;

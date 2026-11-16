@@ -15,15 +15,15 @@ follow_pfn - look up PFN at a user virtual address
 <h2>Arguments</h2>
 
 <i>vma</i>
-<dl><dd><dd>memory mapping</dl>
+<dl><dd></dd><dd>memory mapping</dd></dl>
  
 
  <i>address</i>
-<dl><dd>user virtual address</dl>
+<dl><dd>user virtual address</dd></dl>
  
 
  <i>pfn</i>
-<dl><dd>location to store found PFN</dl>
+<dl><dd>location to store found PFN</dd></dl>
 
 <h2>Description</h2>
 

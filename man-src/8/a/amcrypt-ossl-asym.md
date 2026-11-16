@@ -10,10 +10,10 @@ description: "amcrypt-ossl-asym – crypt program for Amanda asymmetric data enc
 <p>amcrypt-ossl-asym &#8211; crypt program for Amanda asymmetric data encryption using OpenSSL</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amcrypt-ossl-asym</code> [-d]</dl>
+<dt> <code>amcrypt-ossl-asym</code> [-d]</dt></dl>
 <h2>Description</h2>
 <p><code>amcrypt-ossl-asym</code></p>
-<dd>uses <code>OpenSSL</code> to encrypt and decrypt data. OpenSSL is available from <a rel="nofollow" href="http://www.openssl.org">www.openssl.org</a>. OpenSSL offers a wide variety of cipher choices ( <code>amcrypt-ossl-asym</code> defaults to 256-bit AES) and can use hardware cryptographic accelerators on several platforms. </p>
+<dd>uses <code>OpenSSL</code> to encrypt and decrypt data. OpenSSL is available from <a rel="nofollow" href="http://www.openssl.org">www.openssl.org</a>. OpenSSL offers a wide variety of cipher choices ( <code>amcrypt-ossl-asym</code> defaults to 256-bit AES) and can use hardware cryptographic accelerators on several platforms. </dd>
 <p> <code>amcrypt-ossl-asym</code> will search for the OpenSSL program in the following directories: /bin:/usr/bin:/usr/local/bin:/usr/ssl/bin:/usr/local/ssl/bin.</p>
 <h2>Generating Public And Private Keys</h2>
 <p>RSA keys can be generated with the standard OpenSSL commands, e.g.: </p>
@@ -35,27 +35,28 @@ Writing RSA key</pre>
 <h2>Files</h2>
 <p>/var/lib/amanda/backup-privkey.pem</p>
 <dl>
-<dd>File containing the RSA private key. It should not be readable by any user other than the Amanda user.</dl>
+<dd>File containing the RSA private key. It should not be readable by any user other than the Amanda user.</dd></dl>
 <p> /var/lib/amanda/backup-pubkey.pem</p>
 <dl>
-<dd>File containing the RSA public key.</dl>
+<dd>File containing the RSA public key.</dd></dl>
 <p> /var/lib/amanda/.am_passphrase</p>
 <dl>
-<dd>File containing the passphrase. It should not be readable by any user other than the Amanda user.</dl>
+<dd>File containing the passphrase. It should not be readable by any user other than the Amanda user.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5), <code>openssl</code>(1), <code><a href="/docs/linux/man/8-amcrypt-ossl/">amcrypt-ossl</a></code>(8) </p>
 <p> The Amanda Wiki: : <a rel="nofollow" href="http://wiki.zmanda.com/">http://wiki.zmanda.com/</a></p>
 <h2>Author</h2>
 <p><code>Kevin Till</code> &lt;kevin.till [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd><a rel="nofollow" href="http://www.openssl.org">www.openssl.org</a></p>
+<dt> 1.</dt>
+<dd><a rel="nofollow" href="http://www.openssl.org">www.openssl.org</a></dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.openssl.org/">http://www.openssl.org/</a></dl>
-<dt> 2.</p>
-<dd><a rel="nofollow" href="http://www.diceware.com">www.diceware.com</a></p>
+<dd><a rel="nofollow" href="http://www.openssl.org/">http://www.openssl.org/</a></dd></dl>
+<dt> 2.</dt>
+<dd><a rel="nofollow" href="http://www.diceware.com">www.diceware.com</a></dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.diceware.com/">http://www.diceware.com/</a></dl>
+<dd><a rel="nofollow" href="http://www.diceware.com/">http://www.diceware.com/</a></dd></dl>
+</dl>

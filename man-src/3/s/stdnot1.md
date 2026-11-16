@@ -34,18 +34,12 @@ None.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 struct LessThan7 : std::unary_function&lt;int, bool&gt;
-
 {
     bool operator()(int i) const
     {
@@ -53,7 +47,6 @@ struct LessThan7 : std::unary_function&lt;int, bool&gt;
     }
 };
 int main()
-
 {
     std::vector&lt;int&gt; v(10);
     std::iota(begin(v), end(v), 0);

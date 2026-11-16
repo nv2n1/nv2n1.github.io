@@ -13,36 +13,36 @@ description: "quvi-modules-3rdparty – Overview of the loadable 3rd party modul
 <h2>3Rd Party Modules</h2>
 <p>LuaBitOp</p>
 <dl>
-<dd>Lua BitOp is a C extension module for Lua 5.1/5.2 which adds bitwise operations on numbers. </p>
+<dd>Lua BitOp is a C extension module for Lua 5.1/5.2 which adds bitwise operations on numbers. </dd>
 <p> <a rel="nofollow" href="http://bitop.luajit.org/">http://bitop.luajit.org/</a></dl>
 <p> LuaExpat</p>
 <dl>
-<dd>LuaExpat is a SAX XML parser based on the Expat library. </p>
+<dd>LuaExpat is a SAX XML parser based on the Expat library. </dd>
 <p> <a rel="nofollow" href="http://matthewwild.co.uk/projects/luaexpat/">http://matthewwild.co.uk/projects/luaexpat/</a></dl>
 <p> LuaJSON</p>
 <dl>
-<dd>JSON parser/encoder for Lua, parses JSON using LPEG for speed and flexibility. </p>
+<dd>JSON parser/encoder for Lua, parses JSON using LPEG for speed and flexibility. </dd>
 <p> <a rel="nofollow" href="http://www.eharning.us/wiki/luajson/">http://www.eharning.us/wiki/luajson/</a></dl>
 <p> LuaSocket</p>
 <dl>
-<dd>LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet. </p>
+<dd>LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet. </dd>
 <p> <a rel="nofollow" href="http://w3.impa.br/~diego/software/luasocket/">http://w3.impa.br/~diego/software/luasocket/</a></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-libquvi-scripts/">libquvi-scripts</a></code>(7), <code><a href="/docs/linux/man/3-libquvi/">libquvi</a></code>(3), <code>quvi-object</code>(7), <code><a href="/docs/linux/man/7-quvi-modules/">quvi-modules</a></code>(7)</p>
 <h2>Further Resources</h2>
 <p>Home</p>
 <dl>
-<dd><a rel="nofollow" href="http://quvi.sourceforge.net/">http://quvi.sourceforge.net/</a></dl>
+<dd><a rel="nofollow" href="http://quvi.sourceforge.net/">http://quvi.sourceforge.net/</a></dd></dl>
 <p> Development code</p>
 <dl>
-<dd><a href="git://repo.or.cz/libquvi-scripts.git">git://repo.or.cz/libquvi-scripts.git</a></dl>
+<dd><a href="git://repo.or.cz/libquvi-scripts.git">git://repo.or.cz/libquvi-scripts.git</a></dd></dl>
 <p> gitweb</p>
 <dl>
-<dd><a rel="nofollow" href="http://repo.or.cz/w/libquvi-scripts.git">http://repo.or.cz/w/libquvi-scripts.git</a></dl>
+<dd><a rel="nofollow" href="http://repo.or.cz/w/libquvi-scripts.git">http://repo.or.cz/w/libquvi-scripts.git</a></dd></dl>
 <h2>Authors</h2>
 <p>Toni Gundogdu &lt;legatvs [at] gmail.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to the quvi-devel mailing list &lt;quvi-devel [at] lists.sourceforge.net&gt; where the development and the maintenance is primarily done. You do not have to be subscribed to the list to send a message there.</p>
 <h2>License</h2>

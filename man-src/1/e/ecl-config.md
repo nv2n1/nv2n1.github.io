@@ -15,14 +15,14 @@ description: "ecl-config – Embeddable Common LISP configuration query"
 <p> ecl-config will return through the standard output the set of compiler or linker flags needed to build applications that embed ecl.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-cflags</code></p>
-<dd> Output the flags required to compile a C/C++ file.</p>
-<dt><code>-libs</code></p>
+<dt><code>-cflags</code></dt>
+<dd> Output the flags required to compile a C/C++ file.</dd>
+<dt><code>-libs</code></dt>
 <dd>
-<dt><code>-ldflags</code></p>
-<dd> Return the linker flags required to build a C/C++ application or shared library.</p>
-<dt><code>LIBS</code></p>
-<dd> When also using <code>-ldflags</code> also add the cmp (compiler) library.</dl>
+</dd><dt><code>-ldflags</code></dt>
+<dd> Return the linker flags required to build a C/C++ application or shared library.</dd>
+<dt><code>LIBS</code></dt>
+<dd> When also using <code>-ldflags</code> also add the cmp (compiler) library.</dd></dl>
 <h2>BUGS</h2>
 <p> Probably some. Report them! </p>
 <h2>Index</h2>

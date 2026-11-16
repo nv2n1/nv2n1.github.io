@@ -20,13 +20,13 @@ dblink_get_notify(text connname) returns setof (notify_name text, be_pid int, ex
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> The name of a named connection to get notifications on.</dl>
+</dt><dd> The name of a named connection to get notifications on.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns setof (notify_name text, be_pid int, extra text), or an empty set if none.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SELECT dblink_exec('LISTEN virtual');
 dblink_exec-- -- -- -- -- -- -LISTEN(1 row)
@@ -37,5 +37,5 @@ SELECT *FROM dblink_get_notify();
 notify_name | be_pid | extra-- -- -- -- -- -- -+-- -- -- --+-- -- -- -virtual | 1229 |
     (1 row)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

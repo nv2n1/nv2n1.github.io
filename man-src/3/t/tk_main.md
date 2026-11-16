@@ -13,9 +13,9 @@ description: "Tk_Main – main program for Tk-based applications"
 <code>Tk_Main</code>(<i>argc, argv, appInitProc</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>argc</i> (in) Number of elements in <i>argv</i>.</p>
-<dd>char <i>*argv[]</i> (in) Array of strings containing command-line arguments.</p>
-<dd>Tcl_AppInitProc <i>*appInitProc</i> (in) Address of an application-specific initialization procedure. The value for this argument is usually <code>Tcl_AppInit</code>. </p>
+<dd>int <i>argc</i> (in) Number of elements in <i>argv</i>.</dd>
+<dd>char <i>*argv[]</i> (in) Array of strings containing command-line arguments.</dd>
+<dd>Tcl_AppInitProc <i>*appInitProc</i> (in) Address of an application-specific initialization procedure. The value for this argument is usually <code>Tcl_AppInit</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_Main</code> acts as the main program for most Tk-based applications. Starting with Tk 4.0 it is not called <code>main</code> anymore because it is part of the Tk library and having a function <code>main</code> in a library (particularly a shared library) causes problems on many systems. Having <code>main</code> in the Tk library would also make it hard to use Tk in C++ programs, since C++ programs must have special C++ <code>main</code> functions. </p>
@@ -24,7 +24,7 @@ description: "Tk_Main – main program for Tk-based applications"
 <dl COMPACT>
 <dd>
 <pre>typedef int Tcl_AppInitProc(Tcl_Interp *<i>interp</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>AppInitProc</i> is almost always a pointer to <code>Tcl_AppInit</code>; for more details on this procedure, see the documentation for <code>Tcl_AppInit</code>. </p>
 <h2>Keywords</h2>
 <p>application-specific initialization, command-line arguments, main program</p>

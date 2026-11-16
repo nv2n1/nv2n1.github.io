@@ -23,112 +23,112 @@ description: "belkinunv – Driver for Belkin \"Universal UPS\" and compatible"
 <p>See also <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8) for generic options. Never use the <code>-k</code> option with this driver; it does not work properly. </p>
 <p> <code>-x wait</code>[=<i>level</i>]</p>
 <dl>
-<dd>When this option is used, <code>belkinunv</code> does not fork into the background, but behaves as a standalone program. It connects to the UPS and waits until AC power is present. If <i>level</i> is specified, it also waits until the battery charge reaches at least the given level in percent. Then, and only then, <code>belkinunv</code> exits. In addition, while <code>belkinunv</code> runs in this mode, it displays a status line with information on the UPS status and battery level. This is intended for use in the computer&#8217;s shutdown and startup scripts, as described under Soft Shutdown Workaround above.</dl>
+<dd>When this option is used, <code>belkinunv</code> does not fork into the background, but behaves as a standalone program. It connects to the UPS and waits until AC power is present. If <i>level</i> is specified, it also waits until the battery charge reaches at least the given level in percent. Then, and only then, <code>belkinunv</code> exits. In addition, while <code>belkinunv</code> runs in this mode, it displays a status line with information on the UPS status and battery level. This is intended for use in the computer&#8217;s shutdown and startup scripts, as described under Soft Shutdown Workaround above.</dd></dl>
 <p> <code>-x nohang</code></p>
 <dl>
-<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It causes <code>belkinunv</code> to exit if a connection with the UPS cannot be established or is lost, instead of retrying forever, which is the default behavior. The <code>-x nohang</code> option should be used in a startup script, to ensure the computer remains bootable even if the UPS has been disconnected during the power failure (for instance, you attached your computer to a generator, carried it to a neighbor&#8217;s house, or whatever).</dl>
+<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It causes <code>belkinunv</code> to exit if a connection with the UPS cannot be established or is lost, instead of retrying forever, which is the default behavior. The <code>-x nohang</code> option should be used in a startup script, to ensure the computer remains bootable even if the UPS has been disconnected during the power failure (for instance, you attached your computer to a generator, carried it to a neighbor&#8217;s house, or whatever).</dd></dl>
 <p> <code>-x flash</code></p>
 <dl>
-<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It causes the UPS load to be shut off for a short time (&quot;flashed&quot;) just after the AC power has returned and the requested battery level (if any) has been attained. This is useful if slaves are attached to this UPS; the flash will cause all of them to reboot. Note that, due to the design of the Belkin UPS hardware, the load shutdown lasts ca. 1&#8212;2 minutes; a shorter flash cannot be performed reliably. Also, the computers will reboot at the scheduled time, on battery power if necessary, even if AC power fails again in the meantime. This should not be a problem, as your startup scripts can catch this situation.</dl>
+<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It causes the UPS load to be shut off for a short time (&quot;flashed&quot;) just after the AC power has returned and the requested battery level (if any) has been attained. This is useful if slaves are attached to this UPS; the flash will cause all of them to reboot. Note that, due to the design of the Belkin UPS hardware, the load shutdown lasts ca. 1&#8212;2 minutes; a shorter flash cannot be performed reliably. Also, the computers will reboot at the scheduled time, on battery power if necessary, even if AC power fails again in the meantime. This should not be a problem, as your startup scripts can catch this situation.</dd></dl>
 <p> <code>-x silent</code></p>
 <dl>
-<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It suppresses the status line which <code>belkinunv</code> would normally print.</dl>
+<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It suppresses the status line which <code>belkinunv</code> would normally print.</dd></dl>
 <p> <code>-x dumbterm</code></p>
 <dl>
-<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It changes the way in which <code>belkinunv</code> prints its status line. Normally, terminal control sequences are used to overwrite the same line with new status information, each time the status is updated. This may not work on all terminals. If the <code>-x dumbterm</code> option is given, each status update is written on a new line.</dl>
+<dd>This option only has an effect when used in conjunction with the <code>-x wait</code> option. It changes the way in which <code>belkinunv</code> prints its status line. Normally, terminal control sequences are used to overwrite the same line with new status information, each time the status is updated. This may not work on all terminals. If the <code>-x dumbterm</code> option is given, each status update is written on a new line.</dd></dl>
 <h2>Variables</h2>
 <p><code>battery.charge</code>, <code>battery.runtime</code></p>
 <dl>
-<dd>not supported by all hardware.</dl>
+<dd>not supported by all hardware.</dd></dl>
 <p> <code>battery.voltage</code>, <code>battery.voltage.nominal</code>, <code>input.frequency</code>, <code>input.frequency.nominal</code></p>
 <dl>
-<dd>e.g. 60 for 60Hz</dl>
+<dd>e.g. 60 for 60Hz</dd></dl>
 <p> <code>input.sensitivity</code></p>
 <dl>
-<dd>writable: normal/medium/low</dl>
+<dd>writable: normal/medium/low</dd></dl>
 <p> <code>input.transfer.high</code></p>
 <dl>
-<dd>writable: high transfer voltage point in V</dl>
+<dd>writable: high transfer voltage point in V</dd></dl>
 <p> <code>input.transfer.low</code></p>
 <dl>
-<dd>writable: low transfer voltage point in V</dl>
+<dd>writable: low transfer voltage point in V</dd></dl>
 <p> <code>input.voltage</code>, <code>input.voltage.maximum</code>, <code>input.voltage.minimum</code>, <code>input.voltage.nominal</code>, <code>output.frequency</code>, <code>output.voltage</code>, <code>ups.beeper.status</code></p>
 <dl>
-<dd>writable. Values: enabled/disabled/muted. This variable controls the state of the panel beeper. Enabled means sound when the alarm is present, disabled means never sound, and muted means the sound is temporarily disabled until the alarm would normally stop sounding. In the muted state, the beeper is automatically turned back on at the next event (AC failure, battery test, etc). Also, the beeper can&#8217;t be turned off during a critical event (low battery). Note that not all UPS models support the &quot;disabled&quot; state.</dl>
+<dd>writable. Values: enabled/disabled/muted. This variable controls the state of the panel beeper. Enabled means sound when the alarm is present, disabled means never sound, and muted means the sound is temporarily disabled until the alarm would normally stop sounding. In the muted state, the beeper is automatically turned back on at the next event (AC failure, battery test, etc). Also, the beeper can&#8217;t be turned off during a critical event (low battery). Note that not all UPS models support the &quot;disabled&quot; state.</dd></dl>
 <p> <code>ups.firmware</code>, <code>ups.load</code>, <code>ups.model</code>, <code>ups.power.nominal</code></p>
 <dl>
-<dd>e.g. 800 for an 800VA system</dl>
+<dd>e.g. 800 for an 800VA system</dd></dl>
 <p> <code>ups.status</code></p>
 <dl>
-<dd>a list of flags; see the status flags below.</dl>
+<dd>a list of flags; see the status flags below.</dd></dl>
 <p> <code>ups.temperature</code></p>
 <dl>
-<dd>not supported by all hardware.</dl>
+<dd>not supported by all hardware.</dd></dl>
 <p> <code>ups.test.result</code>, <code>ups.delay.restart</code></p>
 <dl>
-<dd>time to restart (read only)</dl>
+<dd>time to restart (read only)</dd></dl>
 <p> <code>ups.delay.shutdown</code></p>
 <dl>
-<dd>time to shutdown (read only). This is always a multiple of 60 seconds.</dl>
+<dd>time to shutdown (read only). This is always a multiple of 60 seconds.</dd></dl>
 <p> <code>ups.type</code></p>
 <dl>
-<dd>ONLINE/OFFLINE/LINEINT. This describes the basic layout of this UPS (for GUI clients which want to draw an animated picture of power flow). An offline UPS has a direct connection from AC input to AC output, and also a connection from AC input to the battery, and from the battery to AC output. An online UPS lacks the direct connection from AC input to AC output, whereas a line interactive UPS lacks the connection from AC input to the battery.</dl>
+<dd>ONLINE/OFFLINE/LINEINT. This describes the basic layout of this UPS (for GUI clients which want to draw an animated picture of power flow). An offline UPS has a direct connection from AC input to AC output, and also a connection from AC input to the battery, and from the battery to AC output. An online UPS lacks the direct connection from AC input to AC output, whereas a line interactive UPS lacks the connection from AC input to the battery.</dd></dl>
 <h2>Commands</h2>
 <p><code>beeper.enable, beeper.disable, beeper.mute</code></p>
 <dl>
-<dd>Enable, disable or mute the panel beeper. Note that if the beeper is muted, it is automatically turned back on at the next event (AC failure, battery test, etc). Also, the beeper can&#8217;t be turned muted during a critical event (low battery).</dl>
+<dd>Enable, disable or mute the panel beeper. Note that if the beeper is muted, it is automatically turned back on at the next event (AC failure, battery test, etc). Also, the beeper can&#8217;t be turned muted during a critical event (low battery).</dd></dl>
 <p> <code>reset.input.minmax</code></p>
 <dl>
-<dd>Reset the variables <code>input.voltage.minimum</code> and <code>input.voltage.maximum</code>.</dl>
+<dd>Reset the variables <code>input.voltage.minimum</code> and <code>input.voltage.maximum</code>.</dd></dl>
 <p> <code>shutdown.reboot</code></p>
 <dl>
-<dd>Shut down load immediately for about 1&#8212;2 minutes.</dl>
+<dd>Shut down load immediately for about 1&#8212;2 minutes.</dd></dl>
 <p> <code>shutdown.reboot.graceful</code></p>
 <dl>
-<dd>After 40 second delay, shut down load for about 1&#8212;2 minutes.</dl>
+<dd>After 40 second delay, shut down load for about 1&#8212;2 minutes.</dd></dl>
 <p> <code>shutdown.stayoff</code></p>
 <dl>
-<dd>Shut down load immediately and stay off. The only way it can be turned back on is by manually pressing the front panel button.</dl>
+<dd>Shut down load immediately and stay off. The only way it can be turned back on is by manually pressing the front panel button.</dd></dl>
 <p> <code>test.battery.start, test.battery.stop</code></p>
 <dl>
-<dd>Start/stop 10 second battery test.</dl>
+<dd>Start/stop 10 second battery test.</dd></dl>
 <p> <code>test.failure.start, test.failure.stop</code></p>
 <dl>
-<dd>Start/stop &quot;deep&quot; battery test.</dl>
+<dd>Start/stop &quot;deep&quot; battery test.</dd></dl>
 <h2>Status Flags</h2>
 <p><code>OB</code></p>
 <dl>
-<dd>load is on battery, including during tests</dl>
+<dd>load is on battery, including during tests</dd></dl>
 <p> <code>OFF</code></p>
 <dl>
-<dd>load is off</dl>
+<dd>load is off</dd></dl>
 <p> <code>OL</code></p>
 <dl>
-<dd>load is online</dl>
+<dd>load is online</dd></dl>
 <p> <code>ACFAIL</code></p>
 <dl>
-<dd>AC failure. Note that this refers to the AC input, and thus it is not the same as &quot;OB&quot;. An AC failure can occur at any time, for instance, during a battery test, or when the UPS load is off.</dl>
+<dd>AC failure. Note that this refers to the AC input, and thus it is not the same as &quot;OB&quot;. An AC failure can occur at any time, for instance, during a battery test, or when the UPS load is off.</dd></dl>
 <p> <code>OVER</code></p>
 <dl>
-<dd>overload</dl>
+<dd>overload</dd></dl>
 <p> <code>OVERHEAT</code></p>
 <dl>
-<dd>overheat</dl>
+<dd>overheat</dd></dl>
 <p> <code>COMMFAULT</code></p>
 <dl>
-<dd>UPS fault</dl>
+<dd>UPS fault</dd></dl>
 <p> <code>LB</code></p>
 <dl>
-<dd>low battery</dl>
+<dd>low battery</dd></dl>
 <p> <code>CHRG</code></p>
 <dl>
-<dd>charging</dl>
+<dd>charging</dd></dl>
 <p> <code>DEPLETED</code></p>
 <dl>
-<dd>the battery is depleted. When the UPS raises this flag, it simultaneously switches off the load.</dl>
+<dd>the battery is depleted. When the UPS raises this flag, it simultaneously switches off the load.</dd></dl>
 <p> <code>RB</code></p>
 <dl>
-<dd>replace battery</dl>
+<dd>replace battery</dd></dl>
 <h2>Examples</h2>
 <p>Here is an example for how <code>belkinunv</code> should be used in a computer&#8217;s shutdown script. These commands should go in the very last part of the shutdown script, after all file systems have been mounted read-only, and just before the computer halts. Note that <code>belkinunv</code> must be installed in a directory which is still readable at that point. </p>
 <dl>
@@ -138,14 +138,14 @@ description: "belkinunv – Driver for Belkin \"Universal UPS\" and compatible"
 if [ -f /etc/killpower ] ; then
  echo &quot;Waiting for AC power, or for UPS batteries to run out...&quot;
  /usr/bin/belkinunv -x wait /dev/ttyS1</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre> # we get here if the power came back on. Reboot.
  echo &quot;Power is back. Rebooting...&quot;
  reboot
 fi</pre>
-</dl>
+</dd></dl>
 <p> And here is an example of how to use <code>belkinunv</code> in the startup script. These commands should go near the beginning of the startup script, before any file systems are mounted read/write, and before any file system integrity checks are done. </p>
 <dl>
 <dd>
@@ -156,7 +156,7 @@ if [ -f /etc/killpower ] ; then
  echo &quot;Waiting for UPS battery charge to reach 60%...&quot;
  /usr/bin/belkinunv -x wait=60 -x nohang /dev/ttyS1
 fi</pre>
-</dl>
+</dd></dl>
 <h2>Exit Status</h2>
 <p>When used normally, <code>belkinunv</code> forks into the background and its diagnostics are the same as for all NUT drivers, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </p>
 <p> When used with the <code>-x wait</code> option, the exit status is normally <code>0</code>. If the <code>-x nohang</code> option has also been specified, an exit status of <code>1</code> indicates that communication with the UPS was lost. If the <code>-x flash</code> option has been specified, an exit status of <code>2</code> indicates that the timed shutdown has failed.</p>
@@ -167,8 +167,8 @@ fi</pre>
 <p><code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet resources:</h3>
 <dl>
-<dd>&bull; The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a></dl>
+<dd>&bull; The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a></dd></dl>
 <dl>
-<dd>&bull; The documentation for the protocol used by this UPS: belkin-universal-ups.html</dl>
+<dd>&bull; The documentation for the protocol used by this UPS: belkin-universal-ups.html</dd></dl>
 <h2>Author</h2>
 <p>Peter Selinger &lt;selinger [at] users.sourceforge.net&gt;</p>

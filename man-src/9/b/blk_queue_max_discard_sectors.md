@@ -15,11 +15,11 @@ blk_queue_max_discard_sectors - set max sectors for a single discard
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>max_discard_sectors</i>
-<dl><dd>maximum number of sectors to discard</dl>
+<dl><dd>maximum number of sectors to discard</dd></dl>
 
 <h2>Copyright</h2>
 

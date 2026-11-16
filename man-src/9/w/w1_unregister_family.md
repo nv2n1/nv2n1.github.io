@@ -14,9 +14,9 @@ description: "w1_unregister_family – unregister a device family driver"
 <p><i>fent</i></p>
 <dl>
 <dd>
-<dd>family to unregister</dl>
+</dd><dd>family to unregister</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

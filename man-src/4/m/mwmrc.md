@@ -21,12 +21,12 @@ $HOME/.mwmrc
 <h3>Resource Types</h3>
 <p>The following types of resources can be described in the mwm resource description file:</p>
 <dl>
-<dt><code>Buttons</code></p>
-<dd>Window manager functions can be bound (associated) with button events.</p>
-<dt><code>Keys</code></p>
-<dd>Window manager functions can be bound (associated) with key press events.</p>
-<dt><code>Menus</code></p>
-<dd>Menu panes can be used for the window menu and other menus posted with key bindings and button bindings.</dl>
+<dt><code>Buttons</code></dt>
+<dd>Window manager functions can be bound (associated) with button events.</dd>
+<dt><code>Keys</code></dt>
+<dd>Window manager functions can be bound (associated) with key press events.</dd>
+<dt><code>Menus</code></dt>
+<dd>Menu panes can be used for the window menu and other menus posted with key bindings and button bindings.</dd></dl>
 <h2>Mwm Resource Description File Syntax</h2>
 <p>The <code>mwm</code> resource description file is a standard text file that contains items of information separated by blanks, tabs, and new lines characters. Blank lines are ignored. Items or characters can be quoted to avoid special interpretation (for example, the comment character can be quoted to prevent it from being interpreted as the comment character). A quoted item can be contained in double quotes (<code>&quot; &quot;</code>). Single characters can be quoted by preceding them by the back-slash character (<code>\</code>). If a line ends with a back-slash, the next line is considered a continuation of that line. All text from an unquoted <code>#</code> to the end of the line is regarded as a comment and is not interpreted as part of a resource description. If <code>!</code> is the first character in a line, the line is regarded as a comment.</p>
 <h3>Window Manager Functions</h3>
@@ -36,89 +36,89 @@ $HOME/.mwmrc
 <code>function_args</code> = {<code>quoted_item</code> | <code>unquoted_item</code>}</pre>
 <p>The following functions are supported. If a function is specified that isn&#8217;t one of the supported functions then it is interpreted by <code>mwm</code> as <code>f.nop</code>.</p>
 <dl>
-<dt><code>f.beep</code></p>
-<dd>This function causes a beep.</p>
-<dt><code>f.circle_down</code> [ <i>icon</i> | <i>window</i>]</p>
-<dd>This function causes the window or icon that is on the top of the window stack to be put on the bottom of the window stack (so that it is no longer obscuring any other window or icon). This function affects only those windows and icons that are obscuring other windows and icons, or that are obscured by other windows and icons. Secondary windows (that is, transient windows) are restacked with their associated primary window. Secondary windows always stay on top of the associated primary window and there can be no other primary windows between the secondary windows and their primary window. If an <i>icon</i> function argument is specified, then the function applies only to icons. If a <i>window</i> function argument is specified then the function applies only to windows.</p>
-<dt><code>f.circle_up</code> [ <i>icon</i> | <i>window</i>]</p>
-<dd>This function raises the window or icon on the bottom of the window stack (so that it is not obscured by any other windows). This function affects only those windows and icons that are obscuring other windows and icons, or that are obscured by other windows and icons. Secondary windows (that is, transient windows) are restacked with their associated primary window. If an <i>icon</i> function argument is specified then the function applies only to icons. If an <i>window</i> function argument is specified then the function applies only to windows.</p>
-<dt><code>f.exec</code> <code>command</code> (or <i>!</i> <code>command</code>)</p>
-<dd>This function causes <i>command</i> to be executed (using the value of the <i>$MWMSHELL</i> or <i>$SHELL</i> environment variable if set; otherwise, <code>/bin/sh</code> ). The <i>!</i> notation can be used in place of the <code>f.exec</code> function name.</p>
-<dt><code>f.focus_color</code></p>
-<dd>This function sets the colormap focus to a client window. If this function is done in a root context, then the default colormap (setup by the X Window System for the screen where <code>mwm</code> is running) is installed and there is no specific client window colormap focus. This function is treated as <code>f.nop</code> if <i>colormapFocusPolicy</i> is not explicit.</p>
-<dt><code>f.focus_key</code></p>
-<dd>This function sets the keyboard input focus to a client window or icon. This function is treated as <code>f.nop</code> if <i>keyboardFocusPolicy</i> is not explicit or the function is executed in a root context.</p>
-<dt><code>f.kill</code></p>
-<dd>This function is used to close application windows. The actual processing that occurs depends on the protocols that the application observes. The application lists the protocols it observes in the <code>WM_PROTOCOLS</code> property on its top level window. If the application observes the <code>WM_DELETE_WINDOW</code> protocol, it is sent a message that requests the window be deleted. If the application observes both <code>WM_DELETE_WINDOW</code> and <code>WM_SAVE_YOURSELF</code>, it is sent one message requesting the window be deleted and another message advising it to save its state. If the application observes only the <code>WM_SAVE_YOURSELF</code>protocol <i>,</i> it is sent a message advising it to save its state. After a delay (specified by the resource <i>quitTimeout</i>), the application&#8217;s connection to the X server is terminated. If the application observes neither of these protocols, its connection to the X server is terminated.</p>
-<dt><code>f.lower</code>&nbsp;<wbr>[<i>&#8211;</i> <code>client</code> | <i>within</i>&nbsp;<wbr>| <i>freeFamily</i>]</p>
-<dd>This function lowers a primary window to the bottom of the global window stack (where it obscures no other window) and lowers the secondary window (transient window or dialog box) within the client family. The arguments to this function are mutually exclusive. The <i>client</i> argument indicates the name or class of a client to lower. The name or class of a client appears in the <code>WM_CLASS</code> property on the client&#8217;s top-level window. If the <i>client</i> argument is not specified, the context that the function was invoked in indicates the window or icon to lower. Specifying <i>within</i> lowers the secondary window within the family (staying above the parent) but does not lower the client family in the global window stack. Specifying <i>freeFamily</i> lowers the window to the bottom of the global windows stack from its local family stack.</p>
-<dt><code>f.maximize</code></p>
-<dd>This function causes a client window to be displayed with its maximum size. Refer to the <i>maximumClientSize</i>, <i>maximumMaximumSize</i>, and <i>limitResize</i> resources in <code><a href="/docs/linux/man/1-mwm/">mwm</a></code>(1).</p>
-<dt><code>f.menu</code> <i>menu_name</i></p>
-<dd>This function associates a cascading (pull-right) menu with a menu pane entry or a menu with a button or key binding. The <i>menu_name</i> function argument identifies the menu to be used.</p>
-<dt><code>f.minimize</code></p>
-<dd>This function causes a client window to be minimized (iconified). When a window is minimized with no icon box in use, and if the <i>lowerOnIconify</i> resource has the value True (the default), the icon is placed on the bottom of the window stack (such that it obscures no other window). If an icon box is used, then the client&#8217;s icon changes to its iconified form inside the icon box. Secondary windows (that is, transient windows) are minimized with their associated primary window. There is only one icon for a primary window and all its secondary windows.</p>
-<dt><code>f.move</code></p>
-<dd>This function initiates an interactive move of a client window.</p>
-<dt><code>f.next_cmap</code></p>
-<dd>This function installs the next colormap in the list of colormaps for the window with the colormap focus.</p>
-<dt><code>f.next_key</code> [ <i>icon</i> | <i>window</i> | <i>transient</i>]</p>
-<dd>This function sets the keyboard input focus to the next window/icon in the set of windows/icons managed by the window manager (the ordering of this set is based on the stacking of windows on the screen). This function is treated as <code>f.nop</code> if <code>keyboardFocusPolicy</code> is not explicit. The keyboard input focus is only moved to windows that do not have an associated secondary window that is application modal. If the <i>transient</i> argument is specified, then transient (secondary) windows are traversed (otherwise, if only <i>window</i> is specified, traversal is done only to the last focused window in a transient group). If an <i>icon</i> function argument is specified, then the function applies only to icons. If a <i>window</i> function argument is specified, then the function applies only to windows.</p>
-<dt><code>f.nop</code></p>
-<dd>This function does nothing.</p>
-<dt><code>f.normalize</code></p>
-<dd>This function causes a client window to be displayed with its normal size. Secondary windows (that is, transient windows) are placed in their normal state along with their associated primary window.</p>
-<dt><code>f.normalize_and_raise</code></p>
-<dd>This function causes a client window to be displayed with its normal size and raised to the top of the window stack. Secondary windows (that is, transient windows) are placed in their normal state along with their associated primary window.</p>
-<dt><code>f.pack_icons</code></p>
-<dd>This function is used to relayout icons (based on the layout policy being used) on the root window or in the icon box. In general this causes icons to be &quot;packed&quot; into the icon grid.</p>
-<dt><code>f.pass_keys</code></p>
-<dd>This function is used to enable/disable (toggle) processing of key bindings for window manager functions. When it disables key binding processing all keys are passed on to the window with the keyboard input focus and no window manager functions are invoked. If the <code>f.pass_keys</code> function is invoked with a key binding to disable key binding processing the same key binding can be used to enable key binding processing.</p>
-<dt><code>f.post_wmenu</code></p>
-<dd>This function is used to post the window menu. If a key is used to post the window menu and a window menu button is present, the window menu is automatically placed with its top-left corner at the bottom-left corner of the window menu button for the client window. If no window menu button is present, the window menu is placed at the top-left corner of the client window.</p>
-<dt><code>f.prev_cmap</code></p>
-<dd>This function installs the previous colormap in the list of colormaps for the window with the colormap focus.</p>
-<dt><code>f.prev_key</code> [ <i>icon</i> | <i>window</i> | <i>transient</i>]</p>
-<dd>This function sets the keyboard input focus to the previous window/icon in the set of windows/icons managed by the window manager (the ordering of this set is based on the stacking of windows on the screen). This function is treated as <code>f.nop</code> if <i>keyboardFocusPolicy</i> is not explicit. The keyboard input focus is only moved to windows that do not have an associated secondary window that is application modal. If the <i>transient</i> argument is specified, then transient (secondary) windows are traversed (otherwise, if only <i>window</i> is specified, traversal is done only to the last focused window in a transient group). If an <i>icon</i> function argument is specified then the function applies only to icons. If an <i>window</i> function argument is specified then the function applies only to windows.</p>
-<dt><code>f.quit_mwm</code></p>
-<dd>This function terminates mwm (but NOT the X window system).</p>
-<dt><code>f.raise</code>&nbsp;<wbr>[<i>&#8211;</i><i>client</i> | <i>within</i> | <i>freeFamily</i>]</p>
-<dd>This function raises a primary window to the top of the global window stack (where it is obscured by no other window) and raises the secondary window (transient window or dialog box) within the client family. The arguments to this function are mutually exclusive. The <i>client</i> argument indicates the name or class of a client to lower. If the <i>client</i> is not specified, the context that the function was invoked in indicates the window or icon to lower. Specifying <i>within</i> raises the secondary window within the family but does not raise the client family in the global window stack. Specifying <i>freeFamily</i> raises the window to the top of its local family stack and raises the family to the top of the global window stack.</p>
-<dt><code>f.raise_lower</code>&nbsp;<wbr>[ <i>within</i> | <i>freeFamily</i>]</p>
-<dd>This function raises a primary window to the top of the global window stack if it is partially obscured by another window; otherwise, it lowers the window to the bottom of the window stack. The arguments to this function are mutually exclusive. Specifying <i>within</i> raises a secondary window within the family (staying above the parent window), if it is partially obscured by another window in the application&#8217;s family; otherwise, it lowers the window to the bottom of the family stack. It has no effect on the global window stacking order. Specifying <i>freeFamily</i> raises the window to the top of its local family stack, if obscured by another window, and raises the family to the top of the global window stack; otherwise, it lowers the window to the bottom of its local family stack and lowers the family to the bottom of the global window stack.</p>
-<dt><code>f.refresh</code></p>
-<dd>This function causes all windows to be redrawn.</p>
-<dt><code>f.refresh_win</code></p>
-<dd>This function causes a client window to be redrawn.</p>
-<dt><code>f.resize</code></p>
-<dd>This function initiates an interactive resize of a client window.</p>
-<dt><code>f.restore</code></p>
-<dd>This function restores the previous state of an icon&#8217;s associated window. If a maximized window is iconified, then <code>f.restore</code> restores it to its maximized state. If a normal window is iconified, then <code>f.restore</code> restores it to its normalized state.</p>
-<dt><code>f.restore_and_raise</code></p>
-<dd>This function restores the previous state of an icon&#8217;s associated window and raises the window to the top of the window stack. If a maximized window is iconified, then <code>f.restore_and_raise</code> restores it to its maximized state and raises it to the top of the window stack. If a normal window is iconified, then <code>f.restore_and_raise</code> restores it to its normalized state and raises it to the top of the window stack.</p>
-<dt><code>f.restart</code></p>
-<dd>This function causes mwm to be restarted (effectively terminated and re-executed). Restart is necessary for <code>mwm</code> to incorporate changes in both the <code>mwmrc</code> file and X resources.</p>
-<dt><code>f.screen</code>&nbsp;<wbr>[ <i>next</i> | <i>prev</i> | <i>back</i> | <i>screen_number</i>]</p>
-<dd>This function causes the pointer to be warp to a specific screen number or to the <i>next</i>, <i>previous</i>, or last visited (<i>back</i>) screen. The arguments to this function are mutually exclusive. The <i>screen_number</i> argument indicates the screen number that the pointer is to be warped. Screens are numbered starting from screen 0. Specifying <i>next</i> cause the pointer to warp to the next managed screen (skipping over any unmanaged screens). Specifying <i>prev</i> cause the pointer to warp to the previous managed screen (skipping over any unmanaged screens). Specifying <i>back</i> cause the pointer to warp to the last visited screen.</p>
-<dt><code>f.send_msg</code> <i>message_number</i></p>
-<dd>This function sends an <code>XClientMessageEvent</code> of type <code>_MOTIF_WM_MESSAGES</code> with <i>message_type</i> set to <i>message_number</i>. The client message is sent only if <i>message_number</i> is included in the client&#8217;s <code>_MOTIF_WM_MESSAGES</code> property. A menu item label is grayed out if the menu item is used to do <code>f.send_msg</code> of a message that is not included in the client&#8217;s <code>_MOTIF_WM_MESSAGES</code> property.</p>
-<dt><code>f.separator</code></p>
-<dd>This function causes a menu separator to be put in the menu pane at the specified location (the label is ignored).</p>
-<dt><code>f.set_behavior</code></p>
-<dd>This function causes the window manager to restart with the default behavior (if a custom behavior is configured) or a custom behavior (if a default behavior is configured). By default this is bound to <i>Shift Ctrl Alt&nbsp;<wbr>&lt;Key&gt;!</i>.</p>
-<dt><code>f.title</code></p>
-<dd>This function inserts a title in the menu pane at the specified location.</p>
-<dt><code>f.version</code></p>
-<dd>This function causes the window manager to display its release version in a dialog box.</dl>
+<dt><code>f.beep</code></dt>
+<dd>This function causes a beep.</dd>
+<dt><code>f.circle_down</code> [ <i>icon</i> | <i>window</i>]</dt>
+<dd>This function causes the window or icon that is on the top of the window stack to be put on the bottom of the window stack (so that it is no longer obscuring any other window or icon). This function affects only those windows and icons that are obscuring other windows and icons, or that are obscured by other windows and icons. Secondary windows (that is, transient windows) are restacked with their associated primary window. Secondary windows always stay on top of the associated primary window and there can be no other primary windows between the secondary windows and their primary window. If an <i>icon</i> function argument is specified, then the function applies only to icons. If a <i>window</i> function argument is specified then the function applies only to windows.</dd>
+<dt><code>f.circle_up</code> [ <i>icon</i> | <i>window</i>]</dt>
+<dd>This function raises the window or icon on the bottom of the window stack (so that it is not obscured by any other windows). This function affects only those windows and icons that are obscuring other windows and icons, or that are obscured by other windows and icons. Secondary windows (that is, transient windows) are restacked with their associated primary window. If an <i>icon</i> function argument is specified then the function applies only to icons. If an <i>window</i> function argument is specified then the function applies only to windows.</dd>
+<dt><code>f.exec</code> <code>command</code> (or <i>!</i> <code>command</code>)</dt>
+<dd>This function causes <i>command</i> to be executed (using the value of the <i>$MWMSHELL</i> or <i>$SHELL</i> environment variable if set; otherwise, <code>/bin/sh</code> ). The <i>!</i> notation can be used in place of the <code>f.exec</code> function name.</dd>
+<dt><code>f.focus_color</code></dt>
+<dd>This function sets the colormap focus to a client window. If this function is done in a root context, then the default colormap (setup by the X Window System for the screen where <code>mwm</code> is running) is installed and there is no specific client window colormap focus. This function is treated as <code>f.nop</code> if <i>colormapFocusPolicy</i> is not explicit.</dd>
+<dt><code>f.focus_key</code></dt>
+<dd>This function sets the keyboard input focus to a client window or icon. This function is treated as <code>f.nop</code> if <i>keyboardFocusPolicy</i> is not explicit or the function is executed in a root context.</dd>
+<dt><code>f.kill</code></dt>
+<dd>This function is used to close application windows. The actual processing that occurs depends on the protocols that the application observes. The application lists the protocols it observes in the <code>WM_PROTOCOLS</code> property on its top level window. If the application observes the <code>WM_DELETE_WINDOW</code> protocol, it is sent a message that requests the window be deleted. If the application observes both <code>WM_DELETE_WINDOW</code> and <code>WM_SAVE_YOURSELF</code>, it is sent one message requesting the window be deleted and another message advising it to save its state. If the application observes only the <code>WM_SAVE_YOURSELF</code>protocol <i>,</i> it is sent a message advising it to save its state. After a delay (specified by the resource <i>quitTimeout</i>), the application&#8217;s connection to the X server is terminated. If the application observes neither of these protocols, its connection to the X server is terminated.</dd>
+<dt><code>f.lower</code>&nbsp;<wbr>[<i>&#8211;</i> <code>client</code> | <i>within</i>&nbsp;<wbr>| <i>freeFamily</i>]</dt>
+<dd>This function lowers a primary window to the bottom of the global window stack (where it obscures no other window) and lowers the secondary window (transient window or dialog box) within the client family. The arguments to this function are mutually exclusive. The <i>client</i> argument indicates the name or class of a client to lower. The name or class of a client appears in the <code>WM_CLASS</code> property on the client&#8217;s top-level window. If the <i>client</i> argument is not specified, the context that the function was invoked in indicates the window or icon to lower. Specifying <i>within</i> lowers the secondary window within the family (staying above the parent) but does not lower the client family in the global window stack. Specifying <i>freeFamily</i> lowers the window to the bottom of the global windows stack from its local family stack.</dd>
+<dt><code>f.maximize</code></dt>
+<dd>This function causes a client window to be displayed with its maximum size. Refer to the <i>maximumClientSize</i>, <i>maximumMaximumSize</i>, and <i>limitResize</i> resources in <code><a href="/docs/linux/man/1-mwm/">mwm</a></code>(1).</dd>
+<dt><code>f.menu</code> <i>menu_name</i></dt>
+<dd>This function associates a cascading (pull-right) menu with a menu pane entry or a menu with a button or key binding. The <i>menu_name</i> function argument identifies the menu to be used.</dd>
+<dt><code>f.minimize</code></dt>
+<dd>This function causes a client window to be minimized (iconified). When a window is minimized with no icon box in use, and if the <i>lowerOnIconify</i> resource has the value True (the default), the icon is placed on the bottom of the window stack (such that it obscures no other window). If an icon box is used, then the client&#8217;s icon changes to its iconified form inside the icon box. Secondary windows (that is, transient windows) are minimized with their associated primary window. There is only one icon for a primary window and all its secondary windows.</dd>
+<dt><code>f.move</code></dt>
+<dd>This function initiates an interactive move of a client window.</dd>
+<dt><code>f.next_cmap</code></dt>
+<dd>This function installs the next colormap in the list of colormaps for the window with the colormap focus.</dd>
+<dt><code>f.next_key</code> [ <i>icon</i> | <i>window</i> | <i>transient</i>]</dt>
+<dd>This function sets the keyboard input focus to the next window/icon in the set of windows/icons managed by the window manager (the ordering of this set is based on the stacking of windows on the screen). This function is treated as <code>f.nop</code> if <code>keyboardFocusPolicy</code> is not explicit. The keyboard input focus is only moved to windows that do not have an associated secondary window that is application modal. If the <i>transient</i> argument is specified, then transient (secondary) windows are traversed (otherwise, if only <i>window</i> is specified, traversal is done only to the last focused window in a transient group). If an <i>icon</i> function argument is specified, then the function applies only to icons. If a <i>window</i> function argument is specified, then the function applies only to windows.</dd>
+<dt><code>f.nop</code></dt>
+<dd>This function does nothing.</dd>
+<dt><code>f.normalize</code></dt>
+<dd>This function causes a client window to be displayed with its normal size. Secondary windows (that is, transient windows) are placed in their normal state along with their associated primary window.</dd>
+<dt><code>f.normalize_and_raise</code></dt>
+<dd>This function causes a client window to be displayed with its normal size and raised to the top of the window stack. Secondary windows (that is, transient windows) are placed in their normal state along with their associated primary window.</dd>
+<dt><code>f.pack_icons</code></dt>
+<dd>This function is used to relayout icons (based on the layout policy being used) on the root window or in the icon box. In general this causes icons to be &quot;packed&quot; into the icon grid.</dd>
+<dt><code>f.pass_keys</code></dt>
+<dd>This function is used to enable/disable (toggle) processing of key bindings for window manager functions. When it disables key binding processing all keys are passed on to the window with the keyboard input focus and no window manager functions are invoked. If the <code>f.pass_keys</code> function is invoked with a key binding to disable key binding processing the same key binding can be used to enable key binding processing.</dd>
+<dt><code>f.post_wmenu</code></dt>
+<dd>This function is used to post the window menu. If a key is used to post the window menu and a window menu button is present, the window menu is automatically placed with its top-left corner at the bottom-left corner of the window menu button for the client window. If no window menu button is present, the window menu is placed at the top-left corner of the client window.</dd>
+<dt><code>f.prev_cmap</code></dt>
+<dd>This function installs the previous colormap in the list of colormaps for the window with the colormap focus.</dd>
+<dt><code>f.prev_key</code> [ <i>icon</i> | <i>window</i> | <i>transient</i>]</dt>
+<dd>This function sets the keyboard input focus to the previous window/icon in the set of windows/icons managed by the window manager (the ordering of this set is based on the stacking of windows on the screen). This function is treated as <code>f.nop</code> if <i>keyboardFocusPolicy</i> is not explicit. The keyboard input focus is only moved to windows that do not have an associated secondary window that is application modal. If the <i>transient</i> argument is specified, then transient (secondary) windows are traversed (otherwise, if only <i>window</i> is specified, traversal is done only to the last focused window in a transient group). If an <i>icon</i> function argument is specified then the function applies only to icons. If an <i>window</i> function argument is specified then the function applies only to windows.</dd>
+<dt><code>f.quit_mwm</code></dt>
+<dd>This function terminates mwm (but NOT the X window system).</dd>
+<dt><code>f.raise</code>&nbsp;<wbr>[<i>&#8211;</i><i>client</i> | <i>within</i> | <i>freeFamily</i>]</dt>
+<dd>This function raises a primary window to the top of the global window stack (where it is obscured by no other window) and raises the secondary window (transient window or dialog box) within the client family. The arguments to this function are mutually exclusive. The <i>client</i> argument indicates the name or class of a client to lower. If the <i>client</i> is not specified, the context that the function was invoked in indicates the window or icon to lower. Specifying <i>within</i> raises the secondary window within the family but does not raise the client family in the global window stack. Specifying <i>freeFamily</i> raises the window to the top of its local family stack and raises the family to the top of the global window stack.</dd>
+<dt><code>f.raise_lower</code>&nbsp;<wbr>[ <i>within</i> | <i>freeFamily</i>]</dt>
+<dd>This function raises a primary window to the top of the global window stack if it is partially obscured by another window; otherwise, it lowers the window to the bottom of the window stack. The arguments to this function are mutually exclusive. Specifying <i>within</i> raises a secondary window within the family (staying above the parent window), if it is partially obscured by another window in the application&#8217;s family; otherwise, it lowers the window to the bottom of the family stack. It has no effect on the global window stacking order. Specifying <i>freeFamily</i> raises the window to the top of its local family stack, if obscured by another window, and raises the family to the top of the global window stack; otherwise, it lowers the window to the bottom of its local family stack and lowers the family to the bottom of the global window stack.</dd>
+<dt><code>f.refresh</code></dt>
+<dd>This function causes all windows to be redrawn.</dd>
+<dt><code>f.refresh_win</code></dt>
+<dd>This function causes a client window to be redrawn.</dd>
+<dt><code>f.resize</code></dt>
+<dd>This function initiates an interactive resize of a client window.</dd>
+<dt><code>f.restore</code></dt>
+<dd>This function restores the previous state of an icon&#8217;s associated window. If a maximized window is iconified, then <code>f.restore</code> restores it to its maximized state. If a normal window is iconified, then <code>f.restore</code> restores it to its normalized state.</dd>
+<dt><code>f.restore_and_raise</code></dt>
+<dd>This function restores the previous state of an icon&#8217;s associated window and raises the window to the top of the window stack. If a maximized window is iconified, then <code>f.restore_and_raise</code> restores it to its maximized state and raises it to the top of the window stack. If a normal window is iconified, then <code>f.restore_and_raise</code> restores it to its normalized state and raises it to the top of the window stack.</dd>
+<dt><code>f.restart</code></dt>
+<dd>This function causes mwm to be restarted (effectively terminated and re-executed). Restart is necessary for <code>mwm</code> to incorporate changes in both the <code>mwmrc</code> file and X resources.</dd>
+<dt><code>f.screen</code>&nbsp;<wbr>[ <i>next</i> | <i>prev</i> | <i>back</i> | <i>screen_number</i>]</dt>
+<dd>This function causes the pointer to be warp to a specific screen number or to the <i>next</i>, <i>previous</i>, or last visited (<i>back</i>) screen. The arguments to this function are mutually exclusive. The <i>screen_number</i> argument indicates the screen number that the pointer is to be warped. Screens are numbered starting from screen 0. Specifying <i>next</i> cause the pointer to warp to the next managed screen (skipping over any unmanaged screens). Specifying <i>prev</i> cause the pointer to warp to the previous managed screen (skipping over any unmanaged screens). Specifying <i>back</i> cause the pointer to warp to the last visited screen.</dd>
+<dt><code>f.send_msg</code> <i>message_number</i></dt>
+<dd>This function sends an <code>XClientMessageEvent</code> of type <code>_MOTIF_WM_MESSAGES</code> with <i>message_type</i> set to <i>message_number</i>. The client message is sent only if <i>message_number</i> is included in the client&#8217;s <code>_MOTIF_WM_MESSAGES</code> property. A menu item label is grayed out if the menu item is used to do <code>f.send_msg</code> of a message that is not included in the client&#8217;s <code>_MOTIF_WM_MESSAGES</code> property.</dd>
+<dt><code>f.separator</code></dt>
+<dd>This function causes a menu separator to be put in the menu pane at the specified location (the label is ignored).</dd>
+<dt><code>f.set_behavior</code></dt>
+<dd>This function causes the window manager to restart with the default behavior (if a custom behavior is configured) or a custom behavior (if a default behavior is configured). By default this is bound to <i>Shift Ctrl Alt&nbsp;<wbr>&lt;Key&gt;!</i>.</dd>
+<dt><code>f.title</code></dt>
+<dd>This function inserts a title in the menu pane at the specified location.</dd>
+<dt><code>f.version</code></dt>
+<dd>This function causes the window manager to display its release version in a dialog box.</dd></dl>
 <h3>Function Constraints</h3>
 <p>Each function may be constrained as to which resource types can specify the function (for example, menu pane) and also what context the function can be used in (for example, the function is done to the selected client window). Function contexts are:</p>
 <dl>
-<dt><i>root</i></p>
-<dd>No client window or icon has been selected as an object for the function.</p>
-<dt><i>window</i></p>
-<dd>A client window has been selected as an object for the function. This includes the window&#8217;s title bar and frame. Some functions are applied only when the window is in its normalized state (for example, <code>f.maximize</code>) or its maximized state (for example, <code>f.normalize</code>).</p>
-<dt><i>icon</i></p>
-<dd>An icon has been selected as an object for the function.</dl>
+<dt><i>root</i></dt>
+<dd>No client window or icon has been selected as an object for the function.</dd>
+<dt><i>window</i></dt>
+<dd>A client window has been selected as an object for the function. This includes the window&#8217;s title bar and frame. Some functions are applied only when the window is in its normalized state (for example, <code>f.maximize</code>) or its maximized state (for example, <code>f.normalize</code>).</dd>
+<dt><i>icon</i></dt>
+<dd>An icon has been selected as an object for the function.</dd></dl>
 <p> If a function is specified in a type of resource where it is not supported or is invoked in a context that does not apply then the function is treated as <code>f.nop</code>. The following table indicates the resource types and function contexts in which window manager functions apply. </p>
 <table>
 <tr VALIGN=top>

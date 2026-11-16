@@ -15,18 +15,18 @@ description: "suffix2instance – Directory Server script for finding a backend 
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-s</code> <i>Suffix DN</i></p>
-<dd>The suffix DN to be mapped to a backend name. Example: &quot;dc=example,dc=com&quot;</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-s</code> <i>Suffix DN</i></dt>
+<dd>The suffix DN to be mapped to a backend name. Example: &quot;dc=example,dc=com&quot;</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>suffix2instance -s &#8216;dc=example,dc=com&#8217;</p>
+<dt>suffix2instance -s &#8216;dc=example,dc=com&#8217;</dt>
 <dd>
-<dt>suffix2instance -Z instance3 -s &#8216;dc=example,dc=com&#8217;</p>
-<dd></dl>
+</dd><dt>suffix2instance -Z instance3 -s &#8216;dc=example,dc=com&#8217;</dt>
+<dd></dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

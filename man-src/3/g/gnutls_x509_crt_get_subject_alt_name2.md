@@ -14,18 +14,18 @@ description: "gnutls_x509_crt_get_subject_alt_name2 – API function"
 <p> <code>int gnutls_x509_crt_get_subject_alt_name2(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>san</i><code>, size_t * </code><i>san_size</i><code>, unsigned int * </code><i>san_type</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>unsigned int seq</p>
-<dd> specifies the sequence number of the alt name (0 for the first one, 1 for the second etc.)</p>
-<dt>void * san</p>
-<dd> is the place where the alternative name will be copied to</p>
-<dt>size_t * san_size</p>
-<dd> holds the size of ret.</p>
-<dt>unsigned int * san_type</p>
-<dd> holds the type of the alternative name (one of gnutls_x509_subject_alt_name_t).</p>
-<dt>unsigned int * critical</p>
-<dd> will be non-zero if the extension is marked as critical (may be null)</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>unsigned int seq</dt>
+<dd> specifies the sequence number of the alt name (0 for the first one, 1 for the second etc.)</dd>
+<dt>void * san</dt>
+<dd> is the place where the alternative name will be copied to</dd>
+<dt>size_t * san_size</dt>
+<dd> holds the size of ret.</dd>
+<dt>unsigned int * san_type</dt>
+<dd> holds the type of the alternative name (one of gnutls_x509_subject_alt_name_t).</dd>
+<dt>unsigned int * critical</dt>
+<dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the alternative names, contained in the given certificate. It is the same as <code>gnutls_x509_crt_get_subject_alt_name()</code> except for the fact that it will return the type of the alternative name in <i>san_type</i> even if the function fails for some reason (i.e. the buffer provided is not enough).</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_x509_crt_get_subject_alt_name2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

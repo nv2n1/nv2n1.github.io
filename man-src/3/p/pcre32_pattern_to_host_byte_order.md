@@ -12,10 +12,8 @@ description: "PCRE – Perl-compatible regular expressions"
 <pre><code>#include &lt;pcre.h&gt;
 int pcre_pattern_to_host_byte_order(pcre *code,
                                     pcre_extra *extra, const unsigned char *tables);
-
 int pcre16_pattern_to_host_byte_order(pcre16 *code,
                                       pcre16_extra *extra, const unsigned char *tables);
-
 int pcre32_pattern_to_host_byte_order(pcre32 *code,
                                       pcre32_extra *extra, const unsigned char *tables);</code></pre>
 <h2>Description</h2>

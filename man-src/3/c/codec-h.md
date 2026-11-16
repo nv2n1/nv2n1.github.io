@@ -133,46 +133,46 @@ description: "daala/codec.h – The shared libdaala C API."
 <p>Initialize the logging module. This should be called once before invoking any other Daala functions if logging support is enabled and you want to use it. Otherwise no logging messages will be printed. </p>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> Success. This function always succeeds. It only returns a value for convenience (e.g., for use in a static initializer).</dl>
+<dd><i>0</i> Success. This function always succeeds. It only returns a value for convenience (e.g., for use in a static initializer).</dd></dl>
 <h3>void daala_comment_init (<code>daala_comment</code> *dc)</h3>
 <p>Initializes a <code>daala_comment</code> section. Users should free the returned data with <code>daala_comment_clear()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dc</i> A <code>daala_comment</code> structure.</dl>
+<dd><i>dc</i> A <code>daala_comment</code> structure.</dd></dl>
 <h3>void daala_comment_clear (<code>daala_comment</code> *dc)</h3>
 <p>Free resources allocated for metadata. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dc</i> A <code>daala_comment</code> structure.</dl>
+<dd><i>dc</i> A <code>daala_comment</code> structure.</dd></dl>
 <h3>double daala_granule_time (void *encdec, int64_tgranpos)</h3>
 <p>Converts a granule position to an absolute time in seconds. The granule position is interpreted in the context of a given <code>daala_enc_ctx</code> or <code>daala_dec_ctx</code> handle (either will suffice). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>encdec</i> A previously allocated <code>daala_enc_ctx</code> or <code>daala_dec_ctx</code> handle.<br />
- <i>granpos</i> The granule position to convert.</dl>
+ <i>granpos</i> The granule position to convert.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The absolute time in seconds corresponding to <i>granpos</i>. This is the &#8216;end time&#8217; for the frame, or the latest time it should be displayed. It is not the presentation time.</dl>
+<dd>The absolute time in seconds corresponding to <i>granpos</i>. This is the &#8216;end time&#8217; for the frame, or the latest time it should be displayed. It is not the presentation time.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>-1</i> The given granule position was invalid (i.e. negative).</dl>
+<dd><i>-1</i> The given granule position was invalid (i.e. negative).</dd></dl>
 <h3>int daala_packet_isheader (<code>daala_packet</code> *dpkt)</h3>
 <p>Determines whether a Daala packet is a header or not. This function does no verification beyond checking the packet type bit, so it should not be used for bitstream identification. Use daala_decode_headerin() for that. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dpkt</i> A <code>daala_packet</code> structure.</dl>
+<dd><i>dpkt</i> A <code>daala_packet</code> structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>1</i> The packet is a header packet.<br />
- <i>0</i> The packet is a video data packet.</dl>
+ <i>0</i> The packet is a video data packet.</dd></dl>
 <h3>int daala_packet_iskeyframe (<code>daala_packet</code> *dpkt)</h3>
 <p>Determines whether a Daala packet is a key frame or not. This function does no verfication beyond checking the packet type and key frame bits, so it should not be used for bitstream identification. Feed the packet to an actual decoder for that. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dpkt</i> A <code>daala_packet</code> structure.</dl>
+<dd><i>dpkt</i> A <code>daala_packet</code> structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>1</i> The packet contains a key frame.<br />
- <i>0</i> The packet contains a delta frame.</dl>
+ <i>0</i> The packet contains a delta frame.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for daala from the source code.</p>

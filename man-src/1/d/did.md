@@ -36,34 +36,34 @@ did last month
 <h3>Select</h3>
 <p> At least one email address needs to be provided on command line unless defined in the config file. Use the complete email address format <code>Name Surname &lt;email [at] example.org&gt;</code> to display full name in the report output. For date values <code>today</code> and <code>yesterday</code> can be used instead of the full date format.</p>
 <dl>
-<dt><code>&#8211;email=</code><i>EMAILS</i></p>
-<dd> User email address(es)</p>
-<dt><code>&#8211;since=</code><i>SINCE</i></p>
-<dd> Start date in the YYYY-MM-DD format</p>
-<dt><code>&#8211;until=</code><i>UNTIL</i></p>
-<dd> End date in the YYYY-MM-DD format</dl>
+<dt><code>&#8211;email=</code><i>EMAILS</i></dt>
+<dd> User email address(es)</dd>
+<dt><code>&#8211;since=</code><i>SINCE</i></dt>
+<dd> Start date in the YYYY-MM-DD format</dd>
+<dt><code>&#8211;until=</code><i>UNTIL</i></dt>
+<dd> End date in the YYYY-MM-DD format</dd></dl>
 <h3>Format</h3>
 <p> The default output is plain text of maximum width 79 characters. This can adjusted using the <code>&#8211;width</code> parameter. To disable shortening altogether use <code>&#8211;width=0</code>. The default width value can be saved in the config file as well. Use <code>&#8211;format=wiki</code> to enable simple MoinMoin wiki syntax. For stats which support them, <code>&#8211;brief</code> and <code>&#8211;verbose</code> can be used to specify a different level of detail to be shown.</p>
 <dl>
-<dt><code>&#8211;format=</code><i>FMT</i></p>
-<dd> Output style, possible values: text (default) or wiki</p>
-<dt><code>&#8211;width=</code><i>WIDTH</i></p>
-<dd> Maximum width of the report output (default: 79)</p>
-<dt><code>&#8211;brief</code></p>
-<dd> Show brief summary only, do not list individual items</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Include more details (like modified git directories)</dl>
+<dt><code>&#8211;format=</code><i>FMT</i></dt>
+<dd> Output style, possible values: text (default) or wiki</dd>
+<dt><code>&#8211;width=</code><i>WIDTH</i></dt>
+<dd> Maximum width of the report output (default: 79)</dd>
+<dt><code>&#8211;brief</code></dt>
+<dd> Show brief summary only, do not list individual items</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Include more details (like modified git directories)</dd></dl>
 <h3>Utils</h3>
 <p> Multiple emails can be used to put together a team report or to gather stats for all of your email aliases. For this use case <code>&#8211;total</code> and <code>&#8211;merge</code> can be used to append the overall summary at the end or merge all results into a single report respectively. Use <code>&#8211;debug</code> or set the environment variable <code>DEBUG</code> to 1 through 5 to set the desired level of debugging.</p>
 <dl>
-<dt><code>&#8211;config=</code><i>FILE</i></p>
-<dd> Use alternate configuration file (default: &#8216;config&#8217;)</p>
-<dt><code>&#8211;total</code></p>
-<dd> Append total stats after listing individual users</p>
-<dt><code>&#8211;merge</code></p>
-<dd> Merge stats of all users into a single report</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Turn on debugging output, do not catch exceptions </p>
+<dt><code>&#8211;config=</code><i>FILE</i></dt>
+<dd> Use alternate configuration file (default: &#8216;config&#8217;)</dd>
+<dt><code>&#8211;total</code></dt>
+<dd> Append total stats after listing individual users</dd>
+<dt><code>&#8211;merge</code></dt>
+<dd> Merge stats of all users into a single report</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Turn on debugging output, do not catch exceptions </dd>
 <p> See <code>did &#8211;help</code> for complete list of available options.</dl>
 <h2>INSTALL</h2>
 <p> Install directly from Fedora/Copr repository: </p>
@@ -120,3 +120,4 @@ status = Status: Green | Yellow | Orange | Red
 <p> Copyright (c) 2015 Red Hat, Inc. All rights reserved. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <h2>Index</h2>
+</p>

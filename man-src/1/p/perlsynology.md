@@ -19,39 +19,39 @@ description: "perlsynology – Perl 5 on Synology DSM systems"
 <p> <i></i><font SIZE="-1"><i>DSM 5</i></font><i></i> </p>
 <p> As <font SIZE="-1">DSM</font> is a trimmed-down Linux system, it lacks many of the tools and libraries commonly found on Linux. The basic tools like sh, cp, rm, etc. are implemented using BusyBox &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/BusyBox">http://en.wikipedia.org/wiki/BusyBox</a>&gt;.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Using your favourite browser open the <font SIZE="-1">DSM</font> management page and start the Package Center.</p>
-<dt>&bull;</p>
-<dd> If you want to smoke test Perl, install <tt>&quot;Perl&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> In Settings, add the following Package Sources: </p>
+<dt>&bull;</dt>
+<dd> Using your favourite browser open the <font SIZE="-1">DSM</font> management page and start the Package Center.</dd>
+<dt>&bull;</dt>
+<dd> If you want to smoke test Perl, install <tt>&quot;Perl&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> In Settings, add the following Package Sources: </dd>
 <pre>
   <a rel="nofollow" href="http://www.cphub.net">http://www.cphub.net</a>
   <a rel="nofollow" href="http://packages.quadrat4.de">http://packages.quadrat4.de</a>
 </pre>
-<dt>&bull;</p>
-<dd> Still in Settings, in Channel Update, select Beta Channel.</p>
-<dt>&bull;</p>
-<dd> Press Refresh. In the left panel the item &#8220;Community&#8221; will appear. Click it. Select &#8220;Bootstrap Installer Beta&#8221; and install it.</p>
-<dt>&bull;</p>
-<dd> Likewise, install &#8220;iPKGui Beta&#8221;. </p>
+<dt>&bull;</dt>
+<dd> Still in Settings, in Channel Update, select Beta Channel.</dd>
+<dt>&bull;</dt>
+<dd> Press Refresh. In the left panel the item &#8220;Community&#8221; will appear. Click it. Select &#8220;Bootstrap Installer Beta&#8221; and install it.</dd>
+<dt>&bull;</dt>
+<dd> Likewise, install &#8220;iPKGui Beta&#8221;. </dd>
 <p> The application window should now show an icon for iPKGui.</p>
-<dt>&bull;</p>
-<dd> Start iPKGui. Install the packages <tt>&quot;make&quot;</tt>, <tt>&quot;gcc&quot;</tt> and <tt>&quot;coreutils&quot;</tt>. </p>
+<dt>&bull;</dt>
+<dd> Start iPKGui. Install the packages <tt>&quot;make&quot;</tt>, <tt>&quot;gcc&quot;</tt> and <tt>&quot;coreutils&quot;</tt>. </dd>
 <p> If you want to smoke test Perl, install <tt>&quot;patch&quot;</tt>.</dl>
 <p> The next step is to add some symlinks to system libraries. For example, the development software expect a library <tt>&quot;libm.so&quot;</tt> that normally is a symlink to <tt>&quot;libm.so.6&quot;</tt>. Synology only provides the latter and not the symlink. </p>
 <p> Here the actual architecture of the Synology system matters. You have to find out where the gcc libraries have been installed. Look in /opt for a directory similar to arm-none-linux-gnueab or powerpc-linux-gnuspe. In the instructions below I&#8217;ll use powerpc-linux-gnuspe as an example.</p>
 <dl>
-<dt>&bull;</p>
-<dd> On the <font SIZE="-1">DSM</font> management page start the Control Panel.</p>
-<dt>&bull;</p>
-<dd> Click Terminal, and enable <font SIZE="-1">SSH</font> service.</p>
-<dt>&bull;</p>
-<dd> Close Terminal and the Control Panel.</p>
-<dt>&bull;</p>
-<dd> Open a shell on the Synology using ssh and become root.</p>
-<dt>&bull;</p>
-<dd> Execute the following commands: </p>
+<dt>&bull;</dt>
+<dd> On the <font SIZE="-1">DSM</font> management page start the Control Panel.</dd>
+<dt>&bull;</dt>
+<dd> Click Terminal, and enable <font SIZE="-1">SSH</font> service.</dd>
+<dt>&bull;</dt>
+<dd> Close Terminal and the Control Panel.</dd>
+<dt>&bull;</dt>
+<dd> Open a shell on the Synology using ssh and become root.</dd>
+<dt>&bull;</dt>
+<dd> Execute the following commands: </dd>
 <pre>
   cd /lib
   ln -s libm.so.6 libm.so
@@ -94,13 +94,13 @@ perladmin = "your.email [at] goes.here"
 <p> No known problems yet </p>
 <p> <i>Build</i></p>
 <dl>
-<dt>Error message &quot;No error definitions found&quot;.</p>
-<dd> This error is generated when it is not possible to find the local definitions for error codes, due to the uncommon structure of the Synology file system. </p>
+<dt>Error message &quot;No error definitions found&quot;.</dt>
+<dd> This error is generated when it is not possible to find the local definitions for error codes, due to the uncommon structure of the Synology file system. </dd>
 <p> This error was fixed in the Perl development git for version 5.19, commit 7a8f1212e5482613c8a5b0402528e3105b26ff24.</dl>
 <p> <i>Failing tests</i></p>
 <dl>
-<dt><i>ext/DynaLoader/t/DynaLoader.t</i></p>
-<dd> One subtest fails due to the uncommon structure of the Synology file system. The file <i>/lib/glibc.so</i> is missing. </p>
+<dt><i>ext/DynaLoader/t/DynaLoader.t</i></dt>
+<dd> One subtest fails due to the uncommon structure of the Synology file system. The file <i>/lib/glibc.so</i> is missing. </dd>
 <p> <font SIZE="-1"><code>WARNING:</code></font> Do not symlink <i>/lib/glibc.so.6</i> to <i>/lib/glibc.so</i> or some system components will start to fail.</dl>
 <h3>Smoke testing Perl 5</h3>
 <p> If building completes successfully, you can set up smoke testing as described in the Test::Smoke documentation. </p>
@@ -133,3 +133,4 @@ perladmin = "your.email [at] goes.here"
 <h2>AUTHOR</h2>
 <p> Johan Vromans &lt;jvromans [at] squirrel.nl&gt; H. Merijn Brand &lt;h.m.brand [at] xs4all.nl&gt; </p>
 <h2>Index</h2>
+</p>

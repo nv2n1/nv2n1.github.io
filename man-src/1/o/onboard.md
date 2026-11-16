@@ -17,32 +17,32 @@ description: "onboard – On-screen Keyboard"
 <h2>OPTIONS</h2>
 <p> <code>onboard</code> accepts the following command-line options:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a help with all available command line options and exit.</p>
-<dt><code>-l &lt;LAYOUT&gt;, &#8211;layout=&lt;LAYOUT&gt;</code></p>
-<dd> Layout file (.onboard) or name</p>
-<dt><code>-t &lt;THEME&gt;, &#8211;theme=&lt;THEME&gt;</code></p>
-<dd> Theme file (.theme) or name</p>
-<dt><code>-x &lt;X&gt;</code></p>
-<dd> Window x position</p>
-<dt><code>-y &lt;Y&gt;</code></p>
-<dd> Window y position</p>
-<dt><code>-s &lt;SIZE&gt;, &#8211;size=&lt;SIZE&gt;</code></p>
-<dd> Window size, widthxheight</p>
-<dt><code>-e, &#8211;xid</code></p>
-<dd> Start in XEmbed mode, e.g. for gnome-screensaver</p>
-<dt><code>-a, &#8211;keep-aspect</code></p>
-<dd> Keep aspect ratio when resizing the window</p>
-<dt><code>-d &lt;DEBUG&gt;, &#8211;debug=&lt;DEBUG&gt;</code></p>
-<dd> &lt;DEBUG&gt;={notset|debug|info|warning|error|critical}</p>
-<dt><code>-m, &#8211;allow-multiple-instances</code></p>
-<dd> Allow multiple Onboard instances</p>
-<dt><code>-q &lt;QUIRKS&gt;, &#8211;quirks=&lt;QUIRKS&gt;</code></p>
-<dd> Override auto-detection and manually select quirks QUIRKS={metacity|compiz|mutter}</p>
-<dt><code>&#8211;not-show-in=&lt;DESKTOPS&gt;</code></p>
-<dd> Silently fail to start in the given desktop environments. &lt;DESKTOPS&gt; is a comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell.</p>
-<dt><code>-g, &#8211;log-learning</code></p>
-<dd> log all learned text; off by default</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a help with all available command line options and exit.</dd>
+<dt><code>-l &lt;LAYOUT&gt;, &#8211;layout=&lt;LAYOUT&gt;</code></dt>
+<dd> Layout file (.onboard) or name</dd>
+<dt><code>-t &lt;THEME&gt;, &#8211;theme=&lt;THEME&gt;</code></dt>
+<dd> Theme file (.theme) or name</dd>
+<dt><code>-x &lt;X&gt;</code></dt>
+<dd> Window x position</dd>
+<dt><code>-y &lt;Y&gt;</code></dt>
+<dd> Window y position</dd>
+<dt><code>-s &lt;SIZE&gt;, &#8211;size=&lt;SIZE&gt;</code></dt>
+<dd> Window size, widthxheight</dd>
+<dt><code>-e, &#8211;xid</code></dt>
+<dd> Start in XEmbed mode, e.g. for gnome-screensaver</dd>
+<dt><code>-a, &#8211;keep-aspect</code></dt>
+<dd> Keep aspect ratio when resizing the window</dd>
+<dt><code>-d &lt;DEBUG&gt;, &#8211;debug=&lt;DEBUG&gt;</code></dt>
+<dd> &lt;DEBUG&gt;={notset|debug|info|warning|error|critical}</dd>
+<dt><code>-m, &#8211;allow-multiple-instances</code></dt>
+<dd> Allow multiple Onboard instances</dd>
+<dt><code>-q &lt;QUIRKS&gt;, &#8211;quirks=&lt;QUIRKS&gt;</code></dt>
+<dd> Override auto-detection and manually select quirks QUIRKS={metacity|compiz|mutter}</dd>
+<dt><code>&#8211;not-show-in=&lt;DESKTOPS&gt;</code></dt>
+<dd> Silently fail to start in the given desktop environments. &lt;DESKTOPS&gt; is a comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell.</dd>
+<dt><code>-g, &#8211;log-learning</code></dt>
+<dd> log all learned text; off by default</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>/usr/share/doc/onboard</code></p>
 <h2>AUTHOR</h2>

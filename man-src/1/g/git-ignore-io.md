@@ -33,7 +33,7 @@ description: "git-ignore-io – Get sample gitignore file"
 <p> Show sample gitignore file for vim</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git ignore - io vim
 #Created by https: // www.gitignore.io/api/vim
@@ -45,21 +45,19 @@ $ git ignore - io vim
                            .netrwhist *
                    ~
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Append sample gitignore for vim and python to .gitignore in current directory.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git ignore-io -a vim python
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Show all available types</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git ignore-io -l
     actionscript             ada                      agda                     android                  anjuta
@@ -68,12 +66,11 @@ $ git ignore-io -l
     bricxcc                  c                        c++                      cakephp                  carthage
     ......
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Search ja in all available types</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git ignore-io -s ja
     django
@@ -81,8 +78,7 @@ $ git ignore-io -s ja
     java
     ninja
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Lee-W <i>cl87654321 [at] gmail.com</i></p>
 <h2>REPORTING BUGS</h2>

@@ -16,30 +16,30 @@ description: "pki – Simple public key infrastructure (PKI) management tool"
 <p> Generate RSA and ECDSA key pairs, create PKCS#10 certificate requests containing subjectAltNames, create X.509 self-signed end-entity and root CA certificates, issue end-entity and intermediate CA certificates signed by the private key of a CA and containing subjectAltNames, CRL distribution points and URIs of OCSP servers. You can also extract raw public keys from private keys, certificate requests and certificates and compute two kinds of SHA-1-based key IDs.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Prints usage information and a short summary of the available commands.</p>
-<dt><code>-g, &#8211;gen</code></p>
-<dd> Generate a new private key.</p>
-<dt><code>-s, &#8211;self</code></p>
-<dd> Create a self-signed certificate.</p>
-<dt><code>-i, &#8211;issue</code></p>
-<dd> Issue a certificate using a CA certificate and key.</p>
-<dt><code>-c, &#8211;signcrl</code></p>
-<dd> Issue a CRL using a CA certificate and key.</p>
-<dt><code>-z, &#8211;acert</code></p>
-<dd> Issue an attribute certificate.</p>
-<dt><code>-r, &#8211;req</code></p>
-<dd> Create a PKCS#10 certificate request.</p>
-<dt><code>-7, &#8211;pkcs7</code></p>
-<dd> Provides PKCS#7 wrap/unwrap functions.</p>
-<dt><code>-k, &#8211;keyid</code></p>
-<dd> Calculate key identifiers of a key or certificate.</p>
-<dt><code>-a, &#8211;print</code></p>
-<dd> Print a credential (key, certificate etc.) in human readable form.</p>
-<dt><code>-p, &#8211;pub</code></p>
-<dd> Extract a public key from a private key or certificate.</p>
-<dt><code>-v, &#8211;verify</code></p>
-<dd> Verify a certificate using a CA certificate.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Prints usage information and a short summary of the available commands.</dd>
+<dt><code>-g, &#8211;gen</code></dt>
+<dd> Generate a new private key.</dd>
+<dt><code>-s, &#8211;self</code></dt>
+<dd> Create a self-signed certificate.</dd>
+<dt><code>-i, &#8211;issue</code></dt>
+<dd> Issue a certificate using a CA certificate and key.</dd>
+<dt><code>-c, &#8211;signcrl</code></dt>
+<dd> Issue a CRL using a CA certificate and key.</dd>
+<dt><code>-z, &#8211;acert</code></dt>
+<dd> Issue an attribute certificate.</dd>
+<dt><code>-r, &#8211;req</code></dt>
+<dd> Create a PKCS#10 certificate request.</dd>
+<dt><code>-7, &#8211;pkcs7</code></dt>
+<dd> Provides PKCS#7 wrap/unwrap functions.</dd>
+<dt><code>-k, &#8211;keyid</code></dt>
+<dd> Calculate key identifiers of a key or certificate.</dd>
+<dt><code>-a, &#8211;print</code></dt>
+<dd> Print a credential (key, certificate etc.) in human readable form.</dd>
+<dt><code>-p, &#8211;pub</code></dt>
+<dd> Extract a public key from a private key or certificate.</dd>
+<dt><code>-v, &#8211;verify</code></dt>
+<dd> Verify a certificate using a CA certificate.</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Generating a CA Certificate</h3>
 <p> The first step is to generate a private key using the <code>&#8211;gen</code> command. By default this generates a 2048-bit RSA key. </p>

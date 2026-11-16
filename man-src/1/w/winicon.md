@@ -25,16 +25,16 @@ description: "Microsoft Windows icon files"
 <h3>Evolution of Windows Icons</h3>
 <p> The Windows icon file format has undergone some extensions since it was invented in the mid-eighties for Windows 1: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Windows 1 used monochrome 32&#215;32 icons only.</p>
-<dt>&bull;</p>
-<dd> Windows 3.0 added color icons with bpp values up to 8.</p>
-<dt>&bull;</p>
-<dd> Windows 4.0 (a.k.a. Windows95) added support for 32-bpp images and resolutions up to 256 by 256.</p>
-<dt>&bull;</p>
-<dd> NT 5.1 (a.k.a. Windows XP) added support for the 8-bit alpha channel in the unused bits of 32-bpp images.</p>
-<dt>&bull;</p>
-<dd> NT 6.0 (a.k.a. Windows Vista) added support for PNG encoded images </p>
+<dt>&bull;</dt>
+<dd> Windows 1 used monochrome 32&#215;32 icons only.</dd>
+<dt>&bull;</dt>
+<dd> Windows 3.0 added color icons with bpp values up to 8.</dd>
+<dt>&bull;</dt>
+<dd> Windows 4.0 (a.k.a. Windows95) added support for 32-bpp images and resolutions up to 256 by 256.</dd>
+<dt>&bull;</dt>
+<dd> NT 5.1 (a.k.a. Windows XP) added support for the 8-bit alpha channel in the unused bits of 32-bpp images.</dd>
+<dt>&bull;</dt>
+<dd> NT 6.0 (a.k.a. Windows Vista) added support for PNG encoded images </dd>
 </dl>
 <h3>Common Resolutions and BPP Values</h3>
 <p> Typical resolutions and bpp values of the Windows shell icons include: </p>

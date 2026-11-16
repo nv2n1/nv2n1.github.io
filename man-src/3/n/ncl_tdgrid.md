@@ -22,11 +22,11 @@ CALL TDGRID (XBEG, XSTP, NOXS, YBEG, YSTP, NOYS, IGRD)
 
 The arguments of TDGRID are as follows:
 <dl><dt>XBEG, XSTP, and NOXS
-<dd>(input expressions of types REAL, REAL, and INTEGER, respectively) - define where ticks or grid lines are to be drawn along the &quot;X&quot; axis of the parallelogram (at XBEG, XBEG+XSTP, XBEG+2*XSTP, ... XBEG+NOXS*XSTP).
-<dt>YBEG, YSTP, and NOYS
-<dd>(input expressions of types REAL, REAL, and INTEGER, respectively) - define where ticks or grid lines are to be drawn along the &quot;Y&quot; axis of the parallelogram (at YBEG, YBEG+YSTP, YBEG+2*YSTP, ... YBEG+NOYS*YSTP).
-<dt>IGRD
-<dd>(an input expression of type INTEGER) - defines what is to be drawn and has one of the values 1 (draw just a perimeter), 2 (draw a perimeter with inward-pointing ticks), or 3 (draw a perimeter with a grid).</dl>
+</dt><dd>(input expressions of types REAL, REAL, and INTEGER, respectively) - define where ticks or grid lines are to be drawn along the &quot;X&quot; axis of the parallelogram (at XBEG, XBEG+XSTP, XBEG+2*XSTP, ... XBEG+NOXS*XSTP).
+</dd><dt>YBEG, YSTP, and NOYS
+</dt><dd>(input expressions of types REAL, REAL, and INTEGER, respectively) - define where ticks or grid lines are to be drawn along the &quot;Y&quot; axis of the parallelogram (at YBEG, YBEG+YSTP, YBEG+2*YSTP, ... YBEG+NOYS*YSTP).
+</dd><dt>IGRD
+</dt><dd>(an input expression of type INTEGER) - defines what is to be drawn and has one of the values 1 (draw just a perimeter), 2 (draw a perimeter with inward-pointing ticks), or 3 (draw a perimeter with a grid).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -18,41 +18,41 @@ description: "tapestat – Report tape statistics."
 <h2>REPORT</h2>
 <p> The <code>tapestat</code> report provides statistics for each tape drive connected to the system. The following data are displayed:</p>
 <dl>
-<dt>r/s</p>
-<dd> The number of reads issued expressed as the number per second averaged over the interval.</p>
-<dt>w/s</p>
-<dd> The number of writes issued expressed as the number per second averaged over the interval.</p>
-<dt>kB_read/s | MB_read/s</p>
-<dd> The amount of data read expressed in kilobytes (by default or if option <code>-k </code>used) or megabytes (if option <code>-m</code> used) per second averaged over the interval.</p>
-<dt>kB_wrtn/s | MB_wrtn/s</p>
-<dd> The amount of data written expressed in kilobytes (by default or if option <code>-k </code>used) or megabytes (if option <code>-m</code> used) per second averaged over the interval.</p>
-<dt>%Rd</p>
-<dd> Read percentage wait &#8211; The percentage of time over the interval spent waiting for read requests to complete. The time is measured from when the request is dispatched to the SCSI mid-layer until it signals that it completed.</p>
-<dt>%Wr</p>
-<dd> Write percentage wait &#8211; The percentage of time over the interval spent waiting for write requests to complete. The time is measured from when the request is dispatched to the SCSI mid-layer until it signals that it completed.</p>
-<dt>%Oa</p>
-<dd> Overall percentage wait &#8211; The percentage of time over the interval spent waiting for any I/O request to complete (read, write, and other).</p>
-<dt>Rs/s</p>
-<dd> The number of I/Os, expressed as the number per second averaged over the interval, where a non-zero residual value was encountered.</p>
-<dt>Ot/s</p>
-<dd> The number of I/Os, expressed as the number per second averaged over the interval, that were included as &quot;other&quot;. Other I/O includes ioctl calls made to the tape driver and implicit operations performed by the tape driver such as rewind on close (for tape devices that implement rewind on close). It does not include any I/O performed using methods outside of the tape driver (e.g. via sg ioctls). </p>
+<dt>r/s</dt>
+<dd> The number of reads issued expressed as the number per second averaged over the interval.</dd>
+<dt>w/s</dt>
+<dd> The number of writes issued expressed as the number per second averaged over the interval.</dd>
+<dt>kB_read/s | MB_read/s</dt>
+<dd> The amount of data read expressed in kilobytes (by default or if option <code>-k </code>used) or megabytes (if option <code>-m</code> used) per second averaged over the interval.</dd>
+<dt>kB_wrtn/s | MB_wrtn/s</dt>
+<dd> The amount of data written expressed in kilobytes (by default or if option <code>-k </code>used) or megabytes (if option <code>-m</code> used) per second averaged over the interval.</dd>
+<dt>%Rd</dt>
+<dd> Read percentage wait &#8211; The percentage of time over the interval spent waiting for read requests to complete. The time is measured from when the request is dispatched to the SCSI mid-layer until it signals that it completed.</dd>
+<dt>%Wr</dt>
+<dd> Write percentage wait &#8211; The percentage of time over the interval spent waiting for write requests to complete. The time is measured from when the request is dispatched to the SCSI mid-layer until it signals that it completed.</dd>
+<dt>%Oa</dt>
+<dd> Overall percentage wait &#8211; The percentage of time over the interval spent waiting for any I/O request to complete (read, write, and other).</dd>
+<dt>Rs/s</dt>
+<dd> The number of I/Os, expressed as the number per second averaged over the interval, where a non-zero residual value was encountered.</dd>
+<dt>Ot/s</dt>
+<dd> The number of I/Os, expressed as the number per second averaged over the interval, that were included as &quot;other&quot;. Other I/O includes ioctl calls made to the tape driver and implicit operations performed by the tape driver such as rewind on close (for tape devices that implement rewind on close). It does not include any I/O performed using methods outside of the tape driver (e.g. via sg ioctls). </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;human</code></p>
-<dd> Print sizes in human readable format (e.g. 1.0k, 1.2M, etc.) The units displayed with this option supersede any other default units (e.g. kilobytes, sectors&#8230;) associated with the metrics.</p>
-<dt><code>-k</code></p>
-<dd> Show the amount of data written or read in kilobytes per second instead of megabytes. This option is mutually exclusive with <code>-m</code>.</p>
-<dt><code>-m</code></p>
-<dd> Show the amount of data written or read in megabytes per second instead of kilobytes. This option is mutually exclusive with <code>-k</code>.</p>
-<dt><code>-t</code></p>
-<dd> Display time stamps. The time stamp format may depend on the value of the <code>S_TIME_FORMAT </code>environment variable (see below).</p>
-<dt><code>-V</code></p>
-<dd> Print version and exit.</p>
-<dt><code>-y</code></p>
-<dd> Omit the initial statistic showing values since boot.</p>
-<dt><code>-z</code></p>
-<dd> Tell <code>tapestat</code> to omit output for any tapes for which there was no activity during the sample period. </p>
+<dt><code>&#8211;human</code></dt>
+<dd> Print sizes in human readable format (e.g. 1.0k, 1.2M, etc.) The units displayed with this option supersede any other default units (e.g. kilobytes, sectors&#8230;) associated with the metrics.</dd>
+<dt><code>-k</code></dt>
+<dd> Show the amount of data written or read in kilobytes per second instead of megabytes. This option is mutually exclusive with <code>-m</code>.</dd>
+<dt><code>-m</code></dt>
+<dd> Show the amount of data written or read in megabytes per second instead of kilobytes. This option is mutually exclusive with <code>-k</code>.</dd>
+<dt><code>-t</code></dt>
+<dd> Display time stamps. The time stamp format may depend on the value of the <code>S_TIME_FORMAT </code>environment variable (see below).</dd>
+<dt><code>-V</code></dt>
+<dd> Print version and exit.</dd>
+<dt><code>-y</code></dt>
+<dd> Omit the initial statistic showing values since boot.</dd>
+<dt><code>-z</code></dt>
+<dd> Tell <code>tapestat</code> to omit output for any tapes for which there was no activity during the sample period. </dd>
 </dl>
 <h2>CONSIDERATIONS</h2>
 <p> It is possible for a percentage value (read, write, or other) to be greater than 100 percent (the <code>tapestat</code> command will never show a percentage value more than 999). If rewinding a tape takes 40 seconds where the interval time is 5 seconds the %Oa value would show as 0 in the intervals before the rewind completed and then show as approximately 800 percent when the rewind completes. </p>
@@ -65,28 +65,26 @@ description: "tapestat – Report tape statistics."
 <h2>ENVIRONMENT</h2>
 <p> The <code>tapestat</code> command takes into account the following environment variables:</p>
 <dl>
-<dt><code>S_COLORS</code></p>
+<dt><code>S_COLORS</code></dt>
 <dd> By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <i>never</i>, <i>always </i>or <i>auto</i> (the latter is equivalent to the default settings).<br />
- Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</p>
-<dt><code>S_COLORS_SGR</code></p>
-<dd> Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>H=31;1:I=32;22:M=35;1:N=34;1:Z=34;22</code>. Supported capabilities are:</p>
+ Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</dd>
+<dt><code>S_COLORS_SGR</code></dt>
+<dd> Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>H=31;1:I=32;22:M=35;1:N=34;1:Z=34;22</code>. Supported capabilities are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>H=</code></p>
-<dd> SGR (Select Graphic Rendition) substring for percentage values greater than or equal to 75%.</p>
-<dt><code>I=</code></p>
-<dd> SGR substring for tape names.</p>
-<dt><code>M=</code></p>
-<dd> SGR substring for percentage values in the range from 50% to 75%.</p>
-<dt><code>N=</code></p>
-<dd> SGR substring for non-zero statistics values.</p>
-<dt><code>Z=</code></p>
-<dd> SGR substring for zero values.</dl>
+<dt><code>H=</code></dt>
+<dd> SGR (Select Graphic Rendition) substring for percentage values greater than or equal to 75%.</dd>
+<dt><code>I=</code></dt>
+<dd> SGR substring for tape names.</dd>
+<dt><code>M=</code></dt>
+<dd> SGR substring for percentage values in the range from 50% to 75%.</dd>
+<dt><code>N=</code></dt>
+<dd> SGR substring for non-zero statistics values.</dd>
+<dt><code>Z=</code></dt>
+<dd> SGR substring for zero values.</dd></dl>
 </dl>
-<dt><code>S_TIME_FORMAT</code></p>
-<dd> If this variable exists and its value is <code>ISO</code> then the current locale will be ignored when printing the date in the report header. The <code>tapestat</code> command will use the ISO 8601 format (YYYY-MM-DD) instead. The timestamp displayed with option <code>-t</code> will also be compliant with ISO 8601 format. </p>
+<dt><code>S_TIME_FORMAT</code></dt>
+<dd> If this variable exists and its value is <code>ISO</code> then the current locale will be ignored when printing the date in the report header. The <code>tapestat</code> command will use the ISO 8601 format (YYYY-MM-DD) instead. The timestamp displayed with option <code>-t</code> will also be compliant with ISO 8601 format. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> <i>/sys </i>filesystem must be mounted for <code>tapestat</code> to work. It will not work on kernels that do not have sysfs support </p>
@@ -96,7 +94,7 @@ description: "tapestat – Report tape statistics."
 <p> <i>/sys/class/scsi_tape/st&lt;num&gt;/stats/*</i></p>
 <dl>
 <dt>
-<dd> Statistics files for tape devices.</dl>
+</dt><dd> Statistics files for tape devices.</dd></dl>
 <p> <i>/proc/uptime </i>contains system uptime. </p>
 <h2>AUTHOR</h2>
 <p> Initial revision by Shane M. SEYMOUR (shane.seymour &lt;at&gt; hpe.com)<br />

@@ -22,16 +22,16 @@ long io_setup(unsigned nr_events, aio_context_t *ctx_idp);
 <p> On success, <code>io_setup</code>() returns 0. For the failure return, see NOTES.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The specified <i>nr_events</i> exceeds the limit of available events, as defined in <i>/proc/sys/fs/aio-max-nr</i> (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</p>
-<dt><code>EFAULT</code></p>
-<dd> An invalid pointer is passed for <i>ctx_idp</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>ctx_idp</i> is not initialized, or the specified <i>nr_events</i> exceeds internal limits. <i>nr_events</i> should be greater than 0.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel resources are available.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>io_setup</code>() is not implemented on this architecture.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The specified <i>nr_events</i> exceeds the limit of available events, as defined in <i>/proc/sys/fs/aio-max-nr</i> (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</dd>
+<dt><code>EFAULT</code></dt>
+<dd> An invalid pointer is passed for <i>ctx_idp</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>ctx_idp</i> is not initialized, or the specified <i>nr_events</i> exceeds internal limits. <i>nr_events</i> should be greater than 0.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel resources are available.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>io_setup</code>() is not implemented on this architecture.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The asynchronous I/O system calls first appeared in Linux 2.5.</p>
 <h2>CONFORMING TO</h2>

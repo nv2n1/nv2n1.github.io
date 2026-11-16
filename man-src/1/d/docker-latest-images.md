@@ -47,68 +47,68 @@ Only show numeric IDs. The default is&nbsp;<wbr><i>false</i>. </p>
 <p> To list the images in a local repository (not the registry) run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker images
 </pre>
-</dl>
+</dd></dl>
 <p> The list will contain the image repository name, a tag for the image, and an image ID, when it was created and its virtual size. Columns: REPOSITORY, TAG, IMAGE ID, CREATED, and SIZE. </p>
 <p> The docker images command takes an optional [REPOSITORY[:TAG]] argument that restricts the list to images that match the argument. If you specify REPOSITORYbut no TAG, the docker images command lists all images in the given repository. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker images java
 </pre>
-</dl>
+</dd></dl>
 <p> The [REPOSITORY[:TAG]] value must be an &quot;exact match&quot;. This means that, for example, docker images jav does not match the image java. </p>
 <p> If both REPOSITORY and TAG are provided, only images matching that repository and tag are listed. To find all local images in the &quot;java&quot; repository with tag &quot;8&quot; you can use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker images java:8
 </pre>
-</dl>
+</dd></dl>
 <p> To get a verbose list of images which contains all the intermediate images used in builds use <code>-a</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker images -a
 </pre>
-</dl>
+</dd></dl>
 <p> Previously, the docker images command supported the &#8211;tree and &#8211;dot arguments, which displayed different visualizations of the image data. Docker core removed this functionality in the 1.7 version. If you liked this functionality, you can still find it in the third-party dockviz tool: &lt;<a rel="nofollow" href="https://github.com/justone/dockviz">https://github.com/justone/dockviz</a>&gt;. </p>
 <h2>Listing images in a desired format</h2>
 <p> When using the &#8211;format option, the image command will either output the data exactly as the template declares or, when using the table directive, will include column headers as well. You can use special characters like 	 for inserting tab spacing between columns. </p>
 <p> The following example uses a template without headers and outputs the ID and Repository entries separated by a colon for all images: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 docker images-- format "&#123;&#123;.ID}}: &#123;&#123;.Repository}}" 77af4d6b9913 : &lt;none&gt;
                                                                      b6fa739cedf5 : committ 78a85c484bad : ipbabble 30557a29d5ab : docker 5ed6274db6ce : &lt;none&gt; 746b819f315e : postgres 746b819f315e : postgres 746b819f315e : postgres 746b819f315e : postgres
 </code></pre>
-</dl>
+</dd></dl>
 <p> To list all images with their repository and tag in a table format you can use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 docker images-- format "table &#123;&#123;.ID}}	&#123;&#123;.Repository}}	&#123;&#123;.Tag}}" IMAGE ID REPOSITORY TAG 77af4d6b9913 &lt; none &gt; &lt;none&gt;
                                                                                                                     b6fa739cedf5 committ latest 78a85c484bad ipbabble&lt;none&gt; 30557a29d5ab docker latest 5ed6274db6ce &lt; none &gt; &lt;none&gt; 746b819f315e postgres 9 746b819f315e postgres 9.3 746b819f315e postgres 9.3.5 746b819f315e postgres latest
 </code></pre>
-</dl>
+</dd></dl>
 <p> Valid template placeholders are listed above. </p>
 <h2>Listing only the shortened image IDs</h2>
 <p> Listing just the shortened image IDs. This can be useful for some automated tools. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker images -q
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
 <h2>Index</h2>

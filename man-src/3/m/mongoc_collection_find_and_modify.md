@@ -22,41 +22,41 @@ mongoc_collection_find_and_modify (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd>A <code>bson_t</code> containing the query to locate target document(s).</dl>
+<dt><code>query</code></dt>
+<dd>A <code>bson_t</code> containing the query to locate target document(s).</dd></dl>
 <dl COMPACT>
-<dt><code>sort</code></p>
-<dd>A <code>bson_t</code> containing the sort order for <code>query</code> \&amp;.</dl>
+<dt><code>sort</code></dt>
+<dd>A <code>bson_t</code> containing the sort order for <code>query</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>update</code></p>
-<dd>A <code>bson_t</code> containing an update spec.</dl>
+<dt><code>update</code></dt>
+<dd>A <code>bson_t</code> containing an update spec.</dd></dl>
 <dl COMPACT>
-<dt><code>fields</code></p>
-<dd>An optional <code>bson_t</code> containing the fields to return or <code>NULL</code> \&amp;.</dl>
+<dt><code>fields</code></dt>
+<dd>An optional <code>bson_t</code> containing the fields to return or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>_remove</code></p>
-<dd>If the matching documents should be removed.</dl>
+<dt><code>_remove</code></dt>
+<dd>If the matching documents should be removed.</dd></dl>
 <dl COMPACT>
-<dt><code>upsert</code></p>
-<dd>If an upsert should be performed.</dl>
+<dt><code>upsert</code></dt>
+<dd>If an upsert should be performed.</dd></dl>
 <dl COMPACT>
-<dt><code>_new</code></p>
-<dd>If the new version of the document should be returned.</dl>
+<dt><code>_new</code></dt>
+<dd>If the new version of the document should be returned.</dd></dl>
 <dl COMPACT>
-<dt><code>reply</code></p>
-<dd>An optional location for a <code>bson_t</code> that will be initialized with the result or <code>NULL</code> \&amp;.</dl>
+<dt><code>reply</code></dt>
+<dd>An optional location for a <code>bson_t</code> that will be initialized with the result or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Update and return an object. </p>
 <p> This is a thin wrapper around the <code>findAndModify</code> command. Either <code>update</code> or <code>_remove</code> arguments are required. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>As of MongoDB 3.2 and mongoc 1.3.0, the <code>mongoc_write_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dl>
+<dd>As of MongoDB 3.2 and mongoc 1.3.0, the <code>mongoc_write_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

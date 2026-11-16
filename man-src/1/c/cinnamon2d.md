@@ -16,24 +16,24 @@ description: "cinnamon – desktop"
 <p> The desktop layout is similar to Gnome 2. The underlying technology is similar from Gnome Shell. The emphasis is put on making users feel at home and providing them with an easy to use and comfortable desktop experience. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace the running window manager </p>
-<dt><code>&#8211;sm-disable</code></p>
-<dd> Disable connection to the session manager </p>
-<dt><code>&#8211;sm-client-id=ID</code></p>
-<dd> Specify session management ID </p>
-<dt><code>&#8211;sm-save-file=FILE</code></p>
-<dd> Initialize session from savefile </p>
-<dt><code>&#8211;screen=SCREEN</code></p>
-<dd> X screen to use </p>
-<dt><code>-d, &#8211;display=DISPLAY</code></p>
-<dd> X display to use </p>
-<dt><code>&#8211;sync</code></p>
-<dd> Make X calls synchronous </p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version and exit </p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help and exit </p>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace the running window manager </dd>
+<dt><code>&#8211;sm-disable</code></dt>
+<dd> Disable connection to the session manager </dd>
+<dt><code>&#8211;sm-client-id=ID</code></dt>
+<dd> Specify session management ID </dd>
+<dt><code>&#8211;sm-save-file=FILE</code></dt>
+<dd> Initialize session from savefile </dd>
+<dt><code>&#8211;screen=SCREEN</code></dt>
+<dd> X screen to use </dd>
+<dt><code>-d, &#8211;display=DISPLAY</code></dt>
+<dd> X display to use </dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Make X calls synchronous </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version and exit </dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help and exit </dd>
 </dl>
 <h2>BUGS</h2>
 <p> The bug tracker can be reached by visiting the website <i><a rel="nofollow" href="https://github.com/linuxmint/Cinnamon/issues">https://github.com/linuxmint/Cinnamon/issues</a></i> </p>

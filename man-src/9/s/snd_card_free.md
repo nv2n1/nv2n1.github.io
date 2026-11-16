@@ -15,7 +15,7 @@ snd_card_free - frees given soundcard structure
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>soundcard structure</dl>
+<dl><dd></dd><dd>soundcard structure</dd></dl>
 
 <h2>Description</h2>
 

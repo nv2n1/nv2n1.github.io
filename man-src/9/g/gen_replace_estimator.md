@@ -14,22 +14,22 @@ description: "gen_replace_estimator – replace rate estimator configuration"
 <p><i>bstats</i></p>
 <dl>
 <dd>
-<dd>basic statistics</dl>
+</dd><dd>basic statistics</dd></dl>
 <p> <i>cpu_bstats</i></p>
 <dl>
-<dd>bstats per cpu</dl>
+<dd>bstats per cpu</dd></dl>
 <p> <i>rate_est</i></p>
 <dl>
-<dd>rate estimator statistics</dl>
+<dd>rate estimator statistics</dd></dl>
 <p> <i>stats_lock</i></p>
 <dl>
-<dd>statistics lock</dl>
+<dd>statistics lock</dd></dl>
 <p> <i>running</i></p>
 <dl>
-<dd>qdisc running seqcount (might be NULL)</dl>
+<dd>qdisc running seqcount (might be NULL)</dd></dl>
 <p> <i>opt</i></p>
 <dl>
-<dd>rate estimator configuration TLV</dl>
+<dd>rate estimator configuration TLV</dd></dl>
 <h2>Description</h2>
 <p>Replaces the configuration of a rate estimator by calling <code>gen_kill_estimator</code> and <code>gen_new_estimator</code>. </p>
 <p> Returns 0 on success or a negative error code.</p>

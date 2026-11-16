@@ -14,8 +14,8 @@ description: "gnutls_pkcs11_get_pin_function – API function"
 <p> <code>gnutls_pin_callback_t gnutls_pkcs11_get_pin_function(void ** </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>void ** userdata</p>
-<dd> data to be supplied to callback</dl>
+<dt>void ** userdata</dt>
+<dd> data to be supplied to callback</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the callback function set using <code>gnutls_pkcs11_set_pin_function()</code>.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_pkcs11_get_pin_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

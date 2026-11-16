@@ -10,9 +10,9 @@ description: "outlook.pst – format of MS Outlook .pst file"
 <p>outlook.pst &#8211; format of MS Outlook .pst file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>outlook.pst</code></dl>
+<dt> <code>outlook.pst</code></dt></dl>
 <h2>Overview</h2>
-<dd>Low level or primitive items in a .pst file are identified by an I_ID value. Higher level or composite items in a .pst file are identified by a D_ID value. There are two separate b-trees indexed by these I_ID and D_ID values. Starting with Outlook 2003, the file format changed from one with 32 bit pointers, to one with 64 bit pointers. We describe both formats here.</p>
+<dd>Low level or primitive items in a .pst file are identified by an I_ID value. Higher level or composite items in a .pst file are identified by a D_ID value. There are two separate b-trees indexed by these I_ID and D_ID values. Starting with Outlook 2003, the file format changed from one with 32 bit pointers, to one with 64 bit pointers. We describe both formats here.</dd>
 <h2>32 Bit File Header</h2>
 <p>The 32 bit file header is located at offset 0 in the .pst file. </p>
 <dl>
@@ -57,7 +57,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 00c4 offsetIndex1 [4 bytes] 0x005400 in this case
 00b8 backPointer2 [4 bytes] 0x021ebc in this case
 00bc offsetIndex2 [4 bytes] 0x0c7e00 in this case</pre>
-</dl>
+</dd></dl>
 <p> We only support index types 0x0e, 0x0f, 0x15, and 0x17, and encryption types 0x00, 0x01 and 0x02. Index type 0x0e is the older 32 bit Outlook format. Index type 0x0f seems to be rare, and so far the data seems to be identical to that in type 0x0e files. Index type 0x17 is the newer 64 bit Outlook format. Index type 0x15 seems to be rare, and according to the libpff project should have the same format as type 0x17 files. It was found in a 64-bit pst file created by Visual Recovery. It may be that index types less than 0x10 are 32 bit, and index types greater than or equal to 0x10 are 64 bit, and the low order four bits of the index type is some subtype or minor version number. </p>
 <p> Encryption type 0x00 is no encryption, type 0x01 is &quot;compressible&quot; encryption which is a simple substitution cipher, and type 0x02 is &quot;strong&quot; encryption, which is a simple three rotor Enigma cipher from WWII. </p>
 <p> offsetIndex1 is the file offset of the root of the index1 b-tree, which contains (I_ID, offset, size, unknown) tuples for each item in the file. backPointer1 is the value that should appear in the parent pointer of that root node. </p>
@@ -107,7 +107,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 00f0 offsetIndex1 [8 bytes] 0x006000 in this case
 00d8 backPointer2 [8 bytes] 0x000083 in this case
 00e0 offsetIndex2 [8 bytes] 0x006a00 in this case</pre>
-</dl>
+</dd></dl>
 <h2>32 Bit Index 1 Node</h2>
 <p>The 32 bit index1 b-tree nodes are 512 byte blocks with the following format. </p>
 <dl>
@@ -160,7 +160,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01f2 itemSize [1 byte] 0x0c constant
 01f3 nodeLevel [1 byte] 0x02 in this case
 01f8 backPointer [4 bytes] 0x021eb4 in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 12 byte records that are active. The nodeLevel is non-zero for this style of nodes. The leaf nodes have a different format. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a triple of (I_ID, backPointer, offset) where the offset points to the next deeper node in the tree, the backPointer value must match the backPointer in that deeper node, and I_ID is the lowest I_ID value in the subtree.</p>
 <h2>64 Bit Index 1 Node</h2>
@@ -215,7 +215,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01ea itemSize [1 byte] 0x18 constant
 01eb nodeLevel [1 byte] 0x01 in this case
 01f8 backPointer [8 bytes] 0x00008a in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 24 byte records that are active. The nodeLevel is non-zero for this style of nodes. The leaf nodes have a different format. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a triple of (I_ID, backPointer, offset) where the offset points to the next deeper node in the tree, the backPointer value must match the backPointer in that deeper node, and I_ID is the lowest I_ID value in the subtree.</p>
 <h2>32 Bit Index 1 Leaf Node</h2>
@@ -270,7 +270,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01f2 itemSize [1 byte] 0x0c constant
 01f3 nodeLevel [1 byte] 0x00 defines a leaf node
 01f8 backPointer [4 bytes] 0x01675a in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 12 byte records that are active. The nodeLevel is zero for these leaf nodes. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a tuple of (I_ID, offset, size, unknown) The two low order bits of the I_ID value seem to be flags. I have never seen a case with bit zero set. Bit one indicates that the item is <i>not</i> encrypted. Note that references to these I_ID values elsewhere may have the low order bit set (and I don&#8217;t know what that means), but when we do the search in this tree we need to clear that bit so that we can find the correct item.</p>
 <h2>64 Bit Index 1 Leaf Node</h2>
@@ -325,7 +325,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01ea itemSize [1 byte] 0x18 constant
 01eb nodeLevel [1 byte] 0x00 defines a leaf node
 01f8 backPointer [8 bytes] 0x000088 in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 24 byte records that are active. The nodeLevel is zero for these leaf nodes. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a tuple of (I_ID, offset, size, unknown) The two low order bits of the I_ID value seem to be flags. I have never seen a case with bit zero set. Bit one indicates that the item is <i>not</i> encrypted. Note that references to these I_ID values elsewhere may have the low order bit set (and I don&#8217;t know what that means), but when we do the search in this tree we need to clear that bit so that we can find the correct item.</p>
 <h2>32 Bit Index 2 Node</h2>
@@ -380,7 +380,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01f2 itemSize [1 byte] 0x0c constant
 01f3 nodeLevel [1 byte] 0x02 in this case
 01f8 backPointer [4 bytes] 0x021ebc in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 12 byte records that are active. The nodeLevel is non-zero for this style of nodes. The leaf nodes have a different format. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a triple of (D_ID, backPointer, offset) where the offset points to the next deeper node in the tree, the backPointer value must match the backPointer in that deeper node, and D_ID is the lowest D_ID value in the subtree.</p>
 <h2>64 Bit Index 2 Node</h2>
@@ -435,7 +435,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01ea itemSize [1 byte] 0x18 constant
 01eb nodeLevel [1 byte] 0x01 in this case
 01f8 backPointer [8 bytes] 0x000083 in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 24 byte records that are active. The nodeLevel is non-zero for this style of nodes. The leaf nodes have a different format. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a triple of (D_ID, backPointer, offset) where the offset points to the next deeper node in the tree, the backPointer value must match the backPointer in that deeper node, and D_ID is the lowest D_ID value in the subtree.</p>
 <h2>32 Bit Index 2 Leaf Node</h2>
@@ -479,7 +479,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01f2 itemSize [1 byte] 0x10 constant
 01f3 nodeLevel [1 byte] 0x00 in this case
 01f8 backPointer [4 bytes] 0x021eae in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 16 byte records that are active. The nodeLevel is zero for these leaf nodes. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a tuple of (D_ID, DESC-I_ID, TREE-I_ID, PARENT-D_ID) The DESC-I_ID points to the main data for this item (Associated Descriptor Items 0x7cec, 0xbcec, or 0x0101) via the index1 tree. The TREE-I_ID is zero or points to an Associated Tree Item 0x0002 via the index1 tree. The PARENT-D_ID points to the parent of this item in this index2 tree.</p>
 <h2>64 Bit Index 2 Leaf Node</h2>
@@ -523,7 +523,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 01ea itemSize [1 byte] 0x20 constant
 01eb nodeLevel [1 byte] 0x00 defines a leaf node
 01f8 backPointer [8 bytes] 0x000077 in this case</pre>
-</dl>
+</dd></dl>
 <p> The itemCount specifies the number of 32 byte records that are active. The nodeLevel is zero for these leaf nodes. The backPointer must match the backPointer from the triple that pointed to this node. </p>
 <p> Each item in this node is a tuple of (D_ID, DESC-I_ID, TREE-I_ID, PARENT-D_ID) The DESC-I_ID points to the main data for this item (Associated Descriptor Items 0x7cec, 0xbcec, or 0x0101) via the index1 tree. The TREE-I_ID is zero or points to an Associated Tree Item 0x0002 via the index1 tree. The PARENT-D_ID points to the parent of this item in this index2 tree.</p>
 <h2>32 Bit Associated Tree Item 0X0002</h2>
@@ -538,7 +538,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 0004 id2 [4 bytes] 0x00819f in this case
 0008 i_id [4 bytes] 0x02a830 in this case
 000c child-i_id [4 bytes] 0 in this case</pre>
-</dl>
+</dd></dl>
 <h2>64 Bit Associated Tree Item 0X0002</h2>
 <p>This descriptor block contains a tree that maps local ID2 values to I_ID entries, similar to the 32 bit version described above. </p>
 <dl>
@@ -556,7 +556,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 000e unknown2 [2 bytes] 0 may be a count or size
 0010 i_id [8 bytes] 0x0000a8 in this case
 0018 child-i_id [8 bytes] 0 in this case</pre>
-</dl>
+</dd></dl>
 <h2>Associated Descriptor Item 0Xbcec</h2>
 <p>Contains information about the item, which may be email, contact, or other outlook types. In the above leaf node, we have a tuple of (0x21, 0x00e638, 0, 0) 0x00e638 is the I_ID of the associated descriptor, and we can lookup that I_ID value in the index1 b-tree to find the (offset,size) of the data in the .pst file. This descriptor is eventually decoded to a list of MAPI elements. </p>
 <dl>
@@ -586,7 +586,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 0000 indexOffset [2 bytes] 0x013c in this case
 0002 signature [2 bytes] 0xbcec constant
 0004 b5offset [4 bytes] 0x0020 index reference</pre>
-</dl>
+</dd></dl>
 <p> Note the signature of 0xbcec. There are other descriptor block formats with other signatures. Note the indexOffset of 0x013c &#8211; starting at that position in the descriptor block, we have an array of two byte integers. The first integer (0x000b) is a (count-1) of the number of overlapping pairs following the count. The first pair is (0, 0xc), the next pair is (0xc, 0x14) and the last (12th) pair is (0x123, 0x13b). These pairs are (start,end+1) offsets of items in this block. So we have count+2 integers following the count value. </p>
 <p> Note the b5offset of 0x0020, which is a type that I will call an index reference. Such index references have at least two different forms, and may point to data either in this block, or in some other block. External pointer references have the low order 4 bits all set, and are ID2 values that can be used to fetch data. This value of 0x0020 is an internal pointer reference, which needs to be right shifted by 4 bits to become 0x0002, which is then a byte offset to be added to the above indexOffset plus two (to skip the count), so it points to the (0xc, 0x14) pair. </p>
 <p> So far we have only described internal index references where the high order 16 bits are zero. That suffices for single descriptor blocks. But in the case of the type 0x0101 descriptor block, we have an array of subblocks. In this case, the high order 16 bits of an internal index reference are used to select the subblock. Each subblock starts with a 16 bit indexOffset which points to the count and array of 16 bit integer pairs which are offsets in the current subblock. </p>
@@ -596,14 +596,14 @@ description: "outlook.pst – format of MS Outlook .pst file"
 <pre>0000 signature [2 bytes] 0x02b5 constant
 0002 datasize [2 bytes] 0x0006 constant +2 for 8 byte entries
 0004 descoffset [4 bytes] 0x0040 index reference</pre>
-</dl>
+</dd></dl>
 <p> Note the descoffset of 0x0040, which again is an index reference. In this case, it is an internal pointer reference, which needs to be right shifted by 4 bits to become 0x0004, which is then a byte offset to be added to the above indexOffset plus two (to skip the count), so it points to the (0x14, 0x7c) pair. The datasize (6) plus the b5 code (02) gives the size of the entries, in this case 8 bytes. We now have the offset 0x14 of the descriptor array, composed of 8 byte entries that describe MAPI elements. Each descriptor entry has the following format: </p>
 <dl>
 <dd>
 <pre>0000 itemType [2 bytes]
 0002 referenceType [2 bytes]
 0004 value [4 bytes]</pre>
-</dl>
+</dd></dl>
 <p> For some reference types (2, 3, 0xb) the value is used directly. Otherwise, the value is an index reference, which is either an ID2 value, or an offset, to be right shifted by 4 bits and used to fetch a pair from the index table to find the offset and size of the item in this descriptor block. </p>
 <p> The following reference types are known, but not all of these are implemented in the code yet. </p>
 <dl>
@@ -627,7 +627,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 0x1014 - Array of 64bit values
 0x101E - Array of Strings
 0x1102 - Array of Binary data</pre>
-</dl>
+</dd></dl>
 <p> The following item types are known, but not all of these are implemented in the code yet. </p>
 <dl>
 <dd>
@@ -880,7 +880,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 0x8706 Start Timestamp
 0x8708 End Timestamp
 0x8712 Journal Entry Type - duplicate?</pre>
-</dl>
+</dd></dl>
 <h2>Associated Descriptor Item 0X7Cec</h2>
 <p>This style of descriptor block is similar to the 0xbcec format. This descriptor is also eventually decoded to a list of MAPI elements. </p>
 <dl>
@@ -913,7 +913,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 0000 indexOffset [2 bytes] 0x017a in this case
 0002 signature [2 bytes] 0x7cec constant
 0004 7coffset [4 bytes] 0x0040 index reference</pre>
-</dl>
+</dd></dl>
 <p> Note the signature of 0x7cec. There are other descriptor block formats with other signatures. Note the indexOffset of 0x017a &#8211; starting at that position in the descriptor block, we have an array of two byte integers. The first integer (0x0006) is a (count-1) of the number of overlapping pairs following the count. The first pair is (0, 0xc), the next pair is (0xc, 0x14) and the last (7th) pair is (0x160, 0x179). These pairs are (start,end+1) offsets of items in this block. So we have count+2 integers following the count value. </p>
 <p> Note the 7coffset of 0x0040, which is an index reference. In this case, it is an internal reference pointer, which needs to be right shifted by 4 bits to become 0x0004, which is then a byte offset to be added to the above indexOffset plus two (to skip the count), so it points to the (0x14, 0xea) pair. We have the offset and size of the &quot;7c&quot; block located at offset 0x14 with a size of 214 bytes in this case. The &quot;7c&quot; block starts with a header with the following format: </p>
 <dl>
@@ -928,14 +928,14 @@ description: "outlook.pst – format of MS Outlook .pst file"
 000e index2Offset [4 bytes] 0x0080 index reference
 0012 unknown [2 bytes] 0x0000 in this case
 0014 unknown [2 bytes] 0x0000 in this case</pre>
-</dl>
+</dd></dl>
 <p> Note the b5Offset of 0x0020, which is an index reference. In this case, it is an internal reference pointer, which needs to be right shifted by 4 bits to become 0x0002, which is then a byte offset to be added to the above indexOffset plus two (to skip the count), so it points to the (0xc, 0x14) pair. Finally, we have the offset and size of the &quot;b5&quot; block located at offset 0xc with a size of 8 bytes in this descriptor block. The &quot;b5&quot; block has the following format: </p>
 <dl>
 <dd>
 <pre>0000 signature [2 bytes] 0x04b5 constant
 0002 datasize [2 bytes] 0x0002 +4 for 6 byte entries in this case
 0004 descoffset [4 bytes] 0x0060 index reference</pre>
-</dl>
+</dd></dl>
 <p> Note the descoffset of 0x0060, which again is an index reference. In this case, it is an internal pointer reference, which needs to be right shifted by 4 bits to become 0x0006, which is then a byte offset to be added to the above indexOffset plus two (to skip the count), so it points to the (0xea, 0xf0) pair. The datasize (2) plus the b5 code (04) gives the size of the entries, in this case 6 bytes. We now have the offset 0xea of an unused block of data in an unknown format, composed of 6 byte entries. That gives us (0xf0 &#8211; 0xea)/6 = 1, so we have a recordCount of one. </p>
 <p> We have seen cases where the descoffset in the b5 block is zero, and the index2Offset in the 7c block is zero. This has been seen for objects that seem to be attachments on messages that have been read. Before the message was read, it did not have any attachments. </p>
 <p> Note the index2Offset above of 0x0080, which again is an index reference. In this case, it is an internal pointer reference, which needs to be right shifted by 4 bits to become 0x0008, which is then a byte offset to be added to the above indexOffset plus two (to skip the count), so it points to the (0xf0, 0x155) pair. This is an array of tables of four byte integers. We will call these the IND2 tables. The size of each of these tables is specified by the recordSize field of the &quot;7c&quot; header. The number of these tables is the above recordCount value derived from the &quot;b5&quot; block. </p>
@@ -947,7 +947,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
 0004 ind2Offset [2 bytes]
 0006 size [1 byte]
 0007 unknown [1 byte]</pre>
-</dl>
+</dd></dl>
 <p> The ind2Offset is a byte offset into the current IND2 table of some value. If that is a four byte integer value, then once we fetch that, we have the same triple (item type, reference type, value) as we find in the 0xbcec style descriptor blocks. If not, then this value is used directly. These 8 byte descriptors are processed recordCount times, each time using the next IND2 table. The item and reference types are as described above for the 0xbcec format descriptor block.</p>
 <h2>32 Bit Associated Descriptor Item 0X0101</h2>
 <p>This descriptor block contains a list of I_ID values. It is used when an I_ID (that would normally point to a type 0x7cec or 0xbcec descriptor block) contains more data than can fit in any single descriptor of those types. In this case, it points to a type 0x0101 block, which contains a list of I_ID values that themselves point to the actual descriptor blocks. The total length value in the 0x0101 header is the sum of the lengths of the blocks pointed to by the list of I_ID values. The result is an array of subblocks, that may contain index references where the high order 16 bits specify which descriptor subblock to use. Only the first descriptor subblock contains the signature (0xbcec or 0x7cec). </p>
@@ -960,7 +960,7 @@ description: "outlook.pst – format of MS Outlook .pst file"
  repeating
 0008 i_id [4 bytes] 0x0c7718 in this case
 000c i_id [4 bytes] 0x0004b8 in this case</pre>
-</dl>
+</dd></dl>
 <h2>64 Bit Associated Descriptor Item 0X0101</h2>
 <p>This descriptor block contains a list of I_ID values, similar to the 32 bit version described above. </p>
 <dl>
@@ -973,4 +973,4 @@ description: "outlook.pst – format of MS Outlook .pst file"
  repeating
 0008 i_id [8 bytes] 0x008310 in this case
 0010 i_id [8 bytes] 0x00831c in this case</pre>
-</dl>
+</dd></dl>

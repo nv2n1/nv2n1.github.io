@@ -16,24 +16,24 @@ description: "imake – C preprocessor interface to the make utility"
 <h2>OPTIONS</h2>
 <p> The following command line options may be passed to <i>imake</i>:</p>
 <dl>
-<dt><code>-D</code><i>define</i></p>
-<dd> This option is passed directly to <i>cpp</i>. It is typically used to set directory-specific variables. For example, the X Window System used this flag to set <i>TOPDIR</i> to the name of the directory containing the top of the core distribution and <i>CURDIR</i> to the name of the current directory, relative to the top.</p>
-<dt><code>-I</code><i>directory</i></p>
-<dd> This option is passed directly to <i>cpp</i>. It is typically used to indicate the directory in which the <i>imake</i> template and configuration files may be found.</p>
-<dt><code>-U</code><i>define</i></p>
-<dd> This option is passed directly to <i>cpp</i>. It is typically used to unset variables when debugging <i>imake</i> configuration files.</p>
-<dt><code>-T</code><i>template</i></p>
-<dd> This option specifies the name of the master template file (which is usually located in the directory specified with <i>-I</i>) used by <i>cpp</i>. The default is <i>Imake.tmpl</i>.</p>
-<dt><code>-f </code><i>filename</i></p>
-<dd> This option specifies the name of the per-directory input file. The default is <i>Imakefile</i>.</p>
-<dt><code>-C </code><i>filename</i></p>
-<dd> This option specifies the name of the .c file that is constructed in the current directory. The default is <i>Imakefile.c</i>.</p>
-<dt><code>-s </code><i>filename</i></p>
-<dd> This option specifies the name of the <i>make</i> description file to be generated but <i>make</i> should not be invoked. If the <i>filename</i> is a dash (-), the output is written to <i>stdout</i>. The default is to generate, but not execute, a <i>Makefile</i>.</p>
-<dt><code>-e</code></p>
-<dd> This option indicates the <i>imake</i> should execute the generated <i>Makefile</i>. The default is to leave this to the user.</p>
-<dt><code>-v</code></p>
-<dd> This option indicates that <i>imake</i> should print the <i>cpp</i> command line that it is using to generate the <i>Makefile</i>.</dl>
+<dt><code>-D</code><i>define</i></dt>
+<dd> This option is passed directly to <i>cpp</i>. It is typically used to set directory-specific variables. For example, the X Window System used this flag to set <i>TOPDIR</i> to the name of the directory containing the top of the core distribution and <i>CURDIR</i> to the name of the current directory, relative to the top.</dd>
+<dt><code>-I</code><i>directory</i></dt>
+<dd> This option is passed directly to <i>cpp</i>. It is typically used to indicate the directory in which the <i>imake</i> template and configuration files may be found.</dd>
+<dt><code>-U</code><i>define</i></dt>
+<dd> This option is passed directly to <i>cpp</i>. It is typically used to unset variables when debugging <i>imake</i> configuration files.</dd>
+<dt><code>-T</code><i>template</i></dt>
+<dd> This option specifies the name of the master template file (which is usually located in the directory specified with <i>-I</i>) used by <i>cpp</i>. The default is <i>Imake.tmpl</i>.</dd>
+<dt><code>-f </code><i>filename</i></dt>
+<dd> This option specifies the name of the per-directory input file. The default is <i>Imakefile</i>.</dd>
+<dt><code>-C </code><i>filename</i></dt>
+<dd> This option specifies the name of the .c file that is constructed in the current directory. The default is <i>Imakefile.c</i>.</dd>
+<dt><code>-s </code><i>filename</i></dt>
+<dd> This option specifies the name of the <i>make</i> description file to be generated but <i>make</i> should not be invoked. If the <i>filename</i> is a dash (-), the output is written to <i>stdout</i>. The default is to generate, but not execute, a <i>Makefile</i>.</dd>
+<dt><code>-e</code></dt>
+<dd> This option indicates the <i>imake</i> should execute the generated <i>Makefile</i>. The default is to leave this to the user.</dd>
+<dt><code>-v</code></dt>
+<dd> This option indicates that <i>imake</i> should print the <i>cpp</i> command line that it is using to generate the <i>Makefile</i>.</dd></dl>
 <h2>HOW IT WORKS</h2>
 <p> <i>Imake</i> invokes <i>cpp</i> with any <i>-I</i> or <i>-D</i> flags passed on the command line and passes the name of a file containing the following 3 lines: </p>
 <pre><code>
@@ -95,12 +95,12 @@ description: "imake – C preprocessor interface to the make utility"
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be set, however their use is not recommended as they introduce dependencies that are not readily apparent when <i>imake</i> is run:</p>
 <dl>
-<dt><code>IMAKEINCLUDE</code></p>
-<dd> If defined, this specifies a &#8220;-I&#8221; include argument to pass to the C preprocessor. E.g., &#8220;-I/usr/X11/config&#8221;.</p>
-<dt><code>IMAKECPP</code></p>
-<dd> If defined, this should be a valid path to a preprocessor program. E.g., &#8220;/usr/local/cpp&#8221;. By default, <i>imake</i> will use cc -E or /usr/bin/cpp, depending on the OS specific configuration.</p>
-<dt><code>IMAKEMAKE</code></p>
-<dd> If defined, this should be a valid path to a make program, such as &#8220;/usr/local/make&#8221;. By default, <i>imake</i> will use whatever <i>make</i> program is found using <i><a href="/docs/linux/man/3-execvp/">execvp</a>(3).</i> This variable is only used if the &#8220;-e&#8221; option is specified.</dl>
+<dt><code>IMAKEINCLUDE</code></dt>
+<dd> If defined, this specifies a &#8220;-I&#8221; include argument to pass to the C preprocessor. E.g., &#8220;-I/usr/X11/config&#8221;.</dd>
+<dt><code>IMAKECPP</code></dt>
+<dd> If defined, this should be a valid path to a preprocessor program. E.g., &#8220;/usr/local/cpp&#8221;. By default, <i>imake</i> will use cc -E or /usr/bin/cpp, depending on the OS specific configuration.</dd>
+<dt><code>IMAKEMAKE</code></dt>
+<dd> If defined, this should be a valid path to a make program, such as &#8220;/usr/local/make&#8221;. By default, <i>imake</i> will use whatever <i>make</i> program is found using <i><a href="/docs/linux/man/3-execvp/">execvp</a>(3).</i> This variable is only used if the &#8220;-e&#8221; option is specified.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Todd Brunhoff, Tektronix and MIT Project Athena; Jim Fulton, MIT X Consortium </p>
 <h2>Index</h2>

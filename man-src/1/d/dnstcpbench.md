@@ -17,37 +17,37 @@ description: "dnstcpbench – tool to perform TCP benchmarking of nameservers"
 <p> When benchmarking extended runs, it may be necessary to enable TIME_WAIT recycling, as TCP/IP port tuples may otherwise run out. On Linux this is performed by running: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # echo 1 &gt; /proc/sys/net/ipv4/tcp_tw_recycle
 </pre>
-</dl>
+</dd></dl>
 <p> The equivalent for IPv6 is not known.</p>
 <h2>OPTIONS</h2>
 <p> -f,&#8211;file</p>
 <dl>
 <dt>
-<dd> Filename from which to read queries. Defaults to standard input if unspecified.</dl>
+</dt><dd> Filename from which to read queries. Defaults to standard input if unspecified.</dd></dl>
 <p> -h,&#8211;help</p>
 <dl>
 <dt>
-<dd> Provide a helpful message</dl>
+</dt><dd> Provide a helpful message</dd></dl>
 <p> &#8211;timeout-msec</p>
 <dl>
 <dt>
-<dd> Number of milliseconds to wait for an answer</dl>
+</dt><dd> Number of milliseconds to wait for an answer</dd></dl>
 <p> &#8211;udp-first, -u</p>
 <dl>
 <dt>
-<dd> Attempt resolution via UDP first, only do TCP if truncated answer is received</dl>
+</dt><dd> Attempt resolution via UDP first, only do TCP if truncated answer is received</dd></dl>
 <p> -v,&#8211;verbose</p>
 <dl>
 <dt>
-<dd> Be wordy on what the program is doing</dl>
+</dt><dd> Be wordy on what the program is doing</dd></dl>
 <p> &#8211;workers</p>
 <dl>
 <dt>
-<dd> Number of parallel worker threads to use.</dl>
+</dt><dd> Number of parallel worker threads to use.</dd></dl>
 <p> Remote IP address can be IPv4 or IPv6. Remote port defaults to 53.</p>
 <h2>STATISTICAL OUTPUT</h2>
 <p> The program reports both mean and median numbers for queries per second and UDP and TCP latency. Each query only counts once, even if it is tried over UDP first. This effectively means that passing <i>-u</i> can lower query rates if many queries get shunted to TCP.</p>
@@ -62,10 +62,10 @@ description: "dnstcpbench – tool to perform TCP benchmarking of nameservers"
 <p> Copyright &#169; 2013 PowerDNS.COM BV. Free use of this software is granted under the terms of the GNU General Public License (GPL) version 2.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> bert.hubert [at] netherlabs.nl</p>
+<dt> 1.</dt>
+<dd> bert.hubert [at] netherlabs.nl</dd>
 <dl>
 <dt>
-<dd> mailto:bert.hubert [at] netherlabs.nl</dl>
+</dt><dd> mailto:bert.hubert [at] netherlabs.nl</dd></dl>
 </dl>
 <h2>Index</h2>

@@ -13,24 +13,24 @@ description: "DPMSSetTimeouts – permits applications to set the timeout values
 #include &lt;X11/extensions/dpms.h&gt;
 <dl COMPACT><dt><code>Status DPMSSetTimeouts</code>
 (
-<dd>Display *<i>display</i>,
-<dd>CARD16 <i>standby</i>,
-<dd>CARD16 <i>suspend</i>,
-<dd>CARD16 <i>off</i>
+</dt><dd>Display *<i>display</i>,
+</dd><dd>CARD16 <i>standby</i>,
+</dd><dd>CARD16 <i>suspend</i>,
+</dd><dd>CARD16 <i>off</i>
 );
 <br>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl></pre>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>Specifies the connection to the X server</p>
-<dt><i>standby</i></p>
-<dd>Specifies the new standby timeout in seconds</p>
-<dt><i>suspend</i></p>
-<dd>Specifies the new suspend timeout in seconds</p>
-<dt><i>off</i></p>
-<dd>Specifies the new off timeout in seconds</dl>
+</dd><dd>Specifies the connection to the X server</dd>
+<dt><i>standby</i></dt>
+<dd>Specifies the new standby timeout in seconds</dd>
+<dt><i>suspend</i></dt>
+<dd>Specifies the new suspend timeout in seconds</dd>
+<dt><i>off</i></dt>
+<dd>Specifies the new off timeout in seconds</dd></dl>
 <h2>Description</h2>
 <p>The DPMSSetTimeouts function permits applications to set the timeout values used by the X server for Display Power Management Signaling (DPMS) timings. </p>
 <p> The value <i>standby</i> is the amount of inactivity time, in seconds, before standby mode is invoked. The actual effects of this mode are dependent on the characteristics of the monitor and frame buffer card. Standby mode is implemented by shutting off the horizontal sync signal, and pulsing the vertical sync signal. Standby mode provides the quickest monitor recovery time. Note also that many monitors implement this mode identical to suspend mode. A value of zero disables the standby mode. </p>
@@ -39,11 +39,11 @@ description: "DPMSSetTimeouts – permits applications to set the timeout values
 <p> Chronologically, <i>standby</i> mode occurs before or simultaneously with <i>suspend</i> mode, and <i>suspend</i> mode must occur before or simultaneously with <i>off</i> mode. Therefore, non-zero mode timeout values must be greater than or equal to the timeout values of earlier modes. If inconsistent values are supplied, a BadValue error will result.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>TRUE</p>
-<dd>The <i>DPMSSetTimeouts</i> function returns TRUE when the function has succeeded.</dl>
+<dt>TRUE</dt>
+<dd>The <i>DPMSSetTimeouts</i> function returns TRUE when the function has succeeded.</dd></dl>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">BadValue</font></p>
-<dd>An argument is out of range.</dl>
+<dt><font SIZE="-1">BadValue</font></dt>
+<dd>An argument is out of range.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-dpmscapable/">DPMSCapable</a></code>(3), <code><a href="/docs/linux/man/3-dpmsinfo/">DPMSInfo</a></code>(3), <code><a href="/docs/linux/man/3-dpmsgettimeouts/">DPMSGetTimeouts</a></code>(3)</p>

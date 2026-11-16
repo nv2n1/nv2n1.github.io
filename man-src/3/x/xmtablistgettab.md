@@ -16,10 +16,10 @@ description: "XmTabListGetTab — A convenience function that returns a copy of 
 <h2>Description</h2>
 <p><code>XmTabListGetTab</code> returns a copy of the tab that is located at the specified position in the tab list.</p>
 <dl COMPACT>
-<dt><i>tablist</i></p>
-<dd>Specifies the tab list.</p>
-<dt><i>position</i></p>
-<dd>Specifies the position of the tab to be returned. A value of 0 (zero) returns the first tab in the tab list, a value of 1 returns the second tab, and so on.</dl>
+<dt><i>tablist</i></dt>
+<dd>Specifies the tab list.</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position of the tab to be returned. A value of 0 (zero) returns the first tab in the tab list, a value of 1 returns the second tab, and so on.</dd></dl>
 <h2>Return</h2>
 <p>Returns a copy of the tab that is located at the specified position in the tab list. If <i>position</i> is greater than or equal to the number of tabs in the tab list, this function returns NULL. The application is responsible for managing the space allocted by the returned tab copy. The application can recover this allocated space by calling <code>XmTabFree</code>.</p>
 <h2>Related</h2>

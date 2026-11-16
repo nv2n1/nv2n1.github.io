@@ -35,76 +35,76 @@ description: "QwtSplineCurveFitter –"
 <p>Spline type The default setting is Auto </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFitMode()</code>, <code>FitMode()</code></dl>
+<dd><code>setFitMode()</code>, <code>FitMode()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Auto </i></p>
-<dd>Use the default spline algorithm for polygons with increasing x values ( p[i-1] &lt; p[i] ), otherwise use a parametric spline algorithm.</p>
-<dt><i>Spline </i></p>
-<dd>Use a default spline algorithm.</p>
-<dt><i>ParametricSpline </i></p>
-<dd>Use a parametric spline algorithm.</dl>
+<dt><i>Auto </i></dt>
+<dd>Use the default spline algorithm for polygons with increasing x values ( p[i-1] &lt; p[i] ), otherwise use a parametric spline algorithm.</dd>
+<dt><i>Spline </i></dt>
+<dd>Use a default spline algorithm.</dd>
+<dt><i>ParametricSpline </i></dt>
+<dd>Use a parametric spline algorithm.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QPolygonF QwtSplineCurveFitter::fitCurve (const QPolygonF &amp;points) const [virtual]</h3>
 <p>Find a curve which has the best fit to a series of data points </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>points</i> Series of data points</dl>
+<dd><i>points</i> Series of data points</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Curve points</dl>
+<dd>Curve points</dd></dl>
 <p> Implements <code>QwtCurveFitter</code>.</p>
 <h3><code>QwtSplineCurveFitter::FitMode</code> QwtSplineCurveFitter::fitMode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mode representing a spline algorithm</dl>
+<dd>Mode representing a spline algorithm</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFitMode()</code></dl>
+<dd><code>setFitMode()</code></dd></dl>
 <h3>void QwtSplineCurveFitter::setFitMode (<code>FitMode</code>mode)</h3>
 <p>Select the algorithm used for building the spline </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Mode representing a spline algorithm</dl>
+<dd><i>mode</i> Mode representing a spline algorithm</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>fitMode()</code></dl>
+<dd><code>fitMode()</code></dd></dl>
 <h3>void QwtSplineCurveFitter::setSpline (const <code>QwtSpline</code> &amp;spline)</h3>
 <p>Assign a spline </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spline</i> Spline</dl>
+<dd><i>spline</i> Spline</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>spline()</code></dl>
+<dd><code>spline()</code></dd></dl>
 <h3>void QwtSplineCurveFitter::setSplineSize (intsplineSize)</h3>
 <p>Assign a spline size ( has to be at least 10 points ) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>splineSize</i> Spline size</dl>
+<dd><i>splineSize</i> Spline size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>splineSize()</code></dl>
+<dd><code>splineSize()</code></dd></dl>
 <h3>const <code>QwtSpline</code> &amp; QwtSplineCurveFitter::spline () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spline</dl>
+<dd>Spline</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSpline()</code></dl>
+<dd><code>setSpline()</code></dd></dl>
 <h3><code>QwtSpline</code> &amp; QwtSplineCurveFitter::spline ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spline</dl>
+<dd>Spline</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSpline()</code></dl>
+<dd><code>setSpline()</code></dd></dl>
 <h3>int QwtSplineCurveFitter::splineSize () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spline size</dl>
+<dd>Spline size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSplineSize()</code></dl>
+<dd><code>setSplineSize()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -15,12 +15,12 @@ description: "ALTER TRIGGER – change the definition of a trigger"
 <p> You must own the table on which the trigger acts to be allowed to change its properties.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of an existing trigger to alter.</p>
-<dt><i>table</i></p>
-<dd>The name of the table on which this trigger acts.</p>
-<dt><i>newname</i></p>
-<dd>The new name for the trigger.</dl>
+<dt><i>name</i></dt>
+<dd>The name of an existing trigger to alter.</dd>
+<dt><i>table</i></dt>
+<dd>The name of the table on which this trigger acts.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name for the trigger.</dd></dl>
 <h2>Notes</h2>
 <p>The ability to temporarily enable or disable a trigger is provided by ALTER TABLE [<code><a href="/docs/linux/man/7-alter_table/">alter_table</a></code>(7)], not by <code>ALTER TRIGGER</code>, because <code>ALTER TRIGGER</code> has no convenient way to express the option of enabling or disabling all of a table&#8217;s triggers at once.</p>
 <h2>Examples</h2>

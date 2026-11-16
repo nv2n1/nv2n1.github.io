@@ -15,10 +15,10 @@ description: "rrdinfo – extract header information from an RRD"
 <p> The <code>info</code> function prints the header information from an <font SIZE="-1">RRD</font> in a parsing friendly format. </p>
 <p> Check rrdcreate if you are uncertain about the meaning of the individual keys.</p>
 <dl>
-<dt><i>filename</i></p>
-<dd> The name of the <font SIZE="-1"><code>RRD</code></font> you want to examine.</p>
-<dt><code>&#8211;daemon</code> <i>address</i></p>
-<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the <font SIZE="-1">RRD</font> files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </p>
+<dt><i>filename</i></dt>
+<dd> The name of the <font SIZE="-1"><code>RRD</code></font> you want to examine.</dd>
+<dt><code>&#8211;daemon</code> <i>address</i></dt>
+<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the <font SIZE="-1">RRD</font> files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </dd>
 <pre>
  rrdtool info --daemon unix:/var/run/rrdcached.sock /var/lib/rrd/foo.rrd
 </pre>
@@ -45,8 +45,8 @@ filename = "random.rrd" rrd_version = "0001" step = 300 last_update = 955892996 
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be used to change the behavior of <tt>&quot;rrdtool info&quot;</tt>:</p>
 <dl>
-<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></p>
-<dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dl>
+<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></dt>
+<dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <h2>Index</h2>

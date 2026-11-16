@@ -13,7 +13,6 @@ description: "std::experimental::pmr::polymorphic_allocator<T>::deallocate – s
 (library fundamentals TS)
     Deallocates the storage pointed to by p,
     which must have been allocated from a memory_resource x that compares equal to *resource() using x.allocate(n * sizeof(T), alignof(T)).
-
     Equivalent to this-&gt;resource()
         -&gt;deallocate(p, n * sizeof(T), alignof(T));
 </code></pre>

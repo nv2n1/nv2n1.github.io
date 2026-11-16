@@ -17,14 +17,14 @@ void bson_iter_array(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>array_len</code></p>
-<dd> A location for the buffer length.</dl>
+<dt><code>array_len</code></dt>
+<dd> A location for the buffer length.</dd></dl>
 <dl>
-<dt><code>array</code></p>
-<dd> A location for the immutable buffer.</dl>
+<dt><code>array</code></dt>
+<dd> A location for the immutable buffer.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_array/">bson_iter_array</a>(3)</code> function shall retrieve the raw buffer of a sub-array from <code>iter</code> \&amp;. <code>iter</code> </p>
 <p> <code>MUST</code> be on an element that is of type BSON_TYPE_ARRAY. This can be verified with <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> or the <code>BSON_ITER_HOLDS_ARRAY(3)</code> macro. </p>

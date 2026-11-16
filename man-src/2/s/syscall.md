@@ -17,13 +17,11 @@ long syscall(long number, ...);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>syscall</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.19:</p>
-<dd> _DEFAULT_SOURCE</p>
-<dt>Before glibc 2.19:</p>
-<dd> _BSD_SOURCE || _SVID_SOURCE</dl>
+<dt>Since glibc 2.19:</dt>
+<dd> _DEFAULT_SOURCE</dd>
+<dt>Before glibc 2.19:</dt>
+<dd> _BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>syscall</code>() is a small library function that invokes the system call whose assembly language interface has the specified <i>number</i> with the specified arguments. Employing <code>syscall</code>() is useful, for example, when invoking a system call that has no wrapper function in the C library. </p>
@@ -327,27 +325,25 @@ long syscall(long number, ...);
 </table>
 <p> Notes:</p>
 <dl>
-<dt>[1]</p>
-<dd> On a few architectures, a register is used as a boolean (0 indicating no error, and -1 indicating an error) to signal that the system call failed. The actual error value is still contained in the return register. On sparc, the carry bit (<i>csr</i>) in the processor status register (<i>psr</i>) is used instead of a full register. On powerpc64, the summary overflow bit (<i>SO</i>) in field 0 of the condition register (<i>cr0</i>) is used.</p>
-<dt>[2]</p>
-<dd> <i>NR</i> is the system call number.</p>
-<dt>[3]</p>
-<dd> For s390 and s390x, <i>NR</i> (the system call number) may be passed directly with <i>svc NR</i> if it is less than 256.</p>
-<dt>[4]</p>
-<dd> On SuperH, the trap number controls the maximum number of arguments passed. A <i>trap&nbsp;#0x10</i> can be used with only 0-argument system calls, a <i>trap&nbsp;#0x11</i> can be used with 0- or 1-argument system calls, and so on up to <i>trap #0x17</i> for 7-argument system calls.</p>
-<dt>[5]</p>
-<dd> The x32 ABI shares syscall table with x86-64 ABI, but there are some nuances:</p>
+<dt>[1]</dt>
+<dd> On a few architectures, a register is used as a boolean (0 indicating no error, and -1 indicating an error) to signal that the system call failed. The actual error value is still contained in the return register. On sparc, the carry bit (<i>csr</i>) in the processor status register (<i>psr</i>) is used instead of a full register. On powerpc64, the summary overflow bit (<i>SO</i>) in field 0 of the condition register (<i>cr0</i>) is used.</dd>
+<dt>[2]</dt>
+<dd> <i>NR</i> is the system call number.</dd>
+<dt>[3]</dt>
+<dd> For s390 and s390x, <i>NR</i> (the system call number) may be passed directly with <i>svc NR</i> if it is less than 256.</dd>
+<dt>[4]</dt>
+<dd> On SuperH, the trap number controls the maximum number of arguments passed. A <i>trap&nbsp;#0x10</i> can be used with only 0-argument system calls, a <i>trap&nbsp;#0x11</i> can be used with 0- or 1-argument system calls, and so on up to <i>trap #0x17</i> for 7-argument system calls.</dd>
+<dt>[5]</dt>
+<dd> The x32 ABI shares syscall table with x86-64 ABI, but there are some nuances:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> In order to indicate that a system call is called under the x32 ABI, an additional bit, <code>__X32_SYSCALL_BIT</code>, is bitwise-ORed with the system call number. The ABI used by a process affects some process behaviors, including signal handling or system call restarting.</p>
-<dt>&bull;</p>
-<dd> Since x32 has different sizes for <i>long</i> and pointer types, layouts of some (but not all; <i>struct timeval</i> or <i>struct rlimit</i> are 64-bit, for example) structures are different. In order to handle this, additional system calls are added to the system call table, starting from number 512 (without the <code>__X32_SYSCALL_BIT</code>). For example, <code>__NR_readv</code> is defined as 19 for the x86-64 ABI and as <i>__X32_SYSCALL_BIT</i> | <i></i><code>515</code> for the x32 ABI. Most of these additional system calls are actually identical to the system calls used for providing i386 compat. There are some notable exceptions, however, such as <code><a href="/docs/linux/man/2-preadv2/">preadv2</a></code>(2), which uses <i>struct iovec</i> entities with 4-byte pointers and sizes (&quot;compat_iovec&quot; in kernel terms), but passes an 8-byte <i>pos</i> argument in a single register and not two, as is done in every other ABI.</dl>
+<dt>&bull;</dt>
+<dd> In order to indicate that a system call is called under the x32 ABI, an additional bit, <code>__X32_SYSCALL_BIT</code>, is bitwise-ORed with the system call number. The ABI used by a process affects some process behaviors, including signal handling or system call restarting.</dd>
+<dt>&bull;</dt>
+<dd> Since x32 has different sizes for <i>long</i> and pointer types, layouts of some (but not all; <i>struct timeval</i> or <i>struct rlimit</i> are 64-bit, for example) structures are different. In order to handle this, additional system calls are added to the system call table, starting from number 512 (without the <code>__X32_SYSCALL_BIT</code>). For example, <code>__NR_readv</code> is defined as 19 for the x86-64 ABI and as <i>__X32_SYSCALL_BIT</i> | <i></i><code>515</code> for the x32 ABI. Most of these additional system calls are actually identical to the system calls used for providing i386 compat. There are some notable exceptions, however, such as <code><a href="/docs/linux/man/2-preadv2/">preadv2</a></code>(2), which uses <i>struct iovec</i> entities with 4-byte pointers and sizes (&quot;compat_iovec&quot; in kernel terms), but passes an 8-byte <i>pos</i> argument in a single register and not two, as is done in every other ABI.</dd></dl>
 </dl>
-<dt>[6]</p>
-<dd> Some architectures (namely, Alpha, IA-64, MIPS, SuperH, sparc/32, and sparc/64) use an additional register (&quot;Retval2&quot; in the above table) to pass back a second return value from the <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2) system call; Alpha uses this technique in the architecture-specific <code>getxpid</code>(2), <code>getxuid</code>(2), and <code>getxgid</code>(2) system calls as well. Other architectures do not use the second return value register in the system call interface, even if it is defined in the System V ABI.</dl>
+<dt>[6]</dt>
+<dd> Some architectures (namely, Alpha, IA-64, MIPS, SuperH, sparc/32, and sparc/64) use an additional register (&quot;Retval2&quot; in the above table) to pass back a second return value from the <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2) system call; Alpha uses this technique in the architecture-specific <code>getxpid</code>(2), <code>getxuid</code>(2), and <code>getxgid</code>(2) system calls as well. Other architectures do not use the second return value register in the system call interface, even if it is defined in the System V ABI.</dd></dl>
 <p> The second table shows the registers used to pass the system call arguments. </p>
 <table>
 <tr VALIGN=top>
@@ -682,8 +678,8 @@ long syscall(long number, ...);
 </table>
 <p> Notes:</p>
 <dl>
-<dt>[1]</p>
-<dd> The mips/o32 system call convention passes arguments 5 through 8 on the user stack.</dl>
+<dt>[1]</dt>
+<dd> The mips/o32 system call convention passes arguments 5 through 8 on the user stack.</dd></dl>
 <p> Note that these tables don&#8217;t cover the entire calling convention&#8212;some architectures may indiscriminately clobber other registers not listed here.</p>
 <h2>EXAMPLES</h2>
 <p> #define _GNU_SOURCE #include &lt;unistd.h&gt; #include &lt;sys/syscall.h&gt; #include &lt;sys/types.h&gt; #include &lt;signal.h&gt; </p>

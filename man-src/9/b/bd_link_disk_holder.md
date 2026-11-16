@@ -14,10 +14,10 @@ description: "bd_link_disk_holder – create symlinks between holding disk and s
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>the claimed slave bdev</dl>
+</dd><dd>the claimed slave bdev</dd></dl>
 <p> <i>disk</i></p>
 <dl>
-<dd>the holding disk</dl>
+<dd>the holding disk</dd></dl>
 <h2>Description</h2>
 <p>DON&#8217;T USE THIS UNLESS YOU&#8217;RE ALREADY USING IT. </p>
 <p> This functions creates the following sysfs symlinks. </p>

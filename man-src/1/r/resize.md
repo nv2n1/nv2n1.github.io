@@ -21,10 +21,10 @@ description: "resize – set environment and terminal settings to current xterm 
 &nbsp;.IP&nbsp;&bull;&nbsp;4 at this point, <i>resize</i> attempts to update the terminal settings to reflect the terminal window&#8217;s size in pixels:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 if the <code>-s</code> option is used, <i>resize</i> then asks the terminal for its size in pixels.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 otherwise, <i>resize</i> asks the operating system for the information and updates that after ensuring that the window&#8217;s dimensions are a multiple of the character height and width.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 in either case, the updated terminal settings are done using a different system call than used for <i>stty</i>.</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 in either case, the updated terminal settings are done using a different system call than used for <i>stty</i>.</dd></dl>
 <p>&nbsp;.IP&nbsp;&bull;&nbsp;4 then <i>resize</i> updates the terminal settings to reflect any altered values such as its size in rows or columns. This affects the values shown by <i>stty</i>.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 finally, <i>resize</i> generates shell commands for setting the environment variables, and writes that to the standard output.</p>
 <h2>EXAMPLES</h2>
@@ -44,45 +44,45 @@ description: "resize – set environment and terminal settings to current xterm 
 <h2>OPTIONS</h2>
 <p> The following options may be used with <i>resize</i>:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> This option indicates that C shell commands should be generated even if the user&#8217;s current shell does not appear to use C shell syntax.</p>
-<dt><code>-s </code>[<i>rows columns</i>]</p>
-<dd> This option indicates that Sun console escape sequences will be used instead of the VT100-style <i>xterm</i> escape codes. If <i>rows</i> and <i>columns</i> are given, <i>resize</i> will ask the <i>xterm</i> to resize itself using those values.</p>
+<dt><code>-c</code></dt>
+<dd> This option indicates that C shell commands should be generated even if the user&#8217;s current shell does not appear to use C shell syntax.</dd>
+<dt><code>-s </code>[<i>rows columns</i>]</dt>
+<dd> This option indicates that Sun console escape sequences will be used instead of the VT100-style <i>xterm</i> escape codes. If <i>rows</i> and <i>columns</i> are given, <i>resize</i> will ask the <i>xterm</i> to resize itself using those values.</dd>
 <dt>
-<dd> Both of the escape sequences used for this option (first to obtain the window size and second to modify it) are subject to <i>xterm</i>&#8216;s <code>allowWindowOps</code> resource setting. The window manager may also choose to disallow the change.</p>
+</dt><dd> Both of the escape sequences used for this option (first to obtain the window size and second to modify it) are subject to <i>xterm</i>&#8216;s <code>allowWindowOps</code> resource setting. The window manager may also choose to disallow the change.</dd>
 <dt>
-<dd> The VT100-style escape sequence used to determine the screen size always works for VT100-compatible terminals. VT100s have no corresponding way to modify the screensize.</p>
-<dt><code>-u</code></p>
-<dd> This option indicates that Bourne shell commands should be generated even if the user&#8217;s current shell does not appear to use Bourne shell syntax.</p>
-<dt><code>-v</code></p>
-<dd> This causes <i>resize</i> to print a version number to the standard output, and then exit.</dl>
+</dt><dd> The VT100-style escape sequence used to determine the screen size always works for VT100-compatible terminals. VT100s have no corresponding way to modify the screensize.</dd>
+<dt><code>-u</code></dt>
+<dd> This option indicates that Bourne shell commands should be generated even if the user&#8217;s current shell does not appear to use Bourne shell syntax.</dd>
+<dt><code>-v</code></dt>
+<dd> This causes <i>resize</i> to print a version number to the standard output, and then exit.</dd></dl>
 <p> Note that the Sun console escape sequences are recognized by XFree86 <i>xterm</i> and by <i>dtterm</i>. The <i>resize</i> program may be installed as <i>sunsize</i>, which causes makes it assume the <code>-s</code> option. </p>
 <p> The <i>rows</i> and <i>columns</i> arguments must appear last; though they are normally associated with the <code>-s</code> option, they are parsed separately.</p>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/termcap</p>
-<dd> for the base termcap entry to modify.</p>
-<dt>~/.cshrc</p>
-<dd> user&#8217;s alias for the command.</dl>
+<dt>/etc/termcap</dt>
+<dd> for the base termcap entry to modify.</dd>
+<dt>~/.cshrc</dt>
+<dd> user&#8217;s alias for the command.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>SHELL</p>
-<dd> Unless overridden by the <code>-c</code> option, <i>resize</i> determines the user&#8217;s current shell by</p>
+<dt>SHELL</dt>
+<dd> Unless overridden by the <code>-c</code> option, <i>resize</i> determines the user&#8217;s current shell by</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 first checking if <code>$SHELL</code> is set, and using that,<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 otherwise <i>resize</i> looks in the password file (/etc/passwd).</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 otherwise <i>resize</i> looks in the password file (/etc/passwd).</dd></dl>
 <dt>
-<dd> Generally Bourne-shell variants (including <i>ksh</i>) do not modify <code>$SHELL</code>, so it is possible for <i>resize</i> to be confused if one runs <i>resize</i> from a Bourne shell spawned from a C shell.</p>
+</dt><dd> Generally Bourne-shell variants (including <i>ksh</i>) do not modify <code>$SHELL</code>, so it is possible for <i>resize</i> to be confused if one runs <i>resize</i> from a Bourne shell spawned from a C shell.</dd>
 <dt>
-<dd> After determining the user&#8217;s shell, <i>resize</i> checks the shell&#8217;s name against a table of known shell names. If it does not find the name in its table, <i>resize</i> will use C shell syntax for the generated commands to set environment variables.</p>
-<dt>TERM</p>
-<dd> <i>Resize</i>&#8216;s generated shell command sets this to &quot;xterm&quot; if not already set.</p>
-<dt>TERMCAP</p>
-<dd> <i>Resize</i>&#8216;s generated shell command sets this variable on systems using termcap, e.g., when <i>resize</i> is linked with the <i>termcap</i> library rather than a <i>terminfo</i> library. The latter does not provide the complete text for a termcap entry.</p>
-<dt>COLUMNS, LINES</p>
-<dd> <i>Resize</i>&#8216;s generated shell command sets these variables on systems using terminfo. Many applications (including the curses library) use those variables when set to override their screensize.</dl>
+</dt><dd> After determining the user&#8217;s shell, <i>resize</i> checks the shell&#8217;s name against a table of known shell names. If it does not find the name in its table, <i>resize</i> will use C shell syntax for the generated commands to set environment variables.</dd>
+<dt>TERM</dt>
+<dd> <i>Resize</i>&#8216;s generated shell command sets this to &quot;xterm&quot; if not already set.</dd>
+<dt>TERMCAP</dt>
+<dd> <i>Resize</i>&#8216;s generated shell command sets this variable on systems using termcap, e.g., when <i>resize</i> is linked with the <i>termcap</i> library rather than a <i>terminfo</i> library. The latter does not provide the complete text for a termcap entry.</dd>
+<dt>COLUMNS, LINES</dt>
+<dd> <i>Resize</i>&#8216;s generated shell command sets these variables on systems using terminfo. Many applications (including the curses library) use those variables when set to override their screensize.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> use_env(3x)<br />
  <a href="/docs/linux/man/1-csh/">csh</a>(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/1-tset/">tset</a>(1)<br />

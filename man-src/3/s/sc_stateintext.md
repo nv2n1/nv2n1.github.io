@@ -11,160 +11,51 @@ description: "sc::StateInText –"
 <p> Reads state information written with <code>StateOutText</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;state_text.h&gt;</code></pre>
 <p> Inherits <code>sc::StateInFile</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>StateInText (std::istream &amp;s)
-
-
-
 StateInText (const char *)
-
-
-
 StateInText (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 int getstring (char *&amp;)
-
-
 This restores strings saved with StateOut::putstring.
-
-
 int get_array_char (char *, int)
-
-
 These restore data saved with StateOut's put.
-
-
 int get_array_uint (unsigned int *, int)
-
-
-
 int get_array_int (int *, int)
-
-
-
 int get_array_float (float *, int)
-
-
-
 int get_array_double (double *, int)
-
-
-
 int get (const ClassDesc **)
-
-
 This restores ClassDesc's.
-
-
 int get (char &amp;r, const char *key=0)
-
-
 These restore data saved with StateOut's put. members.
-
-
 int get (unsigned int &amp;r, const char *key=0)
-
-
-
 int get (int &amp;r, const char *key=0)
-
-
-
 int get (float &amp;r, const char *key=0)
-
-
-
 int get (double &amp;r, const char *key=0)
-
-
-
 int get (char *&amp;)
-
-
 These restore data saved with StateOut's put.
-
-
 int get (unsigned int *&amp;)
-
-
-
 int get (int *&amp;)
-
-
-
 int get (float *&amp;)
-
-
-
 int get (double *&amp;)
-
-
-
 Protected Member Functions
 void no_newline ()
-
-
-
 void no_array ()
-
-
-
 int read (char *)
-
-
-
 int read (unsigned int &amp;)
-
-
-
 int read (int &amp;)
-
-
-
 int read (float &amp;)
-
-
-
 int read (double &amp;)
-
-
-
 void newline ()
-
-
-
 void start_array ()
-
-
-
 void end_array ()
-
-
-
 int getobject (Ref&lt; SavableState &gt; &amp;)
-
-
 This is used to restore an object.
-
-
 void abort ()
-
-
-
 Protected Attributes
 int newlines_
-
-
-
 int no_newline_
-
-
-
 int no_array_</code></pre>
 <h2>Detailed Description</h2>
 <p>Reads state information written with <code>StateOutText</code>.</p>

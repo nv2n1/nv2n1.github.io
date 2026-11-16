@@ -11,7 +11,6 @@ std::ungetc - std::ungetc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int ungetc(int ch, std::FILE *stream);</code></pre> 
 If ch does not equal EOF, pushes the character ch (reinterpreted as unsigned char) into the input buffer associated with the stream stream in such a manner than subsequent read operation from stream will retrieve that character. The external device associated with the stream is not modified. 
 Stream repositioning operations std::fseek, std::fsetpos, and std::rewind discard the effects of ungetc. 
@@ -40,7 +39,6 @@ The apparent size of the pushback buffer may be larger if the character that is 
 
 demonstrates the use of ungetc in its original purpose: implementing scanf 
  // Run this code <pre><code>#include &lt;cctype&gt;
-
 #include &lt;cstdio&gt;
 void demo_scanf(const char *fmt, std::FILE *s)
 {
@@ -66,7 +64,6 @@ void demo_scanf(const char *fmt, std::FILE *s)
     }
 }
 int main()
-
 {
     std::FILE *f = std::fopen(&quot;input.txt&quot;, &quot;w+&quot;);
     std::fputs(&quot;123x&quot;, f);

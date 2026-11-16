@@ -19,37 +19,35 @@ description: "unitdiff – Describe differences in the interface of a FPC unit."
 <h2>Options</h2>
 <p> <code>unitdiff</code> has some options, most of them optional, defaults will be used in most cases. </p>
 <dl>
-<dt><code>&#8211;disable-arguments</code></p>
-<dd> If this option is specified, <code>unitdiff</code> will not check the arguments of functions and procedures. By default, these are checked as well.</p>
-<dt><code>&#8211;disable-private</code></p>
-<dd> By default, private methods of classes are checked. if this option is specified, private fields or methods are not checked.</p>
-<dt><code>&#8211;disable-protected</code></p>
-<dd> By default, protected methods of classes are checked. if this option is specified, protected <i>and</i> private fields or methods are not checked.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Emit a short help text and exit.</p>
-<dt><code>&#8211;lang=language</code></p>
-<dd> Sets the language for the output file. This will mainly set the strings used for the headers in various parts of the documentation files (by default they&#8217;re in english). Currently, valid options are</p>
+<dt><code>&#8211;disable-arguments</code></dt>
+<dd> If this option is specified, <code>unitdiff</code> will not check the arguments of functions and procedures. By default, these are checked as well.</dd>
+<dt><code>&#8211;disable-private</code></dt>
+<dd> By default, private methods of classes are checked. if this option is specified, private fields or methods are not checked.</dd>
+<dt><code>&#8211;disable-protected</code></dt>
+<dd> By default, protected methods of classes are checked. if this option is specified, protected <i>and</i> private fields or methods are not checked.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Emit a short help text and exit.</dd>
+<dt><code>&#8211;lang=language</code></dt>
+<dd> Sets the language for the output file. This will mainly set the strings used for the headers in various parts of the documentation files (by default they&#8217;re in english). Currently, valid options are</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>de </i></p>
-<dd> German.</p>
-<dt><i>fr</i></p>
-<dd> French.</p>
-<dt><i>nl</i></p>
-<dd> Dutch.</dl>
+<dt><i>de </i></dt>
+<dd> German.</dd>
+<dt><i>fr</i></dt>
+<dd> French.</dd>
+<dt><i>nl</i></dt>
+<dd> Dutch.</dd></dl>
 </dl>
-<dt><code>&#8211;list</code></p>
-<dd> If this option is specified, only the list of available identifiers will be specified for the unit or units. If only 1 unit is specified, this option is automatically assumed.</p>
-<dt><code>&#8211;output=filename</code></p>
-<dd> This option tells <code>unitdiff</code> where the output should go. If this option is not specified, the output is sent to standard output (the screen).</p>
-<dt><code>&#8211;sparse</code></p>
-<dd> Turns on sparse mode. In this mode, the output will not contain the types of the identifiers. Only the names of the identifiers are written to the output. By default, also type descriptions are written. </p>
+<dt><code>&#8211;list</code></dt>
+<dd> If this option is specified, only the list of available identifiers will be specified for the unit or units. If only 1 unit is specified, this option is automatically assumed.</dd>
+<dt><code>&#8211;output=filename</code></dt>
+<dd> This option tells <code>unitdiff</code> where the output should go. If this option is not specified, the output is sent to standard output (the screen).</dd>
+<dt><code>&#8211;sparse</code></dt>
+<dd> Turns on sparse mode. In this mode, the output will not contain the types of the identifiers. Only the names of the identifiers are written to the output. By default, also type descriptions are written. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-fpdoc/">fpdoc</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-fpdoc/">fpdoc</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

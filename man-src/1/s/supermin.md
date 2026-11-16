@@ -16,7 +16,6 @@ supermin-- prepare - o OUTPUTDIR PACKAGE[PACKAGE...] supermin-- build - o OUTPUT
 <h2>EXAMPLE</h2>
 <pre>
  supermin --prepare bash util-linux -o /tmp/supermin.d
- 
  cat &gt; init &lt;&lt;EOF
  #!/bin/sh
  mount -t proc /proc /proc
@@ -24,12 +23,9 @@ supermin-- prepare - o OUTPUTDIR PACKAGE[PACKAGE...] supermin-- build - o OUTPUT
  echo Welcome to supermin
  bash -i
  EOF
- 
  chmod +x init
  tar zcf /tmp/supermin.d/init.tar.gz ./init
- 
  supermin --build /tmp/supermin.d -f ext2 -o /tmp/appliance.d
- 
  qemu-kvm -nodefaults -nographic \
           -kernel /tmp/appliance.d/kernel \
           -initrd /tmp/appliance.d/initrd \
@@ -72,117 +68,111 @@ supermin-- build-- if - newer-- lock / run / user /`id - u`/ supermin.lock-- for
 <p> In all cases supermin can only build a supermin appliance which is identical in distro, version and architecture to the host. It does <i>not</i> do cross-builds.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief command line usage, and exit.</p>
-<dt><code>&#8211;build</code></p>
-<dd> Build the full appliance from the supermin appliance. This used to be a separate program called <tt>&quot;supermin-helper&quot;</tt>.</p>
-<dt><code>&#8211;copy-kernel</code></p>
-<dd> (<i>&#8211;build</i> mode only) </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief command line usage, and exit.</dd>
+<dt><code>&#8211;build</code></dt>
+<dd> Build the full appliance from the supermin appliance. This used to be a separate program called <tt>&quot;supermin-helper&quot;</tt>.</dd>
+<dt><code>&#8211;copy-kernel</code></dt>
+<dd> (<i>&#8211;build</i> mode only) </dd>
 <p> Copy the kernel (and device tree, if created) instead of symlinking to the kernel in <i>/boot</i>. </p>
 <p> This is fractionally slower, but is necessary if you want to change the permissions or SELinux label on the kernel or device tree.</p>
-<dt><code>-f</code> <font SIZE="-1">FORMAT</font></p>
+<dt><code>-f</code> <font SIZE="-1">FORMAT</font></dt>
 <dd>
-<dt><code>&#8211;format</code> <font SIZE="-1">FORMAT</font></p>
-<dd> (<i>&#8211;build</i> mode only) </p>
+</dd><dt><code>&#8211;format</code> <font SIZE="-1">FORMAT</font></dt>
+<dd> (<i>&#8211;build</i> mode only) </dd>
 <p> Select the output format for the full appliance. </p>
 <p> There is no default. When using <i>&#8211;build</i> you must specify the <i>&#8211;format</i> option. </p>
 <p> Possible formats are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>chroot</p>
-<dd> A directory tree in the host filesystem. </p>
+<dt>chroot</dt>
+<dd> A directory tree in the host filesystem. </dd>
 <p> The filesystem tree is written to <i></i><font SIZE="-1"><i>OUTPUTDIR</i></font><i></i> (ie. the <i>-o</i> option). </p>
 <p> This is called a <tt>&quot;chroot&quot;</tt> because you could literally <i><a href="/docs/linux/man/1-chroot/">chroot</a></i>(1) into this directory afterwards, although it&#8217;s a better idea to use a container technology (<font SIZE="-1">LXC,</font> etc.). </p>
 <p> No kernel or initrd is generated in this mode because it is assumed that you will be running the appliance using the host kernel.</p>
-<dt>ext2</p>
-<dd> An ext2 filesystem disk image. </p>
+<dt>ext2</dt>
+<dd> An ext2 filesystem disk image. </dd>
 <p> The output kernel is written to <i>OUTPUTDIR/kernel</i>, a small initramfs which can mount the appliance to <i>OUTPUTDIR/initrd</i>, and the ext2 filesystem image to <i>OUTPUTDIR/root</i>. (Where <i></i><font SIZE="-1"><i>OUTPUTDIR</i></font><i></i> is specified by the <i>-o</i> option). </p>
 <p> The filesystem (<i>OUTPUTDIR/root</i>) has a default size of 4 <font SIZE="-1">GB</font> (see also the <i>&#8211;size</i> option).</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;host-cpu</code> <font SIZE="-1">CPU</font></p>
-<dd> (<i>&#8211;build</i> mode only) </p>
+</dl>
+<dt><code>&#8211;host-cpu</code> <font SIZE="-1">CPU</font></dt>
+<dd> (<i>&#8211;build</i> mode only) </dd>
 <p> Specify the host <font SIZE="-1">CPU</font> (eg. <tt>&quot;i686&quot;</tt>, <tt>&quot;x86_64&quot;</tt>). This is used as a substring match when searching for compatible kernels. If not specified, it defaults to the host <font SIZE="-1">CPU</font> that supermin was compiled on.</p>
-<dt><code>&#8211;if-newer</code></p>
-<dd> (<i>&#8211;build</i> mode only) </p>
+<dt><code>&#8211;if-newer</code></dt>
+<dd> (<i>&#8211;build</i> mode only) </dd>
 <p> The output directory is checked and it is <i>not</i> rebuilt unless it needs to be. </p>
 <p> This is done by consulting the dates of the host package database (<i>/var/lib/rpm</i> etc), the input supermin files, and the output directory. The operation is only carried out if either the host package database or the input supermin files are newer than the output directory. </p>
 <p> See also <i>&#8211;lock</i> below.</p>
-<dt><code>&#8211;include-packagelist</code></p>
-<dd> (<i>&#8211;build</i> mode only) </p>
+<dt><code>&#8211;include-packagelist</code></dt>
+<dd> (<i>&#8211;build</i> mode only) </dd>
 <p> Add a <i>/packagelist</i> file inside the generated chroot or ext2 filesystem, containing a sorted list of all the packages used to build the appliance. </p>
 <p> Mostly useful for debugging, as it makes it easier to find out e.g. which version of a package was copied in the appliance.</p>
-<dt><code>&#8211;list-drivers</code></p>
-<dd> List the package manager drivers compiled into supermin, and whether the corresponding package manager is detected on the current system.</p>
-<dt><code>&#8211;lock</code> <font SIZE="-1">LOCKFILE</font></p>
-<dd> (<i>&#8211;build</i> mode only) </p>
+<dt><code>&#8211;list-drivers</code></dt>
+<dd> List the package manager drivers compiled into supermin, and whether the corresponding package manager is detected on the current system.</dd>
+<dt><code>&#8211;lock</code> <font SIZE="-1">LOCKFILE</font></dt>
+<dd> (<i>&#8211;build</i> mode only) </dd>
 <p> If multiple parallel runs of supermin need to build a full appliance, then you can use the <i>&#8211;lock</i> option to ensure they do not stomp on each other. </p>
 <p> The lock file is used to provide mutual exclusion so only one instance of supermin will run at a time. </p>
 <p> Note that the lock file <code>must not</code> be stored inside the output directory.</p>
-<dt><code>-o</code> <font SIZE="-1">OUTPUTDIR</font></p>
-<dd> Select the output directory. </p>
+<dt><code>-o</code> <font SIZE="-1">OUTPUTDIR</font></dt>
+<dd> Select the output directory. </dd>
 <p> When using <i>&#8211;prepare</i>, this is the directory where the supermin appliance will be written. When using <i>&#8211;build</i>, this is the directory where the full appliance, kernel etc will be written. </p>
 <p> <code>Any previous contents of the output directory are deleted</code>, and a new output directory is created. </p>
 <p> The output directory is created (nearly) atomically by constructing a temporary directory called something like <i></i><font SIZE="-1"><i>OUTPUTDIR</i></font><i>.abc543</i>, then renaming the old output directory (if present) and deleting it, and then renaming the temporary directory to <i></i><font SIZE="-1"><i>OUTPUTDIR</i></font><i></i>. By combining this option with <i>&#8211;lock</i> you can ensure that multiple parallel runs of supermin do not conflict with each other.</p>
-<dt><code>&#8211;packager-config</code> <font SIZE="-1">CONFIGFILE</font></p>
-<dd> (<i>&#8211;prepare</i> mode only) </p>
+<dt><code>&#8211;packager-config</code> <font SIZE="-1">CONFIGFILE</font></dt>
+<dd> (<i>&#8211;prepare</i> mode only) </dd>
 <p> Set the configuration file for the package manager. This allows you to specify alternate software repositories. </p>
 <p> For ArchLinux, this sets the pacman configuration file (default <i>/etc/pacman.conf</i>). See <i>pacman.conf</i>(5). </p>
 <p> For Yum/RPM distributions, this sets the yum configuration file (default <i>/etc/yum.conf</i>). See <i>yum.conf</i>(5).</p>
-<dt><code>&#8211;prepare</code></p>
-<dd> Prepare the supermin appliance.</p>
-<dt><code>&#8211;use-installed</code></p>
-<dd> (<i>&#8211;prepare</i> mode only) </p>
+<dt><code>&#8211;prepare</code></dt>
+<dd> Prepare the supermin appliance.</dd>
+<dt><code>&#8211;use-installed</code></dt>
+<dd> (<i>&#8211;prepare</i> mode only) </dd>
 <p> If packages are already installed, use the contents (from the local filesystem) instead of downloading them. </p>
 <p> Note that this can cause malformed appliances if local files have been changed from what was originally in the package. This is particularly a problem for configuration files. </p>
 <p> However this option is useful in some controlled situations: for example when using supermin inside a freshly installed chroot, or if you have no network access during the build.</p>
-<dt><code>&#8211;size</code> <font SIZE="-1">SIZE</font></p>
-<dd> (<i>&#8211;build</i> mode only) </p>
+<dt><code>&#8211;size</code> <font SIZE="-1">SIZE</font></dt>
+<dd> (<i>&#8211;build</i> mode only) </dd>
 <p> Select the size of the output ext2 filesystem, where the size can be specified using common names such as <tt>&quot;32G&quot;</tt> (32 gigabytes) etc. </p>
 <p> If the size is not specified, a default size of 4 <font SIZE="-1">GB</font> is used. </p>
 <p> To specify size in bytes, the number must be followed by the lowercase letter <i>b</i>, eg: <tt>&quot;--size 10737418240b&quot;</tt>.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages. </p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages. </dd>
 <p> You can give this option multiple times to enable even more messages:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>-v</i></p>
-<dd> Debugging of overall stages.</p>
-<dt><i>-v -v</i></p>
-<dd> Detailed information within each stage.</p>
-<dt><i>-v -v -v</i></p>
-<dd> Massive amounts of debugging (far too much for normal use, but good if you are trying to diagnose a bug in supermin).</dl>
+<dt><i>-v</i></dt>
+<dd> Debugging of overall stages.</dd>
+<dt><i>-v -v</i></dt>
+<dd> Detailed information within each stage.</dd>
+<dt><i>-v -v -v</i></dt>
+<dd> Massive amounts of debugging (far too much for normal use, but good if you are trying to diagnose a bug in supermin).</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-V</code></p>
+</dl>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Print the package name and version number, and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Print the package name and version number, and exit.</dd></dl>
 <h2>SUPERMIN APPLIANCES</h2>
 <p> Supermin appliances consist of just enough information to be able to build an appliance containing the same operating system (Linux version, distro, release etc) as the host <font SIZE="-1">OS.</font> Since the host and appliance share many common files such as <i>/bin/bash</i> and <i>/lib/libc.so</i> there is no reason to ship these files in the appliance. They can simply be read from the host on demand when the appliance is launched. Therefore to save space we just store the names of the packages we want from the host, and copy those in (plus dependencies) at build time. </p>
 <p> There are some files which cannot just be copied from the host in this way. These include configuration files which the host admin might have edited. So along with the list of host files, we also store a skeleton base image which contains these files and the outline directory structure. </p>
 <p> Therefore the supermin appliance normally consists of at least two control files (<i>packages</i> and <i>base.tar.gz</i>).</p>
 <dl>
-<dt><i>packages</i></p>
-<dd> The list of packages to be copied from the host. Dependencies are resolved automatically. </p>
+<dt><i>packages</i></dt>
+<dd> The list of packages to be copied from the host. Dependencies are resolved automatically. </dd>
 <p> The file is plain text, one package name per line.</p>
-<dt><i>base.tar</i></p>
+<dt><i>base.tar</i></dt>
 <dd>
-<dt><i>base.tar.gz</i></p>
-<dd> This tar file (which may be compressed) contains the skeleton filesystem. Mostly it contains directories and a few configuration files. </p>
+</dd><dt><i>base.tar.gz</i></dt>
+<dd> This tar file (which may be compressed) contains the skeleton filesystem. Mostly it contains directories and a few configuration files. </dd>
 <p> All paths in the tar file should be relative to the root directory of the appliance.</p>
-<dt><i>hostfiles</i></p>
-<dd> Any other files that are to be copied from the host. This is a plain text file with one pathname per line. </p>
+<dt><i>hostfiles</i></dt>
+<dd> Any other files that are to be copied from the host. This is a plain text file with one pathname per line. </dd>
 <p> Paths can contain wildcards, which are expanded when the appliance is created, eg: </p>
 <pre>
  /etc/yum.repos.d/*.repo
@@ -190,8 +180,8 @@ supermin-- build-- if - newer-- lock / run / user /`id - u`/ supermin.lock-- for
 <p> would copy all of the <i>*.repo</i> files into the appliance. </p>
 <p> Each pathname in the file should start with a <tt>&quot;/&quot;</tt> character. </p>
 <p> Supermin itself does not create hostfiles (although before version 5, this was the main mechanism used to create the full appliance). However you may drop one or more of these files into the supermin appliance directory if you want to copy random unpackaged files into the full appliance.</p>
-<dt><i>excludefiles</i></p>
-<dd> A list of filenames, directory names, or wildcards prefixed by <tt>&quot;-&quot;</tt> which are excluded from the final appliance. </p>
+<dt><i>excludefiles</i></dt>
+<dd> A list of filenames, directory names, or wildcards prefixed by <tt>&quot;-&quot;</tt> which are excluded from the final appliance. </dd>
 <p> This is rather brutal since it just removes things, potentially breaking packages. However it can be used as a convenient way to minimize the size of the final appliance. </p>
 <p> Supermin itself does not create excludefiles. However you may drop one of more of these files into the supermin appliance directory to stop packaged files from being copied into the full appliance.</dl>
 <p> Note that the names above are just suggestions. You can use any names you want, as supermin detects the contents of each file when it reconstructs the appliance. You can also have multiple of each type of file.</p>
@@ -228,47 +218,45 @@ supermin-- build-- if - newer-- lock / run / user /`id - u`/ supermin.lock-- for
  make bzImage
  make modules
  make modules_install INSTALL_MOD_PATH=/tmp/kmods
- 
  export SUPERMIN_KERNEL=/path/to/linux.git/arch/x86/boot/bzImage
  export SUPERMIN_MODULES=/tmp/kmods/lib/modules/3.xx.yy
- 
  supermin --build -f ext2 [etc]
 </pre>
 <h3><font SIZE="-1">ENFORCING AVAILABILITY OF PACKAGES</font></h3>
 <p> Supermin builds the appliance by copying in the packages listed in <i>packages</i>. For this to work those packages must be available. We usually enforce this by adding requirements (eg. <font SIZE="-1">RPM</font> <tt>&quot;Requires:&quot;</tt> lines) on the package that uses the supermin appliance, so that package cannot be installed without pulling in the dependent packages and thus making sure the packages are installed for supermin to use.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1">SUPERMIN_KERNEL</font></p>
-<dd> If this environment variable is set, then automatic selection of the kernel is bypassed and this kernel is used. </p>
+<dt><font SIZE="-1">SUPERMIN_KERNEL</font></dt>
+<dd> If this environment variable is set, then automatic selection of the kernel is bypassed and this kernel is used. </dd>
 <p> The environment variable should point to a kernel file, eg. <i>/boot/vmlinuz-3.0.x86_64</i></p>
-<dt><font SIZE="-1">SUPERMIN_MODULES</font></p>
-<dd> This specifies the kernel modules directory to use. </p>
+<dt><font SIZE="-1">SUPERMIN_MODULES</font></dt>
+<dd> This specifies the kernel modules directory to use. </dd>
 <p> The environment variable should point to a module directory, eg. <i>/lib/modules/3.0.x86_64/</i></p>
-<dt><font SIZE="-1">SUPERMIN_KERNEL_VERSION</font></p>
-<dd> On non-x86 architectures, you may need to set this environment variable if supermin cannot determine the kernel version of <tt>&quot;SUPERMIN_KERNEL&quot;</tt> just by looking at the file.</dl>
+<dt><font SIZE="-1">SUPERMIN_KERNEL_VERSION</font></dt>
+<dd> On non-x86 architectures, you may need to set this environment variable if supermin cannot determine the kernel version of <tt>&quot;SUPERMIN_KERNEL&quot;</tt> just by looking at the file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/supermin/">http://people.redhat.com/~rjones/supermin/</a>&gt;, <i>guestfs</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Matthew Booth</dl>
+<dt>&bull;</dt>
+<dd> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Matthew Booth</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2016 Red Hat Inc. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font> </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">OPTIONS</a></p>
+<dt><a href="#lbAG">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAH">SUPERMIN APPLIANCES</a></p>
+</dd><dt><a href="#lbAH">SUPERMIN APPLIANCES</a></dt>
 <dd>
-<dt><a href="#lbAM">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbAM">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAN">SEE ALSO</a></p>
+</dd><dt><a href="#lbAN">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAO">AUTHORS</a></p>
+</dd><dt><a href="#lbAO">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAP">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">COPYRIGHT</a></dt>
+<dd></dd></dl>

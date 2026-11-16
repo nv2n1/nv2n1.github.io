@@ -18,17 +18,17 @@ bool bson_append_code(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> The key name.</dl>
+<dt><code>key</code></dt>
+<dd> The key name.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> or -1 to use strlen().</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> or -1 to use strlen().</dd></dl>
 <dl>
-<dt><code>javascript</code></p>
-<dd> A UTF-8 encoded string containing the javascript.</dl>
+<dt><code>javascript</code></dt>
+<dd> A UTF-8 encoded string containing the javascript.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_code/">bson_append_code</a>(3)</code> function shall append a new element to <code>bson</code> using the UTF-8 encoded <code>javascript</code> provided. <code>javascript</code> must be a NULL terminated C string. </p>
 <h2>RETURNS</h2>

@@ -25,15 +25,12 @@ typeid(T) if the stored function has type T, otherwise typeid(void)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 int f(int a)
 {
     return -a;
 }
-
 int main()
-
 {
     // fn1 and fn2 have the same type, but their targets do not
     std::function&lt;int(int)&gt; fn1(f),

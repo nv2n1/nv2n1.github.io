@@ -20,20 +20,21 @@ description: "wimlib-imagex-delete – Delete an image from a WIM archive"
 <p> <code>wimlib-imagex delete</code> does not support split WIMs.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;check</code></p>
-<dd> When reading <i>WIMFILE</i>, verify its integrity if the integrity table is present; additionally, when rewriting <i>WIMFILE</i> after the specified image was deleted, always write an integrity table. If this option is not specified, the integrity of <i>WIMFILE</i> will not be checked when it&#8217;s opened, but an integrity table will be written in the updated WIM if and only if one was present before.</p>
-<dt><code>&#8211;soft</code></p>
-<dd> Perform a &quot;soft delete&quot;. Specifying this flag overrides the default behavior of rebuilding the entire WIM after deleting an image. Instead, only minimal changes to correctly remove the image from the WIM will be taken. In particular, all streams will be left alone, even if they are no longer referenced. This is probably not what you want, because no space will be saved by deleting an image in this way.</p>
+<dt><code>&#8211;check</code></dt>
+<dd> When reading <i>WIMFILE</i>, verify its integrity if the integrity table is present; additionally, when rewriting <i>WIMFILE</i> after the specified image was deleted, always write an integrity table. If this option is not specified, the integrity of <i>WIMFILE</i> will not be checked when it&#8217;s opened, but an integrity table will be written in the updated WIM if and only if one was present before.</dd>
+<dt><code>&#8211;soft</code></dt>
+<dd> Perform a &quot;soft delete&quot;. Specifying this flag overrides the default behavior of rebuilding the entire WIM after deleting an image. Instead, only minimal changes to correctly remove the image from the WIM will be taken. In particular, all streams will be left alone, even if they are no longer referenced. This is probably not what you want, because no space will be saved by deleting an image in this way.</dd>
 <dt>
-<dd> You may use <code>wimlib-imagex optimize</code> to delete unreferenced streams from a WIM that has had images soft-deleted from it.</p>
-<dt><code>&#8211;unsafe-compact</code></p>
-<dd> Compact the WIM archive in-place, eliminating &quot;holes&quot;. In general, this option should <i>not</i> be used because a failed or interrupted compaction will corrupt the WIM archive. For more information, see the documentation for this option in <code>wimlib-imagex-optimize</code> (1).</dl>
+</dt><dd> You may use <code>wimlib-imagex optimize</code> to delete unreferenced streams from a WIM that has had images soft-deleted from it.</dd>
+<dt><code>&#8211;unsafe-compact</code></dt>
+<dd> Compact the WIM archive in-place, eliminating &quot;holes&quot;. In general, this option should <i>not</i> be used because a failed or interrupted compaction will corrupt the WIM archive. For more information, see the documentation for this option in <code>wimlib-imagex-optimize</code> (1).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Delete the first image from &#8216;boot.wim&#8217;:</p>
 <dl>
 <dt>
-<dd>
-<p> wimlib-imagex delete boot.wim 1</dl>
+</dt><dd>
+<p> wimlib-imagex delete boot.wim 1</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-optimize/">wimlib-imagex-optimize</a></code>(1) </p>
 <h2>Index</h2>
+</p>

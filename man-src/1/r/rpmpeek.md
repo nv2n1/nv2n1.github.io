@@ -15,10 +15,10 @@ description: "rpmpeek – execute command within RPM contents"
 <p> <code>rpmpeek</code> unpacks <i></i><font SIZE="-1"><i>RPM</i></font><i></i> contents into a temporary directory and executes a <i>command</i> under that directory. The directory is purged upon exit.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd> Do not preserve attributes of unpacked files.</p>
-<dt><code>-h</code></p>
-<dd> Display the usage and exit.</dl>
+<dt><code>-n</code></dt>
+<dd> Do not preserve attributes of unpacked files.</dd>
+<dt><code>-h</code></dt>
+<dd> Display the usage and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Alexey Tourbin &lt;at [at] altlinux.org&gt;.</p>
 <h2>COPYING</h2>

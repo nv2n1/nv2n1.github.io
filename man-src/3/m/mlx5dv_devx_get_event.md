@@ -17,7 +17,7 @@ url: "/docs/linux/man/3-mlx5dv_devx_get_event/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_devx_async_event_hdr {
     uint64_t cookie;
@@ -26,7 +26,7 @@ struct mlx5dv_devx_async_event_hdr {
 ssize_t mlx5dv_devx_get_event(struct mlx5dv_devx_event_channel *event_channel,
                               struct mlx5dv_devx_async_event_hdr *event_data,
                               size_t event_resp_len)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -42,15 +42,15 @@ ssize_t mlx5dv_devx_get_event(struct mlx5dv_devx_event_channel *event_channel,
 
 <dl>
 <dt>event_channel
-<dd>
-<dt>
-<dd> <pre>
+</dt><dd>
+</dd><dt>
+</dt><dd> <pre>
 The channel to get the event over.
 </pre>
-<dt>event_data
-<dd> The output data from the asynchronous event.
-<dt>event_resp_len
-<dd> The output buffer size to hold the response.</dl>
+</dd><dt>event_data
+</dt><dd> The output data from the asynchronous event.
+</dd><dt>event_resp_len
+</dt><dd> The output buffer size to hold the response.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

@@ -15,11 +15,11 @@ disk_map_sector_rcu - map sector to partition
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>gendisk of interest</dl>
+<dl><dd></dd><dd>gendisk of interest</dd></dl>
  
 
  <i>sector</i>
-<dl><dd>sector to map</dl>
+<dl><dd>sector to map</dd></dl>
 
 <h2>Description</h2>
 

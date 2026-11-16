@@ -18,40 +18,40 @@ description: "pmlogsummary – calculate averages of metrics stored in a set of 
 <p> The command line options <code>-S</code> and <code>-T</code> can be used to specify a time window over which metrics should be summarized. These options are common to most Performance Co-Pilot tools and are fully described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
 <p> The remaining options control the specific information to be reported. Metrics with counter semantics are converted to rates before being evaluated.</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Print all information. This is equivalent to <code>-blmMy</code>.</p>
-<dt><code>-b</code></p>
-<dd> Print both forms of averaging, that is both stochastic and time averaging.</p>
-<dt><code>-B</code></p>
-<dd> Print the approximate distribution of values, using histogram bins such that the value range (minimum &#8211; maximum) for each metric is divided equally into <i>nbins</i> bins, and each bin accumulates the frequency of observed values in the corresponding range. Refer to the &#8220;OUTPUT FORMAT&#8221; section below for a description of how the distribution of values is reported).</p>
-<dt><code>-f</code></p>
-<dd> Spreadsheet format &#8211; the tab character is used to delimit each field printed. This option is intended to allow <code>pmlogsummary</code> output to be imported directly into common spreadsheet applications.</p>
-<dt><code>-F</code></p>
-<dd> Spreadsheet format &#8211; the comma character is used to delimit each field printed. This option is intended to allow <code>pmlogsummary</code> output to be imported directly into common spreadsheet applications which support the Comma Separated Value (.csv) format.</p>
-<dt><code>-H</code></p>
-<dd> Print a one-line header at the start showing what each field represents.</p>
-<dt><code>-l</code></p>
-<dd> Also print the archive label, showing the log format version, the time and date for the start and end of the archive time window, and the host from which the performance metrics values were collected.</p>
-<dt><code>-i</code></p>
-<dd> Also print the time at which the minimum value was logged. The format of this timestamp is described in the &#8220;OUTPUT FORMAT&#8221; section below.</p>
-<dt><code>-I</code></p>
-<dd> Also print the time at which the maximum value was logged. The format of this timestamp is described in the &#8220;OUTPUT FORMAT&#8221; section below.</p>
-<dt><code>-m</code></p>
-<dd> Also print the minimum logged value for each metric.</p>
-<dt><code>-M</code></p>
-<dd> Also print the maximum logged value for each metric.</p>
-<dt><code>-s</code></p>
-<dd> Print (only) the sum of all logged values for each metric.</p>
-<dt><code>-N</code></p>
-<dd> Suppress any warnings resulting from individual archive fetches (default).</p>
-<dt><code>-p</code></p>
-<dd> Print all floating point numbers with <i>precision</i> digits after the decimal place.</p>
-<dt><code>-v</code></p>
-<dd> Report (verbosely) on warnings resulting from individual archive fetches.</p>
-<dt><code>-x</code></p>
-<dd> Print stochastic averages instead of the default (time averages).</p>
-<dt><code>-y</code></p>
-<dd> Also print the number of samples encountered in the set of archives for each metric.</dl>
+<dt><code>-a</code></dt>
+<dd> Print all information. This is equivalent to <code>-blmMy</code>.</dd>
+<dt><code>-b</code></dt>
+<dd> Print both forms of averaging, that is both stochastic and time averaging.</dd>
+<dt><code>-B</code></dt>
+<dd> Print the approximate distribution of values, using histogram bins such that the value range (minimum &#8211; maximum) for each metric is divided equally into <i>nbins</i> bins, and each bin accumulates the frequency of observed values in the corresponding range. Refer to the &#8220;OUTPUT FORMAT&#8221; section below for a description of how the distribution of values is reported).</dd>
+<dt><code>-f</code></dt>
+<dd> Spreadsheet format &#8211; the tab character is used to delimit each field printed. This option is intended to allow <code>pmlogsummary</code> output to be imported directly into common spreadsheet applications.</dd>
+<dt><code>-F</code></dt>
+<dd> Spreadsheet format &#8211; the comma character is used to delimit each field printed. This option is intended to allow <code>pmlogsummary</code> output to be imported directly into common spreadsheet applications which support the Comma Separated Value (.csv) format.</dd>
+<dt><code>-H</code></dt>
+<dd> Print a one-line header at the start showing what each field represents.</dd>
+<dt><code>-l</code></dt>
+<dd> Also print the archive label, showing the log format version, the time and date for the start and end of the archive time window, and the host from which the performance metrics values were collected.</dd>
+<dt><code>-i</code></dt>
+<dd> Also print the time at which the minimum value was logged. The format of this timestamp is described in the &#8220;OUTPUT FORMAT&#8221; section below.</dd>
+<dt><code>-I</code></dt>
+<dd> Also print the time at which the maximum value was logged. The format of this timestamp is described in the &#8220;OUTPUT FORMAT&#8221; section below.</dd>
+<dt><code>-m</code></dt>
+<dd> Also print the minimum logged value for each metric.</dd>
+<dt><code>-M</code></dt>
+<dd> Also print the maximum logged value for each metric.</dd>
+<dt><code>-s</code></dt>
+<dd> Print (only) the sum of all logged values for each metric.</dd>
+<dt><code>-N</code></dt>
+<dd> Suppress any warnings resulting from individual archive fetches (default).</dd>
+<dt><code>-p</code></dt>
+<dd> Print all floating point numbers with <i>precision</i> digits after the decimal place.</dd>
+<dt><code>-v</code></dt>
+<dd> Report (verbosely) on warnings resulting from individual archive fetches.</dd>
+<dt><code>-x</code></dt>
+<dd> Print stochastic averages instead of the default (time averages).</dd>
+<dt><code>-y</code></dt>
+<dd> Also print the number of samples encountered in the set of archives for each metric.</dd></dl>
 <p> By default, <code>pmlogsummary</code> reports the time of day according to the local timezone on the system where <code>pmlogsummary</code> is run. The <code>-Z</code> option changes the timezone to <i>timezone</i> in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7). The <code>-z</code> option changes the timezone to the local timezone at the host that is the source of the performance metrics, as specified in the label record of the archive log.</p>
 <h2>OUTPUT FORMAT</h2>
 <p> The <code>pmlogsummary</code> output format is spartan as it is intended to be post-processed with standard tools. This means that there is no annotation associated with each output field which would make processing harder. The intention is that <code>pmlogsummary</code> output be massaged into a format which can be used by a spreadsheet program, is suitable for inclusion in a web page, or whatever. </p>
@@ -163,10 +163,10 @@ $ pmlogsummary - aN - p 1 - B 3 surf network.interface.out.bytes Log Label(Log F
 <p></center></p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
-<dd> default PMNS specification files</p>
-<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></p>
-<dd> Default directory for PCP archives containing performance metric values collected from the host <i>hostname</i>.</dl>
+<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></dt>
+<dd> default PMNS specification files</dd>
+<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></dt>
+<dd> Default directory for PCP archives containing performance metric values collected from the host <i>hostname</i>.</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

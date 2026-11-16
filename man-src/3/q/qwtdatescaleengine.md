@@ -41,16 +41,16 @@ description: "QwtDateScaleEngine –"
 <p> Datetime values are expected as the number of milliseconds since 1970-01-01T00:00:00 Universal Coordinated Time &#8211; also known as &#8216;The Epoch&#8217;, that can be converted to QDateTime using <code>QwtDate::toDateTime()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtDate</code>, <code>QwtPlot::setAxisScaleEngine()</code>, <code>QwtAbstractScale::setScaleEngine()</code></dl>
+<dd><code>QwtDate</code>, <code>QwtPlot::setAxisScaleEngine()</code>, <code>QwtAbstractScale::setScaleEngine()</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtDateScaleEngine::QwtDateScaleEngine (Qt::TimeSpectimeSpec = Qt::LocalTime)</h3>
 <p>Constructor. The engine is initialized to build scales for the given time specification. It classifies intervals &gt; 4 weeks as &gt;= Qt::Month. The first week of a year is defined like for <code>QwtDate::FirstThursday</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>timeSpec</i> Time specification</dl>
+<dd><i>timeSpec</i> Time specification</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTimeSpec()</code>, <code>setMaxWeeks()</code>, <code>setWeek0Type()</code></dl>
+<dd><code>setTimeSpec()</code>, <code>setMaxWeeks()</code>, <code>setWeek0Type()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QDateTime QwtDateScaleEngine::alignDate (const QDateTime &amp;dateTime, doublestepSize, <code>QwtDate::IntervalType</code>intervalType, boolup) const [protected], [virtual]</h3>
 <p>Align a date/time value for a step size </p>
@@ -60,10 +60,10 @@ description: "QwtDateScaleEngine –"
 <dd><i>dateTime</i> Date/time value<br />
  <i>stepSize</i> Step size<br />
  <i>intervalType</i> Interval type<br />
- <i>up</i> When true dateTime is ceiled &#8211; otherwise it is floored</dl>
+ <i>up</i> When true dateTime is ceiled &#8211; otherwise it is floored</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Aligned date/time value</dl>
+<dd>Aligned date/time value</dd></dl>
 <h3>void QwtDateScaleEngine::autoScale (intmaxNumSteps, double &amp;x1, double &amp;x2, double &amp;stepSize) const [virtual]</h3>
 <p>Align and divide an interval </p>
 <p> The algorithm aligns and divides the interval into steps. </p>
@@ -73,10 +73,10 @@ description: "QwtDateScaleEngine –"
 <dd><i>maxNumSteps</i> Max. number of steps<br />
  <i>x1</i> First limit of the interval (In/Out)<br />
  <i>x2</i> Second limit of the interval (In/Out)<br />
- <i>stepSize</i> Step size (Out)</dl>
+ <i>stepSize</i> Step size (Out)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtScaleEngine::setAttribute()</code></dl>
+<dd><code>QwtScaleEngine::setAttribute()</code></dd></dl>
 <p> Reimplemented from <code>QwtLinearScaleEngine</code>.</p>
 <h3><code>QwtScaleDiv</code> QwtDateScaleEngine::divideScale (doublex1, doublex2, intmaxMajorSteps, intmaxMinorSteps, doublestepSize = 0.0) const [virtual]</h3>
 <p>Calculate a scale division for a date/time interval. </p>
@@ -86,10 +86,10 @@ description: "QwtDateScaleEngine –"
  <i>x2</i> Second interval limit<br />
  <i>maxMajorSteps</i> Maximum for the number of major steps<br />
  <i>maxMinorSteps</i> Maximum number of minor steps<br />
- <i>stepSize</i> Step size. If stepSize == 0, the scaleEngine calculates one.</dl>
+ <i>stepSize</i> Step size. If stepSize == 0, the scaleEngine calculates one.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated scale division</dl>
+<dd>Calculated scale division</dd></dl>
 <p> Reimplemented from <code>QwtLinearScaleEngine</code>.</p>
 <h3><code>QwtDate::IntervalType</code> QwtDateScaleEngine::intervalType (const QDateTime &amp;minDate, const QDateTime &amp;maxDate, intmaxSteps) const [virtual]</h3>
 <p>Classification of a date/time interval division </p>
@@ -97,91 +97,91 @@ description: "QwtDateScaleEngine –"
 <dl COMPACT>
 <dd><i>minDate</i> Minimum ( = earlier ) of the interval<br />
  <i>maxDate</i> Maximum ( = later ) of the interval<br />
- <i>maxSteps</i> Maximum for the number of steps</dl>
+ <i>maxSteps</i> Maximum for the number of steps</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Interval classification</dl>
+<dd>Interval classification</dd></dl>
 <h3>int QwtDateScaleEngine::maxWeeks () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Upper limit for the number of weeks, when an interval can be classified as Qt::Week.</dl>
+<dd>Upper limit for the number of weeks, when an interval can be classified as Qt::Week.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMaxWeeks()</code>, <code>week0Type()</code></dl>
+<dd><code>setMaxWeeks()</code>, <code>week0Type()</code></dd></dl>
 <h3>void QwtDateScaleEngine::setMaxWeeks (intweeks)</h3>
 <p>Set a upper limit for the number of weeks, when an interval can be classified as Qt::Week. </p>
 <p> The default setting is 4 weeks. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>weeks</i> Upper limit for the number of weeks</dl>
+<dd><i>weeks</i> Upper limit for the number of weeks</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>In business charts a year is often devided into weeks [1-52]</dl>
+<dd>In business charts a year is often devided into weeks [1-52]</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxWeeks()</code>, <code>setWeek0Type()</code></dl>
+<dd><code>maxWeeks()</code>, <code>setWeek0Type()</code></dd></dl>
 <h3>void QwtDateScaleEngine::setTimeSpec (Qt::TimeSpectimeSpec)</h3>
 <p>Set the time specification used by the engine </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>timeSpec</i> Time specification</dl>
+<dd><i>timeSpec</i> Time specification</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>timeSpec()</code>, <code>setUtcOffset()</code>, <code>toDateTime()</code></dl>
+<dd><code>timeSpec()</code>, <code>setUtcOffset()</code>, <code>toDateTime()</code></dd></dl>
 <h3>void QwtDateScaleEngine::setUtcOffset (intseconds)</h3>
 <p>Set the offset in seconds from Coordinated Universal Time </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>seconds</i> Offset in seconds</dl>
+<dd><i>seconds</i> Offset in seconds</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The offset has no effect beside for the time specification Qt::OffsetFromUTC.</dl>
+<dd>The offset has no effect beside for the time specification Qt::OffsetFromUTC.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QDate::utcOffset(), <code>setTimeSpec()</code>, <code>toDateTime()</code></dl>
+<dd>QDate::utcOffset(), <code>setTimeSpec()</code>, <code>toDateTime()</code></dd></dl>
 <h3>void QwtDateScaleEngine::setWeek0Type (<code>QwtDate::Week0Type</code>week0Type)</h3>
 <p>Sets how to identify the first week of a year. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>week0Type</i> Mode how to identify the first week of a year</dl>
+<dd><i>week0Type</i> Mode how to identify the first week of a year</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>week0Type()</code>, <code>setMaxWeeks()</code></dl>
+<dd><code>week0Type()</code>, <code>setMaxWeeks()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>week0Type has no effect beside for intervals classified as <code>QwtDate::Week</code>.</dl>
+<dd>week0Type has no effect beside for intervals classified as <code>QwtDate::Week</code>.</dd></dl>
 <h3>Qt::TimeSpec QwtDateScaleEngine::timeSpec () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Time specification used by the engine</dl>
+<dd>Time specification used by the engine</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTimeSpec()</code>, <code>utcOffset()</code>, <code>toDateTime()</code></dl>
+<dd><code>setTimeSpec()</code>, <code>utcOffset()</code>, <code>toDateTime()</code></dd></dl>
 <h3>QDateTime QwtDateScaleEngine::toDateTime (doublevalue) const</h3>
 <p>Translate a double value into a QDateTime object. </p>
 <p> For QDateTime result is bounded by <code>QwtDate::minDate()</code> and <code>QwtDate::maxDate()</code> </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>QDateTime object initialized with <code>timeSpec()</code> and <code>utcOffset()</code>.</dl>
+<dd>QDateTime object initialized with <code>timeSpec()</code> and <code>utcOffset()</code>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>timeSpec()</code>, <code>utcOffset()</code>, <code>QwtDate::toDateTime()</code></dl>
+<dd><code>timeSpec()</code>, <code>utcOffset()</code>, <code>QwtDate::toDateTime()</code></dd></dl>
 <h3>int QwtDateScaleEngine::utcOffset () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Offset in seconds from Coordinated Universal Time</dl>
+<dd>Offset in seconds from Coordinated Universal Time</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The offset has no effect beside for the time specification Qt::OffsetFromUTC.</dl>
+<dd>The offset has no effect beside for the time specification Qt::OffsetFromUTC.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QDate::setUtcOffset(), <code>setTimeSpec()</code>, <code>toDateTime()</code></dl>
+<dd>QDate::setUtcOffset(), <code>setTimeSpec()</code>, <code>toDateTime()</code></dd></dl>
 <h3><code>QwtDate::Week0Type</code> QwtDateScaleEngine::week0Type () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Setting how to identify the first week of a year.</dl>
+<dd>Setting how to identify the first week of a year.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWeek0Type()</code>, <code>maxWeeks()</code></dl>
+<dd><code>setWeek0Type()</code>, <code>maxWeeks()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

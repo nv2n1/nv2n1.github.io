@@ -12,34 +12,34 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <pre><code>jarsigner</code> [ <i>options</i> ] <i>jar-file</i> <i>alias</i></pre>
 <pre><code>jarsigner</code> <code>-verify</code> [ <i>options</i> ] <i>jar-file</i> [<i>alias ...</i>]</pre>
 <dl>
-<dt><i>options</i></p>
-<dd>The command-line options. See Options.</p>
-<dt>-verify</p>
-<dd>The <code>-verify</code> option can take zero or more keystore alias names after the JAR file name. When the <code>-verify</code> option is specified, the <code>jarsigner</code> command checks that the certificate used to verify each signed entry in the JAR file matches one of the keystore aliases. The aliases are defined in the keystore specified by <code>-keystore</code> or the default keystore. </p>
+<dt><i>options</i></dt>
+<dd>The command-line options. See Options.</dd>
+<dt>-verify</dt>
+<dd>The <code>-verify</code> option can take zero or more keystore alias names after the JAR file name. When the <code>-verify</code> option is specified, the <code>jarsigner</code> command checks that the certificate used to verify each signed entry in the JAR file matches one of the keystore aliases. The aliases are defined in the keystore specified by <code>-keystore</code> or the default keystore. </dd>
 <p> If you also specified the <code>-strict</code> option, and the <code>jarsigner</code> command detected severe warnings, the message, &quot;jar verified, with signer errors&quot; is displayed.</p>
-<dt><i>jar-file</i></p>
-<dd>The JAR file to be signed. </p>
+<dt><i>jar-file</i></dt>
+<dd>The JAR file to be signed. </dd>
 <p> If you also specified the <code>-strict</code> option, and the <code>jarsigner</code> command detected severe warnings, the message, &quot;jar signed, with signer errors&quot; is displayed.</p>
-<dt><i>alias</i></p>
-<dd>The aliases are defined in the keystore specified by <code>-keystore</code> or the default keystore.</dl>
+<dt><i>alias</i></dt>
+<dd>The aliases are defined in the keystore specified by <code>-keystore</code> or the default keystore.</dd></dl>
 <h2>Description</h2>
 <p>The <code>jarsigner</code> tool has two purposes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>To sign Java Archive (JAR) files.</p>
-<dt>&bull;</p>
-<dd>To verify the signatures and integrity of signed JAR files.</dl>
+<dt>&bull;</dt>
+<dd>To sign Java Archive (JAR) files.</dd>
+<dt>&bull;</dt>
+<dd>To verify the signatures and integrity of signed JAR files.</dd></dl>
 <p> The JAR feature enables the packaging of class files, images, sounds, and other digital data in a single file for faster and easier distribution. A tool named <code>jar</code> enables developers to produce JAR files. (Technically, any zip file can also be considered a JAR file, although when created by the <code>jar</code> command or processed by the <code>jarsigner</code> command, JAR files also contain a <code>META-INF/MANIFEST.MF</code> file.) </p>
 <p> A digital signature is a string of bits that is computed from some data (the data being signed) and the private key of an entity (a person, company, and so on). Similar to a handwritten signature, a digital signature has many useful characteristics:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Its authenticity can be verified by a computation that uses the public key corresponding to the private key used to generate the signature.</p>
-<dt>&bull;</p>
-<dd>It cannot be forged, assuming the private key is kept secret.</p>
-<dt>&bull;</p>
-<dd>It is a function of the data signed and thus cannot be claimed to be the signature for other data as well.</p>
-<dt>&bull;</p>
-<dd>The signed data cannot be changed. If the data is changed, then the signature cannot be verified as authentic.</dl>
+<dt>&bull;</dt>
+<dd>Its authenticity can be verified by a computation that uses the public key corresponding to the private key used to generate the signature.</dd>
+<dt>&bull;</dt>
+<dd>It cannot be forged, assuming the private key is kept secret.</dd>
+<dt>&bull;</dt>
+<dd>It is a function of the data signed and thus cannot be claimed to be the signature for other data as well.</dd>
+<dt>&bull;</dt>
+<dd>The signed data cannot be changed. If the data is changed, then the signature cannot be verified as authentic.</dd></dl>
 <p> To generate an entity&#8217;s signature for a file, the entity must first have a public/private key pair associated with it and one or more certificates that authenticate its public key. A certificate is a digitally signed statement from one entity that says that the public key of another entity has a particular value. </p>
 <p> The <code>jarsigner</code> command uses key and certificate information from a keystore to generate digital signatures for JAR files. A keystore is a database of private keys and their associated X.509 certificate chains that authenticate the corresponding public keys. The <code>keytool</code> command is used to create and administer keystores. </p>
 <p> The <code>jarsigner</code> command uses an entity&#8217;s private key to generate a signature. The signed JAR file contains, among other things, a copy of the certificate from the keystore for the public key corresponding to the private key used to sign the file. The <code>jarsigner</code> command can verify the digital signature of the signed JAR file using the certificate inside it (in its signature block file). </p>
@@ -78,32 +78,32 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <h3>Supported Algorithms</h3>
 <p>By default, the <code>jarsigner</code> command signs a JAR file using one of the following algorithms:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Digital Signature Algorithm (DSA) with the SHA1 digest algorithm</p>
-<dt>&bull;</p>
-<dd>RSA algorithm with the SHA256 digest algorithm</p>
-<dt>&bull;</p>
-<dd>Elliptic Curve (EC) cryptography algorithm with the SHA256 with Elliptic Curve Digital Signature Algorithm (ECDSA).</dl>
+<dt>&bull;</dt>
+<dd>Digital Signature Algorithm (DSA) with the SHA1 digest algorithm</dd>
+<dt>&bull;</dt>
+<dd>RSA algorithm with the SHA256 digest algorithm</dd>
+<dt>&bull;</dt>
+<dd>Elliptic Curve (EC) cryptography algorithm with the SHA256 with Elliptic Curve Digital Signature Algorithm (ECDSA).</dd></dl>
 <p> If the signer&#8217;s public and private keys are DSA keys, then <code>jarsigner</code> signs the JAR file with the <code>SHA1withDSA</code> algorithm. If the signer&#8217;s keys are RSA keys, then <code>jarsigner</code> attempts to sign the JAR file with the <code>SHA256withRSA</code> algorithm. If the signer&#8217;s keys are EC keys, then <code>jarsigner</code> signs the JAR file with the <code>SHA256withECDSA</code> algorithm. </p>
 <p> These default signature algorithms can be overridden using the <code>-sigalg</code> option.</p>
 <h3>The Signed Jar File</h3>
 <p>When the <code>jarsigner</code> command is used to sign a JAR file, the output signed JAR file is exactly the same as the input JAR file, except that it has two additional files placed in the META-INF directory:</p>
 <dl>
-<dt>&bull;</p>
-<dd>A signature file with an <code>.SF</code> extension</p>
-<dt>&bull;</p>
-<dd>A signature block file with a <code>.DSA</code>, <code>.RSA</code>, or <code>.EC</code> extension</dl>
+<dt>&bull;</dt>
+<dd>A signature file with an <code>.SF</code> extension</dd>
+<dt>&bull;</dt>
+<dd>A signature block file with a <code>.DSA</code>, <code>.RSA</code>, or <code>.EC</code> extension</dd></dl>
 <p> The base file names for these two files come from the value of the <code>-sigFile</code> option. For example, when the option is <code>-sigFile MKSIGN</code>, the files are named <code>MKSIGN.SF</code> and <code>MKSIGN.DSA</code> </p>
 <p> If no <code>-sigfile</code> option appears on the command line, then the base file name for the <code>.SF</code> and <code>.DSA</code> files is the first 8 characters of the alias name specified on the command line, all converted to uppercase. If the alias name has fewer than 8 characters, then the full alias name is used. If the alias name contains any characters that are not allowed in a signature file name, then each such character is converted to an underscore (_) character in forming the file name. Valid characters include letters, digits, underscores, and hyphens. </p>
 <p> Signature File </p>
 <p> A signature file (<code>.SF</code> file) looks similar to the manifest file that is always included in a JAR file when the <code>jarsigner</code> command is used to sign the file. For each source file included in the JAR file, the <code>.SF</code> file has three lines, such as in the manifest file, that list the following:</p>
 <dl>
-<dt>&bull;</p>
-<dd>File name</p>
-<dt>&bull;</p>
-<dd>Name of the digest algorithm (SHA)</p>
-<dt>&bull;</p>
-<dd>SHA digest value</dl>
+<dt>&bull;</dt>
+<dd>File name</dd>
+<dt>&bull;</dt>
+<dd>Name of the digest algorithm (SHA)</dd>
+<dt>&bull;</dt>
+<dd>SHA digest value</dd></dl>
 <p> In the manifest file, the SHA digest value for each source file is the digest (hash) of the binary data in the source file. In the <code>.SF</code> file, the digest value for a specified source file is the hash of the three lines in the manifest file for the source file. </p>
 <p> The signature file, by default, includes a header with a hash of the whole manifest file. The header also contains a hash of the manifest header. The presence of the header enables verification optimization. See JAR File Verification. </p>
 <p> Signature Block File </p>
@@ -118,16 +118,16 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <h3>Jar File Verification</h3>
 <p>A successful JAR file verification occurs when the signatures are valid, and none of the files that were in the JAR file when the signatures were generated have changed since then. JAR file verification involves the following steps:</p>
 <dl>
-<dt>1.</p>
-<dd>Verify the signature of the <code>.SF</code> file. </p>
+<dt>1.</dt>
+<dd>Verify the signature of the <code>.SF</code> file. </dd>
 <p> The verification ensures that the signature stored in each signature block (<code>.DSA</code>) file was generated using the private key corresponding to the public key whose certificate (or certificate chain) also appears in the <code>.DSA</code> file. It also ensures that the signature is a valid signature of the corresponding signature (<code>.SF</code>) file, and thus the <code>.SF</code> file was not tampered with.</p>
-<dt>2.</p>
-<dd>Verify the digest listed in each entry in the <code>.SF</code> file with each corresponding section in the manifest. </p>
+<dt>2.</dt>
+<dd>Verify the digest listed in each entry in the <code>.SF</code> file with each corresponding section in the manifest. </dd>
 <p> The <code>.SF</code> file by default includes a header that contains a hash of the entire manifest file. When the header is present, the verification can check to see whether or not the hash in the header matches the hash of the manifest file. If there is a match, then verification proceeds to the next step. </p>
 <p> If there is no match, then a less optimized verification is required to ensure that the hash in each source file information section in the <code>.SF</code> file equals the hash of its corresponding section in the manifest file. See Signature File. </p>
 <p> One reason the hash of the manifest file that is stored in the <code>.SF</code> file header might not equal the hash of the current manifest file is that one or more files were added to the JAR file (with the <code>jar</code> tool) after the signature and <code>.SF</code> file were generated. When the <code>jar</code> tool is used to add files, the manifest file is changed by adding sections to it for the new files, but the <code>.SF</code> file is not changed. A verification is still considered successful when none of the files that were in the JAR file when the signature was generated have been changed since then. This happens when the hashes in the non-header sections of the <code>.SF</code> file equal the hashes of the corresponding sections in the manifest file.</p>
-<dt>3.</p>
-<dd>Read each file in the JAR file that has an entry in the <code>.SF</code> file. While reading, compute the file&#8217;s digest and compare the result with the digest for this file in the manifest section. The digests should be the same or verification fails. </p>
+<dt>3.</dt>
+<dd>Read each file in the JAR file that has an entry in the <code>.SF</code> file. While reading, compute the file&#8217;s digest and compare the result with the digest for this file in the manifest section. The digests should be the same or verification fails. </dd>
 <p> If any serious verification failures occur during the verification process, then the process is stopped and a security exception is thrown. The <code>jarsigner</code> command catches and displays the exception.</dl>
 <p> <i>Note:</i> You should read any addition warnings (or errors if you specified the <code>-strict</code> option), as well as the content of the certificate (by specifying the <code>-verbose</code> and <code>-certs</code> options) to determine if the signature can be trusted.</p>
 <h3>Multiple Signatures For A Jar File</h3>
@@ -142,16 +142,16 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <h2>Options</h2>
 <p>The following sections describe the various <code>jarsigner</code> options. Be aware of the following standards:</p>
 <dl>
-<dt>&bull;</p>
-<dd>All option names are preceded by a minus sign (-).</p>
-<dt>&bull;</p>
-<dd>The options can be provided in any order.</p>
-<dt>&bull;</p>
-<dd>Items that are in italics or underlined (option values) represent the actual values that must be supplied.</p>
-<dt>&bull;</p>
-<dd>The <code>-storepass</code>, <code>-keypass</code>, <code>-sigfile</code>, <code>-sigalg</code>, <code>-digestalg</code>, <code>-signedjar</code>, and TSA-related options are only relevant when signing a JAR file; they are not relevant when verifying a signed JAR file. The <code>-keystore</code> option is relevant for signing and verifying a JAR file. In addition, aliases are specified when signing and verifying a JAR file.</p>
-<dt>-keystore <i>url</i></p>
-<dd>Specifies the URL that tells the keystore location. This defaults to the file <code>.keystore</code> in the user&#8217;s home directory, as determined by the <code>user.home</code> system property. </p>
+<dt>&bull;</dt>
+<dd>All option names are preceded by a minus sign (-).</dd>
+<dt>&bull;</dt>
+<dd>The options can be provided in any order.</dd>
+<dt>&bull;</dt>
+<dd>Items that are in italics or underlined (option values) represent the actual values that must be supplied.</dd>
+<dt>&bull;</dt>
+<dd>The <code>-storepass</code>, <code>-keypass</code>, <code>-sigfile</code>, <code>-sigalg</code>, <code>-digestalg</code>, <code>-signedjar</code>, and TSA-related options are only relevant when signing a JAR file; they are not relevant when verifying a signed JAR file. The <code>-keystore</code> option is relevant for signing and verifying a JAR file. In addition, aliases are specified when signing and verifying a JAR file.</dd>
+<dt>-keystore <i>url</i></dt>
+<dd>Specifies the URL that tells the keystore location. This defaults to the file <code>.keystore</code> in the user&#8217;s home directory, as determined by the <code>user.home</code> system property. </dd>
 <p> A keystore is required when signing. You must explicitly specify a keystore when the default keystore does not exist or if you want to use one other than the default. </p>
 <p> A keystore is not required when verifying, but if one is specified or the default exists and the <code>-verbose</code> option was also specified, then additional information is output regarding whether or not any of the certificates used to verify the JAR file are contained in that keystore. </p>
 <p> The <code>-keystore</code> argument can be a file name and path specification rather than a URL, in which case it is treated the same as a file: URL, for example, the following are equivalent: </p>
@@ -162,98 +162,98 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <pre><code>-storetype PKCS11</code></pre>
 <p>For example, the following command lists the contents of the configured PKCS#11 token: </p>
 <pre><code>keytool -keystore NONE -storetype PKCS11 -list</code></pre>
-<dt>-storetype <i>storetype</i></p>
-<dd>Specifies the type of keystore to be instantiated. The default keystore type is the one that is specified as the value of the <code>keystore.type</code> property in the security properties file, which is returned by the static <code>getDefaultType</code> method in <code>java.security.KeyStore</code>. </p>
+<dt>-storetype <i>storetype</i></dt>
+<dd>Specifies the type of keystore to be instantiated. The default keystore type is the one that is specified as the value of the <code>keystore.type</code> property in the security properties file, which is returned by the static <code>getDefaultType</code> method in <code>java.security.KeyStore</code>. </dd>
 <p> The PIN for a PCKS #11 token can also be specified with the <code>-storepass</code> option. If none is specified, then the <code>keytool</code> and <code>jarsigner</code> commands prompt for the token PIN. If the token has a protected authentication path (such as a dedicated PIN-pad or a biometric reader), then the <code>-protected</code> option must be specified and no password options can be specified.</p>
-<dt>-storepass[:env | :file] <i>argument</i></p>
-<dd>Specifies the password that is required to access the keystore. This is only needed when signing (not verifying) a JAR file. In that case, if a <code>-storepass</code> option is not provided at the command line, then the user is prompted for the password. </p>
+<dt>-storepass[:env | :file] <i>argument</i></dt>
+<dd>Specifies the password that is required to access the keystore. This is only needed when signing (not verifying) a JAR file. In that case, if a <code>-storepass</code> option is not provided at the command line, then the user is prompted for the password. </dd>
 <p> If the modifier <code>env</code> or <code>file</code> is not specified, then the password has the value <i>argument</i>. Otherwise, the password is retrieved as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>env</code>: Retrieve the password from the environment variable named <code>argument</code>.</p>
-<dt>&bull;</p>
-<dd><code>file</code>: Retrieve the password from the file named <code>argument</code>.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>env</code>: Retrieve the password from the environment variable named <code>argument</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>file</code>: Retrieve the password from the file named <code>argument</code>.</dd></dl>
 </dl>
 <p> <i>Note:</i> The password should not be specified on the command line or in a script unless it is for testing purposes, or you are on a secure system.</p>
-<dt>-keypass [:env | :file] <i>argument</i></p>
-<dd>Specifies the password used to protect the private key of the keystore entry addressed by the alias specified on the command line. The password is required when using <code>jarsigner</code> to sign a JAR file. If no password is provided on the command line, and the required password is different from the store password, then the user is prompted for it. </p>
+<dt>-keypass [:env | :file] <i>argument</i></dt>
+<dd>Specifies the password used to protect the private key of the keystore entry addressed by the alias specified on the command line. The password is required when using <code>jarsigner</code> to sign a JAR file. If no password is provided on the command line, and the required password is different from the store password, then the user is prompted for it. </dd>
 <p> If the modifier <code>env</code> or <code>file</code> is not specified, then the password has the value <code>argument</code>. Otherwise, the password is retrieved as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>env</code>: Retrieve the password from the environment variable named <code>argument</code>.</p>
-<dt>&bull;</p>
-<dd><code>file</code>: Retrieve the password from the file named <code>argument</code>.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>env</code>: Retrieve the password from the environment variable named <code>argument</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>file</code>: Retrieve the password from the file named <code>argument</code>.</dd></dl>
 </dl>
 <p> <i>Note:</i> The password should not be specified on the command line or in a script unless it is for testing purposes, or you are on a secure system.</p>
-<dt>-sigfile <i>file</i></p>
-<dd>Specifies the base file name to be used for the generated <code>.SF</code> and <code>.DSA</code> files. For example, if file is <code>DUKESIGN</code>, then the generated <code>.SF</code> and <code>.DSA</code> files are named <code>DUKESIGN.SF</code> and <code>DUKESIGN.DSA</code>, and placed in the <code>META-INF</code> directory of the signed JAR file. </p>
+<dt>-sigfile <i>file</i></dt>
+<dd>Specifies the base file name to be used for the generated <code>.SF</code> and <code>.DSA</code> files. For example, if file is <code>DUKESIGN</code>, then the generated <code>.SF</code> and <code>.DSA</code> files are named <code>DUKESIGN.SF</code> and <code>DUKESIGN.DSA</code>, and placed in the <code>META-INF</code> directory of the signed JAR file. </dd>
 <p> The characters in the file must come from the set <code>a-zA-Z0-9_-</code>. Only letters, numbers, underscore, and hyphen characters are allowed. All lowercase characters are converted to uppercase for the <code>.SF</code> and <code>.DSA</code> file names. </p>
 <p> If no <code>-sigfile</code> option appears on the command line, then the base file name for the <code>.SF</code> and <code>.DSA</code> files is the first 8 characters of the alias name specified on the command line, all converted to upper case. If the alias name has fewer than 8 characters, then the full alias name is used. If the alias name contains any characters that are not valid in a signature file name, then each such character is converted to an underscore (_) character to form the file name.</p>
-<dt>-sigalg <i>algorithm</i></p>
-<dd>Specifies the name of the signature algorithm to use to sign the JAR file. </p>
+<dt>-sigalg <i>algorithm</i></dt>
+<dd>Specifies the name of the signature algorithm to use to sign the JAR file. </dd>
 <p> For a list of standard signature algorithm names, see &quot;Appendix A: Standard Names&quot; in the Java Cryptography Architecture (JCA) Reference Guide at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppA">http://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppA</a> </p>
 <p> This algorithm must be compatible with the private key used to sign the JAR file. If this option is not specified, then <code>SHA1withDSA</code>, <code>SHA256withRSA</code>, or <code>SHA256withECDSA</code> are used depending on the type of private key. There must either be a statically installed provider supplying an implementation of the specified algorithm or the user must specify one with the <code>-providerClass</code> option; otherwise, the command will not succeed.</p>
-<dt>-digestalg <i>algorithm</i></p>
-<dd>Specifies the name of the message digest algorithm to use when digesting the entries of a JAR file. </p>
+<dt>-digestalg <i>algorithm</i></dt>
+<dd>Specifies the name of the message digest algorithm to use when digesting the entries of a JAR file. </dd>
 <p> For a list of standard message digest algorithm names, see &quot;Appendix A: Standard Names&quot; in the Java Cryptography Architecture (JCA) Reference Guide at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppA">http://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppA</a> </p>
 <p> If this option is not specified, then <code>SHA256</code> is used. There must either be a statically installed provider supplying an implementation of the specified algorithm or the user must specify one with the <code>-providerClass</code> option; otherwise, the command will not succeed.</p>
-<dt>-certs</p>
-<dd>If the <code>-certs</code> option appears on the command line with the <code>-verify</code> and <code>-verbose</code> options, then the output includes certificate information for each signer of the JAR file. This information includes the name of the type of certificate (stored in the <code>.DSA</code> file) that certifies the signer&#8217;s public key, and if the certificate is an X.509 certificate (an instance of the <code>java.security.cert.X509Certificate</code>), then the distinguished name of the signer. </p>
+<dt>-certs</dt>
+<dd>If the <code>-certs</code> option appears on the command line with the <code>-verify</code> and <code>-verbose</code> options, then the output includes certificate information for each signer of the JAR file. This information includes the name of the type of certificate (stored in the <code>.DSA</code> file) that certifies the signer&#8217;s public key, and if the certificate is an X.509 certificate (an instance of the <code>java.security.cert.X509Certificate</code>), then the distinguished name of the signer. </dd>
 <p> The keystore is also examined. If no keystore value is specified on the command line, then the default keystore file (if any) is checked. If the public key certificate for a signer matches an entry in the keystore, then the alias name for the keystore entry for that signer is displayed in parentheses.</p>
-<dt>-certchain <i>file</i></p>
-<dd>Specifies the certificate chain to be used when the certificate chain associated with the private key of the keystore entry that is addressed by the alias specified on the command line is not complete. This can happen when the keystore is located on a hardware token where there is not enough capacity to hold a complete certificate chain. The file can be a sequence of concatenated X.509 certificates, or a single PKCS#7 formatted data block, either in binary encoding format or in printable encoding format (also known as Base64 encoding) as defined by the Internet RFC 1421 standard. See Internet RFC 1421 Certificate Encoding Standard and <a rel="nofollow" href="http://tools.ietf.org/html/rfc1421.">http://tools.ietf.org/html/rfc1421.</a></p>
-<dt>-verbose</p>
-<dd>When the <code>-verbose</code> option appears on the command line, it indicates verbose mode, which causes <code>jarsigner</code> to output extra information about the progress of the JAR signing or verification.</p>
-<dt>-internalsf</p>
-<dd>In the past, the <code>.DSA</code> (signature block) file generated when a JAR file was signed included a complete encoded copy of the <code>.SF</code> file (signature file) also generated. This behavior has been changed. To reduce the overall size of the output JAR file, the <code>.DSA</code> file by default does not contain a copy of the <code>.SF</code> file anymore. If <code>-internalsf</code> appears on the command line, then the old behavior is utilized. This option is useful for testing. In practice, do not use the <code>-internalsf</code> option because it incurs higher overhead.</p>
-<dt>-sectionsonly</p>
-<dd>If the <code>-sectionsonly</code> option appears on the command line, then the <code>.SF</code> file (signature file) generated when a JAR file is signed does not include a header that contains a hash of the whole manifest file. It contains only the information and hashes related to each individual source file included in the JAR file. See Signature File. </p>
+<dt>-certchain <i>file</i></dt>
+<dd>Specifies the certificate chain to be used when the certificate chain associated with the private key of the keystore entry that is addressed by the alias specified on the command line is not complete. This can happen when the keystore is located on a hardware token where there is not enough capacity to hold a complete certificate chain. The file can be a sequence of concatenated X.509 certificates, or a single PKCS#7 formatted data block, either in binary encoding format or in printable encoding format (also known as Base64 encoding) as defined by the Internet RFC 1421 standard. See Internet RFC 1421 Certificate Encoding Standard and <a rel="nofollow" href="http://tools.ietf.org/html/rfc1421.">http://tools.ietf.org/html/rfc1421.</a></dd>
+<dt>-verbose</dt>
+<dd>When the <code>-verbose</code> option appears on the command line, it indicates verbose mode, which causes <code>jarsigner</code> to output extra information about the progress of the JAR signing or verification.</dd>
+<dt>-internalsf</dt>
+<dd>In the past, the <code>.DSA</code> (signature block) file generated when a JAR file was signed included a complete encoded copy of the <code>.SF</code> file (signature file) also generated. This behavior has been changed. To reduce the overall size of the output JAR file, the <code>.DSA</code> file by default does not contain a copy of the <code>.SF</code> file anymore. If <code>-internalsf</code> appears on the command line, then the old behavior is utilized. This option is useful for testing. In practice, do not use the <code>-internalsf</code> option because it incurs higher overhead.</dd>
+<dt>-sectionsonly</dt>
+<dd>If the <code>-sectionsonly</code> option appears on the command line, then the <code>.SF</code> file (signature file) generated when a JAR file is signed does not include a header that contains a hash of the whole manifest file. It contains only the information and hashes related to each individual source file included in the JAR file. See Signature File. </dd>
 <p> By default, this header is added, as an optimization. When the header is present, whenever the JAR file is verified, the verification can first check to see whether the hash in the header matches the hash of the whole manifest file. When there is a match, verification proceeds to the next step. When there is no match, it is necessary to do a less optimized verification that the hash in each source file information section in the <code>.SF</code> file equals the hash of its corresponding section in the manifest file. See JAR File Verification. </p>
 <p> The <code>-sectionsonly</code> option is primarily used for testing. It should not be used other than for testing because using it incurs higher overhead.</p>
-<dt>-protected</p>
-<dd>Values can be either <code>true</code> or <code>false</code>. Specify <code>true</code> when a password must be specified through a protected authentication path such as a dedicated PIN reader.</p>
-<dt>-providerClass <i>provider-class-name</i></p>
-<dd>Used to specify the name of cryptographic service provider&#8217;s master class file when the service provider is not listed in the <code>java.security</code> security properties file. </p>
+<dt>-protected</dt>
+<dd>Values can be either <code>true</code> or <code>false</code>. Specify <code>true</code> when a password must be specified through a protected authentication path such as a dedicated PIN reader.</dd>
+<dt>-providerClass <i>provider-class-name</i></dt>
+<dd>Used to specify the name of cryptographic service provider&#8217;s master class file when the service provider is not listed in the <code>java.security</code> security properties file. </dd>
 <p> Used with the <code>-providerArg ConfigFilePath</code> option, the <code>keytool</code> and <code>jarsigner</code> tools install the provider dynamically and use <i>ConfigFilePath</i> for the path to the token configuration file. The following example shows a command to list a <code>PKCS #11</code> keystore when the Oracle PKCS #11 provider was not configured in the security properties file. </p>
 <pre><code>jarsigner -keystore NONE -storetype PKCS11 \</code></pre>
 <pre><code> -providerClass sun.security.pkcs11.SunPKCS11 \</code></pre>
 <pre><code> -providerArg /mydir1/mydir2/token.config \</code></pre>
 <pre><code> -list</code></pre>
-<dt>-providerName <i>providerName</i></p>
-<dd>If more than one provider was configured in the <code>java.security</code> security properties file, then you can use the <code>-providerName</code> option to target a specific provider instance. The argument to this option is the name of the provider. </p>
+<dt>-providerName <i>providerName</i></dt>
+<dd>If more than one provider was configured in the <code>java.security</code> security properties file, then you can use the <code>-providerName</code> option to target a specific provider instance. The argument to this option is the name of the provider. </dd>
 <p> For the Oracle PKCS #11 provider, <i>providerName</i> is of the form <code>SunPKCS11-</code><i>TokenName</i>, where <i>TokenName</i> is the name suffix that the provider instance has been configured with, as detailed in the configuration attributes table. For example, the following command lists the contents of the <code>PKCS #11</code> keystore provider instance with name suffix <code>SmartCard</code>: </p>
 <pre><code>jarsigner -keystore NONE -storetype PKCS11 \</code></pre>
 <pre><code> -providerName SunPKCS11-SmartCard \</code></pre>
 <pre><code> -list</code></pre>
-<dt>-J<i>javaoption</i></p>
-<dd>Passes through the specified <i>javaoption</i> string directly to the Java interpreter. The <code>jarsigner</code> command is a wrapper around the interpreter. This option should not contain any spaces. It is useful for adjusting the execution environment or memory usage. For a list of possible interpreter options, type <code>java -h</code> or <code>java -X</code> at the command line.</p>
-<dt>-tsa <i>url</i></p>
-<dd>If <code>-tsa <a rel="nofollow" href="http://example.tsa.url">http://example.tsa.url</a></code> appears on the command line when signing a JAR file then a time stamp is generated for the signature. The URL, <code><a href="http://example.tsa.url">http://example.tsa.url</a></code>, identifies the location of the Time Stamping Authority (TSA) and overrides any URL found with the <code>-tsacert</code> option. The <code>-tsa</code> option does not require the TSA public key certificate to be present in the keystore. </p>
+<dt>-J<i>javaoption</i></dt>
+<dd>Passes through the specified <i>javaoption</i> string directly to the Java interpreter. The <code>jarsigner</code> command is a wrapper around the interpreter. This option should not contain any spaces. It is useful for adjusting the execution environment or memory usage. For a list of possible interpreter options, type <code>java -h</code> or <code>java -X</code> at the command line.</dd>
+<dt>-tsa <i>url</i></dt>
+<dd>If <code>-tsa <a rel="nofollow" href="http://example.tsa.url">http://example.tsa.url</a></code> appears on the command line when signing a JAR file then a time stamp is generated for the signature. The URL, <code><a href="http://example.tsa.url">http://example.tsa.url</a></code>, identifies the location of the Time Stamping Authority (TSA) and overrides any URL found with the <code>-tsacert</code> option. The <code>-tsa</code> option does not require the TSA public key certificate to be present in the keystore. </dd>
 <p> To generate the time stamp, <code>jarsigner</code> communicates with the TSA with the Time-Stamp Protocol (TSP) defined in RFC 3161. When successful, the time stamp token returned by the TSA is stored with the signature in the signature block file.</p>
-<dt>-tsacert <i>alias</i></p>
-<dd>When <code>-tsacert alias</code> appears on the command line when signing a JAR file, a time stamp is generated for the signature. The alias identifies the TSA public key certificate in the keystore that is in effect. The entry&#8217;s certificate is examined for a Subject Information Access extension that contains a URL identifying the location of the TSA. </p>
+<dt>-tsacert <i>alias</i></dt>
+<dd>When <code>-tsacert alias</code> appears on the command line when signing a JAR file, a time stamp is generated for the signature. The alias identifies the TSA public key certificate in the keystore that is in effect. The entry&#8217;s certificate is examined for a Subject Information Access extension that contains a URL identifying the location of the TSA. </dd>
 <p> The TSA public key certificate must be present in the keystore when using the <code>-tsacert</code> option.</p>
-<dt>-tsapolicyid <i>policyid</i></p>
-<dd>Specifies the object identifier (OID) that identifies the policy ID to be sent to the TSA server. If this option is not specified, no policy ID is sent and the TSA server will choose a default policy ID. </p>
+<dt>-tsapolicyid <i>policyid</i></dt>
+<dd>Specifies the object identifier (OID) that identifies the policy ID to be sent to the TSA server. If this option is not specified, no policy ID is sent and the TSA server will choose a default policy ID. </dd>
 <p> Object identifiers are defined by X.696, which is an ITU Telecommunication Standardization Sector (ITU-T) standard. These identifiers are typically period-separated sets of non-negative digits like <code>1.2.3.4</code>, for example.</p>
-<dt>-altsigner <i>class</i></p>
-<dd>This option specifies an alternative signing mechanism. The fully qualified class name identifies a class file that extends the <code>com.sun.jarsigner.ContentSigner</code> abstract class. The path to this class file is defined by the <code>-altsignerpath</code> option. If the <code>-altsigner</code> option is used, then the <code>jarsigner</code> command uses the signing mechanism provided by the specified class. Otherwise, the <code>jarsigner</code> command uses its default signing mechanism. </p>
+<dt>-altsigner <i>class</i></dt>
+<dd>This option specifies an alternative signing mechanism. The fully qualified class name identifies a class file that extends the <code>com.sun.jarsigner.ContentSigner</code> abstract class. The path to this class file is defined by the <code>-altsignerpath</code> option. If the <code>-altsigner</code> option is used, then the <code>jarsigner</code> command uses the signing mechanism provided by the specified class. Otherwise, the <code>jarsigner</code> command uses its default signing mechanism. </dd>
 <p> For example, to use the signing mechanism provided by a class named <code>com.sun.sun.jarsigner.AuthSigner</code>, use the jarsigner option <code>-altsigner com.sun.jarsigner.AuthSigner</code>.</p>
-<dt>-altsignerpath <i>classpathlist</i></p>
-<dd>Specifies the path to the class file and any JAR file it depends on. The class file name is specified with the <code>-altsigner</code> option. If the class file is in a JAR file, then this option specifies the path to that JAR file. </p>
+<dt>-altsignerpath <i>classpathlist</i></dt>
+<dd>Specifies the path to the class file and any JAR file it depends on. The class file name is specified with the <code>-altsigner</code> option. If the class file is in a JAR file, then this option specifies the path to that JAR file. </dd>
 <p> An absolute path or a path relative to the current directory can be specified. If <i>classpathlist</i> contains multiple paths or JAR files, then they should be separated with a colon (:) on Oracle Solaris and a semicolon (;) on Windows. This option is not necessary when the class is already in the search path. </p>
 <p> The following example shows how to specify the path to a JAR file that contains the class file. The JAR file name is included. </p>
 <pre><code>-altsignerpath /home/user/lib/authsigner.jar</code></pre>
 <p>The following example shows how to specify the path to the JAR file that contains the class file. The JAR file name is omitted. </p>
 <pre><code>-altsignerpath /home/user/classes/com/sun/tools/jarsigner/</code></pre>
-<dt>-strict</p>
-<dd>During the signing or verifying process, the command may issue warning messages. If you specify this option, the exit code of the tool reflects the severe warning messages that this command found. See Errors and Warnings.</p>
-<dt>-verbose <i>suboptions</i></p>
-<dd>For the verifying process, the <code>-verbose</code> option takes suboptions to determine how much information is shown. If the <code>-certs</code> option is also specified, then the default mode (or suboption <code>all</code>) displays each entry as it is being processed, and after that, the certificate information for each signer of the JAR file. If the <code>-certs</code> and the <code>-verbose:grouped</code> suboptions are specified, then entries with the same signer info are grouped and displayed together with their certificate information. If <code>-certs</code> and the <code>-verbose:summary</code> suboptions are specified, then entries with the same signer information are grouped and displayed together with their certificate information. Details about each entry are summarized and displayed as <i>one entry (and more)</i>. See Examples.</dl>
+<dt>-strict</dt>
+<dd>During the signing or verifying process, the command may issue warning messages. If you specify this option, the exit code of the tool reflects the severe warning messages that this command found. See Errors and Warnings.</dd>
+<dt>-verbose <i>suboptions</i></dt>
+<dd>For the verifying process, the <code>-verbose</code> option takes suboptions to determine how much information is shown. If the <code>-certs</code> option is also specified, then the default mode (or suboption <code>all</code>) displays each entry as it is being processed, and after that, the certificate information for each signer of the JAR file. If the <code>-certs</code> and the <code>-verbose:grouped</code> suboptions are specified, then entries with the same signer info are grouped and displayed together with their certificate information. If <code>-certs</code> and the <code>-verbose:summary</code> suboptions are specified, then entries with the same signer information are grouped and displayed together with their certificate information. Details about each entry are summarized and displayed as <i>one entry (and more)</i>. See Examples.</dd></dl>
 <h2>Errors And Warnings</h2>
 <p>During the signing or verifying process, the <code>jarsigner</code> command may issue various errors or warnings. </p>
 <p> If there is a failure, the <code>jarsigner</code> command exits with code 1. If there is no failure, but there are one or more severe warnings, the <code>jarsigner</code> command exits with code 0 when the <code>-strict</code> option is <i>not</i> specified, or exits with the OR-value of the warning codes when the <code>-strict</code> is specified. If there is only informational warnings or no warning at all, the command always exits with code 0. </p>
@@ -263,37 +263,37 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <h3>Failure</h3>
 <p>Reasons why the <code>jarsigner</code> command fails include (but are not limited to) a command line parsing error, the inability to find a keypair to sign the JAR file, or the verification of a signed JAR fails.</p>
 <dl>
-<dt>failure</p>
-<dd>Code 1. The signing or verifying fails.</dl>
+<dt>failure</dt>
+<dd>Code 1. The signing or verifying fails.</dd></dl>
 <h3>Severe Warnings</h3>
 <p><i>Note:</i> Severe warnings are reported as errors if you specify the <code>-strict</code> option. </p>
 <p> Reasons why the <code>jarsigner</code> command issues a severe warning include the certificate used to sign the JAR file has an error or the signed JAR file has other problems.</p>
 <dl>
-<dt>hasExpiredCert</p>
-<dd>Code 4. This jar contains entries whose signer certificate has expired.</p>
-<dt>notYetValidCert</p>
-<dd>Code 4. This jar contains entries whose signer certificate is not yet valid.</p>
-<dt>chainNotValidated</p>
-<dd>Code 4. This jar contains entries whose certificate chain cannot be correctly validated.</p>
-<dt>badKeyUsage</p>
-<dd>Code 8. This jar contains entries whose signer certificate&#8217;s KeyUsage extension doesn&#8217;t allow code signing.</p>
-<dt>badExtendedKeyUsage</p>
-<dd>Code 8. This jar contains entries whose signer certificate&#8217;s ExtendedKeyUsage extension doesn&#8217;t allow code signing.</p>
-<dt>badNetscapeCertType</p>
-<dd>Code 8. This jar contains entries whose signer certificate&#8217;s NetscapeCertType extension doesn&#8217;t allow code signing.</p>
-<dt>hasUnsignedEntry</p>
-<dd>Code 16. This jar contains unsigned entries which have not been integrity-checked.</p>
-<dt>notSignedByAlias</p>
-<dd>Code 32. This jar contains signed entries which are not signed by the specified alias(es).</p>
-<dt>aliasNotInStore</p>
-<dd>Code 32. This jar contains signed entries that are not signed by alias in this keystore.</dl>
+<dt>hasExpiredCert</dt>
+<dd>Code 4. This jar contains entries whose signer certificate has expired.</dd>
+<dt>notYetValidCert</dt>
+<dd>Code 4. This jar contains entries whose signer certificate is not yet valid.</dd>
+<dt>chainNotValidated</dt>
+<dd>Code 4. This jar contains entries whose certificate chain cannot be correctly validated.</dd>
+<dt>badKeyUsage</dt>
+<dd>Code 8. This jar contains entries whose signer certificate&#8217;s KeyUsage extension doesn&#8217;t allow code signing.</dd>
+<dt>badExtendedKeyUsage</dt>
+<dd>Code 8. This jar contains entries whose signer certificate&#8217;s ExtendedKeyUsage extension doesn&#8217;t allow code signing.</dd>
+<dt>badNetscapeCertType</dt>
+<dd>Code 8. This jar contains entries whose signer certificate&#8217;s NetscapeCertType extension doesn&#8217;t allow code signing.</dd>
+<dt>hasUnsignedEntry</dt>
+<dd>Code 16. This jar contains unsigned entries which have not been integrity-checked.</dd>
+<dt>notSignedByAlias</dt>
+<dd>Code 32. This jar contains signed entries which are not signed by the specified alias(es).</dd>
+<dt>aliasNotInStore</dt>
+<dd>Code 32. This jar contains signed entries that are not signed by alias in this keystore.</dd></dl>
 <h3>Informational Warnings</h3>
 <p>Informational warnings include those that are not errors but regarded as bad practice. They do not have a code.</p>
 <dl>
-<dt>hasExpiringCert</p>
-<dd>This jar contains entries whose signer certificate will expire within six months.</p>
-<dt>noTimestamp</p>
-<dd>This jar contains signatures that does not include a timestamp. Without a timestamp, users may not be able to validate this JAR file after the signer certificate&#8217;s expiration date (<code>YYYY-MM-DD</code>) or after any future revocation date.</dl>
+<dt>hasExpiringCert</dt>
+<dd>This jar contains entries whose signer certificate will expire within six months.</dd>
+<dt>noTimestamp</dt>
+<dd>This jar contains signatures that does not include a timestamp. Without a timestamp, users may not be able to validate this JAR file after the signer certificate&#8217;s expiration date (<code>YYYY-MM-DD</code>) or after any future revocation date.</dd></dl>
 <h2>Examples</h2>
 <h3>Sign A Jar File</h3>
 <p>Use the following command to sign bundle.jar with the private key of a user whose keystore alias is <code>jane</code> in a keystore named <code>mystore</code> in the <code>working</code> directory and name the signed JAR file <code>sbundle.jar</code>: </p>
@@ -341,10 +341,10 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <p>If the certificate for a signer is not an X.509 certificate, then there is no distinguished name information. In that case, just the certificate type and the alias are shown. For example, if the certificate is a PGP certificate, and the alias is <code>bob</code>, then you would get: <code>PGP, (bob)</code>.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-jar/">jar</a>(1)</p>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-keytool/">keytool</a>(1)</p>
-<dt>&bull;</p>
-<dd>Trail: Security Features in Java SE at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/security/index.html">http://docs.oracle.com/javase/tutorial/security/index.html</a> </p>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-jar/">jar</a>(1)</dd>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-keytool/">keytool</a>(1)</dd>
+<dt>&bull;</dt>
+<dd>Trail: Security Features in Java SE at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/security/index.html">http://docs.oracle.com/javase/tutorial/security/index.html</a> </dd>
 </dl>

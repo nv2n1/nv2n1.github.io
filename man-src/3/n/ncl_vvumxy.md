@@ -15,25 +15,25 @@ CALL VVUMXY (X,Y,U,V,UVM,XB,YB,XE,YE,IST)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(REAL, input) Location of the vector along the first dimensional axis in the data coordinate system. When MAP is 0, this is the X Axis. If MAP is 1, it is the longitudinal axis, and if MAP is 2, it is the radial axis. For other values of MAP, those that cause VVUMXY to be invoked, the interpretation is up to the author of the mapping routine.
-<dt>Y
-<dd>(REAL, input) Location of the vector along the second dimensional axis in the data coordinate system. When MAP is 0, this is the Y Axis. If MAP is 1, it is the latitudinal axis, and if MAP is 2, it is the angular axis. For other values of MAP, those that cause VVUMXY to be invoked, the interpretation is up to the author of the mapping routine.
-<dt>U
-<dd>(REAL, input) U component of the vector. If TRT is set to 1, the direction of the U component is tangent to the direction of the first dimensional axis in the data coordinate system at the location of the vector. If TRT is set to 0, and MAP has a value of 0 or 2, the direction of the U component is parallel to the horizontal (X axis) in NDC space.
-<dt>V
-<dd>(REAL, input) V component of the vector. If TRT is set to 1, the direction of the V component is normal to the direction of the first dimensional axis in the data coordinate system at the location of the vector. If TRT is set to 0, and MAP has a value of 0 or 2, the direction of the V component is parallel to the vertical (Y axis) in NDC space.
-<dt>UVM
-<dd>(REAL, input) Magnitude of the U and V components, SQRT(U*U+V*V). Although this value could be calculated within the routine, it is more efficient for the calling routine to supply the value as an argument, since it is needed for other purposes at a higher level.
-<dt>XB
-<dd>(REAL, output) Location of the vector starting point along the horizontal (X axis) in NDC space, before adjustment based on the value of the vector positioning parameter, VPO.
-<dt>YB
-<dd>(REAL, output) Location of the vector starting point along the vertical (Y axis) in NDC space, before adjustment based on the value of the vector positioning parameter, VPO
-<dt>XE
-<dd>(REAL, output) Location of the vector ending point along the horizontal (X axis) in NDC space, before adjustment based on the value of the vector positioning parameter, VPO
-<dt>YE
-<dd>(REAL, output) Location of the vector ending point along the vertical (Y axis) in NDC space before adjustment based on the value of the vector positioning parameter, VPO
-<dt>IST
-<dd>(REAL, output) Status of the vector mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dl>
+</dt><dd>(REAL, input) Location of the vector along the first dimensional axis in the data coordinate system. When MAP is 0, this is the X Axis. If MAP is 1, it is the longitudinal axis, and if MAP is 2, it is the radial axis. For other values of MAP, those that cause VVUMXY to be invoked, the interpretation is up to the author of the mapping routine.
+</dd><dt>Y
+</dt><dd>(REAL, input) Location of the vector along the second dimensional axis in the data coordinate system. When MAP is 0, this is the Y Axis. If MAP is 1, it is the latitudinal axis, and if MAP is 2, it is the angular axis. For other values of MAP, those that cause VVUMXY to be invoked, the interpretation is up to the author of the mapping routine.
+</dd><dt>U
+</dt><dd>(REAL, input) U component of the vector. If TRT is set to 1, the direction of the U component is tangent to the direction of the first dimensional axis in the data coordinate system at the location of the vector. If TRT is set to 0, and MAP has a value of 0 or 2, the direction of the U component is parallel to the horizontal (X axis) in NDC space.
+</dd><dt>V
+</dt><dd>(REAL, input) V component of the vector. If TRT is set to 1, the direction of the V component is normal to the direction of the first dimensional axis in the data coordinate system at the location of the vector. If TRT is set to 0, and MAP has a value of 0 or 2, the direction of the V component is parallel to the vertical (Y axis) in NDC space.
+</dd><dt>UVM
+</dt><dd>(REAL, input) Magnitude of the U and V components, SQRT(U*U+V*V). Although this value could be calculated within the routine, it is more efficient for the calling routine to supply the value as an argument, since it is needed for other purposes at a higher level.
+</dd><dt>XB
+</dt><dd>(REAL, output) Location of the vector starting point along the horizontal (X axis) in NDC space, before adjustment based on the value of the vector positioning parameter, VPO.
+</dd><dt>YB
+</dt><dd>(REAL, output) Location of the vector starting point along the vertical (Y axis) in NDC space, before adjustment based on the value of the vector positioning parameter, VPO
+</dd><dt>XE
+</dt><dd>(REAL, output) Location of the vector ending point along the horizontal (X axis) in NDC space, before adjustment based on the value of the vector positioning parameter, VPO
+</dd><dt>YE
+</dt><dd>(REAL, output) Location of the vector ending point along the vertical (Y axis) in NDC space before adjustment based on the value of the vector positioning parameter, VPO
+</dd><dt>IST
+</dt><dd>(REAL, output) Status of the vector mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dd></dl>
 
 <h2>Usage</h2>
 

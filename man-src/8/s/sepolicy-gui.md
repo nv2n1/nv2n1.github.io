@@ -14,10 +14,10 @@ description: "sepolicy-gui – Graphical User Interface for SELinux policy."
 <p>Use <code>sepolicy gui</code> to run a the graphical user interface, which allows you to explore how SELinux confines different process domains. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd>Display help message</p>
-<dt><i>-d, &#8211;domain</i></p>
-<dd>Initialize gui to the selected domain. </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>Display help message</dd>
+<dt><i>-d, &#8211;domain</i></dt>
+<dd>Initialize gui to the selected domain. </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>

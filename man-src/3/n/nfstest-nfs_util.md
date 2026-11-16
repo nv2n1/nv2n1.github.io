@@ -38,47 +38,47 @@ objects
 <code>__init__(self, **kwargs)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>rpcdebug:</code>
-<dd>Set RPC kernel debug flags and save log messages [default: '']
-<dt><code>nfsdebug:</code>
-<dd>Set NFS kernel debug flags and save log messages [default: '']
-<dt><code>dbgname:</code>
-<dd>Base name for log messages files to create [default: 'dbgfile']
-<dt><code>tracename:</code>
-<dd>Base name for trace files to create [default: 'tracefile']
-<dt><code>trcdelay:</code>
-<dd>Seconds to delay before stopping packet trace [default: 0.0]
-<dt><code>notrace:</code>
-<dd>Debug option so a trace is not actually started [default: False]
-<dt><code>tcpdump:</code>
-<dd>Tcpdump command [default: '/usr/sbin/tcpdump']
-<dt><code>messages:</code>
-<dd>Location of file for system messages [default: '/var/log/messages']
-<dt><code>tmpdir:</code>
-<dd>Temporary directory where trace files are created [default: '/tmp']
-<dt><code>tbsize:</code>
-<dd>Capture buffer size in kB [default: 50000]
-</dl></dl>
+<dl><dl><dt><code>rpcdebug:</code>
+</dt><dd>Set RPC kernel debug flags and save log messages [default: '']
+</dd><dt><code>nfsdebug:</code>
+</dt><dd>Set NFS kernel debug flags and save log messages [default: '']
+</dd><dt><code>dbgname:</code>
+</dt><dd>Base name for log messages files to create [default: 'dbgfile']
+</dd><dt><code>tracename:</code>
+</dt><dd>Base name for trace files to create [default: 'tracefile']
+</dd><dt><code>trcdelay:</code>
+</dt><dd>Seconds to delay before stopping packet trace [default: 0.0]
+</dd><dt><code>notrace:</code>
+</dt><dd>Debug option so a trace is not actually started [default: False]
+</dd><dt><code>tcpdump:</code>
+</dt><dd>Tcpdump command [default: '/usr/sbin/tcpdump']
+</dd><dt><code>messages:</code>
+</dt><dd>Location of file for system messages [default: '/var/log/messages']
+</dd><dt><code>tmpdir:</code>
+</dt><dd>Temporary directory where trace files are created [default: '/tmp']
+</dd><dt><code>tbsize:</code>
+</dt><dd>Capture buffer size in kB [default: 50000]
+</dd></dl></dl>
 <code>create_host(self, host, **kwargs)</code>
 Create client host object and set defaults.
 <code>find_exchange_id(self, **kwargs)</code>
 Find the call and its corresponding reply for the NFSv4 EXCHANGE_ID
 going to the server specified by the ipaddr and port.
-<dl><dt><dd><dl><dt><code>ipaddr:</code>
-<dd>Destination IP address [default: self.server]
-<dt><code>port:</code>
-<dd>Destination port [default: self.port]
-</dl></dl><dl><dt><dd>Store the callback IP/TCP expression in object attribute cb_dst
+<dl><dl><dt><code>ipaddr:</code>
+</dt><dd>Destination IP address [default: self.server]
+</dd><dt><code>port:</code>
+</dt><dd>Destination port [default: self.port]
+</dd></dl></dl><dl><dt></dt><dd>Store the callback IP/TCP expression in object attribute cb_dst
 Return a tuple: (pktcall, pktreply).
-</dl>
+</dd></dl>
 <code>find_getdeviceinfo(self, deviceid=None)</code>
 Find the call and its corresponding reply for the NFSv4 GETDEVICEINFO
 going to the server specified by the ipaddr for self.server and port
 given by self.port.
-<dl><dt><dd><dl><dt><code>deviceid:</code>
-<dd>Look for an specific deviceid [default: any deviceid]
-</dl></dl><dl><dt><dd>Return a tuple: (pktcall, pktreply, dslist).
-</dl>
+<dl><dl><dt><code>deviceid:</code>
+</dt><dd>Look for an specific deviceid [default: any deviceid]
+</dd></dl></dl><dl><dt></dt><dd>Return a tuple: (pktcall, pktreply, dslist).
+</dd></dl>
 <code>find_layoutget(self, filehandle)</code>
 Find the call and its corresponding reply for the NFSv4 LAYOUTGET
 of the given file handle going to the server specified by the
@@ -91,52 +91,52 @@ The reply must also match the given status.
 Find the call and its corresponding reply for the specified NFSv4
 operation going to the server specified by the ipaddr and port.
 The reply must also match the given status.
-<dl><dt><dd><dl><dt><code>op:</code>
-<dd>NFS operation to find
-<dt><code>ipaddr:</code>
-<dd>Destination IP address
-<dt><code>port:</code>
-<dd>Destination port [default: any destination port]
-<dt><code>match:</code>
-<dd>Match string to include [default: '']
-<dt><code>status:</code>
-<dd>Match the status of the operation [default: 0]
-<dt><code>src_ipaddr:</code>
-<dd>Source IP address [default: any IP address]
-<dt><code>maxindex:</code>
-<dd>The match fails if packet index hits this limit [default: no limit]
-<dt><code>call_only:</code>
-<dd>Find the call only [default: False]
-</dl></dl><dl><dt><dd>Return a tuple: (pktcall, pktreply).
-</dl>
+<dl><dl><dt><code>op:</code>
+</dt><dd>NFS operation to find
+</dd><dt><code>ipaddr:</code>
+</dt><dd>Destination IP address
+</dd><dt><code>port:</code>
+</dt><dd>Destination port [default: any destination port]
+</dd><dt><code>match:</code>
+</dt><dd>Match string to include [default: '']
+</dd><dt><code>status:</code>
+</dt><dd>Match the status of the operation [default: 0]
+</dd><dt><code>src_ipaddr:</code>
+</dt><dd>Source IP address [default: any IP address]
+</dd><dt><code>maxindex:</code>
+</dt><dd>The match fails if packet index hits this limit [default: no limit]
+</dd><dt><code>call_only:</code>
+</dt><dd>Find the call only [default: False]
+</dd></dl></dl><dl><dt></dt><dd>Return a tuple: (pktcall, pktreply).
+</dd></dl>
 <code>find_open(self, **kwargs)</code>
 Find the call and its corresponding reply for the NFSv4 OPEN of the
 given file going to the server specified by the ipaddr and port.
-<dl><dt><dd><dl><dt><code>filename:</code>
-<dd>Find open call and reply for this file [default: None]
-<dt><code>claimfh:</code>
-<dd>Find open call and reply for this file handle using CLAIM_FH
+<dl><dl><dt><code>filename:</code>
+</dt><dd>Find open call and reply for this file [default: None]
+</dd><dt><code>claimfh:</code>
+</dt><dd>Find open call and reply for this file handle using CLAIM_FH
 [default: None]
-<dt><code>ipaddr:</code>
-<dd>Destination IP address [default: self.server]
-<dt><code>port:</code>
-<dd>Destination port [default: self.port]
-<dt><code>deleg_type:</code>
-<dd>Expected delegation type on reply [default: None]
-<dt><code>deleg_stateid:</code>
-<dd>Delegation stateid expected on call in delegate_cur_info [default: None]
-<dt><code>fh:</code>
-<dd>Find open call and reply for this file handle when using
+</dd><dt><code>ipaddr:</code>
+</dt><dd>Destination IP address [default: self.server]
+</dd><dt><code>port:</code>
+</dt><dd>Destination port [default: self.port]
+</dd><dt><code>deleg_type:</code>
+</dt><dd>Expected delegation type on reply [default: None]
+</dd><dt><code>deleg_stateid:</code>
+</dt><dd>Delegation stateid expected on call in delegate_cur_info [default: None]
+</dd><dt><code>fh:</code>
+</dt><dd>Find open call and reply for this file handle when using
 deleg_stateid [default: None]
-<dt><code>src_ipaddr:</code>
-<dd>Source IP address [default: any IP address]
-<dt><code>maxindex:</code>
-<dd>The match fails if packet index hits this limit [default: no limit]
-<dt><code>anyclaim:</code>
-<dd>Find open for either regular open or using delegate_cur_info [default: False]
-</dl></dl><dl><dt><dd>Must specify either filename, claimfh or both.
+</dd><dt><code>src_ipaddr:</code>
+</dt><dd>Source IP address [default: any IP address]
+</dd><dt><code>maxindex:</code>
+</dt><dd>The match fails if packet index hits this limit [default: no limit]
+</dd><dt><code>anyclaim:</code>
+</dt><dd>Find open for either regular open or using delegate_cur_info [default: False]
+</dd></dl></dl><dl><dt></dt><dd>Must specify either filename, claimfh or both.
 Return a tuple: (filehandle, open_stateid, deleg_stateid).
-</dl>
+</dd></dl>
 <code>get_abs_offset(self, offset, ds_index=None)</code>
 Get real file offset given by the (read/write) offset on the given
 data server index, taking into account the type of layout
@@ -160,15 +160,15 @@ which maps the state id to a string identifying if the state
 id is an open, lock or delegation state id.
 <code>nfs_debug_enable(self, **kwargs)</code>
 Enable NFS debug messages.
-<dl><dt><dd><dl><dt><code>rpcdebug:</code>
-<dd>Set RPC kernel debug flags and save log messages [default: self.rpcdebug]
-<dt><code>nfsdebug:</code>
-<dd>Set NFS kernel debug flags and save log messages [default: self.nfsdebug]
-<dt><code>dbgfile:</code>
-<dd>Name of log messages file to create, default is a unique name
+<dl><dl><dt><code>rpcdebug:</code>
+</dt><dd>Set RPC kernel debug flags and save log messages [default: self.rpcdebug]
+</dd><dt><code>nfsdebug:</code>
+</dt><dd>Set NFS kernel debug flags and save log messages [default: self.nfsdebug]
+</dd><dt><code>dbgfile:</code>
+</dt><dd>Name of log messages file to create, default is a unique name
 created in the temporary directory using self.dbgname as the
 base name.
-</dl></dl>
+</dd></dl></dl>
 <code>nfs_debug_reset(self)</code>
 Reset NFS debug messages.
 <code>stid_str(self, stateid)</code>
@@ -180,147 +180,147 @@ Return the packet trace object created, the packet trace object
 is also stored in the object attribute pktt.
 <code>trace_start(self, tracefile=None, interface=None, capsize=None, clients=None)</code>
 Start trace on interface given
-<dl><dt><dd><dl><dt><code>tracefile:</code>
-<dd>Name of trace file to create, default is a unique name
+<dl><dl><dt><code>tracefile:</code>
+</dt><dd>Name of trace file to create, default is a unique name
 created in the temporary directory using self.tracename as the
 base name.
-<dt><code>capsize:</code>
-<dd>Use the -C option of tcpdump to split the trace files every
+</dd><dt><code>capsize:</code>
+</dt><dd>Use the -C option of tcpdump to split the trace files every
 1000000*capsize bytes. See documentation for tcpdump for more
 information
-<dt><code>clients:</code>
-<dd>List of Host() objects to monitor
-</dl></dl><dl><dt><dd>Return the name of the trace file created.
-</dl>
+</dd><dt><code>clients:</code>
+</dt><dd>List of Host() objects to monitor
+</dd></dl></dl><dl><dt></dt><dd>Return the name of the trace file created.
+</dd></dl>
 <code>trace_stop(self)</code>
 Stop the trace started by trace_start().
 <code>verify_commit(self, ipaddr, port, filehandle, init=False)</code>
 Verify commits are properly sent to the server specified by the
 given ipaddr and port.
-<dl><dt><dd><dl><dt><code>ipaddr:</code>
-<dd>Destination IP address of MDS or DS
-<dt><code>port:</code>
-<dd>Destination port number of MDS or DS
-<dt><code>filehandle:</code>
-<dd>Find commits for this file handle
-<dt><code>init:</code>
-<dd>Initialized test variables [default: False]
-</dl></dl><dl><dt><dd>Return the number of commits sent to the server.
-</dl>
+<dl><dl><dt><code>ipaddr:</code>
+</dt><dd>Destination IP address of MDS or DS
+</dd><dt><code>port:</code>
+</dt><dd>Destination port number of MDS or DS
+</dd><dt><code>filehandle:</code>
+</dt><dd>Find commits for this file handle
+</dd><dt><code>init:</code>
+</dt><dd>Initialized test variables [default: False]
+</dd></dl></dl><dl><dt></dt><dd>Return the number of commits sent to the server.
+</dd></dl>
 <code>verify_create_session(self, ipaddr, port, ds=False, nocreate=False, ds_index=None, exchid_status=0, cs_status=0)</code>
 Verify initial connection to the metadata server(MDS)/data server(DS).
 Verify if EXCHANGE_ID, CREATE_SESSION, RECLAIM_COMPLETE,
 GETATTR asking for FATTR4_LEASE_TIME, and GETATTR asking for
 FATTR4_FS_LAYOUT_TYPES are all sent or not to the server.
-<dl><dt><dd><dl><dt><code>ipaddr:</code>
-<dd>Destination IP address of MDS or DS
-<dt><code>port:</code>
-<dd>Destination port number of MDS or DS
-<dt><code>ds:</code>
-<dd>True if ipaddr/port defines a DS, otherwise MDS [default: False]
-<dt><code>nocreate:</code>
-<dd>True if expecting the client NOT to send EXCHANGE_ID,
+<dl><dl><dt><code>ipaddr:</code>
+</dt><dd>Destination IP address of MDS or DS
+</dd><dt><code>port:</code>
+</dt><dd>Destination port number of MDS or DS
+</dd><dt><code>ds:</code>
+</dt><dd>True if ipaddr/port defines a DS, otherwise MDS [default: False]
+</dd><dt><code>nocreate:</code>
+</dt><dd>True if expecting the client NOT to send EXCHANGE_ID,
 CREATE_SESSION, and RECLAIM_COMPLETE. Otherwise, verify all
 these operations are sent by the client [default: False]
-<dt><code>ds_index:</code>
-<dd>DS index used for displaying purposes only [default: None]
-<dt><code>exchid_status:</code>
-<dd>Expected status for EXCHANGE_ID [default: 0]
-<dt><code>cs_status:</code>
-<dd>Expected status for CREATE_SESSION [default: 0]
-</dl></dl><dl><dt><dd>Return the sessionid and it is also stored in the object
+</dd><dt><code>ds_index:</code>
+</dt><dd>DS index used for displaying purposes only [default: None]
+</dd><dt><code>exchid_status:</code>
+</dt><dd>Expected status for EXCHANGE_ID [default: 0]
+</dd><dt><code>cs_status:</code>
+</dt><dd>Expected status for CREATE_SESSION [default: 0]
+</dd></dl></dl><dl><dt></dt><dd>Return the sessionid and it is also stored in the object
 attribute sessionid.
-</dl>
+</dd></dl>
 <code>verify_io(self, iomode, stateid, ipaddr=None, port=None, src_ipaddr=None, filehandle=None, ds_index=None, init=False, maxindex=None, pattern=None)</code>
 Verify I/O is sent to the server specified by the ipaddr and port.
-<dl><dt><dd><dl><dt><code>iomode:</code>
-<dd>Verify reads (iomode == 1) or writes (iomode == 2)
-<dt><code>stateid:</code>
-<dd>Expected stateid to use in all I/O requests
-<dt><code>ipaddr:</code>
-<dd>Destination IP address of MDS or DS
+<dl><dl><dt><code>iomode:</code>
+</dt><dd>Verify reads (iomode == 1) or writes (iomode == 2)
+</dd><dt><code>stateid:</code>
+</dt><dd>Expected stateid to use in all I/O requests
+</dd><dt><code>ipaddr:</code>
+</dt><dd>Destination IP address of MDS or DS
 [default: do not match destination]
-<dt><code>port:</code>
-<dd>Destination port number of MDS or DS
+</dd><dt><code>port:</code>
+</dt><dd>Destination port number of MDS or DS
 [default: do not match destination port]
-<dt><code>src_ipaddr:</code>
-<dd>Source IP address of request
+</dd><dt><code>src_ipaddr:</code>
+</dt><dd>Source IP address of request
 [default: do not match source]
-<dt><code>filehandle:</code>
-<dd>Find I/O for this file handle. This option is used when
+</dd><dt><code>filehandle:</code>
+</dt><dd>Find I/O for this file handle. This option is used when
 verifying I/O sent to the MDS
 [default: use filehandle given by ds_index]
-<dt><code>ds_index:</code>
-<dd>Data server index. This option is used when verifying I/O sent
+</dd><dt><code>ds_index:</code>
+</dt><dd>Data server index. This option is used when verifying I/O sent
 to the DS -- filehandle is taken from x.layout for this index
 [default: None]
-<dt><code>init:</code>
-<dd>Initialized test variables [default: False]
-<dt><code>maxindex:</code>
-<dd>The match fails if packet index hits this limit [default: no limit]
-<dt><code>pattern:</code>
-<dd>Data pattern to compare [default: default data pattern]
-</dl></dl><dl><dt><dd>Return the number of I/O operations sent to the server.
-</dl>
+</dd><dt><code>init:</code>
+</dt><dd>Initialized test variables [default: False]
+</dd><dt><code>maxindex:</code>
+</dt><dd>The match fails if packet index hits this limit [default: no limit]
+</dd><dt><code>pattern:</code>
+</dt><dd>Data pattern to compare [default: default data pattern]
+</dd></dl></dl><dl><dt></dt><dd>Return the number of I/O operations sent to the server.
+</dd></dl>
 <code>verify_layoutcommit(self, filehandle, filesize)</code>
 Verify layoutcommit is properly sent to the server specified by
 the ipaddr for self.server and port given by self.port.
 Verify a GETATTR asking for file size is sent within the same
 compound as the LAYOUTCOMMIT.
 Verify GETATTR returns correct size for the file.
-<dl><dt><dd><dl><dt><code>filehandle:</code>
-<dd>Find layoutcommit for this file handle
-<dt><code>filesize:</code>
-<dd>Expected size of file
-</dl></dl>
+<dl><dl><dt><code>filehandle:</code>
+</dt><dd>Find layoutcommit for this file handle
+</dd><dt><code>filesize:</code>
+</dt><dd>Expected size of file
+</dd></dl></dl>
 <code>verify_layoutget(self, filehandle, iomode, riomode=None, status=0, offset=None, length=None)</code>
 Verify the client sends a LAYOUTGET for the given file handle.
-<dl><dt><dd><dl><dt><code>filehandle:</code>
-<dd>Find LAYOUTGET for this file handle
-<dt><code>iomode:</code>
-<dd>Expected I/O mode for LAYOUTGET call
-<dt><code>riomode:</code>
-<dd>Expected I/O mode for LAYOUTGET reply if specified, else verify
+<dl><dl><dt><code>filehandle:</code>
+</dt><dd>Find LAYOUTGET for this file handle
+</dd><dt><code>iomode:</code>
+</dt><dd>Expected I/O mode for LAYOUTGET call
+</dd><dt><code>riomode:</code>
+</dt><dd>Expected I/O mode for LAYOUTGET reply if specified, else verify
 reply I/O mode is equal to call I/O mode if iomode == 2.
 If iomode == 1, the reply I/O mode could be equal to 1 or 2
-<dt><code>status:</code>
-<dd>Expected status for LAYOUTGET reply [default: 0]
-<dt><code>offset:</code>
-<dd>Expected layout range for LAYOUTGET reply [default: None]
-<dt><code>length:</code>
-<dd>Expected layout range for LAYOUTGET reply [default: None]
-</dl></dl><dl><dt><dd>If both offset and length are not given, verify LAYOUTGET reply
+</dd><dt><code>status:</code>
+</dt><dd>Expected status for LAYOUTGET reply [default: 0]
+</dd><dt><code>offset:</code>
+</dt><dd>Expected layout range for LAYOUTGET reply [default: None]
+</dd><dt><code>length:</code>
+</dt><dd>Expected layout range for LAYOUTGET reply [default: None]
+</dd></dl></dl><dl><dt></dt><dd>If both offset and length are not given, verify LAYOUTGET reply
 should be a full layout [0, NFS4_UINT64_MAX]. If only one is
 provided the following defaults are used: offset = 0,
 length = NFS4_UINT64_MAX.
 Layout information is stored in the object attribute layout.
 Return a tuple: (layoutget, layoutget_res, loc_body).
-</dl>
+</dd></dl>
 <code>verify_stripe(self, offset, size, ds_index)</code>
 Verify if read/write is sent to the correct data server according
 to stripe size, first stripe index and the number of filehandles.
 The layout information is taken from object attribute layout.
-<dl><dt><dd><dl><dt><code>offset:</code>
-<dd>Real file offset
-<dt><code>size:</code>
-<dd>I/O size
-<dt><code>ds_index:</code>
-<dd>Data server index
-</dl></dl><dl><dt><dd>Return True if stripe is correctly verified, False otherwise.
-</dl>
+<dl><dl><dt><code>offset:</code>
+</dt><dd>Real file offset
+</dd><dt><code>size:</code>
+</dt><dd>I/O size
+</dd><dt><code>ds_index:</code>
+</dt><dd>Data server index
+</dd></dl></dl><dl><dt></dt><dd>Return True if stripe is correctly verified, False otherwise.
+</dd></dl>
 <code>Static methods defined here:</code>
 ----------------------------
 <code>bitmap_str(bitmap, count, bmap, blist)</code>
 Return the string representation of bitmap.
-<dl><dt><dd><dl><dt><code>bitmap:</code>
-<dd>Bitmap to convert
-<dt><code>count:</code>
-<dd>Number of occurrences of bitmap
-<dt><code>bmap:</code>
-<dd>Dictionary mapping the bits to strings
-<dt><code>blist:</code>
-<dd>List of all possible bit combinations
-</dl></dl>
+<dl><dl><dt><code>bitmap:</code>
+</dt><dd>Bitmap to convert
+</dd><dt><code>count:</code>
+</dt><dd>Number of occurrences of bitmap
+</dd><dt><code>bmap:</code>
+</dt><dd>Dictionary mapping the bits to strings
+</dd><dt><code>blist:</code>
+</dt><dd>List of all possible bit combinations
+</dd></dl></dl>
 <code>iomode_str(iomode)</code>
 Return a string representation of iomode.
 This could be run as an instance or class method.</pre>

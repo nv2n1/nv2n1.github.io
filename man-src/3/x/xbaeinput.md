@@ -125,17 +125,17 @@ description: "XbaeInput – The Input widget class."
 </table>
 <p> This resource has not been implemented. </p>
 <dl COMPACT>
-<dt><code>XmNalignment</code></p>
-<dd>This resource has not been implemented! </p>
+<dt><code>XmNalignment</code></dt>
+<dd>This resource has not been implemented! </dd>
 <p> Specifies the alignment of the text when being edited and displayed. Possible values are <code>XmALIGNMENT_BEGINNING</code>and <code>XmALIGNMENT_END</code>. If <code>XmNalignment</code> is set to <code>XmALIGNMENT_END</code>, the text will be right justified. If left as the default of <code>XmALIGNMENT_BEGINNING</code>, the text will be left justified.</p>
-<dt><code>XmNautoFill</code></p>
-<dd>The <code>XmNautoFill</code> resource, when set to True, attempts to automatically insert a literal if a non literal is hit in an allowed literal position. For example, if the <code>XmNpattern</code> resource was set up to accept a date in dd/mm/yyyy format and the user typed &quot;18041999&quot; The resulting string would appear as &quot;18/04/1999&quot;. The default value is False, where the user would have to type the literal.</p>
-<dt><code>XmNconvertCase</code></p>
-<dd>Tells the <code>XbaeInput</code> widget what should be done to alphabetic characters if the requires a lowercase or uppercase letter. If the <code>XmNconvertCase</code> is set to True (default), then the character is automatically converted to the correct case. If set to False, then the user must type the character in the correct case in order for it to be accepted. See the <code>EXAMPLE PATTERNS</code> section towards the end of this document for some examples.</p>
-<dt><code>overwriteMode</code></p>
-<dd>Whether the widget accepts characters in insert mode or overwrite mode is controlled by the resource. Setting this resource calls the <code>XmText</code> <code>toggle-overwrite()</code> action routine, so the Motif toolkit being used must also support this routine.</p>
-<dt><code>XmNpattern</code></p>
-<dd>The <code>XmNpattern</code> resource specifies what can be typed into the <code>XbaeInput</code> widget. If set to the default value of <font SIZE="-1">NULL</font> any character may be entered. The <code>XmNpattern</code> can be set to a string containing the following characters. </p>
+<dt><code>XmNautoFill</code></dt>
+<dd>The <code>XmNautoFill</code> resource, when set to True, attempts to automatically insert a literal if a non literal is hit in an allowed literal position. For example, if the <code>XmNpattern</code> resource was set up to accept a date in dd/mm/yyyy format and the user typed &quot;18041999&quot; The resulting string would appear as &quot;18/04/1999&quot;. The default value is False, where the user would have to type the literal.</dd>
+<dt><code>XmNconvertCase</code></dt>
+<dd>Tells the <code>XbaeInput</code> widget what should be done to alphabetic characters if the requires a lowercase or uppercase letter. If the <code>XmNconvertCase</code> is set to True (default), then the character is automatically converted to the correct case. If set to False, then the user must type the character in the correct case in order for it to be accepted. See the <code>EXAMPLE PATTERNS</code> section towards the end of this document for some examples.</dd>
+<dt><code>overwriteMode</code></dt>
+<dd>Whether the widget accepts characters in insert mode or overwrite mode is controlled by the resource. Setting this resource calls the <code>XmText</code> <code>toggle-overwrite()</code> action routine, so the Motif toolkit being used must also support this routine.</dd>
+<dt><code>XmNpattern</code></dt>
+<dd>The <code>XmNpattern</code> resource specifies what can be typed into the <code>XbaeInput</code> widget. If set to the default value of <font SIZE="-1">NULL</font> any character may be entered. The <code>XmNpattern</code> can be set to a string containing the following characters. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>a</code></td>
@@ -954,8 +954,8 @@ description: "XbaeInput – The Input widget class."
 </table>
 <h3>Callback Information</h3>
 <dl COMPACT>
-<dt><code>XmNvalidateCallback</code></p>
-<dd>Callbacks on the <code>XmNvalidateCallback</code> list are called when the edits to the <code>XbaeInput</code> widget are activated or a losing focus event occurs. Each callback function is passed the following structure: </p>
+<dt><code>XmNvalidateCallback</code></dt>
+<dd>Callbacks on the <code>XmNvalidateCallback</code> list are called when the edits to the <code>XbaeInput</code> widget are activated or a losing focus event occurs. Each callback function is passed the following structure: </dd>
 <table>
 <tr VALIGN=top>
 <td COLSPAN=3><code>typedef struct</code>
@@ -1004,17 +1004,17 @@ description: "XbaeInput – The Input widget class."
 </table>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Set to <code>XmCR_ACTIVATE</code> if the user caused the callback to be invoked by activating the changes in the cell or <code>XmCR_LOSING_FOCUS</code> if the callback was called due to a losing focus event.</p>
-<dt><i>event</i></p>
-<dd>The event pointer that triggered the callback.</p>
-<dt><i>pattern</i></p>
-<dd>A pointer to the pattern for the <code>XbaeInput</code> widget or <font SIZE="-1">NULL</font> if one does not exist. This value is provided as a convenience to the callback.</p>
-<dt><i>value</i></p>
-<dd>The value as it appears in the cell at the time of the callback being invoked.</p>
-<dt><i>doit</i></p>
-<dd>Indicates whether or not the value is valid. By setting <i>doit</i> to False the value will not be accepted.</dl>
+</dd><dl COMPACT>
+<dt><i>reason</i></dt>
+<dd>Set to <code>XmCR_ACTIVATE</code> if the user caused the callback to be invoked by activating the changes in the cell or <code>XmCR_LOSING_FOCUS</code> if the callback was called due to a losing focus event.</dd>
+<dt><i>event</i></dt>
+<dd>The event pointer that triggered the callback.</dd>
+<dt><i>pattern</i></dt>
+<dd>A pointer to the pattern for the <code>XbaeInput</code> widget or <font SIZE="-1">NULL</font> if one does not exist. This value is provided as a convenience to the callback.</dd>
+<dt><i>value</i></dt>
+<dd>The value as it appears in the cell at the time of the callback being invoked.</dd>
+<dt><i>doit</i></dt>
+<dd>Indicates whether or not the value is valid. By setting <i>doit</i> to False the value will not be accepted.</dd></dl>
 <p> This callback provides the application of checking the validity of the value entered into the <code>XbaeInput</code> widget. Checking the validity of a date may be one such instance. If the value is verified as valid, all values of the callback may be left unchanged. If the pointer to the value is changed, the new value will be displayed in the cell and storage for the old value deallocated by the <code>XbaeInput</code> widget. The new value&#8217;s memory is owned by the application and it is up to the application to use XtFree to deallocate it. </p>
 <p> If the <i>value</i> is not considered valid, the <i>doit</i> flag should be set to False, forcing the user to make changes before the value can be accepted.</dl>
 </dl>
@@ -1065,28 +1065,28 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 </table>
-<dl COMPACT>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID.</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (arglist)</dl>
+</dd><dl COMPACT>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (arglist)</dd></dl>
 <p> <code>XbaeCreateInput()</code> creates an instance of an XbaeInput widget and returns the associated widget ID.</dl>
 <h3>Example Patterns</h3>
 <dl COMPACT>
-<dt><code>d[d]/d[d]/dd[dd]</code></p>
-<dd>A date that would accept 1/1/99, 12/1/99, 1/12/1999, 01/01/2000, etc.</p>
-<dt><code>U[L][L][L][L][L], U[L][L][L][L][L]</code></p>
-<dd>&quot;Surname, Firstname&quot; combination, automatically forcing correct case and allowing between 1 and 6 characters per name.</p>
-<dt><code>UU-dd[d][d]</code></p>
-<dd>A flight number consisting of two uppercase letters and 2 to 4 numbers</p>
-<dt><code>(ddd)&nbsp;<wbr>ddd-dddd</code></p>
-<dd>An American style phone number</p>
-<dt><code>UdU[-]dUd</code></p>
-<dd>A Canadian postcode with optional dash.</dl>
+<dt><code>d[d]/d[d]/dd[dd]</code></dt>
+<dd>A date that would accept 1/1/99, 12/1/99, 1/12/1999, 01/01/2000, etc.</dd>
+<dt><code>U[L][L][L][L][L], U[L][L][L][L][L]</code></dt>
+<dd>&quot;Surname, Firstname&quot; combination, automatically forcing correct case and allowing between 1 and 6 characters per name.</dd>
+<dt><code>UU-dd[d][d]</code></dt>
+<dd>A flight number consisting of two uppercase letters and 2 to 4 numbers</dd>
+<dt><code>(ddd)&nbsp;<wbr>ddd-dddd</code></dt>
+<dd>An American style phone number</dd>
+<dt><code>UdU[-]dUd</code></dt>
+<dd>A Canadian postcode with optional dash.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code>VirtualBindings(3X)</code>.</p>
 <h2>Author</h2>

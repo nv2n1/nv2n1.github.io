@@ -36,13 +36,13 @@ description: "QuantLib::GeneralizedBlackScholesProcess – Generalized Black-Sch
 <h3>Real drift (Time t, Real x) const [virtual]</h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>revise extrapolation</dl>
+<dd>revise extrapolation</dd></dl>
 <p> Implements <code>StochasticProcess1D</code>. </p>
 <p> Reimplemented in <code>ExtendedBlackScholesMertonProcess</code>.</p>
 <h3>Real diffusion (Time t, Real x) const [virtual]</h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>revise extrapolation</dl>
+<dd>revise extrapolation</dd></dl>
 <p> Implements <code>StochasticProcess1D</code>. </p>
 <p> Reimplemented in <code>ExtendedBlackScholesMertonProcess</code>.</p>
 <h3>Real apply (Real x0, Real dx) const [virtual]</h3>
@@ -52,7 +52,7 @@ description: "QuantLib::GeneralizedBlackScholesProcess – Generalized Black-Sch
 <p>returns the time value corresponding to the given date in the reference system of the stochastic process. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dl>
+<dd>As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dd></dl>
 <p> Reimplemented from <code>StochasticProcess</code>.</p>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

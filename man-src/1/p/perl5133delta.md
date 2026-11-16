@@ -26,3 +26,4 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <h2>Incompatible Changes</h2>
 <h3>\400 &#8211; \777</h3>
 <p> Use of <tt>&quot;\400&quot;</tt> &#8211; <tt>&quot;\777&quot;</tt> in regexes in certain circumstances has given different, anomalous behavior than their use in all other double-quote-like contexts. Since 5.10.1, a deprecated warning message has been raised when this happens. Now, all double-quote-like contexts have the same behavior, namely to be equivalent to <tt>&quot;
+</p>

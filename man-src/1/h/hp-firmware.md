@@ -15,28 +15,28 @@ description: "hp-firmware – Firmware Download Utility"
 <p> <code>hp-firmware [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>
-<dt>To specify a device-URI:</p>
-<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</p>
-<dt>To specify a CUPS printer:</p>
-<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dl>
+<dt>To specify a device-URI:</dt>
+<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</dd>
+<dt>To specify a CUPS printer:</dt>
+<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dd></dl>
 <h2>MODE</h2>
 <dl>
-<dt>Run in interactive mode:</p>
-<dd> -i or &#8211;interactive</p>
-<dt>Run in non-interactive mode:</p>
-<dd> -n or &#8211;non-interactive</dl>
+<dt>Run in interactive mode:</dt>
+<dd> -i or &#8211;interactive</dd>
+<dt>Run in non-interactive mode:</dt>
+<dd> -n or &#8211;non-interactive</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</p>
-<dt>Use USB IDs to specify printer:</p>
-<dd> -s bbb:ddd, where bbb is the USB bus ID and ddd is the USB device ID. The &#8216;:&#8217; and all leading zeroes must be present.</p>
-<dt>Seconds to delay before download:</p>
-<dd> -y&lt;secs&gt; or &#8211;delay=&lt;secs&gt; (float value, e.g. 0.5)</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd>
+<dt>Use USB IDs to specify printer:</dt>
+<dd> -s bbb:ddd, where bbb is the USB bus ID and ddd is the USB device ID. The &#8216;:&#8217; and all leading zeroes must be present.</dd>
+<dt>Seconds to delay before download:</dt>
+<dd> -y&lt;secs&gt; or &#8211;delay=&lt;secs&gt; (float value, e.g. 0.5)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> hp-plugin hp-toolbox</p>
 <h2>AUTHOR</h2>

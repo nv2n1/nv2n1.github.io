@@ -16,26 +16,26 @@ description: "febootstrap-to-initramfs – Convert febootstrap root to initramfs
 <p> The permissions inside the initrd image are corrected automatically (see the discussion of fakeroot logfile in the <i><a href="/docs/linux/man/8-febootstrap/">febootstrap</a></i>(8) page). You do <i>not</i> need to run this command as root.</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;files=filelist</p>
-<dd><tt>&quot;filelist&quot;</tt> should be a file containing a list of the files to be added to the initramfs (one per line). Only those files are added and any others are ignored. </p>
+<dt>&#8211;files=filelist</dt>
+<dd><tt>&quot;filelist&quot;</tt> should be a file containing a list of the files to be added to the initramfs (one per line). Only those files are added and any others are ignored. </dd>
 <p> When the <tt>&quot;--files&quot;</tt> option is not given, all files in <tt>&quot;DIR&quot;</tt> are added to the initramfs image.</p>
-<dt>&#8211;nocompress</p>
-<dd>This prevents the initramfs image from being compressed. </p>
+<dt>&#8211;nocompress</dt>
+<dd>This prevents the initramfs image from being compressed. </dd>
 <p> Linux can boot from uncompressed initramfs images (in fact, faster), but they take up a lot more space on disk.</dl>
 <h2>/init</h2>
 <p>Normal initramfs images start by executing the program or script called <tt>&quot;/init&quot;</tt>. febootstrap does not create this script, so you may wish to, particularly for very minimal bootstraps that don&#8217;t have the normal SysVinit/upstart machinery. It&#8217;s also required if the kernel cannot find a &#8220;real&#8221; root filesystem (the root filesystem that we built and placed in an initramfs doesn&#8217;t count). </p>
 <p> Linux will try to run the following commands in turn, unless you override it using the <tt>&quot;init=</tt>cmd<tt>&quot;</tt> kernel option:</p>
 <dl>
-<dt>*</p>
-<dd>/init</p>
-<dt>*</p>
-<dd>/sbin/init</p>
-<dt>*</p>
-<dd>/etc/init</p>
-<dt>*</p>
-<dd>/bin/init</p>
-<dt>*</p>
-<dd>/bin/sh</dl>
+<dt>*</dt>
+<dd>/init</dd>
+<dt>*</dt>
+<dd>/sbin/init</dd>
+<dt>*</dt>
+<dd>/etc/init</dd>
+<dt>*</dt>
+<dd>/bin/init</dd>
+<dt>*</dt>
+<dd>/bin/sh</dd></dl>
 <h2>Memory Requirements</h2>
 <p>Initramfs images are uncompressed by the kernel into memory. When booting the new system you will need at least enough free <font SIZE="-1">RAM</font> to store the <code>uncompressed</code> filesystem plus extra to run any programs. Bear this in mind when creating very large filesystems.</p>
 <h2>See Also</h2>

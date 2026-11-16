@@ -59,8 +59,8 @@ description: "install_selinux – Security Enhanced Linux Policy for the install
 <p> <code>install_exec_t</code> </p>
 <p> &#8211; Set files with the install_exec_t type, if you want to transition an executable to the install_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/ostree, /usr/sbin/anaconda, /usr/bin/rpm-ostree, /usr/bin/initial-setup, /usr/libexec/rpm-ostreed, /usr/libexec/anaconda/anaconda-yum </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/ostree, /usr/sbin/anaconda, /usr/bin/rpm-ostree, /usr/bin/initial-setup, /usr/libexec/rpm-ostreed, /usr/libexec/anaconda/anaconda-yum </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

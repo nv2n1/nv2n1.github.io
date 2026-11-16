@@ -16,29 +16,29 @@ description: "csepdjvu – DjVu encoder for separated data files."
 <p> Each separated data file represents one or more page images. When the program arguments specify multiple pages, all the pages are encoded and saved as a bundled multi-page document. When the program arguments specify a single page, the page is encoded and saved as a single page file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d </code><i>n</i></p>
-<dd> Specify the resolution information encoded into the output file expressed in dots per inch. The resolution information encoded in DjVu files determine how the decoder scales the image on a particular display. Meaningful resolutions range from 25 to 6000. The default value is 300 dpi.</p>
-<dt><code>-q </code><i>n</i><code>,&#8230;,</code><i>n</i></p>
+<dt><code>-d </code><i>n</i></dt>
+<dd> Specify the resolution information encoded into the output file expressed in dots per inch. The resolution information encoded in DjVu files determine how the decoder scales the image on a particular display. Meaningful resolutions range from 25 to 6000. The default value is 300 dpi.</dd>
+<dt><code>-q </code><i>n</i><code>,&#8230;,</code><i>n</i></dt>
 <dd>
-<dt><code>-q </code><i>n</i><code>+&#8230;+</code><i>n</i></p>
-<dd> Specify the encoding quality of the IW44 encoded background layer. The option argument contain several integers (one per chunk) separated by either commas or pluses. This option is similar to option <code>-slice</code> of program <code>c44</code>. Please refer to the <code><a href="/docs/linux/man/1-c44/">c44</a></code>(1) man page for additional details. The default quality specification is <code>-q 72,83,93,103</code>. </p>
+</dd><dt><code>-q </code><i>n</i><code>+&#8230;+</code><i>n</i></dt>
+<dd> Specify the encoding quality of the IW44 encoded background layer. The option argument contain several integers (one per chunk) separated by either commas or pluses. This option is similar to option <code>-slice</code> of program <code>c44</code>. Please refer to the <code><a href="/docs/linux/man/1-c44/">c44</a></code>(1) man page for additional details. The default quality specification is <code>-q 72,83,93,103</code>. </dd>
 <p> This option does not apply to uniformly white background that were not specified by the separated data but are called for by the DjVu specification. Such background images always come at the lowest possible resolution and with a standard quality setting that ensures the color uniformity.</p>
-<dt><code>-t</code></p>
-<dd> Program <code>csepdjvu</code> interprets certain comments in the separated file to construct a hidden text layer in the DjVu file. This layer records the location of each word for hiliting purposes. This option reduces the file size by simply recording the location of each line.</p>
-<dt><code>-v</code></p>
-<dd> Display a brief message describing each page.</p>
-<dt><code>-vv</code></p>
-<dd> Display extensive informational messages during encoding. </p>
+<dt><code>-t</code></dt>
+<dd> Program <code>csepdjvu</code> interprets certain comments in the separated file to construct a hidden text layer in the DjVu file. This layer records the location of each word for hiliting purposes. This option reduces the file size by simply recording the location of each line.</dd>
+<dt><code>-v</code></dt>
+<dd> Display a brief message describing each page.</dd>
+<dt><code>-vv</code></dt>
+<dd> Display extensive informational messages during encoding. </dd>
 </dl>
 <h2>SEPARATED DATA FILE FORMAT</h2>
 <p> Each separated data file contains a concatenation of one or more separated page images. Each page is logically represented by a foreground image with a transparent color and by a background image visible through the transparent pixels. The data for each separated page image is the concatenation of the following data blocks:</p>
 <dl>
-<dt>*</p>
-<dd> A foreground image encoded using either the &quot;Color RLE format&quot; or the &quot;Bitonal RLE format&quot;. These formats are described later in this section.</p>
-<dt>*</p>
-<dd> An optional background image encoded as a &quot;Portable Pixmap&quot; ( <font SIZE="-1">PPM</font> ). This well known format is summarized later in this section. The absence of a background image simply indicates that a uniformly white background should be assumed.</p>
-<dt>*</p>
-<dd> An arbitrary number of comment lines starting with character &quot;#&quot; and terminated by a linefeed character. Comment lines whose first word starts with a capital letter have special meanings documented later in this document.</dl>
+<dt>*</dt>
+<dd> A foreground image encoded using either the &quot;Color RLE format&quot; or the &quot;Bitonal RLE format&quot;. These formats are described later in this section.</dd>
+<dt>*</dt>
+<dd> An optional background image encoded as a &quot;Portable Pixmap&quot; ( <font SIZE="-1">PPM</font> ). This well known format is summarized later in this section. The absence of a background image simply indicates that a uniformly white background should be assumed.</dd>
+<dt>*</dt>
+<dd> An arbitrary number of comment lines starting with character &quot;#&quot; and terminated by a linefeed character. Comment lines whose first word starts with a capital letter have special meanings documented later in this document.</dd></dl>
 <p> The dimensions (width and height) of the background image must be obtained by rounding up the quotient of the foreground image dimensions by an integer reduction factor ranging from 1 to 12. Assume, for instance, that the width of the foreground is 2507 and the reduction factor is 3. The width of the background image will be the integer ratio (2507+2)/3. </p>
 <h3>Color RLE format</h3>
 <p> The Color RLE format is a simple run-length encoding scheme for color images with a limited number of distinct colors. The data always begin with a text header composed of the two characters &quot;R6&quot;, the number of columns, the number of rows, and the number of color palette entries. All numbers are expressed in decimal <font SIZE="-1">ASCII.</font> These four items are separated by blank characters (space, tab, carriage return, or linefeed) or by comment lines introduced by character &quot;#&quot;. The last number is followed by exactly one character which usually is a linefeed character. </p>
@@ -54,15 +54,15 @@ description: "csepdjvu – DjVu encoder for separated data files."
 <h3>Comments in separated files</h3>
 <p> Each page is followed by an arbitrary number of comment lines starting with character &quot;#&quot; and terminated by a linefeed character. Comment lines whose first word starts with a capital letter have special meanings. The following constructs are currently defined:</p>
 <dl>
-<dt>*</p>
+<dt>*</dt>
 <dd> <code># T </code><i>px</i><code>:</code><i>py</i><i>dx</i><code>:</code><i>dy</i><i>w</i><code>x</code><i>h</i><code>+</code><i>x</i><code>+</code><i>y</i><code> (</code><i>string</i><code>)</code><br />
- This constructs indicates that the piece of text <i>string</i> must be associated with an area of size <i>w</i>x<i>h</i> at position <i>x</i>,<i>y</i> relative to the lower left corner of the page. The string is UTF-8 encoded. Special characters can be escaped as in PostScript using the backslash character. Integers <i>px</i>, and <i>py</i> represent the position of the current point on the text baseline before the text was drawn. The drawing operation then moves the current point by <i>dx</i>, and <i>dy</i> pixels. When such comments are present, <code>csepdjvu</code> produces a hidden text layer for the corresponding pages.</p>
-<dt>*</p>
+ This constructs indicates that the piece of text <i>string</i> must be associated with an area of size <i>w</i>x<i>h</i> at position <i>x</i>,<i>y</i> relative to the lower left corner of the page. The string is UTF-8 encoded. Special characters can be escaped as in PostScript using the backslash character. Integers <i>px</i>, and <i>py</i> represent the position of the current point on the text baseline before the text was drawn. The drawing operation then moves the current point by <i>dx</i>, and <i>dy</i> pixels. When such comments are present, <code>csepdjvu</code> produces a hidden text layer for the corresponding pages.</dd>
+<dt>*</dt>
 <dd> <code># L </code><i>w</i><code>x</code><i>h</i><code>+</code><i>x</i><code>+</code><i>y</i><code> (</code><i>url</i><code>)</code><br />
- This construct indicates that an hyperlink to url <i>url</i> should be associated with area of size <i>w</i>x<i>h</i> at position <i>x</i>,<i>y</i>. When such comments are present, <code>csepdjvu</code> produces pages with an annotation chunk containing the specified hyperlinks.</p>
-<dt>*</p>
+ This construct indicates that an hyperlink to url <i>url</i> should be associated with area of size <i>w</i>x<i>h</i> at position <i>x</i>,<i>y</i>. When such comments are present, <code>csepdjvu</code> produces pages with an annotation chunk containing the specified hyperlinks.</dd>
+<dt>*</dt>
 <dd> <code># B </code><i>count</i><code> (</code><i>string</i><code>) (#</code><i>pageno</i><code>)</code><br />
- This constructs provides outline information for the document. An outline entry entitled <i>string</i> is associated with page <i>pageno</i>. Integer <i>count </i> indicates how many of the following outline entries must be attached to the current entry as subentries. When such comments are present in the first page <code>csepdjvu</code> produces an navigation chunk with the specified outline. </p>
+ This constructs provides outline information for the document. An outline entry entitled <i>string</i> is associated with page <i>pageno</i>. Integer <i>count </i> indicates how many of the following outline entries must be attached to the current entry as subentries. When such comments are present in the first page <code>csepdjvu</code> produces an navigation chunk with the specified outline. </dd>
 </dl>
 <h2>CREDITS</h2>
 <p> This program was initially written by L&eacute;on Bottou &lt;leonb [at] users.sourceforge.net&gt; and was improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>

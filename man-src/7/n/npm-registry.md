@@ -29,14 +29,15 @@ description: "npm-registry – The JavaScript Package Registry"
 <p>Yes, head over to <i><a rel="nofollow" href="https://npmjs.com/">https://npmjs.com/</a></i></p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help config</p>
-<dt>&bull;</p>
-<dd>npm help 7 config</p>
-<dt>&bull;</p>
-<dd>npm help 5 npmrc</p>
-<dt>&bull;</p>
-<dd>npm help 7 developers</p>
-<dt>&bull;</p>
-<dd>npm help 7 disputes</p>
+<dt>&bull;</dt>
+<dd>npm help config</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 config</dd>
+<dt>&bull;</dt>
+<dd>npm help 5 npmrc</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 developers</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 disputes</dd>
 <dd>
+</dd></dl>

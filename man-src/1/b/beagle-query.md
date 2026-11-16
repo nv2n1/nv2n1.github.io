@@ -16,25 +16,25 @@ description: "beagle-query – search your personal information space"
 <h2>OPTIONS</h2>
 <h3>Search options</h3>
 <dl>
-<dt><code>&#8211;max-hits</code></p>
-<dd> Reduce the number of search results returned per backend. The default is 100. Increasing this will slow down overall search speed.</p>
-<dt><code>&#8211;verbose </code></p>
-<dd> Print detailed information about each hit.</p>
-<dt><code>&#8211;cache</code></p>
+<dt><code>&#8211;max-hits</code></dt>
+<dd> Reduce the number of search results returned per backend. The default is 100. Increasing this will slow down overall search speed.</dd>
+<dt><code>&#8211;verbose </code></dt>
+<dd> Print detailed information about each hit.</dd>
+<dt><code>&#8211;cache</code></dt>
 <dd> Show the entire cached text for each result. Only works with <i>&#8211;verbose</i>.<br />
- Note that for large documents this will produce extremely large output, so use this with uri queries or queries returning only a few results Not recommended for live-queries or stats-only queries.</p>
-<dt><code>&#8211;live-query </code></p>
-<dd> Enable live queries. This argument keeps beagle-query running, continuously feeding new matching hits as the system gets aware of them.</p>
-<dt><code>&#8211;stats-only</code></p>
-<dd> Show only statistics on the number of search results and how long it took to get them, and not the results themselves.</dl>
+ Note that for large documents this will produce extremely large output, so use this with uri queries or queries returning only a few results Not recommended for live-queries or stats-only queries.</dd>
+<dt><code>&#8211;live-query </code></dt>
+<dd> Enable live queries. This argument keeps beagle-query running, continuously feeding new matching hits as the system gets aware of them.</dd>
+<dt><code>&#8211;stats-only</code></dt>
+<dd> Show only statistics on the number of search results and how long it took to get them, and not the results themselves.</dd></dl>
 <h3>Other options</h3>
 <dl>
-<dt><code>&#8211;keywords</code></p>
-<dd> Lists the keywords allowed in <i>query</i>. Keyword queries can be specified as <i>keywordname:value e.g. ext:jpg</i></p>
-<dt><code>&#8211;help</code></p>
-<dd> Print the usage message.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version information.</dl>
+<dt><code>&#8211;keywords</code></dt>
+<dd> Lists the keywords allowed in <i>query</i>. Keyword queries can be specified as <i>keywordname:value e.g. ext:jpg</i></dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print the usage message.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version information.</dd></dl>
 <h2>QUERY</h2>
 <p> You can query for a word, several words or a quoted phrase. When several words are searched, only documents which contain all the words are matched. To specify a phrase, enclose it in shell-escaped quotes (\&quot;search term\&quot;). </p>
 <p> Besides these beagle supports an advanced query syntax. See <a rel="nofollow" href="http://beagle-project.org/Searching_Data#Search_Syntax">http://beagle-project.org/Searching_Data#Search_Syntax</a> for more information.</p>

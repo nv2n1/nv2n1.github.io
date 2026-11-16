@@ -46,8 +46,8 @@ description: "chrome_sandbox_nacl_selinux – Security Enhanced Linux Policy for
 <p> <code>chrome_sandbox_nacl_exec_t</code> </p>
 <p> &#8211; Set files with the chrome_sandbox_nacl_exec_t type, if you want to transition an executable to the chrome_sandbox_nacl_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/google/chrome[^/]*/nacl_helper_bootstrap, /opt/google/chrome/nacl_helper_bootstrap, /usr/lib/chromium-browser/nacl_helper_bootstrap </p>
+<dt>Paths:</dt>
+<dd>/opt/google/chrome[^/]*/nacl_helper_bootstrap, /opt/google/chrome/nacl_helper_bootstrap, /usr/lib/chromium-browser/nacl_helper_bootstrap </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

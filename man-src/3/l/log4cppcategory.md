@@ -174,7 +174,7 @@ description: "log4cpp::Category –"
 <dl COMPACT>
 <dd><i>name</i> the fully qualified name of this <code>Category</code><br />
  <i>parent</i> the parent of this parent, or NULL for the root <code>Category</code><br />
- <i>priority</i> the priority for this <code>Category</code>. Defaults to <code>Priority::NOTSET</code></dl>
+ <i>priority</i> the priority for this <code>Category</code>. Defaults to <code>Priority::NOTSET</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void log4cpp::Category::_logUnconditionally (<code>Priority::Value</code>priority, const char *format, va_listarguments) [protected], [virtual]</h3>
 <h3>void log4cpp::Category::_logUnconditionally2 (<code>Priority::Value</code>priority, const std::string &amp;message) [protected], [virtual]</h3>
@@ -182,146 +182,146 @@ description: "log4cpp::Category –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>priority</i> The priority of this log message.<br />
- <i>message</i> string to write in the log file</dl>
+ <i>message</i> string to write in the log file</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3>void log4cpp::Category::addAppender (<code>Appender</code> *appender)std::invalid_argument [virtual]</h3>
 <p>Adds an <code>Appender</code> to this <code>Category</code>. This method passes ownership from the caller to the <code>Category</code>. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>appender</i> The <code>Appender</code> to wich this category has to log.</dl>
+<dd><i>appender</i> The <code>Appender</code> to wich this category has to log.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl COMPACT>
-<dd><i>std::invalid_argument</i> if the appender is NULL.</dl>
+<dd><i>std::invalid_argument</i> if the appender is NULL.</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3>void log4cpp::Category::addAppender (<code>Appender</code> &amp;appender) [virtual]</h3>
 <p>Adds an <code>Appender</code> for this <code>Category</code>. This method does not pass ownership from the caller to the <code>Category</code>. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>appender</i> The <code>Appender</code> this category has to log to.</dl>
+<dd><i>appender</i> The <code>Appender</code> this category has to log to.</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3>void log4cpp::Category::alert (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with alert priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::alert (const std::string &amp;message)</h3>
 <p>Log a message with alert priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::alertStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority ALERT. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3>void log4cpp::Category::callAppenders (const <code>LoggingEvent</code> &amp;event) [virtual]</h3>
 <p>Call the appenders in the hierarchy starting at this. If no appenders could be found, emit a warning. </p>
 <p> This method always calls all the appenders inherited form the hierracy circumventing any evaluation of whether to log or not to log the particular log request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> the LogginEvent to log.</dl>
+<dd><i>event</i> the LogginEvent to log.</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3>void log4cpp::Category::crit (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with crit priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::crit (const std::string &amp;message)</h3>
 <p>Log a message with crit priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::critStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority CRIT. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3>void log4cpp::Category::debug (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with debug priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::debug (const std::string &amp;message)</h3>
 <p>Log a message with debug priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::debugStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority DEBUG. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3>void log4cpp::Category::emerg (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with emerg priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::emerg (const std::string &amp;message)</h3>
 <p>Log a message with emerg priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::emergStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority EMERG. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3>void log4cpp::Category::error (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with error priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::error (const std::string &amp;message)</h3>
 <p>Log a message with error priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::errorStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority ERROR. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3><code>Category</code> * log4cpp::Category::exists (const std::string &amp;name) [static]</h3>
 <p>If the named category exists (in the default hierarchy) then it returns a reference to the category, otherwise it returns NULL. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <h3>void log4cpp::Category::fatal (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with fatal priority. NB. priority &#8216;fatal&#8217; is equivalent to &#8217;emerg&#8217;. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::fatal (const std::string &amp;message)</h3>
 <p>Log a message with fatal priority. NB. priority &#8216;fatal&#8217; is equivalent to &#8217;emerg&#8217;. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::fatalStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority FATAL. NB. priority &#8216;fatal&#8217; is equivalent to &#8217;emerg&#8217;. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3>bool log4cpp::Category::getAdditivity () const [virtual]</h3>
 <p>Returns the additivity flag for this <code>Category</code> instance. </p>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
@@ -329,28 +329,28 @@ description: "log4cpp::Category –"
 <p>Returns the set of Appenders currently attached to this Catogory. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.1</dl>
+<dd>0.3.1</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The set of attached Appenders.</dl>
+<dd>The set of attached Appenders.</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3><code>Appender</code> * log4cpp::Category::getAppender () const [virtual]</h3>
 <p>Returns the first <code>Appender</code> for this <code>Category</code>, or NULL if no <code>Appender</code> has been set. </p>
 <p> <code>Deprecated</code></p>
 <dl COMPACT>
-<dd>use getAppender(const std::string&amp;)</dl>
+<dd>use getAppender(const std::string&amp;)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>Appender</code>.</dl>
+<dd>The <code>Appender</code>.</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3><code>Appender</code> * log4cpp::Category::getAppender (const std::string &amp;name) const [virtual]</h3>
 <p>Returns the specified <code>Appender</code> for this <code>Category</code>, or NULL if the <code>Appender</code> is not attached to this <code>Category</code>. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>Appender</code>.</dl>
+<dd>The <code>Appender</code>.</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3><code>Priority::Value</code> log4cpp::Category::getChainedPriority () const [virtual]</h3>
 <p>Starting from this <code>Category</code>, search the category hierarchy for a set priority and return it. Otherwise, return the priority of the root category. </p>
@@ -361,182 +361,182 @@ description: "log4cpp::Category –"
 <p> Unlike in log4j, the root category <i>is</i> included in the returned set. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.2. Before 0.3.2 this method returned a std::set</dl>
+<dd>0.3.2. Before 0.3.2 this method returned a std::set</dd></dl>
 <h3><code>Category</code> &amp; log4cpp::Category::getInstance (const std::string &amp;name) [static]</h3>
 <p>Instantiate a <code>Category</code> with name name. This method does not set priority of the category which is by default <code>Priority::NOTSET</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> The name of the category to retrieve.</dl>
+<dd><i>name</i> The name of the category to retrieve.</dd></dl>
 <h3>const std::string &amp; log4cpp::Category::getName () const [virtual]</h3>
 <p>Return the category name. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The category name.</dl>
+<dd>The category name.</dd></dl>
 <h3><code>Category</code> * log4cpp::Category::getParent () [virtual]</h3>
 <p>Returns the parent category of this category, or NULL if the category is the root category. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the parent category.</dl>
+<dd>the parent category.</dd></dl>
 <h3>const <code>Category</code> * log4cpp::Category::getParent () const [virtual]</h3>
 <p>Returns the parent category of this category, or NULL if the category is the root category. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the parent category.</dl>
+<dd>the parent category.</dd></dl>
 <h3><code>Priority::Value</code> log4cpp::Category::getPriority () const [virtual]</h3>
 <p>Returns the assigned <code>Priority</code>, if any, for this <code>Category</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>Priority</code> &#8211; the assigned <code>Priority</code>, can be <code>Priority::NOTSET</code></dl>
+<dd><code>Priority</code> &#8211; the assigned <code>Priority</code>, can be <code>Priority::NOTSET</code></dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3><code>Category</code> &amp; log4cpp::Category::getRoot () [static]</h3>
 <p>Return the root of the <code>Category</code> hierarchy. The root category is always instantiated and available. It&#8217;s name is the empty string. </p>
 <p> Unlike in log4j, calling <code>Category.getInstance</code>(&#8221;) <i>does</i> retrieve the root category and not a category just under root named &#8221;. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The root category</dl>
+<dd>The root category</dd></dl>
 <h3><code>Priority::Value</code> log4cpp::Category::getRootPriority () [static]</h3>
 <p>Get the priority of the root <code>Category</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the priority of the root category</dl>
+<dd>the priority of the root category</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::getStream (<code>Priority::Value</code>priority) [virtual]</h3>
 <p>Return a <code>CategoryStream</code> with given <code>Priority</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The <code>Priority</code> of the <code>CategoryStream</code>.</dl>
+<dd><i>priority</i> The <code>Priority</code> of the <code>CategoryStream</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The requested <code>CategoryStream</code>.</dl>
+<dd>The requested <code>CategoryStream</code>.</dd></dl>
 <h3>void log4cpp::Category::info (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with info priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::info (const std::string &amp;message)</h3>
 <p>Log a message with info priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::infoStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority INFO. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3>bool log4cpp::Category::isAlertEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority ALERT. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isCritEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority CRIT. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isDebugEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority DEBUG. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isEmergEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority EMERG. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isErrorEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority ERROR. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isFatalEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority FATAL. NB. priority &#8216;fatal&#8217; is equivalent to &#8217;emerg&#8217;. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isInfoEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority INFO. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isNoticeEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority NOTICE. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>bool log4cpp::Category::isPriorityEnabled (<code>Priority::Value</code>priority) const [virtual]</h3>
 <p>Returns true if the chained priority of the <code>Category</code> is equal to or higher than given priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The priority to compare with.</dl>
+<dd><i>priority</i> The priority to compare with.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>whether logging is enable for this priority.</dl>
+<dd>whether logging is enable for this priority.</dd></dl>
 <h3>bool log4cpp::Category::isWarnEnabled () const [inline]</h3>
 <p>Return true if the <code>Category</code> will log messages with priority WARN. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the <code>Category</code> will log.</dl>
+<dd>Whether the <code>Category</code> will log.</dd></dl>
 <h3>void log4cpp::Category::log (<code>Priority::Value</code>priority, const char *stringFormat, &#8230;) [virtual]</h3>
 <p>Log a message with the specified priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>priority</i> The priority of this log message.<br />
  <i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::log (<code>Priority::Value</code>priority, const std::string &amp;message) [virtual]</h3>
 <p>Log a message with the specified priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>priority</i> The priority of this log message.<br />
- <i>message</i> string to write in the log file</dl>
+ <i>message</i> string to write in the log file</dd></dl>
 <h3>void log4cpp::Category::logva (<code>Priority::Value</code>priority, const char *stringFormat, va_listva) [virtual]</h3>
 <p>Log a message with the specified priority. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>priority</i> The priority of this log message.<br />
  <i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>va</i> The arguments for stringFormat.</dl>
+ <i>va</i> The arguments for stringFormat.</dd></dl>
 <h3>void log4cpp::Category::notice (const char *stringFormat, &#8230;)</h3>
 <p>Log a message with notice priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::notice (const std::string &amp;message)</h3>
 <p>Log a message with notice priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::noticeStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority NOTICE. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::operator&lt;&lt; (<code>Priority::Value</code>priority) [virtual]</h3>
 <p>Return a <code>CategoryStream</code> with given <code>Priority</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The <code>Priority</code> of the <code>CategoryStream</code>.</dl>
+<dd><i>priority</i> The <code>Priority</code> of the <code>CategoryStream</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The requested <code>CategoryStream</code>.</dl>
+<dd>The requested <code>CategoryStream</code>.</dd></dl>
 <h3>virtual bool log4cpp::Category::ownsAppender () const [inline], [virtual]</h3>
 <p>Returns true if the <code>Category</code> owns the first <code>Appender</code> in its <code>Appender</code> set. In that case the <code>Category</code> destructor will delete the <code>Appender</code>. </p>
 <p> <code>Deprecated</code></p>
 <dl COMPACT>
-<dd>use ownsAppender(Appender*)</dl>
+<dd>use ownsAppender(Appender*)</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3>bool log4cpp::Category::ownsAppender (<code>Appender</code> *appender) const [virtual]</h3>
 <p>Returns true if the <code>Category</code> owns the <code>Appender</code>. In that case the <code>Category</code> destructor will delete the <code>Appender</code>. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
 <h3>void log4cpp::Category::removeAllAppenders () [virtual]</h3>
 <p>Removes all appenders for this <code>Category</code>. </p>
@@ -545,7 +545,7 @@ description: "log4cpp::Category –"
 <p>Removes specified appender for this <code>Category</code>. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <h3>void log4cpp::Category::setAdditivity (booladditivity) [virtual]</h3>
 <p>Set the additivity flag for this <code>Category</code> instance. </p>
 <p> Reimplemented in <code>log4cpp::FixedContextCategory</code>.</p>
@@ -553,31 +553,31 @@ description: "log4cpp::Category –"
 <p>Adds an <code>Appender</code> to this <code>Category</code>. This method passes ownership from the caller to the <code>Category</code>. </p>
 <p> <code>Deprecated</code></p>
 <dl COMPACT>
-<dd>use <code>addAppender(Appender*)</code> or <code>removeAllAppenders()</code> instead.</dl>
+<dd>use <code>addAppender(Appender*)</code> or <code>removeAllAppenders()</code> instead.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>appender</i> The <code>Appender</code> this category has to log to or NULL to remove the current Appenders.</dl>
+<dd><i>appender</i> The <code>Appender</code> this category has to log to or NULL to remove the current Appenders.</dd></dl>
 <h3>void log4cpp::Category::setAppender (<code>Appender</code> &amp;appender) [inline]</h3>
 <p>Adds an <code>Appender</code> for this <code>Category</code>. This method does not pass ownership from the caller to the <code>Category</code>. </p>
 <p> <code>Deprecated</code></p>
 <dl COMPACT>
-<dd>use <code>addAppender(Appender&amp;)</code> instead.</dl>
+<dd>use <code>addAppender(Appender&amp;)</code> instead.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>appender</i> The <code>Appender</code> this category has to log to.</dl>
+<dd><i>appender</i> The <code>Appender</code> this category has to log to.</dd></dl>
 <h3>void log4cpp::Category::setPriority (<code>Priority::Value</code>priority)std::invalid_argument [virtual]</h3>
 <p>Set the priority of this <code>Category</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The priority to set. Use <code>Priority::NOTSET</code> to let the category use its parents priority as effective priority.</dl>
+<dd><i>priority</i> The priority to set. Use <code>Priority::NOTSET</code> to let the category use its parents priority as effective priority.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl COMPACT>
-<dd><i>std::invalid_argument</i> if the caller tries to set <code>Priority::NOTSET</code> on the Root <code>Category</code>.</dl>
+<dd><i>std::invalid_argument</i> if the caller tries to set <code>Priority::NOTSET</code> on the Root <code>Category</code>.</dd></dl>
 <h3>void log4cpp::Category::setRootPriority (<code>Priority::Value</code>priority) [static]</h3>
 <p>Set the priority of the root <code>Category</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The new priority for the root <code>Category</code></dl>
+<dd><i>priority</i> The new priority for the root <code>Category</code></dd></dl>
 <h3>void log4cpp::Category::shutdown () [static]</h3>
 <p>This method will remove all Appenders from Categories.XXX.</p>
 <h3>void log4cpp::Category::warn (const char *stringFormat, &#8230;)</h3>
@@ -585,17 +585,17 @@ description: "log4cpp::Category –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stringFormat</i> Format specifier for the string to write in the log file.<br />
- <i>&#8230;</i> The arguments for stringFormat</dl>
+ <i>&#8230;</i> The arguments for stringFormat</dd></dl>
 <h3>void log4cpp::Category::warn (const std::string &amp;message)</h3>
 <p>Log a message with warn priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> string to write in the log file</dl>
+<dd><i>message</i> string to write in the log file</dd></dl>
 <h3><code>CategoryStream</code> log4cpp::Category::warnStream () [inline]</h3>
 <p>Return a <code>CategoryStream</code> with priority WARN. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>CategoryStream</code>.</dl>
+<dd>The <code>CategoryStream</code>.</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>friend class <code>HierarchyMaintainer</code> [friend]</h3>
 <h2>Author</h2>

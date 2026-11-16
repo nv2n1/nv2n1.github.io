@@ -58,7 +58,7 @@ description: "QuantLib::DiscretizedAsset – Discretized asset class used by num
 <p>This method returns the times at which the numerical method should stop while rolling back the asset. Typical examples include payment times, exercise times and such. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The returned values are not guaranteed to be sorted.</dl>
+<dd>The returned values are not guaranteed to be sorted.</dd></dl>
 <p> Implemented in <code>DiscretizedDiscountBond</code>, and <code>DiscretizedOption</code>.</p>
 <h3>bool isOnTime (Time t) const [protected]</h3>
 <p>This method checks whether the asset was rolled at the given time.</p>

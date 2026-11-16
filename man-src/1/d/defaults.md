@@ -18,52 +18,52 @@ description: "defaults – read or modify GNUstep user defaults"
 <p> defaults read [ domain [ key] ]</p>
 <dl>
 <dt>
-<dd> read the named default from the specified domain. If no &#8216;key&#8217; is given &#8211; read all defaults from the domain. If no &#8216;domain&#8217; is given &#8211; read all defaults from all domains. A domain is either an application name, or &quot;NSGlobalDomain&quot;, for system level defauts. (Running programs can access two other domains, &quot;NSArgumentDomain&quot;, for command line arguments, &quot;NSRegistrationDomain&quot;, a second-chance domain in which &quot;defaults for defaults&quot; can be registered, and possibly domains for specific locales.)</dl>
+</dt><dd> read the named default from the specified domain. If no &#8216;key&#8217; is given &#8211; read all defaults from the domain. If no &#8216;domain&#8217; is given &#8211; read all defaults from all domains. A domain is either an application name, or &quot;NSGlobalDomain&quot;, for system level defauts. (Running programs can access two other domains, &quot;NSArgumentDomain&quot;, for command line arguments, &quot;NSRegistrationDomain&quot;, a second-chance domain in which &quot;defaults for defaults&quot; can be registered, and possibly domains for specific locales.)</dd></dl>
 <p> defaults readkey key</p>
 <dl>
 <dt>
-<dd> read the named default from all domains.</dl>
+</dt><dd> read the named default from all domains.</dd></dl>
 <p> defaults write domain key value</p>
 <dl>
 <dt>
-<dd> write &#8216;value&#8217; as default &#8216;key&#8217; in the specified domain. &#8216;value&#8217; must be a property list in single quotes.</dl>
+</dt><dd> write &#8216;value&#8217; as default &#8216;key&#8217; in the specified domain. &#8216;value&#8217; must be a property list in single quotes.</dd></dl>
 <p> defaults write domain dictionary</p>
 <dl>
 <dt>
-<dd> write &#8216;dictionary&#8217; as a replacement for the specified domain. &#8216;dictionary&#8217; must be a property list in single quotes.</dl>
+</dt><dd> write &#8216;dictionary&#8217; as a replacement for the specified domain. &#8216;dictionary&#8217; must be a property list in single quotes.</dd></dl>
 <p> defaults write</p>
 <dl>
 <dt>
-<dd> reads standard input for defaults in the format produced by &#8216;defaults read&#8217; and writes them to the database.</dl>
+</dt><dd> reads standard input for defaults in the format produced by &#8216;defaults read&#8217; and writes them to the database.</dd></dl>
 <p> defaults delete [ domain [ key] ]</p>
 <dl>
 <dt>
-<dd> remove the specified default(s) from the domain. If no &#8216;key&#8217; is given &#8211; delete the entire domain.</dl>
+</dt><dd> remove the specified default(s) from the domain. If no &#8216;key&#8217; is given &#8211; delete the entire domain.</dd></dl>
 <p> defaults delete</p>
 <dl>
 <dt>
-<dd> read standard input for a series of lines containing pairs of domains and keys for defaults to be deleted.</dl>
+</dt><dd> read standard input for a series of lines containing pairs of domains and keys for defaults to be deleted.</dd></dl>
 <p> defaults domains</p>
 <dl>
 <dt>
-<dd> lists the domains in the database (one per line)</dl>
+</dt><dd> lists the domains in the database (one per line)</dd></dl>
 <p> defaults find word</p>
 <dl>
 <dt>
-<dd> searches domain names, default names, and default value strings for those equal to the specified word and lists them on standard output.</dl>
+</dt><dd> searches domain names, default names, and default value strings for those equal to the specified word and lists them on standard output.</dd></dl>
 <p> defaults plist</p>
 <dl>
 <dt>
-<dd> output some information about property lists</dl>
+</dt><dd> output some information about property lists</dd></dl>
 <p> defaults help</p>
 <dl>
 <dt>
-<dd> list options for the defaults command. </p>
+</dt><dd> list options for the defaults command. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>~/GNUstep/Defaults/.GNUstepDefaults</p>
-<dd> holds defaults for a user </p>
+<dt>~/GNUstep/Defaults/.GNUstepDefaults</dt>
+<dd> holds defaults for a user </dd>
 </dl>
 <h2>BUGS</h2>
 <p> None known. </p>
@@ -73,7 +73,7 @@ description: "defaults – read or modify GNUstep user defaults"
 <p> The &#8216;defaults&#8217; command appeared in OpenStep and combined the capabilities of the earlier NeXTstep commands &#8216;dread&#8217;, &#8216;dwrite&#8217;, and &#8216;dremove&#8217;.</p>
 <dl>
 <dt>
-<dd> The GNUstep version was written in 1998. </p>
+</dt><dd> The GNUstep version was written in 1998. </dd>
 <p> This manual page first appeared in gnustep-base 1.9.2 (March 2004). </p>
 </dl>
 <h2>AUTHORS</h2>

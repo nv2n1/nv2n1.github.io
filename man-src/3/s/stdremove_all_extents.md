@@ -11,10 +11,8 @@ std::remove_all_extents - std::remove_all_extents
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct remove_all_extents;</code></pre> 
 If T is a multidimensional array of some type X, provides the member typedef type equal to X, otherwise type is T. 
 
@@ -48,20 +46,15 @@ using remove_all_extents_t = typename remove_all_extents&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;typeinfo&gt;
 template &lt;class A&gt;
-
 void foo(const A &amp;)
-
 {
     typedef typename std::remove_all_extents&lt;A&gt;::type Type;
     std::cout &lt;&lt; &quot;underlying type: &quot; &lt;&lt; typeid(Type).name() &lt;&lt; '\n';
 }
 int main()
-
 {
     float a1[1][2][3];
     int a2[3][2];

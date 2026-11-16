@@ -25,8 +25,8 @@ description: "avc_open, avc_destroy, avc_reset, avc_cleanup – userspace SELinu
 <p> The userspace AVC obeys callbacks set via <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), in particular the logging and audit callbacks. </p>
 <p> The options which may be passed to <code>avc_open</code>() include the following:</p>
 <dl>
-<dt><code>AVC_OPT_SETENFORCE</code></p>
-<dd> This option forces the userspace AVC into enforcing mode if the option value is non-NULL; permissive mode otherwise. The system enforcing mode will be ignored.</dl>
+<dt><code>AVC_OPT_SETENFORCE</code></dt>
+<dd> This option forces the userspace AVC into enforcing mode if the option value is non-NULL; permissive mode otherwise. The system enforcing mode will be ignored.</dd></dl>
 <h2>NETLINK NOTIFICATION</h2>
 <p> Beginning with version 2.6.4, the Linux kernel supports SELinux status change notification via netlink. Two message types are currently implemented, indicating changes to the enforcing mode and to the loaded policy in the kernel, respectively. The userspace AVC listens for these messages and takes the appropriate action, modifying the behavior of <code><a href="/docs/linux/man/3-avc_has_perm/">avc_has_perm</a></code>(3) to reflect the current enforcing mode and flushing the cache on receipt of a policy load notification. Audit messages are produced when netlink notifications are processed.</p>
 <h2>RETURN VALUE</h2>

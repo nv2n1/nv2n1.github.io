@@ -18,46 +18,46 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 <p> The Nextview <font SIZE="-1">EPG</font> standard was developed for use in <font SIZE="-1">TV</font> sets, but the data can be received and used in a <font SIZE="-1">PC</font>, too &#8211; provided you have a Teletext capable <font SIZE="-1">TV</font> tuner card and are lucky enough to have a content provider in your country. </p>
 <p> <code>nxtvepg</code> enables you to obtain free <font SIZE="-1">TV</font> programme listings for all of the major networks in Germany, Austria, France, Belgium and Switzerland. Currently Nextview <font SIZE="-1">EPG</font> is transmitted by the following <font SIZE="-1">TV</font> networks (note that each of these EPGs cover not only the provider&#8217;s programme but also that of many other networks):</p>
 <dl>
-<dt>*</p>
-<dd> In Germany and Austria: Kabel1 (coverage: apx. 32 networks)</p>
-<dt>*</p>
-<dd> In Switzerland: <font SIZE="-1">SF1</font>, <font SIZE="-1">TSR1</font>, <font SIZE="-1">TSI1</font>, <font SIZE="-1">TV5</font> (coverage: apx. 37 networks)</p>
-<dt>*</p>
-<dd> In France: Canal+, M6, <font SIZE="-1">TV5</font> (coverage: 8 networks)</p>
-<dt>*</p>
-<dd> In Belgium: M6, <font SIZE="-1">TV5</font> (coverage: 32 networks)</p>
-<dt>*</p>
-<dd> In Turkey: <font SIZE="-1">TRT</font> family (coverage: apx. 17 networks)</dl>
+<dt>*</dt>
+<dd> In Germany and Austria: Kabel1 (coverage: apx. 32 networks)</dd>
+<dt>*</dt>
+<dd> In Switzerland: <font SIZE="-1">SF1</font>, <font SIZE="-1">TSR1</font>, <font SIZE="-1">TSI1</font>, <font SIZE="-1">TV5</font> (coverage: apx. 37 networks)</dd>
+<dt>*</dt>
+<dd> In France: Canal+, M6, <font SIZE="-1">TV5</font> (coverage: 8 networks)</dd>
+<dt>*</dt>
+<dd> In Belgium: M6, <font SIZE="-1">TV5</font> (coverage: 32 networks)</dd>
+<dt>*</dt>
+<dd> In Turkey: <font SIZE="-1">TRT</font> family (coverage: apx. 17 networks)</dd></dl>
 <p> For up-to-date information check the nxtvepg homepage in the Internet (see the About popup in the Help menu). If you don&#8217;t receive any of the channels listed above, you can only use the demo mode as described with the <code>-demo</code> command line option. </p>
 <p> Since version 2.8.0 nxtvepg also allows to extract <font SIZE="-1">EPG</font> data from teletext or import from external <font SIZE="-1">XMLTV</font> sources. Note when importing data you need to take care to respect copyright, same as when exporting data. In particular, the German law does not permit &#8220;Web scraping&#8221;, i.e. extraction of programme information from Internet sources without prior permission of the content provider.</p>
 <h2>OPTIONS</h2>
 <p> Summary of command line options:</p>
 <dl>
-<dt><code>-display</code> <i>display</i></p>
-<dd> <font SIZE="-1">UNIX</font> only: The display on which the user interface will be placed, for example <code>localhost:0.0</code>. Default: taken from environment variable <i></i><font SIZE="-1"><i>DISPLAY</i></font><i></i>. For more info see the <i>X</i> manual page section <code>Display Names</code></p>
-<dt><code>-tvdisplay</code> <i>display</i></p>
-<dd> <font SIZE="-1">UNIX</font> only: The display on which the <font SIZE="-1">TV</font> application window is searched, e.g. on a remote host or different screen on a station with multiple monitors. Default: same as the main window&#8217;s display.</p>
-<dt><code>-geometry</code> <i>geometry</i></p>
-<dd> Specifies the position of the main window, e.g. <code>-geometry -0+0</code> to put the main window in the upper right corner of the visible screen. The size of the window cannot be changed.</p>
-<dt><code>-iconic</code></p>
-<dd> Start with the main window iconified (i.e. minimized). </p>
+<dt><code>-display</code> <i>display</i></dt>
+<dd> <font SIZE="-1">UNIX</font> only: The display on which the user interface will be placed, for example <code>localhost:0.0</code>. Default: taken from environment variable <i></i><font SIZE="-1"><i>DISPLAY</i></font><i></i>. For more info see the <i>X</i> manual page section <code>Display Names</code></dd>
+<dt><code>-tvdisplay</code> <i>display</i></dt>
+<dd> <font SIZE="-1">UNIX</font> only: The display on which the <font SIZE="-1">TV</font> application window is searched, e.g. on a remote host or different screen on a station with multiple monitors. Default: same as the main window&#8217;s display.</dd>
+<dt><code>-geometry</code> <i>geometry</i></dt>
+<dd> Specifies the position of the main window, e.g. <code>-geometry -0+0</code> to put the main window in the upper right corner of the visible screen. The size of the window cannot be changed.</dd>
+<dt><code>-iconic</code></dt>
+<dd> Start with the main window iconified (i.e. minimized). </dd>
 <p> For M$ Windows users this option may be esp. helpful when nxtvepg is started from inside the <i>Auto start</i> group and <i>Hide on minimize</i> is enabled: nxtvepg then will start almost invisibly in the background, only with an icon in the system tray of the task bar (see also &#8220;<font SIZE="-1">CONFIGURATION:</font> Show/Hide&#8221;).</p>
-<dt><code>-rcfile</code> <i>path</i></p>
-<dd> Specify an alternate configuration file. Default: on <font SIZE="-1">UNIX</font> <tt>$HOME</tt>/.nxtvepgrc, on Windows nxtvepg.ini in the current directory.</p>
-<dt><code>-dbdir</code> <i>directory</i></p>
-<dd> Specify an alternate directory for the databases. Default: On <font SIZE="-1">UNIX</font> <i>/usr/tmp/nxtvdb</i>, on Windows the current directory. Note that the database management is not equipped for concurrent writing, so if you have more than one <font SIZE="-1">TV</font> tuner card in your system or network, relocate the directory into the users&#8217; homes. </p>
+<dt><code>-rcfile</code> <i>path</i></dt>
+<dd> Specify an alternate configuration file. Default: on <font SIZE="-1">UNIX</font> <tt>$HOME</tt>/.nxtvepgrc, on Windows nxtvepg.ini in the current directory.</dd>
+<dt><code>-dbdir</code> <i>directory</i></dt>
+<dd> Specify an alternate directory for the databases. Default: On <font SIZE="-1">UNIX</font> <i>/usr/tmp/nxtvdb</i>, on Windows the current directory. Note that the database management is not equipped for concurrent writing, so if you have more than one <font SIZE="-1">TV</font> tuner card in your system or network, relocate the directory into the users&#8217; homes. </dd>
 <p> If you&#8217;re using an acquisition daemon, the browser must be configured to use the same directory as the daemon. If the daemon is running on a different host, you need to mount the remote directory, e.g. via <font SIZE="-1">NFS</font>.</p>
-<dt><code>-card</code> <i>index</i></p>
-<dd> Specify which <font SIZE="-1">TV</font> card hardware to use, if you have more than card. Default: index 0. On Linux the given index is appended to the device names, i.e. <i>/dev/vbi</i> and <i>/dev/video</i> (see also &#8220;<font SIZE="-1">FILES</font>&#8221;). On Windows index &#8220;n&#8221; means the n-th card found while scanning the <font SIZE="-1">PCI</font> bus for cards with a supported capture chip (e.g. Brooktree Bt878, Bt878A, Bt848, Bt849, Philips <font SIZE="-1">SAA7134</font>, Conexant 23881). If you have more than one <font SIZE="-1">TV</font> card with the same chip, the order between those is undefined, but still constant (i.e. the order is determined by the driver, not nxtvepg)</p>
-<dt><code>-dvbpid</code> <i>number</i></p>
-<dd> <font SIZE="-1">UNIX</font> only. Also only available when nxtvepg was configured at compile time (i.e. in the Makefile) to use the <i></i><font SIZE="-1"><i>ZVBI</i></font><i> library</i> (&lt;<a rel="nofollow" href="http://zapping.sourceforge.net/ZVBI/index.html">http://zapping.sourceforge.net/ZVBI/index.html</a>&gt;) for acquisition. </p>
+<dt><code>-card</code> <i>index</i></dt>
+<dd> Specify which <font SIZE="-1">TV</font> card hardware to use, if you have more than card. Default: index 0. On Linux the given index is appended to the device names, i.e. <i>/dev/vbi</i> and <i>/dev/video</i> (see also &#8220;<font SIZE="-1">FILES</font>&#8221;). On Windows index &#8220;n&#8221; means the n-th card found while scanning the <font SIZE="-1">PCI</font> bus for cards with a supported capture chip (e.g. Brooktree Bt878, Bt878A, Bt848, Bt849, Philips <font SIZE="-1">SAA7134</font>, Conexant 23881). If you have more than one <font SIZE="-1">TV</font> card with the same chip, the order between those is undefined, but still constant (i.e. the order is determined by the driver, not nxtvepg)</dd>
+<dt><code>-dvbpid</code> <i>number</i></dt>
+<dd> <font SIZE="-1">UNIX</font> only. Also only available when nxtvepg was configured at compile time (i.e. in the Makefile) to use the <i></i><font SIZE="-1"><i>ZVBI</i></font><i> library</i> (&lt;<a rel="nofollow" href="http://zapping.sourceforge.net/ZVBI/index.html">http://zapping.sourceforge.net/ZVBI/index.html</a>&gt;) for acquisition. </dd>
 <p> This option enables data acquisition from a <font SIZE="-1">DVB</font> device. The channel must be tuned with an external application. The <font SIZE="-1">PID</font> is the identifier of the data stream which contains Nextview <font SIZE="-1">EPG</font> data. The <font SIZE="-1">PID</font> also must be determined by external means. <font SIZE="-1">DVB</font> support is still <code>experimental</code> and not officially supported. In particular, the <font SIZE="-1">EPG</font> scan and acquisition modes which would require channel changing are not supported.</p>
-<dt><code>-provider</code> <i></i><font SIZE="-1"><i>CNI</i></font><i></i></p>
-<dd> Select a provider by its hexadecimal <font SIZE="-1">CNI</font> (Country and Network Identifier), e.g. <i>-provider d92</i> for <code>Kabel1</code>. You can find out the provider&#8217;s <font SIZE="-1">CNI</font> during a provider scan or from the database file names. Use keyword <i>merged</i> to dump a merged database (or use code <i></i><font SIZE="-1"><i>FF</i></font><i></i> as required by earlier versions of nxtvepg.) Note before you can use a merged database you have to configure it, see &#8220;<font SIZE="-1">MERGED</font> <font SIZE="-1">DATABASES</font>&#8221;. Default if this option is omitted: the last provider selected during the previous session.</p>
-<dt><code>-noacq</code></p>
-<dd> Start with acquisition disabled. The acquisition can still be started later from the Control menu (see &#8220;<font SIZE="-1">CONTROL:</font> Enable acquisition&#8221;).</p>
-<dt><code>-daemon</code></p>
-<dd> Start without graphical user interface and silently perform acquisition &#8220;in the background.&#8221; This option is implied when running <i>nxtvepgd</i>. (The daemon-only executable is slightly more efficient since it&#8217;s smaller and uses less libraries than the <font SIZE="-1">GUI</font> executable and hence needs less memory.) </p>
+<dt><code>-provider</code> <i></i><font SIZE="-1"><i>CNI</i></font><i></i></dt>
+<dd> Select a provider by its hexadecimal <font SIZE="-1">CNI</font> (Country and Network Identifier), e.g. <i>-provider d92</i> for <code>Kabel1</code>. You can find out the provider&#8217;s <font SIZE="-1">CNI</font> during a provider scan or from the database file names. Use keyword <i>merged</i> to dump a merged database (or use code <i></i><font SIZE="-1"><i>FF</i></font><i></i> as required by earlier versions of nxtvepg.) Note before you can use a merged database you have to configure it, see &#8220;<font SIZE="-1">MERGED</font> <font SIZE="-1">DATABASES</font>&#8221;. Default if this option is omitted: the last provider selected during the previous session.</dd>
+<dt><code>-noacq</code></dt>
+<dd> Start with acquisition disabled. The acquisition can still be started later from the Control menu (see &#8220;<font SIZE="-1">CONTROL:</font> Enable acquisition&#8221;).</dd>
+<dt><code>-daemon</code></dt>
+<dd> Start without graphical user interface and silently perform acquisition &#8220;in the background.&#8221; This option is implied when running <i>nxtvepgd</i>. (The daemon-only executable is slightly more efficient since it&#8217;s smaller and uses less libraries than the <font SIZE="-1">GUI</font> executable and hence needs less memory.) </dd>
 <p> If no other options are given the same provider and acquisition mode as configured with the <font SIZE="-1">GUI</font> will be used. If the -provider option is given acquisition will work for this provider only (note the difference to non-daemon mode, where that option selects the browser database). The -daemon option cannot be combined with the -noacq or -demo options. </p>
 <p> The daemon always creates a named socket in the <i>/tmp</i> directory (<font SIZE="-1">UNIX</font> only) plus optionally a <font SIZE="-1">TCP/IP</font> socket to allow connects by browser processes. While connected, the browser receives updates for opened Nextview databases and reports about the acquisition progress; if left unconnected, the browser listing might be incomplete or outdated. </p>
 <p> It&#8217;s important to note that the browser <code>must use</code> the same <i>-dbdir</i> directory, because the daemon forwards only deltas to the database files stored in that directory. For more details see &#8220;<font SIZE="-1">CONFIGURATION:</font> Client/Server&#8221;. </p>
@@ -67,25 +67,25 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
                  -rcfile /usr/local/etc/nxtvepgrc&quot;
 </pre>
 <p> For terminating the daemon process, see the -daemonstop option below. Alternatively you can stop the daemon via the graphical user interface by disabling <i>enable acquisition</i> in the control menu.</p>
-<dt><code>-daemonstop</code></p>
-<dd> With this option, a background acquisition process is searched and terminated if found; then the program exits. Note you need permission to send signals to the daemon process to be able to stop it (i.e. it must run with the same user <font SIZE="-1">ID</font>). This option is meant to allow controlling acquisition by scripts which start and stop acquisition automatically after a given time. </p>
+<dt><code>-daemonstop</code></dt>
+<dd> With this option, a background acquisition process is searched and terminated if found; then the program exits. Note you need permission to send signals to the daemon process to be able to stop it (i.e. it must run with the same user <font SIZE="-1">ID</font>). This option is meant to allow controlling acquisition by scripts which start and stop acquisition automatically after a given time. </dd>
 <p> Note if the daemon is running on the same host and uid, it can also be stopped by deselecting <i>Enable acquisition</i> in the <i>Control</i> menu while being connected to the daemon. For more details see &#8220;<font SIZE="-1">CONTROL</font>&#8221; and &#8220;<font SIZE="-1">FILES</font>&#8221;.</p>
-<dt><code>-nodetach</code></p>
-<dd> <font SIZE="-1">UNIX</font> only: In daemon mode this option prevents the process actually making itself a daemon, i.e. it doesn&#8217;t fork and stays connected to the terminal. Also all log messages starting with level <i>warning</i> are sent to standard error out (e.g. configuration errors that lead to an immediate exit). This mode is intended for debugging purposes only.</p>
-<dt><code>-acqpassive</code></p>
-<dd> In daemon mode this option overrides the acquisition mode setting in the configuration file and forces acquisition into passive mode (see &#8220;<font SIZE="-1">ACQUISITION</font> <font SIZE="-1">MODES</font>&#8221;). The configuration file is not changed, so that you can use different acquisition strategies for daemon and <font SIZE="-1">GUI</font>.</p>
-<dt><code>-acqonce</code> <i>phase</i></p>
-<dd> In daemon mode this option will automatically stop acquisition and terminate the daemon after the given phase has been completed for all providers. Phases are the same as defined in &#8220;<font SIZE="-1">ACQUISITION</font> <font SIZE="-1">MODES</font>&#8221;, i.e. <i>now</i>, <i>near</i> and <i>full</i>. Note it&#8217;s not useful to use this option in acquisition mode <i>follow-ui</i> because acquisition restarts after each provider change. This option is only useful with a fixed list of providers. </p>
+<dt><code>-nodetach</code></dt>
+<dd> <font SIZE="-1">UNIX</font> only: In daemon mode this option prevents the process actually making itself a daemon, i.e. it doesn&#8217;t fork and stays connected to the terminal. Also all log messages starting with level <i>warning</i> are sent to standard error out (e.g. configuration errors that lead to an immediate exit). This mode is intended for debugging purposes only.</dd>
+<dt><code>-acqpassive</code></dt>
+<dd> In daemon mode this option overrides the acquisition mode setting in the configuration file and forces acquisition into passive mode (see &#8220;<font SIZE="-1">ACQUISITION</font> <font SIZE="-1">MODES</font>&#8221;). The configuration file is not changed, so that you can use different acquisition strategies for daemon and <font SIZE="-1">GUI</font>.</dd>
+<dt><code>-acqonce</code> <i>phase</i></dt>
+<dd> In daemon mode this option will automatically stop acquisition and terminate the daemon after the given phase has been completed for all providers. Phases are the same as defined in &#8220;<font SIZE="-1">ACQUISITION</font> <font SIZE="-1">MODES</font>&#8221;, i.e. <i>now</i>, <i>near</i> and <i>full</i>. Note it&#8217;s not useful to use this option in acquisition mode <i>follow-ui</i> because acquisition restarts after each provider change. This option is only useful with a fixed list of providers. </dd>
 <p> If you want to run another program from inside a script after nxtvepg has finished, use the <i>-nodetach</i> option (<font SIZE="-1">UNIX</font> only) Then the shell which is processing the script will usually wait for nxtvepg to terminate before starting the next command. On Windows there&#8217;s no simple way to achieve this (because non-console applications are always run in the background), so you need to use a script language which supports instructions which wait until a running program (namely nxtvepg) has finished.</p>
-<dt><code>-dump</code> <i>mode</i></p>
-<dd> When started with this argument, nxtvepg will only export the entire programme database, then exit. This argument must be combined with <i>-provider</i> to specify which database shall be exported. </p>
+<dt><code>-dump</code> <i>mode</i></dt>
+<dd> When started with this argument, nxtvepg will only export the entire programme database, then exit. This argument must be combined with <i>-provider</i> to specify which database shall be exported. </dd>
 <p> To export the database in <font SIZE="-1">XML</font> format, use keyword <i>xml</i> as mode. In this case the last mode (i.e. <font SIZE="-1">XMLTV</font> <font SIZE="-1">DTD</font> version) which was used via the main menu is used. To export the database in another mode, use <i>xml5</i>, <i>xml5ltz</i> or <i>xml6</i>. For more details see &#8220;<font SIZE="-1">CONTROL:</font> Export as <font SIZE="-1">XMLTV</font>&#8221;. </p>
 <p> To export programme data into a <font SIZE="-1">HTML</font> document, use keyword <i>html</i> as mode. The same options as configured in the <font SIZE="-1">HTML</font> export dialog are applied (unless you are using the daemon executable <i>nxtvepgd</i> to perform the export.) For details see &#8220;<font SIZE="-1">CONTROL:</font> Export as <font SIZE="-1">HTML</font>&#8221;. The number of exported programmes can be limited by adding a number after the keyword, separated by a colon (e.g. <tt>&quot;-dump html:50&quot;</tt>.) However the format of the programme list is currently not configurable via command line options. </p>
 <p> To export the database into a plain text file (e.g. for import into an <font SIZE="-1">SQL</font> database) three mode keywords are supported: <i>pi</i> to dump programmes (i.e. the complete <font SIZE="-1">TV</font> schedules), <i>ai</i> to dump the provider&#8217;s network table, <i>pdc</i> to dump the <font SIZE="-1">PDC</font> theme categories table. For more details see &#8220;<font SIZE="-1">CONTROL:</font> Export as text&#8221;. </p>
 <p> For debugging purposes there&#8217;s also a mode <i>raw</i> which prints all data in the database in a format which is closely related to the internal data structures. This output should not be used for data export. For more details see &#8220;<font SIZE="-1">CONTROL:</font> Dump raw database&#8221;. </p>
 <p> The output is written to <i>stdout</i> unless you redirect it into a file or pipe it into another program. See also option <i>-outfile</i></p>
-<dt><code>-outfile</code> <i>path</i></p>
-<dd> This option allows to redirect output from <i>-dump</i> or any other modes which print to <i>stdout</i> by default. It also works in normal operation modes, but the created file will be empty. nxtvepg will abort if the specified file already exists to avoid inadvertantly overwriting other files. If you&#8217;re using the option inside a script or batch file you should add a command to remove the target file before invoking nxtvepg. </p>
+<dt><code>-outfile</code> <i>path</i></dt>
+<dd> This option allows to redirect output from <i>-dump</i> or any other modes which print to <i>stdout</i> by default. It also works in normal operation modes, but the created file will be empty. nxtvepg will abort if the specified file already exists to avoid inadvertantly overwriting other files. If you&#8217;re using the option inside a script or batch file you should add a command to remove the target file before invoking nxtvepg. </dd>
 <p> This option is especially helpful for M$ Windows users, since output written to <i>stdout</i> is discarded by the operating system because nxtvepg is not a &#8220;console application&#8221;. This means for exmaple, if output of the above -dump mode is not to be discarded, you must either use this option or redirect output as explained below. </p>
 <p> Note: instead of using this option you can also redirect output with the &#8220;&gt;&#8221; or &#8220;|&#8221; operators in <font SIZE="-1">UNIX</font> shells or under M$ Windows at the MS-DOS command prompt. For example you could use either of the following: </p>
 <pre>
@@ -93,22 +93,22 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
   nxtvepg -dump ai -prov d92 | more
 </pre>
 <p> to write the network table of provider <i>Kabel1</i> (<font SIZE="-1">CNI</font> <i>0xd92</i>) into a file named <i>networks.txt</i>, or pipe it to the paging program &#8220;more&#8221; respectively.</p>
-<dt><code>-remctrl</code> <i>command</i></p>
-<dd> This option can be used to remote control an other, previously started <font SIZE="-1">GUI</font> instance of nxtvepg, i.e. to send the given command to the other process and then exit. </p>
+<dt><code>-remctrl</code> <i>command</i></dt>
+<dd> This option can be used to remote control an other, previously started <font SIZE="-1">GUI</font> instance of nxtvepg, i.e. to send the given command to the other process and then exit. </dd>
 <p> The following commands are available: <i>quit</i> to terminate the other nxtvepg process; <i>iconify</i> to minimize the window; <i>deiconify</i> to undo a previous minimization; <i>raise</i> to deiconify the other window and to bring it to the top (in case it&#8217;s obscured by other windows); <i>acqon</i> to start acquisition; <i>acqoff</i> to stop acquisition.</p>
-<dt><code>-clock</code> <i>mode</i></p>
-<dd> When started with this argument, nxtvepg will acquire the current date and time from teletext and then terminate. To specify from which channel to acquire date and time use the <i>-prov</i> option option. (If you want to use a channel which is not an Nextview <font SIZE="-1">EPG</font> provider, you&#8217;d have to use an external application to tune the channel before you invoke nxtvepg; with the exception of Linux&#8217; <i>v4lctl setstation</i> command this mode is unsupported though and may not work, depending on the external application you&#8217;re using it with.) </p>
+<dt><code>-clock</code> <i>mode</i></dt>
+<dd> When started with this argument, nxtvepg will acquire the current date and time from teletext and then terminate. To specify from which channel to acquire date and time use the <i>-prov</i> option option. (If you want to use a channel which is not an Nextview <font SIZE="-1">EPG</font> provider, you&#8217;d have to use an external application to tune the channel before you invoke nxtvepg; with the exception of Linux&#8217; <i>v4lctl setstation</i> command this mode is unsupported though and may not work, depending on the external application you&#8217;re using it with.) </dd>
 <p> <code>Important restriction</code>: nxtvepg is able to retrieve the clock only from channels where the so-called teletext <i>packet 8/30/1</i> is transmitted, which contains date, time and local time zone offset in a binary format. nxtvepg will never attempt to retrieve times from teletext header lines. All Nextview <font SIZE="-1">EPG</font> providers transmit packet 8/30/1, and a few other networks do too (e.g. <font SIZE="-1">ARD</font> and <font SIZE="-1">ZDF</font> in Germany.) </p>
 <p> With mode <i>print</i> the date and time will be read and printed. The output is written to <i>stdout</i> unless you redirect it into a file or pipe it into another program. See option <i>-outfile</i> for details. </p>
 <p> With mode <i>set</i> the time is set as system time, provided the calling user has the necessary priviliges (e.g. you&#8217;d need to be <i>root</i> on <font SIZE="-1">UNIX</font>; since it&#8217;s depreciated to run nxtvepg with root priviliges, it&#8217;s recommended to first print the time into a file and then pass it to date). </p>
 <p> <font SIZE="-1">UNIX</font> users should also note that the <i>set</i> mode does not update the battery powered hardware clock (aka Real Time Clock <font SIZE="-1"><code>RTC</code></font>), so the correction will probably be lost with the next reboot. To update your <font SIZE="-1">RTC</font>, call <i>hwclock &#8211;systohc</i> or your operating system&#8217;s equivalent after nxtvepg. Some Linux distributions automatically take care of this during shutdown.</p>
-<dt><code>-provscan</code> <i>country</i></p>
-<dd> When started with this argument nxtvepg will start scanning all <font SIZE="-1">TV</font> channels in the given country&#8217;s frequency band for Nextview <font SIZE="-1">EPG</font> providers. Countries are specified by their top-level Internet domain names (e.g. de, at, ch, fr, be) When the scan is finished, nxtvepg updates the provider list stored in the configuration file and terminates itself. The scan is performed in the same way as described in &#8220;<font SIZE="-1">GETTING</font> <font SIZE="-1">STARTED:</font> Search for Nextview providers&#8221; and &#8220;<font SIZE="-1">CONFIGURATION:</font> Provider scan&#8221;, just without the graphical user interface. </p>
+<dt><code>-provscan</code> <i>country</i></dt>
+<dd> When started with this argument nxtvepg will start scanning all <font SIZE="-1">TV</font> channels in the given country&#8217;s frequency band for Nextview <font SIZE="-1">EPG</font> providers. Countries are specified by their top-level Internet domain names (e.g. de, at, ch, fr, be) When the scan is finished, nxtvepg updates the provider list stored in the configuration file and terminates itself. The scan is performed in the same way as described in &#8220;<font SIZE="-1">GETTING</font> <font SIZE="-1">STARTED:</font> Search for Nextview providers&#8221; and &#8220;<font SIZE="-1">CONFIGURATION:</font> Provider scan&#8221;, just without the graphical user interface. </dd>
 <p> During the scan nxtvepg reports progress to <i>stdout</i> unless you redirect it into a file or pipe it into another program. See option <i>-outfile</i> for details.</p>
-<dt><code>-demo</code> <i>path</i></p>
-<dd> Load database given by <i>path</i> and enter demo mode. In this mode all entries of the database are shifted into the presence, i.e. just far enough so that none are expired. Hence the entries&#8217; dates and times are not for real and acquisition or database reselection is not possible.</p>
-<dt><code>-help</code></p>
-<dd> List all available command line options.</dl>
+<dt><code>-demo</code> <i>path</i></dt>
+<dd> Load database given by <i>path</i> and enter demo mode. In this mode all entries of the database are shifted into the presence, i.e. just far enough so that none are expired. Hence the entries&#8217; dates and times are not for real and acquisition or database reselection is not possible.</dd>
+<dt><code>-help</code></dt>
+<dd> List all available command line options.</dd></dl>
 <p> After the options you can add a database filename. If it&#8217;s a regular nxtvepg database, this is equivalent to specifying options <code>-dbdir</code> and <code>-provider</code> (if such options are provided, they are silently overridden in this case.) If it&#8217;s a nxtvepg database, but the file name does not have the format as defined in &#8220;<font SIZE="-1">FILES</font>&#8221;, it&#8217;s assumed to be a demo database and loaded just as with the <code>-demo</code> option. Last but not least, it&#8217;s also possible to name an <font SIZE="-1">XML</font> file with <font SIZE="-1">XMLTV</font> data. </p>
 <p> This is particularily useful for users of graphical file managers (like the Windows Explorer) who can just drag and drop a database file onto the executable. When used on Windows systems the working directory is set to the one that contains the executable, because the Explorer seems to set it to the user&#8217;s desktop root, so that none of the DLLs and drivers are found. </p>
 <p> Note to Windows users: all these options &#8211; unless otherwise noted &#8211; are available in the Win32 version too. You can supply the options either from a &#8220;<font SIZE="-1">MS-DOS</font>&#8221; command prompt or batch file, or by appending them to the executable in a shortcut definition.</p>
@@ -146,10 +146,10 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 <h2>Configuring a <font SIZE="-1">TV</font> application</h2>
 <p> nxtvepg can cooperate in the following ways with <font SIZE="-1">TV</font> applications:</p>
 <dl>
-<dt>*</p>
-<dd> Loading the <font SIZE="-1">TV</font> application&#8217;s channel table: use of the <font SIZE="-1">TV</font> tuner frequencies can significantly speed up the <font SIZE="-1">EPG</font> scan (already mentioned above.) The <font SIZE="-1">TV</font> app&#8217;s channel names are used by the <i>Network name</i> dialog in the Configure menu (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Network names&#8221;) to synchronize network names between nxtvepg and the <font SIZE="-1">TV</font> application.</p>
-<dt>*</p>
-<dd> Interaction between nxtvepg and the <font SIZE="-1">TV</font> application, to provide you with convenience features like an on-screen display of the current programme title after channel changes, changing the channel from inside nxtvepg with the <i>TuneTV</i> button, and background Nextview data acquisition while you&#8217;re watching <font SIZE="-1">TV</font>.</dl>
+<dt>*</dt>
+<dd> Loading the <font SIZE="-1">TV</font> application&#8217;s channel table: use of the <font SIZE="-1">TV</font> tuner frequencies can significantly speed up the <font SIZE="-1">EPG</font> scan (already mentioned above.) The <font SIZE="-1">TV</font> app&#8217;s channel names are used by the <i>Network name</i> dialog in the Configure menu (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Network names&#8221;) to synchronize network names between nxtvepg and the <font SIZE="-1">TV</font> application.</dd>
+<dt>*</dt>
+<dd> Interaction between nxtvepg and the <font SIZE="-1">TV</font> application, to provide you with convenience features like an on-screen display of the current programme title after channel changes, changing the channel from inside nxtvepg with the <i>TuneTV</i> button, and background Nextview data acquisition while you&#8217;re watching <font SIZE="-1">TV</font>.</dd></dl>
 <p> The first one is a passive feature, i.e. only nxtvepg needs to be adapted to the respective <font SIZE="-1">TV</font> applications. The second one however requires cooperation of both sides. For this reason the number of <font SIZE="-1">TV</font> applications for which the passive features are supported will always be much larger. On Windows the interaction features are currently only supported by K!TV. </p>
 <p> On <font SIZE="-1">UNIX</font> <i>xawtv</i>, <i>xdtv</i> (former <i>xawdecode</i>), <i>zapping</i> and <i>tvtime</i> are supported currently. All the features listed above do work with any of them. </p>
 <p> On Windows several freeware <font SIZE="-1">TV</font> applications are supported for the passive features; you must select which one you&#8217;re using. If you&#8217;ve loaded <font SIZE="-1">TV</font> card settings from a <font SIZE="-1">TV</font> app in the <i></i><font SIZE="-1"><i>TV</i></font><i> card input</i> dialog, then the <font SIZE="-1">TV</font> app type and path is already configured. Else, or if you want to use a different app as source for the channel table, open the <i></i><font SIZE="-1"><i>TV</i></font><i> app. interaction</i> dialog (see also &#8220;<font SIZE="-1">CONFIGURATION:</font> <font SIZE="-1">TV</font> application interaction&#8221;). </p>
@@ -176,23 +176,23 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 <h2>ACQUISITION MODES</h2>
 <p> The acquisition mode configuration dialog enables you to control for which providers data is collected, and in which order. It&#8217;s mainly intended for users who use more than one provider&#8217;s database, i.e. in a merged database, or want to optimize startup time. If you&#8217;re happy with a single provider or don&#8217;t want to browse immediately after program start, you should keep the default, which is loading data always for the provider selected in the browser.</p>
 <dl>
-<dt><code>Passive</code></p>
-<dd> <font SIZE="-1">UNIX</font> only: In this mode the software never accesses the video device and never changes the input channel or tuner frequency. It&#8217;s useful if you want to set up the source with command line tools like <i>v4lctl</i>. If you&#8217;re using applications which keep the video device busy (e.g. a <font SIZE="-1">TV</font> application) you don&#8217;t need this mode, because when nxtvepg detects an unsolicited channel change, it automatically switches to the passive mode for as long as the video device remains busy. </p>
+<dt><code>Passive</code></dt>
+<dd> <font SIZE="-1">UNIX</font> only: In this mode the software never accesses the video device and never changes the input channel or tuner frequency. It&#8217;s useful if you want to set up the source with command line tools like <i>v4lctl</i>. If you&#8217;re using applications which keep the video device busy (e.g. a <font SIZE="-1">TV</font> application) you don&#8217;t need this mode, because when nxtvepg detects an unsolicited channel change, it automatically switches to the passive mode for as long as the video device remains busy. </dd>
 <p> Please note: when nxtvepg does not control the input channel, it can not automatically take care of updating your databases. Even if the browser database should be completely empty, no data will appear until you tune in the provider&#8217;s channel manually with an external application. Because of this, passive mode is depreciated.</p>
-<dt><code>External</code></p>
-<dd> This is the recommended mode for Composite or S-Video input sources. Only the input source will be set; the tuner is not touched. Hence the provider channel has to be selected either externally (e.g. in a satellite receiver connected to the Composite or S-Video input sockets) or by a different application (e.g. <font SIZE="-1">TV</font> application, <font SIZE="-1">UNIX</font> only), just like in passive mode. </p>
+<dt><code>External</code></dt>
+<dd> This is the recommended mode for Composite or S-Video input sources. Only the input source will be set; the tuner is not touched. Hence the provider channel has to be selected either externally (e.g. in a satellite receiver connected to the Composite or S-Video input sockets) or by a different application (e.g. <font SIZE="-1">TV</font> application, <font SIZE="-1">UNIX</font> only), just like in passive mode. </dd>
 <p> On Windows systems this mode can be used if your tuner is not known to nxtvepg, i.e. if the <font SIZE="-1">EPG</font> scan does not find any channels with all of the available tuner types. In this case tune in the provider channel with a <font SIZE="-1">TV</font> application; then quit this application and start nxtvepg. When you view the acquisition statistics from the Control menu, the <font SIZE="-1">VPS/PDC</font> code of the tuned channel should appear in the lower half of the window.</p>
-<dt><code>Follow-UI</code></p>
-<dd> This is the default mode: the acquisition always works for the provider you have selected for the browser (i.e. user interface). If you change the provider in the browser window, acquisition follows by tuning the new channel. Of course this requires to have performed an <font SIZE="-1">EPG</font> scan at least once, so that the tuner frequencies of all providers are known. When you use a merged database in the browser, acquisition works on each of the merged providers, one after another, just like in the mode described next.</p>
-<dt><code>Manually selected (Cyclic: All</code></p>
-<dd> This mode enables you to manually select for which providers the acquisition should work. If you select more than one provider, they are loaded one after another, in your specified order. Warning: if you choose a provider for the browser that&#8217;s not on the list, no data will be loaded into the browser, even if it&#8217;s completely empty. </p>
+<dt><code>Follow-UI</code></dt>
+<dd> This is the default mode: the acquisition always works for the provider you have selected for the browser (i.e. user interface). If you change the provider in the browser window, acquisition follows by tuning the new channel. Of course this requires to have performed an <font SIZE="-1">EPG</font> scan at least once, so that the tuner frequencies of all providers are known. When you use a merged database in the browser, acquisition works on each of the merged providers, one after another, just like in the mode described next.</dd>
+<dt><code>Manually selected (Cyclic: All</code></dt>
+<dd> This mode enables you to manually select for which providers the acquisition should work. If you select more than one provider, they are loaded one after another, in your specified order. Warning: if you choose a provider for the browser that&#8217;s not on the list, no data will be loaded into the browser, even if it&#8217;s completely empty. </dd>
 <p> Since transmission errors have to be considered, it&#8217;s not attempted to load every single block of a provider before acquisitions switches to the next. Instead a statistical criterium was defined, that regards the variance in coverage of all networks contained in the database, and the slope of that variance.</p>
-<dt><code>Cyclic: Now &#8211; Near &#8211; All</code></p>
-<dd> Like the previous mode, this one enables you to specify a list of providers to load data for. However they are not just loaded completely one after another. Instead, a 3-staged round-robin is implemented. In the first stage, only <i>Now</i> data is loaded, i.e. the currently running and next 2-3 programmes. When this has been completed for all providers, the next stage begins, which loads <i>Near</i> data, i.e. all programmes running in the next 12-24 hours. When that was completed, the final stage loads the outstanding blocks for all providers. See below for an explanation what this mode is good for.</p>
-<dt><code>Cyclic: Now &#8211; All</code></p>
-<dd> This is the same as the previous mode, except that the <i>Near</i> stage is skipped.</p>
-<dt><code>Cyclic: Near &#8211; All</code></p>
-<dd> This is the same as the mode before the previous one, except that the <i>Now</i> stage is skipped.</dl>
+<dt><code>Cyclic: Now &#8211; Near &#8211; All</code></dt>
+<dd> Like the previous mode, this one enables you to specify a list of providers to load data for. However they are not just loaded completely one after another. Instead, a 3-staged round-robin is implemented. In the first stage, only <i>Now</i> data is loaded, i.e. the currently running and next 2-3 programmes. When this has been completed for all providers, the next stage begins, which loads <i>Near</i> data, i.e. all programmes running in the next 12-24 hours. When that was completed, the final stage loads the outstanding blocks for all providers. See below for an explanation what this mode is good for.</dd>
+<dt><code>Cyclic: Now &#8211; All</code></dt>
+<dd> This is the same as the previous mode, except that the <i>Near</i> stage is skipped.</dd>
+<dt><code>Cyclic: Near &#8211; All</code></dt>
+<dd> This is the same as the mode before the previous one, except that the <i>Now</i> stage is skipped.</dd></dl>
 <p> Which mode is best for you depends on how you use the browser. As said above, if you&#8217;re mainly using a single provider, stick with the Follow-UI mode. If you use a merged database, data is automatically loaded for all contained providers. However if you switch manually between multiple providers, you should choose one of the manual acquisition modes. </p>
 <p> The Cyclic modes enables you to optimize startup time. While in standard manual mode, the first database is loaded completely before the next one is started, in Cyclic modes you can specify to load only Now data of all providers first. Hence already after a couple minutes you&#8217;ll have updated Now information for all providers. If you require more look-ahead than the next 2-3 programmes, e.g. the complete evening, use a Cyclic mode that starts with the Near stage. </p>
 <p> If you use manual acquisition together with a merged browser database, make sure to put the same provider at top in both lists, i.e. acquisition should always start for the &#8220;master database&#8221; of the merge. </p>
@@ -214,75 +214,75 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 <p> The timescale windows have one scale for each network covered by the selected provider. The left end of the scales refers to the start time of the oldest <font SIZE="-1">TV</font> programme in the database. Depending on how long ago the database was updated and the current expiry removal delay (see &#8220;<font SIZE="-1">FILTERING:</font> Expired Programmes Display&#8221;), some or all <font SIZE="-1">TV</font> programmes may lie in the past. The exact dates are printed in the date scale at the top of the window, the current time is additionally marked with a small arrow labeled &#8220;now&#8221;. </p>
 <p> Ranges that are covered by programmes of the respective network in the database are marked in shades of red or blue, uncovered ranges are left black. The different colors reflect the <i>stream</i> in which the data was received, or an error status; the shades age and version. Stream numbers are directly connected with the cycle phases mentioned in &#8220;<font SIZE="-1">ACQUISITION</font> <font SIZE="-1">MODES</font>&#8221;; besides this the difference is not relevant during normal operation.</p>
 <dl>
-<dt><i>red:</i></p>
-<dd> <font SIZE="-1">PI</font> blocks received in stream 1, i.e. cycle phase &#8216;Near&#8217;.</p>
-<dt><i>blue:</i></p>
-<dd> <font SIZE="-1">PI</font> blocks received in stream 2, i.e. cycle phase &#8216;All&#8217;.</p>
-<dt><i>dark red or blue:</i></p>
-<dd> <font SIZE="-1">PI</font> blocks from an earlier database version.</p>
-<dt><i>orange:</i></p>
-<dd> expired <font SIZE="-1">PI</font> blocks from stream 1 or an earlier database version.</p>
-<dt><i>cyan:</i></p>
-<dd> expired <font SIZE="-1">PI</font> blocks from stream 2 and the current database version.</p>
-<dt><i>yellow:</i></p>
-<dd> invalid <font SIZE="-1">PI</font> blocks (overlapping or zero run-time, block number not in the range given in inventory, etc.)</p>
-<dt><i>gray:</i></p>
-<dd> missing <font SIZE="-1">PI</font> blocks. Note that the range can only be roughly estimated, as the time range a block covers is not known until the actual block is available.</p>
-<dt><i>black:</i></p>
-<dd> time range which is not covered by the provider.</dl>
+<dt><i>red:</i></dt>
+<dd> <font SIZE="-1">PI</font> blocks received in stream 1, i.e. cycle phase &#8216;Near&#8217;.</dd>
+<dt><i>blue:</i></dt>
+<dd> <font SIZE="-1">PI</font> blocks received in stream 2, i.e. cycle phase &#8216;All&#8217;.</dd>
+<dt><i>dark red or blue:</i></dt>
+<dd> <font SIZE="-1">PI</font> blocks from an earlier database version.</dd>
+<dt><i>orange:</i></dt>
+<dd> expired <font SIZE="-1">PI</font> blocks from stream 1 or an earlier database version.</dd>
+<dt><i>cyan:</i></dt>
+<dd> expired <font SIZE="-1">PI</font> blocks from stream 2 and the current database version.</dd>
+<dt><i>yellow:</i></dt>
+<dd> invalid <font SIZE="-1">PI</font> blocks (overlapping or zero run-time, block number not in the range given in inventory, etc.)</dd>
+<dt><i>gray:</i></dt>
+<dd> missing <font SIZE="-1">PI</font> blocks. Note that the range can only be roughly estimated, as the time range a block covers is not known until the actual block is available.</dd>
+<dt><i>black:</i></dt>
+<dd> time range which is not covered by the provider.</dd></dl>
 <p> Programmes for which description texts are currently available are additionally marked by an increased height of the scale in the covered time range. For short-info the area is extended towards the top, for long-info towards the bottom (the distinction between short and long info is only related to the Nextview transmission specification and does not neccessarily relate to the length of the description texts; also note that for the merged database there&#8217;s no distinction between short and long info because all texts are concatenated into one.) </p>
 <p> In front of the scales there are 5 separate boxes, which refer to the first 5 programmes (<font SIZE="-1">PI</font> blocks) in the inventory (<font SIZE="-1">AI</font> block). They have two purposes: firstly, during acquisition you can see when the &#8216;Now&#8217; cycle phase is complete; secondly you can check if the data from the Now cycle is expired (marked orange). If all 5 are orange, it&#8217;s time to update the database.</p>
 <h2>Database statistics</h2>
 <p> There are two popup windows available from the Control menu which contain statistical information about the browser database and the acquisition database and progress. The window is horizontally divided in two parts: the upper part lists static information; the lower part lists dynamic info and is available only while acquisition is active. </p>
 <p> The acquisition statistics are updated every time a new <font SIZE="-1">AI</font> block (inventory which lists all covered networks and block counts per network; usually transmitted every 10 seconds) is received.</p>
 <dl>
-<dt><i>Last </i><font SIZE="-1"><i>AI</i></font><i> update:</i></p>
-<dd> The (local) time when the last inventory block was received. Since this block has to be transmitted on a regular basis it tells you when acquisition was active for this database.</p>
-<dt><i>Database version:</i></p>
-<dd> The version number is incremented by the provider every day or after content changes. A version change forces a complete reload of the database.</p>
-<dt><i>Blocks in </i><font SIZE="-1"><i>AI:</i></font><i></i></p>
-<dd> How many blocks are transmitted in total. This number is taken from the provider&#8217;s <font SIZE="-1">AI</font> block, i.e. the inventory. Additionally listed separately for stream 1 and 2 (swo).</p>
-<dt><i>Block count db:</i></p>
-<dd> How many blocks are in the local database. At maximum this can be the number of blocks given in the <font SIZE="-1">AI</font> block.</p>
-<dt><i>Current version:</i></p>
-<dd> How many blocks are in the local database and have the latest version.</p>
-<dt><i>Filled:</i></p>
-<dd> Percentage of blocks in the database in respect to the total given in the <font SIZE="-1">AI</font> block, i.e. &#8220;Block count db&#8221; divided by &#8220;Blocks in <font SIZE="-1">AI</font>&#8221;. The second percentage in the line only reflects blocks of the current version and hence the degree of completeness of acquisition.</p>
-<dt><i>Expired stream:</i></p>
-<dd> Number of programme blocks which have a stop time that&#8217;s in the past but are still registered in the provider&#8217;s inventory (<font SIZE="-1">AI</font>). When acquisition is stopped, this number can be large. During acquisition expired programmes are usually stripped by the provider with the start of every cycle, i.e. usually every 20-25 minutes. The percentage given here is in respect to the actual number of blocks in the local database (all versions), not the <font SIZE="-1">AI</font>.</p>
-<dt><i>Expired total:</i></p>
-<dd> Total number and percentage of expired blocks in the database. This value depends on the expire &#8220;cut-off time&#8221; configured by the user, i.e. on how long expired blocks are kept until they are removed from the database. Normally such blocks disappear from the programme list, but this can be changed with the expire time filter in the Filter menu (see also &#8220;<font SIZE="-1">FILTERING</font>&#8221;).</p>
-<dt><i>Defective blocks:</i></p>
-<dd> Number of blocks with invalid or overlapping start time. These blocks do not show up in the browser (as it would be impossible to handle if there is more than one &#8220;now&#8221; entry for a network). The percentage given here is in respect to the actual number of blocks in the local database (all versions), not the <font SIZE="-1">AI</font>.</dl>
+<dt><i>Last </i><font SIZE="-1"><i>AI</i></font><i> update:</i></dt>
+<dd> The (local) time when the last inventory block was received. Since this block has to be transmitted on a regular basis it tells you when acquisition was active for this database.</dd>
+<dt><i>Database version:</i></dt>
+<dd> The version number is incremented by the provider every day or after content changes. A version change forces a complete reload of the database.</dd>
+<dt><i>Blocks in </i><font SIZE="-1"><i>AI:</i></font><i></i></dt>
+<dd> How many blocks are transmitted in total. This number is taken from the provider&#8217;s <font SIZE="-1">AI</font> block, i.e. the inventory. Additionally listed separately for stream 1 and 2 (swo).</dd>
+<dt><i>Block count db:</i></dt>
+<dd> How many blocks are in the local database. At maximum this can be the number of blocks given in the <font SIZE="-1">AI</font> block.</dd>
+<dt><i>Current version:</i></dt>
+<dd> How many blocks are in the local database and have the latest version.</dd>
+<dt><i>Filled:</i></dt>
+<dd> Percentage of blocks in the database in respect to the total given in the <font SIZE="-1">AI</font> block, i.e. &#8220;Block count db&#8221; divided by &#8220;Blocks in <font SIZE="-1">AI</font>&#8221;. The second percentage in the line only reflects blocks of the current version and hence the degree of completeness of acquisition.</dd>
+<dt><i>Expired stream:</i></dt>
+<dd> Number of programme blocks which have a stop time that&#8217;s in the past but are still registered in the provider&#8217;s inventory (<font SIZE="-1">AI</font>). When acquisition is stopped, this number can be large. During acquisition expired programmes are usually stripped by the provider with the start of every cycle, i.e. usually every 20-25 minutes. The percentage given here is in respect to the actual number of blocks in the local database (all versions), not the <font SIZE="-1">AI</font>.</dd>
+<dt><i>Expired total:</i></dt>
+<dd> Total number and percentage of expired blocks in the database. This value depends on the expire &#8220;cut-off time&#8221; configured by the user, i.e. on how long expired blocks are kept until they are removed from the database. Normally such blocks disappear from the programme list, but this can be changed with the expire time filter in the Filter menu (see also &#8220;<font SIZE="-1">FILTERING</font>&#8221;).</dd>
+<dt><i>Defective blocks:</i></dt>
+<dd> Number of blocks with invalid or overlapping start time. These blocks do not show up in the browser (as it would be impossible to handle if there is more than one &#8220;now&#8221; entry for a network). The percentage given here is in respect to the actual number of blocks in the local database (all versions), not the <font SIZE="-1">AI</font>.</dd></dl>
 <p> The pie chart on the left on the window visualizes these numbers. The circle represents 100% of the blocks listed in <font SIZE="-1">AI</font>. It&#8217;s divided in stream 1 (red) and stream 2 (blue). The shaded segments represent the blocks that are still missing in the local database. The yellow segments the percentage of expired and/or defective blocks. </p>
 <p> When you interpret those values, please remember that blocks may be appended to the transmission cycle when programmes have expired (in a slight violation of the Nextview standard this is done even without changing the database version). So you might see from time to time that the fill percentages take a step back down during acquisition. Also note that expired <font SIZE="-1">PI</font> are not accessible from the user interface, however they are included in the database dump from the <i>Control</i> menu.</p>
 <h2>Acquisition statistics</h2>
 <dl>
-<dt><i>Acq. runtime:</i></p>
-<dd> How long the acquisition has been continuously running for this database. This timer is reset upon provider or database version changes or when an external channel change is detected.</p>
-<dt><i>Channel </i><font SIZE="-1"><i>VPS/PDC:</i></font><i></i></p>
-<dd> The <font SIZE="-1">VPS/PDC</font> code that has last been received on the currently tuned channel. Usually this will be the same as the provider <font SIZE="-1">CNI</font> given in the database statistics, but you might see different values here when you manually tune in a different channel with an external application. </p>
+<dt><i>Acq. runtime:</i></dt>
+<dd> How long the acquisition has been continuously running for this database. This timer is reset upon provider or database version changes or when an external channel change is detected.</dd>
+<dt><i>Channel </i><font SIZE="-1"><i>VPS/PDC:</i></font><i></i></dt>
+<dd> The <font SIZE="-1">VPS/PDC</font> code that has last been received on the currently tuned channel. Usually this will be the same as the provider <font SIZE="-1">CNI</font> given in the database statistics, but you might see different values here when you manually tune in a different channel with an external application. </dd>
 <p> If a valid <font SIZE="-1">VPS/PDC</font> code (Programme Identification Label, <font SIZE="-1">PIL</font>) was received together with the <font SIZE="-1">CNI</font> it is appended after the <font SIZE="-1">CNI</font> in decoded format (i.e. <font SIZE="-1">DD</font>.MM <font SIZE="-1">HH:MM</font> with day, month, hour and minute). Note: the <font SIZE="-1">VPS/PDC</font> codes are used to uniquely identify the current programme on a given network. You can display the codes for all programmes in the database (if you enable them in &#8220;<font SIZE="-1">CONFIGURATION:</font> Select attributes&#8221;) or pass them to external applications (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Context menu configuration&#8221;)</p>
-<dt><i></i><font SIZE="-1"><i>TTX</i></font><i> data rate:</i></p>
-<dd> The rate at which teletext data lines are received on the current channel in baud, i.e. bits per second. Each teletext line counts as 45 bytes.</p>
-<dt><i></i><font SIZE="-1"><i>EPG</i></font><i> data rate:</i></p>
-<dd> Same as <font SIZE="-1">TTX</font> data rate, however only teletext lines that belong to the page which transmits Nextview are counted.</p>
-<dt><i></i><font SIZE="-1"><i>EPG</i></font><i> page rate:</i></p>
-<dd> The per second average of received teletext pages with carry Nextview data. Many provider transmit one page per second during the day and up to 1.5 or 2 pages per second during the night.</p>
-<dt><i></i><font SIZE="-1"><i>AI</i></font><i> recv. count:</i></p>
-<dd> The number of <font SIZE="-1">AI</font> blocks received since acquisition start. As long as this counter remains at zero, no data is added to the database (because the <font SIZE="-1">AI</font> block is mandatory to identify the provider.)</p>
-<dt><i></i><font SIZE="-1"><i>AI</i></font><i> min/avg/max:</i></p>
-<dd> The minimum, average and maximum distance between reception of <font SIZE="-1">AI</font> blocks. The average should usually be 10 seconds. The maximum should not be much higher or else an <font SIZE="-1">EPG</font> scan might have a hard time finding this provider; also the acquisition start-up time would be higher because at first an <font SIZE="-1">AI</font> block must be awaited.</p>
-<dt><i></i><font SIZE="-1"><i>PI</i></font><i> rx repetition:</i></p>
-<dd> The average of the number of times each block in the <font SIZE="-1">AI</font> was received since start of the acquisition. Divided in Now, stream 1 and stream 2. This value is used by acquisition control in the termination criterium for acquisition phases, if the acquisition mode is cyclic.</p>
-<dt><i>Decoder quality:</i></p>
-<dd> Reception and loss statistics: Count of received <font SIZE="-1">EPG</font> teletext pages and count of complete <font SIZE="-1">EPG</font> pages missing in the sequence. Count of received teletext packets (usually 23 per page) and missing packets. Note: page and packet loss is usually caused by decoding errors in packet and page headers (which carry a 50% redundancy so this is a strong indication of weak signal quality) or when a <font SIZE="-1">TV</font> application running in parallel interferes with capture configuration (i.e. when not all required lines in <font SIZE="-1">VBI</font> can be received) </p>
+<dt><i></i><font SIZE="-1"><i>TTX</i></font><i> data rate:</i></dt>
+<dd> The rate at which teletext data lines are received on the current channel in baud, i.e. bits per second. Each teletext line counts as 45 bytes.</dd>
+<dt><i></i><font SIZE="-1"><i>EPG</i></font><i> data rate:</i></dt>
+<dd> Same as <font SIZE="-1">TTX</font> data rate, however only teletext lines that belong to the page which transmits Nextview are counted.</dd>
+<dt><i></i><font SIZE="-1"><i>EPG</i></font><i> page rate:</i></dt>
+<dd> The per second average of received teletext pages with carry Nextview data. Many provider transmit one page per second during the day and up to 1.5 or 2 pages per second during the night.</dd>
+<dt><i></i><font SIZE="-1"><i>AI</i></font><i> recv. count:</i></dt>
+<dd> The number of <font SIZE="-1">AI</font> blocks received since acquisition start. As long as this counter remains at zero, no data is added to the database (because the <font SIZE="-1">AI</font> block is mandatory to identify the provider.)</dd>
+<dt><i></i><font SIZE="-1"><i>AI</i></font><i> min/avg/max:</i></dt>
+<dd> The minimum, average and maximum distance between reception of <font SIZE="-1">AI</font> blocks. The average should usually be 10 seconds. The maximum should not be much higher or else an <font SIZE="-1">EPG</font> scan might have a hard time finding this provider; also the acquisition start-up time would be higher because at first an <font SIZE="-1">AI</font> block must be awaited.</dd>
+<dt><i></i><font SIZE="-1"><i>PI</i></font><i> rx repetition:</i></dt>
+<dd> The average of the number of times each block in the <font SIZE="-1">AI</font> was received since start of the acquisition. Divided in Now, stream 1 and stream 2. This value is used by acquisition control in the termination criterium for acquisition phases, if the acquisition mode is cyclic.</dd>
+<dt><i>Decoder quality:</i></dt>
+<dd> Reception and loss statistics: Count of received <font SIZE="-1">EPG</font> teletext pages and count of complete <font SIZE="-1">EPG</font> pages missing in the sequence. Count of received teletext packets (usually 23 per page) and missing packets. Note: page and packet loss is usually caused by decoding errors in packet and page headers (which carry a 50% redundancy so this is a strong indication of weak signal quality) or when a <font SIZE="-1">TV</font> application running in parallel interferes with capture configuration (i.e. when not all required lines in <font SIZE="-1">VBI</font> can be received) </dd>
 <p> Next is the number of received and dropped blocks. Blocks are usually assembled from data received in several teletext packets and have to be dropped if packets or pages inbetween are missing. Blocks may also be dropped due to decoding or check-sum errors (above note regarding these errors applies here too) </p>
 <p> The final line lists the number of decoded text characters (e.g. programme titles and descriptions) and how many decoding errors were detected. Forward error protection used for text is pretty weak, so you may see errors here even with relatively good signal quality. With bad signal quality the actual error rate might be higher then displayed, since the protection cannot detect double-bit errors.</p>
-<dt><i>Acq mode:</i></p>
-<dd> The current acquisition mode as configured by the user, or forced passive if nxtvepg failed to switch the channel.</p>
-<dt><i>Network variance:</i></p>
-<dd> The variance of block coverage across all networks. This value is used by acquisition control in the termination criterium for acquisition phases, if the acquisition mode is cyclic. It&#8217;s calculated by separately counting the number of blocks in the database for each network; then for each network calculating the percentage of available blocks in regard to expected blocks; then calculating the average and finally variance of these percentages.</dl>
+<dt><i>Acq mode:</i></dt>
+<dd> The current acquisition mode as configured by the user, or forced passive if nxtvepg failed to switch the channel.</dd>
+<dt><i>Network variance:</i></dt>
+<dd> The variance of block coverage across all networks. This value is used by acquisition control in the termination criterium for acquisition phases, if the acquisition mode is cyclic. It&#8217;s calculated by separately counting the number of blocks in the database for each network; then for each network calculating the percentage of available blocks in regard to expected blocks; then calculating the average and finally variance of these percentages.</dd></dl>
 <p> The diagram at the left displays a history of fill percentages for stream 1 and 2; the meaning of the colors is the same as in the timescale windows.</p>
 <h2>MERGED DATABASES</h2>
 <p> If you compare databases of different Nextview providers, you will often find that each has one or more nice features, or covers networks, that the others lack. Instead of changing back and forth between several providers all the time, database merging allows to select and combine features or networks from several original databases into one newly created database. </p>
@@ -304,51 +304,51 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 <h2>Filter Types</h2>
 <p> The following filter types are available:</p>
 <dl>
-<dt><code>Theme categories</code></p>
-<dd> Restrict the listing to programmes that have any of the given theme categories attached to them (logical <font SIZE="-1">OR</font>). The Nextview standard contains a list of 76 predefined themes, which are structured into 11 main categories and subcategories. A programme can have up to 7 theme descriptors attached. </p>
+<dt><code>Theme categories</code></dt>
+<dd> Restrict the listing to programmes that have any of the given theme categories attached to them (logical <font SIZE="-1">OR</font>). The Nextview standard contains a list of 76 predefined themes, which are structured into 11 main categories and subcategories. A programme can have up to 7 theme descriptors attached. </dd>
 <p> If you want to restrict the listing to programmes that have more than one of the given themes (logical <font SIZE="-1">AND</font>) you need to specify them in different theme classes. For example: to get a listing of all programmes which are both Sci-Fi and Comedy, select theme category Sci-Fi, then switch to a different theme class, and select theme category Comedy. The actual class numbers do not matter, you just need to use two different ones (i.e. you can use either #1 and #2 or #5 and #6 etc.)</p>
-<dt><code>Series</code></p>
-<dd> Restrict the listing to programmes that belong to any of the selected series. A series code always implies a network specification (even if the same programme is transmitted on different networks). </p>
+<dt><code>Series</code></dt>
+<dd> Restrict the listing to programmes that belong to any of the selected series. A series code always implies a network specification (even if the same programme is transmitted on different networks). </dd>
 <p> Note: This filter type is only available for providers that assign series codes; also not all series may have a code assigned. For other ones you can use text search among programme titles. </p>
 <p> When series and theme or likewise series and text searches are combined, programmes which match either of both filter types are listed. This is an exception from the general rule of combining different filters with a logical <font SIZE="-1">AND</font>.</p>
-<dt><code>Networks</code></p>
-<dd> Restrict the listing to programmes of one or more given networks. The filter is disabled when all checkbuttons are deactivated. </p>
+<dt><code>Networks</code></dt>
+<dd> Restrict the listing to programmes of one or more given networks. The filter is disabled when all checkbuttons are deactivated. </dd>
 <p> You can also add a network filter listbox to the main window by enabling one of the <i>Show networks</i> checkbuttons in the <i>Show/Hide</i> sub-menu of the Configuration menu (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Show/Hide&#8221;). Also note that selection, order and names of networks are all configurable, in particular you can permanently suppress uninteresting networks from the list.</p>
-<dt><code>Text search</code></p>
-<dd> Restrict the listing to programmes who&#8217;s title or description (or either if both options are enabled) contain one of the given character sequences. If you enable the <i>match complete text</i> option, an exact match will be required, i.e. a search for &#8220;heute&#8221; will not match on &#8220;heute journal&#8221; (intended for title-only searches, as started from the context menu). If you enable option <i>match case</i>, character case is relevant, i.e. a search for &#8220;heute&#8221; will not match on &#8220;Heute Abend&#8221;. </p>
+<dt><code>Text search</code></dt>
+<dd> Restrict the listing to programmes who&#8217;s title or description (or either if both options are enabled) contain one of the given character sequences. If you enable the <i>match complete text</i> option, an exact match will be required, i.e. a search for &#8220;heute&#8221; will not match on &#8220;heute journal&#8221; (intended for title-only searches, as started from the context menu). If you enable option <i>match case</i>, character case is relevant, i.e. a search for &#8220;heute&#8221; will not match on &#8220;Heute Abend&#8221;. </dd>
 <p> You can search for more than one text at the same time; you&#8217;ll get all programmes that contain any of the given texts (logical <font SIZE="-1">OR</font>). The listbox above the text entry field lists all currently active texts. You can double click on the options in the list to toggle them between &#8220;yes&#8221; and &#8220;no&#8221; (i.e. option enabled or disabled). The entries also have small context menus which allow to remove single texts or toggle options. </p>
 <p> Press <i>Click here to open&#8230;</i> to open a small dialog which allows to swiftly add a large list of texts (e.g. a list of your favorite movie titles.) You can paste text for example from a text editor into the dialog or load them directly from a file. Each line in the text fields will be added as a separate search when you press <font SIZE="-1">OK</font> and all new entries will have the same options. Blanks at the beginning or end of lines are automatically removed and lines starting with # are skipped when loading from a file. </p>
 <p> A history of the last 50 searches (manually entered ones only) including options, are stored and available in the drop-down menu below the search text entry field (opened with the arrow button at the left or one of the up/down cursor keys) and the last 10 searches are also available in the <i>Title</i> column header menu in the programme list (the latter in &#8220;single list&#8221; layout only). </p>
 <p> Note: use of this search filter type is depreciated for permanent series searches saved in shortcuts if your provider supports series identifiers (see above). In this case should use those instead because the numerical identifiers have a better protection against transmission errors. A text search can fail due to a single erronous character.</p>
-<dt><code>Features</code></p>
-<dd> Restrict the listing to programmes that match all given attributes (logical <font SIZE="-1">AND</font>), i.e. sound format, picture format, analog/digital, encrypted yes/no, live/new/repeat and subtitles yes/no. </p>
+<dt><code>Features</code></dt>
+<dd> Restrict the listing to programmes that match all given attributes (logical <font SIZE="-1">AND</font>), i.e. sound format, picture format, analog/digital, encrypted yes/no, live/new/repeat and subtitles yes/no. </dd>
 <p> If you want to allow more than one value of the same attribute (e.g. picture format wide <font SIZE="-1">OR</font> Pal+) you have to put them into different feature classes (e.g. first select format wide, then set filter class to 2, then select format <font SIZE="-1">PAL+</font>)</p>
-<dt><code>Parental Rating</code></p>
-<dd> Restrict the listing to programmes that are suitable for children of the given age or elder, e.g. when you select 14, you get all programmes that are recommended for chilren of age 0 to 14. </p>
+<dt><code>Parental Rating</code></dt>
+<dd> Restrict the listing to programmes that are suitable for children of the given age or elder, e.g. when you select 14, you get all programmes that are recommended for chilren of age 0 to 14. </dd>
 <p> Note you can use inverse searches (see below) to find programmes which are recommended only for children above a certain age. For example, if you invert a parental search with age 14, you&#8217;ll get all programmes that are recommended for children of age 16 or older.</p>
-<dt><code>Editorial Rating</code></p>
-<dd> Restrict the listing to programmes that are rated (by the content provider) to have at least the given quality. The range of rating values is 1 to 7. </p>
+<dt><code>Editorial Rating</code></dt>
+<dd> Restrict the listing to programmes that are rated (by the content provider) to have at least the given quality. The range of rating values is 1 to 7. </dd>
 <p> Note that some providers do not use all values, e.g. only 1, 3, 5 (thumb down, middle, thumb up.) For that reason only the first provider&#8217;s ratings are used when merging databases (see also &#8220;<font SIZE="-1">MERGED</font> <font SIZE="-1">DATABASES</font>&#8221;)</p>
-<dt><code>Start time</code></p>
-<dd> Restrict the listing to programmes whose start time lies in the interval and whose start falls onto the given date or weekday. </p>
+<dt><code>Start time</code></dt>
+<dd> Restrict the listing to programmes whose start time lies in the interval and whose start falls onto the given date or weekday. </dd>
 <p> Following options are available: If you enable <i>Start at current time</i> the interval start is fixed to the actual time when the filter is set and the value given as stop time is interpreted as duration, i.e. it&#8217;s added to the interval start. If you enable <i>Stop at end of day</i> the interval end is fixed to 23:59 of the same day. </p>
 <p> For the date you can chose between the following modes: <i>Ignore date</i>: the filter allows programmes that start on any day (in the time window given above). <i>Relative date</i>: allow only programmes that start N days from today, i.e. for zero: today, for 1: tomorrow etc. <i>Weekday</i>: allow programmes starting at the given day of the week (the scale runs from Saturday until Friday.) <i>Day of month</i>: allow only programmes starting the Nth day of any month (the scale runs from 1 to 31.) </p>
 <p> Note that the main intention of this filter is to support time restrictions in the provider&#8217;s navigation menus (see &#8220;<font SIZE="-1">NAVIGATE</font>&#8221;) or shortcuts. For manual navigation there are more practical alternatives, e.g. the weekday scale and drop-down menus in the main browser window above the time and date columns (not available in grid layout.)</p>
-<dt><code>Program index</code></p>
-<dd> Restrict the listing to programmes who&#8217;s index is in the given range. The currently running programme of each network is given index zero, the following programme of each network index one etc. The three most important combinations are available as radio buttons: <i>now</i> (range 0-0), <i>next</i> (range 1-1) and <i>now or next</i> (range 0-1). </p>
+<dt><code>Program index</code></dt>
+<dd> Restrict the listing to programmes who&#8217;s index is in the given range. The currently running programme of each network is given index zero, the following programme of each network index one etc. The three most important combinations are available as radio buttons: <i>now</i> (range 0-0), <i>next</i> (range 1-1) and <i>now or next</i> (range 0-1). </dd>
 <p> For merged databases only indices 0 and 1 are supported.</p>
-<dt><code>Duration</code></p>
-<dd> Restrict the listing to programmes whose duration (i.e. difference between start and stop time) lies in the given range. When the maxium is set to zero, the filter is switched off. </p>
+<dt><code>Duration</code></dt>
+<dd> Restrict the listing to programmes whose duration (i.e. difference between start and stop time) lies in the given range. When the maxium is set to zero, the filter is switched off. </dd>
 <p> You can specify the time values either by use of the scales or by entering a value in the format <font SIZE="-1">MM:HH</font> into the text fields and pressing the Return key.</p>
-<dt><code>Expired Programmes Display</code></p>
-<dd> Unlike all other filter options this one is used to <i>enlarge</i> the set of matching programmes. It allows to include expired programmes (i.e. those with a stop time in the past) into the list; they will be marked with a yellow background (you can change that color, see <tt>&quot;.Xdefaults&quot;</tt> and <tt>&quot;nxtvepg.ad&quot;</tt> in &#8220;<font SIZE="-1">FILES</font>&#8221;.) With the sliders you can set how many days plus hours to shift the expire time threshold. By default the threshold is zero so that expired programmes immediately disappear from the list. </p>
+<dt><code>Expired Programmes Display</code></dt>
+<dd> Unlike all other filter options this one is used to <i>enlarge</i> the set of matching programmes. It allows to include expired programmes (i.e. those with a stop time in the past) into the list; they will be marked with a yellow background (you can change that color, see <tt>&quot;.Xdefaults&quot;</tt> and <tt>&quot;nxtvepg.ad&quot;</tt> in &#8220;<font SIZE="-1">FILES</font>&#8221;.) With the sliders you can set how many days plus hours to shift the expire time threshold. By default the threshold is zero so that expired programmes immediately disappear from the list. </dd>
 <p> Note you cannot add more programmes than are stored in the database; usually programmes are removed after 4 hours. There&#8217;s a second tab called <i>Configure</i> in the dialog which allows to change the delay after which expired programmes are automatically removed. Press the <i>Update</i> button to set the new value. If it&#8217;s lower than before, programmes will immediately be removed from the database; this operation cannot be undone (unless the progammes are still registered in the provider inventory, which may be the case if you haven&#8217;t updated the database in a long time. In this case you may get a confusing warning that programmes are about to be removed although they won&#8217;t.)</p>
-<dt><code>Sorting Criteria</code></p>
-<dd> Restrict the listing to programmes that have any of the given sorting criteria attached to them; every programme can have 0..7 sorting criteria attached to it. They work very much like theme descriptors however their meaning is not predefined by the Nextview standard. The content provider can use arbitrary numbers to represent an attribute. Attributes usually are themes that are not in the predefined catalog, e.g. current events like the Olympic Games, but could also be not content related at all. The meaning of these numbers is usually defined by the provider&#8217;s navigation menus (see &#8220;<font SIZE="-1">NAVIGATE</font>&#8221;). </p>
+<dt><code>Sorting Criteria</code></dt>
+<dd> Restrict the listing to programmes that have any of the given sorting criteria attached to them; every programme can have 0..7 sorting criteria attached to it. They work very much like theme descriptors however their meaning is not predefined by the Nextview standard. The content provider can use arbitrary numbers to represent an attribute. Attributes usually are themes that are not in the predefined catalog, e.g. current events like the Olympic Games, but could also be not content related at all. The meaning of these numbers is usually defined by the provider&#8217;s navigation menus (see &#8220;<font SIZE="-1">NAVIGATE</font>&#8221;). </dd>
 <p> Equivalently to themes, you can assign sorting criteria in different <i>classes</i> to implement a logical <font SIZE="-1">AND</font>, i.e. only programmes that have at least one of the sorting criteria specified in every used class will match. Example: to get all programmes that have 0x01 attached plus either 0x10 or 0x11, specify sorting criterion 0x01 in class #1 and 0x10 and 0x11 in class #2. Note that the dialog displays all values in hexadecimal format, i.e. with digits 0-9 followed by a-f. </p>
 <p> The <i>Load all used</i> button in the sorting criteria filter dialog fills the selection listbox with a list of all codes that are actually used in the current database. This allows a quick overview which filter criteria will produce any matches.</p>
-<dt><font SIZE="-1"><code>VPS/PDC</code></font></p>
-<dd> Restrict the listing to programmes that have a valid <font SIZE="-1">VPS/PDC</font> start time label attached (<font SIZE="-1">VPS/PDC</font> allow to start a video recording at the exact time a programme starts even when delayed; the labels are broadcasted currently in Germany, Austria, Switzerland and England). Additionally you can filter for programmes with a label which differs from the actual start time; these are usually programmes whose start time changed or which were scheduled later (usually the <font SIZE="-1">VPS/PDC</font> label then is the actual start time minus one minute)</dl>
+<dt><font SIZE="-1"><code>VPS/PDC</code></font></dt>
+<dd> Restrict the listing to programmes that have a valid <font SIZE="-1">VPS/PDC</font> start time label attached (<font SIZE="-1">VPS/PDC</font> allow to start a video recording at the exact time a programme starts even when delayed; the labels are broadcasted currently in Germany, Austria, Switzerland and England). Additionally you can filter for programmes with a label which differs from the actual start time; these are usually programmes whose start time changed or which were scheduled later (usually the <font SIZE="-1">VPS/PDC</font> label then is the actual start time minus one minute)</dd></dl>
 <p> Note that the interpretation of two filter types depends on the provider: sorting criterion and series. That&#8217;s because those are just arbitrary numbers which only have a meaning in the context of the provider&#8217;s navigation menu. </p>
 <p> <i>Hint:</i> the filter menu can also be used to examine the filter options that are invoked by the entries in the Navigate menu.</p>
 <h2>Inverting filters</h2>
@@ -423,15 +423,15 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 <p> A quick way to select and deselect filters is by using the context menu, which opens when clicking with the right mouse button onto a programme entry in the main browser window. </p>
 <p> This menu consists of several parts, separated by horizontal lines, which depend on the currently selected programme and hence are not always present.</p>
 <dl>
-<dt><code>Undo currently selected filters</code></p>
-<dd> The first section holds entries which allow disable currently selected filters either one by one or globally (reset). See also &#8220;<font SIZE="-1">FILTERING:</font> Filter Types&#8221;</p>
-<dt><code>Add new filters</code></p>
-<dd> The second section offers a number of possible new filter options, which depend on the currently selected title and the already selected filters. The offered filter types include: themes and network of the selected programme title, it&#8217;s series code, repeat or original transmission suppression (only in cunjunction with series or title text filters) and last but not least the title text. </p>
+<dt><code>Undo currently selected filters</code></dt>
+<dd> The first section holds entries which allow disable currently selected filters either one by one or globally (reset). See also &#8220;<font SIZE="-1">FILTERING:</font> Filter Types&#8221;</dd>
+<dt><code>Add new filters</code></dt>
+<dd> The second section offers a number of possible new filter options, which depend on the currently selected title and the already selected filters. The offered filter types include: themes and network of the selected programme title, it&#8217;s series code, repeat or original transmission suppression (only in cunjunction with series or title text filters) and last but not least the title text. </dd>
 <p> The title text and series filters allow to check very quickly for repeats of a programme. These filter options are included only if there is a match, i.e. if there&#8217;s another programme with the same title or series code respectively.</p>
-<dt><code>Add reminder</code></p>
-<dd> This menu entry will add a reminder for the currently selected programme. The reminder will have the default reminder group. To create reminders in different groups use <i>Add reminder into group</i> in the reminder main menu (see also &#8220;<font SIZE="-1">REMINDERS</font>&#8221;)</p>
-<dt><code>User-defined entries</code></p>
-<dd> The optional fourth section is empty by default, but can be used to invoke user-defined external commands on the selected programme. More precisely, you can execute any command with properties of the selected programme (like title or start time) on its command line. The user commands can be added via the Configure menu (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Context menu configuration&#8221;).</dl>
+<dt><code>Add reminder</code></dt>
+<dd> This menu entry will add a reminder for the currently selected programme. The reminder will have the default reminder group. To create reminders in different groups use <i>Add reminder into group</i> in the reminder main menu (see also &#8220;<font SIZE="-1">REMINDERS</font>&#8221;)</dd>
+<dt><code>User-defined entries</code></dt>
+<dd> The optional fourth section is empty by default, but can be used to invoke user-defined external commands on the selected programme. More precisely, you can execute any command with properties of the selected programme (like title or start time) on its command line. The user commands can be added via the Configure menu (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Context menu configuration&#8221;).</dd></dl>
 <h2>CONTROL</h2>
 <p> Summary of commands available from the Control menu:</p>
 <h2>Enable acquisition</h2>
@@ -516,14 +516,14 @@ CREATE TABLE PI(
 <h2>View statistics/timescales</h2>
 <p> The following four commands are used to open windows with statistics about the databases and acquisition progress. See &#8220;<font SIZE="-1">STATISTICS</font>&#8221; for details.</p>
 <dl>
-<dt><code>View timescales</code></p>
-<dd> Toggles the timescale window for the browser database. The window reflects for each network included in the selected database, which time ranges are covered by programme information. If acquisition is working on the database, you can watch how more and more of the scales get covered. See also &#8220;<font SIZE="-1">STATISTICS:</font> Status line&#8221;</p>
-<dt><code>View statistics</code></p>
-<dd> Toggles the browser database statistics window, which informs you about number of program entries in the database, fill percentage, expiration percentage, date of last update etc. If the acquisition is working on the same database, it also contains information about state and progress of acquisition. See also &#8220;<font SIZE="-1">STATISTICS:</font> Timescale popup windows&#8221;.</p>
-<dt><code>View acq timescales</code></p>
-<dd> Toggles the timescale window for the acquisition database. This entry is only available if the acquisition uses a different database than the browser (e.g. when using a manual or cyclic acquisition mode, see &#8220;<font SIZE="-1">DATA</font> <font SIZE="-1">ACQUISITION</font>&#8221;)</p>
-<dt><code>View acq statistics</code></p>
-<dd> Toggles the acquisition statistics window, which informs you about state and progress of acquisition. If the acquisition control mechanism switches to a different database, the acq statistics window will automatically follow.</dl>
+<dt><code>View timescales</code></dt>
+<dd> Toggles the timescale window for the browser database. The window reflects for each network included in the selected database, which time ranges are covered by programme information. If acquisition is working on the database, you can watch how more and more of the scales get covered. See also &#8220;<font SIZE="-1">STATISTICS:</font> Status line&#8221;</dd>
+<dt><code>View statistics</code></dt>
+<dd> Toggles the browser database statistics window, which informs you about number of program entries in the database, fill percentage, expiration percentage, date of last update etc. If the acquisition is working on the same database, it also contains information about state and progress of acquisition. See also &#8220;<font SIZE="-1">STATISTICS:</font> Timescale popup windows&#8221;.</dd>
+<dt><code>View acq timescales</code></dt>
+<dd> Toggles the timescale window for the acquisition database. This entry is only available if the acquisition uses a different database than the browser (e.g. when using a manual or cyclic acquisition mode, see &#8220;<font SIZE="-1">DATA</font> <font SIZE="-1">ACQUISITION</font>&#8221;)</dd>
+<dt><code>View acq statistics</code></dt>
+<dd> Toggles the acquisition statistics window, which informs you about state and progress of acquisition. If the acquisition control mechanism switches to a different database, the acq statistics window will automatically follow.</dd></dl>
 <h2>Quit</h2>
 <p> Close all windows and terminate the application. If you have started acquisition as a daemon, it will not be terminated (see &#8220;<font SIZE="-1">CONTROL:</font> Connect to acq. daemon&#8221;).</p>
 <h2>CONFIGURATION</h2>
@@ -567,42 +567,42 @@ CREATE TABLE PI(
 <p> Opens a dialog that allows to configure the connection between browser and an acquisition daemon (i.e. a separate instance of nxtvepg which is running in server mode, see <i>-daemon</i> command line switch in &#8220;<font SIZE="-1">OPTIONS</font>&#8221;) The daemon allows to forward all newly acquired <font SIZE="-1">EPG</font> data to one or more connected browsers and to monitor the it&#8217;s acquisition progress. </p>
 <p> The dialog contains settings of which some refer to the server-side only, some to the client-side only and some to both server and client. To avoid confusion, there are three radio buttons at the top of the dialog which allow to grey out items that do not refer to the client or server respectively. Note: for server configuration changes to take effect, the daemon must be restarted. If it&#8217;s running locally, you can do this via the Control menu (see &#8220;<font SIZE="-1">CONTROL:</font> Connect to acq. daemon&#8221;)</p>
 <dl>
-<dt><i>Enable remote control</i></p>
-<dd> Note: this feature is not yet implemented. By enabling remote-control you can stop acquisition, change acquisition mode, <font SIZE="-1">TV</font> card parameters or any parameters configured by this dialog in a running daemon via the network connection.</p>
-<dt><i>Enable </i><font SIZE="-1"><i>TCP/IP</i></font><i></i></p>
-<dd> By enabling connections via the <font SIZE="-1">TCP/IP</font> network protocol, you allow connections from remote hosts. Since there&#8217;s currently no access control in nxtvepg, these hosts can be anywhere in your network, or anywhere in the world if you&#8217;re connected to the Internet. If you don&#8217;t have a firewall which prevents incoming connections of untrusted hosts, this mode is highly depreciated, because nxtvepg is not in any way secured against malicious client connections. </p>
+<dt><i>Enable remote control</i></dt>
+<dd> Note: this feature is not yet implemented. By enabling remote-control you can stop acquisition, change acquisition mode, <font SIZE="-1">TV</font> card parameters or any parameters configured by this dialog in a running daemon via the network connection.</dd>
+<dt><i>Enable </i><font SIZE="-1"><i>TCP/IP</i></font><i></i></dt>
+<dd> By enabling connections via the <font SIZE="-1">TCP/IP</font> network protocol, you allow connections from remote hosts. Since there&#8217;s currently no access control in nxtvepg, these hosts can be anywhere in your network, or anywhere in the world if you&#8217;re connected to the Internet. If you don&#8217;t have a firewall which prevents incoming connections of untrusted hosts, this mode is highly depreciated, because nxtvepg is not in any way secured against malicious client connections. </dd>
 <p> Note: on Windows currently only <font SIZE="-1">TCP/IP</font> is supported, i.e. you have to enable this option if you want to start the daemon.</p>
-<dt><i>Server hostname</i></p>
-<dd> Client-side only: this setting identifies the host on which the daemon is running. You can enter either a hostname in &#8220;dot.com&#8221; format or an <font SIZE="-1">IP</font> address in &#8220;127.0.0.1&#8221; format. If you set it to <i>localhost</i> the connection is automatically established via <font SIZE="-1">UNIX</font> domain sockets (i.e. pipes), which is more efficient than <font SIZE="-1">TCP/IP</font>. You can still use <font SIZE="-1">TCP/IP</font> locally if you set it to the name of your local host, as returned by <i><a href="/docs/linux/man/1-hostname/">hostname</a></i>(1).</p>
-<dt><i>Server </i><font SIZE="-1"><i>TCP</i></font><i> port</i></p>
-<dd> If <font SIZE="-1">TCP/IP</font> is enabled, this setting tells server and client which port to use. You can enter an arbitrary number between 1024 and 65535 here, but you have to make sure no other server is using the same port. Make sure you configure the same port number for client and server. The default is 7658.</p>
-<dt><i>Bind </i><font SIZE="-1"><i>IP</i></font><i> address</i></p>
-<dd> If <font SIZE="-1">TCP/IP</font> is enabled and your server host has more than one <font SIZE="-1">IP</font> address, you can select here on which one to listen for incoming connections. Make sure you use the same <font SIZE="-1">IP</font> address as server hostname on client-side, or a hostname that resolves to that <font SIZE="-1">IP</font> address. This setting is optional; if you leave the field blank (default) the server will bind to all <font SIZE="-1">IP</font> addresses. </p>
+<dt><i>Server hostname</i></dt>
+<dd> Client-side only: this setting identifies the host on which the daemon is running. You can enter either a hostname in &#8220;dot.com&#8221; format or an <font SIZE="-1">IP</font> address in &#8220;127.0.0.1&#8221; format. If you set it to <i>localhost</i> the connection is automatically established via <font SIZE="-1">UNIX</font> domain sockets (i.e. pipes), which is more efficient than <font SIZE="-1">TCP/IP</font>. You can still use <font SIZE="-1">TCP/IP</font> locally if you set it to the name of your local host, as returned by <i><a href="/docs/linux/man/1-hostname/">hostname</a></i>(1).</dd>
+<dt><i>Server </i><font SIZE="-1"><i>TCP</i></font><i> port</i></dt>
+<dd> If <font SIZE="-1">TCP/IP</font> is enabled, this setting tells server and client which port to use. You can enter an arbitrary number between 1024 and 65535 here, but you have to make sure no other server is using the same port. Make sure you configure the same port number for client and server. The default is 7658.</dd>
+<dt><i>Bind </i><font SIZE="-1"><i>IP</i></font><i> address</i></dt>
+<dd> If <font SIZE="-1">TCP/IP</font> is enabled and your server host has more than one <font SIZE="-1">IP</font> address, you can select here on which one to listen for incoming connections. Make sure you use the same <font SIZE="-1">IP</font> address as server hostname on client-side, or a hostname that resolves to that <font SIZE="-1">IP</font> address. This setting is optional; if you leave the field blank (default) the server will bind to all <font SIZE="-1">IP</font> addresses. </dd>
 <p> Note: on systems that support it, <font SIZE="-1">TCP/IP</font> sockets are created in the IPv6 domain (<i></i><font SIZE="-1"><i>PF_INET6</i></font><i></i>) by default. On some systems (e.g. NetBSD) you cannot connect via IPv4 to an IPv6 server and vice versa, i.e. you need to use the same domain on both ends. If your client only supports IPv4, you can force your server to create an IPv4 socket by binding to an IPv4 address. If you fail to connect to a local IPv6 server via the IPv4 loopback address 127.0.0.1, use the IPv6 equivalent &#8220;::1&#8221;.</p>
-<dt><i>Max. connections</i></p>
-<dd> This setting limits the number of client connections the server will allow. Once the limit is reached the server will reject further connection attempts.</p>
-<dt><i>Log filename</i></p>
-<dd> If you enable log generation by the following option, you can choose here where the log will go. Make sure the file is writable to the uid under which the daemon process is running. The file opened and closed for each appended log line (usually there&#8217;s very low traffic into that file) so you can operate on it (e.g. truncate it) without restarting the daemon.</p>
-<dt><i>File min. log level</i></p>
-<dd> Here you can choose if log information should be written to a file. If you run nxtvepg with <font SIZE="-1">TCP/IP</font> disabled, you don&#8217;t need to use logging; but if you allow remote connections you should keep log files at &#8220;info&#8221; level to be able to check which hosts connect to your server. </p>
+<dt><i>Max. connections</i></dt>
+<dd> This setting limits the number of client connections the server will allow. Once the limit is reached the server will reject further connection attempts.</dd>
+<dt><i>Log filename</i></dt>
+<dd> If you enable log generation by the following option, you can choose here where the log will go. Make sure the file is writable to the uid under which the daemon process is running. The file opened and closed for each appended log line (usually there&#8217;s very low traffic into that file) so you can operate on it (e.g. truncate it) without restarting the daemon.</dd>
+<dt><i>File min. log level</i></dt>
+<dd> Here you can choose if log information should be written to a file. If you run nxtvepg with <font SIZE="-1">TCP/IP</font> disabled, you don&#8217;t need to use logging; but if you allow remote connections you should keep log files at &#8220;info&#8221; level to be able to check which hosts connect to your server. </dd>
 <p> The following settings are available: &#8220;no logging&#8221; disables logging; &#8220;error&#8221; enables logging of internal errors that lead to an immediate exit of the daemon; &#8220;warning&#8221; additionally enables logging of unexpected events, i.e. internal errors which do not lead to exit; &#8220;notice&#8221; additionally enables logging of server status changes, i.e. startup and shutdown; &#8220;info&#8221; additionally enables logging of connection establishment or shutdown.</p>
-<dt><i>Syslog min. level</i></p>
-<dd> Here you can enable or disable logging to <font SIZE="-1">UNIX</font> syslog and Windows application event logging (application name is <i>nxtvepg daemon</i>; this feature is not supported by Windows 95). See <font SIZE="-1">UNIX</font> man pages <i>syslogd(8)</i> and <i>syslog.conf(5)</i> or the Windows event log help for details about the syslog facility. The log levels you can choose here are the same as described in the previous paragraph for logging to files.</dl>
+<dt><i>Syslog min. level</i></dt>
+<dd> Here you can enable or disable logging to <font SIZE="-1">UNIX</font> syslog and Windows application event logging (application name is <i>nxtvepg daemon</i>; this feature is not supported by Windows 95). See <font SIZE="-1">UNIX</font> man pages <i>syslogd(8)</i> and <i>syslog.conf(5)</i> or the Windows event log help for details about the syslog facility. The log levels you can choose here are the same as described in the previous paragraph for logging to files.</dd></dl>
 <p> Note that while network mode is enabled configuration of acquisition mode and <font SIZE="-1">TV</font> card input has no effect and no <font SIZE="-1">EPG</font> scan is possible. If you use the same rc/ini file for daemon and <font SIZE="-1">GUI</font> the changed settings will however be used by the daemon upon the next start.</p>
 <h2><font SIZE="-1">TV</font> application interaction</h2>
 <p> Opens a dialog that allows to configure the interaction between a <font SIZE="-1">TV</font> application and nxtvepg. You should at least configure your <font SIZE="-1">TV</font> application type and path here if you&#8217;re using one of the supported applications; this is a recommended step during the initial installation to speed up the <font SIZE="-1">EPG</font> provider search, as described in &#8220;<font SIZE="-1">GETTING</font> <font SIZE="-1">STARTED</font>&#8221;. </p>
 <p> The first four (only three on <font SIZE="-1">UNIX</font>) options allow to switch interaction features on or off. If you want to improve startup time on <font SIZE="-1">UNIX</font>, turn them all off; in this case nxtvepg does not need to search for the <i>xawtv</i> toplevel window (which can take up to several seconds if you have many applications running or a slow connection to your X server.) By default all interaction features are enabled.</p>
 <dl>
-<dt><i>General enable</i></p>
-<dd> Windows only: the option allows to disable or re-enable the allocation of communication resources, and implicitly to switch off or on all interaction features. While disabled, nxtvepg will be invisible for the <font SIZE="-1">TV</font> application. The use of this option is depreciated, as nxtvepg won&#8217;t automatically free the driver when the <font SIZE="-1">TV</font> application is started, and nxtvepg will fail to start acquisition when a <font SIZE="-1">TV</font> appliaction is running. Use this option only if you suspect compatibility problems between the <font SIZE="-1">TV</font> app and nxtvepg, e.g. if one application hangs or crashes during startup if the other is already running. (Not that such behavior is to be expected, but it&#8217;s better to be prepared for anything.)</p>
-<dt><i>Tune </i><font SIZE="-1"><i>TV</i></font><i> button</i></p>
-<dd> This option hides or shows the equally named button below clock in the nxtvepg main window. If you&#8217;re not interested in remote-controlling the <font SIZE="-1">TV</font> application, switch it off. </p>
+<dt><i>General enable</i></dt>
+<dd> Windows only: the option allows to disable or re-enable the allocation of communication resources, and implicitly to switch off or on all interaction features. While disabled, nxtvepg will be invisible for the <font SIZE="-1">TV</font> application. The use of this option is depreciated, as nxtvepg won&#8217;t automatically free the driver when the <font SIZE="-1">TV</font> application is started, and nxtvepg will fail to start acquisition when a <font SIZE="-1">TV</font> appliaction is running. Use this option only if you suspect compatibility problems between the <font SIZE="-1">TV</font> app and nxtvepg, e.g. if one application hangs or crashes during startup if the other is already running. (Not that such behavior is to be expected, but it&#8217;s better to be prepared for anything.)</dd>
+<dt><i>Tune </i><font SIZE="-1"><i>TV</i></font><i> button</i></dt>
+<dd> This option hides or shows the equally named button below clock in the nxtvepg main window. If you&#8217;re not interested in remote-controlling the <font SIZE="-1">TV</font> application, switch it off. </dd>
 <p> Note the button has a little context menu which opens with right mouse button. It contains several remote controls; which one actually work depends on the <font SIZE="-1">TV</font> application.</p>
-<dt><i>Cursor follows channel changes</i></p>
-<dd> While this option is enabled, nxtvepg will monitor <font SIZE="-1">TV</font> channel changes. Whenever such a change is detected, the cursor in the programme listbox will be set onto the title currently running on that network. During <font SIZE="-1">EPG</font> acquisition <font SIZE="-1">VPS/PDC</font> is used to exactly determine the current programme (only on networks which support <font SIZE="-1">VPS/PDC</font>); however if the nominal running time is in the past it&#8217;s currently not possible to display the programme in the listbox. This info may however be sent to the <font SIZE="-1">TV</font> app (see next option). </p>
+<dt><i>Cursor follows channel changes</i></dt>
+<dd> While this option is enabled, nxtvepg will monitor <font SIZE="-1">TV</font> channel changes. Whenever such a change is detected, the cursor in the programme listbox will be set onto the title currently running on that network. During <font SIZE="-1">EPG</font> acquisition <font SIZE="-1">VPS/PDC</font> is used to exactly determine the current programme (only on networks which support <font SIZE="-1">VPS/PDC</font>); however if the nominal running time is in the past it&#8217;s currently not possible to display the programme in the listbox. This info may however be sent to the <font SIZE="-1">TV</font> app (see next option). </dd>
 <p> If you have just a network filter enabled, it will be switched to the new network so that you&#8217;ll get a complete listing of that network&#8217;s programmes, starting with the currently running one. This works even when you have excluded this network in the network selection configuration. If there are more or other filters than network enabled, then they will remain unchanged. If the current programme on the new network does not match this filter setting, then neither cursor nor listbox content will be changed.</p>
-<dt><i>Display </i><font SIZE="-1"><i>EPG</i></font><i> info in </i><font SIZE="-1"><i>TV</i></font><i> app</i></p>
-<dd> While this option is enabled, nxtvepg will monitor <font SIZE="-1">TV</font> channel changes. During <font SIZE="-1">EPG</font> acquisition <font SIZE="-1">VPS/PDC</font> are also monitored to determine newly starting programmes. <font SIZE="-1">VPS/PDC</font> also allows to detect channel changes on an external input source, e.g. a satellite receiver connected via the Composite socket. </p>
+<dt><i>Display </i><font SIZE="-1"><i>EPG</i></font><i> info in </i><font SIZE="-1"><i>TV</i></font><i> app</i></dt>
+<dd> While this option is enabled, nxtvepg will monitor <font SIZE="-1">TV</font> channel changes. During <font SIZE="-1">EPG</font> acquisition <font SIZE="-1">VPS/PDC</font> are also monitored to determine newly starting programmes. <font SIZE="-1">VPS/PDC</font> also allows to detect channel changes on an external input source, e.g. a satellite receiver connected via the Composite socket. </dd>
 <p> After a change of channel or current programme title, the info about the currently running title will be displayed in the <font SIZE="-1">TV</font> application. On Windows it&#8217;s entirely up to the <font SIZE="-1">TV</font> application how this information is displayed. </p>
 <p> On <font SIZE="-1">UNIX</font> the display format can be selected by the following radio buttons: </p>
 <p> With <i>Separate popup</i> nxtvepg will generate a small popup window and put it right beneath the xawtv window. The blue area in the small bar on top represents how much of the (nominal) running time lies in the past. With <i>Video overlay</i> nxtvepg will generate a similar popup, however it&#8217;s placed on top of the video image (please note that this option only works properly with XFree86 version 4 and the XVideo extension; use the <code>xvinfo</code> command to check if your server supports this feature). You can change fonts and colors in this popup via X resources (see &#8220;<font SIZE="-1">FILES</font>&#8221; for details.) <i>Video overlay, 2 lines</i> is the same except that it writes running time and title in separate lines and additionally contains the percentage of expired running time. With <i>Xawtv window title</i> the info will be sent to xawtv and displayed in the window title. Except for this last option, you can configure the desired display duration with the slider at the bottom of the dialog. A duration of zero means the display will never be removed. Finally, with <i>Use external application</i> an arbitrary external application can be invoked to display the information. Title and runtime information can be passed on the command line, in the same way as for external commands in the context menu (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Context menu configuration&#8221;)</dl>
@@ -645,21 +645,21 @@ CREATE TABLE PI(
 <p> As usual, you can change the ordering of items in the list by selecting an item and then clicking the buttons with up/down arrows. To remove an entry, select it and press <i>Delete</i>. If you make an error you can leave the dialog with <i>Abort</i>; changes aren&#8217;t applied and saved until you leave the dialog with <i>Ok</i>. </p>
 <p> The <i>Add new</i> menu button allows to insert a new menu item below the currently selected one:</p>
 <dl>
-<dt><code>External command</code></p>
-<dd> Start an external application with the given command line parameters. This is equivalent to typing a command into a <font SIZE="-1">UNIX</font> shell or using <i>Run command</i> in the Windows Start menu. Command line parameters may use variable substitution as described below. To allow sharing the same nxtvepg configuration file on <font SIZE="-1">UNIX</font> and Windows, there are different types, i.e. <font SIZE="-1">UNIX</font> or Windows. Commands are only included in the context menu if the platform matches the command type. </p>
+<dt><code>External command</code></dt>
+<dd> Start an external application with the given command line parameters. This is equivalent to typing a command into a <font SIZE="-1">UNIX</font> shell or using <i>Run command</i> in the Windows Start menu. Command line parameters may use variable substitution as described below. To allow sharing the same nxtvepg configuration file on <font SIZE="-1">UNIX</font> and Windows, there are different types, i.e. <font SIZE="-1">UNIX</font> or Windows. Commands are only included in the context menu if the platform matches the command type. </dd>
 <p> The dialog&#8217;s entry field labeled <code>Title</code> defines the text which will be included to the popup menu. The field labeled <code>Command</code> defines the command line</p>
-<dt><font SIZE="-1"><code>TV</code></font><code> application remote command</code></p>
-<dd> Send the given command line to an attached <font SIZE="-1">TV</font> application, e.g. to switch <font SIZE="-1">TV</font> channels. Variable substitution can be used here, too. How the command is sent depends on the <font SIZE="-1">TV</font> application; when no <font SIZE="-1">TV</font> app. is connected, such entries are automatically disabled (see also &#8220;<font SIZE="-1">CONFIGURATION:</font> <font SIZE="-1">TV</font> application interaction&#8221;) For example </p>
+<dt><font SIZE="-1"><code>TV</code></font><code> application remote command</code></dt>
+<dd> Send the given command line to an attached <font SIZE="-1">TV</font> application, e.g. to switch <font SIZE="-1">TV</font> channels. Variable substitution can be used here, too. How the command is sent depends on the <font SIZE="-1">TV</font> application; when no <font SIZE="-1">TV</font> app. is connected, such entries are automatically disabled (see also &#8220;<font SIZE="-1">CONFIGURATION:</font> <font SIZE="-1">TV</font> application interaction&#8221;) For example </dd>
 <pre>
   setstation ${network}
 </pre>
 <p> would create a command that switches the <font SIZE="-1">TV</font> app&#8217;s channel to that of the currently selected programme (i.e. the same what the <i>Tune </i><font SIZE="-1"><i>TV</i></font><i></i> button does). You should refer to the documentation of your <font SIZE="-1">TV</font> app to see which commands it supports.</p>
-<dt><code>Menu title</code> and <code>Menu separator</code></p>
-<dd> These can be used to organize the menu contents into groups. In case of menu titles, the dialog&#8217;s entry field labeled <code>Title</code> defines the text which will be included to the popup menu.</p>
-<dt><code>Add/Undo programme filters</code></p>
-<dd> This menu entry will be replaced by automatically generated commands to manipulate filter settings. See &#8220;<font SIZE="-1">CONTEXT</font> <font SIZE="-1">MENU</font>&#8221; for details.</p>
-<dt><code>Add/remove reminder</code></p>
-<dd> This menu entry will be replaced by automatically generated commands to manipulate the reminder list. There are two versions of the entry: if you select the extended version, an additional entry will be included which allows to select reminder groups (only useful if you&#8217;re using multiple groups, see also &#8220;<font SIZE="-1">REMINDERS</font>&#8221;.)</dl>
+<dt><code>Menu title</code> and <code>Menu separator</code></dt>
+<dd> These can be used to organize the menu contents into groups. In case of menu titles, the dialog&#8217;s entry field labeled <code>Title</code> defines the text which will be included to the popup menu.</dd>
+<dt><code>Add/Undo programme filters</code></dt>
+<dd> This menu entry will be replaced by automatically generated commands to manipulate filter settings. See &#8220;<font SIZE="-1">CONTEXT</font> <font SIZE="-1">MENU</font>&#8221; for details.</dd>
+<dt><code>Add/remove reminder</code></dt>
+<dd> This menu entry will be replaced by automatically generated commands to manipulate the reminder list. There are two versions of the entry: if you select the extended version, an additional entry will be included which allows to select reminder groups (only useful if you&#8217;re using multiple groups, see also &#8220;<font SIZE="-1">REMINDERS</font>&#8221;.)</dd></dl>
 <p> When you press the menu button <i>Add Example</i> a list pops up which contains a few example commands which can be copied into the title and command entry fields. </p>
 <p> As mentioned above, external commands and <font SIZE="-1">TV</font> app. remote commands allow to include placeholders enclosed in ${} which are replaced by attributes of the programme selected in the browser listbox at the time the context menu command is invoked. The following is a list of such formal variables The meaning of the variables should be self-explanatory, except possibly for <font SIZE="-1">CNI:</font> this is a hexadecimal network code, and e/p_rating: these are editorial and parental ratings respectively. </p>
 <p>${title} ${network} ${start} ${stop} ${relstart} ${duration} ${CNI} ${description} ${themes} ${VPS} or ${PDC} ${e_rating} ${p_rating} ${sound} ${format} ${digital} ${encrypted} ${live} ${repeat} $<br />
@@ -669,12 +669,12 @@ CREATE TABLE PI(
 <p> Start and stop time related keywords can optionally be followed by either a plus or minus sign and a time offset. The offset value is assumed to be given as minutes. For relstart and duration the precision can be changed by means of the format (see below.) Example: to print the start time minus 5 minutes (e.g. to start a recording 5 minutes earlier) use <tt>&quot;${start-5:%H:%M}&quot;</tt> </p>
 <p> The keywords can optionally be followed by a colon and an output format specification. Options depend on the type of variable substitution:</p>
 <dl>
-<dt><i>Start, stop and </i><font SIZE="-1"><i>VPS/PDC</i></font><i> times</i></p>
-<dd> All options defined in the <a href="/docs/linux/man/3-strftime/">strftime</a><code>(3)</code> manpage are available; default is <tt>%H:</tt>%M-%d.%m.%Y (hour, minute, day, month, year).</p>
-<dt><i>Relative start time and duration</i></p>
-<dd> You can choose between minutes (default) and seconds by appending &#8220;m&#8221; or &#8220;s&#8221;.</p>
-<dt><i>Theme categories</i></p>
-<dd> You can choose between numerical and textual output by appending &#8220;n&#8221; or &#8220;t&#8221;. Use command line option <i>-dump pdc</i> to get a list of theme categories (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;.)</dl>
+<dt><i>Start, stop and </i><font SIZE="-1"><i>VPS/PDC</i></font><i> times</i></dt>
+<dd> All options defined in the <a href="/docs/linux/man/3-strftime/">strftime</a><code>(3)</code> manpage are available; default is <tt>%H:</tt>%M-%d.%m.%Y (hour, minute, day, month, year).</dd>
+<dt><i>Relative start time and duration</i></dt>
+<dd> You can choose between minutes (default) and seconds by appending &#8220;m&#8221; or &#8220;s&#8221;.</dd>
+<dt><i>Theme categories</i></dt>
+<dd> You can choose between numerical and textual output by appending &#8220;n&#8221; or &#8220;t&#8221;. Use command line option <i>-dump pdc</i> to get a list of theme categories (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;.)</dd></dl>
 <p> For all other variables modifiers are currently ignored. </p>
 <p> On <font SIZE="-1">UNIX</font> the resulting substrings which replace the formal variables are always enclosed in single quotes, because the command line is passed to a system shell for execution (/bin/sh, i.e. the <i>Bourne Shell</i> by means of the <i>system</i> function; see also system man pages <code>sh</code> or <code>bash</code>) and there are many characters with special meaning. Single quotes inside he substituted string are correctly escaped. </p>
 <p> Example: The command line </p>
@@ -702,71 +702,71 @@ plan ${start : % d.% m.% Y} ${start : % H : % M} $
 <h2>Show/Hide</h2>
 <p> Toggle visibility of various components in the main window:</p>
 <dl>
-<dt><i>Show shortcuts</i></p>
-<dd> Toggle visibility of the shortcut listbox at the left of the programme list. When you unmap both the shortcuts list and the network list below, the clock and reset buttons are also unmapped so that you get only the programme list.</p>
-<dt><i>Show networks (left)</i></p>
-<dd> Maps or unmaps the network filter listbox below the shortcuts list, or below the clock if you&#8217;ve unmapped the shortcuts list.</p>
-<dt><i>Show networks (middle)</i></p>
-<dd> Maps or unmaps the network filter listbox between shortcuts listbox and programme list.</p>
-<dt><i>Show layout button</i></p>
-<dd> Maps or unmaps the <i>Grid layout</i> checkbutton below the shortcuts or network list in the main window (see also &#8220;<font SIZE="-1">CONFIGURATION:</font> List layout&#8221;). If you&#8217;re permanently using one or the other layout, you will probably want to unmap this button. (It&#8217;s mainly present to make users who upgrade from older versions aware of this new option.)</p>
-<dt><i>Show status line</i></p>
-<dd> Maps or unmaps the database and acquisition status line at the bottom of the browser window.</p>
-<dt><i>Show column headers</i></p>
-<dd> Maps or unmaps the browser listbox column header menubar, i.e. the row of menu buttons above the programme list in single list layout.</p>
-<dt><i>Show weekday scale</i></p>
-<dd> Maps or unmaps the weekday scale to the right of the programme list. (Note you can configure the looks, i.e. font, colors, width and date format via the resource file <tt>&quot;nxtvepg.ad&quot;</tt> or <tt>&quot;.Xdefaults&quot;</tt> on <font SIZE="-1">UNIX</font>, see &#8220;<font SIZE="-1">FILES</font>&#8221;)</p>
-<dt><i>Hide on minimize</i></p>
-<dd> Windows only: When this option is enabled, the main window&#8217;s entry in the task bar is removed when it&#8217;s minimized or when the program is started with the <i>-iconic</i> command line switch. Instead an icon is added to the system tray in the task bar. A double-click on the tray icon deiconifies the main window. A click with the right mouse button opens a little popup menu. The entries in this menu have the same meaning as the equally named ones in the control menu (see &#8220;<font SIZE="-1">CONTROL</font>&#8221;).</dl>
+<dt><i>Show shortcuts</i></dt>
+<dd> Toggle visibility of the shortcut listbox at the left of the programme list. When you unmap both the shortcuts list and the network list below, the clock and reset buttons are also unmapped so that you get only the programme list.</dd>
+<dt><i>Show networks (left)</i></dt>
+<dd> Maps or unmaps the network filter listbox below the shortcuts list, or below the clock if you&#8217;ve unmapped the shortcuts list.</dd>
+<dt><i>Show networks (middle)</i></dt>
+<dd> Maps or unmaps the network filter listbox between shortcuts listbox and programme list.</dd>
+<dt><i>Show layout button</i></dt>
+<dd> Maps or unmaps the <i>Grid layout</i> checkbutton below the shortcuts or network list in the main window (see also &#8220;<font SIZE="-1">CONFIGURATION:</font> List layout&#8221;). If you&#8217;re permanently using one or the other layout, you will probably want to unmap this button. (It&#8217;s mainly present to make users who upgrade from older versions aware of this new option.)</dd>
+<dt><i>Show status line</i></dt>
+<dd> Maps or unmaps the database and acquisition status line at the bottom of the browser window.</dd>
+<dt><i>Show column headers</i></dt>
+<dd> Maps or unmaps the browser listbox column header menubar, i.e. the row of menu buttons above the programme list in single list layout.</dd>
+<dt><i>Show weekday scale</i></dt>
+<dd> Maps or unmaps the weekday scale to the right of the programme list. (Note you can configure the looks, i.e. font, colors, width and date format via the resource file <tt>&quot;nxtvepg.ad&quot;</tt> or <tt>&quot;.Xdefaults&quot;</tt> on <font SIZE="-1">UNIX</font>, see &#8220;<font SIZE="-1">FILES</font>&#8221;)</dd>
+<dt><i>Hide on minimize</i></dt>
+<dd> Windows only: When this option is enabled, the main window&#8217;s entry in the task bar is removed when it&#8217;s minimized or when the program is started with the <i>-iconic</i> command line switch. Instead an icon is added to the system tray in the task bar. A double-click on the tray icon deiconifies the main window. A click with the right mouse button opens a little popup menu. The entries in this menu have the same meaning as the equally named ones in the control menu (see &#8220;<font SIZE="-1">CONTROL</font>&#8221;).</dd></dl>
 <h2>List layout</h2>
 <p> Select layout of the programme list in the main window:</p>
 <dl>
-<dt><i>Single list for all networks</i></p>
-<dd> This is the original layout (the only layout until nxtvepg version 2.4) in which all programmes of all networks are presented in a single list, sorted by start time.</p>
-<dt><i>Separate columns for each network</i></p>
-<dd> In this layout programmes are still sorted by start time, but presented in separate columns for each network. Schedules of different networks are aligned, so that programmes which run at the same time are approximately at the same height. </p>
+<dt><i>Single list for all networks</i></dt>
+<dd> This is the original layout (the only layout until nxtvepg version 2.4) in which all programmes of all networks are presented in a single list, sorted by start time.</dd>
+<dt><i>Separate columns for each network</i></dt>
+<dd> In this layout programmes are still sorted by start time, but presented in separate columns for each network. Schedules of different networks are aligned, so that programmes which run at the same time are approximately at the same height. </dd>
 <p> You can join several columns in a single column via the <i>Control</i> menu (meant for networks which share the same channel; use this in conjunction with <i>air times restriction</i> as described in &#8220;<font SIZE="-1">CONFIGURATION:</font> Select networks&#8221;.) The control menu is part of the drop-down menu below the button at the top of the column. This menu also holds commands to increase or decrease the number of visible columns.</dl>
 <p> In both layouts you can select which types of attributes are printed for each programme by clicking on the icon in the button row at the top of the list (unless column header buttons are hidden.)</p>
 <h2>FILES</h2>
 <h2>Files used on <font SIZE="-1">UNIX</font> systems</h2>
 <dl>
-<dt><code>$HOME/.nxtvepgrc</code></p>
-<dd> Configuration file where all personal settings are stored. Per default this is created in your home directory, but a different path and file name can be specified with the <code>-rcfile</code> option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;).</p>
-<dt><code>/usr/tmp/nxtvdb/nxtvdb-####</code></p>
-<dd> Directory containing one file for each provider&#8217;s database. The path can be changed with the <code>-dbdir</code> command line option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;). Note that the path can also be configured during compilation of the software, so if you downloaded a binary version of this package the path may be different. The current default setting can be queried with the <code>-help</code> command line switch. </p>
+<dt><code>$HOME/.nxtvepgrc</code></dt>
+<dd> Configuration file where all personal settings are stored. Per default this is created in your home directory, but a different path and file name can be specified with the <code>-rcfile</code> option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;).</dd>
+<dt><code>/usr/tmp/nxtvdb/nxtvdb-####</code></dt>
+<dd> Directory containing one file for each provider&#8217;s database. The path can be changed with the <code>-dbdir</code> command line option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;). Note that the path can also be configured during compilation of the software, so if you downloaded a binary version of this package the path may be different. The current default setting can be queried with the <code>-help</code> command line switch. </dd>
 <p> The last 4 digits of the file names are the hexadecimal <font SIZE="-1">CNI</font> (Country and Network Identifier) of the provider.</p>
-<dt><code>/usr/share/nxtvepg/xmltv-etsi.map</code></p>
-<dd> This file is used when importing <font SIZE="-1">EPG</font> data from <font SIZE="-1">XMLTV</font> file to map <font SIZE="-1">XMLTV</font> channel identification strings (i.e. the name given in the <i>&lt;channel id=&#8220;&#8230;&#8221;&gt;</i> <font SIZE="-1">XML</font> tags) to <font SIZE="-1">ETSI</font> channel identification numbers. If a file with the same name is in the current working directory, that one is used instead.</p>
-<dt><code>/dev/vbi0</code>, <code>/dev/vbi1</code>, etc.</p>
-<dd> Device files from which Nextview data is being read during acquisition. The index postfix can be specified with the <code>-card</code> command line option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;). You must have read/write access to these files; by default this is not the case for many Linux distributions for security reasons (since you might have connected a WebCam and mike and someone could spy on you from remote). However on a single-user system it&#8217;s safe to make them world-readable and writable, i.e. in a root shell enter: </p>
+<dt><code>/usr/share/nxtvepg/xmltv-etsi.map</code></dt>
+<dd> This file is used when importing <font SIZE="-1">EPG</font> data from <font SIZE="-1">XMLTV</font> file to map <font SIZE="-1">XMLTV</font> channel identification strings (i.e. the name given in the <i>&lt;channel id=&#8220;&#8230;&#8221;&gt;</i> <font SIZE="-1">XML</font> tags) to <font SIZE="-1">ETSI</font> channel identification numbers. If a file with the same name is in the current working directory, that one is used instead.</dd>
+<dt><code>/dev/vbi0</code>, <code>/dev/vbi1</code>, etc.</dt>
+<dd> Device files from which Nextview data is being read during acquisition. The index postfix can be specified with the <code>-card</code> command line option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;). You must have read/write access to these files; by default this is not the case for many Linux distributions for security reasons (since you might have connected a WebCam and mike and someone could spy on you from remote). However on a single-user system it&#8217;s safe to make them world-readable and writable, i.e. in a root shell enter: </dd>
 <pre>
   chmod 666 /dev/vbi
 </pre>
 <p> Alternatively you can make yourself a member of a group in <i>/etc/groups</i> which has access to the devices or create such a group.</p>
-<dt><code>/dev/video0</code>, <code>/dev/video1</code>, etc.</p>
-<dd> On Linux kernel series 2.4 and earlier (i.e. before revision #2 of the video4linux <font SIZE="-1">API</font>) these device files are used to select the input source (e.g. <font SIZE="-1">TV</font> tuner or one of the composite or S-Video sockets) and tuner frequency for <font SIZE="-1">VBI</font> reception, unless you choose the passive acquisition mode. The index postfix can be specified with the <code>-card</code> command line option. This device must be readable and writable. </p>
+<dt><code>/dev/video0</code>, <code>/dev/video1</code>, etc.</dt>
+<dd> On Linux kernel series 2.4 and earlier (i.e. before revision #2 of the video4linux <font SIZE="-1">API</font>) these device files are used to select the input source (e.g. <font SIZE="-1">TV</font> tuner or one of the composite or S-Video sockets) and tuner frequency for <font SIZE="-1">VBI</font> reception, unless you choose the passive acquisition mode. The index postfix can be specified with the <code>-card</code> command line option. This device must be readable and writable. </dd>
 <p> The device is only kept open during a provider search (see &#8220;<font SIZE="-1">CONFIGURATION:</font> Provider scan&#8221;). Else, it&#8217;s just opened shortly to set the input source and tuner frequency. If the device is busy (e.g. while you watch <font SIZE="-1">TV</font>), acquisition starts on the currently selected channel and automatically follows any externally controlled changes (this will be reported, e.g. in the status line at the bottom of the browser window, as <i>forced passive</i> acquisition mode, see &#8220;<font SIZE="-1">STATISTICS:</font> Status line&#8221;). </p>
 <p> Note: it&#8217;s mandatory that the video device has the same index as the <font SIZE="-1">VBI</font> device. If you have a video device at index 0 which does not support teletext (a webcam, for example) the <font SIZE="-1">VBI</font> device belonging to video device #1 may appear at index 0. You should force the driver to assign device index #1 to the <font SIZE="-1">VBI</font> index. On Linux this is possible by using <i>insmod</i> parameters in <i>/etc/modules.conf</i>, e.g. for bttv: </p>
 <pre>
    options bttv video_nr=1 vbi_nr=1
 </pre>
-<dt><code>/dev/v4l/vbi0</code>, <code>/dev/v4l/video0</code></p>
-<dd> If you have enabled <i>devfs</i> in your Linux kernel, the <font SIZE="-1">VBI</font> and video devices will appear in a subdirectory. nxtvepg automatically detects the existance of this directory and will search the devices there instead of the regular paths.</p>
-<dt><code>/dev/dvb/adapter0/demux0</code></p>
-<dd> This device is used when option <i>-dvbpid</i> is present.</p>
-<dt><code>/tmp/.vbi0.pid</code>, <code>/tmp/.vbi1.pid</code>, etc.</p>
-<dd> This file contains the <font SIZE="-1">PID</font> of the nxtvepg process (or the acquisition slave process unless threading is used) whenever a <font SIZE="-1">VBI</font> device is kept open. The process can be forced to free the device by sending it signal <i></i><font SIZE="-1"><i>SIGHUP</i></font><i></i>, e.g. from a wrapper script around a teletext decoder. An example which works with all shells: </p>
+<dt><code>/dev/v4l/vbi0</code>, <code>/dev/v4l/video0</code></dt>
+<dd> If you have enabled <i>devfs</i> in your Linux kernel, the <font SIZE="-1">VBI</font> and video devices will appear in a subdirectory. nxtvepg automatically detects the existance of this directory and will search the devices there instead of the regular paths.</dd>
+<dt><code>/dev/dvb/adapter0/demux0</code></dt>
+<dd> This device is used when option <i>-dvbpid</i> is present.</dd>
+<dt><code>/tmp/.vbi0.pid</code>, <code>/tmp/.vbi1.pid</code>, etc.</dt>
+<dd> This file contains the <font SIZE="-1">PID</font> of the nxtvepg process (or the acquisition slave process unless threading is used) whenever a <font SIZE="-1">VBI</font> device is kept open. The process can be forced to free the device by sending it signal <i></i><font SIZE="-1"><i>SIGHUP</i></font><i></i>, e.g. from a wrapper script around a teletext decoder. An example which works with all shells: </dd>
 <pre>
    kill -HUP `cat /tmp/.vbi0.pid`
 </pre>
 <p> Note that the daemon is not kept alive when acquisition is disabled, so that sending <font SIZE="-1">HUP</font> to the daemon equals sending <font SIZE="-1">TERM</font>. You can restart acquisition by starting a new daemon. The browser attempts to reconnect every 10 seconds when the connection was broken, but you can also trigger an immediate reconnect be sending the <font SIZE="-1">GUI</font> process <font SIZE="-1">SIGHUP</font>. </p>
 <p> To restart acquisition in non-daemon mode, signal again with <font SIZE="-1">SIGHUP</font>, either to the acquisition slave process or the browser process.</p>
-<dt><code>/tmp/nxtvepg.0</code></p>
-<dd> This non-regular file (socket) is created by the daemon to allow local client connections via <font SIZE="-1">UNIX</font> domain sockets. The same socket can be used for more than one client connection. It&#8217;s deleted when the daemon terminates (unless the daemon crashes or receives an uncatchable signal like the infamous signal 9 aka <font SIZE="-1">KILL</font>). See also &#8220;<font SIZE="-1">CONTROL:</font> Connect to acq. daemon&#8221;.</p>
-<dt><code>$HOME/.xawtv</code></p>
-<dd> This file belongs to the <font SIZE="-1">TV</font> viewer <i>xawtv</i>. It&#8217;s not required or created by nxtvepg. But if it exists, it will be used in the <font SIZE="-1">EPG</font> scan (for a fast scan mode where only the channels defined in this file will be checked) and in the network name configuration dialog. See also &#8220;<font SIZE="-1">CONFIGURATION:</font> <font SIZE="-1">TV</font> application interaction&#8221;.</p>
-<dt><code>$HOME/.Xdefaults</code></p>
-<dd> This file is usually loaded into the X server at startup (or during login) by use of the <i>xrdb</i> command. It contains a series of parameter assignments called <i>X resource definitions</i> for any number of applications. Note: depending on your X11 startup scripts this file may have a different name, e.g. <i>.Xresources</i>. The file could be used to change the &#8220;look&#8221; of almost every element in every dialog window (within limits, because some options are hard-coded) or the look of entire widget classes, like menus or buttons. However that&#8217;s highly implementation dependent and generally not very useful, hence depreciated. </p>
+<dt><code>/tmp/nxtvepg.0</code></dt>
+<dd> This non-regular file (socket) is created by the daemon to allow local client connections via <font SIZE="-1">UNIX</font> domain sockets. The same socket can be used for more than one client connection. It&#8217;s deleted when the daemon terminates (unless the daemon crashes or receives an uncatchable signal like the infamous signal 9 aka <font SIZE="-1">KILL</font>). See also &#8220;<font SIZE="-1">CONTROL:</font> Connect to acq. daemon&#8221;.</dd>
+<dt><code>$HOME/.xawtv</code></dt>
+<dd> This file belongs to the <font SIZE="-1">TV</font> viewer <i>xawtv</i>. It&#8217;s not required or created by nxtvepg. But if it exists, it will be used in the <font SIZE="-1">EPG</font> scan (for a fast scan mode where only the channels defined in this file will be checked) and in the network name configuration dialog. See also &#8220;<font SIZE="-1">CONFIGURATION:</font> <font SIZE="-1">TV</font> application interaction&#8221;.</dd>
+<dt><code>$HOME/.Xdefaults</code></dt>
+<dd> This file is usually loaded into the X server at startup (or during login) by use of the <i>xrdb</i> command. It contains a series of parameter assignments called <i>X resource definitions</i> for any number of applications. Note: depending on your X11 startup scripts this file may have a different name, e.g. <i>.Xresources</i>. The file could be used to change the &#8220;look&#8221; of almost every element in every dialog window (within limits, because some options are hard-coded) or the look of entire widget classes, like menus or buttons. However that&#8217;s highly implementation dependent and generally not very useful, hence depreciated. </dd>
 <p> Defaults for all officially supported options are listed in the so-called &#8220;app-defaults&#8221; file <i>Nxtvepg.ad</i> which is usually installed in <i>/usr/X11/lib/X11/app-defaults</i> (the .ad extension is omitted during installation.) You should not change values there however, because they would be overwritten when you install new versions. Instead copy changed lines into your .Xdefaults file (without the leading comment ! sign.) Note you have to restart nxtvepg for changes to take effect. When X11 is already running you can override individual settings with xrdb like this: </p>
 <pre>
    echo &quot;nxtvepg*text_bg: #E9E9EC&quot; | xrdb -merge
@@ -775,16 +775,16 @@ plan ${start : % d.% m.% Y} ${start : % H : % M} $
 <p> Fonts must be specified as triplets of family, size (use negative values to specify the size in pixels and positive values for sizes given in points) and appearance (only &#8220;normal&#8221; or &#8220;bold&#8221; are recommended). Lines starting with a ! sign are treated as comment and hence ignored. Entries that do not adhere to this syntax are silently discarded.</dl>
 <h2>Files used on Windows systems</h2>
 <dl>
-<dt><code>nxtvepg.ini</code></p>
-<dd> Configuration file where all configuration and personal preference settings are stored. By default this is created in the working directory, but a different path and file name can be specified with the <code>-rcfile</code> option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;).</p>
-<dt><code>xmltv-etsi.map</code></p>
-<dd> This file is used when importing <font SIZE="-1">EPG</font> data from <font SIZE="-1">XMLTV</font> file to map <font SIZE="-1">XMLTV</font> channel identification strings (see <font SIZE="-1">UNIX</font> section above for details.)</p>
-<dt><code>Nxtvepg.ad</code></p>
-<dd> Allows to change the application&#8217;s appearance, i.e. colors and text fonts. The format and content of the file is identical to the <i>.Xdefaults</i> file described in the <font SIZE="-1">UNIX</font> section.</p>
-<dt><code>nxtv____.epg</code></p>
-<dd> One file for each provider&#8217;s database is created in the working directory or the one given with the <code>-dbdir</code> command line option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;). The last 4 digits of the file base names are the hexadecimal <font SIZE="-1">CNI</font> (Country and Network Identifier) of the provider. You must not change the name of this file, or nxtvepg will refuse to load the database.</p>
-<dt><code>vbi_map.dat</code></p>
-<dd> This hidden file is used to set up shared memory to allow information exchange between nxtvepg and an attached <font SIZE="-1">TV</font> application. It&#8217;s automatically removed when nxtvepg terminates and should never be accessed (i.e. being written to or removed) by external applications. The file is not created when <font SIZE="-1">TV</font> app. interaction is disabled (see &#8220;<font SIZE="-1">CONFIGURATION:</font> <font SIZE="-1">TV</font> application interaction&#8221;).</dl>
+<dt><code>nxtvepg.ini</code></dt>
+<dd> Configuration file where all configuration and personal preference settings are stored. By default this is created in the working directory, but a different path and file name can be specified with the <code>-rcfile</code> option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;).</dd>
+<dt><code>xmltv-etsi.map</code></dt>
+<dd> This file is used when importing <font SIZE="-1">EPG</font> data from <font SIZE="-1">XMLTV</font> file to map <font SIZE="-1">XMLTV</font> channel identification strings (see <font SIZE="-1">UNIX</font> section above for details.)</dd>
+<dt><code>Nxtvepg.ad</code></dt>
+<dd> Allows to change the application&#8217;s appearance, i.e. colors and text fonts. The format and content of the file is identical to the <i>.Xdefaults</i> file described in the <font SIZE="-1">UNIX</font> section.</dd>
+<dt><code>nxtv____.epg</code></dt>
+<dd> One file for each provider&#8217;s database is created in the working directory or the one given with the <code>-dbdir</code> command line option (see &#8220;<font SIZE="-1">OPTIONS</font>&#8221;). The last 4 digits of the file base names are the hexadecimal <font SIZE="-1">CNI</font> (Country and Network Identifier) of the provider. You must not change the name of this file, or nxtvepg will refuse to load the database.</dd>
+<dt><code>vbi_map.dat</code></dt>
+<dd> This hidden file is used to set up shared memory to allow information exchange between nxtvepg and an attached <font SIZE="-1">TV</font> application. It&#8217;s automatically removed when nxtvepg terminates and should never be accessed (i.e. being written to or removed) by external applications. The file is not created when <font SIZE="-1">TV</font> app. interaction is disabled (see &#8220;<font SIZE="-1">CONFIGURATION:</font> <font SIZE="-1">TV</font> application interaction&#8221;).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> For in-depth information about Nextview please refer to the specifications <font SIZE="-1">ETS</font> 300 707 (data structures and basic principles), <font SIZE="-1">ETS</font> 300 708 (transmission protocol) and <font SIZE="-1">ETR</font> 288 (code of practice). These specs are available from &lt;<a rel="nofollow" href="http://www.etsi.org/">http://www.etsi.org/</a>&gt; </p>
 <p> You can also have Nextview directly inside your television set &#8211; check out the catalogues of Grundig, Loewe, Metz, Sony, Philips, Thompson, Telefunken or Quelle Universum. However be aware that not all models do support the same set of Nextview features.</p>

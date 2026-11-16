@@ -15,8 +15,8 @@ description: "XmStringLineCount — A compound string function that returns the 
 <h2>Description</h2>
 <p><code>XmStringLineCount</code> returns the number of separators plus one in the provided compound string. In effect, it counts the lines of text.</p>
 <dl COMPACT>
-<dt><i>string</i></p>
-<dd>Specifies the string</dl>
+<dt><i>string</i></dt>
+<dd>Specifies the string</dd></dl>
 <h2>Return</h2>
 <p>Returns the number of lines in the compound string. If <i>string</i> is empty, the function returns 1. If NULL is passed into <i>string</i>, the function returns 0 (zero).</p>
 <h2>Related</h2>

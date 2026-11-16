@@ -16,11 +16,9 @@ description: "gui_set_screen – Changes the bitmap surface GUI routines draw to
 <p> This function can be used to change the bitmap surface the GUI routines draw to. This can be useful if you are using a double buffering or page flipping system. Passing NULL will cause the default surface (screen) to be used again. Example: </p>
 <pre><code>
 BITMAP *page[2];
-
 /* Allocate two pages of video memory */
 page[0] = create_video_bitmap(SCREEN_W, SCREEN_H);
 page[1] = create_video_bitmap(SCREEN_W, SCREEN_H);
-
 /* Page flip */
 show_video_bitmap(page[0]);
 gui_set_screen(page[0]);

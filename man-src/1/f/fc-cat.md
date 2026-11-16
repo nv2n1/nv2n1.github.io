@@ -17,14 +17,14 @@ description: "fc-cat – read font information cache files"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-r</code></p>
-<dd> Recurse into subdirectories.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose.</p>
-<dt><code>-h</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-V</code></p>
-<dd> Show version of the program and exit.</dl>
+<dt><code>-r</code></dt>
+<dd> Recurse into subdirectories.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>-h</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-V</code></dt>
+<dd> Show version of the program and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fc-cache/">fc-cache</a></code>(1) <code><a href="/docs/linux/man/1-fc-list/">fc-list</a></code>(1) <code><a href="/docs/linux/man/1-fc-match/">fc-match</a></code>(1) <code><a href="/docs/linux/man/1-fc-pattern/">fc-pattern</a></code>(1) <code><a href="/docs/linux/man/1-fc-query/">fc-query</a></code>(1) <code><a href="/docs/linux/man/1-fc-scan/">fc-scan</a></code>(1) </p>
 <p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.</p>

@@ -20,12 +20,12 @@ description: "terminfo – terminal capability database"
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Newlines and leading whitespace (spaces or tabs) may be used for formatting entries for readability. These are removed from parsed entries.</p>
 <dl>
 <dd>The <code>infocmp</code> <code>-f</code> and <code>-W</code> options rely on this to format if-then-else expressions, or to enforce maximum line-width. The resulting formatted terminal description can be read by <code>tic</code>.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The first field for each terminal gives the names which are known for the terminal, separated by &#8220;|&#8221; characters.</p>
-<dd>The first name given is the most common abbreviation for the terminal (its primary name), the last name given should be a long name fully identifying the terminal (see <code>longname</code>(3X)), and all others are treated as synonyms (aliases) for the primary terminal name.</p>
-<dd>X/Open Curses advises that all names but the last should be in lower case and contain no blanks; the last name may well contain upper case and blanks for readability.</p>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The first field for each terminal gives the names which are known for the terminal, separated by &#8220;|&#8221; characters.</dd>
+<dd>The first name given is the most common abbreviation for the terminal (its primary name), the last name given should be a long name fully identifying the terminal (see <code>longname</code>(3X)), and all others are treated as synonyms (aliases) for the primary terminal name.</dd>
+<dd>X/Open Curses advises that all names but the last should be in lower case and contain no blanks; the last name may well contain upper case and blanks for readability.</dd>
 <dd>This implementation is not so strict; it allows mixed case in the primary name and aliases. If the last name has no embedded blanks, it allows that to be both an alias and a verbose name (but will warn about this ambiguity).<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Lines beginning with a &#8220;#&#8221; in the first column are treated as comments.</p>
-<dd>While comment lines are legal at any point, the output of <code>captoinfo</code> and <code>infotocap</code> (aliases for <code>tic</code>) will move comments so they occur only between entries.</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Lines beginning with a &#8220;#&#8221; in the first column are treated as comments.</dd>
+<dd>While comment lines are legal at any point, the output of <code>captoinfo</code> and <code>infotocap</code> (aliases for <code>tic</code>) will move comments so they occur only between entries.</dd></dl>
 <p> Terminal names (except for the last, verbose entry) should be chosen using the following conventions. The particular piece of hardware making up the terminal should have a root name, thus &#8220;hp2621&#8221;. This name should not contain hyphens. Modes that the hardware can be in, or user preferences, should be indicated by appending a hyphen and a mode suffix. Thus, a vt100 in 132-column mode would be vt100-w. The following suffixes should be used where possible: <center></p>
 <table>
 <tr VALIGN=top>
@@ -120,7 +120,7 @@ description: "terminfo – terminal capability database"
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Numeric capabilities have a &#8220;#&#8221; following the name, then an unsigned decimal integer value.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 String capabilities have a &#8220;=&#8221; following the name, then an string of characters making up the capability value.</p>
 <dl>
-<dd>String capabilities can be split into multiple lines, just as the fields comprising a terminal entry can be split into multiple lines. While blanks between fields are ignored, blanks embedded within a string value are retained, except for leading blanks on a line.</dl>
+<dd>String capabilities can be split into multiple lines, just as the fields comprising a terminal entry can be split into multiple lines. While blanks between fields are ignored, blanks embedded within a string value are retained, except for leading blanks on a line.</dd></dl>
 <p> Any capability can be <i>canceled</i>, i.e., suppressed from the terminal entry, by following its name with &#8220;@&#8221; rather than a capability value.</p>
 <h3>Similar Terminals</h3>
 <p>If there are two very similar terminals, one (the variant) can be defined as being just like the other (the base) with certain exceptions. In the definition of the variant, the string capability <code>use</code> can be given with the name of the base terminal:<br />
@@ -128,20 +128,20 @@ description: "terminfo – terminal capability database"
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If there are multiple <code>use</code> capabilities, they are merged in reverse order. That is, the rightmost <code>use</code> reference is processed first, then the one to its left, and so forth.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Capabilities given explicitly in the entry override those brought in by <code>use</code> references. A capability can be canceled by placing <code>xx@</code> to the left of the use reference that imports it, where <i>xx</i> is the capability. For example, the entry</p>
 <dl>
-<dd>2621-nl, smkx@, rmkx@, use=2621,</dl>
+<dd>2621-nl, smkx@, rmkx@, use=2621,</dd></dl>
 <p> defines a 2621-nl that does not have the <code>smkx</code> or <code>rmkx</code> capabilities, and hence does not turn on the function key labels when in visual mode. This is useful for different modes for a terminal, or for different user preferences. An entry included via <code>use</code> can contain canceled capabilities, which have the same effect as if those cancels were inline in the using terminal entry.</p>
 <h3>Predefined Capabilities</h3>
 <p><font SIZE="-1"> The following is a complete table of the capabilities included in a terminfo description block and available to terminfo-using code. In each line of the table, The <code>variable</code> is the name by which the programmer (at the terminfo level) accesses the capability. The <code>capname</code> is the short name used in the text of the database, and is used by a person updating the database. Whenever possible, capnames are chosen to be the same as or similar to the ANSI X3.64-1979 standard (now superseded by ECMA-48, which uses identical or very similar names). Semantics are also intended to match those of the specification. The termcap code is the old <code>termcap</code> capability name (some capabilities are new, and have names which termcap did not originate). Capability names have no hard length limit, but an informal limit of 5 characters has been adopted to keep them short and to allow the tabs in the source file <code>Caps</code> to line up nicely. Finally, the description field attempts to convey the semantics of the capability. You may find some codes in the description field:</p>
 <dl>
-<dt>(P)</p>
-<dd>indicates that padding may be specified</p>
-<dt>#[1-9]</p>
-<dd>in the description field indicates that the string is passed through <code>tparm</code>(3X) with parameters as given (#<i>i</i>).</p>
-<dd>If no parameters are listed in the description, passing the string through <code>tparm</code>(3X) may give unexpected results, e.g., if it contains percent (%%) signs.</p>
-<dt>(P*)</p>
-<dd>indicates that padding may vary in proportion to the number of lines affected</p>
-<dt>(#<i>i</i>)</p>
-<dd>indicates the <i>i</i>th parameter.  These are the boolean capabilities: </font><center></p>
+<dt>(P)</dt>
+<dd>indicates that padding may be specified</dd>
+<dt>#[1-9]</dt>
+<dd>in the description field indicates that the string is passed through <code>tparm</code>(3X) with parameters as given (#<i>i</i>).</dd>
+<dd>If no parameters are listed in the description, passing the string through <code>tparm</code>(3X) may give unexpected results, e.g., if it contains percent (%%) signs.</dd>
+<dt>(P*)</dt>
+<dd>indicates that padding may vary in proportion to the number of lines affected</dd>
+<dt>(#<i>i</i>)</dt>
+<dd>indicates the <i>i</i>th parameter.  These are the boolean capabilities: </font><center></dd>
 <table>
 <tr VALIGN=top>
 <td ALIGN=center><code>Variable</code></td>
@@ -684,1104 +684,667 @@ description: "terminfo – terminal capability database"
 </table>
 <p></center> <font SIZE="-1"> These are the string capabilities: </p>
 <pre><code>VariableCap - TCapDescription
-
                   StringnameCode
-
                       acs_charsacscac
                           graphics charset pairs,
     based on vt100
-
         back_tabcbtbt
             back
             tab(P)
-
 bellbelbl
     audible
     signal(bell)(P)
-
         carriage_returncrcr
     carriage return (P *)(P *)
-
         change_char_pitchcpiZA
     Change number of characters per inch to #1
-
     change_line_pitchlpiZB
     Change number of lines per inch to #1
-
     change_res_horzchrZC
     Change horizontal resolution to #1
-
     change_res_vertcvrZD
     Change vertical resolution to #1
-
     change_scroll_regioncsrcs
     change region to line #1 to line #2(P)
-
         char_paddingrmprP
     like ip but when in insert mode
-
     clear_all_tabstbcct
     clear all tab stops(P)
-
 clear_marginsmgcMC
     clear right and left soft margins
-
         clear_screenclearcl
             clear screen and home
             cursor(P *)
-
                 clr_bolel1cb
     Clear to beginning of line
-
     clr_eolelce
     clear to end of line(P)
-
 clr_eosedcd
     clear to end of
     screen(P *)
-
         column_addresshpach
     horizontal position #1,
     absolute(P)
-
         command_charactercmdchCC
     terminal settable cmd character in prototype !
     ?
-
     create_windowcwinCW
     define a window #1 from #2,
     #3 to #4, #5
-
     cursor_addresscupcm move to row #1 columns #2
-
     cursor_downcud1do down one line
-
     cursor_homehomeho home cursor(if no cup)
-
         cursor_invisiblecivisvi make cursor invisible
-
     cursor_leftcub1le move left one space
-
     cursor_mem_addressmrcupCM memory relative cursor addressing,
     move to row #1 columns #2
-
         cursor_normalcnormve
         make cursor appear normal(undo civis / cvvis)
-
             cursor_rightcuf1nd
         non
         - destructive space(move right one space)
-
               cursor_to_llllll
         last line,
     first column(if no cup)
-
         cursor_upcuu1up
     up one line
-
     cursor_visiblecvvisvs
     make cursor very visible
-
     define_chardefcZE
     Define a character #1,
     #2 dots wide, descender #3
-
     delete_characterdch1dc delete character(P *)
-
         delete_linedl1dl delete line(P *)
-
             dial_phonedialDI dial number #1
-
     dis_status_linedslds disable status line
-
     display_clockdclkDK display clock
-
     down_half_linehdhd half a line down
-
     ena_acsenacseA enable alternate char set
-
     enter_alt_charset_modesmacsas start alternate character set(P)
-
 enter_am_modesmamSA
         turn on automatic margins
-
             enter_blink_modeblinkmb
                 turn on blinking
-
                     enter_bold_modeboldmd
                         turn on
                         bold(extra bright) mode
-
     enter_ca_modesmcupti
     string to start programs using cup
-
     enter_delete_modesmdcdm
     enter delete mode
-
     enter_dim_modedimmh
     turn on half
     - bright mode
-
     enter_doublewide_modeswidmZF Enter double -
     wide mode
-
     enter_draft_qualitysdrfqZG
     Enter draft
     - quality mode
-
     enter_insert_modesmirim enter insert mode
-
     enter_italics_modesitmZH Enter italic mode
-
     enter_leftward_modeslmZI Start leftward carriage motion
-
     enter_micro_modesmicmZJ Start micro
     - motion mode
-
     enter_near_letter_qualitysnlqZK Enter NLQ mode
-
     enter_normal_qualitysnrmqZL Enter normal
     - quality mode
-
     enter_protected_modeprotmp turn on protected mode
-
     enter_reverse_moderevmr turn on reverse video mode
-
     enter_secure_modeinvismk turn on blank mode(characters invisible)
-
         enter_shadow_modesshmZM Enter shadow
     - print mode
-
           enter_standout_modesmsoso begin standout mode
-
           enter_subscript_modessubmZN Enter subscript mode
-
           enter_superscript_modessupmZO Enter superscript mode
-
           enter_underline_modesmulus begin underline mode
-
           enter_upward_modesumZP Start upward carriage motion
-
           enter_xon_modesmxonSX turn on xon
           / xoff handshaking
-
           erase_charsechec erase #1 characters(P)
-
               exit_alt_charset_modermacsae end alternate character set(P)
-
 exit_am_modermamRA
 turn off automatic margins
-
-
 exit_attribute_modesgr0me
 turn off all attributes
-
-
 exit_ca_modermcupte
 strings to end programs using cup
-
-
 exit_delete_modermdced
 end delete mode
-
-
 exit_doublewide_moderwidmZQ
 End double-wide mode
-
-
 exit_insert_modermirei
 exit insert mode
-
-
 exit_italics_moderitmZR
 End italic mode
-
-
 exit_leftward_moderlmZS
 End left-motion mode
-
-
 exit_micro_modermicmZT
 End micro-motion mode
-
-
 exit_shadow_modershmZU
 End shadow-print mode
-
-
 exit_standout_modermsose
 exit standout mode
-
-
 exit_subscript_modersubmZV
 End subscript mode
-
-
 exit_superscript_modersupmZW
 End superscript mode
-
-
 exit_underline_modermulue
 exit underline mode
-
-
 exit_upward_moderumZX
 End reverse character motion
-
-
 exit_xon_modermxonRX
 turn off xon/xoff handshaking
-
-
 fixed_pausepausePA
 pause for 2-3 seconds
-
-
 flash_hookhookfh
 flash switch hook
-
-
 flash_screenflashvb
 visible bell (may not move cursor)
-
-
 form_feedffff
 hardcopy terminal page eject (P*)
-
-
 from_status_linefslfs
 return from status line
-
-
 goto_windowwingoWG
 go to window #1
-
-
 hanguphupHU
 hang-up phone
-
-
 init_1stringis1i1
 initialization string
-
-
 init_2stringis2is
 initialization string
-
-
 init_3stringis3i3
 initialization string
-
-
 init_fileifif
 name of initialization file
-
-
 init_progiprogiP
 path name of program for initialization
-
-
 initialize_colorinitcIc
 initialize color #1 to (#2,#3,#4)
-
-
 initialize_pairinitpIp
 Initialize color pair #1 to fg=(#2,#3,#4), bg=(#5,#6,#7)
-
-
 insert_characterich1ic
 insert character (P)
-
 insert_lineil1al
             insert
             line(P *)
-
                 insert_paddingipip
         insert padding after inserted character
-
         key_a1ka1K1
         upper left of keypad
-
         key_a3ka3K3
         upper right of keypad
-
         key_b2kb2K2
         center of keypad
-
         key_backspacekbskb
         backspace key
-
         key_begkbeg @1 begin key
-
         key_btabkcbtkB
         back
         - tab key
-
         key_c1kc1K4 lower left of keypad
-
         key_c3kc3K5 lower right of keypad
-
         key_cancelkcan @2 cancel key
-
         key_catabktbcka clear
         - all - tabs key
-
         key_clearkclrkC clear
         - screen
     or erase key
-
            key_closekclo @3 close key
-
            key_commandkcmd @4 command key
-
            key_copykcpy @5 copy key
-
            key_createkcrt @6 create key
-
            key_ctabkctabkt clear
            - tab key
-
            key_dckdch1kD delete -
            character key
-
            key_dlkdl1kL delete -
            line key
-
            key_downkcud1kd down
            - arrow key
-
            key_eickrmirkM sent by rmir
     or smir in insert mode
-
                key_endkend @7 end key
-
                key_enterkent @8 enter
                / send key
-
                key_eolkelkE clear
            - to - end - of - line key
-
            key_eoskedkS clear
            - to - end - of - screen key
-
            key_exitkext @9 exit key
-
            key_f0kf0k0 F0 function key
-
            key_f1kf1k1 F1 function key
-
            key_f10kf10k;
 F10 function key
-
                 key_f11kf11F1
                     F11 function key
-
                         key_f12kf12F2
                             F12 function key
-
                                 key_f13kf13F3
                                     F13 function key
-
                                         key_f14kf14F4
                                             F14 function key
-
                                                 key_f15kf15F5
                                                     F15 function key
-
                                                         key_f16kf16F6
                                                             F16 function key
-
                                                                 key_f17kf17F7
                                                                     F17 function key
-
                                                                         key_f18kf18F8
                                                                             F18 function key
-
                                                                                 key_f19kf19F9
                                                                                     F19 function key
-
                                                                                         key_f2kf2k2
                                                                                             F2 function key
-
                                                                                                 key_f20kf20FA
                                                                                                     F20 function key
-
                                                                                                         key_f21kf21FB
                                                                                                             F21 function key
-
                                                                                                                 key_f22kf22FC
                                                                                                                     F22 function key
-
                                                                                                                         key_f23kf23FD
                                                                                                                             F23 function key
-
                                                                                                                                 key_f24kf24FE
                                                                                                                                     F24 function key
-
                                                                                                                                         key_f25kf25FF
                                                                                                                                             F25 function key
-
                                                                                                                                                 key_f26kf26FG
                                                                                                                                                     F26 function key
-
                                                                                                                                                         key_f27kf27FH
                                                                                                                                                             F27 function key
-
                                                                                                                                                                 key_f28kf28FI
                                                                                                                                                                     F28 function key
-
                                                                                                                                                                         key_f29kf29FJ
                                                                                                                                                                             F29 function key
-
                                                                                                                                                                                 key_f3kf3k3
                                                                                                                                                                                     F3 function key
-
                                                                                                                                                                                         key_f30kf30FK
                                                                                                                                                                                             F30 function key
-
                                                                                                                                                                                                 key_f31kf31FL
                                                                                                                                                                                                     F31 function key
-
                                                                                                                                                                                                         key_f32kf32FM
                                                                                                                                                                                                             F32 function key
-
                                                                                                                                                                                                                 key_f33kf33FN
                                                                                                                                                                                                                     F33 function key
-
                                                                                                                                                                                                                         key_f34kf34FO
                                                                                                                                                                                                                             F34 function key
-
                                                                                                                                                                                                                                 key_f35kf35FP
                                                                                                                                                                                                                                     F35 function key
-
                                                                                                                                                                                                                                         key_f36kf36FQ
                                                                                                                                                                                                                                             F36 function key
-
                                                                                                                                                                                                                                                 key_f37kf37FR
                                                                                                                                                                                                                                                     F37 function key
-
                                                                                                                                                                                                                                                         key_f38kf38FS
                                                                                                                                                                                                                                                             F38 function key
-
                                                                                                                                                                                                                                                                 key_f39kf39FT
                                                                                                                                                                                                                                                                     F39 function key
-
                                                                                                                                                                                                                                                                         key_f4kf4k4
                                                                                                                                                                                                                                                                             F4 function key
-
                                                                                                                                                                                                                                                                                 key_f40kf40FU
                                                                                                                                                                                                                                                                                     F40 function key
-
                                                                                                                                                                                                                                                                                         key_f41kf41FV
                                                                                                                                                                                                                                                                                             F41 function key
-
                                                                                                                                                                                                                                                                                                 key_f42kf42FW
                                                                                                                                                                                                                                                                                                     F42 function key
-
                                                                                                                                                                                                                                                                                                         key_f43kf43FX
                                                                                                                                                                                                                                                                                                             F43 function key
-
                                                                                                                                                                                                                                                                                                                 key_f44kf44FY
                                                                                                                                                                                                                                                                                                                     F44 function key
-
                                                                                                                                                                                                                                                                                                                         key_f45kf45FZ
                                                                                                                                                                                                                                                                                                                             F45 function key
-
                                                                                                                                                                                                                                                                                                                                 key_f46kf46Fa
                                                                                                                                                                                                                                                                                                                                     F46 function key
-
                                                                                                                                                                                                                                                                                                                                         key_f47kf47Fb
                                                                                                                                                                                                                                                                                                                                             F47 function key
-
                                                                                                                                                                                                                                                                                                                                                 key_f48kf48Fc
                                                                                                                                                                                                                                                                                                                                                     F48 function key
-
                                                                                                                                                                                                                                                                                                                                                         key_f49kf49Fd
                                                                                                                                                                                                                                                                                                                                                             F49 function key
-
                                                                                                                                                                                                                                                                                                                                                                 key_f5kf5k5
                                                                                                                                                                                                                                                                                                                                                                     F5 function key
-
                                                                                                                                                                                                                                                                                                                                                                         key_f50kf50Fe
                                                                                                                                                                                                                                                                                                                                                                             F50 function key
-
                                                                                                                                                                                                                                                                                                                                                                                 key_f51kf51Ff
                                                                                                                                                                                                                                                                                                                                                                                     F51 function key
-
                                                                                                                                                                                                                                                                                                                                                                                         key_f52kf52Fg
                                                                                                                                                                                                                                                                                                                                                                                             F52 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                 key_f53kf53Fh
                                                                                                                                                                                                                                                                                                                                                                                                     F53 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                         key_f54kf54Fi
                                                                                                                                                                                                                                                                                                                                                                                                             F54 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                 key_f55kf55Fj
                                                                                                                                                                                                                                                                                                                                                                                                                     F55 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                         key_f56kf56Fk
                                                                                                                                                                                                                                                                                                                                                                                                                             F56 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                 key_f57kf57Fl
                                                                                                                                                                                                                                                                                                                                                                                                                                     F57 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                         key_f58kf58Fm
                                                                                                                                                                                                                                                                                                                                                                                                                                             F58 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                 key_f59kf59Fn
                                                                                                                                                                                                                                                                                                                                                                                                                                                     F59 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                         key_f6kf6k6
                                                                                                                                                                                                                                                                                                                                                                                                                                                             F6 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                 key_f60kf60Fo
                                                                                                                                                                                                                                                                                                                                                                                                                                                                     F60 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         key_f61kf61Fp
                                                                                                                                                                                                                                                                                                                                                                                                                                                                             F61 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 key_f62kf62Fq
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     F62 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         key_f63kf63Fr
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             F63 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 key_f7kf7k7
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     F7 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         key_f8kf8k8
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             F8 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 key_f9kf9k9
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     F9 function key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         key_findkfnd @0 find key
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             key_helpkhlp %
             1 help key
-
                 key_homekhomekh
                     home key
-
                         key_ickich1kI
                             insert -
         character key
-
             key_ilkil1kA
                 insert -
         line key
-
             key_leftkcub1kl
                 left -
         arrow key
-
             key_llkllkH
                 lower -
         left key(home down)
-
                 key_markkmrk
             % 2 mark key
-
             key_messagekmsg
             % 3 message key
-
             key_movekmov
             % 4 move key
-
             key_nextknxt
             % 5 next key
-
             key_npageknpkN next
         - page key
-
               key_openkopn
               % 6 open key
-
               key_optionskopt
               % 7 options key
-
               key_ppagekppkP previous
         - page key
-
               key_previouskprv
               % 8 previous key
-
               key_printkprt
               % 9 print key
-
               key_redokrdo
               % 0 redo key
-
               key_referencekref
     &amp; 1 reference key
-
     key_refreshkrfr
     &amp; 2 refresh key
-
     key_replacekrpl
     &amp; 3 replace key
-
     key_restartkrst
     &amp; 4 restart key
-
     key_resumekres
     &amp; 5 resume key
-
           key_rightkcuf1kr right
           - arrow key
-
           key_saveksav
     &amp; 6 save key
-
     key_sbegkBEG
     &amp; 9 shifted begin key
-
     key_scancelkCAN
     &amp; 0 shifted cancel key
-
               key_scommandkCMD
               * 1 shifted command key
-
               key_scopykCPY
               * 2 shifted copy key
-
               key_screatekCRT
               * 3 shifted create key
-
               key_sdckDC
               * 4 shifted delete -
           character key
-
               key_sdlkDL
               * 5 shifted delete -
           line key
-
               key_selectkslt
               * 6 select key
-
               key_sendkEND
               * 7 shifted end key
-
               key_seolkEOL
               * 8 shifted clear
           - to - end - of - line key
-
                                 key_sexitkEXT
                                 * 9 shifted exit key
-
                                 key_sfkindkF scroll
           - forward key
-
                 key_sfindkFND
                 * 0 shifted find key
-
                 key_shelpkHLP #1 shifted help key
-
                 key_shomekHOM #2 shifted home key
-
                 key_sickIC #3 shifted insert
           - character key
-
           key_sleftkLFT #4 shifted left
           - arrow key
-
                 key_smessagekMSG
                 % a shifted message key
-
                 key_smovekMOV
                 % b shifted move key
-
                 key_snextkNXT
                 % c shifted next key
-
                 key_soptionskOPT
                 % d shifted options key
-
                 key_spreviouskPRV
                 % e shifted previous key
-
                 key_sprintkPRT
                 % f shifted print key
-
                 key_srkrikR scroll
           - backward key
-
                 key_sredokRDO
                 % g shifted redo key
-
                 key_sreplacekRPL
                 % h shifted replace key
-
                 key_srightkRIT
                 % i shifted right
           - arrow key
-
                 key_srsumekRES
                 % j shifted resume key
-
                 key_ssavekSAV !1 shifted save key
-
                 key_ssuspendkSPD !2 shifted suspend key
-
                 key_stabkhtskT set
           - tab key
-
           key_sundokUND !3 shifted undo key
-
           key_suspendkspd
     &amp; 7 suspend key
-
     key_undokund
     &amp; 8 undo key
-
           key_upkcuu1ku up
           - arrow key
-
           keypad_localrmkxke leave 'keyboard_transmit' mode
-
           keypad_xmitsmkxks enter 'keyboard_transmit' mode
-
           lab_f0lf0l0 label on function key f0 if not f0
-
           lab_f1lf1l1 label on function key f1 if not f1
-
           lab_f10lf10la label on function key f10 if not f10
-
           lab_f2lf2l2 label on function key f2 if not f2
-
           lab_f3lf3l3 label on function key f3 if not f3
-
           lab_f4lf4l4 label on function key f4 if not f4
-
           lab_f5lf5l5 label on function key f5 if not f5
-
           lab_f6lf6l6 label on function key f6 if not f6
-
           lab_f7lf7l7 label on function key f7 if not f7
-
           lab_f8lf8l8 label on function key f8 if not f8
-
           lab_f9lf9l9 label on function key f9 if not f9
-
           label_formatflnLf label format
-
           label_offrmlnLF turn off soft labels
-
           label_onsmlnLO turn on soft labels
-
           meta_offrmmmo turn off meta mode
-
           meta_onsmmmm turn on meta mode(8th - bit on)
-
               micro_column_addressmhpaZY Like column_address in micro mode
-
           micro_downmcud1ZZ Like cursor_down in micro mode
-
           micro_leftmcub1Za Like cursor_left in micro mode
-
           micro_rightmcuf1Zb Like cursor_right in micro mode
-
           micro_row_addressmvpaZc Like row_address #1 in micro mode
-
           micro_upmcuu1Zd Like cursor_up in micro mode
-
           newlinenelnw newline(behave like cr followed by lf)
-
               order_of_pinsporderZe Match software bits to print
           - head pins
-
           orig_colorsococ Set all color pairs to the original ones
-
           orig_pairopop Set default pair to its original value
-
           pad_charpadpc padding char(instead of null)
-
               parm_dchdchDC delete #1 characters(P *)
-
                   parm_delete_linedlDL delete #1 lines(P *)
-
                       parm_down_cursorcudDO down #1 lines(P *)
-
                           parm_down_micromcudZf Like parm_down_cursor in micro mode
-
           parm_ichichIC insert #1 characters(P *)
-
               parm_indexindnSF scroll forward #1 lines(P)
-
                   parm_insert_lineilAL insert #1 lines(P *)
-
                       parm_left_cursorcubLE move #1 characters to the left(P)
-
 parm_left_micromcubZg
 Like parm_left_cursor in micro mode
-
-
 parm_right_cursorcufRI
 move #1 characters to the right (P*)
-
-
 parm_right_micromcufZh
 Like parm_right_cursor in micro mode
-
-
 parm_rindexrinSR
 scroll back #1 lines (P)
-
-
 parm_up_cursorcuuUP
 up #1 lines (P*)
-
-
 parm_up_micromcuuZi
 Like parm_up_cursor in micro mode
-
-
 pkey_keypfkeypk
 program function key #1 to type string #2
-
-
 pkey_localpflocpl
 program function key #1 to execute string #2
-
-
 pkey_xmitpfxpx
 program function key #1 to transmit string #2
-
-
 plab_normplnpn
 program label #1 to show string #2
-
-
 print_screenmc0ps
 print contents of screen
-
-
 prtr_nonmc5ppO
 turn on printer for #1 bytes
-
-
 prtr_offmc4pf
 turn off printer
-
-
 prtr_onmc5po
 turn on printer
-
-
 pulsepulsePU
 select pulse dialing
-
-
 quick_dialqdialQD
 dial number #1 without checking
-
-
 remove_clockrmclkRC
 remove clock
-
-
 repeat_charreprp
 repeat char #1 #2 times (P*)
-
-
 req_for_inputrfiRF
 send next input char (for ptys)
-
-
 reset_1stringrs1r1
 reset string
-
-
 reset_2stringrs2r2
 reset string
-
-
 reset_3stringrs3r3
 reset string
-
-
 reset_filerfrf
 name of reset file
-
-
 restore_cursorrcrc
 restore cursor to position of last save_cursor
-
-
 row_addressvpacv
 vertical position #1 absolute (P)
-
-
 save_cursorscsc
 save current cursor position (P)
-
 scroll_forwardindsf
     scroll text
     up(P)
-
 scroll_reverserisr
     scroll text
     down(P)
-
 select_char_setscsZj
     Select character set,
     #1
-
             set_attributessgrsa
                 define video attributes #1 -
             #9(PG9)
-
                 set_backgroundsetbSb
             Set background color #1
-
             set_bottom_marginsmgbZk
             Set bottom margin at current line
-
             set_bottom_margin_parmsmgbpZl
             Set bottom margin at line #1 or
         (if smgtp is not given) #2 lines from bottom
-
         set_clocksclkSC
         set clock,
     #1 hrs #2 mins #3 secs
-
     set_color_pairscpsp
     Set current color pair to #1
-
     set_foregroundsetfSf
     Set foreground color #1
-
     set_left_marginsmglML
     set left soft margin at current column.(ML is not in BSD termcap)
         .
-
     set_left_margin_parmsmglpZm
     Set left(right)
 margin at column #1
-
     set_right_marginsmgrMR
         set right soft margin at current column
-
             set_right_margin_parmsmgrpZn
                 Set right margin at column #1
-
     set_tabhtsst
         set a tab in every row,
     current columns
-
         set_top_marginsmgtZo
             Set top margin at current line
-
                 set_top_margin_parmsmgtpZp
                     Set
                     top(bottom) margin at row #1
-
-
 set_windowwindwi
 current window is lines #1-#2 cols #3-#4
-
-
 start_bit_imagesbimZq
 Start printing bit image graphics
-
-
 start_char_set_defscsdZr
 Start character set definition #1, with #2 characters in the set
-
-
 stop_bit_imagerbimZs
 Stop printing bit image graphics
-
-
 stop_char_set_defrcsdZt
 End definition of character set #1
-
-
 subscript_characterssubcsZu
 List of subscriptable characters
-
-
 superscript_characterssupcsZv
 List of superscriptable characters
-
-
 tabhtta
 tab to next 8-space hardware tab stop
-
-
 these_cause_crdocrZw
 Printing any of these characters causes CR
-
-
 to_status_linetslts
 move to status line, column #1
-
-
 tonetoneTO
 select touch tone dialing
-
-
 underline_charucuc
 underline char and move past it
-
-
 up_half_linehuhu
 half a line up
-
-
 user0u0u0
 User string #0
-
-
 user1u1u1
 User string #1
-
-
 user2u2u2
 User string #2
-
-
 user3u3u3
 User string #3
-
-
 user4u4u4
 User string #4
-
-
 user5u5u5
 User string #5
-
-
 user6u6u6
 User string #6
-
-
 user7u7u7
 User string #7
-
-
 user8u8u8
 User string #8
-
-
 user9u9u9
 User string #9
-
-
 wait_tonewaitWA
 wait for dial-tone
-
-
 xoff_characterxoffcXF
 XOFF character
-
-
 xon_characterxoncXN
 XON character
-
-
 zero_motionzeromZx
 No motion for subsequent character</code></pre>
 <p> The following string capabilities are present in the SVr4.0 term structure, but were originally not documented in the man page. </font><center></p>
@@ -2150,15 +1713,17 @@ No motion for subsequent character</code></pre>
 <dl>
 <dd><code>
 </code>, <code>\l</code>, <code>
-</code>, <code>	</code>, <code></code>, <code></code>, and <code>\s</code></dl>
+</code>, <code>	</code>, <code></code>, <code></code>, and <code>\s</code></dd></dl>
 <dl>
-<dd>produce</p>
+<dd>produce</dd>
 <dl>
-<dd><i>newline</i>, <i>line-feed</i>, <i>return</i>, <i>tab</i>, <i>backspace</i>, <i>form-feed</i>, and <i>space</i>,</dl>
-<dd>respectively.</dl>
+<dd><i>newline</i>, <i>line-feed</i>, <i>return</i>, <i>tab</i>, <i>backspace</i>, <i>form-feed</i>, and <i>space</i>,</dd></dl>
+<dd>respectively.</dd></dl>
 <p> X/Open Curses does not say what &#8220;appropriate <i>x</i>&#8221; might be. In practice, that is a printable ASCII graphic character. The special case &#8220;^?&#8221; is interpreted as DEL (127). In all other cases, the character value is AND&#8217;d with 0x1f, mapping to ASCII control codes in the range 0 through 31. Other escapes include<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\^</code> for <code>^</code>,<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\</code> for <code>\</code>,<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\</code>, for comma,<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\:</code> for <code>:</code>,<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 and <code>
+</p></dl>
+</code>

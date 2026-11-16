@@ -16,8 +16,8 @@ description: "postfix-add-filter – add filter service to Postfix master.cf"
 <p>If the given <i>smtp service name</i> or <i>smtpd port</i> already appear in the master.cf, a message will be printed to standard out and master.cf will not be modified.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>MAIL_CONFIG</code></p>
-<dd>Directory with Postfix configuration files. </p>
+<dt><code>MAIL_CONFIG</code></dt>
+<dd>Directory with Postfix configuration files. </dd>
 <p> The <code><a href="/docs/linux/man/8-postfix-add-filter/">postfix-add-filter</a></code>(8) command should use this, but it currently doesn&#8217;t. It is hard coded to /etc/postfix. This should be changed.</dl>
 <h2>Configuration Parameters</h2>
 <p>None</p>
@@ -30,3 +30,4 @@ description: "postfix-add-filter – add filter service to Postfix master.cf"
 <h2>Author(S)</h2>
 <pre>Scott Kitterman
 &lt;scott [at] kitterman.com&gt;</pre>
+</p>

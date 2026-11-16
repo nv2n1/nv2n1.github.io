@@ -34,16 +34,16 @@ int getpw(uid_t uid, char *buf);
 <p> If <i>uid</i> is not found in the password database, <code>getpw</code>() returns -1, sets <i>errno</i> to 0, and leaves <i>buf</i> unchanged.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>0</code> or <code>ENOENT</code></p>
-<dd> No user corresponding to <i>uid</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>buf</i> is NULL.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to allocate <i>passwd</i> structure.</dl>
+<dt><code>0</code> or <code>ENOENT</code></dt>
+<dd> No user corresponding to <i>uid</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>buf</i> is NULL.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to allocate <i>passwd</i> structure.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/passwd</i></p>
-<dd> password database file</dl>
+<dt><i>/etc/passwd</i></dt>
+<dd> password database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

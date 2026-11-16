@@ -12,11 +12,11 @@ description: "npm-edit – Edit an installed package"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm edit &lt;pkg&gt;[/&lt;subpkg&gt;...]
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Selects a (sub)dependency in the current working directory and opens the package folder in the default editor (or whatever you&#8217;ve configured as the npm <code>editor</code> config &#8212; see <code>npm-config</code> <i>npm-config</i>.) </p>
 <p> After it has been edited, the package is rebuilt so as to pick up any changes in compiled packages. </p>
@@ -24,31 +24,27 @@ npm edit &lt;pkg&gt;[/&lt;subpkg&gt;...]
 <h3>Configuration</h3>
 <h3>editor</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Default: <code>EDITOR</code> environment variable if set, or <code>&quot;vi&quot;</code> on Posix, or <code>&quot;notepad&quot;</code> on Windows.</p>
-<dt>&bull;</p>
-<dd> Type: path </p>
+<dt>&bull;</dt>
+<dd> Default: <code>EDITOR</code> environment variable if set, or <code>&quot;vi&quot;</code> on Posix, or <code>&quot;notepad&quot;</code> on Windows.</dd>
+<dt>&bull;</dt>
+<dd> Type: path </dd>
 </dl>
 </dl>
 <p> The command to run for <code>npm edit</code> or <code>npm config edit</code>.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help folders</p>
-<dt>&bull;</p>
-<dd> npm help explore</p>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc </p>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help explore</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc </dd>
 </dl>
 </dl>
 <h2>Index</h2>

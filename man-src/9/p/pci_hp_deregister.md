@@ -14,7 +14,7 @@ description: "pci_hp_deregister – deregister a hotplug_slot with the PCI hotpl
 <p><i>slot</i></p>
 <dl>
 <dd>
-<dd>pointer to the struct hotplug_slot to deregister</dl>
+</dd><dd>pointer to the struct hotplug_slot to deregister</dd></dl>
 <h2>Description</h2>
 <p>The <i>slot</i> must have been registered with the pci hotplug subsystem previously with a call to <code>pci_hp_register</code>. </p>
 <p> Returns 0 if successful, anything else for an error.</p>

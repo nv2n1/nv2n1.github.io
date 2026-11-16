@@ -11,20 +11,20 @@ description: "XkbGetDeviceInfo – Determine whether the X server allows Xkb acc
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbDeviceInfoPtr XkbGetDeviceInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>ind_class</i><code>,</code> <code>unsigned int </code><i>ind_id</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask indicating information to return</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; ind_class</i></p>
-<dd>feedback class for indicator requests</p>
-<dt><i>&#8211; ind_id</i></p>
-<dd>feedback ID for indicator requests</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask indicating information to return</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; ind_class</i></dt>
+<dd>feedback class for indicator requests</dd>
+<dt><i>&#8211; ind_id</i></dt>
+<dd>feedback ID for indicator requests</dd></dl>
 <h2>Description</h2>
 <p>To determine whether the X server allows Xkb access to particular capabilities of input devices other than the core X keyboard, or to determine the status of indicator maps, indicator names or button actions on a non-KeyClass extension device, use <i>XkbGetDeviceInfo. </i> </p>
 <p> <i>XkbGetDeviceInfo </i> returns information about the input device specified by <i>device_spec. </i> Unlike the <i>device_spec </i> parameter of most Xkb functions, <i>device_spec </i> does not need to be a keyboard device. It must, however, indicate either the core keyboard or a valid X Input Extension device. </p>
@@ -43,12 +43,10 @@ XkbXI_ButtonActionsMask num_btns (1L &lt;&lt;1) Clients can assign key
  btn_acts actions to buttons 
  non-KeyClass input
  extension devices.
- 
 XkbXI_IndicatorNamesMask leds-&gt;names (1L &lt;&lt;2) Clients can assign
  names to indicators on
  non-KeyClass input
  extension devices.
- 
 XkbXI_IndicatorMapsMask leds-&gt;maps (1L &lt;&lt;3) Clients can assign
  indicator maps to
  indicators on 

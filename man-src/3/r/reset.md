@@ -10,25 +10,10 @@ description: "QuantLib::DiscretizedAsset – Discretized asset class used by num
 <p>QuantLib::DiscretizedAsset &#8211; Discretized asset class used by numerical methods. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual void reset (Size size)=0
-
-
-
 void preAdjustValues ()
-
-
-
 void postAdjustValues ()
-
-
-
 void adjustValues ()
-
-
-
 virtual std::vector&lt; Time &gt; mandatoryTimes () const =0
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherited by DiscretizedCallableFixedRateBond, DiscretizedCapFloor, DiscretizedConvertible, <code>DiscretizedDiscountBond</code>, <code>DiscretizedOption</code>, DiscretizedSwap, and DiscretizedVanillaOption.</p>
 <h3>Public Member Functions</h3>
@@ -47,25 +32,10 @@ Protected Member Functions</code></pre>
 <p>Protected Member Functions <code>Low-level interface</code><br />
  These methods (that developers should override when deriving from <code>DiscretizedAsset</code>) are to be used by numerical methods and not directly by users, with the exception of <code>adjustValues()</code>, <code>preAdjustValues()</code> and <code>postAdjustValues()</code> that can be used together with partialRollback(). </p>
 <pre><code>virtual void reset (Size size)=0
-
-
-
 void preAdjustValues ()
-
-
-
 void postAdjustValues ()
-
-
-
 void adjustValues ()
-
-
-
 virtual std::vector&lt; Time &gt; mandatoryTimes () const =0
-
-
-
 Protected Member Functions</code></pre>
 <p> bool <code>isOnTime</code> (Time t) const </p>
 <p> virtual void <code>preAdjustValuesImpl</code> () </p>
@@ -93,7 +63,7 @@ Protected Member Functions</code></pre>
 <p>This method returns the times at which the numerical method should stop while rolling back the asset. Typical examples include payment times, exercise times and such. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>The returned values are not guaranteed to be sorted.</dl>
+<dd>The returned values are not guaranteed to be sorted.</dd></dl>
 <p> Implemented in <code>DiscretizedDiscountBond</code>, and <code>DiscretizedOption</code>.</p>
 <h3>bool isOnTime (Time t) const [protected]</h3>
 <p>This method checks whether the asset was rolled at the given time.</p>

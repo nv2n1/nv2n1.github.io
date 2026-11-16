@@ -14,7 +14,7 @@ description: "thaw_super – – unlock filesystem"
 <p><i>sb</i></p>
 <dl>
 <dd>
-<dd>the super to thaw</dl>
+</dd><dd>the super to thaw</dd></dl>
 <h2>Description</h2>
 <p>Unlocks the filesystem and marks it writeable again after <code>freeze_super</code>.</p>
 <h2>Copyright</h2>

@@ -24,6 +24,6 @@ description: "globus_error_string.h –"
 <dd><i>base_source</i><br />
  <i>base_cause</i><br />
  <i>fmt</i><br />
- <i>&#8230;</i></dl>
+ <i>&#8230;</i></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_common from the source code.</p>

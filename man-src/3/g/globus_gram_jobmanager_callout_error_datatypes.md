@@ -17,20 +17,20 @@ description: "Datatypes –"
 <p> GRAM Jobmanager Callout Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_BAD_CREDS </i></p>
-<dd> Credentials not accepted</p>
-<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_SYSTEM_ERROR </i></p>
-<dd> Authorization system misconfigured</p>
-<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED </i></p>
-<dd> Authorization denied</p>
-<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED_INVALID_JOB </i></p>
-<dd> Authorization denied &#8211; invalid job id</p>
-<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED_BAD_EXECUTABLE </i></p>
-<dd> Authorization denied &#8211; executable not allowed</p>
-<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_ERROR_LAST </i></p>
-<dd> Last marker &#8211; never used</dl>
+<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_BAD_CREDS </i></dt>
+<dd> Credentials not accepted</dd>
+<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_SYSTEM_ERROR </i></dt>
+<dd> Authorization system misconfigured</dd>
+<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED </i></dt>
+<dd> Authorization denied</dd>
+<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED_INVALID_JOB </i></dt>
+<dd> Authorization denied &#8211; invalid job id</dd>
+<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED_BAD_EXECUTABLE </i></dt>
+<dd> Authorization denied &#8211; executable not allowed</dd>
+<dt><i>GLOBUS_GRAM_JOBMANAGER_CALLOUT_ERROR_LAST </i></dt>
+<dd> Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_job_manager_callout_error from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>

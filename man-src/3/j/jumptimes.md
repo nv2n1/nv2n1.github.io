@@ -40,15 +40,15 @@ description: "QuantLib::PiecewiseYieldCurve – Piecewise yield term structure."
 <p> Each segment is determined sequentially starting from the earliest period to the latest and is chosen so that the instrument whose maturity marks the end of such segment is correctly repriced on the curve. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dl>
+<dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned values is tested by checking them against the original inputs.</p>
-<dt>*</p>
-<dd>the observability of the term structure is tested.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned values is tested by checking them against the original inputs.</dd>
+<dt>*</dt>
+<dd>the observability of the term structure is tested.</dd></dl>
 </dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Bonds.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>FRA.cpp</code>, and <code>swapvaluation.cpp</code>.</p>

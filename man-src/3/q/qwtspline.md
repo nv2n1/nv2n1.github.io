@@ -45,11 +45,11 @@ description: "QwtSpline –"
 <p> <code>Usage:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>1.</p>
-<dd>First call <code>setPoints()</code> to determine the spline coefficients for a tabulated function y(x).</p>
-<dt>2.</p>
-<dd>After the coefficients have been set up, the interpolated function value for an argument x can be determined by calling <code>QwtSpline::value()</code>.</dl>
+</dd><dl COMPACT>
+<dt>1.</dt>
+<dd>First call <code>setPoints()</code> to determine the spline coefficients for a tabulated function y(x).</dd>
+<dt>2.</dt>
+<dd>After the coefficients have been set up, the interpolated function value for an argument x can be determined by calling <code>QwtSpline::value()</code>.</dd></dl>
 </dl>
 <p> <code>Example:</code></p>
 <dl COMPACT>
@@ -71,90 +71,90 @@ QPolygonF interpolate(const QPolygonF&amp; points, int numValues)
  }
  return interpolatedPoints;
 }</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtSpline::SplineType</code></h3>
 <p>Spline type. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Natural </i></p>
-<dd>A natural spline.</p>
-<dt><i>Periodic </i></p>
-<dd>A periodic spline.</dl>
+<dt><i>Natural </i></dt>
+<dd>A natural spline.</dd>
+<dt><i>Periodic </i></dt>
+<dd>A periodic spline.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtSpline::QwtSpline (const <code>QwtSpline</code> &amp;other)</h3>
 <p>Copy constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>other</i> Spline used for initialization</dl>
+<dd><i>other</i> Spline used for initialization</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>bool QwtSpline::buildNaturalSpline (const QPolygonF &amp;points) [protected]</h3>
 <p>Determines the coefficients for a natural spline. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if successful</dl>
+<dd>true if successful</dd></dl>
 <h3>bool QwtSpline::buildPeriodicSpline (const QPolygonF &amp;points) [protected]</h3>
 <p>Determines the coefficients for a periodic spline. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if successful</dl>
+<dd>true if successful</dd></dl>
 <h3>const QVector&lt; double &gt; &amp; QwtSpline::coefficientsA () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A coefficients</dl>
+<dd>A coefficients</dd></dl>
 <h3>const QVector&lt; double &gt; &amp; QwtSpline::coefficientsB () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>B coefficients</dl>
+<dd>B coefficients</dd></dl>
 <h3>const QVector&lt; double &gt; &amp; QwtSpline::coefficientsC () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>C coefficients</dl>
+<dd>C coefficients</dd></dl>
 <h3><code>QwtSpline</code> &amp; QwtSpline::operator= (const <code>QwtSpline</code> &amp;other)</h3>
 <p>Assignment operator </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>other</i> Spline used for initialization</dl>
+<dd><i>other</i> Spline used for initialization</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>*this</dl>
+<dd>*this</dd></dl>
 <h3>QPolygonF QwtSpline::points () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Points, that have been by <code>setPoints()</code></dl>
+<dd>Points, that have been by <code>setPoints()</code></dd></dl>
 <h3>bool QwtSpline::setPoints (const QPolygonF &amp;points)</h3>
 <p>Calculate the spline coefficients. Depending on the value of <i>periodic</i>, this function will determine the coefficients for a natural or a periodic spline and store them internally. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>points</i> Points</dl>
+<dd><i>points</i> Points</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if successful</dl>
+<dd>true if successful</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The sequence of x (but not y) values has to be strictly monotone increasing, which means points[i].x() &lt; points[i+1].x(). If this is not the case, the function will return false</dl>
+<dd>The sequence of x (but not y) values has to be strictly monotone increasing, which means points[i].x() &lt; points[i+1].x(). If this is not the case, the function will return false</dd></dl>
 <h3>void QwtSpline::setSplineType (<code>SplineType</code>splineType)</h3>
 <p>Select the algorithm used for calculating the spline </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>splineType</i> Spline type</dl>
+<dd><i>splineType</i> Spline type</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>splineType()</code></dl>
+<dd><code>splineType()</code></dd></dl>
 <h3><code>QwtSpline::SplineType</code> QwtSpline::splineType () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the spline type</dl>
+<dd>the spline type</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSplineType()</code></dl>
+<dd><code>setSplineType()</code></dd></dl>
 <h3>double QwtSpline::value (doublex) const</h3>
 <p>Calculate the interpolated function value corresponding to a given argument x. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> Coordinate</dl>
+<dd><i>x</i> Coordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Interpolated coordinate</dl>
+<dd>Interpolated coordinate</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -17,12 +17,12 @@ description: "ALTER USER MAPPING – change the definition of a user mapping"
 <p> The owner of a foreign server can alter user mappings for that server for any user. Also, a user can alter a user mapping for his own user name if USAGE privilege on the server has been granted to the user.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>username</i></p>
-<dd>User name of the mapping. CURRENT_USER and USER match the name of the current user. PUBLIC is used to match all present and future user names in the system.</p>
-<dt><i>servername</i></p>
-<dd>Server name of the user mapping.</p>
-<dt><code>OPTIONS ( [ ADD | SET | DROP ] </code><i>option</i><code> [&#8216;</code><i>value</i><code>&#8216;] [, &#8230; ] )</code></p>
-<dd>Change options for the user mapping. The new options override any previously specified options. ADD, SET, and DROP specify the action to be performed. ADD is assumed if no operation is explicitly specified. Option names must be unique; options are also validated by the server&#8217;s foreign-data wrapper.</dl>
+<dt><i>username</i></dt>
+<dd>User name of the mapping. CURRENT_USER and USER match the name of the current user. PUBLIC is used to match all present and future user names in the system.</dd>
+<dt><i>servername</i></dt>
+<dd>Server name of the user mapping.</dd>
+<dt><code>OPTIONS ( [ ADD | SET | DROP ] </code><i>option</i><code> [&#8216;</code><i>value</i><code>&#8216;] [, &#8230; ] )</code></dt>
+<dd>Change options for the user mapping. The new options override any previously specified options. ADD, SET, and DROP specify the action to be performed. ADD is assumed if no operation is explicitly specified. Option names must be unique; options are also validated by the server&#8217;s foreign-data wrapper.</dd></dl>
 <h2>Examples</h2>
 <p>Change the password for user mapping bob, server foo: </p>
 <pre>ALTER USER MAPPING FOR bob SERVER foo OPTIONS (user 'bob', password 'public');</pre>

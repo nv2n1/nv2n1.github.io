@@ -55,9 +55,9 @@ description: "pingd_selinux – Security Enhanced Linux Policy for the pingd pro
 <p> Policy governs the access confined processes have to these ports. SELinux pingd policy is very flexible allowing users to setup their pingd processes in as secure a method as possible. </p>
 <p> The following port types are defined for pingd: </p>
 <dl>
-<dt><code>pingd_port_t</code></p>
+<dt><code>pingd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 9125</dl>
+</dd><dd>Default Defined Ports: tcp 9125</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type pingd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

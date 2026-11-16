@@ -21,7 +21,7 @@ int
 <code>Tcl_InvalidateStringRep</code>(<i>objPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Obj <i>*objPtr</i> (in) Points to an object; must have been the result of a previous call to <code>Tcl_NewObj</code>. </p>
+<dd>Tcl_Obj <i>*objPtr</i> (in) Points to an object; must have been the result of a previous call to <code>Tcl_NewObj</code>. </dd>
 </dl>
 <h2>Introduction</h2>
 <p>This man page presents an overview of Tcl objects and how they are used. It also describes generic procedures for managing Tcl objects. These procedures are used to create and copy objects, and increment and decrement the count of references (pointers) to objects. The procedures are used in conjunction with ones that operate on specific types of objects such as <code>Tcl_GetIntFromObj</code> and <code>Tcl_ListObjAppendElement</code>. The individual procedures are described along with the data structures they manipulate. </p>
@@ -53,7 +53,7 @@ int
  } <i>ptrAndLongRep</i>;
  } <i>internalRep</i>;
 } Tcl_Obj;</pre>
-</dl>
+</dd></dl>
 <p> The <i>bytes</i> and the <i>length</i> members together hold an object&#8217;s UTF-8 string representation, which is a <i>counted string</i> not containing null bytes (UTF-8 null characters should be encoded as a two byte sequence: 192, 128.) <i>bytes</i> points to the first byte of the string representation. The <i>length</i> member gives the number of bytes. The byte array must always have a null byte after the last data byte, at offset <i>length</i>; this allows string representations to be treated as conventional null-terminated C strings. C programs use <code>Tcl_GetStringFromObj</code> and <code>Tcl_GetString</code> to get an object&#8217;s string representation. If <i>bytes</i> is NULL, the string representation is invalid. </p>
 <p> An object&#8217;s type manages its internal representation. The member <i>typePtr</i> points to the Tcl_ObjType structure that describes the type. If <i>typePtr</i> is NULL, the internal representation is invalid. </p>
 <p> The <i>internalRep</i> union member holds an object&#8217;s internal representation. This is either a (long) integer, a double-precision floating-point number, a pointer to a value containing additional information needed by the object&#8217;s type to represent the object, a Tcl_WideInt integer, two arbitrary pointers, or a pair made up of an unsigned long integer and a pointer. </p>
@@ -67,22 +67,22 @@ int
 <dl COMPACT>
 <dd>
 <pre><code>set x 123</code></pre>
-</dl>
+</dd></dl>
 <p> This assigns to <i>x</i> an untyped object whose <i>bytes</i> member points to <code>123</code> and <i>length</i> member contains 3. The object&#8217;s <i>typePtr</i> member is NULL.</p>
 <dl COMPACT>
 <dd>
 <pre><code>puts &quot;x is $x&quot;</code></pre>
-</dl>
+</dd></dl>
 <p> <i>x</i>&#8216;s string representation is valid (since <i>bytes</i> is non-NULL) and is fetched for the command.</p>
 <dl COMPACT>
 <dd>
 <pre><code>incr x</code></pre>
-</dl>
+</dd></dl>
 <p> The <code>incr</code> command first gets an integer from <i>x</i>&#8216;s object by calling <code>Tcl_GetIntFromObj</code>. This procedure checks whether the object is already an integer object. Since it is not, it converts the object by setting the object&#8217;s <i>internalRep.longValue</i> member to the integer <code>123</code> and setting the object&#8217;s <i>typePtr</i> to point to the integer Tcl_ObjType structure. Both representations are now valid. <code>incr</code> increments the object&#8217;s integer internal representation then invalidates its string representation (by calling <code>Tcl_InvalidateStringRep</code>) since the string representation no longer corresponds to the internal representation.</p>
 <dl COMPACT>
 <dd>
 <pre><code>puts &quot;x is now $x&quot;</code></pre>
-</dl>
+</dd></dl>
 <p> The string representation of <i>x</i>&#8216;s object is needed and is recomputed. The string representation is now <code>124</code> and both representations are again valid.</p>
 <h2>Storage Management Of Objects</h2>
 <p>Tcl objects are allocated on the heap and are shared as much as possible to reduce storage requirements. Reference counting is used to determine when an object is no longer needed and can safely be freed. An object just created by <code>Tcl_NewObj</code> or <code>Tcl_NewStringObj</code> has <i>refCount</i> 0. The macro <code>Tcl_IncrRefCount</code> increments the reference count when a new reference to the object is created. The macro <code>Tcl_DecrRefCount</code> decrements the count when a reference is no longer needed and, if the object&#8217;s reference count drops to zero, frees its storage. An object shared by different code or data structures has <i>refCount</i> greater than 1. Incrementing an object&#8217;s reference count ensures that it will not be freed too early or have its value change accidentally. </p>
@@ -96,7 +96,7 @@ if (Tcl_IsShared(listPtr)) {
 }
 result = Tcl_ListObjReplace(interp, listPtr, index, 0,
  (objc-3), &amp;(objv[3]));</pre>
-</dl>
+</dd></dl>
 <p> As another example, <code>incr</code>&#8216;s command procedure must check whether the variable&#8217;s object is shared before incrementing the integer in its internal representation. If it is shared, it needs to duplicate the object in order to avoid accidentally changing values in other data structures.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-tcl_converttotype/">Tcl_ConvertToType</a>(3), <a href="/docs/linux/man/3-tcl_getintfromobj/">Tcl_GetIntFromObj</a>(3), <a href="/docs/linux/man/3-tcl_listobjappendelement/">Tcl_ListObjAppendElement</a>(3), <a href="/docs/linux/man/3-tcl_listobjindex/">Tcl_ListObjIndex</a>(3), <a href="/docs/linux/man/3-tcl_listobjreplace/">Tcl_ListObjReplace</a>(3), <a href="/docs/linux/man/3-tcl_registerobjtype/">Tcl_RegisterObjType</a>(3)</p>

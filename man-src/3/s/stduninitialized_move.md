@@ -10,13 +10,9 @@ description: "std::uninitialized_move – std::uninitialized_move"
 <p>std::uninitialized_move &#8211; std::uninitialized_move</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;memory&gt;
-
 template&lt; class InputIt, class ForwardIt &gt;                                                                (1) (since C++17)
-
 ForwardIt uninitialized_move( InputIt first, InputIt last, ForwardIt d_first );
-
 template&lt; class ExecutionPolicy, class InputIt, class ForwardIt &gt;                                         (2) (since C++17)
-
 ForwardIt uninitialized_move( ExecutionPolicy&amp;&amp; policy, InputIt first, InputIt last, ForwardIt d_first );</code></pre>
 <p>1) Moves elements from the range [first, last) to an uninitialized memory area beginning at d_first as if by </p>
 <pre><code>for (; first != last; ++d_first, (void)++first)

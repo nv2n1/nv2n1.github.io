@@ -14,7 +14,7 @@ description: "phy_device_remove – Remove a previously registered phy device fr
 <p><i>phydev</i></p>
 <dl>
 <dd>
-<dd>phy_device structure to remove</dl>
+</dd><dd>phy_device structure to remove</dd></dl>
 <h2>Description</h2>
 <p>This doesn&#8217;t free the phy_device itself, it merely reverses the effects of <code>phy_device_register</code>. Use <code>phy_device_free</code> to free the device after calling this function.</p>
 <h2>Copyright</h2>

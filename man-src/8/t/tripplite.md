@@ -16,13 +16,13 @@ description: "tripplite – Driver for Tripp-Lite SmartPro UPS equipment"
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>offdelay</code>=<i>num</i></p>
 <dl>
-<dd>Time to wait before the UPS is turned off after the kill power command is sent. The default value is 64 (in seconds).</dl>
+<dd>Time to wait before the UPS is turned off after the kill power command is sent. The default value is 64 (in seconds).</dd></dl>
 <p> <code>rebootdelay</code>=<i>num</i></p>
 <dl>
-<dd>Set the timer before the UPS is cycled after the reboot command is sent. The default value is 64 (in seconds).</dl>
+<dd>Set the timer before the UPS is cycled after the reboot command is sent. The default value is 64 (in seconds).</dd></dl>
 <p> <code>startdelay</code>=<i>num</i></p>
 <dl>
-<dd>Set the time that the UPS waits before it turns itself back on after a reboot command. The default value is 60 (in seconds).</dl>
+<dd>Set the time that the UPS waits before it turns itself back on after a reboot command. The default value is 60 (in seconds).</dd></dl>
 <h2>Known Issues And Bugs</h2>
 <p>Battery charge information may not be correct for all UPSes. It is tuned to be correct for a SMART700SER. Other models may not provide correct information. Information from the manufacturer would be helpful.</p>
 <h2>Authors</h2>

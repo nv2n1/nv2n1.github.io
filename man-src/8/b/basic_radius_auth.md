@@ -15,31 +15,31 @@ description: "basic_radius_auth – Squid RADIUS authentication helper"
 <p><code>basic_radius_auth</code> allows Squid to connect to a RADIUS server to validate the user name and password of Basic HTTP authentication.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f configfile</code></p>
-<dd>Specifies the path to a configuration file. See the CONFIGURATION section for details on the file content.</p>
-<dt><code>-h server</code></p>
-<dd>Alternative method of specifying the server to connect to</p>
-<dt><code>-p port</code></p>
-<dd>Specify another server port where the RADIUS server listens for requests if different from the default RADIUS port. Normally not specified.</p>
-<dt><code>-i identifier</code></p>
-<dd>Unique identifier identifying this Squid proxy to the RADIUS server. If not specified the IP address is used to identify the proxy.</p>
-<dt><code>-w secret</code></p>
-<dd>Alternative method of specifying the shared secret. Using the <code>-f</code> option with a configuration file is generally more secure and recommended.</p>
-<dt><code>-t timeout</code></p>
-<dd>RADIUS request timeout. Default is 10 seconds.</dl>
+<dt><code>-f configfile</code></dt>
+<dd>Specifies the path to a configuration file. See the CONFIGURATION section for details on the file content.</dd>
+<dt><code>-h server</code></dt>
+<dd>Alternative method of specifying the server to connect to</dd>
+<dt><code>-p port</code></dt>
+<dd>Specify another server port where the RADIUS server listens for requests if different from the default RADIUS port. Normally not specified.</dd>
+<dt><code>-i identifier</code></dt>
+<dd>Unique identifier identifying this Squid proxy to the RADIUS server. If not specified the IP address is used to identify the proxy.</dd>
+<dt><code>-w secret</code></dt>
+<dd>Alternative method of specifying the shared secret. Using the <code>-f</code> option with a configuration file is generally more secure and recommended.</dd>
+<dt><code>-t timeout</code></dt>
+<dd>RADIUS request timeout. Default is 10 seconds.</dd></dl>
 <h2>Configuration</h2>
 <p>The configuration specifies how the helper connects to RADIUS. The file contains a list of directives (one per line). Lines beginning with a <code>#</code> are ignored.</p>
 <dl>
-<dt><code>server </code><i>radiusserver</i></p>
-<dd>specifies the name or address of the RADIUS server to connect to.</p>
-<dt><code>secret </code><i>somesecretstring</i></p>
-<dd>specifies the shared RADIUS secret.</p>
-<dt><code>identifier </code><i>nameofserver</i></p>
-<dd>specifies what name the proxy should use to identify itself to the RADIUS server. This directive is optional.</p>
-<dt><code>port </code><i>portnumber</i></p>
-<dd>Specifies the port number or service name where the helper should connect.</p>
-<dt><code>timeout </code><i>seconds</i></p>
-<dd>Specifies the RADIUS request timeout.</dl>
+<dt><code>server </code><i>radiusserver</i></dt>
+<dd>specifies the name or address of the RADIUS server to connect to.</dd>
+<dt><code>secret </code><i>somesecretstring</i></dt>
+<dd>specifies the shared RADIUS secret.</dd>
+<dt><code>identifier </code><i>nameofserver</i></dt>
+<dd>specifies what name the proxy should use to identify itself to the RADIUS server. This directive is optional.</dd>
+<dt><code>port </code><i>portnumber</i></dt>
+<dd>Specifies the port number or service name where the helper should connect.</dd>
+<dt><code>timeout </code><i>seconds</i></dt>
+<dd>Specifies the RADIUS request timeout.</dd></dl>
 <h2>Author</h2>
 <p>This program is written by <i>Marc van Selm &lt;selm [at] cistron.nl&gt;</i> <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i> </p>
 <p> With contributions from many others. </p>

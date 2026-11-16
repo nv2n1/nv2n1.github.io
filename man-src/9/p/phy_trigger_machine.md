@@ -15,7 +15,7 @@ phy_trigger_machine - trigger the state machine to run
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>the phy_device struct</dl>
+<dl><dd></dd><dd>the phy_device struct</dd></dl>
 
 <h2>Description</h2>
 

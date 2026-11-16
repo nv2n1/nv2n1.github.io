@@ -13,30 +13,30 @@ description: "fpm2 – Figaro’s Password Manager 2"
 <p> <code>fpm2</code> is a <font SIZE="-1">GUI</font> password manager using the <font SIZE="-1">GTK2 libraries. Passwords are encrypted using the AES-256 algorithm.</font></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f filename</code></p>
-<dd> Use a different file to store fpm data. Must include directory where file is stored.</p>
-<dt><code>-t</code></p>
-<dd> Start fpm2 hidden in tray. No ask for password on startup.</dl>
+<dt><code>-f filename</code></dt>
+<dd> Use a different file to store fpm data. Must include directory where file is stored.</dd>
+<dt><code>-t</code></dt>
+<dd> Start fpm2 hidden in tray. No ask for password on startup.</dd></dl>
 <h2>USAGE</h2>
 <dl>
-<dt><code>launchers</code></p>
-<dd> Arbitrary launchers can be defined, in order to automatically launch progammes with parameters from the password entry, eg:</dl>
+<dt><code>launchers</code></dt>
+<dd> Arbitrary launchers can be defined, in order to automatically launch progammes with parameters from the password entry, eg:</dd></dl>
 <dl>
 <dt>
-<dd> <code>xterm -title $u@$a -e ssh -X $a -l $u</code>.</dl>
+</dt><dd> <code>xterm -title $u@$a -e ssh -X $a -l $u</code>.</dd></dl>
 <dl>
 <dt>
-<dd> Possible variables are:</dl>
+</dt><dd> Possible variables are:</dd></dl>
 <dl>
 <dt>
-<dd> <code>$a</code> &#8211; an arbitrary argument associated with the password entry &#8211; typically a hostname. </p>
+</dt><dd> <code>$a</code> &#8211; an arbitrary argument associated with the password entry &#8211; typically a hostname. </dd>
 <p> <code>$u</code> &#8211; the username associated with the password entry </p>
 <p> <code>$p</code> &#8211; the password associated with the password entry</dl>
 <dl>
-<dt><code>on-the-fly categories</code></p>
-<dd> Each password entry can belong to a category, which is generated just by naming it in at least one entry.</p>
-<dt><code>password generation</code></p>
-<dd> <code>fpm2</code> will generate passwords for you. Up to 24 characters with a boolean choices for <i>lowercase</i>, <i>uppercase</i>, <i>numbers</i>, <i>symbols</i> and <i>ambigous characters</i> (eg. `O` and `0`).</dl>
+<dt><code>on-the-fly categories</code></dt>
+<dd> Each password entry can belong to a category, which is generated just by naming it in at least one entry.</dd>
+<dt><code>password generation</code></dt>
+<dd> <code>fpm2</code> will generate passwords for you. Up to 24 characters with a boolean choices for <i>lowercase</i>, <i>uppercase</i>, <i>numbers</i>, <i>symbols</i> and <i>ambigous characters</i> (eg. `O` and `0`).</dd></dl>
 <h2>SECURITY</h2>
 <p> Using the $p variable means that your password ends up in <i>.bash_history</i> in addition to being visible by <code>ps aux</code>! </p>
 <p> In order to work around this problem conveniently <code>fpm2</code> can have your password copied to your primary selection, so that you may easily paste it where needed. Then your password should be as secured as your transport.</p>

@@ -21,11 +21,9 @@ description: "cpg_model_initialize – Create a new connection to the CPG servic
 <p> The <i>MODEL_V1</i> is backwards compatible with original callbacks initialized by <i>cpg_initialize</i> but new callback <i>cpg_totem_confchg_fn</i> is defined. </p>
 <p> Every time an CPG event occurs within the joined group, one of the callbacks specified by the argument <i>callbacks</i> is called. The callback functions are described by the following type definitions: </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 typedef void (*cpg_deliver_fn_t)(
     cpg_handle_t handle,
@@ -46,16 +44,13 @@ typedef void (*cpg_totem_confchg_fn_t)(
     uint32_t member_list_entries,
     const uint32_t *member_list);
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> The <i>cpg_model_v1_data_t</i> structure is defined as:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 typedef struct {<br />
     cpg_model_t model;<br />
     cpg_deliver_fn_t cpg_deliver_fn;<br />
@@ -63,32 +58,26 @@ typedef struct {<br />
     cpg_totem_confchg_fn_t cpg_totem_confchg_fn;<br />
     unsigned int flags;<br />
 } cpg_model_v1_data_t;
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> When a configuration change occurs or a message is to be delivered one of the callbacks is called from the <code>cpg_dispatch()</code> function. If a configuration change occurs, <i>cpg_confchg_fn</i> is called. If a delivery of a message occurs, <i>cpg_deliver_fn</i> is called. When totem membership change occurs, <i>cpg_totem_confchg_fn</i> is called. You can OR <i>CPG_MODEL_V1_DELIVER_INITIAL_TOTEM_CONF</i> constant to flags to get callback after first confchg event. </p>
 <p> The <i>cpg_address</i> structure is defined</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 struct cpg_address {<br />
     unsigned int nodeid;<br />
     unsigned int pid;<br />
     unsigned int reason;<br />
 };
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> where nodeid is a 32 bit unique node identifier, pid is the process ID of the process that has joined/left the group or sent the message, and reason is an integer code indicating why the node joined/left the group. </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 CPG_REASON_JOIN     - the process joined a group using cpg_join().
 CPG_REASON_LEAVE    - the process left a group using cpg_leave()
@@ -96,25 +85,21 @@ CPG_REASON_NODEDOWN - the process left a group because the node left the cluster
 CPG_REASON_NODEUP   - the process joined a group because it was already a member of a group on a node that has just joined the cluster
 CPG_REASON_PROCDOWN - the process left a group without calling cpg_leave()
 </pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> The <i>cpg_ring_id</i> structure is defined</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct cpg_ring_id {
     uint32_t nodeid;
     uint64_t seq;
 };
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> where <i>nodeid</i> is if of node of current Totem leader and seq is increasing number. </p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>

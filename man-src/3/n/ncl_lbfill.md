@@ -10,24 +10,24 @@ LBFILL - A routine that is called by LBLBAR (when the argument IFTP is non-zero)
 
 <h2>Synopsis</h2>CALL LBFILL (IFTP, XCRA, YCRA, NCRA, INDX)
 <h2>Description</h2><dl COMPACT><dt>IFTP
-<dd>(an input expression of type INTEGER) is the value of the argument IFTP from the user's call to LBLBAR.
-<dt>XCRA, YCRA
-<dd>(input arrays of type REAL) are real arrays containing the X and Y coordinates of five points defining a rectangular box which is to be filled in some manner. The fifth point defined by these arrays will always be a duplicate of the first.
-<dt>NCRA
-<dd>(an input expression of type INTEGER) is the number of points defining the rectangular box. Its value will always be five.
-<dt>INDX
-<dd>(an input expression of type INTEGER) is one of the indices from the array LFIN, in the user's call to LBLBAR. Its value may be used as a color index or as a pattern selector.</dl><h2>Usage</h2>This routine is called by LBLBAR when LBLBAR's argument IFTP is non-zero. LBFILL is called once for each sub-box in the label bar, using a statement of the form: 
+</dt><dd>(an input expression of type INTEGER) is the value of the argument IFTP from the user's call to LBLBAR.
+</dd><dt>XCRA, YCRA
+</dt><dd>(input arrays of type REAL) are real arrays containing the X and Y coordinates of five points defining a rectangular box which is to be filled in some manner. The fifth point defined by these arrays will always be a duplicate of the first.
+</dd><dt>NCRA
+</dt><dd>(an input expression of type INTEGER) is the number of points defining the rectangular box. Its value will always be five.
+</dd><dt>INDX
+</dt><dd>(an input expression of type INTEGER) is one of the indices from the array LFIN, in the user's call to LBLBAR. Its value may be used as a color index or as a pattern selector.</dd></dl><h2>Usage</h2>This routine is called by LBLBAR when LBLBAR's argument IFTP is non-zero. LBFILL is called once for each sub-box in the label bar, using a statement of the form: 
 
-<dl COMPACT><dd>CALL LBFILL (IFTP,XCRA,YCRA,NCRA,INDX)</dl>
+<dl COMPACT><dd>CALL LBFILL (IFTP,XCRA,YCRA,NCRA,INDX)</dd></dl>
  
 
  and is expected to fill the sub-box defined by its arguments. The default version of the routine looks like this: 
 
 <dl COMPACT><dd>SUBROUTINE LBFILL (IFTP,XCRA,YCRA,NCRA,INDX)
-<dl COMPACT><dd>DIMENSION XCRA(*),YCRA(*) 
+</dd><dl COMPACT><dd>DIMENSION XCRA(*),YCRA(*) 
  CALL GSFACI (INDX) 
  CALL GFA (NCRA-1,XCRA,YCRA) 
- RETURN</dl>
+ RETURN</dd></dl>
  END</dl>
  
 

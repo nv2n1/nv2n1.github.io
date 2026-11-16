@@ -18,8 +18,8 @@ description: "CurveCP — Message-handling programs"
 <h2>OPTIONS</h2>
 <p> How to use <code>curvecpprintkey</code>:</p>
 <dl>
-<dt><code>keydir</code></p>
-<dd> a directory where <code>CurveCP</code> binary keys were created.</dl>
+<dt><code>keydir</code></dt>
+<dd> a directory where <code>CurveCP</code> binary keys were created.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> curvecpserver (1), curvecpclient (1), curvecpmakekey (1), inetd (8), tcpserver (1).</p>
 <h2>AUTHOR</h2>

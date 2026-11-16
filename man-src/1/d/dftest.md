@@ -15,8 +15,8 @@ description: "dftest – Shows display filter byte-code, for debugging dfilter r
 <p> <code>dftest</code> is a simple tool which compiles a display filter and shows its bytecode.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>filter</p>
-<dd> The display filter expression. If needed it has to be quoted.</dl>
+<dt>filter</dt>
+<dd> The display filter expression. If needed it has to be quoted.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Show how the <font SIZE="-1">IP</font> protocol is filtered: </p>
 <pre>

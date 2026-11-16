@@ -12,15 +12,15 @@ description: "update-initramfs.conf – configuration file for update-initramfs"
 <p>The configuration file allows one to disable the update action from <code>update-initramfs.</code> </p>
 <h2>General Variables</h2>
 <dl>
-<dt><code> update_initramfs</p>
-<dd>Default is </code><i>yes</i> for running the latest initramfs-tools hooks in the newest Linux image. Setting it to <i>all</i> updates any known initramfs. It is possible to set it to <i>no</i> for remote servers or boxes where conservative manners needs to be applied. This disables the <code>update_initramfs -u</code> call.</p>
-<dt><code> backup_initramfs</p>
-<dd>If set update_initramfs</code> keeps an .bak file of the previous initramfs. If unset the backup initramfs will not be kept. </p>
+<dt><code> update_initramfs</dt>
+<dd>Default is </code><i>yes</i> for running the latest initramfs-tools hooks in the newest Linux image. Setting it to <i>all</i> updates any known initramfs. It is possible to set it to <i>no</i> for remote servers or boxes where conservative manners needs to be applied. This disables the <code>update_initramfs -u</code> call.</dd>
+<dt><code> backup_initramfs</dt>
+<dd>If set update_initramfs</code> keeps an .bak file of the previous initramfs. If unset the backup initramfs will not be kept. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/initramfs-tools/update-initramfs.conf</i></p>
-<dd></dl>
+<dt><i>/etc/initramfs-tools/update-initramfs.conf</i></dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>The initramfs-tools are written by Maximilian Attems &lt;maks [at] debian.org&gt;, Jeff Bailey &lt;jbailey [at] raspberryginger.com&gt; and numerous others.</p>
 <h2>See Also</h2>

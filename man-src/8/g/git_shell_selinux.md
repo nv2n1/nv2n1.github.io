@@ -20,8 +20,8 @@ description: "git_shell_u – git_shell user role – Security Enhanced Linux Po
 <p>The SELinux user git_shell_u is not able to terminal login.</p>
 <h2>Network</h2>
 <dl>
-<dt>The SELinux user git_shell_u is able to connect to the following tcp ports.</p>
-<dd><code>dns_port_t: 53</code> </p>
+<dt>The SELinux user git_shell_u is able to connect to the following tcp ports.</dt>
+<dd><code>dns_port_t: 53</code> </dd>
 <p> <code>ocsp_port_t: 9080</code> </p>
 <p> <code>kerberos_port_t: 88,750,4444</code> </p>
 </dl>
@@ -55,10 +55,10 @@ description: "git_shell_u – git_shell user role – Security Enhanced Linux Po
 <p>Three things can happen when git_shell_t attempts to execute a program. </p>
 <p> <code>1.</code> SELinux Policy can deny git_shell_t from executing the program. </p>
 <dl>
-<dd><code>2.</code> SELinux Policy can allow git_shell_t to execute the program in the current user type. </p>
+<dd><code>2.</code> SELinux Policy can allow git_shell_t to execute the program in the current user type. </dd>
 <p> Execute the following to see the types that the SELinux user git_shell_t can execute without transitioning: </p>
 <p> <code>sesearch -A -s git_shell_t -c file -p execute_no_trans</code> </p>
-<dd><code>3.</code> SELinux can allow git_shell_t to execute the program and transition to a new type. </p>
+<dd><code>3.</code> SELinux can allow git_shell_t to execute the program and transition to a new type. </dd>
 <p> Execute the following to see the types that the SELinux user git_shell_t can execute and transition: </p>
 <p> <code>$ sesearch -A -s git_shell_t -c process -p transition</code> </p>
 </dl>

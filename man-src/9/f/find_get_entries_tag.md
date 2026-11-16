@@ -15,27 +15,27 @@ find_get_entries_tag - find and return entries that match <i>tag</i>
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>the address_space to search</dl>
+<dl><dd></dd><dd>the address_space to search</dd></dl>
  
 
  <i>start</i>
-<dl><dd>the starting page cache index</dl>
+<dl><dd>the starting page cache index</dd></dl>
  
 
  <i>tag</i>
-<dl><dd>the tag index</dl>
+<dl><dd>the tag index</dd></dl>
  
 
  <i>nr_entries</i>
-<dl><dd>the maximum number of entries</dl>
+<dl><dd>the maximum number of entries</dd></dl>
  
 
  <i>entries</i>
-<dl><dd>where the resulting entries are placed</dl>
+<dl><dd>where the resulting entries are placed</dd></dl>
  
 
  <i>indices</i>
-<dl><dd>the cache indices corresponding to the entries in <i>entries</i></dl>
+<dl><dd>the cache indices corresponding to the entries in <i>entries</i></dd></dl>
 
 <h2>Description</h2>
 

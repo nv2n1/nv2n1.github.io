@@ -23,22 +23,22 @@ description: "socketmap_table – Postfix socketmap table lookup client"
 <h2>Request Format</h2>
 <p>The socketmap protocol supports only the lookup request. The request has the following form: </p>
 <dl>
-<dt><i>name</i><code> &lt;space&gt; </code><i>key</i></p>
-<dd>Search the named socketmap for the specified key.</dl>
+<dt><i>name</i><code> &lt;space&gt; </code><i>key</i></dt>
+<dd>Search the named socketmap for the specified key.</dd></dl>
 <p> Postfix will not generate partial search keys such as domain names without one or more subdomains, network addresses without one or more least-significant octets, or email addresses without the localpart, address extension or domain portion. This behavior is also found with cidr:, pcre:, and regexp: tables.</p>
 <h2>Reply Format</h2>
 <p>The Postfix socketmap client requires that replies are not longer than 100000 characters (not including the netstring encapsulation). Replies must have the following form:</p>
 <dl>
-<dt><code>OK &lt;space&gt; </code><i>data</i></p>
-<dd>The requested data was found.</p>
-<dt><code>NOTFOUND &lt;space&gt;</p>
-<dd>The requested data was not found.</p>
-<dt>TEMP &lt;space&gt; </code><i>reason</i></p>
+<dt><code>OK &lt;space&gt; </code><i>data</i></dt>
+<dd>The requested data was found.</dd>
+<dt><code>NOTFOUND &lt;space&gt;</dt>
+<dd>The requested data was not found.</dd>
+<dt>TEMP &lt;space&gt; </code><i>reason</i></dt>
 <dd>
-<dt><code>TIMEOUT &lt;space&gt; </code><i>reason</i></p>
+</dd><dt><code>TIMEOUT &lt;space&gt; </code><i>reason</i></dt>
 <dd>
-<dt><code>PERM &lt;space&gt; </code><i>reason</i></p>
-<dd>The request failed. The reason, if non-empty, is descriptive text.</dl>
+</dd><dt><code>PERM &lt;space&gt; </code><i>reason</i></dt>
+<dd>The request failed. The reason, if non-empty, is descriptive text.</dd></dl>
 <h2>Security</h2>
 <pre>This map cannot be used for security-sensitive information,
 because neither the connection nor the server are authenticated.</pre>

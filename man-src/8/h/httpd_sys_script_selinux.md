@@ -131,20 +131,20 @@ description: "httpd_sys_script_selinux – Security Enhanced Linux Policy for th
 <p> <code>httpd_sys_script_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_sys_script_exec_t type, if you want to transition an executable to the httpd_sys_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/.*.cgi, /opt/.*.cgi, /var/www/[^/]*/cgi-bin(/.*)?, /var/www/perl(/.*)?, /var/www/html/[^/]*/cgi-bin(/.*)?, /usr/lib/cgi-bin(/.*)?, /var/www/cgi-bin(/.*)?, /var/www/svn/hooks(/.*)?, /usr/share/wordpress/.*.php, /usr/local/nagios/sbin(/.*)?, /usr/share/wordpress/wp-includes/.*.php, /usr/share/wordpress-mu/wp-config.php </p>
+<dt>Paths:</dt>
+<dd>/usr/.*.cgi, /opt/.*.cgi, /var/www/[^/]*/cgi-bin(/.*)?, /var/www/perl(/.*)?, /var/www/html/[^/]*/cgi-bin(/.*)?, /usr/lib/cgi-bin(/.*)?, /var/www/cgi-bin(/.*)?, /var/www/svn/hooks(/.*)?, /usr/share/wordpress/.*.php, /usr/local/nagios/sbin(/.*)?, /usr/share/wordpress/wp-includes/.*.php, /usr/share/wordpress-mu/wp-config.php </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow httpd_sys_script servers to read the /var/httpd_sys_script directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow httpd_sys_script servers to read the /var/httpd_sys_script directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/httpd_sys_script(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/httpd_sys_script</code></p>
 <dl>
-<dt>Allow httpd_sys_script servers to read and write /var/httpd_sys_script/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the httpd_sys_script_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow httpd_sys_script servers to read and write /var/httpd_sys_script/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the httpd_sys_script_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/httpd_sys_script/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/httpd_sys_script/incoming</code><br />
  <code>setsebool -P httpd_sys_script_anon_write 1</code> </p>

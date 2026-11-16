@@ -14,14 +14,14 @@ description: "unmap_mapping_range – unmap the portion of all mmaps in the spec
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>the address space containing mmaps to be unmapped.</dl>
+</dd><dd>the address space containing mmaps to be unmapped.</dd></dl>
 <p> <i>holebegin</i></p>
 <dl>
-<dd>byte in first page to unmap, relative to the start of the underlying file. This will be rounded down to a PAGE_SIZE boundary. Note that this is different from <code>truncate_pagecache</code>, which must keep the partial page. In contrast, we must get rid of partial pages.</dl>
+<dd>byte in first page to unmap, relative to the start of the underlying file. This will be rounded down to a PAGE_SIZE boundary. Note that this is different from <code>truncate_pagecache</code>, which must keep the partial page. In contrast, we must get rid of partial pages.</dd></dl>
 <p> <i>holelen</i></p>
 <dl>
-<dd>size of prospective hole in bytes. This will be rounded up to a PAGE_SIZE boundary. A holelen of zero truncates to the end of the file.</dl>
+<dd>size of prospective hole in bytes. This will be rounded up to a PAGE_SIZE boundary. A holelen of zero truncates to the end of the file.</dd></dl>
 <p> <i>even_cows</i></p>
 <dl>
-<dd>1 when truncating a file, unmap even private COWed pages; but 0 when invalidating pagecache, don&#8217;t throw away private data.</dl>
+<dd>1 when truncating a file, unmap even private COWed pages; but 0 when invalidating pagecache, don&#8217;t throw away private data.</dd></dl>
 <h2>Copyright</h2>

@@ -42,7 +42,8 @@ int cfsetspeed(struct termios *termios_p, speed_t speed);
 <p> In the descriptions below, &quot;not in POSIX&quot; means that the value is not specified in POSIX.1-2001, and &quot;XSI&quot; means that the value is specified in POSIX.1-2001 as part of the XSI extension. </p>
 <p> <i>c_iflag</i> flag constants:</p>
 <dl>
-<dt><code>IGNBRK</code></p>
-<dd> Ignore BREAK condition on input.</p>
-<dt><code>BRKINT</code></p>
+<dt><code>IGNBRK</code></dt>
+<dd> Ignore BREAK condition on input.</dd>
+<dt><code>BRKINT</code></dt>
 <dd> If <code>IGNBRK</code> is set, a BREAK is ignored. If it is not set but <code>BRKINT</code> is set, then a BREAK causes the input and output queues to be flushed, and if the terminal is the controlling terminal of a foreground process group, it will cause a <code>SIGINT</code> to be sent to this foreground process group. When neither <code>IGNBRK</code> nor <code>BRKINT</code> are set, a BREAK reads as a null byte (&#8216;
+</dd></dl>

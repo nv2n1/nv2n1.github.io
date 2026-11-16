@@ -23,19 +23,19 @@ The configuration for report_Uploader event is read from /etc/libreport/events/r
  Configuration file lines should have <i>PARAM = VALUE</i> format. The parameters are: 
 
  <i>Upload_URL</i>
-<dl><dd>Configured upload URL</dl>
+<dl><dd>Configured upload URL</dd></dl>
  
 
  <i>http_proxy</i>
-<dl><dd>the proxy server to use for HTTP</dl>
+<dl><dd>the proxy server to use for HTTP</dd></dl>
  
 
  <i>HTTPS_PROXY</i>
-<dl><dd>the proxy server to use for HTTPS</dl>
+<dl><dd>the proxy server to use for HTTPS</dd></dl>
  
 
  <i>FTP_PROXY</i>
-<dl><dd>the proxy server to use for FTP</dl>
+<dl><dd>the proxy server to use for FTP</dd></dl>
 
 <h2>See Also</h2>
 
@@ -43,4 +43,4 @@ The configuration for report_Uploader event is read from /etc/libreport/events/r
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

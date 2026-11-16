@@ -13,28 +13,28 @@ description: "gmpc [OPTION]"
 <p> GMPC is a fully featured but still very lightweight gtk client for the music player deamon (MPD) </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;start-hidden</code></p>
-<dd> Start hidden.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show an overview of the commandline options.</p>
-<dt><code>&#8211;debug-level=&lt;level&gt;</code></p>
-<dd> Make gmpc output debug information </p>
+<dt><code>&#8211;start-hidden</code></dt>
+<dd> Start hidden.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show an overview of the commandline options.</dd>
+<dt><code>&#8211;debug-level=&lt;level&gt;</code></dt>
+<dd> Make gmpc output debug information </dd>
 <p> 0 &#8211; No output </p>
 <p> 1 &#8211; Error Messages </p>
 <p> 2 &#8211; Error and Warning Messages </p>
 <p> 3 &#8211; All Messages</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version and if possible git revision.</p>
-<dt><code>&#8211;config=&lt;file&gt;</code></p>
-<dd> Use config file &lt;file&gt;</p>
-<dt><code>&#8211;clean-cover-db</code></p>
-<dd> Cleans up the cover db.</p>
-<dt><code>&#8211;disable-plugins</code></p>
-<dd> Don&#8217;t load any plugins.</p>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace the running session of gmpc.</p>
-<dt><code>&#8211;quit</code></p>
-<dd> Quit the running gmpc </p>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version and if possible git revision.</dd>
+<dt><code>&#8211;config=&lt;file&gt;</code></dt>
+<dd> Use config file &lt;file&gt;</dd>
+<dt><code>&#8211;clean-cover-db</code></dt>
+<dd> Cleans up the cover db.</dd>
+<dt><code>&#8211;disable-plugins</code></dt>
+<dd> Don&#8217;t load any plugins.</dd>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace the running session of gmpc.</dd>
+<dt><code>&#8211;quit</code></dt>
+<dd> Quit the running gmpc </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Website: <a rel="nofollow" href="http://gmpcwiki.sarine.nl">http://gmpcwiki.sarine.nl</a> </p>

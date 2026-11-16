@@ -23,10 +23,10 @@ description: "slas2.f –"
  [ 0 H ].
  On return, SSMIN is the smaller singular value and SSMAX is the
  larger singular value.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>F</i> </p>
+<dd><i>F</i> </dd>
 <pre> F is REAL
  The (1,1) element of the 2-by-2 matrix.</pre>
 <p><i>G</i> </p>
@@ -44,13 +44,13 @@ description: "slas2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -66,7 +66,8 @@ description: "slas2.f –"
  Underflow is harmless if underflow is gradual. Otherwise, results
  may correspond to a matrix modified by perturbations of size near
  the underflow threshold.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 108 of file slas2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -14,7 +14,7 @@ description: "pci_dev_driver – get the pci_driver of a device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device to query</dl>
+</dd><dd>the device to query</dd></dl>
 <h2>Description</h2>
 <p>Returns the appropriate pci_driver structure or <code>NULL</code> if there is no registered driver for the device.</p>
 <h2>Copyright</h2>

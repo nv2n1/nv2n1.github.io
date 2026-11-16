@@ -15,13 +15,13 @@ CPCLAM - Adds contour lines to an area map. This is part of the process of drawi
  int *iama)
 <h2>Description</h2>The first three arguments are arrays used in the last call to CPRECT, CPSPS1, or CPSPS2, the contents of which must not have been changed since that call.
 <dl COMPACT><dt>ZDAT
-<dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input) is the data array.
-<dt>RWRK
-<dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the real workspace array.
-<dt>IWRK
-<dd>(INTEGER array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the integer workspace array.
-<dt>IAMA
-<dd>(INTEGER array, dimensioned as specified in a call to ARINAM, in the package Areas) is the array containing the area map to which contour lines are to be added.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input) is the data array.
+</dd><dt>RWRK
+</dt><dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the real workspace array.
+</dd><dt>IWRK
+</dt><dd>(INTEGER array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the integer workspace array.
+</dd><dt>IAMA
+</dt><dd>(INTEGER array, dimensioned as specified in a call to ARINAM, in the package Areas) is the array containing the area map to which contour lines are to be added.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>The routine CPCLAM, which adds contour lines generated from the data in the array ZDAT to the area map in the array IAMA, may be called at any time after the initialization call to CPRECT, CPSPS1, or CPSPS2. The area map must previously have been initialized by a call to the routine ARINAM in the utility Areas. 
 
  The contour lines added to the area map are as specified by the first 'NCL' elements of the parameter arrays 'CLV', 'AIA', and 'AIB'. If 'NCL' is zero, CPPKCL is called to generate these values. 
@@ -34,22 +34,22 @@ CPCLAM - Adds contour lines to an area map. This is part of the process of drawi
 
  Lines are added to the area map in the following order:
 <dl COMPACT><dt>&bull;
-<dd>the edge of the viewport and the vertical lines within it,
-<dt>&bull;
-<dd>the edges of the out-of-range areas, if any,
-<dt>&bull;
-<dd>the edge of the grid,
-<dt>&bull;
-<dd>the edges of the special-value areas, if any, and,
-<dt>&bull;
-<dd>the contour lines, in order of increasing contour level.</dl>
+</dt><dd>the edge of the viewport and the vertical lines within it,
+</dd><dt>&bull;
+</dt><dd>the edges of the out-of-range areas, if any,
+</dd><dt>&bull;
+</dt><dd>the edge of the grid,
+</dd><dt>&bull;
+</dt><dd>the edges of the special-value areas, if any, and,
+</dd><dt>&bull;
+</dt><dd>the contour lines, in order of increasing contour level.</dd></dl>
  
 
  The edge of the viewport may actually be added to the area map twice:
 <dl COMPACT><dt>&bull;
-<dd>as part of the edge group with group identifier 'GIC', and
-<dt>&bull;
-<dd>as part of the edge group with group identifier 'GIS'.</dl>
+</dt><dd>as part of the edge group with group identifier 'GIC', and
+</dd><dt>&bull;
+</dt><dd>as part of the edge group with group identifier 'GIS'.</dd></dl>
  
 
  Vertical lines, if any, are added with group identifier 'GIS'. 

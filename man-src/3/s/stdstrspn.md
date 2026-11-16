@@ -11,7 +11,6 @@ std::strspn - std::strspn
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     size_t strspn(const char *dest, const char *src);</code></pre> 
 Returns the length of the maximum initial segment (span) of the byte string pointed to by dest, that consists of only the characters found in byte string pointed to by src. 
 
@@ -27,14 +26,10 @@ The length of the maximum initial segment that contains only characters from byt
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstring&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
 const char *low_alpha = &quot;qwertyuiopasdfghjklzxcvbnm&quot;;
-
 int main()
-
 {
     std::string s = &quot;abcde312$#@&quot;;
     std::size_t spnsz = std::strspn(s.c_str(), low_alpha);

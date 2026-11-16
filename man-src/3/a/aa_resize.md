@@ -14,8 +14,8 @@ description: "aa_resize – resize functions"
 <p> int aa_resize(aa_context *c); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Do resize action. This function ought to be called when application takes into account the AA_RESIZE event. The context is reinitialized and set to new sizes.</p>
 <h2>RETURNS</h2>

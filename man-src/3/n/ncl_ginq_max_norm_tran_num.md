@@ -13,10 +13,10 @@ description: "ginq_max_norm_tran_num (Inquire maximum normalization transformati
 <p> void ginq_max_norm_tran_num(Gint *err_ind, Gint *max_norm_tran_num);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>max_norm_tran_num</p>
-<dd>(Output) &#8211; Gives the maximum number of normalization transformations available in the GKS package. In NCAR GKS-0A, max_norm_tran_num = 2.</dl>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>max_norm_tran_num</dt>
+<dd>(Output) &#8211; Gives the maximum number of normalization transformations available in the GKS package. In NCAR GKS-0A, max_norm_tran_num = 2.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

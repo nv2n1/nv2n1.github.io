@@ -10,9 +10,9 @@ DSGETC - Retrieves the value of an internal parameter of type CHARACTER.
 
 <h2>Synopsis</h2>CALL DSGETC (PNAM,CVAL)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be retrieved. The name must appear as the first three characters of the string.
-<dt>CVAL
-<dd>A character string that is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
+</dt><dd>A character string that specifies the name of the parameter to be retrieved. The name must appear as the first three characters of the string.
+</dd><dt>CVAL
+</dt><dd>A character string that is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
 <h2>Access</h2>To use DSGETC, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>dsgrid, dsgrid_params, dsgrid2s, dsgrid3s, dsgrid2d, dsgrid3d, dspnt2s, dspnt2d, dspnt3s, dspnt3d dssetc. 
 

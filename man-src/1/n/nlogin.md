@@ -16,55 +16,55 @@ description: "clogin – Cisco login script"
 <p> <code>clogin</code> reads the <i>.cloginrc</i> file for its configuration, then connects and logs into each of the routers specified on the command line in the order listed. Command-line options exist to override some of the directives found in the <i>.cloginrc</i> configuration file. </p>
 <p> The command-line options are as follows:</p>
 <dl>
-<dt><code>-S</code></p>
-<dd> Save the configuration on exit, if the device prompts at logout time. This only has affect when used with -s.</p>
-<dt><code>-V</code></p>
-<dd> Prints package name and version strings.</p>
-<dt><code>-c</code></p>
-<dd> Command to be run on each router list on the command-line. Multiple commands maybe listed by separating them with semi-colons (;). The argument should be quoted to avoid shell expansion.</p>
-<dt><code>-d</code></p>
-<dd> Enable expect debugging.</p>
-<dt><code>-E</code></p>
-<dd> Specifies a variable to pass through to scripts (-s). For example, the command-line option -Efoo=bar will produce a global variable by the name Efoo with the initial value &quot;bar&quot;.</p>
-<dt><code>-e</code></p>
-<dd> Specify a password to be supplied when gaining enable privileges on the router(s). Also see the password directive of the <i>.cloginrc</i> file.</p>
-<dt><code>-f</code></p>
-<dd> Specifies an alternate configuration file. The default is <i>$HOME/.cloginrc</i>.</p>
-<dt><code>-p</code></p>
-<dd> Specifies a password associated with the user specified by the <code>-u</code> option, user directive of the <i>.cloginrc</i> file, or the Unix username of the user.</p>
-<dt><code>-s</code></p>
-<dd> The filename of an <code><a href="/docs/linux/man/1-expect/">expect</a></code>(1) script which will be sourced after the login is successful and is expected to return control to <code>clogin,</code> with the connection to the router intact, when it is done. Note that <code>clogin</code> disables <i>log_user</i> of <code><a href="/docs/linux/man/1-expect/">expect</a></code>(1)<code>when</code> <code>-s</code> is used. Example script(s) can be found in share/rancid/*.exp.</p>
-<dt><code>-t</code></p>
-<dd> Alters the timeout interval; the period that <code>clogin</code> waits for an individual command to return a prompt or the login process to produce a prompt or failure. The argument is in seconds.</p>
-<dt><code>-u</code></p>
-<dd> Specifies the username used when prompted. The command-line option overrides any user directive found in <i>.cloginrc</i>. The default is the current Unix username.</p>
-<dt><code>-v</code></p>
-<dd> Specifies a vty password, that which is prompted for upon connection to the router. This overrides the vty password of the <i>.cloginrc</i> file&#8217;s password directive.</p>
-<dt><code>-w</code></p>
-<dd> Specifies the username used if prompted when gaining enable privileges. The command-line option overrides any user or enauser directives found in <i>.cloginrc</i>. The default is the current Unix username.</p>
-<dt><code>-x</code></p>
-<dd> Similar to the <code>-c</code> option; <code>-x</code> specifies a file with commands to run on each of the routers. The commands must not expect additional input, such as &#8216;copy rcp startup-config&#8217; does. For example:</dl>
+<dt><code>-S</code></dt>
+<dd> Save the configuration on exit, if the device prompts at logout time. This only has affect when used with -s.</dd>
+<dt><code>-V</code></dt>
+<dd> Prints package name and version strings.</dd>
+<dt><code>-c</code></dt>
+<dd> Command to be run on each router list on the command-line. Multiple commands maybe listed by separating them with semi-colons (;). The argument should be quoted to avoid shell expansion.</dd>
+<dt><code>-d</code></dt>
+<dd> Enable expect debugging.</dd>
+<dt><code>-E</code></dt>
+<dd> Specifies a variable to pass through to scripts (-s). For example, the command-line option -Efoo=bar will produce a global variable by the name Efoo with the initial value &quot;bar&quot;.</dd>
+<dt><code>-e</code></dt>
+<dd> Specify a password to be supplied when gaining enable privileges on the router(s). Also see the password directive of the <i>.cloginrc</i> file.</dd>
+<dt><code>-f</code></dt>
+<dd> Specifies an alternate configuration file. The default is <i>$HOME/.cloginrc</i>.</dd>
+<dt><code>-p</code></dt>
+<dd> Specifies a password associated with the user specified by the <code>-u</code> option, user directive of the <i>.cloginrc</i> file, or the Unix username of the user.</dd>
+<dt><code>-s</code></dt>
+<dd> The filename of an <code><a href="/docs/linux/man/1-expect/">expect</a></code>(1) script which will be sourced after the login is successful and is expected to return control to <code>clogin,</code> with the connection to the router intact, when it is done. Note that <code>clogin</code> disables <i>log_user</i> of <code><a href="/docs/linux/man/1-expect/">expect</a></code>(1)<code>when</code> <code>-s</code> is used. Example script(s) can be found in share/rancid/*.exp.</dd>
+<dt><code>-t</code></dt>
+<dd> Alters the timeout interval; the period that <code>clogin</code> waits for an individual command to return a prompt or the login process to produce a prompt or failure. The argument is in seconds.</dd>
+<dt><code>-u</code></dt>
+<dd> Specifies the username used when prompted. The command-line option overrides any user directive found in <i>.cloginrc</i>. The default is the current Unix username.</dd>
+<dt><code>-v</code></dt>
+<dd> Specifies a vty password, that which is prompted for upon connection to the router. This overrides the vty password of the <i>.cloginrc</i> file&#8217;s password directive.</dd>
+<dt><code>-w</code></dt>
+<dd> Specifies the username used if prompted when gaining enable privileges. The command-line option overrides any user or enauser directives found in <i>.cloginrc</i>. The default is the current Unix username.</dd>
+<dt><code>-x</code></dt>
+<dd> Similar to the <code>-c</code> option; <code>-x</code> specifies a file with commands to run on each of the routers. The commands must not expect additional input, such as &#8216;copy rcp startup-config&#8217; does. For example:</dd></dl>
 <pre>
 show version
 show logging
 </pre>
 <dl>
-<dt><code>-y</code></p>
-<dd> Specifies the encryption algorithm for use with the <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) -c option. The default encryption type is often not supported. See the <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) man page for details. The default is 3des. </p>
+<dt><code>-y</code></dt>
+<dd> Specifies the encryption algorithm for use with the <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) -c option. The default encryption type is often not supported. See the <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) man page for details. The default is 3des. </dd>
 </dl>
 <h2>RETURNS</h2>
 <p> If the login script fails for any of the devices on the command-line, the exit value of the script will be non-zero and the value will be the number of failures.</p>
 <h2>ENVIRONMENT</h2>
 <p> <code>clogin</code> recognizes the following environment variables. </p>
 <dl>
-<dt><code>CISCO_USER</code></p>
-<dd> Overrides the user directive found in the <i>.cloginrc</i> file, but may be overridden by the <code>-u</code> option.</p>
-<dt><code>CLOGIN</code></p>
-<dd> <code>clogin</code> will not change the banner on your xterm window if this includes the character &#8216;x&#8217;.</p>
-<dt><code>CLOGINRC</code></p>
-<dd> Specifies an alternative location for the <i>.cloginrc</i> file, like the <code>-f</code> option.</p>
-<dt><code>HOME</code></p>
-<dd> Normally set by <code><a href="/docs/linux/man/1-login/">login</a></code>(1) to the user&#8217;s home directory, HOME is used by <code>clogin</code> to locate the <i>.cloginrc</i> configuration file. </p>
+<dt><code>CISCO_USER</code></dt>
+<dd> Overrides the user directive found in the <i>.cloginrc</i> file, but may be overridden by the <code>-u</code> option.</dd>
+<dt><code>CLOGIN</code></dt>
+<dd> <code>clogin</code> will not change the banner on your xterm window if this includes the character &#8216;x&#8217;.</dd>
+<dt><code>CLOGINRC</code></dt>
+<dd> Specifies an alternative location for the <i>.cloginrc</i> file, like the <code>-f</code> option.</dd>
+<dt><code>HOME</code></dt>
+<dd> Normally set by <code><a href="/docs/linux/man/1-login/">login</a></code>(1) to the user&#8217;s home directory, HOME is used by <code>clogin</code> to locate the <i>.cloginrc</i> configuration file. </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>$HOME/.cloginrc</i> Configuration file.</p>

@@ -92,8 +92,8 @@ description: "pegasus_openlmi_system_selinux – Security Enhanced Linux Policy 
 <p> <code>pegasus_openlmi_system_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_system_exec_t type, if you want to transition an executable to the pegasus_openlmi_system_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/pegasus/cmpiLMI_Fan-cimprovagt, /usr/libexec/pegasus/cmpiLMI_Networking-cimprovagt, /usr/libexec/pegasus/cmpiLMI_PowerManagement-cimprovagt </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/pegasus/cmpiLMI_Fan-cimprovagt, /usr/libexec/pegasus/cmpiLMI_Networking-cimprovagt, /usr/libexec/pegasus/cmpiLMI_PowerManagement-cimprovagt </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

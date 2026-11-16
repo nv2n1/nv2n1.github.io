@@ -32,8 +32,8 @@ myagent.foo.stuff {
 <p> Once the writing of the new <i>namespace</i> file has begun, the signals SIGINT, SIGHUP and SIGTERM will be ignored to protect the integrity of the new files.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>$PCP_VAR_DIR/pmns/root</i></p>
-<dd> the default PMNS, when then environment variable <code>PMNS_DEFAULT</code> is unset</dl>
+<dt><i>$PCP_VAR_DIR/pmns/root</i></dt>
+<dd> the default PMNS, when then environment variable <code>PMNS_DEFAULT</code> is unset</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

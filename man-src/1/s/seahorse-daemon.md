@@ -17,15 +17,15 @@ description: "seahorse-daemon – seahorse pass phrase caching agent"
 <h2>OPTIONS</h2>
 <h3>Help options</h3>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show summary of all options and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display brief usage message and exit. </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of all options and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message and exit. </dd>
 </dl>
 <h3>Application options</h3>
 <dl>
-<dt><code>-d, &#8211;no-daemonize</code></p>
-<dd> Do not daemonize seahorse-daemon. </p>
+<dt><code>-d, &#8211;no-daemonize</code></dt>
+<dd> Do not daemonize seahorse-daemon. </dd>
 </dl>
 <h3>Additional options</h3>
 <p> In addition, the usual GTK+ and GNOME command line options apply. See the output of &#8211;help for details. </p>

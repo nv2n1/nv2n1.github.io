@@ -25,39 +25,39 @@ description: "struct_w1_slave – holds a single slave device on the bus"
 <h2>Members</h2>
 <p>owner</p>
 <dl>
-<dd>Points to the one wire &#8220;wire&#8221; kernel module.</dl>
+<dd>Points to the one wire &#8220;wire&#8221; kernel module.</dd></dl>
 <p> name[W1_MAXNAMELEN]</p>
 <dl>
-<dd>Device id is ascii.</dl>
+<dd>Device id is ascii.</dd></dl>
 <p> w1_slave_entry</p>
 <dl>
-<dd>data for the linked list</dl>
+<dd>data for the linked list</dd></dl>
 <p> reg_num</p>
 <dl>
-<dd>the slave id in binary</dl>
+<dd>the slave id in binary</dd></dl>
 <p> refcnt</p>
 <dl>
-<dd>reference count, delete when 0</dl>
+<dd>reference count, delete when 0</dd></dl>
 <p> ttl</p>
 <dl>
-<dd>decrement per search this slave isn&#8217;t found, deatch at 0</dl>
+<dd>decrement per search this slave isn&#8217;t found, deatch at 0</dd></dl>
 <p> flags</p>
 <dl>
-<dd>bit flags for W1_SLAVE_ACTIVE W1_SLAVE_DETACH</dl>
+<dd>bit flags for W1_SLAVE_ACTIVE W1_SLAVE_DETACH</dd></dl>
 <p> master</p>
 <dl>
-<dd>bus which this slave is on</dl>
+<dd>bus which this slave is on</dd></dl>
 <p> family</p>
 <dl>
-<dd>module for device family type</dl>
+<dd>module for device family type</dd></dl>
 <p> family_data</p>
 <dl>
-<dd>pointer for use by the family module</dl>
+<dd>pointer for use by the family module</dd></dl>
 <p> dev</p>
 <dl>
-<dd>kernel device identifier</dl>
+<dd>kernel device identifier</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

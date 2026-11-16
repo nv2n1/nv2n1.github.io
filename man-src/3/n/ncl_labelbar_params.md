@@ -12,17 +12,17 @@ Labelbar_params - This document briefly describes all Labelbar internal paramete
 
  Parameter descriptions, in alphabetical order, of all Labelbar internal parameters follow. Each description begins with a line giving the parameter name and the intrinsic FORTRAN type of the parameter.
 <dl COMPACT><dt>'CBL' - Integer
-<dd>Color of box lines. The default value is -1.
-<dt>'CFL' - Integer
-<dd>Color of fill lines. The default value is -1.
-<dt>'CLB' - Integer
-<dd>Color of labels. The default value is -1.
-<dt>'WBL' - Real
-<dd>Width of box lines. The default value is 0.
-<dt>'WFL' - Real
-<dd>Width of fill lines. The default value is 0.
-<dt>'WLB' - Real
-<dd>Width of label lines. The default value is 0.</dl>
+</dt><dd>Color of box lines. The default value is -1.
+</dd><dt>'CFL' - Integer
+</dt><dd>Color of fill lines. The default value is -1.
+</dd><dt>'CLB' - Integer
+</dt><dd>Color of labels. The default value is -1.
+</dd><dt>'WBL' - Real
+</dt><dd>Width of box lines. The default value is 0.
+</dd><dt>'WFL' - Real
+</dt><dd>Width of fill lines. The default value is 0.
+</dd><dt>'WLB' - Real
+</dt><dd>Width of label lines. The default value is 0.</dd></dl>
  
 
  Each of the &quot;color&quot; parameters may be given a negative value to indicate that color is unspecified; in this case, the color of an object drawn will be that specified by the current polyline color index (in the case of box lines and fill lines) or the current text color index (in the case of labels). A value which is zero or greater specifies the color index to be used. 

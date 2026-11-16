@@ -19,7 +19,7 @@ description: "dla_syrfsx_extended.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  DLA_SYRFSX_EXTENDED improves the computed solution to a system of
  linear equations by performing extra-precise iterative refinement
@@ -31,11 +31,11 @@ description: "dla_syrfsx_extended.f –"
  subroutine is only resonsible for setting the second fields of
  ERR_BNDS_NORM and ERR_BNDS_COMP.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>PREC_TYPE</i> </p>
+</dt><dd> <i>PREC_TYPE</i> </dd>
 <pre>
           PREC_TYPE is INTEGER
      Specifies the intermediate precision to be used in refinement.
@@ -296,14 +296,14 @@ where norm(Z) is
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 394 of file dla_syrfsx_extended.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

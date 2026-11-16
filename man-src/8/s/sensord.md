@@ -14,39 +14,39 @@ description: "sensord – Sensor information logging daemon."
 <p><code>Sensord</code> is a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) or a round-robin database (RRD) and to alert when a sensor alarm is signalled; for example, if a fan fails, a temperature limit is exceeded, etc. </p>
 <h2>Options</h2>
 <dl>
-<dt>-i, &#8211;interval time</p>
-<dd>Specify the interval between scanning for sensor alarms; the default is to scan every minute. </p>
+<dt>-i, &#8211;interval time</dt>
+<dd>Specify the interval between scanning for sensor alarms; the default is to scan every minute. </dd>
 <p> The time should be specified as a raw integer (seconds) or with a suffix `s&#8217; for seconds, `m&#8217; for minutes or `h&#8217; for hours; for example, the default interval is `60&#8242; or `1m&#8217;. </p>
 <p> Specify an interval of zero to suppress scanning explicitly for alarms.</p>
-<dt>-l, &#8211;log-interval time</p>
-<dd>Specify the interval between logging all sensor readings; the default is to log all readings every half hour. </p>
+<dt>-l, &#8211;log-interval time</dt>
+<dd>Specify the interval between logging all sensor readings; the default is to log all readings every half hour. </dd>
 <p> The time is specified as before; e.g., `30m&#8217;. </p>
 <p> Specify an interval of zero to suppress logging of regular sensor readings.</p>
-<dt>-t, &#8211;rrd-interval time</p>
-<dd>Specify the interval between logging all sensor readings to a round-robin database; the default is to log all readings every five minutes <code>if</code> a round-robin database is configured. </p>
+<dt>-t, &#8211;rrd-interval time</dt>
+<dd>Specify the interval between logging all sensor readings to a round-robin database; the default is to log all readings every five minutes <code>if</code> a round-robin database is configured. </dd>
 <p> The time is specified as before; e.g., `5m&#8217;.</p>
-<dt>-T, &#8211;rrd-no-average</p>
-<dd>Specify that the round-robin database should not be averaged. </p>
-<dt>-r, &#8211;rrd-file file</p>
-<dd>Specify a round-robin database into which to log all sensor readings; e.g., `/var/log/sensord.rrd&#8217;. This database will be created if it does not exist. By default, no round-robin database is used. </p>
+<dt>-T, &#8211;rrd-no-average</dt>
+<dd>Specify that the round-robin database should not be averaged. </dd>
+<dt>-r, &#8211;rrd-file file</dt>
+<dd>Specify a round-robin database into which to log all sensor readings; e.g., `/var/log/sensord.rrd&#8217;. This database will be created if it does not exist. By default, no round-robin database is used. </dd>
 <p> See the section <code>ROUND ROBIN DATABASES</code> below for more details.</p>
-<dt>-c, &#8211;config-file file</p>
-<dd>Specify a <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. If no file is specified, the libsensors default configuration file is used. </p>
-<dt>-p, &#8211;pid-file file</p>
-<dd>Specify what PID file to write; the default is to write the file `/var/run/sensord.pid&#8217;. You should always specify an absolute path here. The file is removed when the daemon exits.</p>
-<dt>-f, &#8211;syslog-facility facility</p>
-<dd>Specify the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) facility to use when logging sensor readings and alarms; the default is to use <i>daemon</i>. </p>
+<dt>-c, &#8211;config-file file</dt>
+<dd>Specify a <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. If no file is specified, the libsensors default configuration file is used. </dd>
+<dt>-p, &#8211;pid-file file</dt>
+<dd>Specify what PID file to write; the default is to write the file `/var/run/sensord.pid&#8217;. You should always specify an absolute path here. The file is removed when the daemon exits.</dd>
+<dt>-f, &#8211;syslog-facility facility</dt>
+<dd>Specify the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) facility to use when logging sensor readings and alarms; the default is to use <i>daemon</i>. </dd>
 <p> Other possible facilities include <i>local0</i> through <i>local7</i>, and <i>user</i>.</p>
-<dt>-g, &#8211;rrd-cgi directory</p>
-<dd>Prints out a sample <code><a href="/docs/linux/man/1-rrdcgi/">rrdcgi</a></code>(1) CGI script that can be used to display graphs of recent sensor information in a Web page, and exits. You must specify the world-writable, Web-accessible directory where the graphs should be stored; the CGI script assumes that this will be accessed under the `/sensord/&#8217; directory on the Webserver. See the section <code>ROUND ROBIN DATABASES</code> below for more details.</p>
-<dt>-a, &#8211;load-average</p>
-<dd>Include the load average in the RRD database. You should also specify this flag when you create the CGI script.</p>
-<dt>-d, &#8211;debug</p>
-<dd>Prints a small amount of additional debugging information.</p>
-<dt>-h, &#8211;help</p>
-<dd>Prints a help message and exits.</p>
-<dt>-v, &#8211;version</p>
-<dd>Displays the program version and exits.</dl>
+<dt>-g, &#8211;rrd-cgi directory</dt>
+<dd>Prints out a sample <code><a href="/docs/linux/man/1-rrdcgi/">rrdcgi</a></code>(1) CGI script that can be used to display graphs of recent sensor information in a Web page, and exits. You must specify the world-writable, Web-accessible directory where the graphs should be stored; the CGI script assumes that this will be accessed under the `/sensord/&#8217; directory on the Webserver. See the section <code>ROUND ROBIN DATABASES</code> below for more details.</dd>
+<dt>-a, &#8211;load-average</dt>
+<dd>Include the load average in the RRD database. You should also specify this flag when you create the CGI script.</dd>
+<dt>-d, &#8211;debug</dt>
+<dd>Prints a small amount of additional debugging information.</dd>
+<dt>-h, &#8211;help</dt>
+<dd>Prints a help message and exits.</dd>
+<dt>-v, &#8211;version</dt>
+<dd>Displays the program version and exits.</dd></dl>
 <h2>Chips</h2>
 <p>To restrict the devices that are scanned by this daemon, you may optionally specify a list of chip names. By default, all available chips are scanned. </p>
 <p> A typical chip name would be `w83782d-*&#8217; (you may want to escape the `*&#8217; for your shell) which would scan any W83782D chips on any bus. See <code><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a></code>(5) for more details. Another option is to simply not load the sensor modules for chips in which you have no interest.</p>
@@ -64,7 +64,7 @@ description: "sensord – Sensor information logging daemon."
 local4.info -/var/log/sensors
 local4.alert /dev/console
 local4.alert *</pre>
-</dl>
+</dd></dl>
 <p> The first line ensures that regular sensor readings do not clutter `/var/log/messages&#8217;; we first say `local4.none&#8217; to eliminate informational messages; then `local4.warn&#8217; to enable warnings and above. The second line says to log all regular sensor readings to `/var/log/sensors&#8217;; the leading hyphen `-&#8216; means that this file is not flushed after every message. The final two lines ensure that alarms are printed to the system console as well as to all connected users (in addition to `/var/log/messages&#8217; and `/var/log/sensors&#8217;).</p>
 <h2>Log Rotation</h2>
 <p>On a typical system with a good sensor chip, expect about 2KB per sensor reading in the log file. This works out at about 3MB per month. You should be rotating your syslog files anyway, but just to be sure you&#8217;ll want to use something like <code><a href="/docs/linux/man/8-logrotate/">logrotate</a></code>(8) or equivalent. You might, for example, want an entry in `/etc/logrotate.d/syslog&#8217; containing:</p>
@@ -76,7 +76,7 @@ local4.alert *</pre>
  /usr/sbin/killall -HUP syslogd
  endscript
 }</pre>
-</dl>
+</dd></dl>
 <p> Note, of course, that you want to restart <code>syslogd</code>(8) and not <code><a href="/docs/linux/man/8-sensord/">sensord</a></code>(8)</p>
 <h2>Alarms</h2>
 <p>Alarms generally indicate a critical condition; for example, a fan failure or an unacceptable temperature or voltage. However, some sensor chips do not support alarms, while others are incorrectly configured and may signal alarms incorrectly. </p>
@@ -96,14 +96,14 @@ local4.alert *</pre>
 <pre>sensord --log-interval 0 \
  --load-average \
  --rrd-file /var/log/sensord.rrd</pre>
-</dl>
+</dd></dl>
 <p> Here, we start <code><a href="/docs/linux/man/8-sensord/">sensord</a></code>(8) and configure it to store readings in a round-robin database; note that we disable logging of sensor readings to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), and enable logging of the load average.</p>
 <dl>
 <dd>
 <pre>mkdir /var/www/sensord
 chown www-data:staff /var/www/sensord
 chmod a=rwxs /var/www/sensord</pre>
-</dl>
+</dd></dl>
 <p> Here, we create a world-writable, Web-accessible directory in which graphs will be stored; we set the ownership and permissions on this directory appropriately. You will have to determine the location and ownership that is appropriate for your machine.</p>
 <dl>
 <dd>
@@ -112,7 +112,7 @@ chmod a=rwxs /var/www/sensord</pre>
  --rrd-cgi /var/www/sensord \
  &gt; /usr/lib/cgi-bin/sensord.cgi
 chmod a+rx /usr/lib/cgi-bin/sensord.cgi</pre>
-</dl>
+</dd></dl>
 <p> Here, we create a CGI script that will display sensor readings from the database. You must specify the location of the round-robin database, the location of the directory where the images should be stored, and whether you want the load average displayed. The <code>&#8211;rrd-cgi</code> command-line parameter causes <code><a href="/docs/linux/man/8-sensord/">sensord</a></code>(8) to display a suitable CGI script on <code>stdout</code> and then to exit. You will need to write this script to the CGI bin directory of your Web server, and edit the script if the image directory you chose is not the `/sensord/&#8217; directory of your Web server. </p>
 <p> Finally, you should be able to view your sensor readings from the URL `<a rel="nofollow" href="http://localhost/cgi-bin/sensord.cgi'.">http://localhost/cgi-bin/sensord.cgi&#8217;.</a></p>
 <h2>Modules</h2>
@@ -129,7 +129,7 @@ modprobe w83781d || { echo Fail. ; exit 1 ; }
 echo OK.
 echo -n &quot;Starting sensord: &quot;
 daemon sensord</pre>
-</dl>
+</dd></dl>
 <p> Ignore the platform-specific shell functions; the general idea should be fairly clear.</p>
 <h2>Errors</h2>
 <p>Errors encountered by this daemon are logged to <code>syslogd</code>(8) after which the daemon will exit.</p>
@@ -139,10 +139,10 @@ daemon sensord</pre>
 <p><i>/etc/sensors3.conf</i><br />
  <i>/etc/sensors.conf</i></p>
 <dl>
-<dd>The system-wide <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. See <code><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a></code>(5) for further details.</dl>
+<dd>The system-wide <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. See <code><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a></code>(5) for further details.</dd></dl>
 <p> <i>/etc/syslog.conf</i></p>
 <dl>
-<dd>The system-wide <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) / <code>syslogd</code>(8) configuration file. See <code>syslog.conf</code>(5) for further details.</dl>
+<dd>The system-wide <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) / <code>syslogd</code>(8) configuration file. See <code>syslog.conf</code>(5) for further details.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5)</p>
 <h2>Authors</h2>

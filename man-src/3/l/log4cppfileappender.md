@@ -47,20 +47,20 @@ description: "log4cpp::FileAppender –"
 <dd><i>name</i> the name of the <code>Appender</code>.<br />
  <i>fileName</i> the name of the file to which the <code>Appender</code> has to log.<br />
  <i>append</i> whether the <code>Appender</code> has to truncate the file or just append to it if it already exists. Defaults to &#8216;true&#8217;.<br />
- <i>mode</i> file mode to open the logfile with. Defaults to 00644.</dl>
+ <i>mode</i> file mode to open the logfile with. Defaults to 00644.</dd></dl>
 <h3>log4cpp::FileAppender::FileAppender (const std::string &amp;name, intfd)</h3>
 <p>Constructs a <code>FileAppender</code> to an already open file descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> the name of the <code>Appender</code>.<br />
- <i>fd</i> the file descriptor to which the <code>Appender</code> has to log.</dl>
+ <i>fd</i> the file descriptor to which the <code>Appender</code> has to log.</dd></dl>
 <h3>log4cpp::FileAppender::~FileAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>
 <h3>void log4cpp::FileAppender::_append (const <code>LoggingEvent</code> &amp;event) [protected], [virtual]</h3>
 <p>Log in <code>Appender</code> specific way. Subclasses of <code>Appender</code> should implement this method to perform actual logging. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>. </p>
 <p> Reimplemented in <code>log4cpp::RollingFileAppender</code>.</p>
 <h3>void log4cpp::FileAppender::close () [virtual]</h3>
@@ -74,13 +74,13 @@ description: "log4cpp::FileAppender –"
 <p>Reopens the logfile. This can be useful for logfiles that are rotated externally, e.g. by logrotate. This method is a NOOP for FileAppenders that have been constructed with a file descriptor. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if the reopen succeeded.</dl>
+<dd>true if the reopen succeeded.</dd></dl>
 <p> Reimplemented from <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::FileAppender::setAppend (boolappend) [virtual]</h3>
 <p>Sets the append vs truncate flag. NB. currently the <code>FileAppender</code> opens the logfile in the constructor. Therefore this method is too late to influence the first file opening. We&#8217;ll need something similar to log4j&#8217;s activateOptions(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>append</i> false to truncate, true to append</dl>
+<dd><i>append</i> false to truncate, true to append</dd></dl>
 <h3>void log4cpp::FileAppender::setMode (mode_tmode) [virtual]</h3>
 <p>Sets the file open mode.</p>
 <h2>Member Data Documentation</h2>

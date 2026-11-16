@@ -13,20 +13,20 @@ description: "repertoiremap – map symbolic character names to Unicode code poi
 <h3>Syntax</h3>
 <p>The repertoiremap file starts with a header that may consist of the following keywords:</p>
 <dl>
-<dt><i>comment_char</i></p>
-<dd>is followed by a character that will be used as the comment character for the rest of the file. It defaults to the number sign (#).</p>
-<dt><i>escape_char</i></p>
-<dd>is followed by a character that should be used as the escape character for the rest of the file to mark characters that should be interpreted in a special way. It defaults to the backslash (\).</dl>
+<dt><i>comment_char</i></dt>
+<dd>is followed by a character that will be used as the comment character for the rest of the file. It defaults to the number sign (#).</dd>
+<dt><i>escape_char</i></dt>
+<dd>is followed by a character that should be used as the escape character for the rest of the file to mark characters that should be interpreted in a special way. It defaults to the backslash (\).</dd></dl>
 <p> The mapping section starts with the keyword <i>CHARIDS</i> in the first column. </p>
 <p> The mapping lines have the following form:</p>
 <dl>
-<dt><i>&lt;symbolic-name&gt; &lt;code-point&gt; comment</i></p>
-<dd>This defines exactly one mapping, <i>comment</i> being optional.</dl>
+<dt><i>&lt;symbolic-name&gt; &lt;code-point&gt; comment</i></dt>
+<dd>This defines exactly one mapping, <i>comment</i> being optional.</dd></dl>
 <p> The mapping section ends with the string <i>END CHARIDS</i>.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/share/i18n/repertoiremaps</i></p>
-<dd>Usual default repertoire map path.</dl>
+<dt><i>/usr/share/i18n/repertoiremaps</i></dt>
+<dd>Usual default repertoire map path.</dd></dl>
 <h2>Conforming To</h2>
 <p>POSIX.2.</p>
 <h2>Notes</h2>

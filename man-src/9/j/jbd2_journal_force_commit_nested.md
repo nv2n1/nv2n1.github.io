@@ -14,14 +14,14 @@ description: "jbd2_journal_force_commit_nested –"
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>journal to force Returns true if progress was made.</dl>
+</dd><dd>journal to force Returns true if progress was made.</dd></dl>
 <h2>Description</h2>
 <p>transaction. This is used for forcing out undo-protected data which contains bitmaps, when the fs is running out of space.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

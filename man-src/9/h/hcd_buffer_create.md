@@ -14,7 +14,7 @@ description: "hcd_buffer_create – initialize buffer pools"
 <p><i>hcd</i></p>
 <dl>
 <dd>
-<dd>the bus whose buffer pools are to be initialized</dl>
+</dd><dd>the bus whose buffer pools are to be initialized</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

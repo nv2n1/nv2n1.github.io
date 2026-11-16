@@ -11,10 +11,10 @@ description: "extend_dmalloc – Analyze return-addresses from dmalloc logfiles.
 <p> extend_dmalloc &#8211; Analyze return-addresses from dmalloc logfiles. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>extend_dmalloc</code> [<i>dmalloc-log</i><code>binary</code>]</dl>
+<dt> <code>extend_dmalloc</code> [<i>dmalloc-log</i><code>binary</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>extend_dmalloc</code></p>
-<dd>will run <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) to get information on the return-addresses from a <code>dmalloc</code>(1) logfile. Specifically it will examine any ra= lines and try to get the corresponding line numbers </p>
+<dd>will run <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) to get information on the return-addresses from a <code>dmalloc</code>(1) logfile. Specifically it will examine any ra= lines and try to get the corresponding line numbers </dd>
 <p> The argument <code>binary</code> must be the binary that generated the log dmalloc-log. </p>
 <p> This utility is part of the KDE Software Development Kit.</p>
 <h2>NOTES</h2>
@@ -23,5 +23,5 @@ description: "extend_dmalloc – Analyze return-addresses from dmalloc logfiles.
 <p> <code>Ben Burton</code> &lt;bab [at] debian.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

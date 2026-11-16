@@ -24,9 +24,7 @@ int silence_g_key(int key, int *scancode)
     return key;
 }
 END_OF_FUNCTION(silence_g_key)
-
 ...
-
     install_timer();
 LOCK_FUNCTION(silence_g_key);
 install_keyboard();

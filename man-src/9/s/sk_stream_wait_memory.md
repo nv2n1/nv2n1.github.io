@@ -15,11 +15,11 @@ sk_stream_wait_memory - Wait for more memory for a socket
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>socket to wait for memory</dl>
+<dl><dd></dd><dd>socket to wait for memory</dd></dl>
  
 
  <i>timeo_p</i>
-<dl><dd>for how long</dl>
+<dl><dd>for how long</dd></dl>
 
 <h2>Copyright</h2>
 

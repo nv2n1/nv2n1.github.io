@@ -17,22 +17,22 @@ description: "sg_ident – send SCSI REPORT/SET IDENTIFYING INFORMATION command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-A</code>, <code>&#8211;ascii</code></p>
-<dd>invokes the Report Identifying Information command and if anything is found interprets it as ASCII (or UTF-8 depending on the locale) and prints the information to stdout.</p>
-<dt><code>-C</code>, <code>&#8211;clear</code></p>
-<dd>invokes the Set Identifying Information command with an information length of zero. This has the effect of clearing the existing information.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-i</code>, <code>&#8211;itype</code>=<i>IT</i></p>
-<dd>where <i>IT</i> is the information type. Defaults to zero. The maximum value is 127 which is special and cannot be used with <i>&#8211;set</i> or <i>&#8211;clear</i>. The information type of 127 (if supported) causes the REPORT IDENTIFYING INFORMATION command to respond with a list of available information types and their maximum lengths in bytes. The odd numbered information types between 3 and 125 (inclusive) are not to be used (as they clash with the SCC-2 standard).</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>invokes the Report Identifying information command and if anything is found sends the information (which may be binary) to stdout. Nothing else is sent to stdout however error reports, if any, are sent to stderr.</p>
-<dt><code>-S</code>, <code>&#8211;set</code></p>
-<dd>first reads stdin until an EOF is detected then invokes the Set Identifying Information command to set what has been fetched from stdin as the information. The amount of data read must be between 1 and 512 bytes length (inclusive).</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-A</code>, <code>&#8211;ascii</code></dt>
+<dd>invokes the Report Identifying Information command and if anything is found interprets it as ASCII (or UTF-8 depending on the locale) and prints the information to stdout.</dd>
+<dt><code>-C</code>, <code>&#8211;clear</code></dt>
+<dd>invokes the Set Identifying Information command with an information length of zero. This has the effect of clearing the existing information.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-i</code>, <code>&#8211;itype</code>=<i>IT</i></dt>
+<dd>where <i>IT</i> is the information type. Defaults to zero. The maximum value is 127 which is special and cannot be used with <i>&#8211;set</i> or <i>&#8211;clear</i>. The information type of 127 (if supported) causes the REPORT IDENTIFYING INFORMATION command to respond with a list of available information types and their maximum lengths in bytes. The odd numbered information types between 3 and 125 (inclusive) are not to be used (as they clash with the SCC-2 standard).</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>invokes the Report Identifying information command and if anything is found sends the information (which may be binary) to stdout. Nothing else is sent to stdout however error reports, if any, are sent to stderr.</dd>
+<dt><code>-S</code>, <code>&#8211;set</code></dt>
+<dd>first reads stdin until an EOF is detected then invokes the Set Identifying Information command to set what has been fetched from stdin as the information. The amount of data read must be between 1 and 512 bytes length (inclusive).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <p> This utility permits users to write their own identifying information to their SCSI devices. There are several other types of descriptors (or designators) that the user cannot change. These include the SCSI INQUIRY command with its standard vendor and product identification strings and the product revision level; plus the large amount of information provided by the &quot;Device Identification&quot; VPD page (see sg_vpd). There is also the READ MEDIA SERIAL NUMBER command (see sg_rmsn). The MMC-4 command set for CD and DVDs has a &quot;media serial number&quot; feature (0x109) [and a &quot;logical unit serial number&quot; feature]. These can be viewed with the sg_get_config utility.</p>
 <h2>Examples</h2>
 <p>First, to see if there is an existing information whose format is unknown (for information type 0), use no options: </p>

@@ -14,7 +14,7 @@ description: "d_real_inode – Return the real inode"
 <p><i>dentry</i></p>
 <dl>
 <dd>
-<dd>The dentry to query</dl>
+</dd><dd>The dentry to query</dd></dl>
 <h2>Description</h2>
 <p>If dentry is on an union/overlay, then return the underlying, real inode. Otherwise return <code>d_inode</code>.</p>
 <h2>Copyright</h2>

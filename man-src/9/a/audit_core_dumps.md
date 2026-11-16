@@ -15,7 +15,7 @@ audit_core_dumps - record information about processes that end abnormally
 <h2>Arguments</h2>
 
 <i>signr</i>
-<dl><dd><dd>signal value</dl>
+<dl><dd></dd><dd>signal value</dd></dl>
 
 <h2>Description</h2>
 

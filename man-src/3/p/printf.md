@@ -25,17 +25,18 @@ description: "printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vd
 <p> <code>snprintf</code>(), <code>vsnprintf</code>():</p>
 <dl>
 <dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE ||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>dprintf</code>(), <code>vdprintf</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.10:</p>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl>
+<dt>Since glibc 2.10:</dt>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The functions in the <code>printf</code>() family produce output according to a <i>format</i> as described below. The functions <code>printf</code>() and <code>vprintf</code>() write output to <i>stdout</i>, the standard output stream; <code>fprintf</code>() and <code>vfprintf</code>() write output to the given output <i>stream</i>; <code>sprintf</code>(), <code>snprintf</code>(), <code>vsprintf</code>(), and <code>vsnprintf</code>() write to the character string <i>str</i>. </p>
 <p> The function <code>dprintf</code>() is the same as <code>fprintf</code>() except that it outputs to a file descriptor, <i>fd</i>, instead of to a <i>stdio</i> stream. </p>
 <p> The functions <code>snprintf</code>() and <code>vsnprintf</code>() write at most <i>size</i> bytes (including the terminating null byte (&#8216;
+</p>

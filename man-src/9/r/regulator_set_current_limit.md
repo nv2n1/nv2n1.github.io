@@ -14,13 +14,13 @@ description: "regulator_set_current_limit – set regulator output current limit
 <p><i>regulator</i></p>
 <dl>
 <dd>
-<dd>regulator source</dl>
+</dd><dd>regulator source</dd></dl>
 <p> <i>min_uA</i></p>
 <dl>
-<dd>Minimum supported current in uA</dl>
+<dd>Minimum supported current in uA</dd></dl>
 <p> <i>max_uA</i></p>
 <dl>
-<dd>Maximum supported current in uA</dl>
+<dd>Maximum supported current in uA</dd></dl>
 <h2>Description</h2>
 <p>Sets current sink to the desired output current. This can be set during any regulator state. IOW, regulator can be disabled or enabled. </p>
 <p> If the regulator is enabled then the current will change to the new value immediately otherwise if the regulator is disabled the regulator will output at the new current when enabled.</p>
@@ -29,10 +29,10 @@ description: "regulator_set_current_limit – set regulator output current limit
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

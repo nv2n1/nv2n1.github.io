@@ -16,27 +16,27 @@ description: "rpms2solv – convert one or more rpms into a solv file"
 <p> <code>-m</code> <i>MANIFESTFILE</i></p>
 <dl>
 <dt>
-<dd> Read the rpm file names from the specified <i>MANIFESTFILE</i>. You can use <code>&#8211;</code> to read the manifest from standard input.</dl>
+</dt><dd> Read the rpm file names from the specified <i>MANIFESTFILE</i>. You can use <code>&#8211;</code> to read the manifest from standard input.</dd></dl>
 <p> <code>-0</code></p>
 <dl>
 <dt>
-<dd> Use a null byte as line terminator for manifest files instead of a newline. This is useful if the file names can contain newlines. See also the <code>-print0</code> option in <code>find</code>.</dl>
+</dt><dd> Use a null byte as line terminator for manifest files instead of a newline. This is useful if the file names can contain newlines. See also the <code>-print0</code> option in <code>find</code>.</dd></dl>
 <p> <code>-F</code></p>
 <dl>
 <dt>
-<dd> Do not put all files from the headers into the file list, but instead use the filtering also found in <code>createrepo</code>.</dl>
+</dt><dd> Do not put all files from the headers into the file list, but instead use the filtering also found in <code>createrepo</code>.</dd></dl>
 <p> <code>-k</code></p>
 <dl>
 <dt>
-<dd> Read pubkeys instead of rpms.</dl>
+</dt><dd> Read pubkeys instead of rpms.</dd></dl>
 <p> <code>-K</code></p>
 <dl>
 <dt>
-<dd> Read pubkey keyrings instead of rpms.</dl>
+</dt><dd> Read pubkey keyrings instead of rpms.</dd></dl>
 <p> <code>-X</code></p>
 <dl>
 <dt>
-<dd> Autoexpand SUSE pattern and product provides into packages.</dl>
+</dt><dd> Autoexpand SUSE pattern and product provides into packages.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-rpmdb2solv/">rpmdb2solv</a>(1)</p>
 <h2>AUTHOR</h2>

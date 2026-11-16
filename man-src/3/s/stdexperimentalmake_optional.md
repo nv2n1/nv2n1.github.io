@@ -11,11 +11,8 @@ std::experimental::make_optional - std::experimental::make_optional
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/optional&gt;
-
 template&lt; class T &gt;
-
 constexpr optional&lt;typename std::decay&lt;T&gt;::type&gt;   (library fundamentals TS)
-
 make_optional( T&amp;&amp; value );</code></pre> 
 Creates an optional object from value. Effectively calls optional&lt;typename std::decay&lt;T&gt;::type&gt;(std::forward&lt;T&gt;(value)) 
 

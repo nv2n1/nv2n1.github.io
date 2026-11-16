@@ -17,11 +17,11 @@ bson_strdupv_printf(const char *format,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>format</code></p>
-<dd> A printf style format string.</dl>
+<dt><code>format</code></dt>
+<dd> A printf style format string.</dd></dl>
 <dl>
-<dt><code>args</code></p>
-<dd> A va_list.</dl>
+<dt><code>args</code></dt>
+<dd> A va_list.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is like <code><a href="/docs/linux/man/3-bson_strdup_printf/">bson_strdup_printf</a>(3)</code> except takes a va_list of parameters. </p>
 <h2>RETURNS</h2>

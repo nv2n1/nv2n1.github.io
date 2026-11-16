@@ -96,16 +96,16 @@ description: "Table Of Contents"
 <p> In graphics processing, there are two common ways of representing numerically the intensity of a pixel, or a component of a pixel. </p>
 <p> The obvious way is with a number that is directly proportional to the light intensity (e.g. 10 means twice as many milliwatts per square centimeter as 5). There are two problems with this: </p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> To the human eye, a 1 milliwatt per square centimeter difference<br />
 &nbsp;<wbr>in a bright image is much less apparent than a 1 milliwatt per<br />
 &nbsp;<wbr>square centimeter difference in a dark image.&nbsp;<wbr>&nbsp;<wbr>So if you have<br />
 &nbsp;<wbr>a fixed number of bits in which to store the intensity value,<br />
 &nbsp;<wbr>you&#8217;re wasting resolution at the bright end and skimping on it at<br />
-&nbsp;<wbr>the dark end.</p>
-<dt>&bull;</p>
+&nbsp;<wbr>the dark end.</dd>
+<dt>&bull;</dt>
 <dd> Monitor inputs and camera outputs aren&#8217;t directly proportional to<br />
-&nbsp;<wbr>the light intensity they project or detect. </p>
+&nbsp;<wbr>the light intensity they project or detect. </dd>
 </dl>
 <p> For these reasons, light intensities are often represented in graphics processing by an exponential scale. The transfer function is called a gamma function and the resulting numbers are called gamma-corrected or gamma-adjusted. There are various gamma functions. The Netpbm formats specify that intensities are represented by gamma-adjusted numbers of a particular gamma transfer function. </p>
 <p> These functions let you convert back and forth between these two scales, using the same gamma transfer function that is specified in the Netpbm format specifications. </p>
@@ -124,7 +124,6 @@ description: "Table Of Contents"
 <p> You can remove the user message routine, so that the library issues future informational messages in its default way (write to Standard Error) by specifying a null pointer for <i>function</i>. </p>
 <p> Example: </p>
 <pre><code>
-
 static pm_usermessagefn logfilewrite;
 static void
 logfilewrite(const char *const msg)
@@ -132,18 +131,17 @@ logfilewrite(const char *const msg)
     fprintf(mymsglog, 'Netpbm message: %s', msg);
 }
 pm_setusermessagefn(&amp;logfilewrite);
-
 pm_message('Message for the message log');
 </code></pre>
 <h3>System Utilities</h3>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> <code>pm_system</code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code>pm_tmpfile</code>(1) </p>
-</dl>
+</dd></dl>
 <h3>Keyword Matching</h3>
 <p> <code>Entry Points</code> </p>
 <p> <code>void pm_keymatch();</code> </p>

@@ -14,7 +14,7 @@ description: "vunmap – release virtual mapping obtained by vmap"
 <p><i>addr</i></p>
 <dl>
 <dd>
-<dd>memory base address</dl>
+</dd><dd>memory base address</dd></dl>
 <h2>Description</h2>
 <p>Free the virtually contiguous memory area starting at <i>addr</i>, which was created from the page array passed to <code>vmap</code>. </p>
 <p> Must not be called in interrupt context.</p>

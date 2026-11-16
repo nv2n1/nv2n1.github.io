@@ -18,8 +18,8 @@ description: "Lintian::Processable::Buildinfo — A buildinfo file Lintian can p
 <p> This class represents a &#8216;buildinfo&#8217; file that Lintian can process. Objects of this kind are often part of a Lintian::Group, which represents all the files in a changes or buildinfo file.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>init (<font SIZE="-1">FILE</font>)</p>
-<dd> Initializes a new object from <font SIZE="-1">FILE.</font></dl>
+<dt>init (<font SIZE="-1">FILE</font>)</dt>
+<dd> Initializes a new object from <font SIZE="-1">FILE.</font></dd></dl>
 <h2>Author</h2>
 <p> Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

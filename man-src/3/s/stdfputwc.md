@@ -11,9 +11,7 @@ std::fputwc - std::fputwc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwchar&gt;
-
 wint_t fputwc( wchar_t ch, std::FILE* stream );
-
 wint_t putwc( wchar_t ch, std::FILE* stream );</code></pre> 
 Writes a wide character ch to the given output stream stream. putwc() may be implemented as a macro and may evaluate stream more than once. 
 

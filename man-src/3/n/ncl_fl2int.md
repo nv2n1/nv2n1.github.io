@@ -19,13 +19,13 @@ FL2INT - converts X and Y coordinates from the User Coordinate System to the Met
  The metacode coordinates of a point are integers IMX and IMY between 0 and 32767 inclusive. The area addressed is a square in a &quot;metacode space&quot; that is usually mapped into a square subset of the addressable area of the plotting device. Metacode coordinates were used in calls to the routine PLOTIT and are returned in calls to FL2INT.
 <h2>Synopsis</h2>CALL FL2INT (PX,PY,IX,IY)
 <h2>Description</h2><dl COMPACT><dt>PX
-<dd>(an input expression of type REAL) is the X coordinate of a point in user coordinates.
-<dt>PY
-<dd>(an input expression of type REAL) is the Y coordinate of a point in user coordinates.
-<dt>IX
-<dd>(an output variable of type INTEGER) is the X coordinate of the point in metacode coordinates.
-<dt>IY
-<dd>(an output variable of type INTEGER) is the Y coordinate of the point in metacode coordinates.</dl><h2>Access</h2>To use FL2INT, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
+</dt><dd>(an input expression of type REAL) is the X coordinate of a point in user coordinates.
+</dd><dt>PY
+</dt><dd>(an input expression of type REAL) is the Y coordinate of a point in user coordinates.
+</dd><dt>IX
+</dt><dd>(an output variable of type INTEGER) is the X coordinate of the point in metacode coordinates.
+</dd><dt>IY
+</dt><dd>(an output variable of type INTEGER) is the Y coordinate of the point in metacode coordinates.</dd></dl><h2>Access</h2>To use FL2INT, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: spps, plotit, cmfx, cmfy, cmux, cmuy, kfmx, kfmy, kmpx, kmpy, kpmx, kpmy, kumx, kumy 
 
  Hardcopy: NCAR Graphics Fundamentals, UNIX Version; User's Guide for NCAR GKS-0A Graphics

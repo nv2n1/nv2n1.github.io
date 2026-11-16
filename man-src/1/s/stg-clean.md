@@ -19,11 +19,11 @@ description: "stg-clean – Delete the empty patches in the series"
 <p> -a, &#8211;applied</p>
 <dl>
 <dt>
-<dd> Delete the empty applied patches.</dl>
+</dt><dd> Delete the empty applied patches.</dd></dl>
 <p> -u, &#8211;unapplied</p>
 <dl>
 <dt>
-<dd> Delete the empty unapplied patches.</dl>
+</dt><dd> Delete the empty unapplied patches.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

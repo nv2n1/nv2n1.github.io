@@ -28,20 +28,20 @@ ALTER DATABASE <i>name</i> RESET ALL</pre>
 <p> The remaining forms change the session default for a run-time configuration variable for a PostgreSQL database. Whenever a new session is subsequently started in that database, the specified value becomes the session default value. The database-specific default overrides whatever setting is present in <i>postgresql.conf</i> or has been received from the <code>postgres</code> command line. Only the database owner or a superuser can change the session defaults for a database. Certain variables cannot be set this way, or can only be set by a superuser.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the database whose attributes are to be altered.</p>
-<dt><i>connlimit</i></p>
-<dd>How many concurrent connections can be made to this database. -1 means no limit.</p>
-<dt><i>newname</i></p>
-<dd>The new name of the database.</p>
-<dt><i>new_owner</i></p>
-<dd>The new owner of the database.</p>
-<dt><i>new_tablespace</i></p>
-<dd>The new default tablespace of the database.</p>
-<dt><i>configuration_parameter</i></p>
+<dt><i>name</i></dt>
+<dd>The name of the database whose attributes are to be altered.</dd>
+<dt><i>connlimit</i></dt>
+<dd>How many concurrent connections can be made to this database. -1 means no limit.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the database.</dd>
+<dt><i>new_owner</i></dt>
+<dd>The new owner of the database.</dd>
+<dt><i>new_tablespace</i></dt>
+<dd>The new default tablespace of the database.</dd>
+<dt><i>configuration_parameter</i></dt>
 <dd>
-<dt><i>value</i></p>
-<dd>Set this database&#8217;s session default for the specified configuration parameter to the given value. If <i>value</i> is DEFAULT or, equivalently, RESET is used, the database-specific setting is removed, so the system-wide default setting will be inherited in new sessions. Use RESET ALL to clear all database-specific settings. SET FROM CURRENT saves the session&#8217;s current value of the parameter as the database-specific value. </p>
+</dd><dt><i>value</i></dt>
+<dd>Set this database&#8217;s session default for the specified configuration parameter to the given value. If <i>value</i> is DEFAULT or, equivalently, RESET is used, the database-specific setting is removed, so the system-wide default setting will be inherited in new sessions. Use RESET ALL to clear all database-specific settings. SET FROM CURRENT saves the session&#8217;s current value of the parameter as the database-specific value. </dd>
 <p> See SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)] and in the documentation for more information about allowed parameter names and values.</dl>
 <h2>Notes</h2>
 <p>It is also possible to tie a session default to a specific role rather than to a database; see ALTER ROLE [<code><a href="/docs/linux/man/7-alter_role/">alter_role</a></code>(7)]. Role-specific settings override database-specific ones if there is a conflict.</p>
@@ -52,3 +52,4 @@ ALTER DATABASE <i>name</i> RESET ALL</pre>
 <p>The <code>ALTER DATABASE</code> statement is a PostgreSQL extension.</p>
 <h2>See Also</h2>
 <p>CREATE DATABASE [<code><a href="/docs/linux/man/7-create_database/">create_database</a></code>(7)], DROP DATABASE [<code><a href="/docs/linux/man/7-drop_database/">drop_database</a></code>(7)], SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)], CREATE TABLESPACE [<code><a href="/docs/linux/man/7-create_tablespace/">create_tablespace</a></code>(7)] </p>
+</p>

@@ -19,10 +19,10 @@ description: "pamdeinterlace – remove ever other row from a PAM/PNM image"
 <p> <code>pamdeinterlace myimage.ppm | pamstretch -yscale=2 &gt;newimage.ppm</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-takeodd</code></p>
-<dd> Take the odd-numbered rows from the input and put them in the output. The rows are numbered starting at zero, so the first row in the output is the second row from the input. You cannot specify both <code>-takeeven</code> and <code>-takeodd</code>. </p>
-<dt><code>-takeeven</code></p>
-<dd> Take the even-numbered rows from the input and put them in the output. The rows are numbered starting at zero, so the first row in the output is the first row from the input. This is the default. You cannot specify both <code>-takeeven</code> and <code>-takeodd</code>. </p>
+<dt><code>-takeodd</code></dt>
+<dd> Take the odd-numbered rows from the input and put them in the output. The rows are numbered starting at zero, so the first row in the output is the second row from the input. You cannot specify both <code>-takeeven</code> and <code>-takeodd</code>. </dd>
+<dt><code>-takeeven</code></dt>
+<dd> Take the even-numbered rows from the input and put them in the output. The rows are numbered starting at zero, so the first row in the output is the first row from the input. This is the default. You cannot specify both <code>-takeeven</code> and <code>-takeodd</code>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamstretch/">pamstretch</a></code>(1), <code><a href="/docs/linux/man/1-pnmscale/">pnmscale</a></code>(1) </p>

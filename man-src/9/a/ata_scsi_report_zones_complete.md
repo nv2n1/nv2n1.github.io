@@ -14,11 +14,11 @@ description: "ata_scsi_report_zones_complete – convert ATA output"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>command structure returning the data</dl>
+</dd><dd>command structure returning the data</dd></dl>
 <h2>Description</h2>
 <p>Convert T-13 little-endian field representation into T-10 big-endian field representation. What a mess.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

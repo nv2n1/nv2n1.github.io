@@ -65,7 +65,7 @@ flag.
 <p> <code>ibv_query_device_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Ariel Levkovich &lt;lariel [at] mellanox.com&gt;</p>
+<dt>Ariel Levkovich &lt;lariel [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -15,11 +15,11 @@ skb_segment - Perform protocol segmentation on skb.
 <h2>Arguments</h2>
 
 <i>head_skb</i>
-<dl><dd><dd>buffer to segment</dl>
+<dl><dd></dd><dd>buffer to segment</dd></dl>
  
 
  <i>features</i>
-<dl><dd>features for the output path (see dev-&gt;features)</dl>
+<dl><dd>features for the output path (see dev-&gt;features)</dd></dl>
 
 <h2>Description</h2>
 

@@ -10,13 +10,12 @@ description: "siginterrupt – allow signals to interrupt system calls"
 <p>siginterrupt &#8211; allow signals to interrupt system calls</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 int siginterrupt(int sig, int flag);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>siginterrupt</code>():</p>
 <dl>
 <dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>siginterrupt</code>() function changes the restart behavior when a system call is interrupted by the signal <i>sig</i>. If the <i>flag</i> argument is false (0), then system calls will be restarted if interrupted by the specified signal <i>sig</i>. This is the default behavior in Linux. </p>
 <p> If the <i>flag</i> argument is true (1) and no data has been transferred, then a system call interrupted by the signal <i>sig</i> will return -1 and <i>errno</i> will be set to <code>EINTR</code>. </p>
@@ -25,8 +24,8 @@ int siginterrupt(int sig, int flag);</code></pre>
 <p>The <code>siginterrupt</code>() function returns 0 on success. It returns -1 if the signal number <i>sig</i> is invalid, with <i>errno</i> set to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>The specified signal number is invalid.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>The specified signal number is invalid.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

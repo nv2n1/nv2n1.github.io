@@ -97,8 +97,8 @@ description: "bitlbee_selinux – Security Enhanced Linux Policy for the bitlbee
 <p> <code>bitlbee_exec_t</code> </p>
 <p> &#8211; Set files with the bitlbee_exec_t type, if you want to transition an executable to the bitlbee_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/bip, /usr/sbin/bitlbee </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/bip, /usr/sbin/bitlbee </dd>
 </dl>
 <p> <code>bitlbee_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the bitlbee_initrc_exec_t type, if you want to transition an executable to the bitlbee_initrc_t domain. </p>
@@ -109,8 +109,8 @@ description: "bitlbee_selinux – Security Enhanced Linux Policy for the bitlbee
 <p> <code>bitlbee_var_run_t</code> </p>
 <p> &#8211; Set files with the bitlbee_var_run_t type, if you want to store the bitlbee files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/bip(/.*)?, /var/run/bitlbee.pid, /var/run/bitlbee.sock </p>
+<dt>Paths:</dt>
+<dd>/var/run/bip(/.*)?, /var/run/bitlbee.pid, /var/run/bitlbee.sock </dd>
 </dl>
 <p> <code>bitlbee_var_t</code> </p>
 <p> &#8211; Set files with the bitlbee_var_t type, if you want to store the bit files under the /var directory. </p>

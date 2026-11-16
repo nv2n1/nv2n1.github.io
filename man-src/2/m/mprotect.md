@@ -22,47 +22,47 @@ int pkey_mprotect(void *addr, size_t len, int prot, int pkey);
 <p> If the calling process tries to access memory in a manner that violates the protections, then the kernel generates a <code>SIGSEGV</code> signal for the process. </p>
 <p> <i>prot</i> is a combination of the following access flags: <code>PROT_NONE</code> or a bitwise-or of the other values in the following list:</p>
 <dl>
-<dt><code>PROT_NONE</code></p>
-<dd> The memory cannot be accessed at all.</p>
-<dt><code>PROT_READ</code></p>
-<dd> The memory can be read.</p>
-<dt><code>PROT_WRITE</code></p>
-<dd> The memory can be modified.</p>
-<dt><code>PROT_EXEC</code></p>
-<dd> The memory can be executed.</p>
-<dt><code>PROT_SEM</code> (since Linux 2.5.7)</p>
-<dd> The memory can be used for atomic operations. This flag was introduced as part of the <code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) implementation (in order to guarantee the ability to perform atomic operations required by commands such as <code>FUTEX_WAIT</code>), but is not currently used in on any architecture.</p>
-<dt><code>PROT_SAO</code> (since Linux 2.6.26)</p>
-<dd> The memory should have strong access ordering. This feature is specific to the PowerPC architecture (version 2.06 of the architecture specification adds the SAO CPU feature, and it is available on POWER 7 or PowerPC A2, for example).</dl>
+<dt><code>PROT_NONE</code></dt>
+<dd> The memory cannot be accessed at all.</dd>
+<dt><code>PROT_READ</code></dt>
+<dd> The memory can be read.</dd>
+<dt><code>PROT_WRITE</code></dt>
+<dd> The memory can be modified.</dd>
+<dt><code>PROT_EXEC</code></dt>
+<dd> The memory can be executed.</dd>
+<dt><code>PROT_SEM</code> (since Linux 2.5.7)</dt>
+<dd> The memory can be used for atomic operations. This flag was introduced as part of the <code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) implementation (in order to guarantee the ability to perform atomic operations required by commands such as <code>FUTEX_WAIT</code>), but is not currently used in on any architecture.</dd>
+<dt><code>PROT_SAO</code> (since Linux 2.6.26)</dt>
+<dd> The memory should have strong access ordering. This feature is specific to the PowerPC architecture (version 2.06 of the architecture specification adds the SAO CPU feature, and it is available on POWER 7 or PowerPC A2, for example).</dd></dl>
 <p> Additionally (since Linux 2.6.0), <i>prot</i> can have one of the following flags set:</p>
 <dl>
 <dt>
-<dd> <code>PROT_GROWSUP</code> Apply the protection mode up to the end of a mapping that grows upwards. (Such mappings are created for the stack area on architectures&#8212;for example, HP-PARISC&#8212;that have an upwardly growing stack.)</p>
-<dt><code>PROT_GROWSDOWN</code></p>
-<dd> Apply the protection mode down to the beginning of a mapping that grows downward (which should be a stack segment or a segment mapped with the <code>MAP_GROWSDOWN</code> flag set).</dl>
+</dt><dd> <code>PROT_GROWSUP</code> Apply the protection mode up to the end of a mapping that grows upwards. (Such mappings are created for the stack area on architectures&#8212;for example, HP-PARISC&#8212;that have an upwardly growing stack.)</dd>
+<dt><code>PROT_GROWSDOWN</code></dt>
+<dd> Apply the protection mode down to the beginning of a mapping that grows downward (which should be a stack segment or a segment mapped with the <code>MAP_GROWSDOWN</code> flag set).</dd></dl>
 <p> Like <code>mprotect</code>(), <code>pkey_mprotect</code>() changes the protection on the pages specified by <i>addr</i> and <i>len</i>. The <i>pkey</i> argument specifies the protection key (see <code><a href="/docs/linux/man/7-pkeys/">pkeys</a></code>(7)) to assign to the memory. The protection key must be allocated with <code><a href="/docs/linux/man/2-pkey_alloc/">pkey_alloc</a></code>(2) before it is passed to <code>pkey_mprotect</code>(). For an example of the use of this system call, see <code><a href="/docs/linux/man/7-pkeys/">pkeys</a></code>(7).</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>mprotect</code>() and <code>pkey_mprotect</code>() return zero. On error, these system calls return -1, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The memory cannot be given the specified access. This can happen, for example, if you <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) a file to which you have read-only access, then ask <code>mprotect</code>() to mark it <code>PROT_WRITE</code>.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>addr</i> is not a valid pointer, or not a multiple of the system page size.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>pkey_mprotect</code>()) <i>pkey</i> has not been allocated with <code><a href="/docs/linux/man/2-pkey_alloc/">pkey_alloc</a></code>(2)</p>
-<dt><code>EINVAL</code></p>
-<dd> Both <code>PROT_GROWSUP</code> and <code>PROT_GROWSDOWN</code> were specified in <i>prot</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid flags specified in <i>prot</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> (PowerPC architecture) <code>PROT_SAO</code> was specified in <i>prot</i>, but SAO hardware feature is not available.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Internal kernel structures could not be allocated.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Addresses in the range [<i>addr</i>, <i>addr</i>+<i>len</i>-1] are invalid for the address space of the process, or specify one or more pages that are not mapped. (Before kernel 2.4.19, the error <code>EFAULT</code> was incorrectly produced for these cases.)</p>
-<dt><code>ENOMEM</code></p>
-<dd> Changing the protection of a memory region would result in the total number of mappings with distinct attributes (e.g., read versus read/write protection) exceeding the allowed maximum. (For example, making the protection of a range <code>PROT_READ</code> in the middle of a region currently protected as <code>PROT_READ|PROT_WRITE</code> would result in three mappings: two read/write mappings at each end and a read-only mapping in the middle.)</dl>
+<dt><code>EACCES</code></dt>
+<dd> The memory cannot be given the specified access. This can happen, for example, if you <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) a file to which you have read-only access, then ask <code>mprotect</code>() to mark it <code>PROT_WRITE</code>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>addr</i> is not a valid pointer, or not a multiple of the system page size.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>pkey_mprotect</code>()) <i>pkey</i> has not been allocated with <code><a href="/docs/linux/man/2-pkey_alloc/">pkey_alloc</a></code>(2)</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Both <code>PROT_GROWSUP</code> and <code>PROT_GROWSDOWN</code> were specified in <i>prot</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid flags specified in <i>prot</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (PowerPC architecture) <code>PROT_SAO</code> was specified in <i>prot</i>, but SAO hardware feature is not available.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Internal kernel structures could not be allocated.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Addresses in the range [<i>addr</i>, <i>addr</i>+<i>len</i>-1] are invalid for the address space of the process, or specify one or more pages that are not mapped. (Before kernel 2.4.19, the error <code>EFAULT</code> was incorrectly produced for these cases.)</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Changing the protection of a memory region would result in the total number of mappings with distinct attributes (e.g., read versus read/write protection) exceeding the allowed maximum. (For example, making the protection of a range <code>PROT_READ</code> in the middle of a region currently protected as <code>PROT_READ|PROT_WRITE</code> would result in three mappings: two read/write mappings at each end and a read-only mapping in the middle.)</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>pkey_mprotect</code>() first appeared in Linux 4.9; library support was added in glibc 2.27.</p>
 <h2>CONFORMING TO</h2>

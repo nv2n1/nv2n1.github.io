@@ -40,20 +40,20 @@ int
 <code>Tcl_ObjectContextSkippedArgs</code>(<i>context</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in/out) The interpreter holding the object or class to create or update a method in.</p>
-<dd>Tcl_Object <i>object</i> (in) The object to create the method in.</p>
-<dd>Tcl_Class <i>class</i> (in) The class to create the method in.</p>
-<dd>Tcl_Obj <i>*nameObj</i> (in) The name of the method to create. Should not be NULL unless creating constructors or destructors.</p>
-<dd>int <i>isPublic</i> (in) A boolean flag saying whether the method is to be exported.</p>
-<dd>Tcl_MethodType <i>*methodTypePtr</i> (in) A description of the type of the method to create, or the type of method to compare against.</p>
-<dd>ClientData <i>clientData</i> (in) A piece of data that is passed to the implementation of the method without interpretation.</p>
-<dd>ClientData <i>*clientDataPtr</i> (out) A pointer to a variable in which to write the <i>clientData</i> value supplied when the method was created. If NULL, the <i>clientData</i> value will not be retrieved.</p>
-<dd>Tcl_Method <i>method</i> (in) A reference to a method to query.</p>
-<dd>Tcl_ObjectContext <i>context</i> (in) A reference to a method-call context. Note that client code <i>must not</i> retain a reference to a context.</p>
-<dd>int <i>objc</i> (in) The number of arguments to pass to the method implementation.</p>
-<dd>Tcl_Obj *const <i>*objv</i> (in) An array of arguments to pass to the method implementation.</p>
+<dd>Tcl_Interp <i>*interp</i> (in/out) The interpreter holding the object or class to create or update a method in.</dd>
+<dd>Tcl_Object <i>object</i> (in) The object to create the method in.</dd>
+<dd>Tcl_Class <i>class</i> (in) The class to create the method in.</dd>
+<dd>Tcl_Obj <i>*nameObj</i> (in) The name of the method to create. Should not be NULL unless creating constructors or destructors.</dd>
+<dd>int <i>isPublic</i> (in) A boolean flag saying whether the method is to be exported.</dd>
+<dd>Tcl_MethodType <i>*methodTypePtr</i> (in) A description of the type of the method to create, or the type of method to compare against.</dd>
+<dd>ClientData <i>clientData</i> (in) A piece of data that is passed to the implementation of the method without interpretation.</dd>
+<dd>ClientData <i>*clientDataPtr</i> (out) A pointer to a variable in which to write the <i>clientData</i> value supplied when the method was created. If NULL, the <i>clientData</i> value will not be retrieved.</dd>
+<dd>Tcl_Method <i>method</i> (in) A reference to a method to query.</dd>
+<dd>Tcl_ObjectContext <i>context</i> (in) A reference to a method-call context. Note that client code <i>must not</i> retain a reference to a context.</dd>
+<dd>int <i>objc</i> (in) The number of arguments to pass to the method implementation.</dd>
+<dd>Tcl_Obj *const <i>*objv</i> (in) An array of arguments to pass to the method implementation.</dd>
 <dd>int <i>skip</i> (in) The number of arguments passed to the method implementation that do not represent &quot;real&quot; arguments.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p>A method is an operation carried out on an object that is associated with the object. Every method must be attached to either an object or a class; methods attached to a class are associated with all instances (direct and indirect) of that class. </p>
 <p> Given a method, the entity that declared it can be found using <code>Tcl_MethodDeclarerClass</code> which returns the class that the method is attached to (or NULL if the method is not attached to any class) and <code>Tcl_MethodDeclarerObject</code> which returns the object that the method is attached to (or NULL if the method is not attached to an object). The name of the method can be retrieved with <code>Tcl_MethodName</code> and whether the method is exported is retrieved with <code>Tcl_MethodIsPublic</code>. The type of the method can also be introspected upon to a limited degree; the function <code>Tcl_MethodIsType</code> returns whether a method is of a particular type, assigning the per-method <i>clientData</i> to the variable pointed to by <i>clientDataPtr</i> if (that is non-NULL) if the type is matched.</p>
@@ -75,7 +75,7 @@ int
  Tcl_MethodDeleteProc *<i>deleteProc</i>;
  Tcl_CloneProc *<i>cloneProc</i>;
 } <code>Tcl_MethodType</code>;</pre>
-</dl>
+</dd></dl>
 <p> The <i>version</i> field allows for future expansion of the structure, and should always be declared equal to TCL_OO_METHOD_VERSION_CURRENT. The <i>name</i> field provides a human-readable name for the type, and is the value that is exposed via the <code>info class methodtype</code> and <code>info object methodtype</code> Tcl commands. </p>
 <p> The <i>callProc</i> field gives a function that is called when the method is invoked; it must never be NULL. </p>
 <p> The <i>deleteProc</i> field gives a function that is used to delete a particular method, and is called when the method is replaced or removed; if the field is NULL, it is assumed that the method&#8217;s <i>clientData</i> needs no special action to delete. </p>
@@ -90,7 +90,7 @@ int
  Tcl_ObjectContext <i>objectContext</i>,
  int <i>objc</i>,
  Tcl_Obj *const *<i>objv</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> argument to a Tcl_MethodCallProc is the value that was given when the method was created, the <i>interp</i> is a place in which to execute scripts and access variables as well as being where to put the result of the method, and the <i>objc</i> and <i>objv</i> fields give the parameter objects to the method. The calling context of the method can be discovered through the <i>objectContext</i> argument, and the return value from a Tcl_MethodCallProc is any Tcl return code (e.g. TCL_OK, TCL_ERROR).</p>
 <h3>Tcl_Methoddeleteproc Function Signature</h3>
 <p>Functions matching this signature are used when a method is deleted, whether through a new method being created or because the object or class is deleted. </p>
@@ -98,7 +98,7 @@ int
 <dd>
 <pre>typedef void <code>Tcl_MethodDeleteProc</code>(
  ClientData <i>clientData</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> argument to a Tcl_MethodDeleteProc will be the same as the value passed to the <i>clientData</i> argument to <code>Tcl_NewMethod</code> or <code>Tcl_NewInstanceMethod</code> when the method was created.</p>
 <h3>Tcl_Cloneproc Function Signature</h3>
 <p>Functions matching this signature are used to copy a method when the object or class is copied using <code>Tcl_CopyObjectInstance</code> (or <code>oo::copy</code>). </p>
@@ -108,7 +108,7 @@ int
  Tcl_Interp *<i>interp</i>,
  ClientData <i>oldClientData</i>,
  ClientData *<i>newClientDataPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>interp</i> argument gives a place to write an error message when the attempt to clone the object is to fail, in which case the clone procedure must also return TCL_ERROR; it should return TCL_OK otherwise. The <i>oldClientData</i> field to a Tcl_CloneProc gives the value from the method being copied from, and the <i>newClientDataPtr</i> field will point to a variable in which to write the value for the method being copied to.</p>
 <h2>See Also</h2>
 <p>Class(3), oo::class(n), oo::define(n), oo::object(n)</p>

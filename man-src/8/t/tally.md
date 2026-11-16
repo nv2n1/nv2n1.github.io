@@ -15,10 +15,10 @@ description: "tally.control – Keep track of newsgroup creations and deletions"
 <p> All these log files reside in the <i>pathlog</i> directory set in <i>inn.conf</i>. In order to generate them, you need to enable control articles logging in <i><a href="/docs/linux/man/5-control-ctl/">control.ctl</a></i>(5), as explained in the <i>control.log</i> entry of <i><a href="/docs/linux/man/5-newslog/">newslog</a></i>(5).</p>
 <h2>Files</h2>
 <dl>
-<dt><i>pathbin</i>/tally.control</p>
-<dd>The Shell script itself used to tally newsgroup creations and deletions up.</p>
-<dt><i>pathlog</i>/control.log</p>
-<dd>This file maintains a count of the number of newgroup and rmgroup control messages seen for each newsgroup. The count is of the number of control messages with the indicated arguments, regardless if they were actually processed. All control arguments, including invalid ones, are counted. An example of lines which can be found in that log file is: </p>
+<dt><i>pathbin</i>/tally.control</dt>
+<dd>The Shell script itself used to tally newsgroup creations and deletions up.</dd>
+<dt><i>pathlog</i>/control.log</dt>
+<dd>This file maintains a count of the number of newgroup and rmgroup control messages seen for each newsgroup. The count is of the number of control messages with the indicated arguments, regardless if they were actually processed. All control arguments, including invalid ones, are counted. An example of lines which can be found in that log file is: </dd>
 <pre> 3 Control: newgroup foo.bar moderated
  3 Control: rmgroup misc.removed
  1 Control: newgroup misc.created</pre>

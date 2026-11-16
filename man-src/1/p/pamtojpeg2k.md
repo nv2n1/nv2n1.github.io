@@ -24,16 +24,16 @@ description: "pamtojpeg2k – convert PAM/PNM image to a JPEG-2000 code stream"
 <h2>OPTIONS</h2>
 <p> Most of the options are identical in name and function to options that the Jasper library JPC encoder subroutine takes. See Jasper documentation for details. Here, we document only options that are not direct analogs of Jasper options. </p>
 <dl>
-<dt><code>-compression=</code><i>ratio</i></p>
-<dd> <i>ratio</i> is a floating point number that specifies the compression ratio. <code>pamtojpeg2k</code> will adjust quality as necessary to ensure that you get this compression ratio. E.g. 4 means the output will be about one fourth the size in bytes of the input file. </p>
+<dt><code>-compression=</code><i>ratio</i></dt>
+<dd> <i>ratio</i> is a floating point number that specifies the compression ratio. <code>pamtojpeg2k</code> will adjust quality as necessary to ensure that you get this compression ratio. E.g. 4 means the output will be about one fourth the size in bytes of the input file. </dd>
 <p> The ratio concerns just the raster part of the image, with the denominator being what the raster would take if it were encoded the most naive way possible (e.g. 3 bytes per pixel in 8-bit-per-sample RGB). It does, however, include metadata that is part of the compressed raster. Because of that, it may not be possible to give you your requested compression ratio at any quality. If it isn&#8217;t, <code>pamtojpeg2k</code> fails with a message saying so. </p>
 <p> If you don&#8217;t specify this option, <code>pamtojpeg2k</code> gives you the best compression it can without losing any quality. Because of the metadata issue described above, this may mean, for a small image, the image actually expands. </p>
 <p> Note that though the Jasper library takes a compression factor, this option specifies a compression ratio. The compression factor is the multiplicative inverse of (1 divided by) the compression ratio. </p>
 <p> Before Netpbm 10.61 (December 2012), the default was a compression ratio of 1, and if <code>pamtojpeg2k</code> could not make the output that small, it just made it as small as it could, with zero quality. You know this is happening when you see the warning message, &#8217;empty layer generated.&#8217; </p>
-<dt><code>-verbose</code></p>
-<dd> This option causes <code>pamtojpeg2k</code> to issue informational messages about the conversion process. </p>
-<dt><code>-debuglevel</code>=<i>number</i></p>
-<dd> This option controls debug messages from the Jasper library. <code>pamtojpeg2k</code> passes <i>number</i> as the debug level to the Jasper JPC encoder. </p>
+<dt><code>-verbose</code></dt>
+<dd> This option causes <code>pamtojpeg2k</code> to issue informational messages about the conversion process. </dd>
+<dt><code>-debuglevel</code>=<i>number</i></dt>
+<dd> This option controls debug messages from the Jasper library. <code>pamtojpeg2k</code> passes <i>number</i> as the debug level to the Jasper JPC encoder. </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr></dl>
 <h2>EXAMPLES</h2>
 <p> This example compresses losslessly. </p>
@@ -57,3 +57,4 @@ description: "pamtojpeg2k – convert PAM/PNM image to a JPEG-2000 code stream"
 <h2>History</h2>
 <p> <code>pamtojpeg2k</code> was added to Netpbm in Release 10.12 (November 2002). </p>
 <h2>Index</h2>
+</p>

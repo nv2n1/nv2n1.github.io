@@ -14,7 +14,7 @@ description: "snd_pcm_suspend_all – trigger SUSPEND to all substreams in the g
 <p><i>pcm</i></p>
 <dl>
 <dd>
-<dd>the PCM instance</dl>
+</dd><dd>the PCM instance</dd></dl>
 <h2>Description</h2>
 <p>After this call, all streams are changed to SUSPENDED state.</p>
 <h2>Return</h2>

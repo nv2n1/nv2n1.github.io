@@ -22,13 +22,13 @@ SUBROUTINE SETR (XMIN,XMAX,YMIN,YMAX,ZMIN,ZMAX,R0)
 <h2>Description</h2>
 
 <dl><dt>XMIN,XMAX
-<dd>Specifies the range of X array that will be passed to SRFACE.
-<dt>YMIN,YMAX
-<dd>Specifies the range of Y array that will be passed to SRFACE.
-<dt>ZMIN,ZMAX
-<dd>Specifies the range of Z array that will be passed to SRFACE. If a movie is being made of an evolving Z array, ZMIN and ZMAX should contain range of the union of all the Z arrays. They need not be exact.
-<dt>R0
-<dd>Distance between observer and point looked at when the picture is to fill the screen when viewed from the direction which makes the picture biggest. If R0 is not positive, then the relative size feature is turned off, and subsequent pictures will fill the screen.</dl>
+</dt><dd>Specifies the range of X array that will be passed to SRFACE.
+</dd><dt>YMIN,YMAX
+</dt><dd>Specifies the range of Y array that will be passed to SRFACE.
+</dd><dt>ZMIN,ZMAX
+</dt><dd>Specifies the range of Z array that will be passed to SRFACE. If a movie is being made of an evolving Z array, ZMIN and ZMAX should contain range of the union of all the Z arrays. They need not be exact.
+</dd><dt>R0
+</dt><dd>Distance between observer and point looked at when the picture is to fill the screen when viewed from the direction which makes the picture biggest. If R0 is not positive, then the relative size feature is turned off, and subsequent pictures will fill the screen.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

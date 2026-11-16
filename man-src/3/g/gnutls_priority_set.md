@@ -14,10 +14,10 @@ description: "gnutls_priority_set – API function"
 <p> <code>int gnutls_priority_set(gnutls_session_t </code><i>session</i><code>, gnutls_priority_t </code><i>priority</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_priority_t priority</p>
-<dd> is a <code>gnutls_priority_t</code> structure.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_priority_t priority</dt>
+<dd> is a <code>gnutls_priority_t</code> structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Sets the priorities to use on the ciphers, key exchange methods, macs and compression methods.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_priority_set – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

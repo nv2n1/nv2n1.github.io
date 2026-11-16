@@ -15,11 +15,11 @@ usb_set_device_state - change a device's current state (usbcore, hcds)
 <h2>Arguments</h2>
 
 <i>udev</i>
-<dl><dd><dd>pointer to device whose state should be changed</dl>
+<dl><dd></dd><dd>pointer to device whose state should be changed</dd></dl>
  
 
  <i>new_state</i>
-<dl><dd>new state value to be stored</dl>
+<dl><dd>new state value to be stored</dd></dl>
 
 <h2>Description</h2>
 

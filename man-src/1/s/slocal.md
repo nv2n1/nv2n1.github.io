@@ -11,10 +11,10 @@ description: "slocal – asynchronously filter and deliver new mail"
 <p> slocal &#8211; asynchronously filter and deliver new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>/usr/libexec/nmh/slocal</code> [<code>-addr</code> <i>address</i>] [<code>-info</code> <i>data</i>] [<code>-sender</code> <i>sender</i>] [<code>-user</code> <i>username</i>] [<code>-mailbox</code> <i>mbox</i>] [<code>-file</code> <i>file</i>] [<code>-maildelivery</code> <i>deliveryfile</i>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-suppressdup</code> | <code>-nosuppressdup</code>] [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>/usr/libexec/nmh/slocal</code> [<code>-addr</code> <i>address</i>] [<code>-info</code> <i>data</i>] [<code>-sender</code> <i>sender</i>] [<code>-user</code> <i>username</i>] [<code>-mailbox</code> <i>mbox</i>] [<code>-file</code> <i>file</i>] [<code>-maildelivery</code> <i>deliveryfile</i>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-suppressdup</code> | <code>-nosuppressdup</code>] [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Slocal</code></p>
-<dd>is a program designed to allow you to have your inbound mail processed according to a complex set of selection criteria. You do not normally invoke <code>slocal</code> yourself, rather <code>slocal</code> is invoked on your behalf by your system&#8217;s Message Transfer Agent (such as <code>sendmail</code>) when the message arrives. </p>
+<dd>is a program designed to allow you to have your inbound mail processed according to a complex set of selection criteria. You do not normally invoke <code>slocal</code> yourself, rather <code>slocal</code> is invoked on your behalf by your system&#8217;s Message Transfer Agent (such as <code>sendmail</code>) when the message arrives. </dd>
 <p> The message selection criteria used by <code>slocal is specified</code> in the file &#8220;<i>.maildelivery</i>&#8221; in the user&#8217;s home directory. You can specify an alternate file with the <code>-maildelivery</code> <i>file</i> option. The syntax of this file is specified below. </p>
 <p> The message delivery address and message sender are determined from the Message Transfer Agent envelope information, if possible. Under <code>sendmail</code>, the sender will obtained from the UUCP &#8220;From:&#8221; line, if present. The user may override these values with the <code>-addr</code> and <code>-sender</code> switches. </p>
 <p> The message is normally read from the standard input. The <code>-file</code> switch sets the name of the file from which the message should be read, instead of reading stdin. This is useful when debugging a &#8220;<i>.maildelivery</i>&#8221; file. </p>
@@ -32,73 +32,71 @@ description: "slocal – asynchronously filter and deliver new mail"
 <p> The format of each line in the &#8220;<i>.maildelivery</i>&#8221; file is: </p>
 <dl>
 <dt>
-<dd> <code>header<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pattern<tt>&nbsp;<wbr></tt>action<tt>&nbsp;<wbr>&nbsp;<wbr></tt>result<tt>&nbsp;<wbr>&nbsp;<wbr></tt>string</code></dl>
+</dt><dd> <code>header<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pattern<tt>&nbsp;<wbr></tt>action<tt>&nbsp;<wbr>&nbsp;<wbr></tt>result<tt>&nbsp;<wbr>&nbsp;<wbr></tt>string</code></dd></dl>
 <p> <code>header</code>:</p>
 <dl>
 <dt>
-<dd> The name of a header field (such as To, Cc, or From) that is to<br />
- be searched for a pattern. This is any field in the headers of the message that might be present. </p>
+</dt><dd> The name of a header field (such as To, Cc, or From) that is to<br />
+ be searched for a pattern. This is any field in the headers of the message that might be present. </dd>
 <p> The following special fields are also defined:</p>
 <dl>
-<dt><i>source</i></p>
-<dd> the out-of-band sender information</p>
-<dt><i>addr</i></p>
-<dd> the address that was used to cause delivery to the recipient</p>
-<dt><i>default</i></p>
-<dd> this matches <code>only</code> if the message hasn&#8217;t been delivered yet</p>
-<dt><i>*</i></p>
-<dd> this always matches</dl>
+<dt><i>source</i></dt>
+<dd> the out-of-band sender information</dd>
+<dt><i>addr</i></dt>
+<dd> the address that was used to cause delivery to the recipient</dd>
+<dt><i>default</i></dt>
+<dd> this matches <code>only</code> if the message hasn&#8217;t been delivered yet</dd>
+<dt><i>*</i></dt>
+<dd> this always matches</dd></dl>
 </dl>
 <p> <code>pattern</code>:</p>
 <dl>
 <dt>
-<dd> The sequence of characters to match in the specified header field. Matching is case-insensitive, but does not use regular expressions.</dl>
+</dt><dd> The sequence of characters to match in the specified header field. Matching is case-insensitive, but does not use regular expressions.</dd></dl>
 <p> <code>action</code>:</p>
 <dl>
 <dt>
-<dd> The action to take to deliver the message. When a message is delivered, a &#8220;Delivery-Date: date&#8221; header is added which indicates the date and time that message was delivered.</p>
+</dt><dd> The action to take to deliver the message. When a message is delivered, a &#8220;Delivery-Date: date&#8221; header is added which indicates the date and time that message was delivered.</dd>
 <dl>
-<dt><i>destroy</i></p>
-<dd> This action always succeeds.</p>
-<dt><i>file</i>, <i>mbox</i>, or <i>&gt;</i></p>
-<dd> Append the message to the file named by <i>string</i>. The message is appended to the file in mbox (uucp) format. This is the format used by most other mail clients (such as mailx, elm). If the message can be appended to the file, then this action succeeds.</p>
-<dt><i>mmdf</i></p>
-<dd> Identical to <i>file</i>, but always appends the message using the MMDF mailbox format.</p>
-<dt><i>pipe</i> or <i>|</i></p>
-<dd> Pipe the message as the standard input to the command named by <i>string</i>, using the Bourne shell <code>sh</code> to interpret the string. Prior to giving the string to the shell, it is expanded with the following built-in variables:</p>
+<dt><i>destroy</i></dt>
+<dd> This action always succeeds.</dd>
+<dt><i>file</i>, <i>mbox</i>, or <i>&gt;</i></dt>
+<dd> Append the message to the file named by <i>string</i>. The message is appended to the file in mbox (uucp) format. This is the format used by most other mail clients (such as mailx, elm). If the message can be appended to the file, then this action succeeds.</dd>
+<dt><i>mmdf</i></dt>
+<dd> Identical to <i>file</i>, but always appends the message using the MMDF mailbox format.</dd>
+<dt><i>pipe</i> or <i>|</i></dt>
+<dd> Pipe the message as the standard input to the command named by <i>string</i>, using the Bourne shell <code>sh</code> to interpret the string. Prior to giving the string to the shell, it is expanded with the following built-in variables:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>$(sender)</p>
-<dd> the out-of-band sender information</p>
-<dt>$(address)</p>
-<dd> the address that was used to cause delivery to the recipient</p>
-<dt>$(size)</p>
-<dd> the size of the message in bytes</p>
-<dt>$(reply-to)</p>
-<dd> either the &#8220;Reply-To:&#8221; or &#8220;From:&#8221; field of the message</p>
-<dt>$(info)</p>
-<dd> the out-of-band information specified</dl>
+<dt>$(sender)</dt>
+<dd> the out-of-band sender information</dd>
+<dt>$(address)</dt>
+<dd> the address that was used to cause delivery to the recipient</dd>
+<dt>$(size)</dt>
+<dd> the size of the message in bytes</dd>
+<dt>$(reply-to)</dt>
+<dd> either the &#8220;Reply-To:&#8221; or &#8220;From:&#8221; field of the message</dd>
+<dt>$(info)</dt>
+<dd> the out-of-band information specified</dd></dl>
 </dl>
-<dt><i>qpipe</i> or <i>^</i></p>
-<dd> Similar to <i>pipe</i>, but executes the command directly, after built-in variable expansion, without assistance from the shell. This action can be used to avoid quoting special characters which your shell might interpret.</p>
-<dt><i>folder</i> or <i>+</i></p>
-<dd> Store the message in the <code>nmh</code> folder named by <i>string</i>. Currently this is handled by piping the message to the <code>nmh</code> program <code>rcvstore</code>, although this may change in the future.</dl>
+<dt><i>qpipe</i> or <i>^</i></dt>
+<dd> Similar to <i>pipe</i>, but executes the command directly, after built-in variable expansion, without assistance from the shell. This action can be used to avoid quoting special characters which your shell might interpret.</dd>
+<dt><i>folder</i> or <i>+</i></dt>
+<dd> Store the message in the <code>nmh</code> folder named by <i>string</i>. Currently this is handled by piping the message to the <code>nmh</code> program <code>rcvstore</code>, although this may change in the future.</dd></dl>
 </dl>
 <p> <code>result</code>:</p>
 <dl>
 <dt>
-<dd> Indicates how the action should be performed:</p>
+</dt><dd> Indicates how the action should be performed:</dd>
 <dl>
-<dt><i>A</i></p>
-<dd> Perform the action. If the action succeeds, then the message is considered delivered.</p>
-<dt><i>R</i></p>
-<dd> Perform the action. Regardless of the outcome of the action, the message is not considered delivered.</p>
-<dt><i>?</i></p>
-<dd> Perform the action only if the message has not been delivered. If the action succeeds, then the message is considered delivered.</p>
-<dt><i>N</i></p>
-<dd> Perform the action only if the message has not been delivered and the previous action succeeded. If this action succeeds, then the message is considered delivered.</dl>
+<dt><i>A</i></dt>
+<dd> Perform the action. If the action succeeds, then the message is considered delivered.</dd>
+<dt><i>R</i></dt>
+<dd> Perform the action. Regardless of the outcome of the action, the message is not considered delivered.</dd>
+<dt><i>?</i></dt>
+<dd> Perform the action only if the message has not been delivered. If the action succeeds, then the message is considered delivered.</dd>
+<dt><i>N</i></dt>
+<dd> Perform the action only if the message has not been delivered and the previous action succeeded. If this action succeeds, then the message is considered delivered.</dd></dl>
 <p> The delivery file is always read completely, so that several matches can be made and several actions can be taken.</dl>
 <h3>Security of Delivery Files</h3>
 <p> In order to prevent security problems, the &#8220;<i>.maildelivery</i>&#8221; file must be owned either by the user or by root, and must be writable only by the owner. If this is not the case, the file is not read. </p>
@@ -163,3 +161,4 @@ default   -        file    ?       mailbox
 <p> Only two return codes are meaningful, others should be. </p>
 <p> <code>Slocal</code> was originally designed to be backwards-compatible with the <code>maildelivery</code> functionality provided by <code>MMDF-II</code>. </p>
 <h2>Index</h2>
+</p>

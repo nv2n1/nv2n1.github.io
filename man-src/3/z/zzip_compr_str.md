@@ -11,7 +11,6 @@ zzip_compr_str - ...
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;zzip/lib.h&gt;
-
 zzip_char_t *zzip_compr_str((int compr));</code></pre>
 
 <h2>Description</h2>
@@ -21,7 +20,7 @@ zzip_char_t *zzip_compr_str((int compr));</code></pre>
 <h2>Author</h2>
 
 <dl><dd>&bull;
-<dd>Guido Draheim &lt;guidod [at] gmx.de&gt;</dl>
+</dd><dd>Guido Draheim &lt;guidod [at] gmx.de&gt;</dd></dl>
 
 <h2>Copyright</h2>
 

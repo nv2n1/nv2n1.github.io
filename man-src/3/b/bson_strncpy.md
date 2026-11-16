@@ -17,13 +17,15 @@ void bson_strncpy(char *dst,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>dst</code></p>
-<dd> The destination buffer.</dl>
+<dt><code>dst</code></dt>
+<dd> The destination buffer.</dd></dl>
 <dl>
-<dt><code>src</code></p>
-<dd> The src buffer.</dl>
+<dt><code>src</code></dt>
+<dd> The src buffer.</dd></dl>
 <dl>
-<dt><code>size</code></p>
-<dd> The number of bytes to copy into dst, which must be at least that size.</dl>
+<dt><code>size</code></dt>
+<dd> The number of bytes to copy into dst, which must be at least that size.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Copies up to <code>size</code> bytes from <code>src</code> into <code>dst</code> \&amp;. <code>dst</code> must be at least <code>size</code> bytes in size. A trailing <code>
+</p>
+</code>

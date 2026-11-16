@@ -14,16 +14,16 @@ description: "ata_scsi_user_scan – indication for user-initiated bus scan"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>SCSI host to scan</dl>
+</dd><dd>SCSI host to scan</dd></dl>
 <p> <i>channel</i></p>
 <dl>
-<dd>Channel to scan</dl>
+<dd>Channel to scan</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>ID to scan</dl>
+<dd>ID to scan</dd></dl>
 <p> <i>lun</i></p>
 <dl>
-<dd>LUN to scan</dl>
+<dd>LUN to scan</dd></dl>
 <h2>Description</h2>
 <p>This function is called when user explicitly requests bus scan. Set probe pending flag and invoke EH. </p>
 <p> LOCKING: SCSI layer (we don&#8217;t care)</p>
@@ -32,5 +32,5 @@ description: "ata_scsi_user_scan – indication for user-initiated bus scan"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -39,7 +39,7 @@ url: "/docs/linux/man/3-mlx5dv_dr_action_destroy/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_dr_domain *mlx5dv_dr_domain_create(
     struct ibv_context *ctx,
@@ -93,7 +93,7 @@ int mlx5dv_dr_action_modify_flow_meter(struct mlx5dv_dr_action *action,
                                        struct mlx5dv_dr_flow_meter_attr *attr,
                                        __be64 modify_field_select);
 int mlx5dv_dr_action_destroy(struct mlx5dv_dr_action *action);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

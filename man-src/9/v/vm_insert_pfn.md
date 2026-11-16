@@ -15,15 +15,15 @@ vm_insert_pfn - insert single pfn into user vma
 <h2>Arguments</h2>
 
 <i>vma</i>
-<dl><dd><dd>user vma to map to</dl>
+<dl><dd></dd><dd>user vma to map to</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>target user address of this page</dl>
+<dl><dd>target user address of this page</dd></dl>
  
 
  <i>pfn</i>
-<dl><dd>source kernel pfn</dl>
+<dl><dd>source kernel pfn</dd></dl>
 
 <h2>Description</h2>
 

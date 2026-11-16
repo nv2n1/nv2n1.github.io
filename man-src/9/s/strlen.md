@@ -15,7 +15,7 @@ strlen - Find the length of a string
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>The string to be sized</dl>
+<dl><dd></dd><dd>The string to be sized</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -251,25 +251,25 @@ sub print_info
  Object Orientation is not the best solution to every problem. In <i>Perl Best Practices</i> (copyright 2004, Published by O'Reilly Media, Inc.), Damian Conway provides a list of criteria to use when deciding if <font SIZE="-1">OO</font> is the right fit for your problem:
 <dl>
 <dt>&bull;
-<dd> The system being designed is large, or is likely to become large.
-<dt>&bull;
-<dd> The data can be aggregated into obvious structures, especially if there's a large amount of data in each aggregate.
-<dt>&bull;
-<dd> The various types of data aggregate form a natural hierarchy that facilitates the use of inheritance and polymorphism.
-<dt>&bull;
-<dd> You have a piece of data on which many different operations are applied.
-<dt>&bull;
-<dd> You need to perform the same general operations on related types of data, but with slight variations depending on the specific type of data the operations are applied to.
-<dt>&bull;
-<dd> It's likely you'll have to add new data types later.
-<dt>&bull;
-<dd> The typical interactions between pieces of data are best represented by operators.
-<dt>&bull;
-<dd> The implementation of individual components of the system is likely to change over time.
-<dt>&bull;
-<dd> The system design is already object-oriented.
-<dt>&bull;
-<dd> Large numbers of other programmers will be using your code modules.</dl>
+</dt><dd> The system being designed is large, or is likely to become large.
+</dd><dt>&bull;
+</dt><dd> The data can be aggregated into obvious structures, especially if there's a large amount of data in each aggregate.
+</dd><dt>&bull;
+</dt><dd> The various types of data aggregate form a natural hierarchy that facilitates the use of inheritance and polymorphism.
+</dd><dt>&bull;
+</dt><dd> You have a piece of data on which many different operations are applied.
+</dd><dt>&bull;
+</dt><dd> You need to perform the same general operations on related types of data, but with slight variations depending on the specific type of data the operations are applied to.
+</dd><dt>&bull;
+</dt><dd> It's likely you'll have to add new data types later.
+</dd><dt>&bull;
+</dt><dd> The typical interactions between pieces of data are best represented by operators.
+</dd><dt>&bull;
+</dt><dd> The implementation of individual components of the system is likely to change over time.
+</dd><dt>&bull;
+</dt><dd> The system design is already object-oriented.
+</dd><dt>&bull;
+</dt><dd> Large numbers of other programmers will be using your code modules.</dd></dl>
 
 <h2>PERL OO SYSTEMS</h2>
 
@@ -303,17 +303,12 @@ sub print_info
  <tt>&quot;Moose&quot;</tt> provides a number of features:
 <dl>
 <dt>&bull;
-<dd> Declarative sugar 
-
+</dt><dd> Declarative sugar 
  <tt>&quot;Moose&quot;</tt> provides a layer of declarative ``sugar'' for defining classes. That sugar is just a set of exported functions that make declaring how your class works simpler and more palatable. This lets you describe <i>what</i> your class is, rather than having to tell Perl <i>how</i> to implement your class. 
-
  The <tt>&quot;has()&quot;</tt> subroutine declares an attribute, and <tt>&quot;Moose&quot;</tt> automatically creates accessors for these attributes. It also takes care of creating a <tt>&quot;new()&quot;</tt> method for you. This constructor knows about the attributes you declared, so you can set them when creating a new <tt>&quot;File&quot;</tt>.
-<dt>&bull;
-<dd> Roles built-in 
-
+</dd><dt>&bull;
+</dt><dd> Roles built-in 
  <tt>&quot;Moose&quot;</tt> lets you define roles the same way you define classes: 
-
- 
 package HasOnOffSwitch;
 use Moose::Role;
 has is_on = &gt; (is = &gt; 'rw',
@@ -328,27 +323,21 @@ sub turn_off
     my $self = shift;
     $self-&gt;is_on(0);
 }
-
-<dt>&bull;
-<dd> A miniature type system 
-
+</dd><dt>&bull;
+</dt><dd> A miniature type system 
  In the example above, you can see that we passed <tt>&quot;isa =&gt; 'Bool'&quot;</tt> to <tt>&quot;has()&quot;</tt> when creating our <tt>&quot;is_on&quot;</tt> attribute. This tells <tt>&quot;Moose&quot;</tt> that this attribute must be a boolean value. If we try to set it to an invalid value, our code will throw an error.
-<dt>&bull;
-<dd> Full introspection and manipulation 
-
+</dd><dt>&bull;
+</dt><dd> Full introspection and manipulation 
  Perl's built-in introspection features are fairly minimal. <tt>&quot;Moose&quot;</tt> builds on top of them and creates a full introspection layer for your classes. This lets you ask questions like ``what methods does the File class implement?'' It also lets you modify your classes programmatically.
-<dt>&bull;
-<dd> Self-hosted and extensible 
-
+</dd><dt>&bull;
+</dt><dd> Self-hosted and extensible 
  <tt>&quot;Moose&quot;</tt> describes itself using its own introspection <font SIZE="-1">API.</font> Besides being a cool trick, this means that you can extend <tt>&quot;Moose&quot;</tt> using <tt>&quot;Moose&quot;</tt> itself.
-<dt>&bull;
-<dd> Rich ecosystem 
-
+</dd><dt>&bull;
+</dt><dd> Rich ecosystem 
  There is a rich ecosystem of <tt>&quot;Moose&quot;</tt> extensions on <font SIZE="-1">CPAN</font> under the MooseX &lt;<a rel="nofollow" HREF="http://search.cpan.org/search?query=MooseX">http://search.cpan.org/search?query=MooseX</a>&amp;mode=dist&gt; namespace. In addition, many modules on <font SIZE="-1">CPAN</font> already use <tt>&quot;Moose&quot;</tt>, providing you with lots of examples to learn from.
-<dt>&bull;
-<dd> Many more features 
-
- <tt>&quot;Moose&quot;</tt> is a very powerful tool, and we can't cover all of its features here. We encourage you to learn more by reading the <tt>&quot;Moose&quot;</tt> documentation, starting with Moose::Manual &lt;<a rel="nofollow" HREF="http://search.cpan.org/perldoc?Moose::Manual">http://search.cpan.org/perldoc?Moose::Manual</a>&gt;.</dl>
+</dd><dt>&bull;
+</dt><dd> Many more features 
+ <tt>&quot;Moose&quot;</tt> is a very powerful tool, and we can't cover all of its features here. We encourage you to learn more by reading the <tt>&quot;Moose&quot;</tt> documentation, starting with Moose::Manual &lt;<a rel="nofollow" HREF="http://search.cpan.org/perldoc?Moose::Manual">http://search.cpan.org/perldoc?Moose::Manual</a>&gt;.</dd></dl>
  
 
  Of course, <tt>&quot;Moose&quot;</tt> isn't perfect. 
@@ -433,21 +422,17 @@ sub print_info
  Here's a brief recap of the options we covered:
 <dl>
 <dt>&bull;
-<dd> Moose 
-
+</dt><dd> Moose 
  <tt>&quot;Moose&quot;</tt> is the maximal option. It has a lot of features, a big ecosystem, and a thriving user base. We also covered Moo briefly. <tt>&quot;Moo&quot;</tt> is <tt>&quot;Moose&quot;</tt> lite, and a reasonable alternative when Moose doesn't work for your application.
-<dt>&bull;
-<dd> Class::Accessor 
-
+</dd><dt>&bull;
+</dt><dd> Class::Accessor 
  <tt>&quot;Class::Accessor&quot;</tt> does a lot less than <tt>&quot;Moose&quot;</tt>, and is a nice alternative if you find <tt>&quot;Moose&quot;</tt> overwhelming. It's been around a long time and is well battle-tested. It also has a minimal <tt>&quot;Moose&quot;</tt> compatibility mode which makes moving from <tt>&quot;Class::Accessor&quot;</tt> to <tt>&quot;Moose&quot;</tt> easy.
-<dt>&bull;
-<dd> Class::Tiny 
-
+</dd><dt>&bull;
+</dt><dd> Class::Tiny 
  <tt>&quot;Class::Tiny&quot;</tt> is the absolute minimal option. It has no dependencies, and almost no syntax to learn. It's a good option for a super minimal environment and for throwing something together quickly without having to worry about details.
-<dt>&bull;
-<dd> Role::Tiny 
-
- Use <tt>&quot;Role::Tiny&quot;</tt> with <tt>&quot;Class::Accessor&quot;</tt> or <tt>&quot;Class::Tiny&quot;</tt> if you find yourself considering multiple inheritance. If you go with <tt>&quot;Moose&quot;</tt>, it comes with its own role implementation.</dl>
+</dd><dt>&bull;
+</dt><dd> Role::Tiny 
+ Use <tt>&quot;Role::Tiny&quot;</tt> with <tt>&quot;Class::Accessor&quot;</tt> or <tt>&quot;Class::Tiny&quot;</tt> if you find yourself considering multiple inheritance. If you go with <tt>&quot;Moose&quot;</tt>, it comes with its own role implementation.</dd></dl>
 
 <h3>Other <font SIZE="-1">OO</font> Systems</h3>
 
@@ -470,8 +455,8 @@ sub print_info
 
 
 <dt><a HREF="#lbAP">PERL OO SYSTEMS</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAW">CONCLUSION</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAW">CONCLUSION</a>
+</dt><dd></dd></dl>

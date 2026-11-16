@@ -11,16 +11,16 @@ description: "XkbGetBounceKeysDelay – Queries the current BounceKeys delay for
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbGetBounceKeysDelay</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>delay_rtrn</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; delay_rtrn</i></p>
-<dd>backfilled with bounce keys delay, ms</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; delay_rtrn</i></dt>
+<dd>backfilled with bounce keys delay, ms</dd></dl>
 <h2>Description</h2>
 <p>The server can generate XkbAccessXNotify events for some of the global keyboard controls. The detail field describes what AccessX event just occurred and can be any of the values in Table 1. </p>
 <table>
@@ -158,10 +158,10 @@ description: "XkbGetBounceKeysDelay – Queries the current BounceKeys delay for
 <p> <i>XkbGetBounceKeysDelay </i> requests the attributes of the BounceKeys control from the server, waits for a reply, and backfills <i>delay_rtrn </i> with the BounceKeys delay attribute. <i>XkbGetBounceKeysDelay </i> returns True if successful; if a compatible version of the Xkb extension is not available in the server <i>XkbGetSlowKeysDelay </i> returns False.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbGetBounceKeysDelay </i> function returns True when it successfully requests the attributes of the BounceKeys control from the server, waits for a reply, and backfills <i>delay_rtrn </i> with the BounceKeys delay attribute.</p>
-<dt>False</p>
-<dd>The <i>XkbGetBounceKeysDelay </i> function returns False if a compatible version of the Xkb extension is not available in the server.</dl>
+<dt>True</dt>
+<dd>The <i>XkbGetBounceKeysDelay </i> function returns True when it successfully requests the attributes of the BounceKeys control from the server, waits for a reply, and backfills <i>delay_rtrn </i> with the BounceKeys delay attribute.</dd>
+<dt>False</dt>
+<dd>The <i>XkbGetBounceKeysDelay </i> function returns False if a compatible version of the Xkb extension is not available in the server.</dd></dl>
 <h2>Structures</h2>
 <p>The structure for the XkbAccessXNotify event type is as follows: </p>
 <pre>typedef struct {

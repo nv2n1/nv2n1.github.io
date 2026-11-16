@@ -11,10 +11,8 @@ std::minus&lt;void&gt; - std::minus&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class minus&lt;void&gt;;</code></pre> 
 std::minus&lt;&gt; is a specialization of std::minus with parameter and return type deduced. 
 

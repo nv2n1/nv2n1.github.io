@@ -15,7 +15,7 @@ description: "QuantLib::Actual365Fixed – Actual/365 (Fixed) day count conventi
 <p>Actual/365 (Fixed) day count convention. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>According to ISDA, &#8216;Actual/365&#8217; (without &#8216;Fixed&#8217;) is an alias for &#8216;Actual/Actual (ISDA)&#8217; (see <code>ActualActual</code>.) If Actual/365 is not explicitly specified as fixed in an instrument specification, you might want to double-check its meaning.</dl>
+<dd>According to ISDA, &#8216;Actual/365&#8217; (without &#8216;Fixed&#8217;) is an alias for &#8216;Actual/Actual (ISDA)&#8217; (see <code>ActualActual</code>.) If Actual/365 is not explicitly specified as fixed in an instrument specification, you might want to double-check its meaning.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>DiscreteHedging.cpp</code>, <code>EquityOption.cpp</code>, and <code>Replication.cpp</code>. </p>
 <h2>Author</h2>

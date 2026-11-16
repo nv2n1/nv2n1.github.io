@@ -15,15 +15,15 @@ strlcat - Append a length-limited, C-string to another
 <h2>Arguments</h2>
 
 <i>dest</i>
-<dl><dd><dd>The string to be appended to</dl>
+<dl><dd></dd><dd>The string to be appended to</dd></dl>
  
 
  <i>src</i>
-<dl><dd>The string to append to it</dl>
+<dl><dd>The string to append to it</dd></dl>
  
 
  <i>count</i>
-<dl><dd>The size of the destination buffer.</dl>
+<dl><dd>The size of the destination buffer.</dd></dl>
 
 <h2>Copyright</h2>
 

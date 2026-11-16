@@ -77,34 +77,34 @@ typedef struct {
 <p> In certain situations, such as recording lists of host specifications or PCP archive paths, the <code>pmGetOptions</code> routine may allocate memory, and store pointers to it within <i>opts</i>. Should a program wish to free this memory before exiting, it can use the <code>pmFreeOptions</code> routine to do so. This is safe to call irrespective of whether memory was allocated dynamically, provided that <i>opts</i> was zeroed initially.</p>
 <h2>Flags Values</h2>
 <dl>
-<dt><code>PM_OPTFLAG_INIT</code></p>
-<dd>Used internally within the library to indicate initialisation has been done, so that on subsequent calls it will not be done again.</p>
-<dt><code>PM_OPTFLAG_DONE</code></p>
-<dd>Used primarily internally within the library to indicate that the final option processing has been completed. This processing involves cross-referencing a number of the options, to check for mutual exclusion, for example. There may be other post-processing at this stage also, provided it does not require a PMAPI context.</p>
-<dt><code>PM_OPTFLAG_MULTI</code></p>
-<dd>Allow more than one host or set of archives to be specified. The default is to allow one source of metrics only, however some of the more sophisticated tools permit multiple metric sources, each of which is handled within a separate context. See also <code>PM_OPTFLAG_MIXED</code>.</p>
-<dt><code>PM_OPTFLAG_USAGE_ERR</code></p>
-<dd>Indicates that the library has detected a command-line usage error. This is an error such as when an option requires an argument but none is supplied, or conflicting options are specified (such as <code>-s</code> and <code>-T</code>).</p>
-<dt><code>PM_OPTFLAG_RUNTIME_ERR</code></p>
-<dd>Indicates that the library has detected an error at run time. This is an error such as failing to retrieve timezone information from <code>pmcd (1)</code> or failing to load an alternate metric namespace from a local file (via the <code>-n</code> option).</p>
-<dt><code>PM_OPTFLAG_EXIT</code></p>
-<dd>Indicates a suggestion from the library that the tool exit cleanly. This is used when the version number is requested, for example (the <code>-V</code> option and PMOPT_VERSION macro).</p>
-<dt><code>PM_OPTFLAG_POSIX</code></p>
-<dd>Use strict POSIX command line argument handling. This means options and following arguments will not be reordered, so additional options cannot follow command line arguments. This may be important for tools where the arguments can be negative numbers, for example, as these should not be treated as command line options in this case.</p>
-<dt><code>PM_OPTFLAG_MIXED</code></p>
-<dd>Allow both live and archive metric sources to be specified. The default is to allow one type of metric context only, however some of the more sophisticated tools permit multiple context types. See also <code>PM_OPTFLAG_MULTI</code>.</p>
-<dt><code>PM_OPTFLAG_ENV_ONLY</code></p>
-<dd>Many options can be specified through the either the command line or from similarly-named environment variables. This flag disables all argument parsing, and only changes <i>opts</i> based on the environment variables. This may be useful for tools wishing to ensure no command line option conflicts occur between their own set and the standard PCP option set (such as an existing tool, reimplemented using PMAPI services).</p>
-<dt><code>PM_OPTFLAG_LONG_ONLY</code></p>
-<dd>Only process long options, not short options.</p>
-<dt><code>PM_OPTFLAG_BOUNDARIES</code></p>
-<dd>The default <code>pmGetOptions</code> behaviour is to parse the time window options (namely, <code>-A</code>, <code>-O</code>, <code>-S</code> and <code>-T</code>), only if one of those options has been specified on the command line. However, this flag can be used (particularly with archive contexts) to find the <i>start</i> and <i>finish</i> times associated with the context(s) even if no time window options were specified. In the case of multiple archives, the time window is defined as the time window spanning all of the archives.</p>
-<dt><code>PM_OPTFLAG_STDOUT_TZ</code></p>
-<dd>The timezone being used will be reported on the standard output stream during option parsing. The default behaviour is to not report, but simply return timezone information via the <i>timezone</i> (<code>-Z</code>) and <i>tzflag</i> (<code>-z</code>) fields in the <i>opts</i> structure.</p>
-<dt><code>PM_OPTFLAG_NOFLUSH</code></p>
-<dd>The final <code>pmflush</code> call issued by <code>pmUsageMessage</code> will be skipped if this flag is set. This is useful in situations where the caller wishes to append additional test to the generated usage message before flushing.</p>
-<dt><code>PM_OPTFLAG_QUIET</code></p>
-<dd>Suppress messages from <code>pmgetopt_r</code> about unrecognised command line options. This is the equivalent to setting the <i>opterr</i> field in the <i>opt</i> parameter (which mimics the <code>getopt</code> variable of the same name).</dl>
+<dt><code>PM_OPTFLAG_INIT</code></dt>
+<dd>Used internally within the library to indicate initialisation has been done, so that on subsequent calls it will not be done again.</dd>
+<dt><code>PM_OPTFLAG_DONE</code></dt>
+<dd>Used primarily internally within the library to indicate that the final option processing has been completed. This processing involves cross-referencing a number of the options, to check for mutual exclusion, for example. There may be other post-processing at this stage also, provided it does not require a PMAPI context.</dd>
+<dt><code>PM_OPTFLAG_MULTI</code></dt>
+<dd>Allow more than one host or set of archives to be specified. The default is to allow one source of metrics only, however some of the more sophisticated tools permit multiple metric sources, each of which is handled within a separate context. See also <code>PM_OPTFLAG_MIXED</code>.</dd>
+<dt><code>PM_OPTFLAG_USAGE_ERR</code></dt>
+<dd>Indicates that the library has detected a command-line usage error. This is an error such as when an option requires an argument but none is supplied, or conflicting options are specified (such as <code>-s</code> and <code>-T</code>).</dd>
+<dt><code>PM_OPTFLAG_RUNTIME_ERR</code></dt>
+<dd>Indicates that the library has detected an error at run time. This is an error such as failing to retrieve timezone information from <code>pmcd (1)</code> or failing to load an alternate metric namespace from a local file (via the <code>-n</code> option).</dd>
+<dt><code>PM_OPTFLAG_EXIT</code></dt>
+<dd>Indicates a suggestion from the library that the tool exit cleanly. This is used when the version number is requested, for example (the <code>-V</code> option and PMOPT_VERSION macro).</dd>
+<dt><code>PM_OPTFLAG_POSIX</code></dt>
+<dd>Use strict POSIX command line argument handling. This means options and following arguments will not be reordered, so additional options cannot follow command line arguments. This may be important for tools where the arguments can be negative numbers, for example, as these should not be treated as command line options in this case.</dd>
+<dt><code>PM_OPTFLAG_MIXED</code></dt>
+<dd>Allow both live and archive metric sources to be specified. The default is to allow one type of metric context only, however some of the more sophisticated tools permit multiple context types. See also <code>PM_OPTFLAG_MULTI</code>.</dd>
+<dt><code>PM_OPTFLAG_ENV_ONLY</code></dt>
+<dd>Many options can be specified through the either the command line or from similarly-named environment variables. This flag disables all argument parsing, and only changes <i>opts</i> based on the environment variables. This may be useful for tools wishing to ensure no command line option conflicts occur between their own set and the standard PCP option set (such as an existing tool, reimplemented using PMAPI services).</dd>
+<dt><code>PM_OPTFLAG_LONG_ONLY</code></dt>
+<dd>Only process long options, not short options.</dd>
+<dt><code>PM_OPTFLAG_BOUNDARIES</code></dt>
+<dd>The default <code>pmGetOptions</code> behaviour is to parse the time window options (namely, <code>-A</code>, <code>-O</code>, <code>-S</code> and <code>-T</code>), only if one of those options has been specified on the command line. However, this flag can be used (particularly with archive contexts) to find the <i>start</i> and <i>finish</i> times associated with the context(s) even if no time window options were specified. In the case of multiple archives, the time window is defined as the time window spanning all of the archives.</dd>
+<dt><code>PM_OPTFLAG_STDOUT_TZ</code></dt>
+<dd>The timezone being used will be reported on the standard output stream during option parsing. The default behaviour is to not report, but simply return timezone information via the <i>timezone</i> (<code>-Z</code>) and <i>tzflag</i> (<code>-z</code>) fields in the <i>opts</i> structure.</dd>
+<dt><code>PM_OPTFLAG_NOFLUSH</code></dt>
+<dd>The final <code>pmflush</code> call issued by <code>pmUsageMessage</code> will be skipped if this flag is set. This is useful in situations where the caller wishes to append additional test to the generated usage message before flushing.</dd>
+<dt><code>PM_OPTFLAG_QUIET</code></dt>
+<dd>Suppress messages from <code>pmgetopt_r</code> about unrecognised command line options. This is the equivalent to setting the <i>opterr</i> field in the <i>opt</i> parameter (which mimics the <code>getopt</code> variable of the same name).</dd></dl>
 <h2>Return Value</h2>
 <p>The <code>pmGetOptions</code> function returns either when it detects a command-line option that is not one of the standard PCP set, or when the end of the command line options has been reached (at which point -1 is returned). Both the <code>pmgetopt_r</code> and <code>pmGetOptions</code> routines return control to the caller in the same way that a regular <code>getopt</code> call would, with the return value indicating either the end of all processing (-1), or the single character form of the option currently being processed, or zero for the special long-option-only case. For all option-processing cases, the <i>opts</i> structure is returned containing filled out <i>optarg</i>, <i>opterr</i>, <i>optopt</i>, <i>optind</i>, and <i>index</i> fields as normal (do <code>NOT</code> use the global optarg or optind from your platform C library, these will <code>NOT</code> be modified). </p>
 <p> <code>pmGetOptions</code> does not return to the caller when any of the standard PCP options are being processed (although the <i>override</i> mechanism can be used to still detect such options if needed). </p>

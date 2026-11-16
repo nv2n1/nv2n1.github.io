@@ -16,22 +16,22 @@ description: "docheckgroups – Process checkgroups and output a list of changes
 <p> If <i>exclude-pattern</i> is given, <i>include-pattern</i> should also be given before (you can use an empty string (&quot;&quot;) if you want to include all the newsgroups). Be that as it may, <code>docheckgroups</code> will only check newsgroups in the top-level hierarchies which are present in the checkgroups. </p>
 <p> Then, <code>docheckgroups</code> checks the <i>active</i> and <i>newsgroups</i> files and displays on its standard output a list of changes, if any. It does not change anything by default; it only points out what should be changed:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Newsgroups which should be removed (they are in the <i>active</i> file but not in the checkgroups) and the relevant <code>ctlinnd</code> commands to achieve that;</p>
-<dt>&bull;</p>
-<dd>Newsgroups which should be added (they are not in the <i>active</i> file but in the checkgroups) and the relevant <code>ctlinnd</code> commands to achieve that;</p>
-<dt>&bull;</p>
-<dd>Newsgroups which are incorrectly marked as moderated or unmoderated (they are both in the <i>active</i> file and the checkgroups but their status differs) and the relevant <code>ctlinnd</code> commands to fix that;</p>
-<dt>&bull;</p>
-<dd>Descriptions which should be removed (they are in the <i>newsgroups</i> file but not in the checkgroups);</p>
-<dt>&bull;</p>
-<dd>Descriptions which should be added (they are not in the <i>newsgroups</i> file but in the checkgroups).</dl>
+<dt>&bull;</dt>
+<dd>Newsgroups which should be removed (they are in the <i>active</i> file but not in the checkgroups) and the relevant <code>ctlinnd</code> commands to achieve that;</dd>
+<dt>&bull;</dt>
+<dd>Newsgroups which should be added (they are not in the <i>active</i> file but in the checkgroups) and the relevant <code>ctlinnd</code> commands to achieve that;</dd>
+<dt>&bull;</dt>
+<dd>Newsgroups which are incorrectly marked as moderated or unmoderated (they are both in the <i>active</i> file and the checkgroups but their status differs) and the relevant <code>ctlinnd</code> commands to fix that;</dd>
+<dt>&bull;</dt>
+<dd>Descriptions which should be removed (they are in the <i>newsgroups</i> file but not in the checkgroups);</dd>
+<dt>&bull;</dt>
+<dd>Descriptions which should be added (they are not in the <i>newsgroups</i> file but in the checkgroups).</dd></dl>
 <p> The output of <code>docheckgroups</code> can be fed into <code>mod-active</code> (it will pause the news server, update the <i>active</i> file accordingly, reload it and resume the work of the news server) or into the shell (commands for <code>ctlinnd</code> will be processed one by one). In order to update the <i>newsgroups</i> file, the <code>-u</code> flag must be given to <code>docheckgroups</code>. </p>
 <p> When processing a checkgroups manually, it is always advisable to first check the raw output of <code>docheckgroups</code>. Then, if everything looks fine, use <code>mod-active</code> and the <code>-u</code> flag.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-u</code></p>
-<dd>If this flag is given, <code>docheckgroups</code> will update the <i>newsgroups</i> file: it removes obsolete descriptions and adds new ones. It also sorts this file alphabetically and improves its general format (see <i><a href="/docs/linux/man/5-newsgroups/">newsgroups</a></i>(5) for an explanation of the preferred number of tabulations).</dl>
+<dt><code>-u</code></dt>
+<dd>If this flag is given, <code>docheckgroups</code> will update the <i>newsgroups</i> file: it removes obsolete descriptions and adds new ones. It also sorts this file alphabetically and improves its general format (see <i><a href="/docs/linux/man/5-newsgroups/">newsgroups</a></i>(5) for an explanation of the preferred number of tabulations).</dd></dl>
 <h2>Examples</h2>
 <p>So as to better understand how <code>docheckgroups</code> works, here are examples with the following <i>active</i> file: </p>
 <pre> a.first 0000000000 0000000001 y
@@ -69,10 +69,10 @@ description: "docheckgroups – Process checkgroups and output a list of changes
 <p>In our example, <code>docheckgroups</code> will then mention a.second.announce and a.second.group for removal since they are in the <i>active</i> file (the same goes for their descriptions). Notwithstanding, if you do want to keep a.second.announce, just add this group to <i>localgroups</i> and <code>docheckgroups</code> will no longer mention it for removal.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>pathbin</i>/docheckgroups</p>
-<dd>The Shell script itself used to process checkgroups.</p>
-<dt><i>pathetc</i>/localgroups</p>
-<dd>The list of local newsgroups along with their descriptions.</dl>
+<dt><i>pathbin</i>/docheckgroups</dt>
+<dd>The Shell script itself used to process checkgroups.</dd>
+<dt><i>pathetc</i>/localgroups</dt>
+<dd>The list of local newsgroups along with their descriptions.</dd></dl>
 <h2>History</h2>
 <p>Documentation written by Julien Elie for InterNetNews. </p>
 <p> <tt>$Id:</tt> docheckgroups.pod 8357 2009-02-27 17:56:00Z iulius $</p>

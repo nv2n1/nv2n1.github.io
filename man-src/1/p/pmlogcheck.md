@@ -37,10 +37,10 @@ description: "pmlogcheck – checks for invalid data in a PCP archive"
 <p> <code>pmlogcheck</code> produces two different timestamp formats, depending on the interval over which it is run. For an interval greater than 24 hours, the date is displayed in addition to the time at which the counter wrap occurred. If the extent of the data being checked is less than 24 hours, a more precise format is used (time is displayed with millisecond precision, but without the date). </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
-<dd> default PMNS specification files</p>
-<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></p>
-<dd> default directory for PCP archives containing performance data collected from the host <i>hostname</i>.</dl>
+<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></dt>
+<dd> default PMNS specification files</dd>
+<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></dt>
+<dd> default directory for PCP archives containing performance data collected from the host <i>hostname</i>.</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

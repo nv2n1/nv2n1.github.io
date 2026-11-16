@@ -29,8 +29,7 @@ corelist - v
 
 <dl>
 <dt>-a
-<dd> lists all versions of the given module (or the matching modules, in case you used a module regexp) in the perls Module::CoreList knows about. 
-
+</dt><dd> lists all versions of the given module (or the matching modules, in case you used a module regexp) in the perls Module::CoreList knows about. 
  <pre>
     corelist -a Unicode
     Unicode was first released with perl v5.6.2
@@ -80,34 +79,29 @@ corelist - v
       v5.14.1    6.0.0
       v5.15.0    6.0.0
 </pre>
-<dt>-d
-<dd> finds the first perl version where a module has been released by date, and not by version number (as is the default).
-<dt>--diff
-<dd> Given two versions of perl, this prints a human-readable table of all module changes between the two. The output format may change in the future, and is meant for <i>humans</i>, not programs. For programs, use the Module::CoreList <font SIZE="-1">API.</font>
-<dt>-? or -help
-<dd> help! help! help! to see more help, try --man.
-<dt>-man
-<dd> all of the help
-<dt>-v
-<dd> lists all of the perl release versions we got the CoreList for. 
-
+</dd><dt>-d
+</dt><dd> finds the first perl version where a module has been released by date, and not by version number (as is the default).
+</dd><dt>--diff
+</dt><dd> Given two versions of perl, this prints a human-readable table of all module changes between the two. The output format may change in the future, and is meant for <i>humans</i>, not programs. For programs, use the Module::CoreList <font SIZE="-1">API.</font>
+</dd><dt>-? or -help
+</dt><dd> help! help! help! to see more help, try --man.
+</dd><dt>-man
+</dt><dd> all of the help
+</dd><dt>-v
+</dt><dd> lists all of the perl release versions we got the CoreList for. 
  If you pass a version argument (value of <tt>$]</tt>, like <tt>5.00503</tt> or <tt>5.008008</tt>), you get a list of all the modules and their respective versions. (If you have the <tt>&quot;version&quot;</tt> module, you can also use new-style version numbers, like <tt>5.8.8</tt>.) 
-
  In module filtering context, it can be used as Perl version filter.
-<dt>-r
-<dd> lists all of the perl releases and when they were released 
-
+</dd><dt>-r
+</dt><dd> lists all of the perl releases and when they were released 
  If you pass a perl version you get the release date for that version only.
-<dt>--utils
-<dd> lists the first version of perl each named utility program was released with 
-
+</dd><dt>--utils
+</dt><dd> lists the first version of perl each named utility program was released with 
  May be used with -d to modify the first release criteria. 
-
  If used with -v &lt;version&gt; then all utilities released with that version of perl are listed, and any utility programs named on the command line are ignored.
-<dt>--feature, -f
-<dd> lists the first version bundle of each named feature given
-<dt>--upstream, -u
-<dd> Shows if the given module is primarily maintained in perl core or on <font SIZE="-1">CPAN</font> and bug tracker <font SIZE="-1">URL.</font></dl>
+</dd><dt>--feature, -f
+</dt><dd> lists the first version bundle of each named feature given
+</dd><dt>--upstream, -u
+</dt><dd> Shows if the given module is primarily maintained in perl core or on <font SIZE="-1">CPAN</font> and bug tracker <font SIZE="-1">URL.</font></dd></dl>
  
 
  As a special case, if you specify the module name <tt>&quot;Unicode&quot;</tt>, you'll get the version number of the Unicode Character Database bundled with the requested perl versions.

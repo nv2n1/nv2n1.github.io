@@ -17,11 +17,13 @@ bool bson_utf8_validate(const char *utf8,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>utf8</code></p>
-<dd> A string to verify.</dl>
+<dt><code>utf8</code></dt>
+<dd> A string to verify.</dd></dl>
 <dl>
-<dt><code>utf8_len</code></p>
-<dd> The length of <code>utf8</code> in bytes.</dl>
+<dt><code>utf8_len</code></dt>
+<dd> The length of <code>utf8</code> in bytes.</dd></dl>
 <dl>
-<dt><code>allow_null</code></p>
+<dt><code>allow_null</code></dt>
 <dd> A bool indicating that embedded <code>
+</dd></dl>
+</code>

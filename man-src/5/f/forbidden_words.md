@@ -24,14 +24,14 @@ System configuration:
 
 <dl><dd><pre>password
 login
-mastercard</pre></dl>
+mastercard</pre></dd></dl>
  
 
  User configuration: 
 
  $XDG_CONFIG_HOME/abrt/settings/forbidden_words.conf 
 
-<dl><dd><pre>usersecretpassword</pre></dl>
+<dl><dd><pre>usersecretpassword</pre></dd></dl>
 
 <h2>See Also</h2>
 
@@ -39,4 +39,4 @@ mastercard</pre></dl>
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

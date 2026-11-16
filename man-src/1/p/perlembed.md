@@ -13,38 +13,38 @@ description: "perlembed – how to embed perl in your C program"
 <h3><font SIZE="-1">PREAMBLE</font></h3>
 <p> Do you want to:</p>
 <dl>
-<dt><code>Use C from Perl?</code></p>
-<dd> Read perlxstut, perlxs, h2xs, perlguts, and perlapi.</p>
-<dt><code>Use a Unix program from Perl?</code></p>
-<dd> Read about back-quotes and about <tt>&quot;system&quot;</tt> and <tt>&quot;exec&quot;</tt> in perlfunc.</p>
-<dt><code>Use Perl from Perl?</code></p>
-<dd> Read about &#8220;do&#8221; in perlfunc and &#8220;eval&#8221; in perlfunc and &#8220;require&#8221; in perlfunc and &#8220;use&#8221; in perlfunc.</p>
-<dt><code>Use C from C?</code></p>
-<dd> Rethink your design.</p>
-<dt><code>Use Perl from C?</code></p>
-<dd> Read on&#8230;</dl>
+<dt><code>Use C from Perl?</code></dt>
+<dd> Read perlxstut, perlxs, h2xs, perlguts, and perlapi.</dd>
+<dt><code>Use a Unix program from Perl?</code></dt>
+<dd> Read about back-quotes and about <tt>&quot;system&quot;</tt> and <tt>&quot;exec&quot;</tt> in perlfunc.</dd>
+<dt><code>Use Perl from Perl?</code></dt>
+<dd> Read about &#8220;do&#8221; in perlfunc and &#8220;eval&#8221; in perlfunc and &#8220;require&#8221; in perlfunc and &#8220;use&#8221; in perlfunc.</dd>
+<dt><code>Use C from C?</code></dt>
+<dd> Rethink your design.</dd>
+<dt><code>Use Perl from C?</code></dt>
+<dd> Read on&#8230;</dd></dl>
 <h3><font SIZE="-1">ROADMAP</font></h3>
 <dl>
-<dt>&bull;</p>
-<dd> Compiling your C program</p>
-<dt>&bull;</p>
-<dd> Adding a Perl interpreter to your C program</p>
-<dt>&bull;</p>
-<dd> Calling a Perl subroutine from your C program</p>
-<dt>&bull;</p>
-<dd> Evaluating a Perl statement from your C program</p>
-<dt>&bull;</p>
-<dd> Performing Perl pattern matches and substitutions from your C program</p>
-<dt>&bull;</p>
-<dd> Fiddling with the Perl stack from your C program</p>
-<dt>&bull;</p>
-<dd> Maintaining a persistent interpreter</p>
-<dt>&bull;</p>
-<dd> Maintaining multiple interpreter instances</p>
-<dt>&bull;</p>
-<dd> Using Perl modules, which themselves use C libraries, from your C program</p>
-<dt>&bull;</p>
-<dd> Embedding Perl under Win32</dl>
+<dt>&bull;</dt>
+<dd> Compiling your C program</dd>
+<dt>&bull;</dt>
+<dd> Adding a Perl interpreter to your C program</dd>
+<dt>&bull;</dt>
+<dd> Calling a Perl subroutine from your C program</dd>
+<dt>&bull;</dt>
+<dd> Evaluating a Perl statement from your C program</dd>
+<dt>&bull;</dt>
+<dd> Performing Perl pattern matches and substitutions from your C program</dd>
+<dt>&bull;</dt>
+<dd> Fiddling with the Perl stack from your C program</dd>
+<dt>&bull;</dt>
+<dd> Maintaining a persistent interpreter</dd>
+<dt>&bull;</dt>
+<dd> Maintaining multiple interpreter instances</dd>
+<dt>&bull;</dt>
+<dd> Using Perl modules, which themselves use C libraries, from your C program</dd>
+<dt>&bull;</dt>
+<dd> Embedding Perl under Win32</dd></dl>
 <h3>Compiling your C program</h3>
 <p> If you have trouble compiling the scripts in this documentation, you&#8217;re not alone. The cardinal rule: <font SIZE="-1">COMPILE THE PROGRAMS IN EXACTLY THE SAME WAY THAT YOUR PERL WAS COMPILED.</font> (Sorry for yelling.) </p>
 <p> Also, every C program that uses Perl must link in the <i>perl library</i>. What&#8217;s that, you ask? Perl is itself written in C; the perl library is the collection of compiled C programs that were used to create your perl executable (<i>/usr/bin/perl</i> or equivalent). (Corollary: you can&#8217;t use Perl from your C program unless Perl has been compiled on your machine, or installed properly&#8212;that&#8217;s why you shouldn&#8217;t blithely copy Perl executables from machine to machine without also copying the <i>lib</i> directory.) </p>
@@ -544,3 +544,4 @@ int main(int argc, char **argv, char **env)<br />
         while (printf(&#8220;Enter file name: &#8220;) &amp;&amp;<br />
                fgets(filename, BUFFER_SIZE, stdin)) {<br />
             filename[strlen(filename) &#8211; 1] = &#8216;
+</p>

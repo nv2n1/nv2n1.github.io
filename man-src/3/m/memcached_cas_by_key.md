@@ -12,11 +12,11 @@ description: "memcached_cas_by_key – Storing and Replacing Data"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_return_t memcached_cas(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>, uint64_t<i>&nbsp;<wbr>cas</i>)</p>
+<dt><code>memcached_return_t memcached_cas(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>, uint64_t<i>&nbsp;<wbr>cas</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_cas_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>, uint64_t<i>&nbsp;<wbr>cas</i>)</p>
+</dd><dt><code>memcached_return_t memcached_cas_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>, uint64_t<i>&nbsp;<wbr>cas</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_cas()</i> overwrites data in the server as long as the &quot;cas&quot; value is still the same in the server. You can get the cas value of a result by calling <code>memcached_result_cas()</code> on a memcached_result_st(3) structure. At the point that this note was written cas is still buggy in memached. Turning on tests for it in <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) is optional. Please see <code>memcached_set()</code> for information on how to do this. </p>
 <p> <i>memcached_cas_by_key()</i> method behaves in a similar method as the non key methods. The difference is that it uses the group_key parameter to map objects to particular servers. </p>
@@ -32,3 +32,4 @@ description: "memcached_cas_by_key – Storing and Replacing Data"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

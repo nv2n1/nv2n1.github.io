@@ -18,24 +18,17 @@ Conrec_family - is a set of two dimensional contour mapping routines. There are 
  To use EZCNTR or CONREC, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order. Other optional libraries to create the quick, smooth, and super contours will automatically be linked by the ncargf77 command. To run a code called mycode.f which has one or more calls to entry EZCNTR or CONREC, issue one of the commands: 
 
 <dl COMPACT><dt>NORMAL
-<dd>Command: &quot;ncargf77 mycode.f&quot; 
-
+</dt><dd>Command: &quot;ncargf77 mycode.f&quot; 
  The contours will be drawn as unsmoothed dashed or solid lines that can include characters along the lines. 
-
-<dt>QUICK
-<dd>Command: &quot;ncargf77 -quick mycode.f&quot; 
-
+</dd><dt>QUICK
+</dt><dd>Command: &quot;ncargf77 -quick mycode.f&quot; 
  The contours will be drawn as unsmoothed dashed or solid lines without characters along the lines. The QUICK drawing algorithm is faster and cruder than that used for NORMAL contour lines. QUICK uses a cell-by-cell analysis rather than following each contour line to completion in sequence as is done in the NORMAL algorithm. 
-
-<dt>SMOOTH
-<dd>Command: &quot;ncargf77 -smooth mycode.f&quot; 
-
+</dd><dt>SMOOTH
+</dt><dd>Command: &quot;ncargf77 -smooth mycode.f&quot; 
  The contours will be drawn as smoothed dashed or solid lines using splines under tension. There may be characters along the lines. 
-
-<dt>SUPER
-<dd>Command: &quot;ncargf77 -super mycode.f&quot; 
-
- The contours will be drawn as smoothed dashed or solid lines using splines under tension. There may be characters along the lines. Crowded lines can be thinned.</dl><h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. The possible error messages are as follows: 
+</dd><dt>SUPER
+</dt><dd>Command: &quot;ncargf77 -super mycode.f&quot; 
+ The contours will be drawn as smoothed dashed or solid lines using splines under tension. There may be characters along the lines. Crowded lines can be thinned.</dd></dl><h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. The possible error messages are as follows: 
 
  CONREC - DIMENSION ERROR - M*N .GT. (2**IARTH) 
  The array to be contoured is dimensioned M by N. This is larger than the address space on this computer (2**IARTH) where IARTH is the size of an address integer. Check your dimension sizes. 

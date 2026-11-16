@@ -39,16 +39,16 @@ int settimeofday(const struct timeval *tv, const struct timezone *tz);
 <p> <code>gettimeofday</code>() and <code>settimeofday</code>() return 0 for success, or -1 for failure (in which case <i>errno</i> is set appropriately).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> One of <i>tv</i> or <i>tz</i> pointed outside the accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>settimeofday</code>()): <i>timezone</i> is invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>settimeofday</code>()): <i>tv.tv_sec</i> is negative or <i>tv.tv_usec</i> is outside the range [0..999,999].</p>
-<dt><code>EINVAL</code> (since Linux 4.3)</p>
-<dd> (<code>settimeofday</code>()): An attempt was made to set the time to a value less than the current value of the <code>CLOCK_MONOTONIC</code> clock (see <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2)).</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process has insufficient privilege to call <code>settimeofday</code>(); under Linux the <code>CAP_SYS_TIME</code> capability is required.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> One of <i>tv</i> or <i>tz</i> pointed outside the accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>settimeofday</code>()): <i>timezone</i> is invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>settimeofday</code>()): <i>tv.tv_sec</i> is negative or <i>tv.tv_usec</i> is outside the range [0..999,999].</dd>
+<dt><code>EINVAL</code> (since Linux 4.3)</dt>
+<dd> (<code>settimeofday</code>()): An attempt was made to set the time to a value less than the current value of the <code>CLOCK_MONOTONIC</code> clock (see <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2)).</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process has insufficient privilege to call <code>settimeofday</code>(); under Linux the <code>CAP_SYS_TIME</code> capability is required.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.3BSD. POSIX.1-2001 describes <code>gettimeofday</code>() but not <code>settimeofday</code>(). POSIX.1-2008 marks <code>gettimeofday</code>() as obsolete, recommending the use of <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2) instead.</p>
 <h2>NOTES</h2>

@@ -34,17 +34,12 @@ The integer value that is stored together with the callback is typically an inde
 
 demonstrates the use of register_callback to update locale-dependent cached values that are used by a custom output operator 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;functional&gt;
 // cached locale-specific message and its hash
-
 typedef std::pair&lt;std::string, std::size_t&gt; cache_t;
 // populate the cached message and its hash from the locale
-
 void update_cache(cache_t &amp;cache, std::locale loc)
-
 {
     auto &amp;fct = std::use_facet&lt;std::messages&lt;char&gt;&gt;(loc);
     std::messages_base::catalog cat = fct.open(&quot;sed&quot;, loc);
@@ -52,9 +47,7 @@ void update_cache(cache_t &amp;cache, std::locale loc)
     cache.second = std::hash&lt;std::string&gt;()(cache.first);
 }
 // update the cache if the locale changed
-
 void true_callback(std::ios_base::event evt, std::ios_base &amp;str, int idx)
-
 {
     if (evt == std::ios_base::imbue_event) {
         cache_t *ptr = static_cast&lt;cache_t *&gt;(str.pword(idx));
@@ -62,9 +55,7 @@ void true_callback(std::ios_base::event evt, std::ios_base &amp;str, int idx)
     }
 }
 // registers the cache in pword() and sets up the callback
-
 struct CacheSetup
-
 {
     CacheSetup(std::ostream &amp;os, std::ios_base::event_callback f, cache_t *cache)
     {
@@ -75,21 +66,16 @@ struct CacheSetup
     };
 };
 // some custom class
-
 struct S {
 };
-
 // some custom class's operator&lt;&lt; that needs fast access to hashed message
-
 std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const S &amp;)
-
 {
     static cache_t cache;
     static CacheSetup setup(os, true_callback, &amp;cache);
     return os &lt;&lt; cache.first &lt;&lt; &quot; : &quot; &lt;&lt; cache.second;
 }
 int main()
-
 {
     std::locale loc(&quot;en_US.utf8&quot;);
     S s;

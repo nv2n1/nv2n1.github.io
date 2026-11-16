@@ -34,7 +34,7 @@ description: "QuantLib::BlackVarianceTermStructure – Black variance term struc
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Volatility</code> blackVolImpl (Time t, Real strike) const [protected, virtual]</h3>
 <p>Returns the volatility for the given strike and date calculating it from the variance. </p>

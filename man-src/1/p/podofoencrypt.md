@@ -17,80 +17,80 @@ description: "podofoencrypt – encrypt PDF files and set PDF security settings"
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display the help text</dl>
+</dt><dd> Display the help text</dd></dl>
 <p> Algorithm: </p>
 <dl>
 <dt>
-<dd> <code>&#8211;rc4v1</code></p>
+</dt><dd> <code>&#8211;rc4v1</code></dd>
 <dl>
 <dt>
-<dd> Use rc4v1 encryption</dl>
+</dt><dd> Use rc4v1 encryption</dd></dl>
 <p> <code>&#8211;rc4v2</code></p>
 <dl>
 <dt>
-<dd> Use rc4v2 encryption (Default value)</dl>
+</dt><dd> Use rc4v2 encryption (Default value)</dd></dl>
 <p> <code>&#8211;aes</code></p>
 <dl>
 <dt>
-<dd> Use aes encryption (currently not supported)</dl>
+</dt><dd> Use aes encryption (currently not supported)</dd></dl>
 </dl>
 <p> Passwords: </p>
 <dl>
 <dt>
-<dd> <code>-u &lt;password&gt;</code></p>
+</dt><dd> <code>-u &lt;password&gt;</code></dd>
 <dl>
 <dt>
-<dd> An optional user password</dl>
+</dt><dd> An optional user password</dd></dl>
 <p> <code>-o &lt;password&gt;</code></p>
 <dl>
 <dt>
-<dd> The required owner password</dl>
+</dt><dd> The required owner password</dd></dl>
 </dl>
 <p> Permissions:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>&#8211;print</code></p>
-<dl>
+</dd><dl>
 <dt>
-<dd>
-<p> Allow printing the document</dl>
+</dt><dd>
+<p> Allow printing the document</dd></dl>
 <p> <code>&#8211;edit</code></p>
 <dl>
 <dt>
-<dd>
-<p> Allow modification of the document besides annotations, form fields or changing pages</dl>
+</dt><dd>
+<p> Allow modification of the document besides annotations, form fields or changing pages</dd></dl>
 <p> <code>&#8211;copy</code></p>
 <dl>
 <dt>
-<dd>
-<p> Allow extraction of text and graphics</dl>
+</dt><dd>
+<p> Allow extraction of text and graphics</dd></dl>
 <p> <code>&#8211;editnotes</code></p>
 <dl>
 <dt>
-<dd>
-<p> Add or modify text annoations or form fields (if ePdfPermissions_Edit is set also allow to create interactive form fields including signature)</dl>
+</dt><dd>
+<p> Add or modify text annoations or form fields (if ePdfPermissions_Edit is set also allow to create interactive form fields including signature)</dd></dl>
 <p> <code>&#8211;fillandsign</code></p>
 <dl>
 <dt>
-<dd>
-<p> Fill in existing form or signature fields</dl>
+</dt><dd>
+<p> Fill in existing form or signature fields</dd></dl>
 <p> <code>&#8211;accessible</code></p>
 <dl>
 <dt>
-<dd>
-<p> Extract text and graphics to support user with disabillities</dl>
+</dt><dd>
+<p> Extract text and graphics to support user with disabillities</dd></dl>
 <p> <code>&#8211;assemble</code></p>
 <dl>
 <dt>
-<dd>
-<p> Assemble the document: insert, create, rotate delete pages or add bookmarks</dl>
+</dt><dd>
+<p> Assemble the document: insert, create, rotate delete pages or add bookmarks</dd></dl>
 <p> <code>&#8211;highprint </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Print a high resolution version of the document </p>
-</dl>
+</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-podofobox/">podofobox</a></code>(1), <code>podofocolor</code>(1), <code><a href="/docs/linux/man/1-podofocountpages/">podofocountpages</a></code>(1), <code><a href="/docs/linux/man/1-podofocrop/">podofocrop</a></code>(1), <code>podofogc</code>(1), <code><a href="/docs/linux/man/1-podofoimg2pdf/">podofoimg2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofoimgextract/">podofoimgextract</a></code>(1), <code><a href="/docs/linux/man/1-podofoincrementalupdates/">podofoincrementalupdates</a></code>(1), <code><a href="/docs/linux/man/1-podofoimpose/">podofoimpose</a></code>(1), <code><a href="/docs/linux/man/1-podofomerge/">podofomerge</a></code>(1), <code><a href="/docs/linux/man/1-podofopages/">podofopages</a></code>(1), <code><a href="/docs/linux/man/1-podofopdfinfo/">podofopdfinfo</a></code>(1), <code><a href="/docs/linux/man/1-podofotxt2pdf/">podofotxt2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofotxtextract/">podofotxtextract</a></code>(1), <code><a href="/docs/linux/man/1-podofouncompress/">podofouncompress</a></code>(1), <code><a href="/docs/linux/man/1-podofoxmp/">podofoxmp</a></code>(1) </p>

@@ -17,18 +17,18 @@ description: "lpq – show printer queue status"
 <h2>OPTIONS</h2>
 <p> <code>lpq</code> supports the following options:</p>
 <dl>
-<dt><code>-E</code></p>
-<dd> Forces encryption when connecting to the server.</p>
-<dt><code>-P </code><i>destination</i>[<code>/</code><i>instance</i>]</p>
-<dd> Specifies an alternate printer or class name.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd> Specifies an alternate username.</p>
-<dt><code>-a</code></p>
-<dd> Reports jobs on all printers.</p>
-<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</p>
-<dd> Specifies an alternate server.</p>
-<dt><code>-l</code></p>
-<dd> Requests a more verbose (long) reporting format.</dl>
+<dt><code>-E</code></dt>
+<dd> Forces encryption when connecting to the server.</dd>
+<dt><code>-P </code><i>destination</i>[<code>/</code><i>instance</i>]</dt>
+<dd> Specifies an alternate printer or class name.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd> Specifies an alternate username.</dd>
+<dt><code>-a</code></dt>
+<dd> Reports jobs on all printers.</dd>
+<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</dt>
+<dd> Specifies an alternate server.</dd>
+<dt><code>-l</code></dt>
+<dd> Requests a more verbose (long) reporting format.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cancel/">cancel</a></code>(1), <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code><a href="/docs/linux/man/1-lprm/">lprm</a></code>(1), <code><a href="/docs/linux/man/1-lpstat/">lpstat</a></code>(1), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>COPYRIGHT</h2>

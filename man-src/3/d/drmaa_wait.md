@@ -94,49 +94,47 @@ size_t&amp;nbsp;error_diag_len
 <p> If returned a non-zero value in the <i>signaled</i> parameter, the drmaa_wtermsig() function evaluates into <i>signal</i> up to <i>signal_len</i> characters of a string representation of the signal that caused the termination of the job. For signals declared by POSIX.1, the symbolic names are returned (e.g., SIGABRT, SIGALRM). For signals not declared by POSIX, any other string may be returned. </p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, drmaa_run_job(), drmaa_run_bulk_jobs(), and drmaa_get_next_job_id() return DRMAA_ERRNO_SUCCESS. Other values indicate an error. Up to <i>error_diag_len</i> characters of error related diagnosis information is then provided in the buffer <i>error_diagnosis</i>. </p>
 <h2>ERRORS</h2>
 <p> The drmaa_synchronize(), drmaa_wait(), drmaa_wifexited(), drmaa_wexitstatus(), drmaa_wifsignaled(), drmaa_wtermsig(), drmaa_wcoredump(), and drmaa_wifaborted() functions can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></p>
-<dd> Unexpected or internal DRMAA error, like system call failure, etc.</p>
-<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></p>
-<dd> Could not contact DRM system for this request.</p>
-<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></p>
-<dd> The specified request is not processed successfully due to authorization failure.</p>
-<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></p>
-<dd> The input value for an argument is invalid.</p>
-<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></p>
-<dd> Failed because there is no active session.</p>
-<dt><code>DRMAA_ERRNO_NO_MEMORY</code></p>
-<dd> Failed allocating memory.</dl>
+<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></dt>
+<dd> Unexpected or internal DRMAA error, like system call failure, etc.</dd>
+<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></dt>
+<dd> Could not contact DRM system for this request.</dd>
+<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></dt>
+<dd> The specified request is not processed successfully due to authorization failure.</dd>
+<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></dt>
+<dd> The input value for an argument is invalid.</dd>
+<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></dt>
+<dd> Failed because there is no active session.</dd>
+<dt><code>DRMAA_ERRNO_NO_MEMORY</code></dt>
+<dd> Failed allocating memory.</dd></dl>
 <p> The drmaa_synchronize() and drmaa_wait() functions can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_EXIT_TIMEOUT</code></p>
-<dd> Time-out condition.</p>
-<dt><code>DRMAA_ERRNO_INVALID_JOB</code></p>
-<dd> The job specified by the does not exist.</dl>
+<dt><code>DRMAA_ERRNO_EXIT_TIMEOUT</code></dt>
+<dd> Time-out condition.</dd>
+<dt><code>DRMAA_ERRNO_INVALID_JOB</code></dt>
+<dd> The job specified by the does not exist.</dd></dl>
 <p> The drmaa_wait() can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_NO_RUSAGE</code></p>
-<dd> This error code is returned by drmaa_wait() when a job has finished but no rusage and stat data could be provided.</dl>
+<dt><code>DRMAA_ERRNO_NO_RUSAGE</code></dt>
+<dd> This error code is returned by drmaa_wait() when a job has finished but no rusage and stat data could be provided.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>Index</h2>

@@ -15,17 +15,17 @@ description: "gnome-calculator – a desktop calculator"
 <p> <code>gnome-calculator</code> is the official calculator of the GNOME desktop environment.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-e, &#8211;equation</code></p>
-<dd> Start gnome-calculator and display the equation following this option.</p>
-<dt><code>-s, &#8211;solve</code></p>
-<dd> Solve the equation provided following this option.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>-h, -?, &#8211;help</code></p>
-<dd> Prints the command line options.</dl>
+<dt><code>-e, &#8211;equation</code></dt>
+<dd> Start gnome-calculator and display the equation following this option.</dd>
+<dt><code>-s, &#8211;solve</code></dt>
+<dd> Solve the equation provided following this option.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>-h, -?, &#8211;help</code></dt>
+<dd> Prints the command line options.</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code>gcalccmd</code></p>
+<dt><code>gcalccmd</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

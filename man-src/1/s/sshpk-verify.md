@@ -16,14 +16,14 @@ description: "sshpk-verify – verify a signature on data using an SSH key"
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ printf 'foo' | sshpk-verify -i ~/.ssh/id_ecdsa -s MEUCIQCYp...
 OK
 $ printf 'foo' | sshpk-verify -i ~/.ssh/id_ecdsa -s GARBAGE...
 NOT OK
 </pre>
-</dl>
+</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>0</code><br />
 &nbsp;<wbr>&nbsp;Signature validates and matches the key. </p>

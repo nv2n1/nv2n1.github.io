@@ -14,12 +14,12 @@ description: "z8530_flush_fifo – Flush on chip RX FIFO"
 <p><i>c</i></p>
 <dl>
 <dd>
-<dd>Channel to flush</dl>
+</dd><dd>Channel to flush</dd></dl>
 <h2>Description</h2>
 <p>Flush the receive FIFO. There is no specific option for this, we blindly read bytes and discard them. Reading when there is no data is harmless. The 8530 has a 4 byte FIFO, the 85230 has 8 bytes. </p>
 <p> All locking is handled for the caller. On return data may still be present if it arrived during the flush.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

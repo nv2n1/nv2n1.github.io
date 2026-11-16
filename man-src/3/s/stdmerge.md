@@ -11,57 +11,31 @@ std::merge - std::merge
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 OutputIt merge( InputIt1 first1, InputIt1 last1,                                                              (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 constexpr OutputIt merge( InputIt1 first1, InputIt1 last1,                                                    (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3 &gt;
-
 ForwardIt3 merge( ExecutionPolicy&amp;&amp; policy,
-
 ForwardIt1 first1, ForwardIt1 last1,                                                                      (2) (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first );                                                                                 (1)
-
 template&lt; class InputIt1, class InputIt2, class OutputIt, class Compare&gt;
-
 OutputIt merge( InputIt1 first1, InputIt1 last1,                                                                            (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first, Compare comp );
-
 template&lt; class InputIt1, class InputIt2, class OutputIt, class Compare&gt;
-
 constexpr OutputIt merge( InputIt1 first1, InputIt1 last1,                                                                  (since C++20)
-
 InputIt2 first2, InputIt2 last2,                                                                          (3)
-
 OutputIt d_first, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3, class Compare&gt;
-
 ForwardIt3 merge( ExecutionPolicy&amp;&amp; policy,
-
 ForwardIt1 first1, ForwardIt1 last1,                                                                          (4)           (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first, Compare comp );</code></pre> 
 Merges two sorted ranges [first1, last1) and [first2, last2) into one sorted range beginning at d_first. 
 1) Elements are compared using operator&lt;. 
@@ -164,18 +138,12 @@ This algorithm performs a similar task as std::set_union does. Both consume two 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;random&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     // fill the vectors with random numbers
     std::random_device rd;

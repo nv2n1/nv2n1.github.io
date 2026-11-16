@@ -10,9 +10,9 @@ CSSETD - Sets the value of an internal parameter of type DOUBLE PRECISION for th
 
 <h2>Synopsis</h2>CALL CSSETD (PNAM,DVAL)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be set.
-<dt>DVAL
-<dd>A DOUBLE PRECISION value that is the value to be assigned to the internal parameter specified by PNAM.</dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the cssgrid_params man page.
+</dt><dd>A character string that specifies the name of the parameter to be set.
+</dd><dt>DVAL
+</dt><dd>A DOUBLE PRECISION value that is the value to be assigned to the internal parameter specified by PNAM.</dd></dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the cssgrid_params man page.
 <h2>Access</h2>To use CSSETD, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>css_overview, cssgrid, cssgrid_params, csgetd. 
 

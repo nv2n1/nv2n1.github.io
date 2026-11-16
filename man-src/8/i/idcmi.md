@@ -15,59 +15,59 @@ description: "ipmiutil_dcmi – handle DCMI functions"
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-a string</p>
-<dd>Set the DCMI Asset Tag to this string.</p>
-<dt>-d string</p>
-<dd>Set the DCMI MC ID to this string.</p>
-<dt>-m 002000</p>
-<dd>Target a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</p>
-<dt>-s</p>
-<dd>When getting info, also get the DCMI sensor information.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-a string</dt>
+<dd>Set the DCMI Asset Tag to this string.</dd>
+<dt>-d string</dt>
+<dd>Set the DCMI MC ID to this string.</dd>
+<dt>-m 002000</dt>
+<dd>Target a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</dd>
+<dt>-s</dt>
+<dd>When getting info, also get the DCMI sensor information.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Functions</h2>
 <dl>
-<dt>info</p>
-<dd>Get DCMI Capabilities, MC ID, and Asset Tag. This is the default function if no function was specified. </p>
-<dt>power</p>
-<dd>Get DCMI Power reading and DCMI Power limit, if supported in the DCMI capabilties.</p>
-<dt>power set_limit</p>
-<dd>Set Power limit</p>
-<dt>power set_action &lt;action&gt;</p>
-<dd>Set Power limit exception action (where action = no_action | power_off | log_sel)</p>
-<dt>power set_correction</p>
-<dd>Set Power limit correction time (in ms)</p>
-<dt>power set_sample</p>
-<dd>Set Power limit sampling period (in sec)</p>
-<dt>power activate</p>
-<dd>Activate Power limit</p>
-<dt>power deactivate</p>
-<dd>Deactivate Power limit </p>
-<dt>thermal</p>
-<dd>Get/Set DCMI Thermal parameters. This requires DCMI 1.5 support. </p>
-<dt>config</p>
-<dd>Get/Set DCMI Configuration parameters. This requires DCMI 1.5 support. </p>
-<dt>help</p>
-<dd>Show the help (usage) message </p>
+<dt>info</dt>
+<dd>Get DCMI Capabilities, MC ID, and Asset Tag. This is the default function if no function was specified. </dd>
+<dt>power</dt>
+<dd>Get DCMI Power reading and DCMI Power limit, if supported in the DCMI capabilties.</dd>
+<dt>power set_limit</dt>
+<dd>Set Power limit</dd>
+<dt>power set_action &lt;action&gt;</dt>
+<dd>Set Power limit exception action (where action = no_action | power_off | log_sel)</dd>
+<dt>power set_correction</dt>
+<dd>Set Power limit correction time (in ms)</dd>
+<dt>power set_sample</dt>
+<dd>Set Power limit sampling period (in sec)</dd>
+<dt>power activate</dt>
+<dd>Activate Power limit</dd>
+<dt>power deactivate</dt>
+<dd>Deactivate Power limit </dd>
+<dt>thermal</dt>
+<dd>Get/Set DCMI Thermal parameters. This requires DCMI 1.5 support. </dd>
+<dt>config</dt>
+<dd>Get/Set DCMI Configuration parameters. This requires DCMI 1.5 support. </dd>
+<dt>help</dt>
+<dd>Show the help (usage) message </dd>
 </dl>
 <h2>Examples</h2>
 <p>ipmiutil dcmi info -s<br />

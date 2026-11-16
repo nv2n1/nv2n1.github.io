@@ -16,13 +16,13 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 <p>&nbsp;<wbr>ldns_dnssec_data_chain_struct(); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dnssec_data_chain</i></p>
+<dt> <i>ldns_dnssec_data_chain</i></dt>
 <dd>
-<dd>Chain structure that contains all DNSSEC data needed to<br />
+</dd><dd>Chain structure that contains all DNSSEC data needed to<br />
  verify an rrset<br />
  struct ldns_dnssec_data_chain_struct<br />
  {<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list *rrset;</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list *rrset;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list *signatures;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_type parent_type;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_data_chain *parent;</p>
@@ -32,12 +32,12 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 <p> }; </p>
 <p> typedef struct ldns_dnssec_data_chain_struct ldns_dnssec_data_chain;</dl>
 <dl>
-<dt> <i>ldns_dnssec_data_chain_struct</i>()</dl>
+<dt> <i>ldns_dnssec_data_chain_struct</i>()</dt></dl>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree</i></p>
+<dt> <i>ldns_dnssec_trust_tree</i></dt>
 <dd>
-<dd>Tree structure that contains the relation of DNSSEC data,<br />
- and their cryptographic status. </p>
+</dd><dd>Tree structure that contains the relation of DNSSEC data,<br />
+ and their cryptographic status. </dd>
 <p> This tree is derived from a data_chain, and can be used<br />
  to look whether there is a connection between an RRSET<br />
  and a trusted key. The tree only contains pointers to the<br />
@@ -85,3 +85,4 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

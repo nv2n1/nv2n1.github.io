@@ -150,14 +150,14 @@ description: "pki_tomcat_selinux – Security Enhanced Linux Policy for the pki_
 <p> <code>pki_tomcat_cert_t</code> </p>
 <p> &#8211; Set files with the pki_tomcat_cert_t type, if you want to treat the files as pki tomcat certificate data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/pki-ca/alias(/.*)?, /etc/pki/pki-tomcat/ca(/.*)?, /var/lib/pki-kra/alias(/.*)?, /var/lib/pki-tks/alias(/.*)?, /var/lib/pki-ocsp/alias(/.*)?, /etc/pki/pki-tomcat/alias(/.*)?, /var/lib/ipa/pki-ca/publish(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/pki-ca/alias(/.*)?, /etc/pki/pki-tomcat/ca(/.*)?, /var/lib/pki-kra/alias(/.*)?, /var/lib/pki-tks/alias(/.*)?, /var/lib/pki-ocsp/alias(/.*)?, /etc/pki/pki-tomcat/alias(/.*)?, /var/lib/ipa/pki-ca/publish(/.*)? </dd>
 </dl>
 <p> <code>pki_tomcat_etc_rw_t</code> </p>
 <p> &#8211; Set files with the pki_tomcat_etc_rw_t type, if you want to treat the files as pki tomcat etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pki-ca(/.*)?, /etc/pki-kra(/.*)?, /etc/pki-tks(/.*)?, /etc/pki-ocsp(/.*)?, /etc/pki/pki-tomcat(/.*)?, /etc/sysconfig/pki/tomcat(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/pki-ca(/.*)?, /etc/pki-kra(/.*)?, /etc/pki-tks(/.*)?, /etc/pki-ocsp(/.*)?, /etc/pki/pki-tomcat(/.*)?, /etc/sysconfig/pki/tomcat(/.*)? </dd>
 </dl>
 <p> <code>pki_tomcat_exec_t</code> </p>
 <p> &#8211; Set files with the pki_tomcat_exec_t type, if you want to transition an executable to the pki_tomcat_t domain. </p>
@@ -166,8 +166,8 @@ description: "pki_tomcat_selinux – Security Enhanced Linux Policy for the pki_
 <p> <code>pki_tomcat_log_t</code> </p>
 <p> &#8211; Set files with the pki_tomcat_log_t type, if you want to treat the data as pki tomcat log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/pki-ca(/.*)?, /var/log/pki-kra(/.*)?, /var/log/pki-tks(/.*)?, /var/log/pki-ocsp(/.*)?, /var/log/pki/pki-tomcat(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/pki-ca(/.*)?, /var/log/pki-kra(/.*)?, /var/log/pki-tks(/.*)?, /var/log/pki-ocsp(/.*)?, /var/log/pki/pki-tomcat(/.*)? </dd>
 </dl>
 <p> <code>pki_tomcat_tmp_t</code> </p>
 <p> &#8211; Set files with the pki_tomcat_tmp_t type, if you want to store pki tomcat temporary files in the /tmp directories. </p>
@@ -176,14 +176,14 @@ description: "pki_tomcat_selinux – Security Enhanced Linux Policy for the pki_
 <p> <code>pki_tomcat_var_lib_t</code> </p>
 <p> &#8211; Set files with the pki_tomcat_var_lib_t type, if you want to store the pki tomcat files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/pki-ca(/.*)?, /var/lib/pki-kra(/.*)?, /var/lib/pki-tks(/.*)?, /var/lib/pki-ocsp(/.*)?, /var/lib/pki/pki-tomcat(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/pki-ca(/.*)?, /var/lib/pki-kra(/.*)?, /var/lib/pki-tks(/.*)?, /var/lib/pki-ocsp(/.*)?, /var/lib/pki/pki-tomcat(/.*)? </dd>
 </dl>
 <p> <code>pki_tomcat_var_run_t</code> </p>
 <p> &#8211; Set files with the pki_tomcat_var_run_t type, if you want to store the pki tomcat files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/pki-ca.pid, /var/run/pki-kra.pid, /var/run/pki-tks.pid, /var/run/pki-ocsp.pid, /var/run/pki/tomcat(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/pki-ca.pid, /var/run/pki-kra.pid, /var/run/pki-tks.pid, /var/run/pki-ocsp.pid, /var/run/pki/tomcat(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

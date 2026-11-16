@@ -18,30 +18,30 @@ description: "lvmpolld — LVM poll daemon"
 <h2>Options</h2>
 <p>To run the daemon in a test environment both the pidfile_path and the socket_path should be changed from the defaults.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;foreground</code></p>
-<dd>Don&#8217;t fork, but run in the foreground.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show help information.</p>
-<dt><i></i><code>-l</code>, <i></i><code>&#8211;log</code> {<i>all</i>|<i>wire</i>|<i>debug</i>}</p>
-<dd>Select the type of log messages to generate. Messages are logged by syslog. Additionally, when -f is given they are also sent to standard error. There are two classes of messages: wire and debug. Selecting &#8216;all&#8217; supplies both and is equivalent to a comma-separated list -l wire,debug.</p>
-<dt><code>-p</code>, <code>&#8211;pidfile</code> <i>pidfile_path</i></p>
-<dd>Path to the pidfile. This overrides both the built-in default (/run/lvmpolld.pid) and the environment variable <code>LVM_LVMPOLLD_PIDFILE</code>. This file is used to prevent more than one instance of the daemon running simultaneously.</p>
-<dt><code>-s</code>, <code>&#8211;socket</code> <i>socket_path</i></p>
-<dd>Path to the socket file. This overrides both the built-in default (/run/lvm/lvmpolld.socket) and the environment variable <code>LVM_LVMPOLLD_SOCKET</code>.</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code> <i>timeout_value</i></p>
-<dd>The daemon may shutdown after being idle for the given time (in seconds). When the option is omitted or the value given is zero the daemon never shutdowns on idle.</p>
-<dt><code>-B</code>, <code>&#8211;binary</code> <i>lvm_binary_path</i></p>
-<dd>Optional path to alternative LVM binary (default: /lvm). Use for testing purposes only.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display the version of lvmpolld daemon.</p>
-<dt><code>&#8211;dump</code></p>
-<dd>Contact the running lvmpolld daemon to obtain the complete state and print it out in a raw format.</dl>
+<dt><code>-f</code>, <code>&#8211;foreground</code></dt>
+<dd>Don&#8217;t fork, but run in the foreground.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show help information.</dd>
+<dt><i></i><code>-l</code>, <i></i><code>&#8211;log</code> {<i>all</i>|<i>wire</i>|<i>debug</i>}</dt>
+<dd>Select the type of log messages to generate. Messages are logged by syslog. Additionally, when -f is given they are also sent to standard error. There are two classes of messages: wire and debug. Selecting &#8216;all&#8217; supplies both and is equivalent to a comma-separated list -l wire,debug.</dd>
+<dt><code>-p</code>, <code>&#8211;pidfile</code> <i>pidfile_path</i></dt>
+<dd>Path to the pidfile. This overrides both the built-in default (/run/lvmpolld.pid) and the environment variable <code>LVM_LVMPOLLD_PIDFILE</code>. This file is used to prevent more than one instance of the daemon running simultaneously.</dd>
+<dt><code>-s</code>, <code>&#8211;socket</code> <i>socket_path</i></dt>
+<dd>Path to the socket file. This overrides both the built-in default (/run/lvm/lvmpolld.socket) and the environment variable <code>LVM_LVMPOLLD_SOCKET</code>.</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code> <i>timeout_value</i></dt>
+<dd>The daemon may shutdown after being idle for the given time (in seconds). When the option is omitted or the value given is zero the daemon never shutdowns on idle.</dd>
+<dt><code>-B</code>, <code>&#8211;binary</code> <i>lvm_binary_path</i></dt>
+<dd>Optional path to alternative LVM binary (default: /lvm). Use for testing purposes only.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display the version of lvmpolld daemon.</dd>
+<dt><code>&#8211;dump</code></dt>
+<dd>Contact the running lvmpolld daemon to obtain the complete state and print it out in a raw format.</dd></dl>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>LVM_LVMPOLLD_PIDFILE</code></p>
-<dd>Path for the pid file.</p>
-<dt><code>LVM_LVMPOLLD_SOCKET</code></p>
-<dd>Path for the socket file. </p>
+<dt><code>LVM_LVMPOLLD_PIDFILE</code></dt>
+<dd>Path for the pid file.</dd>
+<dt><code>LVM_LVMPOLLD_SOCKET</code></dt>
+<dd>Path for the socket file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) </p>

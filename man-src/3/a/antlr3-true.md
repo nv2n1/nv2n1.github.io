@@ -95,9 +95,9 @@ description: "src/antlr3convertutf.c –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Function Documentation</a></p>
+<dt><a href="#lbAN">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAW">Variable Documentation</a></p>
+</dd><dt><a href="#lbAW">Variable Documentation</a></dt>
 <dd>
-<dt><a href="#lbBD">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBD">Author</a></dt>
+<dd></dd></dl>

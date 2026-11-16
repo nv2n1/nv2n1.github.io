@@ -15,14 +15,14 @@ description: "queryparse – extract DNS queries from pcap capture files."
 <p> <code>queryparse</code> is a tool designed to extract DNS queries from pcap-formatted packet capture files and save them in a form suitable for input to Nominum&#8217;s dnsperf or resperf benchmarking tools. <code>queryparse</code> will only examine UDP packets, and currently supports Ethernet and Cisco HDLC frame types.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-i filename</p>
-<dd> Attempt to extract DNS queries from <i>filename,</i> which should be a pcap-formatted packet capture session (e.g., a file created by tcpdump or ethereal).</p>
-<dt>-o filename</p>
-<dd> Write queries to <i>filename</i> in a format suitable for input to Nominum&#8217;s dnsperf or resperf benchmarking tools.</p>
-<dt>-r</p>
-<dd> Keep queries that do not have the RD (recursion desired) flag set. This is useful when parsing packet captures from authoritative nameservers. When parsing captures from caching nameservers, do not use it unless you also want to parse the outgoing queries from the nameserver. Defaults to discarding queries with RD=0.</p>
-<dt>-R</p>
-<dd> Parse responses (QR=1) instead of queries (QR=0).</dl>
+<dt>-i filename</dt>
+<dd> Attempt to extract DNS queries from <i>filename,</i> which should be a pcap-formatted packet capture session (e.g., a file created by tcpdump or ethereal).</dd>
+<dt>-o filename</dt>
+<dd> Write queries to <i>filename</i> in a format suitable for input to Nominum&#8217;s dnsperf or resperf benchmarking tools.</dd>
+<dt>-r</dt>
+<dd> Keep queries that do not have the RD (recursion desired) flag set. This is useful when parsing packet captures from authoritative nameservers. When parsing captures from caching nameservers, do not use it unless you also want to parse the outgoing queries from the nameserver. Defaults to discarding queries with RD=0.</dd>
+<dt>-R</dt>
+<dd> Parse responses (QR=1) instead of queries (QR=0).</dd></dl>
 <h2>FILES</h2>
 <p> None</p>
 <h2>ENVIRONMENT</h2>

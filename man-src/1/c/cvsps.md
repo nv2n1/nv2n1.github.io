@@ -15,62 +15,62 @@ description: "CVSps – create patchset information from CVS"
 <p> CVSps is a program for generating &#8216;patchset&#8217; information from a CVS repository. A patchset in this case is defined as a set of changes made to a collection of files, and all committed at the same time (using a single &#8216;cvs commit&#8217; command). This information is valuable to seeing the big picture of the evolution of a cvs project. While cvs tracks revision information, it is often difficult to see what changes were committed &#8216;atomically&#8217; to the repository.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> display usage summary</p>
-<dt><code>-x</code></p>
-<dd> ignore (and rebuild) ~/.cvsps/cvsps.cache file</p>
-<dt><code>-u</code></p>
-<dd> update ~/.cvsps/cvsps.cache file</p>
-<dt><code>-z &lt;fuzz&gt;</code></p>
-<dd> set the timestamp fuzz factor for identifying patch sets</p>
-<dt><code>-g</code></p>
-<dd> generate diffs of the selected patch sets</p>
-<dt><code>-s &lt;patchset&gt;[-[&lt;patchset&gt;]][,&lt;patchset&gt;&#8230;]</code></p>
-<dd> generate a diff for a given patchsets and patchset ranges</p>
-<dt><code>-a &lt;author&gt;</code></p>
-<dd> restrict output to patchsets created by author</p>
-<dt><code>-f &lt;file&gt;</code></p>
-<dd> restrict output to patchsets involving file</p>
-<dt><code>-d &lt;date1&gt; -d &lt;date2&gt;</code></p>
-<dd> if just one date specified, show revisions newer than date1. If two dates specified, show revisions between two dates.</p>
-<dt><code>-l &lt;regex&gt;</code></p>
-<dd> restrict output to patchsets matching regex in log message</p>
-<dt><code>-b &lt;branch&gt;</code></p>
-<dd> restrict output to patchsets affecting history of branch. If you want to restrict to the main branch, use a branch of &#8216;HEAD&#8217;.</p>
-<dt><code>-r &lt;tag1&gt; -r &lt;tag2&gt;</code></p>
-<dd> if just one tag specified, show revisions since tag1. If two tags specified, show revisions between the two tags.</p>
-<dt><code>-p &lt;dir&gt;</code></p>
-<dd> output individual patchsets as files in &lt;dir&gt; as &lt;dir&gt;/&lt;patchset&gt;.patch</p>
-<dt><code>-v</code></p>
-<dd> show very verbose parsing messages</p>
-<dt><code>-t</code></p>
-<dd> show some brief memory usage statistics</p>
-<dt><code>&#8211;norc</code></p>
-<dd> when invoking cvs, ignore the .cvsrc file</p>
-<dt><code>&#8211;summary-first</code></p>
-<dd> when multiple patchset diffs are being generated, put the patchset summary for all patchsets at the beginning of the output.</p>
-<dt><code>&#8211;test-log &lt;captured cvs log file&gt;</code></p>
-<dd> for testing changes, you can capture cvs log output, then test against this captured file instead of hammering some poor CVS server</p>
-<dt><code>&#8211;bkcvs</code></p>
-<dd> (see note below) for use in parsing the BK-&gt;CVS tree log formats only. This enables some hacks which are not generally applicable.</p>
-<dt><code>&#8211;no-rlog</code></p>
-<dd> disable the use of rlog internally. Note: rlog is required for stable PatchSet numbering. Use with care.</p>
-<dt><code>&#8211;diff-opts &lt;option string&gt;</code></p>
-<dd> send a custom set of options to diff, for example to increase the number of context lines, or change the diff format.</p>
-<dt><code>&#8211;cvs-direct (&#8211;no-cvs-direct)</code></p>
-<dd> enable (disable) built-in cvs client code. This enables the &#8216;pipelining&#8217; of multiple requests over a single client, reducing the overhead of handshaking and authentication to one per PatchSet instead of one per file.</p>
-<dt><code>&#8211;debuglvl &lt;bitmask&gt;</code></p>
-<dd> enable various debug output channels.</p>
-<dt><code>-Z &lt;compression&gt;</code></p>
-<dd> A value 1-9 which specifies amount of compression. A value of 0 disables compression.</p>
-<dt><code>&#8211;root &lt;cvsroot&gt;</code></p>
-<dd> Override the setting of CVSROOT (overrides working dir. and environment). For &#8211;cvs-direct only.</p>
-<dt><code>-q</code></p>
-<dd> Be quiet about warnings.</p>
-<dt><code>-A</code></p>
-<dd> Show ancestor branch when a new branch is found.</p>
-<dt><code>&lt;repository&gt;</code></p>
-<dd> Operate on the specified repository (overrides working dir.)</dl>
+<dt><code>-h</code></dt>
+<dd> display usage summary</dd>
+<dt><code>-x</code></dt>
+<dd> ignore (and rebuild) ~/.cvsps/cvsps.cache file</dd>
+<dt><code>-u</code></dt>
+<dd> update ~/.cvsps/cvsps.cache file</dd>
+<dt><code>-z &lt;fuzz&gt;</code></dt>
+<dd> set the timestamp fuzz factor for identifying patch sets</dd>
+<dt><code>-g</code></dt>
+<dd> generate diffs of the selected patch sets</dd>
+<dt><code>-s &lt;patchset&gt;[-[&lt;patchset&gt;]][,&lt;patchset&gt;&#8230;]</code></dt>
+<dd> generate a diff for a given patchsets and patchset ranges</dd>
+<dt><code>-a &lt;author&gt;</code></dt>
+<dd> restrict output to patchsets created by author</dd>
+<dt><code>-f &lt;file&gt;</code></dt>
+<dd> restrict output to patchsets involving file</dd>
+<dt><code>-d &lt;date1&gt; -d &lt;date2&gt;</code></dt>
+<dd> if just one date specified, show revisions newer than date1. If two dates specified, show revisions between two dates.</dd>
+<dt><code>-l &lt;regex&gt;</code></dt>
+<dd> restrict output to patchsets matching regex in log message</dd>
+<dt><code>-b &lt;branch&gt;</code></dt>
+<dd> restrict output to patchsets affecting history of branch. If you want to restrict to the main branch, use a branch of &#8216;HEAD&#8217;.</dd>
+<dt><code>-r &lt;tag1&gt; -r &lt;tag2&gt;</code></dt>
+<dd> if just one tag specified, show revisions since tag1. If two tags specified, show revisions between the two tags.</dd>
+<dt><code>-p &lt;dir&gt;</code></dt>
+<dd> output individual patchsets as files in &lt;dir&gt; as &lt;dir&gt;/&lt;patchset&gt;.patch</dd>
+<dt><code>-v</code></dt>
+<dd> show very verbose parsing messages</dd>
+<dt><code>-t</code></dt>
+<dd> show some brief memory usage statistics</dd>
+<dt><code>&#8211;norc</code></dt>
+<dd> when invoking cvs, ignore the .cvsrc file</dd>
+<dt><code>&#8211;summary-first</code></dt>
+<dd> when multiple patchset diffs are being generated, put the patchset summary for all patchsets at the beginning of the output.</dd>
+<dt><code>&#8211;test-log &lt;captured cvs log file&gt;</code></dt>
+<dd> for testing changes, you can capture cvs log output, then test against this captured file instead of hammering some poor CVS server</dd>
+<dt><code>&#8211;bkcvs</code></dt>
+<dd> (see note below) for use in parsing the BK-&gt;CVS tree log formats only. This enables some hacks which are not generally applicable.</dd>
+<dt><code>&#8211;no-rlog</code></dt>
+<dd> disable the use of rlog internally. Note: rlog is required for stable PatchSet numbering. Use with care.</dd>
+<dt><code>&#8211;diff-opts &lt;option string&gt;</code></dt>
+<dd> send a custom set of options to diff, for example to increase the number of context lines, or change the diff format.</dd>
+<dt><code>&#8211;cvs-direct (&#8211;no-cvs-direct)</code></dt>
+<dd> enable (disable) built-in cvs client code. This enables the &#8216;pipelining&#8217; of multiple requests over a single client, reducing the overhead of handshaking and authentication to one per PatchSet instead of one per file.</dd>
+<dt><code>&#8211;debuglvl &lt;bitmask&gt;</code></dt>
+<dd> enable various debug output channels.</dd>
+<dt><code>-Z &lt;compression&gt;</code></dt>
+<dd> A value 1-9 which specifies amount of compression. A value of 0 disables compression.</dd>
+<dt><code>&#8211;root &lt;cvsroot&gt;</code></dt>
+<dd> Override the setting of CVSROOT (overrides working dir. and environment). For &#8211;cvs-direct only.</dd>
+<dt><code>-q</code></dt>
+<dd> Be quiet about warnings.</dd>
+<dt><code>-A</code></dt>
+<dd> Show ancestor branch when a new branch is found.</dd>
+<dt><code>&lt;repository&gt;</code></dt>
+<dd> Operate on the specified repository (overrides working dir.)</dd></dl>
 <h2>NOTE ON TAG HANDLING</h2>
 <p> Tags are fundamentally &#8216;file at a time&#8217; in cvs, but like everything else, it would be nice to imagine that they are &#8216;repository at a time.&#8217; The approach cvsps takes is that a tag is assigned to a patchset. The meaning of this is that after this patchset, every revision of every file is after the tag (and conversely, before this patchset, at least one file is still before the tag). However, there are two kinds of inconsistent (or &#8216;funky&#8217;) tags that can be created, even when following best practices for cvs. </p>
 <p> The first is what is called a FUNKY tag. A funky tag is one where there are patchsets which are chronologically (and thus by patchset id) earlier than the tag, but are tagwise after. These tags will be marked as &#8216;**FUNKY**&#8217; in the Tag: section of the cvsps output. When a funky tag is specified as one of the &#8216;-r&#8217; arguments, there are some number of patchsets which need to be considered out of sequence. In this case, the patchsets themselves will be labeled FUNKY and will be processed correctly. </p>
@@ -90,7 +90,7 @@ description: "CVSps – create patchset information from CVS"
 <p> All dates are reported in localtime. This can be overridden (as usual) using the TZ environment variable. Dates as arguments must be in the format &#8216;yyyy/mm/dd hh:mm:ss&#8217;; for example,</p>
 <dl>
 <dt>
-<dd> $ cvsps -d &#8216;2004/05/01 00:00:00&#8217; -d &#8216;2004/07/07 12:00:00&#8217;</dl>
+</dt><dd> $ cvsps -d &#8216;2004/05/01 00:00:00&#8217; -d &#8216;2004/07/07 12:00:00&#8217;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>cvs</code>(<code>1</code>), <code>ci</code>(<code>1</code>), <code>co</code>(<code>1</code>), <code>cvs</code>(<code>5</code>), <code>cvsbug</code>(<code>8</code>), <code>diff</code>(<code>1</code>), <code>grep</code>(<code>1</code>), <code>patch</code>(<code>1</code>), <code>rcs</code>(<code>1</code>), <code>rcsdiff</code>(<code>1</code>), <code>rcsmerge</code>(<code>1</code>), <code>rlog</code>(<code>1</code>).</p>
 <h2>REPORTING BUGS</h2>

@@ -14,17 +14,17 @@ description: "rio_init_mbox_res – Initialize a RIO mailbox resource"
 <p><i>res</i></p>
 <dl>
 <dd>
-<dd>resource struct</dl>
+</dd><dd>resource struct</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>start of mailbox range</dl>
+<dd>start of mailbox range</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>end of mailbox range</dl>
+<dd>end of mailbox range</dd></dl>
 <h2>Description</h2>
 <p>This function is used to initialize the fields of a resource for use as a mailbox resource. It initializes a range of mailboxes using the start and end arguments.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

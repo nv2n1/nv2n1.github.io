@@ -22,20 +22,20 @@ description: "Hash Creation Functions – Functions that create hash tables."
 <dl COMPACT>
 <dd><i>hash</i> The given hash.<br />
  <i>hash_func</i> The function used for hashing node keys.<br />
- <i>compare</i> The function used for comparing node keys.</dl>
+ <i>compare</i> The function used for comparing node keys.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE on success, FALSE on an error.</dl>
+<dd>TRUE on success, FALSE on an error.</dd></dl>
 <p> Referenced by ecore_hash_hash_set(), and ecore_hash_new().</p>
 <h3>EAPI Ecore_Hash* ecore_hash_new (Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)</h3>
 <p>Creates and initializes a new hash. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hash_func</i> The function for determining hash position.<br />
- <i>compare</i> The function for comparing node keys.</dl>
+ <i>compare</i> The function for comparing node keys.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>NULL on error, a new hash on success.</dl>
+<dd>NULL on error, a new hash on success.</dd></dl>
 <p> References ecore_hash_init(). </p>
 <p> Referenced by ecore_plugin_available_get(), ecore_string_init(), and ecore_x_netwm_init().</p>
 <h2>Author</h2>

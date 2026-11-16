@@ -15,7 +15,7 @@ pci_reset_slot - reset a PCI slot
 <h2>Arguments</h2>
 
 <i>slot</i>
-<dl><dd><dd>PCI slot to reset</dl>
+<dl><dd></dd><dd>PCI slot to reset</dd></dl>
 
 <h2>Description</h2>
 

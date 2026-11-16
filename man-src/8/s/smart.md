@@ -35,24 +35,24 @@ stats</pre>
 <p>Run &quot;smart command &#8211;help&quot; for more information.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd>Show program&#8217;s version number and exit</p>
-<dt><code>&#8211;config-file=FILE</code></p>
-<dd>Configuration file (default is &lt;data-dir&gt;/config)</p>
-<dt><code>&#8211;data-dir=DIR</code></p>
-<dd>Specifies the config file location &#8211; can take http, ftp urls and local file Data directory (default is /var/lib/smart/)</p>
-<dt><code>&#8211;log-level=LEVEL</code></p>
-<dd>Set the log level to level (debug, info, warning, error)</p>
-<dt><code>&#8211;gui</code></p>
-<dd>Use the default graphic interface</p>
-<dt><code>&#8211;shell</code></p>
-<dd>Use the default shell interface</p>
-<dt><code>&#8211;interface=NAME</code></p>
-<dd>Use the given interface</p>
-<dt><code>&#8211;ignore-locks</code></p>
-<dd>Don&#8217;t respect locking</p>
-<dt><code>-o OPT, &#8211;option=OPT</code></p>
-<dd>Set the option given by a name=value pair</dl>
+<dt><code>&#8211;version</code></dt>
+<dd>Show program&#8217;s version number and exit</dd>
+<dt><code>&#8211;config-file=FILE</code></dt>
+<dd>Configuration file (default is &lt;data-dir&gt;/config)</dd>
+<dt><code>&#8211;data-dir=DIR</code></dt>
+<dd>Specifies the config file location &#8211; can take http, ftp urls and local file Data directory (default is /var/lib/smart/)</dd>
+<dt><code>&#8211;log-level=LEVEL</code></dt>
+<dd>Set the log level to level (debug, info, warning, error)</dd>
+<dt><code>&#8211;gui</code></dt>
+<dd>Use the default graphic interface</dd>
+<dt><code>&#8211;shell</code></dt>
+<dd>Use the default shell interface</dd>
+<dt><code>&#8211;interface=NAME</code></dt>
+<dd>Use the given interface</dd>
+<dt><code>&#8211;ignore-locks</code></dt>
+<dd>Don&#8217;t respect locking</dd>
+<dt><code>-o OPT, &#8211;option=OPT</code></dt>
+<dd>Set the option given by a name=value pair</dd></dl>
 <h2>Examples</h2>
 <pre>smart install --help
 smart install pkgname

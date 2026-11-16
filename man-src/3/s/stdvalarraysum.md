@@ -25,10 +25,8 @@ The sum of the elements.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
 int main()
-
 {
     std::valarray&lt;int&gt; a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     std::cout &lt;&lt; a.sum() &lt;&lt; '\n';

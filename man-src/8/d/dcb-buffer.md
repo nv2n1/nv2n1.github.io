@@ -10,11 +10,8 @@ description: "dcb-buffer – show / manipulate port buffer settings of the DCB (
 <p>dcb-buffer &#8211; show / manipulate port buffer settings of the DCB (Data Center Bridging) subsystem</p>
 <h2>Synopsis</h2>
 <pre><code>dcb
-
 [ OPTIONS ]
-
 buffer
-
 { COMMAND | help }
 </code></pre>
 <p> <code>dcb buffer show dev</code> DEV [ <code>prio-buffer</code> ] [ <code>buffer-size</code> ] [ <code>total-size</code> ]<br />
@@ -32,12 +29,12 @@ SIZE := { INTEGER | INTEGERK | INTEGERM | ... }
 <h2>Parameters</h2>
 <p>For read-write parameters, the following describes only the write direction, i.e. as used with the <code>set</code> command. For the <code>show</code> command, the parameter name is to be used as a simple keyword without further arguments. This instructs the tool to show the value of a given parameter. When no parameters are given, the tool shows the complete buffer configuration. </p>
 <dl>
-<dt><code>total-size</code></p>
-<dd>A read-only property that shows the total device memory taken up by port buffers. This might be more than a simple sum of individual buffer sizes if there are any hidden or internal buffers. </p>
-<dt><code>prio-buffer </code><i>PRIO-MAP</i></p>
-<dd><i>PRIO-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are priorities, values are buffer indices. For each priority sets a buffer where traffic with that priority is directed to. </p>
-<dt><code>buffer-size </code><i>SIZE-MAP</i></p>
-<dd><i>SIZE-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are buffer indices, values are sizes of that buffer in bytes. The sizes can use the notation documented in section PARAMETERS at <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8). Note that the size requested by the tool can be rounded or capped by the driver to satisfy the requirements of the device. </p>
+<dt><code>total-size</code></dt>
+<dd>A read-only property that shows the total device memory taken up by port buffers. This might be more than a simple sum of individual buffer sizes if there are any hidden or internal buffers. </dd>
+<dt><code>prio-buffer </code><i>PRIO-MAP</i></dt>
+<dd><i>PRIO-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are priorities, values are buffer indices. For each priority sets a buffer where traffic with that priority is directed to. </dd>
+<dt><code>buffer-size </code><i>SIZE-MAP</i></dt>
+<dd><i>SIZE-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are buffer indices, values are sizes of that buffer in bytes. The sizes can use the notation documented in section PARAMETERS at <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8). Note that the size requested by the tool can be rounded or capped by the driver to satisfy the requirements of the device. </dd>
 </dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>Configure the priomap in a one-to-one fashion: </p>

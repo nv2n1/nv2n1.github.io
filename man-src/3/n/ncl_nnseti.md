@@ -15,9 +15,9 @@ CALL NNSETI (PNAM,IVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be set.
-<dt>IVAL
-<dd>An INTEGER value that is the value to be assigned to the internal parameter specified by PNAM.</dl>
+</dt><dd>A character string that specifies the name of the parameter to be set.
+</dd><dt>IVAL
+</dt><dd>An INTEGER value that is the value to be assigned to the internal parameter specified by PNAM.</dd></dl>
 
 <h2>Usage</h2>
 

@@ -20,10 +20,10 @@ description: "oscap-docker – Tool for running oscap within docker container or
 <p>Usage: oscap-docker container-cve CONTAINER_NAME [&#8211;results oval-results-file.xml [&#8211;report report.html]] Chroot to running container, determine OS variant/version, download CVE stream applicable to the given OS and finally run a vulnerability scan. </p>
 <h2>Security Policies</h2>
 <dl>
-<dt><code> SCAP-Security-Guide</code> package contains multiple configuration policies.</p>
+<dt><code> SCAP-Security-Guide</code> package contains multiple configuration policies.</dt>
 <dd>
-<dt><code> Red Hat CVE stream can be found online</code> &#8211; <i><a rel="nofollow" href="https://www.redhat.com/security/data/metrics/">https://www.redhat.com/security/data/metrics/</a></i></p>
-<dd></dl>
+</dd><dt><code> Red Hat CVE stream can be found online</code> &#8211; <i><a rel="nofollow" href="https://www.redhat.com/security/data/metrics/">https://www.redhat.com/security/data/metrics/</a></i></dt>
+<dd></dd></dl>
 <h2>Reporting Bugs</h2>
 <pre>Please report bugs using <a rel="nofollow" href="https://github.com/OpenSCAP/openscap/issues">https://github.com/OpenSCAP/openscap/issues</a></pre>
 <h2>Authors</h2>

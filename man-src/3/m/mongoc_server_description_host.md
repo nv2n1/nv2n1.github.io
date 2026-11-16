@@ -13,8 +13,8 @@ description: "mongoc_server_description_host() – This function returns the hos
 mongoc_server_description_host (const mongoc_server_description_t *description);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>description</code></p>
-<dd>A <code>The server description for which we&#8217;d like a host</code> \&amp;.</dl>
+<dt><code>description</code></dt>
+<dd>A <code>The server description for which we&#8217;d like a host</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function returns the host that the given server description is associated with. This object is owned by the server description </p>
 <h2>Returns</h2>

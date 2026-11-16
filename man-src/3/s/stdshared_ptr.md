@@ -13,7 +13,6 @@ std::shared_ptr - std::shared_ptr
 Defined in header &lt;memory&gt; 
 template&lt; class T &gt; class shared_ptr; <i>(since C++11)</i> 
 std::shared_ptr is a smart pointer that retains shared ownership of an object through a pointer. Several shared_ptr objects may own the same object. The object is destroyed and its memory deallocated when either of the following happens: <pre><code>* the last remaining shared_ptr owning the object is destroyed;
-
 * the last remaining shared_ptr owning the object is assigned another pointer via operator= or reset().</code></pre> 
 The object is destroyed using delete-expression or a custom deleter that is supplied to shared_ptr during construction. 
 A shared_ptr can share ownership of an object while storing a pointer to another object. This feature can be used to point to member objects while owning the object they belong to. The stored pointer is the one accessed by get(), the dereference and the comparison operators. The managed pointer is the one passed to the deleter when use count reaches zero. 
@@ -203,16 +202,11 @@ To satisfy thread safety requirements, the reference counters are typically incr
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;mutex&gt;
 struct Base
-
 {
     Base()
     {
@@ -225,7 +219,6 @@ struct Base
     }
 };
 struct Derived : public Base
-
 {
     Derived()
     {
@@ -237,7 +230,6 @@ struct Derived : public Base
     }
 };
 void thr(std::shared_ptr&lt;Base&gt; p)
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     std::shared_ptr&lt;Base&gt; lp = p; // thread-safe, even though the
@@ -251,7 +243,6 @@ void thr(std::shared_ptr&lt;Base&gt; p)
     }
 }
 int main()
-
 {
     std::shared_ptr&lt;Base&gt; p = std::make_shared&lt;Derived&gt;();
     std::cout &lt;&lt; &quot;Created a shared Derived (as a pointer to Base)\n&quot;

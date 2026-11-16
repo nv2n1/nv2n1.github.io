@@ -18,20 +18,20 @@ description: "bsearch – manages one-time passwords"
 <p> By default only values are printed to standard output. Use the -K option to also print keys. The exit status will be non-zero if any key lookups fail. </p>
 <p> Options are:</p>
 <dl>
-<dt><code>-K</code></p>
-<dd> Print keys.</p>
-<dt><code>-V</code></p>
-<dd> Don&#8217;t print values.</p>
-<dt><code>-h</code></p>
-<dd> Print usage and exit.</p>
-<dt><code>-v</code></p>
-<dd> Print statistic and debug information to standard error. <i>file</i> A sorted flat text file. NOTE: use the &quot;C&quot; locale for sorting this file, as in &quot;LC_ALL=C sort -u -o file file&quot;.</p>
-<dt><code>-h</code></p>
-<dd> For getting a help message.</p>
-<dt><code>-m</code></p>
-<dd> Set <i>max-cache-size</i> as the maximum cache size. If the <i>file</i> is smaller than this size then the whole file will be read into memory, else the program will read blocks. Defaults to 1MB.</p>
-<dt><code>-b</code></p>
-<dd> Set <i>block-size</i> as the block size for block-wise I/O. This must be a power of 2, must be no smaller than 512 and no larger than 1MB. Defaults to the <i>file&#8217;s</i> filesystem&#8217;s preferred blocksize.</dl>
+<dt><code>-K</code></dt>
+<dd> Print keys.</dd>
+<dt><code>-V</code></dt>
+<dd> Don&#8217;t print values.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Print statistic and debug information to standard error. <i>file</i> A sorted flat text file. NOTE: use the &quot;C&quot; locale for sorting this file, as in &quot;LC_ALL=C sort -u -o file file&quot;.</dd>
+<dt><code>-h</code></dt>
+<dd> For getting a help message.</dd>
+<dt><code>-m</code></dt>
+<dd> Set <i>max-cache-size</i> as the maximum cache size. If the <i>file</i> is smaller than this size then the whole file will be read into memory, else the program will read blocks. Defaults to 1MB.</dd>
+<dt><code>-b</code></dt>
+<dd> Set <i>block-size</i> as the block size for block-wise I/O. This must be a power of 2, must be no smaller than 512 and no larger than 1MB. Defaults to the <i>file&#8217;s</i> filesystem&#8217;s preferred blocksize.</dd></dl>
 <h2>EXAMPLES</h2>
 <blockquote>
 <pre>

@@ -14,28 +14,28 @@ description: "gridftpd – ARC GridFTP Server"
 <p>gridftpd is the daemon running the ARC GridFTP server. This server has plugins to allow job submission from Grid clients and to expose a local filesystem as a Grid Storage Element. For more information see &quot;The ARC Computing Element System Administrator Guide&quot; (NORDUGRID-MANUAL-20).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>display help text</p>
-<dt><code>-p</code> <i>number</i></p>
-<dd>port on which to listen</p>
-<dt><code>-c</code> <i>path</i></p>
-<dd>full path to config file</p>
-<dt><code>-n</code> <i>number</i></p>
-<dd>maximum number of connections allowed</p>
-<dt><code>-b</code> <i>number</i></p>
-<dd>default buffer size</p>
-<dt><code>-B</code> <i>number</i></p>
-<dd>maximum buffer size</p>
-<dt><code>-F</code></p>
-<dd>run daemon in foreground</p>
-<dt><code>-U</code> <i>user[:group]</i></p>
-<dd>user (and group) name to switch to after starting</p>
-<dt><code>-L</code> <i>path</i></p>
-<dd>path to log file</p>
-<dt><code>-P</code> <i>path</i></p>
-<dd>path to pid file</p>
-<dt><code>-d</code> <i>number</i></p>
-<dd>debug level, from 0 (lowest verbosity) to 5 (highest verbosity) </p>
+<dt><code>-h</code></dt>
+<dd>display help text</dd>
+<dt><code>-p</code> <i>number</i></dt>
+<dd>port on which to listen</dd>
+<dt><code>-c</code> <i>path</i></dt>
+<dd>full path to config file</dd>
+<dt><code>-n</code> <i>number</i></dt>
+<dd>maximum number of connections allowed</dd>
+<dt><code>-b</code> <i>number</i></dt>
+<dd>default buffer size</dd>
+<dt><code>-B</code> <i>number</i></dt>
+<dd>maximum buffer size</dd>
+<dt><code>-F</code></dt>
+<dd>run daemon in foreground</dd>
+<dt><code>-U</code> <i>user[:group]</i></dt>
+<dd>user (and group) name to switch to after starting</dd>
+<dt><code>-L</code> <i>path</i></dt>
+<dd>path to log file</dd>
+<dt><code>-P</code> <i>path</i></dt>
+<dd>path to pid file</dd>
+<dt><code>-d</code> <i>number</i></dt>
+<dd>debug level, from 0 (lowest verbosity) to 5 (highest verbosity) </dd>
 </dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.nordugrid.org/">http://bugzilla.nordugrid.org/</a></p>

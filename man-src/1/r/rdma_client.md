@@ -26,9 +26,9 @@ rdma_client[-s server_address][-p server_port]
 
 <dl>
 <dt>-s server_address
-<dd> Specifies the address of the system that the rdma_server is running on. By default, the client will attempt to connect to the server using 127.0.0.1.
-<dt>-p server_port
-<dd> Specifies the port number that the server listens on. By default the server listens on port 7471.</dl>
+</dt><dd> Specifies the address of the system that the rdma_server is running on. By default, the client will attempt to connect to the server using 127.0.0.1.
+</dd><dt>-p server_port
+</dt><dd> Specifies the port number that the server listens on. By default the server listens on port 7471.</dd></dl>
 
 <h2>NOTES</h2>
 

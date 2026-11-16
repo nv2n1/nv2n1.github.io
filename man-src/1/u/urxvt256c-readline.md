@@ -18,13 +18,13 @@ url: "/docs/linux/man/1-urxvt256c-readline/"
  To avoid too many false positives, this is only done when:
 <dl>
 <dt>- the tty is in <font SIZE="-1">ICANON</font> state.
-<dd>
-<dt>- the text cursor is visible.
-<dd>
-<dt>- the primary screen is currently being displayed.
-<dd>
-<dt>- the mouse is on the same (multi-row-) line as the text cursor.
-<dd></dl>
+</dt><dd>
+</dd><dt>- the text cursor is visible.
+</dt><dd>
+</dd><dt>- the primary screen is currently being displayed.
+</dt><dd>
+</dd><dt>- the mouse is on the same (multi-row-) line as the text cursor.
+</dt><dd></dd></dl>
  
 
  The normal selection mechanism isn't disabled, so quick successive clicks might interfere with selection creation in harmless ways. 

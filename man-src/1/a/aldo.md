@@ -15,21 +15,21 @@ description: "aldo – A fully console morse code trainer written in ISO C++."
 <p> <code>Aldo</code> is developed from scratch in ISO C++ using GNU C++ Standard Library and libao (<a rel="nofollow" href="http://www.xiph.org">www.xiph.org</a>/ao).<br />
  It is a morse code learning tool which provides four type of training methods: </p>
 <dl>
-<dt><code>Blocks</code></p>
+<dt><code>Blocks</code></dt>
 <dd>
-&nbsp;<wbr>Identify blocks of random characters played in morse code.</p>
-<dt><code>Koch</code></p>
+&nbsp;<wbr>Identify blocks of random characters played in morse code.</dd>
+<dt><code>Koch</code></dt>
 <dd>
 &nbsp;<wbr>Two morse characters will be played at full speed&nbsp;<wbr>(20wpm)<br />
 &nbsp;<wbr>until you&#8217;ll be able to identify at least 90 percent of them.&nbsp;<wbr><br />
-&nbsp;<wbr>After that, one more character will be added, and so on.</p>
-<dt><code>File</code></p>
+&nbsp;<wbr>After that, one more character will be added, and so on.</dd>
+<dt><code>File</code></dt>
 <dd>
-&nbsp;<wbr>Identify played characters generated from a file.</p>
-<dt><code>Callsign</code></p>
+&nbsp;<wbr>Identify played characters generated from a file.</dd>
+<dt><code>Callsign</code></dt>
 <dd>
 &nbsp;<wbr>Identify random callsigns played in morse code.
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Giuseppe Martino &lt;denever [at] users.sf.net&gt;, for the Debian project (but may be used by others). </p>
 <h2>Index</h2>

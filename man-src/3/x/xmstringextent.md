@@ -18,13 +18,13 @@ description: "XmStringExtent — A compound string function that determines the 
 <h2>Description</h2>
 <p><code>XmStringExtent</code> determines the width and height, in pixels, of the smallest rectangle that will enclose the provided compound string.</p>
 <dl COMPACT>
-<dt><i>rendertable</i></p>
-<dd>Specifies the render table</p>
-<dt><i>string</i></p>
-<dd>Specifies the string</p>
-<dt><i>width</i></p>
-<dd>Specifies a pointer to the width of the rectangle</p>
-<dt><i>height</i></p>
-<dd>Specifies a pointer to the height of the rectangle</dl>
+<dt><i>rendertable</i></dt>
+<dd>Specifies the render table</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the string</dd>
+<dt><i>width</i></dt>
+<dd>Specifies a pointer to the width of the rectangle</dd>
+<dt><i>height</i></dt>
+<dd>Specifies a pointer to the height of the rectangle</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmstringcreate/">XmStringCreate</a></code>(3).</p>

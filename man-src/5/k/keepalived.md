@@ -211,11 +211,11 @@ eth1&nbsp;<wbr><br />
 <h2>Virtual server(s)</h2>
 <p>A virtual_server can be a declaration of one of</p>
 <dl>
-<dt><code>vip vport (IPADDR PORT pair)</code></p>
+<dt><code>vip vport (IPADDR PORT pair)</code></dt>
 <dd>
-<dt><code>fwmark &lt;INT&gt;</code></p>
+</dd><dt><code>fwmark &lt;INT&gt;</code></dt>
 <dd>
-<dt><code>(virtual server) group &lt;STRING&gt;</code></p>
+</dd><dt><code>(virtual server) group &lt;STRING&gt;</code></dt>
 <dd>&nbsp;<wbr>#setup service<br />
 &nbsp;<wbr>virtual_server IP port |<br />
 &nbsp;<wbr>virtual_server fwmark int |<br />
@@ -265,7 +265,7 @@ eth1&nbsp;<wbr><br />
 &nbsp;<wbr>#&nbsp;<wbr>RS to add when all realservers are down<br />
 &nbsp;<wbr>sorry_server&nbsp;<wbr>&lt;IPADDR&gt;&nbsp;<wbr>&lt;PORT&gt;<br />
 &nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>one entry for each realserver&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
+&nbsp;<wbr>#&nbsp;<wbr>one entry for each realserver&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
 <p>&nbsp;<wbr>real_server&nbsp;<wbr>&lt;IPADDR&gt;&nbsp;<wbr>&lt;PORT&gt;&nbsp;<wbr><br />
 &nbsp;<wbr>{<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>relative weight to use, default: 1<br />
@@ -368,3 +368,4 @@ eth1&nbsp;<wbr><br />
  Information derived from doc/keepalived.conf.SYNOPSIS, doc/samples/keepalived.conf.* and Changelog by Alexandre Cassen for keepalived-1.1.4, and from HOWTOs by Adam Fletcher and Vince Worthington.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipvsadm/">ipvsadm</a>(8), ip &#8211;help. </p>
+</p>

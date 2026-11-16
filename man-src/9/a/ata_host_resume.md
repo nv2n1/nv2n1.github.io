@@ -14,11 +14,11 @@ description: "ata_host_resume – resume host"
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>host to resume</dl>
+</dd><dd>host to resume</dd></dl>
 <h2>Description</h2>
 <p>Resume <i>host</i>. Actual operation is performed by port resume.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

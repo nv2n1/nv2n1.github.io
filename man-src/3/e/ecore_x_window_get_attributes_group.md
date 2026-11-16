@@ -25,17 +25,17 @@ description: "X Window Get Attributes Functions – Functions that get the attri
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>windows</i> Unused.<br />
- <i>att_ret</i> Pointer to an Ecore_X_Window_Attributes structure in which the attributes of a window are to be stored.</dl>
+ <i>att_ret</i> Pointer to an Ecore_X_Window_Attributes structure in which the attributes of a window are to be stored.</dd></dl>
 <p> Retrieves the attributes of a window. If att_ret is NULL, the function does nothing. If an error occurred, att_ret is set to 0. Otherwise, the att_ret structure is filled with the attributes os the requested window. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_window_attributes_prefetch()</code>, which sends the GetWindowAttributes request, then <code>ecore_x_get_window_attributes_fetch()</code>, which gets the reply.</p>
 <h3>EAPI int ecore_x_window_visible_get (Ecore_X_Window window __UNUSED__)</h3>
 <p>Finds out whether the given window is currently visible. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Unused.</dl>
+<dd><i>window</i> Unused.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the window is visible, otherwise 0.</dl>
+<dd>1 if the window is visible, otherwise 0.</dd></dl>
 <p> Finds out whether the given window is currently visible. If an error occurred, or if the window is not visible, 0 is returned. Otherwise 1 is returned. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_window_attributes_prefetch()</code>, which sends the GetWindowAttributes request, then <code>ecore_x_get_window_attributes_fetch()</code>, which gets the reply.</p>
 <h2>Author</h2>

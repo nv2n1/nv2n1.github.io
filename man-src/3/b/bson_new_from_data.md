@@ -17,11 +17,11 @@ bson_new_from_data (const uint8_t *data,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>data</code></p>
-<dd> A BSON encoded document buffer.</dl>
+<dt><code>data</code></dt>
+<dd> A BSON encoded document buffer.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> The length of <code>data</code> in bytes.</dl>
+<dt><code>length</code></dt>
+<dd> The length of <code>data</code> in bytes.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_new_from_data/">bson_new_from_data</a>(3)</code> function shall create a new <code>bson_t</code> on the heap and copy the contents of <code>data</code> \&amp;. This may be helpful when working with language bindings but is generally expected to be slower. </p>
 <h2>RETURNS</h2>

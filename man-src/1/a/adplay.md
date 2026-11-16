@@ -39,64 +39,64 @@ description: "adplay – AdPlay/UNIX console-based OPL2 audio player"
 <p> The order of the option commandline parameters is not important, except for the <code>-d</code> option, which always has to be specified after an <code>-O</code> option.</p>
 <h3>Output selection:</h3>
 <dl>
-<dt><code>-O, &#8211;output=OUTPUT</code></p>
-<dd> Specify output mechanism. Available mechanisms depend on compilation settings and are printed on <code>&#8211;help</code> output. A reasonable default is automatically selected, based on the availability of the output mechanisms.</dl>
+<dt><code>-O, &#8211;output=OUTPUT</code></dt>
+<dd> Specify output mechanism. Available mechanisms depend on compilation settings and are printed on <code>&#8211;help</code> output. A reasonable default is automatically selected, based on the availability of the output mechanisms.</dd></dl>
 <h3>OSS driver (oss) specific:</h3>
 <dl>
-<dt><code>-d &#8211;device=FILE</code></p>
-<dd> Set sound output device file to FILE. This is <code>/dev/dsp</code> by default.</dl>
+<dt><code>-d &#8211;device=FILE</code></dt>
+<dd> Set sound output device file to FILE. This is <code>/dev/dsp</code> by default.</dd></dl>
 <h3>Disk writer (disk) specific:</h3>
 <dl>
-<dt><code>-d &#8211;device=FILE</code></p>
-<dd> Write sound data to FILE. The data is written in Microsoft RIFF WAVE format (little-endian). You can specify a single &#8216;-&#8216; to write to stdout instead. This option has no default and must be specified when the disk writer is to be used!</dl>
+<dt><code>-d &#8211;device=FILE</code></dt>
+<dd> Write sound data to FILE. The data is written in Microsoft RIFF WAVE format (little-endian). You can specify a single &#8216;-&#8216; to write to stdout instead. This option has no default and must be specified when the disk writer is to be used!</dd></dl>
 <h3>EsounD output (esound) specific:</h3>
 <dl>
-<dt><code>-d &#8211;device=URL</code></p>
-<dd> Connect to &quot;hostname:port&quot; combination in URL. Example: &quot;myhost.sound.net:1234&quot;. The default is &quot;localhost:16001&quot;.</dl>
+<dt><code>-d &#8211;device=URL</code></dt>
+<dd> Connect to &quot;hostname:port&quot; combination in URL. Example: &quot;myhost.sound.net:1234&quot;. The default is &quot;localhost:16001&quot;.</dd></dl>
 <h3>ALSA driver (alsa) specific:</h3>
 <dl>
-<dt><code>-d &#8211;device=DEVICE</code></p>
-<dd> Set sound output device to DEVICE. This is <code>plughw:0,0</code> by default.</dl>
+<dt><code>-d &#8211;device=DEVICE</code></dt>
+<dd> Set sound output device to DEVICE. This is <code>plughw:0,0</code> by default.</dd></dl>
 <h3>Playback quality:</h3>
 <dl>
-<dt><code>-8, &#8211;8bit</code></p>
-<dd> Use only 8-bit samples for playback.</p>
-<dt><code>&#8211;16bit</code></p>
-<dd> Use only 16-bit samples for playback (default).</p>
-<dt><code>-f, &#8211;freq=FREQ</code></p>
-<dd> Set playback frequency to FREQ, in Hz. This is 44100Hz by default.</p>
-<dt><code>&#8211;stereo</code></p>
-<dd> Use only stereo samples for playback. The sound stream is just doubled, no further audio processing is done. This option is pretty useless unless you have very obscure audio hardware that only accepts stereo streams. AdPlug only generates mono streams because the OPL2 only generates mono sound.</p>
-<dt><code>&#8211;mono</code></p>
-<dd> Use only mono samples for playback (default).</p>
-<dt><code>-b &#8211;buffer=SIZE</code></p>
-<dd> Set sound buffer size to SIZE samples. If you notice sound skipping with the default setting, try a greater buffer size. Note that this is measured in samples, not bytes! This is 2048 samples by default. Only the OSS, SDL, ALSA and libao output drivers support this option.</dl>
+<dt><code>-8, &#8211;8bit</code></dt>
+<dd> Use only 8-bit samples for playback.</dd>
+<dt><code>&#8211;16bit</code></dt>
+<dd> Use only 16-bit samples for playback (default).</dd>
+<dt><code>-f, &#8211;freq=FREQ</code></dt>
+<dd> Set playback frequency to FREQ, in Hz. This is 44100Hz by default.</dd>
+<dt><code>&#8211;stereo</code></dt>
+<dd> Use only stereo samples for playback. The sound stream is just doubled, no further audio processing is done. This option is pretty useless unless you have very obscure audio hardware that only accepts stereo streams. AdPlug only generates mono streams because the OPL2 only generates mono sound.</dd>
+<dt><code>&#8211;mono</code></dt>
+<dd> Use only mono samples for playback (default).</dd>
+<dt><code>-b &#8211;buffer=SIZE</code></dt>
+<dd> Set sound buffer size to SIZE samples. If you notice sound skipping with the default setting, try a greater buffer size. Note that this is measured in samples, not bytes! This is 2048 samples by default. Only the OSS, SDL, ALSA and libao output drivers support this option.</dd></dl>
 <h3>Informative output:</h3>
 <dl>
-<dt><code>-i &#8211;instruments</code></p>
-<dd> Display instrument names (if available).</p>
-<dt><code>-r &#8211;realtime</code></p>
-<dd> Display realtime playback information, while playing. This will display a one-line status bar, containing essential playback information.</p>
-<dt><code>-m &#8211;message</code></p>
-<dd> Display the song message (if available).</p>
-<dt></dl>
+<dt><code>-i &#8211;instruments</code></dt>
+<dd> Display instrument names (if available).</dd>
+<dt><code>-r &#8211;realtime</code></dt>
+<dd> Display realtime playback information, while playing. This will display a one-line status bar, containing essential playback information.</dd>
+<dt><code>-m &#8211;message</code></dt>
+<dd> Display the song message (if available).</dd>
+<dt></dt></dl>
 <h3>Playback:</h3>
-<dd> <code>-s &#8211;subsong=N</code> Play subsong number N, instead of the first subsong. Only useful for file formats that support multiple subsongs.</p>
+<dd> <code>-s &#8211;subsong=N</code> Play subsong number N, instead of the first subsong. Only useful for file formats that support multiple subsongs.</dd>
 <dl>
-<dt><code>-o &#8211;once</code></p>
-<dd> Play just once, don&#8217;t loop. This will exit <code>adplay</code> after the song ended. This is the default when multiple <code>FILEs</code> are given.</dl>
+<dt><code>-o &#8211;once</code></dt>
+<dd> Play just once, don&#8217;t loop. This will exit <code>adplay</code> after the song ended. This is the default when multiple <code>FILEs</code> are given.</dd></dl>
 <h3>Miscellaneous:</h3>
 <dl>
-<dt><code>-D, &#8211;database=FILE</code></p>
-<dd> Additionally use database file FILE. This option may be specified multiple times. Each database file is additionally merged with the others, creating one large database on the fly.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Be more quiet.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Be more verbose.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-D, &#8211;database=FILE</code></dt>
+<dd> Additionally use database file FILE. This option may be specified multiple times. Each database file is additionally merged with the others, creating one large database on the fly.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Be more quiet.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Be more verbose.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Simon Peter &lt;dn.tlp [at] gmx.net&gt; </p>
 <h2>Index</h2>

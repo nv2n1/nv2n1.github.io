@@ -17,41 +17,35 @@ description: "Lintian::Processable::Fields::Files – Lintian interface to .buil
 <p> Lintian::Processable::Fields::Files provides an interface to data for .buildinfo and changes files. It implements data collection methods specific to .buildinfo and changes files.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>files</p>
-<dd> Returns a reference to a hash containing information about files listed in the .buildinfo file. Each hash may have the following keys:</p>
+<dt>files</dt>
+<dd> Returns a reference to a hash containing information about files listed in the .buildinfo file. Each hash may have the following keys:</dd>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>name</p>
-<dd> Name of the file.</p>
-<dt>size</p>
-<dd> The size of the file in bytes.</p>
-<dt>section</p>
-<dd> The archive section to which the file belongs.</p>
-<dt>priority</p>
-<dd> The priority of the file.</p>
-<dt>checksums</p>
-<dd> A hash with the keys being checksum algorithms and the values themselves being hashes containing</p>
+<dt>name</dt>
+<dd> Name of the file.</dd>
+<dt>size</dt>
+<dd> The size of the file in bytes.</dd>
+<dt>section</dt>
+<dd> The archive section to which the file belongs.</dd>
+<dt>priority</dt>
+<dd> The priority of the file.</dd>
+<dt>checksums</dt>
+<dd> A hash with the keys being checksum algorithms and the values themselves being hashes containing</dd>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>sum</p>
-<dd> The result of applying the given algorithm to the file.</p>
-<dt>filesize</p>
-<dd> The size of the file as given in the .buildinfo section relating to the given checksum.</dl>
+<dt>sum</dt>
+<dd> The result of applying the given algorithm to the file.</dd>
+<dt>filesize</dt>
+<dd> The size of the file as given in the .buildinfo section relating to the given checksum.</dd></dl>
 </dl>
 <dl COMPACT>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 </dl>
 <dl COMPACT>
-<dt>
-<dd></dl>
-<dt>saved_files</p>
-<dd></dl>
+</dl>
+<dt>saved_files</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p> Originally written by Adam D. Barratt &lt;adsb [at] debian.org&gt; for Lintian.</p>
 <h2>See Also</h2>

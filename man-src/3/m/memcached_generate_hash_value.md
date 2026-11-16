@@ -13,35 +13,35 @@ description: "memcached_generate_hash_value – Generating hash values directly"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_hash_t</code></p>
+<dt><code>memcached_hash_t</code></dt>
 <dd>
-<dt><code>uint32_t memcached_generate_hash_value(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, <i>memcached_hash_t</i><i>&nbsp;<wbr>hash_algorithm</i>)</p>
+</dd><dt><code>uint32_t memcached_generate_hash_value(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, <i>memcached_hash_t</i><i>&nbsp;<wbr>hash_algorithm</i>)</dt>
 <dd>
-<dt><code>uint32_t memcached_generate_hash(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t memcached_generate_hash(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>MEMCACHED_HASH_DEFAULT</code></p>
+</dd><dt><code>MEMCACHED_HASH_DEFAULT</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_MD5</code></p>
+</dd><dt><code>MEMCACHED_HASH_MD5</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_CRC</code></p>
+</dd><dt><code>MEMCACHED_HASH_CRC</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_FNV1_64</code></p>
+</dd><dt><code>MEMCACHED_HASH_FNV1_64</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_FNV1A_64</code></p>
+</dd><dt><code>MEMCACHED_HASH_FNV1A_64</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_FNV1_32</code></p>
+</dd><dt><code>MEMCACHED_HASH_FNV1_32</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_FNV1A_32</code></p>
+</dd><dt><code>MEMCACHED_HASH_FNV1A_32</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_JENKINS</code></p>
+</dd><dt><code>MEMCACHED_HASH_JENKINS</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_MURMUR</code></p>
+</dd><dt><code>MEMCACHED_HASH_MURMUR</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_HSIEH</code></p>
+</dd><dt><code>MEMCACHED_HASH_HSIEH</code></dt>
 <dd>
-<dt><code>MEMCACHED_HASH_MURMUR3</code></p>
+</dd><dt><code>MEMCACHED_HASH_MURMUR3</code></dt>
 <dd>
-<p> Compile and link with -lmemcachedutil -lmemcached</dl>
+<p> Compile and link with -lmemcachedutil -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_generate_hash_value()</i> allows you to hash a key using one of the hash functions defined in the library. This method is provided for the convenience of higher-level language bindings and is not necessary for normal memcache operations. </p>
 <p> The allowed hash algorithm constants are listed in the manpage for <code>memcached_behavior_set()</code>. </p>
@@ -60,3 +60,4 @@ description: "memcached_generate_hash_value – Generating hash values directly"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

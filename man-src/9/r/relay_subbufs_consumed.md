@@ -15,15 +15,15 @@ relay_subbufs_consumed - update the buffer's sub-buffers-consumed count
 <h2>Arguments</h2>
 
 <i>chan</i>
-<dl><dd><dd>the channel</dl>
+<dl><dd></dd><dd>the channel</dd></dl>
  
 
  <i>cpu</i>
-<dl><dd>the cpu associated with the channel buffer to update</dl>
+<dl><dd>the cpu associated with the channel buffer to update</dd></dl>
  
 
  <i>subbufs_consumed</i>
-<dl><dd>number of sub-buffers to add to current buf's count</dl>
+<dl><dd>number of sub-buffers to add to current buf's count</dd></dl>
 
 <h2>Description</h2>
 

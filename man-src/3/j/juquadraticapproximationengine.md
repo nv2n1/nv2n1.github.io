@@ -19,9 +19,9 @@ description: "QuantLib::JuQuadraticApproximationEngine – Pricing engine for Am
 <p> Reference: An Approximate Formula for Pricing American Options, Journal of Derivatives Winter 1999, Ju, N. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Barone-Adesi-Whaley critical commodity price calculation is used, it has not been modified to see whether the method of Ju is faster. Ju does not say how he solves the equation for the critical stock price, e.g. <code>Newton</code> method. He just gives the solution. The method of BAW gives answers to the same accuracy as in Ju (1999).</dl>
+<dd>Barone-Adesi-Whaley critical commodity price calculation is used, it has not been modified to see whether the method of Ju is faster. Ju does not say how he solves the equation for the critical stock price, e.g. <code>Newton</code> method. He just gives the solution. The method of BAW gives answers to the same accuracy as in Ju (1999).</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -20,15 +20,15 @@ description: "ansible-vault – manage encrypted ansible vars files (YAML)."
 <p> <code>&#8211;vault-password-file=</code><i>FILE</i></p>
 <dl>
 <dt>
-<dd> A file containing the vault password to be used during the encryption/decryption steps. Be sure to keep this file secured if it is used. If the file is executable, it will be run and its standard output will be used as the password.</dl>
+</dt><dd> A file containing the vault password to be used during the encryption/decryption steps. Be sure to keep this file secured if it is used. If the file is executable, it will be run and its standard output will be used as the password.</dd></dl>
 <p> <code>&#8211;new-vault-password-file=</code><i>FILE</i></p>
 <dl>
 <dt>
-<dd> A file containing the new vault password to be used when rekeying a file. Be sure to keep this file secured if it is used. If the file is executable, it will be run and its standard output will be used as the password.</dl>
+</dt><dd> A file containing the new vault password to be used when rekeying a file. Be sure to keep this file secured if it is used. If the file is executable, it will be run and its standard output will be used as the password.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show a help message related to the given sub-command.</dl>
+</dt><dd> Show a help message related to the given sub-command.</dd></dl>
 <p> If <i>&#8211;vault-password-file</i> is not supplied ansible-vault will automatically prompt for passwords as required.</p>
 <h2>CREATE</h2>
 <p> <code>$ ansible-vault create [options] FILE</code> </p>

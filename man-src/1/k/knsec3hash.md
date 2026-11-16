@@ -15,14 +15,14 @@ description: "knsec3hash – Simple utility to compute NSEC3 hash (libknot equiv
 <p> This utility generates NSEC3 hash for a given domain name and parameters of NSEC3 hash.</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>salt</i></p>
-<dd> Specifies binary salt encoded as a hexadecimal string.</p>
-<dt><i>algorithm</i></p>
-<dd> Specifies hashing algorithm number. Currently the only supported algorithm is SHA-1 (number 1).</p>
-<dt><i>iterations</i></p>
-<dd> Specifies the number of additional iterations of the hashing algorithm.</p>
-<dt><i>domain-name</i></p>
-<dd> Specifies the domain name to be hashed.</dl>
+<dt><i>salt</i></dt>
+<dd> Specifies binary salt encoded as a hexadecimal string.</dd>
+<dt><i>algorithm</i></dt>
+<dd> Specifies hashing algorithm number. Currently the only supported algorithm is SHA-1 (number 1).</dd>
+<dt><i>iterations</i></dt>
+<dd> Specifies the number of additional iterations of the hashing algorithm.</dd>
+<dt><i>domain-name</i></dt>
+<dd> Specifies the domain name to be hashed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> RFC 5155 &#8211; DNS Security (DNSSEC) Hashed Authenticated Denial of Existence.</p>
 <h2>EXAMPLE</h2>
@@ -31,8 +31,8 @@ description: "knsec3hash – Simple utility to compute NSEC3 hash (libknot equiv
 <h2>AUTHOR</h2>
 <p> Jan Vcelak (<code><a rel="nofollow" href="http://knot-dns.cz">http://knot-dns.cz</a></code>)</p>
 <dl>
-<dt>Please send any bugs or comments to <code>knot-dns [at] labs.nic.cz</code></p>
-<dd></dl>
+<dt>Please send any bugs or comments to <code>knot-dns [at] labs.nic.cz</code></dt>
+<dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-knotc/">knotc</a></code>(8), <code><a href="/docs/linux/man/8-knotd/">knotd</a></code>(8). </p>
 <h2>Index</h2>

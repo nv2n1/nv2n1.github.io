@@ -10,27 +10,18 @@ description: "drand48_r, erand48_r, lrand48_r, nrand48_r, mrand48_r, jrand48_r, 
 <p>drand48_r, erand48_r, lrand48_r, nrand48_r, mrand48_r, jrand48_r, srand48_r, seed48_r, lcong48_r &#8211; generate uniformly distributed pseudo-random numbers reentrantly</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 int drand48_r(struct drand48_data *buffer, double *result);
-
 int erand48_r(unsigned short xsubi[3],
               struct drand48_data *buffer, double *result);
-
 int lrand48_r(struct drand48_data *buffer, long *result);
-
 int nrand48_r(unsigned short xsubi[3],
               struct drand48_data *buffer, long *result);
-
 int mrand48_r(struct drand48_data *buffer, long *result);
-
 int jrand48_r(unsigned short xsubi[3],
               struct drand48_data *buffer, long *result);
-
 int srand48_r(long int seedval, struct drand48_data *buffer);
-
 int seed48_r(unsigned short seed16v[3],
              struct drand48_data *buffer);
-
 int lcong48_r(unsigned short param[7],
               struct drand48_data *buffer);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): All functions shown above:<br />

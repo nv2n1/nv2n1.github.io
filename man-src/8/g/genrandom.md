@@ -10,20 +10,20 @@ description: "genrandom – generate a file containing random data"
 <p>genrandom &#8211; generate a file containing random data</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>genrandom</code> [<code>-n&nbsp;<wbr></code><i>number</i>] {<i>size</i>} {<i>filename</i>}</dl>
+<dt> <code>genrandom</code> [<code>-n&nbsp;<wbr></code><i>number</i>] {<i>size</i>} {<i>filename</i>}</dt></dl>
 <h2>Description</h2>
 <p><code>genrandom</code></p>
-<dd>generates a file or a set of files containing a specified quantity of pseudo-random data, which can be used as a source of entropy for other commands on systems with no random device.</p>
+<dd>generates a file or a set of files containing a specified quantity of pseudo-random data, which can be used as a source of entropy for other commands on systems with no random device.</dd>
 <h2>Arguments</h2>
 <p>-n <i>number</i></p>
 <dl>
-<dd>In place of generating one file, generates <code>number</code> (from 2 to 9) files, appending <code>number</code> to the name.</dl>
+<dd>In place of generating one file, generates <code>number</code> (from 2 to 9) files, appending <code>number</code> to the name.</dd></dl>
 <p> size</p>
 <dl>
-<dd>The size of the file, in kilobytes, to generate.</dl>
+<dd>The size of the file, in kilobytes, to generate.</dd></dl>
 <p> filename</p>
 <dl>
-<dd>The file name into which random data should be written.</dl>
+<dd>The file name into which random data should be written.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-rand/">rand</a></code>(3), <code><a href="/docs/linux/man/3-arc4random/">arc4random</a></code>(3)</p>
 <h2>Author</h2>

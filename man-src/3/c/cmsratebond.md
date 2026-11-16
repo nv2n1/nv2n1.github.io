@@ -17,6 +17,6 @@ description: "QuantLib::CmsRateBond – CMS-rate bond."
 <p>CMS-rate bond. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calculations are tested by checking results against cached values.</dl>
+<dd>calculations are tested by checking results against cached values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

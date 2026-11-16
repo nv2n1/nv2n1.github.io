@@ -18,43 +18,41 @@ mdb - tables[-S][-1 | -d delimiter] database
 <p> It produces a list of tables contained within an MDB <i>database</i> in a format suitable for use in shell scripts.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-S</code></p>
-<dd> Show system tables. System tables are generally those beginning with &#8216;MSys&#8217;</p>
-<dt><code>-1</code></p>
-<dd> specifies that the tables should be listed 1 per line.</p>
-<dt><code>-d</code> <i>delimiter</i></p>
-<dd> specifies an alternative <i>delimiter</i>. If no <i>delimiter</i> is specified, table names will be delimited by a tab character, or by newline if the <code>-1</code> option was specified.</dl>
+<dt><code>-S</code></dt>
+<dd> Show system tables. System tables are generally those beginning with &#8216;MSys&#8217;</dd>
+<dt><code>-1</code></dt>
+<dd> specifies that the tables should be listed 1 per line.</dd>
+<dt><code>-d</code> <i>delimiter</i></dt>
+<dd> specifies an alternative <i>delimiter</i>. If no <i>delimiter</i> is specified, table names will be delimited by a tab character, or by newline if the <code>-1</code> option was specified.</dd></dl>
 <h2>NOTES</h2>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>MDB_JET3_CHARSET</code></p>
-<dd> Defines the charset of the input JET3 (access 97) file. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</p>
-<dt><code>MDBICONV</code></p>
-<dd> Defines the output charset. Default is UTF-8. mdbtools must have been compiled with iconv.</p>
-<dt><code>MDBOPTS</code></p>
-<dd> semi-column separated list of options:</p>
+<dt><code>MDB_JET3_CHARSET</code></dt>
+<dd> Defines the charset of the input JET3 (access 97) file. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</dd>
+<dt><code>MDBICONV</code></dt>
+<dd> Defines the output charset. Default is UTF-8. mdbtools must have been compiled with iconv.</dd>
+<dt><code>MDBOPTS</code></dt>
+<dd> semi-column separated list of options:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> use_index</p>
-<dt>&bull;</p>
-<dd> no_memo</p>
-<dt>&bull;</p>
-<dd> debug_like</p>
-<dt>&bull;</p>
-<dd> debug_write</p>
-<dt>&bull;</p>
-<dd> debug_usage</p>
-<dt>&bull;</p>
-<dd> debug_ole</p>
-<dt>&bull;</p>
-<dd> debug_row</p>
-<dt>&bull;</p>
-<dd> debug_props</p>
-<dt>&bull;</p>
-<dd> debug_all is a shortcut for all debug_* options</dl>
+<dt>&bull;</dt>
+<dd> use_index</dd>
+<dt>&bull;</dt>
+<dd> no_memo</dd>
+<dt>&bull;</dt>
+<dd> debug_like</dd>
+<dt>&bull;</dt>
+<dd> debug_write</dd>
+<dt>&bull;</dt>
+<dd> debug_usage</dd>
+<dt>&bull;</dt>
+<dd> debug_ole</dd>
+<dt>&bull;</dt>
+<dd> debug_row</dd>
+<dt>&bull;</dt>
+<dd> debug_props</dd>
+<dt>&bull;</dt>
+<dd> debug_all is a shortcut for all debug_* options</dd></dl>
 </dl>
 </dl>
 <h2>HISTORY</h2>
@@ -65,7 +63,7 @@ mdb - tables[-S][-1 | -d delimiter] database
 <p> The <code>mdb-tables</code> utility was written by Brian Bruns.</p>
 <h2>BUGS</h2>
 <dl>
-<dt><code>Access allows for tables to have spaces embeded in the table name.</code></p>
-<dd> You must specify a <i>delimiter</i> (<code>-d</code>) if you intend on piping the output of <code>mdb-tables</code> to a program such as awk or cut. </p>
+<dt><code>Access allows for tables to have spaces embeded in the table name.</code></dt>
+<dd> You must specify a <i>delimiter</i> (<code>-d</code>) if you intend on piping the output of <code>mdb-tables</code> to a program such as awk or cut. </dd>
 </dl>
 <h2>Index</h2>

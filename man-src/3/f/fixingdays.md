@@ -68,7 +68,7 @@ description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 <p>returns the amount of the cash flow </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dl>
+<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
 <p> Implements <code>CashFlow</code>.</p>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

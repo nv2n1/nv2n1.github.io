@@ -14,14 +14,14 @@ description: "z8530_channel_load – Load channel data"
 <p><i>c</i></p>
 <dl>
 <dd>
-<dd>Z8530 channel to configure</dl>
+</dd><dd>Z8530 channel to configure</dd></dl>
 <p> <i>rtable</i></p>
 <dl>
-<dd>table of register, value pairs FIXME: ioctl to allow user uploaded tables</dl>
+<dd>table of register, value pairs FIXME: ioctl to allow user uploaded tables</dd></dl>
 <h2>Description</h2>
 <p>Load a Z8530 channel up from the system data. We use +16 to indicate the &#8220;prime&#8221; registers. The value 255 terminates the table.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

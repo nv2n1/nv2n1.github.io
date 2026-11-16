@@ -13,12 +13,12 @@ description: "pskc_set_key_data_secret – API function"
 int pskc_set_key_data_secret(pskc_key_t *key, const char *data, size_t len);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>const char * data</p>
-<dd>the byte array with the key to set, of <i>len</i> length.</p>
-<dt>size_t len</p>
-<dd>length of <i>data</i> byte array.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>const char * data</dt>
+<dd>the byte array with the key to set, of <i>len</i> length.</dd>
+<dt>size_t len</dt>
+<dd>length of <i>data</i> byte array.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Data Secret value. The <i>data</i> data is copied into the <i>key</i> handle, so you may modify or deallocate the <i>data</i> pointer after calling this function. The data is base64 encoded by this function. On errors, the old secret is not modified.</p>
 <h2>Returns</h2>

@@ -17,22 +17,22 @@ description: "acpisrc – ACPICA source code conversion utility"
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Generate cleaned version of the source</p>
-<dt><code>-h</code></p>
-<dd> Insert dual-license header into all module</p>
-<dt><code>-l</code></p>
-<dd> Generate Linux version of the source</p>
-<dt><code>-u</code></p>
-<dd> Generate custom source translation</p>
-<dt><code>-d</code></p>
-<dd> Leave debug statements in code</p>
-<dt><code>-s</code></p>
-<dd> Generate source statistics only</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>-y</code></p>
-<dd> Suppress file overwrite prompts </p>
+<dt><code>-c</code></dt>
+<dd> Generate cleaned version of the source</dd>
+<dt><code>-h</code></dt>
+<dd> Insert dual-license header into all module</dd>
+<dt><code>-l</code></dt>
+<dd> Generate Linux version of the source</dd>
+<dt><code>-u</code></dt>
+<dd> Generate custom source translation</dd>
+<dt><code>-d</code></dt>
+<dd> Leave debug statements in code</dd>
+<dt><code>-s</code></dt>
+<dd> Generate source statistics only</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>-y</code></dt>
+<dd> Suppress file overwrite prompts </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> acpisrc was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>

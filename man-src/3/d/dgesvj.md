@@ -19,7 +19,7 @@ description: "dgesvj.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DGESVJ computes the singular value decomposition(SVD)
 of a real
@@ -32,11 +32,11 @@ of a real
                                            by - N diagonal matrix,
                                     U is an M - by - N orthonormal matrix, and V is an N - by - N orthogonal matrix.The diagonal elements of SIGMA are the singular values of A.The columns of U and V are the left and the right singular vectors of A, respectively.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBA</i> </p>
+</dt><dd> <i>JOBA</i> </dd>
 <pre>
           JOBA is CHARACTER* 1
           Specifies the structure of A.
@@ -208,18 +208,18 @@ or TOL = CTOL * EPS(JOBU.EQ.&#8217;C&#8217;),<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>  The orthogonal N-by-N matrix V is obtained as a product of Jacobi plane<br />
   rotations. The rotations are implemented as fast scaled rotations of<br />
   Anda and Park [1]. In the case of underflow of the Jacobi angle, a<br />
@@ -238,19 +238,19 @@ or TOL = CTOL * EPS(JOBU.EQ.&#8217;C&#8217;),<br />
   number interval ( UNDERFLOW , OVERFLOW ). In extreme cases, even<br />
   denormalized singular values can be computed with the corresponding<br />
   gradual loss of accurate digits.</p>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>== == == == == ==<br />
         Zlatko Drmac(Zagreb, Croatia) and<br />
     Kresimir Veselic(Hagen, Germany)</p>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> [1] A. A. Anda and H. Park: Fast plane rotations with dynamic scaling.<br />
      SIAM J. matrix Anal. Appl., Vol. 15 (1994), pp. 162-174.<br />
  [2] P. P. M. De Rijk: A one-sided Jacobi algorithm for computing the<br />
@@ -269,17 +269,18 @@ or TOL = CTOL * EPS(JOBU.EQ.&#8217;C&#8217;),<br />
  [7] Z. Drmac: SIGMA &#8211; mathematical software library for accurate SVD, PSV,<br />
      QSVD, (H,K)-SVD computations.<br />
      Department of Mathematics, University of Zagreb, 2008.</p>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Bugs, examples and comments: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 == == == == == == == == == == == == == =
                                            Please report all bugs and send interesting test examples and comments to drmac[at] math.hr.Thank you.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 335 of file dgesvj.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

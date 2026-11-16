@@ -15,7 +15,7 @@ usb_autopm_get_interface_no_resume - increment a USB interface's PM-usage counte
 <h2>Arguments</h2>
 
 <i>intf</i>
-<dl><dd><dd>the usb_interface whose counter should be incremented</dl>
+<dl><dd></dd><dd>the usb_interface whose counter should be incremented</dd></dl>
 
 <h2>Description</h2>
 

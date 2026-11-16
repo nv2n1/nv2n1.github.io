@@ -10,13 +10,12 @@ description: "round, roundf, roundl – round to nearest integer, away from zero
 <p>round, roundf, roundl &#8211; round to nearest integer, away from zero</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
-
 double round(double x);
 float roundf(float x);
 long double roundl(long double x);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>round</code>(), <code>roundf</code>(), <code>roundl</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>These functions round <i>x</i> to the nearest integer, but round halfway cases away from zero (regardless of the current rounding direction, see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)), instead of to the nearest even integer like <code><a href="/docs/linux/man/3-rint/">rint</a></code>(3). </p>
 <p> For example, <i>round(0.5)</i> is 1.0, and <i>round(-0.5)</i> is -1.0.</p>

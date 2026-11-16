@@ -15,10 +15,10 @@ description: "isnsadm – iSNS client utility"
 <h2>Options</h2>
 <p>By default, <code>isnsadm</code> will take most of its settings from the configuration file <code>/etc/isns/isnsadm.conf</code>, with the exception of the following options:</p>
 <dl>
-<dt><code>&#8211;config</code><i> filename</i>, <code>-c</code><i> filename</i></p>
-<dd>This option overrides the default configuration file.</p>
-<dt><code>&#8211;debug</code><i> facility</i>, <code>-d</code><i> facility</i></p>
-<dd>enables debugging. Valid facilities are</dl>
+<dt><code>&#8211;config</code><i> filename</i>, <code>-c</code><i> filename</i></dt>
+<dd>This option overrides the default configuration file.</dd>
+<dt><code>&#8211;debug</code><i> facility</i>, <code>-d</code><i> facility</i></dt>
+<dd>enables debugging. Valid facilities are</dd></dl>
 <p> <center></p>
 <table BORDER>
 <tr>
@@ -70,18 +70,18 @@ description: "isnsadm – iSNS client utility"
 </table>
 <p></center> </p>
 <dl>
-<dt><code>&#8211;local</code></p>
-<dd>makes <code>isnsadm</code> use a Local (aka Unix) socket when talking to the iSNS server. This can be used by the administrator to perform management tasks, such as enrolling new clients, editing access control and so on. Local mode is only available to the super user.</p>
-<dt><code>&#8211;control</code></p>
-<dd>makes <code>isnsadm</code> assume the identity of a control node. Control nodes are special in that they have more rights in accessing and modifying the database than normal storage nodes have.</dl>
+<dt><code>&#8211;local</code></dt>
+<dd>makes <code>isnsadm</code> use a Local (aka Unix) socket when talking to the iSNS server. This can be used by the administrator to perform management tasks, such as enrolling new clients, editing access control and so on. Local mode is only available to the super user.</dd>
+<dt><code>&#8211;control</code></dt>
+<dd>makes <code>isnsadm</code> assume the identity of a control node. Control nodes are special in that they have more rights in accessing and modifying the database than normal storage nodes have.</dd></dl>
 <p> When using this option, <code>isnsadm</code> will use the source name and DSA key specified by the <code>Control.SourceName</code> and <code>Control.AuthKeyFile</code> configuration options, respectively. </p>
 <dl>
-<dt><code>&#8211;key</code><i> attr</i><code>=</code><i>value</i></p>
-<dd>This option is recognized in registration mode only, and lets you specify an object key. For a more detailed explanation, refer to section <code>Registration mode</code>.</p>
-<dt><code>&#8211;keyfile=</code><i>filename</i></p>
-<dd>When creating a policy for a new iSNS client, <code>isnsadm</code> is able to generate a DSA key for the client. The public part of the key is stored in a policy object in the iSNS server&#8217;s database, whereas the private portion is stored in the file specified by the <code>keyfile</code> option. <code></p>
-<dt>&#8211;help</code></p>
-<dd>This will print a help message and exit.</dl>
+<dt><code>&#8211;key</code><i> attr</i><code>=</code><i>value</i></dt>
+<dd>This option is recognized in registration mode only, and lets you specify an object key. For a more detailed explanation, refer to section <code>Registration mode</code>.</dd>
+<dt><code>&#8211;keyfile=</code><i>filename</i></dt>
+<dd>When creating a policy for a new iSNS client, <code>isnsadm</code> is able to generate a DSA key for the client. The public part of the key is stored in a policy object in the iSNS server&#8217;s database, whereas the private portion is stored in the file specified by the <code>keyfile</code> option. <code></dd>
+<dt>&#8211;help</code></dt>
+<dd>This will print a help message and exit.</dd></dl>
 <h3>Built-in help</h3>
 <p><code>Isnsadm</code> has built-in help functions. When invoked with <code>&#8211;help</code>, it will print a general help message showing all supported command modes, and exit. Specific help on an individual command mode is available by invoking that mode with a single argument of <code>help</code>, like this: </p>
 <p> <code>isnsadm &#8211;register help</code> </p>
@@ -323,23 +323,23 @@ description: "isnsadm – iSNS client utility"
 <p> <code>target=iqn.2005-01.org.open-iscsi.foo:disk1,alias=disk1</code> </p>
 <p> The following object types are currently supported:</p>
 <dl>
-<dt><code>entity=</code><i>name</i></p>
-<dd>Tells the server to group all objects in the specified Network Entity container object. Normally, the iSNS server will automatically assign an entity name that is in line with its policies, and there is no need to specify it explicitly.</p>
-<dt><code>initiator[=</code><i>name</i><code>]</code></p>
-<dd>This will register an iSCSI storage node of type initiator. By default, the name is set to the iSNS source name.</p>
-<dd>This can be followed by any number of iSCSI storage node attributes.</p>
-<dt><code>target[=</code><i>name</i><code>]</code></p>
-<dd>This will register an iSCSI storage node of type target. By default, the name is set to the iSNS source name.</p>
-<dd>This object accepts the same set of attributes as <code>initiator</code>.</p>
-<dt><code>control[=</code><i>name</i><code>]</code></p>
-<dd>This will register an iSCSI storage node of type control. By default, the name is set to the iSNS source name. Only management nodes should be registered as control nodes, as this gives a node complete control over the iSNS database.</p>
-<dd>This object accepts the same set of attributes as <code>initiator</code>.</p>
-<dt><code>portal=[</code><i>address:port/proto</i><code>]</code></p>
-<dd>This will register a portal using the given address, port and protocol triple. If the triple is omitted, <code>isnsadm</code> will use the client host&#8217;s IP address. If the portal is preceded by an initiator registration (on the command line), the port defaults to 860/tcp; if it is preceded by a target registration, the port defaults to 3260/tcp. For multi-homed hosts, the choice of address is implementation dependant.</p>
-<dd>This can be followed by any number of portal attributes.</p>
-<dt><code>pg</code></p>
-<dd>This will register a portal group joining the preceding portal and node. Portal groups can be used to describe the preferred portals for a given node; please refer to RFC 4711 for details.</p>
-<dd>This can be followed by any number of portal group attributes. The attribute list must specify a portal group tag (PGT) via the <code>pgt</code> attribute.</dl>
+<dt><code>entity=</code><i>name</i></dt>
+<dd>Tells the server to group all objects in the specified Network Entity container object. Normally, the iSNS server will automatically assign an entity name that is in line with its policies, and there is no need to specify it explicitly.</dd>
+<dt><code>initiator[=</code><i>name</i><code>]</code></dt>
+<dd>This will register an iSCSI storage node of type initiator. By default, the name is set to the iSNS source name.</dd>
+<dd>This can be followed by any number of iSCSI storage node attributes.</dd>
+<dt><code>target[=</code><i>name</i><code>]</code></dt>
+<dd>This will register an iSCSI storage node of type target. By default, the name is set to the iSNS source name.</dd>
+<dd>This object accepts the same set of attributes as <code>initiator</code>.</dd>
+<dt><code>control[=</code><i>name</i><code>]</code></dt>
+<dd>This will register an iSCSI storage node of type control. By default, the name is set to the iSNS source name. Only management nodes should be registered as control nodes, as this gives a node complete control over the iSNS database.</dd>
+<dd>This object accepts the same set of attributes as <code>initiator</code>.</dd>
+<dt><code>portal=[</code><i>address:port/proto</i><code>]</code></dt>
+<dd>This will register a portal using the given address, port and protocol triple. If the triple is omitted, <code>isnsadm</code> will use the client host&#8217;s IP address. If the portal is preceded by an initiator registration (on the command line), the port defaults to 860/tcp; if it is preceded by a target registration, the port defaults to 3260/tcp. For multi-homed hosts, the choice of address is implementation dependant.</dd>
+<dd>This can be followed by any number of portal attributes.</dd>
+<dt><code>pg</code></dt>
+<dd>This will register a portal group joining the preceding portal and node. Portal groups can be used to describe the preferred portals for a given node; please refer to RFC 4711 for details.</dd>
+<dd>This can be followed by any number of portal group attributes. The attribute list must specify a portal group tag (PGT) via the <code>pgt</code> attribute.</dd></dl>
 <p> There are two additional command line options of interest, which are used exclusively with Registration mode. One is <code>&#8211;replace</code>. Normally, registration mode will <i>add</i> new objects to the network entity associated with the client host. If you specify <code>&#8211;replace</code> on the command line, the server will wipe the network entity completely, and remove all portals and storage nodes it contained. Then it will create a new network entity, and place the portals and storage nodes provided by the caller inside. </p>
 <p> In addition, it is possible to replace just parts of a network entity. This is achieved by using the command line option <code>&#8211;key</code> to specify the object that should be replaced. </p>
 <p> For instance, assume a network entity contains the portal <code>10.1.1.1:860</code>, and the client&#8217;s network address changed to <code>10.2.7.7</code>. Then the following command will atomically update the database, replacing just the portal without touching the registered storage nodes: </p>
@@ -378,7 +378,7 @@ description: "isnsadm – iSNS client utility"
 </tr>
 </table>
 </table>
-</dl>
+</dd></dl>
 <p> To get a list of supported attributes, invoke <code>isnsadm &#8211;register help</code>.</p>
 <h3>Query mode</h3>
 <p>Query mode is selected by using the <code>&#8211;query</code> option. A query consists of a list of <code>attr</code>=<i></i>value pairs. All attributes must belong to the same object type, i.e. queries that mix a Network Entity attribute with e.g. a Portal attribute will be rejected. </p>
@@ -398,10 +398,10 @@ description: "isnsadm – iSNS client utility"
 <h3>Client Enrollment</h3>
 <p>This mode only works when the server recognizes the client as having control node capabilities, which is possible in two ways:</p>
 <dl>
-<dt>Invoke</p>
-<dd><code>isnsadm &#8211;local</code> as super user on the host <code>isnsd</code> is running on. The <code>&#8211;local</code> options tells it to communicate with the server through the local control socket.</p>
-<dt>Invoke</p>
-<dd><code>isnsadm &#8211;control</code>, which tells it to assume the identity of a control node. When given this option, <code>isnsadm</code> will use the source name and DSA key specified by the <code>Control.SourceName</code> and <code>Control.AuthKeyFile</code> configuration options, respectively. The server must be configured to grant this identity control node status.</dl>
+<dt>Invoke</dt>
+<dd><code>isnsadm &#8211;local</code> as super user on the host <code>isnsd</code> is running on. The <code>&#8211;local</code> options tells it to communicate with the server through the local control socket.</dd>
+<dt>Invoke</dt>
+<dd><code>isnsadm &#8211;control</code>, which tells it to assume the identity of a control node. When given this option, <code>isnsadm</code> will use the source name and DSA key specified by the <code>Control.SourceName</code> and <code>Control.AuthKeyFile</code> configuration options, respectively. The server must be configured to grant this identity control node status.</dd></dl>
 <p> To enroll a client, use the <code>&#8211;enroll</code> option, followed by the (source) name of the client to enroll. This string will be used as the name of the security policy the client will use to identify itself. </p>
 <p> This is followed by a list of attribute/value pairs, where the following set of attributes is supported: </p>
 <p> <center></p>

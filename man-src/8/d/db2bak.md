@@ -15,20 +15,20 @@ description: "db2bak – Directory Server script for making a backup of the data
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>archivedir</code></p>
-<dd>The full path to the directory to store the backup.</p>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-q</code></p>
-<dd>Quiet mode. Reduces output of task.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>archivedir</code></dt>
+<dd>The full path to the directory to store the backup.</dd>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet mode. Reduces output of task.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>db2bak -Z instance2</p>
-<dd>Makes a backup of the entire database for &#8216;instance2&#8217;, and stores it in the default server instance backup directory.</p>
-<dt>db2bak /LDAP/backups/20130305</p>
-<dd>Creates a backup of the database and stores it in specified location.</dl>
+<dt>db2bak -Z instance2</dt>
+<dd>Makes a backup of the entire database for &#8216;instance2&#8217;, and stores it in the default server instance backup directory.</dd>
+<dt>db2bak /LDAP/backups/20130305</dt>
+<dd>Creates a backup of the database and stores it in specified location.</dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

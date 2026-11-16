@@ -10,7 +10,6 @@ description: "sasl_dispose – Dispose of a SASL connection object"
 <p>sasl_dispose &#8211; Dispose of a SASL connection object </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 void sasl_dispose(sasl_conn_t **pconn);</code></pre>
 <h2>Description</h2>
 <p><code>sasl_dispose</code> is called when a SASL connection object is no longer needed. Note that this is usually when the protocol session is done NOT when the authentication is done since a security layer may have been negotiated. </p>

@@ -16,16 +16,16 @@ description: "hal-is-caller-locked-out – determine if a caller is locked out"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;udi</i></p>
-<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</p>
-<dt><i>&#8211;interface</i></p>
-<dd> The name of the interface to check for.</p>
-<dt><i>&#8211;caller</i></p>
-<dd> The unique D-Bus name on the system bus of the caller.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Print out usage.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print the version. </p>
+<dt><i>&#8211;udi</i></dt>
+<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</dd>
+<dt><i>&#8211;interface</i></dt>
+<dd> The name of the interface to check for.</dd>
+<dt><i>&#8211;caller</i></dt>
+<dd> The unique D-Bus name on the system bus of the caller.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Print out usage.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print the version. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> If the given process is locked out or an error occurs, this program exits with exit code 1. Otherwise it exits with exit code 0. Note that only the super user (root) or other privileged users can use this tool. </p>

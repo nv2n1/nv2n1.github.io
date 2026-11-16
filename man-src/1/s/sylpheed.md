@@ -15,26 +15,26 @@ description: "sylpheed – a GTK+ based, lightweight, and fast email client"
 <p> <i>sylpheed</i> is an X based fast email client. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;compose [ADDRESS]</code></p>
-<dd> Open the composition window.</p>
-<dt><code>&#8211;attach [FILE [FILE]&#8230;]</code></p>
-<dd> Open the composition window with FILE attached.</p>
-<dt><code>&#8211;receive</code></p>
-<dd> Receive the new messages from the server.</p>
-<dt><code>&#8211;receive-all</code></p>
-<dd> Receive the new messages of all accounts from the servers.</p>
-<dt><code>&#8211;send</code></p>
-<dd> Send all queued messages.</p>
-<dt><code>&#8211;status [FOLDER]</code></p>
-<dd> Show the total number of the message.</p>
-<dt><code>&#8211;status-full [FOLDER]</code></p>
-<dd> Show the status of each folder</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enter the debug mode.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show this message.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version. </p>
+<dt><code>&#8211;compose [ADDRESS]</code></dt>
+<dd> Open the composition window.</dd>
+<dt><code>&#8211;attach [FILE [FILE]&#8230;]</code></dt>
+<dd> Open the composition window with FILE attached.</dd>
+<dt><code>&#8211;receive</code></dt>
+<dd> Receive the new messages from the server.</dd>
+<dt><code>&#8211;receive-all</code></dt>
+<dd> Receive the new messages of all accounts from the servers.</dd>
+<dt><code>&#8211;send</code></dt>
+<dd> Send all queued messages.</dd>
+<dt><code>&#8211;status [FOLDER]</code></dt>
+<dd> Show the total number of the message.</dd>
+<dt><code>&#8211;status-full [FOLDER]</code></dt>
+<dd> Show the status of each folder</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enter the debug mode.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show this message.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> more documentations are available on /usr/share/sylpheed/manual/ and /usr/share/sylpheed/faq/. </p>

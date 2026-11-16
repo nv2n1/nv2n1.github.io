@@ -15,11 +15,11 @@ scsi_internal_device_unblock - resume a device after a block request
 <h2>Arguments</h2>
 
 <i>sdev</i>
-<dl><dd><dd>device to resume</dl>
+<dl><dd></dd><dd>device to resume</dd></dl>
  
 
  <i>new_state</i>
-<dl><dd>state to set devices to after unblocking</dl>
+<dl><dd>state to set devices to after unblocking</dd></dl>
 
 <h2>Description</h2>
 
@@ -34,11 +34,11 @@ This routine transitions the device to the SDEV_RUNNING state or to one of the o
 <h2>Authors</h2>
 
 <b>James Bottomley</b> &lt;James.Bottomley [at] hansenpartnership.com&gt;
-<dl><dd>Author.</dl>
+<dl><dd>Author.</dd></dl>
  
 
  <b>Rob Landley</b> &lt;rob [at] landley.net&gt;
-<dl><dd>Author.</dl>
+<dl><dd>Author.</dd></dl>
 
 <h2>Copyright</h2>
 

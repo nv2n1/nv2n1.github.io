@@ -34,14 +34,14 @@ ssize_t fgetxattr(int fd, const char &amp;nbsp; *name,
 <p> On success, these calls return a nonnegative value which is the size (in bytes) of the extended attribute value. On failure, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>E2BIG</code></p>
-<dd> The size of the attribute value is larger than the maximum size allowed; the attribute cannot be retrieved. This can happen on filesystems that support very large attribute values such as NFSv4, for example.</p>
-<dt><code>ENODATA</code></p>
-<dd> The named attribute does not exist, or the process has no access to this attribute.</p>
-<dt><code>ENOTSUP</code></p>
-<dd> Extended attributes are not supported by the filesystem, or are disabled.</p>
-<dt><code>ERANGE</code></p>
-<dd> The <i>size</i> of the <i>value</i> buffer is too small to hold the result.</dl>
+<dt><code>E2BIG</code></dt>
+<dd> The size of the attribute value is larger than the maximum size allowed; the attribute cannot be retrieved. This can happen on filesystems that support very large attribute values such as NFSv4, for example.</dd>
+<dt><code>ENODATA</code></dt>
+<dd> The named attribute does not exist, or the process has no access to this attribute.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> Extended attributes are not supported by the filesystem, or are disabled.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> The <i>size</i> of the <i>value</i> buffer is too small to hold the result.</dd></dl>
 <p> In addition, the errors documented in <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) can also occur.</p>
 <h2>VERSIONS</h2>
 <p> These system calls have been available on Linux since kernel 2.4; glibc support is provided since version 2.3.</p>

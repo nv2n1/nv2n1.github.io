@@ -29,13 +29,9 @@ The path to the parent directory.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     for (fs::path p : {&quot;/var/tmp/example.txt&quot;, &quot;/&quot;, &quot;/var/tmp/.&quot;})
         std::cout &lt;&lt; &quot;The parent path of &quot; &lt;&lt; p

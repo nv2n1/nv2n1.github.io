@@ -187,17 +187,17 @@ description: "XmCascadeButtonGadget — The CascadeButtonGadget widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNactivateCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user activates the CascadeButtonGadget, and there is no submenu attached to pop up. The activation occurs when a mouse button is released or when the mnemonic associated with the gadget is typed. The specific mouse button depends on information in the RowColumn parent. The reason sent by the callback is <code>XmCR_ACTIVATE</code>.</p>
-<dt><code>XmNcascadePixmap</code></p>
-<dd>Specifies the cascade pixmap displayed on one end of the gadget when a CascadeButtonGadget is used within a Popup or Pulldown menu pane and a submenu is attached. The LabelGadget class resources <code>XmNmarginBottom</code>, <code>XmNmarginLeft</code>, <code>XmNmarginRight</code>, and <code>XmNmarginTop</code> may be modified to ensure that room is left for the cascade pixmap. The default cascade pixmap in menus other than option menus is an arrow pointing to the side of the menu where the submenu will appear. The default for the CascadeButtonGadget in an option menu is <code>XmUNSPECIFIED_PIXMAP</code>.</p>
-<dd>The positioning of the cascade pixmap to either the left of right of the widget, and the direction of the arrow, depend on the <code>XmNlayoutDirection</code> resource of the MenuShell.</p>
-<dt><code>XmNcascadingCallback</code></p>
-<dd>Specifies the list of callbacks that is called just prior to the mapping of the submenu associated with the CascadeButtonGadget. The reason sent by the callback is <code>XmCR_CASCADING</code>.</p>
-<dt><code>XmNmappingDelay</code></p>
-<dd>Specifies the amount of time, in milliseconds, between when a CascadeButtonGadget becomes armed and when it maps its submenu. This delay is used only when the gadget is within a Popup or Pulldown menu pane. The value must not be negative.</p>
-<dt><code>XmNsubMenuId</code></p>
-<dd>Specifies the widget ID for the Pulldown menu pane to be associated with this CascadeButtonGadget. The specified menu pane is displayed when the CascadeButtonGadget becomes armed. The menu pane must have been created with the appropriate parentage depending on the type of menu used. See <code><a href="/docs/linux/man/3-xmcreatepulldownmenu/">XmCreatePulldownMenu</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatepopupmenu/">XmCreatePopupMenu</a></code>(3), and <code><a href="/docs/linux/man/3-xmcreateoptionmenu/">XmCreateOptionMenu</a></code>(3) for more information on the menu systems.</dl>
+<dt><code>XmNactivateCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user activates the CascadeButtonGadget, and there is no submenu attached to pop up. The activation occurs when a mouse button is released or when the mnemonic associated with the gadget is typed. The specific mouse button depends on information in the RowColumn parent. The reason sent by the callback is <code>XmCR_ACTIVATE</code>.</dd>
+<dt><code>XmNcascadePixmap</code></dt>
+<dd>Specifies the cascade pixmap displayed on one end of the gadget when a CascadeButtonGadget is used within a Popup or Pulldown menu pane and a submenu is attached. The LabelGadget class resources <code>XmNmarginBottom</code>, <code>XmNmarginLeft</code>, <code>XmNmarginRight</code>, and <code>XmNmarginTop</code> may be modified to ensure that room is left for the cascade pixmap. The default cascade pixmap in menus other than option menus is an arrow pointing to the side of the menu where the submenu will appear. The default for the CascadeButtonGadget in an option menu is <code>XmUNSPECIFIED_PIXMAP</code>.</dd>
+<dd>The positioning of the cascade pixmap to either the left of right of the widget, and the direction of the arrow, depend on the <code>XmNlayoutDirection</code> resource of the MenuShell.</dd>
+<dt><code>XmNcascadingCallback</code></dt>
+<dd>Specifies the list of callbacks that is called just prior to the mapping of the submenu associated with the CascadeButtonGadget. The reason sent by the callback is <code>XmCR_CASCADING</code>.</dd>
+<dt><code>XmNmappingDelay</code></dt>
+<dd>Specifies the amount of time, in milliseconds, between when a CascadeButtonGadget becomes armed and when it maps its submenu. This delay is used only when the gadget is within a Popup or Pulldown menu pane. The value must not be negative.</dd>
+<dt><code>XmNsubMenuId</code></dt>
+<dd>Specifies the widget ID for the Pulldown menu pane to be associated with this CascadeButtonGadget. The specified menu pane is displayed when the CascadeButtonGadget becomes armed. The menu pane must have been created with the appropriate parentage depending on the type of menu used. See <code><a href="/docs/linux/man/3-xmcreatepulldownmenu/">XmCreatePulldownMenu</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatepopupmenu/">XmCreatePopupMenu</a></code>(3), and <code><a href="/docs/linux/man/3-xmcreateoptionmenu/">XmCreateOptionMenu</a></code>(3) for more information on the menu systems.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>CascadeButtonGadget inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1473,32 +1473,32 @@ description: "XmCascadeButtonGadget — The CascadeButtonGadget widget class"
  XEvent <i>* event</i>;
 } XmAnyCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback or is NULL if this callback was not triggered by an <code>XEvent</code></dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback or is NULL if this callback was not triggered by an <code>XEvent</code></dd></dl>
 <h3>Behavior</h3>
 <p><code>XmCascadeButtonGadget</code> includes behavior from <code>XmGadget</code>. <code>XmCascadeButton</code> includes the menu traversal behavior from <code>XmLabel</code>. Additional <code>XmCascadeButtonGadget</code> behavior is described in the following list (in a Popup menu system, <code>&lt;Btn3&gt;</code> also performs the <code>&lt;Btn1&gt;</code> actions).</p>
 <dl COMPACT>
-<dt><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>Unposts any menus posted by the parent menu. Arms the CascadeButtonGadget, posts the associated submenu, enables mouse traversal, and, in a MenuBar, arms the MenuBar. If the menu is already active, this event disables keyboard traversal for the menu and returns the menu to mouse traversal mode.</p>
-<dt><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, posts the submenu attached to the CascadeButtonGadget and enables keyboard traversal within the menu. If the CascadeButtonGadget does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButtonGadget, and unposts all posted menus in the cascade.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, and posts the submenu attached to the CascadeButtonGadget if keyboard traversal is enabled in the menu. If the CascadeButtonGadget does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButtonGadget, and unposts all posted menus in the cascade. This action applies only to gadgets in MenuBars, PulldownMenus, and PopupMenus. For a CascadeButtonGadget in an OptionMenu, if the parent is a manager, this action passes the event to the parent.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, and posts the submenu attached to the CascadeButtonGadget if keyboard traversal is enabled in the menu. If the CascadeButtonGadget does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButtonGadget, and unposts all posted menus in the cascade.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Unposts all menus in the menu hierarchy and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu system was entered. Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>In a MenuBar, disarms the CascadeButtonGadget and the menu and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu was entered. For a CascadeButtonGadget in an OptionMenu, if the parent is a manager, this action passes the event to the parent.</p>
-<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</p>
-<dd>In a Popup MenuPane, unposts the menu and restores keyboard focus to the widget from which the menu was posted.</p>
-<dt><code>&lt;Enter&gt;</code>:</p>
-<dd>If keyboard traversal is enabled does nothing. Otherwise, in a MenuBar, unposts any MenuPanes associated with another MenuBar entry, arms the CascadeButtonGadget, and posts the associated submenu. In other menus, arms the CascadeButtonGadget and posts the associated submenu after the delay specified by <code>XmNmappingDelay</code>.</p>
-<dt><code>&lt;Leave&gt;</code>:</p>
-<dd>If keyboard traversal is enabled does nothing. Otherwise, in a MenuBar, disarms the CascadeButtonGadget if the submenu associated with the CascadeButtonGadget is not currently posted or if there is no submenu associated with the CascadeButtonGadget.</p>
-<dd>In other menus, if the pointer moves anywhere except into a submenu associated with the CascadeButtonGadget, the CascadeButtonGadget is disarmed and its submenu is unposted.</dl>
+<dt><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>Unposts any menus posted by the parent menu. Arms the CascadeButtonGadget, posts the associated submenu, enables mouse traversal, and, in a MenuBar, arms the MenuBar. If the menu is already active, this event disables keyboard traversal for the menu and returns the menu to mouse traversal mode.</dd>
+<dt><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, posts the submenu attached to the CascadeButtonGadget and enables keyboard traversal within the menu. If the CascadeButtonGadget does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButtonGadget, and unposts all posted menus in the cascade.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, and posts the submenu attached to the CascadeButtonGadget if keyboard traversal is enabled in the menu. If the CascadeButtonGadget does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButtonGadget, and unposts all posted menus in the cascade. This action applies only to gadgets in MenuBars, PulldownMenus, and PopupMenus. For a CascadeButtonGadget in an OptionMenu, if the parent is a manager, this action passes the event to the parent.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, and posts the submenu attached to the CascadeButtonGadget if keyboard traversal is enabled in the menu. If the CascadeButtonGadget does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButtonGadget, and unposts all posted menus in the cascade.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Unposts all menus in the menu hierarchy and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu system was entered. Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>In a MenuBar, disarms the CascadeButtonGadget and the menu and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu was entered. For a CascadeButtonGadget in an OptionMenu, if the parent is a manager, this action passes the event to the parent.</dd>
+<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</dd>
+<dd>In a Popup MenuPane, unposts the menu and restores keyboard focus to the widget from which the menu was posted.</dd>
+<dt><code>&lt;Enter&gt;</code>:</dt>
+<dd>If keyboard traversal is enabled does nothing. Otherwise, in a MenuBar, unposts any MenuPanes associated with another MenuBar entry, arms the CascadeButtonGadget, and posts the associated submenu. In other menus, arms the CascadeButtonGadget and posts the associated submenu after the delay specified by <code>XmNmappingDelay</code>.</dd>
+<dt><code>&lt;Leave&gt;</code>:</dt>
+<dd>If keyboard traversal is enabled does nothing. Otherwise, in a MenuBar, disarms the CascadeButtonGadget if the submenu associated with the CascadeButtonGadget is not currently posted or if there is no submenu associated with the CascadeButtonGadget.</dd>
+<dd>In other menus, if the pointer moves anywhere except into a submenu associated with the CascadeButtonGadget, the CascadeButtonGadget is disarmed and its submenu is unposted.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

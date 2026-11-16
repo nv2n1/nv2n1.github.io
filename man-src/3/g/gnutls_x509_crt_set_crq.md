@@ -14,10 +14,10 @@ description: "gnutls_x509_crt_set_crq – API function"
 <p> <code>int gnutls_x509_crt_set_crq(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_crq_t </code><i>crq</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> a certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> holds a certificate request</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> holds a certificate request</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the name and public parameters as well as the extensions from the given certificate request to the certificate. Only RSA keys are currently supported. </p>
 <p> Note that this function will only set the <i>crq</i> if it is self signed and the signature is correct. See <code>gnutls_x509_crq_sign2()</code>.</p>
@@ -32,6 +32,6 @@ description: "gnutls_x509_crt_set_crq – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

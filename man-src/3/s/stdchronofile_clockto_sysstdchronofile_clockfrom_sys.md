@@ -11,23 +11,15 @@ description: "std::chrono::file_clock::to_sys,std::chrono::file_clock::from_sys 
 <h2>Synopsis</h2>
 <pre><code>template &lt;class Duration&gt;
 (since C++ 20)
-
     static std::chrono::sys_time&lt;/*see below*/&gt;(1)(optional)
-
         to_sys(const std::chrono::file_time&lt;Duration&gt; &amp;t);
-
 template &lt;class Duration&gt;
 (since C++ 20)
-
     static std::chrono::file_time&lt;/*see below*/&gt;(2)(optional)
-
         from_sys(const std::chrono::sys_time&lt;Duration&gt; &amp;t);
 1) Converts the file_time t to a sys_time representing the same point in time.
-
 2) Converts the sys_time t to a file_time representing the same point in time.
-
 The duration of the return type is computed from Duration in an unspecified manner.
-
 These function templates are optional: an implementation may choose to instead provide to_utc and from_utc.
 </code></pre>
 <h2>Return value</h2>

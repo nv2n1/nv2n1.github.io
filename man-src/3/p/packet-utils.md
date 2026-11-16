@@ -57,15 +57,15 @@ Display RPC string</pre>
 <p>Returns a dictionary where the key is the bit number given by bitmap and the value is the decoded value by evaluating the function used for that specific bit number </p>
 <dl>
 <dd>
-<dl>
-<dt><code>unpack:</code></p>
-<dd>Unpack object</p>
-<dt><code>bitmap:</code></p>
-<dd>Unsigned integer where a value must be decoded for every bit that is set, starting from the least significant bit</p>
-<dt><code>func_map:</code></p>
-<dd>Dictionary which maps a bit number to the function to be used for decoding the value for that bit number. The function must have the &quot;unpack&quot; object as the only argument</p>
-<dt><code>name_map:</code></p>
-<dd>Dictionary which maps a bit number to a bit name. If this is given the resulting dictionary will have a bit name for a key instead of the bit number</dl>
+</dd><dl>
+<dt><code>unpack:</code></dt>
+<dd>Unpack object</dd>
+<dt><code>bitmap:</code></dt>
+<dd>Unsigned integer where a value must be decoded for every bit that is set, starting from the least significant bit</dd>
+<dt><code>func_map:</code></dt>
+<dd>Dictionary which maps a bit number to the function to be used for decoding the value for that bit number. The function must have the &quot;unpack&quot; object as the only argument</dd>
+<dt><code>name_map:</code></dt>
+<dd>Dictionary which maps a bit number to a bit name. If this is given the resulting dictionary will have a bit name for a key instead of the bit number</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-baseobj/">baseobj</a>(3)</code> </p>

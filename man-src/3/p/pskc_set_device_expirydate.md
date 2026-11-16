@@ -13,10 +13,10 @@ description: "pskc_set_device_expirydate – API function"
 void pskc_set_device_expirydate(pskc_key_t *key, const struct tm *expirydate);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>const struct tm * expirydate</p>
-<dd>pointer to a tm struct with device expiry date to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>const struct tm * expirydate</dt>
+<dd>pointer to a tm struct with device expiry date to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage DeviceInfo ExpiryDate. This element denote the end date of a device (such as the one on a payment card, used when issue numbers are not printed on cards).</p>
 <h2>Since</h2>

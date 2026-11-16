@@ -15,12 +15,12 @@ description: "transmission-show – command-line utility to show .torrent file m
 <p> shows BitTorrent .torrent file metadata</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show a short help page and exit.</p>
-<dt><code>-m &#8211;magnet</code></p>
-<dd> Show a magnet link for the specified .torrent file</p>
-<dt><code>-s &#8211;scrape</code></p>
-<dd> Ask the torrent&#8217;s trackers how many peers are in the torrent&#8217;s swarm</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show a short help page and exit.</dd>
+<dt><code>-m &#8211;magnet</code></dt>
+<dd> Show a magnet link for the specified .torrent file</dd>
+<dt><code>-s &#8211;scrape</code></dt>
+<dd> Ask the torrent&#8217;s trackers how many peers are in the torrent&#8217;s swarm</dd></dl>
 <h2>AUTHORS</h2>
 <p> An -nosplit An Jordan Lee</p>
 <h2>SEE ALSO</h2>

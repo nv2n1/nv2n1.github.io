@@ -14,16 +14,16 @@ description: "debugfs_create_automount – create automount point in the debugfs
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>a pointer to a string containing the name of the file to create.</dl>
+</dd><dd>a pointer to a string containing the name of the file to create.</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is NULL, then the file will be created in the root of the debugfs filesystem.</dl>
+<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is NULL, then the file will be created in the root of the debugfs filesystem.</dd></dl>
 <p> <i>f</i></p>
 <dl>
-<dd>function to be called when pathname resolution steps on that one.</dl>
+<dd>function to be called when pathname resolution steps on that one.</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>opaque argument to pass to <code>f</code>.</dl>
+<dd>opaque argument to pass to <code>f</code>.</dd></dl>
 <h2>Description</h2>
 <p><i>f</i> should return what -&gt;<code>d_automount</code> would.</p>
 <h2>Copyright</h2>

@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_set_policy – API function"
 <p> <code>int gnutls_x509_crt_set_policy(gnutls_x509_crt_t </code><i>crt</i><code>, const struct gnutls_x509_policy_st * </code><i>policy</i><code>, unsigned int </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>const struct gnutls_x509_policy_st * policy</p>
-<dd> A pointer to a policy structure.</p>
-<dt>unsigned int critical</p>
-<dd> use non-zero if the extension is marked as critical</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>const struct gnutls_x509_policy_st * policy</dt>
+<dd> A pointer to a policy structure.</dd>
+<dt>unsigned int critical</dt>
+<dd> use non-zero if the extension is marked as critical</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the certificate policy extension (2.5.29.32). Multiple calls to this function append a new policy. </p>
 <p> Note the maximum text size for the qualifier <code>GNUTLS_X509_QUALIFIER_NOTICE</code> is 200 characters. This function will fail with <code>GNUTLS_E_INVALID_REQUEST</code> if this is exceeded.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_crt_set_policy – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -34,50 +34,50 @@ description: "sepolicy-generate – Generate an initial SELinux policy module te
  This is a helper shell script to compile, install and fix the labeling on your test system. It will also generate a man page based on the installed policy, and compile and build an RPM suitable to be installed on other machines If a generate is possible, this tool will print out all generate paths from the source domain to the target domain </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd>Display help message</p>
-<dt><i>-d, &#8211;domain</i></p>
-<dd>Enter domain type(s) which you will be extending</p>
-<dt><i>-n, &#8211;name</i></p>
-<dd>Specify alternate name of policy. The policy will default to the executable or name specified</p>
-<dt><i>-p, &#8211;path</i></p>
-<dd>Specify the directory to store the created policy files. (Default to current working directory ) optional arguments:</p>
-<dt><i>-r, &#8211;role</i></p>
-<dd>Enter role(s) to which this admin user will transition.</p>
-<dt><i>-t, &#8211;type</i></p>
-<dd>Enter type(s) for which you will generate new definition and rule(s)</p>
-<dt><i>-u, &#8211;user</i></p>
-<dd>SELinux user(s) which will transition to this domain</p>
-<dt><i>-w, &#8211;writepath</i></p>
-<dd>Path(s) which the confined processes need to write</p>
-<dt><i>-a, &#8211;admin</i></p>
-<dd>Domain(s) which the confined admin will administrate</p>
-<dt><i>&#8211;admin_user </i></p>
-<dd>Generate Policy for Administrator Login User Role</p>
-<dt><i>&#8211;application</i></p>
-<dd>Generate Policy for User Application</p>
-<dt><i>&#8211;cgi</i></p>
-<dd>Generate Policy for Web Application/Script (CGI)</p>
-<dt><i>&#8211;confined_admin</i></p>
-<dd>Generate Policy for Confined Root Administrator Role</p>
-<dt><i>&#8211;customize</i></p>
-<dd>Generate Policy for Existing Domain Type</p>
-<dt><i>&#8211;dbus</i></p>
-<dd>Generate Policy for DBUS System Daemon</p>
-<dt><i>&#8211;desktop_user</i></p>
-<dd>Generate Policy for Desktop Login User Role</p>
-<dt><i>&#8211;inetd</i></p>
-<dd>Generate Policy for Internet Services Daemon</p>
-<dt><i>&#8211;init</i></p>
-<dd>Generate Policy for Standard Init Daemon (Default)</p>
-<dt><i>&#8211;newtype</i></p>
-<dd>Generate new policy for new types to add to an existing policy.</p>
-<dt><i>&#8211;sandbox</i></p>
-<dd>Generate Policy for Sandbox</p>
-<dt><i>&#8211;term_user</i></p>
-<dd>Generate Policy for Minimal Terminal Login User Role</p>
-<dt><i>&#8211;x_user</i></p>
-<dd>Generate Policy for Minimal X Windows Login User Role </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>Display help message</dd>
+<dt><i>-d, &#8211;domain</i></dt>
+<dd>Enter domain type(s) which you will be extending</dd>
+<dt><i>-n, &#8211;name</i></dt>
+<dd>Specify alternate name of policy. The policy will default to the executable or name specified</dd>
+<dt><i>-p, &#8211;path</i></dt>
+<dd>Specify the directory to store the created policy files. (Default to current working directory ) optional arguments:</dd>
+<dt><i>-r, &#8211;role</i></dt>
+<dd>Enter role(s) to which this admin user will transition.</dd>
+<dt><i>-t, &#8211;type</i></dt>
+<dd>Enter type(s) for which you will generate new definition and rule(s)</dd>
+<dt><i>-u, &#8211;user</i></dt>
+<dd>SELinux user(s) which will transition to this domain</dd>
+<dt><i>-w, &#8211;writepath</i></dt>
+<dd>Path(s) which the confined processes need to write</dd>
+<dt><i>-a, &#8211;admin</i></dt>
+<dd>Domain(s) which the confined admin will administrate</dd>
+<dt><i>&#8211;admin_user </i></dt>
+<dd>Generate Policy for Administrator Login User Role</dd>
+<dt><i>&#8211;application</i></dt>
+<dd>Generate Policy for User Application</dd>
+<dt><i>&#8211;cgi</i></dt>
+<dd>Generate Policy for Web Application/Script (CGI)</dd>
+<dt><i>&#8211;confined_admin</i></dt>
+<dd>Generate Policy for Confined Root Administrator Role</dd>
+<dt><i>&#8211;customize</i></dt>
+<dd>Generate Policy for Existing Domain Type</dd>
+<dt><i>&#8211;dbus</i></dt>
+<dd>Generate Policy for DBUS System Daemon</dd>
+<dt><i>&#8211;desktop_user</i></dt>
+<dd>Generate Policy for Desktop Login User Role</dd>
+<dt><i>&#8211;inetd</i></dt>
+<dd>Generate Policy for Internet Services Daemon</dd>
+<dt><i>&#8211;init</i></dt>
+<dd>Generate Policy for Standard Init Daemon (Default)</dd>
+<dt><i>&#8211;newtype</i></dt>
+<dd>Generate new policy for new types to add to an existing policy.</dd>
+<dt><i>&#8211;sandbox</i></dt>
+<dd>Generate Policy for Sandbox</dd>
+<dt><i>&#8211;term_user</i></dt>
+<dd>Generate Policy for Minimal Terminal Login User Role</dd>
+<dt><i>&#8211;x_user</i></dt>
+<dd>Generate Policy for Minimal X Windows Login User Role </dd>
 </dl>
 <h2>Example</h2>
 <p><code>&gt; sepolicy generate &#8211;init /usr/sbin/rwhod</code><br />

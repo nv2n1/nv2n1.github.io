@@ -15,10 +15,10 @@ description: "mtx-profile – ConTeXt MkIV LuaTeX Profiler"
 <p> <code>ConTeXt MkIV LuaTeX Profiler</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;analyze</code></p>
-<dd> analyze lua calls</p>
-<dt><code>&#8211;trace</code></p>
-<dd> analyze tex calls</dl>
+<dt><code>&#8211;analyze</code></dt>
+<dd> analyze lua calls</dd>
+<dt><code>&#8211;trace</code></dt>
+<dd> analyze tex calls</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

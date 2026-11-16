@@ -10,19 +10,12 @@ description: "std::float_round_style – std::float_round_style"
 <p>std::float_round_style &#8211; std::float_round_style</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;limits&gt;
-
 enum float_round_style {
-
     round_indeterminate = -1,
-
     round_toward_zero = 0,
-
     round_to_nearest = 1,
-
     round_toward_infinity = 2,
-
     round_toward_neg_infinity = 3
-
 };</code></pre>
 <p>Enumeration constants of type std::float_round_style indicate the rounding style used by floating-point arithmetics whenever a result of an expression is stored in an object of a floating-point type. The values are:<br />
 Enumeration constants<br />

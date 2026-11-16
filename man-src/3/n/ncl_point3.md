@@ -21,7 +21,7 @@ CALL POINT3 (U,V,W)
 <h2>Description</h2>
 
 <dl><dt>U,V,W
-<dd>(input expressions of type REAL) are the coordinates of a point in 3-space.</dl>
+</dt><dd>(input expressions of type REAL) are the coordinates of a point in 3-space.</dd></dl>
  
 
  Each point is drawn by calling the GKS routine GPM to draw a polymarker of type 1. Points are therefore drawn in the current polymarker color, as determined by the last call to the GKS routine GSPMCI; by default, color index 1 is the one used. 

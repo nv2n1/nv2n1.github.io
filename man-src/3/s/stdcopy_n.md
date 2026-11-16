@@ -11,24 +11,17 @@ std::copy_n - std::copy_n
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class InputIt, class Size, class OutputIt&gt;
     (since C++ 11)
-
         OutputIt copy_n(InputIt first, Size count, OutputIt result);
 (until C++ 20)
-
     template &lt;class InputIt, class Size, class OutputIt&gt;
     (1)(since C++ 20)
-
         constexpr OutputIt copy_n(InputIt first, Size count, OutputIt result);
-
 template &lt;class ExecutionPolicy, class ForwardIt1, class Size, class ForwardIt2&gt;
 (2)(since C++ 17)
-
     ForwardIt2 copy_n(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, Size count, ForwardIt2 result);
 1) Copies exactly count values from the range beginning at first to the range beginning at result. Formally, for each non-negative integer i &lt; n, performs *(result + i) = *(first + i). Overlap of ranges is not permitted.
-
 2) Same as (1), but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true
 </code></pre>
 
@@ -81,14 +74,10 @@ The overload with a template parameter named ExecutionPolicy reports errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::string in = &quot;1234567890&quot;;
     std::string out;

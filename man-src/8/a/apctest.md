@@ -61,36 +61,36 @@ description: "apctest –"
 <p>Allows the programming of the values of a Smart-UPS&#8217;s EEPROM configuration variables. </p>
 <p> Choosing this option presents a sub-menu of programming options which are detailed below.</p>
 <dl>
-<dt><code>Option 1) Print EEPROM values</code></p>
-<dd>Prints the value of all EEPROM configuration variables known to <code>.</code></p>
-<dt><code>Option 2) Change Battery date</code></p>
-<dd>Changes the battery date &#8211; useful when the battery is replaced so that you can accurately keep track of its age.</p>
-<dt><code>Option 3) Change UPS name</code></p>
-<dd>Changes the UPS name &#8211; use no more than 8 characters to name the UPS.</p>
-<dt><code>Option 4) Change sensitivity</code></p>
-<dd>Changes how sensitive the UPS is to the utility power quality and voltage fluctuations &#8211; (H)igh, (M)edium or (L)ow. The higher the sensitivity, the faster the UPS will switch to battery power or activate SmartBoost/SmartTrim (features that avoid using battery power provided the under/over voltage is within 12% of nominal). This setting should normally be set to High unless the UPS switches to battery power frequently, in which case a less sensitive setting will preserve UPS batteries&#8230; if the connected equipment can tolerate the power quality.</p>
-<dt><code>Option 5) Change alarm delay</code></p>
-<dd>Changes the delay period before the UPS starts sounding its alarm when the utility power is lost.</p>
-<dt><code>Option 6) Change low battery warning delay</code></p>
-<dd>Changes the remaining runtime minutes at which the UPS will send the low battery signal. When the UPS internally calculates that the specified number of minutes remains before battery power will be exhausted, it sends the low battery warning.</p>
-<dt><code>Option 7) Change wakeup delay</code></p>
-<dd>Changes the delay before the UPS restores power to connected equipment when the utility power returns after shutting down in hibernate mode.</p>
-<dt><code>Option 8) Change shutdown delay</code></p>
-<dd>Changes the delay for which the UPS waits before shutting off power to the connected equipment after being commanded to power down in hibernate mode.</p>
-<dt><code>Option 9) Change low transfer voltage</code></p>
-<dd>Changes the low voltage level at which the UPS switches to battery or activates SmartBoost.</p>
-<dt><code>Option 10) Change high transfer voltage</code></p>
-<dd>Changes the high voltage level at which the UPS switches to battery or activates SmartTrim.</p>
-<dt><code>Option 11) Change battery return threshold percent</code></p>
-<dd>Changes the battery charge percentage required after power down in hibernate mode before to the UPS will restore power to connected equipment on the return of utility power.</p>
-<dt><code>Option 12) Change output voltage when on batteries</code></p>
-<dd>Changes the nominal voltage output when the UPS is running on battery power.</p>
-<dt><code>Option 13) Change the self test interval</code></p>
-<dd>Changes or disables the automatic self-test interval.</p>
-<dt><code>Option 14) Set EEPROM with configuration file values</code></p>
-<dd>This option allows the bulk programming of the EEPROM configuration variables from the values contained in the /etc/apcupsd.conf configuration file. Refer to the &quot;APCTEST EEPROM CONFIGURATION DIRECTIVES&quot; section of the man page for apcupsd.conf5</p>
-<dt><code>Option 15) Quit</code></p>
-<dd>This option exits back to the previous (main) menu.</dl>
+<dt><code>Option 1) Print EEPROM values</code></dt>
+<dd>Prints the value of all EEPROM configuration variables known to <code>.</code></dd>
+<dt><code>Option 2) Change Battery date</code></dt>
+<dd>Changes the battery date &#8211; useful when the battery is replaced so that you can accurately keep track of its age.</dd>
+<dt><code>Option 3) Change UPS name</code></dt>
+<dd>Changes the UPS name &#8211; use no more than 8 characters to name the UPS.</dd>
+<dt><code>Option 4) Change sensitivity</code></dt>
+<dd>Changes how sensitive the UPS is to the utility power quality and voltage fluctuations &#8211; (H)igh, (M)edium or (L)ow. The higher the sensitivity, the faster the UPS will switch to battery power or activate SmartBoost/SmartTrim (features that avoid using battery power provided the under/over voltage is within 12% of nominal). This setting should normally be set to High unless the UPS switches to battery power frequently, in which case a less sensitive setting will preserve UPS batteries&#8230; if the connected equipment can tolerate the power quality.</dd>
+<dt><code>Option 5) Change alarm delay</code></dt>
+<dd>Changes the delay period before the UPS starts sounding its alarm when the utility power is lost.</dd>
+<dt><code>Option 6) Change low battery warning delay</code></dt>
+<dd>Changes the remaining runtime minutes at which the UPS will send the low battery signal. When the UPS internally calculates that the specified number of minutes remains before battery power will be exhausted, it sends the low battery warning.</dd>
+<dt><code>Option 7) Change wakeup delay</code></dt>
+<dd>Changes the delay before the UPS restores power to connected equipment when the utility power returns after shutting down in hibernate mode.</dd>
+<dt><code>Option 8) Change shutdown delay</code></dt>
+<dd>Changes the delay for which the UPS waits before shutting off power to the connected equipment after being commanded to power down in hibernate mode.</dd>
+<dt><code>Option 9) Change low transfer voltage</code></dt>
+<dd>Changes the low voltage level at which the UPS switches to battery or activates SmartBoost.</dd>
+<dt><code>Option 10) Change high transfer voltage</code></dt>
+<dd>Changes the high voltage level at which the UPS switches to battery or activates SmartTrim.</dd>
+<dt><code>Option 11) Change battery return threshold percent</code></dt>
+<dd>Changes the battery charge percentage required after power down in hibernate mode before to the UPS will restore power to connected equipment on the return of utility power.</dd>
+<dt><code>Option 12) Change output voltage when on batteries</code></dt>
+<dd>Changes the nominal voltage output when the UPS is running on battery power.</dd>
+<dt><code>Option 13) Change the self test interval</code></dt>
+<dd>Changes or disables the automatic self-test interval.</dd>
+<dt><code>Option 14) Set EEPROM with configuration file values</code></dt>
+<dd>This option allows the bulk programming of the EEPROM configuration variables from the values contained in the /etc/apcupsd.conf configuration file. Refer to the &quot;APCTEST EEPROM CONFIGURATION DIRECTIVES&quot; section of the man page for apcupsd.conf5</dd>
+<dt><code>Option 15) Quit</code></dt>
+<dd>This option exits back to the previous (main) menu.</dd></dl>
 <h3>Option 6) Enter TTY mode communicating with UPS</h3>
 <p>This option allows direct interaction with the attached UPS using the APC smart protocol commands. </p>
 <p> WARNING: Take special care what commands you enter because it is possible to cause the UPS to suddenly shutdown or, in the worst case, modify the UPS in such a way as to permanently disable it. Do NOT experiment with unknown or unsupported commands. Caveat Utilitor!</p>

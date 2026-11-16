@@ -16,10 +16,10 @@ description: "XmListSetHorizPos — A List function that scrolls to the specifie
 <h2>Description</h2>
 <p><code>XmListSetHorizPos</code> sets the <code>XmNvalue</code> resource of the horizontal ScrollBar to the specified position and updates the visible portion of the list with the new value if the List widget&#8217;s <code>XmNlistSizePolicy</code> is set to <code>XmCONSTANT</code> or <code>XmRESIZE_IF_POSSIBLE</code> and the horizontal ScrollBar is currently visible. This is equivalent to moving the horizontal ScrollBar to the specified position.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget</p>
-<dt><i>position</i></p>
-<dd>Specifies the horizontal position</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the horizontal position</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>

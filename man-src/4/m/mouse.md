@@ -277,8 +277,8 @@ description: "mouse – serial mouse interface"
 <p></center></p>
 <h2>Files</h2>
 <dl>
-<dt><i>/dev/mouse</i></p>
-<dd>A commonly used symbolic link pointing to a mouse device.</dl>
+<dt><i>/dev/mouse</i></dt>
+<dd>A commonly used symbolic link pointing to a mouse device.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/4-ttys/">ttyS</a></code>(4), <code><a href="/docs/linux/man/8-gpm/">gpm</a></code>(8)</p>
 <h2>Colophon</h2>

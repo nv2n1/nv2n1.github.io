@@ -11,12 +11,12 @@ description: "update-rc.d – install and remove System-V style init script link
 <h2>Synopsis</h2>
 <p><code>update-rc.d</code> [<i>-n</i>] [<i>-f</i>] <i>name</i><code> remove</code></p>
 <dl>
-<dt> <code>update-rc.d</code> [<i>-n</i>] <i>name</i><code> defaults</code> [<i>NN</i> | <i>SS</i> <i>KK</i>]</p>
-<dt> <code>update-rc.d</code> [<i>-n</i>] <i>name</i> <code>start</code>|<code>stop</code> <i>NN runlevel</i> [<i>runlevel</i>]&#8230; <code>.</code> <code>start</code>|<code>stop</code> <i>NN runlevel</i> [<i>runlevel</i>]&#8230; <code>.</code> &#8230;</p>
-<dt> <code>update-rc.d</code> [<i>-n</i>] <i>name</i><code> disable|enable </code> [<i> S|2|3|4|5 </i>]</dl>
+<dt> <code>update-rc.d</code> [<i>-n</i>] <i>name</i><code> defaults</code> [<i>NN</i> | <i>SS</i> <i>KK</i>]</dt>
+<dt> <code>update-rc.d</code> [<i>-n</i>] <i>name</i> <code>start</code>|<code>stop</code> <i>NN runlevel</i> [<i>runlevel</i>]&#8230; <code>.</code> <code>start</code>|<code>stop</code> <i>NN runlevel</i> [<i>runlevel</i>]&#8230; <code>.</code> &#8230;</dt>
+<dt> <code>update-rc.d</code> [<i>-n</i>] <i>name</i><code> disable|enable </code> [<i> S|2|3|4|5 </i>]</dt></dl>
 <h2>Description</h2>
 <p><code>update-rc.d</code></p>
-<dd>updates the System V style init script links <code>/etc/rc</code><i>runlevel</i><code>.d/</code><i>NNname</i> whose target is the script <code>/etc/init.d/</code><i>name</i>. These links are run by <code>init</code> when it changes runlevels; they are generally used to start and stop system services such as daemons. <i>runlevel</i> is one of the runlevels supported by <code>init</code>, namely, <code>0123456789S</code>, and <i>NN</i> is the two-digit sequence number that determines where in the sequence <code>init</code> will run the scripts. This manpage documents only the usage and behaviour of <code>update-rc.d</code>. For a discussion of the System V style init script arrangements please see <code><a href="/docs/linux/man/8-init/">init</a></code>(8) and the <i>Debian Policy Manual</i>. </p>
+<dd>updates the System V style init script links <code>/etc/rc</code><i>runlevel</i><code>.d/</code><i>NNname</i> whose target is the script <code>/etc/init.d/</code><i>name</i>. These links are run by <code>init</code> when it changes runlevels; they are generally used to start and stop system services such as daemons. <i>runlevel</i> is one of the runlevels supported by <code>init</code>, namely, <code>0123456789S</code>, and <i>NN</i> is the two-digit sequence number that determines where in the sequence <code>init</code> will run the scripts. This manpage documents only the usage and behaviour of <code>update-rc.d</code>. For a discussion of the System V style init script arrangements please see <code><a href="/docs/linux/man/8-init/">init</a></code>(8) and the <i>Debian Policy Manual</i>. </dd>
 <h2>Installing Init Script Links</h2>
 <p>update-rc.d has two modes of operation for installing scripts into the boot sequence. A legacy mode where command line arguments are used to decide the sequence and runlevel configuration, and the default mode where dependency and runlevel information in the init.d script LSB comment header is used instead. Such header is required to be present in init.d scripts. See the <a href="/docs/linux/man/8-insserv/">insserv</a>(8) manual page for details about the LSB header format. The boot sequencing method is decided during installation or upgrades. During upgrades, if there are no loops in the dependencies declared by LSB headers of all installed init.d scripts and no obsolete init.d scripts, the boot system is converted to dependency based boot sequencing. The conversion to dependency based boot sequencing is one-way. The machines using the legacy mode will have a file /etc/init.d/.legacy-bootordering . </p>
 <p> Packages installing init.d scripts should make sure both methods work, for compatiblity with systems where the migration have not been done yet. </p>
@@ -39,10 +39,10 @@ description: "update-rc.d – install and remove System-V style init script link
 <p> Both of these options only operate on start runlevel links of S, 2, 3, 4 or 5. If no start runlevel is specified after the disable or enable keywords, the script will attempt to modify links in all start runlevels.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>-n</i></p>
-<dd>Don&#8217;t do anything, just show what we would do.</p>
-<dt><i>-f</i></p>
-<dd>Force removal of symlinks even if <code>/etc/init.d/</code><i>name</i> still exists.</dl>
+<dt><i>-n</i></dt>
+<dd>Don&#8217;t do anything, just show what we would do.</dd>
+<dt><i>-f</i></dt>
+<dd>Force removal of symlinks even if <code>/etc/init.d/</code><i>name</i> still exists.</dd></dl>
 <h2>Examples</h2>
 <p>Insert links using the defaults: </p>
 <pre><code> update-rc.d foobar defaults</code>
@@ -74,12 +74,12 @@ runlevels 2-5 and stop in runlevels 0, 1 and 6.</pre>
 <p>See <a rel="nofollow" href="http://bugs.debian.org/sysv-rc.">http://bugs.debian.org/sysv-rc.</a></p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/init.d/</code></p>
-<dd>The directory containing the actual init scripts.</p>
-<dt><code>/etc/rc?.d/</code></p>
-<dd>The directories containing the links used by <code>init</code> and managed by <code>update-rc.d</code>.</p>
-<dt><code>/etc/init.d/skeleton</code></p>
-<dd>Model for use by writers of <code>init.d</code> scripts.</dl>
+<dt><code>/etc/init.d/</code></dt>
+<dd>The directory containing the actual init scripts.</dd>
+<dt><code>/etc/rc?.d/</code></dt>
+<dd>The directories containing the links used by <code>init</code> and managed by <code>update-rc.d</code>.</dd>
+<dt><code>/etc/init.d/skeleton</code></dt>
+<dd>Model for use by writers of <code>init.d</code> scripts.</dd></dl>
 <h2>See Also</h2>
 <p><i>Debian Policy Manual</i>,<br />
  <code>/etc/init.d/skeleton</code>,<br />

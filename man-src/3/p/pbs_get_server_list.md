@@ -11,7 +11,6 @@ pbs_get_server_list - get a list of pbs server names
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre> <pre>char pbs_get_server_list()</pre>
 
 <h2>Description</h2>

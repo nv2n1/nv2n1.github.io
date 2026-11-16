@@ -14,17 +14,17 @@ EZVEC - A front-end to VELVCT with a simpler interface. Like VELVCT, it plots a 
 
  void c_ezvec (float *u, float *v, int m, int n)
 <h2>Description</h2><dl COMPACT><dt>U
-<dd>(REAL 2-dimensional array, dimensioned M x n: n &gt;= N, input) By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
-<dt>V
-<dd>(REAL 2-dimensional array, dimensioned M x n: n &gt;= N, input) By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
-<dt>M
-<dd>(INTEGER, input) Actual size of the first dimension of arrays U and V
-<dt>N
-<dd>(INTEGER, input) Assumed size of the second dimension of arrays U and V.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions:
+</dt><dd>(REAL 2-dimensional array, dimensioned M x n: n &gt;= N, input) By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
+</dd><dt>V
+</dt><dd>(REAL 2-dimensional array, dimensioned M x n: n &gt;= N, input) By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
+</dd><dt>M
+</dt><dd>(INTEGER, input) Actual size of the first dimension of arrays U and V
+</dd><dt>N
+</dt><dd>(INTEGER, input) Assumed size of the second dimension of arrays U and V.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions:
 <dl COMPACT><dt>m
-<dd>The actual size of the second dimension of arrays u and v.
-<dt>n
-<dd>The assumed size of first dimension of arrays u and v.</dl><h2>Usage</h2>U and V are 2-dimensional vector component arrays, whose actual first dimensions must be equal to the value of M, and whose second dimensions must equal or exceed the value of N. 
+</dt><dd>The actual size of the second dimension of arrays u and v.
+</dd><dt>n
+</dt><dd>The assumed size of first dimension of arrays u and v.</dd></dl><h2>Usage</h2>U and V are 2-dimensional vector component arrays, whose actual first dimensions must be equal to the value of M, and whose second dimensions must equal or exceed the value of N. 
 
  Assuming the default value of the compatibility mode parameter, CPM, Vectors always performs a SET call and draws a perimeter around the plot when accessed through the EZVEC interface. Before the return from EZVEC, another call to SET restores the previous coordinate system mapping. 
 

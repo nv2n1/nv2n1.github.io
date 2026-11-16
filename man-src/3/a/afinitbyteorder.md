@@ -97,3 +97,4 @@ void afInitRate(AFfilesetup setup, int track, double rate);</pre>
 <p><code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3), <code><a href="/docs/linux/man/3-afinitfileformat/">afInitFileFormat</a></code>(3), <code><a href="/docs/linux/man/3-afinitcompression/">afInitCompression</a></code>(3), <code><a href="/docs/linux/man/3-afopenfile/">afOpenFile</a></code>(3)</p>
 <h2>Author</h2>
 <p>Michael Pruett &lt;michael [at] 68k.org&gt;</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p>

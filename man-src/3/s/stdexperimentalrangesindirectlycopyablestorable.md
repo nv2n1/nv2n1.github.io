@@ -11,19 +11,12 @@ std::experimental::ranges::IndirectlyCopyableStorable - std::experimental::range
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
-
     template &lt;class In, class Out&gt;
-
     concept bool IndirectlyCopyableStorable =
-
         IndirectlyCopyable&lt;In, Out&gt; &amp;&amp;
-
         Writable&lt;Out, const ranges::value_type_t&lt;In&gt; &amp;&gt; &amp;&amp; (ranges TS)
-
                                                                Copyable&lt;ranges::value_type_t&lt;In&gt;&gt; &amp;&amp;
-
         Constructible&lt;ranges::value_type_t&lt;In&gt;, ranges::reference_t&lt;In&gt;&gt; &amp;&amp;
-
         Assignable&lt;ranges::value_type_t&lt;In&gt; &amp;, ranges::reference_t&lt;In&gt;&gt;;
 </code></pre> 
 &nbsp;This section is incomplete 

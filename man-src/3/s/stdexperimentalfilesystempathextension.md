@@ -36,12 +36,9 @@ For any path p, p.stem()+p.extension() == p.filename()
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     std::cout &lt;&lt; fs::path(&quot;/foo/bar.txt&quot;).extension() &lt;&lt; '\n'
               &lt;&lt; fs::path(&quot;/foo/bar.&quot;).extension() &lt;&lt; '\n'

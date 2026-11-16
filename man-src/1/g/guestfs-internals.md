@@ -72,14 +72,14 @@ description: "guestfs-internals – architecture and internals of libguestfs"
 <p> This process has evolved and continues to evolve. The description here corresponds only to the current version of libguestfs and is provided for information only. </p>
 <p> In order to follow the stages involved below, enable libguestfs debugging (set the environment variable <tt>&quot;LIBGUESTFS_DEBUG=1&quot;</tt>).</p>
 <dl>
-<dt>Create the appliance</p>
-<dd> <tt>&quot;supermin --build&quot;</tt> is invoked to create the kernel, a small initrd and the appliance. </p>
+<dt>Create the appliance</dt>
+<dd> <tt>&quot;supermin --build&quot;</tt> is invoked to create the kernel, a small initrd and the appliance. </dd>
 <p> The appliance is cached in <i>/var/tmp/.guestfs-&lt;</i><font SIZE="-1"><i>UID</i></font><i>&gt;</i> (or in another directory if <tt>&quot;LIBGUESTFS_CACHEDIR&quot;</tt> or <tt>&quot;TMPDIR&quot;</tt> are set). </p>
 <p> For a complete description of how the appliance is created and cached, read the <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1) man page.</p>
-<dt>Start qemu and boot the kernel</p>
-<dd> qemu is invoked to boot the kernel.</p>
-<dt>Run the initrd</p>
-<dd> <tt>&quot;supermin --build&quot;</tt> builds a small initrd. The initrd is not the appliance. The purpose of the initrd is to load enough kernel modules in order that the appliance itself can be mounted and started. </p>
+<dt>Start qemu and boot the kernel</dt>
+<dd> qemu is invoked to boot the kernel.</dd>
+<dt>Run the initrd</dt>
+<dd> <tt>&quot;supermin --build&quot;</tt> builds a small initrd. The initrd is not the appliance. The purpose of the initrd is to load enough kernel modules in order that the appliance itself can be mounted and started. </dd>
 <p> The initrd is a cpio archive called <i>/var/tmp/.guestfs-&lt;</i><font SIZE="-1"><i>UID</i></font><i>&gt;/appliance.d/initrd</i>. </p>
 <p> When the initrd has started you will see messages showing that kernel modules are being loaded, similar to this: </p>
 <pre>
@@ -88,8 +88,8 @@ description: "guestfs-internals – architecture and internals of libguestfs"
  supermin: internal insmod libcrc32c.ko
  supermin: internal insmod crc32c-intel.ko
 </pre>
-<dt>Find and mount the appliance device</p>
-<dd> The appliance is a sparse file containing an ext2 filesystem which contains a familiar (although reduced in size) Linux operating system. It would normally be called <i>/var/tmp/.guestfs-&lt;</i><font SIZE="-1"><i>UID</i></font><i>&gt;/appliance.d/root</i>. </p>
+<dt>Find and mount the appliance device</dt>
+<dd> The appliance is a sparse file containing an ext2 filesystem which contains a familiar (although reduced in size) Linux operating system. It would normally be called <i>/var/tmp/.guestfs-&lt;</i><font SIZE="-1"><i>UID</i></font><i>&gt;/appliance.d/root</i>. </dd>
 <p> The regular disks being inspected by libguestfs are the first devices exposed by qemu (eg. as <i>/dev/vda</i>). </p>
 <p> The last disk added to qemu is the appliance itself (eg. <i>/dev/vdb</i> if there was only one regular disk). </p>
 <p> Thus the final job of the initrd is to locate the appliance disk, mount it, and switch root into the appliance, and run <i>/init</i> from the appliance. </p>
@@ -102,10 +102,10 @@ description: "guestfs-internals – architecture and internals of libguestfs"
  Starting /init script ...
 </pre>
 <p> Note that <tt>&quot;Starting /init script ...&quot;</tt> indicates that the appliance&#8217;s init script is now running.</p>
-<dt>Initialize the appliance</p>
-<dd> The appliance itself now initializes itself. This involves starting certain processes like <tt>&quot;udev&quot;</tt>, possibly printing some debug information, and finally running the daemon (<tt>&quot;guestfsd&quot;</tt>).</p>
-<dt>The daemon</p>
-<dd> Finally the daemon (<tt>&quot;guestfsd&quot;</tt>) runs inside the appliance. If it runs you should see: </p>
+<dt>Initialize the appliance</dt>
+<dd> The appliance itself now initializes itself. This involves starting certain processes like <tt>&quot;udev&quot;</tt>, possibly printing some debug information, and finally running the daemon (<tt>&quot;guestfsd&quot;</tt>).</dd>
+<dt>The daemon</dt>
+<dd> Finally the daemon (<tt>&quot;guestfsd&quot;</tt>) runs inside the appliance. If it runs you should see: </dd>
 <pre>
  verbose daemon enabled
 </pre>
@@ -188,14 +188,14 @@ description: "guestfs-internals – architecture and internals of libguestfs"
 <p> Normally a supermin appliance is located on this path (see &#8220;<font SIZE="-1">SUPERMIN APPLIANCE&#8221;</font> in <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1)). libguestfs reconstructs this into a full appliance by running <tt>&quot;supermin --build&quot;</tt>. </p>
 <p> However, a simpler &#8220;fixed appliance&#8221; can also be used. libguestfs detects this by looking for a directory on the path containing all the following files:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>kernel</i></p>
-<dt>&bull;</p>
-<dd> <i>initrd</i></p>
-<dt>&bull;</p>
-<dd> <i>root</i></p>
-<dt>&bull;</p>
-<dd> <i></i><font SIZE="-1"><i>README</i></font><i>.fixed</i> (note that it <code>must</code> be present as well)</dl>
+<dt>&bull;</dt>
+<dd> <i>kernel</i></dd>
+<dt>&bull;</dt>
+<dd> <i>initrd</i></dd>
+<dt>&bull;</dt>
+<dd> <i>root</i></dd>
+<dt>&bull;</dt>
+<dd> <i></i><font SIZE="-1"><i>README</i></font><i>.fixed</i> (note that it <code>must</code> be present as well)</dd></dl>
 <p> If the fixed appliance is found, libguestfs skips supermin entirely and just runs the virtual machine (using qemu or the current backend, see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code>guestfs</code>(3)) with the kernel, initrd and root disk from the fixed appliance. </p>
 <p> Thus the fixed appliance can be used when a platform or a Linux distribution does not support supermin. You build the fixed appliance on a platform that does support supermin using <code>libguestfs-make-fixed-appliance</code>(1), copy it over, and use that to run libguestfs.</p>
 <h2>SEE ALSO</h2>
@@ -213,23 +213,23 @@ description: "guestfs-internals – architecture and internals of libguestfs"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAJ">SEE ALSO</a></p>
+<dt><a href="#lbAJ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAK">AUTHORS</a></p>
+</dd><dt><a href="#lbAK">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAL">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAL">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAM">LICENSE</a></p>
+</dd><dt><a href="#lbAM">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAN">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAN">BUGS</a></dt>
+<dd></dd></dl>

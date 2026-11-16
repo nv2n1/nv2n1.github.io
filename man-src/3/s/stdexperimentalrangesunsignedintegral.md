@@ -11,9 +11,7 @@ std::experimental::ranges::UnsignedIntegral - std::experimental::ranges::Unsigne
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class T &gt;                                                (ranges TS)
-
 concept bool UnsignedIntegral = Integral&lt;T&gt; &amp;&amp; !SignedIntegral&lt;T&gt;;</code></pre> 
 The concept UnsignedIntegral&lt;T&gt; is satisfied if and only if T is an integral type and std::is_signed&lt;T&gt;::value is false. 
 

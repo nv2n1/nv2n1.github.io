@@ -14,9 +14,6 @@ description: "std::__detail::_EndTagger< _FwdIterT, _TraitsT > –"
 <p> void <code>operator()</code> (const <code>_PatternCursor</code> &amp;__pc, <code>_Results</code> &amp;__r)</p>
 <h3>Public Attributes</h3>
 <pre><code>int _M_index
-
-
-
 _FwdIterT _M_pos</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _FwdIterT, typename _TraitsT&gt;struct std::__detail::_EndTagger&lt; _FwdIterT, _TraitsT &gt;</h3>

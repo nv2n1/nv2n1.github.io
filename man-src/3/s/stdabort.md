@@ -39,19 +39,14 @@ POSIX specifies that the abort() function overrides blocking or ignoring the SIG
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;csignal&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
 class Tester {
-
     public:
     Tester()  { std::cout &lt;&lt; &quot;Tester ctor\n&quot;; }
     ~Tester() { std::cout &lt;&lt; &quot;Tester dtor\n&quot;; }
-
 };</code></pre> 
 &nbsp;<wbr>&nbsp;Tester static_tester; // Destructor not called <pre><code>void signal_handler(int signal)
-
 {
     if (signal == SIGABRT) {
         std::cerr &lt;&lt; &quot;SIGABRT received\n&quot;;
@@ -61,7 +56,6 @@ class Tester {
     std::_Exit(EXIT_FAILURE);
 }
 int main()
-
 {
     Tester automatic_tester; // Destructor not called
                              // Setup handler

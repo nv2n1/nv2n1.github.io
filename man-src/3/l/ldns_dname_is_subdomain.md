@@ -18,14 +18,14 @@ description: "ldns_dname_is_subdomain, ldns_dname_str_absolute, ldns_dname_label
 <p> ldns_rdf * ldns_dname_label(const ldns_rdf *rdf, uint8_t labelpos); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dname_is_subdomain</i>()</p>
-<dd>test wether the name sub falls under parent (i.e. is a subdomain of parent). This function will return false if the given dnames are equal. .br <code>sub</code>: the name to test .br <code>parent</code>: the parent&#8217;s name .br Returns true if sub falls under parent, otherwise false</dl>
+<dt> <i>ldns_dname_is_subdomain</i>()</dt>
+<dd>test wether the name sub falls under parent (i.e. is a subdomain of parent). This function will return false if the given dnames are equal. .br <code>sub</code>: the name to test .br <code>parent</code>: the parent&#8217;s name .br Returns true if sub falls under parent, otherwise false</dd></dl>
 <dl>
-<dt> <i>ldns_dname_str_absolute</i>()</p>
-<dd>Checks whether the given dname string is absolute (i.e. ends with a &#8216;.&#8217;) .br <code>*dname_str</code>: a string representing the dname .br Returns true or false</dl>
+<dt> <i>ldns_dname_str_absolute</i>()</dt>
+<dd>Checks whether the given dname string is absolute (i.e. ends with a &#8216;.&#8217;) .br <code>*dname_str</code>: a string representing the dname .br Returns true or false</dd></dl>
 <dl>
-<dt> <i>ldns_dname_label</i>()</p>
-<dd>look inside the rdf and if it is an LDNS_RDF_TYPE_DNAME try and retrieve a specific label. The labels are numbered starting from 0 (left most). .br <code>rdf</code>: the rdf to look in .br <code>labelpos</code>: return the label with this number .br Returns a ldns_rdf* with the label as name or NULL on error</dl>
+<dt> <i>ldns_dname_label</i>()</dt>
+<dd>look inside the rdf and if it is an LDNS_RDF_TYPE_DNAME try and retrieve a specific label. The labels are numbered starting from 0 (left most). .br <code>rdf</code>: the rdf to look in .br <code>labelpos</code>: return the label with this number .br Returns a ldns_rdf* with the label as name or NULL on error</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

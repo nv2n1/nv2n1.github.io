@@ -24,64 +24,64 @@ description: "dave – DAV Explorer"
 <h2>DESCRIPTION</h2>
 <p> dave is a powerful command-line program for interacting with WebDAV-enabled webservers. With dave you can:</p>
 <dl>
-<dt>&bull;</p>
-<dd> get and put files</p>
-<dt>&bull;</p>
-<dd> make directories on a remote webserver</p>
-<dt>&bull;</p>
-<dd> remove files and directories from a remote webserver</p>
-<dt>&bull;</p>
-<dd> edit a file on the webserver with a single command</p>
-<dt>&bull;</p>
-<dd> recursively get a remote directory</p>
-<dt>&bull;</p>
-<dd> recursively put a local directory</p>
-<dt>&bull;</p>
-<dd> lock and unlock remote files and directories</p>
-<dt>&bull;</p>
-<dd> securely transfer over https</p>
-<dt>&bull;</p>
-<dd> authenticate using the safer Digest authentication</dl>
+<dt>&bull;</dt>
+<dd> get and put files</dd>
+<dt>&bull;</dt>
+<dd> make directories on a remote webserver</dd>
+<dt>&bull;</dt>
+<dd> remove files and directories from a remote webserver</dd>
+<dt>&bull;</dt>
+<dd> edit a file on the webserver with a single command</dd>
+<dt>&bull;</dt>
+<dd> recursively get a remote directory</dd>
+<dt>&bull;</dt>
+<dd> recursively put a local directory</dd>
+<dt>&bull;</dt>
+<dd> lock and unlock remote files and directories</dd>
+<dt>&bull;</dt>
+<dd> securely transfer over https</dd>
+<dt>&bull;</dt>
+<dd> authenticate using the safer Digest authentication</dd></dl>
 <p> Dave is a part of the PerlDAV project (<a rel="nofollow" href="http://www.webdav.org/perldav/)">http://www.webdav.org/perldav/)</a> and is built on top of the <font SIZE="-1">HTTP::DAV</font> perl <font SIZE="-1">API.</font> </p>
 <p> If you would like to script webdav interactions in Perl checkout the <font SIZE="-1">HTTP::DAV API</font> as it&#8217;s commands are the basis for dave&#8217;s.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&quot;-debug N&quot;</p>
-<dd> Sets the debug level to N. 0=none. 3=noisy.</p>
-<dt>&quot;-h&quot;</p>
-<dd> Prints basic help and options.</p>
-<dt>&quot;-man&quot;</p>
-<dd> Prints the full manual (equivalent to perldoc dave). </p>
+<dt>&quot;-debug N&quot;</dt>
+<dd> Sets the debug level to N. 0=none. 3=noisy.</dd>
+<dt>&quot;-h&quot;</dt>
+<dd> Prints basic help and options.</dd>
+<dt>&quot;-man&quot;</dt>
+<dd> Prints the full manual (equivalent to perldoc dave). </dd>
 <p> You will need to use a pager like <tt>&quot;more&quot;</tt> or <tt>&quot;less&quot;</tt>. e.g. </p>
 <pre>
     dave -man |less
 </pre>
-<dt>&quot;-p &lt;password&gt;&quot;</p>
-<dd> Sets the password to be used for the <font SIZE="-1">URL.</font> You must also supply a user. See <tt>&quot;-u&quot;</tt>.</p>
-<dt>&quot;-u &lt;username&gt;&quot;</p>
-<dd> Sets the username to be used for the <font SIZE="-1">URL.</font> You must also supply a pass. See <tt>&quot;-p&quot;</tt>.</p>
-<dt>&quot;-tmpdir /some/path&quot;</p>
-<dd> Create temporary files in <tt>&quot;/some/path&quot;</tt> instead of the default <tt>&quot;/tmp&quot;</tt>.</dl>
+<dt>&quot;-p &lt;password&gt;&quot;</dt>
+<dd> Sets the password to be used for the <font SIZE="-1">URL.</font> You must also supply a user. See <tt>&quot;-u&quot;</tt>.</dd>
+<dt>&quot;-u &lt;username&gt;&quot;</dt>
+<dd> Sets the username to be used for the <font SIZE="-1">URL.</font> You must also supply a pass. See <tt>&quot;-p&quot;</tt>.</dd>
+<dt>&quot;-tmpdir /some/path&quot;</dt>
+<dd> Create temporary files in <tt>&quot;/some/path&quot;</tt> instead of the default <tt>&quot;/tmp&quot;</tt>.</dd></dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>cd </code><font SIZE="-1"><code>URL</code></font></p>
-<dd> changes directories </p>
+<dt><code>cd </code><font SIZE="-1"><code>URL</code></font></dt>
+<dd> changes directories </dd>
 <pre>
    dave&gt; open host.org/dav_dir/
    dave&gt; cd dir1
    dave&gt; cd ../dir2
 </pre>
-<dt><code>cat </code><font SIZE="-1"><code>URL</code></font></p>
-<dd> shows the contents of a remote file </p>
+<dt><code>cat </code><font SIZE="-1"><code>URL</code></font></dt>
+<dd> shows the contents of a remote file </dd>
 <pre>
    dave&gt; open host.org/dav_dir/
    dave&gt; cat index.html
 </pre>
 <p> Note: you cannot cat a directory (collection).</p>
-<dt><code>cp</code></p>
+<dt><code>cp</code></dt>
 <dd>
-<dt><code>copy </code><font SIZE="-1"><code>SOURCE_URL DEST_URL</code></font></p>
-<dd> copies one remote resource to another </p>
+</dd><dt><code>copy </code><font SIZE="-1"><code>SOURCE_URL DEST_URL</code></font></dt>
+<dd> copies one remote resource to another </dd>
 <pre>
   dave&gt; open host.org/dav_dir/
 </pre>
@@ -99,12 +99,12 @@ description: "dave – DAV Explorer"
   dave&gt; copy file.txt dav2/new_file.txt
 </pre>
 <p> Aliases: cp</p>
-<dt><code>rmdir </code><font SIZE="-1"><code>URL</code></font></p>
+<dt><code>rmdir </code><font SIZE="-1"><code>URL</code></font></dt>
 <dd>
-<dt><code>rm </code><font SIZE="-1"><code>URL</code></font></p>
+</dd><dt><code>rm </code><font SIZE="-1"><code>URL</code></font></dt>
 <dd>
-<dt><code>delete </code><font SIZE="-1"><code>URL</code></font></p>
-<dd> deletes a remote resource </p>
+</dd><dt><code>delete </code><font SIZE="-1"><code>URL</code></font></dt>
+<dd> deletes a remote resource </dd>
 <pre>
    dave&gt; open host.org/dav_dir/
    dave&gt; delete index.html
@@ -115,8 +115,8 @@ description: "dave – DAV Explorer"
 <p> This command recursively deletes directories. <font SIZE="-1">BE CAREFUL :</font>) </p>
 <p> This command supported wildcards (globbing). See get. </p>
 <p> Aliases: rm, rmdir</p>
-<dt><code>edit </code><font SIZE="-1"><code>URL</code></font></p>
-<dd> edits the contents of a remote file </p>
+<dt><code>edit </code><font SIZE="-1"><code>URL</code></font></dt>
+<dd> edits the contents of a remote file </dd>
 <pre>
    dave&gt; open host.org/dav_dir/
    dave&gt; edit index.html
@@ -135,8 +135,8 @@ description: "dave – DAV Explorer"
 <p> The lock only lasts for 10 hours. </p>
 <p> You cannot edit a directory (collection). </p>
 <p> The temporary save directory is editable by editing dave and changing <font SIZE="-1">TMP_DIR</font></p>
-<dt><code>get </code><font SIZE="-1"><code>URL</code></font><code> [</code><font SIZE="-1"><code>FILE</code></font><code>]</code></p>
-<dd> downloads the file or directory at <font SIZE="-1">URL</font> </p>
+<dt><code>get </code><font SIZE="-1"><code>URL</code></font><code> [</code><font SIZE="-1"><code>FILE</code></font><code>]</code></dt>
+<dd> downloads the file or directory at <font SIZE="-1">URL</font> </dd>
 <p> If <font SIZE="-1">FILE</font> is not specified it will be saved to your current working directory using the same name as the remote name. </p>
 <pre>
   dave&gt; open host.org/dav_dir/
@@ -163,34 +163,34 @@ description: "dave – DAV Explorer"
   dave&gt; get index*.html /tmp/index1.html  # Gets index*.html
   dave&gt; get index[12].htm?                # Gets file1 and file2, .htm and .html
 </pre>
-<dt><code>? [</code><font SIZE="-1"><code>CMD</code></font><code>]</code></p>
+<dt><code>? [</code><font SIZE="-1"><code>CMD</code></font><code>]</code></dt>
 <dd>
-<dt><code>h [</code><font SIZE="-1"><code>CMD</code></font><code>]</code></p>
+</dd><dt><code>h [</code><font SIZE="-1"><code>CMD</code></font><code>]</code></dt>
 <dd>
-<dt><code>help [</code><font SIZE="-1"><code>CMD</code></font><code>]</code></p>
-<dd> prints list of commands or help for <font SIZE="-1">CMD</font> </p>
+</dd><dt><code>help [</code><font SIZE="-1"><code>CMD</code></font><code>]</code></dt>
+<dd> prints list of commands or help for <font SIZE="-1">CMD</font> </dd>
 <pre>
   dave&gt; ?
   dave&gt; help get
 </pre>
 <p> Aliases: ?, h</p>
-<dt><code>lcd [</code><font SIZE="-1"><code>DIR</code></font><code>]</code></p>
-<dd> changes local directory </p>
+<dt><code>lcd [</code><font SIZE="-1"><code>DIR</code></font><code>]</code></dt>
+<dd> changes local directory </dd>
 <pre>
   dave&gt; lcd /tmp
 </pre>
-<dt><code>lls [</code><font SIZE="-1"><code>DIR</code></font><code>]</code></p>
-<dd> lists local directory contents </p>
+<dt><code>lls [</code><font SIZE="-1"><code>DIR</code></font><code>]</code></dt>
+<dd> lists local directory contents </dd>
 <pre>
   dave&gt; lcd /tmp
   dave&gt; lls
   dave&gt; lls /home
 </pre>
 <p> This command simply execs the local ls command and is equivalent to &#8220;!ls&#8221;</p>
-<dt><code>dir [</code><font SIZE="-1"><code>URL</code></font><code>]</code></p>
+<dt><code>dir [</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
 <dd>
-<dt><code>ls [</code><font SIZE="-1"><code>URL</code></font><code>]</code></p>
-<dd> lists remote directory contents or file props </p>
+</dd><dt><code>ls [</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
+<dd> lists remote directory contents or file props </dd>
 <pre>
   dave&gt; ls
   Listing of <a rel="nofollow" href="http://host.org/dav_dir/">http://host.org/dav_dir/</a>
@@ -210,8 +210,8 @@ description: "dave – DAV Explorer"
 </pre>
 <p> Use propfind to get a similar printout of a collection (directory). </p>
 <p> Aliases: dir</p>
-<dt><code>lock [</code><font SIZE="-1"><code>URL</code></font><code> [</code><font SIZE="-1"><code>TIMEOUT</code></font><code>] [</code><font SIZE="-1"><code>DEPTH</code></font><code>]]</code></p>
-<dd> locks a resource </p>
+<dt><code>lock [</code><font SIZE="-1"><code>URL</code></font><code> [</code><font SIZE="-1"><code>TIMEOUT</code></font><code>] [</code><font SIZE="-1"><code>DEPTH</code></font><code>]]</code></dt>
+<dd> locks a resource </dd>
 <p> Without a <font SIZE="-1">URL</font> you will lock the current remote collection. </p>
 <p> <font SIZE="-1">TIMEOUT</font> can be any of the following formats:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>30s&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>30 seconds from now<br />
@@ -226,20 +226,20 @@ description: "dave – DAV Explorer"
 <p> See perldoc <tt>&quot;HTTP::DAV::Resource&quot;</tt> for more information about timeouts. </p>
 <p> <font SIZE="-1">DEPTH</font> can be either &#8220;0&#8221; or &#8220;infinity&#8221; (default) </p>
 <p> Seeting the lock Scope and Type is not currently implemented. Let me know if you need it as it shouldn&#8217;t be too much effort.</p>
-<dt><code>mkdir </code><font SIZE="-1"><code>URL</code></font></p>
+<dt><code>mkdir </code><font SIZE="-1"><code>URL</code></font></dt>
 <dd>
-<dt><code>mkcol </code><font SIZE="-1"><code>URL</code></font></p>
-<dd> make a remote collection (directory) </p>
+</dd><dt><code>mkcol </code><font SIZE="-1"><code>URL</code></font></dt>
+<dd> make a remote collection (directory) </dd>
 <pre>
   dave&gt; open host.org/dav_dir/
   dave&gt; mkcol new_dir
   dave&gt; mkdir /dav_dir/new_dir
 </pre>
 <p> Aliases: mkdir</p>
-<dt><code>mv</code></p>
+<dt><code>mv</code></dt>
 <dd>
-<dt><code>move </code><font SIZE="-1"><code>SOURCE_URL DEST_URL</code></font></p>
-<dd> moves a remote resource to another </p>
+</dd><dt><code>move </code><font SIZE="-1"><code>SOURCE_URL DEST_URL</code></font></dt>
+<dd> moves a remote resource to another </dd>
 <pre>
   dave&gt; open host.org/dav_dir/
 </pre>
@@ -257,23 +257,23 @@ description: "dave – DAV Explorer"
   dave&gt; move file.txt dav2/new_file.txt
 </pre>
 <p> Aliases: mv</p>
-<dt><code>open </code><font SIZE="-1"><code>URL</code></font></p>
-<dd> connects to the WebDAV-enabled server at <font SIZE="-1">URL</font> </p>
+<dt><code>open </code><font SIZE="-1"><code>URL</code></font></dt>
+<dd> connects to the WebDAV-enabled server at <font SIZE="-1">URL</font> </dd>
 <pre>
    dave&gt; open host.org/dav_dir/
 </pre>
 <p> Note that if authorization details are required you will be prompted for them. </p>
 <p> https and Digest authorization are not currently supported. Please let me know if you need it.</p>
-<dt><code>options [</code><font SIZE="-1"><code>URL</code></font><code>]</code></p>
-<dd> show the <font SIZE="-1">HTTP</font> methods allowed for a <font SIZE="-1">URL</font> </p>
+<dt><code>options [</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
+<dd> show the <font SIZE="-1">HTTP</font> methods allowed for a <font SIZE="-1">URL</font> </dd>
 <pre>
    dave&gt; options index.html
    OPTIONS, GET, HEAD, POST, DELETE, TRACE, PROPFIND, 
    PROPPATCH, COPY, MOVE, LOCK, UNLOCK
 </pre>
 <p> Note that Microsoft&#8217;s <font SIZE="-1">IIS</font> does not support <font SIZE="-1">LOCK</font> on collections (directories). Nor does it support <font SIZE="-1">PROPPATCH.</font></p>
-<dt><code>propfind [</code><font SIZE="-1"><code>URL</code></font><code>]</code></p>
-<dd> show the properties of a resource </p>
+<dt><code>propfind [</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
+<dd> show the properties of a resource </dd>
 <pre>
   dave&gt; propfind test
   URL: <a rel="nofollow" href="http://host.org/dav_dir/test/">http://host.org/dav_dir/test/</a>
@@ -285,8 +285,8 @@ description: "dave – DAV Explorer"
   Locks:
 </pre>
 <p> Using ls will get you the same printout if you ls a file. But ls&#8217;ing a collection will show you the collections contents.</p>
-<dt><code>put </code><font SIZE="-1"><code>FILE</code></font><code> [</code><font SIZE="-1"><code>URL</code></font><code>]</code></p>
-<dd> uploads a local file or directory to <font SIZE="-1">URL</font> or the currently opened location. </p>
+<dt><code>put </code><font SIZE="-1"><code>FILE</code></font><code> [</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
+<dd> uploads a local file or directory to <font SIZE="-1">URL</font> or the currently opened location. </dd>
 <p> If <font SIZE="-1">URL</font> is an existing collection then the dir/file will be copied <font SIZE="-1">INTO</font> that collection. </p>
 <pre>
   dave&gt; open host.org/dav_dir/
@@ -312,51 +312,51 @@ description: "dave – DAV Explorer"
   dave&gt; put index[1-4].htm? /dav_dir
 </pre>
 <p> Glob types supported are, * (matches any characters), ? (matches any one character), [&#8230;] (matches any characters in the set &#8230;).</p>
-<dt><code>pwd</code></p>
-<dd> prints the currently opened <font SIZE="-1">URL </font>(working directory) </p>
+<dt><code>pwd</code></dt>
+<dd> prints the currently opened <font SIZE="-1">URL </font>(working directory) </dd>
 <pre>
  dave&gt; open host.org/dav_dir/
  dave&gt; cd new_dir/
  dave&gt; pwd
  <a rel="nofollow" href="http://host.org/dav_dir/new_dir/">http://host.org/dav_dir/new_dir/</a>
 </pre>
-<dt><code>q</code></p>
+<dt><code>q</code></dt>
 <dd>
-<dt><code>bye</code></p>
+</dd><dt><code>bye</code></dt>
 <dd>
-<dt><code>quit</code></p>
-<dd> exits dave </p>
+</dd><dt><code>quit</code></dt>
+<dd> exits dave </dd>
 <p> Note that dave does not unlock any locks created during your session. </p>
 <p> Aliases: q, quit</p>
-<dt><code>set </code><font SIZE="-1"><code>URL PROPERTY VALUE</code></font><code> [</code><font SIZE="-1"><code>NAMESPACE</code></font><code>]</code></p>
-<dd> sets a custom property on a resource </p>
+<dt><code>set </code><font SIZE="-1"><code>URL PROPERTY VALUE</code></font><code> [</code><font SIZE="-1"><code>NAMESPACE</code></font><code>]</code></dt>
+<dd> sets a custom property on a resource </dd>
 <pre>
    dave&gt; set file.txt author &quot;Patrick Collins&quot;
    dave&gt; set file.txt author &quot;Patrick Collins&quot; &quot;mynamespace&quot;
 </pre>
 <p> The <font SIZE="-1">NAMESPACE</font> by default is &#8220;<font SIZE="-1">DAV:&#8221;.</font></p>
-<dt><code>!</code></p>
+<dt><code>!</code></dt>
 <dd>
-<dt><code>sh</code></p>
-<dd> executes a local command (alias !) </p>
+</dd><dt><code>sh</code></dt>
+<dd> executes a local command (alias !) </dd>
 <pre>
    dave&gt; sh cat localfile
    dave&gt; !gzip localfile.gz
    dave&gt; ! &quot;cat localfile | less&quot;
 </pre>
 <p> Aliases: !</p>
-<dt><code>showlocks</code></p>
-<dd> show my locks on a resource </p>
+<dt><code>showlocks</code></dt>
+<dd> show my locks on a resource </dd>
 <p> Shows any locked resources that you&#8217;ve locked in this session. </p>
 <p> See <tt>&quot;propfind&quot;</tt> if you&#8217;d like to see anyone&#8217;s locks held against a particular resource.</p>
-<dt><code>steal [</code><font SIZE="-1"><code>URL</code></font><code>]</code></p>
-<dd> remove <font SIZE="-1">ANY</font> locks on a resource </p>
+<dt><code>steal [</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
+<dd> remove <font SIZE="-1">ANY</font> locks on a resource </dd>
 <p> Useful if you accidentally forgot to unlock a resource from a previous session or if you think that somebody has forgotten to unlock a resource.</p>
-<dt><code>unlock [</code><font SIZE="-1"><code>URL</code></font><code>]</code></p>
-<dd> unlocks a resource </p>
+<dt><code>unlock [</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
+<dd> unlocks a resource </dd>
 <p> Note that unlock will only unlock locks that you have created. Use steal if you want to forcefully unlock somebody else&#8217;s lock.</p>
-<dt><code>unset </code><font SIZE="-1"><code>URL PROPERTY</code></font><code> [</code><font SIZE="-1"><code>NAMESPACE</code></font><code>]</code></p>
-<dd> unsets a property from a resource </p>
+<dt><code>unset </code><font SIZE="-1"><code>URL PROPERTY</code></font><code> [</code><font SIZE="-1"><code>NAMESPACE</code></font><code>]</code></dt>
+<dd> unsets a property from a resource </dd>
 <pre>
    dave&gt; unset file.txt author
    dave&gt; unset file.txt author &quot;mynamespace&quot;
@@ -385,3 +385,4 @@ description: "dave – DAV Explorer"
 <h2>MAINTAINER</h2>
 <p> Cosimo Streppone, &lt;cosimo [at] cpan.org&gt; </p>
 <h2>Index</h2>
+</p>

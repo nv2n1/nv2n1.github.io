@@ -15,15 +15,15 @@ filemap_write_and_wait_range - write out &amp; wait on a file range
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>the address_space for the pages</dl>
+<dl><dd></dd><dd>the address_space for the pages</dd></dl>
  
 
  <i>lstart</i>
-<dl><dd>offset in bytes where the range starts</dl>
+<dl><dd>offset in bytes where the range starts</dd></dl>
  
 
  <i>lend</i>
-<dl><dd>offset in bytes where the range ends (inclusive)</dl>
+<dl><dd>offset in bytes where the range ends (inclusive)</dd></dl>
 
 <h2>Description</h2>
 

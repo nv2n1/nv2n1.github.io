@@ -11,7 +11,6 @@ std::numeric_limits&lt;T&gt;::epsilon - std::numeric_limits&lt;T&gt;::epsilon
 <h2>Synopsis</h2>
 
 <pre><code>static T epsilon() throw();             (until C++11)
-
 static constexpr T epsilon() noexcept;  (since C++11)</code></pre> 
 Returns the machine epsilon, that is, the difference between 1.0 and the next value representable by the floating-point type T. It is only meaningful if std::numeric_limits&lt;T&gt;::is_integer == false. 
 
@@ -43,21 +42,14 @@ long double LDBL_EPSILON
 
 Demonstrates the use of machine epsilon to compare floating-point values for equality 
  // Run this code <pre><code>#include &lt;cmath&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;algorithm&gt;
 template &lt;class T&gt;
-
 typename std::enable_if&lt;!std::numeric_limits&lt;T&gt;::is_integer, bool&gt;::type
 almost_equal(T x, T y, int ulp)
-
 {
     // the machine epsilon has to be scaled to the magnitude of the values used
     // and multiplied by the desired precision in ULPs (units in the last place)
@@ -66,7 +58,6 @@ almost_equal(T x, T y, int ulp)
            || std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::min();
 }
 int main()
-
 {
     double d1 = 0.2;
     double d2 = 1 / std::sqrt(5) / std::sqrt(5);

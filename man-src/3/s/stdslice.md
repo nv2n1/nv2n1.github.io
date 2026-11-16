@@ -10,7 +10,6 @@ description: "std::slice – std::slice"
 <p>std::slice &#8211; std::slice</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;valarray&gt;
-
 class slice;</code></pre>
 <p>std::slice is the selector class that identifies a subset of std::valarray similar to BLAS slice. An object of type std::slice holds three values: the starting index, the stride, and the total number of values in the subset. Objects of type std::slice can be used as indexes with valarray&#8217;s operator[]. </p>
 <h2>Member functions</h2>
@@ -51,14 +50,11 @@ std::size_t stride() const; <code>(3)</code> </p>
 <p>Barebones valarray-backed Matrix class with a trace calculating function.<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
-
 class Matrix
 {
     std::valarray&lt;int&gt; data;
     int dim;
-
   public:
     Matrix(int r, int c)
         : data(r * c), dim(c)
@@ -73,9 +69,7 @@ class Matrix
         return data[std::slice(0, dim, dim + 1)].sum();
     }
 };
-
 int main()
-
 {
     Matrix m(3, 3);
     int n = 0;

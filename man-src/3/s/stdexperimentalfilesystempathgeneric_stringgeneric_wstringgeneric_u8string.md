@@ -11,23 +11,15 @@ std::experimental::filesystem::path::generic_string,generic_wstring,generic_u8st
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits = std::char_traits&lt;CharT&gt;,
-
           class Alloc = std::allocator&lt;CharT&gt;&gt;
 (1)(filesystem TS)
-
     std::basic_string&lt;CharT, Traits, Alloc&gt;
-
     generic_string(const Alloc &amp;a = Alloc()) const;
-
 std::string generic_string() const;
-
 std::wstring generic_wstring() const;
-
 std::string generic_u8string() const;
 (2)(filesystem TS)
-
     std::u16string generic_u16string() const;
-
 std::u32string generic_u32string() const;</code></pre> 
 Returns the internal pathname in generic pathname format, converted to specific string type. Conversion, if any, is specified in todo. The / character is used as the directory separator. 
 1) All memory allocations are performed by a. 

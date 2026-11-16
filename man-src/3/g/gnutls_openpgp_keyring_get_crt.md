@@ -14,12 +14,12 @@ description: "gnutls_openpgp_keyring_get_crt – API function"
 <p> <code>int gnutls_openpgp_keyring_get_crt(gnutls_openpgp_keyring_t </code><i>ring</i><code>, unsigned int </code><i>idx</i><code>, gnutls_openpgp_crt_t * </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_keyring_t ring</p>
-<dd> Holds the keyring.</p>
-<dt>unsigned int idx</p>
-<dd> the index of the certificate to export</p>
-<dt>gnutls_openpgp_crt_t * cert</p>
-<dd> An uninitialized <code>gnutls_openpgp_crt_t</code> type</dl>
+<dt>gnutls_openpgp_keyring_t ring</dt>
+<dd> Holds the keyring.</dd>
+<dt>unsigned int idx</dt>
+<dd> the index of the certificate to export</dd>
+<dt>gnutls_openpgp_crt_t * cert</dt>
+<dd> An uninitialized <code>gnutls_openpgp_crt_t</code> type</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract an OpenPGP certificate from the given keyring. If the index given is out of range <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned. The returned structure needs to be deinited.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_openpgp_keyring_get_crt – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

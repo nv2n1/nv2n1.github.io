@@ -34,13 +34,13 @@ url: "/docs/linux/man/3-fstrcmpi/"
 
 <dl>
 <dt><a HREF="/docs/linux/man/3-fstrcasecmpi/">fstrcasecmpi</a>(3)
-<dd> compare two strings ignoring case
-<dt><a HREF="/docs/linux/man/3-fstrcmp/">fstrcmp</a>(3)
-<dd> fuzzy comparison of two strings
-<dt><a HREF="/docs/linux/man/3-fmemcmp/">fmemcmp</a>(3)
-<dd> fuzzy comparison of two memory areas
-<dt><a HREF="/docs/linux/man/3-strcmp/">strcmp</a>(3)
-<dd> compare two strings</dl>
+</dt><dd> compare two strings ignoring case
+</dd><dt><a HREF="/docs/linux/man/3-fstrcmp/">fstrcmp</a>(3)
+</dt><dd> fuzzy comparison of two strings
+</dd><dt><a HREF="/docs/linux/man/3-fmemcmp/">fmemcmp</a>(3)
+</dt><dd> fuzzy comparison of two memory areas
+</dd><dt><a HREF="/docs/linux/man/3-strcmp/">strcmp</a>(3)
+</dt><dd> compare two strings</dd></dl>
 
 <h2>COPYRIGHT</h2>
 

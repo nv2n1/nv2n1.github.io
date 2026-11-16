@@ -14,13 +14,13 @@ description: "memset – Fill a region of memory with the given value"
 <p><i>s</i></p>
 <dl>
 <dd>
-<dd>Pointer to the start of the area.</dl>
+</dd><dd>Pointer to the start of the area.</dd></dl>
 <p> <i>c</i></p>
 <dl>
-<dd>The byte to fill the area with</dl>
+<dd>The byte to fill the area with</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>The size of the area.</dl>
+<dd>The size of the area.</dd></dl>
 <h2>Description</h2>
 <p>Do not use <code>memset</code> to access IO space, use <code>memset_io</code> instead.</p>
 <h2>Copyright</h2>

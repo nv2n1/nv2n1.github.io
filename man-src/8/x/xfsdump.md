@@ -20,36 +20,36 @@ description: "xfsdump – XFS filesystem incremental dump utility"
 <p> <i>xfsdump</i> maintains an online dump inventory in <i>/var/lib/xfsdump/inventory</i>. The <code>-I</code> option displays the inventory contents hierarchically. The levels of the hierarchy are: filesystem, dump session, stream, and media file. </p>
 <p> The options to <i>xfsdump</i> are:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd>Specifies that files for which the Data Migration Facility (DMF) has complete offline copies (dual-state files) be treated as if they were offline (OFL). This means that the file data will not be dumped by xfsdump, resulting in a smaller dump file. If the file is later restored the file data is still accessible through DMF. If both &#8216;-a option&#8217; and &#8216;-z option&#8217; are specified, the &#8216;-a option&#8217; takes precedence (see &#8216;-z option&#8217; below).</p>
-<dt><code>-b</code> <i>blocksize</i></p>
-<dd>Specifies the blocksize, in bytes, to be used for the dump. The same blocksize must be specified to restore the tape. If the <code>-m</code> option is not used, then <code>-b</code> does not need to be specified. Instead, a default blocksize of 1Mb will be used.</p>
-<dt><code>-c</code> <i>progname</i></p>
-<dd>Use the specified program to alert the operator when a media change is required. The alert program is typically a script to send a mail or flash a window to draw the operator&#8217;s attention.</p>
-<dt><code>-d</code> <i>filesize</i></p>
-<dd>Specifies the size, in megabytes, of dump media files. If not specified, xfsdump will dump data to tape using a single media file per media object. The specified media file size may need to be adjusted if, for example, xfsdump cannot fit a media file onto a single tape.</p>
-<dt><code>-e</code></p>
-<dd>Allow files to be excluded from the dump. This will cause xfsdump to skip files which have the &quot;no dump&quot; file attribute set. See the &quot;Excluding individual files&quot; section below for details on setting this file attribute.</p>
-<dt><code>-f</code> <i>dest</i> [ <code>-f</code> <i>dest</i> &#8230; ]</p>
-<dd>Specifies a dump destination. A dump destination can be the pathname of a device (such as a tape drive), a regular file or a remote tape drive (see <i><a href="/docs/linux/man/8-rmt/">rmt</a></i>(8)). This option must be omitted if the standard output option (a lone <code>&#8211;</code> preceding the source filesystem specification) is specified.</p>
-<dt><code>-l</code> <i>level</i></p>
-<dd>Specifies a dump level of 0 to 9. The dump level determines the base dump to which this dump is relative. The base dump is the most recent dump at a lesser level. A level 0 dump is absolute &#8211; all files are dumped. A dump level where 1 &lt;= <i>level</i> &lt;= 9 is referred to as an incremental dump. Only files that have been changed since the base dump are dumped. Subtree dumps (see the <code>-s</code> option below) cannot be used as the base for incremental dumps.</p>
-<dt><code>-m</code></p>
-<dd>Use the minimal tape protocol for non-scsi tape destinations or remote tape destinations which are not scsi Linux tape drives nor IRIX tape drives. This option cannot be used without specifying a blocksize to be used (see <code>-b</code> option above).</p>
-<dt><code>-o</code></p>
-<dd>Overwrite the tape. With this option, <i>xfsdump </i> does not read the tape first to check the contents. This option may be used if <i>xfsdump </i> is unable to determine the block size of a tape .</p>
-<dt><code>-p</code> <i>interval</i></p>
-<dd>Causes progress reports to be printed at the specified interval. <i>interval</i> is given in seconds. The progress report indicates how many files have been dumped, the total number of files to dump, the percentage of data dumped, and the elapsed time.</p>
-<dt><code>-q</code></p>
-<dd>Destination tape drive is a QIC tape. QIC tapes only use a 512 byte blocksize, for which <i>xfsdump</i> must make special allowances.</p>
-<dt><code>-s</code> <i>pathname</i> [ <code>-s</code> <i>pathname</i> &#8230; ]</p>
-<dd>Restricts the dump to files contained in the specified pathnames (subtrees). A <i>pathname</i> must be relative to the mount point of the filesystem. For example, if a filesystem is mounted at <i>/d2</i>, the <i>pathname</i> argument for the directory <i>/d2/users</i> is &#8220;users&#8221;. A <i>pathname</i> can be a file or a directory; if it is a directory, the entire hierarchy of files and subdirectories rooted at that directory is dumped. Subtree dumps cannot be used as the base for incremental dumps (see the <code>-l</code> option above).</p>
-<dt><code>-t</code> <i>file</i></p>
-<dd>Sets the dump time to the modification time of <i>file</i> rather than using the current time. <i>xfsdump</i> uses the dump time to determine what files need to be backed up during an incremental dump. This option should be used when dumping snapshots so that the dump time matches the time the snapshot was taken. Otherwise files modified after a snapshot is taken may be skipped in the next incremental dump.</p>
-<dt><code>-v</code> <i>verbosity</i></p>
+<dt><code>-a</code></dt>
+<dd>Specifies that files for which the Data Migration Facility (DMF) has complete offline copies (dual-state files) be treated as if they were offline (OFL). This means that the file data will not be dumped by xfsdump, resulting in a smaller dump file. If the file is later restored the file data is still accessible through DMF. If both &#8216;-a option&#8217; and &#8216;-z option&#8217; are specified, the &#8216;-a option&#8217; takes precedence (see &#8216;-z option&#8217; below).</dd>
+<dt><code>-b</code> <i>blocksize</i></dt>
+<dd>Specifies the blocksize, in bytes, to be used for the dump. The same blocksize must be specified to restore the tape. If the <code>-m</code> option is not used, then <code>-b</code> does not need to be specified. Instead, a default blocksize of 1Mb will be used.</dd>
+<dt><code>-c</code> <i>progname</i></dt>
+<dd>Use the specified program to alert the operator when a media change is required. The alert program is typically a script to send a mail or flash a window to draw the operator&#8217;s attention.</dd>
+<dt><code>-d</code> <i>filesize</i></dt>
+<dd>Specifies the size, in megabytes, of dump media files. If not specified, xfsdump will dump data to tape using a single media file per media object. The specified media file size may need to be adjusted if, for example, xfsdump cannot fit a media file onto a single tape.</dd>
+<dt><code>-e</code></dt>
+<dd>Allow files to be excluded from the dump. This will cause xfsdump to skip files which have the &quot;no dump&quot; file attribute set. See the &quot;Excluding individual files&quot; section below for details on setting this file attribute.</dd>
+<dt><code>-f</code> <i>dest</i> [ <code>-f</code> <i>dest</i> &#8230; ]</dt>
+<dd>Specifies a dump destination. A dump destination can be the pathname of a device (such as a tape drive), a regular file or a remote tape drive (see <i><a href="/docs/linux/man/8-rmt/">rmt</a></i>(8)). This option must be omitted if the standard output option (a lone <code>&#8211;</code> preceding the source filesystem specification) is specified.</dd>
+<dt><code>-l</code> <i>level</i></dt>
+<dd>Specifies a dump level of 0 to 9. The dump level determines the base dump to which this dump is relative. The base dump is the most recent dump at a lesser level. A level 0 dump is absolute &#8211; all files are dumped. A dump level where 1 &lt;= <i>level</i> &lt;= 9 is referred to as an incremental dump. Only files that have been changed since the base dump are dumped. Subtree dumps (see the <code>-s</code> option below) cannot be used as the base for incremental dumps.</dd>
+<dt><code>-m</code></dt>
+<dd>Use the minimal tape protocol for non-scsi tape destinations or remote tape destinations which are not scsi Linux tape drives nor IRIX tape drives. This option cannot be used without specifying a blocksize to be used (see <code>-b</code> option above).</dd>
+<dt><code>-o</code></dt>
+<dd>Overwrite the tape. With this option, <i>xfsdump </i> does not read the tape first to check the contents. This option may be used if <i>xfsdump </i> is unable to determine the block size of a tape .</dd>
+<dt><code>-p</code> <i>interval</i></dt>
+<dd>Causes progress reports to be printed at the specified interval. <i>interval</i> is given in seconds. The progress report indicates how many files have been dumped, the total number of files to dump, the percentage of data dumped, and the elapsed time.</dd>
+<dt><code>-q</code></dt>
+<dd>Destination tape drive is a QIC tape. QIC tapes only use a 512 byte blocksize, for which <i>xfsdump</i> must make special allowances.</dd>
+<dt><code>-s</code> <i>pathname</i> [ <code>-s</code> <i>pathname</i> &#8230; ]</dt>
+<dd>Restricts the dump to files contained in the specified pathnames (subtrees). A <i>pathname</i> must be relative to the mount point of the filesystem. For example, if a filesystem is mounted at <i>/d2</i>, the <i>pathname</i> argument for the directory <i>/d2/users</i> is &#8220;users&#8221;. A <i>pathname</i> can be a file or a directory; if it is a directory, the entire hierarchy of files and subdirectories rooted at that directory is dumped. Subtree dumps cannot be used as the base for incremental dumps (see the <code>-l</code> option above).</dd>
+<dt><code>-t</code> <i>file</i></dt>
+<dd>Sets the dump time to the modification time of <i>file</i> rather than using the current time. <i>xfsdump</i> uses the dump time to determine what files need to be backed up during an incremental dump. This option should be used when dumping snapshots so that the dump time matches the time the snapshot was taken. Otherwise files modified after a snapshot is taken may be skipped in the next incremental dump.</dd>
+<dt><code>-v</code> <i>verbosity</i></dt>
 <dd>
-<dt><code>-v</code> <i>subsys</i>=<i>verbosity</i>[,<i>subsys</i>=<i>verbosity</i>,&#8230;]</p>
-<dd>Specifies the level of detail used for messages displayed during the course of the dump. The <i>verbosity</i> argument can be passed as either a string or an integer. If passed as a string the following values may be used: <code>silent</code>, <code>verbose</code>, <code>trace</code>, <code>debug</code>, or <code>nitty</code>. If passed as an integer, values from 0-5 may be used. The values 0-4 correspond to the strings already listed. The value 5 can be used to produce even more verbose debug output. </p>
+</dd><dt><code>-v</code> <i>subsys</i>=<i>verbosity</i>[,<i>subsys</i>=<i>verbosity</i>,&#8230;]</dt>
+<dd>Specifies the level of detail used for messages displayed during the course of the dump. The <i>verbosity</i> argument can be passed as either a string or an integer. If passed as a string the following values may be used: <code>silent</code>, <code>verbose</code>, <code>trace</code>, <code>debug</code>, or <code>nitty</code>. If passed as an integer, values from 0-5 may be used. The values 0-4 correspond to the strings already listed. The value 5 can be used to produce even more verbose debug output. </dd>
 <p> The first form of this option activates message logging across all dump subsystems. The second form allows the message logging level to be controlled on a per-subsystem basis. The two forms can be combined (see the example below). The argument <i>subsys</i> can take one of the following values: <code>general</code>, <code>proc</code>, <code>drive</code>, <code>media</code>, <code>inventory</code>, <code>inomap</code> and <code>excluded_files</code>. </p>
 <p> For example, to dump the root filesystem with tracing activated for all subsystems: <code> </p>
 <p> </code></p>
@@ -63,40 +63,40 @@ description: "xfsdump – XFS filesystem incremental dump utility"
 <p>To list files that will be excluded from the dump: <code> </p>
 <p> </code></p>
 <pre># xfsdump -e -v excluded_files=debug -f /dev/tape /</pre>
-<dt><code>-z</code> <i>size</i></p>
-<dd>Specifies the maximum size, in kilobytes, of files to be included in the dump. Files over this size, will be excluded from the dump, except for DMF dual-state files when &#8216;-a option&#8217; is specified (see &#8216;-a option&#8217; above). When specified, &#8216;-a option&#8217; takes precedence over &#8216;-z option&#8217;. The size is an estimate based on the number of disk blocks actually used by the file, and so does not include holes. In other words, size refers to the amount of space the file would take in the resulting dump. On an interactive restore, the skipped file is visible with xfsrestore&#8217;s &#8216;ls&#8217; and while you can use the &#8216;add&#8217; and &#8216;extract&#8217; commands, nothing will be restored.</p>
-<dt><code>-A</code></p>
-<dd>Do not dump extended file attributes. When dumping a filesystem managed within a DMF environment this option should not be used. DMF stores file migration status within extended attributes associated with each file. If these attributes are not preserved when the filesystem is restored, files that had been in migrated state will not be recallable by DMF. Note that dumps containing extended file attributes cannot be restored with older versions of <i><a href="/docs/linux/man/8-xfsrestore/">xfsrestore</a></i>(8).</p>
-<dt><code>-B</code> <i>session_id</i></p>
-<dd>Specifies the ID of the dump session upon which this dump session is to be based. If this option is specified, the <code>-l</code> (level) and <code>-R</code> (resume) options are not allowed. Instead, <code>xfsdump</code> determines if the current dump session should be incremental and/or resumed, by looking at the base session&#8217;s level and interrupted attributes. If the base session was interrupted, the current dump session is a resumption of that base at the same level. Otherwise, the current dump session is an incremental dump with a level one greater than that of the base session. This option allows incremental and resumed dumps to be based on any previous dump, rather than just the most recent.</p>
-<dt><code>-D</code></p>
-<dd>Controls which directories are backed up during an incremental dump. By default unchanged directories are dumped if files or directories beneath them have changed. This results in a self-contained dump &#8212; if a base dump is lost, or you know the file(s) you wish to restore is in an incremental dump, you can restore just that dump without loading the base dump(s) first. However, this method requires a potentially expensive traversal through the filesystem. </p>
+<dt><code>-z</code> <i>size</i></dt>
+<dd>Specifies the maximum size, in kilobytes, of files to be included in the dump. Files over this size, will be excluded from the dump, except for DMF dual-state files when &#8216;-a option&#8217; is specified (see &#8216;-a option&#8217; above). When specified, &#8216;-a option&#8217; takes precedence over &#8216;-z option&#8217;. The size is an estimate based on the number of disk blocks actually used by the file, and so does not include holes. In other words, size refers to the amount of space the file would take in the resulting dump. On an interactive restore, the skipped file is visible with xfsrestore&#8217;s &#8216;ls&#8217; and while you can use the &#8216;add&#8217; and &#8216;extract&#8217; commands, nothing will be restored.</dd>
+<dt><code>-A</code></dt>
+<dd>Do not dump extended file attributes. When dumping a filesystem managed within a DMF environment this option should not be used. DMF stores file migration status within extended attributes associated with each file. If these attributes are not preserved when the filesystem is restored, files that had been in migrated state will not be recallable by DMF. Note that dumps containing extended file attributes cannot be restored with older versions of <i><a href="/docs/linux/man/8-xfsrestore/">xfsrestore</a></i>(8).</dd>
+<dt><code>-B</code> <i>session_id</i></dt>
+<dd>Specifies the ID of the dump session upon which this dump session is to be based. If this option is specified, the <code>-l</code> (level) and <code>-R</code> (resume) options are not allowed. Instead, <code>xfsdump</code> determines if the current dump session should be incremental and/or resumed, by looking at the base session&#8217;s level and interrupted attributes. If the base session was interrupted, the current dump session is a resumption of that base at the same level. Otherwise, the current dump session is an incremental dump with a level one greater than that of the base session. This option allows incremental and resumed dumps to be based on any previous dump, rather than just the most recent.</dd>
+<dt><code>-D</code></dt>
+<dd>Controls which directories are backed up during an incremental dump. By default unchanged directories are dumped if files or directories beneath them have changed. This results in a self-contained dump &#8212; if a base dump is lost, or you know the file(s) you wish to restore is in an incremental dump, you can restore just that dump without loading the base dump(s) first. However, this method requires a potentially expensive traversal through the filesystem. </dd>
 <p> When <code>-D</code> is specified, unchanged directories are not dumped. This results in a faster dump, but files will end up in the <i><a href="/docs/linux/man/8-xfsrestore/">xfsrestore</a></i>(8) <i>orphanage</i> directory unless the base dump(s) is loaded first.</p>
-<dt><code>-E</code></p>
-<dd>Pre-erase media. If this option is specified, media is erased prior to use. The operator is prompted for confirmation, unless the <code>-F</code> option is also specified.</p>
-<dt><code>-F</code></p>
-<dd>Don&#8217;t prompt the operator. When <i>xfsdump</i> encounters a media object containing non-xfsdump data, <i>xfsdump</i> normally asks the operator for permission to overwrite. With this option the overwrite is performed, no questions asked. When <i>xfsdump</i> encounters end-of-media during a dump, <i>xfsdump</i> normally asks the operator if another media object will be provided. With this option the dump is instead interrupted.</p>
-<dt><code>-I</code></p>
-<dd>Displays the <i>xfsdump</i> inventory (no dump is performed). <i>xfsdump</i> records each dump session in an online inventory in <i>/var/lib/xfsdump/inventory</i>. <i>xfsdump</i> uses this inventory to determine the base for incremental dumps. It is also useful for manually identifying a dump session to be restored. Suboptions to filter the inventory display are described later.</p>
-<dt><code>-J</code></p>
-<dd>Inhibits the normal update of the inventory. This is useful when the media being dumped to will be discarded or overwritten.</p>
-<dt><code>-K</code></p>
-<dd>Generate a format 2 dump instead of the current format. This is useful if the dump will be restored on a system with an older <i>xfsrestore</i> which does not understand the current dump format. Use of this option is otherwise not recommended.</p>
-<dt><code>-L</code> <i>session_label</i></p>
-<dd>Specifies a label for the dump session. It can be any arbitrary string up to 255 characters long.</p>
-<dt><code>-M</code> <i>label</i> [ <code>-M</code> <i>label</i> &#8230; ]</p>
-<dd>Specifies a label for the first media object (for example, tape cartridge) written on the corresponding destination during the session. It can be any arbitrary string up to 255 characters long. Multiple media object labels can be specified, one for each destination.</p>
-<dt><code>-O</code> <i>options_file</i></p>
+<dt><code>-E</code></dt>
+<dd>Pre-erase media. If this option is specified, media is erased prior to use. The operator is prompted for confirmation, unless the <code>-F</code> option is also specified.</dd>
+<dt><code>-F</code></dt>
+<dd>Don&#8217;t prompt the operator. When <i>xfsdump</i> encounters a media object containing non-xfsdump data, <i>xfsdump</i> normally asks the operator for permission to overwrite. With this option the overwrite is performed, no questions asked. When <i>xfsdump</i> encounters end-of-media during a dump, <i>xfsdump</i> normally asks the operator if another media object will be provided. With this option the dump is instead interrupted.</dd>
+<dt><code>-I</code></dt>
+<dd>Displays the <i>xfsdump</i> inventory (no dump is performed). <i>xfsdump</i> records each dump session in an online inventory in <i>/var/lib/xfsdump/inventory</i>. <i>xfsdump</i> uses this inventory to determine the base for incremental dumps. It is also useful for manually identifying a dump session to be restored. Suboptions to filter the inventory display are described later.</dd>
+<dt><code>-J</code></dt>
+<dd>Inhibits the normal update of the inventory. This is useful when the media being dumped to will be discarded or overwritten.</dd>
+<dt><code>-K</code></dt>
+<dd>Generate a format 2 dump instead of the current format. This is useful if the dump will be restored on a system with an older <i>xfsrestore</i> which does not understand the current dump format. Use of this option is otherwise not recommended.</dd>
+<dt><code>-L</code> <i>session_label</i></dt>
+<dd>Specifies a label for the dump session. It can be any arbitrary string up to 255 characters long.</dd>
+<dt><code>-M</code> <i>label</i> [ <code>-M</code> <i>label</i> &#8230; ]</dt>
+<dd>Specifies a label for the first media object (for example, tape cartridge) written on the corresponding destination during the session. It can be any arbitrary string up to 255 characters long. Multiple media object labels can be specified, one for each destination.</dd>
+<dt><code>-O</code> <i>options_file</i></dt>
 <dd>Insert the options contained in <i>options_file</i> into the beginning of the command line. The options are specified just as they would appear if typed into the command line. In addition, newline characters (
-) can be used as whitespace. The options are placed before all options actually given on the command line, just after the command name. Only one <code>-O</code> option can be used. Recursive use is ignored. The source filesystem cannot be specified in <i>options_file</i>.</p>
-<dt><code>-R</code></p>
-<dd>Resumes a previously interrupted dump session. If the most recent dump at this dump&#8217;s level (<code>-l</code> option) was interrupted, this dump contains only files not in the interrupted dump and consistent with the incremental level. However, files contained in the interrupted dump that have been subsequently modified are re-dumped.</p>
-<dt><code>-T</code></p>
-<dd>Inhibits interactive dialogue timeouts. When the <code>-F</code> option is not specified, <i>xfsdump</i> prompts the operator for labels and media changes. Each dialogue normally times out if no response is supplied. This option prevents the timeout.</p>
-<dt><code>-Y</code> <i>length</i></p>
-<dd>Specify I/O buffer ring length. <i>xfsdump</i> uses a ring of output buffers to achieve maximum throughput when dumping to tape drives. The default ring length is 3. However, this is not currently enabled on Linux yet, making this option benign.</p>
-<dt><code>&#8211;</code></p>
-<dd>A lone <code>&#8211;</code> causes the dump stream to be sent to the standard output, where it can be piped to another utility such as <i><a href="/docs/linux/man/8-xfsrestore/">xfsrestore</a></i>(8) or redirected to a file. This option cannot be used with the <code>-f</code> option. The <code>&#8211;</code> must follow all other options and precede the filesystem specification.</dl>
+) can be used as whitespace. The options are placed before all options actually given on the command line, just after the command name. Only one <code>-O</code> option can be used. Recursive use is ignored. The source filesystem cannot be specified in <i>options_file</i>.</dd>
+<dt><code>-R</code></dt>
+<dd>Resumes a previously interrupted dump session. If the most recent dump at this dump&#8217;s level (<code>-l</code> option) was interrupted, this dump contains only files not in the interrupted dump and consistent with the incremental level. However, files contained in the interrupted dump that have been subsequently modified are re-dumped.</dd>
+<dt><code>-T</code></dt>
+<dd>Inhibits interactive dialogue timeouts. When the <code>-F</code> option is not specified, <i>xfsdump</i> prompts the operator for labels and media changes. Each dialogue normally times out if no response is supplied. This option prevents the timeout.</dd>
+<dt><code>-Y</code> <i>length</i></dt>
+<dd>Specify I/O buffer ring length. <i>xfsdump</i> uses a ring of output buffers to achieve maximum throughput when dumping to tape drives. The default ring length is 3. However, this is not currently enabled on Linux yet, making this option benign.</dd>
+<dt><code>&#8211;</code></dt>
+<dd>A lone <code>&#8211;</code> causes the dump stream to be sent to the standard output, where it can be piped to another utility such as <i><a href="/docs/linux/man/8-xfsrestore/">xfsrestore</a></i>(8) or redirected to a file. This option cannot be used with the <code>-f</code> option. The <code>&#8211;</code> must follow all other options and precede the filesystem specification.</dd></dl>
 <p> The filesystem, <i>filesystem</i>, can be specified either as a mount point or as a special device file (for example, <i>/dev/dsk/dks0d1s0</i>). The filesystem must be mounted to be dumped.</p>
 <h2>Notes</h2>
 <h3>Dump Interruption</h3>
@@ -110,24 +110,24 @@ description: "xfsdump – XFS filesystem incremental dump utility"
 <p> This database can be displayed by invoking <i>xfsdump</i> with the <code>-I</code> option. The display uses tabbed indentation to present the inventory hierarchically. The first level is filesystem. The second level is session. The third level is media stream (currently only one stream is supported). The fourth level lists the media files sequentially composing the stream. </p>
 <p> The following suboptions are available to filter the display.</p>
 <dl>
-<dt><code>-I depth=</code><i>n</i></p>
-<dd>(where <i>n</i> is 1, 2, or 3) limits the hierarchical depth of the display. When <i>n</i> is 1, only the filesystem information from the inventory is displayed. When <i>n</i> is 2, only filesystem and session information are displayed. When <i>n</i> is 3, only filesystem, session and stream information are displayed.</p>
-<dt><code>-I level=</code><i>n</i></p>
-<dd>(where <i>n</i> is the dump level) limits the display to dumps of that particular dump level.</dl>
+<dt><code>-I depth=</code><i>n</i></dt>
+<dd>(where <i>n</i> is 1, 2, or 3) limits the hierarchical depth of the display. When <i>n</i> is 1, only the filesystem information from the inventory is displayed. When <i>n</i> is 2, only filesystem and session information are displayed. When <i>n</i> is 3, only filesystem, session and stream information are displayed.</dd>
+<dt><code>-I level=</code><i>n</i></dt>
+<dd>(where <i>n</i> is the dump level) limits the display to dumps of that particular dump level.</dd></dl>
 <p> The display may be restricted to media files contained in a specific media object.</p>
 <dl>
-<dt><code>-I mobjid=</code><i>value</i></p>
-<dd>(where <i>value</i> is a media ID) specifies the media object by its media ID.</p>
-<dt><code>-I mobjlabel=</code><i>value</i></p>
-<dd>(where <i>value</i> is a media label) specifies the media object by its media label.</dl>
+<dt><code>-I mobjid=</code><i>value</i></dt>
+<dd>(where <i>value</i> is a media ID) specifies the media object by its media ID.</dd>
+<dt><code>-I mobjlabel=</code><i>value</i></dt>
+<dd>(where <i>value</i> is a media label) specifies the media object by its media label.</dd></dl>
 <p> Similarly, the display can be restricted to a specific filesystem.</p>
 <dl>
-<dt><code>-I mnt=</code><i>mount_point</i></p>
-<dd>(that is, [hostname:]pathname), identifies the filesystem by mountpoint. Specifying the hostname is optional, but may be useful in a clustered environment where more than one host can be responsible for dumping a filesystem.</p>
-<dt><code>-I fsid=</code><i>filesystem_id</i></p>
-<dd>identifies the filesystem by filesystem ID.</p>
-<dt><code>-I dev=</code><i>device_pathname</i></p>
-<dd>(that is, [hostname:]device_pathname) identifies the filesystem by device. As with the <code>mnt</code> filter, specifying the hostname is optional.</dl>
+<dt><code>-I mnt=</code><i>mount_point</i></dt>
+<dd>(that is, [hostname:]pathname), identifies the filesystem by mountpoint. Specifying the hostname is optional, but may be useful in a clustered environment where more than one host can be responsible for dumping a filesystem.</dd>
+<dt><code>-I fsid=</code><i>filesystem_id</i></dt>
+<dd>identifies the filesystem by filesystem ID.</dd>
+<dt><code>-I dev=</code><i>device_pathname</i></dt>
+<dd>(that is, [hostname:]device_pathname) identifies the filesystem by device. As with the <code>mnt</code> filter, specifying the hostname is optional.</dd></dl>
 <p> More than one of these suboptions, separated by commas, may be specified at the same time to limit the display of the inventory to those dumps of interest. However, at most four suboptions can be specified at once: one to constrain the display hierarchy depth, one to constrain the dump level, one to constrain the media object, and one to constrain the filesystem. </p>
 <p> For example, <code>-I depth=1,mobjlabel=tape 1,mnt=host1:/test_mnt</code> would display only the filesystem information (depth=1) for those filesystems that were mounted on <i>host1:/test_mnt</i> at the time of the dump, and only those filesystems dumped to the media object labeled &quot;tape 1&quot;. </p>
 <p> Dump records may be removed (pruned) from the inventory using the <i>xfsinvutil</i> program. </p>
@@ -169,8 +169,8 @@ description: "xfsdump – XFS filesystem incremental dump utility"
 <pre># xfsdump -J - / | xfsrestore -J - /new</pre>
 <h2>Files</h2>
 <dl>
-<dt>/var/lib/xfsdump/inventory</p>
-<dd>dump inventory database</dl>
+<dt>/var/lib/xfsdump/inventory</dt>
+<dd>dump inventory database</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-attr/">attr</a>(1), <a href="/docs/linux/man/8-rmt/">rmt</a>(8), <a href="/docs/linux/man/8-xfsrestore/">xfsrestore</a>(8), <a href="/docs/linux/man/8-xfsinvutil/">xfsinvutil</a>(8), <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8), attr_get(2).</p>
 <h2>Diagnostics</h2>

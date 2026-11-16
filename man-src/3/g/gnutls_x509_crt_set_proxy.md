@@ -14,16 +14,16 @@ description: "gnutls_x509_crt_set_proxy – API function"
 <p> <code>int gnutls_x509_crt_set_proxy(gnutls_x509_crt_t </code><i>crt</i><code>, int </code><i>pathLenConstraint</i><code>, const char * </code><i>policyLanguage</i><code>, const char * </code><i>policy</i><code>, size_t </code><i>sizeof_policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> a certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>int pathLenConstraint</p>
-<dd> non-negative error codes indicate maximum length of path, and negative error codes indicate that the pathLenConstraints field should not be present.</p>
-<dt>const char * policyLanguage</p>
-<dd> OID describing the language of <i>policy</i> .</p>
-<dt>const char * policy</p>
-<dd> uint8_t byte array with policy language, can be <code>NULL</code></p>
-<dt>size_t sizeof_policy</p>
-<dd> size of <i>policy</i> .</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>int pathLenConstraint</dt>
+<dd> non-negative error codes indicate maximum length of path, and negative error codes indicate that the pathLenConstraints field should not be present.</dd>
+<dt>const char * policyLanguage</dt>
+<dd> OID describing the language of <i>policy</i> .</dd>
+<dt>const char * policy</dt>
+<dd> uint8_t byte array with policy language, can be <code>NULL</code></dd>
+<dt>size_t sizeof_policy</dt>
+<dd> size of <i>policy</i> .</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the proxyCertInfo extension.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_x509_crt_set_proxy – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -15,7 +15,7 @@ sync_inodes_sb - sync sb inode pages
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>the superblock</dl>
+<dl><dd></dd><dd>the superblock</dd></dl>
 
 <h2>Description</h2>
 

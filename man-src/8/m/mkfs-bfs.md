@@ -16,28 +16,28 @@ description: "mkfs.bfs – make an SCO bfs filesystem"
 <h2>Options</h2>
 <p><code>-N</code>, <code>&#8211;inodes</code> <i>number</i></p>
 <dl>
-<dd>Specify the desired <i>number</i> of inodes (at most 512). If nothing is specified, some default number in the range 48-512 is picked depending on the size of the partition.</dl>
+<dd>Specify the desired <i>number</i> of inodes (at most 512). If nothing is specified, some default number in the range 48-512 is picked depending on the size of the partition.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;vname</code> <i>label</i></p>
 <dl>
-<dd>Specify the volume <i>label</i>. I have no idea if/where this is used.</dl>
+<dd>Specify the volume <i>label</i>. I have no idea if/where this is used.</dd></dl>
 <p> <code>-F</code>, <code>&#8211;fname</code> <i>name</i></p>
 <dl>
-<dd>Specify the filesystem <i>name</i>. I have no idea if/where this is used.</dl>
+<dd>Specify the filesystem <i>name</i>. I have no idea if/where this is used.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Explain what is being done.</dl>
+<dd>Explain what is being done.</dd></dl>
 <p> <code>-c</code></p>
 <dl>
-<dd>This option is silently ignored.</dl>
+<dd>This option is silently ignored.</dd></dl>
 <p> <code>-l</code></p>
 <dl>
-<dd>This option is silently ignored.</dl>
+<dd>This option is silently ignored.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit. Option <code>-V</code> only works as <code>&#8211;version</code> when it is the only option.</dl>
+<dd>Display version information and exit. Option <code>-V</code> only works as <code>&#8211;version</code> when it is the only option.</dd></dl>
 <h2>Exit Status</h2>
 <p>The exit status returned by <code>mkfs.bfs</code> is 0 when all went well, and 1 when something went wrong.</p>
 <h2>See Also</h2>

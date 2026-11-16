@@ -15,8 +15,8 @@ void bson_writer_rollback(bson_writer_t *writer);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>writer</code></p>
-<dd> A <code>bson_writer_t</code> \&amp;.</dl>
+<dt><code>writer</code></dt>
+<dd> A <code>bson_writer_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Abort the appending of the current bson_t to the memory region managed by <code>writer</code> \&amp;. This is useful if you detected that you went past a particular memory limit. For example, MongoDB has 48MB message limits. </p>
 <h2>COLOPHON</h2>

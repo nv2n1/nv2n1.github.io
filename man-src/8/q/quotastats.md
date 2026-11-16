@@ -14,27 +14,27 @@ description: "quotastats – Program to query quota statistics"
 <p><code>quotastats</code> queries the kernel for quota statistics. It displays: </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Supported kernel quota version</p>
-<dt>&bull;</p>
-<dd>Number of dquot lookups</p>
-<dt>&bull;</p>
-<dd>Number of dquot drops</p>
-<dt>&bull;</p>
-<dd>Number of dquot reads</p>
-<dt>&bull;</p>
-<dd>Number of dquot writes</p>
-<dt>&bull;</p>
-<dd>Number of quotafile syncs</p>
-<dt>&bull;</p>
-<dd>Number of dquot cache hits</p>
-<dt>&bull;</p>
-<dd>Number of allocated dquots</p>
-<dt>&bull;</p>
-<dd>Number of free dquots</p>
-<dt>&bull;</p>
-<dd>Number of in use dquot entries (user/group)</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Supported kernel quota version</dd>
+<dt>&bull;</dt>
+<dd>Number of dquot lookups</dd>
+<dt>&bull;</dt>
+<dd>Number of dquot drops</dd>
+<dt>&bull;</dt>
+<dd>Number of dquot reads</dd>
+<dt>&bull;</dt>
+<dd>Number of dquot writes</dd>
+<dt>&bull;</dt>
+<dd>Number of quotafile syncs</dd>
+<dt>&bull;</dt>
+<dd>Number of dquot cache hits</dd>
+<dt>&bull;</dt>
+<dd>Number of allocated dquots</dd>
+<dt>&bull;</dt>
+<dd>Number of free dquots</dd>
+<dt>&bull;</dt>
+<dd>Number of in use dquot entries (user/group)</dd></dl>
 </dl>
 <h2>Options</h2>
 <p>None.</p>

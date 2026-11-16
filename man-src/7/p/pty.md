@@ -22,14 +22,14 @@ description: "pty – pseudoterminal interfaces"
 <p>BSD-style pseudoterminals are provided as precreated pairs, with names of the form <i>/dev/ptyXY</i> (master) and <i>/dev/ttyXY</i> (slave), where X is a letter from the 16-character set [p-za-e], and Y is a letter from the 16-character set [0-9a-f]. (The precise range of letters in these two sets varies across UNIX implementations.) For example, <i>/dev/ptyp1</i> and <i>/dev/ttyp1</i> constitute a BSD pseudoterminal pair. A process finds an unused pseudoterminal pair by trying to <code><a href="/docs/linux/man/2-open/">open</a></code>(2) each pseudoterminal master until an open succeeds. The corresponding pseudoterminal slave (substitute &quot;tty&quot; for &quot;pty&quot; in the name of the master) can then be opened.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/dev/ptmx</i></p>
-<dd>UNIX 98 master clone device</p>
-<dt><i>/dev/pts/*</i></p>
-<dd>UNIX 98 slave devices</p>
-<dt><i>/dev/pty[p-za-e][0-9a-f]</i></p>
-<dd>BSD master devices</p>
-<dt><i>/dev/tty[p-za-e][0-9a-f]</i></p>
-<dd>BSD slave devices</dl>
+<dt><i>/dev/ptmx</i></dt>
+<dd>UNIX 98 master clone device</dd>
+<dt><i>/dev/pts/*</i></dt>
+<dd>UNIX 98 slave devices</dd>
+<dt><i>/dev/pty[p-za-e][0-9a-f]</i></dt>
+<dd>BSD master devices</dd>
+<dt><i>/dev/tty[p-za-e][0-9a-f]</i></dt>
+<dd>BSD slave devices</dd></dl>
 <h2>Notes</h2>
 <p>Pseudoterminals are used by applications such as network login services (<code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1), <code><a href="/docs/linux/man/1-rlogin/">rlogin</a></code>(1), <code><a href="/docs/linux/man/1-telnet/">telnet</a></code>(1)), terminal emulators such as <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1), <code><a href="/docs/linux/man/1-script/">script</a></code>(1), <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1), <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1), <code><a href="/docs/linux/man/1-unbuffer/">unbuffer</a></code>(1), and <code><a href="/docs/linux/man/1-expect/">expect</a></code>(1). </p>
 <p> A description of the <code>TIOCPKT</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2), which controls packet mode operation, can be found in <code><a href="/docs/linux/man/2-ioctl_tty/">ioctl_tty</a></code>(2). </p>

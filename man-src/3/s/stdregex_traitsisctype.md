@@ -26,12 +26,9 @@ f &#8211; the bitmask obtained from one or several calls to lookup_classname()</
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;regex&gt;
 int main()
-
 {
     std::regex_traits&lt;char&gt; t;
     std::string str_alnum = &quot;alnum&quot;;

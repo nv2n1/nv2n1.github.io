@@ -17,18 +17,18 @@ description: "aa-exec – confine a program with the specified AppArmor profile"
 &nbsp;<wbr>&nbsp;aa-exec -p profile1 &#8212; ls -l</p>
 <h2>OPTIONS <code>aa-exec</code> accepts the following arguments:</h2>
 <dl>
-<dt>-p <font SIZE="-1">PROFILE,</font> &#8211;profile=PROFILE</p>
-<dd> confine <i>&lt;command&gt;</i> with <font SIZE="-1">PROFILE.</font> If the <font SIZE="-1">PROFILE</font> is not specified use the current profile name (likely unconfined).</p>
-<dt>-n <font SIZE="-1">NAMESPACE,</font> &#8211;namespace=NAMESPACE</p>
-<dd> use profiles in <font SIZE="-1">NAMESPACE.</font> This will result in confinement transitioning to using the new profile namespace.</p>
-<dt>-i, &#8211;immediate</p>
-<dd> transition to <font SIZE="-1">PROFILE</font> before doing executing <i>&lt;command&gt;</i>. This subjects the running of <i>&lt;command&gt;</i> to the exec transition rules of the current profile.</p>
-<dt>-v, &#8211;verbose</p>
-<dd> show commands being performed</p>
-<dt>-d, &#8211;debug</p>
-<dd> show commands and error codes</p>
-<dt>&#8212;</p>
-<dd> Signal the end of options and disables further option processing. Any arguments after the &#8212; are treated as arguments of the command. This is useful when passing arguments to the <i>&lt;command&gt;</i> being invoked by aa-exec.</dl>
+<dt>-p <font SIZE="-1">PROFILE,</font> &#8211;profile=PROFILE</dt>
+<dd> confine <i>&lt;command&gt;</i> with <font SIZE="-1">PROFILE.</font> If the <font SIZE="-1">PROFILE</font> is not specified use the current profile name (likely unconfined).</dd>
+<dt>-n <font SIZE="-1">NAMESPACE,</font> &#8211;namespace=NAMESPACE</dt>
+<dd> use profiles in <font SIZE="-1">NAMESPACE.</font> This will result in confinement transitioning to using the new profile namespace.</dd>
+<dt>-i, &#8211;immediate</dt>
+<dd> transition to <font SIZE="-1">PROFILE</font> before doing executing <i>&lt;command&gt;</i>. This subjects the running of <i>&lt;command&gt;</i> to the exec transition rules of the current profile.</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> show commands being performed</dd>
+<dt>-d, &#8211;debug</dt>
+<dd> show commands and error codes</dd>
+<dt>&#8212;</dt>
+<dd> Signal the end of options and disables further option processing. Any arguments after the &#8212; are treated as arguments of the command. This is useful when passing arguments to the <i>&lt;command&gt;</i> being invoked by aa-exec.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find any bugs, please report them at &lt;<a rel="nofollow" href="https://gitlab.com/apparmor/apparmor/-/issues">https://gitlab.com/apparmor/apparmor/-/issues</a>&gt;</p>
 <h2>SEE ALSO</h2>

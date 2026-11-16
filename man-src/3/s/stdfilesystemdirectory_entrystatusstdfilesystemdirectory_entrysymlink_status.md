@@ -12,12 +12,9 @@ std::filesystem::directory_entry::status,std::filesystem::directory_entry::symli
 
 <pre><code>std::filesystem::file_status status() const;
 (1)(since C++ 17)
-
     std::filesystem::file_status status(std::error_code &amp;ec) const noexcept;
-
 std::filesystem::file_status symlink_status() const;
 (2)(since C++ 17)
-
     std::filesystem::file_status symlink_status(std::error_code &amp;ec) const noexcept;</code></pre> 
 1) Returns status of the entry, as if determined by a status call (symlinks are followed to their targets) 
 2) Returns status of the entry, as if determined by a symlink_status call (symlinks are not followed) 
@@ -41,25 +38,16 @@ Many low-level OS APIs for directory traversal retrieve file attributes along wi
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;filesystem&gt;
-
 #include &lt;unistd.h&gt;
-
 #include &lt;sys/socket.h&gt;
-
 #include &lt;sys/un.h&gt;
-
 #include &lt;sys/stat.h&gt;
 namespace fs = std::filesystem;
 void demo_status(const fs::path &amp;p, fs::file_status s)
-
 {
     std::cout &lt;&lt; p;
     // alternative: switch(s.type()) { case fs::file_type::regular: ...}
@@ -80,9 +68,7 @@ void demo_status(const fs::path &amp;p, fs::file_status s)
     if (!fs::exists(s))
         std::cout &lt;&lt; &quot; does not exist\n&quot;;
 }
-
 int main()
-
 {
     // create files of different kinds
     fs::create_directory(&quot;sandbox&quot;);

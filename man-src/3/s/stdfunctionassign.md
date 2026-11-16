@@ -31,10 +31,5 @@ alloc - allocator to use to allocate memory for the internal data structures
 <h2>See also</h2>
 
 <pre><code>assigns a new target
-
 operator= (public member function)
-
-
-
-
 </code></pre>

@@ -13,10 +13,10 @@ description: "pskc_get_key_policy_pinmaxfailedattempts – API function"
 <p> <code>uint32_t pskc_get_key_policy_pinmaxfailedattempts(pskc_key_t * </code><i>key</i><code>, int * </code><i>present</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>int * present</p>
-<dd>output variable indicating whether data was provided or not.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int * present</dt>
+<dd>output variable indicating whether data was provided or not.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Policy PINPolicy MaxFailedAttempts value. This attribute indicates the maximum number of times the PIN may be entered wrongly before it MUST NOT be possible to use the key anymore (typical reasonable values are in the positive integer range of at least 2 and no more than 10). </p>
 <p> If <i>present</i> is non-NULL, it will be 0 if the field is not present or 1 if it was present.</p>

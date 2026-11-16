@@ -40,8 +40,8 @@ has type Int(Int),
 </code></pre>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>KAYA_LIBRARY_PATH</code></p>
-<dd> A list of extra paths to search for kaya libraries. Paths are separated by &#8216;:&#8217; on Posix systems, and &#8216;;&#8217; on Windows.</dl>
+<dt><code>KAYA_LIBRARY_PATH</code></dt>
+<dd> A list of extra paths to search for kaya libraries. Paths are separated by &#8216;:&#8217; on Posix systems, and &#8216;;&#8217; on Windows.</dd></dl>
 <h2>OBTAINING</h2>
 <p> The latest release of Kaya can be obtained from &lt;<a rel="nofollow" href="http://kayalang.org/download">http://kayalang.org/download</a>&gt;. You can receive announcements of new versions of Kaya by subscribing to the kaya-announce mailing list &lt;<a href="http://lists.kayalang.org/lists/listinfo/kaya-announce">http://lists.kayalang.org/lists/listinfo/kaya-announce</a>&gt; </p>
 <p> Development versions can be obtained using <code><a href="/docs/linux/man/1-darcs/">darcs</a>(1)</code> from &lt;<a rel="nofollow" href="http://kayalang.org/darcs/">http://kayalang.org/darcs/</a>&gt; </p>

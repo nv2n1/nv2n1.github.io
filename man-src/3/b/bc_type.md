@@ -46,7 +46,7 @@ Operator operator-(const Operator &amp;, const Operator &amp;);
 <p> <code>Possible enhancements</code></p>
 <dl>
 <dt>
-<dd> add Richardson extrapolation</dl>
+</dt><dd> add Richardson extrapolation</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

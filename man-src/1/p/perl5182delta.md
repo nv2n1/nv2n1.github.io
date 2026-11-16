@@ -23,17 +23,15 @@ url: "/docs/linux/man/1-perl5182delta/"
 
 <dl>
 <dt>&bull;
-<dd> B has been upgraded from version 1.42_01 to 1.42_02. 
-
+</dt><dd> B has been upgraded from version 1.42_01 to 1.42_02. 
  The fix for [perl #118525] introduced a regression in the behaviour of <tt>&quot;B::CV::GV&quot;</tt>, changing the return value from a <tt>&quot;B::SPECIAL&quot;</tt> object on a <tt>&quot;NULL&quot;</tt> <tt>&quot;CvGV&quot;</tt> to <tt>&quot;undef&quot;</tt>. <tt>&quot;B::CV::GV&quot;</tt> again returns a <tt>&quot;B::SPECIAL&quot;</tt> object in this case. [perl #119413]
-<dt>&bull;
-<dd> B::Concise has been upgraded from version 0.95 to 0.95_01. 
-
+</dd><dt>&bull;
+</dt><dd> B::Concise has been upgraded from version 0.95 to 0.95_01. 
  This fixes a bug in dumping unexpected SPECIALs.
-<dt>&bull;
-<dd> English has been upgraded from version 1.06 to 1.06_01. This fixes an error about the performance of <tt>&quot;$`&quot;</tt>, <tt>$&amp;</tt>, and <tt>&quot;$'&quot;</tt>.
-<dt>&bull;
-<dd> File::Glob has been upgraded from version 1.20 to 1.20_01.</dl>
+</dd><dt>&bull;
+</dt><dd> English has been upgraded from version 1.06 to 1.06_01. This fixes an error about the performance of <tt>&quot;$`&quot;</tt>, <tt>$&amp;</tt>, and <tt>&quot;$'&quot;</tt>.
+</dd><dt>&bull;
+</dt><dd> File::Glob has been upgraded from version 1.20 to 1.20_01.</dd></dl>
 
 <h2>Documentation</h2>
 
@@ -41,33 +39,31 @@ url: "/docs/linux/man/1-perl5182delta/"
 
 <dl>
 <dt>&bull;
-<dd> perlrepository has been restored with a pointer to more useful pages.
-<dt>&bull;
-<dd> perlhack has been updated with the latest changes from blead.</dl>
+</dt><dd> perlrepository has been restored with a pointer to more useful pages.
+</dd><dt>&bull;
+</dt><dd> perlhack has been updated with the latest changes from blead.</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> Perl 5.18.1 introduced a regression along with a bugfix for lexical subs. Some B::SPECIAL results from B::CV::GV became undefs instead. This broke Devel::Cover among other libraries. This has been fixed. [perl #119351]
-<dt>&bull;
-<dd> Perl 5.18.0 introduced a regression whereby <tt>&quot;[:^ascii:]&quot;</tt>, if used in the same character class as other qualifiers, would fail to match characters in the Latin-1 block. This has been fixed. [perl #120799]
-<dt>&bull;
-<dd> Perl 5.18.0 introduced a regression when using -&gt;SUPER::method with <font SIZE="-1">AUTOLOAD</font> by looking up <font SIZE="-1">AUTOLOAD</font> from the current package, rather than the current package’s superclass. This has been fixed. [perl #120694]
-<dt>&bull;
-<dd> Perl 5.18.0 introduced a regression whereby <tt>&quot;-bareword&quot;</tt> was no longer permitted under the <tt>&quot;strict&quot;</tt> and <tt>&quot;integer&quot;</tt> pragmata when used together. This has been fixed. [perl #120288]
-<dt>&bull;
-<dd> Previously PerlIOBase_dup didn't check if pushing the new layer succeeded before (optionally) setting the utf8 flag. This could cause segfaults-by-nullpointer. This has been fixed.
-<dt>&bull;
-<dd> A buffer overflow with very long identifiers has been fixed.
-<dt>&bull;
-<dd> A regression from 5.16 in the handling of padranges led to assertion failures if a keyword plugin declined to handle the second ‘my’, but only after creating a padop. 
-
+</dt><dd> Perl 5.18.1 introduced a regression along with a bugfix for lexical subs. Some B::SPECIAL results from B::CV::GV became undefs instead. This broke Devel::Cover among other libraries. This has been fixed. [perl #119351]
+</dd><dt>&bull;
+</dt><dd> Perl 5.18.0 introduced a regression whereby <tt>&quot;[:^ascii:]&quot;</tt>, if used in the same character class as other qualifiers, would fail to match characters in the Latin-1 block. This has been fixed. [perl #120799]
+</dd><dt>&bull;
+</dt><dd> Perl 5.18.0 introduced a regression when using -&gt;SUPER::method with <font SIZE="-1">AUTOLOAD</font> by looking up <font SIZE="-1">AUTOLOAD</font> from the current package, rather than the current package’s superclass. This has been fixed. [perl #120694]
+</dd><dt>&bull;
+</dt><dd> Perl 5.18.0 introduced a regression whereby <tt>&quot;-bareword&quot;</tt> was no longer permitted under the <tt>&quot;strict&quot;</tt> and <tt>&quot;integer&quot;</tt> pragmata when used together. This has been fixed. [perl #120288]
+</dd><dt>&bull;
+</dt><dd> Previously PerlIOBase_dup didn't check if pushing the new layer succeeded before (optionally) setting the utf8 flag. This could cause segfaults-by-nullpointer. This has been fixed.
+</dd><dt>&bull;
+</dt><dd> A buffer overflow with very long identifiers has been fixed.
+</dd><dt>&bull;
+</dt><dd> A regression from 5.16 in the handling of padranges led to assertion failures if a keyword plugin declined to handle the second ‘my’, but only after creating a padop. 
  This affected, at least, Devel::CallParser under threaded builds. 
-
  This has been fixed.
-<dt>&bull;
-<dd> The construct <tt>&quot;$r=qr/.../; /$r/p&quot;</tt> is now handled properly, an issue which had been worsened by changes 5.18.0. [perl #118213]</dl>
+</dd><dt>&bull;
+</dt><dd> The construct <tt>&quot;$r=qr/.../; /$r/p&quot;</tt> is now handled properly, an issue which had been worsened by changes 5.18.0. [perl #118213]</dd></dl>
 
 <h2>Acknowledgements</h2>
 

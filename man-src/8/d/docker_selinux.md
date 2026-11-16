@@ -89,8 +89,8 @@ description: "docker_selinux – Security Enhanced Linux Policy for the docker p
 <p> <code>docker_auth_exec_t</code> </p>
 <p> &#8211; Set files with the docker_auth_exec_t type, if you want to transition an executable to the docker_auth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/docker-novolume-plugin, /usr/lib/docker/docker-novolume-plugin </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/docker-novolume-plugin, /usr/lib/docker/docker-novolume-plugin </dd>
 </dl>
 <p> <code>docker_config_t</code> </p>
 <p> &#8211; Set files with the docker_config_t type, if you want to treat the files as docker configuration data, usually stored under the /etc directory. </p>
@@ -107,8 +107,8 @@ description: "docker_selinux – Security Enhanced Linux Policy for the docker p
 <p> <code>docker_share_t</code> </p>
 <p> &#8211; Set files with the docker_share_t type, if you want to treat the files as docker share data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/docker/.*/config.env, /var/lib/docker/init(/.*)?, /var/lib/docker/overlay(/.*)?, /var/lib/docker/containers/.*/hosts, /var/lib/docker/containers/.*/hostname </p>
+<dt>Paths:</dt>
+<dd>/var/lib/docker/.*/config.env, /var/lib/docker/init(/.*)?, /var/lib/docker/overlay(/.*)?, /var/lib/docker/containers/.*/hosts, /var/lib/docker/containers/.*/hostname </dd>
 </dl>
 <p> <code>docker_tmp_t</code> </p>
 <p> &#8211; Set files with the docker_tmp_t type, if you want to store docker temporary files in the /tmp directories. </p>
@@ -117,20 +117,20 @@ description: "docker_selinux – Security Enhanced Linux Policy for the docker p
 <p> <code>docker_unit_file_t</code> </p>
 <p> &#8211; Set files with the docker_unit_file_t type, if you want to treat the files as docker unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/docker.service, /usr/lib/systemd/system/docker-novolume-plugin.service </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/docker.service, /usr/lib/systemd/system/docker-novolume-plugin.service </dd>
 </dl>
 <p> <code>docker_var_lib_t</code> </p>
 <p> &#8211; Set files with the docker_var_lib_t type, if you want to store the docker files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/docker(/.*)?, /var/lib/kublet(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/docker(/.*)?, /var/lib/kublet(/.*)? </dd>
 </dl>
 <p> <code>docker_var_run_t</code> </p>
 <p> &#8211; Set files with the docker_var_run_t type, if you want to store the docker files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/docker(/.*)?, /var/run/docker-client(/.*)?, /var/run/docker.pid, /var/run/docker.sock </p>
+<dt>Paths:</dt>
+<dd>/var/run/docker(/.*)?, /var/run/docker-client(/.*)?, /var/run/docker.pid, /var/run/docker.sock </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -17,15 +17,15 @@ description: "ansible-doc – show documentation on Ansible modules"
 <p> <code>-M</code> <i>DIRECTORY</i>, <code>&#8211;module-path=</code><i>DIRECTORY</i></p>
 <dl>
 <dt>
-<dd> the <i>DIRECTORY</i> search path to load modules from. The default is <i>/usr/share/ansible</i>. This can also be set with the ANSIBLE_LIBRARY environment variable.</dl>
+</dt><dd> the <i>DIRECTORY</i> search path to load modules from. The default is <i>/usr/share/ansible</i>. This can also be set with the ANSIBLE_LIBRARY environment variable.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;snippet=</code></p>
 <dl>
 <dt>
-<dd> Produce a snippet which can be copied into a playbook for modification, like a kind of task template.</dl>
+</dt><dd> Produce a snippet which can be copied into a playbook for modification, like a kind of task template.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;list=</code></p>
 <dl>
 <dt>
-<dd> Produce a terse listing of modules and a short description of each.</dl>
+</dt><dd> Produce a terse listing of modules and a short description of each.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> ANSIBLE_LIBRARY &#8212; Override the default ansible module library path</p>
 <h2>FILES</h2>

@@ -15,18 +15,18 @@ description: "pstopdf – convert EPS to PDF"
 <p>&nbsp;<wbr> <code>pstopdf</code> converts EPS (encapsulated PostScript) to PDF. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print usage and version information.</p>
-<dt><code>&#8211;convert</code></p>
-<dd> Convert EPS to PDF. This option is assumed if none is given.</p>
-<dt><code>&#8211;method=</code><i>string</i></p>
-<dd> What method to use for bounding boxes when converting to PDF. Specify one of <code>crop</code>, <code>bounded</code> (the default), or <code>raw</code>. Older versions of ConTeXt used numerical methods (1, 2, or 3).</p>
-<dt><code>&#8211;resolution=</code><i>string</i></p>
-<dd> The resolution to use when when converting to pdf. Specify one of <code>low</code>, <code>normal</code>, <code>medium</code>, <code>high</code>, <code>printer</code>, <code>print</code>, <code>screen</code>, <code>ebook</code>, or <code>default</code>.</p>
-<dt><code>&#8211;request</code></p>
-<dd> Handle exa request file.</p>
-<dt><code>&#8211;watch</code></p>
-<dd> Watch folders for conversions (<i>untested</i>). </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print usage and version information.</dd>
+<dt><code>&#8211;convert</code></dt>
+<dd> Convert EPS to PDF. This option is assumed if none is given.</dd>
+<dt><code>&#8211;method=</code><i>string</i></dt>
+<dd> What method to use for bounding boxes when converting to PDF. Specify one of <code>crop</code>, <code>bounded</code> (the default), or <code>raw</code>. Older versions of ConTeXt used numerical methods (1, 2, or 3).</dd>
+<dt><code>&#8211;resolution=</code><i>string</i></dt>
+<dd> The resolution to use when when converting to pdf. Specify one of <code>low</code>, <code>normal</code>, <code>medium</code>, <code>high</code>, <code>printer</code>, <code>print</code>, <code>screen</code>, <code>ebook</code>, or <code>default</code>.</dd>
+<dt><code>&#8211;request</code></dt>
+<dd> Handle exa request file.</dd>
+<dt><code>&#8211;watch</code></dt>
+<dd> Watch folders for conversions (<i>untested</i>). </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To make <i>cow.pdf</i>: </p>

@@ -683,111 +683,111 @@ description: "XmScrollBar — The ScrollBar widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNdecrementCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one increment and the value decreases. The reason passed to the callback is <code>XmCR_DECREMENT</code>.</p>
-<dt><code>XmNdragCallback</code></p>
-<dd>Specifies the list of callbacks that is called on each incremental change of position when the slider is being dragged. The reason sent by the callback is <code>XmCR_DRAG</code>.</p>
-<dt><code>XmNeditable</code></p>
-<dd>Specifies how ScrollBar will react to user input. This resource can be True or False values, as follows:</p>
+<dt><code>XmNdecrementCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one increment and the value decreases. The reason passed to the callback is <code>XmCR_DECREMENT</code>.</dd>
+<dt><code>XmNdragCallback</code></dt>
+<dd>Specifies the list of callbacks that is called on each incremental change of position when the slider is being dragged. The reason sent by the callback is <code>XmCR_DRAG</code>.</dd>
+<dt><code>XmNeditable</code></dt>
+<dd>Specifies how ScrollBar will react to user input. This resource can be True or False values, as follows:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>True</code></p>
-<dd>Allows the scrollbar to be sensitive to user input. This is the default value.</p>
-<dt><code>False</code></p>
-<dd>Makes the Scale scrollbar insensitive to user input. The visual is not greyed out. This value would mostly be used in <code>XmTHERMOMETER</code> mode.</dl>
+</dd><dl COMPACT>
+<dt><code>True</code></dt>
+<dd>Allows the scrollbar to be sensitive to user input. This is the default value.</dd>
+<dt><code>False</code></dt>
+<dd>Makes the Scale scrollbar insensitive to user input. The visual is not greyed out. This value would mostly be used in <code>XmTHERMOMETER</code> mode.</dd></dl>
 </dl>
-<dd>When <code>XmNeditable</code> is used on a widget it sets the dropsite to <code>XmDROP_SITE_ACTIVE</code>.</p>
-<dt><code>XmNincrement</code></p>
-<dd>Specifies the amount by which the value increases or decreases when the user takes an action that moves the slider by one increment. The actual change in value is the lesser of <code>XmNincrement</code> and (previous <code>XmNvalue</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>) when the slider moves to the end of the ScrollBar with the minimum value, and the lesser of <code>XmNincrement</code> and (<code>XmNmaximum</code>&#8211; <code>XmNsliderSize</code>&nbsp;<wbr>&#8211; previous <code>XmNvalue</code>) when the slider moves to the end of the ScrollBar with the maximum value. The value of this resource must be greater than 0 (zero).</p>
-<dt><code>XmNincrementCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one increment and the value increases. The reason passed to the callback is <code>XmCR_INCREMENT</code>.</p>
-<dt><code>XmNinitialDelay</code></p>
-<dd>Specifies the amount of time in milliseconds to wait before starting continuous slider movement while a button is pressed in an arrow or the scroll region. The value of this resource must be greater than 0 (zero).</p>
-<dt><code>XmNmaximum</code></p>
-<dd>Specifies the slider&#8217;s maximum value. <code>XmNmaximum</code> must be greater than <code>XmNminimum</code>.</p>
-<dt><code>XmNminimum</code></p>
-<dd>Specifies the slider&#8217;s minimum value. <code>XmNmaximum</code> must be greater than <code>XmNminimum</code>.</p>
-<dt><code>XmNorientation</code></p>
-<dd>Specifies whether the ScrollBar is displayed vertically or horizontally. This resource can have values of <code>XmVERTICAL</code> and <code>XmHORIZONTAL</code>.</p>
-<dt><code>XmNpageDecrementCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one page increment and the value decreases. The reason passed to the callback is <code>XmCR_PAGE_DECREMENT</code>.</p>
-<dt><code>XmNpageIncrement</code></p>
-<dd>Specifies the amount by which the value increases or decreases when the user takes an action that moves the slider by one page increment. The actual change in value is the lesser of <code>XmNpageIncrement</code> and (previous <code>XmNvalue</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>) when the slider moves to the end of the ScrollBar with the minimum value, and the lesser of <code>XmNpageIncrement</code> and (<code>XmNmaximum</code>&#8211; <code>XmNsliderSize</code>&nbsp;<wbr>&#8211; previous <code>XmNvalue</code>) when the slider moves to the end of the ScrollBar with the maximum value. The value of this resource must be greater than 0 (zero).</p>
-<dt><code>XmNpageIncrementCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one page increment and the value increases. The reason passed to the callback is <code>XmCR_PAGE_INCREMENT</code>.</p>
-<dt><code>XmNprocessingDirection</code></p>
-<dd>Specifies whether the value for <code>XmNmaximum</code> should be on the right or left side of <code>XmNminimum</code> for horizontal ScrollBars or above or below <code>XmNminimum</code> for vertical ScrollBars. This resource can have values of <code>XmMAX_ON_TOP, XmMAX_ON_BOTTOM, XmMAX_ON_LEFT</code>, and <code>XmMAX_ON_RIGHT</code>. If the ScrollBar is oriented vertically, the default value is <code>XmMAX_ON_BOTTOM</code>. If the ScrollBar is oriented horizontally, the default value depends on the <code>XmNlayoutDirection</code> resource of the widget.</p>
-<dt><code>XmNrepeatDelay</code></p>
-<dd>Specifies the amount of time in milliseconds to wait between subsequent slider movements after the <code>XmNinitialDelay</code> has been processed. The value of this resource must be greater than 0 (zero).</p>
-<dt><code>XmNshowArrows</code></p>
-<dd>Specifies whether the arrows are displayed and how they are to be displayed. This resource can take the following values:</p>
+<dd>When <code>XmNeditable</code> is used on a widget it sets the dropsite to <code>XmDROP_SITE_ACTIVE</code>.</dd>
+<dt><code>XmNincrement</code></dt>
+<dd>Specifies the amount by which the value increases or decreases when the user takes an action that moves the slider by one increment. The actual change in value is the lesser of <code>XmNincrement</code> and (previous <code>XmNvalue</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>) when the slider moves to the end of the ScrollBar with the minimum value, and the lesser of <code>XmNincrement</code> and (<code>XmNmaximum</code>&#8211; <code>XmNsliderSize</code>&nbsp;<wbr>&#8211; previous <code>XmNvalue</code>) when the slider moves to the end of the ScrollBar with the maximum value. The value of this resource must be greater than 0 (zero).</dd>
+<dt><code>XmNincrementCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one increment and the value increases. The reason passed to the callback is <code>XmCR_INCREMENT</code>.</dd>
+<dt><code>XmNinitialDelay</code></dt>
+<dd>Specifies the amount of time in milliseconds to wait before starting continuous slider movement while a button is pressed in an arrow or the scroll region. The value of this resource must be greater than 0 (zero).</dd>
+<dt><code>XmNmaximum</code></dt>
+<dd>Specifies the slider&#8217;s maximum value. <code>XmNmaximum</code> must be greater than <code>XmNminimum</code>.</dd>
+<dt><code>XmNminimum</code></dt>
+<dd>Specifies the slider&#8217;s minimum value. <code>XmNmaximum</code> must be greater than <code>XmNminimum</code>.</dd>
+<dt><code>XmNorientation</code></dt>
+<dd>Specifies whether the ScrollBar is displayed vertically or horizontally. This resource can have values of <code>XmVERTICAL</code> and <code>XmHORIZONTAL</code>.</dd>
+<dt><code>XmNpageDecrementCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one page increment and the value decreases. The reason passed to the callback is <code>XmCR_PAGE_DECREMENT</code>.</dd>
+<dt><code>XmNpageIncrement</code></dt>
+<dd>Specifies the amount by which the value increases or decreases when the user takes an action that moves the slider by one page increment. The actual change in value is the lesser of <code>XmNpageIncrement</code> and (previous <code>XmNvalue</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>) when the slider moves to the end of the ScrollBar with the minimum value, and the lesser of <code>XmNpageIncrement</code> and (<code>XmNmaximum</code>&#8211; <code>XmNsliderSize</code>&nbsp;<wbr>&#8211; previous <code>XmNvalue</code>) when the slider moves to the end of the ScrollBar with the maximum value. The value of this resource must be greater than 0 (zero).</dd>
+<dt><code>XmNpageIncrementCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user takes an action that moves the ScrollBar by one page increment and the value increases. The reason passed to the callback is <code>XmCR_PAGE_INCREMENT</code>.</dd>
+<dt><code>XmNprocessingDirection</code></dt>
+<dd>Specifies whether the value for <code>XmNmaximum</code> should be on the right or left side of <code>XmNminimum</code> for horizontal ScrollBars or above or below <code>XmNminimum</code> for vertical ScrollBars. This resource can have values of <code>XmMAX_ON_TOP, XmMAX_ON_BOTTOM, XmMAX_ON_LEFT</code>, and <code>XmMAX_ON_RIGHT</code>. If the ScrollBar is oriented vertically, the default value is <code>XmMAX_ON_BOTTOM</code>. If the ScrollBar is oriented horizontally, the default value depends on the <code>XmNlayoutDirection</code> resource of the widget.</dd>
+<dt><code>XmNrepeatDelay</code></dt>
+<dd>Specifies the amount of time in milliseconds to wait between subsequent slider movements after the <code>XmNinitialDelay</code> has been processed. The value of this resource must be greater than 0 (zero).</dd>
+<dt><code>XmNshowArrows</code></dt>
+<dd>Specifies whether the arrows are displayed and how they are to be displayed. This resource can take the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmEACH_SIDE</code></p>
-<dd>Indicates that one arrow is displayed on each end of the ScrollBar slider. This corresponds to a value of True in previous releases.</p>
-<dt><code>XmMAX_SIDE</code></p>
-<dd>Indicates that both arrows are displayed on the <code>XmNmaximum</code> side of the ScrollBar slider.</p>
-<dt><code>XmMIN_SIDE</code></p>
-<dd>Indicates that both arrows are displayed on the <code>XmNminimum</code> side of the ScrollBar slider.</p>
-<dt><code>XmNONE</code></p>
-<dd>Indicates that no arrows are displayed. This corresponds to a value of False in previous releases.</dl>
+</dd><dl COMPACT>
+<dt><code>XmEACH_SIDE</code></dt>
+<dd>Indicates that one arrow is displayed on each end of the ScrollBar slider. This corresponds to a value of True in previous releases.</dd>
+<dt><code>XmMAX_SIDE</code></dt>
+<dd>Indicates that both arrows are displayed on the <code>XmNmaximum</code> side of the ScrollBar slider.</dd>
+<dt><code>XmMIN_SIDE</code></dt>
+<dd>Indicates that both arrows are displayed on the <code>XmNminimum</code> side of the ScrollBar slider.</dd>
+<dt><code>XmNONE</code></dt>
+<dd>Indicates that no arrows are displayed. This corresponds to a value of False in previous releases.</dd></dl>
 </dl>
-<dd><code>XmEACH_SIDE</code> is the default value.</p>
-<dt><code>XmNsliderMark</code></p>
-<dd>Specifies the shape the slider is to be displayed in. This resource can take the following values:</p>
+<dd><code>XmEACH_SIDE</code> is the default value.</dd>
+<dt><code>XmNsliderMark</code></dt>
+<dd>Specifies the shape the slider is to be displayed in. This resource can take the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmETCHED_LINE</code></p>
-<dd>Specifies the slider as an etched line.</p>
-<dt><code>XmNONE</code></p>
-<dd>Specifies the slider as a foregrounded rectangle. This is the default for a regular slider.</p>
-<dt><code>XmROUND_MARK</code></p>
-<dd>Specifies the slider as a shadowed circle. This is the default when the slider is a thermometer.</p>
-<dt><code>XmTHUMB_MARK</code></p>
-<dd>Specifies the slider as a series of three etched lines centered in the middle of the slider.</dl>
+</dd><dl COMPACT>
+<dt><code>XmETCHED_LINE</code></dt>
+<dd>Specifies the slider as an etched line.</dd>
+<dt><code>XmNONE</code></dt>
+<dd>Specifies the slider as a foregrounded rectangle. This is the default for a regular slider.</dd>
+<dt><code>XmROUND_MARK</code></dt>
+<dd>Specifies the slider as a shadowed circle. This is the default when the slider is a thermometer.</dd>
+<dt><code>XmTHUMB_MARK</code></dt>
+<dd>Specifies the slider as a series of three etched lines centered in the middle of the slider.</dd></dl>
 </dl>
-<dt><code>XmNslidingMode</code></p>
-<dd>Specifies the mode the slider works in. There are two possible modes:</p>
+<dt><code>XmNslidingMode</code></dt>
+<dd>Specifies the mode the slider works in. There are two possible modes:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSLIDER</code></p>
-<dd>Allows the slider to move freely between the minimum and maximum ends of the scale. This is the default value.</p>
-<dt><code>XmTHERMOMETER</code></p>
-<dd>Forces the slider to be anchored to one side of the trough area.</dl>
+</dd><dl COMPACT>
+<dt><code>XmSLIDER</code></dt>
+<dd>Allows the slider to move freely between the minimum and maximum ends of the scale. This is the default value.</dd>
+<dt><code>XmTHERMOMETER</code></dt>
+<dd>Forces the slider to be anchored to one side of the trough area.</dd></dl>
 </dl>
-<dt><code>XmNsliderSize</code></p>
-<dd>Specifies the length of the slider between the values of 1 and (<code>XmNmaximum</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>). The value is constrained to be within these inclusive bounds. The default value is (<code>XmNmaximum</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>) divided by 10, with a minimum of 1.</p>
-<dt><code>XmNsliderVisual</code></p>
-<dd>Specifies the color of the slider visual. This resource can take the following values:</p>
+<dt><code>XmNsliderSize</code></dt>
+<dd>Specifies the length of the slider between the values of 1 and (<code>XmNmaximum</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>). The value is constrained to be within these inclusive bounds. The default value is (<code>XmNmaximum</code>&nbsp;<wbr>&#8211; <code>XmNminimum</code>) divided by 10, with a minimum of 1.</dd>
+<dt><code>XmNsliderVisual</code></dt>
+<dd>Specifies the color of the slider visual. This resource can take the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmBACKGROUND_COLOR</code></p>
-<dd>Specifies that the slider visual is in the background color.</p>
-<dt><code>XmFOREGROUND_COLOR</code></p>
-<dd>Specifies that the slider visual is in the foreground color.</p>
-<dt><code>XmSHADOWED_BACKGROUND</code></p>
-<dd>Specifies that the slider visual is in the background color, with a shadow. This is the default for a regular slider.</p>
-<dt><code>XmTROUGH_COLOR</code></p>
-<dd>Specifies that the slider visual is in the trough color. This is the default when the slider is a thermometer.</dl>
+</dd><dl COMPACT>
+<dt><code>XmBACKGROUND_COLOR</code></dt>
+<dd>Specifies that the slider visual is in the background color.</dd>
+<dt><code>XmFOREGROUND_COLOR</code></dt>
+<dd>Specifies that the slider visual is in the foreground color.</dd>
+<dt><code>XmSHADOWED_BACKGROUND</code></dt>
+<dd>Specifies that the slider visual is in the background color, with a shadow. This is the default for a regular slider.</dd>
+<dt><code>XmTROUGH_COLOR</code></dt>
+<dd>Specifies that the slider visual is in the trough color. This is the default when the slider is a thermometer.</dd></dl>
 </dl>
-<dt><code>XmNsnapBackMultiple</code></p>
-<dd>Specifies the distance over which the scrollbar slider snaps back to its original position when the user drags the mouse outside the ScrollBar edge. This distance is defined in terms of multiples of the width of the slider. For example, a multiple of 0 (zero) causes the slider to snap back as soon as the pointer moves out of the ScrollBar frame, a multiple of 1 causes the slider to snap back as soon as the pointer moves beyond 1 ScrollBar width of the ScrollBar edge. Whenever the slider snaps back, the ScrollBar <code>dragCallback</code> is called if there is one.</p>
-<dd>The default value is large enough to prevent unwanted snapBack activity if the mouse is moved within the boundaries of any reasonable screen. To reset the default, set this resource to a large value, such as 10000.</p>
-<dt><code>XmNtoBottomCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user takes an action that moves the slider to the end of the ScrollBar with the maximum value. The reason passed to the callback is <code>XmCR_TO_BOTTOM</code>.</p>
-<dt><code>XmNtoTopCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user takes an action that moves the slider to the end of the ScrollBar with the minimum value. The reason passed to the callback is <code>XmCR_TO_TOP</code>.</p>
-<dt><code>XmNtroughColor</code></p>
-<dd>Specifies the color of the slider trough. This color defaults to the color used for selections.</p>
-<dt><code>XmNvalue</code></p>
-<dd>Specifies the slider&#8217;s position, between <code>XmNminimum</code> and (<code>XmNmaximum</code>&nbsp;<wbr>&#8211; <code>XmNsliderSize</code>). The value is constrained to be within these inclusive bounds. The initial value of this resource is the larger of 0 (zero) and <code>XmNminimum</code>.</p>
-<dt><code>XmNvalueChangedCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the slider is released after being dragged. These callbacks are also called in place of <code>XmNincrementCallback</code>, <code>XmNdecrementCallback</code>, <code>XmNpageIncrementCallback</code>, <code>XmNpageDecrementCallback</code>, <code>XmNtoTopCallback</code>, or <code>XmNtoBottomCallback</code> when one of these callback lists would normally be called but the value of the corresponding resource is NULL. The reason passed to the callback is <code>XmCR_VALUE_CHANGED</code>.</dl>
+<dt><code>XmNsnapBackMultiple</code></dt>
+<dd>Specifies the distance over which the scrollbar slider snaps back to its original position when the user drags the mouse outside the ScrollBar edge. This distance is defined in terms of multiples of the width of the slider. For example, a multiple of 0 (zero) causes the slider to snap back as soon as the pointer moves out of the ScrollBar frame, a multiple of 1 causes the slider to snap back as soon as the pointer moves beyond 1 ScrollBar width of the ScrollBar edge. Whenever the slider snaps back, the ScrollBar <code>dragCallback</code> is called if there is one.</dd>
+<dd>The default value is large enough to prevent unwanted snapBack activity if the mouse is moved within the boundaries of any reasonable screen. To reset the default, set this resource to a large value, such as 10000.</dd>
+<dt><code>XmNtoBottomCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user takes an action that moves the slider to the end of the ScrollBar with the maximum value. The reason passed to the callback is <code>XmCR_TO_BOTTOM</code>.</dd>
+<dt><code>XmNtoTopCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user takes an action that moves the slider to the end of the ScrollBar with the minimum value. The reason passed to the callback is <code>XmCR_TO_TOP</code>.</dd>
+<dt><code>XmNtroughColor</code></dt>
+<dd>Specifies the color of the slider trough. This color defaults to the color used for selections.</dd>
+<dt><code>XmNvalue</code></dt>
+<dd>Specifies the slider&#8217;s position, between <code>XmNminimum</code> and (<code>XmNmaximum</code>&nbsp;<wbr>&#8211; <code>XmNsliderSize</code>). The value is constrained to be within these inclusive bounds. The initial value of this resource is the larger of 0 (zero) and <code>XmNminimum</code>.</dd>
+<dt><code>XmNvalueChangedCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the slider is released after being dragged. These callbacks are also called in place of <code>XmNincrementCallback</code>, <code>XmNdecrementCallback</code>, <code>XmNpageIncrementCallback</code>, <code>XmNpageDecrementCallback</code>, <code>XmNtoTopCallback</code>, or <code>XmNtoBottomCallback</code> when one of these callback lists would normally be called but the value of the corresponding resource is NULL. The reason passed to the callback is <code>XmCR_VALUE_CHANGED</code>.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>ScrollBar inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1795,110 +1795,110 @@ description: "XmScrollBar — The ScrollBar widget class"
  int <i>pixel</i>;
 } XmScrollBarCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><i>value</i></p>
-<dd>Contains the new slider location value.</p>
-<dt><i>pixel</i></p>
-<dd>Is used only for <code>XmNtoTopCallback</code> and <code>XmNtoBottomCallback</code>. For horizontal ScrollBars, it contains the <i>x</i> coordinate of where the mouse button selection occurred. For vertical ScrollBars, it contains the <i>y</i> coordinate.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><i>value</i></dt>
+<dd>Contains the new slider location value.</dd>
+<dt><i>pixel</i></dt>
+<dd>Is used only for <code>XmNtoTopCallback</code> and <code>XmNtoBottomCallback</code>. For horizontal ScrollBars, it contains the <i>x</i> coordinate of where the mouse button selection occurred. For vertical ScrollBars, it contains the <i>y</i> coordinate.</dd></dl>
 <h3>Translations</h3>
 <p><code>XmScrollBar</code> includes translations from Primitive. The <code>XmScrollBar</code> translations are described in the following list. </p>
 <p> The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</p>
-<dd>Select()</p>
-<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</p>
-<dd>Release()</p>
-<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a Button1</code><code>&lt;PtrMoved&gt;</code>:</p>
-<dd>Moved()</p>
-<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn2Down&gt;</code>:</p>
-<dd>Select()</p>
-<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn2Up&gt;</code>:</p>
-<dd>Release()</p>
-<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a Button2</code><code>&lt;PtrMoved&gt;</code>:</p>
-<dd>Moved()</p>
-<dt><code>&asymp;s c &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</p>
-<dd>TopOrBottom()</p>
-<dt><code>&asymp;s c &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</p>
-<dd>Release()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>PrimitiveParentActivate()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>CancelDrag()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</p>
-<dd>TopOrBottom()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</p>
-<dd>TopOrBottom()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</p>
-<dd>PageUpOrLeft(<code>Left</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</p>
-<dd>PageUpOrLeft(<code>Left</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</p>
-<dd>PageUpOrLeft(<code>Up</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</p>
-<dd>PageDownOrRight(<code>Right</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</p>
-<dd>PageDownOrRight(<code>Right</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</p>
-<dd>PageDownOrRight(<code>Down</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>PrimitiveHelp()</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>PageUpOrLeft(<code>Up</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>IncrementUpOrLeft(<code>Up</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>PageDownOrRight(<code>Down</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>IncrementDownOrRight(<code>Down</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>PageUpOrLeft(<code>Left</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>IncrementUpOrLeft(<code>Left</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>PageDownOrRight(<code>Right</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>IncrementDownOrRight(<code>Right</code>)</p>
-<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>PrimitiveParentActivate()</p>
-<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>PrimitivePrevTabGroup()</p>
-<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>PrimitiveNextTabGroup()</dl>
+<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>Select()</dd>
+<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>Release()</dd>
+<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a Button1</code><code>&lt;PtrMoved&gt;</code>:</dt>
+<dd>Moved()</dd>
+<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>Select()</dd>
+<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn2Up&gt;</code>:</dt>
+<dd>Release()</dd>
+<dt><code>&asymp;s &asymp;c &asymp;m &asymp;a Button2</code><code>&lt;PtrMoved&gt;</code>:</dt>
+<dd>Moved()</dd>
+<dt><code>&asymp;s c &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>TopOrBottom()</dd>
+<dt><code>&asymp;s c &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>Release()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>PrimitiveParentActivate()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>CancelDrag()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</dt>
+<dd>TopOrBottom()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</dt>
+<dd>TopOrBottom()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</dt>
+<dd>PageUpOrLeft(<code>Left</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</dt>
+<dd>PageUpOrLeft(<code>Left</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</dt>
+<dd>PageUpOrLeft(<code>Up</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</dt>
+<dd>PageDownOrRight(<code>Right</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</dt>
+<dd>PageDownOrRight(<code>Right</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</dt>
+<dd>PageDownOrRight(<code>Down</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>PrimitiveHelp()</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>PageUpOrLeft(<code>Up</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>IncrementUpOrLeft(<code>Up</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>PageDownOrRight(<code>Down</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>IncrementDownOrRight(<code>Down</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>PageUpOrLeft(<code>Left</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>IncrementUpOrLeft(<code>Left</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>PageDownOrRight(<code>Right</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>IncrementDownOrRight(<code>Right</code>)</dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>PrimitiveParentActivate()</dd>
+<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>PrimitivePrevTabGroup()</dd>
+<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>PrimitiveNextTabGroup()</dd></dl>
 <h3>Action Routines</h3>
 <p>The ScrollBar action routines are</p>
 <dl COMPACT>
-<dt>CancelDrag():</p>
-<dd>If the key press occurs during scrolling, cancels the scroll and returns the slider to its previous location in the scrollbar, otherwise, and if the parent is a manager, it passes the event to the parent.</p>
-<dt>IncrementDownOrRight(<code>Down|Right</code>):</p>
-<dd>With an argument of <code>Down</code>, or 0 (zero) for compatibility, moves the slider down by one increment. With an argument of <code>Right</code>, or 1 for compatibility, it moves the slider right by one increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNincrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNdecrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNincrementCallback</code> or <code>XmNdecrementCallback</code> is NULL.</p>
-<dt>IncrementUpOrLeft(<code>Up|Left</code>):</p>
-<dd>With an argument of <code>Up</code>, or 0 (zero) for compatibility, moves the slider up by one increment. With an argument of <code>Left</code>, or 1 for compatibility, it moves the slider left by one increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement to the left or top calls the callbacks for <code>XmNdecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement to the left or top calls the callbacks for <code>XmNincrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNincrementCallback</code> or <code>XmNdecrementCallback</code> is NULL.</p>
-<dt>Moved():</p>
-<dd>If the button press occurs within the slider, the subsequent motion events move the slider to the position of the pointer and call the callbacks for <code>XmNdragCallback</code>.</p>
-<dt>PageDownOrRight(<code>Down|Right</code>):</p>
-<dd>With an argument of <code>Down</code>, or 0 (zero) for compatibility, moves the slider down by one page increment. With an argument of <code>Right</code>, or 1 for compatibility, moves the slider right by one page increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNpageIncrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the <code>XmNpageDecrementCallback</code> callbacks. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNpageIncrementCallback</code> or <code>XmNpageDecrementCallback</code> is NULL.</p>
-<dt>PageUpOrLeft(<code>Up|Left</code>):</p>
-<dd>With an argument of <code>Up</code>, or 0 (zero) for compatibility, moves the slider up by one page increment. With an argument of <code>Left</code>, or 1 for compatibility, it moves the slider left by one page increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement to the left or top calls the callbacks for <code>XmNpageDecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement to the left or top calls the <code>XmNpageIncrementCallback</code> callbacks. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNpageIncrementCallback</code> or <code>XmNpageDecrementCallback</code> is NULL.</p>
-<dt>PrimitiveHelp():</p>
-<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt>PrimitiveNextTabGroup():</p>
-<dd>Traverses to the first item in the next tab group. If the current tab group is the last entry in the tab group list, it wraps to the beginning of the tab group list.</p>
-<dt>PrimitiveParentActivate():</p>
-<dd>If the parent is a manager, passes the event to the parent.</p>
-<dt>PrimitivePrevTabGroup():</p>
-<dd>Traverses to the first item in the previous tab group. If the beginning of the tab group list is reached, it wraps to the end of the tab group list.</p>
-<dt>Release():</p>
-<dd>If the button press occurs within the slider and the slider position is changed, the callbacks for <code>XmNvalueChangedCallback</code> are called.</p>
-<dt>Select():</p>
-<dd><code>In arrow</code>: Moves the slider by one increment in the direction of the arrow. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNincrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNdecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNdecrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNincrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNincrementCallback</code> or <code>XmNdecrementCallback</code> is NULL.</p>
-<dd><code>In scroll region between an arrow and the slider</code>: Moves the slider by one page increment in the direction of the arrow. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNpageIncrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNpageDecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNpageDecrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNpageIncrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNpageIncrementCallback</code> or <code>XmNpageDecrementCallback</code> is NULL.</p>
-<dd><code>In slider</code>: Activates the interactive dragging of the slider.</p>
-<dd>If the button is held down in either the arrows or the scroll region longer than the <code>XmNinitialDelay</code> resource, the slider is moved again by the same increment and the same callbacks are called. After the initial delay has been used, the time delay changes to the time defined by the resource <code>XmNrepeatDelay</code>.</p>
-<dt>TopOrBottom():</p>
-<dd><code>&lt;Ctrl&gt;</code><code>&lt;Btn1Down&gt;</code> in an arrow or in the scroll region between an arrow and the slider moves the slider as far as possible in the direction of the arrow. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNtoBottomCallback</code>, and movement to the left or top calls the callbacks for <code>XmNtoTopCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNtoTopCallback</code>, and movement to the left or top calls the callbacks for <code>XmNtoBottomCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNtoTopCallback</code> or <code>XmNtoBottomCallback</code> is NULL. Pressing <code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code> or <code>&lt;Key&gt;</code><code>&lt;osfBeginData&gt;</code> moves the slider to the minimum value and invokes the <code>XmNtoTopCallback</code>. Pressing <code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code> or <code>&lt;Key&gt;</code><code>&lt;osfEndData&gt;</code> moves the slider to the maximum value and invokes the <code>XmNtoBottomCallback</code>.</dl>
+<dt>CancelDrag():</dt>
+<dd>If the key press occurs during scrolling, cancels the scroll and returns the slider to its previous location in the scrollbar, otherwise, and if the parent is a manager, it passes the event to the parent.</dd>
+<dt>IncrementDownOrRight(<code>Down|Right</code>):</dt>
+<dd>With an argument of <code>Down</code>, or 0 (zero) for compatibility, moves the slider down by one increment. With an argument of <code>Right</code>, or 1 for compatibility, it moves the slider right by one increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNincrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNdecrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNincrementCallback</code> or <code>XmNdecrementCallback</code> is NULL.</dd>
+<dt>IncrementUpOrLeft(<code>Up|Left</code>):</dt>
+<dd>With an argument of <code>Up</code>, or 0 (zero) for compatibility, moves the slider up by one increment. With an argument of <code>Left</code>, or 1 for compatibility, it moves the slider left by one increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement to the left or top calls the callbacks for <code>XmNdecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement to the left or top calls the callbacks for <code>XmNincrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNincrementCallback</code> or <code>XmNdecrementCallback</code> is NULL.</dd>
+<dt>Moved():</dt>
+<dd>If the button press occurs within the slider, the subsequent motion events move the slider to the position of the pointer and call the callbacks for <code>XmNdragCallback</code>.</dd>
+<dt>PageDownOrRight(<code>Down|Right</code>):</dt>
+<dd>With an argument of <code>Down</code>, or 0 (zero) for compatibility, moves the slider down by one page increment. With an argument of <code>Right</code>, or 1 for compatibility, moves the slider right by one page increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNpageIncrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the <code>XmNpageDecrementCallback</code> callbacks. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNpageIncrementCallback</code> or <code>XmNpageDecrementCallback</code> is NULL.</dd>
+<dt>PageUpOrLeft(<code>Up|Left</code>):</dt>
+<dd>With an argument of <code>Up</code>, or 0 (zero) for compatibility, moves the slider up by one page increment. With an argument of <code>Left</code>, or 1 for compatibility, it moves the slider left by one page increment. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement to the left or top calls the callbacks for <code>XmNpageDecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement to the left or top calls the <code>XmNpageIncrementCallback</code> callbacks. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNpageIncrementCallback</code> or <code>XmNpageDecrementCallback</code> is NULL.</dd>
+<dt>PrimitiveHelp():</dt>
+<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt>PrimitiveNextTabGroup():</dt>
+<dd>Traverses to the first item in the next tab group. If the current tab group is the last entry in the tab group list, it wraps to the beginning of the tab group list.</dd>
+<dt>PrimitiveParentActivate():</dt>
+<dd>If the parent is a manager, passes the event to the parent.</dd>
+<dt>PrimitivePrevTabGroup():</dt>
+<dd>Traverses to the first item in the previous tab group. If the beginning of the tab group list is reached, it wraps to the end of the tab group list.</dd>
+<dt>Release():</dt>
+<dd>If the button press occurs within the slider and the slider position is changed, the callbacks for <code>XmNvalueChangedCallback</code> are called.</dd>
+<dt>Select():</dt>
+<dd><code>In arrow</code>: Moves the slider by one increment in the direction of the arrow. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNincrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNdecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNdecrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNincrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNincrementCallback</code> or <code>XmNdecrementCallback</code> is NULL.</dd>
+<dd><code>In scroll region between an arrow and the slider</code>: Moves the slider by one page increment in the direction of the arrow. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNpageIncrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNpageDecrementCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNpageDecrementCallback</code>, and movement to the left or top calls the callbacks for <code>XmNpageIncrementCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNpageIncrementCallback</code> or <code>XmNpageDecrementCallback</code> is NULL.</dd>
+<dd><code>In slider</code>: Activates the interactive dragging of the slider.</dd>
+<dd>If the button is held down in either the arrows or the scroll region longer than the <code>XmNinitialDelay</code> resource, the slider is moved again by the same increment and the same callbacks are called. After the initial delay has been used, the time delay changes to the time defined by the resource <code>XmNrepeatDelay</code>.</dd>
+<dt>TopOrBottom():</dt>
+<dd><code>&lt;Ctrl&gt;</code><code>&lt;Btn1Down&gt;</code> in an arrow or in the scroll region between an arrow and the slider moves the slider as far as possible in the direction of the arrow. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_RIGHT</code> or <code>XmMAX_ON_BOTTOM</code>, movement toward the right or bottom calls the callbacks for <code>XmNtoBottomCallback</code>, and movement to the left or top calls the callbacks for <code>XmNtoTopCallback</code>. If <code>XmNprocessingDirection</code> is <code>XmMAX_ON_LEFT</code> or <code>XmMAX_ON_TOP</code>, movement toward the right or bottom calls the callbacks for <code>XmNtoTopCallback</code>, and movement to the left or top calls the callbacks for <code>XmNtoBottomCallback</code>. The <code>XmNvalueChangedCallback</code> is called if the <code>XmNtoTopCallback</code> or <code>XmNtoBottomCallback</code> is NULL. Pressing <code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code> or <code>&lt;Key&gt;</code><code>&lt;osfBeginData&gt;</code> moves the slider to the minimum value and invokes the <code>XmNtoTopCallback</code>. Pressing <code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code> or <code>&lt;Key&gt;</code><code>&lt;osfEndData&gt;</code> moves the slider to the maximum value and invokes the <code>XmNtoBottomCallback</code>.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

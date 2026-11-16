@@ -15,11 +15,9 @@ description: "rimraf – Fast deep deletion (like rm -rf)"
 <p> rimraf is fast deep deletion utility, much like <code>rm -rf</code>, just faster.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-rm/">rm</a>(1) </p>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-rm/">rm</a>(1) </dd>
 </dl>
 </dl>
 <h2>Index</h2>

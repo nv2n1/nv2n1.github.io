@@ -15,15 +15,15 @@ dev_get_phys_port_name - Get device physical port name
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>name</i>
-<dl><dd>port name</dl>
+<dl><dd>port name</dd></dl>
  
 
  <i>len</i>
-<dl><dd>limit of bytes to copy to name</dl>
+<dl><dd>limit of bytes to copy to name</dd></dl>
 
 <h2>Description</h2>
 

@@ -20,60 +20,56 @@ gmap[options][gfile][tfile][mfile][lfile] gpart[options][nparts][gfile][mfile][l
 <p> When the proper libraries have been included at compile time, <code>gmap</code> and <code>gpart</code> can directly handle compressed graphs, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.grf.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>opt</p>
-<dd> Choose default mapping strategy according to one or several <i>options</i> among:</p>
+<dt><code>-c</code>opt</dt>
+<dd> Choose default mapping strategy according to one or several <i>options</i> among:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>b</code></p>
-<dd> enforce load balance as much as possible.</p>
-<dt><code>q</code></p>
-<dd> privilege quality over speed (default).</p>
-<dt><code>s</code></p>
-<dd> privilege speed over quality.</p>
-<dt><code>t</code></p>
-<dd> enforce safety.</dl>
+<dt><code>b</code></dt>
+<dd> enforce load balance as much as possible.</dd>
+<dt><code>q</code></dt>
+<dd> privilege quality over speed (default).</dd>
+<dt><code>s</code></dt>
+<dd> privilege speed over quality.</dd>
+<dt><code>t</code></dt>
+<dd> enforce safety.</dd></dl>
 </dl>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-m</code>strat</p>
-<dd> Use sequential mapping strategy strat (see Scotch user&#8217;s manual for more information).</p>
-<dt><code>-V</code></p>
-<dd> Display program version and copyright.</p>
-<dt><code>-v</code>verb</p>
-<dd> Set verbose mode to verb. It is a set of one of more characters which can be:</p>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-m</code>strat</dt>
+<dd> Use sequential mapping strategy strat (see Scotch user&#8217;s manual for more information).</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd>
+<dt><code>-v</code>verb</dt>
+<dd> Set verbose mode to verb. It is a set of one of more characters which can be:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>m</code></p>
-<dd> mapping information.</p>
-<dt><code>s</code></p>
-<dd> strategy information.</p>
-<dt><code>t</code></p>
-<dd> timing information.</dl>
+<dt><code>m</code></dt>
+<dd> mapping information.</dd>
+<dt><code>s</code></dt>
+<dd> strategy information.</dd>
+<dt><code>t</code></dt>
+<dd> timing information.</dd></dl>
 </dl>
 </dl>
 <h2>TARGET ARCHITECTURES</h2>
 <p> Target architectures represent graphs onto which source graphs are mapped. In order to speed-up the obtainment of target architecture topological properties during the computation of mappings, some classical topologies are algorithmically coded into the mapper itself. These topologies are consequently simply defined by their code name, followed by their dimensional parameters:</p>
 <dl>
-<dt><code>cmplt </code><i>dim</i></p>
-<dd> unweighted complete graph of size <i>dim</i>.</p>
-<dt><code>cmpltw </code><i>dim</i> <i>w0</i> <i>w1</i> &#8230; <i>wdim-1</i></p>
-<dd> weighted complete graph of size size and of respective loads <i>w0</i>, <i>w1</i>, &#8230;, <i>wdim-1</i>.</p>
-<dt><code>hcub </code><i>dim</i></p>
-<dd> hypercube of dimension <i>dim</i>.</p>
-<dt><code>leaf </code><i>hgt</i> <i>n0</i> <i>w0</i> &#8230; <i>nhgt-1</i> <i>whgt-1</i></p>
-<dd> tree-leaf graph of height <i>hgt</i> with (<i>n0</i> times <i>n1</i> times &#8230; <i>nhgt-1</i>) vertices, with inter-cluster link weights of <i>w0</i>, <i>w1</i>, &#8230; <i>whgt-1</i>.</p>
-<dt><code>mesh2D </code><i>dimX</i> <i>dimY</i></p>
-<dd> 2D mesh of <i>dimX</i> times <i>dimY</i> nodes.</p>
-<dt><code>mesh3D </code><i>dimX</i> <i>dimY</i> <i>dimZ</i></p>
-<dd> 23 mesh of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> nodes.</p>
-<dt><code>torus2D </code><i>dimX</i> <i>dimY</i></p>
-<dd> 2D torus of <i>dimX</i> times <i>dimY</i> nodes.</p>
-<dt><code>torus3D </code><i>dimX</i> <i>dimY</i> <i>dimZ</i></p>
-<dd> 3D torus of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> nodes.</dl>
+<dt><code>cmplt </code><i>dim</i></dt>
+<dd> unweighted complete graph of size <i>dim</i>.</dd>
+<dt><code>cmpltw </code><i>dim</i> <i>w0</i> <i>w1</i> &#8230; <i>wdim-1</i></dt>
+<dd> weighted complete graph of size size and of respective loads <i>w0</i>, <i>w1</i>, &#8230;, <i>wdim-1</i>.</dd>
+<dt><code>hcub </code><i>dim</i></dt>
+<dd> hypercube of dimension <i>dim</i>.</dd>
+<dt><code>leaf </code><i>hgt</i> <i>n0</i> <i>w0</i> &#8230; <i>nhgt-1</i> <i>whgt-1</i></dt>
+<dd> tree-leaf graph of height <i>hgt</i> with (<i>n0</i> times <i>n1</i> times &#8230; <i>nhgt-1</i>) vertices, with inter-cluster link weights of <i>w0</i>, <i>w1</i>, &#8230; <i>whgt-1</i>.</dd>
+<dt><code>mesh2D </code><i>dimX</i> <i>dimY</i></dt>
+<dd> 2D mesh of <i>dimX</i> times <i>dimY</i> nodes.</dd>
+<dt><code>mesh3D </code><i>dimX</i> <i>dimY</i> <i>dimZ</i></dt>
+<dd> 23 mesh of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> nodes.</dd>
+<dt><code>torus2D </code><i>dimX</i> <i>dimY</i></dt>
+<dd> 2D torus of <i>dimX</i> times <i>dimY</i> nodes.</dd>
+<dt><code>torus3D </code><i>dimX</i> <i>dimY</i> <i>dimZ</i></dt>
+<dd> 3D torus of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> nodes.</dd></dl>
 <p> Other target topologies can be created from their source graph description by using the <code>amk_grf</code>(1) command. In this case, the target description will begin with the code name <code>deco</code>.</p>
 <h2>MAPPINGS</h2>
 <p> Mappings are represented by as many lines as there are vertices in the source graph. Each of these lines is made of two figures: the number of the vertex (or its label if source graph vertices are labeled) and the index of the target vertex to which it has been assigned. Target vertex indices range from 0 to the number of vertices in the target architecture (that is, the number of parts) minus one. </p>

@@ -11,7 +11,6 @@ description: "std::experimental::pmr::polymorphic_allocator<T>::destroy – std:
 <h2>Synopsis</h2>
 <pre><code>template &lt;class U&gt;
 (library fundamentals TS)
-
     void destroy(U *p);</code></pre>
 <p>Destroys the object pointed to by p, as if by calling p-&gt;~U(). </p>
 <h2>Parameters</h2>

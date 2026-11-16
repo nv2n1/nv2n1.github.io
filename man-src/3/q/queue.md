@@ -11,92 +11,92 @@ description: "queue – implementations of linked lists and queues"
 <h2>Description</h2>
 <p>The <i>&lt;sys/queue.h&gt;</i> header file provides a set of macros that define and operate on the following data structures:</p>
 <dl>
-<dt>*</p>
-<dd>singly linked lists (SLIST)</p>
-<dt>*</p>
-<dd>doubly linked lists (LIST)</p>
-<dt>*</p>
-<dd>singly linked tail queues (STAILQ)</p>
-<dt>*</p>
-<dd>doubly linked tail queues (TAILQ)</p>
-<dt>*</p>
-<dd>doubly linked circular queues (CIRCLEQ)</dl>
+<dt>*</dt>
+<dd>singly linked lists (SLIST)</dd>
+<dt>*</dt>
+<dd>doubly linked lists (LIST)</dd>
+<dt>*</dt>
+<dd>singly linked tail queues (STAILQ)</dd>
+<dt>*</dt>
+<dd>doubly linked tail queues (TAILQ)</dd>
+<dt>*</dt>
+<dd>doubly linked circular queues (CIRCLEQ)</dd></dl>
 <p> All structures support the following functionality:</p>
 <dl>
-<dt>*</p>
-<dd>Insertion of a new entry at the head of the list.</p>
-<dt>*</p>
-<dd>Insertion of a new entry after any element in the list.</p>
-<dt>*</p>
-<dd>O(1) removal of an entry from the head of the list.</p>
-<dt>*</p>
-<dd>Forward traversal through the list.</dl>
+<dt>*</dt>
+<dd>Insertion of a new entry at the head of the list.</dd>
+<dt>*</dt>
+<dd>Insertion of a new entry after any element in the list.</dd>
+<dt>*</dt>
+<dd>O(1) removal of an entry from the head of the list.</dd>
+<dt>*</dt>
+<dd>Forward traversal through the list.</dd></dl>
 <p> Code size and execution time depend on the complexity of the data structure being used, so programmers should take care to choose the appropriate one.</p>
 <h3>Singly linked lists (SLIST)</h3>
 <p>Singly linked lists are the simplest and support only the above functionality. Singly linked lists are ideal for applications with large datasets and few or no removals, or for implementing a LIFO queue. Singly linked lists add the following functionality:</p>
 <dl>
-<dt>*</p>
-<dd>O(n) removal of any entry in the list.</dl>
+<dt>*</dt>
+<dd>O(n) removal of any entry in the list.</dd></dl>
 <h3>Singly linked tail queues (STAILQ)</h3>
 <p>Singly linked tail queues add the following functionality:</p>
 <dl>
-<dt>*</p>
-<dd>Entries can be added at the end of a list.</p>
-<dt>*</p>
-<dd>O(n) removal of any entry in the list.</p>
-<dt>*</p>
-<dd>They may be concatenated.</dl>
+<dt>*</dt>
+<dd>Entries can be added at the end of a list.</dd>
+<dt>*</dt>
+<dd>O(n) removal of any entry in the list.</dd>
+<dt>*</dt>
+<dd>They may be concatenated.</dd></dl>
 <p> However:</p>
 <dl>
-<dt>*</p>
-<dd>All list insertions must specify the head of the list.</p>
-<dt>*</p>
-<dd>Each head entry requires two pointers rather than one.</dl>
+<dt>*</dt>
+<dd>All list insertions must specify the head of the list.</dd>
+<dt>*</dt>
+<dd>Each head entry requires two pointers rather than one.</dd></dl>
 <p> Singly linked tail queues are ideal for applications with large datasets and few or no removals, or for implementing a FIFO queue.</p>
 <h3>Doubly linked data structures</h3>
 <p>All doubly linked types of data structures (lists and tail queues) additionally allow:</p>
 <dl>
-<dt>*</p>
-<dd>Insertion of a new entry before any element in the list.</p>
-<dt>*</p>
-<dd>O(1) removal of any entry in the list.</dl>
+<dt>*</dt>
+<dd>Insertion of a new entry before any element in the list.</dd>
+<dt>*</dt>
+<dd>O(1) removal of any entry in the list.</dd></dl>
 <p> However:</p>
 <dl>
-<dt>*</p>
-<dd>Each element requires two pointers rather than one.</dl>
+<dt>*</dt>
+<dd>Each element requires two pointers rather than one.</dd></dl>
 <h3>Doubly linked lists (LIST)</h3>
 <p>Linked lists are the simplest of the doubly linked data structures. They add the following functionality over the above:</p>
 <dl>
-<dt>*</p>
-<dd>They may be traversed backwards.</dl>
+<dt>*</dt>
+<dd>They may be traversed backwards.</dd></dl>
 <p> However:</p>
 <dl>
-<dt>*</p>
-<dd>To traverse backwards, an entry to begin the traversal and the list in which it is contained must be specified.</dl>
+<dt>*</dt>
+<dd>To traverse backwards, an entry to begin the traversal and the list in which it is contained must be specified.</dd></dl>
 <h3>Doubly linked tail queues (TAILQ)</h3>
 <p>Tail queues add the following functionality:</p>
 <dl>
-<dt>*</p>
-<dd>Entries can be added at the end of a list.</p>
-<dt>*</p>
-<dd>They may be traversed backwards, from tail to head.</p>
-<dt>*</p>
-<dd>They may be concatenated.</dl>
+<dt>*</dt>
+<dd>Entries can be added at the end of a list.</dd>
+<dt>*</dt>
+<dd>They may be traversed backwards, from tail to head.</dd>
+<dt>*</dt>
+<dd>They may be concatenated.</dd></dl>
 <p> However:</p>
 <dl>
-<dt>*</p>
-<dd>All list insertions and removals must specify the head of the list.</p>
-<dt>*</p>
-<dd>Each head entry requires two pointers rather than one.</dl>
+<dt>*</dt>
+<dd>All list insertions and removals must specify the head of the list.</dd>
+<dt>*</dt>
+<dd>Each head entry requires two pointers rather than one.</dd></dl>
 <h3>Doubly linked circular queues (CIRCLEQ)</h3>
 <p>Circular queues add the following functionality over the above:</p>
 <dl>
-<dt>*</p>
-<dd>The first and last entries are connected.</dl>
+<dt>*</dt>
+<dd>The first and last entries are connected.</dd></dl>
 <p> However:</p>
 <dl>
-<dt>*</p>
-<dd>The termination condition for traversal is more complex.</dl>
+<dt>*</dt>
+<dd>The termination condition for traversal is more complex.</dd></dl>
 <h2>Conforming To</h2>
 <p>Not in POSIX.1, POSIX.1-2001 or POSIX.1-2008. Present on the BSDs. <i>&lt;sys/queue.h&gt;</i> macros first appeared in 4.4BSD.</p>
 <h2>See Also</h2>

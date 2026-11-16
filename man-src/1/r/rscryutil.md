@@ -17,26 +17,26 @@ rscryutil[OPTIONS][FILE]...
 <p> This tool performs various operations on encrypted log files. Most importantly, it provides the ability to decrypt them.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>,<code> &#8211;decrypt</code></p>
-<dd> Select decryption mode. This is the default mode.</p>
-<dt><code>-W</code>,<i>&#8211;write-keyfile</i><code>&nbsp;<wbr>&lt;file&gt;</code></p>
-<dd> Utility function to write a key to a keyfile. The key can be obtained via any method.</p>
-<dt><code>-v</code>,<code> &#8211;verbose</code></p>
-<dd> Select verbose mode.</p>
-<dt><code>-f</code>,<code> &#8211;force</code></p>
-<dd> Forces operations that otherwise would fail.</p>
-<dt><code>-k</code>,<i>&#8211;keyfile</i><code>&nbsp;<wbr>&lt;file&gt;</code></p>
-<dd> Reads the key from &lt;file&gt;. File _must_ contain the key, only, no headers or other meta information. Keyfiles can be generated via the <i>&#8211;write-keyfile</i> option.</p>
-<dt><code>-p</code>,<i>&#8211;key-program</i><code>&nbsp;<wbr>&lt;path-to-program&gt;</code></p>
-<dd> In this mode, the key is provided by a so-called &quot;key program&quot;. This program is executed and must return the key to (as well as some meta information) via stdout. The core idea of key programs is that using this interface the user can implement as complex (and secure) method to obtain keys as desired, all without the need to make modifications to rsyslog.</p>
-<dt><code>-K</code>,<i>&#8211;key</i><code>&nbsp;<wbr>&lt;KEY&gt;</code></p>
-<dd> TESTING AID, NOT FOR PRODUCTION USE. This uses the KEY specified on the command line. This is the actual key, and as such this mode is highly insecure. However, it can be useful for intial testing steps. This option may be removed in the future.</p>
-<dt><code>-a</code>,<i>&#8211;algo</i><code>&nbsp;<wbr>&lt;algo&gt;</code></p>
-<dd> Sets the encryption algorightm (cipher) to be used. See below for supported algorithms. The default is &quot;AES128&quot;.</p>
-<dt><code>-m</code>,<i>&#8211;mode</i><code>&nbsp;<wbr>&lt;mode&gt;</code></p>
-<dd> Sets the ciphermode to be used. See below for supported modes. The default is &quot;CBC&quot;.</p>
-<dt><code>-r</code>,<i>&#8211;generate-random-key</i><code>&nbsp;<wbr>&lt;bytes&gt;</code></p>
-<dd> Generates a random key of length &lt;bytes&gt;. This option is meant to be used together with <i>&#8211;write-keyfile</i> (and it is hard to envision any other valid use for it).</dl>
+<dt><code>-d</code>,<code> &#8211;decrypt</code></dt>
+<dd> Select decryption mode. This is the default mode.</dd>
+<dt><code>-W</code>,<i>&#8211;write-keyfile</i><code>&nbsp;<wbr>&lt;file&gt;</code></dt>
+<dd> Utility function to write a key to a keyfile. The key can be obtained via any method.</dd>
+<dt><code>-v</code>,<code> &#8211;verbose</code></dt>
+<dd> Select verbose mode.</dd>
+<dt><code>-f</code>,<code> &#8211;force</code></dt>
+<dd> Forces operations that otherwise would fail.</dd>
+<dt><code>-k</code>,<i>&#8211;keyfile</i><code>&nbsp;<wbr>&lt;file&gt;</code></dt>
+<dd> Reads the key from &lt;file&gt;. File _must_ contain the key, only, no headers or other meta information. Keyfiles can be generated via the <i>&#8211;write-keyfile</i> option.</dd>
+<dt><code>-p</code>,<i>&#8211;key-program</i><code>&nbsp;<wbr>&lt;path-to-program&gt;</code></dt>
+<dd> In this mode, the key is provided by a so-called &quot;key program&quot;. This program is executed and must return the key to (as well as some meta information) via stdout. The core idea of key programs is that using this interface the user can implement as complex (and secure) method to obtain keys as desired, all without the need to make modifications to rsyslog.</dd>
+<dt><code>-K</code>,<i>&#8211;key</i><code>&nbsp;<wbr>&lt;KEY&gt;</code></dt>
+<dd> TESTING AID, NOT FOR PRODUCTION USE. This uses the KEY specified on the command line. This is the actual key, and as such this mode is highly insecure. However, it can be useful for intial testing steps. This option may be removed in the future.</dd>
+<dt><code>-a</code>,<i>&#8211;algo</i><code>&nbsp;<wbr>&lt;algo&gt;</code></dt>
+<dd> Sets the encryption algorightm (cipher) to be used. See below for supported algorithms. The default is &quot;AES128&quot;.</dd>
+<dt><code>-m</code>,<i>&#8211;mode</i><code>&nbsp;<wbr>&lt;mode&gt;</code></dt>
+<dd> Sets the ciphermode to be used. See below for supported modes. The default is &quot;CBC&quot;.</dd>
+<dt><code>-r</code>,<i>&#8211;generate-random-key</i><code>&nbsp;<wbr>&lt;bytes&gt;</code></dt>
+<dd> Generates a random key of length &lt;bytes&gt;. This option is meant to be used together with <i>&#8211;write-keyfile</i> (and it is hard to envision any other valid use for it).</dd></dl>
 <h2>OPERATION MODES</h2>
 <p> The operation mode specifies what exactly the tool does with the provided files. The default operation mode is &quot;dump&quot;, but this may change in the future. Thus, it is recommended to always set the operations mode explicitely. If multiple operations mode are set on the command line, results are unpredictable.</p>
 <h3>decrypt</h3>

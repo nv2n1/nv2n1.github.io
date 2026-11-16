@@ -21,18 +21,18 @@ description: "tbl-dctrl – generate tabular representations of data in dctrl fo
 <p> If all requested columns have a specified width, <code>tbl-dctrl</code> will produce output immediately, not waiting for the whole input to be read in.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d </code><i>delimiter</i>, <code>&#8211;delimiter=</code><i>delimiter</p>
-<dd> Instead of drawing nice borders to the table, use the specified delimiter</i> string to delimit columns in a row.</p>
-<dt><code>-H</code>, <code>&#8211;no-heading</p>
-<dd> Do not print a table heading (column titles).</p>
-<dt>-l </code><i>level</i>, <code>&#8211;errorlevel=</code><i>level</p>
-<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print out version information.</p>
-<dt><code>-C</code>, <code>&#8211;copying</code></p>
-<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print out a help summary.</dl>
+<dt><code>-d </code><i>delimiter</i>, <code>&#8211;delimiter=</code><i>delimiter</dt>
+<dd> Instead of drawing nice borders to the table, use the specified delimiter</i> string to delimit columns in a row.</dd>
+<dt><code>-H</code>, <code>&#8211;no-heading</dt>
+<dd> Do not print a table heading (column titles).</dd>
+<dt>-l </code><i>level</i>, <code>&#8211;errorlevel=</code><i>level</dt>
+<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print out version information.</dd>
+<dt><code>-C</code>, <code>&#8211;copying</code></dt>
+<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print out a help summary.</dd></dl>
 <h2>OPERANDS</h2>
 <p> <code>tbl-dctrl</code> will read its input from the files named on the command line, in the specified order. A file called <code>&#8211;</code> represents the program&#8217;s standard input stream. If no files are named, the program behaves as if <code>&#8211;</code> alone had been named, that is, input is read from the standard input stream.</p>
 <h2>STDIN</h2>

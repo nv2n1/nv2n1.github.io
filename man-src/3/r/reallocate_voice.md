@@ -10,7 +10,6 @@ description: "reallocate_voice – Switches the sample of an already-allocated v
 <p>reallocate_voice &#8211; Switches the sample of an already-allocated voice. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void reallocate_voice(int voice, const SAMPLE *spl);</code></pre>
 <h2>Description</h2>
 <p>Switches an already-allocated voice to use a different sample. Calling reallocate_voice(voice, sample) is equivalent to: </p>

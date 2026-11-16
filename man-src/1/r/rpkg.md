@@ -41,82 +41,82 @@ description: "rpkg – RPM Packaging utility"
 &nbsp;<wbr>&nbsp;<wbr>-q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run quietly only displaying errors</p>
 <h2>COMMAND OVERVIEW</h2>
 <dl>
-<dt><code>rpkg build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;skip-nvr-check] [&#8211;skip-tag] [&#8211;scratch] [&#8211;srpm [SRPM]]</code></p>
-<dd> Request build</p>
-<dt><code>rpkg chain-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] package [package &#8230;]</code></p>
-<dd> Build current package in order with other packages</p>
-<dt><code>rpkg ci [-h] [-m MESSAGE] [&#8211;with-changelog] [-c] [&#8211;raw] [-t] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></p>
-<dd> Alias for commit</p>
-<dt><code>rpkg clean [-h] [&#8211;dry-run] [-x]</code></p>
-<dd> Remove untracked files</p>
-<dt><code>rpkg clog [-h] [&#8211;raw]</code></p>
-<dd> Make a clog file containing top changelog entry</p>
-<dt><code>rpkg clone [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></p>
-<dd> Clone and checkout a module</p>
-<dt><code>rpkg co [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></p>
-<dd> Alias for clone</p>
-<dt><code>rpkg commit [-h] [-m MESSAGE] [&#8211;with-changelog] [-c] [&#8211;raw] [-t] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></p>
-<dd> Commit changes</p>
-<dt><code>rpkg compile [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></p>
-<dd> Local test rpmbuild compile</p>
-<dt><code>rpkg container-build [-h] [&#8211;repo-url [URL [URL &#8230;]]] [&#8211;osbs-config PATH] [&#8211;instance SECTION] [&#8211;scratch] [&#8211;target TARGET] [&#8211;build-with {koji,osbs}] [&#8211;nowait]</code></p>
-<dd> build a container</p>
-<dt><code>rpkg container-build-setup [-h] (&#8211;get-autorebuild | &#8211;set-autorebuild {true,false})</code></p>
-<dd> set options for container-build</p>
-<dt><code>rpkg copr-build [-h] [&#8211;nowait] project</code></p>
-<dd> Build package in Copr</p>
-<dt><code>rpkg diff [-h] [&#8211;cached] [files [files &#8230;]]</code></p>
-<dd> Show changes between commits, commit and working tree, etc</p>
-<dt><code>rpkg gimmespec [-h]</code></p>
-<dd> Print the spec file name</p>
-<dt><code>rpkg gitbuildhash [-h] build</code></p>
-<dd> Print the git hash used to build the provided n-v-r</p>
-<dt><code>rpkg giturl [-h]</code></p>
-<dd> Print the git url for building</p>
-<dt><code>rpkg help [-h]</code></p>
-<dd> Show usage</p>
-<dt><code>rpkg import [-h] [&#8211;skip-diffs] srpm</code></p>
-<dd> Import srpm content into a module</p>
-<dt><code>rpkg install [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></p>
-<dd> Local test rpmbuild install</p>
-<dt><code>rpkg lint [-h] [&#8211;info] [&#8211;rpmlintconf RPMLINTCONF]</code></p>
-<dd> Run rpmlint against local spec and build output if present.</p>
-<dt><code>rpkg local [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;md5]</code></p>
-<dd> Local test rpmbuild binary</p>
-<dt><code>rpkg mock-config [-h] [&#8211;target TARGET] [&#8211;arch ARCH]</code></p>
-<dd> Generate a mock config</p>
-<dt><code>rpkg mockbuild [-h] [&#8211;root CONFIG] [&#8211;md5] [&#8211;no-clean] [&#8211;no-cleanup-after] [&#8211;no-clean-all]</code></p>
-<dd> Local test build using mock</p>
-<dt><code>rpkg new [-h]</code></p>
-<dd> Diff against last tag</p>
-<dt><code>rpkg new-sources [-h] files [files &#8230;]</code></p>
-<dd> Upload new source files</p>
-<dt><code>rpkg patch [-h] [&#8211;rediff] suffix</code></p>
-<dd> Create and add a gendiff patch file</p>
-<dt><code>rpkg prep [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></p>
-<dd> Local test rpmbuild prep</p>
-<dt><code>rpkg pull [-h] [&#8211;rebase] [&#8211;no-rebase]</code></p>
-<dd> Pull changes from the remote repository and update the working copy.</p>
-<dt><code>rpkg push [-h] [&#8211;force]</code></p>
-<dd> Push changes to remote repository</p>
-<dt><code>rpkg scratch-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;srpm [SRPM]]</code></p>
-<dd> Request scratch build</p>
-<dt><code>rpkg sources [-h] [&#8211;outdir OUTDIR]</code></p>
-<dd> Download source files</p>
-<dt><code>rpkg srpm [-h] [&#8211;md5]</code></p>
-<dd> Create a source rpm</p>
-<dt><code>rpkg switch-branch [-h] [-l] [&#8211;fetch] [branch]</code></p>
-<dd> Work with branches</p>
-<dt><code>rpkg tag [-h] [-f] [-m MESSAGE] [-c] [&#8211;raw] [-F FILE] [-l] [-d] [tag]</code></p>
-<dd> Management of git tags</p>
-<dt><code>rpkg unused-patches [-h]</code></p>
-<dd> Print list of patches not referenced by name in the specfile</p>
-<dt><code>rpkg upload [-h] files [files &#8230;]</code></p>
-<dd> Upload source files</p>
-<dt><code>rpkg verify-files [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></p>
-<dd> Locally verify %%files section</p>
-<dt><code>rpkg verrel [-h]</code></p>
-<dd> Print the name-version-release</dl>
+<dt><code>rpkg build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;skip-nvr-check] [&#8211;skip-tag] [&#8211;scratch] [&#8211;srpm [SRPM]]</code></dt>
+<dd> Request build</dd>
+<dt><code>rpkg chain-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] package [package &#8230;]</code></dt>
+<dd> Build current package in order with other packages</dd>
+<dt><code>rpkg ci [-h] [-m MESSAGE] [&#8211;with-changelog] [-c] [&#8211;raw] [-t] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></dt>
+<dd> Alias for commit</dd>
+<dt><code>rpkg clean [-h] [&#8211;dry-run] [-x]</code></dt>
+<dd> Remove untracked files</dd>
+<dt><code>rpkg clog [-h] [&#8211;raw]</code></dt>
+<dd> Make a clog file containing top changelog entry</dd>
+<dt><code>rpkg clone [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></dt>
+<dd> Clone and checkout a module</dd>
+<dt><code>rpkg co [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></dt>
+<dd> Alias for clone</dd>
+<dt><code>rpkg commit [-h] [-m MESSAGE] [&#8211;with-changelog] [-c] [&#8211;raw] [-t] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></dt>
+<dd> Commit changes</dd>
+<dt><code>rpkg compile [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></dt>
+<dd> Local test rpmbuild compile</dd>
+<dt><code>rpkg container-build [-h] [&#8211;repo-url [URL [URL &#8230;]]] [&#8211;osbs-config PATH] [&#8211;instance SECTION] [&#8211;scratch] [&#8211;target TARGET] [&#8211;build-with {koji,osbs}] [&#8211;nowait]</code></dt>
+<dd> build a container</dd>
+<dt><code>rpkg container-build-setup [-h] (&#8211;get-autorebuild | &#8211;set-autorebuild {true,false})</code></dt>
+<dd> set options for container-build</dd>
+<dt><code>rpkg copr-build [-h] [&#8211;nowait] project</code></dt>
+<dd> Build package in Copr</dd>
+<dt><code>rpkg diff [-h] [&#8211;cached] [files [files &#8230;]]</code></dt>
+<dd> Show changes between commits, commit and working tree, etc</dd>
+<dt><code>rpkg gimmespec [-h]</code></dt>
+<dd> Print the spec file name</dd>
+<dt><code>rpkg gitbuildhash [-h] build</code></dt>
+<dd> Print the git hash used to build the provided n-v-r</dd>
+<dt><code>rpkg giturl [-h]</code></dt>
+<dd> Print the git url for building</dd>
+<dt><code>rpkg help [-h]</code></dt>
+<dd> Show usage</dd>
+<dt><code>rpkg import [-h] [&#8211;skip-diffs] srpm</code></dt>
+<dd> Import srpm content into a module</dd>
+<dt><code>rpkg install [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></dt>
+<dd> Local test rpmbuild install</dd>
+<dt><code>rpkg lint [-h] [&#8211;info] [&#8211;rpmlintconf RPMLINTCONF]</code></dt>
+<dd> Run rpmlint against local spec and build output if present.</dd>
+<dt><code>rpkg local [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;md5]</code></dt>
+<dd> Local test rpmbuild binary</dd>
+<dt><code>rpkg mock-config [-h] [&#8211;target TARGET] [&#8211;arch ARCH]</code></dt>
+<dd> Generate a mock config</dd>
+<dt><code>rpkg mockbuild [-h] [&#8211;root CONFIG] [&#8211;md5] [&#8211;no-clean] [&#8211;no-cleanup-after] [&#8211;no-clean-all]</code></dt>
+<dd> Local test build using mock</dd>
+<dt><code>rpkg new [-h]</code></dt>
+<dd> Diff against last tag</dd>
+<dt><code>rpkg new-sources [-h] files [files &#8230;]</code></dt>
+<dd> Upload new source files</dd>
+<dt><code>rpkg patch [-h] [&#8211;rediff] suffix</code></dt>
+<dd> Create and add a gendiff patch file</dd>
+<dt><code>rpkg prep [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></dt>
+<dd> Local test rpmbuild prep</dd>
+<dt><code>rpkg pull [-h] [&#8211;rebase] [&#8211;no-rebase]</code></dt>
+<dd> Pull changes from the remote repository and update the working copy.</dd>
+<dt><code>rpkg push [-h] [&#8211;force]</code></dt>
+<dd> Push changes to remote repository</dd>
+<dt><code>rpkg scratch-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;srpm [SRPM]]</code></dt>
+<dd> Request scratch build</dd>
+<dt><code>rpkg sources [-h] [&#8211;outdir OUTDIR]</code></dt>
+<dd> Download source files</dd>
+<dt><code>rpkg srpm [-h] [&#8211;md5]</code></dt>
+<dd> Create a source rpm</dd>
+<dt><code>rpkg switch-branch [-h] [-l] [&#8211;fetch] [branch]</code></dt>
+<dd> Work with branches</dd>
+<dt><code>rpkg tag [-h] [-f] [-m MESSAGE] [-c] [&#8211;raw] [-F FILE] [-l] [-d] [tag]</code></dt>
+<dd> Management of git tags</dd>
+<dt><code>rpkg unused-patches [-h]</code></dt>
+<dd> Print list of patches not referenced by name in the specfile</dd>
+<dt><code>rpkg upload [-h] files [files &#8230;]</code></dt>
+<dd> Upload source files</dd>
+<dt><code>rpkg verify-files [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></dt>
+<dd> Locally verify %%files section</dd>
+<dt><code>rpkg verrel [-h]</code></dt>
+<dd> Print the name-version-release</dd></dl>
 <h2>COMMAND REFERENCE</h2>
 <h3>rpkg build</h3>
 <p>&nbsp;<wbr>&nbsp;<wbr>usage: rpkg build&nbsp;<wbr>[-h]&nbsp;<wbr>[&#8211;arches&nbsp;<wbr>[ARCHES&nbsp;<wbr>[ARCHES &#8230;]]]&nbsp;<wbr>[&#8211;md5]&nbsp;<wbr>[&#8211;nowait]<br />

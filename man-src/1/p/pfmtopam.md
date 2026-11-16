@@ -23,14 +23,14 @@ description: "pamtopfm – Convert PFM (Portable Float Map) image to Netpbm form
 &nbsp;<wbr>to convert a PFM image to Netpbm format. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-maxval=</code><i>n</i></p>
+<dt><code>-maxval=</code><i>n</i></dt>
 <dd>
 <p> This specifies the maxval for the PAM. Default is 255. </p>
-<dt><code>-verbose</code></p>
+</dd><dt><code>-verbose</code></dt>
 <dd>
 <p> This causes <code>pfmtopam</code> to display messages describing<br />
 &nbsp;<wbr>&nbsp;<wbr>the PFM input file. </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>

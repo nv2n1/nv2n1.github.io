@@ -18,32 +18,32 @@ description: "grdtrend – Fit trend surface to grids and compute residuals"
 <p> If data file has values set to NaN, these will be ignored during fitting; if output files are written, these will also have NaN in the same locations.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>grdfile</i></p>
-<dd> The name of a 2-D binary grid file.</p>
-<dt><code>-N</code><i>n_model</i>[<code>r</code>]</p>
-<dd> <i>n_model</i> sets the number of model parameters to fit. Append <code>r</code> for robust fit.</dl>
+<dt><i>grdfile</i></dt>
+<dd> The name of a 2-D binary grid file.</dd>
+<dt><code>-N</code><i>n_model</i>[<code>r</code>]</dt>
+<dd> <i>n_model</i> sets the number of model parameters to fit. Append <code>r</code> for robust fit.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-D</code><i>diff.nc</i></p>
-<dd> Write the difference (input data &#8211; trend) to the file <i>diff.nc</i>.</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest. Using the <code>-R</code> option will select a subsection of the input grid. If this subsection exceeds the boundaries of the grid, only the common region will be extracted.</p>
-<dt><code>-T</code><i>trend.nc</i></p>
-<dd> Write the fitted trend to the file <i>trend.nc</i>.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-W</code><i>weight.nc</i></p>
-<dd> If <i>weight.nc</i> exists, it will be read and used to solve a weighted least-squares problem. [Default: Ordinary least-squares fit.] If the robust option has been selected, the weights used in the robust fit will be written to <i>weight.nc</i>.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-D</code><i>diff.nc</i></dt>
+<dd> Write the difference (input data &#8211; trend) to the file <i>diff.nc</i>.</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest. Using the <code>-R</code> option will select a subsection of the input grid. If this subsection exceeds the boundaries of the grid, only the common region will be extracted.</dd>
+<dt><code>-T</code><i>trend.nc</i></dt>
+<dd> Write the fitted trend to the file <i>trend.nc</i>.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-W</code><i>weight.nc</i></dt>
+<dd> If <i>weight.nc</i> exists, it will be read and used to solve a weighted least-squares problem. [Default: Ordinary least-squares fit.] If the robust option has been selected, the weights used in the robust fit will be written to <i>weight.nc</i>.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>REMARKS</h2>
 <p> The domain of x and y will be shifted and scaled to [-1, 1] and the basis functions are built from Legendre polynomials. These have a numerical advantage in the form of the matrix which must be inverted and allow more accurate solutions. NOTE: The model parameters listed with <code>-V</code> are Legendre polynomial coefficients; they are not numerically equivalent to the m#s in the equation described above. The description above is to allow the user to match <code>-N</code> with the order of the polynomial surface. See <code>grdmath</code> if you need to evaluate the trend using the reported coefficients.</p>
 <h2>GRID FILE FORMATS</h2>

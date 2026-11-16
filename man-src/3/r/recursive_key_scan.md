@@ -11,13 +11,10 @@ description: "recursive_key_scan – Apply a function to all keys in a keyring t
  recursive_session_key_scan &#8211; Apply a function to all keys in the session keyring tree</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;keyutils.h&gt;
-
 typedef int (*recursive_key_scanner_t)(key_serial_t parent,
                                        key_serial_t key, char *desc, int desc_len, void *data);
-
 long recursive_key_scan(key_serial_t keyring,
                         recursive_key_scanner_t func, void *data);
-
 long recursive_session_key_scan(recursive_key_scanner_t func,
                                 void *data);</code></pre>
 <h2>Description</h2>
@@ -27,14 +24,14 @@ long recursive_session_key_scan(recursive_key_scanner_t func,
 <p> The callback function is called for each link found in all the keyrings in the nominated tree and so may be called multiple times for a particular key if that key has multiple links to it. </p>
 <p> The callback function is passed the following parameters:</p>
 <dl>
-<dt><code>parent</code></p>
-<dd>The keyring containing the link or 0 for the initial key.</p>
-<dt><code>key</code></p>
-<dd>The key to which the link points.</p>
-<dt><code>desc</code> and <code>desc_len</code></p>
-<dd>A pointer to the raw description and its length as retrieved with <i>keyctl_describe_alloc</i>(). These will be NULL and -1 respectively if the description couldn&#8217;t be retrieved and errno will retain the error from <i>keyctl_describe_alloc</i>().</p>
-<dt><code>data</code></p>
-<dd>The data passed to the scanner function.</dl>
+<dt><code>parent</code></dt>
+<dd>The keyring containing the link or 0 for the initial key.</dd>
+<dt><code>key</code></dt>
+<dd>The key to which the link points.</dd>
+<dt><code>desc</code> and <code>desc_len</code></dt>
+<dd>A pointer to the raw description and its length as retrieved with <i>keyctl_describe_alloc</i>(). These will be NULL and -1 respectively if the description couldn&#8217;t be retrieved and errno will retain the error from <i>keyctl_describe_alloc</i>().</dd>
+<dt><code>data</code></dt>
+<dd>The data passed to the scanner function.</dd></dl>
 <h2>Return Value</h2>
 <p>These functions return the sum of the results of the callback functions they invoke.</p>
 <h2>Errors</h2>

@@ -17,63 +17,61 @@ description: "cifsiostat – Report CIFS statistics."
 <h2>REPORT</h2>
 <p> The CIFS report provides statistics for each mounted CIFS filesystem. The report shows the following fields: </p>
 <dl>
-<dt>Filesystem:</p>
-<dd> This columns shows the mount point of the CIFS filesystem.</p>
-<dt>rB/s (rkB/s, rMB/s)</p>
-<dd> Indicate the average number of bytes (kilobytes, megabytes) read per second.</p>
-<dt>wB/s (wkB/s, wMB/s)</p>
-<dd> Indicate the average number of bytes (kilobytes, megabytes) written per second.</p>
-<dt>rop/s</p>
-<dd> Indicate the number of &#8216;read&#8217; operations that were issued to the filesystem per second.</p>
-<dt>wop/s</p>
-<dd> Indicate the number of &#8216;write&#8217; operations that were issued to the filesystem per second.</p>
-<dt>fo/s</p>
-<dd> Indicate the number of open files per second.</p>
-<dt>fc/s</p>
-<dd> Indicate the number of closed files per second.</p>
-<dt>fd/s</p>
-<dd> Indicate the number of deleted files per second. </p>
+<dt>Filesystem:</dt>
+<dd> This columns shows the mount point of the CIFS filesystem.</dd>
+<dt>rB/s (rkB/s, rMB/s)</dt>
+<dd> Indicate the average number of bytes (kilobytes, megabytes) read per second.</dd>
+<dt>wB/s (wkB/s, wMB/s)</dt>
+<dd> Indicate the average number of bytes (kilobytes, megabytes) written per second.</dd>
+<dt>rop/s</dt>
+<dd> Indicate the number of &#8216;read&#8217; operations that were issued to the filesystem per second.</dd>
+<dt>wop/s</dt>
+<dd> Indicate the number of &#8216;write&#8217; operations that were issued to the filesystem per second.</dd>
+<dt>fo/s</dt>
+<dd> Indicate the number of open files per second.</dd>
+<dt>fc/s</dt>
+<dd> Indicate the number of closed files per second.</dd>
+<dt>fd/s</dt>
+<dd> Indicate the number of deleted files per second. </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;dec={ 0 | 1 | 2 }</code></p>
-<dd> Specify the number of decimal places to use (0 to 2, default value is 2).</p>
-<dt><code>-h</code></p>
-<dd> This option is equivalent to specifying <code>&#8211;human &#8211;pretty</code>.</p>
-<dt><code>&#8211;human</code></p>
-<dd> Print sizes in human readable format (e.g. 1.0k, 1.2M, etc.) The units displayed with this option supersede any other default units (e.g. kilobytes, sectors&#8230;) associated with the metrics.</p>
-<dt><code>-k</code></p>
-<dd> Display statistics in kilobytes per second.</p>
-<dt><code>-m</code></p>
-<dd> Display statistics in megabytes per second.</p>
-<dt><code>&#8211;pretty</code></p>
-<dd> Make the CIFS report easier to read by a human.</p>
-<dt><code>-t</code></p>
-<dd> Print the time for each report displayed. The timestamp format may depend on the value of the <code>S_TIME_FORMAT </code>environment variable (see below).</p>
-<dt><code>-V</code></p>
-<dd> Print version number then exit. </p>
+<dt><code>&#8211;dec={ 0 | 1 | 2 }</code></dt>
+<dd> Specify the number of decimal places to use (0 to 2, default value is 2).</dd>
+<dt><code>-h</code></dt>
+<dd> This option is equivalent to specifying <code>&#8211;human &#8211;pretty</code>.</dd>
+<dt><code>&#8211;human</code></dt>
+<dd> Print sizes in human readable format (e.g. 1.0k, 1.2M, etc.) The units displayed with this option supersede any other default units (e.g. kilobytes, sectors&#8230;) associated with the metrics.</dd>
+<dt><code>-k</code></dt>
+<dd> Display statistics in kilobytes per second.</dd>
+<dt><code>-m</code></dt>
+<dd> Display statistics in megabytes per second.</dd>
+<dt><code>&#8211;pretty</code></dt>
+<dd> Make the CIFS report easier to read by a human.</dd>
+<dt><code>-t</code></dt>
+<dd> Print the time for each report displayed. The timestamp format may depend on the value of the <code>S_TIME_FORMAT </code>environment variable (see below).</dd>
+<dt><code>-V</code></dt>
+<dd> Print version number then exit. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> The <code>cifsiostat </code>command takes into account the following environment variables:</p>
 <dl>
-<dt><code>S_COLORS</code></p>
+<dt><code>S_COLORS</code></dt>
 <dd> By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <code>never</code>, <code>always </code>or <code>auto </code>(the latter is equivalent to the default settings).<br />
- Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</p>
-<dt><code>S_COLORS_SGR</code></p>
-<dd> Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>I=32;22:N=34;1:Z=34;22</code>. Supported capabilities are:</p>
+ Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</dd>
+<dt><code>S_COLORS_SGR</code></dt>
+<dd> Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>I=32;22:N=34;1:Z=34;22</code>. Supported capabilities are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>I=</code></p>
-<dd> SGR substring for filesystem names.</p>
-<dt><code>N=</code></p>
-<dd> SGR substring for non-zero statistics values.</p>
-<dt><code>Z=</code></p>
-<dd> SGR substring for zero values.</dl>
+<dt><code>I=</code></dt>
+<dd> SGR substring for filesystem names.</dd>
+<dt><code>N=</code></dt>
+<dd> SGR substring for non-zero statistics values.</dd>
+<dt><code>Z=</code></dt>
+<dd> SGR substring for zero values.</dd></dl>
 </dl>
-<dt><code>S_TIME_FORMAT</code></p>
-<dd> If this variable exists and its value is <code>ISO</code> then the current locale will be ignored when printing the date in the report header. The <code>cifsiostat</code> command will use the ISO 8601 format (YYYY-MM-DD) instead. The timestamp displayed with option <code>-t </code>will also be compliant with ISO 8601 format. </p>
+<dt><code>S_TIME_FORMAT</code></dt>
+<dd> If this variable exists and its value is <code>ISO</code> then the current locale will be ignored when printing the date in the report header. The <code>cifsiostat</code> command will use the ISO 8601 format (YYYY-MM-DD) instead. The timestamp displayed with option <code>-t </code>will also be compliant with ISO 8601 format. </dd>
 </dl>
 <h2>BUG</h2>
 <p> <i>/proc </i>filesystem must be mounted for <code>cifsiostat </code>to work. </p>

@@ -13,10 +13,10 @@ description: "gcopy_seg_ws (Copy segment to workstation) – copies a GKS segmen
 <p> void gcopy_seg_ws(Gint ws_id, Gint seg_name);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) &#8211; Specifies the workstation identifier (as defined in a gopen_ws call) that is to receive the segment copy.</p>
-<dt>seg_name</p>
-<dd>(Input) &#8211; Identifies the segment that is to be copied to the specified workstation. seg_name must have been used in a previous call to gcreate_seg.</dl>
+<dt>ws_id</dt>
+<dd>(Input) &#8211; Specifies the workstation identifier (as defined in a gopen_ws call) that is to receive the segment copy.</dd>
+<dt>seg_name</dt>
+<dd>(Input) &#8211; Identifies the segment that is to be copied to the specified workstation. seg_name must have been used in a previous call to gcreate_seg.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

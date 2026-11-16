@@ -18,27 +18,23 @@ description: "condor_version print HTCondor version and platform information"
 <p> <code>help</code></p>
 <dl>
 <dt>
-<dd> Print usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Print usage information</dd>
+</dl>
 <p> <code>arch</code></p>
 <dl>
 <dt>
-<dd> Print this machine&#8217;s ClassAd value for Arch</p>
-<dt>
-<dd></dl>
+</dt><dd> Print this machine&#8217;s ClassAd value for Arch</dd>
+</dl>
 <p> <code>opsys</code></p>
 <dl>
 <dt>
-<dd> Print this machine&#8217;s ClassAd value for OpSys</p>
-<dt>
-<dd></dl>
+</dt><dd> Print this machine&#8217;s ClassAd value for OpSys</dd>
+</dl>
 <p> <code>syscall</code></p>
 <dl>
 <dt>
-<dd> Get any requested version and/or platform information from the libcondorsyscall.a that this HTCondor pool is configured to use, instead of using the values that are compiled into the tool itself. This option may be used in combination with any other options to modify where the information is coming from.</p>
-<dt>
-<dd></dl>
+</dt><dd> Get any requested version and/or platform information from the libcondorsyscall.a that this HTCondor pool is configured to use, instead of using the values that are compiled into the tool itself. This option may be used in combination with any other options to modify where the information is coming from.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_version</i> will exit with a status value of 0 (zero) upon success, and it should never exit with a failing value. </p>
 <h2>Author</h2>

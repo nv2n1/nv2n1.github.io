@@ -12,19 +12,14 @@ operator&amp;,|,^(std::bitset) - operator&amp;,|,^(std::bitset)
 
 <pre><code>template &lt;std::size_t N&gt;
 (1)
-
     bitset&lt;N&gt;
     operator&amp;(const bitset&lt;N&gt; &amp;lhs, const bitset&lt;N&gt; &amp;rhs);
-
 template &lt;std::size_t N&gt;
 (2)
-
     bitset&lt;N&gt;
     operator|(const bitset&lt;N&gt; &amp;lhs, const bitset&lt;N&gt; &amp;rhs);
-
 template &lt;std::size_t N&gt;
 (3)
-
     bitset&lt;N&gt;
     operator^(const bitset&lt;N&gt; &amp;lhs, const bitset&lt;N&gt; &amp;rhs);</code></pre> 
 Performs binary AND, OR, and XOR between two bitsets, lhs and rhs. 
@@ -77,14 +72,7 @@ int main()
 <h2>See also</h2>
 
 <pre><code>operator&amp;= performs binary AND, OR, XOR and NOT
-
 operator|= (public member function)
-
 operator^=
-
 operator~
-
-
-
-
 </code></pre>

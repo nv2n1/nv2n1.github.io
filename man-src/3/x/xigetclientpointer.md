@@ -20,15 +20,15 @@ core pointer for non-XI protocol requests and replies. Each
 time a protocol message needs device-dependent data and the
 device is not explicitly given, the ClientPointer device is
 used to obtain the data. For example, a XQueryPointer request
-will return the coordinates of the ClientPointer.</pre></dl><dl COMPACT><dd><pre>XISetClientPointer request sets the ClientPointer device for
+will return the coordinates of the ClientPointer.</pre></dd></dl><dl COMPACT><dd><pre>XISetClientPointer request sets the ClientPointer device for
 the client that owns the given window. If win is None, the
 requesting client's ClientPointer is set to the device
 specified with deviceid. Only master pointer devices can be set
-as ClientPointer.</pre></dl><dl COMPACT><dd><pre>XISetClientPointer and can generate a BadDevice and a BadWindow
-error.</pre></dl><dl COMPACT><dd><pre>The XIGetClientPointer request returns the ClientPointer's
+as ClientPointer.</pre></dd></dl><dl COMPACT><dd><pre>XISetClientPointer and can generate a BadDevice and a BadWindow
+error.</pre></dd></dl><dl COMPACT><dd><pre>The XIGetClientPointer request returns the ClientPointer's
 device ID for the client that owns the given window. If win is
-None, the requesting client's ClientPointer is returned.</pre></dl><dl COMPACT><dd><pre>win may be a client ID instead of a window.</pre></dl><dl COMPACT><dd><pre>XIGetClientPointer can generate a BadWindow error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+None, the requesting client's ClientPointer is returned.</pre></dd></dl><dl COMPACT><dd><pre>win may be a client ID instead of a window.</pre></dd></dl><dl COMPACT><dd><pre>XIGetClientPointer can generate a BadWindow error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The device does not
- exist or is not a master pointer device.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ exist or is not a master pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- window.</pre></dl>
+ window.</pre></dd></dl>

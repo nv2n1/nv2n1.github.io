@@ -19,7 +19,7 @@ description: "xerbla_array.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 XERBLA_ARRAY assists other languages in calling XERBLA, the LAPACK and BLAS error handler.Rather than taking a Fortran string argument as the function's name, XERBLA_ARRAY takes an array of single characters along with the array's length.  XERBLA_ARRAY then copies up to 32 characters of that array into a Fortran string and passes that to XERBLA.If called with a non - positive SRNAME_LEN,
     XERBLA_ARRAY will call XERBLA with a string of all blank characters.Say some macro or other device makes XERBLA_ARRAY available to C99
@@ -31,11 +31,11 @@ XERBLA_ARRAY assists other languages in calling XERBLA, the LAPACK and BLAS erro
  Providing XERBLA_ARRAY is not necessary for intercepting LAPACK
  errors.  XERBLA_ARRAY calls XERBLA.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SRNAME_ARRAY</i> </p>
+</dt><dd> <i>SRNAME_ARRAY</i> </dd>
 <pre>
           SRNAME_ARRAY is CHARACTER(1) array, dimension (SRNAME_LEN)
           The name of the routine which called XERBLA_ARRAY.
@@ -55,14 +55,14 @@ XERBLA_ARRAY assists other languages in calling XERBLA, the LAPACK and BLAS erro
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 91 of file SRC/xerbla_array.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

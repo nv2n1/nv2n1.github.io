@@ -10,10 +10,8 @@ description: "std::is_trivially_copyable – std::is_trivially_copyable"
 <p>std::is_trivially_copyable &#8211; std::is_trivially_copyable</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_trivially_copyable;</code></pre>
 <p>If T is a TriviallyCopyable type, provides the member constant value equal true. For any other type, value is false.<br />
 The only trivially copyable types are scalar types, trivially copyable classes, and arrays of such types/classes (possibly const-qualified, but not volatile-qualified).<br />
@@ -45,7 +43,6 @@ If the underlying bytes of obj1 is copied into such an array, and then the resul
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct A {
     int m;
@@ -67,7 +64,6 @@ struct D {
     }
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_trivially_copyable&lt;A&gt;::value &lt;&lt; '

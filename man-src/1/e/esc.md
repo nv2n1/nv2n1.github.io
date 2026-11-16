@@ -16,14 +16,12 @@ description: "esc – Minimal Command-Line Interface for Smart Card Manager."
 &nbsp;<wbr>&nbsp;<wbr></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>NO Options.</p>
-<dd> Will start the esc daemon if not running. Will start the esc UI if daemon is running.</p>
+<dt>NO Options.</dt>
+<dd> Will start the esc daemon if not running. Will start the esc UI if daemon is running.</dd>
 <dt>
-<dt>&#8211;version</p>
+</dt><dt>&#8211;version</dt>
 <dd>
-<dd> Displays the version number of esc.</p>
-<dt>
-<dd>
+</dd><dd> Displays the version number of esc.</dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>/usr/bin/esc</i> </p>

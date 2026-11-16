@@ -135,10 +135,10 @@ description: "zmq_getsockopt – get 0MQ socket options"
 <h3>ZMQ_EVENTS: Retrieve socket event state</h3>
 <p>The <i>ZMQ_EVENTS</i> option shall retrieve the event state for the specified <i>socket</i>. The returned value is a bit mask constructed by OR&#8217;ing a combination of the following event flags: <code>ZMQ_POLLIN</code></p>
 <dl>
-<dd>Indicates that at least one message may be received from the specified socket without blocking.</dl>
+<dd>Indicates that at least one message may be received from the specified socket without blocking.</dd></dl>
 <p> <code>ZMQ_POLLOUT</code></p>
 <dl>
-<dd>Indicates that at least one message may be sent to the specified socket without blocking.</dl>
+<dd>Indicates that at least one message may be sent to the specified socket without blocking.</dd></dl>
 <p> The combination of a file descriptor returned by the <i>ZMQ_FD</i> option being ready for reading but no actual events returned by a subsequent retrieval of the <i>ZMQ_EVENTS</i> option is valid; applications should simply ignore this case and restart their polling operation/event loop. </p>
 <table>
 <tr VALIGN=top>
@@ -166,10 +166,10 @@ description: "zmq_getsockopt – get 0MQ socket options"
 <p>The <i>ZMQ_FD</i> option shall retrieve the file descriptor associated with the specified <i>socket</i>. The returned file descriptor can be used to integrate the socket into an existing event loop; the 0MQ library shall signal any pending events on the socket in an <i>edge-triggered</i> fashion by making the file descriptor become ready for reading.</p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- The ability to read from the returned file descriptor does not necessarily indicate that messages are available to be read from, or can be written to, the underlying socket; applications must retrieve the actual event state with a subsequent retrieval of the <i>ZMQ_EVENTS</i> option. </p>
+ The ability to read from the returned file descriptor does not necessarily indicate that messages are available to be read from, or can be written to, the underlying socket; applications must retrieve the actual event state with a subsequent retrieval of the <i>ZMQ_EVENTS</i> option. </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- The returned file descriptor is also used internally by the <i>zmq_send</i> and <i>zmq_recv</i> functions. As the descriptor is edge triggered, applications must update the state of <i>ZMQ_EVENTS</i> after each invocation of <i>zmq_send</i> or <i>zmq_recv</i>.To be more explicit: after calling <i>zmq_send</i> the socket may become readable (and vice versa) without triggering a read event on the file descriptor. </p>
+ The returned file descriptor is also used internally by the <i>zmq_send</i> and <i>zmq_recv</i> functions. As the descriptor is edge triggered, applications must update the state of <i>ZMQ_EVENTS</i> after each invocation of <i>zmq_send</i> or <i>zmq_recv</i>.To be more explicit: after calling <i>zmq_send</i> the socket may become readable (and vice versa) without triggering a read event on the file descriptor. </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Caution</code> </font><br />
  The returned file descriptor is intended for use with a <i>poll</i> or similar system call only. Applications must never attempt to read or write data to it directly, neither should they try to close it.  Option value type </td>
@@ -434,12 +434,12 @@ description: "zmq_getsockopt – get 0MQ socket options"
 </table>
 <h3>ZMQ_LINGER: Retrieve linger period for socket shutdown</h3>
 <p>The <i>ZMQ_LINGER</i> option shall retrieve the linger period for the specified <i>socket</i>. The linger period determines how long pending messages which have yet to be sent to a peer shall linger in memory after a socket is closed with <code><a href="/docs/linux/man/3-zmq_close/">zmq_close</a></code>(3), and further affects the termination of the socket&#8217;s context with <code>zmq_term</code>(3). The following outlines the different behaviours:</p>
+</dd><dl>
+<dd>&bull; The default value of <i>-1</i> specifies an infinite linger period. Pending messages shall not be discarded after a call to <i>zmq_close()</i>; attempting to terminate the socket&#8217;s context with <i>zmq_term()</i> shall block until all pending messages have been sent to a peer.</dd></dl>
 <dl>
-<dd>&bull; The default value of <i>-1</i> specifies an infinite linger period. Pending messages shall not be discarded after a call to <i>zmq_close()</i>; attempting to terminate the socket&#8217;s context with <i>zmq_term()</i> shall block until all pending messages have been sent to a peer.</dl>
+<dd>&bull; The value of <i>0</i> specifies no linger period. Pending messages shall be discarded immediately when the socket is closed with <i>zmq_close()</i>.</dd></dl>
 <dl>
-<dd>&bull; The value of <i>0</i> specifies no linger period. Pending messages shall be discarded immediately when the socket is closed with <i>zmq_close()</i>.</dl>
-<dl>
-<dd>&bull; Positive values specify an upper bound for the linger period in milliseconds. Pending messages shall not be discarded after a call to <i>zmq_close()</i>; attempting to terminate the socket&#8217;s context with <i>zmq_term()</i> shall block until either all pending messages have been sent to a peer, or the linger period expires, after which any pending messages shall be discarded. </p>
+<dd>&bull; Positive values specify an upper bound for the linger period in milliseconds. Pending messages shall not be discarded after a call to <i>zmq_close()</i>; attempting to terminate the socket&#8217;s context with <i>zmq_term()</i> shall block until either all pending messages have been sent to a peer, or the linger period expires, after which any pending messages shall be discarded. </dd>
 <table>
 <tr VALIGN=top>
 <td> Option value type </td>
@@ -753,7 +753,7 @@ description: "zmq_getsockopt – get 0MQ socket options"
 </table>
 <h3>ZMQ_RECONNECT_IVL_MAX: Retrieve maximum reconnection interval</h3>
 <p>The <i>ZMQ_RECONNECT_IVL_MAX</i> option shall retrieve the maximum reconnection interval for the specified <i>socket</i>. This is the maximum period 0MQ shall wait between attempts to reconnect. On each reconnect attempt, the previous interval shall be doubled untill ZMQ_RECONNECT_IVL_MAX is reached. This allows for exponential backoff strategy. Default value means no exponential backoff is performed and reconnect interval calculations are only based on ZMQ_RECONNECT_IVL.</p>
-<dl>
+</dd><dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
  Values less than ZMQ_RECONNECT_IVL will be ignored.  Option value type </td>
 <td> int
@@ -1043,17 +1043,17 @@ description: "zmq_getsockopt – get 0MQ socket options"
 <p>The <i>zmq_getsockopt()</i> function shall return zero if successful. Otherwise it shall return -1 and set <i>errno</i> to one of the values defined below.</p>
 <h2>Errors</h2>
 <p><code>EINVAL</code></p>
-<dl>
-<dd>The requested option <i>option_name</i> is unknown, or the requested <i>option_len</i> or <i>option_value</i> is invalid, or the size of the buffer pointed to by <i>option_value</i>, as specified by <i>option_len</i>, is insufficient for storing the option value.</dl>
+</dd><dl>
+<dd>The requested option <i>option_name</i> is unknown, or the requested <i>option_len</i> or <i>option_value</i> is invalid, or the size of the buffer pointed to by <i>option_value</i>, as specified by <i>option_len</i>, is insufficient for storing the option value.</dd></dl>
 <p> <code>ETERM</code></p>
 <dl>
-<dd>The 0MQ <i>context</i> associated with the specified <i>socket</i> was terminated.</dl>
+<dd>The 0MQ <i>context</i> associated with the specified <i>socket</i> was terminated.</dd></dl>
 <p> <code>ENOTSOCK</code></p>
 <dl>
-<dd>The provided <i>socket</i> was invalid.</dl>
+<dd>The provided <i>socket</i> was invalid.</dd></dl>
 <p> <code>EINTR</code></p>
 <dl>
-<dd>The operation was interrupted by delivery of a signal.</dl>
+<dd>The operation was interrupted by delivery of a signal.</dd></dl>
 <h2>Example</h2>
 <p><code>Retrieving the high water mark for outgoing messages</code>. </p>
 <pre><code>/* Retrieve high water mark into sndhwm */
@@ -1066,3 +1066,4 @@ assert(rc == 0);
 <p><code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3) <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3) <code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)</p>
 <h2>Authors</h2>
 <p>This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></code>m[].</p>
+</dl></dl></dl></dl></dl>

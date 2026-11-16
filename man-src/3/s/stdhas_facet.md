@@ -11,15 +11,11 @@ std::has_facet - std::has_facet
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class Facet&gt;
     (until C++ 11)
-
         bool has_facet(const locale &amp;loc) throw();
-
 template &lt;class Facet&gt;
 (since C++ 11)
-
     bool has_facet(const locale &amp;loc) noexcept;</code></pre> 
 Checks if the locale loc implements the facet Facet. 
 
@@ -34,16 +30,13 @@ Returns true if the facet Facet was installed in the locale loc, false otherwise
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 // minimal custom facet
-
 struct myfacet : public std::locale::facet {
     static std::locale::id id;
 };
 std::locale::id myfacet::id;
 int main()
-
 {
     // loc is a &quot;C&quot; locale with myfacet added
     std::locale loc(std::locale::classic(), new myfacet);

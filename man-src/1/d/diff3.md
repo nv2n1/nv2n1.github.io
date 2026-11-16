@@ -15,36 +15,36 @@ description: "diff3 – compare three files line by line"
 <p> Compare three files line by line. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-A</code>, <code>&#8211;show-all</code></p>
-<dd> output all changes, bracketing conflicts</p>
-<dt><code>-e</code>, <code>&#8211;ed</code></p>
-<dd> output ed script incorporating changes from OLDFILE to YOURFILE into MYFILE</p>
-<dt><code>-E</code>, <code>&#8211;show-overlap</code></p>
-<dd> like <code>-e</code>, but bracket conflicts</p>
-<dt><code>-3</code>, <code>&#8211;easy-only</code></p>
-<dd> like <code>-e</code>, but incorporate only nonoverlapping changes</p>
-<dt><code>-x</code>, <code>&#8211;overlap-only</code></p>
-<dd> like <code>-e</code>, but incorporate only overlapping changes</p>
-<dt><code>-X</code></p>
-<dd> like <code>-x</code>, but bracket conflicts</p>
-<dt><code>-i</code></p>
-<dd> append &#8216;w&#8217; and &#8216;q&#8217; commands to ed scripts</p>
-<dt><code>-m</code>, <code>&#8211;merge</code></p>
-<dd> output actual merged file, according to <code>-A</code> if no other options are given</p>
-<dt><code>-a</code>, <code>&#8211;text</code></p>
-<dd> treat all files as text</p>
-<dt><code>&#8211;strip-trailing-cr</code></p>
-<dd> strip trailing carriage return on input</p>
-<dt><code>-T</code>, <code>&#8211;initial-tab</code></p>
-<dd> make tabs line up by prepending a tab</p>
-<dt><code>&#8211;diff-program</code>=<i>PROGRAM</i></p>
-<dd> use PROGRAM to compare files</p>
-<dt><code>-L</code>, <code>&#8211;label</code>=<i>LABEL</i></p>
-<dd> use LABEL instead of file name (can be repeated up to three times)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-A</code>, <code>&#8211;show-all</code></dt>
+<dd> output all changes, bracketing conflicts</dd>
+<dt><code>-e</code>, <code>&#8211;ed</code></dt>
+<dd> output ed script incorporating changes from OLDFILE to YOURFILE into MYFILE</dd>
+<dt><code>-E</code>, <code>&#8211;show-overlap</code></dt>
+<dd> like <code>-e</code>, but bracket conflicts</dd>
+<dt><code>-3</code>, <code>&#8211;easy-only</code></dt>
+<dd> like <code>-e</code>, but incorporate only nonoverlapping changes</dd>
+<dt><code>-x</code>, <code>&#8211;overlap-only</code></dt>
+<dd> like <code>-e</code>, but incorporate only overlapping changes</dd>
+<dt><code>-X</code></dt>
+<dd> like <code>-x</code>, but bracket conflicts</dd>
+<dt><code>-i</code></dt>
+<dd> append &#8216;w&#8217; and &#8216;q&#8217; commands to ed scripts</dd>
+<dt><code>-m</code>, <code>&#8211;merge</code></dt>
+<dd> output actual merged file, according to <code>-A</code> if no other options are given</dd>
+<dt><code>-a</code>, <code>&#8211;text</code></dt>
+<dd> treat all files as text</dd>
+<dt><code>&#8211;strip-trailing-cr</code></dt>
+<dd> strip trailing carriage return on input</dd>
+<dt><code>-T</code>, <code>&#8211;initial-tab</code></dt>
+<dd> make tabs line up by prepending a tab</dd>
+<dt><code>&#8211;diff-program</code>=<i>PROGRAM</i></dt>
+<dd> use PROGRAM to compare files</dd>
+<dt><code>-L</code>, <code>&#8211;label</code>=<i>LABEL</i></dt>
+<dd> use LABEL instead of file name (can be repeated up to three times)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> The default output format is a somewhat human-readable representation of the changes. </p>
 <p> The <code>-e</code>, <code>-E</code>, <code>-x</code>, <code>-X</code> (and corresponding long) options cause an ed script to be output instead of the default. </p>
 <p> Finally, the <code>-m</code> (<code>&#8211;merge</code>) option causes diff3 to do the merge internally and output the actual merged file. For unusual input, this is more robust than using ed. </p>
@@ -63,6 +63,6 @@ description: "diff3 – compare three files line by line"
 <p> The full documentation for <code>diff3</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>diff3</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info diff3</code></dl>
+</dt><dd> <code>info diff3</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

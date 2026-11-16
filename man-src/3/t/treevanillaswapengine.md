@@ -16,13 +16,13 @@ description: "QuantLib::TreeVanillaSwapEngine – Numerical lattice engine for s
 <p> <code>Constructors</code><br />
  <code>Note:</code></p>
 <dl COMPACT>
-<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dl>
+<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dd></dl>
 <p> <code>TreeVanillaSwapEngine</code> (const boost::shared_ptr&lt; <code>ShortRateModel</code> &gt; &amp;, Size timeSteps, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <p> <code>TreeVanillaSwapEngine</code> (const boost::shared_ptr&lt; <code>ShortRateModel</code> &gt; &amp;, const <code>TimeGrid</code> &amp;timeGrid, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <h2>Detailed Description</h2>
 <p>Numerical lattice engine for simple swaps. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calculations are checked against known good results</dl>
+<dd>calculations are checked against known good results</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

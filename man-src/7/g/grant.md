@@ -54,40 +54,40 @@ GRANT <i>role</i> [, ...] TO <i>rolename</i> [, ...] [ WITH ADMIN OPTION ]</pre>
 <p> Depending on the type of object, the initial default privileges might include granting some privileges to PUBLIC. The default is no public access for tables, columns, schemas, and tablespaces; CONNECT privilege and TEMP table creation privilege for databases; EXECUTE privilege for functions; and USAGE privilege for languages. The object owner can of course revoke these privileges. (For maximum security, issue the <code>REVOKE</code> in the same transaction that creates the object; then there is no window in which another user can use the object.) </p>
 <p> The possible privileges are:</p>
 <dl>
-<dt><code>SELECT</code></p>
-<dd>Allows SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] from any column, or the specific columns listed, of the specified table, view, or sequence. Also allows the use of COPY [<code><a href="/docs/linux/man/7-copy/">copy</a></code>(7)] TO. This privilege is also needed to reference existing column values in UPDATE [<code><a href="/docs/linux/man/7-update/">update</a></code>(7)] or DELETE [<code><a href="/docs/linux/man/7-delete/">delete</a></code>(7)]. For sequences, this privilege also allows the use of the <code>currval</code> function.</p>
-<dt><code>INSERT</code></p>
-<dd>Allows INSERT [<code><a href="/docs/linux/man/7-insert/">insert</a></code>(7)] of a new row into the specified table. If specific columns are listed, only those columns may be assigned to in the <code>INSERT</code> command (other columns will therefore receive default values). Also allows COPY [<code><a href="/docs/linux/man/7-copy/">copy</a></code>(7)] FROM.</p>
-<dt><code>UPDATE</code></p>
-<dd>Allows UPDATE [<code><a href="/docs/linux/man/7-update/">update</a></code>(7)] of any column, or the specific columns listed, of the specified table. (In practice, any nontrivial <code>UPDATE</code> command will require SELECT privilege as well, since it must reference table columns to determine which rows to update, and/or to compute new values for columns.) SELECT &#8230; FOR UPDATE and SELECT &#8230; FOR SHARE also require this privilege on at least one column, in addition to the SELECT privilege. For sequences, this privilege allows the use of the <code>nextval</code> and <code>setval</code> functions.</p>
-<dt><code>DELETE</code></p>
-<dd>Allows DELETE [<code><a href="/docs/linux/man/7-delete/">delete</a></code>(7)] of a row from the specified table. (In practice, any nontrivial <code>DELETE</code> command will require SELECT privilege as well, since it must reference table columns to determine which rows to delete.)</p>
-<dt><code>TRUNCATE</code></p>
-<dd>Allows TRUNCATE [<code><a href="/docs/linux/man/7-truncate/">truncate</a></code>(7)] on the specified table.</p>
-<dt><code>REFERENCES</code></p>
-<dd>To create a foreign key constraint, it is necessary to have this privilege on both the referencing and referenced columns. The privilege may be granted for all columns of a table, or just specific columns.</p>
-<dt><code>TRIGGER</code></p>
-<dd>Allows the creation of a trigger on the specified table. (See the CREATE TRIGGER [<code><a href="/docs/linux/man/7-create_trigger/">create_trigger</a></code>(7)] statement.)</p>
-<dt><code>CREATE</code></p>
-<dd>For databases, allows new schemas to be created within the database. </p>
+<dt><code>SELECT</code></dt>
+<dd>Allows SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] from any column, or the specific columns listed, of the specified table, view, or sequence. Also allows the use of COPY [<code><a href="/docs/linux/man/7-copy/">copy</a></code>(7)] TO. This privilege is also needed to reference existing column values in UPDATE [<code><a href="/docs/linux/man/7-update/">update</a></code>(7)] or DELETE [<code><a href="/docs/linux/man/7-delete/">delete</a></code>(7)]. For sequences, this privilege also allows the use of the <code>currval</code> function.</dd>
+<dt><code>INSERT</code></dt>
+<dd>Allows INSERT [<code><a href="/docs/linux/man/7-insert/">insert</a></code>(7)] of a new row into the specified table. If specific columns are listed, only those columns may be assigned to in the <code>INSERT</code> command (other columns will therefore receive default values). Also allows COPY [<code><a href="/docs/linux/man/7-copy/">copy</a></code>(7)] FROM.</dd>
+<dt><code>UPDATE</code></dt>
+<dd>Allows UPDATE [<code><a href="/docs/linux/man/7-update/">update</a></code>(7)] of any column, or the specific columns listed, of the specified table. (In practice, any nontrivial <code>UPDATE</code> command will require SELECT privilege as well, since it must reference table columns to determine which rows to update, and/or to compute new values for columns.) SELECT &#8230; FOR UPDATE and SELECT &#8230; FOR SHARE also require this privilege on at least one column, in addition to the SELECT privilege. For sequences, this privilege allows the use of the <code>nextval</code> and <code>setval</code> functions.</dd>
+<dt><code>DELETE</code></dt>
+<dd>Allows DELETE [<code><a href="/docs/linux/man/7-delete/">delete</a></code>(7)] of a row from the specified table. (In practice, any nontrivial <code>DELETE</code> command will require SELECT privilege as well, since it must reference table columns to determine which rows to delete.)</dd>
+<dt><code>TRUNCATE</code></dt>
+<dd>Allows TRUNCATE [<code><a href="/docs/linux/man/7-truncate/">truncate</a></code>(7)] on the specified table.</dd>
+<dt><code>REFERENCES</code></dt>
+<dd>To create a foreign key constraint, it is necessary to have this privilege on both the referencing and referenced columns. The privilege may be granted for all columns of a table, or just specific columns.</dd>
+<dt><code>TRIGGER</code></dt>
+<dd>Allows the creation of a trigger on the specified table. (See the CREATE TRIGGER [<code><a href="/docs/linux/man/7-create_trigger/">create_trigger</a></code>(7)] statement.)</dd>
+<dt><code>CREATE</code></dt>
+<dd>For databases, allows new schemas to be created within the database. </dd>
 <p> For schemas, allows new objects to be created within the schema. To rename an existing object, you must own the object <code>and</code> have this privilege for the containing schema. </p>
 <p> For tablespaces, allows tables, indexes, and temporary files to be created within the tablespace, and allows databases to be created that have the tablespace as their default tablespace. (Note that revoking this privilege will not alter the placement of existing objects.)</p>
-<dt><code>CONNECT</code></p>
-<dd>Allows the user to connect to the specified database. This privilege is checked at connection startup (in addition to checking any restrictions imposed by <i>pg_hba.conf</i>).</p>
-<dt><code>TEMPORARY</code></p>
+<dt><code>CONNECT</code></dt>
+<dd>Allows the user to connect to the specified database. This privilege is checked at connection startup (in addition to checking any restrictions imposed by <i>pg_hba.conf</i>).</dd>
+<dt><code>TEMPORARY</code></dt>
 <dd>
-<dt><code>TEMP</code></p>
-<dd>Allows temporary tables to be created while using the specified database.</p>
-<dt><code>EXECUTE</code></p>
-<dd>Allows the use of the specified function and the use of any operators that are implemented on top of the function. This is the only type of privilege that is applicable to functions. (This syntax works for aggregate functions, as well.)</p>
-<dt><code>USAGE</code></p>
-<dd>For procedural languages, allows the use of the specified language for the creation of functions in that language. This is the only type of privilege that is applicable to procedural languages. </p>
+</dd><dt><code>TEMP</code></dt>
+<dd>Allows temporary tables to be created while using the specified database.</dd>
+<dt><code>EXECUTE</code></dt>
+<dd>Allows the use of the specified function and the use of any operators that are implemented on top of the function. This is the only type of privilege that is applicable to functions. (This syntax works for aggregate functions, as well.)</dd>
+<dt><code>USAGE</code></dt>
+<dd>For procedural languages, allows the use of the specified language for the creation of functions in that language. This is the only type of privilege that is applicable to procedural languages. </dd>
 <p> For schemas, allows access to objects contained in the specified schema (assuming that the objects&#8217; own privilege requirements are also met). Essentially this allows the grantee to &#8220;look up&#8221; objects within the schema. Without this permission, it is still possible to see the object names, e.g. by querying the system tables. Also, after revoking this permission, existing backends might have statements that have previously performed this lookup, so this is not a completely secure way to prevent object access. </p>
 <p> For sequences, this privilege allows the use of the <code>currval</code> and <code>nextval</code> functions. </p>
 <p> For foreign-data wrappers, this privilege enables the grantee to create new servers using that foreign-data wrapper. </p>
 <p> For servers, this privilege enables the grantee to query the options of the server and associated user mappings.</p>
-<dt><code>ALL PRIVILEGES</code></p>
-<dd>Grant all of the available privileges at once. The PRIVILEGES key word is optional in PostgreSQL, though it is required by strict SQL.</dl>
+<dt><code>ALL PRIVILEGES</code></dt>
+<dd>Grant all of the available privileges at once. The PRIVILEGES key word is optional in PostgreSQL, though it is required by strict SQL.</dd></dl>
 <p> The privileges required by other commands are listed on the reference page of the respective command.</p>
 <h3>Grant On Roles</h3>
 <p>This variant of the <code>GRANT</code> command grants membership in a role to one or more other roles. Membership in a role is significant because it conveys the privileges granted to a role to each of its members. </p>

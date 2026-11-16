@@ -23,117 +23,117 @@ description: "lvm — LVM2 tools"
 <h2>Built-In Commands</h2>
 <p>The following commands are built into lvm without links normally being created in the filesystem for them. </p>
 <dl>
-<dt><code>config</code></p>
-<dd>The same as <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) below.</p>
-<dt><code>devtypes</code></p>
-<dd>Display the recognised built-in block device types.</p>
-<dt><code>dumpconfig</code></p>
-<dd>The same as <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) below.</p>
-<dt><code>formats</code></p>
-<dd>Display recognised metadata formats.</p>
-<dt><code>fullreport</code></p>
-<dd>Report information about PVs, PV segments, VGs, LVs and LV segments, all at once.</p>
-<dt><code>help</code></p>
-<dd>Display the help text.</p>
-<dt><code>lastlog</code></p>
-<dd>Display log report of last command run in LVM shell if command log reporting is enabled.</p>
-<dt><code>lvpoll</code></p>
-<dd>Complete lvmpolld operations (Internal command).</p>
-<dt><code>segtypes</code></p>
-<dd>Display recognised Logical Volume segment types.</p>
-<dt><code>systemid</code></p>
-<dd>Display any system ID currently set on this host.</p>
-<dt><code>tags</code></p>
-<dd>Display any tags defined on this host.</p>
-<dt><code>version</code></p>
-<dd>Display version information.</dl>
+<dt><code>config</code></dt>
+<dd>The same as <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) below.</dd>
+<dt><code>devtypes</code></dt>
+<dd>Display the recognised built-in block device types.</dd>
+<dt><code>dumpconfig</code></dt>
+<dd>The same as <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) below.</dd>
+<dt><code>formats</code></dt>
+<dd>Display recognised metadata formats.</dd>
+<dt><code>fullreport</code></dt>
+<dd>Report information about PVs, PV segments, VGs, LVs and LV segments, all at once.</dd>
+<dt><code>help</code></dt>
+<dd>Display the help text.</dd>
+<dt><code>lastlog</code></dt>
+<dd>Display log report of last command run in LVM shell if command log reporting is enabled.</dd>
+<dt><code>lvpoll</code></dt>
+<dd>Complete lvmpolld operations (Internal command).</dd>
+<dt><code>segtypes</code></dt>
+<dd>Display recognised Logical Volume segment types.</dd>
+<dt><code>systemid</code></dt>
+<dd>Display any system ID currently set on this host.</dd>
+<dt><code>tags</code></dt>
+<dd>Display any tags defined on this host.</dd>
+<dt><code>version</code></dt>
+<dd>Display version information.</dd></dl>
 <h2>Commands</h2>
 <p>The following commands implement the core LVM functionality. </p>
 <dl>
-<dt><code>pvchange</code></p>
-<dd>Change attributes of a Physical Volume.</p>
-<dt><code>pvck</code></p>
-<dd>Check Physical Volume metadata.</p>
-<dt><code>pvcreate</code></p>
-<dd>Initialize a disk or partition for use by LVM.</p>
-<dt><code>pvdisplay</code></p>
-<dd>Display attributes of a Physical Volume.</p>
-<dt><code>pvmove</code></p>
-<dd>Move Physical Extents.</p>
-<dt><code>pvremove</code></p>
-<dd>Remove a Physical Volume.</p>
-<dt><code>pvresize</code></p>
-<dd>Resize a disk or partition in use by LVM2.</p>
-<dt><code>pvs</code></p>
-<dd>Report information about Physical Volumes.</p>
-<dt><code>pvscan</code></p>
-<dd>Scan all disks for Physical Volumes.</p>
-<dt><code>vgcfgbackup</code></p>
-<dd>Backup Volume Group descriptor area.</p>
-<dt><code>vgcfgrestore</code></p>
-<dd>Restore Volume Group descriptor area.</p>
-<dt><code>vgchange</code></p>
-<dd>Change attributes of a Volume Group.</p>
-<dt><code>vgck</code></p>
-<dd>Check Volume Group metadata.</p>
-<dt><code>vgconvert</code></p>
-<dd>Convert Volume Group metadata format.</p>
-<dt><code>vgcreate</code></p>
-<dd>Create a Volume Group.</p>
-<dt><code>vgdisplay</code></p>
-<dd>Display attributes of Volume Groups.</p>
-<dt><code>vgexport</code></p>
-<dd>Make volume Groups unknown to the system.</p>
-<dt><code>vgextend</code></p>
-<dd>Add Physical Volumes to a Volume Group.</p>
-<dt><code>vgimport</code></p>
-<dd>Make exported Volume Groups known to the system.</p>
-<dt><code>vgimportclone</code></p>
-<dd>Import and rename duplicated Volume Group (e.g. a hardware snapshot).</p>
-<dt><code>vgmerge</code></p>
-<dd>Merge two Volume Groups.</p>
-<dt><code>vgmknodes</code></p>
-<dd>Recreate Volume Group directory and Logical Volume special files</p>
-<dt><code>vgreduce</code></p>
-<dd>Reduce a Volume Group by removing one or more Physical Volumes.</p>
-<dt><code>vgremove</code></p>
-<dd>Remove a Volume Group.</p>
-<dt><code>vgrename</code></p>
-<dd>Rename a Volume Group.</p>
-<dt><code>vgs</code></p>
-<dd>Report information about Volume Groups.</p>
-<dt><code>vgscan</code></p>
-<dd>Scan all disks for Volume Groups.</p>
-<dt><code>vgsplit</code></p>
-<dd>Split a Volume Group into two, moving any logical volumes from one Volume Group to another by moving entire Physical Volumes.</p>
-<dt><code>lvchange</code></p>
-<dd>Change attributes of a Logical Volume.</p>
-<dt><code>lvconvert</code></p>
-<dd>Convert a Logical Volume from linear to mirror or snapshot.</p>
-<dt><code>lvcreate</code></p>
-<dd>Create a Logical Volume in an existing Volume Group.</p>
-<dt><code>lvdisplay</code></p>
-<dd>Display attributes of a Logical Volume.</p>
-<dt><code>lvextend</code></p>
-<dd>Extend the size of a Logical Volume.</p>
-<dt><code>lvmconfig</code></p>
-<dd>Display the configuration information after loading <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) and any other configuration files.</p>
-<dt><code>lvmdiskscan</code></p>
-<dd>Scan for all devices visible to LVM2.</p>
-<dt><code>lvmdump</code></p>
-<dd>Create lvm2 information dumps for diagnostic purposes.</p>
-<dt><code>lvreduce</code></p>
-<dd>Reduce the size of a Logical Volume.</p>
-<dt><code>lvremove</code></p>
-<dd>Remove a Logical Volume.</p>
-<dt><code>lvrename</code></p>
-<dd>Rename a Logical Volume.</p>
-<dt><code>lvresize</code></p>
-<dd>Resize a Logical Volume.</p>
-<dt><code>lvs</code></p>
-<dd>Report information about Logical Volumes.</p>
-<dt><code>lvscan</code></p>
-<dd>Scan (all disks) for Logical Volumes.</dl>
+<dt><code>pvchange</code></dt>
+<dd>Change attributes of a Physical Volume.</dd>
+<dt><code>pvck</code></dt>
+<dd>Check Physical Volume metadata.</dd>
+<dt><code>pvcreate</code></dt>
+<dd>Initialize a disk or partition for use by LVM.</dd>
+<dt><code>pvdisplay</code></dt>
+<dd>Display attributes of a Physical Volume.</dd>
+<dt><code>pvmove</code></dt>
+<dd>Move Physical Extents.</dd>
+<dt><code>pvremove</code></dt>
+<dd>Remove a Physical Volume.</dd>
+<dt><code>pvresize</code></dt>
+<dd>Resize a disk or partition in use by LVM2.</dd>
+<dt><code>pvs</code></dt>
+<dd>Report information about Physical Volumes.</dd>
+<dt><code>pvscan</code></dt>
+<dd>Scan all disks for Physical Volumes.</dd>
+<dt><code>vgcfgbackup</code></dt>
+<dd>Backup Volume Group descriptor area.</dd>
+<dt><code>vgcfgrestore</code></dt>
+<dd>Restore Volume Group descriptor area.</dd>
+<dt><code>vgchange</code></dt>
+<dd>Change attributes of a Volume Group.</dd>
+<dt><code>vgck</code></dt>
+<dd>Check Volume Group metadata.</dd>
+<dt><code>vgconvert</code></dt>
+<dd>Convert Volume Group metadata format.</dd>
+<dt><code>vgcreate</code></dt>
+<dd>Create a Volume Group.</dd>
+<dt><code>vgdisplay</code></dt>
+<dd>Display attributes of Volume Groups.</dd>
+<dt><code>vgexport</code></dt>
+<dd>Make volume Groups unknown to the system.</dd>
+<dt><code>vgextend</code></dt>
+<dd>Add Physical Volumes to a Volume Group.</dd>
+<dt><code>vgimport</code></dt>
+<dd>Make exported Volume Groups known to the system.</dd>
+<dt><code>vgimportclone</code></dt>
+<dd>Import and rename duplicated Volume Group (e.g. a hardware snapshot).</dd>
+<dt><code>vgmerge</code></dt>
+<dd>Merge two Volume Groups.</dd>
+<dt><code>vgmknodes</code></dt>
+<dd>Recreate Volume Group directory and Logical Volume special files</dd>
+<dt><code>vgreduce</code></dt>
+<dd>Reduce a Volume Group by removing one or more Physical Volumes.</dd>
+<dt><code>vgremove</code></dt>
+<dd>Remove a Volume Group.</dd>
+<dt><code>vgrename</code></dt>
+<dd>Rename a Volume Group.</dd>
+<dt><code>vgs</code></dt>
+<dd>Report information about Volume Groups.</dd>
+<dt><code>vgscan</code></dt>
+<dd>Scan all disks for Volume Groups.</dd>
+<dt><code>vgsplit</code></dt>
+<dd>Split a Volume Group into two, moving any logical volumes from one Volume Group to another by moving entire Physical Volumes.</dd>
+<dt><code>lvchange</code></dt>
+<dd>Change attributes of a Logical Volume.</dd>
+<dt><code>lvconvert</code></dt>
+<dd>Convert a Logical Volume from linear to mirror or snapshot.</dd>
+<dt><code>lvcreate</code></dt>
+<dd>Create a Logical Volume in an existing Volume Group.</dd>
+<dt><code>lvdisplay</code></dt>
+<dd>Display attributes of a Logical Volume.</dd>
+<dt><code>lvextend</code></dt>
+<dd>Extend the size of a Logical Volume.</dd>
+<dt><code>lvmconfig</code></dt>
+<dd>Display the configuration information after loading <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) and any other configuration files.</dd>
+<dt><code>lvmdiskscan</code></dt>
+<dd>Scan for all devices visible to LVM2.</dd>
+<dt><code>lvmdump</code></dt>
+<dd>Create lvm2 information dumps for diagnostic purposes.</dd>
+<dt><code>lvreduce</code></dt>
+<dd>Reduce the size of a Logical Volume.</dd>
+<dt><code>lvremove</code></dt>
+<dd>Remove a Logical Volume.</dd>
+<dt><code>lvrename</code></dt>
+<dd>Rename a Logical Volume.</dd>
+<dt><code>lvresize</code></dt>
+<dd>Resize a Logical Volume.</dd>
+<dt><code>lvs</code></dt>
+<dd>Report information about Logical Volumes.</dd>
+<dt><code>lvscan</code></dt>
+<dd>Scan (all disks) for Logical Volumes.</dd></dl>
 <p> The following LVM1 commands are not implemented in LVM2: <code>lvmchange</code>, <code>lvmsadc</code>, <code>lvmsar</code>, <code>pvdata</code>. For performance metrics, use <code><a href="/docs/linux/man/8-dmstats/">dmstats</a></code>(8) or to manipulate the kernel device-mapper driver used by LVM2 directly, use <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8).</p>
 <h2>Valid Names</h2>
 <p>The valid characters for VG and LV names are: <code>a</code>&#8211;<code>z</code> <code>A</code>&#8211;<code>Z</code> <code>0</code>&#8211;<code>9</code> <code>+ _ . &#8211;</code> </p>
@@ -164,44 +164,44 @@ description: "lvm — LVM2 tools"
 <p>All tools return a status code of zero on success or non-zero on failure. The non-zero codes distinguish only between the broad categories of unrecognised commands, problems processing the command line arguments and any other failures. As LVM remains under active development, the code used in a specific case occasionally changes between releases. Message text may also change.</p>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>HOME</code></p>
-<dd>Directory containing <i>.lvm_history</i> if the internal readline shell is invoked.</p>
-<dt><code>LVM_OUT_FD</code></p>
-<dd>File descriptor to use for common output from LVM commands.</p>
-<dt><code>LVM_ERR_FD</code></p>
-<dd>File descriptor to use for error output from LVM commands.</p>
-<dt><code>LVM_REPORT_FD</code></p>
-<dd>File descriptor to use for report output from LVM commands.</p>
-<dt><code>LVM_COMMAND_PROFILE</code></p>
-<dd>Name of default command profile to use for LVM commands. This profile is overriden by direct use of <code>&#8211;commandprofile</code> command line option.</p>
-<dt><code>LVM_RUN_BY_DMEVENTD</code></p>
-<dd>This variable is normally set by dmeventd plugin to inform lvm2 command it is running from dmeventd plugin so lvm2 takes some extra action to avoid comunication and deadlocks with dmeventd.</p>
-<dt><code>LVM_SYSTEM_DIR</code></p>
-<dd>Directory containing <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) and other LVM system files. Defaults to &quot;<i>/etc/lvm</i>&quot;.</p>
-<dt><code>LVM_SUPPRESS_FD_WARNINGS</code></p>
-<dd>Suppress warnings about unexpected file descriptors passed into LVM.</p>
-<dt><code>LVM_SUPPRESS_SYSLOG</code></p>
-<dd>Suppress contacting syslog.</p>
-<dt><code>LVM_VG_NAME</code></p>
-<dd>The Volume Group name that is assumed for any reference to a Logical Volume that doesn&#8217;t specify a path. Not set by default.</p>
-<dt><code>LVM_LVMPOLLD_PIDFILE</code></p>
-<dd>Path to the file that stores the lvmpolld process ID.</p>
-<dt><code>LVM_LVMPOLLD_SOCKET</code></p>
-<dd>Path to the socket used to communicate with lvmpolld..</p>
-<dt><code>LVM_LOG_FILE_EPOCH</code></p>
-<dd>A string of up to 32 letters appended to the log filename and followed by the process ID and a startup timestamp using this format string &quot;_%s_%d_%llu&quot;. When set, each process logs to a separate file.</p>
-<dt><code>LVM_LOG_FILE_MAX_LINES</code></p>
-<dd>If more than this number of lines are sent to the log file, the command gets aborted. Automated tests use this to terminate looping commands.</p>
-<dt><code>LVM_EXPECTED_EXIT_STATUS</code></p>
-<dd>The status anticipated when the process exits. Use &quot;&gt;N&quot; to match any status greater than N. If the actual exit status matches and a log file got produced, it is deleted. <code>LVM_LOG_FILE_EPOCH</code> and <code>LVM_EXPECTED_EXIT_STATUS</code> together allow automated test scripts to discard uninteresting log data.</p>
-<dt><code>LVM_SUPPRESS_LOCKING_FAILURE_MESSAGES</code></p>
-<dd>Used to suppress warning messages when the configured locking is known to be unavailable.</p>
-<dt><code>DM_ABORT_ON_INTERNAL_ERRORS</code></p>
-<dd>Abort processing if the code detects a non-fatal internal error.</p>
-<dt><code>DM_DISABLE_UDEV</code></p>
-<dd>Avoid interaction with udev. LVM will manage the relevant nodes in /dev directly.</p>
-<dt><code>DM_DEBUG_WITH_LINE_NUMBERS</code></p>
-<dd>Prepends source file name and code line number with libdm debugging.</dl>
+<dt><code>HOME</code></dt>
+<dd>Directory containing <i>.lvm_history</i> if the internal readline shell is invoked.</dd>
+<dt><code>LVM_OUT_FD</code></dt>
+<dd>File descriptor to use for common output from LVM commands.</dd>
+<dt><code>LVM_ERR_FD</code></dt>
+<dd>File descriptor to use for error output from LVM commands.</dd>
+<dt><code>LVM_REPORT_FD</code></dt>
+<dd>File descriptor to use for report output from LVM commands.</dd>
+<dt><code>LVM_COMMAND_PROFILE</code></dt>
+<dd>Name of default command profile to use for LVM commands. This profile is overriden by direct use of <code>&#8211;commandprofile</code> command line option.</dd>
+<dt><code>LVM_RUN_BY_DMEVENTD</code></dt>
+<dd>This variable is normally set by dmeventd plugin to inform lvm2 command it is running from dmeventd plugin so lvm2 takes some extra action to avoid comunication and deadlocks with dmeventd.</dd>
+<dt><code>LVM_SYSTEM_DIR</code></dt>
+<dd>Directory containing <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) and other LVM system files. Defaults to &quot;<i>/etc/lvm</i>&quot;.</dd>
+<dt><code>LVM_SUPPRESS_FD_WARNINGS</code></dt>
+<dd>Suppress warnings about unexpected file descriptors passed into LVM.</dd>
+<dt><code>LVM_SUPPRESS_SYSLOG</code></dt>
+<dd>Suppress contacting syslog.</dd>
+<dt><code>LVM_VG_NAME</code></dt>
+<dd>The Volume Group name that is assumed for any reference to a Logical Volume that doesn&#8217;t specify a path. Not set by default.</dd>
+<dt><code>LVM_LVMPOLLD_PIDFILE</code></dt>
+<dd>Path to the file that stores the lvmpolld process ID.</dd>
+<dt><code>LVM_LVMPOLLD_SOCKET</code></dt>
+<dd>Path to the socket used to communicate with lvmpolld..</dd>
+<dt><code>LVM_LOG_FILE_EPOCH</code></dt>
+<dd>A string of up to 32 letters appended to the log filename and followed by the process ID and a startup timestamp using this format string &quot;_%s_%d_%llu&quot;. When set, each process logs to a separate file.</dd>
+<dt><code>LVM_LOG_FILE_MAX_LINES</code></dt>
+<dd>If more than this number of lines are sent to the log file, the command gets aborted. Automated tests use this to terminate looping commands.</dd>
+<dt><code>LVM_EXPECTED_EXIT_STATUS</code></dt>
+<dd>The status anticipated when the process exits. Use &quot;&gt;N&quot; to match any status greater than N. If the actual exit status matches and a log file got produced, it is deleted. <code>LVM_LOG_FILE_EPOCH</code> and <code>LVM_EXPECTED_EXIT_STATUS</code> together allow automated test scripts to discard uninteresting log data.</dd>
+<dt><code>LVM_SUPPRESS_LOCKING_FAILURE_MESSAGES</code></dt>
+<dd>Used to suppress warning messages when the configured locking is known to be unavailable.</dd>
+<dt><code>DM_ABORT_ON_INTERNAL_ERRORS</code></dt>
+<dd>Abort processing if the code detects a non-fatal internal error.</dd>
+<dt><code>DM_DISABLE_UDEV</code></dt>
+<dd>Avoid interaction with udev. LVM will manage the relevant nodes in /dev directly.</dd>
+<dt><code>DM_DEBUG_WITH_LINE_NUMBERS</code></dt>
+<dd>Prepends source file name and code line number with libdm debugging.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/lvm/lvm.conf</i><br />
  <i>$HOME/.lvm_history</i></p>

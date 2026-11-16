@@ -31,20 +31,20 @@ description: "rrdcreate – Set up a new Round Robin Database"
 <p> <font SIZE="-1"><code>DS:</code></font><i>ds-name</i><code>:</code><i></i><font SIZE="-1"><i>COMPUTE</i></font><i></i><code>:</code><i>rpn-expression</i> </p>
 <p> In order to decide which data source type to use, review the definitions that follow. Also consult the section on &#8220;<font SIZE="-1">HOW</font> <font SIZE="-1">TO</font> <font SIZE="-1">MEASURE</font>&#8221; for further insight.</p>
 <dl>
-<dt><font SIZE="-1"><code>GAUGE</code></font></p>
-<dd> is for things like temperatures or number of people in a room or the value of a RedHat share.</p>
-<dt><font SIZE="-1"><code>COUNTER</code></font></p>
-<dd> is for continuous incrementing counters like the ifInOctets counter in a router. The <font SIZE="-1"><code>COUNTER</code></font> data source assumes that the counter never decreases, except when a counter overflows. The update function takes the overflow into account. The counter is stored as a per-second rate. When the counter overflows, RRDtool checks if the overflow happened at the 32bit or 64bit border and acts accordingly by adding an appropriate value to the result.</p>
-<dt><font SIZE="-1"><code>DERIVE</code></font></p>
-<dd> will store the derivative of the line going from the last to the current value of the data source. This can be useful for gauges, for example, to measure the rate of people entering or leaving a room. Internally, derive works exactly like <font SIZE="-1">COUNTER</font> but without overflow checks. So if your counter does not reset at 32 or 64 bit you might want to use <font SIZE="-1">DERIVE</font> and combine it with a <font SIZE="-1">MIN</font> value of 0. </p>
+<dt><font SIZE="-1"><code>GAUGE</code></font></dt>
+<dd> is for things like temperatures or number of people in a room or the value of a RedHat share.</dd>
+<dt><font SIZE="-1"><code>COUNTER</code></font></dt>
+<dd> is for continuous incrementing counters like the ifInOctets counter in a router. The <font SIZE="-1"><code>COUNTER</code></font> data source assumes that the counter never decreases, except when a counter overflows. The update function takes the overflow into account. The counter is stored as a per-second rate. When the counter overflows, RRDtool checks if the overflow happened at the 32bit or 64bit border and acts accordingly by adding an appropriate value to the result.</dd>
+<dt><font SIZE="-1"><code>DERIVE</code></font></dt>
+<dd> will store the derivative of the line going from the last to the current value of the data source. This can be useful for gauges, for example, to measure the rate of people entering or leaving a room. Internally, derive works exactly like <font SIZE="-1">COUNTER</font> but without overflow checks. So if your counter does not reset at 32 or 64 bit you might want to use <font SIZE="-1">DERIVE</font> and combine it with a <font SIZE="-1">MIN</font> value of 0. </dd>
 <p> <font SIZE="-1"><code>NOTE</code></font><code> on </code><font SIZE="-1"><code>COUNTER</code></font><code> vs </code><font SIZE="-1"><code>DERIVE</code></font> </p>
 <p> by Don Baarda &lt;don.baarda [at] baesystems.com&gt; </p>
 <p> If you cannot tolerate ever mistaking the occasional counter reset for a legitimate counter wrap, and would prefer &#8220;Unknowns&#8221; for all legitimate counter wraps and resets, always use <font SIZE="-1">DERIVE</font> with min=0. Otherwise, using <font SIZE="-1">COUNTER</font> with a suitable max will return correct values for all legitimate counter wraps, mark some counter resets as &#8220;Unknown&#8221;, but can mistake some counter resets for a legitimate counter wrap. </p>
 <p> For a 5 minute step and 32-bit counter, the probability of mistaking a counter reset for a legitimate wrap is arguably about 0.8% per 1Mbps of maximum bandwidth. Note that this equates to 80% for 100Mbps interfaces, so for high bandwidth interfaces and a 32bit counter, <font SIZE="-1">DERIVE</font> with min=0 is probably preferable. If you are using a 64bit counter, just about any max setting will eliminate the possibility of mistaking a reset for a counter wrap.</p>
-<dt><font SIZE="-1"><code>ABSOLUTE</code></font></p>
-<dd> is for counters which get reset upon reading. This is used for fast counters which tend to overflow. So instead of reading them normally you reset them after every read to make sure you have a maximum time available before the next overflow. Another usage is for things you count like number of messages since the last update.</p>
-<dt><font SIZE="-1"><code>COMPUTE</code></font></p>
-<dd> is for storing the result of a formula applied to other data sources in the <font SIZE="-1"><code>RRD</code></font>. This data source is not supplied a value on update, but rather its Primary Data Points (PDPs) are computed from the PDPs of the data sources according to the rpn-expression that defines the formula. Consolidation functions are then applied normally to the PDPs of the <font SIZE="-1">COMPUTE</font> data source (that is the rpn-expression is only applied to generate PDPs). In database software, such data sets are referred to as &#8220;virtual&#8221; or &#8220;computed&#8221; columns.</dl>
+<dt><font SIZE="-1"><code>ABSOLUTE</code></font></dt>
+<dd> is for counters which get reset upon reading. This is used for fast counters which tend to overflow. So instead of reading them normally you reset them after every read to make sure you have a maximum time available before the next overflow. Another usage is for things you count like number of messages since the last update.</dd>
+<dt><font SIZE="-1"><code>COMPUTE</code></font></dt>
+<dd> is for storing the result of a formula applied to other data sources in the <font SIZE="-1"><code>RRD</code></font>. This data source is not supplied a value on update, but rather its Primary Data Points (PDPs) are computed from the PDPs of the data sources according to the rpn-expression that defines the formula. Consolidation functions are then applied normally to the PDPs of the <font SIZE="-1">COMPUTE</font> data source (that is the rpn-expression is only applied to generate PDPs). In database software, such data sets are referred to as &#8220;virtual&#8221; or &#8220;computed&#8221; columns.</dd></dl>
 <p> <i>heartbeat</i> defines the maximum number of seconds that may pass between two updates of this data source before the value of the data source is assumed to be <i>*UNKNOWN*</i>. </p>
 <p> <i>min</i> and <i>max</i> define the expected range values for data supplied by a data source. If <i>min</i> and/or <i>max</i> are specified any value outside the defined range will be regarded as <i>*UNKNOWN*</i>. If you do not know or care about min and max, set them to U for unknown. Note that min and max always refer to the processed values of the <font SIZE="-1">DS</font>. For a traffic-<font SIZE="-1"><code>COUNTER</code></font> type <font SIZE="-1">DS</font> this would be the maximum and minimum data-rate expected from the device. </p>
 <p> <i>If information on minimal/maximal expected values is available, always set the min and/or max properties. This will help RRDtool in doing a simple sanity check on the data supplied when running update.</i> </p>
@@ -54,14 +54,14 @@ description: "rrdcreate – Set up a new Round Robin Database"
 <p> When data is entered into an <font SIZE="-1"><code>RRD</code></font>, it is first fit into time slots of the length defined with the <code>-s</code> option, thus becoming a <i>primary data point</i>. </p>
 <p> The data is also processed with the consolidation function (<i></i><font SIZE="-1"><i>CF</i></font><i></i>) of the archive. There are several consolidation functions that consolidate primary data points via an aggregate function: <font SIZE="-1"><code>AVERAGE</code></font>, <font SIZE="-1"><code>MIN</code></font>, <font SIZE="-1"><code>MAX</code></font>, <font SIZE="-1"><code>LAST</code></font>.</p>
 <dl>
-<dt><font SIZE="-1">AVERAGE</font></p>
-<dd> the average of the data points is stored.</p>
-<dt><font SIZE="-1">MIN</font></p>
-<dd> the smallest of the data points is stored.</p>
-<dt><font SIZE="-1">MAX</font></p>
-<dd> the largest of the data points is stored.</p>
-<dt><font SIZE="-1">LAST</font></p>
-<dd> the last data points is used.</dl>
+<dt><font SIZE="-1">AVERAGE</font></dt>
+<dd> the average of the data points is stored.</dd>
+<dt><font SIZE="-1">MIN</font></dt>
+<dd> the smallest of the data points is stored.</dd>
+<dt><font SIZE="-1">MAX</font></dt>
+<dd> the largest of the data points is stored.</dd>
+<dt><font SIZE="-1">LAST</font></dt>
+<dd> the last data points is used.</dd></dl>
 <p> Note that data aggregation inevitably leads to loss of precision and information. The trick is to pick the aggregate function such that the <i>interesting</i> properties of your data is kept across the aggregation process. </p>
 <p> The format of <font SIZE="-1"><code>RRA</code></font> line for these consolidation functions is: </p>
 <p> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>AVERAGE</i></font><i> | </i><font SIZE="-1"><i>MIN</i></font><i> | </i><font SIZE="-1"><i>MAX</i></font><i> | </i><font SIZE="-1"><i>LAST</i></font><i></i><code>:</code><i>xff</i><code>:</code><i>steps</i><code>:</code><i>rows</i> </p>
@@ -71,18 +71,18 @@ description: "rrdcreate – Set up a new Round Robin Database"
 <h2>Aberrant Behavior Detection with Holt-Winters Forecasting</h2>
 <p> In addition to the aggregate functions, there are a set of specialized functions that enable <code>RRDtool</code> to provide data smoothing (via the Holt-Winters forecasting algorithm), confidence bands, and the flagging aberrant behavior in the data source time series:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>HWPREDICT</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>alpha</i><code>:</code><i>beta</i><code>:</code><i>seasonal period</i>[<code>:</code><i>rra-num</i>]</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>MHWPREDICT</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>alpha</i><code>:</code><i>beta</i><code>:</code><i>seasonal period</i>[<code>:</code><i>rra-num</i>]</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>SEASONAL</i></font><i></i><code>:</code><i>seasonal period</i><code>:</code><i>gamma</i><code>:</code><i>rra-num</i>[<code>:smoothing-window=</code><i>fraction</i>]</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>DEVSEASONAL</i></font><i></i><code>:</code><i>seasonal period</i><code>:</code><i>gamma</i><code>:</code><i>rra-num</i>[<code>:smoothing-window=</code><i>fraction</i>]</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>DEVPREDICT</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>rra-num</i></p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>FAILURES</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>threshold</i><code>:</code><i>window length</i><code>:</code><i>rra-num</i></dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>HWPREDICT</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>alpha</i><code>:</code><i>beta</i><code>:</code><i>seasonal period</i>[<code>:</code><i>rra-num</i>]</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>MHWPREDICT</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>alpha</i><code>:</code><i>beta</i><code>:</code><i>seasonal period</i>[<code>:</code><i>rra-num</i>]</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>SEASONAL</i></font><i></i><code>:</code><i>seasonal period</i><code>:</code><i>gamma</i><code>:</code><i>rra-num</i>[<code>:smoothing-window=</code><i>fraction</i>]</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>DEVSEASONAL</i></font><i></i><code>:</code><i>seasonal period</i><code>:</code><i>gamma</i><code>:</code><i>rra-num</i>[<code>:smoothing-window=</code><i>fraction</i>]</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>DEVPREDICT</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>rra-num</i></dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>FAILURES</i></font><i></i><code>:</code><i>rows</i><code>:</code><i>threshold</i><code>:</code><i>window length</i><code>:</code><i>rra-num</i></dd></dl>
 <p> These <code>RRAs</code> differ from the true consolidation functions in several ways. First, each of the <font SIZE="-1"><code>RRA</code></font>s is updated once for every primary data point. Second, these <code>RRAs</code> are interdependent. To generate real-time confidence bounds, a matched set of <font SIZE="-1">SEASONAL</font>, <font SIZE="-1">DEVSEASONAL</font>, <font SIZE="-1">DEVPREDICT</font>, and either <font SIZE="-1">HWPREDICT</font> or <font SIZE="-1">MHWPREDICT</font> must exist. Generating smoothed values of the primary data points requires a <font SIZE="-1">SEASONAL</font> <font SIZE="-1"><code>RRA</code></font> and either an <font SIZE="-1">HWPREDICT</font> or <font SIZE="-1">MHWPREDICT</font> <font SIZE="-1"><code>RRA</code></font>. Aberrant behavior detection requires <font SIZE="-1">FAILURES</font>, <font SIZE="-1">DEVSEASONAL</font>, <font SIZE="-1">SEASONAL</font>, and either <font SIZE="-1">HWPREDICT</font> or <font SIZE="-1">MHWPREDICT</font>. </p>
 <p> The predicted, or smoothed, values are stored in the <font SIZE="-1">HWPREDICT</font> or <font SIZE="-1">MHWPREDICT</font> <font SIZE="-1"><code>RRA</code></font>. <font SIZE="-1">HWPREDICT</font> and <font SIZE="-1">MHWPREDICT</font> are actually two variations on the Holt-Winters method. They are interchangeable. Both attempt to decompose data into three components: a baseline, a trend, and a seasonal coefficient. <font SIZE="-1">HWPREDICT</font> adds its seasonal coefficient to the baseline to form a prediction, whereas <font SIZE="-1">MHWPREDICT</font> multiplies its seasonal coefficient by the baseline to form a prediction. The difference is noticeable when the baseline changes significantly in the course of a season; <font SIZE="-1">HWPREDICT</font> will predict the seasonality to stay constant as the baseline changes, but <font SIZE="-1">MHWPREDICT</font> will predict the seasonality to grow or shrink in proportion to the baseline. The proper choice of method depends on the thing being modeled. For simplicity, the rest of this discussion will refer to <font SIZE="-1">HWPREDICT</font>, but <font SIZE="-1">MHWPREDICT</font> may be substituted in its place. </p>
 <p> The predicted deviations are stored in <font SIZE="-1">DEVPREDICT</font> (think a standard deviation which can be scaled to yield a confidence band). The <font SIZE="-1">FAILURES</font> <font SIZE="-1"><code>RRA</code></font> stores binary indicators. A 1 marks the indexed observation as failure; that is, the number of confidence bounds violations in the preceding window of observations met or exceeded a specified threshold. An example of using these <code>RRAs</code> to graph confidence bounds and failures appears in rrdgraph. </p>
@@ -97,16 +97,16 @@ description: "rrdcreate – Set up a new Round Robin Database"
 <p> <i>smoothing-window</i> specifies the fraction of a season that should be averaged around each point. By default, the value of <i>smoothing-window</i> is 0.05, which means each value in <font SIZE="-1">SEASONAL</font> and <font SIZE="-1">DEVSEASONAL</font> will be occasionally replaced by averaging it with its (<i>seasonal period</i>*0.05) nearest neighbors. Setting <i>smoothing-window</i> to zero will disable the running-average smoother altogether. </p>
 <p> <i>rra-num</i> provides the links between related <code>RRAs</code>. If <font SIZE="-1">HWPREDICT</font> is specified alone and the other <code>RRAs</code> are created implicitly, then there is no need to worry about this argument. If <code>RRAs</code> are created explicitly, then carefully pay attention to this argument. For each <font SIZE="-1"><code>RRA</code></font> which includes this argument, there is a dependency between that <font SIZE="-1"><code>RRA</code></font> and another <font SIZE="-1"><code>RRA</code></font>. The <i>rra-num</i> argument is the 1-based index in the order of <font SIZE="-1"><code>RRA</code></font> creation (that is, the order they appear in the <i>create</i> command). The dependent <font SIZE="-1"><code>RRA</code></font> for each <font SIZE="-1"><code>RRA</code></font> requiring the <i>rra-num</i> argument is listed here:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">HWPREDICT</font> <i>rra-num</i> is the index of the <font SIZE="-1">SEASONAL</font> <font SIZE="-1"><code>RRA</code></font>.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">SEASONAL</font> <i>rra-num</i> is the index of the <font SIZE="-1">HWPREDICT</font> <font SIZE="-1"><code>RRA</code></font>.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">DEVPREDICT</font> <i>rra-num</i> is the index of the <font SIZE="-1">DEVSEASONAL</font> <font SIZE="-1"><code>RRA</code></font>.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">DEVSEASONAL</font> <i>rra-num</i> is the index of the <font SIZE="-1">HWPREDICT</font> <font SIZE="-1"><code>RRA</code></font>.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">FAILURES</font> <i>rra-num</i> is the index of the <font SIZE="-1">DEVSEASONAL</font> <font SIZE="-1"><code>RRA</code></font>.</dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">HWPREDICT</font> <i>rra-num</i> is the index of the <font SIZE="-1">SEASONAL</font> <font SIZE="-1"><code>RRA</code></font>.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">SEASONAL</font> <i>rra-num</i> is the index of the <font SIZE="-1">HWPREDICT</font> <font SIZE="-1"><code>RRA</code></font>.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">DEVPREDICT</font> <i>rra-num</i> is the index of the <font SIZE="-1">DEVSEASONAL</font> <font SIZE="-1"><code>RRA</code></font>.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">DEVSEASONAL</font> <i>rra-num</i> is the index of the <font SIZE="-1">HWPREDICT</font> <font SIZE="-1"><code>RRA</code></font>.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">FAILURES</font> <i>rra-num</i> is the index of the <font SIZE="-1">DEVSEASONAL</font> <font SIZE="-1"><code>RRA</code></font>.</dd></dl>
 <p> <i>threshold</i> is the minimum number of violations (observed values outside the confidence bounds) within a window that constitutes a failure. If the <font SIZE="-1">FAILURES</font> <font SIZE="-1"><code>RRA</code></font> is implicitly created, the default value is 7. </p>
 <p> <i>window length</i> is the number of time points in the window. Specify an integer greater than or equal to the threshold and less than or equal to 28. The time interval this window represents depends on the interval between primary data points. If the <font SIZE="-1">FAILURES</font> <font SIZE="-1"><code>RRA</code></font> is implicitly created, the default value is 9.</p>
 <h2>The HEARTBEAT and the STEP</h2>
@@ -156,12 +156,12 @@ description: "rrdcreate – Set up a new Round Robin Database"
 <h2>HOW TO MEASURE</h2>
 <p> Here are a few hints on how to measure:</p>
 <dl>
-<dt>Temperature</p>
-<dd> Usually you have some type of meter you can read to get the temperature. The temperature is not really connected with a time. The only connection is that the temperature reading happened at a certain time. You can use the <font SIZE="-1"><code>GAUGE</code></font> data source type for this. RRDtool will then record your reading together with the time.</p>
-<dt>Mail Messages</p>
-<dd> Assume you have a method to count the number of messages transported by your mail server in a certain amount of time, giving you data like &#8216;5 messages in the last 65 seconds&#8217;. If you look at the count of 5 like an <font SIZE="-1"><code>ABSOLUTE</code></font> data type you can simply update the <font SIZE="-1">RRD</font> with the number 5 and the end time of your monitoring period. RRDtool will then record the number of messages per second. If at some later stage you want to know the number of messages transported in a day, you can get the average messages per second from RRDtool for the day in question and multiply this number with the number of seconds in a day. Because all math is run with Doubles, the precision should be acceptable.</p>
-<dt>It&#8217;s always a Rate</p>
-<dd> RRDtool stores rates in amount/second for <font SIZE="-1">COUNTER</font>, <font SIZE="-1">DERIVE</font> and <font SIZE="-1">ABSOLUTE</font> data. When you plot the data, you will get on the y axis amount/second which you might be tempted to convert to an absolute amount by multiplying by the delta-time between the points. RRDtool plots continuous data, and as such is not appropriate for plotting absolute amounts as for example &#8220;total bytes&#8221; sent and received in a router. What you probably want is plot rates that you can scale to bytes/hour, for example, or plot absolute amounts with another tool that draws bar-plots, where the delta-time is clear on the plot for each point (such that when you read the graph you see for example <font SIZE="-1">GB</font> on the y axis, days on the x axis and one bar for each day).</dl>
+<dt>Temperature</dt>
+<dd> Usually you have some type of meter you can read to get the temperature. The temperature is not really connected with a time. The only connection is that the temperature reading happened at a certain time. You can use the <font SIZE="-1"><code>GAUGE</code></font> data source type for this. RRDtool will then record your reading together with the time.</dd>
+<dt>Mail Messages</dt>
+<dd> Assume you have a method to count the number of messages transported by your mail server in a certain amount of time, giving you data like &#8216;5 messages in the last 65 seconds&#8217;. If you look at the count of 5 like an <font SIZE="-1"><code>ABSOLUTE</code></font> data type you can simply update the <font SIZE="-1">RRD</font> with the number 5 and the end time of your monitoring period. RRDtool will then record the number of messages per second. If at some later stage you want to know the number of messages transported in a day, you can get the average messages per second from RRDtool for the day in question and multiply this number with the number of seconds in a day. Because all math is run with Doubles, the precision should be acceptable.</dd>
+<dt>It&#8217;s always a Rate</dt>
+<dd> RRDtool stores rates in amount/second for <font SIZE="-1">COUNTER</font>, <font SIZE="-1">DERIVE</font> and <font SIZE="-1">ABSOLUTE</font> data. When you plot the data, you will get on the y axis amount/second which you might be tempted to convert to an absolute amount by multiplying by the delta-time between the points. RRDtool plots continuous data, and as such is not appropriate for plotting absolute amounts as for example &#8220;total bytes&#8221; sent and received in a router. What you probably want is plot rates that you can scale to bytes/hour, for example, or plot absolute amounts with another tool that draws bar-plots, where the delta-time is clear on the plot for each point (such that when you read the graph you see for example <font SIZE="-1">GB</font> on the y axis, days on the x axis and one bar for each day).</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  rrdtool create temperature.rrd --step 300 \
@@ -207,17 +207,17 @@ description: "rrdcreate – Set up a new Round Robin Database"
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Aberrant Behavior Detection with Holt-Winters Forecasting</a></p>
+<dt><a href="#lbAK">Aberrant Behavior Detection with Holt-Winters Forecasting</a></dt>
 <dd>
-<dt><a href="#lbAL">The HEARTBEAT and the STEP</a></p>
+</dd><dt><a href="#lbAL">The HEARTBEAT and the STEP</a></dt>
 <dd>
-<dt><a href="#lbAM">HOW TO MEASURE</a></p>
+</dd><dt><a href="#lbAM">HOW TO MEASURE</a></dt>
 <dd>
-<dt><a href="#lbAN">EXAMPLE</a></p>
+</dd><dt><a href="#lbAN">EXAMPLE</a></dt>
 <dd>
-<dt><a href="#lbAO">EXAMPLE 2</a></p>
+</dd><dt><a href="#lbAO">EXAMPLE 2</a></dt>
 <dd>
-<dt><a href="#lbAP">EXAMPLE 3</a></p>
+</dd><dt><a href="#lbAP">EXAMPLE 3</a></dt>
 <dd>
-<dt><a href="#lbAQ">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAQ">AUTHOR</a></dt>
+<dd></dd></dl>

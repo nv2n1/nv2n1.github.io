@@ -11,9 +11,7 @@ description: "sc::TranslateDataIn –"
 <p> Convert data from other formats.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;translate.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>TranslateDataIn</code> (<code>StateIn</code> *s, <code>TranslateData</code> *t)<br />
  <i>Input data will come from s. </i><br />

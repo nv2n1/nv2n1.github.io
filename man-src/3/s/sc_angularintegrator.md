@@ -11,32 +11,15 @@ description: "sc::AngularIntegrator –"
 <p> An abstract base class for angular integrators.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::GaussLegendreAngularIntegrator</code>, and <code>sc::LebedevLaikovIntegrator</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>AngularIntegrator (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 AngularIntegrator (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 virtual int nw (void) const =0
-
-
-
 virtual int num_angular_points (double r_value, int ir)=0
-
-
-
 virtual double angular_point_cartesian (int iangular, double r, SCVector3 &amp;integration_point) const =0</code></pre>
 <h2>Detailed Description</h2>
 <p>An abstract base class for angular integrators.</p>

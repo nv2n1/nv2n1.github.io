@@ -28,10 +28,10 @@ SELECT [ ALL | DISTINCT [ ON ( <i>expression</i> [, ...] ) ] ]
 <p><code>SELECT INTO</code> creates a new table and fills it with data computed by a query. The data is not returned to the client, as it is with a normal <code>SELECT</code>. The new table&#8217;s columns have the names and data types associated with the output columns of the <code>SELECT</code>.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>TEMPORARY or TEMP</code></p>
-<dd>If specified, the table is created as a temporary table. Refer to CREATE TABLE [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)] for details.</p>
-<dt><i>new_table</i></p>
-<dd>The name (optionally schema-qualified) of the table to be created.</dl>
+<dt><code>TEMPORARY or TEMP</code></dt>
+<dd>If specified, the table is created as a temporary table. Refer to CREATE TABLE [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)] for details.</dd>
+<dt><i>new_table</i></dt>
+<dd>The name (optionally schema-qualified) of the table to be created.</dd></dl>
 <p> All other parameters are described in detail under SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</p>
 <h2>Notes</h2>
 <p>CREATE TABLE AS [<code><a href="/docs/linux/man/7-create_table_as/">create_table_as</a></code>(7)] is functionally similar to <code>SELECT INTO</code>. <code>CREATE TABLE AS</code> is the recommended syntax, since this form of <code>SELECT INTO</code> is not available in <code>ECPG</code> or <code>PL/pgSQL</code>, because they interpret the INTO clause differently. Furthermore, <code>CREATE TABLE AS</code> offers a superset of the functionality provided by <code>SELECT INTO</code>. </p>

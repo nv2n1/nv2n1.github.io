@@ -16,10 +16,10 @@ description: "XmMultiListGetSelectedRowArray — an MultiList function that retu
 <h2>Description</h2>
 <p>This routine creates an array of integers which are selected row numbers in the MultiList widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the MultiList widget.</p>
-<dt><i>num_rows</i></p>
-<dd>Specifies pointer to the integer indicates number of returned row numbers.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the MultiList widget.</dd>
+<dt><i>num_rows</i></dt>
+<dd>Specifies pointer to the integer indicates number of returned row numbers.</dd></dl>
 <p> For a complete definition of MultiList and its associated resources, see <code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>
 <h2>Return</h2>
 <p>The <code>int *</code> returned by this function contains a selected rows numbers array. The calling routine is responsible for freeing the returned pointer with XtFree(). The function will return NULL if no elements are selected.</p>

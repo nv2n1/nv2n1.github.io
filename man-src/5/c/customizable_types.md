@@ -14,18 +14,18 @@ description: "customizable_types – The SELinux customizable types configuratio
 <p> The use of customizable types is deprecated as the preferred approach is to use <code><a href="/docs/linux/man/8-semanage/">semanage</a></code>(8) <code>fcontext</code>(8) <code>&#8230;</code>(8). However, SELinux-aware applications such as <code><a href="/docs/linux/man/8-setfiles/">setfiles</a></code>(8) will use this information to obtain a list of types relating to files that should not be relabeled. </p>
 <p> <code>selinux_customizable_types_path</code>(3) will return the active policy path to this file. The default customizable types file is:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/customizable_types</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/customizable_types</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> <code>is_context_customizable</code>(3) reads this file to determine if a context is customisable or not for the active policy.</p>
 <h2>File Format</h2>
 <p>Each line in the file consists of the following:</p>
 <dl>
-<dd><i>type</i></dl>
+<dd><i>type</i></dd></dl>
 <p> Where:</p>
 <dl>
-<dd><i>type</i></p>
+<dd><i>type</i></dd>
 <dl>
-<dd>The type defined in the policy that can be customised.</dl>
+<dd>The type defined in the policy that can be customised.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p># ./contexts/customizable_types<br />

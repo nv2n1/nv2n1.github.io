@@ -10,15 +10,15 @@ description: "ipsec_version – lists KLIPS version information"
 <p>ipsec_version &#8211; lists KLIPS version information</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>cat</code> <i>/proc/net/ipsec_version</i></dl>
+<dt> <code>cat</code> <i>/proc/net/ipsec_version</i></dt></dl>
 <h2>Obsolete</h2>
-<dd>Note that ipsec_version is only supported on the classic KLIPS stack. It is not supported on any other stack.</p>
+<dd>Note that ipsec_version is only supported on the classic KLIPS stack. It is not supported on any other stack.</dd>
 <h2>Description</h2>
 <p>/proc/net/ipsec_version is a read-only file which lists the currently running KLIPS version information.</p>
 <h2>Examples</h2>
 <p><code>FreeS/WAN version: 1.4</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> shows that the currently loaded <code>KLIPS</code> is from <code>FreeS/WAN 1.4.</code></p>
 <h2>Files</h2>
 <p>/proc/net/ipsec_version</p>
@@ -29,4 +29,4 @@ description: "ipsec_version – lists KLIPS version information"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

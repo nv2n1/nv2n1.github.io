@@ -19,115 +19,103 @@ gout[options][gfile][xfile][mfile][vfile]
 <p> When the proper libraries have been included at compile time, gtst can directly handle compressed graphs, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.grf.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-g</code><i>geop</i></p>
-<dd> Geometry parameters, which can be an arbitrary combination of any of the following code letters:</p>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-g</code><i>geop</i></dt>
+<dd> Geometry parameters, which can be an arbitrary combination of any of the following code letters:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>n</code></p>
-<dd> Do not read geometry data, when it is not available or not required, such as when using the <code>-om</code> option.</p>
-<dt><code>p</code></p>
-<dd> Permute Y and Z geometry dimensions.</p>
-<dt><code>r</code></p>
-<dd> Rotate geometry by 90 degrees in the (X,Y) plane.</dl>
+<dt><code>n</code></dt>
+<dd> Do not read geometry data, when it is not available or not required, such as when using the <code>-om</code> option.</dd>
+<dt><code>p</code></dt>
+<dd> Permute Y and Z geometry dimensions.</dd>
+<dt><code>r</code></dt>
+<dd> Rotate geometry by 90 degrees in the (X,Y) plane.</dd></dl>
 </dl>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-mn</code></p>
-<dd> Do not read mapping data, when it is not available or not required.</p>
-<dt><code>-o</code><i>outp</i></p>
-<dd> Select the output file type and allows to provide additional parameters between braces and separated by commas:</p>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-mn</code></dt>
+<dd> Do not read mapping data, when it is not available or not required.</dd>
+<dt><code>-o</code><i>outp</i></dt>
+<dd> Select the output file type and allows to provide additional parameters between braces and separated by commas:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>i</code></p>
-<dd> OpenInventor 3D mesh file, to be viewed by means of programs such as <code>ivview</code>. Additional parameters for this output file type are:</p>
+<dt><code>i</code></dt>
+<dd> OpenInventor 3D mesh file, to be viewed by means of programs such as <code>ivview</code>. Additional parameters for this output file type are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>c</code></p>
-<dd> Color output.</p>
-<dt><code>g</code></p>
-<dd> Gray level output.</p>
-<dt><code>r</code></p>
-<dd> Remove cut edges.</p>
-<dt><code>v</code></p>
-<dd> View cut edges.</dl>
+<dt><code>c</code></dt>
+<dd> Color output.</dd>
+<dt><code>g</code></dt>
+<dd> Gray level output.</dd>
+<dt><code>r</code></dt>
+<dd> Remove cut edges.</dd>
+<dt><code>v</code></dt>
+<dd> View cut edges.</dd></dl>
 </dl>
-<dt><code>m</code></p>
-<dd> PostScript matrix pattern file. Additional parameters for this output file type are:</p>
+<dt><code>m</code></dt>
+<dd> PostScript matrix pattern file. Additional parameters for this output file type are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>e</code></p>
-<dd> EPSF-type output.</p>
-<dt><code>f</code></p>
-<dd> Full-page output.</dl>
+<dt><code>e</code></dt>
+<dd> EPSF-type output.</dd>
+<dt><code>f</code></dt>
+<dd> Full-page output.</dd></dl>
 </dl>
-<dt><code>p</code></p>
-<dd> PostScript 2D mesh file. This output module was intended for 2D meshes; as a fallback, the Z coordinate is projected according to isometric perspective rules, but drawings of full 3D objects are most likely to be unreadable. Additional parameters for this output file type are:</p>
+<dt><code>p</code></dt>
+<dd> PostScript 2D mesh file. This output module was intended for 2D meshes; as a fallback, the Z coordinate is projected according to isometric perspective rules, but drawings of full 3D objects are most likely to be unreadable. Additional parameters for this output file type are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>c</code></p>
-<dd> Color output.</p>
-<dt><code>g</code></p>
-<dd> Gray level output.</p>
-<dt><code>e</code></p>
-<dd> EPSF-type output.</p>
-<dt><code>f</code></p>
-<dd> Full-page output.</p>
-<dt><code>s</code></p>
-<dd> Short clipping (disks excluded).</p>
-<dt><code>l</code></p>
-<dd> Large clipping (disks included).</p>
-<dt><code>a</code></p>
-<dd> Avoid displaying disks.</p>
-<dt><code>d</code></p>
-<dd> Display disks.</p>
-<dt><code>r</code></p>
-<dd> Remove cut edges.</p>
-<dt><code>v</code></p>
-<dd> View cut edges.</p>
-<dt><code>X=</code><i>rat</i></p>
-<dd> Maximum x clipping ratio (in [0.0;1.0]).</p>
-<dt><code>x=</code><i>rat</i></p>
-<dd> Minimum x clipping ratio.</p>
-<dt><code>Y=</code><i>rat</i></p>
-<dd> Maximum y clipping ratio.</p>
-<dt><code>y=</code><i>rat</i></p>
-<dd> Minimum y clipping ratio.</dl>
+<dt><code>c</code></dt>
+<dd> Color output.</dd>
+<dt><code>g</code></dt>
+<dd> Gray level output.</dd>
+<dt><code>e</code></dt>
+<dd> EPSF-type output.</dd>
+<dt><code>f</code></dt>
+<dd> Full-page output.</dd>
+<dt><code>s</code></dt>
+<dd> Short clipping (disks excluded).</dd>
+<dt><code>l</code></dt>
+<dd> Large clipping (disks included).</dd>
+<dt><code>a</code></dt>
+<dd> Avoid displaying disks.</dd>
+<dt><code>d</code></dt>
+<dd> Display disks.</dd>
+<dt><code>r</code></dt>
+<dd> Remove cut edges.</dd>
+<dt><code>v</code></dt>
+<dd> View cut edges.</dd>
+<dt><code>X=</code><i>rat</i></dt>
+<dd> Maximum x clipping ratio (in [0.0;1.0]).</dd>
+<dt><code>x=</code><i>rat</i></dt>
+<dd> Minimum x clipping ratio.</dd>
+<dt><code>Y=</code><i>rat</i></dt>
+<dd> Maximum y clipping ratio.</dd>
+<dt><code>y=</code><i>rat</i></dt>
+<dd> Minimum y clipping ratio.</dd></dl>
 </dl>
-<dt><code>t</code></p>
-<dd> Tulip 3D mesh file. Additional parameters for this output file type are:</p>
+<dt><code>t</code></dt>
+<dd> Tulip 3D mesh file. Additional parameters for this output file type are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>b</code></p>
-<dd> Black and white output.</p>
-<dt><code>c</code></p>
-<dd> Color output.</p>
-<dt><code>a</code></p>
-<dd> Avoid displaying disks.</p>
-<dt><code>d</code></p>
-<dd> Display disks.</p>
-<dt><code>r</code></p>
-<dd> Remove cut edges.</p>
-<dt><code>v</code></p>
-<dd> View cut edges.</dl>
+<dt><code>b</code></dt>
+<dd> Black and white output.</dd>
+<dt><code>c</code></dt>
+<dd> Color output.</dd>
+<dt><code>a</code></dt>
+<dd> Avoid displaying disks.</dd>
+<dt><code>d</code></dt>
+<dd> Display disks.</dd>
+<dt><code>r</code></dt>
+<dd> Remove cut edges.</dd>
+<dt><code>v</code></dt>
+<dd> View cut edges.</dd></dl>
 </dl>
 </dl>
 </dl>
-<dt><code>-V</code></p>
-<dd> Display program version and copyright.</dl>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Build an OpenInventor file of the mapping of graph brol.grf contained in file brol.map. Vertices with no mapping information attached to them will be rendered in white, while distinct colors will be used to represent the different parts. Cut edges will be removed: </p>
 <pre>

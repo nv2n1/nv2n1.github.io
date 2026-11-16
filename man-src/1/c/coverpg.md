@@ -21,16 +21,16 @@ description: "make.coverpg – create a fax coverpg on stdout"
 <p> In this directory, you can also find two shell scripts (fax and faxmemo) that will take advantage of one more esoteric feature of my coverpage programs: if called with the option &quot;-m &lt;memo-file&gt;&quot;, the sample programs will put a text file &quot;&lt;memo-file&gt;&quot; on the cover page (used for short notes or such). To make use of it, <i>faxspool</i> is called with the option &#8216;-C &quot;make.coverpg -m &lt;memo-file&gt;&quot;&#8217; (the double quotes are needed!). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>none</p>
+<dt>none</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Example</h2>
 <p> A five-page fax sent from me to my second number could result in a call like this: </p>
 <p> make.coverpg 5 &quot;+49-89-3243328&quot; &quot;Gert Doering&quot; &quot;3244814&quot; &quot;myself&quot; &quot;Sep 15 94&quot; &quot;22:10:00&quot; </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/lib64/mgetty+sendfax/make.coverpg</code></p>
-<dd> the program itself </p>
+<dt><code>/usr/lib64/mgetty+sendfax/make.coverpg</code></dt>
+<dd> the program itself </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1), <a href="/docs/linux/man/1-ghostscript/">ghostscript</a>(1) </p>

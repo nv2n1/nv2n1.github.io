@@ -46,6 +46,6 @@ description: "runlevel – event signalling change of system runlevel"
 <dd>
 <pre>start on runlevel [2345]
 stop on runlevel [!2345]</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-runlevel/">runlevel</a></code>(8) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) <code><a href="/docs/linux/man/8-telinit/">telinit</a></code>(8) <code><a href="/docs/linux/man/8-shutdown/">shutdown</a></code>(8) <code><a href="/docs/linux/man/1-who/">who</a></code>(1) </p>

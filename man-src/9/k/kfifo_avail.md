@@ -10,10 +10,10 @@ description: "kfifo_avail – returns the number of unused elements in the fifo"
 <p>kfifo_avail &#8211; returns the number of unused elements in the fifo</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kfifo_avail(</code><i>fifo</i><code>);</code></dl>
+<dt> <code>kfifo_avail(</code><i>fifo</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>fifo</i></p>
 <dl>
 <dd>
-<dd>address of the fifo to be used</dl>
+</dd><dd>address of the fifo to be used</dd></dl>
 <h2>Copyright</h2>

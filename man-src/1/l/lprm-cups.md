@@ -16,18 +16,18 @@ description: "lprm – cancel print jobs"
 <h2>OPTIONS</h2>
 <p> The <i>lprm</i> command supports the following options:</p>
 <dl>
-<dt>-E</p>
+<dt>-E</dt>
 <dd>
- Forces encryption when connecting to the server.</p>
-<dt>-P destination[/instance]</p>
+ Forces encryption when connecting to the server.</dd>
+<dt>-P destination[/instance]</dt>
 <dd>
- Specifies the destination printer or class.</p>
-<dt>-U username</p>
+ Specifies the destination printer or class.</dd>
+<dt>-U username</dt>
 <dd>
- Specifies an alternate username.</p>
-<dt>-h server[:port]</p>
+ Specifies an alternate username.</dd>
+<dt>-h server[:port]</dt>
 <dd>
- Specifies an alternate server.</dl>
+ Specifies an alternate server.</dd></dl>
 <h2>COMPATIBILITY</h2>
 <p> The CUPS version of <i>lprm</i> is compatible with the standard Berkeley <i>lprm</i> command.</p>
 <h2>SEE ALSO</h2>

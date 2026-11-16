@@ -36,51 +36,51 @@ description: "camlp5 – Pre-Precessor-Pretty-Printer for OCaml mkcamlp5 – Cre
 <p> The load options select parsing and printing actions recorded in OCaml object files (ending with .cmo or .cma). Several usage of these options are authorized. They must precede the other options. </p>
 <p> An optionnal <code>&#8212;</code> may end the load options. </p>
 <dl>
-<dt><code>-I&nbsp;<wbr></code><i>directory</i></p>
-<dd> Add <i>directory</i> in the search path for files loaded. Unless the option -nolib is used, the camlp5 library directory is appended to the path. Warning: there is no automatic search in the current directory: add &quot;-I .&quot; for this.</p>
-<dt><code>-where</code></p>
-<dd> Print camlp5 library directory name and exit.</p>
-<dt><code>-nolib</code></p>
-<dd> No automatic search for objects files in camlp5 library directory.</p>
-<dt><code>object-file</code></p>
-<dd> The file is loaded in camlp5 core. </p>
+<dt><code>-I&nbsp;<wbr></code><i>directory</i></dt>
+<dd> Add <i>directory</i> in the search path for files loaded. Unless the option -nolib is used, the camlp5 library directory is appended to the path. Warning: there is no automatic search in the current directory: add &quot;-I .&quot; for this.</dd>
+<dt><code>-where</code></dt>
+<dd> Print camlp5 library directory name and exit.</dd>
+<dt><code>-nolib</code></dt>
+<dd> No automatic search for objects files in camlp5 library directory.</dd>
+<dt><code>object-file</code></dt>
+<dd> The file is loaded in camlp5 core. </dd>
 </dl>
 <h2>OTHER OPTIONS</h2>
 <p> The others options are: </p>
 <dl>
-<dt><i>file</i></p>
-<dd> Treat <i>file</i> as an interface file if it ends with .mli and as an implementation file if it ends with .ml. </p>
-<dt><code>-intf&nbsp;<wbr></code><i>file</i></p>
-<dd> Treat <i>file</i> as an interface file, whatever its extension.</p>
-<dt><code>-impl&nbsp;<wbr></code><i>file</i></p>
-<dd> Treat <i>file</i> as an implementation file, whatever its extension.</p>
-<dt><code>-unsafe</code></p>
-<dd> Generate unsafe accesses to arrays and strings.</p>
-<dt><code>-noassert</code></p>
-<dd> Do not compile assertion checks.</p>
-<dt><code>-verbose</code></p>
-<dd> More verbose in parsing errors.</p>
-<dt><code>-QD&nbsp;<wbr></code><i>file</i></p>
-<dd> Dump in <i>file</i> in case of syntax error in the result of a quotation expansion.</p>
-<dt><code>-o&nbsp;<wbr></code><i>out-file</i></p>
-<dd> Print the result on out-file instead of standard output. File is opened with open_out_bin (see OCaml library Pervasives).</p>
-<dt><code>-v</code></p>
-<dd> Print the version number and exit.</p>
-<dt><code>-help</code></p>
-<dd> Print the available options and exit. This print includes the options possibly added by the loaded object files. </p>
+<dt><i>file</i></dt>
+<dd> Treat <i>file</i> as an interface file if it ends with .mli and as an implementation file if it ends with .ml. </dd>
+<dt><code>-intf&nbsp;<wbr></code><i>file</i></dt>
+<dd> Treat <i>file</i> as an interface file, whatever its extension.</dd>
+<dt><code>-impl&nbsp;<wbr></code><i>file</i></dt>
+<dd> Treat <i>file</i> as an implementation file, whatever its extension.</dd>
+<dt><code>-unsafe</code></dt>
+<dd> Generate unsafe accesses to arrays and strings.</dd>
+<dt><code>-noassert</code></dt>
+<dd> Do not compile assertion checks.</dd>
+<dt><code>-verbose</code></dt>
+<dd> More verbose in parsing errors.</dd>
+<dt><code>-QD&nbsp;<wbr></code><i>file</i></dt>
+<dd> Dump in <i>file</i> in case of syntax error in the result of a quotation expansion.</dd>
+<dt><code>-o&nbsp;<wbr></code><i>out-file</i></dt>
+<dd> Print the result on out-file instead of standard output. File is opened with open_out_bin (see OCaml library Pervasives).</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version number and exit.</dd>
+<dt><code>-help</code></dt>
+<dd> Print the available options and exit. This print includes the options possibly added by the loaded object files. </dd>
 </dl>
 <p> The others options can be extended by loaded object files. The provided files add the following options: </p>
 <dl>
-<dt><code>-l&nbsp;<wbr></code><i>line-length</i></p>
-<dd> Added by pr_o.cmo and pr_r.cmo: set the line length (default 78).</p>
-<dt><code>-sep&nbsp;<wbr></code><i>string</i></p>
-<dd> Added by pr_o.cmo and pr_r.cmo: print this string between phrases instead of comments.</p>
-<dt><code>-no_ss</code></p>
-<dd> Added by pr_o.cmo: do not print double semicolons</p>
-<dt><code>-D&nbsp;<wbr></code><i>ident</i></p>
-<dd> Added by pa_macro.cmo: define the ident.</p>
-<dt><code>-U&nbsp;<wbr></code><i>ident</i></p>
-<dd> Added by pa_macro.cmo: undefine the ident. </p>
+<dt><code>-l&nbsp;<wbr></code><i>line-length</i></dt>
+<dd> Added by pr_o.cmo and pr_r.cmo: set the line length (default 78).</dd>
+<dt><code>-sep&nbsp;<wbr></code><i>string</i></dt>
+<dd> Added by pr_o.cmo and pr_r.cmo: print this string between phrases instead of comments.</dd>
+<dt><code>-no_ss</code></dt>
+<dd> Added by pr_o.cmo: do not print double semicolons</dd>
+<dt><code>-D&nbsp;<wbr></code><i>ident</i></dt>
+<dd> Added by pa_macro.cmo: define the ident.</dd>
+<dt><code>-U&nbsp;<wbr></code><i>ident</i></dt>
+<dd> Added by pa_macro.cmo: undefine the ident. </dd>
 </dl>
 <h2>PROVIDED FILES</h2>
 <p> These files are installed in the directory /usr/lib64/ocaml/camlp5. </p>
@@ -150,16 +150,16 @@ description: "camlp5 – Pre-Precessor-Pretty-Printer for OCaml mkcamlp5 – Cre
 <h2>ENVIRONMENT VARIABLE</h2>
 <p> The following environment variable is also consulted: </p>
 <dl>
-<dt><code>CAMLP5PARAM</code></p>
-<dd> Set the grammars parsing algorithm parameters. This variable must be a sequence of parameter specifications. A parameter specification is a letter optionally followed by an = and a value. There are four possible parameters: </p>
-<dt><code>b</code>&nbsp;<wbr>(backtrack)</p>
-<dd> Set the backtrack algorithm as default.</p>
-<dt><code>t</code>&nbsp;<wbr>(trace)</p>
-<dd> Trace symbols (terminals and non-terminals) while parsing with backtracking.</p>
-<dt><code>y</code>&nbsp;<wbr>(trace-stalling)</p>
-<dd> In backtracking, trace the advance in the input stream (number of unfrozen tokens) and the possible stalling (number of tokens tests).</p>
-<dt><code>l</code>&nbsp;<wbr>(maximum-stalling)</p>
-<dd> Set the maximum stalling value. </p>
+<dt><code>CAMLP5PARAM</code></dt>
+<dd> Set the grammars parsing algorithm parameters. This variable must be a sequence of parameter specifications. A parameter specification is a letter optionally followed by an = and a value. There are four possible parameters: </dd>
+<dt><code>b</code>&nbsp;<wbr>(backtrack)</dt>
+<dd> Set the backtrack algorithm as default.</dd>
+<dt><code>t</code>&nbsp;<wbr>(trace)</dt>
+<dd> Trace symbols (terminals and non-terminals) while parsing with backtracking.</dd>
+<dt><code>y</code>&nbsp;<wbr>(trace-stalling)</dt>
+<dd> In backtracking, trace the advance in the input stream (number of unfrozen tokens) and the possible stalling (number of tokens tests).</dd>
+<dt><code>l</code>&nbsp;<wbr>(maximum-stalling)</dt>
+<dd> Set the maximum stalling value. </dd>
 </dl>
 <h2>FILES</h2>
 <p> Library directory of camlp5 in the present installation:<br />

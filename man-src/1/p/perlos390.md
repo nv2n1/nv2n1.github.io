@@ -104,31 +104,27 @@ url: "/docs/linux/man/1-perlos390/"
  Once you've unpacked the distribution, run ``sh Configure'' (see <font SIZE="-1">INSTALL</font> for a full discussion of the Configure options). There is a ``hints'' file for os390 that specifies the correct values for most things. Some things to watch out for include:
 <dl>
 <dt>&bull;
-<dd> A message of the form: 
-
+</dt><dd> A message of the form: 
  <pre>
  (I see you are using the Korn shell.  Some ksh's blow up on
  Configure, mainly on older exotic systems.  If yours does, try the
  Bourne shell instead.)
 </pre> 
-
  is nothing to worry about at all.
-<dt>&bull;
-<dd> Some of the parser default template files in /samples are needed in /etc. In particular be sure that you at least copy /samples/yyparse.c to /etc before running Perl's Configure. This step ensures successful extraction of <font SIZE="-1">EBCDIC</font> versions of parser files such as perly.c and perly.h. This has to be done before running Configure the first time. If you failed to do so then the easiest way to re-Configure Perl is to delete your misconfigured build root and re-extract the source from the tar ball. Then you must ensure that /etc/yyparse.c is properly in place before attempting to re-run Configure.
-<dt>&bull;
-<dd> This port will support dynamic loading, but it is not selected by default. If you would like to experiment with dynamic loading then be sure to specify -Dusedl in the arguments to the Configure script. See the comments in hints/os390.sh for more information on dynamic loading. If you build with dynamic loading then you will need to add the <tt>$archlibexp</tt>/CORE directory to your <font SIZE="-1">LIBPATH</font> environment variable in order for perl to work. See the config.sh file for the value of <tt>$archlibexp</tt>. If in trying to use Perl you see an error message similar to: 
-
+</dd><dt>&bull;
+</dt><dd> Some of the parser default template files in /samples are needed in /etc. In particular be sure that you at least copy /samples/yyparse.c to /etc before running Perl's Configure. This step ensures successful extraction of <font SIZE="-1">EBCDIC</font> versions of parser files such as perly.c and perly.h. This has to be done before running Configure the first time. If you failed to do so then the easiest way to re-Configure Perl is to delete your misconfigured build root and re-extract the source from the tar ball. Then you must ensure that /etc/yyparse.c is properly in place before attempting to re-run Configure.
+</dd><dt>&bull;
+</dt><dd> This port will support dynamic loading, but it is not selected by default. If you would like to experiment with dynamic loading then be sure to specify -Dusedl in the arguments to the Configure script. See the comments in hints/os390.sh for more information on dynamic loading. If you build with dynamic loading then you will need to add the <tt>$archlibexp</tt>/CORE directory to your <font SIZE="-1">LIBPATH</font> environment variable in order for perl to work. See the config.sh file for the value of <tt>$archlibexp</tt>. If in trying to use Perl you see an error message similar to: 
  <pre>
  CEE3501S The module libperl.dll was not found.
    From entry point __dllstaticinit at compile unit offset +00000194
    at
 </pre> 
-
  then your <font SIZE="-1">LIBPATH</font> does not have the location of libperl.x and either libperl.dll or libperl.so in it. Add that directory to your <font SIZE="-1">LIBPATH</font> and proceed.
-<dt>&bull;
-<dd> Do not turn on the compiler optimization flag ``-O''. There is a bug in either the optimizer or perl that causes perl to not work correctly when the optimizer is on.
-<dt>&bull;
-<dd> Some of the configuration files in /etc used by the networking APIs are either missing or have the wrong names. In particular, make sure that there's either an /etc/resolv.conf or an /etc/hosts, so that <b>gethostbyname()</b> works, and make sure that the file /etc/proto has been renamed to /etc/protocol (<font SIZE="-1">NOT</font> /etc/protocols, as used by other Unix systems). You may have to look for things like <font SIZE="-1">HOSTNAME</font> and <font SIZE="-1">DOMAINORIGIN</font> in the ``//'<font SIZE="-1">SYS1.TCPPARMS</font>(<font SIZE="-1">TCPDATA</font>)''' <font SIZE="-1">PDS</font> member in order to properly set up your /etc networking files.</dl>
+</dd><dt>&bull;
+</dt><dd> Do not turn on the compiler optimization flag ``-O''. There is a bug in either the optimizer or perl that causes perl to not work correctly when the optimizer is on.
+</dd><dt>&bull;
+</dt><dd> Some of the configuration files in /etc used by the networking APIs are either missing or have the wrong names. In particular, make sure that there's either an /etc/resolv.conf or an /etc/hosts, so that <b>gethostbyname()</b> works, and make sure that the file /etc/proto has been renamed to /etc/protocol (<font SIZE="-1">NOT</font> /etc/protocols, as used by other Unix systems). You may have to look for things like <font SIZE="-1">HOSTNAME</font> and <font SIZE="-1">DOMAINORIGIN</font> in the ``//'<font SIZE="-1">SYS1.TCPPARMS</font>(<font SIZE="-1">TCPDATA</font>)''' <font SIZE="-1">PDS</font> member in order to properly set up your /etc networking files.</dd></dl>
 
 <h3>Build, Test, Install Perl on <font SIZE="-1">OS/390</font></h3>
 
@@ -169,19 +165,16 @@ url: "/docs/linux/man/1-perlos390/"
  The ``make test'' step runs a Perl Verification Procedure, usually before installation. You might encounter <font SIZE="-1">STDERR</font> messages even during a successful run of ``make test''. Here is a guide to some of the more commonly seen anomalies:
 <dl>
 <dt>&bull;
-<dd> A message of the form: 
-
+</dt><dd> A message of the form: 
  <pre>
  io/openpid...........CEE5210S The signal SIGHUP was received.
  CEE5210S The signal SIGHUP was received.
  CEE5210S The signal SIGHUP was received.
  ok
 </pre> 
-
  indicates that the t/io/openpid.t test of Perl has passed but done so with extraneous messages on stderr from <font SIZE="-1">CEE.</font>
-<dt>&bull;
-<dd> A message of the form: 
-
+</dd><dt>&bull;
+</dt><dd> A message of the form: 
  <pre>
  lib/ftmp-security....File::Temp::_gettemp: Parent directory (/tmp/)
  is not safe (sticky bit not set when world writable?) at
@@ -190,34 +183,24 @@ url: "/docs/linux/man/1-perlos390/"
  bit not set when world writable?) at lib/ftmp-security.t line 100
  ok
 </pre> 
-
  indicates a problem with the permissions on your /tmp directory within the <font SIZE="-1">HFS.</font> To correct that problem issue the command: 
-
  <pre>
      chmod a+t /tmp
 </pre> 
-
  from an account with write access to the directory entry for /tmp.
-<dt>&bull;
-<dd> Out of Memory! 
-
+</dd><dt>&bull;
+</dt><dd> Out of Memory! 
  Recent perl test suite is quite memory hungry. In addition to the comments above on memory limitations it is also worth checking for _CEE_RUNOPTS in your environment. Perl now has (in miniperlmain.c) a C #pragma to set <font SIZE="-1">CEE</font> run options, but the environment variable wins. 
-
  The C code asks for: 
-
  <pre>
  #pragma runopts(HEAP(2M,500K,ANYWHERE,KEEP,8K,4K) STACK(,,ANY,) ALL31(ON))
 </pre> 
-
  The important parts of that are the second argument (the increment) to <font SIZE="-1">HEAP,</font> and allowing the stack to be ``Above the (16M) line''. If the heap increment is too small then when perl (for example loading unicode/Name.pl) tries to create a ``big'' (400K+) string it cannot fit in a single segment and you get ``Out of Memory!'' - even if there is still plenty of memory available. 
-
  A related issue is use with perl's malloc. Perl's malloc uses <tt>&quot;sbrk()&quot;</tt> to get memory, and <tt>&quot;sbrk()&quot;</tt> is limited to the first allocation so in this case something like: 
-
  <pre>
   HEAP(8M,500K,ANYWHERE,KEEP,8K,4K)
 </pre> 
-
- is needed to get through the test suite.</dl>
+ is needed to get through the test suite.</dd></dl>
 
 <h3>Installation Anomalies with Perl on <font SIZE="-1">OS/390</font></h3>
 
@@ -358,10 +341,10 @@ main()
 
 
 <dt><a HREF="#lbAP">AUTHORS</a>
-<dd>
-<dt><a HREF="#lbAQ">SEE ALSO</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAQ">SEE ALSO</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAS">HISTORY</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAS">HISTORY</a>
+</dt><dd></dd></dl>

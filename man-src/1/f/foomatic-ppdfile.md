@@ -19,19 +19,19 @@ description: "foomatic-ppdfile – Generate a PPD file for a given printer/drive
 <p> The last form prints a help message and exits. </p>
 <h3>Options</h3>
 <dl>
-<dt><code>-d</code><i> drivername</i></p>
-<dd> The (optional) driver name to use. If the driver name is not supplied, the default or first driver in the printers compatible driver list is used. </p>
-<dt><code>-p</code></p>
-<dd> printer id The printer id. </p>
-<dt><code>-w</code></p>
-<dd> Return a PPD file that conforms to the Microsoft Windows format limitations. </p>
-<dt><code>-A</code></p>
-<dd> Return all printer entries in the database. </p>
-<dt><code>-P</code><i>pattern</i></p>
-<dd> Return all printer entries in the database which match the regular expression. </p>
-<dt></dl>
+<dt><code>-d</code><i> drivername</i></dt>
+<dd> The (optional) driver name to use. If the driver name is not supplied, the default or first driver in the printers compatible driver list is used. </dd>
+<dt><code>-p</code></dt>
+<dd> printer id The printer id. </dd>
+<dt><code>-w</code></dt>
+<dd> Return a PPD file that conforms to the Microsoft Windows format limitations. </dd>
+<dt><code>-A</code></dt>
+<dd> Return all printer entries in the database. </dd>
+<dt><code>-P</code><i>pattern</i></dt>
+<dd> Return all printer entries in the database which match the regular expression. </dd>
+<dt></dt></dl>
 <h2>SEE ALSO</h2>
-<dd> <i><a href="/docs/linux/man/1-foomatic-rip/">foomatic-rip</a></i>(1) </p>
+<dd> <i><a href="/docs/linux/man/1-foomatic-rip/">foomatic-rip</a></i>(1) </dd>
 <h2>EXIT STATUS</h2>
 <p> <code>foomatic-ppdfile</code> returns 0 on success, 1 otherwise. </p>
 <h2>AUTHOR</h2>

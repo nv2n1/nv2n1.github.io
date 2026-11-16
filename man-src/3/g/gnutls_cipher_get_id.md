@@ -14,8 +14,8 @@ description: "gnutls_cipher_get_id – API function"
 <p> <code>gnutls_cipher_algorithm_t gnutls_cipher_get_id(const char * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * name</p>
-<dd> is a cipher algorithm name</dl>
+<dt>const char * name</dt>
+<dd> is a cipher algorithm name</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The names are compared in a case insensitive way.</p>
 <h2>RETURNS</h2>
@@ -29,6 +29,6 @@ description: "gnutls_cipher_get_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

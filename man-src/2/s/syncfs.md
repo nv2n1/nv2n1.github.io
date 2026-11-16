@@ -17,13 +17,13 @@ description: "sync, syncfs – commit filesystem caches to disk"
 <p> <code>sync</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>syncfs</code>():</p>
 <dl>
 <dt>
-<dd> _GNU_SOURCE</dl>
+</dt><dd> _GNU_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>sync</code>() causes all pending modifications to filesystem metadata and cached file data to be written to the underlying filesystems. </p>
 <p> <code>syncfs</code>() is like <code>sync</code>(), but synchronizes just the filesystem containing file referred to by the open file descriptor <i>fd</i>.</p>
@@ -33,14 +33,14 @@ description: "sync, syncfs – commit filesystem caches to disk"
 <p> <code>sync</code>() is always successful. </p>
 <p> <code>syncfs</code>() can fail for at least the following reasons:</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>EIO</code></p>
-<dd> An error occurred during synchronization. This error may relate to data written to any file on the filesystem, or on metadata related to the filesystem itself.</p>
-<dt><code>ENOSPC</code></p>
-<dd> Disk space was exhausted while synchronizing.</p>
-<dt><code>ENOSPC</code>, <code>EDQUOT</code></p>
-<dd> Data was written to a files on NFS or another filesystem which does not allocate space at the time of a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) system call, and some previous write failed due to insufficient storage space.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>EIO</code></dt>
+<dd> An error occurred during synchronization. This error may relate to data written to any file on the filesystem, or on metadata related to the filesystem itself.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> Disk space was exhausted while synchronizing.</dd>
+<dt><code>ENOSPC</code>, <code>EDQUOT</code></dt>
+<dd> Data was written to a files on NFS or another filesystem which does not allocate space at the time of a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) system call, and some previous write failed due to insufficient storage space.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>syncfs</code>() first appeared in Linux 2.6.39; library support was added to glibc in version 2.14.</p>
 <h2>CONFORMING TO</h2>

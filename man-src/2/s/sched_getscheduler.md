@@ -26,19 +26,19 @@ int sched_getscheduler(pid_t pid);
 <p> In the current implementation, the structure contains only one field, <i>sched_priority</i>. The interpretation of <i>param</i> depends on the selected policy. </p>
 <p> Currently, Linux supports the following &quot;normal&quot; (i.e., non-real-time) scheduling policies as values that may be specified in <i>policy</i>:</p>
 <dl>
-<dt><code>SCHED_OTHER</code></p>
-<dd> the standard round-robin time-sharing policy;</p>
-<dt><code>SCHED_BATCH</code></p>
-<dd> for &quot;batch&quot; style execution of processes; and</p>
-<dt><code>SCHED_IDLE</code></p>
-<dd> for running <i>very</i> low priority background jobs.</dl>
+<dt><code>SCHED_OTHER</code></dt>
+<dd> the standard round-robin time-sharing policy;</dd>
+<dt><code>SCHED_BATCH</code></dt>
+<dd> for &quot;batch&quot; style execution of processes; and</dd>
+<dt><code>SCHED_IDLE</code></dt>
+<dd> for running <i>very</i> low priority background jobs.</dd></dl>
 <p> For each of the above policies, <i>param-&gt;sched_priority</i> must be 0. </p>
 <p> Various &quot;real-time&quot; policies are also supported, for special time-critical applications that need precise control over the way in which runnable threads are selected for execution. For the rules governing when a process may use these policies, see <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7). The real-time policies that may be specified in <i>policy</i> are:</p>
 <dl>
-<dt><code>SCHED_FIFO</code></p>
-<dd> a first-in, first-out policy; and</p>
-<dt><code>SCHED_RR</code></p>
-<dd> a round-robin policy.</dl>
+<dt><code>SCHED_FIFO</code></dt>
+<dd> a first-in, first-out policy; and</dd>
+<dt><code>SCHED_RR</code></dt>
+<dd> a round-robin policy.</dd></dl>
 <p> For each of the above policies, <i>param-&gt;sched_priority</i> specifies a scheduling priority for the thread. This is a number in the range returned by calling <code><a href="/docs/linux/man/2-sched_get_priority_min/">sched_get_priority_min</a></code>(2) and <code><a href="/docs/linux/man/2-sched_get_priority_max/">sched_get_priority_max</a></code>(2) with the specified <i>policy</i>. On Linux, these system calls return, respectively, 1 and 99. </p>
 <p> Since Linux 2.6.32, the <code>SCHED_RESET_ON_FORK</code> flag can be ORed in <i>policy</i> when calling <code>sched_setscheduler</code>(). As a result of including this flag, children created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) do not inherit privileged scheduling policies. See <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7) for details. </p>
 <p> <code>sched_getscheduler</code>() returns the current scheduling policy of the thread identified by <i>pid</i>. If <i>pid</i> equals zero, the policy of the calling thread will be retrieved.</p>
@@ -46,16 +46,16 @@ int sched_getscheduler(pid_t pid);
 <p> On success, <code>sched_setscheduler</code>() returns zero. On success, <code>sched_getscheduler</code>() returns the policy for the thread (a nonnegative integer). On error, both calls return -1, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> Invalid arguments: <i>pid</i> is negative or <i>param</i> is NULL.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>sched_setscheduler</code>()) <i>policy</i> is not one of the recognized policies.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>sched_setscheduler</code>()) <i>param</i> does not make sense for the specified <i>policy</i>.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling thread does not have appropriate privileges.</p>
-<dt><code>ESRCH</code></p>
-<dd> The thread whose ID is <i>pid</i> could not be found.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid arguments: <i>pid</i> is negative or <i>param</i> is NULL.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>sched_setscheduler</code>()) <i>policy</i> is not one of the recognized policies.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>sched_setscheduler</code>()) <i>param</i> does not make sense for the specified <i>policy</i>.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling thread does not have appropriate privileges.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The thread whose ID is <i>pid</i> could not be found.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008 (but see BUGS below). The <code>SCHED_BATCH</code> and <code>SCHED_IDLE</code> policies are Linux-specific.</p>
 <h2>NOTES</h2>

@@ -19,7 +19,7 @@ description: "ddisna.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DDISNA computes the reciprocal condition numbers for the eigenvectors
  of a real symmetric or complex Hermitian matrix or for the left or
@@ -35,11 +35,11 @@ description: "ddisna.f –"
  DDISNA may also be used to compute error bounds for eigenvectors of
  the generalized symmetric definite eigenproblem.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre>
           JOB is CHARACTER*1
           Specifies for which problem the reciprocal condition numbers
@@ -79,14 +79,14 @@ D is DOUBLE PRECISION array, dimension(M) if JOB = 'E' dimension(min(M, N)) if J
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 118 of file ddisna.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

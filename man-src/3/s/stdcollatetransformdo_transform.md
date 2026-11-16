@@ -11,14 +11,10 @@ std::collate&lt;CharT&gt;::transform,do_transform - std::collate&lt;CharT&gt;::t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  string_type transform(const CharT *low, const CharT *high) const;
-
 protected:
 (2)
-
     virtual string_type do_transform(const CharT *low, const CharT *high) const;</code></pre> 
 1) Public member function, calls the protected virtual member function do_transform of the most derived class. 
 2) Converts the character sequence [low, high) to a string that, compared lexicographically (e.g. with operator&lt; for strings) with the result of calling transform() on another string, produces the same result as calling do_compare() on the same two strings. 
@@ -39,12 +35,9 @@ In addition to the use in collation, the implementation-specific format of the t
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::locale::global(std::locale(&quot;sv_SE.utf8&quot;));
     auto &amp;f = std::use_facet&lt;std::collate&lt;wchar_t&gt;&gt;(std::locale());

@@ -11,13 +11,10 @@ std::experimental::overaligned_tag,std::experimental::overaligned - std::experim
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / simd&gt;
-
     template &lt;std::size_t N&gt;
-
     struct overaligned_tag {
 };
 template &lt;std::size_t N&gt;
-
 inline constexpr overaligned_tag&lt;N&gt; overaligned{};</code></pre> 
 This tag type indicates that the buffer of copy_from and copy_to is aligned to N. 
 

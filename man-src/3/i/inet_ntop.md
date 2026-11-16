@@ -19,18 +19,18 @@ const char *inet_ntop(int af, const void *src,
 <p> This function converts the network address structure <i>src</i> in the <i>af</i> address family into a character string. The resulting string is copied to the buffer pointed to by <i>dst</i>, which must be a non-null pointer. The caller specifies the number of bytes available in this buffer in the argument <i>size</i>. </p>
 <p> <code>inet_ntop</code>() extends the <code>inet_ntoa</code>(3) function to support multiple address families, <code>inet_ntoa</code>(3) is now considered to be deprecated in favor of <code>inet_ntop</code>(). The following address families are currently supported:</p>
 <dl>
-<dt><code>AF_INET</code></p>
-<dd> <i>src</i> points to a <i>struct in_addr</i> (in network byte order) which is converted to an IPv4 network address in the dotted-decimal format, &quot;<i>ddd.ddd.ddd.ddd</i>&quot;. The buffer <i>dst</i> must be at least <code>INET_ADDRSTRLEN</code> bytes long.</p>
-<dt><code>AF_INET6</code></p>
-<dd> <i>src</i> points to a <i>struct in6_addr</i> (in network byte order) which is converted to a representation of this address in the most appropriate IPv6 network address format for this address. The buffer <i>dst</i> must be at least <code>INET6_ADDRSTRLEN</code> bytes long.</dl>
+<dt><code>AF_INET</code></dt>
+<dd> <i>src</i> points to a <i>struct in_addr</i> (in network byte order) which is converted to an IPv4 network address in the dotted-decimal format, &quot;<i>ddd.ddd.ddd.ddd</i>&quot;. The buffer <i>dst</i> must be at least <code>INET_ADDRSTRLEN</code> bytes long.</dd>
+<dt><code>AF_INET6</code></dt>
+<dd> <i>src</i> points to a <i>struct in6_addr</i> (in network byte order) which is converted to a representation of this address in the most appropriate IPv6 network address format for this address. The buffer <i>dst</i> must be at least <code>INET6_ADDRSTRLEN</code> bytes long.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>inet_ntop</code>() returns a non-null pointer to <i>dst</i>. NULL is returned if there was an error, with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAFNOSUPPORT</code></p>
-<dd> <i>af</i> was not a valid address family.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The converted address string would exceed the size given by <i>size</i>.</dl>
+<dt><code>EAFNOSUPPORT</code></dt>
+<dd> <i>af</i> was not a valid address family.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The converted address string would exceed the size given by <i>size</i>.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

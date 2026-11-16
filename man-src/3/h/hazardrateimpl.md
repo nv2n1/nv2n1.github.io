@@ -33,14 +33,14 @@ description: "QuantLib::DefaultDensityStructure – default-density adapter for 
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>Probability survivalProbabilityImpl (Time) const [protected, virtual]</h3>
 <p>probability of survival between today (t = 0) and a given time </p>
 <p> implemented in terms of the default density $ p(t) $ as [ S(t) = 1 &#8211; int_0^t p( au) d au. ] </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This implementation uses numerical integration. Derived classes should override it if a more efficient formula is available.</dl>
+<dd>This implementation uses numerical integration. Derived classes should override it if a more efficient formula is available.</dd></dl>
 <p> Implements <code>DefaultProbabilityTermStructure</code>. </p>
 <p> Reimplemented in <code>InterpolatedDefaultDensityCurve&lt; Interpolator &gt;</code>.</p>
 <h3><code>Real</code> hazardRateImpl (Time) const [protected, virtual]</h3>

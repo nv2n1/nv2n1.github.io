@@ -10,13 +10,7 @@ description: "mib parsing and datatype manipulation routines. –"
 <p>mib parsing and datatype manipulation routines. &#8211;</p>
 <h3>Data Structures</h3>
 <pre><code>struct _PrefixList
-
-
-
 struct parse_hints
-
-
-
 Typedefs</code></pre>
 <p> typedef <code>_PrefixList</code> * <code>PrefixListPtr</code> </p>
 <p> typedef <code>_PrefixList</code> <code>PrefixList</code></p>
@@ -122,7 +116,7 @@ Typedefs</code></pre>
 <p> int <code>get_wild_node</code> (const char *name, oid *objid, size_t *objidlen)<br />
  <i></i><code>See also:</code></p>
 <dl>
-<dd>comments on find_best_tree_node for usage after first time.</dl>
+<dd>comments on find_best_tree_node for usage after first time.</dd></dl>
 <p> &quot;<br />
  int <code>get_node</code> (const char *name, oid *objid, size_t *objidlen) </p>
 <p> void <code>clear_tree_flags</code> (register struct <code>tree</code> *tp) </p>
@@ -166,17 +160,8 @@ Typedefs</code></pre>
 <p> int <code>snprint_badtype</code> (char *buf, size_t buf_len, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)</p>
 <h3>Variables</h3>
 <pre><code>tree * tree_head
-
-
-
 tree * Mib
-
-
-
 oid RFC1213_MIB [] = { 1, 3, 6, 1, 2, 1 }
-
-
-
 PrefixList mib_prefixes []</code></pre>
 <h2>Function Documentation</h2>
 <h3>int _sprint_hexstring_line (u_char ** buf, size_t * buf_len, size_t * out_len, int allow_realloc, const u_char * cp, size_t line_len)</h3>
@@ -190,10 +175,10 @@ PrefixList mib_prefixes []</code></pre>
  <i>out_len</i> incremented by the number of characters printed.<br />
  <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size.<br />
  <i>cp</i> the array of characters to encode.<br />
- <i>line_len</i> the array length of cp.</dl>
+ <i>line_len</i> the array length of cp.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>1 on success, or 0 on failure (out of memory, or buffer to small when not allowed to realloc.)</dl>
+<dd>1 on success, or 0 on failure (out of memory, or buffer to small when not allowed to realloc.)</dd></dl>
 <p> Definition at line 271 of file mib.c. </p>
 <p> References netsnmp_ds_get_boolean(), and snmp_realloc(). </p>
 <p> Referenced by sprint_realloc_hexstring().</p>
@@ -205,10 +190,10 @@ PrefixList mib_prefixes []</code></pre>
 <p>Takes the value in VAR and turns it into an OID segment in var-&gt;name. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>var</i> The variable.</dl>
+<dd><i>var</i> The variable.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>SNMPERR_SUCCESS or SNMPERR_GENERR</dl>
+<dd>SNMPERR_SUCCESS or SNMPERR_GENERR</dd></dl>
 <p> Definition at line 3442 of file mib.c. </p>
 <p> References netsnmp_vardata::integer, variable_list::name, variable_list::name_length, variable_list::name_loc, NULL, netsnmp_vardata::objid, SNMP_FREE, netsnmp_vardata::string, variable_list::type, variable_list::val, and variable_list::val_len. </p>
 <p> Referenced by build_oid_noalloc().</p>
@@ -219,7 +204,7 @@ PrefixList mib_prefixes []</code></pre>
 <dd><i>f</i> The file descriptor to print to.<br />
  <i>objid</i> The object identifier.<br />
  <i>objidlen</i> The object id length.<br />
- <i>width</i> Number of subidentifiers.</dl>
+ <i>width</i> Number of subidentifiers.</dd></dl>
 <p> Definition at line 4437 of file mib.c. </p>
 <p> References NULL, SNMP_FREE, and sprint_realloc_description(). </p>
 <p> Referenced by print_description().</p>
@@ -229,7 +214,7 @@ PrefixList mib_prefixes []</code></pre>
 <dl>
 <dd><i>f</i> The file descriptor to print to.<br />
  <i>objid</i> The oid to print<br />
- <i>objidlen</i> The length of oidid.</dl>
+ <i>objidlen</i> The length of oidid.</dd></dl>
 <p> Definition at line 3163 of file mib.c. </p>
 <p> References netsnmp_sprint_realloc_objid_tree(), NULL, and SNMP_FREE. </p>
 <p> Referenced by print_objid().</p>
@@ -240,7 +225,7 @@ PrefixList mib_prefixes []</code></pre>
 <dd><i>f</i> The file descriptor to print to.<br />
  <i>objid</i> The object id.<br />
  <i>objidlen</i> The length of teh object id.<br />
- <i>variable</i> The variable to print.</dl>
+ <i>variable</i> The variable to print.</dd></dl>
 <p> Definition at line 3317 of file mib.c. </p>
 <p> References NULL, SNMP_FREE, and sprint_realloc_variable(). </p>
 <p> Referenced by print_variable().</p>
@@ -248,14 +233,14 @@ PrefixList mib_prefixes []</code></pre>
 <p>Retrieves the tree head. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the tree head.</dl>
+<dd>the tree head.</dd></dl>
 <p> Definition at line 2017 of file mib.c. </p>
 <p> References tree_head. </p>
 <p> Referenced by netsnmp_config_parse_table_set(), and snmp_add_var().</p>
 <h3>int get_wild_node (const char * name, oid * objid, size_t * objidlen)</h3>
 <p><code>See also:</code></p>
 <dl>
-<dd>comments on find_best_tree_node for usage after first time.</dl>
+<dd>comments on find_best_tree_node for usage after first time.</dd></dl>
 <p> Definition at line 5457 of file mib.c. </p>
 <p> References get_node(), tree::label, NULL, and tree_head. </p>
 <p> Referenced by snmp_parse_oid().</p>
@@ -280,13 +265,14 @@ PrefixList mib_prefixes []</code></pre>
 <dl>
 <dd><i>C</i> The character buffer.<br />
  <i>L</i> The length of the buffer.<br />
- <i>O</i> The oid.</dl>
+ <i>O</i> The oid.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on Sucess, 1 on failure.</dl>
+<dd>0 on Sucess, 1 on failure.</dd></dl>
 <p> length </p>
 <p> Definition at line 6244 of file mib.c. </p>
 <p> Referenced by netsnmp_oid2str().</p>
 <h3>int netsnmp_oid2str (char * S, int L, oid * O)</h3>
 <p>Converts an OID to its string form. </p>
 <p> in example 5 . &#8216;h&#8217; . &#8216;e&#8217; . &#8216;l&#8217; . &#8216;l&#8217; . &#8216;o&#8217; = &#8216;hello
+</p>

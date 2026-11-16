@@ -19,7 +19,7 @@ description: "QuantLib::AnalyticBarrierEngine – Pricing engine for barrier opt
 <p> The formulas are taken from &#8216;Option pricing formulas&#8217;, E.G. Haug, McGraw-Hill, p.69 and following. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Replication.cpp</code>. </p>
 <h2>Author</h2>

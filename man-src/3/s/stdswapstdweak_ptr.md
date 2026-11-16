@@ -12,7 +12,6 @@ std::swap(std::weak_ptr) - std::swap(std::weak_ptr)
 
 <pre><code>template &lt;class T&gt;
 (since C++ 11)
-
     void swap(weak_ptr&lt;T&gt; &amp;lhs, weak_ptr&lt;T&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::weak_ptr. Swaps the pointers of lhs and rhs. Calls lhs.swap(rhs). 
 

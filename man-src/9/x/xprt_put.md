@@ -15,7 +15,7 @@ xprt_put - release a reference to an RPC transport.
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>pointer to the transport</dl>
+<dl><dd></dd><dd>pointer to the transport</dd></dl>
 
 <h2>Copyright</h2>
 

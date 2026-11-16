@@ -15,8 +15,8 @@ description: "pre2ncgm – convert a pre-CGM NCAR metafile to an NCAR CGM."
 <p> The &quot;pre2ncgm&quot; command reads a pre-CGM NCAR metafile from standard input and writes an NCAR CGM file to standard output. When plotted, the output file should have virtually the same appearance as the input file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd> When this option appears, all text and header records which appear in the input file (created by PRSIM) are not copied to the output file.</dl>
+<dt><code>-n</code></dt>
+<dd> When this option appears, all text and header records which appear in the input file (created by PRSIM) are not copied to the output file.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The command </p>
 <p> <code>pre2ncgm</code> &lt; input-file &gt; output-file </p>

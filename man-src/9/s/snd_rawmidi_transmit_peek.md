@@ -14,13 +14,13 @@ description: "snd_rawmidi_transmit_peek – copy data from the internal buffer"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the rawmidi substream</dl>
+</dd><dd>the rawmidi substream</dd></dl>
 <p> <i>buffer</i></p>
 <dl>
-<dd>the buffer pointer</dl>
+<dd>the buffer pointer</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>data size to transfer</dl>
+<dd>data size to transfer</dd></dl>
 <h2>Description</h2>
 <p>Copies data from the internal output buffer to the given buffer. </p>
 <p> Call this in the interrupt handler when the midi output is ready, and call <code>snd_rawmidi_transmit_ack</code> after the transmission is finished.</p>

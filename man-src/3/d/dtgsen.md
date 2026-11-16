@@ -19,7 +19,7 @@ description: "dtgsen.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  DTGSEN reorders the generalized real Schur decomposition of a real
  matrix pair (A, B) (in terms of an orthonormal equivalence trans-
@@ -42,11 +42,11 @@ description: "dtgsen.f –"
      resp.,
      and norms of "projections" onto left and right eigenspaces w.r.t.the selected cluster in the(1, 1) - block.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>IJOB</i> </p>
+</dt><dd> <i>IJOB</i> </dd>
 <pre>
           IJOB is INTEGER
           Specifies whether condition numbers are required for the
@@ -224,18 +224,18 @@ the<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>DTGSEN first collects the selected eigenvalues by computing<br />
     orthogonal U and W that move them to the top left corner<br />
     of(A, B)<br />
@@ -299,15 +299,15 @@ may move and<br />
   based estimate DIF is not wanted (see DLATDF), then the parameter<br />
   IDIFJB (see below) should be changed from 3 to 4 (routine DLATDF<br />
   (IJOB = 2 will be used)). See DTGSYL for more details.</p>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+</dt><dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [1] B.Kagstrom; A Direct Method for Reordering Eigenvalues in the
       Generalized Real Schur Form of a Regular Matrix Pair (A, B), in
@@ -327,8 +327,9 @@ may move and<br />
       Note 75. To appear in ACM Trans. on Math. Software, Vol 22, No 1,
       1996.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 451 of file dtgsen.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

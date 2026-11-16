@@ -14,7 +14,7 @@ description: "sync_mapping_buffers – write out & wait upon a mapping’s “as
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>the mapping which wants those buffers written</dl>
+</dd><dd>the mapping which wants those buffers written</dd></dl>
 <h2>Description</h2>
 <p>Starts I/O against the buffers at mapping-&gt;private_list, and waits upon that I/O. </p>
 <p> Basically, this is a convenience function for <code>fsync</code>. <i>mapping</i> is a file or directory which needs those buffers to be written for a successful <code>fsync</code>.</p>

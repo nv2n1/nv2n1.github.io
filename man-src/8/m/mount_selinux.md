@@ -67,9 +67,9 @@ description: "mount_selinux – Security Enhanced Linux Policy for the mount pro
 <p> Policy governs the access confined processes have to these ports. SELinux mount policy is very flexible allowing users to setup their mount processes in as secure a method as possible. </p>
 <p> The following port types are defined for mount: </p>
 <dl>
-<dt><code>mountd_port_t</code></p>
+<dt><code>mountd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 20048 udp 20048</dl>
+</dd><dd>Default Defined Ports: tcp 20048 udp 20048</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type mount_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>file_type</code> </p>
@@ -86,16 +86,16 @@ description: "mount_selinux – Security Enhanced Linux Policy for the mount pro
 <p> <code>mount_ecryptfs_exec_t</code> </p>
 <p> &#8211; Set files with the mount_ecryptfs_exec_t type, if you want to transition an executable to the mount_ecryptfs_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/mount.ecryptfs, /usr/sbin/umount.ecryptfs, /usr/sbin/mount.ecryptfs_private, /usr/sbin/umount.ecryptfs_private </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/mount.ecryptfs, /usr/sbin/umount.ecryptfs, /usr/sbin/mount.ecryptfs_private, /usr/sbin/umount.ecryptfs_private </dd>
 </dl>
 <p> <code>mount_ecryptfs_tmpfs_t</code> </p>
 <p> &#8211; Set files with the mount_ecryptfs_tmpfs_t type, if you want to store mount ecryptfs files on a tmpfs file system. </p>
 <p> <code>mount_exec_t</code> </p>
 <p> &#8211; Set files with the mount_exec_t type, if you want to transition an executable to the mount_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/mount.*, /bin/umount.*, /sbin/mount.*, /sbin/umount.*, /usr/bin/mount.*, /usr/bin/umount.*, /usr/sbin/mount.*, /usr/sbin/umount.* </p>
+<dt>Paths:</dt>
+<dd>/bin/mount.*, /bin/umount.*, /sbin/mount.*, /sbin/umount.*, /usr/bin/mount.*, /usr/bin/umount.*, /usr/sbin/mount.*, /usr/sbin/umount.* </dd>
 </dl>
 <p> <code>mount_loopback_t</code> </p>
 <p> &#8211; Set files with the mount_loopback_t type, if you want to treat the files as mount loopback data. </p>
@@ -104,8 +104,8 @@ description: "mount_selinux – Security Enhanced Linux Policy for the mount pro
 <p> <code>mount_var_run_t</code> </p>
 <p> &#8211; Set files with the mount_var_run_t type, if you want to store the mount files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/run/mount(/.*)?, /dev/.mount(/.*)?, /var/run/mount(/.*)?, /var/run/davfs2(/.*)?, /var/cache/davfs2(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/run/mount(/.*)?, /dev/.mount(/.*)?, /var/run/mount(/.*)?, /var/run/davfs2(/.*)?, /var/cache/davfs2(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

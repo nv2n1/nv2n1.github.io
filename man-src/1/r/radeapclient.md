@@ -19,40 +19,40 @@ description: "radeapclient – send EAP packets to a RADIUS server, calculate re
 <p> No other EAP types are currently supported. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-4</p>
-<dd> Use IPv4 (default)</p>
-<dt>-6</p>
-<dd> Use IPv6</p>
-<dt>-c&nbsp;<wbr><i>count</i></p>
-<dd> Send each packet <i>count</i> times.</p>
-<dt>-d&nbsp;<wbr><i>raddb</i></p>
-<dd> Set dictionary directory.</p>
-<dt>-f&nbsp;<wbr><i>file</i></p>
-<dd> Read packets from <i>file</i>, not stdin.</p>
-<dt>-r&nbsp;<wbr><i>retries</i></p>
-<dd> If timeout, retry sending the packet <i>retries</i> times.</p>
-<dt>-t&nbsp;<wbr><i>timeout</i></p>
-<dd> Wait <i>timeout</i> seconds before retrying (may be a floating point number).</p>
-<dt>-h</p>
-<dd> Print usage help information.</p>
-<dt>-i&nbsp;<wbr><i>id</i></p>
-<dd> Set request id to &#8216;<i>id</i>&#8216;. Values may be 0..255</p>
-<dt>-S&nbsp;<wbr><i>file</i></p>
-<dd> Read secret from <i>file</i>, not command line.</p>
-<dt>-q</p>
-<dd> Quiet, do not print anything out.</p>
-<dt>-s</p>
-<dd> Print out summary information of auth results.</p>
-<dt>-v</p>
-<dd> Show program version information.</p>
-<dt>-x</p>
-<dd> Enable debugging mode. </p>
+<dt>-4</dt>
+<dd> Use IPv4 (default)</dd>
+<dt>-6</dt>
+<dd> Use IPv6</dd>
+<dt>-c&nbsp;<wbr><i>count</i></dt>
+<dd> Send each packet <i>count</i> times.</dd>
+<dt>-d&nbsp;<wbr><i>raddb</i></dt>
+<dd> Set dictionary directory.</dd>
+<dt>-f&nbsp;<wbr><i>file</i></dt>
+<dd> Read packets from <i>file</i>, not stdin.</dd>
+<dt>-r&nbsp;<wbr><i>retries</i></dt>
+<dd> If timeout, retry sending the packet <i>retries</i> times.</dd>
+<dt>-t&nbsp;<wbr><i>timeout</i></dt>
+<dd> Wait <i>timeout</i> seconds before retrying (may be a floating point number).</dd>
+<dt>-h</dt>
+<dd> Print usage help information.</dd>
+<dt>-i&nbsp;<wbr><i>id</i></dt>
+<dd> Set request id to &#8216;<i>id</i>&#8216;. Values may be 0..255</dd>
+<dt>-S&nbsp;<wbr><i>file</i></dt>
+<dd> Read secret from <i>file</i>, not command line.</dd>
+<dt>-q</dt>
+<dd> Quiet, do not print anything out.</dd>
+<dt>-s</dt>
+<dd> Print out summary information of auth results.</dd>
+<dt>-v</dt>
+<dd> Show program version information.</dd>
+<dt>-x</dt>
+<dd> Enable debugging mode. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> A sample session that queries the remote server with an EAP-MD5 challenge.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 (echo 'User-Name = "bob"';
  echo 'EAP-MD5-Password = "hello"';
@@ -65,7 +65,7 @@ description: "radeapclient – send EAP packets to a RADIUS server, calculate re
                             - x localhost auth testing123 &lt;
     req.txt
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-radclient/">radclient</a>(1)</p>
 <h2>AUTHOR</h2>

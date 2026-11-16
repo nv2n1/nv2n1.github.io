@@ -14,16 +14,16 @@ description: "mongoc_cursor_t – Client-side cursor abtraction"
 <p> Cursors are lazy, meaning that no network traffic occurs until the first call to <code><a href="/docs/linux/man/3-mongoc_cursor_next/">mongoc_cursor_next</a>(3)</code> \&amp;. </p>
 <p> At that point we can: </p>
 <dl COMPACT>
-<dt>\[bu]</p>
-<dd>Determine which host we&#8217;ve connected to with <code><a href="/docs/linux/man/3-mongoc_cursor_get_host/">mongoc_cursor_get_host</a>(3)</code> \&amp;.</p>
-<dt>\[bu]</p>
-<dd>Retrieve more records with repeated calls to <code><a href="/docs/linux/man/3-mongoc_cursor_next/">mongoc_cursor_next</a>(3)</code> \&amp;.</p>
-<dt>\[bu]</p>
-<dd>Test for more records with <code><a href="/docs/linux/man/3-mongoc_cursor_more/">mongoc_cursor_more</a>(3)</code></p>
-<dt>\[bu]</p>
-<dd>Clone a query to repeat execution at a later point with <code><a href="/docs/linux/man/3-mongoc_cursor_clone/">mongoc_cursor_clone</a>(3)</code> \&amp;.</p>
-<dt>\[bu]</p>
-<dd>Test for errors with <code><a href="/docs/linux/man/3-mongoc_cursor_error/">mongoc_cursor_error</a>(3)</code> \&amp;. </p>
+<dt>\[bu]</dt>
+<dd>Determine which host we&#8217;ve connected to with <code><a href="/docs/linux/man/3-mongoc_cursor_get_host/">mongoc_cursor_get_host</a>(3)</code> \&amp;.</dd>
+<dt>\[bu]</dt>
+<dd>Retrieve more records with repeated calls to <code><a href="/docs/linux/man/3-mongoc_cursor_next/">mongoc_cursor_next</a>(3)</code> \&amp;.</dd>
+<dt>\[bu]</dt>
+<dd>Test for more records with <code><a href="/docs/linux/man/3-mongoc_cursor_more/">mongoc_cursor_more</a>(3)</code></dd>
+<dt>\[bu]</dt>
+<dd>Clone a query to repeat execution at a later point with <code><a href="/docs/linux/man/3-mongoc_cursor_clone/">mongoc_cursor_clone</a>(3)</code> \&amp;.</dd>
+<dt>\[bu]</dt>
+<dd>Test for errors with <code><a href="/docs/linux/man/3-mongoc_cursor_error/">mongoc_cursor_error</a>(3)</code> \&amp;. </dd>
 </dl>
 <h2>Thread Safety</h2>
 <p><code>mongoc_cursor_t</code> is <code>NOT</code> thread safe. It may only be used from the thread it was created from. </p>

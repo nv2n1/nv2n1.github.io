@@ -15,15 +15,13 @@ description: "ausearch_set_stop – set the cursor position"
 <h2>DESCRIPTION</h2>
 <p> ausearch_set_stop determines where the internal cursor will stop when a search condition is met. The possible values are: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>AUSEARCH_STOP_EVENT</i></p>
-<dd> This one repositions the cursors to the first field of the first record of the event containing the items searched for.</p>
-<dt><i>AUSEARCH_STOP_RECORD</i></p>
-<dd> This one repositions the cursors to the first field of the record containing the items searched for.</p>
-<dt><i>AUSEARCH_STOP_FIELD</i></p>
-<dd> This one simply stops on the current field when the evaluation of the rules becomes true.</dl>
+<dt><i>AUSEARCH_STOP_EVENT</i></dt>
+<dd> This one repositions the cursors to the first field of the first record of the event containing the items searched for.</dd>
+<dt><i>AUSEARCH_STOP_RECORD</i></dt>
+<dd> This one repositions the cursors to the first field of the record containing the items searched for.</dd>
+<dt><i>AUSEARCH_STOP_FIELD</i></dt>
+<dd> This one simply stops on the current field when the evaluation of the rules becomes true.</dd></dl>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> Returns -1 if an error occurs; otherwise, 0 for success. </p>

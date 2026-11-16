@@ -17,113 +17,113 @@ description: "fence_virt – Fencing agent for virtual machines using VM Channel
 <h2>General Parameters</h2>
 <p><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
 <dl>
-<dt><code>-d</code></p>
-<dd>Increment (command line) debug level <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-H</code></p>
-<dd>Virtual machine (domain UUID or name) to fence </p>
-<dt><code>-o</code></p>
-<dd>Fencing action (null, off, on, reboot, status, monitor, list, or metadata) (Default Value: reboot). See the FENCING ACTIONS section. </p>
-<dt><code>-t</code></p>
-<dd>Fencing timeout (in seconds) (Default Value: 30) </p>
-<dt><code>-w</code></p>
-<dd>Fencing delay (in seconds). The fence agent will wait the specified number of seconds before attempting a fencing operation. (Default Value: 0) </p>
+<dt><code>-d</code></dt>
+<dd>Increment (command line) debug level <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-H</code></dt>
+<dd>Virtual machine (domain UUID or name) to fence </dd>
+<dt><code>-o</code></dt>
+<dd>Fencing action (null, off, on, reboot, status, monitor, list, or metadata) (Default Value: reboot). See the FENCING ACTIONS section. </dd>
+<dt><code>-t</code></dt>
+<dd>Fencing timeout (in seconds) (Default Value: 30) </dd>
+<dt><code>-w</code></dt>
+<dd>Fencing delay (in seconds). The fence agent will wait the specified number of seconds before attempting a fencing operation. (Default Value: 0) </dd>
 </dl>
 <h2>Multicast Parameters</h2>
 <p>These parameters are used only when using fence_virt in multicast mode (e.g. by running fence_xvm). </p>
 <dl>
-<dt><code>-i</code></p>
-<dd>IP Family (auto, ipv4, ipv6) (Default Value: auto) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-a</code></p>
-<dd>Multicast address (Default Values: 225.0.0.12 / ff02::3:1) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-p</code></p>
-<dd>IP port (Default Value: 1229) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-T</code></p>
-<dd>Multicast time-to-live (in hops) (Default Value: 2) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-r</code></p>
-<dd>Multicast retransmit time (in 1/10sec) (Default Value: 20) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-C</code></p>
-<dd>Authentication (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-c</code></p>
-<dd>Packet hash strength (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>-k</code></p>
-<dd>Shared key file (Default Value: /etc/cluster/fence_xvm.key) </p>
-<dt><code>-u</code></p>
-<dd>Specify if using fence_virt with older fence_xvmd installations which are using UUIDs. Fence_virtd ignores this parameter. </p>
+<dt><code>-i</code></dt>
+<dd>IP Family (auto, ipv4, ipv6) (Default Value: auto) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-a</code></dt>
+<dd>Multicast address (Default Values: 225.0.0.12 / ff02::3:1) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-p</code></dt>
+<dd>IP port (Default Value: 1229) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-T</code></dt>
+<dd>Multicast time-to-live (in hops) (Default Value: 2) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-r</code></dt>
+<dd>Multicast retransmit time (in 1/10sec) (Default Value: 20) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-C</code></dt>
+<dd>Authentication (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-c</code></dt>
+<dd>Packet hash strength (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>-k</code></dt>
+<dd>Shared key file (Default Value: /etc/cluster/fence_xvm.key) </dd>
+<dt><code>-u</code></dt>
+<dd>Specify if using fence_virt with older fence_xvmd installations which are using UUIDs. Fence_virtd ignores this parameter. </dd>
 </dl>
 <h2>Serial/Vmchannel Parameters</h2>
 <p>These parameters are used only when using fence_virt in serial mode (e.g. by running fence_virt). </p>
 <dl>
-<dt><code>-D</code></p>
-<dd>Serial device (fence_virt mode). On the host, the serial device must be mapped in each domain&#8217;s configuration file. See <a href="/docs/linux/man/5-fence_virt-conf/">fence_virt.conf</a>(5) for more information. Specifying a serial device causes fence_virt to use serial mode (as opposed to VMChannel mode). </p>
-<dt><code>-P</code></p>
-<dd>Serial parameters. (Default Value: 115200,8N1) </p>
-<dt><code>-A</code></p>
-<dd>VMChannel IP address (Default Value: 10.0.2.179) </p>
-<dt><code>-p</code></p>
-<dd>VMChannel IP port (Default Value: 1229) </p>
+<dt><code>-D</code></dt>
+<dd>Serial device (fence_virt mode). On the host, the serial device must be mapped in each domain&#8217;s configuration file. See <a href="/docs/linux/man/5-fence_virt-conf/">fence_virt.conf</a>(5) for more information. Specifying a serial device causes fence_virt to use serial mode (as opposed to VMChannel mode). </dd>
+<dt><code>-P</code></dt>
+<dd>Serial parameters. (Default Value: 115200,8N1) </dd>
+<dt><code>-A</code></dt>
+<dd>VMChannel IP address (Default Value: 10.0.2.179) </dd>
+<dt><code>-p</code></dt>
+<dd>VMChannel IP port (Default Value: 1229) </dd>
 </dl>
 <h2>General Stdin Parameters</h2>
 <p>These parameters are passed to fence_virt via standard input if no command line options are present. They are presented to fence_virt in the form: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>name=value <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
 <dl>
-<dt><code>debug</code></p>
-<dd>Specify debugging level </p>
-<dt><code>port</code></p>
-<dd>Virtual machine (domain UUID or name) to fence </p>
-<dt><code>action</code></p>
-<dd>Fencing action (null, off, on, reboot, status, monitor, list, or metadata) (Default Value: reboot). See the FENCING ACTIONS section. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>timeout</code></p>
-<dd>Fencing timeout (in seconds) (Default Value: 30) </p>
+<dt><code>debug</code></dt>
+<dd>Specify debugging level </dd>
+<dt><code>port</code></dt>
+<dd>Virtual machine (domain UUID or name) to fence </dd>
+<dt><code>action</code></dt>
+<dd>Fencing action (null, off, on, reboot, status, monitor, list, or metadata) (Default Value: reboot). See the FENCING ACTIONS section. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>timeout</code></dt>
+<dd>Fencing timeout (in seconds) (Default Value: 30) </dd>
 </dl>
 <h2>Multicast Stdin Parameters</h2>
 <dl>
-<dt><code>ip_family</code></p>
-<dd>IP Family ([auto], ipv4, ipv6) (Default Value: auto) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>multicast_address</code></p>
-<dd>Multicast address (Defaults: 225.0.0.12 / ff02::3:1) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>port</code></p>
-<dd>IP port (Default Value: 1229) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>multicast_ttl</code></p>
-<dd>Multicast time-to-live (in hops) (Default Value: 2) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>retrans</code></p>
-<dd>Multicast retransmit time (in 1/10sec) (Default Value: 20) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>auth</code></p>
-<dd>Authentication (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>hash</code></p>
-<dd>Packet hash strength (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>key_file</code></p>
-<dd>Shared key file (Default Value: /etc/cluster/fence_xvm.key) </p>
-<dt><code>use_uuid</code></p>
-<dd>Specify if using fence_virt with older fence_xvmd installations which are using UUIDs. Fence_virtd ignores this parameter. </p>
+<dt><code>ip_family</code></dt>
+<dd>IP Family ([auto], ipv4, ipv6) (Default Value: auto) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>multicast_address</code></dt>
+<dd>Multicast address (Defaults: 225.0.0.12 / ff02::3:1) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>port</code></dt>
+<dd>IP port (Default Value: 1229) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>multicast_ttl</code></dt>
+<dd>Multicast time-to-live (in hops) (Default Value: 2) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>retrans</code></dt>
+<dd>Multicast retransmit time (in 1/10sec) (Default Value: 20) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>auth</code></dt>
+<dd>Authentication (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>hash</code></dt>
+<dd>Packet hash strength (none, sha1, sha256, sha512) (Default Value: sha256) <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>key_file</code></dt>
+<dd>Shared key file (Default Value: /etc/cluster/fence_xvm.key) </dd>
+<dt><code>use_uuid</code></dt>
+<dd>Specify if using fence_virt with older fence_xvmd installations which are using UUIDs. Fence_virtd ignores this parameter. </dd>
 </dl>
 <h2>Serial/Vmchannel Stdin Parameters</h2>
 <dl>
-<dt><code>serial_device</code></p>
-<dd>Serial device. On the host, the serial device must be mapped in each domain&#8217;s configuration file. See <a href="/docs/linux/man/5-fence_virt-conf/">fence_virt.conf</a>(5) for more information. If specified, causes fence_virt to operate in serial mode (not specifying causes fence_virt to operate in VM Channel mode). </p>
-<dt><code>serial_params</code></p>
-<dd>Serial parameters. Default=115200,8N1. </p>
-<dt><code>channel_ip</code></p>
-<dd>Channel IP. Default=10.0.2.179 </p>
-<dt><code>ipport</code></p>
-<dd>Channel port. Default=1229 </p>
+<dt><code>serial_device</code></dt>
+<dd>Serial device. On the host, the serial device must be mapped in each domain&#8217;s configuration file. See <a href="/docs/linux/man/5-fence_virt-conf/">fence_virt.conf</a>(5) for more information. If specified, causes fence_virt to operate in serial mode (not specifying causes fence_virt to operate in VM Channel mode). </dd>
+<dt><code>serial_params</code></dt>
+<dd>Serial parameters. Default=115200,8N1. </dd>
+<dt><code>channel_ip</code></dt>
+<dd>Channel IP. Default=10.0.2.179 </dd>
+<dt><code>ipport</code></dt>
+<dd>Channel port. Default=1229 </dd>
 </dl>
 <h2>Fencing Actions</h2>
 <p><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
 <dl>
-<dt><code>off </code></p>
-<dd>&nbsp;<wbr>Destroy or turn off virtual machine. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>reboot </code></p>
-<dd>Reboot virtual machine; i.e. restart the virtual machine on the same host where it is currently running. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>on </code></p>
-<dd>Turn on a virtual machine. Note: Turning on a virtual machine only works with some fence_virt backends. </p>
-<dt><code>status </code></p>
-<dd>Check whether a virtual machine is running or not. </p>
-<dt><code>monitor </code></p>
-<dd>Check the health of fence_virtd&#8217;s backend plugin. </p>
-<dt><code>list </code></p>
-<dd>List virtual machines which may be fenced by fence_virtd (not supported on all backends). </p>
-<dt><code>metadata </code></p>
-<dd>Print XML metadata to standard output. </p>
+<dt><code>off </code></dt>
+<dd>&nbsp;<wbr>Destroy or turn off virtual machine. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>reboot </code></dt>
+<dd>Reboot virtual machine; i.e. restart the virtual machine on the same host where it is currently running. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>on </code></dt>
+<dd>Turn on a virtual machine. Note: Turning on a virtual machine only works with some fence_virt backends. </dd>
+<dt><code>status </code></dt>
+<dd>Check whether a virtual machine is running or not. </dd>
+<dt><code>monitor </code></dt>
+<dd>Check the health of fence_virtd&#8217;s backend plugin. </dd>
+<dt><code>list </code></dt>
+<dd>List virtual machines which may be fenced by fence_virtd (not supported on all backends). </dd>
+<dt><code>metadata </code></dt>
+<dd>Print XML metadata to standard output. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-fence_virtd/">fence_virtd</a>(8), fence(8), fence_virtd.conf(5) </p>

@@ -15,43 +15,43 @@ description: "marked – a javascript markdown parser"
 <p> <code>marked</code> is a full-featured javascript markdown parser, built for speed. It also includes multiple GFM features. </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>cat in.md | marked &gt; out.html</p>
+<dt>cat in.md | marked &gt; out.html</dt>
 <dd>
-<dt>echo &quot;hello *world*&quot; | marked</p>
+</dd><dt>echo &quot;hello *world*&quot; | marked</dt>
 <dd>
-<dt>marked -o out.html in.md &#8211;gfm</p>
+</dd><dt>marked -o out.html in.md &#8211;gfm</dt>
 <dd>
-<dt>marked &#8211;output=&quot;hello world.html&quot; -i in.md &#8211;no-breaks</p>
+</dd><dt>marked &#8211;output=&quot;hello world.html&quot; -i in.md &#8211;no-breaks</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o, &#8211;output&nbsp;<wbr>[</code><i>output</i>]</p>
-<dd> Specify file output. If none is specified, write to stdout.</p>
-<dt><code>-i, &#8211;input&nbsp;<wbr>[</code><i>input</i>]</p>
-<dd> Specify file input, otherwise use last argument as input file. If no input file is specified, read from stdin.</p>
-<dt><code>-t, &#8211;tokens</code></p>
-<dd> Output a token stream instead of html.</p>
-<dt><code>&#8211;pedantic</code></p>
-<dd> Conform to obscure parts of markdown.pl as much as possible. Don&#8217;t fix original markdown bugs.</p>
-<dt><code>&#8211;gfm</code></p>
-<dd> Enable github flavored markdown.</p>
-<dt><code>&#8211;breaks</code></p>
-<dd> Enable GFM line breaks. Only works with the gfm option.</p>
-<dt><code>&#8211;tables</code></p>
-<dd> Enable GFM tables. Only works with the gfm option.</p>
-<dt><code>&#8211;sanitize</code></p>
-<dd> Sanitize output. Ignore any HTML input.</p>
-<dt><code>&#8211;smart-lists</code></p>
-<dd> Use smarter list behavior than the original markdown.</p>
-<dt><code>&#8211;lang-prefix&nbsp;<wbr>[</code><i>prefix</i>]</p>
-<dd> Set the prefix for code block classes.</p>
-<dt><code>&#8211;no-sanitize, -no-etc&#8230;</code></p>
-<dd> The inverse of any of the marked options above.</p>
-<dt><code>&#8211;silent</code></p>
-<dd> Silence error output.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display help information. </p>
+<dt><code>-o, &#8211;output&nbsp;<wbr>[</code><i>output</i>]</dt>
+<dd> Specify file output. If none is specified, write to stdout.</dd>
+<dt><code>-i, &#8211;input&nbsp;<wbr>[</code><i>input</i>]</dt>
+<dd> Specify file input, otherwise use last argument as input file. If no input file is specified, read from stdin.</dd>
+<dt><code>-t, &#8211;tokens</code></dt>
+<dd> Output a token stream instead of html.</dd>
+<dt><code>&#8211;pedantic</code></dt>
+<dd> Conform to obscure parts of markdown.pl as much as possible. Don&#8217;t fix original markdown bugs.</dd>
+<dt><code>&#8211;gfm</code></dt>
+<dd> Enable github flavored markdown.</dd>
+<dt><code>&#8211;breaks</code></dt>
+<dd> Enable GFM line breaks. Only works with the gfm option.</dd>
+<dt><code>&#8211;tables</code></dt>
+<dd> Enable GFM tables. Only works with the gfm option.</dd>
+<dt><code>&#8211;sanitize</code></dt>
+<dd> Sanitize output. Ignore any HTML input.</dd>
+<dt><code>&#8211;smart-lists</code></dt>
+<dd> Use smarter list behavior than the original markdown.</dd>
+<dt><code>&#8211;lang-prefix&nbsp;<wbr>[</code><i>prefix</i>]</dt>
+<dd> Set the prefix for code block classes.</dd>
+<dt><code>&#8211;no-sanitize, -no-etc&#8230;</code></dt>
+<dd> The inverse of any of the marked options above.</dd>
+<dt><code>&#8211;silent</code></dt>
+<dd> Silence error output.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display help information. </dd>
 </dl>
 <h2>CONFIGURATION</h2>
 <p> For configuring and running programmatically. </p>

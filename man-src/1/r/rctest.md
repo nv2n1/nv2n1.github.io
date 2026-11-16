@@ -15,54 +15,54 @@ description: "rctest – RFCOMM testing"
 <p> <code><a href="/docs/linux/man/1-rctest/">rctest</a>(1)</code> is used to test RFCOMM communications on the BlueZ stack</p>
 <h2>MODES</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd> listen and receive</p>
-<dt><code>-w</code></p>
-<dd> listen and send</p>
-<dt><code>-d</code></p>
-<dd> listen and dump incoming data</p>
-<dt><code>-s</code></p>
-<dd> connect and send</p>
-<dt><code>-u</code></p>
-<dd> connect and receive</p>
-<dt><code>-n</code></p>
-<dd> connect and be silent</p>
-<dt><code>-c</code></p>
-<dd> connect, disconnect, connect, &#8230;</p>
-<dt><code>-m</code></p>
-<dd> multiple connects</dl>
+<dt><code>-r</code></dt>
+<dd> listen and receive</dd>
+<dt><code>-w</code></dt>
+<dd> listen and send</dd>
+<dt><code>-d</code></dt>
+<dd> listen and dump incoming data</dd>
+<dt><code>-s</code></dt>
+<dd> connect and send</dd>
+<dt><code>-u</code></dt>
+<dd> connect and receive</dd>
+<dt><code>-n</code></dt>
+<dd> connect and be silent</dd>
+<dt><code>-c</code></dt>
+<dd> connect, disconnect, connect, &#8230;</dd>
+<dt><code>-m</code></dt>
+<dd> multiple connects</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i>&nbsp;bytes</i></p>
-<dd> send/receive bytes</p>
-<dt><code>-i</code><i>&nbsp;device</i></p>
-<dd> select the specified device</p>
-<dt><code>-P</code><i>&nbsp;channel</i></p>
-<dd> select the specified channel</p>
-<dt><code>-U</code><i>&nbsp;uuid</i></p>
-<dd> select the specified uuid</p>
-<dt><code>-L</code><i>&nbsp;seconds</i></p>
-<dd> enable SO_LINGER options for seconds</p>
-<dt><code>-W</code><i>&nbsp;seconds</i></p>
-<dd> enable deferred setup for seconds</p>
-<dt><code>-B</code><i>&nbsp;filename</i></p>
-<dd> use data packets from filename</p>
-<dt><code>-N</code><i>&nbsp;num</i></p>
-<dd> send num frames</p>
-<dt><code>-C</code><i>&nbsp;num</i></p>
-<dd> send num frames before delay (default: 1)</p>
-<dt><code>-D</code><i>&nbsp;milliseconds</i></p>
-<dd> delay milliseconds after sending num frames (default: 0)</p>
-<dt><code>-A</code></p>
-<dd> request authentication</p>
-<dt><code>-E</code></p>
-<dd> request encryption</p>
-<dt><code>-S</code></p>
-<dd> secure connection</p>
-<dt><code>-M</code></p>
-<dd> become central</p>
-<dt><code>-T</code></p>
-<dd> enable timestamps</dl>
+<dt><code>-b</code><i>&nbsp;bytes</i></dt>
+<dd> send/receive bytes</dd>
+<dt><code>-i</code><i>&nbsp;device</i></dt>
+<dd> select the specified device</dd>
+<dt><code>-P</code><i>&nbsp;channel</i></dt>
+<dd> select the specified channel</dd>
+<dt><code>-U</code><i>&nbsp;uuid</i></dt>
+<dd> select the specified uuid</dd>
+<dt><code>-L</code><i>&nbsp;seconds</i></dt>
+<dd> enable SO_LINGER options for seconds</dd>
+<dt><code>-W</code><i>&nbsp;seconds</i></dt>
+<dd> enable deferred setup for seconds</dd>
+<dt><code>-B</code><i>&nbsp;filename</i></dt>
+<dd> use data packets from filename</dd>
+<dt><code>-N</code><i>&nbsp;num</i></dt>
+<dd> send num frames</dd>
+<dt><code>-C</code><i>&nbsp;num</i></dt>
+<dd> send num frames before delay (default: 1)</dd>
+<dt><code>-D</code><i>&nbsp;milliseconds</i></dt>
+<dd> delay milliseconds after sending num frames (default: 0)</dd>
+<dt><code>-A</code></dt>
+<dd> request authentication</dd>
+<dt><code>-E</code></dt>
+<dd> request encryption</dd>
+<dt><code>-S</code></dt>
+<dd> secure connection</dd>
+<dt><code>-M</code></dt>
+<dd> become central</dd>
+<dt><code>-T</code></dt>
+<dd> enable timestamps</dd></dl>
 <h2>RESOURCES</h2>
 <p> <i><a rel="nofollow" href="http://www.bluez.org">http://www.bluez.org</a></i></p>
 <h2>REPORTING BUGS</h2>

@@ -14,8 +14,8 @@ description: "gnutls_x509_aia_deinit – API function"
 <p> <code>void gnutls_x509_aia_deinit(gnutls_x509_aia_t </code><i>aia</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_aia_t aia</p>
-<dd> The authority info access structure</dl>
+<dt>gnutls_x509_aia_t aia</dt>
+<dd> The authority info access structure</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will deinitialize a CRL distribution points structure.</p>
 <h2>SINCE</h2>
@@ -29,6 +29,6 @@ description: "gnutls_x509_aia_deinit – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

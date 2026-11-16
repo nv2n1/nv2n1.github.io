@@ -56,16 +56,16 @@ description: "QuantLib::Forward – Abstract base forward class."
 <p> incomeDiscountCurve_, which for generality is not automatically set to the discountCurve_, is the curve used to discount future income/dividends/storage-costs etc back to the evaluation date. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Add preconditions and tests</dl>
+<dd>Add preconditions and tests</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This class still needs to be rigorously tested</dl>
+<dd>This class still needs to be rigorously tested</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual <code>Real</code> forwardValue () const [virtual]</h3>
 <p>forward value/price of underlying, discounting income/dividends </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>if this is a bond forward price, is must be a dirty forward price.</dl>
+<dd>if this is a bond forward price, is must be a dirty forward price.</dd></dl>
 <h3><code>InterestRate</code> impliedYield (<code>Real</code> underlyingSpotValue, <code>Real</code> forwardValue, <code>Date</code> settlementDate, Compounding compoundingConvention, <code>DayCounter</code> dayCounter)</h3>
 <p>Simple yield calculation based on underlying spot and forward values, taking into account underlying income. When $ t&gt;0 $, call with: underlyingSpotValue=spotValue(t), forwardValue=strikePrice, to get current yield. For a repo, if $ t=0 $, impliedYield should reproduce the spot repo rate. For FRA&#8217;s, this should reproduce the relevant zero rate at the FRA&#8217;s maturityDate_;</p>
 <h3>void performCalculations () const [protected, virtual]</h3>

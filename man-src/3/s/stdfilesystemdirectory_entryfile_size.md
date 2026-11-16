@@ -12,7 +12,6 @@ std::filesystem::directory_entry::file_size - std::filesystem::directory_entry::
 
 <pre><code>std::uintmax_t file_size() const;
 (since C++ 17)
-
     std::uintmax_t file_size(std::error_code &amp;ec) const noexcept;</code></pre> 
 If the file size is cached in this directory_entry, returns the cached value. Otherwise, returns std::filesystem::file_size(path()) or std::filesystem::file_size(path(), ec), respectively 
 

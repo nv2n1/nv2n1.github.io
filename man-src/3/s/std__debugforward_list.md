@@ -77,50 +77,17 @@ description: "std::__debug::forward_list< _Tp, _Alloc > –"
 <p> template&lt;typename _BinPred &gt; void <code>unique</code> (_BinPred __binary_pred)</p>
 <h3>Public Attributes</h3>
 <pre><code>const _Alloc &amp; __al: _Base(__list
-
-
-
 const _Alloc __al
-
-
-
 __pad0__: _Base(__al) { } forward_list(const forward_list&amp; __list
-
-
-
 _Safe_iterator_base * _M_const_iterators
-
-
-
 _Safe_iterator_base * _M_iterators
-
-
-
 unsigned int _M_version
-
-
-
 void
-
-
-
 Protected Member Functions
 void _M_detach_all ()
-
-
-
 void _M_detach_singular ()
-
-
-
 __gnu_cxx::__mutex &amp; _M_get_mutex ()  throw ()
-
-
-
 void _M_revalidate_singular ()
-
-
-
 void _M_swap (_Safe_sequence_base &amp;__x)</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _Tp, typename _Alloc = std::allocator&lt;_Tp&gt;&gt;class std::__debug::forward_list&lt; _Tp, _Alloc &gt;</h3>
@@ -142,7 +109,7 @@ void _M_swap (_Safe_sequence_base &amp;__x)</code></pre>
 <p>Detach all singular iterators. </p>
 <p> <code>Postcondition:</code></p>
 <dl>
-<dd>for all iterators i attached to this sequence, i-&gt;_M_version == _M_version.</dl>
+<dd>for all iterators i attached to this sequence, i-&gt;_M_version == _M_version.</dd></dl>
 <h3>__gnu_cxx::__mutex&amp; __gnu_debug::_Safe_sequence_base::_M_get_mutex () [protected], [inherited]</h3>
 <p>For use in _Safe_sequence. </p>
 <p> Referenced by __gnu_debug::_Safe_sequence&lt; _Sequence &gt;::_M_transfer_from_if().</p>

@@ -24,18 +24,18 @@ tig &lt; [Git command output]</pre>
 <dl>
 <dd>
 <pre>$ git show | tig</pre>
-</dl>
+</dd></dl>
 <h3>Git Command Options</h3>
 <p>All Git command options specified on the command line will be passed to the given command and all will be shell quoted before they are passed to the shell. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If you specify options for the main view, you should not use the &#8211;pretty option as this option will be set automatically to the format expected by the main view. </p>
 </dl>
 <p> Example on how to view a commit and show both author and committer information: </p>
 <dl>
 <dd>
 <pre>$ tig show --pretty=fuller</pre>
-</dl>
+</dd></dl>
 <p> See the section on specifying revisions for an introduction to revision options supported by the Git commands. For details on specific Git command options, refer to the man page of the command in question.</p>
 <h2>The Viewer</h2>
 <p>The display consists of a status window on the last line of the screen and one or more views. The default is to only show one view at a time but it is possible to split both the main and log view to also show the commit diff. </p>
@@ -43,52 +43,52 @@ tig &lt; [Git command output]</pre>
 <dl>
 <dd>
 <pre>commit 4d55caff4cc89335192f3e566004b4ceef572521</pre>
-</dl>
+</dd></dl>
 <p> You will split the view so that the log view is displayed in the top window and the diff view in the bottom window. You can switch between the two views by pressing <i>Tab</i>. To maximize the log view again, simply press <i>l</i>.</p>
 <h3>Views</h3>
 <p>Various <i>views</i> of a repository are presented. Each view is based on output from an external command, most often <i>git log</i>, <i>git diff</i>, or <i>git show</i>. </p>
 <p> The main view</p>
 <dl>
-<dd>Is the default view, and it shows a one line summary of each commit in the chosen list of revisions. The summary includes author date, author, and the first line of the log message. Additionally, any repository references, such as tags, will be shown.</dl>
+<dd>Is the default view, and it shows a one line summary of each commit in the chosen list of revisions. The summary includes author date, author, and the first line of the log message. Additionally, any repository references, such as tags, will be shown.</dd></dl>
 <p> The log view</p>
 <dl>
-<dd>Presents a more rich view of the revision log showing the whole log message and the diffstat.</dl>
+<dd>Presents a more rich view of the revision log showing the whole log message and the diffstat.</dd></dl>
 <p> The reflog view</p>
 <dl>
-<dd>Presents a view of the reflog allowing to navigate the repo history.</dl>
+<dd>Presents a view of the reflog allowing to navigate the repo history.</dd></dl>
 <p> The diff view</p>
 <dl>
-<dd>Shows either the diff of the current working tree, that is, what has changed since the last commit, or the commit diff complete with log message, diffstat and diff.</dl>
+<dd>Shows either the diff of the current working tree, that is, what has changed since the last commit, or the commit diff complete with log message, diffstat and diff.</dd></dl>
 <p> The tree view</p>
 <dl>
-<dd>Lists directory trees associated with the current revision allowing subdirectories to be descended or ascended and file blobs to be viewed.</dl>
+<dd>Lists directory trees associated with the current revision allowing subdirectories to be descended or ascended and file blobs to be viewed.</dd></dl>
 <p> The blob view</p>
 <dl>
-<dd>Displays the file content or &quot;blob&quot; of data associated with a file name.</dl>
+<dd>Displays the file content or &quot;blob&quot; of data associated with a file name.</dd></dl>
 <p> The blame view</p>
 <dl>
-<dd>Displays the file content annotated or blamed by commits.</dl>
+<dd>Displays the file content annotated or blamed by commits.</dd></dl>
 <p> The refs view</p>
 <dl>
-<dd>Displays the branches, remotes and tags in the repository.</dl>
+<dd>Displays the branches, remotes and tags in the repository.</dd></dl>
 <p> The status view</p>
 <dl>
-<dd>Displays status of files in the working tree and allows changes to be staged/unstaged as well as adding of untracked files.</dl>
+<dd>Displays status of files in the working tree and allows changes to be staged/unstaged as well as adding of untracked files.</dd></dl>
 <p> The stage view</p>
 <dl>
-<dd>Displays diff changes for staged or unstaged files being tracked or file content of untracked files.</dl>
+<dd>Displays diff changes for staged or unstaged files being tracked or file content of untracked files.</dd></dl>
 <p> The stash view</p>
 <dl>
-<dd>Displays the list of stashes in the repository.</dl>
+<dd>Displays the list of stashes in the repository.</dd></dl>
 <p> The grep view</p>
 <dl>
-<dd>Displays a list of files and all the lines that matches a search pattern.</dl>
+<dd>Displays a list of files and all the lines that matches a search pattern.</dd></dl>
 <p> The pager view</p>
 <dl>
-<dd>Is used for displaying both input from stdin and output from Git commands entered in the internal prompt.</dl>
+<dd>Is used for displaying both input from stdin and output from Git commands entered in the internal prompt.</dd></dl>
 <p> The help view</p>
 <dl>
-<dd>Displays a quick reference of key bindings.</dl>
+<dd>Displays a quick reference of key bindings.</dd></dl>
 <h3>Browsing State and User-defined Commands</h3>
 <p>The viewer keeps track of both what head and commit ID you are currently viewing. The commit ID will follow the cursor line and change every time you highlight a different commit. Whenever you reopen the diff view it will be reloaded, if the commit ID changed. The head ID is used when opening the main and log view to indicate from what revision to show history. </p>
 <p> Some of the commands used or provided by Tig can be configured. This goes for some of the environment variables as well as the external commands. These user-defined commands can use arguments that refer to the current browsing state by using one of the following variables. </p>
@@ -293,61 +293,61 @@ tig &lt; [Git command output]</pre>
 </table>
 <p> Example user-defined commands: </p>
 <dl>
-<dd>&bull; Allow to amend the last commit: </p>
+<dd>&bull; Allow to amend the last commit: </dd>
 <dl>
 <dd>
 <pre>bind generic + !git commit --amend</pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd>&bull; Copy commit ID to clipboard: </p>
+<dd>&bull; Copy commit ID to clipboard: </dd>
 <dl>
 <dd>
 <pre>bind generic 9 !@sh -c &quot;echo -n %(commit) | xclip -selection c&quot;</pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd>&bull; Add/edit notes for the current commit used during a review: </p>
+<dd>&bull; Add/edit notes for the current commit used during a review: </dd>
 <dl>
 <dd>
 <pre>bind generic T !git notes edit %(commit)</pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd>&bull; Enter Git&#8217;s interactive add for fine-grained staging of file content: </p>
+<dd>&bull; Enter Git&#8217;s interactive add for fine-grained staging of file content: </dd>
 <dl>
 <dd>
 <pre>bind generic I !git add -i %(file)</pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd>&bull; Rebase current branch on top of the selected branch: </p>
+<dd>&bull; Rebase current branch on top of the selected branch: </dd>
 <dl>
 <dd>
 <pre>bind refs 3 !git rebase -i %(branch)</pre>
-</dl>
+</dd></dl>
 </dl>
 <h3>Title Windows</h3>
 <p>Each view has a title window which shows the name of the view, current commit ID if available, and where the view is positioned: </p>
 <dl>
 <dd>
 <pre>[main] c622eefaa485995320bc743431bae0d497b1d875 - commit 1 of 61 (1%)</pre>
-</dl>
+</dd></dl>
 <p> By default, the title of the current view is highlighted using bold font. For long loading views (taking over 3 seconds) the time since loading started will be appended: </p>
 <dl>
 <dd>
 <pre>[main] 77d9e40fbcea3238015aea403e06f61542df9a31 - commit 1 of 779 (0%) 5s</pre>
-</dl>
+</dd></dl>
 <h2>Environment Variables</h2>
 <p>Several options related to the interface with Git can be configured via environment options.</p>
 <h3>Configuration Files</h3>
 <p>Upon startup, Tig first reads the system wide configuration file ({sysconfdir}/tigrc by default) and then proceeds to read the user&#8217;s configuration file (~/.tigrc or $XDG_CONFIG_HOME/tig/config by default). The paths to either of these files can be overridden through the following environment variables: </p>
 <p> TIGRC_USER</p>
 <dl>
-<dd>Path of the user configuration file.</dl>
+<dd>Path of the user configuration file.</dd></dl>
 <p> TIGRC_SYSTEM</p>
 <dl>
-<dd>Path of the system wide configuration file.</dl>
+<dd>Path of the system wide configuration file.</dd></dl>
 <h3>History Files</h3>
 <p>If compiled with readline support, Tig writes a persistent command and search history to ~/.tig_history or $XDG_DATA_HOME/tig/history.</p>
 <h3>Repository References</h3>
@@ -355,26 +355,26 @@ tig &lt; [Git command output]</pre>
 <dl>
 <dd>
 <pre>2006-03-26 19:42 Petr Baudis | [cogito-0.17.1] Cogito 0.17.1</pre>
-</dl>
+</dd></dl>
 <p> If you want to limit what branches are shown, say only show branches named master or those which start with the feature/ prefix, you can do it by setting the following variable: </p>
 <dl>
 <dd>
 <pre>$ TIG_LS_REMOTE=&quot;git ls-remote . master feature/*&quot; tig</pre>
-</dl>
+</dd></dl>
 <p> Or set the variable permanently in your environment. </p>
 <p> TIG_LS_REMOTE</p>
 <dl>
-<dd>Command for retrieving all repository references. The command should output data in the same format as <a href="/docs/linux/man/1-git-ls-remote/">git-ls-remote</a>(1). Defaults to:</dl>
+<dd>Command for retrieving all repository references. The command should output data in the same format as <a href="/docs/linux/man/1-git-ls-remote/">git-ls-remote</a>(1). Defaults to:</dd></dl>
 <dl>
 <dd>
 <pre>git ls-remote .</pre>
-</dl>
+</dd></dl>
 <h3>Diff options</h3>
 <p>It is possible to alter how diffs are shown by the diff view. If for example you prefer to have commit and author dates shown as relative dates, use: </p>
 <dl>
 <dd>
 <pre>$ TIG_DIFF_OPTS=&quot;--relative-date&quot; tig</pre>
-</dl>
+</dd></dl>
 <p> Or set the variable permanently in your environment.</p>
 <h2>Default Keybindings</h2>
 <p>Below the default key bindings are shown.</p>
@@ -1012,21 +1012,21 @@ tig &lt; [Git command output]</pre>
 <dl>
 <dd>
 <pre>$ tig Makefile README</pre>
-</dl>
+</dd></dl>
 <p> To avoid ambiguity with Tig&#8217;s subcommands or repository references such as tag names, be sure to separate file names from other Git options using &quot;&#8211;&quot;. So if you have a file named <i>status</i> it will clash with the <i>status</i> subcommand, and thus you will have to use: </p>
 <dl>
 <dd>
 <pre>$ tig -- status</pre>
-</dl>
+</dd></dl>
 <h3>Limit by Date or Number</h3>
 <p>To speed up interaction with Git, you can limit the amount of commits to show both for the log and main view. Either limit by date using e.g. &#8211;since=1.month or limit by the number of commits using -n400. </p>
 <p> If you are only interested in changes that happened between two dates you can use: </p>
 <dl>
 <dd>
 <pre>$ tig --after=&quot;May 5th&quot; --before=&quot;2006-05-16 15:44&quot;</pre>
-</dl>
+</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If you want to avoid having to quote dates containing spaces you can use &quot;.&quot; instead, e.g. &#8211;after=May.5th. </p>
 </dl>
 <h3>Limiting by Commit Ranges</h3>
@@ -1034,12 +1034,12 @@ tig &lt; [Git command output]</pre>
 <dl>
 <dd>
 <pre>$ tig tag-1.0..tag-2.0</pre>
-</dl>
+</dd></dl>
 <p> This way of commit limiting makes it trivial to only browse the commits which haven&#8217;t been pushed to a remote branch. Assuming <i>origin</i> is your upstream remote branch, using: </p>
 <dl>
 <dd>
 <pre>$ tig origin..HEAD</pre>
-</dl>
+</dd></dl>
 <p> will list what will be pushed to the remote branch. Optionally, the ending <i>HEAD</i> can be left out since it is implied.</p>
 <h3>Limiting by Reachability</h3>
 <p>Git interprets the range specifier &quot;tag-1.0..tag-2.0&quot; as &quot;all commits reachable from <i>tag-2.0</i> but not from <i>tag-1.0</i>&quot;. Where reachability refers to what commits are ancestors (or part of the history) of the branch or tagged revision in question. </p>
@@ -1047,20 +1047,20 @@ tig &lt; [Git command output]</pre>
 <dl>
 <dd>
 <pre>$ tig tag-2.0 ^tag-1.0</pre>
-</dl>
+</dd></dl>
 <p> You can think of <i>^</i> as a negation operator. Using this alternate syntax, it is possible to further prune commits by specifying multiple branch cut offs.</p>
 <h3>Combining Revisions Specification</h3>
 <p>Revision options can to some degree be combined, which makes it possible to say &quot;show at most 20 commits from within the last month that changed files under the Documentation/ directory.&quot; </p>
 <dl>
 <dd>
 <pre>$ tig --since=1.month -n20 -- Documentation/</pre>
-</dl>
+</dd></dl>
 <h3>Examining All Repository References</h3>
 <p>In some cases, it can be useful to query changes across all references in a repository. An example is to ask &quot;did any line of development in this repository change a particular file within the last week&quot;. This can be accomplished using: </p>
 <dl>
 <dd>
 <pre>$ tig --all --since=1.week -- Makefile</pre>
-</dl>
+</dd></dl>
 <h2>More Information</h2>
 <p>Please visit Tig&#8217;s m[blue]<code>home page</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>main Git repository</code>m[]<font SIZE="-2">[2]</font> for information about new releases and how to report bugs and feature requests.</p>
 <h2>Copyright</h2>
@@ -1069,20 +1069,21 @@ tig &lt; [Git command output]</pre>
 <h2>See Also</h2>
 <p>Manpages: </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-tig/">tig</a></code>(1)</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-tig/">tig</a></code>(1)</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/5-tigrc/">tigrc</a></code>(5)</dl>
+<dd>&bull; <code><a href="/docs/linux/man/5-tigrc/">tigrc</a></code>(5)</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>home page</p>
+<dt> 1.</dt>
+<dd>home page</dd>
 <dl>
-<dd><a rel="nofollow" href="https://jonas.github.io/tig">https://jonas.github.io/tig</a></dl>
-<dt> 2.</p>
-<dd>main Git repository</p>
+<dd><a rel="nofollow" href="https://jonas.github.io/tig">https://jonas.github.io/tig</a></dd></dl>
+<dt> 2.</dt>
+<dd>main Git repository</dd>
 <dl>
-<dd><a rel="nofollow" href="https://github.com/jonas/tig">https://github.com/jonas/tig</a></dl>
-<dt> 3.</p>
-<dd>jonas.fonseca [at] gmail.com</p>
+<dd><a rel="nofollow" href="https://github.com/jonas/tig">https://github.com/jonas/tig</a></dd></dl>
+<dt> 3.</dt>
+<dd>jonas.fonseca [at] gmail.com</dd>
 <dl>
-<dd>mailto:jonas.fonseca [at] gmail.com</dl>
+<dd>mailto:jonas.fonseca [at] gmail.com</dd></dl>
+</dl>

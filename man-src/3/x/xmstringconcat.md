@@ -16,10 +16,10 @@ description: "XmStringConcat — A compound string function that appends one str
 <h2>Description</h2>
 <p><code>XmStringConcat</code> copies <i>s2</i> to the end of <i>s1</i> and returns a copy of the resulting compound string. The original strings are preserved. The function will allocate space to hold the returned compound string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmStringFree</code>.</p>
 <dl COMPACT>
-<dt><i>s1</i></p>
-<dd>Specifies the compound string to which a copy of <i>s2</i> is appended</p>
-<dt><i>s2</i></p>
-<dd>Specifies the compound string that is appended to the end of <i>s1</i></dl>
+<dt><i>s1</i></dt>
+<dd>Specifies the compound string to which a copy of <i>s2</i> is appended</dd>
+<dt><i>s2</i></dt>
+<dd>Specifies the compound string that is appended to the end of <i>s1</i></dd></dl>
 <h2>Return</h2>
 <p>Returns a new compound string.</p>
 <h2>Related</h2>

@@ -13,51 +13,51 @@ description: "xfsettingsd – XSettings daemon for Xfce"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> xfsettingsd [OPTION&#8230;]</dl>
+</dt><dd> xfsettingsd [OPTION&#8230;]</dd></dl>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</p>
-<dt><code>&#8211;help-sm-client</code></p>
-<dd> Show session management options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd>
+<dt><code>&#8211;help-sm-client</code></dt>
+<dd> Show session management options</dd></dl>
 <p> GTK+ Options</p>
 <dl>
-<dt><code>&#8211;class</code>=<i>CLASS</i></p>
-<dd> Program class as used by the window manager</p>
-<dt><code>&#8211;name</code>=<i>NAME</i></p>
-<dd> Program name as used by the window manager</p>
-<dt><code>&#8211;screen</code>=<i>SCREEN</i></p>
-<dd> X screen to use</p>
-<dt><code>&#8211;sync</code></p>
-<dd> Make X calls synchronous</p>
-<dt><code>&#8211;gtk-module</code>=<i>MODULES</i></p>
-<dd> Load additional GTK+ modules</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd> Make all warnings fatal</dl>
+<dt><code>&#8211;class</code>=<i>CLASS</i></dt>
+<dd> Program class as used by the window manager</dd>
+<dt><code>&#8211;name</code>=<i>NAME</i></dt>
+<dd> Program name as used by the window manager</dd>
+<dt><code>&#8211;screen</code>=<i>SCREEN</i></dt>
+<dd> X screen to use</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Make X calls synchronous</dd>
+<dt><code>&#8211;gtk-module</code>=<i>MODULES</i></dt>
+<dd> Load additional GTK+ modules</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd> Make all warnings fatal</dd></dl>
 <p> Session management options</p>
 <dl>
-<dt><code>&#8211;sm-client-id</code>=<i>ID</i></p>
-<dd> Session management client ID</p>
-<dt><code>&#8211;sm-client-disable</code></p>
-<dd> Disable session management</dl>
+<dt><code>&#8211;sm-client-id</code>=<i>ID</i></dt>
+<dd> Session management client ID</dd>
+<dt><code>&#8211;sm-client-disable</code></dt>
+<dd> Disable session management</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Version information</p>
-<dt><code>&#8211;no-daemon</code></p>
-<dd> Do not fork to the background</p>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace running xsettings daemon (if any)</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</dl>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Version information</dd>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd> Do not fork to the background</dd>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace running xsettings daemon (if any)</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008-2011</p>
 <dl>
 <dt>
-<dd> The Xfce development team. All rights reserved.</dl>
+</dt><dd> The Xfce development team. All rights reserved.</dd></dl>
 <p> Please report bugs to &lt;<a rel="nofollow" href="https://bugzilla.xfce.org/">https://bugzilla.xfce.org/</a>&gt;. </p>
 <h2>Index</h2>

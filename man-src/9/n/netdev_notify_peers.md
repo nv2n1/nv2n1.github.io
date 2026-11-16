@@ -15,7 +15,7 @@ netdev_notify_peers - notify network peers about existence of <i>dev</i>
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
 
 <h2>Description</h2>
 

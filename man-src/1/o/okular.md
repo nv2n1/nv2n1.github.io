@@ -11,61 +11,61 @@ description: "okular – a universal document viewer"
 <p> okular &#8211; a universal document viewer </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>okular</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>Okular options</i>] [<i>URL</i>]</dl>
+<dt> <code>okular</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>Okular options</i>] [<i>URL</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>okular</code></p>
-<dd>is aimed to show documents in different formats.</p>
+<dd>is aimed to show documents in different formats.</dd>
 <h2>GENERIC OPTIONS</h2>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help about options.</dl>
+</dt><dd> Show help about options.</dd></dl>
 <p> <code>&#8211;help-qt</code></p>
 <dl>
 <dt>
-<dd> Show Qt specific options.</dl>
+</dt><dd> Show Qt specific options.</dd></dl>
 <p> <code>&#8211;help-kde</code></p>
 <dl>
 <dt>
-<dd> Show KDE specific options.</dl>
+</dt><dd> Show KDE specific options.</dd></dl>
 <p> <code>&#8211;help-all</code></p>
 <dl>
 <dt>
-<dd> Show all options.</dl>
+</dt><dd> Show all options.</dd></dl>
 <p> <code>&#8211;author</code></p>
 <dl>
 <dt>
-<dd> Show author information.</dl>
+</dt><dd> Show author information.</dd></dl>
 <p> <code>-v, &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Show version information.</dl>
+</dt><dd> Show version information.</dd></dl>
 <p> <code>&#8211;license</code></p>
 <dl>
 <dt>
-<dd> Show license information.</dl>
+</dt><dd> Show license information.</dd></dl>
 <p> <code>&#8212;</code></p>
 <dl>
 <dt>
-<dd> End of options.</dl>
+</dt><dd> End of options.</dd></dl>
 <h2>OKULAR OPTIONS</h2>
 <p> <code>-p, &#8211;page </code><i>number</i></p>
 <dl>
 <dt>
-<dd> Open a given page in the document.</dl>
+</dt><dd> Open a given page in the document.</dd></dl>
 <p> <code>&#8211;presentation</code></p>
 <dl>
 <dt>
-<dd> Start the document in presentation mode.</dl>
+</dt><dd> Start the document in presentation mode.</dd></dl>
 <p> <code>&#8211;unique</code></p>
 <dl>
 <dt>
-<dd> Unique instance control.</dl>
+</dt><dd> Unique instance control.</dd></dl>
 <h2>ARGUMENTS</h2>
 <p> <code>URL</code></p>
 <dl>
 <dt>
-<dd> An address of the document to be opened. For PDF, can be given as <i>document_name</i>#<i>named_destination</i> where <i>named_destination</i> is a particular named destination embedded in the document.</dl>
+</dt><dd> An address of the document to be opened. For PDF, can be given as <i>document_name</i>#<i>named_destination</i> where <i>named_destination</i> is a particular named destination embedded in the document.</dd></dl>
 <h2>FEEDBACK</h2>
 <p> On IRC, irc.freenode.net #okular or via email, okular-devel [at] kde.org or on the web, &lt;m[blue]<code><a rel="nofollow" href="http://okular.kde.org/">http://okular.kde.org/</a></code>m[]&gt;</p>
 <h2>SEE ALSO</h2>
@@ -81,5 +81,5 @@ description: "okular – a universal document viewer"
 <p> <code>Yuri Chornoivan</code> &lt;yurchor [at] ukr.net&gt;</p>
 <dl>
 <dt>
-<dd> Okular man page.</dl>
+</dt><dd> Okular man page.</dd></dl>
 <h2>Index</h2>

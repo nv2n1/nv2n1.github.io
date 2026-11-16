@@ -11,28 +11,17 @@ description: "sc::Pool –"
 <h2>Synopsis</h2>
 <h3>Public Member Functions</h3>
 <pre><code>Pool(size_t)
-
     size_t size()
-
         void *allocate(size_t size)
-
             void release(void *d)
-
                 double *allocate_double(size_t n)
-
                     void release(double *d)
-
                         int *allocate_int(size_t n)
-
                             void release(int *d)
-
                                 void print(std::ostream &amp;o = ExEnv::out0())
-
                                     void check()
-
                                         Protected Types
     enum { freelist_size = sizeof(size_t) * 8 }
-
 Protected Member Functions</code></pre>
 <p> <code>PoolData</code> * <code>voidptr_to_pd</code> (void *d) </p>
 <p> int <code>freelist_find_slot</code> (size_t) </p>

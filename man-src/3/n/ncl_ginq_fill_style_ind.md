@@ -13,25 +13,25 @@ description: "ginq_fill_style_ind (Inquire fill area style index) – retrieves 
 <p> void ginq_fill_style_ind(Gint *err_ind, Gint *fill_style_ind);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>fill_style_ind</p>
-<dd>(Output) &#8211; Returns the fill area style index as set by default or by a call to gset_fill_style_ind.</p>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>fill_style_ind</dt>
+<dd>(Output) &#8211; Returns the fill area style index as set by default or by a call to gset_fill_style_ind.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>1</p>
-<dd>Horizontal lines (default)</p>
-<dt>2</p>
-<dd>Vertical lines</p>
-<dt>3</p>
-<dd>Lines of positive slope</p>
-<dt>4</p>
-<dd>Lines of negative slope</p>
-<dt>5</p>
-<dd>Horizontal and vertical lines</p>
-<dt>6</p>
-<dd>Lines of positive and negative slope</dl>
+</dd><dl COMPACT>
+<dt>1</dt>
+<dd>Horizontal lines (default)</dd>
+<dt>2</dt>
+<dd>Vertical lines</dd>
+<dt>3</dt>
+<dd>Lines of positive slope</dd>
+<dt>4</dt>
+<dd>Lines of negative slope</dd>
+<dt>5</dt>
+<dd>Horizontal and vertical lines</dd>
+<dt>6</dt>
+<dd>Lines of positive and negative slope</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

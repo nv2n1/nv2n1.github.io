@@ -13,21 +13,21 @@ description: "fsc – Fast offline compiler for the Scala 2 language"
 <p> <code>fsc</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;</p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt>&lt;<i>options</i>&gt;</p>
-<dd> Command line options. See <code>OPTIONS</code> below.</p>
-<dt>&lt;<i>source files</i>&gt;</p>
-<dd> One or more source files to be compiled (such as MyClass.scala).</dl>
+<dt>&lt;<i>options</i>&gt;</dt>
+<dd> Command line options. See <code>OPTIONS</code> below.</dd>
+<dt>&lt;<i>source files</i>&gt;</dt>
+<dd> One or more source files to be compiled (such as MyClass.scala).</dd></dl>
 <h2>OPTIONS</h2>
 <p> The offline compiler supports all options of <code>scalac</code> plus the following: </p>
 <dl>
-<dt><code>-reset</code></p>
-<dd> Reset compile server caches.</p>
-<dt><code>-shutdown</code></p>
-<dd> Shut down the compilation daemon. The daemon attempts to restart itself as necessary, but sometimes an explicit shutdown is required. A common example is if jars on the class path have changed.</p>
-<dt><code>-server</code> &lt;<i>hostname:portnumber</i>&gt;</p>
-<dd> Specify compile server host at port number. Usually this option is not needed. Note that the hostname must be for a host that shares the same filesystem.</p>
-<dt><code>-J</code>&lt;<i>flag</i>&gt;</p>
-<dd> Pass &lt;<i>flag</i>&gt; directly to the Java VM for the compilation daemon.</dl>
+<dt><code>-reset</code></dt>
+<dd> Reset compile server caches.</dd>
+<dt><code>-shutdown</code></dt>
+<dd> Shut down the compilation daemon. The daemon attempts to restart itself as necessary, but sometimes an explicit shutdown is required. A common example is if jars on the class path have changed.</dd>
+<dt><code>-server</code> &lt;<i>hostname:portnumber</i>&gt;</dt>
+<dd> Specify compile server host at port number. Usually this option is not needed. Note that the hostname must be for a host that shares the same filesystem.</dd>
+<dt><code>-J</code>&lt;<i>flag</i>&gt;</dt>
+<dd> Pass &lt;<i>flag</i>&gt; directly to the Java VM for the compilation daemon.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>fsc</code> tool submits Scala compilation jobs to a compilation daemon. The first time it is executed, the daemon is started automatically. On subsequent runs, the same daemon can be reused, thus resulting in a faster compilation. The tool is especially effective when repeatedly compiling with the same class paths, because the compilation daemon can reuse a compiler instance. </p>
 <p> The compilation daemon is smart enough to flush its cached compiler when the class path changes. However, if the contents of the class path change, for example due to upgrading a library, then the daemon should be explicitly shut down with <code>-shutdown</code>. </p>
@@ -39,18 +39,16 @@ description: "fsc – Fast offline compiler for the Scala 2 language"
 </code></pre>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>JAVACMD</code></p>
-<dd> Specify the <code>java</code> command to be used for running the Scala code. Arguments may be specified as part of the environment variable; spaces, quotation marks, etc., will be passed directly to the shell for expansion.</p>
-<dt><code>JAVA_HOME</code></p>
-<dd> Specify JDK/JRE home directory. This directory is used to locate the <code>java</code> command unless <code>JAVACMD</code> variable set.</p>
-<dt><code>JAVA_OPTS</code></p>
-<dd> Specify the options to be passed to the <code>java</code> command defined by <code>JAVACMD</code>.</p>
+<dt><code>JAVACMD</code></dt>
+<dd> Specify the <code>java</code> command to be used for running the Scala code. Arguments may be specified as part of the environment variable; spaces, quotation marks, etc., will be passed directly to the shell for expansion.</dd>
+<dt><code>JAVA_HOME</code></dt>
+<dd> Specify JDK/JRE home directory. This directory is used to locate the <code>java</code> command unless <code>JAVACMD</code> variable set.</dd>
+<dt><code>JAVA_OPTS</code></dt>
+<dd> Specify the options to be passed to the <code>java</code> command defined by <code>JAVACMD</code>.</dd>
 <dt>
-<dd> With Java 1.5 (or newer) one may for example configure the memory usage of the JVM as follows: JAVA_OPTS=&quot;-Xmx512M -Xms16M -Xss16M&quot;</p>
+</dt><dd> With Java 1.5 (or newer) one may for example configure the memory usage of the JVM as follows: JAVA_OPTS=&quot;-Xmx512M -Xms16M -Xss16M&quot;</dd>
 <dt>
-<dd> With GNU Java one may configure the memory usage of the GIJ as follows: JAVA_OPTS=&quot;&#8211;mx512m &#8211;ms16m&quot;</p>
-<dt>
-<dd>
+</dt><dd> With GNU Java one may configure the memory usage of the GIJ as follows: JAVA_OPTS=&quot;&#8211;mx512m &#8211;ms16m&quot;</dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> <code>fsc</code> returns a zero exit status if it succeeds to compile the specified input files. Non zero is returned in case of failure.</p>

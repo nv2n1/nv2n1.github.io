@@ -26,53 +26,51 @@ description: "gij – GNU interpreter for Java bytecode"
 <p> Note that <tt>&quot;gij&quot;</tt> is not limited to interpreting code. Because <tt>&quot;libgcj&quot;</tt> includes a class loader which can dynamically load shared objects, it is possible to give <tt>&quot;gij&quot;</tt> the name of a class which has been compiled and put into a shared library on the class path.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-cp</code> <i>path</i></p>
+<dt><code>-cp</code> <i>path</i></dt>
 <dd>
-<dt><code>-classpath</code> <i>path</i></p>
-<dd> Set the initial class path. The class path is used for finding class and resource files. If specified, this option overrides the <tt>&quot;CLASSPATH&quot;</tt> environment variable. Note that this option is ignored if <tt>&quot;-jar&quot;</tt> is used.</p>
-<dt><code>-D</code><i>name</i><code>[=</code><i>value</i><code>]</code></p>
-<dd> This defines a system property named <i>name</i> with value <i>value</i>. If <i>value</i> is not specified then it defaults to the empty string. These system properties are initialized at the program&#8217;s startup and can be retrieved at runtime using the <tt>&quot;java.lang.System.getProperty&quot;</tt> method.</p>
-<dt><code>-ms=</code><i>number</i></p>
-<dd> Equivalent to <tt>&quot;-Xms&quot;</tt>.</p>
-<dt><code>-mx=</code><i>number</i></p>
-<dd> Equivalent to <tt>&quot;-Xmx&quot;</tt>.</p>
-<dt><code>-noverify</code></p>
-<dd> Do not verify compliance of bytecode with the <font SIZE="-1">VM</font> specification. In addition, this option disables type verification which is otherwise performed on BC-ABI compiled code.</p>
-<dt><code>-X</code></p>
+</dd><dt><code>-classpath</code> <i>path</i></dt>
+<dd> Set the initial class path. The class path is used for finding class and resource files. If specified, this option overrides the <tt>&quot;CLASSPATH&quot;</tt> environment variable. Note that this option is ignored if <tt>&quot;-jar&quot;</tt> is used.</dd>
+<dt><code>-D</code><i>name</i><code>[=</code><i>value</i><code>]</code></dt>
+<dd> This defines a system property named <i>name</i> with value <i>value</i>. If <i>value</i> is not specified then it defaults to the empty string. These system properties are initialized at the program&#8217;s startup and can be retrieved at runtime using the <tt>&quot;java.lang.System.getProperty&quot;</tt> method.</dd>
+<dt><code>-ms=</code><i>number</i></dt>
+<dd> Equivalent to <tt>&quot;-Xms&quot;</tt>.</dd>
+<dt><code>-mx=</code><i>number</i></dt>
+<dd> Equivalent to <tt>&quot;-Xmx&quot;</tt>.</dd>
+<dt><code>-noverify</code></dt>
+<dd> Do not verify compliance of bytecode with the <font SIZE="-1">VM</font> specification. In addition, this option disables type verification which is otherwise performed on BC-ABI compiled code.</dd>
+<dt><code>-X</code></dt>
 <dd>
-<dt><code>-X</code><i>argument</i></p>
-<dd> Supplying <tt>&quot;-X&quot;</tt> by itself will cause <tt>&quot;gij&quot;</tt> to list all the supported <tt>&quot;-X&quot;</tt> options. Currently these options are supported:</p>
+</dd><dt><code>-X</code><i>argument</i></dt>
+<dd> Supplying <tt>&quot;-X&quot;</tt> by itself will cause <tt>&quot;gij&quot;</tt> to list all the supported <tt>&quot;-X&quot;</tt> options. Currently these options are supported:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-Xms</code><i>size</i></p>
-<dd> Set the initial heap size.</p>
-<dt><code>-Xmx</code><i>size</i></p>
-<dd> Set the maximum heap size.</p>
-<dt><code>-Xss</code><i>size</i></p>
-<dd> Set the thread stack size.</dl>
+<dt><code>-Xms</code><i>size</i></dt>
+<dd> Set the initial heap size.</dd>
+<dt><code>-Xmx</code><i>size</i></dt>
+<dd> Set the maximum heap size.</dd>
+<dt><code>-Xss</code><i>size</i></dt>
+<dd> Set the thread stack size.</dd></dl>
 </dl>
 <dl>
 <dt>
+</dt><dd>
+<p> Unrecognized <tt>&quot;-X&quot;</tt> options are ignored, for compatibility with other runtimes.</dd></dl>
+<dt><code>-jar</code></dt>
+<dd> This indicates that the name passed to <tt>&quot;gij&quot;</tt> should be interpreted as the name of a jar file, not a class.</dd>
+<dt><code>&#8211;help</code></dt>
 <dd>
-<p> Unrecognized <tt>&quot;-X&quot;</tt> options are ignored, for compatibility with other runtimes.</dl>
-<dt><code>-jar</code></p>
-<dd> This indicates that the name passed to <tt>&quot;gij&quot;</tt> should be interpreted as the name of a jar file, not a class.</p>
-<dt><code>&#8211;help</code></p>
+</dd><dt><code>-?</code></dt>
+<dd> Print help, then exit.</dd>
+<dt><code>&#8211;showversion</code></dt>
+<dd> Print version number and continue.</dd>
+<dt><code>&#8211;fullversion</code></dt>
+<dd> Print detailed version information, then exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version number, then exit.</dd>
+<dt><code>-verbose</code></dt>
 <dd>
-<dt><code>-?</code></p>
-<dd> Print help, then exit.</p>
-<dt><code>&#8211;showversion</code></p>
-<dd> Print version number and continue.</p>
-<dt><code>&#8211;fullversion</code></p>
-<dd> Print detailed version information, then exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version number, then exit.</p>
-<dt><code>-verbose</code></p>
-<dd>
-<dt><code>-verbose:class</code></p>
-<dd> Each time a class is initialized, print a short message on standard error.</dl>
+</dd><dt><code>-verbose:class</code></dt>
+<dd> Each time a class is initialized, print a short message on standard error.</dd></dl>
 <p> <tt>&quot;gij&quot;</tt> also recognizes and ignores the following options, for compatibility with existing application launch scripts: <tt>&quot;-client&quot;</tt>, <tt>&quot;-server&quot;</tt>, <tt>&quot;-hotspot&quot;</tt>, <tt>&quot;-jrockit&quot;</tt>, <tt>&quot;-agentlib&quot;</tt>, <tt>&quot;-agentpath&quot;</tt>, <tt>&quot;-debug&quot;</tt>, <tt>&quot;-d32&quot;</tt>, <tt>&quot;-d64&quot;</tt>, <tt>&quot;-javaagent&quot;</tt>, <tt>&quot;-noclassgc&quot;</tt>, <tt>&quot;-verify&quot;</tt>, and <tt>&quot;-verifyremote&quot;</tt>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-gcj/">gcj</a></i>(1), <i><a href="/docs/linux/man/1-gcjh/">gcjh</a></i>(1), <i><a href="/docs/linux/man/1-jcf-dump/">jcf-dump</a></i>(1), <i>gfdl</i>(7), and the Info entries for <i>gcj</i> and <i>gcc</i>.</p>

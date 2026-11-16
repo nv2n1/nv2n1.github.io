@@ -14,19 +14,19 @@ description: "blk_rq_map_user_iov – map user data to a request, for REQ_TYPE_B
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>request queue where request should be inserted</dl>
+</dd><dd>request queue where request should be inserted</dd></dl>
 <p> <i>rq</i></p>
 <dl>
-<dd>request to map data to</dl>
+<dd>request to map data to</dd></dl>
 <p> <i>map_data</i></p>
 <dl>
-<dd>pointer to the rq_map_data holding pages (if necessary)</dl>
+<dd>pointer to the rq_map_data holding pages (if necessary)</dd></dl>
 <p> <i>iter</i></p>
 <dl>
-<dd>iovec iterator</dl>
+<dd>iovec iterator</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>memory allocation flags</dl>
+<dd>memory allocation flags</dd></dl>
 <h2>Description</h2>
 <p>Data will be mapped directly for zero copy I/O, if possible. Otherwise a kernel bounce buffer is used. </p>
 <p> A matching <code>blk_rq_unmap_user</code> must be issued at the end of I/O, while still in process context.</p>

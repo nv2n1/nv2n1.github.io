@@ -17,20 +17,20 @@ description: "policytool – PolicyTool Administration GUI Utility"
 <p> where: </p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>file</p>
-<dd>directs <i>policytool</i> to load a local policy file</p>
-<dt>filename</p>
-<dd>The file name</dl>
+</dd><dl COMPACT>
+<dt>file</dt>
+<dd>directs <i>policytool</i> to load a local policy file</dd>
+<dt>filename</dt>
+<dd>The file name</dd></dl>
 </dl>
 <h2>Description</h2>
 <p><code>policytool</code> is a GUI that allows users to create and manage policy files. For details, see <i>the Policytool Users Guide</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/PolicyGuide.html.">http://docs.oracle.com/javase/7/docs/technotes/guides/security/PolicyGuide.html.</a> </p>
 <h2>Options</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>file</p>
-<dd>Loads <i>filename</i>.</dl>
+</dd><dl COMPACT>
+<dt>file</dt>
+<dd>Loads <i>filename</i>.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><i>Default Policy Implementation and Syntax</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/PolicyFiles.html">http://docs.oracle.com/javase/7/docs/technotes/guides/security/PolicyFiles.html</a> </p>

@@ -24,14 +24,14 @@ description: "gitworkflows – An overview of recommended workflows with Git"
 <h3>Graduation</h3>
 <p>As a given feature goes from experimental to stable, it also &quot;graduates&quot; between the corresponding branches of the software. <code>git.git</code> uses the following <i>integration branches</i>: </p>
 <dl>
-<dd>&bull; <i>maint</i> tracks the commits that should go into the next &quot;maintenance release&quot;, i.e., update of the last released stable version;</dl>
+<dd>&bull; <i>maint</i> tracks the commits that should go into the next &quot;maintenance release&quot;, i.e., update of the last released stable version;</dd></dl>
 <dl>
-<dd>&bull; <i>master</i> tracks the commits that should go into the next release;</dl>
+<dd>&bull; <i>master</i> tracks the commits that should go into the next release;</dd></dl>
 <dl>
-<dd>&bull; <i>next</i> is intended as a testing branch for topics being tested for stability for master.</dl>
+<dd>&bull; <i>next</i> is intended as a testing branch for topics being tested for stability for master.</dd></dl>
 <p> There is a fourth official branch that is used slightly differently: </p>
 <dl>
-<dd>&bull; <i>seen</i> (patches seen by the maintainer) is an integration branch for things that are not quite ready for inclusion yet (see &quot;Integration Branches&quot; below).</dl>
+<dd>&bull; <i>seen</i> (patches seen by the maintainer) is an integration branch for things that are not quite ready for inclusion yet (see &quot;Integration Branches&quot; below).</dd></dl>
 <p> Each of the four branches is usually a direct descendant of the one above it. </p>
 <p> Conceptually, the feature enters at an unstable branch (usually <i>next</i> or <i>seen</i>), and &quot;graduates&quot; to <i>master</i> for the next release once it is considered stable enough.</p>
 <h3>Merging upwards</h3>
@@ -47,11 +47,11 @@ description: "gitworkflows – An overview of recommended workflows with Git"
 <p> Make a side branch for every topic (feature, bugfix, &#8230;). Fork it off at the oldest integration branch that you will eventually want to merge it into. </p>
 <p> Many things can then be done very naturally: </p>
 <dl>
-<dd>&bull; To get the feature/bugfix into an integration branch, simply merge it. If the topic has evolved further in the meantime, merge again. (Note that you do not necessarily have to merge it to the oldest integration branch first. For example, you can first merge a bugfix to <i>next</i>, give it some testing time, and merge to <i>maint</i> when you know it is stable.)</dl>
+<dd>&bull; To get the feature/bugfix into an integration branch, simply merge it. If the topic has evolved further in the meantime, merge again. (Note that you do not necessarily have to merge it to the oldest integration branch first. For example, you can first merge a bugfix to <i>next</i>, give it some testing time, and merge to <i>maint</i> when you know it is stable.)</dd></dl>
 <dl>
-<dd>&bull; If you find you need new features from the branch <i>other</i> to continue working on your topic, merge <i>other</i> to <i>topic</i>. (However, do not do this &quot;just habitually&quot;, see below.)</dl>
+<dd>&bull; If you find you need new features from the branch <i>other</i> to continue working on your topic, merge <i>other</i> to <i>topic</i>. (However, do not do this &quot;just habitually&quot;, see below.)</dd></dl>
 <dl>
-<dd>&bull; If you find you forked off the wrong branch and want to move it &quot;back in time&quot;, use <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1).</dl>
+<dd>&bull; If you find you forked off the wrong branch and want to move it &quot;back in time&quot;, use <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1).</dd></dl>
 <p> Note that the last point clashes with the other two: a topic that has been merged elsewhere should not be rebased. See the section on RECOVERING FROM UPSTREAM REBASE in <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1). </p>
 <p> We should point out that &quot;habitually&quot; (regularly for no real reason) merging an integration branch into your topics &#8212; and by extension, merging anything upstream into anything downstream on a regular basis &#8212; is frowned upon: </p>
 <p> <code>Example 3. Merge to downstream only at well-defined points</code> </p>
@@ -85,21 +85,21 @@ description: "gitworkflows – An overview of recommended workflows with Git"
 <p> The <i>maint</i> branch should now be fast-forwarded to the newly released code so that maintenance fixes can be tracked for the current release: </p>
 <p> <code>Example 8. Update maint to new release</code> </p>
 <dl>
-<dd>&bull; <code>git checkout maint</code></dl>
+<dd>&bull; <code>git checkout maint</code></dd></dl>
 <dl>
-<dd>&bull; <code>git merge &#8211;ff-only master</code></dl>
+<dd>&bull; <code>git merge &#8211;ff-only master</code></dd></dl>
 <p> If the merge fails because it is not a fast-forward, then it is possible some fixes on <i>maint</i> were missed in the feature release. This will not happen if the content of the branches was verified as described in the previous section.</p>
 <h3>Branch management for next and seen after a feature release</h3>
 <p>After a feature release, the integration branch <i>next</i> may optionally be rewound and rebuilt from the tip of <i>master</i> using the surviving topics on <i>next</i>: </p>
 <p> <code>Example 9. Rewind and rebuild next</code> </p>
 <dl>
-<dd>&bull; <code>git switch -C next master</code></dl>
+<dd>&bull; <code>git switch -C next master</code></dd></dl>
 <dl>
-<dd>&bull; <code>git merge ai/topic_in_next1</code></dl>
+<dd>&bull; <code>git merge ai/topic_in_next1</code></dd></dl>
 <dl>
-<dd>&bull; <code>git merge ai/topic_in_next2</code></dl>
+<dd>&bull; <code>git merge ai/topic_in_next2</code></dd></dl>
 <dl>
-<dd>&bull; &#8230;</dl>
+<dd>&bull; &#8230;</dd></dl>
 <p> The advantage of doing this is that the history of <i>next</i> will be clean. For example, some topics merged into <i>next</i> may have initially looked promising, but were later found to be undesirable or premature. In such a case, the topic is reverted out of <i>next</i> but the fact remains in the history that it was once merged and reverted. By recreating <i>next</i>, you give another incarnation of such topics a clean slate to retry, and a feature release is a good point in history to do so. </p>
 <p> If you do this, then you should make a public announcement indicating that <i>next</i> was rewound and rebuilt. </p>
 <p> The same rewind and rebuild process may be followed for <i>seen</i>. A public announcement is not necessary since <i>seen</i> is a throw-away branch, as described above.</p>
@@ -111,11 +111,11 @@ description: "gitworkflows – An overview of recommended workflows with Git"
 <p>The merge workflow works by copying branches between upstream and downstream. Upstream can merge contributions into the official history; downstream base their work on the official history. </p>
 <p> There are three main tools that can be used for this: </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) copies your branches to a remote repository, usually to one that can be read by all involved parties;</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) copies your branches to a remote repository, usually to one that can be read by all involved parties;</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1) that copies remote branches to your repository; and</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1) that copies remote branches to your repository; and</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1) that does fetch and merge in one go.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1) that does fetch and merge in one go.</dd></dl>
 <p> Note the last point. Do <i>not</i> use <i>git pull</i> unless you actually want to merge the remote branch. </p>
 <p> Getting changes out is easy: </p>
 <p> <code>Example 10. Push/pull: Publishing branches/topics</code> </p>
@@ -130,7 +130,7 @@ description: "gitworkflows – An overview of recommended workflows with Git"
 <dd>
 <pre>Please pull from
  &lt;url&gt; &lt;branch&gt;</pre>
-</dl>
+</dd></dl>
 <p> In that case, <i>git pull</i> can do the fetch and merge in one go, as follows. </p>
 <p> <code>Example 12. Push/pull: Merging remote topics</code> </p>
 <p> <code>git pull &lt;url&gt; &lt;branch&gt;</code> </p>
@@ -139,9 +139,9 @@ description: "gitworkflows – An overview of recommended workflows with Git"
 <p>If you are a contributor that sends changes upstream in the form of emails, you should use topic branches as usual (see above). Then use <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1) to generate the corresponding emails (highly recommended over manually formatting them because it makes the maintainer&#8217;s life easier). </p>
 <p> <code>Example 13. format-patch/am: Publishing branches/topics</code> </p>
 <dl>
-<dd>&bull; <code>git format-patch -M upstream..topic</code> to turn them into preformatted patch files</dl>
+<dd>&bull; <code>git format-patch -M upstream..topic</code> to turn them into preformatted patch files</dd></dl>
 <dl>
-<dd>&bull; <code>git send-email &#8211;to=&lt;recipient&gt; &lt;patches&gt;</code></dl>
+<dd>&bull; <code>git send-email &#8211;to=&lt;recipient&gt; &lt;patches&gt;</code></dd></dl>
 <p> See the <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1) and <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1) manpages for further usage notes. </p>
 <p> If the maintainer tells you that your patch no longer applies to the current upstream, you will have to rebase your topic (you cannot use a merge because you cannot format-patch merges): </p>
 <p> <code>Example 14. format-patch/am: Keeping topics up to date</code> </p>

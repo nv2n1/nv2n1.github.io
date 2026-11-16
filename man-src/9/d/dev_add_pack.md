@@ -15,7 +15,7 @@ dev_add_pack - add packet handler
 <h2>Arguments</h2>
 
 <i>pt</i>
-<dl><dd><dd>packet type declaration</dl>
+<dl><dd></dd><dd>packet type declaration</dd></dl>
 
 <h2>Description</h2>
 

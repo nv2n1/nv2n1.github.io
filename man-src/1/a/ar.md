@@ -28,105 +28,105 @@ description: "ar – create, modify, and extract from archives"
 <p> If you wish, you may begin the first command-line argument with a dash. </p>
 <p> The <i>p</i> keyletter specifies what operation to execute; it may be any of the following, but you must specify only one of them:</p>
 <dl>
-<dt><code>d</code></p>
-<dd> <i>Delete</i> modules from the archive. Specify the names of modules to be deleted as <i>member</i>&#8230;; the archive is untouched if you specify no files to delete. </p>
+<dt><code>d</code></dt>
+<dd> <i>Delete</i> modules from the archive. Specify the names of modules to be deleted as <i>member</i>&#8230;; the archive is untouched if you specify no files to delete. </dd>
 <p> If you specify the <code>v</code> modifier, <code>ar</code> lists each module as it is deleted.</p>
-<dt><code>m</code></p>
-<dd> Use this operation to <i>move</i> members in an archive. </p>
+<dt><code>m</code></dt>
+<dd> Use this operation to <i>move</i> members in an archive. </dd>
 <p> The ordering of members in an archive can make a difference in how programs are linked using the library, if a symbol is defined in more than one member. </p>
 <p> If no modifiers are used with <tt>&quot;m&quot;</tt>, any members you name in the <i>member</i> arguments are moved to the <i>end</i> of the archive; you can use the <code>a</code>, <code>b</code>, or <code>i</code> modifiers to move them to a specified place instead.</p>
-<dt><code>p</code></p>
-<dd> <i>Print</i> the specified members of the archive, to the standard output file. If the <code>v</code> modifier is specified, show the member name before copying its contents to standard output. </p>
+<dt><code>p</code></dt>
+<dd> <i>Print</i> the specified members of the archive, to the standard output file. If the <code>v</code> modifier is specified, show the member name before copying its contents to standard output. </dd>
 <p> If you specify no <i>member</i> arguments, all the files in the archive are printed.</p>
-<dt><code>q</code></p>
-<dd> <i>Quick append</i>; Historically, add the files <i>member</i>&#8230; to the end of <i>archive</i>, without checking for replacement. </p>
+<dt><code>q</code></dt>
+<dd> <i>Quick append</i>; Historically, add the files <i>member</i>&#8230; to the end of <i>archive</i>, without checking for replacement. </dd>
 <p> The modifiers <code>a</code>, <code>b</code>, and <code>i</code> do <i>not</i> affect this operation; new members are always placed at the end of the archive. </p>
 <p> The modifier <code>v</code> makes <code>ar</code> list each file as it is appended. </p>
 <p> Since the point of this operation is speed, implementations of <code>ar</code> have the option of not updating the archive&#8217;s symbol table if one exists. Too many different systems however assume that symbol tables are always up-to-date, so <font SIZE="-1">GNU</font> <code>ar</code> will rebuild the table even with a quick append. </p>
 <p> Note &#8211; <font SIZE="-1">GNU</font> <code>ar</code> treats the command <code>qs</code> as a synonym for <code>r</code> &#8211; replacing already existing files in the archive and appending new ones at the end.</p>
-<dt><code>r</code></p>
-<dd> Insert the files <i>member</i>&#8230; into <i>archive</i> (with <i>replacement</i>). This operation differs from <code>q</code> in that any previously existing members are deleted if their names match those being added. </p>
+<dt><code>r</code></dt>
+<dd> Insert the files <i>member</i>&#8230; into <i>archive</i> (with <i>replacement</i>). This operation differs from <code>q</code> in that any previously existing members are deleted if their names match those being added. </dd>
 <p> If one of the files named in <i>member</i>&#8230; does not exist, <code>ar</code> displays an error message, and leaves undisturbed any existing members of the archive matching that name. </p>
 <p> By default, new members are added at the end of the file; but you may use one of the modifiers <code>a</code>, <code>b</code>, or <code>i</code> to request placement relative to some existing member. </p>
 <p> The modifier <code>v</code> used with this operation elicits a line of output for each file inserted, along with one of the letters <code>a</code> or <code>r</code> to indicate whether the file was appended (no old member deleted) or replaced.</p>
-<dt><code>s</code></p>
-<dd> Add an index to the archive, or update it if it already exists. Note this command is an exception to the rule that there can only be one command letter, as it is possible to use it as either a command or a modifier. In either case it does the same thing.</p>
-<dt><code>t</code></p>
-<dd> Display a <i>table</i> listing the contents of <i>archive</i>, or those of the files listed in <i>member</i>&#8230; that are present in the archive. Normally only the member name is shown, but if the modifier <code>O</code> is specified, then the corresponding offset of the member is also displayed. Finally, in order to see the modes (permissions), timestamp, owner, group, and size the <code>v</code> modifier should be included. </p>
+<dt><code>s</code></dt>
+<dd> Add an index to the archive, or update it if it already exists. Note this command is an exception to the rule that there can only be one command letter, as it is possible to use it as either a command or a modifier. In either case it does the same thing.</dd>
+<dt><code>t</code></dt>
+<dd> Display a <i>table</i> listing the contents of <i>archive</i>, or those of the files listed in <i>member</i>&#8230; that are present in the archive. Normally only the member name is shown, but if the modifier <code>O</code> is specified, then the corresponding offset of the member is also displayed. Finally, in order to see the modes (permissions), timestamp, owner, group, and size the <code>v</code> modifier should be included. </dd>
 <p> If you do not specify a <i>member</i>, all files in the archive are listed. </p>
 <p> If there is more than one file with the same name (say, <code>fie</code>) in an archive (say <code>b.a</code>), <code>ar t b.a fie</code> lists only the first instance; to see them all, you must ask for a complete listing&#8212;in our example, <code>ar t b.a</code>.</p>
-<dt><code>x</code></p>
-<dd> <i>Extract</i> members (named <i>member</i>) from the archive. You can use the <code>v</code> modifier with this operation, to request that <code>ar</code> list each name as it extracts it. </p>
+<dt><code>x</code></dt>
+<dd> <i>Extract</i> members (named <i>member</i>) from the archive. You can use the <code>v</code> modifier with this operation, to request that <code>ar</code> list each name as it extracts it. </dd>
 <p> If you do not specify a <i>member</i>, all files in the archive are extracted. </p>
 <p> Files cannot be extracted from a thin archive, and there are restrictions on extracting from archives created with <code>P</code>: The paths must not be absolute, may not contain <tt>&quot;..&quot;</tt>, and any subdirectories in the paths must exist. If it is desired to avoid these restrictions then used the <code>&#8211;output</code> option to specify an output directory.</dl>
 <p> A number of modifiers (<i>mod</i>) may immediately follow the <i>p</i> keyletter, to specify variations on an operation&#8217;s behavior:</p>
 <dl>
-<dt><code>a</code></p>
-<dd> Add new files <i>after</i> an existing member of the archive. If you use the modifier <code>a</code>, the name of an existing archive member must be present as the <i>relpos</i> argument, before the <i>archive</i> specification.</p>
-<dt><code>b</code></p>
-<dd> Add new files <i>before</i> an existing member of the archive. If you use the modifier <code>b</code>, the name of an existing archive member must be present as the <i>relpos</i> argument, before the <i>archive</i> specification. (same as <code>i</code>).</p>
-<dt><code>c</code></p>
-<dd> <i>Create</i> the archive. The specified <i>archive</i> is always created if it did not exist, when you request an update. But a warning is issued unless you specify in advance that you expect to create it, by using this modifier.</p>
-<dt><code>D</code></p>
-<dd> Operate in <i>deterministic</i> mode. When adding files and the archive index use zero for UIDs, GIDs, timestamps, and use consistent file modes for all files. When this option is used, if <code>ar</code> is used with identical options and identical input files, multiple runs will create identical output files regardless of the input files&#8217; owners, groups, file modes, or modification times. </p>
+<dt><code>a</code></dt>
+<dd> Add new files <i>after</i> an existing member of the archive. If you use the modifier <code>a</code>, the name of an existing archive member must be present as the <i>relpos</i> argument, before the <i>archive</i> specification.</dd>
+<dt><code>b</code></dt>
+<dd> Add new files <i>before</i> an existing member of the archive. If you use the modifier <code>b</code>, the name of an existing archive member must be present as the <i>relpos</i> argument, before the <i>archive</i> specification. (same as <code>i</code>).</dd>
+<dt><code>c</code></dt>
+<dd> <i>Create</i> the archive. The specified <i>archive</i> is always created if it did not exist, when you request an update. But a warning is issued unless you specify in advance that you expect to create it, by using this modifier.</dd>
+<dt><code>D</code></dt>
+<dd> Operate in <i>deterministic</i> mode. When adding files and the archive index use zero for UIDs, GIDs, timestamps, and use consistent file modes for all files. When this option is used, if <code>ar</code> is used with identical options and identical input files, multiple runs will create identical output files regardless of the input files&#8217; owners, groups, file modes, or modification times. </dd>
 <p> If <i>binutils</i> was configured with <code>&#8211;enable-deterministic-archives</code>, then this mode is on by default. It can be disabled with the <code>U</code> modifier, below.</p>
-<dt><code>f</code></p>
-<dd> Truncate names in the archive. <font SIZE="-1">GNU</font> <code>ar</code> will normally permit file names of any length. This will cause it to create archives which are not compatible with the native <code>ar</code> program on some systems. If this is a concern, the <code>f</code> modifier may be used to truncate file names when putting them in the archive.</p>
-<dt><code>i</code></p>
-<dd> Insert new files <i>before</i> an existing member of the archive. If you use the modifier <code>i</code>, the name of an existing archive member must be present as the <i>relpos</i> argument, before the <i>archive</i> specification. (same as <code>b</code>).</p>
-<dt><code>l</code></p>
-<dd> Specify dependencies of this library. The dependencies must immediately follow this option character, must use the same syntax as the linker command line, and must be specified within a single argument. I.e., if multiple items are needed, they must be quoted to form a single command line argument. For example <code>L &#8220;-L/usr/local/lib -lmydep1 -lmydep2&#8221;</code></p>
-<dt><code>N</code></p>
-<dd> Uses the <i>count</i> parameter. This is used if there are multiple entries in the archive with the same name. Extract or delete instance <i>count</i> of the given name from the archive.</p>
-<dt><code>o</code></p>
-<dd> Preserve the <i>original</i> dates of members when extracting them. If you do not specify this modifier, files extracted from the archive are stamped with the time of extraction.</p>
-<dt><code>O</code></p>
-<dd> Display member offsets inside the archive. Use together with the <code>t</code> option.</p>
-<dt><code>P</code></p>
-<dd> Use the full path name when matching or storing names in the archive. Archives created with full path names are not <font SIZE="-1">POSIX</font> compliant, and thus may not work with tools other than up to date <font SIZE="-1">GNU</font> tools. Modifying such archives with <font SIZE="-1">GNU</font> <code>ar</code> without using <code>P</code> will remove the full path names unless the archive is a thin archive. Note that <code>P</code> may be useful when adding files to a thin archive since <code>r</code> without <code>P</code> ignores the path when choosing which element to replace. Thus </p>
+<dt><code>f</code></dt>
+<dd> Truncate names in the archive. <font SIZE="-1">GNU</font> <code>ar</code> will normally permit file names of any length. This will cause it to create archives which are not compatible with the native <code>ar</code> program on some systems. If this is a concern, the <code>f</code> modifier may be used to truncate file names when putting them in the archive.</dd>
+<dt><code>i</code></dt>
+<dd> Insert new files <i>before</i> an existing member of the archive. If you use the modifier <code>i</code>, the name of an existing archive member must be present as the <i>relpos</i> argument, before the <i>archive</i> specification. (same as <code>b</code>).</dd>
+<dt><code>l</code></dt>
+<dd> Specify dependencies of this library. The dependencies must immediately follow this option character, must use the same syntax as the linker command line, and must be specified within a single argument. I.e., if multiple items are needed, they must be quoted to form a single command line argument. For example <code>L &#8220;-L/usr/local/lib -lmydep1 -lmydep2&#8221;</code></dd>
+<dt><code>N</code></dt>
+<dd> Uses the <i>count</i> parameter. This is used if there are multiple entries in the archive with the same name. Extract or delete instance <i>count</i> of the given name from the archive.</dd>
+<dt><code>o</code></dt>
+<dd> Preserve the <i>original</i> dates of members when extracting them. If you do not specify this modifier, files extracted from the archive are stamped with the time of extraction.</dd>
+<dt><code>O</code></dt>
+<dd> Display member offsets inside the archive. Use together with the <code>t</code> option.</dd>
+<dt><code>P</code></dt>
+<dd> Use the full path name when matching or storing names in the archive. Archives created with full path names are not <font SIZE="-1">POSIX</font> compliant, and thus may not work with tools other than up to date <font SIZE="-1">GNU</font> tools. Modifying such archives with <font SIZE="-1">GNU</font> <code>ar</code> without using <code>P</code> will remove the full path names unless the archive is a thin archive. Note that <code>P</code> may be useful when adding files to a thin archive since <code>r</code> without <code>P</code> ignores the path when choosing which element to replace. Thus </dd>
 <pre>
         ar rcST archive.a subdir/file1 subdir/file2 file1
 </pre>
 <p> will result in the first <tt>&quot;subdir/file1&quot;</tt> being replaced with <tt>&quot;file1&quot;</tt> from the current directory. Adding <code>P</code> will prevent this replacement.</p>
-<dt><code>s</code></p>
-<dd> Write an object-file index into the archive, or update an existing one, even if no other change is made to the archive. You may use this modifier flag either with any operation, or alone. Running <code>ar s</code> on an archive is equivalent to running <code>ranlib</code> on it.</p>
-<dt><code>S</code></p>
-<dd> Do not generate an archive symbol table. This can speed up building a large library in several steps. The resulting archive can not be used with the linker. In order to build a symbol table, you must omit the <code>S</code> modifier on the last execution of <code>ar</code>, or you must run <code>ranlib</code> on the archive.</p>
-<dt><code>T</code></p>
-<dd> Deprecated alias for <code>&#8211;thin</code>. <code>T</code> is not recommended because in many ar implementations <code>T</code> has a different meaning, as specified by X/Open System Interface.</p>
-<dt><code>u</code></p>
-<dd> Normally, <code>ar r</code>&#8230; inserts all files listed into the archive. If you would like to insert <i>only</i> those of the files you list that are newer than existing members of the same names, use this modifier. The <code>u</code> modifier is allowed only for the operation <code>r</code> (replace). In particular, the combination <code>qu</code> is not allowed, since checking the timestamps would lose any speed advantage from the operation <code>q</code>.</p>
-<dt><code>U</code></p>
-<dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <code>D</code> modifier, above: added files and the archive index will get their actual <font SIZE="-1">UID, GID,</font> timestamp, and file mode values. </p>
+<dt><code>s</code></dt>
+<dd> Write an object-file index into the archive, or update an existing one, even if no other change is made to the archive. You may use this modifier flag either with any operation, or alone. Running <code>ar s</code> on an archive is equivalent to running <code>ranlib</code> on it.</dd>
+<dt><code>S</code></dt>
+<dd> Do not generate an archive symbol table. This can speed up building a large library in several steps. The resulting archive can not be used with the linker. In order to build a symbol table, you must omit the <code>S</code> modifier on the last execution of <code>ar</code>, or you must run <code>ranlib</code> on the archive.</dd>
+<dt><code>T</code></dt>
+<dd> Deprecated alias for <code>&#8211;thin</code>. <code>T</code> is not recommended because in many ar implementations <code>T</code> has a different meaning, as specified by X/Open System Interface.</dd>
+<dt><code>u</code></dt>
+<dd> Normally, <code>ar r</code>&#8230; inserts all files listed into the archive. If you would like to insert <i>only</i> those of the files you list that are newer than existing members of the same names, use this modifier. The <code>u</code> modifier is allowed only for the operation <code>r</code> (replace). In particular, the combination <code>qu</code> is not allowed, since checking the timestamps would lose any speed advantage from the operation <code>q</code>.</dd>
+<dt><code>U</code></dt>
+<dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <code>D</code> modifier, above: added files and the archive index will get their actual <font SIZE="-1">UID, GID,</font> timestamp, and file mode values. </dd>
 <p> This is the default unless <i>binutils</i> was configured with <code>&#8211;enable-deterministic-archives</code>.</p>
-<dt><code>v</code></p>
-<dd> This modifier requests the <i>verbose</i> version of an operation. Many operations display additional information, such as filenames processed, when the modifier <code>v</code> is appended.</p>
-<dt><code>V</code></p>
-<dd> This modifier shows the version number of <code>ar</code>.</dl>
+<dt><code>v</code></dt>
+<dd> This modifier requests the <i>verbose</i> version of an operation. Many operations display additional information, such as filenames processed, when the modifier <code>v</code> is appended.</dd>
+<dt><code>V</code></dt>
+<dd> This modifier shows the version number of <code>ar</code>.</dd></dl>
 <p> The <code>ar</code> program also supports some command-line options which are neither modifiers nor actions, but which do change its behaviour in specific ways:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Displays the list of command-line options supported by <code>ar</code> and then exits.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Displays the version information of <code>ar</code> and then exits.</p>
-<dt><code>-X32_64</code></p>
-<dd> <code>ar</code> ignores an initial option spelled <code>-X32_64</code>, for compatibility with <font SIZE="-1">AIX.</font> The behaviour produced by this option is the default for <font SIZE="-1">GNU</font> <code>ar</code>. <code>ar</code> does not support any of the other <code>-X</code> options; in particular, it does not support <code>-X32</code> which is the default for <font SIZE="-1">AIX</font> <code>ar</code>.</p>
-<dt><code>&#8211;plugin</code> <i>name</i></p>
-<dd> The optional command-line switch <code>&#8211;plugin</code> <i>name</i> causes <code>ar</code> to load the plugin called <i>name</i> which adds support for more file formats, including object files with link-time optimization information. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Displays the list of command-line options supported by <code>ar</code> and then exits.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Displays the version information of <code>ar</code> and then exits.</dd>
+<dt><code>-X32_64</code></dt>
+<dd> <code>ar</code> ignores an initial option spelled <code>-X32_64</code>, for compatibility with <font SIZE="-1">AIX.</font> The behaviour produced by this option is the default for <font SIZE="-1">GNU</font> <code>ar</code>. <code>ar</code> does not support any of the other <code>-X</code> options; in particular, it does not support <code>-X32</code> which is the default for <font SIZE="-1">AIX</font> <code>ar</code>.</dd>
+<dt><code>&#8211;plugin</code> <i>name</i></dt>
+<dd> The optional command-line switch <code>&#8211;plugin</code> <i>name</i> causes <code>ar</code> to load the plugin called <i>name</i> which adds support for more file formats, including object files with link-time optimization information. </dd>
 <p> This option is only available if the toolchain has been built with plugin support enabled. </p>
 <p> If <code>&#8211;plugin</code> is not provided, but plugin support has been enabled then <code>ar</code> iterates over the files in <i>${libdir}/bfd-plugins</i> in alphabetic order and the first plugin that claims the object in question is used. </p>
 <p> Please note that this plugin search directory is <i>not</i> the one used by <code>ld</code>&#8216;s <code>-plugin</code> option. In order to make <code>ar</code> use the linker plugin it must be copied into the <i>${libdir}/bfd-plugins</i> directory. For <font SIZE="-1">GCC</font> based compilations the linker plugin is called <i>liblto_plugin.so.0.0.0</i>. For Clang based compilations it is called <i>LLVMgold.so</i>. The <font SIZE="-1">GCC</font> plugin is always backwards compatible with earlier versions, so it is sufficient to just copy the newest one.</p>
-<dt><code>&#8211;target</code> <i>target</i></p>
-<dd> The optional command-line switch <code>&#8211;target</code> <i>bfdname</i> specifies that the archive members are in an object code format different from your system&#8217;s default format. See</p>
-<dt><code>&#8211;output</code> <i>dirname</i></p>
-<dd> The <code>&#8211;output</code> option can be used to specify a path to a directory into which archive members should be extracted. If this option is not specified then the current directory will be used. </p>
+<dt><code>&#8211;target</code> <i>target</i></dt>
+<dd> The optional command-line switch <code>&#8211;target</code> <i>bfdname</i> specifies that the archive members are in an object code format different from your system&#8217;s default format. See</dd>
+<dt><code>&#8211;output</code> <i>dirname</i></dt>
+<dd> The <code>&#8211;output</code> option can be used to specify a path to a directory into which archive members should be extracted. If this option is not specified then the current directory will be used. </dd>
 <p> Note &#8211; although the presence of this option does imply a <code>x</code> extraction operation that option must still be included on the command line.</p>
-<dt><code>&#8211;record-libdeps</code> <i>libdeps</i></p>
-<dd> The <code>&#8211;record-libdeps</code> option is identical to the <code>l</code> modifier, just handled in long form.</p>
-<dt><code>&#8211;thin</code></p>
-<dd> Make the specified <i>archive</i> a <i>thin</i> archive. If it already exists and is a regular archive, the existing members must be present in the same directory as <i>archive</i>.</p>
-<dt><code>@</code><i>file</i></p>
-<dd> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </p>
+<dt><code>&#8211;record-libdeps</code> <i>libdeps</i></dt>
+<dd> The <code>&#8211;record-libdeps</code> option is identical to the <code>l</code> modifier, just handled in long form.</dd>
+<dt><code>&#8211;thin</code></dt>
+<dd> Make the specified <i>archive</i> a <i>thin</i> archive. If it already exists and is a regular archive, the existing members must be present in the same directory as <i>archive</i>.</dd>
+<dt><code>@</code><i>file</i></dt>
+<dd> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </dd>
 <p> Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself contain additional @<i>file</i> options; any such options will be processed recursively.</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nm/">nm</a></code>(1), <code><a href="/docs/linux/man/1-ranlib/">ranlib</a></code>(1), and the Info entries for <i>binutils</i>.</p>
@@ -134,3 +134,4 @@ description: "ar – create, modify, and extract from archives"
 <p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
 <h2>Index</h2>
+</p>

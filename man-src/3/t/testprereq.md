@@ -36,12 +36,9 @@ Test::Prereq - check if Makefile.PL has the right pre-requisites
  You should be able to do a 'make test' manually to make everything work, though.
 <h3>Warning about redefining ExtUtils::MakeMaker::WriteMakefile</h3>Test::Prereq has its own version of ExtUtils::MakeMaker::WriteMakefile so it can run the Makefile.PL and get the argument list of that function. You may see warnings about this.
 <h2>Functions</h2><dl COMPACT><dt>prereq_ok( [ <font SIZE="-1">VERSION,</font> [ <font SIZE="-1">NAME</font> [, <font SIZE="-1">SKIP_ARRAY</font>] ] ] )
-<dd>Tests Makefile.PL to ensure all non-core module dependencies are in <font SIZE="-1">PREREQ_PM.</font> If you haven't set a testing plan already, <i>prereq_ok()</i> creates a plan of one test. 
-
+</dt><dd>Tests Makefile.PL to ensure all non-core module dependencies are in <font SIZE="-1">PREREQ_PM.</font> If you haven't set a testing plan already, <i>prereq_ok()</i> creates a plan of one test. 
  If you don't specify a version, prereq_ok assumes you want to compare the list of prerequisite modules to version 5.008005. 
-
  Valid versions come from Module::CoreList (which uses $[). 
-
  <pre> #!/usr/bin/perl
  use Module::CoreList;
  print map &quot;$_\n&quot;, sort keys %Module::CoreList::version;
@@ -63,8 +60,7 @@ Test::Prereq - check if Makefile.PL has the right pre-requisites
  5.008005
  5.009
  5.009001</pre>prereq_ok attempts to remove modules found in blib and libraries found in t from the reported prerequisites. 
-
- The optional third argument is an array reference to a list of names that prereq_ok should ignore. You might want to use this if your tests do funny things with require.</dl><h2>To Do</h2>* set up a couple fake module distributions to test 
+ The optional third argument is an array reference to a list of names that prereq_ok should ignore. You might want to use this if your tests do funny things with require.</dd></dl><h2>To Do</h2>* set up a couple fake module distributions to test 
 
  * warn about things that show up in <font SIZE="-1">PREREQ_PM</font> unnecessarily
 <h2>Source Availability</h2>This source is in Github: 

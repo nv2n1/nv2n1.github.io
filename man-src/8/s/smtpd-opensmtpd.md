@@ -20,78 +20,78 @@ description: "smtpd – Simple Mail Transfer Protocol daemon"
 <p> The options are as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-D</code> <i>macro</i>=<i>value</i></p>
-<dd>Define <i>macro</i> to be set to <i>value</i> on the command line. Overrides the definition of <i>macro</i> in the configuration file.</p>
-<dt><code>-d</code></p>
-<dd>Do not daemonize. If this option is specified, <code>smtpd</code> will run in the foreground and log to <i>stderr.</i></p>
-<dt><code>-f</code> <i>file</i></p>
-<dd>Specify an alternative configuration file.</p>
-<dt><code>-h</code></p>
-<dd>Display version and usage.</p>
-<dt><code>-n</code></p>
-<dd>Configtest mode. Only check the configuration file for validity.</p>
-<dt><code>-P</code> <i>system</i></p>
-<dd>Pause a specific subsystem at startup. Normal operation can be resumed using <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8). This option can be used multiple times. The accepted values are:</dl>
-<dl>
-<dd>
-<dl>
-<dt>mda</p>
-<dd>Do not schedule local deliveries.</p>
-<dt>mta</p>
-<dd>Do not schedule remote transfers.</p>
-<dt>smtp</p>
-<dd>Do not listen on SMTP sockets.</dl>
-</dl>
-<dl>
-<dt><code>-T</code> <i>trace</i></p>
-<dd>Enables real-time tracing at startup. Normal operation can be resumed using <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8). This option can be used multiple times. The accepted values are:</dl>
+</dd><dl>
+<dt><code>-D</code> <i>macro</i>=<i>value</i></dt>
+<dd>Define <i>macro</i> to be set to <i>value</i> on the command line. Overrides the definition of <i>macro</i> in the configuration file.</dd>
+<dt><code>-d</code></dt>
+<dd>Do not daemonize. If this option is specified, <code>smtpd</code> will run in the foreground and log to <i>stderr.</i></dd>
+<dt><code>-f</code> <i>file</i></dt>
+<dd>Specify an alternative configuration file.</dd>
+<dt><code>-h</code></dt>
+<dd>Display version and usage.</dd>
+<dt><code>-n</code></dt>
+<dd>Configtest mode. Only check the configuration file for validity.</dd>
+<dt><code>-P</code> <i>system</i></dt>
+<dd>Pause a specific subsystem at startup. Normal operation can be resumed using <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8). This option can be used multiple times. The accepted values are:</dd></dl>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>imsg</p>
-<dt>&bull;</p>
-<dd>io</p>
-<dt>&bull;</p>
-<dd>smtp (incoming sessions)</p>
-<dt>&bull;</p>
-<dd>filters</p>
-<dt>&bull;</p>
-<dd>transfer (outgoing sessions)</p>
-<dt>&bull;</p>
-<dd>bounce</p>
-<dt>&bull;</p>
-<dd>scheduler</p>
-<dt>&bull;</p>
-<dd>expand (aliases/virtual/forward expansion)</p>
-<dt>&bull;</p>
-<dd>lookup (user/credentials lookups)</p>
-<dt>&bull;</p>
-<dd>stat</p>
-<dt>&bull;</p>
-<dd>rules (matched by incoming sessions)</p>
-<dt>&bull;</p>
-<dd>mproc</p>
-<dt>&bull;</p>
-<dd>all</dl>
+</dd><dl>
+<dt>mda</dt>
+<dd>Do not schedule local deliveries.</dd>
+<dt>mta</dt>
+<dd>Do not schedule remote transfers.</dd>
+<dt>smtp</dt>
+<dd>Do not listen on SMTP sockets.</dd></dl>
 </dl>
 <dl>
-<dt><code>-v</code></p>
-<dd>Produce more verbose output.</dl>
+<dt><code>-T</code> <i>trace</i></dt>
+<dd>Enables real-time tracing at startup. Normal operation can be resumed using <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8). This option can be used multiple times. The accepted values are:</dd></dl>
+<dl>
+<dd>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>imsg</dd>
+<dt>&bull;</dt>
+<dd>io</dd>
+<dt>&bull;</dt>
+<dd>smtp (incoming sessions)</dd>
+<dt>&bull;</dt>
+<dd>filters</dd>
+<dt>&bull;</dt>
+<dd>transfer (outgoing sessions)</dd>
+<dt>&bull;</dt>
+<dd>bounce</dd>
+<dt>&bull;</dt>
+<dd>scheduler</dd>
+<dt>&bull;</dt>
+<dd>expand (aliases/virtual/forward expansion)</dd>
+<dt>&bull;</dt>
+<dd>lookup (user/credentials lookups)</dd>
+<dt>&bull;</dt>
+<dd>stat</dd>
+<dt>&bull;</dt>
+<dd>rules (matched by incoming sessions)</dd>
+<dt>&bull;</dt>
+<dd>mproc</dd>
+<dt>&bull;</dt>
+<dd>all</dd></dl>
+</dl>
+<dl>
+<dt><code>-v</code></dt>
+<dd>Produce more verbose output.</dd></dl>
 </dl>
 <h2>Files</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>/etc/opensmtpd/mailname</code></p>
-<dd>Alternate server name to use.</p>
-<dt><code>/etc/opensmtpd/smtpd.conf</code></p>
-<dd>Default <code>smtpd</code> configuration file.</p>
-<dt><code>/var/run/smtpd.sock</code></p>
-<dd>Ux -domain socket used for communication with <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8).</p>
-<dt><code>/var/spool/smtpd/</code></p>
-<dd>Spool directories for mail during processing.</dl>
+</dd><dl>
+<dt><code>/etc/opensmtpd/mailname</code></dt>
+<dd>Alternate server name to use.</dd>
+<dt><code>/etc/opensmtpd/smtpd.conf</code></dt>
+<dd>Default <code>smtpd</code> configuration file.</dd>
+<dt><code>/var/run/smtpd.sock</code></dt>
+<dd>Ux -domain socket used for communication with <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8).</dd>
+<dt><code>/var/spool/smtpd/</code></dt>
+<dd>Spool directories for mail during processing.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-smtpd-conf/">smtpd.conf</a></code>(5), <code>mailwrapper</code>(8), <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8)</p>

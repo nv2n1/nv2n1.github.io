@@ -29,7 +29,7 @@ description: "zmq_curve – secure authentication and confidentiality"
 secret:
  7BB864B489AFA3671FBE69101F94B38972F24816DFB01B51656B3FEC8DFD0888
  D:)Q[IlAW!ahhC2ac:9*A}h:p?([4%wOTJ%JR%cs</pre>
-</dl>
+</dd></dl>
 <p> And the server shall use this long-term key pair (specified as hexadecimal and in Z85): </p>
 <dl>
 <dd>
@@ -39,7 +39,7 @@ secret:
 secret:
  8E0BDD697628B91D8F245587EE95C5B04D48963F79259877B49CD9063AEAD3B7
  JTKVSB%%)wK0E.X)V&gt;+}o?pNmC{O&amp;4W4b!Ni{Lh6</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-zmq_z85_encode/">zmq_z85_encode</a></code>(3) <code><a href="/docs/linux/man/3-zmq_z85_decode/">zmq_z85_decode</a></code>(3) <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3) <code><a href="/docs/linux/man/7-zmq_null/">zmq_null</a></code>(7) <code><a href="/docs/linux/man/7-zmq_plain/">zmq_plain</a></code>(7) <code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)</p>
 <h2>Authors</h2>

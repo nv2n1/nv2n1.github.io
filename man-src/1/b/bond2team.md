@@ -16,42 +16,42 @@ description: "bond2team — Converts bonding configuration to team"
 <p> The resulting files are saved in a temporary directory using ifcfg style by default. In the case of converting an ifcfg file, it translates the bonding options to team, preserving all other options. In that case, it converts the respective slave ifcfg files to team port, preserving all their other options too. In case of converting from given bonding options in the command line, the tool can use the specified ports as team ports.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;master &lt;interface&gt;</code></p>
-<dd> Specify the interface name or ifcfg file to convert. If the interface name is specified, the tool will look at /etc/sysconfig/network-scripts/ for the respective ifcfg file.</p>
-<dt><code>&#8211;rename &lt;interface&gt;</code></p>
-<dd> This is a convenient option to replace the original interface name by the specified name. For instance, if &#8211;master specifies bond0, it is possible to use &#8211;rename team0 to change the final interface name to team0.</p>
-<dt><code>&#8211;ifcfg</code></p>
-<dd> Set the output format to ifcfg config style. [default]</p>
-<dt><code>&#8211;json</code></p>
-<dd> Set the output format to JSON style. See <code><a href="/docs/linux/man/5-teamd-conf/">teamd.conf</a></code>(5) for further details.</p>
-<dt><code>&#8211;bonding_opts &#8216;&lt;bonding options&gt;&#8217;</code></p>
-<dd> Specify the bonding options to be converted instead of reading them from the ifcfg file.</p>
-<dt><code>&#8211;port &lt;interface&gt;</code></p>
-<dd> Set the specified interface as a team port.</p>
-<dt><code>&#8211;configdir &lt;directory&gt;</code></p>
-<dd> Change the ifcfg configuration path from /etc/sysconfig/network-scripts to the specified &lt;directory&gt;.</p>
-<dt><code>&#8211;outputdir &lt;directory&gt;</code></p>
-<dd> Set the output directory to &lt;directory&gt;.</p>
-<dt><code>&#8211;stdout</code></p>
-<dd> Print the result to the screen instead of writing to files.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Increase the debugging level.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Disallow any messages to be printed to console.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print tool version to console and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help text to console and exit.</p>
-<dt><code>&#8211;examples</code></p>
-<dd> Print common usage examples to console and exit.</dl>
+<dt><code>&#8211;master &lt;interface&gt;</code></dt>
+<dd> Specify the interface name or ifcfg file to convert. If the interface name is specified, the tool will look at /etc/sysconfig/network-scripts/ for the respective ifcfg file.</dd>
+<dt><code>&#8211;rename &lt;interface&gt;</code></dt>
+<dd> This is a convenient option to replace the original interface name by the specified name. For instance, if &#8211;master specifies bond0, it is possible to use &#8211;rename team0 to change the final interface name to team0.</dd>
+<dt><code>&#8211;ifcfg</code></dt>
+<dd> Set the output format to ifcfg config style. [default]</dd>
+<dt><code>&#8211;json</code></dt>
+<dd> Set the output format to JSON style. See <code><a href="/docs/linux/man/5-teamd-conf/">teamd.conf</a></code>(5) for further details.</dd>
+<dt><code>&#8211;bonding_opts &#8216;&lt;bonding options&gt;&#8217;</code></dt>
+<dd> Specify the bonding options to be converted instead of reading them from the ifcfg file.</dd>
+<dt><code>&#8211;port &lt;interface&gt;</code></dt>
+<dd> Set the specified interface as a team port.</dd>
+<dt><code>&#8211;configdir &lt;directory&gt;</code></dt>
+<dd> Change the ifcfg configuration path from /etc/sysconfig/network-scripts to the specified &lt;directory&gt;.</dd>
+<dt><code>&#8211;outputdir &lt;directory&gt;</code></dt>
+<dd> Set the output directory to &lt;directory&gt;.</dd>
+<dt><code>&#8211;stdout</code></dt>
+<dd> Print the result to the screen instead of writing to files.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Increase the debugging level.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Disallow any messages to be printed to console.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print tool version to console and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help text to console and exit.</dd>
+<dt><code>&#8211;examples</code></dt>
+<dd> Print common usage examples to console and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To convert the current &#8216;bond0&#8217; ifcfg configuration to team ifcfg:</p>
 <dl>
 <dt>
 <pre>
-<dd># bond2team --master bond0
+</dt><dd># bond2team --master bond0
 </pre>
-</dl>
+</dd></dl>
 <p> To convert the current &#8216;bond0&#8217; ifcfg configuration to team ifcfg renaming the interface name to &#8216;team0&#8217;. <code>Caution</code> : firewall rules, alias interfaces, etc., that might be tied to the original interface name can break after the renaming because the tool will only change the ifcfg file, nothing else. </p>
 <pre>
 # bond2team --master bond0 --rename team0

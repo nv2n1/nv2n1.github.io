@@ -15,11 +15,11 @@ skb_mac_gso_segment - mac layer segmentation handler.
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to segment</dl>
+<dl><dd></dd><dd>buffer to segment</dd></dl>
  
 
  <i>features</i>
-<dl><dd>features for the output path (see dev-&gt;features)</dl>
+<dl><dd>features for the output path (see dev-&gt;features)</dd></dl>
 
 <h2>Copyright</h2>
 

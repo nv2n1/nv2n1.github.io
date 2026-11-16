@@ -15,12 +15,12 @@ description: "gnokiid – create a virtual modem for old Nokia mobile phones"
 <h2>Options</h2>
 <p>If called without any options, <code>gnokiid</code> will set up a virtual modem device using the settings in <a href="/docs/linux/man/1-gnokii/">gnokii</a>(1) config file (if it exists). Otherwise,</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>print out a short usage message</p>
-<dt><code>&#8211;version</code></p>
-<dd>print out version, copyright, phone, and serial device info</p>
-<dt><code>&#8211;debug</code></p>
-<dd>uses STDIN/STDOUT for a virtual modem</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>print out a short usage message</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print out version, copyright, phone, and serial device info</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>uses STDIN/STDOUT for a virtual modem</dd></dl>
 <h2>Diagnostics</h2>
 <p>Various error messages are printed to STDERR.</p>
 <h2>Bugs</h2>

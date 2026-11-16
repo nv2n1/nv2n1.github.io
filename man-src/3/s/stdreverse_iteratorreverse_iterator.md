@@ -12,25 +12,18 @@ std::reverse_iterator&lt;Iter&gt;::reverse_iterator - std::reverse_iterator&lt;I
 
 <pre><code>reverse_iterator();
 (until C++ 17)
-
     constexpr reverse_iterator();
 (since C++ 17)
-
     explicit reverse_iterator(iterator_type x);
 (until C++ 17)
-
     constexpr explicit reverse_iterator(iterator_type x);
 (1)(since C++ 17)
-
     template &lt;class U&gt;
     (2)(until C++ 17)
-
         reverse_iterator(const reverse_iterator&lt;U&gt; &amp;other);
 (3)
-
     template &lt;class U&gt;
     (since C++ 17)
-
         constexpr reverse_iterator(const reverse_iterator&lt;U&gt; &amp;other);</code></pre> 
 Constructs a new iterator adaptor. 
 1) Default constructor. The underlying iterator is value-initialized. Operations on the resulting iterator have defined behavior if and only if the corresponding operations on a value-initialized Iterator also have defined behavior. 
@@ -50,10 +43,5 @@ other - iterator adaptor to copy
 <h2>See also</h2>
 
 <pre><code>assigns another iterator
-
 operator= (public member function)
-
-
-
-
 </code></pre>

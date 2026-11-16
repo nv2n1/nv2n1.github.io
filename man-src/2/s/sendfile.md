@@ -25,24 +25,24 @@ description: "sendfile – transfer data between file descriptors"
 <p> On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> Nonblocking I/O has been selected using <code>O_NONBLOCK</code> and the write would block.</p>
-<dt><code>EBADF</code></p>
-<dd> The input file was not opened for reading or the output file was not opened for writing.</p>
-<dt><code>EFAULT</code></p>
-<dd> Bad address.</p>
-<dt><code>EINVAL</code></p>
-<dd> Descriptor is not valid or locked, or an <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)-like operation is not available for <i>in_fd</i>, or <i>count</i> is negative.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>out_fd</i> has the <code>O_APPEND</code> flag set. This is not currently supported by <code>sendfile</code>().</p>
-<dt><code>EIO</code></p>
-<dd> Unspecified error while reading from <i>in_fd</i>.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to read from <i>in_fd</i>.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd> <i>count</i> is too large, the operation would result in exceeding the maximum size of either the input file or the output file.</p>
-<dt><code>ESPIPE</code></p>
-<dd> <i>offset</i> is not NULL but the input file is not seekable.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> Nonblocking I/O has been selected using <code>O_NONBLOCK</code> and the write would block.</dd>
+<dt><code>EBADF</code></dt>
+<dd> The input file was not opened for reading or the output file was not opened for writing.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Bad address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Descriptor is not valid or locked, or an <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)-like operation is not available for <i>in_fd</i>, or <i>count</i> is negative.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>out_fd</i> has the <code>O_APPEND</code> flag set. This is not currently supported by <code>sendfile</code>().</dd>
+<dt><code>EIO</code></dt>
+<dd> Unspecified error while reading from <i>in_fd</i>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to read from <i>in_fd</i>.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd> <i>count</i> is too large, the operation would result in exceeding the maximum size of either the input file or the output file.</dd>
+<dt><code>ESPIPE</code></dt>
+<dd> <i>offset</i> is not NULL but the input file is not seekable.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>sendfile</code>() first appeared in Linux 2.2. The include file <i>&lt;sys/sendfile.h&gt;</i> is present since glibc 2.1.</p>
 <h2>CONFORMING TO</h2>

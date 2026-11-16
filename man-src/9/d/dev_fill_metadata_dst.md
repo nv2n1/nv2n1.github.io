@@ -15,11 +15,11 @@ dev_fill_metadata_dst - Retrieve tunnel egress information.
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>targeted interface</dl>
+<dl><dd></dd><dd>targeted interface</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>The packet.</dl>
+<dl><dd>The packet.</dd></dl>
 
 <h2>Description</h2>
 

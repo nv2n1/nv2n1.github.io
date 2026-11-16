@@ -32,7 +32,7 @@ description: "src/antlr3treeparser.c –"
 <p> Creates a new Mismatched Tree Nde Exception and inserts in the recognizer exception stack. <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>recognizer</i> Context pointer for this recognizer</dl>
+</dt><dd> <i>recognizer</i> Context pointer for this recognizer</dd></dl>
 <p> References ANTLR3_MISMATCHED_TREE_NODE_EXCEPTION, ANTLR3_MISMATCHED_TREE_NODE_NAME, antlr3RecognitionExceptionNew(), ANTLR3_RECOGNIZER_SHARED_STATE_struct::exception, ANTLR3_EXCEPTION_struct::name, ANTLR3_BASE_RECOGNIZER_struct::state, and ANTLR3_EXCEPTION_struct::type. </p>
 <p> Referenced by antlr3TreeParserNewStream().</p>
 <h3>ANTLR3_API <code>pANTLR3_TREE_PARSER</code> antlr3TreeParserNewStream (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctnstream, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state)</h3>
@@ -62,5 +62,5 @@ description: "src/antlr3treeparser.c –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAO">Author</a></dt>
+<dd></dd></dl>

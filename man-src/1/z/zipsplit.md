@@ -15,26 +15,26 @@ description: "zipsplit – split a zipfile into smaller zipfiles"
 <p> zipfile Zipfile to split. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code></p>
-<dd> Report how many files it will take, but don&#8217;t make them.</p>
-<dt><code>-i</code></p>
-<dd> Make index (zipsplit.idx) and count its size against first zip file.</p>
-<dt><code>-n&nbsp;</code>size</p>
-<dd> Make zip files no larger than &quot;size&quot; (default = 36000).</p>
-<dt><code>-r&nbsp;</code>room</p>
-<dd> Leave room for &quot;room&quot; bytes on the first disk (default = 0).</p>
-<dt><code>-b&nbsp;</code>path</p>
-<dd> Use path for the output zip files.</p>
-<dt><code>-p</code></p>
-<dd> Pause between output zip files.</p>
-<dt><code>-s</code></p>
-<dd> Do a sequential split even if it takes more zip files.</p>
-<dt><code>-h</code></p>
-<dd> Show a short help.</p>
-<dt><code>-v</code></p>
-<dd> Show version information.</p>
-<dt><code>-L</code></p>
-<dd> Show software license. </p>
+<dt><code>-t</code></dt>
+<dd> Report how many files it will take, but don&#8217;t make them.</dd>
+<dt><code>-i</code></dt>
+<dd> Make index (zipsplit.idx) and count its size against first zip file.</dd>
+<dt><code>-n&nbsp;</code>size</dt>
+<dd> Make zip files no larger than &quot;size&quot; (default = 36000).</dd>
+<dt><code>-r&nbsp;</code>room</dt>
+<dd> Leave room for &quot;room&quot; bytes on the first disk (default = 0).</dd>
+<dt><code>-b&nbsp;</code>path</dt>
+<dd> Use path for the output zip files.</dd>
+<dt><code>-p</code></dt>
+<dd> Pause between output zip files.</dd>
+<dt><code>-s</code></dt>
+<dd> Do a sequential split even if it takes more zip files.</dd>
+<dt><code>-h</code></dt>
+<dd> Show a short help.</dd>
+<dt><code>-v</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-L</code></dt>
+<dd> Show software license. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <i>zipsplit</i> reads a zipfile and splits it into smaller zipfiles. </p>

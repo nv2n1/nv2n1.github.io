@@ -14,16 +14,16 @@ description: "gnutls_pkcs11_copy_x509_privkey – API function"
 <p> <code>int gnutls_pkcs11_copy_x509_privkey(const char * </code><i>token_url</i><code>, gnutls_x509_privkey_t </code><i>key</i><code>, const char * </code><i>label</i><code>, unsigned int </code><i>key_usage</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * token_url</p>
-<dd> A PKCS <code>11</code> URL specifying a token</p>
-<dt>gnutls_x509_privkey_t key</p>
-<dd> A private key</p>
-<dt>const char * label</p>
-<dd> A name to be used for the stored data</p>
-<dt>unsigned int key_usage</p>
-<dd> One of GNUTLS_KEY_*</p>
-<dt>unsigned int flags</p>
-<dd> One of GNUTLS_PKCS11_OBJ_* flags</dl>
+<dt>const char * token_url</dt>
+<dd> A PKCS <code>11</code> URL specifying a token</dd>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> A private key</dd>
+<dt>const char * label</dt>
+<dd> A name to be used for the stored data</dd>
+<dt>unsigned int key_usage</dt>
+<dd> One of GNUTLS_KEY_*</dd>
+<dt>unsigned int flags</dt>
+<dd> One of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will copy a private key into a PKCS <code>11</code> token specified by a URL. It is highly recommended flags to contain <code>GNUTLS_PKCS11_OBJ_FLAG_MARK_SENSITIVE</code> unless there is a strong reason not to.</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_pkcs11_copy_x509_privkey – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

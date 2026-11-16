@@ -10,11 +10,8 @@ description: "dcb-maxrate – show / manipulate port maxrate settings of the DCB
 <p>dcb-maxrate &#8211; show / manipulate port maxrate settings of the DCB (Data Center Bridging) subsystem</p>
 <h2>Synopsis</h2>
 <pre><code>dcb
-
 [ OPTIONS ]
-
 maxrate
-
 { COMMAND | help }
 </code></pre>
 <p> <code>dcb maxrate show dev</code> DEV [ <code>tc-maxrate</code> ]<br />
@@ -23,7 +20,6 @@ maxrate
 RATE-MAPPING := { TC | all }:RATE
 TC := { 0 .. 7 }
 RATE := { INTEGER[bit] | INTEGERKbit |
-
     INTEGERMib | ... }
 </code></pre>
 <h2>Description</h2>
@@ -31,8 +27,8 @@ RATE := { INTEGER[bit] | INTEGERKbit |
 <h2>Parameters</h2>
 <p>The following describes only the write direction, i.e. as used with the <code>set</code> command. For the <code>show</code> command, the parameter name is to be used as a simple keyword without further arguments. This instructs the tool to show the value of a given parameter. When no parameters are given, the tool shows the complete maxrate configuration. </p>
 <dl>
-<dt><code>tc-maxrate </code><i>RATE-MAP</i></p>
-<dd><i>RATE-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are TC indices, values are traffic rates in bits per second. The rates can use the notation documented in section PARAMETERS at <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8). Note that under that notation, &quot;bit&quot; stands for bits per second whereas &quot;b&quot; stands for bytes per second. When showing, the command line option <code>-i</code> toggles between using decadic and ISO/IEC prefixes. </p>
+<dt><code>tc-maxrate </code><i>RATE-MAP</i></dt>
+<dd><i>RATE-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are TC indices, values are traffic rates in bits per second. The rates can use the notation documented in section PARAMETERS at <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8). Note that under that notation, &quot;bit&quot; stands for bits per second whereas &quot;b&quot; stands for bytes per second. When showing, the command line option <code>-i</code> toggles between using decadic and ISO/IEC prefixes. </dd>
 </dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>Set rates of all traffic classes to 25Gbps, except for TC 6, which will have the rate of 100Gbps: </p>

@@ -14,7 +14,7 @@ description: "fc_vport_terminate – Admin App or LLDD requests termination of a
 <p><i>vport</i></p>
 <dl>
 <dd>
-<dd>fc_vport to be terminated</dl>
+</dd><dd>fc_vport to be terminated</dd></dl>
 <h2>Description</h2>
 <p>Calls the LLDD <code>vport_delete</code> function, then deallocates and removes the vport from the shost and object tree.</p>
 <h2>Notes</h2>
@@ -22,8 +22,8 @@ description: "fc_vport_terminate – Admin App or LLDD requests termination of a
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

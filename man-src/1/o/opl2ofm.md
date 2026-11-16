@@ -16,16 +16,13 @@ description: "opl2ofm – convert Omega and TeX property-list files to font-metr
 <p> The program also works with TeX PL files, producing TeX TFM files. (<code>opl2ofm</code> is based on the WEB source code for <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1).) </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>
-<dd>
-<dt><code>-help</code></p>
-<dd> display a brief summary of syntax and options</p>
-<dt><code>-verbose</code></p>
-<dd> display progress reports</p>
-<dt><code>-version</code></p>
-<dd> output version information and exit</p>
-<dt>
-<dd></dl>
+<dt><code>-help</code></dt>
+<dd> display a brief summary of syntax and options</dd>
+<dt><code>-verbose</code></dt>
+<dd> display progress reports</dd>
+<dt><code>-version</code></dt>
+<dd> output version information and exit</dd>
+</dl>
 <h2>BUGS</h2>
 <p> None known, but report any found to &lt;omega [at] ens.fr&gt; (mailing list). You should also check to see if the bug is present in <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1). </p>
 <h2>SEE ALSO</h2>
@@ -36,9 +33,10 @@ description: "opl2ofm – convert Omega and TeX property-list files to font-metr
 <p> According to the WEB documentation: </p>
 <dl>
 <dt>
-<dd> The first <code>PLtoTF</code> program was designed by Leo Guibas in the summer of 1978. Contributions by Frank Liang, Doug Wyatt, and Lyle Ramshaw also had a significant effect on the evolution of the present code. </p>
+</dt><dd> The first <code>PLtoTF</code> program was designed by Leo Guibas in the summer of 1978. Contributions by Frank Liang, Doug Wyatt, and Lyle Ramshaw also had a significant effect on the evolution of the present code. </dd>
 <p> Extensions for an enhanced ligature mechanism were added by D.E. Knuth in 1989. </p>
 <p> Extensions to handle extended font metric files (&#8220;OFM&#8221;) were added by John Plaice in December 1995 and January 1996, resulting in the new program <code>OPL2OFM</code>.</dl>
 <p> The primary authors of Omega are John Plaice &lt;plaice [at] cse.unsw.edu.au&gt; and Yannis Haralambous &lt;yannis [at] fluxus-virus.com&gt;. </p>
 <p> This manual page was written by C.M. Connelly &lt;cmc [at] debian.org&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
 <h2>Index</h2>
+</p>

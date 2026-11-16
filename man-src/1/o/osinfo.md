@@ -20,38 +20,34 @@ description: "osinfo – gather information regarding the running operating syst
 <h3>Options</h3>
 <p> <code>osinfo</code> recognizes the following options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-c</code></p>
-<dd> Use the CIM formats for DateTime and SystemUpTime values (not the formatting done by default). As specified by the DMTF, the CIMDateTime format is yyyymmddhhmmss.mmmmmmsutc, where yyyy is a 4-digit year, mm is the month, dd is the day, hh is the hour on a 24-hour clock, mm is the minute, ss is the second, mmmmmm is the number of microseconds, s is a &quot;+&quot; or &quot;-&quot; indicating the sign of the UTC (Universal Time Code) correction field (since the DateTime is returned in the local time zone of the system), and utc is the offset from UTC in minutes.</p>
-<dt><code>-h</code> hostname</p>
-<dd> Connect to the CIM Server on the specified host. If this option is not specified, <code>osinfo </code> connects to the localhost.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display command usage information.</p>
-<dt><code>-p</code> portnumber</p>
-<dd> Connect to the CIM Server on the specified port number. If this option is not specified, <code>osinfo</code> connects to the default port for the wbem-http service, or if the <code>-s</code> option is specified, to the default port for the wbem-https service.</p>
-<dt><code>-s</code></p>
-<dd> Enable the use of the SSL protocol between <code>osinfo </code> and the CIM server. The <code>-s</code> option should be specified if the CIM Server on the specified hostname/portnumber expects clients to connect using HTTPS.</p>
-<dt><code>-t</code> timeout</p>
-<dd> Wait the specified number of milliseconds on sending a request, before timing out if no response has been received. The <i>timeout </i> value must be an integer value greater than 0.</p>
-<dt><code>-u</code> username</p>
-<dd> Connect as the specified <i>R username . </i> If <i>username </i> is not specified, the current logged in user is used for authentication. This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display CIM Server version.</p>
-<dt><code>-w</code> password</p>
-<dd> Authenticate the connection using the specified <i>password .</i> This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified. WARNING: A password should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If the remote host requests authentication and this option is not specified, <code>osinfo </code> will prompt for the password.</dl>
+<dt><code>-c</code></dt>
+<dd> Use the CIM formats for DateTime and SystemUpTime values (not the formatting done by default). As specified by the DMTF, the CIMDateTime format is yyyymmddhhmmss.mmmmmmsutc, where yyyy is a 4-digit year, mm is the month, dd is the day, hh is the hour on a 24-hour clock, mm is the minute, ss is the second, mmmmmm is the number of microseconds, s is a &quot;+&quot; or &quot;-&quot; indicating the sign of the UTC (Universal Time Code) correction field (since the DateTime is returned in the local time zone of the system), and utc is the offset from UTC in minutes.</dd>
+<dt><code>-h</code> hostname</dt>
+<dd> Connect to the CIM Server on the specified host. If this option is not specified, <code>osinfo </code> connects to the localhost.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display command usage information.</dd>
+<dt><code>-p</code> portnumber</dt>
+<dd> Connect to the CIM Server on the specified port number. If this option is not specified, <code>osinfo</code> connects to the default port for the wbem-http service, or if the <code>-s</code> option is specified, to the default port for the wbem-https service.</dd>
+<dt><code>-s</code></dt>
+<dd> Enable the use of the SSL protocol between <code>osinfo </code> and the CIM server. The <code>-s</code> option should be specified if the CIM Server on the specified hostname/portnumber expects clients to connect using HTTPS.</dd>
+<dt><code>-t</code> timeout</dt>
+<dd> Wait the specified number of milliseconds on sending a request, before timing out if no response has been received. The <i>timeout </i> value must be an integer value greater than 0.</dd>
+<dt><code>-u</code> username</dt>
+<dd> Connect as the specified <i>R username . </i> If <i>username </i> is not specified, the current logged in user is used for authentication. This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display CIM Server version.</dd>
+<dt><code>-w</code> password</dt>
+<dd> Authenticate the connection using the specified <i>password .</i> This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified. WARNING: A password should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If the remote host requests authentication and this option is not specified, <code>osinfo </code> will prompt for the password.</dd></dl>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> When an error occurs, an error message is written to stderr and an appropriate value is returned. The following values are returned:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>0 </code></p>
-<dd> Success</p>
-<dt><code>1</code></p>
-<dd> Error</dl>
+<dt><code>0 </code></dt>
+<dd> Success</dd>
+<dt><code>1</code></dt>
+<dd> Error</dd></dl>
 </dl>
 <h2>USAGE NOTE</h2>
 <p> The <code>osinfo </code> command requires that the CIM Server is running.</p>
@@ -59,53 +55,51 @@ description: "osinfo – gather information regarding the running operating syst
 <p> <code>osinfo error: Cannot connect</code></p>
 <dl>
 <dt>
-<dd> The CIMOM is not running. Start the CIMOM with the <code>cimserver</code> command and re-run <code>osinfo .</code></dl>
+</dt><dd> The CIMOM is not running. Start the CIMOM with the <code>cimserver</code> command and re-run <code>osinfo .</code></dd></dl>
 <h2>EXAMPLES</h2>
 <p> Run the default <code>osinfo </code> command.</p>
 <dl>
-<dt>
+<dt><code>OperatingSystem Information</code></dt>
 <dd>
-<dt><code>OperatingSystem Information</code></p>
+</dd><dt><code> Host: myserver.hp.com </code></dt>
 <dd>
-<dt><code> Host: myserver.hp.com </code></p>
+</dd><dt><code> Name: HP-UX </code></dt>
 <dd>
-<dt><code> Name: HP-UX </code></p>
+</dd><dt><code> Version: B.11.00 </code></dt>
 <dd>
-<dt><code> Version: B.11.00 </code></p>
+</dd><dt><code> UserLicense: Unlimited user license </code></dt>
 <dd>
-<dt><code> UserLicense: Unlimited user license </code></p>
+</dd><dt><code> OSCapability: 32 bit </code></dt>
 <dd>
-<dt><code> OSCapability: 32 bit </code></p>
+</dd><dt><code> LastBootTime: Sep 24, 2001 9:16:18 (-0700) </code></dt>
 <dd>
-<dt><code> LastBootTime: Sep 24, 2001 9:16:18 (-0700) </code></p>
+</dd><dt><code> LocalDateTime: May 23, 2002 10:55:54 (-0700) </code></dt>
 <dd>
-<dt><code> LocalDateTime: May 23, 2002 10:55:54 (-0700) </code></p>
-<dd>
-<dt><code> SystemUpTime: 20828377 seconds = 241 days, 1 hr, 39 mins, 37 secs </code></p>
-<dd></dl>
+</dd><dt><code> SystemUpTime: 20828377 seconds = 241 days, 1 hr, 39 mins, 37 secs </code></dt>
+<dd></dd></dl>
 <p> The system myserver.hp.com is running version B.11.00 of HP-UX, has an unlimited user license, and is 32-bit capable. The Operating System was last booted on Sept 24, 2001 and the local date and time are given. All time values are offset from GMT by -7 hours. </p>
 <p> Run <code>osinfo ,</code> with the values displayed in their CIM format</p>
 <dl>
 <dt>
-<dd> <code>osinfo -c</code> </p>
-<dt><code>OperatingSystem Information</code></p>
+</dt><dd> <code>osinfo -c</code> </dd>
+<dt><code>OperatingSystem Information</code></dt>
 <dd>
-<dt><code> Host: rushmore.cup.hp.com</code></p>
+</dd><dt><code> Host: rushmore.cup.hp.com</code></dt>
 <dd>
-<dt><code> Name: HP-UX</code></p>
+</dd><dt><code> Name: HP-UX</code></dt>
 <dd>
-<dt><code> Version: B.11.00</code></p>
+</dd><dt><code> Version: B.11.00</code></dt>
 <dd>
-<dt><code> UserLicense: Unlimited user license</code></p>
+</dd><dt><code> UserLicense: Unlimited user license</code></dt>
 <dd>
-<dt><code> OSCapability: 32 bit</code></p>
+</dd><dt><code> OSCapability: 32 bit</code></dt>
 <dd>
-<dt><code> LastBootTime: 20010924091618.000000-420</code></p>
+</dd><dt><code> LastBootTime: 20010924091618.000000-420</code></dt>
 <dd>
-<dt><code> LocalDateTime: 20020523105801.000000-420</code></p>
+</dd><dt><code> LocalDateTime: 20020523105801.000000-420</code></dt>
 <dd>
-<dt><code> SystemUpTime: 20828504</code></p>
-<dd></dl>
+</dd><dt><code> SystemUpTime: 20828504</code></dt>
+<dd></dd></dl>
 <p> The same rushmore.cup.hp.com system is displayed, but in this output the LastBootTime and LocalDateTime values are in the CIM format. The SystemUpTime value is in total seconds (as specified by CIM). Other fields do not change, as their CIM specification is the strings themselves.</p>
 <h2>SEE ALSO</h2>
 <p> cimserver(1).</p>

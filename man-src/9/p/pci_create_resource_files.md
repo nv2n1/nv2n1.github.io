@@ -15,7 +15,7 @@ pci_create_resource_files - create resource files in sysfs for <i>dev</i>
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>dev in question</dl>
+<dl><dd></dd><dd>dev in question</dd></dl>
 
 <h2>Description</h2>
 

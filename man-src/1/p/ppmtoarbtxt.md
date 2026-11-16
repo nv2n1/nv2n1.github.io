@@ -16,40 +16,40 @@ description: "ppmtoarbtxt – generate image in arbitrary text format from PPM i
 <p> <code>ppmtoarbtxt</code> generates simple text-based graphics formats based on format descriptions given as input. A text-based graphics format is one in which an image is represented by text (like PNM plain format, but unlike PNM raw format). </p>
 <p> <code>ppmtoarbtxt</code> reads a PPM image as input. For each pixel in the image, <code>ppmtoarbtxt</code> writes the contents of the skeleton file <i>bodyskl</i>, with certain substitutions based on the value of the pixel, to stdout. The substitutions are as follows: </p>
 <dl>
-<dt><code>#(ired</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> generates an integer in the range <i>blackref</i> to <i>whiteref</i> using <i>format</i> representing the red intensity of the pixel. A red intensity of 0 becomes <i>blackref</i>; a red intensity of maxval becomes <i>whiteref</i>. </p>
+<dt><code>#(ired</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> generates an integer in the range <i>blackref</i> to <i>whiteref</i> using <i>format</i> representing the red intensity of the pixel. A red intensity of 0 becomes <i>blackref</i>; a red intensity of maxval becomes <i>whiteref</i>. </dd>
 <p> <code>#(ired)</code> is equivalent to <code>#(ired %d 0 255)</code>. </p>
-<dt><code>#(igreen</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> Same as <code>#(ired&#8230;</code>, but for green. </p>
-<dt><code>#(iblue</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> Same as <code>#(ired&#8230;</code>, but for blue. </p>
-<dt><code>#(ilum</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> Same as <code>#(ired&#8230;</code>, but representing the luminance value (0.299*red + 0.587*green + 0.114*blue) of the pixel. </p>
-<dt><code>#(fred</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> Same as <code>#(ired&#8230;</code>, but generates a floating point number instead of an integer. </p>
+<dt><code>#(igreen</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> Same as <code>#(ired&#8230;</code>, but for green. </dd>
+<dt><code>#(iblue</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> Same as <code>#(ired&#8230;</code>, but for blue. </dd>
+<dt><code>#(ilum</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> Same as <code>#(ired&#8230;</code>, but representing the luminance value (0.299*red + 0.587*green + 0.114*blue) of the pixel. </dd>
+<dt><code>#(fred</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> Same as <code>#(ired&#8230;</code>, but generates a floating point number instead of an integer. </dd>
 <p> <code>#(fred)</code> is equivalent to <code>#(fred %f 0.0 1.0)</code>. </p>
-<dt><code>#(fgreen</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> Same as <code>#(fred&#8230;</code>, but for green. </p>
-<dt><code>#(fblue</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> Same as <code>#(fred&#8230;</code>, but for blue. </p>
-<dt><code>#(flum</code><i> format blackref whiteref</i><code>)</code></p>
-<dd> Same as <code>#(fred&#8230;</code>, but representing the luminance value (0.299*red + 0.587*green + 0.114*blue) of the pixel. </p>
-<dt><code>#(width)</code></p>
-<dd> Generates the width in pixels of the image. </p>
-<dt><code>#(height)</code></p>
-<dd> Generates the height in pixels of the image. </p>
-<dt><code>#(posx)</code></p>
-<dd> Generates the horizontal position of the pixel, in pixels from the left edge of the image. </p>
-<dt><code>#(posy)</code></p>
-<dd> Generates the vertical position of the pixel, in pixels from the top edge of the image. </p>
+<dt><code>#(fgreen</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> Same as <code>#(fred&#8230;</code>, but for green. </dd>
+<dt><code>#(fblue</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> Same as <code>#(fred&#8230;</code>, but for blue. </dd>
+<dt><code>#(flum</code><i> format blackref whiteref</i><code>)</code></dt>
+<dd> Same as <code>#(fred&#8230;</code>, but representing the luminance value (0.299*red + 0.587*green + 0.114*blue) of the pixel. </dd>
+<dt><code>#(width)</code></dt>
+<dd> Generates the width in pixels of the image. </dd>
+<dt><code>#(height)</code></dt>
+<dd> Generates the height in pixels of the image. </dd>
+<dt><code>#(posx)</code></dt>
+<dd> Generates the horizontal position of the pixel, in pixels from the left edge of the image. </dd>
+<dt><code>#(posy)</code></dt>
+<dd> Generates the vertical position of the pixel, in pixels from the top edge of the image. </dd>
 </dl>
 <p> If the skeleton file ends with a LF-character, <code>ppmtoarbtxt</code> ignores it &#8212; it does not include it in the output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-hd</code> <i>headskl</i></p>
-<dd> This option causes <code>ppmtoarbtxt</code> to place the contents of the file named <i>headskl</i> at the beginning of the output, before the first pixel. It does the same substitutions as for <i>bodyskl</i>, except substitutions based on a pixel value are undefined. </p>
-<dt><code>-tl</code> <i>tailskl</i></p>
-<dd> This option causes <code>ppmtoarbtxt</code> to place the contents of the file named <i>tailskl</i> at the end of the output, after the last pixel. It is analogous to <code>-hd</code>. </p>
+<dt><code>-hd</code> <i>headskl</i></dt>
+<dd> This option causes <code>ppmtoarbtxt</code> to place the contents of the file named <i>headskl</i> at the beginning of the output, before the first pixel. It does the same substitutions as for <i>bodyskl</i>, except substitutions based on a pixel value are undefined. </dd>
+<dt><code>-tl</code> <i>tailskl</i></dt>
+<dd> This option causes <code>ppmtoarbtxt</code> to place the contents of the file named <i>tailskl</i> at the end of the output, after the last pixel. It is analogous to <code>-hd</code>. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <h3>gray inversion</h3>

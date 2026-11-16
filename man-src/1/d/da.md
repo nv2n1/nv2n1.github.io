@@ -16,10 +16,10 @@ description: "da – setup development environment and create basic projects in 
 <h2>DESCRIPTION</h2>
 <p> <code>da</code> is the main command of DevAssistant. It is responsible for dispatching commandline calls to assistants or actions. It accepts some optional flags: </p>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd> makes DevAssistant log lots of debugging information</p>
-<dt><code>&#8211;no-cache</code></p>
-<dd> makes DevAssistant read all individual assistants and completely ignore cache </p>
+<dt><code>&#8211;debug</code></dt>
+<dd> makes DevAssistant log lots of debugging information</dd>
+<dt><code>&#8211;no-cache</code></dt>
+<dd> makes DevAssistant read all individual assistants and completely ignore cache </dd>
 </dl>
 <h2>DESCRIPTION &#8211; ASSISTANT_TYPE</h2>
 <p> DevAssistant can help you with various tasks during development. The tasks are carried out by so called &quot;assistants&quot; &#8211; there are four types of assistants: </p>
@@ -38,23 +38,23 @@ description: "da – setup development environment and create basic projects in 
 <h2>COMMON OPTIONS</h2>
 <p> There are some commonly used options shared among many assistants. Their usual meaning is explained below:</p>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> print help for selected assistant.</p>
-<dt><code>-n &#8211;name</code></p>
-<dd> name of the project (relative or absolute path).</p>
-<dt><code>-e &#8211;eclipse</code></p>
-<dd> import project into <i>eclipse</i> environment. Uses ~/workspace workspace by default, can be overriden by specifying another path.</p>
-<dt><code>-g &#8211;github &lt;username&gt;</code></p>
-<dd> create a GitHub repo and push the initial sources there. Uses current system username as GitHub username, unless specified otherwise. The GitHub projectname is taken from the <code>name</code> parameter.</p>
-<dt><code>-b &#8211;build</code></p>
-<dd> generate a SPEC file, SRPM and mock-build RPM.</p>
-<dt><code>-v &#8211;vim</code></p>
-<dd> install vim settings specific for this language (backs up your original vim settings) </p>
+<dt><code>-h &#8211;help</code></dt>
+<dd> print help for selected assistant.</dd>
+<dt><code>-n &#8211;name</code></dt>
+<dd> name of the project (relative or absolute path).</dd>
+<dt><code>-e &#8211;eclipse</code></dt>
+<dd> import project into <i>eclipse</i> environment. Uses ~/workspace workspace by default, can be overriden by specifying another path.</dd>
+<dt><code>-g &#8211;github &lt;username&gt;</code></dt>
+<dd> create a GitHub repo and push the initial sources there. Uses current system username as GitHub username, unless specified otherwise. The GitHub projectname is taken from the <code>name</code> parameter.</dd>
+<dt><code>-b &#8211;build</code></dt>
+<dd> generate a SPEC file, SRPM and mock-build RPM.</dd>
+<dt><code>-v &#8211;vim</code></dt>
+<dd> install vim settings specific for this language (backs up your original vim settings) </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DEVASSISTANT_PATH</code></p>
-<dd> A colon-separated list of directories in which to search for assistants. Searched in before the standard paths. If multiple assistants with the same name are found only the first of them will be used. </p>
+<dt><code>DEVASSISTANT_PATH</code></dt>
+<dd> A colon-separated list of directories in which to search for assistants. Searched in before the standard paths. If multiple assistants with the same name are found only the first of them will be used. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>da-gui</code>(1) </p>

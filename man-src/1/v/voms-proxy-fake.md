@@ -11,10 +11,10 @@ description: "voms-proxy-fake – create a proxy with VOMS extensions"
 <p> voms-proxy-fake &#8211; create a proxy with VOMS extensions</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>voms-proxy-fake</code> [options] </p>
+<dt> <code>voms-proxy-fake</code> [options] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>The voms-proxy-fake generates a proxy containing arbitrary attributes without contacting the VOMS server. </p>
+<dd>The voms-proxy-fake generates a proxy containing arbitrary attributes without contacting the VOMS server. </dd>
 <h2>OPTIONS</h2>
 <p> Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. </p>
 <p> <code>-help</code> Displays usage. </p>

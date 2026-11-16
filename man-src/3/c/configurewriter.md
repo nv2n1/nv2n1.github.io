@@ -47,10 +47,10 @@ description: "XMLTV::Configure::Writer – Configuration file writer for XMLTV g
 <p>None.</p>
 <h2>Methods</h2>
 <dl COMPACT>
-<dt><i>start()</i></p>
-<dd>Write the start of the &lt;xmltvconfiguration&gt; element. Parameter is a hashref which gives the attributes of this element.</p>
-<dt><i>write_string()</i></p>
-<dd>Write a &lt;string&gt; element. Parameter is a hashref with the data for the element: </p>
+<dt><i>start()</i></dt>
+<dd>Write the start of the &lt;xmltvconfiguration&gt; element. Parameter is a hashref which gives the attributes of this element.</dd>
+<dt><i>write_string()</i></dt>
+<dd>Write a &lt;string&gt; element. Parameter is a hashref with the data for the element: </dd>
 <pre> $writer-&gt;write_string( {
  id =&gt; 'username', 
  title =&gt; [ [ 'Username', 'en' ],
@@ -70,6 +70,6 @@ description: "XMLTV::Configure::Writer – Configuration file writer for XMLTV g
 <h2>Pod Errors</h2>
 <p>Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl COMPACT>
-<dt>Around line 44:</p>
-<dd>Non-ASCII character seen before =encoding in &#8221;Anva.ndarnamn&#8217;,&#8217;. Assuming <font SIZE="-1">ISO8859-1</font> </p>
+<dt>Around line 44:</dt>
+<dd>Non-ASCII character seen before =encoding in &#8221;Anva.ndarnamn&#8217;,&#8217;. Assuming <font SIZE="-1">ISO8859-1</font> </dd>
 </dl>

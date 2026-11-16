@@ -15,19 +15,19 @@ snd_pcm_hw_constraint_list - apply a list of constraints to a parameter
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>cond</i>
-<dl><dd>condition bits</dl>
+<dl><dd>condition bits</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the list constraint</dl>
+<dl><dd>hw_params variable to apply the list constraint</dd></dl>
  
 
  <i>l</i>
-<dl><dd>list</dl>
+<dl><dd>list</dd></dl>
 
 <h2>Description</h2>
 

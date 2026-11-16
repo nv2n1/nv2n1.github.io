@@ -14,11 +14,11 @@ description: "spans_boundary – Check a packet can be ISA DMA’d"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>The buffer to check</dl>
+</dd><dd>The buffer to check</dd></dl>
 <h2>Description</h2>
 <p>Returns true if the buffer cross a DMA boundary on a PC. The poor thing can only DMA within a 64K block not across the edges of it.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -27,16 +27,16 @@ description: "FvwmBacker – the fvwm background changer module"
 <h2>Configuration Options</h2>
 <p>The following options can be placed in the .fvwm2rc file </p>
 <dl>
-<dt>*FvwmBacker: Command <i>(Desk d, Page x y) command</i></p>
-<dd>Specifies the <i>command</i> to execute when the viewport matches the arguments for the desk d, page x coordinate and y coordinate. Any or all of these three numeric arguments can be replaced with an asterisk (*) to indicate that any value matches, in this case Desk or Page parts can be skipped. </p>
+<dt>*FvwmBacker: Command <i>(Desk d, Page x y) command</i></dt>
+<dd>Specifies the <i>command</i> to execute when the viewport matches the arguments for the desk d, page x coordinate and y coordinate. Any or all of these three numeric arguments can be replaced with an asterisk (*) to indicate that any value matches, in this case Desk or Page parts can be skipped. </dd>
 <p> If either the <i>Desk</i> or the <i>Page</i> parts are omitted, the command is not executed if only the desk or the page is switched. If neither is given, the command is executed only once when the module is started. This is not the same as using asterisks for the numeric arguments: if asterisks are used, the command is always executed when only the desk or page changes, if the corresponding part is omitted, the command is never executed when only the desk or page changes. </p>
 <p> If the <i>command</i> is <i>-solid</i> FvwmBacker uses the next argument as a color in the X database and sets the background to that color without generating a system call to xsetroot (only single word color names may be used). </p>
 <p> If the <i>command</i> is <i>colorset</i> FvwmBacker uses the background specified in colorset <i>n</i> for the given desk. Please refer to the man page of the FvwmTheme module for details about colorsets. </p>
 <p> Otherwise the command is sent to fvwm to execute. </p>
-<dt>*FvwmBacker: RetainPixmap</p>
-<dd>Causes FvwmBacker to retain and publish the Pixmap with which the background has been set. This works only for the <i>-solid</i> or <i>colorset</i> commands. This is useful for applications which want to use the root Pixmap on the background to simulate transparency (for example, Eterm and Aterm use this method). This option should also be used for the RootTransparent colorset option (see the FvwmTheme man page). Note: with a colorset background this command may add a lot of memory to the X server. For example, this adds the pixmap width times height bytes with a TiledPixmap image, screen_width times screen_height bytes with a Pixmap image or a C,B,D,R,S or Y Gradient and screen_width bytes with a VGradient or screen height bytes with an HGradient. </p>
-<dt>*FvwmBacker: DoNotRetainPixmap</p>
-<dd>Cancels the effect of the previous option. This is the default. </p>
+<dt>*FvwmBacker: RetainPixmap</dt>
+<dd>Causes FvwmBacker to retain and publish the Pixmap with which the background has been set. This works only for the <i>-solid</i> or <i>colorset</i> commands. This is useful for applications which want to use the root Pixmap on the background to simulate transparency (for example, Eterm and Aterm use this method). This option should also be used for the RootTransparent colorset option (see the FvwmTheme man page). Note: with a colorset background this command may add a lot of memory to the X server. For example, this adds the pixmap width times height bytes with a TiledPixmap image, screen_width times screen_height bytes with a Pixmap image or a C,B,D,R,S or Y Gradient and screen_width bytes with a VGradient or screen height bytes with an HGradient. </dd>
+<dt>*FvwmBacker: DoNotRetainPixmap</dt>
+<dd>Cancels the effect of the previous option. This is the default. </dd>
 </dl>
 <h2>Run-Time Configuration</h2>
 <p>It it possible to replace FvwmBacker&#8217;s configuration at run-time, although it is not yet possible to remove existing configuration lines. This is done by simply removing the old configuration from withing fvwm and then read a new one. This can be done in many ways, for example by using an fvwm function or one of the modules <code>FvwmCommand</code> or <code>FvwmConsole</code>. </p>
@@ -47,8 +47,8 @@ description: "FvwmBacker – the fvwm background changer module"
 <h2>Old-Style Options</h2>
 <p>There is continued support for the now deprecated option: </p>
 <dl>
-<dt>*FvwmBacker: Desk <i>d command</i></p>
-<dd>It is functionally equivalent to omitting the page coordinates with <i>*FvwmBacker: Command</i>: </p>
+<dt>*FvwmBacker: Desk <i>d command</i></dt>
+<dd>It is functionally equivalent to omitting the page coordinates with <i>*FvwmBacker: Command</i>: </dd>
 <pre>*FvwmBacker: Command (Desk Id) command</pre>
 </dl>
 <h2>Sample Configuration</h2>

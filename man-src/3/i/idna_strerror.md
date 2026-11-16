@@ -14,8 +14,8 @@ description: "idna_strerror – API function"
 <p> <code>const char * idna_strerror(Idna_rc </code><i>rc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>Idna_rc rc</p>
-<dd> an <code>Idna_rc</code> return code.</dl>
+<dt>Idna_rc rc</dt>
+<dd> an <code>Idna_rc</code> return code.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Convert a return code integer to a text string. This string can be used to output a diagnostic message to the user.</p>
 <h2>IDNA_SUCCESS</h2>
@@ -53,6 +53,6 @@ description: "idna_strerror – API function"
 <p> The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libidn</code></dl>
+</dt><dd> <code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

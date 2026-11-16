@@ -11,29 +11,11 @@ description: "std::tr2::dynamic_bitset< _WordT, _Alloc >::reference –"
 <h2>Synopsis</h2>
 <h3>Public Member Functions</h3>
 <pre><code>reference (dynamic_bitset &amp;__b, size_type __pos)
-
-
-
 reference &amp; flip ()
-
-
-
 operator bool () const
-
-
-
 reference &amp; operator= (bool __x)
-
-
-
 reference &amp; operator= (const reference &amp;__j)
-
-
-
 bool operator~ () const
-
-
-
 Friends</code></pre>
 <p> class <code>dynamic_bitset</code></p>
 <h2>Detailed Description</h2>

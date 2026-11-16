@@ -11,16 +11,16 @@ description: "XkbChangeDeviceInfo – Update the server’s description of a dev
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbChangeDeviceInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>XkbDeviceChangesPtr </code><i>changes</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_info</i></p>
-<dd>local copy of device state and configuration</p>
-<dt><i>&#8211; changes</i></p>
-<dd>note specifying changes in device_info</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_info</i></dt>
+<dd>local copy of device state and configuration</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>note specifying changes in device_info</dd></dl>
 <h2>Description</h2>
 <p><i>XkbChangeDeviceInfo </i> updates the server&#8217;s description of the device specified in <i>device_info-&gt;device_spec </i> with the changes specified in <i>changes </i> and contained in <i>device_info. </i> The update is made by an <i>XkbSetDeviceInfo </i> request.</p>
 <h2>Structures</h2>

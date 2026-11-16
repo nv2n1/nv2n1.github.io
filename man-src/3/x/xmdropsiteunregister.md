@@ -15,8 +15,8 @@ description: "XmDropSiteUnregister — A Drag and Drop function that frees drop 
 <h2>Description</h2>
 <p><code>XmDropSiteUnregister</code> informs the toolkit that the specified widget is no longer a registered drop site. The function frees all associated drop site information.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget, registered as a drop site, that is to be unregistered</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget, registered as a drop site, that is to be unregistered</dd></dl>
 <p> For a complete definition of DropSite and its associated resources, see <code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3) and <code><a href="/docs/linux/man/3-xmdropsiteregister/">XmDropSiteRegister</a></code>(3).</p>

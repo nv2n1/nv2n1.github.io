@@ -18,10 +18,10 @@ description: "gpgsm-gencert.sh – Generate an X.509 certificate request"
 <p> The full documentation for this tool is maintained as a Texinfo manual. If GnuPG and the info program are properly installed at your site, the command </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 info gnupg
 </pre>
-</dl>
+</dd></dl>
 <p> should give you access to the complete manual including a menu structure and an index. </p>
 <h2>Index</h2>

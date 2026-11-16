@@ -10,7 +10,6 @@ description: "rect – Draws an outline rectangle. Allegro game programming libr
 <p>rect &#8211; Draws an outline rectangle. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void rect(BITMAP *bmp, int x1, int y1, int x2, int y2, int color);</code></pre>
 <h2>Description</h2>
 <p>Draws an outline rectangle with the two points as its opposite corners. </p>

@@ -84,8 +84,8 @@ description: "ypxfr_selinux – Security Enhanced Linux Policy for the ypxfr pro
 <p> <code>ypxfr_exec_t</code> </p>
 <p> &#8211; Set files with the ypxfr_exec_t type, if you want to transition an executable to the ypxfr_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/yp/ypxfr, /usr/sbin/rpc.ypxfrd </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/yp/ypxfr, /usr/sbin/rpc.ypxfrd </dd>
 </dl>
 <p> <code>ypxfr_var_run_t</code> </p>
 <p> &#8211; Set files with the ypxfr_var_run_t type, if you want to store the ypxfr files under the /run or /var/run directory. </p>

@@ -12,8 +12,8 @@ description: "XFree – free client data"
 <p>int XFree(void *<i>data</i>);</p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>data</i></p>
-<dd>Specifies the data that are to be freed.</dl>
+<dt><i>data</i></dt>
+<dd>Specifies the data that are to be freed.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XFree</code> function is a general-purpose Xlib routine that frees the specified data. You must use it to free any objects that were allocated by Xlib, unless an alternate function is explicitly specified for the object. </p>
 <p> If data is NULL, no operation is performed.</p>

@@ -18,10 +18,10 @@ description: "djvmcvt – Convert multi-page DjVu documents."
 <p> This program converts any multi-page DjVu document to either the bundled or indirect multi-page format. The input file <i>docin.djvu</i> must be either the file name of a bundled document or the index file of an indirect document. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b[undled]</code></p>
-<dd> Create a bundled multi-page DjVu document named <i>docout.djvu</i>.</p>
-<dt><code>-i[ndirect]</code></p>
-<dd> Create an indirect multi-page DjVu document. All the files composing the indirect document will be stored into directory <i>dir</i>. The index file will be named <i>index.djvu</i>. </p>
+<dt><code>-b[undled]</code></dt>
+<dd> Create a bundled multi-page DjVu document named <i>docout.djvu</i>.</dd>
+<dt><code>-i[ndirect]</code></dt>
+<dd> Create an indirect multi-page DjVu document. All the files composing the indirect document will be stored into directory <i>dir</i>. The index file will be named <i>index.djvu</i>. </dd>
 </dl>
 <h2>CREDITS</h2>
 <p> This program was initially written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>

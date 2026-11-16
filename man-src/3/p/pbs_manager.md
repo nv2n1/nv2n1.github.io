@@ -10,7 +10,6 @@ description: "pbs_manager – administrator a pbs batch object"
 <p>pbs_manager &#8211; administrator a pbs batch object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre><code>int pbs_manager(int connect, int command, int obj_type, char&nbsp;<wbr>*obj_name,
 struct attropl&nbsp;<wbr>*attrib, char&nbsp;<wbr>*extend)

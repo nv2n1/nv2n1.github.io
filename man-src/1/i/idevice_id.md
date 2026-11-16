@@ -15,14 +15,13 @@ description: "idevice_id – Prints device name or a list of attached devices."
 <p> Prints device name or a list of attached devices. The UDID is a 40-digit hexadecimal number of the device for which the name should be retrieved. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l, &#8211;list</code></p>
-<dd> list UDID of all attached devices</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> enable communication debugging.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> prints usage information.</p>
-<dt>
-<dd></dl>
+<dt><code>-l, &#8211;list</code></dt>
+<dd> list UDID of all attached devices</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> enable communication debugging.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> prints usage information.</dd>
+</dl>
 <h2>AUTHORS</h2>
 <p>&nbsp;<wbr>Zach C. </p>
 <p>&nbsp;<wbr>Jonathan Beck </p>

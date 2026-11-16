@@ -11,27 +11,16 @@ std::chrono::operator==,!=,&lt;,&lt;=,&gt;,&gt;=(std::chrono::year_month_day_las
 <h2>Synopsis</h2>
 
 <pre><code>constexpr bool operator==(const std::chrono::year_month_day_last &amp;x, (1)(since C++ 20)
-
                                                                          const std::chrono::year_month_day_last &amp;y) noexcept;
-
 constexpr bool operator!=(const std::chrono::year_month_day_last &amp;x, (2)(since C++ 20)
-
                                                                          const std::chrono::year_month_day_last &amp;y) noexcept;
-
 constexpr bool operator&lt;(const std::chrono::year_month_day_last &amp;x, (3)(since C++ 20)
-
                                                                         const std::chrono::year_month_day_last &amp;y) noexcept;
-
 constexpr bool operator&gt;(const std::chrono::year_month_day_last &amp;x, (4)(since C++ 20)
-
                                                                         const std::chrono::year_month_day_last &amp;y) noexcept;
-
 constexpr bool operator&lt;=(const std::chrono::year_month_day_last &amp;x, (5)(since C++ 20)
-
                                                                          const std::chrono::year_month_day_last &amp;y) noexcept;
-
 constexpr bool operator&gt;=(const std::chrono::year_month_day_last &amp;x, (6)(since C++ 20)
-
                                                                          const std::chrono::year_month_day_last &amp;y) noexcept;</code></pre> 
 Compares the two year_month_day_last objects x and y. This is a lexicographical comparison: the year() is compared first, then month(). 
 

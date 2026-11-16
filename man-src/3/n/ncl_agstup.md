@@ -17,19 +17,18 @@ AGSTUP - Performs &quot;set-up&quot; tasks required before AGBACK and AGCURV may
  int iiey)
 <h2>Description</h2>The first five arguments of AGSTUP are meaningful only if at least one of 'X/MINIMUM.' and 'X/MAXIMUM.' has the value &quot;null 1&quot; or &quot;null 2&quot;, specifying that Autograph is to determine for itself the minimum and/or maximum X coordinate in the user's data. Similarly, the second five arguments are meaningful only if at least one of 'Y/ MINIMUM.' and 'Y/MAXIMUM.' has the value &quot;null 1&quot; or &quot;null 2&quot;.
 <dl COMPACT><dt>XDRA
-<dd>(an input array of type REAL, dimensioned as implied by the next four arguments) contains user X coordinates.
-<dt>NVIX
-<dd>(an input expression of type INTEGER) is the number of &quot;vectors&quot; of data from XDRA to be considered in computing the minimum and/or maximum X values.
-<dt>IIVX
-<dd>(an input expression of type INTEGER) is the index increment between two &quot;vectors&quot; in XDRA. The 1st element of the first vector is XDRA(1), the 1st element of the second vector is XDRA(1+IIVX), the 1st element of the third vector is XDRA(1+IIVX*2), etc.
-<dt>NEVX
-<dd>(an input expression of type INTEGER) is the number of elements of each vector in XDRA to be considered in computing the minimum and/or maximum X values.
-<dt>IIEX
-<dd>(an input expression of type INTEGER) is the index increment between two consecutive elements of a vector in XDRA. The second element of the 1st vector is XDRA (1+IIEX), the third element of the 1st vector is XDRA(1+IIEX*2), etc. If IIEX has the value 0, the contents of XDRA are ignored completely; the minimum and maximum X values are considered to be &quot;1.&quot; and FLOAT(NEVX), respectively.
-<dt>YDRA, NVIY, IIVY, NEVY, and IIEY
-<dd>are used similarly, but define the user Y coordinates. 
-
- Some examples:</dl><h2></h2><table> <tr VALIGN=top><td>X array</td><td>Data to use</td><td>XDRA</td><td>NVIX</td><td>IIVX</td><td>NEVX</td><td>HEX</td><td>
+</dt><dd>(an input array of type REAL, dimensioned as implied by the next four arguments) contains user X coordinates.
+</dd><dt>NVIX
+</dt><dd>(an input expression of type INTEGER) is the number of &quot;vectors&quot; of data from XDRA to be considered in computing the minimum and/or maximum X values.
+</dd><dt>IIVX
+</dt><dd>(an input expression of type INTEGER) is the index increment between two &quot;vectors&quot; in XDRA. The 1st element of the first vector is XDRA(1), the 1st element of the second vector is XDRA(1+IIVX), the 1st element of the third vector is XDRA(1+IIVX*2), etc.
+</dd><dt>NEVX
+</dt><dd>(an input expression of type INTEGER) is the number of elements of each vector in XDRA to be considered in computing the minimum and/or maximum X values.
+</dd><dt>IIEX
+</dt><dd>(an input expression of type INTEGER) is the index increment between two consecutive elements of a vector in XDRA. The second element of the 1st vector is XDRA (1+IIEX), the third element of the 1st vector is XDRA(1+IIEX*2), etc. If IIEX has the value 0, the contents of XDRA are ignored completely; the minimum and maximum X values are considered to be &quot;1.&quot; and FLOAT(NEVX), respectively.
+</dd><dt>YDRA, NVIY, IIVY, NEVY, and IIEY
+</dt><dd>are used similarly, but define the user Y coordinates. 
+ Some examples:</dd></dl><h2></h2><table> <tr VALIGN=top><td>X array</td><td>Data to use</td><td>XDRA</td><td>NVIX</td><td>IIVX</td><td>NEVX</td><td>HEX</td><td>
 </td></tr><tr VALIGN=top><td>-------</td><td>-----------</td><td>----</td><td>----</td><td>----</td><td>----</td><td>---</td><td>
 </td></tr><tr VALIGN=top><td>X(100)</td><td>all data</td><td>X(1)</td><td>1</td><td>-</td><td>100</td><td>1</td><td>
 </td></tr><tr VALIGN=top><td>

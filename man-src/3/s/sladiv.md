@@ -21,7 +21,7 @@ description: "sladiv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SLADIV performs complex division in real arithmetic
         a +
@@ -31,11 +31,11 @@ SLADIV performs complex division in real arithmetic
                                     The algorithm is due to Michael Baudin and
            Robert L.Smith and can be found in the paper "A Robust Complex Division in Scilab"
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> </p>
+</dt><dd> <i>A</i> </dd>
 <pre>
           A is REAL
 </pre>
@@ -65,14 +65,14 @@ SLADIV performs complex division in real arithmetic
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> January 2013</dl>
+</dt><dd> January 2013</dd></dl>
 <p> Definition at line 92 of file sladiv.f.</p>
 <h3>subroutine sladiv1 (realA, realB, realC, realD, realP, realQ)</h3>
 <p> Definition at line 178 of file sladiv.f.</p>

@@ -14,13 +14,13 @@ description: "blkdev_get_by_path – open a block device by name"
 <p><i>path</i></p>
 <dl>
 <dd>
-<dd>path to the block device to open</dl>
+</dd><dd>path to the block device to open</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>FMODE_* mask</dl>
+<dd>FMODE_* mask</dd></dl>
 <p> <i>holder</i></p>
 <dl>
-<dd>exclusive holder identifier</dl>
+<dd>exclusive holder identifier</dd></dl>
 <h2>Description</h2>
 <p>Open the blockdevice described by the device file at <i>path</i>. <i>mode</i> and <i>holder</i> are identical to <code>blkdev_get</code>. </p>
 <p> On success, the returned block_device has reference count of one.</p>

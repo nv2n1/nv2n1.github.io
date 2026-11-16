@@ -14,13 +14,13 @@ description: "bio_alloc_bioset – allocate a bio for I/O"
 <p><i>gfp_mask</i></p>
 <dl>
 <dd>
-<dd>the GFP_ mask given to the slab allocator</dl>
+</dd><dd>the GFP_ mask given to the slab allocator</dd></dl>
 <p> <i>nr_iovecs</i></p>
 <dl>
-<dd>number of iovecs to pre-allocate</dl>
+<dd>number of iovecs to pre-allocate</dd></dl>
 <p> <i>bs</i></p>
 <dl>
-<dd>the bio_set to allocate from.</dl>
+<dd>the bio_set to allocate from.</dd></dl>
 <h2>Description</h2>
 <p>If <i>bs</i> is NULL, uses <code>kmalloc</code> to allocate the bio; else the allocation is backed by the <i>bs</i>&#8216;s mempool. </p>
 <p> When <i>bs</i> is not NULL, if <code>__GFP_DIRECT_RECLAIM</code> is set then bio_alloc will always be able to allocate a bio. This is due to the mempool guarantees. To make this work, callers must never allocate more than 1 bio at a time from this pool. Callers that need to allocate more than 1 bio must always submit the previously allocated bio for IO before attempting to allocate a new one. Failure to do so can cause deadlocks under memory pressure. </p>

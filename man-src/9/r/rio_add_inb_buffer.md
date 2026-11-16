@@ -14,17 +14,17 @@ description: "rio_add_inb_buffer – Add buffer to an inbound mailbox queue"
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port containing the inbound mailbox</dl>
+</dd><dd>Master port containing the inbound mailbox</dd></dl>
 <p> <i>mbox</i></p>
 <dl>
-<dd>The inbound mailbox number</dl>
+<dd>The inbound mailbox number</dd></dl>
 <p> <i>buffer</i></p>
 <dl>
-<dd>Pointer to the message buffer</dl>
+<dd>Pointer to the message buffer</dd></dl>
 <h2>Description</h2>
 <p>Adds a buffer to an inbound mailbox queue for reception. Returns 0 on success.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -11,14 +11,12 @@ description: "mysql_fix_privilege_tables – upgrade MySQL system tables"
 <p> mysql_fix_privilege_tables &#8211; upgrade MySQL system tables </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysql_fix_privilege_tables &#8211;password=</code><i>root_password</i></dl>
+<dt> <code>mysql_fix_privilege_tables &#8211;password=</code><i>root_password</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt>
+<dd> <font SIZE="+1"> <code>Note</code> </font></dd>
 <dd>
-<dd> <font SIZE="+1"> <code>Note</code> </font></p>
-<dd>
-<dd>In MySQL 5.1.7, <code>mysql_fix_privilege_tables</code> was superseded by <code>mysql_upgrade</code>, which should be used instead. See <code><a href="/docs/linux/man/1-mysql_upgrade/">mysql_upgrade</a></code>(1). </p>
+</dd><dd>In MySQL 5.1.7, <code>mysql_fix_privilege_tables</code> was superseded by <code>mysql_upgrade</code>, which should be used instead. See <code><a href="/docs/linux/man/1-mysql_upgrade/">mysql_upgrade</a></code>(1). </dd>
 </dl>
 <p> Some releases of MySQL introduce changes to the structure of the system tables in the mysql database to add new privileges or support new features. When you update to a new version of MySQL, you should update your system tables as well to make sure that their structure is up to date. Otherwise, there might be capabilities that you cannot take advantage of. </p>
 <p> <code>mysql_fix_privilege_tables</code> is an older script that previously was used to uprade the system tables in the mysql database after a MySQL upgrade. </p>
@@ -26,35 +24,35 @@ description: "mysql_fix_privilege_tables – upgrade MySQL system tables"
 <p> On Unix or Unix-like systems, update the system tables by running the <code>mysql_fix_privilege_tables</code> script: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>mysql_fix_privilege_tables</code>
 </pre>
-</dl>
+</dd></dl>
 <p> You must run this script while the server is running. It attempts to connect to the server running on the local host as root. If your root account requires a password, indicate the password on the command line like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>mysql_fix_privilege_tables --password=</code><i>root_password</i>
 </pre>
-</dl>
+</dd></dl>
 <p> The <code>mysql_fix_privilege_tables</code> script performs any actions necessary to convert your system tables to the current format. You might see some Duplicate column name warnings as it runs; you can ignore them. </p>
 <p> After running the script, stop the server and restart it so that any changes made to the system tables take effect. </p>
 <p> On Windows systems, MySQL distributions include a mysql_fix_privilege_tables.sql SQL script that you can run using the <code>mysql</code> client. For example, if your MySQL installation is located at C:\Program Files\MySQL\MySQL Server 5.1, the commands look like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 C:\&gt; <code>cd &quot;C:\Program Files\MySQL\MySQL Server 5.1&quot;</code>
 C:\&gt; <code>bin\mysql -u root -p mysql</code>
 mysql&gt; <code>SOURCE share/mysql_fix_privilege_tables.sql</code>
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Prior to version 5.1.17, the mysql_fix_privilege_tables.sql script is found in the scripts directory. </p>
 </dl>
 <p> The <code>mysql</code> command will prompt you for the root password; enter it when prompted. </p>

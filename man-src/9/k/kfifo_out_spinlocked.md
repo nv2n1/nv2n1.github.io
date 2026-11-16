@@ -10,21 +10,21 @@ description: "kfifo_out_spinlocked – get data from the fifo using a spinlock f
 <p>kfifo_out_spinlocked &#8211; get data from the fifo using a spinlock for locking</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kfifo_out_spinlocked(</code><i>fifo</i><code>, </code><i>buf</i><code>, </code><i>n</i><code>, </code><i>lock</i><code>);</code></dl>
+<dt> <code>kfifo_out_spinlocked(</code><i>fifo</i><code>, </code><i>buf</i><code>, </code><i>n</i><code>, </code><i>lock</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>fifo</i></p>
 <dl>
 <dd>
-<dd>address of the fifo to be used</dl>
+</dd><dd>address of the fifo to be used</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>pointer to the storage buffer</dl>
+<dd>pointer to the storage buffer</dd></dl>
 <p> <i>n</i></p>
 <dl>
-<dd>max. number of elements to get</dl>
+<dd>max. number of elements to get</dd></dl>
 <p> <i>lock</i></p>
 <dl>
-<dd>pointer to the spinlock to use for locking</dl>
+<dd>pointer to the spinlock to use for locking</dd></dl>
 <h2>Description</h2>
 <p>This macro get the data from the fifo and return the numbers of elements copied.</p>
 <h2>Copyright</h2>

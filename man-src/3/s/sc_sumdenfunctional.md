@@ -11,64 +11,25 @@ description: "sc::SumDenFunctional –"
 <p> The <code>SumDenFunctional</code> computes energies and densities using the a sum of energy density functions method.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>. Inherited by <code>sc::StdDenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SumDenFunctional (const Ref&lt; KeyVal &gt; &amp;)
-
-
 This KeyVal constructor reads the following keywords:.
-
-
 SumDenFunctional (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void set_spin_polarized (int)
-
-
-
 void set_compute_potential (int)
-
-
-
 int need_density_gradient ()
-
-
-
 void point (const PointInputData &amp;, PointOutputData &amp;)
-
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the object.
-
-
 double a0 () const
-
-
 Override the DenFunctional::a0() member, so that a0's in contributing functionals can be added in as well.
-
-
-
 Protected Attributes
 int n_
-
-
-
 Ref&lt; DenFunctional &gt; * funcs_
-
-
-
 double * coefs_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>SumDenFunctional</code> computes energies and densities using the a sum of energy density functions method.</p>
@@ -76,10 +37,10 @@ double * coefs_</code></pre>
 <h3>sc::SumDenFunctional::SumDenFunctional (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>This <code>KeyVal</code> constructor reads the following keywords:. .IP &quot;funcs&quot; 1c Specifies an array of <code>DenIntegrator</code> objects.</p>
 <dl>
-<dt>coefs</p>
-<dd>Specifies the coefficient of each <code>DenIntegrator</code> object.</p>
-<dt>a0</p>
-<dd>Specifies the coefficient of the Hartree-Fock exchange. This is nonzero for hybrid functionals. The default is zero.</dl>
+<dt>coefs</dt>
+<dd>Specifies the coefficient of each <code>DenIntegrator</code> object.</dd>
+<dt>a0</dt>
+<dd>Specifies the coefficient of the Hartree-Fock exchange. This is nonzero for hybrid functionals. The default is zero.</dd></dl>
 <p> For example, the B3LYP functional can be specified with the following input: </p>
 <pre> functional&lt;<code>SumDenFunctional</code>&gt;: (
  a0 = 0.2

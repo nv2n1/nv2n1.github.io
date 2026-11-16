@@ -32,12 +32,12 @@ description: "avc_has_perm, avc_has_perm_noaudit, avc_audit, avc_entry_ref_init 
 <p> In permissive mode, zero will be returned and <i>errno</i> unchanged even if permissions were denied. <code>avc_has_perm</code>() will still produce an audit message in this case.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> A requested permission was denied.</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>tclass</i> and/or the security contexts referenced by <i>ssid</i> and <i>tsid</i> are not recognized by the currently loaded policy.</p>
-<dt><code>ENOMEM</code></p>
-<dd> An attempt to allocate memory failed.</dl>
+<dt><code>EACCES</code></dt>
+<dd> A requested permission was denied.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>tclass</i> and/or the security contexts referenced by <i>ssid</i> and <i>tsid</i> are not recognized by the currently loaded policy.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> An attempt to allocate memory failed.</dd></dl>
 <h2>NOTES</h2>
 <p> Internal errors encountered by the userspace AVC may cause certain values of <i>errno</i> to be returned unexpectedly. For example, netlink socket errors may produce <code>EACCES</code> or <code>EINVAL</code>. Make sure that userspace object managers are granted appropriate access to netlink by the policy.</p>
 <h2>AUTHOR</h2>

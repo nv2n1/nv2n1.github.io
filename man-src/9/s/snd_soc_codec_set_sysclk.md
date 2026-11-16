@@ -15,23 +15,23 @@ snd_soc_codec_set_sysclk - configure CODEC system or master clock.
 <h2>Arguments</h2>
 
 <i>codec</i>
-<dl><dd><dd>CODEC</dl>
+<dl><dd></dd><dd>CODEC</dd></dl>
  
 
  <i>clk_id</i>
-<dl><dd>DAI specific clock ID</dl>
+<dl><dd>DAI specific clock ID</dd></dl>
  
 
  <i>source</i>
-<dl><dd>Source for the clock</dl>
+<dl><dd>Source for the clock</dd></dl>
  
 
  <i>freq</i>
-<dl><dd>new clock frequency in Hz</dl>
+<dl><dd>new clock frequency in Hz</dd></dl>
  
 
  <i>dir</i>
-<dl><dd>new clock direction - input/output.</dl>
+<dl><dd>new clock direction - input/output.</dd></dl>
 
 <h2>Description</h2>
 

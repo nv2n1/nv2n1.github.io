@@ -10,37 +10,13 @@ description: "QuantLib::SampledCurve – This class contains a sampled curve."
 <p>QuantLib::SampledCurve &#8211; This class contains a sampled curve. </p>
 <h2>Synopsis</h2>
 <pre><code>void swap (SampledCurve &amp;)
-
-
-
 void setLogGrid (Real min, Real max)
-
-
-
 void regridLogGrid (Real min, Real max)
-
-
-
 void shiftGrid (Real s)
-
-
-
 void scaleGrid (Real s)
-
-
-
 void regrid (const Array &amp;new_grid)
-
-
-
 template&lt;class T &gt; void regrid (const Array &amp;new_grid, T func)
-
-
-
 template&lt;class T &gt; const SampledCurve &amp; transform (T x)
-
-
-
 template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x)</code></pre>
 <h3>Public Member Functions</h3>
 <p>void swap (SampledCurve &amp;)</p>
@@ -75,37 +51,13 @@ template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x)</code></pr
 <p> <code>Real</code> <code>secondDerivativeAtCenter</code> () const<br />
  <code>utilities</code> </p>
 <pre><code>void swap (SampledCurve &amp;)
-
-
-
 void setLogGrid (Real min, Real max)
-
-
-
 void regridLogGrid (Real min, Real max)
-
-
-
 void shiftGrid (Real s)
-
-
-
 void scaleGrid (Real s)
-
-
-
 void regrid (const Array &amp;new_grid)
-
-
-
 template&lt;class T &gt; void regrid (const Array &amp;new_grid, T func)
-
-
-
 template&lt;class T &gt; const SampledCurve &amp; transform (T x)
-
-
-
 template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x)</code></pre>
 <h2>Detailed Description</h2>
 <p>This class contains a sampled curve. </p>
@@ -114,14 +66,14 @@ template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x)</code></pr
 <h3><code>Real</code> valueAtCenter () const</h3>
 <p><code>Possible enhancements</code></p>
 <dl>
-<dd>replace or complement with a more general function valueAt(spot)</dl>
+<dd>replace or complement with a more general function valueAt(spot)</dd></dl>
 <h3><code>Real</code> firstDerivativeAtCenter () const</h3>
 <p><code>Possible enhancements</code></p>
 <dl>
-<dd>replace or complement with a more general function firstDerivativeAt(spot)</dl>
+<dd>replace or complement with a more general function firstDerivativeAt(spot)</dd></dl>
 <h3><code>Real</code> secondDerivativeAtCenter () const</h3>
 <p><code>Possible enhancements</code></p>
 <dl>
-<dd>replace or complement with a more general function secondDerivativeAt(spot)</dl>
+<dd>replace or complement with a more general function secondDerivativeAt(spot)</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

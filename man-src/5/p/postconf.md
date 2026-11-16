@@ -15,40 +15,40 @@ description: "postconf – Postfix configuration parameters"
 <p>The Postfix main.cf configuration file specifies parameters that control the operation of the Postfix mail system. Typically the file contains only a small subset of all parameters; parameters not specified are left at their default values. </p>
 <p> The general format of the main.cf file is as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Each logical line has the form &quot;parameter = value&quot;. Whitespace around the &quot;=&quot; is ignored, as is whitespace at the end of a logical line.</p>
-<dt>&bull;</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>&bull;</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</p>
-<dt>&bull;</p>
-<dd>A parameter value may refer to other parameters.</p>
+<dt>&bull;</dt>
+<dd>Each logical line has the form &quot;parameter = value&quot;. Whitespace around the &quot;=&quot; is ignored, as is whitespace at the end of a logical line.</dd>
+<dt>&bull;</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>&bull;</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd>
+<dt>&bull;</dt>
+<dd>A parameter value may refer to other parameters.</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>The expressions &quot;$name&quot; and &quot;${name}&quot; are recursively replaced with the value of the named parameter. The parameter name must contain only characters from the set [a-zA-Z0-9_]. An undefined parameter value is replaced with the empty value.</p>
-<dt>&bull;</p>
-<dd>The expressions &quot;${name?value}&quot; and &quot;${name?{value}}&quot; are replaced with &quot;value&quot; when &quot;$name&quot; is non-empty. The parameter name must contain only characters from the set [a-zA-Z0-9_]. These forms are supported with Postfix versions &gt;= 2.2 and &gt;= 3.0, respectively.</p>
-<dt>&bull;</p>
-<dd>The expressions &quot;${name:value}&quot; and &quot;${name:{value}}&quot; are replaced with &quot;value&quot; when &quot;$name&quot; is empty. The parameter name must contain only characters from the set [a-zA-Z0-9_]. These forms are supported with Postfix versions &gt;= 2.2 and &gt;= 3.0, respectively.</p>
-<dt>&bull;</p>
-<dd>The expression &quot;${name?{value1}:{value2}}&quot; is replaced with &quot;value1&quot; when &quot;$name&quot; is non-empty, and with &quot;value2&quot; when &quot;$name&quot; is empty. The &quot;{}&quot; is required for &quot;value1&quot;, optional for &quot;value2&quot;. The parameter name must contain only characters from the set [a-zA-Z0-9_]. This form is supported with Postfix versions &gt;= 3.0.</p>
-<dt>&bull;</p>
-<dd>The first item inside &quot;${&#8230;}&quot; may be a relational expression of the form: &quot;{value3} == {value4}&quot;. Besides the &quot;==&quot; (equality) operator Postfix supports &quot;!=&quot; (inequality), &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;, and &quot;&gt;&quot;. The comparison is numerical when both operands are all digits, otherwise the comparison is lexicographical. These forms are supported with Postfix versions &gt;= 3.0.</p>
-<dt>&bull;</p>
-<dd>Each &quot;value&quot; is subject to recursive named parameter and relational expression evaluation, except where noted.</p>
-<dt>&bull;</p>
-<dd>Whitespace before or after each &quot;{value}&quot; is ignored.</p>
-<dt>&bull;</p>
-<dd>Specify &quot;$$&quot; to produce a single &quot;$&quot; character.</p>
-<dt>&bull;</p>
-<dd>The legacy form &quot;$(&#8230;)&quot; is equivalent to the preferred form &quot;${&#8230;}&quot;.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>The expressions &quot;$name&quot; and &quot;${name}&quot; are recursively replaced with the value of the named parameter. The parameter name must contain only characters from the set [a-zA-Z0-9_]. An undefined parameter value is replaced with the empty value.</dd>
+<dt>&bull;</dt>
+<dd>The expressions &quot;${name?value}&quot; and &quot;${name?{value}}&quot; are replaced with &quot;value&quot; when &quot;$name&quot; is non-empty. The parameter name must contain only characters from the set [a-zA-Z0-9_]. These forms are supported with Postfix versions &gt;= 2.2 and &gt;= 3.0, respectively.</dd>
+<dt>&bull;</dt>
+<dd>The expressions &quot;${name:value}&quot; and &quot;${name:{value}}&quot; are replaced with &quot;value&quot; when &quot;$name&quot; is empty. The parameter name must contain only characters from the set [a-zA-Z0-9_]. These forms are supported with Postfix versions &gt;= 2.2 and &gt;= 3.0, respectively.</dd>
+<dt>&bull;</dt>
+<dd>The expression &quot;${name?{value1}:{value2}}&quot; is replaced with &quot;value1&quot; when &quot;$name&quot; is non-empty, and with &quot;value2&quot; when &quot;$name&quot; is empty. The &quot;{}&quot; is required for &quot;value1&quot;, optional for &quot;value2&quot;. The parameter name must contain only characters from the set [a-zA-Z0-9_]. This form is supported with Postfix versions &gt;= 3.0.</dd>
+<dt>&bull;</dt>
+<dd>The first item inside &quot;${&#8230;}&quot; may be a relational expression of the form: &quot;{value3} == {value4}&quot;. Besides the &quot;==&quot; (equality) operator Postfix supports &quot;!=&quot; (inequality), &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;, and &quot;&gt;&quot;. The comparison is numerical when both operands are all digits, otherwise the comparison is lexicographical. These forms are supported with Postfix versions &gt;= 3.0.</dd>
+<dt>&bull;</dt>
+<dd>Each &quot;value&quot; is subject to recursive named parameter and relational expression evaluation, except where noted.</dd>
+<dt>&bull;</dt>
+<dd>Whitespace before or after each &quot;{value}&quot; is ignored.</dd>
+<dt>&bull;</dt>
+<dd>Specify &quot;$$&quot; to produce a single &quot;$&quot; character.</dd>
+<dt>&bull;</dt>
+<dd>The legacy form &quot;$(&#8230;)&quot; is equivalent to the preferred form &quot;${&#8230;}&quot;.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>When the same parameter is defined multiple times, only the last instance is remembered.</p>
-<dt>&bull;</p>
-<dd>Otherwise, the order of main.cf parameter definitions does not matter.</dl>
+<dt>&bull;</dt>
+<dd>When the same parameter is defined multiple times, only the last instance is remembered.</dd>
+<dt>&bull;</dt>
+<dd>Otherwise, the order of main.cf parameter definitions does not matter.</dd></dl>
 <p> The remainder of this document is a description of all Postfix configuration parameters. Default values are shown after the parameter name in parentheses, and can be looked up with the &quot;<code>postconf -d</code>&quot; command. </p>
 <p> Note: this is not an invitation to make changes to Postfix configuration parameters. Unnecessary changes can impair the operation of the mail system.</p>
 <h2>2bounce_notice_recipient (default: postmaster)</h2>
@@ -181,13 +181,13 @@ alias_maps = hash:/etc/aliases</pre>
 <p>Enable the rewriting of the form &quot;user%domain&quot; to &quot;user [at] domain&quot;. This is enabled by default. </p>
 <p> Note: as of Postfix version 2.2, message header address rewriting happens only when one of the following conditions is true:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</p>
-<dt>&bull;</p>
-<dd>The message is received from a network client that matches $local_header_rewrite_clients,</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</dd>
+<dt>&bull;</dt>
+<dd>The message is received from a network client that matches $local_header_rewrite_clients,</dd>
+<dt>&bull;</dt>
 <dd>The message is received from the network, and the remote_header_rewrite_domain parameter specifies a non-empty value.
-</dl>
+</dd></dl>
 <p> To get the behavior before Postfix version 2.2, specify &quot;local_header_rewrite_clients = static:all&quot;. </p>
 <p> Example: </p>
 <pre>allow_percent_hack = no</pre>
@@ -220,26 +220,26 @@ alias_maps = hash:/etc/aliases</pre>
 <p> Note 1: this feature is enabled by default and must not be turned off. Postfix does not support domain-less addresses. </p>
 <p> Note 2: with Postfix version 2.2, message header address rewriting happens only when one of the following conditions is true:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</p>
-<dt>&bull;</p>
-<dd>The message is received from a network client that matches $local_header_rewrite_clients,</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</dd>
+<dt>&bull;</dt>
+<dd>The message is received from a network client that matches $local_header_rewrite_clients,</dd>
+<dt>&bull;</dt>
 <dd>The message is received from the network, and the remote_header_rewrite_domain parameter specifies a non-empty value.
-</dl>
+</dd></dl>
 <p> To get the behavior before Postfix version 2.2, specify &quot;local_header_rewrite_clients = static:all&quot;.</p>
 <h2>append_dot_mydomain (default: Postfix &gt;= 3.0: no, Postfix &lt; 3.0: yes)</h2>
 <p>With locally submitted mail, append the string &quot;.$mydomain&quot; to addresses that have no &quot;.domain&quot; information. With remotely submitted mail, append the string &quot;.$remote_header_rewrite_domain&quot; instead. </p>
 <p> Note 1: this feature is enabled by default. If disabled, users will not be able to send mail to &quot;user [at] partialdomainname&quot; but will have to specify full domain names instead. </p>
 <p> Note 2: with Postfix version 2.2, message header address rewriting happens only when one of the following conditions is true:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</p>
-<dt>&bull;</p>
-<dd>The message is received from a network client that matches $local_header_rewrite_clients,</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</dd>
+<dt>&bull;</dt>
+<dd>The message is received from a network client that matches $local_header_rewrite_clients,</dd>
+<dt>&bull;</dt>
 <dd>The message is received from the network, and the remote_header_rewrite_domain parameter specifies a non-empty value.
-</dl>
+</dd></dl>
 <p> To get the behavior before Postfix version 2.2, specify &quot;local_header_rewrite_clients = static:all&quot;.</p>
 <h2>application_event_drain_time (default: 100s)</h2>
 <p>How long the <code><a href="/docs/linux/man/1-postkick/">postkick</a></code>(1) command waits for a request to enter the Postfix daemon process input buffer before giving up. </p>
@@ -304,11 +304,11 @@ alias_maps = hash:/etc/aliases</pre>
 <p>The maximal amount of original message text that is sent in a non-delivery notification. Specify a byte count. A message is returned as either message/rfc822 (the complete original) or as text/rfc822-headers (the headers only). With Postfix version 2.4 and earlier, a message is always returned as message/rfc822 and is truncated when it exceeds the size limit. </p>
 <p> Notes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>If you increase this limit, then you should increase the mime_nesting_limit value proportionally.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>If you increase this limit, then you should increase the mime_nesting_limit value proportionally.</dd>
+<dt>&bull;</dt>
 <dd>Be careful when making changes. Excessively large values will result in the loss of non-delivery notifications, when a bounce message size exceeds a local or remote MTA&#8217;s message size limit.
-</dl>
+</dd></dl>
 <h2>bounce_template_file (default: empty)</h2>
 <p>Pathname of a configuration file with bounce message templates. These override the built-in templates of delivery status notification (DSN) messages for undeliverable mail, for delayed mail, successful delivery, or delivery verification. The <code><a href="/docs/linux/man/5-bounce/">bounce</a></code>(5) manual page describes how to edit and test template files. </p>
 <p> Template message body text may contain $name references to Postfix configuration parameters. The result of $name expansion can be previewed with &quot;<code>postconf -b </code><i>file_name</i>&quot; before the file is placed into the Postfix configuration directory. </p>
@@ -326,13 +326,13 @@ alias_maps = hash:/etc/aliases</pre>
 <p> If you use this feature, run &quot;<code>postmap /etc/postfix/canonical</code>&quot; to build the necessary DBM or DB file after every change. The changes will become visible after a minute or so. Use &quot;<code>postfix reload</code>&quot; to eliminate the delay. </p>
 <p> Note: with Postfix version 2.2, message header address mapping happens only when message header address rewriting is enabled:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</p>
-<dt>&bull;</p>
-<dd>The message is received from a network client that matches $local_header_rewrite_clients,</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</dd>
+<dt>&bull;</dt>
+<dd>The message is received from a network client that matches $local_header_rewrite_clients,</dd>
+<dt>&bull;</dt>
 <dd>The message is received from the network, and the remote_header_rewrite_domain parameter specifies a non-empty value.
-</dl>
+</dd></dl>
 <p> To get the behavior before Postfix version 2.2, specify &quot;local_header_rewrite_clients = static:all&quot;. </p>
 <p> Examples: </p>
 <pre>canonical_maps = dbm:/etc/postfix/canonical
@@ -346,26 +346,26 @@ canonical_maps = hash:/etc/postfix/canonical</pre>
 <p>The <code><a href="/docs/linux/man/8-local/">local</a></code>(8) delivery agent working directory for delivery to external command. Failure to change directory causes the delivery to be deferred. </p>
 <p> The command_execution_directory value is not subject to Postfix configuration parameter $name expansion. Instead, the following $name expansions are done on command_execution_directory before the directory is used. Expansion happens in the context of the delivery request. The result of $name expansion is filtered with the character set that is specified with the execution_directory_expansion_filter parameter.</p>
 <dl>
-<dt><code>$user</code></p>
-<dd>The recipient&#8217;s username. </p>
-<dt><code>$shell</code></p>
-<dd>The recipient&#8217;s login shell pathname. </p>
-<dt><code>$home</code></p>
-<dd>The recipient&#8217;s home directory. </p>
-<dt><code>$recipient</code></p>
-<dd>The full recipient address. </p>
-<dt><code>$extension</code></p>
-<dd>The optional recipient address extension. </p>
-<dt><code>$domain</code></p>
-<dd>The recipient domain. </p>
-<dt><code>$local</code></p>
-<dd>The entire recipient localpart. </p>
-<dt><code>$recipient_delimiter</code></p>
-<dd>The address extension delimiter that was found in the recipient address (Postfix 2.11 and later), or the system-wide recipient address extension delimiter (Postfix 2.10 and earlier). </p>
-<dt><code>${name?value}</code></p>
-<dd>Expands to <i>value</i> when <i>$name</i> is non-empty. </p>
-<dt><code>${name:value}</code></p>
-<dd>Expands to <i>value</i> when <i>$name</i> is empty. </p>
+<dt><code>$user</code></dt>
+<dd>The recipient&#8217;s username. </dd>
+<dt><code>$shell</code></dt>
+<dd>The recipient&#8217;s login shell pathname. </dd>
+<dt><code>$home</code></dt>
+<dd>The recipient&#8217;s home directory. </dd>
+<dt><code>$recipient</code></dt>
+<dd>The full recipient address. </dd>
+<dt><code>$extension</code></dt>
+<dd>The optional recipient address extension. </dd>
+<dt><code>$domain</code></dt>
+<dd>The recipient domain. </dd>
+<dt><code>$local</code></dt>
+<dd>The entire recipient localpart. </dd>
+<dt><code>$recipient_delimiter</code></dt>
+<dd>The address extension delimiter that was found in the recipient address (Postfix 2.11 and later), or the system-wide recipient address extension delimiter (Postfix 2.10 and earlier). </dd>
+<dt><code>${name?value}</code></dt>
+<dd>Expands to <i>value</i> when <i>$name</i> is non-empty. </dd>
+<dt><code>${name:value}</code></dt>
+<dd>Expands to <i>value</i> when <i>$name</i> is empty. </dd>
 </dl>
 <p> Instead of $name you can also specify ${name} or $(name). </p>
 <p> This feature is available in Postfix 2.2 and later.</p>
@@ -394,11 +394,11 @@ using backwards-compatible default setting <i>name=value</i>
 <h2>config_directory (default: see postconf -d output)</h2>
 <p>The default location of the Postfix main.cf and master.cf configuration files. This can be overruled via the following mechanisms:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The MAIL_CONFIG environment variable (daemon processes and commands).</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>The MAIL_CONFIG environment variable (daemon processes and commands).</dd>
+<dt>&bull;</dt>
 <dd>The &quot;-c&quot; command-line option (commands only).
-</dl>
+</dd></dl>
 <p> With Postfix command that run with set-gid privileges, a config_directory override requires either root privileges, or it requires that the directory is listed with the alternate_config_directories parameter in the default main.cf file.</p>
 <h2>confirm_delay_cleared (default: no)</h2>
 <p>After sending a &quot;your message is delayed&quot; notification, inform the sender when the delay clears up. This can result in a sudden burst of notifications at the end of a prolonged network outage, and is therefore disabled by default. </p>
@@ -418,11 +418,11 @@ using backwards-compatible default setting <i>name=value</i>
 <p>After the message is queued, send the entire message to the specified <i>transport:destination</i>. The <i>transport</i> name specifies the first field of a mail delivery agent definition in master.cf; the syntax of the next-hop <i>destination</i> is described in the manual page of the corresponding delivery agent. More information about external content filters is in the Postfix FILTER_README file. </p>
 <p> Notes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>This setting has lower precedence than a FILTER action that is specified in an <code><a href="/docs/linux/man/5-access/">access</a></code>(5), <code><a href="/docs/linux/man/5-header_checks/">header_checks</a></code>(5) or <code><a href="/docs/linux/man/5-body_checks/">body_checks</a></code>(5) table.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>This setting has lower precedence than a FILTER action that is specified in an <code><a href="/docs/linux/man/5-access/">access</a></code>(5), <code><a href="/docs/linux/man/5-header_checks/">header_checks</a></code>(5) or <code><a href="/docs/linux/man/5-body_checks/">body_checks</a></code>(5) table.</dd>
+<dt>&bull;</dt>
 <dd>The meaning of an empty next-hop filter <i>destination</i> is version dependent. Postfix 2.7 and later will use the recipient domain; earlier versions will use $myhostname. Specify &quot;default_filter_nexthop = $myhostname&quot; for compatibility with Postfix 2.6 or earlier, or specify a content_filter value with an explicit next-hop <i>destination</i>.
-</dl>
+</dd></dl>
 <h2>cyrus_sasl_config_path (default: empty)</h2>
 <p>Search path for Cyrus SASL application configuration files, currently used only to locate the $smtpd_sasl_path.conf file. Specify zero or more directories separated by a colon character, or an empty value to use Cyrus SASL&#8217;s built-in search path. </p>
 <p> This feature is available in Postfix 2.5 and later when compiled with Cyrus SASL 2.1.22 or later.</p>
@@ -431,11 +431,11 @@ using backwards-compatible default setting <i>name=value</i>
 <h2>daemon_table_open_error_is_fatal (default: no)</h2>
 <p>How a Postfix daemon process handles errors while opening lookup tables: gradual degradation or immediate termination.</p>
 <dl>
-<dt><code> no </code> (default)</p>
+<dt><code> no </code> (default)</dt>
 <dd>Gradual degradation: a daemon process logs a message of type &quot;error&quot; and continues execution with reduced functionality. Features that do not depend on the unavailable table will work normally, while features that depend on the table will result in a type &quot;warning&quot; message.<br />
- When the notify_classes parameter value contains the &quot;data&quot; class, the Postfix SMTP server and client will report transcripts of sessions with an error because a table is unavailable. </p>
-<dt><code> yes </code> (historical behavior)</p>
-<dd>Immediate termination: a daemon process logs a type &quot;fatal&quot; message and terminates immediately. This option reduces the number of possible code paths through Postfix, and may therefore be slightly more secure than the default. </p>
+ When the notify_classes parameter value contains the &quot;data&quot; class, the Postfix SMTP server and client will report transcripts of sessions with an error because a table is unavailable. </dd>
+<dt><code> yes </code> (historical behavior)</dt>
+<dd>Immediate termination: a daemon process logs a type &quot;fatal&quot; message and terminates immediately. This option reduces the number of possible code paths through Postfix, and may therefore be slightly more secure than the default. </dd>
 </dl>
 <p> For the sake of sanity, the number of type &quot;error&quot; messages is limited to 13 over the lifetime of a daemon process. </p>
 <p> This feature is available in Postfix 2.9 and later.</p>
@@ -512,11 +512,11 @@ default_delivery_slot_cost = 2</pre>
  /^(2\S+ delivered to command).+/ $1</pre>
 <p>Notes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>This feature will NOT override the soft_bounce safety net.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>This feature will NOT override the soft_bounce safety net.</dd>
+<dt>&bull;</dt>
 <dd>This feature will change the enhanced status code and text that is logged to the maillog file, and that is reported to the sender in delivery confirmation or non-delivery notifications.
-</dl>
+</dd></dl>
 <p> This feature is available in Postfix 3.0 and later.</p>
 <h2>default_destination_concurrency_failed_cohort_limit (default: 1)</h2>
 <p>How many pseudo-cohorts must suffer connection or handshake failure before a specific destination is considered unavailable (and further delivery is suspended). Specify zero to disable this feature. A destination&#8217;s pseudo-cohort failure count is reset each time a delivery completes without connection or handshake failure for that specific destination. </p>
@@ -531,12 +531,12 @@ default_delivery_slot_cost = 2</pre>
 <p> As of Postfix version 2.5, negative feedback cannot reduce delivery concurrency to zero. Instead, a destination is marked dead (further delivery suspended) after the failed pseudo-cohort count reaches $default_destination_concurrency_failed_cohort_limit (or $<i>transport</i>_destination_concurrency_failed_cohort_limit). To make the scheduler completely immune to connection or handshake failures, specify a zero feedback value and a zero failed pseudo-cohort limit. </p>
 <p> Specify one of the following forms:</p>
 <dl>
-<dt><i>number</i></p>
+<dt><i>number</i></dt>
 <dd>
-<dt><i>number</i> / <i>number</i></p>
-<dd>Constant feedback. The value must be in the range 0..1 inclusive. The default setting of &quot;1&quot; is compatible with Postfix versions before 2.5, where a destination&#8217;s delivery concurrency is throttled down to zero (and further delivery suspended) after a single failed pseudo-cohort. </p>
-<dt><i>number</i> / concurrency</p>
-<dd>Variable feedback of &quot;<i>number</i> / (delivery concurrency)&quot;. The <i>number</i> must be in the range 0..1 inclusive. With <i>number</i> equal to &quot;1&quot;, a destination&#8217;s delivery concurrency is decremented by 1 after each failed pseudo-cohort. </p>
+</dd><dt><i>number</i> / <i>number</i></dt>
+<dd>Constant feedback. The value must be in the range 0..1 inclusive. The default setting of &quot;1&quot; is compatible with Postfix versions before 2.5, where a destination&#8217;s delivery concurrency is throttled down to zero (and further delivery suspended) after a single failed pseudo-cohort. </dd>
+<dt><i>number</i> / concurrency</dt>
+<dd>Variable feedback of &quot;<i>number</i> / (delivery concurrency)&quot;. The <i>number</i> must be in the range 0..1 inclusive. With <i>number</i> equal to &quot;1&quot;, a destination&#8217;s delivery concurrency is decremented by 1 after each failed pseudo-cohort. </dd>
 </dl>
 <p> A pseudo-cohort is the number of deliveries equal to a destination&#8217;s delivery concurrency. </p>
 <p> Use <i>transport</i>_destination_concurrency_negative_feedback to specify a transport-specific override, where <i>transport</i> is the master.cf name of the message delivery transport. </p>
@@ -545,12 +545,12 @@ default_delivery_slot_cost = 2</pre>
 <p>The per-destination amount of delivery concurrency positive feedback, after a delivery completes without connection or handshake failure. Feedback values are in the range 0..1 inclusive. The concurrency increases until it reaches the per-destination maximal concurrency limit. With positive feedback, concurrency is incremented at the end of a sequence with length 1/feedback. This is unlike negative feedback, where concurrency is decremented at the start of a sequence of length 1/feedback. </p>
 <p> Specify one of the following forms:</p>
 <dl>
-<dt><i>number</i></p>
+<dt><i>number</i></dt>
 <dd>
-<dt><i>number</i> / <i>number</i></p>
-<dd>Constant feedback. The value must be in the range 0..1 inclusive. The default setting of &quot;1&quot; is compatible with Postfix versions before 2.5, where a destination&#8217;s delivery concurrency doubles after each successful pseudo-cohort. </p>
-<dt><i>number</i> / concurrency</p>
-<dd>Variable feedback of &quot;<i>number</i> / (delivery concurrency)&quot;. The <i>number</i> must be in the range 0..1 inclusive. With <i>number</i> equal to &quot;1&quot;, a destination&#8217;s delivery concurrency is incremented by 1 after each successful pseudo-cohort. </p>
+</dd><dt><i>number</i> / <i>number</i></dt>
+<dd>Constant feedback. The value must be in the range 0..1 inclusive. The default setting of &quot;1&quot; is compatible with Postfix versions before 2.5, where a destination&#8217;s delivery concurrency doubles after each successful pseudo-cohort. </dd>
+<dt><i>number</i> / concurrency</dt>
+<dd>Variable feedback of &quot;<i>number</i> / (delivery concurrency)&quot;. The <i>number</i> must be in the range 0..1 inclusive. With <i>number</i> equal to &quot;1&quot;, a destination&#8217;s delivery concurrency is incremented by 1 after each successful pseudo-cohort. </dd>
 </dl>
 <p> A pseudo-cohort is the number of deliveries equal to a destination&#8217;s delivery concurrency. </p>
 <p> Use <i>transport</i>_destination_concurrency_positive_feedback to specify a transport-specific override, where <i>transport</i> is the master.cf name of the message delivery transport. </p>
@@ -559,11 +559,11 @@ default_delivery_slot_cost = 2</pre>
 <p>The default amount of delay that is inserted between individual message deliveries to the same destination and over the same message delivery transport. Specify a non-zero value to rate-limit those message deliveries to at most one per $default_destination_rate_delay. </p>
 <p> The resulting behavior depends on the value of the corresponding per-destination recipient limit.</p>
 <dl>
-<dt>&bull;</p>
-<dd>With a corresponding per-destination recipient limit &gt; 1, the rate delay specifies the time between deliveries to the <i>same domain</i>. Different domains are delivered in parallel, subject to the process limits specified in master.cf.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>With a corresponding per-destination recipient limit &gt; 1, the rate delay specifies the time between deliveries to the <i>same domain</i>. Different domains are delivered in parallel, subject to the process limits specified in master.cf.</dd>
+<dt>&bull;</dt>
 <dd>With a corresponding per-destination recipient limit equal to 1, the rate delay specifies the time between deliveries to the <i>same recipient</i>. Different recipients are delivered in parallel, subject to the process limits specified in master.cf.
-</dl>
+</dd></dl>
 <p> To enable the delay, specify a non-zero time value (an integral value plus an optional one-letter suffix that specifies the time unit). </p>
 <p> Time units: s (seconds), m (minutes), h (hours), d (days), w (weeks). The default time unit is s (seconds). </p>
 <p> NOTE: the delay is enforced by the queue manager. The delay timer state does not survive &quot;<code>postfix reload</code>&quot; or &quot;<code>postfix stop</code>&quot;. </p>
@@ -574,13 +574,13 @@ default_delivery_slot_cost = 2</pre>
 <p>The default maximal number of recipients per message delivery. This is the default limit for delivery via the <code><a href="/docs/linux/man/8-lmtp/">lmtp</a></code>(8), <code><a href="/docs/linux/man/8-pipe/">pipe</a></code>(8), <code><a href="/docs/linux/man/8-smtp/">smtp</a></code>(8) and <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) delivery agents. </p>
 <p> Setting this parameter to a value of 1 affects email deliveries as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd>It changes the meaning of the corresponding per-destination concurrency limit, from concurrency of deliveries to the <i>same domain</i> into concurrency of deliveries to the <i>same recipient</i>. Different recipients are delivered in parallel, subject to the process limits specified in master.cf.</p>
-<dt>&bull;</p>
-<dd>It changes the meaning of the corresponding per-destination rate delay, from the delay between deliveries to the <i>same domain</i> into the delay between deliveries to the <i>same recipient</i>. Again, different recipients are delivered in parallel, subject to the process limits specified in master.cf.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>It changes the meaning of the corresponding per-destination concurrency limit, from concurrency of deliveries to the <i>same domain</i> into concurrency of deliveries to the <i>same recipient</i>. Different recipients are delivered in parallel, subject to the process limits specified in master.cf.</dd>
+<dt>&bull;</dt>
+<dd>It changes the meaning of the corresponding per-destination rate delay, from the delay between deliveries to the <i>same domain</i> into the delay between deliveries to the <i>same recipient</i>. Again, different recipients are delivered in parallel, subject to the process limits specified in master.cf.</dd>
+<dt>&bull;</dt>
 <dd>It changes the meaning of other corresponding per-destination settings in a similar manner, from settings for delivery to the <i>same domain</i> into settings for delivery to the <i>same recipient</i>.
-</dl>
+</dd></dl>
 <p> Use <i>transport</i>_destination_recipient_limit to specify a transport-specific override, where <i>transport</i> is the master.cf name of the message delivery transport.</p>
 <h2>default_extra_recipient_limit (default: 1000)</h2>
 <p>The default value for the extra per-transport limit imposed on the number of in-memory recipients. This extra recipient space is reserved for the cases when the Postfix queue manager&#8217;s scheduler preempts one message with another and suddenly needs some extra recipients slots for the chosen message in order to avoid performance degradation. </p>
@@ -600,51 +600,51 @@ default_delivery_slot_cost = 2</pre>
 <p> This feature is available in Postfix 2.0 and later. </p>
 <p> The template does not support Postfix configuration parameter $name substitution. Instead, it supports exactly one level of $name substitution for the following attributes:</p>
 <dl>
-<dt><code>$client</code></p>
-<dd>The client hostname and IP address, formatted as name[address]. </p>
-<dt><code>$client_address</code></p>
-<dd>The client IP address. </p>
-<dt><code>$client_name</code></p>
-<dd>The client hostname or &quot;unknown&quot;. See reject_unknown_client_hostname for more details. </p>
-<dt><code>$reverse_client_name</code></p>
-<dd>The client hostname from address-&gt;name lookup, or &quot;unknown&quot;. See reject_unknown_reverse_client_hostname for more details. </p>
-<dt><code>$helo_name</code></p>
-<dd>The hostname given in HELO or EHLO command or empty string. </p>
-<dt><code>$rbl_class</code></p>
-<dd>The blacklisted entity type: Client host, Helo command, Sender address, or Recipient address. </p>
-<dt><code>$rbl_code</code></p>
-<dd>The numerical SMTP response code, as specified with the maps_rbl_reject_code configuration parameter. Note: The numerical SMTP response code is required, and must appear at the start of the reply. With Postfix version 2.3 and later this information may be followed by an RFC 3463 enhanced status code. </p>
-<dt><code>$rbl_domain</code></p>
-<dd>The RBL domain where $rbl_what is blacklisted. </p>
-<dt><code>$rbl_reason</code></p>
-<dd>The reason why $rbl_what is blacklisted, or an empty string. </p>
-<dt><code>$rbl_what</code></p>
-<dd>The entity that is blacklisted (an IP address, a hostname, a domain name, or an email address whose domain was blacklisted). </p>
-<dt><code>$recipient</code></p>
-<dd>The recipient address or &lt;&gt; in case of the null address. </p>
-<dt><code>$recipient_domain</code></p>
-<dd>The recipient domain or empty string. </p>
-<dt><code>$recipient_name</code></p>
-<dd>The recipient address localpart or &lt;&gt; in case of null address. </p>
-<dt><code>$sender</code></p>
-<dd>The sender address or &lt;&gt; in case of the null address. </p>
-<dt><code>$sender_domain</code></p>
-<dd>The sender domain or empty string. </p>
-<dt><code>$sender_name</code></p>
-<dd>The sender address localpart or &lt;&gt; in case of the null address. </p>
-<dt><code>${name?text}</code></p>
-<dd>Expands to `text&#8217; if $name is not empty. </p>
-<dt><code>${name:text}</code></p>
-<dd>Expands to `text&#8217; if $name is empty. </p>
+<dt><code>$client</code></dt>
+<dd>The client hostname and IP address, formatted as name[address]. </dd>
+<dt><code>$client_address</code></dt>
+<dd>The client IP address. </dd>
+<dt><code>$client_name</code></dt>
+<dd>The client hostname or &quot;unknown&quot;. See reject_unknown_client_hostname for more details. </dd>
+<dt><code>$reverse_client_name</code></dt>
+<dd>The client hostname from address-&gt;name lookup, or &quot;unknown&quot;. See reject_unknown_reverse_client_hostname for more details. </dd>
+<dt><code>$helo_name</code></dt>
+<dd>The hostname given in HELO or EHLO command or empty string. </dd>
+<dt><code>$rbl_class</code></dt>
+<dd>The blacklisted entity type: Client host, Helo command, Sender address, or Recipient address. </dd>
+<dt><code>$rbl_code</code></dt>
+<dd>The numerical SMTP response code, as specified with the maps_rbl_reject_code configuration parameter. Note: The numerical SMTP response code is required, and must appear at the start of the reply. With Postfix version 2.3 and later this information may be followed by an RFC 3463 enhanced status code. </dd>
+<dt><code>$rbl_domain</code></dt>
+<dd>The RBL domain where $rbl_what is blacklisted. </dd>
+<dt><code>$rbl_reason</code></dt>
+<dd>The reason why $rbl_what is blacklisted, or an empty string. </dd>
+<dt><code>$rbl_what</code></dt>
+<dd>The entity that is blacklisted (an IP address, a hostname, a domain name, or an email address whose domain was blacklisted). </dd>
+<dt><code>$recipient</code></dt>
+<dd>The recipient address or &lt;&gt; in case of the null address. </dd>
+<dt><code>$recipient_domain</code></dt>
+<dd>The recipient domain or empty string. </dd>
+<dt><code>$recipient_name</code></dt>
+<dd>The recipient address localpart or &lt;&gt; in case of null address. </dd>
+<dt><code>$sender</code></dt>
+<dd>The sender address or &lt;&gt; in case of the null address. </dd>
+<dt><code>$sender_domain</code></dt>
+<dd>The sender domain or empty string. </dd>
+<dt><code>$sender_name</code></dt>
+<dd>The sender address localpart or &lt;&gt; in case of the null address. </dd>
+<dt><code>${name?text}</code></dt>
+<dd>Expands to `text&#8217; if $name is not empty. </dd>
+<dt><code>${name:text}</code></dt>
+<dd>Expands to `text&#8217; if $name is empty. </dd>
 </dl>
 <p> Instead of $name you can also specify ${name} or $(name). </p>
 <p> Note: when an enhanced status code is specified in an RBL reply template, it is subject to modification. The following transformations are needed when the same RBL reply template is used for client, helo, sender, or recipient access restrictions.</p>
 <dl>
-<dt>&bull;</p>
-<dd>When rejecting a sender address, the Postfix SMTP server will transform a recipient DSN status (e.g., 4.1.1-4.1.6) into the corresponding sender DSN status, and vice versa.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>When rejecting a sender address, the Postfix SMTP server will transform a recipient DSN status (e.g., 4.1.1-4.1.6) into the corresponding sender DSN status, and vice versa.</dd>
+<dt>&bull;</dt>
 <dd>When rejecting non-address information (such as the HELO command argument or the client hostname/address), the Postfix SMTP server will transform a sender or recipient DSN status into a generic non-address DSN status (e.g., 4.0.0).
-</dl>
+</dd></dl>
 <h2>default_recipient_limit (default: 20000)</h2>
 <p>The default per-transport upper limit on the number of in-memory recipients. These limits take priority over the global qmgr_message_recipient_limit after the message has been assigned to the respective transports. See also default_extra_recipient_limit and qmgr_message_recipient_minimum. </p>
 <p> Use <i>transport</i>_recipient_limit to specify a transport-specific override, where <i>transport</i> is the master.cf name of the message delivery transport.</p>
@@ -690,15 +690,15 @@ default_delivery_slot_cost = 2</pre>
 <p> Large delay values are rounded off to an integral number seconds; delay values below the delay_logging_resolution_limit are logged as &quot;0&quot;, and delay values under 100s are logged with at most two-digit precision. </p>
 <p> The format of the &quot;delays=a/b/c/d&quot; logging is as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd>a = time from message arrival to last active queue entry</p>
-<dt>&bull;</p>
-<dd>b = time from last active queue entry to connection setup</p>
-<dt>&bull;</p>
-<dd>c = time in connection setup, including DNS, EHLO and STARTTLS</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>a = time from message arrival to last active queue entry</dd>
+<dt>&bull;</dt>
+<dd>b = time from last active queue entry to connection setup</dd>
+<dt>&bull;</dt>
+<dd>c = time in connection setup, including DNS, EHLO and STARTTLS</dd>
+<dt>&bull;</dt>
 <dd>d = time in message transmission
-</dl>
+</dd></dl>
 <p> This feature is available in Postfix 2.3 and later.</p>
 <h2>delay_notice_recipient (default: postmaster)</h2>
 <p>The recipient of postmaster notifications with the message headers of mail that cannot be delivered within $delay_warning_time time units. </p>
@@ -770,30 +770,30 @@ default_delivery_slot_cost = 2</pre>
 <p> Note: see below for how to convert long queue file names to Postfix &lt;= 2.8. </p>
 <p> Changing the parameter value to &quot;yes&quot; has the following effects:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Existing queue file names are not affected.</p>
-<dt>&bull;</p>
-<dd>New queue files are created with names such as 3Pt2mN2VXxznjll. These are encoded in a 52-character alphabet that contains digits (0-9), upper-case letters (B-Z) and lower-case letters (b-z). For safety reasons the vowels (AEIOUaeiou) are excluded from the alphabet. The name format is: 6 or more characters for the time in seconds, 4 characters for the time in microseconds, the &#8216;z&#8217;; the remainder is the file inode number encoded in the first 51 characters of the 52-character alphabet.</p>
-<dt>&bull;</p>
-<dd>New messages have a Message-ID header with <i>queueID</i>@<i>myhostname</i>.</p>
-<dt>&bull;</p>
-<dd>The mailq (postqueue -p) output has a wider Queue ID column. The number of whitespace-separated fields is not changed.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>Existing queue file names are not affected.</dd>
+<dt>&bull;</dt>
+<dd>New queue files are created with names such as 3Pt2mN2VXxznjll. These are encoded in a 52-character alphabet that contains digits (0-9), upper-case letters (B-Z) and lower-case letters (b-z). For safety reasons the vowels (AEIOUaeiou) are excluded from the alphabet. The name format is: 6 or more characters for the time in seconds, 4 characters for the time in microseconds, the &#8216;z&#8217;; the remainder is the file inode number encoded in the first 51 characters of the 52-character alphabet.</dd>
+<dt>&bull;</dt>
+<dd>New messages have a Message-ID header with <i>queueID</i>@<i>myhostname</i>.</dd>
+<dt>&bull;</dt>
+<dd>The mailq (postqueue -p) output has a wider Queue ID column. The number of whitespace-separated fields is not changed.</dd>
+<dt>&bull;</dt>
 <dd>The hash_queue_depth algorithm uses the first characters of the queue file creation time in microseconds, after conversion into hexadecimal representation. This produces the same queue hashing behavior as if the queue file name was created with &quot;enable_long_queue_ids = no&quot;.
-</dl>
+</dd></dl>
 <p> Changing the parameter value to &quot;no&quot; has the following effects:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Existing long queue file names are renamed to the short form (while running &quot;postfix reload&quot; or &quot;postsuper&quot;).</p>
-<dt>&bull;</p>
-<dd>New queue files are created with names such as C3CD21F3E90 from a hexadecimal alphabet that contains digits (0-9) and upper-case letters (A-F). The name format is: 5 characters for the time in microseconds; the remainder is the file inode number.</p>
-<dt>&bull;</p>
-<dd>New messages have a Message-ID header with <i>YYYYMMDDHHMMSS.queueid</i>@<i>myhostname</i>, where <i>YYYYMMDDHHMMSS</i> are the year, month, day, hour, minute and second.</p>
-<dt>&bull;</p>
-<dd>The mailq (postqueue -p) output has the same format as with Postfix &lt;= 2.8.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>Existing long queue file names are renamed to the short form (while running &quot;postfix reload&quot; or &quot;postsuper&quot;).</dd>
+<dt>&bull;</dt>
+<dd>New queue files are created with names such as C3CD21F3E90 from a hexadecimal alphabet that contains digits (0-9) and upper-case letters (A-F). The name format is: 5 characters for the time in microseconds; the remainder is the file inode number.</dd>
+<dt>&bull;</dt>
+<dd>New messages have a Message-ID header with <i>YYYYMMDDHHMMSS.queueid</i>@<i>myhostname</i>, where <i>YYYYMMDDHHMMSS</i> are the year, month, day, hour, minute and second.</dd>
+<dt>&bull;</dt>
+<dd>The mailq (postqueue -p) output has the same format as with Postfix &lt;= 2.8.</dd>
+<dt>&bull;</dt>
 <dd>The hash_queue_depth algorithm uses the first characters of the queue file name, with the hexadecimal representation of the file creation time in microseconds.
-</dl>
+</dd></dl>
 <p> Before migration to Postfix &lt;= 2.8, the following commands are required to convert long queue file names into short names: </p>
 <pre># postfix stop
 # postconf enable_long_queue_ids=no
@@ -804,10 +804,10 @@ default_delivery_slot_cost = 2</pre>
 <p>Enable support for the original recipient address after an address is rewritten to a different address (for example with aliasing or with canonical mapping). </p>
 <p> The original recipient address is used as follows:</p>
 <dl>
-<dt>Final delivery</p>
-<dd>With &quot;enable_original_recipient = yes&quot;, the original recipient address is stored in the <code>X-Original-To</code> message header. This header may be used to distinguish between different recipients that share the same mailbox. </p>
-<dt>Recipient deduplication</p>
-<dd>With &quot;enable_original_recipient = yes&quot;, the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon performs duplicate recipient elimination based on the content of (original recipient, maybe-rewritten recipient) pairs. Otherwise, the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon performs duplicate recipient elimination based only on the maybe-rewritten recipient address. </p>
+<dt>Final delivery</dt>
+<dd>With &quot;enable_original_recipient = yes&quot;, the original recipient address is stored in the <code>X-Original-To</code> message header. This header may be used to distinguish between different recipients that share the same mailbox. </dd>
+<dt>Recipient deduplication</dt>
+<dd>With &quot;enable_original_recipient = yes&quot;, the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon performs duplicate recipient elimination based on the content of (original recipient, maybe-rewritten recipient) pairs. Otherwise, the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon performs duplicate recipient elimination based only on the maybe-rewritten recipient address. </dd>
 </dl>
 <p> Note: with Postfix &lt;= 3.2 the &quot;setting enable_original_recipient = <code>no</code>&quot; breaks address verification for addresses that are aliased or otherwise rewritten (Postfix is unable to store the address verification result under the original probe destination address; instead, it can store the result only under the rewritten address). </p>
 <p> This feature is available in Postfix 2.1 and later. Postfix version 2.0 behaves as if this parameter is always set to <code>yes</code>. Postfix versions before 2.0 have no support for the original recipient address.</p>
@@ -835,13 +835,13 @@ default_delivery_slot_cost = 2</pre>
 <p> The fallback relays must be SMTP destinations. Specify a domain, host, host:port, [host]:port, [address] or [address]:port; the form [host] turns off MX lookups. If you specify multiple SMTP destinations, Postfix will try them in the specified order. </p>
 <p> Note: before Postfix 2.2, do not use the fallback_relay feature when relaying mail for a backup or primary MX domain. Mail would loop between the Postfix MX host and the fallback_relay host when the final destination is unavailable.</p>
 <dl>
-<dt>&bull;</p>
-<dd>In main.cf specify &quot;relay_transport = relay&quot;,</p>
-<dt>&bull;</p>
-<dd>In master.cf specify &quot;-o fallback_relay =&quot; (i.e., empty) at the end of the relay entry.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>In main.cf specify &quot;relay_transport = relay&quot;,</dd>
+<dt>&bull;</dt>
+<dd>In master.cf specify &quot;-o fallback_relay =&quot; (i.e., empty) at the end of the relay entry.</dd>
+<dt>&bull;</dt>
 <dd>In transport maps, specify &quot;relay:<i>nexthop&#8230;</i>&quot; as the right-hand side for backup or primary MX domain entries.
-</dl>
+</dd></dl>
 <p> Postfix version 2.2 and later will not use the fallback_relay feature for destinations that it is MX host for.</p>
 <h2>fallback_transport (default: empty)</h2>
 <p>Optional message delivery transport that the <code><a href="/docs/linux/man/8-local/">local</a></code>(8) delivery agent should use for names that are not found in the <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5) or UNIX password database. </p>
@@ -879,26 +879,26 @@ default_delivery_slot_cost = 2</pre>
 <p>The <code><a href="/docs/linux/man/8-local/">local</a></code>(8) delivery agent search list for finding a .forward file with user-specified delivery methods. The first file that is found is used. </p>
 <p> The forward_path value is not subject to Postfix configuration parameter $name expansion. Instead, the following $name expansions are done on forward_path before the search actually happens. The result of $name expansion is filtered with the character set that is specified with the forward_expansion_filter parameter.</p>
 <dl>
-<dt><code>$user</code></p>
-<dd>The recipient&#8217;s username. </p>
-<dt><code>$shell</code></p>
-<dd>The recipient&#8217;s login shell pathname. </p>
-<dt><code>$home</code></p>
-<dd>The recipient&#8217;s home directory. </p>
-<dt><code>$recipient</code></p>
-<dd>The full recipient address. </p>
-<dt><code>$extension</code></p>
-<dd>The optional recipient address extension. </p>
-<dt><code>$domain</code></p>
-<dd>The recipient domain. </p>
-<dt><code>$local</code></p>
-<dd>The entire recipient localpart. </p>
-<dt><code>$recipient_delimiter</code></p>
-<dd>The address extension delimiter that was found in the recipient address (Postfix 2.11 and later), or the system-wide recipient address extension delimiter (Postfix 2.10 and earlier). </p>
-<dt><code>${name?value}</code></p>
-<dd>Expands to <i>value</i> when <i>$name</i> is non-empty. </p>
-<dt><code>${name:value}</code></p>
-<dd>Expands to <i>value</i> when <i>$name</i> is empty. </p>
+<dt><code>$user</code></dt>
+<dd>The recipient&#8217;s username. </dd>
+<dt><code>$shell</code></dt>
+<dd>The recipient&#8217;s login shell pathname. </dd>
+<dt><code>$home</code></dt>
+<dd>The recipient&#8217;s home directory. </dd>
+<dt><code>$recipient</code></dt>
+<dd>The full recipient address. </dd>
+<dt><code>$extension</code></dt>
+<dd>The optional recipient address extension. </dd>
+<dt><code>$domain</code></dt>
+<dd>The recipient domain. </dd>
+<dt><code>$local</code></dt>
+<dd>The entire recipient localpart. </dd>
+<dt><code>$recipient_delimiter</code></dt>
+<dd>The address extension delimiter that was found in the recipient address (Postfix 2.11 and later), or the system-wide recipient address extension delimiter (Postfix 2.10 and earlier). </dd>
+<dt><code>${name?value}</code></dt>
+<dd>Expands to <i>value</i> when <i>$name</i> is non-empty. </dd>
+<dt><code>${name:value}</code></dt>
+<dd>Expands to <i>value</i> when <i>$name</i> is empty. </dd>
 </dl>
 <p> Instead of $name you can also specify ${name} or $(name). </p>
 <p> Examples: </p>
@@ -925,20 +925,20 @@ forward_path =
 <p>The format of the Postfix-generated <code>From:</code> header. This setting affects the appearance of &#8216;full name&#8217; information when a local program such as /bin/mail submits a message without From: header through the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command. </p>
 <p> Specify one of the following:</p>
 <dl>
-<dt><code>standard</code> (default)</p>
-<dd>Produce a header formatted as &quot;<code>From:</code> <i>name</i><code> &lt;</code><i>address</i><code>&gt;</code>&quot;. This is the default as of Postfix 3.3. </p>
-<dt><code>obsolete</code></p>
-<dd>Produce a header formatted as &quot;<code>From:</code> <i>address</i> <code>(</code><i>name</i><code>)</code>&quot;. This is the behavior prior to Postfix 3.3. </p>
+<dt><code>standard</code> (default)</dt>
+<dd>Produce a header formatted as &quot;<code>From:</code> <i>name</i><code> &lt;</code><i>address</i><code>&gt;</code>&quot;. This is the default as of Postfix 3.3. </dd>
+<dt><code>obsolete</code></dt>
+<dd>Produce a header formatted as &quot;<code>From:</code> <i>address</i> <code>(</code><i>name</i><code>)</code>&quot;. This is the behavior prior to Postfix 3.3. </dd>
 </dl>
 <p> Notes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Postfix generates the format &quot;<code>From:</code> <i>address</i>&quot; when <i>name</i> information is unavailable or the envelope sender address is empty. This is the same behavior as prior to Postfix 3.3.</p>
-<dt>&bull;</p>
-<dd>In the <code>standard</code> form, the <i>name</i> will be quoted if it contains <code>specials</code> as defined in RFC 5322, or the &quot;!%&quot; address operators.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>Postfix generates the format &quot;<code>From:</code> <i>address</i>&quot; when <i>name</i> information is unavailable or the envelope sender address is empty. This is the same behavior as prior to Postfix 3.3.</dd>
+<dt>&bull;</dt>
+<dd>In the <code>standard</code> form, the <i>name</i> will be quoted if it contains <code>specials</code> as defined in RFC 5322, or the &quot;!%&quot; address operators.</dd>
+<dt>&bull;</dt>
 <dd>The Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command gets <i>name</i> information from the <code>-F</code> command-line option, from the <code>NAME</code> environment variable, or from the UNIX password file.
-</dl>
+</dd></dl>
 <p> This feature is available in Postfix 3.3 and later.</p>
 <h2>header_size_limit (default: 102400)</h2>
 <p>The maximal amount of memory in bytes for storing a message header. If a header is larger, the excess is discarded. The limit is enforced by the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) server.</p>
@@ -962,14 +962,14 @@ home_mailbox = Maildir/</pre>
 <h2>import_environment (default: see postconf -d output)</h2>
 <p>The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides. Unprivileged utilities will enforce the name=value overrides, but otherwise will not change their process environment. Examples of relevant parameters:</p>
 <dl>
-<dt><code>TZ</code></p>
-<dd>May be needed for sane time keeping on most System-V-ish systems. </p>
-<dt><code>DISPLAY</code></p>
-<dd>Needed for debugging Postfix daemons with an X-windows debugger. </p>
-<dt><code>XAUTHORITY</code></p>
-<dd>Needed for debugging Postfix daemons with an X-windows debugger. </p>
-<dt><code>MAIL_CONFIG</code></p>
-<dd>Needed to make &quot;<code>postfix -c</code>&quot; work. </p>
+<dt><code>TZ</code></dt>
+<dd>May be needed for sane time keeping on most System-V-ish systems. </dd>
+<dt><code>DISPLAY</code></dt>
+<dd>Needed for debugging Postfix daemons with an X-windows debugger. </dd>
+<dt><code>XAUTHORITY</code></dt>
+<dd>Needed for debugging Postfix daemons with an X-windows debugger. </dd>
+<dt><code>MAIL_CONFIG</code></dt>
+<dd>Needed to make &quot;<code>postfix -c</code>&quot; work. </dd>
 </dl>
 <p> Specify a list of names and/or name=value pairs, separated by whitespace or comma. Specify &quot;{ name=value }&quot; to protect whitespace or comma in parameter values (whitespace after the opening &quot;{&quot; and before the closing &quot;}&quot; is ignored). The form name=value is supported with Postfix version 2.1 and later; the use of {} is supported with Postfix 3.0 and later.</p>
 <h2>in_flow_delay (default: 1s)</h2>
@@ -1011,10 +1011,10 @@ inet_protocols = ipv4, ipv6</pre>
 <h2>internal_mail_filter_classes (default: empty)</h2>
 <p>What categories of Postfix-generated mail are subject to before-queue content inspection by non_smtpd_milters, header_checks and body_checks. Specify zero or more of the following, separated by whitespace or comma.</p>
 <dl>
-<dt><code>bounce</code></p>
-<dd>Inspect the content of delivery status notifications. </p>
-<dt><code>notify</code></p>
-<dd>Inspect the content of postmaster notifications by the <code><a href="/docs/linux/man/8-smtp/">smtp</a></code>(8) and <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) processes. </p>
+<dt><code>bounce</code></dt>
+<dd>Inspect the content of delivery status notifications. </dd>
+<dt><code>notify</code></dt>
+<dd>Inspect the content of postmaster notifications by the <code><a href="/docs/linux/man/8-smtp/">smtp</a></code>(8) and <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) processes. </dd>
 </dl>
 <p> NOTE: It&#8217;s generally not safe to enable content inspection of Postfix-generated email messages. The user is warned. </p>
 <p> This feature is available in Postfix 2.3 and later.</p>
@@ -1062,15 +1062,15 @@ inet_protocols = ipv4, ipv6</pre>
 <p> This parameter is available in Postfix version 2.2 and earlier. With Postfix version 2.3 and later, see lmtp_connection_cache_on_demand, lmtp_connection_cache_destinations, or lmtp_connection_reuse_time_limit. </p>
 <p> The effectiveness of cached connections will be determined by the number of remote LMTP servers in use, and the concurrency limit specified for the Postfix LMTP client. Cached connections are closed under any of the following conditions:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The Postfix LMTP client idle time limit is reached. This limit is specified with the Postfix max_idle configuration parameter.</p>
-<dt>&bull;</p>
-<dd>A delivery request specifies a different destination than the one currently cached.</p>
-<dt>&bull;</p>
-<dd>The per-process limit on the number of delivery requests is reached. This limit is specified with the Postfix max_use configuration parameter.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>The Postfix LMTP client idle time limit is reached. This limit is specified with the Postfix max_idle configuration parameter.</dd>
+<dt>&bull;</dt>
+<dd>A delivery request specifies a different destination than the one currently cached.</dd>
+<dt>&bull;</dt>
+<dd>The per-process limit on the number of delivery requests is reached. This limit is specified with the Postfix max_use configuration parameter.</dd>
+<dt>&bull;</dt>
 <dd>Upon the onset of another delivery request, the remote LMTP server associated with the current session does not respond to the RSET command.
-</dl>
+</dd></dl>
 <p> Most of these limitations have been with the Postfix a connection cache that is shared among multiple LMTP client programs.</p>
 <h2>lmtp_cname_overrides_servername (default: yes)</h2>
 <p>The LMTP-specific version of the smtp_cname_overrides_servername configuration parameter. See there for details. </p>
@@ -1123,11 +1123,11 @@ inet_protocols = ipv4, ipv6</pre>
 <p> This feature is available in Postfix 2.3 and later. </p>
 <p> Notes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Specify the <code>silent-discard</code> pseudo keyword to prevent this action from being logged.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>Specify the <code>silent-discard</code> pseudo keyword to prevent this action from being logged.</dd>
+<dt>&bull;</dt>
 <dd>Use the lmtp_discard_lhlo_keyword_address_maps feature to discard LHLO keywords selectively.
-</dl>
+</dd></dl>
 <h2>lmtp_dns_reply_filter (default: empty)</h2>
 <p>Optional filter for Postfix LMTP client DNS lookup results. See smtp_dns_reply_filter for details including an example. </p>
 <p> This feature is available in Postfix 3.0 and later.</p>
@@ -1238,14 +1238,14 @@ inet_protocols = ipv4, ipv6</pre>
 <p>SASL security options; as of Postfix 2.3 the list of available features depends on the SASL client implementation that is selected with <code>lmtp_sasl_type</code>. </p>
 <p> The following security features are defined for the <code>cyrus</code> client SASL implementation:</p>
 <dl>
-<dt><code>noplaintext</code></p>
-<dd>Disallow authentication methods that use plaintext passwords. </p>
-<dt><code>noactive</code></p>
-<dd>Disallow authentication methods that are vulnerable to non-dictionary active attacks. </p>
-<dt><code>nodictionary</code></p>
-<dd>Disallow authentication methods that are vulnerable to passive dictionary attack. </p>
-<dt><code>noanonymous</code></p>
-<dd>Disallow anonymous logins. </p>
+<dt><code>noplaintext</code></dt>
+<dd>Disallow authentication methods that use plaintext passwords. </dd>
+<dt><code>noactive</code></dt>
+<dd>Disallow authentication methods that are vulnerable to non-dictionary active attacks. </dd>
+<dt><code>nodictionary</code></dt>
+<dd>Disallow authentication methods that are vulnerable to passive dictionary attack. </dd>
+<dt><code>noanonymous</code></dt>
+<dd>Disallow anonymous logins. </dd>
 </dl>
 <p> Example: </p>
 <pre>lmtp_sasl_security_options = noplaintext</pre>
@@ -1405,20 +1405,20 @@ local_command_shell = /bin/bash -c</pre>
 <p> See the append_at_myorigin and append_dot_mydomain parameters for details of how domain names are appended to incomplete addresses. </p>
 <p> Specify a list of zero or more of the following:</p>
 <dl>
-<dt><code>permit_inet_interfaces</code></p>
-<dd>Append the domain name in $myorigin or $mydomain when the client IP address matches $inet_interfaces. This is enabled by default. </p>
-<dt><code>permit_mynetworks</code></p>
-<dd>Append the domain name in $myorigin or $mydomain when the client IP address matches any network or network address listed in $mynetworks. This setting will not prevent remote mail header address rewriting when mail from a remote client is forwarded by a neighboring system. </p>
-<dt><code>permit_sasl_authenticated </code></p>
-<dd>Append the domain name in $myorigin or $mydomain when the client is successfully authenticated via the RFC 4954 (AUTH) protocol. </p>
-<dt><code>permit_tls_clientcerts </code></p>
-<dd>Append the domain name in $myorigin or $mydomain when the remote SMTP client TLS certificate fingerprint or public key fingerprint (Postfix 2.9 and later) is listed in $relay_clientcerts. The fingerprint digest algorithm is configurable via the smtpd_tls_fingerprint_digest parameter (hard-coded as md5 prior to Postfix version 2.5). </p>
-<dt><code>permit_tls_all_clientcerts </code></p>
-<dd>Append the domain name in $myorigin or $mydomain when the remote SMTP client TLS certificate is successfully verified, regardless of whether it is listed on the server, and regardless of the certifying authority. </p>
-<dt><code>check_address_map </code><i>type:table</i></p>
+<dt><code>permit_inet_interfaces</code></dt>
+<dd>Append the domain name in $myorigin or $mydomain when the client IP address matches $inet_interfaces. This is enabled by default. </dd>
+<dt><code>permit_mynetworks</code></dt>
+<dd>Append the domain name in $myorigin or $mydomain when the client IP address matches any network or network address listed in $mynetworks. This setting will not prevent remote mail header address rewriting when mail from a remote client is forwarded by a neighboring system. </dd>
+<dt><code>permit_sasl_authenticated </code></dt>
+<dd>Append the domain name in $myorigin or $mydomain when the client is successfully authenticated via the RFC 4954 (AUTH) protocol. </dd>
+<dt><code>permit_tls_clientcerts </code></dt>
+<dd>Append the domain name in $myorigin or $mydomain when the remote SMTP client TLS certificate fingerprint or public key fingerprint (Postfix 2.9 and later) is listed in $relay_clientcerts. The fingerprint digest algorithm is configurable via the smtpd_tls_fingerprint_digest parameter (hard-coded as md5 prior to Postfix version 2.5). </dd>
+<dt><code>permit_tls_all_clientcerts </code></dt>
+<dd>Append the domain name in $myorigin or $mydomain when the remote SMTP client TLS certificate is successfully verified, regardless of whether it is listed on the server, and regardless of the certifying authority. </dd>
+<dt><code>check_address_map </code><i>type:table</i></dt>
 <dd>
-<dt><i>type:table</i></p>
-<dd>Append the domain name in $myorigin or $mydomain when the client IP address matches the specified lookup table. The lookup result is ignored, and no subnet lookup is done. This is suitable for, e.g., pop-before-smtp lookup tables. </p>
+</dd><dt><i>type:table</i></dt>
+<dd>Append the domain name in $myorigin or $mydomain when the client IP address matches the specified lookup table. The lookup result is ignored, and no subnet lookup is done. This is suitable for, e.g., pop-before-smtp lookup tables. </dd>
 </dl>
 <p> Examples: </p>
 <p> The Postfix &lt; 2.2 backwards compatible setting: always rewrite message headers, and always append my own domain to incomplete header addresses. </p>
@@ -1437,13 +1437,13 @@ local_command_shell = /bin/bash -c</pre>
 <p> To turn off local recipient checking in the Postfix SMTP server, specify &quot;local_recipient_maps =&quot; (i.e. empty). </p>
 <p> The default setting assumes that you use the default Postfix local delivery agent for local delivery. You need to update the local_recipient_maps setting if:</p>
 <dl>
-<dt>&bull;</p>
-<dd>You redefine the local delivery agent in master.cf.</p>
-<dt>&bull;</p>
-<dd>You redefine the &quot;local_transport&quot; setting in main.cf.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>You redefine the local delivery agent in master.cf.</dd>
+<dt>&bull;</dt>
+<dd>You redefine the &quot;local_transport&quot; setting in main.cf.</dd>
+<dt>&bull;</dt>
 <dd>You use the &quot;luser_relay&quot;, &quot;mailbox_transport&quot;, or &quot;fallback_transport&quot; feature of the Postfix <code><a href="/docs/linux/man/8-local/">local</a></code>(8) delivery agent.
-</dl>
+</dd></dl>
 <p> Details are described in the LOCAL_RECIPIENT_README file. </p>
 <p> Beware: if the Postfix SMTP server runs chrooted, you need to access the passwd file via the <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) service, in order to overcome chroot access restrictions. The alternative, maintaining a copy of the system password file in the chroot jail is not practical. </p>
 <p> Examples: </p>
@@ -1457,26 +1457,26 @@ local_command_shell = /bin/bash -c</pre>
 <p>Optional catch-all destination for unknown <code><a href="/docs/linux/man/8-local/">local</a></code>(8) recipients. By default, mail for unknown recipients in domains that match $mydestination, $inet_interfaces or $proxy_interfaces is returned as undeliverable. </p>
 <p> The luser_relay value is not subject to Postfix configuration parameter $name expansion. Instead, the following $name expansions are done:</p>
 <dl>
-<dt><code>$domain</code></p>
-<dd>The recipient domain. </p>
-<dt><code>$extension</code></p>
-<dd>The recipient address extension. </p>
-<dt><code>$home</code></p>
-<dd>The recipient&#8217;s home directory. </p>
-<dt><code>$local</code></p>
-<dd>The entire recipient address localpart. </p>
-<dt><code>$recipient</code></p>
-<dd>The full recipient address. </p>
-<dt><code>$recipient_delimiter</code></p>
-<dd>The address extension delimiter that was found in the recipient address (Postfix 2.11 and later), or the system-wide recipient address extension delimiter (Postfix 2.10 and earlier). </p>
-<dt><code>$shell</code></p>
-<dd>The recipient&#8217;s login shell. </p>
-<dt><code>$user</code></p>
-<dd>The recipient username. </p>
-<dt><code>${name?value}</code></p>
-<dd>Expands to <i>value</i> when <i>$name</i> has a non-empty value. </p>
-<dt><code>${name:value}</code></p>
-<dd>Expands to <i>value</i> when <i>$name</i> has an empty value. </p>
+<dt><code>$domain</code></dt>
+<dd>The recipient domain. </dd>
+<dt><code>$extension</code></dt>
+<dd>The recipient address extension. </dd>
+<dt><code>$home</code></dt>
+<dd>The recipient&#8217;s home directory. </dd>
+<dt><code>$local</code></dt>
+<dd>The entire recipient address localpart. </dd>
+<dt><code>$recipient</code></dt>
+<dd>The full recipient address. </dd>
+<dt><code>$recipient_delimiter</code></dt>
+<dd>The address extension delimiter that was found in the recipient address (Postfix 2.11 and later), or the system-wide recipient address extension delimiter (Postfix 2.10 and earlier). </dd>
+<dt><code>$shell</code></dt>
+<dd>The recipient&#8217;s login shell. </dd>
+<dt><code>$user</code></dt>
+<dd>The recipient username. </dd>
+<dt><code>${name?value}</code></dt>
+<dd>Expands to <i>value</i> when <i>$name</i> has a non-empty value. </dd>
+<dt><code>${name:value}</code></dt>
+<dd>Expands to <i>value</i> when <i>$name</i> has an empty value. </dd>
 </dl>
 <p> Instead of $name you can also specify ${name} or $(name). </p>
 <p> Note: luser_relay works only for the Postfix <code><a href="/docs/linux/man/8-local/">local</a></code>(8) delivery agent. </p>
@@ -1504,40 +1504,40 @@ mail_spool_directory = /var/spool/mail</pre>
 <p>Optional external command that the <code><a href="/docs/linux/man/8-local/">local</a></code>(8) delivery agent should use for mailbox delivery. The command is run with the user ID and the primary group ID privileges of the recipient. Exception: command delivery for root executes with $default_privs privileges. This is not a problem, because 1) mail for root should always be aliased to a real user and 2) don&#8217;t log in as root, use &quot;su&quot; instead. </p>
 <p> The following environment variables are exported to the command:</p>
 <dl>
-<dt><code>CLIENT_ADDRESS</code></p>
-<dd>Remote client network address. Available in Postfix version 2.2 and later. </p>
-<dt><code>CLIENT_HELO</code></p>
-<dd>Remote client EHLO command parameter. Available in Postfix version 2.2 and later. </p>
-<dt><code>CLIENT_HOSTNAME</code></p>
-<dd>Remote client hostname. Available in Postfix version 2.2 and later. </p>
-<dt><code>CLIENT_PROTOCOL</code></p>
-<dd>Remote client protocol. Available in Postfix version 2.2 and later. </p>
-<dt><code>DOMAIN</code></p>
-<dd>The domain part of the recipient address. </p>
-<dt><code>EXTENSION</code></p>
-<dd>The optional address extension. </p>
-<dt><code>HOME</code></p>
-<dd>The recipient home directory. </p>
-<dt><code>LOCAL</code></p>
-<dd>The recipient address localpart. </p>
-<dt><code>LOGNAME</code></p>
-<dd>The recipient&#8217;s username. </p>
-<dt><code>ORIGINAL_RECIPIENT</code></p>
-<dd>The entire recipient address, before any address rewriting or aliasing. </p>
-<dt><code>RECIPIENT</code></p>
-<dd>The full recipient address. </p>
-<dt><code>SASL_METHOD</code></p>
-<dd>SASL authentication method specified in the remote client AUTH command. Available in Postfix version 2.2 and later. </p>
-<dt><code>SASL_SENDER</code></p>
-<dd>SASL sender address specified in the remote client MAIL FROM command. Available in Postfix version 2.2 and later. </p>
-<dt><code>SASL_USER</code></p>
-<dd>SASL username specified in the remote client AUTH command. Available in Postfix version 2.2 and later. </p>
-<dt><code>SENDER</code></p>
-<dd>The full sender address. </p>
-<dt><code>SHELL</code></p>
-<dd>The recipient&#8217;s login shell. </p>
-<dt><code>USER</code></p>
-<dd>The recipient username. </p>
+<dt><code>CLIENT_ADDRESS</code></dt>
+<dd>Remote client network address. Available in Postfix version 2.2 and later. </dd>
+<dt><code>CLIENT_HELO</code></dt>
+<dd>Remote client EHLO command parameter. Available in Postfix version 2.2 and later. </dd>
+<dt><code>CLIENT_HOSTNAME</code></dt>
+<dd>Remote client hostname. Available in Postfix version 2.2 and later. </dd>
+<dt><code>CLIENT_PROTOCOL</code></dt>
+<dd>Remote client protocol. Available in Postfix version 2.2 and later. </dd>
+<dt><code>DOMAIN</code></dt>
+<dd>The domain part of the recipient address. </dd>
+<dt><code>EXTENSION</code></dt>
+<dd>The optional address extension. </dd>
+<dt><code>HOME</code></dt>
+<dd>The recipient home directory. </dd>
+<dt><code>LOCAL</code></dt>
+<dd>The recipient address localpart. </dd>
+<dt><code>LOGNAME</code></dt>
+<dd>The recipient&#8217;s username. </dd>
+<dt><code>ORIGINAL_RECIPIENT</code></dt>
+<dd>The entire recipient address, before any address rewriting or aliasing. </dd>
+<dt><code>RECIPIENT</code></dt>
+<dd>The full recipient address. </dd>
+<dt><code>SASL_METHOD</code></dt>
+<dd>SASL authentication method specified in the remote client AUTH command. Available in Postfix version 2.2 and later. </dd>
+<dt><code>SASL_SENDER</code></dt>
+<dd>SASL sender address specified in the remote client MAIL FROM command. Available in Postfix version 2.2 and later. </dd>
+<dt><code>SASL_USER</code></dt>
+<dd>SASL username specified in the remote client AUTH command. Available in Postfix version 2.2 and later. </dd>
+<dt><code>SENDER</code></dt>
+<dd>The full sender address. </dd>
+<dt><code>SHELL</code></dt>
+<dd>The recipient&#8217;s login shell. </dd>
+<dt><code>USER</code></dt>
+<dd>The recipient username. </dd>
 </dl>
 <p> Unlike other Postfix configuration parameters, the mailbox_command parameter is not subjected to $name substitutions. This is to make it easier to specify shell syntax (see example below). </p>
 <p> If you can, avoid shell meta characters because they will force Postfix to run an expensive shell process. If you&#8217;re delivering via &quot;procmail&quot; then running a shell won&#8217;t make a noticeable difference in the total cost. </p>
@@ -1606,13 +1606,13 @@ mailbox_command = /some/where/maildrop -d &quot;$USER&quot;
 <p>does not change &quot;user [at] any.thing.foo.example.com&quot; or &quot;user [at] foo.example.com&quot;, but strips &quot;user [at] any.thing.else.example.com&quot; to &quot;user [at] example.com&quot;. </p>
 <p> Note: with Postfix version 2.2, message header address masquerading happens only when message header address rewriting is enabled:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</p>
-<dt>&bull;</p>
-<dd>The message is received from a network client that matches $local_header_rewrite_clients,</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>The message is received with the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command,</dd>
+<dt>&bull;</dt>
+<dd>The message is received from a network client that matches $local_header_rewrite_clients,</dd>
+<dt>&bull;</dt>
 <dd>The message is received from the network, and the remote_header_rewrite_domain parameter specifies a non-empty value.
-</dl>
+</dd></dl>
 <p> To get the behavior before Postfix version 2.2, specify &quot;local_header_rewrite_clients = static:all&quot;. </p>
 <p> Example: </p>
 <pre>masquerade_domains = $mydomain</pre>
@@ -1662,3 +1662,4 @@ master_service_disable = !foo/inet, inet</pre>
 <p> Note 2: this feature is disabled with &quot;receive_override_options = no_header_body_checks&quot;. </p>
 <p> Example: </p>
 <pre>message_reject_characters = 
+</pre>

@@ -18,27 +18,27 @@ description: "ldns-gen-zone – read a zonefile and print it while adding DS rec
 <p> The idea is to use this tool for quickly generating a representative artificial zonefile from a real zonefile, to use it for testing purposes. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a NUM</code></p>
-<dd> Adds NUM extra artificial NS RRSets to the output. The RRSets owner names start with &#8216;xn--&#8216; in an attempt to ensure uniqueness (nl.-zone does not support IDN&#8217;s &#8211; and this tool was written with that knowledge in mind). </p>
+<dt><code>-a NUM</code></dt>
+<dd> Adds NUM extra artificial NS RRSets to the output. The RRSets owner names start with &#8216;xn--&#8216; in an attempt to ensure uniqueness (nl.-zone does not support IDN&#8217;s &#8211; and this tool was written with that knowledge in mind). </dd>
 <p> An artificial NS RRSet has two NS records; ns1.example.com and ns2.example.com. </p>
-<dt><code>-p NUM</code></p>
-<dd> Add NUM% of DS RRSets to the NS RRSets (anywhere between 1-4 DS records per RRSet). </p>
-<dt><code>-o ORIGIN</code></p>
-<dd> Sets an $ORIGIN, which can be handy if the one in the zonefile is set to &#8216;@&#8217; for example. If there is an $ORIGIN in the zonefile, this option will silently be ignored. </p>
-<dt><code>-s</code></p>
-<dd> This is the recommended way of processing large zones that are already sorted and canonicalized (ie lowercase). It skips the sorting and canonicalization step that is required for properly grouping RRSets together (before adding any DS records to them. Skipping this step will speed things up. </p>
+<dt><code>-p NUM</code></dt>
+<dd> Add NUM% of DS RRSets to the NS RRSets (anywhere between 1-4 DS records per RRSet). </dd>
+<dt><code>-o ORIGIN</code></dt>
+<dd> Sets an $ORIGIN, which can be handy if the one in the zonefile is set to &#8216;@&#8217; for example. If there is an $ORIGIN in the zonefile, this option will silently be ignored. </dd>
+<dt><code>-s</code></dt>
+<dd> This is the recommended way of processing large zones that are already sorted and canonicalized (ie lowercase). It skips the sorting and canonicalization step that is required for properly grouping RRSets together (before adding any DS records to them. Skipping this step will speed things up. </dd>
 <p> It is not recommended to use this option if you want to add DS records to unsorted, non-canonicalized zones. </p>
-<dt><code>-h</code></p>
-<dd> Show usage and exit. </p>
-<dt><code>-v</code></p>
-<dd> Show version and exit. </p>
+<dt><code>-h</code></dt>
+<dd> Show usage and exit. </dd>
+<dt><code>-v</code></dt>
+<dd> Show version and exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>ldns-gen-zone -a 100000 -p 10 -s ./zonefile.txt</code></p>
-<dd> Read a zonefile, add 100.000 artificial NS RRSets and 10% of DS records, print it to standard output. Don&#8217;t sort (will only work well if the input zonefile is already sorted and canonicalized). </p>
-<dt><code>ldns-gen-zone -p 10 -s -o nl zonefile.txt | named-compilezone -s relative -i none -o zonefile_10.txt nl /dev/stdin</code></p>
-<dd> This creates a nicely formatted zone file with the help of <code>named-compilezone</code>. It adds 10% DS records to the .nl zone, reformats it and saves it as <code>zonefile_10.txt</code>. </p>
+<dt><code>ldns-gen-zone -a 100000 -p 10 -s ./zonefile.txt</code></dt>
+<dd> Read a zonefile, add 100.000 artificial NS RRSets and 10% of DS records, print it to standard output. Don&#8217;t sort (will only work well if the input zonefile is already sorted and canonicalized). </dd>
+<dt><code>ldns-gen-zone -p 10 -s -o nl zonefile.txt | named-compilezone -s relative -i none -o zonefile_10.txt nl /dev/stdin</code></dt>
+<dd> This creates a nicely formatted zone file with the help of <code>named-compilezone</code>. It adds 10% DS records to the .nl zone, reformats it and saves it as <code>zonefile_10.txt</code>. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Initially written by Marco Davids, several modifications added by Miek Gieben, both from SIDN. </p>

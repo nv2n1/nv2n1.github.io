@@ -18,10 +18,10 @@ description: "dmp – translate Troff output to low-level MetaPost input"
 <h2>OPTIONS</h2>
 <p> <code>dmp</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mpost/">mpost</a></code>(1), <code><a href="/docs/linux/man/1-makempx/">makempx</a></code>(1). </p>
 <h2>Index</h2>

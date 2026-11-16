@@ -21,289 +21,289 @@ description: "babel , obabel – a converter for chemistry and molecular modelin
 <h2>OPTIONS</h2>
 <p> If only input and output files are given, Open Babel will guess the file type from the filename extension.</p>
 <dl>
-<dt><code>-: Qo </code><i>SMILES-string Qc </i>Enter SMILES string and use it in place of an input file. The SMILES string</p>
-<dd> should be enclosed in quotation marks. More than one can be used, and a molecule title can be included if enclosed in quotes.</p>
-<dt><code>-a </code><i>options</i></p>
-<dd> Format-specific input options. See &#8211;<code>H </code><i>format-ID </i> for options allowed by a particular format</p>
-<dt><code>&#8211;addtotitle</code></p>
-<dd> Append text to the current molecule title</p>
-<dt><code>&#8211;addformula</code></p>
-<dd> Append the molecular formula after the current molecule title</p>
-<dt><code>-b</code></p>
-<dd> Convert dative bonds: e.g., [N+]([O-])=O to N(=O)=O</p>
-<dt><code>-c</code></p>
-<dd> Center atomic coordinates at (0,0,0)</p>
-<dt><code>-C</code></p>
-<dd> Combine molecules in first file with others having the same name</p>
-<dt><code>-e</code></p>
-<dd> Continue after errors</p>
-<dt><code>-d</code></p>
-<dd> Delete Hydrogens</p>
-<dt><code>&#8212;errorlevel </code><i>2</i></p>
-<dd> Filter the level of errors and warnings displayed: </p>
+<dt><code>-: Qo </code><i>SMILES-string Qc </i>Enter SMILES string and use it in place of an input file. The SMILES string</dt>
+<dd> should be enclosed in quotation marks. More than one can be used, and a molecule title can be included if enclosed in quotes.</dd>
+<dt><code>-a </code><i>options</i></dt>
+<dd> Format-specific input options. See &#8211;<code>H </code><i>format-ID </i> for options allowed by a particular format</dd>
+<dt><code>&#8211;addtotitle</code></dt>
+<dd> Append text to the current molecule title</dd>
+<dt><code>&#8211;addformula</code></dt>
+<dd> Append the molecular formula after the current molecule title</dd>
+<dt><code>-b</code></dt>
+<dd> Convert dative bonds: e.g., [N+]([O-])=O to N(=O)=O</dd>
+<dt><code>-c</code></dt>
+<dd> Center atomic coordinates at (0,0,0)</dd>
+<dt><code>-C</code></dt>
+<dd> Combine molecules in first file with others having the same name</dd>
+<dt><code>-e</code></dt>
+<dd> Continue after errors</dd>
+<dt><code>-d</code></dt>
+<dd> Delete Hydrogens</dd>
+<dt><code>&#8212;errorlevel </code><i>2</i></dt>
+<dd> Filter the level of errors and warnings displayed: </dd>
 <p>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>critical errors only<br />
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>include warnings too&nbsp;<wbr>(default)<br />
 &nbsp;<wbr>3&nbsp;<wbr>=&nbsp;<wbr>include informational messages too<br />
 &nbsp;<wbr>4&nbsp;<wbr>=&nbsp;<wbr>include&nbsp;<wbr>&quot;audit log&quot;&nbsp;<wbr>messages of changes to data<br />
 &nbsp;<wbr>5&nbsp;<wbr>=&nbsp;<wbr>include debugging messages too</p>
-<dt><code>-f </code><i>file &#8230;</i></p>
-<dd> For multiple entry input, start import with molecule # as the first entry</p>
-<dt><code>-F</code></p>
-<dd> Output the available fingerprint types</p>
-<dt><code>-h</code></p>
-<dd> Add hydrogens</p>
-<dt><code>-H</code></p>
-<dd> Output usage information</p>
-<dt><code>-H </code><i>format-ID</i></p>
-<dd> Output formatting information and options for format specified</p>
-<dt><code>-Hall</code></p>
-<dd> Output formatting information and options for all formats</p>
-<dt><code>-i&lt;format-ID&gt;</code></p>
-<dd> Specifies input format, see below for the available formats</p>
-<dt><code>-j</code></p>
+<dt><code>-f </code><i>file &#8230;</i></dt>
+<dd> For multiple entry input, start import with molecule # as the first entry</dd>
+<dt><code>-F</code></dt>
+<dd> Output the available fingerprint types</dd>
+<dt><code>-h</code></dt>
+<dd> Add hydrogens</dd>
+<dt><code>-H</code></dt>
+<dd> Output usage information</dd>
+<dt><code>-H </code><i>format-ID</i></dt>
+<dd> Output formatting information and options for format specified</dd>
+<dt><code>-Hall</code></dt>
+<dd> Output formatting information and options for all formats</dd>
+<dt><code>-i&lt;format-ID&gt;</code></dt>
+<dd> Specifies input format, see below for the available formats</dd>
+<dt><code>-j</code></dt>
 <dd>
-<dt><code>&#8211;join</code></p>
-<dd> Join all input molecules into a single output molecule entry</p>
-<dt><code>-k</code></p>
-<dd> Translate computational chemistry modeling keywords (e.g., GAMESS and Gaussian)</p>
-<dt><code>-m</code></p>
-<dd> Produce multiple output files, to allow:</p>
+</dd><dt><code>&#8211;join</code></dt>
+<dd> Join all input molecules into a single output molecule entry</dd>
+<dt><code>-k</code></dt>
+<dd> Translate computational chemistry modeling keywords (e.g., GAMESS and Gaussian)</dd>
+<dt><code>-m</code></dt>
+<dd> Produce multiple output files, to allow:</dd>
 <dl>
-<dt><code>Splitting one input file &#8211; put each molecule into consecutively</code></p>
-<dd> numbered output files</p>
-<dt><code>Batch conversion &#8211; convert each of multiple input files into a</code></p>
-<dd> specified output format</dl>
-<dt><code>-l </code><i>file &#8230;</i></p>
-<dd> For multiple entry input, stop import with molecule # as the last entry</p>
-<dt><code>-o </code><i>format-ID</i></p>
-<dd> Specifies output format, see below for the available formats</p>
-<dt><code>-O </code><i>outfile</i></p>
-<dd> Specify the output file. This option applies to <code>obabel</code> only.</p>
-<dt><code>-p</code></p>
-<dd> Add Hydrogens appropriate for pH (use transforms in phmodel.txt)</p>
-<dt><code>&#8211;property </code></p>
-<dd> Add or replace a property (e.g., in an MDL SD file)</p>
-<dt><code>-s </code><i>SMARTS</i></p>
-<dd> Convert only molecules matching the SMARTS pattern specified</p>
-<dt><code>&#8211;separate</code></p>
-<dd> Separate disconnected fragments into individual molecular records</p>
-<dt><code>-t</code></p>
-<dd> All input files describe a single molecule</p>
-<dt><code>&#8211;title </code><i>title</i></p>
-<dd> Add or replace molecular title</p>
-<dt><code>-x </code><i>options</i></p>
-<dd> Format-specific output options. See &#8211;<code>H </code><i>format-ID</i> for options allowed by a particular format</p>
-<dt><code>-v </code><i>SMARTS</i></p>
-<dd> Convert only molecules <code>NOT</code> matching SMARTS pattern specified</p>
-<dt><code>-V</code></p>
-<dd> Output version number and exit</p>
-<dt><code>-z</code></p>
-<dd> Compress the output with gzip</dl>
+<dt><code>Splitting one input file &#8211; put each molecule into consecutively</code></dt>
+<dd> numbered output files</dd>
+<dt><code>Batch conversion &#8211; convert each of multiple input files into a</code></dt>
+<dd> specified output format</dd></dl>
+<dt><code>-l </code><i>file &#8230;</i></dt>
+<dd> For multiple entry input, stop import with molecule # as the last entry</dd>
+<dt><code>-o </code><i>format-ID</i></dt>
+<dd> Specifies output format, see below for the available formats</dd>
+<dt><code>-O </code><i>outfile</i></dt>
+<dd> Specify the output file. This option applies to <code>obabel</code> only.</dd>
+<dt><code>-p</code></dt>
+<dd> Add Hydrogens appropriate for pH (use transforms in phmodel.txt)</dd>
+<dt><code>&#8211;property </code></dt>
+<dd> Add or replace a property (e.g., in an MDL SD file)</dd>
+<dt><code>-s </code><i>SMARTS</i></dt>
+<dd> Convert only molecules matching the SMARTS pattern specified</dd>
+<dt><code>&#8211;separate</code></dt>
+<dd> Separate disconnected fragments into individual molecular records</dd>
+<dt><code>-t</code></dt>
+<dd> All input files describe a single molecule</dd>
+<dt><code>&#8211;title </code><i>title</i></dt>
+<dd> Add or replace molecular title</dd>
+<dt><code>-x </code><i>options</i></dt>
+<dd> Format-specific output options. See &#8211;<code>H </code><i>format-ID</i> for options allowed by a particular format</dd>
+<dt><code>-v </code><i>SMARTS</i></dt>
+<dd> Convert only molecules <code>NOT</code> matching SMARTS pattern specified</dd>
+<dt><code>-V</code></dt>
+<dd> Output version number and exit</dd>
+<dt><code>-z</code></dt>
+<dd> Compress the output with gzip</dd></dl>
 <h2>FILE FORMATS</h2>
 <p> The following formats are currently supported by Open Babel:</p>
 <dl>
-<dt><code>acr &#8212; Carine ASCI Crystal</code></p>
+<dt><code>acr &#8212; Carine ASCI Crystal</code></dt>
 <dd>
-<dt><code>alc &#8212; Alchemy format</code></p>
+</dd><dt><code>alc &#8212; Alchemy format</code></dt>
 <dd>
-<dt><code>arc &#8212; Accelrys/MSI Biosym/Insight II CAR format [Read-only]</code></p>
+</dd><dt><code>arc &#8212; Accelrys/MSI Biosym/Insight II CAR format [Read-only]</code></dt>
 <dd>
-<dt><code>bgf &#8212; MSI BGF format</code></p>
+</dd><dt><code>bgf &#8212; MSI BGF format</code></dt>
 <dd>
-<dt><code>box &#8212; Dock 3.5 Box format</code></p>
+</dd><dt><code>box &#8212; Dock 3.5 Box format</code></dt>
 <dd>
-<dt><code>bs &#8212; Ball and Stick format</code></p>
+</dd><dt><code>bs &#8212; Ball and Stick format</code></dt>
 <dd>
-<dt><code>c3d1 &#8212; Chem3D Cartesian 1 format</code></p>
+</dd><dt><code>c3d1 &#8212; Chem3D Cartesian 1 format</code></dt>
 <dd>
-<dt><code>c3d2 &#8212; Chem3D Cartesian 2 format</code></p>
+</dd><dt><code>c3d2 &#8212; Chem3D Cartesian 2 format</code></dt>
 <dd>
-<dt><code>caccrt &#8212; Cacao Cartesian format</code></p>
+</dd><dt><code>caccrt &#8212; Cacao Cartesian format</code></dt>
 <dd>
-<dt><code>cache &#8212; CAChe MolStruct format [Write-only]</code></p>
+</dd><dt><code>cache &#8212; CAChe MolStruct format [Write-only]</code></dt>
 <dd>
-<dt><code>cacint &#8212; Cacao Internal format [Write-only]</code></p>
+</dd><dt><code>cacint &#8212; Cacao Internal format [Write-only]</code></dt>
 <dd>
-<dt><code>can &#8212; Canonical SMILES format</code></p>
+</dd><dt><code>can &#8212; Canonical SMILES format</code></dt>
 <dd>
-<dt><code>car &#8212; Accelrys/MSI Biosym/Insight II CAR format [Read-only]</code></p>
+</dd><dt><code>car &#8212; Accelrys/MSI Biosym/Insight II CAR format [Read-only]</code></dt>
 <dd>
-<dt><code>ccc &#8212; CCC format [Read-only]</code></p>
+</dd><dt><code>ccc &#8212; CCC format [Read-only]</code></dt>
 <dd>
-<dt><code>cdx &#8212; ChemDraw binary format [Read-only]</code></p>
+</dd><dt><code>cdx &#8212; ChemDraw binary format [Read-only]</code></dt>
 <dd>
-<dt><code>cdxml &#8212; ChemDraw CDXML format</code></p>
+</dd><dt><code>cdxml &#8212; ChemDraw CDXML format</code></dt>
 <dd>
-<dt><code>cht &#8212; Chemtool format [Write-only]</code></p>
+</dd><dt><code>cht &#8212; Chemtool format [Write-only]</code></dt>
 <dd>
-<dt><code>cif &#8212; Crystallographic Information File</code></p>
+</dd><dt><code>cif &#8212; Crystallographic Information File</code></dt>
 <dd>
-<dt><code>cml &#8212; Chemical Markup Language</code></p>
+</dd><dt><code>cml &#8212; Chemical Markup Language</code></dt>
 <dd>
-<dt><code>cmlr &#8212; CML Reaction format</code></p>
+</dd><dt><code>cmlr &#8212; CML Reaction format</code></dt>
 <dd>
-<dt><code>com &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></p>
+</dd><dt><code>com &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></dt>
 <dd>
-<dt><code>copy &#8212; Copies raw text [Write-only]</code></p>
+</dd><dt><code>copy &#8212; Copies raw text [Write-only]</code></dt>
 <dd>
-<dt><code>crk2d &#8212; Chemical Resource Kit 2D diagram format</code></p>
+</dd><dt><code>crk2d &#8212; Chemical Resource Kit 2D diagram format</code></dt>
 <dd>
-<dt><code>crk3d &#8212; Chemical Resource Kit 3D format</code></p>
+</dd><dt><code>crk3d &#8212; Chemical Resource Kit 3D format</code></dt>
 <dd>
-<dt><code>csr &#8212; Accelrys/MSI Quanta CSR format [Write-only]</code></p>
+</dd><dt><code>csr &#8212; Accelrys/MSI Quanta CSR format [Write-only]</code></dt>
 <dd>
-<dt><code>cssr &#8212; CSD CSSR format [Write-only]</code></p>
+</dd><dt><code>cssr &#8212; CSD CSSR format [Write-only]</code></dt>
 <dd>
-<dt><code>ct &#8212; ChemDraw Connection Table format </code></p>
+</dd><dt><code>ct &#8212; ChemDraw Connection Table format </code></dt>
 <dd>
-<dt><code>dmol &#8212; DMol3 coordinates format</code></p>
+</dd><dt><code>dmol &#8212; DMol3 coordinates format</code></dt>
 <dd>
-<dt><code>ent &#8212; Protein Data Bank format</code></p>
+</dd><dt><code>ent &#8212; Protein Data Bank format</code></dt>
 <dd>
-<dt><code>fa &#8212; FASTA format [Write-only]</code></p>
+</dd><dt><code>fa &#8212; FASTA format [Write-only]</code></dt>
 <dd>
-<dt><code>fasta &#8212; FASTA format [Write-only]</code></p>
+</dd><dt><code>fasta &#8212; FASTA format [Write-only]</code></dt>
 <dd>
-<dt><code>fch &#8212; Gaussian formatted checkpoint file format [Read-only]</code></p>
+</dd><dt><code>fch &#8212; Gaussian formatted checkpoint file format [Read-only]</code></dt>
 <dd>
-<dt><code>fchk &#8212; Gaussian formatted checkpoint file format [Read-only]</code></p>
+</dd><dt><code>fchk &#8212; Gaussian formatted checkpoint file format [Read-only]</code></dt>
 <dd>
-<dt><code>fck &#8212; Gaussian formatted checkpoint file format [Read-only]</code></p>
+</dd><dt><code>fck &#8212; Gaussian formatted checkpoint file format [Read-only]</code></dt>
 <dd>
-<dt><code>feat &#8212; Feature format</code></p>
+</dd><dt><code>feat &#8212; Feature format</code></dt>
 <dd>
-<dt><code>fh &#8212; Fenske-Hall Z-Matrix format [Write-only]</code></p>
+</dd><dt><code>fh &#8212; Fenske-Hall Z-Matrix format [Write-only]</code></dt>
 <dd>
-<dt><code>fix &#8212; SMILES FIX format [Write-only]</code></p>
+</dd><dt><code>fix &#8212; SMILES FIX format [Write-only]</code></dt>
 <dd>
-<dt><code>fpt &#8212; Fingerprint format [Write-only]</code></p>
+</dd><dt><code>fpt &#8212; Fingerprint format [Write-only]</code></dt>
 <dd>
-<dt><code>fract &#8212; Free Form Fractional format</code></p>
+</dd><dt><code>fract &#8212; Free Form Fractional format</code></dt>
 <dd>
-<dt><code>fs &#8212; Open Babel FastSearching database</code></p>
+</dd><dt><code>fs &#8212; Open Babel FastSearching database</code></dt>
 <dd>
-<dt><code>fsa &#8212; FASTA format [Write-only]</code></p>
+</dd><dt><code>fsa &#8212; FASTA format [Write-only]</code></dt>
 <dd>
-<dt><code>g03 &#8212; Gaussian 98/03 Output [Read-only]</code></p>
+</dd><dt><code>g03 &#8212; Gaussian 98/03 Output [Read-only]</code></dt>
 <dd>
-<dt><code>g98 &#8212; Gaussian 98/03 Output [Read-only]</code></p>
+</dd><dt><code>g98 &#8212; Gaussian 98/03 Output [Read-only]</code></dt>
 <dd>
-<dt><code>gam &#8212; GAMESS Output [Read-only]</code></p>
+</dd><dt><code>gam &#8212; GAMESS Output [Read-only]</code></dt>
 <dd>
-<dt><code>gamin &#8212; GAMESS Input [Write-only]</code></p>
+</dd><dt><code>gamin &#8212; GAMESS Input [Write-only]</code></dt>
 <dd>
-<dt><code>gamout &#8212; GAMESS Output [Read-only]</code></p>
+</dd><dt><code>gamout &#8212; GAMESS Output [Read-only]</code></dt>
 <dd>
-<dt><code>gau &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></p>
+</dd><dt><code>gau &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></dt>
 <dd>
-<dt><code>gjc &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></p>
+</dd><dt><code>gjc &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></dt>
 <dd>
-<dt><code>gjf &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></p>
+</dd><dt><code>gjf &#8212; Gaussian 98/03 Cartesian Input [Write-only]</code></dt>
 <dd>
-<dt><code>gpr &#8212; Ghemical format</code></p>
+</dd><dt><code>gpr &#8212; Ghemical format</code></dt>
 <dd>
-<dt><code>gr96 &#8212; GROMOS96 format [Write-only]</code></p>
+</dd><dt><code>gr96 &#8212; GROMOS96 format [Write-only]</code></dt>
 <dd>
-<dt><code>hin &#8212; HyperChem HIN format</code></p>
+</dd><dt><code>hin &#8212; HyperChem HIN format</code></dt>
 <dd>
-<dt><code>inchi &#8212; IUPAC InChI [Write-only]</code></p>
+</dd><dt><code>inchi &#8212; IUPAC InChI [Write-only]</code></dt>
 <dd>
-<dt><code>inp &#8212; GAMESS Input [Write-only]</code></p>
+</dd><dt><code>inp &#8212; GAMESS Input [Write-only]</code></dt>
 <dd>
-<dt><code>ins &#8212; ShelX format [Read-only]</code></p>
+</dd><dt><code>ins &#8212; ShelX format [Read-only]</code></dt>
 <dd>
-<dt><code>jin &#8212; Jaguar input format [Write-only]</code></p>
+</dd><dt><code>jin &#8212; Jaguar input format [Write-only]</code></dt>
 <dd>
-<dt><code>jout &#8212; Jaguar output format [Read-only]</code></p>
+</dd><dt><code>jout &#8212; Jaguar output format [Read-only]</code></dt>
 <dd>
-<dt><code>mdl &#8212; MDL MOL format</code></p>
+</dd><dt><code>mdl &#8212; MDL MOL format</code></dt>
 <dd>
-<dt><code>mmd &#8212; MacroModel format</code></p>
+</dd><dt><code>mmd &#8212; MacroModel format</code></dt>
 <dd>
-<dt><code>mmod &#8212; MacroModel format</code></p>
+</dd><dt><code>mmod &#8212; MacroModel format</code></dt>
 <dd>
-<dt><code>mol &#8212; MDL MOL format</code></p>
+</dd><dt><code>mol &#8212; MDL MOL format</code></dt>
 <dd>
-<dt><code>mol2 &#8212; Sybyl Mol2 format</code></p>
+</dd><dt><code>mol2 &#8212; Sybyl Mol2 format</code></dt>
 <dd>
-<dt><code>molreport &#8212; Open Babel molecule report [Write-only]</code></p>
+</dd><dt><code>molreport &#8212; Open Babel molecule report [Write-only]</code></dt>
 <dd>
-<dt><code>moo &#8212; MOPAC Output format [Read-only]</code></p>
+</dd><dt><code>moo &#8212; MOPAC Output format [Read-only]</code></dt>
 <dd>
-<dt><code>mop &#8212; MOPAC Cartesian format</code></p>
+</dd><dt><code>mop &#8212; MOPAC Cartesian format</code></dt>
 <dd>
-<dt><code>mopcrt &#8212; MOPAC Cartesian format</code></p>
+</dd><dt><code>mopcrt &#8212; MOPAC Cartesian format</code></dt>
 <dd>
-<dt><code>mopin &#8212; MOPAC Internal</code></p>
+</dd><dt><code>mopin &#8212; MOPAC Internal</code></dt>
 <dd>
-<dt><code>mopout &#8212; MOPAC Output format [Read-only]</code></p>
+</dd><dt><code>mopout &#8212; MOPAC Output format [Read-only]</code></dt>
 <dd>
-<dt><code>mpc &#8212; MOPAC Cartesian format</code></p>
+</dd><dt><code>mpc &#8212; MOPAC Cartesian format</code></dt>
 <dd>
-<dt><code>mpd &#8212; Sybyl descriptor format [Write-only]</code></p>
+</dd><dt><code>mpd &#8212; Sybyl descriptor format [Write-only]</code></dt>
 <dd>
-<dt><code>mpqc &#8212; MPQC output format [Read-only]</code></p>
+</dd><dt><code>mpqc &#8212; MPQC output format [Read-only]</code></dt>
 <dd>
-<dt><code>mpqcin &#8212; MPQC simplified input format [Write-only]</code></p>
+</dd><dt><code>mpqcin &#8212; MPQC simplified input format [Write-only]</code></dt>
 <dd>
-<dt><code>nw &#8212; NWChem input format [Write-only]</code></p>
+</dd><dt><code>nw &#8212; NWChem input format [Write-only]</code></dt>
 <dd>
-<dt><code>nwo &#8212; NWChem output format [Read-only]</code></p>
+</dd><dt><code>nwo &#8212; NWChem output format [Read-only]</code></dt>
 <dd>
-<dt><code>pc &#8212; PubChem format [Read-only]</code></p>
+</dd><dt><code>pc &#8212; PubChem format [Read-only]</code></dt>
 <dd>
-<dt><code>pcm &#8212; PCModel format</code></p>
+</dd><dt><code>pcm &#8212; PCModel format</code></dt>
 <dd>
-<dt><code>pdb &#8212; Protein Data Bank format</code></p>
+</dd><dt><code>pdb &#8212; Protein Data Bank format</code></dt>
 <dd>
-<dt><code>pov &#8212; POV-Ray input format [Write-only]</code></p>
+</dd><dt><code>pov &#8212; POV-Ray input format [Write-only]</code></dt>
 <dd>
-<dt><code>pqs &#8212; Parallel Quantum Solutions format</code></p>
+</dd><dt><code>pqs &#8212; Parallel Quantum Solutions format</code></dt>
 <dd>
-<dt><code>prep &#8212; Amber Prep format [Read-only]</code></p>
+</dd><dt><code>prep &#8212; Amber Prep format [Read-only]</code></dt>
 <dd>
-<dt><code>qcin &#8212; Q-Chem input format [Write-only]</code></p>
+</dd><dt><code>qcin &#8212; Q-Chem input format [Write-only]</code></dt>
 <dd>
-<dt><code>qcout &#8212; Q-Chem output format [Read-only]</code></p>
+</dd><dt><code>qcout &#8212; Q-Chem output format [Read-only]</code></dt>
 <dd>
-<dt><code>report &#8212; Open Babel report format [Write-only]</code></p>
+</dd><dt><code>report &#8212; Open Babel report format [Write-only]</code></dt>
 <dd>
-<dt><code>res &#8212; ShelX format [Read-only]</code></p>
+</dd><dt><code>res &#8212; ShelX format [Read-only]</code></dt>
 <dd>
-<dt><code>rxn &#8212; MDL RXN format</code></p>
+</dd><dt><code>rxn &#8212; MDL RXN format</code></dt>
 <dd>
-<dt><code>sd &#8212; MDL MOL format</code></p>
+</dd><dt><code>sd &#8212; MDL MOL format</code></dt>
 <dd>
-<dt><code>sdf &#8212; MDL MOL format</code></p>
+</dd><dt><code>sdf &#8212; MDL MOL format</code></dt>
 <dd>
-<dt><code>smi &#8212; SMILES format</code></p>
+</dd><dt><code>smi &#8212; SMILES format</code></dt>
 <dd>
-<dt><code>sy2 &#8212; Sybyl Mol2 format</code></p>
+</dd><dt><code>sy2 &#8212; Sybyl Mol2 format</code></dt>
 <dd>
-<dt><code>tdd &#8212; Thermo format</code></p>
+</dd><dt><code>tdd &#8212; Thermo format</code></dt>
 <dd>
-<dt><code>test &#8212; Test format [Write-only]</code></p>
+</dd><dt><code>test &#8212; Test format [Write-only]</code></dt>
 <dd>
-<dt><code>therm &#8212; Thermo format</code></p>
+</dd><dt><code>therm &#8212; Thermo format</code></dt>
 <dd>
-<dt><code>tmol &#8212; TurboMole Coordinate format</code></p>
+</dd><dt><code>tmol &#8212; TurboMole Coordinate format</code></dt>
 <dd>
-<dt><code>txyz &#8212; Tinker MM2 format [Write-only]</code></p>
+</dd><dt><code>txyz &#8212; Tinker MM2 format [Write-only]</code></dt>
 <dd>
-<dt><code>unixyz &#8212; UniChem XYZ format</code></p>
+</dd><dt><code>unixyz &#8212; UniChem XYZ format</code></dt>
 <dd>
-<dt><code>vmol &#8212; ViewMol format</code></p>
+</dd><dt><code>vmol &#8212; ViewMol format</code></dt>
 <dd>
-<dt><code>xed &#8212; XED format [Write-only]</code></p>
+</dd><dt><code>xed &#8212; XED format [Write-only]</code></dt>
 <dd>
-<dt><code>xml &#8212; General XML format [Read-only]</code></p>
+</dd><dt><code>xml &#8212; General XML format [Read-only]</code></dt>
 <dd>
-<dt><code>xyz &#8212; XYZ cartesian coordinates format</code></p>
+</dd><dt><code>xyz &#8212; XYZ cartesian coordinates format</code></dt>
 <dd>
-<dt><code>yob &#8212; YASARA.org YOB format</code></p>
+</dd><dt><code>yob &#8212; YASARA.org YOB format</code></dt>
 <dd>
-<dt><code>zin &#8212; ZINDO input format [Write-only]</code></p>
-<dd></dl>
+</dd><dt><code>zin &#8212; ZINDO input format [Write-only]</code></dt>
+<dd></dd></dl>
 <h2>FORMAT OPTIONS</h2>
 <p> Individual file formats may have additional formatting options. </p>
 <p> Input format options are preceded by &#8216;a&#8217;, e.g. -as </p>

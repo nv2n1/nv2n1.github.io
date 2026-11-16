@@ -15,47 +15,47 @@ description: "staprun – systemtap runtime"
 <h2>Options</h2>
 <p>The <i>staprun</i> program supports the following options. Any other option prints a list of supported options.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd>Verbose mode. The level of verbosity is also set in the <i>SYSTEMTAP_VERBOSE</i> environment variable.</p>
-<dt><code>-V</code></p>
-<dd>Print version number and exit.</p>
-<dt><code>-w</code></p>
-<dd>Suppress warnings from the script.</p>
-<dt><code>-u</code></p>
-<dd>Load the uprobes.ko module.</p>
-<dt><code>-c CMD</code></p>
-<dd>Command CMD will be run and the <i>staprun</i> program will exit when CMD does. The &#8216;_stp_target&#8217; variable will contain the pid for CMD.</p>
-<dt><code>-x PID</code></p>
-<dd>The &#8216;_stp_target&#8217; variable will be set to PID.</p>
-<dt><code>-o FILE</code></p>
-<dd>Send output to FILE. If the module uses bulk mode, the output will be in percpu files FILE_x(FILE_cpux in background and bulk mode) where &#8216;x&#8217; is the cpu number. This supports <a href="/docs/linux/man/3-strftime/">strftime</a>(3) formats for FILE.</p>
-<dt><code>-b BUFFER_SIZE</code></p>
-<dd>The systemtap module will specify a buffer size. Setting one here will override that value. The value should be an integer between 1 and 4095 which be assumed to be the buffer size in MB. That value will be per-cpu if bulk mode is used.</p>
-<dt><code>-L</code></p>
-<dd>Load module and start probes, then detach from the module leaving the probes running. The module can be attached to later by using the <code>-A</code> option.</p>
-<dt><code>-A</code></p>
-<dd>Attach to loaded systemtap module.</p>
-<dt><code>-C WHEN</code></p>
-<dd>Control coloring of error messages. WHEN must be either &quot;never&quot;, &quot;always&quot;, or &quot;auto&quot; (i.e. enable only if at a terminal). If the option is missing, then &quot;auto&quot; is assumed. Colors can be modified using the SYSTEMTAP_COLORS environment variable. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more information on syntax and behaviour.</p>
-<dt><code>-d</code></p>
-<dd>Delete a module. Only detached or unused modules the user has permission to access will be deleted. Use &quot;*&quot; (quoted) to delete all unused modules.</p>
-<dt><code>-D</code></p>
-<dd>Run staprun in background as a daemon and show it&#8217;s pid.</p>
-<dt><code>-R</code></p>
-<dd>Rename the module to a unique name before inserting it.</p>
-<dt><code>-r N:URI</code></p>
-<dd>Pass the given number and URI data to the tapset functions remote_id() and remote_uri().</p>
-<dt><code>-S</code><i> size[,N]</i></p>
-<dd>Sets the maximum size of output file and the maximum number of output files. If the size of output file will exceed <code>size</code> , systemtap switches output file to the next file. And if the number of output files exceed <code>N</code> , systemtap removes the oldest output file. You can omit the second argument.</p>
-<dt><code>-T timeout</code></p>
-<dd>Sets maximum time reader thread will wait before dumping trace buffer. Value is in ms, default is 200ms. Setting this to a high value decreases number of stapio wake-ups, allowing deeper sleep for embedded platforms. But it impacts interactivity on terminal as traces are dumped less often in case of low throughput. There is no interactivity or performance impact for high throughput as trace is dumped when buffer is full, before this timeout expires.</p>
-<dt><code>var1=val</code></p>
-<dd>Sets the value of global variable var1 to val. Global variables contained within a module are treated as module options and can be set from the staprun command line. </p>
+<dt><code>-v</code></dt>
+<dd>Verbose mode. The level of verbosity is also set in the <i>SYSTEMTAP_VERBOSE</i> environment variable.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version number and exit.</dd>
+<dt><code>-w</code></dt>
+<dd>Suppress warnings from the script.</dd>
+<dt><code>-u</code></dt>
+<dd>Load the uprobes.ko module.</dd>
+<dt><code>-c CMD</code></dt>
+<dd>Command CMD will be run and the <i>staprun</i> program will exit when CMD does. The &#8216;_stp_target&#8217; variable will contain the pid for CMD.</dd>
+<dt><code>-x PID</code></dt>
+<dd>The &#8216;_stp_target&#8217; variable will be set to PID.</dd>
+<dt><code>-o FILE</code></dt>
+<dd>Send output to FILE. If the module uses bulk mode, the output will be in percpu files FILE_x(FILE_cpux in background and bulk mode) where &#8216;x&#8217; is the cpu number. This supports <a href="/docs/linux/man/3-strftime/">strftime</a>(3) formats for FILE.</dd>
+<dt><code>-b BUFFER_SIZE</code></dt>
+<dd>The systemtap module will specify a buffer size. Setting one here will override that value. The value should be an integer between 1 and 4095 which be assumed to be the buffer size in MB. That value will be per-cpu if bulk mode is used.</dd>
+<dt><code>-L</code></dt>
+<dd>Load module and start probes, then detach from the module leaving the probes running. The module can be attached to later by using the <code>-A</code> option.</dd>
+<dt><code>-A</code></dt>
+<dd>Attach to loaded systemtap module.</dd>
+<dt><code>-C WHEN</code></dt>
+<dd>Control coloring of error messages. WHEN must be either &quot;never&quot;, &quot;always&quot;, or &quot;auto&quot; (i.e. enable only if at a terminal). If the option is missing, then &quot;auto&quot; is assumed. Colors can be modified using the SYSTEMTAP_COLORS environment variable. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more information on syntax and behaviour.</dd>
+<dt><code>-d</code></dt>
+<dd>Delete a module. Only detached or unused modules the user has permission to access will be deleted. Use &quot;*&quot; (quoted) to delete all unused modules.</dd>
+<dt><code>-D</code></dt>
+<dd>Run staprun in background as a daemon and show it&#8217;s pid.</dd>
+<dt><code>-R</code></dt>
+<dd>Rename the module to a unique name before inserting it.</dd>
+<dt><code>-r N:URI</code></dt>
+<dd>Pass the given number and URI data to the tapset functions remote_id() and remote_uri().</dd>
+<dt><code>-S</code><i> size[,N]</i></dt>
+<dd>Sets the maximum size of output file and the maximum number of output files. If the size of output file will exceed <code>size</code> , systemtap switches output file to the next file. And if the number of output files exceed <code>N</code> , systemtap removes the oldest output file. You can omit the second argument.</dd>
+<dt><code>-T timeout</code></dt>
+<dd>Sets maximum time reader thread will wait before dumping trace buffer. Value is in ms, default is 200ms. Setting this to a high value decreases number of stapio wake-ups, allowing deeper sleep for embedded platforms. But it impacts interactivity on terminal as traces are dumped less often in case of low throughput. There is no interactivity or performance impact for high throughput as trace is dumped when buffer is full, before this timeout expires.</dd>
+<dt><code>var1=val</code></dt>
+<dd>Sets the value of global variable var1 to val. Global variables contained within a module are treated as module options and can be set from the staprun command line. </dd>
 </dl>
 <h2>Arguments</h2>
 <p><code>MODULE</code> is either a module path or a module name. If it is a module name, the module will be looked for in the following directory (where &#8216;VERSION&#8217; is the output of &quot;uname -r&quot;):</p>
 <dl>
-<dd>/lib/modules/VERSION/systemtap</dl>
+<dd>/lib/modules/VERSION/systemtap</dd></dl>
 <p> Any additional arguments on the command line are passed to the module. One use of these additional module arguments is to set the value of global variables declared within the module. </p>
 <p> $ stap -p4 -m mod1 -e&nbsp;<wbr>&#8216;global var1=&quot;foo&quot;; probe begin{printf(&quot;%s
 &quot;, var1); exit()}&#8217; </p>
@@ -83,20 +83,20 @@ description: "staprun – systemtap runtime"
 <p>Systemtap, in the default kernel-module runtime mode, is an administrative tool. It exposes kernel internal data structures and potentially private user information. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for additional information on safety and security. </p>
 <p> To increase system security, users of systemtap must be root, or in the <i>staprun</i> group in order to execute this setuid <i>staprun</i> program. A user may select a particular privilege level with the stap <i>&#8211;privilege=</i> option, which <i>staprun</i> will later enforce.</p>
 <dl>
-<dt>stapdev</p>
-<dd>Members of the <i>stapdev</i> group can write and load script modules with root-equivalent privileges, without particular security constraints. (Many safety constraints remain.)</p>
-<dt>stapsys</p>
-<dd>Members of the <i>stapsys</i> group have almost all the privileges of <i>stapdev</i>, except for guru mode constructs.</p>
-<dt>staprun</p>
-<dd>Members only of the <i>stapusr</i> group may any-privileged modules placed into the /lib/modules/VERSION/systemtap by the system administrator.</p>
-<dt>staprun</p>
-<dd>Members only of the <i>stapusr</i> group may also write and load low-privilege script modules, which are normally limited to manipulating their own processes (and not the kernel nor other users&#8217; processes).</dl>
+<dt>stapdev</dt>
+<dd>Members of the <i>stapdev</i> group can write and load script modules with root-equivalent privileges, without particular security constraints. (Many safety constraints remain.)</dd>
+<dt>stapsys</dt>
+<dd>Members of the <i>stapsys</i> group have almost all the privileges of <i>stapdev</i>, except for guru mode constructs.</dd>
+<dt>staprun</dt>
+<dd>Members only of the <i>stapusr</i> group may any-privileged modules placed into the /lib/modules/VERSION/systemtap by the system administrator.</dd>
+<dt>staprun</dt>
+<dd>Members only of the <i>stapusr</i> group may also write and load low-privilege script modules, which are normally limited to manipulating their own processes (and not the kernel nor other users&#8217; processes).</dd></dl>
 <p> Part of the privilege enforcement mechanism may require using a stap-server and administrative trust in its cryptographic signer; see the <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8) manual page for a for more information. </p>
 <p> On a kernel with FIPS mode enabled, staprun normally refuses to attempt to load systemtap-generated kernel modules. This is because on some kernels, this results in a panic. If your kernel includes corrections such as linux commit #002c77a48b47, then you can force staprun to attempt module loads anyway, by setting the <code>STAP_FIPS_OVERRIDE</code> environment variable to any value.</p>
 <h2>Files</h2>
 <dl>
-<dt>/lib/modules/VERSION/systemtap</p>
-<dd>If MODULE is a module name, the module will be looked for in this directory. Users who are only in the <i>&#8216;stapusr&#8217;</i> group can install modules located in this directory. This directory must be owned by the root user and not be world writable. </p>
+<dt>/lib/modules/VERSION/systemtap</dt>
+<dd>If MODULE is a module name, the module will be looked for in this directory. Users who are only in the <i>&#8216;stapusr&#8217;</i> group can install modules located in this directory. This directory must be owned by the root user and not be world writable. </dd>
 </dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-stap/">stap</a></i>(1), <i>stapprobes</i>(3stap), <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8), <i><a href="/docs/linux/man/8-stapdyn/">stapdyn</a></i>(8), <i>stapex</i>(3stap) </p>

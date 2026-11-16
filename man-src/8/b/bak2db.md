@@ -15,16 +15,16 @@ description: "bak2db – Directory Server script for restoring a backup"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>archivedir</code></p>
-<dd>The directory of the archived database.</p>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-n</code> <i>Backend Name</i></p>
-<dd>The name of the LDBM database to restore. Example: userRoot</p>
-<dt><code>-q</code></p>
-<dd>Quiet mode. Reduces output of task.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>archivedir</code></dt>
+<dd>The directory of the archived database.</dd>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-n</code> <i>Backend Name</i></dt>
+<dd>The name of the LDBM database to restore. Example: userRoot</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet mode. Reduces output of task.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <p>bak2db /LDAP/backups/20130305/ -Z instance1 -n userRoot bak2db /LDAP/backups/20130305/ -n example </p>
 <h2>Diagnostics</h2>

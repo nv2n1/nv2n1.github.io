@@ -16,8 +16,8 @@ description: "cvtbatch – Convert Usenet batch files to INN format"
 <p> If the input file consists of a series of message-IDs, then use <code>grephistory</code> with the <code>-s</code> flag piped into <code>cvtbatch</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-w</code> <i>items</i></p>
-<dd>The <code>-w</code> flag specifies how each output line should be written. The items for this flag should be chosen from the <tt>&quot;W&quot;</tt> flag items as specified in <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). They may be chosen from the following set: </p>
+<dt><code>-w</code> <i>items</i></dt>
+<dd>The <code>-w</code> flag specifies how each output line should be written. The items for this flag should be chosen from the <tt>&quot;W&quot;</tt> flag items as specified in <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). They may be chosen from the following set: </dd>
 <pre> b Size of the article in bytes.
  f Storage API token of the article (same as &quot;n&quot;).
  m Article message-ID.
@@ -29,3 +29,4 @@ description: "cvtbatch – Convert Usenet batch files to INN format"
 <p> <tt>$Id:</tt> cvtbatch.pod 8776 2009-11-15 09:24:06Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-grephistory/">grephistory</a></i>(1), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). </p>
+</p>

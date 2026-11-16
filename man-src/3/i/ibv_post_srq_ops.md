@@ -55,7 +55,7 @@ struct ibv_ops_wr {
 <p> <code>ibv_create_srq_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Artemy Kovalyov &lt;artemyko [at] mellanox.com&gt;</p>
+<dt>Artemy Kovalyov &lt;artemyko [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

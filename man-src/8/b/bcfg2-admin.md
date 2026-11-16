@@ -15,98 +15,98 @@ description: "bcfg2-admin – Perform repository administration tasks"
 <h2>Options</h2>
 <p><code>-C &lt;config-file&gt;</code></p>
 <dl>
-<dd>Specify the location of the configuration file (if it is not in /etc/bcfg2.conf)</dl>
+<dd>Specify the location of the configuration file (if it is not in /etc/bcfg2.conf)</dd></dl>
 <h2>Modes</h2>
 <p><code>init</code></p>
 <dl>
-<dd>Initialize a new repository (interactive)</dl>
+<dd>Initialize a new repository (interactive)</dd></dl>
 <p> <code>client &lt;action&gt; &lt;client&gt; [attribute=value]</code></p>
 <dl>
-<dd>Add or remove clients from metadata</dl>
+<dd>Add or remove clients from metadata</dd></dl>
 <p> <code>query [g=group] [p=profile] [-f output-file] [-n] [-c]</code></p>
 <dl>
-<dd>Search for clients based on group or profile</dl>
+<dd>Search for clients based on group or profile</dd></dl>
 <p> <code>compare &lt;old&gt; &lt;new&gt;</code></p>
 <dl>
-<dd>Compare two client configurations. Can be used to verify consistent behavior between releases</dl>
+<dd>Compare two client configurations. Can be used to verify consistent behavior between releases</dd></dl>
 <p> <code>minestruct &lt;client&gt; [-f xml-file] [-g groups]</code></p>
 <dl>
-<dd>Build structure entries based on client statistics extra entries</dl>
+<dd>Build structure entries based on client statistics extra entries</dd></dl>
 <p> <code>pull &lt;client&gt; &lt;entry-type&gt; &lt;entry-name&gt;</code></p>
 <dl>
-<dd>Install configuration information into repo based on client bad entries</dl>
+<dd>Install configuration information into repo based on client bad entries</dd></dl>
 <p> <code>tidy</code></p>
 <dl>
-<dd>Remove unused files from repository</dl>
+<dd>Remove unused files from repository</dd></dl>
 <p> <code>viz [-h] [-b] [-k] [-o png-file] [-r]</code></p>
 <dl>
-<dd>Create a graphviz diagram of client, group and bundle information</dl>
+<dd>Create a graphviz diagram of client, group and bundle information</dd></dl>
 <h2>Client Options</h2>
 <p><code>mode</code></p>
 <dl>
-<dd>Add a client &#8216;add&#8217; or delete a client &#8216;del&#8217;</dl>
+<dd>Add a client &#8216;add&#8217; or delete a client &#8216;del&#8217;</dd></dl>
 <p> <code>client</code></p>
 <dl>
-<dd>Specify the client&#8217;s name</dl>
+<dd>Specify the client&#8217;s name</dd></dl>
 <p> <code>attribute=value</code></p>
 <dl>
-<dd>Set attribute values when adding a new client</dl>
+<dd>Set attribute values when adding a new client</dd></dl>
 <h2>Query Options</h2>
 <p><code>g=group</code></p>
 <dl>
-<dd>Specify a group to search within</dl>
+<dd>Specify a group to search within</dd></dl>
 <p> <code>p=profile</code></p>
 <dl>
-<dd>Specify a profile to search within</dl>
+<dd>Specify a profile to search within</dd></dl>
 <p> <code>-f &lt;output-file&gt;</code></p>
 <dl>
-<dd>Write the results of the query to a file</dl>
+<dd>Write the results of the query to a file</dd></dl>
 <p> <code>-n</code></p>
 <dl>
-<dd>Print the results, one on each line</dl>
+<dd>Print the results, one on each line</dd></dl>
 <p> <code>-c</code></p>
 <dl>
-<dd>Print the results, separated by commas</dl>
+<dd>Print the results, separated by commas</dd></dl>
 <h2>Compare Options</h2>
 <p><code>old</code></p>
 <dl>
-<dd>Specify the location of the old configuration file</dl>
+<dd>Specify the location of the old configuration file</dd></dl>
 <p> <code>new</code></p>
 <dl>
-<dd>Specify the location of the new configuration file</dl>
+<dd>Specify the location of the new configuration file</dd></dl>
 <h2>Minestruct Options</h2>
 <p><code>client</code></p>
 <dl>
-<dd>Client whose metadata is to be searched for extra entries</dl>
+<dd>Client whose metadata is to be searched for extra entries</dd></dl>
 <p> <code>-g &lt;groups&gt;</code></p>
 <dl>
-<dd>Hierarchy of groups in which to place the extra entries in</dl>
+<dd>Hierarchy of groups in which to place the extra entries in</dd></dl>
 <p> <code>-f &lt;xml-output-file&gt;</code></p>
 <dl>
-<dd>Specify the xml file in which to write the extra entries</dl>
+<dd>Specify the xml file in which to write the extra entries</dd></dl>
 <h2>Pull Options</h2>
 <p><code>client</code></p>
 <dl>
-<dd>Specify the name of the client to search for</dl>
+<dd>Specify the name of the client to search for</dd></dl>
 <p> <code>entry-type</code></p>
 <dl>
-<dd>Specify the type of the entry to pull</dl>
+<dd>Specify the type of the entry to pull</dd></dl>
 <p> <code>entry-name</code></p>
 <dl>
-<dd>Specify the name of the entry to pull</dl>
+<dd>Specify the name of the entry to pull</dd></dl>
 <h2>Viz Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Include hosts in diagram</dl>
+<dd>Include hosts in diagram</dd></dl>
 <p> <code>-b</code></p>
 <dl>
-<dd>Include bundles in diagram</dl>
+<dd>Include bundles in diagram</dd></dl>
 <p> <code>-o &lt;output file&gt;</code></p>
 <dl>
-<dd>Write to outfile file instead of stdout</dl>
+<dd>Write to outfile file instead of stdout</dd></dl>
 <p> <code>-r</code></p>
 <dl>
-<dd>Produce raw graphviz output</dl>
+<dd>Produce raw graphviz output</dd></dl>
 <p> <code>-k</code></p>
 <dl>
-<dd>Add a shape/color key</dl>
+<dd>Add a shape/color key</dd></dl>

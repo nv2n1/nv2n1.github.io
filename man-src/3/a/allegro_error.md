@@ -19,7 +19,6 @@ void abort_on_error(const char *message)
 {
     if (screen != NULL)
         set_gfx_mode(GFX_TEXT, 0, 0, 0, 0);
-
     allegro_message("%s.
 Last Allegro error `%s'
 ",

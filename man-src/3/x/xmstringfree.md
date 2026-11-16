@@ -15,7 +15,7 @@ description: "XmStringFree — A compound string function that conditionally dea
 <h2>Description</h2>
 <p><code>XmStringFree</code> conditionally recovers memory used by a compound string. Applications should call <code>XmStringFree</code> when the application no longer needs <i>string</i>.</p>
 <dl COMPACT>
-<dt><i>string</i></p>
-<dd>Specifies the compound string to be freed</dl>
+<dt><i>string</i></dt>
+<dd>Specifies the compound string to be freed</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmstringcreate/">XmStringCreate</a></code>(3).</p>

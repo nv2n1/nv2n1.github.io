@@ -14,16 +14,16 @@ description: "atd – run jobs queued for later execution"
 <p><code>atd</code> runs jobs queued by <code><a href="/docs/linux/man/1-at/">at</a>(1)</code>. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-l</code></p>
-<dd>Specifies a limiting load factor, over which batch jobs should not be run, instead of the compile-time choice of 0.8. For an SMP system with <i>n</i> CPUs, you will probably want to set this higher than <i>n-1.</i></p>
-<dt><code>-b</code></p>
-<dd>Specify the minimum interval in seconds between the start of two batch jobs (60 default).</p>
-<dt><code>-d</code></p>
-<dd>Debug; print error messages to standard error instead of using <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code>. This option also implies <code>-f</code>.</p>
-<dt><code>-f</code></p>
-<dd>Run <code>atd</code> in the foreground.</p>
-<dt><code>-s</code></p>
-<dd>Process the at/batch queue only once. This is primarily of use for compatibility with old versions of <code>at</code>; <code>atd -s</code> is equivalent to the old <code>atrun</code> command.</dl>
+<dt><code>-l</code></dt>
+<dd>Specifies a limiting load factor, over which batch jobs should not be run, instead of the compile-time choice of 0.8. For an SMP system with <i>n</i> CPUs, you will probably want to set this higher than <i>n-1.</i></dd>
+<dt><code>-b</code></dt>
+<dd>Specify the minimum interval in seconds between the start of two batch jobs (60 default).</dd>
+<dt><code>-d</code></dt>
+<dd>Debug; print error messages to standard error instead of using <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code>. This option also implies <code>-f</code>.</dd>
+<dt><code>-f</code></dt>
+<dd>Run <code>atd</code> in the foreground.</dd>
+<dt><code>-s</code></dt>
+<dd>Process the at/batch queue only once. This is primarily of use for compatibility with old versions of <code>at</code>; <code>atd -s</code> is equivalent to the old <code>atrun</code> command.</dd></dl>
 <h2>Warning</h2>
 <p><code>atd</code> won&#8217;t work if its spool directory is mounted via NFS even if <i>no_root_squash</i> is set.</p>
 <h2>Files</h2>

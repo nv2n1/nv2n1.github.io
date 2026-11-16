@@ -24,12 +24,12 @@ char *if_indextoname(unsigned int ifindex, char *ifname);
 <h2>ERRORS</h2>
 <p> <code>if_nametoindex</code>() may fail and set <i>errno</i> if:</p>
 <dl>
-<dt><code>ENODEV</code></p>
-<dd> No interface found with given name.</dl>
+<dt><code>ENODEV</code></dt>
+<dd> No interface found with given name.</dd></dl>
 <p> <code>if_indextoname</code>() may fail and set <i>errno</i> if:</p>
 <dl>
-<dt><code>ENXIO</code></p>
-<dd> No interface found for the index.</dl>
+<dt><code>ENXIO</code></dt>
+<dd> No interface found for the index.</dd></dl>
 <p> <code>if_nametoindex</code>() and <code>if_indextoname</code>() may also fail for any of the errors specified for <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2) or <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

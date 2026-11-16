@@ -17,22 +17,22 @@ description: "dpkg-distaddfile – add entries to debian/files"
 <p> The filename should be specified relative to the directory where <code>dpkg-genchanges</code> will expect to find the files, usually <code>..</code>, rather than being a pathname relative to the current directory when <code>dpkg-distaddfile</code> is run.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code><i>files-list-file</i></p>
-<dd> Read or write the list of files to be uploaded here, rather than using <code>debian/files</code>.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Show the usage message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version and exit.</dl>
+<dt><code>-f</code><i>files-list-file</i></dt>
+<dd> Read or write the list of files to be uploaded here, rather than using <code>debian/files</code>.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></p>
-<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</p>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></p>
-<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dl>
+<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
+<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>debian/files</code></p>
-<dd> The list of generated files which are part of the upload being prepared. <code>dpkg-distaddfile</code> can be used to add additional files.</dl>
+<dt><code>debian/files</code></dt>
+<dd> The list of generated files which are part of the upload being prepared. <code>dpkg-distaddfile</code> can be used to add additional files.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-src-files/">deb-src-files</a></code>(5). </p>
 <h2>Index</h2>

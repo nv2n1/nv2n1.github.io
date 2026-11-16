@@ -30,10 +30,10 @@ description: "sla_syamv.f –"
  &quot;symbolically&quot; zero components are not perturbed. A zero
  entry is considered &quot;symbolic&quot; if all multiplications involved
  in computing that entry have at least one zero multiplicand.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is INTEGER
  On entry, UPLO specifies whether the upper or lower
  triangular part of the array A is to be referenced as
@@ -93,13 +93,13 @@ description: "sla_syamv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -111,7 +111,8 @@ description: "sla_syamv.f –"
  Richard Hanson, Sandia National Labs.
  -- Modified for the absolute-value product, April 2006
  Jason Riedy, UC Berkeley</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 177 of file sla_syamv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

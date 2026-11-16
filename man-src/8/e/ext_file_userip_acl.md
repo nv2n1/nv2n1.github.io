@@ -16,20 +16,20 @@ description: "ext_file_userip_acl – Restrict users to certain IP addresses, us
 <p> It works by reading a pair composed by an IP address and an username on STDIN and matching it against a configuration file.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Write debug info to stderr.</p>
-<dt><code>-f file</code></p>
-<dd>Configuration <code>file </code> to load.</p>
-<dt><code>-h</code></p>
-<dd>Display the binary help and command line syntax info using stderr.</dl>
+<dt><code>-d</code></dt>
+<dd>Write debug info to stderr.</dd>
+<dt><code>-f file</code></dt>
+<dd>Configuration <code>file </code> to load.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the binary help and command line syntax info using stderr.</dd></dl>
 <h2>Configuration</h2>
 <p>The <code>squid.conf </code> configuration for the external ACL should be:</p>
 <dl>
-<dd><code>external_acl_type type-name %SRC %LOGIN /path/to/ext_file_userip_acl -f /path/to/config.file</code></dl>
+<dd><code>external_acl_type type-name %SRC %LOGIN /path/to/ext_file_userip_acl -f /path/to/config.file</code></dd></dl>
 <p> If the helper program finds a matching username/ip in the configuration file, it returns <code>OK</code> , otherwise it returns <code>ERR .</code> </p>
 <p> The configuration file format is as follows:</p>
 <dl>
-<dd>ip_addr[/netmask]<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>username|@group|ALL|NONE</dl>
+<dd>ip_addr[/netmask]<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>username|@group|ALL|NONE</dd></dl>
 <p> Where<br />
  <code>ip_addr </code> is a dotted quad format IP address, the <code>netmask</code> must be in dotted quad format too. </p>
 <p> When the second parameter is prefixed with an <code>@</code> , the program will lookup the <code>/etc/group</code> file entry for the specified username. </p>

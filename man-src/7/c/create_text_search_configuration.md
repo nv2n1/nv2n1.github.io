@@ -21,12 +21,12 @@ description: "CREATE TEXT SEARCH CONFIGURATION – define a new text search conf
 <p> Refer to in the documentation for further information.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the text search configuration to be created. The name can be schema-qualified.</p>
-<dt><i>parser_name</i></p>
-<dd>The name of the text search parser to use for this configuration.</p>
-<dt><i>source_config</i></p>
-<dd>The name of an existing text search configuration to copy.</dl>
+<dt><i>name</i></dt>
+<dd>The name of the text search configuration to be created. The name can be schema-qualified.</dd>
+<dt><i>parser_name</i></dt>
+<dd>The name of the text search parser to use for this configuration.</dd>
+<dt><i>source_config</i></dt>
+<dd>The name of an existing text search configuration to copy.</dd></dl>
 <h2>Notes</h2>
 <p>The PARSER and COPY options are mutually exclusive, because when an existing configuration is copied, its parser selection is copied too.</p>
 <h2>Compatibility</h2>

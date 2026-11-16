@@ -15,19 +15,19 @@ snd_soc_dai_set_sysclk - configure DAI system or master clock.
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>clk_id</i>
-<dl><dd>DAI specific clock ID</dl>
+<dl><dd>DAI specific clock ID</dd></dl>
  
 
  <i>freq</i>
-<dl><dd>new clock frequency in Hz</dl>
+<dl><dd>new clock frequency in Hz</dd></dl>
  
 
  <i>dir</i>
-<dl><dd>new clock direction - input/output.</dl>
+<dl><dd>new clock direction - input/output.</dd></dl>
 
 <h2>Description</h2>
 

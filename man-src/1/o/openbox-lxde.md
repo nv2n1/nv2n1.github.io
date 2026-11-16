@@ -11,9 +11,9 @@ description: "openbox-lxde – wrapper to run openbox for LXDE"
 <p> openbox-lxde &#8211; wrapper to run openbox for LXDE </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>openbox-lxde</code></dl>
+<dt> <code>openbox-lxde</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This manual page documents briefly the <code>openbox-lxde</code> command. </p>
+<dd>This manual page documents briefly the <code>openbox-lxde</code> command. </dd>
 <p> <code>openbox-lxde</code> is a wrapper script which runs openbox with LXDE specific config file.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by paulliu grandpaul [at] gmail.com for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>
@@ -23,7 +23,7 @@ description: "openbox-lxde – wrapper to run openbox for LXDE"
 <p> <code>Ying-Chun Liu</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> CopyrightCopyright &#169; 2008 paulliu </p>
 <h2>Index</h2>

@@ -16,34 +16,34 @@ description: "getmail – retrieve messages from one or more POP3, IMAP4, or SDP
 <p> getmail has built-in support for delivering to maildirs, mboxrd-format mbox files, and external MDAs.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program&#8217;s version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show a short usage summary and exit</p>
-<dt><code>-g</code><i>DIR</i>, <code>&#8211;getmaildir</code>=<i>DIR</i></p>
-<dd> look in DIR for config/data files</p>
-<dt><code>-r</code><i>FILE</i>, <code>&#8211;rcfile</code>=<i>FILE</i></p>
-<dd> load configuration from FILE (may be given multiple times)</p>
-<dt><code>&#8211;dump</code></p>
-<dd> dump configuration and exit (debugging)</p>
-<dt><code>&#8211;trace</code></p>
-<dd> print extended trace information (extremely verbose)</p>
-<dt><code>-i</code><i>FOLDER</i>, <code>&#8211;idle</code>=<i>FOLDER</i></p>
-<dd> maintain connection and listen for new messages in <i>FOLDER</i>. This flag will only work if a single rc file is given, and will only work on IMAP connections where the server supports IMAP4 IDLE (RFC 2177).</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show a short usage summary and exit</dd>
+<dt><code>-g</code><i>DIR</i>, <code>&#8211;getmaildir</code>=<i>DIR</i></dt>
+<dd> look in DIR for config/data files</dd>
+<dt><code>-r</code><i>FILE</i>, <code>&#8211;rcfile</code>=<i>FILE</i></dt>
+<dd> load configuration from FILE (may be given multiple times)</dd>
+<dt><code>&#8211;dump</code></dt>
+<dd> dump configuration and exit (debugging)</dd>
+<dt><code>&#8211;trace</code></dt>
+<dd> print extended trace information (extremely verbose)</dd>
+<dt><code>-i</code><i>FOLDER</i>, <code>&#8211;idle</code>=<i>FOLDER</i></dt>
+<dd> maintain connection and listen for new messages in <i>FOLDER</i>. This flag will only work if a single rc file is given, and will only work on IMAP connections where the server supports IMAP4 IDLE (RFC 2177).</dd></dl>
 <p> The following options override any in the configuration file(s).</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> operate more verbosely (can be given multiple times)</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> do not print informational messages</p>
-<dt><code>-d</code>, <code>&#8211;delete</code></p>
-<dd> delete messages from server after retrieving</p>
-<dt><code>-l</code>, <code>&#8211;dont-delete</code></p>
-<dd> do not delete messages from server after retrieving</p>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> retrieve all messages</p>
-<dt><code>-n</code>, <code>&#8211;new</code></p>
-<dd> retrieve only unread messages</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> operate more verbosely (can be given multiple times)</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> do not print informational messages</dd>
+<dt><code>-d</code>, <code>&#8211;delete</code></dt>
+<dd> delete messages from server after retrieving</dd>
+<dt><code>-l</code>, <code>&#8211;dont-delete</code></dt>
+<dd> do not delete messages from server after retrieving</dd>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> retrieve all messages</dd>
+<dt><code>-n</code>, <code>&#8211;new</code></dt>
+<dd> retrieve only unread messages</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Charles Cazabon.</p>
 <h2>REPORTING BUGS</h2>

@@ -12,12 +12,9 @@ std::experimental::get_underlying - std::experimental::get_underlying
 
 <pre><code>template &lt;class T&gt;
 (library fundamentals TS v2)
-
     constexpr T &amp;get_underlying(propagate_const&lt;T&gt; &amp;pt) noexcept;
-
 template &lt;class T&gt;
 (library fundamentals TS v2)
-
     constexpr const T &amp;get_underlying(const propagate_const&lt;T&gt; &amp;pt) noexcept;</code></pre> 
 Retrieves a reference to the pointer-like object stored in a propagate_const. 
 

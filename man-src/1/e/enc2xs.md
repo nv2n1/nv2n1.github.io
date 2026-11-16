@@ -20,14 +20,14 @@ description: "enc2xs — Perl Encode Module Generator"
 <h2>Quick Guide</h2>
 <p> If you want to know as little about Perl as possible but need to add a new encoding, just read this chapter and forget the rest.</p>
 <dl>
-<dt>0.</p>
-<dd> Have a .ucm file ready. You can get it from somewhere or you can write your own from scratch or you can grab one from the Encode distribution and customize it. For the <font SIZE="-1">UCM</font> format, see the next Chapter. In the example below, I&#8217;ll call my theoretical encoding myascii, defined in <i>my.ucm</i>. <tt>&quot;$&quot;</tt> is a shell prompt. </p>
+<dt>0.</dt>
+<dd> Have a .ucm file ready. You can get it from somewhere or you can write your own from scratch or you can grab one from the Encode distribution and customize it. For the <font SIZE="-1">UCM</font> format, see the next Chapter. In the example below, I&#8217;ll call my theoretical encoding myascii, defined in <i>my.ucm</i>. <tt>&quot;$&quot;</tt> is a shell prompt. </dd>
 <pre>
   $ ls -F
   my.ucm
 </pre>
-<dt>1.</p>
-<dd> Issue a command as follows; </p>
+<dt>1.</dt>
+<dd> Issue a command as follows; </dd>
 <pre>
   $ enc2xs -M My my.ucm
   generating Makefile.PL
@@ -47,11 +47,9 @@ description: "enc2xs — Perl Encode Module Generator"
   t/My.t      - test file
 </pre>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1.1.</p>
-<dd> If you want *.ucm installed together with the modules, do as follows; </p>
+<dt>1.1.</dt>
+<dd> If you want *.ucm installed together with the modules, do as follows; </dd>
 <pre>
   $ mkdir Encode
   $ mv *.ucm Encode
@@ -60,18 +58,17 @@ description: "enc2xs — Perl Encode Module Generator"
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>2.</p>
-<dd> Edit the files generated. You don&#8217;t have to if you have no time <font SIZE="-1">AND</font> no intention to give it to someone else. But it is a good idea to edit the pod and to add more tests.</p>
-<dt>3.</p>
-<dd> Now issue a command all Perl Mongers love: </p>
+</dl>
+<dt>2.</dt>
+<dd> Edit the files generated. You don&#8217;t have to if you have no time <font SIZE="-1">AND</font> no intention to give it to someone else. But it is a good idea to edit the pod and to add more tests.</dd>
+<dt>3.</dt>
+<dd> Now issue a command all Perl Mongers love: </dd>
 <pre>
   $ perl Makefile.PL
   Writing Makefile for Encode::My
 </pre>
-<dt>4.</p>
-<dd> Now all you have to do is make. </p>
+<dt>4.</dt>
+<dd> Now all you have to do is make. </dd>
 <pre>
   $ make
   cp My.pm blib/lib/Encode/My.pm
@@ -87,8 +84,8 @@ description: "enc2xs — Perl Encode Module Generator"
   $
 </pre>
 <p> The time it takes varies depending on how fast your machine is and how large your encoding is. Unless you are working on something big like euc-tw, it won&#8217;t take too long.</p>
-<dt>5.</p>
-<dd> You can &#8220;make install&#8221; already but you should test first. </p>
+<dt>5.</dt>
+<dd> You can &#8220;make install&#8221; already but you should test first. </dd>
 <pre><code>
 $ make test
     PERL_DL_NONLAZY = 1 / usr / local / bin / perl - Iblib / arch - Iblib / lib - e 'use Test::Harness  qw(&amp;runtests $verbose); \
@@ -98,10 +95,10 @@ $ make test
   Files=1, Tests=2,  0 wallclock secs
    ( 0.09 cusr + 0.01 csys = 0.09 CPU)
 </code></pre>
-<dt>6.</p>
-<dd> If you are content with the test result, just &#8220;make install&#8221;</p>
-<dt>7.</p>
-<dd> If you want to add your encoding to Encode&#8217;s demand-loading list (so you don&#8217;t have to &#8220;use Encode::YourEncoding&#8221;), run </p>
+<dt>6.</dt>
+<dd> If you are content with the test result, just &#8220;make install&#8221;</dd>
+<dt>7.</dt>
+<dd> If you want to add your encoding to Encode&#8217;s demand-loading list (so you don&#8217;t have to &#8220;use Encode::YourEncoding&#8221;), run </dd>
 <pre>
   enc2xs -C
 </pre>
@@ -121,3 +118,5 @@ $ make test
   #
   CHARMAP
   &lt;U0000&gt; 
+</p>
+</pre>

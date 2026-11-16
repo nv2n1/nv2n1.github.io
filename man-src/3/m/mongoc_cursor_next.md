@@ -14,11 +14,11 @@ mongoc_cursor_next (mongoc_cursor_t *cursor,
  const bson_t **bson);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>bson</code></p>
-<dd>A location for a <code>const bson_t *</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd>A location for a <code>const bson_t *</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall iterate the underlying cursor, setting <code>bson</code> to the next document. </p>
 <p> This function is a blocking function. </p>

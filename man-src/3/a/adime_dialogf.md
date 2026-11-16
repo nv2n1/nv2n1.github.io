@@ -83,7 +83,6 @@ int age = 20;
 int shoe_size = 40;
 int married = 0;
 char filename_buffer[1024] = "";
-
 adime_dialogf("Fill in personal data",
               ADIME_ALIGN_CENTRE, ADIME_ALIGN_CENTRE, 200,
               "Name%string[1024]"

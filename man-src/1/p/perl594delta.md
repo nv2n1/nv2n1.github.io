@@ -41,25 +41,25 @@ description: "perl594delta – what is new for perl v5.9.4"
 <p> <font SIZE="-1">MAD</font>, which stands for <i>Misc Attribute Decoration</i>, is a still-in-development work leading to a Perl 5 to Perl 6 converter. To enable it, it&#8217;s necessary to pass the argument <tt>&quot;-Dmad&quot;</tt> to Configure. The obtained perl isn&#8217;t binary compatible with a regular perl 5.9.4, and has space and speed penalties; moreover not all regression tests still pass with it. (Larry Wall, Nicholas Clark)</p>
 <h2>Modules and Pragmas</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;encoding::warnings&quot;</tt> is now a lexical pragma. (Although on older perls, which don&#8217;t have support for lexical pragmas, it keeps its global behaviour.) (Audrey Tang)</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;threads&quot;</tt> is now a dual-life module, also available on <font SIZE="-1">CPAN</font>. It has been expanded in many ways. A <i>kill()</i> method is available for thread signalling. One can get thread status, or the list of running or joinable threads. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;encoding::warnings&quot;</tt> is now a lexical pragma. (Although on older perls, which don&#8217;t have support for lexical pragmas, it keeps its global behaviour.) (Audrey Tang)</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;threads&quot;</tt> is now a dual-life module, also available on <font SIZE="-1">CPAN</font>. It has been expanded in many ways. A <i>kill()</i> method is available for thread signalling. One can get thread status, or the list of running or joinable threads. </dd>
 <p> A new <tt>&quot;threads-&gt;exit()&quot;</tt> method is used to exit from the application (this is the default for the main thread) or from the current thread only (this is the default for all other threads). On the other hand, the <i>exit()</i> built-in now always causes the whole application to terminate. (Jerry D. Hedden)</dl>
 <h3>New Core Modules</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Hash::Util::FieldHash&quot;</tt>, by Anno Siegel, has been added. This module provides support for <i>field hashes</i>: hashes that maintain an association of a reference with a value, in a thread-safe garbage-collected way. Such hashes are useful to implement inside-out objects.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Module::Build&quot;</tt>, by Ken Williams, has been added. It&#8217;s an alternative to <tt>&quot;ExtUtils::MakeMaker&quot;</tt> to build and install perl modules.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Module::Load&quot;</tt>, by Jos Boumans, has been added. It provides a single interface to load Perl modules and <i>.pl</i> files.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Module::Loaded&quot;</tt>, by Jos Boumans, has been added. It&#8217;s used to mark modules as loaded or unloaded.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Package::Constants&quot;</tt>, by Jos Boumans, has been added. It&#8217;s a simple helper to list all constants declared in a given package.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Win32API::File&quot;</tt>, by Tye McQueen, has been added (for Windows builds). This module provides low-level access to Win32 system <font SIZE="-1">API</font> calls for files/dirs.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Hash::Util::FieldHash&quot;</tt>, by Anno Siegel, has been added. This module provides support for <i>field hashes</i>: hashes that maintain an association of a reference with a value, in a thread-safe garbage-collected way. Such hashes are useful to implement inside-out objects.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Module::Build&quot;</tt>, by Ken Williams, has been added. It&#8217;s an alternative to <tt>&quot;ExtUtils::MakeMaker&quot;</tt> to build and install perl modules.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Module::Load&quot;</tt>, by Jos Boumans, has been added. It provides a single interface to load Perl modules and <i>.pl</i> files.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Module::Loaded&quot;</tt>, by Jos Boumans, has been added. It&#8217;s used to mark modules as loaded or unloaded.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Package::Constants&quot;</tt>, by Jos Boumans, has been added. It&#8217;s a simple helper to list all constants declared in a given package.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Win32API::File&quot;</tt>, by Tye McQueen, has been added (for Windows builds). This module provides low-level access to Win32 system <font SIZE="-1">API</font> calls for files/dirs.</dd></dl>
 <h2>Utility Changes</h2>
 <h3>config_data</h3>
 <p> <tt>&quot;config_data&quot;</tt> is a new utility that comes with <tt>&quot;Module::Build&quot;</tt>. It provides a command-line interface to the configuration of Perl modules that use Module::Build&#8217;s framework of configurability (that is, <tt>*::ConfigData</tt> modules that contain local configuration information for their parent modules.)</p>
@@ -77,15 +77,15 @@ description: "perl594delta – what is new for perl v5.9.4"
 <p> The <font SIZE="-1">UTF-8</font> caching code is now more efficient, and used more often. (Nicholas Clark)</p>
 <h3>Regular expressions</h3>
 <dl>
-<dt>Engine de-recursivised</p>
-<dd> The regular expression engine is no longer recursive, meaning that patterns that used to overflow the stack will either die with useful explanations, or run to completion, which, since they were able to blow the stack before, will likely take a very long time to happen. If you were experiencing the occasional stack overflow (or segfault) and upgrade to discover that now perl apparently hangs instead, look for a degenerate regex. (Dave Mitchell)</p>
-<dt>Single char char-classes treated as literals</p>
-<dd> Classes of a single character are now treated the same as if the character had been used as a literal, meaning that code that uses char-classes as an escaping mechanism will see a speedup. (Yves Orton)</p>
-<dt>Trie optimisation of literal string alternations</p>
-<dd> Alternations, where possible, are optimised into more efficient matching structures. String literal alternations are merged into a trie and are matched simultaneously. This means that instead of O(N) time for matching N alternations at a given point the new code performs in O(1) time. (Yves Orton) </p>
+<dt>Engine de-recursivised</dt>
+<dd> The regular expression engine is no longer recursive, meaning that patterns that used to overflow the stack will either die with useful explanations, or run to completion, which, since they were able to blow the stack before, will likely take a very long time to happen. If you were experiencing the occasional stack overflow (or segfault) and upgrade to discover that now perl apparently hangs instead, look for a degenerate regex. (Dave Mitchell)</dd>
+<dt>Single char char-classes treated as literals</dt>
+<dd> Classes of a single character are now treated the same as if the character had been used as a literal, meaning that code that uses char-classes as an escaping mechanism will see a speedup. (Yves Orton)</dd>
+<dt>Trie optimisation of literal string alternations</dt>
+<dd> Alternations, where possible, are optimised into more efficient matching structures. String literal alternations are merged into a trie and are matched simultaneously. This means that instead of O(N) time for matching N alternations at a given point the new code performs in O(1) time. (Yves Orton) </dd>
 <p> <code>Note:</code> Much code exists that works around perl&#8217;s historic poor performance on alternations. Often the tricks used to do so will disable the new optimisations. Hopefully the utility modules used for this purpose will be educated about these new optimisations by the time 5.10 is released.</p>
-<dt>Aho-Corasick start-point optimisation</p>
-<dd> When a pattern starts with a trie-able alternation and there aren&#8217;t better optimisations available the regex engine will use Aho-Corasick matching to find the start point. (Yves Orton)</dl>
+<dt>Aho-Corasick start-point optimisation</dt>
+<dd> When a pattern starts with a trie-able alternation and there aren&#8217;t better optimisations available the regex engine will use Aho-Corasick matching to find the start point. (Yves Orton)</dd></dl>
 <h3>Sloppy stat on Windows</h3>
 <p> On Windows, perl&#8217;s <i>stat()</i> function normally opens the file to determine the link count and update attributes that may have been changed through hard links. Setting ${^WIN32_SLOPPY_STAT} to a true value speeds up <i>stat()</i> by not performing this operation. (Jan Dubois)</p>
 <h2>Installation and Configuration Improvements</h2>
@@ -101,10 +101,10 @@ description: "perl594delta – what is new for perl v5.9.4"
 <p> The configuration process now detects whether <i>strlcat()</i> and <i>strlcpy()</i> are available. When they are not available, perl&#8217;s own version is used (from Russ Allbery&#8217;s public domain implementation). Various places in the perl interpreter now use them. (Steve Peters)</p>
 <h3>Windows build improvements</h3>
 <dl>
-<dt>Building <font SIZE="-1">XS</font> extensions</p>
-<dd> Support for building <font SIZE="-1">XS</font> extension modules with the free MinGW compiler has been improved in the case where perl itself was built with the Microsoft <font SIZE="-1">VC++</font> compiler. (ActiveState)</p>
-<dt>Support for 64-bit compiler</p>
-<dd> Support for building perl with Microsoft&#8217;s 64-bit compiler has been improved. (ActiveState)</dl>
+<dt>Building <font SIZE="-1">XS</font> extensions</dt>
+<dd> Support for building <font SIZE="-1">XS</font> extension modules with the free MinGW compiler has been improved in the case where perl itself was built with the Microsoft <font SIZE="-1">VC++</font> compiler. (ActiveState)</dd>
+<dt>Support for 64-bit compiler</dt>
+<dd> Support for building perl with Microsoft&#8217;s 64-bit compiler has been improved. (ActiveState)</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <h3><font SIZE="-1">PERL5SHELL</font> and tainting</h3>
 <p> On Windows, the <font SIZE="-1">PERL5SHELL</font> environment variable is now checked for taintedness. (Rafael Garcia-Suarez)</p>
@@ -120,8 +120,8 @@ description: "perl594delta – what is new for perl v5.9.4"
 <p> In previous versions, perl would read the file <i>/dev/urandom</i> if it existed when seeding its random number generator. That file is unlikely to exist on Windows, and if it did would probably not contain appropriate data, so perl no longer tries to read it on Windows. (Alex Davies)</p>
 <h2>New or Changed Diagnostics</h2>
 <dl>
-<dt>State variable %s will be reinitialized</p>
-<dd> One can assign initial values to state variables, but not when they&#8217;re declared as a sub-part of a list assignment. See perldiag.</dl>
+<dt>State variable %s will be reinitialized</dt>
+<dd> One can assign initial values to state variables, but not when they&#8217;re declared as a sub-part of a list assignment. See perldiag.</dd></dl>
 <h2>Changed Internals</h2>
 <p> A new file, <i>mathoms.c</i>, contains functions that aren&#8217;t used anymore in the perl core, but remain around because modules out there might still use them. They come from a factorization effort: for example, many <font SIZE="-1">PP</font> functions are now shared for several ops. </p>
 <p> The implementation of the special variables $^H and %^H has changed, to allow implementing lexical pragmas in pure perl.</p>
@@ -137,27 +137,27 @@ description: "perl594delta – what is new for perl v5.9.4"
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Core Enhancements</a></p>
+<dt><a href="#lbAI">Core Enhancements</a></dt>
 <dd>
-<dt><a href="#lbAO">Modules and Pragmas</a></p>
+</dd><dt><a href="#lbAO">Modules and Pragmas</a></dt>
 <dd>
-<dt><a href="#lbAQ">Utility Changes</a></p>
+</dd><dt><a href="#lbAQ">Utility Changes</a></dt>
 <dd>
-<dt><a href="#lbAS">Documentation</a></p>
+</dd><dt><a href="#lbAS">Documentation</a></dt>
 <dd>
-<dt><a href="#lbAW">Performance Enhancements</a></p>
+</dd><dt><a href="#lbAW">Performance Enhancements</a></dt>
 <dd>
-<dt><a href="#lbBB">Installation and Configuration Improvements</a></p>
+</dd><dt><a href="#lbBB">Installation and Configuration Improvements</a></dt>
 <dd>
-<dt><a href="#lbBH">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbBH">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbBO">New or Changed Diagnostics</a></p>
+</dd><dt><a href="#lbBO">New or Changed Diagnostics</a></dt>
 <dd>
-<dt><a href="#lbBP">Changed Internals</a></p>
+</dd><dt><a href="#lbBP">Changed Internals</a></dt>
 <dd>
-<dt><a href="#lbBQ">Known Problems</a></p>
+</dd><dt><a href="#lbBQ">Known Problems</a></dt>
 <dd>
-<dt><a href="#lbBR">Reporting Bugs</a></p>
+</dd><dt><a href="#lbBR">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbBS">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBS">SEE ALSO</a></dt>
+<dd></dd></dl>

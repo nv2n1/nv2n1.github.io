@@ -10,7 +10,6 @@ description: "pack_ungetc – Moves one single character back to the input buffe
 <p>pack_ungetc &#8211; Moves one single character back to the input buffer. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int pack_ungetc(int c, PACKFILE *f);</code></pre>
 <h2>Description</h2>
 <p>Puts a character back to the file&#8217;s input buffer. Like with ungetc from libc, only a single push back is guaranteed. </p>

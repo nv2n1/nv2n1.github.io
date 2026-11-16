@@ -11,17 +11,12 @@ description: "std::filesystem::file_status::file_status – std::filesystem::fil
 <h2>Synopsis</h2>
 <pre><code>file_status() noexcept
     : file_status(std::filesystem::file_type::none){}(1)(since C++ 17)
-
           file_status(const file_status &amp;) noexcept = default;
 (2)(since C++ 17)
-
     file_status(file_status &amp;&amp;) noexcept = default;
 (3)(since C++ 17)
-
     explicit file_status(
-
         std::filesystem::file_type type, (4)(since C++ 17)
-
                                              std::filesystem::perms permissions = std::filesystem::perms::unknown) noexcept;</code></pre>
 <p>Constructs a new file_status object.<br />
 1) Default constructor that calls <code>(4)</code> with std::filesystem::file_type::none.<br />

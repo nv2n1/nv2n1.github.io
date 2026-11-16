@@ -16,7 +16,7 @@ description: "sssd-sudo – Configuring sudo with the SSSD back end"
 <dl>
 <dd>
 <pre>sudoers: files sss</pre>
-</dl>
+</dd></dl>
 <p> More information about configuring the sudoers search order from the nsswitch.conf file as well as information about the LDAP schema that is used to store sudo rules in the directory can be found in <code><a href="/docs/linux/man/5-sudoers-ldap/">sudoers.ldap</a></code>(5). </p>
 <p> <i>Note</i>: in order to use netgroups or IPA hostgroups in sudo rules, you also need to correctly set <code><a href="/docs/linux/man/1-nisdomainname/">nisdomainname</a></code>(1) to your NIS domain name (which equals to IPA domain name when using hostgroups).</p>
 <h2>Configuring Sssd To Fetch Sudo Rules</h2>
@@ -33,7 +33,7 @@ id_provider = ldap
 sudo_provider = ldap
 ldap_uri = <a href="ldap://example.com">ldap://example.com</a>
 ldap_sudo_search_base = ou=sudoers,dc=example,dc=com</pre>
-</dl>
+</dd></dl>
 <p> It&#8217;s important to note that on platforms where systemd is supported there&#8217;s no need to add the &quot;sudo&quot; provider to the list of services, as it became optional. However, sssd-sudo.socket must be enabled instead. </p>
 <p> When SSSD is configured to use IPA as the ID provider, the sudo provider is automatically enabled. The sudo search base is configured to use the IPA native LDAP tree (cn=sudo,$SUFFIX). If any other search base is defined in sssd.conf, this value will be used instead. The compat tree (ou=sudoers,$SUFFIX) is no longer required for IPA sudo functionality.</p>
 <h2>The Sudo Rule Caching Mechanism</h2>
@@ -43,17 +43,17 @@ ldap_sudo_search_base = ou=sudoers,dc=example,dc=com</pre>
 <p> The <i>rules refresh</i> ensures that we do not grant the user more permission than defined. It is triggered each time the user runs sudo. Rules refresh will find all rules that apply to this user, check their expiration time and redownload them if expired. In the case that any of these rules are missing on the server, the SSSD will do an out of band full refresh because more rules (that apply to other users) may have been deleted. </p>
 <p> If enabled, SSSD will store only rules that can be applied to this machine. This means rules that contain one of the following values in <i>sudoHost</i> attribute: </p>
 <dl>
-<dd>&bull; keyword ALL</dl>
+<dd>&bull; keyword ALL</dd></dl>
 <dl>
-<dd>&bull; wildcard</dl>
+<dd>&bull; wildcard</dd></dl>
 <dl>
-<dd>&bull; netgroup (in the form &quot;+netgroup&quot;)</dl>
+<dd>&bull; netgroup (in the form &quot;+netgroup&quot;)</dd></dl>
 <dl>
-<dd>&bull; hostname or fully qualified domain name of this machine</dl>
+<dd>&bull; hostname or fully qualified domain name of this machine</dd></dl>
 <dl>
-<dd>&bull; one of the IP addresses of this machine</dl>
+<dd>&bull; one of the IP addresses of this machine</dd></dl>
 <dl>
-<dd>&bull; one of the IP addresses of the network (in the form &quot;address/mask&quot;)</dl>
+<dd>&bull; one of the IP addresses of the network (in the form &quot;address/mask&quot;)</dd></dl>
 <p> There are many configuration options that can be used to adjust the behavior. Please refer to &quot;ldap_sudo_*&quot; in <code><a href="/docs/linux/man/5-sssd-ldap/">sssd-ldap</a></code>(5) and &quot;sudo_*&quot; in <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sssd/">sssd</a></code>(8), <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ldap/">sssd-ldap</a></code>(5), <code><a href="/docs/linux/man/5-sssd-krb5/">sssd-krb5</a></code>(5), <code><a href="/docs/linux/man/5-sssd-simple/">sssd-simple</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ipa/">sssd-ipa</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ad/">sssd-ad</a></code>(5), <code><a href="/docs/linux/man/5-sssd-sudo/">sssd-sudo</a></code>(5),<code><a href="/docs/linux/man/5-sssd-secrets/">sssd-secrets</a></code>(5),<code><a href="/docs/linux/man/8-sss_cache/">sss_cache</a></code>(8), <code><a href="/docs/linux/man/8-sss_debuglevel/">sss_debuglevel</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupadd/">sss_groupadd</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupdel/">sss_groupdel</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupshow/">sss_groupshow</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupmod/">sss_groupmod</a></code>(8), <code><a href="/docs/linux/man/8-sss_useradd/">sss_useradd</a></code>(8), <code><a href="/docs/linux/man/8-sss_userdel/">sss_userdel</a></code>(8), <code><a href="/docs/linux/man/8-sss_usermod/">sss_usermod</a></code>(8), <code><a href="/docs/linux/man/8-sss_obfuscate/">sss_obfuscate</a></code>(8), <code><a href="/docs/linux/man/8-sss_seed/">sss_seed</a></code>(8), <code><a href="/docs/linux/man/8-sssd_krb5_locator_plugin/">sssd_krb5_locator_plugin</a></code>(8), <code>sss_ssh_authorizedkeys</code>(8), <code>sss_ssh_knownhostsproxy</code>(8),<code><a href="/docs/linux/man/5-sssd-ifp/">sssd-ifp</a></code>(5),<code><a href="/docs/linux/man/8-pam_sss/">pam_sss</a></code>(8). <code><a href="/docs/linux/man/5-sss_rpcidmapd/">sss_rpcidmapd</a></code>(5)</p>

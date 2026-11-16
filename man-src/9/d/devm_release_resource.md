@@ -14,10 +14,10 @@ description: "devm_release_resource – release a previously requested resource"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device for which to release the resource</dl>
+</dd><dd>device for which to release the resource</dd></dl>
 <p> <i>new</i></p>
 <dl>
-<dd>descriptor of the resource to release</dl>
+<dd>descriptor of the resource to release</dd></dl>
 <h2>Description</h2>
 <p>Releases a resource previously requested using <code>devm_request_resource</code>.</p>
 <h2>Copyright</h2>

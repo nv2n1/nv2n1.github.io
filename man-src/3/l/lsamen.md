@@ -19,7 +19,7 @@ description: "lsamen.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  LSAMEN  tests if the first N letters of CA are the same as the
  first N letters of CB, regardless of case.
@@ -27,11 +27,11 @@ description: "lsamen.f –"
  and .FALSE. otherwise.  LSAMEN also returns .FALSE. if LEN( CA )
  or LEN( CB ) is less than N.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The number of characters in CA and CB to be compared.
@@ -50,14 +50,14 @@ description: "lsamen.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 75 of file lsamen.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

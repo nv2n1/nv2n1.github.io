@@ -14,14 +14,14 @@ description: "DROP TEXT SEARCH TEMPLATE – remove a text search template"
 <p><code>DROP TEXT SEARCH TEMPLATE</code> drops an existing text search template. You must be a superuser to use this command.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the text search template does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing text search template.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the text search template.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the text search template if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the text search template does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing text search template.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the text search template.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the text search template if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Remove the text search template thesaurus: </p>
 <pre>DROP TEXT SEARCH TEMPLATE thesaurus;</pre>

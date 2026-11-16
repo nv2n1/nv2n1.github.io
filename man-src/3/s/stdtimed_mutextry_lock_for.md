@@ -12,7 +12,6 @@ std::timed_mutex::try_lock_for - std::timed_mutex::try_lock_for
 
 <pre><code>template &lt;class Rep, class Period&gt;
 (since C++ 11)
-
     bool try_lock_for(const std::chrono::duration&lt;Rep, Period&gt; &amp;timeout_duration);</code></pre> 
 Tries to lock the mutex. Blocks until specified timeout_duration has elapsed or the lock is acquired, whichever comes first. On successful lock acquisition returns true, otherwise returns false. 
 If timeout_duration is less or equal timeout_duration.zero(), the function behaves like try_lock(). 
@@ -37,19 +36,13 @@ Any exception thrown by clock, time_point, or duration during the execution (clo
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;mutex&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;sstream&gt;
 std::mutex cout_mutex; // control access to std::cout
-
 std::timed_mutex mutex;
 void job(int id)
-
 {
     using Ms = std::chrono::milliseconds;
     std::ostringstream stream;
@@ -67,7 +60,6 @@ void job(int id)
     std::cout &lt;&lt; &quot;[&quot; &lt;&lt; id &lt;&lt; &quot;] &quot; &lt;&lt; stream.str() &lt;&lt; &quot;\n&quot;;
 }
 int main()
-
 {
     std::vector&lt;std::thread&gt; threads;
     for (int i = 0; i &lt; 4; ++i) {

@@ -11,13 +11,13 @@ description: "XtCallAcceptFocus – calla widget’s accept_focus procedure"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>Boolean XtCallAcceptFocus(Widget <i>w</i>, Time *<i>time</i>);</dl>
+<dd>Boolean XtCallAcceptFocus(Widget <i>w</i>, Time *<i>time</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>time</i></p>
-<dd>Specifies the X time of the event that is causing the accept focus.</p>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>time</i></dt>
+<dd>Specifies the X time of the event that is causing the accept focus.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtCallAcceptFocus</code> function calls the specified widget&#8217;s accept_focus procedure, passing it the specified widget and time, and returns what the accept_focus procedure returns. If accept_focus is NULL, <code>XtCallAcceptFocus</code> returns <code>False</code>.</p>
 <h2>See Also</h2>

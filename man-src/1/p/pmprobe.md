@@ -21,18 +21,18 @@ description: "pmprobe – lightweight probe for performance metrics"
 <p> Normally <code>pmprobe</code> operates on the distributed Performance Metrics Name Space (PMNS), however, if the <code>-n</code> option is specified an alternative local PMNS file is loaded from the file <i>pmnsfile</i>. </p>
 <p> Other options control the output of additional information when one or more values is available.</p>
 <dl>
-<dt><code>-f</code></p>
-<dd> When used with <code>-i</code> or <code>-I</code> the set of instances reported will be all of those known at the source of the performance data. By default the set of reported instances are those for which values are currently available, which may be smaller than the set reported with <code>-f</code>.</p>
-<dt><code>-I</code></p>
-<dd> Report the external identifiers for each instance. The literal string <code>PM_IN_NULL</code> is reported for singular metrics.</p>
-<dt><code>-i</code></p>
-<dd> Report the internal identifiers for each instance. The values are in decimal and prefixed by &#8220;?&#8221;. As a special case, the literal string <code>PM_IN_NULL</code> is reported for singular metrics.</p>
-<dt><code>-K</code></p>
-<dd> When using the <code>-L</code> option to fetch metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code>__pmSpecLocalPMDA</code>(3). More than one <code>-K</code> option may be used.</p>
-<dt><code>-O</code></p>
-<dd> When used in conjunction with an archive source of metrics and the <code>-v</code> option the <i>time</i> argument defines a time origin at which the metrics should be fetched from the archive(s). Refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for a complete description of this option, and the syntax for the <i>time</i> argument.</p>
-<dt><code>-v</code></p>
-<dd> Report the value for each instance, as per the formatting rules of <code><a href="/docs/linux/man/3-pmprintvalue/">pmPrintValue</a></code>(3). When fetching from a set of archives, only those instances present in the first archive record for a metric will be displayed; see also the <code>-O</code> option.</dl>
+<dt><code>-f</code></dt>
+<dd> When used with <code>-i</code> or <code>-I</code> the set of instances reported will be all of those known at the source of the performance data. By default the set of reported instances are those for which values are currently available, which may be smaller than the set reported with <code>-f</code>.</dd>
+<dt><code>-I</code></dt>
+<dd> Report the external identifiers for each instance. The literal string <code>PM_IN_NULL</code> is reported for singular metrics.</dd>
+<dt><code>-i</code></dt>
+<dd> Report the internal identifiers for each instance. The values are in decimal and prefixed by &#8220;?&#8221;. As a special case, the literal string <code>PM_IN_NULL</code> is reported for singular metrics.</dd>
+<dt><code>-K</code></dt>
+<dd> When using the <code>-L</code> option to fetch metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code>__pmSpecLocalPMDA</code>(3). More than one <code>-K</code> option may be used.</dd>
+<dt><code>-O</code></dt>
+<dd> When used in conjunction with an archive source of metrics and the <code>-v</code> option the <i>time</i> argument defines a time origin at which the metrics should be fetched from the archive(s). Refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for a complete description of this option, and the syntax for the <i>time</i> argument.</dd>
+<dt><code>-v</code></dt>
+<dd> Report the value for each instance, as per the formatting rules of <code><a href="/docs/linux/man/3-pmprintvalue/">pmPrintValue</a></code>(3). When fetching from a set of archives, only those instances present in the first archive record for a metric will be displayed; see also the <code>-O</code> option.</dd></dl>
 <p> The <code>-v</code> option is mutually exclusive with either the <code>-I</code> or <code>-i</code> options. </p>
 <p> The <code>-V</code> option provides a cryptic summary of the number of messages sent and received across the PMAPI interface.</p>
 <h2>EXAMPLES</h2>
@@ -60,8 +60,8 @@ disk.all.total 1 4992466
 </pre>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
-<dd> default PMNS specification files</dl>
+<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></dt>
+<dd> default PMNS specification files</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

@@ -11,163 +11,55 @@ description: "sc::StateIn –"
 <p> Restores objects that derive from <code>SavableState</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;statein.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::MsgStateBufRecv</code>, and <code>sc::StateInFile</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>virtual void get_header ()
-
-
 Read in the header information.
-
-
 virtual int version (const ClassDesc *)
-
-
 Returns the version of the ClassDesc in the persistent object or -1 if info on the ClassDesc doesn't exist.
-
-
 virtual int getstring (char *&amp;)
-
-
 This restores strings saved with StateOut::putstring.
-
-
 virtual int get (std::string &amp;)
-
-
 This restores a std::string object.
-
-
 virtual int get (char &amp;r, const char *keyword=0)
-
-
 These restore data saved with StateOut's put. members.
-
-
 virtual int get (unsigned int &amp;r, const char *keyword=0)
-
-
-
 virtual int get (int &amp;r, const char *keyword=0)
-
-
-
 virtual int get (bool &amp;r, const char *keyword=0)
-
-
-
 virtual int get (float &amp;r, const char *keyword=0)
-
-
-
 virtual int get (double &amp;r, const char *keyword=0)
-
-
-
 virtual int get (char *&amp;)
-
-
 These restore data saved with StateOut's put.
-
-
 virtual int get (unsigned int *&amp;)
-
-
-
 virtual int get (int *&amp;)
-
-
-
 virtual int get (float *&amp;)
-
-
-
 virtual int get (double *&amp;)
-
-
-
 virtual int get_array_char (char *p, int size)
-
-
 These restore data saved with StateOut's put.
-
-
 virtual int get_array_uint (unsigned int *p, int size)
-
-
-
 virtual int get_array_int (int *p, int size)
-
-
-
 virtual int get_array_float (float *p, int size)
-
-
-
 virtual int get_array_double (double *p, int size)
-
-
-
 template&lt;class T &gt; int get (typename std::vector&lt; T &gt; &amp;v)
-
-
 Read an STL vector of data.
-
-
 int node_to_node () const
-
-
 True if this is a node to node save/restore.
-
-
 virtual int use_directory ()
-
-
 Returns true of this object uses a directory.
-
-
 virtual int tell ()
-
-
 Return the current position in the file.
-
-
 virtual void seek (int)
-
-
 Set the current position in the file.
-
-
 virtual int seekable ()
-
-
 Return non-zero if seek does anything sensible.
-
-
 int has_directory () const
-
-
-
 virtual void list_objects (std::ostream &amp;=ExEnv::out0())
-
-
 List all the objects to the stream.
-
-
 void set_override (const Ref&lt; KeyVal &gt; &amp;kv)
-
-
 Give this StateIn a KeyVal object that is used to override values.
-
-
 const Ref&lt; KeyVal &gt; &amp; override () const
-
-
 Return the KeyVal used to override values.
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual int <code>get_array_void</code> (void *, int) </p>
 <p> int <code>push_key</code> (const char *key) </p>

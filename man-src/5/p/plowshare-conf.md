@@ -14,7 +14,7 @@ description: "plowshare.conf – Configuration file for Plowshare"
 <dd>
 <pre><i>~/.config/plowshare/plowshare.conf</i>
 <i>/etc/plowshare.conf</i></pre>
-</dl>
+</dd></dl>
 <p> Note: Usage of configuration file can be disabled using <code>&#8211;no-plowsharerc</code> command-line option. There is also <code>&#8211;plowsharerc=</code><i>FILE</i> option to specify an alternate configuration file. </p>
 <h2>File Format</h2>
 <p><i>plowshare.conf</i> file uses an INI-style format. It is composed of six sections which may be present in any order. Each section may contain lines of the form: </p>
@@ -39,17 +39,17 @@ description: "plowshare.conf – Configuration file for Plowshare"
  <i>token</i> <i>=</i> <i>value</i>
  ...
 <code># this is a comment</code></pre>
-</dl>
+</dd></dl>
 <p> Notes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Sections are unordered.</p>
-<dt>&bull;</p>
-<dd>Blank lines or lines beginning with a hash character (&#8216;#&#8217;) are treated as comments and ignored.</p>
-<dt>&bull;</p>
-<dd>Whitespace before and after a <i>token</i> or <i>value</i> is ignored (although a <i>value</i> can contain whitespace within).</p>
-<dt>&bull;</p>
-<dd>Double quoting <i>value</i> is optional. Use them to preserve leading and trailing whitespace.</dl>
+<dt>&bull;</dt>
+<dd>Sections are unordered.</dd>
+<dt>&bull;</dt>
+<dd>Blank lines or lines beginning with a hash character (&#8216;#&#8217;) are treated as comments and ignored.</dd>
+<dt>&bull;</dt>
+<dd>Whitespace before and after a <i>token</i> or <i>value</i> is ignored (although a <i>value</i> can contain whitespace within).</dd>
+<dt>&bull;</dt>
+<dd>Double quoting <i>value</i> is optional. Use them to preserve leading and trailing whitespace.</dd></dl>
 <p> Valid tokens are always lowercase. Names are long-option command-line arguments of plowshare. For example: <i>temp-directory</i> for plowdown. For modules options, tokens are prepended by module name and a slash character. For example: <i>rapidgator/auth</i> (short-option are also possible here). </p>
 <p> For values, no backslash interpretation is made. &quot;	&quot; is a regular string with two characters, it is not a tab character. </p>
 <p> Options in general section prevail over Plow* section. Options given on the command line prevail over configuration file options.</p>

@@ -34,9 +34,9 @@ url: "/docs/linux/man/3-fstrcasecmpi/"
 
 <dl>
 <dt><a HREF="/docs/linux/man/3-fstrcasecmp/">fstrcasecmp</a>(3)
-<dd> fuzzy comparison of two strings ignoring case
-<dt><a HREF="/docs/linux/man/3-fstrcmpi/">fstrcmpi</a>(3)
-<dd> fuzzy comparison of two strings</dl>
+</dt><dd> fuzzy comparison of two strings ignoring case
+</dd><dt><a HREF="/docs/linux/man/3-fstrcmpi/">fstrcmpi</a>(3)
+</dt><dd> fuzzy comparison of two strings</dd></dl>
 
 <h2>COPYRIGHT</h2>
 

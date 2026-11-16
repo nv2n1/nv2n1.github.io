@@ -11,19 +11,19 @@ description: "XtAddInput, XtAddTimeOut, XtAddWorkProc – register input, timeou
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>XtInputId XtAddInput(int <i>source</i>, XtPointer <i>condition</i>, XtInputCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</p>
-<dd>XtIntervalId XtAddTimeOut(unsigned long <i>interval</i>, XtTimerCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</p>
-<dd>XtWorkProcId XtAddWorkProc(XtWorkProc <i>proc</i>, XtPointer <i>client_data</i>);</dl>
+<dd>XtInputId XtAddInput(int <i>source</i>, XtPointer <i>condition</i>, XtInputCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>XtIntervalId XtAddTimeOut(unsigned long <i>interval</i>, XtTimerCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>XtWorkProcId XtAddWorkProc(XtWorkProc <i>proc</i>, XtPointer <i>client_data</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>client_data</i></p>
-<dd>Specifies the argument that is to be passed to the specified procedure when input is available</p>
-<dt><i>condition</i></p>
-<dd>Specifies the mask that indicates a read, write, or exception condition or some operating system dependent condition.</p>
-<dt><i>proc</i></p>
-<dd>Specifies the procedure that is to be called when input is available.</p>
-<dt><i>source</i></p>
-<dd>Specifies the source file descriptor on a UNIX-based system or other operating system dependent device specification.</dl>
+<dt><i>client_data</i></dt>
+<dd>Specifies the argument that is to be passed to the specified procedure when input is available</dd>
+<dt><i>condition</i></dt>
+<dd>Specifies the mask that indicates a read, write, or exception condition or some operating system dependent condition.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the procedure that is to be called when input is available.</dd>
+<dt><i>source</i></dt>
+<dd>Specifies the source file descriptor on a UNIX-based system or other operating system dependent device specification.</dd></dl>
 <h2>Description</h2>
 <p><code>XtAddInput</code> has been replaced by <code>XtAppAddInput.</code> </p>
 <p> <code>XtAddTimeOut</code> has been replaced by <code>XtAppAddTimeOut.</code> </p>

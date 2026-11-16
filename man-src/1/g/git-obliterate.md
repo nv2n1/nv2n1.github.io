@@ -19,30 +19,27 @@ description: "git-obliterate – rewrite past commits to remove some files"
 <p> Remove .secret from the repository:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git obliterate .secret
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Remove .secret from commits between origin and feature:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git obliterate .secret -- feature ^origin
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Remove .secret from commit abcdefg to commit 1234567</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git obliterate .secret -- abcdefg..1234567
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by &lt;<i>brianloveswords [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUG</h2>

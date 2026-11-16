@@ -16,8 +16,8 @@ description: "ldns_octet"
 <p> ldns_status ldns_octet(char *word, size_t *length); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_octet</i>()</p>
-<dd>removes \DDD, \[space] and other escapes from the input. See RFC 1035, section 5.1. .br <code>word</code>: what to check .br <code>length</code>: the string .br Returns ldns_status mesg</dl>
+<dt> <i>ldns_octet</i>()</dt>
+<dd>removes \DDD, \[space] and other escapes from the input. See RFC 1035, section 5.1. .br <code>word</code>: what to check .br <code>length</code>: the string .br Returns ldns_status mesg</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

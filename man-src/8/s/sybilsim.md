@@ -30,14 +30,14 @@ description: "sybilsim — Cjdns packet switch"
 }
  }
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Example use:</p>
 <dl>
 <dd>
 <pre>makekeys | head -20 &gt;keys.txt
 node /usr/libexec/cjdns/tools/lib/makesim.js keys.txt |
 /usr/libexec/cjdns/sybilsim</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-makekeys/">makekeys</a>(1), <a href="/docs/linux/man/1-cjdroute/">cjdroute</a>(1) <a href="/docs/linux/man/8-sybilsim/">sybilsim</a>(8) &#8212; Cjdns packet switch =============================================</p>
 <h2>Synopsis</h2>
@@ -62,13 +62,13 @@ node /usr/libexec/cjdns/tools/lib/makesim.js keys.txt |
 }
  }
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Example use:</p>
 <dl>
 <dd>
 <pre>makekeys | head -20 &gt;keys.txt
 node /usr/libexec/cjdns/tools/lib/makesim.js keys.txt |
 /usr/libexec/cjdns/sybilsim</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-makekeys/">makekeys</a>(1), <a href="/docs/linux/man/1-cjdroute/">cjdroute</a>(1) </p>

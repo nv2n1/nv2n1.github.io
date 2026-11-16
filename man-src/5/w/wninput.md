@@ -13,7 +13,7 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 <h3>Lexicographer File Names</h3>
 <p>The names of the lexicographer files are of the form:</p>
 <dl>
-<dd><i>pos</i>.<i>suffix</i></dl>
+<dd><i>pos</i>.<i>suffix</i></dd></dl>
 <p> where <i>pos</i> is either <code>noun</code>, <code>verb</code>, <code>adj</code> or <code>adv</code>. <i>suffix</i> may be used to organize groups of synsets into different files, for example <code>noun.animal</code> and <code>noun.plant</code>. See <code><a href="/docs/linux/man/5-lexnames/">lexnames</a></code>(5) for a list of lexicographer file names that are used in building WordNet.</p>
 <h3>Pointers</h3>
 <p>Pointers are used to represent the relations between the words in one synset and another. Semantic pointers represent relations between word meanings, and therefore pertain to all of the words in the source and target synsets. Lexical pointers represent relations between word forms, and pertain only to specific words in the source and target synsets. The following pointer types are usually used to indicate lexical relations: Antonym, Pertainym, Participle, Also See, Derivationally Related. The remaining pointer types are generally used to represent semantic relations. A relation from a source to a target synset is formed by specifying a word from the target synset in the source synset, followed by the <i>pointer_symbol</i> indicating the pointer type. The location of a pointer within a synset defines it as either lexical or semantic. The <font SIZE="-1"><code>&quot;Lexicographer File Format&quot;</code></font> section describes the syntax for entering a semantic pointer, and <font SIZE="-1"><code>&quot;Word Syntax&quot;</code></font> describes the syntax for entering a lexical pointer. Although there are many pointer types, only certain types of relations are permitted between synsets of each syntactic category. The <i>pointer_symbol</i>s for nouns are:</p>
@@ -38,7 +38,7 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 <code>-r</code> Member of this domain - REGION
 <code>;u</code> Domain of synset - USAGE
 <code>-u</code> Member of this domain - USAGE
-</dl></pre>
+</dd></dl></pre>
 <p>The <i>pointer_symbol</i>s for verbs are:</p>
 <dl>
 <dd>
@@ -53,7 +53,7 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 <code>;c</code> Domain of synset - TOPIC
 <code>;r</code> Domain of synset - REGION
 <code>;u</code> Domain of synset - USAGE</pre>
-</dl>
+</dd></dl>
 <p> The <i>pointer_symbol</i>s for adjectives are:</p>
 <dl>
 <dd>
@@ -66,7 +66,7 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 <code>;c</code> Domain of synset - TOPIC
 <code>;r</code> Domain of synset - REGION
 <code>;u</code> Domain of synset - USAGE</pre>
-</dl>
+</dd></dl>
 <p> The <i>pointer_symbol</i>s for adverbs are:</p>
 <dl>
 <dd>
@@ -75,7 +75,7 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 <code>;c</code> Domain of synset - TOPIC
 <code>;r</code> Domain of synset - REGION
 <code>;u</code> Domain of synset - USAGE</pre>
-</dl>
+</dd></dl>
 <p> Many pointer types are reflexive, meaning that if a synset contains a pointer to another synset, the other synset should contain a corresponding reflexive pointer. <code><a href="/docs/linux/man/1-grind/">grind</a></code>(1) automatically inserts missing reflexive pointers for the following pointer types: <center></p>
 <table BORDER>
 <tr>
@@ -193,7 +193,7 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 33 Somebody ----s VERB-ing
 34 It ----s that CLAUSE
 35 Something ----s INFINITIVE</pre>
-</dl>
+</dd></dl>
 <h3>Lexicographer File Format</h3>
 <p>Synsets are entered one per line, and each line is terminated with a newline character. A line containing a synset may be as long as necessary, but no newlines can be entered within a synset. Within a synset, spaces or tabs may be used to separate entities. Items enclosed in italicized square brackets may not be present. The general synset syntax is: </p>
 <pre><code>{ ~~words~~pointers~~ ( ~gloss~ )~~}</code></pre>
@@ -208,40 +208,40 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 [-]
 [additional head/satellite synsets]
 </i><code>]</code></pre>
-</dl>
+</dd></dl>
 <p> Each adjective cluster is enclosed in square brackets, and may have one or more parts. Each part consists of a head synset and optional satellite synsets that are conceptually similar to the head synset&#8217;s meaning. Parts of a cluster are separated by one or more hyphens (<code>&#8211;</code>) on a line by themselves, with the terminating square bracket following the last synset. Head and satellite synsets follow the syntax of basic synsets, however a &quot;Similar to&quot; pointer must be specified in a head synset for each of its satellite synsets. Most adjective clusters contain two antonymous parts. See <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7) for a discussion of adjective clusters, and <font SIZE="-1"><code>&quot;Special Adjective Syntax&quot;</code></font> for more information on adjective cluster syntax. Synsets for relational adjectives (pertainyms) and participial adjectives do not adhere to the cluster structure. They use the basic synset syntax. Comments can be entered in a lexicographer file by enclosing the text of the comment in parentheses. Note that comments <code>cannot</code> appear within a synset, as parentheses within a synset have an entirely different meaning (see <font SIZE="-1"><code>&quot;Gloss Syntax&quot;</code></font> ). However, entire synsets (or adjective clusters) can be &quot;commented out&quot; by enclosing them in parentheses. This is often used by the lexicographers to verify the syntax of files under development or to leave a note to oneself while working on entries.</p>
 <h3>Word Syntax</h3>
 <p>A synset must have at least one word, and the words of a synset must appear after the opening brace and before any other synset constructs. A word may be entered in either the simple word or word/pointer syntax. A simple word is of the form:</p>
 <dl>
 <dd>
 <pre><i>word[</i> <code>(</code> <i>marker</i> <code>)</code> <i>][lex_id]</i> <code>,</code></pre>
-</dl>
+</dd></dl>
 <p> <i>word</i> may be entered in any combination of upper and lower case unless it is in an adjective cluster. A collocation is entered by joining the individual words with an underscore character (<code>_</code>). Numbers (integer or real) may be entered, either by themselves or as part of a word string, by following the number with a double quote (<code>&quot;</code>). See <font SIZE="-1"><code>&quot;Special Adjective Syntax&quot;</code></font> for a description of adjective clusters and markers. <i>word</i> may be followed by an integer <i>lex_id</i> from <code>1</code> to <code>15</code>. The <i>lex_id</i> is used to distinguish different senses of the same word within a lexicographer file. The lexicographer assigns <i>lex_id</i> values, usually in ascending order, although there is no requirement that the numbers be consecutive. The default is <code>0</code>, and does not have to be specified. A <i>lex_id</i> must be used on pointers if the desired sense has a non-zero <i>lex_id</i> in its synset specification. Word/pointer syntax is of the form:</p>
 <dl>
 <dd>
 <pre><code>[~~</code> <i>word[</i> <code>(</code> <i>marker</i> <code>)</code> <i>][lex_id]</i> <code>,</code> <i>~~pointers~~</i> <code>]</code></pre>
-</dl>
+</dd></dl>
 <p> This syntax is used when one or more pointers correspond only to the specific word in the word/pointer set, rather than all the words in the synset, and represents a lexical relation. Note that a word/pointer set appears within a synset, therefore the square brackets used to enclose it are treated differently from those used to define an adjective cluster. Only one word can be specified in each word/pointer set, and any number of pointers may be included. A synset can have any number of word/pointer sets. Each is treated by <code><a href="/docs/linux/man/1-grind/">grind</a></code>(1) essentially as a <i>word</i>, so they all must appear before any synset <i>pointers</i> representing semantic relations. For verbs, the word/pointer syntax is extended in the following manner to allow the user to specify generic sentence frames that, like pointers, correspond only to a specific word, rather than all the words in the synset. In this case, <i>pointers</i> are optional.</p>
 <dl>
 <dd>
 <pre><code>[~~</code> <i>word</i> <code>,</code> ~~<i>[pointers]~~frames~~</i> <code>]</code></pre>
-</dl>
+</dd></dl>
 <h3>Pointer Syntax</h3>
 <p>Pointers are optional in synsets. If a pointer is specified outside of a word/pointer set, the relation is applied to all of the words in the synset, including any words specified using the word/pointer syntax. This indicates a semantic relation between the meanings of the words in the synsets. If specified within a word/pointer set, the relation corresponds only to the word in the set and represents a lexical relation. A pointer is of the form:</p>
 <dl>
 <dd>
 <pre><i>[lex_filename</i><code>:</code> <i>]word[lex_id]</i><code>,</code><i>pointer_symbol</i></pre>
-</dl>
+</dd></dl>
 <p> or:</p>
 <dl>
 <dd>
 <pre><i>[lex_filename</i><code>:</code> <i>]word[lex_id]</i><code>^</code><i>word[lex_id]</i><code>,</code><i>pointer_symbol</i></pre>
-</dl>
+</dd></dl>
 <p> For pointers, <i>word</i> indicates a word in another synset. When the second form of a pointer is used, the first <i>word</i> indicates a word in a head synset, and the second is a word in a satellite of that cluster. <i>word</i> may be followed by a <i>lex_id</i> that is used to match the pointer to the correct target synset. The synset containing <i>word</i> may reside in another lexicographer file. In this case, <i>word</i> is preceded by <i>lex_filename</i> as shown. See <font SIZE="-1"><code>&quot;Pointers&quot;</code></font> for a list of <i>pointer_symbol</i>s and their meanings.</p>
 <h3>Verb Frame List Syntax</h3>
 <p>Frame numbers corresponding to generic sentence frames must be entered in each verb synset. If a frame list is specified outside of a word/pointer set, the verb frames in the list apply to all of the words in the synset, including any words specified using the word/pointer syntax. If specified within a word/pointer set, the verb frames in the list correspond only to the word in the set. A frame number list is entered as follows:</p>
 <dl>
-<dd><code>frames:</code>~~<i>f_num</i>[<code>,</code><i>f_num&#8230;]</i></dl>
+<dd><code>frames:</code>~~<i>f_num</i>[<code>,</code><i>f_num&#8230;]</i></dd></dl>
 <p> Where <i>f_num</i> specifies a generic frame number. See <font SIZE="-1"><code>&quot;Verb Frames&quot;</code></font> for a list of generic sentences and their corresponding frame numbers.</p>
 <h3>Gloss Syntax</h3>
 <p>A gloss is included in all synsets. The lexicographer may enter a text string of any length desired. A gloss is simply a string enclosed in parentheses with no embedded carriage returns. It provides a definition of what the synset represents and/or example sentences.</p>
@@ -252,7 +252,7 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 <pre><code>(p)</code> predicate position
 <code>(a)</code> prenominal (attributive) position
 <code>(ip)</code> immediately postnominal position </pre>
-</dl>
+</dd></dl>
 <h2>Examples</h2>
 <p><i>(Note that these are hypothetical examples not found in the WordNet lexicographer files.)</i> </p>
 <p> Sample noun synsets:</p>
@@ -262,14 +262,14 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 { collie, dog1,@ (large multi-colored dog with pointy nose) }
 { hound, hunting_dog, pack,#m dog1,@ }
 { dog, }</pre>
-</dl>
+</dd></dl>
 <p> Sample verb synsets:</p>
 <dl>
 <dd>
 <pre>{ [ confuse, clarify,! frames: 1 ] blur, obscure, frames: 8, 10 }
 { [ clarify, confuse,! ] make_clear, interpret,@ frames: 8 }
 { interpret, construe, understand,@ frames: 8 }</pre>
-</dl>
+</dd></dl>
 <p> Sample adjective clusters:</p>
 <dl>
 <dd>
@@ -280,13 +280,13 @@ description: "noun.suffix, verb.suffix, adj.suffix, adv.suffix – WordNet lexic
 { [ COLD, HOT,! ] frigid, (cold to the touch) }
 { freezing, }
 ]</pre>
-</dl>
+</dd></dl>
 <p> Sample adverb synsets:</p>
 <dl>
 <dd>
 <pre>{ [ basically, adj.all:essential^basic,\ ] [ essentially, adj.all:basic^fundamental,\ ] ( by one's very nature )}
 { pointedly, adj.all:pungent^pointed,\ }
 { [ badly, adj.all:bad,\ well,! ] ill, (&quot;He was badly prepared&quot;) }</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-grind/">grind</a></code>(1), <code><a href="/docs/linux/man/5-wnintro/">wnintro</a></code>(5), <code><a href="/docs/linux/man/5-lexnames/">lexnames</a></code>(5), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/7-uniqbeg/">uniqbeg</a></code>(7), <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7). Fellbaum, C. (1998), ed. <i>&quot;WordNet: An Electronic Lexical Database&quot;</i>. MIT Press, Cambridge, MA. </p>

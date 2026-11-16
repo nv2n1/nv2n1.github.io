@@ -14,11 +14,11 @@ description: "aica_rtc_gettimeofday – Get the time from the AICA RTC"
 <p><i>ts</i></p>
 <dl>
 <dd>
-<dd>pointer to resulting timespec</dl>
+</dd><dd>pointer to resulting timespec</dd></dl>
 <h2>Description</h2>
 <p>Grabs the current RTC seconds counter and adjusts it to the Unix Epoch.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

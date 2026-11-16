@@ -14,12 +14,12 @@ description: "HerculesStudio – Hercules GUI Interface"
 <p>Hercules Studio is a GUI front-end to the Hercules mainframe Emulator</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f &lt;hercules-config-file&gt; </code></p>
-<dd>Use &lt;hercules-config-file&gt; as hercules virtual machine configuration file.</p>
-<dt><code>-r &lt;hercules-run-commands-file&gt;</code></p>
-<dd>Run &lt;hercules-run-commands-file&gt; after hercules is started.</p>
-<dt><code>-h</code></p>
-<dd>Print help information.</dl>
+<dt><code>-f &lt;hercules-config-file&gt; </code></dt>
+<dd>Use &lt;hercules-config-file&gt; as hercules virtual machine configuration file.</dd>
+<dt><code>-r &lt;hercules-run-commands-file&gt;</code></dt>
+<dd>Run &lt;hercules-run-commands-file&gt; after hercules is started.</dd>
+<dt><code>-h</code></dt>
+<dd>Print help information.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-hercules/">hercules</a></code>(1),</p>
 <h2>Author</h2>

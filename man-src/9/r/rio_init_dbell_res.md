@@ -14,17 +14,17 @@ description: "rio_init_dbell_res – Initialize a RIO doorbell resource"
 <p><i>res</i></p>
 <dl>
 <dd>
-<dd>resource struct</dl>
+</dd><dd>resource struct</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>start of doorbell range</dl>
+<dd>start of doorbell range</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>end of doorbell range</dl>
+<dd>end of doorbell range</dd></dl>
 <h2>Description</h2>
 <p>This function is used to initialize the fields of a resource for use as a doorbell resource. It initializes a range of doorbell messages using the start and end arguments.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

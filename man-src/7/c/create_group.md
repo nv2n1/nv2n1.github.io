@@ -11,7 +11,6 @@ description: "CREATE GROUP – define a new database role"
 <h2>Synopsis</h2>
 <pre>CREATE GROUP <i>name</i> [ [ WITH ] <i>option</i> [ ... ] ]
 where <i>option</i> can be:
- 
  SUPERUSER | NOSUPERUSER
  | CREATEDB | NOCREATEDB
  | CREATEROLE | NOCREATEROLE

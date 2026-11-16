@@ -12,7 +12,7 @@ description: "request-key.conf – Instantiation handler configuration file"
 <p>These files are used by the /sbin/request-key program to determine which program it should run to instantiate a key. </p>
 <p> request-key looks for the best match, reading all the following files:</p>
 <dl>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/etc/request-key.d/*.conf</p>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/etc/request-key.d/*.conf</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/etc/request-key.conf
 </dl>
 <p> If it doesn&#8217;t find a match, it will return an error and the kernel will automatically negate the key. </p>
@@ -36,10 +36,10 @@ description: "request-key.conf – Instantiation handler configuration file"
  %g Key GID<br />
  %T Requestor&#8217;s thread keyring<br />
  %P Requestor&#8217;s process keyring<br />
- %S Requestor&#8217;s session keyring</dl>
+ %S Requestor&#8217;s session keyring</dd></dl>
 <p> There&#8217;s another macro substitution too that permits the interpolation of the contents of a key: </p>
 <dl>
-<dd>%{&lt;type&gt;:&lt;description&gt;}</dl>
+<dd>%{&lt;type&gt;:&lt;description&gt;}</dd></dl>
 <p> This performs a lookup for a key of the given type and description on the requestor&#8217;s keyrings, and if found, substitutes the contents for the macro. If not found an error will be logged and the key under construction will be negated.</p>
 <h2>Example</h2>
 <p>A basic file will be installed in the /etc. This will contain two debugging lines that can be used to test the installation: </p>
@@ -47,16 +47,16 @@ description: "request-key.conf – Instantiation handler configuration file"
 <dd>create user debug:* negate /bin/keyctl negate %k 30 %S<br />
  create user debug:loop:* * |/bin/cat<br />
  create user debug:* * /usr/share/keyutils/request-key-debug.sh %k %d %c %S<br />
- negate * * * /bin/keyctl negate %k 30 %S</dl>
+ negate * * * /bin/keyctl negate %k 30 %S</dd></dl>
 <p> This is set up so that something like: </p>
 <dl>
-<dd>keyctl request2 user debug:xxxx negate</dl>
+<dd>keyctl request2 user debug:xxxx negate</dd></dl>
 <p> will create a negative user-defined key, something like: </p>
 <dl>
-<dd>keyctl request2 user debug:yyyy spoon</dl>
+<dd>keyctl request2 user debug:yyyy spoon</dd></dl>
 <p> will create an instantiated user-defined key with &quot;Debug spoon&quot; as the payload, and something like: </p>
 <dl>
-<dd>keyctl request2 user debug:loop:zzzz abcdefghijkl</dl>
+<dd>keyctl request2 user debug:loop:zzzz abcdefghijkl</dd></dl>
 <p> will create an instantiated user-defined key with the callout information as the payload.</p>
 <h2>Files</h2>
 <p>/etc/request-key.conf<br />

@@ -39,66 +39,66 @@ tv_grab_na_dd-- help
 <p> Like many utilities, tv_grab_na_dd tries to exit with a &#8220;0&#8221; on success and something else on error.</p>
 <h2>Stand-alone options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd> Print a help message and exit.</p>
-<dt>&#8211;version</p>
-<dd> Show the version of the grabber.</p>
-<dt>&#8211;capabilities</p>
-<dd> Show which capabilities the grabber supports. For more information, see &lt;<a rel="nofollow" href="http://wiki.xmltv.org/index.php/XmltvCapabilities">http://wiki.xmltv.org/index.php/XmltvCapabilities</a>&gt;</dl>
+<dt>&#8211;help</dt>
+<dd> Print a help message and exit.</dd>
+<dt>&#8211;version</dt>
+<dd> Show the version of the grabber.</dd>
+<dt>&#8211;capabilities</dt>
+<dd> Show which capabilities the grabber supports. For more information, see &lt;<a rel="nofollow" href="http://wiki.xmltv.org/index.php/XmltvCapabilities">http://wiki.xmltv.org/index.php/XmltvCapabilities</a>&gt;</dd></dl>
 <h2>Mode selection (default is grab mode)</h2>
 <dl>
-<dt>&#8211;configure</p>
-<dd> Activates configure mode. If a config file already exists the values are used as defaults.</p>
-<dt>&#8211;gui <font SIZE="-1">OPTION</font></p>
-<dd> Use this option to enable a graphical interface to be used. <font SIZE="-1">OPTION</font> may be &#8216;Tk&#8217;, or left blank for the best available choice. Additional allowed values of <font SIZE="-1">OPTION</font> are &#8216;Term&#8217; for normal terminal output (default) and &#8216;TermNoProgressBar&#8217; to disable the use of Term::ProgressBar.</p>
-<dt>&#8211;list-lineups</p>
-<dd> Lists available lineups. Only requires username in the config file. Used by programs that automate the &#8220;&#8211;configure&#8221; process.</dl>
+<dt>&#8211;configure</dt>
+<dd> Activates configure mode. If a config file already exists the values are used as defaults.</dd>
+<dt>&#8211;gui <font SIZE="-1">OPTION</font></dt>
+<dd> Use this option to enable a graphical interface to be used. <font SIZE="-1">OPTION</font> may be &#8216;Tk&#8217;, or left blank for the best available choice. Additional allowed values of <font SIZE="-1">OPTION</font> are &#8216;Term&#8217; for normal terminal output (default) and &#8216;TermNoProgressBar&#8217; to disable the use of Term::ProgressBar.</dd>
+<dt>&#8211;list-lineups</dt>
+<dd> Lists available lineups. Only requires username in the config file. Used by programs that automate the &#8220;&#8211;configure&#8221; process.</dd></dl>
 <h2>General Options</h2>
 <dl>
-<dt>&#8211;config-file <i>file</i></p>
-<dd> Set the name of the configuration file, the default is <code>~/.xmltv/tv_grab_na_dd.conf</code>. This is the file created during &#8220;&#8211;configure&#8221; mode.</p>
-<dt>&#8211;dd-data <i>file</i></p>
-<dd> Store raw Data Direct data to this file. (default is a temporary file)</p>
-<dt>&#8211;reprocess</p>
-<dd> Don&#8217;t get data from Data Direct, but reprocess a file saved with &#8211;dd-data.</p>
-<dt>&#8211;auto-config <i>add|ignore</i></p>
-<dd> When used in &#8211;configure mode, updates the config file, removing old channels, and adding or ignoring new channels. Prompts are skipped if defaults are available in the current config file. </p>
+<dt>&#8211;config-file <i>file</i></dt>
+<dd> Set the name of the configuration file, the default is <code>~/.xmltv/tv_grab_na_dd.conf</code>. This is the file created during &#8220;&#8211;configure&#8221; mode.</dd>
+<dt>&#8211;dd-data <i>file</i></dt>
+<dd> Store raw Data Direct data to this file. (default is a temporary file)</dd>
+<dt>&#8211;reprocess</dt>
+<dd> Don&#8217;t get data from Data Direct, but reprocess a file saved with &#8211;dd-data.</dd>
+<dt>&#8211;auto-config <i>add|ignore</i></dt>
+<dd> When used in &#8211;configure mode, updates the config file, removing old channels, and adding or ignoring new channels. Prompts are skipped if defaults are available in the current config file. </dd>
 <p> When used in grab mode, appends new channels to the config file.</dl>
 <h2>Grabber Mode options</h2>
 <dl>
-<dt>&#8211;days <i>n</i></p>
-<dd> Grab <i>n</i> days. The default is 7.</p>
-<dt>&#8211;offset <i>n</i></p>
-<dd> Start N days after the default.</p>
-<dt>&#8211;quiet</p>
-<dd> Suppress some messages normally written to standard error.</p>
-<dt>&#8211;notrim</p>
-<dd> Data Direct includes shows in progress at the start time. The default behavior is to filter these shows out so data can be cleanly split between days. This option turns off that filter so you get shows in progress a tthe start time.</p>
-<dt>&#8211;old-chan-id</p>
-<dd> Use a channel id similar to the one used by the old <code>tv_grab_na</code> grabber.</p>
-<dt>&#8211;low-mem</p>
-<dd> Omit all but the most basic program information. Reduces memory usage.</p>
-<dt>&#8211;output <i>file</i></p>
-<dd> Write xml to <i>file</i> rather than standard output.</p>
-<dt>&#8211;list-channel</p>
-<dd> Same as <code>&#8211;days</code> 0</p>
-<dt>&#8211;share <i></i><font SIZE="-1"><i>SHAREDIR</i></font><i></i></p>
-<dd> tv_grab_na_icons stores icons in <i></i><font SIZE="-1"><i>SHAREDIR</i></font><i></i>/icons. The share directory is set at install time, but there may be times when it needs to be specified. (for example: no write access to the default share directory)</p>
-<dt>&#8211;list-times</p>
-<dd> Report to <font SIZE="-1">STDERR</font> the Schedules Direct blockedTime (not currently enforced) and suggestedTime values to assist automated processes with scheduling.</p>
-<dt>&#8211;download-only</p>
-<dd> Don&#8217;t generate any output, just fetch the data. Personally I don&#8217;t see the point, but it was requested and easy to add.</p>
-<dt>&#8211;padd <i>n</i></p>
-<dd> Add &lt;n&gt; spaces to the front of the start date. This is normally not needed, but can be helpful in working around a Tribune problem when the request packet spans <font SIZE="-1">TCP</font> packets. Recommended initial value is &#8220;20&#8221;. This is only needed if you get &#8220;invalid start time&#8221; messages. If this helps, please post results to the list.</p>
-<dt>&#8211;dropbadchar</p>
-<dd> <font SIZE="-1">DD</font> data is supposed to be in <font SIZE="-1">UTF-8</font> format. Sometimes <font SIZE="-1">DD</font> sends bad characters which cause a &#8220;Bad <font SIZE="-1">XML</font> from <font SIZE="-1">DD&#8221;</font> error. This option causes those bad characters to be deleted.</p>
-<dt>&#8211;agent <font SIZE="-1">NAME</font></p>
-<dd> appends <font SIZE="-1">NAME</font> to the http agent string when fetching data. This is a polite way to tell Schedules Direct which application is being used. It helps developers know how many people are using their application and gives applications credit towards free accounts.</dl>
+<dt>&#8211;days <i>n</i></dt>
+<dd> Grab <i>n</i> days. The default is 7.</dd>
+<dt>&#8211;offset <i>n</i></dt>
+<dd> Start N days after the default.</dd>
+<dt>&#8211;quiet</dt>
+<dd> Suppress some messages normally written to standard error.</dd>
+<dt>&#8211;notrim</dt>
+<dd> Data Direct includes shows in progress at the start time. The default behavior is to filter these shows out so data can be cleanly split between days. This option turns off that filter so you get shows in progress a tthe start time.</dd>
+<dt>&#8211;old-chan-id</dt>
+<dd> Use a channel id similar to the one used by the old <code>tv_grab_na</code> grabber.</dd>
+<dt>&#8211;low-mem</dt>
+<dd> Omit all but the most basic program information. Reduces memory usage.</dd>
+<dt>&#8211;output <i>file</i></dt>
+<dd> Write xml to <i>file</i> rather than standard output.</dd>
+<dt>&#8211;list-channel</dt>
+<dd> Same as <code>&#8211;days</code> 0</dd>
+<dt>&#8211;share <i></i><font SIZE="-1"><i>SHAREDIR</i></font><i></i></dt>
+<dd> tv_grab_na_icons stores icons in <i></i><font SIZE="-1"><i>SHAREDIR</i></font><i></i>/icons. The share directory is set at install time, but there may be times when it needs to be specified. (for example: no write access to the default share directory)</dd>
+<dt>&#8211;list-times</dt>
+<dd> Report to <font SIZE="-1">STDERR</font> the Schedules Direct blockedTime (not currently enforced) and suggestedTime values to assist automated processes with scheduling.</dd>
+<dt>&#8211;download-only</dt>
+<dd> Don&#8217;t generate any output, just fetch the data. Personally I don&#8217;t see the point, but it was requested and easy to add.</dd>
+<dt>&#8211;padd <i>n</i></dt>
+<dd> Add &lt;n&gt; spaces to the front of the start date. This is normally not needed, but can be helpful in working around a Tribune problem when the request packet spans <font SIZE="-1">TCP</font> packets. Recommended initial value is &#8220;20&#8221;. This is only needed if you get &#8220;invalid start time&#8221; messages. If this helps, please post results to the list.</dd>
+<dt>&#8211;dropbadchar</dt>
+<dd> <font SIZE="-1">DD</font> data is supposed to be in <font SIZE="-1">UTF-8</font> format. Sometimes <font SIZE="-1">DD</font> sends bad characters which cause a &#8220;Bad <font SIZE="-1">XML</font> from <font SIZE="-1">DD&#8221;</font> error. This option causes those bad characters to be deleted.</dd>
+<dt>&#8211;agent <font SIZE="-1">NAME</font></dt>
+<dd> appends <font SIZE="-1">NAME</font> to the http agent string when fetching data. This is a polite way to tell Schedules Direct which application is being used. It helps developers know how many people are using their application and gives applications credit towards free accounts.</dd></dl>
 <h2>Automating configuration</h2>
 <p> Sometimes applications want to call <code>tv_grab_na_dd</code> as a standalone application, but automate the configure process. The best way is to hook in to the XMLTV::Ask module, but if that&#8217;s not available, here is a solution. </p>
 <dl>
 <dt>
-<dd> Step1. Application creates config file with username (and optionally password). </p>
+</dt><dd> Step1. Application creates config file with username (and optionally password). </dd>
 <p> Step2. <tt>&quot;tv_grab_na_dd --dd-data lineups.xml --list-lineups&quot;</tt> </p>
 <p> Step3. Application adds desired lineup to config file. </p>
 <p> Step4. <tt>&quot;tv_grab_na_dd --dd-data lineups.xml --reprocess --auto-config add --list-channels&quot;</tt> </p>
@@ -141,12 +141,12 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
 <h2>Notes on episode numbers</h2>
 <p> Three episode-num formats are supplied (when available)</p>
 <dl>
-<dt>xmltv_ns</p>
-<dd> always <tt>&quot;..a/b&quot;</tt> for part <tt>&quot;a&quot;</tt> of <tt>&quot;b&quot;</tt>. First two xmltv_ns fields always blank.</p>
-<dt>dd_progid</p>
-<dd> <font SIZE="-1">TMS</font> generated <tt>&quot;a.b.c/d&quot;</tt> where <tt>&quot;a&quot;</tt> is a unique program id, <tt>&quot;b&quot;</tt> is a unique episode id, <tt>&quot;c/d&quot;</tt> is part <tt>&quot;c&quot;</tt> of <tt>&quot;d&quot;</tt> similar to xmltv_ns.</p>
-<dt>onscreen</p>
-<dd> Distributor-designated number corresponding to an episode of a specific show. Varies by distributor.</dl>
+<dt>xmltv_ns</dt>
+<dd> always <tt>&quot;..a/b&quot;</tt> for part <tt>&quot;a&quot;</tt> of <tt>&quot;b&quot;</tt>. First two xmltv_ns fields always blank.</dd>
+<dt>dd_progid</dt>
+<dd> <font SIZE="-1">TMS</font> generated <tt>&quot;a.b.c/d&quot;</tt> where <tt>&quot;a&quot;</tt> is a unique program id, <tt>&quot;b&quot;</tt> is a unique episode id, <tt>&quot;c/d&quot;</tt> is part <tt>&quot;c&quot;</tt> of <tt>&quot;d&quot;</tt> similar to xmltv_ns.</dd>
+<dt>onscreen</dt>
+<dd> Distributor-designated number corresponding to an episode of a specific show. Varies by distributor.</dd></dl>
 <h2>Notes on passwords</h2>
 <p> If a password is stored in the config file, the config file should be properly protected. Instead of storing the password in the config file, it can be omitted, and will be prompted for.</p>
 <h2>Notes on lineup changes</h2>
@@ -164,14 +164,14 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
 <h3>Contributors:</h3>
 <dl>
 <dt>
-<dd> Ed Avis, ed [at] membled.com </p>
+</dt><dd> Ed Avis, ed [at] membled.com </dd>
 <p> Don Huettl, drh [at] huettl.net </p>
 <p> Matti Airas, mairas [at] iki.fi (I used tv_grab_fi as a template) </p>
 <p> and of course everyone else I forgot to mention. :)</dl>
 <h2>POD ERRORS</h2>
 <p> Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl>
-<dt>Around line 340:</p>
-<dd> =over without closing =back </p>
+<dt>Around line 340:</dt>
+<dd> =over without closing =back </dd>
 </dl>
 <h2>Index</h2>

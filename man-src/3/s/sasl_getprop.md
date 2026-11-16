@@ -10,7 +10,6 @@ description: "sasl_getprop – Get a SASL property"
 <p>sasl_getprop &#8211; Get a SASL property </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_getprop(sasl_conn_t *conn,
                  int propnum,
                  const void **pvalue);</code></pre>

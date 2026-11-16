@@ -10,18 +10,16 @@ description: "towlower, towlower_l – convert a wide character to lowercase"
 <p>towlower, towlower_l &#8211; convert a wide character to lowercase</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wctype.h&gt;
-
 wint_t towlower(wint_t wc);
-
 wint_t towlower_l(wint_t wc, locale_t locale);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>towlower_l</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.10:</p>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl>
+<dt>Since glibc 2.10:</dt>
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The <code>towlower</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-tolower/">tolower</a></code>(3) function. If <i>wc</i> is an uppercase wide character, and there exists a lowercase equivalent in the current locale, it returns the lowercase equivalent of <i>wc</i>. In all other cases, <i>wc</i> is returned unchanged. </p>

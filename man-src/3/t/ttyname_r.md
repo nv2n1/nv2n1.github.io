@@ -10,9 +10,7 @@ description: "ttyname, ttyname_r – return name of a terminal"
 <p>ttyname, ttyname_r &#8211; return name of a terminal</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;unistd.h&gt;
-
 char *ttyname(int fd);
-
 int ttyname_r(int fd, char *buf, size_t buflen);</code></pre>
 <h2>Description</h2>
 <p>The function <code>ttyname</code>() returns a pointer to the null-terminated pathname of the terminal device that is open on the file descriptor <i>fd</i>, or NULL on error (for example, if <i>fd</i> is not connected to a terminal). The return value may point to static data, possibly overwritten by the next call. The function <code>ttyname_r</code>() stores this pathname in the buffer <i>buf</i> of length <i>buflen</i>.</p>
@@ -20,13 +18,13 @@ int ttyname_r(int fd, char *buf, size_t buflen);</code></pre>
 <p>The function <code>ttyname</code>() returns a pointer to a pathname on success. On error, NULL is returned, and <i>errno</i> is set appropriately. The function <code>ttyname_r</code>() returns 0 on success, and an error number upon error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd>Bad file descriptor.</p>
-<dd><code>ENODEV</code> <i>fd</i> refers to a slave pseudoterminal device but the corresponding pathname could not be found (see NOTES).</p>
-<dt><code>ENOTTY</code></p>
-<dd><i>fd</i> does not refer to a terminal device.</p>
-<dt><code>ERANGE</code></p>
-<dd>(<code>ttyname_r</code>()) <i>buflen</i> was too small to allow storing the pathname.</dl>
+<dt><code>EBADF</code></dt>
+<dd>Bad file descriptor.</dd>
+<dd><code>ENODEV</code> <i>fd</i> refers to a slave pseudoterminal device but the corresponding pathname could not be found (see NOTES).</dd>
+<dt><code>ENOTTY</code></dt>
+<dd><i>fd</i> does not refer to a terminal device.</dd>
+<dt><code>ERANGE</code></dt>
+<dd>(<code>ttyname_r</code>()) <i>buflen</i> was too small to allow storing the pathname.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

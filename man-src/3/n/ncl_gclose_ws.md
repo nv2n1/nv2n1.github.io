@@ -13,8 +13,8 @@ description: "gclose_ws (Close workstation) – closes a workstation."
 <p> void gclose_ws(Gint ws_id);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) &#8211; A number identifying the workstation to be closed. ws_id must be the same as that used in some previous gopen_ws call.</dl>
+<dt>ws_id</dt>
+<dd>(Input) &#8211; A number identifying the workstation to be closed. ws_id must be the same as that used in some previous gopen_ws call.</dd></dl>
 <h2>Usage</h2>
 <p>Close workstation updates the workstation and removes its identifier from the set of open workstations. The connection to the workstation is released and the associated connection ID is available for re-use.</p>
 <h2>Access</h2>

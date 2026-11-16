@@ -19,11 +19,11 @@ description: "git-relink – Hardlink common objects in local repositories"
 <p> &#8211;safe</p>
 <dl>
 <dt>
-<dd> Stops if two objects with the same hash exist but have different sizes. Default is to warn and continue.</dl>
+</dt><dd> Stops if two objects with the same hash exist but have different sizes. Default is to warn and continue.</dd></dl>
 <p> &lt;dir&gt;</p>
 <dl>
 <dt>
-<dd> Directories containing a .git/objects/ subdirectory.</dl>
+</dt><dd> Directories containing a .git/objects/ subdirectory.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

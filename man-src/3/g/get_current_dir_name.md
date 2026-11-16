@@ -20,20 +20,18 @@ char *get_current_dir_name(void);
 <p> <code>get_current_dir_name</code>():</p>
 <dl>
 <dt>
-<dd> _GNU_SOURCE</dl>
+</dt><dd> _GNU_SOURCE</dd></dl>
 <p> <code>getwd</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.12:</p>
+<dt>Since glibc 2.12:</dt>
 <dd>
 <pre><code>
 (_XOPEN_SOURCE &amp;nbsp; &gt;= &amp;nbsp; 500) &amp;&amp; !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200809L) || /* Glibc since 2.19: */ _DEFAULT_SOURCE
     || /* Glibc versions &lt;= 2.19: */ _BSD_SOURCE
 </code></pre>
-<dt>Before glibc 2.12:</p>
-<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dd><dt>Before glibc 2.12:</dt>
+<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return a null-terminated string containing an absolute pathname that is the current working directory of the calling process. The pathname is returned as the function result and via the argument <i>buf</i>, if present. </p>
@@ -47,22 +45,22 @@ char *get_current_dir_name(void);
 <p> On failure, these functions return NULL, and <i>errno</i> is set to indicate the error. The contents of the array pointed to by <i>buf</i> are undefined on error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Permission to read or search a component of the filename was denied.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>buf</i> points to a bad address.</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>size</i> argument is zero and <i>buf</i> is not a null pointer.</p>
-<dt><code>EINVAL</code></p>
-<dd> <code>getwd</code>(): <i>buf</i> is NULL.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <code>getwd</code>(): The size of the null-terminated absolute pathname string exceeds <code>PATH_MAX</code> bytes.</p>
-<dt><code>ENOENT</code></p>
-<dd> The current working directory has been unlinked.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>ERANGE</code></p>
-<dd> The <i>size</i> argument is less than the length of the absolute pathname of the working directory, including the terminating null byte. You need to allocate a bigger array and try again.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Permission to read or search a component of the filename was denied.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>buf</i> points to a bad address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>size</i> argument is zero and <i>buf</i> is not a null pointer.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <code>getwd</code>(): <i>buf</i> is NULL.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <code>getwd</code>(): The size of the null-terminated absolute pathname string exceeds <code>PATH_MAX</code> bytes.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The current working directory has been unlinked.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> The <i>size</i> argument is less than the length of the absolute pathname of the working directory, including the terminating null byte. You need to allocate a bigger array and try again.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

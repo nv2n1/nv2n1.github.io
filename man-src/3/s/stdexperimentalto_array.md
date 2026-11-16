@@ -11,9 +11,7 @@ std::experimental::to_array - std::experimental::to_array
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/array&gt;
-
 template &lt;class T, std::size_t N&gt;                                  (library fundamentals TS v2)
-
 constexpr std::array&lt;std::remove_cv_t&lt;T&gt;, N&gt; to_array(T (&amp;a)[N]);</code></pre> 
 Creates a std::array from the built-in array a. The elements of the std::array are copy-initialized from the corresponding element of a. 
 
@@ -46,18 +44,12 @@ An std::array object whose elements are copy-initialized from the corresponding 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdlib&gt;
-
 #include &lt;cassert&gt;
-
 #include &lt;experimental/array&gt;
-
 #include &lt;unistd.h&gt;
 // mkstemp(3) that works
-
 template &lt;std::size_t N&gt;
-
 int tempfd(char const (&amp;tmpl)[N])
-
 {
     auto s = std::experimental::to_array(tmpl);
     int fd = mkstemp(s.data());
@@ -66,7 +58,6 @@ int tempfd(char const (&amp;tmpl)[N])
     return fd;
 }
 int main()
-
 {
     int fd = tempfd(&quot;/tmp/test.XXXXXX&quot;);
     int rt = close(fd);

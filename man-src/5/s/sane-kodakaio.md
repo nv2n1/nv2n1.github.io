@@ -17,8 +17,8 @@ description: "sane-kodakaio – SANE backend for Kodak aio printer / scanners"
 <p>The configuration file <i>kodakaio.conf</i> is used to tell the backend how to look for scanners, and provide options controlling the operation of the backend. This file is read each time the frontend asks the backend for a list of scanners, generally only when the frontend starts.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_KODAKAIO</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_DEBUG_KODAKAIO</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 </dl>
 <h2>Known Issues</h2>
 <p>Most hardware options are either not supported or not exposed for control by the user, including: multifeed detection, image compression etc.</p>

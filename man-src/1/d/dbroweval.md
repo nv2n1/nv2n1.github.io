@@ -21,46 +21,46 @@ dbroweval[-f CodeFile] code[code...]
 <p> Even more perverse, _columname(N) is the value of the Nth column after columnname [so <i>_columnname</i>(0) is the also the column&#8217;s value.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b </code><font SIZE="-1"><code>CODE</code></font></p>
-<dd> Run <font SIZE="-1">CODE</font> before reading any data (like awk <font SIZE="-1">BEGIN</font> blocks).</p>
-<dt><code>-e </code><font SIZE="-1"><code>CODE</code></font></p>
-<dd> Run <font SIZE="-1">CODE</font> at the end of all data (like awk <font SIZE="-1">END</font> blocks).</p>
-<dt><code>-f </code><font SIZE="-1"><code>FILE</code></font></p>
-<dd> Read code from the <font SIZE="-1">FILE.</font></p>
-<dt><code>-n</code> or <code>&#8211;no-output</code></p>
-<dd> no output except for comments and what is in the provided code</p>
-<dt><code>-N</code> or <code>&#8211;no-output-even-comments</code></p>
-<dd> no output at all, except for what is in the provided code</p>
-<dt><code>-m</code> or <code>&#8211;manual-output</code></p>
-<dd> The user must setup output, allowing arbitrary comments. See example 2 below for details.</p>
-<dt><code>-w</code> or <code>&#8211;warnings</code></p>
-<dd> Enable warnings in user supplied code.</p>
-<dt><code>&#8211;saveoutput $OUT_REF</code></p>
-<dd> Save output writer (for integration with other fsdb filters).</dl>
+<dt><code>-b </code><font SIZE="-1"><code>CODE</code></font></dt>
+<dd> Run <font SIZE="-1">CODE</font> before reading any data (like awk <font SIZE="-1">BEGIN</font> blocks).</dd>
+<dt><code>-e </code><font SIZE="-1"><code>CODE</code></font></dt>
+<dd> Run <font SIZE="-1">CODE</font> at the end of all data (like awk <font SIZE="-1">END</font> blocks).</dd>
+<dt><code>-f </code><font SIZE="-1"><code>FILE</code></font></dt>
+<dd> Read code from the <font SIZE="-1">FILE.</font></dd>
+<dt><code>-n</code> or <code>&#8211;no-output</code></dt>
+<dd> no output except for comments and what is in the provided code</dd>
+<dt><code>-N</code> or <code>&#8211;no-output-even-comments</code></dt>
+<dd> no output at all, except for what is in the provided code</dd>
+<dt><code>-m</code> or <code>&#8211;manual-output</code></dt>
+<dd> The user must setup output, allowing arbitrary comments. See example 2 below for details.</dd>
+<dt><code>-w</code> or <code>&#8211;warnings</code></dt>
+<dd> Enable warnings in user supplied code.</dd>
+<dt><code>&#8211;saveoutput $OUT_REF</code></dt>
+<dd> Save output writer (for integration with other fsdb filters).</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>ADVANCED USAGE</h2>
 <p> Typically dbroweval outputs a line in the same schema for each input line. For advanced usage, one can violate each of these assumptions. </p>
 <p> Some fun:</p>
 <dl>
-<dt><code>omitting a line</code></p>
-<dd> Add the code <tt>&quot;next row if ($your condition);&quot;</tt></p>
-<dt><code>outputting an extra line</code></p>
-<dd> Call <tt>&quot;&amp;$write_fastpath_sub($fref)&quot;</tt>. You may find <tt>$fref</tt>, the input row, useful.</p>
-<dt><code>changing the schema</code></p>
-<dd> See the examples below in &#8220;Command 2: Changing the Schema&#8221;</dl>
+<dt><code>omitting a line</code></dt>
+<dd> Add the code <tt>&quot;next row if ($your condition);&quot;</tt></dd>
+<dt><code>outputting an extra line</code></dt>
+<dd> Call <tt>&quot;&amp;$write_fastpath_sub($fref)&quot;</tt>. You may find <tt>$fref</tt>, the input row, useful.</dd>
+<dt><code>changing the schema</code></dt>
+<dd> See the examples below in &#8220;Command 2: Changing the Schema&#8221;</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

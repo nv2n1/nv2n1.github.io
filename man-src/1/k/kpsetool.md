@@ -17,61 +17,61 @@ description: "kpsetool – script to make teTeX-style kpsetool, kpsexpand, and k
 <p> <code>kpsetool</code> is a Bourne shell script that makes a teTeX-style <code>kpsetool</code>, <code>kpsexpand</code>, and <code>kpsepath</code> available. <code>kpsetool</code> uses <code>web2c</code>&#8216;s (new) <code>kpsexpand</code> binary, so the syntax for <code>kpsexpand</code> is incompatible with teTeX&#8217;s as of version 0.4. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m</code> <i>mode</i></p>
-<dd> set Metafont mode</p>
-<dt><code>-n</code> <i>progname</i></p>
-<dd> pretend to be <i>progname</i> to kpathsea</p>
-<dt><code>-p</code></p>
-<dd> act like <code><a href="/docs/linux/man/1-kpsepath/">kpsepath</a></code>(1)</p>
-<dt><code>-v</code></p>
-<dd> act like <code><a href="/docs/linux/man/1-kpsexpand/">kpsexpand</a></code>(1)</p>
-<dt><code>-w</code></p>
-<dd> act like <code><a href="/docs/linux/man/1-kpsewhich/">kpsewhich</a></code>(1)</dl>
+<dt><code>-m</code> <i>mode</i></dt>
+<dd> set Metafont mode</dd>
+<dt><code>-n</code> <i>progname</i></dt>
+<dd> pretend to be <i>progname</i> to kpathsea</dd>
+<dt><code>-p</code></dt>
+<dd> act like <code><a href="/docs/linux/man/1-kpsepath/">kpsepath</a></code>(1)</dd>
+<dt><code>-v</code></dt>
+<dd> act like <code><a href="/docs/linux/man/1-kpsexpand/">kpsexpand</a></code>(1)</dd>
+<dt><code>-w</code></dt>
+<dd> act like <code><a href="/docs/linux/man/1-kpsewhich/">kpsewhich</a></code>(1)</dd></dl>
 <h2>USAGE</h2>
 <p> <i>PATHTYPE</i> can be </p>
 <dl>
-<dt><code>base</code></p>
-<dd> Metafont memory dump</p>
-<dt><code>bib</code></p>
-<dd> BibTeX bibliography source</p>
-<dt><code>bst</code></p>
-<dd> BibTeX style files</p>
-<dt><code>cnf</code></p>
-<dd> Kpathsea runtime configuration files</p>
-<dt><code>dvips_config</code></p>
-<dd> dvips config files</p>
-<dt><code>dvips_header</code></p>
-<dd> dvips header files</p>
-<dt><code>fmt</code></p>
-<dd> TeX memory dump</p>
-<dt><code>gf</code></p>
-<dd> generic font bitmap</p>
-<dt><code>mem</code></p>
-<dd> MetaPost memory dump</p>
-<dt><code>mf</code></p>
-<dd> Metafont source</p>
-<dt><code>mfpool</code></p>
-<dd> Metafont program strings</p>
-<dt><code>mp</code></p>
-<dd> MetaPost source</p>
-<dt><code>mppool</code></p>
-<dd> MetaPost program strings</p>
-<dt><code>mpsupport</code></p>
-<dd> MetaPost support files</p>
-<dt><code>pict</code></p>
-<dd> Other kinds of figures</p>
-<dt><code>pk</code></p>
-<dd> packed bitmap font</p>
-<dt><code>tex</code></p>
-<dd> TeX source</p>
-<dt><code>texpool</code></p>
-<dd> TeX program strings</p>
-<dt><code>tfm</code></p>
-<dd> TeX font metrics</p>
-<dt><code>troff_font</code></p>
-<dd> troff fonts</p>
-<dt><code>vf</code></p>
-<dd> virtual font</dl>
+<dt><code>base</code></dt>
+<dd> Metafont memory dump</dd>
+<dt><code>bib</code></dt>
+<dd> BibTeX bibliography source</dd>
+<dt><code>bst</code></dt>
+<dd> BibTeX style files</dd>
+<dt><code>cnf</code></dt>
+<dd> Kpathsea runtime configuration files</dd>
+<dt><code>dvips_config</code></dt>
+<dd> dvips config files</dd>
+<dt><code>dvips_header</code></dt>
+<dd> dvips header files</dd>
+<dt><code>fmt</code></dt>
+<dd> TeX memory dump</dd>
+<dt><code>gf</code></dt>
+<dd> generic font bitmap</dd>
+<dt><code>mem</code></dt>
+<dd> MetaPost memory dump</dd>
+<dt><code>mf</code></dt>
+<dd> Metafont source</dd>
+<dt><code>mfpool</code></dt>
+<dd> Metafont program strings</dd>
+<dt><code>mp</code></dt>
+<dd> MetaPost source</dd>
+<dt><code>mppool</code></dt>
+<dd> MetaPost program strings</dd>
+<dt><code>mpsupport</code></dt>
+<dd> MetaPost support files</dd>
+<dt><code>pict</code></dt>
+<dd> Other kinds of figures</dd>
+<dt><code>pk</code></dt>
+<dd> packed bitmap font</dd>
+<dt><code>tex</code></dt>
+<dd> TeX source</dd>
+<dt><code>texpool</code></dt>
+<dd> TeX program strings</dd>
+<dt><code>tfm</code></dt>
+<dd> TeX font metrics</dd>
+<dt><code>troff_font</code></dt>
+<dd> troff fonts</dd>
+<dt><code>vf</code></dt>
+<dd> virtual font</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kpsewhich/">kpsewhich</a></code>(1) </p>
 <p> <i>Kpathsea: A library for path searching</i> (info or DVI file) </p>

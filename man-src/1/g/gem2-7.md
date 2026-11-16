@@ -14,9 +14,9 @@ description: "gem2.7 – frontend to RubyGems, the Ruby package manager"
 <p>gem2.7 is the frontend to RubyGems, the standard package manager for Ruby. This is a basic help message containing pointers to more information. </p>
 <p> Further help:</p>
 <dl>
-<dd><code>gem2.7 help commands</code> list all gem2.7 commands</p>
-<dd><code>gem2.7 help examples</code> shows some examples of usage</p>
-<dd><code>gem2.7 help COMMAND</code> show help on COMMAND, (e.g. &#8216;gem2.7 help install&#8217;)</dl>
+<dd><code>gem2.7 help commands</code> list all gem2.7 commands</dd>
+<dd><code>gem2.7 help examples</code> shows some examples of usage</dd>
+<dd><code>gem2.7 help COMMAND</code> show help on COMMAND, (e.g. &#8216;gem2.7 help install&#8217;)</dd></dl>
 <h2>Links</h2>
 <p><a rel="nofollow" href="http://rubygems.org/">http://rubygems.org/</a></p>
 <h2>Examples</h2>

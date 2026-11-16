@@ -17,10 +17,10 @@ description: "rancid-cvs – initialize CVS, Subversion or git and rancid group 
 <p> Running <code>rancid-cvs</code> for groups which already exist will not cause problems. If the group&#8217;s directory already exists, the import into the revision control system will be skipped, and if it&#8217;s <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5) already exists, it will not be altered. </p>
 <p> The command-line options are as follows:</p>
 <dl>
-<dt><code>-V</code></p>
-<dd> Prints package name and version strings.</p>
-<dt><code>-f group_config_file</code></p>
-<dd> Specify an alternative rancid.conf. The global rancid.conf file is read by <code>rancid-run.</code></dl>
+<dt><code>-V</code></dt>
+<dd> Prints package name and version strings.</dd>
+<dt><code>-f group_config_file</code></dt>
+<dd> Specify an alternative rancid.conf. The global rancid.conf file is read by <code>rancid-run.</code></dd></dl>
 <p> The best method for adding groups is by adding the group name to <i>LIST_OF_GROUPS</i> in <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), then run <code>rancid-cvs.</code> <code>Do not create the directories manually, allow rancid-cvs to do it.</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cvs/">cvs</a></code>(1), <code><a href="/docs/linux/man/1-git/">git</a></code>(1), <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5), <code><a href="/docs/linux/man/1-svn/">svn</a></code>(1)</p>

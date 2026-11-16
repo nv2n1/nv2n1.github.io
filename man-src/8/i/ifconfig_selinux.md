@@ -65,8 +65,8 @@ description: "ifconfig_selinux – Security Enhanced Linux Policy for the ifconf
 <p> <code>ifconfig_exec_t</code> </p>
 <p> &#8211; Set files with the ifconfig_exec_t type, if you want to transition an executable to the ifconfig_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/ip, /sbin/ip, /sbin/iw, /sbin/tc, /usr/bin/ip, /usr/sbin/ip, /usr/sbin/iw, /usr/sbin/tc, /sbin/ethtool, /sbin/ifconfig, /sbin/iwconfig, /sbin/mii-tool, /usr/sbin/ethtool, /usr/sbin/ifconfig, /usr/sbin/iwconfig, /usr/sbin/mii-tool, /sbin/ipx_configure, /sbin/ipx_interface, /sbin/ipx_internal_net, /usr/sbin/ipx_configure, /usr/sbin/ipx_interface, /usr/sbin/ipx_internal_net </p>
+<dt>Paths:</dt>
+<dd>/bin/ip, /sbin/ip, /sbin/iw, /sbin/tc, /usr/bin/ip, /usr/sbin/ip, /usr/sbin/iw, /usr/sbin/tc, /sbin/ethtool, /sbin/ifconfig, /sbin/iwconfig, /sbin/mii-tool, /usr/sbin/ethtool, /usr/sbin/ifconfig, /usr/sbin/iwconfig, /usr/sbin/mii-tool, /sbin/ipx_configure, /sbin/ipx_interface, /sbin/ipx_internal_net, /usr/sbin/ipx_configure, /usr/sbin/ipx_interface, /usr/sbin/ipx_internal_net </dd>
 </dl>
 <p> <code>ifconfig_var_run_t</code> </p>
 <p> &#8211; Set files with the ifconfig_var_run_t type, if you want to store the ifconfig files under the /run or /var/run directory. </p>

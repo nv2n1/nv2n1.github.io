@@ -20,12 +20,12 @@ description: "unicode – universal character set"
 <h3>Implementation levels</h3>
 <p>As not all systems are expected to support advanced mechanisms like combining characters, ISO 10646-1 specifies the following three <i>implementation levels</i> of UCS:</p>
 <dl>
-<dt>Level 1</p>
-<dd>Combining characters and Hangul Jamo (a variant encoding of the Korean script, where a Hangul syllable glyph is coded as a triplet or pair of vowel/consonant codes) are not supported.</p>
-<dt>Level 2</p>
-<dd>In addition to level 1, combining characters are now allowed for some languages where they are essential (e.g., Thai, Lao, Hebrew, Arabic, Devanagari, Malayalam).</p>
-<dt>Level 3</p>
-<dd>All UCS characters are supported.</dl>
+<dt>Level 1</dt>
+<dd>Combining characters and Hangul Jamo (a variant encoding of the Korean script, where a Hangul syllable glyph is coded as a triplet or pair of vowel/consonant codes) are not supported.</dd>
+<dt>Level 2</dt>
+<dd>In addition to level 1, combining characters are now allowed for some languages where they are essential (e.g., Thai, Lao, Hebrew, Arabic, Devanagari, Malayalam).</dd>
+<dt>Level 3</dt>
+<dd>All UCS characters are supported.</dd></dl>
 <p> The Unicode 3.0 Standard published by the Unicode Consortium contains exactly the UCS Basic Multilingual Plane at implementation level 3, as described in ISO 10646-1:2000. Unicode 3.1 added the supplemental planes of ISO 10646-2. The Unicode standard and technical reports published by the Unicode Consortium provide much additional information on the semantics and recommended usages of various characters. They provide guidelines and algorithms for editing, sorting, comparing, normalizing, converting, and displaying Unicode strings.</p>
 <h3>Unicode under Linux</h3>
 <p>Under GNU/Linux, the C type <i>wchar_t</i> is a signed 32-bit integer type. Its values are always interpreted by the C library as UCS code values (in all locales), a convention that is signaled by the GNU C library to applications by defining the constant <code>__STDC_ISO_10646__</code> as specified in the ISO C99 standard. </p>
@@ -36,26 +36,26 @@ description: "unicode – universal character set"
 <p> Two other planes are reserved for private usage, plane 15 (Supplementary Private Use Area-A, range 0xf0000 to 0xffffd) and plane 16 (Supplementary Private Use Area-B, range 0x100000 to 0x10fffd).</p>
 <h3>Literature</h3>
 <dl>
-<dt>*</p>
-<dd>Information technology &#8212; Universal Multiple-Octet Coded Character Set (UCS) &#8212; Part 1: Architecture and Basic Multilingual Plane. International Standard ISO/IEC 10646-1, International Organization for Standardization, Geneva, 2000.</p>
-<dd>This is the official specification of UCS . Available from</p>
-<dt>*</p>
-<dd>The Unicode Standard, Version 3.0. The Unicode Consortium, Addison-Wesley, Reading, MA, 2000, ISBN 0-201-61633-5.</p>
-<dt>*</p>
-<dd>S. Harbison, G. Steele. C: A Reference Manual. Fourth edition, Prentice Hall, Englewood Cliffs, 1995, ISBN 0-13-326224-3.</p>
-<dd>A good reference book about the C programming language. The fourth edition covers the 1994 Amendment 1 to the ISO C90 standard, which adds a large number of new C library functions for handling wide and multibyte character encodings, but it does not yet cover ISO C99, which improved wide and multibyte character support even further.</p>
-<dt>*</p>
-<dd>Unicode Technical Reports.</p>
+<dt>*</dt>
+<dd>Information technology &#8212; Universal Multiple-Octet Coded Character Set (UCS) &#8212; Part 1: Architecture and Basic Multilingual Plane. International Standard ISO/IEC 10646-1, International Organization for Standardization, Geneva, 2000.</dd>
+<dd>This is the official specification of UCS . Available from</dd>
+<dt>*</dt>
+<dd>The Unicode Standard, Version 3.0. The Unicode Consortium, Addison-Wesley, Reading, MA, 2000, ISBN 0-201-61633-5.</dd>
+<dt>*</dt>
+<dd>S. Harbison, G. Steele. C: A Reference Manual. Fourth edition, Prentice Hall, Englewood Cliffs, 1995, ISBN 0-13-326224-3.</dd>
+<dd>A good reference book about the C programming language. The fourth edition covers the 1994 Amendment 1 to the ISO C90 standard, which adds a large number of new C library functions for handling wide and multibyte character encodings, but it does not yet cover ISO C99, which improved wide and multibyte character support even further.</dd>
+<dt>*</dt>
+<dd>Unicode Technical Reports.</dd>
 <dl>
-<dd></dl>
-<dt>*</p>
-<dd>Markus Kuhn: UTF-8 and Unicode FAQ for UNIX/Linux.</p>
+<dd></dd></dl>
+<dt>*</dt>
+<dd>Markus Kuhn: UTF-8 and Unicode FAQ for UNIX/Linux.</dd>
 <dl>
-<dd></dl>
-<dt>*</p>
-<dd>Bruno Haible: Unicode HOWTO.</p>
+<dd></dd></dl>
+<dt>*</dt>
+<dd>Bruno Haible: Unicode HOWTO.</dd>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-locale/">locale</a></code>(1), <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/7-charsets/">charsets</a></code>(7), <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7)</p>

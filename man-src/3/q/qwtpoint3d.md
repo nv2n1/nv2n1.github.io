@@ -40,7 +40,7 @@ description: "QwtPoint3D –"
 <p>Constructs a null point. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isNull()</code></dl>
+<dd><code>isNull()</code></dd></dl>
 <h3>QwtPoint3D::QwtPoint3D (const <code>QwtPoint3D</code> &amp;other) [inline]</h3>
 <p>Copy constructor. Constructs a point using the values of the point specified.</p>
 <h3>QwtPoint3D::QwtPoint3D (const QPointF &amp;other) [inline]</h3>
@@ -49,43 +49,43 @@ description: "QwtPoint3D –"
 <h3>bool QwtPoint3D::isNull () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True if the point is null; otherwise returns false.</dl>
+<dd>True if the point is null; otherwise returns false.</dd></dl>
 <p> A point is considered to be null if x, y and z-coordinates are equal to zero.</p>
 <h3>bool QwtPoint3D::operator!= (const <code>QwtPoint3D</code> &amp;other) const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True if this rect and other are different; otherwise returns false.</dl>
+<dd>True if this rect and other are different; otherwise returns false.</dd></dl>
 <h3>bool QwtPoint3D::operator== (const <code>QwtPoint3D</code> &amp;other) const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, if this point and other are equal; otherwise returns false.</dl>
+<dd>True, if this point and other are equal; otherwise returns false.</dd></dl>
 <h3>double &amp; QwtPoint3D::rx () [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A reference to the x-coordinate of the point.</dl>
+<dd>A reference to the x-coordinate of the point.</dd></dl>
 <h3>double &amp; QwtPoint3D::ry () [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A reference to the y-coordinate of the point.</dl>
+<dd>A reference to the y-coordinate of the point.</dd></dl>
 <h3>double &amp; QwtPoint3D::rz () [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A reference to the z-coordinate of the point.</dl>
+<dd>A reference to the z-coordinate of the point.</dd></dl>
 <h3>QPointF QwtPoint3D::toPoint () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>2D point, where the z coordinate is dropped.</dl>
+<dd>2D point, where the z coordinate is dropped.</dd></dl>
 <h3>double QwtPoint3D::x () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The x-coordinate of the point.</dl>
+<dd>The x-coordinate of the point.</dd></dl>
 <h3>double QwtPoint3D::y () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The y-coordinate of the point.</dl>
+<dd>The y-coordinate of the point.</dd></dl>
 <h3>double QwtPoint3D::z () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The z-coordinate of the point.</dl>
+<dd>The z-coordinate of the point.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

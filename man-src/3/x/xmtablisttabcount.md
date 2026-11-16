@@ -15,8 +15,8 @@ description: "XmTabListTabCount — A convenience function that counts the numbe
 <h2>Description</h2>
 <p><code>XmTabListTabCount</code> counts the number of tabs in the specified <i>tablist</i>.</p>
 <dl COMPACT>
-<dt><i>tablist</i></p>
-<dd>Specifies the tab list.</dl>
+<dt><i>tablist</i></dt>
+<dd>Specifies the tab list.</dd></dl>
 <h2>Return</h2>
 <p>Returns the number of tabs in <i>tablist</i>.</p>
 <h2>Related</h2>

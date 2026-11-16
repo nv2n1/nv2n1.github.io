@@ -283,24 +283,24 @@ description: "XmPushButtonGadget — The PushButtonGadget widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNactivateCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the PushButtonGadget is activated. It is activated when the user presses and releases the active mouse button while the pointer is inside the PushButtonGadget. Activating PushButtonGadget also disarms it. For this callback, the reason is <code>XmCR_ACTIVATE</code>. This callback uses the <code>XmQTactivatable</code> trait.</p>
-<dt><code>XmNarmCallback</code></p>
-<dd>Specifies the list of callbacks that is called when PushButtonGadget is armed. It is armed when the user presses the active mouse button while the pointer is inside the PushButtonGadget. For this callback, the reason is <code>XmCR_ARM</code>.</p>
-<dt><code>XmNarmColor</code></p>
-<dd>Specifies the color with which to fill the armed button. <code>XmNfillOnArm</code> must be set to True for this resource to have an effect. The default for a color display is a color between the background and the bottom shadow color. For a monochrome display, the default is set to the foreground color, and any text in the label appears in the background color when the button is armed.</p>
-<dt><code>XmNarmPixmap</code></p>
-<dd>Specifies the pixmap to be used as the button face if <code>XmNlabeltype</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code> and PushButtonGadget is armed. This resource is disabled when the PushButtonGadget is in a menu.</p>
-<dt><code>XmNdefaultButtonShadowThickness</code></p>
-<dd>This resource specifies the width of the default button indicator shadow. If this resource is 0 (zero), the width of the shadow comes from the value of the <code>XmNshowAsDefault</code> resource. If this resource is greater than zero, the <code>XmNshowAsDefault</code> resource is only used to specify whether this button is the default. The default value is the initial value of <code>XmNshowAsDefault</code>.</p>
-<dt><code>XmNdisarmCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the PushButtonGadget is disarmed. PushButtonGadget is disarmed when the user presses and releases the active mouse button while the pointer is inside that gadget. For this callback, the reason is <code>XmCR_DISARM</code>.</p>
-<dt><code>XmNfillOnArm</code></p>
-<dd>Forces the PushButtonGadget to fill the background of the button with the color specified by <code>XmNarmColor</code> when the button is armed and when this resource is set to True. If it is False, only the top and bottom shadow colors are switched. When the PushButtonGadget is in a menu, this resource is ignored and assumed to be False.</p>
-<dt><code>XmNmultiClick</code></p>
-<dd>If a button click is followed by another button click within the time span specified by the display&#8217;s multiclick time, and this resource is set to <code>XmMULTICLICK_DISCARD</code>, the second click is not processed. If this resource is set to <code>XmMULTICLICK_KEEP</code>, the event is processed and <i>click_count</i> is incremented in the callback structure. When the button is in a menu, the default is <code>XmMULTICLICK_DISCARD</code>; otherwise, for a button not in a menu, the default value is <code>XmMULTICLICK_KEEP</code>.</p>
-<dt><code>XmNshowAsDefault</code></p>
-<dd>If <code>XmNdefaultButtonShadowThickness</code> is greater than 0 (zero), a value greater than zero in this resource specifies to mark this button as the default button. If <code>XmNdefaultButtonShadowThickness</code> is 0, a value greater than 0 in this resource specifies to mark this button as the default button with the shadow thickness specified by this resource. The space between the shadow and the default shadow is equal to the sum of both shadows. The default value is 0. When the Display resource <code>XmNdefaultButtonEmphasis</code> has a value of <code>XmEXTERNAL_HIGHLIGHT</code> (the default), PushButton draws the location cursor outside of the outer shadow. When this resource has a value of <code>XmINTERNAL_HIGHLIGHT</code>, the highlight is drawn between the inner and outer shadows. When this value is not 0, the Label <code>XmNmarginLeft</code>, <code>XmNmarginRight</code>, <code>XmNmarginTop</code>, and <code>XmNmarginBottom</code> resources may be modified to accommodate the second shadow. This resource is disabled when the PushButton is in a menu.</dl>
+<dt><code>XmNactivateCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the PushButtonGadget is activated. It is activated when the user presses and releases the active mouse button while the pointer is inside the PushButtonGadget. Activating PushButtonGadget also disarms it. For this callback, the reason is <code>XmCR_ACTIVATE</code>. This callback uses the <code>XmQTactivatable</code> trait.</dd>
+<dt><code>XmNarmCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when PushButtonGadget is armed. It is armed when the user presses the active mouse button while the pointer is inside the PushButtonGadget. For this callback, the reason is <code>XmCR_ARM</code>.</dd>
+<dt><code>XmNarmColor</code></dt>
+<dd>Specifies the color with which to fill the armed button. <code>XmNfillOnArm</code> must be set to True for this resource to have an effect. The default for a color display is a color between the background and the bottom shadow color. For a monochrome display, the default is set to the foreground color, and any text in the label appears in the background color when the button is armed.</dd>
+<dt><code>XmNarmPixmap</code></dt>
+<dd>Specifies the pixmap to be used as the button face if <code>XmNlabeltype</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code> and PushButtonGadget is armed. This resource is disabled when the PushButtonGadget is in a menu.</dd>
+<dt><code>XmNdefaultButtonShadowThickness</code></dt>
+<dd>This resource specifies the width of the default button indicator shadow. If this resource is 0 (zero), the width of the shadow comes from the value of the <code>XmNshowAsDefault</code> resource. If this resource is greater than zero, the <code>XmNshowAsDefault</code> resource is only used to specify whether this button is the default. The default value is the initial value of <code>XmNshowAsDefault</code>.</dd>
+<dt><code>XmNdisarmCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the PushButtonGadget is disarmed. PushButtonGadget is disarmed when the user presses and releases the active mouse button while the pointer is inside that gadget. For this callback, the reason is <code>XmCR_DISARM</code>.</dd>
+<dt><code>XmNfillOnArm</code></dt>
+<dd>Forces the PushButtonGadget to fill the background of the button with the color specified by <code>XmNarmColor</code> when the button is armed and when this resource is set to True. If it is False, only the top and bottom shadow colors are switched. When the PushButtonGadget is in a menu, this resource is ignored and assumed to be False.</dd>
+<dt><code>XmNmultiClick</code></dt>
+<dd>If a button click is followed by another button click within the time span specified by the display&#8217;s multiclick time, and this resource is set to <code>XmMULTICLICK_DISCARD</code>, the second click is not processed. If this resource is set to <code>XmMULTICLICK_KEEP</code>, the event is processed and <i>click_count</i> is incremented in the callback structure. When the button is in a menu, the default is <code>XmMULTICLICK_DISCARD</code>; otherwise, for a button not in a menu, the default value is <code>XmMULTICLICK_KEEP</code>.</dd>
+<dt><code>XmNshowAsDefault</code></dt>
+<dd>If <code>XmNdefaultButtonShadowThickness</code> is greater than 0 (zero), a value greater than zero in this resource specifies to mark this button as the default button. If <code>XmNdefaultButtonShadowThickness</code> is 0, a value greater than 0 in this resource specifies to mark this button as the default button with the shadow thickness specified by this resource. The space between the shadow and the default shadow is equal to the sum of both shadows. The default value is 0. When the Display resource <code>XmNdefaultButtonEmphasis</code> has a value of <code>XmEXTERNAL_HIGHLIGHT</code> (the default), PushButton draws the location cursor outside of the outer shadow. When this resource has a value of <code>XmINTERNAL_HIGHLIGHT</code>, the highlight is drawn between the inner and outer shadows. When this value is not 0, the Label <code>XmNmarginLeft</code>, <code>XmNmarginRight</code>, <code>XmNmarginTop</code>, and <code>XmNmarginBottom</code> resources may be modified to accommodate the second shadow. This resource is disabled when the PushButton is in a menu.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>PushButtonGadget inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1627,47 +1627,47 @@ description: "XmPushButtonGadget — The PushButtonGadget widget class"
  int <i>click_count</i>;
 } XmPushButtonCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><i>click_count</i></p>
-<dd>Valid only when the reason is <code>XmCR_ACTIVATE</code>. It contains the number of clicks in the last multiclick sequence if the <code>XmNmultiClick</code> resource is set to <code>XmMULTICLICK_KEEP</code>; otherwise it contains 1. The activate callback is invoked for each click if <code>XmNmultiClick</code> is set to <code>XmMULTICLICK_KEEP</code>.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><i>click_count</i></dt>
+<dd>Valid only when the reason is <code>XmCR_ACTIVATE</code>. It contains the number of clicks in the last multiclick sequence if the <code>XmNmultiClick</code> resource is set to <code>XmMULTICLICK_KEEP</code>; otherwise it contains 1. The activate callback is invoked for each click if <code>XmNmultiClick</code> is set to <code>XmMULTICLICK_KEEP</code>.</dd></dl>
 <h3>Behavior</h3>
 <p><code>XmPushButtonGadget</code> includes behavior from <code>XmGadget</code>. <code>XmPushButtonGadget</code> includes menu traversal behavior from <code>XmLabelGadget</code>. Additional behavior for XmPushButtonGadget is described in the following list.</p>
 <dl COMPACT>
-<dt><code>&lt;Btn2Down&gt;</code>:</p>
-<dd>Drags the contents of a PushButtonGadget label, identified when <code>&lt;Btn2&gt;</code> is pressed. This action is undefined for PushButtonGadgets used in a menu system.</p>
-<dt><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>This action arms the PushButtonGadget.</p>
-<dd>In a menu, this action unposts any menus posted by the PushButtonGadget&#8217;s parent menu, disables keyboard traversal for the menu, and enables mouse traversal for the menu. It draws the shadow in the armed state. Unless the button is already armed, it calls the <code>XmNarmCallback</code> callbacks.</p>
-<dd>If the button is not in a menu, this action draws the shadow in the armed state. If <code>XmNfillOnArm</code> is set to True, it fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNarmPixmap</code> is used for the button face. It calls the <code>XmNarmCallback</code> callbacks.</p>
-<dt><code>&lt;Btn1&gt;</code><code>(2+)</code>:</p>
-<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing.</p>
-<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action draws the shadow in the armed state. If the button is not in a menu and if <code>XmNfillOnArm</code> is set to True, it fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNarmPixmap</code> is used for the button face. This action calls the <code>XmNarmCallback</code> callbacks.</p>
-<dt><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>In a menu, this action unposts all menus in the menu hierarchy and activates the PushButtonGadget. It calls the <code>XmNactivateCallback</code> callbacks and then the <code>XmNdisarmCallback</code> callbacks.</p>
-<dd>If the PushButtonGadget is not in a menu, this action draws the shadow in the unarmed state. If <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used for the button face. If the pointer is still within the button, this action calls the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code>.</p>
-<dt><code>&lt;Btn1Up&gt;</code><code>(2+)</code>:</p>
-<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing.</p>
-<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action increments <i>click_count</i> in the callback structure and draws the shadow in the unarmed state. If the button is not in a menu and if <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, <code>XmNlabelPixmap</code> is used for the button face. If the pointer is within the PushButtonGadget, this action calls the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code>.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>In a menu, this action unposts all menus in the menu hierarchy, unless the button is already armed, and calls the <code>XmNarmCallback</code> callbacks, the <code>XmNactivateCallback</code> and the <code>XmNdisarmCallback</code> callbacks. Outside a menu, <code>KActivate</code> has no effect. For PushButtonGadgets outside of a menu, if the parent is a manager, this action passes the event to the parent.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>In a menu, this action unposts all menus in the menu hierarchy, unless the button is already armed, and calls the <code>XmNarmCallback</code> callbacks. This acton calls the <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code> callbacks.</p>
-<dd>Outside a menu, this action draws the shadow in the armed state and, if <code>XmNfillOnArm</code> is set to True, fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, <code>XmNarmPixmap</code> is used for the button face. This action calls the <code>XmNarmCallback</code> callbacks.</p>
-<dd>Outside a menu, this action also arranges for the following to happen, either immediately or at a later time: the shadow is drawn in the unarmed state and, if <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used for the button face. The <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code> callbacks are called.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>In a Pulldown or Popup MenuPane, unposts all menus in the menu hierarchy and restores keyboard focus to the widget that had the focus before the menu system was entered. This action calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</p>
-<dd>In a Popup MenuPane, unposts the menu and restores keyboard focus to the widget from which the menu was posted. For a PushButtonGadget outside of a menu, if the parent is a manger, this action passes the event to the parent.</p>
-<dt><code>&lt;Enter&gt;</code>:</p>
-<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the armed state and calls the <code>XmNarmCallback</code> callbacks.</p>
-<dd>If the PushButtonGadget is not in a menu and the cursor leaves and then reenters the PushButtonGadget while the button is pressed, this action draws the shadow in the armed state. If <code>XmNfillOnArm</code> is set to True, it also fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNarmPixmap</code> is used for the button face.</p>
-<dt><code>&lt;Leave&gt;</code>:</p>
-<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the unarmed state and calls the <code>XmNdisarmCallback</code> callbacks.</p>
-<dd>If the PushButtonGadget is not in a menu and the cursor leaves the PushButtonGadget while the button is pressed, this action draws the shadow in the unarmed state. If <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used for the button face.</dl>
+<dt><code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>Drags the contents of a PushButtonGadget label, identified when <code>&lt;Btn2&gt;</code> is pressed. This action is undefined for PushButtonGadgets used in a menu system.</dd>
+<dt><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>This action arms the PushButtonGadget.</dd>
+<dd>In a menu, this action unposts any menus posted by the PushButtonGadget&#8217;s parent menu, disables keyboard traversal for the menu, and enables mouse traversal for the menu. It draws the shadow in the armed state. Unless the button is already armed, it calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dd>If the button is not in a menu, this action draws the shadow in the armed state. If <code>XmNfillOnArm</code> is set to True, it fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNarmPixmap</code> is used for the button face. It calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dt><code>&lt;Btn1&gt;</code><code>(2+)</code>:</dt>
+<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing.</dd>
+<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action draws the shadow in the armed state. If the button is not in a menu and if <code>XmNfillOnArm</code> is set to True, it fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNarmPixmap</code> is used for the button face. This action calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dt><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>In a menu, this action unposts all menus in the menu hierarchy and activates the PushButtonGadget. It calls the <code>XmNactivateCallback</code> callbacks and then the <code>XmNdisarmCallback</code> callbacks.</dd>
+<dd>If the PushButtonGadget is not in a menu, this action draws the shadow in the unarmed state. If <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used for the button face. If the pointer is still within the button, this action calls the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code>.</dd>
+<dt><code>&lt;Btn1Up&gt;</code><code>(2+)</code>:</dt>
+<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing.</dd>
+<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action increments <i>click_count</i> in the callback structure and draws the shadow in the unarmed state. If the button is not in a menu and if <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, <code>XmNlabelPixmap</code> is used for the button face. If the pointer is within the PushButtonGadget, this action calls the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code>.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>In a menu, this action unposts all menus in the menu hierarchy, unless the button is already armed, and calls the <code>XmNarmCallback</code> callbacks, the <code>XmNactivateCallback</code> and the <code>XmNdisarmCallback</code> callbacks. Outside a menu, <code>KActivate</code> has no effect. For PushButtonGadgets outside of a menu, if the parent is a manager, this action passes the event to the parent.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>In a menu, this action unposts all menus in the menu hierarchy, unless the button is already armed, and calls the <code>XmNarmCallback</code> callbacks. This acton calls the <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code> callbacks.</dd>
+<dd>Outside a menu, this action draws the shadow in the armed state and, if <code>XmNfillOnArm</code> is set to True, fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, <code>XmNarmPixmap</code> is used for the button face. This action calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dd>Outside a menu, this action also arranges for the following to happen, either immediately or at a later time: the shadow is drawn in the unarmed state and, if <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used for the button face. The <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code> callbacks are called.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>In a Pulldown or Popup MenuPane, unposts all menus in the menu hierarchy and restores keyboard focus to the widget that had the focus before the menu system was entered. This action calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</dd>
+<dd>In a Popup MenuPane, unposts the menu and restores keyboard focus to the widget from which the menu was posted. For a PushButtonGadget outside of a menu, if the parent is a manger, this action passes the event to the parent.</dd>
+<dt><code>&lt;Enter&gt;</code>:</dt>
+<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the armed state and calls the <code>XmNarmCallback</code> callbacks.</dd>
+<dd>If the PushButtonGadget is not in a menu and the cursor leaves and then reenters the PushButtonGadget while the button is pressed, this action draws the shadow in the armed state. If <code>XmNfillOnArm</code> is set to True, it also fills the button with the color specified by <code>XmNarmColor</code>. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNarmPixmap</code> is used for the button face.</dd>
+<dt><code>&lt;Leave&gt;</code>:</dt>
+<dd>In a menu, if keyboard traversal is enabled, this action does nothing. Otherwise, it draws the shadow in the unarmed state and calls the <code>XmNdisarmCallback</code> callbacks.</dd>
+<dd>If the PushButtonGadget is not in a menu and the cursor leaves the PushButtonGadget while the button is pressed, this action draws the shadow in the unarmed state. If <code>XmNfillOnArm</code> is set to True, the background color reverts to the unarmed color. If <code>XmNlabelType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_AND_STRING</code>, the <code>XmNlabelPixmap</code> is used for the button face.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

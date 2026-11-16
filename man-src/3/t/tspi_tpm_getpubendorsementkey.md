@@ -35,14 +35,14 @@ description: "Tspi_TPM_GetPubEndorsementKey – create a TSS key object from the
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_GetPubEndorsementKey</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hTPM</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
-<dd>One or more parameters is bad. </p>
-<dt><font SIZE="-1">TPM_E_DISABLED_CMD</font></p>
-<dd>Reading of PubEK from TPM has been disabled. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hTPM</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dd>One or more parameters is bad. </dd>
+<dt><font SIZE="-1">TPM_E_DISABLED_CMD</font></dt>
+<dd>Reading of PubEK from TPM has been disabled. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_GetPubEndorsementKey</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>

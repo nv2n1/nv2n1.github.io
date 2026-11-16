@@ -15,64 +15,64 @@ description: "krazy2all – Sanity checks KDE source code."
 <p> krazy2all finds all supported files within the current directory tree and runs the krazy2 checker on all of them, producing 1 concise report in the specified export format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</p>
-<dt><code>&#8211;list</code></p>
-<dd> Print a list of all available checker programs and exit.</p>
-<dt><code>&#8211;list-types</code></p>
-<dd> Print a list of the support file types and exit.</p>
-<dt><code>&#8211;ignorerc</code></p>
-<dd> Ignore .krazy files.</p>
-<dt><code>&#8211;config</code> &lt;krazyrc&gt;</p>
-<dd> Read settings from the specified krazyrc configuration file only. All other configuration files will be ignored, including those found in the user&#8217;s home directory or in the current working directory.</p>
-<dt><code>&#8211;dry-run</code></p>
-<dd> With this option the checker programs aren&#8217;t run; instead, the command line for each check that would be run is printed.</p>
-<dt><code>&#8211;priority</code> &lt;low|normal|high|important|all&gt;</p>
-<dd> Tell each checker program to report issues with the specified priority only. This option is useful to help put issues into &#8220;fix-first&#8221; order. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd>
+<dt><code>&#8211;list</code></dt>
+<dd> Print a list of all available checker programs and exit.</dd>
+<dt><code>&#8211;list-types</code></dt>
+<dd> Print a list of the support file types and exit.</dd>
+<dt><code>&#8211;ignorerc</code></dt>
+<dd> Ignore .krazy files.</dd>
+<dt><code>&#8211;config</code> &lt;krazyrc&gt;</dt>
+<dd> Read settings from the specified krazyrc configuration file only. All other configuration files will be ignored, including those found in the user&#8217;s home directory or in the current working directory.</dd>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> With this option the checker programs aren&#8217;t run; instead, the command line for each check that would be run is printed.</dd>
+<dt><code>&#8211;priority</code> &lt;low|normal|high|important|all&gt;</dt>
+<dd> Tell each checker program to report issues with the specified priority only. This option is useful to help put issues into &#8220;fix-first&#8221; order. </dd>
 <p> Supported priorites are:<br />
 &nbsp;<wbr>&nbsp;<wbr>low -&gt;&nbsp;<wbr>print low priority issues only<br />
 &nbsp;<wbr>&nbsp;<wbr>normal -&gt;&nbsp;<wbr>print normal priority issues only<br />
 &nbsp;<wbr>&nbsp;<wbr>high -&gt;&nbsp;<wbr>print high priority issues only<br />
 &nbsp;<wbr>&nbsp;<wbr>important -&gt;&nbsp;<wbr>print issues with normal or high priority<br />
 &nbsp;<wbr>&nbsp;<wbr>all -&gt;&nbsp;<wbr>print all issues&nbsp;<wbr>(default)</p>
-<dt><code>&#8211;strict</code> &lt;normal|super|all&gt;</p>
-<dd> Tell each checker program to report issues match the strictness level only. Use this option to help filter out issues of less importance. </p>
+<dt><code>&#8211;strict</code> &lt;normal|super|all&gt;</dt>
+<dd> Tell each checker program to report issues match the strictness level only. Use this option to help filter out issues of less importance. </dd>
 <p> Support strictness levels are:<br />
 &nbsp;<wbr>&nbsp;<wbr>normal -&gt;&nbsp;<wbr>print non-super strict issues only<br />
 &nbsp;<wbr>&nbsp;<wbr>super -&gt;&nbsp;<wbr>print super strict issues only<br />
 &nbsp;<wbr>&nbsp;<wbr>all -&gt;&nbsp;<wbr>print all issues&nbsp;<wbr>(default)</p>
-<dt><code>&#8211;check</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</p>
-<dd> Run the specified checker program(s) only. You may not combine this option with <code>&#8211;check-sets</code>. </p>
+<dt><code>&#8211;check</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</dt>
+<dd> Run the specified checker program(s) only. You may not combine this option with <code>&#8211;check-sets</code>. </dd>
 <p> Use the <code>&#8211;list</code> option to show the list of available checkers.</p>
-<dt><code>&#8211;check-sets</code> &lt;set[,set1,set2,&#8230;,setN]&gt;</p>
-<dd> Run the checker programs belonging to the specified set(s) only. You may not combine this option with <code>&#8211;check</code>. </p>
+<dt><code>&#8211;check-sets</code> &lt;set[,set1,set2,&#8230;,setN]&gt;</dt>
+<dd> Run the checker programs belonging to the specified set(s) only. You may not combine this option with <code>&#8211;check</code>. </dd>
 <p> Use the <code>&#8211;list-sets</code> option to see the list of available check sets and programs.</p>
-<dt><code>&#8211;exclude</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</p>
-<dd> Do <font SIZE="-1"><code>NOT</code></font> run the specified checker program(s).</p>
-<dt><code>&#8211;extra</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</p>
-<dd> Add the specified &#8220;extra&#8221; program(s) to the list of checkers to run. Use the &#8211;list option to show the list of available &#8220;extra&#8221; checkers; they will be marked with the tag [<font SIZE="-1">EXTRA</font>] by the checker description line.</p>
-<dt><code>&#8211;types</code> &lt;type[,type1,type2,&#8230;,typeN]&gt;</p>
-<dd> Check the specified file type(s) only.</p>
-<dt><code>&#8211;exclude-types</code> &lt;type[,type1,type2,&#8230;,typeN]&gt;</p>
-<dd> Do <font SIZE="-1">NOT</font> check the specified file type(s).</p>
-<dt><code>&#8211;export</code> &lt;text|textlist|textedit|xml&gt;</p>
+<dt><code>&#8211;exclude</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</dt>
+<dd> Do <font SIZE="-1"><code>NOT</code></font> run the specified checker program(s).</dd>
+<dt><code>&#8211;extra</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</dt>
+<dd> Add the specified &#8220;extra&#8221; program(s) to the list of checkers to run. Use the &#8211;list option to show the list of available &#8220;extra&#8221; checkers; they will be marked with the tag [<font SIZE="-1">EXTRA</font>] by the checker description line.</dd>
+<dt><code>&#8211;types</code> &lt;type[,type1,type2,&#8230;,typeN]&gt;</dt>
+<dd> Check the specified file type(s) only.</dd>
+<dt><code>&#8211;exclude-types</code> &lt;type[,type1,type2,&#8230;,typeN]&gt;</dt>
+<dd> Do <font SIZE="-1">NOT</font> check the specified file type(s).</dd>
+<dt><code>&#8211;export</code> &lt;text|textlist|textedit|xml&gt;</dt>
 <dd> Output in one of the following formats:<br />
 &nbsp;<wbr>&nbsp;<wbr>text&nbsp;<wbr>(default)<br />
 &nbsp;<wbr>&nbsp;<wbr>textlist -&gt;&nbsp;<wbr>plain old text, 1 offending file-per-line<br />
 &nbsp;<wbr>&nbsp;<wbr>textedit -&gt;&nbsp;<wbr>text formatted for IDEs, 1 issue-per-line&nbsp;<wbr>(file:line:issue)<br />
-&nbsp;<wbr>&nbsp;<wbr>xml -&gt;&nbsp;<wbr><font SIZE="-1">XML</font>&nbsp;<wbr>formatted</p>
-<dt><code>&#8211;title</code></p>
-<dd> Give the output report a project title.</p>
-<dt><code>&#8211;cms</code></p>
-<dd> An acronym for &#8220;component/module/subdir&#8221;. Used to write the breadcrumbs line in the <font SIZE="-1">XML</font> output. Must be a slash-delimited triple containing the component, module, and subdir which is being scanned.</p>
-<dt><code>&#8211;brief</code></p>
-<dd> Only print the output for checkers that have at least 1 issue.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Suppress all output messages.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print the offending content for each file processed</dl>
+&nbsp;<wbr>&nbsp;<wbr>xml -&gt;&nbsp;<wbr><font SIZE="-1">XML</font>&nbsp;<wbr>formatted</dd>
+<dt><code>&#8211;title</code></dt>
+<dd> Give the output report a project title.</dd>
+<dt><code>&#8211;cms</code></dt>
+<dd> An acronym for &#8220;component/module/subdir&#8221;. Used to write the breadcrumbs line in the <font SIZE="-1">XML</font> output. Must be a slash-delimited triple containing the component, module, and subdir which is being scanned.</dd>
+<dt><code>&#8211;brief</code></dt>
+<dd> Only print the output for checkers that have at least 1 issue.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Suppress all output messages.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print the offending content for each file processed</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <font SIZE="-1">KRAZY_PLUGIN_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating plugins. By default, plugins are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-plugins:krazy-plugins</i>. </p>
 <p> <font SIZE="-1">KRAZY_EXTRA_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating &#8220;extra&#8221; plugins. By default, the &#8220;extras&#8221; are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-extras:krazy-extras</i>. </p>

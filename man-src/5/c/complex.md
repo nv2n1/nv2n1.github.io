@@ -17,7 +17,7 @@ description: "complex – xxQS_NAMExx complexes configuration file format"
 <pre>qconf -aattr exechost complex_values tmp_free=10T $(qconf -sel)</pre>
 <h3><code>Default queue resource attributes</code></h3>
 <p>By default there is a selection of parameters in the queue configuration as defined in The principal queue configuration parameters requestable for a job by the user are: </p>
-<pre><dl><dt><dd>qname
+<pre><dl><dt></dt><dd>qname
 hostname
 notify
 calendar
@@ -36,15 +36,15 @@ s_core
 h_core
 s_rss
 h_rss
-</dl></pre>
+</dd></dl></pre>
 <h3><code>Default host resource attributes</code></h3>
 <p>The standard set of host-related attributes consists of two categories. The first category is built by several queue configuration attributes which are particularly suitable to be managed on a host basis. These attributes are: </p>
-<pre><dl><dt><dd>slots
+<pre><dl><dt></dt><dd>slots
 s_vmem
 h_vmem
 s_fsize
 h_fsize
-</dl></pre>
+</dd></dl></pre>
 <p>(Please refer to for details.) <code>Note:</code> Defining these attributes in the host complex is no contradiction to having them also in the queue configuration. It allows maintaining the corresponding resources on a host level, and at the same time on a queue level. Total virtual free memory (h_vmem) can be managed for a host, for example, and a subset of the total amount can be associated with a queue on that host. The second attribute category in the standard host complex is that of the default load values every periodically reports load to The reported load values are either the standard xxQS_NAMExx load values, such as the CPU load average (see <i><a href="/docs/linux/man/1-uptime/">uptime</a></i>(1)), or load values defined by the xxQS_NAMExx administration (see the <code>load_sensor</code> parameter in the cluster or host configuration (see for details). The definition of characteristics for the standard load values is part of the default host complex, while administrator-defined load values require extension of the host complex. Please refer to for detailed information on the standard set of load values.</p>
 <h3><code>Overriding attributes</code></h3>
 <p>An attribute can be assigned to the global object, host object, and queue object at the same time. On the host level it might get its value from the user-defined resource limit and a load sensor. If the attribute is a consumable, we have, in addition to the resource limit and its load report at host level, also the internal usage which the system keeps track of. The merge is done as follows: In general an attribute can be overridden on a lower level<br />
@@ -60,19 +60,19 @@ h_fsize
 <h3><code>type</code></h3>
 <p>This setting determines how the corresponding values are to be treated by xxQS_NAMExx internally in comparisons or in load scaling for the load complex entries:</p>
 <dl>
-<dt>&bull;</p>
-<dd>With <code>INT</code> only raw integers are allowed.</p>
-<dt>&bull;</p>
-<dd>With <code>DOUBLE</code> floating point numbers in double precision (decimal and scientific notation) can be specified.</p>
-<dt>&bull;</p>
-<dd>With <code>TIME</code> time specifiers are allowed. Refer to for a format description.</p>
-<dt>&bull;</p>
-<dd>With <code>MEMORY</code> memory size specifiers are allowed. Refer to for a format description.</p>
-<dt>&bull;</p>
-<dd>With <code>BOOL</code> the strings TRUE and FALSE are allowed. When used in a load formula (refer to TRUE and FALSE get mapped into &#8216;1&#8217; and &#8216;0&#8217;.</p>
-<dt>&bull;</p>
-<dd>With <code>STRING</code> all strings are allowed and are used for wildcard regular boolean expression matching. Please see the man page for <code>expression</code> definition. </p>
-<pre><dl><dt><dd>Examples:
+<dt>&bull;</dt>
+<dd>With <code>INT</code> only raw integers are allowed.</dd>
+<dt>&bull;</dt>
+<dd>With <code>DOUBLE</code> floating point numbers in double precision (decimal and scientific notation) can be specified.</dd>
+<dt>&bull;</dt>
+<dd>With <code>TIME</code> time specifiers are allowed. Refer to for a format description.</dd>
+<dt>&bull;</dt>
+<dd>With <code>MEMORY</code> memory size specifiers are allowed. Refer to for a format description.</dd>
+<dt>&bull;</dt>
+<dd>With <code>BOOL</code> the strings TRUE and FALSE are allowed. When used in a load formula (refer to TRUE and FALSE get mapped into &#8216;1&#8217; and &#8216;0&#8217;.</dd>
+<dt>&bull;</dt>
+<dd>With <code>STRING</code> all strings are allowed and are used for wildcard regular boolean expression matching. Please see the man page for <code>expression</code> definition. </dd>
+<pre><dl><dt></dt><dd>Examples:
  -l arch=&quot;*x*|sol*&quot; :
  results in &quot;arch=lx-x86&quot; OR &quot;arch=lx-amd64&quot;
  OR &quot;arch=sol-amd64&quot; OR ...
@@ -91,13 +91,13 @@ h_fsize
  results in NEITHER &quot;arch=lx-x86&quot; NOR &quot;arch=sol-amd64&quot;
  -l arch=&quot;lx2[4|6]-amd64&quot; :
  results in &quot;arch=lx24-amd64&quot; OR &quot;arch=lx26-amd64&quot;
-</dl></pre>
-<dt>&bull;</p>
-<dd><code>CSTRING</code> is like <code>STRING</code> except comparisons are case insensitive.</p>
-<dt>&bull;</p>
-<dd><code>RESTRING</code> is the same as <code>STRING</code> for historical compatibility, but is deprecated and may be removed in future..</p>
-<dt>&bull;</p>
-<dd><code>HOST</code> is like <code>CSTRING</code> but the expression must match a valid host name.</dl>
+</dd></dl></pre>
+<dt>&bull;</dt>
+<dd><code>CSTRING</code> is like <code>STRING</code> except comparisons are case insensitive.</dd>
+<dt>&bull;</dt>
+<dd><code>RESTRING</code> is the same as <code>STRING</code> for historical compatibility, but is deprecated and may be removed in future..</dd>
+<dt>&bull;</dt>
+<dd><code>HOST</code> is like <code>CSTRING</code> but the expression must match a valid host name.</dd></dl>
 <h3><code>relop</code></h3>
 <p>The relation operator is used when the value requested by the user for this parameter is compared against the corresponding value configured for the considered queues. If the result of the comparison is false, the job cannot run in this queue. Possible relation operators are &quot;==&quot;, &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot; and &quot;EXCL&quot;. The only valid operator for string type attributes is &quot;==&quot;. </p>
 <p> The &quot;EXCL&quot; relation operator implements exclusive scheduling and is only valid for consumable boolean type attributes. Exclusive means the result of the comparison is only true if a job requests to be exclusive, and no other exclusive or non-exclusive job uses the complex. If the job does not request to be exclusive and no other exclusive job uses the complex the comparison is also true.</p>

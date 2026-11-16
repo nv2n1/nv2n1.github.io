@@ -51,8 +51,8 @@ description: "svc_start_selinux – Security Enhanced Linux Policy for the svc_s
 <p> <code>svc_start_exec_t</code> </p>
 <p> &#8211; Set files with the svc_start_exec_t type, if you want to transition an executable to the svc_start_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/svc, /usr/bin/svok, /usr/bin/svscan, /usr/bin/supervise, /usr/bin/svscanboot </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/svc, /usr/bin/svok, /usr/bin/svscan, /usr/bin/supervise, /usr/bin/svscanboot </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

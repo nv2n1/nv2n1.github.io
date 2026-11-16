@@ -20,20 +20,21 @@ Applications that make no use of multiplexing do not need to call
  this routine. </pre>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_multiplex_init</code>&nbsp;<wbr>(void);</dl>
 <p> <code>Examples</code></p>
 <dl COMPACT>
 <dd>
 <pre>* retval = PAPI_multiplex_init();
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i> This call always returns PAPI_OK</dl>
+<dd><i>PAPI_OK</i> This call always returns PAPI_OK</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_multiplex</code> </p>
+<dd><code>PAPI_set_multiplex</code> </dd>
 <p> <code>PAPI_get_multiplex</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

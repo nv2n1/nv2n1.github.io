@@ -11,37 +11,13 @@ description: "std::__exception_ptr::exception_ptr –"
 <h2>Synopsis</h2>
 <h3>Public Member Functions</h3>
 <pre><code>exception_ptr (const exception_ptr &amp;) noexcept
-
-
-
 exception_ptr (nullptr_t) noexcept
-
-
-
 exception_ptr (exception_ptr &amp;&amp;__o) noexcept
-
-
-
 class std::type_info * __cxa_exception_type () const noexcept __attribute__((__pure__))
-
-
-
 operator bool () const
-
-
-
 exception_ptr &amp; operator= (const exception_ptr &amp;) noexcept
-
-
-
 exception_ptr &amp; operator= (exception_ptr &amp;&amp;__o) noexcept
-
-
-
 void swap (exception_ptr &amp;) noexcept
-
-
-
 Friends</code></pre>
 <p> bool <code>operator==</code> (const <code>exception_ptr</code> &amp;, const <code>exception_ptr</code> &amp;) noexcept __attribute__((__pure__)) </p>
 <p> <code>exception_ptr</code> <code>std::current_exception</code> () noexcept </p>

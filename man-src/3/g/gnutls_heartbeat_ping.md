@@ -14,14 +14,14 @@ description: "gnutls_heartbeat_ping – API function"
 <p> <code>int gnutls_heartbeat_ping(gnutls_session_t </code><i>session</i><code>, size_t </code><i>data_size</i><code>, unsigned int </code><i>max_tries</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>size_t data_size</p>
-<dd> is the length of the ping payload.</p>
-<dt>unsigned int max_tries</p>
-<dd> if flags is <code>GNUTLS_HEARTBEAT_WAIT</code> then this sets the number of retransmissions. Use zero for indefinite (until timeout).</p>
-<dt>unsigned int flags</p>
-<dd> if <code>GNUTLS_HEARTBEAT_WAIT</code> then wait for pong or timeout instead of returning immediately.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>size_t data_size</dt>
+<dd> is the length of the ping payload.</dd>
+<dt>unsigned int max_tries</dt>
+<dd> if flags is <code>GNUTLS_HEARTBEAT_WAIT</code> then this sets the number of retransmissions. Use zero for indefinite (until timeout).</dd>
+<dt>unsigned int flags</dt>
+<dd> if <code>GNUTLS_HEARTBEAT_WAIT</code> then wait for pong or timeout instead of returning immediately.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sends a ping to the peer. If the <i>flags</i> is set to <code>GNUTLS_HEARTBEAT_WAIT</code> then it waits for a reply from the peer. </p>
 <p> Note that it is highly recommended to use this function with the flag <code>GNUTLS_HEARTBEAT_WAIT</code>, or you need to handle retransmissions and timeouts manually.</p>
@@ -38,6 +38,6 @@ description: "gnutls_heartbeat_ping – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

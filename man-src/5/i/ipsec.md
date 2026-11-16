@@ -46,7 +46,7 @@ myip %any : PSK &quot;shared secret with many roadwarriors&quot;
 # XAUTH password, used with leftxauthusername=username
 @username : XAUTH &quot;password&quot;
 include ipsec.*.secrets # get secrets from other files</pre>
-</dl>
+</dd></dl>
 <p> Each entry in the file is a list of indices, followed by a secret. The two parts are separated by a colon (<code>:</code>) that is followed by whitespace or a newline. </p>
 <p> An index is an IP address, or a Fully Qualified Domain Name, user [at] FQDN, <code>%any</code> or <code>%any6</code> (other kinds may come). An IP address may be written in the familiar dotted quad form or as a domain name to be looked up when the file is loaded (or in any of the forms supported by the Libreswan <code>ipsec_ttoaddr</code>(3) routine). Be aware that using domain names requires DNS to be functional before the IPsec tunnel comes up. To denote a Fully Qualified Domain Name (as opposed to an IP address denoted by its domain name), precede the name with an at sign (<code>@</code>). </p>
 <p> Matching IDs with indices is fairly straightforward: they have to be equal. In the case of a &#8220;Road Warrior&#8221; connection, if an equal match is not found for the Peer&#8217;s ID, and it is in the form of an IP address, an index of <code>%any</code> will match the peer&#8217;s IP address if IPV4 and <code>%any6</code> will match a the peer&#8217;s IP address if IPV6. </p>
@@ -75,4 +75,4 @@ include ipsec.*.secrets # get secrets from other files</pre>
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

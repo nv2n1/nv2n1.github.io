@@ -60,37 +60,31 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <p> <i>Word characters</i> </p>
 <p> A <tt>&quot;\w&quot;</tt> matches a single alphanumeric character (an alphabetic character, or a decimal digit); or a connecting punctuation character, such as an underscore (&#8220;_&#8221;); or a &#8220;mark&#8221; character (like some sort of accent) that attaches to one of those. It does not match a whole word. To match a whole word, use <tt>&quot;\w+&quot;</tt>. This isn&#8217;t the same thing as matching an English word, but in the <font SIZE="-1">ASCII</font> range it is the same as a string of Perl-identifier characters.</p>
 <dl>
-<dt>If the &quot;/a&quot; modifier is in effect &#8230;</p>
-<dd> <tt>&quot;\w&quot;</tt> matches the 63 characters [a-zA-Z0-9_].</p>
-<dt>otherwise &#8230;</p>
+<dt>If the &quot;/a&quot; modifier is in effect &#8230;</dt>
+<dd> <tt>&quot;\w&quot;</tt> matches the 63 characters [a-zA-Z0-9_].</dd>
+<dt>otherwise &#8230;</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>For code points above 255 &#8230;</dt>
+<dd> <tt>&quot;\w&quot;</tt> matches the same as <tt>&quot;\p{Word}&quot;</tt> matches in this range. That is, it matches Thai letters, Greek letters, etc. This includes connector punctuation (like the underscore) which connect two words together, or diacritics, such as a <tt>&quot;COMBINING TILDE&quot;</tt> and the modifier letters, which are generally used to add auxiliary markings to letters.</dd>
+<dt>For code points below 256 &#8230;</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>For code points above 255 &#8230;</p>
-<dd> <tt>&quot;\w&quot;</tt> matches the same as <tt>&quot;\p{Word}&quot;</tt> matches in this range. That is, it matches Thai letters, Greek letters, etc. This includes connector punctuation (like the underscore) which connect two words together, or diacritics, such as a <tt>&quot;COMBINING TILDE&quot;</tt> and the modifier letters, which are generally used to add auxiliary markings to letters.</p>
-<dt>For code points below 256 &#8230;</p>
-<dd>
-<dl>
-<dt>
-<dd>
-<dl>
-<dt>if locale rules are in effect &#8230;</p>
-<dd> <tt>&quot;\w&quot;</tt> matches the platform&#8217;s native underscore character plus whatever the locale considers to be alphanumeric.</p>
-<dt>if, instead, Unicode rules are in effect &#8230;</p>
-<dd> <tt>&quot;\w&quot;</tt> matches exactly what <tt>&quot;\p{Word}&quot;</tt> matches.</p>
-<dt>otherwise &#8230;</p>
-<dd> <tt>&quot;\w&quot;</tt> matches [a-zA-Z0-9_].</dl>
+<dt>if locale rules are in effect &#8230;</dt>
+<dd> <tt>&quot;\w&quot;</tt> matches the platform&#8217;s native underscore character plus whatever the locale considers to be alphanumeric.</dd>
+<dt>if, instead, Unicode rules are in effect &#8230;</dt>
+<dd> <tt>&quot;\w&quot;</tt> matches exactly what <tt>&quot;\p{Word}&quot;</tt> matches.</dd>
+<dt>otherwise &#8230;</dt>
+<dd> <tt>&quot;\w&quot;</tt> matches [a-zA-Z0-9_].</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> Which rules apply are determined as described in &#8220;Which character set modifier is in effect?&#8221; in perlre. </p>
 <p> There are a number of security issues with the full Unicode list of word characters. See &lt;<a rel="nofollow" href="http://unicode.org/reports/tr36">http://unicode.org/reports/tr36</a>&gt;. </p>
@@ -99,6 +93,8 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <p> <i>Whitespace</i> </p>
 <p> <tt>&quot;\s&quot;</tt> matches any single character considered whitespace.</p>
 <dl>
-<dt>If the &quot;/a&quot; modifier is in effect &#8230;</p>
+<dt>If the &quot;/a&quot; modifier is in effect &#8230;</dt>
 <dd> In all Perl versions, <tt>&quot;\s&quot;</tt> matches the 5 characters [	
- ]; that is, the horizontal tab, the newline, the form feed, the carriage return, and the space. Starting in Perl v5.18, it also matches the vertical tab, <tt>&quot;
+
+ ]; that is, the horizontal tab, the newline, the form feed, the carriage return, and the space. Starting in Perl v5.18, it also matches the vertical tab, <tt>&quot;
+</dd></dl>

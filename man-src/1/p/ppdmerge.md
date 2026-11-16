@@ -16,8 +16,8 @@ description: "ppdmerge – merge ppd files (deprecated)"
 <h2>OPTIONS</h2>
 <p> <code>ppdmerge</code> supports the following options:</p>
 <dl>
-<dt><code>-o </code><i>output-ppd-file</i></p>
-<dd> Specifies the PPD file to create. If not specified, the merged PPD file is written to the standard output. If the output file already exists, it is silently overwritten.</dl>
+<dt><code>-o </code><i>output-ppd-file</i></dt>
+<dd> Specifies the PPD file to create. If not specified, the merged PPD file is written to the standard output. If the output file already exists, it is silently overwritten.</dd></dl>
 <h2>NOTES</h2>
 <p> PPD files are deprecated and will no longer be supported in a future feature release of CUPS. Printers that do not support IPP can be supported using applications such as <code><a href="/docs/linux/man/1-ippeveprinter/">ippeveprinter</a></code>(1). </p>
 <p> <code>ppdmerge</code> does not check whether the merged PPD files are for the same device. Merging of different device PPDs will yield unpredictable results.</p>

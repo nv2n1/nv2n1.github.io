@@ -21,10 +21,10 @@ description: "acl_dup – duplicate an ACL"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_dup function returns a value of <code>(acl_t)NULL</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</p>
-<dt><code>Bq </code>Er ENOMEM</p>
-<dd> The <i>acl_t</i> to be returned requires more memory than is allowed by the hardware or system-imposed memory management constraints.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dd>
+<dt><code>Bq </code>Er ENOMEM</dt>
+<dd> The <i>acl_t</i> to be returned requires more memory than is allowed by the hardware or system-imposed memory management constraints.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

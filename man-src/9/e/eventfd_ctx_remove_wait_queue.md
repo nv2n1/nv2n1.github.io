@@ -13,15 +13,15 @@ description: "eventfd_ctx_remove_wait_queue – Read the current counter and rem
 <h2>Arguments</h2>
 <p><i>ctx</i></p>
 <dl>
-<dd>[in] Pointer to eventfd context.</dl>
+<dd>[in] Pointer to eventfd context.</dd></dl>
 <p> <i>wait</i></p>
 <dl>
-<dd>[in] Wait queue to be removed.</dl>
+<dd>[in] Wait queue to be removed.</dd></dl>
 <p> <i>cnt</i></p>
 <dl>
-<dd>[out] Pointer to the 64-bit counter value.</dl>
+<dd>[out] Pointer to the 64-bit counter value.</dd></dl>
 <h2>Description</h2>
-<dd>Returns <code>0</code> if successful, or the following error codes: </p>
+<dd>Returns <code>0</code> if successful, or the following error codes: </dd>
 <p> -EAGAIN : The operation would have blocked. </p>
 <p> This is used to atomically remove a wait queue entry from the eventfd wait queue head, and read/reset the counter value.</p>
 <h2>Copyright</h2>

@@ -22,9 +22,9 @@ CALL TDPRPT (UI3D, VI3D, WI3D, XI2D, YI2D)
 
 The arguments of TDPRPT are as follows:
 <dl><dt>UI3D, VI3D, and WI3D
-<dd>(input expressions of type REAL) - the coordinates of a point in 3-space.
-<dt>XI2D and YI2D
-<dd>(output variables of type REAL) - the coordinates of the projection of the point in the projection plane.</dl>
+</dt><dd>(input expressions of type REAL) - the coordinates of a point in 3-space.
+</dd><dt>XI2D and YI2D
+</dt><dd>(output variables of type REAL) - the coordinates of the projection of the point in the projection plane.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

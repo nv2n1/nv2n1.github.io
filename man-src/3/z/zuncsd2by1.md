@@ -25,14 +25,12 @@ description: "zuncsd2by1.f –"
  [ X21 ] [ | U2 ] [ 0 0 0 ]
  [ 0 S 0 ]
  [ 0 0 I ]
- 
  X11 is P-by-Q. The unitary matrices U1, U2, V1, and V2 are P-by-P,
  (M-P)-by-(M-P), Q-by-Q, and (M-Q)-by-(M-Q), respectively. C and S are
  R-by-R nonnegative diagonal matrices satisfying C^2 + S^2 = I, in
  which R = MIN(P,M-P,Q,M-Q)..fi
- 
 <code>Parameters:</code>
-<dl><dt><dd><i>JOBU1</i> 
+<dl><dt></dt><dd><i>JOBU1</i> 
  JOBU1 is CHARACTER
  = 'Y': U1 is computed;
  otherwise: U1 is not computed.</pre>
@@ -122,7 +120,6 @@ description: "zuncsd2by1.f –"
 <p><i>LRWORK</i> </p>
 <pre> LRWORK is INTEGER
  The dimension of the array RWORK.
- 
  If LRWORK = -1, then a workspace query is assumed; the routine
  only calculates the optimal size of the RWORK array, returns
  this value as the first entry of the work array, and no error
@@ -137,19 +134,19 @@ aram[out] IWORK
  &lt; 0: if INFO = -i, the i-th argument had an illegal value.
  &gt; 0: ZBBCSD did not converge. See the description of WORK
  above for details.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>July 2012</dl>
+<dd>July 2012</dd></dl>
 <p> Definition at line 259 of file zuncsd2by1.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

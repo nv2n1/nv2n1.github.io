@@ -11,10 +11,10 @@ description: "protoc-gen-go – Go compiler output filter for the protocol buffe
 <p> protoc-gen-go &#8211; Go compiler output filter for the protocol buffer compiler </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>protoc</code></p>
-<dd> <i>&#8211;plugin=protoc-gen-go=/usr/bin/protoc-gen-go</i> <i>&#8211;go_out=gocode</i> <i>input.proto</i></p>
-<dt><code>protoc</code></p>
-<dd> <i>&#8211;go_out=gocode</i> <i>input.proto</i></dl>
+<dt><code>protoc</code></dt>
+<dd> <i>&#8211;plugin=protoc-gen-go=/usr/bin/protoc-gen-go</i> <i>&#8211;go_out=gocode</i> <i>input.proto</i></dd>
+<dt><code>protoc</code></dt>
+<dd> <i>&#8211;go_out=gocode</i> <i>input.proto</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>protoc-gen-go</code> is a filter for the <code><a href="/docs/linux/man/1-protoc/">protoc</a></code>(1) protocol buffer compiler. It takes the protocol buffer format from <code><a href="/docs/linux/man/1-protoc/">protoc</a></code>(1) as input and produces Go code as output which can then be used to encode (marshal) and decode (unmarshal) data in the protocol buffer format specified in its input. The input is typically produced by <code><a href="/docs/linux/man/1-protoc/">protoc</a></code>(1) by taking a .proto input file and converting it to a protocol buffer descriptor format which <code>protoc-gen-go</code> can then read. If <code>protoc-gen-go</code> can be found in the regular search path, the <i>&#8211;plugin</i> flag can be omitted.</p>
 <h2>OPTIONS</h2>
@@ -29,11 +29,11 @@ description: "protoc-gen-go – Go compiler output filter for the protocol buffe
 <p> Copyright &#169; 2010-2013 The Go Authors. All rights reserved. </p>
 <p> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p>
-<dt>&bull;</p>
-<dd> Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
-<dt>&bull;</p>
-<dd> Neither the name of Google Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</dl>
+<dt>&bull;</dt>
+<dd> Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</dd>
+<dt>&bull;</dt>
+<dd> Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</dd>
+<dt>&bull;</dt>
+<dd> Neither the name of Google Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</dd></dl>
 <p> THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </p>
 <h2>Index</h2>

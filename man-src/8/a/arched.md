@@ -14,30 +14,30 @@ description: "arched – ARC Hosting Environment Daemon"
 <p>arched is the ARC Hosting Environment Daemon and is responsible for&#8230;</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code>, <code>&#8211;foreground</code></p>
-<dd>run daemon in foreground</p>
-<dt><code>-w</code>, <code>&#8211;watchdog</code></p>
-<dd>enables watchdog which restarts stuck and failed arched (it works only in background mode)</p>
-<dt><code>-c</code>, <code>&#8211;xml-config</code></p>
-<dd>full path of XML config file</p>
-<dt><code>-i</code>, <code>&#8211;ini-config</code></p>
-<dd>full path of INI config file</p>
-<dt><code>-d</code>, <code>&#8211;config-dump</code></p>
-<dd>dump XML config generated from INI one</p>
-<dt><code>-p</code>, <code>&#8211;pid-file</code></p>
-<dd>full path of pid file</p>
-<dt><code>-u</code>, <code>&#8211;user</code></p>
-<dd>user name to switch after starting</p>
-<dt><code>-g</code>, <code>&#8211;group</code></p>
-<dd>group name to switch after starting</p>
-<dt><code>-s</code>, <code>&#8211;schema</code></p>
-<dd>full path of XML schema file to be used for validating configuration</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>output version information and exit</p>
-<dt><code>-a</code>, <code>&#8211;install</code></p>
-<dd>install windows service (only works on windows)</p>
-<dt><code>-r</code>, <code>&#8211;uninstall</code></p>
-<dd>uninstall windows service (only works on windows)</dl>
+<dt><code>-f</code>, <code>&#8211;foreground</code></dt>
+<dd>run daemon in foreground</dd>
+<dt><code>-w</code>, <code>&#8211;watchdog</code></dt>
+<dd>enables watchdog which restarts stuck and failed arched (it works only in background mode)</dd>
+<dt><code>-c</code>, <code>&#8211;xml-config</code></dt>
+<dd>full path of XML config file</dd>
+<dt><code>-i</code>, <code>&#8211;ini-config</code></dt>
+<dd>full path of INI config file</dd>
+<dt><code>-d</code>, <code>&#8211;config-dump</code></dt>
+<dd>dump XML config generated from INI one</dd>
+<dt><code>-p</code>, <code>&#8211;pid-file</code></dt>
+<dd>full path of pid file</dd>
+<dt><code>-u</code>, <code>&#8211;user</code></dt>
+<dd>user name to switch after starting</dd>
+<dt><code>-g</code>, <code>&#8211;group</code></dt>
+<dd>group name to switch after starting</dd>
+<dt><code>-s</code>, <code>&#8211;schema</code></dt>
+<dd>full path of XML schema file to be used for validating configuration</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>output version information and exit</dd>
+<dt><code>-a</code>, <code>&#8211;install</code></dt>
+<dd>install windows service (only works on windows)</dd>
+<dt><code>-r</code>, <code>&#8211;uninstall</code></dt>
+<dd>uninstall windows service (only works on windows)</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.nordugrid.org/">http://bugzilla.nordugrid.org/</a></p>
 <h2>Copyright</h2>

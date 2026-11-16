@@ -11,9 +11,7 @@ description: "sc::auto_vec –"
 <p> The <code>auto_vec</code> class functions much like auto_ptr, except it contains references to arrays.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;autovec.h&gt;
-
 Public Types</code></pre>
 <p> typedef T <code>element_type</code></p>
 <h3>Public Member Functions</h3>

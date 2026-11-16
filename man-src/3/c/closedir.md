@@ -21,8 +21,8 @@ int closedir(DIR *dirp);
 <p> The <code>closedir</code>() function returns 0 on success. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> Invalid directory stream descriptor <i>dirp</i>.</dl>
+<dt><code>EBADF</code></dt>
+<dd> Invalid directory stream descriptor <i>dirp</i>.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

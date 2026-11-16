@@ -18,3 +18,4 @@ description: "pmCtime – format the date and time for a reporting timezone"
 <p> Like <code><a href="/docs/linux/man/3-ctime/">ctime</a></code>(3) the time to be converted is passed via <i>clock</i>, and the result in <i>buf</i> is fixed width fields in the format: </p>
 <p> Fri Sep 13 00:00:00 1986
 
+</p>

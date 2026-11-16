@@ -14,21 +14,21 @@ description: "modecpy – Prepare response for MODE SENSE"
 <p><i>dest</i></p>
 <dl>
 <dd>
-<dd>output buffer</dl>
+</dd><dd>output buffer</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>data being copied</dl>
+<dd>data being copied</dd></dl>
 <p> <i>n</i></p>
 <dl>
-<dd>length of mode page</dl>
+<dd>length of mode page</dd></dl>
 <p> <i>changeable</i></p>
 <dl>
-<dd>whether changeable parameters are requested</dl>
+<dd>whether changeable parameters are requested</dd></dl>
 <h2>Description</h2>
 <p>Generate a generic MODE SENSE page for either current or changeable parameters. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

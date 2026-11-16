@@ -14,7 +14,7 @@ description: "usb_remove_hcd – shutdown processing for generic HCDs"
 <p><i>hcd</i></p>
 <dl>
 <dd>
-<dd>the usb_hcd structure to remove</dl>
+</dd><dd>the usb_hcd structure to remove</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

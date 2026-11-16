@@ -15,23 +15,23 @@ blk_execute_rq_nowait - insert a request into queue for execution
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>queue to insert the request in</dl>
+<dl><dd></dd><dd>queue to insert the request in</dd></dl>
  
 
  <i>bd_disk</i>
-<dl><dd>matching gendisk</dl>
+<dl><dd>matching gendisk</dd></dl>
  
 
  <i>rq</i>
-<dl><dd>request to insert</dl>
+<dl><dd>request to insert</dd></dl>
  
 
  <i>at_head</i>
-<dl><dd>insert request at head or tail of queue</dl>
+<dl><dd>insert request at head or tail of queue</dd></dl>
  
 
  <i>done</i>
-<dl><dd>I/O completion handler</dl>
+<dl><dd>I/O completion handler</dd></dl>
 
 <h2>Description</h2>
 

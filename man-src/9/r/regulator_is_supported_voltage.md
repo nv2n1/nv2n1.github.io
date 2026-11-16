@@ -14,22 +14,22 @@ description: "regulator_is_supported_voltage – check if a voltage range can be
 <p><i>regulator</i></p>
 <dl>
 <dd>
-<dd>Regulator to check.</dl>
+</dd><dd>Regulator to check.</dd></dl>
 <p> <i>min_uV</i></p>
 <dl>
-<dd>Minimum required voltage in uV.</dl>
+<dd>Minimum required voltage in uV.</dd></dl>
 <p> <i>max_uV</i></p>
 <dl>
-<dd>Maximum required voltage in uV.</dl>
+<dd>Maximum required voltage in uV.</dd></dl>
 <h2>Description</h2>
 <p>Returns a boolean or a negative error code.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

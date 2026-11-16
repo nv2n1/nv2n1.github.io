@@ -16,13 +16,13 @@ description: "fixnt – Filter for the Windows NT postscript printer driver."
 <p> The filter takes the broken postscript file on <code>stdin</code>, and outputs a fixed postscript file on <code>stdout</code>. It has no other form for invocation and takes no options on the command-line.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>fixnt</code></p>
-<dd> takes no options.</dl>
+<dt><code>fixnt</code></dt>
+<dd> takes no options.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>fixnt</code> does not check for NTPSOct94. For a workaround, use a <a href="/docs/linux/man/1-sed/">sed</a>(1) command to replace &#8216;NTPSOct94&#8217; with &#8216;NTPSOct95&#8217;, like so:</p>
 <dl>
 <dt>
-<dd> sed &#8216;s/NTPSOct94/NTPSOct95/g&#8217;</dl>
+</dt><dd> sed &#8216;s/NTPSOct94/NTPSOct95/g&#8217;</dd></dl>
 <p> This is particularly important for Windows NT 3.5 users.</p>
 <h2>AUTHOR</h2>
 <p> <code>fixnt</code> was written by Holger Bauer &lt;Holger.Bauer [at] topmail.de&gt;, Michael Rath &lt;rath [at] itsm.uni-stuttgart.de&gt;, and Akim Demaille &lt;demaille [at] inf.enst.fr&gt;.</p>

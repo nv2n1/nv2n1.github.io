@@ -37,12 +37,12 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_DIR})</pre>
 <p> If clang is not being used, this won&#8217;t have an effect. See <i><a rel="nofollow" href="https://commits.kde.org/clazy?path=README.md">https://commits.kde.org/clazy?path=README.md</a></i> </p>
 <p> Since 5.17.0</p>
 <dl>
-<dt>&bull;</p>
-<dd>Uninstall target functionality since 1.7.0.</p>
-<dt>&bull;</p>
-<dd><code>APPLE_FORCE_X11</code> option since 5.14.0 (detecting X11 was previously the default behavior)</p>
-<dt>&bull;</p>
-<dd><code>APPLE_SUPPRESS_X11_WARNING</code> option since 5.14.0</dl>
+<dt>&bull;</dt>
+<dd>Uninstall target functionality since 1.7.0.</dd>
+<dt>&bull;</dt>
+<dd><code>APPLE_FORCE_X11</code> option since 5.14.0 (detecting X11 was previously the default behavior)</dd>
+<dt>&bull;</dt>
+<dd><code>APPLE_SUPPRESS_X11_WARNING</code> option since 5.14.0</dd></dl>
 <h3>KDECompilerSettings</h3>
 <p>Set useful compile and link flags for C++ (and C) code. </p>
 <p> Enables many more warnings than the default, and sets stricter modes for some compiler features. By default, exceptions are disabled; kde_target_enable_exceptions() can be used to re-enable them for a specific target. </p>
@@ -66,95 +66,95 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_DIR})</pre>
 <p> Note that none of the variables defined by this module provide any information about the location of already-installed KDE software. </p>
 <p> Inclusion of this module defines the following variables:</p>
 <dl>
-<dt><code>KDE_INSTALL_&lt;dir&gt;</code></p>
-<dd>destination for files of a given type</p>
-<dt><code>KDE_INSTALL_FULL_&lt;dir&gt;</code></p>
-<dd>corresponding absolute path </p>
+<dt><code>KDE_INSTALL_&lt;dir&gt;</code></dt>
+<dd>destination for files of a given type</dd>
+<dt><code>KDE_INSTALL_FULL_&lt;dir&gt;</code></dt>
+<dd>corresponding absolute path </dd>
 <p> where <code>&lt;dir&gt;</code> is one of (default values in parentheses and alternative, deprecated variable name in square brackets):</p>
-<dt><code>BUNDLEDIR</code></p>
-<dd>application bundles (<code>/Applications/KDE</code>) [<code>BUNDLE_INSTALL_DIR</code>]</p>
-<dt><code>EXECROOTDIR</code></p>
-<dd>executables and libraries (<code>&lt;empty&gt;</code>) [<code>EXEC_INSTALL_PREFIX</code>]</p>
-<dt><code>BINDIR</code></p>
-<dd>user executables (<code>EXECROOTDIR/bin</code>) [<code>BIN_INSTALL_DIR</code>]</p>
-<dt><code>SBINDIR</code></p>
-<dd>system admin executables (<code>EXECROOTDIR/sbin</code>) [<code>SBIN_INSTALL_DIR</code>]</p>
-<dt><code>LIBDIR</code></p>
-<dd>object code libraries (<code>EXECROOTDIR/lib</code>, <code>EXECROOTDIR/lib64</code> or <code>EXECROOTDIR/lib/&lt;multiarch-tuple</code> on Debian) [<code>LIB_INSTALL_DIR</code>]</p>
-<dt><code>LIBEXECDIR</code></p>
-<dd>executables for internal use by programs and libraries (<code>BINDIR</code> on Windows, <code>LIBDIR/libexec</code> otherwise) [<code>LIBEXEC_INSTALL_DIR</code>]</p>
-<dt><code>CMAKEPACKAGEDIR</code></p>
-<dd>CMake packages, including config files (<code>LIBDIR/cmake</code>) [<code>CMAKECONFIG_INSTALL_PREFIX</code>]</p>
-<dt><code>QTPLUGINDIR</code></p>
-<dd>Qt plugins (<code>LIBDIR/plugins</code>) [<code>QT_PLUGIN_INSTALL_DIR</code>]</p>
-<dt><code>PLUGINDIR</code></p>
-<dd>Plugins (<code>QTPLUGINDIR</code>) [<code>PLUGIN_INSTALL_DIR</code>]</p>
-<dt><code>QTQUICKIMPORTSDIR</code></p>
-<dd>QtQuick1 imports (<code>QTPLUGINDIR/imports</code>) [<code>IMPORTS_INSTALL_DIR</code>]</p>
-<dt><code>QMLDIR</code></p>
-<dd>QtQuick2 imports (<code>LIBDIR/qml</code>) [<code>QML_INSTALL_DIR</code>]</p>
-<dt><code>INCLUDEDIR</code></p>
-<dd>C and C++ header files (<code>include</code>) [<code>INCLUDE_INSTALL_DIR</code>]</p>
-<dt><code>LOCALSTATEDIR</code></p>
-<dd>modifiable single-machine data (<code>var</code>)</p>
-<dt><code>SHAREDSTATEDIR</code></p>
-<dd>modifiable architecture-independent data (<code>com</code>)</p>
-<dt><code>DATAROOTDIR</code></p>
-<dd>read-only architecture-independent data root (<code>share</code>) [<code>SHARE_INSTALL_PREFIX</code>]</p>
-<dt><code>DATADIR</code></p>
-<dd>read-only architecture-independent data (<code>DATAROOTDIR</code>) [<code>DATA_INSTALL_DIR</code>]</p>
-<dt><code>DOCBUNDLEDIR</code></p>
-<dd>documentation bundles generated using kdoctools (<code>DATAROOTDIR/doc/HTML</code>) [<code>HTML_INSTALL_DIR</code>]</p>
-<dt><code>KCFGDIR</code></p>
-<dd>kconfig description files (<code>DATAROOTDIR/config.kcfg</code>) [<code>KCFG_INSTALL_DIR</code>]</p>
-<dt><code>KCONFUPDATEDIR</code></p>
-<dd>kconf_update scripts (<code>DATAROOTDIR/kconf_update</code>) [<code>KCONF_UPDATE_INSTALL_DIR</code>]</p>
-<dt><code>KSERVICES5DIR</code></p>
-<dd>services for KDE Frameworks 5 (<code>DATAROOTDIR/kservices5</code>) [<code>SERVICES_INSTALL_DIR</code>]</p>
-<dt><code>KSERVICETYPES5DIR</code></p>
-<dd>service types for KDE Frameworks 5 (<code>DATAROOTDIR/kservicetypes5</code>) [<code>SERVICETYPES_INSTALL_DIR</code>]</p>
-<dt><code>KXMLGUI5DIR</code></p>
-<dd>knotify description files (<code>DATAROOTDIR/kxmlgui5</code>) [<code>KXMLGUI_INSTALL_DIR</code>]</p>
-<dt><code>KTEMPLATESDIR</code></p>
-<dd>Kapptemplate and Kdevelop templates (<code>kdevappwizard/templates</code>)</p>
-<dt><code>KNOTIFY5RCDIR</code></p>
-<dd>knotify description files (<code>DATAROOTDIR/knotifications5</code>) [<code>KNOTIFYRC_INSTALL_DIR</code>]</p>
-<dt><code>ICONDIR</code></p>
-<dd>icons (<code>DATAROOTDIR/icons</code>) [<code>ICON_INSTALL_DIR</code>]</p>
-<dt><code>LOCALEDIR</code></p>
-<dd>knotify description files (<code>DATAROOTDIR/locale</code>) [<code>LOCALE_INSTALL_DIR</code>]</p>
-<dt><code>SOUNDDIR</code></p>
-<dd>sound files (<code>DATAROOTDIR/sounds</code>) [<code>SOUND_INSTALL_DIR</code>]</p>
-<dt><code>TEMPLATEDIR</code></p>
-<dd>templates (<code>DATAROOTDIR/templates</code>) [<code>TEMPLATES_INSTALL_DIR</code>]</p>
-<dt><code>WALLPAPERDIR</code></p>
-<dd>desktop wallpaper images (<code>DATAROOTDIR/wallpapers</code>) [<code>WALLPAPER_INSTALL_DIR</code>]</p>
-<dt><code>APPDIR</code></p>
-<dd>application desktop files (<code>DATAROOTDIR/applications</code>) [<code>XDG_APPS_INSTALL_DIR</code>]</p>
-<dt><code>DESKTOPDIR</code></p>
-<dd>desktop directories (<code>DATAROOTDIR/desktop-directories</code>) [<code>XDG_DIRECTORY_INSTALL_DIR</code>]</p>
-<dt><code>MIMEDIR</code></p>
-<dd>mime description files (<code>DATAROOTDIR/mime/packages</code>) [<code>XDG_MIME_INSTALL_DIR</code>]</p>
-<dt><code>METAINFODIR</code></p>
-<dd>AppStream component metadata files (<code>DATAROOTDIR/metainfo</code>)</p>
-<dt><code>MANDIR</code></p>
-<dd>man documentation (<code>DATAROOTDIR/man</code>) [<code>MAN_INSTALL_DIR</code>]</p>
-<dt><code>INFODIR</code></p>
-<dd>info documentation (<code>DATAROOTDIR/info</code>)</p>
-<dt><code>DBUSDIR</code></p>
-<dd>D-Bus (<code>DATAROOTDIR/dbus-1</code>)</p>
-<dt><code>DBUSINTERFACEDIR</code></p>
-<dd>D-Bus interfaces (<code>DBUSDIR/interfaces</code>) [<code>DBUS_INTERFACES_INSTALL_DIR</code>]</p>
-<dt><code>DBUSSERVICEDIR</code></p>
-<dd>D-Bus session services (<code>DBUSDIR/services</code>) [<code>DBUS_SERVICES_INSTALL_DIR</code>]</p>
-<dt><code>DBUSSYSTEMSERVICEDIR</code></p>
-<dd>D-Bus system services (<code>DBUSDIR/system-services</code>) [<code>DBUS_SYSTEM_SERVICES_INSTALL_DIR</code>]</p>
-<dt><code>SYSCONFDIR</code></p>
-<dd>read-only single-machine data (<code>etc</code>, or <code>/etc</code> if <code>CMAKE_INSTALL_PREFIX</code> is <code>/usr</code>) [<code>SYSCONF_INSTALL_DIR</code>]</p>
-<dt><code>CONFDIR</code></p>
-<dd>application configuration files (<code>SYSCONFDIR/xdg</code>) [<code>CONFIG_INSTALL_DIR</code>]</p>
-<dt><code>AUTOSTARTDIR</code></p>
-<dd>autostart files (<code>CONFDIR/autostart</code>) [<code>AUTOSTART_INSTALL_DIR</code>] </p>
+<dt><code>BUNDLEDIR</code></dt>
+<dd>application bundles (<code>/Applications/KDE</code>) [<code>BUNDLE_INSTALL_DIR</code>]</dd>
+<dt><code>EXECROOTDIR</code></dt>
+<dd>executables and libraries (<code>&lt;empty&gt;</code>) [<code>EXEC_INSTALL_PREFIX</code>]</dd>
+<dt><code>BINDIR</code></dt>
+<dd>user executables (<code>EXECROOTDIR/bin</code>) [<code>BIN_INSTALL_DIR</code>]</dd>
+<dt><code>SBINDIR</code></dt>
+<dd>system admin executables (<code>EXECROOTDIR/sbin</code>) [<code>SBIN_INSTALL_DIR</code>]</dd>
+<dt><code>LIBDIR</code></dt>
+<dd>object code libraries (<code>EXECROOTDIR/lib</code>, <code>EXECROOTDIR/lib64</code> or <code>EXECROOTDIR/lib/&lt;multiarch-tuple</code> on Debian) [<code>LIB_INSTALL_DIR</code>]</dd>
+<dt><code>LIBEXECDIR</code></dt>
+<dd>executables for internal use by programs and libraries (<code>BINDIR</code> on Windows, <code>LIBDIR/libexec</code> otherwise) [<code>LIBEXEC_INSTALL_DIR</code>]</dd>
+<dt><code>CMAKEPACKAGEDIR</code></dt>
+<dd>CMake packages, including config files (<code>LIBDIR/cmake</code>) [<code>CMAKECONFIG_INSTALL_PREFIX</code>]</dd>
+<dt><code>QTPLUGINDIR</code></dt>
+<dd>Qt plugins (<code>LIBDIR/plugins</code>) [<code>QT_PLUGIN_INSTALL_DIR</code>]</dd>
+<dt><code>PLUGINDIR</code></dt>
+<dd>Plugins (<code>QTPLUGINDIR</code>) [<code>PLUGIN_INSTALL_DIR</code>]</dd>
+<dt><code>QTQUICKIMPORTSDIR</code></dt>
+<dd>QtQuick1 imports (<code>QTPLUGINDIR/imports</code>) [<code>IMPORTS_INSTALL_DIR</code>]</dd>
+<dt><code>QMLDIR</code></dt>
+<dd>QtQuick2 imports (<code>LIBDIR/qml</code>) [<code>QML_INSTALL_DIR</code>]</dd>
+<dt><code>INCLUDEDIR</code></dt>
+<dd>C and C++ header files (<code>include</code>) [<code>INCLUDE_INSTALL_DIR</code>]</dd>
+<dt><code>LOCALSTATEDIR</code></dt>
+<dd>modifiable single-machine data (<code>var</code>)</dd>
+<dt><code>SHAREDSTATEDIR</code></dt>
+<dd>modifiable architecture-independent data (<code>com</code>)</dd>
+<dt><code>DATAROOTDIR</code></dt>
+<dd>read-only architecture-independent data root (<code>share</code>) [<code>SHARE_INSTALL_PREFIX</code>]</dd>
+<dt><code>DATADIR</code></dt>
+<dd>read-only architecture-independent data (<code>DATAROOTDIR</code>) [<code>DATA_INSTALL_DIR</code>]</dd>
+<dt><code>DOCBUNDLEDIR</code></dt>
+<dd>documentation bundles generated using kdoctools (<code>DATAROOTDIR/doc/HTML</code>) [<code>HTML_INSTALL_DIR</code>]</dd>
+<dt><code>KCFGDIR</code></dt>
+<dd>kconfig description files (<code>DATAROOTDIR/config.kcfg</code>) [<code>KCFG_INSTALL_DIR</code>]</dd>
+<dt><code>KCONFUPDATEDIR</code></dt>
+<dd>kconf_update scripts (<code>DATAROOTDIR/kconf_update</code>) [<code>KCONF_UPDATE_INSTALL_DIR</code>]</dd>
+<dt><code>KSERVICES5DIR</code></dt>
+<dd>services for KDE Frameworks 5 (<code>DATAROOTDIR/kservices5</code>) [<code>SERVICES_INSTALL_DIR</code>]</dd>
+<dt><code>KSERVICETYPES5DIR</code></dt>
+<dd>service types for KDE Frameworks 5 (<code>DATAROOTDIR/kservicetypes5</code>) [<code>SERVICETYPES_INSTALL_DIR</code>]</dd>
+<dt><code>KXMLGUI5DIR</code></dt>
+<dd>knotify description files (<code>DATAROOTDIR/kxmlgui5</code>) [<code>KXMLGUI_INSTALL_DIR</code>]</dd>
+<dt><code>KTEMPLATESDIR</code></dt>
+<dd>Kapptemplate and Kdevelop templates (<code>kdevappwizard/templates</code>)</dd>
+<dt><code>KNOTIFY5RCDIR</code></dt>
+<dd>knotify description files (<code>DATAROOTDIR/knotifications5</code>) [<code>KNOTIFYRC_INSTALL_DIR</code>]</dd>
+<dt><code>ICONDIR</code></dt>
+<dd>icons (<code>DATAROOTDIR/icons</code>) [<code>ICON_INSTALL_DIR</code>]</dd>
+<dt><code>LOCALEDIR</code></dt>
+<dd>knotify description files (<code>DATAROOTDIR/locale</code>) [<code>LOCALE_INSTALL_DIR</code>]</dd>
+<dt><code>SOUNDDIR</code></dt>
+<dd>sound files (<code>DATAROOTDIR/sounds</code>) [<code>SOUND_INSTALL_DIR</code>]</dd>
+<dt><code>TEMPLATEDIR</code></dt>
+<dd>templates (<code>DATAROOTDIR/templates</code>) [<code>TEMPLATES_INSTALL_DIR</code>]</dd>
+<dt><code>WALLPAPERDIR</code></dt>
+<dd>desktop wallpaper images (<code>DATAROOTDIR/wallpapers</code>) [<code>WALLPAPER_INSTALL_DIR</code>]</dd>
+<dt><code>APPDIR</code></dt>
+<dd>application desktop files (<code>DATAROOTDIR/applications</code>) [<code>XDG_APPS_INSTALL_DIR</code>]</dd>
+<dt><code>DESKTOPDIR</code></dt>
+<dd>desktop directories (<code>DATAROOTDIR/desktop-directories</code>) [<code>XDG_DIRECTORY_INSTALL_DIR</code>]</dd>
+<dt><code>MIMEDIR</code></dt>
+<dd>mime description files (<code>DATAROOTDIR/mime/packages</code>) [<code>XDG_MIME_INSTALL_DIR</code>]</dd>
+<dt><code>METAINFODIR</code></dt>
+<dd>AppStream component metadata files (<code>DATAROOTDIR/metainfo</code>)</dd>
+<dt><code>MANDIR</code></dt>
+<dd>man documentation (<code>DATAROOTDIR/man</code>) [<code>MAN_INSTALL_DIR</code>]</dd>
+<dt><code>INFODIR</code></dt>
+<dd>info documentation (<code>DATAROOTDIR/info</code>)</dd>
+<dt><code>DBUSDIR</code></dt>
+<dd>D-Bus (<code>DATAROOTDIR/dbus-1</code>)</dd>
+<dt><code>DBUSINTERFACEDIR</code></dt>
+<dd>D-Bus interfaces (<code>DBUSDIR/interfaces</code>) [<code>DBUS_INTERFACES_INSTALL_DIR</code>]</dd>
+<dt><code>DBUSSERVICEDIR</code></dt>
+<dd>D-Bus session services (<code>DBUSDIR/services</code>) [<code>DBUS_SERVICES_INSTALL_DIR</code>]</dd>
+<dt><code>DBUSSYSTEMSERVICEDIR</code></dt>
+<dd>D-Bus system services (<code>DBUSDIR/system-services</code>) [<code>DBUS_SYSTEM_SERVICES_INSTALL_DIR</code>]</dd>
+<dt><code>SYSCONFDIR</code></dt>
+<dd>read-only single-machine data (<code>etc</code>, or <code>/etc</code> if <code>CMAKE_INSTALL_PREFIX</code> is <code>/usr</code>) [<code>SYSCONF_INSTALL_DIR</code>]</dd>
+<dt><code>CONFDIR</code></dt>
+<dd>application configuration files (<code>SYSCONFDIR/xdg</code>) [<code>CONFIG_INSTALL_DIR</code>]</dd>
+<dt><code>AUTOSTARTDIR</code></dt>
+<dd>autostart files (<code>CONFDIR/autostart</code>) [<code>AUTOSTART_INSTALL_DIR</code>] </dd>
 <p> If <code>KDE_INSTALL_DIRS_NO_DEPRECATED</code> is set to TRUE before including this module, the deprecated variables (listed in the square brackets above) are not defined. </p>
 <p> In addition, for each <code>KDE_INSTALL_*</code> variable, an equivalent <code>CMAKE_INSTALL_*</code> variable is defined. If <code>KDE_INSTALL_DIRS_NO_DEPRECATED</code> is set to TRUE, only those variables defined by the <code>GNUInstallDirs</code> module (shipped with CMake) are defined. If <code>KDE_INSTALL_DIRS_NO_CMAKE_VARIABLES</code> is set to TRUE, no variables with a <code>CMAKE_</code> prefix will be defined by this module (other than CMAKE_INSTALL_DEFAULT_COMPONENT_NAME &#8211; see below). </p>
 <p> The <code>KDE_INSTALL_&lt;dir&gt;</code> variables (or their <code>CMAKE_INSTALL_&lt;dir&gt;</code> or deprecated counterparts) may be passed to the DESTINATION options of <code>install()</code> commands for the corresponding file type. They are set in the CMake cache, and so the defaults above can be overridden by users. </p>
@@ -175,29 +175,30 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_DIR})</pre>
 <p> TEMPLATES lists subdirectories containing template files; each <code>&lt;template&gt;</code> directory will be packaged into a file named <code>&lt;template&gt;.tar.bz2</code> and installed to the appropriate location. </p>
 <p> The template is a minimal source tree of an application as if it was an application project by itself, with names (file names or text inside) the text files replaced by the following placeholders when needed:</p>
 <dl>
-<dt><code>%{PROJECTDIRNAME}</code></p>
-<dd>%{APPNAMELC}-%{VERSION} for KAppTemplate</p>
-<dt><code>%{APPNAME}</code></p>
-<dd>project name as entered by user ex: MyKApp</p>
-<dt><code>%{APPNAMELC}</code></p>
-<dd>project name in lower case ex: mykapp</p>
-<dt><code>%{APPNAMEUC}</code></p>
-<dd>project name in upper case ex: MYKAPP</p>
-<dt><code>%{CPP_TEMPLATE}</code></p>
-<dd>license header for cpp file</p>
-<dt><code>%{H_TEMPLATE}</code></p>
-<dd>license header for h file</p>
-<dt><code>%{AUTHOR}</code></p>
-<dd>author name ex: George Ignacious</p>
-<dt><code>%{EMAIL}</code></p>
-<dd>author email ex: <i>foo [at] bar.org</i></p>
-<dt><code>%{VERSION}</code></p>
-<dd>project version ex: 0.1</p>
-<dt><code>%{dest}</code></p>
-<dd>used in .kdevtemplate</p>
-<dt><code>%{src}</code></p>
-<dd>used in .kdevtemplate </p>
+<dt><code>%{PROJECTDIRNAME}</code></dt>
+<dd>%{APPNAMELC}-%{VERSION} for KAppTemplate</dd>
+<dt><code>%{APPNAME}</code></dt>
+<dd>project name as entered by user ex: MyKApp</dd>
+<dt><code>%{APPNAMELC}</code></dt>
+<dd>project name in lower case ex: mykapp</dd>
+<dt><code>%{APPNAMEUC}</code></dt>
+<dd>project name in upper case ex: MYKAPP</dd>
+<dt><code>%{CPP_TEMPLATE}</code></dt>
+<dd>license header for cpp file</dd>
+<dt><code>%{H_TEMPLATE}</code></dt>
+<dd>license header for h file</dd>
+<dt><code>%{AUTHOR}</code></dt>
+<dd>author name ex: George Ignacious</dd>
+<dt><code>%{EMAIL}</code></dt>
+<dd>author email ex: <i>foo [at] bar.org</i></dd>
+<dt><code>%{VERSION}</code></dt>
+<dd>project version ex: 0.1</dd>
+<dt><code>%{dest}</code></dt>
+<dd>used in .kdevtemplate</dd>
+<dt><code>%{src}</code></dt>
+<dd>used in .kdevtemplate </dd>
 <p> Multiple templates can be passed at once. </p>
 <p> Since 5.18</dl>
 <h2>Copyright</h2>
 <p>KDE Developers</p>
+</p>

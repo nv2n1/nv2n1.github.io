@@ -80,36 +80,36 @@ description: "lvm_selinux – Security Enhanced Linux Policy for the lvm process
 <p> <code>lvm_exec_t</code> </p>
 <p> &#8211; Set files with the lvm_exec_t type, if you want to transition an executable to the lvm_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/lib/lvm-10/.*, /lib/lvm-200/.*, /usr/lib/lvm-10/.*, /usr/lib/lvm-200/.*, /usr/lib/systemd/system-generators/lvm2.*, /sbin/lvm, /sbin/lvs, /sbin/pvs, /sbin/vgs, /sbin/vgck, /sbin/dmraid, /sbin/kpartx, /sbin/lvmsar, /sbin/lvscan, /sbin/pvdata, /sbin/pvmove, /sbin/pvscan, /sbin/vgscan, /sbin/dmsetup, /sbin/e2fsadm, /sbin/lvmetad, /sbin/lvmsadc, /sbin/vgmerge, /sbin/vgsplit, /usr/sbin/lvm, /usr/sbin/lvs, /usr/sbin/pvs, /usr/sbin/vgs, /sbin/lvchange, /sbin/lvcreate, /sbin/lvextend, /sbin/lvmpolld, /sbin/lvreduce, /sbin/lvremove, /sbin/lvrename, /sbin/lvresize, /sbin/pvchange, /sbin/pvcreate, /sbin/pvremove, /sbin/vgchange, /sbin/vgcreate, /sbin/vgexport, /sbin/vgextend, /sbin/vgimport, /sbin/vgreduce, /sbin/vgremove, /sbin/vgrename, /usr/sbin/vgck, /sbin/lvdisplay, /sbin/lvmchange, /sbin/pvdisplay, /sbin/vgdisplay, /sbin/vgmknodes, /sbin/vgwrapper, /sbin/cryptsetup, /sbin/lvm.static, /sbin/multipathd, /usr/sbin/dmraid, /usr/sbin/kpartx, /usr/sbin/lvmsar, /usr/sbin/lvscan, /usr/sbin/pvdata, /usr/sbin/pvmove, /usr/sbin/pvscan, /usr/sbin/vgscan, /sbin/mount.crypt, /sbin/lvmdiskscan, /sbin/vgcfgbackup, /usr/sbin/dmsetup, /usr/sbin/e2fsadm, /usr/sbin/lvmetad, /usr/sbin/lvmsadc, /usr/sbin/vgmerge, /usr/sbin/vgsplit, /sbin/umount.crypt, /sbin/vgcfgrestore, /usr/sbin/dmeventd, /usr/sbin/lvchange, /usr/sbin/lvcreate, /usr/sbin/lvextend, /usr/sbin/lvmpolld, /usr/sbin/lvmlockd, /usr/sbin/lvreduce, /usr/sbin/lvremove, /usr/sbin/lvrename, /usr/sbin/lvresize, /usr/sbin/pvchange, /usr/sbin/pvcreate, /usr/sbin/pvremove, /usr/sbin/vgchange, /usr/sbin/vgcreate, /usr/sbin/vgexport, /usr/sbin/vgextend, /usr/sbin/vgimport, /usr/sbin/vgreduce, /usr/sbin/vgremove, /usr/sbin/vgrename, /sbin/lvmiopversion, /sbin/vgscan.static, /usr/sbin/lvdisplay, /usr/sbin/lvmchange, /usr/sbin/pvdisplay, /usr/sbin/vgdisplay, /usr/sbin/vgmknodes, /usr/sbin/vgwrapper, /sbin/dmsetup.static, /usr/sbin/cryptsetup, /usr/sbin/lvm.static, /usr/sbin/multipathd, /sbin/vgchange.static, /usr/sbin/lvmdiskscan, /usr/sbin/mount.crypt, /usr/sbin/vgcfgbackup, /sbin/multipath.static, /usr/sbin/vgcfgrestore, /usr/sbin/lvmiopversion, /usr/sbin/vgscan.static, /usr/sbin/dmsetup.static, /usr/sbin/vgchange.static, /usr/sbin/multipath.static, /usr/lib/storaged/storaged, /lib/udev/udisks-lvm-pv-export, /usr/libexec/storaged/storaged, /usr/lib/udev/udisks-lvm-pv-export, /usr/lib/systemd/systemd-cryptsetup, /usr/lib/storaged/storaged-lvm-helper </p>
+<dt>Paths:</dt>
+<dd>/lib/lvm-10/.*, /lib/lvm-200/.*, /usr/lib/lvm-10/.*, /usr/lib/lvm-200/.*, /usr/lib/systemd/system-generators/lvm2.*, /sbin/lvm, /sbin/lvs, /sbin/pvs, /sbin/vgs, /sbin/vgck, /sbin/dmraid, /sbin/kpartx, /sbin/lvmsar, /sbin/lvscan, /sbin/pvdata, /sbin/pvmove, /sbin/pvscan, /sbin/vgscan, /sbin/dmsetup, /sbin/e2fsadm, /sbin/lvmetad, /sbin/lvmsadc, /sbin/vgmerge, /sbin/vgsplit, /usr/sbin/lvm, /usr/sbin/lvs, /usr/sbin/pvs, /usr/sbin/vgs, /sbin/lvchange, /sbin/lvcreate, /sbin/lvextend, /sbin/lvmpolld, /sbin/lvreduce, /sbin/lvremove, /sbin/lvrename, /sbin/lvresize, /sbin/pvchange, /sbin/pvcreate, /sbin/pvremove, /sbin/vgchange, /sbin/vgcreate, /sbin/vgexport, /sbin/vgextend, /sbin/vgimport, /sbin/vgreduce, /sbin/vgremove, /sbin/vgrename, /usr/sbin/vgck, /sbin/lvdisplay, /sbin/lvmchange, /sbin/pvdisplay, /sbin/vgdisplay, /sbin/vgmknodes, /sbin/vgwrapper, /sbin/cryptsetup, /sbin/lvm.static, /sbin/multipathd, /usr/sbin/dmraid, /usr/sbin/kpartx, /usr/sbin/lvmsar, /usr/sbin/lvscan, /usr/sbin/pvdata, /usr/sbin/pvmove, /usr/sbin/pvscan, /usr/sbin/vgscan, /sbin/mount.crypt, /sbin/lvmdiskscan, /sbin/vgcfgbackup, /usr/sbin/dmsetup, /usr/sbin/e2fsadm, /usr/sbin/lvmetad, /usr/sbin/lvmsadc, /usr/sbin/vgmerge, /usr/sbin/vgsplit, /sbin/umount.crypt, /sbin/vgcfgrestore, /usr/sbin/dmeventd, /usr/sbin/lvchange, /usr/sbin/lvcreate, /usr/sbin/lvextend, /usr/sbin/lvmpolld, /usr/sbin/lvmlockd, /usr/sbin/lvreduce, /usr/sbin/lvremove, /usr/sbin/lvrename, /usr/sbin/lvresize, /usr/sbin/pvchange, /usr/sbin/pvcreate, /usr/sbin/pvremove, /usr/sbin/vgchange, /usr/sbin/vgcreate, /usr/sbin/vgexport, /usr/sbin/vgextend, /usr/sbin/vgimport, /usr/sbin/vgreduce, /usr/sbin/vgremove, /usr/sbin/vgrename, /sbin/lvmiopversion, /sbin/vgscan.static, /usr/sbin/lvdisplay, /usr/sbin/lvmchange, /usr/sbin/pvdisplay, /usr/sbin/vgdisplay, /usr/sbin/vgmknodes, /usr/sbin/vgwrapper, /sbin/dmsetup.static, /usr/sbin/cryptsetup, /usr/sbin/lvm.static, /usr/sbin/multipathd, /sbin/vgchange.static, /usr/sbin/lvmdiskscan, /usr/sbin/mount.crypt, /usr/sbin/vgcfgbackup, /sbin/multipath.static, /usr/sbin/vgcfgrestore, /usr/sbin/lvmiopversion, /usr/sbin/vgscan.static, /usr/sbin/dmsetup.static, /usr/sbin/vgchange.static, /usr/sbin/multipath.static, /usr/lib/storaged/storaged, /lib/udev/udisks-lvm-pv-export, /usr/libexec/storaged/storaged, /usr/lib/udev/udisks-lvm-pv-export, /usr/lib/systemd/systemd-cryptsetup, /usr/lib/storaged/storaged-lvm-helper </dd>
 </dl>
 <p> <code>lvm_lock_t</code> </p>
 <p> &#8211; Set files with the lvm_lock_t type, if you want to treat the files as lvm lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/lvm/lock(/.*)?, /var/lock/lvm(/.*)?, /var/lock/dmraid(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/lvm/lock(/.*)?, /var/lock/lvm(/.*)?, /var/lock/dmraid(/.*)? </dd>
 </dl>
 <p> <code>lvm_metadata_t</code> </p>
 <p> &#8211; Set files with the lvm_metadata_t type, if you want to treat the files as lvm metadata data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/lvmtab(/.*)?, /etc/lvmtab.d(/.*)?, /etc/lvm/cache(/.*)?, /etc/multipath(/.*)?, /etc/lvm/backup(/.*)?, /etc/lvm/archive(/.*)?, /var/cache/multipathd(/.*)?, /etc/lvm/.cache </p>
+<dt>Paths:</dt>
+<dd>/etc/lvmtab(/.*)?, /etc/lvmtab.d(/.*)?, /etc/lvm/cache(/.*)?, /etc/multipath(/.*)?, /etc/lvm/backup(/.*)?, /etc/lvm/archive(/.*)?, /var/cache/multipathd(/.*)?, /etc/lvm/.cache </dd>
 </dl>
 <p> <code>lvm_tmp_t</code> </p>
 <p> &#8211; Set files with the lvm_tmp_t type, if you want to store lvm temporary files in the /tmp directories. </p>
 <p> <code>lvm_unit_file_t</code> </p>
 <p> &#8211; Set files with the lvm_unit_file_t type, if you want to treat the files as lvm unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/lvm2.*.service, /usr/lib/systemd/generator/lvm.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/lvm2.*.service, /usr/lib/systemd/generator/lvm.* </dd>
 </dl>
 <p> <code>lvm_var_lib_t</code> </p>
 <p> &#8211; Set files with the lvm_var_lib_t type, if you want to store the lvm files under the /var/lib directory. </p>
 <p> <code>lvm_var_run_t</code> </p>
 <p> &#8211; Set files with the lvm_var_run_t type, if you want to store the lvm files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/lvm(/.*)?, /var/run/dmevent.*, /var/run/storaged(/.*)?, /var/run/multipathd(/.*)?, /var/run/multipathd.sock </p>
+<dt>Paths:</dt>
+<dd>/var/run/lvm(/.*)?, /var/run/dmevent.*, /var/run/storaged(/.*)?, /var/run/multipathd(/.*)?, /var/run/multipathd.sock </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

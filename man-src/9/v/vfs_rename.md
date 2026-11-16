@@ -14,22 +14,22 @@ description: "vfs_rename – rename a filesystem object"
 <p><i>old_dir</i></p>
 <dl>
 <dd>
-<dd>parent of source</dl>
+</dd><dd>parent of source</dd></dl>
 <p> <i>old_dentry</i></p>
 <dl>
-<dd>source</dl>
+<dd>source</dd></dl>
 <p> <i>new_dir</i></p>
 <dl>
-<dd>parent of destination</dl>
+<dd>parent of destination</dd></dl>
 <p> <i>new_dentry</i></p>
 <dl>
-<dd>destination</dl>
+<dd>destination</dd></dl>
 <p> <i>delegated_inode</i></p>
 <dl>
-<dd>returns an inode needing a delegation break</dl>
+<dd>returns an inode needing a delegation break</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>rename flags</dl>
+<dd>rename flags</dd></dl>
 <h2>Description</h2>
 <p>The caller must hold multiple mutexes&#8211;see <code>lock_rename</code>). </p>
 <p> If vfs_rename discovers a delegation in need of breaking at either the source or destination, it will return -EWOULDBLOCK and return a reference to the inode in delegated_inode. The caller should then break the delegation and retry. Because breaking a delegation may take a long time, the caller should drop all locks before doing so. </p>

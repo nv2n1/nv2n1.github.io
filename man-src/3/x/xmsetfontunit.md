@@ -18,9 +18,9 @@ description: "XmSetFontUnit — A function that sets the font unit value for a d
 <p> This function sets the font units for all screens on the display. </p>
 <p> <code>NOTE:</code> <code>XmSetFontUnit</code> is obsolete and exists for compatibility with previous releases. Instead of using this function, provide initial values or call <code>XtSetValues</code> for the XmScreen resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</p>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Defines the display for which this font unit value is to be applied.</p>
-<dt><i>font_unit_value</i></p>
-<dd>Specifies the value to be used for both horizontal and vertical font units in the conversion calculations.</dl>
+<dt><i>display</i></dt>
+<dd>Defines the display for which this font unit value is to be applied.</dd>
+<dt><i>font_unit_value</i></dt>
+<dd>Specifies the value to be used for both horizontal and vertical font units in the conversion calculations.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmconvertunits/">XmConvertUnits</a></code>(3), <code><a href="/docs/linux/man/3-xmsetfontunits/">XmSetFontUnits</a></code>(3), <code><a href="/docs/linux/man/3-xmgadget/">XmGadget</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code><a href="/docs/linux/man/3-xmprimitive/">XmPrimitive</a></code>(3), and <code><a href="/docs/linux/man/3-xmscreen/">XmScreen</a></code>(3).</p>

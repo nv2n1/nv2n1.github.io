@@ -11,7 +11,6 @@ description: "ql/instruments/stickyratchet.hpp – Payoffs for double nested opt
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/option.hpp&gt;
-
 #include &lt;ql/payoff.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>DoubleStickyRatchetPayoff</code><br />

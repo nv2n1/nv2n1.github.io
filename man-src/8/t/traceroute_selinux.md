@@ -51,9 +51,9 @@ description: "traceroute_selinux – Security Enhanced Linux Policy for the trac
 <p> Policy governs the access confined processes have to these ports. SELinux traceroute policy is very flexible allowing users to setup their traceroute processes in as secure a method as possible. </p>
 <p> The following port types are defined for traceroute: </p>
 <dl>
-<dt><code>traceroute_port_t</code></p>
+<dt><code>traceroute_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 64000-64010</dl>
+</dd><dd>Default Defined Ports: udp 64000-64010</dd></dl>
 <h2>File Contexts</h2>
 <p>SELinux requires files to have an extended attribute to define the file type. </p>
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux traceroute policy is very flexible allowing users to setup their traceroute processes in as secure a method as possible. </p>
@@ -61,8 +61,8 @@ description: "traceroute_selinux – Security Enhanced Linux Policy for the trac
 <p> <code>traceroute_exec_t</code> </p>
 <p> &#8211; Set files with the traceroute_exec_t type, if you want to transition an executable to the traceroute_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/tracepath.*, /bin/traceroute.*, /usr/bin/tracepath.*, /usr/bin/traceroute.*, /usr/sbin/traceroute.*, /usr/bin/lft, /usr/bin/mtr, /usr/bin/nmap, /usr/sbin/mtr </p>
+<dt>Paths:</dt>
+<dd>/bin/tracepath.*, /bin/traceroute.*, /usr/bin/tracepath.*, /usr/bin/traceroute.*, /usr/sbin/traceroute.*, /usr/bin/lft, /usr/bin/mtr, /usr/bin/nmap, /usr/sbin/mtr </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

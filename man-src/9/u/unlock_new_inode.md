@@ -15,7 +15,7 @@ unlock_new_inode - clear the I_NEW state and wake up any waiters
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>new inode to unlock</dl>
+<dl><dd></dd><dd>new inode to unlock</dd></dl>
 
 <h2>Description</h2>
 

@@ -18,19 +18,19 @@ fish_key_reader[-c][-d LEVEL]
 <p> The tool will output an example bind command matching the character sequence captured. If the character sequence matches a special key name (see bind &#8211;key-names), both bind CHARS &#8230; and bind -k KEYNAME &#8230; usage will be shown. </p>
 <p> The following parameters are available: </p>
 <dl>
-<dt>&bull;</p>
-<dd> -c or &#8211;continuous begins a session where multiple key sequences can be inspected. By default the program exits after capturing a single key sequence.</p>
-<dt>&bull;</p>
-<dd> -d or &#8211;debug-level=DEBUG_LEVEL enables debug output and specifies a verbosity level (like fish -d). Defaults to 0.</dl>
+<dt>&bull;</dt>
+<dd> -c or &#8211;continuous begins a session where multiple key sequences can be inspected. By default the program exits after capturing a single key sequence.</dd>
+<dt>&bull;</dt>
+<dd> -d or &#8211;debug-level=DEBUG_LEVEL enables debug output and specifies a verbosity level (like fish -d). Defaults to 0.</dd></dl>
 <p> In continuous mode (-c), the delay in milliseconds since the previous character was received is also shown. This information may be useful to determine a preferred fish_escape_delay_ms setting or learn the amount of lag introduced by ssh or tmux. </p>
 <p> fish_key_reader intentionally disables handling of many signals. To terminate fish_key_reader in a &#8211;continuous run:</p>
 <dl>
-<dt>&bull;</p>
-<dd> press Ctrl-C twice, or</p>
-<dt>&bull;</p>
-<dd> press Ctrl-D twice, or</p>
-<dt>&bull;</p>
-<dd> type exit, or</p>
-<dt>&bull;</p>
-<dd> type quit</dl>
+<dt>&bull;</dt>
+<dd> press Ctrl-C twice, or</dd>
+<dt>&bull;</dt>
+<dd> press Ctrl-D twice, or</dd>
+<dt>&bull;</dt>
+<dd> type exit, or</dd>
+<dt>&bull;</dt>
+<dd> type quit</dd></dl>
 <h2>Index</h2>

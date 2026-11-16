@@ -10,7 +10,6 @@ description: "std::strxfrm – std::strxfrm"
 <p>std::strxfrm &#8211; std::strxfrm</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cstring&gt;
-
     std::size_t strxfrm(char *dest, const char *src, std::size_t count);</code></pre>
 <p>Transforms the null-terminated byte string pointed to by src into the implementation-defined form such that comparing two transformed strings with std::strcmp gives the same result as comparing the original strings with std::strcoll, in the current C locale.<br />
 The first count characters of the transformed string are written to destination, including the terminating null character, and the length of the full transformed string is returned, excluding the terminating null character.<br />
@@ -28,16 +27,11 @@ count &#8211; maximum number of characters to be written</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cassert&gt;
 int main()
-
 {
     char *loc = std::setlocale(LC_COLLATE, &quot;cs_CZ.iso88592&quot;);
     assert(loc);

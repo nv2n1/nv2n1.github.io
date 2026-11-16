@@ -15,13 +15,13 @@ description: "kmodsign – Kernel module signing tool"
 <p> Sign a kernel module image for use with an enforcing kernel.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code></p>
-<dd> save a copy of the p7s signature (.p7s)</p>
-<dt><code>-d</code></p>
-<dd> produce a detached signature file (.p7s) only</p>
-<dt><code>-D</code></p>
-<dd> produce a full detached signature block (may be cat&#8217;d onto the end of a module)</p>
-<dt><code>-k</code></p>
-<dd> switch to using keyid for identification </p>
+<dt><code>-p</code></dt>
+<dd> save a copy of the p7s signature (.p7s)</dd>
+<dt><code>-d</code></dt>
+<dd> produce a detached signature file (.p7s) only</dd>
+<dt><code>-D</code></dt>
+<dd> produce a full detached signature block (may be cat&#8217;d onto the end of a module)</dd>
+<dt><code>-k</code></dt>
+<dd> switch to using keyid for identification </dd>
 </dl>
 <h2>Index</h2>

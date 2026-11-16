@@ -20,4 +20,4 @@ The configuration file consists of items in the format &quot;Option = Value&quot
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

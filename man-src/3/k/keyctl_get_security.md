@@ -20,7 +20,7 @@ long keyctl_get_security_alloc(key_serial_t key, char **_buffer);
 <p> <code>keyctl_get_security</code>() retrieves the security context of a key as a NUL-terminated string. This will be rendered in a form appropriate to the LSM in force &#8211; for instance, with SELinux, it may look like</p>
 <dl>
 <dt>
-<dd> <code>unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023</code></dl>
+</dt><dd> <code>unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023</code></dd></dl>
 <p> The caller must have <code>view</code> permission on a key to be able to get its security context. </p>
 <p> <i>buffer</i> and <i>buflen</i> specify the buffer into which the string will be placed. If the buffer is too small, the full size of the string will be returned, and no copy will take place. </p>
 <p> <code>keyctl_get_security_alloc</code>() is similar to <code>keyctl_get_security</code>() except that it allocates a buffer big enough to hold the string and copies the string into it. If successful, A pointer to the buffer is placed in <i>*_buffer</i>. The caller must free the buffer.</p>
@@ -29,14 +29,14 @@ long keyctl_get_security_alloc(key_serial_t key, char **_buffer);
 <p> On success <code>keyctl_get_security_alloc</code>() returns the amount of data in the buffer, less the NUL terminator. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The key specified is invalid.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The key specified has expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The key specified had been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The key exists, but is not <code>viewable</code> by the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The key specified is invalid.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The key specified has expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The key specified had been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The key exists, but is not <code>viewable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

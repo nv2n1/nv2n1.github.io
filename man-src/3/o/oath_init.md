@@ -13,8 +13,8 @@ description: "oath_init – API function"
 int oath_init(void);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>Description</h2>
 <p>This function initializes the OATH library. Every user of this library needs to call this function before using other functions. You should call <code>oath_done()</code> when use of the OATH library is no longer needed. </p>
 <p> Note that this function may also initialize Libgcrypt, if the OATH library is built with libgcrypt support and libgcrypt has not been initialized before. Thus if you want to manually initialize libgcrypt you must do it before calling this function. This is useful in cases you want to disable libgcrypt&#8217;s internal lockings etc.</p>

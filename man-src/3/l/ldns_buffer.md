@@ -15,13 +15,14 @@ description: "ldns_buffer"
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_buffer</i></p>
+<dt> <i>ldns_buffer</i></dt>
 <dd>
-<dd>implementation of buffers to ease operations </p>
+</dd><dd>implementation of buffers to ease operations </dd>
 <p> ldns_buffers can contain arbitrary information, per octet. You can write<br />
  to the current end of a buffer, read from the current position, and<br />
  access any data within it. </p>
-<p> Example use of buffers is in the source code of ef host2str.c<br />
+<p> Example use of buffers is in the source code of 
+ef host2str.c<br />
  struct ldns_struct_buffer<br />
  {<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The current position used for reading/writing:</code> </p>
@@ -52,3 +53,4 @@ description: "ldns_buffer"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

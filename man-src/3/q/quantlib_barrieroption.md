@@ -38,6 +38,6 @@ description: "QuantLib::BarrierOption – Barrier option on a single asset."
 <h3><code>Volatility</code> impliedVolatility (<code>Real</code> price, const boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; &amp; process, <code>Real</code> accuracy = 1.0e-4, Size maxEvaluations = 100, <code>Volatility</code> minVol = 1.0e-7, <code>Volatility</code> maxVol = 4.0) const</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>see <code>VanillaOption</code> for notes on implied-volatility calculation.</dl>
+<dd>see <code>VanillaOption</code> for notes on implied-volatility calculation.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

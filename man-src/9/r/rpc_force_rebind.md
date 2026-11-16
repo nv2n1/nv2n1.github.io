@@ -15,7 +15,7 @@ rpc_force_rebind - force transport to check that remote port is unchanged
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>client to rebind</dl>
+<dl><dd></dd><dd>client to rebind</dd></dl>
 
 <h2>Copyright</h2>
 

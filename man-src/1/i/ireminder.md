@@ -16,20 +16,20 @@ description: "ireminder – Prayer time reminder"
 <h2>OPTIONS</h2>
 <p> Some of the options within <code>ireminder</code> allow for list inputs, those are meant to be a quoted series of text/numbers.</p>
 <dl>
-<dt><code>-ipraytime </code><i>path</i></p>
-<dd> Specify the path to the ipraytime executable. Unless this options is specified, the script will default to look for the binary in /usr/bin, /usr/local/bin and the current directory.</p>
-<dt><code>-skip </code><i>event_name</i></p>
-<dd> Specify name of prayer/event to skip, valid options include &quot;imsaak fajr shorooq zuhr asr maghrib isha&quot; (list ok).</p>
-<dt><code>-reminder </code><i>minutes</i></p>
-<dd> Specify prior to how many minutes to remind (list ok).</p>
-<dt><code>-inplace</code></p>
-<dd> Specify to print output in-place (without scrolling).</p>
-<dt><code>-execr </code><i>cmd</i></p>
-<dd> Specify an external application trigger for reminders. The %m directive is recognized and is substituted with the normal output message or string. The %s directive is recognized and is substituted by the salat&#8217;s name.</p>
-<dt><code>-execs </code><i>cmd</i></p>
-<dd> Specify an external application trigger for when the salat reaches its appointed time (ie. &quot;salat now&quot;). The %m directive is recognized and is substituted with the normal output message or string. The %s directive is recognized and is substituted by the salat&#8217;s name.</p>
-<dt><code>-help</code></p>
-<dd> Produce a help screen.</dl>
+<dt><code>-ipraytime </code><i>path</i></dt>
+<dd> Specify the path to the ipraytime executable. Unless this options is specified, the script will default to look for the binary in /usr/bin, /usr/local/bin and the current directory.</dd>
+<dt><code>-skip </code><i>event_name</i></dt>
+<dd> Specify name of prayer/event to skip, valid options include &quot;imsaak fajr shorooq zuhr asr maghrib isha&quot; (list ok).</dd>
+<dt><code>-reminder </code><i>minutes</i></dt>
+<dd> Specify prior to how many minutes to remind (list ok).</dd>
+<dt><code>-inplace</code></dt>
+<dd> Specify to print output in-place (without scrolling).</dd>
+<dt><code>-execr </code><i>cmd</i></dt>
+<dd> Specify an external application trigger for reminders. The %m directive is recognized and is substituted with the normal output message or string. The %s directive is recognized and is substituted by the salat&#8217;s name.</dd>
+<dt><code>-execs </code><i>cmd</i></dt>
+<dd> Specify an external application trigger for when the salat reaches its appointed time (ie. &quot;salat now&quot;). The %m directive is recognized and is substituted with the normal output message or string. The %s directive is recognized and is substituted by the salat&#8217;s name.</dd>
+<dt><code>-help</code></dt>
+<dd> Produce a help screen.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs on the web using <a rel="nofollow" href="http://bugs.arabeyes.org">http://bugs.arabeyes.org</a></p>
 <h2>AUTHOR</h2>

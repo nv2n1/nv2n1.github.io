@@ -10,7 +10,6 @@ description: "ustrzcpy – Copies a string into another one, specifying size. Al
 <p>ustrzcpy &#8211; Copies a string into another one, specifying size. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrzcpy(char *dest, int size, const char *src);</code></pre>
 <h2>Description</h2>
 <p>This function copies `src&#8217; (including the terminating null character) into `dest&#8217;, whose length in bytes is specified by `size&#8217; and which is guaranteed to be null-terminated even if `src&#8217; is bigger than `size&#8217;. </p>

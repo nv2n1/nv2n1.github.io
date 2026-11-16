@@ -32,8 +32,8 @@ description: "atomic-containers – operations on containers"
 <p> e.g. If you have 2 running containers on your system with container IDs (496b8679b6cf, 9bb990da1203). </p>
 <dl>
 <dt>
-<dd>
-<p> atomic containers trim Trimming container id 496b8679b6cf Trimming container id 9bb990da1203</dl>
+</dt><dd>
+<p> atomic containers trim Trimming container id 496b8679b6cf Trimming container id 9bb990da1203</dd></dl>
 <p> <code>atomic containers update</code>, update a system container to use a newer version of an image. </p>
 <p> Can use &#8211;set to update environment variables. </p>
 <p> <code>atomic containers rollback</code>, rollback a system container to the other deployment if one exists. </p>
@@ -65,3 +65,4 @@ description: "atomic-containers – operations on containers"
 <h2>HISTORY</h2>
 <p> June 2016, Originally compiled by Giuseppe Scrivano (gscrivan at redhat dot com) July 2016, Added sub-commands filter, no-trunc and quiet (jerzhang at redhat dot com) Sept 2016, Added atomic containers trim subcommand (shishir dot mahajan at redhat dot com) </p>
 <h2>Index</h2>
+</p>

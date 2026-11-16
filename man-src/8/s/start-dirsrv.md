@@ -14,14 +14,14 @@ description: "start-dirsrv – start script for Directory Server"
 <p>start-dirsrv starts all Directory Server instances on a system, or only a single instance if specified </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&lt;instance&gt;</code></p>
+<dt><code>&lt;instance&gt;</code></dt>
 <dd>Specifies a single Directory Server instance to start
-</dl>
+</dd></dl>
 <h2>Usage</h2>
 <p>Sample usage:</p>
 <dl>
-<dt><code>start-dirsrv example</code></p>
-<dd></dl>
+<dt><code>start-dirsrv example</code></dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>start-dirsrv was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

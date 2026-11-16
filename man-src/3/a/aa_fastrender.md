@@ -21,16 +21,16 @@ description: "aa_fastrender – simple and fast AA-lib rendering function."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int x1</code></p>
-<dd> Column of top left coner of rendered area (in characters!).</p>
-<dt><code>int y1</code></p>
-<dd> Row of top left coner of rendered area.</p>
-<dt><code>int x2</code></p>
-<dd> Column of bottom right coner of rendered area.</p>
-<dt><code>int y2</code></p>
-<dd> Row of bottom right coner of rendered area.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int x1</code></dt>
+<dd> Column of top left coner of rendered area (in characters!).</dd>
+<dt><code>int y1</code></dt>
+<dd> Row of top left coner of rendered area.</dd>
+<dt><code>int x2</code></dt>
+<dd> Column of bottom right coner of rendered area.</dd>
+<dt><code>int y2</code></dt>
+<dd> Row of bottom right coner of rendered area.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function does the trick of converting the emulated framebuffer into high quality ASCII-art. It is slightly faster and less flexible the aa_render function. </p>
 <p> Note that to see the effect you need to call aa_flush too. </p>

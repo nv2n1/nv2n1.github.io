@@ -31,7 +31,7 @@ description: "log4cpp::AbortAppender –"
 <p>This <code>Appender</code> causes the application to abort() upon the first append() call. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.5</dl>
+<dd>0.3.5</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>log4cpp::AbortAppender::AbortAppender (const std::string &amp;name)</h3>
 <h3>log4cpp::AbortAppender::~AbortAppender () [virtual]</h3>
@@ -40,7 +40,7 @@ description: "log4cpp::AbortAppender –"
 <p>Log in <code>Appender</code> specific way. Subclasses of <code>Appender</code> should implement this method to perform actual logging. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::AbortAppender::close () [virtual]</h3>
 <p>Release any resources allocated within the appender such as file handles, network connections, etc. </p>
@@ -49,19 +49,19 @@ description: "log4cpp::AbortAppender –"
 <p>Reopens the output destination of this <code>Appender</code>, e.g. the logfile or TCP socket. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false if an error occured during reopening, true otherwise.</dl>
+<dd>false if an error occured during reopening, true otherwise.</dd></dl>
 <p> Reimplemented from <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>bool log4cpp::AbortAppender::requiresLayout () const [virtual]</h3>
 <p>The <code>AbortAppender</code> does not layout. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false</dl>
+<dd>false</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::AbortAppender::setLayout (<code>Layout</code> *layout) [virtual]</h3>
 <p>Set the <code>Layout</code> for this appender. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>layout</i> The layout to use.</dl>
+<dd><i>layout</i> The layout to use.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

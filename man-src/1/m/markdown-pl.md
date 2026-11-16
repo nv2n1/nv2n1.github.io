@@ -27,17 +27,16 @@ Markdown.pl - Convert Markdown syntax to (X)HTML
 
  <pre> $ echo &quot;A **simple** test&quot; | markdown
  &lt;p&gt;A &lt;strong&gt;simple&lt;/strong&gt; test&lt;/p&gt;</pre><h2>Options</h2><dl><dt>version
-<dd>Shows the full information for this version
-<dt>shortversion
-<dd>Shows only the version number
-<dt>html4tags
-<dd>Produce <font SIZE="-1">HTML</font> 4-style tags instead of <font SIZE="-1">XHTML - XHTML</font> requires elements that do not wrap a block (i.e. the <tt>&quot;hr&quot;</tt> tag) to state they will not be closed, by closing with <tt>&quot;/&gt;&quot;</tt>. <font SIZE="-1">HTML</font> 4-style will plainly output the tag as it comes: 
-
+</dt><dd>Shows the full information for this version
+</dd><dt>shortversion
+</dt><dd>Shows only the version number
+</dd><dt>html4tags
+</dt><dd>Produce <font SIZE="-1">HTML</font> 4-style tags instead of <font SIZE="-1">XHTML - XHTML</font> requires elements that do not wrap a block (i.e. the <tt>&quot;hr&quot;</tt> tag) to state they will not be closed, by closing with <tt>&quot;/&gt;&quot;</tt>. <font SIZE="-1">HTML</font> 4-style will plainly output the tag as it comes: 
  <pre> $ echo '---' | markdown
  &lt;hr /&gt;
  $ echo '---' | markdown --html4tags
- &lt;hr&gt;</pre><dt>help
-<dd>Shows this documentation</dl><h2>Author</h2>Copyright 2004 John Gruber 
+ &lt;hr&gt;</pre></dd><dt>help
+</dt><dd>Shows this documentation</dd></dl><h2>Author</h2>Copyright 2004 John Gruber 
 
  Copyright 2008 Tomas Doran 
 

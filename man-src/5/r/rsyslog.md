@@ -13,60 +13,60 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <h2>Modules</h2>
 <p>Rsyslog has a modular design. Consequently, there is a growing number of modules. See the html documentation for their full description. </p>
 <dl>
-<dt><i>omsnmp</i></p>
-<dd>SNMP trap output module</p>
-<dt><i>omgssapi</i></p>
-<dd>Output module for GSS-enabled syslog</p>
-<dt><i>ommysql</i></p>
-<dd>Output module for MySQL</p>
-<dt><i>omrelp</i></p>
-<dd>Output module for the reliable RELP protocol (prevents message loss). For details, see below at imrelp and the html documentation. It can be used like this:</p>
-<dd>*.* :omrelp:server:port</p>
-<dd>*.* :omrelp:192.168.0.1:2514 # actual sample</p>
-<dt><i>ompgsql</i></p>
-<dd>Output module for PostgreSQL</p>
-<dt><i>omlibdbi</i></p>
-<dd>Generic database output module (Firebird/Interbase, MS SQL, Sybase, SQLite, Ingres, Oracle, mSQL)</p>
-<dt><i>imfile</i></p>
-<dd>Input module for text files</p>
-<dt><i>imudp</i></p>
-<dd>Input plugin for UDP syslog. Replaces the deprecated -r option. Can be used like this:</p>
-<dd>$ModLoad imudp</p>
-<dd>$UDPServerRun 514</p>
-<dt><i>imtcp</i></p>
-<dd>Input plugin for plain TCP syslog. Replaces the deprecated -t option. Can be used like this:</p>
-<dd>$ModLoad imtcp</p>
-<dd>$InputTCPServerRun 514</p>
+<dt><i>omsnmp</i></dt>
+<dd>SNMP trap output module</dd>
+<dt><i>omgssapi</i></dt>
+<dd>Output module for GSS-enabled syslog</dd>
+<dt><i>ommysql</i></dt>
+<dd>Output module for MySQL</dd>
+<dt><i>omrelp</i></dt>
+<dd>Output module for the reliable RELP protocol (prevents message loss). For details, see below at imrelp and the html documentation. It can be used like this:</dd>
+<dd>*.* :omrelp:server:port</dd>
+<dd>*.* :omrelp:192.168.0.1:2514 # actual sample</dd>
+<dt><i>ompgsql</i></dt>
+<dd>Output module for PostgreSQL</dd>
+<dt><i>omlibdbi</i></dt>
+<dd>Generic database output module (Firebird/Interbase, MS SQL, Sybase, SQLite, Ingres, Oracle, mSQL)</dd>
+<dt><i>imfile</i></dt>
+<dd>Input module for text files</dd>
+<dt><i>imudp</i></dt>
+<dd>Input plugin for UDP syslog. Replaces the deprecated -r option. Can be used like this:</dd>
+<dd>$ModLoad imudp</dd>
+<dd>$UDPServerRun 514</dd>
+<dt><i>imtcp</i></dt>
+<dd>Input plugin for plain TCP syslog. Replaces the deprecated -t option. Can be used like this:</dd>
+<dd>$ModLoad imtcp</dd>
+<dd>$InputTCPServerRun 514</dd>
 <dt>
-<dt><i>imrelp</i></p>
+</dt><dt><i>imrelp</i></dt>
 <dd>
-<dd>Input plugin for the RELP protocol. RELP can be used instead of UDP or plain TCP syslog to provide reliable delivery of syslog messages. Please note that plain TCP syslog does NOT provide truly reliable delivery, with it messages may be lost when there is a connection problem or the server shuts down. RELP prevents message loss in those cases. It can be used like this:</p>
-<dd>$ModLoad imrelp</p>
-<dd>$InputRELPServerRun 2514</p>
-<dt><i>imgssapi</i></p>
-<dd>Input plugin for plain TCP and GSS-enable syslog</p>
-<dt><i>immark</i></p>
-<dd>Support for mark messages</p>
-<dt><i>imklog</i></p>
-<dd>Kernel logging. To include kernel log messages, you need to do</p>
-<dd>$ModLoad imklog </p>
+</dd><dd>Input plugin for the RELP protocol. RELP can be used instead of UDP or plain TCP syslog to provide reliable delivery of syslog messages. Please note that plain TCP syslog does NOT provide truly reliable delivery, with it messages may be lost when there is a connection problem or the server shuts down. RELP prevents message loss in those cases. It can be used like this:</dd>
+<dd>$ModLoad imrelp</dd>
+<dd>$InputRELPServerRun 2514</dd>
+<dt><i>imgssapi</i></dt>
+<dd>Input plugin for plain TCP and GSS-enable syslog</dd>
+<dt><i>immark</i></dt>
+<dd>Support for mark messages</dd>
+<dt><i>imklog</i></dt>
+<dd>Kernel logging. To include kernel log messages, you need to do</dd>
+<dd>$ModLoad imklog </dd>
 <p> Please note that the klogd daemon is no longer necessary and consequently no longer provided by the rsyslog package.</p>
-<dt><i>imuxsock</i></p>
-<dd>Unix sockets, including the system log socket. You need to specify</p>
-<dd>$ModLoad imuxsock </p>
+<dt><i>imuxsock</i></dt>
+<dd>Unix sockets, including the system log socket. You need to specify</dd>
+<dd>$ModLoad imuxsock </dd>
 <p> in order to receive log messages from local system processes. This config directive should only left out if you know exactly what you are doing. </p>
 </dl>
 <h2>Basic Structure</h2>
 <p>Lines starting with a hash mark (&#8216;#&#8217;) and empty lines are ignored. Rsyslog.conf should contain following sections (sorted by recommended order in file): </p>
 <dl>
-<dt>Global directives</p>
-<dd>Global directives set some global properties of whole rsyslog daemon, for example size of main message queue ($MainMessageQueueSize), loading external modules ($ModLoad) and so on. All global directives need to be specified on a line by their own and must start with a dollar-sign. The complete list of global directives can be found in html documentation in doc directory or online on web pages. </p>
-<dt>Templates</p>
-<dd>Templates allow you to specify format of the logged message. They are also used for dynamic file name generation. They have to be defined before they are used in rules. For more info about templates see TEMPLATES section of this manpage. </p>
-<dt>Output channels</p>
-<dd>Output channels provide an umbrella for any type of output that the user might want. They have to be defined before they are used in rules. For more info about output channels see OUTPUT CHANNELS section of this manpage. </p>
-<dt>Rules (selector + action)</p>
-<dd>Every rule line consists of two fields, a selector field and an action field. These two fields are separated by one or more spaces or tabs. The selector field specifies a pattern of facilities and priorities belonging to the specified action. </p>
+<dt>Global directives</dt>
+<dd>Global directives set some global properties of whole rsyslog daemon, for example size of main message queue ($MainMessageQueueSize), loading external modules ($ModLoad) and so on. All global directives need to be specified on a line by their own and must start with a dollar-sign. The complete list of global directives can be found in html documentation in doc directory or online on web pages. </dd>
+<dt>Templates</dt>
+<dd>Templates allow you to specify format of the logged message. They are also used for dynamic file name generation. They have to be defined before they are used in rules. For more info about templates see TEMPLATES section of this manpage. </dd>
+<dt>Output channels</dt>
+<dd>Output channels provide an umbrella for any type of output that the user might want. They have to be defined before they are used in rules. For more info about output channels see OUTPUT CHANNELS section of this manpage. </dd>
+<dt>Rules (selector + action)</dt>
+<dd>Every rule line consists of two fields, a selector field and an action field. These two fields are separated by one or more spaces or tabs. The selector field specifies a pattern of facilities and priorities belonging to the specified action. </dd>
 </dl>
 <h2>Selectors</h2>
 <p>The selector field itself again consists of two parts, a facility and a priority, separated by a period (&#8216;.&#8217;). Both parts are case insensitive and can also be specified as decimal numbers, but don&#8217;t do that, you have been warned. Both facilities and priorities are described in <a href="/docs/linux/man/3-syslog/">syslog</a>(3). The names mentioned below correspond to the similar LOG_-values in /usr/include/syslog.h. </p>
@@ -83,11 +83,11 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p>Typically messages are logged to real files. The file has to be specified with full pathname, beginning with a slash (&#8216;/&#8217;). </p>
 <p> <code>Example:</code></p>
 <dl>
-<dd>*.* /var/log/traditionalfile.log;RSYSLOG_TraditionalFileFormat # log to a file in the traditional format</dl>
+<dd>*.* /var/log/traditionalfile.log;RSYSLOG_TraditionalFileFormat # log to a file in the traditional format</dd></dl>
 <p> Note: if you would like to use high-precision timestamps in your log files, just remove the &quot;;RSYSLOG_TraditionalFormat&quot;. That will select the default template, which, if not changed, uses RFC 3339 timestamps. </p>
 <p> <code>Example:</code></p>
 <dl>
-<dd>*.* /var/log/file.log # log to a file with RFC3339 timestamps</dl>
+<dd>*.* /var/log/file.log # log to a file with RFC3339 timestamps</dd></dl>
 <h3>Named pipes</h3>
 <p>This version of <a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a>(8) has support for logging output to named pipes (fifos). A fifo or named pipe can be used as a destination for log messages by prepending a pipe symbol (&#8216;|&#8217;) to the name of the file. This is handy for debugging. Note that the fifo must be created with the <a href="/docs/linux/man/1-mkfifo/">mkfifo</a>(1) command before <a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a>(8) is started.</p>
 <h3>Terminal and console</h3>
@@ -97,11 +97,11 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p> To forward messages to another host via UDP, prepend the hostname with the at sign (&quot;@&quot;). To forward it via plain tcp, prepend two at signs (&quot;@@&quot;). To forward via RELP, prepend the string &quot;:omrelp:&quot; in front of the hostname. </p>
 <p> <code>Example:</code></p>
 <dl>
-<dd>*.* @192.168.0.1</dl>
+<dd>*.* @192.168.0.1</dd></dl>
 <p> In the example above, messages are forwarded via UDP to the machine 192.168.0.1, the destination port defaults to 514. Due to the nature of UDP, you will probably lose some messages in transit. If you expect high traffic volume, you can expect to lose a quite noticeable number of messages (the higher the traffic, the more likely and severe is message loss). </p>
 <p> <code>If you would like to prevent message loss, use RELP:</code></p>
 <dl>
-<dd>*.* :omrelp:192.168.0.1:2514</dl>
+<dd>*.* :omrelp:192.168.0.1:2514</dd></dl>
 <p> Note that a port number was given as there is no standard port for relp. </p>
 <p> Keep in mind that you need to load the correct input and output plugins (see &quot;Modules&quot; above). </p>
 <p> Please note that rsyslogd offers a variety of options in regarding to remote forwarding. For full details, please see the html documentation.</p>
@@ -117,14 +117,14 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p> Discard is just the single tilde character with no further parameters. </p>
 <p> <code>Example:</code></p>
 <dl>
-<dd>*.* ~ # discards everything.</dl>
+<dd>*.* ~ # discards everything.</dd></dl>
 <h3>Output channel</h3>
 <p>Binds an output channel definition (see there for details) to this action. Output channel actions must start with a $-sign, e.g. if you would like to bind your output channel definition &quot;mychannel&quot; to the action, use &quot;$mychannel&quot;. Output channels support template definitions like all all other actions.</p>
 <h3>Shell execute</h3>
 <p>This executes a program in a subshell. The program is passed the template-generated message as the only command line parameter. Rsyslog waits until the program terminates and only then continues to run. </p>
 <p> <code>Example:</code></p>
 <dl>
-<dd>^program-to-execute;template</dl>
+<dd>^program-to-execute;template</dd></dl>
 <p> The program-to-execute can be any valid executable. It receives the template string as a single parameter (argv[1]).</p>
 <h2>Filter Conditions</h2>
 <p>Rsyslog offers three different types &quot;filter conditions&quot;: </p>
@@ -137,21 +137,21 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p>Property-based filters are unique to rsyslogd. They allow to filter on any property, like HOSTNAME, syslogtag and msg. </p>
 <p> A property-based filter must start with a colon in column 0. This tells rsyslogd that it is the new filter type. The colon must be followed by the property name, a comma, the name of the compare operation to carry out, another comma and then the value to compare against. This value must be quoted. There can be spaces and tabs between the commas. Property names and compare operations are case-sensitive, so &quot;msg&quot; works, while &quot;MSG&quot; is an invalid property name. In brief, the syntax is as follows: </p>
 <dl>
-<dd>:property, [!]compare-operation, &quot;value&quot;</dl>
+<dd>:property, [!]compare-operation, &quot;value&quot;</dd></dl>
 <p> The following compare-operations are currently supported: </p>
 <dl>
-<dd><code>contains</code></p>
+<dd><code>contains</code></dd>
 <dl>
-<dd>Checks if the string provided in value is contained in the property</dl>
+<dd>Checks if the string provided in value is contained in the property</dd></dl>
 <p> <code>isequal</code></p>
 <dl>
-<dd>Compares the &quot;value&quot; string provided and the property contents. These two values must be exactly equal to match.</dl>
+<dd>Compares the &quot;value&quot; string provided and the property contents. These two values must be exactly equal to match.</dd></dl>
 <p> <code>startswith</code></p>
 <dl>
-<dd>Checks if the value is found exactly at the beginning of the property value</dl>
+<dd>Checks if the value is found exactly at the beginning of the property value</dd></dl>
 <p> <code>regex</code></p>
 <dl>
-<dd>Compares the property against the provided regular expression.</dl>
+<dd>Compares the property against the provided regular expression.</dd></dl>
 </dl>
 <h3>Expression-Based Filters</h3>
 <p>See the html documentation for this feature.</p>
@@ -159,7 +159,7 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p>Every output in rsyslog uses templates &#8211; this holds true for files, user messages and so on. Templates compatible with the stock syslogd formats are hardcoded into rsyslogd. If no template is specified, we use one of these hardcoded templates. Search for &quot;template_&quot; in syslogd.c and you will find the hardcoded ones. </p>
 <p> A template consists of a template directive, a name, the actual template text and optional options. A sample is: </p>
 <dl>
-<dd><code>$template MyTemplateName,\7Text %property% some more text\n,&lt;options&gt;</code></dl>
+<dd><code>$template MyTemplateName,\7Text %property% some more text\n,&lt;options&gt;</code></dd></dl>
 <p> The &quot;$template&quot; is the template directive. It tells rsyslog that this line contains a template. The backslash is an escape character. For example, \7 rings the bell (this is an ASCII value), 
  is a new line. The set in rsyslog is a bit restricted currently. </p>
 <p> All text in the template is used literally, except for things within percent signs. These are properties and allow you access to the contents of the syslog message. Properties are accessed via the property replacer and it can for example pick a substring or do date-specific formatting. More on this is the PROPERTY REPLACER section of this manpage. </p>
@@ -171,18 +171,18 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p> Properties can be accessed by the property replacer (see there for details). </p>
 <p> <code>Please note that templates can also by used to generate selector lines with dynamic file names.</code> For example, if you would like to split syslog messages from different hosts to different files (one per host), you can define the following template: </p>
 <dl>
-<dd><code>$template DynFile,/var/log/system-%HOSTNAME%.log</code></dl>
+<dd><code>$template DynFile,/var/log/system-%HOSTNAME%.log</code></dd></dl>
 <p>&nbsp;<wbr> This template can then be used when defining an output selector line. It will result in something like &quot;/var/log/system-localhost.log&quot;</p>
 <h3>Template options</h3>
 <p>The &lt;options&gt; part is optional. It carries options influencing the template as whole. See details below. Be sure NOT to mistake template options with property options &#8211; the later ones are processed by the property replacer and apply to a SINGLE property, only (and not the whole template). </p>
 <p> Template options are case-insensitive. Currently defined are: </p>
 <dl>
 <dd>
-<dl>
-<dt>sql</p>
-<dd>format the string suitable for a SQL statement in MySQL format. This will replace single quotes (&quot;&#8217;&quot;) and the backslash character by their backslash-escaped counterpart (&quot;&#8217;&quot; and &quot;\&quot;) inside each field. Please note that in MySQL configuration, the NO_BACKSLASH_ESCAPES mode must be turned off for this format to work (this is the default). </p>
-<dt>stdsql</p>
-<dd>format the string suitable for a SQL statement that is to be sent to a standards-compliant sql server. This will replace single quotes (&quot;&#8217;&quot;) by two single quotes (&quot;&#8221;&quot;) inside each field. You must use stdsql together with MySQL if in MySQL configuration the NO_BACKSLASH_ESCAPES is turned on.</dl>
+</dd><dl>
+<dt>sql</dt>
+<dd>format the string suitable for a SQL statement in MySQL format. This will replace single quotes (&quot;&#8217;&quot;) and the backslash character by their backslash-escaped counterpart (&quot;&#8217;&quot; and &quot;\&quot;) inside each field. Please note that in MySQL configuration, the NO_BACKSLASH_ESCAPES mode must be turned off for this format to work (this is the default). </dd>
+<dt>stdsql</dt>
+<dd>format the string suitable for a SQL statement that is to be sent to a standards-compliant sql server. This will replace single quotes (&quot;&#8217;&quot;) by two single quotes (&quot;&#8221;&quot;) inside each field. You must use stdsql together with MySQL if in MySQL configuration the NO_BACKSLASH_ESCAPES is turned on.</dd></dl>
 </dl>
 <p> Either the <code>sql</code> or <code>stdsql </code> option <code>MUST </code> be specified when a template is used for writing to a database, otherwise injection might occur. Please note that due to the unfortunate fact that several vendors have violated the sql standard and introduced their own escape methods, it is impossible to have a single option doing all the work. So you yourself must make sure you are using the right format. <code>If you choose the wrong one, you are still vulnerable to sql injection.</code> </p>
 <p> Please note that the database writer *checks* that the sql option is present in the template. If it is not present, the write database action is disabled. This is to guard you against accidental forgetting it and then becoming vulnerable to SQL injection. The sql option can also be useful with files &#8211; especially if you want to import them into a database on another machine for performance reasons. However, do NOT use it if you do not have a real need for it &#8211; among others, it takes some toll on the processing time. Not much, but on a really busy system you might notice it ;) </p>
@@ -191,103 +191,103 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p>Please note that the samples are split across multiple lines. A template MUST NOT actually be split across multiple lines. </p>
 <p> A template that resembles traditional syslogd file output: </p>
 <dl>
-<dd>$template TraditionalFormat,&quot;%timegenerated% %HOSTNAME% </p>
+<dd>$template TraditionalFormat,&quot;%timegenerated% %HOSTNAME% </dd>
 <p> %syslogtag%%msg:::drop-last-lf%
 &quot;</dl>
 <p> A template that tells you a little more about the message: </p>
 <dl>
-<dd>$template precise,&quot;%syslogpriority%,%syslogfacility%,%timegenerated%,%HOSTNAME%, </p>
+<dd>$template precise,&quot;%syslogpriority%,%syslogfacility%,%timegenerated%,%HOSTNAME%, </dd>
 <p> %syslogtag%,%msg%
 &quot;</dl>
 <p> A template for RFC 3164 format: </p>
 <dl>
-<dd>$template RFC3164fmt,&quot;&lt;%PRI%&gt;%TIMESTAMP% %HOSTNAME% %syslogtag%%msg%&quot;</dl>
+<dd>$template RFC3164fmt,&quot;&lt;%PRI%&gt;%TIMESTAMP% %HOSTNAME% %syslogtag%%msg%&quot;</dd></dl>
 <p> A template for the format traditionally used for user messages: </p>
 <dl>
 <dd>$template usermsg,&quot; XXXX%syslogtag%%msg%
-&quot;</dl>
+&quot;</dd></dl>
 <p> And a template with the traditional wall-message format: </p>
 <dl>
 <dd>$template wallmsg,&quot;
-\7Message from syslogd@%HOSTNAME% at %timegenerated%&quot;</dl>
+\7Message from syslogd@%HOSTNAME% at %timegenerated%&quot;</dd></dl>
 <p> <code>A template that can be used for writing to a database (please note the SQL template option)</code> </p>
 <dl>
 <dd>$template MySQLInsert,&quot;insert iut, message, receivedat values (&#8216;%iut%&#8217;, &#8216;%msg:::UPPERCASE%&#8217;, &#8216;%timegenerated:::date-mysql%&#8217;) into systemevents
-&quot;, SQL </p>
+&quot;, SQL </dd>
 <p> NOTE 1: This template is embedded into core application under name <code>StdDBFmt</code> , so you don&#8217;t need to define it. </p>
 <p> NOTE 2: You have to have MySQL module installed to use this template.</dl>
 <h2>Output Channels</h2>
 <p>Output Channels are a new concept first introduced in rsyslog 0.9.0. As of this writing, it is most likely that they will be replaced by something different in the future. So if you use them, be prepared to change you configuration file syntax when you upgrade to a later release. </p>
 <p> Output channels are defined via an $outchannel directive. It&#8217;s syntax is as follows: </p>
 <dl>
-<dd><code>$outchannel name,file-name,max-size,action-on-max-size</code></dl>
+<dd><code>$outchannel name,file-name,max-size,action-on-max-size</code></dd></dl>
 <p> name is the name of the output channel (not the file), file-name is the file name to be written to, max-size the maximum allowed size and action-on-max-size a command to be issued when the max size is reached. This command always has exactly one parameter. The binary is that part of action-on-max-size before the first space, its parameter is everything behind that space. </p>
 <p> Keep in mind that $outchannel just defines a channel with &quot;name&quot;. It does not activate it. To do so, you must use a selector line (see below). That selector line includes the channel name plus &quot;:omfile:$&quot; in front of it. A sample might be: </p>
 <dl>
-<dd>*.* :omfile:$mychannel</dl>
+<dd>*.* :omfile:$mychannel</dd></dl>
 <h2>Property Replacer</h2>
 <p>The property replacer is a core component in rsyslogd&#8217;s output system. A syslog message has a number of well-defined properties (see below). Each of this properties can be accessed and manipulated by the property replacer. With it, it is easy to use only part of a property value or manipulate the value, e.g. by converting all characters to lower case.</p>
 <h3>Accessing Properties</h3>
 <p>Syslog message properties are used inside templates. They are accessed by putting them between percent signs. Properties can be modified by the property replacer. The full syntax is as follows: </p>
 <dl>
-<dd><code>%propname:fromChar:toChar:options%</code></dl>
+<dd><code>%propname:fromChar:toChar:options%</code></dd></dl>
 <p> propname is the name of the property to access. <code>It is case-sensitive.</code></p>
 <h3>Available Properties</h3>
 <dl>
-<dt><code>msg</code></p>
-<dd>the MSG part of the message (aka &quot;the message&quot; ;))</p>
-<dt><code>rawmsg</code></p>
-<dd>the message exactly as it was received from the socket. Should be useful for debugging.</p>
-<dt><code>HOSTNAME</code></p>
-<dd>hostname from the message</p>
-<dt><code>FROMHOST</code></p>
-<dd>hostname of the system the message was received from (in a relay chain, this is the system immediately in front of us and not necessarily the original sender)</p>
-<dt><code>syslogtag</code></p>
-<dd>TAG from the message</p>
-<dt><code>programname</code></p>
-<dd>the &quot;static&quot; part of the tag, as defined by BSD syslogd. For example, when TAG is &quot;named[12345]&quot;, programname is &quot;named&quot;.</p>
-<dt><code>PRI</code></p>
-<dd>PRI part of the message &#8211; undecoded (single value)</p>
-<dt><code>PRI-text</code></p>
-<dd>the PRI part of the message in a textual form (e.g. &quot;syslog.info&quot;)</p>
-<dt><code>IUT</code></p>
-<dd>the monitorware InfoUnitType &#8211; used when talking to a MonitorWare backend (also for phpLogCon)</p>
-<dt><code>syslogfacility</code></p>
-<dd>the facility from the message &#8211; in numerical form</p>
-<dt><code>syslogfacility-text</code></p>
-<dd>the facility from the message &#8211; in text form</p>
-<dt><code>syslogseverity</code></p>
-<dd>severity from the message &#8211; in numerical form</p>
-<dt><code>syslogseverity-text</code></p>
-<dd>severity from the message &#8211; in text form</p>
-<dt><code>timegenerated</code></p>
-<dd>timestamp when the message was RECEIVED. Always in high resolution</p>
-<dt><code>timereported</code></p>
-<dd>timestamp from the message. Resolution depends on what was provided in the message (in most cases, only seconds)</p>
-<dt><code>TIMESTAMP</code></p>
-<dd>alias for timereported</p>
-<dt><code>PROTOCOL-VERSION</code></p>
-<dd>The contents of the PROTOCOL-VERSION field from IETF draft draft-ietf-syslog-protocol</p>
-<dt><code>STRUCTURED-DATA</code></p>
-<dd>The contents of the STRUCTURED-DATA field from IETF draft draft-ietf-syslog-protocol</p>
-<dt><code>APP-NAME</code></p>
-<dd>The contents of the APP-NAME field from IETF draft draft-ietf-syslog-protocol</p>
-<dt><code>PROCID</code></p>
-<dd>The contents of the PROCID field from IETF draft draft-ietf-syslog-protocol</p>
-<dt><code>MSGID</code></p>
-<dd>The contents of the MSGID field from IETF draft draft-ietf-syslog-protocol</p>
-<dt><code>$NOW</code></p>
-<dd>The current date stamp in the format YYYY-MM-DD</p>
-<dt><code>$YEAR</code></p>
-<dd>The current year (4-digit)</p>
-<dt><code>$MONTH</code></p>
-<dd>The current month (2-digit)</p>
-<dt><code>$DAY</code></p>
-<dd>The current day of the month (2-digit)</p>
-<dt><code>$HOUR</code></p>
-<dd>The current hour in military (24 hour) time (2-digit)</p>
-<dt><code>$MINUTE</code></p>
-<dd>The current minute (2-digit) </p>
+<dt><code>msg</code></dt>
+<dd>the MSG part of the message (aka &quot;the message&quot; ;))</dd>
+<dt><code>rawmsg</code></dt>
+<dd>the message exactly as it was received from the socket. Should be useful for debugging.</dd>
+<dt><code>HOSTNAME</code></dt>
+<dd>hostname from the message</dd>
+<dt><code>FROMHOST</code></dt>
+<dd>hostname of the system the message was received from (in a relay chain, this is the system immediately in front of us and not necessarily the original sender)</dd>
+<dt><code>syslogtag</code></dt>
+<dd>TAG from the message</dd>
+<dt><code>programname</code></dt>
+<dd>the &quot;static&quot; part of the tag, as defined by BSD syslogd. For example, when TAG is &quot;named[12345]&quot;, programname is &quot;named&quot;.</dd>
+<dt><code>PRI</code></dt>
+<dd>PRI part of the message &#8211; undecoded (single value)</dd>
+<dt><code>PRI-text</code></dt>
+<dd>the PRI part of the message in a textual form (e.g. &quot;syslog.info&quot;)</dd>
+<dt><code>IUT</code></dt>
+<dd>the monitorware InfoUnitType &#8211; used when talking to a MonitorWare backend (also for phpLogCon)</dd>
+<dt><code>syslogfacility</code></dt>
+<dd>the facility from the message &#8211; in numerical form</dd>
+<dt><code>syslogfacility-text</code></dt>
+<dd>the facility from the message &#8211; in text form</dd>
+<dt><code>syslogseverity</code></dt>
+<dd>severity from the message &#8211; in numerical form</dd>
+<dt><code>syslogseverity-text</code></dt>
+<dd>severity from the message &#8211; in text form</dd>
+<dt><code>timegenerated</code></dt>
+<dd>timestamp when the message was RECEIVED. Always in high resolution</dd>
+<dt><code>timereported</code></dt>
+<dd>timestamp from the message. Resolution depends on what was provided in the message (in most cases, only seconds)</dd>
+<dt><code>TIMESTAMP</code></dt>
+<dd>alias for timereported</dd>
+<dt><code>PROTOCOL-VERSION</code></dt>
+<dd>The contents of the PROTOCOL-VERSION field from IETF draft draft-ietf-syslog-protocol</dd>
+<dt><code>STRUCTURED-DATA</code></dt>
+<dd>The contents of the STRUCTURED-DATA field from IETF draft draft-ietf-syslog-protocol</dd>
+<dt><code>APP-NAME</code></dt>
+<dd>The contents of the APP-NAME field from IETF draft draft-ietf-syslog-protocol</dd>
+<dt><code>PROCID</code></dt>
+<dd>The contents of the PROCID field from IETF draft draft-ietf-syslog-protocol</dd>
+<dt><code>MSGID</code></dt>
+<dd>The contents of the MSGID field from IETF draft draft-ietf-syslog-protocol</dd>
+<dt><code>$NOW</code></dt>
+<dd>The current date stamp in the format YYYY-MM-DD</dd>
+<dt><code>$YEAR</code></dt>
+<dd>The current year (4-digit)</dd>
+<dt><code>$MONTH</code></dt>
+<dd>The current month (2-digit)</dd>
+<dt><code>$DAY</code></dt>
+<dd>The current day of the month (2-digit)</dd>
+<dt><code>$HOUR</code></dt>
+<dd>The current hour in military (24 hour) time (2-digit)</dd>
+<dt><code>$MINUTE</code></dt>
+<dd>The current minute (2-digit) </dd>
 </dl>
 <p> Properties starting with a $-sign are so-called system properties. These do NOT stem from the message but are rather internally-generated.</p>
 <h3>Character Positions</h3>
@@ -298,24 +298,24 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <h3>Property Options</h3>
 <p>Property options are case-insensitive. Currently, the following options are defined:</p>
 <dl>
-<dt>uppercase</p>
-<dd>convert property to lowercase only</p>
-<dt>lowercase</p>
-<dd>convert property text to uppercase only</p>
-<dt>drop-last-lf</p>
-<dd>The last LF in the message (if any), is dropped. Especially useful for PIX.</p>
-<dt>date-mysql</p>
-<dd>format as mysql date</p>
-<dt>date-rfc3164</p>
-<dd>format as RFC 3164 date</p>
-<dt>date-rfc3339</p>
-<dd>format as RFC 3339 date</p>
-<dt>escape-cc</p>
-<dd>replace control characters (ASCII value 127 and values less then 32) with an escape sequence. The sequence is &quot;#&lt;charval&gt;&quot; where charval is the 3-digit decimal value of the control character. For example, a tabulator would be replaced by &quot;#009&quot;.</p>
-<dt>space-cc</p>
-<dd>replace control characters by spaces</p>
-<dt>drop-cc</p>
-<dd>drop control characters &#8211; the resulting string will neither contain control characters, escape sequences nor any other replacement character like space. </p>
+<dt>uppercase</dt>
+<dd>convert property to lowercase only</dd>
+<dt>lowercase</dt>
+<dd>convert property text to uppercase only</dd>
+<dt>drop-last-lf</dt>
+<dd>The last LF in the message (if any), is dropped. Especially useful for PIX.</dd>
+<dt>date-mysql</dt>
+<dd>format as mysql date</dd>
+<dt>date-rfc3164</dt>
+<dd>format as RFC 3164 date</dd>
+<dt>date-rfc3339</dt>
+<dd>format as RFC 3339 date</dd>
+<dt>escape-cc</dt>
+<dd>replace control characters (ASCII value 127 and values less then 32) with an escape sequence. The sequence is &quot;#&lt;charval&gt;&quot; where charval is the 3-digit decimal value of the control character. For example, a tabulator would be replaced by &quot;#009&quot;.</dd>
+<dt>space-cc</dt>
+<dd>replace control characters by spaces</dd>
+<dt>drop-cc</dt>
+<dd>drop control characters &#8211; the resulting string will neither contain control characters, escape sequences nor any other replacement character like space. </dd>
 </dl>
 <h2>Queued Operations</h2>
 <p>Rsyslogd supports queued operations to handle offline outputs (like remote syslogd&#8217;s or database servers being down). When running in queued mode, rsyslogd buffers messages to memory and optionally to disk (on an as-needed basis). Queues survive rsyslogd restarts. </p>
@@ -323,13 +323,13 @@ description: "rsyslog.conf – rsyslogd(8) configuration file"
 <p> To learn more about queued operations, see the html documentation.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/rsyslog.conf</i></p>
-<dd>Configuration file for <code>rsyslogd</code> </p>
+<dt><i>/etc/rsyslog.conf</i></dt>
+<dd>Configuration file for <code>rsyslogd</code> </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a></code>(8), <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) The complete documentation can be found in the doc folder of the rsyslog distribution or online at</p>
 <dl>
-<dd><code><a rel="nofollow" href="http://www.rsyslog.com/doc">http://www.rsyslog.com/doc</a></code></dl>
+<dd><code><a rel="nofollow" href="http://www.rsyslog.com/doc">http://www.rsyslog.com/doc</a></code></dd></dl>
 <p> Please note that the man page reflects only a subset of the configuration options. Be sure to read the html documentation for all features and details. This is especially vital if you plan to set up a more-then-extremely-simple system. </p>
 <h2>Authors</h2>
 <p><code>rsyslogd</code> is taken from sysklogd sources, which have been heavily modified by Rainer Gerhards (rgerhards [at] adiscon.com) and others.</p>

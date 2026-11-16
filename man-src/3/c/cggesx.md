@@ -19,7 +19,7 @@ description: "cggesx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CGGESX computes for a pair of N-by-N complex nonsymmetric matrices
  (A,B), the generalized eigenvalues, the complex Schur form (S,T),
@@ -46,11 +46,11 @@ description: "cggesx.f –"
      negative diagonal and S is upper
          triangular.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVSL</i> </p>
+</dt><dd> <i>JOBVSL</i> </dd>
 <pre>
           JOBVSL is CHARACTER*1
           = 'N':  do not compute the left Schur vectors;
@@ -251,14 +251,14 @@ the routine
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 328 of file cggesx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

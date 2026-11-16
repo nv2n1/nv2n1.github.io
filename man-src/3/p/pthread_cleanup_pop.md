@@ -10,11 +10,9 @@ description: "pthread_cleanup_push, pthread_cleanup_pop – push and pop thread 
 <p>pthread_cleanup_push, pthread_cleanup_pop &#8211; push and pop thread cancellation clean-up handlers</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 void pthread_cleanup_push(void (*routine)(void *),
                           void *arg);
 void pthread_cleanup_pop(int execute);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>These functions manipulate the calling thread&#8217;s stack of thread-cancellation clean-up handlers. A clean-up handler is a function that is automatically executed when a thread is canceled (or in various other circumstances described below); it might, for example, unlock a mutex so that it becomes available to other threads in the process. </p>
@@ -22,12 +20,12 @@ Compile and link with - pthread.</code></pre>
 <p> The <code>pthread_cleanup_pop</code>() function removes the routine at the top of the stack of clean-up handlers, and optionally executes it if <i>execute</i> is nonzero. </p>
 <p> A cancellation clean-up handler is popped from the stack and executed in the following circumstances:</p>
 <dl>
-<dt>1.</p>
-<dd>When a thread is canceled, all of the stacked clean-up handlers are popped and executed in the reverse of the order in which they were pushed onto the stack.</p>
-<dt>2.</p>
-<dd>When a thread terminates by calling <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3), all clean-up handlers are executed as described in the preceding point. (Clean-up handlers are <i>not</i> called if the thread terminates by performing a <i>return</i> from the thread start function.)</p>
-<dt>3.</p>
-<dd>When a thread calls <code>pthread_cleanup_pop</code>() with a nonzero <i>execute</i> argument, the top-most clean-up handler is popped and executed.</dl>
+<dt>1.</dt>
+<dd>When a thread is canceled, all of the stacked clean-up handlers are popped and executed in the reverse of the order in which they were pushed onto the stack.</dd>
+<dt>2.</dt>
+<dd>When a thread terminates by calling <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3), all clean-up handlers are executed as described in the preceding point. (Clean-up handlers are <i>not</i> called if the thread terminates by performing a <i>return</i> from the thread start function.)</dd>
+<dt>3.</dt>
+<dd>When a thread calls <code>pthread_cleanup_pop</code>() with a nonzero <i>execute</i> argument, the top-most clean-up handler is popped and executed.</dd></dl>
 <p> POSIX.1 permits <code>pthread_cleanup_push</code>() and <code>pthread_cleanup_pop</code>() to be implemented as macros that expand to text containing &#8216;<code>{</code>&#8216; and &#8216;<code>}</code>&#8216;, respectively. For this reason, the caller must ensure that calls to these functions are paired within the same function, and at the same lexical nesting level. (In other words, a clean-up handler is established only during the execution of a specified section of code.) </p>
 <p> Calling <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) (<code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3)) produces undefined results if any call has been made to <code>pthread_cleanup_push</code>() or <code>pthread_cleanup_pop</code>() without the matching call of the pair since the jump buffer was filled by <code><a href="/docs/linux/man/3-setjmp/">setjmp</a></code>(3) (<code><a href="/docs/linux/man/3-sigsetjmp/">sigsetjmp</a></code>(3)). Likewise, calling <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) (<code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3)) from inside a clean-up handler produces undefined results unless the jump buffer was also filled by <code><a href="/docs/linux/man/3-setjmp/">setjmp</a></code>(3) (<code><a href="/docs/linux/man/3-sigsetjmp/">sigsetjmp</a></code>(3)) inside the handler.</p>
 <h2>Return Value</h2>

@@ -19,86 +19,86 @@ description: "gtklp – print files via CUPS"
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <code>gtklp</code>:</p>
 <dl>
-<dt>-P <i>printer</i></p>
+<dt>-P <i>printer</i></dt>
 <dd>
- Use <i>printer</i> as default destination.</p>
-<dt>-d <i>printer</i></p>
+ Use <i>printer</i> as default destination.</dd>
+<dt>-d <i>printer</i></dt>
 <dd>
- This option is equivalent to &quot;-P&quot;.</p>
-<dt>-c <i>configdir</i></p>
+ This option is equivalent to &quot;-P&quot;.</dd>
+<dt>-c <i>configdir</i></dt>
 <dd>
- Use <i>configdir</i> to set an alternative path to the configfiles for <code>GtkLP</code>. </p>
-<dt>-S <i>server</i></p>
+ Use <i>configdir</i> to set an alternative path to the configfiles for <code>GtkLP</code>. </dd>
+<dt>-S <i>server</i></dt>
 <dd>
- The name of the CUPS-Server.</p>
-<dt>-h <i>server</i></p>
+ The name of the CUPS-Server.</dd>
+<dt>-h <i>server</i></dt>
 <dd>
- The same as -S.</p>
-<dt>-p <i>port</i></p>
+ The same as -S.</dd>
+<dt>-p <i>port</i></dt>
 <dd>
- The port of CUPS-Server, 631 per default.</p>
-<dt>-l</p>
+ The port of CUPS-Server, 631 per default.</dd>
+<dt>-l</dt>
 <dd>
  Only list the chosen options as a list of commandline-parameters for lpr.<br />
- Nice for scripting purposes&#8230;</p>
-<dt>-D</p>
+ Nice for scripting purposes&#8230;</dd>
+<dt>-D</dt>
 <dd>
- Debug.</p>
-<dt>-V</p>
+ Debug.</dd>
+<dt>-V</dt>
 <dd>
- Displays the version of <code>GtkLP</code>.</p>
-<dt>-b</p>
+ Displays the version of <code>GtkLP</code>.</dd>
+<dt>-b</dt>
 <dd>
- Use builtin defaults instead of saved options</p>
-<dt>-i</p>
+ Use builtin defaults instead of saved options</dd>
+<dt>-i</dt>
 <dd>
  Ignore data on stdin.<br />
- Sometimes useful, e.g. for printing from some versions of the Acrobat Reader.</p>
-<dt>-U <i>user</i></p>
+ Sometimes useful, e.g. for printing from some versions of the Acrobat Reader.</dd>
+<dt>-U <i>user</i></dt>
 <dd>
- The name of the cups-User to use.</p>
-<dt>-# <i>n</i></p>
+ The name of the cups-User to use.</dd>
+<dt>-# <i>n</i></dt>
 <dd>
- Make <i>n</i> copies per default.</p>
-<dt>-n <i>n</i></p>
+ Make <i>n</i> copies per default.</dd>
+<dt>-n <i>n</i></dt>
 <dd>
- The same as -#.</p>
-<dt>-H</p>
+ The same as -#.</dd>
+<dt>-H</dt>
 <dd>
- Help</p>
-<dt>-C</p>
+ Help</dd>
+<dt>-C</dt>
 <dd>
- Force console-mode</p>
-<dt>-o <i>option=value</i></p>
+ Force console-mode</dd>
+<dt>-o <i>option=value</i></dt>
 <dd>
- Specify extra options, same syntax as lpr</p>
-<dt>-E</p>
+ Specify extra options, same syntax as lpr</dd>
+<dt>-E</dt>
 <dd>
- Forces encryption when connecting to the server.</p>
-<dt>-q <i>priority</i></p>
+ Forces encryption when connecting to the server.</dd>
+<dt>-q <i>priority</i></dt>
 <dd>
- Specify the priority of the print job, from 1 (lowest) to 100 (highest)</p>
-<dt>-t <i>jobname</i></p>
+ Specify the priority of the print job, from 1 (lowest) to 100 (highest)</dd>
+<dt>-t <i>jobname</i></dt>
 <dd>
- Specify the jobname</p>
-<dt>-J <i>jobname</i></p>
+ Specify the jobname</dd>
+<dt>-J <i>jobname</i></dt>
 <dd>
- The same as -t.</p>
+ The same as -t.</dd>
 <dt>
-<dd>
- If called as lp, the following options differ from GtkLP`s options:</p>
-<dt>-X</p>
+</dt><dd>
+ If called as lp, the following options differ from GtkLP`s options:</dd>
+<dt>-X</dt>
 <dd> Force X-Mode, even if GTKLP_FORCEX is not set to 1 <code>.TP</code>5 -P <i>page-list</i><br />
- Specifies which pages to print in the document. The list can contain a list of numbers and ranges (#-#) separated by commas (e.g. 1,3-5,16). </p>
-<dt>-H <i>handling</i></p>
-<dd> Specifies when the job should be printed. A value of <i>immediate</i> will print the file immediately, a value of <i>hold</i> will hold the job indefinitely, and a time value (HH:MM) will hold the job until the specified time. (does this option work ?)</p>
+ Specifies which pages to print in the document. The list can contain a list of numbers and ranges (#-#) separated by commas (e.g. 1,3-5,16). </dd>
+<dt>-H <i>handling</i></dt>
+<dd> Specifies when the job should be printed. A value of <i>immediate</i> will print the file immediately, a value of <i>hold</i> will hold the job indefinitely, and a time value (HH:MM) will hold the job until the specified time. (does this option work ?)</dd>
 <dt>
-<dd>
- If called as lpr, the following options differ from GtkLP`s options:</p>
-<dt>-X</p>
-<dd> Force X-Mode, even if GTKLP_FORCEX is not set to 1 <code>.TP</code>5 -C <i>jobname</i> Specify the jobname <code>.TP</code>5 -T <i>jobname</i> The same as -C. <code>.TP</code>5 -p Specifies that the print file should be formatted with a shaded header with the date, time, job name, and page number. This option is equivalent to &quot;-oprettyprint&quot; and is only useful when printing text files. <code>.TP</code>5 -l Specifies that the print file is already formatted for the destination and should be sent without filtering. This option is equivalent to &quot;-oraw&quot;.</p>
-<dt><code>Some</code>other<code>options</code>from<code>systemv`s</code>lp<code>and</code>berkeley`s<code>lpr</code>are<code>ignored</code></p>
-<dd> without error message</dl>
+</dt><dd>
+ If called as lpr, the following options differ from GtkLP`s options:</dd>
+<dt>-X</dt>
+<dd> Force X-Mode, even if GTKLP_FORCEX is not set to 1 <code>.TP</code>5 -C <i>jobname</i> Specify the jobname <code>.TP</code>5 -T <i>jobname</i> The same as -C. <code>.TP</code>5 -p Specifies that the print file should be formatted with a shaded header with the date, time, job name, and page number. This option is equivalent to &quot;-oprettyprint&quot; and is only useful when printing text files. <code>.TP</code>5 -l Specifies that the print file is already formatted for the destination and should be sent without filtering. This option is equivalent to &quot;-oraw&quot;.</dd>
+<dt><code>Some</code>other<code>options</code>from<code>systemv`s</code>lp<code>and</code>berkeley`s<code>lpr</code>are<code>ignored</code></dt>
+<dd> without error message</dd></dl>
 <h2>PATHS</h2>
 <p> <code>GtkLP</code> looks for config-files under<br />
  <i>&lt;configdir&gt;</i><br />
@@ -119,29 +119,29 @@ description: "gtklp – print files via CUPS"
 <h2>VARIABLES</h2>
 <p> You can set the following environment variables to influence the behaviour of GtkLP:</p>
 <dl>
-<dt>CUPS_SERVER</p>
+<dt>CUPS_SERVER</dt>
 <dd>
- The default CUPS-server to connect to</p>
-<dt>IPP_PORT</p>
+ The default CUPS-server to connect to</dd>
+<dt>IPP_PORT</dt>
 <dd>
- The default Port of the CUPS-server to connect to</p>
-<dt>PRINTER</p>
+ The default Port of the CUPS-server to connect to</dd>
+<dt>PRINTER</dt>
 <dd>
- The default printer to use</p>
-<dt>GTKLP_FORCEX</p>
+ The default printer to use</dd>
+<dt>GTKLP_FORCEX</dt>
 <dd>
- Set to 1 to force X-Mode for lpr and lp</dl>
+ Set to 1 to force X-Mode for lpr and lp</dd></dl>
 <h2>ERROR</h2>
 <p> GtkLP produces the following Error-Codes:</p>
 <dl>
-<dt>0</p>
-<dd> normal program termination </p>
-<dt>1</p>
-<dd> small error, wrong parameters, etc. </p>
-<dt>2</p>
-<dd> Server Problems, server not found, no default printer found, etc. </p>
-<dt>3</p>
-<dd> BAD error. Fields declared too short, too many printers, etc.</dl>
+<dt>0</dt>
+<dd> normal program termination </dd>
+<dt>1</dt>
+<dd> small error, wrong parameters, etc. </dd>
+<dt>2</dt>
+<dd> Server Problems, server not found, no default printer found, etc. </dd>
+<dt>3</dt>
+<dd> BAD error. Fields declared too short, too many printers, etc.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gtklpq/">gtklpq</a>(1), <a href="/docs/linux/man/1-lpr/">lpr</a>(1), CUPS Software Users Manual<br />
  <a rel="nofollow" href="http://localhost:631/documentation.html">http://localhost:631/documentation.html</a></p>

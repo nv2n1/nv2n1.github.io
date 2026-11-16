@@ -10,9 +10,6 @@ description: "QuantLib::FittedBondDiscountCurve – Discount curve fitted to a s
 <p>QuantLib::FittedBondDiscountCurve &#8211; <code>Discount</code> curve fitted to a set of fixed-coupon bonds. </p>
 <h2>Synopsis</h2>
 <pre><code>void update ()
-
-
-
 Friends</code></pre>
 <p> Inherits <code>QuantLib::YieldTermStructure</code>, and <code>QuantLib::LazyObject</code>.</p>
 <h3>Classes</h3>
@@ -25,9 +22,6 @@ Friends</code></pre>
  void update ()</p>
 <p>Friends <code>Observer interface</code> </p>
 <pre><code>void update ()
-
-
-
 Friends</code></pre>
 <p> class <code>FittingMethod</code></p>
 <h2>Detailed Description</h2>
@@ -37,16 +31,16 @@ Friends</code></pre>
 <p> <code> Example: </code> <code>compares various bond discount curve fitting methodologies </code> </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>The method can be slow if there are many bonds to fit. Speed also depends on the particular choice of fitting method chosen and its convergence properties under optimization. See also todo list for BondDiscountCurveFittingMethod.</dl>
+<dd>The method can be slow if there are many bonds to fit. Speed also depends on the particular choice of fitting method chosen and its convergence properties under optimization. See also todo list for BondDiscountCurveFittingMethod.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>refactor the bond helper class so that it is pure virtual and returns a generic bond or its cash flows. Derived classes would include helpers for fixed-rate and zero-coupon bonds. In this way, both bonds and bills can be used to fit a discount curve using the exact same machinery. At present, only fixed-coupon bonds are supported. An even better way to move forward might be to get rate helpers to return cashflows, in which case this class could be used to fit any set of cash flows, not just bonds.</dl>
+<dd>refactor the bond helper class so that it is pure virtual and returns a generic bond or its cash flows. Derived classes would include helpers for fixed-rate and zero-coupon bonds. In this way, both bonds and bills can be used to fit a discount curve using the exact same machinery. At present, only fixed-coupon bonds are supported. An even better way to move forward might be to get rate helpers to return cashflows, in which case this class could be used to fit any set of cash flows, not just bonds.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>add more fitting diagnostics: smoothness, standard deviation, student-t test, etc. Generic smoothness method may be useful for smoothing splines fitting. See Fisher, M., D. Nychka and D. Zervos: &#8216;Fitting the term structure of interest rates with smoothing splines.&#8217; Board of Governors of the Federal Reserve System, Federal Resere Board Working Paper, 95-1.</dl>
+<dd>add more fitting diagnostics: smoothness, standard deviation, student-t test, etc. Generic smoothness method may be useful for smoothing splines fitting. See Fisher, M., D. Nychka and D. Zervos: &#8216;Fitting the term structure of interest rates with smoothing splines.&#8217; Board of Governors of the Federal Reserve System, Federal Resere Board Working Paper, 95-1.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>add extrapolation routines</dl>
+<dd>add extrapolation routines</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>FittedBondCurve.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

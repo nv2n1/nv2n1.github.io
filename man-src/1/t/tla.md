@@ -27,273 +27,273 @@ description: "tla – arch command line client tool"
 <h2>COMMAND OVERVIEW</h2>
 <h3>Help</h3>
 <dl>
-<dt><code>tla help [options]</code></p>
-<dd> provide help with arch </p>
+<dt><code>tla help [options]</code></dt>
+<dd> provide help with arch </dd>
 </dl>
 <h3>User Commands</h3>
 <dl>
-<dt><code>tla my-id [options] [id]</code></p>
-<dd> print or change your id </p>
-<dt><code>tla my-default-archive [options] [archive]</code></p>
-<dd> print or change your default archive </p>
-<dt><code>tla register-archive [options] [archive] location</code></p>
-<dd> change an archive location registration </p>
-<dt><code>tla archive-register [options] [archive] location</code></p>
-<dd> change an archive location registration </p>
-<dt><code>tla whereis-archive [options] archive</code></p>
-<dd> print an archive location registration </p>
-<dt><code>tla archives [options] [search regular expression]</code></p>
-<dd> report registered archives and their locations </p>
+<dt><code>tla my-id [options] [id]</code></dt>
+<dd> print or change your id </dd>
+<dt><code>tla my-default-archive [options] [archive]</code></dt>
+<dd> print or change your default archive </dd>
+<dt><code>tla register-archive [options] [archive] location</code></dt>
+<dd> change an archive location registration </dd>
+<dt><code>tla archive-register [options] [archive] location</code></dt>
+<dd> change an archive location registration </dd>
+<dt><code>tla whereis-archive [options] archive</code></dt>
+<dd> print an archive location registration </dd>
+<dt><code>tla archives [options] [search regular expression]</code></dt>
+<dd> report registered archives and their locations </dd>
 </dl>
 <h3>Project Tree Commands</h3>
 <dl>
-<dt><code>tla init-tree [options] [[archive]/version]</code></p>
-<dd> initialize a new project tree </p>
-<dt><code>tla tree-root [options] [dir]</code></p>
-<dd> find and print the root of a project tree </p>
-<dt><code>tla tree-version [options] [dir]</code></p>
-<dd> print the default version for a project tree </p>
-<dt><code>tla tree-id [options] [dir]</code></p>
-<dd> Print the tree identifier for a project tree </p>
-<dt><code>tla tree-revision [options] [dir]</code></p>
-<dd> Print the tree identifier for a project tree </p>
-<dt><code>tla set-tree-version [options] [archive]/version</code></p>
-<dd> set the default version for a project tree </p>
-<dt><code>tla undo [options] [revision] [&#8211; file &#8230;]</code></p>
-<dd> undo and save changes in a project tree </p>
-<dt><code>tla redo [options] [changeset]</code></p>
-<dd> redo changes in project tree </p>
-<dt><code>tla changes [options] [revision] [&#8211; limit&#8230;]</code></p>
-<dd> report about local changes in a project tree </p>
-<dt><code>tla file-diff [options] file [revision]</code></p>
-<dd> show local changes to a file </p>
-<dt><code>tla diff [options] [revision] [&#8211; files&#8230;]</code></p>
-<dd> report about local changes in a project tree </p>
-<dt><code>tla export [options] [revision] dir </code></p>
-<dd> export all or some of a tree revision </p>
+<dt><code>tla init-tree [options] [[archive]/version]</code></dt>
+<dd> initialize a new project tree </dd>
+<dt><code>tla tree-root [options] [dir]</code></dt>
+<dd> find and print the root of a project tree </dd>
+<dt><code>tla tree-version [options] [dir]</code></dt>
+<dd> print the default version for a project tree </dd>
+<dt><code>tla tree-id [options] [dir]</code></dt>
+<dd> Print the tree identifier for a project tree </dd>
+<dt><code>tla tree-revision [options] [dir]</code></dt>
+<dd> Print the tree identifier for a project tree </dd>
+<dt><code>tla set-tree-version [options] [archive]/version</code></dt>
+<dd> set the default version for a project tree </dd>
+<dt><code>tla undo [options] [revision] [&#8211; file &#8230;]</code></dt>
+<dd> undo and save changes in a project tree </dd>
+<dt><code>tla redo [options] [changeset]</code></dt>
+<dd> redo changes in project tree </dd>
+<dt><code>tla changes [options] [revision] [&#8211; limit&#8230;]</code></dt>
+<dd> report about local changes in a project tree </dd>
+<dt><code>tla file-diff [options] file [revision]</code></dt>
+<dd> show local changes to a file </dd>
+<dt><code>tla diff [options] [revision] [&#8211; files&#8230;]</code></dt>
+<dd> report about local changes in a project tree </dd>
+<dt><code>tla export [options] [revision] dir </code></dt>
+<dd> export all or some of a tree revision </dd>
 </dl>
 <h3>Project Tree Inventory Commands</h3>
 <dl>
-<dt><code>tla inventory [options] [&#8211;] [dir]*</code></p>
-<dd> inventory a source tree </p>
-<dt><code>tla tree-lint [options] [dir]</code></p>
-<dd> audit a source tree </p>
-<dt><code>tla lint [options] [dir]</code></p>
-<dd> audit a source tree </p>
-<dt><code>tla id [options] file &#8230;</code></p>
-<dd> report the inventory id for a file </p>
-<dt><code>tla id-tagging-method [options] [method]</code></p>
-<dd> print or change a project tree id tagging method </p>
-<dt><code>tla add [options] file &#8230;</code></p>
-<dd> add an explicit inventory id </p>
-<dt><code>tla add-id [options] file &#8230;</code></p>
-<dd> add an explicit inventory id </p>
-<dt><code>tla delete-id [options] file &#8230;</code></p>
-<dd> remove an explicit inventory id </p>
-<dt><code>tla move-id [options] from to</code></p>
-<dd> move an explicit inventory id </p>
-<dt><code>tla touch [options] file &#8230;</code></p>
-<dd> add an explicit inventory id, touching the file. </p>
-<dt><code>tla rm [options] file&#8230;</code></p>
-<dd> remove a file (or dir, or symlink) and its explicit inventory tag </p>
-<dt><code>tla mv [options] from to OR from1 from2 &#8230; dir</code></p>
-<dd> move a file (or dir, or symlink) and its explicit inventory tag </p>
-<dt><code>tla explicit-default [options] [TAG-PREFIX]</code></p>
-<dd> print or modify default ids </p>
-<dt><code>tla default-id [options] [TAG-PREFIX]</code></p>
-<dd> print or modify default ids </p>
-<dt><code>tla id-tagging-defaults [options]</code></p>
-<dd> print the default =tagging-method contents </p>
+<dt><code>tla inventory [options] [&#8211;] [dir]*</code></dt>
+<dd> inventory a source tree </dd>
+<dt><code>tla tree-lint [options] [dir]</code></dt>
+<dd> audit a source tree </dd>
+<dt><code>tla lint [options] [dir]</code></dt>
+<dd> audit a source tree </dd>
+<dt><code>tla id [options] file &#8230;</code></dt>
+<dd> report the inventory id for a file </dd>
+<dt><code>tla id-tagging-method [options] [method]</code></dt>
+<dd> print or change a project tree id tagging method </dd>
+<dt><code>tla add [options] file &#8230;</code></dt>
+<dd> add an explicit inventory id </dd>
+<dt><code>tla add-id [options] file &#8230;</code></dt>
+<dd> add an explicit inventory id </dd>
+<dt><code>tla delete-id [options] file &#8230;</code></dt>
+<dd> remove an explicit inventory id </dd>
+<dt><code>tla move-id [options] from to</code></dt>
+<dd> move an explicit inventory id </dd>
+<dt><code>tla touch [options] file &#8230;</code></dt>
+<dd> add an explicit inventory id, touching the file. </dd>
+<dt><code>tla rm [options] file&#8230;</code></dt>
+<dd> remove a file (or dir, or symlink) and its explicit inventory tag </dd>
+<dt><code>tla mv [options] from to OR from1 from2 &#8230; dir</code></dt>
+<dd> move a file (or dir, or symlink) and its explicit inventory tag </dd>
+<dt><code>tla explicit-default [options] [TAG-PREFIX]</code></dt>
+<dd> print or modify default ids </dd>
+<dt><code>tla default-id [options] [TAG-PREFIX]</code></dt>
+<dd> print or modify default ids </dd>
+<dt><code>tla id-tagging-defaults [options]</code></dt>
+<dd> print the default =tagging-method contents </dd>
 </dl>
 <h3>Patch Set Commands</h3>
 <dl>
-<dt><code>tla changeset [options] ORIG MOD DEST [files]</code></p>
-<dd> compute a whole-tree changeset </p>
-<dt><code>tla mkpatch [options] ORIG MOD DEST [files]</code></p>
-<dd> compute a whole-tree changeset </p>
-<dt><code>tla apply-changeset [options] CHANGESET [TARGET]</code></p>
-<dd> apply a whole-tree changeset </p>
-<dt><code>tla dopatch [options] CHANGESET [TARGET]</code></p>
-<dd> apply a whole-tree changeset </p>
-<dt><code>tla show-changeset [options] [dir]</code></p>
-<dd> generate a report from a changeset </p>
+<dt><code>tla changeset [options] ORIG MOD DEST [files]</code></dt>
+<dd> compute a whole-tree changeset </dd>
+<dt><code>tla mkpatch [options] ORIG MOD DEST [files]</code></dt>
+<dd> compute a whole-tree changeset </dd>
+<dt><code>tla apply-changeset [options] CHANGESET [TARGET]</code></dt>
+<dd> apply a whole-tree changeset </dd>
+<dt><code>tla dopatch [options] CHANGESET [TARGET]</code></dt>
+<dd> apply a whole-tree changeset </dd>
+<dt><code>tla show-changeset [options] [dir]</code></dt>
+<dd> generate a report from a changeset </dd>
 </dl>
 <h3>Archive Transaction Commands</h3>
 <dl>
-<dt><code>tla make-archive [options] name location</code></p>
-<dd> create a new archive directory </p>
-<dt><code>tla archive-create [options] name location</code></p>
-<dd> create a new archive directory </p>
-<dt><code>tla archive-setup [options] [version &#8230;]</code></p>
-<dd> create new categories, branches and versions </p>
-<dt><code>tla make-category [options] category</code></p>
-<dd> create a new archive category </p>
-<dt><code>tla make-branch [options] branch</code></p>
-<dd> create a new archive branch </p>
-<dt><code>tla make-version [options] version</code></p>
-<dd> create a new archive version </p>
-<dt><code>tla import [options] [[archive]/version]</code></p>
-<dd> archive a full-source base-0 revision </p>
-<dt><code>tla commit [options] [[archive]/version] [&#8211; file &#8230;]</code></p>
-<dd> archive a changeset-based revision </p>
-<dt><code>tla get [options] revision [dir]</code></p>
-<dd> construct a project tree for a revision </p>
-<dt><code>tla get-changeset [options] revision [dir]</code></p>
-<dd> retrieve a changeset from an archive </p>
-<dt><code>tla lock-revision [options] revision</code></p>
-<dd> lock (or unlock) an archive revision </p>
-<dt><code>tla archive-mirror [options] [from [to] [limit]]</code></p>
-<dd> update an archive mirror </p>
+<dt><code>tla make-archive [options] name location</code></dt>
+<dd> create a new archive directory </dd>
+<dt><code>tla archive-create [options] name location</code></dt>
+<dd> create a new archive directory </dd>
+<dt><code>tla archive-setup [options] [version &#8230;]</code></dt>
+<dd> create new categories, branches and versions </dd>
+<dt><code>tla make-category [options] category</code></dt>
+<dd> create a new archive category </dd>
+<dt><code>tla make-branch [options] branch</code></dt>
+<dd> create a new archive branch </dd>
+<dt><code>tla make-version [options] version</code></dt>
+<dd> create a new archive version </dd>
+<dt><code>tla import [options] [[archive]/version]</code></dt>
+<dd> archive a full-source base-0 revision </dd>
+<dt><code>tla commit [options] [[archive]/version] [&#8211; file &#8230;]</code></dt>
+<dd> archive a changeset-based revision </dd>
+<dt><code>tla get [options] revision [dir]</code></dt>
+<dd> construct a project tree for a revision </dd>
+<dt><code>tla get-changeset [options] revision [dir]</code></dt>
+<dd> retrieve a changeset from an archive </dd>
+<dt><code>tla lock-revision [options] revision</code></dt>
+<dd> lock (or unlock) an archive revision </dd>
+<dt><code>tla archive-mirror [options] [from [to] [limit]]</code></dt>
+<dd> update an archive mirror </dd>
 </dl>
 <h3>Archive Commands</h3>
 <dl>
-<dt><code>tla abrowse [options] [limit]</code></p>
-<dd> print an outline describing archive contents </p>
-<dt><code>tla rbrowse [options] [[ARCHIVE_NAME/]LIMIT_REGEX]</code></p>
-<dd> print an outline describing an archive&#8217;s contents </p>
-<dt><code>tla categories [options] [archive]</code></p>
-<dd> list the categories in an archive </p>
-<dt><code>tla branches [options] [category]</code></p>
-<dd> list the branches in an archive category </p>
-<dt><code>tla versions [options] [branch]</code></p>
-<dd> list the versions in an archive branch </p>
-<dt><code>tla revisions [options] [version]</code></p>
-<dd> list the revisions in an archive version </p>
-<dt><code>tla ancestry [options] [revision]</code></p>
-<dd> display the ancestory of a revision </p>
-<dt><code>tla ancestry-graph [options] [revision]</code></p>
-<dd> display the ancestory of a revision </p>
-<dt><code>tla cat-archive-log [options] revision</code></p>
-<dd> print the contents of an archived log entry </p>
-<dt><code>tla cacherev [options] [revision]</code></p>
-<dd> cache a full source tree in an archive </p>
-<dt><code>tla cachedrevs [options] [version]</code></p>
-<dd> list cached revisions in an archive </p>
-<dt><code>tla uncacherev [options] revision [dir]</code></p>
-<dd> remove a cached full source tree from an archive </p>
-<dt><code>tla archive-meta-info [options] item-name</code></p>
-<dd> report meta-info from an archive </p>
-<dt><code>tla archive-snapshot [options] dir [limit]</code></p>
-<dd> update an archive snapshot </p>
-<dt><code>tla archive-version [options]</code></p>
-<dd> list the archive-version in an archive </p>
-<dt><code>tla archive-fixup [options]</code></p>
-<dd> fix ancillary files in an archive </p>
+<dt><code>tla abrowse [options] [limit]</code></dt>
+<dd> print an outline describing archive contents </dd>
+<dt><code>tla rbrowse [options] [[ARCHIVE_NAME/]LIMIT_REGEX]</code></dt>
+<dd> print an outline describing an archive&#8217;s contents </dd>
+<dt><code>tla categories [options] [archive]</code></dt>
+<dd> list the categories in an archive </dd>
+<dt><code>tla branches [options] [category]</code></dt>
+<dd> list the branches in an archive category </dd>
+<dt><code>tla versions [options] [branch]</code></dt>
+<dd> list the versions in an archive branch </dd>
+<dt><code>tla revisions [options] [version]</code></dt>
+<dd> list the revisions in an archive version </dd>
+<dt><code>tla ancestry [options] [revision]</code></dt>
+<dd> display the ancestory of a revision </dd>
+<dt><code>tla ancestry-graph [options] [revision]</code></dt>
+<dd> display the ancestory of a revision </dd>
+<dt><code>tla cat-archive-log [options] revision</code></dt>
+<dd> print the contents of an archived log entry </dd>
+<dt><code>tla cacherev [options] [revision]</code></dt>
+<dd> cache a full source tree in an archive </dd>
+<dt><code>tla cachedrevs [options] [version]</code></dt>
+<dd> list cached revisions in an archive </dd>
+<dt><code>tla uncacherev [options] revision [dir]</code></dt>
+<dd> remove a cached full source tree from an archive </dd>
+<dt><code>tla archive-meta-info [options] item-name</code></dt>
+<dd> report meta-info from an archive </dd>
+<dt><code>tla archive-snapshot [options] dir [limit]</code></dt>
+<dd> update an archive snapshot </dd>
+<dt><code>tla archive-version [options]</code></dt>
+<dd> list the archive-version in an archive </dd>
+<dt><code>tla archive-fixup [options]</code></dt>
+<dd> fix ancillary files in an archive </dd>
 </dl>
 <h3>Patch Log Commands</h3>
 <dl>
-<dt><code>tla make-log [options] [version]</code></p>
-<dd> initialize a new log file entry </p>
-<dt><code>tla log-versions [options]</code></p>
-<dd> list patch log versions in a project tree </p>
-<dt><code>tla add-log-version [options] [archive]/version</code></p>
-<dd> add a patch log version to a project tree </p>
-<dt><code>tla remove-log-version [options] [archive]/version</code></p>
-<dd> remove a version&#8217;s patch log from a project tree </p>
-<dt><code>tla logs [options] [[archive]/version &#8230;]</code></p>
-<dd> list patch logs for a version in a project tree </p>
-<dt><code>tla cat-log [options] revision-spec</code></p>
-<dd> print the contents of a project tree log entry </p>
-<dt><code>tla changelog [options] [[archive]/version]</code></p>
-<dd> generate a ChangeLog from a patch log </p>
-<dt><code>tla log-for-merge [options] [[archive]/version]</code></p>
-<dd> generate a log entry body for a merge </p>
-<dt><code>tla merges [options] INTO [FROM]</code></p>
-<dd> report where two branches have been merged </p>
-<dt><code>tla new-merges [options] [[archive]/version]</code></p>
-<dd> list tree patches new to a version </p>
+<dt><code>tla make-log [options] [version]</code></dt>
+<dd> initialize a new log file entry </dd>
+<dt><code>tla log-versions [options]</code></dt>
+<dd> list patch log versions in a project tree </dd>
+<dt><code>tla add-log-version [options] [archive]/version</code></dt>
+<dd> add a patch log version to a project tree </dd>
+<dt><code>tla remove-log-version [options] [archive]/version</code></dt>
+<dd> remove a version&#8217;s patch log from a project tree </dd>
+<dt><code>tla logs [options] [[archive]/version &#8230;]</code></dt>
+<dd> list patch logs for a version in a project tree </dd>
+<dt><code>tla cat-log [options] revision-spec</code></dt>
+<dd> print the contents of a project tree log entry </dd>
+<dt><code>tla changelog [options] [[archive]/version]</code></dt>
+<dd> generate a ChangeLog from a patch log </dd>
+<dt><code>tla log-for-merge [options] [[archive]/version]</code></dt>
+<dd> generate a log entry body for a merge </dd>
+<dt><code>tla merges [options] INTO [FROM]</code></dt>
+<dd> report where two branches have been merged </dd>
+<dt><code>tla new-merges [options] [[archive]/version]</code></dt>
+<dd> list tree patches new to a version </dd>
 </dl>
 <h3>Multi-project Configuration Commands</h3>
 <dl>
-<dt><code>tla build-config [options] config</code></p>
-<dd> instantiate a multi-project config </p>
-<dt><code>tla cat-config [options] config</code></p>
-<dd> output information about a multi-project config </p>
+<dt><code>tla build-config [options] config</code></dt>
+<dd> instantiate a multi-project config </dd>
+<dt><code>tla cat-config [options] config</code></dt>
+<dd> output information about a multi-project config </dd>
 </dl>
 <h3>Commands for Branching and Merging</h3>
 <dl>
-<dt><code>tla tag [options] SOURCE-REVISION TAG-VERSION</code></p>
-<dd> create a continuation revision </p>
-<dt><code>tla branch [options] [SOURCE] BRANCH</code></p>
-<dd> create a continuation revision </p>
-<dt><code>tla switch [options] [package]</code></p>
-<dd> change the working trees version </p>
-<dt><code>tla update [options] [version/revision]</code></p>
-<dd> update a project tree </p>
-<dt><code>tla replay [options] [version/revision&#8230;]</code></p>
-<dd> apply revision changesets to a project tree </p>
-<dt><code>tla star-merge [options] [FROM]</code></p>
-<dd> merge mutually merged branches </p>
-<dt><code>tla apply-delta [options] FROM(REVISION|DIR) TO(REVISION|DIR)</code></p>
-<dd> compute a changeset between any two trees or revisions and apply it to a project tree </p>
-<dt><code>tla missing [options] [version]</code></p>
-<dd> print patches missing from a project tree </p>
-<dt><code>tla join-branch [options] version</code></p>
-<dd> add a version as an ancestor of a project tree </p>
-<dt><code>tla sync-tree [options] revision</code></p>
-<dd> unify a project tree&#8217;s patch-log with a given revision </p>
-<dt><code>tla delta [options] (REVISION|TREE)-A (REVISION|TREE)-B [DESTDIR]</code></p>
-<dd> compute a changeset (or diff) between any two trees or revisions </p>
+<dt><code>tla tag [options] SOURCE-REVISION TAG-VERSION</code></dt>
+<dd> create a continuation revision </dd>
+<dt><code>tla branch [options] [SOURCE] BRANCH</code></dt>
+<dd> create a continuation revision </dd>
+<dt><code>tla switch [options] [package]</code></dt>
+<dd> change the working trees version </dd>
+<dt><code>tla update [options] [version/revision]</code></dt>
+<dd> update a project tree </dd>
+<dt><code>tla replay [options] [version/revision&#8230;]</code></dt>
+<dd> apply revision changesets to a project tree </dd>
+<dt><code>tla star-merge [options] [FROM]</code></dt>
+<dd> merge mutually merged branches </dd>
+<dt><code>tla apply-delta [options] FROM(REVISION|DIR) TO(REVISION|DIR)</code></dt>
+<dd> compute a changeset between any two trees or revisions and apply it to a project tree </dd>
+<dt><code>tla missing [options] [version]</code></dt>
+<dd> print patches missing from a project tree </dd>
+<dt><code>tla join-branch [options] version</code></dt>
+<dd> add a version as an ancestor of a project tree </dd>
+<dt><code>tla sync-tree [options] revision</code></dt>
+<dd> unify a project tree&#8217;s patch-log with a given revision </dd>
+<dt><code>tla delta [options] (REVISION|TREE)-A (REVISION|TREE)-B [DESTDIR]</code></dt>
+<dd> compute a changeset (or diff) between any two trees or revisions </dd>
 </dl>
 <h3>Local Cache Commands</h3>
 <dl>
-<dt><code>tla changes [options] [revision] [&#8211; limit&#8230;]</code></p>
-<dd> report about local changes in a project tree </p>
-<dt><code>tla file-diff [options] file [revision]</code></p>
-<dd> show local changes to a file </p>
-<dt><code>tla file-find [options] file [revision]</code></p>
-<dd> find given version of file </p>
-<dt><code>tla pristines [options] [limit]</code></p>
-<dd> list pristine trees in a project tree </p>
-<dt><code>tla lock-pristine [options] revision</code></p>
-<dd> lock (or unlock) a pristine tree </p>
-<dt><code>tla add-pristine [options] revision</code></p>
-<dd> ensure that a project tree has a particular pristine revision </p>
-<dt><code>tla find-pristine [options] revision</code></p>
-<dd> find and print the path to a pristine revision </p>
+<dt><code>tla changes [options] [revision] [&#8211; limit&#8230;]</code></dt>
+<dd> report about local changes in a project tree </dd>
+<dt><code>tla file-diff [options] file [revision]</code></dt>
+<dd> show local changes to a file </dd>
+<dt><code>tla file-find [options] file [revision]</code></dt>
+<dd> find given version of file </dd>
+<dt><code>tla pristines [options] [limit]</code></dt>
+<dd> list pristine trees in a project tree </dd>
+<dt><code>tla lock-pristine [options] revision</code></dt>
+<dd> lock (or unlock) a pristine tree </dd>
+<dt><code>tla add-pristine [options] revision</code></dt>
+<dd> ensure that a project tree has a particular pristine revision </dd>
+<dt><code>tla find-pristine [options] revision</code></dt>
+<dd> find and print the path to a pristine revision </dd>
 </dl>
 <h3>Revision Library Commands</h3>
 <dl>
-<dt><code>tla my-revision-library [options] [dir]</code></p>
-<dd> print or change your revision library path </p>
-<dt><code>tla library-dir [options] [dir]</code></p>
-<dd> print or change your revision library path </p>
-<dt><code>tla library-config [options] library-dir</code></p>
-<dd> configure parameters of a revision library </p>
-<dt><code>tla library-find [options] revision</code></p>
-<dd> find and print the location of a revision in the revision library </p>
-<dt><code>tla library-add [options] revision</code></p>
-<dd> add a revision to the revision library </p>
-<dt><code>tla library-remove [options] revision</code></p>
-<dd> remove a revision from the revision library </p>
-<dt><code>tla library-archives [options]</code></p>
-<dd> list the archives in your revision library </p>
-<dt><code>tla library-categories [options] [archive]</code></p>
-<dd> list the categories in your revision library </p>
-<dt><code>tla library-branches [options] [category]</code></p>
-<dd> list the branches in a library category </p>
-<dt><code>tla library-versions [options] [branch]</code></p>
-<dd> list the versions in a library branch </p>
-<dt><code>tla library-revisions [options] [version]</code></p>
-<dd> list the revisions in a library version </p>
-<dt><code>tla library-log [options] revision</code></p>
-<dd> output a log message from the revision library </p>
-<dt><code>tla library-file [options] file revision</code></p>
-<dd> find a file in a revision library </p>
+<dt><code>tla my-revision-library [options] [dir]</code></dt>
+<dd> print or change your revision library path </dd>
+<dt><code>tla library-dir [options] [dir]</code></dt>
+<dd> print or change your revision library path </dd>
+<dt><code>tla library-config [options] library-dir</code></dt>
+<dd> configure parameters of a revision library </dd>
+<dt><code>tla library-find [options] revision</code></dt>
+<dd> find and print the location of a revision in the revision library </dd>
+<dt><code>tla library-add [options] revision</code></dt>
+<dd> add a revision to the revision library </dd>
+<dt><code>tla library-remove [options] revision</code></dt>
+<dd> remove a revision from the revision library </dd>
+<dt><code>tla library-archives [options]</code></dt>
+<dd> list the archives in your revision library </dd>
+<dt><code>tla library-categories [options] [archive]</code></dt>
+<dd> list the categories in your revision library </dd>
+<dt><code>tla library-branches [options] [category]</code></dt>
+<dd> list the branches in a library category </dd>
+<dt><code>tla library-versions [options] [branch]</code></dt>
+<dd> list the versions in a library branch </dd>
+<dt><code>tla library-revisions [options] [version]</code></dt>
+<dd> list the revisions in a library version </dd>
+<dt><code>tla library-log [options] revision</code></dt>
+<dd> output a log message from the revision library </dd>
+<dt><code>tla library-file [options] file revision</code></dt>
+<dd> find a file in a revision library </dd>
 </dl>
 <h3>Published Revisions Commands</h3>
 <dl>
-<dt><code>tla grab [options] location</code></p>
-<dd> grab a published revision </p>
+<dt><code>tla grab [options] location</code></dt>
+<dd> grab a published revision </dd>
 </dl>
 <h3>Miscellaneous Scripting Support</h3>
 <dl>
-<dt><code>tla parse-package-name [options] name</code></p>
-<dd> parse a package name </p>
-<dt><code>tla valid-package-name [options] name</code></p>
-<dd> test a package name for validity </p>
-<dt><code>tla escape [&#8211;unescaped] string</code></p>
-<dd> print strings in escaped or unescaped form </p>
+<dt><code>tla parse-package-name [options] name</code></dt>
+<dd> parse a package name </dd>
+<dt><code>tla valid-package-name [options] name</code></dt>
+<dd> test a package name for validity </dd>
+<dt><code>tla escape [&#8211;unescaped] string</code></dt>
+<dd> print strings in escaped or unescaped form </dd>
 </dl>
 <h2>HELP</h2>
 <h3>tla help</h3>
@@ -1922,24 +1922,24 @@ description: "tla – arch command line client tool"
 <p> Using Pika escaping rules. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>EDITOR</i></p>
-<dd> If $<code>EDITOR</code> is set, use its value as the path of the text editor <code>arch</code> is to run when asking the user for text input. If unset, log messages must be given on the command line using the `-L&#8217; parameter or in the file created by `tla make-log&#8217;.</p>
-<dt><i>HOME</i></p>
-<dd> User&#8217;s home directory, where <code>arch</code> looks for <i>.arch-cache/</i> and <i>.arch-params/ .</i> </p>
-<dt><i>http_proxy HTTP_PROXY</i></p>
-<dd> If $<code>http_proxy</code> or $<code>HTTP_PROXY</code> is set, <code>arch</code> used its value as the URL of the proxy to use for WebDAV accesses. $<code>http_proxy</code> has higher priority than $<code>HTTP_PROXY</code>. If unset, no proxy is used.</p>
-<dt><i>TMPDIR</i></p>
-<dd> If $<code>TMPDIR</code> is set, <code>arch</code> creates temporary files in the given directory. Otherwise, it uses `/tmp&#8217;.</dl>
+<dt><i>EDITOR</i></dt>
+<dd> If $<code>EDITOR</code> is set, use its value as the path of the text editor <code>arch</code> is to run when asking the user for text input. If unset, log messages must be given on the command line using the `-L&#8217; parameter or in the file created by `tla make-log&#8217;.</dd>
+<dt><i>HOME</i></dt>
+<dd> User&#8217;s home directory, where <code>arch</code> looks for <i>.arch-cache/</i> and <i>.arch-params/ .</i> </dd>
+<dt><i>http_proxy HTTP_PROXY</i></dt>
+<dd> If $<code>http_proxy</code> or $<code>HTTP_PROXY</code> is set, <code>arch</code> used its value as the URL of the proxy to use for WebDAV accesses. $<code>http_proxy</code> has higher priority than $<code>HTTP_PROXY</code>. If unset, no proxy is used.</dd>
+<dt><i>TMPDIR</i></dt>
+<dd> If $<code>TMPDIR</code> is set, <code>arch</code> creates temporary files in the given directory. Otherwise, it uses `/tmp&#8217;.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>${HOME}/.arch-cache/</i></p>
-<dd> Directory where <code>arch</code> caches archive data</p>
-<dt><i>${HOME}/.arch-params/</i></p>
-<dd> Directory where all the user&#8217;s settings are stored.</p>
-<dt><i>${HOME}/.arch-params/hook</i></p>
-<dd> Hook script called after every execution of tla.</p>
-<dt><i>${HOME}/.arch-params/signing/</i></p>
-<dd> Directory where the commands for signing and checking signatures are stored.</dl>
+<dt><i>${HOME}/.arch-cache/</i></dt>
+<dd> Directory where <code>arch</code> caches archive data</dd>
+<dt><i>${HOME}/.arch-params/</i></dt>
+<dd> Directory where all the user&#8217;s settings are stored.</dd>
+<dt><i>${HOME}/.arch-params/hook</i></dt>
+<dd> Hook script called after every execution of tla.</dd>
+<dt><i>${HOME}/.arch-params/signing/</i></dt>
+<dd> Directory where the commands for signing and checking signatures are stored.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a rel="nofollow" href="http://gnuarch.org/,">http://gnuarch.org/,</a></code> <code><a rel="nofollow" href="http://wiki.gnuarch.org/">http://wiki.gnuarch.org/</a></code></p>
 <h2>Index</h2>

@@ -16,24 +16,24 @@ description: "wstool – wstool Documentation"
 <p> wstool allows manipulation of a set of version-controlled folders as specified in a workspace definition file.</p>
 <h3>Contents</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>wstool: A tool for managing source code workspaces</i></p>
-<dt>&bull;</p>
-<dd> <i>Usage</i></p>
-<dt>&bull;</p>
-<dd> <i>init</i></p>
-<dt>&bull;</p>
-<dd> <i>set</i></p>
-<dt>&bull;</p>
-<dd> <i>merge</i></p>
-<dt>&bull;</p>
-<dd> <i>update</i></p>
-<dt>&bull;</p>
-<dd> <i>info</i></p>
-<dt>&bull;</p>
-<dd> <i>status</i></p>
-<dt>&bull;</p>
-<dd> <i>diff</i></dl>
+<dt>&bull;</dt>
+<dd> <i>wstool: A tool for managing source code workspaces</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Usage</i></dd>
+<dt>&bull;</dt>
+<dd> <i>init</i></dd>
+<dt>&bull;</dt>
+<dd> <i>set</i></dd>
+<dt>&bull;</dt>
+<dd> <i>merge</i></dd>
+<dt>&bull;</dt>
+<dd> <i>update</i></dd>
+<dt>&bull;</dt>
+<dd> <i>info</i></dd>
+<dt>&bull;</dt>
+<dd> <i>status</i></dd>
+<dt>&bull;</dt>
+<dd> <i>diff</i></dd></dl>
 <h3>Usage</h3>
 <pre><code>
 wstool is a command to manipulate multiple version controlled folders.
@@ -60,10 +60,10 @@ print a diff over some SCM controlled entries
 <p> set up a directory as workspace </p>
 <p> wstool init does the following:</p>
 <dl>
-<dt>1.</p>
-<dd> Reads folder/file/web-uri SOURCE_PATH looking for a rosinstall yaml</p>
-<dt>2.</p>
-<dd> Creates new .rosinstall file at TARGET-PATH configured </p>
+<dt>1.</dt>
+<dd> Reads folder/file/web-uri SOURCE_PATH looking for a rosinstall yaml</dd>
+<dt>2.</dt>
+<dd> Creates new .rosinstall file at TARGET-PATH configured </dd>
 <p> SOURCE_PATH can e.g. be a folder like /opt/ros/electric If PATH is not given, uses current folder. </p>
 <p>Usage : wstool init[TARGET_PATH[SOURCE_PATH]] ? Options::<br />
                                                         &#8211; h,<br />
@@ -149,8 +149,8 @@ $ wstool update robot_model geometry
 <h3>info</h3>
 <p> Overview of some entries</p>
 <dl>
-<dt><code>The Status (S) column shows</code></p>
-<dd> x for missing L for uncommited (local) changes V for difference in version and/or remote URI C for difference in local and remote versions </p>
+<dt><code>The Status (S) column shows</code></dt>
+<dd> x for missing L for uncommited (local) changes V for difference in version and/or remote URI C for difference in local and remote versions </dd>
 <p> The &#8216;Version-Spec&#8217; column shows what tag, branch or revision was given in the .rosinstall file. The &#8216;UID&#8217; column shows the unique ID of the current (and specified) version. The &#8216;URI&#8217; column shows the configured URL of the repo. </p>
 <p> If status is V, the difference between what was specified and what is real is shown in the respective column. For SVN entries, the url is split up according to standard layout (trunk/tags/branches). The ROS_PACKAGE_PATH follows the order of the table, earlier entries overlay later entries. </p>
 <p> When given one localname, just show the data of one element in list form. This also has the generic properties element which is usually empty. </p>
@@ -229,92 +229,92 @@ easy_install -U wstool vcstools
 </code></pre>
 <p> Things to note are:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>version</code> is optional though recommended.</p>
-<dt>&bull;</p>
-<dd> Absolute or relative paths are valid for <code>local-name</code></p>
-<dt>&bull;</p>
-<dd> <code>uri</code> can be a local file path to a repository.</dl>
+<dt>&bull;</dt>
+<dd> <code>version</code> is optional though recommended.</dd>
+<dt>&bull;</dt>
+<dd> Absolute or relative paths are valid for <code>local-name</code></dd>
+<dt>&bull;</dt>
+<dd> <code>uri</code> can be a local file path to a repository.</dd></dl>
 <h2>DEVELOPER&#8217;S GUIDE</h2>
 <h3>Changelog</h3>
 <h3>0.1.12</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix command line arguments of <code>wstool scrape</code>.</dl>
+<dt>&bull;</dt>
+<dd> Fix command line arguments of <code>wstool scrape</code>.</dd></dl>
 <h3>0.1.11</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Changed the way <code>.bak</code> files are created when overwriting existing configurations.</p>
-<dt>&bull;</p>
-<dd> Added the Scrape command.</p>
-<dt>&bull;</p>
-<dd> Added default git branch and status to <code>wstool fetch &#8211;info</code>.</p>
-<dt>&bull;</p>
-<dd> Added versioned dependency on vcstools <code>0.1.38</code> to make use of new API features.</dl>
+<dt>&bull;</dt>
+<dd> Changed the way <code>.bak</code> files are created when overwriting existing configurations.</dd>
+<dt>&bull;</dt>
+<dd> Added the Scrape command.</dd>
+<dt>&bull;</dt>
+<dd> Added default git branch and status to <code>wstool fetch &#8211;info</code>.</dd>
+<dt>&bull;</dt>
+<dd> Added versioned dependency on vcstools <code>0.1.38</code> to make use of new API features.</dd></dl>
 <h3>0.1.10</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix regression which broke the -j option.</p>
-<dt>&bull;</p>
-<dd> Enable pretty printing of the <code>.rosinstall</code> file&#8217;s YAML.</dl>
+<dt>&bull;</dt>
+<dd> Fix regression which broke the -j option.</dd>
+<dt>&bull;</dt>
+<dd> Enable pretty printing of the <code>.rosinstall</code> file&#8217;s YAML.</dd></dl>
 <h3>0.1.9</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix for zsh completion.</p>
-<dt>&bull;</p>
-<dd> Fixed version dependency on vcstools for debian.</dl>
+<dt>&bull;</dt>
+<dd> Fix for zsh completion.</dd>
+<dt>&bull;</dt>
+<dd> Fixed version dependency on vcstools for debian.</dd></dl>
 <h3>0.1.8</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix for installation issue.</dl>
+<dt>&bull;</dt>
+<dd> Fix for installation issue.</dd></dl>
 <h3>0.1.7</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Added installation of generated man pages.</p>
-<dt>&bull;</p>
-<dd> Added installation of shell completion for wstool.</p>
-<dt>&bull;</p>
-<dd> Improved output of wstool info with the new get_current_version_label in vcstools.</p>
-<dt>&bull;</p>
-<dd> Added a foreach command.</p>
-<dt>&bull;</p>
-<dd> Added a <code>&#8211;root</code> option to wstool info.</p>
-<dt>&bull;</p>
-<dd> Enhanced the <code>&#8211;update</code> option for wstool set.</p>
-<dt>&bull;</p>
-<dd> Now uses multiple threads for network operations by default.</p>
-<dt>&bull;</p>
-<dd> Some other minor fixes and improvements and docs.</dl>
+<dt>&bull;</dt>
+<dd> Added installation of generated man pages.</dd>
+<dt>&bull;</dt>
+<dd> Added installation of shell completion for wstool.</dd>
+<dt>&bull;</dt>
+<dd> Improved output of wstool info with the new get_current_version_label in vcstools.</dd>
+<dt>&bull;</dt>
+<dd> Added a foreach command.</dd>
+<dt>&bull;</dt>
+<dd> Added a <code>&#8211;root</code> option to wstool info.</dd>
+<dt>&bull;</dt>
+<dd> Enhanced the <code>&#8211;update</code> option for wstool set.</dd>
+<dt>&bull;</dt>
+<dd> Now uses multiple threads for network operations by default.</dd>
+<dt>&bull;</dt>
+<dd> Some other minor fixes and improvements and docs.</dd></dl>
 <h3>0.1.5</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Releasing to allow changes for new platform vivid.</p>
-<dt>&bull;</p>
-<dd> Fix svn diff for change in output with svn 1.7.9.</p>
-<dt>&bull;</p>
-<dd> info command shows information about unmanaged paths.</dl>
+<dt>&bull;</dt>
+<dd> Releasing to allow changes for new platform vivid.</dd>
+<dt>&bull;</dt>
+<dd> Fix svn diff for change in output with svn 1.7.9.</dd>
+<dt>&bull;</dt>
+<dd> info command shows information about unmanaged paths.</dd></dl>
 <h3>0.1.4</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix detection of path conflicts #24 (<i><a rel="nofollow" href="https://github.com/vcstools/wstool/pull/24">https://github.com/vcstools/wstool/pull/24</a></i>).</dl>
+<dt>&bull;</dt>
+<dd> Fix detection of path conflicts #24 (<i><a rel="nofollow" href="https://github.com/vcstools/wstool/pull/24">https://github.com/vcstools/wstool/pull/24</a></i>).</dd></dl>
 <h3>0.0.3</h3>
 <dl>
-<dt>&bull;</p>
-<dd> not using ROS_WORKSPACE anymore</p>
-<dt>&bull;</p>
-<dd> fix to &quot;wstool cmd &#8211;help&quot;</dl>
+<dt>&bull;</dt>
+<dd> not using ROS_WORKSPACE anymore</dd>
+<dt>&bull;</dt>
+<dd> fix to &quot;wstool cmd &#8211;help&quot;</dd></dl>
 <h3>0.0.2</h3>
 <dl>
-<dt>&bull;</p>
-<dd> fix #2 creating &quot;wstool2 file instaed of &quot;.rosinstall&quot;</dl>
+<dt>&bull;</dt>
+<dd> fix #2 creating &quot;wstool2 file instaed of &quot;.rosinstall&quot;</dd></dl>
 <h3>0.0.1</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Initial creation based on functions inrosinstall</dl>
+<dt>&bull;</dt>
+<dd> Initial creation based on functions inrosinstall</dd></dl>
 <h3>Bug reports and feature requests</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Submit a bug report</i></dl>
+<dt>&bull;</dt>
+<dd> <i>Submit a bug report</i></dd></dl>
 <h3>Developer Setup</h3>
 <p> The wstool source can be downloaded using Mercurial: </p>
 <pre>
@@ -349,12 +349,12 @@ $ cd wstool/doc
 $ make html
 </pre>
 <dl>
-<dt>&bull;</p>
-<dd> <i>genindex</i></p>
-<dt>&bull;</p>
-<dd> <i>modindex</i></p>
-<dt>&bull;</p>
-<dd> <i>search</i></dl>
+<dt>&bull;</dt>
+<dd> <i>genindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>modindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>search</i></dd></dl>
 <h2>AUTHOR</h2>
 <p> Tully Foote, Thibault Kruse, Ken Conley, Brian Gerkey</p>
 <h2>COPYRIGHT</h2>

@@ -11,7 +11,6 @@ description: "sc::SCMatrixRectSubBlock –"
 <p> The <code>SCMatrixRectSubBlock</code> describes a rectangular piece of a matrix.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;block.h&gt;</code></pre>
 <p> Inherits <code>sc::SCMatrixBlock</code>.</p>
 <h3>Public Member Functions</h3>
@@ -24,25 +23,10 @@ description: "sc::SCMatrixRectSubBlock –"
 <p> void <code>process</code> (<code>SCElementOp3</code> *, <code>SCMatrixBlock</code> *, <code>SCMatrixBlock</code> *)</p>
 <h3>Public Attributes</h3>
 <pre><code>int istart
-
-
-
 int jstart
-
-
-
 int iend
-
-
-
 int jend
-
-
-
 int istride
-
-
-
 double * data</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>SCMatrixRectSubBlock</code> describes a rectangular piece of a matrix. </p>

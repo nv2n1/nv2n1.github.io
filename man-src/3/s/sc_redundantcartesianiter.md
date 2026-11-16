@@ -11,7 +11,6 @@ description: "sc::RedundantCartesianIter –"
 <p> <code>RedundantCartesianIter</code> objects loop through all possible combinations of a given number of axes.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;cartiter.h&gt;</code></pre>
 <p> Inherited by <code>sc::RedundantCartesianIterCCA</code>, <code>sc::RedundantCartesianIterCints</code>, and <code>sc::RedundantCartesianIterV3</code>.</p>
 <h3>Public Member Functions</h3>

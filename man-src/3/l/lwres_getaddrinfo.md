@@ -14,12 +14,12 @@ description: "lwres_getaddrinfo, lwres_freeaddrinfo – socket address structure
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
 <dl>
-<dt> <code>int lwres_getaddrinfo(const char&nbsp;<wbr>*</code><i>hostname</i><code>, const char&nbsp;<wbr>*</code><i>servname</i><code>, const struct addrinfo&nbsp;<wbr>*</code><i>hints</i><code>, struct addrinfo&nbsp;<wbr>**</code><i>res</i><code>);</code></p>
-<dt> <code>void lwres_freeaddrinfo(struct addrinfo&nbsp;<wbr>*</code><i>ai</i><code>);</code></dl>
-<dd>If the operating system does not provide a <code>struct addrinfo</code>, the following structure is used: </p>
+<dt> <code>int lwres_getaddrinfo(const char&nbsp;<wbr>*</code><i>hostname</i><code>, const char&nbsp;<wbr>*</code><i>servname</i><code>, const struct addrinfo&nbsp;<wbr>*</code><i>hints</i><code>, struct addrinfo&nbsp;<wbr>**</code><i>res</i><code>);</code></dt>
+<dt> <code>void lwres_freeaddrinfo(struct addrinfo&nbsp;<wbr>*</code><i>ai</i><code>);</code></dt></dl>
+<dd>If the operating system does not provide a <code>struct addrinfo</code>, the following structure is used: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct addrinfo {
     int ai_flags;             /* AI_PASSIVE, AI_CANONNAME */
@@ -32,26 +32,26 @@ struct addrinfo {
     struct addrinfo *ai_next; /* next structure in linked list */
 };
 </code></pre>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>lwres_getaddrinfo()</code> is used to get a list of IP addresses and port numbers for host <i>hostname</i> and service <i>servname</i>. The function is the lightweight resolver&#8217;s implementation of <code>getaddrinfo()</code> as defined in RFC2133. <i>hostname</i> and <i>servname</i> are pointers to null-terminated strings or <code>NULL</code>. <i>hostname</i> is either a host name or a numeric host address string: a dotted decimal IPv4 address or an IPv6 address. <i>servname</i> is either a decimal port number or a service name as listed in <i>/etc/services</i>. </p>
 <p> <i>hints</i> is an optional pointer to a <code>struct addrinfo</code>. This structure can be used to provide hints concerning the type of socket that the caller supports or wishes to use. The caller can supply the following structure elements in <i>*hints</i>: </p>
 <p> <code>ai_family</code></p>
 <dl>
 <dt>
-<dd> The protocol family that should be used. When <code>ai_family</code> is set to <code>PF_UNSPEC</code>, it means the caller will accept any protocol family supported by the operating system.</dl>
+</dt><dd> The protocol family that should be used. When <code>ai_family</code> is set to <code>PF_UNSPEC</code>, it means the caller will accept any protocol family supported by the operating system.</dd></dl>
 <p> <code>ai_socktype</code></p>
 <dl>
 <dt>
-<dd> denotes the type of socket &#8212; <code>SOCK_STREAM</code>, <code>SOCK_DGRAM</code> or <code>SOCK_RAW</code> &#8212; that is wanted. When <code>ai_socktype</code> is zero the caller will accept any socket type.</dl>
+</dt><dd> denotes the type of socket &#8212; <code>SOCK_STREAM</code>, <code>SOCK_DGRAM</code> or <code>SOCK_RAW</code> &#8212; that is wanted. When <code>ai_socktype</code> is zero the caller will accept any socket type.</dd></dl>
 <p> <code>ai_protocol</code></p>
 <dl>
 <dt>
-<dd> indicates which transport protocol is wanted: IPPROTO_UDP or IPPROTO_TCP. If <code>ai_protocol</code> is zero the caller will accept any protocol.</dl>
+</dt><dd> indicates which transport protocol is wanted: IPPROTO_UDP or IPPROTO_TCP. If <code>ai_protocol</code> is zero the caller will accept any protocol.</dd></dl>
 <p> <code>ai_flags</code></p>
 <dl>
 <dt>
-<dd> Flag bits. If the <code>AI_CANONNAME</code> bit is set, a successful call to <code>lwres_getaddrinfo()</code> will return a null-terminated string containing the canonical name of the specified hostname in <code>ai_canonname</code> of the first <code>addrinfo</code> structure returned. Setting the <code>AI_PASSIVE</code> bit indicates that the returned socket address structure is intended for used in a call to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2). In this case, if the hostname argument is a <code>NULL</code> pointer, then the IP address portion of the socket address structure will be set to <code>INADDR_ANY</code> for an IPv4 address or <code>IN6ADDR_ANY_INIT</code> for an IPv6 address. </p>
+</dt><dd> Flag bits. If the <code>AI_CANONNAME</code> bit is set, a successful call to <code>lwres_getaddrinfo()</code> will return a null-terminated string containing the canonical name of the specified hostname in <code>ai_canonname</code> of the first <code>addrinfo</code> structure returned. Setting the <code>AI_PASSIVE</code> bit indicates that the returned socket address structure is intended for used in a call to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2). In this case, if the hostname argument is a <code>NULL</code> pointer, then the IP address portion of the socket address structure will be set to <code>INADDR_ANY</code> for an IPv4 address or <code>IN6ADDR_ANY_INIT</code> for an IPv6 address. </dd>
 <p> When <code>ai_flags</code> does not set the <code>AI_PASSIVE</code> bit, the returned socket address structure will be ready for use in a call to <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) for a connection-oriented protocol or <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), or <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) if a connectionless protocol was chosen. The IP address portion of the socket address structure will be set to the loopback address if <i>hostname</i> is a <code>NULL</code> pointer and <code>AI_PASSIVE</code> is not set in <code>ai_flags</code>. </p>
 <p> If <code>ai_flags</code> is set to <code>AI_NUMERICHOST</code> it indicates that <i>hostname</i> should be treated as a numeric string defining an IPv4 or IPv6 address and no name resolution should be attempted.</dl>
 <p> All other elements of the <code>struct addrinfo</code> passed via <i>hints</i> must be zero. </p>
@@ -66,3 +66,4 @@ struct addrinfo {
 <p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
  Copyright &#169; 2000, 2001, 2003 Internet Software Consortium. </p>
 <h2>Index</h2>
+</p>

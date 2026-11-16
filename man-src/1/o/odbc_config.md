@@ -16,50 +16,50 @@ description: "odbc_config – get compile options for compiling unixODBC client"
 <h2>OPTIONS</h2>
 <p> <code></p>
 <dl>
-<dt>&#8211;prefix</p>
-<dd> </code> Prefix for architecture-independent file tree. </p>
+<dt>&#8211;prefix</dt>
+<dd> </code> Prefix for architecture-independent file tree. </dd>
 <p> <code></p>
-<dt>&#8211;exec-prefix</p>
-<dd> </code> Prefix for architecture-dependent file tree. </p>
+<dt>&#8211;exec-prefix</dt>
+<dd> </code> Prefix for architecture-dependent file tree. </dd>
 <p> <code></p>
-<dt>&#8211;include-prefix</p>
-<dd> </code> Directory with C header files for unixODBC. </p>
+<dt>&#8211;include-prefix</dt>
+<dd> </code> Directory with C header files for unixODBC. </dd>
 <p> <code></p>
-<dt>&#8211;lib-prefix</p>
-<dd> </code> Directory with object code (.so) libraries. </p>
+<dt>&#8211;lib-prefix</dt>
+<dd> </code> Directory with object code (.so) libraries. </dd>
 <p> <code></p>
-<dt>&#8211;bin-prefix</p>
-<dd> </code> Location of user executables. </p>
+<dt>&#8211;bin-prefix</dt>
+<dd> </code> Location of user executables. </dd>
 <p> <code></p>
-<dt>&#8211;version</p>
-<dd> </code> unixODBC version. </p>
+<dt>&#8211;version</dt>
+<dd> </code> unixODBC version. </dd>
 <p> <code></p>
-<dt>&#8211;libs</p>
-<dd> </code> Compiler flags for linking dynamic libraries. </p>
+<dt>&#8211;libs</dt>
+<dd> </code> Compiler flags for linking dynamic libraries. </dd>
 <p> <code></p>
-<dt>&#8211;static-libs</p>
-<dd> </code> Absolute file name of static unixODBC library. </p>
+<dt>&#8211;static-libs</dt>
+<dd> </code> Absolute file name of static unixODBC library. </dd>
 <p> <code></p>
-<dt>&#8211;libtool-libs</p>
-<dd> </code> Absolute file name of libtool unixODBC library. </p>
+<dt>&#8211;libtool-libs</dt>
+<dd> </code> Absolute file name of libtool unixODBC library. </dd>
 <p> <code></p>
-<dt>&#8211;cflags</p>
-<dd> </code> Compiler flags to find include files and critical compiler flags and defines used when compiling the libodbc library. </p>
+<dt>&#8211;cflags</dt>
+<dd> </code> Compiler flags to find include files and critical compiler flags and defines used when compiling the libodbc library. </dd>
 <p> <code></p>
-<dt>&#8211;odbcversion</p>
-<dd> </code> Version of the ODBC specification used by the unixODBC. </p>
+<dt>&#8211;odbcversion</dt>
+<dd> </code> Version of the ODBC specification used by the unixODBC. </dd>
 <p> <code></p>
-<dt>&#8211;odbcini</p>
-<dd> </code> Absolute file name of the system-wide DSN configuration file <i>odbc.ini</i>. </p>
+<dt>&#8211;odbcini</dt>
+<dd> </code> Absolute file name of the system-wide DSN configuration file <i>odbc.ini</i>. </dd>
 <p> <code></p>
-<dt>&#8211;odbcinstini</p>
-<dd> </code> Absolute file name of the driver configuration file <i>odbcinst.ini</i>. </p>
+<dt>&#8211;odbcinstini</dt>
+<dd> </code> Absolute file name of the driver configuration file <i>odbcinst.ini</i>. </dd>
 <p> <code></p>
-<dt>&#8211;header</p>
-<dd> </code> Definitions of used C preprocessor constants. It is suitable to be piped into C header file. </p>
+<dt>&#8211;header</dt>
+<dd> </code> Definitions of used C preprocessor constants. It is suitable to be piped into C header file. </dd>
 <p> <code></p>
-<dt>&#8211;ulen</p>
-<dd> </code> Compiler flag for defining <i>SIZEOF_SQLULEN</i>. </p>
+<dt>&#8211;ulen</dt>
+<dd> </code> Compiler flag for defining <i>SIZEOF_SQLULEN</i>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-odbcinst-ini/">odbcinst.ini</a></code>(5), <code><a href="/docs/linux/man/5-odbc-ini/">odbc.ini</a></code>(5) </p>

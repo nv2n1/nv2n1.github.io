@@ -11,15 +11,11 @@ std::experimental::simd_cast,std::experimental::static_simd_cast - std::experime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / simd&gt;
-
     template &lt;class V, class T, class Abi&gt;
     (1)
-
     /*see below*/ simd_cast(const simd&lt;T, Abi&gt; &amp;v);
-
 template &lt;class V, class T, class Abi&gt;
 (2)
-
     /*see below*/ static_simd_cast(const simd&lt;T, Abi&gt; &amp;v);</code></pre> 
 Cast a simd object to another simd object. If V is T, returns simd&lt;T, Abi&gt;; otherwise, if V is a scalar type, returns simd&lt;V, simd_abi::fixed_size&lt;simd&lt;T, Abi&gt;::size()&gt;&gt;. Otherwise, V must be a simd type, and the function returns V. 
 1) This function does not participate in overloading resolution unless 

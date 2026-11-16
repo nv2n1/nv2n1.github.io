@@ -11,14 +11,11 @@ std::atomic&lt;T&gt;::operator= - std::atomic&lt;T&gt;::operator=
 <h2>Synopsis</h2>
 
 <pre><code>T operator=(T desired) noexcept;
-
 T operator=(T desired) volatile noexcept;
 (1)(since C++ 11)(1)(since C++ 11)
-
     atomic &amp;
     operator=(const atomic &amp;) = delete;
 (2)(since C++ 11)
-
     atomic &amp;
     operator=(const atomic &amp;) volatile = delete;</code></pre> 
 1) Atomically assigns a value desired to the atomic variable. Equivalent to store(desired). 

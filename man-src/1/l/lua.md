@@ -20,16 +20,16 @@ description: "lua – Lua interpreter"
 <p> In interactive mode, <code>lua</code> prompts the user, reads lines from the standard input, and executes them as they are read. If a line does not contain a complete statement, then a secondary prompt is displayed and lines are read until a complete statement is formed or a syntax error is found. So, one way to interrupt the reading of an incomplete statement is to force a syntax error: adding a <code>&#8216;;&#8217; </code> in the middle of a statement is a sure way of forcing a syntax error (except inside multiline strings and comments; these must be closed explicitly). If a line starts with <code>&#8216;=&#8217;</code>, then <code>lua</code> displays the values of all the expressions in the remainder of the line. The expressions must be separated by commas. The primary prompt is the value of the global variable <code>_PROMPT</code>, if this value is a string; otherwise, the default prompt is used. Similarly, the secondary prompt is the value of the global variable <code>_PROMPT2</code>. So, to change the prompts, set the corresponding variable to a string of your choice. You can do that after calling the interpreter or on the command line (but in this case you have to be careful with quotes if the prompt string contains a space; otherwise you may confuse the shell.) The default prompts are &quot;&gt; &quot; and &quot;&gt;&gt; &quot;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> load and execute the standard input as a file, that is, not interactively, even when the standard input is a terminal.</p>
-<dt><code>-e</code><i> stat</i></p>
-<dd> execute statement <i>stat</i>. You need to quote <i>stat </i> if it contains spaces, quotes, or other characters special to the shell.</p>
-<dt><code>-i</code></p>
-<dd> enter interactive mode after <i>script</i> is executed.</p>
-<dt><code>-l</code><i> name</i></p>
-<dd> call <code>require(&#8216;</code><i>name</i><code>&#8216;)</code> before executing <i>script</i>. Typically used to load libraries.</p>
-<dt><code>-v</code></p>
-<dd> show version information.</dl>
+<dt><code>&#8211;</code></dt>
+<dd> load and execute the standard input as a file, that is, not interactively, even when the standard input is a terminal.</dd>
+<dt><code>-e</code><i> stat</i></dt>
+<dd> execute statement <i>stat</i>. You need to quote <i>stat </i> if it contains spaces, quotes, or other characters special to the shell.</dd>
+<dt><code>-i</code></dt>
+<dd> enter interactive mode after <i>script</i> is executed.</dd>
+<dt><code>-l</code><i> name</i></dt>
+<dd> call <code>require(&#8216;</code><i>name</i><code>&#8216;)</code> before executing <i>script</i>. Typically used to load libraries.</dd>
+<dt><code>-v</code></dt>
+<dd> show version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-luac/">luac</a></code>(1)<br />
  <a rel="nofollow" href="http://www.lua.org/">http://www.lua.org/</a></p>

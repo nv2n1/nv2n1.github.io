@@ -13,12 +13,12 @@ description: "hex2hcd – Broadcom Bluetooth firmware converter"
 <p> Broadcom Bluetooth firmware converter Usage:</p>
 <dl>
 <dt>
-<dd> hex2hcd [options] &lt;file&gt;</dl>
+</dt><dd> hex2hcd [options] &lt;file&gt;</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code>, <code>&#8211;output</code> &lt;file&gt;</p>
-<dd> Provide firmware output file</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options </p>
+<dt><code>-o</code>, <code>&#8211;output</code> &lt;file&gt;</dt>
+<dd> Provide firmware output file</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options </dd>
 </dl>
 <h2>Index</h2>

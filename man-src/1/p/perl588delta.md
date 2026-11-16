@@ -15,1124 +15,890 @@ description: "perl588delta – what is new for perl v5.8.8"
 <p> There are no changes intentionally incompatible with 5.8.7. If any exist, they are bugs and reports are welcome.</p>
 <h2>Core Enhancements</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;chdir&quot;</tt>, <tt>&quot;chmod&quot;</tt> and <tt>&quot;chown&quot;</tt> can now work on filehandles as well as filenames, if the system supports respectively <tt>&quot;fchdir&quot;</tt>, <tt>&quot;fchmod&quot;</tt> and <tt>&quot;fchown&quot;</tt>, thanks to a patch provided by Gisle Aas.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;chdir&quot;</tt>, <tt>&quot;chmod&quot;</tt> and <tt>&quot;chown&quot;</tt> can now work on filehandles as well as filenames, if the system supports respectively <tt>&quot;fchdir&quot;</tt>, <tt>&quot;fchmod&quot;</tt> and <tt>&quot;fchown&quot;</tt>, thanks to a patch provided by Gisle Aas.</dd></dl>
 <h2>Modules and Pragmata</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Attribute::Handlers&quot;</tt> upgraded to version 0.78_02</p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Attribute::Handlers&quot;</tt> upgraded to version 0.78_02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fix</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fix</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;attrs&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;attrs&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup only</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup only</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;autouse&quot;</tt> upgraded to version 1.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;autouse&quot;</tt> upgraded to version 1.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Simplified implementation</dl>
+<dt>&bull;</dt>
+<dd> Simplified implementation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;B&quot;</tt> upgraded to version 1.09_01</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B&quot;</tt> upgraded to version 1.09_01</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> The inheritance hierarchy of the <tt>&quot;B::&quot;</tt> modules has been corrected; <tt>&quot;B::NV&quot;</tt> now inherits from <tt>&quot;B::SV&quot;</tt> (instead of <tt>&quot;B::IV&quot;</tt>).</dl>
+<dt>&bull;</dt>
+<dd> The inheritance hierarchy of the <tt>&quot;B::&quot;</tt> modules has been corrected; <tt>&quot;B::NV&quot;</tt> now inherits from <tt>&quot;B::SV&quot;</tt> (instead of <tt>&quot;B::IV&quot;</tt>).</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;blib&quot;</tt> upgraded to version 1.03</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;blib&quot;</tt> upgraded to version 1.03</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fix</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fix</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;ByteLoader&quot;</tt> upgraded to version 0.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ByteLoader&quot;</tt> upgraded to version 0.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;CGI&quot;</tt> upgraded to version 3.15</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CGI&quot;</tt> upgraded to version 3.15</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Extraneous &#8220;?&#8221; from <tt>&quot;self_url()&quot;</tt> removed</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;scrolling_list()&quot;</tt> select attribute fixed</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;virtual_port&quot;</tt> now works properly with the https protocol</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;upload_hook()&quot;</tt> and <tt>&quot;append()&quot;</tt> now works in function-oriented mode</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;POST_MAX&quot;</tt> doesn&#8217;t cause the client to hang any more</p>
-<dt>&bull;</p>
-<dd> Automatic tab indexes are now disabled and new <tt>&quot;-tabindex&quot;</tt> pragma has been added to turn automatic indexes back on</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;end_form()&quot;</tt> doesn&#8217;t emit empty (and non-validating) <tt>&quot;&lt;div&gt;&quot;</tt></p>
-<dt>&bull;</p>
-<dd> <tt>&quot;CGI::Carp&quot;</tt> works better in certain mod_perl configurations</p>
-<dt>&bull;</p>
-<dd> Setting <tt>$CGI::TMPDIRECTORY</tt> is now effective</p>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Extraneous &#8220;?&#8221; from <tt>&quot;self_url()&quot;</tt> removed</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;scrolling_list()&quot;</tt> select attribute fixed</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;virtual_port&quot;</tt> now works properly with the https protocol</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;upload_hook()&quot;</tt> and <tt>&quot;append()&quot;</tt> now works in function-oriented mode</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POST_MAX&quot;</tt> doesn&#8217;t cause the client to hang any more</dd>
+<dt>&bull;</dt>
+<dd> Automatic tab indexes are now disabled and new <tt>&quot;-tabindex&quot;</tt> pragma has been added to turn automatic indexes back on</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;end_form()&quot;</tt> doesn&#8217;t emit empty (and non-validating) <tt>&quot;&lt;div&gt;&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CGI::Carp&quot;</tt> works better in certain mod_perl configurations</dd>
+<dt>&bull;</dt>
+<dd> Setting <tt>$CGI::TMPDIRECTORY</tt> is now effective</dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;charnames&quot;</tt> upgraded to version 1.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;charnames&quot;</tt> upgraded to version 1.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;viacode()&quot;</tt> now accept hex strings and has been optimized.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;viacode()&quot;</tt> now accept hex strings and has been optimized.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;CPAN&quot;</tt> upgraded to version 1.76_02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CPAN&quot;</tt> upgraded to version 1.76_02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> 1 minor bug fix for Win32</dl>
+<dt>&bull;</dt>
+<dd> 1 minor bug fix for Win32</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Cwd&quot;</tt> upgraded to version 3.12</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Cwd&quot;</tt> upgraded to version 3.12</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;canonpath()&quot;</tt> on Win32 now collapses <i>foo\..</i> sections correctly.</p>
-<dt>&bull;</p>
-<dd> Improved behaviour on Symbian <font SIZE="-1">OS.</font></p>
-<dt>&bull;</p>
-<dd> Enhanced documentation and typo fixes</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;canonpath()&quot;</tt> on Win32 now collapses <i>foo\..</i> sections correctly.</dd>
+<dt>&bull;</dt>
+<dd> Improved behaviour on Symbian <font SIZE="-1">OS.</font></dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation and typo fixes</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Data::Dumper&quot;</tt> upgraded to version 2.121_08</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Data::Dumper&quot;</tt> upgraded to version 2.121_08</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> A problem where <tt>&quot;Data::Dumper&quot;</tt> would sometimes update the iterator state of hashes has been fixed</p>
-<dt>&bull;</p>
-<dd> Numeric labels now work</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> A problem where <tt>&quot;Data::Dumper&quot;</tt> would sometimes update the iterator state of hashes has been fixed</dd>
+<dt>&bull;</dt>
+<dd> Numeric labels now work</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;DB&quot;</tt> upgraded to version 1.01</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DB&quot;</tt> upgraded to version 1.01</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> A problem where the state of the regexp engine would sometimes get clobbered when running under the debugger has been fixed.</dl>
+<dt>&bull;</dt>
+<dd> A problem where the state of the regexp engine would sometimes get clobbered when running under the debugger has been fixed.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;DB_File&quot;</tt> upgraded to version 1.814</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DB_File&quot;</tt> upgraded to version 1.814</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Adds support for Berkeley <font SIZE="-1">DB 4.4.</font></dl>
+<dt>&bull;</dt>
+<dd> Adds support for Berkeley <font SIZE="-1">DB 4.4.</font></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Devel::DProf&quot;</tt> upgraded to version 20050603.00</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Devel::DProf&quot;</tt> upgraded to version 20050603.00</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Devel::Peek&quot;</tt> upgraded to version 1.03</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Devel::Peek&quot;</tt> upgraded to version 1.03</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Devel::PPPort&quot;</tt> upgraded to version 3.06_01</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Devel::PPPort&quot;</tt> upgraded to version 3.06_01</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;--compat-version&quot;</tt> argument checking has been improved</p>
-<dt>&bull;</p>
-<dd> Files passed on the command line are filtered by default</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;--nofilter&quot;</tt> option to override the filtering has been added</p>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;--compat-version&quot;</tt> argument checking has been improved</dd>
+<dt>&bull;</dt>
+<dd> Files passed on the command line are filtered by default</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;--nofilter&quot;</tt> option to override the filtering has been added</dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;diagnostics&quot;</tt> upgraded to version 1.15</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;diagnostics&quot;</tt> upgraded to version 1.15</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fix</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fix</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Digest&quot;</tt> upgraded to version 1.14</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Digest&quot;</tt> upgraded to version 1.14</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> The constructor now knows which module implements <font SIZE="-1">SHA-224</font></p>
-<dt>&bull;</p>
-<dd> Documentation tweaks and typo fixes</dl>
+<dt>&bull;</dt>
+<dd> The constructor now knows which module implements <font SIZE="-1">SHA-224</font></dd>
+<dt>&bull;</dt>
+<dd> Documentation tweaks and typo fixes</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Digest::MD5&quot;</tt> upgraded to version 2.36</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Digest::MD5&quot;</tt> upgraded to version 2.36</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;XSLoader&quot;</tt> is now used for faster loading</p>
-<dt>&bull;</p>
-<dd> Enhanced documentation including <font SIZE="-1">MD5</font> weaknesses discovered lately</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;XSLoader&quot;</tt> is now used for faster loading</dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation including <font SIZE="-1">MD5</font> weaknesses discovered lately</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Dumpvalue&quot;</tt> upgraded to version 1.12</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Dumpvalue&quot;</tt> upgraded to version 1.12</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation fix</dl>
+<dt>&bull;</dt>
+<dd> Documentation fix</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;DynaLoader&quot;</tt> upgraded but unfortunately we&#8217;re not able to increment its version number :-(</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DynaLoader&quot;</tt> upgraded but unfortunately we&#8217;re not able to increment its version number :-(</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Implements <tt>&quot;dl_unload_file&quot;</tt> on Win32</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;XSLoader&quot;</tt> 0.06 incorporated; small optimisation for calling <tt>&quot;bootstrap_inherit()&quot;</tt> and documentation enhancements.</dl>
+<dt>&bull;</dt>
+<dd> Implements <tt>&quot;dl_unload_file&quot;</tt> on Win32</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;XSLoader&quot;</tt> 0.06 incorporated; small optimisation for calling <tt>&quot;bootstrap_inherit()&quot;</tt> and documentation enhancements.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Encode&quot;</tt> upgraded to version 2.12</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Encode&quot;</tt> upgraded to version 2.12</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> A coderef is now acceptable for <tt>&quot;CHECK&quot;</tt>!</p>
-<dt>&bull;</p>
-<dd> 3 new characters added to the <font SIZE="-1">ISO-8859-7</font> encoding</p>
-<dt>&bull;</p>
-<dd> New encoding <tt>&quot;MIME-Header-ISO_2022_JP&quot;</tt> added</p>
-<dt>&bull;</p>
-<dd> Problem with partial characters and <tt>&quot;encoding(utf-8-strict)&quot;</tt> fixed.</p>
-<dt>&bull;</p>
-<dd> Documentation enhancements and typo fixes</dl>
+<dt>&bull;</dt>
+<dd> A coderef is now acceptable for <tt>&quot;CHECK&quot;</tt>!</dd>
+<dt>&bull;</dt>
+<dd> 3 new characters added to the <font SIZE="-1">ISO-8859-7</font> encoding</dd>
+<dt>&bull;</dt>
+<dd> New encoding <tt>&quot;MIME-Header-ISO_2022_JP&quot;</tt> added</dd>
+<dt>&bull;</dt>
+<dd> Problem with partial characters and <tt>&quot;encoding(utf-8-strict)&quot;</tt> fixed.</dd>
+<dt>&bull;</dt>
+<dd> Documentation enhancements and typo fixes</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;English&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;English&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> the <tt>$COMPILING</tt> variable has been added</dl>
+<dt>&bull;</dt>
+<dd> the <tt>$COMPILING</tt> variable has been added</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Constant&quot;</tt> upgraded to version 0.17</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Constant&quot;</tt> upgraded to version 0.17</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Improved compatibility with older versions of perl</dl>
+<dt>&bull;</dt>
+<dd> Improved compatibility with older versions of perl</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::MakeMaker&quot;</tt> upgraded to version 6.30 (was 6.17)</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::MakeMaker&quot;</tt> upgraded to version 6.30 (was 6.17)</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Too much to list here; see &lt;<a rel="nofollow" href="http://search.cpan.org/dist/ExtUtils-MakeMaker/Changes">http://search.cpan.org/dist/ExtUtils-MakeMaker/Changes</a>&gt;</dl>
+<dt>&bull;</dt>
+<dd> Too much to list here; see &lt;<a rel="nofollow" href="http://search.cpan.org/dist/ExtUtils-MakeMaker/Changes">http://search.cpan.org/dist/ExtUtils-MakeMaker/Changes</a>&gt;</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Basename&quot;</tt> upgraded to version 2.74, with changes contributed by Michael Schwern.</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Basename&quot;</tt> upgraded to version 2.74, with changes contributed by Michael Schwern.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation clarified and errors corrected.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;basename&quot;</tt> now strips trailing path separators before processing the name.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;basename&quot;</tt> now returns <tt>&quot;/&quot;</tt> for parameter <tt>&quot;/&quot;</tt>, to make <tt>&quot;basename&quot;</tt> consistent with the shell utility of the same name.</p>
-<dt>&bull;</p>
-<dd> The suffix is no longer stripped if it is identical to the remaining characters in the name, again for consistency with the shell utility.</p>
-<dt>&bull;</p>
-<dd> Some internal code cleanup.</dl>
+<dt>&bull;</dt>
+<dd> Documentation clarified and errors corrected.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;basename&quot;</tt> now strips trailing path separators before processing the name.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;basename&quot;</tt> now returns <tt>&quot;/&quot;</tt> for parameter <tt>&quot;/&quot;</tt>, to make <tt>&quot;basename&quot;</tt> consistent with the shell utility of the same name.</dd>
+<dt>&bull;</dt>
+<dd> The suffix is no longer stripped if it is identical to the remaining characters in the name, again for consistency with the shell utility.</dd>
+<dt>&bull;</dt>
+<dd> Some internal code cleanup.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Copy&quot;</tt> upgraded to version 2.09</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Copy&quot;</tt> upgraded to version 2.09</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Copying a file onto itself used to fail.</p>
-<dt>&bull;</p>
-<dd> Moving a file between file systems now preserves the access and modification time stamps</dl>
+<dt>&bull;</dt>
+<dd> Copying a file onto itself used to fail.</dd>
+<dt>&bull;</dt>
+<dd> Moving a file between file systems now preserves the access and modification time stamps</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Find&quot;</tt> upgraded to version 1.10</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Find&quot;</tt> upgraded to version 1.10</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Win32 portability fixes</p>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Win32 portability fixes</dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Glob&quot;</tt> upgraded to version 1.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Glob&quot;</tt> upgraded to version 1.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Path&quot;</tt> upgraded to version 1.08</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Path&quot;</tt> upgraded to version 1.08</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;mkpath&quot;</tt> now preserves <tt>&quot;errno&quot;</tt> when <tt>&quot;mkdir&quot;</tt> fails</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;mkpath&quot;</tt> now preserves <tt>&quot;errno&quot;</tt> when <tt>&quot;mkdir&quot;</tt> fails</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Spec&quot;</tt> upgraded to version 3.12</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Spec&quot;</tt> upgraded to version 3.12</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Spec-&gt;rootdir()&quot;</tt> now returns <tt>&quot;\&quot;</tt> on Win32, instead of <tt>&quot;/&quot;</tt></p>
-<dt>&bull;</p>
-<dd> <tt>$^O</tt> could sometimes become tainted. This has been fixed.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;canonpath&quot;</tt> on Win32 now collapses <tt>&quot;foo/..&quot;</tt> (or <tt>&quot;foo\..&quot;</tt>) sections correctly, rather than doing the &#8220;misguided&#8221; work it was previously doing. Note that <tt>&quot;canonpath&quot;</tt> on Unix still does <code>not</code> collapse these sections, as doing so would be incorrect.</p>
-<dt>&bull;</p>
-<dd> Some documentation improvements</p>
-<dt>&bull;</p>
-<dd> Some internal code cleanup</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Spec-&gt;rootdir()&quot;</tt> now returns <tt>&quot;\&quot;</tt> on Win32, instead of <tt>&quot;/&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> <tt>$^O</tt> could sometimes become tainted. This has been fixed.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;canonpath&quot;</tt> on Win32 now collapses <tt>&quot;foo/..&quot;</tt> (or <tt>&quot;foo\..&quot;</tt>) sections correctly, rather than doing the &#8220;misguided&#8221; work it was previously doing. Note that <tt>&quot;canonpath&quot;</tt> on Unix still does <code>not</code> collapse these sections, as doing so would be incorrect.</dd>
+<dt>&bull;</dt>
+<dd> Some documentation improvements</dd>
+<dt>&bull;</dt>
+<dd> Some internal code cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;FileCache&quot;</tt> upgraded to version 1.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;FileCache&quot;</tt> upgraded to version 1.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">POD</font> formatting errors in the documentation fixed</dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">POD</font> formatting errors in the documentation fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Filter::Simple&quot;</tt> upgraded to version 0.82</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;FindBin&quot;</tt> upgraded to version 1.47</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Filter::Simple&quot;</tt> upgraded to version 0.82</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;FindBin&quot;</tt> upgraded to version 1.47</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Now works better with directories where access rights are more restrictive than usual.</dl>
+<dt>&bull;</dt>
+<dd> Now works better with directories where access rights are more restrictive than usual.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;GDBM_File&quot;</tt> upgraded to version 1.08</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;GDBM_File&quot;</tt> upgraded to version 1.08</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Getopt::Long&quot;</tt> upgraded to version 2.35</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Getopt::Long&quot;</tt> upgraded to version 2.35</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;prefix_pattern&quot;</tt> has now been complemented by a new configuration option <tt>&quot;long_prefix_pattern&quot;</tt> that allows the user to specify what prefix patterns should have long option style semantics applied.</p>
-<dt>&bull;</p>
-<dd> Options can now take multiple values at once (experimental)</p>
-<dt>&bull;</p>
-<dd> Various bug fixes</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;prefix_pattern&quot;</tt> has now been complemented by a new configuration option <tt>&quot;long_prefix_pattern&quot;</tt> that allows the user to specify what prefix patterns should have long option style semantics applied.</dd>
+<dt>&bull;</dt>
+<dd> Options can now take multiple values at once (experimental)</dd>
+<dt>&bull;</dt>
+<dd> Various bug fixes</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;if&quot;</tt> upgraded to version 0.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;if&quot;</tt> upgraded to version 0.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Give more meaningful error messages from <tt>&quot;if&quot;</tt> when invoked with a condition in list context.</p>
-<dt>&bull;</p>
-<dd> Restore backwards compatibility with earlier versions of perl</dl>
+<dt>&bull;</dt>
+<dd> Give more meaningful error messages from <tt>&quot;if&quot;</tt> when invoked with a condition in list context.</dd>
+<dt>&bull;</dt>
+<dd> Restore backwards compatibility with earlier versions of perl</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;IO&quot;</tt> upgraded to version 1.22</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IO&quot;</tt> upgraded to version 1.22</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Enhanced documentation</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;IPC::Open2&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IPC::Open2&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;IPC::Open3&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IPC::Open3&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;List::Util&quot;</tt> upgraded to version 1.18 (was 1.14)</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;List::Util&quot;</tt> upgraded to version 1.18 (was 1.14)</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Fix pure-perl version of <tt>&quot;refaddr&quot;</tt> to avoid blessing an un-blessed reference</p>
-<dt>&bull;</p>
-<dd> Use <tt>&quot;XSLoader&quot;</tt> for faster loading</p>
-<dt>&bull;</p>
-<dd> Fixed various memory leaks</p>
-<dt>&bull;</p>
-<dd> Internal cleanup and portability fixes</dl>
+<dt>&bull;</dt>
+<dd> Fix pure-perl version of <tt>&quot;refaddr&quot;</tt> to avoid blessing an un-blessed reference</dd>
+<dt>&bull;</dt>
+<dd> Use <tt>&quot;XSLoader&quot;</tt> for faster loading</dd>
+<dt>&bull;</dt>
+<dd> Fixed various memory leaks</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup and portability fixes</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::Complex&quot;</tt> upgraded to version 1.35</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::Complex&quot;</tt> upgraded to version 1.35</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;atan2(0, i)&quot;</tt> now works, as do all the (computable) complex argument cases</p>
-<dt>&bull;</p>
-<dd> Fixes for certain bugs in <tt>&quot;make&quot;</tt> and <tt>&quot;emake&quot;</tt></p>
-<dt>&bull;</p>
-<dd> Support returning the <i>k</i>th root directly</p>
-<dt>&bull;</p>
-<dd> Support <tt>&quot;[2,-3pi/8]&quot;</tt> in <tt>&quot;emake&quot;</tt></p>
-<dt>&bull;</p>
-<dd> Support <tt>&quot;inf&quot;</tt> for <tt>&quot;make&quot;</tt>/<tt>&quot;emake&quot;</tt></p>
-<dt>&bull;</p>
-<dd> Document <tt>&quot;make&quot;</tt>/<tt>&quot;emake&quot;</tt> more visibly</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;atan2(0, i)&quot;</tt> now works, as do all the (computable) complex argument cases</dd>
+<dt>&bull;</dt>
+<dd> Fixes for certain bugs in <tt>&quot;make&quot;</tt> and <tt>&quot;emake&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> Support returning the <i>k</i>th root directly</dd>
+<dt>&bull;</dt>
+<dd> Support <tt>&quot;[2,-3pi/8]&quot;</tt> in <tt>&quot;emake&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> Support <tt>&quot;inf&quot;</tt> for <tt>&quot;make&quot;</tt>/<tt>&quot;emake&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> Document <tt>&quot;make&quot;</tt>/<tt>&quot;emake&quot;</tt> more visibly</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::Trig&quot;</tt> upgraded to version 1.03</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::Trig&quot;</tt> upgraded to version 1.03</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Add more great circle routines: <tt>&quot;great_circle_waypoint&quot;</tt> and <tt>&quot;great_circle_destination&quot;</tt></dl>
+<dt>&bull;</dt>
+<dd> Add more great circle routines: <tt>&quot;great_circle_waypoint&quot;</tt> and <tt>&quot;great_circle_destination&quot;</tt></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;MIME::Base64&quot;</tt> upgraded to version 3.07</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;MIME::Base64&quot;</tt> upgraded to version 3.07</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Use <tt>&quot;XSLoader&quot;</tt> for faster loading</p>
-<dt>&bull;</p>
-<dd> Enhanced documentation</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Use <tt>&quot;XSLoader&quot;</tt> for faster loading</dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;NDBM_File&quot;</tt> upgraded to version 1.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;NDBM_File&quot;</tt> upgraded to version 1.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;ODBM_File&quot;</tt> upgraded to version 1.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ODBM_File&quot;</tt> upgraded to version 1.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fixed</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fixed</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Opcode&quot;</tt> upgraded to version 1.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Opcode&quot;</tt> upgraded to version 1.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Enhanced documentation</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;open&quot;</tt> upgraded to version 1.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;open&quot;</tt> upgraded to version 1.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;overload&quot;</tt> upgraded to version 1.04</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;overload&quot;</tt> upgraded to version 1.04</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO&quot;</tt> upgraded to version 1.04</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO&quot;</tt> upgraded to version 1.04</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO::via&quot;</tt> iterate over layers properly now</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO::scalar&quot;</tt> understands <tt>&quot;$/ = &quot;&quot;&quot;</tt> now</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;encoding(utf-8-strict)&quot;</tt> with partial characters now works</p>
-<dt>&bull;</p>
-<dd> Enhanced documentation</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO::via&quot;</tt> iterate over layers properly now</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO::scalar&quot;</tt> understands <tt>&quot;$/ = &quot;&quot;&quot;</tt> now</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;encoding(utf-8-strict)&quot;</tt> with partial characters now works</dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Pod::Functions&quot;</tt> upgraded to version 1.03</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Pod::Functions&quot;</tt> upgraded to version 1.03</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Pod::Html&quot;</tt> upgraded to version 1.0504</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Pod::Html&quot;</tt> upgraded to version 1.0504</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">HTML</font> output will now correctly link to <tt>&quot;=item&quot;</tt>s on the same page, and should be valid <font SIZE="-1">XHTML.</font></p>
-<dt>&bull;</p>
-<dd> Variable names are recognized as intended</p>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">HTML</font> output will now correctly link to <tt>&quot;=item&quot;</tt>s on the same page, and should be valid <font SIZE="-1">XHTML.</font></dd>
+<dt>&bull;</dt>
+<dd> Variable names are recognized as intended</dd>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Pod::Parser&quot;</tt> upgraded to version 1.32</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Pod::Parser&quot;</tt> upgraded to version 1.32</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Allow files that start with <tt>&quot;=head&quot;</tt> on the first line</p>
-<dt>&bull;</p>
-<dd> Win32 portability fix</p>
-<dt>&bull;</p>
-<dd> Exit status of <tt>&quot;pod2usage&quot;</tt> fixed</p>
-<dt>&bull;</p>
-<dd> New <tt>&quot;-noperldoc&quot;</tt> switch for <tt>&quot;pod2usage&quot;</tt></p>
-<dt>&bull;</p>
-<dd> Arbitrary <font SIZE="-1">URL</font> schemes now allowed</p>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</dl>
+<dt>&bull;</dt>
+<dd> Allow files that start with <tt>&quot;=head&quot;</tt> on the first line</dd>
+<dt>&bull;</dt>
+<dd> Win32 portability fix</dd>
+<dt>&bull;</dt>
+<dd> Exit status of <tt>&quot;pod2usage&quot;</tt> fixed</dd>
+<dt>&bull;</dt>
+<dd> New <tt>&quot;-noperldoc&quot;</tt> switch for <tt>&quot;pod2usage&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> Arbitrary <font SIZE="-1">URL</font> schemes now allowed</dd>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;POSIX&quot;</tt> upgraded to version 1.09</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POSIX&quot;</tt> upgraded to version 1.09</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;re&quot;</tt> upgraded to version 0.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;re&quot;</tt> upgraded to version 0.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Safe&quot;</tt> upgraded to version 2.12</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Safe&quot;</tt> upgraded to version 2.12</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Minor documentation enhancement</dl>
+<dt>&bull;</dt>
+<dd> Minor documentation enhancement</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;SDBM_File&quot;</tt> upgraded to version 1.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;SDBM_File&quot;</tt> upgraded to version 1.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fixed</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fixed</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Socket&quot;</tt> upgraded to version 1.78</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Socket&quot;</tt> upgraded to version 1.78</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Storable&quot;</tt> upgraded to version 2.15</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Storable&quot;</tt> upgraded to version 2.15</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> This includes the <tt>&quot;STORABLE_attach&quot;</tt> hook functionality added by Adam Kennedy, and more frugal memory requirements when storing under <tt>&quot;ithreads&quot;</tt>, by using the <tt>&quot;ithreads&quot;</tt> cloning tracking code.</dl>
+<dt>&bull;</dt>
+<dd> This includes the <tt>&quot;STORABLE_attach&quot;</tt> hook functionality added by Adam Kennedy, and more frugal memory requirements when storing under <tt>&quot;ithreads&quot;</tt>, by using the <tt>&quot;ithreads&quot;</tt> cloning tracking code.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Switch&quot;</tt> upgraded to version 2.10_01</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Switch&quot;</tt> upgraded to version 2.10_01</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Sys::Syslog&quot;</tt> upgraded to version 0.13</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Sys::Syslog&quot;</tt> upgraded to version 0.13</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Now provides numeric macros and meaningful <tt>&quot;Exporter&quot;</tt> tags.</p>
-<dt>&bull;</p>
-<dd> No longer uses <tt>&quot;Sys::Hostname&quot;</tt> as it may provide useless values in unconfigured network environments, so instead uses <tt>&quot;INADDR_LOOPBACK&quot;</tt> directly.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;syslog()&quot;</tt> now uses local timestamp.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;setlogmask()&quot;</tt> now behaves like its C counterpart.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;setlogsock()&quot;</tt> will now <tt>&quot;croak()&quot;</tt> as documented.</p>
-<dt>&bull;</p>
-<dd> Improved error and warnings messages.</p>
-<dt>&bull;</p>
-<dd> Improved documentation.</dl>
+<dt>&bull;</dt>
+<dd> Now provides numeric macros and meaningful <tt>&quot;Exporter&quot;</tt> tags.</dd>
+<dt>&bull;</dt>
+<dd> No longer uses <tt>&quot;Sys::Hostname&quot;</tt> as it may provide useless values in unconfigured network environments, so instead uses <tt>&quot;INADDR_LOOPBACK&quot;</tt> directly.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;syslog()&quot;</tt> now uses local timestamp.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;setlogmask()&quot;</tt> now behaves like its C counterpart.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;setlogsock()&quot;</tt> will now <tt>&quot;croak()&quot;</tt> as documented.</dd>
+<dt>&bull;</dt>
+<dd> Improved error and warnings messages.</dd>
+<dt>&bull;</dt>
+<dd> Improved documentation.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Term::ANSIColor&quot;</tt> upgraded to version 1.10</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Term::ANSIColor&quot;</tt> upgraded to version 1.10</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Fixes a bug in <tt>&quot;colored&quot;</tt> when <tt>$EACHLINE</tt> is set that caused it to not color lines consisting solely of 0 (literal zero).</p>
-<dt>&bull;</p>
-<dd> Improved tests.</dl>
+<dt>&bull;</dt>
+<dd> Fixes a bug in <tt>&quot;colored&quot;</tt> when <tt>$EACHLINE</tt> is set that caused it to not color lines consisting solely of 0 (literal zero).</dd>
+<dt>&bull;</dt>
+<dd> Improved tests.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Term::ReadLine&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Term::ReadLine&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation tweaks</dl>
+<dt>&bull;</dt>
+<dd> Documentation tweaks</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Test::Harness&quot;</tt> upgraded to version 2.56 (was 2.48)</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Test::Harness&quot;</tt> upgraded to version 2.56 (was 2.48)</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> The <tt>&quot;Test::Harness&quot;</tt> timer is now off by default.</p>
-<dt>&bull;</p>
-<dd> Now shows elapsed time in milliseconds.</p>
-<dt>&bull;</p>
-<dd> Various bug fixes</dl>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;Test::Harness&quot;</tt> timer is now off by default.</dd>
+<dt>&bull;</dt>
+<dd> Now shows elapsed time in milliseconds.</dd>
+<dt>&bull;</dt>
+<dd> Various bug fixes</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Test::Simple&quot;</tt> upgraded to version 0.62 (was 0.54)</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Test::Simple&quot;</tt> upgraded to version 0.62 (was 0.54)</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;is_deeply()&quot;</tt> no longer fails to work for many cases</p>
-<dt>&bull;</p>
-<dd> Various minor bug fixes</p>
-<dt>&bull;</p>
-<dd> Documentation enhancements</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;is_deeply()&quot;</tt> no longer fails to work for many cases</dd>
+<dt>&bull;</dt>
+<dd> Various minor bug fixes</dd>
+<dt>&bull;</dt>
+<dd> Documentation enhancements</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Text::Tabs&quot;</tt> upgraded to version 2005.0824</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Text::Tabs&quot;</tt> upgraded to version 2005.0824</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Provides a faster implementation of <tt>&quot;expand&quot;</tt></dl>
+<dt>&bull;</dt>
+<dd> Provides a faster implementation of <tt>&quot;expand&quot;</tt></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Text::Wrap&quot;</tt> upgraded to version 2005.082401</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Text::Wrap&quot;</tt> upgraded to version 2005.082401</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Adds <tt>$Text::Wrap::separator2</tt>, which allows you to preserve existing newlines but add line-breaks with some other string.</dl>
+<dt>&bull;</dt>
+<dd> Adds <tt>$Text::Wrap::separator2</tt>, which allows you to preserve existing newlines but add line-breaks with some other string.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;threads&quot;</tt> upgraded to version 1.07</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;threads&quot;</tt> upgraded to version 1.07</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;threads&quot;</tt> will now honour <tt>&quot;no warnings 'threads'&quot;</tt></p>
-<dt>&bull;</p>
-<dd> A thread&#8217;s interpreter is now freed after <tt>&quot;$t-&gt;join()&quot;</tt> rather than after <tt>&quot;undef $t&quot;</tt>, which should fix some <tt>&quot;ithreads&quot;</tt> memory leaks. (Fixed by Dave Mitchell)</p>
-<dt>&bull;</p>
-<dd> Some documentation typo fixes.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;threads&quot;</tt> will now honour <tt>&quot;no warnings 'threads'&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> A thread&#8217;s interpreter is now freed after <tt>&quot;$t-&gt;join()&quot;</tt> rather than after <tt>&quot;undef $t&quot;</tt>, which should fix some <tt>&quot;ithreads&quot;</tt> memory leaks. (Fixed by Dave Mitchell)</dd>
+<dt>&bull;</dt>
+<dd> Some documentation typo fixes.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;threads::shared&quot;</tt> upgraded to version 0.94</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;threads::shared&quot;</tt> upgraded to version 0.94</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation changes only</p>
-<dt>&bull;</p>
-<dd> Note: An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on <font SIZE="-1">CPAN</font> &#8211; this will be merged into 5.8.9 if it proves stable.</dl>
+<dt>&bull;</dt>
+<dd> Documentation changes only</dd>
+<dt>&bull;</dt>
+<dd> Note: An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on <font SIZE="-1">CPAN</font> &#8211; this will be merged into 5.8.9 if it proves stable.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::Hash&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::Hash&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Time::HiRes&quot;</tt> upgraded to version 1.86 (was 1.66)</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Time::HiRes&quot;</tt> upgraded to version 1.86 (was 1.66)</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;clock_nanosleep()&quot;</tt> and <tt>&quot;clock()&quot;</tt> functions added</p>
-<dt>&bull;</p>
-<dd> Support for the <font SIZE="-1">POSIX</font> <tt>&quot;clock_gettime()&quot;</tt> and <tt>&quot;clock_getres()&quot;</tt> has been added</p>
-<dt>&bull;</p>
-<dd> Return <tt>&quot;undef&quot;</tt> or an empty list if the C <tt>&quot;gettimeofday()&quot;</tt> function fails</p>
-<dt>&bull;</p>
-<dd> Improved <tt>&quot;nanosleep&quot;</tt> detection</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</p>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;clock_nanosleep()&quot;</tt> and <tt>&quot;clock()&quot;</tt> functions added</dd>
+<dt>&bull;</dt>
+<dd> Support for the <font SIZE="-1">POSIX</font> <tt>&quot;clock_gettime()&quot;</tt> and <tt>&quot;clock_getres()&quot;</tt> has been added</dd>
+<dt>&bull;</dt>
+<dd> Return <tt>&quot;undef&quot;</tt> or an empty list if the C <tt>&quot;gettimeofday()&quot;</tt> function fails</dd>
+<dt>&bull;</dt>
+<dd> Improved <tt>&quot;nanosleep&quot;</tt> detection</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Unicode::Collate&quot;</tt> upgraded to version 0.52</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Unicode::Collate&quot;</tt> upgraded to version 0.52</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Now implements <font SIZE="-1">UCA</font> Revision 14 (based on Unicode 4.1.0).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Unicode::Collate-&gt;new&quot;</tt> method no longer overwrites user&#8217;s <tt>$_</tt></p>
-<dt>&bull;</p>
-<dd> Enhanced documentation</dl>
+<dt>&bull;</dt>
+<dd> Now implements <font SIZE="-1">UCA</font> Revision 14 (based on Unicode 4.1.0).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Unicode::Collate-&gt;new&quot;</tt> method no longer overwrites user&#8217;s <tt>$_</tt></dd>
+<dt>&bull;</dt>
+<dd> Enhanced documentation</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Unicode::UCD&quot;</tt> upgraded to version 0.24</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Unicode::UCD&quot;</tt> upgraded to version 0.24</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;User::grent&quot;</tt> upgraded to version 1.01</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;User::grent&quot;</tt> upgraded to version 1.01</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typo fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typo fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;utf8&quot;</tt> upgraded to version 1.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;utf8&quot;</tt> upgraded to version 1.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;vmsish&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;vmsish&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation typos fixed</dl>
+<dt>&bull;</dt>
+<dd> Documentation typos fixed</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;warnings&quot;</tt> upgraded to version 1.05</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;warnings&quot;</tt> upgraded to version 1.05</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Gentler messing with <tt>&quot;Carp::&quot;</tt> internals</p>
-<dt>&bull;</p>
-<dd> Internal cleanup</p>
-<dt>&bull;</p>
-<dd> Documentation update</dl>
+<dt>&bull;</dt>
+<dd> Gentler messing with <tt>&quot;Carp::&quot;</tt> internals</dd>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd>
+<dt>&bull;</dt>
+<dd> Documentation update</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Win32&quot;</tt> upgraded to version 0.2601</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Win32&quot;</tt> upgraded to version 0.2601</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Provides Windows Vista support to <tt>&quot;Win32::GetOSName&quot;</tt></p>
-<dt>&bull;</p>
-<dd> Documentation enhancements</dl>
+<dt>&bull;</dt>
+<dd> Provides Windows Vista support to <tt>&quot;Win32::GetOSName&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> Documentation enhancements</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;XS::Typemap&quot;</tt> upgraded to version 0.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;XS::Typemap&quot;</tt> upgraded to version 0.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Internal cleanup</dl>
+<dt>&bull;</dt>
+<dd> Internal cleanup</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>Utility Changes</h2>
 <h3>h2xs enhancements</h3>
@@ -1145,12 +911,12 @@ description: "perl588delta – what is new for perl v5.8.8"
 <p> The perlglossary manpage is a glossary of terms used in the Perl documentation, technical and otherwise, kindly provided by O&#8217;Reilly Media, inc.</p>
 <h2>Performance Enhancements</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Weak reference creation is now <i>O(1)</i> rather than <i>O(n)</i>, courtesy of Nicholas Clark. Weak reference deletion remains <i>O(n)</i>, but if deletion only happens at program exit, it may be skipped completely.</p>
-<dt>&bull;</p>
-<dd> Salvador Fandiño provided improvements to reduce the memory usage of <tt>&quot;sort&quot;</tt> and to speed up some cases.</p>
-<dt>&bull;</p>
-<dd> Jarkko Hietaniemi and Andy Lester worked to mark as much data as possible in the C source files as <tt>&quot;static&quot;</tt>, to increase the proportion of the executable file that the operating system can share between process, and thus reduce real memory usage on multi-user systems.</dl>
+<dt>&bull;</dt>
+<dd> Weak reference creation is now <i>O(1)</i> rather than <i>O(n)</i>, courtesy of Nicholas Clark. Weak reference deletion remains <i>O(n)</i>, but if deletion only happens at program exit, it may be skipped completely.</dd>
+<dt>&bull;</dt>
+<dd> Salvador Fandiño provided improvements to reduce the memory usage of <tt>&quot;sort&quot;</tt> and to speed up some cases.</dd>
+<dt>&bull;</dt>
+<dd> Jarkko Hietaniemi and Andy Lester worked to mark as much data as possible in the C source files as <tt>&quot;static&quot;</tt>, to increase the proportion of the executable file that the operating system can share between process, and thus reduce real memory usage on multi-user systems.</dd></dl>
 <h2>Installation and Configuration Improvements</h2>
 <p> Parallel makes should work properly now, although there may still be problems if <tt>&quot;make test&quot;</tt> is instructed to run in parallel. </p>
 <p> Building with Borland&#8217;s compilers on Win32 should work more smoothly. In particular Steve Hay has worked to side step many warnings emitted by their compilers and at least one C compiler internal error. </p>
@@ -1170,30 +936,30 @@ description: "perl588delta – what is new for perl v5.8.8"
 <p> It had been reported that running under perl&#8217;s debugger when processing Unicode data could cause unexpectedly large slowdowns. The most likely cause of this was identified and fixed by Nicholas Clark.</p>
 <h3>Smaller fixes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;FindBin&quot;</tt> now works better with directories where access rights are more restrictive than usual.</p>
-<dt>&bull;</p>
-<dd> Several memory leaks in ithreads were closed. An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on <font SIZE="-1">CPAN</font> &#8211; this will be merged into 5.8.9 if it proves stable.</p>
-<dt>&bull;</p>
-<dd> Trailing spaces are now trimmed from <tt>$!</tt> and <tt>$^E</tt>.</p>
-<dt>&bull;</p>
-<dd> Operations that require perl to read a process&#8217;s list of groups, such as reads of <tt>$(</tt> and <tt>$)</tt>, now dynamically allocate memory rather than using a fixed sized array. The fixed size array could cause C stack exhaustion on systems configured to use large numbers of groups.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO::scalar&quot;</tt> now works better with non-default <tt>$/</tt> settings.</p>
-<dt>&bull;</p>
-<dd> You can now use the <tt>&quot;x&quot;</tt> operator to repeat a <tt>&quot;qw//&quot;</tt> list. This used to raise a syntax error.</p>
-<dt>&bull;</p>
-<dd> The debugger now traces correctly execution in eval(&quot;&quot;)uated code that contains #line directives.</p>
-<dt>&bull;</p>
-<dd> The value of the <tt>&quot;open&quot;</tt> pragma is no longer ignored for three-argument opens.</p>
-<dt>&bull;</p>
-<dd> The optimisation of <tt>&quot;for (reverse @a)&quot;</tt> introduced in perl 5.8.6 could misbehave when the array had undefined elements and was used in <font SIZE="-1">LVALUE</font> context. Dave Mitchell provided a fix.</p>
-<dt>&bull;</p>
-<dd> Some case insensitive matches between <font SIZE="-1">UTF-8</font> encoded data and 8 bit regexps, and vice versa, could give malformed character warnings. These have been fixed by Dave Mitchell and Yves Orton.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;lcfirst&quot;</tt> and <tt>&quot;ucfirst&quot;</tt> could corrupt the string for certain cases where the length <font SIZE="-1">UTF-8</font> encoding of the string in lower case, upper case or title case differed. This was fixed by Nicholas Clark.</p>
-<dt>&bull;</p>
-<dd> Perl will now use the C library calls <tt>&quot;unsetenv&quot;</tt> and <tt>&quot;clearenv&quot;</tt> if present to delete keys from <tt>%ENV</tt> and delete <tt>%ENV</tt> entirely, thanks to a patch from Alan Burlison.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;FindBin&quot;</tt> now works better with directories where access rights are more restrictive than usual.</dd>
+<dt>&bull;</dt>
+<dd> Several memory leaks in ithreads were closed. An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on <font SIZE="-1">CPAN</font> &#8211; this will be merged into 5.8.9 if it proves stable.</dd>
+<dt>&bull;</dt>
+<dd> Trailing spaces are now trimmed from <tt>$!</tt> and <tt>$^E</tt>.</dd>
+<dt>&bull;</dt>
+<dd> Operations that require perl to read a process&#8217;s list of groups, such as reads of <tt>$(</tt> and <tt>$)</tt>, now dynamically allocate memory rather than using a fixed sized array. The fixed size array could cause C stack exhaustion on systems configured to use large numbers of groups.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO::scalar&quot;</tt> now works better with non-default <tt>$/</tt> settings.</dd>
+<dt>&bull;</dt>
+<dd> You can now use the <tt>&quot;x&quot;</tt> operator to repeat a <tt>&quot;qw//&quot;</tt> list. This used to raise a syntax error.</dd>
+<dt>&bull;</dt>
+<dd> The debugger now traces correctly execution in eval(&quot;&quot;)uated code that contains #line directives.</dd>
+<dt>&bull;</dt>
+<dd> The value of the <tt>&quot;open&quot;</tt> pragma is no longer ignored for three-argument opens.</dd>
+<dt>&bull;</dt>
+<dd> The optimisation of <tt>&quot;for (reverse @a)&quot;</tt> introduced in perl 5.8.6 could misbehave when the array had undefined elements and was used in <font SIZE="-1">LVALUE</font> context. Dave Mitchell provided a fix.</dd>
+<dt>&bull;</dt>
+<dd> Some case insensitive matches between <font SIZE="-1">UTF-8</font> encoded data and 8 bit regexps, and vice versa, could give malformed character warnings. These have been fixed by Dave Mitchell and Yves Orton.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;lcfirst&quot;</tt> and <tt>&quot;ucfirst&quot;</tt> could corrupt the string for certain cases where the length <font SIZE="-1">UTF-8</font> encoding of the string in lower case, upper case or title case differed. This was fixed by Nicholas Clark.</dd>
+<dt>&bull;</dt>
+<dd> Perl will now use the C library calls <tt>&quot;unsetenv&quot;</tt> and <tt>&quot;clearenv&quot;</tt> if present to delete keys from <tt>%ENV</tt> and delete <tt>%ENV</tt> entirely, thanks to a patch from Alan Burlison.</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <h3>Attempt to set length of freed array</h3>
 <p> This is a new warning, produced in situations such as this: </p>
@@ -1211,7 +977,6 @@ $$r = 503;
 #Wrong, will now warn
 $rin = fileno(STDIN);
 ($nfound, $timeleft) = select($rout = $rin, undef, undef, $timeout);
-
 #Should be
 $rin = '';
 vec($rin, fileno(STDIN), 1) = 1;
@@ -1246,13 +1011,13 @@ vec($rin, fileno(STDIN), 1) = 1;
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAS">New or Changed Diagnostics</a></p>
+<dt><a href="#lbAS">New or Changed Diagnostics</a></dt>
 <dd>
-<dt><a href="#lbAW">Changed Internals</a></p>
+</dd><dt><a href="#lbAW">Changed Internals</a></dt>
 <dd>
-<dt><a href="#lbAX">Platform Specific Problems</a></p>
+</dd><dt><a href="#lbAX">Platform Specific Problems</a></dt>
 <dd>
-<dt><a href="#lbAY">Reporting Bugs</a></p>
+</dd><dt><a href="#lbAY">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbAZ">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAZ">SEE ALSO</a></dt>
+<dd></dd></dl>

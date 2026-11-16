@@ -18,54 +18,54 @@ description: "nsend – Send messages to users or groups"
 <p> <code>recipient name</code></p>
 <dl>
 <dt>
-<dd> <code>recipient name</code> is either the NetWare name of the user to receive the message or the name of an existing user group on that server. You can use wildcards in this specification.</dl>
+</dt><dd> <code>recipient name</code> is either the NetWare name of the user to receive the message or the name of an existing user group on that server. You can use wildcards in this specification.</dd></dl>
 <p> <code>-o</code> <i>recipient name</i></p>
 <dl>
 <dt>
-<dd> Specifies recipient&#8217;s name. This can specify user or group.</dl>
+</dt><dd> Specifies recipient&#8217;s name. This can specify user or group.</dd></dl>
 <p> <code>-t</code> <i>recipent type</i></p>
 <dl>
 <dt>
-<dd> Specifies recipient&#8217;s type.</dl>
+</dt><dd> Specifies recipient&#8217;s type.</dd></dl>
 <p> <code>-c</code> <i>connNum</i>[,<i>&#8230;</i>]</p>
 <dl>
 <dt>
-<dd> Specifies connection numbers of recipients. You can use this option as workaround to deliver messages to directory services users.</dl>
+</dt><dd> Specifies connection numbers of recipients. You can use this option as workaround to deliver messages to directory services users.</dd></dl>
 <p> <code>-i</code> <i>userID</i></p>
 <dl>
 <dt>
-<dd> Specifies recipient&#8217;s object ID. You can use this option as workaround to deliver messages to directory services users.</dl>
+</dt><dd> Specifies recipient&#8217;s object ID. You can use this option as workaround to deliver messages to directory services users.</dd></dl>
 <p> <code>message</code></p>
 <dl>
 <dt>
-<dd> <code>message</code> is the message to be sent. Please note that this has to be a single command line argument. If you want to send a message that contains spaces, you have to quote them on the command line. For example, to annoy your system administrator, you should try </p>
+</dt><dd> <code>message</code> is the message to be sent. Please note that this has to be a single command line argument. If you want to send a message that contains spaces, you have to quote them on the command line. For example, to annoy your system administrator, you should try </dd>
 <p>nsend supervisor&nbsp;<wbr>&#8216;I know how this works!&#8217;<br />
  Program first searches (wildcards allowed) bindery with <i>recipients name</i> and <i>type</i>. If <code>user</code> is found, message is sent to this user, if <code>group</code> is found, message is sent to this group. Other object types are ignored. If no suitable object was found in this phase, <code>connection list</code> for specified object is retrieved (no wildcards allowed) and message is sent to this object (including <code>print servers</code> and so on). No expansions on <code>group</code> is done this time.</dl>
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> By default, nsend prepends &#8216;From &#8230;.&#8217; text to message. You can suppress this by adding <code>-a</code> to command line.</dl>
+</dt><dd> By default, nsend prepends &#8216;From &#8230;.&#8217; text to message. You can suppress this by adding <code>-a</code> to command line.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> <code>server</code> is the name of the server you want to use.</dl>
+</dt><dd> <code>server</code> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user name</i></p>
 <dl>
 <dt>
-<dd> If the user name your NetWare administrator gave to you differs from your unix user-id, you should use <code>-U</code> to tell the server about your NetWare user name.</dl>
+</dt><dd> If the user name your NetWare administrator gave to you differs from your unix user-id, you should use <code>-U</code> to tell the server about your NetWare user name.</dd></dl>
 <p> <code>-P</code> <i>password</i></p>
 <dl>
 <dt>
-<dd> You may want to give the password required by the server on the command line. You should be careful about using passwords in scripts.</dl>
+</dt><dd> You may want to give the password required by the server on the command line. You should be careful about using passwords in scripts.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> <code>-n</code> should be given if specified user does not have password. </p>
+</dt><dd> <code>-n</code> should be given if specified user does not have password. </dd>
 <p> If neither <code>-n</code> nor <code>-P</code> are given, nsend prompts for a password.</dl>
 <p> <code>-C</code></p>
 <dl>
 <dt>
-<dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C</code>.</dl>
+</dt><dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C</code>.</dd></dl>
 <h2>BUGS</h2>
 <p> Directory services connection are not supported yet.<br />
  Options <code>-c</code>, <code>-i</code> and <code>-o</code> cannot be used together.<br />

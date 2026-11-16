@@ -14,10 +14,10 @@ description: "REASSIGN OWNED – change the ownership of database objects owned 
 <p><code>REASSIGN OWNED</code> instructs the system to change the ownership of the database objects owned by one of the old_roles, to new_role.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>old_role</i></p>
-<dd>The name of a role. The ownership of all the objects in the current database owned by this role will be reassigned to <i>new_role</i>.</p>
-<dt><i>new_role</i></p>
-<dd>The name of the role that will be made the new owner of the affected objects.</dl>
+<dt><i>old_role</i></dt>
+<dd>The name of a role. The ownership of all the objects in the current database owned by this role will be reassigned to <i>new_role</i>.</dd>
+<dt><i>new_role</i></dt>
+<dd>The name of the role that will be made the new owner of the affected objects.</dd></dl>
 <h2>Notes</h2>
 <p><code>REASSIGN OWNED</code> is often used to prepare for the removal of one or more roles. Because <code>REASSIGN OWNED</code> only affects the objects in the current database, it is usually necessary to execute this command in each database that contains objects owned by a role that is to be removed. </p>
 <p> The DROP OWNED [<code><a href="/docs/linux/man/7-drop_owned/">drop_owned</a></code>(7)] command is an alternative that drops all the database objects owned by one or more roles. </p>

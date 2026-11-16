@@ -11,23 +11,23 @@ AGCHNL - Provides a way for the user to substitute arbitrary character strings f
 <h2>Synopsis</h2>&nbsp;<wbr>SUBROUTINE AGCHNL&nbsp;<wbr>(IAXS,VILS,CHRM,MCIM,NCIM,IPXM,&nbsp;<wbr> 
  + CHRE,MCIE,NCIE)
 <h2>Description</h2><dl COMPACT><dt>IAXS
-<dd>(an input expression of type INTEGER) is the number of the axis being drawn. The values 1, 2, 3, and 4 imply the left, right, bottom, and top axes, respectively.
-<dt>VILS
-<dd>(an input expression of type REAL) is the value to be represented by the numeric label, in the label system for the axis. The value of VILS must not be altered.
-<dt>CHRM
-<dd>(an input variable of type CHARACTER), on entry, contains the mantissa of the numeric label, as it will appear if AGCHNL makes no changes. If the numeric label includes a &quot;times&quot; symbol, it is represented by a blank in CHRM. (See IPXM, below.) CHRM may be modified.
-<dt>MCIM
-<dd>(an input expression of type INTEGER) is the length of CHRM - the maximum number of characters that it will hold. The value of MCIM must not be altered.
-<dt>NCIM
-<dd>(an input variable of type INTEGER), on entry, is the number of meaningful characters in CHRM. If CHRM is changed, NCIM should be changed accordingly.
-<dt>IPXM
-<dd>(an input variable of type INTEGER), on entry, is zero if there is no &quot;times&quot; symbol in CHRM; if it is non-zero, it is the index of a character position in CHRM. If AGCHNL changes the position of the &quot;times&quot; symbol in CHRM, removes it, or adds it, the value of IPXM must be changed.
-<dt>CHRE
-<dd>(an input variable of type CHARACTER), on entry, contains the exponent of the numeric label, as it will appear if AGCHNL makes no changes. CHRE may be modified.
-<dt>MCIE
-<dd>(an input expression of type INTEGER) is the length of CHRE - the maximum number of characters that it will hold. The value of MCIE must not be altered.
-<dt>NCIE
-<dd>(an input variable of type INTEGER), on entry, is the number of meaningful characters in CHRE. If CHRE is changed, NCIE should be changed accordingly.</dl><h2>Usage</h2>This routine is not called by the user program, but by Autograph itself, just after the character string representing each numeric label has been generated and just before it is written on the graph. The user may change the character string in any desired way. Axes may thereby be labeled using the names of the months, Roman numerals, etc. 
+</dt><dd>(an input expression of type INTEGER) is the number of the axis being drawn. The values 1, 2, 3, and 4 imply the left, right, bottom, and top axes, respectively.
+</dd><dt>VILS
+</dt><dd>(an input expression of type REAL) is the value to be represented by the numeric label, in the label system for the axis. The value of VILS must not be altered.
+</dd><dt>CHRM
+</dt><dd>(an input variable of type CHARACTER), on entry, contains the mantissa of the numeric label, as it will appear if AGCHNL makes no changes. If the numeric label includes a &quot;times&quot; symbol, it is represented by a blank in CHRM. (See IPXM, below.) CHRM may be modified.
+</dd><dt>MCIM
+</dt><dd>(an input expression of type INTEGER) is the length of CHRM - the maximum number of characters that it will hold. The value of MCIM must not be altered.
+</dd><dt>NCIM
+</dt><dd>(an input variable of type INTEGER), on entry, is the number of meaningful characters in CHRM. If CHRM is changed, NCIM should be changed accordingly.
+</dd><dt>IPXM
+</dt><dd>(an input variable of type INTEGER), on entry, is zero if there is no &quot;times&quot; symbol in CHRM; if it is non-zero, it is the index of a character position in CHRM. If AGCHNL changes the position of the &quot;times&quot; symbol in CHRM, removes it, or adds it, the value of IPXM must be changed.
+</dd><dt>CHRE
+</dt><dd>(an input variable of type CHARACTER), on entry, contains the exponent of the numeric label, as it will appear if AGCHNL makes no changes. CHRE may be modified.
+</dd><dt>MCIE
+</dt><dd>(an input expression of type INTEGER) is the length of CHRE - the maximum number of characters that it will hold. The value of MCIE must not be altered.
+</dd><dt>NCIE
+</dt><dd>(an input variable of type INTEGER), on entry, is the number of meaningful characters in CHRE. If CHRE is changed, NCIE should be changed accordingly.</dd></dl><h2>Usage</h2>This routine is not called by the user program, but by Autograph itself, just after the character string representing each numeric label has been generated and just before it is written on the graph. The user may change the character string in any desired way. Axes may thereby be labeled using the names of the months, Roman numerals, etc. 
 
  Note: A user version of AGCHNL should not call any other Autograph routine.
 <h2>Access</h2>To use AGCHNL, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

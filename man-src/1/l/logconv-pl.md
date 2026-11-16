@@ -15,35 +15,35 @@ description: "logconv.pl – analyzes Directory Server access log files"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>help/usage</p>
-<dt><code>-d, &#8211;rootDN</code> &lt;Directory Managers DN&gt;</p>
-<dd>DEFAULT -&gt; cn=directory manager</p>
-<dt><code>-D, &#8211;data</code> &lt;Location for temporary data files&gt;</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>help/usage</dd>
+<dt><code>-d, &#8211;rootDN</code> &lt;Directory Managers DN&gt;</dt>
+<dd>DEFAULT -&gt; cn=directory manager</dd>
+<dt><code>-D, &#8211;data</code> &lt;Location for temporary data files&gt;</dt>
 <dd>DEFAULT -&gt; /tmp<br />
- TIP -&gt; If there is not enough RAM, a RAM disk can be used instead: </p>
+ TIP -&gt; If there is not enough RAM, a RAM disk can be used instead: </dd>
 <p>&nbsp;<wbr>mkdir&nbsp;<wbr>/dev/shm/logconv, and use this directory for the&nbsp;<wbr>&quot;-D&quot;&nbsp;<wbr>value.</p>
-<dt><code>-s, &#8211;sizeLimit</code> &lt;Number of results to return per category&gt;</p>
-<dd>DEFAULT -&gt; 20</p>
-<dt><code>-X, &#8211;excludeIP</code> &lt;IP address to exclude from connection stats&gt;</p>
-<dd>E.g. Load balancers</p>
-<dt><code>-v, &#8211;version</code> show version of tool</p>
-<dd>Print version of the tool</p>
-<dt><code>-S, &#8211;startTime</code> &lt;time to begin analyzing logfile from&gt;</p>
-<dd>Time to begin analyzing logfile from E.g. [28/Mar/2002:13:14:22 <code>-0800]</code></p>
-<dt><code>-E, &#8211;endTime</code> &lt;time to stop analyzing logfile&gt;</p>
-<dd>Time to stop analyzing logfile from E.g. [28/Mar/2002:13:24:62 <code>-0800]</code></p>
-<dt><code>-T, &#8211;minEtime</code> &lt;minimum etime to report unindexed searches&gt;</p>
-<dd>The minimum etime that is required to record and report on an unindexed search. Default is zero.</p>
-<dt><code>-M, &#8211;reportFileMins</code> &lt;CSV output file&gt;</p>
-<dd>This option creates a CSV report for spreadsheets.</p>
-<dt><code>-m, &#8211;reportFileSecs</code> &lt;CSV output file&gt;</p>
-<dd>This option creates a CSV report for spreadsheets.</p>
-<dt><code>-B, &#8211;bind</code> &lt;ALL | ANONYMOUS | Bind DN&gt;</p>
-<dd>This generates a report based on either ALL bind dn&#8217;s, anonymous binds, or a specific DN.</p>
-<dt><code>-V, &#8211;verbose</code> &lt;enable verbose output &#8211; includes all stats listed below except U&gt;</p>
-<dd>Verbose output</p>
-<dt><code>-[efcibaltnxgjuU]</code></p>
+<dt><code>-s, &#8211;sizeLimit</code> &lt;Number of results to return per category&gt;</dt>
+<dd>DEFAULT -&gt; 20</dd>
+<dt><code>-X, &#8211;excludeIP</code> &lt;IP address to exclude from connection stats&gt;</dt>
+<dd>E.g. Load balancers</dd>
+<dt><code>-v, &#8211;version</code> show version of tool</dt>
+<dd>Print version of the tool</dd>
+<dt><code>-S, &#8211;startTime</code> &lt;time to begin analyzing logfile from&gt;</dt>
+<dd>Time to begin analyzing logfile from E.g. [28/Mar/2002:13:14:22 <code>-0800]</code></dd>
+<dt><code>-E, &#8211;endTime</code> &lt;time to stop analyzing logfile&gt;</dt>
+<dd>Time to stop analyzing logfile from E.g. [28/Mar/2002:13:24:62 <code>-0800]</code></dd>
+<dt><code>-T, &#8211;minEtime</code> &lt;minimum etime to report unindexed searches&gt;</dt>
+<dd>The minimum etime that is required to record and report on an unindexed search. Default is zero.</dd>
+<dt><code>-M, &#8211;reportFileMins</code> &lt;CSV output file&gt;</dt>
+<dd>This option creates a CSV report for spreadsheets.</dd>
+<dt><code>-m, &#8211;reportFileSecs</code> &lt;CSV output file&gt;</dt>
+<dd>This option creates a CSV report for spreadsheets.</dd>
+<dt><code>-B, &#8211;bind</code> &lt;ALL | ANONYMOUS | Bind DN&gt;</dt>
+<dd>This generates a report based on either ALL bind dn&#8217;s, anonymous binds, or a specific DN.</dd>
+<dt><code>-V, &#8211;verbose</code> &lt;enable verbose output &#8211; includes all stats listed below except U&gt;</dt>
+<dd>Verbose output</dd>
+<dt><code>-[efcibaltnxgjuU]</code></dt>
 <dd><code>e</code> Error Code stats<br />
  <code>f</code> Failed Login Stats<br />
  <code>c</code> Connection Code Stats<br />
@@ -60,15 +60,15 @@ description: "logconv.pl – analyzes Directory Server access log files"
  <code>u</code> Unindexed Search Stats (very detailed)<br />
  <code>y</code> Connection Latency Stats<br />
  <code>p</code> Open Connection ID Stats<br />
- <code>U</code> Unindexed Search Summary</dl>
+ <code>U</code> Unindexed Search Summary</dd></dl>
 <h2>Usage</h2>
 <p>Examples:</p>
 <dl>
-<dd>logconv.pl <code>-s</code> 10 <code>-V</code> access</p>
-<dd>logconv.pl <code>-d</code> &quot;cn=directory manager&quot; /export/server4/slapd-host/logs/access*</p>
-<dd>logconv.pl <code>-s</code> 50 <code>-ibgju</code> access*</p>
+<dd>logconv.pl <code>-s</code> 10 <code>-V</code> access</dd>
+<dd>logconv.pl <code>-d</code> &quot;cn=directory manager&quot; /export/server4/slapd-host/logs/access*</dd>
+<dd>logconv.pl <code>-s</code> 50 <code>-ibgju</code> access*</dd>
 <dd>logconv.pl <code>-S</code> &quot;[28/Mar/2002:13:14:22 <code>-0800]</code>&quot; <code>-E</code> &quot;[28/Mar/2002:13:50:05 <code>-0800]</code>&quot; <code>-e</code> access
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>logconv.pl was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

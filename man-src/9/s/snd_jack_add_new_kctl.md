@@ -15,15 +15,15 @@ snd_jack_add_new_kctl - Create a new snd_jack_kctl and add it to jack
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>the jack instance which the kctl will attaching to</dl>
+<dl><dd></dd><dd>the jack instance which the kctl will attaching to</dd></dl>
  
 
  <i>name</i>
-<dl><dd>the name for the snd_kcontrol object</dl>
+<dl><dd>the name for the snd_kcontrol object</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>a bitmask of enum snd_jack_type values that can be detected by this snd_jack_kctl object.</dl>
+<dl><dd>a bitmask of enum snd_jack_type values that can be detected by this snd_jack_kctl object.</dd></dl>
 
 <h2>Description</h2>
 

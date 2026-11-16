@@ -17,14 +17,14 @@ description: "Mucous – Python / Curses client for museek"
 <h2>OPTIONS</h2>
 <p> Mucous accepts the following options:</p>
 <dl>
-<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</p>
-<dd> Use a different config file.</p>
-<dt><code>-l &lt;</code><i>directory</i>&gt;, &#8211;log &lt;<i>directory</i>&gt;</p>
-<dd> Use a different chat log directory.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display Version and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help and exit. </p>
+<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</dt>
+<dd> Use a different config file.</dd>
+<dt><code>-l &lt;</code><i>directory</i>&gt;, &#8211;log &lt;<i>directory</i>&gt;</dt>
+<dd> Use a different chat log directory.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display Version and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help and exit. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To run this program the standard way type: </p>
@@ -35,28 +35,28 @@ description: "Mucous – Python / Curses client for museek"
 <p> mucous &#8211;log logdir</p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>TERM</code></p>
-<dd> Specifies the type of Terminal; changes the way mucous displays color.</dl>
+<dt><code>TERM</code></dt>
+<dd> Specifies the type of Terminal; changes the way mucous displays color.</dd></dl>
 <p> For XTerm: xterm-color </p>
 <p> For aterm or rxvt: rxvt </p>
 <p> For urxvt: rxvt-unicode</p>
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.mucous/config</i></p>
-<dd> The default location for the <code>mucous</code> config file.</p>
+&nbsp;<wbr><i>~/.mucous/config</i></dt>
+<dd> The default location for the <code>mucous</code> config file.</dd>
 <dt>
-&nbsp;<wbr><i>~/.mucous/logs/</i></p>
-<dd> The default directory for chat logs.</p>
+&nbsp;<wbr><i>~/.mucous/logs/</i></dt>
+<dd> The default directory for chat logs.</dd>
 <dt>
-&nbsp;<wbr><i>~/.mucous/logs/room/</i></p>
-<dd> The directory where chat room logs are stored.</p>
+&nbsp;<wbr><i>~/.mucous/logs/room/</i></dt>
+<dd> The directory where chat room logs are stored.</dd>
 <dt>
-&nbsp;<wbr><i>~/.mucous/logs/private/</i></p>
-<dd> The directory where private chat logs are stored.</p>
+&nbsp;<wbr><i>~/.mucous/logs/private/</i></dt>
+<dd> The directory where private chat logs are stored.</dd>
 <dt>
-&nbsp;<wbr><i>~/.mucous/$USER.image</i></p>
-<dd> The file where a user&#8217;s userinfo image is saved.</dl>
+&nbsp;<wbr><i>~/.mucous/$USER.image</i></dt>
+<dd> The file where a user&#8217;s userinfo image is saved.</dd></dl>
 <h2>AUTHORS</h2>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>

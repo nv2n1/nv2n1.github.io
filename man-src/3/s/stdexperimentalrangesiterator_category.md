@@ -11,32 +11,23 @@ std::experimental::ranges::iterator_category - std::experimental::ranges::iterat
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
-
     template &lt;class I&gt;
     (1)
-
         struct iterator_category {
 };
-
 template &lt;class T&gt;
 (2)
-
     struct iterator_category&lt;T *&gt;;
-
 template &lt;class T&gt;
 (3)
-
     struct iterator_category&lt;const T&gt; : iterator_category&lt;T&gt; {
 };
-
 template &lt;class T&gt;
-
 requires requires
 {
     typename T::iterator_category;
 }
 (4)
-
     struct iterator_category&lt;T&gt;;</code></pre> 
 Computes the iterator category of the class I, if any. Users may specialize iterator_category for a program-defined type. 
 1) Primary template is an empty struct. 
@@ -49,9 +40,7 @@ Computes the iterator category of the class I, if any. Users may specialize iter
 * Otherwise, if T::iterator_category is the same as or derives from std::input_iterator_tag, provides a member type type equal to ranges::input_iterator_tag. 
 * Otherwise, if T::iterator_category is the same as or derives from std::output_iterator_tag, there is no member type. 
 Helper alias template <pre><code>template&lt; class T &gt;                                                       (ranges TS)
-
 using iterator_category_t = typename ranges::iterator_category&lt;T&gt;::type;
-
 </code></pre>
 
 <h2>Example</h2>

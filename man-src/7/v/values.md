@@ -20,16 +20,16 @@ description: "VALUES – compute a set of rows"
 <p> Within larger commands, <code>VALUES</code> is syntactically allowed anywhere that <code>SELECT</code> is. Because it is treated like a <code>SELECT</code> by the grammar, it is possible to use the ORDER BY, LIMIT (or equivalently FETCH FIRST), and OFFSET clauses with a <code>VALUES</code> command.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>expression</i></p>
-<dd>A constant or expression to compute and insert at the indicated place in the resulting table (set of rows). In a <code>VALUES</code> list appearing at the top level of an <code>INSERT</code>, an <i>expression</i> can be replaced by DEFAULT to indicate that the destination column&#8217;s default value should be inserted. DEFAULT cannot be used when <code>VALUES</code> appears in other contexts.</p>
-<dt><i>sort_expression</i></p>
-<dd>An expression or integer constant indicating how to sort the result rows. This expression can refer to the columns of the <code>VALUES</code> result as column1, column2, etc. For more details see ORDER BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</p>
-<dt><i>operator</i></p>
-<dd>A sorting operator. For details see ORDER BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</p>
-<dt><i>count</i></p>
-<dd>The maximum number of rows to return. For details see LIMIT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</p>
-<dt><i>start</i></p>
-<dd>The number of rows to skip before starting to return rows. For details see LIMIT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</dl>
+<dt><i>expression</i></dt>
+<dd>A constant or expression to compute and insert at the indicated place in the resulting table (set of rows). In a <code>VALUES</code> list appearing at the top level of an <code>INSERT</code>, an <i>expression</i> can be replaced by DEFAULT to indicate that the destination column&#8217;s default value should be inserted. DEFAULT cannot be used when <code>VALUES</code> appears in other contexts.</dd>
+<dt><i>sort_expression</i></dt>
+<dd>An expression or integer constant indicating how to sort the result rows. This expression can refer to the columns of the <code>VALUES</code> result as column1, column2, etc. For more details see ORDER BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</dd>
+<dt><i>operator</i></dt>
+<dd>A sorting operator. For details see ORDER BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</dd>
+<dt><i>count</i></dt>
+<dd>The maximum number of rows to return. For details see LIMIT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</dd>
+<dt><i>start</i></dt>
+<dd>The number of rows to skip before starting to return rows. For details see LIMIT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</dd></dl>
 <h2>Notes</h2>
 <p><code>VALUES</code> lists with very large numbers of rows should be avoided, as you might encounter out-of-memory failures or poor performance. <code>VALUES</code> appearing within <code>INSERT</code> is a special case (because the desired column types are known from the <code>INSERT</code>&#8216;s target table, and need not be inferred by scanning the <code>VALUES</code> list), so it can handle larger lists than are practical in other contexts.</p>
 <h2>Examples</h2>
@@ -59,7 +59,7 @@ UPDATE employees SET salary = salary * v.increase
 <pre>SELECT * FROM machines
 WHERE ip_address IN (VALUES('192.168.0.1'::inet), ('192.168.0.10'), ('192.168.1.43'));</pre>
 <dl>
-<dd><code>Tip:</code> For simple IN tests, it&#8217;s better to rely on the list-of-scalars form of IN than to write a <code>VALUES</code> query as shown above. The list of scalars method requires less writing and is often more efficient.</dl>
+<dd><code>Tip:</code> For simple IN tests, it&#8217;s better to rely on the list-of-scalars form of IN than to write a <code>VALUES</code> query as shown above. The list of scalars method requires less writing and is often more efficient.</dd></dl>
 <h2>Compatibility</h2>
 <p><code>VALUES</code> conforms to the SQL standard. LIMIT and OFFSET are PostgreSQL extensions; see also under SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)].</p>
 <h2>See Also</h2>

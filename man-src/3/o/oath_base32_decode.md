@@ -13,14 +13,14 @@ description: "oath_base32_decode – API function"
 int oath_base32_decode(const char *in, size_t inlen, char **out, size_t *outlen);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * in</p>
-<dd>input string with base32 encoded data of length <i>inlen</i></p>
-<dt>size_t inlen</p>
-<dd>length of input base32 string <i>in</i></p>
-<dt>char ** out</p>
-<dd>pointer to output variable for binary data of length <i>outlen</i>, or NULL</p>
-<dt>size_t * outlen</p>
-<dd>pointer to output variable holding length of <i>out</i>, or NULL</dl>
+<dt>const char * in</dt>
+<dd>input string with base32 encoded data of length <i>inlen</i></dd>
+<dt>size_t inlen</dt>
+<dd>length of input base32 string <i>in</i></dd>
+<dt>char ** out</dt>
+<dd>pointer to output variable for binary data of length <i>outlen</i>, or NULL</dd>
+<dt>size_t * outlen</dt>
+<dd>pointer to output variable holding length of <i>out</i>, or NULL</dd></dl>
 <h2>Description</h2>
 <p>Decode a base32 encoded string into binary data. </p>
 <p> Space characters are ignored and pad characters are added if needed. Non-base32 data are not ignored but instead will lead to an <code>OATH_INVALID_BASE32</code> error. </p>

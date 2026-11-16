@@ -16,69 +16,69 @@ description: "lslocks – list local system locks"
 <h2>Options</h2>
 <p><code>-b</code>, <code>&#8211;bytes</code></p>
 <dl>
-<dd>Print the SIZE column in bytes rather than in a human-readable format.</dl>
+<dd>Print the SIZE column in bytes rather than in a human-readable format.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;noinaccessible</code></p>
 <dl>
-<dd>Ignore lock files which are inaccessible for the current user.</dl>
+<dd>Ignore lock files which are inaccessible for the current user.</dd></dl>
 <p> <code>-J</code>, <code>&#8211;json</code></p>
 <dl>
-<dd>Use JSON output format.</dl>
+<dd>Use JSON output format.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
-<dd>Do not print a header line.</dl>
+<dd>Do not print a header line.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code> <i>list</i></p>
 <dl>
-<dd>Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns. </p>
+<dd>Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns. </dd>
 <p> The default list of columns may be extended if <i>list</i> is specified in the format <i>+list</i> (e.g., <code>lslocks -o +BLOCKER</code>).</dl>
 <p> <code>&#8211;output-all</code></p>
 <dl>
-<dd>Output all available columns.</dl>
+<dd>Output all available columns.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;pid</code> <i>pid</i></p>
 <dl>
-<dd>Display only the locks held by the process with this <i>pid</i>.</dl>
+<dd>Display only the locks held by the process with this <i>pid</i>.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;raw</code></p>
 <dl>
-<dd>Use the raw output format.</dl>
+<dd>Use the raw output format.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;notruncate</code></p>
 <dl>
-<dd>Do not truncate text in columns.</dl>
+<dd>Do not truncate text in columns.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Output</h2>
 <p>COMMAND</p>
 <dl>
-<dd>The command name of the process holding the lock.</dl>
+<dd>The command name of the process holding the lock.</dd></dl>
 <p> PID</p>
 <dl>
-<dd>The process ID of the process which holds the lock or -1 for OFDLCK.</dl>
+<dd>The process ID of the process which holds the lock or -1 for OFDLCK.</dd></dl>
 <p> TYPE</p>
 <dl>
-<dd>The type of lock; can be FLOCK (created with <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2)), POSIX (created with <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) and <code><a href="/docs/linux/man/3-lockf/">lockf</a></code>(3)) or OFDLCK (created with <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</dl>
+<dd>The type of lock; can be FLOCK (created with <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2)), POSIX (created with <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) and <code><a href="/docs/linux/man/3-lockf/">lockf</a></code>(3)) or OFDLCK (created with <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</dd></dl>
 <p> SIZE</p>
 <dl>
-<dd>Size of the locked file.</dl>
+<dd>Size of the locked file.</dd></dl>
 <p> MODE</p>
 <dl>
-<dd>The lock&#8217;s access permissions (read, write). If the process is blocked and waiting for the lock, then the mode is postfixed with an &#8216;*&#8217; (asterisk).</dl>
+<dd>The lock&#8217;s access permissions (read, write). If the process is blocked and waiting for the lock, then the mode is postfixed with an &#8216;*&#8217; (asterisk).</dd></dl>
 <p> M</p>
 <dl>
-<dd>Whether the lock is mandatory; 0 means no (meaning the lock is only advisory), 1 means yes. (See <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).)</dl>
+<dd>Whether the lock is mandatory; 0 means no (meaning the lock is only advisory), 1 means yes. (See <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).)</dd></dl>
 <p> START</p>
 <dl>
-<dd>Relative byte offset of the lock.</dl>
+<dd>Relative byte offset of the lock.</dd></dl>
 <p> END</p>
 <dl>
-<dd>Ending offset of the lock.</dl>
+<dd>Ending offset of the lock.</dd></dl>
 <p> PATH</p>
 <dl>
-<dd>Full path of the lock. If none is found, or there are no permissions to read the path, it will fall back to the device&#8217;s mountpoint and &quot;&#8230;&quot; is appended to the path. The path might be truncated; use <code>&#8211;notruncate</code> to get the full path.</dl>
+<dd>Full path of the lock. If none is found, or there are no permissions to read the path, it will fall back to the device&#8217;s mountpoint and &quot;&#8230;&quot; is appended to the path. The path might be truncated; use <code>&#8211;notruncate</code> to get the full path.</dd></dl>
 <p> BLOCKER</p>
 <dl>
-<dd>The PID of the process which blocks the lock.</dl>
+<dd>The PID of the process which blocks the lock.</dd></dl>
 <h2>Notes</h2>
 <p>The <code>lslocks</code> command is meant to replace the <code>lslk</code>(8) command, originally written by and unmaintained since 2001.</p>
 <h2>Authors</h2>

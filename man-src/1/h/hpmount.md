@@ -17,12 +17,12 @@ description: "hpmount — change directory on an HFS+ volume"
 <p> <code>hpmount</code> accepts the following options:<br />
 &nbsp;</p>
 <dl>
-<dt><code>-r</code></p>
+<dt><code>-r</code></dt>
 <dd> mount the volume read-only. The default is to allow write-access.<br />
-&nbsp;</p>
-<dt><code>-p</code><i>n</i></p>
+&nbsp;</dd>
+<dt><code>-p</code><i>n</i></dt>
 <dd> mount partition number <code>n</code>. The default is to mount the first partition that looks like it contains an HFS+ volume.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>See also</h2>
 <p> <a href="/docs/linux/man/7-hfsplus/">hfsplus</a>(7), <a href="/docs/linux/man/1-hpls/">hpls</a>(1), <a href="/docs/linux/man/1-hpcd/">hpcd</a>(1), <a href="/docs/linux/man/1-hppwd/">hppwd</a>(1), <a href="/docs/linux/man/1-hpcopy/">hpcopy</a>(1), <a href="/docs/linux/man/1-hprm/">hprm</a>(1), <a href="/docs/linux/man/1-hpmkdir/">hpmkdir</a>(1), <a href="/docs/linux/man/1-hpumount/">hpumount</a>(1), <a href="/docs/linux/man/1-hpfsck/">hpfsck</a>(1).<br />
 &nbsp;</p>

@@ -15,31 +15,31 @@ description: "LDP – Intro to the Linux Documentation Project, with help, guide
 <h2>Web Pages</h2>
 <p>The LDP has its own dedicated web site as do many of the various translations projects which are linked from the main LDP web site at: </p>
 <dl>
-<dd><code><a rel="nofollow" href="http://www.tldp.org/">http://www.tldp.org/</a></code></dl>
+<dd><code><a rel="nofollow" href="http://www.tldp.org/">http://www.tldp.org/</a></code></dd></dl>
 <h2>Man Pages</h2>
 <p>A web page with status information for manual pages and translations is found at: </p>
 <dl>
-<dd><code><a rel="nofollow" href="http://www.win.tue.nl/~aeb/linux/man/">http://www.win.tue.nl/~aeb/linux/man/</a></code></dl>
+<dd><code><a rel="nofollow" href="http://www.win.tue.nl/~aeb/linux/man/">http://www.win.tue.nl/~aeb/linux/man/</a></code></dd></dl>
 <h2>Mailing Lists</h2>
 <p>LDP has a number of mailing lists, such as </p>
 <dl>
-<dd><code>&lt;announce [at] en.tlpd.org&gt;</code> Announcements from the LDP project</p>
-<dt><code>&lt;discuss [at] en.tldp.org&gt;</code></p>
-<dd>General discussion on the LDP project</p>
-<dt><code>&lt;docbook [at] en.tldp.org&gt;</code></p>
-<dd>Questions about the use of DocBook</dl>
+<dd><code>&lt;announce [at] en.tlpd.org&gt;</code> Announcements from the LDP project</dd>
+<dt><code>&lt;discuss [at] en.tldp.org&gt;</code></dt>
+<dd>General discussion on the LDP project</dd>
+<dt><code>&lt;docbook [at] en.tldp.org&gt;</code></dt>
+<dd>Questions about the use of DocBook</dd></dl>
 <p> For subscription information, see the website. </p>
 <p> If you are interested in DocBook beyond the simple markup of your LDP document, you may want to consider joining one of the OASIS DocBook mailing lists. Please see <code><a rel="nofollow" href="http://docbook.org/mailinglist/index.html">http://docbook.org/mailinglist/index.html</a></code> for more information.</p>
 <h2>Files</h2>
 <p>Most distributions include the HOWTOs and mini-HOWTOs in the installation</p>
 <dl>
-<dt><i>/usr/doc/</i> (old place for documentation)</p>
+<dt><i>/usr/doc/</i> (old place for documentation)</dt>
 <dd>
-<dt><i>/usr/share/doc/</i> (new place for documentation)</p>
+</dd><dt><i>/usr/share/doc/</i> (new place for documentation)</dt>
 <dd>
-<dt><i>/usr/share/doc/HOWTO/</i> (HOWTO files)</p>
+</dd><dt><i>/usr/share/doc/HOWTO/</i> (HOWTO files)</dt>
 <dd>
-<dt><i>/usr/share/doc/HOWTO/mini/</i> (mini-HOWTO files)</p>
-<dd></dl>
+</dd><dt><i>/usr/share/doc/HOWTO/mini/</i> (mini-HOWTO files)</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-info/">info</a></code>(1), <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code>xman</code>(1x) <code>info</code> pages as read with <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1) or <code><a href="/docs/linux/man/1-info/">info</a></code>(1) </p>

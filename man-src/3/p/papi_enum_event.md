@@ -46,78 +46,78 @@ See the discussion below for platform-specific definitions.
 * </pre>
 <p><code>Generic Modifiers</code></p>
 <dl COMPACT>
-<dd>The following values are implemented for preset events </p>
+<dd>The following values are implemented for preset events </dd>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>PAPI_ENUM_EVENTS &#8212; Enumerate all (default)</p>
-<dt>&bull;</p>
-<dd>PAPI_ENUM_FIRST &#8212; Enumerate first event (preset or native) preset/native chosen based on type of EventCode</dl>
+<dt>&bull;</dt>
+<dd>PAPI_ENUM_EVENTS &#8212; Enumerate all (default)</dd>
+<dt>&bull;</dt>
+<dd>PAPI_ENUM_FIRST &#8212; Enumerate first event (preset or native) preset/native chosen based on type of EventCode</dd></dl>
 </dl>
 <p> <code>Native Modifiers</code></p>
 <dl COMPACT>
-<dd>The following values are implemented for native events </p>
+<dd>The following values are implemented for native events </dd>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_UMASKS &#8212; Given an event, iterate through possible umasks one at a time</p>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_UMASK_COMBOS &#8212; Given an event, iterate through all possible combinations of umasks. This is not implemented on libpfm4.</dl>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_UMASKS &#8212; Given an event, iterate through possible umasks one at a time</dd>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_UMASK_COMBOS &#8212; Given an event, iterate through all possible combinations of umasks. This is not implemented on libpfm4.</dd></dl>
 </dl>
 <p> <code>Preset Modifiers</code></p>
 <dl COMPACT>
-<dd>The following values are implemented for preset events </p>
+<dd>The following values are implemented for preset events </dd>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_AVAIL &#8212; enumerate only available presets</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_MSC &#8212; Miscellaneous preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_INS &#8212; Instruction related preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_IDL &#8212; Stalled or Idle preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_BR &#8212; Branch related preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_CND &#8212; Conditional preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_MEM &#8212; Memory related preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_CACH &#8212; Cache related preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_L1 &#8212; L1 cache related preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_L2 &#8212; L2 cache related preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_L3 &#8212; L3 cache related preset events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_TLB &#8212; Translation Lookaside Buffer events</p>
-<dt>&bull;</p>
-<dd>PAPI_PRESET_ENUM_FP &#8212; Floating Point related preset events</dl>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_AVAIL &#8212; enumerate only available presets</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_MSC &#8212; Miscellaneous preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_INS &#8212; Instruction related preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_IDL &#8212; Stalled or Idle preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_BR &#8212; Branch related preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_CND &#8212; Conditional preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_MEM &#8212; Memory related preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_CACH &#8212; Cache related preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_L1 &#8212; L1 cache related preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_L2 &#8212; L2 cache related preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_L3 &#8212; L3 cache related preset events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_TLB &#8212; Translation Lookaside Buffer events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_PRESET_ENUM_FP &#8212; Floating Point related preset events</dd></dl>
 </dl>
 <p> <code>ITANIUM Modifiers</code></p>
 <dl COMPACT>
-<dd>The following values are implemented for modifier on Itanium: </p>
+<dd>The following values are implemented for modifier on Itanium: </dd>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_IARR &#8211; Enumerate IAR (instruction address ranging) events</p>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_DARR &#8211; Enumerate DAR (data address ranging) events</p>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_OPCM &#8211; Enumerate OPC (opcode matching) events</p>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_IEAR &#8211; Enumerate IEAR (instr event address register) events</p>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_DEAR &#8211; Enumerate DEAR (data event address register) events</dl>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_IARR &#8211; Enumerate IAR (instruction address ranging) events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_DARR &#8211; Enumerate DAR (data address ranging) events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_OPCM &#8211; Enumerate OPC (opcode matching) events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_IEAR &#8211; Enumerate IEAR (instr event address register) events</dd>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_DEAR &#8211; Enumerate DEAR (data event address register) events</dd></dl>
 </dl>
 <p> <code>POWER Modifiers</code></p>
 <dl COMPACT>
-<dd>The following values are implemented for POWER </p>
+<dd>The following values are implemented for POWER </dd>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>PAPI_NTV_ENUM_GROUPS &#8211; Enumerate groups to which an event belongs</dl>
+<dt>&bull;</dt>
+<dd>PAPI_NTV_ENUM_GROUPS &#8211; Enumerate groups to which an event belongs</dd></dl>
 </dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>PAPI </p>
+<dd>PAPI </dd>
 <p>&nbsp;<wbr>PAPIF&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_enum_cmp_event</code>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_get_event_info</code>&nbsp;<wbr> </p>
@@ -126,3 +126,4 @@ See the discussion below for platform-specific definitions.
 <p>&nbsp;<wbr>PAPI_native&nbsp;<wbr></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

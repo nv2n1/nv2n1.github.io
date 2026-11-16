@@ -17,15 +17,15 @@ description: "xscreensaver-getimage-file – put a randomly-selected image on th
 <h2>OPTIONS</h2>
 <p> <i>xscreensaver-getimage-file</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print diagnostics.</p>
-<dt><code>&#8211;name</code></p>
-<dd> Don&#8217;t load an image: instead just print the file name to stdout.</p>
-<dt><i>directory-or-URL</i></p>
-<dd> If a directory is specified, it will be searched recursively for images. Any images found will eligible for display. For efficiency, the contents of the directory are cached for a few hours before it is re-scanned. </p>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print diagnostics.</dd>
+<dt><code>&#8211;name</code></dt>
+<dd> Don&#8217;t load an image: instead just print the file name to stdout.</dd>
+<dt><i>directory-or-URL</i></dt>
+<dd> If a directory is specified, it will be searched recursively for images. Any images found will eligible for display. For efficiency, the contents of the directory are cached for a few hours before it is re-scanned. </dd>
 <p> If a URL is specified, it should be the URL of an RSS or Atom feed containing images. The first time it is accessed, all of the images in the feed will be downloaded to a local cache directory. If a few hours have elapsed since last time, the URL will be polled again, and any new images will be cached, any images no longer in the feed will be expired.</p>
-<dt><code>&#8211;no-cache</code></p>
-<dd> Update the cache immediately, even if it is not time yet. This will re-scan the directory, or re-poll the RSS feed.</dl>
+<dt><code>&#8211;no-cache</code></dt>
+<dd> Update the cache immediately, even if it is not time yet. This will re-scan the directory, or re-poll the RSS feed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>X</code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1), <code><a href="/docs/linux/man/1-xv/">xv</a></code>(1), <code>xli</code>(1), <code>xloadimage</code>(1), <code>chbg</code>(1)</p>
 <h2>COPYRIGHT</h2>

@@ -14,12 +14,12 @@ description: "nand_init_data_interface – find the best data interface and timi
 <p><i>chip</i></p>
 <dl>
 <dd>
-<dd>The NAND chip</dl>
+</dd><dd>The NAND chip</dd></dl>
 <h2>Description</h2>
 <p>Find the best data interface and NAND timings supported by the chip and the driver. First tries to retrieve supported timing modes from ONFI information, and if the NAND chip does not support ONFI, relies on the -&gt;onfi_timing_mode_default specified in the nand_ids table. After this function nand_chip-&gt;data_interface is initialized with the best timing mode available. </p>
 <p> Returns 0 for success or negative error code otherwise.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

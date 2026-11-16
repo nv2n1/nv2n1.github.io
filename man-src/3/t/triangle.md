@@ -10,7 +10,6 @@ description: "triangle – Draws a filled triangle. Allegro game programming lib
 <p>triangle &#8211; Draws a filled triangle. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void triangle(BITMAP *bmp, int x1, y1, x2, y2, x3, y3, int color);</code></pre>
 <h2>Description</h2>
 <p>Draws a filled triangle between the three points. </p>

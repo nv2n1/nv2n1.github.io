@@ -14,14 +14,14 @@ description: "sas_remove_host – tear down a Scsi_Host’s SAS data structures"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>Scsi Host that is torn down</dl>
+</dd><dd>Scsi Host that is torn down</dd></dl>
 <h2>Description</h2>
 <p>Removes all SAS PHYs and remote PHYs for a given Scsi_Host. Must be called just before scsi_remove_host for SAS HBAs.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

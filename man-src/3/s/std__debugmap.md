@@ -35,223 +35,60 @@ description: "std::__debug::map< _Key, _Tp, _Compare, _Allocator > –"
  _Tp &gt; <code>value_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>map (const _Compare &amp;__comp=_Compare(), const _Allocator &amp;__a=_Allocator())
-
-
-
 template&lt;typename _InputIterator &gt; map (_InputIterator __first, _InputIterator __last, const _Compare &amp;__comp=_Compare(), const _Allocator &amp;__a=_Allocator())
-
-
-
 map (const map &amp;__x)
-
-
-
 map (const _Base &amp;__x)
-
-
-
 map (initializer_list&lt; value_type &gt; __l, const _Compare &amp;__c=_Compare(), const allocator_type &amp;__a=allocator_type())
-
-
-
 void _M_attach (_Safe_iterator_base *__it, bool __constant)
-
-
-
 void _M_attach_single (_Safe_iterator_base *__it, bool __constant)  throw ()
-
-
-
 _Base &amp; _M_base () noexcept
-
-
-
 const _Base &amp; _M_base () const noexcept
-
-
-
 void _M_detach (_Safe_iterator_base *__it)
-
-
-
 void _M_detach_single (_Safe_iterator_base *__it)  throw ()
-
-
-
 void _M_invalidate_all () const
-
-
-
 void _M_invalidate_if (_Predicate __pred)
-
-
-
 void _M_transfer_from_if (_Safe_sequence &amp;__from, _Predicate __pred)
-
-
-
 iterator begin () noexcept
-
-
-
 const_iterator begin () const noexcept
-
-
-
 const_iterator cbegin () const noexcept
-
-
-
 const_iterator cend () const noexcept
-
-
-
 void clear () noexcept
-
-
-
 const_reverse_iterator crbegin () const noexcept
-
-
-
 const_reverse_iterator crend () const noexcept
-
-
-
 template&lt;typename... _Args&gt; std::pair&lt; iterator, bool &gt; emplace (_Args &amp;&amp;...__args)
-
-
-
 template&lt;typename... _Args&gt; iterator emplace_hint (const_iterator __pos, _Args &amp;&amp;...__args)
-
-
-
 iterator end () noexcept
-
-
-
 const_iterator end () const noexcept
-
-
-
 std::pair&lt; iterator, iterator &gt; equal_range (const key_type &amp;__x)
-
-
-
 std::pair&lt; const_iterator,
-
-
 const_iterator &gt; equal_range (const key_type &amp;__x) const &quot;
-
-
 iterator erase (const_iterator __position)
-
-
-
 iterator erase (iterator __position)
-
-
-
 size_type erase (const key_type &amp;__x)
-
-
-
 iterator erase (const_iterator __first, const_iterator __last)
-
-
-
 iterator find (const key_type &amp;__x)
-
-
-
 const_iterator find (const key_type &amp;__x) const
-
-
-
 std::pair&lt; iterator, bool &gt; insert (const value_type &amp;__x)
-
-
-
 template&lt;typename _Pair , typename  = typename std::enable_if&lt;std::is_constructible&lt;value_type,    _Pair&amp;&amp;&gt;::value&gt;::type&gt; std::pair&lt; iterator, bool &gt; insert (_Pair &amp;&amp;__x)
-
-
-
 void insert (std::initializer_list&lt; value_type &gt; __list)
-
-
-
 template&lt;typename _Pair , typename  = typename std::enable_if&lt;std::is_constructible&lt;value_type,    _Pair&amp;&amp;&gt;::value&gt;::type&gt; iterator insert (const_iterator __position, _Pair &amp;&amp;__x)
-
-
-
 template&lt;typename _InputIterator &gt; void insert (_InputIterator __first, _InputIterator __last)
-
-
-
 return iterator (_Base::insert(__position.base(), __x), this)
-
-
-
 iterator lower_bound (const key_type &amp;__x)
-
-
-
 const_iterator lower_bound (const key_type &amp;__x) const
-
-
-
 noexcept (is_nothrow_copy_constructible&lt; _Compare &gt;::value)
-
-
-
 map &amp; operator= (const map &amp;__x)
-
-
-
 map &amp; operator= (map &amp;&amp;__x)
-
-
-
 map &amp; operator= (initializer_list&lt; value_type &gt; __l)
-
-
-
 reverse_iterator rbegin () noexcept
-
-
-
 const_reverse_iterator rbegin () const noexcept
-
-
-
 reverse_iterator rend () noexcept
-
-
-
 const_reverse_iterator rend () const noexcept
-
-
-
 void swap (map &amp;__x)
-
-
-
 iterator upper_bound (const key_type &amp;__x)
-
-
-
 const_iterator upper_bound (const key_type &amp;__x) const
-
-
-
 while (false)
-
-
-
 while (false)
-
-
-
 Public Attributes</code></pre>
 <p> _Safe_iterator_base * <code>_M_const_iterators</code> </p>
 <p> _Safe_iterator_base * <code>_M_iterators</code> </p>
@@ -260,21 +97,9 @@ Public Attributes</code></pre>
 <p> <code>do</code></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void _M_detach_all ()
-
-
-
 void _M_detach_singular ()
-
-
-
 __gnu_cxx::__mutex &amp; _M_get_mutex ()  throw ()
-
-
-
 void _M_revalidate_singular ()
-
-
-
 void _M_swap (_Safe_sequence_base &amp;__x)</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _Key, typename _Tp, typename _Compare = std::less&lt;_Key&gt;, typename _Allocator = std::allocator&lt;std::pair&lt;const _Key, _Tp&gt; &gt;&gt;class std::__debug::map&lt; _Key, _Tp, _Compare, _Allocator &gt;</h3>
@@ -296,7 +121,7 @@ void _M_swap (_Safe_sequence_base &amp;__x)</code></pre>
 <p>Detach all singular iterators. </p>
 <p> <code>Postcondition:</code></p>
 <dl>
-<dd>for all iterators i attached to this sequence, i-&gt;_M_version == _M_version.</dl>
+<dd>for all iterators i attached to this sequence, i-&gt;_M_version == _M_version.</dd></dl>
 <h3>__gnu_cxx::__mutex&amp; __gnu_debug::_Safe_sequence_base::_M_get_mutex () [protected], [inherited]</h3>
 <p>For use in _Safe_sequence. </p>
 <p> Referenced by __gnu_debug::_Safe_sequence&lt; _Sequence &gt;::_M_transfer_from_if().</p>

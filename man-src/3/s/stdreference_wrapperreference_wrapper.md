@@ -13,10 +13,8 @@ description: "std::reference_wrapper<T>::reference_wrapper – std::reference_wr
 reference_wrapper( U&amp;&amp; x ) noexcept(/*see below*/) ;<br />
 reference_wrapper( const reference_wrapper&amp; other ) noexcept; <code>(2)</code> </p>
 <pre><code>Constructs a new reference wrapper.
-
 1) Converts x to T&amp; as if by T&amp; t = std::forward&lt;U&gt;(x);
 , then stores a reference to t.This overload only participates in overload resolution if typename std::decay&lt;U&gt;::type is not the same type as reference_wrapper and the expression FUN(std::declval&lt;U&gt;()) is well - formed, where FUN names the set of imaginary functions void FUN(T &amp;) noexcept;
-
 void FUN(T &amp;&amp;) = delete;</code></pre>
 <p>2) Copy constructor. Stores a reference to other.get(). </p>
 <h2>Parameters</h2>

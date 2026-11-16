@@ -49,6 +49,6 @@ description: "Ecore_Sdl.h – Ecore SDL system functions."
 <p>Shuts down the Ecore_Sdl library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of times the system has been initialised without being shut down.</dl>
+<dd>The number of times the system has been initialised without being shut down.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -15,7 +15,7 @@ blk_free_tags - release a given set of tag maintenance info
 <h2>Arguments</h2>
 
 <i>bqt</i>
-<dl><dd><dd>the tag map to free</dl>
+<dl><dd></dd><dd>the tag map to free</dd></dl>
 
 <h2>Description</h2>
 

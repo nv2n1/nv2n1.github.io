@@ -52,55 +52,55 @@ description: "GridFTP Constants –"
 <p>GridFTP DCAU values. The enumeration values match the character value of the argument to DCAU. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_FTP_CONTROL_DCAU_NONE </i></p>
-<dd>No Authorization</p>
-<dt><i>GLOBUS_FTP_CONTROL_DCAU_SELF </i></p>
-<dd>Self Authorization</p>
-<dt><i>GLOBUS_FTP_CONTROL_DCAU_SUBJECT </i></p>
-<dd>Subject Authorization</p>
-<dt><i>GLOBUS_FTP_CONTROL_DCAU_DEFAULT </i></p>
-<dd>Default Authorization</dl>
+<dt><i>GLOBUS_FTP_CONTROL_DCAU_NONE </i></dt>
+<dd>No Authorization</dd>
+<dt><i>GLOBUS_FTP_CONTROL_DCAU_SELF </i></dt>
+<dd>Self Authorization</dd>
+<dt><i>GLOBUS_FTP_CONTROL_DCAU_SUBJECT </i></dt>
+<dd>Subject Authorization</dd>
+<dt><i>GLOBUS_FTP_CONTROL_DCAU_DEFAULT </i></dt>
+<dd>Default Authorization</dd></dl>
 <h3>enum <code>globus_ftp_control_mode_e</code></h3>
 <p>GridFTP MODE values. The enumeration values match the character value of the argument to MODE. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_FTP_CONTROL_MODE_NONE </i></p>
-<dd>Undefined MODE</p>
-<dt><i>GLOBUS_FTP_CONTROL_MODE_STREAM </i></p>
-<dd>Stream Mode</p>
-<dt><i>GLOBUS_FTP_CONTROL_MODE_BLOCK </i></p>
-<dd>Block Mode</p>
-<dt><i>GLOBUS_FTP_CONTROL_MODE_EXTENDED_BLOCK </i></p>
-<dd>Extended Block Mode</p>
-<dt><i>GLOBUS_FTP_CONTROL_MODE_COMPRESSED </i></p>
-<dd>Compressed Mode</dl>
+<dt><i>GLOBUS_FTP_CONTROL_MODE_NONE </i></dt>
+<dd>Undefined MODE</dd>
+<dt><i>GLOBUS_FTP_CONTROL_MODE_STREAM </i></dt>
+<dd>Stream Mode</dd>
+<dt><i>GLOBUS_FTP_CONTROL_MODE_BLOCK </i></dt>
+<dd>Block Mode</dd>
+<dt><i>GLOBUS_FTP_CONTROL_MODE_EXTENDED_BLOCK </i></dt>
+<dd>Extended Block Mode</dd>
+<dt><i>GLOBUS_FTP_CONTROL_MODE_COMPRESSED </i></dt>
+<dd>Compressed Mode</dd></dl>
 <h3>enum <code>globus_ftp_control_protection_t</code></h3>
 <p>GridFTP Protection Types. The enumeration values match the types of protection handled by the GridFTP server. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_CLEAR </i></p>
-<dd>Clear protection</p>
-<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_SAFE </i></p>
-<dd>Safe (integrity) protection</p>
-<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_CONFIDENTIAL </i></p>
-<dd>Confidential (encrypted) protection</p>
-<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_PRIVATE </i></p>
-<dd>Private (integrity and encrypted) protection</dl>
+<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_CLEAR </i></dt>
+<dd>Clear protection</dd>
+<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_SAFE </i></dt>
+<dd>Safe (integrity) protection</dd>
+<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_CONFIDENTIAL </i></dt>
+<dd>Confidential (encrypted) protection</dd>
+<dt><i>GLOBUS_FTP_CONTROL_PROTECTION_PRIVATE </i></dt>
+<dd>Private (integrity and encrypted) protection</dd></dl>
 <h3>enum <code>globus_ftp_control_striping_mode_e</code></h3>
 <p>GridFTP Striping Types. The enumeration values match the types of striping handled by the GridFTP server.</p>
 <h3>enum <code>globus_ftp_control_type_e</code></h3>
 <p>GridFTP TYPE values. The enumeration values match the character value of the argument to TYPE. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_FTP_CONTROL_TYPE_NONE </i></p>
-<dd>Undefined TYPE</p>
-<dt><i>GLOBUS_FTP_CONTROL_TYPE_ASCII </i></p>
-<dd>ASCII TYPE</p>
-<dt><i>GLOBUS_FTP_CONTROL_TYPE_EBCDIC </i></p>
-<dd>EBCDIC TYPE</p>
-<dt><i>GLOBUS_FTP_CONTROL_TYPE_IMAGE </i></p>
-<dd>Image TYPE</p>
-<dt><i>GLOBUS_FTP_CONTROL_TYPE_LOCAL </i></p>
-<dd>Local TYPE</dl>
+<dt><i>GLOBUS_FTP_CONTROL_TYPE_NONE </i></dt>
+<dd>Undefined TYPE</dd>
+<dt><i>GLOBUS_FTP_CONTROL_TYPE_ASCII </i></dt>
+<dd>ASCII TYPE</dd>
+<dt><i>GLOBUS_FTP_CONTROL_TYPE_EBCDIC </i></dt>
+<dd>EBCDIC TYPE</dd>
+<dt><i>GLOBUS_FTP_CONTROL_TYPE_IMAGE </i></dt>
+<dd>Image TYPE</dd>
+<dt><i>GLOBUS_FTP_CONTROL_TYPE_LOCAL </i></dt>
+<dd>Local TYPE</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_ftp_control from the source code.</p>

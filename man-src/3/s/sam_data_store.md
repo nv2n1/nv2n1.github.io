@@ -18,11 +18,12 @@ description: "sam_data_store – Store user data"
 <p>This call return CS_OK value if successful, otherwise and error is returned. </p>
 <h2>Errors</h2>
 <dl>
-<dt>CS_ERR_BAD_HANDLE</p>
-<dd>component was not initialized by calling <code><a href="/docs/linux/man/3-sam_initialize/">sam_initialize</a>(3)</code> or it was finalized.</p>
-<dt>CS_ERR_NO_MEMORY</p>
-<dd>internal malloc/realloc failed because data are too large</p>
-<dt>CS_ERR_LIBRARY</p>
-<dd>some internal error appeared (mostly because communication with parent process failed) </p>
+<dt>CS_ERR_BAD_HANDLE</dt>
+<dd>component was not initialized by calling <code><a href="/docs/linux/man/3-sam_initialize/">sam_initialize</a>(3)</code> or it was finalized.</dd>
+<dt>CS_ERR_NO_MEMORY</dt>
+<dd>internal malloc/realloc failed because data are too large</dd>
+<dt>CS_ERR_LIBRARY</dt>
+<dd>some internal error appeared (mostly because communication with parent process failed) </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-sam_data_getsize/">sam_data_getsize</a></code>(3), <code><a href="/docs/linux/man/3-sam_data_restore/">sam_data_restore</a></code>(3) <code>CS_ERR_TRY_AGAIN</code> Resource temporarily unavailable <code>CS_ERR_INVALID_PARAM</code> Invalid argument <code>CS_ERR_ACCESS</code> Permission denied <code>CS_ERR_LIBRARY</code> The connection failed <code>CS_ERR_INTERRUPT</code> System call inturrupted by a signal <code>CS_ERR_NOT_SUPPORTED</code> The requested protocol/functuality not supported <code>CS_ERR_MESSAGE_ERROR</code> Incorrect auth message received <code>CS_ERR_NO_MEMORY</code> Not enough memory to completed the requested task </p>
+</dl>

@@ -31,31 +31,27 @@ url: "/docs/linux/man/1-sql/"
 <h2>NOTES</h2>
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 &nbsp;<wbr>SQL does not support&nbsp;<wbr>'.'&nbsp;<wbr>(dots)&nbsp;<wbr>in table names.
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>Supported table name characters are only: 
  [A-Za-z][A-Za-z0-9_]*
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>A table name must start with a character, not a number.
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>Text-string matching requires the text part to be&nbsp;<wbr>'single quoted'. When run from the command line multiple queries should be contained in &quot;double quotes&quot;. e.g. 
- 
  d.vect map where=&quot;individual='juvenile' and area='beach'&quot; 
-
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>An error message such as&nbsp;<wbr>&quot;dbmi: Protocol error&quot;&nbsp;<wbr>either indicates an invalid column name or an unsupported column type (then the GRASS SQL parser needs to be extended).
-<dt>
-<dd> 
-&nbsp;<wbr>DBF column names are limited to 10 characters&nbsp;<wbr>(DBF API definition)</dl>
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>DBF column names are limited to 10 characters&nbsp;<wbr>(DBF API definition)</dd></dl>
 </dl>
 
 <h2>EXAMPLES</h2>

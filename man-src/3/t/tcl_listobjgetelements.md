@@ -27,19 +27,19 @@ int
 <code>Tcl_ListObjReplace</code>(<i>interp, listPtr, first, count, objc, objv</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) If an error occurs while converting an object to be a list object, an error message is left in the interpreter&#8217;s result object unless <i>interp</i> is NULL.</p>
-<dd>Tcl_Obj <i>*listPtr</i> (in/out) Points to the list object to be manipulated. If <i>listPtr</i> does not already point to a list object, an attempt will be made to convert it to one.</p>
-<dd>Tcl_Obj <i>*elemListPtr</i> (in/out) For <code>Tcl_ListObjAppendList</code>, this points to a list object containing elements to be appended onto <i>listPtr</i>. Each element of *<i>elemListPtr</i> will become a new element of <i>listPtr</i>. If *<i>elemListPtr</i> is not NULL and does not already point to a list object, an attempt will be made to convert it to one.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) For <code>Tcl_ListObjAppendElement</code>, points to the Tcl object that will be appended to <i>listPtr</i>. For <code>Tcl_SetListObj</code>, this points to the Tcl object that will be converted to a list object containing the <i>objc</i> elements of the array referenced by <i>objv</i>.</p>
-<dd>int <i>*objcPtr</i> (in) Points to location where <code>Tcl_ListObjGetElements</code> stores the number of element objects in <i>listPtr</i>.</p>
-<dd>Tcl_Obj <i>***objvPtr</i> (out) A location where <code>Tcl_ListObjGetElements</code> stores a pointer to an array of pointers to the element objects of <i>listPtr</i>.</p>
-<dd>int <i>objc</i> (in) The number of Tcl objects that <code>Tcl_NewListObj</code> will insert into a new list object, and <code>Tcl_ListObjReplace</code> will insert into <i>listPtr</i>. For <code>Tcl_SetListObj</code>, the number of Tcl objects to insert into <i>objPtr</i>.</p>
-<dd>Tcl_Obj *const <i>objv[]</i> (in) An array of pointers to objects. <code>Tcl_NewListObj</code> will insert these objects into a new list object and <code>Tcl_ListObjReplace</code> will insert them into an existing <i>listPtr</i>. Each object will become a separate list element.</p>
-<dd>int <i>*intPtr</i> (out) Points to location where <code>Tcl_ListObjLength</code> stores the length of the list.</p>
-<dd>int <i>index</i> (in) Index of the list element that <code>Tcl_ListObjIndex</code> is to return. The first element has index 0.</p>
-<dd>Tcl_Obj <i>**objPtrPtr</i> (out) Points to place where <code>Tcl_ListObjIndex</code> is to store a pointer to the resulting list element object.</p>
-<dd>int <i>first</i> (in) Index of the starting list element that <code>Tcl_ListObjReplace</code> is to replace. The list&#8217;s first element has index 0.</p>
-<dd>int <i>count</i> (in) The number of elements that <code>Tcl_ListObjReplace</code> is to replace. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) If an error occurs while converting an object to be a list object, an error message is left in the interpreter&#8217;s result object unless <i>interp</i> is NULL.</dd>
+<dd>Tcl_Obj <i>*listPtr</i> (in/out) Points to the list object to be manipulated. If <i>listPtr</i> does not already point to a list object, an attempt will be made to convert it to one.</dd>
+<dd>Tcl_Obj <i>*elemListPtr</i> (in/out) For <code>Tcl_ListObjAppendList</code>, this points to a list object containing elements to be appended onto <i>listPtr</i>. Each element of *<i>elemListPtr</i> will become a new element of <i>listPtr</i>. If *<i>elemListPtr</i> is not NULL and does not already point to a list object, an attempt will be made to convert it to one.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) For <code>Tcl_ListObjAppendElement</code>, points to the Tcl object that will be appended to <i>listPtr</i>. For <code>Tcl_SetListObj</code>, this points to the Tcl object that will be converted to a list object containing the <i>objc</i> elements of the array referenced by <i>objv</i>.</dd>
+<dd>int <i>*objcPtr</i> (in) Points to location where <code>Tcl_ListObjGetElements</code> stores the number of element objects in <i>listPtr</i>.</dd>
+<dd>Tcl_Obj <i>***objvPtr</i> (out) A location where <code>Tcl_ListObjGetElements</code> stores a pointer to an array of pointers to the element objects of <i>listPtr</i>.</dd>
+<dd>int <i>objc</i> (in) The number of Tcl objects that <code>Tcl_NewListObj</code> will insert into a new list object, and <code>Tcl_ListObjReplace</code> will insert into <i>listPtr</i>. For <code>Tcl_SetListObj</code>, the number of Tcl objects to insert into <i>objPtr</i>.</dd>
+<dd>Tcl_Obj *const <i>objv[]</i> (in) An array of pointers to objects. <code>Tcl_NewListObj</code> will insert these objects into a new list object and <code>Tcl_ListObjReplace</code> will insert them into an existing <i>listPtr</i>. Each object will become a separate list element.</dd>
+<dd>int <i>*intPtr</i> (out) Points to location where <code>Tcl_ListObjLength</code> stores the length of the list.</dd>
+<dd>int <i>index</i> (in) Index of the list element that <code>Tcl_ListObjIndex</code> is to return. The first element has index 0.</dd>
+<dd>Tcl_Obj <i>**objPtrPtr</i> (out) Points to place where <code>Tcl_ListObjIndex</code> is to store a pointer to the resulting list element object.</dd>
+<dd>int <i>first</i> (in) Index of the starting list element that <code>Tcl_ListObjReplace</code> is to replace. The list&#8217;s first element has index 0.</dd>
+<dd>int <i>count</i> (in) The number of elements that <code>Tcl_ListObjReplace</code> is to replace. </dd>
 </dl>
 <h2>Description</h2>
 <p>Tcl list objects have an internal representation that supports the efficient indexing and appending. The procedures described in this man page are used to create, modify, index, and append to Tcl list objects from C code. </p>
@@ -54,7 +54,7 @@ int
 <dd>
 <pre>result = Tcl_ListObjReplace(interp, listPtr, index, 0,
  objc, objv);</pre>
-</dl>
+</dd></dl>
 <p> Similarly, the following code appends the <i>objc</i> objects referenced by the array <i>objv</i> to the end of the list <i>listPtr</i>: </p>
 <dl COMPACT>
 <dd>
@@ -63,13 +63,13 @@ if (result == TCL_OK) {
  result = Tcl_ListObjReplace(interp, listPtr, length, 0,
  objc, objv);
 }</pre>
-</dl>
+</dd></dl>
 <p> The <i>count</i> list elements starting at <i>first</i> can be deleted by simply calling <code>Tcl_ListObjReplace</code> with a NULL <i>objvPtr</i>: </p>
 <dl COMPACT>
 <dd>
 <pre>result = Tcl_ListObjReplace(interp, listPtr, first, count,
  0, NULL);</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>Tcl_NewObj, Tcl_DecrRefCount, Tcl_IncrRefCount, Tcl_GetObjResult</p>
 <h2>Keywords</h2>

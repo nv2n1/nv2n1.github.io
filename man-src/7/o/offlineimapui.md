@@ -31,51 +31,39 @@ Blinkenlights is an interface designed to be sleek, fun to watch, and informativ
  Each light in the Blinkenlights interface represents a thread of execution --- that is, a particular task that OfflineIMAP is performing right now. The colors indicate what task the particular thread is performing, and are as follows: 
 
 <dl><dd>&bull; Black 
-
-<dl><dd><pre>indicates that this light's thread has terminated; it will light up again
-later when new threads start up. So, black indicates no activity.</pre></dl></dl><dl><dd>&bull; Red (Meaning 1) 
-
-<dl><dd><pre>is the color of the main program's thread, which basically does nothing but
-monitor the others. It might remind you of HAL 9000 in 2001.</pre></dl></dl><dl><dd>&bull; Gray 
-
-<dl><dd><pre>indicates that the thread is establishing a new connection to the IMAP
-server.</pre></dl></dl><dl><dd>&bull; Purple 
-
-<dl><dd><pre>is the color of an account synchronization thread that is monitoring the
-progress of the folders in that account (not generating any I/O).</pre></dl></dl><dl><dd>&bull; Cyan 
-
-<dl><dd><pre>indicates that the thread is syncing a folder.</pre></dl></dl><dl><dd>&bull; Green 
-
-<dl><dd><pre>means that a folder's message list is being loaded.</pre></dl></dl><dl><dd>&bull; Blue 
-
-<dl><dd><pre>is the color of a message synchronization controller thread.</pre></dl></dl><dl><dd>&bull; Orange 
-
-<dl><dd><pre>indicates that an actual message is being copied. (We use fuchsia for fake
-messages.)</pre></dl></dl><dl><dd>&bull; Red (meaning 2) 
-
-<dl><dd><pre>indicates that a message is being deleted.</pre></dl></dl><dl><dd>&bull; Yellow / bright orange 
-
-<dl><dd><pre>indicates that message flags are being added.</pre></dl></dl><dl><dd>&bull; Pink / bright red 
-
-<dl><dd><pre>indicates that message flags are being removed.</pre></dl></dl><dl><dd>&bull; Red / Black Flashing 
-
-<dl><dd><pre>corresponds to the countdown timer that runs between synchronizations.</pre></dl></dl>
+</dd><dl><dd><pre>indicates that this light's thread has terminated; it will light up again
+later when new threads start up. So, black indicates no activity.</pre></dd></dl></dl><dl><dd>&bull; Red (Meaning 1) 
+</dd><dl><dd><pre>is the color of the main program's thread, which basically does nothing but
+monitor the others. It might remind you of HAL 9000 in 2001.</pre></dd></dl></dl><dl><dd>&bull; Gray 
+</dd><dl><dd><pre>indicates that the thread is establishing a new connection to the IMAP
+server.</pre></dd></dl></dl><dl><dd>&bull; Purple 
+</dd><dl><dd><pre>is the color of an account synchronization thread that is monitoring the
+progress of the folders in that account (not generating any I/O).</pre></dd></dl></dl><dl><dd>&bull; Cyan 
+</dd><dl><dd><pre>indicates that the thread is syncing a folder.</pre></dd></dl></dl><dl><dd>&bull; Green 
+</dd><dl><dd><pre>means that a folder's message list is being loaded.</pre></dd></dl></dl><dl><dd>&bull; Blue 
+</dd><dl><dd><pre>is the color of a message synchronization controller thread.</pre></dd></dl></dl><dl><dd>&bull; Orange 
+</dd><dl><dd><pre>indicates that an actual message is being copied. (We use fuchsia for fake
+messages.)</pre></dd></dl></dl><dl><dd>&bull; Red (meaning 2) 
+</dd><dl><dd><pre>indicates that a message is being deleted.</pre></dd></dl></dl><dl><dd>&bull; Yellow / bright orange 
+</dd><dl><dd><pre>indicates that message flags are being added.</pre></dd></dl></dl><dl><dd>&bull; Pink / bright red 
+</dd><dl><dd><pre>indicates that message flags are being removed.</pre></dd></dl></dl><dl><dd>&bull; Red / Black Flashing 
+</dd><dl><dd><pre>corresponds to the countdown timer that runs between synchronizations.</pre></dd></dl></dl>
  
 
  The name of this interfaces derives from a bit of computer history. Eric Raymond's Jargon File defines blinkenlights, in part, as: 
 
 <dl><dd><pre>Front-panel diagnostic lights on a computer, esp. a dinosaur. Now that
 dinosaurs are rare, this term usually refers to status lights on a modem,
-network hub, or the like.</pre></dl>
+network hub, or the like.</pre></dd></dl>
  
 
  This term derives from the last word of the famous blackletter-Gothic sign in mangled pseudo-German that once graced about half the computer rooms in the English-speaking world. One version ran in its entirety as follows: 
 
-<dl><dd><pre>ACHTUNG! ALLES LOOKENSPEEPERS!</pre></dl><dl><dd><pre>Das computermachine ist nicht fuer gefingerpoken und mittengrabben.
+<dl><dd><pre>ACHTUNG! ALLES LOOKENSPEEPERS!</pre></dd></dl><dl><dd><pre>Das computermachine ist nicht fuer gefingerpoken und mittengrabben.
 Ist easy schnappen der springenwerk, blowenfusen und poppencorken
 mit spitzensparken. Ist nicht fuer gewerken bei das dumpkopfen.
 Das rubbernecken sichtseeren keepen das cotten-pickenen hans in das
-pockets muss; relaxen und watchen das blinkenlichten.</pre></dl>
+pockets muss; relaxen und watchen das blinkenlichten.</pre></dd></dl>
 
 <h2>Quiet</h2>
 
@@ -91,5 +79,5 @@ MachineUI generates output in a machine-parsable format. It is designed for othe
 
 <h2>See Also</h2>
 
-<dl><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/1-offlineimap/">offlineimap</a>(1)</pre></dl>
+<dl><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/1-offlineimap/">offlineimap</a>(1)</pre></dd></dl>
  

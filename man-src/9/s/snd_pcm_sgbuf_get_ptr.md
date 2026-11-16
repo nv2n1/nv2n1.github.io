@@ -15,11 +15,11 @@ snd_pcm_sgbuf_get_ptr - Get the virtual address at the corresponding offset
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>ofs</i>
-<dl><dd>byte offset</dl>
+<dl><dd>byte offset</dd></dl>
 
 <h2>Copyright</h2>
 

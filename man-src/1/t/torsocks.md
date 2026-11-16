@@ -19,22 +19,22 @@ description: "torsocks — Shell wrapper to simplify the use of the"
 <p> For further information on configuration, see <code><a href="/docs/linux/man/5-torsocks-conf/">torsocks.conf</a>(5).</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;shell</code></p>
-<dd> Create a new shell with LD_PRELOAD including <code><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8)</code>.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version.</p>
-<dt><code>-u, &#8211;user</code></p>
-<dd> Set username for the SOCKS5 authentication. Use for circuit isolation in Tor. Note that you MUST have a password set either by the command line, environment variable or configuration file (<a href="/docs/linux/man/5-torsocks-conf/">torsocks.conf</a>(5).</p>
-<dt><code>-p, &#8211;pass</code></p>
-<dd> Set password for the SOCKS5 authentication. Use for circuit isolation in Tor. Note that you MUST have a username set either by the command line, environment variable or configuration file (<a href="/docs/linux/man/5-torsocks-conf/">torsocks.conf</a>(5)).</p>
-<dt><code>-i, &#8211;isolate</code></p>
-<dd> Automatic tor isolation. Set the username and password for the SOCKS5 authentication method to a PID/current time based value automatically. Username and Password MUST NOT be set.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Activate the debug mode. Output will be written on stderr.</p>
-<dt><code>on | off</code></p>
-<dd> This option adds or removes <code><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8)</code> from the LD_PRELOAD environment variable for the current shell. If you want to use this option, you HAVE to source torsocks from your shell. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;shell</code></dt>
+<dd> Create a new shell with LD_PRELOAD including <code><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8)</code>.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version.</dd>
+<dt><code>-u, &#8211;user</code></dt>
+<dd> Set username for the SOCKS5 authentication. Use for circuit isolation in Tor. Note that you MUST have a password set either by the command line, environment variable or configuration file (<a href="/docs/linux/man/5-torsocks-conf/">torsocks.conf</a>(5).</dd>
+<dt><code>-p, &#8211;pass</code></dt>
+<dd> Set password for the SOCKS5 authentication. Use for circuit isolation in Tor. Note that you MUST have a username set either by the command line, environment variable or configuration file (<a href="/docs/linux/man/5-torsocks-conf/">torsocks.conf</a>(5)).</dd>
+<dt><code>-i, &#8211;isolate</code></dt>
+<dd> Automatic tor isolation. Set the username and password for the SOCKS5 authentication method to a PID/current time based value automatically. Username and Password MUST NOT be set.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Activate the debug mode. Output will be written on stderr.</dd>
+<dt><code>on | off</code></dt>
+<dd> This option adds or removes <code><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8)</code> from the LD_PRELOAD environment variable for the current shell. If you want to use this option, you HAVE to source torsocks from your shell. </dd>
 <pre>
 Add the torsocks library to LD_PRELOAD
 $ . torsocks on
@@ -42,8 +42,8 @@ $ . torsocks on
 Remove the torsocks library from LD_PRELOAD
 $ . torsocks off
 </pre>
-<dt><code>show | sh</code></p>
-<dd> Show the current value of the LD_PRELOAD environment variable. </p>
+<dt><code>show | sh</code></dt>
+<dd> Show the current value of the LD_PRELOAD environment variable. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> Please see <code><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8)</code> for more detail on possible environment variables. </p>

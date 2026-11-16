@@ -14,14 +14,14 @@ description: "rio_local_set_device_id – Set the base/extended device id for a 
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>RIO master port</dl>
+</dd><dd>RIO master port</dd></dl>
 <p> <i>did</i></p>
 <dl>
-<dd>Device ID value to be written</dl>
+<dd>Device ID value to be written</dd></dl>
 <h2>Description</h2>
 <p>Writes the base/extended device id from a device.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -18,42 +18,42 @@ description: "vstpg, vstpp – VisioBraille file transferring"
 <p> Before getting from terminal, leading path and trailing extensions are removed, but put back for local filename. </p>
 <h2>COMMAND-LINE OPTIONS</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd> ask for confirmation of transfer, for each file (on the terminal)</p>
-<dt><code>-f</code></p>
-<dd> don&#8217;t ask for such a confirmation (default)</p>
-<dt><code>-b</code></p>
-<dd> if they exists, recursively rename the old files with an added .x suffix, just like logrotate does</p>
-<dt><code>-n</code></p>
-<dd> do not keep such backup file (default)</p>
-<dt><code>-s</code> <i>socketport</i></p>
-<dd> use socketport as the port number instead of default for connecting to BrlNet</p>
-<dt><code>-k</code> <i>filename</i></p>
-<dd> use filename as key path instead of default for reading BrlNet&#8217;s authentication key</p>
-<dt><code>-d</code></p>
-<dd> use current directory rather than the download directory (see <i>vbs_dir</i> below)</p>
-<dt><code>-o</code> <i>filename</i></p>
-<dd> also read filename as config file </p>
+<dt><code>-i</code></dt>
+<dd> ask for confirmation of transfer, for each file (on the terminal)</dd>
+<dt><code>-f</code></dt>
+<dd> don&#8217;t ask for such a confirmation (default)</dd>
+<dt><code>-b</code></dt>
+<dd> if they exists, recursively rename the old files with an added .x suffix, just like logrotate does</dd>
+<dt><code>-n</code></dt>
+<dd> do not keep such backup file (default)</dd>
+<dt><code>-s</code> <i>socketport</i></dt>
+<dd> use socketport as the port number instead of default for connecting to BrlNet</dd>
+<dt><code>-k</code> <i>filename</i></dt>
+<dd> use filename as key path instead of default for reading BrlNet&#8217;s authentication key</dd>
+<dt><code>-d</code></dt>
+<dd> use current directory rather than the download directory (see <i>vbs_dir</i> below)</dd>
+<dt><code>-o</code> <i>filename</i></dt>
+<dd> also read filename as config file </dd>
 </dl>
 <h2>CONFIG FILE</h2>
 <p> <i>vstpg</i> and <i>vstpp</i> read a configuration file <code>$HOME/.vstprc</code> which contains keywords or equalities, one per line (what follows a # is ignored). </p>
 <p> You can ask them to also read any other file thanks to the <code>-o</code> option. </p>
 <p> Here are keywords: </p>
 <dl>
-<dt><code>backup</code></p>
-<dd> make <code>-b</code> option the default </p>
-<dt><code>nobackup</code></p>
-<dd> make <code>-f</code> option the default </p>
-<dt>and equalities:</p>
+<dt><code>backup</code></dt>
+<dd> make <code>-b</code> option the default </dd>
+<dt><code>nobackup</code></dt>
+<dd> make <code>-f</code> option the default </dd>
+<dt>and equalities:</dt>
 <dd>
-<dt><code>keyname</code> = <i>filename</i></p>
-<dd> use this file instead of default, to find BrlNet&#8217;s authentication key </p>
-<dt><code>socketport</code> = <i>port</i></p>
-<dd> use this port number, instead of default, to connect to BrlNet </p>
-<dt><code>vbs_ext</code> = <i>.ext</i></p>
-<dd> use .ext as an extension for downloaded files (.vis by default) this is overridden on command line if an extension is provided in the file name </p>
-<dt><code>vbs_dir</code> = <i>path</i></p>
-<dd> use path instead of current directory for putting files, except when using the <code>-d</code> option, or if the filename begins with &#8216;.&#8217; </p>
+</dd><dt><code>keyname</code> = <i>filename</i></dt>
+<dd> use this file instead of default, to find BrlNet&#8217;s authentication key </dd>
+<dt><code>socketport</code> = <i>port</i></dt>
+<dd> use this port number, instead of default, to connect to BrlNet </dd>
+<dt><code>vbs_ext</code> = <i>.ext</i></dt>
+<dd> use .ext as an extension for downloaded files (.vis by default) this is overridden on command line if an extension is provided in the file name </dd>
+<dt><code>vbs_dir</code> = <i>path</i></dt>
+<dd> use path instead of current directory for putting files, except when using the <code>-d</code> option, or if the filename begins with &#8216;.&#8217; </dd>
 </dl>
 <h2>RETURNED VALUE</h2>
 <table>

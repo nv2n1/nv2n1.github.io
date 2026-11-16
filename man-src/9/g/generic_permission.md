@@ -14,10 +14,10 @@ description: "generic_permission – check for access rights on a Posix-like fil
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>inode to check access rights for</dl>
+</dd><dd>inode to check access rights for</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>right to check for (<code>MAY_READ</code>, <code>MAY_WRITE</code>, <code>MAY_EXEC</code>, &#8230;)</dl>
+<dd>right to check for (<code>MAY_READ</code>, <code>MAY_WRITE</code>, <code>MAY_EXEC</code>, &#8230;)</dd></dl>
 <h2>Description</h2>
 <p>Used to check for read/write/execute permissions on a file. We use &#8220;fsuid&#8221; for this, letting us set arbitrary permissions for filesystem access without changing the &#8220;normal&#8221; uids which are used for other things. </p>
 <p> generic_permission is rcu-walk aware. It returns -ECHILD in case an rcu-walk request cannot be satisfied (eg. requires blocking or too much complexity). It would then be called again in ref-walk mode.</p>

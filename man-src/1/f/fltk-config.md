@@ -21,45 +21,45 @@ url: "/docs/linux/man/1-fltk-config/"
  The following options are supported:
 <dl>
 <dt>--api-version
-<dd> 
+</dt><dd> 
  Displays the current FLTK API version number, e.g. &quot;1.1&quot;.
-<dt>--cc
-<dd>
-<dt>--cxx
-<dd> 
+</dd><dt>--cc
+</dt><dd>
+</dd><dt>--cxx
+</dt><dd> 
  Displays the C/C++ compiler that was used to compile FLTK.
-<dt>--cflags
-<dd>
-<dt>--cxxflags
-<dd> 
+</dd><dt>--cflags
+</dt><dd>
+</dd><dt>--cxxflags
+</dt><dd> 
  Displays the C/C++ compiler options to use when compiling source files that use FLTK.
-<dt>--compile <i>program.cxx</i>
-<dd> 
+</dd><dt>--compile <i>program.cxx</i>
+</dt><dd> 
  Compiles the source file <i>program.cxx</i> into <i>program</i>. This option implies &quot;--post <i>program</i>&quot;.
-<dt>-g
-<dd> 
+</dd><dt>-g
+</dt><dd> 
  Enables debugging information when compiling with the <i>--compile</i> option.
-<dt>--ldflags
-<dd> 
+</dd><dt>--ldflags
+</dt><dd> 
  Displays the linker options to use when linking a FLTK application.
-<dt>--ldstaticflags
-<dd> 
+</dd><dt>--ldstaticflags
+</dt><dd> 
  Displays the linker options to use when linking a FLTK application to the static FLTK libraries.
-<dt>--libs
-<dd> 
+</dd><dt>--libs
+</dt><dd> 
  Displays the full path to the FLTK library files, to be used for dependency checking.
-<dt>--use-gl
-<dd> 
+</dd><dt>--use-gl
+</dt><dd> 
  Enables OpenGL support.
-<dt>--use-glut
-<dd> 
+</dd><dt>--use-glut
+</dt><dd> 
  Enables GLUT support.
-<dt>--use-images
-<dd> 
+</dd><dt>--use-images
+</dt><dd> 
  Enables image file support.
-<dt>--version
-<dd> 
- Displays the current FLTK version number, e.g. &quot;1.1.0&quot;.</dl>
+</dd><dt>--version
+</dt><dd> 
+ Displays the current FLTK version number, e.g. &quot;1.1.0&quot;.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

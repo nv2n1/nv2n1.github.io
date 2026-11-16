@@ -32,13 +32,13 @@ ibacm[-D][-P][-A addr_file][-O option_file]
 
 <dl>
 <dt>-D
-<dd> run in daemon mode (default)
-<dt>-P
-<dd> run as standard process
-<dt>-A addr_file
-<dd> address configuration file
-<dt>-O option_file
-<dd> option configuration file</dl>
+</dt><dd> run in daemon mode (default)
+</dd><dt>-P
+</dt><dd> run as standard process
+</dd><dt>-A addr_file
+</dt><dd> address configuration file
+</dd><dt>-O option_file
+</dt><dd> option configuration file</dd></dl>
 
 <h2>QUICK START GUIDE</h2>
 

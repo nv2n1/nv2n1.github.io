@@ -11,7 +11,6 @@ description: "sc::DiscreteConnollyShape –"
 <p> <code>DiscreteConnollyShape</code> and <code>ConnollyShape</code> should produce the same result.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;molshape.h&gt;</code></pre>
 <p> Inherits <code>sc::UnionShape</code>.</p>
 <h3>Public Member Functions</h3>

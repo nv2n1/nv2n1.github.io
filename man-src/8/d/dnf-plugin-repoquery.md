@@ -16,38 +16,38 @@ description: "dnf.plugin.repoquery – DNF repoquery Plugin"
 <h3>Select Options</h3>
 <p>Together with <code>&lt;pkg-spec&gt;</code>, control what packages are displayed in the output. If <code>&lt;pkg-spec&gt;</code> is given, the set of resulting packages matching the specification. All packages are considered if no <code>&lt;pkg-spec&gt;</code> is specified.</p>
 <dl>
-<dt><code>&lt;pkg-spec&gt;</code></p>
-<dd>Package specification like: name[-[epoch:]version[-release]][.arch]. See <a rel="nofollow" href="http://dnf.readthedocs.org/en/latest/command_ref.html#specifying-packages">http://dnf.readthedocs.org/en/latest/command_ref.html#specifying-packages</a></p>
-<dt><code>&#8211;arch &lt;arch&gt;</code></p>
-<dd>Limit the resulting set only to packages of arch <code>&lt;arch&gt;</code>.</p>
-<dt><code>-f &lt;file&gt;</code>, <code>&#8211;file &lt;file&gt;</code></p>
-<dd>Limit the resulting set only to package that owns <code>&lt;file&gt;</code>.</p>
-<dt><code>&#8211;repoid &lt;id&gt;</code></p>
-<dd>Limit the resulting set only to packages from repo identified by <code>&lt;id&gt;</code>.</p>
-<dt><code>&#8211;whatprovides &lt;capability&gt;</code></p>
-<dd>Limit the resulting set only to packages that provide <code>&lt;capability&gt;</code>.</p>
-<dt><code>&#8211;whatrequires &lt;capability&gt;</code></p>
-<dd>Limit the resulting set only to packages that require <code>&lt;capability&gt;</code>.</dl>
+<dt><code>&lt;pkg-spec&gt;</code></dt>
+<dd>Package specification like: name[-[epoch:]version[-release]][.arch]. See <a rel="nofollow" href="http://dnf.readthedocs.org/en/latest/command_ref.html#specifying-packages">http://dnf.readthedocs.org/en/latest/command_ref.html#specifying-packages</a></dd>
+<dt><code>&#8211;arch &lt;arch&gt;</code></dt>
+<dd>Limit the resulting set only to packages of arch <code>&lt;arch&gt;</code>.</dd>
+<dt><code>-f &lt;file&gt;</code>, <code>&#8211;file &lt;file&gt;</code></dt>
+<dd>Limit the resulting set only to package that owns <code>&lt;file&gt;</code>.</dd>
+<dt><code>&#8211;repoid &lt;id&gt;</code></dt>
+<dd>Limit the resulting set only to packages from repo identified by <code>&lt;id&gt;</code>.</dd>
+<dt><code>&#8211;whatprovides &lt;capability&gt;</code></dt>
+<dd>Limit the resulting set only to packages that provide <code>&lt;capability&gt;</code>.</dd>
+<dt><code>&#8211;whatrequires &lt;capability&gt;</code></dt>
+<dd>Limit the resulting set only to packages that require <code>&lt;capability&gt;</code>.</dd></dl>
 <h3>Query Options</h3>
 <p>Set what information is displayed about each package. </p>
 <p> The following are mutually exclusive, i.e. at most one can be specified. If no query option is given, matching packages are displayed in the standard NEVRA notation.</p>
 <dl>
-<dt><code>&#8211;conflicts</code></p>
-<dd>Display capabilities that the package conflicts with. Same as <code>&#8211;qf &quot;%{conflicts}</code>.</p>
-<dt><code>-i, &#8211;info</code></p>
-<dd>Show detailed information about the package.</p>
-<dt><code>-l, &#8211;list</code></p>
-<dd>Show list of files in the package.</p>
-<dt><code>-s, &#8211;source</code></p>
-<dd>Show package source RPM name.</p>
-<dt><code>&#8211;obsoletes</code></p>
-<dd>Display capabilities that the package obsoletes. Same as <code>&#8211;qf &quot;%{obsoletes}</code>.</p>
-<dt><code>&#8211;provides</code></p>
-<dd>Display capabilities provided by the package. Same as <code>&#8211;qf &quot;%{provides}</code>.</p>
-<dt><code>&#8211;qf &lt;format&gt;</code>, <code>&#8211;queryformat &lt;format&gt;</code></p>
-<dd>Custom display format. <code>&lt;format&gt;</code> is a string to output for each matched package. Every occurrence of <code>%{&lt;tag&gt;}</code> within is replaced by corresponding attribute of the package. List of recognized tags can be displayed by running <code>dnf repoquery &#8211;querytags</code>.</p>
-<dt><code>&#8211;requires</code></p>
-<dd>Display capabilities that the package depends on. Same as <code>&#8211;qf &quot;%{requires}</code>.</dl>
+<dt><code>&#8211;conflicts</code></dt>
+<dd>Display capabilities that the package conflicts with. Same as <code>&#8211;qf &quot;%{conflicts}</code>.</dd>
+<dt><code>-i, &#8211;info</code></dt>
+<dd>Show detailed information about the package.</dd>
+<dt><code>-l, &#8211;list</code></dt>
+<dd>Show list of files in the package.</dd>
+<dt><code>-s, &#8211;source</code></dt>
+<dd>Show package source RPM name.</dd>
+<dt><code>&#8211;obsoletes</code></dt>
+<dd>Display capabilities that the package obsoletes. Same as <code>&#8211;qf &quot;%{obsoletes}</code>.</dd>
+<dt><code>&#8211;provides</code></dt>
+<dd>Display capabilities provided by the package. Same as <code>&#8211;qf &quot;%{provides}</code>.</dd>
+<dt><code>&#8211;qf &lt;format&gt;</code>, <code>&#8211;queryformat &lt;format&gt;</code></dt>
+<dd>Custom display format. <code>&lt;format&gt;</code> is a string to output for each matched package. Every occurrence of <code>%{&lt;tag&gt;}</code> within is replaced by corresponding attribute of the package. List of recognized tags can be displayed by running <code>dnf repoquery &#8211;querytags</code>.</dd>
+<dt><code>&#8211;requires</code></dt>
+<dd>Display capabilities that the package depends on. Same as <code>&#8211;qf &quot;%{requires}</code>.</dd></dl>
 <h2>Examples</h2>
 <p>Display NEVRAS of all available packages matching <code>light*</code>: </p>
 <pre>dnf repoquery 'light*'</pre>

@@ -11,9 +11,9 @@ description: "xmlif – conditional processing instructions for XML"
 <p> xmlif &#8211; conditional processing instructions for XML </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>xmlif</code> [attrib=value&#8230;]</dl>
+<dt> <code>xmlif</code> [attrib=value&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>xmlif filters XML according to conditionalizing markup. This can be useful for formatting one of several versions of an XML document depending on conditions passed to the command. </p>
+<dd>xmlif filters XML according to conditionalizing markup. This can be useful for formatting one of several versions of an XML document depending on conditions passed to the command. </dd>
 <p> Attribute/value pairs from the command line are matched against the attributes associated with certain processing instructions in the document. The instructions are &lt;?xmlif if?&gt; and its inverse &lt;?xmlif if not?&gt;, &lt;?xmlif elif?&gt; and its inverse &lt;?xmlif elif not?&gt;, &lt;?xmlif else?&gt;, and &lt;?xmlif fi?&gt;. </p>
 <p> Argument/value pairs given on the command line are checked against the value of corresponding attributes in the conditional processing instructions. An `attribute match&#8217; happens if an attribute occurs in both the command-line arguments and the tag, and the values match. An `attribute mismatch&#8217; happens if an attribute occurs in both the command-line arguments and the tag, but the values do not match. </p>
 <p> Spans between &lt;?xmlif if?&gt; or &lt;?xmlif elif?&gt; and the next conditional processing instruction at the same nesting level are passed through unaltered if there is at least one attribute match and no attribute mismatch; spans between &lt;?xmlif if not?&gt; and &lt;?xmlif elif not?&gt; and the next conditional processing instruction are passed otherwise. Spans between &lt;?xmlif else?&gt; and the next conditional-processing tag are passed through only if no previous span at the same level has been passed through. &lt;?xmlif if?&gt; and &lt;?xmlif fi?&gt; (and their `not&#8217; variants) change the current nesting level; &lt;?xmlif else?&gt; and &lt;?xmlif elif?&gt; do not. </p>
@@ -22,7 +22,7 @@ description: "xmlif – conditional processing instructions for XML"
 <p> Here is an example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Always issue this text.&lt; ? xmlif if condition = 'html' ? &gt;
                                                              Issue this text if 'condition=html' is given on the command line.&lt;
@@ -36,10 +36,10 @@ Always issue this text.&lt; ? xmlif if condition = 'html' ? &gt;
                              ? &gt;
                                    Always issue this text.
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>Eric S. Raymond</code> &lt;esr [at] snark.thyrsus.com&gt;</p>
 <dl>
 <dt>
-<dd> Author of xmlif program</dl>
+</dt><dd> Author of xmlif program</dd></dl>
 <h2>Index</h2>

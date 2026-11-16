@@ -15,68 +15,68 @@ description: "usbhid-ups – Driver for USB/HID UPS equipment"
 <p><code>usbhid-ups</code> brings USB/HID UPS monitoring to NUT on all platform supporting USB through libusb. It should detect any UPS that uses the HID power device class, but the amount of data will vary depending on the manufacturer and model. </p>
 <p> At the present time, usbhid-ups supports: </p>
 <dl>
-<dd>&bull; the newer Eaton USB models,</dl>
+<dd>&bull; the newer Eaton USB models,</dd></dl>
 <dl>
-<dd>&bull; all MGE USB models,</dl>
+<dd>&bull; all MGE USB models,</dd></dl>
 <dl>
-<dd>&bull; all Dell USB models,</dl>
+<dd>&bull; all Dell USB models,</dd></dl>
 <dl>
-<dd>&bull; some APC models,</dl>
+<dd>&bull; some APC models,</dd></dl>
 <dl>
-<dd>&bull; some Belkin models,</dl>
+<dd>&bull; some Belkin models,</dd></dl>
 <dl>
-<dd>&bull; some Cyber Power Systems models.</dl>
+<dd>&bull; some Cyber Power Systems models.</dd></dl>
 <dl>
-<dd>&bull; some TrippLite models</dl>
+<dd>&bull; some TrippLite models</dd></dl>
 <p> For a more complete list, refer to the NUT hardware compatibility list, available in the source distribution as data/drivers.list, or on the NUT website. You may use the &quot;explore&quot; driver option to gather information from HID UPSes which are not yet supported; see below for details. </p>
 <p> This driver is known to work on: </p>
 <dl>
-<dd>&bull; most Linux systems,</dl>
+<dd>&bull; most Linux systems,</dd></dl>
 <dl>
-<dd>&bull; FreeBSD (beta stage) and maybe other *BSD,</dl>
+<dd>&bull; FreeBSD (beta stage) and maybe other *BSD,</dd></dl>
 <dl>
-<dd>&bull; Darwin / Mac OS X,</dl>
+<dd>&bull; Darwin / Mac OS X,</dd></dl>
 <dl>
-<dd>&bull; Solaris 10.</dl>
+<dd>&bull; Solaris 10.</dd></dl>
 <h2>Extra Arguments</h2>
 <p>This driver also supports the following optional settings: </p>
 <p> <code>offdelay</code>=<i>num</i></p>
 <dl>
-<dd>Set the timer before the UPS is turned off after the kill power command is sent (via the <code>-k</code> switch). </p>
+<dd>Set the timer before the UPS is turned off after the kill power command is sent (via the <code>-k</code> switch). </dd>
 <p> The default value is 20 (in seconds). Usually this <code>must be lower</code> than <i>ondelay</i>, but the driver will <code>not</code> warn you upon startup if it isn&#8217;t.</dl>
 <p> <code>ondelay</code>=<i>num</i></p>
 <dl>
-<dd>Set the timer for the UPS to switch on in case the power returns after the kill power command had been sent but before the actual switch off. This ensures the machines connected to the UPS are, in all cases, rebooted after a power failure. </p>
+<dd>Set the timer for the UPS to switch on in case the power returns after the kill power command had been sent but before the actual switch off. This ensures the machines connected to the UPS are, in all cases, rebooted after a power failure. </dd>
 <p> The default value is 30 (in seconds). Usually this <code>must be greater</code> than offdelay, but the driver will <code>not</code> warn you upon startup if it isn&#8217;t. Some UPS&#8217;es will restart no matter what, even if the power is (still) out at the moment this timer elapses. In that case, you could try if setting <i>ondelay = -1</i> in <code>ups.conf</code> helps.</dl>
 <p> <code>pollfreq</code>=<i>num</i></p>
 <dl>
-<dd>Set polling frequency, in seconds, to reduce the USB data flow. Between two polling requests, the driver will wait for interrupts (aka UPS notifications), which are data changes returned by the UPS by itself. This mechanism allow to avoid or reduce staleness message, due to the UPS being temporarily overloaded with too much polling requests. The default value is 30 (in seconds).</dl>
+<dd>Set polling frequency, in seconds, to reduce the USB data flow. Between two polling requests, the driver will wait for interrupts (aka UPS notifications), which are data changes returned by the UPS by itself. This mechanism allow to avoid or reduce staleness message, due to the UPS being temporarily overloaded with too much polling requests. The default value is 30 (in seconds).</dd></dl>
 <p> <code>pollonly</code></p>
 <dl>
-<dd>If this flag is set, the driver will ignore interrupts it receives from the UPS (not recommended, but needed if these reports are broken on your UPS).</dl>
+<dd>If this flag is set, the driver will ignore interrupts it receives from the UPS (not recommended, but needed if these reports are broken on your UPS).</dd></dl>
 <p> <code>vendor</code>=<i>regex</i>, <code>product</code>=<i>regex</i>, <code>serial</code>=<i>regex</i>, <code>vendorid</code>=<i>regex</i>, <code>productid</code>=<i>regex</i></p>
 <dl>
-<dd>Select a specific UPS, in case there is more than one connected via USB Each option specifies an extended regular expression (see <a href="/docs/linux/man/7-regex/">regex</a>(7)) that must match the UPS&#8217;s entire vendor/product/serial string (minus any surrounding whitespace), or the whole 4-digit hexadecimal code for vendorid and productid. Try <code>-DD</code> for finding out the strings to match. </p>
+<dd>Select a specific UPS, in case there is more than one connected via USB Each option specifies an extended regular expression (see <a href="/docs/linux/man/7-regex/">regex</a>(7)) that must match the UPS&#8217;s entire vendor/product/serial string (minus any surrounding whitespace), or the whole 4-digit hexadecimal code for vendorid and productid. Try <code>-DD</code> for finding out the strings to match. </dd>
 <p> Examples: </p>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> -x vendor=&quot;Foo.Corporation.*&quot;</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> -x vendorid=051d* (APC)</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> -x product=&quot;.*(Smart|Back)-?UPS.*&quot;</dl>
 </dl>
 <p> <code>bus</code>=<i>regex</i></p>
 <dl>
-<dd>Select a UPS on a specific USB bus or group of busses. The argument is a regular expression that must match the bus name where the UPS is connected (e.g. bus=&quot;002&quot;, bus=&quot;00[2-3]&quot;).</dl>
+<dd>Select a UPS on a specific USB bus or group of busses. The argument is a regular expression that must match the bus name where the UPS is connected (e.g. bus=&quot;002&quot;, bus=&quot;00[2-3]&quot;).</dd></dl>
 <p> <code>explore</code></p>
 <dl>
-<dd>With this option, the driver will connect to any device, including ones that are not yet supported. This must always be combined with the &quot;vendorid&quot; option. In this mode, the driver will not do anything useful except for printing debugging information (typically used with -DD).</dl>
+<dd>With this option, the driver will connect to any device, including ones that are not yet supported. This must always be combined with the &quot;vendorid&quot; option. In this mode, the driver will not do anything useful except for printing debugging information (typically used with -DD).</dd></dl>
 <p> <code>maxreport</code></p>
 <dl>
-<dd>With this option, the driver activates a tweak to workaround buggy firmware returning invalid HID report length. Some APC Back-UPS units are known to have this bug.</dl>
+<dd>With this option, the driver activates a tweak to workaround buggy firmware returning invalid HID report length. Some APC Back-UPS units are known to have this bug.</dd></dl>
 <h2>Installation</h2>
 <p>This driver is not built by default. You can build it by using &quot;configure &#8211;with-usb=yes&quot;. Note that it will also install other USB drivers. </p>
 <p> You also need to install manually the legacy hotplug files (libhidups and libhid.usermap, generally in /etc/hotplug/usb/), or the udev file (nut-usbups.rules, generally in /etc/udev/rules.d/) to address the permission settings problem. For more information, refer to the README file in nut/scripts/hotplug or nut/scripts/udev. </p>
@@ -93,7 +93,7 @@ description: "usbhid-ups – Driver for USB/HID UPS equipment"
  driver = usbhid-ups
  port = auto
  vendorid = 09ae</pre>
-</dl>
+</dd></dl>
 <h2>Known Issues And Bugs</h2>
 <h3>Repetitive timeout and staleness</h3>
 <p>Some models tends to be unresponsive with the default polling frequency. The result is that your system log will have lots of messages like: </p>
@@ -102,7 +102,7 @@ description: "usbhid-ups – Driver for USB/HID UPS equipment"
 <pre>usb 2-1: control timeout on ep0in
 usb 2-1: usbfs: USBDEVFS_CONTROL failed cmd usbhid-ups rqt 128 rq 6 len 256
 ret -110</pre>
-</dl>
+</dd></dl>
 <p> In this case, simply modify the general parameter &quot;pollinterval&quot; to a higher value (like 10 for 10 seconds). This should solve the issue.</p>
 <h3>Got EPERM: Operation not permitted upon driver startup</h3>
 <p>You have forgotten to install the hotplug files, as explained in the INSTALLATION section above. Don&#8217;t forget to restart hotplug so that it applies these changes.</p>

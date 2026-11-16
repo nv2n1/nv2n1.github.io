@@ -20,34 +20,34 @@ description: "orte-dvm, ompi_dvm – Establish a Distributed Virtual Machine (DV
 <p> <i>orte-dvm</i> will establish a DVM that can be used to execute subsequent applications. Use of <i>orte-dvm</i> can be advantageous, for example, when you want to execute a number of short-lived tasks. In such cases, the time required to start the ORTE DVM can be a significant fraction of the time to execute the overall application. Thus, creating a persistent DVM can speed the overall execution. In addition, a persistent DVM will support executing multiple parallel applications while maintaining separation between their respective cores.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, &#8211;help</p>
-<dd> Display help for this command</p>
-<dt><code>-V</code>, &#8211;version</p>
-<dd> Print version number. If no other arguments are given, this will also cause orte-dvm to exit.</dl>
+<dt><code>-h</code>, &#8211;help</dt>
+<dd> Display help for this command</dd>
+<dt><code>-V</code>, &#8211;version</dt>
+<dd> Print version number. If no other arguments are given, this will also cause orte-dvm to exit.</dd></dl>
 <p> Use one of the following options to specify which hosts (nodes) of the cluster to use for the DVM.</p>
 <dl>
-<dt><code>-H</code>, -host, &#8211;host &lt;host1,host2,&#8230;,hostN&gt;</p>
-<dd> List of hosts for the DVM.</p>
-<dt><code>-hostfile</code>, &#8211;hostfile &lt;hostfile&gt;</p>
-<dd> Provide a hostfile to use.</p>
-<dt><code>-machinefile</code>, &#8211;machinefile &lt;machinefile&gt;</p>
-<dd> Synonym for <i>-hostfile</i>.</p>
-<dt><code>&#8211;prefix </code>&lt;dir&gt;</p>
-<dd> Prefix directory that will be used to set the <i>PATH</i> and <i>LD_LIBRARY_PATH</i> on the remote node before invoking the ORTE daemon.</dl>
+<dt><code>-H</code>, -host, &#8211;host &lt;host1,host2,&#8230;,hostN&gt;</dt>
+<dd> List of hosts for the DVM.</dd>
+<dt><code>-hostfile</code>, &#8211;hostfile &lt;hostfile&gt;</dt>
+<dd> Provide a hostfile to use.</dd>
+<dt><code>-machinefile</code>, &#8211;machinefile &lt;machinefile&gt;</dt>
+<dd> Synonym for <i>-hostfile</i>.</dd>
+<dt><code>&#8211;prefix </code>&lt;dir&gt;</dt>
+<dd> Prefix directory that will be used to set the <i>PATH</i> and <i>LD_LIBRARY_PATH</i> on the remote node before invoking the ORTE daemon.</dd></dl>
 <p> Setting MCA parameters:</p>
 <dl>
-<dt><code>-gmca</code>, &#8211;gmca &lt;key&gt; &lt;value&gt;</p>
-<dd> Pass global MCA parameters that are applicable to all contexts. <i>&lt;key&gt;</i> is the parameter name; <i>&lt;value&gt;</i> is the parameter value.</p>
-<dt><code>-mca</code>, &#8211;mca &lt;key&gt; &lt;value&gt;</p>
-<dd> Send arguments to various MCA modules. See the &quot;MCA&quot; section, below.</p>
-<dt><code>-report-uri</code>, &#8211;report-uri &lt;channel&gt;</p>
-<dd> Print out orte-dvm&#8217;s URI during startup. The channel must be either a &#8216;-&#8216; to indicate that the URI is to be output to stdout, a &#8216;+&#8217; to indicate that the URI is to be output to stderr, or a filename to which the URI is to be written.</dl>
+<dt><code>-gmca</code>, &#8211;gmca &lt;key&gt; &lt;value&gt;</dt>
+<dd> Pass global MCA parameters that are applicable to all contexts. <i>&lt;key&gt;</i> is the parameter name; <i>&lt;value&gt;</i> is the parameter value.</dd>
+<dt><code>-mca</code>, &#8211;mca &lt;key&gt; &lt;value&gt;</dt>
+<dd> Send arguments to various MCA modules. See the &quot;MCA&quot; section, below.</dd>
+<dt><code>-report-uri</code>, &#8211;report-uri &lt;channel&gt;</dt>
+<dd> Print out orte-dvm&#8217;s URI during startup. The channel must be either a &#8216;-&#8216; to indicate that the URI is to be output to stdout, a &#8216;+&#8217; to indicate that the URI is to be output to stderr, or a filename to which the URI is to be written.</dd></dl>
 <p> The following options are useful for developers; they are not generally useful to most ORTE and/or MPI users:</p>
 <dl>
-<dt><code>-d</code>, &#8211;debug-devel</p>
-<dd> Enable debugging of the ORTE layer.</p>
-<dt><code>&#8211;debug-daemons-file</code></p>
-<dd> Enable debugging of the ORTE daemons in the DVM, storing output in files.</dl>
+<dt><code>-d</code>, &#8211;debug-devel</dt>
+<dd> Enable debugging of the ORTE layer.</dd>
+<dt><code>&#8211;debug-daemons-file</code></dt>
+<dd> Enable debugging of the ORTE daemons in the DVM, storing output in files.</dd></dl>
 <p> There may be other options listed with <i>orte-dvm &#8211;help</i>.</p>
 <h2>DESCRIPTION</h2>
 <p> <i>orte-dvm</i> starts a Distributed Virtual Machine (DVM) by launching a daemon on each node of the allocation, as modified or specified by the <i>-host</i> and <i>-hostfile</i> options. Applications can subsequently be executed using the <i>orte-submit</i> command. The DVM remains in operation until receiving the <i>orte-submit -terminate</i> command.</p>
@@ -55,8 +55,8 @@ description: "orte-dvm, ompi_dvm – Establish a Distributed Virtual Machine (DV
 <p> Host nodes can be identified on the <i>orte-dvm</i> command line with the <i>-host</i> option or in a hostfile. </p>
 <p> For example,</p>
 <dl>
-<dt>orte-dvm -H aa,aa,bb ./a.out</p>
-<dd> launches two processes on node aa and one on bb.</dl>
+<dt>orte-dvm -H aa,aa,bb ./a.out</dt>
+<dd> launches two processes on node aa and one on bb.</dd></dl>
 <p> Or, consider the hostfile </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=2<br />

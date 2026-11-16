@@ -19,10 +19,10 @@ description: "QuantLib::BinomialVanillaEngine – Pricing engine for vanilla opt
 <p>Pricing engine for vanilla options using binomial trees. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking it against analytic results.</dl>
+<dd>the correctness of the returned values is tested by checking it against analytic results.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd><code>Greeks</code> are not overly accurate. They could be improved by building a tree so that it has three points at the current time. The value would be fetched from the middle one, while the two side points would be used for estimating partial derivatives.</dl>
+<dd><code>Greeks</code> are not overly accurate. They could be improved by building a tree so that it has three points at the current time. The value would be fetched from the middle one, while the two side points would be used for estimating partial derivatives.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>EquityOption.cpp</code>. </p>
 <h2>Author</h2>

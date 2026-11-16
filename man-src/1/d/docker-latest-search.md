@@ -34,7 +34,7 @@ Don&#8217;t truncate output. The default is&nbsp;<wbr><i>false</i>. </p>
 <p> Search a registry for the term &#8216;fedora&#8217; and only display those images ranked 3 or higher: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker search --filter=starts=3 fedora
 INDEX      NAME                            DESCRIPTION                                    STARS OFFICIAL  AUTOMATED
@@ -43,12 +43,12 @@ docker.io  docker.io/fedora                (Semi) Official Fedora base image.   
 docker.io  docker.io/mattdm/fedora-small   A small Fedora image on which to build. Co...  8
 docker.io  docker.io/goldmann/wildfly      A WildFly application server running on a ...  3               [OK]
 </pre>
-</dl>
+</dd></dl>
 <h2>Search Docker Hub for automated images</h2>
 <p> Search Docker Hub for the term &#8216;fedora&#8217; and only display automated images ranked 1 or higher: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker search-- filter = is - automated = true --filter = starts = 1 fedora
                                                                              INDEX NAME DESCRIPTION STARS OFFICIAL AUTOMATED
@@ -56,7 +56,7 @@ $ docker search-- filter = is - automated = true --filter = starts = 1 fedora
                                                                          goldmann / wildfly A WildFly application server running on a... 3 [OK] docker.io docker.io / tutum / fedora -
                                                                      20 Fedora 20 image with SSH access.For the r... 1 [OK]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; April 2015, updated by Mary Anthony for v2 &lt;mary [at] docker.com&gt; April 2016, updated by Vincent Demeester &lt;vincent [at] sbr.pm&gt; </p>
 <h2>Index</h2>

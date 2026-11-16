@@ -12,9 +12,9 @@ description: "memcached_quit – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>void memcached_quit(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</p>
+<dt><code>void memcached_quit(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_quit()</i> will disconnect you from all currently connected servers. It will also reset the state of the connection (ie, any <code>memcached_fetch()</code> you are in the middle of will be terminated). This function is called automatically when you call <code>memcached_free()</code> on the <code>memcached_st</code> structure. </p>
 <p> You do not need to call this on your own. All operations to change server hashes and parameters will handle connections to the server for you. This function is provided mainly so that you can timeout your connections or reset connections during the middle of a <code>memcached_fetch()</code>.</p>
@@ -31,3 +31,4 @@ description: "memcached_quit – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

@@ -33,12 +33,9 @@ code <i>(public member function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;thread&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;system_error&gt;
 int main()
-
 {
     try {
         std::thread().detach(); // attempt to detach a non-thread

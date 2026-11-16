@@ -14,10 +14,10 @@ description: "wimax_rfkill – Set the software RF switch state for a WiMAX devi
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor</dl>
+</dd><dd>WiMAX device descriptor</dd></dl>
 <p> <i>state</i></p>
 <dl>
-<dd>New RF state.</dl>
+<dd>New RF state.</dd></dl>
 <h2>Return</h2>
 <p>&gt;= 0 toggle state if ok, &lt; 0 errno code on error. The toggle state is returned as a bitmap, bit 0 being the hardware RF state, bit 1 the software RF state. </p>
 <p> 0 means disabled (<code>WIMAX_RF_ON</code>, radio on), 1 means enabled radio off (<code>WIMAX_RF_OFF</code>).</p>

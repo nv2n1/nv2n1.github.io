@@ -123,27 +123,27 @@ Free the memory used by a GSI proxy handle.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to be destroyed.</dl>
+</dt><dd> <i>handle</i> The handle to be destroyed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_init()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_init()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_common_name (<code>globus_gsi_proxy_handle_t</code>handle, const char *common_name)</h3>
 <p> Set the proxy common name stored in the GSI Proxy handle. </p>
 <p> This function sets the proxy common name in the GSI Proxy handle. Note that the common name is only used for draft compliant proxies. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for which to set the proxy common name.<br />
- <i>common_name</i> The proxy common name to set.</dl>
+</dt><dd> <i>handle</i> The handle for which to set the proxy common name.<br />
+ <i>common_name</i> The proxy common name to set.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS upon success GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE if handle is invalid</dl>
+</dt><dd> GLOBUS_SUCCESS upon success GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE if handle is invalid</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_private_key (<code>globus_gsi_proxy_handle_t</code>handle, const EVP_PKEY *proxy_key)</h3>
 <p> Set the private key in a GSI Proxy handle. </p>
 <pre>
@@ -154,44 +154,44 @@ handle.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for which to set the private key<br />
- <i>proxy_key</i> Parameter used to pass the key</dl>
+</dt><dd> <i>handle</i> The handle for which to set the private key<br />
+ <i>proxy_key</i> Parameter used to pass the key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_get_private_key()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_get_private_key()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_req (<code>globus_gsi_proxy_handle_t</code>handle, X509_REQ *req)</h3>
 <p> Set Request Set the certificate request in a GSI Proxy handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for which to set the certificate request<br />
- <i>req</i> Request to be copied to handle.</dl>
+</dt><dd> <i>handle</i> The handle for which to set the certificate request<br />
+ <i>req</i> Request to be copied to handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_get_req()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_get_req()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_is_limited (<code>globus_gsi_proxy_handle_t</code>handle, globus_bool_t *is_limited)</h3>
 <p> Check to see the proxy is a limited proxy </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> the proxy handle to check<br />
- <i>is_limited</i> boolean value to set depending on the type of proxy</dl>
+</dt><dd> <i>handle</i> the proxy handle to check<br />
+ <i>is_limited</i> boolean value to set depending on the type of proxy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAN">Author</a></dt>
+<dd></dd></dl>

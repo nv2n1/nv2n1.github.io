@@ -13,17 +13,17 @@ AGSETC - Allows a user program to (in effect) store a character string as the va
 
  void c_agsetc (char *tpgn, char *cusr)
 <h2>Description</h2><dl COMPACT><dt>TPGN
-<dd>(an input expression of type CHARACTER) is a parameter identifier, as described for AGSETP, above. The specified parameter must be one of those which intrinsically have values of type character: 'LINE/END.', 'LABEL/NAME.', 'LINE/ TEXT.', or 'DASH/PATTERN/n.'
-<dt>CUSR
-<dd>(an input expression of type CHARACTER) is the desired character string.
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>If 'LINE/END.' is being set, only the first character of CUSR will be used.
-<dt>&bull;
-<dd>If 'LABEL/NAME.' is being set, the length of the string CUSR will be taken to be &quot;MAX(1,LEN(CUSR))&quot;.
-<dt>&bull;
-<dd>If the text of a label is being set, CUSR must either be of the exact length specified by 'LINE/MAXIMUM.' (40 characters, by default) or shorter; if shorter, it must be terminated by the character defined by 'LINE/END.' (default: a '$').
-<dt>&bull;
-<dd>If a dash pattern is being set, the length of CUSR will be taken to be the minimum of &quot;LEN(CUSR)&quot; and the value specified by 'DASH/LENGTH.'.</dl></dl>
+</dt><dd>(an input expression of type CHARACTER) is a parameter identifier, as described for AGSETP, above. The specified parameter must be one of those which intrinsically have values of type character: 'LINE/END.', 'LABEL/NAME.', 'LINE/ TEXT.', or 'DASH/PATTERN/n.'
+</dd><dt>CUSR
+</dt><dd>(an input expression of type CHARACTER) is the desired character string.
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>If 'LINE/END.' is being set, only the first character of CUSR will be used.
+</dd><dt>&bull;
+</dt><dd>If 'LABEL/NAME.' is being set, the length of the string CUSR will be taken to be &quot;MAX(1,LEN(CUSR))&quot;.
+</dd><dt>&bull;
+</dt><dd>If the text of a label is being set, CUSR must either be of the exact length specified by 'LINE/MAXIMUM.' (40 characters, by default) or shorter; if shorter, it must be terminated by the character defined by 'LINE/END.' (default: a '$').
+</dd><dt>&bull;
+</dt><dd>If a dash pattern is being set, the length of CUSR will be taken to be the minimum of &quot;LEN(CUSR)&quot; and the value specified by 'DASH/LENGTH.'.</dd></dl></dl>
 </dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to set the current value of Autograph parameters. For a complete list of parameters available in this utility, see the autograph_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: agex05, agex06, agex07, agex08, agex09, agex13, tagupw, tautog, fagaxlbl, fagovrvw.

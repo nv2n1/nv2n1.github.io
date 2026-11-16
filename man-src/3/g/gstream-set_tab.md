@@ -18,16 +18,12 @@ description: "set_tab"
 <pre><code>
 set_tab(130);
 // set a tab stop at the x-position 130, don't change colour or font
-
 set_tab(400);
 // set a tab stop at 400, don't change colour or font
-
 set_tab(80, 24);
 // set a stop at 80 and let it change the colour to 24, no font change
-
 set_tab(190, 57, my_arial_font);
 // set tab stop at 190, change colour to 57 and font to 'my_arial_font'
-
 set_tab(250, courier);
 // set tab stop at 250, don't change colour, but change font to 'courier'
 </code></pre>

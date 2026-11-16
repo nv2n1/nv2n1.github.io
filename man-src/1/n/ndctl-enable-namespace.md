@@ -19,19 +19,19 @@ description: "ndctl-enable-namespace – enable the given namespace(s)"
 <p> &lt;namespace&gt;</p>
 <dl>
 <dt>
-<dd> A <i>namespaceX.Y</i> device name. The keyword <i>all</i> can be specified to carry out the operation on every namespace in the system, optionally filtered by region (see &#8211;region=option)</dl>
+</dt><dd> A <i>namespaceX.Y</i> device name. The keyword <i>all</i> can be specified to carry out the operation on every namespace in the system, optionally filtered by region (see &#8211;region=option)</dd></dl>
 <p> -r, &#8211;region=</p>
 <dl>
 <dt>
-<dd> A <i>regionX</i> device name, or a region id number. The keyword <i>all</i> can be specified to carry out the operation on every region in the system, optionally filtered by bus id (see &#8211;bus= option).</dl>
+</dt><dd> A <i>regionX</i> device name, or a region id number. The keyword <i>all</i> can be specified to carry out the operation on every region in the system, optionally filtered by bus id (see &#8211;bus= option).</dd></dl>
 <p> -b, &#8211;bus=</p>
 <dl>
 <dt>
-<dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dl>
+</dt><dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Emit debug messages for the namespace operation</dl>
+</dt><dd> Emit debug messages for the namespace operation</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ndctl-disable-namespace/">ndctl-disable-namespace</a></code>(1) </p>
 <h2>Index</h2>

@@ -12,11 +12,9 @@ std::shared_future&lt;T&gt;::operator= - std::shared_future&lt;T&gt;::operator=
 
 <pre><code>shared_future &amp;operator=(const shared_future &amp;other);
 (since C++ 11)(1)(until C++ 17)
-
     shared_future &amp;
     operator=(const shared_future &amp;other) noexcept;
 (since C++ 17)
-
     shared_future &amp;
     operator=(shared_future &amp;&amp;other) noexcept;
 (2)(since C++ 11)</code></pre> 

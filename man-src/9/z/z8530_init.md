@@ -14,7 +14,7 @@ description: "z8530_init – Initialise a Z8530 device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Z8530 device to initialise.</dl>
+</dd><dd>Z8530 device to initialise.</dd></dl>
 <h2>Description</h2>
 <p>Configure up a Z8530/Z85C30 or Z85230 chip. We check the device is present, identify the type and then program it to hopefully keep quite and behave. This matters a lot, a Z8530 in the wrong state will sometimes get into stupid modes generating 10Khz interrupt streams and the like. </p>
 <p> We set the interrupt handler up to discard any events, in case we get them during reset or setp. </p>
@@ -22,5 +22,5 @@ description: "z8530_init – Initialise a Z8530 device"
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

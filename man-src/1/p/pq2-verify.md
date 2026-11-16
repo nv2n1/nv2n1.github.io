@@ -17,20 +17,20 @@ description: "pq2-verify – Extract the content one or more datasets from a dat
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>dataset</i></p>
-<dd> Datasets to be analysed; the &#8216;*&#8217; wild card in the items (in such a case the full string, as shown by pq2-ls, should be given, e.g. &#8216;/default/ganis/h1-set5*&#8217;.</dl>
+<dt><i>dataset</i></dt>
+<dd> Datasets to be analysed; the &#8216;*&#8217; wild card in the items (in such a case the full string, as shown by pq2-ls, should be given, e.g. &#8216;/default/ganis/h1-set5*&#8217;.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep the temporary files created during the analysis under $TMPDIR</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>-d</code> &lt;<i>dataset</i>&gt;, <code>&#8211;dataset</code>=&lt;<i>dataset</i>&gt;</p>
-<dd> Alternative way to define the datasets to be analyzed</p>
-<dt><code>-o</code> &lt;<i>options</i>&gt;</p>
-<dd> Options for veriying datasets. These allow to control: the subset selection; the pre-processing actions; and the processing action. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep the temporary files created during the analysis under $TMPDIR</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>-d</code> &lt;<i>dataset</i>&gt;, <code>&#8211;dataset</code>=&lt;<i>dataset</i>&gt;</dt>
+<dd> Alternative way to define the datasets to be analyzed</dd>
+<dt><code>-o</code> &lt;<i>options</i>&gt;</dt>
+<dd> Options for veriying datasets. These allow to control: the subset selection; the pre-processing actions; and the processing action. </dd>
 <pre>
    Options controlling the file sample:
       A               process all files
@@ -50,27 +50,27 @@ description: "pq2-verify – Extract the content one or more datasets from a dat
       V               notify the actions
 </pre>
 <p> Not all the combinations of the above options are allowed; an error is printed when an incosistency is found.</p>
-<dt><code>&#8211;redir</code>=&lt;<i>redirector</i></p>
-<dd> URL to be used to relocate the files.</p>
-<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</p>
-<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dl>
+<dt><code>&#8211;redir</code>=&lt;<i>redirector</i></dt>
+<dd> URL to be used to relocate the files.</dd>
+<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</dt>
+<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dd></dl>
 <h2>RETURN</h2>
 <p> The pq2-verify script returns -1 if any error occurs (connection failed; dataset does not exists) and &gt;=0 in case of success. A return code of 1 indicates that some of the files in the dataset are not yet online (staged); this can be used to trigger automatic retries in scripts while waiting for stage-in operations.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>1. Update the &#8216;is-staged&#8217; bit for all the files in a dataset</p>
+<dt>1. Update the &#8216;is-staged&#8217; bit for all the files in a dataset</dt>
 <dd>
 <pre>
    $ pq2-verify -o &quot;AN&quot; /default/pippo/mydset
 </pre>
-<dt>2. Issue a locate request for all the files in a dataset</p>
+</dd><dt>2. Issue a locate request for all the files in a dataset</dt>
 <dd>
 <pre>
    $ pq2-verify -o &quot;AL&quot; /default/pippo/mydset
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> See <i>setup-pq2</i>(1).</p>
 <h2>SEE ALSO</h2>

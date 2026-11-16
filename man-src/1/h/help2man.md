@@ -14,42 +14,42 @@ description: "help2man – generate a simple manual page"
 <h2>DESCRIPTION</h2>
 <p> `help2man&#8217; generates a man page out of `&#8211;help&#8217; and `&#8211;version&#8217; output.</p>
 <dl>
-<dt><code>-n</code>, <code>&#8211;name</code>=<i>STRING</i></p>
-<dd> description for the NAME paragraph</p>
-<dt><code>-s</code>, <code>&#8211;section</code>=<i>SECTION</i></p>
-<dd> section number for manual page (1, 6, 8)</p>
-<dt><code>-m</code>, <code>&#8211;manual</code>=<i>TEXT</i></p>
-<dd> name of manual (User Commands, &#8230;)</p>
-<dt><code>-S</code>, <code>&#8211;source</code>=<i>TEXT</i></p>
-<dd> source of program (FSF, Debian, &#8230;)</p>
-<dt><code>-L</code>, <code>&#8211;locale</code>=<i>STRING</i></p>
-<dd> select locale (default &quot;C&quot;)</p>
-<dt><code>-i</code>, <code>&#8211;include</code>=<i>FILE</i></p>
-<dd> include material from `FILE&#8217;</p>
-<dt><code>-I</code>, <code>&#8211;opt-include</code>=<i>FILE</i></p>
-<dd> include material from `FILE&#8217; if it exists</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></p>
-<dd> send output to `FILE&#8217;</p>
-<dt><code>-p</code>, <code>&#8211;info-page</code>=<i>TEXT</i></p>
-<dd> name of Texinfo manual</p>
-<dt><code>-N</code>, <code>&#8211;no-info</code></p>
-<dd> suppress pointer to Texinfo manual</p>
-<dt><code>-l</code>, <code>&#8211;libtool</code></p>
-<dd> exclude the `lt-&#8216; from the program name</p>
-<dt><code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> print version number, then exit</dl>
+<dt><code>-n</code>, <code>&#8211;name</code>=<i>STRING</i></dt>
+<dd> description for the NAME paragraph</dd>
+<dt><code>-s</code>, <code>&#8211;section</code>=<i>SECTION</i></dt>
+<dd> section number for manual page (1, 6, 8)</dd>
+<dt><code>-m</code>, <code>&#8211;manual</code>=<i>TEXT</i></dt>
+<dd> name of manual (User Commands, &#8230;)</dd>
+<dt><code>-S</code>, <code>&#8211;source</code>=<i>TEXT</i></dt>
+<dd> source of program (FSF, Debian, &#8230;)</dd>
+<dt><code>-L</code>, <code>&#8211;locale</code>=<i>STRING</i></dt>
+<dd> select locale (default &quot;C&quot;)</dd>
+<dt><code>-i</code>, <code>&#8211;include</code>=<i>FILE</i></dt>
+<dd> include material from `FILE&#8217;</dd>
+<dt><code>-I</code>, <code>&#8211;opt-include</code>=<i>FILE</i></dt>
+<dd> include material from `FILE&#8217; if it exists</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> send output to `FILE&#8217;</dd>
+<dt><code>-p</code>, <code>&#8211;info-page</code>=<i>TEXT</i></dt>
+<dd> name of Texinfo manual</dd>
+<dt><code>-N</code>, <code>&#8211;no-info</code></dt>
+<dd> suppress pointer to Texinfo manual</dd>
+<dt><code>-l</code>, <code>&#8211;libtool</code></dt>
+<dd> exclude the `lt-&#8216; from the program name</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd></dl>
 <p> EXECUTABLE should accept `&#8211;help&#8217; and `&#8211;version&#8217; options and produce output on stdout although alternatives may be specified using:</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help-option</code>=<i>STRING</i></p>
-<dd> help option string</p>
-<dt><code>-v</code>, <code>&#8211;version-option</code>=<i>STRING</i></p>
-<dd> version option string</p>
-<dt><code>&#8211;version-string</code>=<i>STRING</i></p>
-<dd> version string</p>
-<dt><code>&#8211;no-discard-stderr</code></p>
-<dd> include stderr when parsing option output</dl>
+<dt><code>-h</code>, <code>&#8211;help-option</code>=<i>STRING</i></dt>
+<dd> help option string</dd>
+<dt><code>-v</code>, <code>&#8211;version-option</code>=<i>STRING</i></dt>
+<dd> version option string</dd>
+<dt><code>&#8211;version-string</code>=<i>STRING</i></dt>
+<dd> version string</dd>
+<dt><code>&#8211;no-discard-stderr</code></dt>
+<dd> include stderr when parsing option output</dd></dl>
 <h2>INCLUDE FILES</h2>
 <p> Additional material may be included in the generated output with the <code>&#8211;include</code> and <code>&#8211;opt-include</code> options. The format is simple: </p>
 <p>&nbsp;<wbr>[section]<br />
@@ -88,6 +88,6 @@ description: "help2man – generate a simple manual page"
 <p> The full documentation for <code>help2man</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>help2man</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info help2man</code></dl>
+</dt><dd> <code>info help2man</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

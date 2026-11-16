@@ -14,11 +14,11 @@ description: "rio_dev_put – Release a use of the RIO device structure"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device being disconnected</dl>
+</dd><dd>RIO device being disconnected</dd></dl>
 <h2>Description</h2>
 <p>Must be called when a user of a device is finished with it. When the last user of the device calls this function, the memory of the device is freed.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

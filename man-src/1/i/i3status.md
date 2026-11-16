@@ -15,7 +15,7 @@ description: "i3status – Generates a status line for dzen2 or xmobar"
 <p> -c</p>
 <dl>
 <dt>
-<dd> Specifies an alternate configuration file path (default is /etc/i3status.conf or ~/.i3status.conf).</dl>
+</dt><dd> Specifies an alternate configuration file path (default is /etc/i3status.conf or ~/.i3status.conf).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> i3status is a small program (less than 1000 SLOC) for generating a status bar for dzen2, xmobar or similar programs. It is designed to be very efficient by issuing a very small number of systemcalls, as one generally wants to update such a status line every second. This ensures that even under high load, your status bar is updated correctly. Also, it saves a bit of energy by not hogging your CPU as much as spawning the corresponding amount of shell commands would.</p>
 <h2>CONFIGURATION</h2>
@@ -24,7 +24,7 @@ description: "i3status – Generates a status line for dzen2 or xmobar"
 <p> <code>Sample configuration</code>. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 general{
     output_format = "dzen2" colors = true interval = 5} order = "ipv6" order += "disk /" order += "run_watch DHCP" order += "run_watch VPN" order += "wireless wlan0" order += "ethernet eth0" order += "battery 0" order += "cpu_temperature 0" order += "load" order += "time" wireless wlan0{
@@ -44,22 +44,22 @@ battery 0 {
     format = "%free"
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h3>General</h3>
 <p> The colors directive will disable all colors if you set it to false. interval is the time in seconds which i3status will sleep until printing the next status line. </p>
 <p> Using output_format you can chose which format strings i3status should use in its output. Currently available are: </p>
 <p> dzen2</p>
 <dl>
 <dt>
-<dd> Dzen is a general purpose messaging, notification and menuing program for X11. It was designed to be scriptable in any language and integrate well with window managers like dwm, wmii and xmonad though it will work with any windowmanger</dl>
+</dt><dd> Dzen is a general purpose messaging, notification and menuing program for X11. It was designed to be scriptable in any language and integrate well with window managers like dwm, wmii and xmonad though it will work with any windowmanger</dd></dl>
 <p> xmobar</p>
 <dl>
 <dt>
-<dd> xmobar is a minimalistic, text based, status bar. It was designed to work with the xmonad Window Manager.</dl>
+</dt><dd> xmobar is a minimalistic, text based, status bar. It was designed to work with the xmonad Window Manager.</dd></dl>
 <p> none</p>
 <dl>
 <dt>
-<dd> Does not use any color codes. Separates values by the pipe symbol.</dl>
+</dt><dd> Does not use any color codes. Separates values by the pipe symbol.</dd></dl>
 <h3>IPv6</h3>
 <p> This module gets the IPv6 address used for outgoing connections (that is, the best available public IPv6 address on your computer). </p>
 <p> <code>Example format_up</code>: %ip </p>
@@ -100,22 +100,22 @@ battery 0 {
 <p> <code>Example for usage of i3status with dzen2</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 i3status | dzen2 -fg white -ta r -w 1280 \
 -fn &quot;-misc-fixed-medium-r-normal--13-120-75-75-C-70-iso8859-1&quot;
 </pre>
-</dl>
+</dd></dl>
 <h2>USING I3STATUS WITH XMOBAR</h2>
 <p> To get xmobar to start, you might need to copy the default configuration file to ~/.xmobarrc. </p>
 <p> <code>Example for usage of i3status with xmobar</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 i3status-xmobar | xmobar -o -t &quot;%StdinReader%&quot; -c &quot;[Run StdinReader]&quot;
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-strftime/">strftime</a>(3), <a href="/docs/linux/man/1-date/">date</a>(1), <a href="/docs/linux/man/3-glob/">glob</a>(3), <a href="/docs/linux/man/1-dzen2/">dzen2</a>(1), xmobar(1)</p>
 <h2>AUTHORS</h2>

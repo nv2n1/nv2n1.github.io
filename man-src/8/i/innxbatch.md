@@ -14,15 +14,15 @@ description: "innxbatch – send xbatched Usenet articles to a remote NNTP serve
 <p><i>Innxbatch</i> connects to the NNTP server at the specified <i>host</i> and sends it the specified xbatch files, using the XBATCH extension to the NNTP protocol. It is normally invoked by a script run out of <i><a href="/docs/linux/man/8-cron/">cron</a></i>(8) that uses <i><a href="/docs/linux/man/1-shlock/">shlock</a></i>(1) to lock the host name, followed by a <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8) command to flush the batchfile. Each file is removed after it has been successfully transferred. If a communication error such as a <i><a href="/docs/linux/man/2-write/">write</a></i>(2) failure, or an unexpected reply from the remote server occurs, <i>innxbatch</i> will stop sending and leave all remaining files untouched for later retry. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-t seconds</code></p>
-<dd><i>Innxbatch</i> normally blocks until the connection is made. To specify a timeout on how long to try to make the connection, use the &#8220;-t&#8221; flag.</p>
-<dt><code>-T seconds</code></p>
+<dt><code>-t seconds</code></dt>
+<dd><i>Innxbatch</i> normally blocks until the connection is made. To specify a timeout on how long to try to make the connection, use the &#8220;-t&#8221; flag.</dd>
+<dt><code>-T seconds</code></dt>
 <dd>To specify the total amount of time that should be allowed for article transfers, use the &#8220;-T&#8221; flag.<br />
- The default is to wait until an I/O error occurs, or all the articles have been transferred. If the &#8220;-T&#8221; flag is used, the time is checked just before each article is started; it will not abort a transfer that is in progress.</p>
-<dt><code>-v</code></p>
-<dd>Upon exit, <i>innxbatch</i> reports transfer and CPU usage statistics via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3). If the &#8220;-v&#8221; flag is used, they will also be printed on the standard output.</p>
-<dt><code>-D</code></p>
-<dd>Use the &#8220;-D&#8221; flag to print debugging information on standard error. This will show the protocol transactions between <i>innxbatch</i> and the NNTP server on the remote host.</dl>
+ The default is to wait until an I/O error occurs, or all the articles have been transferred. If the &#8220;-T&#8221; flag is used, the time is checked just before each article is started; it will not abort a transfer that is in progress.</dd>
+<dt><code>-v</code></dt>
+<dd>Upon exit, <i>innxbatch</i> reports transfer and CPU usage statistics via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3). If the &#8220;-v&#8221; flag is used, they will also be printed on the standard output.</dd>
+<dt><code>-D</code></dt>
+<dd>Use the &#8220;-D&#8221; flag to print debugging information on standard error. This will show the protocol transactions between <i>innxbatch</i> and the NNTP server on the remote host.</dd></dl>
 <h2>Examples</h2>
 <p>A sample <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a>(5)</i> entry to produce appropriate xbatch files (thanks to Karsten Leipold &lt;poldi [at] dfn.de&gt;): </p>
 <pre> nase\

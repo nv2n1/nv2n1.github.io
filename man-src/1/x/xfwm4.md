@@ -13,33 +13,33 @@ description: "xfwm4 – Window manager for Xfce"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> xfwm4 [OPTION&#8230;] [ARGUMENTS&#8230;]</dl>
+</dt><dd> xfwm4 [OPTION&#8230;] [ARGUMENTS&#8230;]</dd></dl>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</p>
-<dt><code>&#8211;help-sm-client</code></p>
-<dd> Show session management options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd>
+<dt><code>&#8211;help-sm-client</code></dt>
+<dd> Show session management options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>&#8211;daemon</code></p>
-<dd> Fork to the background</p>
-<dt><code>&#8211;compositor</code>=<i>on</i>|off|auto</p>
-<dd> Set the compositor mode</p>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace the existing window manager</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version information and exit</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</p>
+<dt><code>&#8211;daemon</code></dt>
+<dd> Fork to the background</dd>
+<dt><code>&#8211;compositor</code>=<i>on</i>|off|auto</dt>
+<dd> Set the compositor mode</dd>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace the existing window manager</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version information and exit</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd>
 <dt>
-<dd> Released under the terms of the GNU General Public License. Compiled against GTK+-2.24.18, using GTK+-2.24.18.</p>
+</dt><dd> Released under the terms of the GNU General Public License. Compiled against GTK+-2.24.18, using GTK+-2.24.18.</dd>
 <dt>
-<dd> Build configuration and supported features: &#8211; Startup notification support: Yes &#8211; XSync support: Yes &#8211; Render support: Yes &#8211; Xrandr support: Yes &#8211; Embedded compositor: Yes &#8211; KDE systray proxy (deprecated): No</dl>
+</dt><dd> Build configuration and supported features: &#8211; Startup notification support: Yes &#8211; XSync support: Yes &#8211; Render support: Yes &#8211; Xrandr support: Yes &#8211; Embedded compositor: Yes &#8211; KDE systray proxy (deprecated): No</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Upstream documentation at <a rel="nofollow" href="http://docs.xfce.org/xfce/xfwm4/start">http://docs.xfce.org/xfce/xfwm4/start</a> </p>
 <h2>Index</h2>

@@ -10,26 +10,26 @@ description: "XChangeKeyboardControl, XGetKeyboardControl, XAutoRepeatOn, XAutoR
 <p>XChangeKeyboardControl, XGetKeyboardControl, XAutoRepeatOn, XAutoRepeatOff, XBell, XQueryKeymap, XKeyboardControl &#8211; manipulate keyboard settings and keyboard control structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XChangeKeyboardControl(Display *<i>display</i>, unsigned long <i>value_mask</i>, XKeyboardControl *<i>values</i>);</p>
-<dd>int XGetKeyboardControl(Display *<i>display</i>, XKeyboardState *<i>values_return</i>);</p>
-<dd>int XAutoRepeatOn(Display *<i>display</i>);</p>
-<dd>int XAutoRepeatOff(Display *<i>display</i>);</p>
-<dd>int XBell(Display *<i>display</i>, int <i>percent</i>);</p>
-<dd>int XQueryKeymap(Display *<i>display</i>, char <i>keys_return</i>[32]);</dl>
+<dd>int XChangeKeyboardControl(Display *<i>display</i>, unsigned long <i>value_mask</i>, XKeyboardControl *<i>values</i>);</dd>
+<dd>int XGetKeyboardControl(Display *<i>display</i>, XKeyboardState *<i>values_return</i>);</dd>
+<dd>int XAutoRepeatOn(Display *<i>display</i>);</dd>
+<dd>int XAutoRepeatOff(Display *<i>display</i>);</dd>
+<dd>int XBell(Display *<i>display</i>, int <i>percent</i>);</dd>
+<dd>int XQueryKeymap(Display *<i>display</i>, char <i>keys_return</i>[32]);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>keys_return</i></p>
-<dd>Returns an array of bytes that identifies which keys are pressed down. Each bit represents one key of the keyboard.</p>
-<dt><i>percent</i></p>
-<dd>Specifies the volume for the bell, which can range from -100 to 100 inclusive.</p>
-<dt><i>value_mask</i></p>
-<dd>Specifies which controls to change. This mask is the bitwise inclusive OR of the valid control mask bits.</p>
-<dt><i>values</i></p>
-<dd>Specifies one value for each bit set to 1 in the mask.</p>
-<dt><i>values_return</i></p>
-<dd>Returns the current keyboard controls in the specified <code>XKeyboardState</code> structure.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>keys_return</i></dt>
+<dd>Returns an array of bytes that identifies which keys are pressed down. Each bit represents one key of the keyboard.</dd>
+<dt><i>percent</i></dt>
+<dd>Specifies the volume for the bell, which can range from -100 to 100 inclusive.</dd>
+<dt><i>value_mask</i></dt>
+<dd>Specifies which controls to change. This mask is the bitwise inclusive OR of the valid control mask bits.</dd>
+<dt><i>values</i></dt>
+<dd>Specifies one value for each bit set to 1 in the mask.</dd>
+<dt><i>values_return</i></dt>
+<dd>Returns the current keyboard controls in the specified <code>XKeyboardState</code> structure.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XChangeKeyboardControl</code> function controls the keyboard characteristics defined by the <code>XKeyboardControl</code> structure. The value_mask argument specifies which values are to be changed. </p>
 <p> <code>XChangeKeyboardControl</code> can generate <code>BadMatch</code> and <code>BadValue</code> errors. </p>
@@ -38,10 +38,10 @@ description: "XChangeKeyboardControl, XGetKeyboardControl, XAutoRepeatOn, XAutoR
 <p> The <code>XAutoRepeatOff</code> function turns off auto-repeat for the keyboard on the specified display. </p>
 <p> The <code>XBell</code> function rings the bell on the keyboard on the specified display, if possible. The specified volume is relative to the base volume for the keyboard. If the value for the percent argument is not in the range -100 to 100 inclusive, a <code>BadValue</code> error results. The volume at which the bell rings when the percent argument is nonnegative is:</p>
 <dl COMPACT>
-<dd>base &#8211; [(base * percent) / 100] + percent</dl>
+<dd>base &#8211; [(base * percent) / 100] + percent</dd></dl>
 <p> The volume at which the bell rings when the percent argument is negative is:</p>
 <dl COMPACT>
-<dd>base + [(base * percent) / 100]</dl>
+<dd>base + [(base * percent) / 100]</dd></dl>
 <p> To change the base volume of the bell, use <code>XChangeKeyboardControl</code>. </p>
 <p> <code>XBell</code> can generate a <code>BadValue</code> error. </p>
 <p> The <code>XQueryKeymap</code> function returns a bit vector for the logical state of the keyboard, where each bit set to 1 indicates that the corresponding key is currently pressed down. The vector is represented as 32 bytes. Byte N (from 0) contains the bits for keys 8N to 8N + 7 with the least significant bit in the byte representing key 8N. </p>
@@ -125,10 +125,10 @@ description: "XChangeKeyboardControl, XGetKeyboardControl, XAutoRepeatOn, XAutoR
 <p> For the LEDs, the least significant bit of led_mask corresponds to LED one, and each bit set to 1 in led_mask indicates an LED that is lit. The global_auto_repeat member can be set to <code>AutoRepeatModeOn</code> or <code>AutoRepeatModeOff</code>. The auto_repeats member is a bit vector. Each bit set to 1 indicates that auto-repeat is enabled for the corresponding key. The vector is represented as 32 bytes. Byte N (from 0) contains the bits for keys 8N to 8N + 7 with the least significant bit in the byte representing key 8N.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xchangekeyboardmapping/">XChangeKeyboardMapping</a>(3), <a href="/docs/linux/man/3-xkbchangeenabledcontrols/">XkbChangeEnabledControls</a>(3), <a href="/docs/linux/man/3-xkbbell/">XkbBell</a>(3), <a href="/docs/linux/man/3-xkbdevicebell/">XkbDeviceBell</a>(3), <a href="/docs/linux/man/3-xkbgetmap/">XkbGetMap</a>(3), <a href="/docs/linux/man/3-xsetpointermapping/">XSetPointerMapping</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

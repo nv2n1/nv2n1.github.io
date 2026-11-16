@@ -11,7 +11,6 @@ std::iswspace - std::iswspace
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     int iswspace(wint_t ch);</code></pre> 
 Checks if the given wide character is a wide whitespace character as classified by the currently installed C locale. In the default locale, the whitespace characters are the following: * space (0x20, ' ')
 
@@ -42,21 +41,15 @@ ISO 30112 defines POSIX space characters as Unicode characters U+0009..U+000D, U
 
 Demonstrates the use of iswspace() with different locales 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;cwctype&gt;
-
 void try_with(wchar_t c, const char *loc)
-
 {
     std::setlocale(LC_ALL, loc);
     std::wcout &lt;&lt; &quot;isspace('&quot; &lt;&lt; c &lt;&lt; &quot;') in &quot; &lt;&lt; loc &lt;&lt; &quot; locale returned &quot;
                &lt;&lt; std::boolalpha &lt;&lt; (bool)std::iswspace(c) &lt;&lt; '\n';
 }
-
 int main()
-
 {
     wchar_t EM_SPACE = L'\u2003'; // Unicode character 'EM SPACE'
     try_with(EM_SPACE, &quot;C&quot;);

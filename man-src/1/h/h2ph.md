@@ -28,16 +28,16 @@ description: "h2ph – convert .h C header files to .ph Perl header files"
 <p> If run with no arguments, filters standard input to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d destination_dir</p>
-<dd> Put the resulting <code>.ph</code> files beneath <code>destination_dir</code>, instead of beneath the default Perl library location (<tt>$Config{'installsitearch'}</tt>).</p>
-<dt>-r</p>
-<dd> Run recursively; if any of <code>headerfiles</code> are directories, then run <i>h2ph</i> on all files in those directories (and their subdirectories, etc.). <code>-r</code> and <code>-a</code> are mutually exclusive.</p>
-<dt>-a</p>
-<dd> Run automagically; convert <code>headerfiles</code>, as well as any <code>.h</code> files which they include. This option will search for <code>.h</code> files in all directories which your C compiler ordinarily uses. <code>-a</code> and <code>-r</code> are mutually exclusive.</p>
-<dt>-l</p>
-<dd> Symbolic links will be replicated in the destination directory. If <code>-l</code> is not specified, then links are skipped over.</p>
-<dt>-h</p>
-<dd> Put &#8216;hints&#8217; in the .ph files which will help in locating problems with <i>h2ph</i>. In those cases when you <code>require</code> a <code>.ph</code> file containing syntax errors, instead of the cryptic </p>
+<dt>-d destination_dir</dt>
+<dd> Put the resulting <code>.ph</code> files beneath <code>destination_dir</code>, instead of beneath the default Perl library location (<tt>$Config{'installsitearch'}</tt>).</dd>
+<dt>-r</dt>
+<dd> Run recursively; if any of <code>headerfiles</code> are directories, then run <i>h2ph</i> on all files in those directories (and their subdirectories, etc.). <code>-r</code> and <code>-a</code> are mutually exclusive.</dd>
+<dt>-a</dt>
+<dd> Run automagically; convert <code>headerfiles</code>, as well as any <code>.h</code> files which they include. This option will search for <code>.h</code> files in all directories which your C compiler ordinarily uses. <code>-a</code> and <code>-r</code> are mutually exclusive.</dd>
+<dt>-l</dt>
+<dd> Symbolic links will be replicated in the destination directory. If <code>-l</code> is not specified, then links are skipped over.</dd>
+<dt>-h</dt>
+<dd> Put &#8216;hints&#8217; in the .ph files which will help in locating problems with <i>h2ph</i>. In those cases when you <code>require</code> a <code>.ph</code> file containing syntax errors, instead of the cryptic </dd>
 <pre>
         [ some error condition ] at (eval mmm) line nnn
 </pre>
@@ -46,12 +46,12 @@ description: "h2ph – convert .h C header files to .ph Perl header files"
         [ some error condition ] at filename.ph line nnn
 </pre>
 <p> However, the <code>.ph</code> files almost double in size when built using <code>-h</code>.</p>
-<dt>-e</p>
-<dd> If an error is encountered during conversion, output file will be removed and a warning emitted instead of terminating the conversion immediately.</p>
-<dt>-D</p>
-<dd> Include the code from the <code>.h</code> file as a comment in the <code>.ph</code> file. This is primarily used for debugging <i>h2ph</i>.</p>
-<dt>-Q</p>
-<dd> &#8216;Quiet&#8217; mode; don&#8217;t print out the names of the files being converted.</dl>
+<dt>-e</dt>
+<dd> If an error is encountered during conversion, output file will be removed and a warning emitted instead of terminating the conversion immediately.</dd>
+<dt>-D</dt>
+<dd> Include the code from the <code>.h</code> file as a comment in the <code>.ph</code> file. This is primarily used for debugging <i>h2ph</i>.</dd>
+<dt>-Q</dt>
+<dd> &#8216;Quiet&#8217; mode; don&#8217;t print out the names of the files being converted.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> No environment variables are used.</p>
 <h2>FILES</h2>

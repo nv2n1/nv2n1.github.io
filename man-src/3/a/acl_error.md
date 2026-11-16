@@ -16,14 +16,14 @@ description: "acl_error – convert an ACL error code to a text message"
 <h2>DESCRIPTION</h2>
 <p> The Fn acl_error function converts an ACL error code such as returned by the Fn acl_check function to a text message describing the error condition. In the &#8220;POSIX&#8221; locale, Fn acl_check returns the following descriptions for the error codes.</p>
 <dl>
-<dt><code>ACL_MULTI_ERROR</code></p>
-<dd> &#8220;Multiple entries&#8221;</p>
-<dt><code>ACL_DUPLICATE_ERROR</code></p>
-<dd> &#8220;Duplicate entries&#8221;</p>
-<dt><code>ACL_MISS_ERROR</code></p>
-<dd> &#8220;Missing or wrong entry&#8221;</p>
-<dt><code>ACL_ENTRY_ERROR</code></p>
-<dd> &#8220;Invalid entry type&#8221;</dl>
+<dt><code>ACL_MULTI_ERROR</code></dt>
+<dd> &#8220;Multiple entries&#8221;</dd>
+<dt><code>ACL_DUPLICATE_ERROR</code></dt>
+<dd> &#8220;Duplicate entries&#8221;</dd>
+<dt><code>ACL_MISS_ERROR</code></dt>
+<dd> &#8220;Missing or wrong entry&#8221;</dd>
+<dt><code>ACL_ENTRY_ERROR</code></dt>
+<dd> &#8220;Invalid entry type&#8221;</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The Fn acl_error function returns a text message if the error code is recognized, and a value of <code>(const char *)NULL</code> otherwise.</p>
 <h2>STANDARDS</h2>

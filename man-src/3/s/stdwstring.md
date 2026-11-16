@@ -10,25 +10,15 @@ description: "std::basic_string – std::basic_string"
 <p>std::basic_string &#8211; std::basic_string</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;string&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;,                        (1)
-
 class Allocator = std::allocator&lt;CharT&gt;
-
 &gt; class basic_string;
-
 namespace pmr {
-
     template &lt;class CharT, class Traits = std::char_traits&lt;CharT&gt;&gt;
-
     using basic_string = std::basic_string&lt; CharT, Traits,         (2) (since C++17)
-
     std::polymorphic_allocator&lt;CharT&gt;&gt;
-
 }</code></pre>
 <p>The class template basic_string stores and manipulates sequences of char-like objects, which are non-array objects of trivial standard-layout type. The class is dependent neither on the character type nor on the nature of operations on that type. The definitions of the operations are supplied via the Traits template parameter &#8211; a specialization of std::char_traits or a compatible traits class. Traits::char_type and CharT must name the same type; otherwise the program is ill-formed.<br />
 The elements of a basic_string are stored contiguously, that is, for a basic_string s, &amp;*(s.begin() + n) == &amp;*s.begin() + n for any n in [0, s.size()), or, equivalently, a pointer to s[0] can be passed to functions that expect a pointer to the first element of a CharT[] array. <i>(since C++11)</i><br />

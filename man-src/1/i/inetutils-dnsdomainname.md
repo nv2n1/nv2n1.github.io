@@ -17,12 +17,12 @@ description: "dnsdomainname – show DNS domain name"
 <p> The tool uses <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2) to get the host name of the system and getaddrinfo(2) to resolve it into a canonical name. The part after the first period (`.&#8217; ) of the canonical name is shown.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-? , -help</code></p>
-<dd> Give this help list.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Give a short usage message.</p>
-<dt><code>-V , -version</code></p>
-<dd> Print program version.</dl>
+<dt><code>-? , -help</code></dt>
+<dd> Give this help list.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Give a short usage message.</dd>
+<dt><code>-V , -version</code></dt>
+<dd> Print program version.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2), <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3) </p>
 <h2>Index</h2>

@@ -11,7 +11,6 @@ description: "sc::ARMCIMemoryGrp –"
 <p> The <code>ARMCIMemoryGrp</code> concrete class provides an implementation of <code>MsgMemoryGrp</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;memarmci.h&gt;</code></pre>
 <p> Inherits <code>sc::RDMAMemoryGrp</code>.</p>
 <h3>Public Member Functions</h3>

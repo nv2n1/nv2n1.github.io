@@ -16,7 +16,7 @@ BeakerLib - virtualX - Helpers for handling virtual X server
  Start a virtual X server on a first free display. Tries only first N displays, so you can run out of them. 
 
  <pre> rlVirtualXStart name</pre><dl><dt>name
-<dd>String identifying the X server.</dl>
+</dt><dd>String identifying the X server.</dd></dl>
  
 
  Returns 0 when the server is started successfully. 
@@ -26,7 +26,7 @@ BeakerLib - virtualX - Helpers for handling virtual X server
  Get the <font SIZE="-1">DISPLAY</font> variable for specified virtual X server. 
 
  <pre> rlVirtualXGetDisplay name</pre><dl><dt>name
-<dd>String identifying the X server.</dl>
+</dt><dd>String identifying the X server.</dd></dl>
  
 
  Displays the number of display where specified virtual X server is running to standard output. Returns 0 on success. 
@@ -36,7 +36,7 @@ BeakerLib - virtualX - Helpers for handling virtual X server
  Kill the specified X server. 
 
  <pre> rlVirtualXStop name</pre><dl><dt>name
-<dd>String identifying the X server.</dl>
+</dt><dd>String identifying the X server.</dd></dl>
  
 
  Returns 0 when the server is stopped successfully. 
@@ -55,8 +55,7 @@ BeakerLib - virtualX - Helpers for handling virtual X server
  <pre> @echo &quot;Requires: xorg-x11-server-Xvfb&quot; &gt;&gt; $(METADATA) # RHEL-5
  @echo &quot;Requires: xorg-x11-Xvfb&quot; &gt;&gt; $(METADATA) # RHEL-4
  @echo &quot;Requires: XFree86-Xvfb&quot; &gt;&gt; $(METADATA) # RHEL-3</pre><h2>Authors</h2><dl><dt>&bull;
-<dd>Jan Hutar &lt;jhutar [at] redhat.com&gt;
-<dt>&bull;
-<dd>Petr Splichal &lt;psplicha [at] redhat.com&gt; 
-
-</dl>
+</dt><dd>Jan Hutar &lt;jhutar [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd>Petr Splichal &lt;psplicha [at] redhat.com&gt; 
+</dd></dl>

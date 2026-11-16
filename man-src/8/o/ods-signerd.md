@@ -14,20 +14,20 @@ description: "ods-signerd – OpenDNSSEC Signer Engine daemon"
 <p>ods-signerd is part of the OpenDNSSEC software. It will keep your DNS zones continuous signed. For more information, go to <code><a rel="nofollow" href="http://www.opendnssec.org">http://www.opendnssec.org</a></code> and visit the Documentation page. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-1</code></p>
-<dd>Run signer engine once, then exit (for debugging purposes).</p>
-<dt><code>-c</code><i> FILE</i></p>
-<dd>Read configuration from file, instead of using the default.</p>
-<dt><code>-d</code></p>
-<dd>Run daemon in foreground.</p>
-<dt><code>-h</code></p>
-<dd>Show this help.</p>
-<dt><code>-i</code></p>
-<dd>Print configuration and exit (for debugging purposes).</p>
-<dt><code>-v</code></p>
-<dd>Increase verbosity.</p>
-<dt><code>-V</code></p>
-<dd>Show version and exit.</dl>
+<dt><code>-1</code></dt>
+<dd>Run signer engine once, then exit (for debugging purposes).</dd>
+<dt><code>-c</code><i> FILE</i></dt>
+<dd>Read configuration from file, instead of using the default.</dd>
+<dt><code>-d</code></dt>
+<dd>Run daemon in foreground.</dd>
+<dt><code>-h</code></dt>
+<dd>Show this help.</dd>
+<dt><code>-i</code></dt>
+<dd>Print configuration and exit (for debugging purposes).</dd>
+<dt><code>-v</code></dt>
+<dd>Increase verbosity.</dd>
+<dt><code>-V</code></dt>
+<dd>Show version and exit.</dd></dl>
 <h2>Diagnostics</h2>
 <p>will log all the problems via standard syslog(8).</p>
 <h2>See Also</h2>

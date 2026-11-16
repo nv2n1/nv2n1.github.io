@@ -10,25 +10,17 @@ description: "std::ilogb,std::ilogbf,std::ilogbl – std::ilogb,std::ilogbf,std:
 <p>std::ilogb,std::ilogbf,std::ilogbl &#8211; std::ilogb,std::ilogbf,std::ilogbl</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cmath&gt;
-
     int ilogb(float arg);
 (1)(since C++ 11)
-
     int ilogbf(float arg);
-
 int ilogb(double arg);
 (2)(since C++ 11)
-
     int ilogb(long double arg);
 (3)(since C++ 11)
-
     int ilogbl(long double arg);
-
 int ilogb(IntegralType arg);
 (4)(since C++ 11)
-
 #define FP_ILOGB0 /*implementation-defined*/ (5)(since C++ 11)
-
 #define FP_ILOGBNAN /*implementation-defined*/ (6)(since C++ 11)</code></pre>
 <p>1-3) Extracts the value of the unbiased exponent from the floating-point argument arg, and returns it as a signed integer value.<br />
 4) A set of overloads or a function template accepting an argument of any integral_type. Equivalent to <code>(2)</code> (the argument is cast to double).<br />
@@ -64,16 +56,11 @@ The value of the exponent returned by std::ilogb is always 1 less than the expon
 <p>Compares different floating-point decomposition functions<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     double f = 123.45;
     std::cout &lt;&lt; &quot;Given the number &quot; &lt;&lt; f &lt;&lt; &quot; or &quot; &lt;&lt; std::hexfloat

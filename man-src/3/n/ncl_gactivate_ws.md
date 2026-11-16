@@ -13,8 +13,8 @@ description: "gactivate_ws (Activate workstation) – activates a GKS workstatio
 <p> void gactivate_ws(Gint ws_id);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) &#8211; A number identifying the workstation to be activated. ws_id must be the same as that used in some previous gopen_ws call.</dl>
+<dt>ws_id</dt>
+<dd>(Input) &#8211; A number identifying the workstation to be activated. ws_id must be the same as that used in some previous gopen_ws call.</dd></dl>
 <h2>Usage</h2>
 <p>Active workstations receive all GKS output primitives.</p>
 <h2>Access</h2>

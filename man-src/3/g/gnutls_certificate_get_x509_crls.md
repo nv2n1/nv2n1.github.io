@@ -14,12 +14,12 @@ description: "gnutls_certificate_get_x509_crls – Used to export all the CRLs f
 <p> <code>void gnutls_certificate_get_x509_crls(gnutls_certificate_credentials_t </code><i>sc</i><code>, gnutls_x509_crl_t ** </code><i>x509_crl_list</i><code>, unsigned int * </code><i>ncrls</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t sc</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_x509_crl_t ** x509_crl_list</p>
-<dd> the exported CRL list. Should be treated as constant</p>
-<dt>unsigned int * ncrls</p>
-<dd> the number of exported CRLs</dl>
+<dt>gnutls_certificate_credentials_t sc</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_x509_crl_t ** x509_crl_list</dt>
+<dd> the exported CRL list. Should be treated as constant</dd>
+<dt>unsigned int * ncrls</dt>
+<dd> the number of exported CRLs</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export all the CRLs associated with the given credentials.</p>
 <h2>SINCE</h2>
@@ -33,6 +33,6 @@ description: "gnutls_certificate_get_x509_crls – Used to export all the CRLs f
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

@@ -11,15 +11,11 @@ std::advance - std::advance
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class InputIt, class Distance&gt;
     (until C++ 17)
-
         void advance(InputIt &amp;it, Distance n);
-
 template &lt;class InputIt, class Distance&gt;
 (since C++ 17)
-
     constexpr void advance(InputIt &amp;it, Distance n);</code></pre> 
 Increments given iterator it by n elements. 
 If n is negative, the iterator is decremented. In this case, InputIt must meet the requirements of LegacyBidirectionalIterator, otherwise the behavior is undefined. 
@@ -50,12 +46,9 @@ The behavior is undefined if the specified sequence of increments or decrements 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4};
     auto vi = v.begin();

@@ -19,14 +19,14 @@ description: "login – authenticate a user and start new session"
 <p> For password authentication Kerberos 5, Kerberos 4 (if compiled in), OTP (if compiled in) and local <code>( /etc/passwd </code> passwords are supported. OTP will be used if the the user is registered to use it, and <code>login</code> is given the option &#8211;<code>a otp</code> When using OTP, a challenge is shown to the user. </p>
 <p> Further options are:</p>
 <dl>
-<dt><code>-a </code><i>string</i></p>
-<dd> Which authentication mode to use, the only supported value is currently &#8220;otp&#8221;</p>
-<dt><code>-f</code></p>
-<dd> Indicates that the user is already authenticated. This happens, for instance, when login is started by telnetd, and the user has proved authentic via Kerberos.</p>
-<dt><code>-h </code><i>hostname</i></p>
-<dd> Indicates which host the user is logging in from. This is passed from telnetd, and is entered into the login database.</p>
-<dt><code>-p</code></p>
-<dd> This tells <code>login</code> to preserve all environment variables. If not given, only the <code>TERM</code> and <code>TZ</code> variables are preserved. It could be a security risk to pass random variables to <code>login</code> or the user shell, so the calling daemon should make sure it only passes &#8220;safe&#8221; variables.</dl>
+<dt><code>-a </code><i>string</i></dt>
+<dd> Which authentication mode to use, the only supported value is currently &#8220;otp&#8221;</dd>
+<dt><code>-f</code></dt>
+<dd> Indicates that the user is already authenticated. This happens, for instance, when login is started by telnetd, and the user has proved authentic via Kerberos.</dd>
+<dt><code>-h </code><i>hostname</i></dt>
+<dd> Indicates which host the user is logging in from. This is passed from telnetd, and is entered into the login database.</dd>
+<dt><code>-p</code></dt>
+<dd> This tells <code>login</code> to preserve all environment variables. If not given, only the <code>TERM</code> and <code>TZ</code> variables are preserved. It could be a security risk to pass random variables to <code>login</code> or the user shell, so the calling daemon should make sure it only passes &#8220;safe&#8221; variables.</dd></dl>
 <p> The process of logging user in proceeds as follows. </p>
 <p> First a check is made that logins are allowed at all. This usually means checking /etc/nologin If it exists, and the user trying to login is not root, the contents is printed, and then login exits. </p>
 <p> Then various system parameters are set up, like changing the owner of the tty to the user, setting up signals, setting the group list, and user and group id. Also various machine specific tasks are performed. </p>
@@ -37,24 +37,24 @@ description: "login – authenticate a user and start new session"
 <h2>ENVIRONMENT</h2>
 <p> These environment variables are set by login (not including ones set by /etc/environment ) </p>
 <dl>
-<dt><code>PATH</code></p>
-<dd> the default system path</p>
-<dt><code>HOME</code></p>
-<dd> the user&#8217;s home directory (or possibly /</p>
-<dt><code>USER , LOGNAME</code></p>
-<dd> both set to the username</p>
-<dt><code>SHELL</code></p>
-<dd> the user&#8217;s shell</p>
-<dt><code>TERM , TZ</code></p>
-<dd> set to whatever is passed to <code>login</code></p>
-<dt><code>KRB5CCNAME</code></p>
-<dd> if the password is verified via Kerberos 5, this will point to the credentials cache file</p>
-<dt><code>KRBTKFILE</code></p>
-<dd> if the password is verified via Kerberos 4, this will point to the ticket file</dl>
+<dt><code>PATH</code></dt>
+<dd> the default system path</dd>
+<dt><code>HOME</code></dt>
+<dd> the user&#8217;s home directory (or possibly /</dd>
+<dt><code>USER , LOGNAME</code></dt>
+<dd> both set to the username</dd>
+<dt><code>SHELL</code></dt>
+<dd> the user&#8217;s shell</dd>
+<dt><code>TERM , TZ</code></dt>
+<dd> set to whatever is passed to <code>login</code></dd>
+<dt><code>KRB5CCNAME</code></dt>
+<dd> if the password is verified via Kerberos 5, this will point to the credentials cache file</dd>
+<dt><code>KRBTKFILE</code></dt>
+<dd> if the password is verified via Kerberos 4, this will point to the ticket file</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/environment </code></p>
-<dd> Contains a set of environment variables that should be set in addition to the ones above. It should contain sh-style assignments like &#8220;VARIABLE=value&#8221; Note that they are not parsed the way a shell would. No variable expansion is performed, and all strings are literal, and quotation marks should not be used. Everything after a hash mark is considered a comment. The following are all different (the last will set the variable <code>BAR</code> not <code>FOO )</code> </p>
+<dt><code>/etc/environment </code></dt>
+<dd> Contains a set of environment variables that should be set in addition to the ones above. It should contain sh-style assignments like &#8220;VARIABLE=value&#8221; Note that they are not parsed the way a shell would. No variable expansion is performed, and all strings are literal, and quotation marks should not be used. Everything after a hash mark is considered a comment. The following are all different (the last will set the variable <code>BAR</code> not <code>FOO )</code> </dd>
 <blockquote>
 <pre>
 FOO=this is a string
@@ -62,23 +62,23 @@ FOO=&quot;this is a string&quot;
 BAR= FOO='this is a string'
 </pre>
 </blockquote>
-<dt><code>/etc/login.access </code></p>
-<dd> See login.access5.</p>
-<dt><code>/etc/login.conf </code></p>
-<dd> This is a termcap style configuration file, that contains various settings used by <code>login</code> Currently only the &#8220;default&#8221; capability record is used. The possible capability strings include: </p>
+<dt><code>/etc/login.access </code></dt>
+<dd> See login.access5.</dd>
+<dt><code>/etc/login.conf </code></dt>
+<dd> This is a termcap style configuration file, that contains various settings used by <code>login</code> Currently only the &#8220;default&#8221; capability record is used. The possible capability strings include: </dd>
 <dl>
-<dt><code>environment</code></p>
-<dd> This is a comma separated list of environment files that are read in the order specified. If this is missing the default /etc/environment is used.</p>
-<dt><code>login_program</code></p>
-<dd> This program will be executed just before the user&#8217;s shell is started. It will be called without arguments.</p>
-<dt><code>logout_program</code></p>
-<dd> This program will be executed just after the user&#8217;s shell has terminated. It will be called without arguments. This program will be the parent process of the spawned shell.</p>
-<dt><code>motd</code></p>
-<dd> A comma separated list of text files that will be printed to the user&#8217;s terminal before starting the shell. The string <code>welcome</code> works similarly, but points to a single file.</p>
-<dt><code>limits</code></p>
-<dd> Points to a file containing ulimit settings for various users. Syntax is inspired by what pam_limits uses, and the default is /etc/security/limits.conf</dl>
-<dt><code>/etc/nologin </code></p>
-<dd> If it exists, login is denied to all but root. The contents of this file is printed before login exits.</dl>
+<dt><code>environment</code></dt>
+<dd> This is a comma separated list of environment files that are read in the order specified. If this is missing the default /etc/environment is used.</dd>
+<dt><code>login_program</code></dt>
+<dd> This program will be executed just before the user&#8217;s shell is started. It will be called without arguments.</dd>
+<dt><code>logout_program</code></dt>
+<dd> This program will be executed just after the user&#8217;s shell has terminated. It will be called without arguments. This program will be the parent process of the spawned shell.</dd>
+<dt><code>motd</code></dt>
+<dd> A comma separated list of text files that will be printed to the user&#8217;s terminal before starting the shell. The string <code>welcome</code> works similarly, but points to a single file.</dd>
+<dt><code>limits</code></dt>
+<dd> Points to a file containing ulimit settings for various users. Syntax is inspired by what pam_limits uses, and the default is /etc/security/limits.conf</dd></dl>
+<dt><code>/etc/nologin </code></dt>
+<dd> If it exists, login is denied to all but root. The contents of this file is printed before login exits.</dd></dl>
 <p> Other <code>login</code> programs typically print all sorts of information by default, such as last time you logged in, if you have mail, and system message files. This version of <code>login</code> does not, so there is no reason for .hushlogin files or similar. We feel that these tasks are best left to the user&#8217;s shell, but the <code>login_program</code> facility allows for a shell independent solution, if that is desired.</p>
 <h2>EXAMPLES</h2>
 <p> A login.conf file could look like: </p>

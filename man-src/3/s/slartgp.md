@@ -19,7 +19,7 @@ description: "slartgp.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SLARTGP generates a plane rotation so that
     [CS SN]
@@ -28,11 +28,11 @@ SLARTGP generates a plane rotation so that
      more accurate version of the Level 1 BLAS routine SROTG,
      with the following other differences : F and G are unchanged on return.If G = 0, then CS = (+ / -)1 and SN = 0. If F = 0 and (G.ne.0), then CS = 0 and SN = (+ / -)1. The sign is chosen so that R &gt;= 0.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>F</i> </p>
+</dt><dd> <i>F</i> </dd>
 <pre>
           F is REAL
           The first component of vector to be rotated.
@@ -63,14 +63,14 @@ SLARTGP generates a plane rotation so that
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 96 of file slartgp.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -26,10 +26,10 @@ description: "voodoo – Voodoo video driver"
 <p>Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details. This section only covers configuration details specific to this driver. </p>
 <p> The following driver <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;ShadowFBN&#8217;34&#8217; N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;</code></p>
-<dd>Enables a shadow buffer in main memory. This turns off acceleration but for otherwise unaccelerated operations can improve performance materially. Default: off for voodoo2, on for voodoo1.</p>
-<dt><code>Option N&#8217;34&#8217;NoAccelN&#8217;34&#8217; N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;</code></p>
-<dd>Disables acceleration if set. Unless debugging this option should only be set if ShadowFB is enabled. Default: off for voodoo2, on for voodoo1.</dl>
+<dt><code>Option N&#8217;34&#8217;ShadowFBN&#8217;34&#8217; N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Enables a shadow buffer in main memory. This turns off acceleration but for otherwise unaccelerated operations can improve performance materially. Default: off for voodoo2, on for voodoo1.</dd>
+<dt><code>Option N&#8217;34&#8217;NoAccelN&#8217;34&#8217; N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Disables acceleration if set. Unless debugging this option should only be set if ShadowFB is enabled. Default: off for voodoo2, on for voodoo1.</dd></dl>
 <h2>Bugs</h2>
 <p>The driver interacts badly with the sstfb frame buffer driver as there is insufficient information to restore the chip to its previous state.</p>
 <h2>See Also</h2>

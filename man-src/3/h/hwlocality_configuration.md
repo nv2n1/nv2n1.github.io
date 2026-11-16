@@ -42,30 +42,30 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> Flags to be set onto a topology context before load. Flags should be given to <code>hwloc_topology_set_flags()</code>. They may also be returned by <code>hwloc_topology_get_flags()</code>. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>HWLOC_TOPOLOGY_FLAG_WHOLE_SYSTEM </i></p>
-<dd> Detect the whole system, ignore reservations and offline settings. Gather all resources, even if some were disabled by the administrator. For instance, ignore Linux Cgroup/Cpusets and gather all processors and memory nodes, and ignore the fact that some resources may be offline.</dl>
+<dt><i>HWLOC_TOPOLOGY_FLAG_WHOLE_SYSTEM </i></dt>
+<dd> Detect the whole system, ignore reservations and offline settings. Gather all resources, even if some were disabled by the administrator. For instance, ignore Linux Cgroup/Cpusets and gather all processors and memory nodes, and ignore the fact that some resources may be offline.</dd></dl>
 <p> When this flag is not set, PUs that are disallowed are not added to the topology. Parent objects (package, core, cache, etc.) are added only if some of their children are allowed. NUMA nodes are always added but their available memory is set to 0 when disallowed.</p>
 <dl>
-<dt><i>HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM </i></p>
-<dd> Assume that the selected backend provides the topology for the system on which we are running. This forces <code>hwloc_topology_is_thissystem()</code> to return 1, i.e. makes hwloc assume that the selected backend provides the topology for the system on which we are running, even if it is not the OS-specific backend but the XML backend for instance. This means making the binding functions actually call the OS-specific system calls and really do binding, while the XML backend would otherwise provide empty hooks just returning success.</dl>
+<dt><i>HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM </i></dt>
+<dd> Assume that the selected backend provides the topology for the system on which we are running. This forces <code>hwloc_topology_is_thissystem()</code> to return 1, i.e. makes hwloc assume that the selected backend provides the topology for the system on which we are running, even if it is not the OS-specific backend but the XML backend for instance. This means making the binding functions actually call the OS-specific system calls and really do binding, while the XML backend would otherwise provide empty hooks just returning success.</dd></dl>
 <p> Setting the environment variable HWLOC_THISSYSTEM may also result in the same behavior. </p>
 <p> This can be used for efficiency reasons to first detect the topology once, save it to an XML file, and quickly reload it later through the XML backend, but still having binding functions actually do bind.</p>
 <dl>
-<dt><i>HWLOC_TOPOLOGY_FLAG_IO_DEVICES </i></p>
-<dd> Detect PCI devices. By default, I/O devices are ignored. This flag enables I/O device detection using the pci backend. Only the common PCI devices (GPUs, NICs, block devices, &#8230;) and host bridges (objects that connect the host objects to an I/O subsystem) will be added to the topology. Additionally it also enables MemoryModule misc objects. Uncommon devices and other bridges (such as PCI-to-PCI bridges) will be ignored.</p>
-<dt><i>HWLOC_TOPOLOGY_FLAG_IO_BRIDGES </i></p>
-<dd> Detect PCI bridges. This flag should be combined with <code>HWLOC_TOPOLOGY_FLAG_IO_DEVICES</code> to enable the detection of both common devices and of all useful bridges (bridges that have at least one device behind them).</p>
-<dt><i>HWLOC_TOPOLOGY_FLAG_WHOLE_IO </i></p>
-<dd> Detect the whole PCI hierarchy. This flag enables detection of all I/O devices (even the uncommon ones such as DMA channels) and bridges (even those that have no device behind them) using the pci backend. This implies <code>HWLOC_TOPOLOGY_FLAG_IO_DEVICES</code>.</p>
-<dt><i>HWLOC_TOPOLOGY_FLAG_ICACHES </i></p>
-<dd> Detect instruction caches. This flag enables detection of Instruction caches, instead of only Data and Unified caches.</dl>
+<dt><i>HWLOC_TOPOLOGY_FLAG_IO_DEVICES </i></dt>
+<dd> Detect PCI devices. By default, I/O devices are ignored. This flag enables I/O device detection using the pci backend. Only the common PCI devices (GPUs, NICs, block devices, &#8230;) and host bridges (objects that connect the host objects to an I/O subsystem) will be added to the topology. Additionally it also enables MemoryModule misc objects. Uncommon devices and other bridges (such as PCI-to-PCI bridges) will be ignored.</dd>
+<dt><i>HWLOC_TOPOLOGY_FLAG_IO_BRIDGES </i></dt>
+<dd> Detect PCI bridges. This flag should be combined with <code>HWLOC_TOPOLOGY_FLAG_IO_DEVICES</code> to enable the detection of both common devices and of all useful bridges (bridges that have at least one device behind them).</dd>
+<dt><i>HWLOC_TOPOLOGY_FLAG_WHOLE_IO </i></dt>
+<dd> Detect the whole PCI hierarchy. This flag enables detection of all I/O devices (even the uncommon ones such as DMA channels) and bridges (even those that have no device behind them) using the pci backend. This implies <code>HWLOC_TOPOLOGY_FLAG_IO_DEVICES</code>.</dd>
+<dt><i>HWLOC_TOPOLOGY_FLAG_ICACHES </i></dt>
+<dd> Detect instruction caches. This flag enables detection of Instruction caches, instead of only Data and Unified caches.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>unsigned long hwloc_topology_get_flags (<code>hwloc_topology_t</code> topology)</h3>
 <p> Get OR&#8217;ed flags of a topology. Get the OR&#8217;ed set of <code>hwloc_topology_flags_e</code> of a topology. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the flags previously set with <code>hwloc_topology_set_flags()</code>.</dl>
+</dt><dd> the flags previously set with <code>hwloc_topology_set_flags()</code>.</dd></dl>
 <h3>const struct <code>hwloc_topology_support</code>* hwloc_topology_get_support (<code>hwloc_topology_t</code> restrict topology)</h3>
 <p> Retrieve the topology support.</p>
 <h3>void* hwloc_topology_get_userdata (<code>hwloc_topology_t</code> topology)</h3>
@@ -81,14 +81,14 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 1 if this topology context was built using the system running this program. </p>
+</dt><dd> 1 if this topology context was built using the system running this program. </dd>
 <p> 0 instead (for instance if using another file-system root, a XML topology file, or a synthetic topology).</dl>
 <h3>int hwloc_topology_set_custom (<code>hwloc_topology_t</code> topology)</h3>
 <p> Prepare the topology for custom assembly. The topology then contains a single root object. It must then be built by inserting other topologies with <code>hwloc_custom_insert_topology()</code> or single objects with <code>hwloc_custom_insert_group_object_by_parent()</code>. <code>hwloc_topology_load()</code> must be called to finalize the new topology as usual. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> If nothing is inserted in the topology, <code>hwloc_topology_load()</code> will fail with errno set to EINVAL. </p>
+</dt><dd> If nothing is inserted in the topology, <code>hwloc_topology_load()</code> will fail with errno set to EINVAL. </dd>
 <p> The cpuset and nodeset of the root object are NULL because these sets are meaningless when assembling multiple topologies. </p>
 <p> On success, the custom component replaces the previously enabled component (if any), but the topology is not actually modified until <code>hwloc_topology_load()</code>.</dl>
 <h3>int hwloc_topology_set_distance_matrix (<code>hwloc_topology_t</code> restrict topology, <code>hwloc_obj_type_t</code> type, unsigned nbobjs, unsigned * os_index, float * distances)</h3>
@@ -97,7 +97,7 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Distance matrices are ignored in multi-node topologies.</dl>
+</dt><dd> Distance matrices are ignored in multi-node topologies.</dd></dl>
 <h3>int hwloc_topology_set_flags (<code>hwloc_topology_t</code> topology, unsigned long flags)</h3>
 <p> Set OR&#8217;ed flags to non-yet-loaded topology. Set a OR&#8217;ed set of <code>hwloc_topology_flags_e</code> onto a topology that was not yet loaded. </p>
 <p> If this function is called multiple times, the last invokation will erase and replace the set of flags that was previously set. </p>
@@ -108,19 +108,19 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 with errno set to ENOSYS on non-Linux and on Linux systems that do not support it. </p>
+</dt><dd> -1 with errno set to ENOSYS on non-Linux and on Linux systems that do not support it. </dd>
 <p> -1 with the appropriate errno if fsroot_path cannot be used.</dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> For convenience, this backend provides empty binding hooks which just return success. To have hwloc still actually call OS-specific hooks, the <code>HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM</code> has to be set to assert that the loaded file is really the underlying system. </p>
+</dt><dd> For convenience, this backend provides empty binding hooks which just return success. To have hwloc still actually call OS-specific hooks, the <code>HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM</code> has to be set to assert that the loaded file is really the underlying system. </dd>
 <p> On success, the Linux component replaces the previously enabled component (if any), but the topology is not actually modified until <code>hwloc_topology_load()</code>.</dl>
 <h3>int hwloc_topology_set_pid (<code>hwloc_topology_t</code> restrict topology, hwloc_pid_t pid)</h3>
 <p> Change which process the topology is viewed from. On some systems, processes may have different views of the machine, for instance the set of allowed CPUs. By default, hwloc exposes the view from the current process. Calling <code>hwloc_topology_set_pid()</code> permits to make it expose the topology of the machine from the point of view of another process. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </p>
+</dt><dd> hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </dd>
 <p> -1 is returned and errno is set to ENOSYS on platforms that do not support this feature.</dl>
 <h3>int hwloc_topology_set_synthetic (<code>hwloc_topology_t</code> restrict topology, const char *restrict description)</h3>
 <p> Enable synthetic topology. Gather topology information from the given description, a space-separated string of numbers describing the arity of each level. Each number may be prefixed with a type and a colon to enforce the type of a level. If only some level types are enforced, hwloc will try to choose the other types according to usual topologies, but it may fail and you may have to specify more level types manually. See also the <code>Synthetic topologies</code>. </p>
@@ -129,7 +129,7 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> For convenience, this backend provides empty binding hooks which just return success. </p>
+</dt><dd> For convenience, this backend provides empty binding hooks which just return success. </dd>
 <p> On success, the synthetic component replaces the previously enabled component (if any), but the topology is not actually modified until <code>hwloc_topology_load()</code>.</dl>
 <h3>void hwloc_topology_set_userdata (<code>hwloc_topology_t</code> topology, const void * userdata)</h3>
 <p> Set the topology-specific userdata pointer. Each topology may store one application-given private data pointer. It is initialized to NULL. hwloc will never modify it. </p>
@@ -141,11 +141,11 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 with errno set to EINVAL on failure to read the XML file.</dl>
+</dt><dd> -1 with errno set to EINVAL on failure to read the XML file.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> See also <code>hwloc_topology_set_userdata_import_callback()</code> for importing application-specific object userdata. </p>
+</dt><dd> See also <code>hwloc_topology_set_userdata_import_callback()</code> for importing application-specific object userdata. </dd>
 <p> For convenience, this backend provides empty binding hooks which just return success. To have hwloc still actually call OS-specific hooks, the <code>HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM</code> has to be set to assert that the loaded file is really the underlying system. </p>
 <p> On success, the XML component replaces the previously enabled component (if any), but the topology is not actually modified until <code>hwloc_topology_load()</code>.</dl>
 <h3>int hwloc_topology_set_xmlbuffer (<code>hwloc_topology_t</code> restrict topology, const char *restrict buffer, int size)</h3>
@@ -154,17 +154,17 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 with errno set to EINVAL on failure to read the XML buffer.</dl>
+</dt><dd> -1 with errno set to EINVAL on failure to read the XML buffer.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> See also <code>hwloc_topology_set_userdata_import_callback()</code> for importing application-specific object userdata. </p>
+</dt><dd> See also <code>hwloc_topology_set_userdata_import_callback()</code> for importing application-specific object userdata. </dd>
 <p> For convenience, this backend provides empty binding hooks which just return success. To have hwloc still actually call OS-specific hooks, the <code>HWLOC_TOPOLOGY_FLAG_IS_THISSYSTEM</code> has to be set to assert that the loaded file is really the underlying system. </p>
 <p> On success, the XML component replaces the previously enabled component (if any), but the topology is not actually modified until <code>hwloc_topology_load()</code>.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Function Documentation</a></p>
+<dt><a href="#lbAI">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAZ">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAZ">Author</a></dt>
+<dd></dd></dl>

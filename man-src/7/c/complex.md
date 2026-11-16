@@ -15,12 +15,12 @@ description: "complex – basics of complex mathematics"
 <p> There are other ways to represent that number. The pair (a,b) of real numbers may be viewed as a point in the plane, given by X- and Y-coordinates. This same point may also be described by giving the pair of real numbers (r,phi), where r is the distance to the origin O, and phi the angle between the X-axis and the line Oz. Now z = r*exp(i*phi) = r*(cos(phi)+i*sin(phi)). </p>
 <p> The basic operations are defined on z = a+b*i and w = c+d*i as:</p>
 <dl>
-<dt><code>addition: z+w = (a+c) + (b+d)*i</code></p>
+<dt><code>addition: z+w = (a+c) + (b+d)*i</code></dt>
 <dd>
-<dt><code>multiplication: z*w = (a*c &#8211; b*d) + (a*d + b*c)*i</code></p>
+</dd><dt><code>multiplication: z*w = (a*c &#8211; b*d) + (a*d + b*c)*i</code></dt>
 <dd>
-<dt><code>division: z/w = ((a*c + b*d)/(c*c + d*d)) + ((b*c &#8211; a*d)/(c*c + d*d))*i</code></p>
-<dd></dl>
+</dd><dt><code>division: z/w = ((a*c + b*d)/(c*c + d*d)) + ((b*c &#8211; a*d)/(c*c + d*d))*i</code></dt>
+<dd></dd></dl>
 <p> Nearly all math function have a complex counterpart but there are some complex-only functions.</p>
 <h2>Examples</h2>
 <p>Your C-compiler can work with complex numbers if it supports the C99 standard. Link with <i>-lm</i>. The imaginary unit is represented by I. </p>

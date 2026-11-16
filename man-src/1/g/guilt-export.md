@@ -17,7 +17,7 @@ description: "guilt-export – Export a patch series (to be used by quilt)"
 <p> &lt;target_dir&gt;</p>
 <dl>
 <dt>
-<dd> Name of the directory to export the patch series to. (defaults to patches).</dl>
+</dt><dd> Name of the directory to export the patch series to. (defaults to patches).</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Pierre Habouzit &lt;m[blue]<code>madcoder [at] debian.org</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -26,10 +26,10 @@ description: "guilt-export – Export a patch series (to be used by quilt)"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> madcoder [at] debian.org</p>
+<dt> 1.</dt>
+<dd> madcoder [at] debian.org</dd>
 <dl>
 <dt>
-<dd> mailto:madcoder [at] debian.org</dl>
+</dt><dd> mailto:madcoder [at] debian.org</dd></dl>
 </dl>
 <h2>Index</h2>

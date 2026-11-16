@@ -17,10 +17,10 @@ description: "lorder – list dependencies for object files"
 <p> When linking static binaries, and <a href="/docs/linux/man/1-tsort/">tsort</a>(1) can be used to properly order library archives automatically.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>NM</code></p>
-<dd> Path to the <a href="/docs/linux/man/1-nm/">nm</a>(1) binary, defaults to &#8220;<code>nm</code> &#8221;</p>
-<dt><code>NMFLAGS</code></p>
-<dd> Flags to pass to <a href="/docs/linux/man/1-nm/">nm</a>(1).</dl>
+<dt><code>NM</code></dt>
+<dd> Path to the <a href="/docs/linux/man/1-nm/">nm</a>(1) binary, defaults to &#8220;<code>nm</code> &#8221;</dd>
+<dt><code>NMFLAGS</code></dt>
+<dd> Flags to pass to <a href="/docs/linux/man/1-nm/">nm</a>(1).</dd></dl>
 <h2>EXAMPLES</h2>
 <blockquote>
 <pre><code>

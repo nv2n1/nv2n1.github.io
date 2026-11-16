@@ -10,10 +10,10 @@ description: "kfifo_recsize – returns the size of the record length field"
 <p>kfifo_recsize &#8211; returns the size of the record length field</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kfifo_recsize(</code><i>fifo</i><code>);</code></dl>
+<dt> <code>kfifo_recsize(</code><i>fifo</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>fifo</i></p>
 <dl>
 <dd>
-<dd>address of the fifo to be used</dl>
+</dd><dd>address of the fifo to be used</dd></dl>
 <h2>Copyright</h2>

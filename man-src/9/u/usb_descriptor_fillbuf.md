@@ -14,17 +14,17 @@ description: "usb_descriptor_fillbuf – fill buffer with descriptors"
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>Buffer to be filled</dl>
+</dd><dd>Buffer to be filled</dd></dl>
 <p> <i>buflen</i></p>
 <dl>
-<dd>Size of buf</dl>
+<dd>Size of buf</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>Array of descriptor pointers, terminated by null pointer.</dl>
+<dd>Array of descriptor pointers, terminated by null pointer.</dd></dl>
 <h2>Description</h2>
 <p>Copies descriptors into the buffer, returning the length or a negative error code if they can&#8217;t all be copied. Useful when assembling descriptors for an associated set of interfaces used as part of configuring a composite device; or in other cases where sets of descriptors need to be marshaled.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

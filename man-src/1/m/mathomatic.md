@@ -19,30 +19,30 @@ description: "mathomatic – a computer algebra system rmath – a computer alge
 <p> <code>rmath</code> allows you to use Mathomatic with input of functions like <code>sin(x)</code> and <code>sqrt(x)</code> automatically expanded to equivalent algebraic expressions by the <code>m4</code> macro processor. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Enable bold colors. Color mode will be turned on and colors will be brighter if this option is specified. Same as the &quot;set bold color&quot; command. </p>
-<dt><code>-c</code></p>
-<dd> Toggle color mode. This mode outputs ANSI terminal escape sequences to make each level of parentheses a different color, for easier reading. Requires a terminal emulator that supports ANSI color escape sequences. If the colors are too hard to see, use the <code>-b</code> option to increase the brightness. </p>
-<dt><code>-h</code></p>
-<dd> Display a brief help message listing all of these options and then exit. </p>
-<dt><code>-m number</code></p>
-<dd> Change the memory size of equation spaces. It is followed by a decimal floating point number which is a multiplier of the default equation space size. This allows larger equation spaces so that manipulating extremely large expressions will succeed without getting the &quot;Expression too large&quot; error. Specifying a number higher than 100 may make Mathomatic unresponsive. </p>
-<dt><code>-q</code></p>
-<dd> Set quiet mode. The startup message and prompts are not displayed. This is useful when piping or redirecting input into Mathomatic, because the input won&#8217;t be displayed, so prompt output should be turned off. This option does the same thing as the &quot;set no prompt&quot; command. </p>
-<dt><code>-r</code></p>
-<dd> Disable readline input processing. Readline allows using the cursor keys and outputs terminal control codes which can be turned off with this option. </p>
-<dt><code>-s level</code></p>
-<dd> Set the enforced security level for the Mathomatic session. Level 0 is the default with no security. Level 1 disallows shelling out. Level 2 disallows shelling out and writing files. Level 3 disallows shelling out and reading/writing files for complete security. This run-time option was created for use on open public servers that can&#8217;t use the SECURE compile-time define. </p>
-<dt><code>-t</code></p>
-<dd> Set test mode. Used when testing and comparing output. Bypasses loading startup file, turns off color mode and readline, sets wide output mode, ignores pause command, etc. </p>
-<dt><code>-u</code></p>
-<dd> Guarantee that standard output and standard error output are unbuffered. Useful when piping. </p>
-<dt><code>-v</code></p>
-<dd> Display version number, compilation options used, maximum possible memory usage, then exit. </p>
-<dt><code>-w</code></p>
-<dd> Set wide output mode for an unlimited width output device like the &quot;set wide&quot; command does. Sets infinite screen columns and rows so that 2D (two dimensional) expression output will always succeed and not be downgraded to 1D output when it doesn&#8217;t fit in the display area. Use when redirecting output or with a terminal emulator that doesn&#8217;t wrap lines. This mode only affects 2D output. </p>
-<dt><code>-x</code></p>
-<dd> Enable HTML output mode (which is also valid XHTML). This makes Mathomatic output suitable for inclusion in a web page. The color mode and bold colors flags affect this mode, allowing HTML color output. Wide output mode is also set by this option, meaning expressions will always be displayed in 2D. </p>
+<dt><code>-b</code></dt>
+<dd> Enable bold colors. Color mode will be turned on and colors will be brighter if this option is specified. Same as the &quot;set bold color&quot; command. </dd>
+<dt><code>-c</code></dt>
+<dd> Toggle color mode. This mode outputs ANSI terminal escape sequences to make each level of parentheses a different color, for easier reading. Requires a terminal emulator that supports ANSI color escape sequences. If the colors are too hard to see, use the <code>-b</code> option to increase the brightness. </dd>
+<dt><code>-h</code></dt>
+<dd> Display a brief help message listing all of these options and then exit. </dd>
+<dt><code>-m number</code></dt>
+<dd> Change the memory size of equation spaces. It is followed by a decimal floating point number which is a multiplier of the default equation space size. This allows larger equation spaces so that manipulating extremely large expressions will succeed without getting the &quot;Expression too large&quot; error. Specifying a number higher than 100 may make Mathomatic unresponsive. </dd>
+<dt><code>-q</code></dt>
+<dd> Set quiet mode. The startup message and prompts are not displayed. This is useful when piping or redirecting input into Mathomatic, because the input won&#8217;t be displayed, so prompt output should be turned off. This option does the same thing as the &quot;set no prompt&quot; command. </dd>
+<dt><code>-r</code></dt>
+<dd> Disable readline input processing. Readline allows using the cursor keys and outputs terminal control codes which can be turned off with this option. </dd>
+<dt><code>-s level</code></dt>
+<dd> Set the enforced security level for the Mathomatic session. Level 0 is the default with no security. Level 1 disallows shelling out. Level 2 disallows shelling out and writing files. Level 3 disallows shelling out and reading/writing files for complete security. This run-time option was created for use on open public servers that can&#8217;t use the SECURE compile-time define. </dd>
+<dt><code>-t</code></dt>
+<dd> Set test mode. Used when testing and comparing output. Bypasses loading startup file, turns off color mode and readline, sets wide output mode, ignores pause command, etc. </dd>
+<dt><code>-u</code></dt>
+<dd> Guarantee that standard output and standard error output are unbuffered. Useful when piping. </dd>
+<dt><code>-v</code></dt>
+<dd> Display version number, compilation options used, maximum possible memory usage, then exit. </dd>
+<dt><code>-w</code></dt>
+<dd> Set wide output mode for an unlimited width output device like the &quot;set wide&quot; command does. Sets infinite screen columns and rows so that 2D (two dimensional) expression output will always succeed and not be downgraded to 1D output when it doesn&#8217;t fit in the display area. Use when redirecting output or with a terminal emulator that doesn&#8217;t wrap lines. This mode only affects 2D output. </dd>
+<dt><code>-x</code></dt>
+<dd> Enable HTML output mode (which is also valid XHTML). This makes Mathomatic output suitable for inclusion in a web page. The color mode and bold colors flags affect this mode, allowing HTML color output. Wide output mode is also set by this option, meaning expressions will always be displayed in 2D. </dd>
 </dl>
 <h2>GENERAL</h2>
 <p> After any options, text files may be specified on the shell command line that will be automatically read in with the read command. </p>
@@ -51,13 +51,13 @@ description: "mathomatic – a computer algebra system rmath – a computer alge
 <p> Complete documentation is available in HTML format; see the local documentation directory or online at &quot;<a rel="nofollow" href="http://mathomatic.org/math/doc/">http://mathomatic.org/math/doc/</a>&quot; for the latest Mathomatic documentation. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>EDITOR</code></p>
-<dd> The EDITOR environment variable specifies which text editor to use for the edit command. </p>
+<dt><code>EDITOR</code></dt>
+<dd> The EDITOR environment variable specifies which text editor to use for the edit command. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.mathomaticrc</code></p>
-<dd> Optional startup file containing Mathomatic set command options. It should be a text file with one set option per line. Do not include the word &quot;set&quot;. For example, the line &quot;no color&quot; will make Mathomatic default to non-color mode, which is useful if you are not using a standard terminal emulator. </p>
+<dt><code>~/.mathomaticrc</code></dt>
+<dd> Optional startup file containing Mathomatic set command options. It should be a text file with one set option per line. Do not include the word &quot;set&quot;. For example, the line &quot;no color&quot; will make Mathomatic default to non-color mode, which is useful if you are not using a standard terminal emulator. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-matho-primes/">matho-primes</a></code>(1), <code><a href="/docs/linux/man/1-primorial/">primorial</a></code>(1), <code><a href="/docs/linux/man/1-matho-mult/">matho-mult</a></code>(1), <code><a href="/docs/linux/man/1-matho-sum/">matho-sum</a></code>(1), <code><a href="/docs/linux/man/1-matho-pascal/">matho-pascal</a></code>(1), <code><a href="/docs/linux/man/1-matho-sumsq/">matho-sumsq</a></code>(1) </p>

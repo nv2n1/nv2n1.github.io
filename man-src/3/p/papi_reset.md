@@ -28,7 +28,6 @@ This call assumes an initialized PAPI library and a properly added event set
 <pre>int EventSet = PAPI_NULL;
 int Events[] = {PAPI_TOT_INS, PAPI_FP_OPS};
 int ret;
- 
 // Create an empty EventSet
 ret = PAPI_create_eventset(&amp;EventSet);
 if (ret != PAPI_OK) handle_error(ret);
@@ -47,6 +46,6 @@ if (ret != PAPI_OK) handle_error(ret);
  * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_create_eventset</code></dl>
+<dd><code>PAPI_create_eventset</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

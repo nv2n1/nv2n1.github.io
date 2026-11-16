@@ -15,19 +15,19 @@ bitmap_bitremap - Apply map defined by a pair of bitmaps to a single bit
 <h2>Arguments</h2>
 
 <i>oldbit</i>
-<dl><dd><dd>bit position to be mapped</dl>
+<dl><dd></dd><dd>bit position to be mapped</dd></dl>
  
 
  <i>old</i>
-<dl><dd>defines domain of map</dl>
+<dl><dd>defines domain of map</dd></dl>
  
 
  <i>new</i>
-<dl><dd>defines range of map</dl>
+<dl><dd>defines range of map</dd></dl>
  
 
  <i>bits</i>
-<dl><dd>number of bits in each of these bitmaps</dl>
+<dl><dd>number of bits in each of these bitmaps</dd></dl>
 
 <h2>Description</h2>
 

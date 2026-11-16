@@ -17,11 +17,11 @@ description: "ldns_rr_list_new, ldns_rr_list_free"
 <p> void ldns_rr_list_free(ldns_rr_list *rr_list); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_list_new</i>()</p>
-<dd>creates a new rr_list structure. .br Returns a new rr_list structure</dl>
+<dt> <i>ldns_rr_list_new</i>()</dt>
+<dd>creates a new rr_list structure. .br Returns a new rr_list structure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_list_free</i>()</p>
-<dd>frees an rr_list structure. .br <code>rr_list</code>: the list to free</dl>
+<dt> <i>ldns_rr_list_free</i>()</dt>
+<dd>frees an rr_list structure. .br <code>rr_list</code>: the list to free</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

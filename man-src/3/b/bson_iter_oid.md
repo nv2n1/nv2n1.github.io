@@ -18,8 +18,8 @@ bson_iter_oid(const bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Fetches the <code>bson_oid_t</code> for a BSON_TYPE_OID element. You should verify it is an element of type BSON_TYPE_OID before calling this function. </p>
 <h2>RETURNS</h2>

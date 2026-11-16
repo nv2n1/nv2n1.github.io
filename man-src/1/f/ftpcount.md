@@ -15,12 +15,12 @@ description: "ftpcount – show current number of connections for each proftpd s
 <p> The <code>ftpcount</code> command shows the current number of connections per server and virtualhost/anonymous configuration defined in the proftpd.conf file. Connections spawned by inetd are counted separately from those created by a master proftpd <i>standalone</i> server.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h,&#8211;help</code></p>
-<dd> Display a short usage description, including all available options.</p>
-<dt><code>-f,&#8211;file</code><i> scoreboard-file</i></p>
-<dd> Specify the full path to proftpd&#8217;s run-time scoreboard file (configured via the <code>ScoreboardFile</code> directive in <i>proftpd.conf</i> ). If proftpd&#8217;s default directory has been changed via this directive, <code>ftpcount</code> must either be recompiled or this option must be used in order to find proftpd&#8217;s scoreboard.</p>
-<dt><code>-S,&#8211;server</code><i> server-name</i></p>
-<dd> Specify the ServerName for a specific virtual host. If used, <i>ftpcount</i> will only show the session count for the given virtual host.</dl>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Display a short usage description, including all available options.</dd>
+<dt><code>-f,&#8211;file</code><i> scoreboard-file</i></dt>
+<dd> Specify the full path to proftpd&#8217;s run-time scoreboard file (configured via the <code>ScoreboardFile</code> directive in <i>proftpd.conf</i> ). If proftpd&#8217;s default directory has been changed via this directive, <code>ftpcount</code> must either be recompiled or this option must be used in order to find proftpd&#8217;s scoreboard.</dd>
+<dt><code>-S,&#8211;server</code><i> server-name</i></dt>
+<dd> Specify the ServerName for a specific virtual host. If used, <i>ftpcount</i> will only show the session count for the given virtual host.</dd></dl>
 <h2>FILES</h2>
 <p> <code>/usr/bin/ftpcount</code><br />
  <code>/run/proftpd/proftpd.scoreboard</code></p>

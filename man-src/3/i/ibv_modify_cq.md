@@ -33,7 +33,7 @@ struct ibv_modify_cq_attr {
 <p> <code>ibv_create_cq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Yonatan Cohen &lt;yonatanc [at] mellanox.com&gt;</p>
+<dt>Yonatan Cohen &lt;yonatanc [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

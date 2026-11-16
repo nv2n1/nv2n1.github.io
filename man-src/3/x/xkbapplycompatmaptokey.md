@@ -11,16 +11,16 @@ description: "XkbApplyCompatMapToKey – Apply the new compatibility mapping to 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbApplyCompatMapToKey</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>XkbChangesPtr </code><i>changes</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description to be updated</p>
-<dt><i>&#8211; key</i></p>
-<dd>key to be updated</p>
-<dt><i>&#8211; changes</i></p>
-<dd>notes changes to the Xkb keyboard description</dl>
+</dd><dd>keyboard description to be updated</dd>
+<dt><i>&#8211; key</i></dt>
+<dd>key to be updated</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>notes changes to the Xkb keyboard description</dd></dl>
 <h2>Description</h2>
 <p><i>XkbApplyCompatMapToKey </i> essentially performs the operation described in Core Keyboard Mapping to Xkb Keyboard Mapping Transformation to a specific key. This updates the behavior, actions, repeat status, and virtual modifier bindings of the key. </p>
 <p> <code>Core Keyboard Mapping to Xkb Keyboard Mapping Transformation</code> </p>
@@ -100,29 +100,29 @@ description: "XkbApplyCompatMapToKey – Apply the new compatibility mapping to 
 </tr>
 </table>
 <dl COMPACT>
-<dt>1.</p>
-<dd>Map the symbols from the keys in the core keyboard map to groups and symbols on keys in the Xkb keyboard map. The core keyboard mapping is of fixed width, so each key in the core mapping has the same number of symbols associated with it. The Xkb mapping allows a different number of symbols to be associated with each key; those symbols may be divided into a different number of groups (1-4) for each key. For each key, this process therefore involves partitioning the fixed number of symbols from the core mapping into a set of variable-length groups with a variable number of symbols in each group. For example, if the core protocol map is of width five, the partition for one key might result in one group with two symbols and another with three symbols. A different key might result in two groups with two symbols plus a third group with one symbol. The core protocol map requires at least two symbols in each of the first two groups.</p>
-<dt>1a.</p>
-<dd>For each changed key, determine the number of groups represented in the new core keyboard map. This results in a tentative group count for each key in the Xkb map.</p>
-<dt>1b.</p>
-<dd>For each changed key, determine the number of symbols in each of the groups found in step 1a. There is one explicit override control associated with each of the four possible groups for each Xkb key, ExplicitKeyType1 through ExplicitKeyType4. If no explicit override control is set for a group, the number of symbols used for that group from the core map is two. If the explicit override control is set for a group on the key, the number of symbols used for that Xkb group from the core map is the width of the Xkb group with one exception: because of the core protocol requirement for at least two symbols in each of groups one and two, the number of symbols used for groups one and two is the maximum of 2 or the width of the Xkb group.</p>
-<dt>1c.</p>
-<dd>For each changed key, assign the symbols in the core map to the appropriate group on the key. If the total number of symbols required by the Xkb map for a particular key needs more symbols than the core protocol map contains, the additional symbols are taken to be NoSymbol keysyms appended to the end of the core set. If the core map contains more symbols than are needed by the Xkb map, trailing symbols in the core map are discarded. In the absence of an explicit override for group one or two, symbols are assigned in order by group; the first symbols in the core map are assigned to group one, in order, followed by group two, and so on. For example, if the core map contained eight symbols per key, and a particular Xkb map contained 2 symbols for G1 and G2 and three for G3, the symbols would be assigned as (G is group, L is shift level): </p>
+<dt>1.</dt>
+<dd>Map the symbols from the keys in the core keyboard map to groups and symbols on keys in the Xkb keyboard map. The core keyboard mapping is of fixed width, so each key in the core mapping has the same number of symbols associated with it. The Xkb mapping allows a different number of symbols to be associated with each key; those symbols may be divided into a different number of groups (1-4) for each key. For each key, this process therefore involves partitioning the fixed number of symbols from the core mapping into a set of variable-length groups with a variable number of symbols in each group. For example, if the core protocol map is of width five, the partition for one key might result in one group with two symbols and another with three symbols. A different key might result in two groups with two symbols plus a third group with one symbol. The core protocol map requires at least two symbols in each of the first two groups.</dd>
+<dt>1a.</dt>
+<dd>For each changed key, determine the number of groups represented in the new core keyboard map. This results in a tentative group count for each key in the Xkb map.</dd>
+<dt>1b.</dt>
+<dd>For each changed key, determine the number of symbols in each of the groups found in step 1a. There is one explicit override control associated with each of the four possible groups for each Xkb key, ExplicitKeyType1 through ExplicitKeyType4. If no explicit override control is set for a group, the number of symbols used for that group from the core map is two. If the explicit override control is set for a group on the key, the number of symbols used for that Xkb group from the core map is the width of the Xkb group with one exception: because of the core protocol requirement for at least two symbols in each of groups one and two, the number of symbols used for groups one and two is the maximum of 2 or the width of the Xkb group.</dd>
+<dt>1c.</dt>
+<dd>For each changed key, assign the symbols in the core map to the appropriate group on the key. If the total number of symbols required by the Xkb map for a particular key needs more symbols than the core protocol map contains, the additional symbols are taken to be NoSymbol keysyms appended to the end of the core set. If the core map contains more symbols than are needed by the Xkb map, trailing symbols in the core map are discarded. In the absence of an explicit override for group one or two, symbols are assigned in order by group; the first symbols in the core map are assigned to group one, in order, followed by group two, and so on. For example, if the core map contained eight symbols per key, and a particular Xkb map contained 2 symbols for G1 and G2 and three for G3, the symbols would be assigned as (G is group, L is shift level): </dd>
 <pre> G1L1 G1L2 G2L1 G2L2 G3L1 G3L2 G3L3</pre>
 <p>If an explicit override control is set for group one or two, the symbols are taken from the core set in a somewhat different order. The first four symbols from the core set are assigned to G1L1, G1L2, G2L1, G2L2, respectively. If group one requires more symbols, they are taken next, and then any additional symbols needed by group two. Group three and four symbols are taken in complete sequence after group two. For example, a key with four groups and three symbols in each group would take symbols from the core set in the following order: </p>
 <pre> G1L1 G1L2 G2L1 G2L2 G1L3 G2L3 G3L1 G3L2 G3L3 G4L1 G4L2 G4L3</pre>
 <p>As previously noted, the core protocol map requires at lease two symbols in groups one and two. Because of this, if an explicit override control for an Xkb key is set and group one and / or group two is of width one, it is not possible to generate the symbols taken from the core protocol set and assigned to position G1L2 and / or G2L2.</p>
-<dt>1d.</p>
-<dd>For each group on each changed key, assign a key type appropriate for the symbols in the group.</p>
-<dt>1e.</p>
-<dd>For each changed key, remove any empty or redundant groups. </p>
+<dt>1d.</dt>
+<dd>For each group on each changed key, assign a key type appropriate for the symbols in the group.</dd>
+<dt>1e.</dt>
+<dd>For each changed key, remove any empty or redundant groups. </dd>
 <p> At this point, the groups and their associated symbols have been assigned to the corresponding key definitions in the Xkb map.</p>
-<dt>2.</p>
-<dd>Apply symbol interpretations to modify key operation. This phase is completely skipped if the ExplicitInterpret override control bit is set in the explicit controls mask for the Xkb key (see Explicit Components-Avoiding Automatic Remapping by the Server).</p>
-<dt>2a.</p>
-<dd>For each symbol on each changed key, attempt to match the symbol and modifiers from the Xkb map to a symbol interpretation describing how to generate the symbol.</p>
-<dt>2b.</p>
-<dd>When a match is found in step 2a, apply the symbol interpretation to change the semantics associated with the symbol in the Xkb key map. If no match is found, apply a default interpretation.</dl>
+<dt>2.</dt>
+<dd>Apply symbol interpretations to modify key operation. This phase is completely skipped if the ExplicitInterpret override control bit is set in the explicit controls mask for the Xkb key (see Explicit Components-Avoiding Automatic Remapping by the Server).</dd>
+<dt>2a.</dt>
+<dd>For each symbol on each changed key, attempt to match the symbol and modifiers from the Xkb map to a symbol interpretation describing how to generate the symbol.</dd>
+<dt>2b.</dt>
+<dd>When a match is found in step 2a, apply the symbol interpretation to change the semantics associated with the symbol in the Xkb key map. If no match is found, apply a default interpretation.</dd></dl>
 <p> The symbol interpretations used in step 2 are configurable and may be specified using XkbSymInterpretRec structures referenced by the sym_interpret field of an XkbCompatMapRec. </p>
 <p> <code>Symbol Interpretations &#8211; the XkbSymInterpretRec Structure</code> </p>
 <p> Symbol interpretations are used to guide the X server when it modifies the Xkb keymap in step 2. An initial set of symbol interpretations is loaded by the server when it starts. A client may add new ones using XkbSetCompatMap. </p>

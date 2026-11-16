@@ -34,18 +34,12 @@ std::future_error on the following error conditions:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;future&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;utility&gt;
 void worker(std::future&lt;void&gt; &amp;output)
-
 {
     std::packaged_task&lt;void(bool &amp;)&gt; my_task{[](bool &amp;done) { done = true; }};
     auto result = my_task.get_future();
@@ -57,9 +51,7 @@ void worker(std::future&lt;void&gt; &amp;output)
         std::cout &lt;&lt; &quot;worker: result is not ready yet&quot; &lt;&lt; std::endl;
     output = std::move(result);
 }
-
 int main()
-
 {
     std::future&lt;void&gt; result;
     std::thread{worker, std::ref(result)}.join();

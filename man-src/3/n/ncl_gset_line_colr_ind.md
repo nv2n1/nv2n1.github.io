@@ -13,8 +13,8 @@ description: "gset_line_colr_ind (Polyline color index) – sets the polyline co
 <p> void gset_line_colr_ind(Gint line_colr_ind);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>line_colr_ind</p>
-<dd>(Input) &#8211; A color index.</dl>
+<dt>line_colr_ind</dt>
+<dd>(Input) &#8211; A color index.</dd></dl>
 <h2>Usage</h2>
 <p>All lines drawn with calls to the gpolyline output primitive will be drawn with the color associated with index line_colr_ind until gset_line_colr_ind is called again and a new index is assigned. </p>
 <p> For all GKS output primitives, color is assigned using a color index. The color indices run from 0 to 255, where 0 is the background color index and 1 is the foreground color index. Color values are associated with indices by calls to the GKS routine gset_colr_rep. If a color index is used that has no user-assigned color value set in a gset_colr_rep call, then a device-dependent color value will be assigned to that index.</p>

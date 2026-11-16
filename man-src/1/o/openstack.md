@@ -26,10 +26,10 @@ export OS_PASSWORD=&lt;password&gt;  # (optional)
 </pre>
 <p> <code>openstack</code> can use different types of authentication plugins provided by the keystoneclient library. The following default plugins are available:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>token</code>: Authentication with a token</p>
-<dt>&bull;</p>
-<dd> <code>password</code>: Authentication with a username and a password </p>
+<dt>&bull;</dt>
+<dd> <code>token</code>: Authentication with a token</dd>
+<dt>&bull;</dt>
+<dd> <code>password</code>: Authentication with a username and a password </dd>
 <p> Refer to the keystoneclient library documentation for more details about these plugins and their options, and for a complete list of available plugins. Please bear in mind that some plugins might not support all of the functionalities of <code>openstack</code>; for example the v3unscopedsaml plugin can deliver only unscoped tokens, some commands might not be available through this authentication method. </p>
 <p> Additionally, it is possible to use Keystone&#8217;s service token to authenticate, by setting the options <i>&#8211;os-token</i> and <i>&#8211;os-url</i> (or the environment variables <code>OS_TOKEN</code> and <code>OS_URL</code> respectively). This method takes precedence over authentication plugins. </p>
 <p> <code>NOTE:</code> To use the <code>v3unscopedsaml</code> method, the lxml package will need to be installed.</dl>
@@ -37,42 +37,42 @@ export OS_PASSWORD=&lt;password&gt;  # (optional)
 <p> <code>openstack</code> takes global options that control overall behaviour and command-specific options that control the command operation. Most global options have a corresponding environment variable that may also be used to set the value. If both are present, the command-line option takes priority. The environment variable names are derived from the option name by dropping the leading dashes (&#8216;&#8211;&#8216;), converting each embedded dash (&#8216;-&#8216;) to an underscore (&#8216;_&#8217;), and converting to upper case. </p>
 <p> <code>openstack</code> recognizes the following global options:</p>
 <dl>
-<dt><i>&#8211;os-auth-plugin</i> &lt;auth-plugin&gt;</p>
-<dd> The authentication plugin to use when connecting to the Identity service. If this option is not set, <code>openstack</code> will attempt to guess the authentication method to use based on the other options. If this option is set, its version must match <i>&#8211;os-identity-api-version</i></p>
-<dt><i>&#8211;os-auth-url</i> &lt;auth-url&gt;</p>
-<dd> Authentication URL</p>
-<dt><i>&#8211;os-url</i> &lt;service-url&gt;</p>
-<dd> Service URL, when using a service token for authentication</p>
-<dt><i>&#8211;os-domain-name</i> &lt;auth-domain-name&gt; | <i>&#8211;os-domain-id</i> &lt;auth-domain-id&gt;</p>
-<dd> Domain-level authorization scope (name or ID)</p>
-<dt><i>&#8211;os-project-name</i> &lt;auth-project-name&gt; | <i>&#8211;os-project-id</i> &lt;auth-project-id&gt;</p>
-<dd> Project-level authentication scope (name or ID)</p>
-<dt><i>&#8211;os-project-domain-name</i> &lt;auth-project-domain-name&gt; | <i>&#8211;os-project-domain-id</i> &lt;auth-project-domain-id&gt;</p>
-<dd> Domain name or id containing project</p>
-<dt><i>&#8211;os-username</i> &lt;auth-username&gt;</p>
-<dd> Authentication username</p>
-<dt><i>&#8211;os-password</i> &lt;auth-password&gt;</p>
-<dd> Authentication password</p>
-<dt><i>&#8211;os-token</i> &lt;token&gt;</p>
-<dd> Authenticated token or service token</p>
-<dt><i>&#8211;os-user-domain-name</i> &lt;auth-user-domain-name&gt; | <i>&#8211;os-user-domain-id</i> &lt;auth-user-domain-id&gt;</p>
-<dd> Domain name or id containing user</p>
-<dt><i>&#8211;os-user-domain-name</i> &lt;auth-user-domain-name&gt; | <i>&#8211;os-user-domain-id</i> &lt;auth-user-domain-id&gt;</p>
-<dd> Domain name or ID containing user</p>
-<dt><i>&#8211;os-trust-id</i> &lt;trust-id&gt;</p>
-<dd> id of the trust to use as a trustee user</p>
-<dt><i>&#8211;os-default-domain</i> &lt;auth-domain&gt;</p>
-<dd> Default domain ID (Default: &#8216;default&#8217;)</p>
-<dt><i>&#8211;os-region-name</i> &lt;auth-region-name&gt;</p>
-<dd> Authentication region name</p>
-<dt><i>&#8211;os-cacert</i> &lt;ca-bundle-file&gt;</p>
-<dd> CA certificate bundle file</p>
-<dt><i>&#8211;verify</i> | <i>&#8211;insecure</i></p>
-<dd> Verify or ignore server certificate (default: verify)</p>
-<dt><i>&#8211;os-identity-api-version</i> &lt;identity-api-version&gt;</p>
-<dd> Identity API version (Default: 2.0)</p>
-<dt><i>&#8211;os-XXXX-api-version</i> &lt;XXXX-api-version&gt;</p>
-<dd> Additional API version options will be available depending on the installed API libraries.</dl>
+<dt><i>&#8211;os-auth-plugin</i> &lt;auth-plugin&gt;</dt>
+<dd> The authentication plugin to use when connecting to the Identity service. If this option is not set, <code>openstack</code> will attempt to guess the authentication method to use based on the other options. If this option is set, its version must match <i>&#8211;os-identity-api-version</i></dd>
+<dt><i>&#8211;os-auth-url</i> &lt;auth-url&gt;</dt>
+<dd> Authentication URL</dd>
+<dt><i>&#8211;os-url</i> &lt;service-url&gt;</dt>
+<dd> Service URL, when using a service token for authentication</dd>
+<dt><i>&#8211;os-domain-name</i> &lt;auth-domain-name&gt; | <i>&#8211;os-domain-id</i> &lt;auth-domain-id&gt;</dt>
+<dd> Domain-level authorization scope (name or ID)</dd>
+<dt><i>&#8211;os-project-name</i> &lt;auth-project-name&gt; | <i>&#8211;os-project-id</i> &lt;auth-project-id&gt;</dt>
+<dd> Project-level authentication scope (name or ID)</dd>
+<dt><i>&#8211;os-project-domain-name</i> &lt;auth-project-domain-name&gt; | <i>&#8211;os-project-domain-id</i> &lt;auth-project-domain-id&gt;</dt>
+<dd> Domain name or id containing project</dd>
+<dt><i>&#8211;os-username</i> &lt;auth-username&gt;</dt>
+<dd> Authentication username</dd>
+<dt><i>&#8211;os-password</i> &lt;auth-password&gt;</dt>
+<dd> Authentication password</dd>
+<dt><i>&#8211;os-token</i> &lt;token&gt;</dt>
+<dd> Authenticated token or service token</dd>
+<dt><i>&#8211;os-user-domain-name</i> &lt;auth-user-domain-name&gt; | <i>&#8211;os-user-domain-id</i> &lt;auth-user-domain-id&gt;</dt>
+<dd> Domain name or id containing user</dd>
+<dt><i>&#8211;os-user-domain-name</i> &lt;auth-user-domain-name&gt; | <i>&#8211;os-user-domain-id</i> &lt;auth-user-domain-id&gt;</dt>
+<dd> Domain name or ID containing user</dd>
+<dt><i>&#8211;os-trust-id</i> &lt;trust-id&gt;</dt>
+<dd> id of the trust to use as a trustee user</dd>
+<dt><i>&#8211;os-default-domain</i> &lt;auth-domain&gt;</dt>
+<dd> Default domain ID (Default: &#8216;default&#8217;)</dd>
+<dt><i>&#8211;os-region-name</i> &lt;auth-region-name&gt;</dt>
+<dd> Authentication region name</dd>
+<dt><i>&#8211;os-cacert</i> &lt;ca-bundle-file&gt;</dt>
+<dd> CA certificate bundle file</dd>
+<dt><i>&#8211;verify</i> | <i>&#8211;insecure</i></dt>
+<dd> Verify or ignore server certificate (default: verify)</dd>
+<dt><i>&#8211;os-identity-api-version</i> &lt;identity-api-version&gt;</dt>
+<dd> Identity API version (Default: 2.0)</dd>
+<dt><i>&#8211;os-XXXX-api-version</i> &lt;XXXX-api-version&gt;</dt>
+<dd> Additional API version options will be available depending on the installed API libraries.</dd></dl>
 <h2>COMMANDS</h2>
 <p> To get a list of the available commands: </p>
 <pre>
@@ -84,10 +84,10 @@ openstack help &lt;command&gt;
 </pre>
 <p> Note that the set of commands shown will vary depending on the API versions that are in effect at that time. For example, to force the display of the Identity v3 commands: openstack &#8211;os-identity-api-version 3 &#8211;help</p>
 <dl>
-<dt><i>complete</i></p>
-<dd> Print the bash completion functions for the current command set.</p>
-<dt><i>help</i></p>
-<dd> Print help for an individual command </p>
+<dt><i>complete</i></dt>
+<dd> Print the bash completion functions for the current command set.</dd>
+<dt><i>help</i></dt>
+<dd> Print help for an individual command </dd>
 <p> Additional information on the OpenStackClient command structure and arguments is available in the <i>OpenStackClient Commands</i> wiki page.</dl>
 <h3>Command Objects</h3>
 <p> The list of command objects is growing longer with the addition of OpenStack project support. The object names may consist of multiple words to compose a unique name. Occasionally when multiple APIs have a common name with common overlapping purposes there will be options to select which object to use, or the API resources will be merged, as in the <code>quota</code> object that has options referring to both Compute and Volume quotas.</p>
@@ -112,43 +112,43 @@ openstack image create-- disk - format = qcow2-- container - format = bare-- pub
 </code></pre>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.openstack</code></p>
-<dd> Placeholder for future local state directory. This directory is intended to be shared among multiple OpenStack-related applications; contents are namespaced with an identifier for the app that owns it. Shared contents (such as <code>~/.openstack/cache</code>) have no prefix and the contents must be portable.</dl>
+<dt><code>~/.openstack</code></dt>
+<dd> Placeholder for future local state directory. This directory is intended to be shared among multiple OpenStack-related applications; contents are namespaced with an identifier for the app that owns it. Shared contents (such as <code>~/.openstack/cache</code>) have no prefix and the contents must be portable.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables can be set to alter the behaviour of <code>openstack</code>. Most of them have corresponding command-line options that take precedence if set.</p>
 <dl>
-<dt><code>OS_AUTH_PLUGIN</code></p>
-<dd> The authentication plugin to use when connecting to the Identity service, its version must match the Identity API version</p>
-<dt><code>OS_AUTH_URL</code></p>
-<dd> Authentication URL</p>
-<dt><code>OS_URL</code></p>
-<dd> Service URL (when using the service token)</p>
-<dt><code>OS_DOMAIN_NAME</code></p>
-<dd> Domain-level authorization scope (name or ID)</p>
-<dt><code>OS_PROJECT_NAME</code></p>
-<dd> Project-level authentication scope (name or ID)</p>
-<dt><code>OS_PROJECT_DOMAIN_NAME</code></p>
-<dd> Domain name or id containing project</p>
-<dt><code>OS_USERNAME</code></p>
-<dd> Authentication username</p>
-<dt><code>OS_TOKEN</code></p>
-<dd> Authenticated or service token</p>
-<dt><code>OS_PASSWORD</code></p>
-<dd> Authentication password</p>
-<dt><code>OS_USER_DOMAIN_NAME</code></p>
-<dd> Domain name or id containing user</p>
-<dt><code>OS_TRUST_ID</code></p>
-<dd> id of the trust to use as a trustee user</p>
-<dt><code>OS_DEFAULT_DOMAIN</code></p>
-<dd> Default domain ID (Default: &#8216;default&#8217;)</p>
-<dt><code>OS_REGION_NAME</code></p>
-<dd> Authentication region name</p>
-<dt><code>OS_CACERT</code></p>
-<dd> CA certificate bundle file</p>
-<dt><code>OS_IDENTITY_API_VERSION</code></p>
-<dd> Identity API version (Default: 2.0)</p>
-<dt><code>OS_XXXX_API_VERSION</code></p>
-<dd> Additional API version options will be available depending on the installed API libraries.</dl>
+<dt><code>OS_AUTH_PLUGIN</code></dt>
+<dd> The authentication plugin to use when connecting to the Identity service, its version must match the Identity API version</dd>
+<dt><code>OS_AUTH_URL</code></dt>
+<dd> Authentication URL</dd>
+<dt><code>OS_URL</code></dt>
+<dd> Service URL (when using the service token)</dd>
+<dt><code>OS_DOMAIN_NAME</code></dt>
+<dd> Domain-level authorization scope (name or ID)</dd>
+<dt><code>OS_PROJECT_NAME</code></dt>
+<dd> Project-level authentication scope (name or ID)</dd>
+<dt><code>OS_PROJECT_DOMAIN_NAME</code></dt>
+<dd> Domain name or id containing project</dd>
+<dt><code>OS_USERNAME</code></dt>
+<dd> Authentication username</dd>
+<dt><code>OS_TOKEN</code></dt>
+<dd> Authenticated or service token</dd>
+<dt><code>OS_PASSWORD</code></dt>
+<dd> Authentication password</dd>
+<dt><code>OS_USER_DOMAIN_NAME</code></dt>
+<dd> Domain name or id containing user</dd>
+<dt><code>OS_TRUST_ID</code></dt>
+<dd> id of the trust to use as a trustee user</dd>
+<dt><code>OS_DEFAULT_DOMAIN</code></dt>
+<dd> Default domain ID (Default: &#8216;default&#8217;)</dd>
+<dt><code>OS_REGION_NAME</code></dt>
+<dd> Authentication region name</dd>
+<dt><code>OS_CACERT</code></dt>
+<dd> CA certificate bundle file</dd>
+<dt><code>OS_IDENTITY_API_VERSION</code></dt>
+<dd> Identity API version (Default: 2.0)</dd>
+<dt><code>OS_XXXX_API_VERSION</code></dt>
+<dd> Additional API version options will be available depending on the installed API libraries.</dd></dl>
 <h2>BUGS</h2>
 <p> Bug reports are accepted at the python-openstackclient LaunchPad project &quot;<i><a rel="nofollow" href="https://bugs.launchpad.net/python-openstackclient/+bugs">https://bugs.launchpad.net/python-openstackclient/+bugs</a></i>&quot;.</p>
 <h2>AUTHORS</h2>

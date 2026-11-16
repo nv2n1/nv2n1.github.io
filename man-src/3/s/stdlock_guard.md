@@ -11,9 +11,7 @@ std::lock_guard - std::lock_guard
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;mutex&gt;
-
 template&lt; class Mutex &gt;
-
 class lock_guard;</code></pre> 
 The class lock_guard is a mutex wrapper that provides a convenient RAII-style mechanism for owning a mutex for the duration of a scoped block. 
 When a lock_guard object is created, it attempts to take ownership of the mutex it is given. When control leaves the scope in which the lock_guard object was created, the lock_guard is destructed and the mutex is released. 
@@ -43,15 +41,11 @@ operator= not copy-assignable
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;thread&gt;
-
 #include &lt;mutex&gt;
-
 #include &lt;iostream&gt;
 int g_i = 0;
-
 std::mutex g_i_mutex; // protects g_i
 void safe_increment()
-
 {
     std::lock_guard&lt;std::mutex&gt; lock(g_i_mutex);
     ++g_i;
@@ -60,7 +54,6 @@ void safe_increment()
     // goes out of scope
 }
 int main()
-
 {
     std::cout &lt;&lt; &quot;main: &quot; &lt;&lt; g_i &lt;&lt; '\n';
     std::thread t1(safe_increment);

@@ -13,52 +13,52 @@ description: "gatherd.conf – SBLIM metric repository daemon configuration file
 <h2>Options</h2>
 <p><code>RepositoryHost</code>=<i>addr</i></p>
 <dl>
-<dd>The ip address of the remote repository daemon to which metric values will be sent. Default is <code>localhost</code>.</dl>
+<dd>The ip address of the remote repository daemon to which metric values will be sent. Default is <code>localhost</code>.</dd></dl>
 <p> <code>RepositoryPort</code>=<i>port</i></p>
 <dl>
-<dd>TCP port of remote repository daemon. Default is <code>6363</code>.</dl>
+<dd>TCP port of remote repository daemon. Default is <code>6363</code>.</dd></dl>
 <p> <code>TraceLevel</code>=<i>level</i></p>
 <dl>
-<dd>Trace level for the <code>gatherd</code> process. Default is <code>0</code>.</dl>
+<dd>Trace level for the <code>gatherd</code> process. Default is <code>0</code>.</dd></dl>
 <p> <code>TraceFile</code>=<i>file</i></p>
 <dl>
-<dd>Name of file to write tracing information. Default is <code>stderr</code>.</dl>
+<dd>Name of file to write tracing information. Default is <code>stderr</code>.</dd></dl>
 <p> <code>TraceComponents</code>=<i>comps[:comps&#8230;]</i></p>
 <dl>
-<dd>Gatherer components to be traced seperated by a colon (:). Valid components are: comm, util, gather, rrepos. Default is <code>none</code>.</dl>
+<dd>Gatherer components to be traced seperated by a colon (:). Valid components are: comm, util, gather, rrepos. Default is <code>none</code>.</dd></dl>
 <p> <code>PluginDirectory</code>=<i>dir</i></p>
 <dl>
-<dd>Directory where metric collection plugins are located. Default is <code>/usr/lib/gather/mplug</code> (<code>/usr/lib64/gather/mplug</code>).</dl>
+<dd>Directory where metric collection plugins are located. Default is <code>/usr/lib/gather/mplug</code> (<code>/usr/lib64/gather/mplug</code>).</dd></dl>
 <p> <code>AutoLoad</code>=<i>plugin[:plugin&#8230;]</i></p>
 <dl>
-<dd>Plugins to automatically load, initalize and start sampling. Valid values are: * or colon-seperated list. Default is <code>none</code>.</dl>
+<dd>Plugins to automatically load, initalize and start sampling. Valid values are: * or colon-seperated list. Default is <code>none</code>.</dd></dl>
 <p> <code>SampleInterval</code>=<i>secs</i></p>
 <dl>
-<dd>If specified this interval will override the plugin defined individual sampling intervals. Unit is in seconds. </p>
+<dd>If specified this interval will override the plugin defined individual sampling intervals. Unit is in seconds. </dd>
 <p> <code>WARNING:</code> This config option should only be used for debugging purposes. It overrides the per metric defined sample interval of all plugins, and really short intervals can introduce skew in the data due to seconds not being a high enough sample resolution.</dl>
 <p> <code>Synchronization</code>=<i>0|1</i></p>
 <dl>
-<dd>Specifies whether the metric plugins are invoked in a time-synchronized manner. Synchronized metrics with the same sample interval will be scheduled together. Possible values are: </p>
+<dd>Specifies whether the metric plugins are invoked in a time-synchronized manner. Synchronized metrics with the same sample interval will be scheduled together. Possible values are: </dd>
 <dl>
 <dd>
 <pre>1 synchronized relative to Jan, 1st, 1970, 00:00</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>0 unsynchronized, will be scheduled asap</pre>
-</dl>
+</dd></dl>
 <p> Default is <code>1</code>.</dl>
 <h2>Bugs</h2>
 <p>The SBLIM project maintains a mailing list to which you should direct all questions regarding sfcb, sfcc, wbemcli, the metric data gatherer, or any of the SBLIM providers. To subscribe to this list visit:</p>
 <dl>
 <dd>
 <pre><a rel="nofollow" href="https://lists.sourceforge.net/lists/listinfo/sblim-issues">https://lists.sourceforge.net/lists/listinfo/sblim-issues</a></pre>
-</dl>
+</dd></dl>
 <p> Please report bugs you discover to the bug tracker. The SBLIM project bug tracking page can be found at:</p>
 <dl>
 <dd>
 <pre><a rel="nofollow" href="https://sourceforge.net/tracker/?group_id=128809">https://sourceforge.net/tracker/?group_id=128809</a>&amp;atid=712784</pre>
-</dl>
+</dd></dl>
 <h2>Authors</h2>
 <p>Please refer to the AUTHORS file distributed with sblim-gather.</p>
 <h2>Copyright</h2>

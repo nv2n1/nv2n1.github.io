@@ -11,12 +11,12 @@ description: "instant-showcache – prints modules found in Instant cache"
 <p> instant-showcache &#8211; prints modules found in Instant cache</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>instant-showcache</code></p>
-<dd> &#8211; prints all modules in Instant cache.</p>
-<dt><code>instant-showcache compile.log</code></p>
-<dd> &#8211; prints all modules in cache as well as the contents of each file compile.log found in module directories</p>
-<dt><code>instant-showcache fe*.cpp</code></p>
-<dd> &#8211; prints all modules in cache as well as the contents of each file that matches fe*.cpp found in module directories </p>
+<dt><code>instant-showcache</code></dt>
+<dd> &#8211; prints all modules in Instant cache.</dd>
+<dt><code>instant-showcache compile.log</code></dt>
+<dd> &#8211; prints all modules in cache as well as the contents of each file compile.log found in module directories</dd>
+<dt><code>instant-showcache fe*.cpp</code></dt>
+<dd> &#8211; prints all modules in cache as well as the contents of each file that matches fe*.cpp found in module directories </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-instant-clean/">instant-clean</a></i>(1) </p>

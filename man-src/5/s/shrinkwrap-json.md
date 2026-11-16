@@ -13,12 +13,13 @@ description: "npm-shrinkwrap.json – A publishable lockfile"
 <h3>See also</h3>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>npm help shrinkwrap</p>
-<dt>&bull;</p>
-<dd>npm help package-lock.json</p>
-<dt>&bull;</p>
-<dd>npm help package.json</p>
-<dt>&bull;</p>
-<dd>npm help install </p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>npm help shrinkwrap</dd>
+<dt>&bull;</dt>
+<dd>npm help package-lock.json</dd>
+<dt>&bull;</dt>
+<dd>npm help package.json</dd>
+<dt>&bull;</dt>
+<dd>npm help install </dd>
+</dl></dl>

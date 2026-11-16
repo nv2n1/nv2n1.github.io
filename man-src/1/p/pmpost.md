@@ -18,8 +18,8 @@ description: "pmpost – append messages to the Performance Co-Pilot notice boar
 <p> If the notice board file does not exist, <code>pmpost</code> will create it. <code>pmpost</code> would usually run from long-running PCP daemons executing under the (typically unprivileged) <code>$PCP_USER</code> and <code>$PCP_GROUP</code> accounts. The file should be owned by root, and group writable by the <code>$PCP_GROUP</code> group.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_LOG_DIR/NOTICES</code></p>
-<dd> the PCP notice board file</dl>
+<dt><code>$PCP_LOG_DIR/NOTICES</code></dt>
+<dd> the PCP notice board file</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> The file <code>/etc/pcp.conf</code> contains the local values for PCP_ variables.</p>
 <h2>UNIX SEE ALSO</h2>

@@ -21,10 +21,10 @@ int userfaultfd(int flags);
 <p> Once the userfaultfd object is configured, the application can use <code><a href="/docs/linux/man/2-read/">read</a></code>(2) to receive userfaultfd notifications. The reads from userfaultfd may be blocking or non-blocking, depending on the value of <i>flags</i> used for the creation of the userfaultfd or subsequent calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2). </p>
 <p> The following values may be bitwise ORed in <i>flags</i> to change the behavior of <code>userfaultfd</code>():</p>
 <dl>
-<dt><code>O_CLOEXEC</code></p>
-<dd> Enable the close-on-exec flag for the new userfaultfd file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</p>
-<dt><code>O_NONBLOCK</code></p>
-<dd> Enables non-blocking operation for the userfaultfd object. See the description of the <code>O_NONBLOCK</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dl>
+<dt><code>O_CLOEXEC</code></dt>
+<dd> Enable the close-on-exec flag for the new userfaultfd file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dd>
+<dt><code>O_NONBLOCK</code></dt>
+<dd> Enables non-blocking operation for the userfaultfd object. See the description of the <code>O_NONBLOCK</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dd></dl>
 <p> When the last file descriptor referring to a userfaultfd object is closed, all memory ranges that were registered with the object are unregistered and unread events are flushed.</p>
 <h3>Usage</h3>
 <p> The userfaultfd mechanism is designed to allow a thread in a multithreaded program to perform user-space paging for the other threads in the process. When a page fault occurs for one of the regions registered to the userfaultfd object, the faulting thread is put to sleep and an event is generated that can be read via the userfaultfd file descriptor. The fault-handling thread reads events from this file descriptor and services them using the operations described in <code><a href="/docs/linux/man/2-ioctl_userfaultfd/">ioctl_userfaultfd</a></code>(2). When servicing the page fault events, the fault-handling thread can trigger a wake-up for the sleeping thread. </p>
@@ -68,67 +68,63 @@ int userfaultfd(int flags);
 <p> If multiple events are available and the supplied buffer is large enough, <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns as many events as will fit in the supplied buffer. If the buffer supplied to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is smaller than the size of the <i>uffd_msg</i> structure, the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) fails with the error <code>EINVAL</code>. </p>
 <p> The fields set in the <i>uffd_msg</i> structure are as follows:</p>
 <dl>
-<dt><i>event</i></p>
-<dd> The type of event. Depending of the event type, different fields of the <i>arg</i> union represent details required for the event processing. The non-page-fault events are generated only when appropriate feature is enabled during API handshake with <code>UFFDIO_API</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2).</p>
+<dt><i>event</i></dt>
+<dd> The type of event. Depending of the event type, different fields of the <i>arg</i> union represent details required for the event processing. The non-page-fault events are generated only when appropriate feature is enabled during API handshake with <code>UFFDIO_API</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2).</dd>
 <dt>
-<dd> The following values can appear in the <i>event</i> field:</p>
+</dt><dd> The following values can appear in the <i>event</i> field:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>UFFD_EVENT_PAGEFAULT</code> (since Linux 4.3)</p>
-<dd> A page-fault event. The page-fault details are available in the <i>pagefault</i> field.</p>
-<dt><code>UFFD_EVENT_FORK</code> (since Linux 4.11)</p>
-<dd> Generated when the faulting process invokes <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) (or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) without the <code>CLONE_VM</code> flag). The event details are available in the <i>fork</i> field.</p>
-<dt><code>UFFD_EVENT_REMAP</code> (since Linux 4.11)</p>
-<dd> Generated when the faulting process invokes <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2). The event details are available in the <i>remap</i> field.</p>
-<dt><code>UFFD_EVENT_REMOVE</code> (since Linux 4.11)</p>
-<dd> Generated when the faulting process invokes <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) with <code>MADV_DONTNEED</code> or <code>MADV_REMOVE</code> advice. The event details are available in the <i>remove</i> field.</p>
-<dt><code>UFFD_EVENT_UNMAP</code> (since Linux 4.11)</p>
-<dd> Generated when the faulting process unmaps a memory range, either explicitly using <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2) or implicitly during <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) or <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2). The event details are available in the <i>remove</i> field.</dl>
+<dt><code>UFFD_EVENT_PAGEFAULT</code> (since Linux 4.3)</dt>
+<dd> A page-fault event. The page-fault details are available in the <i>pagefault</i> field.</dd>
+<dt><code>UFFD_EVENT_FORK</code> (since Linux 4.11)</dt>
+<dd> Generated when the faulting process invokes <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) (or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) without the <code>CLONE_VM</code> flag). The event details are available in the <i>fork</i> field.</dd>
+<dt><code>UFFD_EVENT_REMAP</code> (since Linux 4.11)</dt>
+<dd> Generated when the faulting process invokes <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2). The event details are available in the <i>remap</i> field.</dd>
+<dt><code>UFFD_EVENT_REMOVE</code> (since Linux 4.11)</dt>
+<dd> Generated when the faulting process invokes <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) with <code>MADV_DONTNEED</code> or <code>MADV_REMOVE</code> advice. The event details are available in the <i>remove</i> field.</dd>
+<dt><code>UFFD_EVENT_UNMAP</code> (since Linux 4.11)</dt>
+<dd> Generated when the faulting process unmaps a memory range, either explicitly using <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2) or implicitly during <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) or <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2). The event details are available in the <i>remove</i> field.</dd></dl>
 </dl>
-<dt><i>pagefault.address</i></p>
-<dd> The address that triggered the page fault.</p>
-<dt><i>pagefault.flags</i></p>
-<dd> A bit mask of flags that describe the event. For <code>UFFD_EVENT_PAGEFAULT</code>, the following flag may appear:</p>
+<dt><i>pagefault.address</i></dt>
+<dd> The address that triggered the page fault.</dd>
+<dt><i>pagefault.flags</i></dt>
+<dd> A bit mask of flags that describe the event. For <code>UFFD_EVENT_PAGEFAULT</code>, the following flag may appear:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>UFFD_PAGEFAULT_FLAG_WRITE</code></p>
-<dd> If the address is in a range that was registered with the <code>UFFDIO_REGISTER_MODE_MISSING</code> flag (see <code><a href="/docs/linux/man/2-ioctl_userfaultfd/">ioctl_userfaultfd</a></code>(2)) and this flag is set, this a write fault; otherwise it is a read fault.</dl>
+<dt><code>UFFD_PAGEFAULT_FLAG_WRITE</code></dt>
+<dd> If the address is in a range that was registered with the <code>UFFDIO_REGISTER_MODE_MISSING</code> flag (see <code><a href="/docs/linux/man/2-ioctl_userfaultfd/">ioctl_userfaultfd</a></code>(2)) and this flag is set, this a write fault; otherwise it is a read fault.</dd></dl>
 </dl>
-<dt><i>fork.ufd</i></p>
-<dd> The file descriptor associated with the userfault object created for the child created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2).</p>
-<dt><i>remap.from</i></p>
-<dd> The original address of the memory range that was remapped using <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</p>
-<dt><i>remap.to</i></p>
-<dd> The new address of the memory range that was remapped using <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</p>
-<dt><i>remap.len</i></p>
-<dd> The original length of the memory range that was remapped using <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</p>
-<dt><i>remove.start</i></p>
-<dd> The start address of the memory range that was freed using <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) or unmapped</p>
-<dt><i>remove.end</i></p>
-<dd> The end address of the memory range that was freed using <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) or unmapped</dl>
+<dt><i>fork.ufd</i></dt>
+<dd> The file descriptor associated with the userfault object created for the child created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2).</dd>
+<dt><i>remap.from</i></dt>
+<dd> The original address of the memory range that was remapped using <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</dd>
+<dt><i>remap.to</i></dt>
+<dd> The new address of the memory range that was remapped using <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</dd>
+<dt><i>remap.len</i></dt>
+<dd> The original length of the memory range that was remapped using <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</dd>
+<dt><i>remove.start</i></dt>
+<dd> The start address of the memory range that was freed using <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) or unmapped</dd>
+<dt><i>remove.end</i></dt>
+<dd> The end address of the memory range that was freed using <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) or unmapped</dd></dl>
 <p> A <code><a href="/docs/linux/man/2-read/">read</a></code>(2) on a userfaultfd file descriptor can fail with the following errors:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The userfaultfd object has not yet been enabled using the <code>UFFDIO_API</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The userfaultfd object has not yet been enabled using the <code>UFFDIO_API</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation</dd></dl>
 <p> If the <code>O_NONBLOCK</code> flag is enabled in the associated open file description, the userfaultfd file descriptor can be monitored with <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2), and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7). When events are available, the file descriptor indicates as readable. If the <code>O_NONBLOCK</code> flag is not enabled, then <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) (always) indicates the file as having a <code>POLLERR</code> condition, and <code><a href="/docs/linux/man/2-select/">select</a></code>(2) indicates the file descriptor as both readable and writable.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>userfaultfd</code>() returns a new file descriptor that refers to the userfaultfd object. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> An unsupported value was specified in <i>flags</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>EPERM</code> (since Linux 5.2)</p>
-<dd> The caller is not privileged (does not have the <code>CAP_SYS_PTRACE</code> capability in the initial user namespace), and <i>/proc/sys/vm/unprivileged_userfaultfd</i> has the value 0.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> An unsupported value was specified in <i>flags</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>EPERM</code> (since Linux 5.2)</dt>
+<dd> The caller is not privileged (does not have the <code>CAP_SYS_PTRACE</code> capability in the initial user namespace), and <i>/proc/sys/vm/unprivileged_userfaultfd</i> has the value 0.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>userfaultfd</code>() system call first appeared in Linux 4.3. </p>
 <p> The support for hugetlbfs and shared memory areas and non-page-fault events was added in Linux 4.11</p>

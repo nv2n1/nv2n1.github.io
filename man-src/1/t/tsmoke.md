@@ -32,12 +32,12 @@ description: "tSmoke – Commandline tool for sending SmokePing information"
 <p>When installing tSmoke, some variables must be adjusted to fit your local system. </p>
 <p> We need to use the following <code>libraries</code>:</p>
 <dl COMPACT>
-<dt>Smokeping</p>
+<dt>Smokeping</dt>
 <dd>
-<dt>RRDTool Perl bindings</p>
+</dd><dt>RRDTool Perl bindings</dt>
 <dd>
-<dt>Getopt::Long</p>
-<dd></dl>
+</dd><dt>Getopt::Long</dt>
+<dd></dd></dl>
 <p> Set up your libraries: </p>
 <pre> use lib &quot;/usr/local/smokeping/lib&quot;;
  use lib &quot;/usr/local/rrdtool-1.0.39/lib/perl&quot;;</pre>

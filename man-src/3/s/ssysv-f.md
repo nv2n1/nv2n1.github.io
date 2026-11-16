@@ -11,8 +11,6 @@ description: "ssysv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine ssysv (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)
-
-
 SSYSV computes the solution to system of linear equations A * X = B for SY matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssysv (characterUPLO, integerN, integerNRHS, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, real, dimension( ldb, * )B, integerLDB, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -31,10 +29,10 @@ SSYSV computes the solution to system of linear equations A * X = B for SY matri
  triangular matrices, and D is symmetric and block diagonal with
  1-by-1 and 2-by-2 diagonal blocks. The factored form of A is then
  used to solve the system of equations A * X = B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre>
@@ -104,13 +102,13 @@ SSYSV computes the solution to system of linear equations A * X = B for SY matri
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 171 of file ssysv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

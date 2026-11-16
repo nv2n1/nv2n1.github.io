@@ -18,10 +18,10 @@ description: "vmmouse_detect – VMware mouse device autodetection tool"
 <h2>DIAGNOSTICS</h2>
 <p> <code>vmmouse_detect</code>&#8216;s exit status is used to communicate information.</p>
 <dl>
-<dt>0</p>
-<dd> <code>vmmouse_detect</code> found a mouse and exited normally.</p>
-<dt>1</p>
-<dd> Either the vmmouse client was not enabled, or it is not being run from within a VMware virtual machine.</dl>
+<dt>0</dt>
+<dd> <code>vmmouse_detect</code> found a mouse and exited normally.</dd>
+<dt>1</dt>
+<dd> Either the vmmouse client was not enabled, or it is not being run from within a VMware virtual machine.</dd></dl>
 <h2>BUGS</h2>
 <p> Please report bugs in <code>vmmouse_detect</code> &lt;<a rel="nofollow" href="https://bugs.launchpad.net/ubuntu/+source/mdetect/vmmouse_detect">https://bugs.launchpad.net/ubuntu/+source/mdetect/vmmouse_detect</a>&gt;.</p>
 <h2>AUTHORS</h2>

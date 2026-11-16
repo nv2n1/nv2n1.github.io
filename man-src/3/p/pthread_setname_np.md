@@ -17,3 +17,4 @@ int pthread_getname_np(pthread_t thread,
 <p> Compile and link with <i>-pthread</i>.</p>
 <h2>Description</h2>
 <p>By default, all the threads created using <code>pthread_create</code>() inherit the program name. The <code>pthread_setname_np</code>() function can be used to set a unique name for a thread, which can be useful for debugging multithreaded applications. The thread name is a meaningful C language string, whose length is restricted to 16 characters, including the terminating null byte (&#8216;
+</p>

@@ -11,9 +11,7 @@ std::experimental::default_searcher,std::experimental::make_default_searcher - s
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/functional&gt;
-
 template&lt; class ForwardIterator1, class BinaryPredicate = std::equal_to&lt;&gt; &gt;  (library fundamentals TS)
-
 class default_searcher;</code></pre> 
 A class suitable for use with std::experimental::search that delegates the search operation to the standard library's std::search. 
 default_searcher is CopyConstructible and CopyAssignable. 
@@ -92,14 +90,10 @@ A default_searcher constructed with the arguments pat_first, pat_last, pred.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;experimental/algorithm&gt;
-
 #include &lt;experimental/functional&gt;
 int main()
-
 {
     std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
                      &quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;

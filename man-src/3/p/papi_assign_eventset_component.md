@@ -45,9 +45,10 @@ options.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_opt</code> </p>
+<dd><code>PAPI_set_opt</code> </dd>
 <p>&nbsp;<wbr><code>PAPI_create_eventset</code>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_add_events</code>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_set_multiplex</code>&nbsp;<wbr></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

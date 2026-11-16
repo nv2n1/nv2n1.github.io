@@ -67,47 +67,47 @@ myprog: myprog.o
 
 <dl>
 <dt>--prefix
-<dd> Print the installation prefix.
-<dt>--exec-prefix
-<dd> Print the executable installation prefix.
-<dt>--version
-<dd> Print the version number.
-<dt>--so-version
-<dd> Print the shared object version.
-<dt>--scdatadir
-<dd> Print the data installation directory.
-<dt>--buildid
-<dd> Print the build identifier.
-<dt>--cppflags
-<dd> Print the C preprocessor flags.
-<dt>--cflags
-<dd> Print the C flags.
-<dt>--cxxflags
-<dd> Print the C++ flags.
-<dt>--cc
-<dd> Print the C flags.
-<dt>--f77flags
-<dd> Print the FORTRAN 77 flags.
-<dt>--f77
-<dd> Print the FORTRAN 77 compiler.
-<dt>--cxx
-<dd> Print the C++ compiler.
-<dt>--libdir
-<dd> Print the library directories.
-<dt>--libs
-<dd> Print the libraries.
-<dt>--libtool
-<dd> Print the libtool executable.
-<dt>--ltlink
-<dd> Print the libtool link command.
-<dt>--ltlinklibopts
-<dd> Print the libtool library link options.
-<dt>--ltlinkbinopts
-<dd> Print the libtool binary link options.
-<dt>--ltcomp
-<dd> Print the libtool compile command.
-<dt>--ltinst
-<dd> Print the libtool install command.</dl>
+</dt><dd> Print the installation prefix.
+</dd><dt>--exec-prefix
+</dt><dd> Print the executable installation prefix.
+</dd><dt>--version
+</dt><dd> Print the version number.
+</dd><dt>--so-version
+</dt><dd> Print the shared object version.
+</dd><dt>--scdatadir
+</dt><dd> Print the data installation directory.
+</dd><dt>--buildid
+</dt><dd> Print the build identifier.
+</dd><dt>--cppflags
+</dt><dd> Print the C preprocessor flags.
+</dd><dt>--cflags
+</dt><dd> Print the C flags.
+</dd><dt>--cxxflags
+</dt><dd> Print the C++ flags.
+</dd><dt>--cc
+</dt><dd> Print the C flags.
+</dd><dt>--f77flags
+</dt><dd> Print the FORTRAN 77 flags.
+</dd><dt>--f77
+</dt><dd> Print the FORTRAN 77 compiler.
+</dd><dt>--cxx
+</dt><dd> Print the C++ compiler.
+</dd><dt>--libdir
+</dt><dd> Print the library directories.
+</dd><dt>--libs
+</dt><dd> Print the libraries.
+</dd><dt>--libtool
+</dt><dd> Print the libtool executable.
+</dd><dt>--ltlink
+</dt><dd> Print the libtool link command.
+</dd><dt>--ltlinklibopts
+</dt><dd> Print the libtool library link options.
+</dd><dt>--ltlinkbinopts
+</dt><dd> Print the libtool binary link options.
+</dd><dt>--ltcomp
+</dt><dd> Print the libtool compile command.
+</dd><dt>--ltinst
+</dt><dd> Print the libtool install command.</dd></dl>
  
 
  

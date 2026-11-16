@@ -10,13 +10,9 @@ description: "rdma-statistic – RDMA statistic counter configuration"
 <p>rdma-statistic &#8211; RDMA statistic counter configuration</p>
 <h2>Synopsis</h2>
 <pre><code>rdma
-
 [ OPTIONS ]
-
 statistic
-
 { COMMAND |
-
     help }
 </code></pre>
 <p> <code>rdma statistic</code> { <i>OBJECT</i> } <code>show</code><br />
@@ -32,16 +28,12 @@ statistic
  <code>rdma statistic</code> <i>OBJECT</i> <code>bind</code> <i>COUNTER_SCOPE</i> [ <i>DEV/PORT_INDEX</i> ] [ <i>OBJECT-ID</i> ] [ <i>COUNTER-ID</i> ]<br />
  <code>rdma statistic</code> <i>OBJECT</i> <code>unbind</code> <i>COUNTER_SCOPE</i> [ <i>DEV/PORT_INDEX</i> ] [ <i>COUNTER-ID</i> ] [ <i>OBJECT-ID</i> ] </p>
 <pre><code>COUNTER_SCOPE :=
-
 { link | dev }
 OBJECT :=
-
 { qp | mr }
 CRITERIA :=
-
 { type | pid }
 FILTER_NAME :=
-
 { cntn | lqpn | pid | qp-type }
 </code></pre>
 <h2>Description</h2>
@@ -56,55 +48,55 @@ FILTER_NAME :=
 <h2>Examples</h2>
 <p>rdma statistic show</p>
 <dl>
-<dd>Shows the state of the default counter of all RDMA devices on the system.</dl>
+<dd>Shows the state of the default counter of all RDMA devices on the system.</dd></dl>
 <p> rdma statistic show link mlx5_2/1</p>
 <dl>
-<dd>Shows the state of the default counter of specified RDMA port</dl>
+<dd>Shows the state of the default counter of specified RDMA port</dd></dl>
 <p> rdma statistic qp show</p>
 <dl>
-<dd>Shows the state of all qp counters of all RDMA devices on the system.</dl>
+<dd>Shows the state of all qp counters of all RDMA devices on the system.</dd></dl>
 <p> rdma statistic qp show link mlx5_2/1</p>
 <dl>
-<dd>Shows the state of all qp counters of specified RDMA port.</dl>
+<dd>Shows the state of all qp counters of specified RDMA port.</dd></dl>
 <p> rdma statistic qp show link mlx5_2 pid 30489</p>
 <dl>
-<dd>Shows the state of all qp counters of specified RDMA port and belonging to pid 30489</dl>
+<dd>Shows the state of all qp counters of specified RDMA port and belonging to pid 30489</dd></dl>
 <p> rdma statistic qp show link mlx5_2 qp-type UD</p>
 <dl>
-<dd>Shows the state of all qp counters of specified RDMA port and with QP type UD</dl>
+<dd>Shows the state of all qp counters of specified RDMA port and with QP type UD</dd></dl>
 <p> rdma statistic qp mode</p>
 <dl>
-<dd>List current counter mode on all devices</dl>
+<dd>List current counter mode on all devices</dd></dl>
 <p> rdma statistic qp mode link mlx5_2/1</p>
 <dl>
-<dd>List current counter mode of device mlx5_2 port 1</dl>
+<dd>List current counter mode of device mlx5_2 port 1</dd></dl>
 <p> rdma statistic qp set link mlx5_2/1 auto type on</p>
 <dl>
-<dd>On device mlx5_2 port 1, for each new user QP bind it with a counter automatically. Per counter for QPs with same qp type.</dl>
+<dd>On device mlx5_2 port 1, for each new user QP bind it with a counter automatically. Per counter for QPs with same qp type.</dd></dl>
 <p> rdma statistic qp set link mlx5_2/1 auto pid on</p>
 <dl>
-<dd>On device mlx5_2 port 1, for each new user QP bind it with a counter automatically. Per counter for QPs with same pid.</dl>
+<dd>On device mlx5_2 port 1, for each new user QP bind it with a counter automatically. Per counter for QPs with same pid.</dd></dl>
 <p> rdma statistic qp set link mlx5_2/1 auto pid,type on</p>
 <dl>
-<dd>On device mlx5_2 port 1, for each new user QP bind it with a counter automatically. Per counter for QPs with same pid and same type.</dl>
+<dd>On device mlx5_2 port 1, for each new user QP bind it with a counter automatically. Per counter for QPs with same pid and same type.</dd></dl>
 <p> rdma statistic qp set link mlx5_2/1 auto off</p>
 <dl>
-<dd>Turn-off auto mode on device mlx5_2 port 1. The allocated counters can be manually accessed.</dl>
+<dd>Turn-off auto mode on device mlx5_2 port 1. The allocated counters can be manually accessed.</dd></dl>
 <p> rdma statistic qp bind link mlx5_2/1 lqpn 178</p>
 <dl>
-<dd>On device mlx5_2 port 1, allocate a counter and bind the specified qp on it</dl>
+<dd>On device mlx5_2 port 1, allocate a counter and bind the specified qp on it</dd></dl>
 <p> rdma statistic qp unbind link mlx5_2/1 cntn 4 lqpn 178</p>
 <dl>
-<dd>On device mlx5_2 port 1, bind the specified qp on the specified counter</dl>
+<dd>On device mlx5_2 port 1, bind the specified qp on the specified counter</dd></dl>
 <p> rdma statistic qp unbind link mlx5_2/1 cntn 4</p>
 <dl>
-<dd>On device mlx5_2 port 1, unbind all QPs on the specified counter. After that this counter will be released automatically by the kernel.</dl>
+<dd>On device mlx5_2 port 1, unbind all QPs on the specified counter. After that this counter will be released automatically by the kernel.</dd></dl>
 <p> rdma statistic show mr</p>
 <dl>
-<dd>List all currently allocated MR&#8217;s and their counters.</dl>
+<dd>List all currently allocated MR&#8217;s and their counters.</dd></dl>
 <p> rdma statistic show mr mrn 6</p>
 <dl>
-<dd>Dump a specific MR statistics with mrn 6. Dumps nothing if does not exists.</dl>
+<dd>Dump a specific MR statistics with mrn 6. Dumps nothing if does not exists.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rdma/">rdma</a></code>(8), <code><a href="/docs/linux/man/8-rdma-dev/">rdma-dev</a></code>(8), <code><a href="/docs/linux/man/8-rdma-link/">rdma-link</a></code>(8), <code><a href="/docs/linux/man/8-rdma-resource/">rdma-resource</a></code>(8), </p>
 <h2>Authors</h2>

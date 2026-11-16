@@ -17,7 +17,7 @@ The idmap_tdb plugin is the default backend used by winbindd for storing SID/uid
 <h2>Idmap Options</h2>
 
 range = low - high
-<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dl>
+<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dd></dl>
 
 <h2>Examples</h2>
 
@@ -26,7 +26,7 @@ This example shows how tdb is used as a the default idmap backend. This configur
 <dl><dd><pre> [global]
  # &quot;backend = tdb&quot; is redundant here since it is the default
  idmap config * : backend = tdb
- idmap config * : range = 1000000-2000000</pre></dl>
+ idmap config * : range = 1000000-2000000</pre></dd></dl>
 
 <h2>Author</h2>
 

@@ -15,27 +15,27 @@ description: "stapdyn – systemtap dyninst runtime"
 <h2>Options</h2>
 <p>The <i>stapdyn</i> program supports the following options. Any other option prints a list of supported options.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd>Verbose mode.</p>
-<dt><code>-V</code></p>
-<dd>Print version number and exit.</p>
-<dt><code>-w</code></p>
-<dd>Suppress warnings from the script.</p>
-<dt><code>-c CMD</code></p>
-<dd>Command CMD will be run and the <i>stapdyn</i> program will exit when CMD does. The &#8216;_stp_target&#8217; variable will contain the pid for CMD.</p>
-<dt><code>-x PID</code></p>
-<dd>The &#8216;_stp_target&#8217; variable will be set to PID.</p>
-<dt><code>-o FILE</code></p>
-<dd>Send output to FILE. If the module uses bulk mode, the output will be in percpu files FILE_x(FILE_cpux in background and bulk mode) where &#8216;x&#8217; is the cpu number. This supports <a href="/docs/linux/man/3-strftime/">strftime</a>(3) formats for FILE.</p>
-<dt><code>-C WHEN</code></p>
-<dd>Control coloring of error messages. WHEN must be either &quot;never&quot;, &quot;always&quot;, or &quot;auto&quot; (i.e. enable only if at a terminal). If the option is missing, then &quot;auto&quot; is assumed. Colors can be modified using the SYSTEMTAP_COLORS environment variable. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more information on syntax and behaviour.</p>
-<dt><code>var1=val</code></p>
-<dd>Sets the value of global variable var1 to val. Global variables contained within a script are treated as options and can be set from the stapdyn command line. </p>
+<dt><code>-v</code></dt>
+<dd>Verbose mode.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version number and exit.</dd>
+<dt><code>-w</code></dt>
+<dd>Suppress warnings from the script.</dd>
+<dt><code>-c CMD</code></dt>
+<dd>Command CMD will be run and the <i>stapdyn</i> program will exit when CMD does. The &#8216;_stp_target&#8217; variable will contain the pid for CMD.</dd>
+<dt><code>-x PID</code></dt>
+<dd>The &#8216;_stp_target&#8217; variable will be set to PID.</dd>
+<dt><code>-o FILE</code></dt>
+<dd>Send output to FILE. If the module uses bulk mode, the output will be in percpu files FILE_x(FILE_cpux in background and bulk mode) where &#8216;x&#8217; is the cpu number. This supports <a href="/docs/linux/man/3-strftime/">strftime</a>(3) formats for FILE.</dd>
+<dt><code>-C WHEN</code></dt>
+<dd>Control coloring of error messages. WHEN must be either &quot;never&quot;, &quot;always&quot;, or &quot;auto&quot; (i.e. enable only if at a terminal). If the option is missing, then &quot;auto&quot; is assumed. Colors can be modified using the SYSTEMTAP_COLORS environment variable. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more information on syntax and behaviour.</dd>
+<dt><code>var1=val</code></dt>
+<dd>Sets the value of global variable var1 to val. Global variables contained within a script are treated as options and can be set from the stapdyn command line. </dd>
 </dl>
 <h2>Arguments</h2>
 <p><code>MODULE</code> is either a module path or a module name. If it is a module name, the module will be looked for in the following directory (where &#8216;VERSION&#8217; is the output of &quot;uname -r&quot;):</p>
 <dl>
-<dd>/lib/modules/VERSION/systemtap</dl>
+<dd>/lib/modules/VERSION/systemtap</dd></dl>
 <p> $ stap &#8211;dyninst -p4 -m mod1 -e&nbsp;<wbr>&#8216;global var1=&quot;foo&quot;; probe begin{printf(&quot;%s
 &quot;, var1); exit()}&#8217; </p>
 <p> Running this with an additional module argument: </p>

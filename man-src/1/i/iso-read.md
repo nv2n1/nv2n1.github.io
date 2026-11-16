@@ -13,28 +13,28 @@ description: "iso-read – reads portions of an ISO 9660 image"
 <p> <code>iso-read</code> [<i>OPTION</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></p>
-<dd> Set debugging to LEVEL.</p>
-<dt><code>-i</code>, <code>&#8211;image</code>=<i>FILE</i></p>
-<dd> Read from ISO-9660 image. This option is mandatory</p>
-<dt><code>-e</code>, <code>&#8211;extract</code>=<i>FILE</i></p>
-<dd> Extract FILE from ISO-9660 image. This option is mandatory.</p>
-<dt><code>-k</code>, <code>&#8211;ignore</code></p>
-<dd> Ignore read error(s), i.e. keep going</p>
-<dt><code>&#8211;no-header</code></p>
-<dd> Don&#8217;t display header and copyright (for regression testing)</p>
-<dt><code>-o</code>, <code>&#8211;output-file</code>=<i>FILE</i></p>
-<dd> Output file. This option is mandatory.</p>
-<dt><code>-U</code> <code>&#8211;udf</code></p>
-<dd> Contents are in UDF format</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> display version and copyright information and exit</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></dt>
+<dd> Set debugging to LEVEL.</dd>
+<dt><code>-i</code>, <code>&#8211;image</code>=<i>FILE</i></dt>
+<dd> Read from ISO-9660 image. This option is mandatory</dd>
+<dt><code>-e</code>, <code>&#8211;extract</code>=<i>FILE</i></dt>
+<dd> Extract FILE from ISO-9660 image. This option is mandatory.</dd>
+<dt><code>-k</code>, <code>&#8211;ignore</code></dt>
+<dd> Ignore read error(s), i.e. keep going</dd>
+<dt><code>&#8211;no-header</code></dt>
+<dd> Don&#8217;t display header and copyright (for regression testing)</dd>
+<dt><code>-o</code>, <code>&#8211;output-file</code>=<i>FILE</i></dt>
+<dd> Output file. This option is mandatory.</dd>
+<dt><code>-U</code> <code>&#8211;udf</code></dt>
+<dd> Contents are in UDF format</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> display version and copyright information and exit</dd></dl>
 <h3>Help options:</h3>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> Show this help message</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display brief usage message</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> Show this help message</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message</dd></dl>
 <h2>AUTHOR</h2>
 <p> Rocky Bernstein &lt;rocky [at] gnu.org&gt;</p>
 <h2>COPYRIGHT</h2>

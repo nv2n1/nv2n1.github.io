@@ -22,109 +22,97 @@ description: "git-reauthor – Rewrite history to change author’s identity"
 <p> -a, &#8211;all</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Rewrite ALL identities in commits and tags.
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> -c, &#8211;use-config</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Define correct values from user Git config
 Values of --correct-email and --correct-name options take precedence over the ones from the config if specified as well
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> -e, &#8211;correct-email &lt;<i>email</i>&gt;</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Define the correct email to set
 Empty email '' is allowed
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> -n, &#8211;correct-name &lt;<i>name</i>&gt;</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Define the correct name to set
 Empty name '' is not allowed
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> -o, &#8211;old-email &lt;<i>email</i>&gt;</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Rewrite identities matching old email in commits and tags
 Empty email '' is allowed
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> -t, &#8211;type &lt;<i>id</i>&gt;</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Define the type of identities affected by the rewrite
 Possible type identifiers are: author, committer, both (default)
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Replace the personal email and name of Jack to his work ones</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git reauthor-- old - email jack[at] perso.me-- correct - email jack[at] work.com-- correct - name 'Jack Foobar'
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Replace the email and name of Jack to the ones defined in the Git config</p>
 <dl>
 <dt>
-<dd>
-$ git reauthor&#8211; old &#8211; email jack[at] perso.me&#8211; use &#8211; config</p>
-<dt>
-<dd></dl>
+</dt><dd>
+$ git reauthor&#8211; old &#8211; email jack[at] perso.me&#8211; use &#8211; config</dd>
+</dl>
 <p> Replace only the email of Jack (keep the name already used)</p>
 <dl>
 <dt>
-<dd>
-$ git reauthor&#8211; old &#8211; email jack[at] perso&#8211; correct &#8211; email jack[at] perso.me</p>
-<dt>
-<dd></dl>
+</dt><dd>
+$ git reauthor&#8211; old &#8211; email jack[at] perso&#8211; correct &#8211; email jack[at] perso.me</dd>
+</dl>
 <p> Change only the committer email of Jack (keep the author email already used)</p>
 <dl>
 <dt>
-<dd>
-$ git reauthor&#8211; old &#8211; email jack[at] perso.me&#8211; correct &#8211; email jack[at] work.com&#8211; type committer</p>
-<dt>
-<dd></dl>
+</dt><dd>
+$ git reauthor&#8211; old &#8211; email jack[at] perso.me&#8211; correct &#8211; email jack[at] work.com&#8211; type committer</dd>
+</dl>
 <p> Set Jack&#8217;s identity as the only one of the whole repository</p>
 <dl>
 <dt>
-<dd>
-$ git reauthor&#8211; all&#8211; correct &#8211; email jack[at] perso.me&#8211; correct &#8211; name Jack</p>
-<dt>
-<dd></dl>
+</dt><dd>
+$ git reauthor&#8211; all&#8211; correct &#8211; email jack[at] perso.me&#8211; correct &#8211; name Jack</dd>
+</dl>
 <p> Set Jack as the only committer of the whole repository (keeps authors)</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git reauthor-- all-- correct - email jack[at] perso.me-- correct - name Jack-- type committer
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Damien Tardy-Panis &lt;<i>damien [at] tardypad.me</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

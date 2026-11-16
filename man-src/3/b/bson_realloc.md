@@ -17,11 +17,11 @@ bson_realloc(void *mem,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>mem</code></p>
-<dd> A memory region.</dl>
+<dt><code>mem</code></dt>
+<dd> A memory region.</dd></dl>
 <dl>
-<dt><code>num_bytes</code></p>
-<dd> A size_t containing the new requested size.</dl>
+<dt><code>num_bytes</code></dt>
+<dd> A size_t containing the new requested size.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is a portable <code><a href="/docs/linux/man/3-realloc/">realloc</a>(3)</code> wrapper. </p>
 <p> In general, this function will return an allocation at least <code>sizeof(void*)</code> bytes or bigger. If <code>num_bytes</code> is 0, then the allocation will be freed. </p>
@@ -29,7 +29,7 @@ bson_realloc(void *mem,
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> This function will abort on failure to allocate memory.</dl>
+</dt><dd> This function will abort on failure to allocate memory.</dd></dl>
 <h2>RETURNS</h2>
 <p> A pointer to a memory region which <code>HAS NOT</code> been zeroed. </p>
 <h2>COLOPHON</h2>

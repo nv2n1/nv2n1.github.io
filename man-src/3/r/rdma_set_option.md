@@ -12,29 +12,24 @@ rdma_set_option - Set communication options for an rdma_cm_id.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_set_option
-
     (struct rdma_cm_id *id,
-
      int level,
-
      int optname,
-
      void *optval,
-
      size_t optlen);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>level
-<dd>Protocol level of the option to set.
-<dt>optname
-<dd>Name of the option, relative to the level, to set.
-<dt>optval
-<dd>Reference to the option data. The data is dependent on the level and optname.
-<dt>optlen
-<dd>The size of the %optval buffer.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>level
+</dt><dd>Protocol level of the option to set.
+</dd><dt>optname
+</dt><dd>Name of the option, relative to the level, to set.
+</dd><dt>optval
+</dt><dd>Reference to the option data. The data is dependent on the level and optname.
+</dd><dt>optlen
+</dt><dd>The size of the %optval buffer.</dd></dl>
 
 <h2>Description</h2>
 

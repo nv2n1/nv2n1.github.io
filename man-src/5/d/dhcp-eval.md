@@ -76,59 +76,61 @@ if not option domain-name = &quot;example.org&quot; {
 <p>The following is the current list of boolean expressions that are supported by the DHCP distribution. </p>
 <p> <i>data-expression-1 </i><code>=</code> <i>data-expression-2</i></p>
 <dl>
-<dd>The <code>=</code> operator compares the values of two data expressions, returning true if they are the same, false if they are not. If either the left-hand side or the right-hand side are null, the result is also null.</dl>
+<dd>The <code>=</code> operator compares the values of two data expressions, returning true if they are the same, false if they are not. If either the left-hand side or the right-hand side are null, the result is also null.</dd></dl>
 <p> <i>data-expression-1 </i><code>~=</code> <i>data-expression-2</i> <i>data-expression-1 </i><code>~~</code> <i>data-expression-2</i></p>
 <dl>
-<dd>The <code>~=</code> and <code>~~</code> operators (not available on all systems) perform extended <a href="/docs/linux/man/7-regex/">regex</a>(7) matching of the values of two data expressions, returning true if <i>data-expression-1</i> matches against the regular expression evaluated by <i>data-expression-2</i>, or false if it does not match or encounters some error. If either the left-hand side or the right-hand side are null or empty strings, the result is also false. The <code>~~</code> operator differs from the <code>~=</code> operator in that it is case-insensitive.</dl>
+<dd>The <code>~=</code> and <code>~~</code> operators (not available on all systems) perform extended <a href="/docs/linux/man/7-regex/">regex</a>(7) matching of the values of two data expressions, returning true if <i>data-expression-1</i> matches against the regular expression evaluated by <i>data-expression-2</i>, or false if it does not match or encounters some error. If either the left-hand side or the right-hand side are null or empty strings, the result is also false. The <code>~~</code> operator differs from the <code>~=</code> operator in that it is case-insensitive.</dd></dl>
 <p> <i>boolean-expression-1 </i><code>and</code> <i>boolean-expression-2</i> </p>
 <dl>
-<dd>The <code>and</code> operator evaluates to true if the boolean expression on the left-hand side and the boolean expression on the right-hand side both evaluate to true. Otherwise, it evaluates to false. If either the expression on the left-hand side or the expression on the right-hand side are null, the result is null.</dl>
+<dd>The <code>and</code> operator evaluates to true if the boolean expression on the left-hand side and the boolean expression on the right-hand side both evaluate to true. Otherwise, it evaluates to false. If either the expression on the left-hand side or the expression on the right-hand side are null, the result is null.</dd></dl>
 <p> <i>boolean-expression-1 </i><code>or</code> <i>boolean-expression-2</i> </p>
 <dl>
-<dd>The <code>or</code> operator evaluates to true if either the boolean expression on the left-hand side or the boolean expression on the right-hand side evaluate to true. Otherwise, it evaluates to false. If either the expression on the left-hand side or the expression on the right-hand side are null, the result is null.</dl>
+<dd>The <code>or</code> operator evaluates to true if either the boolean expression on the left-hand side or the boolean expression on the right-hand side evaluate to true. Otherwise, it evaluates to false. If either the expression on the left-hand side or the expression on the right-hand side are null, the result is null.</dd></dl>
 <p> <code>not </code><i>boolean-expression</i> </p>
 <dl>
-<dd>The <code>not</code> operator evaluates to true if <i>boolean-expression</i> evaluates to false, and returns false if <i>boolean-expression</i> evaluates to true. If <i>boolean-expression</i> evaluates to null, the result is also null.</dl>
+<dd>The <code>not</code> operator evaluates to true if <i>boolean-expression</i> evaluates to false, and returns false if <i>boolean-expression</i> evaluates to true. If <i>boolean-expression</i> evaluates to null, the result is also null.</dd></dl>
 <p> <code>exists </code><i>option-name</i> </p>
 <dl>
-<dd>The <code>exists</code> expression returns true if the specified option exists in the incoming DHCP packet being processed.</dl>
+<dd>The <code>exists</code> expression returns true if the specified option exists in the incoming DHCP packet being processed.</dd></dl>
 <p> <code>known</code> </p>
 <dl>
-<dd>The <code>known</code> expression returns true if the client whose request is currently being processed is known &#8211; that is, if there&#8217;s a host declaration for it.</dl>
+<dd>The <code>known</code> expression returns true if the client whose request is currently being processed is known &#8211; that is, if there&#8217;s a host declaration for it.</dd></dl>
 <p> <code>static</code> </p>
 <dl>
-<dd>The <code>static</code> expression returns true if the lease assigned to the client whose request is currently being processed is derived from a static address assignment.</dl>
+<dd>The <code>static</code> expression returns true if the lease assigned to the client whose request is currently being processed is derived from a static address assignment.</dd></dl>
 <h2>Data Expressions</h2>
 <p>Several of the boolean expressions above depend on the results of evaluating data expressions. A list of these expressions is provided here. </p>
 <p> <code>substring (</code><i>data-expr</i><code>, </code><i>offset</i><code>, </code><i>length</i><code>)</code> </p>
 <dl>
-<dd>The <code>substring</code> operator evaluates the data expression and returns the substring of the result of that evaluation that starts <i>offset</i> bytes from the beginning, continuing for <i>length</i> bytes. <i>Offset</i> and <i>length</i> are both numeric expressions. If <i>data-expr</i>, <i>offset</i> or <i>length</i> evaluate to null, then the result is also null. If <i>offset</i> is greater than or equal to the length of the evaluated data, then a zero-length data string is returned. If <i>length is greater then the remaining length of the evaluated data after offset</i>, then a data string containing all data from <i>offset</i> to the end of the evaluated data is returned.</dl>
+<dd>The <code>substring</code> operator evaluates the data expression and returns the substring of the result of that evaluation that starts <i>offset</i> bytes from the beginning, continuing for <i>length</i> bytes. <i>Offset</i> and <i>length</i> are both numeric expressions. If <i>data-expr</i>, <i>offset</i> or <i>length</i> evaluate to null, then the result is also null. If <i>offset</i> is greater than or equal to the length of the evaluated data, then a zero-length data string is returned. If <i>length is greater then the remaining length of the evaluated data after offset</i>, then a data string containing all data from <i>offset</i> to the end of the evaluated data is returned.</dd></dl>
 <p> <code>suffix (</code><i>data-expr</i><code>, </code><i>length</i><code>)</code> </p>
 <dl>
-<dd>The <code>suffix</code> operator evaluates <i>data-expr</i> and returns the last <i>length</i> bytes of the result of that evaluation. <i>Length</i> is a numeric expression. If <i>data-expr</i> or <i>length</i> evaluate to null, then the result is also null. If <i>suffix</i> evaluates to a number greater than the length of the evaluated data, then the evaluated data is returned.</dl>
+<dd>The <code>suffix</code> operator evaluates <i>data-expr</i> and returns the last <i>length</i> bytes of the result of that evaluation. <i>Length</i> is a numeric expression. If <i>data-expr</i> or <i>length</i> evaluate to null, then the result is also null. If <i>suffix</i> evaluates to a number greater than the length of the evaluated data, then the evaluated data is returned.</dd></dl>
 <p> <code>lcase (</code><i>data-expr</i><code>)</code> </p>
 <dl>
-<dd>The <code>lcase</code> function returns the result of evaluating <i>data-expr</i> converted to lower case. If <i>data-expr</i> evaluates to null, then the result is also null.</dl>
+<dd>The <code>lcase</code> function returns the result of evaluating <i>data-expr</i> converted to lower case. If <i>data-expr</i> evaluates to null, then the result is also null.</dd></dl>
 <p> <code>ucase (</code><i>data-expr</i><code>)</code> </p>
 <dl>
-<dd>The <code>ucase</code> function returns the result of evaluating <i>data-expr</i> converted to upper case. If <i>data-expr</i> evaluates to null, then the result is also null.</dl>
+<dd>The <code>ucase</code> function returns the result of evaluating <i>data-expr</i> converted to upper case. If <i>data-expr</i> evaluates to null, then the result is also null.</dd></dl>
 <p> <code>option </code><i>option-name</i> </p>
 <dl>
-<dd>The <code>option</code> operator returns the contents of the specified option in the packet to which the server is responding.</dl>
+<dd>The <code>option</code> operator returns the contents of the specified option in the packet to which the server is responding.</dd></dl>
 <p> <code>config-option </code><i>option-name</i> </p>
 <dl>
-<dd>The <code>config-option</code> operator returns the value for the specified option that the DHCP client or server has been configured to send.</dl>
+<dd>The <code>config-option</code> operator returns the value for the specified option that the DHCP client or server has been configured to send.</dd></dl>
 <p> <code>gethostname()</code> </p>
 <dl>
-<dd>The <code>gethostname()</code> function returns a data string whose contents are a character string, the results of calling gethostname() on the local system with a size limit of 255 bytes (not including NULL terminator). This can be used for example to configure dhclient to send the local hostname without knowing the local hostname at the time dhclient.conf is written.</dl>
+<dd>The <code>gethostname()</code> function returns a data string whose contents are a character string, the results of calling gethostname() on the local system with a size limit of 255 bytes (not including NULL terminator). This can be used for example to configure dhclient to send the local hostname without knowing the local hostname at the time dhclient.conf is written.</dd></dl>
 <p> <code>hardware</code> </p>
 <dl>
-<dd>The <code>hardware</code> operator returns a data string whose first element is the type of network interface indicated in packet being considered, and whose subsequent elements are client&#8217;s link-layer address. If there is no packet, or if the RFC2131 <i>hlen</i> field is invalid, then the result is null. Hardware types include ethernet (1), token-ring (6), and fddi (8). Hardware types are specified by the IETF, and details on how the type numbers are defined can be found in RFC2131 (in the ISC DHCP distribution, this is included in the doc/ subdirectory).</dl>
+<dd>The <code>hardware</code> operator returns a data string whose first element is the type of network interface indicated in packet being considered, and whose subsequent elements are client&#8217;s link-layer address. If there is no packet, or if the RFC2131 <i>hlen</i> field is invalid, then the result is null. Hardware types include ethernet (1), token-ring (6), and fddi (8). Hardware types are specified by the IETF, and details on how the type numbers are defined can be found in RFC2131 (in the ISC DHCP distribution, this is included in the doc/ subdirectory).</dd></dl>
 <p> <code>packet (</code><i>offset</i><code>, </code><i>length</i><code>)</code> </p>
 <dl>
-<dd>The <code>packet</code> operator returns the specified portion of the packet being considered, or null in contexts where no packet is being considered. <i>Offset</i> and <i>length</i> are applied to the contents packet as in the <code>substring</code> operator.</dl>
+<dd>The <code>packet</code> operator returns the specified portion of the packet being considered, or null in contexts where no packet is being considered. <i>Offset</i> and <i>length</i> are applied to the contents packet as in the <code>substring</code> operator.</dd></dl>
 <p> <i>string</i> </p>
 <dl>
-<dd>A string, enclosed in quotes, may be specified as a data expression, and returns the text between the quotes, encoded in ASCII. The backslash (&#8216;\&#8217;) character is treated specially, as in C programming: &#8216;	&#8217; means TAB, &#8216;&#8217; means carriage return, &#8216;
+<dd>A string, enclosed in quotes, may be specified as a data expression, and returns the text between the quotes, encoded in ASCII. The backslash (&#8216;\&#8217;) character is treated specially, as in C programming: &#8216;	&#8217; means TAB, &#8216;
+&#8217; means carriage return, &#8216;
 &#8217; means newline, and &#8216;&#8217; means bell. Any octal value can be specified with &#8216;
 nn&#8217;, where nnn is any positive octal number less than 0400. Any hexadecimal value can be specified with &#8216;
+</dd></dl>

@@ -15,7 +15,7 @@ skb_queue_empty - check if a queue is empty
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>queue head</dl>
+<dl><dd></dd><dd>queue head</dd></dl>
 
 <h2>Description</h2>
 

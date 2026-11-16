@@ -15,11 +15,11 @@ disk_flush_events - schedule immediate event checking and flushing
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>disk to check and flush events for</dl>
+<dl><dd></dd><dd>disk to check and flush events for</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>events to flush</dl>
+<dl><dd>events to flush</dd></dl>
 
 <h2>Description</h2>
 

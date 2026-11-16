@@ -15,23 +15,23 @@ blk_rq_map_kern - map kernel data to a request, for REQ_TYPE_BLOCK_PC usage
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>request queue where request should be inserted</dl>
+<dl><dd></dd><dd>request queue where request should be inserted</dd></dl>
  
 
  <i>rq</i>
-<dl><dd>request to fill</dl>
+<dl><dd>request to fill</dd></dl>
  
 
  <i>kbuf</i>
-<dl><dd>the kernel buffer</dl>
+<dl><dd>the kernel buffer</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length of user data</dl>
+<dl><dd>length of user data</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>memory allocation flags</dl>
+<dl><dd>memory allocation flags</dd></dl>
 
 <h2>Description</h2>
 

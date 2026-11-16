@@ -11,20 +11,14 @@ std::for_each - std::for_each
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class InputIt, class UnaryFunction&gt;
     (until C++ 20)
-
         UnaryFunction for_each(InputIt first, InputIt last, UnaryFunction f);
-
 template &lt;class InputIt, class UnaryFunction&gt;
 (1)(since C++ 20)
-
     constexpr UnaryFunction for_each(InputIt first, InputIt last, UnaryFunction f);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class UnaryFunction2&gt;
 (2)(since C++ 17)
-
     void for_each(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, UnaryFunction2 f);</code></pre> 
 1) Applies the given function object f to the result of dereferencing every iterator in the range [first, last), in order. 
 2) Applies the given function object f to the result of dereferencing every iterator in the range [first, last) (not necessarily in order). The algorithm is executed according to policy. This overload does not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true. 
@@ -89,12 +83,9 @@ The overload with a template parameter named ExecutionPolicy reports errors as f
 
 The following example uses a lambda_function to increment all of the elements of a vector and then uses an overloaded operator() in a functor to compute their sum. Note that to compute the sum, it is recommended to use the dedicated algorithm std::accumulate. 
  // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
 struct Sum
-
 {
     Sum()
         : sum{0}
@@ -107,7 +98,6 @@ struct Sum
     int sum;
 };
 int main()
-
 {
     std::vector&lt;int&gt; nums{3, 4, 2, 8, 15, 267};
     auto print = [](const int &amp;n) { std::cout &lt;&lt; &quot; &quot; &lt;&lt; n; };

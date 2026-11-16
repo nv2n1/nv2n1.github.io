@@ -31,7 +31,7 @@ int ibv_destroy_cq(struct ibv_cq *cq);
 <p> <code>ibv_resize_cq</code>(3), <code>ibv_req_notify_cq</code>(3), <code>ibv_ack_cq_events</code>(3), <code>ibv_create_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -10,15 +10,12 @@ description: "std::ratio_less_equal – std::ratio_less_equal"
 <p>std::ratio_less_equal &#8211; std::ratio_less_equal</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;ratio&gt;
-
     template &lt;class R1, class R2&gt;
     (since C++ 11)
-
         struct ratio_less_equal : std::integral_constant;</code></pre>
 <p>If the ratio R1 is less than or equal to the ratio R2, provides the member constant value equal true. Otherwise, value is false.<br />
 Helper variable template </p>
 <pre><code>template&lt; class R1, class R2 &gt;                                               (since C++17)
-
 inline constexpr bool ratio_less_equal_v = ratio_less_equal&lt;R1, R2&gt;::value;
 </code></pre>
 <p>Inherited from std::integral_constant </p>

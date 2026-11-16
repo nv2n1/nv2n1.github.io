@@ -11,57 +11,18 @@ description: "sc::mat4 –"
 <h2>Synopsis</h2>
 <h3>Public Member Functions</h3>
 <pre><code>mat4 (const vec4 &amp;v0, const vec4 &amp;v1, const vec4 &amp;v2, const vec4 &amp;v3)
-
-
-
 mat4 (const double d)
-
-
-
 mat4 (const mat4 &amp;m)
-
-
-
 mat4 &amp; operator= (const mat4 &amp;m)
-
-
-
 mat4 &amp; operator+= (const mat4 &amp;m)
-
-
-
 mat4 &amp; operator-= (const mat4 &amp;m)
-
-
-
 mat4 &amp; operator*= (const double d)
-
-
-
 mat4 &amp; operator/= (const double d)
-
-
-
 vec4 &amp; operator[] (int i)
-
-
-
 const vec4 &amp; operator[] (int i) const
-
-
-
 mat4 transpose () const
-
-
-
 mat4 inverse ()
-
-
-
 mat4 &amp; apply (V_FCT_PTR fct)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>vec4</code> <code>v</code> [4]</p>
 <h3>Friends</h3>

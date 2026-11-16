@@ -18,7 +18,7 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 <p> <code>pamarith</code> is the same thing for binary functions &#8212; it takes two images as input and applies a specified simple arithmetic function (e.g. addition) on pairs of samples from the two to produce the single output image. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-multiplier=</code><i>realnum</i></p>
+<dt><code>-multiplier=</code><i>realnum</i></dt>
 <dd>
 <p> This option makes the transfer function that of multiplying by<br />
 &nbsp;<wbr>&nbsp;<wbr><i>realnum</i>.&nbsp;<wbr>&nbsp;<wbr><i>realnum</i>&nbsp;<wbr>must be nonnegative.&nbsp;<wbr>&nbsp;<wbr>If the result<br />
@@ -36,7 +36,7 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 &nbsp;<wbr>&nbsp;<wbr>sequence of images of brightness declining to black or increasing to<br />
 &nbsp;<wbr>&nbsp;<wbr>white, if that&#8217;s what you want.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-divisor=</code><i>realnum</i></p>
+</dd><dt><code>-divisor=</code><i>realnum</i></dt>
 <dd>
 <p> This option makes the transfer function that of dividing by<br />
 &nbsp;<wbr>&nbsp;<wbr><i>realnum</i>.&nbsp;<wbr>&nbsp;<wbr><i>realnum</i>&nbsp;<wbr>must be nonnegative.&nbsp;<wbr>&nbsp;<wbr>If the result<br />
@@ -44,7 +44,7 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 <p> This is the same function as you would get with <code>-multiplier</code>,<br />
 &nbsp;<wbr>&nbsp;<wbr>specifying the multiplicative inverse of&nbsp;<wbr><i>realnum</i>.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-adder=</code><i>integer</i></p>
+</dd><dt><code>-adder=</code><i>integer</i></dt>
 <dd>
 <p> This option makes the transfer function that of adding<br />
 &nbsp;<wbr>&nbsp;<wbr><i>wholenum</i>.&nbsp;<wbr>&nbsp;<wbr>If the result is greater than the image maxval,<br />
@@ -54,7 +54,7 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 &nbsp;<wbr>&nbsp;<wbr>and an&nbsp;<wbr>&#8216;adder&#8217;&nbsp;<wbr>is a snake.&nbsp;<wbr>&nbsp;<wbr>We use&nbsp;<wbr>&#8216;adder&#8217;&nbsp;<wbr>because<br />
 &nbsp;<wbr>&nbsp;<wbr>it makes more sense.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-subtractor=</code><i>integer</i></p>
+</dd><dt><code>-subtractor=</code><i>integer</i></dt>
 <dd>
 <p> This option makes the transfer function that of subtracting<br />
 &nbsp;<wbr>&nbsp;<wbr><i>wholenum</i>.&nbsp;<wbr>&nbsp;<wbr>If the result is greater than the image maxval,<br />
@@ -66,14 +66,14 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 <p> This is the same function as you would get with <code>-adder</code>,<br />
 &nbsp;<wbr>&nbsp;<wbr>specifying the negative of&nbsp;<wbr><i>integer</i>.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-min=</code><i>wholenum</i></p>
+</dd><dt><code>-min=</code><i>wholenum</i></dt>
 <dd>
 <p> This option makes the transfer function that of taking the<br />
 &nbsp;<wbr>&nbsp;<wbr>maximum of the argument and&nbsp;<wbr><i>wholenum</i>.&nbsp;<wbr>&nbsp;<wbr>I.e the minimum<br />
 &nbsp;<wbr>&nbsp;<wbr>value in the output will be&nbsp;<wbr><i>wholenum</i>. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>If&nbsp;<wbr><i>wholenum</i>&nbsp;<wbr>is greater than the maxval, though, every sample<br />
 &nbsp;<wbr>&nbsp;<wbr>in the output will be maxval. </p>
-<dt><code>-max=</code><i>wholenum</i></p>
+</dd><dt><code>-max=</code><i>wholenum</i></dt>
 <dd>
 <p> This option makes the transfer function that of taking the<br />
 &nbsp;<wbr>&nbsp;<wbr>minimum of the argument and&nbsp;<wbr><i>wholenum</i>.&nbsp;<wbr>&nbsp;<wbr>I.e the maximum<br />
@@ -81,7 +81,7 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 <p>&nbsp;<wbr>&nbsp;<wbr>If&nbsp;<wbr><i>wholenum</i>&nbsp;<wbr>is greater than the maxval, the function is<br />
 &nbsp;<wbr>&nbsp;<wbr>idempotent &#8212; the output is identical to the input.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-andmask=</code><i>hexmask</i></p>
+</dd><dt><code>-andmask=</code><i>hexmask</i></dt>
 <dd>
 <p> This option makes the transfer function that of bitwise anding<br />
 &nbsp;<wbr>&nbsp;<wbr>with&nbsp;<wbr><i>hexmask</i>. </p>
@@ -90,19 +90,19 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 &nbsp;<wbr>&nbsp;<wbr>meaning of maxval with respect to bit string operations such as<br />
 &nbsp;<wbr>&nbsp;<wbr>this. </p>
 <p> This option was new in Netpbm 10.40 (September 2007). </p>
-<dt><code>-ormask=</code><i>hexmask</i></p>
+</dd><dt><code>-ormask=</code><i>hexmask</i></dt>
 <dd>
 <p> This option makes the transfer function that of bitwise<br />
 &nbsp;<wbr>&nbsp;<wbr>inclusive oring with&nbsp;<wbr><i>hexmask</i>. </p>
 <p> This is analogous to <code>-andmask</code>. </p>
 <p> This option was new in Netpbm 10.40 (September 2007). </p>
-<dt><code>-xormask=</code><i>hexmask</i></p>
+</dd><dt><code>-xormask=</code><i>hexmask</i></dt>
 <dd>
 <p> This option makes the transfer function that of bitwise<br />
 &nbsp;<wbr>&nbsp;<wbr>exclusive oring with&nbsp;<wbr><i>hexmask</i>. </p>
 <p> This is analogous to <code>-andmask</code>. </p>
 <p> This option was new in Netpbm 10.40 (September 2007). </p>
-<dt><code>-not</code></p>
+</dd><dt><code>-not</code></dt>
 <dd>
 <p> This option makes the transfer function that of bitwise logical<br />
 &nbsp;<wbr>&nbsp;<wbr>inversion&nbsp;<wbr>(e.g. sample value 0xAA becomes 0x55). </p>
@@ -112,7 +112,7 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 <p> <code>pnminvert</code> does the same thing for a bilevel visual image<br />
 &nbsp;<wbr>&nbsp;<wbr>which has maxval 1 or is of PBM type. </p>
 <p> This option was new in Netpbm 10.40 (September 2007). </p>
-<dt><code>-shiftleft=</code><i>count</i></p>
+</dd><dt><code>-shiftleft=</code><i>count</i></dt>
 <dd>
 <p> This option makes the transfer function that of bitwise shifting<br />
 &nbsp;<wbr>&nbsp;<wbr>left by&nbsp;<wbr><i>count</i>&nbsp;<wbr>bits. </p>
@@ -120,13 +120,13 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 &nbsp;<wbr>&nbsp;<wbr>meaning of maxval with respect to bit string operations such as<br />
 &nbsp;<wbr>&nbsp;<wbr>this. </p>
 <p> This option was new in Netpbm 10.40 (September 2007). </p>
-<dt><code>-shiftright=</code><i>count</i></p>
+</dd><dt><code>-shiftright=</code><i>count</i></dt>
 <dd>
 <p> This option makes the transfer function that of bitwise shifting<br />
 &nbsp;<wbr>&nbsp;<wbr>right by&nbsp;<wbr><i>count</i>&nbsp;<wbr>bits. </p>
 <p> This is analogous to <code>-shiftleft</code>. </p>
 <p> This option was new in Netpbm 10.40 (September 2007). </p>
-</dl>
+</dd></dl>
 <h2>MAXVAL</h2>
 <p> For the arithmetic functions, the maxval has no meaning. The function applies to the sample value as an integer. (Note that this differs from the usual interpretation of PAM samples as being a fraction of a maxval, but <i>does</i> produce more intuitive result: 2 times 5 is 10. </p>
 <p> But with the bit string operations, the maxval has a special meaning. The functions in question are: <code>-andmask</code>, <code>-ormask</code>, <code>-xormask</code>, <code>-not</code>, <code>-shiftleft</code>, and <code>-shiftright</code>. </p>

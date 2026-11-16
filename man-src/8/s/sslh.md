@@ -26,58 +26,58 @@ url: "/docs/linux/man/8-sslh/"
 <p>As a security/authorization program, <code>sslh</code> logs to the <font SIZE="-1">LOG_AUTH</font> facility, with priority <font SIZE="-1">LOG_INFO</font> for normal connections and <font SIZE="-1">LOG_ERR</font> for failures.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-F</code> <i>filename</i>, <code>&#8211;config</code> <i>filename</i></p>
-<dd>Uses <i>filename</i> has configuration file. If other command-line options are specified, they will override the configuration file&#8217;s settings.</p>
-<dt><code>-t</code> <i>num</i>, <code>&#8211;timeout</code> <i>num</i></p>
-<dd>Timeout before forwarding the connection to the timeout protocol (which should usually be <font SIZE="-1">SSH</font>). Default is 2s.</p>
-<dt><code>&#8211;on-timeout</code> <i>protocol name</i></p>
-<dd>Name of the protocol to connect to after the timeout period is over. Default is &#8216;ssh&#8217;.</p>
-<dt><code>&#8211;transparent</code></p>
-<dd>Makes <code>sslh</code> behave as a transparent proxy, i.e. the receiving service sees the original client&#8217;s <font SIZE="-1">IP</font> address. This works on Linux only and involves <code>iptables</code> settings. Refer to the <font SIZE="-1">README</font> for more information.</p>
-<dt><code>-p</code> <i>listening address</i>, <code>&#8211;listen</code> <i>listening address</i></p>
-<dd>Interface and port on which to listen, e.g. <i>foobar:443</i>, where <i>foobar</i> is the name of an interface (typically the <font SIZE="-1">IP</font> address on which the Internet connection ends up). </p>
+<dt><code>-F</code> <i>filename</i>, <code>&#8211;config</code> <i>filename</i></dt>
+<dd>Uses <i>filename</i> has configuration file. If other command-line options are specified, they will override the configuration file&#8217;s settings.</dd>
+<dt><code>-t</code> <i>num</i>, <code>&#8211;timeout</code> <i>num</i></dt>
+<dd>Timeout before forwarding the connection to the timeout protocol (which should usually be <font SIZE="-1">SSH</font>). Default is 2s.</dd>
+<dt><code>&#8211;on-timeout</code> <i>protocol name</i></dt>
+<dd>Name of the protocol to connect to after the timeout period is over. Default is &#8216;ssh&#8217;.</dd>
+<dt><code>&#8211;transparent</code></dt>
+<dd>Makes <code>sslh</code> behave as a transparent proxy, i.e. the receiving service sees the original client&#8217;s <font SIZE="-1">IP</font> address. This works on Linux only and involves <code>iptables</code> settings. Refer to the <font SIZE="-1">README</font> for more information.</dd>
+<dt><code>-p</code> <i>listening address</i>, <code>&#8211;listen</code> <i>listening address</i></dt>
+<dd>Interface and port on which to listen, e.g. <i>foobar:443</i>, where <i>foobar</i> is the name of an interface (typically the <font SIZE="-1">IP</font> address on which the Internet connection ends up). </dd>
 <p> This can be specified several times to bind <code>sslh</code> to several addresses.</p>
-<dt><code>&#8211;ssl</code> <i>target address</i></p>
+<dt><code>&#8211;ssl</code> <i>target address</i></dt>
 <dd>
-<dt><code>&#8211;tls</code> <i>target address</i></p>
-<dd>Interface and port on which to forward <font SIZE="-1">SSL</font> connection, typically <i>localhost:443</i>. </p>
+</dd><dt><code>&#8211;tls</code> <i>target address</i></dt>
+<dd>Interface and port on which to forward <font SIZE="-1">SSL</font> connection, typically <i>localhost:443</i>. </dd>
 <p> Note that you can set <code>sslh</code> to listen on <i>ext_ip:443</i> and <code>httpd</code> to listen on <i>localhost:443</i>: this allows clients inside your network to just connect directly to <code>httpd</code>. </p>
 <p> Also, <code>sslh</code> probes for SSLv3 (or TLSv1) handshake and will reject connections from clients requesting SSLv2. This is compliant to <font SIZE="-1">RFC6176</font> which prohibits the usage of SSLv2. If you wish to accept SSLv2, use <code>&#8211;default</code> instead.</p>
-<dt><code>&#8211;ssh</code> <i>target address</i></p>
-<dd>Interface and port on which to forward <font SIZE="-1">SSH</font> connections, typically <i>localhost:22</i>.</p>
-<dt><code>&#8211;openvpn</code> <i>target address</i></p>
-<dd>Interface and port on which to forward OpenVPN connections, typically <i>localhost:1194</i>.</p>
-<dt><code>&#8211;xmpp</code> <i>target address</i></p>
-<dd>Interface and port on which to forward <font SIZE="-1">XMPP</font> connections, typically <i>localhost:5222</i>.</p>
-<dt><code>&#8211;http</code> <i>target address</i></p>
-<dd>Interface and port on which to forward <font SIZE="-1">HTTP</font> connections, typically <i>localhost:80</i>.</p>
-<dt><code>&#8211;tinc</code> <i>target address</i></p>
-<dd>Interface and port on which to forward tinc connections, typically <i>localhost:655</i>. </p>
+<dt><code>&#8211;ssh</code> <i>target address</i></dt>
+<dd>Interface and port on which to forward <font SIZE="-1">SSH</font> connections, typically <i>localhost:22</i>.</dd>
+<dt><code>&#8211;openvpn</code> <i>target address</i></dt>
+<dd>Interface and port on which to forward OpenVPN connections, typically <i>localhost:1194</i>.</dd>
+<dt><code>&#8211;xmpp</code> <i>target address</i></dt>
+<dd>Interface and port on which to forward <font SIZE="-1">XMPP</font> connections, typically <i>localhost:5222</i>.</dd>
+<dt><code>&#8211;http</code> <i>target address</i></dt>
+<dd>Interface and port on which to forward <font SIZE="-1">HTTP</font> connections, typically <i>localhost:80</i>.</dd>
+<dt><code>&#8211;tinc</code> <i>target address</i></dt>
+<dd>Interface and port on which to forward tinc connections, typically <i>localhost:655</i>. </dd>
 <p> This is experimental. If you use this feature, please report the results (even if it works!)</p>
-<dt><code>&#8211;anyprot</code> <i>target address</i></p>
-<dd>Interface and port on which to forward if no other protocol has been found. Because <code>sslh</code> tries protocols in the order specified on the command line, this should be specified last. If no default is specified, <code>sslh</code> will forward unknown protocols to the first protocol specified.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Increase verboseness.</p>
-<dt><code>-n</code>, <code>&#8211;numeric</code></p>
-<dd>Do not attempt to resolve hostnames: logs will contain <font SIZE="-1">IP</font> addresses. This is mostly useful if the system&#8217;s <font SIZE="-1">DNS</font> is slow and running the <i>sslh-select</i> variant, as <font SIZE="-1">DNS</font> requests will hang all connections.</p>
-<dt><code>-V</code></p>
-<dd>Prints <code>sslh</code> version.</p>
-<dt><code>-u</code> <i>username</i>, <code>&#8211;user</code> <i>username</i></p>
-<dd>Requires to run under the specified username.</p>
-<dt><code>-P</code> <i>pidfile</i>, <code>&#8211;pidfile</code> <i>pidfile</i></p>
-<dd>Specifies a file in which to write the <font SIZE="-1">PID</font> of the main server.</p>
-<dt><code>-i</code>, <code>&#8211;inetd</code></p>
-<dd>Runs as an <i>inetd</i> server. Options <code>-P</code> (<font SIZE="-1">PID</font> file), <code>-p</code> (listen address), <code>-u</code> (user) are ignored.</p>
-<dt><code>-f</code>, <code>&#8211;foreground</code></p>
-<dd>Runs in foreground. The server will not fork and will remain connected to the terminal. Messages normally sent to <code>syslog</code> will also be sent to <i>stderr</i>.</p>
-<dt><code>&#8211;background</code></p>
-<dd>Runs in background. This overrides <code>foreground</code> if set in the configuration file (or on the command line, but there is no point setting both on the command line unless you have a personality disorder).</dl>
+<dt><code>&#8211;anyprot</code> <i>target address</i></dt>
+<dd>Interface and port on which to forward if no other protocol has been found. Because <code>sslh</code> tries protocols in the order specified on the command line, this should be specified last. If no default is specified, <code>sslh</code> will forward unknown protocols to the first protocol specified.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase verboseness.</dd>
+<dt><code>-n</code>, <code>&#8211;numeric</code></dt>
+<dd>Do not attempt to resolve hostnames: logs will contain <font SIZE="-1">IP</font> addresses. This is mostly useful if the system&#8217;s <font SIZE="-1">DNS</font> is slow and running the <i>sslh-select</i> variant, as <font SIZE="-1">DNS</font> requests will hang all connections.</dd>
+<dt><code>-V</code></dt>
+<dd>Prints <code>sslh</code> version.</dd>
+<dt><code>-u</code> <i>username</i>, <code>&#8211;user</code> <i>username</i></dt>
+<dd>Requires to run under the specified username.</dd>
+<dt><code>-P</code> <i>pidfile</i>, <code>&#8211;pidfile</code> <i>pidfile</i></dt>
+<dd>Specifies a file in which to write the <font SIZE="-1">PID</font> of the main server.</dd>
+<dt><code>-i</code>, <code>&#8211;inetd</code></dt>
+<dd>Runs as an <i>inetd</i> server. Options <code>-P</code> (<font SIZE="-1">PID</font> file), <code>-p</code> (listen address), <code>-u</code> (user) are ignored.</dd>
+<dt><code>-f</code>, <code>&#8211;foreground</code></dt>
+<dd>Runs in foreground. The server will not fork and will remain connected to the terminal. Messages normally sent to <code>syslog</code> will also be sent to <i>stderr</i>.</dd>
+<dt><code>&#8211;background</code></dt>
+<dd>Runs in background. This overrides <code>foreground</code> if set in the configuration file (or on the command line, but there is no point setting both on the command line unless you have a personality disorder).</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/systemd/system/sslh.service</i></p>
-<dd>Systemd unit to control the daemon.</p>
-<dt><i>/etc/sysconfig/sslh</i></p>
-<dd>Server configuration. These are environment variables loaded by the start-up script and passed to <code>sslh</code> as command-line arguments. Refer to the <font SIZE="-1">OPTIONS</font> section for a detailed explanation of the variables used by <code>sslh</code>.</dl>
+<dt><i>/usr/lib/systemd/system/sslh.service</i></dt>
+<dd>Systemd unit to control the daemon.</dd>
+<dt><i>/etc/sysconfig/sslh</i></dt>
+<dd>Server configuration. These are environment variables loaded by the start-up script and passed to <code>sslh</code> as command-line arguments. Refer to the <font SIZE="-1">OPTIONS</font> section for a detailed explanation of the variables used by <code>sslh</code>.</dd></dl>
 <h2>See Also</h2>
 <p>Last version available from &lt;<a rel="nofollow" href="http://www.rutschle.net/tech/sslh">http://www.rutschle.net/tech/sslh</a>&gt;, and can be tracked from &lt;<a rel="nofollow" href="http://freecode.com/projects/sslh">http://freecode.com/projects/sslh</a>&gt;.</p>
 <h2>Author</h2>

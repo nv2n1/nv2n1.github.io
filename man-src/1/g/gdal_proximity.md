@@ -21,41 +21,41 @@ gdal_proximity.py srcfile dstfile[-srcband n][-dstband n]
 <h2>DESCRIPTION</h2>
 <p> The gdal_proximity.py script generates a raster proximity map indicating the distance from the center of each pixel to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which the raster pixel value is in the set of target pixel values. </p>
 <dl>
-<dt><i>srcfile</i></p>
-<dd> The source raster file used to identify target pixels.</dl>
+<dt><i>srcfile</i></dt>
+<dd> The source raster file used to identify target pixels.</dd></dl>
 <dl>
-<dt><i>dstfile</i></p>
-<dd> The destination raster file to which the proximity map will be written. It may be a pre-existing file of the same size as srcfile. If it does not exist it will be created.</dl>
+<dt><i>dstfile</i></dt>
+<dd> The destination raster file to which the proximity map will be written. It may be a pre-existing file of the same size as srcfile. If it does not exist it will be created.</dd></dl>
 <dl>
-<dt><code>-srcband</code> <i>n</i></p>
-<dd> Identifies the band in the source file to use (default is 1).</dl>
+<dt><code>-srcband</code> <i>n</i></dt>
+<dd> Identifies the band in the source file to use (default is 1).</dd></dl>
 <dl>
-<dt><code>-dstband</code> <i>n</i></p>
-<dd> Identifies the band in the destination file to use (default is 1).</dl>
+<dt><code>-dstband</code> <i>n</i></dt>
+<dd> Identifies the band in the destination file to use (default is 1).</dd></dl>
 <dl>
-<dt><code>-of</code> <i>format</i>:</p>
-<dd> Select the output format. The default is GeoTIFF (GTiff). Use the short format name.</dl>
+<dt><code>-of</code> <i>format</i>:</dt>
+<dd> Select the output format. The default is GeoTIFF (GTiff). Use the short format name.</dd></dl>
 <dl>
-<dt><code>-co</code> <i>&#8216;NAME=VALUE&#8217;</i>:</p>
-<dd> passes a creation option to the output format driver. Multiple <code>-co</code> options may be listed. See format specific documentation for legal creation options for each format.</dl>
+<dt><code>-co</code> <i>&#8216;NAME=VALUE&#8217;</i>:</dt>
+<dd> passes a creation option to the output format driver. Multiple <code>-co</code> options may be listed. See format specific documentation for legal creation options for each format.</dd></dl>
 <dl>
-<dt><code>-ot</code> <i>datatype</i>:</p>
-<dd> Force the output image bands to have a specific type. Use type names (ie. Byte, Int16,&#8230;)</dl>
+<dt><code>-ot</code> <i>datatype</i>:</dt>
+<dd> Force the output image bands to have a specific type. Use type names (ie. Byte, Int16,&#8230;)</dd></dl>
 <dl>
-<dt><code>-values</code> <i>n,n,n</i>:</p>
-<dd> A list of target pixel values in the source image to be considered target pixels. If not specified, all non-zero pixels will be considered target pixels.</dl>
+<dt><code>-values</code> <i>n,n,n</i>:</dt>
+<dd> A list of target pixel values in the source image to be considered target pixels. If not specified, all non-zero pixels will be considered target pixels.</dd></dl>
 <dl>
-<dt><code>-distunits</code> <i>PIXEL/GEO</i>:</p>
-<dd> Indicate whether distances generated should be in pixel or georeferenced coordinates (default PIXEL).</dl>
+<dt><code>-distunits</code> <i>PIXEL/GEO</i>:</dt>
+<dd> Indicate whether distances generated should be in pixel or georeferenced coordinates (default PIXEL).</dd></dl>
 <dl>
-<dt><code>-maxdist</code> <i>n</i>:</p>
-<dd> The maximum distance to be generated. All pixels beyond this distance will be assigned either the nodata value, or 65535. Distance is interpreted in pixels unless -distunits GEO is specified.</dl>
+<dt><code>-maxdist</code> <i>n</i>:</dt>
+<dd> The maximum distance to be generated. All pixels beyond this distance will be assigned either the nodata value, or 65535. Distance is interpreted in pixels unless -distunits GEO is specified.</dd></dl>
 <dl>
-<dt><code>-nodata</code> <i>n</i>:</p>
-<dd> Specify a nodata value to use for the destination proximity raster.</dl>
+<dt><code>-nodata</code> <i>n</i>:</dt>
+<dd> Specify a nodata value to use for the destination proximity raster.</dd></dl>
 <dl>
-<dt><code>-fixed-buf-val</code> <i>n</i>:</p>
-<dd> Specify a value to be applied to all pixels that are within the -maxdist of target pixels (including the target pixels) instead of a distance value.</dl>
+<dt><code>-fixed-buf-val</code> <i>n</i>:</dt>
+<dd> Specify a value to be applied to all pixels that are within the -maxdist of target pixels (including the target pixels) instead of a distance value.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
 <h2>Index</h2>

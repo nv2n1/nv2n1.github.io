@@ -16,22 +16,22 @@ description: "consoletype – print type of the console connected to standard in
 <h2>RETURN VALUE</h2>
 <p> <code>consoletype when passed no arguments returns</p>
 <dl>
-<dt></code><i>0</p>
-<dd> if on virtual terminal</p>
-<dt>1</p>
-<dd> if on serial console</p>
-<dt>2</p>
-<dd> if on a pseudo terminal.</p>
-<dt>When passed the stdout</i> argument, <code>consoletype</code> returns</p>
+<dt></code><i>0</dt>
+<dd> if on virtual terminal</dd>
+<dt>1</dt>
+<dd> if on serial console</dd>
+<dt>2</dt>
+<dd> if on a pseudo terminal.</dd>
+<dt>When passed the stdout</i> argument, <code>consoletype</code> returns</dt>
 <dd>
-<dt><i>0</p>
-<dd> in all cases, and prints the console type to stdout.</p>
-<dt>When passed the fg</i> argument, <code>consoletype</code> returns</p>
+</dd><dt><i>0</dt>
+<dd> in all cases, and prints the console type to stdout.</dd>
+<dt>When passed the fg</i> argument, <code>consoletype</code> returns</dt>
 <dd>
-<dt><i>0</p>
-<dd> if the console connected to standard input is the current virtual terminal</p>
-<dt>1</p>
-<dd> otherwise. </p>
+</dd><dt><i>0</dt>
+<dd> if the console connected to standard input is the current virtual terminal</dd>
+<dt>1</dt>
+<dd> otherwise. </dd>
 </dl>
 <p> </i></p>
 <h2>Index</h2>

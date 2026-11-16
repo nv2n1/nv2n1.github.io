@@ -28,14 +28,14 @@ int initgroups(const char *user, gid_t group);
 <p> The <code>initgroups</code>() function returns 0 on success. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to allocate group information structure.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process has insufficient privilege. See the underlying system call <code><a href="/docs/linux/man/2-setgroups/">setgroups</a></code>(2).</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to allocate group information structure.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process has insufficient privilege. See the underlying system call <code><a href="/docs/linux/man/2-setgroups/">setgroups</a></code>(2).</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/group</i></p>
-<dd> group database file</dl>
+<dt><i>/etc/group</i></dt>
+<dd> group database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

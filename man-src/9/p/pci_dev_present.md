@@ -15,7 +15,7 @@ pci_dev_present - Returns 1 if device matching the device list is present, 0 if 
 <h2>Arguments</h2>
 
 <i>ids</i>
-<dl><dd><dd>A pointer to a null terminated list of struct pci_device_id structures that describe the type of PCI device the caller is trying to find.</dl>
+<dl><dd></dd><dd>A pointer to a null terminated list of struct pci_device_id structures that describe the type of PCI device the caller is trying to find.</dd></dl>
 
 <h2>Description</h2>
 

@@ -11,9 +11,7 @@ std::experimental::filesystem::temp_directory_path - std::experimental::filesyst
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/filesystem&gt;
-
 path temp_directory_path();                 (1) (filesystem TS)
-
 path temp_directory_path( error_code&amp; ec );</code></pre> 
 Returns the directory location suitable for temporary files. 
 
@@ -39,13 +37,9 @@ On Windows systems, the path is typically the one returned by GetTempPath
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;Temp directory is &quot; &lt;&lt; fs::temp_directory_path() &lt;&lt; '\n';
 }

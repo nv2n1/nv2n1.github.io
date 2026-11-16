@@ -23,3 +23,4 @@ void *rawmemchr(const void *s, int c);
 <p> The <code>memrchr</code>() function is like the <code>memchr</code>() function, except that it searches backward from the end of the <i>n</i> bytes pointed to by <i>s</i> instead of forward from the beginning. </p>
 <p> The <code>rawmemchr</code>() function is similar to <code>memchr</code>(): it assumes (i.e., the programmer knows for certain) that an instance of <i>c</i> lies somewhere in the memory area starting at the location pointed to by <i>s</i>, and so performs an optimized search for <i>c</i> (i.e., no use of a count argument to limit the range of the search). If an instance of <i>c</i> is not found, the results are unpredictable. The following call is a fast means of locating a string&#8217;s terminating null byte: </p>
 <p> char *p = rawmemchr(s,&nbsp;&#8216;
+</p>

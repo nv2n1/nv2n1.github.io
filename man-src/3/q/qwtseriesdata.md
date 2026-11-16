@@ -30,14 +30,14 @@ description: "QwtSeriesData< T > –"
 <p> Qwt offers several implementations of the <code>QwtSeriesData</code> API, but in situations, where data of an application specific format needs to be displayed, without having to copy it, it is recommended to implement an individual data access. </p>
 <p> A subclass of <code>QwtSeriesData&lt;QPointF&gt;</code> must implement: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>size()</code> </p>
+<dt>&bull;</dt>
+<dd><code>size()</code> </dd>
 <p>&nbsp;<wbr>Should return number of data points.</p>
-<dt>&bull;</p>
-<dd><code>sample()</code> </p>
+<dt>&bull;</dt>
+<dd><code>sample()</code> </dd>
 <p>&nbsp;<wbr>Should return values x and y values of the sample at specific position as QPointF object.</p>
-<dt>&bull;</p>
-<dd><code>boundingRect()</code> </p>
+<dt>&bull;</dt>
+<dd><code>boundingRect()</code> </dd>
 <p>&nbsp;<wbr>Should return the bounding rectangle of the data series. It is used for autoscaling and might help certain algorithms for displaying the data. You can use qwtBoundingRect()&nbsp;<wbr>for an implementation but often it is possible to implement a more efficient algorithm depending on the characteristics of the series. The member d_boundingRect is intended for caching the calculated rectangle.&nbsp;<wbr></dl>
 <h2>Member Function Documentation</h2>
 <h3>template&lt;typename T&gt; virtual QRectF <code>QwtSeriesData</code>&lt; T &gt;::boundingRect () const [pure virtual]</h3>
@@ -46,16 +46,16 @@ description: "QwtSeriesData< T > –"
 <p> qwtBoundingRect(&#8230;) offers slow implementations iterating over the samples. For large sets it is recommended to implement something faster f.e. by caching the bounding rectangle. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <p> Implemented in <code>QwtTradingChartData</code>, <code>QwtSetSeriesData</code>, <code>QwtIntervalSeriesData</code>, <code>QwtPoint3DSeriesData</code>, <code>QwtPointSeriesData</code>, <code>QwtSyntheticPointData</code>, <code>QwtCPointerData</code>, and <code>QwtPointArrayData</code>.</p>
 <h3>template&lt;typename T&gt; virtual T <code>QwtSeriesData</code>&lt; T &gt;::sample (size_ti) const [pure virtual]</h3>
 <p>Return a sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>i</i> Index</dl>
+<dd><i>i</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Sample at position i</dl>
+<dd>Sample at position i</dd></dl>
 <p> Implemented in <code>QwtArraySeriesData&lt; T &gt;</code>, <code>QwtArraySeriesData&lt; QwtIntervalSample &gt;</code>, <code>QwtArraySeriesData&lt; QwtOHLCSample &gt;</code>, <code>QwtArraySeriesData&lt; QPointF &gt;</code>, <code>QwtArraySeriesData&lt; QwtPoint3D &gt;</code>, <code>QwtArraySeriesData&lt; QwtSetSample &gt;</code>, <code>QwtSyntheticPointData</code>, <code>QwtCPointerData</code>, and <code>QwtPointArrayData</code>.</p>
 <h3>template&lt;typename T &gt; void <code>QwtSeriesData</code>&lt; T &gt;::setRectOfInterest (const QRectF &amp;rect) [virtual]</h3>
 <p>Set a the &#8216;rect of interest&#8217; </p>
@@ -63,12 +63,12 @@ description: "QwtSeriesData< T > –"
 <p> The default implementation does nothing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Rectangle of interest</dl>
+<dd><i>rect</i> Rectangle of interest</dd></dl>
 <p> Reimplemented in <code>QwtSyntheticPointData</code>.</p>
 <h3>template&lt;typename T&gt; virtual size_t <code>QwtSeriesData</code>&lt; T &gt;::size () const [pure virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of samples</dl>
+<dd>Number of samples</dd></dl>
 <p> Implemented in <code>QwtArraySeriesData&lt; T &gt;</code>, <code>QwtArraySeriesData&lt; QwtIntervalSample &gt;</code>, <code>QwtArraySeriesData&lt; QwtOHLCSample &gt;</code>, <code>QwtArraySeriesData&lt; QPointF &gt;</code>, <code>QwtArraySeriesData&lt; QwtPoint3D &gt;</code>, <code>QwtArraySeriesData&lt; QwtSetSample &gt;</code>, <code>QwtSyntheticPointData</code>, <code>QwtCPointerData</code>, and <code>QwtPointArrayData</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

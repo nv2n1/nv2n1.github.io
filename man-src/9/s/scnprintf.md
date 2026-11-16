@@ -15,19 +15,19 @@ scnprintf - Format a string and place it in a buffer
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>The buffer to place the result into</dl>
+<dl><dd></dd><dd>The buffer to place the result into</dd></dl>
  
 
  <i>size</i>
-<dl><dd>The size of the buffer, including the trailing null space</dl>
+<dl><dd>The size of the buffer, including the trailing null space</dd></dl>
  
 
  <i>fmt</i>
-<dl><dd>The format string to use</dl>
+<dl><dd>The format string to use</dd></dl>
  
 
  <i>...</i>
-<dl><dd>Arguments for the format string</dl>
+<dl><dd>Arguments for the format string</dd></dl>
 
 <h2>Description</h2>
 

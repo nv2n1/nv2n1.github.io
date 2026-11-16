@@ -15,7 +15,7 @@ usb_hc_died - report abnormal shutdown of a host controller (bus glue)
 <h2>Arguments</h2>
 
 <i>hcd</i>
-<dl><dd><dd>pointer to the HCD representing the controller</dl>
+<dl><dd></dd><dd>pointer to the HCD representing the controller</dd></dl>
 
 <h2>Description</h2>
 

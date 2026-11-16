@@ -22,8 +22,8 @@ description: "setpgid, getpgid, setpgrp, getpgrp – set/get process group"
 <p> <code>getpgid</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dl>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd></dl>
 <p> <code>setpgrp</code>() (POSIX.1): </p>
 <pre><code>
 _XOPEN_SOURCE &amp;nbsp;
@@ -55,14 +55,14 @@ _XOPEN_SOURCE &amp;nbsp;
 <p> <code>getpgid</code>(), and the BSD-specific <code>getpgrp</code>() return a process group on success. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> An attempt was made to change the process group ID of one of the children of the calling process and the child had already performed an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) (<code>setpgid</code>(), <code>setpgrp</code>()).</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>pgid</i> is less than 0 (<code>setpgid</code>(), <code>setpgrp</code>()).</p>
-<dt><code>EPERM</code></p>
-<dd> An attempt was made to move a process into a process group in a different session, or to change the process group ID of one of the children of the calling process and the child was in a different session, or to change the process group ID of a session leader (<code>setpgid</code>(), <code>setpgrp</code>()).</p>
-<dt><code>ESRCH</code></p>
-<dd> For <code>getpgid</code>(): <i>pid</i> does not match any process. For <code>setpgid</code>(): <i>pid</i> is not the calling process and not a child of the calling process.</dl>
+<dt><code>EACCES</code></dt>
+<dd> An attempt was made to change the process group ID of one of the children of the calling process and the child had already performed an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) (<code>setpgid</code>(), <code>setpgrp</code>()).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>pgid</i> is less than 0 (<code>setpgid</code>(), <code>setpgrp</code>()).</dd>
+<dt><code>EPERM</code></dt>
+<dd> An attempt was made to move a process into a process group in a different session, or to change the process group ID of one of the children of the calling process and the child was in a different session, or to change the process group ID of a session leader (<code>setpgid</code>(), <code>setpgrp</code>()).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> For <code>getpgid</code>(): <i>pid</i> does not match any process. For <code>setpgid</code>(): <i>pid</i> is not the calling process and not a child of the calling process.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>setpgid</code>() and the version of <code>getpgrp</code>() with no arguments conform to POSIX.1-2001. </p>
 <p> POSIX.1-2001 also specifies <code>getpgid</code>() and the version of <code>setpgrp</code>() that takes no arguments. (POSIX.1-2008 marks this <code>setpgrp</code>() specification as obsolete.) </p>

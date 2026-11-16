@@ -15,24 +15,24 @@ description: "mate-volume-control – The MATE Volume Control application"
 <p> The MATE Volume Control application is an audio mixer that enables you to mix audio and adjust volume levels of various audio mixer devices on your system.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b, &#8211;backend=pulse|alsa|oss|null</code></p>
-<dd> Launch <code>mate-volume-control</code> with the selected sound system backend.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Enable debugging code.</p>
-<dt><code>-p, &#8211;page=effects|hardware|input|output|applications</code></p>
-<dd> Launch <code>mate-volume-control</code> on the specified page/tab.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</p>
-<dt>This program also accepts the standard GTK+ options.</p>
+<dt><code>-b, &#8211;backend=pulse|alsa|oss|null</code></dt>
+<dd> Launch <code>mate-volume-control</code> with the selected sound system backend.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Enable debugging code.</dd>
+<dt><code>-p, &#8211;page=effects|hardware|input|output|applications</code></dt>
+<dd> Launch <code>mate-volume-control</code> on the specified page/tab.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd>
+<dt>This program also accepts the standard GTK+ options.</dt>
 <dd>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Print GTK+ options.</dl>
+</dd><dt><code>&#8211;help-gtk</code></dt>
+<dd> Print GTK+ options.</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/mate-media/issues">http://github.com/mate-desktop/mate-media/issues</a></p>

@@ -14,13 +14,13 @@ description: "superhyway_add_device – Add a SuperHyway module"
 <p><i>base</i></p>
 <dl>
 <dd>
-<dd>Physical address where module is mapped.</dl>
+</dd><dd>Physical address where module is mapped.</dd></dl>
 <p> <i>sdev</i></p>
 <dl>
-<dd>SuperHyway device to add, or NULL to allocate a new one.</dl>
+<dd>SuperHyway device to add, or NULL to allocate a new one.</dd></dl>
 <p> <i>bus</i></p>
 <dl>
-<dd>Bus where SuperHyway module resides.</dl>
+<dd>Bus where SuperHyway module resides.</dd></dl>
 <h2>Description</h2>
 <p>This is responsible for adding a new SuperHyway module. This sets up a new struct superhyway_device for the module being added if <i>sdev</i> == NULL. </p>
 <p> Devices are initially added in the order that they are scanned (from the top-down of the memory map), and are assigned an ID based on the order that they are added. Any manual addition of a module will thus get the ID after the devices already discovered regardless of where it resides in memory. </p>
@@ -28,5 +28,5 @@ description: "superhyway_add_device – Add a SuperHyway module"
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

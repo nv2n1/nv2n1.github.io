@@ -110,22 +110,22 @@ description: "mdadm_selinux – Security Enhanced Linux Policy for the mdadm pro
 <p> <code>mdadm_conf_t</code> </p>
 <p> &#8211; Set files with the mdadm_conf_t type, if you want to treat the files as mdadm configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/mdadm.conf, /etc/mdadm.conf.anacbak </p>
+<dt>Paths:</dt>
+<dd>/etc/mdadm.conf, /etc/mdadm.conf.anacbak </dd>
 </dl>
 <p> <code>mdadm_exec_t</code> </p>
 <p> &#8211; Set files with the mdadm_exec_t type, if you want to transition an executable to the mdadm_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/mdadm, /sbin/mdmon, /sbin/mdmpd, /sbin/iprdump, /sbin/iprinit, /sbin/iprupdate, /usr/sbin/mdadm, /usr/sbin/mdmpd, /usr/sbin/mdmon, /sbin/raid-check, /usr/sbin/iprdump, /usr/sbin/iprinit, /usr/sbin/iprupdate, /usr/sbin/raid-check </p>
+<dt>Paths:</dt>
+<dd>/sbin/mdadm, /sbin/mdmon, /sbin/mdmpd, /sbin/iprdump, /sbin/iprinit, /sbin/iprupdate, /usr/sbin/mdadm, /usr/sbin/mdmpd, /usr/sbin/mdmon, /sbin/raid-check, /usr/sbin/iprdump, /usr/sbin/iprinit, /usr/sbin/iprupdate, /usr/sbin/raid-check </dd>
 </dl>
 <p> <code>mdadm_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the mdadm_initrc_exec_t type, if you want to transition an executable to the mdadm_initrc_t domain. </p>
 <p> <code>mdadm_log_t</code> </p>
 <p> &#8211; Set files with the mdadm_log_t type, if you want to treat the data as mdadm log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/iprdump.*, /var/log/iprdbg </p>
+<dt>Paths:</dt>
+<dd>/var/log/iprdump.*, /var/log/iprdbg </dd>
 </dl>
 <p> <code>mdadm_tmp_t</code> </p>
 <p> &#8211; Set files with the mdadm_tmp_t type, if you want to store mdadm temporary files in the /tmp directories. </p>
@@ -134,14 +134,14 @@ description: "mdadm_selinux – Security Enhanced Linux Policy for the mdadm pro
 <p> <code>mdadm_unit_file_t</code> </p>
 <p> &#8211; Set files with the mdadm_unit_file_t type, if you want to treat the files as mdadm unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/mdmon@.*, /usr/lib/systemd/system/mdmonitor.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/mdmon@.*, /usr/lib/systemd/system/mdmonitor.* </dd>
 </dl>
 <p> <code>mdadm_var_run_t</code> </p>
 <p> &#8211; Set files with the mdadm_var_run_t type, if you want to store the mdadm files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/dev/md/.*, /var/run/mdadm(/.*)?, /dev/.mdadm.map </p>
+<dt>Paths:</dt>
+<dd>/dev/md/.*, /var/run/mdadm(/.*)?, /dev/.mdadm.map </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

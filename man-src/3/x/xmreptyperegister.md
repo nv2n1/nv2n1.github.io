@@ -22,14 +22,14 @@ description: "XmRepTypeRegister — A representation type manager function that 
 <p> A representation type can only be registered once; if the same representation type name is registered more than once, the behavior is undefined. </p>
 <p> The function <code>XmRepTypeAddReverse</code> installs a reverse converter for a registered representation type. The reverse converter takes a representation type numerical value and returns the corresponding string value. If the list of numerical values for a representation type contains duplicate values, the reverse converter uses the first name in the <i>value_names</i> list that matches the specified numeric value. For example, if a <i>value_names</i> array has <i>cancel</i>, <i>proceed</i>, and <i>abort</i>, and the corresponding <i>values</i> array contains 0, 1, and 0, the reverse converter will return <i>cancel</i> instead of <i>abort</i> for an input value of 0.</p>
 <dl COMPACT>
-<dt><i>rep_type</i></p>
-<dd>Specifies the representation type name.</p>
-<dt><i>value_names</i></p>
-<dd>Specifies a pointer to an array of value names associated with the representation type. A value name is specified in lowercase characters without an <code>Xm</code> prefix. Words within a name are separated with underscores.</p>
-<dt><i>values</i></p>
-<dd>Specifies a pointer to an array of values associated with the representation type. A value in this array is associated with the value name in the corresponding position of the <i>value_names</i> array.</p>
-<dt><i>num_values</i></p>
-<dd>Specifies the number of entries in the <i>value_names</i> and <i>values</i> arrays.</dl>
+<dt><i>rep_type</i></dt>
+<dd>Specifies the representation type name.</dd>
+<dt><i>value_names</i></dt>
+<dd>Specifies a pointer to an array of value names associated with the representation type. A value name is specified in lowercase characters without an <code>Xm</code> prefix. Words within a name are separated with underscores.</dd>
+<dt><i>values</i></dt>
+<dd>Specifies a pointer to an array of values associated with the representation type. A value in this array is associated with the value name in the corresponding position of the <i>value_names</i> array.</dd>
+<dt><i>num_values</i></dt>
+<dd>Specifies the number of entries in the <i>value_names</i> and <i>values</i> arrays.</dd></dl>
 <h2>Return</h2>
 <p>Returns the identification number for the specified representation type.</p>
 <h2>Related</h2>

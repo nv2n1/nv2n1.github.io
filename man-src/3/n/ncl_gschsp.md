@@ -12,9 +12,8 @@ GSCHSP (Set character spacing) - sets the character spacing for text.
 
  void gset_char_space(Gdouble char_space);
 <h2>Description</h2><dl COMPACT><dt>CHSP
-<dd>(Real, Input) - Specifies how much additional white space should be inserted between characters drawn using the GTX output primitive. CHSP is specified as a fraction of the character height. 
-
- A character spacing of zero positions the character body of each successive character contiguously with enough white space between them to produce pleasing normal spacing. A positive value inserts extra space between successive characters. A negative value causes successive characters to overlap. By default CHSP = 0.0.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Real, Input) - Specifies how much additional white space should be inserted between characters drawn using the GTX output primitive. CHSP is specified as a fraction of the character height. 
+ A character spacing of zero positions the character body of each successive character contiguously with enough white space between them to produce pleasing normal spacing. A positive value inserts extra space between successive characters. A negative value causes successive characters to overlap. By default CHSP = 0.0.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gtx, gstxp, gstxal, gstxfp, gschh, gschup, gschxp, gscr, gstxci, gqtxp, gqtxal, gqtxfp, gqchh, gqchsp, gqchup, gqchxp, plotchar, gset_char_space 
 
  Hardcopy: User's Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version

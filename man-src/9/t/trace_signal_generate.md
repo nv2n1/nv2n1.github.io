@@ -14,26 +14,26 @@ description: "trace_signal_generate – called when a signal is generated"
 <p><i>sig</i></p>
 <dl>
 <dd>
-<dd>signal number</dl>
+</dd><dd>signal number</dd></dl>
 <p> <i>info</i></p>
 <dl>
-<dd>pointer to struct siginfo</dl>
+<dd>pointer to struct siginfo</dd></dl>
 <p> <i>task</i></p>
 <dl>
-<dd>pointer to struct task_struct</dl>
+<dd>pointer to struct task_struct</dd></dl>
 <p> <i>group</i></p>
 <dl>
-<dd>shared or private</dl>
+<dd>shared or private</dd></dl>
 <p> <i>result</i></p>
 <dl>
-<dd>TRACE_SIGNAL_*</dl>
+<dd>TRACE_SIGNAL_*</dd></dl>
 <h2>Description</h2>
 <p>Current process sends a &#8216;sig&#8217; signal to &#8216;task&#8217; process with &#8216;info&#8217; siginfo. If &#8216;info&#8217; is SEND_SIG_NOINFO or SEND_SIG_PRIV, &#8216;info&#8217; is not a pointer and you can&#8217;t access its field. Instead, SEND_SIG_NOINFO means that si_code is SI_USER, and SEND_SIG_PRIV means that si_code is SI_KERNEL.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

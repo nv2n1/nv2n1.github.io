@@ -18,53 +18,53 @@ description: "sg_logs – access log pages with SCSI LOG SENSE command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd>outputs all the log pages supported by the device. This requires a two stage process: first the &quot;supported log pages&quot; log page is fetched, then for each entry in the response, the corresponding log page is fetched and displayed. When used twice (e.g. &#8216;-aa&#8217;) all log pages and subpages are fetched.</p>
-<dt><code>-b</code>, <code>&#8211;brief</code></p>
-<dd>shorten the amount of output for some log pages. For example the Tape Alert log page only outputs parameters whose flags are set when <i>&#8211;brief</i> is given.</p>
-<dt><code>-c</code>, <code>&#8211;control</code>=<i>PC</i></p>
-<dd>accepts 0, 1, 2 or 3 for the <i>PC</i> argument: </p>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd>outputs all the log pages supported by the device. This requires a two stage process: first the &quot;supported log pages&quot; log page is fetched, then for each entry in the response, the corresponding log page is fetched and displayed. When used twice (e.g. &#8216;-aa&#8217;) all log pages and subpages are fetched.</dd>
+<dt><code>-b</code>, <code>&#8211;brief</code></dt>
+<dd>shorten the amount of output for some log pages. For example the Tape Alert log page only outputs parameters whose flags are set when <i>&#8211;brief</i> is given.</dd>
+<dt><code>-c</code>, <code>&#8211;control</code>=<i>PC</i></dt>
+<dd>accepts 0, 1, 2 or 3 for the <i>PC</i> argument: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>0</code>&nbsp;<wbr>: current threshold values </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>1</code>&nbsp;<wbr>: current cumulative values </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>2</code>&nbsp;<wbr>: default threshold values </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>3</code>&nbsp;<wbr>: default cumulative values<br />
  The default value is 1 (i.e. current cumulative values).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>The default action is to decode known mode page numbers (and subpage numbers) into text. When this option is used once, the response is output in hexadecimal.</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd>lists the names of all logs sense pages supported by this device. This is done by reading the &quot;supported log pages&quot; log page. When used twice (e.g. &#8216;-ll&#8217;) lists the names of all logs sense pages and subpages supported by this device. There is a list of common log page codes below.</p>
-<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></p>
-<dd>sets the &quot;allocation length&quot; field in the LOG SENSE cdb. The is the maximum length in bytes that the response will be. Without this option (or <i>LEN</i> equal to 0) this utility first fetches the 4 byte response then does a second access with the length indicated in the first (4 byte) response. Negative values and 1 for <i>LEN</i> are not accepted. <i>LEN</i> cannot exceed 65535 (0xffff). Responses can be quite large (e.g. the background scan results log page) and this option can be used to limit the amount of information returned.</p>
-<dt><code>-n</code>, <code>&#8211;name</code></p>
-<dd>decode some log pages into &#8216;name=value&#8217; entries, one per line. The name contains no space and may be abbreviated and the value is decimal unless prefixed by &#8216;0x&#8217;. Nesting is indicated by leading spaces. This form is meant to be relatively easy to parse.</p>
-<dt><code>-O</code>, <code>&#8211;old</code></p>
-<dd>switch to older style options.</p>
-<dt><code>-p</code>, <code>&#8211;page</code>=<i>PG[,SPG]</i></p>
-<dd>log page code to access. <i>PG</i> is expected to be a decimal number between 0 and 63 inclusive. A hexadecimal number can be specified by a leading &quot;0x&quot; or a trailing &quot;h&quot;. Common log page codes are listed below. Optionally <i>SPG</i>, a subpage code, can be given. <i>SPG</i> is expected to be a decimal number between 0 and 255 inclusive.</p>
-<dt><code>-P</code>, <code>&#8211;paramp</code>=<i>PP</i></p>
-<dd><i>PP</i> is the parameter pointer value to place in a field of that name in the LOG SENSE cdb. A decimal number in the range 0 to 65535 (0xffff) is expected. When a value greater than 0 is given the <i>&#8211;ppc</i> option should be selected. The default value is 0.</p>
-<dt><code>-q</code>, <code>&#8211;pcb</code></p>
-<dd>show Parameter Control Byte settings (only relevant when log parameters being output in ASCII).</p>
-<dt><code>-Q</code>, <code>&#8211;ppc</code></p>
-<dd>sets the Parameter Pointer Control (PPC) bit in the LOG SENSE cdb. Default is 0 (i.e. cleared).</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>output the response in binary to stdout. Error messages and warnings are output to stderr.</p>
-<dt><code>-R</code>, <code>&#8211;reset</code></p>
-<dd>use SCSI LOG SELECT command (PCR bit set) to reset the all log pages (or the given page). [SPC-4 (rev 6) doesn&#8217;t say that a given log (sub)page can be reset yet.] Exactly what is reset depends on the accompanying SP bit (i.e. <i>&#8211;sp</i> option which defaults to 0) and the <i>PC</i> (&quot;page control&quot;) value (which defaults to 1). Supplying this option implies the <i>&#8211;select</i> option as well. This option seems to clear error counter log pages but leaves pages like self-test results, start-stop cycle counter and temperature log pages unaffected. This option may be required to clear log pages if a counter reaches its maximum value since the log page in which the counter is found will remain &quot;stuck&quot; until something is done.</p>
-<dt><code>-S</code>, <code>&#8211;select</code></p>
-<dd>use a LOG SELECT command. The default action (i.e. when neither this option nor <i>&#8211;reset</i> is given) is to do a LOG SENSE command. When this option is given, the SP bit (i.e. <i>&#8211;sp</i> option which defaults to 0), the <i>PC</i> (&quot;page control&quot;) value (which defaults to 1) and the PCR bit (i.e. <i>&#8211;reset</i> option which defaults to 0) are placed in the LOG SELECT cdb. At some stage the log page and subpage options may also be active [but SPC-4 (rev 6) doesn&#8217;t say that].</p>
-<dt><code>-s</code>, <code>&#8211;sp</code></p>
-<dd>sets the Saving Parameters (SP) bit. Default is 0 (i.e. cleared). When set this instructs the device to store the current log page parameters (as indicated by the DS and TSD parameter codes) in some non-volatile location. Hence the log parameters will be preserved across power cycles. This option is typically not needed, especially if the GLTSD flag is clear in the control mode page as this instructs the device to periodically save all saveable log parameters to non-volatile locations.</p>
-<dt><code>-t</code>, <code>&#8211;temperature</code></p>
-<dd>outputs the temperature. First looks in the temperature log page and if that is not available tries the Informational Exceptions log page which may also have the current temperature (especially on older disks).</p>
-<dt><code>-T</code>, <code>&#8211;transport</code></p>
-<dd>outputs the transport (&#8216;Protocol specific port&#8217;) log page. Equivalent to setting &#8216;&#8211;page=18h&#8217;.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level of verbosity.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print out version string then exit.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>The default action is to decode known mode page numbers (and subpage numbers) into text. When this option is used once, the response is output in hexadecimal.</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd>lists the names of all logs sense pages supported by this device. This is done by reading the &quot;supported log pages&quot; log page. When used twice (e.g. &#8216;-ll&#8217;) lists the names of all logs sense pages and subpages supported by this device. There is a list of common log page codes below.</dd>
+<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></dt>
+<dd>sets the &quot;allocation length&quot; field in the LOG SENSE cdb. The is the maximum length in bytes that the response will be. Without this option (or <i>LEN</i> equal to 0) this utility first fetches the 4 byte response then does a second access with the length indicated in the first (4 byte) response. Negative values and 1 for <i>LEN</i> are not accepted. <i>LEN</i> cannot exceed 65535 (0xffff). Responses can be quite large (e.g. the background scan results log page) and this option can be used to limit the amount of information returned.</dd>
+<dt><code>-n</code>, <code>&#8211;name</code></dt>
+<dd>decode some log pages into &#8216;name=value&#8217; entries, one per line. The name contains no space and may be abbreviated and the value is decimal unless prefixed by &#8216;0x&#8217;. Nesting is indicated by leading spaces. This form is meant to be relatively easy to parse.</dd>
+<dt><code>-O</code>, <code>&#8211;old</code></dt>
+<dd>switch to older style options.</dd>
+<dt><code>-p</code>, <code>&#8211;page</code>=<i>PG[,SPG]</i></dt>
+<dd>log page code to access. <i>PG</i> is expected to be a decimal number between 0 and 63 inclusive. A hexadecimal number can be specified by a leading &quot;0x&quot; or a trailing &quot;h&quot;. Common log page codes are listed below. Optionally <i>SPG</i>, a subpage code, can be given. <i>SPG</i> is expected to be a decimal number between 0 and 255 inclusive.</dd>
+<dt><code>-P</code>, <code>&#8211;paramp</code>=<i>PP</i></dt>
+<dd><i>PP</i> is the parameter pointer value to place in a field of that name in the LOG SENSE cdb. A decimal number in the range 0 to 65535 (0xffff) is expected. When a value greater than 0 is given the <i>&#8211;ppc</i> option should be selected. The default value is 0.</dd>
+<dt><code>-q</code>, <code>&#8211;pcb</code></dt>
+<dd>show Parameter Control Byte settings (only relevant when log parameters being output in ASCII).</dd>
+<dt><code>-Q</code>, <code>&#8211;ppc</code></dt>
+<dd>sets the Parameter Pointer Control (PPC) bit in the LOG SENSE cdb. Default is 0 (i.e. cleared).</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>output the response in binary to stdout. Error messages and warnings are output to stderr.</dd>
+<dt><code>-R</code>, <code>&#8211;reset</code></dt>
+<dd>use SCSI LOG SELECT command (PCR bit set) to reset the all log pages (or the given page). [SPC-4 (rev 6) doesn&#8217;t say that a given log (sub)page can be reset yet.] Exactly what is reset depends on the accompanying SP bit (i.e. <i>&#8211;sp</i> option which defaults to 0) and the <i>PC</i> (&quot;page control&quot;) value (which defaults to 1). Supplying this option implies the <i>&#8211;select</i> option as well. This option seems to clear error counter log pages but leaves pages like self-test results, start-stop cycle counter and temperature log pages unaffected. This option may be required to clear log pages if a counter reaches its maximum value since the log page in which the counter is found will remain &quot;stuck&quot; until something is done.</dd>
+<dt><code>-S</code>, <code>&#8211;select</code></dt>
+<dd>use a LOG SELECT command. The default action (i.e. when neither this option nor <i>&#8211;reset</i> is given) is to do a LOG SENSE command. When this option is given, the SP bit (i.e. <i>&#8211;sp</i> option which defaults to 0), the <i>PC</i> (&quot;page control&quot;) value (which defaults to 1) and the PCR bit (i.e. <i>&#8211;reset</i> option which defaults to 0) are placed in the LOG SELECT cdb. At some stage the log page and subpage options may also be active [but SPC-4 (rev 6) doesn&#8217;t say that].</dd>
+<dt><code>-s</code>, <code>&#8211;sp</code></dt>
+<dd>sets the Saving Parameters (SP) bit. Default is 0 (i.e. cleared). When set this instructs the device to store the current log page parameters (as indicated by the DS and TSD parameter codes) in some non-volatile location. Hence the log parameters will be preserved across power cycles. This option is typically not needed, especially if the GLTSD flag is clear in the control mode page as this instructs the device to periodically save all saveable log parameters to non-volatile locations.</dd>
+<dt><code>-t</code>, <code>&#8211;temperature</code></dt>
+<dd>outputs the temperature. First looks in the temperature log page and if that is not available tries the Informational Exceptions log page which may also have the current temperature (especially on older disks).</dd>
+<dt><code>-T</code>, <code>&#8211;transport</code></dt>
+<dd>outputs the transport (&#8216;Protocol specific port&#8217;) log page. Equivalent to setting &#8216;&#8211;page=18h&#8217;.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level of verbosity.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print out version string then exit.</dd></dl>
 <h2>Notes</h2>
 <p>This utility will usually do a double fetch of log pages with the SCSI LOG SENSE command. The first fetch requests a 4 byte response (i.e. place 4 in the &quot;allocation length&quot; field in the cdb). From that response it can calculate the actual length of the response which is what it asks for on the second fetch. This is typical practice in SCSI and guaranteed to work in the standards. However some older devices don&#8217;t comply. For those devices using the <i>&#8211;maxlen=LEN</i> option will do a single fetch. A value of 252 should be a safe starting point. </p>
 <p> Various log pages hold information error rates, device temperature, start stop cycles since device produced and the results of the last 20 self tests. Self tests can be initiated by the <a href="/docs/linux/man/8-sg_senddiag/">sg_senddiag</a>(8) utility. The smartmontools package provides much of the information found with sg_logs in a form suitable for monitoring the health of SCSI disks and tape drives. </p>
@@ -101,50 +101,50 @@ description: "sg_logs – access log pages with SCSI LOG SENSE command"
 <p>The options in this section were the only ones available prior to sg3_utils version 1.23 . In sg3_utils version 1.23 and later these older options can be selected by either setting the SG3_UTILS_OLD_OPTS environment variable or using &#8216;&#8211;old&#8217; (or &#8216;-O) as the first option. </p>
 <p> Options with arguments or with two or more letters can have an extra &#8216;-&#8216; prepended. For example: both &#8216;-pcb&#8217; and &#8216;&#8211;pcb&#8217; are acceptable.</p>
 <dl>
-<dt><code>-a</code></p>
-<dd>outputs all the log pages supported by the device. Equivalent to <i>&#8211;all</i> in the main description.</p>
-<dt><code>-A</code></p>
-<dd>outputs all the log pages and subpages supported by the device. Equivalent to &#8216;&#8211;all &#8211;all&#8217; in the main description.</p>
-<dt><code>-c</code>=<i>PC</i></p>
-<dd>Equivalent to <i>&#8211;control=PC</i> in the main description.</p>
-<dt><code>-h</code></p>
-<dd>suppresses decoding of known log sense pages and prints out the response in hex instead.</p>
-<dt><code>-H</code></p>
-<dd>same action as &#8216;-h&#8217; in this section and equivalent to <i>&#8211;hex</i> in the main description.</p>
-<dt><code>-l</code></p>
-<dd>lists the names of all logs sense pages supported by this device. Equivalent to <i>&#8211;list</i> in the main description.</p>
-<dt><code>-L</code></p>
-<dd>lists the names of all logs sense pages and subpages supported by this device. Equivalent to &#8216;&#8211;list &#8211;list&#8217; in the main description.</p>
-<dt><code>-m</code>=<i>LEN</i></p>
-<dd>request only <i>LEN</i> bytes of response data. Default is 0 which is interpreted as all that is available. <i>LEN</i> is decimal unless it has a leading &#8216;0x&#8217; or trailing &#8216;h&#8217;. Equivalent to <i>&#8211;maxlen=LEN</i> in the main description.</p>
-<dt><code>-n</code></p>
-<dd>Equivalent to <i>&#8211;name</i> in the main description.</p>
-<dt><code>-N</code></p>
-<dd>switch to the newer style options.</p>
-<dt><code>-p</code>=<i>PG[,SPG]</i></p>
-<dd><i>PG</i> is the log page code to access. Should be a hexadecimal number between 0 and 3f inclusive. If given <i>SPG</i> is the log subpage code. <i>SPG</i> should be a hexadecimal number between 0 and ff inclusive. The subpage code of &#8216;ff&#8217; can be thought of as a wildcard.</p>
-<dt><code>-paramp</code>=<i>PP</i></p>
-<dd><i>PP</i> is the parameter pointer value (in hex) to place in command. Should be a number between 0 and ffff inclusive.</p>
-<dt><code>-pcb</code></p>
-<dd>show Parameter Control Byte settings (only relevant when log parameters being output in ASCII).</p>
-<dt><code>-ppc</code></p>
-<dd>sets the Parameter Pointer Control (PPC) bit. Default is 0 (i.e. cleared).</p>
-<dt><code>-r</code></p>
-<dd>use SCSI LOG SELECT command (PCR bit set) to reset the all log pages (or the given page). Equivalent to <i>&#8211;reset</i> in the main description.</p>
-<dt><code>-select</code></p>
-<dd>use a LOG SELECT command. Equivalent to <i>&#8211;select</i> in the main description.</p>
-<dt><code>-sp</code></p>
-<dd>sets the Saving Parameters (SP) bit. Default is 0 (i.e. cleared). Equivalent to <i>&#8211;sp</i> in the main description.</p>
-<dt><code>-t</code></p>
-<dd>outputs the temperature. Equivalent to <i>&#8211;temperature in the main description.</p>
-<dt></i><code>-T</code></p>
-<dd>outputs the transport (&#8216;Protocol specific port&#8217;) log page. Equivalent to <i>&#8211;transport</i> in the main description.</p>
-<dt><code>-v</code></p>
-<dd>increase level of verbosity.</p>
-<dt><code>-V</code></p>
-<dd>print out version string then exit.</p>
-<dt><code>-?</code></p>
-<dd>output usage message then exit.</dl>
+<dt><code>-a</code></dt>
+<dd>outputs all the log pages supported by the device. Equivalent to <i>&#8211;all</i> in the main description.</dd>
+<dt><code>-A</code></dt>
+<dd>outputs all the log pages and subpages supported by the device. Equivalent to &#8216;&#8211;all &#8211;all&#8217; in the main description.</dd>
+<dt><code>-c</code>=<i>PC</i></dt>
+<dd>Equivalent to <i>&#8211;control=PC</i> in the main description.</dd>
+<dt><code>-h</code></dt>
+<dd>suppresses decoding of known log sense pages and prints out the response in hex instead.</dd>
+<dt><code>-H</code></dt>
+<dd>same action as &#8216;-h&#8217; in this section and equivalent to <i>&#8211;hex</i> in the main description.</dd>
+<dt><code>-l</code></dt>
+<dd>lists the names of all logs sense pages supported by this device. Equivalent to <i>&#8211;list</i> in the main description.</dd>
+<dt><code>-L</code></dt>
+<dd>lists the names of all logs sense pages and subpages supported by this device. Equivalent to &#8216;&#8211;list &#8211;list&#8217; in the main description.</dd>
+<dt><code>-m</code>=<i>LEN</i></dt>
+<dd>request only <i>LEN</i> bytes of response data. Default is 0 which is interpreted as all that is available. <i>LEN</i> is decimal unless it has a leading &#8216;0x&#8217; or trailing &#8216;h&#8217;. Equivalent to <i>&#8211;maxlen=LEN</i> in the main description.</dd>
+<dt><code>-n</code></dt>
+<dd>Equivalent to <i>&#8211;name</i> in the main description.</dd>
+<dt><code>-N</code></dt>
+<dd>switch to the newer style options.</dd>
+<dt><code>-p</code>=<i>PG[,SPG]</i></dt>
+<dd><i>PG</i> is the log page code to access. Should be a hexadecimal number between 0 and 3f inclusive. If given <i>SPG</i> is the log subpage code. <i>SPG</i> should be a hexadecimal number between 0 and ff inclusive. The subpage code of &#8216;ff&#8217; can be thought of as a wildcard.</dd>
+<dt><code>-paramp</code>=<i>PP</i></dt>
+<dd><i>PP</i> is the parameter pointer value (in hex) to place in command. Should be a number between 0 and ffff inclusive.</dd>
+<dt><code>-pcb</code></dt>
+<dd>show Parameter Control Byte settings (only relevant when log parameters being output in ASCII).</dd>
+<dt><code>-ppc</code></dt>
+<dd>sets the Parameter Pointer Control (PPC) bit. Default is 0 (i.e. cleared).</dd>
+<dt><code>-r</code></dt>
+<dd>use SCSI LOG SELECT command (PCR bit set) to reset the all log pages (or the given page). Equivalent to <i>&#8211;reset</i> in the main description.</dd>
+<dt><code>-select</code></dt>
+<dd>use a LOG SELECT command. Equivalent to <i>&#8211;select</i> in the main description.</dd>
+<dt><code>-sp</code></dt>
+<dd>sets the Saving Parameters (SP) bit. Default is 0 (i.e. cleared). Equivalent to <i>&#8211;sp</i> in the main description.</dd>
+<dt><code>-t</code></dt>
+<dd>outputs the temperature. Equivalent to <i>&#8211;temperature in the main description.</dd>
+<dt></i><code>-T</code></dt>
+<dd>outputs the transport (&#8216;Protocol specific port&#8217;) log page. Equivalent to <i>&#8211;transport</i> in the main description.</dd>
+<dt><code>-v</code></dt>
+<dd>increase level of verbosity.</dd>
+<dt><code>-V</code></dt>
+<dd>print out version string then exit.</dd>
+<dt><code>-?</code></dt>
+<dd>output usage message then exit.</dd></dl>
 <h2>Author</h2>
 <p>Written by Douglas Gilbert</p>
 <h2>Reporting Bugs</h2>

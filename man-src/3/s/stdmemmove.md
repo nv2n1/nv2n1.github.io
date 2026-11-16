@@ -11,7 +11,6 @@ std::memmove - std::memmove
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     void *memmove(void *dest, const void *src, std::size_t count);</code></pre> 
 Copies count characters from the object pointed to by src to the object pointed to by dest. Both objects are reinterpreted as arrays of unsigned char. 
 The objects may overlap: copying takes place as if the characters were copied to a temporary character array and then the characters were copied from the array to dest. 
@@ -34,10 +33,8 @@ Despite being specified &quot;as if&quot; a temporary buffer is used, actual imp
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     char str[] = &quot;1234567890&quot;;
     std::cout &lt;&lt; str &lt;&lt; '\n';

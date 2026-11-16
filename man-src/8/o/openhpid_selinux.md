@@ -47,9 +47,9 @@ description: "openhpid_selinux – Security Enhanced Linux Policy for the openhp
 <p> Policy governs the access confined processes have to these ports. SELinux openhpid policy is very flexible allowing users to setup their openhpid processes in as secure a method as possible. </p>
 <p> The following port types are defined for openhpid: </p>
 <dl>
-<dt><code>openhpid_port_t</code></p>
+<dt><code>openhpid_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 4743 udp 4743</dl>
+</dd><dd>Default Defined Ports: tcp 4743 udp 4743</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type openhpid_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

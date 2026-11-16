@@ -12,81 +12,77 @@ description: "blenderplayer – a utility for previewing .blend files"
 <h2>DESCRIPTION</h2>
 <p> usage: blenderplayer [-w [w h l t]] [-f [fw fh fb ff]] [-g gamengineoptions] [-s stereomode] filename.blend</p>
 <dl>
-<dt> <code>-h</code>: Prints this command summary</p>
-<dt> <code>-w</code>: display in a window</p>
-<dt> <code>&#8211;Optional</code> parameters&#8211;</p>
+<dt> <code>-h</code>: Prints this command summary</dt>
+<dt> <code>-w</code>: display in a window</dt>
+<dt> <code>&#8211;Optional</code> parameters&#8211;</dt>
+<dd>w = window width h = window height</dd>
 <dt>
-<dd>
-<dd>w = window width h = window height</p>
+</dt><dd> l = window left coordinate t = window top coordinate Note: If w or h is defined, both must be defined.</dd>
 <dt>
-<dd> l = window left coordinate t = window top coordinate Note: If w or h is defined, both must be defined.</p>
+</dt><dd> Also, if l or t is defined, all options must be used.</dd>
+<dt> <code>-f</code>: start game in full screen mode</dt>
+<dt> <code>&#8211;Optional</code> parameters&#8211;</dt>
+<dd>fw = full screen mode pixel width fh = full screen mode pixel height</dd>
 <dt>
-<dd> Also, if l or t is defined, all options must be used.</p>
-<dt> <code>-f</code>: start game in full screen mode</p>
-<dt> <code>&#8211;Optional</code> parameters&#8211;</p>
+</dt><dd> fb = full screen mode bits per pixel ff = full screen mode frequency Note: If fw or fh is defined, both must be defined.</dd>
 <dt>
-<dd>
-<dd>fw = full screen mode pixel width fh = full screen mode pixel height</p>
+</dt><dd> Also, if fb is used, fw and fh must be used. ff requires all options.</dd>
+<dt> <code>-s</code>: start player in stereo</dt>
 <dt>
-<dd> fb = full screen mode bits per pixel ff = full screen mode frequency Note: If fw or fh is defined, both must be defined.</p>
+</dt><dd>stereomode: hwpageflip</dd>
+<dd> (Quad buffered shutter glasses)</dd>
+<dt>syncdoubling</dt>
+<dd> (Above Below)</dd>
+<dt>sidebyside</dt>
+<dd> (Left Right)</dd>
+<dt>anaglyph</dt>
+<dd> (Red-Blue glasses)</dd>
+<dt>vinterlace</dt>
+<dd> (Vertical interlace for autostereo display)</dd>
 <dt>
-<dd> Also, if fb is used, fw and fh must be used. ff requires all options.</p>
-<dt> <code>-s</code>: start player in stereo</p>
+</dt><dd> depending on the type of stereo you want</dd>
+<dt> <code>-D</code>: start player in dome mode</dt>
+<dt> <code>&#8211;Optional</code> parameters&#8211;</dt>
 <dt>
-<dd>stereomode: hwpageflip</p>
-<dd> (Quad buffered shutter glasses)</p>
-<dt>syncdoubling</p>
-<dd> (Above Below)</p>
-<dt>sidebyside</p>
-<dd> (Left Right)</p>
-<dt>anaglyph</p>
-<dd> (Red-Blue glasses)</p>
-<dt>vinterlace</p>
-<dd> (Vertical interlace for autostereo display)</p>
+</dt><dd>angle</dd>
+<dd> = field of view in degrees</dd>
+<dt>tilt</dt>
+<dd> = tilt angle in degrees</dd>
 <dt>
-<dd> depending on the type of stereo you want</p>
-<dt> <code>-D</code>: start player in dome mode</p>
-<dt> <code>&#8211;Optional</code> parameters&#8211;</p>
+</dt><dd> warpdata = a file to use for warping the image (absolute path) mode: fisheye (Fisheye)</dd>
+<dt>truncatedfront</dt>
+<dd> (Front-Truncated)</dd>
+<dt>truncatedrear</dt>
+<dd> (Rear-Truncated)</dd>
+<dt>cubemap</dt>
+<dd> (Cube Map)</dd>
+<dt>sphericalpanoramic</dt>
+<dd> (Spherical Panoramic)</dd>
 <dt>
-<dd>angle</p>
-<dd> = field of view in degrees</p>
-<dt>tilt</p>
-<dd> = tilt angle in degrees</p>
+</dt><dd> depending on the type of dome you are using</dd>
+<dt> <code>-i</code>: parent windows ID</dt>
+<dt> <code>-d</code>: turn debugging on</dt>
+<dt> <code>-g</code>: game engine options:</dt>
 <dt>
-<dd> warpdata = a file to use for warping the image (absolute path) mode: fisheye (Fisheye)</p>
-<dt>truncatedfront</p>
-<dd> (Front-Truncated)</p>
-<dt>truncatedrear</p>
-<dd> (Rear-Truncated)</p>
-<dt>cubemap</p>
-<dd> (Cube Map)</p>
-<dt>sphericalpanoramic</p>
-<dd> (Spherical Panoramic)</p>
+</dt><dd>Name</dd>
+<dd> Default Description</dd>
+<dt> <code>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</code></dt>
 <dt>
-<dd> depending on the type of dome you are using</p>
-<dt> <code>-i</code>: parent windows ID</p>
-<dt> <code>-d</code>: turn debugging on</p>
-<dt> <code>-g</code>: game engine options:</p>
+</dt><dd>fixedtime</dd>
+<dd> 0 &quot;Enable all frames&quot;</dd>
+<dt>nomipmap</dt>
+<dd> 0 Disable mipmaps</dd>
+<dt>show_framerate</dt>
+<dd> 0 Show the frame rate</dd>
+<dt>show_properties</dt>
+<dd> 0 Show debug properties</dd>
+<dt>show_profile</dt>
+<dd> 0 Show profiling information</dd>
+<dt>blender_material</dt>
+<dd> 0 Enable material settings</dd>
+<dt>ignore_deprecation_warnings</dt>
+<dd> 1 Ignore deprecation warnings</dd>
 <dt>
-<dd>Name</p>
-<dd> Default Description</p>
-<dt> <code>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</code></p>
-<dt>
-<dd>fixedtime</p>
-<dd> 0 &quot;Enable all frames&quot;</p>
-<dt>nomipmap</p>
-<dd> 0 Disable mipmaps</p>
-<dt>show_framerate</p>
-<dd> 0 Show the frame rate</p>
-<dt>show_properties</p>
-<dd> 0 Show debug properties</p>
-<dt>show_profile</p>
-<dd> 0 Show profiling information</p>
-<dt>blender_material</p>
-<dd> 0 Enable material settings</p>
-<dt>ignore_deprecation_warnings</p>
-<dd> 1 Ignore deprecation warnings</p>
-<dt>
-<dd> &#8211; : all arguments after this are ignored, allowing python to access them from sys.argv</dl>
+</dt><dd> &#8211; : all arguments after this are ignored, allowing python to access them from sys.argv</dd></dl>
 <p> example: blenderplayer <code>-w</code> 320 200 10 10 <code>-g</code> noaudio//home//user//filename.blend example: blenderplayer <code>-g</code> show_framerate = 0 //home//user//filename.blend </p>
 <h2>Index</h2>

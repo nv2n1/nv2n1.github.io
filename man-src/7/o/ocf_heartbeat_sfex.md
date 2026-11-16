@@ -10,39 +10,39 @@ description: "ocf_heartbeat_sfex – Manages exclusive acess to shared storage u
 <p>ocf_heartbeat_sfex &#8211; Manages exclusive acess to shared storage using Shared Disk File EXclusiveness (SF-EX)</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sfex</code> [start | stop | monitor | meta-data]</dl>
+<dt> <code>sfex</code> [start | stop | monitor | meta-data]</dt></dl>
 <h2>Description</h2>
-<dd>Resource script for SF-EX. It manages a shared storage medium exclusively .</p>
+<dd>Resource script for SF-EX. It manages a shared storage medium exclusively .</dd>
 <h2>Supported Parameters</h2>
 <p><code>device</code></p>
 <dl>
-<dd>Block device path that stores exclusive control data. (required, string, no default)</dl>
+<dd>Block device path that stores exclusive control data. (required, string, no default)</dd></dl>
 <p> <code>index</code></p>
 <dl>
-<dd>Location in block device where exclusive control data is stored. 1 or more is specified. Default is 1. (optional, integer, default 1)</dl>
+<dd>Location in block device where exclusive control data is stored. 1 or more is specified. Default is 1. (optional, integer, default 1)</dd></dl>
 <p> <code>collision_timeout</code></p>
 <dl>
-<dd>Waiting time when a collision of lock acquisition is detected. Default is 1 second. (optional, integer, default 1)</dl>
+<dd>Waiting time when a collision of lock acquisition is detected. Default is 1 second. (optional, integer, default 1)</dd></dl>
 <p> <code>monitor_interval</code></p>
 <dl>
-<dd>Monitor interval(sec). Default is 10 seconds (optional, integer, default 10)</dl>
+<dd>Monitor interval(sec). Default is 10 seconds (optional, integer, default 10)</dd></dl>
 <p> <code>lock_timeout</code></p>
 <dl>
-<dd>Valid term of lock(sec). Default is 20 seconds. (optional, integer, default 20)</dl>
+<dd>Valid term of lock(sec). Default is 20 seconds. (optional, integer, default 20)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 600.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 600.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 10. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 10. Suggested interval: 10.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a sfex resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_sfex ocf:heartbeat:sfex \

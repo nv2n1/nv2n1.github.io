@@ -17,18 +17,18 @@ description: "getsid – get session ID"
 <p> <code>getsid</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dl>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>getsid(0)</i> returns the session ID of the calling process. <code>getsid</code>() returns the session ID of the process with process ID <i>pid</i>. If <i>pid</i> is 0, <code>getsid</code>() returns the session ID of the calling process.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, a session ID is returned. On error, <i>(pid_t)&nbsp;-1</i> will be returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> A process with process ID <i>pid</i> exists, but it is not in the same session as the calling process, and the implementation considers this an error.</p>
-<dt><code>ESRCH</code></p>
-<dd> No process with process ID <i>pid</i> was found.</dl>
+<dt><code>EPERM</code></dt>
+<dd> A process with process ID <i>pid</i> exists, but it is not in the same session as the calling process, and the implementation considers this an error.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No process with process ID <i>pid</i> was found.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is available on Linux since version 2.0.</p>
 <h2>CONFORMING TO</h2>

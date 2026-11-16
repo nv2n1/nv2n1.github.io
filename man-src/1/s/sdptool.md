@@ -17,31 +17,31 @@ description: "sdptool – control and interrogate SDP servers"
 <p> The following commands are available. In all cases <code>bdaddr</code> specifies the device to search or browse. If <i>local</i> is used for <code>bdaddr</code>, then the local SDP database is searched. </p>
 <p> Services are identified and manipulated with a 4-byte <code>record_handle</code> (NOT the service name). To find a service&#8217;s <code>record_handle</code>, look for the &quot;Service RecHandle&quot; line in the <code>search</code> or <code>browse</code> results</p>
 <dl>
-<dt><code>search [&#8211;bdaddr bdaddr] [&#8211;tree] [&#8211;raw] [&#8211;xml] service_name</code></p>
-<dd> Search for services.. </p>
+<dt><code>search [&#8211;bdaddr bdaddr] [&#8211;tree] [&#8211;raw] [&#8211;xml] service_name</code></dt>
+<dd> Search for services.. </dd>
 <p> Known service names are <code>DID</code>, <code>SP</code>, <code>DUN</code>, <code>LAN</code>, <code>FAX</code>, <code>OPUSH</code>, <code>FTP</code>, <code>HS</code>, <code>HF</code>, <code>HFAG</code>, <code>SAP</code>, <code>NAP</code>, <code>GN</code>, <code>PANU</code>, <code>HCRP</code>, <code>HID</code>, <code>CIP</code>, <code>A2SRC</code>, <code>A2SNK</code>, <code>AVRCT</code>, <code>AVRTG</code>, <code>UDIUE</code>, <code>UDITE</code> and <code>SYNCML</code>.</p>
-<dt><code>browse [&#8211;tree] [&#8211;raw] [&#8211;xml] [bdaddr]</code></p>
-<dd> Browse all available services on the device specified by a Bluetooth address as a parameter.</p>
-<dt><code>records [&#8211;tree] [&#8211;raw] [&#8211;xml] bdaddr</code></p>
-<dd> Retrieve all possible service records.</p>
-<dt><code>add [ &#8211;handle=N &#8211;channel=N ]</code></p>
-<dd> Add a service to the local SDP database. </p>
+<dt><code>browse [&#8211;tree] [&#8211;raw] [&#8211;xml] [bdaddr]</code></dt>
+<dd> Browse all available services on the device specified by a Bluetooth address as a parameter.</dd>
+<dt><code>records [&#8211;tree] [&#8211;raw] [&#8211;xml] bdaddr</code></dt>
+<dd> Retrieve all possible service records.</dd>
+<dt><code>add [ &#8211;handle=N &#8211;channel=N ]</code></dt>
+<dd> Add a service to the local SDP database. </dd>
 <p> You can specify a handle for this record using the <code>&#8211;handle</code> option. </p>
 <p> You can specify a channel to add the service on using the <code>&#8211;channel</code> option. </p>
 <p> NOTE: Local adapters configuration will not be updated and this command should be used only for SDP testing.</p>
-<dt><code>del record_handle</code></p>
-<dd> Remove a service from the local SDP database. </p>
+<dt><code>del record_handle</code></dt>
+<dd> Remove a service from the local SDP database. </dd>
 <p> NOTE: Local adapters configuration will not be updated and this command should be used only for SDP testing.</p>
-<dt><code>get [&#8211;tree] [&#8211;raw] [&#8211;xml] [&#8211;bdaddr bdaddr] record_handle</code></p>
-<dd> Retrieve a service from the local SDP database.</p>
-<dt><code>setattr record_handle attrib_id attrib_value</code></p>
-<dd> Set or add an attribute to an SDP record.</p>
-<dt><code>setseq record_handle attrib_id attrib_values</code></p>
-<dd> Set or add an attribute sequence to an SDP record.</dl>
+<dt><code>get [&#8211;tree] [&#8211;raw] [&#8211;xml] [&#8211;bdaddr bdaddr] record_handle</code></dt>
+<dd> Retrieve a service from the local SDP database.</dd>
+<dt><code>setattr record_handle attrib_id attrib_value</code></dt>
+<dd> Set or add an attribute to an SDP record.</dd>
+<dt><code>setseq record_handle attrib_id attrib_values</code></dt>
+<dd> Set or add an attribute sequence to an SDP record.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Displays help on using sdptool.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Displays help on using sdptool.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 $ sdptool browse 00:80:98:24:15:6D

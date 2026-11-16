@@ -18,38 +18,38 @@ description: "smp_rep_zone_perm_tbl – invoke REPORT ZONE PERMISSION TABLE func
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;append</code></p>
-<dd>used in conjunction with <i>&#8211;permf=FN</i> to append to <i>FN</i> if it already exists. If <i>FN</i> does not exist then it is created.</p>
-<dt><code>-B</code>, <code>&#8211;bits</code>=<i>COL</i></p>
-<dd>This is an alternate zone permission table represention showing single bits with the origin (i.e. ZP[0,0]) in the top left. The output is a bit array with <i>COL</i> columns and up to <i>COL</i> rows. This output resembles the example zone permission tables shown in the SAS draft documents (at t10.org). The default (i.e. without this option) is output that reflects the byte oriented, big endian nature of SCSI (and hence SMP) commands. The output produced by this option is not suitable as input for the smp_conf_zone_perm_tbl utility.</p>
-<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></p>
-<dd>starting (first and lowest numbered) source zone group (default: zone group 0).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-m</code>, <code>&#8211;multiple</code></p>
-<dd>starting at source zone group 0 (or <i>SS</i>), multiple REPORT ZONE PERMISSION TABLE requests are issued until the last (127th and 255th) source zone descriptor is output. This option should not be given together with the <i>&#8211;num=MD</i> option.</p>
-<dt><code>-N</code>, <code>&#8211;nocomma</code></p>
-<dd>output each zone group descriptor as a long string of hexadecimal digits, two digits per byte. Default action is to output a comma separated list of hexadecimal ASCII bytes for each zone group descriptor.</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>MD</i></p>
-<dd>where <i>MD</i> is the maximum number of descriptors that can be reported in the one response. The default value is 63. 63 is the maximum number of &quot;128 zone groups&quot; sized descriptors that can fit in one response. If the expander is using &quot;256 zone groups&quot; sized descriptors then a maximum of 31 descriptors can fit in one response. This option should not be given together with the <i>&#8211;multiple</i> option.</p>
-<dt><code>-P</code>, <code>&#8211;permf</code>=<i>FN</i></p>
-<dd><i>FN</i> is a file to write the zone permission descriptors to. The default action is to output the zone permissions descriptors to stdout. Note that the whole permissions table may not fit in one response. If the <i>FN</i> exists then it is truncated prior to the write unless <i>&#8211;append</i> is given. To append to the existing <i>FN</i> add the <i>&#8211;append</i> option.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-R</code>, <code>&#8211;report</code>=<i>RT</i></p>
-<dd>set the &#8216;report type&#8217; field in the SMP request. <i>RT</i> may take these values: 0 for report current values (default); 1 for report the shadow values; 2 for report saved values; 3 for report default values.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. The mpt interface needs this option and it will typically be an expander&#8217;s SAS address. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></p>
-<dd>See entry above, listed in order by its short option letter (i.e. <i>-f</i>).</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-a</code>, <code>&#8211;append</code></dt>
+<dd>used in conjunction with <i>&#8211;permf=FN</i> to append to <i>FN</i> if it already exists. If <i>FN</i> does not exist then it is created.</dd>
+<dt><code>-B</code>, <code>&#8211;bits</code>=<i>COL</i></dt>
+<dd>This is an alternate zone permission table represention showing single bits with the origin (i.e. ZP[0,0]) in the top left. The output is a bit array with <i>COL</i> columns and up to <i>COL</i> rows. This output resembles the example zone permission tables shown in the SAS draft documents (at t10.org). The default (i.e. without this option) is output that reflects the byte oriented, big endian nature of SCSI (and hence SMP) commands. The output produced by this option is not suitable as input for the smp_conf_zone_perm_tbl utility.</dd>
+<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></dt>
+<dd>starting (first and lowest numbered) source zone group (default: zone group 0).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-m</code>, <code>&#8211;multiple</code></dt>
+<dd>starting at source zone group 0 (or <i>SS</i>), multiple REPORT ZONE PERMISSION TABLE requests are issued until the last (127th and 255th) source zone descriptor is output. This option should not be given together with the <i>&#8211;num=MD</i> option.</dd>
+<dt><code>-N</code>, <code>&#8211;nocomma</code></dt>
+<dd>output each zone group descriptor as a long string of hexadecimal digits, two digits per byte. Default action is to output a comma separated list of hexadecimal ASCII bytes for each zone group descriptor.</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>MD</i></dt>
+<dd>where <i>MD</i> is the maximum number of descriptors that can be reported in the one response. The default value is 63. 63 is the maximum number of &quot;128 zone groups&quot; sized descriptors that can fit in one response. If the expander is using &quot;256 zone groups&quot; sized descriptors then a maximum of 31 descriptors can fit in one response. This option should not be given together with the <i>&#8211;multiple</i> option.</dd>
+<dt><code>-P</code>, <code>&#8211;permf</code>=<i>FN</i></dt>
+<dd><i>FN</i> is a file to write the zone permission descriptors to. The default action is to output the zone permissions descriptors to stdout. Note that the whole permissions table may not fit in one response. If the <i>FN</i> exists then it is truncated prior to the write unless <i>&#8211;append</i> is given. To append to the existing <i>FN</i> add the <i>&#8211;append</i> option.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-R</code>, <code>&#8211;report</code>=<i>RT</i></dt>
+<dd>set the &#8216;report type&#8217; field in the SMP request. <i>RT</i> may take these values: 0 for report current values (default); 1 for report the shadow values; 2 for report saved values; 3 for report default values.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. The mpt interface needs this option and it will typically be an expander&#8217;s SAS address. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></dt>
+<dd>See entry above, listed in order by its short option letter (i.e. <i>-f</i>).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>When the <i>&#8211;permf=FN</i> is given and <i>SS</i> is greater than zero then a line of the form &quot;&#8211;start=<i>SS</i>&quot; is written to <i>FN</i> just prior to the first row of zone permissions. </p>
 <p> There are some examples of the <i>&#8211;permf=FN</i> format in the examples directory.</p>

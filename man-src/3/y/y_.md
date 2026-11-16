@@ -10,132 +10,46 @@ description: "QuantLib::OneFactorCopula – Abstract base class for one-factor c
 <p>QuantLib::OneFactorCopula &#8211; Abstract base class for one-factor copula models. </p>
 <h2>Synopsis</h2>
 <pre><code>OneFactorCopula (const Handle&lt; Quote &gt; &amp;correlation, Real maximum=5, Size integrationSteps=50)
-
-
-
 virtual Real density (Real m) const =0
-
-
 Density function of M.
-
-
 virtual Real cumulativeZ (Real z) const =0
-
-
 Cumulative distribution of Z.
-
-
 virtual Real cumulativeY (Real y) const
-
-
 Cumulative distribution of Y.
-
-
 virtual Real inverseCumulativeY (Real p) const
-
-
 Inverse cumulative distribution of Y.
-
-
 Real correlation () const
-
-
 Single correlation parameter.
-
-
 Real conditionalProbability (Real prob, Real m) const
-
-
 Conditional probability.
-
-
 std::vector&lt; Real &gt; conditionalProbability (const std::vector&lt; Real &gt; &amp;prob, Real m) const
-
-
 Vector of conditional probabilities.
-
-
 Real integral (Real p) const
-
-
-
 template&lt;class F &gt; Real integral (const F &amp;f, std::vector&lt; Real &gt; &amp;probabilities) const
-
-
-
 template&lt;class F &gt; Distribution integral (const F &amp;f, const std::vector&lt; Real &gt; &amp;nominals, const std::vector&lt; Real &gt; &amp;probabilities) const
-
-
-
 int checkMoments (Real tolerance) const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::LazyObject</code>. Inherited by <code>OneFactorGaussianCopula</code>, <code>OneFactorGaussianStudentCopula</code>, <code>OneFactorStudentCopula</code>, and <code>OneFactorStudentGaussianCopula</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>OneFactorCopula (const Handle&lt; Quote &gt; &amp;correlation, Real maximum=5, Size integrationSteps=50)
-
-
-
 virtual Real density (Real m) const =0
-
-
 Density function of M.
-
-
 virtual Real cumulativeZ (Real z) const =0
-
-
 Cumulative distribution of Z.
-
-
 virtual Real cumulativeY (Real y) const
-
-
 Cumulative distribution of Y.
-
-
 virtual Real inverseCumulativeY (Real p) const
-
-
 Inverse cumulative distribution of Y.
-
-
 Real correlation () const
-
-
 Single correlation parameter.
-
-
 Real conditionalProbability (Real prob, Real m) const
-
-
 Conditional probability.
-
-
 std::vector&lt; Real &gt; conditionalProbability (const std::vector&lt; Real &gt; &amp;prob, Real m) const
-
-
 Vector of conditional probabilities.
-
-
 Real integral (Real p) const
-
-
-
 template&lt;class F &gt; Real integral (const F &amp;f, std::vector&lt; Real &gt; &amp;probabilities) const
-
-
-
 template&lt;class F &gt; Distribution integral (const F &amp;f, const std::vector&lt; Real &gt; &amp;nominals, const std::vector&lt; Real &gt; &amp;probabilities) const
-
-
-
 int checkMoments (Real tolerance) const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Handle</code>&lt; <code>Quote</code> &gt; <code>correlation_</code> </p>
 <p> Real <code>max_</code> </p>
@@ -162,7 +76,7 @@ Protected Attributes</code></pre>
 <p> [ F(y) = Prob ,(Y &lt; y) = int_{-infty}^infty D_Z(z),dz: int_{-infty}^{h(y,a,z)} D_M(m),dm, qquad h(y,a,z) = ac{y &#8211; qrt{1 &#8211; a^2}dot z}{a}, qquad a &gt; 0. ].PPIn general, $ F_Y(y) $ needs to be computed numerically. </p>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>Improve on simple Euler integration</dl>
+<dd>Improve on simple Euler integration</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual Real density (Real m) const [pure virtual]</h3>
 <p>Density function of M. </p>

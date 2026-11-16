@@ -10,15 +10,11 @@ description: "std::destroy – std::destroy"
 <p>std::destroy &#8211; std::destroy</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class ForwardIt&gt;
     (1)(since C++ 17)
-
         void destroy(ForwardIt first, ForwardIt last);
-
 template &lt;class ExecutionPolicy, class ForwardIt&gt;
 (2)(since C++ 17)
-
     void destroy(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last);</code></pre>
 <p>1) Destroys the objects in the range [first, last), as if by for (; first != last; ++first)<br />
     std::destroy_at(std::addressof(*first));<br />
@@ -50,9 +46,7 @@ No increment, assignment, comparison, or indirection through valid instances of 
 <p>The following example demonstrates how to use destroy to destroy a contiguous sequence of elements.<br />
  // Run this code </p>
 <pre><code>#include &lt;memory&gt;
-
 #include &lt;new&gt;
-
 #include &lt;iostream&gt;
 struct Tracer {
     int value;
@@ -63,7 +57,6 @@ struct Tracer {
     }
 };
 int main()
-
 {
     alignas(Tracer) unsigned char buffer[sizeof(Tracer) * 8];
     for (int i = 0; i &lt; 8; ++i)

@@ -15,10 +15,10 @@ description: "id3info – Display id3 tag information."
 <p> <code>Id3info</code> displays both the id3v1 and id3v2 tag information for a file. Id3info will not differentiate between the two types of tags.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display help and exit</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display version information and exit</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display help and exit</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display version information and exit</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-id3convert/">id3convert</a>(1), <a href="/docs/linux/man/1-id3tag/">id3tag</a>(1), <a href="/docs/linux/man/1-id3v2/">id3v2</a>(1)</p>
 <h2>AUTHOR</h2>

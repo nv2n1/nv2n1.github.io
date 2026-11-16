@@ -22,24 +22,24 @@ int ibv_dereg_mr(struct ibv_mr *mr);
 <h2>DESCRIPTION</h2>
 <p> <code>ibv_reg_mr()</code> registers a memory region (MR) associated with the protection domain <i>pd</i>. The MR&#8217;s starting address is <i>addr</i> and its size is <i>length</i>. The argument <i>access</i> describes the desired memory protection attributes; it is either 0 or the bitwise OR of one or more of the following flags: </p>
 <dl>
-<dt><code>IBV_ACCESS_LOCAL_WRITE </code> Enable Local Write Access</p>
+<dt><code>IBV_ACCESS_LOCAL_WRITE </code> Enable Local Write Access</dt>
 <dd>
-<dt><code>IBV_ACCESS_REMOTE_WRITE </code> Enable Remote Write Access</p>
+</dd><dt><code>IBV_ACCESS_REMOTE_WRITE </code> Enable Remote Write Access</dt>
 <dd>
-<dt><code>IBV_ACCESS_REMOTE_READ</code> Enable Remote Read Access</p>
+</dd><dt><code>IBV_ACCESS_REMOTE_READ</code> Enable Remote Read Access</dt>
 <dd>
-<dt><code>IBV_ACCESS_REMOTE_ATOMIC</code> Enable Remote Atomic Operation Access (if supported)</p>
+</dd><dt><code>IBV_ACCESS_REMOTE_ATOMIC</code> Enable Remote Atomic Operation Access (if supported)</dt>
 <dd>
-<dt><code>IBV_ACCESS_MW_BIND</code> Enable Memory Window Binding</p>
+</dd><dt><code>IBV_ACCESS_MW_BIND</code> Enable Memory Window Binding</dt>
 <dd>
-<dt><code>IBV_ACCESS_ZERO_BASED</code> Use byte offset from beginning of MR to access this MR, instead of a pointer address</p>
+</dd><dt><code>IBV_ACCESS_ZERO_BASED</code> Use byte offset from beginning of MR to access this MR, instead of a pointer address</dt>
 <dd>
-<dt><code>IBV_ACCESS_ON_DEMAND</code> Create an on-demand paging MR</p>
+</dd><dt><code>IBV_ACCESS_ON_DEMAND</code> Create an on-demand paging MR</dt>
 <dd>
-<dt><code>IBV_ACCESS_HUGETLB</code> Huge pages are guaranteed to be used for this MR, applicable with IBV_ACCESS_ON_DEMAND in explicit mode only</p>
+</dd><dt><code>IBV_ACCESS_HUGETLB</code> Huge pages are guaranteed to be used for this MR, applicable with IBV_ACCESS_ON_DEMAND in explicit mode only</dt>
 <dd>
-<dt><code>IBV_ACCESS_RELAXED_ORDERING</code> Allow system to reorder accesses to the MR to improve performance</p>
-<dd></dl>
+</dd><dt><code>IBV_ACCESS_RELAXED_ORDERING</code> Allow system to reorder accesses to the MR to improve performance</dt>
+<dd></dd></dl>
 <p> If <code>IBV_ACCESS_REMOTE_WRITE</code> or <code>IBV_ACCESS_REMOTE_ATOMIC</code> is set, then <code>IBV_ACCESS_LOCAL_WRITE</code> must be set too. </p>
 <p> Local read access is always enabled for the MR. </p>
 <p> To create an implicit ODP MR, IBV_ACCESS_ON_DEMAND should be set, addr should be 0 and length should be SIZE_MAX. </p>
@@ -55,7 +55,7 @@ int ibv_dereg_mr(struct ibv_mr *mr);
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_post_send</code>(3), <code>ibv_post_recv</code>(3), <code>ibv_post_srq_recv</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

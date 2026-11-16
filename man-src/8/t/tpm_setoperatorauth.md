@@ -16,19 +16,20 @@ description: "tpm_setoperatorauth – sets the operator authorization value in t
 <h2>Description</h2>
 <p><code>tpm_setoperatorauth</code> allows setting the operator authorization value in the TPM (via the TPM_SetOperatorAuth API). This operation prompts for the new password and a confirmation of it. The <code>&#8211;well-known</code> option tells the API to use the default TSS_WELL_KNOWN_SECRET (a 20-bytes array of zeros) as operator authorization information, instead of prompting for one.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display command usage info.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Display command version info.</p>
-<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</p>
-<dd>Set logging level.</p>
-<dt><code>-u</code>, <code>&#8211;unicode</code></p>
-<dd>Use TSS UNICODE encoding for passwords to comply with applications using TSS popup boxes</p>
-<dt><code>-z</code>, <code>&#8211;well-known</code></p>
-<dd>Use the default TSS_WELL_KNOWN_SECRET 20-bytes array of zeros as the operator password.</p>
-<dt><code>-p</code>, <code>&#8211;op_password_unicode</code></p>
-<dd>Use TSS UNICODE encoding for new operator password to comply with applications using TSS popup boxes </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display command usage info.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Display command version info.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</dt>
+<dd>Set logging level.</dd>
+<dt><code>-u</code>, <code>&#8211;unicode</code></dt>
+<dd>Use TSS UNICODE encoding for passwords to comply with applications using TSS popup boxes</dd>
+<dt><code>-z</code>, <code>&#8211;well-known</code></dt>
+<dd>Use the default TSS_WELL_KNOWN_SECRET 20-bytes array of zeros as the operator password.</dd>
+<dt><code>-p</code>, <code>&#8211;op_password_unicode</code></dt>
+<dd>Use TSS UNICODE encoding for new operator password to comply with applications using TSS popup boxes </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-tpm_version/">tpm_version</a></code>(1), <code><a href="/docs/linux/man/8-tpm_takeownership/">tpm_takeownership</a></code>(8), <code><a href="/docs/linux/man/8-tcsd/">tcsd</a></code>(8) </p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt;</p>
+</dl>

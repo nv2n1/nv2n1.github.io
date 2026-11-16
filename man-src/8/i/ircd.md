@@ -10,29 +10,29 @@ description: "ircd – The IRCD-Hybrid Internet Relay Chat server"
 <p>ircd &#8211; The IRCD-Hybrid Internet Relay Chat server</p>
 <h2>Synopsis</h2>
 <dl>
-<dt><code>ircd</code></p>
-<dd>[-configfile filename] [-dlinefile filename] [-klinefile filename] [-xlinefile filename] [-logfile filename] [-pidfile filename] [-foreground] [-version]</dl>
+<dt><code>ircd</code></dt>
+<dd>[-configfile filename] [-dlinefile filename] [-klinefile filename] [-xlinefile filename] [-logfile filename] [-pidfile filename] [-foreground] [-version]</dd></dl>
 <h2>Description</h2>
 <p><i>ircd</i> is the server (daemon) program for the Internet Relay Chat Program. The <i>ircd</i> is a server in that its function is to &quot;serve&quot; the client program <i>irc(1)</i> and other compatible programs with messages and commands. All commands and user messages are passed directly to the <i>ircd</i> for processing and relaying to other IRC servers. </p>
 <p> This is <i>ircd-hybrid</i>, the highly modified (and hopefully improved) variant of the original ircd program by Jarkko Oikarinen.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-configfile filename</code></p>
-<dd>Specifies the ircd.conf file to be used for this <i>ircd</i>. The option is used to override the default ircd.conf given at compile time. By default, this is &quot;etc/ircd.conf&quot; within the prefix you installed the <i>ircd</i> in.</p>
-<dt><code>-dlinefile filename</code></p>
+<dt><code>-configfile filename</code></dt>
+<dd>Specifies the ircd.conf file to be used for this <i>ircd</i>. The option is used to override the default ircd.conf given at compile time. By default, this is &quot;etc/ircd.conf&quot; within the prefix you installed the <i>ircd</i> in.</dd>
+<dt><code>-dlinefile filename</code></dt>
 <dd>
-<dt><code>-klinefile filename</code></p>
+</dd><dt><code>-klinefile filename</code></dt>
 <dd>
-<dt><code>-xlinefile filename</code></p>
-<dd>Specifies the files to be used for D-lines (host bans), K-lines (hostmask bans), and X-lines (gecos bans), which by default are within the etc/ directory of your installation prefix as dline.conf, kline.conf, and xline.conf.</p>
-<dt><code>-logfile filename</code></p>
-<dd>Specifies an alternative logfile to be used than that specified in defaults.h</p>
-<dt><code>-pidfile filename</code></p>
-<dd>Specifies the file used by the <i>ircd</i> to store its process ID. The option is used to override the default ircd.pid given at compile time.</p>
-<dt><code>-foreground</code></p>
-<dd>Makes <i>ircd</i> run in the foreground</p>
-<dt><code>-version</code></p>
-<dd>Makes <i>ircd</i> print its version, and exit.</dl>
+</dd><dt><code>-xlinefile filename</code></dt>
+<dd>Specifies the files to be used for D-lines (host bans), K-lines (hostmask bans), and X-lines (gecos bans), which by default are within the etc/ directory of your installation prefix as dline.conf, kline.conf, and xline.conf.</dd>
+<dt><code>-logfile filename</code></dt>
+<dd>Specifies an alternative logfile to be used than that specified in defaults.h</dd>
+<dt><code>-pidfile filename</code></dt>
+<dd>Specifies the file used by the <i>ircd</i> to store its process ID. The option is used to override the default ircd.pid given at compile time.</dd>
+<dt><code>-foreground</code></dt>
+<dd>Makes <i>ircd</i> run in the foreground</dd>
+<dt><code>-version</code></dt>
+<dd>Makes <i>ircd</i> print its version, and exit.</dd></dl>
 <h2>Usage</h2>
 <p>If you plan to connect your <i>ircd</i> server to an existing IRC network, you will need to alter your local IRC configuration file (typically named &quot;ircd.conf&quot;) so that it will accept and make connections to other <i>IRC</i> servers. This file contains the hostnames, IP addresses, and sometimes passwords for connections to other ircds around the world. </p>
 <p> The example ircd.conf in the etc/ directory documents itself. Read it carefully or you may expose a risk on your network simply by having your ircd running!</p>

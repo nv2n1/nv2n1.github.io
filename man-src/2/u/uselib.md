@@ -20,12 +20,12 @@ description: "uselib – load shared library"
 <h2>ERRORS</h2>
 <p> In addition to all of the error codes returned by <code><a href="/docs/linux/man/2-open/">open</a></code>(2) and <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), the following may also be returned:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The library specified by <i>library</i> does not have read or execute permission, or the caller does not have search permission for one of the directories in the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOEXEC</code></p>
-<dd> The file specified by <i>library</i> is not an executable of a known type; for example, it does not have the correct magic numbers.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The library specified by <i>library</i> does not have read or execute permission, or the caller does not have search permission for one of the directories in the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOEXEC</code></dt>
+<dd> The file specified by <i>library</i> is not an executable of a known type; for example, it does not have the correct magic numbers.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>uselib</code>() is Linux-specific, and should not be used in programs intended to be portable.</p>
 <h2>NOTES</h2>

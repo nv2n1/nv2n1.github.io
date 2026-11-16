@@ -22,9 +22,9 @@ CALL TDGETR (PNAM,RVAL)
 
 The arguments of TDGETR are as follows:
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to retrieve. The character string can be of any length, but only the first three characters of it will be examined.
-<dt>RVAL
-<dd>(an output variable of type REAL) - A real variable to receive the desired parameter value. If the internal parameter is of type REAL and has the value &quot;r&quot;, RVAL will be given the value &quot;r&quot;; if the internal parameter is of type INTEGER and has the value &quot;i&quot;, RVAL will be given the value &quot;REAL(i)&quot;.</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to retrieve. The character string can be of any length, but only the first three characters of it will be examined.
+</dd><dt>RVAL
+</dt><dd>(an output variable of type REAL) - A real variable to receive the desired parameter value. If the internal parameter is of type REAL and has the value &quot;r&quot;, RVAL will be given the value &quot;r&quot;; if the internal parameter is of type INTEGER and has the value &quot;i&quot;, RVAL will be given the value &quot;REAL(i)&quot;.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

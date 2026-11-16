@@ -18,17 +18,17 @@ int XmClipboardWithdrawFormat (<i>display, window, data_id</i>)
 <h2>Description</h2>
 <p><code>XmClipboardWithdrawFormat</code> indicates that the application no longer supplies a data item to the clipboard that the application had previously passed by name.</p>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies a pointer to the <code>Display</code> structure that was returned in a previous call to <code>XOpenDisplay</code> or <code>XtDisplay</code>.</p>
-<dt><i>window</i></p>
-<dd>Specifies the window ID of a widget that relates the application window to the clipboard. The widget&#8217;s window ID can be obtained through <code>XtWindow</code>. The same application instance should pass the same window ID to each clipboard function it calls.</p>
-<dt><i>data_id</i></p>
-<dd>Specifies an identifying number assigned to the data item, that uniquely identifies the data item and the format. This was assigned to the item when it was originally passed by <code>XmClipboardCopy</code>.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies a pointer to the <code>Display</code> structure that was returned in a previous call to <code>XOpenDisplay</code> or <code>XtDisplay</code>.</dd>
+<dt><i>window</i></dt>
+<dd>Specifies the window ID of a widget that relates the application window to the clipboard. The widget&#8217;s window ID can be obtained through <code>XtWindow</code>. The same application instance should pass the same window ID to each clipboard function it calls.</dd>
+<dt><i>data_id</i></dt>
+<dd>Specifies an identifying number assigned to the data item, that uniquely identifies the data item and the format. This was assigned to the item when it was originally passed by <code>XmClipboardCopy</code>.</dd></dl>
 <h2>Return</h2>
 <dl COMPACT>
-<dt><code>XmClipboardSuccess</code></p>
-<dd>The function was successful.</p>
-<dt><code>XmClipboardLocked</code></p>
-<dd>The function failed because the clipboard was locked by another application. The application can continue to call the function again with the same parameters until the lock goes away. This gives the application the opportunity to ask if the user wants to keep trying or to give up on the operation.</dl>
+<dt><code>XmClipboardSuccess</code></dt>
+<dd>The function was successful.</dd>
+<dt><code>XmClipboardLocked</code></dt>
+<dd>The function failed because the clipboard was locked by another application. The application can continue to call the function again with the same parameters until the lock goes away. This gives the application the opportunity to ask if the user wants to keep trying or to give up on the operation.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmclipboardcopy/">XmClipboardCopy</a></code>(3) and <code><a href="/docs/linux/man/3-xmclipboardstartcopy/">XmClipboardStartCopy</a></code>(3).</p>

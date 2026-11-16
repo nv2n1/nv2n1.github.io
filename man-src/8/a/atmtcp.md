@@ -18,40 +18,40 @@ description: "atmtcp – set up ATM over TCP connections"
 <p> If <code>atmtcp</code> has any readable links after processing the command line, it enters a loop to perform the data forwarding. If no readable links have been specified, <code>atmtcp</code> terminates after processing the command line. If any setup operation fails, <code>atmtcp</code> terminates at this point and does not attempt to cancel previous operations (e.g. creation of permanent interfaces).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>print detailed progress information on standard error.</p>
-<dt><code>-v</code></p>
-<dd>print some progress information on standard error.</p>
-<dt><code>-V</code></p>
-<dd>print version number of <code>atmtcp</code> on standard output and exit.</dl>
+<dt><code>-d</code></dt>
+<dd>print detailed progress information on standard error.</dd>
+<dt><code>-v</code></dt>
+<dd>print some progress information on standard error.</dd>
+<dt><code>-V</code></dt>
+<dd>print version number of <code>atmtcp</code> on standard output and exit.</dd></dl>
 <h2>Commands</h2>
 <dl>
-<dt><code>create</code>&nbsp;<wbr>[<i>itf</i>]</p>
-<dd>create a persistent interface. If no interface number is specified, <code>atmtcp</code> uses the default value 0.</p>
-<dt><code>remove</code>&nbsp;<wbr>[<i>itf</i>]</p>
-<dd>remove a persistent interface. If the interface is still in use, it is marked as ephemeral and will be removed as soon as all VCs are closed. If no interface number is specified, <code>atmtcp</code> uses the default value 0.</p>
-<dt><code>virtual</code>&nbsp;<wbr>[<i>itf</i>]</p>
-<dd>link to the corresponding virtual (ATM over TCP) interface. If no interface number is specified, the kernel assigns the first available number.</p>
-<dt><code>real</code>&nbsp;<wbr>[<i>itf</i>]</p>
-<dd>link to the corresponding ATM interface. If no interface number is specified, <code>atmtcp</code> uses the default value 0. If a link requests that a VC be opened, <code>atmtcp</code> will attempt to open a VC with the specified QoS parameters on that interface. If the operation succeeds, data can be sent or received on that VC. If the operation fails, an error code is returned to the requester. Note that only data arriving on open VCs can be received and that a <i>real</i> ATM interface never initiates a connection. <code>atmtcp</code> can share ATM interfaces with other applications.</p>
-<dt><code>connect</code>&nbsp;<wbr><i>host</i>&nbsp;<wbr>[<i>port</i>]</p>
-<dd>connect to an instance of <code>atmtcp</code> running on the specified host. If the port argument is omitted, <code>atmtcp</code> uses the default port 2812.</p>
-<dt><code>switch</code>&nbsp;<wbr><i>host</i>&nbsp;<wbr><i>line</i>&nbsp;<wbr>[<i>port</i>]</p>
-<dd>like <code>connect</code>, but connects to an ATM over TCP &quot;switch&quot; and selects the specified virtual line.</p>
-<dt><code>listen</code>&nbsp;<wbr>[<i>port</i>]</p>
-<dd>listen for an incoming ATM over TCP connection. If the port argument is omitted, <code>atmtcp</code> uses the default port 2812. <code>atmtcp</code> waits until the connection is established. Only one connection is accepted per <code>listen</code> command.</p>
-<dt><code>listen-bg</code>&nbsp;<wbr>[<i>port</i>]</p>
-<dd>like <code>listen</code>, but run in background after beginning to listen.</p>
-<dt><code>read</code>&nbsp;<wbr><i>file</i>&nbsp;<wbr>[<i>stream</i>]</p>
-<dd>play back all streams from the specified file. If a stream number is specified, only that stream is played back.</p>
-<dt><code>write</code>&nbsp;<wbr><i>file</i></p>
-<dd>record the traffic of all links in the specified file. The PDUs from each link are stored in a stream with the same number as the link.</p>
-<dt><code>print</code></p>
-<dd>print a hex dump of the content of all received PDUs on standard output.</p>
-<dt><code>bg</code></p>
-<dd>continue to run in background (i.e. in a forked child process).</p>
-<dt><code>wait</code>&nbsp;<wbr>[<i>seconds</i>]</p>
-<dd>wait for the specified number of seconds. If no time is specified, <code>atmtcp</code> waits for a newline on standard input.</dl>
+<dt><code>create</code>&nbsp;<wbr>[<i>itf</i>]</dt>
+<dd>create a persistent interface. If no interface number is specified, <code>atmtcp</code> uses the default value 0.</dd>
+<dt><code>remove</code>&nbsp;<wbr>[<i>itf</i>]</dt>
+<dd>remove a persistent interface. If the interface is still in use, it is marked as ephemeral and will be removed as soon as all VCs are closed. If no interface number is specified, <code>atmtcp</code> uses the default value 0.</dd>
+<dt><code>virtual</code>&nbsp;<wbr>[<i>itf</i>]</dt>
+<dd>link to the corresponding virtual (ATM over TCP) interface. If no interface number is specified, the kernel assigns the first available number.</dd>
+<dt><code>real</code>&nbsp;<wbr>[<i>itf</i>]</dt>
+<dd>link to the corresponding ATM interface. If no interface number is specified, <code>atmtcp</code> uses the default value 0. If a link requests that a VC be opened, <code>atmtcp</code> will attempt to open a VC with the specified QoS parameters on that interface. If the operation succeeds, data can be sent or received on that VC. If the operation fails, an error code is returned to the requester. Note that only data arriving on open VCs can be received and that a <i>real</i> ATM interface never initiates a connection. <code>atmtcp</code> can share ATM interfaces with other applications.</dd>
+<dt><code>connect</code>&nbsp;<wbr><i>host</i>&nbsp;<wbr>[<i>port</i>]</dt>
+<dd>connect to an instance of <code>atmtcp</code> running on the specified host. If the port argument is omitted, <code>atmtcp</code> uses the default port 2812.</dd>
+<dt><code>switch</code>&nbsp;<wbr><i>host</i>&nbsp;<wbr><i>line</i>&nbsp;<wbr>[<i>port</i>]</dt>
+<dd>like <code>connect</code>, but connects to an ATM over TCP &quot;switch&quot; and selects the specified virtual line.</dd>
+<dt><code>listen</code>&nbsp;<wbr>[<i>port</i>]</dt>
+<dd>listen for an incoming ATM over TCP connection. If the port argument is omitted, <code>atmtcp</code> uses the default port 2812. <code>atmtcp</code> waits until the connection is established. Only one connection is accepted per <code>listen</code> command.</dd>
+<dt><code>listen-bg</code>&nbsp;<wbr>[<i>port</i>]</dt>
+<dd>like <code>listen</code>, but run in background after beginning to listen.</dd>
+<dt><code>read</code>&nbsp;<wbr><i>file</i>&nbsp;<wbr>[<i>stream</i>]</dt>
+<dd>play back all streams from the specified file. If a stream number is specified, only that stream is played back.</dd>
+<dt><code>write</code>&nbsp;<wbr><i>file</i></dt>
+<dd>record the traffic of all links in the specified file. The PDUs from each link are stored in a stream with the same number as the link.</dd>
+<dt><code>print</code></dt>
+<dd>print a hex dump of the content of all received PDUs on standard output.</dd>
+<dt><code>bg</code></dt>
+<dd>continue to run in background (i.e. in a forked child process).</dd>
+<dt><code>wait</code>&nbsp;<wbr>[<i>seconds</i>]</dt>
+<dd>wait for the specified number of seconds. If no time is specified, <code>atmtcp</code> waits for a newline on standard input.</dd></dl>
 <h2>Restrictions</h2>
 <p>Due to recent protocol changes, <code>atmtcp</code> is currently not compatible with the ATM over TCP &quot;switch&quot;. </p>
 <p> Only AAL SDUs are exchanged, no segmentation or reassembly is performed. That implies that using different AALs (e.g. AAL5 and AAL0) on either side will reveal limitations of this emulation. </p>

@@ -21,12 +21,12 @@ int ares_mkquery(const char *name, int dnsclass, int type,
 <h2>RETURN VALUES</h2>
 <p> <code>ares_mkquery</code> can return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> Construction of the DNS query succeeded.</p>
-<dt><code>ARES_EBADNAME</code></p>
-<dd> The query name <i>name</i> could not be encoded as a domain name, either because it contained a zero-length label or because it contained a label of more than 63 characters.</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> Memory was exhausted.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> Construction of the DNS query succeeded.</dd>
+<dt><code>ARES_EBADNAME</code></dt>
+<dd> The query name <i>name</i> could not be encoded as a domain name, either because it contained a zero-length label or because it contained a label of more than 63 characters.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_expand_name/">ares_expand_name</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_string/">ares_free_string</a></code>(3)</p>
 <h2>AUTHOR</h2>

@@ -20,16 +20,16 @@ description: "unvis strunvis strnunvis – decode a visual representation of cha
 <h2>Return Values</h2>
 <p>The Fn unvis function has several return codes that must be handled properly. They are:</p>
 <dl>
-<dt><code>0 (zero)</code></p>
-<dd>Another character is necessary; nothing has been recognized yet.</p>
-<dt><code>UNVIS_VALID</code></p>
-<dd>A valid character has been recognized and is available at the location pointed to by Fa cp .</p>
-<dt><code>UNVIS_VALIDPUSH</code></p>
-<dd>A valid character has been recognized and is available at the location pointed to by Fa cp ; however, the character currently passed in should be passed in again.</p>
-<dt><code>UNVIS_NOCHAR</code></p>
-<dd>A valid sequence was detected, but no character was produced. This return code is necessary to indicate a logical break between characters.</p>
-<dt><code>UNVIS_SYNBAD</code></p>
-<dd>An invalid escape sequence was detected, or the decoder is in an unknown state. The decoder is placed into the starting state.</dl>
+<dt><code>0 (zero)</code></dt>
+<dd>Another character is necessary; nothing has been recognized yet.</dd>
+<dt><code>UNVIS_VALID</code></dt>
+<dd>A valid character has been recognized and is available at the location pointed to by Fa cp .</dd>
+<dt><code>UNVIS_VALIDPUSH</code></dt>
+<dd>A valid character has been recognized and is available at the location pointed to by Fa cp ; however, the character currently passed in should be passed in again.</dd>
+<dt><code>UNVIS_NOCHAR</code></dt>
+<dd>A valid sequence was detected, but no character was produced. This return code is necessary to indicate a logical break between characters.</dd>
+<dt><code>UNVIS_SYNBAD</code></dt>
+<dd>An invalid escape sequence was detected, or the decoder is in an unknown state. The decoder is placed into the starting state.</dd></dl>
 <p> When all bytes in the stream have been processed, call Fn unvis one more time with Fa flag set to <code>UNVIS_END</code> to extract any remaining character (the character passed in is ignored). </p>
 <p> The Fn strunvis function returns the number of bytes written (not counting the trailing NUL byte) or -1 if an error occurred. </p>
 <p> The Fn strnunvis function returns the number of bytes (not counting the trailing NUL byte) that would be needed to fully convert the input string, or -1 if an error occurred.</p>

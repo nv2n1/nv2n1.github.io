@@ -19,7 +19,7 @@ description: "clock_getres, clock_gettime, clock_settime – clock and time func
 <p> <code>clock_getres</code>(), <code>clock_gettime</code>(), <code>clock_settime</code>():</p>
 <dl>
 <dt>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</dl>
+</dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The function <code>clock_getres</code>() finds the resolution (precision) of the specified clock <i>clockid</i>, and, if <i>res</i> is non-NULL, stores it in the <i>struct timespec</i> pointed to by <i>res</i>. The resolution of clocks depends on the implementation and cannot be configured by a particular process. If the time value pointed to by the argument <i>tp</i> of <code>clock_settime</code>() is not a multiple of <i>res</i>, then it is truncated to a multiple of <i>res</i>. </p>
 <p> The functions <code>clock_gettime</code>() and <code>clock_settime</code>() retrieve and set the time of the specified clock <i>clockid</i>. </p>
@@ -32,32 +32,32 @@ description: "clock_getres, clock_gettime, clock_settime – clock and time func
 <p> More clocks may be implemented. The interpretation of the corresponding time values and the effect on timers is unspecified. </p>
 <p> Sufficiently recent versions of glibc and the Linux kernel support the following clocks:</p>
 <dl>
-<dt><code>CLOCK_REALTIME</code></p>
-<dd> A settable system-wide clock that measures real (i.e., wall-clock) time. Setting this clock requires appropriate privileges. This clock is affected by discontinuous jumps in the system time (e.g., if the system administrator manually changes the clock), and by the incremental adjustments performed by <code><a href="/docs/linux/man/3-adjtime/">adjtime</a></code>(3) and NTP.</p>
-<dt><code>CLOCK_REALTIME_ALARM</code> (since Linux 3.0; Linux-specific)</p>
-<dd> Like <code>CLOCK_REALTIME</code>, but not settable. See <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2) for further details.</p>
-<dt><code>CLOCK_REALTIME_COARSE</code> (since Linux 2.6.32; Linux-specific)</p>
-<dd> A faster but less precise version of <code>CLOCK_REALTIME</code>. This clock is not settable. Use when you need very fast, but not fine-grained timestamps. Requires per-architecture support, and probably also architecture support for this flag in the <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7).</p>
-<dt><code>CLOCK_TAI</code> (since Linux 3.10; Linux-specific)</p>
-<dd> A nonsettable system-wide clock derived from wall-clock time but ignoring leap seconds. This clock does not experience discontinuities and backwards jumps caused by NTP inserting leap seconds as <code>CLOCK_REALTIME</code> does.</p>
+<dt><code>CLOCK_REALTIME</code></dt>
+<dd> A settable system-wide clock that measures real (i.e., wall-clock) time. Setting this clock requires appropriate privileges. This clock is affected by discontinuous jumps in the system time (e.g., if the system administrator manually changes the clock), and by the incremental adjustments performed by <code><a href="/docs/linux/man/3-adjtime/">adjtime</a></code>(3) and NTP.</dd>
+<dt><code>CLOCK_REALTIME_ALARM</code> (since Linux 3.0; Linux-specific)</dt>
+<dd> Like <code>CLOCK_REALTIME</code>, but not settable. See <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2) for further details.</dd>
+<dt><code>CLOCK_REALTIME_COARSE</code> (since Linux 2.6.32; Linux-specific)</dt>
+<dd> A faster but less precise version of <code>CLOCK_REALTIME</code>. This clock is not settable. Use when you need very fast, but not fine-grained timestamps. Requires per-architecture support, and probably also architecture support for this flag in the <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7).</dd>
+<dt><code>CLOCK_TAI</code> (since Linux 3.10; Linux-specific)</dt>
+<dd> A nonsettable system-wide clock derived from wall-clock time but ignoring leap seconds. This clock does not experience discontinuities and backwards jumps caused by NTP inserting leap seconds as <code>CLOCK_REALTIME</code> does.</dd>
 <dt>
-<dd> The acronym TAI refers to International Atomic Time.</p>
-<dt><code>CLOCK_MONOTONIC</code></p>
-<dd> A nonsettable system-wide clock that represents monotonic time since&#8212;as described by POSIX&#8212;&quot;some unspecified point in the past&quot;. On Linux, that point corresponds to the number of seconds that the system has been running since it was booted.</p>
+</dt><dd> The acronym TAI refers to International Atomic Time.</dd>
+<dt><code>CLOCK_MONOTONIC</code></dt>
+<dd> A nonsettable system-wide clock that represents monotonic time since&#8212;as described by POSIX&#8212;&quot;some unspecified point in the past&quot;. On Linux, that point corresponds to the number of seconds that the system has been running since it was booted.</dd>
 <dt>
-<dd> The <code>CLOCK_MONOTONIC</code> clock is not affected by discontinuous jumps in the system time (e.g., if the system administrator manually changes the clock), but is affected by the incremental adjustments performed by <code><a href="/docs/linux/man/3-adjtime/">adjtime</a></code>(3) and NTP. This clock does not count time that the system is suspended. All <code>CLOCK_MONOTONIC</code> variants guarantee that the time returned by consecutive calls will not go backwards, but successive calls may&#8212;depending on the architecture&#8212;return identical (not-increased) time values.</p>
-<dt><code>CLOCK_MONOTONIC_COARSE</code> (since Linux 2.6.32; Linux-specific)</p>
-<dd> A faster but less precise version of <code>CLOCK_MONOTONIC</code>. Use when you need very fast, but not fine-grained timestamps. Requires per-architecture support, and probably also architecture support for this flag in the <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7).</p>
-<dt><code>CLOCK_MONOTONIC_RAW</code> (since Linux 2.6.28; Linux-specific)</p>
-<dd> Similar to <code>CLOCK_MONOTONIC</code>, but provides access to a raw hardware-based time that is not subject to NTP adjustments or the incremental adjustments performed by <code><a href="/docs/linux/man/3-adjtime/">adjtime</a></code>(3). This clock does not count time that the system is suspended.</p>
-<dt><code>CLOCK_BOOTTIME</code> (since Linux 2.6.39; Linux-specific)</p>
-<dd> A nonsettable system-wide clock that is identical to <code>CLOCK_MONOTONIC</code>, except that it also includes any time that the system is suspended. This allows applications to get a suspend-aware monotonic clock without having to deal with the complications of <code>CLOCK_REALTIME</code>, which may have discontinuities if the time is changed using <code><a href="/docs/linux/man/2-settimeofday/">settimeofday</a></code>(2) or similar.</p>
-<dt><code>CLOCK_BOOTTIME_ALARM</code> (since Linux 3.0; Linux-specific)</p>
-<dd> Like <code>CLOCK_BOOTTIME</code>. See <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2) for further details.</p>
-<dt><code>CLOCK_PROCESS_CPUTIME_ID</code> (since Linux 2.6.12)</p>
-<dd> This is a clock that measures CPU time consumed by this process (i.e., CPU time consumed by all threads in the process). On Linux, this clock is not settable.</p>
-<dt><code>CLOCK_THREAD_CPUTIME_ID</code> (since Linux 2.6.12)</p>
-<dd> This is a clock that measures CPU time consumed by this thread. On Linux, this clock is not settable.</dl>
+</dt><dd> The <code>CLOCK_MONOTONIC</code> clock is not affected by discontinuous jumps in the system time (e.g., if the system administrator manually changes the clock), but is affected by the incremental adjustments performed by <code><a href="/docs/linux/man/3-adjtime/">adjtime</a></code>(3) and NTP. This clock does not count time that the system is suspended. All <code>CLOCK_MONOTONIC</code> variants guarantee that the time returned by consecutive calls will not go backwards, but successive calls may&#8212;depending on the architecture&#8212;return identical (not-increased) time values.</dd>
+<dt><code>CLOCK_MONOTONIC_COARSE</code> (since Linux 2.6.32; Linux-specific)</dt>
+<dd> A faster but less precise version of <code>CLOCK_MONOTONIC</code>. Use when you need very fast, but not fine-grained timestamps. Requires per-architecture support, and probably also architecture support for this flag in the <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7).</dd>
+<dt><code>CLOCK_MONOTONIC_RAW</code> (since Linux 2.6.28; Linux-specific)</dt>
+<dd> Similar to <code>CLOCK_MONOTONIC</code>, but provides access to a raw hardware-based time that is not subject to NTP adjustments or the incremental adjustments performed by <code><a href="/docs/linux/man/3-adjtime/">adjtime</a></code>(3). This clock does not count time that the system is suspended.</dd>
+<dt><code>CLOCK_BOOTTIME</code> (since Linux 2.6.39; Linux-specific)</dt>
+<dd> A nonsettable system-wide clock that is identical to <code>CLOCK_MONOTONIC</code>, except that it also includes any time that the system is suspended. This allows applications to get a suspend-aware monotonic clock without having to deal with the complications of <code>CLOCK_REALTIME</code>, which may have discontinuities if the time is changed using <code><a href="/docs/linux/man/2-settimeofday/">settimeofday</a></code>(2) or similar.</dd>
+<dt><code>CLOCK_BOOTTIME_ALARM</code> (since Linux 3.0; Linux-specific)</dt>
+<dd> Like <code>CLOCK_BOOTTIME</code>. See <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2) for further details.</dd>
+<dt><code>CLOCK_PROCESS_CPUTIME_ID</code> (since Linux 2.6.12)</dt>
+<dd> This is a clock that measures CPU time consumed by this process (i.e., CPU time consumed by all threads in the process). On Linux, this clock is not settable.</dd>
+<dt><code>CLOCK_THREAD_CPUTIME_ID</code> (since Linux 2.6.12)</dt>
+<dd> This is a clock that measures CPU time consumed by this thread. On Linux, this clock is not settable.</dd></dl>
 <p> Linux also implements dynamic clock instances as described below.</p>
 <h3>Dynamic clocks</h3>
 <p> In addition to the hard-coded System-V style clock IDs described above, Linux also supports POSIX clock operations on certain character devices. Such devices are called &quot;dynamic&quot; clocks, and are supported since Linux 2.6.39. </p>
@@ -69,24 +69,24 @@ description: "clock_getres, clock_gettime, clock_settime – clock and time func
 <p> <code>clock_gettime</code>(), <code>clock_settime</code>(), and <code>clock_getres</code>() return 0 for success, or -1 for failure (in which case <i>errno</i> is set appropriately).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> <code>clock_settime</code>() does not have write permission for the dynamic POSIX clock device indicated.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>tp</i> points outside the accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>clockid</i> specified is invalid for one of two reasons. Either the System-V style hard coded positive value is out of range, or the dynamic clock ID does not refer to a valid instance of a clock object.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>clock_settime</code>()): <i>tp.tv_sec</i> is negative or <i>tp.tv_nsec</i> is outside the range [0..999,999,999].</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>clockid</i> specified in a call to <code>clock_settime</code>() is not a settable clock.</p>
-<dt><code>EINVAL</code> (since Linux 4.3)</p>
-<dd> A call to <code>clock_settime</code>() with a <i>clockid</i> of <code>CLOCK_REALTIME</code> attempted to set the time to a value less than the current value of the <code>CLOCK_MONOTONIC</code> clock.</p>
-<dt><code>ENODEV</code></p>
-<dd> The hot-pluggable device (like USB for example) represented by a dynamic <i>clk_id</i> has disappeared after its character device was opened.</p>
-<dt><code>ENOTSUP</code></p>
-<dd> The operation is not supported by the dynamic POSIX clock device specified.</p>
-<dt><code>EPERM</code></p>
-<dd> <code>clock_settime</code>() does not have permission to set the clock indicated.</dl>
+<dt><code>EACCES</code></dt>
+<dd> <code>clock_settime</code>() does not have write permission for the dynamic POSIX clock device indicated.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>tp</i> points outside the accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>clockid</i> specified is invalid for one of two reasons. Either the System-V style hard coded positive value is out of range, or the dynamic clock ID does not refer to a valid instance of a clock object.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>clock_settime</code>()): <i>tp.tv_sec</i> is negative or <i>tp.tv_nsec</i> is outside the range [0..999,999,999].</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>clockid</i> specified in a call to <code>clock_settime</code>() is not a settable clock.</dd>
+<dt><code>EINVAL</code> (since Linux 4.3)</dt>
+<dd> A call to <code>clock_settime</code>() with a <i>clockid</i> of <code>CLOCK_REALTIME</code> attempted to set the time to a value less than the current value of the <code>CLOCK_MONOTONIC</code> clock.</dd>
+<dt><code>ENODEV</code></dt>
+<dd> The hot-pluggable device (like USB for example) represented by a dynamic <i>clk_id</i> has disappeared after its character device was opened.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> The operation is not supported by the dynamic POSIX clock device specified.</dd>
+<dt><code>EPERM</code></dt>
+<dd> <code>clock_settime</code>() does not have permission to set the clock indicated.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls first appeared in Linux 2.6.</p>
 <h2>ATTRIBUTES</h2>
@@ -112,8 +112,8 @@ description: "clock_getres, clock_gettime, clock_settime – clock and time func
 <p> POSIX.1 specifies the following:</p>
 <dl>
 <dt>
-<dd>
-<p> Setting the value of the <code>CLOCK_REALTIME</code> clock via <code>clock_settime</code>() shall have no effect on threads that are blocked waiting for a relative time service based upon this clock, including the <code>nanosleep</code>() function; nor on the expiration of relative timers based upon this clock. Consequently, these time services shall expire when the requested relative interval elapses, independently of the new or old value of the clock.</dl>
+</dt><dd>
+<p> Setting the value of the <code>CLOCK_REALTIME</code> clock via <code>clock_settime</code>() shall have no effect on threads that are blocked waiting for a relative time service based upon this clock, including the <code>nanosleep</code>() function; nor on the expiration of relative timers based upon this clock. Consequently, these time services shall expire when the requested relative interval elapses, independently of the new or old value of the clock.</dd></dl>
 <p> According to POSIX.1-2001, a process with &quot;appropriate privileges&quot; may set the <code>CLOCK_PROCESS_CPUTIME_ID</code> and <code>CLOCK_THREAD_CPUTIME_ID</code> clocks using <code>clock_settime</code>(). On Linux, these clocks are not settable (i.e., no process has &quot;appropriate privileges&quot;).</p>
 <h3>C library/kernel differences</h3>
 <p> On some architectures, an implementation of <code>clock_gettime</code>() is provided in the <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7).</p>
@@ -170,3 +170,4 @@ description: "clock_getres, clock_gettime, clock_settime – clock and time func
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
+</p>

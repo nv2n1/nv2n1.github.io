@@ -17,12 +17,12 @@ description: "chicken – A Scheme-to-C translator"
 <p> Enter <code>chicken -help</code> for a list of supported command-line options. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>CHICKEN_PREFIX</code></p>
-<dd> Is used as a prefix directory for support files, include-files and libraries. </p>
-<dt><code>CHICKEN_INCLUDE_PATH</code></p>
-<dd> Contains one or more pathnames where the compiler should additionally look for include-files, separated by <code>;</code> characters. </p>
-<dt><code>CHICKEN_OPTIONS</code></p>
-<dd> Holds a string of default compiler options that should apply to every invocation of <code>chicken</code> . </p>
+<dt><code>CHICKEN_PREFIX</code></dt>
+<dd> Is used as a prefix directory for support files, include-files and libraries. </dd>
+<dt><code>CHICKEN_INCLUDE_PATH</code></dt>
+<dd> Contains one or more pathnames where the compiler should additionally look for include-files, separated by <code>;</code> characters. </dd>
+<dt><code>CHICKEN_OPTIONS</code></dt>
+<dd> Holds a string of default compiler options that should apply to every invocation of <code>chicken</code> . </dd>
 </dl>
 <h2>DOCUMENTATION</h2>
 <p> More information can be found in the <i>CHICKEN User&#8217;s Manual</i> </p>

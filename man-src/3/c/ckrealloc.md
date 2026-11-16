@@ -28,9 +28,9 @@ attemptckrealloc(ptr, size)
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>
-<dd> unsigned int <i>size</i> (in) Size in bytes of the memory block to allocate.</p>
+</dt><dd> unsigned int <i>size</i> (in) Size in bytes of the memory block to allocate.</dd>
 <dt>
-<dd> char <i>*ptr</i> (in) Pointer to memory block to free or realloc. </p>
+</dt><dd> char <i>*ptr</i> (in) Pointer to memory block to free or realloc. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> These procedures provide a platform and compiler independent interface for memory allocation. Programs that need to transfer ownership of memory blocks between Tcl and other modules should use these routines rather than the native <code>malloc()</code> and <code>free()</code> routines provided by the C run-time library. </p>

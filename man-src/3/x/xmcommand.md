@@ -367,23 +367,23 @@ description: "XmCommand — The Command widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNcommand</code></p>
-<dd>Contains the current command-line text. This is the <code>XmNtextString</code> resource in SelectionBox, renamed for Command. This resource can also be modified with <code>XmCommandSetValue</code> and <code>XmCommandAppendValue</code> functions. The command area is a Text widget.</p>
-<dt><code>XmNcommandChangedCallback</code></p>
-<dd>Specifies the list of callbacks that is called after each time the value of the command changes. The callback reason is <code>XmCR_COMMAND_CHANGED</code>. This is equivalent to the <code>XmNvalueChangedCallback</code> of the Text widget, except that a pointer to an <code>XmCommandCallbackStructure</code> is passed, and the structure&#8217;s <i>value</i> member contains the <code>XmString</code>.</p>
-<dt><code>XmNcommandEnteredCallback</code></p>
-<dd>Specifies the list of callbacks that is called when a command is entered in the Command. The callback reason is <code>XmCR_COMMAND_ENTERED</code>. A pointer to an <code>XmCommandCallback</code> structure is passed.</p>
-<dt><code>XmNhistoryItems</code></p>
-<dd>Lists <code>XmString</code> items that make up the contents of the history list. This is the <code>XmNlistItems</code> resource in SelectionBox, renamed for Command. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</p>
-<dt><code>XmNhistoryItemCount</code></p>
-<dd>Specifies the number of <code>XmStrings</code> in <code>XmNhistoryItems</code>. This is the <code>XmNlistItemCount</code> resource in SelectionBox, renamed for Command. The value must not be negative.</p>
-<dt><code>XmNhistoryMaxItems</code></p>
-<dd>Specifies the maximum number of items allowed in the history list. Once this number is reached, an existing list item must be removed before a new item can be added to the list. For each command entered, the first list item is removed from the list, so the new command can be added to the list. The value must be greater than 0 (zero).</p>
-<dt><code>XmNhistoryVisibleItemCount</code></p>
-<dd>Specifies the number of items in the history list that should be visible at one time. In effect, it sets the height (in lines) of the history list window. This is the <code>XmNlistVisibleItemCount</code> resource in SelectionBox, renamed for Command. The value must be greater than 0 (zero). The default is dynamic based on the height of the list.</p>
-<dt><code>XmNpromptString</code></p>
-<dd>Specifies a prompt for the command line. This is the <code>XmNselectionLabelString</code> resource in SelectionBox, renamed for Command. The default may vary depending on the value of the <code>XmNlayoutDirection</code> resource and the locale. In the C locale the default is &gt; (right angle bracket).</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dl>
+<dt><code>XmNcommand</code></dt>
+<dd>Contains the current command-line text. This is the <code>XmNtextString</code> resource in SelectionBox, renamed for Command. This resource can also be modified with <code>XmCommandSetValue</code> and <code>XmCommandAppendValue</code> functions. The command area is a Text widget.</dd>
+<dt><code>XmNcommandChangedCallback</code></dt>
+<dd>Specifies the list of callbacks that is called after each time the value of the command changes. The callback reason is <code>XmCR_COMMAND_CHANGED</code>. This is equivalent to the <code>XmNvalueChangedCallback</code> of the Text widget, except that a pointer to an <code>XmCommandCallbackStructure</code> is passed, and the structure&#8217;s <i>value</i> member contains the <code>XmString</code>.</dd>
+<dt><code>XmNcommandEnteredCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when a command is entered in the Command. The callback reason is <code>XmCR_COMMAND_ENTERED</code>. A pointer to an <code>XmCommandCallback</code> structure is passed.</dd>
+<dt><code>XmNhistoryItems</code></dt>
+<dd>Lists <code>XmString</code> items that make up the contents of the history list. This is the <code>XmNlistItems</code> resource in SelectionBox, renamed for Command. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</dd>
+<dt><code>XmNhistoryItemCount</code></dt>
+<dd>Specifies the number of <code>XmStrings</code> in <code>XmNhistoryItems</code>. This is the <code>XmNlistItemCount</code> resource in SelectionBox, renamed for Command. The value must not be negative.</dd>
+<dt><code>XmNhistoryMaxItems</code></dt>
+<dd>Specifies the maximum number of items allowed in the history list. Once this number is reached, an existing list item must be removed before a new item can be added to the list. For each command entered, the first list item is removed from the list, so the new command can be added to the list. The value must be greater than 0 (zero).</dd>
+<dt><code>XmNhistoryVisibleItemCount</code></dt>
+<dd>Specifies the number of items in the history list that should be visible at one time. In effect, it sets the height (in lines) of the history list window. This is the <code>XmNlistVisibleItemCount</code> resource in SelectionBox, renamed for Command. The value must be greater than 0 (zero). The default is dynamic based on the height of the list.</dd>
+<dt><code>XmNpromptString</code></dt>
+<dd>Specifies a prompt for the command line. This is the <code>XmNselectionLabelString</code> resource in SelectionBox, renamed for Command. The default may vary depending on the value of the <code>XmNlayoutDirection</code> resource and the locale. In the C locale the default is &gt; (right angle bracket).</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Command inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -2596,14 +2596,14 @@ description: "XmCommand — The Command widget class"
  int <i>length</i>;
 } XmCommandCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><i>value</i></p>
-<dd>Specifies the <code>XmString</code> in the CommandArea</p>
-<dt><i>length</i></p>
-<dd>Specifies the size in bytes of the <code>XmString</code> value. This member is obsolete and exists for compatibility with earlier releases.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the <code>XmString</code> in the CommandArea</dd>
+<dt><i>length</i></dt>
+<dd>Specifies the size in bytes of the <code>XmString</code> value. This member is obsolete and exists for compatibility with earlier releases.</dd></dl>
 <h3>Translations</h3>
 <p><code>XmCommand</code> inherits translations from <code>XmSelectionBox</code>.</p>
 <h3>Accelerators</h3>
@@ -2611,29 +2611,29 @@ description: "XmCommand — The Command widget class"
 <h3>Action Routines</h3>
 <p>The <code>XmCommand</code> action routines are:</p>
 <dl COMPACT>
-<dt>SelectionBoxUpOrDown(<code>Previous|Next|First|Last</code>):</p>
-<dd>When called with an argument of <code>Previous</code>, or 0 (zero) for compatibility, selects the previous item in the history list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>Next</code>, or 1 for compatibility, selects the next item in the history list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>First</code>, or 2 for compatibility, selects the first item in the history list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>Last</code>, or 3 for compatibility, selects the last item in the history list and replaces the text with that item.</p>
-<dd>Calls the callbacks for <code>XmNcommandChangedCallback</code>.</dl>
+<dt>SelectionBoxUpOrDown(<code>Previous|Next|First|Last</code>):</dt>
+<dd>When called with an argument of <code>Previous</code>, or 0 (zero) for compatibility, selects the previous item in the history list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>Next</code>, or 1 for compatibility, selects the next item in the history list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>First</code>, or 2 for compatibility, selects the first item in the history list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>Last</code>, or 3 for compatibility, selects the last item in the history list and replaces the text with that item.</dd>
+<dd>Calls the callbacks for <code>XmNcommandChangedCallback</code>.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>The Command widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>If the parent of the Command is a manager, the event is passed to the parent.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Text:</p>
-<dd>Calls the Text widget&#8217;s <code>XmNactivateCallback</code> callbacks. If the text is empty, this action then returns. Otherwise, if the history list has <code>XmNhistoryMaxItems</code> items, it removes the first item in the list. It adds the text to the history list as the last item, clears the text, and calls the <code>XmNcommandEnteredCallback</code> callbacks.</p>
-<dt><code>&lt;Key&gt;</code>&nbsp;<wbr>in Text:</p>
-<dd>When any change is made to the text edit widget, this action calls the callbacks for <code>XmNcommandChangedCallback</code>.</p>
-<dt><code>&lt;BtnDown&gt;</code><code>(2+)</code>&nbsp;<wbr>or&nbsp;<wbr><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in List:</p>
-<dd>Calls the List widget&#8217;s <code>XmNdefaultActionCallback</code> callbacks. If the history list has <code>XmNhistoryMaxItems</code> items, this action removes the first item in the list. It adds the selected List item to the history list as the last item, clears the text, and calls the <code>XmNcommandEnteredCallback</code> callbacks.</p>
-<dt><code>&lt;FocusIn&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNfocusCallback</code>.</p>
-<dt><code>&lt;MapWindow&gt;</code>:</p>
-<dd>When a Command that is the child of a DialogShell is mapped, this action calls the callbacks for <code>XmNmapCallback</code>.</p>
-<dt><code>&lt;UnmapWindow&gt;</code>:</p>
-<dd>When a Command that is the child of a DialogShell is unmapped, this action calls the callbacks for <code>XmNunmapCallback</code>.</dl>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>If the parent of the Command is a manager, the event is passed to the parent.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Text:</dt>
+<dd>Calls the Text widget&#8217;s <code>XmNactivateCallback</code> callbacks. If the text is empty, this action then returns. Otherwise, if the history list has <code>XmNhistoryMaxItems</code> items, it removes the first item in the list. It adds the text to the history list as the last item, clears the text, and calls the <code>XmNcommandEnteredCallback</code> callbacks.</dd>
+<dt><code>&lt;Key&gt;</code>&nbsp;<wbr>in Text:</dt>
+<dd>When any change is made to the text edit widget, this action calls the callbacks for <code>XmNcommandChangedCallback</code>.</dd>
+<dt><code>&lt;BtnDown&gt;</code><code>(2+)</code>&nbsp;<wbr>or&nbsp;<wbr><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in List:</dt>
+<dd>Calls the List widget&#8217;s <code>XmNdefaultActionCallback</code> callbacks. If the history list has <code>XmNhistoryMaxItems</code> items, this action removes the first item in the list. It adds the selected List item to the history list as the last item, clears the text, and calls the <code>XmNcommandEnteredCallback</code> callbacks.</dd>
+<dt><code>&lt;FocusIn&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNfocusCallback</code>.</dd>
+<dt><code>&lt;MapWindow&gt;</code>:</dt>
+<dd>When a Command that is the child of a DialogShell is mapped, this action calls the callbacks for <code>XmNmapCallback</code>.</dd>
+<dt><code>&lt;UnmapWindow&gt;</code>:</dt>
+<dd>When a Command that is the child of a DialogShell is unmapped, this action calls the callbacks for <code>XmNunmapCallback</code>.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

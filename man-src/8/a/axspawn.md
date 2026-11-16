@@ -42,20 +42,20 @@ read-/writable. Has to be owned by the user or uid 0&nbsp;<wbr>(root).<br />
 &nbsp;<wbr>sys:12345678901234567890</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-p DB0FHN or &#8211;pwprompt DB0FHN</code></p>
-<dd>While baycom or md5 password authentication (see above), the password prompt is set to the first argument (DB0FHN in this example). This may be needed for some packet-radio terminal programs for detecting the password prompt properly.</p>
-<dt><code>-c, &#8211;changeuser</code></p>
-<dd>Allow connecting ax25 users to change their username for login. They&#8217;ll be asked for their real login name.</p>
-<dt><code>-e, &#8211;embedded</code></p>
-<dd>Special treatment for axspawn on non-standard conform embedded devices. I.e. openwrt has no true /bin/login: if you use it as a real login program, it raises a security hole.</p>
-<dt><code>-r, &#8211;rootlogin</code></p>
-<dd>Permit login as user root. Cave: only md5 or baycom style is allowed; no plaintext password.</p>
-<dt><code>&#8211;only-md5</code></p>
-<dd>Insist in md5 authentication during login. If no password for the user is found, or it is not md5, then no other login mechanism is granted. This option, in combination with -c and -r, may be a useful configuration for systems where no ax25 user accounts are available, but you as sysop would like to have a login access for your administrative tasks.</p>
-<dt><code>-w, &#8211;wait</code></p>
-<dd>Eats the first line the user sends. This feature is useful if you have TCP VC connects to the same Call+SSID. It is now obsolete, because ax25d is the right place for this and implements this functionality better.</p>
-<dt>Theses are options and not part of the preferences because you _may_ like to have on every interface definition in ax25d.conf (where axspawn is started from) a different behaviour.</p>
-<dd></dl>
+<dt><code>-p DB0FHN or &#8211;pwprompt DB0FHN</code></dt>
+<dd>While baycom or md5 password authentication (see above), the password prompt is set to the first argument (DB0FHN in this example). This may be needed for some packet-radio terminal programs for detecting the password prompt properly.</dd>
+<dt><code>-c, &#8211;changeuser</code></dt>
+<dd>Allow connecting ax25 users to change their username for login. They&#8217;ll be asked for their real login name.</dd>
+<dt><code>-e, &#8211;embedded</code></dt>
+<dd>Special treatment for axspawn on non-standard conform embedded devices. I.e. openwrt has no true /bin/login: if you use it as a real login program, it raises a security hole.</dd>
+<dt><code>-r, &#8211;rootlogin</code></dt>
+<dd>Permit login as user root. Cave: only md5 or baycom style is allowed; no plaintext password.</dd>
+<dt><code>&#8211;only-md5</code></dt>
+<dd>Insist in md5 authentication during login. If no password for the user is found, or it is not md5, then no other login mechanism is granted. This option, in combination with -c and -r, may be a useful configuration for systems where no ax25 user accounts are available, but you as sysop would like to have a login access for your administrative tasks.</dd>
+<dt><code>-w, &#8211;wait</code></dt>
+<dd>Eats the first line the user sends. This feature is useful if you have TCP VC connects to the same Call+SSID. It is now obsolete, because ax25d is the right place for this and implements this functionality better.</dd>
+<dt>Theses are options and not part of the preferences because you _may_ like to have on every interface definition in ax25d.conf (where axspawn is started from) a different behaviour.</dt>
+<dd></dd></dl>
 <h2>Files</h2>
 <pre>/etc/passwd
 <br>

@@ -12,18 +12,18 @@ description: "br2684ctl – RFC1483/2684 Bridge Daemon"
 <p><code>br2684ctl</code> [ <code>-b</code> ] [[ <code>-c&nbsp;<wbr></code><i>n</i> ] [ <code>-e&nbsp;<wbr></code><i>0|1</i> ] [ <code>-p&nbsp;<wbr></code><i>0|1</i> ] [ <code>-s&nbsp;<wbr></code><i>sndbuf</i> ] [ <code>-a&nbsp;<wbr></code><i>[itf].vpi.vci</i> ]] &#8230;</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>-a&nbsp;<wbr></code><i>[itf].vpi.vci</i></p>
-<dd>ATM PVC number, VPI and VCI. (Required)</p>
-<dt><code>-b</code></p>
-<dd>Puts the process in the background.</p>
-<dt><code>-c&nbsp;<wbr></code><i>n</i></p>
-<dd>br2684 interface number such as 0, 1, &#8230; (Required)</p>
-<dt><code>-e&nbsp;<wbr></code><i>0|1</i></p>
-<dd>Encapsulation method: 0=LLC, 1=VC mux (the default is 0 or LLC)</p>
-<dt><code>-p&nbsp;<wbr></code><i>0|1</i></p>
-<dd>Payload method: 0=Routed, 1=Bridged (the default is 1 or Bridged)</p>
-<dt><code>-s&nbsp;<wbr></code><i>sndbuf</i></p>
-<dd>Send buffer size. Default is 8192.</dl>
+<dt><code>-a&nbsp;<wbr></code><i>[itf].vpi.vci</i></dt>
+<dd>ATM PVC number, VPI and VCI. (Required)</dd>
+<dt><code>-b</code></dt>
+<dd>Puts the process in the background.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>n</i></dt>
+<dd>br2684 interface number such as 0, 1, &#8230; (Required)</dd>
+<dt><code>-e&nbsp;<wbr></code><i>0|1</i></dt>
+<dd>Encapsulation method: 0=LLC, 1=VC mux (the default is 0 or LLC)</dd>
+<dt><code>-p&nbsp;<wbr></code><i>0|1</i></dt>
+<dd>Payload method: 0=Routed, 1=Bridged (the default is 1 or Bridged)</dd>
+<dt><code>-s&nbsp;<wbr></code><i>sndbuf</i></dt>
+<dd>Send buffer size. Default is 8192.</dd></dl>
 <h2>Description</h2>
 <p>br2684ctl handles RFC1483/2684 bridged PDUs. This is most often used in ADSL scenarios where <i>usually</i> the subscribers&#8217; ethernet traffic is encapsulated in ATM AAL5 (by bridging ADSL modems) according to RFC2684. The subscriber-side ADSL modem can be external with an ethernet connector or an internal ADSL card in a PC. RFC1483 has been obsoleted by RFC2684. </p>
 <p> For example it is possible to set up your Linux box to handle several ATM PVC&#8217;s with bridged-1483 (sometimes referred as SNAP) encapsulation. The Linux network stack might provide DHCP, IP masquerading, IP firewall services or bridge the Ethernet frames just like it had several ethernet interfaces. In fact it can have several (logical) ethernet interfaces, where ATM is just used as a carrier.</p>

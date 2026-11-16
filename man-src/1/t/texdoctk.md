@@ -18,25 +18,25 @@ description: "texdoctk – GUI for easier access of TeX package and program docu
 <p> a2ps myfile.txt &gt;myfile.ps</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-v</i></p>
-<dd> verbose: enable some viewer messages which are otherwise sent to stderr, as well as some warning popup windows. This can also be set in a configuration file.</p>
-<dt><i>-a</i></p>
-<dd> autoview: autostart viewer if a listbox contains only one item (this will frequently happen in search results). This can also be set in a configuration file.</dl>
+<dt><i>-v</i></dt>
+<dd> verbose: enable some viewer messages which are otherwise sent to stderr, as well as some warning popup windows. This can also be set in a configuration file.</dd>
+<dt><i>-a</i></dt>
+<dd> autoview: autostart viewer if a listbox contains only one item (this will frequently happen in search results). This can also be set in a configuration file.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> The configuration is controlled by the system default configuration file ($TEXMFMAIN)/texdoctk/texdocrc.defaults, most of whose entries can though be overridden by the users&#8217; own optional ~/.texdocrc files and/or command line options.</p>
 <h3>The Settings menu and configuration files</h3>
 <p> The Settings menu is used to change the user-definable settings of <code>texdoctk</code> for the duration of the program call or as new defaults. The latter case is the purpose of the Save button, which generates or rewrites the user&#8217;s own ~/.texdocrc file. The system defaults cannot be edited with the Settings menu.</p>
 <dl>
-<dt>Paths</p>
-<dd> The TEXMF-type paths on the system are reported, and the user can specify the name of the subdirectory of $HOMETEXMF, where the personal documentation is stored.</p>
-<dt>General viewer behaviour</p>
+<dt>Paths</dt>
+<dd> The TEXMF-type paths on the system are reported, and the user can specify the name of the subdirectory of $HOMETEXMF, where the personal documentation is stored.</dd>
+<dt>General viewer behaviour</dt>
 <dd>
 <p> <i>Suppress error messages</i> toggle verbose mode (see option -v); default is off. </p>
 <p> <i>Autostart viewer for one-item listboxes</i> if a listbox contains only one item (see option -a) </p>
 <p> <i>Use text viewer for unknown file format</i> i.e. treat the file as plain text. <code>texdoctk</code> should recognize the usual file formats and also relate names like README to plain text, but some docs may have freely invented names. Default is on; if switched off, trying to view such files will raise an error. The switch does not influence printing: unrecognized formats cannot be printed. </p>
 <p> <i>Change viewer colours</i> using either RGB triplets in the format #rrggbb or the standardized names.</p>
-<dt>DVI/PostScript/PDF/HTML/Plain text</p>
-<dd> For text files, <code>texdoctk</code> provides an own viewer. If this viewer is disabled, but no alternative viewer is specified, <code>texdoctk</code> tries to read the content of the environment variable $PAGER. </p>
+</dd><dt>DVI/PostScript/PDF/HTML/Plain text</dt>
+<dd> For text files, <code>texdoctk</code> provides an own viewer. If this viewer is disabled, but no alternative viewer is specified, <code>texdoctk</code> tries to read the content of the environment variable $PAGER. </dd>
 <p> If you want to print the documentations, you will need converters to turn non-PS files into PostScript. Here are some suggestions: </p>
 <p> dvi-&gt;ps: dvips (is part of teTeX) (<a rel="nofollow" href="http://www.radicaleye.com/dvips.html)">http://www.radicaleye.com/dvips.html)</a> </p>
 <p> pdf-&gt;ps: pdf2ps (<a rel="nofollow" href="http://www.cs.wisc.edu/~ghost)">http://www.cs.wisc.edu/~ghost)</a> or Acrobat Reader (<a rel="nofollow" href="http://www.adobe.com)">http://www.adobe.com)</a> </p>
@@ -57,14 +57,14 @@ description: "texdoctk – GUI for easier access of TeX package and program docu
 <p> The entry for <i>foo</i> will then be appended to the list of entries in the Graphics category. The 18th button can be activated in the same way, but using a new category name; possible entries at the beginning of the database which have not been assigned to a category will be assigned to the default Miscellaneous, making the 18th button active with that label. Note that you cannot have more than 18 categories; if there are more, only the one defined last will appear and be used. </p>
 <p> If the documentation is included in the .sty file instead of a proper documentation file, the optional keywords should start with -?- directly after the semicolon, where ? is 0, 1, 2 or 3; these are flags which indicate in which part of the .sty the instructions are placed and should help <code>texdoctk</code> to extract the documentation from the style and present it without the code, which would normally be of little use.</p>
 <dl>
-<dt>0</p>
-<dd> no specific place, scattered between the code</p>
-<dt>1</p>
-<dd> at end, behind ndinput; some .sty files have well-organized documentation behind the end of the actual code, where TeX doesn&#8217;t see it upon compilation</p>
-<dt>2</p>
-<dd> at beginning, terminated by %%%%%%; in some other cases, some usage information is at the beginning of the .sty as a comment terminated by a line full of %</p>
-<dt>3</p>
-<dd> as 2, but with a blank line as termination</dl>
+<dt>0</dt>
+<dd> no specific place, scattered between the code</dd>
+<dt>1</dt>
+<dd> at end, behind ndinput; some .sty files have well-organized documentation behind the end of the actual code, where TeX doesn&#8217;t see it upon compilation</dd>
+<dt>2</dt>
+<dd> at beginning, terminated by %%%%%%; in some other cases, some usage information is at the beginning of the .sty as a comment terminated by a line full of %</dd>
+<dt>3</dt>
+<dd> as 2, but with a blank line as termination</dd></dl>
 <p> See the system database for plenty of examples. </p>
 <h2>FILES</h2>
 <p> $TEXMFMAIN/texdoctk/texdocrc.defaults system-wide configuration file </p>

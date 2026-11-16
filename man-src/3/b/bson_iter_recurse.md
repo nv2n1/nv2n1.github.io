@@ -17,11 +17,11 @@ bson_iter_recurse (const bson_iter_t *iter,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>child</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>child</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_recurse/">bson_iter_recurse</a>(3)</code> function shall initialize <code>child</code> using the embedded document or array currently observed by <code>iter</code> \&amp;. </p>
 <p> If there was a failure to initialize the <code>iter</code> , false is returned and both <code>iter</code> and <code>child</code> should be considered invalid. </p>

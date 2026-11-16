@@ -22,13 +22,13 @@ Many commands apply to a set of packages:
 
  There are four reserved names for paths that should not be used for packages to be built with the go tool:
 <dl><dt>&bull;
-<dd>&quot;main&quot; denotes the top-level package in a stand-alone executable.
-<dt>&bull;
-<dd>&quot;all&quot; expands to all packages found in all the GOPATH trees. For example, 'go list all' lists all the packages on the local system. When using modules, &quot;all&quot; expands to all packages in the main module and their dependencies, including dependencies needed by tests of any of those.
-<dt>&bull;
-<dd>&quot;std&quot; is like all but expands to just the packages in the standard Go library.
-<dt>&bull;
-<dd>&quot;cmd&quot; expands to the Go repository's commands and their internal libraries.</dl>
+</dt><dd>&quot;main&quot; denotes the top-level package in a stand-alone executable.
+</dd><dt>&bull;
+</dt><dd>&quot;all&quot; expands to all packages found in all the GOPATH trees. For example, 'go list all' lists all the packages on the local system. When using modules, &quot;all&quot; expands to all packages in the main module and their dependencies, including dependencies needed by tests of any of those.
+</dd><dt>&bull;
+</dt><dd>&quot;std&quot; is like all but expands to just the packages in the standard Go library.
+</dd><dt>&bull;
+</dt><dd>&quot;cmd&quot; expands to the Go repository's commands and their internal libraries.</dd></dl>
  
 
  Import paths beginning with &quot;cmd/&quot; only match source code in the Go repository. 

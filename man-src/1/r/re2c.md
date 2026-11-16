@@ -17,7 +17,7 @@ description: "re2c – convert regular expressions to C/C++"
 <p> Given the following code: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 unsigned int stou(const char *s)
 {
@@ -28,3 +28,5 @@ unsigned int stou(const char *s)
         /*!re2c
             re2c:yyfill:enable = 0;
             "
+</dd></dl>
+</code></pre>

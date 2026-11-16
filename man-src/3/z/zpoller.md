@@ -13,22 +13,18 @@ description: "zpoller – trivial socket poller class"
 //  instance, or a zactor_t instance.
 CZMQ_EXPORT zpoller_t *
 zpoller_new(void *reader, ...);
-
 //  Destroy a poller
 CZMQ_EXPORT void
 zpoller_destroy(zpoller_t **self_p);
-
 //  Add a reader to be polled. Returns 0 if OK, -1 on failure. The reader may
 //  be a libzmq void * socket, a zsock_t instance, or a zactor_t instance.
 CZMQ_EXPORT int
 zpoller_add(zpoller_t *self, void *reader);
-
 //  Remove a reader from the poller; returns 0 if OK, -1 on failure. The
 //  reader may be a libzmq void * socket, a zsock_t instance, or a zactor_t
 //  instance.
 CZMQ_EXPORT int
 zpoller_remove(zpoller_t *self, void *reader);
-
 //  Poll the registered readers for I/O, return first reader that has input.
 //  The reader will be a libzmq void * socket, or a zsock_t or zactor_t
 //  instance as specified in zpoller_new/zpoller_add. The timeout should be
@@ -40,24 +36,19 @@ zpoller_remove(zpoller_t *self, void *reader);
 //  zpoller_terminated (). The timeout is in msec.
 CZMQ_EXPORT void *
 zpoller_wait(zpoller_t *self, int timeout);
-
 //  Return true if the last zpoller_wait () call ended because the timeout
 //  expired, without any error.
 CZMQ_EXPORT bool
 zpoller_expired(zpoller_t *self);
-
 //  Return true if the last zpoller_wait () call ended because the process
 //  was interrupted, or the parent context was destroyed.
 CZMQ_EXPORT bool
 zpoller_terminated(zpoller_t *self);
-
 //  Ignore zsys_interrupted flag in this poller. By default, a zpoller_wait will
 //  return immediately if detects zsys_interrupted is set to something other than
 //  zero. Calling zpoller_ignore_interrupts will supress this behavior.
-
 CZMQ_EXPORT void
 zpoller_ignore_interrupts(zpoller_t *self);
-
 //  Self test of this class
 CZMQ_EXPORT void
 zpoller_test(bool verbose);</code></pre>
@@ -79,17 +70,13 @@ zsock_t *bowl = zsock_new(ZMQ_PULL);
 assert(bowl);
 zsock_t *dish = zsock_new(ZMQ_PULL);
 assert(dish);
-
 //  Set-up poller
 zpoller_t *poller = zpoller_new(bowl, dish, NULL);
 assert(poller);
-
 // Add a reader to the existing poller
 rc = zpoller_add(poller, sink);
 assert(rc == 0);
-
 zstr_send(vent, &quot;Hello, World&quot;);
-
 //  We expect a message only on the sink
 zsock_t *which = (zsock_t *)zpoller_wait(poller, -1);
 assert(which == sink);
@@ -98,11 +85,9 @@ assert(zpoller_terminated(poller) == false);
 char *message = zstr_recv(which);
 assert(streq(message, &quot;Hello, World&quot;));
 zstr_free(&amp;message);
-
 //  Stop polling reader
 rc = zpoller_remove(poller, sink);
 assert(rc == 0);
-
 //  Check we can poll an FD
 rc = zsock_connect(bowl, &quot;tcp://127.0.0.1:%d&quot;, port_nbr);
 assert(rc != -1);
@@ -111,7 +96,6 @@ rc = zpoller_add(poller, (void *)&amp;fd);
 assert(rc != -1);
 zstr_send(vent, &quot;Hello again, world&quot;);
 assert(zpoller_wait(poller, 500) == &amp;fd);
-
 // Check whether poller properly ignores zsys_interrupted flag
 // when asked to
 zsys_interrupted = 1;
@@ -121,10 +105,8 @@ zpoller_ignore_interrupts(poller);
 zpoller_wait(poller, 0);
 assert(!zpoller_terminated(poller));
 zsys_interrupted = 0;
-
 //  Destroy poller and sockets
 zpoller_destroy(&amp;poller);
-
 zsock_destroy(&amp;vent);
 zsock_destroy(&amp;sink);
 zsock_destroy(&amp;bowl);
@@ -139,7 +121,8 @@ zsock_destroy(&amp;dish);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

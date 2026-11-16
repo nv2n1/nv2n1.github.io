@@ -15,15 +15,15 @@ pskb_put - add data to the tail of a potentially fragmented buffer
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>start of the buffer to use</dl>
+<dl><dd></dd><dd>start of the buffer to use</dd></dl>
  
 
  <i>tail</i>
-<dl><dd>tail fragment of the buffer to use</dl>
+<dl><dd>tail fragment of the buffer to use</dd></dl>
  
 
  <i>len</i>
-<dl><dd>amount of data to add</dl>
+<dl><dd>amount of data to add</dd></dl>
 
 <h2>Description</h2>
 

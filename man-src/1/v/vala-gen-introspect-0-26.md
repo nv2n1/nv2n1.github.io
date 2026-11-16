@@ -14,13 +14,13 @@ description: "vala-gen-introspect – generate a GI file for GObject and glib ba
 <p><code>vala-gen-introspect</code> is a utility which generates GI files from GObject and glib based packages. It can be used in combination with vapigen(1) to generate an API for Vala, and allow it&#8217;s usage in Vala for compiling to native code. <i>PKGNAME</i> is the pkg-config name of the library and <i>PKGBASE</i> specifies the base directory for that package. </p>
 <h2>Examples</h2>
 <dl COMPACT>
-<dt>After compilation, the following command generates a GI for pango:</p>
-<dd><code>vala-gen-introspect pango packages/pango</code> </p>
+<dt>After compilation, the following command generates a GI for pango:</dt>
+<dd><code>vala-gen-introspect pango packages/pango</code> </dd>
 </dl>
 <h2>Options</h2>
 <dl COMPACT>
-<dt>This command currently takes no command line options.</p>
-<dd></dl>
+<dt>This command currently takes no command line options.</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code>vapigen</code>(1) </p>
 <h2>Author</h2>

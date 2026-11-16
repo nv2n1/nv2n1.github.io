@@ -26,14 +26,14 @@ description: "XmResolvePartOffsets — A function that allows writing of upward-
 <p> The widget defines a variable, of type <code>XmOffsetPtr</code>, to point to the offset record. This can be part of the widget&#8217;s class record or a separate global variable. </p>
 <p> In class initialization, the widget calls <code>XmResolvePartOffsets</code>, passing it a pointer to contain the address of the offset record and the class record. This does several things:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>Adds the superclass (which, by definition, has already been initialized) size field to the part size field</p>
-<dt> &bull;</p>
-<dd>Allocates an array based upon the number of superclasses</p>
-<dt> &bull;</p>
-<dd>Fills in the offsets of all the widget parts with the appropriate values, determined by examining the size fields of all superclass records</p>
-<dt> &bull;</p>
-<dd>Uses the part offset array to modify the offset entries in the resource list to be real offsets, in place</dl>
+<dt> &bull;</dt>
+<dd>Adds the superclass (which, by definition, has already been initialized) size field to the part size field</dd>
+<dt> &bull;</dt>
+<dd>Allocates an array based upon the number of superclasses</dd>
+<dt> &bull;</dt>
+<dd>Fills in the offsets of all the widget parts with the appropriate values, determined by examining the size fields of all superclass records</dd>
+<dt> &bull;</dt>
+<dd>Uses the part offset array to modify the offset entries in the resource list to be real offsets, in place</dd></dl>
 <p> The widget defines a constant that will be the index to its part structure in the offsets array. The value should be 1 greater than the index of the widget&#8217;s superclass. Constants defined for all <code>Xm</code> widgets can be found in <code>XmP.h</code>. </p>
 <pre><tt>#define BarIndex (XmBulletinBIndex + 1)</tt></pre>
 <p>Instead of accessing fields directly, the widget must always go through the offset table. The <code>XmField</code> macro helps you access these fields. Because the <code>XmPartOffset</code> and <code>XmField</code> macros concatenate things together, you must ensure that there is no space after the part argument. For example, the following macros do not work because of the space after the part (Label) argument: </p>
@@ -46,9 +46,9 @@ XmPartOffset(Label, text)</tt></pre>
  offset[BarIndex] + XtOffset(BarPart,xyz)))</tt></pre>
 <p>The parameters for <code>XmResolvePartOffsets</code> are</p>
 <dl COMPACT>
-<dt><i>widget_class</i></p>
-<dd>Specifies the widget class pointer for the created widget</p>
-<dt><i>offset</i></p>
-<dd>Returns the offset record</dl>
+<dt><i>widget_class</i></dt>
+<dd>Specifies the widget class pointer for the created widget</dd>
+<dt><i>offset</i></dt>
+<dd>Returns the offset record</dd></dl>
 <h2>Related Information</h2>
 <p><code><a href="/docs/linux/man/3-xmresolveallpartoffsets/">XmResolveAllPartOffsets</a></code>(3).</p>

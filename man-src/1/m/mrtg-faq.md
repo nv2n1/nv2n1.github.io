@@ -42,5 +42,5 @@ description: "mrtg-faq – How to get help if you have problems with MRTG"
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">AUTHOR</a></p>
-<dd></dl>
+<dt><a href="#lbAK">AUTHOR</a></dt>
+<dd></dd></dl>

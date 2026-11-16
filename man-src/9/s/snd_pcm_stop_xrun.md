@@ -14,7 +14,7 @@ description: "snd_pcm_stop_xrun – stop the running streams as XRUN"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the PCM substream instance</dl>
+</dd><dd>the PCM substream instance</dd></dl>
 <h2>Description</h2>
 <p>This stops the given running substream (and all linked substreams) as XRUN. Unlike <code>snd_pcm_stop</code>, this function takes the substream lock by itself.</p>
 <h2>Return</h2>

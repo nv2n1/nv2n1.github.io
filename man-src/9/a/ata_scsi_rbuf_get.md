@@ -14,13 +14,13 @@ description: "ata_scsi_rbuf_get – Map response buffer."
 <p><i>cmd</i></p>
 <dl>
 <dd>
-<dd>SCSI command containing buffer to be mapped.</dl>
+</dd><dd>SCSI command containing buffer to be mapped.</dd></dl>
 <p> <i>copy_in</i></p>
 <dl>
-<dd>copy in from user buffer</dl>
+<dd>copy in from user buffer</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>unsigned long variable to store irq enable status</dl>
+<dd>unsigned long variable to store irq enable status</dd></dl>
 <h2>Description</h2>
 <p>Prepare buffer for simulated SCSI commands. </p>
 <p> LOCKING: spin_lock_irqsave(ata_scsi_rbuf_lock) on success</p>
@@ -29,5 +29,5 @@ description: "ata_scsi_rbuf_get – Map response buffer."
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

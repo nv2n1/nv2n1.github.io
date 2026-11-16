@@ -14,7 +14,7 @@ description: "ata_dev_classify – determine device type based on ATA-spec signa
 <p><i>tf</i></p>
 <dl>
 <dd>
-<dd>ATA taskfile register set for device to be identified</dl>
+</dd><dd>ATA taskfile register set for device to be identified</dd></dl>
 <h2>Description</h2>
 <p>Determine from taskfile register contents whether a device is ATA or ATAPI, as per &#8220;Signature and persistence&#8221; section of ATA/PI spec (volume 1, sect 5.14). </p>
 <p> LOCKING: None.</p>
@@ -23,5 +23,5 @@ description: "ata_dev_classify – determine device type based on ATA-spec signa
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

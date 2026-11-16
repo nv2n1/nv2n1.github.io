@@ -15,46 +15,46 @@ description: "arctest – ARC Test Suite"
 <p> <code>arctest [options]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;cluster</code>=<i>name</i></p>
-<dd> select one or more computing elements: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</p>
-<dt><code>-g</code>, <code>&#8211;index</code>=<i>name</i></p>
-<dd> select one or more registries: <i>name</i> can be an alias for a single registry, a group of registries or a URL</p>
-<dt><code>-R</code>, <code>&#8211;rejectdiscovery</code>=<i>URL</i></p>
-<dd> skip the service with the given URL during service discovery</p>
-<dt><code>-S</code>, <code>&#8211;submissioninterface</code>=<i>InterfaceName</i></p>
-<dd> only use this interface for submitting (e.g. org.nordugrid.gridftpjob, org.ogf.glue.emies.activitycreation, org.ogf.bes)</p>
-<dt><code>-I</code>, <code>&#8211;infointerface</code>=<i>InterfaceName</i></p>
-<dd> the computing element specified by URL at the command line should be queried using this information interface (possible options: org.nordugrid.ldapng, org.nordugrid.ldapglue2, org.nordugrid.wsrfglue2, org.ogf.glue.emies.resourceinfo)</p>
-<dt><code>-J</code> <i>jobid</i>, <code>&#8211;jobid</code>=<i>jobid</i></p>
-<dd> submits testjob given by the jobid.</p>
-<dt><code>-r</code> <i>time</i>, <code>&#8211;runtime</code>=<i>time</i></p>
-<dd> test job runtime specified in case of the 1st test job.</p>
-<dt><code>-j</code>, <code>&#8211;joblist</code>=<i>filename</i></p>
-<dd> the file storing information about active jobs (default ~/.arc/jobs.xml)</p>
-<dt><code>-o</code>, <code>&#8211;jobids-to-file</code>=<i>filename</i></p>
-<dd> the IDs of the submitted jobs will be appended to this file</p>
-<dt><code>-D</code>, <code>&#8211;dryrun</code></p>
-<dd> submit jobs as dry run (no submission to batch system)</p>
-<dt><code> &#8211;direct</code></p>
-<dd> submit directly &#8211; no resource discovery or matchmaking</p>
-<dt><code>-x</code>, <code>&#8211;dumpdescription</code></p>
-<dd> do not submit &#8211; dump job description in the language accepted by the target</p>
-<dt><code>-E</code>, <code>&#8211;certificate</code></p>
-<dd> prints information about installed user- and CA-certificates</p>
-<dt><code>-P</code>, <code>&#8211;listplugins</code></p>
-<dd> list the available plugins</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></p>
-<dd> timeout in seconds (default 20)</p>
-<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></p>
-<dd> configuration file (default ~/.arc/client.conf)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></p>
-<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</p>
-<dt><code>-b</code>, <code>&#8211;broker</code>=<i>broker</i></p>
-<dd> selected broker: Random (default), FastestQueue or custom</p>
-<dt><code>-v</code>, <code>-version</code></p>
-<dd> print version information</p>
-<dt><code>-h</code>, <code>-help</code></p>
-<dd> print usage information</dl>
+<dt><code>-c</code>, <code>&#8211;cluster</code>=<i>name</i></dt>
+<dd> select one or more computing elements: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</dd>
+<dt><code>-g</code>, <code>&#8211;index</code>=<i>name</i></dt>
+<dd> select one or more registries: <i>name</i> can be an alias for a single registry, a group of registries or a URL</dd>
+<dt><code>-R</code>, <code>&#8211;rejectdiscovery</code>=<i>URL</i></dt>
+<dd> skip the service with the given URL during service discovery</dd>
+<dt><code>-S</code>, <code>&#8211;submissioninterface</code>=<i>InterfaceName</i></dt>
+<dd> only use this interface for submitting (e.g. org.nordugrid.gridftpjob, org.ogf.glue.emies.activitycreation, org.ogf.bes)</dd>
+<dt><code>-I</code>, <code>&#8211;infointerface</code>=<i>InterfaceName</i></dt>
+<dd> the computing element specified by URL at the command line should be queried using this information interface (possible options: org.nordugrid.ldapng, org.nordugrid.ldapglue2, org.nordugrid.wsrfglue2, org.ogf.glue.emies.resourceinfo)</dd>
+<dt><code>-J</code> <i>jobid</i>, <code>&#8211;jobid</code>=<i>jobid</i></dt>
+<dd> submits testjob given by the jobid.</dd>
+<dt><code>-r</code> <i>time</i>, <code>&#8211;runtime</code>=<i>time</i></dt>
+<dd> test job runtime specified in case of the 1st test job.</dd>
+<dt><code>-j</code>, <code>&#8211;joblist</code>=<i>filename</i></dt>
+<dd> the file storing information about active jobs (default ~/.arc/jobs.xml)</dd>
+<dt><code>-o</code>, <code>&#8211;jobids-to-file</code>=<i>filename</i></dt>
+<dd> the IDs of the submitted jobs will be appended to this file</dd>
+<dt><code>-D</code>, <code>&#8211;dryrun</code></dt>
+<dd> submit jobs as dry run (no submission to batch system)</dd>
+<dt><code> &#8211;direct</code></dt>
+<dd> submit directly &#8211; no resource discovery or matchmaking</dd>
+<dt><code>-x</code>, <code>&#8211;dumpdescription</code></dt>
+<dd> do not submit &#8211; dump job description in the language accepted by the target</dd>
+<dt><code>-E</code>, <code>&#8211;certificate</code></dt>
+<dd> prints information about installed user- and CA-certificates</dd>
+<dt><code>-P</code>, <code>&#8211;listplugins</code></dt>
+<dd> list the available plugins</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
+<dd> timeout in seconds (default 20)</dd>
+<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></dt>
+<dd> configuration file (default ~/.arc/client.conf)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></dt>
+<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</dd>
+<dt><code>-b</code>, <code>&#8211;broker</code>=<i>broker</i></dt>
+<dd> selected broker: Random (default), FastestQueue or custom</dd>
+<dt><code>-v</code>, <code>-version</code></dt>
+<dd> print version information</dd>
+<dt><code>-h</code>, <code>-help</code></dt>
+<dd> print usage information</dd></dl>
 <h2>EXTENDED DESCRIPTION</h2>
 <p> The <code>arctest</code> command is used for basic testing of ARC client and server installation through submitting various test jobs. It can also print basic information about user&#8217;s certificate. The command is complementary to <code>arcinfo</code> and <code>arcproxy -I</code> </p>
 <p> The test jobs available in this version of arctest are: </p>

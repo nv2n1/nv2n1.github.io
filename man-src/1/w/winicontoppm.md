@@ -19,14 +19,14 @@ description: "winicontoppm – convert a Windows .ico file into 1 or more portab
 <p> <code>winicontoppm</code> can convert images with 1, 4, 8, 24 or 32 bits per pixel (bpp). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-writeands</code></p>
-<dd> For each icon written, also write the &#8216;and&#8217; (transparancy) mask as a seperate PBM file. It&#8217;s name is of the form <i>ppmdestfile</i><code>_and.pbm</code> or <i>ppmdestfile</i><code>_and_1.pbm</code><i></i>.</p>
-<dt><code>-allicons</code></p>
-<dd> Extract all images from the .ico file.</p>
-<dt><code>-bestqual</code></p>
-<dd> Extract only the best quality (largest, then highest bpp) image from the .ico file.</p>
-<dt><code>-multippm</code></p>
-<dd> Write all ppms to a single file. </p>
+<dt><code>-writeands</code></dt>
+<dd> For each icon written, also write the &#8216;and&#8217; (transparancy) mask as a seperate PBM file. It&#8217;s name is of the form <i>ppmdestfile</i><code>_and.pbm</code> or <i>ppmdestfile</i><code>_and_1.pbm</code><i></i>.</dd>
+<dt><code>-allicons</code></dt>
+<dd> Extract all images from the .ico file.</dd>
+<dt><code>-bestqual</code></dt>
+<dd> Extract only the best quality (largest, then highest bpp) image from the .ico file.</dd>
+<dt><code>-multippm</code></dt>
+<dd> Write all ppms to a single file. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmtowinicon/">ppmtowinicon</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>

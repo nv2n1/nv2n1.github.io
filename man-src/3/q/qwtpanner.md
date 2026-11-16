@@ -58,92 +58,92 @@ description: "QwtPanner –"
 <p>Creates an panner that is enabled for the left mouse button. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget to be panned</dl>
+<dd><i>parent</i> Parent widget to be panned</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QBitmap QwtPanner::contentsMask () const [protected], [virtual]</h3>
 <p>Calculate a mask for the contents of the panned widget. Sometimes only parts of the contents of a widget should be panned. F.e. for a widget with a styled background with rounded borders only the area inside of the border should be panned. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An empty bitmap, indicating no mask</dl>
+<dd>An empty bitmap, indicating no mask</dd></dl>
 <p> Reimplemented in <code>QwtPlotPanner</code>.</p>
 <h3>const QCursor QwtPanner::cursor () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Cursor that is active while panning</dl>
+<dd>Cursor that is active while panning</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCursor()</code></dl>
+<dd><code>setCursor()</code></dd></dl>
 <h3>bool QwtPanner::eventFilter (QObject *object, QEvent *event) [virtual]</h3>
 <p>Event filter. When <code>isEnabled()</code> is true mouse events of the observed widget are filtered. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>object</i> Object to be filtered<br />
- <i>event</i> Event</dl>
+ <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Always false, beside for paint events for the parent widget.</dl>
+<dd>Always false, beside for paint events for the parent widget.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code></dl>
+<dd><code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code></dd></dl>
 <h3>QPixmap QwtPanner::grab () const [protected], [virtual]</h3>
 <p>Grab the widget into a pixmap. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Grabbed pixmap</dl>
+<dd>Grabbed pixmap</dd></dl>
 <p> Reimplemented in <code>QwtPlotPanner</code>.</p>
 <h3>bool QwtPanner::isEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true when enabled, false otherwise</dl>
+<dd>true when enabled, false otherwise</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setEnabled</code>, <code>eventFilter()</code></dl>
+<dd><code>setEnabled</code>, <code>eventFilter()</code></dd></dl>
 <h3>bool QwtPanner::isOrientationEnabled (Qt::Orientationo) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True if an orientation is enabled</dl>
+<dd>True if an orientation is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>orientations()</code>, <code>setOrientations()</code></dl>
+<dd><code>orientations()</code>, <code>setOrientations()</code></dd></dl>
 <h3>void QwtPanner::moved (intdx, intdy) [signal]</h3>
 <p>Signal emitted, while the widget moved, but panning is not finished. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>dx</i> Offset in horizontal direction<br />
- <i>dy</i> Offset in vertical direction</dl>
+ <i>dy</i> Offset in vertical direction</dd></dl>
 <h3>void QwtPanner::paintEvent (QPaintEvent *pe) [protected], [virtual]</h3>
 <p>Paint event. Repaint the grabbed pixmap on its current position and fill the empty spaces by the background of the parent widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pe</i> Paint event</dl>
+<dd><i>pe</i> Paint event</dd></dl>
 <h3>void QwtPanner::panned (intdx, intdy) [signal]</h3>
 <p>Signal emitted, when panning is done </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>dx</i> Offset in horizontal direction<br />
- <i>dy</i> Offset in vertical direction</dl>
+ <i>dy</i> Offset in vertical direction</dd></dl>
 <h3>void QwtPanner::setAbortKey (intkey, Qt::KeyboardModifiersmodifiers = Qt::NoModifier)</h3>
 <p>Change the abort key The defaults are Qt::Key_Escape and Qt::NoModifiers </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> Key ( See Qt::Keycode )<br />
- <i>modifiers</i> Keyboard modifiers</dl>
+ <i>modifiers</i> Keyboard modifiers</dd></dl>
 <h3>void QwtPanner::setCursor (const QCursor &amp;cursor)</h3>
 <p>Change the cursor, that is active while panning The default is the cursor of the parent widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cursor</i> New cursor</dl>
+<dd><i>cursor</i> New cursor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCursor()</code></dl>
+<dd><code>setCursor()</code></dd></dl>
 <h3>void QwtPanner::setEnabled (boolon)</h3>
 <p>En/disable the panner. When enabled is true an event filter is installed for the observed widget, otherwise the event filter is removed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> true or false</dl>
+<dd><i>on</i> true or false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isEnabled()</code>, <code>eventFilter()</code></dl>
+<dd><code>isEnabled()</code>, <code>eventFilter()</code></dd></dl>
 <h3>void QwtPanner::setMouseButton (Qt::MouseButtonbutton, Qt::KeyboardModifiersmodifiers = Qt::NoModifier)</h3>
 <p>Change the mouse button and modifiers used for panning The defaults are Qt::LeftButton and Qt::NoModifier</p>
 <h3>void QwtPanner::setOrientations (Qt::Orientationso)</h3>
@@ -153,41 +153,41 @@ description: "QwtPanner –"
 <p>Handle a key press event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>keyEvent</i> Key event</dl>
+<dd><i>keyEvent</i> Key event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dl>
+<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dd></dl>
 <h3>void QwtPanner::widgetKeyReleaseEvent (QKeyEvent *keyEvent) [protected], [virtual]</h3>
 <p>Handle a key release event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>keyEvent</i> Key event</dl>
+<dd><i>keyEvent</i> Key event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dl>
+<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dd></dl>
 <h3>void QwtPanner::widgetMouseMoveEvent (QMouseEvent *mouseEvent) [protected], [virtual]</h3>
 <p>Handle a mouse move event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mouseEvent</i> Mouse event</dl>
+<dd><i>mouseEvent</i> Mouse event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code></dl>
+<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code></dd></dl>
 <h3>void QwtPanner::widgetMousePressEvent (QMouseEvent *mouseEvent) [protected], [virtual]</h3>
 <p>Handle a mouse press event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mouseEvent</i> Mouse event</dl>
+<dd><i>mouseEvent</i> Mouse event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code>,</dl>
+<dd><code>eventFilter()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code>,</dd></dl>
 <h3>void QwtPanner::widgetMouseReleaseEvent (QMouseEvent *mouseEvent) [protected], [virtual]</h3>
 <p>Handle a mouse release event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mouseEvent</i> Mouse event</dl>
+<dd><i>mouseEvent</i> Mouse event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseMoveEvent()</code>,</dl>
+<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseMoveEvent()</code>,</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -18,5 +18,5 @@ description: "mlx5dv – Direct verbs for mlx5 devices This is low level access 
 <p><code>ibv_post_send</code>(3), <code>verbs</code>(7), <code><a href="/docs/linux/man/3-mlx5dv_is_supported/">mlx5dv_is_supported</a>(3)</code> </p>
 <h2>Authors</h2>
 <dl>
-<dt>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</p>
-<dd></dl>
+<dt>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</dt>
+<dd></dd></dl>

@@ -55,39 +55,39 @@ description: "insserv – boot sequence organizer using LSB init.d script depend
 <h2>Options</h2>
 <p>Currently there exists nine options for <code>insserv</code>.</p>
 <dl>
-<dt><code>-v</code>,&nbsp;<wbr><code>&#8211;verbose</code></p>
-<dd>Write out what is currently going on.</p>
-<dt><code>-c&nbsp;<wbr>&lt;config&gt;</code>,&nbsp;<wbr><code>&#8211;config&nbsp;<wbr>&lt;config&gt;</code></p>
-<dd>Specify path to the insserv.conf file and the insserv.conf.d directory. Useful for testing.</p>
-<dt><code>-o&nbsp;<wbr>&lt;path&gt;</code>,&nbsp;<wbr><code>&#8211;override&nbsp;<wbr>&lt;path&gt;</code></p>
-<dd>LSB comment headers found in this path will override existing LSB comment headers of scripts in the init.d directory (default path is <i>/etc/insserv/overrides/</i>).</p>
-<dt><code>-p&nbsp;<wbr>&lt;path&gt;</code>,&nbsp;<wbr><code>&#8211;path&nbsp;<wbr>&lt;path&gt;</code></p>
-<dd>Specify path to init.d directory. Useful for testing.</p>
-<dt><code>-n</code>,&nbsp;<wbr><code>&#8211;dryrun</code></p>
-<dd>Do not update symlinks.</p>
-<dt><code>-r</code>,&nbsp;<wbr><code>&#8211;remove</code></p>
-<dd>Remove the listed scripts from all runlevels.</p>
-<dt><code>-d</code>,&nbsp;<wbr><code>&#8211;default</code></p>
-<dd>Use default runlevels as defined in the scripts. This may restore an edited runlevel link scheme.</p>
-<dt><code>-f</code>,&nbsp;<wbr><code>&#8211;force</code></p>
-<dd>Ignore if a required service is missed. Beside this if start and or stop levels are specified on the command line the default levels of the script will be ignored.</p>
-<dt><code>-u&nbsp;<wbr>&lt;path&gt;</code>,&nbsp;<wbr><code>&#8211;upstart-job&nbsp;<wbr>&lt;path&gt;</code></p>
-<dd>Path to replace existing upstart job path. (default path is <i>/lib/init/upstart-job</i>).</p>
-<dt><code>-s</code>,&nbsp;<wbr><code>&#8211;showall</code></p>
-<dd>Output runlevel and sequence information. Do not update symlinks.</p>
-<dt><code>-h</code>,&nbsp;<wbr><code>&#8211;help</code></p>
-<dd>Print out short usage message.</dl>
+<dt><code>-v</code>,&nbsp;<wbr><code>&#8211;verbose</code></dt>
+<dd>Write out what is currently going on.</dd>
+<dt><code>-c&nbsp;<wbr>&lt;config&gt;</code>,&nbsp;<wbr><code>&#8211;config&nbsp;<wbr>&lt;config&gt;</code></dt>
+<dd>Specify path to the insserv.conf file and the insserv.conf.d directory. Useful for testing.</dd>
+<dt><code>-o&nbsp;<wbr>&lt;path&gt;</code>,&nbsp;<wbr><code>&#8211;override&nbsp;<wbr>&lt;path&gt;</code></dt>
+<dd>LSB comment headers found in this path will override existing LSB comment headers of scripts in the init.d directory (default path is <i>/etc/insserv/overrides/</i>).</dd>
+<dt><code>-p&nbsp;<wbr>&lt;path&gt;</code>,&nbsp;<wbr><code>&#8211;path&nbsp;<wbr>&lt;path&gt;</code></dt>
+<dd>Specify path to init.d directory. Useful for testing.</dd>
+<dt><code>-n</code>,&nbsp;<wbr><code>&#8211;dryrun</code></dt>
+<dd>Do not update symlinks.</dd>
+<dt><code>-r</code>,&nbsp;<wbr><code>&#8211;remove</code></dt>
+<dd>Remove the listed scripts from all runlevels.</dd>
+<dt><code>-d</code>,&nbsp;<wbr><code>&#8211;default</code></dt>
+<dd>Use default runlevels as defined in the scripts. This may restore an edited runlevel link scheme.</dd>
+<dt><code>-f</code>,&nbsp;<wbr><code>&#8211;force</code></dt>
+<dd>Ignore if a required service is missed. Beside this if start and or stop levels are specified on the command line the default levels of the script will be ignored.</dd>
+<dt><code>-u&nbsp;<wbr>&lt;path&gt;</code>,&nbsp;<wbr><code>&#8211;upstart-job&nbsp;<wbr>&lt;path&gt;</code></dt>
+<dd>Path to replace existing upstart job path. (default path is <i>/lib/init/upstart-job</i>).</dd>
+<dt><code>-s</code>,&nbsp;<wbr><code>&#8211;showall</code></dt>
+<dd>Output runlevel and sequence information. Do not update symlinks.</dd>
+<dt><code>-h</code>,&nbsp;<wbr><code>&#8211;help</code></dt>
+<dd>Print out short usage message.</dd></dl>
 <p> But you may use the argument syntax described in the following section.</p>
 <h2>Arguments</h2>
 <dl>
-<dt>[[<i>/</i>]<i>path/to/init.d/</i>]</p>
-<dd>Relative or absolute path to the init scripts base directory. This defaults to <i>/etc/init.d/</i> in compliance with the LSB specification. In this case <code>insserv</code> does not add or remove a script to the runlevels declared in the script headers, but may re-order the runlevels if the order of the currently enabled scripts has changed (see option <code>-d</code>). Note that if a relative path is used <code>insserv</code> has to be called from the root directory.</p>
-<dt>[[<i>/</i>]<i>path/to/init.d/</i>]<i>script &#8230;</i></p>
-<dd>List of scripts which have to be added to the runlevels. If a path is used it should point to the absolute or relative location of the boot scripts. <code>insserv</code> checks for the existence of these scripts. For the runlevels the information found in the script is used.</p>
-<dt>[[<i>/</i>]<i>path/to/init.d/</i>]<i>script</i>[<i>,start=&lt;lvl1,lvl2,&#8230;&gt;</i>]</p>
-<dd>List of scripts which have to be added to the specified runlevels to be started with. You may use this extension to override the default values for start and stop runlevels of the script. Note that <code>lvl1</code>,&nbsp;<wbr><code>lvl2</code>, &#8230; are the known runlevels explained above. The extension <i>,stop=&lt;lvl1,lvl2,&#8230;&gt;</i> is also possible.</p>
-<dt><code>-r</code>&nbsp;<wbr>[[<i>/</i>]<i>path/to/init.d/</i>]<i>script &#8230;</i></p>
-<dd>List of scripts which should be removed from the runlevels. If a path is used it should point to the absolute or relative location of the boot scripts. <code>insserv</code> checks for the existence of these scripts.</dl>
+<dt>[[<i>/</i>]<i>path/to/init.d/</i>]</dt>
+<dd>Relative or absolute path to the init scripts base directory. This defaults to <i>/etc/init.d/</i> in compliance with the LSB specification. In this case <code>insserv</code> does not add or remove a script to the runlevels declared in the script headers, but may re-order the runlevels if the order of the currently enabled scripts has changed (see option <code>-d</code>). Note that if a relative path is used <code>insserv</code> has to be called from the root directory.</dd>
+<dt>[[<i>/</i>]<i>path/to/init.d/</i>]<i>script &#8230;</i></dt>
+<dd>List of scripts which have to be added to the runlevels. If a path is used it should point to the absolute or relative location of the boot scripts. <code>insserv</code> checks for the existence of these scripts. For the runlevels the information found in the script is used.</dd>
+<dt>[[<i>/</i>]<i>path/to/init.d/</i>]<i>script</i>[<i>,start=&lt;lvl1,lvl2,&#8230;&gt;</i>]</dt>
+<dd>List of scripts which have to be added to the specified runlevels to be started with. You may use this extension to override the default values for start and stop runlevels of the script. Note that <code>lvl1</code>,&nbsp;<wbr><code>lvl2</code>, &#8230; are the known runlevels explained above. The extension <i>,stop=&lt;lvl1,lvl2,&#8230;&gt;</i> is also possible.</dd>
+<dt><code>-r</code>&nbsp;<wbr>[[<i>/</i>]<i>path/to/init.d/</i>]<i>script &#8230;</i></dt>
+<dd>List of scripts which should be removed from the runlevels. If a path is used it should point to the absolute or relative location of the boot scripts. <code>insserv</code> checks for the existence of these scripts.</dd></dl>
 <h2>Overrides</h2>
 <p>Beside using the extensions <i>,start=&lt;lvl1,lvl2,&#8230;&gt;</i> and <i>,stop=&lt;lvl1,lvl2,&#8230;&gt;</i> it is possible to use override files replace a LSB comment header or simple provide a missing LSB comment header. This can be done by placing a file with the new LSB comment header using the same name as the boot or init script in the directory <i>/etc/insserv/overrides/</i>. For third party boot scripts without LSB header it is possible to add a file with the same name in the directory <i>/usr/share/insserv/overrides/</i> to make them completely LSB compliant.</p>
 <h2>Upstart Job Compatibility</h2>
@@ -96,14 +96,14 @@ description: "insserv – boot sequence organizer using LSB init.d script depend
 <p>The exit codes have the following conditions:</p>
 <dl>
 <dd>
-<dl>
-<dt>0</p>
-<dd>Service was successfully installed or removed</p>
-<dt>1</p>
-<dd>Service was not installed or removed</dl>
+</dd><dl>
+<dt>0</dt>
+<dd>Service was successfully installed or removed</dd>
+<dt>1</dt>
+<dd>Service was not installed or removed</dd></dl>
 </dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <h2>Note</h2>
 <p>Please be aware that the following patterns of boot script file names will be not accepted by <code>insserv:</code> </p>
 <pre> *.dpkg*
@@ -124,14 +124,14 @@ description: "insserv – boot sequence organizer using LSB init.d script depend
 <p>Boot scripts sometimes lack a LSB comment header. Contact a package maintainer or developer of the software which provides the script to have a LSB comment header added to it.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/insserv.conf</i></p>
-<dd>configuration file for <code>insserv</code> which defines the LSB System Facilities.</p>
-<dt><i>/etc/insserv.conf.d/</i></p>
-<dd>directory for further configuration files for declaring LSB System Facilities.</p>
-<dt><i>/etc/insserv/overrides/</i></p>
-<dd>path to replace existing LSB comment headers with the comment headers found in this path.</p>
-<dt><i>/etc/init.d/</i></p>
-<dd>path to the init script base directory as required by the Linux Standard Base Specification (LSB).</dl>
+<dt><i>/etc/insserv.conf</i></dt>
+<dd>configuration file for <code>insserv</code> which defines the LSB System Facilities.</dd>
+<dt><i>/etc/insserv.conf.d/</i></dt>
+<dd>directory for further configuration files for declaring LSB System Facilities.</dd>
+<dt><i>/etc/insserv/overrides/</i></dt>
+<dd>path to replace existing LSB comment headers with the comment headers found in this path.</dd>
+<dt><i>/etc/init.d/</i></dt>
+<dd>path to the init script base directory as required by the Linux Standard Base Specification (LSB).</dd></dl>
 <p> <i>/etc/init.d/.depend.boot</i>,<br />
  <i>/etc/init.d/.depend.start</i>,<br />
  <i>/etc/init.d/.depend.stop</i> The <code><a href="/docs/linux/man/1-make/">make</a></code>(1) like dependency files produced by <code>insserv</code> for <i>booting</i>, <i>starting</i>, and <i>stopping</i> with the help of <code><a href="/docs/linux/man/8-startpar/">startpar</a></code>(8).</p>

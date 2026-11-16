@@ -14,7 +14,7 @@ description: "ata_scsi_rw_xlat – Translate SCSI r/w command into an ATA one"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Storage for translated ATA taskfile</dl>
+</dd><dd>Storage for translated ATA taskfile</dd></dl>
 <h2>Description</h2>
 <p>Converts any of six SCSI read/write commands into the ATA counterpart, including starting sector (LBA), sector count, and taking into account the device&#8217;s LBA48 support. </p>
 <p> Commands <code>READ_6</code>, <code>READ_10</code>, <code>READ_16</code>, <code>WRITE_6</code>, <code>WRITE_10</code>, and <code>WRITE_16</code> are currently supported. </p>
@@ -24,5 +24,5 @@ description: "ata_scsi_rw_xlat – Translate SCSI r/w command into an ATA one"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

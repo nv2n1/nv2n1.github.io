@@ -11,62 +11,26 @@ description: "sc::RefSCDimension –"
 <p> The <code>RefSCDimension</code> class is a smart pointer to an <code>SCDimension</code> specialization.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;dim.h&gt;</code></pre>
 <p> Inherits <code>Ref&lt; SCDimension &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>RefSCDimension ()
-
-
 Initializes the dimension pointer to 0.
-
-
 RefSCDimension (const RefSCDimension &amp;d)
-
-
 Make this and d refer to the same SCDimension.
-
-
 RefSCDimension (SCDimension *d)
-
-
 Make this refer to d.
-
-
 RefSCDimension &amp; operator= (SCDimension *d)
-
-
 Make this refer to d.
-
-
 RefSCDimension &amp; operator&lt;&lt; (RefCount *)
-
-
 Assigns to the given base class pointer using dynamic_cast.
-
-
 RefSCDimension &amp; operator&lt;&lt; (const RefBase &amp;)
-
-
 Assignment to the object that a references using dynamic_cast.
-
-
 RefSCDimension &amp; operator= (const RefSCDimension &amp;d)
-
-
 Make this and d refer to the same SCDimension.
-
-
 operator int () const
-
-
 Return the dimension.
-
-
 int n () const
-
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>RefSCDimension</code> class is a smart pointer to an <code>SCDimension</code> specialization.</p>

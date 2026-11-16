@@ -10,12 +10,12 @@ description: "XGrabServer, XUngrabServer – grab the server"
 <p>XGrabServer, XUngrabServer &#8211; grab the server </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XGrabServer(Display *<i>display</i>);</p>
-<dd>int XUngrabServer(Display *<i>display</i>);</dl>
+<dd>int XGrabServer(Display *<i>display</i>);</dd>
+<dd>int XUngrabServer(Display *<i>display</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XGrabServer</code> function disables processing of requests and close downs on all other connections than the one this request arrived on. You should not grab the X server any more than is absolutely necessary. </p>
 <p> The <code>XUngrabServer</code> function restarts processing of requests and close downs on other connections. You should avoid grabbing the X server as much as possible.</p>

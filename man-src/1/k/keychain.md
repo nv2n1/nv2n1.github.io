@@ -18,81 +18,76 @@ description: "keychain – re-use ssh-agent and/or gpg-agent between logins"
 <p> keychain supports most UNIX-like operating systems, including Cygwin. It works with Bourne-compatible, csh-compatible and fish shells.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;agents</code> <i>list</i></p>
-<dd> Start the agents listed. By default keychain will build the list automatically based on the existence of ssh-agent and/or gpg-agent on the system. The list should be comma-separated, for example &#8220;gpg,ssh&#8221;</p>
-<dt><code>&#8211;attempts</code> <i>num</i></p>
-<dd> Try num times to add keys before giving up. The default is 1.</p>
-<dt><code>&#8211;clear</code></p>
-<dd> Delete all of ssh-agent&#8217;s keys. Typically this is used in .bash_profile. The theory behind this is that keychain should assume that you are an intruder until proven otherwise. However, while this option increases security, it still allows your cron jobs to use your ssh keys when you&#8217;re logged out.</p>
-<dt><code>&#8211;confirm</code></p>
-<dd> Keys are subject to interactive confirmation by the <font SIZE="-1">SSH_ASKPASS</font> program before being used for authentication. See the -c option for <i><a href="/docs/linux/man/1-ssh-add/">ssh-add</a></i>(1).</p>
-<dt><code>&#8211;dir</code> <i>dirname</i></p>
-<dd> Keychain will use dirname rather than <tt>$HOME</tt>/.keychain</p>
-<dt><code>&#8211;eval</code></p>
-<dd> Keychain will print lines to be evaluated in the shell on stdout. It respects the <font SIZE="-1">SHELL</font> environment variable to determine if Bourne shell or C shell output is expected.</p>
-<dt><code>&#8211;env</code> <i>filename</i></p>
-<dd> After parsing options, keychain will load additional environment settings from &#8220;filename&#8221;. By default, if &#8220;&#8211;env&#8221; is not given, then keychain will attempt to load from ~/.keychain/[hostname]-env or alternatively ~/.keychain/env. The purpose of this file is to override settings such as <font SIZE="-1">PATH</font>, in case ssh is stored in a non-standard place.</p>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show help that looks remarkably like this man-page.</p>
-<dt><code>&#8211;host</code> <i>name</i></p>
-<dd> Set alternate hostname for creation of pidfiles</p>
-<dt><code>&#8211;ignore-missing</code></p>
-<dd> Don&#8217;t warn if some keys on the command-line can&#8217;t be found. This is useful for situations where you have a shared .bash_profile, but your keys might not be available on every machine where keychain is run.</p>
-<dt><code>&#8211;inherit</code> <i>which</i></p>
-<dd> Attempt to inherit agent variables from the environment. This can be useful in a variety of circumstances, for example when ssh-agent is started by gdm. The following values are valid for &#8220;which&#8221;:</p>
+<dt><code>&#8211;agents</code> <i>list</i></dt>
+<dd> Start the agents listed. By default keychain will build the list automatically based on the existence of ssh-agent and/or gpg-agent on the system. The list should be comma-separated, for example &#8220;gpg,ssh&#8221;</dd>
+<dt><code>&#8211;attempts</code> <i>num</i></dt>
+<dd> Try num times to add keys before giving up. The default is 1.</dd>
+<dt><code>&#8211;clear</code></dt>
+<dd> Delete all of ssh-agent&#8217;s keys. Typically this is used in .bash_profile. The theory behind this is that keychain should assume that you are an intruder until proven otherwise. However, while this option increases security, it still allows your cron jobs to use your ssh keys when you&#8217;re logged out.</dd>
+<dt><code>&#8211;confirm</code></dt>
+<dd> Keys are subject to interactive confirmation by the <font SIZE="-1">SSH_ASKPASS</font> program before being used for authentication. See the -c option for <i><a href="/docs/linux/man/1-ssh-add/">ssh-add</a></i>(1).</dd>
+<dt><code>&#8211;dir</code> <i>dirname</i></dt>
+<dd> Keychain will use dirname rather than <tt>$HOME</tt>/.keychain</dd>
+<dt><code>&#8211;eval</code></dt>
+<dd> Keychain will print lines to be evaluated in the shell on stdout. It respects the <font SIZE="-1">SHELL</font> environment variable to determine if Bourne shell or C shell output is expected.</dd>
+<dt><code>&#8211;env</code> <i>filename</i></dt>
+<dd> After parsing options, keychain will load additional environment settings from &#8220;filename&#8221;. By default, if &#8220;&#8211;env&#8221; is not given, then keychain will attempt to load from ~/.keychain/[hostname]-env or alternatively ~/.keychain/env. The purpose of this file is to override settings such as <font SIZE="-1">PATH</font>, in case ssh is stored in a non-standard place.</dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show help that looks remarkably like this man-page.</dd>
+<dt><code>&#8211;host</code> <i>name</i></dt>
+<dd> Set alternate hostname for creation of pidfiles</dd>
+<dt><code>&#8211;ignore-missing</code></dt>
+<dd> Don&#8217;t warn if some keys on the command-line can&#8217;t be found. This is useful for situations where you have a shared .bash_profile, but your keys might not be available on every machine where keychain is run.</dd>
+<dt><code>&#8211;inherit</code> <i>which</i></dt>
+<dd> Attempt to inherit agent variables from the environment. This can be useful in a variety of circumstances, for example when ssh-agent is started by gdm. The following values are valid for &#8220;which&#8221;:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>local</code></p>
-<dd> Inherit when a pid (e.g. <font SIZE="-1">SSH_AGENT_PID</font>) is set in the environment. This disallows inheriting a forwarded agent.</p>
-<dt><code>any</code></p>
-<dd> Inherit when a sock (e.g. <font SIZE="-1">SSH_AUTH_SOCK</font>) is set in the environment. This allows inheriting a forwarded agent.</p>
-<dt><code>local-once</code></p>
-<dd> Same as &#8220;local&#8221;, but only inherit if keychain isn&#8217;t already providing an agent.</p>
-<dt><code>any-once</code></p>
-<dd> Same as &#8220;any&#8221;, but only inherit if keychain isn&#8217;t already providing an agent.</dl>
+<dt><code>local</code></dt>
+<dd> Inherit when a pid (e.g. <font SIZE="-1">SSH_AGENT_PID</font>) is set in the environment. This disallows inheriting a forwarded agent.</dd>
+<dt><code>any</code></dt>
+<dd> Inherit when a sock (e.g. <font SIZE="-1">SSH_AUTH_SOCK</font>) is set in the environment. This allows inheriting a forwarded agent.</dd>
+<dt><code>local-once</code></dt>
+<dd> Same as &#8220;local&#8221;, but only inherit if keychain isn&#8217;t already providing an agent.</dd>
+<dt><code>any-once</code></dt>
+<dd> Same as &#8220;any&#8221;, but only inherit if keychain isn&#8217;t already providing an agent.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> By default, keychain-2.5.0 and later will behave as if &#8220;&#8211;inherit local-once&#8221; is specified. You should specify &#8220;&#8211;noinherit&#8221; if you want the older behavior.</dl>
-<dt><code>&#8211;lockwait</code> <i>seconds</i></p>
-<dd> How long to wait for the lock to become available. Defaults to 30 seconds. -1 indicates to wait forever.</p>
-<dt><code>&#8211;noask</code></p>
-<dd> This option tells keychain do everything it normally does (ensure ssh-agent is running, set up the ~/.keychain/[hostname]-{c}sh files) except that it will not prompt you to add any of the keys you specified if they haven&#8217;t yet been added to ssh-agent.</p>
-<dt><code>&#8211;nocolor</code></p>
-<dd> Disable color hilighting for non ANSI-compatible terms.</p>
-<dt><code>&#8211;nogui</code></p>
-<dd> Don&#8217;t honor <font SIZE="-1">SSH_ASKPASS</font>, if it is set. This will cause ssh-add to prompt on the terminal instead of using a graphical program.</p>
-<dt><code>&#8211;noinherit</code></p>
-<dd> Don&#8217;t inherit any agent processes, overriding the default &#8220;&#8211;inherit local-once&#8221;</p>
-<dt><code>&#8211;nolock</code></p>
-<dd> Don&#8217;t attempt to use a lockfile while manipulating files, pids and keys.</p>
-<dt><code>-k &#8211;stop</code> <i>which</i></p>
-<dd> Kill currently running agent processes. The following values are valid for &#8220;which&#8221;:</p>
+</dt><dd>
+<p> By default, keychain-2.5.0 and later will behave as if &#8220;&#8211;inherit local-once&#8221; is specified. You should specify &#8220;&#8211;noinherit&#8221; if you want the older behavior.</dd></dl>
+<dt><code>&#8211;lockwait</code> <i>seconds</i></dt>
+<dd> How long to wait for the lock to become available. Defaults to 30 seconds. -1 indicates to wait forever.</dd>
+<dt><code>&#8211;noask</code></dt>
+<dd> This option tells keychain do everything it normally does (ensure ssh-agent is running, set up the ~/.keychain/[hostname]-{c}sh files) except that it will not prompt you to add any of the keys you specified if they haven&#8217;t yet been added to ssh-agent.</dd>
+<dt><code>&#8211;nocolor</code></dt>
+<dd> Disable color hilighting for non ANSI-compatible terms.</dd>
+<dt><code>&#8211;nogui</code></dt>
+<dd> Don&#8217;t honor <font SIZE="-1">SSH_ASKPASS</font>, if it is set. This will cause ssh-add to prompt on the terminal instead of using a graphical program.</dd>
+<dt><code>&#8211;noinherit</code></dt>
+<dd> Don&#8217;t inherit any agent processes, overriding the default &#8220;&#8211;inherit local-once&#8221;</dd>
+<dt><code>&#8211;nolock</code></dt>
+<dd> Don&#8217;t attempt to use a lockfile while manipulating files, pids and keys.</dd>
+<dt><code>-k &#8211;stop</code> <i>which</i></dt>
+<dd> Kill currently running agent processes. The following values are valid for &#8220;which&#8221;:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>all</p>
-<dd> Kill all agent processes and quit keychain immediately. Prior to keychain-2.5.0, this was the behavior of the bare &#8220;&#8211;stop&#8221; option.</p>
-<dt>others</p>
-<dd> Kill agent processes other than the one keychain is providing. Prior to keychain-2.5.0, keychain would do this automatically. The new behavior requires that you specify it explicitly if you want it.</p>
-<dt>mine</p>
-<dd> Kill keychain&#8217;s agent processes, leaving other agents alone.</dl>
+<dt>all</dt>
+<dd> Kill all agent processes and quit keychain immediately. Prior to keychain-2.5.0, this was the behavior of the bare &#8220;&#8211;stop&#8221; option.</dd>
+<dt>others</dt>
+<dd> Kill agent processes other than the one keychain is providing. Prior to keychain-2.5.0, keychain would do this automatically. The new behavior requires that you specify it explicitly if you want it.</dd>
+<dt>mine</dt>
+<dd> Kill keychain&#8217;s agent processes, leaving other agents alone.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-Q &#8211;quick</code></p>
-<dd> If an ssh-agent process is running then use it. Don&#8217;t verify the list of keys, other than making sure it&#8217;s non-empty. This option avoids locking when possible so that multiple terminals can be opened simultaneously without waiting on each other.</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> Only print messages in case of warning, error or required interactivity.</p>
-<dt><code>&#8211;timeout</code> <i>minutes</i></p>
-<dd> Set a timeout in minutes on your keys. This is conveyed to ssh-agent which does the actual timing out of keys since keychain doesn&#8217;t run continuously.</p>
-<dt><code>-V &#8211;version</code></p>
-<dd> Show version information.</dl>
+</dl>
+<dt><code>-Q &#8211;quick</code></dt>
+<dd> If an ssh-agent process is running then use it. Don&#8217;t verify the list of keys, other than making sure it&#8217;s non-empty. This option avoids locking when possible so that multiple terminals can be opened simultaneously without waiting on each other.</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> Only print messages in case of warning, error or required interactivity.</dd>
+<dt><code>&#8211;timeout</code> <i>minutes</i></dt>
+<dd> Set a timeout in minutes on your keys. This is conveyed to ssh-agent which does the actual timing out of keys since keychain doesn&#8217;t run continuously.</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd> Show version information.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Note that the examples below assume that keychain is available on the machine they&#8217;re run. If you&#8217;re using them in your login profile snippets that are shared between systems, it may be a good idea to protect their invocation by first checking if keychain is indeed available. </p>
 <p> This snippet should work in any shell to load two ssh keys (id_rsa and id_dsa) and one gpg key (key id 0123ABCD): </p>

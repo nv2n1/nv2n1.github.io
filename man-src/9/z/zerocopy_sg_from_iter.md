@@ -14,10 +14,10 @@ description: "zerocopy_sg_from_iter – Build a zerocopy datagram from an iov_it
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>buffer to copy</dl>
+</dd><dd>buffer to copy</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>the source to copy from</dl>
+<dd>the source to copy from</dd></dl>
 <h2>Description</h2>
 <p>The function will first copy up to headlen, and then pin the userspace pages and build frags through them. </p>
 <p> Returns 0, -EFAULT or -EMSGSIZE.</p>

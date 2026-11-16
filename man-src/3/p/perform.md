@@ -11,119 +11,45 @@ QuantLib::NonLinearLeastSquare - Non-linear least-square method.
 <h2>Synopsis</h2>
 
 <pre><code>NonLinearLeastSquare (Constraint &amp;c, Real accuracy=1e-4, Size maxiter=100)
-
-
 Default constructor.
-
-
 NonLinearLeastSquare (Constraint &amp;c, Real accuracy, Size maxiter, boost::shared_ptr&lt; OptimizationMethod &gt; om)
-
-
 Default constructor.
-
-
 ~NonLinearLeastSquare ()
-
-
 Destructor.
-
-
 Array &amp; perform (LeastSquareProblem &amp;lsProblem)
-
-
 Solve least square problem using numerix solver.
-
-
 void setInitialValue (const Array &amp;initialValue)
-
-
-
 Array &amp; results ()
-
-
 return the results
-
-
 Real residualNorm ()
-
-
 return the least square residual norm
-
-
 Real lastValue ()
-
-
 return last function value
-
-
 Integer exitFlag ()
-
-
 return exit flag
-
-
 Integer iterationsNumber ()
-
-
 return the performed number of iterations</code></pre>
 
 <h3>Public Member Functions</h3>
 
 <pre><code>NonLinearLeastSquare (Constraint &amp;c, Real accuracy=1e-4, Size maxiter=100)
-
-
 Default constructor.
-
-
 NonLinearLeastSquare (Constraint &amp;c, Real accuracy, Size maxiter, boost::shared_ptr&lt; OptimizationMethod &gt; om)
-
-
 Default constructor.
-
-
 ~NonLinearLeastSquare ()
-
-
 Destructor.
-
-
 Array &amp; perform (LeastSquareProblem &amp;lsProblem)
-
-
 Solve least square problem using numerix solver.
-
-
 void setInitialValue (const Array &amp;initialValue)
-
-
-
 Array &amp; results ()
-
-
 return the results
-
-
 Real residualNorm ()
-
-
 return the least square residual norm
-
-
 Real lastValue ()
-
-
 return last function value
-
-
 Integer exitFlag ()
-
-
 return exit flag
-
-
 Integer iterationsNumber ()
-
-
 return the performed number of iterations</code></pre>
 
 <h2>Detailed Description</h2>

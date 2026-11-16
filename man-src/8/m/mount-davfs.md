@@ -18,69 +18,69 @@ description: "mount.davfs – Mount a WebDAV resource in a directory"
 <p><code>mount.davfs</code> allows you to mount the WebDAV resource identified by <i>webdavserver</i> into the local filesystem at <i>dir.</i> WebDAV is an extension to HTTP that allows remote, collaborative authoring of Web resources, defined in RFC 4918. <code>mount.davfs</code> is part of <code>davfs2</code>. <code>davfs2</code> allows documents on a remote Web server to be edited using standard applications. For example, a remote Web site could be updated in-place using the same development tools that initially created the site. Or you may use a WebDAV resource for documents you want to access and edited from different locations. <code>davfs2</code> supports <code>TLS/SSL</code> (if the neon library supports it) and proxies. <code>mount.davfs</code> runs as a daemon in userspace. It integrates into the virtual file system by either the coda or the fuse kernel files system. Currently CODA_KERNEL_VERSION 3 and FUSE_KERNEL_VERSION 7 are supported. <code>mount.davfs</code> is usually invoked by the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) command when using the <i>-t davfs</i> option. After mounting it runs as a daemon. To unmount the <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) command is used. <i>webdavserver</i> is the URL of the server. It must at least contain the host name. It may additionally contain the scheme, the port and the path. Missing components are set to sensible default values. The path component must <code>not</code> be %-encoded, but when entering the URL at the command line or in /etc/fstab the escaping rules of the shell or fstab must be obeyed. <i>dir</i> is the mountpoint where the WebDAV resource is mounted on. It may be an absolute or relative path. <i>fstab</i> may be used to define mounts and mount options as usual. In place of the device the url of the WebDAV server must be given. There must not be more than one entry in <i>fstab</i> for every mountpoint. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-V &#8211;version</code></p>
-<dd>Output version. </p>
-<dt><code>-h &#8211;help</code></p>
-<dd>Print a help message. </p>
-<dt><code>-o</code></p>
-<dd>A comma-separated list defines mount options to be used. Available options are: </p>
+<dt><code>-V &#8211;version</code></dt>
+<dd>Output version. </dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd>Print a help message. </dd>
+<dt><code>-o</code></dt>
+<dd>A comma-separated list defines mount options to be used. Available options are: </dd>
 <dl>
 <dd>
-<dl>
-<dt><code>[no]auto</code></p>
+</dd><dl>
+<dt><code>[no]auto</code></dt>
 <dd>Can (not) be mounted with <code>mount -a</code>.<br />
- Default: <code>auto</code>. </p>
-<dt><code>conf=</code><i>absolute path</i></p>
+ Default: <code>auto</code>. </dd>
+<dt><code>conf=</code><i>absolute path</i></dt>
 <dd>An alternative user configuration file. This option is intended for cases where the default user configuration file in the users home directory can not be used.<br />
- Default: <i>~/.davfs2/davfs2.conf</i> </p>
-<dt><code>[no]dev</code></p>
-<dd>(Do not) interpret character or block special devices on the file system. This option is only included for compatibility with the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) program. It will allways be set to <code>nodev</code> </p>
-<dt><code>dir_mode=</code><i>mode</i></p>
+ Default: <i>~/.davfs2/davfs2.conf</i> </dd>
+<dt><code>[no]dev</code></dt>
+<dd>(Do not) interpret character or block special devices on the file system. This option is only included for compatibility with the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) program. It will allways be set to <code>nodev</code> </dd>
+<dt><code>dir_mode=</code><i>mode</i></dt>
 <dd>The default mode bits for directories in the mounted file system. Value given in octal. s-bits for user and group are allways silently ignored.<br />
- Default: calculated from the umask of the mounting user; an x-bit is associated to every r-bit in u-g-o. </p>
-<dt><code>[no]exec</code></p>
+ Default: calculated from the umask of the mounting user; an x-bit is associated to every r-bit in u-g-o. </dd>
+<dt><code>[no]exec</code></dt>
 <dd>(Do not) allow execution of any binaries on the mounted file system.<br />
- Default: <code>exec</code>. (When mounting as an ordinary user, the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) program will set the default to <code>noexec</code>.) </p>
-<dt><code>file_mode=</code><i>mode</i></p>
+ Default: <code>exec</code>. (When mounting as an ordinary user, the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) program will set the default to <code>noexec</code>.) </dd>
+<dt><code>file_mode=</code><i>mode</i></dt>
 <dd>The default mode bits for files in the mounted file system. Value given in octal. s-bits for user and group are allways silently ignored.<br />
- Default: calculated from the umask of the mounting user; no x-bits are set for files. </p>
-<dt><code>gid=</code><i>group</i></p>
+ Default: calculated from the umask of the mounting user; no x-bits are set for files. </dd>
+<dt><code>gid=</code><i>group</i></dt>
 <dd>The group the mounted file system belongs to. It may be a numeric ID or a group name. The mounting user, if not root, must be member of this group.<br />
- Default: the primary group of the mounting user. </p>
-<dt><code>[no]_netdev</code></p>
+ Default: the primary group of the mounting user. </dd>
+<dt><code>[no]_netdev</code></dt>
 <dd>The file system needs a (no) network connection for operation. This information allows the operating system to handle the file system properly at system start and when the network is shut down.<br />
- Default: <code>_netdev</code> </p>
-<dt><code>ro</code></p>
+ Default: <code>_netdev</code> </dd>
+<dt><code>ro</code></dt>
 <dd>Mount the file system read-only.<br />
- Default: <code>rw</code>. </p>
-<dt><code>rw</code></p>
+ Default: <code>rw</code>. </dd>
+<dt><code>rw</code></dt>
 <dd>Mount the file system read-write.<br />
- Default: <code>rw</code>. </p>
-<dt><code>[no]suid</code></p>
-<dd>Do not allow set-user-identifier or set-group-identifier bits to take effect. This option is only included for compatibility with the mount program. It will allways be set to <code>nosuid</code>. </p>
-<dt><code>[no]user</code></p>
+ Default: <code>rw</code>. </dd>
+<dt><code>[no]suid</code></dt>
+<dd>Do not allow set-user-identifier or set-group-identifier bits to take effect. This option is only included for compatibility with the mount program. It will allways be set to <code>nosuid</code>. </dd>
+<dt><code>[no]user</code></dt>
 <dd>(Do not) allow an ordinary user to mount the file system. The name of the mounting user is written to <i>mtab</i> so that he can unmount the file system again. Option <code>user</code> implies the options <code>noexec</code>, <code>nosuid</code> and <code>nodev</code> (unless overridden by subsequent options). This option makes only sense when set in <i>fstab</i>.<br />
- Default: ordinary users are not allowed to mount. </p>
-<dt><code>users</code></p>
+ Default: ordinary users are not allowed to mount. </dd>
+<dt><code>users</code></dt>
 <dd>Like <code>user</code>, but <code>any</code> user is allowed to unmount the file system, not only the mounting user. This is generally not recomended. On systems with no <i>mtab</i> file with the <code>user</code> option unmounting by the mounting user will fail. In this case the <code>users</code> may be an appropriate work around.<br />
- Default: only the mounting user is allowed to unmount the file system. </p>
-<dt><code>uid=</code><i>user</i></p>
+ Default: only the mounting user is allowed to unmount the file system. </dd>
+<dt><code>uid=</code><i>user</i></dt>
 <dd>The owner of the mounted file system. It may be a numeric ID or a user name. Only when mounted by root, this may be different from the mounting user.<br />
- Default: ID of the mounting user.</dl>
+ Default: ID of the mounting user.</dd></dl>
 </dl>
-<dt><code>username=</code><i>WebDAV_user</i></p>
+<dt><code>username=</code><i>WebDAV_user</i></dt>
 <dd>Use this name to authenticate with the WebDAV server. This option is intended for use with pam_mount only. When this option is set the credentials in the secrets files will be ignored. The password will always be read from stdin, even when option <i>askauth</i> is set to 0. Do not use it in <i>fstab</i>. The username will be visible for everyone in the output of <i>ps</i>.<br />
  Default: no username.<br />
- <code>Experimental:</code> This option is experimental and might be removed. If you think it useful and successfully use it please send a short report. </p>
+ <code>Experimental:</code> This option is experimental and might be removed. If you think it useful and successfully use it please send a short report. </dd>
 </dl>
 <h2>Security Policy</h2>
 <p><code>mount.davfs</code> needs root privileges for mounting. But running a daemon, that is connected to the internet, with root privileges is a security risk. So <code>mount.davfs</code> will change its uid and gid when entering daemon mode. </p>
 <dl>
-<dd>When invoked by root <code>mount.davfs</code> will run as user <code>davfs2</code> and group <code>davfs2</code>. This may be changed in <i>/etc/davfs2/davfs2.conf</i>. </p>
+<dd>When invoked by root <code>mount.davfs</code> will run as user <code>davfs2</code> and group <code>davfs2</code>. This may be changed in <i>/etc/davfs2/davfs2.conf</i>. </dd>
 <p> When invoked by an ordinary user it will run with the id of this user and with group <code>davfs2</code>.</dl>
 <p> As the file system may be mounted over an insecure internet connection, this increases the risk that malicious content may be included in the file system. So <code>mount.davfs</code> is slightly more restrictive than <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). </p>
 <dl>
-<dd>Options <code>nosuid</code> and <code>nodev</code> will always be set; even root can not change this. </p>
+<dd>Options <code>nosuid</code> and <code>nodev</code> will always be set; even root can not change this. </dd>
 <p> For ordinary users to be able to mount, they must be member of group <code>davfs2</code> and there must be an entry in <i>fstab</i>. </p>
 <p> When the mount point given in <i>fstab</i> is a relative file name and the file system is mounted by an unprivileged user, the mount point must lie within the home directory of the mounting user. </p>
 <p> If in <i>fstab</i> option <code>uid</code> and/or <code>gid</code> are given, an ordinary user can only mount, if her uid is the one given in option <code>uid</code> and he belongs to the group given in option <code>gid</code>.</dl>
@@ -97,7 +97,7 @@ description: "mount.davfs – Mount a WebDAV resource in a directory"
 <h2>Locks, Lost Update Problem And Backup Files</h2>
 <p>WebDAV introduced locks and <code>mount.davfs</code> uses them by default. This will in most cases prevent two people from changing the same file in parallel. But not allways: </p>
 <dl>
-<dd>You might have disabled locks in <i>/etc/davfs2/davfs2.conf</i> or <i>~/.davfs2/davfs2.conf</i>. </p>
+<dd>You might have disabled locks in <i>/etc/davfs2/davfs2.conf</i> or <i>~/.davfs2/davfs2.conf</i>. </dd>
 <p> The server might not support locks (they are not mandatory). </p>
 <p> A bad connection might prevent <code>mount.davfs</code> from refreshing the lock in time. </p>
 <p> Another WebDAV-client might use your lock (that is not too difficult and might even happen without intention).</dl>
@@ -111,66 +111,66 @@ description: "mount.davfs – Mount a WebDAV resource in a directory"
 <p> When the file system is unmounted, attributes of cached files (including owner and permissions) are stored in cache, as well as the attributs of the direcotries they are in. But there is no information stored about directories that do not contain cached files.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/davfs2/davfs2.conf</i></p>
-<dd>System wide configuration file. </p>
-<dt><i>~/.davfs2/davfs2.conf</i></p>
-<dd>Configuration file in the users home directory.The user configuration takes precedence over the system wide configuration. If it does not exist, <code>mount.davfs</code> will will create a template file. </p>
-<dt><i>/etc/davfs2/secrets</i></p>
-<dd>Holds the credentials for WebDAV servers and the proxy, as well as decryption passwords for client certificates. The file must be read-writable by root only. </p>
-<dt><i>~/.davfs2/secrets</i></p>
-<dd>Holds credentials for WebDAV servers and proxy, as well as decryption passwords for client certificates. The file must be read-writable by the owner only. Credentials are first looked up in the home directory of the mounting user. If not found there the system wide secrets file is consulted. If no creditentials and passwords are found they are asked from the user interactively (if not disabled). If the file does not exist, <code>mount.davfs</code> will will create a template file. </p>
-<dt><i>/etc/davfs2/certs</i></p>
+<dt><i>/etc/davfs2/davfs2.conf</i></dt>
+<dd>System wide configuration file. </dd>
+<dt><i>~/.davfs2/davfs2.conf</i></dt>
+<dd>Configuration file in the users home directory.The user configuration takes precedence over the system wide configuration. If it does not exist, <code>mount.davfs</code> will will create a template file. </dd>
+<dt><i>/etc/davfs2/secrets</i></dt>
+<dd>Holds the credentials for WebDAV servers and the proxy, as well as decryption passwords for client certificates. The file must be read-writable by root only. </dd>
+<dt><i>~/.davfs2/secrets</i></dt>
+<dd>Holds credentials for WebDAV servers and proxy, as well as decryption passwords for client certificates. The file must be read-writable by the owner only. Credentials are first looked up in the home directory of the mounting user. If not found there the system wide secrets file is consulted. If no creditentials and passwords are found they are asked from the user interactively (if not disabled). If the file does not exist, <code>mount.davfs</code> will will create a template file. </dd>
+<dt><i>/etc/davfs2/certs</i></dt>
 <dd>You may store trusted server certificates here, that can not be verified by use of the system wide CA-Certificates. This is useful when your server uses a selfmade certificate. You must configure the <code>servercert</code> option in <i>/etc/davfs2/davfs2.conf</i> or <i>~/.davfs2/davfs2.conf</i> to use it. Certificates must be in PEM format.<br />
- Be sure to verify the certificate. </p>
-<dt><i>~/.davfs2/certs</i></p>
+ Be sure to verify the certificate. </dd>
+<dt><i>~/.davfs2/certs</i></dt>
 <dd>You may store trusted server certificates here, that can not be verified by use of the system wide CA-Certificates. This is useful when your server uses a selfmade certificate. You must configure the <code>servercert</code> option in <i>~/.davfs2/davfs2.conf</i> to use it. Certificates must be in PEM format.<br />
- Be sure to verify the certificate. </p>
-<dt><i>/etc/davfs2/certs/private</i></p>
-<dd>To store client certificates. Certificates must be in PKCS#12 format. You must configure the <code>clientcert</code> option in <i>/etc/davfs2/davfs2.conf</i> or <i>~/.davfs2/davfs2.conf</i> to use it. This directory must be rwx by root only. </p>
-<dt><i>~/.davfs2/certs/private</i></p>
-<dd>To store client certificates. Certificates must be in PKCS#12 format. You must configure the <code>clientcert</code> option in <i>~/.davfs2/davfs2.conf</i> to use it. This directory must be rwx by the owner only. </p>
-<dt><i>/var/run/mount.davfs</i></p>
-<dd>PID-files of running mount.davfs processes are stored there. This directory must belong to group <code>davfs2</code> with write permissions for the group and the sticky-bit set (mode 1775). The PID-files are named after the mount point of the file system. </p>
-<dt><i>/var/cache/davfs2</i></p>
-<dd>System wide directory for cached files. Used when the file system is mounted by root. It must belong do group <code>davfs2</code> and read, write and execute bits for group must be set. There is a subdirectory for every mounted file system. The names of this subdirectories are created from url, mount point and user name. </p>
-<dt><i>~/.davfs2/cache</i></p>
-<dd>Cache directory in the mounting users home directory. For every mounted WebDAV resource a subdirectory is created. </p>
+ Be sure to verify the certificate. </dd>
+<dt><i>/etc/davfs2/certs/private</i></dt>
+<dd>To store client certificates. Certificates must be in PKCS#12 format. You must configure the <code>clientcert</code> option in <i>/etc/davfs2/davfs2.conf</i> or <i>~/.davfs2/davfs2.conf</i> to use it. This directory must be rwx by root only. </dd>
+<dt><i>~/.davfs2/certs/private</i></dt>
+<dd>To store client certificates. Certificates must be in PKCS#12 format. You must configure the <code>clientcert</code> option in <i>~/.davfs2/davfs2.conf</i> to use it. This directory must be rwx by the owner only. </dd>
+<dt><i>/var/run/mount.davfs</i></dt>
+<dd>PID-files of running mount.davfs processes are stored there. This directory must belong to group <code>davfs2</code> with write permissions for the group and the sticky-bit set (mode 1775). The PID-files are named after the mount point of the file system. </dd>
+<dt><i>/var/cache/davfs2</i></dt>
+<dd>System wide directory for cached files. Used when the file system is mounted by root. It must belong do group <code>davfs2</code> and read, write and execute bits for group must be set. There is a subdirectory for every mounted file system. The names of this subdirectories are created from url, mount point and user name. </dd>
+<dt><i>~/.davfs2/cache</i></dt>
+<dd>Cache directory in the mounting users home directory. For every mounted WebDAV resource a subdirectory is created. </dd>
 <p> <code>mount.davfs</code> will try to create missing directories, but it will <code>not</code> touch <i>/etc/davfs2</i>. </p>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>https_proxy http_proxy all_proxy</code></p>
+<dt><code>https_proxy http_proxy all_proxy</code></dt>
 <dd>If no proxy is defined in the configuration file the value is taken from this environment variables. The proxy may be given with or without scheme and with or without port<br />
  http_proxy=[<a rel="nofollow" href="http://]foo.bar[:3218]">http://]foo.bar[:3218]</a><br />
- Only used when the mounting user is root. </p>
-<dt><code>no_proxy</code></p>
+ Only used when the mounting user is root. </dd>
+<dt><code>no_proxy</code></dt>
 <dd>A comma separated list of domain names that shall be accessed directly. <code>*</code> matches any domain name. A domain name starting with <code>.</code> (period) matches all subdomains.<br />
  Only used when the mounting user is root.<br />
- Not applied when the proxy is defined in <i>/etc/davfs2</i>. </p>
+ Not applied when the proxy is defined in <i>/etc/davfs2</i>. </dd>
 </dl>
 <h2>Examples</h2>
 <p><code>Non root user (e.g. filomena):</code> To allow an ordinary user to mount there must be an entry in <i>fstab</i></p>
 <dl>
-<dd><a rel="nofollow" href="http://webdav.org/dav">http://webdav.org/dav</a> /media/dav davfs noauto,user 0 0</dl>
+<dd><a rel="nofollow" href="http://webdav.org/dav">http://webdav.org/dav</a> /media/dav davfs noauto,user 0 0</dd></dl>
 <p> If a proxy must be used this should be configured in <i>/etc/davfs2/davfs2.conf</i></p>
 <dl>
-<dd>proxy proxy.mycompany.com:8080</dl>
+<dd>proxy proxy.mycompany.com:8080</dd></dl>
 <p> Credentials are stored in <i>/home/filomena/.davfs2/secrets</i></p>
 <dl>
 <dd>proxy.mycompany.com filomena &quot;my secret&quot;<br />
- /media/dav webdav-username password</dl>
+ /media/dav webdav-username password</dd></dl>
 <p> Now the WebDAV resource may be mounted by user filomena invoking</p>
 <dl>
-<dd><code>mount /media/dav</code></dl>
+<dd><code>mount /media/dav</code></dd></dl>
 <p> and unmounted by user filomena invoking</p>
 <dl>
-<dd><code>umount /media/dav</code></dl>
+<dd><code>umount /media/dav</code></dd></dl>
 <p> <code>Root user only:</code> Mounts the resource <i><a rel="nofollow" href="https://asciigirl.com/webdav">https://asciigirl.com/webdav</a></i> at mount point <i>/mount/site</i>, encrypting all traffic with SSL. Credentials for <i><a rel="nofollow" href="http://webdav.org/dav">http://webdav.org/dav</a></i> will be looked up in <i>/etc/davfs2/secrets</i>, if not found there the user will be asked.</p>
 <dl>
-<dd><code>mount -t davfs -o uid=otto,gid=users,mode=775 <a rel="nofollow" href="https://asciigirl.com/webdav">https://asciigirl.com/webdav</a> /mount/site</code></dl>
+<dd><code>mount -t davfs -o uid=otto,gid=users,mode=775 <a rel="nofollow" href="https://asciigirl.com/webdav">https://asciigirl.com/webdav</a> /mount/site</code></dd></dl>
 <p> Mounts the resource <i><a rel="nofollow" href="http://linux.org.ar/repos">http://linux.org.ar/repos</a></i> at <i>/dav</i>.</p>
 <dl>
-<dd><code>mount.davfs -o uid=otto,gid=users,mode=775 <a rel="nofollow" href="http://linux.org.ar/repos/">http://linux.org.ar/repos/</a> /dav</code></dl>
+<dd><code>mount.davfs -o uid=otto,gid=users,mode=775 <a rel="nofollow" href="http://linux.org.ar/repos/">http://linux.org.ar/repos/</a> /dav</code></dd></dl>
 <h2>Bugs</h2>
 <p><code>davfs2</code> does not support links. A <code>davfs2</code> file system cannot be moved with <i>mount &#8211;move</i>. </p>
 <h2>Authors</h2>

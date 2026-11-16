@@ -14,12 +14,12 @@ description: "asn1_array2tree – API function"
 <p> <code>int asn1_array2tree(const asn1_static_node * </code><i>array</i><code>, asn1_node * </code><i>definitions</i><code>, char * </code><i>errorDescription</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const asn1_static_node * array</p>
-<dd> specify the array that contains ASN.1 declarations</p>
-<dt>asn1_node * definitions</p>
-<dd> return the pointer to the structure created by *ARRAY ASN.1 declarations</p>
-<dt>char * errorDescription</p>
-<dd> return the error description.</dl>
+<dt>const asn1_static_node * array</dt>
+<dd> specify the array that contains ASN.1 declarations</dd>
+<dt>asn1_node * definitions</dt>
+<dd> return the pointer to the structure created by *ARRAY ASN.1 declarations</dd>
+<dt>char * errorDescription</dt>
+<dd> return the error description.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates the structures needed to manage the ASN.1 definitions.<br />
 &nbsp;<wbr><i>array</i>&nbsp;<wbr>is a vector created by&nbsp;<wbr><code>asn1_parser2array()</code>.</p>
@@ -32,9 +32,9 @@ description: "asn1_array2tree – API function"
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
 <h2>Index</h2>

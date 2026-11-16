@@ -11,7 +11,6 @@ description: "ql/termstructures/yield/nonlinearfittingmethods.hpp – nonlinear 
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/yield/fittedbonddiscountcurve.hpp&gt;
-
 #include &lt;ql/math/bspline.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>ExponentialSplinesFitting</code><br />

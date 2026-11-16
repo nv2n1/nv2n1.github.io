@@ -17,32 +17,30 @@ description: "states – awk alike text processing tool"
 <p> The biggest difference between <code>states</code> and awk, besides state machine extensions, is that <code>states</code> is not line-oriented. It matches regular expression tokens from the input and once a match is processed, it continues processing from the current position, not from the beginning of the next input line. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-D </code><i>var</i><code>=</code><i>val</i><code>, &#8211;define=</code><i>var</i><code>=</code><i>val</i></p>
-<dd> Define variable <i>var</i> to have string value <i>val</i>. Command line definitions overwrite variable definitions found from the config file.</p>
-<dt><code>-f </code><i>file</i><code>, &#8211;file=</code><i>file</i></p>
-<dd> Read state definitions from file <i>file</i>. As a default, <code>states</code> tries to read state definitions from file <code>states.st</code> in the current working directory.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print short help message and exit.</p>
-<dt><code>-o </code><i>file</i><code>, &#8211;output=</code><i>file</i></p>
-<dd> Save output to file <i>file</i> instead of printing it to <code>stdout</code>.</p>
-<dt><code>-p </code><i>path</i><code>, &#8211;path=</code><i>path</i></p>
-<dd> Set the load path to <i>path</i>. The load path defaults to the directory, from which the state definitions file is loaded.</p>
-<dt><code>-s </code><i>state</i><code>, &#8211;state=</code><i>state</i></p>
-<dd> Start execution from state <code>state</code>. This definition overwrites start state resolved from the <code>start</code> block.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Increase the program verbosity.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print <code>states</code> version and exit.</p>
-<dt><code>-W </code><i>level</i><code>, &#8211;warning=</code><i>level</i></p>
-<dd> Set the warning level to <i>level</i>. Possible values for <i>level</i> are:</p>
+<dt><code>-D </code><i>var</i><code>=</code><i>val</i><code>, &#8211;define=</code><i>var</i><code>=</code><i>val</i></dt>
+<dd> Define variable <i>var</i> to have string value <i>val</i>. Command line definitions overwrite variable definitions found from the config file.</dd>
+<dt><code>-f </code><i>file</i><code>, &#8211;file=</code><i>file</i></dt>
+<dd> Read state definitions from file <i>file</i>. As a default, <code>states</code> tries to read state definitions from file <code>states.st</code> in the current working directory.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print short help message and exit.</dd>
+<dt><code>-o </code><i>file</i><code>, &#8211;output=</code><i>file</i></dt>
+<dd> Save output to file <i>file</i> instead of printing it to <code>stdout</code>.</dd>
+<dt><code>-p </code><i>path</i><code>, &#8211;path=</code><i>path</i></dt>
+<dd> Set the load path to <i>path</i>. The load path defaults to the directory, from which the state definitions file is loaded.</dd>
+<dt><code>-s </code><i>state</i><code>, &#8211;state=</code><i>state</i></dt>
+<dd> Start execution from state <code>state</code>. This definition overwrites start state resolved from the <code>start</code> block.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Increase the program verbosity.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print <code>states</code> version and exit.</dd>
+<dt><code>-W </code><i>level</i><code>, &#8211;warning=</code><i>level</i></dt>
+<dd> Set the warning level to <i>level</i>. Possible values for <i>level</i> are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>light</code></p>
-<dd> light warnings (default)</p>
-<dt><code>all</code></p>
-<dd> all warnings</dl>
+<dt><code>light</code></dt>
+<dd> light warnings (default)</dd>
+<dt><code>all</code></dt>
+<dd> all warnings</dd></dl>
 </dl>
 </dl>
 <h2>STATES PROGRAM FILES</h2>
@@ -50,7 +48,7 @@ description: "states – awk alike text processing tool"
 <p> The <i>start</i> block is the main() of the <code>states</code> program, it is executed on script startup for each input file and it can perform any initialization the script needs. It normally also calls the <code>check_startrules()</code> and <code>check_namerules()</code> primitives which resolve the initial state from the input file name or the data found from the beginning of the input file. Here is a sample start block which initializes two variables and does the standard start state resolving: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 start
 {
@@ -60,12 +58,12 @@ start
     check_namerules();
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> Once the start block is processed, the input processing is continued from the initial state. </p>
 <p> The initial state is resolved by the information found from the <i>startrules</i> and <i>namerules</i> blocks. Both blocks contain regular expression &#8211; symbol pairs, when the regular expression is matched from the name of from the beginning of the input file, the initial state is named by the corresponding symbol. For example, the following start and name rules can distinguish C and Fortran files: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 namerules
 {
@@ -78,7 +76,7 @@ startrules
     / -\* -fortran -\* - / fortran;
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> If these rules are used with the previously shown start block, <code>states</code> first check the beginning of input file. If it has string <code>-*- c -*-</code>, the file is assumed to contain C code and the processing is started from state called <code>c</code>. If the beginning of the input file has string <code>-*- fortran -*-</code>, the initial state is <code>fortran</code>. If none of the start rules matched, the name of the input file is matched with the namerules. If the name ends to suffix <code>c</code> or <code>C</code>, we go to state <code>c</code>. If the suffix is <code>f</code> or <code>F</code>, the initial state is fortran. </p>
 <p> If both start and name rules failed to resolve the start state, <code>states</code> just copies its input to output unmodified. </p>
 <p> The start state can also be specified from the command line with option <code>-s</code>, <code>&#8211;state</code>. </p>
@@ -90,95 +88,91 @@ startrules
 <p> The <code>states</code> program file can also have top-level expressions, they are evaluated after the program file is parsed but before any input files are processed or the <i>start</i> block is evaluated. </p>
 <h2>PRIMITIVE FUNCTIONS</h2>
 <dl>
-<dt><code>call (</code><i>symbol</i><code>)</code></p>
-<dd> Move to state <i>symbol</i> and continue input file processing from that state. Function returns whatever the <code>symbol</code> state&#8217;s terminating <code>return</code> statement returned.</p>
-<dt><code>calln (</code><i>name</i><code>)</code></p>
-<dd> Like <code>call</code> but the argument <i>name</i> is evaluated and its value must be string. For example, this function can be used to call a state which name is stored to a variable.</p>
-<dt><code>check_namerules ()</code></p>
-<dd> Try to resolve start state from <code>namerules</code> rules. Function returns <code>1</code> if start state was resolved or <code>0</code> otherwise.</p>
-<dt><code>check_startrules ()</code></p>
-<dd> Try to resolve start state from <code>startrules</code> rules. Function returns <code>1</code> if start state was resolved or <code>0</code> otherwise.</p>
-<dt><code>concat (</code><i>str</i><code>, &#8230;)</code></p>
-<dd> Concanate argument strings and return result as a new string.</p>
-<dt><code>float (</code><i>any</i><code>)</code></p>
-<dd> Convert argument to a floating point number.</p>
-<dt><code>getenv (</code><i>str</i><code>)</code></p>
-<dd> Get value of environment variable <i>str</i>. Returns an empty string if variable <i>var</i> is undefined.</p>
-<dt><code>int (</code><i>any</i><code>)</code></p>
-<dd> Convert argument to an integer number.</p>
-<dt><code>length (</code><i>item</i><code>, &#8230;)</code></p>
-<dd> Count the length of argument strings or lists.</p>
-<dt><code>list (</code><i>any</i><code>, &#8230;)</code></p>
-<dd> Create a new list which contains items <i>any</i>, &#8230;</p>
-<dt><code>panic (</code><i>any</i><code>, &#8230;)</code></p>
-<dd> Report a non-recoverable error and exit with status <code>1</code>. Function never returns.</p>
-<dt><code>print (</code><i>any</i><code>, &#8230;)</code></p>
-<dd> Convert arguments to strings and print them to the output.</p>
-<dt><code>range (</code><i>source</i><code>, </code><i>start</i><code>, </code><i>end</i><code>)</code></p>
-<dd> Return a sub-range of <i>source</i> starting from position <i>start</i> (inclusively) to <i>end</i> (exclusively). Argument <i>source</i> can be string or list.</p>
-<dt><code>regexp (</code><i>string</i><code>)</code></p>
-<dd> Convert string <i>string</i> to a new regular expression.</p>
-<dt><code>regexp_syntax (</code><i>char</i><code>, </code><i>syntax</i><code>)</code></p>
-<dd> Modify regular expression character syntaxes by assigning new syntax <i>syntax</i> for character <i>char</i>. Possible values for <i>syntax</i> are:</p>
+<dt><code>call (</code><i>symbol</i><code>)</code></dt>
+<dd> Move to state <i>symbol</i> and continue input file processing from that state. Function returns whatever the <code>symbol</code> state&#8217;s terminating <code>return</code> statement returned.</dd>
+<dt><code>calln (</code><i>name</i><code>)</code></dt>
+<dd> Like <code>call</code> but the argument <i>name</i> is evaluated and its value must be string. For example, this function can be used to call a state which name is stored to a variable.</dd>
+<dt><code>check_namerules ()</code></dt>
+<dd> Try to resolve start state from <code>namerules</code> rules. Function returns <code>1</code> if start state was resolved or <code>0</code> otherwise.</dd>
+<dt><code>check_startrules ()</code></dt>
+<dd> Try to resolve start state from <code>startrules</code> rules. Function returns <code>1</code> if start state was resolved or <code>0</code> otherwise.</dd>
+<dt><code>concat (</code><i>str</i><code>, &#8230;)</code></dt>
+<dd> Concanate argument strings and return result as a new string.</dd>
+<dt><code>float (</code><i>any</i><code>)</code></dt>
+<dd> Convert argument to a floating point number.</dd>
+<dt><code>getenv (</code><i>str</i><code>)</code></dt>
+<dd> Get value of environment variable <i>str</i>. Returns an empty string if variable <i>var</i> is undefined.</dd>
+<dt><code>int (</code><i>any</i><code>)</code></dt>
+<dd> Convert argument to an integer number.</dd>
+<dt><code>length (</code><i>item</i><code>, &#8230;)</code></dt>
+<dd> Count the length of argument strings or lists.</dd>
+<dt><code>list (</code><i>any</i><code>, &#8230;)</code></dt>
+<dd> Create a new list which contains items <i>any</i>, &#8230;</dd>
+<dt><code>panic (</code><i>any</i><code>, &#8230;)</code></dt>
+<dd> Report a non-recoverable error and exit with status <code>1</code>. Function never returns.</dd>
+<dt><code>print (</code><i>any</i><code>, &#8230;)</code></dt>
+<dd> Convert arguments to strings and print them to the output.</dd>
+<dt><code>range (</code><i>source</i><code>, </code><i>start</i><code>, </code><i>end</i><code>)</code></dt>
+<dd> Return a sub-range of <i>source</i> starting from position <i>start</i> (inclusively) to <i>end</i> (exclusively). Argument <i>source</i> can be string or list.</dd>
+<dt><code>regexp (</code><i>string</i><code>)</code></dt>
+<dd> Convert string <i>string</i> to a new regular expression.</dd>
+<dt><code>regexp_syntax (</code><i>char</i><code>, </code><i>syntax</i><code>)</code></dt>
+<dd> Modify regular expression character syntaxes by assigning new syntax <i>syntax</i> for character <i>char</i>. Possible values for <i>syntax</i> are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8216;w&#8217;</code></p>
-<dd> character is a word constituent</p>
-<dt><code>&#8216; &#8216;</code></p>
-<dd> character isn&#8217;t a word constituent</dl>
+<dt><code>&#8216;w&#8217;</code></dt>
+<dd> character is a word constituent</dd>
+<dt><code>&#8216; &#8216;</code></dt>
+<dd> character isn&#8217;t a word constituent</dd></dl>
 </dl>
-<dt><code>regmatch (</code><i>string</i><code>, </code><i>regexp</i><code>)</code></p>
-<dd> Check if string <i>string</i> matches regular expression <i>regexp</i>. Functions returns a boolean success status and sets sub-expression registers <code>$</code><i>n</i>.</p>
-<dt><code>regsub (</code><i>string</i>, <i>regexp</i><code>, </code><i>subst</i><code>)</code></p>
-<dd> Search regular expression <i>regexp</i> from string <i>string</i> and replace the matching substring with string <i>subst</i>. Returns the resulting string. The substitution string <i>subst</i> can contain <code>$</code><i>n</i> references to the <i>n</i>:th parenthesized sup-expression.</p>
-<dt><code>regsuball (</code><i>string</i>, <i>regexp</i><code>, </code><i>subst</i><code>)</code></p>
-<dd> Like <code>regsub</code> but replace all matches of regular expression <i>regexp</i> from string <i>string</i> with string <i>subst</i>.</p>
-<dt><code>require_state (</code><i>symbol</i><code>)</code></p>
-<dd> Check that the state <i>symbol</i> is defined. If the required state is undefined, the function tries to autoload it. If the loading fails, the program will terminate with an error message.</p>
-<dt><code>split (</code><i>regexp</i><code>, </code><i>string</i><code>)</code></p>
-<dd> Split string <i>string</i> to list considering matches of regular rexpression <i>regexp</i> as item separator.</p>
-<dt><code>sprintf (</code><i>fmt</i>, &#8230;)</p>
-<dd> Format arguments according to <i>fmt</i> and return result as a string.</p>
-<dt><code>strcmp (</code><i>str1</i><code>, </code><i>str2</i><code>)</code></p>
-<dd> Perform a case-sensitive comparision for strings <i>str1</i> and <i>str2</i>. Function returns a value that is:</p>
+<dt><code>regmatch (</code><i>string</i><code>, </code><i>regexp</i><code>)</code></dt>
+<dd> Check if string <i>string</i> matches regular expression <i>regexp</i>. Functions returns a boolean success status and sets sub-expression registers <code>$</code><i>n</i>.</dd>
+<dt><code>regsub (</code><i>string</i>, <i>regexp</i><code>, </code><i>subst</i><code>)</code></dt>
+<dd> Search regular expression <i>regexp</i> from string <i>string</i> and replace the matching substring with string <i>subst</i>. Returns the resulting string. The substitution string <i>subst</i> can contain <code>$</code><i>n</i> references to the <i>n</i>:th parenthesized sup-expression.</dd>
+<dt><code>regsuball (</code><i>string</i>, <i>regexp</i><code>, </code><i>subst</i><code>)</code></dt>
+<dd> Like <code>regsub</code> but replace all matches of regular expression <i>regexp</i> from string <i>string</i> with string <i>subst</i>.</dd>
+<dt><code>require_state (</code><i>symbol</i><code>)</code></dt>
+<dd> Check that the state <i>symbol</i> is defined. If the required state is undefined, the function tries to autoload it. If the loading fails, the program will terminate with an error message.</dd>
+<dt><code>split (</code><i>regexp</i><code>, </code><i>string</i><code>)</code></dt>
+<dd> Split string <i>string</i> to list considering matches of regular rexpression <i>regexp</i> as item separator.</dd>
+<dt><code>sprintf (</code><i>fmt</i>, &#8230;)</dt>
+<dd> Format arguments according to <i>fmt</i> and return result as a string.</dd>
+<dt><code>strcmp (</code><i>str1</i><code>, </code><i>str2</i><code>)</code></dt>
+<dd> Perform a case-sensitive comparision for strings <i>str1</i> and <i>str2</i>. Function returns a value that is:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-1</code></p>
-<dd> string <i>str1</i> is less than <i>str2</i></p>
-<dt><code>0</code></p>
-<dd> strings are equal</p>
-<dt><code>1</code></p>
-<dd> string <i>str1</i> is greater than <i>str2</i></dl>
+<dt><code>-1</code></dt>
+<dd> string <i>str1</i> is less than <i>str2</i></dd>
+<dt><code>0</code></dt>
+<dd> strings are equal</dd>
+<dt><code>1</code></dt>
+<dd> string <i>str1</i> is greater than <i>str2</i></dd></dl>
 </dl>
-<dt><code>string (</code><i>any</i><code>)</code></p>
-<dd> Convert argument to string.</p>
-<dt><code>strncmp (</code><i>str1</i><code>, </code><i>str2</i><code>, </code><i>num</i><code>)</code></p>
-<dd> Perform a case-sensitive comparision for strings <i>str1</i> and <i>str2</i> comparing at maximum <i>num</i><code> characters.</p>
-<dt>substring (</code><i>str</i><code>, </code><i>start</i><code>, </code><i>end</i><code>)</code></p>
-<dd> Return a substring of string <i>str</i> starting from position <i>start</i> (inclusively) to <i>end</i> (exclusively). </p>
+<dt><code>string (</code><i>any</i><code>)</code></dt>
+<dd> Convert argument to string.</dd>
+<dt><code>strncmp (</code><i>str1</i><code>, </code><i>str2</i><code>, </code><i>num</i><code>)</code></dt>
+<dd> Perform a case-sensitive comparision for strings <i>str1</i> and <i>str2</i> comparing at maximum <i>num</i><code> characters.</dd>
+<dt>substring (</code><i>str</i><code>, </code><i>start</i><code>, </code><i>end</i><code>)</code></dt>
+<dd> Return a substring of string <i>str</i> starting from position <i>start</i> (inclusively) to <i>end</i> (exclusively). </dd>
 </dl>
 <h2>BUILTIN VARIABLES</h2>
 <dl>
-<dt><code>$.</code></p>
-<dd> current input line number</p>
-<dt><code>$</code><i>n</i></p>
-<dd> the <i>n</i>:th parenthesized regular expression sub-expression from the latest state regular expression or from the <code>regmatch</code> primitive</p>
-<dt><code>$`</code></p>
-<dd> everything before the matched regular rexpression. This is usable when used with the <code>regmatch</code> primitive; the contents of this variable is undefined when used in action blocks to refer the data before the block&#8217;s regular expression.</p>
-<dt><code>$B</code></p>
-<dd> an alias for <code>$`</code></p>
-<dt><code>argv</code></p>
-<dd> list of input file names</p>
-<dt><code>filename</code></p>
-<dd> name of the current input file</p>
-<dt><code>program</code></p>
-<dd> name of the program (usually <code>states</code>)</p>
-<dt><code>version</code></p>
-<dd> program version string </p>
+<dt><code>$.</code></dt>
+<dd> current input line number</dd>
+<dt><code>$</code><i>n</i></dt>
+<dd> the <i>n</i>:th parenthesized regular expression sub-expression from the latest state regular expression or from the <code>regmatch</code> primitive</dd>
+<dt><code>$`</code></dt>
+<dd> everything before the matched regular rexpression. This is usable when used with the <code>regmatch</code> primitive; the contents of this variable is undefined when used in action blocks to refer the data before the block&#8217;s regular expression.</dd>
+<dt><code>$B</code></dt>
+<dd> an alias for <code>$`</code></dd>
+<dt><code>argv</code></dt>
+<dd> list of input file names</dd>
+<dt><code>filename</code></dt>
+<dd> name of the current input file</dd>
+<dt><code>program</code></dt>
+<dd> name of the program (usually <code>states</code>)</dd>
+<dt><code>version</code></dt>
+<dd> program version string </dd>
 </dl>
 <h2>FILES</h2>
 <pre>

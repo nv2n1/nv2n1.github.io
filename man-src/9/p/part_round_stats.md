@@ -15,11 +15,11 @@ part_round_stats - Round off the performance stats on a struct disk_stats.
 <h2>Arguments</h2>
 
 <i>cpu</i>
-<dl><dd><dd>cpu number for stats access</dl>
+<dl><dd></dd><dd>cpu number for stats access</dd></dl>
  
 
  <i>part</i>
-<dl><dd>target partition</dl>
+<dl><dd>target partition</dd></dl>
 
 <h2>Description</h2>
 

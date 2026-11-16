@@ -14,16 +14,16 @@ description: "pci_create_slot – create or increment refcount for physical PCI 
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>struct pci_bus of parent bridge</dl>
+</dd><dd>struct pci_bus of parent bridge</dd></dl>
 <p> <i>slot_nr</i></p>
 <dl>
-<dd>PCI_SLOT(pci_dev-&gt;devfn) or -1 for placeholder</dl>
+<dd>PCI_SLOT(pci_dev-&gt;devfn) or -1 for placeholder</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>user visible string presented in /sys/bus/pci/slots/&lt;name&gt;</dl>
+<dd>user visible string presented in /sys/bus/pci/slots/&lt;name&gt;</dd></dl>
 <p> <i>hotplug</i></p>
 <dl>
-<dd>set if caller is hotplug driver, NULL otherwise</dl>
+<dd>set if caller is hotplug driver, NULL otherwise</dd></dl>
 <h2>Description</h2>
 <p>PCI slots have first class attributes such as address, speed, width, and a struct pci_slot is used to manage them. This interface will either return a new struct pci_slot to the caller, or if the pci_slot already exists, its refcount will be incremented. </p>
 <p> Slots are uniquely identified by a <i>pci_bus</i>, <i>slot_nr</i> tuple. </p>

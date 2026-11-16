@@ -12,21 +12,13 @@ description: "parse_time print_time_table unparse_time unparse_time_approx – p
 <p>The roken library (libroken, -lroken)</p>
 <h2>Synopsis</h2>
 <pre><code>Fd #include &lt;parse_time.h&gt;
-
 Ft int
-
 Fn parse_time const char *timespec const char *def_unit
-
 Ft void
-
 Fn print_time_table FILE *f
-
 Ft size_t
-
 Fn unparse_time int seconds char *buf size_t len
-
 Ft size_t
-
 Fn unparse_time_approx int seconds char *buf size_t len</code></pre>
 <h2>Description</h2>
 <p>The Fn parse_time function converts the period of time specified into a number of seconds. The Fa timespec can be any number of Aq number unit pairs separated by comma and whitespace. The number can be negative. Numbers without explicit units are taken as being Fa def_unit . </p>
@@ -34,27 +26,26 @@ Fn unparse_time_approx int seconds char *buf size_t len</code></pre>
 <p> Fn print_time_table prints a descriptive list of available units on the passed file descriptor. </p>
 <p> The possible units include:</p>
 <dl>
-<dt><code>second , s</code></p>
+<dt><code>second , s</code></dt>
 <dd>
-<dt><code>minute , m</code></p>
+</dd><dt><code>minute , m</code></dt>
 <dd>
-<dt><code>hour , h</code></p>
+</dd><dt><code>hour , h</code></dt>
 <dd>
-<dt><code>day</code></p>
+</dd><dt><code>day</code></dt>
 <dd>
-<dt><code>week</code></p>
-<dd>seven days</p>
-<dt><code>month</code></p>
-<dd>30 days</p>
-<dt><code>year</code></p>
-<dd>365 days</dl>
+</dd><dt><code>week</code></dt>
+<dd>seven days</dd>
+<dt><code>month</code></dt>
+<dd>30 days</dd>
+<dt><code>year</code></dt>
+<dd>365 days</dd></dl>
 <p> Units names can be arbitrarily abbreviated (as long as they are unique).</p>
 <h2>Return Values</h2>
 <p>Fn parse_time returns the number of seconds that represents the expression in Fa timespec or -1 on error. Fn unparse_time and Fn unparse_time_approx return the number of characters written to Fa buf . if the return value is greater than or equal to the Fa len argument, the string was too short and some of the printed characters were discarded.</p>
 <h2>Examples</h2>
 <pre><code>#include &lt;parse_time.h&gt;
 #include &lt;stdio.h&gt;
-
 int main(int argc, char **argv)
 {
     int i;
@@ -81,7 +72,6 @@ int main(int argc, char **argv)
     }
     return 0;
 }
-
 $./ a.out &quot;1 minute 30 seconds&quot;
           &quot;90 s&quot;
           &quot;1 y -1 s&quot; 1 year = 365 days 1 month = 30 days 1 week = 7 days 1 day = 24 hours 1 hour = 60 minutes 1 minute = 60 seconds 1 second-- parse_time = 90 unparse_time = 1 minute 30 seconds

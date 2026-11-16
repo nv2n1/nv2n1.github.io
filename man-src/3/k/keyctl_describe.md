@@ -24,7 +24,7 @@ long keyctl_describe_alloc(key_serial_t key, char **_buffer);
 <p> The description will be a string of format:</p>
 <dl>
 <dt>
-<dd> <code>&#8220;%s;%d;%d;%08x;%s&#8221;</code></dl>
+</dt><dd> <code>&#8220;%s;%d;%d;%08x;%s&#8221;</code></dd></dl>
 <p> where the arguments are: key type name, key UID, key GID, key permissions mask and key description. </p>
 <p> <code>NOTE!</code> The key description will not contain any semicolons, so that should be separated out by working backwards from the end of the string. This permits extra information to be inserted before it by later versions of the kernel simply by inserting more semicolon-terminated substrings.</p>
 <h2>RETURN VALUE</h2>
@@ -32,14 +32,14 @@ long keyctl_describe_alloc(key_serial_t key, char **_buffer);
 <p> On success <code>keyctl_describe_alloc</code>() returns the amount of data in the buffer, less the NUL terminator. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The key specified is invalid.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The key specified has expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The key specified had been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The key exists, but is not <code>viewable</code> by the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The key specified is invalid.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The key specified has expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The key specified had been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The key exists, but is not <code>viewable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

@@ -11,8 +11,6 @@ description: "zptsv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zptsv (N, NRHS, D, E, B, LDB, INFO)
-
-
 ZPTSV computes the solution to system of linear equations A * X = B for PT matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zptsv (integerN, integerNRHS, double precision, dimension( * )D, complex*16, dimension( * )E, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
@@ -25,10 +23,10 @@ ZPTSV computes the solution to system of linear equations A * X = B for PT matri
  matrix, and X and B are N-by-NRHS matrices.
  A is factored as A = L*D*L**H, and the factored form of A is then
  used to solve the system of equations.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix A. N &gt;= 0.</pre>
 <p><i>NRHS</i> </p>
@@ -65,13 +63,13 @@ ZPTSV computes the solution to system of linear equations A * X = B for PT matri
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 116 of file zptsv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

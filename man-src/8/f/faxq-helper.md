@@ -20,16 +20,16 @@ description: "faxq-helper – privileged helper process to access the fax queue"
 <h2>Return Values</h2>
 <p><i>faxq-helper</i> has the following exit() values: </p>
 <dl>
-<dt><code>0</code></p>
-<dd>everything went fine </p>
-<dt><code>1</code></p>
-<dd>invalid JOB ID specified on the command line </p>
-<dt><code>2</code></p>
-<dd>some problem with the directory setup of the outgoing queue dir, /var/spool/fax/outgoing (it will print a detailed error message) </p>
-<dt><code>3</code></p>
-<dd>some problems with the user ID setup of the &#8220;fax&#8221; user (it will print a detailed error message) </p>
-<dt><code>10</code></p>
-<dd>failure to process the specified command (it will print a detailed error message) </p>
+<dt><code>0</code></dt>
+<dd>everything went fine </dd>
+<dt><code>1</code></dt>
+<dd>invalid JOB ID specified on the command line </dd>
+<dt><code>2</code></dt>
+<dd>some problem with the directory setup of the outgoing queue dir, /var/spool/fax/outgoing (it will print a detailed error message) </dd>
+<dt><code>3</code></dt>
+<dd>some problems with the user ID setup of the &#8220;fax&#8221; user (it will print a detailed error message) </dd>
+<dt><code>10</code></dt>
+<dd>failure to process the specified command (it will print a detailed error message) </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/1-faxq/">faxq</a>(1), <a href="/docs/linux/man/1-faxrm/">faxrm</a>(1), <a href="/docs/linux/man/5-faxqueue/">faxqueue</a>(5)</p>

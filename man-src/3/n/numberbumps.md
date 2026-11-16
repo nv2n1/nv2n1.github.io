@@ -16,33 +16,12 @@ QuantLib::VegaBumpCollection -
 <h3>Public Member Functions</h3>
 
 <pre><code>VegaBumpCollection (const boost::shared_ptr&lt; MarketModel &gt; &amp;volStructure, bool allowFactorwiseBumping=true)
-
-
-
 VegaBumpCollection (const std::vector&lt; VegaBumpCluster &gt; &amp;allBumps, const boost::shared_ptr&lt; MarketModel &gt; &amp;volStructure)
-
-
-
 Size numberBumps () const
-
-
-
 const boost::shared_ptr&lt; MarketModel &gt; &amp; associatedModel () const
-
-
-
 const std::vector&lt; VegaBumpCluster &gt; &amp; allBumps () const
-
-
-
 bool isFull () const
-
-
-
 bool isNonOverlapping () const
-
-
-
 bool isSensible () const</code></pre>
 
 <h2>Detailed Description</h2>

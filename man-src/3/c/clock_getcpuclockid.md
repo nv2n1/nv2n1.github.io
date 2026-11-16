@@ -19,19 +19,19 @@ int clock_getcpuclockid(pid_t pid, clockid_t *clockid);
 <p> <code>clock_getcpuclockid</code>():</p>
 <dl>
 <dt>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>clock_getcpuclockid</code>() function obtains the ID of the CPU-time clock of the process whose ID is <i>pid</i>, and returns it in the location pointed to by <i>clockid</i>. If <i>pid</i> is zero, then the clock ID of the CPU-time clock of the calling process is returned.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>clock_getcpuclockid</code>() returns 0; on error, it returns one of the positive error numbers listed in ERRORS.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd> The kernel does not support obtaining the per-process CPU-time clock of another process, and <i>pid</i> does not specify the calling process.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller does not have permission to access the CPU-time clock of the process specified by <i>pid</i>. (Specified in POSIX.1-2001; does not occur on Linux unless the kernel does not support obtaining the per-process CPU-time clock of another process.)</p>
-<dt><code>ESRCH</code></p>
-<dd> There is no process with the ID <i>pid</i>.</dl>
+<dt><code>ENOSYS</code></dt>
+<dd> The kernel does not support obtaining the per-process CPU-time clock of another process, and <i>pid</i> does not specify the calling process.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller does not have permission to access the CPU-time clock of the process specified by <i>pid</i>. (Specified in POSIX.1-2001; does not occur on Linux unless the kernel does not support obtaining the per-process CPU-time clock of another process.)</dd>
+<dt><code>ESRCH</code></dt>
+<dd> There is no process with the ID <i>pid</i>.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>clock_getcpuclockid</code>() function is available in glibc since version 2.2.</p>
 <h2>ATTRIBUTES</h2>

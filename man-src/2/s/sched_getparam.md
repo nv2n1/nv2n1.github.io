@@ -29,14 +29,14 @@ struct sched_param {
 <p> On success, <code>sched_setparam</code>() and <code>sched_getparam</code>() return 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> Invalid arguments: <i>param</i> is NULL or <i>pid</i> is negative</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>sched_setparam</code>()) The argument <i>param</i> does not make sense for the current scheduling policy.</p>
-<dt><code>EPERM</code></p>
-<dd> (<code>sched_setparam</code>()) The caller does not have appropriate privileges (Linux: does not have the <code>CAP_SYS_NICE</code> capability).</p>
-<dt><code>ESRCH</code></p>
-<dd> The thread whose ID is <i>pid</i> could not be found.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid arguments: <i>param</i> is NULL or <i>pid</i> is negative</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>sched_setparam</code>()) The argument <i>param</i> does not make sense for the current scheduling policy.</dd>
+<dt><code>EPERM</code></dt>
+<dd> (<code>sched_setparam</code>()) The caller does not have appropriate privileges (Linux: does not have the <code>CAP_SYS_NICE</code> capability).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The thread whose ID is <i>pid</i> could not be found.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>SEE ALSO</h2>

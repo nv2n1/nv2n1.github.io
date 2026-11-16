@@ -18,22 +18,22 @@ description: "ipmiutil_discover – discover IPMI LAN-enabled nodes"
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-a</p>
-<dd>All nodes, use the broadcast ping method. This is the default if no options are specified. This will detect the first enabled ethernet interface, and defaults to the broadcast address x.x.x.255 (where x.x.x.x is IP address) unless -b is used to specify otherwise.</p>
-<dt>-b &lt;ip&gt;</p>
-<dd>Beginning IP address, required, unless using broadcast with defaults. This could be a specific IP address, or a broadcast address, ending in 255, if the broadcast method (-a) is used.</p>
-<dt>-e &lt;ip&gt;</p>
-<dd>Endign IP address of the range. Not used for broadcast method. If this is not specified, a range of one IP address matching the beginning IP is assumed.</p>
-<dt>-g</p>
-<dd>Use the GetChannelAuthenticationCapabilities command method over IPMI LAN instead of the RMCP ping. Not compatible with broadcast. This may be useful if the vendor BMC does not support RMCP ping for some reason.</p>
-<dt>-i eth0</p>
-<dd>The interface name to use when sending the probes. The default is to detect the first enabled ethernet interface (e.g. eth0).</p>
-<dt>-m</p>
-<dd>shows MAC address. Uses the broadcast ping method, but uses a raw socket so that the MAC address can be displayed. This detects the first enabled ethernet interface, and defaults to the broadcast address 255.255.255.255 like -a. Using -m with raw sockets requires root privilege.</p>
-<dt>-r N</p>
-<dd>Repeat the ping N times to each node. Default is to send 1 ping per node.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed. </p>
+<dt>-a</dt>
+<dd>All nodes, use the broadcast ping method. This is the default if no options are specified. This will detect the first enabled ethernet interface, and defaults to the broadcast address x.x.x.255 (where x.x.x.x is IP address) unless -b is used to specify otherwise.</dd>
+<dt>-b &lt;ip&gt;</dt>
+<dd>Beginning IP address, required, unless using broadcast with defaults. This could be a specific IP address, or a broadcast address, ending in 255, if the broadcast method (-a) is used.</dd>
+<dt>-e &lt;ip&gt;</dt>
+<dd>Endign IP address of the range. Not used for broadcast method. If this is not specified, a range of one IP address matching the beginning IP is assumed.</dd>
+<dt>-g</dt>
+<dd>Use the GetChannelAuthenticationCapabilities command method over IPMI LAN instead of the RMCP ping. Not compatible with broadcast. This may be useful if the vendor BMC does not support RMCP ping for some reason.</dd>
+<dt>-i eth0</dt>
+<dd>The interface name to use when sending the probes. The default is to detect the first enabled ethernet interface (e.g. eth0).</dd>
+<dt>-m</dt>
+<dd>shows MAC address. Uses the broadcast ping method, but uses a raw socket so that the MAC address can be displayed. This detects the first enabled ethernet interface, and defaults to the broadcast address 255.255.255.255 like -a. Using -m with raw sockets requires root privilege.</dd>
+<dt>-r N</dt>
+<dd>Repeat the ping N times to each node. Default is to send 1 ping per node.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed. </dd>
 </dl>
 <h2>Examples</h2>
 <p>&nbsp;<wbr>idiscover -a -b 192.168.1.255<br />

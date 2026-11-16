@@ -17,38 +17,39 @@ description: "lsipc – show information on IPC facilities currently employed in
 <p> <code>-i</code>, <code>&#8211;id</code> <i>id</i></p>
 <dl>
 <dt>
-<dd> Show full details on just the one resource element identified by <i>id</i>. This option needs to be combined with one of the three resource options: <code>-m</code>, <code>-q</code> or <code>-s</code>. It is possible to override the default output format for this option with the <code>&#8211;list</code>, <code>&#8211;raw</code>, <code>&#8211;json</code> or <code>&#8211;export</code> option.</dl>
+</dt><dd> Show full details on just the one resource element identified by <i>id</i>. This option needs to be combined with one of the three resource options: <code>-m</code>, <code>-q</code> or <code>-s</code>. It is possible to override the default output format for this option with the <code>&#8211;list</code>, <code>&#8211;raw</code>, <code>&#8211;json</code> or <code>&#8211;export</code> option.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;global</code></p>
 <dl>
 <dt>
-<dd> Show system-wide usage and limits of IPC resources. This option may be combined with one of the three resource options: <code>-m</code>, <code>-q</code> or <code>-s</code>. The default is to show information about all resources.</dl>
+</dt><dd> Show system-wide usage and limits of IPC resources. This option may be combined with one of the three resource options: <code>-m</code>, <code>-q</code> or <code>-s</code>. The default is to show information about all resources.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <h3>Resource options</h3>
 <p> <code>-m</code>, <code>&#8211;shmems</code></p>
 <dl>
 <dt>
-<dd> Write information about active shared memory segments.</dl>
+</dt><dd> Write information about active shared memory segments.</dd></dl>
 <p> <code>-q</code>, <code>&#8211;queues</code></p>
 <dl>
 <dt>
-<dd> Write information about active message queues.</dl>
+</dt><dd> Write information about active message queues.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;semaphores</code></p>
 <dl>
 <dt>
-<dd> Write information about active semaphore sets.</dl>
+</dt><dd> Write information about active semaphore sets.</dd></dl>
 <h3>Output formatting</h3>
 <p> <code>-c</code>, <code>&#8211;creator</code></p>
 <dl>
 <dt>
-<dd> Show creator and owner.</dl>
+</dt><dd> Show creator and owner.</dd></dl>
 <p> <code>-e</code>, <code>&#8211;export</code></p>
 <dl>
 <dt>
-<dd> Produce output in the form of key=&quot;value&quot; pairs. All potentially unsafe value characters are hex-escaped (
+</dt><dd> Produce output in the form of key=&quot;value&quot; pairs. All potentially unsafe value characters are hex-escaped (
+</dd></dl>

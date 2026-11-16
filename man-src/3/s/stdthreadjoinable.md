@@ -25,17 +25,13 @@ true if the thread object identifies an active thread of execution, false otherw
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 void foo()
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 int main()
-
 {
     std::thread t;
     std::cout &lt;&lt; &quot;before starting, joinable: &quot; &lt;&lt; std::boolalpha &lt;&lt; t.joinable()

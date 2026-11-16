@@ -15,19 +15,19 @@ blk_add_trace_rq - Add a trace for a request oriented action
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>queue the io is for</dl>
+<dl><dd></dd><dd>queue the io is for</dd></dl>
  
 
  <i>rq</i>
-<dl><dd>the source request</dl>
+<dl><dd>the source request</dd></dl>
  
 
  <i>nr_bytes</i>
-<dl><dd>number of completed bytes</dl>
+<dl><dd>number of completed bytes</dd></dl>
  
 
  <i>what</i>
-<dl><dd>the action</dl>
+<dl><dd>the action</dd></dl>
 
 <h2>Description</h2>
 

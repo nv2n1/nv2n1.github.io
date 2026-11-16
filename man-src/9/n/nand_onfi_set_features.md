@@ -14,18 +14,18 @@ description: "nand_onfi_set_features – [REPLACEABLE] set features for ONFI nan
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>nand chip info structure</dl>
+<dd>nand chip info structure</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>feature address.</dl>
+<dd>feature address.</dd></dl>
 <p> <i>subfeature_param</i></p>
 <dl>
-<dd>the subfeature parameters, a four bytes array.</dl>
+<dd>the subfeature parameters, a four bytes array.</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

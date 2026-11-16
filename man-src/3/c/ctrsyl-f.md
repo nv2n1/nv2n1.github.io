@@ -25,10 +25,10 @@ description: "ctrsyl.f –"
  M-by-M and B is N-by-N; the right hand side C and the solution X are
  M-by-N; and scale is an output scale factor, set &lt;= 1 to avoid
  overflow in X.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>TRANA</i> </p>
+<dd><i>TRANA</i> </dd>
 <pre> TRANA is CHARACTER*1
  Specifies the option op(A):
  = 'N': op(A) = A (No transpose)
@@ -83,13 +83,13 @@ description: "ctrsyl.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 157 of file ctrsyl.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

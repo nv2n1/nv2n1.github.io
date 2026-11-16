@@ -19,20 +19,20 @@ mongoc_collection_remove (mongoc_collection_t          *collection,
 </pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd> A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd> A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd> A <code>mongoc_remove_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd> A <code>mongoc_remove_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>selector</code></p>
-<dd> A <code>bson_t</code> containing the query to match documents.</dl>
+<dt><code>selector</code></dt>
+<dd> A <code>bson_t</code> containing the query to match documents.</dd></dl>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd> A <code>mongoc_write_concern_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd> A <code>mongoc_write_concern_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd> An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd> An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p> This function shall remove documents in the given <code>collection</code> that match <code>selector</code> \&amp;. The bson <code>selector</code> is not validated, simply passed along as appropriate to the server. As such, compatibility and errors should be validated in the appropriate server documentation. </p>
 <p> If you want to limit deletes to a single document, provide <code>MONGOC_REMOVE_SINGLE_REMOVE</code> in <code>flags</code> \&amp;. </p>

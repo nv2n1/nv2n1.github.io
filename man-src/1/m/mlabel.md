@@ -22,40 +22,40 @@ mlabel[-vcsn][-N serial] drive : [new_label]
 <p> Reasonable care is taken to create a valid MS-DOS volume label. If an invalid label is specified, <tt>mlabel</tt> changes the label (and displays the new label if the verbose mode is set). <tt>Mlabel</tt> returns 0 on success or 1 on failure. </p>
 <p> Mlabel supports the following options:</p>
 <dl>
-<dt><tt>c</tt>&nbsp;</p>
-<dd> Clears an existing label, without prompting the user</p>
-<dt><tt>s</tt>&nbsp;</p>
-<dd> Shows the existing label, without prompting the user.</p>
-<dt><tt>n&nbsp;</tt>&nbsp;</p>
-<dd> Assigns a new (random) serial number to the disk</p>
-<dt><tt>N&nbsp;</tt><i>serial</i><tt></tt>&nbsp;</p>
-<dd> Sets the supplied serial number. The serial number should be supplied as an 8 digit hexadecimal number, without spaces</dl>
+<dt><tt>c</tt>&nbsp;</dt>
+<dd> Clears an existing label, without prompting the user</dd>
+<dt><tt>s</tt>&nbsp;</dt>
+<dd> Shows the existing label, without prompting the user.</dd>
+<dt><tt>n&nbsp;</tt>&nbsp;</dt>
+<dd> Assigns a new (random) serial number to the disk</dd>
+<dt><tt>N&nbsp;</tt><i>serial</i><tt></tt>&nbsp;</dt>
+<dd> Sets the supplied serial number. The serial number should be supplied as an 8 digit hexadecimal number, without spaces</dd></dl>
 <h2>See Also</h2>
 <p> Mtools&#8217; texinfo doc</p>
 <h2>Viewing the texi doc</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation. However, this process is only approximative, and some items, such as crossreferences, footnotes and indices are lost in this translation process. Indeed, these items have no appropriate representation in the manpage format. Moreover, not all information has been translated into the manpage version. Thus I strongly advise you to use the original texinfo doc. See the end of this manpage for instructions how to view the texinfo doc.</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a printable copy from the texinfo doc, run the following commands:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make dvi; dvips mtools.dvi
 </code></pre>
 </dl>
 <p>&nbsp;</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a html copy, run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make html
 </code></pre>
 </dl>
 <p>&nbsp; A premade html can be found at <tt>&infin;<a rel="nofollow" href="http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral">http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral</a></tt></p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make info
 </code></pre>

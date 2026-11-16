@@ -26,20 +26,20 @@ description: "Key :: Basic Methods –"
 </code></pre>
 <p> A Key is the essential class that encapsulates key <code>name </code>, <code>value </code> and <code>metainfo </code>. Key properties are:</p>
 <dl>
-<dt>*</p>
-<dd> <code>Key name </code></p>
-<dt>*</p>
-<dd> <code>Key value </code></p>
-<dt>*</p>
-<dd> <code>Data type </code></p>
-<dt>*</p>
-<dd> <code>Key comment </code></p>
-<dt>*</p>
-<dd> <code>Key owner </code></p>
-<dt>*</p>
-<dd> <code>UID, GID and filesystem-like mode permissions </code></p>
-<dt>*</p>
-<dd> <code>Mode, change and modification times </code></dl>
+<dt>*</dt>
+<dd> <code>Key name </code></dd>
+<dt>*</dt>
+<dd> <code>Key value </code></dd>
+<dt>*</dt>
+<dd> <code>Data type </code></dd>
+<dt>*</dt>
+<dd> <code>Key comment </code></dd>
+<dt>*</dt>
+<dd> <code>Key owner </code></dd>
+<dt>*</dt>
+<dd> <code>UID, GID and filesystem-like mode permissions </code></dd>
+<dt>*</dt>
+<dd> <code>Mode, change and modification times </code></dd></dl>
 <p> Described here the methods to allocate and free the key.</p>
 <h2>Function Documentation</h2>
 <h3>int keyCopy (Key * dest, const Key * source)Copy or Clear a key.</h3>
@@ -61,34 +61,34 @@ description: "Key :: Basic Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>dest</i> the key which will be written to<br />
- <i>source</i> the key which should be copied or NULL to clean the destination key</dl>
+</dt><dd> <i>dest</i> the key which will be written to<br />
+ <i>source</i> the key which should be copied or NULL to clean the destination key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 on failure when a NULL pointer was passed for dest or a dynamic property could not be written. </p>
+</dt><dd> -1 on failure when a NULL pointer was passed for dest or a dynamic property could not be written. </dd>
 <p> 0 when dest was cleaned </p>
 <p> 1 when source was successfully copied</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyDup()</code> to get a duplication of a <code>Key :: Basic Methods</code></dl>
+</dt><dd> <code>keyDup()</code> to get a duplication of a <code>Key :: Basic Methods</code></dd></dl>
 <h3>ssize_t keyDecRef (Key * key)Decrement the viability of a key object.</h3>
 <p> The reference counter can&#8217;t be decremented once it reached 0. In that situation nothing will happen and 0 will be returned. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the value of the new reference counter </p>
+</dt><dd> the value of the new reference counter </dd>
 <p> -1 on null pointer </p>
 <p> 0 when the key is ready to be freed</dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the key object to work with</dl>
+</dt><dd> <i>key</i> the key object to work with</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyGetRef()</code>, <code>keyDel()</code>, <code>keyIncRef()</code></dl>
+</dt><dd> <code>keyGetRef()</code>, <code>keyDel()</code>, <code>keyIncRef()</code></dd></dl>
 <h3>int keyDel (Key * key)A destructor for Key objects.</h3>
 <p> Every key created by <code>keyNew()</code> must be deleted with <code>keyDel()</code>. </p>
 <p> It is save to delete keys which are in a keyset, the number of references will be returned then. </p>
@@ -96,15 +96,15 @@ description: "Key :: Basic Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the key object to delete</dl>
+</dt><dd> <i>key</i> the key object to delete</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyNew()</code>, keyInc(), <code>keyGetRef()</code></dl>
+</dt><dd> <code>keyNew()</code>, keyInc(), <code>keyGetRef()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the value of the reference counter if the key is within keyset(s) </p>
+</dt><dd> the value of the reference counter if the key is within keyset(s) </dd>
 <p> 0 when the key was freed </p>
 <p> -1 on null pointers</dl>
 <h3>Key* keyDup (const Key * source)Return a duplicate of a key.</h3>
@@ -131,16 +131,16 @@ description: "Key :: Basic Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>source</i> has to be an initializised source Key</dl>
+</dt><dd> <i>source</i> has to be an initializised source Key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 failure or on NULL pointer </p>
+</dt><dd> 0 failure or on NULL pointer </dd>
 <p> a fully copy of source on success</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>ksAppend()</code>, <code>keyDel()</code> </p>
+</dt><dd> <code>ksAppend()</code>, <code>keyDel()</code> </dd>
 <p> keyClear(), <code>keyNew()</code></dl>
 <h3>ssize_t keyGetRef (const Key * key)Return how many references the key has.</h3>
 <p> The references will be incremented when <code>ksAppendKey()</code> or <code>ksAppend()</code> uses the key and will be decremented when <code>ksPop()</code> is used. </p>
@@ -149,16 +149,16 @@ description: "Key :: Basic Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the key object to work with</dl>
+</dt><dd> <i>key</i> the key object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of references </p>
+</dt><dd> the number of references </dd>
 <p> -1 on null pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyIncRef()</code> and <code>keyDecRef()</code></dl>
+</dt><dd> <code>keyIncRef()</code> and <code>keyDecRef()</code></dd></dl>
 <h3>ssize_t keyIncRef (Key * key)Increment the viability of a key object.</h3>
 <p> This function is intended for applications using their own reference counter for key objects. With it you can increment the reference and thus avoid destruction of the object in a subsequent <code>keyDel()</code>. </p>
 <p>Key *k;<br />
@@ -170,17 +170,17 @@ keyDel(k); // now really free it</p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the value of the new reference counter </p>
+</dt><dd> the value of the new reference counter </dd>
 <p> -1 on null pointer </p>
 <p> SSIZE_MAX when maximum exceeded</dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the key object to work with</dl>
+</dt><dd> <i>key</i> the key object to work with</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyGetRef()</code>, <code>keyDecRef()</code>, <code>keyDel()</code></dl>
+</dt><dd> <code>keyGetRef()</code>, <code>keyDecRef()</code>, <code>keyDel()</code></dd></dl>
 <h3>Key* keyNew (const char * keyName, &#8230;)A practical way to fully create a Key object in one step.</h3>
 <p> This function tries to mimic the C++ way for constructors. </p>
 <p> To just get a key object, simple do: </p>
@@ -191,7 +191,7 @@ keyDel(k);</p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> When you already have a key with similar properties its easier and cheaper to <code>keyDup()</code> the key.</dl>
+</dt><dd> When you already have a key with similar properties its easier and cheaper to <code>keyDup()</code> the key.</dd></dl>
 <p> Due to ABI compatibility, the Key structure is not defined in kdb.h, only declared. So you can only declare pointers to Keys in your program, and allocate and free memory for them with <code>keyNew()</code> and <code>keyDel()</code> respectively. See <a rel="nofollow" href="http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html#AEN135">http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html#AEN135</a> </p>
 <p> You can call it in many different ways depending on the attribute tags you pass as parameters. Tags are represented as the keyswitch_t values, and tell <code>keyNew()</code> which Key attribute comes next. </p>
 <p> The simplest and minimum way to use it is with no tags, only a key name: </p>
@@ -208,12 +208,13 @@ keyDel(emptyNamedKey);</p>
 <p> <code>keyNew()</code> allocates memory for a key object and cleans everything up. After that, it processes the given argument list. </p>
 <p> The Key attribute tags are the following:</p>
 <dl>
-<dt>*</p>
-<dd> keyswitch_t::KEY_TYPE </p>
+<dt>*</dt>
+<dd> keyswitch_t::KEY_TYPE </dd>
 <p>&nbsp;<wbr>Next parameter is a type of the value. Default assumed is KEY_TYPE_UNDEFINED. Set this attribute so that a subsequent KEY_VALUE can toggle to&nbsp;<wbr><code>keySetString()</code>&nbsp;<wbr>or&nbsp;<wbr><code>keySetBinary()</code>&nbsp;<wbr>regarding to&nbsp;<wbr><code>keyIsString()</code>&nbsp;<wbr>or&nbsp;<wbr><code>keyIsBinary()</code>. If you don&#8217;t use KEY_TYPE but a KEY_VALUE follows afterwards, KEY_TYPE_STRING will be used.</p>
-<dt>*</p>
-<dd> keyswitch_t::KEY_SIZE </p>
+<dt>*</dt>
+<dd> keyswitch_t::KEY_SIZE </dd>
 <p>&nbsp;<wbr>Define a maximum length of the value. This is especially useful for setting a binary key. So make sure you use that before you KEY_VALUE for binary keys.</p>
-<dt>*</p>
-<dd> keyswitch_t::KEY_VALUE </p>
+<dt>*</dt>
+<dd> keyswitch_t::KEY_VALUE </dd>
 <p>&nbsp;<wbr>Next parameter is a pointer to the value that will be set to the key If no keyswitch_t::KEY_TYPE was used before, keyswitch_t::KEY_TYPE_STRING is assumed. If KEY_TYPE was previously passed with a KEY_TYPE_BINARY, you should have passed KEY_SIZE before!&nbsp;<wbr>Otherwise it will be cut of with first&nbsp;<wbr>
+</p></dl>

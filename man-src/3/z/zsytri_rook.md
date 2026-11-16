@@ -21,10 +21,10 @@ description: "zsytri_rook.f –"
 <pre> ZSYTRI_ROOK computes the inverse of a complex symmetric
  matrix A using the factorization A = U*D*U**T or A = L*D*L**T
  computed by ZSYTRF_ROOK.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  Specifies whether the details of the factorization are stored
  as an upper or lower triangular matrix.
@@ -61,13 +61,13 @@ description: "zsytri_rook.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dd>
@@ -77,7 +77,8 @@ description: "zsytri_rook.f –"
  September 2007, Sven Hammarling, Nicholas J. Higham, Craig Lucas,
  School of Mathematics,
  University of Manchester</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 130 of file zsytri_rook.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

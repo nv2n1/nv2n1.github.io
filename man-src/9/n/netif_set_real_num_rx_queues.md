@@ -15,11 +15,11 @@ netif_set_real_num_rx_queues - set actual number of RX queues used
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Network device</dl>
+<dl><dd></dd><dd>Network device</dd></dl>
  
 
  <i>rxq</i>
-<dl><dd>Actual number of RX queues</dl>
+<dl><dd>Actual number of RX queues</dd></dl>
 
 <h2>Description</h2>
 

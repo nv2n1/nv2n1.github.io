@@ -15,11 +15,11 @@ snd_soc_dapm_get_pin_switch - Get information for a pin switch
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>mixer control</dl>
+<dl><dd></dd><dd>mixer control</dd></dl>
  
 
  <i>ucontrol</i>
-<dl><dd>Value</dl>
+<dl><dd>Value</dd></dl>
 
 <h2>Copyright</h2>
 

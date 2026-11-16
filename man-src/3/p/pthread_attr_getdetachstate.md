@@ -10,20 +10,18 @@ description: "pthread_attr_setdetachstate, pthread_attr_getdetachstate – set/g
 <p>pthread_attr_setdetachstate, pthread_attr_getdetachstate &#8211; set/get detach state attribute in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate);
 int pthread_attr_getdetachstate(const pthread_attr_t *attr,
                                 int *detachstate);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_attr_setdetachstate</code>() function sets the detach state attribute of the thread attributes object referred to by <i>attr</i> to the value specified in <i>detachstate</i>. The detach state attribute determines whether a thread created using the thread attributes object <i>attr</i> will be created in a joinable or a detached state. </p>
 <p> The following values may be specified in <i>detachstate</i>:</p>
 <dl>
-<dt><code>PTHREAD_CREATE_DETACHED</code></p>
-<dd>Threads that are created using <i>attr</i> will be created in a detached state.</p>
-<dt><code>PTHREAD_CREATE_JOINABLE</code></p>
-<dd>Threads that are created using <i>attr</i> will be created in a joinable state.</dl>
+<dt><code>PTHREAD_CREATE_DETACHED</code></dt>
+<dd>Threads that are created using <i>attr</i> will be created in a detached state.</dd>
+<dt><code>PTHREAD_CREATE_JOINABLE</code></dt>
+<dd>Threads that are created using <i>attr</i> will be created in a joinable state.</dd></dl>
 <p> The default setting of the detach state attribute in a newly initialized thread attributes object is <code>PTHREAD_CREATE_JOINABLE</code>. </p>
 <p> The <code>pthread_attr_getdetachstate</code>() returns the detach state attribute of the thread attributes object <i>attr</i> in the buffer pointed to by <i>detachstate</i>.</p>
 <h2>Return Value</h2>
@@ -31,8 +29,8 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_attr_setdetachstate</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>An invalid value was specified in <i>detachstate</i>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>An invalid value was specified in <i>detachstate</i>.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

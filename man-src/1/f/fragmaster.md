@@ -39,3 +39,4 @@ fragmaster[options] Create EPS and PDF files with embedded psfrag substitutions.
 % Just an ordinary comment %
     % Some special comments : % fmclass : book % fmclassopt : 11pt % fmopt : width = 6cm %
                                                                                      % Another special comment : % head : % 
+</code></pre>

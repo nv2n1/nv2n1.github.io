@@ -19,3 +19,4 @@ char *rindex(const char *s, int c);
 <p> The <code>index</code>() function returns a pointer to the first occurrence of the character <i>c</i> in the string <i>s</i>. </p>
 <p> The <code>rindex</code>() function returns a pointer to the last occurrence of the character <i>c</i> in the string <i>s</i>. </p>
 <p> The terminating null byte (&#8216;
+</p>

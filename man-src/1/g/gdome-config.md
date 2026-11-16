@@ -16,18 +16,18 @@ description: "gdome-config – script to get information about the installed ver
 <h2>OPTIONS</h2>
 <p> <i>gdome-config</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the currently installed version of <i>gdome2</i> on the standard output.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Print the linker flags that are necessary to link a <i>gdome2</i> program.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Print the compiler flags that are necessary to compile a <i>gdome2</i> program.</p>
-<dt><code>&#8211;prefix=DIR</code></p>
-<dd> If specified, use DIR instead of the installation prefix that <i>gdome2</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</p>
-<dt><code>&#8211;exec-prefix=DIR</code></p>
-<dd> If specified, use DIR instead of the installation exec prefix that <i>gdome2</i> was built when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a short help text and exit.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the currently installed version of <i>gdome2</i> on the standard output.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print the linker flags that are necessary to link a <i>gdome2</i> program.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Print the compiler flags that are necessary to compile a <i>gdome2</i> program.</dd>
+<dt><code>&#8211;prefix=DIR</code></dt>
+<dd> If specified, use DIR instead of the installation prefix that <i>gdome2</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd>
+<dt><code>&#8211;exec-prefix=DIR</code></dt>
+<dd> If specified, use DIR instead of the installation exec prefix that <i>gdome2</i> was built when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a short help text and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was added by Enrico Zini &lt;zinie [at] cs.unibo.it&gt; for the Debian GNU/Linux system (but may be used by others). The page was made editing the manpage written by Fredrik Hallenberg &lt;hallon [at] lysator.liu.se&gt; for the libxml2 Debian GNU/Linux package. </p>
 <h2>Index</h2>

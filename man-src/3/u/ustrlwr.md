@@ -10,7 +10,6 @@ description: "ustrlwr – Replaces all letters with lower case. Allegro game pro
 <p>ustrlwr &#8211; Replaces all letters with lower case. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrlwr(char *s);</code></pre>
 <h2>Description</h2>
 <p>This function replaces all upper case letters in `s&#8217; with lower case letters. Example: </p>

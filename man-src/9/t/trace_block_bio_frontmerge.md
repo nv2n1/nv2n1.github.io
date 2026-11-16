@@ -14,20 +14,20 @@ description: "trace_block_bio_frontmerge – merging block operation to the begi
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>queue holding operation</dl>
+</dd><dd>queue holding operation</dd></dl>
 <p> <i>rq</i></p>
 <dl>
-<dd>request bio is being merged into</dl>
+<dd>request bio is being merged into</dd></dl>
 <p> <i>bio</i></p>
 <dl>
-<dd>new block operation to merge</dl>
+<dd>new block operation to merge</dd></dl>
 <h2>Description</h2>
 <p>Merging block IO operation <i>bio</i> to the beginning of an existing block operation in queue <i>q</i>.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

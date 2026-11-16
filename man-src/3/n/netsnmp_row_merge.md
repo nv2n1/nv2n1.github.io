@@ -10,21 +10,9 @@ description: "row_merge – Calls sub handlers with request for one row at a tim
 <p>row_merge &#8211; Calls sub handlers with request for one row at a time.</p>
 <h3>Defines</h3>
 <pre><code>#define ROW_MERGE_WAITING   0
-
-
-
 #define ROW_MERGE_ACTIVE   1
-
-
-
 #define ROW_MERGE_DONE   2
-
-
-
 #define ROW_MERGE_HEAD   3
-
-
-
 Functions</code></pre>
 <p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_row_merge_handler</code> (int prefix_len)<br />
  <i>returns a row_merge handler that can be injected into a given handler chain. </i><br />

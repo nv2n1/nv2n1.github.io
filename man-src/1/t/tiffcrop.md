@@ -16,11 +16,11 @@ description: "tiffcrop – select, copy, crop, convert, extract, and/or process 
 <p> The available functions can be grouped broadly into three classes:</p>
 <dl>
 <dt>
-<dd> Those that select individual images or sections of images from the input files. The options -N for sequences or lists of individual images in the input files, -Z for zones, -z for regions, -X and -Y for fixed sized selections, -m for margins, -U for units, and -E for edge reference provide a variety of ways to specify portions of the input image.</p>
+</dt><dd> Those that select individual images or sections of images from the input files. The options -N for sequences or lists of individual images in the input files, -Z for zones, -z for regions, -X and -Y for fixed sized selections, -m for margins, -U for units, and -E for edge reference provide a variety of ways to specify portions of the input image.</dd>
 <dt>
-<dd> Those that allow the individual images or selections to be exported to one or more output files in different groupings and control the organization of the data in the output images. The options -P for page size grouping, -S for subdivision into columns and rows and -e for export mode options that produce one or more files from each input image. The options -r, -s, -t, -w control strip and tile format and sizes while -B -L -c -f modify the endian addressing scheme, the compression options, and the bit fill sequence of images as they are written.</p>
+</dt><dd> Those that allow the individual images or selections to be exported to one or more output files in different groupings and control the organization of the data in the output images. The options -P for page size grouping, -S for subdivision into columns and rows and -e for export mode options that produce one or more files from each input image. The options -r, -s, -t, -w control strip and tile format and sizes while -B -L -c -f modify the endian addressing scheme, the compression options, and the bit fill sequence of images as they are written.</dd>
 <dt>
-<dd> Those that perform some action on each image that is selected from the input file. The options include -R for rotate, -I for inversion of the photometric interpretation and/or data values, and -F to flip (mirror) the image horizontally or vertically.</dl>
+</dt><dd> Those that perform some action on each image that is selected from the input file. The options include -R for rotate, -I for inversion of the photometric interpretation and/or data values, and -F to flip (mirror) the image horizontally or vertically.</dd></dl>
 <p> Functions are applied to the input image(s) in the following order: cropping, fixed area extraction, zone and region extraction, inversion, mirroring, rotation. </p>
 <p> Functions are applied to the output image(s) in the following order: export mode options for grouping zones, regions, or images into one or more files, <i>or</i> row and column divisions with output margins, <i>or</i> page size divisions with page orientation options. </p>
 <p> Finally, strip, tile, byte order, output resolution, and compression options are applied to all output images. </p>
@@ -29,148 +29,148 @@ description: "tiffcrop – select, copy, crop, convert, extract, and/or process 
 <p> Using the options for selecting individual input images and the options for exporting images and/or segments defined as zones or regions of each input image, <i>tiffcrop</i> can perform the functions of tiffcp and tiffsplit in a single pass while applying multiple operations to individual selections or images. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display the syntax summary for tiffcrop.</p>
-<dt><code>-v</code></p>
-<dd> Report the current version and last modification date for tiffcrop.</p>
-<dt><code>-N odd|even|#,#-#,#|last</code></p>
-<dd> Specify one or more series or range(s) of images within each file to process. The words <code>odd</code> or <code>even</code> may be used to specify all odd or even numbered images counting from one. Note that internally, TIFF images are numbered from zero rather than one but since this convention is not obvious to most users, tiffcrop used 1 to specifiy the first image in a multipage file. The word <code>last </code> may be used in place of a number in the sequence to indicate the final image in the file without knowing how many images there are. Ranges of images may be specified with a dash and multiple sets can be indicated by joining them in a comma-separated list. eg. use <code>-N 1,5-7,last </code> to process the 1st, 5th through 7th, and final image in the file.</p>
-<dt><code>-E top|bottom|left|right</code></p>
-<dd> Specify the top, bottom, left, or right edge as the reference from which to calcuate the width and length of crop regions or sequence of postions for zones. When used with the -e option for exporting zones or regions, the reference edge determines how composite images are arranged. Using -E left or right causes successive zones or regions to be merged horizontally whereas using -E top or bottom causes successive zones or regions to be arranged vertically. This option has no effect on export layout when multiple zones or regions are not being exported to composite images. Edges may be abbreviated to the first letter.</p>
-<dt><code>-e combined|divided|image|multiple|separate</code></p>
-<dd> Specify the export mode for images and selections from input images. The final filename on the command line is considered to be the destination file or filename stem for automatically generated sequences of files. Modes may be abbreviated to the first letter.</p>
+<dt><code>-h</code></dt>
+<dd> Display the syntax summary for tiffcrop.</dd>
+<dt><code>-v</code></dt>
+<dd> Report the current version and last modification date for tiffcrop.</dd>
+<dt><code>-N odd|even|#,#-#,#|last</code></dt>
+<dd> Specify one or more series or range(s) of images within each file to process. The words <code>odd</code> or <code>even</code> may be used to specify all odd or even numbered images counting from one. Note that internally, TIFF images are numbered from zero rather than one but since this convention is not obvious to most users, tiffcrop used 1 to specifiy the first image in a multipage file. The word <code>last </code> may be used in place of a number in the sequence to indicate the final image in the file without knowing how many images there are. Ranges of images may be specified with a dash and multiple sets can be indicated by joining them in a comma-separated list. eg. use <code>-N 1,5-7,last </code> to process the 1st, 5th through 7th, and final image in the file.</dd>
+<dt><code>-E top|bottom|left|right</code></dt>
+<dd> Specify the top, bottom, left, or right edge as the reference from which to calcuate the width and length of crop regions or sequence of postions for zones. When used with the -e option for exporting zones or regions, the reference edge determines how composite images are arranged. Using -E left or right causes successive zones or regions to be merged horizontally whereas using -E top or bottom causes successive zones or regions to be arranged vertically. This option has no effect on export layout when multiple zones or regions are not being exported to composite images. Edges may be abbreviated to the first letter.</dd>
+<dt><code>-e combined|divided|image|multiple|separate</code></dt>
+<dd> Specify the export mode for images and selections from input images. The final filename on the command line is considered to be the destination file or filename stem for automatically generated sequences of files. Modes may be abbreviated to the first letter.</dd>
 <dt>
-<dd> combined All images and selections are written to a single file with multiple selections from one image combined into a single image (default)</p>
+</dt><dd> combined All images and selections are written to a single file with multiple selections from one image combined into a single image (default)</dd>
 <dt>
-<dd> divided All images and selections are written to a single file with each selection from one image written to a new image</p>
+</dt><dd> divided All images and selections are written to a single file with each selection from one image written to a new image</dd>
 <dt>
-<dd> image Each input image is written to a new file (numeric filename sequence) with multiple selections from the image combined into one image</p>
+</dt><dd> image Each input image is written to a new file (numeric filename sequence) with multiple selections from the image combined into one image</dd>
 <dt>
-<dd> multiple Each input image is written to a new file (numeric filename sequence) with each selection from the image written to a new image</p>
+</dt><dd> multiple Each input image is written to a new file (numeric filename sequence) with each selection from the image written to a new image</dd>
 <dt>
-<dd> separate Individual selections from each image are written to separate files</p>
-<dt><code>-U in|cm|px</code></p>
-<dd> Specify the type of units to apply to dimensions for margins and crop regions for input and output images. Inches or centimeters are converted to pixels using the resolution unit specified in the TIFF file (which defaults to inches if not specified in the IFD).</p>
-<dt><code>-m #,#,#,#</code></p>
-<dd> Specify margins to be removed from the input image. The order must be top, left, bottom, right with only commas separating the elements of the list. Margins are scaled according to the current units and removed before any other extractions are computed..</p>
-<dt><code>-X #</code></p>
-<dd> Set the horizontal (X-axis) dimension of a region to extract relative to the specified origin reference. If the origin is the top or bottom edge, the X axis value will be assumed to start at the left edge.</p>
-<dt><code>-Y #</code></p>
-<dd> Set the vertical (Y-axis) dimension of a region to extract relative to the specified origin reference. If the origin is the left or right edge, the Y axis value will be assumed to start at the top.</p>
-<dt><code>-Z #:#,#:# </code></p>
-<dd> Specify zones of the image designated as position X of Y equal sized portions measured from the reference edge, eg 1:3 would be first third of the image starting from the reference edge minus any margins specified for the confining edges. Multiple zones can be specified as a comma separated list but they must reference the same edge. To extract the top quarter and the bottom third of an image you would use <code>-Z 1:4,3:3.</code></p>
-<dt><code>-z x1,y1,x2,y2: &#8230; :xN,yN,xN+1,yN+1 </code></p>
-<dd> Specify a series of coordinates to define regions for processing and exporting. The coordinates represent the top left and lower right corners of each region in the current units, eg inch, cm, or pixels. Pixels are counted from one to width or height and inches or cm are calculated from image resolution data. </p>
+</dt><dd> separate Individual selections from each image are written to separate files</dd>
+<dt><code>-U in|cm|px</code></dt>
+<dd> Specify the type of units to apply to dimensions for margins and crop regions for input and output images. Inches or centimeters are converted to pixels using the resolution unit specified in the TIFF file (which defaults to inches if not specified in the IFD).</dd>
+<dt><code>-m #,#,#,#</code></dt>
+<dd> Specify margins to be removed from the input image. The order must be top, left, bottom, right with only commas separating the elements of the list. Margins are scaled according to the current units and removed before any other extractions are computed..</dd>
+<dt><code>-X #</code></dt>
+<dd> Set the horizontal (X-axis) dimension of a region to extract relative to the specified origin reference. If the origin is the top or bottom edge, the X axis value will be assumed to start at the left edge.</dd>
+<dt><code>-Y #</code></dt>
+<dd> Set the vertical (Y-axis) dimension of a region to extract relative to the specified origin reference. If the origin is the left or right edge, the Y axis value will be assumed to start at the top.</dd>
+<dt><code>-Z #:#,#:# </code></dt>
+<dd> Specify zones of the image designated as position X of Y equal sized portions measured from the reference edge, eg 1:3 would be first third of the image starting from the reference edge minus any margins specified for the confining edges. Multiple zones can be specified as a comma separated list but they must reference the same edge. To extract the top quarter and the bottom third of an image you would use <code>-Z 1:4,3:3.</code></dd>
+<dt><code>-z x1,y1,x2,y2: &#8230; :xN,yN,xN+1,yN+1 </code></dt>
+<dd> Specify a series of coordinates to define regions for processing and exporting. The coordinates represent the top left and lower right corners of each region in the current units, eg inch, cm, or pixels. Pixels are counted from one to width or height and inches or cm are calculated from image resolution data. </dd>
 <p> Each colon delimited series of four values represents the horizontal and vertical offsets from the top and left edges of the image, regardless of the edge specified with the -E option. The first and third values represent the horizontal offsets of the corner points from the left edge while the second and fourth values represent the vertical offsets from the top edge.</p>
-<dt><code>-F horiz|vert</code></p>
-<dd> Flip, ie mirror, the image or extracted region horizontally or vertically.</p>
-<dt><code>-R 90|180|270</code></p>
-<dd> Rotate the image or extracted region 90, 180, or 270 degrees clockwise.</p>
-<dt><code>\-I [black|white|data|both]</code></p>
-<dd> Invert color space, eg dark to light for bilevel and grayscale images. This can be used to modify negative images to positive or to correct images that have the PHOTOMETRIC_INTERPRETATIN tag set incorrectly. If the value is black or white, the PHOTOMETRIC_INTERPRETATION tag is set to MinIsBlack or MinIsWhite, without altering the image data. If the argument is data or both, the data values of the image are modified. Specifying both inverts the data and the PHOTOMETRIC_INTERPRETATION tag, whereas using data inverts the data but not the PHOTOMETRIC_INTERPRETATION tag. No support for modifying the color space of color images in this release.</p>
-<dt><code>-H #</code></p>
-<dd> Set the horizontal resolution of output images to # expressed in the current units.</p>
-<dt><code>-V #</code></p>
-<dd> Set the vertical resolution of the output images to # expressed in the current units.</p>
-<dt><code>-J #</code></p>
-<dd> Set the horizontal margin of an output page size to # expressed in the current units when sectioning image into columns x rows subimages using the -S cols:rows option.</p>
-<dt><code>-K #</code></p>
-<dd> Set the vertical margin of an output page size to # expressed in the current units when sectioning image into columns x rows submiages using the -S cols:rows option.</p>
-<dt><code>-O portrait|landscape|auto</code></p>
-<dd> Set the output orientation of the pages or sections. Auto will use the arrangement that requires the fewest pages. This option is only meaningful in conjunction with the -P option to format an image to fit on a specific paper size.</p>
-<dt><code>-P page</code></p>
-<dd> Format the output images to fit on page size paper. Use -P list to show the supported page sizes and dimensions. You can define a custom page size by entering the width and length of the page in the current units with the following format #.#x#.#.</p>
-<dt><code>-S cols:rows</code></p>
-<dd> Divide each image into cols across and rows down equal sections.</p>
-<dt><code>-B</code></p>
-<dd> Force output to be written with Big-Endian byte order. This option only has an effect when the output file is created or overwritten and not when it is appended to.</p>
-<dt><code>-C</code></p>
-<dd> Suppress the use of &#8220;strip chopping&#8221; when reading images that have a single strip/tile of uncompressed data.</p>
-<dt><code>-c</code></p>
-<dd> Specify the compression to use for data written to the output file: <code>none </code> for no compression, <code>packbits</code> for PackBits compression, <code>lzw</code> for Lempel-Ziv &amp; Welch compression, <code>jpeg </code> for baseline JPEG compression. <code>zip</code> for Deflate compression, <code>g3</code> for CCITT Group 3 (T.4) compression, and <code>g4</code> for CCITT Group 4 (T.6) compression. By default <i>tiffcrop</i> will compress data according to the value of the <i>Compression</i> tag found in the source file.</p>
+<dt><code>-F horiz|vert</code></dt>
+<dd> Flip, ie mirror, the image or extracted region horizontally or vertically.</dd>
+<dt><code>-R 90|180|270</code></dt>
+<dd> Rotate the image or extracted region 90, 180, or 270 degrees clockwise.</dd>
+<dt><code>\-I [black|white|data|both]</code></dt>
+<dd> Invert color space, eg dark to light for bilevel and grayscale images. This can be used to modify negative images to positive or to correct images that have the PHOTOMETRIC_INTERPRETATIN tag set incorrectly. If the value is black or white, the PHOTOMETRIC_INTERPRETATION tag is set to MinIsBlack or MinIsWhite, without altering the image data. If the argument is data or both, the data values of the image are modified. Specifying both inverts the data and the PHOTOMETRIC_INTERPRETATION tag, whereas using data inverts the data but not the PHOTOMETRIC_INTERPRETATION tag. No support for modifying the color space of color images in this release.</dd>
+<dt><code>-H #</code></dt>
+<dd> Set the horizontal resolution of output images to # expressed in the current units.</dd>
+<dt><code>-V #</code></dt>
+<dd> Set the vertical resolution of the output images to # expressed in the current units.</dd>
+<dt><code>-J #</code></dt>
+<dd> Set the horizontal margin of an output page size to # expressed in the current units when sectioning image into columns x rows subimages using the -S cols:rows option.</dd>
+<dt><code>-K #</code></dt>
+<dd> Set the vertical margin of an output page size to # expressed in the current units when sectioning image into columns x rows submiages using the -S cols:rows option.</dd>
+<dt><code>-O portrait|landscape|auto</code></dt>
+<dd> Set the output orientation of the pages or sections. Auto will use the arrangement that requires the fewest pages. This option is only meaningful in conjunction with the -P option to format an image to fit on a specific paper size.</dd>
+<dt><code>-P page</code></dt>
+<dd> Format the output images to fit on page size paper. Use -P list to show the supported page sizes and dimensions. You can define a custom page size by entering the width and length of the page in the current units with the following format #.#x#.#.</dd>
+<dt><code>-S cols:rows</code></dt>
+<dd> Divide each image into cols across and rows down equal sections.</dd>
+<dt><code>-B</code></dt>
+<dd> Force output to be written with Big-Endian byte order. This option only has an effect when the output file is created or overwritten and not when it is appended to.</dd>
+<dt><code>-C</code></dt>
+<dd> Suppress the use of &#8220;strip chopping&#8221; when reading images that have a single strip/tile of uncompressed data.</dd>
+<dt><code>-c</code></dt>
+<dd> Specify the compression to use for data written to the output file: <code>none </code> for no compression, <code>packbits</code> for PackBits compression, <code>lzw</code> for Lempel-Ziv &amp; Welch compression, <code>jpeg </code> for baseline JPEG compression. <code>zip</code> for Deflate compression, <code>g3</code> for CCITT Group 3 (T.4) compression, and <code>g4</code> for CCITT Group 4 (T.6) compression. By default <i>tiffcrop</i> will compress data according to the value of the <i>Compression</i> tag found in the source file.</dd>
 <dt>
-<dd> The <font SIZE="-1">CCITT</font> Group 3 and Group 4 compression algorithms can only be used with bilevel data.</p>
+</dt><dd> The <font SIZE="-1">CCITT</font> Group 3 and Group 4 compression algorithms can only be used with bilevel data.</dd>
 <dt>
-<dd> Group 3 compression can be specified together with several T.4-specific options: <code>1d</code> for 1-dimensional encoding, <code>2d</code> for 2-dimensional encoding, and <code>fill</code> to force each encoded scanline to be zero-filled so that the terminating EOL code lies on a byte boundary. Group 3-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;g3&#8221; option; e.g. <code>-c g3:2d:fill</code> to get 2D-encoded data with byte-aligned EOL codes.</p>
+</dt><dd> Group 3 compression can be specified together with several T.4-specific options: <code>1d</code> for 1-dimensional encoding, <code>2d</code> for 2-dimensional encoding, and <code>fill</code> to force each encoded scanline to be zero-filled so that the terminating EOL code lies on a byte boundary. Group 3-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;g3&#8221; option; e.g. <code>-c g3:2d:fill</code> to get 2D-encoded data with byte-aligned EOL codes.</dd>
 <dt>
-<dd> <font SIZE="-1">LZW</font> compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for <font SIZE="-1">LZW</font> compression with horizontal differencing.</p>
-<dt><code>-f</code></p>
-<dd> Specify the bit fill order to use in writing output data. By default, <i>tiffcrop</i> will create a new file with the same fill order as the original. Specifying <code>-f lsb2msb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">LSB2MSB,</font> while <code>-f msb2lsb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">MSB2LSB.</font></p>
-<dt><code>-i</code></p>
-<dd> Ignore non-fatal read errors and continue processing of the input file.</p>
-<dt><code>-l</code></p>
-<dd> Specify the length of a tile (in pixels). <i>Tiffcrop</i> attempts to set the tile dimensions so that no more than 8 kilobytes of data appear in a tile.</p>
-<dt><code>-L</code></p>
-<dd> Force output to be written with Little-Endian byte order. This option only has an effect when the output file is created or overwritten and not when it is appended to.</p>
-<dt><code>-M</code></p>
-<dd> Suppress the use of memory-mapped files when reading images.</p>
-<dt><code>-p</code></p>
-<dd> Specify the planar configuration to use in writing image data that has more than one sample per pixel. By default, <i>tiffcrop</i> will create a new file with the same planar configuration as the original. Specifying <code>-p contig</code> will force data to be written with multi-sample data packed together, while <code>-p separate</code> will force samples to be written in separate planes.</p>
-<dt><code>-r</code></p>
-<dd> Specify the number of rows (scanlines) in each strip of data written to the output file. By default (or when value <code>0</code> is specified), <i>tiffcrop</i> attempts to set the rows/strip that no more than 8 kilobytes of data appear in a strip. If you specify the special value <code>-1</code> it will results in infinite number of the rows per strip. The entire image will be the one strip in that case.</p>
-<dt><code>-s</code></p>
-<dd> Force the output file to be written with data organized in strips (rather than tiles).</p>
-<dt><code>-t</code></p>
-<dd> Force the output file to be written with data organized in tiles (rather than strips).</p>
-<dt><code>-w</code></p>
-<dd> Specify the width of a tile (in pixels). <i>tiffcrop</i> attempts to set the tile dimensions so that no more than 8 kilobytes of data appear in a tile. <i>tiffcrop</i> attempts to set the tile dimensions so that no more than 8 kilobytes of data appear in a tile.</p>
-<dt>Debug and dump facility</p>
-<dd> <code>-D opt1:value1,opt2:value2,opt3:value3:opt4:value4</code> Display program progress and/or dump raw data to non-TIFF files. Options include the following and must be joined as a comma separated list. The use of this option is generally limited to program debugging and development of future options. An equal sign may be substituted for the colon in option:value pairs.</p>
+</dt><dd> <font SIZE="-1">LZW</font> compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for <font SIZE="-1">LZW</font> compression with horizontal differencing.</dd>
+<dt><code>-f</code></dt>
+<dd> Specify the bit fill order to use in writing output data. By default, <i>tiffcrop</i> will create a new file with the same fill order as the original. Specifying <code>-f lsb2msb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">LSB2MSB,</font> while <code>-f msb2lsb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">MSB2LSB.</font></dd>
+<dt><code>-i</code></dt>
+<dd> Ignore non-fatal read errors and continue processing of the input file.</dd>
+<dt><code>-l</code></dt>
+<dd> Specify the length of a tile (in pixels). <i>Tiffcrop</i> attempts to set the tile dimensions so that no more than 8 kilobytes of data appear in a tile.</dd>
+<dt><code>-L</code></dt>
+<dd> Force output to be written with Little-Endian byte order. This option only has an effect when the output file is created or overwritten and not when it is appended to.</dd>
+<dt><code>-M</code></dt>
+<dd> Suppress the use of memory-mapped files when reading images.</dd>
+<dt><code>-p</code></dt>
+<dd> Specify the planar configuration to use in writing image data that has more than one sample per pixel. By default, <i>tiffcrop</i> will create a new file with the same planar configuration as the original. Specifying <code>-p contig</code> will force data to be written with multi-sample data packed together, while <code>-p separate</code> will force samples to be written in separate planes.</dd>
+<dt><code>-r</code></dt>
+<dd> Specify the number of rows (scanlines) in each strip of data written to the output file. By default (or when value <code>0</code> is specified), <i>tiffcrop</i> attempts to set the rows/strip that no more than 8 kilobytes of data appear in a strip. If you specify the special value <code>-1</code> it will results in infinite number of the rows per strip. The entire image will be the one strip in that case.</dd>
+<dt><code>-s</code></dt>
+<dd> Force the output file to be written with data organized in strips (rather than tiles).</dd>
+<dt><code>-t</code></dt>
+<dd> Force the output file to be written with data organized in tiles (rather than strips).</dd>
+<dt><code>-w</code></dt>
+<dd> Specify the width of a tile (in pixels). <i>tiffcrop</i> attempts to set the tile dimensions so that no more than 8 kilobytes of data appear in a tile. <i>tiffcrop</i> attempts to set the tile dimensions so that no more than 8 kilobytes of data appear in a tile.</dd>
+<dt>Debug and dump facility</dt>
+<dd> <code>-D opt1:value1,opt2:value2,opt3:value3:opt4:value4</code> Display program progress and/or dump raw data to non-TIFF files. Options include the following and must be joined as a comma separated list. The use of this option is generally limited to program debugging and development of future options. An equal sign may be substituted for the colon in option:value pairs.</dd>
 <dt>
-<dd> debug:N Display limited program progress indicators where larger N increase the level of detail.</p>
+</dt><dd> debug:N Display limited program progress indicators where larger N increase the level of detail.</dd>
 <dt>
-<dd> format:txt|raw Format any logged data as ASCII text or raw binary values. ASCII text dumps include strings of ones and zeroes representing the binary values in the image data plus identifying headers.</p>
+</dt><dd> format:txt|raw Format any logged data as ASCII text or raw binary values. ASCII text dumps include strings of ones and zeroes representing the binary values in the image data plus identifying headers.</dd>
 <dt>
-<dd> level:N Specify the level of detail presented in the dump files. This can vary from dumps of the entire input or output image data to dumps of data processed by specific functions. Current range of levels is 1 to 3.</p>
+</dt><dd> level:N Specify the level of detail presented in the dump files. This can vary from dumps of the entire input or output image data to dumps of data processed by specific functions. Current range of levels is 1 to 3.</dd>
 <dt>
-<dd> input:full-path-to-directory/input-dumpname</p>
+</dt><dd> input:full-path-to-directory/input-dumpname</dd>
 <dt>
-<dd> output:full-path-to-directory/output-dumpname</p>
+</dt><dd> output:full-path-to-directory/output-dumpname</dd>
 <dt>
-<dd> When dump files are being written, each image will be written to a separate file with the name built by adding a numeric sequence value to the dumpname and an extension of .txt for ASCII dumps or .bin for binary dumps. </p>
+</dt><dd> When dump files are being written, each image will be written to a separate file with the name built by adding a numeric sequence value to the dumpname and an extension of .txt for ASCII dumps or .bin for binary dumps. </dd>
 <p> The four debug/dump options are independent, though it makes little sense to specify a dump file without specifying a detail level.</p>
 <dt>
-<dd> Note: Tiffcrop may be compiled with -DDEVELMODE to enable additional very<br />
-&nbsp;<wbr>low level debug reporting.</dl>
+</dt><dd> Note: Tiffcrop may be compiled with -DDEVELMODE to enable additional very<br />
+&nbsp;<wbr>low level debug reporting.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following concatenates two files and writes the result using <font SIZE="-1">LZW</font> encoding:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 tiffcrop -c lzw a.tif b.tif result.tif
 </pre>
-</dl>
+</dd></dl>
 <p> To convert a G3 1d-encoded <font SIZE="-1">TIFF</font> to a single strip of G4-encoded data the following might be used:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 tiffcrop -c g4 -r 10000 g3.tif g4.tif
 </pre>
-</dl>
+</dd></dl>
 <p> (1000 is just a number that is larger than the number of rows in the source file.) </p>
 <p> To extract a selected set of images from a multi-image TIFF file use the -N option described above. Thus, to copy the 1st and 3rd images of image file &quot;album.tif&quot; to &quot;result.tif&quot;:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 tiffcrop -N 1,3 album.tif result.tif
 </pre>
-</dl>
+</dd></dl>
 <p> Invert a bilevel image scan of a microfilmed document and crop off margins of 0.25 inches on the left and right, 0.5 inch on the top, and 0.75 inch on the bottom. From the remaining portion of the image, select the second and third quarters, ie, one half of the area left from the center to each margin.</p>
 <dl>
 <dt>
-<dd> tiffcrop -U in -m 0.5,0.25,0.75,0.25 -E left -Z 2:4,3:4 -I both MicrofilmNegative.tif MicrofilmPostiveCenter.tif</dl>
+</dt><dd> tiffcrop -U in -m 0.5,0.25,0.75,0.25 -E left -Z 2:4,3:4 -I both MicrofilmNegative.tif MicrofilmPostiveCenter.tif</dd></dl>
 <p> Extract only the final image of a large Architectural E sized multipage TIFF file and rotate it 90 degrees clockwise while reformatting the output to fit on tabloid sized sheets with one quarter of an inch on each side:</p>
 <dl>
 <dt>
-<dd> tiffcrop -N last -R 90 -O auto -P tabloid -U in -J 0.25 -K 0.25 -H 300 -V 300 Big-PlatMap.tif BigPlatMap-Tabloid.tif</dl>
+</dt><dd> tiffcrop -N last -R 90 -O auto -P tabloid -U in -J 0.25 -K 0.25 -H 300 -V 300 Big-PlatMap.tif BigPlatMap-Tabloid.tif</dd></dl>
 <p> The output images will have a specified resolution of 300 dpi in both directions. The orientation of each page will be determined by whichever choice requires the fewest pages. To specify a specific orientation, use the portrait or landscape option. The paper size option does not resample the image. It breaks each original image into a series of smaller images that will fit on the target paper size at the specified resolution. </p>
 <p> Extract two regions 2048 pixels wide by 2048 pixels high from each page of a multi-page input file and write each region to a separate output file.</p>
 <dl>
 <dt>
-<dd> tiffcrop -U px -z 1,1,2048,2048:1,2049,2048,4097 -e separate CheckScans.tiff Check</dl>
+</dt><dd> tiffcrop -U px -z 1,1,2048,2048:1,2049,2048,4097 -e separate CheckScans.tiff Check</dd></dl>
 <p> The output file names will use the stem Check with a numeric suffix which is incremented for each region of each image, eg Check-001.tiff, Check-002.tiff &#8230; Check-NNN.tiff. To produce a unique file for each page of the input image with one new image for each region of the input image on that page, change the export option to -e multiple. </p>
 <h2>NOTES</h2>
 <p> In general, bilevel, grayscale, palette and RGB(A) data with bit depths from 1 to 32 bits should work in both interleaved and separate plane formats. Unlike tiffcp, tiffcrop can read and write tiled images with bits per sample that are not a multiple of 8 in both interleaved and separate planar format. Floating point data types are supported at bit depts of 16, 24, 32 and 64 bits per sample. </p>

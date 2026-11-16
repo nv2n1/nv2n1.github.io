@@ -15,17 +15,8 @@ wl_shm_pool -
 <h3>Public Attributes</h3>
 
 <pre><code>struct wl_resource * resource
-
-
-
 int refcount
-
-
-
 char * data
-
-
-
 int32_t size
 </code></pre>
 

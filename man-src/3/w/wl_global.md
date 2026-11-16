@@ -15,29 +15,11 @@ wl_global -
 <h3>Public Attributes</h3>
 
 <pre><code>struct wl_display * display
-
-
-
 struct wl_interface * interface
-
-
-
 uint32_t name
-
-
-
 uint32_t version
-
-
-
 void * data
-
-
-
 wl_global_bind_func_t bind
-
-
-
 struct wl_list link
 </code></pre>
 

@@ -14,23 +14,14 @@ description: "memkind_hbw.h – high bandwidth memory memkind operations. Note: 
 <pre><code>
 #include &lt;memkind/internal/memkind_hbw.h&gt;
 Link with - lmemkind int memkind_hbw_check_available(struct memkind *kind);
-
 int memkind_hbw_hugetlb_check_available(struct memkind *kind);
-
 int memkind_hbw_gbtlb_check_available(struct memkind *kind);
-
 int memkind_hbw_get_mbind_nodemask(struct memkind *kind, unsigned long *nodemask, unsigned long maxnode);
-
 int memkind_hbw_all_get_mbind_nodemask(struct memkind *kind, unsigned long *nodemask, unsigned long maxnode);
-
 void memkind_hbw_init_once(void);
-
 void memkind_hbw_hugetlb_init_once(void);
-
 void memkind_hbw_preferred_init_once(void);
-
 void memkind_hbw_preferred_hugetlb_init_once(void);
-
 void memkind_hbw_interleave_init_once(void);
 </code></pre>
 <h2>DESCRIPTION</h2>

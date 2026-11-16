@@ -11,7 +11,6 @@ std::wmemset - std::wmemset
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwchar&gt;
-
 wchar_t* wmemset( wchar_t* dest, wchar_t ch, std::size_t count );</code></pre> 
 Copies the wide character ch into each of the first count wide characters of the wide character array pointed to by dest. 
 If overflow occurs, the behavior is undefined. 
@@ -34,14 +33,10 @@ This function is not locale-sensitive and pays no attention to the values of the
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     wchar_t ar[4] = {L'1', L'2', L'3', L'4'};
     std::wmemset(ar, L'\U0001f34c', 2); // replaces [12] with the &#x1f34c; bananas

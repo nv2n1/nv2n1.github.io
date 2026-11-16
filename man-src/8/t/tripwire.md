@@ -94,28 +94,28 @@ from Tripwire is working correctly.
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m i</code>, <code>&#8211;init</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></p>
-<dd>Use the specified policy file.</p>
-<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></p>
-<dd>Write to the specified database file.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Use the specified site key file to read the configuration and policy files.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Use the specified local key file to write the new database file. Mutually exclusive with (<code>-e</code>).</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specifies passphrase to be used with local key to sign the new database. Mutually exclusive with (<code>-e</code>).</p>
-<dt><code>-e</code>, <code>&#8211;no-encryption</code></p>
-<dd>Do not sign the database being stored. The database file will still be compressed and will not be human-readable. Mutually exclusive with (<code>-L</code>) and (<code>-P</code>). </p>
+<dt><code>-m i</code>, <code>&#8211;init</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></dt>
+<dd>Use the specified policy file.</dd>
+<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></dt>
+<dd>Write to the specified database file.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Use the specified site key file to read the configuration and policy files.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Use the specified local key file to write the new database file. Mutually exclusive with (<code>-e</code>).</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specifies passphrase to be used with local key to sign the new database. Mutually exclusive with (<code>-e</code>).</dd>
+<dt><code>-e</code>, <code>&#8211;no-encryption</code></dt>
+<dd>Do not sign the database being stored. The database file will still be compressed and will not be human-readable. Mutually exclusive with (<code>-L</code>) and (<code>-P</code>). </dd>
 <hr>
 </dl>
 <h3>Integrity Checking mode:</h3>
@@ -228,56 +228,56 @@ from Tripwire is working correctly.
 </td>
 </tr>
 </table>
-<p> [ <i>object1</i> [ <i>object2&#8230;</i> ]]</dl>
+<p> [ <i>object1</i> [ <i>object2&#8230;</i> ]]</dd></dl>
 <dl>
-<dt><code>-m c</code>, <code>&#8211;check</code></p>
-<dd>Mode selector.</p>
-<dt><code>-I</code>, <code>&#8211;interactive</code></p>
-<dd>At the end of integrity checking, the resulting report is opened in an editor where database updates can be easily specified using the ballot boxes included in the report.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></p>
-<dd>Use the specified policy file.</p>
-<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></p>
-<dd>Use the specified database file.</p>
-<dt><code>-r</code><i> report</i>, <code>&#8211;twrfile</code><i> report</i></p>
-<dd>Write the specified report file.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Use the specified site key file to read the configuration and policy files.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Use the specified local key file to read the database file and, if (<code>-E</code>) is specified, to write the report file.</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specifies passphrase to be used with local key to sign the database when (<code>-I</code>) is used, and to sign the report when (<code>-E</code>) is used. Valid only with (<code>-I</code>) or (<code>-E</code>).</p>
-<dt><code>-n</code>, <code>&#8211;no-tty-output</code></p>
-<dd>Suppress the report from being printed at the console.</p>
-<dt><code>-V</code><i> editor</i>, <code>&#8211;visual</code><i> editor</i></p>
-<dd>Use the specified editor to edit the update ballot boxes. Meaningful only with (<code>-I</code>).</p>
-<dt><code>-E</code>, <code>&#8211;signed-report</code></p>
-<dd>Specifies that the <i>Tripwire</i> report will be signed. If no passphrase is specified on the command line, <code>tripwire</code> will prompt for the local passphrase.</p>
-<dt><code>-i</code><i> list</i>, <code>&#8211;ignore</code><i> list</i></p>
-<dd>Do not compute or compare the properties specified in <i>list</i>. Any of the letter codes (abcdgimnprstulCHMS) specified in propertymasks can be excluded. Use of this option overrides information from the policy file. The format to be used for <i>list</i> is a double-quoted, comma-delimited list of properties (e.g.&nbsp;<wbr><i>&#8211;ignore&nbsp;<wbr>&quot;p,c,m&quot;</i>).</p>
-<dt><code>-l </code>{ <i>level </i>| <i>name </i>}, <code>&#8211;severity </code>{ <i>level </i>| <i>name </i>}</p>
-<dd>Check only policy rules with severity greater than or equal to the given level. The level may be specified as a number or as a name. Severity names are defined as follows: </p>
+<dt><code>-m c</code>, <code>&#8211;check</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-I</code>, <code>&#8211;interactive</code></dt>
+<dd>At the end of integrity checking, the resulting report is opened in an editor where database updates can be easily specified using the ballot boxes included in the report.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></dt>
+<dd>Use the specified policy file.</dd>
+<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></dt>
+<dd>Use the specified database file.</dd>
+<dt><code>-r</code><i> report</i>, <code>&#8211;twrfile</code><i> report</i></dt>
+<dd>Write the specified report file.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Use the specified site key file to read the configuration and policy files.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Use the specified local key file to read the database file and, if (<code>-E</code>) is specified, to write the report file.</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specifies passphrase to be used with local key to sign the database when (<code>-I</code>) is used, and to sign the report when (<code>-E</code>) is used. Valid only with (<code>-I</code>) or (<code>-E</code>).</dd>
+<dt><code>-n</code>, <code>&#8211;no-tty-output</code></dt>
+<dd>Suppress the report from being printed at the console.</dd>
+<dt><code>-V</code><i> editor</i>, <code>&#8211;visual</code><i> editor</i></dt>
+<dd>Use the specified editor to edit the update ballot boxes. Meaningful only with (<code>-I</code>).</dd>
+<dt><code>-E</code>, <code>&#8211;signed-report</code></dt>
+<dd>Specifies that the <i>Tripwire</i> report will be signed. If no passphrase is specified on the command line, <code>tripwire</code> will prompt for the local passphrase.</dd>
+<dt><code>-i</code><i> list</i>, <code>&#8211;ignore</code><i> list</i></dt>
+<dd>Do not compute or compare the properties specified in <i>list</i>. Any of the letter codes (abcdgimnprstulCHMS) specified in propertymasks can be excluded. Use of this option overrides information from the policy file. The format to be used for <i>list</i> is a double-quoted, comma-delimited list of properties (e.g.&nbsp;<wbr><i>&#8211;ignore&nbsp;<wbr>&quot;p,c,m&quot;</i>).</dd>
+<dt><code>-l </code>{ <i>level </i>| <i>name </i>}, <code>&#8211;severity </code>{ <i>level </i>| <i>name </i>}</dt>
+<dd>Check only policy rules with severity greater than or equal to the given level. The level may be specified as a number or as a name. Severity names are defined as follows: </dd>
 <pre> Low 33
  Medium 66
  High 100</pre>
 <p>Mutually exclusive with (<code>-R</code>).</p>
-<dt><code>-R</code><i> rule</i>, <code>&#8211;rule-name</code><i> rule</i></p>
-<dd>Check only the specified policy rule. Mutually exclusive with (<code>-l</code>).</p>
-<dt><code>-x</code><i> section</i>, <code>&#8211;section</code><i> section</i></p>
-<dd>Only check the rules in the specified section of the policy file. For <i>Tripwire 2.4</i>, <tt>FS</tt> is the only meaningful argument for this flag.</p>
-<dt><code>-M</code>, <code>&#8211;email-report</code></p>
-<dd>Specifies that reports be emailed to the recipient(s) designated in the policy file.</p>
-<dt><code>-t</code><i> level</i>, <code>&#8211;email-report-level</code><i> level</i></p>
-<dd>Specifies the detail level of email reports, overriding the EMAILREPORTLEVEL variable in the configuration file. <i>level</i> must be a number from 0 to 4. Valid only with (<code>-M</code>).</p>
-<dt><code>-h</code>, <code>&#8211;hexadecimal</code></p>
-<dd>Display hash values as hexadecimal in email reports</p>
-<dt>[ <i>object1</i> [ <i>object2&#8230;</i> ]]</p>
-<dd>List of files and directories that should be integrity checked. Default is all files. If files are specified for checking, the <code>&#8211;severity</code> and <code>&#8211;rule-name</code> options will be ignored. </p>
+<dt><code>-R</code><i> rule</i>, <code>&#8211;rule-name</code><i> rule</i></dt>
+<dd>Check only the specified policy rule. Mutually exclusive with (<code>-l</code>).</dd>
+<dt><code>-x</code><i> section</i>, <code>&#8211;section</code><i> section</i></dt>
+<dd>Only check the rules in the specified section of the policy file. For <i>Tripwire 2.4</i>, <tt>FS</tt> is the only meaningful argument for this flag.</dd>
+<dt><code>-M</code>, <code>&#8211;email-report</code></dt>
+<dd>Specifies that reports be emailed to the recipient(s) designated in the policy file.</dd>
+<dt><code>-t</code><i> level</i>, <code>&#8211;email-report-level</code><i> level</i></dt>
+<dd>Specifies the detail level of email reports, overriding the EMAILREPORTLEVEL variable in the configuration file. <i>level</i> must be a number from 0 to 4. Valid only with (<code>-M</code>).</dd>
+<dt><code>-h</code>, <code>&#8211;hexadecimal</code></dt>
+<dd>Display hash values as hexadecimal in email reports</dd>
+<dt>[ <i>object1</i> [ <i>object2&#8230;</i> ]]</dt>
+<dd>List of files and directories that should be integrity checked. Default is all files. If files are specified for checking, the <code>&#8211;severity</code> and <code>&#8211;rule-name</code> options will be ignored. </dd>
 <hr>
 </dl>
 <h3>Database Update mode:</h3>
@@ -350,34 +350,34 @@ from Tripwire is working correctly.
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m u</code>, <code>&#8211;update</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></p>
-<dd>Use the specified policy file.</p>
-<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></p>
-<dd>Update the specified database file.</p>
-<dt><code>-r</code><i> report</i>, <code>&#8211;twrfile</code><i> report</i></p>
-<dd>Read the specified report file.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Use the specified site key file to read the configuration and policy files.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Use the specified local key file to read the database file and report file, and to re-write the database file.</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specifies passphrase to be used with local key to sign the database.</p>
-<dt><code>-V</code><i> editor</i>, <code>&#8211;visual</code><i> editor</i></p>
-<dd>Use the specified editor to edit the update ballot boxes. Mutually exclusive with (<code>-a</code>).</p>
-<dt><code>-a</code>, <code>&#8211;accept-all</code></p>
-<dd>Specifies that all the entries in the report file are updated without prompting. Mutually exclusive with (<code>-V</code>).</p>
-<dt><code>-Z </code>{ low | high }, <code>&#8211;secure-mode </code>{ low | high }</p>
-<dd>Specifies the security level, which affects how certain conditions are handled when inconsistent information is found between the report file and the current database: </p>
+<dt><code>-m u</code>, <code>&#8211;update</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></dt>
+<dd>Use the specified policy file.</dd>
+<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></dt>
+<dd>Update the specified database file.</dd>
+<dt><code>-r</code><i> report</i>, <code>&#8211;twrfile</code><i> report</i></dt>
+<dd>Read the specified report file.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Use the specified site key file to read the configuration and policy files.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Use the specified local key file to read the database file and report file, and to re-write the database file.</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specifies passphrase to be used with local key to sign the database.</dd>
+<dt><code>-V</code><i> editor</i>, <code>&#8211;visual</code><i> editor</i></dt>
+<dd>Use the specified editor to edit the update ballot boxes. Mutually exclusive with (<code>-a</code>).</dd>
+<dt><code>-a</code>, <code>&#8211;accept-all</code></dt>
+<dd>Specifies that all the entries in the report file are updated without prompting. Mutually exclusive with (<code>-V</code>).</dd>
+<dt><code>-Z </code>{ low | high }, <code>&#8211;secure-mode </code>{ low | high }</dt>
+<dd>Specifies the security level, which affects how certain conditions are handled when inconsistent information is found between the report file and the current database: </dd>
 <p> High: In <code>high</code> security mode, if a file does not match the properties in the report file, Tripwire reports the differences as warnings, and exits without changing the database. </p>
 <p> Low: In <code>low</code> security mode, inconsistencies are reported as warnings, but the changes are still made to the database. </p>
 <hr>
@@ -442,34 +442,34 @@ from Tripwire is working correctly.
 </td>
 </tr>
 </table>
-<p> <i>policyfile.txt</i></dl>
+<p> <i>policyfile.txt</i></dd></dl>
 <dl>
-<dt><code>-m p</code>, <code>&#8211;update-policy</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></p>
-<dd>Write the specified policy file.</p>
-<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></p>
-<dd>Use the specified database file.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Use the specified site key file to read the configuration file, and read and write the policy file.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Use the specified local key file to read and write the database file.</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specifies passphrase to be used with local key to sign the database.</p>
-<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></p>
-<dd>Specifies passphrase to be used with site key to sign the new policy file.</p>
-<dt><code>-Z </code>{ low | high }, <code>&#8211;secure-mode </code>{ low | high }</p>
-<dd>Specifies the security level, which affects how certain conditions are handled when the existing filesystem does not match the database information. Since the database produced at the end of a policy update becomes the baseline for future integrity checks, this consistency-checking ensures that no substantive filesystem changes have occurred since the last integrity check. </p>
+<dt><code>-m p</code>, <code>&#8211;update-policy</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></dt>
+<dd>Write the specified policy file.</dd>
+<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></dt>
+<dd>Use the specified database file.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Use the specified site key file to read the configuration file, and read and write the policy file.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Use the specified local key file to read and write the database file.</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specifies passphrase to be used with local key to sign the database.</dd>
+<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></dt>
+<dd>Specifies passphrase to be used with site key to sign the new policy file.</dd>
+<dt><code>-Z </code>{ low | high }, <code>&#8211;secure-mode </code>{ low | high }</dt>
+<dd>Specifies the security level, which affects how certain conditions are handled when the existing filesystem does not match the database information. Since the database produced at the end of a policy update becomes the baseline for future integrity checks, this consistency-checking ensures that no substantive filesystem changes have occurred since the last integrity check. </dd>
 <p> High: In <code>high</code> security mode, if a file on the filesystem does not match the properties in the database file, Tripwire reports the differences as warnings, and exits without changing the database or the policy file. </p>
 <p> Low: In <code>low</code> security mode, inconsistencies are reported as warnings, but the changes are still made to the database and policy file.</p>
-<dt><i>policyfile.txt</i></p>
-<dd>Specifies the text policy file that will become the new policy file. </p>
+<dt><i>policyfile.txt</i></dt>
+<dd>Specifies the text policy file that will become the new policy file. </dd>
 <hr>
 </dl>
 <h3>Test mode:</h3>
@@ -487,12 +487,12 @@ from Tripwire is working correctly.
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m t</code>, <code>&#8211;test</code></p>
-<dd>Mode selector.</p>
-<dt><code>-e</code><i> user [at] domain.com</i>, <code>&#8211;email</code><i> user [at] domain.com</i></p>
-<dd>Use the specified email address. This parameter must be supplied when test mode is used. Only one address may be specified.</dl>
+<dt><code>-m t</code>, <code>&#8211;test</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-e</code><i> user [at] domain.com</i>, <code>&#8211;email</code><i> user [at] domain.com</i></dt>
+<dd>Use the specified email address. This parameter must be supplied when test mode is used. Only one address may be specified.</dd></dl>
 <h2>Version Information</h2>
 <p>This man page describes <code>tripwire</code> version 2.4</p>
 <h2>Authors</h2>

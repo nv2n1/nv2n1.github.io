@@ -17,24 +17,24 @@ description: "dnsreplay – A PowerDNS nameserver debugging tool"
 <p> By default it only replay queries with recursion-desired flag set.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help | -h</code></p>
+<dt><code>&#8211;help | -h</code></dt>
 <dd>
- Show summary of options.</p>
-<dt><code>&#8211;packet-limit </code><i>num</i></p>
+ Show summary of options.</dd>
+<dt><code>&#8211;packet-limit </code><i>num</i></dt>
 <dd>
- Stop after replaying <i>num</i> packets. Default for <i>num</i> is 0, which means no limit.</p>
-<dt><code>&#8211;quiet </code><i>flag</i></p>
+ Stop after replaying <i>num</i> packets. Default for <i>num</i> is 0, which means no limit.</dd>
+<dt><code>&#8211;quiet </code><i>flag</i></dt>
 <dd>
- If <i>flag</i> is set to 1. dnsreplay will not be very noisy with its output. This is the default.</p>
-<dt><code>&#8211;recursive </code><i>flag</i></p>
+ If <i>flag</i> is set to 1. dnsreplay will not be very noisy with its output. This is the default.</dd>
+<dt><code>&#8211;recursive </code><i>flag</i></dt>
 <dd>
- If <i>flag</i> is set to 1. dnsreplay will only replay queries with recursion desired flag set. This is the default.</p>
-<dt><code>&#8211;speedup </code><i>factor</i></p>
+ If <i>flag</i> is set to 1. dnsreplay will only replay queries with recursion desired flag set. This is the default.</dd>
+<dt><code>&#8211;speedup </code><i>factor</i></dt>
 <dd>
- Replay queries with this speedup factor. Default is 1.</p>
-<dt><code>&#8211;timeout-msec </code><i>time</i></p>
+ Replay queries with this speedup factor. Default is 1.</dd>
+<dt><code>&#8211;timeout-msec </code><i>time</i></dt>
 <dd>
- Wait at least this many milliseconds for a reply. Default is 500.</dl>
+ Wait at least this many milliseconds for a reply. Default is 500.</dd></dl>
 <h2>BUGS</h2>
 <p> dnsreplay has no certain handling for timeouts. It handles around at most 65536 outstanding answers.</p>
 <h2>SEE ALSO</h2>

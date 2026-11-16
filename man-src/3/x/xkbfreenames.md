@@ -11,16 +11,16 @@ description: "XkbFreeNames – Free symbolic names structures"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbFreeNames</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_map</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description for which names are to be freed</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of names components to be freed</p>
-<dt><i>&#8211; free_map</i></p>
-<dd>True =&gt; XkbNamesRec structure itself should be freed</dl>
+</dd><dd>keyboard description for which names are to be freed</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of names components to be freed</dd>
+<dt><i>&#8211; free_map</i></dt>
+<dd>True =&gt; XkbNamesRec structure itself should be freed</dd></dl>
 <h2>Description</h2>
 <p>Do not free symbolic names structures directly using <i>free </i> or <i>XFree. </i> Use <i>XkbFreeNames </i> instead. </p>
 <p> The <i>which </i> parameter is the bitwise inclusive OR of the valid names mask bits defined in Table 1. </p>

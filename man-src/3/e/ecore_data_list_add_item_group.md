@@ -27,10 +27,10 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list.<br />
- <i>data</i> The data to append.</dl>
+ <i>data</i> The data to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>FALSE if an error occurs, TRUE if appended successfully</dl>
+<dd>FALSE if an error occurs, TRUE if appended successfully</dd></dl>
 <p> References ecore_list_node_new(). </p>
 <p> Referenced by ecore_con_server_add(), ecore_con_server_connect(), ecore_file_app_list(), ecore_file_ls(), ecore_hash_keys(), ecore_path_group_add(), ecore_path_group_available(), and ecore_plugin_load().</p>
 <h3>EAPI int ecore_list_append_list (Ecore_List * list, Ecore_List * append)</h3>
@@ -38,10 +38,10 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list.<br />
- <i>append</i> The list to append.</dl>
+ <i>append</i> The list to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>FALSE if an error occurs, TRUE if appended successfully</dl>
+<dd>FALSE if an error occurs, TRUE if appended successfully</dd></dl>
 <p> References ecore_list_empty_is(), and ecore_list_init(). </p>
 <p> Referenced by ecore_list_merge().</p>
 <h3>EAPI int ecore_list_insert (Ecore_List * list, void * data) [inline]</h3>
@@ -49,30 +49,30 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list to hold the inserted data.<br />
- <i>data</i> The data to insert into list.</dl>
+ <i>data</i> The data to insert into list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>FALSE if there is an error, TRUE on success</dl>
+<dd>FALSE if there is an error, TRUE on success</dd></dl>
 <p> References ecore_list_node_new().</p>
 <h3>EAPI int ecore_list_prepend (Ecore_List * list, void * data) [inline]</h3>
 <p>Prepend data to the beginning of the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list.<br />
- <i>data</i> The data to prepend.</dl>
+ <i>data</i> The data to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>FALSE if an error occurs, TRUE if prepended successfully.</dl>
+<dd>FALSE if an error occurs, TRUE if prepended successfully.</dd></dl>
 <p> References ecore_list_node_new().</p>
 <h3>EAPI int ecore_list_prepend_list (Ecore_List * list, Ecore_List * prepend)</h3>
 <p>Prepend a list to the beginning of the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list.<br />
- <i>prepend</i> The list to prepend.</dl>
+ <i>prepend</i> The list to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>FALSE if an error occurs, TRUE if prepended successfully.</dl>
+<dd>FALSE if an error occurs, TRUE if prepended successfully.</dd></dl>
 <p> References ecore_list_empty_is(), and ecore_list_init().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

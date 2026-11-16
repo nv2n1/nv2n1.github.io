@@ -15,9 +15,9 @@ description: "SPI_gettypeid – return the data type OID of the specified column
 <h2>Arguments</h2>
 <p>TupleDesc <i>rowdesc</i></p>
 <dl COMPACT>
-<dd>input row description</dl>
+<dd>input row description</dd></dl>
 <p> int <i>colnumber</i></p>
 <dl COMPACT>
-<dd>column number (count starts at 1)</dl>
+<dd>column number (count starts at 1)</dd></dl>
 <h2>Return Value</h2>
 <p>The OID of the data type of the specified column or InvalidOid on error. On error, <i>SPI_result</i> is set to SPI_ERROR_NOATTRIBUTE.</p>

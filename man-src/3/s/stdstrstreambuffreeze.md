@@ -22,10 +22,8 @@ While the stream is frozen, overflow() will not reallocate the buffer and the de
 <p>In this example, initial allocation of the underlying array was for 16 bytes<br />
  // Run this code </p>
 <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     {
         std::strstream dyn;      // dynamically-allocated read/write buffer

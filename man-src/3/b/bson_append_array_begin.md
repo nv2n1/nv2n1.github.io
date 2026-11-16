@@ -18,17 +18,17 @@ bool bson_append_array_begin(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> A string containing the name for the key.</dl>
+<dt><code>key</code></dt>
+<dd> A string containing the name for the key.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> or -1 to call <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> or -1 to call <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>child</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>child</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_array_begin/">bson_append_array_begin</a>(3)</code> function shall begin appending an array field to <code>bson</code> \&amp;. This allows for incrementally building a sub-array. Doing so will generally yield better performance as you will serialize to a single buffer. When done building the sub-array, the caller <code>MUST</code> call <code><a href="/docs/linux/man/3-bson_append_array_end/">bson_append_array_end</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>

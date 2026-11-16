@@ -23,35 +23,35 @@ description: "qtchooser – a wrapper used to select between Qt development bina
 <p> <code>-list-versions</code></p>
 <dl>
 <dt>
-<dd> Lists available Qt versions from the configuration files</dl>
+</dt><dd> Lists available Qt versions from the configuration files</dd></dl>
 <p> <code>-print-env</code></p>
 <dl>
 <dt>
-<dd> Prints environment information</dl>
+</dt><dd> Prints environment information</dd></dl>
 <p> <code>-qt=</code><i>version</i></p>
 <dl>
 <dt>
-<dd> Selects <i>version</i> as the Qt version to be used</dl>
+</dt><dd> Selects <i>version</i> as the Qt version to be used</dd></dl>
 <p> <code>-run-tool=</code><i>tool</i></p>
 <dl>
 <dt>
-<dd> Runs the selected <i>tool</i>.</dl>
+</dt><dd> Runs the selected <i>tool</i>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>QTCHOOSER_NO_GLOBAL_DIR</code></p>
-<dd> If qtchooser has been built with <code>QTCHOOSER_GLOBAL_DIR</code> (predefined search paths for qtchooser&#8217;s configuration files, useful in some distros), setting this variable will override its effect.</p>
-<dt><code>QT_SELECT</code></p>
-<dd> Same as <code>-qt=</code><i>version</i>. If set, the selected configuration is used and binaries symlinked to qtchooser will be executed without additional parameters.</p>
-<dt><code>XDG_CONFIG_HOME</code></p>
+<dt><code>QTCHOOSER_NO_GLOBAL_DIR</code></dt>
+<dd> If qtchooser has been built with <code>QTCHOOSER_GLOBAL_DIR</code> (predefined search paths for qtchooser&#8217;s configuration files, useful in some distros), setting this variable will override its effect.</dd>
+<dt><code>QT_SELECT</code></dt>
+<dd> Same as <code>-qt=</code><i>version</i>. If set, the selected configuration is used and binaries symlinked to qtchooser will be executed without additional parameters.</dd>
+<dt><code>XDG_CONFIG_HOME</code></dt>
 <dd>
-<dt><code>XDG_CONFIG_DIRS</code></p>
-<dd> Used as specified in &lt;<code><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></code>&gt;</dl>
+</dd><dt><code>XDG_CONFIG_DIRS</code></dt>
+<dd> Used as specified in &lt;<code><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></code>&gt;</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/xdg/qtchooser/*.conf</i></p>
-<dd> System-wide configuration files. Each has two lines, the first is the path to the binaries and the second is the path to the Qt libraries. If a <i>default.conf</i> is provided, the settings from it will be automatically used in case nothing else is selected.</p>
-<dt><i></i><code>$HOME</code>/.config/qtchooser/*.conf</p>
-<dd> User configuration files. </p>
+<dt><i>/etc/xdg/qtchooser/*.conf</i></dt>
+<dd> System-wide configuration files. Each has two lines, the first is the path to the binaries and the second is the path to the Qt libraries. If a <i>default.conf</i> is provided, the settings from it will be automatically used in case nothing else is selected.</dd>
+<dt><i></i><code>$HOME</code>/.config/qtchooser/*.conf</dt>
+<dd> User configuration files. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> qtchooser was written by Thiago Macieira from Intel. </p>

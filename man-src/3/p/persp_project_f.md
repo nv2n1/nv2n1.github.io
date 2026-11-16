@@ -10,7 +10,6 @@ description: "persp_project, persp_project_f – Projects a 3d point into 2d scr
 <p>persp_project, persp_project_f &#8211; Projects a 3d point into 2d screen space. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void persp_project(fixed x, fixed y, fixed z, fixed *xout, fixed *yout);
 void persp_project_f(float x, float y, float z, float *xout, float *yout);</code></pre>
 <h2>Description</h2>

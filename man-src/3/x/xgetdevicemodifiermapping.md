@@ -21,7 +21,7 @@ specified device. If it succeeds, the X server generates a
 DeviceMappingNotify event, and XSetDeviceModifierMapping
 returns MappingSuccess. X permits at most eight modifier keys.
 If more than eight are specified in the XModifierKeymap
-structure, a BadLength error results.</pre></dl><dl COMPACT><dd><pre>The modifiermap member of the XModifierKeymap structure
+structure, a BadLength error results.</pre></dd></dl><dl COMPACT><dd><pre>The modifiermap member of the XModifierKeymap structure
 contains eight sets of max_keypermod KeyCodes, one for each
 modifier in the order Shift, Lock, Control, Mod1, Mod2, Mod3,
 Mod4, and Mod5. Only nonzero KeyCodes have meaning in each set,
@@ -29,7 +29,7 @@ and zero KeyCodes are ignored. In addition, all of the nonzero
 KeyCodes must be in the range specified by min_keycode and
 max_keycode as returned by XListInputDevices, or a BadValue
 error results. No KeyCode may appear twice in the entire map,
-or a BadValue error results.</pre></dl><dl COMPACT><dd><pre>An X server can impose restrictions on how modifiers can be
+or a BadValue error results.</pre></dd></dl><dl COMPACT><dd><pre>An X server can impose restrictions on how modifiers can be
 changed, for example, if certain keys do not generate up
 transitions in hardware, if auto-repeat cannot be disabled on
 certain keys, or if multiple modifier keys are not supported.
@@ -39,34 +39,34 @@ new KeyCodes specified for a modifier differ from those
 currently defined and any (current or new) keys for that
 modifier are in the logically down state,
 XSetDeviceModifierMapping returns MappingBusy, and none of the
-modifiers is changed.</pre></dl><dl COMPACT><dd><pre>XSetDeviceModifierMapping can generate BadLength, BadDevice,
-BadMatch, BadAlloc, and BadValue errors.</pre></dl><dl COMPACT><dd><pre>The XGetDeviceModifierMapping request returns a pointer to a
+modifiers is changed.</pre></dd></dl><dl COMPACT><dd><pre>XSetDeviceModifierMapping can generate BadLength, BadDevice,
+BadMatch, BadAlloc, and BadValue errors.</pre></dd></dl><dl COMPACT><dd><pre>The XGetDeviceModifierMapping request returns a pointer to a
 newly created XModifierKeymap structure that contains the keys
 being used as modifiers. The structure should be freed after
 use by calling XFreeModifierMapping . If only zero values
-appear in the set for any modifier, that modifier is disabled.</pre></dl><dl COMPACT><dd><pre>XGetDeviceModifierMapping can generate BadDevice and BadMatch
-errors.</pre></dl>
+appear in the set for any modifier, that modifier is disabled.</pre></dd></dl><dl COMPACT><dd><pre>XGetDeviceModifierMapping can generate BadDevice and BadMatch
+errors.</pre></dd></dl>
  
 
  Structures 
 
-<dl COMPACT><dd><pre>The XModifierKeymap structure contains:</pre></dl><dl COMPACT><dd><pre>typedef struct {
+<dl COMPACT><dd><pre>The XModifierKeymap structure contains:</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
 int max_keypermod;
 KeyCode *modifiermap;
-} XModifierKeymap;</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadLength
+} XModifierKeymap;</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadLength
  More than eight keys were specified in the
- XModifierKeymap structure.</pre></dl><dl COMPACT><dd><pre>BadAlloc
+ XModifierKeymap structure.</pre></dd></dl><dl COMPACT><dd><pre>BadAlloc
  The server failed to allocate the requested resource or
- server memory.</pre></dl><dl COMPACT><dd><pre>BadDevice
+ server memory.</pre></dd></dl><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
- specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XGetDeviceModifierMapping or
  XChangeDeviceModifierMapping request was made specifying
- a device that has no keys.</pre></dl><dl COMPACT><dd><pre>BadValue
+ a device that has no keys.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XSetDeviceKeyMapping(3), XSetDeviceButtonMapping(3)</pre></dl>
+ set of alternatives can generate this error.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XSetDeviceKeyMapping(3), XSetDeviceButtonMapping(3)</pre></dd></dl>

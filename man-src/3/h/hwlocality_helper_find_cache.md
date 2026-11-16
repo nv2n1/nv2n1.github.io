@@ -20,11 +20,11 @@ description: "hwlocality_helper_find_cache – Looking at Cache Objects"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> NULL if no cache matches.</dl>
+</dt><dd> NULL if no cache matches.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function cannot work if the root object does not have a CPU set, e.g. if the topology is made of different machines.</dl>
+</dt><dd> This function cannot work if the root object does not have a CPU set, e.g. if the topology is made of different machines.</dd></dl>
 <h3>static int hwloc_get_cache_type_depth (<code>hwloc_topology_t</code> topology, unsigned cachelevel, <code>hwloc_obj_cache_type_t</code> cachetype) [inline], [static]</h3>
 <p> Find the depth of cache objects matching cache depth and type. Return the depth of the topology level that contains cache objects whose attributes match cachedepth and cachetype. This function intends to disambiguate the case where <code>hwloc_get_type_depth()</code> returns <code>HWLOC_TYPE_DEPTH_MULTIPLE</code>. </p>
 <p> If no cache level matches, <code>HWLOC_TYPE_DEPTH_UNKNOWN</code> is returned. </p>
@@ -36,9 +36,9 @@ description: "hwlocality_helper_find_cache – Looking at Cache Objects"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> NULL if no cache matches or if an invalid object is given.</dl>
+</dt><dd> NULL if no cache matches or if an invalid object is given.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

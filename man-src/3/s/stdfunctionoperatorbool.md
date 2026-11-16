@@ -24,15 +24,12 @@ true if *this stores a callable function target, false otherwise.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 void sampleFunction()
-
 {
     std::cout &lt;&lt; &quot;This is the sample function!\n&quot;;
 }
 void checkFunc(std::function&lt;void()&gt; &amp;func)
-
 {
     // Use operator bool to determine if callable target is available.
     if (func) {
@@ -43,7 +40,6 @@ void checkFunc(std::function&lt;void()&gt; &amp;func)
     }
 }
 int main()
-
 {
     std::function&lt;void()&gt; f1;
     std::function&lt;void()&gt; f2(sampleFunction);

@@ -19,67 +19,67 @@ description: "install-docs – manage online Debian documentation"
 <p> This manual page provides a quick synopsis of <code>install-docs</code> usage. Full documentation can be found in the documentation, including a description of the control file syntax and grammar.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Operate verbosely.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Print some debugging information.</p>
-<dt><code>&#8211;no-update-menus</code></p>
-<dd>Inhibit running <i>dwww-build-menu</i>(8), <i>dhelp_parse</i>(8), and <i>scrollkeeper-update</i>(8).</p>
-<dt><code>&#8211;rootdir</code> <i>dir</i></p>
-<dd>Set the root directory to <i>dir</i> instead of `<i>/</i>&#8216;. Useful and valid only with the <code>&#8211;check</code> action.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Operate verbosely.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Print some debugging information.</dd>
+<dt><code>&#8211;no-update-menus</code></dt>
+<dd>Inhibit running <i>dwww-build-menu</i>(8), <i>dhelp_parse</i>(8), and <i>scrollkeeper-update</i>(8).</dd>
+<dt><code>&#8211;rootdir</code> <i>dir</i></dt>
+<dd>Set the root directory to <i>dir</i> instead of `<i>/</i>&#8216;. Useful and valid only with the <code>&#8211;check</code> action.</dd></dl>
 <h2>Actions</h2>
 <p>Below is list of possible actions <code>install-docs</code> could handle. There can be only one action option passed to install-docs, moreover the action with its arguments must be the last option passed. </p>
 <p> Each <i>file</i> argument should be the full path for the doc-base control file (i.e. `/usr/share/doc-base/some_file&#8217; or `/etc/doc-base/documents/some_file&#8217;), and each <i>docid</i> should be the document identifier (Document identifiers are set in the `Document&#8217; field of the control file, and usually correspond to the package name.) </p>
 <p> If <i>file</i> or <i>docid</i> equals `<code>&#8211;</code>&#8216; (the minus sign), the list of arguments is read from the standard input (each file name or document id in separate line).</p>
 <dl>
-<dt><code>-i</code> <i>file</i> [<i>file</i> &#8230;], <code>&#8211;install</code> <i>file</i> [<i>file</i> &#8230;]</p>
-<dd>Install the documentation described by the control file <i>file</i>.</p>
-<dt><code>-r</code> <i>file</i> [<i>file</i> &#8230;], <code>&#8211;remove</code> <i>file</i> [<i>file</i> &#8230;]</p>
-<dd>Remove the documentation identified by the control file <i>file</i>.</p>
-<dt><code>-c</code> <i>file</i> [<i>file</i> &#8230;], <code>&#8211;check</code> <i>file</i> [<i>file</i> &#8230;]</p>
-<dd>Check the control file <i>file</i> and display number of possible problems found. Use with <i>&#8211;verbose</i> to get the actual locations of errors and warnings. If <i>&#8211;rootdir</i> was also given, its argument will be prepended to names of the files given if the `Files&#8217; and `Index&#8217; fields of the <i>file</i>.</p>
-<dt><code>-R</code>, <code>&#8211;remove-all</code></p>
-<dd>De-register all registered documents.</p>
-<dt><code>-I</code>, <code>&#8211;install-all</code></p>
-<dd>(Re)register all documents from <i>/usr/share/doc-base</i> and <i>/etc/doc-base/documents</i>.</p>
-<dt><code>-C</code>, <code>&#8211;install-changed</code></p>
-<dd>Compare contents of <i>/usr/share/doc-base</i> and <i>/etc/doc-base/documents</i> directories with registered documents database and de-register any files that are missing and (re)register only changed or new files.</p>
-<dt><code>-s</code> <i>docid</i> [<i>docid</i> &#8230;], <code>&#8211;status</code> <i>docid</i> [<i>docid</i> &#8230;]</p>
-<dd>Display the status of the document identifier <i>docid</i>.</p>
-<dt><code>-L</code> <i>docid</i> [<i>docid</i> &#8230;], <code>&#8211;listfiles</code> <i>docid</i> [<i>docid</i> &#8230;]</p>
-<dd>Deprecated option. Does nothing.</p>
-<dt><code>&#8211;dump-db</code> <i>dbname</i></p>
-<dd>Dumps contents of internal databases, for debugging purposes. <i>dbname</i> can be either <code>files.db</code> or <code>status.db</code>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a short help message.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display version information.</dl>
+<dt><code>-i</code> <i>file</i> [<i>file</i> &#8230;], <code>&#8211;install</code> <i>file</i> [<i>file</i> &#8230;]</dt>
+<dd>Install the documentation described by the control file <i>file</i>.</dd>
+<dt><code>-r</code> <i>file</i> [<i>file</i> &#8230;], <code>&#8211;remove</code> <i>file</i> [<i>file</i> &#8230;]</dt>
+<dd>Remove the documentation identified by the control file <i>file</i>.</dd>
+<dt><code>-c</code> <i>file</i> [<i>file</i> &#8230;], <code>&#8211;check</code> <i>file</i> [<i>file</i> &#8230;]</dt>
+<dd>Check the control file <i>file</i> and display number of possible problems found. Use with <i>&#8211;verbose</i> to get the actual locations of errors and warnings. If <i>&#8211;rootdir</i> was also given, its argument will be prepended to names of the files given if the `Files&#8217; and `Index&#8217; fields of the <i>file</i>.</dd>
+<dt><code>-R</code>, <code>&#8211;remove-all</code></dt>
+<dd>De-register all registered documents.</dd>
+<dt><code>-I</code>, <code>&#8211;install-all</code></dt>
+<dd>(Re)register all documents from <i>/usr/share/doc-base</i> and <i>/etc/doc-base/documents</i>.</dd>
+<dt><code>-C</code>, <code>&#8211;install-changed</code></dt>
+<dd>Compare contents of <i>/usr/share/doc-base</i> and <i>/etc/doc-base/documents</i> directories with registered documents database and de-register any files that are missing and (re)register only changed or new files.</dd>
+<dt><code>-s</code> <i>docid</i> [<i>docid</i> &#8230;], <code>&#8211;status</code> <i>docid</i> [<i>docid</i> &#8230;]</dt>
+<dd>Display the status of the document identifier <i>docid</i>.</dd>
+<dt><code>-L</code> <i>docid</i> [<i>docid</i> &#8230;], <code>&#8211;listfiles</code> <i>docid</i> [<i>docid</i> &#8230;]</dt>
+<dd>Deprecated option. Does nothing.</dd>
+<dt><code>&#8211;dump-db</code> <i>dbname</i></dt>
+<dd>Dumps contents of internal databases, for debugging purposes. <i>dbname</i> can be either <code>files.db</code> or <code>status.db</code>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a short help message.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display version information.</dd></dl>
 <h2>Compatibility Issues</h2>
 <p>The following features were added in version 0.8.4, please make sure to add proper `<i>Conflicts</i>&#8216; or `<i>Depends</i>&#8216; lines if you would like to use them in your package&#8217;s scripts:</p>
 <dl>
-<dt>&bull;</p>
-<dd>support for passing more than one argument to the <code>-i</code> and <code>-r</code> actions,</p>
-<dt>&bull;</p>
-<dd>reading arguments from the standard input,</p>
-<dt>&bull;</p>
-<dd><code>-I</code>,<code>&#8211;install-all</code>, <code>-R</code>, <code>&#8212;remove-all</code>, <code>-c</code>, <code>&#8211;check</code> actions,</p>
-<dt>&bull;</p>
-<dd><code>-d</code>, <code>&#8211;debug</code>, <code>-h</code>, <code>&#8211;help</code> options.</dl>
+<dt>&bull;</dt>
+<dd>support for passing more than one argument to the <code>-i</code> and <code>-r</code> actions,</dd>
+<dt>&bull;</dt>
+<dd>reading arguments from the standard input,</dd>
+<dt>&bull;</dt>
+<dd><code>-I</code>,<code>&#8211;install-all</code>, <code>-R</code>, <code>&#8212;remove-all</code>, <code>-c</code>, <code>&#8211;check</code> actions,</dd>
+<dt>&bull;</dt>
+<dd><code>-d</code>, <code>&#8211;debug</code>, <code>-h</code>, <code>&#8211;help</code> options.</dd></dl>
 <p> The <code>-C</code>, <code>&#8211;install-changed</code>, <code>&#8211;dump-db</code>, <code>-V</code>, <code>&#8211;version</code> options were added in 0.8.12.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/share/doc-base/</i></p>
-<dd>The location of doc-base control files provided by various packages.</p>
-<dt><i>/etc/doc-base/documents/</i></p>
-<dd>The location of doc-base control files provided by local administrator.</p>
-<dt><i>/var/lib/doc-base/info/documents/</i></p>
-<dd>The location of registered control files.</p>
-<dt><i>/var/lib/doc-base/info/status.db</i></p>
-<dd>Statuses of registered documents.</p>
-<dt><i>/var/lib/doc-base/info/files.db</i></p>
-<dd>Timestamps and documents ids of registered doc-base files.</p>
-<dt><i>/var/lib/doc-base/omf/</i></p>
-<dd>The location of generated scrollkeeper <font SIZE="-1">OMF</font> files. Note: <i>/usr/share/omf/doc-base</i> should be a symbolic link pointing to the directory.</dl>
+<dt><i>/usr/share/doc-base/</i></dt>
+<dd>The location of doc-base control files provided by various packages.</dd>
+<dt><i>/etc/doc-base/documents/</i></dt>
+<dd>The location of doc-base control files provided by local administrator.</dd>
+<dt><i>/var/lib/doc-base/info/documents/</i></dt>
+<dd>The location of registered control files.</dd>
+<dt><i>/var/lib/doc-base/info/status.db</i></dt>
+<dd>Statuses of registered documents.</dd>
+<dt><i>/var/lib/doc-base/info/files.db</i></dt>
+<dd>Timestamps and documents ids of registered doc-base files.</dd>
+<dt><i>/var/lib/doc-base/omf/</i></dt>
+<dd>The location of generated scrollkeeper <font SIZE="-1">OMF</font> files. Note: <i>/usr/share/omf/doc-base</i> should be a symbolic link pointing to the directory.</dd></dl>
 <h2>Bugs</h2>
 <p>See <a rel="nofollow" href="http://bugs.debian.org/doc-base">http://bugs.debian.org/doc-base</a> &lt;<a href="http://bugs.debian.org/doc-base">http://bugs.debian.org/doc-base</a>&gt;.</p>
 <h2>See Also</h2>

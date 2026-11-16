@@ -16,18 +16,18 @@ description: "mate-invest-chart — tool to set CPU frequency"
 <h2>OPTIONS</h2>
 <p> Invest provides the following features:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Retrieve quotes for any stock, stock index, currency or precious metal known by Yahoo! Finance</p>
-<dt>&bull;</p>
-<dd> Quotes are automatically updated every 15 minutes</p>
-<dt>&bull;</p>
-<dd> The current price, today&#8217;s change, and a chart of today&#8217;s changes are displayed</p>
-<dt>&bull;</p>
-<dd> The currency of the quote is displayed, and if configured, automatically translated into a target currency</p>
-<dt>&bull;</p>
-<dd> The amount of the increase or decrease in the price since purchase, also translatable into the target currency</p>
-<dt>&bull;</p>
-<dd> The percentage increase or decrease in the price since purchase</dl>
+<dt>&bull;</dt>
+<dd> Retrieve quotes for any stock, stock index, currency or precious metal known by Yahoo! Finance</dd>
+<dt>&bull;</dt>
+<dd> Quotes are automatically updated every 15 minutes</dd>
+<dt>&bull;</dt>
+<dd> The current price, today&#8217;s change, and a chart of today&#8217;s changes are displayed</dd>
+<dt>&bull;</dt>
+<dd> The currency of the quote is displayed, and if configured, automatically translated into a target currency</dd>
+<dt>&bull;</dt>
+<dd> The amount of the increase or decrease in the price since purchase, also translatable into the target currency</dd>
+<dt>&bull;</dt>
+<dd> The percentage increase or decrease in the price since purchase</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>mate-invest-chart</code>, as part of mate-applets (derived from gnome-applets), has been written by Raphael Slinckx and other GNOME/MATE contributors. </p>
 <p> This <code>mate-invest-chart</code> manual page has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the <code>Debian</code> system (but may be used by others. </p>

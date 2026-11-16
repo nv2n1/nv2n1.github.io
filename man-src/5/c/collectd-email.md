@@ -29,16 +29,13 @@ The <tt>&quot;email plugin&quot;</tt> opens an UNIX-socket over which one can su
 
 This plugin collects data indirectly by providing a UNIX-socket that external programs can connect to. A simple line based protocol is used to communicate with the plugin:
 <dl><dt>&bull;
-<dd>E-Mail type (e.g. ``ham'', ``spam'', ``virus'', ...) and size (bytes): 
-
+</dt><dd>E-Mail type (e.g. ``ham'', ``spam'', ``virus'', ...) and size (bytes): 
  <pre> e:&lt;type&gt;:&lt;size&gt;</pre>If <tt>&quot;size&quot;</tt> is less than or equal to zero, <tt>&quot;size&quot;</tt> is ignored.
-<dt>&bull;
-<dd>Spam score: 
-
- <pre> s:&lt;value&gt;</pre><dt>&bull;
-<dd>Successful spam checks (e.g. ``<font SIZE="-1">BAYES_99'', ``SUBJECT_DRUG_GAP_C'', ...</font>): 
-
- <pre> c:&lt;type1&gt;[,&lt;type2&gt;,...]</pre>Each line is limited to 256 characters (including the newline character). Longer lines will be ignored.</dl>
+</dd><dt>&bull;
+</dt><dd>Spam score: 
+ <pre> s:&lt;value&gt;</pre></dd><dt>&bull;
+</dt><dd>Successful spam checks (e.g. ``<font SIZE="-1">BAYES_99'', ``SUBJECT_DRUG_GAP_C'', ...</font>): 
+ <pre> c:&lt;type1&gt;[,&lt;type2&gt;,...]</pre>Each line is limited to 256 characters (including the newline character). Longer lines will be ignored.</dd></dl>
 
 <h2>See Also</h2>
 

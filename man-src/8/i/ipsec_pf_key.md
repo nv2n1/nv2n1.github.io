@@ -10,9 +10,9 @@ description: "ipsec_pf_key – shows pfkey messages emitted by the kernel when u
 <p>ipsec_pf_key &#8211; shows pfkey messages emitted by the kernel when using the KLIPS or MAST stack.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pf_key</code> &#8211;ah &#8211;esp &#8211;ipip &#8211;ipcomp &#8211;daemon <i>filehmac-md5-96</i> | <i>hmac-sha1-96</i></dl>
+<dt> <code>pf_key</code> &#8211;ah &#8211;esp &#8211;ipip &#8211;ipcomp &#8211;daemon <i>filehmac-md5-96</i> | <i>hmac-sha1-96</i></dt></dl>
 <h2>Stack</h2>
-<dd>Note that pf_key is only supported on the KLIPS and MAST stacks. It is not supported on any other stack.</p>
+<dd>Note that pf_key is only supported on the KLIPS and MAST stacks. It is not supported on any other stack.</dd>
 <h2>Description</h2>
 <p><code>pf_key</code> is a program to open a PF_KEY socket and print all messages that are received from it. With no options, it will register itself to receive key requests for AH, ESP, IPIP and IPCOMP security associations. If given more specific options, then it will listen only to those protocols which are listed. </p>
 <p> If the messages are recognized, the messages will be decoded. </p>
@@ -26,4 +26,4 @@ description: "ipsec_pf_key – shows pfkey messages emitted by the kernel when u
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

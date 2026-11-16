@@ -59,28 +59,28 @@ description: "select, pselect – synchronous I/O multiplexing"
 <h3>Select law</h3>
 <p> Many people who try to use <code>select</code>() come across behavior that is difficult to understand and produces nonportable or borderline results. For instance, the above program is carefully written not to block at any point, even though it does not set its file descriptors to nonblocking mode. It is easy to introduce subtle errors that will remove the advantage of using <code>select</code>(), so here is a list of essentials to watch for when using <code>select</code>().</p>
 <dl>
-<dt>1.</p>
-<dd> You should always try to use <code>select</code>() without a timeout. Your program should have nothing to do if there is no data available. Code that depends on timeouts is not usually portable and is difficult to debug.</p>
-<dt>2.</p>
-<dd> The value <i>nfds</i> must be properly calculated for efficiency as explained above.</p>
-<dt>3.</p>
-<dd> No file descriptor must be added to any set if you do not intend to check its result after the <code>select</code>() call, and respond appropriately. See next rule.</p>
-<dt>4.</p>
-<dd> After <code>select</code>() returns, all file descriptors in all sets should be checked to see if they are ready.</p>
-<dt>5.</p>
-<dd> The functions <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), and <code><a href="/docs/linux/man/2-send/">send</a></code>(2) do <i>not</i> necessarily read/write the full amount of data that you have requested. If they do read/write the full amount, it&#8217;s because you have a low traffic load and a fast stream. This is not always going to be the case. You should cope with the case of your functions managing to send or receive only a single byte.</p>
-<dt>6.</p>
-<dd> Never read/write only in single bytes at a time unless you are really sure that you have a small amount of data to process. It is extremely inefficient not to read/write as much data as you can buffer each time. The buffers in the example below are 1024 bytes although they could easily be made larger.</p>
-<dt>7.</p>
-<dd> Calls to <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), and <code>select</code>() can fail with the error <code>EINTR</code>, and calls to <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2) <code><a href="/docs/linux/man/2-write/">write</a></code>(2), and <code><a href="/docs/linux/man/2-send/">send</a></code>(2) can fail with <i>errno</i> set to <code>EAGAIN</code> (<code>EWOULDBLOCK</code>). These results must be properly managed (not done properly above). If your program is not going to receive any signals, then it is unlikely you will get <code>EINTR</code>. If your program does not set nonblocking I/O, you will not get <code>EAGAIN</code>.</p>
-<dt>8.</p>
-<dd> Never call <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), or <code><a href="/docs/linux/man/2-send/">send</a></code>(2) with a buffer length of zero.</p>
-<dt>9.</p>
-<dd> If the functions <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), and <code><a href="/docs/linux/man/2-send/">send</a></code>(2) fail with errors other than those listed in <code>7.</code>, or one of the input functions returns 0, indicating end of file, then you should <i>not</i> pass that file descriptor to <code>select</code>() again. In the example below, I close the file descriptor immediately, and then set it to -1 to prevent it being included in a set.</p>
-<dt>10.</p>
-<dd> The timeout value must be initialized with each new call to <code>select</code>(), since some operating systems modify the structure. <code>pselect</code>() however does not modify its timeout structure.</p>
-<dt>11.</p>
-<dd> Since <code>select</code>() modifies its file descriptor sets, if the call is being used in a loop, then the sets must be reinitialized before each call.</dl>
+<dt>1.</dt>
+<dd> You should always try to use <code>select</code>() without a timeout. Your program should have nothing to do if there is no data available. Code that depends on timeouts is not usually portable and is difficult to debug.</dd>
+<dt>2.</dt>
+<dd> The value <i>nfds</i> must be properly calculated for efficiency as explained above.</dd>
+<dt>3.</dt>
+<dd> No file descriptor must be added to any set if you do not intend to check its result after the <code>select</code>() call, and respond appropriately. See next rule.</dd>
+<dt>4.</dt>
+<dd> After <code>select</code>() returns, all file descriptors in all sets should be checked to see if they are ready.</dd>
+<dt>5.</dt>
+<dd> The functions <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), and <code><a href="/docs/linux/man/2-send/">send</a></code>(2) do <i>not</i> necessarily read/write the full amount of data that you have requested. If they do read/write the full amount, it&#8217;s because you have a low traffic load and a fast stream. This is not always going to be the case. You should cope with the case of your functions managing to send or receive only a single byte.</dd>
+<dt>6.</dt>
+<dd> Never read/write only in single bytes at a time unless you are really sure that you have a small amount of data to process. It is extremely inefficient not to read/write as much data as you can buffer each time. The buffers in the example below are 1024 bytes although they could easily be made larger.</dd>
+<dt>7.</dt>
+<dd> Calls to <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), and <code>select</code>() can fail with the error <code>EINTR</code>, and calls to <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2) <code><a href="/docs/linux/man/2-write/">write</a></code>(2), and <code><a href="/docs/linux/man/2-send/">send</a></code>(2) can fail with <i>errno</i> set to <code>EAGAIN</code> (<code>EWOULDBLOCK</code>). These results must be properly managed (not done properly above). If your program is not going to receive any signals, then it is unlikely you will get <code>EINTR</code>. If your program does not set nonblocking I/O, you will not get <code>EAGAIN</code>.</dd>
+<dt>8.</dt>
+<dd> Never call <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), or <code><a href="/docs/linux/man/2-send/">send</a></code>(2) with a buffer length of zero.</dd>
+<dt>9.</dt>
+<dd> If the functions <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), and <code><a href="/docs/linux/man/2-send/">send</a></code>(2) fail with errors other than those listed in <code>7.</code>, or one of the input functions returns 0, indicating end of file, then you should <i>not</i> pass that file descriptor to <code>select</code>() again. In the example below, I close the file descriptor immediately, and then set it to -1 to prevent it being included in a set.</dd>
+<dt>10.</dt>
+<dd> The timeout value must be initialized with each new call to <code>select</code>(), since some operating systems modify the structure. <code>pselect</code>() however does not modify its timeout structure.</dd>
+<dt>11.</dt>
+<dd> Since <code>select</code>() modifies its file descriptor sets, if the call is being used in a loop, then the sets must be reinitialized before each call.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> See <code><a href="/docs/linux/man/2-select/">select</a></code>(2).</p>
 <h2>NOTES</h2>

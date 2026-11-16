@@ -30,12 +30,9 @@ The stem of the filename identified by the path.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     std::cout &lt;&lt; fs::path(&quot;/foo/bar.txt&quot;).stem() &lt;&lt; '\n'
               &lt;&lt; fs::path(&quot;/foo/.bar&quot;).stem() &lt;&lt; '\n';

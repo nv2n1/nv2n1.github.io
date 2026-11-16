@@ -14,12 +14,12 @@ description: "ich_pata_cable_detect – Probe host controller cable detect info"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>Port for which cable detect info is desired</dl>
+</dd><dd>Port for which cable detect info is desired</dd></dl>
 <h2>Description</h2>
 <p>Read 80c cable indicator from ATA PCI device&#8217;s PCI config register. This register is normally set by firmware (BIOS). </p>
 <p> LOCKING: None (inherited from caller).</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

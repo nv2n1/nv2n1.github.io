@@ -11,39 +11,23 @@ std::equal_range - std::equal_range
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt, class T&gt;
-
     std::pair&lt;ForwardIt, ForwardIt&gt;(until C++ 20)
-
         equal_range(ForwardIt first, ForwardIt last,
-
                     const T &amp;value);
-
 template &lt;class ForwardIt, class T&gt;
-
 constexpr std::pair&lt;ForwardIt, ForwardIt&gt;(since C++ 20)
-
     equal_range(ForwardIt first, ForwardIt last,
-
                 const T &amp;value);
 (1)
-
     template &lt;class ForwardIt, class T, class Compare&gt;
-
     std::pair&lt;ForwardIt, ForwardIt&gt;(until C++ 20)
-
         equal_range(ForwardIt first, ForwardIt last,
-
                     const T &amp;value, Compare comp);
 (2)
-
     template &lt;class ForwardIt, class T, class Compare&gt;
-
     constexpr std::pair&lt;ForwardIt, ForwardIt&gt;(since C++ 20)
-
         equal_range(ForwardIt first, ForwardIt last,
-
                     const T &amp;value, Compare comp);</code></pre> 
 Returns a range containing all elements equivalent to value in the range [first, last). 
 The range [first, last) must be at least partially ordered with respect to value, i.e. it must satisfy all of the following requirements: 
@@ -110,12 +94,9 @@ The number of comparisons performed is logarithmic in the distance between first
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
 struct S
-
 {
     int number;
     char name;
@@ -126,7 +107,6 @@ struct S
     }
 };
 int main()
-
 {
     // note: not ordered, only partitioned w.r.t. S defined below
     std::vector&lt;S&gt; vec = &#123;&#123;1, 'A'}, {2, 'B'}, {2, 'C'}, {2, 'D'}, {4, 'G'}, {3, 'F'}};
@@ -134,7 +114,6 @@ int main()
     auto p = std::equal_range(vec.begin(), vec.end(), value);
     for (auto i = p.first; i != p.second; ++i)
         std::cout &lt;&lt; i-&gt;name &lt;&lt; ' ';
-
     // heterogeneous comparison:
     struct Comp {
         bool operator()(const S &amp;s, int i) const

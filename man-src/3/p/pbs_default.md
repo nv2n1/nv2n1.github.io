@@ -10,7 +10,6 @@ description: "pbs_default – return the pbs default server name"
 <p>pbs_default &#8211; return the pbs default server name</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>int pbs_default()</pre>
 <h2>Description</h2>

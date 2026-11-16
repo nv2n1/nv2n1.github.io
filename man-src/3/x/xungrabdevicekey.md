@@ -61,13 +61,13 @@ conditions are true:
  contains the device.
  * The confine_to window (if any) is viewable.
  * A passive grab on the same key/modifier combination does
- not exist on any ancestor of grab_window.</pre></dl><dl COMPACT><dd><pre>The interpretation of the remaining arguments is as for
+ not exist on any ancestor of grab_window.</pre></dd></dl><dl COMPACT><dd><pre>The interpretation of the remaining arguments is as for
 XGrabDevice. The active grab is terminated automatically when
-the logical state of the device has the specified key released.</pre></dl><dl COMPACT><dd><pre>Note that the logical state of a device (as seen by means of
+the logical state of the device has the specified key released.</pre></dd></dl><dl COMPACT><dd><pre>Note that the logical state of a device (as seen by means of
 the X protocol ) may lag the physical state if device event
-processing is frozen.</pre></dl><dl COMPACT><dd><pre>If the key is not AnyKey, it must be in the range specified by
+processing is frozen.</pre></dd></dl><dl COMPACT><dd><pre>If the key is not AnyKey, it must be in the range specified by
 min_keycode and max_keycode as returned by the
-XListInputDevices request. Otherwise, a BadValue error results.</pre></dl><dl COMPACT><dd><pre>This request overrides all previous grabs by the same client on
+XListInputDevices request. Otherwise, a BadValue error results.</pre></dd></dl><dl COMPACT><dd><pre>This request overrides all previous grabs by the same client on
 the same Key/modifier combinations on the same window. A
 modifier of AnyModifier is equivalent to issuing the grab
 request for all possible modifier combinations (including the
@@ -75,34 +75,34 @@ combination of no modifiers). It is not required that all
 modifiers specified have currently assigned KeyCodes. A key of
 AnyKey is equivalent to issuing the request for all possible
 keys. Otherwise, it is not required that the specified key
-currently be assigned to a physical Key.</pre></dl><dl COMPACT><dd><pre>If a modifier_device of NULL is specified, the X keyboard will
-be used as the modifier_device.</pre></dl><dl COMPACT><dd><pre>If some other client has already issued a XGrabDeviceKey with
+currently be assigned to a physical Key.</pre></dd></dl><dl COMPACT><dd><pre>If a modifier_device of NULL is specified, the X keyboard will
+be used as the modifier_device.</pre></dd></dl><dl COMPACT><dd><pre>If some other client has already issued a XGrabDeviceKey with
 the same Key/modifier combination on the same window, a
 BadAccess error results. When using AnyModifier or AnyKey, the
 request fails completely, and a BadAccess error results (no
 grabs are established) if there is a conflicting grab for any
-combination.XGrabDeviceKey has no effect on an active grab.</pre></dl><dl COMPACT><dd><pre>XGrabDeviceKey can generate BadAccess, BadClass, BadDevice,
+combination.XGrabDeviceKey has no effect on an active grab.</pre></dd></dl><dl COMPACT><dd><pre>XGrabDeviceKey can generate BadAccess, BadClass, BadDevice,
 BadMatch, BadValue, and BadWindow errors. It returns Success on
-successful completion of the request.</pre></dl><dl COMPACT><dd><pre>The XUngrabDeviceKey request releases the passive grab for a
+successful completion of the request.</pre></dd></dl><dl COMPACT><dd><pre>The XUngrabDeviceKey request releases the passive grab for a
 key/modifier combination on the specified window if it was
 grabbed by this client. A modifier of AnyModifier is equivalent
 to issuing the ungrab request for all possible modifier
 combinations, including the combination of no modifiers. A Key
 of AnyKey is equivalent to issuing the request for all possible
-Keys.XUngrabDeviceKey has no effect on an active grab.</pre></dl><dl COMPACT><dd><pre>If a modifier_device of NULL is specified, the X keyboard will
-be used as the modifier_device.</pre></dl><dl COMPACT><dd><pre>XUngrabDeviceKey can generate BadDevice, BadMatch, BadValue and
-BadWindow errors.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+Keys.XUngrabDeviceKey has no effect on an active grab.</pre></dd></dl><dl COMPACT><dd><pre>If a modifier_device of NULL is specified, the X keyboard will
+be used as the modifier_device.</pre></dd></dl><dl COMPACT><dd><pre>XUngrabDeviceKey can generate BadDevice, BadMatch, BadValue and
+BadWindow errors.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
- specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XGrabDeviceKey request was
  made specifying a device that has no keys, or a modifier
- device that has no keys.</pre></dl><dl COMPACT><dd><pre>BadValue
+ device that has no keys.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ set of alternatives can generate this error.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- Window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XAllowDeviceEvents(3), XGrabDevice(3), XGrabDeviceButton(3)</pre></dl>
+ Window.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XAllowDeviceEvents(3), XGrabDevice(3), XGrabDeviceButton(3)</pre></dd></dl>

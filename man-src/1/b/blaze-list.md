@@ -16,46 +16,46 @@ description: "blaze-list – browse the content of the BlazeBlogger repository"
 <p> <code>blaze-list</code> displays the content of the BlazeBlogger repository. All items are listed by default, but desired subset can be easily selected via additional options.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</p>
-<dt><code>-I</code>, <code>&#8211;id</code> <i>id</i></p>
-<dd> Display the record with specified <i>id</i> only.</p>
-<dt><code>-a</code>, <code>&#8211;author</code> <i>author</i></p>
-<dd> List records by specified <i>author</i> only.</p>
-<dt><code>-t</code>, <code>&#8211;title</code> <i>title</i></p>
-<dd> List records with matching <i>title</i>.</p>
-<dt><code>-T</code>, <code>&#8211;tag</code> <i>tag</i></p>
-<dd> List records tagged as <i>tag</i>.</p>
-<dt><code>-d</code>, <code>&#8211;day</code> <i>day</i></p>
-<dd> List records from the specified day where <i>day</i> is in the <font SIZE="-1">DD</font> format. Do not forget to specify the month and year as well, unless you, for example, want to list all records from the first day of every month.</p>
-<dt><code>-m</code>, <code>&#8211;month</code> <i>month</i></p>
-<dd> List records from the specified month where <i>month</i> is in the <font SIZE="-1">MM</font> format. Do not forget to specify the year as well, unless you, for example, want to list all july records.</p>
-<dt><code>-y</code>, <code>&#8211;year</code> <i>year</i></p>
-<dd> List records from the specified year where <i>year</i> is in the <font SIZE="-1">YYYY</font> format.</p>
-<dt><code>-n</code>, <code>&#8211;number</code> <i>number</i></p>
-<dd> List selected <i>number</i> of records only.</p>
-<dt><code>-p</code>, <code>&#8211;pages</code></p>
-<dd> List pages instead of blog posts.</p>
-<dt><code>-P</code>, <code>&#8211;posts</code></p>
-<dd> List blog posts; this is the default option.</p>
-<dt><code>-S</code>, <code>&#8211;stats</code></p>
-<dd> Show repository statistics instead of blog posts.</p>
-<dt><code>-s</code>, <code>&#8211;short</code></p>
-<dd> Display each record on a single line.</p>
-<dt><code>-r</code>, <code>&#8211;reverse</code></p>
-<dd> Display records in reverse order.</p>
-<dt><code>-c</code>, <code>&#8211;color</code>, <code>&#8211;colour</code></p>
-<dd> Enable coloured output, no matter what is set in the configuration.</p>
-<dt><code>-C</code>, <code>&#8211;no-color</code>, <code>&#8211;no-colour</code></p>
-<dd> Disable coloured output, no matter what is set in the configuration.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Avoid displaying messages that are not necessary.</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Display all messages. This is the default option.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</dd>
+<dt><code>-I</code>, <code>&#8211;id</code> <i>id</i></dt>
+<dd> Display the record with specified <i>id</i> only.</dd>
+<dt><code>-a</code>, <code>&#8211;author</code> <i>author</i></dt>
+<dd> List records by specified <i>author</i> only.</dd>
+<dt><code>-t</code>, <code>&#8211;title</code> <i>title</i></dt>
+<dd> List records with matching <i>title</i>.</dd>
+<dt><code>-T</code>, <code>&#8211;tag</code> <i>tag</i></dt>
+<dd> List records tagged as <i>tag</i>.</dd>
+<dt><code>-d</code>, <code>&#8211;day</code> <i>day</i></dt>
+<dd> List records from the specified day where <i>day</i> is in the <font SIZE="-1">DD</font> format. Do not forget to specify the month and year as well, unless you, for example, want to list all records from the first day of every month.</dd>
+<dt><code>-m</code>, <code>&#8211;month</code> <i>month</i></dt>
+<dd> List records from the specified month where <i>month</i> is in the <font SIZE="-1">MM</font> format. Do not forget to specify the year as well, unless you, for example, want to list all july records.</dd>
+<dt><code>-y</code>, <code>&#8211;year</code> <i>year</i></dt>
+<dd> List records from the specified year where <i>year</i> is in the <font SIZE="-1">YYYY</font> format.</dd>
+<dt><code>-n</code>, <code>&#8211;number</code> <i>number</i></dt>
+<dd> List selected <i>number</i> of records only.</dd>
+<dt><code>-p</code>, <code>&#8211;pages</code></dt>
+<dd> List pages instead of blog posts.</dd>
+<dt><code>-P</code>, <code>&#8211;posts</code></dt>
+<dd> List blog posts; this is the default option.</dd>
+<dt><code>-S</code>, <code>&#8211;stats</code></dt>
+<dd> Show repository statistics instead of blog posts.</dd>
+<dt><code>-s</code>, <code>&#8211;short</code></dt>
+<dd> Display each record on a single line.</dd>
+<dt><code>-r</code>, <code>&#8211;reverse</code></dt>
+<dd> Display records in reverse order.</dd>
+<dt><code>-c</code>, <code>&#8211;color</code>, <code>&#8211;colour</code></dt>
+<dd> Enable coloured output, no matter what is set in the configuration.</dd>
+<dt><code>-C</code>, <code>&#8211;no-color</code>, <code>&#8211;no-colour</code></dt>
+<dd> Disable coloured output, no matter what is set in the configuration.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Avoid displaying messages that are not necessary.</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Display all messages. This is the default option.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1).</p>
 <h2>BUGS</h2>

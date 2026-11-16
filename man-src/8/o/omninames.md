@@ -14,10 +14,10 @@ description: "omniNames – omniORB Naming Service"
 <p>omniNames is omniORB&#8217;s implementation of the OMG&#8217;s COS Naming Service Specification. When started for the first time, omniNames needs to be told which port it should listen on. This is specified with the -start option. Subsequently, omniNames will always determine its port from the log file which it writes. When omniNames starts up successfully it writes the stringified object reference for its root context on standard error. </p>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>OMNINAMES_LOGDIR</code></p>
-<dd>the directory in which log files are kept.</p>
-<dt><code>OMNINAMES_ITBC</code></p>
-<dd>the idle time between checkpoints in seconds. It defaults to 15 minutes. </p>
+<dt><code>OMNINAMES_LOGDIR</code></dt>
+<dd>the directory in which log files are kept.</dd>
+<dt><code>OMNINAMES_ITBC</code></dt>
+<dd>the idle time between checkpoints in seconds. It defaults to 15 minutes. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-nameclt/">nameclt</a>(1) </p>

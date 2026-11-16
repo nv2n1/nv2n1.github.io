@@ -11,52 +11,34 @@ std::minmax - std::minmax
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b);
 (until C++ 14)
-
     template &lt;class T&gt;
     (since C++ 14)
-
         constexpr std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b);
-
 template &lt;class T, class Compare&gt;
 (since C++ 11)
-
     std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b, (until C++ 14)
-
                                                                        Compare comp);
-
 template &lt;class T, class Compare&gt;
-
 constexpr std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b, (1)(since C++ 14)
-
                                                                              Compare comp);
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist);
 (until C++ 14)
-
     template &lt;class T&gt;
     (since C++ 14)
-
         constexpr std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist);
 (3)
-
     template &lt;class T, class Compare&gt;
     (since C++ 11)
-
         std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist, Compare comp);
 (4)(until C++ 14)
-
     template &lt;class T, class Compare&gt;
     (since C++ 14)
-
         constexpr std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist, Compare comp);</code></pre> 
 Returns the lowest and the greatest of the given values. 
 1-2) Returns references to the smaller and the greater of a and b. 
@@ -148,16 +130,11 @@ int x = p.second; // undefined behavior
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4, 1, 5, 9, 2, 6};
     std::srand(std::time(0));

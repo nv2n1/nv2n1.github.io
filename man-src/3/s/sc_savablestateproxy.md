@@ -11,7 +11,6 @@ description: "sc::SavableStateProxy –"
 <p> Create a proxy for a <code>SavableState</code> object.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;proxy.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClassProxy</code>.</p>
 <h3>Public Member Functions</h3>

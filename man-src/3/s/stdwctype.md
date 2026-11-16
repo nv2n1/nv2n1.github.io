@@ -11,7 +11,6 @@ std::wctype - std::wctype
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     std::wctype_t wctype(const char *str);</code></pre> 
 Constructs a value of type std::wctype_t that describes a LC_CTYPE category of wide character classification. It may be one of the standard classification categories, or a locale-specific category, such as &quot;jkanji&quot;. 
 

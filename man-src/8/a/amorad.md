@@ -15,13 +15,13 @@ description: "amorad – Amora (A Remote Mobile Assistant) daemon"
 <p> The server (amorad) is written in C using Xlib and XTest to send events for X session and the POSIX socket API for I/O. It must be started by the user, inside a valid X session.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Help (usage) message </p>
-<dt><code>-l</code></p>
-<dd>Set a specific path for the log file </p>
-<dt><code>-v</code></p>
+<dt><code>-h</code></dt>
+<dd>Help (usage) message </dd>
+<dt><code>-l</code></dt>
+<dd>Set a specific path for the log file </dd>
+<dt><code>-v</code></dt>
 <dd>Show program version and exit
-</dl>
+</dd></dl>
 <h2>Amora Client</h2>
 <p>In order to use amora, you need a mobile phone with amora-client installed and running. The current client is implemented in Python for S60 (Nokia cellphones).</p>
 <h2>Bugs</h2>

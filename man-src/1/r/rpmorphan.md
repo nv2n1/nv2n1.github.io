@@ -65,90 +65,90 @@ description: "rpmorphan – find orphaned packages"
 <h2>REQUIRED ARGUMENTS</h2>
 <p> you should provide at least one target. this can be</p>
 <dl>
-<dt><code>-all</code></p>
-<dd> all the installed rpm package</p>
-<dt><code>-package</code></p>
-<dd> one or several explicit package</p>
-<dt><code>-guess-*</code></p>
-<dd> pre-selected packages groups</p>
-<dt><code>-guess-custom</code></p>
-<dd> give a filter to select the packages you want study. you can use regular expressions.</dl>
+<dt><code>-all</code></dt>
+<dd> all the installed rpm package</dd>
+<dt><code>-package</code></dt>
+<dd> one or several explicit package</dd>
+<dt><code>-guess-*</code></dt>
+<dd> pre-selected packages groups</dd>
+<dt><code>-guess-custom</code></dt>
+<dd> give a filter to select the packages you want study. you can use regular expressions.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd> Print the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd> Print the program release and exit.</p>
-<dt><code>-verbose</code></p>
-<dd> The program works and print debugging messages.</p>
-<dt><code>-dry-run</code></p>
-<dd> this is a simulation mode : rpmorphan will show you what is the result of package removing. The window&#8217;s title is modified to show this mode.</p>
-<dt><code>-use-cache</code></p>
-<dd> the rpm query may be long (10 to 30 s). If you will run an rpmorphan tool several time, this option will allow to gain a lot of time : it save the rpm query on a file cache (first call), then use this cache instead quering rpm (others calls).</p>
-<dt><code>-clear-cache</code></p>
-<dd> to remove cache file. Can be used with -use-cache to write a new cache.</p>
-<dt><code>-gui</code></p>
-<dd> display a graphical interface which allow to show informations, remove packages (an internal help is provided). This is currently the same as the -tk option</p>
-<dt><code>-tk</code></p>
-<dd> display a tk graphical interface which allow to show informations, remove packages (an internal help is provided). The Tk perl module is necessary to run the gui.</p>
-<dt><code>-curses</code></p>
-<dd> display a curses graphical interface which allow to show informations, remove packages (an internal help is provided). The Curses::UI perl module is necessary to run the gui.</p>
-<dt><code>-exclude</code></p>
-<dd> this option will specify the packages to exclude from the output. Can be used as &#8216;&#8211;exclude pac1 &#8211;exclude pac2&#8217; or &#8216;&#8211;exclude &#8220;pac1, pac2&#8221;&#8217;</p>
-<dt><code>-install-time</code></p>
-<dd> install-time is a filter on the period from the package installation date to now (in days). if set positive, it only allow packages installed before x days. if set negative, it only allow packages installed since x days.</p>
-<dt><code>-access-time</code></p>
-<dd> access-time is designed to filter packages which have not been used since x days. </p>
+<dt><code>-help</code></dt>
+<dd> Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd> Print the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd> Print the program release and exit.</dd>
+<dt><code>-verbose</code></dt>
+<dd> The program works and print debugging messages.</dd>
+<dt><code>-dry-run</code></dt>
+<dd> this is a simulation mode : rpmorphan will show you what is the result of package removing. The window&#8217;s title is modified to show this mode.</dd>
+<dt><code>-use-cache</code></dt>
+<dd> the rpm query may be long (10 to 30 s). If you will run an rpmorphan tool several time, this option will allow to gain a lot of time : it save the rpm query on a file cache (first call), then use this cache instead quering rpm (others calls).</dd>
+<dt><code>-clear-cache</code></dt>
+<dd> to remove cache file. Can be used with -use-cache to write a new cache.</dd>
+<dt><code>-gui</code></dt>
+<dd> display a graphical interface which allow to show informations, remove packages (an internal help is provided). This is currently the same as the -tk option</dd>
+<dt><code>-tk</code></dt>
+<dd> display a tk graphical interface which allow to show informations, remove packages (an internal help is provided). The Tk perl module is necessary to run the gui.</dd>
+<dt><code>-curses</code></dt>
+<dd> display a curses graphical interface which allow to show informations, remove packages (an internal help is provided). The Curses::UI perl module is necessary to run the gui.</dd>
+<dt><code>-exclude</code></dt>
+<dd> this option will specify the packages to exclude from the output. Can be used as &#8216;&#8211;exclude pac1 &#8211;exclude pac2&#8217; or &#8216;&#8211;exclude &#8220;pac1, pac2&#8221;&#8217;</dd>
+<dt><code>-install-time</code></dt>
+<dd> install-time is a filter on the period from the package installation date to now (in days). if set positive, it only allow packages installed before x days. if set negative, it only allow packages installed since x days.</dd>
+<dt><code>-access-time</code></dt>
+<dd> access-time is designed to filter packages which have not been used since x days. </dd>
 <p> be careful : this option will slow the program</p>
-<dt><code>-fullalgo</code></p>
-<dd> for a small list of packages, rpmorphan use a different quicker methode : rpm -e &#8211;test </p>
+<dt><code>-fullalgo</code></dt>
+<dd> for a small list of packages, rpmorphan use a different quicker methode : rpm -e &#8211;test </dd>
 <p> this option can be used to force the use of the full algo</p>
-<dt><code>-suggests</code></p>
-<dd> some rpm version offers a meta-data dependency call suggests : it is for usefull but not necessary packages. if this option is set, the suggested packages are used in rpmorphan as required packages. The default value for this option is unset.</p>
-<dt><code>-arch</code></p>
-<dd> by default, rpmorphan works on package name. this option will rpmorphan work on full package name : name-version-release.arch. This may be usefull if you have several version or several archictectures installed.</p>
-<dt><code>-package</code></p>
-<dd> search if the given package(s) is(are) orphaned. Can be used as &#8216;&#8211;package pac1 &#8211;package pac2&#8217; or &#8216;&#8211;package &#8220;pac1, pac2&#8221;&#8217;</p>
-<dt><code>-all</code></p>
-<dd> apply on all installed packages. The output should be interpreted. For example lilo or grub are orphaned packages, but are necessary to boot &#8230; </p>
+<dt><code>-suggests</code></dt>
+<dd> some rpm version offers a meta-data dependency call suggests : it is for usefull but not necessary packages. if this option is set, the suggested packages are used in rpmorphan as required packages. The default value for this option is unset.</dd>
+<dt><code>-arch</code></dt>
+<dd> by default, rpmorphan works on package name. this option will rpmorphan work on full package name : name-version-release.arch. This may be usefull if you have several version or several archictectures installed.</dd>
+<dt><code>-package</code></dt>
+<dd> search if the given package(s) is(are) orphaned. Can be used as &#8216;&#8211;package pac1 &#8211;package pac2&#8217; or &#8216;&#8211;package &#8220;pac1, pac2&#8221;&#8217;</dd>
+<dt><code>-all</code></dt>
+<dd> apply on all installed packages. The output should be interpreted. For example lilo or grub are orphaned packages, but are necessary to boot &#8230; </dd>
 <p> the &#8220;-install-time&#8221; and &#8220;-access-time&#8221; options may be useful to filter the list</p>
-<dt><code>-guess-perl</code></p>
-<dd> This option tries to find perl modules. It tries to match &#8220;^perl&#8221;</p>
-<dt><code>-guess-python</code></p>
-<dd> This option tries to find python modules. It tries to match &#8220;^python&#8221;</p>
-<dt><code>-guess-pike</code></p>
-<dd> This option tries to find pike modules. It tries to match &#8220;^pike&#8221;</p>
-<dt><code>-guess-ruby</code></p>
-<dd> This option tries to find ruby modules. It tries to match &#8220;^ruby&#8221;</p>
-<dt><code>-guess-common</code></p>
-<dd> This option tries to find common packages. It tries to match &#8220;-common$&#8221;</p>
-<dt><code>-guess-data</code></p>
-<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</p>
-<dt><code>-guess-doc</code></p>
-<dd> This option tries to find documentation packages. It tries to match &#8220;-doc$&#8221;</p>
-<dt><code>-guess-data</code></p>
-<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</p>
-<dt><code>-guess-dev</code></p>
-<dd> This option tries to find development packages. It tries to match &#8220;-devel$&#8221;</p>
-<dt><code>-guess-lib</code></p>
-<dd> This option tries to find library packages. It tries to match &#8220;^lib&#8221;</p>
-<dt><code>-guess-all</code></p>
-<dd> This is a short to tell : Try all of the above (perl, python &#8230;)</p>
-<dt><code>-guess-custom</code></p>
-<dd> this will allow you to specify your own filter. for exemple &#8220;^wh&#8221; will match whois, whatsnewfm &#8230;</p>
-<dt><code>-keep-file</code></p>
-<dd> define the keep file to be used. If not set, the /var/lib/rpmorphan/keep will be used</p>
-<dt><code>-list-keep</code></p>
-<dd> list the permanent list of excluded packages and exit.</p>
-<dt><code>-zero-keep</code></p>
-<dd> empty the permanent list of excluded packages and exit.</p>
-<dt><code>-add-keep</code></p>
-<dd> add package(s) to the permanent list of excluded packages and exit. </p>
+<dt><code>-guess-perl</code></dt>
+<dd> This option tries to find perl modules. It tries to match &#8220;^perl&#8221;</dd>
+<dt><code>-guess-python</code></dt>
+<dd> This option tries to find python modules. It tries to match &#8220;^python&#8221;</dd>
+<dt><code>-guess-pike</code></dt>
+<dd> This option tries to find pike modules. It tries to match &#8220;^pike&#8221;</dd>
+<dt><code>-guess-ruby</code></dt>
+<dd> This option tries to find ruby modules. It tries to match &#8220;^ruby&#8221;</dd>
+<dt><code>-guess-common</code></dt>
+<dd> This option tries to find common packages. It tries to match &#8220;-common$&#8221;</dd>
+<dt><code>-guess-data</code></dt>
+<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</dd>
+<dt><code>-guess-doc</code></dt>
+<dd> This option tries to find documentation packages. It tries to match &#8220;-doc$&#8221;</dd>
+<dt><code>-guess-data</code></dt>
+<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</dd>
+<dt><code>-guess-dev</code></dt>
+<dd> This option tries to find development packages. It tries to match &#8220;-devel$&#8221;</dd>
+<dt><code>-guess-lib</code></dt>
+<dd> This option tries to find library packages. It tries to match &#8220;^lib&#8221;</dd>
+<dt><code>-guess-all</code></dt>
+<dd> This is a short to tell : Try all of the above (perl, python &#8230;)</dd>
+<dt><code>-guess-custom</code></dt>
+<dd> this will allow you to specify your own filter. for exemple &#8220;^wh&#8221; will match whois, whatsnewfm &#8230;</dd>
+<dt><code>-keep-file</code></dt>
+<dd> define the keep file to be used. If not set, the /var/lib/rpmorphan/keep will be used</dd>
+<dt><code>-list-keep</code></dt>
+<dd> list the permanent list of excluded packages and exit.</dd>
+<dt><code>-zero-keep</code></dt>
+<dd> empty the permanent list of excluded packages and exit.</dd>
+<dt><code>-add-keep</code></dt>
+<dd> add package(s) to the permanent list of excluded packages and exit. </dd>
 <p> Can be used as &#8216;&#8211;add-keep pac1 &#8211;add-keep pac2&#8217; or &#8216;&#8211;add-keep &#8220;pac1, pac2&#8221;&#8217;</p>
-<dt><code>-del-keep</code></p>
-<dd> remove package(s) from the permanent list of excluded packages and exit. </p>
+<dt><code>-del-keep</code></dt>
+<dd> remove package(s) from the permanent list of excluded packages and exit. </dd>
 <p> Can be used as &#8216;&#8211;add-keep pac1 &#8211;add-keep pac2&#8217; or &#8216;&#8211;add-keep &#8220;pac1, pac2&#8221;&#8217;</dl>
 <h2>USAGE</h2>
 <p> rpmorphan can be useful after a distribution upgrade, to remove packages forgotten by the upgrade tool. It is interesting to use the options &quot;-all -install-time +xx&#8217;. </p>
@@ -176,16 +176,16 @@ description: "rpmorphan – find orphaned packages"
 <p> If you want to speed up rpmorphan, you should install the <font SIZE="-1">RPM2</font> perl module ( perl-RPM2 rpm package). On mandriva, the <font SIZE="-1">URPM</font> perl module (dependency from urpmi) will be used instead.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>display orphaned libraries</p>
-<dd> rpmorphan</p>
-<dt>display all orphaned packages in a curses interface</p>
-<dd> rpmorphan &#8211;all &#8211;curses</p>
-<dt>display orphaned packages, not used since one year</p>
-<dd> rpmorphan &#8211;all -access-time +365</p>
-<dt>display all orphaned packages, installed in the last 10 days</p>
-<dd> rpmorphan &#8211;all -install-time -10</p>
-<dt>display all orphaned packages, installed one month ago (or more)</p>
-<dd> rpmorphan &#8211;all -install-time +30</dl>
+<dt>display orphaned libraries</dt>
+<dd> rpmorphan</dd>
+<dt>display all orphaned packages in a curses interface</dt>
+<dd> rpmorphan &#8211;all &#8211;curses</dd>
+<dt>display orphaned packages, not used since one year</dt>
+<dd> rpmorphan &#8211;all -access-time +365</dd>
+<dt>display all orphaned packages, installed in the last 10 days</dt>
+<dd> rpmorphan &#8211;all -install-time -10</dd>
+<dt>display all orphaned packages, installed one month ago (or more)</dt>
+<dd> rpmorphan &#8211;all -install-time +30</dd></dl>
 <h2>BUGS AND LIMITATIONS</h2>
 <p> Virtuals packages are not well (for now) taken in account. Let&#8217;s see an example : lilo and grub provide &#8216;bootloader&#8217; virtual, which is necessary for system boot. if the 2 are installed, they will be shown all 2 as orphans (but you can not remove the 2). If you remove one of them, the other is now longer shown as orphan. </p>
 <p> the software can only work with one version of each software : we only treat the first version seen</p>
@@ -200,8 +200,8 @@ description: "rpmorphan – find orphaned packages"
 <p> For Mandriva users : the &#8216;urpme &#8211;auto-orphans&#8217; command show quickly a a list of unused library packages.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1">RPMORPHAN_METHOD</font></p>
-<dd> for experts only : allow to force the method used to get rpm data. It can be set to <font SIZE="-1">URPM, RPM2</font> or &#8216;basic&#8217; (for external rpm query)</dl>
+<dt><font SIZE="-1">RPMORPHAN_METHOD</font></dt>
+<dd> for experts only : allow to force the method used to get rpm data. It can be set to <font SIZE="-1">URPM, RPM2</font> or &#8216;basic&#8217; (for external rpm query)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>rpm</i>(1) for rpm call </p>
 <p> <i><a href="/docs/linux/man/1-rpmusage/">rpmusage</a></i>(1) </p>

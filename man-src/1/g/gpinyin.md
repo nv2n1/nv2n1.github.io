@@ -18,19 +18,19 @@ description: "gpinyin – use Hanyu Pinyin Chinese in roff"
 <p> Pinyin sections in <i>groff</i> files are enclosed by two <code>.pinyin</code> requests with different arguments. The starting request is</p>
 <dl>
 <dt>
-<dd> .pinyin start</dl>
+</dt><dd> .pinyin start</dd></dl>
 <p> or</p>
 <dl>
 <dt>
-<dd> .pinyin begin</dl>
+</dt><dd> .pinyin begin</dd></dl>
 <p> and the ending request is</p>
 <dl>
 <dt>
-<dd> .pinyin stop</dl>
+</dt><dd> .pinyin stop</dd></dl>
 <p> or</p>
 <dl>
 <dt>
-<dd> .pinyin end</dl>
+</dt><dd> .pinyin end</dd></dl>
 <p> .</p>
 <h3>Syllables</h3>
 <p> The spoken Chinese language is based on about 411 <i>syllables</i>; see </p>
@@ -101,17 +101,17 @@ description: "gpinyin – use Hanyu Pinyin Chinese in roff"
 <p> The neutral tone number can be omitted from a word-final syllable, but not otherwise.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> <code>&#8211;help</code> Print usage information and exit.</p>
-<dt><code>-v</code></p>
-<dd> <code>&#8211;version</code> Print version information and exit.</dl>
+<dt><code>-h</code></dt>
+<dd> <code>&#8211;help</code> Print usage information and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> <code>&#8211;version</code> Print version information and exit.</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>gpinyin</code> was written by Bernd Warken</p>
 <h2>SEE ALSO</h2>
 <p> Useful documents on the World Wide Web related to Pinyin include</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  &#8220;Pinyin&#8221; (Wikipedia)<br />
  &#8220;Pinyin table&#8221; (Wikipedia)<br />
  <i>Pinyin to Unicode</i><br />
@@ -119,7 +119,7 @@ description: "gpinyin – use Hanyu Pinyin Chinese in roff"
  <i>Pinyin.info: a guide to the writing of Mandarin Chinese in romanization</i><br />
  &#8220;Where do the tone marks go?&#8221; (Pinyin.info)<br />
  pinyin.txt from the CJK macro package for
-</dl>
+</dd></dl>
 <p> and<br />
  pinyin.sty from the CJK macro package for </p>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-grog/">grog</a></code>(1), and <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1) explain how to view <i>roff</i> documents. </p>

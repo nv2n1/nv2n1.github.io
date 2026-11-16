@@ -15,41 +15,41 @@ description: "pmieconf – display and set configurable pmie rule variables"
 <p> <code>pmieconf</code> is a utility for viewing and configuring variables from generalized <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) rules. The set of generalized rules is read in from <i>rulepath</i>, and the output <i>file</i> produced by <code>pmieconf</code> is a valid input file for <code>pmie</code>. </p>
 <p> A brief description of the <code>pmieconf</code> command line options follows:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> When run from automated <code>pmie</code> setup processes, this option is used to add a specific message and timestamp indicating that this is the case. It is not appropriate when using the tool interactively.</p>
-<dt><code>-f</code> <i>file</i></p>
-<dd> Any rule modifications resulting from <code>pmieconf</code> manipulation of variable values will be written to <i>file</i>. The default value of <i>file</i> is dependent on the user ID &#8211; for the root user, the file <i>$PCP_VAR_DIR/config/pmieconf/config.pmie</i> is used, for other users the default is <i>$HOME/.pcp/pmie/config.pmie</i>.</p>
-<dt><code>-F</code></p>
-<dd> Forces the <code>pmieconf</code> output <i>file</i> to be created (or updated), after which <code>pmieconf</code> immediately exits.</p>
-<dt><code>-r</code> <i>rulepath</i></p>
-<dd> Allows the source of generalized <code>pmie</code> rules to be changed &#8211; <i>rulepath</i> is a colon-delimited list of <code><a href="/docs/linux/man/5-pmieconf/">pmieconf</a></code>(5) rule files and/or subdirectories. The default value for <i>rulepath</i> is <i>$PCP_VAR_DIR/config/pmieconf</i>. Use of this option overrides the <code>PMIECONF_PATH</code> environment variable which has a similar function.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. Additional information associated with each rule and its associated variables will be displayed. This is the complete list of variables which affects any given rule (by default, global variables are not displayed with the rule).</dl>
+<dt><code>-c</code></dt>
+<dd> When run from automated <code>pmie</code> setup processes, this option is used to add a specific message and timestamp indicating that this is the case. It is not appropriate when using the tool interactively.</dd>
+<dt><code>-f</code> <i>file</i></dt>
+<dd> Any rule modifications resulting from <code>pmieconf</code> manipulation of variable values will be written to <i>file</i>. The default value of <i>file</i> is dependent on the user ID &#8211; for the root user, the file <i>$PCP_VAR_DIR/config/pmieconf/config.pmie</i> is used, for other users the default is <i>$HOME/.pcp/pmie/config.pmie</i>.</dd>
+<dt><code>-F</code></dt>
+<dd> Forces the <code>pmieconf</code> output <i>file</i> to be created (or updated), after which <code>pmieconf</code> immediately exits.</dd>
+<dt><code>-r</code> <i>rulepath</i></dt>
+<dd> Allows the source of generalized <code>pmie</code> rules to be changed &#8211; <i>rulepath</i> is a colon-delimited list of <code><a href="/docs/linux/man/5-pmieconf/">pmieconf</a></code>(5) rule files and/or subdirectories. The default value for <i>rulepath</i> is <i>$PCP_VAR_DIR/config/pmieconf</i>. Use of this option overrides the <code>PMIECONF_PATH</code> environment variable which has a similar function.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. Additional information associated with each rule and its associated variables will be displayed. This is the complete list of variables which affects any given rule (by default, global variables are not displayed with the rule).</dd></dl>
 <p> The <code>pmieconf</code> <i>command</i>s allow information related to the various rules and configurable variables to be displayed or modified. If no <code>pmieconf</code> <i>command</i>s are presented on the command line, <code>pmieconf</code> prompts for <i>command</i>s interactively. </p>
 <p> The <code>pmieconf</code> <i>command</i> language is described here:</p>
 <dl>
-<dt><code>help [ { . | all | global | &lt;rule&gt; | &lt;group&gt; } [&lt;variable&gt;] ]</code></p>
-<dd> Without arguments, the <code>help</code> command displays the syntax for all of the available <code>pmieconf</code> commands. With one argument, a description of one or more of the generalized rules is displayed. With two arguments, a description of a specific variable relating to one or more of the generalized rules is displayed.</p>
-<dt><code>rules [ enabled | disabled ]</code></p>
-<dd> Display the name and short summary for all of the generalized rules found on <i>rulepath</i>. Each of the rule names can be used in place of the keyword <code>&lt;rule&gt;</code> in this command syntax description. The <code>enabled</code> and <code>disabled</code> options can be used to filter the set of rules displayed to just those which are enabled or disabled respectfully.</p>
-<dt><code>groups</code></p>
-<dd> Display the name of all of the rule groups that were found on <i>rulepath</i>. Each of the group names can be used in place of the keyword <code>&lt;group&gt;</code> in this command syntax description, which applies the command to all rules within the rule group.</p>
-<dt><code>status</code></p>
-<dd> Display status information relating to the current <code>pmieconf</code> session, including a list of running <code>pmie</code> processes which are currently using <i>file</i>.</p>
-<dt><code>enable { . | all | &lt;rule&gt; | &lt;group&gt; }</code></p>
-<dd> Enables the specified rule or group of rules. An enabled rule is one which will be included in the <code>pmie</code> configuration file generated by <code>pmieconf</code>. Any enabled &quot;actions&quot; will be appended to the rule&#8217;s &quot;predicate&quot;, in a manner conforming to the <code>pmie</code> syntax (&quot;actions&quot; can be viewed using the <code>list global</code> command, described below).</p>
-<dt><code>disable { . | all | &lt;rule&gt; | &lt;group&gt; }</code></p>
-<dd> Disables the specified rule or group of rules. If the rule was previously enabled, it will be removed from the <code>pmie</code> configuration file generated by <code>pmieconf</code>, and hence no longer evaluated when <code>pmie</code> is restarted (using <code>pmieconf</code> does not affect any existing <code>pmie</code> processes using <i>file</i>).</p>
-<dt><code>list { . | all | global | &lt;rule&gt; | &lt;group&gt; } [&lt;variable&gt;]</code></p>
-<dd> Display the values for a specific rule variable; or for all variables of a rule, a rule group, all rules, or the global variables.</p>
-<dt><code>modify { . | all | global | &lt;rule&gt; | &lt;group&gt; } &lt;variable&gt; &lt;value&gt;</code></p>
-<dd> Enable, disable, or otherwise change the value for one or more rule variables. This value must be consistent with the type of the variable, which can be inferred from the format of the printed value &#8211; e.g. strings will be enclosed in double-quotes, percentages have the &#8220;%&#8221; symbol appended, etc. Note that certain rule variables cannot be modified through <code>pmieconf</code> &#8211; &quot;predicate&quot; and &quot;help&quot;, for example.</p>
-<dt><code>undo { . | all | global | &lt;rule&gt; | &lt;group&gt; } [&lt;variable&gt;]</code></p>
-<dd> Applicable only to a variable whose value has been modified &#8211; this <i>command</i> simply reverts to the default value for the given variable.</p>
-<dt><code>quit</code></p>
-<dd> Save any changes made to <i>file</i> and then exit <code>pmieconf</code>.</p>
-<dt><code>abort</code></p>
-<dd> Exit <code>pmieconf</code> immediately without saving any changes to <i>file</i>.</dl>
+<dt><code>help [ { . | all | global | &lt;rule&gt; | &lt;group&gt; } [&lt;variable&gt;] ]</code></dt>
+<dd> Without arguments, the <code>help</code> command displays the syntax for all of the available <code>pmieconf</code> commands. With one argument, a description of one or more of the generalized rules is displayed. With two arguments, a description of a specific variable relating to one or more of the generalized rules is displayed.</dd>
+<dt><code>rules [ enabled | disabled ]</code></dt>
+<dd> Display the name and short summary for all of the generalized rules found on <i>rulepath</i>. Each of the rule names can be used in place of the keyword <code>&lt;rule&gt;</code> in this command syntax description. The <code>enabled</code> and <code>disabled</code> options can be used to filter the set of rules displayed to just those which are enabled or disabled respectfully.</dd>
+<dt><code>groups</code></dt>
+<dd> Display the name of all of the rule groups that were found on <i>rulepath</i>. Each of the group names can be used in place of the keyword <code>&lt;group&gt;</code> in this command syntax description, which applies the command to all rules within the rule group.</dd>
+<dt><code>status</code></dt>
+<dd> Display status information relating to the current <code>pmieconf</code> session, including a list of running <code>pmie</code> processes which are currently using <i>file</i>.</dd>
+<dt><code>enable { . | all | &lt;rule&gt; | &lt;group&gt; }</code></dt>
+<dd> Enables the specified rule or group of rules. An enabled rule is one which will be included in the <code>pmie</code> configuration file generated by <code>pmieconf</code>. Any enabled &quot;actions&quot; will be appended to the rule&#8217;s &quot;predicate&quot;, in a manner conforming to the <code>pmie</code> syntax (&quot;actions&quot; can be viewed using the <code>list global</code> command, described below).</dd>
+<dt><code>disable { . | all | &lt;rule&gt; | &lt;group&gt; }</code></dt>
+<dd> Disables the specified rule or group of rules. If the rule was previously enabled, it will be removed from the <code>pmie</code> configuration file generated by <code>pmieconf</code>, and hence no longer evaluated when <code>pmie</code> is restarted (using <code>pmieconf</code> does not affect any existing <code>pmie</code> processes using <i>file</i>).</dd>
+<dt><code>list { . | all | global | &lt;rule&gt; | &lt;group&gt; } [&lt;variable&gt;]</code></dt>
+<dd> Display the values for a specific rule variable; or for all variables of a rule, a rule group, all rules, or the global variables.</dd>
+<dt><code>modify { . | all | global | &lt;rule&gt; | &lt;group&gt; } &lt;variable&gt; &lt;value&gt;</code></dt>
+<dd> Enable, disable, or otherwise change the value for one or more rule variables. This value must be consistent with the type of the variable, which can be inferred from the format of the printed value &#8211; e.g. strings will be enclosed in double-quotes, percentages have the &#8220;%&#8221; symbol appended, etc. Note that certain rule variables cannot be modified through <code>pmieconf</code> &#8211; &quot;predicate&quot; and &quot;help&quot;, for example.</dd>
+<dt><code>undo { . | all | global | &lt;rule&gt; | &lt;group&gt; } [&lt;variable&gt;]</code></dt>
+<dd> Applicable only to a variable whose value has been modified &#8211; this <i>command</i> simply reverts to the default value for the given variable.</dd>
+<dt><code>quit</code></dt>
+<dd> Save any changes made to <i>file</i> and then exit <code>pmieconf</code>.</dd>
+<dt><code>abort</code></dt>
+<dd> Exit <code>pmieconf</code> immediately without saving any changes to <i>file</i>.</dd></dl>
 <p> Each of the commands above can be shortened by simply using the first character of the command name, and also &#8220;?&#8221; for help. </p>
 <p> Use of the <code>all</code> keyword causes the command to be applied to all of the rules. The <code>global</code> keyword refers to those variables which are applied to every rule. Such variables can be changed either globally or locally, for example: </p>
 <pre>
@@ -98,12 +98,12 @@ pmieconf &gt; l cpu.syscall predicate
 <p> The environment variable <code>PMIECONF_PATH</code> has a similar function to the <code>-r</code> option described above, and if set will be used provided no <code>-r</code> option is presented.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>$PCP_VAR_DIR/config/pmieconf/</i>*/*</p>
-<dd> generalized system resource monitoring rules</p>
-<dt><i>$PCP_VAR_DIR/config/pmieconf/config.pmie</i></p>
-<dd> default super-user settings for system resource monitoring rules</p>
-<dt><i>$HOME/.pcp/pmie/config.pmie</i></p>
-<dd> default user settings for system resource monitoring rules</dl>
+<dt><i>$PCP_VAR_DIR/config/pmieconf/</i>*/*</dt>
+<dd> generalized system resource monitoring rules</dd>
+<dt><i>$PCP_VAR_DIR/config/pmieconf/config.pmie</i></dt>
+<dd> default super-user settings for system resource monitoring rules</dd>
+<dt><i>$HOME/.pcp/pmie/config.pmie</i></dt>
+<dd> default user settings for system resource monitoring rules</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

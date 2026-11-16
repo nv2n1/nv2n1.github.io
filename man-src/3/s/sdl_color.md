@@ -17,14 +17,14 @@ description: "SDL_Color – Format independent color description"
 } SDL_Color;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>r</code></p>
-<dd>Red intensity</p>
-<dt><code>g</code></p>
-<dd>Green intensity</p>
-<dt><code>b</code></p>
-<dd>Blue intensity</p>
-<dt><code>unused</code></p>
-<dd>Unused</dl>
+<dt><code>r</code></dt>
+<dd>Red intensity</dd>
+<dt><code>g</code></dt>
+<dd>Green intensity</dd>
+<dt><code>b</code></dt>
+<dd>Blue intensity</dd>
+<dt><code>unused</code></dt>
+<dd>Unused</dd></dl>
 <h2>Description</h2>
 <p><code>SDL_Color</code> describes a color in a format independent way. You can convert a <code>SDL_Color</code> to a pixel value for a certain pixel format using <i></i><code>SDL_MapRGB</code>.</p>
 <h2>See Also</h2>

@@ -38,32 +38,32 @@ description: "cdeftutorial – Alex van den Bogaerdt’s CDEF tutorial"
 <p> <font SIZE="-1">RPN</font> is short-hand for Reverse Polish Notation. It works as follows. You put the variables or numbers on a stack. You also put operations (things-to-do) on the stack and this stack is then processed. The result will be placed on the stack. At the end, there should be exactly one number left: the outcome of the series of operations. If there is not exactly one number left, RRDtool will complain loudly. </p>
 <p> Above multiplication by eight will look like:</p>
 <dl>
-<dt>1.</p>
-<dd> Start with an empty stack</p>
-<dt>2.</p>
-<dd> Put the content of variable inbytes on the stack</p>
-<dt>3.</p>
-<dd> Put the number eight on the stack</p>
-<dt>4.</p>
-<dd> Put the operation multiply on the stack</p>
-<dt>5.</p>
-<dd> Process the stack</p>
-<dt>6.</p>
-<dd> Retrieve the value from the stack and put it in variable inbits</dl>
+<dt>1.</dt>
+<dd> Start with an empty stack</dd>
+<dt>2.</dt>
+<dd> Put the content of variable inbytes on the stack</dd>
+<dt>3.</dt>
+<dd> Put the number eight on the stack</dd>
+<dt>4.</dt>
+<dd> Put the operation multiply on the stack</dd>
+<dt>5.</dt>
+<dd> Process the stack</dd>
+<dt>6.</dt>
+<dd> Retrieve the value from the stack and put it in variable inbits</dd></dl>
 <p> We will now do an example with real numbers. Suppose the variable inbytes would have value 10, the stack would be:</p>
 <dl>
-<dt>1.</p>
-<dd> ||</p>
-<dt>2.</p>
-<dd> |10|</p>
-<dt>3.</p>
-<dd> |10|8|</p>
-<dt>4.</p>
-<dd> |10|8|*|</p>
-<dt>5.</p>
-<dd> |80|</p>
-<dt>6.</p>
-<dd> ||</dl>
+<dt>1.</dt>
+<dd> ||</dd>
+<dt>2.</dt>
+<dd> |10|</dd>
+<dt>3.</dt>
+<dd> |10|8|</dd>
+<dt>4.</dt>
+<dd> |10|8|*|</dd>
+<dt>5.</dt>
+<dd> |80|</dd>
+<dt>6.</dt>
+<dd> ||</dd></dl>
 <p> Processing the stack (step 5) will retrieve one value from the stack (from the right at step 4). This is the operation multiply and this takes two values off the stack as input. The result is put back on the stack (the value 80 in this case). For multiplication the order doesn&#8217;t matter, but for other operations like subtraction and division it does. Generally speaking you have the following order: </p>
 <pre>
    y = A - B  --&gt;  y=minus(A,B)  --&gt;  CDEF:y=A,B,-
@@ -137,10 +137,10 @@ router1.rrd : link1in
 <h3>The unknown value</h3>
 <p> Sometimes collecting your data will fail. This can be very common, especially when querying over busy links. RRDtool can be configured to allow for one (or even more) unknown value(s) and calculate the missing update. You can, for instance, query your device every minute. This is creating one so called <font SIZE="-1">PDP</font> or primary data point per minute. If you defined your <font SIZE="-1">RRD</font> to contain an <font SIZE="-1">RRA</font> that stores 5-minute values, you need five of those PDPs to create one <font SIZE="-1">CDP</font> (consolidated data point). These PDPs can become unknown in two cases:</p>
 <dl>
-<dt>1.</p>
-<dd> The updates are too far apart. This is tuned using the &#8220;heartbeat&#8221; setting.</p>
-<dt>2.</p>
-<dd> The update was set to unknown on purpose by inserting no value (using the template option) or by using &#8220;U&#8221; as the value to insert.</dl>
+<dt>1.</dt>
+<dd> The updates are too far apart. This is tuned using the &#8220;heartbeat&#8221; setting.</dd>
+<dt>2.</dt>
+<dd> The update was set to unknown on purpose by inserting no value (using the template option) or by using &#8220;U&#8221; as the value to insert.</dd></dl>
 <p> When a <font SIZE="-1">CDP</font> is calculated, another mechanism determines if this <font SIZE="-1">CDP</font> is valid or not. If there are too many PDPs unknown, the <font SIZE="-1">CDP</font> is unknown as well. This is determined by the xff factor. Please note that one unknown counter update can result in two unknown PDPs! If you only allow for one unknown <font SIZE="-1">PDP</font> per <font SIZE="-1">CDP</font>, this makes the <font SIZE="-1">CDP</font> go unknown! </p>
 <p> Suppose the counter increments with one per second and you retrieve it every minute: </p>
 <p>counter value resulting rate 10&#8217;000 10&#8217;060 1;<br />
@@ -167,10 +167,10 @@ you don&#8217;t know the previous value 10&#8217;300 1;<br />
 <p> You are keeping statistics on your router for over a year now. Recently you installed an extra router and you would like to show the combined throughput for these two devices. </p>
 <p> If you just add up the counters from router.rrd and router2.rrd, you will add known data (from router.rrd) to unknown data (from router2.rrd) for the bigger part of your stats. You could solve this in a few ways:</p>
 <dl>
-<dt>&bull;</p>
-<dd> While creating the new database, fill it with zeros from the start to now. You have to make the database start at or before the least recent time in the other database.</p>
-<dt>&bull;</p>
-<dd> Alternatively, you could use <font SIZE="-1">CDEF</font> and alter unknown data to zero.</dl>
+<dt>&bull;</dt>
+<dd> While creating the new database, fill it with zeros from the start to now. You have to make the database start at or before the least recent time in the other database.</dd>
+<dt>&bull;</dt>
+<dd> Alternatively, you could use <font SIZE="-1">CDEF</font> and alter unknown data to zero.</dd></dl>
 <p> Both methods have their pros and cons. The first method is troublesome and if you want to do that you have to figure it out yourself. It is not possible to create a database filled with zeros, you have to put them in manually. Implementing the second method is described next: </p>
 <p> What we want is: &#8220;if the value is unknown, replace it with zero&#8221;. This could be written in pseudo-code as: if (value is unknown) then (zero) else (value). When reading the rrdgraph manual you notice the &#8220;<font SIZE="-1">UN</font>&#8221; function that returns zero or one. You also notice the &#8220;<font SIZE="-1">IF</font>&#8221; function that takes zero or one as input. </p>
 <p> First look at the &#8220;<font SIZE="-1">IF</font>&#8221; function. It takes three values from the stack, the first value is the decision point, the second value is returned to the stack if the evaluation is &#8220;true&#8221; and if not, the third value is returned to the stack. We want the &#8220;<font SIZE="-1">UN</font>&#8221; function to decide what happens so we combine those two functions in one <font SIZE="-1">CDEF</font>. </p>
@@ -198,12 +198,12 @@ true return a if false return b</p>
 <h3>Example: better handling of unknown data, by using time</h3>
 <p> The above example has one drawback. If you do log unknown data in your database after installing your new equipment, it will also be translated into zero and therefore you won&#8217;t see that there was a problem. This is not good and what you really want to do is:</p>
 <dl>
-<dt>&bull;</p>
-<dd> If there is unknown data, look at the time that this sample was taken.</p>
-<dt>&bull;</p>
-<dd> If the unknown value is before time xxx, make it zero.</p>
-<dt>&bull;</p>
-<dd> If it is after time xxx, leave it as unknown data.</dl>
+<dt>&bull;</dt>
+<dd> If there is unknown data, look at the time that this sample was taken.</dd>
+<dt>&bull;</dt>
+<dd> If the unknown value is before time xxx, make it zero.</dd>
+<dt>&bull;</dt>
+<dd> If it is after time xxx, leave it as unknown data.</dd></dl>
 <p> This is doable: you can compare the time that the sample was taken to some known time. Assuming you started to monitor your device on Friday September 17, 1999, 00:35:57 <font SIZE="-1">MET</font> <font SIZE="-1">DST</font>. Translate this time in seconds since 1970-01-01 and it becomes 937&#8217;521&#8217;357. If you process unknown values that were received after this time, you want to leave them unknown and if they were &#8220;received&#8221; before this time, you want to translate them into zero (so you can effectively ignore them while adding them to your other routers counters). </p>
 <p> Translating Friday September 17, 1999, 00:35:57 <font SIZE="-1">MET</font> <font SIZE="-1">DST</font> into 937&#8217;521&#8217;357 can be done by, for instance, using gnu date: </p>
 <pre>
@@ -212,12 +212,12 @@ true return a if false return b</p>
 <p> You could also dump the database and see where the data starts to be known. There are several other ways of doing this, just pick one. </p>
 <p> Now we have to create the magic that allows us to process unknown values different depending on the time that the sample was taken. This is a three step process:</p>
 <dl>
-<dt>1.</p>
-<dd> If the timestamp of the value is after 937&#8217;521&#8217;357, leave it as is.</p>
-<dt>2.</p>
-<dd> If the value is a known value, leave it as is.</p>
-<dt>3.</p>
-<dd> Change the unknown value into zero.</dl>
+<dt>1.</dt>
+<dd> If the timestamp of the value is after 937&#8217;521&#8217;357, leave it as is.</dd>
+<dt>2.</dt>
+<dd> If the value is a known value, leave it as is.</dd>
+<dt>3.</dt>
+<dd> Change the unknown value into zero.</dd></dl>
 <p> Lets look at part one: </p>
 <pre>
     if (true) return the original value
@@ -239,10 +239,10 @@ then a else b<br />
 <p> Suppose you have a problem that shows up as huge spikes in your graph. You know this happens and why, so you decide to work around the problem. Perhaps you&#8217;re using your network to do a backup at night and by doing so you get almost 10mb/s while the rest of your network activity does not produce numbers higher than 100kb/s. </p>
 <p> There are two options:</p>
 <dl>
-<dt>1.</p>
-<dd> If the number exceeds 100kb/s it is wrong and you want it masked out by changing it into unknown.</p>
-<dt>2.</p>
-<dd> You don&#8217;t want the graph to show more than 100kb/s.</dl>
+<dt>1.</dt>
+<dd> If the number exceeds 100kb/s it is wrong and you want it masked out by changing it into unknown.</dd>
+<dt>2.</dt>
+<dd> You don&#8217;t want the graph to show more than 100kb/s.</dd></dl>
 <p> Pseudo code: if (number &gt; 100) then unknown else number or Pseudo code: if (number &gt; 100) then 100 else number. </p>
 <p> The second &#8220;problem&#8221; may also be solved by using the rigid option of RRDtool graph, however this has not the same result. In this example you can end up with a graph that does autoscaling. Also, if you use the numbers to display maxima they will be set to 100kb/s. </p>
 <p> We use &#8220;<font SIZE="-1">IF</font>&#8221; and &#8220;<font SIZE="-1">GT</font>&#8221; again. &#8220;if (x) then (y) else (z)&#8221; is written down as &#8220;CDEF:result=x,y,z,IF&#8221;; now fill in x, y and z. For x you fill in &#8220;number greater than 100kb/s&#8221; becoming &#8220;number,100000,GT&#8221; (kilo is 1&#8217;000 and b/s is what we measure!). The &#8220;z&#8221; part is &#8220;number&#8221; in both cases and the &#8220;y&#8221; part is either &#8220;<font SIZE="-1">UNKN</font>&#8221; for unknown or &#8220;100000&#8221; for 100kb/s. </p>
@@ -312,10 +312,10 @@ then a else b<br />
 <p> If there is unknown data in one of users1..users4, the &#8220;wrongdata&#8221; <font SIZE="-1">AREA</font> will be drawn and because it starts at the X-axis and has infinite height it will effectively overwrite the STACKed parts. </p>
 <p> You could combine the two <font SIZE="-1">CDEF</font> lines into one (we don&#8217;t use &#8220;allusers&#8221;) if you like. But there are good reasons for writing two <font SIZE="-1">CDEFS:</font></p>
 <dl>
-<dt>&bull;</p>
-<dd> It improves the readability of the script.</p>
-<dt>&bull;</p>
-<dd> It can be used inside <font SIZE="-1">GPRINT</font> to display the total number of users.</dl>
+<dt>&bull;</dt>
+<dd> It improves the readability of the script.</dd>
+<dt>&bull;</dt>
+<dd> It can be used inside <font SIZE="-1">GPRINT</font> to display the total number of users.</dd></dl>
 <p> If you choose to combine them, you can substitute the &#8220;allusers&#8221; in the second <font SIZE="-1">CDEF</font> with the part after the equal sign from the first line: </p>
 <pre>
    CDEF:wrongdata=users1,users2,users3,users4,+,+,+,UN,INF,UNKN,IF
@@ -338,3 +338,4 @@ then a else b<br />
       CDEF:far=9,5,/,cel,*,32,+ \
       LINE2:cel#00a000:&quot;D. Celsius&quot; \
       LINE2:far#ff0000:&quot;D. Fahrenheit
+</pre>

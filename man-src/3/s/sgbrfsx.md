@@ -39,10 +39,7 @@ url: "/docs/linux/man/3-sgbrfsx/"
  <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre><code>
     SGBRFSX improves the computed solution to a system of linear
     equations and provides error bounds and backward error estimates
@@ -55,10 +52,7 @@ url: "/docs/linux/man/3-sgbrfsx/"
     and C below. In this case, the solution and error bounds returned
     are for the original unequilibrated system.
 </code></pre> 
-
- 
 &nbsp;<wbr> 
-
  <pre>
      Some optional parameters are bundled in the PARAMS array.  These
      settings determine how refinement is performed, but often the
@@ -66,15 +60,13 @@ url: "/docs/linux/man/3-sgbrfsx/"
      can pass NPARAMS = 0 which prevents the source code from accessing
      the PARAMS argument.
 </pre> 
-
-</dl>
+</dd></dl>
  
 
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>TRANS</i> 
-
+</dt><dd> <i>TRANS</i> 
  <pre>
           TRANS is CHARACTER*1
      Specifies the form of the system of equations:
@@ -82,10 +74,7 @@ url: "/docs/linux/man/3-sgbrfsx/"
        = 'T':  A**T * X = B  (Transpose)
        = 'C':  A**H * X = B  (Conjugate transpose = Transpose)
 </pre> 
-
- 
  <i>EQUED</i> 
-
  <pre>
           EQUED is CHARACTER*1
      Specifies the form of equilibration that was done to A
@@ -100,43 +89,28 @@ url: "/docs/linux/man/3-sgbrfsx/"
                replaced by diag(R) * A * diag(C).
                The right hand side B has been changed accordingly.
 </pre> 
-
- 
  <i>N</i> 
-
  <pre>
           N is INTEGER
      The order of the matrix A.  N &gt;= 0.
 </pre> 
-
- 
  <i>KL</i> 
-
  <pre>
           KL is INTEGER
      The number of subdiagonals within the band of A.  KL &gt;= 0.
 </pre> 
-
- 
  <i>KU</i> 
-
  <pre>
           KU is INTEGER
      The number of superdiagonals within the band of A.  KU &gt;= 0.
 </pre> 
-
- 
  <i>NRHS</i> 
-
  <pre>
           NRHS is INTEGER
      The number of right hand sides, i.e., the number of columns
      of the matrices B and X.  NRHS &gt;= 0.
 </pre> 
-
- 
  <i>AB</i> 
-
  <pre>
           AB is DOUBLE PRECISION array, dimension (LDAB,N)
      The original band matrix A, stored in rows 1 to KL+KU+1.
@@ -144,18 +118,12 @@ url: "/docs/linux/man/3-sgbrfsx/"
      array AB as follows:
      AB(ku+1+i-j,j) = A(i,j) for max(1,j-ku)&lt;=i&lt;=min(n,j+kl).
 </pre> 
-
- 
  <i>LDAB</i> 
-
  <pre>
           LDAB is INTEGER
      The leading dimension of the array AB.  LDAB &gt;= KL+KU+1.
 </pre> 
-
- 
  <i>AFB</i> 
-
  <pre>
           AFB is DOUBLE PRECISION array, dimension (LDAFB,N)
      Details of the LU factorization of the band matrix A, as
@@ -164,31 +132,19 @@ url: "/docs/linux/man/3-sgbrfsx/"
      the multipliers used during the factorization are stored in
      rows KL+KU+2 to 2*KL+KU+1.
 </pre> 
-
- 
  <i>LDAFB</i> 
-
  <pre>
           LDAFB is INTEGER
      The leading dimension of the array AFB.  LDAFB &gt;= 2*KL*KU+1.
 </pre> 
-
- 
  <i>IPIV</i> 
-
- 
 IPIV is INTEGER array, dimension(N)
                            The pivot indices from SGETRF; for
 1 &lt;= i &lt;= N, row i of the
                  matrix was interchanged with row
                  IPIV(i)
                      .
- 
-
- 
  <i>R</i> 
-
- 
           R is REAL array, dimension (N)
      The row scale factors for A.  If EQUED = 'R' or 'B', A is
      multiplied on the left by diag(R);
@@ -196,12 +152,7 @@ IPIV is INTEGER array, dimension(N)
               = 'N' or 'C', R
                                 is not accessed.R is an input argument if FACT = 'F';
           otherwise, R is an output argument.If FACT = 'F' and EQUED = 'R' or 'B', each element of R must be positive.If R is output, each element of R is a power of the radix.If R is input, each element of R should be a power of the radix to ensure a reliable solution and error estimates.Scaling by powers of the radix does not cause rounding errors unless the result underflows or overflows.Rounding errors during scaling lead to refining with a matrix that is not equivalent to the input matrix, producing error estimates that may not be reliable.
- 
-
- 
  <i>C</i> 
-
- 
           C is REAL array, dimension (N)
      The column scale factors for A.  If EQUED = 'C' or 'B', A is
      multiplied on the right by diag(C);
@@ -209,44 +160,28 @@ IPIV is INTEGER array, dimension(N)
               = 'N' or 'R', C
                                 is not accessed.C is an input argument if FACT = 'F';
           otherwise, C is an output argument.If FACT = 'F' and EQUED = 'C' or 'B', each element of C must be positive.If C is output, each element of C is a power of the radix.If C is input, each element of C should be a power of the radix to ensure a reliable solution and error estimates.Scaling by powers of the radix does not cause rounding errors unless the result underflows or overflows.Rounding errors during scaling lead to refining with a matrix that is not equivalent to the input matrix, producing error estimates that may not be reliable.
- 
-
- 
  <i>B</i> 
-
  <pre>
           B is REAL array, dimension (LDB,NRHS)
      The right hand side matrix B.
 </pre> 
-
- 
  <i>LDB</i> 
-
  <pre>
           LDB is INTEGER
      The leading dimension of the array B.  LDB &gt;= max(1,N).
 </pre> 
-
- 
  <i>X</i> 
-
  <pre>
           X is REAL array, dimension (LDX,NRHS)
      On entry, the solution matrix X, as computed by SGETRS.
      On exit, the improved solution matrix X.
 </pre> 
-
- 
  <i>LDX</i> 
-
  <pre>
           LDX is INTEGER
      The leading dimension of the array X.  LDX &gt;= max(1,N).
 </pre> 
-
- 
  <i>RCOND</i> 
-
  <pre>
           RCOND is REAL
      Reciprocal scaled condition number.  This is an estimate of the
@@ -257,10 +192,7 @@ IPIV is INTEGER array, dimension(N)
      if this number is very small and the matrix appears ill-
      conditioned.
 </pre> 
-
- 
  <i>BERR</i> 
-
  <pre>
           BERR is REAL array, dimension (NRHS)
      Componentwise relative backward error.  This is the
@@ -268,21 +200,14 @@ IPIV is INTEGER array, dimension(N)
      (i.e., the smallest relative change in any element of A or B that
      makes X(j) an exact solution).
 </pre> 
-
- 
  <i>N_ERR_BNDS</i> 
-
  <pre>
           N_ERR_BNDS is INTEGER
      Number of error bounds to return for each right hand side
      and each type (normwise or componentwise).  See ERR_BNDS_NORM and
      ERR_BNDS_COMP below.
 </pre> 
-
- 
  <i>ERR_BNDS_NORM</i> 
-
- 
 ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right - hand side, this array contains information about various error bounds and condition numbers corresponding to the normwise relative error, which is defined as follows : Normwise relative error in the ith solution vector : max_j(abs(XTRUE(j, i) - X(j, i)))-- -- -- -- -- -- -- -- -- -- -- -- -- -- --max_j abs(X(j, i)) The array is indexed by the type of error information as described below.There currently are up to three pieces of information returned.The first index in ERR_BNDS_NORM(i,
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 :) corresponds to the ith right
                                                                                                                                                                                                                         - hand side.The second index in ERR_BNDS_NORM(
@@ -306,12 +231,7 @@ ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right - hand s
               radix so all absolute row sums of Z are approximately 1.
      See Lapack Working Note 165 for further details and extra
      cautions.
- 
-
- 
  <i>ERR_BNDS_COMP</i> 
-
- 
           ERR_BNDS_COMP is REAL array, dimension (NRHS, N_ERR_BNDS)
      For each right-hand side, this array contains information about
      various error bounds and condition numbers corresponding to the
@@ -353,20 +273,13 @@ ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right - hand s
               sums of Z are approximately 1.
      See Lapack Working Note 165 for further details and extra
      cautions.
- 
-
- 
  <i>NPARAMS</i> 
-
  <pre>
           NPARAMS is INTEGER
      Specifies the number of parameters set in PARAMS.  If .LE. 0, the
      PARAMS array is never referenced and default values are used.
 </pre> 
-
- 
  <i>PARAMS</i> 
-
  <pre><code>
           PARAMS is REAL array, dimension NPARAMS
      Specifies algorithm parameters.  If an entry is .LT. 0.0, then
@@ -398,24 +311,15 @@ ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right - hand s
             is true, 0.0 is false.
          Default: 1.0 (attempt componentwise convergence)
 </code></pre> 
-
- 
  <i>WORK</i> 
-
  <pre>
           WORK is REAL array, dimension (4*N)
 </pre> 
-
- 
  <i>IWORK</i> 
-
  <pre>
           IWORK is INTEGER array, dimension (N)
 </pre> 
-
- 
  <i>INFO</i> 
-
  <pre>
           INFO is INTEGER
        = 0:  Successful exit. The solution to every right-hand side is
@@ -441,27 +345,22 @@ ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right - hand s
          about all of the right-hand sides check ERR_BNDS_NORM or
          ERR_BNDS_COMP.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
  
 
  

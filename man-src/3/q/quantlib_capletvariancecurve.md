@@ -30,6 +30,6 @@ description: "QuantLib::CapletVarianceCurve –"
 <h2>Detailed Description</h2>
 <p><code>Deprecated</code></p>
 <dl COMPACT>
-<dd>use the <code>StrippedOptionletAdapter</code> of a <code>StrippedOptionlet</code> instance</dl>
+<dd>use the <code>StrippedOptionletAdapter</code> of a <code>StrippedOptionlet</code> instance</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

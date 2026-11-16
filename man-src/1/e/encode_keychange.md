@@ -17,34 +17,34 @@ description: "encode_keychange – produce the KeyChange string for SNMPv3"
 <p> Passphrases are obtained by examining a number of sources until success (in order listed):</p>
 <dl>
 <dt>
-<dd> command line options (see <code>-N</code> and <code>-O</code> options below);</p>
+</dt><dd> command line options (see <code>-N</code> and <code>-O</code> options below);</dd>
 <dt>
-<dd> the file <code>$HOME/.snmp/passphrase.ek</code> which should only contain two lines with old and new passphrase;</p>
+</dt><dd> the file <code>$HOME/.snmp/passphrase.ek</code> which should only contain two lines with old and new passphrase;</dd>
 <dt>
-<dd> standard input <code>-or-</code> user input from the terminal.</dl>
+</dt><dd> standard input <code>-or-</code> user input from the terminal.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-E</code> [0x]&lt;<i>engineID</i>&gt; EngineID used for Kul generation.</p>
-<dd> &lt;<i>engineID</i>&gt; is intepreted as a hex string when preceded by 0x, otherwise it is treated as a text string. If no &lt;<i>engineID</i>&gt; is specified, it is constructed from the first IP address for the local host.</p>
-<dt><code>-f</code></p>
-<dd> Force passphrases to be read from standard input.</p>
-<dt><code>-h</code></p>
-<dd> Display the help message.</p>
-<dt><code>-N</code> &quot;&lt;<i>new_passphrase</i>&gt;&quot;</p>
-<dd> Passphrase used to generate the new Ku.</p>
-<dt><code>-O</code> &quot;&lt;<i>old_passphrase</i>&gt;&quot;</p>
-<dd> Passphrase used to generate the old Ku.</p>
-<dt><code>-P</code></p>
-<dd> Turn off the prompt for passphrases when getting data from standard input.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose.</p>
-<dt><code>-V</code></p>
-<dd> Echo passphrases to terminal.</dl>
+<dt><code>-E</code> [0x]&lt;<i>engineID</i>&gt; EngineID used for Kul generation.</dt>
+<dd> &lt;<i>engineID</i>&gt; is intepreted as a hex string when preceded by 0x, otherwise it is treated as a text string. If no &lt;<i>engineID</i>&gt; is specified, it is constructed from the first IP address for the local host.</dd>
+<dt><code>-f</code></dt>
+<dd> Force passphrases to be read from standard input.</dd>
+<dt><code>-h</code></dt>
+<dd> Display the help message.</dd>
+<dt><code>-N</code> &quot;&lt;<i>new_passphrase</i>&gt;&quot;</dt>
+<dd> Passphrase used to generate the new Ku.</dd>
+<dt><code>-O</code> &quot;&lt;<i>old_passphrase</i>&gt;&quot;</dt>
+<dd> Passphrase used to generate the old Ku.</dd>
+<dt><code>-P</code></dt>
+<dd> Turn off the prompt for passphrases when getting data from standard input.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>-V</code></dt>
+<dd> Echo passphrases to terminal.</dd></dl>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> The localized key method is defined in RFC 2274, Sections 2.6 and A.2, and originally documented in</p>
 <dl>
 <dt>
-<dd> U. Blumenthal, N. C. Hien, B. Wijnen, &quot;Key Derivation for Network Management Applications&quot;, IEEE Network Magazine, April/May issue, 1997. </p>
+</dt><dd> U. Blumenthal, N. C. Hien, B. Wijnen, &quot;Key Derivation for Network Management Applications&quot;, IEEE Network Magazine, April/May issue, 1997. </dd>
 </dl>
 <h2>Index</h2>

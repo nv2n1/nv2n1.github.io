@@ -16,81 +16,81 @@ description: "xawtv – a X11 program for watching TV"
 <h2>OPTIONS</h2>
 <p> All command line options also have a Resource, so you can put them into your .Xdefaults file too.</p>
 <dl>
-<dt><code>-h</code>, <code>-help</code></p>
-<dd> Print a short description of all command line options.</p>
-<dt><code>-hwscan</code></p>
-<dd> Print a list of available devices.</p>
-<dt><code>-f</code>, <code>-fullscreen</code></p>
+<dt><code>-h</code>, <code>-help</code></dt>
+<dd> Print a short description of all command line options.</dd>
+<dt><code>-hwscan</code></dt>
+<dd> Print a list of available devices.</dd>
+<dt><code>-f</code>, <code>-fullscreen</code></dt>
 <dd> startup in fullscreen mode.<br />
- Resource: xawtv.fullscreen (bool).</p>
-<dt><code>-n</code>, <code>-noconf</code></p>
+ Resource: xawtv.fullscreen (bool).</dd>
+<dt><code>-n</code>, <code>-noconf</code></dt>
 <dd> don&#8217;t read the config file ($HOME/.xawtv).<br />
- Resource: xawtv.readconfig (bool).</p>
-<dt><code>-o</code>, <code>-outfile</code> base</p>
+ Resource: xawtv.readconfig (bool).</dd>
+<dt><code>-o</code>, <code>-outfile</code> base</dt>
 <dd> set basestring for the snapshot output files. The filename will be &quot;base-timestamp-nr.ext&quot;.<br />
- Resource: xawtv.basename (string).</p>
-<dt><code>-c</code>, <code>-device</code> device</p>
+ Resource: xawtv.basename (string).</dd>
+<dt><code>-c</code>, <code>-device</code> device</dt>
 <dd> set video4linux device (default is /dev/video0). This option also disables Xvideo support.<br />
- Resource: xawtv.device (string).</p>
-<dt><code>-D</code>, <code>-driver</code> name</p>
+ Resource: xawtv.device (string).</dd>
+<dt><code>-D</code>, <code>-driver</code> name</dt>
 <dd> set video4linux driver (default is &quot;libv4l&quot;). This option also disables Xvideo support.<br />
- Resource: xawtv.driver (string).</p>
-<dt><code>-C</code>, <code>-dspdev</code> device</p>
+ Resource: xawtv.driver (string).</dd>
+<dt><code>-C</code>, <code>-dspdev</code> device</dt>
 <dd> set audio device (default is /dev/dsp).<br />
- Resource: xawtv.dspdev (string).</p>
-<dt><code>-vbidev</code> device</p>
+ Resource: xawtv.dspdev (string).</dd>
+<dt><code>-vbidev</code> device</dt>
 <dd> set vbi device (default is /dev/vbi0).<br />
- Resource: xawtv.vbidev (string).</p>
-<dt><code>-c</code>, <code>-xvport</code> number</p>
+ Resource: xawtv.vbidev (string).</dd>
+<dt><code>-c</code>, <code>-xvport</code> number</dt>
 <dd> set Xvideo port (defaults to the first usable if Xvideo is available). This option also enables Xvideo support.<br />
- Resource: xawtv.xvport (int).</p>
-<dt><code>-joydev</code> device</p>
+ Resource: xawtv.xvport (int).</dd>
+<dt><code>-joydev</code> device</dt>
 <dd> joystick device to use for controlling xawtv.<br />
- Resource: xawtv.joydev (string).</p>
-<dt><code>-v</code>, <code>-debug</code> level</p>
+ Resource: xawtv.joydev (string).</dd>
+<dt><code>-v</code>, <code>-debug</code> level</dt>
 <dd> Be verbose, <code>level</code> may be 0 (default), 1 or 2. It exists just for debugging and trouble-shooting.<br />
- Resource: xawtv.debug (int).</p>
-<dt><code>-remote</code></p>
+ Resource: xawtv.debug (int).</dd>
+<dt><code>-remote</code></dt>
 <dd> X11 display is remote. This basically disables overlay mode, you might need this if xawtv fails to autodetect a remote X11 display.<br />
- Resource: xawtv.remote (bool).</p>
-<dt><code>-b</code>, <code>-bpp</code> n</p>
+ Resource: xawtv.remote (bool).</dd>
+<dt><code>-b</code>, <code>-bpp</code> n</dt>
 <dd> force xawtv into <code>n</code> bpp color depth. Works for switching between 15/16 and 24/32 bpp. This gets just passed through to <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8).<br />
- Resource: xawtv.bpp (int).</p>
-<dt><code>-shift</code> n</p>
+ Resource: xawtv.bpp (int).</dd>
+<dt><code>-shift</code> n</dt>
 <dd> Shift the video display by <code>n</code> bytes. Try this if your video display isn&#8217;t within the xawtv window, some older matrox cards show this problem. This gets passed through to <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8) too.<br />
- Resource: xawtv.shift (int).</p>
-<dt><code>-fb</code></p>
+ Resource: xawtv.shift (int).</dd>
+<dt><code>-fb</code></dt>
 <dd> Use the framebuffer device to determine the video framebuffer address (instead of the DGA extension). Yet another pass through argument.<br />
- Resource: xawtv.fbdev (bool).</p>
-<dt><code>-xv/-noxv </code></p>
+ Resource: xawtv.fbdev (bool).</dd>
+<dt><code>-xv/-noxv </code></dt>
 <dd> enable/disable the usage of the Xvideo extension altogether, i.e. -noxv has the same effect as both -noxv-video and -noxv-image switches (see below).<br />
- Resource: xawtv.xv (bool).</p>
-<dt><code>-xv-video/-noxv-video </code></p>
+ Resource: xawtv.xv (bool).</dd>
+<dt><code>-xv-video/-noxv-video </code></dt>
 <dd> enable/disable the usage of the Xvideo extension for video overlay (i.e. XvPutVideo). overlay mode uses this. default is on.<br />
- Resource: xawtv.xvVideo (bool).</p>
-<dt><code>-xv-image/-noxv-image </code></p>
+ Resource: xawtv.xvVideo (bool).</dd>
+<dt><code>-xv-image/-noxv-image </code></dt>
 <dd> enable/disable the usage of the Xvideo extension for image scaling (i.e. XvPutImage). grabdisplay mode uses this. default is on.<br />
- Resource: xawtv.xvImage (bool).</p>
-<dt><code>-vm/-novm</code></p>
+ Resource: xawtv.xvImage (bool).</dd>
+<dt><code>-vm/-novm</code></dt>
 <dd> enable/disable the usage of the VidMode extension, default is off. If there is a fullscreen video mode configured in the config file, the vidmode extension will be enabled automatically.<br />
- Resource: xawtv.vidmode (bool).</p>
-<dt><code>-dga/-nodga</code></p>
+ Resource: xawtv.vidmode (bool).</dd>
+<dt><code>-dga/-nodga</code></dt>
 <dd> enable/disable the usage of the DGA extension, default is on.<br />
- Resource: xawtv.dga (bool).</p>
-<dt><code>-parallel</code> n</p>
+ Resource: xawtv.dga (bool).</dd>
+<dt><code>-parallel</code> n</dt>
 <dd> use n compression threads (default: one).<br />
- Resource: xawtv.parallel (int).</dl>
+ Resource: xawtv.parallel (int).</dd></dl>
 <p> The usual toolkit options like <code>-geometry</code> are supported too.</p>
 <h2>SUPPORTED HARDWARE / INTERFACES</h2>
 <dl>
-<dt><code>v4l2</code></p>
-<dd> video4linux two &#8211; modern standard linux video capture API</p>
-<dt><code>libv4l</code></p>
-<dd> work through the libv4l library, which provides an additional thin layer on top of video4linux2 devices for support of more wide range of devices&#8217; pixel formats (often required for webcams etc.) It is default for Xawtv on Linux systems.</p>
-<dt><code>bktr</code></p>
-<dd> FreeBSD / OpenBSD driver for bt848/878 grabber cards.</p>
-<dt><code>Xvideo</code></p>
-<dd> X11 Extension for video devices. Note that the Xvideo extension does support overlay only, you can&#8217;t capture images/movies if the Xvideo extension is used. On the other hand this is the only way to scaled video overlay (i.e. fullscreen without black borders @ 1024&#215;748) if both hardware and xfree86 driver support it. See README.xfree4 for more details and hints on how to setup Xvideo.</dl>
+<dt><code>v4l2</code></dt>
+<dd> video4linux two &#8211; modern standard linux video capture API</dd>
+<dt><code>libv4l</code></dt>
+<dd> work through the libv4l library, which provides an additional thin layer on top of video4linux2 devices for support of more wide range of devices&#8217; pixel formats (often required for webcams etc.) It is default for Xawtv on Linux systems.</dd>
+<dt><code>bktr</code></dt>
+<dd> FreeBSD / OpenBSD driver for bt848/878 grabber cards.</dd>
+<dt><code>Xvideo</code></dt>
+<dd> X11 Extension for video devices. Note that the Xvideo extension does support overlay only, you can&#8217;t capture images/movies if the Xvideo extension is used. On the other hand this is the only way to scaled video overlay (i.e. fullscreen without black borders @ 1024&#215;748) if both hardware and xfree86 driver support it. See README.xfree4 for more details and hints on how to setup Xvideo.</dd></dl>
 <h2>GETTING STARTED</h2>
 <p> Just start xawtv. Then verify the settings in the options menu (right mouse button) and adjust the settings (TV norm, Video source, frequency table). With the cursor keys you can control the tuner and look for TV Stations. Other useful hotkeys are listed below. </p>
 <p> The hotkey &#8216;E&#8217; will show the channel editor where you can create/edit entries your TV stations. Don&#8217;t forget to click on &quot;save&quot; to write a config file. You can also create/edit a config file with any text editor, see <a href="/docs/linux/man/5-xawtvrc/">xawtvrc</a>(5) for a description of the config file syntax. There are a number of config options which can only be set by editing the config file. </p>

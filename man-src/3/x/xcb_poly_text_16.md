@@ -10,27 +10,25 @@ description: "xcb_poly_text_16 –"
 <p>xcb_poly_text_16 &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_poly_text_16(xcb_connection_t *conn, xcb_drawable_t drawable, xcb_gcontext_t gc, int16_t x, int16_t y, uint32_t items_len, const uint8_t *items);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>gc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>x</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>y</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>items_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>items</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>gc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>x</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>y</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>items_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>items</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

@@ -10,33 +10,19 @@ description: "std::experimental::ranges::lexicographical_compare – std::experi
 <p>std::experimental::ranges::lexicographical_compare &#8211; std::experimental::ranges::lexicographical_compare</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/ranges/algorithm&gt;
-
 template&lt; InputIterator I1, Sentinel&lt;I1&gt; S1, InputIterator I2, Sentinel&lt;I2&gt; S2,
-
 class Proj1 = ranges::identity, class Proj2 = ranges::identity,
-
 class Comp = ranges::less&lt;&gt; &gt;
-
 requires IndirectStrictWeakOrder&lt;Comp, projected&lt;I1, Proj1&gt;, projected&lt;I2, Proj2&gt;&gt; (1) (ranges TS)
-
 bool lexicographical_compare(I1 first1, S1 last1, I2 first2, S2 last2,
-
 Comp comp = Comp{},
-
 Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
-
 template&lt; InputRange R1, InputRange R2,
-
 class Proj1 = ranges::identity, class Proj2 = ranges::identity,
-
 class Comp = ranges::less&lt;&gt; &gt;
-
 requires IndirectStrictWeakOrder&lt;Comp, projected&lt;ranges::iterator_t&lt;R1&gt;, Proj1&gt;,   (2) (ranges TS)
-
 projected&lt;ranges::iterator_t&lt;R2&gt;, Proj2&gt;&gt;
-
 bool lexicographical_compare(R1&amp;&amp; r1, R2&amp;&amp; r2, Comp comp = Comp{},
-
 Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});</code></pre>
 <p>1) Checks if the first range [first1, last1) is lexicographically less than the second range [first2, last2). Elements are compared using the given binary comparison function comp, after being projected with proj1 and proj2 respectively.<br />
 2) Same as <code>(1)</code>, but uses r1 as the first source range and r2 as the second source range, as if using ranges::begin(r1) as first1, ranges::end(r1) as last1, ranges::begin(r2) as first2, and ranges::end(r2) as last2.<br />

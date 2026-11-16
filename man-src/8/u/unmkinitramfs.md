@@ -15,10 +15,10 @@ description: "unmkinitramfs – extract content from an initramfs image"
 <p>The <code>unmkinitramfs</code> command extracts the content of a given initramfs image using <code>cpio</code>. If the image contains multiple segments, each are passed to <code>cpio</code> in order. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Display usage information and exit. </p>
-<dt><code>-v</code></p>
-<dd>Display verbose messages about extraction. </p>
+<dt><code>-h</code></dt>
+<dd>Display usage information and exit. </dd>
+<dt><code>-v</code></dt>
+<dd>Display verbose messages about extraction. </dd>
 </dl>
 <h2>Usage Examples</h2>
 <p>Extract initramfs content of current running kernel: </p>

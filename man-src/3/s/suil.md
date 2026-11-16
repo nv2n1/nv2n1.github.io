@@ -63,7 +63,7 @@ description: "Suil –"
 <dd><i>write_func</i> Function to send a value to a plugin port.<br />
  <i>index_func</i> Function to get the index for a port by symbol.<br />
  <i>subscribe_func</i> Function to subscribe to port updates.<br />
- <i>unsubscribe_func</i> Function to unsubscribe from port updates.</dl>
+ <i>unsubscribe_func</i> Function to unsubscribe from port updates.</dd></dl>
 <h3>void suil_host_set_touch_func (<code>SuilHost</code> *host, <code>SuilTouchFunc</code>touch_func)</h3>
 <p>Set a touch function for a host descriptor. Note this function will only be called if the UI supports it.</p>
 <h3>void suil_host_free (<code>SuilHost</code> *host)</h3>
@@ -73,10 +73,10 @@ description: "Suil –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>host_type_uri</i> The URI of the desired widget type of the host, corresponding to the type_uri parameter of <code>suil_instance_new()</code>.<br />
- <i>ui_type_uri</i> The URI of the UI widget type.</dl>
+ <i>ui_type_uri</i> The URI of the UI widget type.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 if wrapping is unsupported, otherwise the quality of the wrapping where 1 is the highest quality (direct native embedding with no wrapping) and increasing values are of a progressively lower quality and/or stability.</dl>
+<dd>0 if wrapping is unsupported, otherwise the quality of the wrapping where 1 is the highest quality (direct native embedding with no wrapping) and increasing values are of a progressively lower quality and/or stability.</dd></dl>
 <h3><code>SuilInstance</code>* suil_instance_new (<code>SuilHost</code> *host, <code>SuilController</code>controller, const char *container_type_uri, const char *plugin_uri, const char *ui_uri, const char *ui_type_uri, const char *ui_bundle_path, const char *ui_binary_path, const LV2_Feature *const *features)</h3>
 <p>Instantiate a UI for an LV2 plugin. This funcion may load a suil module to adapt the UI to the desired toolkit. Suil is configured at compile time to load modules from the appropriate place, but this can be changed at run-time via the environment variable SUIL_MODULE_DIR. This makes it possible to bundle suil with an application. </p>
 <p> Note that some situations (Gtk in Qt, Windows in Gtk) require a parent container to be passed as a feature with URI LV2_UI__parent (<a rel="nofollow" href="http://lv2plug.in/ns/extensions/ui#ui)">http://lv2plug.in/ns/extensions/ui#ui)</a> in order to work correctly. The data must point to a single child container of the host widget set. </p>
@@ -90,10 +90,10 @@ description: "Suil –"
  <i>ui_type_uri</i> URI of the actual UI widget type.<br />
  <i>ui_bundle_path</i> Path of the UI bundle.<br />
  <i>ui_binary_path</i> Path of the UI binary.<br />
- <i>features</i> NULL-terminated array of supported features, or NULL.</dl>
+ <i>features</i> NULL-terminated array of supported features, or NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A new UI instance, or NULL if instantiation failed.</dl>
+<dd>A new UI instance, or NULL if instantiation failed.</dd></dl>
 <h3>void suil_instance_free (<code>SuilInstance</code> *instance)</h3>
 <p>Free a plugin UI instance. The caller must ensure all references to the UI have been dropped before calling this function (e.g. it has been removed from its parent).</p>
 <h3><code>SuilHandle</code> suil_instance_get_handle (<code>SuilInstance</code> *instance)</h3>
@@ -109,7 +109,7 @@ description: "Suil –"
  <i>port_index</i> Index of the port which has changed.<br />
  <i>buffer_size</i> Size of buffer in bytes.<br />
  <i>format</i> Format of buffer (mapped URI, or 0 for float).<br />
- <i>buffer</i> Change data, e.g. the new port value.</dl>
+ <i>buffer</i> Change data, e.g. the new port value.</dd></dl>
 <p> This function can be used to notify the UI about any port change, but in the simplest case is used to set the value of lv2:ControlPort ports. For simplicity, this is a special case where format is 0, buffer_size is 4, and buffer should point to a single float. </p>
 <p> The buffer must be valid only for the duration of this call, the UI must not keep a reference to it.</p>
 <h3>const void* suil_instance_extension_data (<code>SuilInstance</code> *instance, const char *uri)</h3>

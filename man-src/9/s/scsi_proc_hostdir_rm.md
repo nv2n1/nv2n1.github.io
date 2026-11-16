@@ -14,12 +14,12 @@ description: "scsi_proc_hostdir_rm – remove directory in /proc for a scsi host
 <p><i>sht</i></p>
 <dl>
 <dd>
-<dd>owner of directory</dl>
+</dd><dd>owner of directory</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -25,8 +25,8 @@ wint_t putwc(wchar_t wc, FILE *stream);
 <h2>ERRORS</h2>
 <p> Apart from the usual ones, there is</p>
 <dl>
-<dt><code>EILSEQ</code></p>
-<dd> Conversion of <i>wc</i> to the stream&#8217;s encoding fails.</dl>
+<dt><code>EILSEQ</code></dt>
+<dd> Conversion of <i>wc</i> to the stream&#8217;s encoding fails.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

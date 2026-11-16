@@ -15,16 +15,16 @@ description: "stdbuf – Run COMMAND, with modified buffering operations for its
 <p> Run COMMAND, with modified buffering operations for its standard streams. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-i</code>, <code>&#8211;input</code>=<i>,MODE/</i></p>
-<dd> adjust standard input stream buffering</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>,MODE/</i></p>
-<dd> adjust standard output stream buffering</p>
-<dt><code>-e</code>, <code>&#8211;error</code>=<i>,MODE/</i></p>
-<dd> adjust standard error stream buffering</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-i</code>, <code>&#8211;input</code>=<i>,MODE/</i></dt>
+<dd> adjust standard input stream buffering</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>,MODE/</i></dt>
+<dd> adjust standard output stream buffering</dd>
+<dt><code>-e</code>, <code>&#8211;error</code>=<i>,MODE/</i></dt>
+<dd> adjust standard error stream buffering</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If MODE is &#8216;L&#8217; the corresponding stream will be line buffered. This option is invalid with standard input. </p>
 <p> If MODE is &#8216;0&#8217; the corresponding stream will be unbuffered. </p>
 <p> Otherwise MODE is a number which may be followed by one of the following: KB 1000, K 1024, MB 1000*1000, M 1024*1024, and so on for G, T, P, E, Z, Y. Binary prefixes can be used, too: KiB=K, MiB=M, and so on. In this case the corresponding stream will be fully buffered with the buffer size set to MODE bytes. </p>

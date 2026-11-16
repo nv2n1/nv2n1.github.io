@@ -46,7 +46,7 @@ description: "Handle Management –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_handle_init()</code>, <code>globus_ftp_client_handle_destroy()</code>, <code>globus_ftp_client_handleattr_t</code></dl>
+</dt><dd> <code>globus_ftp_client_handle_init()</code>, <code>globus_ftp_client_handle_destroy()</code>, <code>globus_ftp_client_handleattr_t</code></dd></dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_ftp_client_handle_add_plugin (<code>globus_ftp_client_handle_t</code> *handle, <code>globus_ftp_client_plugin_t</code> *plugin)</h3>
 <p> Add a plugin to an FTP client handle. </p>
@@ -56,55 +56,55 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The FTP client handle to set or query.<br />
- <i>plugin</i> A pointer to the plugin structure to add to this handle.</dl>
+</dt><dd> <i>handle</i> The FTP client handle to set or query.<br />
+ <i>plugin</i> A pointer to the plugin structure to add to this handle.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_ftp_client_remove_plugin(), globus_ftp_clent_handleattr_add_plugin(), globus_ftp_clent_handleattr_remove_plugin()</dl>
+</dt><dd> globus_ftp_client_remove_plugin(), globus_ftp_clent_handleattr_add_plugin(), globus_ftp_clent_handleattr_remove_plugin()</dd></dl>
 <h3>globus_result_t globus_ftp_client_handle_cache_url_state (<code>globus_ftp_client_handle_t</code> *handle, const char *url)</h3>
 <p> Cache connections to an FTP server. </p>
 <p> Explicitly cache connections to URL server in an FTP handle. When an URL is cached, the client library will not close the connection to the URL server after a file transfer completes. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br />
- <i>url</i> The URL of the FTP or GSIFTP server to cache.</dl>
+</dt><dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br />
+ <i>url</i> The URL of the FTP or GSIFTP server to cache.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_ftp_client_flush_url_state()</dl>
+</dt><dd> globus_ftp_client_flush_url_state()</dd></dl>
 <h3>globus_result_t globus_ftp_client_handle_destroy (<code>globus_ftp_client_handle_t</code> *handle)</h3>
 <p> Destroy a client FTP handle. </p>
 <p> A FTP client handle may not be destroyed if a get, put, or third-party transfer is in progress. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to be destroyed.</dl>
+</dt><dd> <i>handle</i> The handle to be destroyed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_handle_init()</code></dl>
+</dt><dd> <code>globus_ftp_client_handle_init()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_handle_flush_url_state (<code>globus_ftp_client_handle_t</code> *handle, const char *url)</h3>
 <p> Remove a cached connection from the FTP client handle. </p>
 <p> Explicitly remove a cached connection to an FTP server from the FTP handle. If an idle connection to an FTP server exists, it will be closed. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br />
- <i>url</i> The URL of the FTP or GSIFTP server to cache.</dl>
+</dt><dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br />
+ <i>url</i> The URL of the FTP or GSIFTP server to cache.</dd></dl>
 <h3>globus_result_t globus_ftp_client_handle_init (<code>globus_ftp_client_handle_t</code> *handle, <code>globus_ftp_client_handleattr_t</code> *attr)</h3>
 <p> Initialize a client FTP handle. </p>
 <p> Initialize an FTP handle which can be used in subsequent get, put, or transfer requests. A handle may have at most one get, put, or third-party transfer in progress. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to be initialized.<br />
- <i>attr</i> Initial attributes to be used to create this handle.</dl>
+</dt><dd> <i>handle</i> The handle to be initialized.<br />
+ <i>attr</i> Initial attributes to be used to create this handle.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_handle_destroy()</code></dl>
+</dt><dd> <code>globus_ftp_client_handle_destroy()</code></dd></dl>
 <p> <code>Examples: </code> <code>globus_ftp_client_debug_plugin.example</code>, and <code>globus_ftp_client_restart_plugin.example</code>.</p>
 <h3>globus_result_t globus_ftp_client_handle_remove_plugin (<code>globus_ftp_client_handle_t</code> *handle, <code>globus_ftp_client_plugin_t</code> *plugin)</h3>
 <p> Remove a plugin to an FTP client handle. </p>
@@ -113,28 +113,28 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The FTP client handle to set or query.<br />
- <i>plugin</i> A pointer to the plugin structure to remove from this handle.</dl>
+</dt><dd> <i>handle</i> The FTP client handle to set or query.<br />
+ <i>plugin</i> A pointer to the plugin structure to remove from this handle.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_ftp_client_add_plugin(), globus_ftp_clent_handleattr_add_plugin(), globus_ftp_clent_handleattr_remove_plugin()</dl>
+</dt><dd> globus_ftp_client_add_plugin(), globus_ftp_clent_handleattr_add_plugin(), globus_ftp_clent_handleattr_remove_plugin()</dd></dl>
 <h3>globus_result_t globus_ftp_client_handle_set_user_pointer (<code>globus_ftp_client_handle_t</code> *handle, void *user_pointer)</h3>
 <p> Set/Get the user pointer field from an ftp client handle. </p>
 <p> The user pointer is provided to all the user of the FTP client library to assocate a pointer to any application-specific data to an FTP client handle. This pointer is never internally used by the client library. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The FTP client handle to set or query.<br />
- <i>user_pointer</i> The value of the user pointer field.</dl>
+</dt><dd> <i>handle</i> The FTP client handle to set or query.<br />
+ <i>user_pointer</i> The value of the user pointer field.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Access to the user_pointer are not synchronized, the user must take care to make sure that multiple threads are not modifying it&#8217;s value.</dl>
+</dt><dd> Access to the user_pointer are not synchronized, the user must take care to make sure that multiple threads are not modifying it&#8217;s value.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">Function Documentation</a></p>
+<dt><a href="#lbAM">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAU">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAU">Author</a></dt>
+<dd></dd></dl>

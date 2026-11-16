@@ -16,16 +16,16 @@ description: "bochs – Portable x86 Emulator."
 <h2>OPTIONS</h2>
 <p> When you run bochs without one of the following options, it will search for a configuration file called .bochsrc in the current directory and your home directory and display the start menu.</p>
 <dl>
-<dt><code>-q</code></p>
-<dd> With this option the start menu will be skipped after loading the configuration file.</p>
-<dt><code>-f configfile</code></p>
-<dd> This option specifies the name of the configuration file.</p>
-<dt><code>-qf configfile</code></p>
-<dd> When you run bochs with this option, it will skip the start menu and use the specified configuration file.</p>
-<dt><code>-n</code></p>
-<dd> With this option bochs doesn&#8217;t load a configuration file. In that case the setup for the emulation must be done with bochsrc options on the command line or in the start menu.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print a summary of the command line options for bochs and exit.</dl>
+<dt><code>-q</code></dt>
+<dd> With this option the start menu will be skipped after loading the configuration file.</dd>
+<dt><code>-f configfile</code></dt>
+<dd> This option specifies the name of the configuration file.</dd>
+<dt><code>-qf configfile</code></dt>
+<dd> When you run bochs with this option, it will skip the start menu and use the specified configuration file.</dd>
+<dt><code>-n</code></dt>
+<dd> With this option bochs doesn&#8217;t load a configuration file. In that case the setup for the emulation must be done with bochsrc options on the command line or in the start menu.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a summary of the command line options for bochs and exit.</dd></dl>
 <p> You can override the settings from the configuration file with command line arguments, using the same syntax as the bochsrc file. If you have any spaces in your command line arguments, they should be enclosed in single quotes. For information on Bochs command line and configuration file arguments, see the man page <code><a href="/docs/linux/man/5-bochsrc/">bochsrc</a>(5).</code> </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>bochs -q&nbsp;<wbr>&#8216;boot:a&#8217;&nbsp;<wbr>&#8216;floppya: 1_44=a.img, status=inserted&#8217; </p>

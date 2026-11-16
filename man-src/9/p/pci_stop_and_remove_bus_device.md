@@ -15,7 +15,7 @@ pci_stop_and_remove_bus_device - remove a PCI device and any children
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the device to remove</dl>
+<dl><dd></dd><dd>the device to remove</dd></dl>
 
 <h2>Description</h2>
 

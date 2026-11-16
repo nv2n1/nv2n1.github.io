@@ -38,94 +38,94 @@ description: "wimlib-imagex – Extract, create, modify, or mount a WIM (Windows
 <h2>GENERAL FEATURES</h2>
 <p> The following are some of the general features, or use cases, currently supported by <code>wimlib-imagex</code>, and pointers to the relevant commands:</p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> Display information about a WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex info</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex info</code>)</dd>
+<dt>&bull;</dt>
 <dd> List the files in a WIM image<br />
-&nbsp;<wbr>(<code>wimlib-imagex dir</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex dir</code>)</dd>
+<dt>&bull;</dt>
 <dd> Extract, or &quot;apply&quot;, a full WIM image<br />
-&nbsp;<wbr>(<code>wimlib-imagex apply</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex apply</code>)</dd>
+<dt>&bull;</dt>
 <dd> Extract files or directories from a WIM image<br />
-&nbsp;<wbr>(<code>wimlib-imagex extract</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex extract</code>)</dd>
+<dt>&bull;</dt>
 <dd> Capture a WIM image and save it to a new WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex capture</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex capture</code>)</dd>
+<dt>&bull;</dt>
 <dd> Capture a WIM image and append it to an existing WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex append</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex append</code>)</dd>
+<dt>&bull;</dt>
 <dd> Modify a WIM image by adding, deleting, or renaming files<br />
-&nbsp;<wbr>(<code>wimlib-imagex update</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex update</code>)</dd>
+<dt>&bull;</dt>
 <dd> (Linux only) Mount a WIM image read-only<br />
-&nbsp;<wbr>(<code>wimlib-imagex mount</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex mount</code>)</dd>
+<dt>&bull;</dt>
 <dd> (Linux only) Mount a WIM image read-write<br />
-&nbsp;<wbr>(<code>wimlib-imagex mountrw</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex mountrw</code>)</dd>
+<dt>&bull;</dt>
 <dd> Delete an image from a WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex delete</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex delete</code>)</dd>
+<dt>&bull;</dt>
 <dd> Export image(s) from a WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex export</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex export</code>)</dd>
+<dt>&bull;</dt>
 <dd> Change the name or description of a WIM image<br />
-&nbsp;<wbr>(<code>wimlib-imagex info</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex info</code>)</dd>
+<dt>&bull;</dt>
 <dd> Change the bootable image index of a WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex info</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex info</code>)</dd>
+<dt>&bull;</dt>
 <dd> Rebuild, and optionally recompress, a WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex optimize</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex optimize</code>)</dd>
+<dt>&bull;</dt>
 <dd> Split a WIM file into multiple parts<br />
-&nbsp;<wbr>(<code>wimlib-imagex split</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex split</code>)</dd>
+<dt>&bull;</dt>
 <dd> Join a split WIM<br />
-&nbsp;<wbr>(<code>wimlib-imagex join</code>)</p>
-<dt>&bull;</p>
+&nbsp;<wbr>(<code>wimlib-imagex join</code>)</dd>
+<dt>&bull;</dt>
 <dd> Verify a WIM file<br />
-&nbsp;<wbr>(<code>wimlib-imagex verify</code>)</dl>
+&nbsp;<wbr>(<code>wimlib-imagex verify</code>)</dd></dl>
 <h2>DETAILED FEATURES</h2>
 <p> This section presents some of the interesting features of <code>wimlib-imagex</code> in more detail.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Multi-platform support. <code>wimlib-imagex</code> is supported on both UNIX-like systems (mainly Linux, but also FreeBSD, Mac OS X, etc.) and Windows, and most code is shared among all platforms. However, platform-specific features are supported when possible.</p>
-<dt>&bull;</p>
-<dd> On UNIX-like systems, integration with libntfs-3g allows capturing a WIM image directly from a block device containing an NTFS volume, or applying a WIM image directly to a block device containing an NTFS volume. This allows saving and restoring NTFS-specific data, such as security descriptors and named data streams, which would otherwise only be supported on Windows.</p>
-<dt>&bull;</p>
-<dd> Long path support on Windows. <code>wimlib-imagex</code> can capture and apply files with paths exceeding the MAX_PATH (260 character) limitation of the Win32 subsystem.</p>
-<dt>&bull;</p>
-<dd> Non-Administrator support on Windows. You can run <code>wimlib-imagex</code> without Administrator rights, subject to some limitations.</p>
-<dt>&bull;</p>
-<dd> Support for WIM integrity tables. An integrity table is a list of SHA-1 message digests appended to the end of a WIM file which gives checksums over the WIM file itself. The <code>&#8211;check</code> option to several <code>wimlib-imagex</code> commands can be used to verify or add integrity tables.</p>
-<dt>&bull;</p>
-<dd> On UNIX-like systems, support for saving and restoring UNIX uids (user IDs), gids (group IDs), and modes to/from WIM images. This is a wimlib extension, but the Microsoft implementation ignores this extra metadata.</p>
-<dt>&bull;</p>
-<dd> Multithreaded compression. By default, data compression is multithreaded and will use all available processors.</p>
-<dt>&bull;</p>
-<dd> XPRESS, LZX, and LZMS decompression and compression. wimlib contains independent implementations of all these compression algorithms. Sometimes they can do better than the equivalent Microsoft implementations.</p>
-<dt>&bull;</p>
-<dd> &quot;ESD file&quot; support. As mentioned in <code>BACKGROUND INFORMATION</code>, &quot;ESD files&quot; use a new WIM format that features solid resources and LZMS compression. This support was first present in wimlib v1.6.0, but v1.7.0 and later have improved compatibility.</p>
-<dt>&bull;</p>
-<dd> On Linux, support for mounting WIM images with FUSE (Filesystem in UserSpacE).</p>
-<dt>&bull;</p>
-<dd> &quot;Pipable&quot; WIMs. This is a wimlib extension and is not compatible with the Microsoft implementation. A pipable WIM, created with <code>wimcapture</code> with the <code>&#8211;pipable</code> option, can be written to standard output or read from standard input. This can be used to pipe images to or from a server over the network to implement fast filesystem imaging and restore.</p>
-<dt>&bull;</p>
-<dd> Split WIMs. A split WIM is a WIM archive split into multiple parts. <code>wimsplit</code> can create a split WIM from a standalone WIM, and <code>wimjoin</code> can create a standalone WIM from a split WIM.</p>
-<dt>&bull;</p>
-<dd> Delta WIMs. A delta WIM contains image metadata but excludes file data already present in another WIM file. A delta WIM can be created using <code>wimcapture</code> with the <code>&#8211;delta-from</code> option.</p>
-<dt>&bull;</p>
-<dd> Fast incremental backups. Using the <code>&#8211;update-of</code> option of <code>wimcapture</code> or <code>wimappend</code>, you can optimize an image capture so that files that are unmodified based on timestamps are not be read from disk. But even without this option, since the WIM format features single-instance files, a file identical to any already present in the WIM archive (in any image) will not be written, but rather a reference to the stored file will be used.</p>
-<dt>&bull;</p>
-<dd> Windows-specific image metadata support. When capturing an image of a Windows operating system, wimlib will automatically populate XML metadata fields such as the Windows OS version details by scanning well-known system files.</p>
-<dt>&bull;</p>
-<dd> WIMBoot support. On Windows 8.1 and later, files can be &quot;externally backed&quot; by a WIM archive with the help of Microsoft&#8217;s Windows Overlay Filesystem filter driver (WOF). With the <code>&#8211;wimboot</code> option, <code>wimapply</code> will extract &quot;pointer files&quot; to the WIM archive rather than the files themselves.</p>
-<dt>&bull;</p>
-<dd> VSS snapshot support. On Windows, <code>wimcapture</code> or <code>wimappend</code> with the <code>&#8211;snapshot</code> option will automatically create a temporary VSS snapshot and capture the image from it. This can be used to image a &quot;live&quot; Windows system.</dl>
+<dt>&bull;</dt>
+<dd> Multi-platform support. <code>wimlib-imagex</code> is supported on both UNIX-like systems (mainly Linux, but also FreeBSD, Mac OS X, etc.) and Windows, and most code is shared among all platforms. However, platform-specific features are supported when possible.</dd>
+<dt>&bull;</dt>
+<dd> On UNIX-like systems, integration with libntfs-3g allows capturing a WIM image directly from a block device containing an NTFS volume, or applying a WIM image directly to a block device containing an NTFS volume. This allows saving and restoring NTFS-specific data, such as security descriptors and named data streams, which would otherwise only be supported on Windows.</dd>
+<dt>&bull;</dt>
+<dd> Long path support on Windows. <code>wimlib-imagex</code> can capture and apply files with paths exceeding the MAX_PATH (260 character) limitation of the Win32 subsystem.</dd>
+<dt>&bull;</dt>
+<dd> Non-Administrator support on Windows. You can run <code>wimlib-imagex</code> without Administrator rights, subject to some limitations.</dd>
+<dt>&bull;</dt>
+<dd> Support for WIM integrity tables. An integrity table is a list of SHA-1 message digests appended to the end of a WIM file which gives checksums over the WIM file itself. The <code>&#8211;check</code> option to several <code>wimlib-imagex</code> commands can be used to verify or add integrity tables.</dd>
+<dt>&bull;</dt>
+<dd> On UNIX-like systems, support for saving and restoring UNIX uids (user IDs), gids (group IDs), and modes to/from WIM images. This is a wimlib extension, but the Microsoft implementation ignores this extra metadata.</dd>
+<dt>&bull;</dt>
+<dd> Multithreaded compression. By default, data compression is multithreaded and will use all available processors.</dd>
+<dt>&bull;</dt>
+<dd> XPRESS, LZX, and LZMS decompression and compression. wimlib contains independent implementations of all these compression algorithms. Sometimes they can do better than the equivalent Microsoft implementations.</dd>
+<dt>&bull;</dt>
+<dd> &quot;ESD file&quot; support. As mentioned in <code>BACKGROUND INFORMATION</code>, &quot;ESD files&quot; use a new WIM format that features solid resources and LZMS compression. This support was first present in wimlib v1.6.0, but v1.7.0 and later have improved compatibility.</dd>
+<dt>&bull;</dt>
+<dd> On Linux, support for mounting WIM images with FUSE (Filesystem in UserSpacE).</dd>
+<dt>&bull;</dt>
+<dd> &quot;Pipable&quot; WIMs. This is a wimlib extension and is not compatible with the Microsoft implementation. A pipable WIM, created with <code>wimcapture</code> with the <code>&#8211;pipable</code> option, can be written to standard output or read from standard input. This can be used to pipe images to or from a server over the network to implement fast filesystem imaging and restore.</dd>
+<dt>&bull;</dt>
+<dd> Split WIMs. A split WIM is a WIM archive split into multiple parts. <code>wimsplit</code> can create a split WIM from a standalone WIM, and <code>wimjoin</code> can create a standalone WIM from a split WIM.</dd>
+<dt>&bull;</dt>
+<dd> Delta WIMs. A delta WIM contains image metadata but excludes file data already present in another WIM file. A delta WIM can be created using <code>wimcapture</code> with the <code>&#8211;delta-from</code> option.</dd>
+<dt>&bull;</dt>
+<dd> Fast incremental backups. Using the <code>&#8211;update-of</code> option of <code>wimcapture</code> or <code>wimappend</code>, you can optimize an image capture so that files that are unmodified based on timestamps are not be read from disk. But even without this option, since the WIM format features single-instance files, a file identical to any already present in the WIM archive (in any image) will not be written, but rather a reference to the stored file will be used.</dd>
+<dt>&bull;</dt>
+<dd> Windows-specific image metadata support. When capturing an image of a Windows operating system, wimlib will automatically populate XML metadata fields such as the Windows OS version details by scanning well-known system files.</dd>
+<dt>&bull;</dt>
+<dd> WIMBoot support. On Windows 8.1 and later, files can be &quot;externally backed&quot; by a WIM archive with the help of Microsoft&#8217;s Windows Overlay Filesystem filter driver (WOF). With the <code>&#8211;wimboot</code> option, <code>wimapply</code> will extract &quot;pointer files&quot; to the WIM archive rather than the files themselves.</dd>
+<dt>&bull;</dt>
+<dd> VSS snapshot support. On Windows, <code>wimcapture</code> or <code>wimappend</code> with the <code>&#8211;snapshot</code> option will automatically create a temporary VSS snapshot and capture the image from it. This can be used to image a &quot;live&quot; Windows system.</dd></dl>
 <h2>LOCALES AND CHARACTER ENCODINGS</h2>
 <p> WIM files themselves store file and stream names using Windows native &quot;wide character strings&quot;, which are UTF-16. On Windows, wimlib works using these same strings, so conversions are usually not necessary and there should be no problems with character encodings. </p>
 <p> On UNIX-like systems, wimlib works primarily in the locale-dependent multibyte encoding, which you are strongly recommended to set to UTF-8 to avoid any problems. You can alternatively set the environmental variable <code>WIMLIB_IMAGEX_USE_UTF8</code> to force <code>wimlib-imagex</code> to use UTF-8 internally, even if the current locale is not UTF-8 compatible.</p>

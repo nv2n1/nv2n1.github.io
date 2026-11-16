@@ -23,7 +23,7 @@ description: "SDL_CDStatus – Returns the current status of the given drive."
 <p>If the drive has a CD in it, the table of contents of the CD and current play position of the CD will be stored in the SDL_CD structure. </p>
 <p> The macro <code>CD_INDRIVE</code> is provided for convenience, and given a status returns true if there&#8217;s a disk in the drive. </p>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> SDL_CDStatus</code> also updates the <i></i><code>SDL_CD</code> structure passed to it.</dl>
 <h2>Example</h2>
 <pre><tt>int playTrack(int track)
@@ -42,3 +42,4 @@ description: "SDL_CDStatus – Returns the current status of the given drive."
 }</tt></pre>
 <h2>See Also</h2>
 <p><i></i><code>SDL_CD</code></p>
+</p>

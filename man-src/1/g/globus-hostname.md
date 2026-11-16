@@ -17,11 +17,11 @@ description: "globus-hostname – Print the system host name"
 <p> <code>-help, -h</code></p>
 <dl>
 <dt>
-<dd> Show usage information and exit.</dl>
+</dt><dd> Show usage information and exit.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
 <dt>
-<dd> Show version information and exit.</dl>
+</dt><dd> Show version information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2016 University of Chicago </p>
 <h2>Index</h2>

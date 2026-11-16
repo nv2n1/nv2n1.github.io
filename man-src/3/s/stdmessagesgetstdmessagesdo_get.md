@@ -11,14 +11,10 @@ std::messages&lt;CharT&gt;::get,std::messages&lt;CharT&gt;::do_get - std::messag
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  string_type get(catalog cat, int set, int msgid, const string_type &amp;dfault) const;
-
 protected:
 (2)
-
     virtual string_type do_get(catalog cat, int set, int msgid, const string_type &amp;dfault) const;</code></pre> 
 1) Public member function, calls the protected virtual member function do_get of the most derived class. 
 2) Obtains a message from the open message catalog cat using the values set, msgid and dfault in implementation-defined manner. If the expected message is not found in the catalog, returns a copy of dfault. 
@@ -42,10 +38,8 @@ On POSIX systems, this function call usually translates to a call to catgets(), 
 
 The following example demonstrated retrieval of messages: on a typical GNU/Linux system it reads from /usr/share/locale/de/LC_MESSAGES/sed.mo 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::locale loc(&quot;de_DE.utf8&quot;);
     std::cout.imbue(loc);

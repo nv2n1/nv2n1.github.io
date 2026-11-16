@@ -10,10 +10,10 @@ description: "amcheckdb – check Amanda database for tape consistency"
 <p>amcheckdb &#8211; check Amanda database for tape consistency</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amcheckdb</code> <i>config</i></dl>
+<dt> <code>amcheckdb</code> <i>config</i></dt></dl>
 <h2>Description</h2>
 <p><code>Amcheckdb</code></p>
-<dd>verifies that every tape mentioned in the Amanda database is still valid in the <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5). </p>
+<dd>verifies that every tape mentioned in the Amanda database is still valid in the <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5). </dd>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Example</h2>
 <p>This shows a normal response: </p>

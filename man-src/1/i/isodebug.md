@@ -15,14 +15,14 @@ description: "isodebug – print genisoimage debug info from ISO-9660 image"
 <p> <code>Isodebug</code> reads the debug info written by <code>genisoimage</code>(8) from within a ISO-9660 file system image and prints them.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Prints a short summary of the <code>isodebug</code> options and exists.</p>
-<dt><code>-version</code></p>
-<dd> Prints the <code>isodebug</code> version number string and exists.</p>
-<dt><code>-i</code><i> filename</i></p>
-<dd> Filename to read ISO-9660 image from.</p>
-<dt><code>dev=</code><i>target</i></p>
-<dd> SCSI target to use as CD/DVD-Recorder. See <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1) for more information on now to use this option.</dl>
+<dt><code>-help</code></dt>
+<dd> Prints a short summary of the <code>isodebug</code> options and exists.</dd>
+<dt><code>-version</code></dt>
+<dd> Prints the <code>isodebug</code> version number string and exists.</dd>
+<dt><code>-i</code><i> filename</i></dt>
+<dd> Filename to read ISO-9660 image from.</dd>
+<dt><code>dev=</code><i>target</i></dt>
+<dd> SCSI target to use as CD/DVD-Recorder. See <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1) for more information on now to use this option.</dd></dl>
 <h2>FILES</h2>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></code>(1).</p>

@@ -15,17 +15,17 @@ description: "yum-changelog"
 <p> <code><a href="/docs/linux/man/1-yum-changelog/">yum-changelog</a>(1)</code> is a Yum plugin for viewing package changelogs before/after updating. yum will invoke <code><a href="/docs/linux/man/1-yum-changelog/">yum-changelog</a>(1)</code> plugin if the <code>&#8211;changelog</code> option or the <code>changelog</code> command is used with yum.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;changelog</p>
-<dd> Show changelog delta of updated packages</dl>
+<dt>&#8211;changelog</dt>
+<dd> Show changelog delta of updated packages</dd></dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt>changelog</p>
-<dd> Show changelog data of packages listed (same format as the list command). The first argument is required and is either &quot;all&quot; for all the changelog entries, a date for the changelog entries since a specified point in time or a number for a given number of changelog entries.</dl>
+<dt>changelog</dt>
+<dd> Show changelog data of packages listed (same format as the list command). The first argument is required and is either &quot;all&quot; for all the changelog entries, a date for the changelog entries since a specified point in time or a number for a given number of changelog entries.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/etc/yum/pluginconf.d/changelog.conf</i></p>
 <dl>
 <dt>
-<dd> The system wide configuration file. See <code><a href="/docs/linux/man/5-yum-changelog-conf/">yum-changelog.conf</a>(5)</code> for more information.</dl>
+</dt><dd> The system wide configuration file. See <code><a href="/docs/linux/man/5-yum-changelog-conf/">yum-changelog.conf</a>(5)</code> for more information.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> # yum <code>changelog</code> 2008-Jan yum\*<br />
  Listing changelogs since: 2008-01-18 </p>
@@ -56,9 +56,9 @@ description: "yum-changelog"
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-<dd> Chitlesh Goorah &lt;chitlesh [at] fedoraproject.org&gt;<br />
+</dt><dd> Chitlesh Goorah &lt;chitlesh [at] fedoraproject.org&gt;<br />
  Panu Matilainen &lt;pmatilai [at] laiskiainen.org&gt;<br />
- James Antill &lt;james [at] and.org&gt;</dl>
+ James Antill &lt;james [at] and.org&gt;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>yum(1)</code> </p>
 <h2>Index</h2>

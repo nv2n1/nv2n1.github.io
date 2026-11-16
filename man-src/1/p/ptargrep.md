@@ -19,16 +19,16 @@ ptargrep[options]&lt;pattern&gt;&lt;tar file&gt;... Options : --basename | -b ig
 <p> Multiple tar archive filenames can be specified &#8211; they will each be processed in turn.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;basename</code> (alias -b)</p>
-<dd> When matching files are extracted, ignore the directory path from the archive and write to the current directory using the basename of the file from the archive. Beware: if two matching files in the archive have the same basename, the second file extracted will overwrite the first.</p>
-<dt><code>&#8211;ignore-case</code> (alias -i)</p>
-<dd> Make pattern matching case-insensitive.</p>
-<dt><code>&#8211;list-only</code> (alias -l)</p>
-<dd> Print the pathname of each matching file from the archive to <font SIZE="-1">STDOUT.</font> Without this option, the default behaviour is to extract each matching file.</p>
-<dt><code>&#8211;verbose</code> (alias -v)</p>
-<dd> Log debugging info to <font SIZE="-1">STDERR.</font></p>
-<dt><code>&#8211;help</code> (alias -?)</p>
-<dd> Display this documentation.</dl>
+<dt><code>&#8211;basename</code> (alias -b)</dt>
+<dd> When matching files are extracted, ignore the directory path from the archive and write to the current directory using the basename of the file from the archive. Beware: if two matching files in the archive have the same basename, the second file extracted will overwrite the first.</dd>
+<dt><code>&#8211;ignore-case</code> (alias -i)</dt>
+<dd> Make pattern matching case-insensitive.</dd>
+<dt><code>&#8211;list-only</code> (alias -l)</dt>
+<dd> Print the pathname of each matching file from the archive to <font SIZE="-1">STDOUT.</font> Without this option, the default behaviour is to extract each matching file.</dd>
+<dt><code>&#8211;verbose</code> (alias -v)</dt>
+<dd> Log debugging info to <font SIZE="-1">STDERR.</font></dd>
+<dt><code>&#8211;help</code> (alias -?)</dt>
+<dd> Display this documentation.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2010 Grant McLean &lt;grantm [at] cpan.org&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>

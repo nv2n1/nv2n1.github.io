@@ -15,15 +15,15 @@ rpc_localaddr - discover local endpoint address for an RPC client
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client structure</dl>
+<dl><dd></dd><dd>RPC client structure</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>target buffer</dl>
+<dl><dd>target buffer</dd></dl>
  
 
  <i>buflen</i>
-<dl><dd>size of target buffer, in bytes</dl>
+<dl><dd>size of target buffer, in bytes</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,13 +14,13 @@ description: "strncpy – Copy a length-limited, C-string"
 <p><i>dest</i></p>
 <dl>
 <dd>
-<dd>Where to copy the string to</dl>
+</dd><dd>Where to copy the string to</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>Where to copy the string from</dl>
+<dd>Where to copy the string from</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>The maximum number of bytes to copy</dl>
+<dd>The maximum number of bytes to copy</dd></dl>
 <h2>Description</h2>
 <p>The result is not <code>NUL-terminated</code> if the source exceeds <i>count</i> bytes. </p>
 <p> In the case where the length of <i>src</i> is less than that of count, the remainder of <i>dest</i> will be padded with <code>NUL</code>.</p>

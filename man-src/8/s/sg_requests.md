@@ -16,28 +16,28 @@ description: "sg_requests – send one or more SCSI REQUEST SENSE commands"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;desc</code></p>
-<dd>sets the DESC bit in the REQUEST SENSE SCSI cdb. The <i>DEVICE</i> should return sense data in descriptor (rather than fixed) format. This will only occur if the <i>DEVICE</i> recognizes descriptor format (SPC-3 and later). If the device is pre SPC-3 then setting a bit in a reserved field may cause a check condition status with an illegal request sense key, but will most likely be ignored.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output response in ASCII hexadecimal.</p>
-<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></p>
-<dd>where <i>LEN</i> is the (maximum) response length in bytes. It is placed in the cdb&#8217;s &quot;allocation length&quot; field. If not given (or <i>LEN</i> is zero) then 252 is used. The maximum value of <i>LEN</i> is 255 (but SPC-4 recommends 252).</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></p>
-<dd>perform <i>NUM</i> SCSI REQUEST SENSE commands, stopping when either <i>NUM</i> is reached or an error occurs. The default value for <i>NUM</i> is 1 .</p>
-<dt><code>-p</code>, <code>&#8211;progress</code></p>
-<dd>show progress indication (a percentage) if available. If <i>&#8211;number=NUM</i> is given, <i>NUM</i> is greater than 1 and an initial progress indication was detected then this utility waits 30 seconds before subsequent checks. Exits when <i>NUM</i> is reached or there are no more progress indications. Ignores <i>&#8211;hex</i>, <i>&#8211;raw</i> and <i>&#8211;time</i> options. See NOTES section below.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>output response in binary (to stdout).</p>
-<dt><code>-s</code>, <code>&#8211;status</code></p>
-<dd>if the REQUEST SENSE command finished without error (as indicated by its SCSI status) then the contents of the parameter data are analysed as sense data and the exit status is set accordingly. The default action (i.e. when this option is not given) is to ignore the contents of the parameter data for the purposes of setting the exit status. Some types of error set a sense key of &quot;NO SENSE&quot; with non-zero information in the additional sense code (e.g. the FAILURE PREDICTION THRESHOLD EXCEEDED group of codes); this results in an exit status value of 10. If the sense key is &quot;NO SENSE&quot; and both asc and ascq are zero then the exit status is set to 0 . See the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page for exit status values.</p>
-<dt><code>-t</code>, <code>&#8211;time</code></p>
-<dd>time the SCSI REQUEST SENSE command(s) and calculate the average number of operations per second.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output). Additionally the response (if received) is output in ASCII-HEX. Use this option multiple times for greater verbosity.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-d</code>, <code>&#8211;desc</code></dt>
+<dd>sets the DESC bit in the REQUEST SENSE SCSI cdb. The <i>DEVICE</i> should return sense data in descriptor (rather than fixed) format. This will only occur if the <i>DEVICE</i> recognizes descriptor format (SPC-3 and later). If the device is pre SPC-3 then setting a bit in a reserved field may cause a check condition status with an illegal request sense key, but will most likely be ignored.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output response in ASCII hexadecimal.</dd>
+<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></dt>
+<dd>where <i>LEN</i> is the (maximum) response length in bytes. It is placed in the cdb&#8217;s &quot;allocation length&quot; field. If not given (or <i>LEN</i> is zero) then 252 is used. The maximum value of <i>LEN</i> is 255 (but SPC-4 recommends 252).</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></dt>
+<dd>perform <i>NUM</i> SCSI REQUEST SENSE commands, stopping when either <i>NUM</i> is reached or an error occurs. The default value for <i>NUM</i> is 1 .</dd>
+<dt><code>-p</code>, <code>&#8211;progress</code></dt>
+<dd>show progress indication (a percentage) if available. If <i>&#8211;number=NUM</i> is given, <i>NUM</i> is greater than 1 and an initial progress indication was detected then this utility waits 30 seconds before subsequent checks. Exits when <i>NUM</i> is reached or there are no more progress indications. Ignores <i>&#8211;hex</i>, <i>&#8211;raw</i> and <i>&#8211;time</i> options. See NOTES section below.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>output response in binary (to stdout).</dd>
+<dt><code>-s</code>, <code>&#8211;status</code></dt>
+<dd>if the REQUEST SENSE command finished without error (as indicated by its SCSI status) then the contents of the parameter data are analysed as sense data and the exit status is set accordingly. The default action (i.e. when this option is not given) is to ignore the contents of the parameter data for the purposes of setting the exit status. Some types of error set a sense key of &quot;NO SENSE&quot; with non-zero information in the additional sense code (e.g. the FAILURE PREDICTION THRESHOLD EXCEEDED group of codes); this results in an exit status value of 10. If the sense key is &quot;NO SENSE&quot; and both asc and ascq are zero then the exit status is set to 0 . See the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page for exit status values.</dd>
+<dt><code>-t</code>, <code>&#8211;time</code></dt>
+<dd>time the SCSI REQUEST SENSE command(s) and calculate the average number of operations per second.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output). Additionally the response (if received) is output in ASCII-HEX. Use this option multiple times for greater verbosity.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>In SCSI 1 and 2 the REQUEST SENSE command was very important for error and warning processing in SCSI. The autosense capability rendered this command almost superfluous. </p>
 <p> However recent SCSI drafts (e.g. SPC-4 rev 14 and SBC-3 rev 14) increase the utility of the REQUEST SENSE command. Idle and standby (low) power conditions can be detected with this command. </p>

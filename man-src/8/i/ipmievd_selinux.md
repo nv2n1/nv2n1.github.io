@@ -84,8 +84,8 @@ description: "ipmievd_selinux – Security Enhanced Linux Policy for the ipmievd
 <p> <code>ipmievd_exec_t</code> </p>
 <p> &#8211; Set files with the ipmievd_exec_t type, if you want to transition an executable to the ipmievd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ipmievd, /usr/libexec/openipmi-helper </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ipmievd, /usr/libexec/openipmi-helper </dd>
 </dl>
 <p> <code>ipmievd_lock_t</code> </p>
 <p> &#8211; Set files with the ipmievd_lock_t type, if you want to treat the files as ipmievd lock data, stored under the /var/lock directory </p>

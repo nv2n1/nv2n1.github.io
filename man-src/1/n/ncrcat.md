@@ -19,24 +19,24 @@ description: "ncrcat – netCDF Record Concatenator"
 <p> Concatenate files <code>85.nc</code>, <code>86.nc</code>, &nbsp;<wbr>&#8230;&nbsp;<wbr> <code>89.nc</code> along the record dimension, and store the results in <code>8589.nc</code>:</p>
 <dl>
 <dt>
-<dd> ncrcat 85.nc 86.nc 87.nc 88.nc 89.nc 8589.nc<br />
+</dt><dd> ncrcat 85.nc 86.nc 87.nc 88.nc 89.nc 8589.nc<br />
  ncrcat 8[56789].nc 8589.nc<br />
- ncrcat -n 5,2,1 85.nc 8589.nc</dl>
+ ncrcat -n 5,2,1 85.nc 8589.nc</dd></dl>
 <p> These three methods produce identical answers. </p>
 <p> Assume the files <code>85.nc</code>, <code>86.nc</code>, &nbsp;<wbr>&#8230;&nbsp;<wbr> <code>89.nc</code> each contain a record coordinate <i>time</i> of length 12 defined such that the third record in <code>86.nc</code> contains data from March 1986, etc. NCO knows how to hyperslab the record dimension across files. Thus, to concatenate data from December, 1985&#8211;February, 1986:</p>
 <dl>
 <dt>
-<dd> ncrcat -d time,11,13 85.nc 86.nc 87.nc 8512_8602.nc<br />
- ncrcat -F -d time,12,14 85.nc 86.nc 87.nc 8512_8602.nc</dl>
+</dt><dd> ncrcat -d time,11,13 85.nc 86.nc 87.nc 8512_8602.nc<br />
+ ncrcat -F -d time,12,14 85.nc 86.nc 87.nc 8512_8602.nc</dd></dl>
 <p> The file <code>87.nc</code> is superfluous, but does not cause an error. The <code>-F</code> turns on the Fortran (1-based) indexing convention. </p>
 <p> The following uses the <i>stride</i> option to concatenate all the March temperature data from multiple input files into a single output file</p>
 <dl>
 <dt>
-<dd> ncrcat -F -d time,3,,12 -v temperature 85.nc 86.nc 87.nc 858687_03.nc</dl>
+</dt><dd> ncrcat -F -d time,3,,12 -v temperature 85.nc 86.nc 87.nc 858687_03.nc</dd></dl>
 <p> Assume the <i>time</i> coordinate is incrementally numbered such that January, 1985 = 1 and December, 1989 = 60. Assuming <code>??</code> only expands to the five desired files, the following concatenates June, 1985&#8211;June, 1989:</p>
 <dl>
 <dt>
-<dd> ncrcat -d time,6.,54. ??.nc 8506_8906.nc</dl>
+</dt><dd> ncrcat -d time,6.,54. ??.nc 8506_8906.nc</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>NCO</code> manual pages written by Charlie Zender and originally formatted by Brian Mays. </p>
 <h2>REPORTING BUGS</h2>
@@ -49,7 +49,7 @@ description: "ncrcat – netCDF Record Concatenator"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <h2>HOMEPAGE</h2>
 <p> The <code>NCO</code> homepage at &lt;<a rel="nofollow" href="http://nco.sf.net">http://nco.sf.net</a>&gt; contains more information. </p>

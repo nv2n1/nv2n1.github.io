@@ -11,41 +11,23 @@ std::copy,std::copy_if - std::copy,std::copy_if
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt, class OutputIt &gt;                                                                   (until C++20)
-
 OutputIt copy( InputIt first, InputIt last, OutputIt d_first );
-
 template&lt; class InputIt, class OutputIt &gt;                                                                   (since C++20)
-
 constexpr OutputIt copy( InputIt first, InputIt last, OutputIt d_first );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;                                   (2) (since C++17)
-
 ForwardIt2 copy( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last, ForwardIt2 d_first );
-
 template&lt; class InputIt, class OutputIt, class UnaryPredicate &gt;
-
 OutputIt copy_if( InputIt first, InputIt last,                                                                            (since C++11)
-
 OutputIt d_first,                                                                                   (1)                   (until C++20)
-
 UnaryPredicate pred );
-
 template&lt; class InputIt, class OutputIt, class UnaryPredicate &gt;
-
 constexpr OutputIt copy_if( InputIt first, InputIt last,                                                (3)               (since C++20)
-
 OutputIt d_first,
-
 UnaryPredicate pred );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class UnaryPredicate &gt;
-
 ForwardIt2 copy_if( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last,                            (4)           (since C++17)
-
 ForwardIt2 d_first,
-
 UnaryPredicate pred );</code></pre> 
 Copies the elements in the range, defined by [first, last), to another range beginning at d_first. 
 1) Copies all elements in the range [first, last) starting from first and proceeding to last - 1. The behavior is undefined if d_first is within the range [first, last). In this case, std::copy_backward may be used instead. 
@@ -134,31 +116,21 @@ When copying overlapping ranges, std::copy is appropriate when copying to the le
 
 The following code uses copy to both copy the contents of one vector to another and to display the resulting vector: 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;numeric&gt;
 int main()
-
 {
     std::vector&lt;int&gt; from_vector(10);
     std::iota(from_vector.begin(), from_vector.end(), 0);
     std::vector&lt;int&gt; to_vector;
     std::copy(from_vector.begin(), from_vector.end(),
               std::back_inserter(to_vector));
-
     // or, alternatively,
-
     //  std::vector&lt;int&gt; to_vector(from_vector.size());
-
     //  std::copy(from_vector.begin(), from_vector.end(), to_vector.begin());
-
     // either way is equivalent to
-
     //  std::vector&lt;int&gt; to_vector = from_vector;
     std::cout &lt;&lt; &quot;to_vector contains: &quot;;
     std::copy(to_vector.begin(), to_vector.end(),

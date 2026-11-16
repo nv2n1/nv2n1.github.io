@@ -19,31 +19,29 @@ description: "snmptrap, snmpinform – sends an SNMP notification to a manager"
 <p> If any of the required version 1 parameters, <i>enterprise-oid</i>, <i>agent</i>, and <i>uptime</i> are specified as empty, it defaults to <i>1.3.6.1.4.1.3.1.1 (enterprises.cmu.1.1)</i>, <i>hostname</i>, and <i>host-uptime</i> respectively. </p>
 <p> The <i>TYPE</i> is a single character, one of:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>i</code></p>
-<dd> INTEGER</p>
-<dt><code>u</code></p>
-<dd> UNSIGNED</p>
-<dt><code>c</code></p>
-<dd> COUNTER32</p>
-<dt><code>s</code></p>
-<dd> STRING</p>
-<dt><code>x</code></p>
-<dd> HEX STRING</p>
-<dt><code>d</code></p>
-<dd> DECIMAL STRING</p>
-<dt><code>n</code></p>
-<dd> NULLOBJ</p>
-<dt><code>o</code></p>
-<dd> OBJID</p>
-<dt><code>t</code></p>
-<dd> TIMETICKS</p>
-<dt><code>a</code></p>
-<dd> IPADDRESS</p>
-<dt><code>b</code></p>
-<dd> BITS</dl>
+<dt><code>i</code></dt>
+<dd> INTEGER</dd>
+<dt><code>u</code></dt>
+<dd> UNSIGNED</dd>
+<dt><code>c</code></dt>
+<dd> COUNTER32</dd>
+<dt><code>s</code></dt>
+<dd> STRING</dd>
+<dt><code>x</code></dt>
+<dd> HEX STRING</dd>
+<dt><code>d</code></dt>
+<dd> DECIMAL STRING</dd>
+<dt><code>n</code></dt>
+<dd> NULLOBJ</dd>
+<dt><code>o</code></dt>
+<dd> OBJID</dd>
+<dt><code>t</code></dt>
+<dd> TIMETICKS</dd>
+<dt><code>a</code></dt>
+<dd> IPADDRESS</dd>
+<dt><code>b</code></dt>
+<dd> BITS</dd></dl>
 </dl>
 <p> which are handled in the same way as the <code>snmpset</code> command. </p>
 <p> For example: </p>

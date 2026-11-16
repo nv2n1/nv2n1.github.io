@@ -25,9 +25,6 @@ description: "table – Helps you implement a table."
  <i>Implement a table with datamatted storage. </i></p>
 <h3>Defines</h3>
 <pre><code>#define SPARSE_TABLE_HANDLER_NAME   'sparse_table'
-
-
-
 Functions</code></pre>
 <p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_table_handler</code> (<code>netsnmp_table_registration_info</code> *tabreq)<br />
  <i>Given a netsnmp_table_registration_info object, creates a table handler. </i><br />
@@ -71,10 +68,10 @@ Functions</code></pre>
 <p> Call this from subhandlers on a request to extract the processed netsnmp_request_info information. The resulting information includes the index values and the column number. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>request</i> populated netsnmp request structure</dl>
+<dd><i>request</i> populated netsnmp request structure</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>populated netsnmp_table_request_info structure</dl>
+<dd>populated netsnmp_table_request_info structure</dd></dl>
 <p> Definition at line 125 of file table.c. </p>
 <p> References netsnmp_request_get_list_data(). </p>
 <p> Referenced by _netsnmp_tdata_helper_handler(), netsnmp_container_table_row_insert(), netsnmp_insert_iterator_context(), netsnmp_insert_table_row(), netsnmp_table_data_helper_handler(), netsnmp_table_data_set_helper_handler(), netsnmp_table_iterator_helper_handler(), and table_helper_handler().</p>
@@ -89,10 +86,10 @@ Functions</code></pre>
 <p> The table helper handler pulls out the column number and indexes from the request oid so that you don&#8217;t have to do the complex work of parsing within your own code. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>tabreq</i> is a pointer to a netsnmp_table_registration_info struct. The table handler needs to know up front how your table is structured. A netsnmp_table_registeration_info structure that is passed to the table handler should contain the asn index types for the table as well as the minimum and maximum column that should be used.</dl>
+<dd><i>tabreq</i> is a pointer to a netsnmp_table_registration_info struct. The table handler needs to know up front how your table is structured. A netsnmp_table_registeration_info structure that is passed to the table handler should contain the asn index types for the table as well as the minimum and maximum column that should be used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Returns a pointer to a netsnmp_mib_handler struct which contains the handler&#8217;s name and the access method</dl>
+<dd>Returns a pointer to a netsnmp_mib_handler struct which contains the handler&#8217;s name and the access method</dd></dl>
 <p> Definition at line 85 of file table.c. </p>
 <p> References count_varbinds(), netsnmp_table_registration_info_s::indexes, netsnmp_mib_handler_s::myvoid, netsnmp_create_handler(), NULL, netsnmp_table_registration_info_s::number_indexes, snmp_log(), and table_helper_handler(). </p>
 <p> Referenced by netsnmp_register_table(), and netsnmp_sparse_table_register().</p>

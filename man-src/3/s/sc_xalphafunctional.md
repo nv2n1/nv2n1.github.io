@@ -11,40 +11,18 @@ description: "sc::XalphaFunctional –"
 <p> Implements the Xalpha exchange functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>XalphaFunctional (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 XalphaFunctional (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void point (const PointInputData &amp;, PointOutputData &amp;)
-
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the object.
-
-
-
 Protected Attributes
 double alpha_
-
-
-
 double factor_</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements the Xalpha exchange functional.</p>

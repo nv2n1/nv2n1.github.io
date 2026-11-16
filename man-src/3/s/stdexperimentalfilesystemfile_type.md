@@ -11,29 +11,17 @@ std::experimental::filesystem::file_type - std::experimental::filesystem::file_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/filesystem&gt;
-
 enum class file_type {
-
     none = 0,
-
     not_found = -1,
-
     regular = 1,
-
     directory = 2,
-
     symlink = 3,                                 (filesystem TS)
-
     block = 4,
-
     character = 5,
-
     fifo = 6,
-
     socket = 7,
-
     unknown = 8
-
 };</code></pre> 
 Indicates a type of a file or directory a path refers to. 
 &nbsp;This section is incomplete 

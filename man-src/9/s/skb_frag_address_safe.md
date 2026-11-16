@@ -14,7 +14,7 @@ description: "skb_frag_address_safe – gets the address of the data contained i
 <p><i>frag</i></p>
 <dl>
 <dd>
-<dd>the paged fragment buffer</dl>
+</dd><dd>the paged fragment buffer</dd></dl>
 <h2>Description</h2>
 <p>Returns the address of the data within <i>frag</i>. Checks that the page is mapped and returns <code>NULL</code> otherwise.</p>
 <h2>Copyright</h2>

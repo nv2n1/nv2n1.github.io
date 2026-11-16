@@ -16,9 +16,9 @@ ibacm_prov - InfiniBand communication management assistant provider interface
 
 The ibacm provider interface provides a plugin interface that allows a vendor to implement proprietary solutions to support scalable address and route resolution services over InfiniBand. To add a provider to the ibacm core service, the provider must
 <dl><dt>1. be implemented as a shared library;
-<dd><dt>2. be installed under a configured directory, eg., /usr/lib64/ibacm/;
-<dd><dt>3 export a function provider_query() that returns a pointer to its provider info
-<dd>and version info.</dl>
+</dt><dd></dd><dt>2. be installed under a configured directory, eg., /usr/lib64/ibacm/;
+</dt><dd></dd><dt>3 export a function provider_query() that returns a pointer to its provider info
+</dt><dd>and version info.</dd></dl>
  The prototype of provider_query function is defined below: struct acm_provider {
     size_t size;
     uint32_t version;

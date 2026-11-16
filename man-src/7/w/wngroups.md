@@ -14,19 +14,19 @@ description: "wngroups – discussion of WordNet search code to group similar ve
 <p>Coverage of verb groups is incomplete.</p>
 <h2>Environment Variables (Unix)</h2>
 <dl>
-<dt><code>WNHOME</code></p>
-<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</p>
-<dt><code>WNSEARCHDIR</code></p>
-<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dl>
+<dt><code>WNHOME</code></dt>
+<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
 <h2>Registry (Windows)</h2>
 <dl>
-<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></p>
-<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>sentidx.vrb</code></p>
-<dd>verb sense keys and sentence frame numbers</p>
-<dt><code>sents.vrb</code></p>
-<dd>example sentence frames</dl>
+<dt><code>sentidx.vrb</code></dt>
+<dd>verb sense keys and sentence frame numbers</dd>
+<dt><code>sents.vrb</code></dt>
+<dd>example sentence frames</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-wn/">wn</a></code>(1), <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1), <code><a href="/docs/linux/man/5-senseidx/">senseidx</a></code>(5), <code><a href="/docs/linux/man/3-wnsearch/">wnsearch</a></code>(3), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/7-wnintro/">wnintro</a></code>(7). </p>

@@ -16,5 +16,6 @@ description: "dddupdate-config – ddupdate configuration file setup tool."
 <p>Does not support configuration of more advanced features like ipv6 and non-standard address-plugins beyond <i>web-default-ip</i> and <i>default-if</i>. </p>
 <h2>See Also</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code></p>
+<dt><code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code></dt>
 <dd>
+</dd></dl>

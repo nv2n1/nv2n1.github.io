@@ -12,12 +12,10 @@ description: "PCRE – Perl-compatible regular expressions."
 <pre><code>#include &lt;pcreposix.h&gt;
 int regcomp(regex_t *preg, const char *pattern,
             int cflags);
-
 int regexec(regex_t *preg, const char *string,
             size_t nmatch, regmatch_t pmatch[], int eflags);
 size_t regerror(int errcode, const regex_t *preg,
                 char *errbuf, size_t errbuf_size);
-
 void regfree(regex_t *preg);</code></pre>
 <h2>Description</h2>
 <p>This set of functions provides a POSIX-style API for the PCRE regular expression 8-bit library. See the <code>pcreapi</code> documentation for a description of PCRE&#8217;s native API, which contains much additional functionality. There is no POSIX-style wrapper for PCRE&#8217;s 16-bit and 32-bit library. </p>

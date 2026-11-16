@@ -14,7 +14,7 @@ description: "atapi_check_dma – Check whether ATAPI DMA can be supported"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Metadata associated with taskfile to check</dl>
+</dd><dd>Metadata associated with taskfile to check</dd></dl>
 <h2>Description</h2>
 <p>Allow low-level driver to filter ATA PACKET commands, returning a status indicating whether or not it is OK to use DMA for the supplied PACKET command. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
@@ -23,5 +23,5 @@ description: "atapi_check_dma – Check whether ATAPI DMA can be supported"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

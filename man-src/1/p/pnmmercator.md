@@ -28,16 +28,16 @@ description: "pnmmercator – transform a worldmap from rectangular projection t
 <h2>OPTIONS</h2>
 <p> &lt;dl compact=&quot;compact&quot;&gt;</p>
 <dl>
-<dt><code>-inverse</code></p>
+<dt><code>-inverse</code></dt>
 <dd>
 <p> With this option a conversion from Mercator to degrees is applied.The output image will have half the height of the input map. </p>
-<dt><code>-nomix</code></p>
+</dd><dt><code>-nomix</code></dt>
 <dd>
 <p> Default behaviour is that color blending is applied in between two adjacent rows. If you specify the -nomix parameter there is no blending. The consequence is a banding at the top and bottom of the map. With this option, the output map will also consist of exactly the same colors as the input. </p>
-<dt><code>-verbose</code> and <code>-vverbose</code></p>
+</dd><dt><code>-verbose</code> and <code>-vverbose</code></dt>
 <dd>
 <p> This parameter outputs some additional information. If you double the &#8216;v&#8217;, it will output debug data about the lat/long degree and Mercator conversions. </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pnm</code>(1)<br />
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) </p>

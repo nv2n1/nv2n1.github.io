@@ -18,46 +18,46 @@ description: "sphtriangulate – Delaunay or Voronoi construction of spherical l
 <p> None.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</p>
-<dt><code>-A</code></p>
-<dd> Compute the area of the spherical triangles (<code>-Qd</code>) or polygons (<code>-Qv</code>) and write the areas (in chosen units; see <code>-L</code>) in the output segment headers [no areas calculated].</p>
-<dt><code>-C</code></p>
-<dd> For large data set you can save some memory (at the expense of more processing) by only storing one form of location coordinates (geographic or Cartesian 3-D vectors) at any given time, translating from one form to the other when necessary [Default keeps both arrays in memory].</p>
-<dt><code>-D</code></p>
-<dd> Used to skip the last (repeated) input vertex at the end of a closed segment if it equals the first point in the segment. [Default uses all points].</p>
-<dt><code>-L</code><i>unit</i></p>
-<dd> Specify the unit used for distance and area calculations. Choose among <code>e</code> (m), <code>f</code> (foot), <code>k</code> (km), <code>m</code> (mile), <code>n</code> (nautical mile), <code>u</code> (survey foot), or <code>d</code> (spherical degree). A spherical approximation is used unless <i>PROJ_ELLIPSOID</i> is set to an actual ellipsoid, in which case we convert latitudes to authalic latitudes before calculating areas. When degree is selected the areas are given in steradians.</p>
-<dt><code>-N</code><i>nfile</i></p>
-<dd> Write the information pertaining to each polygon. For Delaunay: the three node number and the triangle area (if <code>-A</code> was set); for Voronoi the unique node lon, lat and polygon area (if <code>-A</code> was set)) to a separate file. This information is also encoded in the segment headers of ASCII output files. Required if binary output is needed.</p>
-<dt><code>-Q</code><code>d</code>|<code>v</code></p>
-<dd> Append <code>d</code> for Delaunay triangles or <code>v</code> for Voronoi polygons [Delaunay]. If <code>-bo</code> is used then <code>-N</code> may be used to specify a separate file where the polygon information normally is written.</p>
-<dt><code>-T</code></p>
-<dd> Write the unique arcs of the construction [Default writes fillable triangles or polygons]. When used with <code>-A</code> we store arc length in the segment header in chosen unit (see <code>-L</code>).</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is same as input].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-r</code> <i>(more &#8230;)</i></p>
-<dd> Set pixel node registration [gridline].</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</dd>
+<dt><code>-A</code></dt>
+<dd> Compute the area of the spherical triangles (<code>-Qd</code>) or polygons (<code>-Qv</code>) and write the areas (in chosen units; see <code>-L</code>) in the output segment headers [no areas calculated].</dd>
+<dt><code>-C</code></dt>
+<dd> For large data set you can save some memory (at the expense of more processing) by only storing one form of location coordinates (geographic or Cartesian 3-D vectors) at any given time, translating from one form to the other when necessary [Default keeps both arrays in memory].</dd>
+<dt><code>-D</code></dt>
+<dd> Used to skip the last (repeated) input vertex at the end of a closed segment if it equals the first point in the segment. [Default uses all points].</dd>
+<dt><code>-L</code><i>unit</i></dt>
+<dd> Specify the unit used for distance and area calculations. Choose among <code>e</code> (m), <code>f</code> (foot), <code>k</code> (km), <code>m</code> (mile), <code>n</code> (nautical mile), <code>u</code> (survey foot), or <code>d</code> (spherical degree). A spherical approximation is used unless <i>PROJ_ELLIPSOID</i> is set to an actual ellipsoid, in which case we convert latitudes to authalic latitudes before calculating areas. When degree is selected the areas are given in steradians.</dd>
+<dt><code>-N</code><i>nfile</i></dt>
+<dd> Write the information pertaining to each polygon. For Delaunay: the three node number and the triangle area (if <code>-A</code> was set); for Voronoi the unique node lon, lat and polygon area (if <code>-A</code> was set)) to a separate file. This information is also encoded in the segment headers of ASCII output files. Required if binary output is needed.</dd>
+<dt><code>-Q</code><code>d</code>|<code>v</code></dt>
+<dd> Append <code>d</code> for Delaunay triangles or <code>v</code> for Voronoi polygons [Delaunay]. If <code>-bo</code> is used then <code>-N</code> may be used to specify a separate file where the polygon information normally is written.</dd>
+<dt><code>-T</code></dt>
+<dd> Write the unique arcs of the construction [Default writes fillable triangles or polygons]. When used with <code>-A</code> we store arc length in the segment header in chosen unit (see <code>-L</code>).</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is same as input].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-r</code> <i>(more &#8230;)</i></dt>
+<dd> Set pixel node registration [gridline].</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your <code>gmt.conf</code> file. Longitude and latitude are formatted according to <i>FORMAT_GEO_OUT</i>, whereas other values are formatted according to <i>FORMAT_FLOAT_OUT</i>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <i>FORMAT_FLOAT_OUT</i> setting.</p>
 <h2>EXAMPLES</h2>

@@ -18,36 +18,36 @@ description: "Gromit-MPX – Presentation helper to make annotations on screen"
 <h2>KEYBOARD CONTROL</h2>
 <p> By default, Gromit-MPX grabs the &quot;F9&quot; key (this can be changed using the &quot;&#8211;key&quot; option), making it unavailable to other application. The available shortcuts are:</p>
 <dl>
-<dt><code>F9</code></p>
-<dd> toggle painting</p>
-<dt><code>SHIFT-F9</code></p>
-<dd> clear screen</p>
-<dt><code>CTRL-F9</code></p>
-<dd> toggle visibility</p>
-<dt><code>ALT-F9</code></p>
-<dd> quit Gromit-MPX</dl>
+<dt><code>F9</code></dt>
+<dd> toggle painting</dd>
+<dt><code>SHIFT-F9</code></dt>
+<dd> clear screen</dd>
+<dt><code>CTRL-F9</code></dt>
+<dd> toggle visibility</dd>
+<dt><code>ALT-F9</code></dt>
+<dd> quit Gromit-MPX</dd></dl>
 <h2>OPTIONS (STARTUP)</h2>
 <p> A short summary of the available commandline arguments for invoking Gromit-MPX, see below for the options to control an already running Gromit-MPX process:</p>
 <dl>
-<dt><code>-a, &#8211;active</code></p>
-<dd> start Gromit-MPX and immediately activate it.</p>
-<dt><code>-k &lt;keysym&gt;, &#8211;key &lt;keysym&gt;</code></p>
-<dd> will change the key used to grab the mouse. &lt;keysym&gt; can e.g. be &quot;F9&quot;, &quot;F12&quot;, &quot;Control_R&quot; or &quot;Print&quot;. To determine the keysym for different keys you can use the <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1) command. You can specify &quot;none&quot; to prevent Gromit-MPX from grabbing a key.</p>
-<dt><code>-K &lt;keycode&gt;, &#8211;keycode &lt;keycode&gt;</code></p>
-<dd> will change the key used to grab the mouse. Under rare circumstances identifying the key with the keysym can fail. You can then use the keycode to specify the key uniquely. To determine the keycode for different keys you can use the <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1) command.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> gives some debug output.</dl>
+<dt><code>-a, &#8211;active</code></dt>
+<dd> start Gromit-MPX and immediately activate it.</dd>
+<dt><code>-k &lt;keysym&gt;, &#8211;key &lt;keysym&gt;</code></dt>
+<dd> will change the key used to grab the mouse. &lt;keysym&gt; can e.g. be &quot;F9&quot;, &quot;F12&quot;, &quot;Control_R&quot; or &quot;Print&quot;. To determine the keysym for different keys you can use the <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1) command. You can specify &quot;none&quot; to prevent Gromit-MPX from grabbing a key.</dd>
+<dt><code>-K &lt;keycode&gt;, &#8211;keycode &lt;keycode&gt;</code></dt>
+<dd> will change the key used to grab the mouse. Under rare circumstances identifying the key with the keysym can fail. You can then use the keycode to specify the key uniquely. To determine the keycode for different keys you can use the <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1) command.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> gives some debug output.</dd></dl>
 <h2>OPTIONS (CONTROL)</h2>
 <p> A sort summary of the available commandline arguments to control an already running Gromit-MPX process, see above for the options available to start Gromit-MPX.</p>
 <dl>
-<dt><code>-q, &#8211;quit</code></p>
-<dd> will cause the main Gromit-MPX process to quit.</p>
-<dt><code>-t, &#8211;toggle</code></p>
-<dd> will toggle the grabbing of the cursor.</p>
-<dt><code>-v, &#8211;visibility</code></p>
-<dd> will toggle the visibility of the window.</p>
-<dt><code>-c, &#8211;clear</code></p>
-<dd> will clear the screen.</dl>
+<dt><code>-q, &#8211;quit</code></dt>
+<dd> will cause the main Gromit-MPX process to quit.</dd>
+<dt><code>-t, &#8211;toggle</code></dt>
+<dd> will toggle the grabbing of the cursor.</dd>
+<dt><code>-v, &#8211;visibility</code></dt>
+<dd> will toggle the visibility of the window.</dd>
+<dt><code>-c, &#8211;clear</code></dt>
+<dd> will clear the screen.</dd></dl>
 <h2>BUGS</h2>
 <p> When there is no compositing manager such as Compiz or xcompmgr running, Gromit-MPX falls back to a legacy drawing mode. This may drastically slow down your X-Server, especially when you draw very thin lines. It makes heavy use of the shape extension, which is quite expensive if you paint a complex pattern on screen. Especially terminal-programs tend to scroll incredibly slow if something is painted over their window.</p>
 <h2>AUTHORS</h2>

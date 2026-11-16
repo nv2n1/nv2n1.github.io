@@ -26,14 +26,14 @@ rcopy source server[:destination][-p port] rcopy[-p port]
 
 <dl>
 <dt>ource
-<dd> The name and path of the source file to copy.
-<dt>erver
-<dd> The name or address of the destination server.
-<dt>:destination
-<dd> An optional destination filename and path. If not given, the destination filename will match that of the source.
-<dt>-p server_port
-<dd> The server's port number.
-<dt></dl>
+</dt><dd> The name and path of the source file to copy.
+</dd><dt>erver
+</dt><dd> The name or address of the destination server.
+</dd><dt>:destination
+</dt><dd> An optional destination filename and path. If not given, the destination filename will match that of the source.
+</dd><dt>-p server_port
+</dt><dd> The server's port number.
+</dd><dt></dt></dl>
 
 <h2>NOTES</h2>
 
@@ -48,3 +48,4 @@ rcopy source server[:destination][-p port] rcopy[-p port]
 <h2>Index</h2>
 
 
+</dd>

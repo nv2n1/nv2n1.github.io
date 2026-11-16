@@ -23,76 +23,74 @@ int mount(const char *source, const char *target,
 <p> The <i>data</i> argument is interpreted by the different filesystems. Typically it is a string of comma-separated options understood by this filesystem. See <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) for details of the options available for each filesystem type. </p>
 <p> A call to <code>mount</code>() performs one of a number of general types of operation, depending on the bits specified in <i>mountflags</i>. The choice of which operation to perform is determined by testing the bits set in <i>mountflags</i>, with the tests being conducted in the order listed here:</p>
 <dl>
-<dt>*</p>
-<dd> Remount an existing mount: <i>mountflags</i> includes <code>MS_REMOUNT</code>.</p>
-<dt>*</p>
-<dd> Create a bind mount: <i>mountflags</i> includes <code>MS_BIND</code>.</p>
-<dt>*</p>
-<dd> Change the propagation type of an existing mount: <i>mountflags</i> includes one of <code>MS_SHARED</code>, <code>MS_PRIVATE</code>, <code>MS_SLAVE</code>, or <code>MS_UNBINDABLE</code>.</p>
-<dt>*</p>
-<dd> Move an existing mount to a new location: <i>mountflags</i> includes <code>MS_MOVE</code>.</p>
-<dt>*</p>
-<dd> Create a new mount: <i>mountflags</i> includes none of the above flags.</dl>
+<dt>*</dt>
+<dd> Remount an existing mount: <i>mountflags</i> includes <code>MS_REMOUNT</code>.</dd>
+<dt>*</dt>
+<dd> Create a bind mount: <i>mountflags</i> includes <code>MS_BIND</code>.</dd>
+<dt>*</dt>
+<dd> Change the propagation type of an existing mount: <i>mountflags</i> includes one of <code>MS_SHARED</code>, <code>MS_PRIVATE</code>, <code>MS_SLAVE</code>, or <code>MS_UNBINDABLE</code>.</dd>
+<dt>*</dt>
+<dd> Move an existing mount to a new location: <i>mountflags</i> includes <code>MS_MOVE</code>.</dd>
+<dt>*</dt>
+<dd> Create a new mount: <i>mountflags</i> includes none of the above flags.</dd></dl>
 <p> Each of these operations is detailed later in this page. Further flags may be specified in <i>mountflags</i> to modify the behavior of <code>mount</code>(), as described below.</p>
 <h3>Additional mount flags</h3>
 <p> The list below describes the additional flags that can be specified in <i>mountflags</i>. Note that some operation types ignore some or all of these flags, as described later in this page.</p>
 <dl>
-<dt><code>MS_DIRSYNC</code> (since Linux 2.5.19)</p>
-<dd> Make directory changes on this filesystem synchronous. (This property can be obtained for individual directories or subtrees using <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).)</p>
-<dt><code>MS_LAZYTIME</code> (since Linux 4.0)</p>
-<dd> Reduce on-disk updates of inode timestamps (atime, mtime, ctime) by maintaining these changes only in memory. The on-disk timestamps are updated only when:</p>
+<dt><code>MS_DIRSYNC</code> (since Linux 2.5.19)</dt>
+<dd> Make directory changes on this filesystem synchronous. (This property can be obtained for individual directories or subtrees using <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).)</dd>
+<dt><code>MS_LAZYTIME</code> (since Linux 4.0)</dt>
+<dd> Reduce on-disk updates of inode timestamps (atime, mtime, ctime) by maintaining these changes only in memory. The on-disk timestamps are updated only when:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>(a)</p>
-<dd> the inode needs to be updated for some change unrelated to file timestamps;</p>
-<dt>(b)</p>
-<dd> the application employs <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), <code><a href="/docs/linux/man/2-syncfs/">syncfs</a></code>(2), or <code><a href="/docs/linux/man/2-sync/">sync</a></code>(2);</p>
-<dt>(c)</p>
-<dd> an undeleted inode is evicted from memory; or</p>
-<dt>(d)</p>
-<dd> more than 24 hours have passed since the inode was written to disk.</dl>
+<dt>(a)</dt>
+<dd> the inode needs to be updated for some change unrelated to file timestamps;</dd>
+<dt>(b)</dt>
+<dd> the application employs <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), <code><a href="/docs/linux/man/2-syncfs/">syncfs</a></code>(2), or <code><a href="/docs/linux/man/2-sync/">sync</a></code>(2);</dd>
+<dt>(c)</dt>
+<dd> an undeleted inode is evicted from memory; or</dd>
+<dt>(d)</dt>
+<dd> more than 24 hours have passed since the inode was written to disk.</dd></dl>
 </dl>
 <dt>
-<dd> This mount option significantly reduces writes needed to update the inode&#8217;s timestamps, especially mtime and atime. However, in the event of a system crash, the atime and mtime fields on disk might be out of date by up to 24 hours.</p>
+</dt><dd> This mount option significantly reduces writes needed to update the inode&#8217;s timestamps, especially mtime and atime. However, in the event of a system crash, the atime and mtime fields on disk might be out of date by up to 24 hours.</dd>
 <dt>
-<dd> Examples of workloads where this option could be of significant benefit include frequent random writes to preallocated files, as well as cases where the <code>MS_STRICTATIME</code> mount option is also enabled. (The advantage of combining <code>MS_STRICTATIME</code> and <code>MS_LAZYTIME</code> is that <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) will return the correctly updated atime, but the atime updates will be flushed to disk only in the cases listed above.)</p>
-<dt><code>MS_MANDLOCK</code></p>
-<dd> Permit mandatory locking on files in this filesystem. (Mandatory locking must still be enabled on a per-file basis, as described in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).) Since Linux 4.5, this mount option requires the <code>CAP_SYS_ADMIN</code> capability and a kernel configured with the <code>CONFIG_MANDATORY_FILE_LOCKING</code> option.</p>
-<dt><code>MS_NOATIME</code></p>
-<dd> Do not update access times for (all types of) files on this filesystem.</p>
-<dt><code>MS_NODEV</code></p>
-<dd> Do not allow access to devices (special files) on this filesystem.</p>
-<dt><code>MS_NODIRATIME</code></p>
-<dd> Do not update access times for directories on this filesystem. This flag provides a subset of the functionality provided by <code>MS_NOATIME</code>; that is, <code>MS_NOATIME</code> implies <code>MS_NODIRATIME</code>.</p>
-<dt><code>MS_NOEXEC</code></p>
-<dd> Do not allow programs to be executed from this filesystem.</p>
-<dt><code>MS_NOSUID</code></p>
-<dd> Do not honor set-user-ID and set-group-ID bits or file capabilities when executing programs from this filesystem.</p>
-<dt><code>MS_RDONLY</code></p>
-<dd> Mount filesystem read-only.</p>
-<dt><code>MS_REC</code> (since Linux 2.4.11)</p>
-<dd> Used in conjunction with <code>MS_BIND</code> to create a recursive bind mount, and in conjunction with the propagation type flags to recursively change the propagation type of all of the mounts in a subtree. See below for further details.</p>
-<dt><code>MS_RELATIME</code> (since Linux 2.6.20)</p>
-<dd> When a file on this filesystem is accessed, update the file&#8217;s last access time (atime) only if the current value of atime is less than or equal to the file&#8217;s last modification time (mtime) or last status change time (ctime). This option is useful for programs, such as <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), that need to know when a file has been read since it was last modified. Since Linux 2.6.30, the kernel defaults to the behavior provided by this flag (unless <code>MS_NOATIME</code> was specified), and the <code>MS_STRICTATIME</code> flag is required to obtain traditional semantics. In addition, since Linux 2.6.30, the file&#8217;s last access time is always updated if it is more than 1 day old.</p>
-<dt><code>MS_SILENT</code> (since Linux 2.6.17)</p>
-<dd> Suppress the display of certain (<i>printk</i>()) warning messages in the kernel log. This flag supersedes the misnamed and obsolete <code>MS_VERBOSE</code> flag (available since Linux 2.4.12), which has the same meaning.</p>
-<dt><code>MS_STRICTATIME</code> (since Linux 2.6.30)</p>
-<dd> Always update the last access time (atime) when files on this filesystem are accessed. (This was the default behavior before Linux 2.6.30.) Specifying this flag overrides the effect of setting the <code>MS_NOATIME</code> and <code>MS_RELATIME</code> flags.</p>
-<dt><code>MS_SYNCHRONOUS</code></p>
-<dd> Make writes on this filesystem synchronous (as though the <code>O_SYNC</code> flag to <code><a href="/docs/linux/man/2-open/">open</a></code>(2) was specified for all file opens to this filesystem).</p>
-<dt><code>MS_NOSYMFOLLOW</code> (since Linux 5.10)</p>
-<dd> Do not follow symbolic links when resolving paths. Symbolic links can still be created, and <code><a href="/docs/linux/man/1-readlink/">readlink</a></code>(1), <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2), <code><a href="/docs/linux/man/1-realpath/">realpath</a></code>(1), and <code><a href="/docs/linux/man/3-realpath/">realpath</a></code>(3) all still work properly.</dl>
+</dt><dd> Examples of workloads where this option could be of significant benefit include frequent random writes to preallocated files, as well as cases where the <code>MS_STRICTATIME</code> mount option is also enabled. (The advantage of combining <code>MS_STRICTATIME</code> and <code>MS_LAZYTIME</code> is that <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) will return the correctly updated atime, but the atime updates will be flushed to disk only in the cases listed above.)</dd>
+<dt><code>MS_MANDLOCK</code></dt>
+<dd> Permit mandatory locking on files in this filesystem. (Mandatory locking must still be enabled on a per-file basis, as described in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).) Since Linux 4.5, this mount option requires the <code>CAP_SYS_ADMIN</code> capability and a kernel configured with the <code>CONFIG_MANDATORY_FILE_LOCKING</code> option.</dd>
+<dt><code>MS_NOATIME</code></dt>
+<dd> Do not update access times for (all types of) files on this filesystem.</dd>
+<dt><code>MS_NODEV</code></dt>
+<dd> Do not allow access to devices (special files) on this filesystem.</dd>
+<dt><code>MS_NODIRATIME</code></dt>
+<dd> Do not update access times for directories on this filesystem. This flag provides a subset of the functionality provided by <code>MS_NOATIME</code>; that is, <code>MS_NOATIME</code> implies <code>MS_NODIRATIME</code>.</dd>
+<dt><code>MS_NOEXEC</code></dt>
+<dd> Do not allow programs to be executed from this filesystem.</dd>
+<dt><code>MS_NOSUID</code></dt>
+<dd> Do not honor set-user-ID and set-group-ID bits or file capabilities when executing programs from this filesystem.</dd>
+<dt><code>MS_RDONLY</code></dt>
+<dd> Mount filesystem read-only.</dd>
+<dt><code>MS_REC</code> (since Linux 2.4.11)</dt>
+<dd> Used in conjunction with <code>MS_BIND</code> to create a recursive bind mount, and in conjunction with the propagation type flags to recursively change the propagation type of all of the mounts in a subtree. See below for further details.</dd>
+<dt><code>MS_RELATIME</code> (since Linux 2.6.20)</dt>
+<dd> When a file on this filesystem is accessed, update the file&#8217;s last access time (atime) only if the current value of atime is less than or equal to the file&#8217;s last modification time (mtime) or last status change time (ctime). This option is useful for programs, such as <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), that need to know when a file has been read since it was last modified. Since Linux 2.6.30, the kernel defaults to the behavior provided by this flag (unless <code>MS_NOATIME</code> was specified), and the <code>MS_STRICTATIME</code> flag is required to obtain traditional semantics. In addition, since Linux 2.6.30, the file&#8217;s last access time is always updated if it is more than 1 day old.</dd>
+<dt><code>MS_SILENT</code> (since Linux 2.6.17)</dt>
+<dd> Suppress the display of certain (<i>printk</i>()) warning messages in the kernel log. This flag supersedes the misnamed and obsolete <code>MS_VERBOSE</code> flag (available since Linux 2.4.12), which has the same meaning.</dd>
+<dt><code>MS_STRICTATIME</code> (since Linux 2.6.30)</dt>
+<dd> Always update the last access time (atime) when files on this filesystem are accessed. (This was the default behavior before Linux 2.6.30.) Specifying this flag overrides the effect of setting the <code>MS_NOATIME</code> and <code>MS_RELATIME</code> flags.</dd>
+<dt><code>MS_SYNCHRONOUS</code></dt>
+<dd> Make writes on this filesystem synchronous (as though the <code>O_SYNC</code> flag to <code><a href="/docs/linux/man/2-open/">open</a></code>(2) was specified for all file opens to this filesystem).</dd>
+<dt><code>MS_NOSYMFOLLOW</code> (since Linux 5.10)</dt>
+<dd> Do not follow symbolic links when resolving paths. Symbolic links can still be created, and <code><a href="/docs/linux/man/1-readlink/">readlink</a></code>(1), <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2), <code><a href="/docs/linux/man/1-realpath/">realpath</a></code>(1), and <code><a href="/docs/linux/man/3-realpath/">realpath</a></code>(3) all still work properly.</dd></dl>
 <p> From Linux 2.4 onward, some of the above flags are settable on a per-mount basis, while others apply to the superblock of the mounted filesystem, meaning that all mounts of the same filesystem share those flags. (Previously, all of the flags were per-superblock.) </p>
 <p> The per-mount-point flags are as follows:</p>
 <dl>
-<dt>*</p>
-<dd> Since Linux 2.4: <code>MS_NODEV</code>, <code>MS_NOEXEC</code>, and <code>MS_NOSUID</code> flags are settable on a per-mount-point basis.</p>
-<dt>*</p>
-<dd> Additionally, since Linux 2.6.16: <code>MS_NOATIME</code> and <code>MS_NODIRATIME</code>.</p>
-<dt>*</p>
-<dd> Additionally, since Linux 2.6.20: <code>MS_RELATIME</code>.</dl>
+<dt>*</dt>
+<dd> Since Linux 2.4: <code>MS_NODEV</code>, <code>MS_NOEXEC</code>, and <code>MS_NOSUID</code> flags are settable on a per-mount-point basis.</dd>
+<dt>*</dt>
+<dd> Additionally, since Linux 2.6.16: <code>MS_NOATIME</code> and <code>MS_NODIRATIME</code>.</dd>
+<dt>*</dt>
+<dd> Additionally, since Linux 2.6.20: <code>MS_RELATIME</code>.</dd></dl>
 <p> The following flags are per-superblock: <code>MS_DIRSYNC</code>, <code>MS_LAZYTIME</code>, <code>MS_MANDLOCK</code>, <code>MS_SILENT</code>, and <code>MS_SYNCHRONOUS</code>. The initial settings of these flags are determined on the first mount of the filesystem, and will be shared by all subsequent mounts of the same filesystem. Subsequently, the settings of the flags can be changed via a remount operation (see below). Such changes will be visible via all mount points associated with the filesystem. </p>
 <p> Since Linux 2.6.16, <code>MS_RDONLY</code> can be set or cleared on a per-mount-point basis as well as on the underlying filesystem superblock. The mounted filesystem will be writable only if neither the filesystem nor the mountpoint are flagged as read-only.</p>
 <h3>Remounting an existing mount</h3>
@@ -115,18 +113,18 @@ int mount(const char *source, const char *target,
 <p> The <i>source</i>, <i>filesystemtype</i>, and <i>data</i> arguments are ignored. </p>
 <p> The meanings of the propagation type flags are as follows:</p>
 <dl>
-<dt><code>MS_SHARED</code></p>
-<dd> Make this mount point shared. Mount and unmount events immediately under this mount point will propagate to the other mount points that are members of this mount&#8217;s peer group. Propagation here means that the same mount or unmount will automatically occur under all of the other mount points in the peer group. Conversely, mount and unmount events that take place under peer mount points will propagate to this mount point.</p>
-<dt><code>MS_PRIVATE</code></p>
-<dd> Make this mount point private. Mount and unmount events do not propagate into or out of this mount point.</p>
-<dt><code>MS_SLAVE</code></p>
-<dd> If this is a shared mount point that is a member of a peer group that contains other members, convert it to a slave mount. If this is a shared mount point that is a member of a peer group that contains no other members, convert it to a private mount. Otherwise, the propagation type of the mount point is left unchanged.</p>
+<dt><code>MS_SHARED</code></dt>
+<dd> Make this mount point shared. Mount and unmount events immediately under this mount point will propagate to the other mount points that are members of this mount&#8217;s peer group. Propagation here means that the same mount or unmount will automatically occur under all of the other mount points in the peer group. Conversely, mount and unmount events that take place under peer mount points will propagate to this mount point.</dd>
+<dt><code>MS_PRIVATE</code></dt>
+<dd> Make this mount point private. Mount and unmount events do not propagate into or out of this mount point.</dd>
+<dt><code>MS_SLAVE</code></dt>
+<dd> If this is a shared mount point that is a member of a peer group that contains other members, convert it to a slave mount. If this is a shared mount point that is a member of a peer group that contains no other members, convert it to a private mount. Otherwise, the propagation type of the mount point is left unchanged.</dd>
 <dt>
-<dd> When a mount point is a slave, mount and unmount events propagate into this mount point from the (master) shared peer group of which it was formerly a member. Mount and unmount events under this mount point do not propagate to any peer.</p>
+</dt><dd> When a mount point is a slave, mount and unmount events propagate into this mount point from the (master) shared peer group of which it was formerly a member. Mount and unmount events under this mount point do not propagate to any peer.</dd>
 <dt>
-<dd> A mount point can be the slave of another peer group while at the same time sharing mount and unmount events with a peer group of which it is a member.</p>
-<dt><code>MS_UNBINDABLE</code></p>
-<dd> Make this mount unbindable. This is like a private mount, and in addition this mount can&#8217;t be bind mounted. When a recursive bind mount (<code>mount</code>() with the <code>MS_BIND</code> and <code>MS_REC</code> flags) is performed on a directory subtree, any unbindable mounts within the subtree are automatically pruned (i.e., not replicated) when replicating that subtree to produce the target subtree.</dl>
+</dt><dd> A mount point can be the slave of another peer group while at the same time sharing mount and unmount events with a peer group of which it is a member.</dd>
+<dt><code>MS_UNBINDABLE</code></dt>
+<dd> Make this mount unbindable. This is like a private mount, and in addition this mount can&#8217;t be bind mounted. When a recursive bind mount (<code>mount</code>() with the <code>MS_BIND</code> and <code>MS_REC</code> flags) is performed on a directory subtree, any unbindable mounts within the subtree are automatically pruned (i.e., not replicated) when replicating that subtree to produce the target subtree.</dd></dl>
 <p> By default, changing the propagation type affects only the <i>target</i> mount point. If the <code>MS_REC</code> flag is also specified in <i>mountflags</i>, then the propagation type of all mount points under <i>target</i> is also changed. </p>
 <p> For further details regarding mount propagation types (including the default propagation type assigned to new mounts), see <code><a href="/docs/linux/man/7-mount_namespaces/">mount_namespaces</a></code>(7).</p>
 <h3>Moving a mount</h3>
@@ -140,66 +138,66 @@ int mount(const char *source, const char *target,
 <h2>ERRORS</h2>
 <p> The error values given below result from filesystem type independent errors. Each filesystem type may have its own special errors and its own special behavior. See the Linux kernel source code for details.</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> A component of a path was not searchable. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EACCES</code></p>
-<dd> Mounting a read-only filesystem was attempted without giving the <code>MS_RDONLY</code> flag.</p>
+<dt><code>EACCES</code></dt>
+<dd> A component of a path was not searchable. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EACCES</code></dt>
+<dd> Mounting a read-only filesystem was attempted without giving the <code>MS_RDONLY</code> flag.</dd>
 <dt>
-<dd> The filesystem may be read-only for various reasons, including: it resides on a read-only optical disk; it is resides on a device with a physical switch that has been set to mark the device read-only; the filesystem implementation was compiled with read-only support; or errors were detected when initially mounting the filesystem, so that it was marked read-only and can&#8217;t be remounted as read-write (until the errors are fixed).</p>
+</dt><dd> The filesystem may be read-only for various reasons, including: it resides on a read-only optical disk; it is resides on a device with a physical switch that has been set to mark the device read-only; the filesystem implementation was compiled with read-only support; or errors were detected when initially mounting the filesystem, so that it was marked read-only and can&#8217;t be remounted as read-write (until the errors are fixed).</dd>
 <dt>
-<dd> Some filesystems instead return the error <code>EROFS</code> on an attempt to mount a read-only filesystem.</p>
-<dt><code>EACCES</code></p>
-<dd> The block device <i>source</i> is located on a filesystem mounted with the <code>MS_NODEV</code> option.</p>
-<dt><code>EBUSY</code></p>
-<dd> An attempt was made to stack a new mount directly on top of an existing mount point that was created in this mount namespace with the same <i>source</i> and <i>target</i>.</p>
-<dt><code>EBUSY</code></p>
-<dd> <i>source</i> cannot be remounted read-only, because it still holds files open for writing.</p>
-<dt><code>EFAULT</code></p>
-<dd> One of the pointer arguments points outside the user address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>source</i> had an invalid superblock.</p>
-<dt><code>EINVAL</code></p>
-<dd> A remount operation (<code>MS_REMOUNT</code>) was attempted, but <i>source</i> was not already mounted on <i>target</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> A move operation (<code>MS_MOVE</code>) was attempted, but the mount tree under <i>source</i> includes unbindable mounts and <i>target</i> is a mount point that has propagation type <code>MS_SHARED</code>.</p>
-<dt><code>EINVAL</code></p>
-<dd> A move operation (<code>MS_MOVE</code>) was attempted, but the parent mount of <i>source</i> mount has propagation type <code>MS_SHARED</code>.</p>
-<dt><code>EINVAL</code></p>
-<dd> A move operation (<code>MS_MOVE</code>) was attempted, but <i>source</i> was not a mount point, or was &#8216;/&#8217;.</p>
-<dt><code>EINVAL</code></p>
-<dd> A bind operation (<code>MS_BIND</code>) was requested where <i>source</i> referred a mount namespace magic link (i.e., a <i>/proc/[pid]/ns/mnt</i> magic link or a bind mount to such a link) and the propagation type of the parent mount of <i>target</i> was <code>MS_SHARED</code>, but propagation of the requested bind mount could lead to a circular dependency that might prevent the mount namespace from ever being freed.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>mountflags</i> includes more than one of <code>MS_SHARED</code>, <code>MS_PRIVATE</code>, <code>MS_SLAVE</code>, or <code>MS_UNBINDABLE</code>.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>mountflags</i> includes <code>MS_SHARED</code>, <code>MS_PRIVATE</code>, <code>MS_SLAVE</code>, or <code>MS_UNBINDABLE</code> and also includes a flag other than <code>MS_REC</code> or <code>MS_SILENT</code>.</p>
-<dt><code>EINVAL</code></p>
-<dd> An attempt was made to bind mount an unbindable mount.</p>
-<dt><code>EINVAL</code></p>
-<dd> In an unprivileged mount namespace (i.e., a mount namespace owned by a user namespace that was created by an unprivileged user), a bind mount operation (<code>MS_BIND</code>) was attempted without specifying (<code>MS_REC</code>), which would have revealed the filesystem tree underneath one of the submounts of the directory being bound.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many links encountered during pathname resolution.</p>
-<dt><code>ELOOP</code></p>
-<dd> A move operation was attempted, and <i>target</i> is a descendant of <i>source</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> (In case no block device is required:) Table of dummy devices is full.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> A pathname was longer than <code>MAXPATHLEN</code>.</p>
-<dt><code>ENODEV</code></p>
-<dd> <i>filesystemtype</i> not configured in the kernel.</p>
-<dt><code>ENOENT</code></p>
-<dd> A pathname was empty or had a nonexistent component.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The kernel could not allocate a free page to copy filenames or data into.</p>
-<dt><code>ENOTBLK</code></p>
-<dd> <i>source</i> is not a block device (and a device was required).</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>target</i>, or a prefix of <i>source</i>, is not a directory.</p>
-<dt><code>ENXIO</code></p>
-<dd> The major number of the block device <i>source</i> is out of range.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller does not have the required privileges.</p>
-<dt><code>EROFS</code></p>
-<dd> Mounting a read-only filesystem was attempted without giving the <code>MS_RDONLY</code> flag. See <code>EACCES</code>, above.</dl>
+</dt><dd> Some filesystems instead return the error <code>EROFS</code> on an attempt to mount a read-only filesystem.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The block device <i>source</i> is located on a filesystem mounted with the <code>MS_NODEV</code> option.</dd>
+<dt><code>EBUSY</code></dt>
+<dd> An attempt was made to stack a new mount directly on top of an existing mount point that was created in this mount namespace with the same <i>source</i> and <i>target</i>.</dd>
+<dt><code>EBUSY</code></dt>
+<dd> <i>source</i> cannot be remounted read-only, because it still holds files open for writing.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> One of the pointer arguments points outside the user address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>source</i> had an invalid superblock.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> A remount operation (<code>MS_REMOUNT</code>) was attempted, but <i>source</i> was not already mounted on <i>target</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> A move operation (<code>MS_MOVE</code>) was attempted, but the mount tree under <i>source</i> includes unbindable mounts and <i>target</i> is a mount point that has propagation type <code>MS_SHARED</code>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> A move operation (<code>MS_MOVE</code>) was attempted, but the parent mount of <i>source</i> mount has propagation type <code>MS_SHARED</code>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> A move operation (<code>MS_MOVE</code>) was attempted, but <i>source</i> was not a mount point, or was &#8216;/&#8217;.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> A bind operation (<code>MS_BIND</code>) was requested where <i>source</i> referred a mount namespace magic link (i.e., a <i>/proc/[pid]/ns/mnt</i> magic link or a bind mount to such a link) and the propagation type of the parent mount of <i>target</i> was <code>MS_SHARED</code>, but propagation of the requested bind mount could lead to a circular dependency that might prevent the mount namespace from ever being freed.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>mountflags</i> includes more than one of <code>MS_SHARED</code>, <code>MS_PRIVATE</code>, <code>MS_SLAVE</code>, or <code>MS_UNBINDABLE</code>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>mountflags</i> includes <code>MS_SHARED</code>, <code>MS_PRIVATE</code>, <code>MS_SLAVE</code>, or <code>MS_UNBINDABLE</code> and also includes a flag other than <code>MS_REC</code> or <code>MS_SILENT</code>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An attempt was made to bind mount an unbindable mount.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> In an unprivileged mount namespace (i.e., a mount namespace owned by a user namespace that was created by an unprivileged user), a bind mount operation (<code>MS_BIND</code>) was attempted without specifying (<code>MS_REC</code>), which would have revealed the filesystem tree underneath one of the submounts of the directory being bound.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many links encountered during pathname resolution.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> A move operation was attempted, and <i>target</i> is a descendant of <i>source</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> (In case no block device is required:) Table of dummy devices is full.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> A pathname was longer than <code>MAXPATHLEN</code>.</dd>
+<dt><code>ENODEV</code></dt>
+<dd> <i>filesystemtype</i> not configured in the kernel.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A pathname was empty or had a nonexistent component.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The kernel could not allocate a free page to copy filenames or data into.</dd>
+<dt><code>ENOTBLK</code></dt>
+<dd> <i>source</i> is not a block device (and a device was required).</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>target</i>, or a prefix of <i>source</i>, is not a directory.</dd>
+<dt><code>ENXIO</code></dt>
+<dd> The major number of the block device <i>source</i> is out of range.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller does not have the required privileges.</dd>
+<dt><code>EROFS</code></dt>
+<dd> Mounting a read-only filesystem was attempted without giving the <code>MS_RDONLY</code> flag. See <code>EACCES</code>, above.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The definitions of <code>MS_DIRSYNC</code>, <code>MS_MOVE</code>, <code>MS_PRIVATE</code>, <code>MS_REC</code>, <code>MS_RELATIME</code>, <code>MS_SHARED</code>, <code>MS_SLAVE</code>, <code>MS_STRICTATIME</code>, and <code>MS_UNBINDABLE</code> were added to glibc headers in version 2.12.</p>
 <h2>CONFORMING TO</h2>

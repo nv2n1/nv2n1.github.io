@@ -11,82 +11,83 @@ description: "ustr-import – ustr string library import tool"
 <p> ustr-import &#8211; ustr string library import tool</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ustr-import</code> [&#8211;32|&#8211;64] [-d][d] [-c] [-b x] [-e 1|0] [-s 1|0] section </p>
+<dt> <code>ustr-import</code> [&#8211;32|&#8211;64] [-d][d] [-c] [-b x] [-e 1|0] [-s 1|0] section </dt>
 <dl>
-<dt>&#8211;32</p>
+<dt>&#8211;32</dt>
 <dd>
-<dd>If you installed with multilib, this runs the 32 bit varient (and installs the variable multilib build code as ustr-conf.h). </p>
-<dt>&#8211;64</p>
-<dd> If you installed with multilib, this runs the 64 bit varient (and installs the variable multilib build code as ustr-conf.h). </p>
-<dt>-d</p>
-<dd> Turn debugging on, USTR_ASSERT() now runs code etc. </p>
-<dt>-d</p>
-<dd> Turn extra debugging on, including End of String (EOS) markers that takeup space. Note that you can do -dd to add both at once. </p>
-<dt>-c</p>
-<dd> Use C files, this requires that you alter the build system to compile the C files and link them into your application. The default is to just provide headers that you can just include. </p>
-<dt>-b</p>
-<dd> Specify the default reference count byte size: 0, 1, 2 or 4 (or 8 on 64 bit platforms). Note that 2 bytes is the minimum if you have explicit size storage. </p>
-<dt>-e</p>
-<dd> Specify the default exact sized allocations flag, without this flag allocations are rounded up to the neared half power of two. </p>
-<dt>-s</p>
-<dd> Specify the default explicit size storage flag, without this flag allocations have an implicit size based on their length with it a size value is stored with the string (thus taking significantly larger space for small strings, but this doesn&#8217;t require reallocating the string when growing and shrinking the string). Note that turning this on also increases the minimum sizes for length and reference count storage. </p>
+</dd><dd>If you installed with multilib, this runs the 32 bit varient (and installs the variable multilib build code as ustr-conf.h). </dd>
+<dt>&#8211;64</dt>
+<dd> If you installed with multilib, this runs the 64 bit varient (and installs the variable multilib build code as ustr-conf.h). </dd>
+<dt>-d</dt>
+<dd> Turn debugging on, USTR_ASSERT() now runs code etc. </dd>
+<dt>-d</dt>
+<dd> Turn extra debugging on, including End of String (EOS) markers that takeup space. Note that you can do -dd to add both at once. </dd>
+<dt>-c</dt>
+<dd> Use C files, this requires that you alter the build system to compile the C files and link them into your application. The default is to just provide headers that you can just include. </dd>
+<dt>-b</dt>
+<dd> Specify the default reference count byte size: 0, 1, 2 or 4 (or 8 on 64 bit platforms). Note that 2 bytes is the minimum if you have explicit size storage. </dd>
+<dt>-e</dt>
+<dd> Specify the default exact sized allocations flag, without this flag allocations are rounded up to the neared half power of two. </dd>
+<dt>-s</dt>
+<dd> Specify the default explicit size storage flag, without this flag allocations have an implicit size based on their length with it a size value is stored with the string (thus taking significantly larger space for small strings, but this doesn&#8217;t require reallocating the string when growing and shrinking the string). Note that turning this on also increases the minimum sizes for length and reference count storage. </dd>
 </dl>
 <h2>SECTIONS</h2>
 <dl>
-<dt>all</p>
-<dd> All of the following sections are included. </p>
-<dt>b</p>
-<dd> Working with binary numbers in NBO format. </p>
-<dt>cmp</p>
-<dd> Comparing, strcmp() for Ustr&#8217;s, although the Ustr versions are safer and much faster. </p>
-<dt>cntl</p>
-<dd> Control options dynamically. </p>
-<dt>fmt</p>
-<dd> Formatted output, sprintf() for Ustr&#8217;s. </p>
-<dt>gdb</p>
-<dd> Copy just the .gdbinit file to the local dir. </p>
-<dt>io</p>
-<dd> Input Output. </p>
-<dt>ins</p>
-<dd> Inserting data. </p>
-<dt>main</p>
-<dd> The core functions, including strcat(), strdup() and delete for Ustr&#8217;s. Always safer and often much faster. </p>
-<dt>parse</p>
-<dd> Parsing integers, Ie. Nice versions of strtol(). </p>
-<dt>pool</p>
-<dd> A bundled memory pool API, to use with the ustrp functions. </p>
-<dt>replace</p>
-<dd> Replacing all occurances of data. </p>
-<dt>sc</p>
-<dd> Shortcut functions for Ustr&#8217;s. </p>
-<dt>set</p>
-<dd> Setting data, strcpy() for Ustr&#8217;s. </p>
-<dt>split</p>
-<dd> Slit the data, strtok() / strsep() for Ustr&#8217;s. </p>
-<dt>spn</p>
-<dd> Spanning, strspn() / strcspn() for Ustr&#8217;s. </p>
-<dt>srch</p>
-<dd> Searching, strchr() / strrchr() / strstr() for Ustr&#8217;s, although the Ustr versions are safer and much faster. </p>
-<dt>sub</p>
-<dd> Substituting data. </p>
-<dt>utf8</p>
-<dd> Working with UTF8. </p>
+<dt>all</dt>
+<dd> All of the following sections are included. </dd>
+<dt>b</dt>
+<dd> Working with binary numbers in NBO format. </dd>
+<dt>cmp</dt>
+<dd> Comparing, strcmp() for Ustr&#8217;s, although the Ustr versions are safer and much faster. </dd>
+<dt>cntl</dt>
+<dd> Control options dynamically. </dd>
+<dt>fmt</dt>
+<dd> Formatted output, sprintf() for Ustr&#8217;s. </dd>
+<dt>gdb</dt>
+<dd> Copy just the .gdbinit file to the local dir. </dd>
+<dt>io</dt>
+<dd> Input Output. </dd>
+<dt>ins</dt>
+<dd> Inserting data. </dd>
+<dt>main</dt>
+<dd> The core functions, including strcat(), strdup() and delete for Ustr&#8217;s. Always safer and often much faster. </dd>
+<dt>parse</dt>
+<dd> Parsing integers, Ie. Nice versions of strtol(). </dd>
+<dt>pool</dt>
+<dd> A bundled memory pool API, to use with the ustrp functions. </dd>
+<dt>replace</dt>
+<dd> Replacing all occurances of data. </dd>
+<dt>sc</dt>
+<dd> Shortcut functions for Ustr&#8217;s. </dd>
+<dt>set</dt>
+<dd> Setting data, strcpy() for Ustr&#8217;s. </dd>
+<dt>split</dt>
+<dd> Slit the data, strtok() / strsep() for Ustr&#8217;s. </dd>
+<dt>spn</dt>
+<dd> Spanning, strspn() / strcspn() for Ustr&#8217;s. </dd>
+<dt>srch</dt>
+<dd> Searching, strchr() / strrchr() / strstr() for Ustr&#8217;s, although the Ustr versions are safer and much faster. </dd>
+<dt>sub</dt>
+<dd> Substituting data. </dd>
+<dt>utf8</dt>
+<dd> Working with UTF8. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/ustr/include/ustr-conf.h</i> <i>/ustr/include/ustr-conf-debug.h</i></p>
-<dd> In multilib. this is the header to choose the correct conf.h header based on the byte size. </p>
-<dt><i>/ustr/include/ustr*.h</i></p>
-<dd> The default &quot;extern&quot; header files. </p>
-<dt><i>/usr/share/ustr-*/ustr-*-internal.h</i></p>
-<dd> Internal functions, used the implement the public interfaces. </p>
-<dt><i>/usr/share/ustr-*/ustr-*-code.h</i></p>
-<dd> The code behind the public interfaces. </p>
-<dt><i>/usr/share/ustr-*/ustr-*-code.c</i></p>
-<dd> The C files, which use the code header files to create objects. </p>
-<dt><i>/usr/share/ustr-*/.gdbinit</i></p>
-<dd> The GDB init file containing macros to help inspect Ustr&#8217;s in the debugger. </p>
+<dt><i>/ustr/include/ustr-conf.h</i> <i>/ustr/include/ustr-conf-debug.h</i></dt>
+<dd> In multilib. this is the header to choose the correct conf.h header based on the byte size. </dd>
+<dt><i>/ustr/include/ustr*.h</i></dt>
+<dd> The default &quot;extern&quot; header files. </dd>
+<dt><i>/usr/share/ustr-*/ustr-*-internal.h</i></dt>
+<dd> Internal functions, used the implement the public interfaces. </dd>
+<dt><i>/usr/share/ustr-*/ustr-*-code.h</i></dt>
+<dd> The code behind the public interfaces. </dd>
+<dt><i>/usr/share/ustr-*/ustr-*-code.c</i></dt>
+<dd> The C files, which use the code header files to create objects. </dd>
+<dt><i>/usr/share/ustr-*/.gdbinit</i></dt>
+<dd> The GDB init file containing macros to help inspect Ustr&#8217;s in the debugger. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ustr/">ustr</a></code>(3),<code><a href="/docs/linux/man/3-ustr_const/">ustr_const</a></code>(3) </p>
 <h2>Index</h2>
+</dl>

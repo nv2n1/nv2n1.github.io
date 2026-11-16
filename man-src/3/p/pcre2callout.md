@@ -11,7 +11,6 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pcre2.h&gt;
 int (*pcre2_callout)(pcre2_callout_block *, void *);
-
 int pcre2_callout_enumerate(const pcre2_code *code,
                             int (*callback)(pcre2_callout_enumerate_block *, void *),
                             void *user_data);</code></pre>

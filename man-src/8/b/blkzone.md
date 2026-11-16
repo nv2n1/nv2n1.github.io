@@ -158,25 +158,25 @@ description: "blkzone – run zone command on a device"
 <p>The <i>offset</i> and <i>length</i> option arguments may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;) or the suffixes KB (=1000), MB (=1000*1000), and so on for GB, TB, PB, EB, ZB and YB. Additionally, the 0x prefix can be used to specify <i>offset</i> and <i>length</i> in hex. </p>
 <p> <code>-o</code>, <code>&#8211;offset</code> <i>sector</i></p>
 <dl>
-<dd>The starting zone specified as a sector offset. The provided offset in sector units (512 bytes) should match the start of a zone. The default value is zero.</dl>
+<dd>The starting zone specified as a sector offset. The provided offset in sector units (512 bytes) should match the start of a zone. The default value is zero.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;length</code> <i>sectors</i></p>
 <dl>
-<dd>The maximum number of sectors the command should operate on. The default value is the number of sectors remaining after <i>offset</i>. This option cannot be used together with the option <code>&#8211;count</code>.</dl>
+<dd>The maximum number of sectors the command should operate on. The default value is the number of sectors remaining after <i>offset</i>. This option cannot be used together with the option <code>&#8211;count</code>.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;count</code> <i>count</i></p>
 <dl>
-<dd>The maximum number of zones the command should operate on. The default value is the number of zones starting from <i>offset</i>. This option cannot be used together with the option <code>&#8211;length</code>.</dl>
+<dd>The maximum number of zones the command should operate on. The default value is the number of zones starting from <i>offset</i>. This option cannot be used together with the option <code>&#8211;length</code>.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;force</code></p>
 <dl>
-<dd>Enforce commands to change zone status on block devices used by the system.</dl>
+<dd>Enforce commands to change zone status on block devices used by the system.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Display the number of zones returned in the report or the range of sectors reset.</dl>
+<dd>Display the number of zones returned in the report or the range of sectors reset.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Authors</h2>
 <h2>See Also</h2>
 <p><code>sg_rep_zones</code>(8)</p>

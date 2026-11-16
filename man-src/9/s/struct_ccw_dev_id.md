@@ -16,14 +16,14 @@ description: "struct_ccw_dev_id – unique identifier for ccw devices"
 <h2>Members</h2>
 <p>ssid</p>
 <dl>
-<dd>subchannel set id</dl>
+<dd>subchannel set id</dd></dl>
 <p> devno</p>
 <dl>
-<dd>device number</dl>
+<dd>device number</dd></dl>
 <h2>Description</h2>
 <p>This structure is not directly based on any hardware structure. The hardware identifies a device by its device number and its subchannel, which is in turn identified by its id. In order to get a unique identifier for ccw devices across subchannel sets, <i>struct</i> ccw_dev_id has been introduced.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

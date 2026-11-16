@@ -14,14 +14,14 @@ description: "atomic_dec_and_mutex_lock – return holding mutex if we dec to 0"
 <p><i>cnt</i></p>
 <dl>
 <dd>
-<dd>the atomic which we are to dec</dl>
+</dd><dd>the atomic which we are to dec</dd></dl>
 <p> <i>lock</i></p>
 <dl>
-<dd>the mutex to return holding if we dec to 0</dl>
+<dd>the mutex to return holding if we dec to 0</dd></dl>
 <h2>Description</h2>
 <p>return true and hold lock if we dec to 0, return false otherwise</p>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

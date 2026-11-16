@@ -16,8 +16,8 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> pki_ca_etc_rw_t </code> </p>
 <p> &#8211; Set files with the pki_ca_etc_rw_t type, if you want to treat the files as pki ca etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pki-ca(/.*)?, /etc/sysconfig/pki/ca(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/pki-ca(/.*)?, /etc/sysconfig/pki/ca(/.*)? </dd>
 </dl>
 <p> <code>pki_ca_exec_t </code> </p>
 <p> &#8211; Set files with the pki_ca_exec_t type, if you want to transition an executable to the pki_ca_t domain. </p>
@@ -30,8 +30,8 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> <code>pki_ca_var_run_t </code> </p>
 <p> &#8211; Set files with the pki_ca_var_run_t type, if you want to store the pki ca files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/pki-ca.pid, /var/run/pki/ca(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/pki-ca.pid, /var/run/pki/ca(/.*)? </dd>
 </dl>
 <p> <code>pki_common_dev_t </code> </p>
 <p> &#8211; Set files with the pki_common_dev_t type, if you want to treat the files as pki common dev data. </p>
@@ -40,8 +40,8 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> <code>pki_kra_etc_rw_t </code> </p>
 <p> &#8211; Set files with the pki_kra_etc_rw_t type, if you want to treat the files as pki kra etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pki-kra(/.*)?, /etc/sysconfig/pki/kra(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/pki-kra(/.*)?, /etc/sysconfig/pki/kra(/.*)? </dd>
 </dl>
 <p> <code>pki_kra_exec_t </code> </p>
 <p> &#8211; Set files with the pki_kra_exec_t type, if you want to transition an executable to the pki_kra_t domain. </p>
@@ -54,14 +54,14 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> <code>pki_kra_var_run_t </code> </p>
 <p> &#8211; Set files with the pki_kra_var_run_t type, if you want to store the pki kra files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/pki-kra.pid, /var/run/pki/kra(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/pki-kra.pid, /var/run/pki/kra(/.*)? </dd>
 </dl>
 <p> <code>pki_ocsp_etc_rw_t </code> </p>
 <p> &#8211; Set files with the pki_ocsp_etc_rw_t type, if you want to treat the files as pki ocsp etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pki-ocsp(/.*)?, /etc/sysconfig/pki/ocsp(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/pki-ocsp(/.*)?, /etc/sysconfig/pki/ocsp(/.*)? </dd>
 </dl>
 <p> <code>pki_ocsp_exec_t </code> </p>
 <p> &#8211; Set files with the pki_ocsp_exec_t type, if you want to transition an executable to the pki_ocsp_t domain. </p>
@@ -74,14 +74,14 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> <code>pki_ocsp_var_run_t </code> </p>
 <p> &#8211; Set files with the pki_ocsp_var_run_t type, if you want to store the pki ocsp files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/pki-ocsp.pid, /var/run/pki/ocsp(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/pki-ocsp.pid, /var/run/pki/ocsp(/.*)? </dd>
 </dl>
 <p> <code>pki_ra_etc_rw_t </code> </p>
 <p> &#8211; Set files with the pki_ra_etc_rw_t type, if you want to treat the files as pki ra etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/sysconfig/pki/ra(/.*)?, /etc/pki-ra(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/sysconfig/pki/ra(/.*)?, /etc/pki-ra(/.*)? </dd>
 </dl>
 <p> <code>pki_ra_exec_t </code> </p>
 <p> &#8211; Set files with the pki_ra_exec_t type, if you want to transition an executable to the pki_ra_t domain. </p>
@@ -98,8 +98,8 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> <code>pki_tks_etc_rw_t </code> </p>
 <p> &#8211; Set files with the pki_tks_etc_rw_t type, if you want to treat the files as pki tks etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/sysconfig/pki/tks(/.*)?, /etc/pki-tks(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/sysconfig/pki/tks(/.*)?, /etc/pki-tks(/.*)? </dd>
 </dl>
 <p> <code>pki_tks_exec_t </code> </p>
 <p> &#8211; Set files with the pki_tks_exec_t type, if you want to transition an executable to the pki_tks_t domain. </p>
@@ -112,14 +112,14 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> <code>pki_tks_var_run_t </code> </p>
 <p> &#8211; Set files with the pki_tks_var_run_t type, if you want to store the pki tks files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/pki-tks.pid, /var/run/pki/tks(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/pki-tks.pid, /var/run/pki/tks(/.*)? </dd>
 </dl>
 <p> <code>pki_tps_etc_rw_t </code> </p>
 <p> &#8211; Set files with the pki_tps_etc_rw_t type, if you want to treat the files as pki tps etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/sysconfig/pki/tps(/.*)?, /etc/pki-tps(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/sysconfig/pki/tps(/.*)?, /etc/pki-tps(/.*)? </dd>
 </dl>
 <p> <code>pki_tps_exec_t </code> </p>
 <p> &#8211; Set files with the pki_tps_exec_t type, if you want to transition an executable to the pki_tps_t domain. </p>
@@ -141,24 +141,24 @@ description: "pki_selinux – Security Enhanced Linux Policy for the pki process
 <p> Policy governs the access confined processes have to these ports. SELinux pki policy is very flexible allowing users to setup their pki processes in as secure a method as possible. </p>
 <p> The following port types are defined for pki: </p>
 <dl>
-<dt><code>pki_ca_port_t </code></p>
+<dt><code>pki_ca_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8021 </p>
-<dt><code>pki_kra_port_t </code></p>
+</dd><dd>Default Defined Ports: tcp 8021 </dd>
+<dt><code>pki_kra_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8021 </p>
-<dt><code>pki_ocsp_port_t </code></p>
+</dd><dd>Default Defined Ports: tcp 8021 </dd>
+<dt><code>pki_ocsp_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8021 </p>
-<dt><code>pki_ra_port_t </code></p>
+</dd><dd>Default Defined Ports: tcp 8021 </dd>
+<dt><code>pki_ra_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8021 </p>
-<dt><code>pki_tks_port_t </code></p>
+</dd><dd>Default Defined Ports: tcp 8021 </dd>
+<dt><code>pki_tks_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8021 </p>
-<dt><code>pki_tps_port_t </code></p>
+</dd><dd>Default Defined Ports: tcp 8021 </dd>
+<dt><code>pki_tps_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8021</dl>
+</dd><dd>Default Defined Ports: tcp 8021</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux pki policy is very flexible allowing users to setup their pki processes in as secure a method as possible. </p>

@@ -22,32 +22,32 @@ description: "struct_rio_switch_ops – Per-switch operations"
 <h2>Members</h2>
 <p>owner</p>
 <dl>
-<dd>The module owner of this structure</dl>
+<dd>The module owner of this structure</dd></dl>
 <p> add_entry</p>
 <dl>
-<dd>Callback for switch-specific route add function</dl>
+<dd>Callback for switch-specific route add function</dd></dl>
 <p> get_entry</p>
 <dl>
-<dd>Callback for switch-specific route get function</dl>
+<dd>Callback for switch-specific route get function</dd></dl>
 <p> clr_table</p>
 <dl>
-<dd>Callback for switch-specific clear route table function</dl>
+<dd>Callback for switch-specific clear route table function</dd></dl>
 <p> set_domain</p>
 <dl>
-<dd>Callback for switch-specific domain setting function</dl>
+<dd>Callback for switch-specific domain setting function</dd></dl>
 <p> get_domain</p>
 <dl>
-<dd>Callback for switch-specific domain get function</dl>
+<dd>Callback for switch-specific domain get function</dd></dl>
 <p> em_init</p>
 <dl>
-<dd>Callback for switch-specific error management init function</dl>
+<dd>Callback for switch-specific error management init function</dd></dl>
 <p> em_handle</p>
 <dl>
-<dd>Callback for switch-specific error management handler function</dl>
+<dd>Callback for switch-specific error management handler function</dd></dl>
 <h2>Description</h2>
 <p>Defines the operations that are necessary to initialize/control a particular RIO switch device.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

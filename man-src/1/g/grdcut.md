@@ -16,34 +16,34 @@ description: "grdcut – Extract subregion from a grid"
 <p> <code>grdcut</code> will produce a new <i>outgrid</i> file which is a subregion of <i>ingrid</i>. The subregion is specified with <code>-R</code> as in other programs; the specified range must not exceed the range of <i>ingrid</i> (but see <code>-N</code>). If in doubt, run <code>grdinfo</code> to check range. Alternatively, define the subregion indirectly via a range check on the node values or via distances from a given point. Complementary to <code>grdcut</code> there is <code>grdpaste</code>, which will join together two grid files along a common edge.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>ingrid</i></p>
-<dd> This is the input grid file.</p>
-<dt><code>-G</code><i>outgrid</i></p>
-<dd> This is the output grid file.</dl>
+<dt><i>ingrid</i></dt>
+<dd> This is the input grid file.</dd>
+<dt><code>-G</code><i>outgrid</i></dt>
+<dd> This is the output grid file.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-N</code>[<i>nodata</i>]</p>
-<dd> Allow grid to be extended if new <code>-R</code> exceeds existing boundaries. Append <i>nodata</i> value to initialize nodes outside current region [Default is NaN].</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest. This defines the subregion to be cut out.</p>
-<dt><code>-S</code>[<code>n</code>]<i>lon/lat/radius</i>[<i>unit</i>]</p>
-<dd> Specify an origin and radius; append a distance unit (see UNITS) and we determine the corresponding rectangular region so that all grid nodes on or inside the circle are contained in the subset. If <code>-Sn</code> is used we set all nodes outside the circle to NaN.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-Z</code>[<code>n</code>|<code>r</code>]<i>min/max</i></p>
-<dd> Determine the new rectangular region so that all nodes <i>outside</i> this region are also outside the given <i>z</i>-range [-inf/+inf]. To indicate no limit on min or max, specify a hyphen (-). Normally, any NaNs encountered are simply skipped and not considered in the decision. Use <code>-Zn</code> to consider a NaN to be outside the <i>z</i>-range. This means the new subset will be NaN-free. Alternatively, use <code>-Zr</code> to consider NaNs to be within the data range. In this case we stop shrinking the boundaries once a NaN is found [Default simply skips NaNs when making the range decision].</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-N</code>[<i>nodata</i>]</dt>
+<dd> Allow grid to be extended if new <code>-R</code> exceeds existing boundaries. Append <i>nodata</i> value to initialize nodes outside current region [Default is NaN].</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest. This defines the subregion to be cut out.</dd>
+<dt><code>-S</code>[<code>n</code>]<i>lon/lat/radius</i>[<i>unit</i>]</dt>
+<dd> Specify an origin and radius; append a distance unit (see UNITS) and we determine the corresponding rectangular region so that all grid nodes on or inside the circle are contained in the subset. If <code>-Sn</code> is used we set all nodes outside the circle to NaN.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-Z</code>[<code>n</code>|<code>r</code>]<i>min/max</i></dt>
+<dd> Determine the new rectangular region so that all nodes <i>outside</i> this region are also outside the given <i>z</i>-range [-inf/+inf]. To indicate no limit on min or max, specify a hyphen (-). Normally, any NaNs encountered are simply skipped and not considered in the decision. Use <code>-Zn</code> to consider a NaN to be outside the <i>z</i>-range. This means the new subset will be NaN-free. Alternatively, use <code>-Zr</code> to consider NaNs to be within the data range. In this case we stop shrinking the boundaries once a NaN is found [Default simply skips NaNs when making the range decision].</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>UNITS</h2>
 <p> For map distance unit, append <i>unit</i> <code>d</code> for arc degree, <code>m</code> for arc minute, and <code>s</code> for arc second, or <code>e</code> for meter [Default], <code>f</code> for foot, <code>k</code> for km, <code>M</code> for statute mile, <code>n</code> for nautical mile, and <code>u</code> for US survey foot. By default we compute such distances using a spherical approximation with great circles. Prepend <code>&#8211;</code> to a distance (or the unit is no distance is given) to perform &quot;Flat Earth&quot; calculations (quicker but less accurate) or prepend <code>+</code> to perform exact geodesic calculations (slower but more accurate).</p>
 <h2>GRID FILE FORMATS</h2>

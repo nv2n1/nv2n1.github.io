@@ -57,9 +57,9 @@ description: "preupgrade_selinux – Security Enhanced Linux Policy for the preu
 <p> Policy governs the access confined processes have to these ports. SELinux preupgrade policy is very flexible allowing users to setup their preupgrade processes in as secure a method as possible. </p>
 <p> The following port types are defined for preupgrade: </p>
 <dl>
-<dt><code>preupgrade_port_t</code></p>
+<dt><code>preupgrade_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8099</dl>
+</dd><dd>Default Defined Ports: tcp 8099</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type preupgrade_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>file_type</code> </p>
@@ -76,8 +76,8 @@ description: "preupgrade_selinux – Security Enhanced Linux Policy for the preu
 <p> <code>preupgrade_data_t</code> </p>
 <p> &#8211; Set files with the preupgrade_data_t type, if you want to treat the files as preupgrade content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/preupgrade(/.*)?, /var/log/preupgrade(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/preupgrade(/.*)?, /var/log/preupgrade(/.*)? </dd>
 </dl>
 <p> <code>preupgrade_exec_t</code> </p>
 <p> &#8211; Set files with the preupgrade_exec_t type, if you want to transition an executable to the preupgrade_t domain. </p>

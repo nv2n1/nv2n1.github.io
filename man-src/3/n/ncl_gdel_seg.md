@@ -13,8 +13,8 @@ description: "gdel_seg (Delete segment) – deletes a GKS segment."
 <p> void gdel_seg(Gint seg_name);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>seg_name</p>
-<dd>(Input) &#8211; Specifies the segment identifier for a segment that will be deleted by a call to this function.</dl>
+<dt>seg_name</dt>
+<dd>(Input) &#8211; Specifies the segment identifier for a segment that will be deleted by a call to this function.</dd></dl>
 <h2>Usage</h2>
 <p>The segment name is removed from the set of names of segments that are currently in use.</p>
 <h2>Access</h2>

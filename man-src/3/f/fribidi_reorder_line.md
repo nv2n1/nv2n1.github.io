@@ -39,41 +39,37 @@ url: "/docs/linux/man/3-fribidi_reorder_line/"
 
 <dl>
 <dt><b>FriBidiFlags flags</b>
-<dd> Reorder flags.
-<dt><b>const FriBidiCharType *bidi_types</b>
-<dd> Input list of bidi types as returned by fribidi_get_bidi_types(). 
-
+</dt><dd> Reorder flags.
+</dd><dt><b>const FriBidiCharType *bidi_types</b>
+</dt><dd> Input list of bidi types as returned by fribidi_get_bidi_types(). 
  Since there are 23 possible values for a <b>const FriBidiCharType</b>, they are not all listed here.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input length of the line.
-<dt><b>const FriBidiStrIndex off</b>
-<dd> Input offset of the beginning of the line in the paragraph.
-<dt><b>const FriBidiParType base_dir</b>
-<dd> Resolved paragraph base direction. 
-
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input length of the line.
+</dd><dt><b>const FriBidiStrIndex off</b>
+</dt><dd> Input offset of the beginning of the line in the paragraph.
+</dd><dt><b>const FriBidiParType base_dir</b>
+</dt><dd> Resolved paragraph base direction. 
  Possible values for a <b>const FriBidiParType</b> are as follows:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt><b>FRIBIDI_PAR_LTR</b>
-<dd> Left-To-Right paragraph.
-<dt><b>FRIBIDI_PAR_RTL</b>
-<dd> Right-To-Left paragraph.
-<dt><b>FRIBIDI_PAR_ON</b>
-<dd> DirectiOn-Neutral paragraph.
-<dt><b>FRIBIDI_PAR_WLTR</b>
-<dd> Weak Left To Right paragraph.
-<dt><b>FRIBIDI_PAR_WRTL</b>
-<dd> Weak Right To Left paragraph.</dl>
+</dt><dd> Left-To-Right paragraph.
+</dd><dt><b>FRIBIDI_PAR_RTL</b>
+</dt><dd> Right-To-Left paragraph.
+</dd><dt><b>FRIBIDI_PAR_ON</b>
+</dt><dd> DirectiOn-Neutral paragraph.
+</dd><dt><b>FRIBIDI_PAR_WLTR</b>
+</dt><dd> Weak Left To Right paragraph.
+</dd><dt><b>FRIBIDI_PAR_WRTL</b>
+</dt><dd> Weak Right To Left paragraph.</dd></dl>
 </dl>
 
 <dt><b>FriBidiLevel *embedding_levels</b>
-<dd> Input list of embedding levels, as returned by fribidi_get_par_embedding_levels.
-<dt><b>FriBidiChar *visual_str</b>
-<dd> Visual string to reorder.
-<dt><b>FriBidiStrIndex *map</b>
-<dd> A map of string indices which is reordered to reflect where each glyph ends up.</dl>
+</dt><dd> Input list of embedding levels, as returned by fribidi_get_par_embedding_levels.
+</dd><dt><b>FriBidiChar *visual_str</b>
+</dt><dd> Visual string to reorder.
+</dd><dt><b>FriBidiStrIndex *map</b>
+</dt><dd> A map of string indices which is reordered to reflect where each glyph ends up.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

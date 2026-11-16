@@ -16,9 +16,9 @@ description: "SPI_fnumber – determine the column number for the specified colu
 <h2>Arguments</h2>
 <p>TupleDesc <i>rowdesc</i></p>
 <dl COMPACT>
-<dd>input row description</dl>
+<dd>input row description</dd></dl>
 <p> const char * <i>colname</i></p>
 <dl COMPACT>
-<dd>column name</dl>
+<dd>column name</dd></dl>
 <h2>Return Value</h2>
 <p>Column number (count starts at 1), or SPI_ERROR_NOATTRIBUTE if the named column was not found.</p>

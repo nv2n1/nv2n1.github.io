@@ -16,35 +16,35 @@ description: "rpmdb2solv – convert the rpm database into a solv file"
 <p> <code>-o</code> <i>OUTFILE</i></p>
 <dl>
 <dt>
-<dd> Write the generated solv to <i>OUTFILE</i> instead of standard output.</dl>
+</dt><dd> Write the generated solv to <i>OUTFILE</i> instead of standard output.</dd></dl>
 <p> <code>-P</code></p>
 <dl>
 <dt>
-<dd> Print percentages as packages are being read in. The output format is like rpm&#8217;s &#8211;percent option.</dl>
+</dt><dd> Print percentages as packages are being read in. The output format is like rpm&#8217;s &#8211;percent option.</dd></dl>
 <p> <code>-r</code> <i>ROOTDIR</i></p>
 <dl>
 <dt>
-<dd> Use <i>ROOTDIR</i> as root directory.</dl>
+</dt><dd> Use <i>ROOTDIR</i> as root directory.</dd></dl>
 <p> <code>-k</code></p>
 <dl>
 <dt>
-<dd> Read pubkeys from the rpm database instead of installed packages. Note that many distributions stopped storing pubkeys in the database but use a directory like <code>/var/lib/rpm/pubkeys</code> instead.</dl>
+</dt><dd> Read pubkeys from the rpm database instead of installed packages. Note that many distributions stopped storing pubkeys in the database but use a directory like <code>/var/lib/rpm/pubkeys</code> instead.</dd></dl>
 <p> <code>-A</code></p>
 <dl>
 <dt>
-<dd> Also scan the <code>/usr/share/appdata</code> for installed appdata files and create pseudo packages for each file.</dl>
+</dt><dd> Also scan the <code>/usr/share/appdata</code> for installed appdata files and create pseudo packages for each file.</dd></dl>
 <p> <code>-p</code> <i>PRODDIR</i></p>
 <dl>
 <dt>
-<dd> Also read SUSE product files from directory <i>PRODDIR</i>. The standard directory is <code>/etc/products.d</code>.</dl>
+</dt><dd> Also read SUSE product files from directory <i>PRODDIR</i>. The standard directory is <code>/etc/products.d</code>.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> Do not read any packages from the rpm database. This is useful together with <code>-p</code> to only convert SUSE products.</dl>
+</dt><dd> Do not read any packages from the rpm database. This is useful together with <code>-p</code> to only convert SUSE products.</dd></dl>
 <p> <code>-X</code></p>
 <dl>
 <dt>
-<dd> Autoexpand SUSE pattern and product provides into packages.</dl>
+</dt><dd> Autoexpand SUSE pattern and product provides into packages.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-rpms2solv/">rpms2solv</a>(1)</p>
 <h2>AUTHOR</h2>

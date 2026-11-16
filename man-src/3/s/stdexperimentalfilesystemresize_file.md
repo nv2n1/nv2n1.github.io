@@ -11,10 +11,8 @@ std::experimental::filesystem::resize_file - std::experimental::filesystem::resi
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     void resize_file(const path &amp;p, std::uintmax_t new_size);
 (filesystem TS)
-
     void resize_file(const path &amp;p, std::uintmax_t new_size, error_code &amp;ec);</code></pre> 
 Changes the size of the regular file named by p as if by POSIX truncate: if the file size was previously larger than new_size, the remainder of the file is discarded. If the file was previously smaller than new_size, the file size is increased and the new area appears as if zero-filled. 
 
@@ -42,17 +40,11 @@ On systems that support sparse files, increasing the file size does not increase
 
 demonstrates the effect of creating a sparse file on the free space 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;example.bin&quot;;
     std::ofstream(p).put('a');

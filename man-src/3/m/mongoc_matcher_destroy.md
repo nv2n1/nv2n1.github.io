@@ -15,10 +15,10 @@ mongoc_matcher_destroy (mongoc_matcher_t *matcher);</pre>
 <h2>Deprecated</h2>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dl>
+<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>matcher</code></p>
-<dd>A <code>mongoc_matcher_t</code> \&amp;.</dl>
+<dt><code>matcher</code></dt>
+<dd>A <code>mongoc_matcher_t</code> \&amp;.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

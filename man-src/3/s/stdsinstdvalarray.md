@@ -11,9 +11,7 @@ std::sin(std::valarray) - std::sin(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;valarray&gt;
-
     template &lt;class T&gt;
-
     valarray&lt;T&gt; sin(const valarray&lt;T&gt; &amp;va);</code></pre> 
 For each element in va computes sine of the value of the element. 
 
@@ -54,14 +52,10 @@ The function can be implemented with the return type different from std::valarra
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
-
 #include &lt;cmath&gt;
 const double pi = std::acos(-1);
-
 int main()
-
 {
     std::valarray&lt;double&gt; v1 = {0, 0.25, 0.5, 0.75, 1};
     std::valarray&lt;double&gt; v2 = std::sin(v1 * pi);

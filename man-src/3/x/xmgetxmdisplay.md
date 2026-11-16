@@ -15,8 +15,8 @@ description: "XmGetXmDisplay — A Display function that returns the XmDisplay o
 <h2>Description</h2>
 <p><code>XmGetXmDisplay</code> returns the <code>XmDisplay</code> object ID associated with a display. The application can access Display resources with <code>XtGetValues</code>.</p>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the display for which the <code>XmDisplay</code> object ID is to be returned</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the display for which the <code>XmDisplay</code> object ID is to be returned</dd></dl>
 <p> For a complete definition of Display and its associated resources, see <code><a href="/docs/linux/man/3-xmdisplay/">XmDisplay</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the <code>XmDisplay</code> object ID for the specified display.</p>

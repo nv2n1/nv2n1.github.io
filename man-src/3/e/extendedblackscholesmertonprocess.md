@@ -25,12 +25,12 @@ description: "QuantLib::ExtendedBlackScholesMertonProcess – experimental Black
 <h3>Real drift (Time t, Real x) const [virtual]</h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>revise extrapolation</dl>
+<dd>revise extrapolation</dd></dl>
 <p> Reimplemented from <code>GeneralizedBlackScholesProcess</code>.</p>
 <h3>Real diffusion (Time t, Real x) const [virtual]</h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>revise extrapolation</dl>
+<dd>revise extrapolation</dd></dl>
 <p> Reimplemented from <code>GeneralizedBlackScholesProcess</code>.</p>
 <h3>Real evolve (Time t0, Real x0, Time dt, Real dw) const [virtual]</h3>
 <p>returns the asset value after a time interval $ Delta t $ according to the given discretization. By default, it returns [ E(x_0,t_0,Delta t) + S(x_0,t_0,Delta t) dot Delta w ] where $ E $ is the expectation and $ S $ the standard deviation. </p>

@@ -18,10 +18,10 @@ description: "XmWidgetGetDisplayRect — Retrieves display rectangle information
 <p> If the widget contains a string, the return values specify the x and y-coordinates of the upper left corner of the display rectangle relative to the origin of the widget and the width and height in pixels. </p>
 <p> In the case of a pixmap, the return values specify the x and y-coordinates of the upper left corner of the pixmap relative to the origin, and the width and height of the pixmap in pixels.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the widget ID</p>
-<dt><i>displayrect</i></p>
-<dd>Specifies a pointer to an XRectangle structure in which the x and y-coordinates, width and height of the display rectangle are returned</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget ID</dd>
+<dt><i>displayrect</i></dt>
+<dd>Specifies a pointer to an XRectangle structure in which the x and y-coordinates, width and height of the display rectangle are returned</dd></dl>
 <h2>Return</h2>
 <p>Returns True if the specified widget has an associated display rectangle; otherwise, returns False.</p>
 <h2>Related</h2>

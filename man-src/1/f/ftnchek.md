@@ -41,106 +41,106 @@ description: "ftnchek – Fortran 77 program checker"
 <p> <code>ftnchek</code> options fall into two categories: switches, which are either true or false, and settings, which have a numeric or string value. The name of a switch is prefixed by &#8216;no&#8217; or &#8216;no-&#8216; to turn it off: e.g. <code>-nopure</code> would turn off the warnings about impure functions. The &#8216;no&#8217; prefix can also be used with numeric settings, having the effect of turning off the corresponding warnings. Settings that control lists of warnings have a special syntax discussed below. Only the first 3 characters of an option name (not counting the &#8216;-&#8216;) need be provided. A colon may be used in place of an equals sign for numeric or string setting assignments; however, we show only the equals sign form below. </p>
 <p> The switches and settings which <code>ftnchek</code> currently recognizes are listed below. For each option, the default is the value used if the option is not explicitly specified, while the turn-on is the value used if the option is given without assigning it a value.</p>
 <dl>
-<dt><code>-arguments=</code><i>list</i></p>
-<dd> Control warnings about subprogram type and argument mismatches. Default = turn-on = all.</p>
-<dt><code>-array=</code><i>list</i></p>
-<dd> Control warnings in checking array arguments of subprograms. Default = turn-on = all.</p>
-<dt><code>-brief</code></p>
-<dd> Use shorter format for some error messages. Default = no.</p>
-<dt><code>-calltree=</code><i>list</i></p>
-<dd> Produce subprogram call hierarchy in one of 3 formats: text call-tree, who-calls-who and VCG. Default = none, turn-on = tree,prune,sort. </p>
+<dt><code>-arguments=</code><i>list</i></dt>
+<dd> Control warnings about subprogram type and argument mismatches. Default = turn-on = all.</dd>
+<dt><code>-array=</code><i>list</i></dt>
+<dd> Control warnings in checking array arguments of subprograms. Default = turn-on = all.</dd>
+<dt><code>-brief</code></dt>
+<dd> Use shorter format for some error messages. Default = no.</dd>
+<dt><code>-calltree=</code><i>list</i></dt>
+<dd> Produce subprogram call hierarchy in one of 3 formats: text call-tree, who-calls-who and VCG. Default = none, turn-on = tree,prune,sort. </dd>
 <p> If the <code>-mkhtml</code> option is invoked <i>and</i> tree is the applied calltree option, a file named CallTree.html, will be produced depicting the tree in HTML format.</p>
-<dt><code>-check</code></p>
-<dd> Perform checking. Default = yes.</p>
-<dt><code>-columns=</code><i>num</i></p>
-<dd> Set maximum line length to <i>num</i> columns. (Beyond this is ignored.) Turn-on = max = 132. Default = 72.</p>
-<dt><code>-common=</code><i>list</i></p>
-<dd> Set degree of strictness in checking COMMON blocks. Default = turn-on = all.</p>
-<dt><code>-crossref=</code><i>list</i></p>
-<dd> Print cross-reference list of subprogram calls, label usage, and/or COMMON block use. Default = none.</p>
-<dt><code>-declare</code></p>
-<dd> Print a list of all identifiers whose datatype is not explicitly declared. Default = no.</p>
-<dt><code>-division</code></p>
-<dd> Warn wherever division is done (except division by a constant). Default = no.</p>
-<dt><code>-errors=</code><i>num</i></p>
-<dd> Set the maximum number of error messages per cascade. Default = turn-on = 3.</p>
-<dt><code>-extern</code></p>
-<dd> Warn if external subprograms which are invoked are never defined. Default = yes.</p>
-<dt><code>-f77=</code><i>list</i></p>
-<dd> Control specific warnings about supported extensions to the Fortran 77 Standard. Default = none, turn-on = all.</p>
-<dt><code>-f90=</code><i>list</i></p>
-<dd> Control specific warnings about supported extensions to the Fortran 77 Standard that were not adopted as part of the Fortran 90 Standard. Default = none, turn-on = all.</p>
-<dt><code>-f95=</code><i>list</i></p>
-<dd> Control specific warnings about standard Fortran 77 features that were deleted from the Fortran 95 Standard. Default = none, turn-on = all.</p>
-<dt><code>-help</code></p>
-<dd> Print command summary. Default = no.</p>
-<dt><code>-identifier-chars=</code><i>list</i></p>
-<dd> Define non-alphanumeric characters that may be used in identifiers. Default = turn-on = dollar sign and underscore.</p>
-<dt><code>-include=</code><i>path</i></p>
-<dd> Define a directory to search for INCLUDE files before searching in the system-wide directory. Cumulative. Default = turn-on = none.</p>
-<dt><code>-intrinsic=</code><i>list</i></p>
-<dd> Control treatment of nonstandard intrinsic functions. Default = all except <code>vms</code> for Unix version, all except <code>unix</code> for VMS version, all except <code>unix</code> and <code>vms</code> for other versions. Turn-on = all.</p>
-<dt><code>-library</code></p>
-<dd> Begin library mode: do not warn about subprograms in file that are defined but never used. Default = no.</p>
-<dt><code>-list</code></p>
-<dd> Print source listing of program. Default = no.</p>
-<dt><code>-makedcls=</code><i>list</i></p>
-<dd> Prepare a file of declarations. The <i>list</i> specifies options for the format of this file. Default = none, turn-on = declarations.</p>
-<dt><code>-mkhtml=</code><i>list</i></p>
-<dd> Create individual HTML document files from ftnchek analysis and code comments. Usually you will also want to specify <code>-call=tree</code> to create the root HTML file CallTree.html. Default = none, turn-on = documents.</p>
-<dt><code>-novice</code></p>
-<dd> Give output suitable for novice users. Default = yes.</p>
-<dt><code>-output=</code><i>filename</i></p>
-<dd> Send output to the given file. Default and turn-on sends output to the screen. (Default filename extension is <i>.lis</i>).</p>
-<dt><code>-pointersize=</code><i>num</i></p>
-<dd> Set the size of &#8220;Cray pointer&#8221; variables to <i>num</i> bytes. Min = 1, max = 16. Default = turn-on = 4</p>
-<dt><code>-portability=</code><i>list</i></p>
-<dd> Warn about non-portable usages. Default = none, turn-on = all.</p>
-<dt><code>-pretty=</code><i>list</i></p>
-<dd> Give warnings for possibly misleading appearance of source code. Default = turn-on = all.</p>
-<dt><code>-project=</code><i>list</i></p>
-<dd> Create project file (see explanation below). Default = no.</p>
-<dt><code>-pure</code></p>
-<dd> Assume functions are pure, i.e. have no side effects. Default = yes.</p>
-<dt><code>-quiet</code></p>
-<dd> Produce less verbose output. Default = no.</p>
-<dt><code>-reference</code></p>
-<dd> Print table of subprograms referenced by each subprogram. Default = no.</p>
-<dt><code>-resources</code></p>
-<dd> Print amount of resources used in analyzing the program. Default = no.</p>
-<dt><code>-sixchar</code></p>
-<dd> List any variable names which clash at 6 characters length. Default = no.</p>
-<dt><code>-sort</code></p>
-<dd> Print list of subprograms sorted in prerequisite order. Default = no.</p>
-<dt><code>-source=</code><i>list</i></p>
-<dd> Select source formatting options: fixed or free form, DEC Fortran tab-formatted lines, VMS-style INCLUDE statement, UNIX-style backslash escape sequences, and implicit typing of parameters. Default = none, turn-on = all.</p>
-<dt><code>-style=</code><i>list</i></p>
-<dd> Produce extra-picky warnings about obsolescent or old-fashioned programming constructions. Default = none, turn-on = all.</p>
-<dt><code>-symtab</code></p>
-<dd> Print symbol table and label table for each subprogram. Default = no.</p>
-<dt><code>-truncation=</code><i>list</i></p>
-<dd> Check for possible loss of accuracy by truncation. Default = turn-on = all.</p>
-<dt><code>-usage=</code><i>list</i></p>
-<dd> Control warnings about unused or uninitialized variables, common blocks, etc. Default = turn-on = all.</p>
-<dt><code>-vcg</code></p>
-<dd> Produce VCG format of call graph.</p>
-<dt><code>-version</code></p>
-<dd> Print version number. Default = no.</p>
-<dt><code>-volatile</code></p>
-<dd> Assume COMMON blocks lose definition between activations. Default = no. (Obsolete. Use <code>-common=volatile</code> instead.)</p>
-<dt><code>-wordsize=</code><i>num</i></p>
-<dd> Set the default word size for numeric quantities to <i>num</i> bytes. Default = turn-on = 4 bytes.</p>
-<dt><code>-wrap=</code><i>num</i></p>
-<dd> Set output column at which to wrap long error messages and warnings to the next line. If set to 0, turn off wrapping. Default = turn-on = 79.</dl>
+<dt><code>-check</code></dt>
+<dd> Perform checking. Default = yes.</dd>
+<dt><code>-columns=</code><i>num</i></dt>
+<dd> Set maximum line length to <i>num</i> columns. (Beyond this is ignored.) Turn-on = max = 132. Default = 72.</dd>
+<dt><code>-common=</code><i>list</i></dt>
+<dd> Set degree of strictness in checking COMMON blocks. Default = turn-on = all.</dd>
+<dt><code>-crossref=</code><i>list</i></dt>
+<dd> Print cross-reference list of subprogram calls, label usage, and/or COMMON block use. Default = none.</dd>
+<dt><code>-declare</code></dt>
+<dd> Print a list of all identifiers whose datatype is not explicitly declared. Default = no.</dd>
+<dt><code>-division</code></dt>
+<dd> Warn wherever division is done (except division by a constant). Default = no.</dd>
+<dt><code>-errors=</code><i>num</i></dt>
+<dd> Set the maximum number of error messages per cascade. Default = turn-on = 3.</dd>
+<dt><code>-extern</code></dt>
+<dd> Warn if external subprograms which are invoked are never defined. Default = yes.</dd>
+<dt><code>-f77=</code><i>list</i></dt>
+<dd> Control specific warnings about supported extensions to the Fortran 77 Standard. Default = none, turn-on = all.</dd>
+<dt><code>-f90=</code><i>list</i></dt>
+<dd> Control specific warnings about supported extensions to the Fortran 77 Standard that were not adopted as part of the Fortran 90 Standard. Default = none, turn-on = all.</dd>
+<dt><code>-f95=</code><i>list</i></dt>
+<dd> Control specific warnings about standard Fortran 77 features that were deleted from the Fortran 95 Standard. Default = none, turn-on = all.</dd>
+<dt><code>-help</code></dt>
+<dd> Print command summary. Default = no.</dd>
+<dt><code>-identifier-chars=</code><i>list</i></dt>
+<dd> Define non-alphanumeric characters that may be used in identifiers. Default = turn-on = dollar sign and underscore.</dd>
+<dt><code>-include=</code><i>path</i></dt>
+<dd> Define a directory to search for INCLUDE files before searching in the system-wide directory. Cumulative. Default = turn-on = none.</dd>
+<dt><code>-intrinsic=</code><i>list</i></dt>
+<dd> Control treatment of nonstandard intrinsic functions. Default = all except <code>vms</code> for Unix version, all except <code>unix</code> for VMS version, all except <code>unix</code> and <code>vms</code> for other versions. Turn-on = all.</dd>
+<dt><code>-library</code></dt>
+<dd> Begin library mode: do not warn about subprograms in file that are defined but never used. Default = no.</dd>
+<dt><code>-list</code></dt>
+<dd> Print source listing of program. Default = no.</dd>
+<dt><code>-makedcls=</code><i>list</i></dt>
+<dd> Prepare a file of declarations. The <i>list</i> specifies options for the format of this file. Default = none, turn-on = declarations.</dd>
+<dt><code>-mkhtml=</code><i>list</i></dt>
+<dd> Create individual HTML document files from ftnchek analysis and code comments. Usually you will also want to specify <code>-call=tree</code> to create the root HTML file CallTree.html. Default = none, turn-on = documents.</dd>
+<dt><code>-novice</code></dt>
+<dd> Give output suitable for novice users. Default = yes.</dd>
+<dt><code>-output=</code><i>filename</i></dt>
+<dd> Send output to the given file. Default and turn-on sends output to the screen. (Default filename extension is <i>.lis</i>).</dd>
+<dt><code>-pointersize=</code><i>num</i></dt>
+<dd> Set the size of &#8220;Cray pointer&#8221; variables to <i>num</i> bytes. Min = 1, max = 16. Default = turn-on = 4</dd>
+<dt><code>-portability=</code><i>list</i></dt>
+<dd> Warn about non-portable usages. Default = none, turn-on = all.</dd>
+<dt><code>-pretty=</code><i>list</i></dt>
+<dd> Give warnings for possibly misleading appearance of source code. Default = turn-on = all.</dd>
+<dt><code>-project=</code><i>list</i></dt>
+<dd> Create project file (see explanation below). Default = no.</dd>
+<dt><code>-pure</code></dt>
+<dd> Assume functions are pure, i.e. have no side effects. Default = yes.</dd>
+<dt><code>-quiet</code></dt>
+<dd> Produce less verbose output. Default = no.</dd>
+<dt><code>-reference</code></dt>
+<dd> Print table of subprograms referenced by each subprogram. Default = no.</dd>
+<dt><code>-resources</code></dt>
+<dd> Print amount of resources used in analyzing the program. Default = no.</dd>
+<dt><code>-sixchar</code></dt>
+<dd> List any variable names which clash at 6 characters length. Default = no.</dd>
+<dt><code>-sort</code></dt>
+<dd> Print list of subprograms sorted in prerequisite order. Default = no.</dd>
+<dt><code>-source=</code><i>list</i></dt>
+<dd> Select source formatting options: fixed or free form, DEC Fortran tab-formatted lines, VMS-style INCLUDE statement, UNIX-style backslash escape sequences, and implicit typing of parameters. Default = none, turn-on = all.</dd>
+<dt><code>-style=</code><i>list</i></dt>
+<dd> Produce extra-picky warnings about obsolescent or old-fashioned programming constructions. Default = none, turn-on = all.</dd>
+<dt><code>-symtab</code></dt>
+<dd> Print symbol table and label table for each subprogram. Default = no.</dd>
+<dt><code>-truncation=</code><i>list</i></dt>
+<dd> Check for possible loss of accuracy by truncation. Default = turn-on = all.</dd>
+<dt><code>-usage=</code><i>list</i></dt>
+<dd> Control warnings about unused or uninitialized variables, common blocks, etc. Default = turn-on = all.</dd>
+<dt><code>-vcg</code></dt>
+<dd> Produce VCG format of call graph.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version number. Default = no.</dd>
+<dt><code>-volatile</code></dt>
+<dd> Assume COMMON blocks lose definition between activations. Default = no. (Obsolete. Use <code>-common=volatile</code> instead.)</dd>
+<dt><code>-wordsize=</code><i>num</i></dt>
+<dd> Set the default word size for numeric quantities to <i>num</i> bytes. Default = turn-on = 4 bytes.</dd>
+<dt><code>-wrap=</code><i>num</i></dt>
+<dd> Set output column at which to wrap long error messages and warnings to the next line. If set to 0, turn off wrapping. Default = turn-on = 79.</dd></dl>
 <p> When more than one option is used, they should be separated by a blank space, except on systems such as VMS where options begin with slash ( / ). No blank spaces may be placed around the equals sign ( = ) in a setting. ftnchek &quot;?&quot; will produce a command summary listing all options and settings. </p>
 <p> For settings that take a list of keywords, namely <code>-arguments</code>, <code>-array</code>, <code>-calltree</code>, <code>-common</code>, <code>-crossref</code>, <code>-f77</code>, <code>-f90</code>, <code>-f95</code>, <code>-intrinsic</code>, <code>-makedcls</code>, <code>-mkhtml</code>, <code>-portability</code>, <code>-pretty</code>, <code>-project</code>, <code>-source</code>, <code>-style</code>, <code>-truncation</code>, and <code>-usage</code>, the list consists of keywords separated by commas or colons. If the list of keywords is omitted, the effect is to set the option to its turn-on value (same as &#8220;all&#8221; in most cases). Also, if the list is omitted, the setting name can be prefixed with <code>no</code> or <code>no-</code> to turn off all the options it controls. For example, <code>-f77</code> turns on all warnings about nonstandard constructions, while <code>-nof77</code> turns them all off. Three special keywords are:</p>
 <dl>
-<dt><code>help</code></p>
-<dd> Print out all the option keywords controlled by the setting, with a brief explanation of their meanings. This keyword cannot be given in a list with other keywords.</p>
-<dt><code>all</code></p>
-<dd> Set all options. This turns on all options controlled by the setting.</p>
-<dt><code>none</code></p>
-<dd> Clear all options. This turns off all options controlled by the setting.</dl>
+<dt><code>help</code></dt>
+<dd> Print out all the option keywords controlled by the setting, with a brief explanation of their meanings. This keyword cannot be given in a list with other keywords.</dd>
+<dt><code>all</code></dt>
+<dd> Set all options. This turns on all options controlled by the setting.</dd>
+<dt><code>none</code></dt>
+<dd> Clear all options. This turns off all options controlled by the setting.</dd></dl>
 <p> These three special keywords must be given in full. For all other keywords, only as many letters of the keyword as are necessary to identify it unambiguously need be given, or a wildcard pattern may be used. Including a keyword in the list turns the corresponding option on. For example, <code>-f77=intrinsic</code> would turn on only the warnings about use of nonstandard intrinsic functions. Prefixing a keyword by <code>no-</code> turns its option off. For example, <code>-pretty=no-long-line</code> turns off warnings about lines exceeding 72 columns in length while leaving all other warnings about misleading appearance in effect. If a setting has default <code>none</code>, you can turn on all options except one or two by using <code>all</code> first. For example, <code>-f77=all,no-include</code> enables warnings about all nonstandard extensions except INCLUDE statements. If a setting has default <code>all</code>, you can turn off all warnings except one or two by using <code>none</code> first. For example, <code>-truncation=none,demotion</code> would turn off all precision related warnings except about demotions. Wildcard patterns contain an asterisk to stand for any string of characters. If a wildcard pattern is used, all the warnings that match it are affected. If <code>no-</code> is prefixed to the pattern, all the matching warnings are turned off, otherwise they are all turned on. The minimum unambiguous length rule does not apply to wildcard matching. For example, use <code>-usage=no-*var*</code> to turn off all warnings relating to variable usage (both local and common). (Unix users may need to quote any options containing wildcards in order to prevent the shell from attempting to expand them.) Wildcards are recognized only in lists of warning keywords, not in the top-level options themselves. </p>
 <p> When <code>ftnchek</code> starts up, it looks for environment variables and also for a preferences file. Any options defined in the environment or in the preferences file are used as defaults in place of the built-in defaults. They are over-ridden by any command line options. See the section on changing the defaults for details about the environment options and the preferences file. </p>
 <p> When giving a name of an input file, the extension is optional. If no extension is given, <code>ftnchek</code> will first look for a project file with extension <i>.prj</i>, and will use that if it exists. If not, then <code>ftnchek</code> will look for a Fortran source file with the extension <i>.for</i> for VMS systems, <i>.f</i> for UNIX systems. More than one file name can be given to <code>ftnchek</code>, and it will process the modules in all files as if they were in a single file. </p>
@@ -150,66 +150,66 @@ description: "ftnchek – Fortran 77 program checker"
 <p> This section provides a more detailed discussion of <code>ftnchek</code> command-line options. Options and filenames may be interspersed on a command line. Most options are positional: each option remains in effect from the point it is encountered until it is overridden by a later change. Thus for example, the listing may be suppressed for some files and not for others. Exceptions are: the <code>-intrinsic</code>, <code>-pointersize</code>, and <code>-wordsize</code> settings, which cannot be changed once processing of input files has started; the <code>-arguments</code>, <code>-array</code>, <code>-calltree</code>, <code>-common</code>, <code>-crossref</code>, <code>-extern</code>, <code>-reference</code>, <code>-resources</code>, <code>-sort</code>, <code>-vcg</code>, and <code>-volatile</code> options, where the action depends only on the value of the option after the processing of input files is finished; and the <code>-include</code> setting, which is cumulative. </p>
 <p> The option names in the following list are in alphabetical order. </p>
 <dl>
-<dt><code>-arguments=</code><i>list</i></p>
+<dt><code>-arguments=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Controls warnings about mismatches between actual and dummy subprogram arguments, and also about mismatches between expected and actual subprogram type. (An actual argument is an argument passed to the subprogram by the caller; a dummy argument is an argument received by the subprogram.) By default, all warnings are turned on. </p>
+</dt><dd> Controls warnings about mismatches between actual and dummy subprogram arguments, and also about mismatches between expected and actual subprogram type. (An actual argument is an argument passed to the subprogram by the caller; a dummy argument is an argument received by the subprogram.) By default, all warnings are turned on. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. Since all these warnings are on by default, include a keyword prefixed by <code>no-</code> to turn off a particular warning. There are three special keywords: <code>all</code> to turn on all the warnings about arguments, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-arguments</code> is equivalent to <code>-arguments=all</code>, and <code>-noarguments</code> is equivalent to <code>-arguments=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>arrayness</code>:</p>
-<dd> warn about inconsistent use of arguments that are arrays. These warnings can be further controlled by the <code>-array</code> option.</p>
-<dt><code>type</code>:</p>
-<dd> warn about dummy arguments of a different data type from the actual arguments.</p>
-<dt><code>function-type</code>:</p>
-<dd> warn if the invocation assumes the function&#8217;s return value is a different type than it actually is. Also warns if a function is called as a subroutine, or vice-versa.</p>
-<dt><code>number</code>:</p>
-<dd> warn about invoking a subprogram with a different number of arguments than the subprogram expects.</dl>
+<dt><code>arrayness</code>:</dt>
+<dd> warn about inconsistent use of arguments that are arrays. These warnings can be further controlled by the <code>-array</code> option.</dd>
+<dt><code>type</code>:</dt>
+<dd> warn about dummy arguments of a different data type from the actual arguments.</dd>
+<dt><code>function-type</code>:</dt>
+<dd> warn if the invocation assumes the function&#8217;s return value is a different type than it actually is. Also warns if a function is called as a subroutine, or vice-versa.</dd>
+<dt><code>number</code>:</dt>
+<dd> warn about invoking a subprogram with a different number of arguments than the subprogram expects.</dd></dl>
 <p> For compatibility with previous versions of <code>ftnchek</code>, a numeric form of this setting is also accepted: the <i>list</i> is replaced by a number from 0 to 3. A value of 0 turns all the warnings off, 1 turns on only <code>number</code>, 2 turns on all except <code>number</code>, and 3 turns all the warnings on. </p>
 <p> This setting does not apply to checking invocations of intrinsic functions or statement functions, which can only be turned off by the <code>-nocheck</code> option. </p>
 <p> See also: <code>-array</code>, <code>-library</code>, <code>-usage</code>.</dl>
-<dt><code>-array=</code><i>list</i></p>
+<dt><code>-array=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Controls the degree of strictness in checking agreement between actual and dummy subprogram arguments that are arrays. The warnings controlled by this setting are for constructions that might legitimately be used by a knowledgeable programmer, but that often indicate programming errors. By default, all warnings are turned on. </p>
+</dt><dd> Controls the degree of strictness in checking agreement between actual and dummy subprogram arguments that are arrays. The warnings controlled by this setting are for constructions that might legitimately be used by a knowledgeable programmer, but that often indicate programming errors. By default, all warnings are turned on. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. Since all these warnings are on by default, include a keyword prefixed by <code>no-</code> to turn off a particular warning. There are three special keywords: <code>all</code> to turn on all the warnings about array arguments, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-array</code> is equivalent to <code>-array=all</code>, and <code>-noarray</code> is equivalent to <code>-array=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>dimensions</code>:</p>
-<dd> warn if the arguments differ in their number of dimensions, or if the actual argument is an array element while the dummy argument is a whole array.</p>
-<dt><code>size</code>:</p>
-<dd> warn if both arguments are arrays, but they differ in number of elements.</dl>
+<dt><code>dimensions</code>:</dt>
+<dd> warn if the arguments differ in their number of dimensions, or if the actual argument is an array element while the dummy argument is a whole array.</dd>
+<dt><code>size</code>:</dt>
+<dd> warn if both arguments are arrays, but they differ in number of elements.</dd></dl>
 <p> For compatibility with previous versions of <code>ftnchek</code>, a numeric form of this setting is also accepted: the <i>list</i> is replaced by a number from 0 to 3. A value of 0 turns all the warnings off, 1 turns on only <code>dimensions</code>, 2 turns on only <code>size</code>, and 3 turns all the warnings on. </p>
 <p> Note: A warning is always given regardless of this setting if the actual argument is an array while the dummy argument is a scalar variable, or if the actual argument is a scalar variable or expression while the dummy argument is an array. These cases are seldom intentional. (To turn off even these warnings, use <code>-arguments=no-arrayness</code>.) No warning is ever given if the actual argument is an array element while the dummy argument is a scalar variable. Variable-dimensioned arrays and arrays dimensioned with 1 or asterisk match any number of array elements. There is no check of whether multi-dimensional arrays agree in the size of each dimension separately. </p>
 <p> See also: <code>-arguments</code>, <code>-library</code>, <code>-usage</code>.</dl>
-<dt><code>-brief</code></p>
+<dt><code>-brief</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Selects a shorter format for some warning messages. At present, the only warnings controlled by this flag are those that are printed at the end of processing each subprogram. These include warnings about variables that are set but not used or used before set, variable names that do not conform to the Fortran 77 standard, etc. (These warnings may be suppressed entirely depending on other flags, such as the <code>-usage</code> or <code>-f77</code> flags.) In the default format each variable is listed on a separate line, along with the line number where the variable is declared, set or used, according to the nature of the warning. The briefer format simply lists all variables to which the warning applies, with up to 4 variables per line. </p>
+</dt><dd> Selects a shorter format for some warning messages. At present, the only warnings controlled by this flag are those that are printed at the end of processing each subprogram. These include warnings about variables that are set but not used or used before set, variable names that do not conform to the Fortran 77 standard, etc. (These warnings may be suppressed entirely depending on other flags, such as the <code>-usage</code> or <code>-f77</code> flags.) In the default format each variable is listed on a separate line, along with the line number where the variable is declared, set or used, according to the nature of the warning. The briefer format simply lists all variables to which the warning applies, with up to 4 variables per line. </dd>
 <p> See also: <code>-quiet</code>.</dl>
-<dt><code>-calltree=</code><i>list</i></p>
+<dt><code>-calltree=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Causes <code>ftnchek</code> to print out the call structure of the complete program. </p>
+</dt><dd> Causes <code>ftnchek</code> to print out the call structure of the complete program. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. There are two special keywords: <code>none</code> to turn off all the options, and <code>help</code> to print the list of all the keywords with a brief explanation of each. (The keyword <code>all</code> turns on all the options, but should not normally be used since only one format should be specified.) If <i>list</i> is omitted, <code>-calltree</code> is equivalent to <code>-calltree=tree</code>, and <code>-nocalltree</code> is equivalent to <code>-calltree=none</code>. By default no call graph is printed. </p>
 <p> If the -mkhtml option is invoked <i>and</i> tree is the applied calltree option, a file named CallTree.html, will also be produced depicting the tree in HTML format. This file is useful as a starting point for browsing the HTML files describing each component of the program. </p>
 <p> The keywords which control which format is used are as follows:</p>
 <dl>
-<dt><code>tree</code>:</p>
-<dd> produce the call graph in tree format.</p>
-<dt><code>reference</code>:</p>
-<dd> produce the call graph in who-calls-who format (same as <code>-reference</code> switch).</p>
-<dt><code>vcg</code>:</p>
-<dd> produce the call graph in VCG format (same as <code>-vcg</code> switch).</dl>
+<dt><code>tree</code>:</dt>
+<dd> produce the call graph in tree format.</dd>
+<dt><code>reference</code>:</dt>
+<dd> produce the call graph in who-calls-who format (same as <code>-reference</code> switch).</dd>
+<dt><code>vcg</code>:</dt>
+<dd> produce the call graph in VCG format (same as <code>-vcg</code> switch).</dd></dl>
 <p> Only one of the formats <code>tree</code>, <code>reference</code>, or <code>vcg</code> may be specified. </p>
 <p> The following keywords control options affecting the output:</p>
 <dl>
-<dt><code>prune</code>:</p>
-<dd> prune repeated subtrees (applicable only with <code>tree</code>). This the default.</p>
-<dt><code>sort</code>:</p>
-<dd> sort children of each routine into alphabetical order. This is the default.</dl>
+<dt><code>prune</code>:</dt>
+<dd> prune repeated subtrees (applicable only with <code>tree</code>). This the default.</dd>
+<dt><code>sort</code>:</dt>
+<dd> sort children of each routine into alphabetical order. This is the default.</dd></dl>
 <p> See the discussion of the <code>-reference</code> and <code>-vcg</code> flags for details about these formats. </p>
 <p> For <code>tree</code> format, The call graph is printed out starting from the main program, which is listed on the first line at the left margin. Then on the following lines, each routine called by the main program is listed, indented a few spaces, followed by the subtree starting at that routine. </p>
 <p> In the default mode, if a routine is called by more than one other routine, its call subtree is printed only the first time it is encountered Later calls give only the routine name and the notice &#8220;(see above)&#8221;. To have the subtree printed for each occurrence of the routine, use option <code>no-prune</code>. </p>
@@ -217,181 +217,181 @@ description: "ftnchek – Fortran 77 program checker"
 <p> Technical points: Each list of routines called by a given routine is printed in alphabetical order unless the <code>no-sort</code> option is given. If multiple main programs are found, the call tree of each is printed separately. If no main program is found, a report to that effect is printed out, and the call trees of any top-level non-library routines are printed. This flag only controls the printing of the call tree: <code>ftnchek</code> constructs the call tree in any case because it is used to determine which library modules will be cross-checked. See the discussion of the <code>-library</code> flag. </p>
 <p> For compatibility with previous versions of <code>ftnchek</code>, a numeric form of this setting is also accepted: the <i>list</i> is replaced by a number from 0 to 15. This number is formed from 1 for <code>tree</code> format, 2 for <code>reference</code> format, or 3 for <code>vcg</code> format, plus 4 for <code>no-prune</code>, and 8 for <code>no-sort</code>. </p>
 <p> See also: <code>-crossref</code>, <code>-library</code>, <code>-reference</code>, <code>-sort</code>, <code>-symtab</code>, <code>-vcg</code>.</dl>
-<dt><code>-check</code></p>
+<dt><code>-check</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This switch is provided so that errors and warning messages can be turned off when <code>ftnchek</code> is used for purposes other than finding bugs, such as making declarations or printing the call tree. It is positional, so after turning all checks off, selected checks can be turned back on. The effect of <code>-nocheck</code> is to put all switches, numeric settings, and settings controlling lists of warnings to their turn-off values, as if they had all been specified with the -no prefix. Switches and settings that specify options and modes of operation, rather than controlling warnings, are unaffected. These are <code>-columns</code>, <code>-crossref</code>, <code>-include</code>, <code>-intrinsic</code>, <code>-library</code>, <code>-list</code>, <code>-makedcls</code>, <code>-novice</code>, <code>-output</code>, <code>-pointersize</code>, <code>-project</code>, <code>-quiet</code>, <code>-reference</code>, <code>-resources</code>, <code>-sort</code>, <code>-source</code>, <code>-symtab</code>, <code>-vcg</code>, <code>-version</code>, <code>-wordsize</code>, and <code>-wrap</code>. Default = yes. </p>
+</dt><dd> This switch is provided so that errors and warning messages can be turned off when <code>ftnchek</code> is used for purposes other than finding bugs, such as making declarations or printing the call tree. It is positional, so after turning all checks off, selected checks can be turned back on. The effect of <code>-nocheck</code> is to put all switches, numeric settings, and settings controlling lists of warnings to their turn-off values, as if they had all been specified with the -no prefix. Switches and settings that specify options and modes of operation, rather than controlling warnings, are unaffected. These are <code>-columns</code>, <code>-crossref</code>, <code>-include</code>, <code>-intrinsic</code>, <code>-library</code>, <code>-list</code>, <code>-makedcls</code>, <code>-novice</code>, <code>-output</code>, <code>-pointersize</code>, <code>-project</code>, <code>-quiet</code>, <code>-reference</code>, <code>-resources</code>, <code>-sort</code>, <code>-source</code>, <code>-symtab</code>, <code>-vcg</code>, <code>-version</code>, <code>-wordsize</code>, and <code>-wrap</code>. Default = yes. </dd>
 <p> Parse errors (syntax errors due to unrecognized or malformed statements) are not suppressed by this switch, since the results may be incorrect if <code>ftnchek</code> has not parsed the program correctly. </p>
 <p> There are some miscellaneous errors and warning messages that are not controlled by any other switch, and so can be turned off only by this switch. Note that using <code>-check</code> following <code>-nocheck</code> only has the effect of turning these special warnings back on, and does not restore all the checks it turned off. These warnings are:</p>
 <dl>
-<dt>o</p>
-<dd> Module contains no executable statements.</p>
-<dt>o</p>
-<dd> In free source form, missing space where space is required (e.g. between a keyword and an identifier) or space present where none is allowed (e.g. within an identifier).</p>
-<dt>o</p>
-<dd> Zero or negative length specification in a data type declaration of the form type*len.</p>
-<dt>o</p>
-<dd> Invalid operand(s) in an expression.</p>
-<dt>o</p>
-<dd> Array assigned to scalar.</p>
-<dt>o</p>
-<dd> Type mismatch between DO index and bounds.</p>
-<dt>o</p>
-<dd> Undefined common block declared in SAVE statement.</p>
-<dt>o</p>
-<dd> Intrinsic function explicitly declared with an incompatible type.</p>
-<dt>o</p>
-<dd> Unknown intrinsic function explicitly declared in an INTRINSIC statement.</p>
-<dt>o</p>
-<dd> Intrinsic function passed as a subprogram argument is not declared in an INTRINSIC statement.</p>
-<dt>o</p>
-<dd> Intrinsic function or statement function invoked incorrectly.</p>
-<dt>o</p>
-<dd> Function does not set return value prior to RETURN statement.</p>
-<dt>o</p>
-<dd> Parameter constant value not evaluated (this is <code>ftnchek</code>&#8216;s fault, and it is just informing you of the fact).</p>
-<dt>o</p>
-<dd> Entry point of a subprogram is later used as a different subprogram&#8217;s name.</p>
-<dt>o</p>
-<dd> Unknown keyword used in an I/O statement.</p>
-<dt>o</p>
-<dd> Illegal label reference (e.g. GOTO refers to a non-executable statement; I/O statement refers to a non-format statement).</dl>
+<dt>o</dt>
+<dd> Module contains no executable statements.</dd>
+<dt>o</dt>
+<dd> In free source form, missing space where space is required (e.g. between a keyword and an identifier) or space present where none is allowed (e.g. within an identifier).</dd>
+<dt>o</dt>
+<dd> Zero or negative length specification in a data type declaration of the form type*len.</dd>
+<dt>o</dt>
+<dd> Invalid operand(s) in an expression.</dd>
+<dt>o</dt>
+<dd> Array assigned to scalar.</dd>
+<dt>o</dt>
+<dd> Type mismatch between DO index and bounds.</dd>
+<dt>o</dt>
+<dd> Undefined common block declared in SAVE statement.</dd>
+<dt>o</dt>
+<dd> Intrinsic function explicitly declared with an incompatible type.</dd>
+<dt>o</dt>
+<dd> Unknown intrinsic function explicitly declared in an INTRINSIC statement.</dd>
+<dt>o</dt>
+<dd> Intrinsic function passed as a subprogram argument is not declared in an INTRINSIC statement.</dd>
+<dt>o</dt>
+<dd> Intrinsic function or statement function invoked incorrectly.</dd>
+<dt>o</dt>
+<dd> Function does not set return value prior to RETURN statement.</dd>
+<dt>o</dt>
+<dd> Parameter constant value not evaluated (this is <code>ftnchek</code>&#8216;s fault, and it is just informing you of the fact).</dd>
+<dt>o</dt>
+<dd> Entry point of a subprogram is later used as a different subprogram&#8217;s name.</dd>
+<dt>o</dt>
+<dd> Unknown keyword used in an I/O statement.</dd>
+<dt>o</dt>
+<dd> Illegal label reference (e.g. GOTO refers to a non-executable statement; I/O statement refers to a non-format statement).</dd></dl>
 <p> See also: <code>-errors</code>.</dl>
-<dt><code>-columns=</code><i>num</i></p>
+<dt><code>-columns=</code><i>num</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Set maximum statement length to <i>num</i> columns. (Beyond this is ignored.) This setting is provided to allow checking of programs which may violate the Fortran standard limit of 72 columns for the length of a statement. According to the standard, all characters past column 72 are ignored. If this setting is used when the <code>-f77=long-line</code> option is in effect, a warning will be given for any lines in which characters past column 72 are processed. Turn-on = max = 132. Default = 72. </p>
+</dt><dd> Set maximum statement length to <i>num</i> columns. (Beyond this is ignored.) This setting is provided to allow checking of programs which may violate the Fortran standard limit of 72 columns for the length of a statement. According to the standard, all characters past column 72 are ignored. If this setting is used when the <code>-f77=long-line</code> option is in effect, a warning will be given for any lines in which characters past column 72 are processed. Turn-on = max = 132. Default = 72. </dd>
 <p> This setting does not suppress warnings about the presence of characters beyond column 72. To process code with meaningful program text beyond column 72, use this setting and be sure the <code>-f77</code> <code>long-line</code> option is off. To process code with sequence numbers in columns 73 to 80, leave the the columns setting at the default value and use the <code>-pretty=no-long-line</code> flag. </p>
 <p> See also: <code>-f77</code>, <code>-pretty</code>.</dl>
-<dt><code>-common=</code><i>list</i></p>
+<dt><code>-common=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This setting controls the strictness of checking of COMMON blocks. By default, all warnings except <code>volatile</code> are turned on. </p>
+</dt><dd> This setting controls the strictness of checking of COMMON blocks. By default, all warnings except <code>volatile</code> are turned on. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. Since most of these warnings are on by default, include a keyword prefixed by <code>no-</code> to turn off a particular warning. There are three special keywords: <code>all</code> to turn on all the warnings, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-common</code> is equivalent to <code>-common=dimensions,exact,length,type</code>, and <code>-nocommon</code> is equivalent to <code>-common=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>dimensions</code>:</p>
-<dd> corresponding arrays in each declaration of a block must agree in size and number of dimensions. This option only has an effect when used together with <code>exact</code>.</p>
-<dt><code>exact</code>:</p>
-<dd> the comparison of two blocks is done variable-by-variable rather than simply requiring agreement between corresponding storage locations. Use this if all declarations of a given COMMON block are supposed to be identical, which is a good programming practice.</p>
-<dt><code>length</code>:</p>
-<dd> warn if different declarations of the same block are not equal in total length. The Fortran 77 Standard requires each named common block, but not blank common, to be the same length in all modules of the program.</p>
-<dt><code>type</code>:</p>
-<dd> in each declaration of a given COMMON block, corresponding memory locations (words or bytes) must agree in data type. If used together with <code>exact</code>, this will require that corresponding variables agree in data type.</p>
-<dt><code>volatile</code>:</p>
-<dd> Assume that COMMON blocks are volatile.</dl>
+<dt><code>dimensions</code>:</dt>
+<dd> corresponding arrays in each declaration of a block must agree in size and number of dimensions. This option only has an effect when used together with <code>exact</code>.</dd>
+<dt><code>exact</code>:</dt>
+<dd> the comparison of two blocks is done variable-by-variable rather than simply requiring agreement between corresponding storage locations. Use this if all declarations of a given COMMON block are supposed to be identical, which is a good programming practice.</dd>
+<dt><code>length</code>:</dt>
+<dd> warn if different declarations of the same block are not equal in total length. The Fortran 77 Standard requires each named common block, but not blank common, to be the same length in all modules of the program.</dd>
+<dt><code>type</code>:</dt>
+<dd> in each declaration of a given COMMON block, corresponding memory locations (words or bytes) must agree in data type. If used together with <code>exact</code>, this will require that corresponding variables agree in data type.</dd>
+<dt><code>volatile</code>:</dt>
+<dd> Assume that COMMON blocks are volatile.</dd></dl>
 <p> Many Fortran programmers assume that variables, whether local or in COMMON, are static, i.e. that once assigned a value, they retain that value permanently until assigned a different value by the program. However, in fact the Fortran 77 Standard does not require this to be the case. Local variables may become undefined between activations of a module in which they are declared. Similarly, COMMON blocks may become undefined if no module in which they are declared is active. (The technical term for entities with this behavior is &#8220;automatic&#8221;, but <code>ftnchek</code> uses the word &#8220;volatile&#8221; since it is clearer to the nonspecialist.) Only COMMON blocks declared in a SAVE statement, or declared in the main program or in a block data subprogram remain defined as long as the program is running. Variables and COMMON blocks that can become undefined at some point are called volatile. </p>
 <p> If the <code>-common=volatile</code> flag is turned on, <code>ftnchek</code> will warn you if it finds a volatile COMMON block. If, at the same time, the <code>-usage=com-block-volatile </code> option is turned on (which is the default), <code>ftnchek</code> will try to check whether such a block can lose its defined status between activations of the modules where it is declared. <code>ftnchek</code> does not do a very good job of this: the rule used is to see whether the block is declared in two separated subtrees of the call tree. For instance, this would be the case if two modules, both called from the main program, shared a volatile COMMON block. A block can also become undefined between two successive calls of the same subprogram, but <code>ftnchek</code> is not smart enough to tell whether a subprogram can be called more than once, so this case is not checked for. </p>
 <p> The <code>-common=volatile</code> flag does not affect the way <code>ftnchek</code> checks the usage of local variables. </p>
 <p> For compatibility with previous versions of <code>ftnchek</code>, a numeric form of this setting is also accepted: the <i>list</i> is replaced by a number from 0 to 3. A value of 0 turns all the warnings off, 1 or greater turns on <code>type</code>, 2 or greater turns on <code>length</code>, and 3 turns on <code>dimensions</code> and <code>exact</code> also. The numeric form cannot turn on the <code>volatile</code> option. </p>
 <p> See also: <code>-library</code>, <code>-usage</code>.</dl>
-<dt><code>-crossref=</code><i>list</i></p>
+<dt><code>-crossref=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Prints cross-reference tables. Default = none. </p>
+</dt><dd> Prints cross-reference tables. Default = none. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. The keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>calls</code>:</p>
-<dd> table lists each subprogram followed by a list of routines that call it. This listing omits library modules that are not in the call tree of the main program. The list is alphabetized.</p>
-<dt><code>common</code>:</p>
-<dd> table lists each COMMON block followed by a list of the routines that access it. These listed routines are those in which some variables in the COMMON block are accessed, not simply those routines that declare the block. (To find out what routines declare a COMMON block but do not use it, see the <code>-usage</code> flag.)</p>
-<dt><code>labels</code>:</p>
-<dd> table lists each label followed by a list of all references to it. A label reference is denoted by the line number and statement type of the referring statement. The label list is in sequential order. The references are listed in the order they are encountered in the program.</dl>
+<dt><code>calls</code>:</dt>
+<dd> table lists each subprogram followed by a list of routines that call it. This listing omits library modules that are not in the call tree of the main program. The list is alphabetized.</dd>
+<dt><code>common</code>:</dt>
+<dd> table lists each COMMON block followed by a list of the routines that access it. These listed routines are those in which some variables in the COMMON block are accessed, not simply those routines that declare the block. (To find out what routines declare a COMMON block but do not use it, see the <code>-usage</code> flag.)</dd>
+<dt><code>labels</code>:</dt>
+<dd> table lists each label followed by a list of all references to it. A label reference is denoted by the line number and statement type of the referring statement. The label list is in sequential order. The references are listed in the order they are encountered in the program.</dd></dl>
 <p> See also: <code>-calltree</code>, <code>-reference</code>, <code>-sort</code>, <code>-symtab</code>, <code>-vcg</code>.</dl>
-<dt><code>-declare</code></p>
+<dt><code>-declare</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> If this flag is set, all identifiers whose datatype is not declared in each module will be listed. This flag is useful for helping to find misspelled variable names, etc. The same listing will be given if the module contains an IMPLICIT NONE statement. Default = no. </p>
+</dt><dd> If this flag is set, all identifiers whose datatype is not declared in each module will be listed. This flag is useful for helping to find misspelled variable names, etc. The same listing will be given if the module contains an IMPLICIT NONE statement. Default = no. </dd>
 <p> See also: <code>-sixchar</code>, <code>-usage</code>.</dl>
-<dt><code>-division</code></p>
+<dt><code>-division</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This switch is provided to help users spot potential division by zero problems. If this switch is selected, every division except by a constant will be flagged. (It is assumed that the user is intelligent enough not to divide by a constant which is equal to zero!) Default = no. </p>
+</dt><dd> This switch is provided to help users spot potential division by zero problems. If this switch is selected, every division except by a constant will be flagged. (It is assumed that the user is intelligent enough not to divide by a constant which is equal to zero!) Default = no. </dd>
 <p> See also: <code>-portability</code>, <code>-truncation</code>.</dl>
-<dt><code>-errors=</code><i>num</i></p>
+<dt><code>-errors=</code><i>num</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Set the maximum number of error messages in a &#8220;cascade&#8221;. During checking of agreement of subprogram arguments, common block declarations, and so forth, sometimes a single case will generate a long string of warnings. Often this simply indicates some other cause than a genuine item-by-item mismatch, such as for example a varible missing from one list. So in such cases <code>ftnchek</code> stops printing the warnings after the cascade limit is reached, and the trailer &#8220;etc&#8230;&#8221; is printed to indicate that there were more errors not printed. If you think that these warnings are likely to be genuine, use this setting to see more of them. Turn-on = default = 3, max = 999. A value of 0 means no limit. </p>
+</dt><dd> Set the maximum number of error messages in a &#8220;cascade&#8221;. During checking of agreement of subprogram arguments, common block declarations, and so forth, sometimes a single case will generate a long string of warnings. Often this simply indicates some other cause than a genuine item-by-item mismatch, such as for example a varible missing from one list. So in such cases <code>ftnchek</code> stops printing the warnings after the cascade limit is reached, and the trailer &#8220;etc&#8230;&#8221; is printed to indicate that there were more errors not printed. If you think that these warnings are likely to be genuine, use this setting to see more of them. Turn-on = default = 3, max = 999. A value of 0 means no limit. </dd>
 <p> This setting does not set an overall limit on the number of error messages printed, only the number printed in any one cascade. Most types of warnings and error messages are not subject to the cascade effect and so are not affected by this setting. To turn off warnings generally, use the individual warning control options or the <code>-nocheck</code> option. </p>
 <p> See also: <code>-check</code>.</dl>
-<dt><code>-extern</code></p>
+<dt><code>-extern</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Causes <code>ftnchek</code> to report whether any subprograms invoked by the program are never defined. Ordinarily, if <code>ftnchek</code> is being run on a complete program, each subprogram other than the intrinsic functions should be defined somewhere. Turn off this switch if you just want to check a subset of files which form part of a larger complete program. Subprogram arguments will still be checked for correctness. Default = yes. </p>
+</dt><dd> Causes <code>ftnchek</code> to report whether any subprograms invoked by the program are never defined. Ordinarily, if <code>ftnchek</code> is being run on a complete program, each subprogram other than the intrinsic functions should be defined somewhere. Turn off this switch if you just want to check a subset of files which form part of a larger complete program. Subprogram arguments will still be checked for correctness. Default = yes. </dd>
 <p> The <code>-extern</code> flag is now superseded by the <code>-usage=ext-undefined</code> option. For the sake of convenience, the <code>-extern</code> flag is retained, so that <code>-noextern</code> is equivalent to <code>-usage=no-ext-undefined</code> option. The <code>-extern</code> switch may be retired eventually. </p>
 <p> See also: <code>-library</code>.</dl>
-<dt><code>-f77=</code><i>list</i></p>
+<dt><code>-f77=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Use this setting to catch language extensions which violate the Fortran 77 Standard. Such extensions may cause your program not to be portable. Examples include the use of underscores in variable names; variable names longer than six characters; statement lines longer than 72 characters; and nonstandard statements such as the DO &#8230; ENDDO structure. <code>ftnchek</code> does not report on the use of lowercase letters. By default, all warnings are turned off. </p>
+</dt><dd> Use this setting to catch language extensions which violate the Fortran 77 Standard. Such extensions may cause your program not to be portable. Examples include the use of underscores in variable names; variable names longer than six characters; statement lines longer than 72 characters; and nonstandard statements such as the DO &#8230; ENDDO structure. <code>ftnchek</code> does not report on the use of lowercase letters. By default, all warnings are turned off. </dd>
 <p> This setting provides detailed control over the warnings about supported extensions to the Fortran 77 Standard. (Further details about the extensions themselves are given below in the section on Extensions.) The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the warnings about nonstandard extensions, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-f77</code> is equivalent to <code>-f77=all</code>, and <code>-nof77</code> is equivalent to <code>-f77=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>accept-type</code>:</p>
-<dd> ACCEPT and TYPE I/O statements.</p>
-<dt><code>array-bounds</code>:</p>
-<dd> Expressions defining array bounds that contain array elements or function references.</p>
-<dt><code>assignment-stmt</code>:</p>
-<dd> Assignment statements involving arrays. In Fortran 90, an array can be assigned to another array of compatible shape, or a scalar can be assigned to an array. Neither of these assignments is permitted in Fortran 77.</p>
+<dt><code>accept-type</code>:</dt>
+<dd> ACCEPT and TYPE I/O statements.</dd>
+<dt><code>array-bounds</code>:</dt>
+<dd> Expressions defining array bounds that contain array elements or function references.</dd>
+<dt><code>assignment-stmt</code>:</dt>
+<dd> Assignment statements involving arrays. In Fortran 90, an array can be assigned to another array of compatible shape, or a scalar can be assigned to an array. Neither of these assignments is permitted in Fortran 77.</dd>
 <dt>
-<dd> A related warning occurs when an array is assigned to a scalar. Since this is illegal also in Fortran 90, it is always warned about regardless of the <code>-f77</code> setting (unless all checking is turned off with the <code>-nocheck</code> flag).</p>
-<dt><code>attribute-based-decl</code>:</p>
-<dd> Type declarations in the new Fortran 90 attribute-based style. This style of declaration is distinguished by the use of a double colon (::) between the list of attributes and the list of declared variables. This option also controls warnings for use of Fortran 90 length or kind specifiers in type declarations. (Although these specifiers can be used in non-attribute-based declarations, they are controlled by this option to avoid proliferation of <code>-f77</code> options.)</p>
-<dt><code>automatic-array</code>:</p>
-<dd> Local (not dummy) arrays which have variable size. These would correspond to arrays whose storage would have to be dynamically allocated at run time.</p>
-<dt><code>backslash</code>:</p>
-<dd> Unix backslash escape in strings. This warning will be given only if the <code>-source=unix-backslash</code> setting is specified to cause the escape interpretation of backslash..</p>
-<dt><code>byte</code>:</p>
-<dd> BYTE data type declaration.</p>
-<dt><code>case-construct</code>:</p>
-<dd> The SELECT CASE construct.</p>
-<dt><code>character</code>:</p>
-<dd> Extensions to the Fortran 77 standard regarding character data. At present, this only controls warnings about character variables declared with zero or negative length. In Fortran 77, all character variables must be of positive length. In Fortran 90, they can be zero length, and declarations that specify negative lengths are permitted, turning into zero for the declared length. Note: because negative length specifiers may indicate a programming error, the warning about them is given even if this option is turned off, and is suppressed only by the <code>-nocheck</code> flag.</p>
-<dt><code>common-subprog-name</code>:</p>
-<dd> Common block and subprogram having the same name.</p>
-<dt><code>construct-name</code>:</p>
-<dd> Use of a construct-name to label a control statement.</p>
-<dt><code>continuation</code>:</p>
-<dd> More than 19 successive continuation lines.</p>
-<dt><code>cpp</code>:</p>
-<dd> Unix C preprocessor directives in the source code.</p>
-<dt><code>cray-pointer</code>:</p>
-<dd> &#8220;Cray pointer&#8221; syntax.</p>
-<dt><code>cycle-exit</code>:</p>
-<dd> The CYCLE and EXIT statements.</p>
-<dt><code>d-comment</code>:</p>
-<dd> Debugging comments starting with D in the source code.</p>
-<dt><code>dec-tab</code>:</p>
-<dd> DEC Fortran style tab-formatted source code. This warning will be given only if the <code>-source=dec-tab</code> setting is specified to cause interpretation of tabs in this style.</p>
-<dt><code>do-enddo</code>:</p>
-<dd> DO loop extensions: terminal statement label omitted, END DO, and WHILE.</p>
-<dt><code>double-complex</code>:</p>
-<dd> Double precision complex datatype.</p>
-<dt><code>format-dollarsign</code>:</p>
-<dd> Dollar sign control code in FORMAT statements.</p>
-<dt><code>format-edit-descr</code>:</p>
-<dd> Nonstandard edit descriptors in FORMAT statements.</p>
-<dt><code>function-noparen</code>:</p>
-<dd> Function definition without parentheses.</p>
-<dt><code>implicit-none</code>:</p>
-<dd> IMPLICIT NONE statement.</p>
-<dt><code>include</code>:</p>
-<dd> INCLUDE statement.</p>
-<dt><code>inline-comment</code>:</p>
-<dd> Inline comments starting with an exclamation point.</p>
-<dt><code>internal-list-io</code>:</p>
-<dd> List-directed I/O to or from an internal file.</p>
-<dt><code>intrinsic</code>:</p>
-<dd> Nonstandard intrinsic functions.</p>
-<dt><code>io-keywords</code></p>
-<dd> Nonstandard keywords used in I/O statements. These fall into three groups. The first group includes keywords that are accepted in Fortran 90: <center></p>
+</dt><dd> A related warning occurs when an array is assigned to a scalar. Since this is illegal also in Fortran 90, it is always warned about regardless of the <code>-f77</code> setting (unless all checking is turned off with the <code>-nocheck</code> flag).</dd>
+<dt><code>attribute-based-decl</code>:</dt>
+<dd> Type declarations in the new Fortran 90 attribute-based style. This style of declaration is distinguished by the use of a double colon (::) between the list of attributes and the list of declared variables. This option also controls warnings for use of Fortran 90 length or kind specifiers in type declarations. (Although these specifiers can be used in non-attribute-based declarations, they are controlled by this option to avoid proliferation of <code>-f77</code> options.)</dd>
+<dt><code>automatic-array</code>:</dt>
+<dd> Local (not dummy) arrays which have variable size. These would correspond to arrays whose storage would have to be dynamically allocated at run time.</dd>
+<dt><code>backslash</code>:</dt>
+<dd> Unix backslash escape in strings. This warning will be given only if the <code>-source=unix-backslash</code> setting is specified to cause the escape interpretation of backslash..</dd>
+<dt><code>byte</code>:</dt>
+<dd> BYTE data type declaration.</dd>
+<dt><code>case-construct</code>:</dt>
+<dd> The SELECT CASE construct.</dd>
+<dt><code>character</code>:</dt>
+<dd> Extensions to the Fortran 77 standard regarding character data. At present, this only controls warnings about character variables declared with zero or negative length. In Fortran 77, all character variables must be of positive length. In Fortran 90, they can be zero length, and declarations that specify negative lengths are permitted, turning into zero for the declared length. Note: because negative length specifiers may indicate a programming error, the warning about them is given even if this option is turned off, and is suppressed only by the <code>-nocheck</code> flag.</dd>
+<dt><code>common-subprog-name</code>:</dt>
+<dd> Common block and subprogram having the same name.</dd>
+<dt><code>construct-name</code>:</dt>
+<dd> Use of a construct-name to label a control statement.</dd>
+<dt><code>continuation</code>:</dt>
+<dd> More than 19 successive continuation lines.</dd>
+<dt><code>cpp</code>:</dt>
+<dd> Unix C preprocessor directives in the source code.</dd>
+<dt><code>cray-pointer</code>:</dt>
+<dd> &#8220;Cray pointer&#8221; syntax.</dd>
+<dt><code>cycle-exit</code>:</dt>
+<dd> The CYCLE and EXIT statements.</dd>
+<dt><code>d-comment</code>:</dt>
+<dd> Debugging comments starting with D in the source code.</dd>
+<dt><code>dec-tab</code>:</dt>
+<dd> DEC Fortran style tab-formatted source code. This warning will be given only if the <code>-source=dec-tab</code> setting is specified to cause interpretation of tabs in this style.</dd>
+<dt><code>do-enddo</code>:</dt>
+<dd> DO loop extensions: terminal statement label omitted, END DO, and WHILE.</dd>
+<dt><code>double-complex</code>:</dt>
+<dd> Double precision complex datatype.</dd>
+<dt><code>format-dollarsign</code>:</dt>
+<dd> Dollar sign control code in FORMAT statements.</dd>
+<dt><code>format-edit-descr</code>:</dt>
+<dd> Nonstandard edit descriptors in FORMAT statements.</dd>
+<dt><code>function-noparen</code>:</dt>
+<dd> Function definition without parentheses.</dd>
+<dt><code>implicit-none</code>:</dt>
+<dd> IMPLICIT NONE statement.</dd>
+<dt><code>include</code>:</dt>
+<dd> INCLUDE statement.</dd>
+<dt><code>inline-comment</code>:</dt>
+<dd> Inline comments starting with an exclamation point.</dd>
+<dt><code>internal-list-io</code>:</dt>
+<dd> List-directed I/O to or from an internal file.</dd>
+<dt><code>intrinsic</code>:</dt>
+<dd> Nonstandard intrinsic functions.</dd>
+<dt><code>io-keywords</code></dt>
+<dd> Nonstandard keywords used in I/O statements. These fall into three groups. The first group includes keywords that are accepted in Fortran 90: <center></dd>
 <table>
 <tr VALIGN=top>
 <td>ACTION</td>
@@ -467,52 +467,52 @@ description: "ftnchek – Fortran 77 program checker"
 </tr>
 </table>
 <p></center> This flag also controls a warning about use of ACCESS=&#8217;APPEND&#8217;, which is accepted by some compilers. The value of &#8216;APPEND&#8217; is not valid for any I/O specifier in standard Fortran 77, and in Fortran 90 &#8216;APPEND&#8217; should be used as a value of the POSITION specifier, not ACCESS.</p>
-<dt><code>long-line</code>:</p>
-<dd> Statements with meaningful code past 72 columns. This warning is given only if the <code>-columns</code> setting has been used to increase the statement field width.</p>
-<dt><code>long-name</code>:</p>
-<dd> Identifiers over 6 characters long.</p>
-<dt><code>mixed-common</code>:</p>
-<dd> Mixed character and noncharacter data in COMMON block.</p>
-<dt><code>mixed-expr</code>:</p>
-<dd> Nonstandard type combinations in expressions, for example DOUBLE PRECISION with COMPLEX, assigning hollerith to integer, logical operations on integers.</p>
-<dt><code>name-dollarsign</code>:</p>
-<dd> Dollar sign used as a character in identifiers.</p>
-<dt><code>name-underscore</code>:</p>
-<dd> Underscore used as a character in identifiers.</p>
-<dt><code>namelist</code>:</p>
-<dd> NAMELIST statement.</p>
-<dt><code>param-implicit-type</code>:</p>
-<dd> Implicit typing of a parameter by the data type of the value assigned. This warning can only occur if implicit parameter typing has been turned on by the <code>-source=param-implicit-type</code> option, or if the PARAMETER statement is of the nonstandard form without parentheses. If this option is turned on, then any instances where implicit parameter typing occurs will be warned about. If you want to be warned only in those instances where the implicit data type differs from the default type, use <code>-portability=param-implicit-type</code> instead. According to the Fortran 77 standard, the data type of a parameter is given by the same rules as for a variable, and if necessary a type conversion is done when the value is assigned.</p>
-<dt><code>param-intrinsic</code>:</p>
-<dd> Intrinsic function or exponentiation by a real used to define the value of a PARAMETER definition.</p>
-<dt><code>param-noparen</code>:</p>
-<dd> PARAMETER statement without parentheses. The user should be aware that the semantics of this form of the statement differs from that of the standard form: in this form, the parameter takes its data type from the value assigned, rather than having its default data type based on the first letter of the parameter name. (This form of the PARAMETER statement was introduced by DEC before the Fortran 77 standard was defined, and should be avoided.)</p>
-<dt><code>pointer</code>:</p>
-<dd> Fortran 90 standard pointer-related syntax, including POINTER, TARGET and ALLOCATABLE type declarations, ALLOCATE, DEALLOCATE, and NULLIFY statements, and pointer assignment using =&gt;.</p>
-<dt><code>quad-constant</code>:</p>
-<dd> Quad precision real constants, e.g. of the form 1.23Q4.</p>
-<dt><code>quotemark</code>:</p>
-<dd> Strings delimited by quote marks rather than apostrophes.</p>
-<dt><code>relops</code>:</p>
-<dd> Relational (comparison) operators composed of punctuation, namely: &lt; &lt;= == /= &gt; &gt;=.</p>
-<dt><code>semicolon</code>:</p>
-<dd> Semicolon used as statement separator.</p>
-<dt><code>statement-order</code>:</p>
-<dd> Statements out of the sequence mandated by the Standard. The allowed sequence is illustrated in Table 1 in the section on Interpreting the Output.</p>
-<dt><code>typeless-constant</code>:</p>
-<dd> Typeless constants, for example Z&#8217;19AF&#8217;.</p>
-<dt><code>type-size</code>:</p>
-<dd> Type declarations specifying a size, for example REAL*8.</p>
-<dt><code>variable-format</code>:</p>
-<dd> Variable repeat specification or field size in FORMAT. These are of the form &lt; <i>expr</i> &gt;.</p>
-<dt><code>vms-io</code>:</p>
-<dd> Obsolete. Now has the same meaning as the <code>io-keywords</code> keyword.</dl>
+<dt><code>long-line</code>:</dt>
+<dd> Statements with meaningful code past 72 columns. This warning is given only if the <code>-columns</code> setting has been used to increase the statement field width.</dd>
+<dt><code>long-name</code>:</dt>
+<dd> Identifiers over 6 characters long.</dd>
+<dt><code>mixed-common</code>:</dt>
+<dd> Mixed character and noncharacter data in COMMON block.</dd>
+<dt><code>mixed-expr</code>:</dt>
+<dd> Nonstandard type combinations in expressions, for example DOUBLE PRECISION with COMPLEX, assigning hollerith to integer, logical operations on integers.</dd>
+<dt><code>name-dollarsign</code>:</dt>
+<dd> Dollar sign used as a character in identifiers.</dd>
+<dt><code>name-underscore</code>:</dt>
+<dd> Underscore used as a character in identifiers.</dd>
+<dt><code>namelist</code>:</dt>
+<dd> NAMELIST statement.</dd>
+<dt><code>param-implicit-type</code>:</dt>
+<dd> Implicit typing of a parameter by the data type of the value assigned. This warning can only occur if implicit parameter typing has been turned on by the <code>-source=param-implicit-type</code> option, or if the PARAMETER statement is of the nonstandard form without parentheses. If this option is turned on, then any instances where implicit parameter typing occurs will be warned about. If you want to be warned only in those instances where the implicit data type differs from the default type, use <code>-portability=param-implicit-type</code> instead. According to the Fortran 77 standard, the data type of a parameter is given by the same rules as for a variable, and if necessary a type conversion is done when the value is assigned.</dd>
+<dt><code>param-intrinsic</code>:</dt>
+<dd> Intrinsic function or exponentiation by a real used to define the value of a PARAMETER definition.</dd>
+<dt><code>param-noparen</code>:</dt>
+<dd> PARAMETER statement without parentheses. The user should be aware that the semantics of this form of the statement differs from that of the standard form: in this form, the parameter takes its data type from the value assigned, rather than having its default data type based on the first letter of the parameter name. (This form of the PARAMETER statement was introduced by DEC before the Fortran 77 standard was defined, and should be avoided.)</dd>
+<dt><code>pointer</code>:</dt>
+<dd> Fortran 90 standard pointer-related syntax, including POINTER, TARGET and ALLOCATABLE type declarations, ALLOCATE, DEALLOCATE, and NULLIFY statements, and pointer assignment using =&gt;.</dd>
+<dt><code>quad-constant</code>:</dt>
+<dd> Quad precision real constants, e.g. of the form 1.23Q4.</dd>
+<dt><code>quotemark</code>:</dt>
+<dd> Strings delimited by quote marks rather than apostrophes.</dd>
+<dt><code>relops</code>:</dt>
+<dd> Relational (comparison) operators composed of punctuation, namely: &lt; &lt;= == /= &gt; &gt;=.</dd>
+<dt><code>semicolon</code>:</dt>
+<dd> Semicolon used as statement separator.</dd>
+<dt><code>statement-order</code>:</dt>
+<dd> Statements out of the sequence mandated by the Standard. The allowed sequence is illustrated in Table 1 in the section on Interpreting the Output.</dd>
+<dt><code>typeless-constant</code>:</dt>
+<dd> Typeless constants, for example Z&#8217;19AF&#8217;.</dd>
+<dt><code>type-size</code>:</dt>
+<dd> Type declarations specifying a size, for example REAL*8.</dd>
+<dt><code>variable-format</code>:</dt>
+<dd> Variable repeat specification or field size in FORMAT. These are of the form &lt; <i>expr</i> &gt;.</dd>
+<dt><code>vms-io</code>:</dt>
+<dd> Obsolete. Now has the same meaning as the <code>io-keywords</code> keyword.</dd></dl>
 <p> See also: <code>-f90</code>, <code>-f95</code>, <code>-portability</code>, <code>-pretty</code>, <code>-style</code>, <code>-wordsize</code>.</dl>
-<dt><code>-f90=</code><i>list</i></p>
+<dt><code>-f90=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This setting provides detailed control over the warnings about supported extensions to the Fortran 77 Standard that were not adopted as part of the Fortran 90 Standard. Note that <code>ftnchek</code> does not support the full Fortran 90 language. However, it does support some common extensions to Fortran 77 that were prevalent before Fortran 90 was defined. Some of these extensions became part of the Fortran 90 Standard, but others did not. The <code>-f90</code> setting warns only about the latter. That is, this flag covers things that are neither legal Fortran 77 nor legal Fortran 90. Therefore, the warnings controlled by this flag are basically a subset of the warnings controlled by <code>-f77</code>. There are a few cases, described below, where the circumstances in which the warning is given are slightly different for the two flags. </p>
+</dt><dd> This setting provides detailed control over the warnings about supported extensions to the Fortran 77 Standard that were not adopted as part of the Fortran 90 Standard. Note that <code>ftnchek</code> does not support the full Fortran 90 language. However, it does support some common extensions to Fortran 77 that were prevalent before Fortran 90 was defined. Some of these extensions became part of the Fortran 90 Standard, but others did not. The <code>-f90</code> setting warns only about the latter. That is, this flag covers things that are neither legal Fortran 77 nor legal Fortran 90. Therefore, the warnings controlled by this flag are basically a subset of the warnings controlled by <code>-f77</code>. There are a few cases, described below, where the circumstances in which the warning is given are slightly different for the two flags. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the warnings about nonstandard extensions, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-f90</code> is equivalent to <code>-f90=all</code>, and <code>-nof90</code> is equivalent to <code>-f90=none</code>. </p>
 <p> The following keywords have identical meanings for <code>-f90</code> as for <code>-f77</code>. The reader is referred to the explanations under <code>-f77</code>. <center></p>
 <table>
@@ -556,65 +556,65 @@ description: "ftnchek – Fortran 77 program checker"
 <p></center> </p>
 <p> The keywords which differ somewhat from the corresponding <code>-f77</code> keywords are as follows.</p>
 <dl>
-<dt><code>continuation</code>:</p>
-<dd> The limit on the number of continuation lines for a statement in fixed source form is the same, namely 19, in Fortran 90 as in Fortran 77. For free source form the limit is 39 continuation lines, and a line containing a continuation mark cannot be otherwise empty or contain only a comment.</p>
-<dt><code>intrinsic</code>:</p>
-<dd> This is the same as for <code>-f77</code> except for the intrinsic functions defined in MIL-STD 1753, which are all included in Fortran 90, and so are not warned about. (See <code>-intrinsic</code> for a list.)</p>
-<dt><code>io-keywords</code>:</p>
-<dd> This is the same as for <code>-f77</code> except that no warnings are given for the I/O keywords that are standard in Fortran 90.</p>
-<dt><code>long-line</code>:</p>
-<dd> Although the Fortran 90 Standard allows lines longer than 72 characters in free source form, this restriction still applies to fixed source form. In free source form the line length limit is 132 characters, and unlike fixed form, <code>ftnchek</code> does not allow this limit to be increased.</p>
-<dt><code>mixed-expr</code>:</p>
-<dd> This is the same as for <code>-f77</code> except for expressions mixing extended precision real with complex data types, which are permitted in Fortran 90.</p>
-<dt><code>statement-order</code>:</p>
-<dd> This is similar to the corresponding <code>-f77</code> warning, but applies the somewhat looser restrictions on statement order of the Fortran 90 Standard. In particular, Fortran 90 allows DATA statements and statement-function definitions to be intermixed with specification statements.</p>
-<dt><code>typeless-constant</code>:</p>
-<dd> In Fortran 90, binary, octal, and hexadecimal constants of the form B&#8217;ddd&#8217;, O&#8217;ddd&#8217;, and Z&#8217;ddd&#8217;, respectively, are permitted. Here &#8216;ddd&#8217; represents a string of digits. <code>ftnchek</code> recognizes these forms, as well as a variant of the form X&#8217;ddd&#8217; for a hexadecimal constant, and other variants in which the base indicator B, O, Z, or X follows the digit string. These variants were not adopted in Fortran 90, so only they are warned about when this flag is turned on.</dl>
+<dt><code>continuation</code>:</dt>
+<dd> The limit on the number of continuation lines for a statement in fixed source form is the same, namely 19, in Fortran 90 as in Fortran 77. For free source form the limit is 39 continuation lines, and a line containing a continuation mark cannot be otherwise empty or contain only a comment.</dd>
+<dt><code>intrinsic</code>:</dt>
+<dd> This is the same as for <code>-f77</code> except for the intrinsic functions defined in MIL-STD 1753, which are all included in Fortran 90, and so are not warned about. (See <code>-intrinsic</code> for a list.)</dd>
+<dt><code>io-keywords</code>:</dt>
+<dd> This is the same as for <code>-f77</code> except that no warnings are given for the I/O keywords that are standard in Fortran 90.</dd>
+<dt><code>long-line</code>:</dt>
+<dd> Although the Fortran 90 Standard allows lines longer than 72 characters in free source form, this restriction still applies to fixed source form. In free source form the line length limit is 132 characters, and unlike fixed form, <code>ftnchek</code> does not allow this limit to be increased.</dd>
+<dt><code>mixed-expr</code>:</dt>
+<dd> This is the same as for <code>-f77</code> except for expressions mixing extended precision real with complex data types, which are permitted in Fortran 90.</dd>
+<dt><code>statement-order</code>:</dt>
+<dd> This is similar to the corresponding <code>-f77</code> warning, but applies the somewhat looser restrictions on statement order of the Fortran 90 Standard. In particular, Fortran 90 allows DATA statements and statement-function definitions to be intermixed with specification statements.</dd>
+<dt><code>typeless-constant</code>:</dt>
+<dd> In Fortran 90, binary, octal, and hexadecimal constants of the form B&#8217;ddd&#8217;, O&#8217;ddd&#8217;, and Z&#8217;ddd&#8217;, respectively, are permitted. Here &#8216;ddd&#8217; represents a string of digits. <code>ftnchek</code> recognizes these forms, as well as a variant of the form X&#8217;ddd&#8217; for a hexadecimal constant, and other variants in which the base indicator B, O, Z, or X follows the digit string. These variants were not adopted in Fortran 90, so only they are warned about when this flag is turned on.</dd></dl>
 <p> See also: <code>-f77</code>, <code>-f95</code>, <code>-portability</code>, <code>-pretty</code>, <code>-style</code>, <code>-wordsize</code>.</dl>
-<dt><code>-f95=</code><i>list</i></p>
+<dt><code>-f95=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This setting provides detailed control over warnings about standard Fortran 77 features that were deleted from the Fortran 95 Standard. Unlike the <code>-f77</code> and <code>-f90</code> settings, these warnings apply to syntax which is legal Fortran 77. However, since these features have been deleted from the Standard, it is possible that programs containing them will be unacceptable to some newer compilers. </p>
+</dt><dd> This setting provides detailed control over warnings about standard Fortran 77 features that were deleted from the Fortran 95 Standard. Unlike the <code>-f77</code> and <code>-f90</code> settings, these warnings apply to syntax which is legal Fortran 77. However, since these features have been deleted from the Standard, it is possible that programs containing them will be unacceptable to some newer compilers. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the warnings about nonstandard extensions, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-f95</code> is equivalent to <code>-f95=all</code>, and <code>-nof95</code> is equivalent to <code>-f95=none</code>. The warning keywords with their meanings are as follows.</p>
 <dl>
-<dt><code>real-do</code>:</p>
-<dd> A DO variable of any real numeric type.</p>
-<dt><code>pause</code>:</p>
-<dd> The PAUSE statement.</p>
-<dt><code>assign</code>:</p>
-<dd> The ASSIGN statement, assigned GOTO, or assigned format.</p>
-<dt><code>h-edit</code>:</p>
-<dd> The H edit descriptor in a format.</dl>
+<dt><code>real-do</code>:</dt>
+<dd> A DO variable of any real numeric type.</dd>
+<dt><code>pause</code>:</dt>
+<dd> The PAUSE statement.</dd>
+<dt><code>assign</code>:</dt>
+<dd> The ASSIGN statement, assigned GOTO, or assigned format.</dd>
+<dt><code>h-edit</code>:</dt>
+<dd> The H edit descriptor in a format.</dd></dl>
 <p> There is one other Fortran 77 syntax feature that was deleted in Fortran 95, namely branching to an ENDIF from outside the IF block. However, <code>ftnchek</code> is unable to analyze program flow, and so it does not provide a warning for this. </p>
 <p> See also: <code>-f77</code>, <code>-f90</code>, <code>-portability</code>, <code>-pretty</code>, <code>-style</code>, <code>-wordsize</code>.</dl>
-<dt><code>-help</code></p>
+<dt><code>-help</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Prints a list of all the command-line options with a short description of each along with its default value. This command is identical in function to the <code>&#8220;?&#8221;</code> argument, and is provided as a convenience for those systems in which the question mark has special meaning to the command interpreter. Default = no. </p>
+</dt><dd> Prints a list of all the command-line options with a short description of each along with its default value. This command is identical in function to the <code>&#8220;?&#8221;</code> argument, and is provided as a convenience for those systems in which the question mark has special meaning to the command interpreter. Default = no. </dd>
 <p> The help listing also prints the version number and patch level of <code>ftnchek</code> and a copyright notice. </p>
 <p> Note: the &#8220;default&#8221; values printed in square brackets in the help listing are, strictly speaking, not the built-in defaults but the current values after any environment options and any command-line options preceding the <code>-help</code> option have been processed. </p>
 <p> See also: <code>-novice</code>, <code>-version</code>, and <code>help</code> option of all settings that take a list of keywords.</dl>
-<dt><code>-identifier-chars=</code><i>list</i></p>
+<dt><code>-identifier-chars=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Define non-alphanumeric characters that may be used in identifiers. By default, <code>ftnchek</code> only accepts the dollar sign and underscore as non-alphanumeric characters in identifier names. The characters in the <i>list</i> replace whatever set of accepted non-alphanumeric characters was previously in effect. Thus, if dollar sign or underscore are not included in the list, they lose their status as acceptable characters. </p>
+</dt><dd> Define non-alphanumeric characters that may be used in identifiers. By default, <code>ftnchek</code> only accepts the dollar sign and underscore as non-alphanumeric characters in identifier names. The characters in the <i>list</i> replace whatever set of accepted non-alphanumeric characters was previously in effect. Thus, if dollar sign or underscore are not included in the list, they lose their status as acceptable characters. </dd>
 <p> This option is provided to enable <code>ftnchek</code> to handle source files containing non-standard identifer names that may be needed, for example, to access certain operating system services. See the section on Limitations and Extensions for the treatment of identifiers containing these characters in implicit typing. </p>
 <p> Using <code>-noidentifer-chars</code> turns off acceptance of non-alphanumeric characters entirely. </p>
 <p> See also: <code>-source</code>.</dl>
-<dt><code>-include=</code><i>path</i></p>
+<dt><code>-include=</code><i>path</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specifies a directory to be searched for files specified by INCLUDE statements. Unlike other command-line options, this setting is cumulative; that is, if it is given more than once on the command line, all the directories so specified are placed on a list that will be searched in the same order as they are given. The order in which <code>ftnchek</code> searches for a file to be included is: the current directory; the directory specified by environment variable FTNCHEK_INCLUDE if any; the directories specified by any <code>-include</code> options; the directory specified by environment variable INCLUDE; and finally in a standard system-wide directory (/usr/include for UNIX, SYS$LIBRARY for VMS, and \include for MSDOS). </p>
+</dt><dd> Specifies a directory to be searched for files specified by INCLUDE statements. Unlike other command-line options, this setting is cumulative; that is, if it is given more than once on the command line, all the directories so specified are placed on a list that will be searched in the same order as they are given. The order in which <code>ftnchek</code> searches for a file to be included is: the current directory; the directory specified by environment variable FTNCHEK_INCLUDE if any; the directories specified by any <code>-include</code> options; the directory specified by environment variable INCLUDE; and finally in a standard system-wide directory (/usr/include for UNIX, SYS$LIBRARY for VMS, and \include for MSDOS). </dd>
 <p> See also: <code>-f77</code>, <code>-source</code>.</dl>
-<dt><code>-intrinsic=</code><i>list</i></p>
+<dt><code>-intrinsic=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Controls whether <code>ftnchek</code> recognizes certain nonstandard intrinsic functions as intrinsic. The <i>list</i> consists of keywords separated by commas or colons. Some of the keywords control whether to recognize certain groups of functions, and other keywords control the expected syntax for invoking some nonstandard intrinsics. Include a keyword to turn on recognition of the corresponding set of intrinsics or to allow the corresponding syntax. Include a keyword prefixed by <code>no-</code> to turn off that recognition. </p>
+</dt><dd> Controls whether <code>ftnchek</code> recognizes certain nonstandard intrinsic functions as intrinsic. The <i>list</i> consists of keywords separated by commas or colons. Some of the keywords control whether to recognize certain groups of functions, and other keywords control the expected syntax for invoking some nonstandard intrinsics. Include a keyword to turn on recognition of the corresponding set of intrinsics or to allow the corresponding syntax. Include a keyword prefixed by <code>no-</code> to turn off that recognition. </dd>
 <p> There are three special keywords: <code>all</code> turns on recognition of all the nonstandard intrinsics (listed below) and accepts either syntax for those that have variations. Use <code>none</code> to turn off recognition of all nonstandard intrinsics except those noted below. Use <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-intrinsic</code> is equivalent to <code>-intrinsic=all</code>, and <code>-nointrinsic</code> is equivalent to <code>-intrinsic=none</code>. </p>
 <p> The nonstandard intrinsic functions needed to support the nonstandard extended precision data types (double complex and quad precision) are always recognized. The intrinsics for the double complex data type are: <center></p>
 <table>
@@ -729,8 +729,8 @@ description: "ftnchek – Fortran 77 program checker"
 </table>
 <p></center> The keywords controlling recognition of other nonstandard intrinsic functions are as follows:</p>
 <dl>
-<dt><code>extra</code>:</p>
-<dd> recognize the following commonly available nonstandard intrinsics (all except EXIT and LOC are defined in MIL-STD 1753): <center></p>
+<dt><code>extra</code>:</dt>
+<dd> recognize the following commonly available nonstandard intrinsics (all except EXIT and LOC are defined in MIL-STD 1753): <center></dd>
 <table>
 <tr VALIGN=top>
 <td>BTEST</td>
@@ -755,8 +755,8 @@ description: "ftnchek – Fortran 77 program checker"
 </tr>
 </table>
 <p></center></p>
-<dt><code>unix</code>:</p>
-<dd> recognize these common Unix-specific intrinsic functions: <center></p>
+<dt><code>unix</code>:</dt>
+<dd> recognize these common Unix-specific intrinsic functions: <center></dd>
 <table>
 <tr VALIGN=top>
 <td>ABORT</td>
@@ -788,8 +788,8 @@ description: "ftnchek – Fortran 77 program checker"
 </tr>
 </table>
 <p></center></p>
-<dt><code>vms</code>:</p>
-<dd> recognize these common VMS-specific intrinsic functions: <center></p>
+<dt><code>vms</code>:</dt>
+<dd> recognize these common VMS-specific intrinsic functions: <center></dd>
 <table>
 <tr VALIGN=top>
 <td>DATE</td>
@@ -807,39 +807,39 @@ description: "ftnchek – Fortran 77 program checker"
 </tr>
 </table>
 <p></center></p>
-<dt><code>iargc-no-argument</code>:</p>
-<dd> specify that IARGC may be invoked with no arguments.</p>
-<dt><code>iargc-one-argument</code>:</p>
-<dd> specify that IARGC may be invoked with one argument.</p>
-<dt><code>rand-no-argument</code>:</p>
-<dd> specify that RAND and IRAND may be invoked with no arguments.</p>
-<dt><code>rand-one-argument</code>:</p>
-<dd> specify that RAND and IRAND may be invoked with one argument.</dl>
+<dt><code>iargc-no-argument</code>:</dt>
+<dd> specify that IARGC may be invoked with no arguments.</dd>
+<dt><code>iargc-one-argument</code>:</dt>
+<dd> specify that IARGC may be invoked with one argument.</dd>
+<dt><code>rand-no-argument</code>:</dt>
+<dd> specify that RAND and IRAND may be invoked with no arguments.</dd>
+<dt><code>rand-one-argument</code>:</dt>
+<dd> specify that RAND and IRAND may be invoked with one argument.</dd></dl>
 <p> The <code>no-argument</code> and <code>one-argument</code> keywords work as follows: turning the option on causes <code>ftnchek</code> to accept the corresponding syntax for invocation of the function, without excluding the possibility of the alternative syntax. Turning the option off causes the corresponding syntax not to be accepted. If both options are turned on at once (the default), then either syntax is accepted. Turning both options off at once would not be meaningful. These options have no effect if recognition of Unix intrinsics has been turned off. </p>
 <p> Note that this setting does not control whether non-standard warnings are issued about these functions. It controls whether the functions are assumed to be intrinsic or not, which determines how their usage is checked. When functions in any of these sets are included, their invocations will be checked according to the rules for the intrinsic functions; otherwise they will be checked as normal (user-written) external functions. The non-standard warnings are controlled by the <code>-f77=intrinsic</code> option. </p>
 <p> The default value of this setting is equivalent to <code>-intrinsic=all</code> followed by <code>-intrinsic=no-vms</code> for the Unix version, <code>-intrinsic=no-unix</code> for the VMS version, and <code>-intrinsic=no-unix,no-vms</code> for other versions. </p>
 <p> Note: In versions of <code>ftnchek</code> prior to 2.10, the <code>-intrinsic</code> flag took a numeric argument instead of a list of options. For the sake of users who may have written scripts invoking <code>ftnchek</code> in this way, the numeric form is still accepted. The numeric form of the setting consists of three digits. The ones digit selects the set of intrinsic functions to be supported. The digit 0 selects only Fortran 77 standard intrinsics plus those needed to support the nonstandard extended precision data types. The digit 1 is equivalent to <code>extra</code>, 2 is equivalent to <code>extra,unix</code>, and 3 is equivalent to <code>extra,vms</code>. The tens digit of this setting controls the syntax of the RAND intrinsic function, and the hundreds digit controls the syntax of the IARGC function. For these digits, specify 0 to require invocation with no argument, 1 to require one argument, and 2 to allow either form. </p>
 <p> See also: <code>-f77</code>.</dl>
-<dt><code>-library</code></p>
+<dt><code>-library</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This switch is used when a number of subprograms are contained in a file, but not all of them are used by the application. Normally, <code>ftnchek</code> warns you if any subprograms are defined but never used. This switch will suppress these warnings. Default = no. </p>
+</dt><dd> This switch is used when a number of subprograms are contained in a file, but not all of them are used by the application. Normally, <code>ftnchek</code> warns you if any subprograms are defined but never used. This switch will suppress these warnings. Default = no. </dd>
 <p> This switch also controls which subprogram calls and COMMON block declarations are checked. If a file is read with the <code>-library</code> flag in effect, the subprogram calls and COMMON declarations contained in a routine in that file will be checked only if that routine is in the main program&#8217;s call tree. On the other hand, if the <code>-library</code> switch is turned off, then <code>ftnchek</code> checks the calls of every routine by every other routine, regardless of whether those routines could ever actually be invoked at run time, and likewise all COMMON block declarations are compared for agreement. </p>
 <p> The difference between this switch and the <code>-usage=no-ext-unused</code> option for subprograms is that the latter suppresses only the warning about routines being declared but not used. The <code>-library</code> switch goes further and excludes unused routines processed while it is in effect from all cross-checking of arguments and COMMON block declarations as well. </p>
 <p> (If there is no main program anywhere in the set of files that <code>ftnchek</code> has read, so that there is no call tree, then <code>ftnchek</code> will look for any non-library routines that are not called by any other routine, and use these as substitutes for the main program in constructing the call tree and deciding what to check. If no such top-level non-library routines are found, then all inter-module calls and all COMMON declarations will be checked.) </p>
 <p> See also: <code>-arguments</code>, <code>-calltree</code>, <code>-common</code>, <code>-extern</code>, <code>-usage</code>.</dl>
-<dt><code>-list</code></p>
+<dt><code>-list</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specifies that a listing of the Fortran program is to be printed out with line numbers. If <code>ftnchek</code> detects an error, the error message follows the program line with a caret ( ^ ) specifying the location of the error. If no source listing was requested, <code>ftnchek</code> will still print out any line containing an error, to aid the user in determining where the error occurred. Default = no. </p>
+</dt><dd> Specifies that a listing of the Fortran program is to be printed out with line numbers. If <code>ftnchek</code> detects an error, the error message follows the program line with a caret ( ^ ) specifying the location of the error. If no source listing was requested, <code>ftnchek</code> will still print out any line containing an error, to aid the user in determining where the error occurred. Default = no. </dd>
 <p> See also: <code>-output</code>, B-symtab, fB-quiet.</dl>
-<dt><code>-makedcls=</code><i>list</i></p>
+<dt><code>-makedcls=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Prepare a neatly-formatted file of declarations of variables, common blocks, and namelist lists, for possible merging into the source code. The declarations are stored in a file of the same name as the source code, but with the extension changed to <i>.dcl</i>. If no declarations are written to the file, it is deleted to reduce clutter from empty files. </p>
+</dt><dd> Prepare a neatly-formatted file of declarations of variables, common blocks, and namelist lists, for possible merging into the source code. The declarations are stored in a file of the same name as the source code, but with the extension changed to <i>.dcl</i>. If no declarations are written to the file, it is deleted to reduce clutter from empty files. </dd>
 <p> If input comes from standard input, instead of a named file, then declarations are written to standard output. </p>
 <p> Variables are declared in alphabetical order within each declaration class and type, with integer variables first, because of their later possible use in array dimensions. </p>
 <p> PARAMETER statements are an exception to the alphabetical order rule, because the Fortran 77 Standard requires that the expressions defining parameter values refer only to constants and already-defined parameter names. This forces the original source file order of such statements to be preserved in the declaration files. </p>
@@ -847,390 +847,390 @@ description: "ftnchek – Fortran 77 program checker"
 <p> Various options for the form of the declarations file are controlled by the <i>list</i>, which consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the options, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-makedcls</code> is equivalent to <code>-makedcls=declarations</code> (i.e. produce the declarations file using the default options), and <code>-nomakedcls</code> is equivalent to <code>-makedcls=none</code>. </p>
 <p> For compatibility with previous versions of <code>ftnchek</code>, a numeric form of this setting is also accepted: the <i>list</i> is replaced by a number which is the sum of the numbers in parentheses beside the keywords in the following list. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>declarations</code> (1):</p>
-<dd> Write a declaration file. (This is implied by any of the other options, and can be omitted if any other options are given.)</p>
-<dt><code>undeclared-only</code> (2):</p>
-<dd> By default, all variables are included in the declaration file. With this option, include only <i>undeclared</i> variables. This setting is useful if you want to check for undeclared variables, since Fortran source files with all variables properly declared will not result in a <i>.dcl</i> file. With this option, common blocks and namelist lists will not be included in the declaration file, since by their nature they cannot be undeclared.</p>
-<dt><code>compact</code> (4):</p>
-<dd> The declarations are normally prettyprinted to line up neatly in common columns, as in the declaration files output by the Extended PFORT Verifier, <code>pfort</code>(1L). This option value selects instead compact output, without column alignment.</p>
-<dt><code>use-continuation-lines</code> (8):</p>
-<dd> Causes continuation lines to be used where permissible. The default is to begin a new declaration on each line. This option is appropriate to use together with <code>compact</code>.</p>
-<dt><code>keywords-lowercase</code> (16):</p>
-<dd> Output Fortran keywords in lowercase, instead of the default uppercase.</p>
-<dt><code>vars-and-consts-lowercase</code> (32):</p>
-<dd> Output variables and constants in lowercase, instead of the default uppercase. Character string constants are not affected by this option.</p>
-<dt><code>exclude-sftran3</code> (64):</p>
-<dd> Omit declarations of internal integer variables produced by the SFTRAN3 preprocessor, <code>xsf3</code>(1L), as part of the translation of structured Fortran statements to ordinary Fortran. These variables have six-character names of the form <i>NPRddd</i>, <i>NXdddd</i>, <i>N2dddd</i>, and <i>N3dddd</i>, where <i>d</i> is a decimal digit. Because they are invisible in the SFTRAN3 source code, and will change if the SFTRAN3 code is modified, such variables should not be explicitly declared. Instead, they should just assume the default Fortran INTEGER data type based on their initial letter, <i>N</i>.</p>
-<dt><code>asterisk-comment</code> (128):</p>
-<dd> Use an asterisk as the comment character; the default is otherwise &#8216;C&#8217;.</p>
-<dt><code>comment-char-lowercase</code> (256):</p>
-<dd> Use &#8216;c&#8217; instead of &#8216;C&#8217; or &#8216;*&#8217; as the comment character.</p>
-<dt><code>suppress-array-dimensions</code> (512):</p>
-<dd> Suppress dimensioning of arrays in the generated declarations. This option is for use with code lacking type declarations, to allow the declaration files to be inserted without change into the code. Since the code will have dimension statements already, dimensioning the array variables in the type statements of the declaration file is redundant. This option should be used only in conjunction with option 2 = undeclared-only because otherwise any arrays that were dimensioned in a type statement will lose their dimensioning.</p>
-<dt><code>free-form</code> (1024):</p>
-<dd> Produce declarations in free source form. This mode is automatically used if the input source is free form. Use this option to produce declarations in free form even if the input is in fixed form. Free form declarations are indented only 2 columns instead of 6, use the exclamation mark as the comment character, and indicate continuation lines by an ampersand at the end of the line to be continued.</dl>
+<dt><code>declarations</code> (1):</dt>
+<dd> Write a declaration file. (This is implied by any of the other options, and can be omitted if any other options are given.)</dd>
+<dt><code>undeclared-only</code> (2):</dt>
+<dd> By default, all variables are included in the declaration file. With this option, include only <i>undeclared</i> variables. This setting is useful if you want to check for undeclared variables, since Fortran source files with all variables properly declared will not result in a <i>.dcl</i> file. With this option, common blocks and namelist lists will not be included in the declaration file, since by their nature they cannot be undeclared.</dd>
+<dt><code>compact</code> (4):</dt>
+<dd> The declarations are normally prettyprinted to line up neatly in common columns, as in the declaration files output by the Extended PFORT Verifier, <code>pfort</code>(1L). This option value selects instead compact output, without column alignment.</dd>
+<dt><code>use-continuation-lines</code> (8):</dt>
+<dd> Causes continuation lines to be used where permissible. The default is to begin a new declaration on each line. This option is appropriate to use together with <code>compact</code>.</dd>
+<dt><code>keywords-lowercase</code> (16):</dt>
+<dd> Output Fortran keywords in lowercase, instead of the default uppercase.</dd>
+<dt><code>vars-and-consts-lowercase</code> (32):</dt>
+<dd> Output variables and constants in lowercase, instead of the default uppercase. Character string constants are not affected by this option.</dd>
+<dt><code>exclude-sftran3</code> (64):</dt>
+<dd> Omit declarations of internal integer variables produced by the SFTRAN3 preprocessor, <code>xsf3</code>(1L), as part of the translation of structured Fortran statements to ordinary Fortran. These variables have six-character names of the form <i>NPRddd</i>, <i>NXdddd</i>, <i>N2dddd</i>, and <i>N3dddd</i>, where <i>d</i> is a decimal digit. Because they are invisible in the SFTRAN3 source code, and will change if the SFTRAN3 code is modified, such variables should not be explicitly declared. Instead, they should just assume the default Fortran INTEGER data type based on their initial letter, <i>N</i>.</dd>
+<dt><code>asterisk-comment</code> (128):</dt>
+<dd> Use an asterisk as the comment character; the default is otherwise &#8216;C&#8217;.</dd>
+<dt><code>comment-char-lowercase</code> (256):</dt>
+<dd> Use &#8216;c&#8217; instead of &#8216;C&#8217; or &#8216;*&#8217; as the comment character.</dd>
+<dt><code>suppress-array-dimensions</code> (512):</dt>
+<dd> Suppress dimensioning of arrays in the generated declarations. This option is for use with code lacking type declarations, to allow the declaration files to be inserted without change into the code. Since the code will have dimension statements already, dimensioning the array variables in the type statements of the declaration file is redundant. This option should be used only in conjunction with option 2 = undeclared-only because otherwise any arrays that were dimensioned in a type statement will lose their dimensioning.</dd>
+<dt><code>free-form</code> (1024):</dt>
+<dd> Produce declarations in free source form. This mode is automatically used if the input source is free form. Use this option to produce declarations in free form even if the input is in fixed form. Free form declarations are indented only 2 columns instead of 6, use the exclamation mark as the comment character, and indicate continuation lines by an ampersand at the end of the line to be continued.</dd></dl>
 <p> The declaration files contain distinctive comments that mark the start and end of declarations for each program unit, to facilitate using text editor macros for merging the declarations back into the source code. </p>
 <p> The <code>ftnchek</code> distribution includes a program, <code>dcl2inc</code>, which processes declaration files to produce files containing declarations of all COMMON blocks, in a form suitable for use as INCLUDE files. See the <code>dcl2inc</code>(1L) man page for the details of its use. </p>
 <p> See also: <code>-mkhtml</code>.</dl>
-<dt><code>-mkhtml=</code><i>list</i></p>
+<dt><code>-mkhtml=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Produce HTML documentation from source. Creates individual HTML files from ftnchek analysis and code comments. All comments immediately preceding and following the function or subroutine definition are captured to the HTML file. No reformatting of source comments is performed other than stripping of FORTRAN comment characters. In addition, the HTML file lists the local variables declared, common block variables used, functions and subroutines called, I/O unit usage, and other information about each subprogram. Usually you will also want to specify <code>-call=tree</code> to create the root HTML file CallTree.html. (Perhaps this file should be named index.html.) </p>
+</dt><dd> Produce HTML documentation from source. Creates individual HTML files from ftnchek analysis and code comments. All comments immediately preceding and following the function or subroutine definition are captured to the HTML file. No reformatting of source comments is performed other than stripping of FORTRAN comment characters. In addition, the HTML file lists the local variables declared, common block variables used, functions and subroutines called, I/O unit usage, and other information about each subprogram. Usually you will also want to specify <code>-call=tree</code> to create the root HTML file CallTree.html. (Perhaps this file should be named index.html.) </dd>
 <p> Various options for the form of the HTML files are controlled by the <i>list</i>, which consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the options, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-mkhtml</code> is equivalent to <code>-mkhtml=documents</code> (i.e. produce the HTML document files using the default options), and <code>-nomkhtmls</code> is equivalent to <code>-mkhtml=none</code>. </p>
 <p> For the sake of simplicity, the options for <code>-mkhtml</code> are the same as those for <code>-makedcls</code> except for those that are inapplicable. Likewise, a numeric form of this setting can be used, formed as the sum of the numbers in parentheses in the list below. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>documents</code> (1):</p>
-<dd> Create the HTML documents. (This is implied by any of the other options, and can be omitted if any other options are given.)</p>
-<dt><code>compact</code> (4):</p>
-<dd> The declarations are normally prettyprinted to line up neatly in common columns. This option value selects instead compact output, without column alignment.</p>
-<dt><code>use-continuation-lines</code> (8):</p>
-<dd> Causes continuation lines to be used instead of beginning a new declaration on each line. This option is appropriate to use together with <code>compact</code>.</p>
-<dt><code>keywords-lowercase</code> (16):</p>
-<dd> Output Fortran keywords in lowercase, instead of the default uppercase.</p>
-<dt><code>vars-and-consts-lowercase</code> (32):</p>
-<dd> Output variables and constants in lowercase, instead of the default uppercase. Character string constants are not affected by this option.</p>
-<dt><code>exclude-sftran3</code> (64):</p>
-<dd> Omit declarations of internal integer variables produced by the SFTRAN3 preprocessor, <code>xsf3</code>(1L). (See <code>-makedcls</code> for discussion.)</p>
-<dt><code>suppress-array-dimensions</code> (512):</p>
-<dd> Suppress dimensioning of arrays in the generated declarations. This is normally undesirable, but is available if for some reason you do not want the array dimensions to appear in the HTML.</p>
-<dt><code>free-form</code> (1024):</p>
-<dd> Produce variable declarations in free source form. This mode is automatically used if the input source is free form. This mainly affects the form of continuation lines if they are used.</dl>
+<dt><code>documents</code> (1):</dt>
+<dd> Create the HTML documents. (This is implied by any of the other options, and can be omitted if any other options are given.)</dd>
+<dt><code>compact</code> (4):</dt>
+<dd> The declarations are normally prettyprinted to line up neatly in common columns. This option value selects instead compact output, without column alignment.</dd>
+<dt><code>use-continuation-lines</code> (8):</dt>
+<dd> Causes continuation lines to be used instead of beginning a new declaration on each line. This option is appropriate to use together with <code>compact</code>.</dd>
+<dt><code>keywords-lowercase</code> (16):</dt>
+<dd> Output Fortran keywords in lowercase, instead of the default uppercase.</dd>
+<dt><code>vars-and-consts-lowercase</code> (32):</dt>
+<dd> Output variables and constants in lowercase, instead of the default uppercase. Character string constants are not affected by this option.</dd>
+<dt><code>exclude-sftran3</code> (64):</dt>
+<dd> Omit declarations of internal integer variables produced by the SFTRAN3 preprocessor, <code>xsf3</code>(1L). (See <code>-makedcls</code> for discussion.)</dd>
+<dt><code>suppress-array-dimensions</code> (512):</dt>
+<dd> Suppress dimensioning of arrays in the generated declarations. This is normally undesirable, but is available if for some reason you do not want the array dimensions to appear in the HTML.</dd>
+<dt><code>free-form</code> (1024):</dt>
+<dd> Produce variable declarations in free source form. This mode is automatically used if the input source is free form. This mainly affects the form of continuation lines if they are used.</dd></dl>
 <p> See also: <code>-calltree</code>, <code>-makedcls</code>.</dl>
-<dt><code>-novice</code></p>
+<dt><code>-novice</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This flag is intended to provide more helpful output for beginners. It has two effects:</p>
+</dt><dd> This flag is intended to provide more helpful output for beginners. It has two effects:</dd>
 <dl>
-<dt>(a)</p>
-<dd> provides an extra message to the effect that a function that is used but not defined anywhere might be an array which the user forgot to declare in a DIMENSION statement (since the syntax of an array reference is the same as that of a function reference).</p>
-<dt>(b)</p>
-<dd> modifies the form of the error messages and warnings. If the flag is turned off by <code>-nonovice</code>, these messages are printed in a style more resembling UNIX <code>lint</code>.</dl>
+<dt>(a)</dt>
+<dd> provides an extra message to the effect that a function that is used but not defined anywhere might be an array which the user forgot to declare in a DIMENSION statement (since the syntax of an array reference is the same as that of a function reference).</dd>
+<dt>(b)</dt>
+<dd> modifies the form of the error messages and warnings. If the flag is turned off by <code>-nonovice</code>, these messages are printed in a style more resembling UNIX <code>lint</code>.</dd></dl>
 <p> Default = yes.</dl>
-<dt><code>-output=</code><i>filename</i></p>
-<dd> This setting is provided for convenience on systems which do not allow easy redirection of output from programs. When this setting is given, the output which normally appears on the screen will be sent instead to the named file. Note, however, that operational errors of <code>ftnchek</code> itself (e.g. out of space or cannot open file) will still be sent to the screen. The extension for the filename is optional, and if no extension is given, the extension <i>.lis</i> will be used. </p>
-<dt><code>-pointersize=</code><i>num</i></p>
+<dt><code>-output=</code><i>filename</i></dt>
+<dd> This setting is provided for convenience on systems which do not allow easy redirection of output from programs. When this setting is given, the output which normally appears on the screen will be sent instead to the named file. Note, however, that operational errors of <code>ftnchek</code> itself (e.g. out of space or cannot open file) will still be sent to the screen. The extension for the filename is optional, and if no extension is given, the extension <i>.lis</i> will be used. </dd>
+<dt><code>-pointersize=</code><i>num</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specifies the size of a &#8220;Cray pointer&#8221; variable to be <i>num</i> bytes. Default = turn-on = 4 bytes. </p>
+</dt><dd> Specifies the size of a &#8220;Cray pointer&#8221; variable to be <i>num</i> bytes. Default = turn-on = 4 bytes. </dd>
 <p> The pointer size is used to inform precision mismatch warnings involving pointer variables, for example when a pointer is assigned a value from an allocation routine, or passed as a subprogram parameter. </p>
 <p> See also: <code>-f77</code>, <code>-portability</code>, <code>-truncation</code>, <code>-wordsize</code>.</dl>
-<dt><code>-portability=</code><i>list</i></p>
+<dt><code>-portability=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>ftnchek</code> will give warnings for a variety of non-portable usages. Examples include the use of tabs except in comments or inside strings, the use of Hollerith constants, and the equivalencing of variables of different data types. This option does not produce warnings for supported extensions to the Fortran 77 Standard, which may also cause portability problems. To catch those, use the <code>-f77</code> setting. By default, all warnings are turned off. </p>
+</dt><dd> <code>ftnchek</code> will give warnings for a variety of non-portable usages. Examples include the use of tabs except in comments or inside strings, the use of Hollerith constants, and the equivalencing of variables of different data types. This option does not produce warnings for supported extensions to the Fortran 77 Standard, which may also cause portability problems. To catch those, use the <code>-f77</code> setting. By default, all warnings are turned off. </dd>
 <p> This setting provides detailed control over the warnings about possible portability problems. The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the warnings about nonportable usages, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-portability</code> is equivalent to <code>-portability=all</code>, and <code>-noportability</code> is equivalent to <code>-portability=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>backslash</code>:</p>
-<dd> Backslash character in strings. Since some compilers treat the backslash as an escape character, its presence can cause problems even though it is used in a standard-conforming way.</p>
-<dt><code>common-alignment</code>:</p>
-<dd> COMMON block variables not in descending order of storage size. Some compilers require this ordering because of storage alignment requirements.</p>
-<dt><code>hollerith</code>:</p>
-<dd> Hollerith constants (other than within FORMAT specifications). The Hollerith data type is a feature of Fortran IV that has been deleted in the Fortran 77 standard. It is superseded by the character data type. Storing Hollerith data in variables of a numeric or logical data type is nonportable due to differing word sizes.</p>
-<dt><code>long-string</code>:</p>
-<dd> String constants, variables, or expressions over 255 chars long.</p>
-<dt><code>mixed-equivalence</code>:</p>
-<dd> Variables of different data types equivalenced.</p>
-<dt><code>mixed-size</code>:</p>
-<dd> Variables declared with default precision used with variables given explicit precision, in expressions, assignments, or as arguments. For example, if a variable declared as REAL*8 is treated as equivalent to DOUBLE PRECISION.</p>
-<dt><code>real-do</code>:</p>
-<dd> Non-integer DO loop index and bounds. These can cause a program&#8217;s results to depend on the hardware characteristics of the particular computer used.</p>
-<dt><code>param-implicit-type</code>:</p>
-<dd> Implicit typing of a parameter by the data type of the value assigned, if it differs from the default type. This warning can only occur if implicit parameter typing has been turned on by the <code>-source=param-implicit-type</code> option, or if the PARAMETER statement is of the nonstandard form without parentheses. If this option is turned on, then any instances where implicit parameter typing occurs and where the implicit type is different from the default type based on the first letter of the parameter name, will be warned about. Implicit parameter typing can change the semantics of statements where the parameter is used, causing portability problems.</p>
-<dt><code>tab</code>:</p>
-<dd> Tabs in source code. Tabs are interpreted differently by different compilers. This warning will be given only once, at the end of the file.</dl>
+<dt><code>backslash</code>:</dt>
+<dd> Backslash character in strings. Since some compilers treat the backslash as an escape character, its presence can cause problems even though it is used in a standard-conforming way.</dd>
+<dt><code>common-alignment</code>:</dt>
+<dd> COMMON block variables not in descending order of storage size. Some compilers require this ordering because of storage alignment requirements.</dd>
+<dt><code>hollerith</code>:</dt>
+<dd> Hollerith constants (other than within FORMAT specifications). The Hollerith data type is a feature of Fortran IV that has been deleted in the Fortran 77 standard. It is superseded by the character data type. Storing Hollerith data in variables of a numeric or logical data type is nonportable due to differing word sizes.</dd>
+<dt><code>long-string</code>:</dt>
+<dd> String constants, variables, or expressions over 255 chars long.</dd>
+<dt><code>mixed-equivalence</code>:</dt>
+<dd> Variables of different data types equivalenced.</dd>
+<dt><code>mixed-size</code>:</dt>
+<dd> Variables declared with default precision used with variables given explicit precision, in expressions, assignments, or as arguments. For example, if a variable declared as REAL*8 is treated as equivalent to DOUBLE PRECISION.</dd>
+<dt><code>real-do</code>:</dt>
+<dd> Non-integer DO loop index and bounds. These can cause a program&#8217;s results to depend on the hardware characteristics of the particular computer used.</dd>
+<dt><code>param-implicit-type</code>:</dt>
+<dd> Implicit typing of a parameter by the data type of the value assigned, if it differs from the default type. This warning can only occur if implicit parameter typing has been turned on by the <code>-source=param-implicit-type</code> option, or if the PARAMETER statement is of the nonstandard form without parentheses. If this option is turned on, then any instances where implicit parameter typing occurs and where the implicit type is different from the default type based on the first letter of the parameter name, will be warned about. Implicit parameter typing can change the semantics of statements where the parameter is used, causing portability problems.</dd>
+<dt><code>tab</code>:</dt>
+<dd> Tabs in source code. Tabs are interpreted differently by different compilers. This warning will be given only once, at the end of the file.</dd></dl>
 <p> See also: <code>-f77</code>, <code>-f90</code>, <code>-f95</code>, <code>-pretty</code>, <code>-style</code>, <code>-wordsize</code>.</dl>
-<dt><code>-pretty=</code><i>list</i></p>
+<dt><code>-pretty=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Controls certain messages related to the appearance of the source code. These warn about things that might make a program less readable or be deceptive to the reader. By default, all warnings are turned on. </p>
+</dt><dd> Controls certain messages related to the appearance of the source code. These warn about things that might make a program less readable or be deceptive to the reader. By default, all warnings are turned on. </dd>
 <p> This setting provides detailed control over the warnings about appearance. The <i>list</i> consists of keywords separated by commas or colons. Since all warnings are on by default, include a keyword prefixed by <code>no-</code> to turn off a particular warning. There are three special keywords: <code>all</code> to turn on all the warnings about misleading appearances, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-pretty</code> is equivalent to <code>-pretty=all</code>, and <code>-nopretty</code> is equivalent to <code>-pretty=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>alternate-return</code>:</p>
-<dd> A RETURN statement has a constant specifying an alternate return point that is not between 0 and the number of dummy arguments that are labels. This is legal, and has the same effect as a RETURN with no alternate return expression, but suggests that the programmer intended to use an alternate return label that is not provided.</p>
-<dt><code>embedded-space</code>:</p>
-<dd> Space embedded in variable names or in multi-character operators such as **.</p>
-<dt><code>continuation</code>:</p>
-<dd> Continuation mark following a comment line.</p>
-<dt><code>long-line</code>:</p>
-<dd> Lines (except comments) over 72 columns in width (beyond 72 is normally ignored by compiler).</p>
-<dt><code>missing-space</code>:</p>
-<dd> Lack of space between variable and a preceding keyword.</p>
-<dt><code>multiple-common</code>:</p>
-<dd> COMMON block declared in multiple statements. No warning is given if the statements are consecutive except for comment lines.</p>
-<dt><code>multiple-namelist</code>:</p>
-<dd> NAMELIST declared in multiple statements. No warning is given if the statements are consecutive except for comment lines.</p>
-<dt><code>parentheses</code>:</p>
-<dd> Parentheses around a variable by itself. As a subprogram argument, this makes the argument an expression, not modifiable by the subprogram.</dl>
+<dt><code>alternate-return</code>:</dt>
+<dd> A RETURN statement has a constant specifying an alternate return point that is not between 0 and the number of dummy arguments that are labels. This is legal, and has the same effect as a RETURN with no alternate return expression, but suggests that the programmer intended to use an alternate return label that is not provided.</dd>
+<dt><code>embedded-space</code>:</dt>
+<dd> Space embedded in variable names or in multi-character operators such as **.</dd>
+<dt><code>continuation</code>:</dt>
+<dd> Continuation mark following a comment line.</dd>
+<dt><code>long-line</code>:</dt>
+<dd> Lines (except comments) over 72 columns in width (beyond 72 is normally ignored by compiler).</dd>
+<dt><code>missing-space</code>:</dt>
+<dd> Lack of space between variable and a preceding keyword.</dd>
+<dt><code>multiple-common</code>:</dt>
+<dd> COMMON block declared in multiple statements. No warning is given if the statements are consecutive except for comment lines.</dd>
+<dt><code>multiple-namelist</code>:</dt>
+<dd> NAMELIST declared in multiple statements. No warning is given if the statements are consecutive except for comment lines.</dd>
+<dt><code>parentheses</code>:</dt>
+<dd> Parentheses around a variable by itself. As a subprogram argument, this makes the argument an expression, not modifiable by the subprogram.</dd></dl>
 <p> Note that in free source form, extra space and missing space are forbidden by the Fortran 90 Standard, and are not mere style violations. In this case the warnings are replaced by syntax error messages, and can be turned off only by using <code>-nocheck</code>. </p>
 <p> See also: <code>-f77</code>, <code>-portability</code>, <code>-style</code>.</dl>
-<dt><code>-project=</code><i>list</i></p>
+<dt><code>-project=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>ftnchek</code> will create a project file from each source file that is input while this option is turned on. The project file will be given the same name as the input file, but with the extension <i>.f</i> or <i>.for</i> replaced by <i>.prj</i>. (If input is from standard input, the project file is named <i>ftnchek.prj</i>.) Default = none. </p>
+</dt><dd> <code>ftnchek</code> will create a project file from each source file that is input while this option is turned on. The project file will be given the same name as the input file, but with the extension <i>.f</i> or <i>.for</i> replaced by <i>.prj</i>. (If input is from standard input, the project file is named <i>ftnchek.prj</i>.) Default = none. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the options, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-project</code> is equivalent to <code>-project=all</code>, and <code>-noproject</code> is equivalent to <code>-project=none</code>. The keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>create</code>:</p>
-<dd> Produce a project file. The default is not to produce a project file. If this option is not turned on, the other options have no effect.</p>
-<dt><code>trim-calls</code>:</p>
-<dd> Trim the amount of information stored in the project file about subprogram declarations and calls. This is the default. Turn this option off only in rare situations. (See discussion below.) The amount of trimming varies depending on the <code>-library</code> flag. More information is trimmed if that flag is turned on.</p>
-<dt><code>trim-common</code>:</p>
-<dd> Trim the number of common block declarations stored in the project file. This is the default. Turn this option off only in rare situations. (See discussion below.) This option has no effect if the <code>-library</code> flag is turned off: when not in library mode, no trimming of common block declarations is done regardless of this option.</dl>
+<dt><code>create</code>:</dt>
+<dd> Produce a project file. The default is not to produce a project file. If this option is not turned on, the other options have no effect.</dd>
+<dt><code>trim-calls</code>:</dt>
+<dd> Trim the amount of information stored in the project file about subprogram declarations and calls. This is the default. Turn this option off only in rare situations. (See discussion below.) The amount of trimming varies depending on the <code>-library</code> flag. More information is trimmed if that flag is turned on.</dd>
+<dt><code>trim-common</code>:</dt>
+<dd> Trim the number of common block declarations stored in the project file. This is the default. Turn this option off only in rare situations. (See discussion below.) This option has no effect if the <code>-library</code> flag is turned off: when not in library mode, no trimming of common block declarations is done regardless of this option.</dd></dl>
 <p> A project file contains a summary of information from the source file, for use in checking agreement among FUNCTION, SUBROUTINE, and COMMON usages in other files. It allows incremental checking, which saves time whenever you have a large set of files containing shared subroutines, most of which seldom change. You can run <code>ftnchek</code> once on each file with the <code>-project</code> flag set, creating the project files. Usually you would also set the <code>-library</code> and <code>-noextern</code> flags at this time, to suppress messages relating to consistency with other files. Only error messages pertaining to each file by itself will be printed at this time. Thereafter, run <code>ftnchek</code> without these flags on all the project files together, to check consistency among the different files. All messages internal to the individual files will now be omitted. Only when a file is altered will a new project file need to be made for it. </p>
 <p> Naturally, when the <code>-project</code> option is turned on, <code>ftnchek</code> will not read project files as input. </p>
 <p> Ordinarily, the trim options should be left on when you intend to create project files for future input to <code>ftnchek</code>. Since trimming is on by default, this means that simply giving the command <code>-project</code> with no option list is the recommended mode. The trim options are provided only as a convenience for those who want to make use of project files for purposes other than checking the program with <code>ftnchek</code>. To use project files for their intended purpose, the trim options should not be turned off. </p>
 <p> Project files contain only information needed for checking agreement between files. This means that a project file is of no use if all modules of the complete program are contained in a single file. </p>
 <p> A more detailed discussion is given in the section on Using Project Files.</dl>
-<dt><code>-pure</code></p>
+<dt><code>-pure</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Assume functions are &#8220;pure&#8221;, i.e., they will not have side effects by modifying their arguments or variables in a COMMON block. When this flag is in effect, <code>ftnchek</code> will base its determination of set and used status of the actual arguments on the assumption that arguments passed to a function are not altered. It will also issue a warning if a function is found to modify any of its arguments or any COMMON variables. Default = yes. </p>
+</dt><dd> Assume functions are &#8220;pure&#8221;, i.e., they will not have side effects by modifying their arguments or variables in a COMMON block. When this flag is in effect, <code>ftnchek</code> will base its determination of set and used status of the actual arguments on the assumption that arguments passed to a function are not altered. It will also issue a warning if a function is found to modify any of its arguments or any COMMON variables. Default = yes. </dd>
 <p> When this flag is turned off, actual arguments passed to functions will be handled the same way as actual arguments passed to subroutines. This means that <code>ftnchek</code> will assume that arguments may be modified by the functions. No warnings will be given if a function is found to have side effects. Because stricter checking is possible if functions are assumed to be pure, you should turn this flag off only if your program actually uses functions with side effects.</dl>
-<dt><code>-quiet</code></p>
+<dt><code>-quiet</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This option reduces the amount of output relating to normal operation, so that error messages are more apparent. This option is provided for the convenience of users who are checking large suites of files. The eliminated output includes the names of project files, and the message reporting that no syntax errors were found. It also eliminates some blank lines that are ordinarily included for clarity. (Some of this output is turned back on by the <code>-list</code> and <code>-symtab</code> options.) Default = no. </p>
+</dt><dd> This option reduces the amount of output relating to normal operation, so that error messages are more apparent. This option is provided for the convenience of users who are checking large suites of files. The eliminated output includes the names of project files, and the message reporting that no syntax errors were found. It also eliminates some blank lines that are ordinarily included for clarity. (Some of this output is turned back on by the <code>-list</code> and <code>-symtab</code> options.) Default = no. </dd>
 <p> Note: the way to remember the difference between the <code>-quiet</code> and <code>-brief</code> is that <code>-quiet</code> doesn&#8217;t suppress any warning-related information, whereas <code>-brief</code> does. </p>
 <p> See also: <code>-brief</code>.</dl>
-<dt><code>-reference</code></p>
+<dt><code>-reference</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specifies that a who-calls-who table be printed. This table lists each subprogram followed by a list of the routines it calls. This switch is equivalent to <code>-calltree=reference</code>. Default = no. </p>
+</dt><dd> Specifies that a who-calls-who table be printed. This table lists each subprogram followed by a list of the routines it calls. This switch is equivalent to <code>-calltree=reference</code>. Default = no. </dd>
 <p> The reference list omits routines called by unused library modules. Thus it contains the same information as for the call-tree format, namely the hierarchy of subprogram calls, but printed in a different way. This prints out a breadth-first traversal of the call tree whereas <code>-calltree=tree</code> prints out a depth-first traversal. </p>
 <p> See also: <code>-calltree</code>, <code>-crossref</code>, <code>-library</code>, <code>-sort</code>, <code>-symtab</code>, <code>-vcg</code>.</dl>
-<dt><code>-resources</code></p>
+<dt><code>-resources</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Prints the amount of resources used by <code>ftnchek</code> in processing the program. This listing may be useful in analyzing the size and complexity of a program. It can also help in choosing larger sizes for <code>ftnchek</code>&#8216;s internal tables if they are too small to analyze a particular program. Default = no. </p>
+</dt><dd> Prints the amount of resources used by <code>ftnchek</code> in processing the program. This listing may be useful in analyzing the size and complexity of a program. It can also help in choosing larger sizes for <code>ftnchek</code>&#8216;s internal tables if they are too small to analyze a particular program. Default = no. </dd>
 <p> In this listing, the term &#8220;chunk size&#8221; is the size of the blocks of memory allocated to store the item in question, in units of the size of one item, not necessarily in bytes. When the initially allocated space is filled up, more memory is allocated in chunks of this size. The following is an explanation of the items printed:</p>
 <dl>
-<dt><i>Source lines processed:</i></p>
-<dd> Total number of lines of code, with separate totals for statement lines and comment lines. Comment lines include lines with &#8216;C&#8217; or &#8216;*&#8217; in column 1 as well as blank lines and lines containing only an inline comment. Statement lines are all other lines, including lines that have an inline comment following some code. Continuation lines are counted as separate lines. Lines in include files are counted each time the file is included.</p>
-<dt><i>Total executable statements:</i></p>
-<dd> Number of statements in the program, other than specification, data, statement-function, FORMAT, ENTRY, and END statements.</p>
-<dt><i>Total number of modules:</i></p>
-<dd> A module is any external subprogram, including the main program, subroutines, functions, and block data units. This count is of modules defined within the source, not modules referenced. Statement functions are not included. A subprogram with multiple entry points is only counted once.</p>
-<dt><i>Total statement labels defined</i></p>
-<dd> Number of labels attached to statements (often called statement numbers). The total label count for the entire program is given, as well as the maximum number in any single subprogram.</p>
-<dt><i>Max identifier name chars:</i></p>
-<dd> Number of characters used for storing identifier names. An identifier is a variable, subprogram, or common block name. Local names are those of local variables in a subprogram, whereas global names refer to subprogram and common block names, as well as dummy argument names and common variable names. Actual argument text (up to 15 characters for each argument) is also included here. The space used for local names is not recovered at the end of each module, so this number, like global space, grows until the whole program is analyzed. Unfortunately, this figure may include some text stored more than once, although a heuristic is used that will avoid duplicates in many cases.</p>
-<dt><i>Max token text chars:</i></p>
-<dd> A token is the smallest syntactic unit of the FORTRAN language above the level of individual characters. For instance a token can be a variable name, a numerical constant, a quoted text string, or a punctuation character. Token text is stored while a module is being processed. For technical reasons, single-character tokens are not included in this total. Items that are not represented in the symbol table may be duplicated. The space for token text is recovered at the end of each module, so this figure represents the maximum for any one module.</p>
-<dt><i>Max local symbols:</i></p>
-<dd> This is the largest number of entries in the local symbol table for any module. Local symbol table entries include all variables and parameters, common block names, statement functions, external subprograms and intrinsic functions referenced by the module. Literal constants are not stored in the local symbol table.</p>
-<dt><i>Max global symbols:</i></p>
-<dd> This is the number of entries in the global symbol table at the end of processing. Global symbol table entries include external subprogram and common block names. Intrinsic functions and statement functions are not included.</p>
-<dt><i>Max number of tokenlists:</i></p>
-<dd> A token list is a sequence of tokens representing the actual or dummy argument list of a subprogram, or the list of variables in a common block or namelist. Therefore this number represents the largest sum of COMMON, CALL, NAMELIST and ENTRY statements and function invocations for any one module. The space is recovered at the end of each module.</p>
-<dt><i>Max token list/tree space:</i></p>
-<dd> This is the largest number of tokens in all the token lists and token trees of any one module. A token tree is formed when analyzing an expression: each operand is a leaf of the tree, and the operators are the nodes. Therefore this number is a measure of the maximum complexity of an individual module. For instance a module with many long arithmetic expressions will have a high number. Note that unlike token text described above, the number of tokens is independent of the length of the variable names or literal constants in the expressions.</p>
-<dt><i>Number of subprogram invocations:</i></p>
-<dd> This is the sum over all modules of the number of CALL statements and function invocations (except intrinsic functions and statement functions).</p>
-<dt><i>Number of common block decls:</i></p>
-<dd> This is the sum over all modules of the number of common block declarations. That is, each declaration of a block in a different module is counted separately. (The standard allows multiple declarations of a block within the same module; these are counted as only one declaration since they are equivalent to a single long declaration.)</p>
-<dt><i>Number of array dim &amp; param ptrs:</i></p>
-<dd> This is the sum over all modules of the number of array dimension and parameter definition text strings saved for use by the <code>-makedcls</code> option. The length of the text strings is not counted. Each dimension of a multidimensional array is counted separately.</dl>
+<dt><i>Source lines processed:</i></dt>
+<dd> Total number of lines of code, with separate totals for statement lines and comment lines. Comment lines include lines with &#8216;C&#8217; or &#8216;*&#8217; in column 1 as well as blank lines and lines containing only an inline comment. Statement lines are all other lines, including lines that have an inline comment following some code. Continuation lines are counted as separate lines. Lines in include files are counted each time the file is included.</dd>
+<dt><i>Total executable statements:</i></dt>
+<dd> Number of statements in the program, other than specification, data, statement-function, FORMAT, ENTRY, and END statements.</dd>
+<dt><i>Total number of modules:</i></dt>
+<dd> A module is any external subprogram, including the main program, subroutines, functions, and block data units. This count is of modules defined within the source, not modules referenced. Statement functions are not included. A subprogram with multiple entry points is only counted once.</dd>
+<dt><i>Total statement labels defined</i></dt>
+<dd> Number of labels attached to statements (often called statement numbers). The total label count for the entire program is given, as well as the maximum number in any single subprogram.</dd>
+<dt><i>Max identifier name chars:</i></dt>
+<dd> Number of characters used for storing identifier names. An identifier is a variable, subprogram, or common block name. Local names are those of local variables in a subprogram, whereas global names refer to subprogram and common block names, as well as dummy argument names and common variable names. Actual argument text (up to 15 characters for each argument) is also included here. The space used for local names is not recovered at the end of each module, so this number, like global space, grows until the whole program is analyzed. Unfortunately, this figure may include some text stored more than once, although a heuristic is used that will avoid duplicates in many cases.</dd>
+<dt><i>Max token text chars:</i></dt>
+<dd> A token is the smallest syntactic unit of the FORTRAN language above the level of individual characters. For instance a token can be a variable name, a numerical constant, a quoted text string, or a punctuation character. Token text is stored while a module is being processed. For technical reasons, single-character tokens are not included in this total. Items that are not represented in the symbol table may be duplicated. The space for token text is recovered at the end of each module, so this figure represents the maximum for any one module.</dd>
+<dt><i>Max local symbols:</i></dt>
+<dd> This is the largest number of entries in the local symbol table for any module. Local symbol table entries include all variables and parameters, common block names, statement functions, external subprograms and intrinsic functions referenced by the module. Literal constants are not stored in the local symbol table.</dd>
+<dt><i>Max global symbols:</i></dt>
+<dd> This is the number of entries in the global symbol table at the end of processing. Global symbol table entries include external subprogram and common block names. Intrinsic functions and statement functions are not included.</dd>
+<dt><i>Max number of tokenlists:</i></dt>
+<dd> A token list is a sequence of tokens representing the actual or dummy argument list of a subprogram, or the list of variables in a common block or namelist. Therefore this number represents the largest sum of COMMON, CALL, NAMELIST and ENTRY statements and function invocations for any one module. The space is recovered at the end of each module.</dd>
+<dt><i>Max token list/tree space:</i></dt>
+<dd> This is the largest number of tokens in all the token lists and token trees of any one module. A token tree is formed when analyzing an expression: each operand is a leaf of the tree, and the operators are the nodes. Therefore this number is a measure of the maximum complexity of an individual module. For instance a module with many long arithmetic expressions will have a high number. Note that unlike token text described above, the number of tokens is independent of the length of the variable names or literal constants in the expressions.</dd>
+<dt><i>Number of subprogram invocations:</i></dt>
+<dd> This is the sum over all modules of the number of CALL statements and function invocations (except intrinsic functions and statement functions).</dd>
+<dt><i>Number of common block decls:</i></dt>
+<dd> This is the sum over all modules of the number of common block declarations. That is, each declaration of a block in a different module is counted separately. (The standard allows multiple declarations of a block within the same module; these are counted as only one declaration since they are equivalent to a single long declaration.)</dd>
+<dt><i>Number of array dim &amp; param ptrs:</i></dt>
+<dd> This is the sum over all modules of the number of array dimension and parameter definition text strings saved for use by the <code>-makedcls</code> option. The length of the text strings is not counted. Each dimension of a multidimensional array is counted separately.</dd></dl>
 <p> These numbers are obviously not the same when project files are used in place of the original source code. Even the numbers for global entities may be different, since some redundant information is eliminated in project files.</dl>
-<dt><code>-sixchar</code></p>
+<dt><code>-sixchar</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> One of the goals of the <code>ftnchek</code> program is to help users to write portable Fortran programs. One potential source of nonportability is the use of variable names that are longer than six characters. Some compilers just ignore the extra characters. This behavior could potentially lead to two different variables being considered as the same. For instance, variables named AVERAGECOST and AVERAGEPRICE are the same in the first six characters. If you wish to catch such possible conflicts, use this flag. Default = no. </p>
+</dt><dd> One of the goals of the <code>ftnchek</code> program is to help users to write portable Fortran programs. One potential source of nonportability is the use of variable names that are longer than six characters. Some compilers just ignore the extra characters. This behavior could potentially lead to two different variables being considered as the same. For instance, variables named AVERAGECOST and AVERAGEPRICE are the same in the first six characters. If you wish to catch such possible conflicts, use this flag. Default = no. </dd>
 <p> Use the <code>-f77=long-names</code> if you want to list <i>all</i> variables longer than six characters, not just those pairs that are the same in the first six. </p>
 <p> See also: <code>-f77</code>, <code>-portability</code>.</dl>
-<dt><code>-sort</code></p>
+<dt><code>-sort</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specifies that a sorted list of all modules used in the program be printed. This list is in &#8220;prerequisite&#8221; order, i.e. each module is printed only after all the modules from which it is called have been printed. This is also called a &#8220;topological sort&#8221; of the call tree. Each module is listed only once. Routines that are not in the call tree of the main program are omitted. If there are any cycles in the call graph (illegal in standard Fortran) they will be detected and diagnosed. Default = no. </p>
+</dt><dd> Specifies that a sorted list of all modules used in the program be printed. This list is in &#8220;prerequisite&#8221; order, i.e. each module is printed only after all the modules from which it is called have been printed. This is also called a &#8220;topological sort&#8221; of the call tree. Each module is listed only once. Routines that are not in the call tree of the main program are omitted. If there are any cycles in the call graph (illegal in standard Fortran) they will be detected and diagnosed. Default = no. </dd>
 <p> See also: <code>-calltree</code>, <code>-crossref</code>, <code>-reference</code>, <code>-symtab</code>, <code>-vcg</code>.</dl>
-<dt><code>-source=</code><i>list</i></p>
+<dt><code>-source=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This setting controls certain options about the form of the Fortran source code. The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the options, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-source</code> is equivalent to <code>-source=all</code>, and <code>-nosource</code> is equivalent to <code>-source=none</code>. </p>
+</dt><dd> This setting controls certain options about the form of the Fortran source code. The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the options, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-source</code> is equivalent to <code>-source=all</code>, and <code>-nosource</code> is equivalent to <code>-source=none</code>. </dd>
 <p> For compatibility with previous versions of <code>ftnchek</code>, a numeric form of this setting is also accepted: the <i>list</i> is replaced by a number which is the sum of the numbers in parentheses beside the keywords in the following list. (The <code>fixed</code> and <code>free</code> options do not have numeric values.) The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>fixed</code>:</p>
-<dd> Interpret the source as fixed form (with supported extensions such as exclamation mark for comments). Statements must be in columns 7 to 72 (unless the <code>-cols</code> setting has been used to change this), and blanks are not significant outside character context (but warned about under the <code>-pretty</code> option). This is the default mode unless the source file extension is <i>.f90</i> or <i>.F90</i>. this option cannot be given together with <code>-source=free</code>.</p>
-<dt><code>free</code>:</p>
-<dd> Interpret the source as free form. Statements may be anywhere in columns 1 to 132, comments can only begin with an exclamation mark, and blanks are required in some places such as between identifiers and keywords. This is the default mode if the source file extension is <i>.f90</i> or <i>.F90</i>. This option cannot be given together with <code>-source=fixed</code> or <code>-source=dec-tab</code></p>
-<dt><code>dec-tab</code> (1):</p>
-<dd> Accept DEC-style tab-formatted source. A line beginning with an initial tab will be treated as a new statement line unless the character after the tab is a nonzero digit, in which case it is treated as a continuation line. The next column after the tab or continuation mark is taken as column 7. A warning will be given in the case where the line is a continuation, if <code>-f77=dec-tab</code> is in effect.</p>
-<dt><code>vms-include</code> (2):</p>
-<dd> Accept VMS-style INCLUDE statements. These follow the normal syntax, but with the following additional features: (1) the file extension, if not given, defaults to the same as a normal source file extension; and (2) the option /LIST or /NOLIST can be appended to the include-file name, to control listing of its contents.</p>
-<dt><code>unix-backslash</code> (4):</p>
-<dd> Handle UNIX-style backslash escapes in character strings. The escape sequence following the backslash will be evaluated according to the ANSI standard for strings in C: up to three digits signify an octal value, an x signifies the start of a hexadecimal constant, any of the letters a b f n r t signify special control codes, and any other character (including newline) signifies the character itself. When this source code option is in effect, a warning will be given if the <code>-f77=backslash</code> setting is specified.</p>
+<dt><code>fixed</code>:</dt>
+<dd> Interpret the source as fixed form (with supported extensions such as exclamation mark for comments). Statements must be in columns 7 to 72 (unless the <code>-cols</code> setting has been used to change this), and blanks are not significant outside character context (but warned about under the <code>-pretty</code> option). This is the default mode unless the source file extension is <i>.f90</i> or <i>.F90</i>. this option cannot be given together with <code>-source=free</code>.</dd>
+<dt><code>free</code>:</dt>
+<dd> Interpret the source as free form. Statements may be anywhere in columns 1 to 132, comments can only begin with an exclamation mark, and blanks are required in some places such as between identifiers and keywords. This is the default mode if the source file extension is <i>.f90</i> or <i>.F90</i>. This option cannot be given together with <code>-source=fixed</code> or <code>-source=dec-tab</code></dd>
+<dt><code>dec-tab</code> (1):</dt>
+<dd> Accept DEC-style tab-formatted source. A line beginning with an initial tab will be treated as a new statement line unless the character after the tab is a nonzero digit, in which case it is treated as a continuation line. The next column after the tab or continuation mark is taken as column 7. A warning will be given in the case where the line is a continuation, if <code>-f77=dec-tab</code> is in effect.</dd>
+<dt><code>vms-include</code> (2):</dt>
+<dd> Accept VMS-style INCLUDE statements. These follow the normal syntax, but with the following additional features: (1) the file extension, if not given, defaults to the same as a normal source file extension; and (2) the option /LIST or /NOLIST can be appended to the include-file name, to control listing of its contents.</dd>
+<dt><code>unix-backslash</code> (4):</dt>
+<dd> Handle UNIX-style backslash escapes in character strings. The escape sequence following the backslash will be evaluated according to the ANSI standard for strings in C: up to three digits signify an octal value, an x signifies the start of a hexadecimal constant, any of the letters a b f n r t signify special control codes, and any other character (including newline) signifies the character itself. When this source code option is in effect, a warning will be given if the <code>-f77=backslash</code> setting is specified.</dd>
 <dt>
-<dd> The default behavior is to treat the backslash like any other normal character, but a warning about portability will be generated if the <code>-portability</code> flag is set. Because of the fact that some compilers treat the backslash in a nonstandard way, it is possible for standard-conforming programs to be non-portable if they use the backslash character in strings.</p>
+</dt><dd> The default behavior is to treat the backslash like any other normal character, but a warning about portability will be generated if the <code>-portability</code> flag is set. Because of the fact that some compilers treat the backslash in a nonstandard way, it is possible for standard-conforming programs to be non-portable if they use the backslash character in strings.</dd>
 <dt>
-<dd> Since <code>ftnchek</code> does not do much with the interpreted string, it is seldom necessary to use this option. It is needed in order to avoid spurious warnings only if (a) the program being checked uses backslash to embed an apostrophe or quote mark in a string instead of using the standard mechanism of doubling the delimiter; (b) the backslash is used to escape the end-of-line in order to continue a string across multiple source lines; or (c) a PARAMETER definition uses an intrinsic string function such as LEN with such a string as argument, and that value is later used to define array dimensions, etc.</p>
-<dt><code>param-implicit-type</code> (8):</p>
-<dd> Implicit typing of a parameter by the data type of the value assigned. Some non-standard compilers may allow the data type of the value to override the Fortran 77 default type of a parameter that is based on the first letter of the parameter name. This option only applies to PARAMETER statements of the standard form which has parentheses. A parameter that has been explicitly declared in a type statement prior to the PARAMETER statement is not affected by this option. A warning will be given under the <code>-f77=param-implicit-type</code> or <code>-portability=param-implicit-type</code> option.</p>
+</dt><dd> Since <code>ftnchek</code> does not do much with the interpreted string, it is seldom necessary to use this option. It is needed in order to avoid spurious warnings only if (a) the program being checked uses backslash to embed an apostrophe or quote mark in a string instead of using the standard mechanism of doubling the delimiter; (b) the backslash is used to escape the end-of-line in order to continue a string across multiple source lines; or (c) a PARAMETER definition uses an intrinsic string function such as LEN with such a string as argument, and that value is later used to define array dimensions, etc.</dd>
+<dt><code>param-implicit-type</code> (8):</dt>
+<dd> Implicit typing of a parameter by the data type of the value assigned. Some non-standard compilers may allow the data type of the value to override the Fortran 77 default type of a parameter that is based on the first letter of the parameter name. This option only applies to PARAMETER statements of the standard form which has parentheses. A parameter that has been explicitly declared in a type statement prior to the PARAMETER statement is not affected by this option. A warning will be given under the <code>-f77=param-implicit-type</code> or <code>-portability=param-implicit-type</code> option.</dd>
 <dt>
-<dd> Note that this implicit typing is treated as equivalent to an explicit type declaration for the parameter. Therefore, if you use <code>-makedcls=undeclared-only</code> to generate declarations only of undeclared variables, these parameters will <i>not</i> be included.</p>
-<dt><code>dec-param-standard-type</code> (16):</p>
-<dd> Follow the Fortran 77 rule for data typing of DEC Fortran style parameters. These are declared using a nonstandard form of the PARAMETER statement which lacks parentheses. According to DEC Fortran, parameters defined by this form of the statement have their data type given by the data type of the value assigned. Use this option to tell <code>ftnchek</code> not to follow this rule but instead to use the same rule as for standard PARAMETER statements. This option does not apply to PARAMETER statements of the standard form.</dl>
+</dt><dd> Note that this implicit typing is treated as equivalent to an explicit type declaration for the parameter. Therefore, if you use <code>-makedcls=undeclared-only</code> to generate declarations only of undeclared variables, these parameters will <i>not</i> be included.</dd>
+<dt><code>dec-param-standard-type</code> (16):</dt>
+<dd> Follow the Fortran 77 rule for data typing of DEC Fortran style parameters. These are declared using a nonstandard form of the PARAMETER statement which lacks parentheses. According to DEC Fortran, parameters defined by this form of the statement have their data type given by the data type of the value assigned. Use this option to tell <code>ftnchek</code> not to follow this rule but instead to use the same rule as for standard PARAMETER statements. This option does not apply to PARAMETER statements of the standard form.</dd></dl>
 <p> By default, all these source code options are turned off, except for the <code>vms-include</code> option, which is on by default in the VMS version.. </p>
 <p> See also: <code>-f77</code>, <code>-include</code>, <code>-portability</code>.</dl>
-<dt><code>-style=</code><i>list</i></p>
+<dt><code>-style=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Provides extra-picky warnings about obsolescent or old-fashioned programming constructions. This option is helpful for efforts to follow a modern programming style. (Most of the things complained about under this option are forbidden in the <code>F</code> subset language.) By default, all warnings are turned off. </p>
+</dt><dd> Provides extra-picky warnings about obsolescent or old-fashioned programming constructions. This option is helpful for efforts to follow a modern programming style. (Most of the things complained about under this option are forbidden in the <code>F</code> subset language.) By default, all warnings are turned off. </dd>
 <p> The <i>list</i> consists of keywords separated by commas or colons. There are three special keywords: <code>all</code> to turn on all the options, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-style</code> is equivalent to <code>-style=all</code>, and <code>-nostyle</code> is equivalent to <code>-style=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>block-if</code>:</p>
-<dd> Complain about arithmetic IF statement. Accept block IF or logical IF (which controls a single statement).</p>
-<dt><code>construct-name</code>:</p>
-<dd> Complain about unnamed block constructs: IF, DO, and SELECT CASE. Note that if a construct name is present on the opening statement of a construct, then it is required to be present on all other component statements (ELSE, END IF, etc.) of the construct. In that case a missing construct name on those statements generates a syntax error regardless of this option. The purpose of this option is to warn if the construct completely lacks the optional name.</p>
-<dt><code>distinct-do</code>:</p>
-<dd> Complain if two DO loops share a common terminator statement.</p>
-<dt><code>do-construct</code>:</p>
-<dd> Complain if terminator of a DO loop is anything other than an END DO or CONTINUE statement. This is the requirement in order for the loop to meet the Fortran 90 definition of a do-construct.</p>
-<dt><code>do-enddo</code>:</p>
-<dd> Complain if terminator of a DO loop is anything other than an END DO statement. (This option overrides the <code>do-construct</code> option, being even stricter.)</p>
-<dt><code>end-name</code>:</p>
-<dd> Complain about the absence of the subprogram name on structured END statements.</p>
-<dt><code>format-stmt</code>:</p>
-<dd> Complain about the presence of FORMAT statements. Only the FORMAT statements themselves are flagged, not the references to them in I/O lists.</p>
-<dt><code>goto</code>:</p>
-<dd> Complain about the presence of unconditional, computed or assigned GOTO statements. Also complain about alternate returns (but not about labels as subprogram arguments).</p>
-<dt><code>labeled-stmt</code>:</p>
-<dd> Complain about the presence of labels (numbers) on statements other than FORMAT statements. (Since FORMAT statements are arguably convenient and not readily abused, complaints about them are controlled by the separate <code>format-stmt</code> keyword.)</p>
-<dt><code>program-stmt</code>:</p>
-<dd> Complain about the absence of a PROGRAM statement at the head of the main program.</p>
-<dt><code>structured-end</code>:</p>
-<dd> Complain about the use of a plain END statement to end a subprogram, rather than a structured END statement (END PROGRAM, END SUBROUTINE, END FUNCTION, or END BLOCK DATA).</dl>
+<dt><code>block-if</code>:</dt>
+<dd> Complain about arithmetic IF statement. Accept block IF or logical IF (which controls a single statement).</dd>
+<dt><code>construct-name</code>:</dt>
+<dd> Complain about unnamed block constructs: IF, DO, and SELECT CASE. Note that if a construct name is present on the opening statement of a construct, then it is required to be present on all other component statements (ELSE, END IF, etc.) of the construct. In that case a missing construct name on those statements generates a syntax error regardless of this option. The purpose of this option is to warn if the construct completely lacks the optional name.</dd>
+<dt><code>distinct-do</code>:</dt>
+<dd> Complain if two DO loops share a common terminator statement.</dd>
+<dt><code>do-construct</code>:</dt>
+<dd> Complain if terminator of a DO loop is anything other than an END DO or CONTINUE statement. This is the requirement in order for the loop to meet the Fortran 90 definition of a do-construct.</dd>
+<dt><code>do-enddo</code>:</dt>
+<dd> Complain if terminator of a DO loop is anything other than an END DO statement. (This option overrides the <code>do-construct</code> option, being even stricter.)</dd>
+<dt><code>end-name</code>:</dt>
+<dd> Complain about the absence of the subprogram name on structured END statements.</dd>
+<dt><code>format-stmt</code>:</dt>
+<dd> Complain about the presence of FORMAT statements. Only the FORMAT statements themselves are flagged, not the references to them in I/O lists.</dd>
+<dt><code>goto</code>:</dt>
+<dd> Complain about the presence of unconditional, computed or assigned GOTO statements. Also complain about alternate returns (but not about labels as subprogram arguments).</dd>
+<dt><code>labeled-stmt</code>:</dt>
+<dd> Complain about the presence of labels (numbers) on statements other than FORMAT statements. (Since FORMAT statements are arguably convenient and not readily abused, complaints about them are controlled by the separate <code>format-stmt</code> keyword.)</dd>
+<dt><code>program-stmt</code>:</dt>
+<dd> Complain about the absence of a PROGRAM statement at the head of the main program.</dd>
+<dt><code>structured-end</code>:</dt>
+<dd> Complain about the use of a plain END statement to end a subprogram, rather than a structured END statement (END PROGRAM, END SUBROUTINE, END FUNCTION, or END BLOCK DATA).</dd></dl>
 <p> See also: <code>-f77</code>, <code>-f90</code>, <code>-f95</code>, <code>-pretty</code>, <code>-portability</code>.</dl>
-<dt><code>-symtab</code></p>
+<dt><code>-symtab</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> A symbol table will be printed out for each module, listing all identifiers mentioned in the module. This table gives the name of each variable, its datatype, and the number of dimensions for arrays. An asterisk (*) indicates that the variable has been implicitly typed, rather than being named in an explicit type declaration statement. The table also lists all subprograms invoked by the module, all COMMON blocks declared, etc. Default = no. </p>
+</dt><dd> A symbol table will be printed out for each module, listing all identifiers mentioned in the module. This table gives the name of each variable, its datatype, and the number of dimensions for arrays. An asterisk (*) indicates that the variable has been implicitly typed, rather than being named in an explicit type declaration statement. The table also lists all subprograms invoked by the module, all COMMON blocks declared, etc. Default = no. </dd>
 <p> Also, for each module, a label table will be printed. The table lists each label defined in the module; the line on which said statement label is defined; and the statement type (executable, format, or specification). The labels are listed in sequential order. </p>
 <p> Also printed is a table describing the I/O units used by the module, together with information about how they are used: what operations are performed, whether the access is sequential or direct, and whether the I/O is formatted or unformatted. </p>
 <p> See also: <code>-calltree</code>, <code>-crossref</code>, <code>-list</code>, <code>-reference</code>, <code>-sort</code>, <code>-vcg</code>.</dl>
-<dt><code>-truncation=</code><i>list</i></p>
+<dt><code>-truncation=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Warn about possible truncation (or roundoff) errors. Most of these are related to integer arithmetic. By default, all warnings are turned on. </p>
+</dt><dd> Warn about possible truncation (or roundoff) errors. Most of these are related to integer arithmetic. By default, all warnings are turned on. </dd>
 <p> This setting provides detailed control over the warnings about possible truncation errors. The <i>list</i> consists of keywords separated by commas or colons. Since all warnings are on by default, include a keyword prefixed by <code>no-</code> to turn off a particular warning. There are three special keywords: <code>all</code> to turn on all the warnings about truncation, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-truncation</code> is equivalent to <code>-truncation=all</code>, and <code>-notruncation</code> is equivalent to <code>-truncation=none</code>. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>int-div-exponent</code>:</p>
-<dd> use of the result of integer division as an exponent. This suggests that a real quotient is intended. An example would be writing X**(1/3) to evaluate the cube root of X. The correct expression is X**(1./3.).</p>
-<dt><code>int-div-real</code>:</p>
-<dd> Conversion of an expression involving an integer division to real. This suggests that a real quotient is intended.</p>
-<dt><code>int-div-zero</code>:</p>
-<dd> division in an integer constant expression that yields a result of zero.</p>
-<dt><code>int-neg-power</code>:</p>
-<dd> exponentiation of an integer by a negative integer (which yields zero unless the base integer is 1 in magnitude). This suggests that a real base is intended.</p>
-<dt><code>promotion</code>:</p>
-<dd> automatic conversion of a lower precision quantity to one of higher precision. The loss of accuracy for real variables in this process is comparable to the corresponding demotion. No warning is given for promotion of integer quantities to real since this is ordinarily exact.</p>
-<dt><code>real-do-index</code>:</p>
-<dd> use of a non-integer DO index in a loop with integer bounds. An integer DO index with real bounds is always warned about regardless of this setting.</p>
-<dt><code>real-subscript</code>:</p>
-<dd> use of a non-integer array subscript.</p>
-<dt><code>significant-figures</code>:</p>
-<dd> overspecifying a single precision constant. This may indicate that a double precision constant was intended.</p>
-<dt><code>size-demotion</code>:</p>
-<dd> automatic conversion of a higher precision quantity to one of lower precision of the same type. This warning only occurs when an explicit size is used in declaring the type of one or both operands in an assignment. For example, a warning wil be issued where a REAL*8 variable is assigned to a REAL variable, if the default wordsize of 4 is in effect. A warning is also issued if a long integer is assigned to a shorter one, for example, if an INTEGER expression is assigned to an INTEGER*2 variable. There is one exception to this last case, namely if the right hand side of the assignment is a small literal constant (less than 128). <code>type-demotion</code>: automatic conversion of a higher precision quantity to one of lower precision of different type. This warning includes conversion of real quantities to integer, double precision to single precision real, and assignment of a longer character string to a shorter one.</dl>
+<dt><code>int-div-exponent</code>:</dt>
+<dd> use of the result of integer division as an exponent. This suggests that a real quotient is intended. An example would be writing X**(1/3) to evaluate the cube root of X. The correct expression is X**(1./3.).</dd>
+<dt><code>int-div-real</code>:</dt>
+<dd> Conversion of an expression involving an integer division to real. This suggests that a real quotient is intended.</dd>
+<dt><code>int-div-zero</code>:</dt>
+<dd> division in an integer constant expression that yields a result of zero.</dd>
+<dt><code>int-neg-power</code>:</dt>
+<dd> exponentiation of an integer by a negative integer (which yields zero unless the base integer is 1 in magnitude). This suggests that a real base is intended.</dd>
+<dt><code>promotion</code>:</dt>
+<dd> automatic conversion of a lower precision quantity to one of higher precision. The loss of accuracy for real variables in this process is comparable to the corresponding demotion. No warning is given for promotion of integer quantities to real since this is ordinarily exact.</dd>
+<dt><code>real-do-index</code>:</dt>
+<dd> use of a non-integer DO index in a loop with integer bounds. An integer DO index with real bounds is always warned about regardless of this setting.</dd>
+<dt><code>real-subscript</code>:</dt>
+<dd> use of a non-integer array subscript.</dd>
+<dt><code>significant-figures</code>:</dt>
+<dd> overspecifying a single precision constant. This may indicate that a double precision constant was intended.</dd>
+<dt><code>size-demotion</code>:</dt>
+<dd> automatic conversion of a higher precision quantity to one of lower precision of the same type. This warning only occurs when an explicit size is used in declaring the type of one or both operands in an assignment. For example, a warning wil be issued where a REAL*8 variable is assigned to a REAL variable, if the default wordsize of 4 is in effect. A warning is also issued if a long integer is assigned to a shorter one, for example, if an INTEGER expression is assigned to an INTEGER*2 variable. There is one exception to this last case, namely if the right hand side of the assignment is a small literal constant (less than 128). <code>type-demotion</code>: automatic conversion of a higher precision quantity to one of lower precision of different type. This warning includes conversion of real quantities to integer, double precision to single precision real, and assignment of a longer character string to a shorter one.</dd></dl>
 <p> The warnings about promotion and demotion also apply to complex constants, considering the precision to be that of the real or imaginary part. Warnings about promotions and demotions are given only when the conversion is done automatically, e.g. in expressions of mixed precision or in an assignment statement. If intrinsic functions such as INT are used to perform the conversion, no warning is given. </p>
 <p> See also: <code>-portability</code>, <code>-wordsize</code>.</dl>
-<dt><code>-usage=</code><i>list</i></p>
+<dt><code>-usage=</code><i>list</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Warn about unused or possible uninitialized variables, unused common blocks, undefined or unused statement labels, and unused or undefined subprograms. By default, all warnings are turned on. </p>
+</dt><dd> Warn about unused or possible uninitialized variables, unused common blocks, undefined or unused statement labels, and unused or undefined subprograms. By default, all warnings are turned on. </dd>
 <p> This setting provides detailed control over the warnings about possible usage errors. The <i>list</i> consists of keywords separated by commas or colons. Since all warnings are on by default, include a keyword prefixed by <code>no-</code> to turn off a particular warning. There are three special keywords: <code>all</code> to turn on all the warnings about usage, <code>none</code> to turn them all off, and <code>help</code> to print the list of all the keywords with a brief explanation of each. If <i>list</i> is omitted, <code>-usage</code> is equivalent to <code>-usage=all</code>, and <code>-nousage</code> is equivalent to <code>-usage=none</code>. These warnings cover four main categories of objects: subprogram dummy arguments, common blocks and variables, subprograms and functions, and local variables. Warnings include undefined items, multiply defined items, unused items, etc. The warning keywords with their meanings are as follows:</p>
 <dl>
-<dt><code>arg-alias</code>:</p>
-<dd> a scalar dummy argument is actually the same as another and is (or may be) modified. The Fortran 77 standard (section 15.9.3.6) prohibits modifying an argument that is aliased to another.</p>
-<dt><code>arg-array-alias</code>:</p>
-<dd> a dummy argument which is an array or array element is in the same array as another and is modified. This flag is similar to <code>arg-alias</code> but provides separate control over array arguments. It is harder to tell if aliasing is occurring in the case of arrays, so if <code>ftnchek</code> gives too many false warnings, this flag allows the array-related ones to be turned off without suppressing the warnings for scalars.</p>
-<dt><code>arg-common-alias</code>:</p>
-<dd> a scalar dummy argument is the same as a common variable in the subprogram, and either is modified. This is also prohibited by the Fortran 77 standard. If common checking is not exact (see the <code>-common</code> setting), it is harder to tell if aliasing is occurring, so the warning is given if the variable is anywhere in a common block that is declared by the subprogram.</p>
-<dt><code>arg-common-array-alias</code>:</p>
-<dd> a dummy argument which is an array or array element is in the same array as a common variable, and either is modified. If common checking is not exact, the variable can be anywhere in a common block that is declared by the subprogram.</p>
-<dt><code>arg-const-modified</code>:</p>
-<dd> a subprogram modifies an argument which is a constant or an expression. Such an action could cause anomalous behavior of the program.</p>
-<dt><code>arg-unused</code>:</p>
-<dd> a dummy argument is declared but never used. This is similar to the <code>var-unused</code> keyword described below, but applies only to arguments.</p>
-<dt><code>com-block-unused</code>:</p>
-<dd> a common block is declared but none of the variables in it are used by any subprogram. This warning is suppressed if the common strictness setting is 0.</p>
-<dt><code>com-block-volatile</code>:</p>
-<dd> a common block may lose the definition of its contents if common blocks are volatile. This option only has an effect if the <code>-common=volatile</code> flag is in effect. See the discussion of the <code>-common</code> setting above.</p>
-<dt><code>com-var-set-unused</code>:</p>
-<dd> a common variable is assigned a value, but its value is not used by any subprogram. This warning is suppressed if the common strictness setting is 0.</p>
-<dt><code>com-var-uninitialized</code>:</p>
-<dd> a common variable&#8217;s value is used in some subprogram, but is not set anywhere. Unfortunately, <code>ftnchek</code> does not do a thorough enough analysis of the calling sequence to know which routines are called before others. So warnings about this type of error will only be given for cases in which a variable is used in some routine but not set in any other routine. Checking of individual COMMON variables is done only if the <code>-common</code> setting is 3 (variable by variable agreement). This warning is suppressed if the common strictness setting is 0.</p>
-<dt><code>com-var-unused</code>:</p>
-<dd> a common variable is declared but not used by any subprogram. This warning is suppressed if the common strictness setting is 0.</p>
-<dt><code>do-index-modified</code>:</p>
-<dd> a variable that is the index of a DO loop is modified by some statement within the range of the loop. The Standard permits an active DO variable to be modified only by the incrementation mechanism of the DO statement.</p>
-<dt><code>ext-multiply-defined</code>:</p>
-<dd> an external (a subroutine or function) is defined more than once. Definition of an external means providing the body of its source code.</p>
-<dt><code>ext-declared-only</code>:</p>
-<dd> a name is declared in an EXTERNAL statement in some module, but is not defined or used anywhere.</p>
-<dt><code>ext-undefined</code>:</p>
-<dd> an external is used (invoked) but not defined anywhere. This option is equivalent to the <code>-external</code> flag. If the subprogram is invoked more than once, those invocations will still be checked for consistency.</p>
-<dt><code>ext-unused</code>:</p>
-<dd> an external is defined (its subprogram body is present) but it is not used. A subprogram is considered unused even if it is invoked by some other subprogram, if it cannot be called from any thread of execution starting with the main program. The agreement of the subprogram&#8217;s arguments with its invocations is still checked even if this warning is turned off. If there is no main program, then this warning is issued only if the subprogram is not invoked anywhere. This warning is suppressed in library mode, but library mode has the additional effect of suppressing argument checking for unused routines.</p>
-<dt><code>label-undefined</code>:</p>
-<dd> a statement refers to a label that has not been defined.</p>
-<dt><code>label-unused</code>:</p>
-<dd> a statement label is defined, but never referred to.</p>
-<dt><code>var-set-unused</code>:</p>
-<dd> a local variable is assigned a value, but that value is not used.</p>
-<dt><code>var-uninitialized</code>:</p>
-<dd> a local variable&#8217;s value may be used before it is assigned. Sometimes <code>ftnchek</code> makes a mistake in the warnings about local variable usage. Usually it errs on the side of giving a warning where no problem exists, but in rare cases it may fail to warn where the problem does exist. See the section on Bugs for examples. If variables are equivalenced, the rule used by <code>ftnchek</code> is that a reference to any variable implies the same reference to all variables it is equivalenced to. For arrays, the rule is that a reference to any array element is treated as a reference to all elements of the array.</p>
-<dt><code>var-unused</code>:</p>
-<dd> a local variable is declared (for instance, in a type declaration) but is not used in the module. Does not apply to dummy arguments: warnings about them are controlled by the keyword <code>arg-unused</code> described above.</dl>
+<dt><code>arg-alias</code>:</dt>
+<dd> a scalar dummy argument is actually the same as another and is (or may be) modified. The Fortran 77 standard (section 15.9.3.6) prohibits modifying an argument that is aliased to another.</dd>
+<dt><code>arg-array-alias</code>:</dt>
+<dd> a dummy argument which is an array or array element is in the same array as another and is modified. This flag is similar to <code>arg-alias</code> but provides separate control over array arguments. It is harder to tell if aliasing is occurring in the case of arrays, so if <code>ftnchek</code> gives too many false warnings, this flag allows the array-related ones to be turned off without suppressing the warnings for scalars.</dd>
+<dt><code>arg-common-alias</code>:</dt>
+<dd> a scalar dummy argument is the same as a common variable in the subprogram, and either is modified. This is also prohibited by the Fortran 77 standard. If common checking is not exact (see the <code>-common</code> setting), it is harder to tell if aliasing is occurring, so the warning is given if the variable is anywhere in a common block that is declared by the subprogram.</dd>
+<dt><code>arg-common-array-alias</code>:</dt>
+<dd> a dummy argument which is an array or array element is in the same array as a common variable, and either is modified. If common checking is not exact, the variable can be anywhere in a common block that is declared by the subprogram.</dd>
+<dt><code>arg-const-modified</code>:</dt>
+<dd> a subprogram modifies an argument which is a constant or an expression. Such an action could cause anomalous behavior of the program.</dd>
+<dt><code>arg-unused</code>:</dt>
+<dd> a dummy argument is declared but never used. This is similar to the <code>var-unused</code> keyword described below, but applies only to arguments.</dd>
+<dt><code>com-block-unused</code>:</dt>
+<dd> a common block is declared but none of the variables in it are used by any subprogram. This warning is suppressed if the common strictness setting is 0.</dd>
+<dt><code>com-block-volatile</code>:</dt>
+<dd> a common block may lose the definition of its contents if common blocks are volatile. This option only has an effect if the <code>-common=volatile</code> flag is in effect. See the discussion of the <code>-common</code> setting above.</dd>
+<dt><code>com-var-set-unused</code>:</dt>
+<dd> a common variable is assigned a value, but its value is not used by any subprogram. This warning is suppressed if the common strictness setting is 0.</dd>
+<dt><code>com-var-uninitialized</code>:</dt>
+<dd> a common variable&#8217;s value is used in some subprogram, but is not set anywhere. Unfortunately, <code>ftnchek</code> does not do a thorough enough analysis of the calling sequence to know which routines are called before others. So warnings about this type of error will only be given for cases in which a variable is used in some routine but not set in any other routine. Checking of individual COMMON variables is done only if the <code>-common</code> setting is 3 (variable by variable agreement). This warning is suppressed if the common strictness setting is 0.</dd>
+<dt><code>com-var-unused</code>:</dt>
+<dd> a common variable is declared but not used by any subprogram. This warning is suppressed if the common strictness setting is 0.</dd>
+<dt><code>do-index-modified</code>:</dt>
+<dd> a variable that is the index of a DO loop is modified by some statement within the range of the loop. The Standard permits an active DO variable to be modified only by the incrementation mechanism of the DO statement.</dd>
+<dt><code>ext-multiply-defined</code>:</dt>
+<dd> an external (a subroutine or function) is defined more than once. Definition of an external means providing the body of its source code.</dd>
+<dt><code>ext-declared-only</code>:</dt>
+<dd> a name is declared in an EXTERNAL statement in some module, but is not defined or used anywhere.</dd>
+<dt><code>ext-undefined</code>:</dt>
+<dd> an external is used (invoked) but not defined anywhere. This option is equivalent to the <code>-external</code> flag. If the subprogram is invoked more than once, those invocations will still be checked for consistency.</dd>
+<dt><code>ext-unused</code>:</dt>
+<dd> an external is defined (its subprogram body is present) but it is not used. A subprogram is considered unused even if it is invoked by some other subprogram, if it cannot be called from any thread of execution starting with the main program. The agreement of the subprogram&#8217;s arguments with its invocations is still checked even if this warning is turned off. If there is no main program, then this warning is issued only if the subprogram is not invoked anywhere. This warning is suppressed in library mode, but library mode has the additional effect of suppressing argument checking for unused routines.</dd>
+<dt><code>label-undefined</code>:</dt>
+<dd> a statement refers to a label that has not been defined.</dd>
+<dt><code>label-unused</code>:</dt>
+<dd> a statement label is defined, but never referred to.</dd>
+<dt><code>var-set-unused</code>:</dt>
+<dd> a local variable is assigned a value, but that value is not used.</dd>
+<dt><code>var-uninitialized</code>:</dt>
+<dd> a local variable&#8217;s value may be used before it is assigned. Sometimes <code>ftnchek</code> makes a mistake in the warnings about local variable usage. Usually it errs on the side of giving a warning where no problem exists, but in rare cases it may fail to warn where the problem does exist. See the section on Bugs for examples. If variables are equivalenced, the rule used by <code>ftnchek</code> is that a reference to any variable implies the same reference to all variables it is equivalenced to. For arrays, the rule is that a reference to any array element is treated as a reference to all elements of the array.</dd>
+<dt><code>var-unused</code>:</dt>
+<dd> a local variable is declared (for instance, in a type declaration) but is not used in the module. Does not apply to dummy arguments: warnings about them are controlled by the keyword <code>arg-unused</code> described above.</dd></dl>
 <p> Note: In versions of <code>ftnchek</code> prior to 2.10, the <code>-usage</code> flag took a numeric argument instead of a list of options. For the sake of users who may have written scripts invoking <code>ftnchek</code> in this way, the numeric form is still accepted. The numeric setting is composed of three digits. The first digit (hundreds place) controls warnings about subprograms (functions and subroutines), the second digit (tens place) warnings about common blocks and common variables,, and the third digit (ones place) warnings about local variables. Each digit controls warnings according to the convention that a 1 means warn about undefined items and variables that are used before set, a 2 means warn about items that are unused, and a 3 means warn about both types. These numbers are now converted to the appropriate values for the above-listed keywords, except for <code>com-block-volatile</code>, which is not affected by the numeric argument. </p>
 <p> See also: <code>-common</code>, <code>-declare</code>, <code>-extern</code>, <code>-library</code>.</dl>
-<dt><code>-vcg</code></p>
+<dt><code>-vcg</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Produce the call graph in the form of a VCG graph description. This description is written to a separate file, with the same stem as the file containing the main program, and suffix <i>.vcg</i>. This file is able to be given directly to <code>xvcg</code>(1L) to visualize the call graph. (If input is from the standard input, then the graph description is sent to standard output.) This switch is equivalent to <code>-calltree=vcg</code>. Default = no. </p>
+</dt><dd> Produce the call graph in the form of a VCG graph description. This description is written to a separate file, with the same stem as the file containing the main program, and suffix <i>.vcg</i>. This file is able to be given directly to <code>xvcg</code>(1L) to visualize the call graph. (If input is from the standard input, then the graph description is sent to standard output.) This switch is equivalent to <code>-calltree=vcg</code>. Default = no. </dd>
 <p> The VCG description as created is more complex than it need be. VCG allows graphs and nested subgraphs: each subroutine is created as a subgraph nested inside its calling routines. This allows you to interactively display subgraphs or summarise them. </p>
 <p> The <code>-vcg</code> option for <code>ftnchek</code> was written by Dr. Philip Rubini of Cranfield University, UK. </p>
 <p> <code>xvcg</code> is a graph visualisation tool which runs under the X windows system. It is freely available from <a href="ftp://ftp.cs.uni-sb.de">ftp.cs.uni-sb.de</a>. It was written by G. Sander of the University of Saarland, Germany. </p>
 <p> See also: <code>-calltree</code>, <code>-crossref</code>, <code>-reference</code>, <code>-sort</code>.</dl>
-<dt><code>-version</code></p>
+<dt><code>-version</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This option causes <code>ftnchek</code> to print a line giving the version number, release date, and patch level of the program. If no files are given, it then exits. If files are given, the effect of this option is to include the patch level (normally omitted) in the version information printed at the start of processing. Default = no. </p>
+</dt><dd> This option causes <code>ftnchek</code> to print a line giving the version number, release date, and patch level of the program. If no files are given, it then exits. If files are given, the effect of this option is to include the patch level (normally omitted) in the version information printed at the start of processing. Default = no. </dd>
 <p> See also: <code>-help</code>.</dl>
-<dt><code>-volatile</code></p>
+<dt><code>-volatile</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Assume that COMMON blocks are volatile. Default = no. </p>
+</dt><dd> Assume that COMMON blocks are volatile. Default = no. </dd>
 <p> This flag is superseded by <code>-common=volatile</code>, and should no longer be used. It may be eliminated in a future release of <code>ftnchek</code>. </p>
 <p> See also: <code>-common</code>, <code>-usage</code>.</dl>
-<dt><code>-wordsize=</code><i>num</i></p>
+<dt><code>-wordsize=</code><i>num</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specifies the default word size to be <i>num</i> bytes. This is the size of logical and single-precision numeric variables that are not given explicit precisions. (Explicit precisions for non-character variables are an extension to the Fortran 77 Standard, and are given by type declarations such as REAL*8 X.) Double-precision and complex variables will be twice this value, and double complex variables four times. Quad-precision constants and intrinsic function results will be four times this value. Note that variables declared as REAL*16 will be regarded as quad precision only if the word size is 4 bytes. Default = turn-on = 4 bytes. </p>
+</dt><dd> Specifies the default word size to be <i>num</i> bytes. This is the size of logical and single-precision numeric variables that are not given explicit precisions. (Explicit precisions for non-character variables are an extension to the Fortran 77 Standard, and are given by type declarations such as REAL*8 X.) Double-precision and complex variables will be twice this value, and double complex variables four times. Quad-precision constants and intrinsic function results will be four times this value. Note that variables declared as REAL*16 will be regarded as quad precision only if the word size is 4 bytes. Default = turn-on = 4 bytes. </dd>
 <p> The word size value does not matter for checking standard-conforming programs that do not declare explicit precisions for non-character variables or store Hollerith data in variables. This setting also does not affect the default size of character variables, which is always 1 byte. Hollerith constants also are assumed to occupy 1 byte per character. </p>
 <p> The word size is used to determine whether truncation occurs in assignment statements, and to catch precision mismatches in subprogram argument lists and common block lists. The exact warnings that are issued will depend on the status of other flags. Under both the <code>-portability=mixed-size</code> and the <code>-nowordsize</code> flag, any mixing of explicit with default precision objects (character expressions not included) is warned about. This applies to arithmetic expressions containing both types of objects, and to subprogram arguments and COMMON variables. Under control of the <code>-truncation=demotion</code> and <code>promotion</code> options, a warning is given for assignment of an expression to a shorter variable of the same type, or for promotion of a lower precision value to higher precision in an arithmetic expression or an assignment statement. </p>
 <p> Giving a word size of 0, or equivalently, using <code>-nowordsize</code> means that no default value will be assumed. This is equivalent to specifying <code>-portability=mixed-size</code>. Use it to find cases of mixing default and explicit precision, for example to flag places where REAL*8 is treated as equivalent to DOUBLE PRECISION. </p>
 <p> See also: <code>-pointersize</code>, <code>-portability</code>, <code>-truncation</code>.</dl>
-<dt><code>-wrap=</code><i>col</i></p>
-<dd> Controls the wrapping of error messages. Long error messages that would run past the specified column will be broken up into separate lines between the words of the message for better readability. If turned off with <code>-nowrap</code>, each separate error message will be printed on one line, leaving it up to the display to wrap the message or truncate it. Default = turn-on = 79. </p>
+<dt><code>-wrap=</code><i>col</i></dt>
+<dd> Controls the wrapping of error messages. Long error messages that would run past the specified column will be broken up into separate lines between the words of the message for better readability. If turned off with <code>-nowrap</code>, each separate error message will be printed on one line, leaving it up to the display to wrap the message or truncate it. Default = turn-on = 79. </dd>
 </dl>
 <h2>CHANGING THE DEFAULTS</h2>
 <p> <code>ftnchek</code> includes two mechanisms for changing the default values of all options: by defining environment variables or by creating a preferences file. When <code>ftnchek</code> starts up, it looks in its environment for any variables whose names are composed by prefixing the string FTNCHEK_ onto the uppercased version of the option name. If such a variable is found, its value is used to specify the default for the corresponding switch or setting. In the case of settings (for example, the <code>-common</code> strictness setting) the value of the environment variable is read as the default setting value. In the case of switches, the default switch will be taken as true or yes unless the environment variable has the value 0 or NO. </p>
@@ -1335,14 +1335,14 @@ $
 <p> According to <code>ftnchek</code>, the program contains variables which may be used before they are assigned an initial value, and variables which are not needed. <code>ftnchek</code> also warns the user that an integer quotient has been converted to a real. This may assist the user in catching an unintended roundoff error. Since the <code>-symtab</code> flag was given, <code>ftnchek</code> prints out a table containing identifiers from the local module and their corresponding datatype and number of dimensions. Finally, <code>ftnchek</code> warns that the function COMPAV is not used with the proper type of arguments. </p>
 <p> With <code>ftnchek</code>&#8216;s help, we can debug the program. We can see that there were the following errors:</p>
 <dl>
-<dt>1.</p>
-<dd> SUM and COUNT should have been converted to real before doing the division.</p>
-<dt>2.</p>
-<dd> SUM should have been initialized to 0 before entering the loop.</p>
-<dt>3.</p>
-<dd> AVG was never printed out after being calculated.</p>
-<dt>4.</p>
-<dd> NUMS should have been declared INTEGER instead of REAL.</dl>
+<dt>1.</dt>
+<dd> SUM and COUNT should have been converted to real before doing the division.</dd>
+<dt>2.</dt>
+<dd> SUM should have been initialized to 0 before entering the loop.</dd>
+<dt>3.</dt>
+<dd> AVG was never printed out after being calculated.</dd>
+<dt>4.</dt>
+<dd> NUMS should have been declared INTEGER instead of REAL.</dd></dl>
 <p> We also see that I, not J, should have been declared INTEGER in function COMPAV. Also, MAXNOS was not declared as INTEGER, nor COMPAV as REAL, in program AVENUM. These are not errors, but they may indicate carelessness. As it happened, the default type of these variables coincided with the intended type. </p>
 <p> Here is the corrected program, and its output when run: </p>
 <p>C AUTHORS : MIKE MYERS AND LUCIA SPAGNUOLO<br />
@@ -1373,58 +1373,58 @@ INTEGER SUM, COUNT, I, SCORE(5) C SUM = 0 DO 30 I = 1, COUNT SUM = SUM + SCORE(I
 <p> If <code>ftnchek</code> gives you a syntax error message when the compiler does not, it may be because your program contains an extension to standard Fortran which is accepted by the compiler but not by <code>ftnchek</code>. (See the section on Extensions.) On a VAX/VMS system, you can use the compiler option /STANDARD to cause the compiler to accept only standard Fortran. On most UNIX or UNIX-like systems, this can be accomplished by setting the flag <code>-ansi.</code> </p>
 <p> Many of the messages given by <code>ftnchek</code> are self-explanatory. Those that need some additional explanation are listed below in alphabetical order.</p>
 <dl>
-<dt><i>Common block NAME: data type mismatch at position n</i></p>
-<dd> The <i>n</i>-th variable in the COMMON block differs in data type in two different declarations of the COMMON block. By default (<code>-common</code> strictness level 3), <code>ftnchek</code> is very picky about COMMON blocks: the variables listed in them must match exactly by data type and array dimensions. That is, the legal pair of declarations in different modules: </p>
+<dt><i>Common block NAME: data type mismatch at position n</i></dt>
+<dd> The <i>n</i>-th variable in the COMMON block differs in data type in two different declarations of the COMMON block. By default (<code>-common</code> strictness level 3), <code>ftnchek</code> is very picky about COMMON blocks: the variables listed in them must match exactly by data type and array dimensions. That is, the legal pair of declarations in different modules: </dd>
 <pre>
      COMMON /COM1/ A,B
 and
      COMMON /COM1/ A(2)
 </pre>
 <p> will cause <code>ftnchek</code> to give warnings at strictness level 3. These two declarations are legal in Fortran since they both declare two real variables. At strictness level 1 or 2, no warning would be given in this example, but the warning would be given if there were a data type mismatch, for instance, if B were declared INTEGER. Controlled by <code>-common</code> setting. </p>
-<dt><i>Common block NAME has long data type following short data type</i></p>
-<dd> Some compilers require alignment of multi-byte items so that each item begins at an address that is a multiple of the item size. Thus if a short (e.g. single-precision real) item is followed by a long (e.g. double precision real) item, the latter may not be aligned correctly. Controlled by <code>-portability=common-alignment</code> option. </p>
-<dt><i>Common block NAME has mixed character and non-character variables</i></p>
-<dd> The ANSI standard requires that if any variable in a COMMON block is of type CHARACTER, then all other variables in the same COMMON block must also be of type CHARACTER. Controlled by <code>-f77=mixed-common</code> option. </p>
-<dt><i>Common block NAME: varying length</i></p>
-<dd> For <code>-common</code> setting level 2, this message means that a COMMON block is declared to have different numbers of words in two different subprograms. A word is the amount of storage occupied by one integer or real variable. For <code>-common</code> setting level 3, it means that the two declarations have different numbers of variables, where an array of any size is considered one variable. This is not necessarily an error, but it may indicate that a variable is missing from one of the lists. Note that according to the Fortran 77 Standard, it is an error for named COMMON blocks (but not blank COMMON) to differ in number of words in declarations in different modules. Given for <code>-common</code> setting 2 or 3. </p>
-<dt><i>Error: Badly formed logical/relational operator or constant</i></p>
+<dt><i>Common block NAME has long data type following short data type</i></dt>
+<dd> Some compilers require alignment of multi-byte items so that each item begins at an address that is a multiple of the item size. Thus if a short (e.g. single-precision real) item is followed by a long (e.g. double precision real) item, the latter may not be aligned correctly. Controlled by <code>-portability=common-alignment</code> option. </dd>
+<dt><i>Common block NAME has mixed character and non-character variables</i></dt>
+<dd> The ANSI standard requires that if any variable in a COMMON block is of type CHARACTER, then all other variables in the same COMMON block must also be of type CHARACTER. Controlled by <code>-f77=mixed-common</code> option. </dd>
+<dt><i>Common block NAME: varying length</i></dt>
+<dd> For <code>-common</code> setting level 2, this message means that a COMMON block is declared to have different numbers of words in two different subprograms. A word is the amount of storage occupied by one integer or real variable. For <code>-common</code> setting level 3, it means that the two declarations have different numbers of variables, where an array of any size is considered one variable. This is not necessarily an error, but it may indicate that a variable is missing from one of the lists. Note that according to the Fortran 77 Standard, it is an error for named COMMON blocks (but not blank COMMON) to differ in number of words in declarations in different modules. Given for <code>-common</code> setting 2 or 3. </dd>
+<dt><i>Error: Badly formed logical/relational operator or constant</i></dt>
 <dd>
-<dt><i>Error: Badly formed real constant</i></p>
-<dd> The syntax analyzer has found the start of one of the special words that begin and end with a period (e.g. .EQ.), or the start of a numeric constant, but did not succeed in finding a complete item of that kind. </p>
-<dt><i>Error: cannot be adjustable size in module NAME</i></p>
-<dd> A character variable cannot be declared with a size that is an asterisk in parentheses unless it is a dummy argument, a parameter, or the name of the function defined in the module. </p>
-<dt><i>Error: cannot be declared in SAVE statement in module NAME</i></p>
-<dd> Only local variables and common blocks can be declared in a SAVE statement. </p>
-<dt><i>Error: No path to this statement</i></p>
-<dd> <code>ftnchek</code> will detect statements which are ignored or by-passed because there is no foreseeable route to the statement. For example, an unnumbered statement (a statement without a statement label), occurring immediately after a GOTO statement, cannot possibly be executed. </p>
-<dt><i>Error: Parse error</i></p>
-<dd> This means that the parser, which analyzes the Fortran program into expressions, statements, etc., has been unable to find a valid interpretation for some portion of a statement in the program. If your compiler does not report a syntax error at the same place, the most common explanations are: (1) use of an extension to ANSI standard Fortran that is not recognized by <code>ftnchek</code>, or (2) the statement requires more lookahead than <code>ftnchek</code> uses (see section on Bugs).</p>
+</dd><dt><i>Error: Badly formed real constant</i></dt>
+<dd> The syntax analyzer has found the start of one of the special words that begin and end with a period (e.g. .EQ.), or the start of a numeric constant, but did not succeed in finding a complete item of that kind. </dd>
+<dt><i>Error: cannot be adjustable size in module NAME</i></dt>
+<dd> A character variable cannot be declared with a size that is an asterisk in parentheses unless it is a dummy argument, a parameter, or the name of the function defined in the module. </dd>
+<dt><i>Error: cannot be declared in SAVE statement in module NAME</i></dt>
+<dd> Only local variables and common blocks can be declared in a SAVE statement. </dd>
+<dt><i>Error: No path to this statement</i></dt>
+<dd> <code>ftnchek</code> will detect statements which are ignored or by-passed because there is no foreseeable route to the statement. For example, an unnumbered statement (a statement without a statement label), occurring immediately after a GOTO statement, cannot possibly be executed. </dd>
+<dt><i>Error: Parse error</i></dt>
+<dd> This means that the parser, which analyzes the Fortran program into expressions, statements, etc., has been unable to find a valid interpretation for some portion of a statement in the program. If your compiler does not report a syntax error at the same place, the most common explanations are: (1) use of an extension to ANSI standard Fortran that is not recognized by <code>ftnchek</code>, or (2) the statement requires more lookahead than <code>ftnchek</code> uses (see section on Bugs).</dd>
 <dt>
-<dd> NOTE: This message means that the affected statement is not interpreted. Therefore, it is possible that <code>ftnchek</code>&#8216;s subsequent processing will be in error, if it depends on any matters affected by this statement (type declarations, etc.). </p>
-<dt><i>Error: Syntax error</i></p>
-<dd> This is the same as &#8220;Error: Parse error&#8221; (see above). It is generated if your version of <code>ftnchek</code> was built using the UNIX <code>yacc</code> parser generator rather than GNU <code>bison</code>. </p>
-<dt><i>Identifiers which are not unique in first six chars</i></p>
-<dd> Warns that two identifiers which are longer than 6 characters do not differ in the first 6 characters. This is for portability: they may not be considered distinct by some compilers. Controlled by <code>-sixchar</code> option. </p>
-<dt><i>Nonportable usage: argument precision may not be correct for intrinsic function</i></p>
-<dd> The precision of an argument passed to an intrinsic function may be incorrect on some computers. Issued when a numeric variable declared with explicit precision (e.g. REAL*8 X) is passed to a specific intrinsic function (e.g. DSQRT(X)). Controlled by <code>-portability=mixed-size</code> and <code>-wordsize</code>. </p>
-<dt><i>Nonportable usage: character constant/variable length exceeds 255</i></p>
-<dd> Some compilers do not support character strings more than 255 characters in length. Controlled by <code>-portability=long-string</code>. </p>
-<dt><i>Nonportable usage: File contains tabs</i></p>
-<dd> <code>ftnchek</code> expands tabs to be equivalent to spaces up to the next column which is a multiple of 8. Some compilers treat tabs differently, and also it is possible that files sent by electronic mail will have the tabs converted to blanks in some way. Therefore files containing tabs may not be compiled correctly after being transferred. <code>ftnchek</code> does not give this message if tabs only occur within comments or character constants. Controlled by <code>-portability=tab</code>. </p>
-<dt><i>Nonportable usage: non-integer DO loop bounds</i></p>
-<dd> This warning is only given when the DO index and bounds are non-integer. Use of non-integer quantities in a DO statement may cause unexpected errors, or different results on different machines, due to roundoff effects. Controlled by <code>-portability=real-do</code>. </p>
-<dt><i>Possibly it is an array which was not declared</i></p>
-<dd> This message is appended to warnings related to a function invocation or to an argument type mismatch, for which the possibility exists that what appears to be a function is actually meant to be an array. If the programmer forgot to dimension an array, references to the array will be interpreted as function invocations. This message will be suppressed if the name in question appears in an EXTERNAL or INTRINSIC statement. Controlled by the <code>-novice</code> option. </p>
-<dt><i>Possibly misleading appearance: characters past 72 columns</i></p>
-<dd> The program is being processed with the statement field width at its standard value of 72, and some nonblank characters have been found past column 72. In this case, <code>ftnchek</code> is not processing the characters past column 72, and is notifying the user that the statement may not have the meaning that it appears to have. These characters might be intended by the programmer to be significant, but they will be ignored by the compiler. Controlled by <code>-pretty=long-line</code>. </p>
-<dt><i>Possibly misleading appearance: Common block declared in more than one statement</i></p>
-<dd> Such multiple declarations are legal and have the same effect as a continuation of the original declaration of the block. This warning is only given if the two declarations are separated by one or more intervening statements. Controlled by <code>-pretty=multiple-common</code>. </p>
-<dt><i>Possibly misleading appearance: Continuation follows comment or blank line</i></p>
-<dd> <code>ftnchek</code> issues this warning message to alert the user that a continuation of a statement is interspersed with comments, making it easy to overlook. Controlled by <code>-pretty=continuation</code>. </p>
-<dt><i>Possibly misleading appearance: Extraneous parentheses</i></p>
-<dd> Warns about parentheses surrounding a variable by itself in an expression. When a parenthesized variable is passed as an argument to a subprogram, it is treated as an expression, not as a variable whose value can be modified by the called routine. Controlled by <code>-pretty=parentheses</code>. </p>
-<dt><i>Subprogram NAME: argument data type mismatch at position n</i></p>
-<dd> The subprogram&#8217;s <i>n</i>-th actual argument (in the CALL or the usage of a function) differs in datatype or precision from the <i>n</i>-th dummy argument (in the SUBROUTINE or FUNCTION declaration). For instance, if the user defines a subprogram by </p>
+</dt><dd> NOTE: This message means that the affected statement is not interpreted. Therefore, it is possible that <code>ftnchek</code>&#8216;s subsequent processing will be in error, if it depends on any matters affected by this statement (type declarations, etc.). </dd>
+<dt><i>Error: Syntax error</i></dt>
+<dd> This is the same as &#8220;Error: Parse error&#8221; (see above). It is generated if your version of <code>ftnchek</code> was built using the UNIX <code>yacc</code> parser generator rather than GNU <code>bison</code>. </dd>
+<dt><i>Identifiers which are not unique in first six chars</i></dt>
+<dd> Warns that two identifiers which are longer than 6 characters do not differ in the first 6 characters. This is for portability: they may not be considered distinct by some compilers. Controlled by <code>-sixchar</code> option. </dd>
+<dt><i>Nonportable usage: argument precision may not be correct for intrinsic function</i></dt>
+<dd> The precision of an argument passed to an intrinsic function may be incorrect on some computers. Issued when a numeric variable declared with explicit precision (e.g. REAL*8 X) is passed to a specific intrinsic function (e.g. DSQRT(X)). Controlled by <code>-portability=mixed-size</code> and <code>-wordsize</code>. </dd>
+<dt><i>Nonportable usage: character constant/variable length exceeds 255</i></dt>
+<dd> Some compilers do not support character strings more than 255 characters in length. Controlled by <code>-portability=long-string</code>. </dd>
+<dt><i>Nonportable usage: File contains tabs</i></dt>
+<dd> <code>ftnchek</code> expands tabs to be equivalent to spaces up to the next column which is a multiple of 8. Some compilers treat tabs differently, and also it is possible that files sent by electronic mail will have the tabs converted to blanks in some way. Therefore files containing tabs may not be compiled correctly after being transferred. <code>ftnchek</code> does not give this message if tabs only occur within comments or character constants. Controlled by <code>-portability=tab</code>. </dd>
+<dt><i>Nonportable usage: non-integer DO loop bounds</i></dt>
+<dd> This warning is only given when the DO index and bounds are non-integer. Use of non-integer quantities in a DO statement may cause unexpected errors, or different results on different machines, due to roundoff effects. Controlled by <code>-portability=real-do</code>. </dd>
+<dt><i>Possibly it is an array which was not declared</i></dt>
+<dd> This message is appended to warnings related to a function invocation or to an argument type mismatch, for which the possibility exists that what appears to be a function is actually meant to be an array. If the programmer forgot to dimension an array, references to the array will be interpreted as function invocations. This message will be suppressed if the name in question appears in an EXTERNAL or INTRINSIC statement. Controlled by the <code>-novice</code> option. </dd>
+<dt><i>Possibly misleading appearance: characters past 72 columns</i></dt>
+<dd> The program is being processed with the statement field width at its standard value of 72, and some nonblank characters have been found past column 72. In this case, <code>ftnchek</code> is not processing the characters past column 72, and is notifying the user that the statement may not have the meaning that it appears to have. These characters might be intended by the programmer to be significant, but they will be ignored by the compiler. Controlled by <code>-pretty=long-line</code>. </dd>
+<dt><i>Possibly misleading appearance: Common block declared in more than one statement</i></dt>
+<dd> Such multiple declarations are legal and have the same effect as a continuation of the original declaration of the block. This warning is only given if the two declarations are separated by one or more intervening statements. Controlled by <code>-pretty=multiple-common</code>. </dd>
+<dt><i>Possibly misleading appearance: Continuation follows comment or blank line</i></dt>
+<dd> <code>ftnchek</code> issues this warning message to alert the user that a continuation of a statement is interspersed with comments, making it easy to overlook. Controlled by <code>-pretty=continuation</code>. </dd>
+<dt><i>Possibly misleading appearance: Extraneous parentheses</i></dt>
+<dd> Warns about parentheses surrounding a variable by itself in an expression. When a parenthesized variable is passed as an argument to a subprogram, it is treated as an expression, not as a variable whose value can be modified by the called routine. Controlled by <code>-pretty=parentheses</code>. </dd>
+<dt><i>Subprogram NAME: argument data type mismatch at position n</i></dt>
+<dd> The subprogram&#8217;s <i>n</i>-th actual argument (in the CALL or the usage of a function) differs in datatype or precision from the <i>n</i>-th dummy argument (in the SUBROUTINE or FUNCTION declaration). For instance, if the user defines a subprogram by </dd>
 <pre>
      SUBROUTINE SUBA(X)
      REAL X
@@ -1438,23 +1438,23 @@ and
      CALL SUBA(2.0)
 </pre>
 <dt>
-<dd> When checking an argument which is a subprogram, <code>ftnchek</code> must be able to determine whether it is a function or a subroutine. The rules used by <code>ftnchek</code> to do this are as follows: If the subprogram, besides being passed as an actual argument, is also invoked directly elsewhere in the same module, then its type is determined by that usage. If not, then if the name of the subprogram does not appear in an explicit type declaration, it is assumed to be a subroutine; if it is explicitly typed it is taken as a function. Therefore, subroutines passed as actual arguments need only be declared by an EXTERNAL statement in the calling module, whereas functions must also be explicitly typed in order to avoid generating this error message. Controlled by <code>-arguments</code> setting. </p>
-<dt><i>Subprogram NAME: argument arrayness mismatch at position n</i></p>
-<dd> Similar to the preceding situation, but the subprogram dummy argument differs from the corresponding actual argument in its number of dimensions or number of elements. Controlled by <code>-array</code> together with <code>-arguments</code> settings. </p>
-<dt><i>Subprogram NAME: argument mismatch at position n</i></p>
-<dd> A character dummy argument is larger than the corresponding actual argument, or a Hollerith dummy argument is larger than the corresponding actual argument. Controlled by <code>-arguments</code> setting. </p>
-<dt><i>Subprogram NAME: argument usage mismatch</i></p>
-<dd> <code>ftnchek</code> detects a possible conflict between the way a subprogram uses an argument and the way in which the argument is supplied to the subprogram. The conflict can be one of two types, as outlined below. </p>
+</dt><dd> When checking an argument which is a subprogram, <code>ftnchek</code> must be able to determine whether it is a function or a subroutine. The rules used by <code>ftnchek</code> to do this are as follows: If the subprogram, besides being passed as an actual argument, is also invoked directly elsewhere in the same module, then its type is determined by that usage. If not, then if the name of the subprogram does not appear in an explicit type declaration, it is assumed to be a subroutine; if it is explicitly typed it is taken as a function. Therefore, subroutines passed as actual arguments need only be declared by an EXTERNAL statement in the calling module, whereas functions must also be explicitly typed in order to avoid generating this error message. Controlled by <code>-arguments</code> setting. </dd>
+<dt><i>Subprogram NAME: argument arrayness mismatch at position n</i></dt>
+<dd> Similar to the preceding situation, but the subprogram dummy argument differs from the corresponding actual argument in its number of dimensions or number of elements. Controlled by <code>-array</code> together with <code>-arguments</code> settings. </dd>
+<dt><i>Subprogram NAME: argument mismatch at position n</i></dt>
+<dd> A character dummy argument is larger than the corresponding actual argument, or a Hollerith dummy argument is larger than the corresponding actual argument. Controlled by <code>-arguments</code> setting. </dd>
+<dt><i>Subprogram NAME: argument usage mismatch</i></dt>
+<dd> <code>ftnchek</code> detects a possible conflict between the way a subprogram uses an argument and the way in which the argument is supplied to the subprogram. The conflict can be one of two types, as outlined below. </dd>
 <dt>
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></p>
-<dd> <i>Dummy arg is modified, Actual arg is const or expr</i> A dummy argument is an argument as named in a SUBROUTINE or FUNCTION statement and used within the subprogram. An actual argument is an argument as passed to a subroutine or function by the caller. <code>ftnchek</code> is saying that a dummy argument is modified by the subprogram, implying that its value is changed in the calling module. The corresponding actual argument should not be a constant or expression, but rather a variable or array element which can be legitimately assigned to. Controlled by the <code>-usage=arg-const-modified</code> option. </p>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dt>
+<dd> <i>Dummy arg is modified, Actual arg is const or expr</i> A dummy argument is an argument as named in a SUBROUTINE or FUNCTION statement and used within the subprogram. An actual argument is an argument as passed to a subroutine or function by the caller. <code>ftnchek</code> is saying that a dummy argument is modified by the subprogram, implying that its value is changed in the calling module. The corresponding actual argument should not be a constant or expression, but rather a variable or array element which can be legitimately assigned to. Controlled by the <code>-usage=arg-const-modified</code> option. </dd>
 <dt>
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></p>
-<dd> <i>Dummy arg used before set, Actual arg not set</i> Here a dummy argument may be used in the subprogram before having a value assigned to it by the subprogram. The corresponding actual argument should have a value assigned to it by the caller prior to invoking the subprogram. Controlled by the <code>-usage=var-uninitialized</code> option.</p>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dt>
+<dd> <i>Dummy arg used before set, Actual arg not set</i> Here a dummy argument may be used in the subprogram before having a value assigned to it by the subprogram. The corresponding actual argument should have a value assigned to it by the caller prior to invoking the subprogram. Controlled by the <code>-usage=var-uninitialized</code> option.</dd>
 <dt>
-<dd> This warning is not affected by the <code>-arguments</code> setting. </p>
-<dt><i>Subprogram NAME invoked inconsistently</i></p>
-<dd> Here the mismatch is between the datatype of the subprogram itself as used and as defined. For instance, if the user declares </p>
+</dt><dd> This warning is not affected by the <code>-arguments</code> setting. </dd>
+<dt><i>Subprogram NAME invoked inconsistently</i></dt>
+<dd> Here the mismatch is between the datatype of the subprogram itself as used and as defined. For instance, if the user declares </dd>
 <pre>
      INTEGER FUNCTION COUNT(A)
 </pre>
@@ -1467,63 +1467,63 @@ and
      INTEGER COUNT
 </pre>
 <dt>
-<dd> Given for <code>-arguments</code> setting 2 or 3. </p>
-<dt><i>Subprogram NAME: varying length argument lists:</i></p>
-<dd> An inconsistency has been found between the number of dummy arguments (parameters) a subprogram has and the number of actual arguments given it in an invocation. <code>ftnchek</code> keeps track of all invocations of subprograms (CALL statements and expressions using functions) and compares them with the definitions of the subprograms elsewhere in the source code. The Fortran compiler normally does not catch this type of error. Given for <code>-arguments</code> setting 1 or 3. </p>
-<dt><i>Variable not declared. Type has been implicitly defined</i></p>
-<dd> When printing the symbol table for a module, <code>ftnchek</code> will flag with an asterisk all identifiers that are not explicitly typed and will show the datatype that was assigned through implicit typing. This provides support for users who wish to declare all variables as is required in Pascal or some other languages. This message appears only when the <code>-symtab</code> option is in effect. Alternatively, use the <code>-declare</code> flag if you want to get a list of all undeclared variables. </p>
-<dt><i>Variables declared but never referenced</i></p>
-<dd> Detects any identifiers that were declared in your program but were never used, either to be assigned a value or to have their value accessed. Variables in COMMON are excluded. Controlled by the <code>-usage=var-unused</code> option. </p>
-<dt><i>Variables set but never used</i></p>
-<dd> <code>ftnchek</code> will notify the user when a variable has been assigned a value, but the variable is not otherwise used in the program. Usually this results from an oversight. Controlled by the <code>-usage=var-set-unused</code> option. </p>
-<dt><i>Variables used before set</i></p>
-<dd> This message indicates that an identifier is used to compute a value prior to its initialization. Such usage may lead to an incorrect value being computed, since its initial value is not controlled. Controlled by the <code>-usage=var-uninitialized</code> option. </p>
-<dt><i>Variables may be used before set</i></p>
-<dd> Similar to used before set except that <code>ftnchek</code> is not able to determine its status with certainty. <code>ftnchek</code> assumes a variable may be used before set if the first usage of the variable occurs prior in the program text to its assignment. Controlled by the <code>-usage=var-uninitialized</code> option. </p>
-<dt><i>Warning: DO index is not integer</i></p>
-<dd> This warning is only given when the DO bounds are integer, but the DO index is not. It may indicate a failure to declare the index to be an integer. Controlled by <code>-truncation=real-do</code> option. </p>
-<dt><i>Warning: integer quotient expr &#8230; converted to real</i></p>
-<dd> The quotient of two integers results in an integer type result, in which the fractional part is dropped. If such an integer expression involving division is later converted to a real datatype, it may be that a real type division had been intended. Controlled by <code>-truncation=int-div-real</code> option. </p>
-<dt><i>Warning: Integer quotient expr &#8230; used in exponent</i></p>
-<dd> The quotient of two integers results in an integer type result, in which the fractional part is dropped. If such an integer expression is used as an exponent, it is quite likely that a real type division was intended. Controlled by <code>-truncation=int-div-exponent</code> option. </p>
-<dt><i>Warning: NAME not set when RETURN encountered</i></p>
-<dd> The way that functions in Fortran return a value is by assigning the value to the name of the function. This message indicates that the function was not assigned a value before the point where a RETURN statement was found. Therefore it is possible that the function could return an undefined value. </p>
-<dt><i>Warning: Nonstandard syntax: adjustable size cannot be concatenated here</i></p>
-<dd> The Fortran 77 Standard (sec. 6.2.2) forbids concatenating character variables whose size is an asterisk in parentheses, except in an assignment statement. Controlled by <code>-f77=mixed-expr</code>. </p>
-<dt><i>Warning: Nonstandard syntax : significant characters past 72 columns</i></p>
-<dd> This warning is given under the <code>-f77=long-line</code> setting if the <code>-columns</code> setting has been used to increase the statement field width, and a statement has meaningful program text beyond column 72. Standard Fortran ignores all text in those columns, but some compilers do not. Thus the program may be treated differently by different compilers. </p>
-<dt><i>Warning: Nonstandard syntax : Statement out of order.</i></p>
-<dd> <code>ftnchek</code> will detect statements that are out of the sequence specified for ANSI standard Fortran 77. Table 1 illustrates the allowed sequence of statements in the Fortran language. Statements which are out of order are nonetheless interpreted by <code>ftnchek</code>, to prevent &#8220;cascades&#8221; of error messages. The sequence counter is also rolled back to prevent repetition of the error message for a block of similar statements. Controlled by the <code>-f77=statement-order</code> option.</p>
+</dt><dd> Given for <code>-arguments</code> setting 2 or 3. </dd>
+<dt><i>Subprogram NAME: varying length argument lists:</i></dt>
+<dd> An inconsistency has been found between the number of dummy arguments (parameters) a subprogram has and the number of actual arguments given it in an invocation. <code>ftnchek</code> keeps track of all invocations of subprograms (CALL statements and expressions using functions) and compares them with the definitions of the subprograms elsewhere in the source code. The Fortran compiler normally does not catch this type of error. Given for <code>-arguments</code> setting 1 or 3. </dd>
+<dt><i>Variable not declared. Type has been implicitly defined</i></dt>
+<dd> When printing the symbol table for a module, <code>ftnchek</code> will flag with an asterisk all identifiers that are not explicitly typed and will show the datatype that was assigned through implicit typing. This provides support for users who wish to declare all variables as is required in Pascal or some other languages. This message appears only when the <code>-symtab</code> option is in effect. Alternatively, use the <code>-declare</code> flag if you want to get a list of all undeclared variables. </dd>
+<dt><i>Variables declared but never referenced</i></dt>
+<dd> Detects any identifiers that were declared in your program but were never used, either to be assigned a value or to have their value accessed. Variables in COMMON are excluded. Controlled by the <code>-usage=var-unused</code> option. </dd>
+<dt><i>Variables set but never used</i></dt>
+<dd> <code>ftnchek</code> will notify the user when a variable has been assigned a value, but the variable is not otherwise used in the program. Usually this results from an oversight. Controlled by the <code>-usage=var-set-unused</code> option. </dd>
+<dt><i>Variables used before set</i></dt>
+<dd> This message indicates that an identifier is used to compute a value prior to its initialization. Such usage may lead to an incorrect value being computed, since its initial value is not controlled. Controlled by the <code>-usage=var-uninitialized</code> option. </dd>
+<dt><i>Variables may be used before set</i></dt>
+<dd> Similar to used before set except that <code>ftnchek</code> is not able to determine its status with certainty. <code>ftnchek</code> assumes a variable may be used before set if the first usage of the variable occurs prior in the program text to its assignment. Controlled by the <code>-usage=var-uninitialized</code> option. </dd>
+<dt><i>Warning: DO index is not integer</i></dt>
+<dd> This warning is only given when the DO bounds are integer, but the DO index is not. It may indicate a failure to declare the index to be an integer. Controlled by <code>-truncation=real-do</code> option. </dd>
+<dt><i>Warning: integer quotient expr &#8230; converted to real</i></dt>
+<dd> The quotient of two integers results in an integer type result, in which the fractional part is dropped. If such an integer expression involving division is later converted to a real datatype, it may be that a real type division had been intended. Controlled by <code>-truncation=int-div-real</code> option. </dd>
+<dt><i>Warning: Integer quotient expr &#8230; used in exponent</i></dt>
+<dd> The quotient of two integers results in an integer type result, in which the fractional part is dropped. If such an integer expression is used as an exponent, it is quite likely that a real type division was intended. Controlled by <code>-truncation=int-div-exponent</code> option. </dd>
+<dt><i>Warning: NAME not set when RETURN encountered</i></dt>
+<dd> The way that functions in Fortran return a value is by assigning the value to the name of the function. This message indicates that the function was not assigned a value before the point where a RETURN statement was found. Therefore it is possible that the function could return an undefined value. </dd>
+<dt><i>Warning: Nonstandard syntax: adjustable size cannot be concatenated here</i></dt>
+<dd> The Fortran 77 Standard (sec. 6.2.2) forbids concatenating character variables whose size is an asterisk in parentheses, except in an assignment statement. Controlled by <code>-f77=mixed-expr</code>. </dd>
+<dt><i>Warning: Nonstandard syntax : significant characters past 72 columns</i></dt>
+<dd> This warning is given under the <code>-f77=long-line</code> setting if the <code>-columns</code> setting has been used to increase the statement field width, and a statement has meaningful program text beyond column 72. Standard Fortran ignores all text in those columns, but some compilers do not. Thus the program may be treated differently by different compilers. </dd>
+<dt><i>Warning: Nonstandard syntax : Statement out of order.</i></dt>
+<dd> <code>ftnchek</code> will detect statements that are out of the sequence specified for ANSI standard Fortran 77. Table 1 illustrates the allowed sequence of statements in the Fortran language. Statements which are out of order are nonetheless interpreted by <code>ftnchek</code>, to prevent &#8220;cascades&#8221; of error messages. The sequence counter is also rolled back to prevent repetition of the error message for a block of similar statements. Controlled by the <code>-f77=statement-order</code> option.</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- | | implicit | parameter | -- -- -- -- -- -- -- -- -- -- - | | other specification format | -- -- -- -- -- -- -- - | -- -- -- -- -- -- -- -- -- -- -and | | statement - function entry | data | -- -- -- -- -- -- -- -- -- -- - | | executable-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --Table 1
 </code></pre>
-<dt><i>Warning: Possible division by zero</i></p>
-<dd> This message is printed out wherever division is done (except division by a constant). Use it to help locate a runtime division by zero problem. Controlled by <code>-division</code> option. </p>
-<dt><i>Warning: real truncated to intg</i></p>
-<dd> <code>ftnchek</code> has detected an assignment statement which has a real expression on the right, but an integer variable on the left. The fractional part of the real value will be lost. If you explicitly convert the real expression to integer using the INT or NINT intrinsic function, no warning will be printed. A similar message is printed if a double precision expression is assigned to a single precision variable, etc. Controlled by <code>-truncation=demotion</code> option. </p>
-<dt><i>Warning: subscript is not integer</i></p>
-<dd> Since array subscripts are normally integer quantities, the use of a non-integer expression here may signal an error. Controlled by <code>-truncation=real-subscript</code> option. </p>
-<dt><i>Warning: Unknown intrinsic function</i></p>
-<dd> This message warns the user that a name declared in an INTRINSIC statement is unknown to <code>ftnchek</code>. Probably it is a nonstandard intrinsic function, and so the program will not be portable. The function will be treated by <code>ftnchek</code> as a user-defined function. This warning is not suppressed by any option, since it affects <code>ftnchek</code>&#8216;s analysis of the program. However, if the intrinsic function is in one of the supported sets of nonstandard intrinsics, you can use the <code>-intrinsic</code> setting to cause <code>ftnchek</code> to recognize it. </p>
+</dd><dt><i>Warning: Possible division by zero</i></dt>
+<dd> This message is printed out wherever division is done (except division by a constant). Use it to help locate a runtime division by zero problem. Controlled by <code>-division</code> option. </dd>
+<dt><i>Warning: real truncated to intg</i></dt>
+<dd> <code>ftnchek</code> has detected an assignment statement which has a real expression on the right, but an integer variable on the left. The fractional part of the real value will be lost. If you explicitly convert the real expression to integer using the INT or NINT intrinsic function, no warning will be printed. A similar message is printed if a double precision expression is assigned to a single precision variable, etc. Controlled by <code>-truncation=demotion</code> option. </dd>
+<dt><i>Warning: subscript is not integer</i></dt>
+<dd> Since array subscripts are normally integer quantities, the use of a non-integer expression here may signal an error. Controlled by <code>-truncation=real-subscript</code> option. </dd>
+<dt><i>Warning: Unknown intrinsic function</i></dt>
+<dd> This message warns the user that a name declared in an INTRINSIC statement is unknown to <code>ftnchek</code>. Probably it is a nonstandard intrinsic function, and so the program will not be portable. The function will be treated by <code>ftnchek</code> as a user-defined function. This warning is not suppressed by any option, since it affects <code>ftnchek</code>&#8216;s analysis of the program. However, if the intrinsic function is in one of the supported sets of nonstandard intrinsics, you can use the <code>-intrinsic</code> setting to cause <code>ftnchek</code> to recognize it. </dd>
 </dl>
 <h2>LIMITATIONS AND EXTENSIONS</h2>
 <p> <code>ftnchek</code> accepts ANSI standard Fortran-77 programs with some minor limitations and numerous common extensions.</p>
 <dl>
-<dt><code>Limitations</code>:</p>
+<dt><code>Limitations</code>:</dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> The dummy arguments in statement functions are treated like ordinary variables of the program. That is, their scope is the entire subprogram, not just the statement function definition. </p>
+</dt><dd> The dummy arguments in statement functions are treated like ordinary variables of the program. That is, their scope is the entire subprogram, not just the statement function definition. </dd>
 <p> The checking of FORMAT statements is lax, tolerating missing separators (comma, etc.) between format descriptors in places where the Standard requires them, and allowing <i>.d</i> fields on descriptors that should not have them. It does warn under <code>-f77=format-edit-descr</code> about nonstandard descriptor types (like O), and supported extensions. </p>
 <p> There are some syntactic extensions and Fortran 90 elements that <code>ftnchek</code> accepts but does very little checking. For instance, pointer usage (whether the nonstandard Cray syntax or the Fortran 90 syntax) is not checked other than for set and used status. It is hoped that some day more thorough checking will be implemented, but for now the user should regard the acceptance of these syntactic features simply as a convenience to enable checking of other aspects of code that contains them. See the section Extensions for specifics about what features are accepted but not fully checked. </p>
 <p> If a user-supplied subprogram has the same name as one of the nonstandard intrinsic functions recognized by <code>ftnchek</code>, it must be declared in an EXTERNAL statement in any routine that invokes it. Otherwise it will be subject to the checking normally given to the intrinsic function. Since the nonstandard intrinsics are not standard, this EXTERNAL statement is not required by the Fortran 77 Standard. Using the <code>-intrinsic=none</code> setting, recognition of most nonstandard intrinsics (excepting only those needed to support the double complex data type) can be turned off. See the lists of supported nonstandard intrinsic functions under the discussion of the <code>-intrinsic</code> setting above.</dl>
-<dt><code>Extensions</code>:</p>
+<dt><code>Extensions</code>:</dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> All of these extensions (except lower-case characters) will generate warnings if the relevant <code>-f77</code> option is set. Some of the extensions listed below are part of the Fortran-90 Standard. These are indicated by the notation (F90). </p>
+</dt><dd> All of these extensions (except lower-case characters) will generate warnings if the relevant <code>-f77</code> option is set. Some of the extensions listed below are part of the Fortran-90 Standard. These are indicated by the notation (F90). </dd>
 <p> Tabs are permitted, and translated into equivalent blanks which correspond to tab stops every 8 columns. The standard does not recognize tabs. Note that some compilers allow tabs, but treat them differently. The treatment defined for DEC FORTRAN can be achieved using the <code>-source=dec-tab</code> setting. </p>
 <p> Strings may be delimited by either quote marks or apostrophes. A sequence of two delimiter characters is interpreted as a single embedded delimiter character. (F90) </p>
 <p> Strings may contain UNIX-style backslash escape sequences. They will be interpreted as such if the <code>-source=unix-backslash</code> setting is given. Otherwise the backslash character will be treated as a normal printing character. </p>
@@ -1598,73 +1598,73 @@ and
 <h2>NEW FEATURES</h2>
 <p> Here are the changes from Version 3.2 to Version 3.3:</p>
 <dl>
-<dt>1.</p>
-<dd> Front-end has been rewritten for unlimited lookahead, eliminating the longstanding bug that caused incorrect interpretation of statements whose ambiguity was not resolved in the first line.</p>
-<dt>2.</p>
-<dd> The <code>-mkhtml</code> option is now available in the MS-DOS version.</p>
-<dt>3.</p>
-<dd> Added support for Fortran 90 pointer related syntax: ALLOCATE, DEALLOCATE, and NULLIFY statements; the ALLOCATABLE, POINTER and TARGET attributes in type declarations; the pointer assigment operator =&gt; and intrinsic functions ALLOCATED and ASSOCIATED; and deferred-shape array declarations. At present these new syntax features are accepted but not properly checked. This feature was added by Robert Landrito.</p>
-<dt>4.</p>
-<dd> The <code>-f77</code> and <code>-f90</code> <code>pointer</code> option controlling warnings about &#8220;Cray pointers&#8221; has been renamed to <code>cray-pointer</code>. The <code>-f77=pointer</code> option now instead controls warnings for code containing Fortran 90 pointer-related syntax.</p>
-<dt>5.</p>
-<dd> Re-implemented <code>-mkhtml</code> processing so it is now much faster on source files containing many routines.</p>
-<dt>6.</p>
-<dd> Changed the arrangement of the test directory so there is no longer any need to modify the distribution in order to run the test suite (<i>check.bat</i>) under MS-DOS.</p>
-<dt>7.</p>
-<dd> Fixed bug in reading numeric settings on command line when setting name abbreviated to 3 characters.</p>
-<dt>8.</p>
-<dd> Fixed bug causing spurious warning for a GOTO referring to a labeled END statement when the statement before END was a FORMAT.</p>
-<dt>9.</p>
-<dd> New flag <code>-f77=character</code> to control warnings about extensions to the Fortran 77 character data type. Accompanying this new flag is support for Fortran 90 rules for character variable declarations that evaluate to zero or negative length, allowing them and treating negative length values as zero.</p>
-<dt>10.</p>
-<dd> Fixed minor bug in printing of comments and blank lines following last END statement in <code>-list</code> mode.</dl>
+<dt>1.</dt>
+<dd> Front-end has been rewritten for unlimited lookahead, eliminating the longstanding bug that caused incorrect interpretation of statements whose ambiguity was not resolved in the first line.</dd>
+<dt>2.</dt>
+<dd> The <code>-mkhtml</code> option is now available in the MS-DOS version.</dd>
+<dt>3.</dt>
+<dd> Added support for Fortran 90 pointer related syntax: ALLOCATE, DEALLOCATE, and NULLIFY statements; the ALLOCATABLE, POINTER and TARGET attributes in type declarations; the pointer assigment operator =&gt; and intrinsic functions ALLOCATED and ASSOCIATED; and deferred-shape array declarations. At present these new syntax features are accepted but not properly checked. This feature was added by Robert Landrito.</dd>
+<dt>4.</dt>
+<dd> The <code>-f77</code> and <code>-f90</code> <code>pointer</code> option controlling warnings about &#8220;Cray pointers&#8221; has been renamed to <code>cray-pointer</code>. The <code>-f77=pointer</code> option now instead controls warnings for code containing Fortran 90 pointer-related syntax.</dd>
+<dt>5.</dt>
+<dd> Re-implemented <code>-mkhtml</code> processing so it is now much faster on source files containing many routines.</dd>
+<dt>6.</dt>
+<dd> Changed the arrangement of the test directory so there is no longer any need to modify the distribution in order to run the test suite (<i>check.bat</i>) under MS-DOS.</dd>
+<dt>7.</dt>
+<dd> Fixed bug in reading numeric settings on command line when setting name abbreviated to 3 characters.</dd>
+<dt>8.</dt>
+<dd> Fixed bug causing spurious warning for a GOTO referring to a labeled END statement when the statement before END was a FORMAT.</dd>
+<dt>9.</dt>
+<dd> New flag <code>-f77=character</code> to control warnings about extensions to the Fortran 77 character data type. Accompanying this new flag is support for Fortran 90 rules for character variable declarations that evaluate to zero or negative length, allowing them and treating negative length values as zero.</dd>
+<dt>10.</dt>
+<dd> Fixed minor bug in printing of comments and blank lines following last END statement in <code>-list</code> mode.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>ftnchek</code> still has much room for improvement. Your feedback is appreciated. We want to know about any bugs you notice. Bugs include not only cases in which <code>ftnchek</code> issues an error message where no error exists, but also if <code>ftnchek</code> fails to issue a warning when it ought to. Note, however, that <code>ftnchek</code> is not intended to catch all syntax errors (see section on Limitations). Also, it is not considered a bug for a variable to be reported as used before set, if the reason is that the usage of the variable occurs prior in the text to where the variable is set. For instance, this could occur when a GOTO causes execution to loop backward to some previously skipped statements. <code>ftnchek</code> does not analyze the program flow, but assumes that statements occurring earlier in the text are executed before the following ones. </p>
 <p> We especially want to know if <code>ftnchek</code> crashes for any reason. It is not supposed to crash, even on programs with syntax errors. Suggestions are welcomed for additional features which you would find useful. Tell us if any of <code>ftnchek</code>&#8216;s messages are incomprehensible. Comments on the readability and accuracy of this document are also welcome. </p>
 <p> You may also suggest support for additional extensions to the Fortran language. These will be included only if it is felt that the extensions are sufficiently widely accepted by compilers. </p>
 <p> If you find a bug in <code>ftnchek</code>, first consult the list of known bugs below to see if it has already been reported. Also check the section entitled &#8220;Limitations and Extensions&#8221; above for restrictions that could be causing the problem. If you do not find the problem documented in either place, then send a report including</p>
 <dl>
-<dt>1.</p>
-<dd> The operating system and CPU type on which <code>ftnchek</code> is running.</p>
-<dt>2.</p>
-<dd> The version of <code>ftnchek</code> and values of any environment options or settings defined in startup file. (Capturing the output of ftnchek -help is useful for this.)</p>
-<dt>3.</p>
-<dd> A brief description of the bug.</p>
-<dt>4.</p>
-<dd> If possible, a small sample program showing the bug.</dl>
+<dt>1.</dt>
+<dd> The operating system and CPU type on which <code>ftnchek</code> is running.</dd>
+<dt>2.</dt>
+<dd> The version of <code>ftnchek</code> and values of any environment options or settings defined in startup file. (Capturing the output of ftnchek -help is useful for this.)</dd>
+<dt>3.</dt>
+<dd> A brief description of the bug.</dd>
+<dt>4.</dt>
+<dd> If possible, a small sample program showing the bug.</dd></dl>
 <p> The report should be sent to Dr. Robert Moniot (see contact information in section entitled &#8220;Installation and Support&#8221;). </p>
 <p> Highest priority will be given to bugs which cause <code>ftnchek</code> to crash. </p>
 <p> Certain problems that arise when checking large programs can be fixed by increasing the sizes of the data areas in <code>ftnchek</code>. (These problems are generally signaled by error messages beginning with &#8220;Oops&#8221;.) The simplest way to increase the table sizes is by recompiling <code>ftnchek</code> with the LARGE_MACHINE macro name defined. Consult the makefile and README file for the method of doing this. </p>
 <p> The following is a list of known bugs.</p>
 <dl>
-<dt>1.</p>
-<dd> Bug: Used-before-set message is suppressed for any variable which is used as the loop index in an implied-do loop, even if it was in fact used before being set in some earlier statement. For example, consider J in the statement</p>
+<dt>1.</dt>
+<dd> Bug: Used-before-set message is suppressed for any variable which is used as the loop index in an implied-do loop, even if it was in fact used before being set in some earlier statement. For example, consider J in the statement</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       WRITE(5,*) (A(J), J=1,10)
 </pre>
 <p> Here <code>ftnchek</code> parses the I/O expression, A(J), where J is used, before it parses the implied loop where J is set. Normally this would cause <code>ftnchek</code> to report a spurious used-before-set warning for J. Since this report is usually in error and occurs fairly commonly, <code>ftnchek</code> suppresses the warning for J altogether. </p>
-<p> Prognosis: A future version of <code>ftnchek</code> is planned which will handle implied-do loops correctly.</dl>
-<dt>2.</p>
-<dd> Bug: Variables used (not as arguments) in statement-function subprograms do not have their usage status updated when the statement function is invoked.</p>
+<p> Prognosis: A future version of <code>ftnchek</code> is planned which will handle implied-do loops correctly.</dd></dl>
+<dt>2.</dt>
+<dd> Bug: Variables used (not as arguments) in statement-function subprograms do not have their usage status updated when the statement function is invoked.</dd>
 <dl>
 <dt>
-<dd>
-<p> Prognosis: To be fixed in a future version of <code>ftnchek</code>.</dl>
-<dt>3.</p>
-<dd> Bug: VAX version does not expand wildcards in filenames on the command line if they are followed without space by an option, e.g. ftnchek *.f/calltree would not expand the *.f. This is because VMS-style options without intervening space are not supported by the GNU shell_mung routine that is used to expand wildcards.</p>
+</dt><dd>
+<p> Prognosis: To be fixed in a future version of <code>ftnchek</code>.</dd></dl>
+<dt>3.</dt>
+<dd> Bug: VAX version does not expand wildcards in filenames on the command line if they are followed without space by an option, e.g. ftnchek *.f/calltree would not expand the *.f. This is because VMS-style options without intervening space are not supported by the GNU shell_mung routine that is used to expand wildcards.</dd>
 <dl>
 <dt>
-<dd>
-<p> Prognosis: unlikely to be fixed.</dl>
-<dt>4.</p>
-<dd> Bug: checking for nonstandard format edit descriptors is done only in FORMAT statements, not in character strings used as formats.</p>
+</dt><dd>
+<p> Prognosis: unlikely to be fixed.</dd></dl>
+<dt>4.</dt>
+<dd> Bug: checking for nonstandard format edit descriptors is done only in FORMAT statements, not in character strings used as formats.</dd>
 <dl>
 <dt>
-<dd>
-<p> Prognosis: may be fixed someday.</dl>
+</dt><dd>
+<p> Prognosis: may be fixed someday.</dd></dl>
 </dl>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>ftnchek</code> was designed by Dr. Robert Moniot, professor at Fordham University. During the academic year of 1988-1989, Michael Myers and Lucia Spagnuolo developed the program to perform the variable usage checks. During the following year it was augmented by Lois Bigbie to check subprogram arguments and COMMON block declarations. Brian Downing assisted with the implementation of the INCLUDE statement. John Quinn wrote the common block usage checks. Heba Elsayed wrote the label table printout and label usage checks. Nelson H. F. Beebe of the University of Utah added most of the new code to implement the <code>-makedcls</code> feature and wrote the dcl2inc script. The <code>-mkhtml</code> feature was contributed by Mark McVeigh of Framatome ANP, Inc. The <code>-reference</code> feature was contributed by Gerome Emmanuel, Ecole des mines, U. Nancy (slightly modified). The <code>-vcg</code> option was contributed by Dr. Philip Rubini of Cranfield University, UK. The support for Cray pointer syntax was provided by John Dannenhoffer of United Technologies Research Center. John C. Bollinger of Indiana University added the parser syntax for the SELECT CASE construct. Robert Landrito added the parser syntax for F90 pointer-related features. Additional features will be added as time permits. As of Version 2.5, the name was changed from <code>forchek</code> to <code>ftnchek</code>, to avoid confusion with a similar program named <code>forcheck</code>, developed earlier at Leiden University. </p>
@@ -1677,3 +1677,4 @@ and
 <h2>SEE ALSO</h2>
 <p> <code>dcl2inc</code>(1L), <code>dtoq</code>(1L), <code>dtos</code>(1L), <code><a href="/docs/linux/man/1-f77/">f77</a></code>(1), <code>fd2s</code>(1L), <code>fs2d</code>(1L), <code>ftnpp</code>(1L), <code>pfort</code>(1L), <code>qtod</code>(1L), <code>sf3</code>(1L), <code>stod</code>(1L). <code>xsf3</code>(1L), <code>xvcg</code>(1L). </p>
 <h2>Index</h2>
+</p>

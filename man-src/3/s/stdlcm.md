@@ -11,9 +11,7 @@ std::lcm - std::lcm
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class M, class N&gt;                        (since C++17)
-
 constexpr std::common_type_t&lt;M, N&gt; lcm(M m, N n);</code></pre> 
 Computes the least common multiple of the integers m and n. 
 

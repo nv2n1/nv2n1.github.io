@@ -15,16 +15,16 @@ description: "groff_ms – GNU roff manuscript macro package for formatting docu
 <h2>Usage</h2>
 <p>The <i>ms</i> macro package expects files to have a certain amount of structure. The simplest documents can begin with a paragraph macro and consist of text separated by paragraph macros or even blank lines. Longer documents have a structure as follows:</p>
 <dl>
-<dt><code>Document type</code></p>
-<dd>If you use the <code>RP</code> (report) macro at the beginning of the document, <i>groff</i> prints the cover page information on its own page; otherwise it prints the information on the first page with your document text immediately following. Other document formats found in AT&amp;T <i>troff</i> are specific to AT&amp;T or Berkeley, and are not supported in <i>groff ms</i>.</p>
-<dt><code>Format and layout</code></p>
-<dd>By setting number registers, you can change your document&#8217;s margins, spacing, headers and footers, footnotes, and the base point size for the text. See <i>Document control registers</i> below for more details.</p>
-<dt><code>Cover page</code></p>
-<dd>A cover page consists of a title, and optionally the author&#8217;s name and institution, an abstract, and the date. See <i>Cover page macros</i> below for more details.</p>
-<dt><code>Body</code></p>
-<dd>Following the cover page is your document. It consists of paragraphs, headings, and lists.</p>
-<dt><code>Table of contents</code></p>
-<dd>Longer documents usually include a table of contents, which you can add by placing the <code>TC</code> macro at the end of your document.</dl>
+<dt><code>Document type</code></dt>
+<dd>If you use the <code>RP</code> (report) macro at the beginning of the document, <i>groff</i> prints the cover page information on its own page; otherwise it prints the information on the first page with your document text immediately following. Other document formats found in AT&amp;T <i>troff</i> are specific to AT&amp;T or Berkeley, and are not supported in <i>groff ms</i>.</dd>
+<dt><code>Format and layout</code></dt>
+<dd>By setting number registers, you can change your document&#8217;s margins, spacing, headers and footers, footnotes, and the base point size for the text. See <i>Document control registers</i> below for more details.</dd>
+<dt><code>Cover page</code></dt>
+<dd>A cover page consists of a title, and optionally the author&#8217;s name and institution, an abstract, and the date. See <i>Cover page macros</i> below for more details.</dd>
+<dt><code>Body</code></dt>
+<dd>Following the cover page is your document. It consists of paragraphs, headings, and lists.</dd>
+<dt><code>Table of contents</code></dt>
+<dd>Longer documents usually include a table of contents, which you can add by placing the <code>TC</code> macro at the end of your document.</dd></dl>
 <h3>Document control registers</h3>
 <p>The following table lists the document control number registers. For the sake of consistency, set registers related to margins at the beginning of your document, or just after the <code>RP</code> macro. </p>
 <p> <code>Margin settings</code></p>
@@ -84,7 +84,7 @@ description: "groff_ms – GNU roff manuscript macro package for formatting docu
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> <code>Text settings</code></p>
 <dl>
 <dd>
@@ -135,7 +135,7 @@ description: "groff_ms – GNU roff manuscript macro package for formatting docu
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> <code>Paragraph settings</code></p>
 <dl>
 <dd>
@@ -193,7 +193,7 @@ description: "groff_ms – GNU roff manuscript macro package for formatting docu
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> <code>Footnote settings</code></p>
 <dl>
 <dd>
@@ -262,7 +262,7 @@ description: "groff_ms – GNU roff manuscript macro package for formatting docu
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> <code>Other settings</code></p>
 <dl>
 <dd>
@@ -299,29 +299,29 @@ description: "groff_ms – GNU roff manuscript macro package for formatting docu
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h3>Cover page macros</h3>
 <p>Use the following macros to create a cover page for your document in the order shown.</p>
 <dl>
-<dt><code>.RP </code>[<code>no</code>]</p>
-<dd>Specifies the report format for your document. The report format creates a separate cover page. With no <code>RP</code> macro, <i>groff</i> prints a subset of the cover page on page~1 of your document.</p>
-<dd>If you use the optional <code>no</code> argument, <i>groff</i> prints a title page but does not repeat any of the title page information (title, author, abstract, etc.) on page~1 of the document.</p>
-<dt><code>.P1</code></p>
-<dd>(P-one) Prints the header on page~1. The default is to suppress the header.</p>
-<dt><code>.DA</code></p>
-<dd>[<i>xxx</i>] (optional) Print the current date, or the arguments to the macro if any, on the title page (if specified) and in the footers. This is the default for <i>nroff</i>.</p>
-<dt><code>.ND</code></p>
-<dd>[<i>xxx</i>] (optional) Print the current date, or the arguments to the macro if any, on the title page (if specified) but not in the footers. This is the default for <i>troff</i>.</p>
-<dt><code>.TL</code></p>
-<dd>Specifies the document title. <i>Groff</i> collects text following the <code>TL</code> macro into the title, until reaching the author name or abstract.</p>
-<dt><code>.AU</code></p>
-<dd>Specifies the author&#8217;s name. You can specify multiple authors by using an <code>AU</code> macro for each author.</p>
-<dt><code>.AI</code></p>
-<dd>Specifies the author&#8217;s institution. You can specify multiple institutions.</p>
-<dt><code>.AB </code>[<code>no</code>]</p>
-<dd>Begins the abstract. The default is to print the word <code>ABSTRACT</code>, centered and in italics, above the text of the abstract. The option <code>no</code> suppresses this heading.</p>
-<dt><code>.AE</code></p>
-<dd>End the abstract.</dl>
+<dt><code>.RP </code>[<code>no</code>]</dt>
+<dd>Specifies the report format for your document. The report format creates a separate cover page. With no <code>RP</code> macro, <i>groff</i> prints a subset of the cover page on page~1 of your document.</dd>
+<dd>If you use the optional <code>no</code> argument, <i>groff</i> prints a title page but does not repeat any of the title page information (title, author, abstract, etc.) on page~1 of the document.</dd>
+<dt><code>.P1</code></dt>
+<dd>(P-one) Prints the header on page~1. The default is to suppress the header.</dd>
+<dt><code>.DA</code></dt>
+<dd>[<i>xxx</i>] (optional) Print the current date, or the arguments to the macro if any, on the title page (if specified) and in the footers. This is the default for <i>nroff</i>.</dd>
+<dt><code>.ND</code></dt>
+<dd>[<i>xxx</i>] (optional) Print the current date, or the arguments to the macro if any, on the title page (if specified) but not in the footers. This is the default for <i>troff</i>.</dd>
+<dt><code>.TL</code></dt>
+<dd>Specifies the document title. <i>Groff</i> collects text following the <code>TL</code> macro into the title, until reaching the author name or abstract.</dd>
+<dt><code>.AU</code></dt>
+<dd>Specifies the author&#8217;s name. You can specify multiple authors by using an <code>AU</code> macro for each author.</dd>
+<dt><code>.AI</code></dt>
+<dd>Specifies the author&#8217;s institution. You can specify multiple institutions.</dd>
+<dt><code>.AB </code>[<code>no</code>]</dt>
+<dd>Begins the abstract. The default is to print the word <code>ABSTRACT</code>, centered and in italics, above the text of the abstract. The option <code>no</code> suppresses this heading.</dd>
+<dt><code>.AE</code></dt>
+<dd>End the abstract.</dd></dl>
 <h3>Paragraphs</h3>
 <p>Use the <code>PP</code> macro to create indented paragraphs, and the <code>LP</code> macro to create paragraphs with no initial indent. </p>
 <p> The <code>QP</code> macro indents all text at both left and right margins by the amount of the register <code>QI</code>. The effect is reminiscent of the HTML <code>&lt;BLOCKQUOTE&gt;</code> tag. The next paragraph or heading returns the margins to normal. <code>QP</code> inserts the vertical space specified in register <code>PD</code> as inter-paragraph spacing. </p>
@@ -333,12 +333,12 @@ description: "groff_ms – GNU roff manuscript macro package for formatting docu
 <p>Use headings to create a hierarchical structure for your document. By default, the <i>ms</i> macros print headings in <code>bold</code> using the same font family and point size as the body text. For output devices which support scalable fonts, this behaviour may be modified by defining the document control registers <code>GROWPS</code> and <code>PSINCR</code>. </p>
 <p> The following heading macros are available:</p>
 <dl>
-<dt><code>.NH&nbsp;</code><i>xx</i></p>
-<dd>Numbered heading. The argument <i>xx</i> is either a numeric argument to indicate the level of the heading, or <code>S~</code><i>xx~xx~</i>&#8230; to set the section number explicitly. If you specify heading levels out of sequence, such as invoking <code>.NH 3</code> after <code>.NH 1</code>, <i>groff</i> prints a warning on standard error.</p>
-<dd>If the <code>GROWPS</code> register is set to a value greater than the level of the heading, then the point size of the heading will be increased by <code>PSINCR</code> units over the text size specified by the <code>PS</code> register, for each level by which the heading level is less than the value of <code>GROWPS</code>. For example, the sequence:</p>
+<dt><code>.NH&nbsp;</code><i>xx</i></dt>
+<dd>Numbered heading. The argument <i>xx</i> is either a numeric argument to indicate the level of the heading, or <code>S~</code><i>xx~xx~</i>&#8230; to set the section number explicitly. If you specify heading levels out of sequence, such as invoking <code>.NH 3</code> after <code>.NH 1</code>, <i>groff</i> prints a warning on standard error.</dd>
+<dd>If the <code>GROWPS</code> register is set to a value greater than the level of the heading, then the point size of the heading will be increased by <code>PSINCR</code> units over the text size specified by the <code>PS</code> register, for each level by which the heading level is less than the value of <code>GROWPS</code>. For example, the sequence:</dd>
 <dl>
 <dd>
-<pre><dl><dt><dd>.nr PS 10
+<pre></dd><dl><dt></dt><dd>.nr PS 10
 .nr GROWPS 3
 .nr PSINCR 1.5p
 .
@@ -350,58 +350,59 @@ Second Level Heading
 .
 .NH 3
 Third Level Heading</pre>
+</dd></dl>
 </dl>
-</dl>
-<dd>will cause &#8220;<i>1. Top Level Heading</i>&#8221; to be printed in 13pt <code>bold</code> text, followed by &#8220;<i>1.1. Second Level Heading</i>&#8221; in 11.5pt <code>bold</code> text, while &#8220;<i>1.1.1. Third Level Heading</i>&#8221;, and all more deeply nested heading levels, will remain in the 10pt <code>bold</code> text which is specified by the <code>PS</code> register.</p>
-<dd>Note that the value stored in <code>PSINCR</code> is interpreted in <i>groff</i> basic units; the <i>p</i> scaling factor should be employed when assigning a value specified in points.</p>
-<dd>The style used to represent the section number, within a numbered heading, is controlled by the <code>SN-STYLE</code> string; this may be set to either the <code>SN-DOT</code> or the <code>SN-NO-DOT</code> style, (described below), by aliasing <code>SN-STYLE</code> accordingly. By default, <code>SN-STYLE</code> is initialised by defining the alias</p>
+<dd>will cause &#8220;<i>1. Top Level Heading</i>&#8221; to be printed in 13pt <code>bold</code> text, followed by &#8220;<i>1.1. Second Level Heading</i>&#8221; in 11.5pt <code>bold</code> text, while &#8220;<i>1.1.1. Third Level Heading</i>&#8221;, and all more deeply nested heading levels, will remain in the 10pt <code>bold</code> text which is specified by the <code>PS</code> register.</dd>
+<dd>Note that the value stored in <code>PSINCR</code> is interpreted in <i>groff</i> basic units; the <i>p</i> scaling factor should be employed when assigning a value specified in points.</dd>
+<dd>The style used to represent the section number, within a numbered heading, is controlled by the <code>SN-STYLE</code> string; this may be set to either the <code>SN-DOT</code> or the <code>SN-NO-DOT</code> style, (described below), by aliasing <code>SN-STYLE</code> accordingly. By default, <code>SN-STYLE</code> is initialised by defining the alias</dd>
 <dl>
 <dd>
-<pre><dl><dt><dd>.als SN-STYLE SN-DOT</pre>
+<pre></dd><dl><dt></dt><dd>.als SN-STYLE SN-DOT</pre>
+</dd></dl>
 </dl>
-</dl>
-<dd>it may be changed to the <code>SN-NO-DOT</code> style, if preferred, by defining the alternative alias</p>
+<dd>it may be changed to the <code>SN-NO-DOT</code> style, if preferred, by defining the alternative alias</dd>
 <dl>
 <dd>
-<pre><dl><dt><dd>.als SN-STYLE SN-NO-DOT</pre>
+<pre></dd><dl><dt></dt><dd>.als SN-STYLE SN-NO-DOT</pre>
+</dd></dl>
 </dl>
-</dl>
-<dd>Any such change becomes effective with the first use of <code>.NH</code>, <i>after</i> the new alias is defined.</p>
-<dd>After invoking <code>.NH</code>, the assigned heading number is available in the strings <code>SN-DOT</code> (as it appears in the default formatting style for numbered headings, with a terminating period following the number), and <code>SN-NO-DOT</code> (with this terminating period omitted). The string <code>SN</code> is also defined, as an alias for <code>SN-DOT</code>; if preferred, the user may redefine it as an alias for <code>SN-NO-DOT</code>, by including the initialisation:</p>
+<dd>Any such change becomes effective with the first use of <code>.NH</code>, <i>after</i> the new alias is defined.</dd>
+<dd>After invoking <code>.NH</code>, the assigned heading number is available in the strings <code>SN-DOT</code> (as it appears in the default formatting style for numbered headings, with a terminating period following the number), and <code>SN-NO-DOT</code> (with this terminating period omitted). The string <code>SN</code> is also defined, as an alias for <code>SN-DOT</code>; if preferred, the user may redefine it as an alias for <code>SN-NO-DOT</code>, by including the initialisation:</dd>
 <dl>
 <dd>
-<pre><dl><dt><dd>.als SN SN-NO-DOT</pre>
+<pre></dd><dl><dt></dt><dd>.als SN SN-NO-DOT</pre>
+</dd></dl>
 </dl>
-</dl>
-<dd>at any time; the change becomes effective with the next use of <code>.NH</code>, <i>after</i> the new alias is defined.</p>
-<dt><code>.SH</code></p>
-<dd>[<i>xx</i>] Unnumbered subheading. The use of the optional <i>xx</i> argument is a GNU extension, which adjusts the point size of the unnumbered subheading to match that of a numbered heading, introduced using <code>.NH&nbsp;</code><i>xx</i> with the same value of <i>xx</i>. For example, given the same settings for <code>PS</code>, <code>GROWPS</code> and <code>PSINCR</code>, as used in the preceding <code>.NH</code> example, the sequence:</p>
+<dd>at any time; the change becomes effective with the next use of <code>.NH</code>, <i>after</i> the new alias is defined.</dd>
+<dt><code>.SH</code></dt>
+<dd>[<i>xx</i>] Unnumbered subheading. The use of the optional <i>xx</i> argument is a GNU extension, which adjusts the point size of the unnumbered subheading to match that of a numbered heading, introduced using <code>.NH&nbsp;</code><i>xx</i> with the same value of <i>xx</i>. For example, given the same settings for <code>PS</code>, <code>GROWPS</code> and <code>PSINCR</code>, as used in the preceding <code>.NH</code> example, the sequence:</dd>
 <dl>
 <dd>
-<pre><dl><dt><dd>.SH 2
+<pre></dd><dl><dt></dt><dd>.SH 2
 An Unnumbered Subheading</pre>
+</dd></dl>
 </dl>
-</dl>
-<dd>will print &#8220;<i>An Unnumbered Subheading</i>&#8221; in 11.5pt <code>bold</code> text.</dl>
+<dd>will print &#8220;<i>An Unnumbered Subheading</i>&#8221; in 11.5pt <code>bold</code> text.</dd></dl>
 <h3>Highlighting</h3>
 <p>The <i>ms</i> macros provide a variety of methods to highlight or emphasize text:</p>
 <dl>
-<dt><code>.B</code></p>
-<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in <code>bold type</code>. If you specify a second argument, <i>groff</i> prints it in the previous font after the bold text, with no intervening space (this allows you to set punctuation after the highlighted text without highlighting the punctuation). Similarly, it prints the third argument (if any) in the previous font <code>before</code> the first argument. For example,</p>
+<dt><code>.B</code></dt>
+<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in <code>bold type</code>. If you specify a second argument, <i>groff</i> prints it in the previous font after the bold text, with no intervening space (this allows you to set punctuation after the highlighted text without highlighting the punctuation). Similarly, it prints the third argument (if any) in the previous font <code>before</code> the first argument. For example,</dd>
 <dl>
 <dd>
-<dl>
-<dd>.B foo ) (</dl>
+</dd><dl>
+<dd>.B foo ) (</dd></dl>
 </dl>
-<dd>prints &#8220;(<code>foo</code>)&#8221;.</p>
-<dd>If you give this macro no arguments, <i>groff</i> prints all text following in bold until the next highlighting, paragraph, or heading macro.</p>
-<dt><code>.R</code></p>
-<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in roman (or regular) type. It operates similarly to the <code>B</code> macro otherwise.</p>
-<dt><code>.I</code></p>
-<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in <i>italic type</i>. It operates similarly to the <code>B</code> macro otherwise.</p>
-<dt><code>.CW</code></p>
-<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in a constant-width face. It operates similarly to the <code>B</code> macro otherwise.</p>
-<dt><code>.BI</code></p>
-<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in bold italic type. It operates similarly to the <code>B</code> macro otherwise.</p>
-<dt><code>.BX</code></p>
+<dd>prints &#8220;(<code>foo</code>)&#8221;.</dd>
+<dd>If you give this macro no arguments, <i>groff</i> prints all text following in bold until the next highlighting, paragraph, or heading macro.</dd>
+<dt><code>.R</code></dt>
+<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in roman (or regular) type. It operates similarly to the <code>B</code> macro otherwise.</dd>
+<dt><code>.I</code></dt>
+<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in <i>italic type</i>. It operates similarly to the <code>B</code> macro otherwise.</dd>
+<dt><code>.CW</code></dt>
+<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in a constant-width face. It operates similarly to the <code>B</code> macro otherwise.</dd>
+<dt><code>.BI</code></dt>
+<dd>[<i>txt</i> [<i>post</i> [<i>pre</i>]]] Sets its first argument in bold italic type. It operates similarly to the <code>B</code> macro otherwise.</dd>
+<dt><code>.BX</code></dt>
 <dd>[<i>txt</i>] Prints its argument and draws a box around it. If you want to box a string that contains spaces, use a digit-width space (
+</dd></dl>

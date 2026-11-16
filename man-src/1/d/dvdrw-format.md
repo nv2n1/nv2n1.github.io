@@ -14,12 +14,12 @@ description: "dvd+rw-format – format DVD+-RW/-RAM disk"
 <p>The <code>dvd+rw-format</code> command formats dvd disk in the specified dvd drive (e.g. <i>/dev/dvd</i>). </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-force[=full]</code></p>
-<dd>This forces to format dvd as new while wiping any existing data.</p>
-<dt><code>-blank[=full]</code></p>
-<dd>This blanks dvd while changing to sequential mode.</p>
-<dt><code>-lead-out</code></p>
-<dd>This relocates the lead-out next to outermost written sector as well as makes sure there is no virgin surface before it. Previously written data is not affected by this operation. Useful for addressing <code>DVD-ROM compatibility,</code> or playability of already recorded media in legacy units. </p>
+<dt><code>-force[=full]</code></dt>
+<dd>This forces to format dvd as new while wiping any existing data.</dd>
+<dt><code>-blank[=full]</code></dt>
+<dd>This blanks dvd while changing to sequential mode.</dd>
+<dt><code>-lead-out</code></dt>
+<dd>This relocates the lead-out next to outermost written sector as well as makes sure there is no virgin surface before it. Previously written data is not affected by this operation. Useful for addressing <code>DVD-ROM compatibility,</code> or playability of already recorded media in legacy units. </dd>
 </dl>
 <h2>See Also</h2>
 <p>Most up-to-date information on dvd+rw-tools is available at <a rel="nofollow" href="http://fy.chalmers.se/~appro/linux/DVD+RW/.">http://fy.chalmers.se/~appro/linux/DVD+RW/.</a> </p>

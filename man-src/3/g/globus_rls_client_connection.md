@@ -39,45 +39,45 @@ description: "Connection Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>certfile</i> Name of X509 certificate file.<br />
- <i>keyfile</i> Name of X509 key file.</dl>
+</dt><dd> <i>certfile</i> Name of X509 certificate file.<br />
+ <i>keyfile</i> Name of X509 key file.</dd></dl>
 <h3>void globus_rls_client_proxy_certificate (char * proxy)</h3>
 <p> Set X509_USER_PROXY environment variable to specified file. <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>proxy</i> Name of X509 proxy certificate file. If NULL clears X509_USER_PROXY.</dl>
+</dt><dd> <i>proxy</i> Name of X509 proxy certificate file. If NULL clears X509_USER_PROXY.</dd></dl>
 <h3>globus_result_t globus_rls_client_connect (char * url, <code>globus_rls_handle_t</code> ** h)</h3>
 <p> Open connection to RLS server. <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>url</i> URL of server to connect to. URL scheme should be <code>RLS</code> or <code>RLSN</code>, eg <code>RLS://my.host</code>. If the URL scheme is <code>RLSN</code> then no authentication is performed (the RLS server must be started with authentication disabled as well, this option is primarily intended for testing).<br />
- <i>h</i> If the connection is successful <i>*h</i> will be set to the connection handle. This handle is required by all other functions in the API.</dl>
+</dt><dd> <i>url</i> URL of server to connect to. URL scheme should be <code>RLS</code> or <code>RLSN</code>, eg <code>RLS://my.host</code>. If the URL scheme is <code>RLSN</code> then no authentication is performed (the RLS server must be started with authentication disabled as well, this option is primarily intended for testing).<br />
+ <i>h</i> If the connection is successful <i>*h</i> will be set to the connection handle. This handle is required by all other functions in the API.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> Handle <i>h</i> now connected to RLS server identified by <i>url</i>.</dl>
+</dt><dd> <i>GLOBUS_SUCCESS</i> Handle <i>h</i> now connected to RLS server identified by <i>url</i>.</dd></dl>
 <h3>globus_result_t globus_rls_client_close (<code>globus_rls_handle_t</code> * h)</h3>
 <p> Close connection to RLS server. <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>h</i> Connection handle to be closed, previously allocated by <code>globus_rls_client_connect()</code>.</dl>
+</dt><dd> <i>h</i> Connection handle to be closed, previously allocated by <code>globus_rls_client_connect()</code>.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> Connection closed, <i>h</i> is no longer valid.</dl>
+</dt><dd> <i>GLOBUS_SUCCESS</i> Connection closed, <i>h</i> is no longer valid.</dd></dl>
 <h3>int globus_rls_client_get_timeout ()</h3>
 <p> Get timeout for IO calls to RLS server. If 0 IO calls do not timeout. The default is 30 seconds. </p>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>timeout</i> Seconds to wait before timing out an IO operation.</dl>
+</dt><dd> <i>timeout</i> Seconds to wait before timing out an IO operation.</dd></dl>
 <h3>void globus_rls_client_set_timeout (int seconds)</h3>
 <p> Set timeout for IO calls to RLS server. <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>seconds</i> Seconds to wait before timing out an IO operation. If 0 IO calls do not timeout. The default is 30 seconds.</dl>
+</dt><dd> <i>seconds</i> Seconds to wait before timing out an IO operation. If 0 IO calls do not timeout. The default is 30 seconds.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAR">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAR">Author</a></dt>
+<dd></dd></dl>

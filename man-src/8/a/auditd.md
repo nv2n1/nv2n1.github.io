@@ -14,24 +14,24 @@ description: "auditd – The Linux Audit daemon"
 <p><code>auditd</code> is the userspace component to the Linux Auditing System. It&#8217;s responsible for writing audit records to the disk. Viewing the logs is done with the <code>ausearch</code> or <code>aureport</code> utilities. Configuring the audit system or loading rules is done with the <code>auditctl</code> utility. During startup, the rules in <i>/etc/audit/audit.rules</i> are read by <code>auditctl</code> and loaded into the kernel. Alternately, there is also an <code>augenrules</code> program that reads rules located in <i>/etc/audit/rules.d/</i> and compiles them into an audit.rules file. The audit daemon itself has some configuration options that the admin may wish to customize. They are found in the <code>auditd.conf</code> file.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>leave the audit daemon in the foreground for debugging. Messages also go to stderr rather than the audit log.</p>
-<dt><code>-l</code></p>
-<dd>allow the audit daemon to follow symlinks for config files.</p>
-<dt><code>-n</code></p>
-<dd>no fork. This is useful for running off of inittab or systemd.</p>
-<dt><code>-s=</code><i>ENABLE_STATE</i></p>
-<dd>specify when starting if auditd should change the current value for the kernel enabled flag. Valid values for ENABLE_STATE are &quot;disable&quot;, &quot;enable&quot; or &quot;nochange&quot;. The default is to enable (and disable when auditd terminates). The value of the enabled flag may be changed during the lifetime of auditd using &#8216;auditctl -e&#8217;.</dl>
+<dt><code>-f</code></dt>
+<dd>leave the audit daemon in the foreground for debugging. Messages also go to stderr rather than the audit log.</dd>
+<dt><code>-l</code></dt>
+<dd>allow the audit daemon to follow symlinks for config files.</dd>
+<dt><code>-n</code></dt>
+<dd>no fork. This is useful for running off of inittab or systemd.</dd>
+<dt><code>-s=</code><i>ENABLE_STATE</i></dt>
+<dd>specify when starting if auditd should change the current value for the kernel enabled flag. Valid values for ENABLE_STATE are &quot;disable&quot;, &quot;enable&quot; or &quot;nochange&quot;. The default is to enable (and disable when auditd terminates). The value of the enabled flag may be changed during the lifetime of auditd using &#8216;auditctl -e&#8217;.</dd></dl>
 <h2>Signals</h2>
 <dl>
-<dt>SIGHUP</p>
-<dd>causes auditd to reconfigure. This means that auditd re-reads the configuration file. If there are no syntax errors, it will proceed to implement the requested changes. If the reconfigure is successful, a DAEMON_CONFIG event is recorded in the logs. If not successful, error handling is controlled by space_left_action, admin_space_left_action, disk_full_action, and disk_error_action parameters in auditd.conf. </p>
-<dt>SIGTERM</p>
-<dd>caused auditd to discontinue processing audit events, write a shutdown audit event, and exit. </p>
-<dt>SIGUSR1</p>
-<dd>causes auditd to immediately rotate the logs. It will consult the max_log_file_action to see if it should keep the logs or not. </p>
-<dt>SIGUSR2</p>
-<dd>causes auditd to attempt to resume logging. This is usually needed after logging has been suspended. </p>
+<dt>SIGHUP</dt>
+<dd>causes auditd to reconfigure. This means that auditd re-reads the configuration file. If there are no syntax errors, it will proceed to implement the requested changes. If the reconfigure is successful, a DAEMON_CONFIG event is recorded in the logs. If not successful, error handling is controlled by space_left_action, admin_space_left_action, disk_full_action, and disk_error_action parameters in auditd.conf. </dd>
+<dt>SIGTERM</dt>
+<dd>caused auditd to discontinue processing audit events, write a shutdown audit event, and exit. </dd>
+<dt>SIGUSR1</dt>
+<dd>causes auditd to immediately rotate the logs. It will consult the max_log_file_action to see if it should keep the logs or not. </dd>
+<dt>SIGUSR2</dt>
+<dd>causes auditd to attempt to resume logging. This is usually needed after logging has been suspended. </dd>
 </dl>
 <h2>Files</h2>
 <p><code>/etc/audit/auditd.conf</code> &#8211; configuration file for audit daemon </p>

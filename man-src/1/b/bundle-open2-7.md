@@ -17,5 +17,5 @@ description: "bundle-open – Opens the source directory for a gem in your bundl
 <dl>
 <dd>
 <pre>bundle open 'rack'</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Will open the source directory for the &#8216;rack&#8217; gem in your bundle.</p>

@@ -17,11 +17,11 @@ bson_writer_begin (bson_writer_t *writer,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>writer</code></p>
-<dd> A <code>bson_writer_t</code> \&amp;.</dl>
+<dt><code>writer</code></dt>
+<dd> A <code>bson_writer_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Begins writing a new document. The caller may use the bson structure to write out a new BSON document. When completed, the caller must call either <code><a href="/docs/linux/man/3-bson_writer_end/">bson_writer_end</a>(3)</code> or <code><a href="/docs/linux/man/3-bson_writer_rollback/">bson_writer_rollback</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>

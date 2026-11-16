@@ -18,36 +18,36 @@ description: "sg_verify – invoke SCSI VERIFY command(s) on a block device"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well. The options are arranged in alphabetical order based on the long option name.</p>
 <dl>
-<dt><code>-S</code>, <code>&#8211;16</code></p>
-<dd>uses a VERIFY(16) command (default VERIFY(10)). Even without this option, using an <i>&#8211;lba=LBA</i> which is too large, will cause the utility to issue a VERIFY(16) command.</p>
-<dt><code>-b</code>, <code>&#8211;bpc</code>=<i>BPC</i></p>
-<dd>this option is ignored if <i>&#8211;ndo=NDO</i> is given. Otherwise <i>BPC</i> specifies the maximum number of blocks that will be verified by a single SCSI VERIFY command. The default value is 128 blocks which equates to 64 KB for a disk with 512 byte blocks. If <i>BPC</i> is less than <i>COUNT</i> then multiple SCSI VERIFY commands are sent to the <i>DEVICE</i>. For the default VERIFY(10) <i>BPC</i> cannot exceed 0xffff (65,535) while for VERIFY(16) <i>BPC</i> cannot exceed 0x7fffffff (2,147,483,647). For recent block devices (disks) this value may be constrained by the maximum transfer length field in the block limits VPD page.</p>
-<dt><code>-c</code>, <code>&#8211;count</code>=<i>COUNT</i></p>
-<dd>where <i>COUNT</i> specifies the number of blocks to verify. The default value is 1 . If <i>COUNT</i> is greater than <i>BPC</i> (or its default value of 128) and <i>NDO</i> is not given, 0 or less then multiple SCSI VERIFY commands are sent to the device. Otherwise <i>COUNT</i> becomes the contents of the verification length field of the SCSI VERIFY command issued. The <code>sg_readcap</code> utility can be used to find the maximum number of blocks that a block device (e.g. a disk) has.</p>
-<dt><code>-d</code>, <code>&#8211;dpo</code></p>
-<dd>disable page out changes the cache retention priority of blocks read on the device&#8217;s cache to the lowest priority. This means that blocks read by other commands are more likely to remain in the device&#8217;s cache.</p>
-<dt><code>-E</code>, <code>&#8211;ebytchk</code>=<i>BCH</i></p>
-<dd>sets the BYTCHK field to <i>BCH</i> overriding the value (1) set by the <i>&#8211;ndo=NDO</i> option. Values of 1, 2 or 3 are accepted for <i>BCH</i> however sbc3r34 reserves the value 2. If this option is given then <i>&#8211;ndo=NDO</i> must also be given. If <i>BCH</i> is 3 then <i>COUNT</i> must be 1 and <i>NDO</i> should be the size of one logical block (plus the size of some or all of the protection infomation if <i>VRP</i> is greater than 0).</p>
-<dt><code>-g</code>, <code>&#8211;group</code>=<i>GN</i></p>
-<dd>where <i>GN</i> becomes the contents of the group number field in the SCSI VERIFY(16) command. The default value for <i>GN</i> is 0. Note that this option is ignored for the SCSI VERIFY(10) command.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-i</code>, <code>&#8211;in</code>=<i>IF</i></p>
-<dd>where <i>IF</i> is the name of a file from which <i>NDO</i> bytes will be read and placed in the data-out buffer. This is only done when the <i>&#8211;ndo=NDO</i> option is given. If this option is not given then stdin is read. If <i>IF</i> is &quot;-&quot; then stdin is also used.</p>
-<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></p>
-<dd>where <i>LBA</i> specifies the logical block address of the first block to start the verify operation. <i>LBA</i> is assumed to be decimal unless prefixed by &#8216;0x&#8217; or a trailing &#8216;h&#8217; (see below). The default value is 0 (i.e. the start of the device).</p>
-<dt><code>-n</code>, <code>&#8211;ndo</code>=<i>NDO</i></p>
-<dd><i>NDO</i> is the number of bytes to obtain from the <i>FN</i> file (if <i>&#8211;in=FN</i> is given) or from stdin. Those bytes are placed in the data-out buffer associated with the SCSI VERIFY command and <i>NDO</i> is placed in the verification length field in the cdb. The default value for <i>NDO</i> is 0 and the maximum value is dependant on the OS. If the <i>&#8211;ebytchk=BCH</i> option is not given then the BYTCHK field in the cdb is set to 1.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>suppress the sense buffer messages associated with a MISCOMPARE sense key that would otherwise be sent to stderr. Still set the exit status to 14 which is the sense key value indicating a MISCOMPARE .</p>
-<dt><code>-r</code>, <code>&#8211;readonly</code></p>
-<dd>opens the DEVICE read-only rather than read-write which is the default. The Linux sg driver needs read-write access for the SCSI VERIFY command but other access methods may require read-only access.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</p>
-<dt><code>-P</code>, <code>&#8211;vrprotect</code>=<i>VRP</i></p>
-<dd>where <i>VRP</i> is the value in the vrprotect field in the VERIFY command cdb. It must be a value between 0 and 7 inclusive. The default value is zero.</dl>
+<dt><code>-S</code>, <code>&#8211;16</code></dt>
+<dd>uses a VERIFY(16) command (default VERIFY(10)). Even without this option, using an <i>&#8211;lba=LBA</i> which is too large, will cause the utility to issue a VERIFY(16) command.</dd>
+<dt><code>-b</code>, <code>&#8211;bpc</code>=<i>BPC</i></dt>
+<dd>this option is ignored if <i>&#8211;ndo=NDO</i> is given. Otherwise <i>BPC</i> specifies the maximum number of blocks that will be verified by a single SCSI VERIFY command. The default value is 128 blocks which equates to 64 KB for a disk with 512 byte blocks. If <i>BPC</i> is less than <i>COUNT</i> then multiple SCSI VERIFY commands are sent to the <i>DEVICE</i>. For the default VERIFY(10) <i>BPC</i> cannot exceed 0xffff (65,535) while for VERIFY(16) <i>BPC</i> cannot exceed 0x7fffffff (2,147,483,647). For recent block devices (disks) this value may be constrained by the maximum transfer length field in the block limits VPD page.</dd>
+<dt><code>-c</code>, <code>&#8211;count</code>=<i>COUNT</i></dt>
+<dd>where <i>COUNT</i> specifies the number of blocks to verify. The default value is 1 . If <i>COUNT</i> is greater than <i>BPC</i> (or its default value of 128) and <i>NDO</i> is not given, 0 or less then multiple SCSI VERIFY commands are sent to the device. Otherwise <i>COUNT</i> becomes the contents of the verification length field of the SCSI VERIFY command issued. The <code>sg_readcap</code> utility can be used to find the maximum number of blocks that a block device (e.g. a disk) has.</dd>
+<dt><code>-d</code>, <code>&#8211;dpo</code></dt>
+<dd>disable page out changes the cache retention priority of blocks read on the device&#8217;s cache to the lowest priority. This means that blocks read by other commands are more likely to remain in the device&#8217;s cache.</dd>
+<dt><code>-E</code>, <code>&#8211;ebytchk</code>=<i>BCH</i></dt>
+<dd>sets the BYTCHK field to <i>BCH</i> overriding the value (1) set by the <i>&#8211;ndo=NDO</i> option. Values of 1, 2 or 3 are accepted for <i>BCH</i> however sbc3r34 reserves the value 2. If this option is given then <i>&#8211;ndo=NDO</i> must also be given. If <i>BCH</i> is 3 then <i>COUNT</i> must be 1 and <i>NDO</i> should be the size of one logical block (plus the size of some or all of the protection infomation if <i>VRP</i> is greater than 0).</dd>
+<dt><code>-g</code>, <code>&#8211;group</code>=<i>GN</i></dt>
+<dd>where <i>GN</i> becomes the contents of the group number field in the SCSI VERIFY(16) command. The default value for <i>GN</i> is 0. Note that this option is ignored for the SCSI VERIFY(10) command.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-i</code>, <code>&#8211;in</code>=<i>IF</i></dt>
+<dd>where <i>IF</i> is the name of a file from which <i>NDO</i> bytes will be read and placed in the data-out buffer. This is only done when the <i>&#8211;ndo=NDO</i> option is given. If this option is not given then stdin is read. If <i>IF</i> is &quot;-&quot; then stdin is also used.</dd>
+<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></dt>
+<dd>where <i>LBA</i> specifies the logical block address of the first block to start the verify operation. <i>LBA</i> is assumed to be decimal unless prefixed by &#8216;0x&#8217; or a trailing &#8216;h&#8217; (see below). The default value is 0 (i.e. the start of the device).</dd>
+<dt><code>-n</code>, <code>&#8211;ndo</code>=<i>NDO</i></dt>
+<dd><i>NDO</i> is the number of bytes to obtain from the <i>FN</i> file (if <i>&#8211;in=FN</i> is given) or from stdin. Those bytes are placed in the data-out buffer associated with the SCSI VERIFY command and <i>NDO</i> is placed in the verification length field in the cdb. The default value for <i>NDO</i> is 0 and the maximum value is dependant on the OS. If the <i>&#8211;ebytchk=BCH</i> option is not given then the BYTCHK field in the cdb is set to 1.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>suppress the sense buffer messages associated with a MISCOMPARE sense key that would otherwise be sent to stderr. Still set the exit status to 14 which is the sense key value indicating a MISCOMPARE .</dd>
+<dt><code>-r</code>, <code>&#8211;readonly</code></dt>
+<dd>opens the DEVICE read-only rather than read-write which is the default. The Linux sg driver needs read-write access for the SCSI VERIFY command but other access methods may require read-only access.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd>
+<dt><code>-P</code>, <code>&#8211;vrprotect</code>=<i>VRP</i></dt>
+<dd>where <i>VRP</i> is the value in the vrprotect field in the VERIFY command cdb. It must be a value between 0 and 7 inclusive. The default value is zero.</dd></dl>
 <h2>Bytchk</h2>
 <p>BYTCHK is the name of a field (two bits wide) in the VERIFY(10) and VERIFY(16) commands. When set to 1 or 3 (sbc3r34 reserves the value 2) it indicates that associated with the SCSI VERIFY command, a data-out buffer will be sent for the device (disk) to check. Using the <i>&#8211;ndo=NDO</i> option sets the BYTCHK field to 1 and <i>NDO</i> is the number of bytes placed in the data-out buffer. Those bytes are obtained from stdin or <i>IF</i> (from the <i>&#8211;in=FN</i> option). The <i>&#8211;ebytchk=BCH</i> option may be used to override the BYTCHK field value of 1 with <i>BCH</i>. </p>
 <p> The calculation of <i>NDO</i> is left up to the user. Its value depends on the logical block size (which can be found with the sg_readcap utility), the <i>COUNT</i> and the <i>VRP</i> values. If the <i>VRP</i> is greater than 0 then each logical block will contain an extra 8 bytes (at least) of protection information. </p>

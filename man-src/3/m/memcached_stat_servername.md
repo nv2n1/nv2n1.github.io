@@ -13,21 +13,21 @@ description: "memcached_stat_servername – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_stat_st</code></p>
+<dt><code>memcached_stat_st</code></dt>
 <dd>
-<dt><code>memcached_return_t (*memcached_stat_fn)(memcached_server_instance_st</code><i>&nbsp;<wbr>server</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, void<i>&nbsp;<wbr>*context</i>)</p>
+</dd><dt><code>memcached_return_t (*memcached_stat_fn)(memcached_server_instance_st</code><i>&nbsp;<wbr>server</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, void<i>&nbsp;<wbr>*context</i>)</dt>
 <dd>
-<dt><i>memcached_stat_st</i> *memcached_stat(memcached_st<i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*args</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+</dd><dt><i>memcached_stat_st</i> *memcached_stat(memcached_st<i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*args</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_stat_servername(</code><i>memcached_stat_st</i><i>&nbsp;<wbr>*stat</i>, char<i>&nbsp;<wbr>*args</i>, const char<i>&nbsp;<wbr>*hostname</i>, in_port_t<i>&nbsp;<wbr>port</i>)</p>
+</dd><dt><code>memcached_return_t memcached_stat_servername(</code><i>memcached_stat_st</i><i>&nbsp;<wbr>*stat</i>, char<i>&nbsp;<wbr>*args</i>, const char<i>&nbsp;<wbr>*hostname</i>, in_port_t<i>&nbsp;<wbr>port</i>)</dt>
 <dd>
-<dt><code>char * memcached_stat_get_value(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_stat_st</i><i>&nbsp;<wbr>*stat</i>, const char<i>&nbsp;<wbr>*key</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+</dd><dt><code>char * memcached_stat_get_value(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_stat_st</i><i>&nbsp;<wbr>*stat</i>, const char<i>&nbsp;<wbr>*key</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<dt><code>char ** memcached_stat_get_keys(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_stat_st</i><i>&nbsp;<wbr>*stat</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+</dd><dt><code>char ** memcached_stat_get_keys(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_stat_st</i><i>&nbsp;<wbr>*stat</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_stat_execute(memcached_st</code><i>&nbsp;<wbr>*memc</i>, const char<i>&nbsp;<wbr>*args</i>, <i>memcached_stat_fn</i><i>&nbsp;<wbr>func</i>, void<i>&nbsp;<wbr>*context</i>)</p>
+</dd><dt><code>memcached_return_t memcached_stat_execute(memcached_st</code><i>&nbsp;<wbr>*memc</i>, const char<i>&nbsp;<wbr>*args</i>, <i>memcached_stat_fn</i><i>&nbsp;<wbr>func</i>, void<i>&nbsp;<wbr>*context</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) has the ability to query a memcached server (or collection of servers) for their current state. Queries to find state return a <i>memcached_stat_st</i> structure. You are responsible for freeing this structure. While it is possible to access the structure directly it is not advisable. <i>memcached_stat_get_value()</i> has been provided to query the structure. </p>
 <p> <i>memcached_stat_execute()</i> uses the servers found in <i>memcached_stat_st</i> and executes a &quot;stat&quot; command on each server. args is an optional argument that can be passed in to modify the behavior of &quot;stats&quot;. You will need to supply a callback function that will be supplied each pair of values returned by the memcached server. </p>
@@ -50,3 +50,4 @@ description: "memcached_stat_servername – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

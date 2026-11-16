@@ -44,7 +44,7 @@ description: "QuantLib::CallableBond – Callable bond base class."
 <p> Base callable bond class for fixed and zero coupon bonds. Defines commonalities between fixed and zero coupon callable bonds. At present, only European and Bermudan put/call schedules supported (no American optionality), as defined by the <code>Callability</code> class. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>models/shortrate/calibrationHelpers </p>
+<dd>models/shortrate/calibrationHelpers </dd>
 <p> OAS/OAD </p>
 <p> floating rate callable bonds ?</dl>
 <h2>Member Function Documentation</h2>
@@ -57,3 +57,4 @@ description: "QuantLib::CallableBond – Callable bond base class."
 <p> Reimplemented in <code>CallableFixedRateBond</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+</p>

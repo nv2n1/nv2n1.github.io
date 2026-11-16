@@ -31,47 +31,47 @@ git bundle create[-q | --quiet | --progress | --all - progress][--all - progress
 <p> create [options] &lt;file&gt; &lt;git-rev-list-args&gt;</p>
 <dl>
 <dt>
-<dd> Used to create a bundle named <i>file</i>. This requires the <i>&lt;git-rev-list-args&gt;</i> arguments to define the bundle contents. <i>options</i> contains the options specific to the <i>git bundle create</i> subcommand.</dl>
+</dt><dd> Used to create a bundle named <i>file</i>. This requires the <i>&lt;git-rev-list-args&gt;</i> arguments to define the bundle contents. <i>options</i> contains the options specific to the <i>git bundle create</i> subcommand.</dd></dl>
 <p> verify &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Used to check that a bundle file is valid and will apply cleanly to the current repository. This includes checks on the bundle format itself as well as checking that the prerequisite commits exist and are fully linked in the current repository. <i>git bundle</i> prints a list of missing commits, if any, and exits with a non-zero status.</dl>
+</dt><dd> Used to check that a bundle file is valid and will apply cleanly to the current repository. This includes checks on the bundle format itself as well as checking that the prerequisite commits exist and are fully linked in the current repository. <i>git bundle</i> prints a list of missing commits, if any, and exits with a non-zero status.</dd></dl>
 <p> list-heads &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Lists the references defined in the bundle. If followed by a list of references, only references matching those given are printed out.</dl>
+</dt><dd> Lists the references defined in the bundle. If followed by a list of references, only references matching those given are printed out.</dd></dl>
 <p> unbundle &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Passes the objects in the bundle to <i>git index-pack</i> for storage in the repository, then prints the names of all defined references. If a list of references is given, only references matching those in the list are printed. This command is really plumbing, intended to be called only by <i>git fetch</i>.</dl>
+</dt><dd> Passes the objects in the bundle to <i>git index-pack</i> for storage in the repository, then prints the names of all defined references. If a list of references is given, only references matching those in the list are printed. This command is really plumbing, intended to be called only by <i>git fetch</i>.</dd></dl>
 <p> &lt;git-rev-list-args&gt;</p>
 <dl>
 <dt>
-<dd> A list of arguments, acceptable to <i>git rev-parse</i> and <i>git rev-list</i> (and containing a named ref, see SPECIFYING REFERENCES below), that specifies the specific objects and references to transport. For example, <code>master~10..master</code> causes the current master reference to be packaged along with all objects added since its 10th ancestor commit. There is no explicit limit to the number of references and objects that may be packaged.</dl>
+</dt><dd> A list of arguments, acceptable to <i>git rev-parse</i> and <i>git rev-list</i> (and containing a named ref, see SPECIFYING REFERENCES below), that specifies the specific objects and references to transport. For example, <code>master~10..master</code> causes the current master reference to be packaged along with all objects added since its 10th ancestor commit. There is no explicit limit to the number of references and objects that may be packaged.</dd></dl>
 <p> [&lt;refname&gt;&#8230;]</p>
 <dl>
 <dt>
-<dd> A list of references used to limit the references reported as available. This is principally of use to <i>git fetch</i>, which expects to receive only those references asked for and not necessarily everything in the pack (in this case, <i>git bundle</i> acts like <i>git fetch-pack</i>).</dl>
+</dt><dd> A list of references used to limit the references reported as available. This is principally of use to <i>git fetch</i>, which expects to receive only those references asked for and not necessarily everything in the pack (in this case, <i>git bundle</i> acts like <i>git fetch-pack</i>).</dd></dl>
 <p> &#8211;progress</p>
 <dl>
 <dt>
-<dd> Progress status is reported on the standard error stream by default when it is attached to a terminal, unless -q is specified. This flag forces progress status even if the standard error stream is not directed to a terminal.</dl>
+</dt><dd> Progress status is reported on the standard error stream by default when it is attached to a terminal, unless -q is specified. This flag forces progress status even if the standard error stream is not directed to a terminal.</dd></dl>
 <p> &#8211;all-progress</p>
 <dl>
 <dt>
-<dd> When &#8211;stdout is specified then progress report is displayed during the object count and compression phases but inhibited during the write-out phase. The reason is that in some cases the output stream is directly linked to another command which may wish to display progress status of its own as it processes incoming pack data. This flag is like &#8211;progress except that it forces progress report for the write-out phase as well even if &#8211;stdout is used.</dl>
+</dt><dd> When &#8211;stdout is specified then progress report is displayed during the object count and compression phases but inhibited during the write-out phase. The reason is that in some cases the output stream is directly linked to another command which may wish to display progress status of its own as it processes incoming pack data. This flag is like &#8211;progress except that it forces progress report for the write-out phase as well even if &#8211;stdout is used.</dd></dl>
 <p> &#8211;all-progress-implied</p>
 <dl>
 <dt>
-<dd> This is used to imply &#8211;all-progress whenever progress display is activated. Unlike &#8211;all-progress this flag doesn&#8217;t actually force any progress display by itself.</dl>
+</dt><dd> This is used to imply &#8211;all-progress whenever progress display is activated. Unlike &#8211;all-progress this flag doesn&#8217;t actually force any progress display by itself.</dd></dl>
 <p> &#8211;version=&lt;version&gt;</p>
 <dl>
 <dt>
-<dd> Specify the bundle version. Version 2 is the older format and can only be used with SHA-1 repositories; the newer version 3 contains capabilities that permit extensions. The default is the oldest supported format, based on the hash algorithm in use.</dl>
+</dt><dd> Specify the bundle version. Version 2 is the older format and can only be used with SHA-1 repositories; the newer version 3 contains capabilities that permit extensions. The default is the oldest supported format, based on the hash algorithm in use.</dd></dl>
 <p> -q, &#8211;quiet</p>
 <dl>
 <dt>
-<dd> This flag makes the command not to report its progress on the standard error stream.</dl>
+</dt><dd> This flag makes the command not to report its progress on the standard error stream.</dd></dl>
 <h2>SPECIFYING REFERENCES</h2>
 <p> Revisions must be accompanied by reference names to be packaged in a bundle. </p>
 <p> More than one reference may be packaged, and more than one set of prerequisite objects can be specified. The objects packaged are those not contained in the union of the prerequisites. </p>
@@ -79,52 +79,52 @@ git bundle create[-q | --quiet | --progress | --all - progress][--all - progress
 <p> All of these simple cases are OK (assuming we have a &quot;master&quot; and &quot;next&quot; branch): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create master.bundle master
 $ echo master | git bundle create master.bundle --stdin
 $ git bundle create master-and-next.bundle master next
 $ (echo master; echo next) | git bundle create master-and-next.bundle --stdin
 </pre>
-</dl>
+</dd></dl>
 <p> And so are these (and the same but omitted <code>&#8211;stdin</code> examples): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create recent-master.bundle master~10..master
 $ git bundle create recent-updates.bundle master~10..master next~5..next
 </pre>
-</dl>
+</dd></dl>
 <p> A revision name or a range whose right-hand-side cannot be resolved to a reference is not accepted: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create HEAD.bundle $(git rev-parse HEAD)
 fatal: Refusing to create empty bundle.
 $ git bundle create master-yesterday.bundle master~10..master~5
 fatal: Refusing to create empty bundle.
 </pre>
-</dl>
+</dd></dl>
 <h2>OBJECT PREREQUISITES</h2>
 <p> When creating bundles it is possible to create a self-contained bundle that can be unbundled in a repository with no common history, as well as providing negative revisions to exclude objects needed in the earlier parts of the history. </p>
 <p> Feeding a revision such as <code>new</code> to <code>git bundle create</code> will create a bundle file that contains all the objects reachable from the revision <code>new</code>. That bundle can be unbundled in any repository to obtain a full history that leads to the revision <code>new</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create full.bundle new
 </pre>
-</dl>
+</dd></dl>
 <p> A revision range such as <code>old..new</code> will produce a bundle file that will require the revision <code>old</code> (and any objects reachable from it) to exist for the bundle to be &quot;unbundle&quot;-able: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create full.bundle old..new
 </pre>
-</dl>
+</dd></dl>
 <p> A self-contained bundle without any prerequisites can be extracted into anywhere, even into an empty repository, or be cloned from (i.e., <code>new</code>, but not <code>old..new</code>). </p>
 <p> It is okay to err on the side of caution, causing the bundle file to contain objects already in the destination, as these are ignored when unpacking at the destination. </p>
 <p> If you want to match <code>git clone &#8211;mirror</code>, which would include your refs such as <code>refs/remotes/*</code>, use <code>&#8211;all</code>. If you want to provide the same set of refs that a clone directly from the source repository would get, use <code>&#8211;branches &#8211;tags</code> for the <code>&lt;git-rev-list-args&gt;</code>. </p>
@@ -134,114 +134,114 @@ $ git bundle create full.bundle old..new
 <p> To bootstrap the process, you can first create a bundle that does not have any prerequisites. You can use a tag to remember up to what commit you last processed, in order to make it easy to later update the other repository with an incremental bundle: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 machineA$ cd R1
 machineA$ git bundle create file.bundle master
 machineA$ git tag -f lastR2bundle master
 </pre>
-</dl>
+</dd></dl>
 <p> Then you transfer file.bundle to the target machine B. Because this bundle does not require any existing object to be extracted, you can create a new repository on machine B by cloning from it: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 machineB$ git clone -b master /home/me/tmp/file.bundle R2
 </pre>
-</dl>
+</dd></dl>
 <p> This will define a remote called &quot;origin&quot; in the resulting repository that lets you fetch and pull from the bundle. The $GIT_DIR/config file in R2 will have an entry like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [remote &quot;origin&quot;]
     url = /home/me/tmp/file.bundle
     fetch = refs/heads/*:refs/remotes/origin/*
 </pre>
-</dl>
+</dd></dl>
 <p> To update the resulting mine.git repository, you can fetch or pull after replacing the bundle stored at /home/me/tmp/file.bundle with incremental updates. </p>
 <p> After working some more in the original repository, you can create an incremental bundle to update the other repository: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 machineA$ cd R1
 machineA$ git bundle create file.bundle lastR2bundle..master
 machineA$ git tag -f lastR2bundle master
 </pre>
-</dl>
+</dd></dl>
 <p> You then transfer the bundle to the other machine to replace /home/me/tmp/file.bundle, and pull from it. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 machineB$ cd R2
 machineB$ git pull
 </pre>
-</dl>
+</dd></dl>
 <p> If you know up to what commit the intended recipient repository should have the necessary objects, you can use that knowledge to specify the prerequisites, giving a cut-off point to limit the revisions and objects that go in the resulting bundle. The previous example used the lastR2bundle tag for this purpose, but you can use any other options that you would give to the <code><a href="/docs/linux/man/1-git-log/">git-log</a></code>(1) command. Here are more examples: </p>
 <p> You can use a tag that is present in both: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create mybundle v1.0.0..master
 </pre>
-</dl>
+</dd></dl>
 <p> You can use a prerequisite based on time: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create mybundle --since=10.days master
 </pre>
-</dl>
+</dd></dl>
 <p> You can use the number of commits: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle create mybundle -10 master
 </pre>
-</dl>
+</dd></dl>
 <p> You can run <code>git-bundle verify</code> to see if you can extract from a bundle that was created with a prerequisite: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git bundle verify mybundle
 </pre>
-</dl>
+</dd></dl>
 <p> This will list what commits you must have in order to extract from the bundle and will error out if you do not have them. </p>
 <p> A bundle from a recipient repository&#8217;s point of view is just like a regular repository which it fetches or pulls from. You can, for example, map references when fetching: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git fetch mybundle master:localRef
 </pre>
-</dl>
+</dd></dl>
 <p> You can also see what references it offers: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git ls-remote mybundle
 </pre>
-</dl>
+</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> the <code>bundle-format</code> documentation</p>
+<dt> 1.</dt>
+<dd> the <code>bundle-format</code> documentation</dd>
 <dl>
 <dt>
-<dd> file:///usr/share/doc/git/html/technical/bundle-format.html</dl>
-<dt> 2.</p>
-<dd> the pack format documentation</p>
+</dt><dd> file:///usr/share/doc/git/html/technical/bundle-format.html</dd></dl>
+<dt> 2.</dt>
+<dd> the pack format documentation</dd>
 <dl>
 <dt>
-<dd> file:///usr/share/doc/git/html/technical/pack-format.html</dl>
+</dt><dd> file:///usr/share/doc/git/html/technical/pack-format.html</dd></dl>
 </dl>
 <h2>Index</h2>

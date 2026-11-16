@@ -15,15 +15,15 @@ snd_pcm_format_set_silence - set the silence data on the buffer
 <h2>Arguments</h2>
 
 <i>format</i>
-<dl><dd><dd>the PCM format</dl>
+<dl><dd></dd><dd>the PCM format</dd></dl>
  
 
  <i>data</i>
-<dl><dd>the buffer pointer</dl>
+<dl><dd>the buffer pointer</dd></dl>
  
 
  <i>samples</i>
-<dl><dd>the number of samples to set silence</dl>
+<dl><dd>the number of samples to set silence</dd></dl>
 
 <h2>Description</h2>
 

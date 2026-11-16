@@ -16,37 +16,37 @@ description: "bannergrab – a network service banner grabbing tool"
  By default, if bannergrab has a trigger for the port number that is specified, the trigger for that port is used. If no trigger is listed for a port, the default one is used. No attempt is made to determine the type of service operating on a port.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
+<dt><code>&#8211;help</code></dt>
 <dd>
- Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program.</p>
-<dt><code>&#8211;show-triggers</code></p>
-<dd> Lists the triggers used by bannergrab.</p>
-<dt><code>&#8211;trigger=&lt;trigger&gt;</code></p>
-<dd> Specify the trigger to use. Specify DEFAULT to use the default trigger.</p>
-<dt><code>&#8211;no-triggers</code></p>
-<dd> Collect only the connection banner, no triggers are sent and no SSL.</p>
-<dt><code>&#8211;udp</code></p>
+ Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>&#8211;show-triggers</code></dt>
+<dd> Lists the triggers used by bannergrab.</dd>
+<dt><code>&#8211;trigger=&lt;trigger&gt;</code></dt>
+<dd> Specify the trigger to use. Specify DEFAULT to use the default trigger.</dd>
+<dt><code>&#8211;no-triggers</code></dt>
+<dd> Collect only the connection banner, no triggers are sent and no SSL.</dd>
+<dt><code>&#8211;udp</code></dt>
 <dd>
- Connect to a port using UDP. The default is to use TCP.</p>
-<dt><code>&#8211;no-ssl</code></p>
+ Connect to a port using UDP. The default is to use TCP.</dd>
+<dt><code>&#8211;no-ssl</code></dt>
 <dd>
- Prevent SSL connection creation.</p>
-<dt><code>&#8211;no-hex</code></p>
-<dd> Output containing non-printable characters are converted to hex. This option prevents the conversion.</p>
-<dt><code>&#8211;conn-time=&lt;secs&gt;</code></p>
-<dd> Connection timeout (default is 5s).</p>
-<dt><code>&#8211;read-time=&lt;secs&gt;</code></p>
-<dd> Read timeout (default is 3s).</p>
-<dt><code>&#8211;verbose</code></p>
+ Prevent SSL connection creation.</dd>
+<dt><code>&#8211;no-hex</code></dt>
+<dd> Output containing non-printable characters are converted to hex. This option prevents the conversion.</dd>
+<dt><code>&#8211;conn-time=&lt;secs&gt;</code></dt>
+<dd> Connection timeout (default is 5s).</dd>
+<dt><code>&#8211;read-time=&lt;secs&gt;</code></dt>
+<dd> Read timeout (default is 3s).</dd>
+<dt><code>&#8211;verbose</code></dt>
 <dd> Show additional program details such as any errors.
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>bannergrab 127.0.0.1 80</p>
+<dt>bannergrab 127.0.0.1 80</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> bannergrab was written by Ian Ventura-Whiting &lt;fizz [at] titania.co.uk&gt;. </p>
 <h2>Index</h2>

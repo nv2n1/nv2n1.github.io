@@ -21,34 +21,34 @@ description: "nightfall – binary star astronomy"
 <p> The full documentation for <code>nightfall</code> is distributed only in DVI and HTML format, as it is quite big, and thus not very well suited to the &#8216;man&#8217; page format. It includes some discussion of binary stars (at a popular science level, hopefully) that you may find helpful in understanding what the program does. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h</i></p>
-<dd> Print a usage message on standard output and exit successfully.</p>
-<dt><i>-U</i></p>
-<dd> Run in interactive mode.</p>
-<dt><i>-C file</i></p>
-<dd> Use binary star parameters from a configuration file instead of giving them on the command line. Sample configuration files are in <i>share/nightfall/cfg</i>.</p>
-<dt><i>-G</i>[<i>P</i>|<i>S</i>|<i>1</i>|<i>2</i>]</p>
-<dd> Plot a graph of the lightcurve after its computation (<i>P</i>|<i>S</i> &#8211; zoom on primary/secondary eclipse, <i>1</i>|<i>2</i> &#8211; plot 1/2 orbits).</p>
-<dt><i>-A</i></p>
-<dd> Generate an animated view of the binary star.</p>
-<dt><i>-V</i>[<i>v</i>|<i>i</i>|<i>c</i>|<i>a</i>]</p>
-<dd> Visualize the geometry of the binary star system (<i>v</i> &#8211; view of the stars, <i>i</i> &#8211; image of the potential, <i>c </i> &#8211; contour plot of the potential, <i>a</i> &#8211; all of them).</p>
-<dt><i>-H</i></p>
-<dd> Send plot to a postscript file. If the postscript file exists, it will be overwritten.</p>
-<dt><i>-B[U|B|V|I|R|J|H|K|u|v|b|y|1|2]</i></p>
-<dd> Select the filter/bandpass for which the lightcurve should be plotted. <i>U</i>&#8211;<i>K</i> range from ultraviolett to infrared, best match to the human eye is V. <i>u</i>&#8211;<i>y</i> are narrow-band filters. <i>1</i>|<i>2</i> will select radial velocity curves instead of a light curve.</p>
-<dt><i>-fP/-fS value</i></p>
-<dd> By default, <code>nightfall </code> assumes synchroneous rotation, which means that the stars are rotating with the orbital period, and thus show each other always the same &#8216;side&#8217;. With this option, you can set the ratio of stellar rotation frequency to orbital frequency to some <i>value </i> different from one, seperately for the primary <i>P</i> and the secondary <i>S</i>.</p>
-<dt><i>-e eccentricity periastron_length</i></p>
-<dd> By default, <code>nightfall </code> assumes the orbit to be circular. With this option, you can set the <i>eccentricity</i> of the orbit (0 is circular, maximum is less than 1), and the <i>periastron length</i>, which is the point of closest approach of the two stars in their orbit (0 &#8211; 360 degree).</p>
-<dt><i>-sP/-sS longitude latitude radius dimfactor</i></p>
-<dd> Place a spot on the primary (<i>P</i>) or secondary (<i>S</i>). The spot parameters are the location of the spot (<i>longitude</i>,<i>latitude</i>), its <i>radius</i>, and the <i>dimfactor</i> by which the temperature is reduced (or increased) within the spot area.</p>
-<dt><i>-tP/-tM/-tD value</i></p>
-<dd> Set the absolute value for the orbital period <i>P</i> (in days), the total mass <i>M</i> (in units of solar masses), and/or the orbital separation <i>D </i> (in solar radii) of the system. Any two of these are independent, the third is then calculated from Kepler&#8217;s laws (i.e., you should set only two of these).</p>
-<dt><i>-I file</i></p>
-<dd> Read in observational data from a data file. Sample data files are in <i>share/nightfall/data</i>.</p>
-<dt><i>-D[vwb]</i></p>
-<dd> Diagnostic output (<i>v</i> &#8211; verbose, <i>w</i> &#8211; warnings, <i>b</i> &#8211; status messages).</dl>
+<dt><i>-h</i></dt>
+<dd> Print a usage message on standard output and exit successfully.</dd>
+<dt><i>-U</i></dt>
+<dd> Run in interactive mode.</dd>
+<dt><i>-C file</i></dt>
+<dd> Use binary star parameters from a configuration file instead of giving them on the command line. Sample configuration files are in <i>share/nightfall/cfg</i>.</dd>
+<dt><i>-G</i>[<i>P</i>|<i>S</i>|<i>1</i>|<i>2</i>]</dt>
+<dd> Plot a graph of the lightcurve after its computation (<i>P</i>|<i>S</i> &#8211; zoom on primary/secondary eclipse, <i>1</i>|<i>2</i> &#8211; plot 1/2 orbits).</dd>
+<dt><i>-A</i></dt>
+<dd> Generate an animated view of the binary star.</dd>
+<dt><i>-V</i>[<i>v</i>|<i>i</i>|<i>c</i>|<i>a</i>]</dt>
+<dd> Visualize the geometry of the binary star system (<i>v</i> &#8211; view of the stars, <i>i</i> &#8211; image of the potential, <i>c </i> &#8211; contour plot of the potential, <i>a</i> &#8211; all of them).</dd>
+<dt><i>-H</i></dt>
+<dd> Send plot to a postscript file. If the postscript file exists, it will be overwritten.</dd>
+<dt><i>-B[U|B|V|I|R|J|H|K|u|v|b|y|1|2]</i></dt>
+<dd> Select the filter/bandpass for which the lightcurve should be plotted. <i>U</i>&#8211;<i>K</i> range from ultraviolett to infrared, best match to the human eye is V. <i>u</i>&#8211;<i>y</i> are narrow-band filters. <i>1</i>|<i>2</i> will select radial velocity curves instead of a light curve.</dd>
+<dt><i>-fP/-fS value</i></dt>
+<dd> By default, <code>nightfall </code> assumes synchroneous rotation, which means that the stars are rotating with the orbital period, and thus show each other always the same &#8216;side&#8217;. With this option, you can set the ratio of stellar rotation frequency to orbital frequency to some <i>value </i> different from one, seperately for the primary <i>P</i> and the secondary <i>S</i>.</dd>
+<dt><i>-e eccentricity periastron_length</i></dt>
+<dd> By default, <code>nightfall </code> assumes the orbit to be circular. With this option, you can set the <i>eccentricity</i> of the orbit (0 is circular, maximum is less than 1), and the <i>periastron length</i>, which is the point of closest approach of the two stars in their orbit (0 &#8211; 360 degree).</dd>
+<dt><i>-sP/-sS longitude latitude radius dimfactor</i></dt>
+<dd> Place a spot on the primary (<i>P</i>) or secondary (<i>S</i>). The spot parameters are the location of the spot (<i>longitude</i>,<i>latitude</i>), its <i>radius</i>, and the <i>dimfactor</i> by which the temperature is reduced (or increased) within the spot area.</dd>
+<dt><i>-tP/-tM/-tD value</i></dt>
+<dd> Set the absolute value for the orbital period <i>P</i> (in days), the total mass <i>M</i> (in units of solar masses), and/or the orbital separation <i>D </i> (in solar radii) of the system. Any two of these are independent, the third is then calculated from Kepler&#8217;s laws (i.e., you should set only two of these).</dd>
+<dt><i>-I file</i></dt>
+<dd> Read in observational data from a data file. Sample data files are in <i>share/nightfall/data</i>.</dd>
+<dt><i>-D[vwb]</i></dt>
+<dd> Diagnostic output (<i>v</i> &#8211; verbose, <i>w</i> &#8211; warnings, <i>b</i> &#8211; status messages).</dd></dl>
 <h2>NOTES</h2>
 <p> The definition of primary/secondary is inverse to the usual convention in astronomy. </p>
 <p> Obviously, the size of a star in a binary system is limited by the orbital separation of the two stars. Instead of having to calculate the maximum useful stellar size herself, the user simply gives the desired stellar size as a fraction (0.001-1.3) of the maximum <i>polar</i> radius of the star (which is calculated by the program). In the output file <i>NightfallCurve.dat</i>, you will then find the &#8216;real&#8217; size of the star(s). </p>

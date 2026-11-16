@@ -14,10 +14,10 @@ description: "gnutls_certificate_client_set_retrieve_function – API function"
 <p> <code>void gnutls_certificate_client_set_retrieve_function(gnutls_certificate_credentials_t </code><i>cred</i><code>, gnutls_certificate_client_retrieve_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t cred</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_certificate_client_retrieve_function * func</p>
-<dd> is the callback function</dl>
+<dt>gnutls_certificate_credentials_t cred</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_certificate_client_retrieve_function * func</dt>
+<dd> is the callback function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets a callback to be called in order to retrieve the certificate to be used in the handshake. You are advised to use <code>gnutls_certificate_set_retrieve_function2()</code> because it is much more efficient in the processing it requires from gnutls. </p>
 <p> The callback&#8217;s function prototype is: int (*callback)(gnutls_session_t, const gnutls_datum_t* req_ca_dn, int nreqs, const gnutls_pk_algorithm_t* pk_algos, int pk_algos_length, gnutls_retr_st* st); </p>
@@ -35,6 +35,6 @@ description: "gnutls_certificate_client_set_retrieve_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

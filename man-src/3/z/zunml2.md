@@ -28,10 +28,10 @@ description: "zunml2.f –"
  Q = H(k)**H . . . H(2)**H H(1)**H
  as returned by ZGELQF. Q is of order m if SIDE = 'L' and of order n
  if SIDE = 'R'.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'L': apply Q or Q**H from the Left
  = 'R': apply Q or Q**H from the Right</pre>
@@ -84,13 +84,13 @@ description: "zunml2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 159 of file zunml2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

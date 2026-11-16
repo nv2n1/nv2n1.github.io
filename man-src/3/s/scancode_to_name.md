@@ -10,7 +10,6 @@ description: "scancode_to_name – Converts a scancode to a key name. Allegro ga
 <p>scancode_to_name &#8211; Converts a scancode to a key name. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 const char *scancode_to_name(int scancode);</code></pre>
 <h2>Description</h2>
 <p>This function returns a string pointer containing the name of they key with the given scancode. This is useful if you e.g. let the user choose a key for some action, and want to display something more meaningful than just the scancode. Example: </p>

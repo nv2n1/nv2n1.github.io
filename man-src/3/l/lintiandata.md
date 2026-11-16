@@ -37,37 +37,38 @@ description: "Lintian::Data – Lintian interface to query lists of keywords"
 <p> Where Perl semantics allow it, the sub can modify <font SIZE="-1">CURVALUE</font> and the changes will be reflected in the result. As an example, if <font SIZE="-1">CURVALUE</font> is a hashref, new keys can be inserted etc.</p>
 <h2>Class Methods</h2>
 <dl COMPACT>
-<dt>new(<font SIZE="-1">TYPE</font> [,SEPARATOR[, <font SIZE="-1">CODE</font>]])</p>
-<dd>Creates a new Lintian::Data object for the given <font SIZE="-1">TYPE.</font> <font SIZE="-1">TYPE</font> is a partial path relative to the <i>data</i> directory and should correspond to a file in that directory. The contents of that file will be loaded into memory and returned as part of the newly created object. On error, <code>new()</code> throws an exception. </p>
+<dt>new(<font SIZE="-1">TYPE</font> [,SEPARATOR[, <font SIZE="-1">CODE</font>]])</dt>
+<dd>Creates a new Lintian::Data object for the given <font SIZE="-1">TYPE.</font> <font SIZE="-1">TYPE</font> is a partial path relative to the <i>data</i> directory and should correspond to a file in that directory. The contents of that file will be loaded into memory and returned as part of the newly created object. On error, <code>new()</code> throws an exception. </dd>
 <p> If <font SIZE="-1">SEPARATOR</font> is given, it will be used as a regular expression for splitting the lines into key/value pairs. </p>
 <p> If <font SIZE="-1">CODE</font> is also given, it is assumed to be a sub that will pre-process the key/value pairs. See the &#8220;Interface for the <font SIZE="-1">CODE</font> argument&#8221; above. </p>
 <p> A given file will only be loaded once. If <code>new()</code> is called again with the same <font SIZE="-1">TYPE</font> argument, the data previously loaded will be reused, avoiding multiple file reads.</p>
-<dt>set_vendor(<font SIZE="-1">PROFILE</font>)</p>
-<dd>Specifies vendor profile. It must be set before the first data file is loaded.</dl>
+<dt>set_vendor(<font SIZE="-1">PROFILE</font>)</dt>
+<dd>Specifies vendor profile. It must be set before the first data file is loaded.</dd></dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt><code>all()</code></p>
-<dd>Returns all keywords listed in the data file as a list in original order. In a scalar context, returns the number of keywords.</p>
-<dt>matches_any(KEYWORD[, <font SIZE="-1">MODIFIERS</font>])</p>
-<dd>Returns true if <font SIZE="-1">KEYWORD</font> matches any regular expression listed in the data file. The optional <font SIZE="-1">MODIFIERS</font> serve as modifiers on all regexes.</p>
-<dt>known(<font SIZE="-1">KEYWORD</font>)</p>
-<dd>Returns true if <font SIZE="-1">KEYWORD</font> was listed in the data file represented by this Lintian::Data instance and false otherwise.</p>
-<dt>value(<font SIZE="-1">KEYWORD</font>)</p>
-<dd>Returns the value attached to <font SIZE="-1">KEYWORD</font> if it was listed in the data file represented by this Lintian::Data instance and the undefined value otherwise. If <font SIZE="-1">SEPARATOR</font> was not given, the value will &#8216;1&#8217;.</dl>
+<dt><code>all()</code></dt>
+<dd>Returns all keywords listed in the data file as a list in original order. In a scalar context, returns the number of keywords.</dd>
+<dt>matches_any(KEYWORD[, <font SIZE="-1">MODIFIERS</font>])</dt>
+<dd>Returns true if <font SIZE="-1">KEYWORD</font> matches any regular expression listed in the data file. The optional <font SIZE="-1">MODIFIERS</font> serve as modifiers on all regexes.</dd>
+<dt>known(<font SIZE="-1">KEYWORD</font>)</dt>
+<dd>Returns true if <font SIZE="-1">KEYWORD</font> was listed in the data file represented by this Lintian::Data instance and false otherwise.</dd>
+<dt>value(<font SIZE="-1">KEYWORD</font>)</dt>
+<dd>Returns the value attached to <font SIZE="-1">KEYWORD</font> if it was listed in the data file represented by this Lintian::Data instance and the undefined value otherwise. If <font SIZE="-1">SEPARATOR</font> was not given, the value will &#8216;1&#8217;.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt>no data type specified</p>
-<dd><code>new()</code> was called without a <font SIZE="-1">TYPE</font> argument.</p>
-<dt>unknown data type %s</p>
-<dd>The <font SIZE="-1">TYPE</font> argument to <code>new()</code> did not correspond to a file in the <i>data</i> directory of the Lintian root.</p>
-<dt>undefined value for %s (type: %s)</p>
-<dd>The <font SIZE="-1">CODE</font> argument return undef for the <font SIZE="-1">KEY</font> and no previous value for that <font SIZE="-1">KEY</font> was available.</dl>
+<dt>no data type specified</dt>
+<dd><code>new()</code> was called without a <font SIZE="-1">TYPE</font> argument.</dd>
+<dt>unknown data type %s</dt>
+<dd>The <font SIZE="-1">TYPE</font> argument to <code>new()</code> did not correspond to a file in the <i>data</i> directory of the Lintian root.</dd>
+<dt>undefined value for %s (type: %s)</dt>
+<dd>The <font SIZE="-1">CODE</font> argument return undef for the <font SIZE="-1">KEY</font> and no previous value for that <font SIZE="-1">KEY</font> was available.</dd></dl>
 <h2>Files</h2>
 <dl COMPACT>
-<dt>LINTIAN_INCLUDE_DIR/data</p>
-<dd>The files loaded by this module must be located in this directory. Relative paths containing a <tt>&quot;/&quot;</tt> are permitted, so files may be organized in subdirectories in this directory. </p>
+<dt>LINTIAN_INCLUDE_DIR/data</dt>
+<dd>The files loaded by this module must be located in this directory. Relative paths containing a <tt>&quot;/&quot;</tt> are permitted, so files may be organized in subdirectories in this directory. </dd>
 <p> Note that lintian supports multiple LINTIAN_INCLUDE_DIRs.</dl>
 <h2>Author</h2>
 <p>Originally written by Russ Allbery &lt;rra [at] debian.org&gt; for Lintian.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1), &lt;<a rel="nofollow" href="https://lintian.debian.org/manual/section-2.6.html">https://lintian.debian.org/manual/section-2.6.html</a>&gt;</p>
+</p>

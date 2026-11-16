@@ -96,77 +96,77 @@ description: "sc::IntMolecularCoor –"
 <h3>sc::IntMolecularCoor::IntMolecularCoor (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p> The <code>KeyVal</code> constructor. .IP &quot;variable&quot; 1c Gives a <code>SetIntCoor</code> object that specifies the internal coordinates that can be varied. If this is not given, the variable coordinates will be generated. </p>
 <dl COMPACT>
-<dt>followed</p>
-<dd> Gives a <code>IntCoor</code> object that specifies a coordinate to used as the first coordinate in the variable coordinate list. The remaining coordinates will be automatically generated. The default is no followed coordinate. This option is usually used to set the initial search direction for a transition state optimization, where it is used in conjunction with the mode_following keyword read by the <code>EFCOpt</code> class.</dl>
+<dt>followed</dt>
+<dd> Gives a <code>IntCoor</code> object that specifies a coordinate to used as the first coordinate in the variable coordinate list. The remaining coordinates will be automatically generated. The default is no followed coordinate. This option is usually used to set the initial search direction for a transition state optimization, where it is used in conjunction with the mode_following keyword read by the <code>EFCOpt</code> class.</dd></dl>
 <dl COMPACT>
-<dt>fixed</p>
-<dd> Gives a <code>SetIntCoor</code> object that specifies the internal coordinates that will be fixed. The default is no fixed coordinates.</dl>
+<dt>fixed</dt>
+<dd> Gives a <code>SetIntCoor</code> object that specifies the internal coordinates that will be fixed. The default is no fixed coordinates.</dd></dl>
 <dl COMPACT>
-<dt>watched</p>
-<dd> Gives a <code>SetIntCoor</code> object that specifies internal coordinates that will be printed out whenever the coordinates are changed. The default is none.</dl>
+<dt>watched</dt>
+<dd> Gives a <code>SetIntCoor</code> object that specifies internal coordinates that will be printed out whenever the coordinates are changed. The default is none.</dd></dl>
 <dl COMPACT>
-<dt>have_fixed_values</p>
-<dd> If true, then values for the fixed coordinates must be given in fixed and an attempt will be made to displace the initial geometry to the given fixed values. The default is false.</dl>
+<dt>have_fixed_values</dt>
+<dd> If true, then values for the fixed coordinates must be given in fixed and an attempt will be made to displace the initial geometry to the given fixed values. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>extra_bonds</p>
-<dd> This is only read if the generator keyword is not given. It is a vector of atom numbers, where elements $(i-1) imes 2 + 1$ and $i imes 2$ specify the atoms which are bound in extra bond $i$. The extra_bonds keyword should only be needed for weakly interacting fragments, otherwise all the needed bonds will be found.</dl>
+<dt>extra_bonds</dt>
+<dd> This is only read if the generator keyword is not given. It is a vector of atom numbers, where elements $(i-1) imes 2 + 1$ and $i imes 2$ specify the atoms which are bound in extra bond $i$. The extra_bonds keyword should only be needed for weakly interacting fragments, otherwise all the needed bonds will be found.</dd></dl>
 <dl COMPACT>
-<dt>generator</p>
-<dd> Specifies an <code>IntCoorGen</code> object that creates simple, redundant internal coordinates. If this keyword is not given, then a vector giving extra bonds to be added is read from extra_bonds and this is used to create an <code>IntCoorGen</code> object.</dl>
+<dt>generator</dt>
+<dd> Specifies an <code>IntCoorGen</code> object that creates simple, redundant internal coordinates. If this keyword is not given, then a vector giving extra bonds to be added is read from extra_bonds and this is used to create an <code>IntCoorGen</code> object.</dd></dl>
 <dl COMPACT>
-<dt>decouple_bonds</p>
-<dd> Automatically generated internal coordinates are linear combinations of possibly any mix of simple internal coordinates. If decouple_bonds is true, an attempt will be made to form some of the internal coordinates from just stretch simple coordinates. The default is false.</dl>
+<dt>decouple_bonds</dt>
+<dd> Automatically generated internal coordinates are linear combinations of possibly any mix of simple internal coordinates. If decouple_bonds is true, an attempt will be made to form some of the internal coordinates from just stretch simple coordinates. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>decouple_bends</p>
-<dd> This is like decouple_bonds except it applies to the bend-like coordinates. The default is false.</dl>
+<dt>decouple_bends</dt>
+<dd> This is like decouple_bonds except it applies to the bend-like coordinates. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>max_update_disp</p>
-<dd> The maximum displacement to be used in the displacement to fixed internal coordinates values. Larger displacements will be broken into several smaller displacements and new coordinates will be formed for each of these displacments. This is only used when fixed and have_fixed_values are given. The default is 0.5.</dl>
+<dt>max_update_disp</dt>
+<dd> The maximum displacement to be used in the displacement to fixed internal coordinates values. Larger displacements will be broken into several smaller displacements and new coordinates will be formed for each of these displacments. This is only used when fixed and have_fixed_values are given. The default is 0.5.</dd></dl>
 <dl COMPACT>
-<dt>max_update_steps</p>
-<dd> The maximum number of steps permitted to convert internal coordinate displacements to cartesian coordinate displacements. The default is 100.</dl>
+<dt>max_update_steps</dt>
+<dd> The maximum number of steps permitted to convert internal coordinate displacements to cartesian coordinate displacements. The default is 100.</dd></dl>
 <dl COMPACT>
-<dt>update_bmat</p>
-<dd> Displacements in internal coordinates are converted to a cartesian displacements iteratively. If there are large changes in the cartesian coordinates during conversion, then recompute the $B$ matrix, which is using to do the conversion. The default is false.</dl>
+<dt>update_bmat</dt>
+<dd> Displacements in internal coordinates are converted to a cartesian displacements iteratively. If there are large changes in the cartesian coordinates during conversion, then recompute the $B$ matrix, which is using to do the conversion. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>only_totally_symmetric</p>
-<dd> If a simple test reveals that an internal coordinate is not totally symmetric, then it will not be added to the internal coordinate list. The default is true.</dl>
+<dt>only_totally_symmetric</dt>
+<dd> If a simple test reveals that an internal coordinate is not totally symmetric, then it will not be added to the internal coordinate list. The default is true.</dd></dl>
 <dl COMPACT>
-<dt>simple_tolerance</p>
-<dd> The internal coordinates are formed as linear combinations of simple, redundant internal coordinates. Coordinates with coefficients smaller then simple_tolerance will be omitted. The default is 1.0e-3.</dl>
+<dt>simple_tolerance</dt>
+<dd> The internal coordinates are formed as linear combinations of simple, redundant internal coordinates. Coordinates with coefficients smaller then simple_tolerance will be omitted. The default is 1.0e-3.</dd></dl>
 <dl COMPACT>
-<dt>cartesian_tolerance</p>
-<dd> The tolerance for conversion of internal coordinate displacements to cartesian displacements. The default is 1.0e-12.</dl>
+<dt>cartesian_tolerance</dt>
+<dd> The tolerance for conversion of internal coordinate displacements to cartesian displacements. The default is 1.0e-12.</dd></dl>
 <dl COMPACT>
-<dt>form:print_simple</p>
-<dd> Print the simple internal coordinates. The default is false.</dl>
+<dt>form:print_simple</dt>
+<dd> Print the simple internal coordinates. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>form:print_variable</p>
-<dd> Print the variable internal coordinates. The default is false.</dl>
+<dt>form:print_variable</dt>
+<dd> Print the variable internal coordinates. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>form:print_constant</p>
-<dd> Print the constant internal coordinates. The default is false.</dl>
+<dt>form:print_constant</dt>
+<dd> Print the constant internal coordinates. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>form:print_molecule</p>
-<dd> Print the molecule when forming coordinates. The default is false.</dl>
+<dt>form:print_molecule</dt>
+<dd> Print the molecule when forming coordinates. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>scale_bonds</p>
-<dd> Obsolete. The default value is 1.0.</dl>
+<dt>scale_bonds</dt>
+<dd> Obsolete. The default value is 1.0.</dd></dl>
 <dl COMPACT>
-<dt>scale_bends</p>
-<dd> Obsolete. The default value is 1.0.</dl>
+<dt>scale_bends</dt>
+<dd> Obsolete. The default value is 1.0.</dd></dl>
 <dl COMPACT>
-<dt>scale_tors</p>
-<dd> Obsolete. The default value is 1.0.</dl>
+<dt>scale_tors</dt>
+<dd> Obsolete. The default value is 1.0.</dd></dl>
 <dl COMPACT>
-<dt>scale_outs</p>
-<dd> Obsolete. The default value is 1.0.</dl>
+<dt>scale_outs</dt>
+<dd> Obsolete. The default value is 1.0.</dd></dl>
 <dl COMPACT>
-<dt>symmetry_tolerance</p>
-<dd> Obsolete. The default is 1.0e-5.</dl>
+<dt>symmetry_tolerance</dt>
+<dd> Obsolete. The default is 1.0e-5.</dd></dl>
 <dl COMPACT>
-<dt>coordinate_tolerance</p>
-<dd> Obsolete. The default is 1.0e-7.</dl>
+<dt>coordinate_tolerance</dt>
+<dd> Obsolete. The default is 1.0e-7.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual int sc::IntMolecularCoor::all_to_cartesian (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCVector</code> &amp; internal) [virtual]</h3>
 <p> Like to_cartesians(), except all internal coordinates are considered, not just the variable ones.</p>

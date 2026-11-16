@@ -11,20 +11,14 @@ std::remove_cv,std::remove_const,std::remove_volatile - std::remove_cv,std::remo
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct remove_cv;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct remove_const;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct remove_volatile;</code></pre> 
 Provides the member typedef type which is the same as T, except that its topmost cv-qualifiers are removed. 
 1) removes the topmost const, the topmost volatile, or both, if present. 
@@ -64,7 +58,6 @@ using remove_volatile_t = typename remove_volatile&lt;T&gt;::type;
 
 Removing const/volatile from const volatile int * does not modify the type, because the pointer itself is neither const nor volatile. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
 {

@@ -15,7 +15,7 @@ description: "sane-sp15c – SANE backend for Fujitsu ScanPartner 15C flatbed sc
 <pre>Vendor: Model: Rev:
 -------- ---------------- -----
 FCPA ScanPartner 15C 1.01</pre>
-</dl>
+</dd></dl>
 <p> The ScanPartner 15C driver supports lineart (1-bit), halftone (1-bit), grayscale (4-bit and 8-bit), and color (3 x 8-bit) scanning. Other scanners in these families may work. The ScanPartner 15C seems to be a repackaging of the ScanPartner 600C. People are encouraged to try these driver with the other scanners and to contact the author with test results. </p>
 <h2>Configuration</h2>
 <p>A modest effort has been made to expose the standard options to the API. This allows frontends such as <code>xscanimage</code>(1) to set scanning region, resolution, bit-depth (and color), and enable the automatic document feeder.</p>

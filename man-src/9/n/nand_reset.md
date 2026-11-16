@@ -14,14 +14,14 @@ description: "nand_reset – Reset and initialize a NAND device"
 <p><i>chip</i></p>
 <dl>
 <dd>
-<dd>The NAND chip</dl>
+</dd><dd>The NAND chip</dd></dl>
 <p> <i>chipnr</i></p>
 <dl>
-<dd>Internal die id</dl>
+<dd>Internal die id</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 for success or negative error code otherwise</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

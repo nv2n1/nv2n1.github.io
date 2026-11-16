@@ -10,19 +10,15 @@ description: "random, srandom, initstate, setstate – random number generator"
 <p>random, srandom, initstate, setstate &#8211; random number generator</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 long random(void);
-
 void srandom(unsigned seed);
-
 char *initstate(unsigned seed, char *state, size_t n);
-
 char *setstate(char *state);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>random</code>(), <code>srandom</code>(), <code>initstate</code>(), <code>setstate</code>():</p>
 <dl>
 <dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>random</code>() function uses a nonlinear additive feedback random number generator employing a default table of size 31 long integers to return successive pseudo-random numbers in the range from 0 to 2^31 &#8211; 1. The period of this random number generator is very large, approximately <i>16&nbsp;*&nbsp;((2^31)&nbsp;&#8211; 1)</i>. </p>
 <p> The <code>srandom</code>() function sets its argument as the seed for a new sequence of pseudo-random integers to be returned by <code>random</code>(). These sequences are repeatable by calling <code>srandom</code>() with the same seed value. If no seed value is provided, the <code>random</code>() function is automatically seeded with a value of 1. </p>
@@ -34,10 +30,10 @@ char *setstate(char *state);</code></pre>
 <p> On success, <code>setstate</code>() returns a pointer to the previous state array. On error, it returns NULL, with <i>errno</i> set to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>The <i>state</i> argument given to <code>setstate</code>() was NULL.</p>
-<dt><code>EINVAL</code></p>
-<dd>A state array of less than 8 bytes was specified to <code>initstate</code>().</dl>
+<dt><code>EINVAL</code></dt>
+<dd>The <i>state</i> argument given to <code>setstate</code>() was NULL.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>A state array of less than 8 bytes was specified to <code>initstate</code>().</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

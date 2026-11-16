@@ -11,7 +11,6 @@ description: "wcswidth – determine columns needed for a fixed-size wide-charac
 <h2>Synopsis</h2>
 <pre><code>#define _XOPEN_SOURCE /* See feature_test_macros(7) */
 #include &lt;wchar.h&gt;
-
 int wcswidth(const wchar_t *s, size_t n);</code></pre>
 <h2>Description</h2>
 <p>The <code>wcswidth</code>() function returns the number of columns needed to represent the wide-character string pointed to by <i>s</i>, but at most <i>n</i> wide characters. If a nonprintable wide character occurs among these characters, -1 is returned.</p>

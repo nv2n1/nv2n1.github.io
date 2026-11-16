@@ -31,10 +31,10 @@ description: "tset, reset – terminal initialization"
 &nbsp;.IP&nbsp;&bull;&nbsp;4 if the &#8220;<code>-w</code>&#8221; option is enabled, <code>tset</code> may update the terminal&#8217;s window size.</p>
 <dl>
 <dt>
-<dd> If the window size cannot be obtained from the operating system, but the terminal description (or environment, e.g., <code>LINES</code> and <code>COLUMNS</code> variables specify this), use this to set the operating system&#8217;s notion of the window size.<br />
+</dt><dd> If the window size cannot be obtained from the operating system, but the terminal description (or environment, e.g., <code>LINES</code> and <code>COLUMNS</code> variables specify this), use this to set the operating system&#8217;s notion of the window size.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 if the &#8220;<code>-c</code>&#8221; option is enabled, the backspace, interrupt and line kill characters (among many other things) are set<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 unless the &#8220;<code>-I</code>&#8221; option is enabled, the terminal and tab <i>initialization</i> strings are sent to the standard error output, and <code>tset</code> waits one second (in case a hardware reset was issued).<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Finally, if the erase, interrupt and line kill characters have changed, or are not set to their default values, their values are displayed to the standard error output.</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Finally, if the erase, interrupt and line kill characters have changed, or are not set to their default values, their values are displayed to the standard error output.</dd></dl>
 <h3>reset &#8211; reinitialization</h3>
 <p> When invoked as <code>reset</code>, <code>tset</code> sets the terminal modes to &#8220;sane&#8221; values:<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 sets cooked and echo modes,<br />
@@ -50,30 +50,30 @@ description: "tset, reset – terminal initialization"
 <h2>OPTIONS</h2>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Set control characters and modes.</p>
-<dt><code>-e&nbsp;</code><i>ch</i></p>
-<dd> Set the erase character to <i>ch</i>.</p>
-<dt><code>-I</code></p>
-<dd> Do not send the terminal or tab initialization strings to the terminal.</p>
-<dt><code>-i&nbsp;</code><i>ch</i></p>
-<dd> Set the interrupt character to <i>ch</i>.</p>
-<dt><code>-k&nbsp;</code><i>ch</i></p>
-<dd> Set the line kill character to <i>ch</i>.</p>
-<dt><code>-m&nbsp;</code><i>mapping</i></p>
-<dd> Specify a mapping from a port type to a terminal. See the section <code>TERMINAL TYPE MAPPING</code> for more information.</p>
-<dt><code>-Q</code></p>
-<dd> Do not display any values for the erase, interrupt and line kill characters. Normally <code>tset</code> displays the values for control characters which differ from the system&#8217;s default values.</p>
-<dt><code>-q</code></p>
-<dd> The terminal type is displayed to the standard output, and the terminal is not initialized in any way. The option &#8220;-&#8221; by itself is equivalent but archaic.</p>
-<dt><code>-r</code></p>
-<dd> Print the terminal type to the standard error output.</p>
-<dt><code>-s</code></p>
-<dd> Print the sequence of shell commands to initialize the environment variable <code>TERM</code> to the standard output. See the section <code>SETTING THE ENVIRONMENT</code> for details.</p>
-<dt><code>-V</code></p>
-<dd> reports the version of ncurses which was used in this program, and exits.</p>
-<dt><code>-w</code></p>
-<dd> Resize the window to match the size deduced via <code>setupterm</code>(3X). Normally this has no effect, unless <code>setupterm</code> is not able to detect the window size.</dl>
+<dt><code>-c</code></dt>
+<dd> Set control characters and modes.</dd>
+<dt><code>-e&nbsp;</code><i>ch</i></dt>
+<dd> Set the erase character to <i>ch</i>.</dd>
+<dt><code>-I</code></dt>
+<dd> Do not send the terminal or tab initialization strings to the terminal.</dd>
+<dt><code>-i&nbsp;</code><i>ch</i></dt>
+<dd> Set the interrupt character to <i>ch</i>.</dd>
+<dt><code>-k&nbsp;</code><i>ch</i></dt>
+<dd> Set the line kill character to <i>ch</i>.</dd>
+<dt><code>-m&nbsp;</code><i>mapping</i></dt>
+<dd> Specify a mapping from a port type to a terminal. See the section <code>TERMINAL TYPE MAPPING</code> for more information.</dd>
+<dt><code>-Q</code></dt>
+<dd> Do not display any values for the erase, interrupt and line kill characters. Normally <code>tset</code> displays the values for control characters which differ from the system&#8217;s default values.</dd>
+<dt><code>-q</code></dt>
+<dd> The terminal type is displayed to the standard output, and the terminal is not initialized in any way. The option &#8220;-&#8221; by itself is equivalent but archaic.</dd>
+<dt><code>-r</code></dt>
+<dd> Print the terminal type to the standard error output.</dd>
+<dt><code>-s</code></dt>
+<dd> Print the sequence of shell commands to initialize the environment variable <code>TERM</code> to the standard output. See the section <code>SETTING THE ENVIRONMENT</code> for details.</dd>
+<dt><code>-V</code></dt>
+<dd> reports the version of ncurses which was used in this program, and exits.</dd>
+<dt><code>-w</code></dt>
+<dd> Resize the window to match the size deduced via <code>setupterm</code>(3X). Normally this has no effect, unless <code>setupterm</code> is not able to detect the window size.</dd></dl>
 <p> The arguments for the <code>-e</code>, <code>-i</code>, and <code>-k</code> options may either be entered as actual characters or by using the &#8220;hat&#8221; notation, i.e., control-h may be specified as &#8220;^H&#8221; or &#8220;^h&#8221;. </p>
 <p> If neither <code>-c</code> or <code>-w</code> is given, both options are assumed.</p>
 <h2>SETTING THE ENVIRONMENT</h2>
@@ -113,18 +113,18 @@ description: "tset, reset – terminal initialization"
 <h2>ENVIRONMENT</h2>
 <p> The <code>tset</code> command uses these environment variables:</p>
 <dl>
-<dt>SHELL</p>
-<dd> tells <code>tset</code> whether to initialize <code>TERM</code> using <code>sh</code> or <code>csh</code> syntax.</p>
-<dt>TERM</p>
-<dd> Denotes your terminal type. Each terminal type is distinct, though many are similar.</p>
-<dt>TERMCAP</p>
-<dd> may denote the location of a termcap database. If it is not an absolute pathname, e.g., begins with a &#8220;/&#8221;, <code>tset</code> removes the variable from the environment before looking for the terminal description.</dl>
+<dt>SHELL</dt>
+<dd> tells <code>tset</code> whether to initialize <code>TERM</code> using <code>sh</code> or <code>csh</code> syntax.</dd>
+<dt>TERM</dt>
+<dd> Denotes your terminal type. Each terminal type is distinct, though many are similar.</dd>
+<dt>TERMCAP</dt>
+<dd> may denote the location of a termcap database. If it is not an absolute pathname, e.g., begins with a &#8220;/&#8221;, <code>tset</code> removes the variable from the environment before looking for the terminal description.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/ttys</p>
-<dd> system port name to terminal type mapping database (BSD versions only).</p>
-<dt>/etc/terminfo</p>
-<dd> terminal capability database</dl>
+<dt>/etc/ttys</dt>
+<dd> system port name to terminal type mapping database (BSD versions only).</dd>
+<dt>/etc/terminfo</dt>
+<dd> terminal capability database</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code>curs_terminfo</code>(3X), <code><a href="/docs/linux/man/4-tty/">tty</a></code>(4), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5), <code>ttys</code>(5), <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>

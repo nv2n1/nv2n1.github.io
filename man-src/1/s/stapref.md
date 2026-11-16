@@ -17,7 +17,7 @@ description: "stapref – systemtap language reference"
 <p> Keywords </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 &amp;bull;
 break
@@ -51,11 +51,11 @@ try / catch
           &amp;bull;
 while
 </code></pre>
-</dl>
+</dd></dl>
 <p> Data Types and Operators </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Integers<br />
     &amp;bull;<br />
 var1 = 5 &amp; bull;<br />
@@ -94,11 +94,11 @@ array[index](array read / write) &amp; bull;<br />
     Aggregation<br />
     operator&amp; bull;<br />
 var &lt; &lt; &lt; value
-</dl>
+</dd></dl>
 <p> Statements </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Jump Statements<br />
     &amp;bull;<br />
 continue<br />
@@ -109,10 +109,10 @@ next<br />
     &amp;bull;<br />
 return expression &amp; bull;<br />
 try statement catch (message)
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Selection Statements<br />
     &amp;bull;<br />
 if (expression)<br />
@@ -120,10 +120,10 @@ if (expression)<br />
         &amp;bull;<br />
 else<br />
     statement
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Iteration Statements<br />
     &amp;bull;<br />
 foreach (variable in array)<br />
@@ -137,10 +137,10 @@ for (expression; expression; expression)<br />
         &amp;bull;<br />
 while (expression)<br />
 statement
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Declaration Statements<br />
     &amp;bull;<br />
 function name(variable<br />
@@ -158,21 +158,21 @@ probe label = probepoint<br />
 {<br />
     statement<br />
 }
-</dl>
+</dd></dl>
 <p> Lexical Structure </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Comments
 &bull; <code>#</code> ... comment
 &bull; <code>//</code> ... comment
 &bull; <code>/*</code> ... comment ... <code>*/</code>
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Preprocessor<br />
     &amp;bull;<br />
 % (expression % ? true_tokens % : false_tokens %) &amp; bull;<br />
@@ -180,11 +180,11 @@ Preprocessor<br />
 {<br />
     statement %<br />
 }
-</dl>
+</dd></dl>
 <p> Builtin Functions </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Aggregation Builtin Functions<br />
     &amp;bull;<br />
 @avg(variable) &amp; bull;<br />
@@ -194,10 +194,10 @@ Aggregation Builtin Functions<br />
 @max(variable) &amp; bull;<br />
 @min(variable) &amp; bull;<br />
 @sum(variable)
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Output Builtin Functions<br />
     &amp;bull;<br />
 print(variable) &amp; bull;<br />
@@ -216,19 +216,19 @@ println() &amp; bull;<br />
 sprint : string(variable) &amp; bull;<br />
 sprintf : string(format<br />
                  : string, variable, &#8230;)
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Variable Access Builtin Functions<br />
     &amp;bull;<br />
 @cast(variable, &#8220;type_name&#8221;[, &#8220;module&#8221;]) &amp; bull;<br />
 @defined(variable)
-</dl>
+</dd></dl>
 <p> Probepoints </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 Some of the more commonly used probepoints<br />
     &amp;bull;<br />
 kernel.function(PATTERN) kernel.function(PATTERN).call<br />
@@ -294,11 +294,11 @@ python2.module(&#8220;MODULENAME&#8221;).function(&#8220;PATTERN&#8221;) &amp; b
 python2.module(&#8220;MODULENAME&#8221;).function(&#8220;PATTERN&#8221;).return &amp;bull;<br />
 python3.module(&#8220;MODULENAME&#8221;).function(&#8220;PATTERN&#8221;) &amp; bull;<br />
 python3.module(&#8220;MODULENAME&#8221;).function(&#8220;PATTERN&#8221;).return
-</dl>
+</dd></dl>
 <p> Tapset Functions </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Some of the more commonly used tapset functions
     &amp;bull;
@@ -369,7 +369,7 @@ user_long : long(addr
 user_string : string(addr
                      : long)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <i><a href="//www.systutorials.com/docs/linux/man/1-stap/">stap</a></i>(1)

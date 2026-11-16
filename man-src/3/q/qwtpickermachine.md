@@ -36,23 +36,23 @@ description: "QwtPickerMachine –"
 <p> <code>QwtPickerMachine</code> accepts key and mouse events and translates them into selection commands. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dl>
+<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPickerMachine::SelectionType</code></h3>
 <p>Type of a selection. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>selectionType()</code></dl>
+<dd><code>selectionType()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoSelection </i></p>
-<dd>The state machine not usable for any type of selection.</p>
-<dt><i>PointSelection </i></p>
-<dd>The state machine is for selecting a single point.</p>
-<dt><i>RectSelection </i></p>
-<dd>The state machine is for selecting a rectangle (2 points).</p>
-<dt><i>PolygonSelection </i></p>
-<dd>The state machine is for selecting a polygon (many points). </p>
+<dt><i>NoSelection </i></dt>
+<dd>The state machine not usable for any type of selection.</dd>
+<dt><i>PointSelection </i></dt>
+<dd>The state machine is for selecting a single point.</dd>
+<dt><i>RectSelection </i></dt>
+<dd>The state machine is for selecting a rectangle (2 points).</dd>
+<dt><i>PolygonSelection </i></dt>
+<dd>The state machine is for selecting a polygon (many points). </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

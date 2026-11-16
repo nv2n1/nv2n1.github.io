@@ -12,21 +12,18 @@ rdma_join_multicast - Joins a multicast group.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_join_multicast
-
     (struct rdma_cm_id *id,
-
      struct sockaddr *addr,
-
      void *context);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>Communication identifier associated with the request.
-<dt>addr
-<dd>Multicast address identifying the group to join.
-<dt>context
-<dd>User-defined context associated with the join request.</dl>
+</dt><dd>Communication identifier associated with the request.
+</dd><dt>addr
+</dt><dd>Multicast address identifying the group to join.
+</dd><dt>context
+</dt><dd>User-defined context associated with the join request.</dd></dl>
 
 <h2>Description</h2>
 

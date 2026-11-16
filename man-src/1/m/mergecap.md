@@ -20,22 +20,22 @@ description: "mergecap – Merges two or more capture files into one"
 <p> The output file frame encapsulation type is set to the type of the input files if all input files have the same type. If not all of the input files have the same frame encapsulation type, the output file type is set to <font SIZE="-1">WTAP_ENCAP_PER_PACKET. </font> Note that some capture file formats, most notably <code>pcap</code>, do not currently support <font SIZE="-1">WTAP_ENCAP_PER_PACKET.</font> This combination will cause the output file creation to fail.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-a</p>
-<dd> Causes the frame timestamps to be ignored, writing all packets from the first input file followed by all packets from the second input file. By default, when <code>-a</code> is not specified, the contents of the input files are merged in chronological order based on each frame&#8217;s timestamp. </p>
+<dt>-a</dt>
+<dd> Causes the frame timestamps to be ignored, writing all packets from the first input file followed by all packets from the second input file. By default, when <code>-a</code> is not specified, the contents of the input files are merged in chronological order based on each frame&#8217;s timestamp. </dd>
 <p> Note: when merging, <code>mergecap</code> assumes that packets within a capture file are already in chronological order.</p>
-<dt>-F &lt;file format&gt;</p>
-<dd> Sets the file format of the output capture file. <code>Mergecap</code> can write the file in several formats; <code>mergecap -F</code> provides a list of the available output formats. The default is to use the file format of the first input file.</p>
-<dt>-h</p>
-<dd> Prints the version and options and exits.</p>
-<dt>-s &lt;snaplen&gt;</p>
-<dd> Sets the snapshot length to use when writing the data. If the <code>-s</code> flag is used to specify a snapshot length, frames in the input file with more captured data than the specified snapshot length will have only the amount of data specified by the snapshot length written to the output file. This may be useful if the program that is to read the output file cannot handle packets larger than a certain size (for example, the versions of snoop in Solaris 2.5.1 and Solaris 2.6 appear to reject Ethernet frames larger than the standard Ethernet <font SIZE="-1">MTU,</font> making them incapable of handling gigabit Ethernet captures if jumbo frames were used).</p>
-<dt>-T &lt;encapsulation type&gt;</p>
-<dd> Sets the packet encapsulation type of the output capture file. If the <code>-T</code> flag is used to specify a frame encapsulation type, the encapsulation type of the output capture file will be forced to the specified type, rather than being the type appropriate to the encapsulation type of the input capture files. </p>
+<dt>-F &lt;file format&gt;</dt>
+<dd> Sets the file format of the output capture file. <code>Mergecap</code> can write the file in several formats; <code>mergecap -F</code> provides a list of the available output formats. The default is to use the file format of the first input file.</dd>
+<dt>-h</dt>
+<dd> Prints the version and options and exits.</dd>
+<dt>-s &lt;snaplen&gt;</dt>
+<dd> Sets the snapshot length to use when writing the data. If the <code>-s</code> flag is used to specify a snapshot length, frames in the input file with more captured data than the specified snapshot length will have only the amount of data specified by the snapshot length written to the output file. This may be useful if the program that is to read the output file cannot handle packets larger than a certain size (for example, the versions of snoop in Solaris 2.5.1 and Solaris 2.6 appear to reject Ethernet frames larger than the standard Ethernet <font SIZE="-1">MTU,</font> making them incapable of handling gigabit Ethernet captures if jumbo frames were used).</dd>
+<dt>-T &lt;encapsulation type&gt;</dt>
+<dd> Sets the packet encapsulation type of the output capture file. If the <code>-T</code> flag is used to specify a frame encapsulation type, the encapsulation type of the output capture file will be forced to the specified type, rather than being the type appropriate to the encapsulation type of the input capture files. </dd>
 <p> Note that this merely forces the encapsulation type of the output file to be the specified type; the packet headers of the packets will not be translated from the encapsulation type of the input capture file to the specified encapsulation type (for example, it will not translate an Ethernet capture to an <font SIZE="-1">FDDI</font> capture if an Ethernet capture is read and &#8216;<code>-T fddi</code>&#8216; is specified).</p>
-<dt>-v</p>
-<dd> Causes <code>mergecap</code> to print a number of messages while it&#8217;s working.</p>
-<dt>-w &lt;outfile&gt;|-</p>
-<dd> Sets the output filename. If the name is &#8216;<code>&#8211;</code>&#8216;, stdout will be used. This setting is mandatory.</dl>
+<dt>-v</dt>
+<dd> Causes <code>mergecap</code> to print a number of messages while it&#8217;s working.</dd>
+<dt>-w &lt;outfile&gt;|-</dt>
+<dd> Sets the output filename. If the name is &#8216;<code>&#8211;</code>&#8216;, stdout will be used. This setting is mandatory.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To merge two capture files together, 100 seconds apart use: </p>
 <pre>

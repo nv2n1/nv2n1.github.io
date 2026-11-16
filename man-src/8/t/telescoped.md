@@ -13,10 +13,10 @@ description: "telescoped – control the telescope, the server"
 <h2>Description</h2>
 <p>The options are as follows:</p>
 <dl>
-<dt><code>-longitude</code></p>
-<dd>Longitude of the mount&#8217;s site in degress. Positive on east.</p>
-<dt><code>-latitude</code></p>
-<dd>Latitude of the mount&#8217;s site in degress. Positive on north. <code>-c</code> Location of config file. Usually: nightview.conf.</dl>
+<dt><code>-longitude</code></dt>
+<dd>Longitude of the mount&#8217;s site in degress. Positive on east.</dd>
+<dt><code>-latitude</code></dt>
+<dd>Latitude of the mount&#8217;s site in degress. Positive on north. <code>-c</code> Location of config file. Usually: nightview.conf.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p><a rel="nofollow" href="http://integral.sci.muni.cz">http://integral.sci.muni.cz</a></p>
 <h2>Bugs</h2>

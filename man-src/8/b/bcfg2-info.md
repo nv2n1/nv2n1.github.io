@@ -15,10 +15,10 @@ description: "bcfg2-info – Creates a local version of the bcfg2 server core fo
 <h2>Options</h2>
 <p><code>-C &lt;config file&gt;</code></p>
 <dl>
-<dd>Specify an alternative location for bcfg2.conf. (Default /etc/bcfg2.conf)</dl>
+<dd>Specify an alternative location for bcfg2.conf. (Default /etc/bcfg2.conf)</dd></dl>
 <p> <code>-h</code></p>
 <dl>
-<dd>Give a bit of help about the command line arguments and options. After this bcfg2-info exits.</dl>
+<dd>Give a bit of help about the command line arguments and options. After this bcfg2-info exits.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-bcfg2/">bcfg2</a>(1),</code> <code><a href="/docs/linux/man/8-bcfg2-server/">bcfg2-server</a>(8)</code></p>
 <h2>Bugs</h2>

@@ -15,26 +15,26 @@ description: "bcopy – Bacula’s ‘Copy from tape’"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-?</code></p>
-<dd>Show version and usage of program.</p>
-<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></p>
-<dd>Specify a bootstrap file.</p>
-<dt><code>-c&nbsp;<wbr></code><i>config</i></p>
-<dd>Specify configuration file.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>Set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd>Print timestamp in debug output.</p>
-<dt><code>-i&nbsp;<wbr></code><i>input</i></p>
-<dd>Specify input Volume names (separated by &#8216;|&#8217;)</p>
-<dt><code>-o&nbsp;<wbr></code><i>output</i></p>
-<dd>Specify output Volume names (separated by &#8216;|&#8217;)</p>
-<dt><code>-p</code></p>
-<dd>Proceed in spite of I/O errors.</p>
-<dt><code>-w&nbsp;<wbr></code><i>directory</i></p>
-<dd>Specify working directory (default <i>/tmp</i>).</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode.</dl>
+<dt><code>-?</code></dt>
+<dd>Show version and usage of program.</dd>
+<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></dt>
+<dd>Specify a bootstrap file.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>config</i></dt>
+<dd>Specify configuration file.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>Set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd>Print timestamp in debug output.</dd>
+<dt><code>-i&nbsp;<wbr></code><i>input</i></dt>
+<dd>Specify input Volume names (separated by &#8216;|&#8217;)</dd>
+<dt><code>-o&nbsp;<wbr></code><i>output</i></dt>
+<dd>Specify output Volume names (separated by &#8216;|&#8217;)</dd>
+<dt><code>-p</code></dt>
+<dd>Proceed in spite of I/O errors.</dd>
+<dt><code>-w&nbsp;<wbr></code><i>directory</i></dt>
+<dd>Specify working directory (default <i>/tmp</i>).</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode.</dd></dl>
 <h2>See Also</h2>
 <p><code>bls</code>(1), <code>bextract</code>(1).</p>
 <h2>Author</h2>

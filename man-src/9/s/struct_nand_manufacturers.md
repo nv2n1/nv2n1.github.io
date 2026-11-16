@@ -16,12 +16,12 @@ description: "struct_nand_manufacturers – NAND Flash Manufacturer ID Structure
 <h2>Members</h2>
 <p>id</p>
 <dl>
-<dd>manufacturer ID code of device.</dl>
+<dd>manufacturer ID code of device.</dd></dl>
 <p> name</p>
 <dl>
-<dd>Manufacturer name</dl>
+<dd>Manufacturer name</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

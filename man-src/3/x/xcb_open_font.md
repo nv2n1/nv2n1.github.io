@@ -11,22 +11,20 @@ xcb_open_font - opens a font
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_open_font(xcb_connection_t *conn, xcb_font_t fid, uint16_t name_len, const char *name);</code></pre>
 
 <h2>Request Arguments</h2>
 
 <dl><dt><i>conn</i>
-<dd>The XCB connection to X11.
-<dt><i>fid</i>
-<dd>The ID with which you will refer to the font, created by <i>xcb_generate_id</i>.
-<dt><i>name_len</i>
-<dd>Length (in bytes) of <i>name</i>.
-<dt><i>name</i>
-<dd>A pattern describing an X core font.</dl>
+</dt><dd>The XCB connection to X11.
+</dd><dt><i>fid</i>
+</dt><dd>The ID with which you will refer to the font, created by <i>xcb_generate_id</i>.
+</dd><dt><i>name_len</i>
+</dt><dd>Length (in bytes) of <i>name</i>.
+</dd><dt><i>name</i>
+</dt><dd>A pattern describing an X core font.</dd></dl>
 
 <h2>Description</h2>
 
@@ -43,7 +41,7 @@ Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the e
 <h2>Errors</h2>
 
 <dl><dt><i>xcb_name_error_t</i>
-<dd>No font matches the given <i>name</i>.</dl>
+</dt><dd>No font matches the given <i>name</i>.</dd></dl>
 
 <h2>See Also</h2>
 

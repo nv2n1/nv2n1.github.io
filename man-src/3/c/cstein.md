@@ -19,7 +19,7 @@ description: "cstein.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CSTEIN computes the eigenvectors of a real symmetric tridiagonal
  matrix T corresponding to specified eigenvalues, using inverse
@@ -31,11 +31,11 @@ description: "cstein.f –"
  transformation to the eigenvectors of a complex Hermitian matrix
  which was reduced to tridiagonal form.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The order of the matrix.  N &gt;= 0.
@@ -126,7 +126,7 @@ description: "cstein.f –"
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   MAXITS  INTEGER, default = 5
           The maximum number of iterations performed.
@@ -134,18 +134,18 @@ description: "cstein.f –"
           The number of iterations performed after norm growth
           criterion is satisfied, should be at least 1.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 182 of file cstein.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

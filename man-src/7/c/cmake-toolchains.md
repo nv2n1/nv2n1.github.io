@@ -98,60 +98,60 @@ set(CMAKE_SYSTEM_VERSION 8.1)</pre>
 <p> For Visual Studio Generators, CMake expects <i>NVIDIA Nsight Tegra Visual Studio Edition</i> or the <i>Visual Studio tools for Android</i> to be installed. See those sections for further configuration details. </p>
 <p> For Makefile Generators and the <code>Ninja</code> generator, CMake expects one of these environments:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>NDK</i></p>
-<dt>&bull;</p>
-<dd><i>Standalone Toolchain</i> </p>
+<dt>&bull;</dt>
+<dd><i>NDK</i></dd>
+<dt>&bull;</dt>
+<dd><i>Standalone Toolchain</i> </dd>
 <p> CMake uses the following steps to select one of the environments:</p>
-<dt>&bull;</p>
-<dd>If the <code>CMAKE_ANDROID_NDK</code> variable is set, the NDK at the specified location will be used.</p>
-<dt>&bull;</p>
-<dd>Else, if the <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code> variable is set, the Standalone Toolchain at the specified location will be used.</p>
-<dt>&bull;</p>
-<dd>Else, if the <code>CMAKE_SYSROOT</code> variable is set to a directory of the form <code>&lt;ndk&gt;/platforms/android-&lt;api&gt;/arch-&lt;arch&gt;</code>, the <code>&lt;ndk&gt;</code> part will be used as the value of <code>CMAKE_ANDROID_NDK</code> and the NDK will be used.</p>
-<dt>&bull;</p>
-<dd>Else, if the <code>CMAKE_SYSROOT</code> variable is set to a directory of the form <code>&lt;standalone-toolchain&gt;/sysroot</code>, the <code>&lt;standalone-toolchain&gt;</code> part will be used as the value of <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code> and the Standalone Toolchain will be used.</p>
-<dt>&bull;</p>
-<dd>Else, if a cmake variable <code>ANDROID_NDK</code> is set it will be used as the value of <code>CMAKE_ANDROID_NDK</code>, and the NDK will be used.</p>
-<dt>&bull;</p>
-<dd>Else, if a cmake variable <code>ANDROID_STANDALONE_TOOLCHAIN</code> is set, it will be used as the value of <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code>, and the Standalone Toolchain will be used.</p>
-<dt>&bull;</p>
-<dd>Else, if an environment variable <code>ANDROID_NDK_ROOT</code> or <code>ANDROID_NDK</code> is set, it will be used as the value of <code>CMAKE_ANDROID_NDK</code>, and the NDK will be used.</p>
-<dt>&bull;</p>
-<dd>Else, if an environment variable <code>ANDROID_STANDALONE_TOOLCHAIN</code> is set then it will be used as the value of <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code>, and the Standalone Toolchain will be used.</p>
-<dt>&bull;</p>
-<dd>Else, an error diagnostic will be issued that neither the NDK or Standalone Toolchain can be found. </p>
+<dt>&bull;</dt>
+<dd>If the <code>CMAKE_ANDROID_NDK</code> variable is set, the NDK at the specified location will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, if the <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code> variable is set, the Standalone Toolchain at the specified location will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, if the <code>CMAKE_SYSROOT</code> variable is set to a directory of the form <code>&lt;ndk&gt;/platforms/android-&lt;api&gt;/arch-&lt;arch&gt;</code>, the <code>&lt;ndk&gt;</code> part will be used as the value of <code>CMAKE_ANDROID_NDK</code> and the NDK will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, if the <code>CMAKE_SYSROOT</code> variable is set to a directory of the form <code>&lt;standalone-toolchain&gt;/sysroot</code>, the <code>&lt;standalone-toolchain&gt;</code> part will be used as the value of <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code> and the Standalone Toolchain will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, if a cmake variable <code>ANDROID_NDK</code> is set it will be used as the value of <code>CMAKE_ANDROID_NDK</code>, and the NDK will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, if a cmake variable <code>ANDROID_STANDALONE_TOOLCHAIN</code> is set, it will be used as the value of <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code>, and the Standalone Toolchain will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, if an environment variable <code>ANDROID_NDK_ROOT</code> or <code>ANDROID_NDK</code> is set, it will be used as the value of <code>CMAKE_ANDROID_NDK</code>, and the NDK will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, if an environment variable <code>ANDROID_STANDALONE_TOOLCHAIN</code> is set then it will be used as the value of <code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code>, and the Standalone Toolchain will be used.</dd>
+<dt>&bull;</dt>
+<dd>Else, an error diagnostic will be issued that neither the NDK or Standalone Toolchain can be found. </dd>
 <p> New in version 3.20: If an Android NDK is selected, its version number is reported in the <code>CMAKE_ANDROID_NDK_VERSION</code> variable. </p>
 </dl>
 <h3>Cross Compiling for Android with the NDK</h3>
 <p>A toolchain file may configure Makefile Generators, Ninja Generators, or Visual Studio Generators to target Android for cross-compiling. </p>
 <p> Configure use of an Android NDK with the following variables:</p>
 <dl>
-<dt><code>CMAKE_SYSTEM_NAME</code></p>
-<dd>Set to <code>Android</code>. Must be specified to enable cross compiling for Android.</p>
-<dt><code>CMAKE_SYSTEM_VERSION</code></p>
-<dd>Set to the Android API level. If not specified, the value is determined as follows:</p>
-<dt>&bull;</p>
-<dd>If the <code>CMAKE_ANDROID_API</code> variable is set, its value is used as the API level.</p>
-<dt>&bull;</p>
-<dd>If the <code>CMAKE_SYSROOT</code> variable is set, the API level is detected from the NDK directory structure containing the sysroot.</p>
-<dt>&bull;</p>
-<dd>Otherwise, the latest API level available in the NDK is used.</p>
-<dt><code>CMAKE_ANDROID_ARCH_ABI</code></p>
-<dd>Set to the Android ABI (architecture). If not specified, this variable will default to the first supported ABI in the list of <code>armeabi</code>, <code>armeabi-v7a</code> and <code>arm64-v8a</code>. The <code>CMAKE_ANDROID_ARCH</code> variable will be computed from <code>CMAKE_ANDROID_ARCH_ABI</code> automatically. Also see the <code>CMAKE_ANDROID_ARM_MODE</code> and <code>CMAKE_ANDROID_ARM_NEON</code> variables.</p>
-<dt><code>CMAKE_ANDROID_NDK</code></p>
-<dd>Set to the absolute path to the Android NDK root directory. If not specified, a default for this variable will be chosen as specified <i>above</i>.</p>
-<dt><code>CMAKE_ANDROID_NDK_DEPRECATED_HEADERS</code></p>
-<dd>Set to a true value to use the deprecated per-api-level headers instead of the unified headers. If not specified, the default will be false unless using a NDK that does not provide unified headers.</p>
-<dt><code>CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION</code></p>
-<dd>On NDK r19 or above, this variable must be unset or set to <code>clang</code>. On NDK r18 or below, set this to the version of the NDK toolchain to be selected as the compiler. If not specified, the default will be the latest available GCC toolchain.</p>
-<dt><code>CMAKE_ANDROID_STL_TYPE</code></p>
-<dd>Set to specify which C++ standard library to use. If not specified, a default will be selected as described in the variable documentation. </p>
+<dt><code>CMAKE_SYSTEM_NAME</code></dt>
+<dd>Set to <code>Android</code>. Must be specified to enable cross compiling for Android.</dd>
+<dt><code>CMAKE_SYSTEM_VERSION</code></dt>
+<dd>Set to the Android API level. If not specified, the value is determined as follows:</dd>
+<dt>&bull;</dt>
+<dd>If the <code>CMAKE_ANDROID_API</code> variable is set, its value is used as the API level.</dd>
+<dt>&bull;</dt>
+<dd>If the <code>CMAKE_SYSROOT</code> variable is set, the API level is detected from the NDK directory structure containing the sysroot.</dd>
+<dt>&bull;</dt>
+<dd>Otherwise, the latest API level available in the NDK is used.</dd>
+<dt><code>CMAKE_ANDROID_ARCH_ABI</code></dt>
+<dd>Set to the Android ABI (architecture). If not specified, this variable will default to the first supported ABI in the list of <code>armeabi</code>, <code>armeabi-v7a</code> and <code>arm64-v8a</code>. The <code>CMAKE_ANDROID_ARCH</code> variable will be computed from <code>CMAKE_ANDROID_ARCH_ABI</code> automatically. Also see the <code>CMAKE_ANDROID_ARM_MODE</code> and <code>CMAKE_ANDROID_ARM_NEON</code> variables.</dd>
+<dt><code>CMAKE_ANDROID_NDK</code></dt>
+<dd>Set to the absolute path to the Android NDK root directory. If not specified, a default for this variable will be chosen as specified <i>above</i>.</dd>
+<dt><code>CMAKE_ANDROID_NDK_DEPRECATED_HEADERS</code></dt>
+<dd>Set to a true value to use the deprecated per-api-level headers instead of the unified headers. If not specified, the default will be false unless using a NDK that does not provide unified headers.</dd>
+<dt><code>CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION</code></dt>
+<dd>On NDK r19 or above, this variable must be unset or set to <code>clang</code>. On NDK r18 or below, set this to the version of the NDK toolchain to be selected as the compiler. If not specified, the default will be the latest available GCC toolchain.</dd>
+<dt><code>CMAKE_ANDROID_STL_TYPE</code></dt>
+<dd>Set to specify which C++ standard library to use. If not specified, a default will be selected as described in the variable documentation. </dd>
 <p> The following variables will be computed and provided automatically:</p>
-<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_PREFIX</code></p>
-<dd>The absolute path prefix to the binutils in the NDK toolchain.</p>
-<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_SUFFIX</code></p>
-<dd>The host platform suffix of the binutils in the NDK toolchain. </p>
+<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_PREFIX</code></dt>
+<dd>The absolute path prefix to the binutils in the NDK toolchain.</dd>
+<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_SUFFIX</code></dt>
+<dd>The host platform suffix of the binutils in the NDK toolchain. </dd>
 <p> For example, a toolchain file might contain: </p>
 <pre>set(CMAKE_SYSTEM_NAME Android)
 set(CMAKE_SYSTEM_VERSION 21) # API level
@@ -170,23 +170,23 @@ set(CMAKE_ANDROID_STL_TYPE gnustl_static)</pre>
 <p>A toolchain file may configure Makefile Generators or the <code>Ninja</code> generator to target Android for cross-compiling using a standalone toolchain. </p>
 <p> Configure use of an Android standalone toolchain with the following variables:</p>
 <dl>
-<dt><code>CMAKE_SYSTEM_NAME</code></p>
-<dd>Set to <code>Android</code>. Must be specified to enable cross compiling for Android.</p>
-<dt><code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code></p>
-<dd>Set to the absolute path to the standalone toolchain root directory. A <code>${CMAKE_ANDROID_STANDALONE_TOOLCHAIN}/sysroot</code> directory must exist. If not specified, a default for this variable will be chosen as specified <i>above</i>.</p>
-<dt><code>CMAKE_ANDROID_ARM_MODE</code></p>
-<dd>When the standalone toolchain targets ARM, optionally set this to <code>ON</code> to target 32-bit ARM instead of 16-bit Thumb. See variable documentation for details.</p>
-<dt><code>CMAKE_ANDROID_ARM_NEON</code></p>
-<dd>When the standalone toolchain targets ARM v7, optionally set thisto <code>ON</code> to target ARM NEON devices. See variable documentation for details. </p>
+<dt><code>CMAKE_SYSTEM_NAME</code></dt>
+<dd>Set to <code>Android</code>. Must be specified to enable cross compiling for Android.</dd>
+<dt><code>CMAKE_ANDROID_STANDALONE_TOOLCHAIN</code></dt>
+<dd>Set to the absolute path to the standalone toolchain root directory. A <code>${CMAKE_ANDROID_STANDALONE_TOOLCHAIN}/sysroot</code> directory must exist. If not specified, a default for this variable will be chosen as specified <i>above</i>.</dd>
+<dt><code>CMAKE_ANDROID_ARM_MODE</code></dt>
+<dd>When the standalone toolchain targets ARM, optionally set this to <code>ON</code> to target 32-bit ARM instead of 16-bit Thumb. See variable documentation for details.</dd>
+<dt><code>CMAKE_ANDROID_ARM_NEON</code></dt>
+<dd>When the standalone toolchain targets ARM v7, optionally set thisto <code>ON</code> to target ARM NEON devices. See variable documentation for details. </dd>
 <p> The following variables will be computed and provided automatically:</p>
-<dt><code>CMAKE_SYSTEM_VERSION</code></p>
-<dd>The Android API level detected from the standalone toolchain.</p>
-<dt><code>CMAKE_ANDROID_ARCH_ABI</code></p>
-<dd>The Android ABI detected from the standalone toolchain.</p>
-<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_PREFIX</code></p>
-<dd>The absolute path prefix to the <code>binutils</code> in the standalone toolchain.</p>
-<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_SUFFIX</code></p>
-<dd>The host platform suffix of the <code>binutils</code> in the standalone toolchain. </p>
+<dt><code>CMAKE_SYSTEM_VERSION</code></dt>
+<dd>The Android API level detected from the standalone toolchain.</dd>
+<dt><code>CMAKE_ANDROID_ARCH_ABI</code></dt>
+<dd>The Android ABI detected from the standalone toolchain.</dd>
+<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_PREFIX</code></dt>
+<dd>The absolute path prefix to the <code>binutils</code> in the standalone toolchain.</dd>
+<dt><code>CMAKE_&lt;LANG&gt;_ANDROID_TOOLCHAIN_SUFFIX</code></dt>
+<dd>The host platform suffix of the <code>binutils</code> in the standalone toolchain. </dd>
 <p> For example, a toolchain file might contain: </p>
 <pre>set(CMAKE_SYSTEM_NAME Android)
 set(CMAKE_ANDROID_STANDALONE_TOOLCHAIN /path/to/android-toolchain)</pre>
@@ -201,40 +201,40 @@ set(CMAKE_ANDROID_STANDALONE_TOOLCHAIN /path/to/android-toolchain)</pre>
 <p>The <code>CMAKE_GENERATOR_TOOLSET</code> may be set to select the Nsight Tegra &quot;Toolchain Version&quot; value. </p>
 <p> See also target properties:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>ANDROID_ANT_ADDITIONAL_OPTIONS</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_API_MIN</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_API</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_ARCH</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_ASSETS_DIRECTORIES</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_GUI</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_JAR_DEPENDENCIES</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_JAR_DIRECTORIES</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_JAVA_SOURCE_DIR</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_NATIVE_LIB_DEPENDENCIES</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_NATIVE_LIB_DIRECTORIES</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_PROCESS_MAX</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_PROGUARD_CONFIG_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_PROGUARD</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_SECURE_PROPS_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_SKIP_ANT_STEP</code></p>
-<dt>&bull;</p>
-<dd><code>ANDROID_STL_TYPE</code></dl>
+<dt>&bull;</dt>
+<dd><code>ANDROID_ANT_ADDITIONAL_OPTIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_API_MIN</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_API</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_ARCH</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_ASSETS_DIRECTORIES</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_GUI</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_JAR_DEPENDENCIES</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_JAR_DIRECTORIES</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_JAVA_SOURCE_DIR</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_NATIVE_LIB_DEPENDENCIES</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_NATIVE_LIB_DIRECTORIES</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_PROCESS_MAX</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_PROGUARD_CONFIG_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_PROGUARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_SECURE_PROPS_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_SKIP_ANT_STEP</code></dd>
+<dt>&bull;</dt>
+<dd><code>ANDROID_STL_TYPE</code></dd></dl>
 <h3>Cross Compiling for iOS, tvOS, or watchOS</h3>
 <p>For cross-compiling to iOS, tvOS, or watchOS, the <code>Xcode</code> generator is recommended. The <code>Unix Makefiles</code> or <code>Ninja</code> generators can also be used, but they require the project to handle more areas like target CPU selection and code signing. </p>
 <p> Any of the three systems can be targeted by setting the <code>CMAKE_SYSTEM_NAME</code> variable to a value from the table below. By default, the latest Device SDK is chosen. As for all Apple platforms, a different SDK (e.g. a simulator) can be selected by setting the <code>CMAKE_OSX_SYSROOT</code> variable, although this should rarely be necessary (see <i>Switching Between Device and Simulator</i> below). A list of available SDKs can be obtained by running <code>xcodebuild -showsdks</code>. <center></p>
@@ -327,11 +327,11 @@ Architectures in the fat file: _install/lib/libfoo.a are: i386 armv7 armv7s x86_
 <pre>$ cmake --build ... -- -sdk iphonesimulator</pre>
 <p>Please note that checks made during configuration were performed against the configure-time SDK and might not hold true for other SDKs. Commands like <code>find_package()</code>, <code>find_library()</code>, etc. store and use details only for the configured SDK/platform, so they can be problematic if wanting to switch between device and simulator builds. You can follow the next rules to make device + simulator configuration work:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Use explicit <code>-l</code> linker flag, e.g. <code>target_link_libraries(foo PUBLIC &quot;-lz&quot;)</code></p>
-<dt>&bull;</p>
-<dd>Use explicit <code>-framework</code> linker flag, e.g. <code>target_link_libraries(foo PUBLIC &quot;-framework CoreFoundation&quot;)</code></p>
-<dt>&bull;</p>
-<dd>Use <code>find_package()</code> only for libraries installed with <code>CMAKE_IOS_INSTALL_COMBINED</code> feature</dl>
+<dt>&bull;</dt>
+<dd>Use explicit <code>-l</code> linker flag, e.g. <code>target_link_libraries(foo PUBLIC &quot;-lz&quot;)</code></dd>
+<dt>&bull;</dt>
+<dd>Use explicit <code>-framework</code> linker flag, e.g. <code>target_link_libraries(foo PUBLIC &quot;-framework CoreFoundation&quot;)</code></dd>
+<dt>&bull;</dt>
+<dd>Use <code>find_package()</code> only for libraries installed with <code>CMAKE_IOS_INSTALL_COMBINED</code> feature</dd></dl>
 <h2>Copyright</h2>
 <p>2000-2022 Kitware, Inc. and Contributors</p>

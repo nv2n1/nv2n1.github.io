@@ -10,17 +10,11 @@ description: "std::experimental::ranges::adjacent_find – std::experimental::ra
 <p>std::experimental::ranges::adjacent_find &#8211; std::experimental::ranges::adjacent_find</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/ranges/algorithm&gt;
-
 template&lt; ForwardIterator I, Sentinel&lt;I&gt; S, class Proj = ranges::identity,
-
 IndirectRelation&lt;projected&lt;I, Proj&gt;&gt; Pred = ranges::equal_to&lt;&gt; &gt;                         (1) (ranges TS)
-
 I adjacent_find(I first, S last, Pred pred = Pred{}, Proj proj = Proj{});
-
 template&lt; ForwardRange R, class Proj = ranges::identity,
-
 IndirectRelation&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred = ranges::equal_to&lt;&gt; &gt;     (2) (ranges TS)
-
 ranges::safe_iterator_t&lt;R&gt; adjacent_find(R&amp;&amp; r, Pred pred = Pred{}, Proj proj = Proj{});</code></pre>
 <p>1) Searches the range [first, last) for two consecutive identical elements. Elements are compared using pred after being projected with proj.<br />
 2) Same as <code>(1)</code>, but uses r as the source range, as if using ranges::begin(r) as first and ranges::end(r) as last.<br />

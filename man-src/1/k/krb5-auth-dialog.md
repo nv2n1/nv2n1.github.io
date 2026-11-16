@@ -15,10 +15,10 @@ description: "krb5-auth-dialog – Kerberos 5 credential checking"
 <p> The krb5-auth-dialog application will periodically check (every 30 seconds) if the user has Kerberos credentials, and if so, if they will expire soon (in less than 30 minutes). If it determines that this is the case, krb5-auth-dialog will attempt to obtain fresh credentials, prompting the user for whatever information is necessary. </p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>&#8211;always</p>
-<dd> By default, krb5-auth-dialog will exit if it finds that the user has no Kerberos credentials. If this option is specified, then it will instead attempt to get credentials. </p>
-<dt>&#8211;auto</p>
-<dd> Overrides the &#8211;always option, restoring the default behavior. </p>
+<dt>&#8211;always</dt>
+<dd> By default, krb5-auth-dialog will exit if it finds that the user has no Kerberos credentials. If this option is specified, then it will instead attempt to get credentials. </dd>
+<dt>&#8211;auto</dt>
+<dd> Overrides the &#8211;always option, restoring the default behavior. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5) </p>

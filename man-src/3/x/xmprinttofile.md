@@ -22,14 +22,14 @@ description: "XmPrintToFile — Retrieves and saves data that would normally be 
 <p> <code>XmPrintToFile</code> first tries to open the given filename for writing and returns <code>False</code> if it can&#8217;t. Else, it uses <code>XpGetDocumentData</code>, giving it a save proc that writes the data received in the file and a finish proc that closes the file or removes it on an unsuccessful termination. It calls <code>finish_proc</code> at that point, passing it the argument received from the Xp layer (<code>status == XPGetDocFinished</code> means the file is valid and was closed, otherwise the file was removed). </p>
 <p> <code>XmPrintToFile</code> is non-blocking; if it returns successfully, it just means the file was opened successfully, not that all the data was received.</p>
 <dl COMPACT>
-<dt><i>dpy</i></p>
-<dd>Print display connection.</p>
-<dt><i>filename</i></p>
-<dd>Name of the file to put the print data in.</p>
-<dt><i>finish_proc</i></p>
-<dd>Called when all the data has been received.</p>
-<dt><i>client_data</i></p>
-<dd>Passed with the <i>finish_proc</i>.</dl>
+<dt><i>dpy</i></dt>
+<dd>Print display connection.</dd>
+<dt><i>filename</i></dt>
+<dd>Name of the file to put the print data in.</dd>
+<dt><i>finish_proc</i></dt>
+<dd>Called when all the data has been received.</dd>
+<dt><i>client_data</i></dt>
+<dd>Passed with the <i>finish_proc</i>.</dd></dl>
 <h2>Return Value</h2>
 <p>Returns <code>False</code> if the filename could not be created or opened for writing, <code>True</code> otherwise.</p>
 <h2>Errors/Warnings</h2>

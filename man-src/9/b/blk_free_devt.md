@@ -14,7 +14,7 @@ description: "blk_free_devt – free a dev_t"
 <p><i>devt</i></p>
 <dl>
 <dd>
-<dd>dev_t to free</dl>
+</dd><dd>dev_t to free</dd></dl>
 <h2>Description</h2>
 <p>Free <i>devt</i> which was allocated using <code>blk_alloc_devt</code>.</p>
 <h2>Context</h2>

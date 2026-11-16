@@ -9,19 +9,19 @@ url: "/docs/linux/man/3-ncl_bivar/"
 Bivar - Provides bivariate interpolation and smooth surface fitting for values given at irregularly distributed points. The resulting interpolating function and its first-order partial derivatives are continuous. The method employed is local, i.e. a change in the data in one area of the plane does not affect the interpolating function except in that local area. Also, the method gives exact results when all points lie in a plane. 
 
 <h2>Synopsis</h2><dl COMPACT><dt>IDBVIP
-<dd>Produces interpolated values at points (XI(I), YI(I)), I=1,...,NIP. This is useful for filling in missing data points on a grid.
-<dt>IDSFFT
-<dd>Performs smooth surface fitting when the projections of the data points in the X-Y plane are irregularly distributed in the plane.
-<dt>IDPLTR
-<dd>Plots the triangulation of the data points.
-<dt>IDGETI
-<dd>Retrieves the integer value of a Bivar parameter.
-<dt>IDGETR
-<dd>Retrieves the real value of a Bivar parameter.
-<dt>IDSETI
-<dd>Provides a new integer value for a Bivar parameter.
-<dt>IDSETR
-<dd>Provides a new real value for a Bivar parameter.</dl><h2>C-Binding Synopsis</h2>c_idbvip, 
+</dt><dd>Produces interpolated values at points (XI(I), YI(I)), I=1,...,NIP. This is useful for filling in missing data points on a grid.
+</dd><dt>IDSFFT
+</dt><dd>Performs smooth surface fitting when the projections of the data points in the X-Y plane are irregularly distributed in the plane.
+</dd><dt>IDPLTR
+</dt><dd>Plots the triangulation of the data points.
+</dd><dt>IDGETI
+</dt><dd>Retrieves the integer value of a Bivar parameter.
+</dd><dt>IDGETR
+</dt><dd>Retrieves the real value of a Bivar parameter.
+</dd><dt>IDSETI
+</dt><dd>Provides a new integer value for a Bivar parameter.
+</dd><dt>IDSETR
+</dt><dd>Provides a new real value for a Bivar parameter.</dd></dl><h2>C-Binding Synopsis</h2>c_idbvip, 
  c_idsfft 
  c_idpltr 
  c_idgeti 

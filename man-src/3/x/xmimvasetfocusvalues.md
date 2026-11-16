@@ -17,8 +17,8 @@ description: "XmImVaSetFocusValues — An input manager function that notifies a
 <p> This routine uses the ANSI C variable-length argument list (varargs) calling conventions. The variable-length argument list consists of groups of arguments each of which contains an attribute followed by the value of the attribute. The last argument in the list must be NULL </p>
 <p> Note that the List and TextField widgets call the <code>XmImVaSetFocusValues</code> function when they receive focus. Therefore, further calls to the <code>XmImVaSetFocusValues</code> function for these widgets are unnecessary.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget registered with the input manager</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget registered with the input manager</dd></dl>
 <p> For more information on variable-length argument lists, see the X Toolkit Intrinsics documentation.</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmimsetfocusvalues/">XmImSetFocusValues</a></code>(3), <code><a href="/docs/linux/man/3-xmimsetvalues/">XmImSetValues</a></code>(3), and <code><a href="/docs/linux/man/3-xmimvasetvalues/">XmImVaSetValues</a></code>(3).</p>

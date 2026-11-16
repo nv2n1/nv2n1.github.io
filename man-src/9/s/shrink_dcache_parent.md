@@ -15,7 +15,7 @@ shrink_dcache_parent - prune dcache
 <h2>Arguments</h2>
 
 <i>parent</i>
-<dl><dd><dd>parent of entries to prune</dl>
+<dl><dd></dd><dd>parent of entries to prune</dd></dl>
 
 <h2>Description</h2>
 

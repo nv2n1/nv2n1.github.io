@@ -17,8 +17,8 @@ description: "lchsh – Change login shell"
 <p> Entering an empty string (by pressing Enter) at the &quot;New Shell&quot; prompt is interpreted as accepting the current value. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </p>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, 1 on error. </p>

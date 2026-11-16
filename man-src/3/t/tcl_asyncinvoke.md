@@ -20,11 +20,11 @@ int
 <code>Tcl_AsyncReady</code>()</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_AsyncProc <i>*proc</i> (in) Procedure to invoke to handle an asynchronous event.</p>
-<dd>ClientData <i>clientData</i> (in) One-word value to pass to <i>proc</i>.</p>
-<dd>Tcl_AsyncHandler <i>async</i> (in) Token for asynchronous event handler.</p>
-<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter in which command was being evaluated when handler was invoked, or NULL if handler was invoked when there was no interpreter active.</p>
-<dd>int <i>code</i> (in) Completion code from command that just completed in <i>interp</i>, or 0 if <i>interp</i> is NULL. </p>
+<dd>Tcl_AsyncProc <i>*proc</i> (in) Procedure to invoke to handle an asynchronous event.</dd>
+<dd>ClientData <i>clientData</i> (in) One-word value to pass to <i>proc</i>.</dd>
+<dd>Tcl_AsyncHandler <i>async</i> (in) Token for asynchronous event handler.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter in which command was being evaluated when handler was invoked, or NULL if handler was invoked when there was no interpreter active.</dd>
+<dd>int <i>code</i> (in) Completion code from command that just completed in <i>interp</i>, or 0 if <i>interp</i> is NULL. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures provide a safe mechanism for dealing with asynchronous events such as signals. If an event such as a signal occurs while a Tcl script is being evaluated then it is not safe to take any substantive action to process the event. For example, it is not safe to evaluate a Tcl script since the interpreter may already be in the middle of evaluating a script; it may not even be safe to allocate memory, since a memory allocation could have been in progress when the event occurred. The only safe approach is to set a flag indicating that the event occurred, then handle the event later when the world has returned to a clean state, such as after the current Tcl command completes. </p>
@@ -36,7 +36,7 @@ int
  ClientData <i>clientData</i>,
  Tcl_Interp *<i>interp</i>,
  int <i>code</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> will be the same as the <i>clientData</i> argument passed to <code>Tcl_AsyncCreate</code> when the handler was created. If <i>proc</i> is invoked just after a command has completed execution in an interpreter, then <i>interp</i> will identify the interpreter in which the command was evaluated and <i>code</i> will be the completion code returned by that command. The command&#8217;s result will be present in the interpreter&#8217;s result. When <i>proc</i> returns, whatever it leaves in the interpreter&#8217;s result will be returned as the result of the command and the integer value returned by <i>proc</i> will be used as the new completion code for the command. </p>
 <p> It is also possible for <i>proc</i> to be invoked when no interpreter is active. This can happen, for example, if an asynchronous event occurs while the application is waiting for interactive input or an X event. In this case <i>interp</i> will be NULL and <i>code</i> will be 0, and the return value from <i>proc</i> will be ignored. </p>
 <p> The procedure <code>Tcl_AsyncInvoke</code> is called to invoke all of the handlers that are ready. The procedure <code>Tcl_AsyncReady</code> will return non-zero whenever any asynchronous handlers are ready; it can be checked to avoid calls to <code>Tcl_AsyncInvoke</code> when there are no ready handlers. Tcl calls <code>Tcl_AsyncReady</code> after each command is evaluated and calls <code>Tcl_AsyncInvoke</code> if needed. Applications may also call <code>Tcl_AsyncInvoke</code> at interesting times for that application. For example, Tcl&#8217;s event handler calls <code>Tcl_AsyncReady</code> after each event and calls <code>Tcl_AsyncInvoke</code> if needed. The <i>interp</i> and <i>code</i> arguments to <code>Tcl_AsyncInvoke</code> have the same meaning as for <i>proc</i>: they identify the active interpreter, if any, and the completion code from the command that just completed. </p>

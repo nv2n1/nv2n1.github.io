@@ -10,17 +10,13 @@ description: "std::chrono::file_clock – std::chrono::file_clock"
 <p>std::chrono::file_clock &#8211; std::chrono::file_clock</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;chrono&gt;
-
 using file_clock = /* see below */;  (since C++20)</code></pre>
 <p>std::chrono::file_clock is an alias for the clock used for std::filesystem::file_time_type. Its epoch is unspecified.<br />
 file_clock meets the TrivialClock requirements.<br />
 Time point family </p>
 <pre><code>Defined in namespace std::chrono
-
 template&lt;class Duration&gt;                                                       (since C++20)
-
 using file_time = std::chrono::time_point&lt;std::chrono::file_clock, Duration&gt;;
-
 </code></pre>
 <p>operator&lt;&lt;_(std::chrono::file_time) performs stream output on a file_time<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />

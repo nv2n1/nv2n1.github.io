@@ -16,11 +16,11 @@ description: "kadm5.acl – Kerberos ACL file"
 <pre>principal permissions [target_principal [restrictions] ]</pre>
 <p><code>NOTE:</code> Line order in the ACL file is important. The first matching entry will control access for an actor principal on a target principal.</p>
 <dl>
-<dt><i>principal</i></p>
-<dd>(Partially or fully qualified Kerberos principal name.) Specifies the principal whose permissions are to be set. </p>
+<dt><i>principal</i></dt>
+<dd>(Partially or fully qualified Kerberos principal name.) Specifies the principal whose permissions are to be set. </dd>
 <p> Each component of the name may be wildcarded using the <code>*</code> character.</p>
-<dt><i>permissions</i></p>
-<dd>Specifies what operations may or may not be performed by a <i>principal</i> matching a particular entry. This is a string of one or more of the following list of characters or their upper-case counterparts. If the character is <i>upper-case</i>, then the operation is disallowed. If the character is <i>lower-case</i>, then the operation is permitted. <center></p>
+<dt><i>permissions</i></dt>
+<dd>Specifies what operations may or may not be performed by a <i>principal</i> matching a particular entry. This is a string of one or more of the following list of characters or their upper-case counterparts. If the character is <i>upper-case</i>, then the operation is disallowed. If the character is <i>lower-case</i>, then the operation is permitted. <center></dd>
 <table>
 <tr VALIGN=top>
 <td COLSPAN=2>
@@ -129,19 +129,19 @@ description: "kadm5.acl – Kerberos ACL file"
 </tr>
 </table>
 <p></center></p>
-<dt><i>target_principal</i></p>
-<dd>(Optional. Partially or fully qualified Kerberos principal name.) Specifies the principal on which <i>permissions</i> may be applied. Each component of the name may be wildcarded using the <code>*</code> character. </p>
+<dt><i>target_principal</i></dt>
+<dd>(Optional. Partially or fully qualified Kerberos principal name.) Specifies the principal on which <i>permissions</i> may be applied. Each component of the name may be wildcarded using the <code>*</code> character. </dd>
 <p> <i>target_principal</i> can also include back-references to <i>principal</i>, in which <code>*number</code> matches the corresponding wildcard in <i>principal</i>.</p>
-<dt><i>restrictions</i></p>
-<dd>(Optional) A string of flags. Allowed restrictions are:</p>
-<dt><code>{+|-}</code><i>flagname</i></p>
-<dd>flag is forced to the indicated value. The permissible flags are the same as those for the <code>default_principal_flags</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</p>
-<dt><i>-clearpolicy</i></p>
-<dd>policy is forced to be empty.</p>
-<dt><i>-policy pol</i></p>
-<dd>policy is forced to be <i>pol</i>.</p>
-<dt><code>-{</code><i>expire, pwexpire, maxlife, maxrenewlife</i>} <i>time</i></p>
-<dd>(<i>getdate</i> string) associated value will be forced to MIN(<i>time</i>, requested value). </p>
+<dt><i>restrictions</i></dt>
+<dd>(Optional) A string of flags. Allowed restrictions are:</dd>
+<dt><code>{+|-}</code><i>flagname</i></dt>
+<dd>flag is forced to the indicated value. The permissible flags are the same as those for the <code>default_principal_flags</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</dd>
+<dt><i>-clearpolicy</i></dt>
+<dd>policy is forced to be empty.</dd>
+<dt><i>-policy pol</i></dt>
+<dd>policy is forced to be <i>pol</i>.</dd>
+<dt><code>-{</code><i>expire, pwexpire, maxlife, maxrenewlife</i>} <i>time</i></dt>
+<dd>(<i>getdate</i> string) associated value will be forced to MIN(<i>time</i>, requested value). </dd>
 <p> The above flags act as restrictions on any add or modify operation which is allowed due to that ACL line. </p>
 <p> <code>WARNING:</code> If the kadmind ACL file is modified, the kadmind daemon needs to be restarted for changes to take effect.</dl>
 <h2>Example</h2>
@@ -163,3 +163,4 @@ sms [at] ATHENA.MIT.EDU x * -maxlife 9h -postdateable # line 6</pre>
 <p>MIT</p>
 <h2>Copyright</h2>
 <p>1985-2016, MIT</p>
+</p>

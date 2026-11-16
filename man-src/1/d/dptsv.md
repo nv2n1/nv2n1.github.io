@@ -19,10 +19,10 @@ description: "dptsv – mutual converter between TSV and QDBM Depot database"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below. For a complete description, see the file:///usr/share/doc/qdbm-doc/spex.html#depotcli.</p>
 <dl>
-<dt><code>-bnum num</code></p>
-<dd> specify the number of the elements of the bucket array.</p>
-<dt><code>-bin</code></p>
-<dd> treat records as Base64 format.</dl>
+<dt><code>-bnum num</code></dt>
+<dd> specify the number of the elements of the bucket array.</dd>
+<dt><code>-bin</code></dt>
+<dd> treat records as Base64 format.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> For example, to make a database to search `/etc/password&#8217; by a user name, perform the following command.<br />
  <code> cat /etc/passwd | tr &#8216;:&#8217; &#8216; &#8216; | dptsv import casket</code> </p>

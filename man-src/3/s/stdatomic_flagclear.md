@@ -11,10 +11,8 @@ std::atomic_flag::clear - std::atomic_flag::clear
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;atomic&gt;
-
     void clear(std::memory_order order = std::memory_order_seq_cst) volatile noexcept;
 (1)(since C++ 11)
-
     void clear(std::memory_order order = std::memory_order_seq_cst) noexcept;
 (2)(since C++ 11)</code></pre> 
 Atomically changes the state of a std::atomic_flag to clear (false). 

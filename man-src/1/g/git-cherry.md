@@ -21,67 +21,67 @@ git cherry[-v][&lt;upstream&gt;[&lt;head&gt;[&lt;limit&gt;]]]
 <p> -v</p>
 <dl>
 <dt>
-<dd> Show the commit subjects next to the SHA1s.</dl>
+</dt><dd> Show the commit subjects next to the SHA1s.</dd></dl>
 <p> &lt;upstream&gt;</p>
 <dl>
 <dt>
-<dd> Upstream branch to search for equivalent commits. Defaults to the upstream branch of HEAD.</dl>
+</dt><dd> Upstream branch to search for equivalent commits. Defaults to the upstream branch of HEAD.</dd></dl>
 <p> &lt;head&gt;</p>
 <dl>
 <dt>
-<dd> Working branch; defaults to HEAD.</dl>
+</dt><dd> Working branch; defaults to HEAD.</dd></dl>
 <p> &lt;limit&gt;</p>
 <dl>
 <dt>
-<dd> Do not report commits up to (and including) limit.</dl>
+</dt><dd> Do not report commits up to (and including) limit.</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Patch workflows</h3>
 <p> git-cherry is frequently used in patch-based workflows (see <code><a href="/docs/linux/man/7-gitworkflows/">gitworkflows</a></code>(7)) to determine if a series of patches has been applied by the upstream maintainer. In such a workflow you might create and send a topic branch like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git checkout -b topic origin/master
 # work and create some commits
 $ git format-patch origin/master
 $ git send-email ... 00*
 </pre>
-</dl>
+</dd></dl>
 <p> Later, you can see whether your changes have been applied by saying (still on <code>topic</code>): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git fetch  # update your notion of origin/master
 $ git cherry -v
 </pre>
-</dl>
+</dd></dl>
 <h3>Concrete example</h3>
 <p> In a situation where topic consisted of three commits, and the maintainer applied two of them, the situation might look like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ git log&#8211; graph&#8211; oneline&#8211; decorate&#8211; boundary origin / master&#8230; topic * 7654321(origin / master) upstream tip commit[&#8230; snip some other commits&#8230;] * cccc111 cherry &#8211; pick of C *aaaa111 cherry &#8211; pick of A[&#8230; snip a lot more that has happened&#8230;] | *cccc000(topic)<br />
 commit C | *bbbb000 commit B | *aaaa000 commit A | /<br />
                                                        o 1234567 branch point
-</dl>
+</dd></dl>
 <p> In such cases, git-cherry shows a concise summary of what has yet to be applied: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git cherry origin/master topic
 - cccc000... commit C
 + bbbb000... commit B
 - aaaa000... commit A
 </pre>
-</dl>
+</dd></dl>
 <p> Here, we see that the commits A and C (marked with <code>&#8211;</code>) can be dropped from your <code>topic</code> branch when you rebase it on top of <code>origin/master</code>, while the commit B (marked with <code>+</code>) still needs to be kept so that it will be sent to be applied to <code>origin/master</code>.</p>
 <h3>Using a limit</h3>
 <p> The optional &lt;limit&gt; is useful in cases where your topic is based on other work that is not in upstream. Expanding on the previous example, this might look like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git log-- graph-- oneline-- decorate-- boundary origin / master... topic * 7654321(origin / master) upstream tip commit[... snip some other commits...] * cccc111 cherry - pick of C *aaaa111 cherry - pick of A[... snip a lot more that has happened...] | *cccc000(topic)
 commit C | *bbbb000 commit B | *aaaa000 commit A | *0000fff(base)unpublished stuff F[... snip...] | *0000aaa unpublished stuff A
@@ -89,18 +89,18 @@ commit C | *bbbb000 commit B | *aaaa000 commit A | *0000fff(base)unpublished stu
               o 1234567 merge
           - base between upstream and topic
 </code></pre>
-</dl>
+</dd></dl>
 <p> By specifying <code>base</code> as the limit, you can avoid listing commits between <code>base</code> and <code>topic</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git cherry origin/master topic base
 - cccc000... commit C
 + bbbb000... commit B
 - aaaa000... commit A
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-git-patch-id/">git-patch-id</a></code>(1)</p>
 <h2>GIT</h2>

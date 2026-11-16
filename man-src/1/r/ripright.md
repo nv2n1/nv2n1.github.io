@@ -16,22 +16,22 @@ description: "ripright – CD ripper"
 <p> In case a disc is unknown, MusicBrainz Picard can be used to send the CD ToC to the MusicBrainz database. The MusicBrainz website can then be used to find or add details of a CD, after which the CD can be ripped using RipRight. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;daemon</code></p>
-<dd> Run in daemon mode. Ripright will detach from the terminal and direct output to the syslog.</p>
-<dt><code>-a</code>, <code>&#8211;rip-to-all</code></p>
-<dd> Normally exactly 1 result is required from Musicbrainz, otherwise the CD will be refused and ejected. With this option, the CD will be ripped and tagged to multiple files, once as each result from Musicbrainz. Each rip is output under a directory named Ambiguous/&lt;mb-release-id&gt;/ where the the Musicbrainz release Id is used to identify each possible release.</p>
-<dt><code>-w</code>, <code>&#8211;w32-filenames</code></p>
-<dd> Covert characters that are illegal on Windows filesystems to UTF-8 alternatives. If accessing files over Samba, this prevents name mangling which can lose the file extension. Mapped characters are <code>*</code>, <code>?</code>, <code>&quot;</code> and <code>|</code> which are replaced by <code>ӿ</code>, <code>ʔ</code>, <code>¨</code> and <code>ǀ</code> respectively.</p>
-<dt><code>-s</code>, <code>&#8211;allow-skips</code></p>
-<dd> Normally ripping attempts to make a perfect copy of a CD by using all data verification and correction features of the cdparanoia library. With this option, each bad sectors will be skipped after 20 failed attempts to read the data. Without this option, ripping of scratched or damaged CDs may take a very long time and possibly may not complete.</p>
-<dt><code>-r</code>, <code>&#8211;require-art</code></p>
-<dd> Refuse to rip a CD if the cover art cannot be retrieved. The correct ASIN must be added to the MusicBrainz database for art to be fetched from Amazon.</p>
-<dt><code>-f &lt;file&gt;</code>, <code>&#8211;folder-art &lt;file&gt;</p>
-<dd> Save cover art (if available) to &lt;file&gt;, relative to the output directory. The art file will be converted to the format specified by the filename e.g. -f folder.jpg or -f folder.gif or -f folder.png</p>
-<dt>-c</code>, <code>&#8211;cd-device</code></p>
-<dd> Path to the CD-ROM device to use. This defaults to /dev/cdrom if not otherwise specified.</p>
-<dt><code>-o</code>, <code>&#8211;output-file</code></p>
-<dd> Set the format used to produce output filenames and paths. This should be a string containing the following special tokens: </p>
+<dt><code>-d</code>, <code>&#8211;daemon</code></dt>
+<dd> Run in daemon mode. Ripright will detach from the terminal and direct output to the syslog.</dd>
+<dt><code>-a</code>, <code>&#8211;rip-to-all</code></dt>
+<dd> Normally exactly 1 result is required from Musicbrainz, otherwise the CD will be refused and ejected. With this option, the CD will be ripped and tagged to multiple files, once as each result from Musicbrainz. Each rip is output under a directory named Ambiguous/&lt;mb-release-id&gt;/ where the the Musicbrainz release Id is used to identify each possible release.</dd>
+<dt><code>-w</code>, <code>&#8211;w32-filenames</code></dt>
+<dd> Covert characters that are illegal on Windows filesystems to UTF-8 alternatives. If accessing files over Samba, this prevents name mangling which can lose the file extension. Mapped characters are <code>*</code>, <code>?</code>, <code>&quot;</code> and <code>|</code> which are replaced by <code>ӿ</code>, <code>ʔ</code>, <code>¨</code> and <code>ǀ</code> respectively.</dd>
+<dt><code>-s</code>, <code>&#8211;allow-skips</code></dt>
+<dd> Normally ripping attempts to make a perfect copy of a CD by using all data verification and correction features of the cdparanoia library. With this option, each bad sectors will be skipped after 20 failed attempts to read the data. Without this option, ripping of scratched or damaged CDs may take a very long time and possibly may not complete.</dd>
+<dt><code>-r</code>, <code>&#8211;require-art</code></dt>
+<dd> Refuse to rip a CD if the cover art cannot be retrieved. The correct ASIN must be added to the MusicBrainz database for art to be fetched from Amazon.</dd>
+<dt><code>-f &lt;file&gt;</code>, <code>&#8211;folder-art &lt;file&gt;</dt>
+<dd> Save cover art (if available) to &lt;file&gt;, relative to the output directory. The art file will be converted to the format specified by the filename e.g. -f folder.jpg or -f folder.gif or -f folder.png</dd>
+<dt>-c</code>, <code>&#8211;cd-device</code></dt>
+<dd> Path to the CD-ROM device to use. This defaults to /dev/cdrom if not otherwise specified.</dd>
+<dt><code>-o</code>, <code>&#8211;output-file</code></dt>
+<dd> Set the format used to produce output filenames and paths. This should be a string containing the following special tokens: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>%N&nbsp;<wbr>=&nbsp;<wbr>Track number&nbsp;<wbr>(TRACKNUMBER)<br />
 &nbsp;<wbr>&nbsp;<wbr>%A&nbsp;<wbr>=&nbsp;<wbr>Track artist&nbsp;<wbr>(ARTIST)<br />
 &nbsp;<wbr>&nbsp;<wbr>%a&nbsp;<wbr>=&nbsp;<wbr>Track artist sort name&nbsp;<wbr>(ARTISTSORT)<br />

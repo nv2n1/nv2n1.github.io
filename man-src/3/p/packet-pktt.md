@@ -63,18 +63,18 @@ Initialize object's private data, note that this will not check the
 file for existence nor will open the file to verify if it is a valid
 tcpdump file. The tcpdump trace file will be opened the first time a
 packet is retrieved.
-<dl><dt><dd><dl><dt><code>tracefile:</code>
-<dd>Name of tcpdump trace file or a list of trace file names
+<dl><dl><dt><code>tracefile:</code>
+</dt><dd>Name of tcpdump trace file or a list of trace file names
 (little or big endian format)
-<dt><code>live:</code>
-<dd>If set to True, methods will not return if encountered &lt;EOF&gt;,
+</dd><dt><code>live:</code>
+</dt><dd>If set to True, methods will not return if encountered &lt;EOF&gt;,
 they will keep on trying until more data is available in the
 file. This is useful when running tcpdump in parallel,
 especially when tcpdump is run with the '-C' option, in which
 case when &lt;EOF&gt; is encountered the next trace file created by
 tcpdump will be opened and the object will be re-initialized,
 all private data referencing the previous file is lost.
-</dl></dl>
+</dd></dl></dl>
 <code>__iter__(self)</code>
 Make this object iterable.
 <code>clear_xid_list(self)</code>
@@ -84,15 +84,15 @@ Return the packet that matches the given expression, also the packet
 index points to the next packet after the matched packet.
 Returns None if packet is not found and the packet index points
 to the packet at the beginning of the search.
-<dl><dt><dd><dl><dt><code>expr:</code>
-<dd>String of expressions to be evaluated
-<dt><code>maxindex:</code>
-<dd>The match fails if packet index hits this limit
-<dt><code>rewind:</code>
-<dd>Rewind to index where matching started if match fails
-<dt><code>reply:</code>
-<dd>Match RPC replies of previously matched calls as well
-</dl></dl><dl><dt><dd>Examples:
+<dl><dl><dt><code>expr:</code>
+</dt><dd>String of expressions to be evaluated
+</dd><dt><code>maxindex:</code>
+</dt><dd>The match fails if packet index hits this limit
+</dd><dt><code>rewind:</code>
+</dt><dd>Rewind to index where matching started if match fails
+</dd><dt><code>reply:</code>
+</dt><dd>Match RPC replies of previously matched calls as well
+</dd></dl></dl><dl><dt></dt><dd>Examples:
  # Find the packet with both the ACK and SYN TCP flags set to 1
  pkt = x.match(&quot;TCP.flags.ACK == 1 and TCP.flags.SYN == 1&quot;)
  # Find the next NFS EXCHANGE_ID request
@@ -121,7 +121,7 @@ to the packet at the beginning of the search.
  print x.pkt.nfs
 See also:
  match_ethernet(), match_ip(), match_tcp(), match_rpc(), match_nfs()
-</dl>
+</dd></dl>
 <code>match_nfs(self, uargs)</code>
 Match NFS values on current packet.
 In NFSv4, there is a single compound procedure with multiple

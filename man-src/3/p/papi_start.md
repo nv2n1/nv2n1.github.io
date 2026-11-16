@@ -13,11 +13,11 @@ description: "PAPI_start –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_start(&nbsp;<wbr>int&nbsp;<wbr>&nbsp;<wbr>EventSet&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code></dl>
+<dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code></dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_OK</i><br />
@@ -26,7 +26,7 @@ description: "PAPI_start –"
  <i>PAPI_ENOEVST</i> &#8212; The EventSet specified does not exist.<br />
  <i>PAPI_EISRUN</i> &#8212; The EventSet is currently counting events.<br />
  <i>PAPI_ECNFLCT</i> &#8212; The underlying counter hardware can not count this event and other events in the EventSet simultaneously.<br />
- <i>PAPI_ENOEVNT</i> &#8212; The PAPI preset is not available on the underlying hardware.</dl>
+ <i>PAPI_ENOEVNT</i> &#8212; The PAPI preset is not available on the underlying hardware.</dd></dl>
 <p> <code>PAPI_start</code> starts counting all of the hardware events contained in the previously defined EventSet. All counters are implicitly set to zero before counting. Assumes an initialized PAPI library and a properly added event set. </p>
 <p> <code>Example:</code></p>
 <dl COMPACT>
@@ -51,9 +51,9 @@ description: "PAPI_start –"
 * printf(&quot;%lld
 &quot;,values[0]);
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_create_eventset</code> <code>PAPI_add_event</code> <code>PAPI_stop</code></dl>
+<dd><code>PAPI_create_eventset</code> <code>PAPI_add_event</code> <code>PAPI_stop</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

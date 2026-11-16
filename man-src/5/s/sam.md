@@ -162,5 +162,6 @@ description: "sam – Sequence Alignment/Map file format"
 <p> where the second column gives the string representation of the FLAG field.</p>
 <h2>See Also</h2>
 <dl>
-<dt><a rel="nofollow" href="https://github.com/samtools/hts-specs">https://github.com/samtools/hts-specs</a></p>
-<dd>The full SAM/BAM file format specification </p>
+<dt><a rel="nofollow" href="https://github.com/samtools/hts-specs">https://github.com/samtools/hts-specs</a></dt>
+<dd>The full SAM/BAM file format specification </dd>
+</dl>

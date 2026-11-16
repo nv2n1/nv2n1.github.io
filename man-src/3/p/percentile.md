@@ -10,32 +10,14 @@ description: "QuantLib::GeneralStatistics – Statistics tool."
 <p>QuantLib::GeneralStatistics &#8211; Statistics tool. </p>
 <h2>Synopsis</h2>
 <pre><code>void add (Real value, Real weight=1.0)
-
-
 adds a datum to the set, possibly with a weight
-
-
 template&lt;class DataIterator &gt; void addSequence (DataIterator begin, DataIterator end)
-
-
 adds a sequence of data to the set, with default weight
-
-
 template&lt;class DataIterator , class WeightIterator &gt; void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)
-
-
 adds a sequence of data to the set, each with its weight
-
-
 void reset ()
-
-
 resets the data to a null set
-
-
 void sort () const
-
-
 sort the data set in increasing order</code></pre>
 <h3>Public Types</h3>
 <p>typedef Real <code>value_type</code></p>
@@ -60,32 +42,14 @@ sort the data set in increasing order</code></pre>
 <p> Real <code>topPercentile</code> (Real y) const<br />
  <code>Modifiers</code> </p>
 <pre><code>void add (Real value, Real weight=1.0)
-
-
 adds a datum to the set, possibly with a weight
-
-
 template&lt;class DataIterator &gt; void addSequence (DataIterator begin, DataIterator end)
-
-
 adds a sequence of data to the set, with default weight
-
-
 template&lt;class DataIterator , class WeightIterator &gt; void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)
-
-
 adds a sequence of data to the set, each with its weight
-
-
 void reset ()
-
-
 resets the data to a null set
-
-
 void sort () const
-
-
 sort the data set in increasing order</code></pre>
 <h2>Detailed Description</h2>
 <p>Statistics tool. </p>
@@ -129,6 +93,6 @@ sort the data set in increasing order</code></pre>
 <p>adds a datum to the set, possibly with a weight </p>
 <p> <code>Precondition:</code></p>
 <dl>
-<dd>weights must be positive or null</dl>
+<dd>weights must be positive or null</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

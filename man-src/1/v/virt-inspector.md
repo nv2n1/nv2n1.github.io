@@ -29,48 +29,48 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
 <p> All of the information available from virt-inspector is also available through the core libguestfs inspection <font SIZE="-1">API </font>(see &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <i>guestfs</i>(3)). The same information can also be fetched using guestfish or via libguestfs bindings in many programming languages (see &#8220;<font SIZE="-1">GETTING INSPECTION DATA FROM THE LIBGUESTFS API&#8221;</font>).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a</code> <font SIZE="-1">URI</font></p>
+<dt><code>-a</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;add</code> <font SIZE="-1">URI</font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></p>
+</dd><dt><code>&#8211;add</code> <font SIZE="-1">URI</font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> Libvirt is only used if you specify a <tt>&quot;domname&quot;</tt> on the command line. If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;echo-keys</code></p>
-<dd> When prompting for keys and passphrases, virt-inspector normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</p>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;echo-keys</code></dt>
+<dd> When prompting for keys and passphrases, virt-inspector normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</dd>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> Specify the format of disk images given on the command line. If this is omitted then the format is autodetected from the content of the disk image. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> Specify the format of disk images given on the command line. If this is omitted then the format is autodetected from the content of the disk image. </dd>
 <p> If disk images are requested from libvirt, then this program asks libvirt for this information. In this case, the value of the format parameter is ignored. </p>
 <p> If working with untrusted raw-format guest disk images, you should ensure the format is always specified.</p>
-<dt><code>&#8211;keys-from-stdin</code></p>
-<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</p>
-<dt><code>-v</code></p>
+<dt><code>&#8211;keys-from-stdin</code></dt>
+<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</p>
-<dt><code>&#8211;xpath</code> query</p>
-<dd> Perform an XPath query on the <font SIZE="-1">XML</font> on stdin, and print the result on stdout. In this mode virt-inspector simply runs an XPath query; all other inspection functions are disabled. See &#8220;<font SIZE="-1">XPATH QUERIES&#8221;</font> below for some examples.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd>
+<dt><code>&#8211;xpath</code> query</dt>
+<dd> Perform an XPath query on the <font SIZE="-1">XML</font> on stdin, and print the result on stdout. In this mode virt-inspector simply runs an XPath query; all other inspection functions are disabled. See &#8220;<font SIZE="-1">XPATH QUERIES&#8221;</font> below for some examples.</dd></dl>
 <h2>OLD-STYLE COMMAND LINE ARGUMENTS</h2>
 <p> Previous versions of virt-inspector allowed you to write either: </p>
 <pre>
@@ -281,10 +281,10 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
 <p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <a rel="nofollow" href="http://www.w3.org/TR/xpath/,">http://www.w3.org/TR/xpath/,</a> <i><a href="/docs/linux/man/1-base64/">base64</a></i>(1), <i><a href="/docs/linux/man/1-xmlstarlet/">xmlstarlet</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
-<dt>&bull;</p>
-<dd> Matthew Booth mbooth [at] redhat.com</dl>
+<dt>&bull;</dt>
+<dd> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></dd>
+<dt>&bull;</dt>
+<dd> Matthew Booth mbooth [at] redhat.com</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010-2012 Red Hat Inc.</p>
 <h2>LICENSE</h2>
@@ -296,31 +296,31 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAO">XPATH QUERIES</a></p>
+<dt><a href="#lbAO">XPATH QUERIES</a></dt>
 <dd>
-<dt><a href="#lbAP">GETTING INSPECTION DATA FROM THE LIBGUESTFS API</a></p>
+</dd><dt><a href="#lbAP">GETTING INSPECTION DATA FROM THE LIBGUESTFS API</a></dt>
 <dd>
-<dt><a href="#lbAR">OLD VERSIONS OF VIRT-INSPECTOR</a></p>
+</dd><dt><a href="#lbAR">OLD VERSIONS OF VIRT-INSPECTOR</a></dt>
 <dd>
-<dt><a href="#lbAS">EXIT STATUS</a></p>
+</dd><dt><a href="#lbAS">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbAT">SEE ALSO</a></p>
+</dd><dt><a href="#lbAT">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAU">AUTHORS</a></p>
+</dd><dt><a href="#lbAU">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAV">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAV">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAW">LICENSE</a></p>
+</dd><dt><a href="#lbAW">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAX">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAX">BUGS</a></dt>
+<dd></dd></dl>

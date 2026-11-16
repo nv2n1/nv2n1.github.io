@@ -19,7 +19,7 @@ description: "stgevc.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  STGEVC computes some or all of the right and/or left eigenvectors of
  a pair of real matrices (S,P), where S is a quasi-triangular matrix
@@ -29,13 +29,10 @@ description: "stgevc.f –"
  as computed by SGGHRD + SHGEQZ.
  The right eigenvector x and the left eigenvector y of (S,P)
  corresponding to an eigenvalue w are defined by:
- 
     S*x = w*P*x,  (y**H)*S = w*(y**H)*P,
- 
  where y**H denotes the conjugate tranpose of y.
  The eigenvalues are not input to this routine, but are computed
  directly from the diagonal blocks of S and P.
- 
  This routine returns the matrices X and/or Y of right and left
  eigenvectors of (S,P), or the products Z*X and/or Q*Y,
  where Z and Q are input matrices.
@@ -43,11 +40,11 @@ description: "stgevc.f –"
  factorization of a matrix pair (A,B), then Z*X and Q*Y
  are the matrices of right and left eigenvectors of (A,B).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
           = 'R': compute right eigenvectors only;
@@ -162,18 +159,18 @@ if HOWMNY<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
   Allocation of workspace:
   ---------- -- ---------
@@ -217,8 +214,9 @@ if HOWMNY<br />
           are adjacent to one another,
       whereas with the rowwise method, the elements accessed at a step are spaced LDS(and LDP) words apart.When finding left eigenvectors, the matrix in question is the transpose of the one in storage, so the rowwise method then actually accesses columns of A and B at each step, and so is the preferred method.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 295 of file stgevc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

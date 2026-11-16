@@ -20,54 +20,54 @@ git request - pull[-p]&lt;start&gt;&lt;url&gt;[&lt;end&gt;]
 <p> -p</p>
 <dl>
 <dt>
-<dd> Include patch text in the output.</dl>
+</dt><dd> Include patch text in the output.</dd></dl>
 <p> &lt;start&gt;</p>
 <dl>
 <dt>
-<dd> Commit to start at. This names a commit that is already in the upstream history.</dl>
+</dt><dd> Commit to start at. This names a commit that is already in the upstream history.</dd></dl>
 <p> &lt;url&gt;</p>
 <dl>
 <dt>
-<dd> The repository URL to be pulled from.</dl>
+</dt><dd> The repository URL to be pulled from.</dd></dl>
 <p> &lt;end&gt;</p>
 <dl>
 <dt>
-<dd> Commit to end at (defaults to HEAD). This names the commit at the tip of the history you are asking to be pulled. </p>
+</dt><dd> Commit to end at (defaults to HEAD). This names the commit at the tip of the history you are asking to be pulled. </dd>
 <p> When the repository named by <code>&lt;url&gt;</code> has the commit at a tip of a ref that is different from the ref you have locally, you can use the <code>&lt;local&gt;:&lt;remote&gt;</code> syntax, to have its local name, a colon <code>:</code>, and its remote name.</dl>
 <h2>EXAMPLES</h2>
 <p> Imagine that you built your work on your <code>master</code> branch on top of the <code>v1.0</code> release, and want it to be integrated to the project. First you push that change to your public repository for others to see: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git push <a rel="nofollow" href="https://git.ko.xz/project">https://git.ko.xz/project</a> master
 </pre>
-</dl>
+</dd></dl>
 <p> Then, you run this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git request-pull v1.0 <a rel="nofollow" href="https://git.ko.xz/project">https://git.ko.xz/project</a> master
 </pre>
-</dl>
+</dd></dl>
 <p> which will produce a request to the upstream, summarizing the changes between the <code>v1.0</code> release and your <code>master</code>, to pull it from your public repository. </p>
 <p> If you pushed your change to a branch whose name is different from the one you have locally, e.g. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git push <a rel="nofollow" href="https://git.ko.xz/project">https://git.ko.xz/project</a> master:for-linus
 </pre>
-</dl>
+</dd></dl>
 <p> then you can ask that to be pulled with </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git request-pull v1.0 <a rel="nofollow" href="https://git.ko.xz/project">https://git.ko.xz/project</a> master:for-linus
 </pre>
-</dl>
+</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

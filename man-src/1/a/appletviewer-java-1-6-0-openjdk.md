@@ -16,10 +16,10 @@ description: "appletviewer – The Java Applet Viewer"
 <p> <code>Note:</code> The <code>appletviewer</code> requires encoded URLs according to the escaping mechanism defined in RFC2396. Only encoded URLs are supported. However, file names must be unencoded, as specified in RFC2396. </p>
 <h2>Options</h2>
 <dl>
-<dt>-debug</p>
-<dd>Starts the applet viewer in the Java debugger, <code>jdb</code>, thus allowing you to debug the applets in the document.</p>
-<dt>-encoding &nbsp;<wbr> &nbsp;<wbr>encoding name</p>
-<dd>Specify the input HTML file encoding name.</p>
-<dt>-Jjavaoption</p>
-<dd>Passes through the string <i>javaoption</i> as a single argument to the Java interpreter which runs the appletviewer. The argument should not contain spaces. Multiple argument words must all begin with the prefix <code>-J</code>, which is stripped. This is useful for adjusting the compiler&#8217;s execution environment or memory usage.</dl>
+<dt>-debug</dt>
+<dd>Starts the applet viewer in the Java debugger, <code>jdb</code>, thus allowing you to debug the applets in the document.</dd>
+<dt>-encoding &nbsp;<wbr> &nbsp;<wbr>encoding name</dt>
+<dd>Specify the input HTML file encoding name.</dd>
+<dt>-Jjavaoption</dt>
+<dd>Passes through the string <i>javaoption</i> as a single argument to the Java interpreter which runs the appletviewer. The argument should not contain spaces. Multiple argument words must all begin with the prefix <code>-J</code>, which is stripped. This is useful for adjusting the compiler&#8217;s execution environment or memory usage.</dd></dl>
 <p>&nbsp;<wbr></p>

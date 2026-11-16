@@ -15,10 +15,10 @@ description: "scl2trd – Convert .scl disk images to .trd."
 <p> scl2trd converts a .scl disk file to a 80 track, double sided (640 KB) .trd disk file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>sclfile</i></p>
-<dd> specifies a .scl file whose contents are to be converted.</p>
-<dt><i>trdfile</i></p>
-<dd> specifies a .trd file to create.</dl>
+<dt><i>sclfile</i></dt>
+<dd> specifies a .scl file whose contents are to be converted.</dd>
+<dt><i>trdfile</i></dt>
+<dd> specifies a .trd file to create.</dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>SEE ALSO</h2>

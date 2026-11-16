@@ -28,10 +28,10 @@ description: "Atlas::Message::QueuedDecoder – Decoder that presents a queue of
 <p> This message decoder puts arrived objects into a queue and allows the application to pop them off the front of the queue, peek at the front of the queue, as well as checking to see how many objects are currently in the queue. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>DecoderBase</code> </p>
+<dd><code>DecoderBase</code> </dd>
 <p> <code>Element</code></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dl>
+<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

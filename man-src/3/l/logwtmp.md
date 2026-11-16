@@ -21,8 +21,8 @@ void logwtmp(const char *line, const char *name, const char *host);
 <p> <code>logwtmp</code>() constructs a utmp structure using <i>line</i>, <i>name</i>, <i>host</i>, current time and current process ID. Then it calls <code>updwtmp</code>() to append the structure to the wtmp file.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/log/wtmp</i></p>
-<dd> database of past user logins</dl>
+<dt><i>/var/log/wtmp</i></dt>
+<dd> database of past user logins</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

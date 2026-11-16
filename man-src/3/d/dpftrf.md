@@ -19,7 +19,7 @@ description: "dpftrf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DPFTRF computes the Cholesky factorization of a real symmetric
  positive definite matrix A.
@@ -29,11 +29,11 @@ description: "dpftrf.f –"
  where U is an upper triangular matrix and L is lower triangular.
  This is the block version of the algorithm, calling Level 3 BLAS.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANSR</i> </p>
+</dt><dd> <i>TRANSR</i> </dd>
 <pre>
           TRANSR is CHARACTER*1
           = 'N':  The Normal TRANSR of RFP A is stored;
@@ -82,18 +82,18 @@ k = N / 2. RFP A is(0
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   We first consider Rectangular Full Packed (RFP) Format when N is
   even. We give an example where N = 6.
@@ -155,8 +155,9 @@ k = N / 2. RFP A is(0
      03 13 23 33 11             33 11 21 31 41 51
      04 14 24 34 44             43 44 22 32 42 52
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 199 of file dpftrf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

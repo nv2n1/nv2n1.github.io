@@ -16,10 +16,10 @@ description: "kpsestat – compute octal mode from mode of existing file"
 <h2>OPTIONS</h2>
 <p> <code>kpsestat</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1). </p>
 <h2>Index</h2>

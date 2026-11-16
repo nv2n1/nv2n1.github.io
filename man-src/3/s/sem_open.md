@@ -12,7 +12,6 @@ description: "sem_open – initialize and open a named semaphore"
 <pre><code>#include &lt;fcntl.h&gt; /* For O_* constants */
 #include &lt;semaphore.h&gt;
 #include &lt;sys/stat.h&gt; /* For mode constants */
-
 sem_t *sem_open(const char *name, int oflag);
 sem_t *sem_open(const char *name, int oflag,
                 mode_t mode, unsigned int value);</code></pre>
@@ -25,24 +24,24 @@ sem_t *sem_open(const char *name, int oflag,
 <p>On success, <code>sem_open</code>() returns the address of the new semaphore; this address is used when calling other semaphore-related functions. On error, <code>sem_open</code>() returns <code>SEM_FAILED</code>, with <i>errno</i> set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>The semaphore exists, but the caller does not have permission to open it.</p>
-<dt><code>EEXIST</code></p>
-<dd>Both <code>O_CREAT</code> and <code>O_EXCL</code> were specified in <i>oflag</i>, but a semaphore with this <i>name</i> already exists.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>value</i> was greater than <code>SEM_VALUE_MAX</code>.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>name</i> consists of just &quot;/&quot;, followed by no other characters.</p>
-<dt><code>EMFILE</code></p>
-<dd>The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd><i>name</i> was too long.</p>
-<dt><code>ENFILE</code></p>
-<dd>The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOENT</code></p>
-<dd>The <code>O_CREAT</code> flag was not specified in <i>oflag</i> and no semaphore with this <i>name</i> exists; or, <code>O_CREAT</code> was specified, but <i>name</i> wasn&#8217;t well formed.</p>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory.</dl>
+<dt><code>EACCES</code></dt>
+<dd>The semaphore exists, but the caller does not have permission to open it.</dd>
+<dt><code>EEXIST</code></dt>
+<dd>Both <code>O_CREAT</code> and <code>O_EXCL</code> were specified in <i>oflag</i>, but a semaphore with this <i>name</i> already exists.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>value</i> was greater than <code>SEM_VALUE_MAX</code>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>name</i> consists of just &quot;/&quot;, followed by no other characters.</dd>
+<dt><code>EMFILE</code></dt>
+<dd>The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd><i>name</i> was too long.</dd>
+<dt><code>ENFILE</code></dt>
+<dd>The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>The <code>O_CREAT</code> flag was not specified in <i>oflag</i> and no semaphore with this <i>name</i> exists; or, <code>O_CREAT</code> was specified, but <i>name</i> wasn&#8217;t well formed.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

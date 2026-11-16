@@ -126,8 +126,8 @@ description: "watchdog_selinux – Security Enhanced Linux Policy for the watchd
 <p> <code>watchdog_unconfined_exec_t</code> </p>
 <p> &#8211; Set files with the watchdog_unconfined_exec_t type, if you want to transition an executable to the watchdog_unconfined_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/watchdog.d(/.*)?, /usr/libexec/watchdog/scripts(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/watchdog.d(/.*)?, /usr/libexec/watchdog/scripts(/.*)? </dd>
 </dl>
 <p> <code>watchdog_var_run_t</code> </p>
 <p> &#8211; Set files with the watchdog_var_run_t type, if you want to store the watchdog files under the /run or /var/run directory. </p>

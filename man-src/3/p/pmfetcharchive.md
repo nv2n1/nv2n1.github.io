@@ -24,6 +24,6 @@ description: "pmFetchArchive – get performance metrics directly from a set if 
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3), <code><a href="/docs/linux/man/3-pmfreeresult/">pmFreeResult</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3) and <code><a href="/docs/linux/man/3-pmtrimnamespace/">pmTrimNameSpace</a></code>(3).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOTARCHIVE</code></p>
-<dd>the current PMAPI context is not associated with a set of archive logs </p>
+<dt><code>PM_ERR_NOTARCHIVE</code></dt>
+<dd>the current PMAPI context is not associated with a set of archive logs </dd>
 </dl>

@@ -10,14 +10,10 @@ description: "std::ctype<CharT>::scan_is,std::ctype<CharT>::do_scan_is – std::
 <p>std::ctype&lt;CharT&gt;::scan_is,std::ctype&lt;CharT&gt;::do_scan_is &#8211; std::ctype&lt;CharT&gt;::scan_is,std::ctype&lt;CharT&gt;::do_scan_is</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  const CharT *scan_is(mask m, const CharT *beg, const CharT *end) const;
-
 protected:
 (2)
-
     virtual const CharT *do_scan_is(mask m, const CharT *beg, const CharT *end) const;</code></pre>
 <p>1) public member function, calls the protected virtual member function do_scan_is of the most derived class.<br />
 2) Locates the first character in the character array [beg, end) that satisfies the classification mask m, that is, the first character c such that is(m, c) would return true. </p>
@@ -30,14 +26,10 @@ end &#8211; one past the end pointer for the array of characters to search</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;locale&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::wcout.imbue(std::locale(&quot;en_US.utf8&quot;));

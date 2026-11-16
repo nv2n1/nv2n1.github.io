@@ -10,7 +10,7 @@ description: "vfs_catia – translate illegal characters in Catia filenames"
 <p>vfs_catia &#8211; translate illegal characters in Catia filenames</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = catia</dl>
+<dd>vfs objects = catia</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The Catia CAD package commonly creates filenames that use characters that are illegal in CIFS filenames. The vfs_catia VFS module implements a character mapping so that these files can be shared with CIFS clients. </p>
@@ -19,7 +19,7 @@ description: "vfs_catia – translate illegal characters in Catia filenames"
 <h2>Options</h2>
 <p>catia:mappings = SERVER_HEX_CHAR:CLIENT_HEX_CHAR</p>
 <dl>
-<dd>SERVER_HEX_CHAR specifies a 0x prefixed hexedecimal character code that, when included in a Samba server-side filename, will be mapped to CLIENT_HEX_CHAR for the CIFS client. </p>
+<dd>SERVER_HEX_CHAR specifies a 0x prefixed hexedecimal character code that, when included in a Samba server-side filename, will be mapped to CLIENT_HEX_CHAR for the CIFS client. </dd>
 <p> The same mapping occurs in the opposite direction. Multiple character mappings are separated by a comma.</dl>
 <h2>Examples</h2>
 <p>Map server-side quotation-marks (&quot;) to client-side diaeresis (ad) on filenames in the [CAD] share: </p>
@@ -29,7 +29,7 @@ description: "vfs_catia – translate illegal characters in Catia filenames"
  m[blue]<code>path = /data/cad</code>m[]
  m[blue]<code>vfs objects = catia</code>m[]
  m[blue]<code>catia:mappings = 0x22:0xa8</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> Perform comprehensive mapping of common Catia filename characters: </p>
 <dl>
 <dd>
@@ -37,7 +37,7 @@ description: "vfs_catia – translate illegal characters in Catia filenames"
  m[blue]<code>path = /data/cad</code>m[]
  m[blue]<code>vfs objects = catia</code>m[]
  m[blue]<code>catia:mappings = 0x22:0xa8,0x2a:0xa4,0x2f:0xf8,0x3a:0xf7,0x3c:0xab,0x3e:0xbb,0x3f:0xbf,0x5c:0xff,0x7c:0xa6</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> Server-side filename to be translated (Note that the path delimiter &quot;/&quot; is not used here): </p>
 <p> a:a*a?a&quot;a&lt;a&gt;a|a </p>
 <p> Resulting filename, as seen by the client: </p>
@@ -51,7 +51,7 @@ description: "vfs_catia – translate illegal characters in Catia filenames"
  m[blue]<code>path = /data/cad</code>m[]
  m[blue]<code>vfs objects = catia</code>m[]
  m[blue]<code>catia:mappings = 0x3a:0x5f</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> Here the colon &quot;:&quot; is mapped to the underscore &quot;_&quot;. </p>
 <p> Assuming a server-side filename &quot;a:should_work&quot;, which is translated to &quot;a_should_work&quot; for the client. </p>
 <p> BUT the reverse mapping from client &quot;a_should_work&quot; to server will result in &quot;a:should:work&quot; &#8211; something like &quot;file not found&quot; will be returned.</p>

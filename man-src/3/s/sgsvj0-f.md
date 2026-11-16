@@ -22,10 +22,10 @@ description: "sgsvj0.f –"
  purpose. It applies Jacobi rotations in the same way as SGESVJ does, but
  it does not check convergence (stopping criterion). Few tuning
  parameters (marked by [TP]) are available for the implementer.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBV</i> </p>
+<dd><i>JOBV</i> </dd>
 <pre> JOBV is CHARACTER*1
  Specifies whether the output from this procedure is used
  to compute the matrix V:
@@ -116,22 +116,22 @@ description: "sgsvj0.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
-<dd>SGSVJ0 is used just to enable SGESVJ to call a simplified version of itself to work on a submatrix of the original matrix.</dl>
+<dd>SGSVJ0 is used just to enable SGESVJ to call a simplified version of itself to work on a submatrix of the original matrix.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+<dd>Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl>
 <p> <code>Bugs, Examples and Comments: </code></p>
 <dl>
-<dd>Please report all bugs and send interesting test examples and comments to drmac [at] math.hr. Thank you.</dl>
+<dd>Please report all bugs and send interesting test examples and comments to drmac [at] math.hr. Thank you.</dd></dl>
 <p> Definition at line 218 of file sgsvj0.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

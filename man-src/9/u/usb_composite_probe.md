@@ -14,7 +14,7 @@ description: "usb_composite_probe – register a composite driver"
 <p><i>driver</i></p>
 <dl>
 <dd>
-<dd>the driver to register</dl>
+</dd><dd>the driver to register</dd></dl>
 <h2>Context</h2>
 <p>single threaded during gadget setup</p>
 <h2>Description</h2>
@@ -23,5 +23,5 @@ description: "usb_composite_probe – register a composite driver"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

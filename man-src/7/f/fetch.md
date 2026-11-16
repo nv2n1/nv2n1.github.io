@@ -28,49 +28,49 @@ where <i>direction</i> can be empty or one of:
 <h2>Description</h2>
 <p><code>FETCH</code> retrieves rows using a previously-created cursor. A cursor has an associated position, which is used by <code>FETCH</code>. The cursor position can be before the first row of the query result, on any particular row of the result, or after the last row of the result. When created, a cursor is positioned before the first row. After fetching some rows, the cursor is positioned on the row most recently retrieved. If <code>FETCH</code> runs off the end of the available rows then the cursor is left positioned after the last row, or before the first row if fetching backward. <code>FETCH ALL</code> or <code>FETCH BACKWARD ALL</code> will always leave the cursor positioned after the last row or before the first row. The forms NEXT, PRIOR, FIRST, LAST, ABSOLUTE, RELATIVE fetch a single row after moving the cursor appropriately. If there is no such row, an empty result is returned, and the cursor is left positioned before the first row or after the last row as appropriate. The forms using FORWARD and BACKWARD retrieve the indicated number of rows moving in the forward or backward direction, leaving the cursor positioned on the last-returned row (or after/before all rows, if the <i>count</i> exceeds the number of rows available). RELATIVE 0, FORWARD 0, and BACKWARD 0 all request fetching the current row without moving the cursor, that is, re-fetching the most recently fetched row. This will succeed unless the cursor is positioned before the first row or after the last row; in which case, no row is returned.</p>
 <dl>
-<dd><code>Note:</code> This page describes usage of cursors at the SQL command level. If you are trying to use cursors inside a <code>PL/pgSQL</code> function, the rules are different &#8212; see in the documentation.</dl>
+<dd><code>Note:</code> This page describes usage of cursors at the SQL command level. If you are trying to use cursors inside a <code>PL/pgSQL</code> function, the rules are different &#8212; see in the documentation.</dd></dl>
 <h2>Parameters</h2>
 <dl>
-<dt><i>direction</i></p>
-<dd><i>direction</i> defines the fetch direction and number of rows to fetch. It can be one of the following:</p>
+<dt><i>direction</i></dt>
+<dd><i>direction</i> defines the fetch direction and number of rows to fetch. It can be one of the following:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>NEXT</code></p>
-<dd>Fetch the next row. This is the default if <i>direction</i> is omitted.</p>
-<dt><code>PRIOR</code></p>
-<dd>Fetch the prior row.</p>
-<dt><code>FIRST</code></p>
-<dd>Fetch the first row of the query (same as ABSOLUTE 1).</p>
-<dt><code>LAST</code></p>
-<dd>Fetch the last row of the query (same as ABSOLUTE -1).</p>
-<dt><code>ABSOLUTE </code><i>count</i></p>
-<dd>Fetch the <i>count</i>&#8216;th row of the query, or the abs(<i>count</i>)&#8217;th row from the end if <i>count</i> is negative. Position before first row or after last row if <i>count</i> is out of range; in particular, ABSOLUTE 0 positions before the first row.</p>
-<dt><code>RELATIVE </code><i>count</i></p>
-<dd>Fetch the <i>count</i>&#8216;th succeeding row, or the abs(<i>count</i>)&#8217;th prior row if <i>count</i> is negative. RELATIVE 0 re-fetches the current row, if any.</p>
-<dt><i>count</i></p>
-<dd>Fetch the next <i>count</i> rows (same as FORWARD <i>count</i>).</p>
-<dt><code>ALL</code></p>
-<dd>Fetch all remaining rows (same as FORWARD ALL).</p>
-<dt><code>FORWARD</code></p>
-<dd>Fetch the next row (same as NEXT).</p>
-<dt><code>FORWARD </code><i>count</i></p>
-<dd>Fetch the next <i>count</i> rows. FORWARD 0 re-fetches the current row.</p>
-<dt><code>FORWARD ALL</code></p>
-<dd>Fetch all remaining rows.</p>
-<dt><code>BACKWARD</code></p>
-<dd>Fetch the prior row (same as PRIOR).</p>
-<dt><code>BACKWARD </code><i>count</i></p>
-<dd>Fetch the prior <i>count</i> rows (scanning backwards). BACKWARD 0 re-fetches the current row.</p>
-<dt><code>BACKWARD ALL</code></p>
-<dd>Fetch all prior rows (scanning backwards).</dl>
+</dd><dl>
+<dt><code>NEXT</code></dt>
+<dd>Fetch the next row. This is the default if <i>direction</i> is omitted.</dd>
+<dt><code>PRIOR</code></dt>
+<dd>Fetch the prior row.</dd>
+<dt><code>FIRST</code></dt>
+<dd>Fetch the first row of the query (same as ABSOLUTE 1).</dd>
+<dt><code>LAST</code></dt>
+<dd>Fetch the last row of the query (same as ABSOLUTE -1).</dd>
+<dt><code>ABSOLUTE </code><i>count</i></dt>
+<dd>Fetch the <i>count</i>&#8216;th row of the query, or the abs(<i>count</i>)&#8217;th row from the end if <i>count</i> is negative. Position before first row or after last row if <i>count</i> is out of range; in particular, ABSOLUTE 0 positions before the first row.</dd>
+<dt><code>RELATIVE </code><i>count</i></dt>
+<dd>Fetch the <i>count</i>&#8216;th succeeding row, or the abs(<i>count</i>)&#8217;th prior row if <i>count</i> is negative. RELATIVE 0 re-fetches the current row, if any.</dd>
+<dt><i>count</i></dt>
+<dd>Fetch the next <i>count</i> rows (same as FORWARD <i>count</i>).</dd>
+<dt><code>ALL</code></dt>
+<dd>Fetch all remaining rows (same as FORWARD ALL).</dd>
+<dt><code>FORWARD</code></dt>
+<dd>Fetch the next row (same as NEXT).</dd>
+<dt><code>FORWARD </code><i>count</i></dt>
+<dd>Fetch the next <i>count</i> rows. FORWARD 0 re-fetches the current row.</dd>
+<dt><code>FORWARD ALL</code></dt>
+<dd>Fetch all remaining rows.</dd>
+<dt><code>BACKWARD</code></dt>
+<dd>Fetch the prior row (same as PRIOR).</dd>
+<dt><code>BACKWARD </code><i>count</i></dt>
+<dd>Fetch the prior <i>count</i> rows (scanning backwards). BACKWARD 0 re-fetches the current row.</dd>
+<dt><code>BACKWARD ALL</code></dt>
+<dd>Fetch all prior rows (scanning backwards).</dd></dl>
 </dl>
 </dl>
 <dl>
-<dt><i>count</i></p>
-<dd><i>count</i> is a possibly-signed integer constant, determining the location or number of rows to fetch. For FORWARD and BACKWARD cases, specifying a negative <i>count</i> is equivalent to changing the sense of FORWARD and BACKWARD.</p>
-<dt><i>cursorname</i></p>
-<dd>An open cursor&#8217;s name.</dl>
+<dt><i>count</i></dt>
+<dd><i>count</i> is a possibly-signed integer constant, determining the location or number of rows to fetch. For FORWARD and BACKWARD cases, specifying a negative <i>count</i> is equivalent to changing the sense of FORWARD and BACKWARD.</dd>
+<dt><i>cursorname</i></dt>
+<dd>An open cursor&#8217;s name.</dd></dl>
 <h2>Outputs</h2>
 <p>On successful completion, a <code>FETCH</code> command returns a command tag of the form </p>
 <pre>FETCH <i>count</i></pre>

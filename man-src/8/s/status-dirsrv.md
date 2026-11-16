@@ -14,14 +14,14 @@ description: "status-dirsrv – script for showing the status of Directory Serve
 <p>status-dirsrv shows all the status of Directory Server instances on a system, or of a single instance if specified </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&lt;instance&gt;</code></p>
+<dt><code>&lt;instance&gt;</code></dt>
 <dd>Specifies a single Directory Server instance to show the status
-</dl>
+</dd></dl>
 <h2>Usage</h2>
 <p>Sample usage:</p>
 <dl>
-<dt><code>status-dirsrv example</code></p>
-<dd></dl>
+<dt><code>status-dirsrv example</code></dt>
+<dd></dd></dl>
 <h2>Exit Status</h2>
 <p>status-dirsrv returns 0 if all Directory Server instances are running. Otherwise, it returns a positive value which represents the number of server instances which are not running. </p>
 <p> If a single Directory Server instance is specified, 0 is returned if the instance is running; 1 is returned if the instance is not running; 255 is returned if the instance does not exist.</p>

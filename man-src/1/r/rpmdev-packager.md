@@ -14,22 +14,22 @@ description: "rpmdev-packager – manual page for rpmdev-packager version 1.1"
 <h2>DESCRIPTION</h2>
 <p> rpmdev-packager guesses rpm packager info from various sources:</p>
 <dl>
-<dt>$RPM_PACKAGER</p>
-<dd> from environment (full name + email address)</p>
-<dt>%packager</p>
-<dd> from rpm configuration (full name + email address)</p>
-<dt><i>/etc/passwd</i></p>
-<dd> gecos (full name)</p>
-<dt>certificates</p>
-<dd> ~/.fedora.cert (email address)</p>
-<dt>$MAILTO</p>
-<dd> from environment (email address)</dl>
+<dt>$RPM_PACKAGER</dt>
+<dd> from environment (full name + email address)</dd>
+<dt>%packager</dt>
+<dd> from rpm configuration (full name + email address)</dd>
+<dt><i>/etc/passwd</i></dt>
+<dd> gecos (full name)</dd>
+<dt>certificates</dt>
+<dd> ~/.fedora.cert (email address)</dd>
+<dt>$MAILTO</dt>
+<dd> from environment (email address)</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help message and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help message and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt;, component rpmdevtools, or at &lt;<a rel="nofollow" href="https://fedorahosted.org/rpmdevtools/">https://fedorahosted.org/rpmdevtools/</a>&gt;.</p>
 <h2>COPYRIGHT</h2>

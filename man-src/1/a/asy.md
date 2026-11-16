@@ -21,220 +21,220 @@ description: "asy – Asymptote: a script-based vector graphics language"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;batchView=true; </p>
 <p> For a complete description, see the Info files.</p>
 <dl>
-<dt><code>-GPUindexing </code></p>
-<dd> Compute indexing partial sums on GPU [true].</p>
-<dt><code>-GPUinterlock </code></p>
-<dd> Use fragment shader interlock [true].</p>
-<dt><code>-V,-View </code></p>
-<dd> View output; command-line only.</p>
-<dt><code>-absolute </code></p>
-<dd> Use absolute WebGL dimensions [false].</p>
-<dt><code>-a,-align C|B|T|Z </code></p>
-<dd> Center, Bottom, Top, or Zero page alignment [C].</p>
-<dt><code>-aligndir pair </code></p>
-<dd> Directional page alignment (overrides align) [(0,0)].</p>
-<dt><code>-antialias n </code></p>
-<dd> Antialiasing width for rasterized output [2].</p>
-<dt><code>-auto3D </code></p>
-<dd> Automatically activate 3D scene [true].</p>
-<dt><code>-autobillboard </code></p>
-<dd> 3D labels always face viewer by default [true].</p>
-<dt><code>-autoimport string </code></p>
-<dd> Module to automatically import.</p>
-<dt><code>-autoplain </code></p>
-<dd> Enable automatic importing of plain [true].</p>
-<dt><code>-autoplay </code></p>
-<dd> Autoplay 3D animations [false].</p>
-<dt><code>-autorotate </code></p>
-<dd> Enable automatic PDF page rotation [false].</p>
-<dt><code>-axes3 </code></p>
-<dd> Show 3D axes in PDF output [true].</p>
-<dt><code>-batchMask </code></p>
-<dd> Mask fpu exceptions in batch mode [false].</p>
-<dt><code>-batchView </code></p>
-<dd> View output in batch mode [false].</p>
-<dt><code>-bw </code></p>
-<dd> Convert all colors to black and white [false].</p>
-<dt><code>-cd directory </code></p>
-<dd> Set current directory; command-line only.</p>
-<dt><code>-cmyk </code></p>
-<dd> Convert rgb colors to cmyk [false].</p>
-<dt><code>-c,-command string </code></p>
-<dd> Command to autoexecute.</p>
-<dt><code>-compact </code></p>
-<dd> Conserve memory at the expense of speed [false].</p>
-<dt><code>-compress </code></p>
-<dd> Compress images in PDF output [true].</p>
-<dt><code>-d,-debug </code></p>
-<dd> Enable debugging messages [false].</p>
-<dt><code>-devicepixelratio n </code></p>
-<dd> Ratio of physical to logical pixels [1].</p>
-<dt><code>-digits n </code></p>
-<dd> Default output file precision [7].</p>
-<dt><code>-divisor n </code></p>
-<dd> Garbage collect using purge(divisor=n) [2].</p>
-<dt><code>-dvisvgmMultipleFiles</code></p>
-<dd> dvisvgm supports multiple files [false].</p>
-<dt><code>-embed </code></p>
-<dd> Embed rendered preview image [true].</p>
-<dt><code>-exitonEOF </code></p>
-<dd> Exit interactive mode on EOF [true].</p>
-<dt><code>-fitscreen </code></p>
-<dd> Fit rendered image to screen [true].</p>
-<dt><code>-framedelay ms </code></p>
-<dd> Additional frame delay [0].</p>
-<dt><code>-framerate frames/s </code></p>
-<dd> Animation speed [30].</p>
-<dt><code>-globalread </code></p>
-<dd> Allow read from other directory [true].</p>
-<dt><code>-globalwrite </code></p>
-<dd> Allow write to other directory [false].</p>
-<dt><code>-gray </code></p>
-<dd> Convert all colors to grayscale [false].</p>
-<dt><code>-h,-help </code></p>
-<dd> Show summary of options; command-line only.</p>
-<dt><code>-historylines n </code></p>
-<dd> Retain n lines of history [1000].</p>
-<dt><code>-ibl </code></p>
-<dd> Enable environment map image-based lighting [false].</p>
-<dt><code>-iconify </code></p>
-<dd> Iconify rendering window [false].</p>
-<dt><code>-image string </code></p>
-<dd> Environment image name [snowyField].</p>
-<dt><code>-imageDir string </code></p>
-<dd> Environment image library directory [ibl].</p>
-<dt><code>-inlineimage </code></p>
-<dd> Generate inline embedded image [false].</p>
-<dt><code>-inlinetex </code></p>
-<dd> Generate inline TeX code [false].</p>
-<dt><code>-interactiveMask </code></p>
-<dd> Mask fpu exceptions in interactive mode [true].</p>
-<dt><code>-interactiveView </code></p>
-<dd> View output in interactive mode [true].</p>
-<dt><code>-interactiveWrite </code></p>
-<dd> Write expressions entered at the prompt to stdout [true].</p>
-<dt><code>-k,-keep </code></p>
-<dd> Keep intermediate files [false].</p>
-<dt><code>-keepaux </code></p>
-<dd> Keep intermediate LaTeX .aux files [false].</p>
-<dt><code>-level n </code></p>
-<dd> Postscript level [3].</p>
-<dt><code>-l,-listvariables </code></p>
-<dd> List available global functions and variables [false].</p>
-<dt><code>-localhistory </code></p>
-<dd> Use a local interactive history file [false].</p>
-<dt><code>-loop </code></p>
-<dd> Loop 3D animations [false].</p>
-<dt><code>-lossy </code></p>
-<dd> Use single precision for V3D reals [false].</p>
-<dt><code>-lsp </code></p>
-<dd> Interactive mode for the Language Server Protocol [false].</p>
-<dt><code>-m,-mask </code></p>
-<dd> Mask fpu exceptions; command-line only.</p>
-<dt><code>-maxtile pair </code></p>
-<dd> Maximum rendering tile size [(1024,768)].</p>
-<dt><code>-maxviewport pair </code></p>
-<dd> Maximum viewport size [(0,0)].</p>
-<dt><code>-multiline </code></p>
-<dd> Input code over multiple lines at the prompt [false].</p>
-<dt><code>-multipleView </code></p>
-<dd> View output from multiple batch-mode files [false].</p>
-<dt><code>-multisample n </code></p>
-<dd> Multisampling width for screen images [4].</p>
-<dt><code>-offline </code></p>
-<dd> Produce offline html files [false].</p>
-<dt><code>-O,-offset pair </code></p>
-<dd> PostScript offset [(0,0)].</p>
-<dt><code>-f,-outformat format </code></p>
-<dd> Convert each output file to specified format.</p>
-<dt><code>-o,-outname name </code></p>
-<dd> Alternative output directory/filename.</p>
-<dt><code>-p,-parseonly </code></p>
-<dd> Parse file [false].</p>
-<dt><code>-pdfreload </code></p>
-<dd> Automatically reload document in pdfviewer [false].</p>
-<dt><code>-pdfreloaddelay usec </code></p>
-<dd> Delay before attempting initial pdf reload [750000].</p>
-<dt><code>-position pair </code></p>
-<dd> Initial 3D rendering screen position [(0,0)].</p>
-<dt><code>-prc </code></p>
-<dd> Embed 3D PRC graphics in PDF output [false].</p>
-<dt><code>-prerender resolution</code></p>
-<dd> Prerender V3D objects (0 implies vector output) [0].</p>
-<dt><code>-prompt string </code></p>
-<dd> Prompt [&gt; ].</p>
-<dt><code>-prompt2 string </code></p>
-<dd> Continuation prompt for multiline input [..].</p>
-<dt><code>-q,-quiet </code></p>
-<dd> Suppress welcome text and noninteractive stdout [false].</p>
-<dt><code>-render n </code></p>
-<dd> Render 3D graphics using n pixels per bp (-1=auto) [-1].</p>
-<dt><code>-resizestep step </code></p>
-<dd> Resize step [1.2].</p>
-<dt><code>-reverse </code></p>
-<dd> reverse 3D animations [false].</p>
-<dt><code>-rgb </code></p>
-<dd> Convert cmyk colors to rgb [false].</p>
-<dt><code>-safe </code></p>
-<dd> Disable system call [true].</p>
-<dt><code>-scroll n </code></p>
-<dd> Scroll standard output n lines at a time [0].</p>
-<dt><code>-shiftHoldDistance n </code></p>
-<dd> WebGL touch screen distance limit for shift mode [20].</p>
-<dt><code>-shiftWaitTime ms </code></p>
-<dd> WebGL touch screen shift mode delay [200].</p>
-<dt><code>-spinstep deg/s </code></p>
-<dd> Spin speed [60].</p>
-<dt><code>-svgemulation </code></p>
-<dd> Emulate unimplemented SVG shading [true].</p>
-<dt><code>-tabcompletion </code></p>
-<dd> Interactive prompt auto-completion [true].</p>
-<dt><code>-tex engine </code></p>
-<dd> latex|pdflatex|xelatex|lualatex|tex|pdftex|luatex|context|none [latex].</p>
-<dt><code>-thick </code></p>
-<dd> Render thick 3D lines [true].</p>
-<dt><code>-thin </code></p>
-<dd> Render thin 3D lines [true].</p>
-<dt><code>-threads </code></p>
-<dd> Use POSIX threads for 3D rendering [true].</p>
-<dt><code>-toolbar </code></p>
-<dd> Show 3D toolbar in PDF output [true].</p>
-<dt><code>-s,-translate </code></p>
-<dd> Show translated virtual machine code [false].</p>
-<dt><code>-twice </code></p>
-<dd> Run LaTeX twice (to resolve references) [false].</p>
-<dt><code>-twosided </code></p>
-<dd> Use two-sided 3D lighting model for rendering [true].</p>
-<dt><code>-u,-user string </code></p>
-<dd> General purpose user string.</p>
-<dt><code>-v,-verbose </code></p>
-<dd> Increase verbosity level (can specify multiple times) [0].</p>
-<dt><code>-version </code></p>
-<dd> Show version; command-line only.</p>
-<dt><code>-vibrateTime ms </code></p>
-<dd> WebGL shift mode vibrate duration [25].</p>
-<dt><code>-viewportmargin pair </code></p>
-<dd> Horizontal and vertical 3D viewport margin [(0.5,0.5)].</p>
-<dt><code>-wait </code></p>
-<dd> Wait for child processes to finish before exiting [false].</p>
-<dt><code>-warn string </code></p>
-<dd> Enable warning; command-line only.</p>
-<dt><code>-webgl2 </code></p>
-<dd> Use webgl2 if available [false].</p>
-<dt><code>-where </code></p>
-<dd> Show where listed variables are declared [false].</p>
-<dt><code>-wsl </code></p>
-<dd> Run asy under the Windows Subsystem for Linux. [false].</p>
-<dt><code>-xasy </code></p>
-<dd> Interactive mode for xasy [false].</p>
-<dt><code>-zoomPinchCap limit </code></p>
-<dd> WebGL maximum zoom pinch [100].</p>
-<dt><code>-zoomPinchFactor n </code></p>
-<dd> WebGL zoom pinch sensitivity [10].</p>
-<dt><code>-zoomfactor factor </code></p>
-<dd> Zoom step factor [1.05].</p>
-<dt><code>-zoomstep step </code></p>
-<dd> Mouse motion zoom step [0.1]. </p>
+<dt><code>-GPUindexing </code></dt>
+<dd> Compute indexing partial sums on GPU [true].</dd>
+<dt><code>-GPUinterlock </code></dt>
+<dd> Use fragment shader interlock [true].</dd>
+<dt><code>-V,-View </code></dt>
+<dd> View output; command-line only.</dd>
+<dt><code>-absolute </code></dt>
+<dd> Use absolute WebGL dimensions [false].</dd>
+<dt><code>-a,-align C|B|T|Z </code></dt>
+<dd> Center, Bottom, Top, or Zero page alignment [C].</dd>
+<dt><code>-aligndir pair </code></dt>
+<dd> Directional page alignment (overrides align) [(0,0)].</dd>
+<dt><code>-antialias n </code></dt>
+<dd> Antialiasing width for rasterized output [2].</dd>
+<dt><code>-auto3D </code></dt>
+<dd> Automatically activate 3D scene [true].</dd>
+<dt><code>-autobillboard </code></dt>
+<dd> 3D labels always face viewer by default [true].</dd>
+<dt><code>-autoimport string </code></dt>
+<dd> Module to automatically import.</dd>
+<dt><code>-autoplain </code></dt>
+<dd> Enable automatic importing of plain [true].</dd>
+<dt><code>-autoplay </code></dt>
+<dd> Autoplay 3D animations [false].</dd>
+<dt><code>-autorotate </code></dt>
+<dd> Enable automatic PDF page rotation [false].</dd>
+<dt><code>-axes3 </code></dt>
+<dd> Show 3D axes in PDF output [true].</dd>
+<dt><code>-batchMask </code></dt>
+<dd> Mask fpu exceptions in batch mode [false].</dd>
+<dt><code>-batchView </code></dt>
+<dd> View output in batch mode [false].</dd>
+<dt><code>-bw </code></dt>
+<dd> Convert all colors to black and white [false].</dd>
+<dt><code>-cd directory </code></dt>
+<dd> Set current directory; command-line only.</dd>
+<dt><code>-cmyk </code></dt>
+<dd> Convert rgb colors to cmyk [false].</dd>
+<dt><code>-c,-command string </code></dt>
+<dd> Command to autoexecute.</dd>
+<dt><code>-compact </code></dt>
+<dd> Conserve memory at the expense of speed [false].</dd>
+<dt><code>-compress </code></dt>
+<dd> Compress images in PDF output [true].</dd>
+<dt><code>-d,-debug </code></dt>
+<dd> Enable debugging messages [false].</dd>
+<dt><code>-devicepixelratio n </code></dt>
+<dd> Ratio of physical to logical pixels [1].</dd>
+<dt><code>-digits n </code></dt>
+<dd> Default output file precision [7].</dd>
+<dt><code>-divisor n </code></dt>
+<dd> Garbage collect using purge(divisor=n) [2].</dd>
+<dt><code>-dvisvgmMultipleFiles</code></dt>
+<dd> dvisvgm supports multiple files [false].</dd>
+<dt><code>-embed </code></dt>
+<dd> Embed rendered preview image [true].</dd>
+<dt><code>-exitonEOF </code></dt>
+<dd> Exit interactive mode on EOF [true].</dd>
+<dt><code>-fitscreen </code></dt>
+<dd> Fit rendered image to screen [true].</dd>
+<dt><code>-framedelay ms </code></dt>
+<dd> Additional frame delay [0].</dd>
+<dt><code>-framerate frames/s </code></dt>
+<dd> Animation speed [30].</dd>
+<dt><code>-globalread </code></dt>
+<dd> Allow read from other directory [true].</dd>
+<dt><code>-globalwrite </code></dt>
+<dd> Allow write to other directory [false].</dd>
+<dt><code>-gray </code></dt>
+<dd> Convert all colors to grayscale [false].</dd>
+<dt><code>-h,-help </code></dt>
+<dd> Show summary of options; command-line only.</dd>
+<dt><code>-historylines n </code></dt>
+<dd> Retain n lines of history [1000].</dd>
+<dt><code>-ibl </code></dt>
+<dd> Enable environment map image-based lighting [false].</dd>
+<dt><code>-iconify </code></dt>
+<dd> Iconify rendering window [false].</dd>
+<dt><code>-image string </code></dt>
+<dd> Environment image name [snowyField].</dd>
+<dt><code>-imageDir string </code></dt>
+<dd> Environment image library directory [ibl].</dd>
+<dt><code>-inlineimage </code></dt>
+<dd> Generate inline embedded image [false].</dd>
+<dt><code>-inlinetex </code></dt>
+<dd> Generate inline TeX code [false].</dd>
+<dt><code>-interactiveMask </code></dt>
+<dd> Mask fpu exceptions in interactive mode [true].</dd>
+<dt><code>-interactiveView </code></dt>
+<dd> View output in interactive mode [true].</dd>
+<dt><code>-interactiveWrite </code></dt>
+<dd> Write expressions entered at the prompt to stdout [true].</dd>
+<dt><code>-k,-keep </code></dt>
+<dd> Keep intermediate files [false].</dd>
+<dt><code>-keepaux </code></dt>
+<dd> Keep intermediate LaTeX .aux files [false].</dd>
+<dt><code>-level n </code></dt>
+<dd> Postscript level [3].</dd>
+<dt><code>-l,-listvariables </code></dt>
+<dd> List available global functions and variables [false].</dd>
+<dt><code>-localhistory </code></dt>
+<dd> Use a local interactive history file [false].</dd>
+<dt><code>-loop </code></dt>
+<dd> Loop 3D animations [false].</dd>
+<dt><code>-lossy </code></dt>
+<dd> Use single precision for V3D reals [false].</dd>
+<dt><code>-lsp </code></dt>
+<dd> Interactive mode for the Language Server Protocol [false].</dd>
+<dt><code>-m,-mask </code></dt>
+<dd> Mask fpu exceptions; command-line only.</dd>
+<dt><code>-maxtile pair </code></dt>
+<dd> Maximum rendering tile size [(1024,768)].</dd>
+<dt><code>-maxviewport pair </code></dt>
+<dd> Maximum viewport size [(0,0)].</dd>
+<dt><code>-multiline </code></dt>
+<dd> Input code over multiple lines at the prompt [false].</dd>
+<dt><code>-multipleView </code></dt>
+<dd> View output from multiple batch-mode files [false].</dd>
+<dt><code>-multisample n </code></dt>
+<dd> Multisampling width for screen images [4].</dd>
+<dt><code>-offline </code></dt>
+<dd> Produce offline html files [false].</dd>
+<dt><code>-O,-offset pair </code></dt>
+<dd> PostScript offset [(0,0)].</dd>
+<dt><code>-f,-outformat format </code></dt>
+<dd> Convert each output file to specified format.</dd>
+<dt><code>-o,-outname name </code></dt>
+<dd> Alternative output directory/filename.</dd>
+<dt><code>-p,-parseonly </code></dt>
+<dd> Parse file [false].</dd>
+<dt><code>-pdfreload </code></dt>
+<dd> Automatically reload document in pdfviewer [false].</dd>
+<dt><code>-pdfreloaddelay usec </code></dt>
+<dd> Delay before attempting initial pdf reload [750000].</dd>
+<dt><code>-position pair </code></dt>
+<dd> Initial 3D rendering screen position [(0,0)].</dd>
+<dt><code>-prc </code></dt>
+<dd> Embed 3D PRC graphics in PDF output [false].</dd>
+<dt><code>-prerender resolution</code></dt>
+<dd> Prerender V3D objects (0 implies vector output) [0].</dd>
+<dt><code>-prompt string </code></dt>
+<dd> Prompt [&gt; ].</dd>
+<dt><code>-prompt2 string </code></dt>
+<dd> Continuation prompt for multiline input [..].</dd>
+<dt><code>-q,-quiet </code></dt>
+<dd> Suppress welcome text and noninteractive stdout [false].</dd>
+<dt><code>-render n </code></dt>
+<dd> Render 3D graphics using n pixels per bp (-1=auto) [-1].</dd>
+<dt><code>-resizestep step </code></dt>
+<dd> Resize step [1.2].</dd>
+<dt><code>-reverse </code></dt>
+<dd> reverse 3D animations [false].</dd>
+<dt><code>-rgb </code></dt>
+<dd> Convert cmyk colors to rgb [false].</dd>
+<dt><code>-safe </code></dt>
+<dd> Disable system call [true].</dd>
+<dt><code>-scroll n </code></dt>
+<dd> Scroll standard output n lines at a time [0].</dd>
+<dt><code>-shiftHoldDistance n </code></dt>
+<dd> WebGL touch screen distance limit for shift mode [20].</dd>
+<dt><code>-shiftWaitTime ms </code></dt>
+<dd> WebGL touch screen shift mode delay [200].</dd>
+<dt><code>-spinstep deg/s </code></dt>
+<dd> Spin speed [60].</dd>
+<dt><code>-svgemulation </code></dt>
+<dd> Emulate unimplemented SVG shading [true].</dd>
+<dt><code>-tabcompletion </code></dt>
+<dd> Interactive prompt auto-completion [true].</dd>
+<dt><code>-tex engine </code></dt>
+<dd> latex|pdflatex|xelatex|lualatex|tex|pdftex|luatex|context|none [latex].</dd>
+<dt><code>-thick </code></dt>
+<dd> Render thick 3D lines [true].</dd>
+<dt><code>-thin </code></dt>
+<dd> Render thin 3D lines [true].</dd>
+<dt><code>-threads </code></dt>
+<dd> Use POSIX threads for 3D rendering [true].</dd>
+<dt><code>-toolbar </code></dt>
+<dd> Show 3D toolbar in PDF output [true].</dd>
+<dt><code>-s,-translate </code></dt>
+<dd> Show translated virtual machine code [false].</dd>
+<dt><code>-twice </code></dt>
+<dd> Run LaTeX twice (to resolve references) [false].</dd>
+<dt><code>-twosided </code></dt>
+<dd> Use two-sided 3D lighting model for rendering [true].</dd>
+<dt><code>-u,-user string </code></dt>
+<dd> General purpose user string.</dd>
+<dt><code>-v,-verbose </code></dt>
+<dd> Increase verbosity level (can specify multiple times) [0].</dd>
+<dt><code>-version </code></dt>
+<dd> Show version; command-line only.</dd>
+<dt><code>-vibrateTime ms </code></dt>
+<dd> WebGL shift mode vibrate duration [25].</dd>
+<dt><code>-viewportmargin pair </code></dt>
+<dd> Horizontal and vertical 3D viewport margin [(0.5,0.5)].</dd>
+<dt><code>-wait </code></dt>
+<dd> Wait for child processes to finish before exiting [false].</dd>
+<dt><code>-warn string </code></dt>
+<dd> Enable warning; command-line only.</dd>
+<dt><code>-webgl2 </code></dt>
+<dd> Use webgl2 if available [false].</dd>
+<dt><code>-where </code></dt>
+<dd> Show where listed variables are declared [false].</dd>
+<dt><code>-wsl </code></dt>
+<dd> Run asy under the Windows Subsystem for Linux. [false].</dd>
+<dt><code>-xasy </code></dt>
+<dd> Interactive mode for xasy [false].</dd>
+<dt><code>-zoomPinchCap limit </code></dt>
+<dd> WebGL maximum zoom pinch [100].</dd>
+<dt><code>-zoomPinchFactor n </code></dt>
+<dd> WebGL zoom pinch sensitivity [10].</dd>
+<dt><code>-zoomfactor factor </code></dt>
+<dd> Zoom step factor [1.05].</dd>
+<dt><code>-zoomstep step </code></dt>
+<dd> Mouse motion zoom step [0.1]. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Asymptote is documented fully in the asymptote Info page. The manual can also be accessed in interactive mode with the &quot;help&quot; command. </p>

@@ -25,132 +25,132 @@ description: "rmt – remote magnetic tape server"
 <dl>
 <dt><code>O</code><i>device</i><code>
 </code><i>flags</i><code>
-</code></p>
-<dd>Opens the <i>device</i> with given <i>flags</i>. If a device had already been opened, it is closed before opening the new one. </p>
+</code></dt>
+<dd>Opens the <i>device</i> with given <i>flags</i>. If a device had already been opened, it is closed before opening the new one. </dd>
 <p> <code>Arguments</code></p>
 <dl>
 <dd>
+</dd><dl>
+<dt><i>device</i></dt>
+<dd>The name of the device to open.</dd>
+<dt><i>flags</i></dt>
+<dd>Flags for <code><a href="/docs/linux/man/2-open/">open</a></code>(2): a decimal number, or any valid <code>O_*</code> constant from <code>fcntl.h</code> (the initial <code>O_</code> may be omitted), or a bitwise or (using <code>|</code>) of any number of these, e.g.: 576 64|512 CREAT|TRUNC</dd>
 <dl>
-<dt><i>device</i></p>
-<dd>The name of the device to open.</p>
-<dt><i>flags</i></p>
-<dd>Flags for <code><a href="/docs/linux/man/2-open/">open</a></code>(2): a decimal number, or any valid <code>O_*</code> constant from <code>fcntl.h</code> (the initial <code>O_</code> may be omitted), or a bitwise or (using <code>|</code>) of any number of these, e.g.: 576 64|512 CREAT|TRUNC</p>
-<dl>
-<dd>In addition, a combined form is also allowed, i.e. a decimal mode followed by its symbolic representation. In this case the symbolic representation is given preference.</dl>
+<dd>In addition, a combined form is also allowed, i.e. a decimal mode followed by its symbolic representation. In this case the symbolic representation is given preference.</dd></dl>
 <p> <code>Reply</code></p>
 <dl>
 <dd><code>A0
-</code> on success.</dl>
+</code> on success.</dd></dl>
 <p> <code>Extensions</code></p>
 <dl>
-<dd>BSD version allows only decimal number as <i>flags</i>.</dl>
+<dd>BSD version allows only decimal number as <i>flags</i>.</dd></dl>
 <dt><code>C</code>[<i>device</i>]<code>
-</code></p>
-<dd>Close the currently open device.</p>
+</code></dt>
+<dd>Close the currently open device.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Arguments</code></p>
-<dd>Any arguments are silently ignored.</p>
-<dt><code>Reply</code></p>
+</dd><dl>
+<dt><code>Arguments</code></dt>
+<dd>Any arguments are silently ignored.</dd>
+<dt><code>Reply</code></dt>
 <dd><code>A0
-</code> on success.</dl>
+</code> on success.</dd></dl>
 </dl>
 <dt><code>L</code><i>whence</i><code>
 </code><i>offset</i><code>
-</code></p>
+</code></dt>
 <dd>
+</dd><dl>
+<dd>Performs an <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2) on the currently open device with the specified parameters.</dd>
 <dl>
-<dd>Performs an <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2) on the currently open device with the specified parameters.</p>
-<dl>
-<dt><code>Arguments</code></p>
+<dt><code>Arguments</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>whence</i></p>
-<dd>Where to measure offset from. Valid values are: </p>
+</dd><dl>
+<dt><i>whence</i></dt>
+<dd>Where to measure offset from. Valid values are: </dd>
 <pre> 0, SET, SEEK_SET seek from the file beginning
  1, CUR, SEEK_CUR seek from the current location
  2, END, SEEK_END seek from the file end</pre>
 </dl>
 </dl>
-<dt><code>Reply</code></p>
+<dt><code>Reply</code></dt>
 <dd><code>A</code><i>offset</i><code>
-</code> on success. The <i>offset</i> is the new offset in file.</p>
-<dt><code>Extensions</code></p>
-<dd>BSD version allows only 0,1,2 as <i>whence</i>.</dl>
+</code> on success. The <i>offset</i> is the new offset in file.</dd>
+<dt><code>Extensions</code></dt>
+<dd>BSD version allows only 0,1,2 as <i>whence</i>.</dd></dl>
 </dl>
 <dt><code>R</code><i>count</i><code>
-</code></p>
-<dd>Read <i>count</i> bytes of data from the current device.</p>
+</code></dt>
+<dd>Read <i>count</i> bytes of data from the current device.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Arguments</code></p>
+</dd><dl>
+<dt><code>Arguments</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>count</i></p>
-<dd>number of bytes to read.</dl>
+</dd><dl>
+<dt><i>count</i></dt>
+<dd>number of bytes to read.</dd></dl>
 </dl>
-<dt><code>Reply</code></p>
-<dd>On success: </p>
+<dt><code>Reply</code></dt>
+<dd>On success: </dd>
 <p> <code>A</code><i>rdcount</i><code>
 </code> </p>
 <p> followed by <i>rdcount</i> bytes of data read from the device.</dl>
 </dl>
 <dt><code>W</code><i>count</i><code>
-</code></p>
-<dd>Writes data onto the current device. The command is followed by <i>count</i> bytes of input data.</p>
+</code></dt>
+<dd>Writes data onto the current device. The command is followed by <i>count</i> bytes of input data.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Arguments</code></p>
+</dd><dl>
+<dt><code>Arguments</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>count</i></p>
-<dd>Number of bytes to write.</dl>
+</dd><dl>
+<dt><i>count</i></dt>
+<dd>Number of bytes to write.</dd></dl>
 </dl>
-<dt><code>Reply</code></p>
+<dt><code>Reply</code></dt>
 <dd>On success: <code>A</code><i>wrcount</i><code>
-</code>, where <i>wrcount</i> is the number of bytes actually written.</dl>
+</code>, where <i>wrcount</i> is the number of bytes actually written.</dd></dl>
 </dl>
 <dt><code>I</code><i>opcode</i><code>
 </code><i>count</i><code>
-</code></p>
-<dd>Perform a <code>MTIOCOP</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) command with the specified paramedters.</p>
+</code></dt>
+<dd>Perform a <code>MTIOCOP</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) command with the specified paramedters.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Arguments</code></p>
+</dd><dl>
+<dt><code>Arguments</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>opcode</i></p>
-<dd><code>MTIOCOP</code> operation code.</p>
-<dt><i>count</i></p>
-<dd>mt_count.</dl>
+</dd><dl>
+<dt><i>opcode</i></dt>
+<dd><code>MTIOCOP</code> operation code.</dd>
+<dt><i>count</i></dt>
+<dd>mt_count.</dd></dl>
 </dl>
-<dt><code>Reply</code></p>
+<dt><code>Reply</code></dt>
 <dd>On success: <code>A0
-</code>.</dl>
+</code>.</dd></dl>
 </dl>
 <dt><code>S
-</code></p>
-<dd>Returns the status of the currently open device, as obtained from a <code>MTIOCGET</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) call.</p>
+</code></dt>
+<dd>Returns the status of the currently open device, as obtained from a <code>MTIOCGET</code> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) call.</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Arguments</code></p>
-<dd>None</p>
-<dt><code>Reply</code></p>
+</dd><dl>
+<dt><code>Arguments</code></dt>
+<dd>None</dd>
+<dt><code>Reply</code></dt>
 <dd>On success: <code>A</code><i>count</i><code>
-</code> followed by <i>count</i> bytes of data.</dl>
+</code> followed by <i>count</i> bytes of data.</dd></dl>
 </dl>
 </dl>
 </dl>

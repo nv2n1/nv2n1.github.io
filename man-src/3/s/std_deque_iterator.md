@@ -25,66 +25,21 @@ description: "std::_Deque_iterator< _Tp, _Ref, _Ptr > –"
 <p> typedef _Tp <code>value_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>_Deque_iterator (_Tp *__x, _Map_pointer __y)
-
-
-
 _Deque_iterator (const iterator &amp;__x)
-
-
-
 void _M_set_node (_Map_pointer __new_node)
-
-
-
 reference operator* () const
-
-
-
 _Self operator+ (difference_type __n) const
-
-
-
 _Self &amp; operator++ ()
-
-
-
 _Self operator++ (int)
-
-
-
 _Self &amp; operator+= (difference_type __n)
-
-
-
 _Self operator- (difference_type __n) const
-
-
-
 _Self &amp; operator-- ()
-
-
-
 _Self operator-- (int)
-
-
-
 _Self &amp; operator-= (difference_type __n)
-
-
-
 pointer operator-&gt; () const
-
-
-
 reference operator[] (difference_type __n) const
-
-
-
 Static Public Member Functions
 static size_t _S_buffer_size ()
-
-
-
 Public Attributes</code></pre>
 <p> _Tp * <code>_M_cur</code> </p>
 <p> _Tp * <code>_M_first</code> </p>

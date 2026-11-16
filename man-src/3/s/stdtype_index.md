@@ -52,15 +52,10 @@ std::hash&lt;std::type_index&gt; hash support for std::type_index
 
 The following program is an example of an efficient type-value mapping. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;typeinfo&gt;
-
 #include &lt;typeindex&gt;
-
 #include &lt;unordered_map&gt;
-
 #include &lt;string&gt;
-
 #include &lt;memory&gt;
 struct A {
     virtual ~A()
@@ -69,11 +64,9 @@ struct A {
 };
 struct B : A {
 };
-
 struct C : A {
 };
 int main()
-
 {
     std::unordered_map&lt;std::type_index, std::string&gt; type_names;
     type_names[std::type_index(typeid(int))] = &quot;int&quot;;

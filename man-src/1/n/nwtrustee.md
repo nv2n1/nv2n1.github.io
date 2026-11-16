@@ -18,43 +18,43 @@ description: "nwtrustee – List an object’s trustee directory assignments"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> <code>-h</code> is used to print out a short help text.</dl>
+</dt><dd> <code>-h</code> is used to print out a short help text.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> <code>server</code> is the name of the server you want to use.</dl>
+</dt><dd> <code>server</code> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user</i></p>
 <dl>
 <dt>
-<dd> <code>user</code> is the user name to use for login.</dl>
+</dt><dd> <code>user</code> is the user name to use for login.</dd></dl>
 <p> <code>-P</code> <i>password</i></p>
 <dl>
 <dt>
-<dd> <code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwtrustee prompts for a password.</dl>
+</dt><dd> <code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwtrustee prompts for a password.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> <code>-n</code> should be given if no password is required for the login.</dl>
+</dt><dd> <code>-n</code> should be given if no password is required for the login.</dd></dl>
 <p> <code>-C</code></p>
 <dl>
 <dt>
-<dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dl>
+</dt><dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dd></dl>
 <p> <code>-O</code> <i>object id</i></p>
 <dl>
 <dt>
-<dd> The bindery object id of the user whose assignments should be listed. Alternatively, use -o object name.</dl>
+</dt><dd> The bindery object id of the user whose assignments should be listed. Alternatively, use -o object name.</dd></dl>
 <p> <code>-o</code> <i>object name</i></p>
 <dl>
 <dt>
-<dd> The name of the user whose assignments should be listed.</dl>
+</dt><dd> The name of the user whose assignments should be listed.</dd></dl>
 <p> <code>-t</code> <i>object type</i></p>
 <dl>
 <dt>
-<dd> The type of object whose assignments should be listed. This defaults to 1, which means user. Another sensible value is 2, which means group.</dl>
+</dt><dd> The type of object whose assignments should be listed. This defaults to 1, which means user. Another sensible value is 2, which means group.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Verbose listing. Also list the specific rights that are assigned to the user.</dl>
+</dt><dd> Verbose listing. Also list the specific rights that are assigned to the user.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwtrustee was written by Jacek Stepniewski &lt;cunio [at] gazeta.pl&gt;. This manual page was written by Volker Lendecke. </p>
 <h2>Index</h2>

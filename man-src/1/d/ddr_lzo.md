@@ -56,12 +56,12 @@ description: "ddr_lzo – Data de/compression plugin for dd_rescue"
 <p> While care has been applied to check the result of memory allocations &#8230;, the decompressor code has not been audited and only limited fuzzing has been applied to ensure it&#8217;s not vulnerable to malicious data &#8212; be careful when you process data from untrusted sources.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>dd_rescue -ptAL lzo=algo=lzo1x_1_15:compress,hash=alg=sha256 infile outfile</code></p>
-<dd> compresses data from <i>infile</i> into <i>outfile</i> using the algorithm lzo1x_1_15 and calculates the sha256 hash value of outfile. outfile will have time stamp and access rights copied over from infile and it will be emptied before (if the file happens to exist). The output file won&#8217;t have encoded holes; errors in the infile will result in zeros.</p>
-<dt><code>dd_rescue -aL MD5,lzo=compr:bench,MD5,lzo=decompress,MD5 infile infile2</code></p>
-<dd> will copy <i>infile</i> to <i>infile2</i> compressing the data and decompressing it again on the fly. It will output MD5 hashes for the compressed data as well (though it&#8217;s not stored) and for the two infiles &#8212; the output should be identical, obviously. This command is rather artificial, used for testing. The -a flag makes dd_rescue detect zero blocks and create holes, thus testing hole encoding (sparse files) and decoding as well if the infile has sizable regions filled with zeros.</p>
-<dt><code>dd_rescue -s1M -S0 -L lzo=search,nodiscard infile.lzo outfile</code></p>
-<dd> will search for a lzop block header in infile.lzo starting at position 1MiB into the file and decompress the remainder of the file. On finding corrupted blocks, it will still write the output from the decompressor to outfile.</dl>
+<dt><code>dd_rescue -ptAL lzo=algo=lzo1x_1_15:compress,hash=alg=sha256 infile outfile</code></dt>
+<dd> compresses data from <i>infile</i> into <i>outfile</i> using the algorithm lzo1x_1_15 and calculates the sha256 hash value of outfile. outfile will have time stamp and access rights copied over from infile and it will be emptied before (if the file happens to exist). The output file won&#8217;t have encoded holes; errors in the infile will result in zeros.</dd>
+<dt><code>dd_rescue -aL MD5,lzo=compr:bench,MD5,lzo=decompress,MD5 infile infile2</code></dt>
+<dd> will copy <i>infile</i> to <i>infile2</i> compressing the data and decompressing it again on the fly. It will output MD5 hashes for the compressed data as well (though it&#8217;s not stored) and for the two infiles &#8212; the output should be identical, obviously. This command is rather artificial, used for testing. The -a flag makes dd_rescue detect zero blocks and create holes, thus testing hole encoding (sparse files) and decoding as well if the infile has sizable regions filled with zeros.</dd>
+<dt><code>dd_rescue -s1M -S0 -L lzo=search,nodiscard infile.lzo outfile</code></dt>
+<dd> will search for a lzop block header in infile.lzo starting at position 1MiB into the file and decompress the remainder of the file. On finding corrupted blocks, it will still write the output from the decompressor to outfile.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dd_rescue/">dd_rescue</a></code>(1) <code>liblzo2 documentation</code> <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1)</p>
 <h2>AUTHOR</h2>

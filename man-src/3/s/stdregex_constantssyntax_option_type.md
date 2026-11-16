@@ -11,47 +11,26 @@ std::regex_constants::syntax_option_type - std::regex_constants::syntax_option_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;regex&gt;
-
 typedef /*unspecified*/ syntax_option_type;                        (since C++11)
-
 constexpr syntax_option_type icase = /*unspecified*/;
-
 constexpr syntax_option_type nosubs = /*unspecified*/;
-
 constexpr syntax_option_type optimize = /*unspecified*/;
-
 constexpr syntax_option_type collate = /*unspecified*/;
-
 constexpr syntax_option_type ECMAScript = /*unspecified*/;         (since C++11)
-
 constexpr syntax_option_type basic = /*unspecified*/;              (until C++17)
-
 constexpr syntax_option_type extended = /*unspecified*/;
-
 constexpr syntax_option_type awk = /*unspecified*/;
-
 constexpr syntax_option_type grep = /*unspecified*/;
-
 constexpr syntax_option_type egrep = /*unspecified*/;
-
 inline constexpr syntax_option_type icase = /*unspecified*/;
-
 inline constexpr syntax_option_type nosubs = /*unspecified*/;
-
 inline constexpr syntax_option_type optimize = /*unspecified*/;
-
 inline constexpr syntax_option_type collate = /*unspecified*/;
-
 inline constexpr syntax_option_type ECMAScript = /*unspecified*/;
-
 inline constexpr syntax_option_type basic = /*unspecified*/;       (since C++17)
-
 inline constexpr syntax_option_type extended = /*unspecified*/;
-
 inline constexpr syntax_option_type awk = /*unspecified*/;
-
 inline constexpr syntax_option_type grep = /*unspecified*/;
-
 inline constexpr syntax_option_type egrep = /*unspecified*/;
 inline constexpr syntax_option_type multiline = /*unspecified*/;</code></pre> 
 The syntax_option_type is a BitmaskType that contains options that govern how regular expressions behave. 
@@ -84,12 +63,9 @@ In C++11, these constants were specified with redundant keyword static, which wa
 
 Illustrates the difference in the matching algorithm between ECMAScript and POSIX regular expressions 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;regex&gt;
 int main()
-
 {
     std::string str = &quot;zzxayyzz&quot;;
     std::regex re1(&quot;.*(a|xayy)&quot;);                       // ECMA

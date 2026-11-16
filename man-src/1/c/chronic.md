@@ -30,11 +30,10 @@ url: "/docs/linux/man/1-chronic/"
 
 <dl>
 <dt>-v
-<dd> Verbose output (distinguishes between <font SIZE="-1">STDOUT</font> and <font SIZE="-1">STDERR,</font> also reports <font SIZE="-1">RETVAL</font>)
-<dt>-e
-<dd> Stderr triggering. Triggers output when stderr output length is non-zero. Without -e chronic needs non-zero return value to trigger output. 
-
- In this mode, chronic's return value will be <tt>2</tt> if the command's return value is <tt>0</tt> but the command printed to stderr.</dl>
+</dt><dd> Verbose output (distinguishes between <font SIZE="-1">STDOUT</font> and <font SIZE="-1">STDERR,</font> also reports <font SIZE="-1">RETVAL</font>)
+</dd><dt>-e
+</dt><dd> Stderr triggering. Triggers output when stderr output length is non-zero. Without -e chronic needs non-zero return value to trigger output. 
+ In this mode, chronic's return value will be <tt>2</tt> if the command's return value is <tt>0</tt> but the command printed to stderr.</dd></dl>
 
 <h2>AUTHOR</h2>
 

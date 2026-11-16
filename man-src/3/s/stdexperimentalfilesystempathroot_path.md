@@ -29,12 +29,9 @@ The root path of the path.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     std::cout &lt;&lt; &quot;Current root path is: &quot; &lt;&lt; fs::current_path().root_path() &lt;&lt; '\n';
 }

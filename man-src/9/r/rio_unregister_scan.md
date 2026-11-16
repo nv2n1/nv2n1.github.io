@@ -14,14 +14,14 @@ description: "rio_unregister_scan – removes enumeration/discovery method from 
 <p><i>mport_id</i></p>
 <dl>
 <dd>
-<dd>mport device ID for which fabric scan routine has to be unregistered (RIO_MPORT_ANY = apply to all mports that use the specified scan_ops)</dl>
+</dd><dd>mport device ID for which fabric scan routine has to be unregistered (RIO_MPORT_ANY = apply to all mports that use the specified scan_ops)</dd></dl>
 <p> <i>scan_ops</i></p>
 <dl>
-<dd>enumeration/discovery operations structure</dl>
+<dd>enumeration/discovery operations structure</dd></dl>
 <h2>Description</h2>
 <p>Removes enumeration or discovery method assigned to the specified mport device. If RIO_MPORT_ANY is specified, removes the specified operations from all mports that have them attached.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

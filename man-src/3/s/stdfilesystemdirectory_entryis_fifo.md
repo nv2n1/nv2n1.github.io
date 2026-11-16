@@ -12,7 +12,6 @@ std::filesystem::directory_entry::is_fifo - std::filesystem::directory_entry::is
 
 <pre><code>bool is_fifo() const;
 (since C++ 17)
-
     bool is_fifo(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object is a FIFO or pipe file. Effectively returns std::filesystem::is_fifo(status()) or std::filesystem::is_fifo(status(ec)), respectively 
 

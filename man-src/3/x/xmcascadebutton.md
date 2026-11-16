@@ -187,16 +187,16 @@ description: "XmCascadeButton — The CascadeButton widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNactivateCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user activates the CascadeButton widget and there is no submenu attached to pop up. The activation occurs when a mouse button is released or when the mnemonic associated with the widget is typed. The specific mouse button depends on information in the RowColumn parent. The reason sent by the callback is <code>XmCR_ACTIVATE</code>.</p>
-<dt><code>XmNcascadePixmap</code></p>
-<dd>Specifies the cascade pixmap displayed on one end of the widget when a CascadeButton is used within a Popup or Pulldown menu pane and a submenu is attached. The Label class resources <code>XmNmarginBottom</code>, <code>XmNmarginLeft</code>, <code>XmNmarginRight</code>, and <code>XmNmarginTop</code> may be modified to ensure that room is left for the cascade pixmap. The default cascade pixmap is an arrow pointing to the side of the menu where the submenu will appear. The positioning of the cascade pixmap to either the left of right of the widget, and the direction of the arrow, depend on the <code>XmNlayoutDirection</code> resource of the MenuShell.</p>
-<dt><code>XmNcascadingCallback</code></p>
-<dd>Specifies the list of callbacks that is called just prior to the mapping of the submenu associated with CascadeButton. The reason sent by the callback is <code>XmCR_CASCADING</code>.</p>
-<dt><code>XmNmappingDelay</code></p>
-<dd>Specifies the amount of time, in milliseconds, between when a CascadeButton becomes armed and when it maps its submenu. This delay is used only when the widget is within a Popup or Pulldown menu pane. The value must not be negative.</p>
-<dt><code>XmNsubMenuId</code></p>
-<dd>Specifies the widget ID for the Pulldown menu pane to be associated with this CascadeButton. The specified menu pane is displayed when the CascadeButton becomes armed. The menu pane must have been created with the appropriate parentage depending on the type of menu used. See <code><a href="/docs/linux/man/3-xmcreatemenubar/">XmCreateMenuBar</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatepulldownmenu/">XmCreatePulldownMenu</a></code>(3), and <code><a href="/docs/linux/man/3-xmcreatepopupmenu/">XmCreatePopupMenu</a></code>(3) for more information on the menu systems.</dl>
+<dt><code>XmNactivateCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user activates the CascadeButton widget and there is no submenu attached to pop up. The activation occurs when a mouse button is released or when the mnemonic associated with the widget is typed. The specific mouse button depends on information in the RowColumn parent. The reason sent by the callback is <code>XmCR_ACTIVATE</code>.</dd>
+<dt><code>XmNcascadePixmap</code></dt>
+<dd>Specifies the cascade pixmap displayed on one end of the widget when a CascadeButton is used within a Popup or Pulldown menu pane and a submenu is attached. The Label class resources <code>XmNmarginBottom</code>, <code>XmNmarginLeft</code>, <code>XmNmarginRight</code>, and <code>XmNmarginTop</code> may be modified to ensure that room is left for the cascade pixmap. The default cascade pixmap is an arrow pointing to the side of the menu where the submenu will appear. The positioning of the cascade pixmap to either the left of right of the widget, and the direction of the arrow, depend on the <code>XmNlayoutDirection</code> resource of the MenuShell.</dd>
+<dt><code>XmNcascadingCallback</code></dt>
+<dd>Specifies the list of callbacks that is called just prior to the mapping of the submenu associated with CascadeButton. The reason sent by the callback is <code>XmCR_CASCADING</code>.</dd>
+<dt><code>XmNmappingDelay</code></dt>
+<dd>Specifies the amount of time, in milliseconds, between when a CascadeButton becomes armed and when it maps its submenu. This delay is used only when the widget is within a Popup or Pulldown menu pane. The value must not be negative.</dd>
+<dt><code>XmNsubMenuId</code></dt>
+<dd>Specifies the widget ID for the Pulldown menu pane to be associated with this CascadeButton. The specified menu pane is displayed when the CascadeButton becomes armed. The menu pane must have been created with the appropriate parentage depending on the type of menu used. See <code><a href="/docs/linux/man/3-xmcreatemenubar/">XmCreateMenuBar</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatepulldownmenu/">XmCreatePulldownMenu</a></code>(3), and <code><a href="/docs/linux/man/3-xmcreatepopupmenu/">XmCreatePopupMenu</a></code>(3) for more information on the menu systems.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>CascadeButton inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1712,94 +1712,94 @@ description: "XmCascadeButton — The CascadeButton widget class"
  XEvent <i>* event</i>;
 } XmAnyCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback or is NULL if this callback was not triggered due to an <code>XEvent</code></dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback or is NULL if this callback was not triggered due to an <code>XEvent</code></dd></dl>
 <h3>Translations</h3>
 <p><code>XmCascadeButton</code> includes translations from <code>XmPrimitive</code>. <code>XmCascadeButton</code> includes the menu traversal translations from <code>XmLabel</code>. </p>
 <p> Note that altering translations in <code>#override</code> or <code>#augment</code> mode is undefined. </p>
 <p> The following list describes the translations for a CascadeButton in a MenuBar. The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>&lt;EnterWindow&gt;</code><code>Normal</code>:</p>
-<dd>MenuBarEnter()</p>
-<dt><code>&lt;LeaveWindow&gt;</code><code>Normal</code>:</p>
-<dd>MenuBarLeave()</p>
-<dt><code>&lt;Btn2Down&gt;</code>:</p>
-<dd>ProcessDrag()</p>
-<dt><code>c&lt;BtnDown&gt;</code>:</p>
-<dd>MenuButtonTakeFocusUp()</p>
-<dt><code>c&lt;BtnUp&gt;</code>:</p>
-<dd>MenuButtonTakeFocusUp()</p>
-<dt><code>&asymp;c</code><code>&lt;BtnDown&gt;</code>:</p>
-<dd>MenuBarSelect()</p>
-<dt><code>&asymp;c</code><code>&lt;BtnUp&gt;</code>:</p>
-<dd>DoSelect()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>KeySelect()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>KeySelect()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Help()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>CleanupMenuBar()</p>
-<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>KeySelect()</p>
-<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>KeySelect()</dl>
+<dt><code>&lt;EnterWindow&gt;</code><code>Normal</code>:</dt>
+<dd>MenuBarEnter()</dd>
+<dt><code>&lt;LeaveWindow&gt;</code><code>Normal</code>:</dt>
+<dd>MenuBarLeave()</dd>
+<dt><code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>ProcessDrag()</dd>
+<dt><code>c&lt;BtnDown&gt;</code>:</dt>
+<dd>MenuButtonTakeFocusUp()</dd>
+<dt><code>c&lt;BtnUp&gt;</code>:</dt>
+<dd>MenuButtonTakeFocusUp()</dd>
+<dt><code>&asymp;c</code><code>&lt;BtnDown&gt;</code>:</dt>
+<dd>MenuBarSelect()</dd>
+<dt><code>&asymp;c</code><code>&lt;BtnUp&gt;</code>:</dt>
+<dd>DoSelect()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>KeySelect()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>KeySelect()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Help()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>CleanupMenuBar()</dd>
+<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>KeySelect()</dd>
+<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>KeySelect()</dd></dl>
 <p> The following list describes the translations for a CascadeButton in a PullDown or Popup MenuPane. In a Popup menu system, <code>&lt;Btn3&gt;</code> also performs the <code>&lt;Btn1&gt;</code> actions.</p>
 <dl COMPACT>
-<dt><code>&lt;EnterWindow&gt;</code>:</p>
-<dd>DelayedArm()</p>
-<dt><code>&lt;LeaveWindow&gt;</code>:</p>
-<dd>CheckDisarm()</p>
-<dt><code>&lt;Btn2Down&gt;</code>:</p>
-<dd>ProcessDrag()</p>
-<dt><code>c&lt;BtnDown&gt;</code>:</p>
-<dd>MenuButtonTakeFocus()</p>
-<dt><code>c&lt;BtnUp&gt;</code>:</p>
-<dd>MenuButtonTakeFocusUp()</p>
-<dt><code>&asymp;c</code><code>&lt;BtnDown&gt;</code>:</p>
-<dd>StartDrag()</p>
-<dt><code>&asymp;c</code><code>&lt;BtnUp&gt;</code>:</p>
-<dd>DoSelect()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>KeySelect()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>KeySelect()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Help()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>CleanupMenuBar()</p>
-<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>KeySelect()</p>
-<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>KeySelect()</dl>
+<dt><code>&lt;EnterWindow&gt;</code>:</dt>
+<dd>DelayedArm()</dd>
+<dt><code>&lt;LeaveWindow&gt;</code>:</dt>
+<dd>CheckDisarm()</dd>
+<dt><code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>ProcessDrag()</dd>
+<dt><code>c&lt;BtnDown&gt;</code>:</dt>
+<dd>MenuButtonTakeFocus()</dd>
+<dt><code>c&lt;BtnUp&gt;</code>:</dt>
+<dd>MenuButtonTakeFocusUp()</dd>
+<dt><code>&asymp;c</code><code>&lt;BtnDown&gt;</code>:</dt>
+<dd>StartDrag()</dd>
+<dt><code>&asymp;c</code><code>&lt;BtnUp&gt;</code>:</dt>
+<dd>DoSelect()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>KeySelect()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>KeySelect()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Help()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>CleanupMenuBar()</dd>
+<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>KeySelect()</dd>
+<dt><code>&asymp;s</code><code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>KeySelect()</dd></dl>
 <h3>Action Routines</h3>
 <p>The XmCascadeButton action routines are</p>
 <dl COMPACT>
-<dt>CleanupMenuBar():</p>
-<dd>In a MenuBar, disarms the CascadeButton and the menu and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu was entered.</p>
-<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</p>
-<dd>In a Popup MenuPane, unposts the menu and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget from which the menu was posted.</p>
-<dt>DoSelect():</p>
-<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, posts the submenu attached to the CascadeButton and enables keyboard traversal within the menu. If the CascadeButton does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButton, and unposts all posted menus in the cascade.</p>
-<dt>Help():</p>
-<dd>Unposts all menus in the menu hierarchy and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu system was entered. Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt>KeySelect():</p>
-<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, and posts the submenu attached to the CascadeButton if keyboard traversal is enabled in the menu. If the CascadeButton does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButton, and unposts all posted menus in the cascade.</p>
-<dt>MenuBarSelect():</p>
-<dd>Unposts any menus posted by the parent menu. Arms both the CascadeButton and the MenuBar, posts the associated submenu, and enables mouse traversal. If the menu is already active, this event disables keyboard traversal for the menu and returns the menu to mouse traversal mode.</p>
-<dt>StartDrag():</p>
-<dd>Arms the CascadeButton, posts the associated submenu, and enables mouse traversal. If the menu is already active, this event disables keyboard traversal for the menu and returns the menu to mouse traversal mode.</dl>
+<dt>CleanupMenuBar():</dt>
+<dd>In a MenuBar, disarms the CascadeButton and the menu and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu was entered.</dd>
+<dd>In a toplevel Pulldown MenuPane from a MenuBar, unposts the menu, disarms the MenuBar CascadeButton and the MenuBar, and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the MenuBar was entered. In other Pulldown MenuPanes, unposts the menu.</dd>
+<dd>In a Popup MenuPane, unposts the menu and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget from which the menu was posted.</dd>
+<dt>DoSelect():</dt>
+<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, posts the submenu attached to the CascadeButton and enables keyboard traversal within the menu. If the CascadeButton does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButton, and unposts all posted menus in the cascade.</dd>
+<dt>Help():</dt>
+<dd>Unposts all menus in the menu hierarchy and, when the shell&#8217;s keyboard focus policy is <code>XmEXPLICIT</code>, restores keyboard focus to the widget that had the focus before the menu system was entered. Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt>KeySelect():</dt>
+<dd>Calls the callbacks in <code>XmNcascadingCallback</code>, and posts the submenu attached to the CascadeButton if keyboard traversal is enabled in the menu. If the CascadeButton does not have a submenu attached, this action calls the callbacks in <code>XmNactivateCallback</code>, activates the CascadeButton, and unposts all posted menus in the cascade.</dd>
+<dt>MenuBarSelect():</dt>
+<dd>Unposts any menus posted by the parent menu. Arms both the CascadeButton and the MenuBar, posts the associated submenu, and enables mouse traversal. If the menu is already active, this event disables keyboard traversal for the menu and returns the menu to mouse traversal mode.</dd>
+<dt>StartDrag():</dt>
+<dd>Arms the CascadeButton, posts the associated submenu, and enables mouse traversal. If the menu is already active, this event disables keyboard traversal for the menu and returns the menu to mouse traversal mode.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>Posting a submenu calls the <code>XmNcascadingCallback</code> callbacks. This widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;EnterWindow&gt;</code>:</p>
-<dd>If keyboard traversal is enabled, does nothing. Otherwise, in a MenuBar that is armed, unposts any MenuPanes associated with another MenuBar entry, arms the CascadeButton, and posts the associated submenu. In other menus, arms the CascadeButton and posts the associated submenu after the delay specified by <code>XmNmappingDelay</code>.</p>
-<dt><code>&lt;LeaveWindow&gt;</code>:</p>
-<dd>If keyboard traversal is enabled does nothing. Otherwise, in a MenuBar that is armed, disarms the CascadeButton if the submenu associated with the CascadeButton is not currently posted or if there is no submenu associated with the CascadeButton.</p>
-<dd>In other menus, if the pointer moves anywhere except into a submenu associated with the CascadeButton, the CascadeButton is disarmed and its submenu is unposted.</dl>
+<dt><code>&lt;EnterWindow&gt;</code>:</dt>
+<dd>If keyboard traversal is enabled, does nothing. Otherwise, in a MenuBar that is armed, unposts any MenuPanes associated with another MenuBar entry, arms the CascadeButton, and posts the associated submenu. In other menus, arms the CascadeButton and posts the associated submenu after the delay specified by <code>XmNmappingDelay</code>.</dd>
+<dt><code>&lt;LeaveWindow&gt;</code>:</dt>
+<dd>If keyboard traversal is enabled does nothing. Otherwise, in a MenuBar that is armed, disarms the CascadeButton if the submenu associated with the CascadeButton is not currently posted or if there is no submenu associated with the CascadeButton.</dd>
+<dd>In other menus, if the pointer moves anywhere except into a submenu associated with the CascadeButton, the CascadeButton is disarmed and its submenu is unposted.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

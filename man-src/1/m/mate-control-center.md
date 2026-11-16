@@ -16,16 +16,16 @@ description: "mate-control-center – Configure MATE settings"
 <p> When run without arguments, the shell displays the control center overview, which shows all available configuration panels. The overview allows one to open individual panels by clicking on them. It also has a search entry to find panels by searching keywords.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print the application&#8217;s help options and exit.</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Print GTK help options and exit.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print application and GTK help options and exit.</p>
-<dt><code>&#8211;hide</code></p>
-<dd> Hide on start (useful for preloading the shell).</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</dl>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print the application&#8217;s help options and exit.</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Print GTK help options and exit.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print application and GTK help options and exit.</dd>
+<dt><code>&#8211;hide</code></dt>
+<dd> Hide on start (useful for preloading the shell).</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd></dl>
 <p> This program additionally accepts the standard MATE and GTK options (as listed with <i>&#8211;help-gtk</i>).</p>
 <h2>EXIT STATUS</h2>
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>

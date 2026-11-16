@@ -14,17 +14,17 @@ description: "irq_chip_compose_msi_msg – Componse msi message for a irq chip"
 <p><i>data</i></p>
 <dl>
 <dd>
-<dd>Pointer to interrupt specific data</dl>
+</dd><dd>Pointer to interrupt specific data</dd></dl>
 <p> <i>msg</i></p>
 <dl>
-<dd>Pointer to the MSI message</dl>
+<dd>Pointer to the MSI message</dd></dl>
 <h2>Description</h2>
 <p>For hierarchical domains we find the first chip in the hierarchy which implements the irq_compose_msi_msg callback. For non hierarchical we use the top level chip.</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

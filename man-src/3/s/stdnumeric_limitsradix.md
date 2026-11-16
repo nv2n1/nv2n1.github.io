@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::radix – std::numeric_limits<T>::radix"
 <h2>Synopsis</h2>
 <pre><code>static const int radix;
 (until C++ 11)
-
     static constexpr int radix;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::radix is the base of the number system used in the representation of the type. It is 2 for all binary numeric types, but it may be, for example, 10 for IEEE 754 decimal_floating-point_types or for third-party binary-coded_decimal integers. This constant is meaningful for all specializations. </p>

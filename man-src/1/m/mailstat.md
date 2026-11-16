@@ -15,18 +15,18 @@ description: "mailstat – shows mail-arrival statistics"
 <p> <code>mailstat</code> parses a procmail-generated $LOGFILE and displays a summary about the messages delivered to all folders (total size, average size, nr of messages). The $LOGFILE is truncated to zero length, unless the <code>-k</code> option is used. Exit code 0 if mail arrived, 1 if no mail arrived.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-k</i></p>
-<dd> keep logfile intact</p>
-<dt><i>-l</i></p>
-<dd> long display format</p>
-<dt><i>-m</i></p>
-<dd> merge any errors into one line</p>
-<dt><i>-o</i></p>
-<dd> use the old logfile</p>
-<dt><i>-t</i></p>
-<dd> terse display format</p>
-<dt><i>-s</i></p>
-<dd> silent in case of no mail</dl>
+<dt><i>-k</i></dt>
+<dd> keep logfile intact</dd>
+<dt><i>-l</i></dt>
+<dd> long display format</dd>
+<dt><i>-m</i></dt>
+<dd> merge any errors into one line</dd>
+<dt><i>-o</i></dt>
+<dd> use the old logfile</dd>
+<dt><i>-t</i></dt>
+<dd> terse display format</dd>
+<dt><i>-s</i></dt>
+<dd> silent in case of no mail</dd></dl>
 <h2>NOTES</h2>
 <p> Customise to your heart&#8217;s content, this program is only provided as a guideline.</p>
 <h2>AUTHOR</h2>

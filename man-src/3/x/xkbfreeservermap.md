@@ -11,16 +11,16 @@ description: "XkbFreeServerMap – Free memory used by the server member of an X
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbFreeServerMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description containing server map to free</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask identifying components of map to free</p>
-<dt><i>&#8211; free_all</i></p>
-<dd>True =&gt; free all server map components and server itself</dl>
+</dd><dd>keyboard description containing server map to free</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask identifying components of map to free</dd>
+<dt><i>&#8211; free_all</i></dt>
+<dd>True =&gt; free all server map components and server itself</dd></dl>
 <h2>Description</h2>
 <p>The <i>XkbFreeServerMap </i> function frees the specified components of server map in the XkbDescRec structure specified by the <i>xkb </i> parameter and sets the corresponding structure component values to NULL. The <i>which parameter specifies a combination of the server map masks and is a </i> bitwise inclusive OR of the masks listed in Table 1. If <i>free_all </i> is True, <i>which </i> is ignored and <i>XkbFreeServerMap </i> frees every non-NULL structure component in the server map, frees the XkbServerMapRec structure referenced by the <i>server </i> member of the <i>xkb </i> parameter, and sets the <i>server </i> member to NULL. </p>
 <table>

@@ -14,12 +14,12 @@ description: "gnutls_pkcs12_get_bag – API function"
 <p> <code>int gnutls_pkcs12_get_bag(gnutls_pkcs12_t </code><i>pkcs12</i><code>, int </code><i>indx</i><code>, gnutls_pkcs12_bag_t </code><i>bag</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs12_t pkcs12</p>
-<dd> should contain a gnutls_pkcs12_t structure</p>
-<dt>int indx</p>
-<dd> contains the index of the bag to extract</p>
-<dt>gnutls_pkcs12_bag_t bag</p>
-<dd> An initialized bag, where the contents of the bag will be copied</dl>
+<dt>gnutls_pkcs12_t pkcs12</dt>
+<dd> should contain a gnutls_pkcs12_t structure</dd>
+<dt>int indx</dt>
+<dd> contains the index of the bag to extract</dd>
+<dt>gnutls_pkcs12_bag_t bag</dt>
+<dd> An initialized bag, where the contents of the bag will be copied</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return a Bag from the PKCS12 structure. </p>
 <p> After the last Bag has been read <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>
@@ -34,6 +34,6 @@ description: "gnutls_pkcs12_get_bag – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

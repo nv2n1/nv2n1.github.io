@@ -11,9 +11,7 @@ std::initializer_list - std::initializer_list
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;initializer_list&gt;
-
 template&lt; class T &gt;                   (since C++11)
-
 class initializer_list;</code></pre> 
 An object of type std::initializer_list&lt;T&gt; is a lightweight proxy object that provides access to an array of objects of type const T. 
 A std::initializer_list object is automatically constructed when: 
@@ -77,12 +75,9 @@ rend(std::initializer_list) specializes std::rend
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;initializer_list&gt;
 template &lt;class T&gt;
-
 struct S {
     std::vector&lt;T&gt; v;
     S(std::initializer_list&lt;T&gt; l)
@@ -101,12 +96,10 @@ struct S {
     }
 };
 template &lt;typename T&gt;
-
 void templated_fn(T)
 {
 }
 int main()
-
 {
     S&lt;int&gt; s = {1, 2, 3, 4, 5}; // copy list-initialization
     s.append({6, 7, 8});        // list-initialization in function call

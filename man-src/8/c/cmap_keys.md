@@ -16,19 +16,19 @@ description: "cmap_keys – Overview of keys stored in the Configuration Map"
 <p> In this man page, wild-cards have the usual meaning.</p>
 <h2>Keys</h2>
 <dl>
-<dt>internal_configuration.*</p>
-<dd>Internal configuration data. All keys in this prefix are read only. It&#8217;s only useful for getting a list of loaded services. </p>
-<dt>logging.*</p>
-<dd>Values read from the configuration file. It&#8217;s possible to change them at runtime. If subsystem specific configuration is needed, the key must be in the form logging.logger_subsys.SERVICE.key, where SERVICE is upper case name of the service and key is same as in the configuration file. All values are of string type. </p>
-<dt>nodelist.*</p>
-<dd>Values read from the configuration file. Each node element in the configuration file gets assigned it&#8217;s position starting from zero. So the first node from the config file has nodelist.node.0. prefix. To be a valid entry, each node must have <code>ring0_addr</code> key. To change the <code>nodeid</code> key, use a u32 data type. </p>
+<dt>internal_configuration.*</dt>
+<dd>Internal configuration data. All keys in this prefix are read only. It&#8217;s only useful for getting a list of loaded services. </dd>
+<dt>logging.*</dt>
+<dd>Values read from the configuration file. It&#8217;s possible to change them at runtime. If subsystem specific configuration is needed, the key must be in the form logging.logger_subsys.SERVICE.key, where SERVICE is upper case name of the service and key is same as in the configuration file. All values are of string type. </dd>
+<dt>nodelist.*</dt>
+<dd>Values read from the configuration file. Each node element in the configuration file gets assigned it&#8217;s position starting from zero. So the first node from the config file has nodelist.node.0. prefix. To be a valid entry, each node must have <code>ring0_addr</code> key. To change the <code>nodeid</code> key, use a u32 data type. </dd>
 <p> Local node position is stored in <code>local_node_pos</code> key (RO), so it&#8217;s easy to find out nodeid/ring addresses of the local node directly from cmap. </p>
-<dt>runtime.blackbox.*</p>
-<dd>Trigger keys for storing fplay data. It&#8217;s recommended that you the corosync-blackbox command to change keys in this prefix. </p>
-<dt>runtime.connections.*</p>
-<dd>There is information about total number of active connections in given moment in the <code>active</code> key, number of closed connections during whole runtime of corosync in the <code>closed</code> key and information about each active IPC connection. All keys in this prefix are read-only. </p>
-<dt>runtime.connections.ID.*</p>
-<dd>Each IPC connection has a unique ID. This is in the form [[short_name:][PID:]internal_id. On some platforms, short_name and PID are not filled and only internal_id is used. </p>
+<dt>runtime.blackbox.*</dt>
+<dd>Trigger keys for storing fplay data. It&#8217;s recommended that you the corosync-blackbox command to change keys in this prefix. </dd>
+<dt>runtime.connections.*</dt>
+<dd>There is information about total number of active connections in given moment in the <code>active</code> key, number of closed connections during whole runtime of corosync in the <code>closed</code> key and information about each active IPC connection. All keys in this prefix are read-only. </dd>
+<dt>runtime.connections.ID.*</dt>
+<dd>Each IPC connection has a unique ID. This is in the form [[short_name:][PID:]internal_id. On some platforms, short_name and PID are not filled and only internal_id is used. </dd>
 <p> Typical keys in this prefix are: </p>
 <p> <code>client_pid</code> containing PID of IPC connection (unavailable on some platforms). </p>
 <p> <code>dispatched</code> number of dispatched messages. </p>
@@ -41,12 +41,12 @@ description: "cmap_keys – Overview of keys stored in the Configuration Map"
 <p> <code>responses</code> is the number of responses sent to the IPC client. </p>
 <p> <code>send_retries</code> contains the total number of interrupted sends. </p>
 <p> <code>service_id</code> contains the ID of service which the IPC is connected to. </p>
-<dt>runtime.config.*</p>
-<dd>Contains the values actually in use by the totem membership protocol. Values here are either taken from the Corosync configuration file, defaults or computed from entries in the config file. For information on individual keys please refer to the man page <code><a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a></code>(5). </p>
-<dt>runtime.services.*</p>
-<dd>Prefix with statistics for service engines. Each service has it&#8217;s own <code>service_id</code> key in the prefix with the name runtime.services.SERVICE., where SERVICE is the lower case name of the service. Inside the service prefix is the number of messages received and sent by the corosync engine in the format runtime.services.SERVICE.EXEC_CALL.rx and runtime.services.SERVICE.EXEC_CALL.tx, where EXEC_CALL is the internal id of the service call (so for example 3 in cpg service is receive of multicast message from other nodes). </p>
-<dt>runtime.totem.pg.mrp.srp.*</p>
-<dd>Prefix containing statistics about totem. All keys here are read only. Typical key prefixes: </p>
+<dt>runtime.config.*</dt>
+<dd>Contains the values actually in use by the totem membership protocol. Values here are either taken from the Corosync configuration file, defaults or computed from entries in the config file. For information on individual keys please refer to the man page <code><a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a></code>(5). </dd>
+<dt>runtime.services.*</dt>
+<dd>Prefix with statistics for service engines. Each service has it&#8217;s own <code>service_id</code> key in the prefix with the name runtime.services.SERVICE., where SERVICE is the lower case name of the service. Inside the service prefix is the number of messages received and sent by the corosync engine in the format runtime.services.SERVICE.EXEC_CALL.rx and runtime.services.SERVICE.EXEC_CALL.tx, where EXEC_CALL is the internal id of the service call (so for example 3 in cpg service is receive of multicast message from other nodes). </dd>
+<dt>runtime.totem.pg.mrp.srp.*</dt>
+<dd>Prefix containing statistics about totem. All keys here are read only. Typical key prefixes: </dd>
 <p> <code>commit_entered</code> Number of times the processor entered COMMIT state. </p>
 <p> <code>commit_token_lost</code> Number of times the processor lost token in COMMIT state. </p>
 <p> <code>consensus_timeouts</code> How many times the processor timed out forming a consensus about membership. </p>
@@ -73,26 +73,26 @@ description: "cmap_keys – Overview of keys stored in the Configuration Map"
 <p> <code>mtt_rx_token</code> Mean transit time of token in milliseconds. In other words, time between two consecutive token receives. </p>
 <p> <code>avg_token_workload</code> Average time in milliseconds of holding time of token on the current processor. </p>
 <p> <code>avg_backlog_calc</code> Average number of not yet sent messages on the current processor. </p>
-<dt>runtime.totem.pg.mrp.srp.members.*</p>
-<dd>Prefix containing members of the totem single ring protocol. Each member keys has format runtime.totem.pg.mrp.srp.members.NODEID.KEY, where key is one of: </p>
+<dt>runtime.totem.pg.mrp.srp.members.*</dt>
+<dd>Prefix containing members of the totem single ring protocol. Each member keys has format runtime.totem.pg.mrp.srp.members.NODEID.KEY, where key is one of: </dd>
 <p> <code>ip</code> IP address of member. It&#8217;s stored in format r(RING_ID) ip(IP_ADDRESS). </p>
 <p> <code>join_count</code> Number of times the processor joined membership with local cluster. When processor fails and rejoins again, this value is incremented. </p>
 <p> <code>status</code> Status of the processor. Can be one of joined and left. </p>
 <p> <code>config_version</code> Config version of the member node. </p>
-<dt>resources.process.PID.*</p>
-<dd>Prefix created by applications using SAM with CMAP integration. It contains the following keys: </p>
+<dt>resources.process.PID.*</dt>
+<dd>Prefix created by applications using SAM with CMAP integration. It contains the following keys: </dd>
 <p> <code>recovery</code> Recovery policy of the process. Can be one of quit or restart. </p>
 <p> <code>poll_period</code> Value passed in sam_initialize as a time_interval. </p>
 <p> <code>last_updated</code> Last time SAM received a heartbeat from the client. </p>
 <p> <code>state</code> State of the client. Can be one of failed, stopped, running and waiting for quorum. </p>
-<dt>uidgid.*</p>
-<dd>Information about users/groups which are allowed to make IPC connections to corosync. Entries loaded from configuration file are stored with uidgid.config.* prefix and are pruned on configuration file reload. Dynamic entries has uidgid.* prefix and a configuration file reload doesn&#8217;t affect them. </p>
-<dt>quorum.cancel_wait_for_all</p>
-<dd>Tells votequorum to cancel waiting for all nodes at cluster startup. Can be used to unblock quorum if notes are known to be down. for pcs use only. </p>
-<dt>config.reload_in_progress</p>
-<dd>This value will be set to 1 (or created) when a corosync.conf reload is started, and set to 0 when the reload is completed. This allows interested subsystems to do atomic reconfiguration rather than changing each key. Note that individual add/change/delete notifications will still be sent during a reload. </p>
-<dt>config.totemconfig_reload_in_progress</p>
-<dd>This key is similar to <code>config.totemconfig_reload_in_progress</code> but changed after the totem config trigger is processed. It is useful (mainly) for situations when <code>nodelist.local_node_pos</code> must be correctly reinstated before anything else. </p>
+<dt>uidgid.*</dt>
+<dd>Information about users/groups which are allowed to make IPC connections to corosync. Entries loaded from configuration file are stored with uidgid.config.* prefix and are pruned on configuration file reload. Dynamic entries has uidgid.* prefix and a configuration file reload doesn&#8217;t affect them. </dd>
+<dt>quorum.cancel_wait_for_all</dt>
+<dd>Tells votequorum to cancel waiting for all nodes at cluster startup. Can be used to unblock quorum if notes are known to be down. for pcs use only. </dd>
+<dt>config.reload_in_progress</dt>
+<dd>This value will be set to 1 (or created) when a corosync.conf reload is started, and set to 0 when the reload is completed. This allows interested subsystems to do atomic reconfiguration rather than changing each key. Note that individual add/change/delete notifications will still be sent during a reload. </dd>
+<dt>config.totemconfig_reload_in_progress</dt>
+<dd>This key is similar to <code>config.totemconfig_reload_in_progress</code> but changed after the totem config trigger is processed. It is useful (mainly) for situations when <code>nodelist.local_node_pos</code> must be correctly reinstated before anything else. </dd>
 </dl>
 <h2>Dynamic Change User/Group Permission To Use Corosync Ipc</h2>
 <p>Is the same as in the configuration file. eg: to add UID 500 use </p>

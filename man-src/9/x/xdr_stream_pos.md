@@ -15,7 +15,7 @@ xdr_stream_pos - Return the current offset from the start of the xdr_stream
 <h2>Arguments</h2>
 
 <i>xdr</i>
-<dl><dd><dd>pointer to struct xdr_stream</dl>
+<dl><dd></dd><dd>pointer to struct xdr_stream</dd></dl>
 
 <h2>Copyright</h2>
 

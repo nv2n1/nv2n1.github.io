@@ -20,20 +20,20 @@ description: "oggz-scan — Scan an Ogg file and output characteristic landmarks
 &nbsp;<wbr></p>
 <h3>Output options</h3>
 <dl>
-<dt>-o <code>filename</code>, &#8211;output <code>filename</code></p>
-<dd> Write output to the specified <code>filename</code> instead of printing it to standard output.</p>
-<dt>-f <code>format</code>, &#8211;format <code>format</code></p>
-<dd> Write output in the specified <code>format</code>. Supported formats are plain, cmml, html. (Default: plain)</dl>
+<dt>-o <code>filename</code>, &#8211;output <code>filename</code></dt>
+<dd> Write output to the specified <code>filename</code> instead of printing it to standard output.</dd>
+<dt>-f <code>format</code>, &#8211;format <code>format</code></dt>
+<dd> Write output in the specified <code>format</code>. Supported formats are plain, cmml, html. (Default: plain)</dd></dl>
 <h3>Feature options</h3>
 <dl>
-<dt>-k, &#8211;keyframe</p>
-<dd> Display timestamps of unforced Theora keyframes.</dl>
+<dt>-k, &#8211;keyframe</dt>
+<dd> Display timestamps of unforced Theora keyframes.</dd></dl>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit.</dl>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Silvia Pfeiffer October 7, 2005;</p>
 <h2>COPYRIGHT</h2>

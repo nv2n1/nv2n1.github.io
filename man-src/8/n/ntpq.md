@@ -15,67 +15,67 @@ description: "ntpq – standard NTP query program"
 <p>The <code>ntpq</code> utility program is used to monitor NTP daemon <code>ntpd</code> operations and determine performance. It uses the standard NTP mode 6 control message formats defined in Appendix B of the NTPv3 specification RFC1305. The same formats are used in NTPv4, although some of the variable names have changed and new ones added. The description on this page is for the NTPv4 variables. The program can be run either in interactive mode or controlled using command line arguments. Requests to read and write arbitrary variables can be assembled, with raw and pretty-printed output options being available. The <code>ntpq</code> can also obtain and print a list of peers in a common format by sending multiple queries to the server. If one or more request options is included on the command line when <code>ntpq</code> is executed, each of the requests will be sent to the NTP servers running on each of the hosts given as command line arguments, or on localhost by default. If no request options are given, <code>ntpq</code> will attempt to read commands from the standard input and execute these on the NTP server running on the first host given on the command line, again defaulting to localhost when no other host is specified. <code>ntpq</code> will prompt for commands if the standard input is a terminal device. <code>ntpq</code> uses NTP mode 6 packets to communicate with the NTP server, and hence can be used to query any compatible server on the network which permits it. Note that since NTP is a UDP protocol this communication will be somewhat unreliable, especially over large distances in terms of network topology. <code>ntpq</code> makes one attempt to retransmit requests, and will time requests out if the remote host is not heard from within a suitable timeout time. Note that in contexts where a host name is expected, a <code>-4</code> qualifier preceding the host name forces DNS resolution to the IPv4 namespace, while a <code>-6</code> qualifier forces DNS resolution to the IPv6 namespace. For examples and usage, see the NTP Debugging Techniques page. Command line options are described following. Specifying a command line option other than <code>-i</code> or <code>-n</code> will cause the specified query (queries) to be sent to the indicated host(s) immediately. Otherwise, <code>ntpq</code> will attempt to read interactive format commands from the standard input.</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-4</code></p>
-<dd>Force DNS resolution of following host names on the command line to the IPv4 namespace.</p>
-<dt><code>-6</code></p>
-<dd>Force DNS resolution of following host names on the command line to the IPv6 namespace.</p>
-<dt><code>-c</code></p>
-<dd>The following argument is interpreted as an interactive format command and is added to the list of commands to be executed on the specified host(s). Multiple <code>-c</code> options may be given.</p>
-<dt><code>-d</code></p>
-<dd>Turn on debugging mode.</p>
-<dt><code>-i</code></p>
-<dd>Force <code>ntpq</code> to operate in interactive mode. Prompts will be written to the standard output and commands read from the standard input.</p>
-<dt><code>-n</code></p>
-<dd>Output all host addresses in dotted-quad numeric format rather than converting to the canonical host names.</p>
-<dt><code>-p</code></p>
-<dd>Print a list of the peers known to the server as well as a summary of their state. This is equivalent to the <code>peers</code> interactive command.</dl>
+</dd><dl>
+<dt><code>-4</code></dt>
+<dd>Force DNS resolution of following host names on the command line to the IPv4 namespace.</dd>
+<dt><code>-6</code></dt>
+<dd>Force DNS resolution of following host names on the command line to the IPv6 namespace.</dd>
+<dt><code>-c</code></dt>
+<dd>The following argument is interpreted as an interactive format command and is added to the list of commands to be executed on the specified host(s). Multiple <code>-c</code> options may be given.</dd>
+<dt><code>-d</code></dt>
+<dd>Turn on debugging mode.</dd>
+<dt><code>-i</code></dt>
+<dd>Force <code>ntpq</code> to operate in interactive mode. Prompts will be written to the standard output and commands read from the standard input.</dd>
+<dt><code>-n</code></dt>
+<dd>Output all host addresses in dotted-quad numeric format rather than converting to the canonical host names.</dd>
+<dt><code>-p</code></dt>
+<dd>Print a list of the peers known to the server as well as a summary of their state. This is equivalent to the <code>peers</code> interactive command.</dd></dl>
 </dl>
 <h2>Internal Commands</h2>
 <p>Interactive format commands consist of a keyword followed by zero to four arguments. Only enough characters of the full keyword to uniquely identify the command need be typed. The output of a command is normally sent to the standard output, but optionally the output of individual commands may be sent to a file by appending a <code>&gt;</code>, followed by a file name, to the command line. A number of interactive format commands are executed entirely within the <code>ntpq</code> program itself and do not result in NTP mode-6 requests being sent to a server. These are described following. </p>
 <dl>
 <dd>
-<dl>
-<dt><code>? [</code><i>command_keyword</i><code>]</code></p>
+</dd><dl>
+<dt><code>? [</code><i>command_keyword</i><code>]</code></dt>
 <dd>
-<dt><code>help [</code><i>command_keyword</i><code>]</code></p>
-<dd>A <code>?</code> by itself will print a list of all the command keywords known to <code>ntpq</code>46 A <code>?</code> followed by a command keyword will print function and usage information about the command.</p>
-<dt><code>addvars </code><i>name</i><code> [ = </code><i>value</i><code>] [&#8230;]</code></p>
+</dd><dt><code>help [</code><i>command_keyword</i><code>]</code></dt>
+<dd>A <code>?</code> by itself will print a list of all the command keywords known to <code>ntpq</code>46 A <code>?</code> followed by a command keyword will print function and usage information about the command.</dd>
+<dt><code>addvars </code><i>name</i><code> [ = </code><i>value</i><code>] [&#8230;]</code></dt>
 <dd>
-<dt><code>rmvars </code><i>name</i><code> [&#8230;]</code></p>
+</dd><dt><code>rmvars </code><i>name</i><code> [&#8230;]</code></dt>
 <dd>
-<dt><code>clearvars</code></p>
-<dd>The arguments to this command consist of a list of items of the form <i>name</i><code> = </code><i>value</i>, where the <code>= </code><i>value</i> is ignored, and can be omitted in read requests. <code>ntpq</code> maintains an internal list in which data to be included in control messages can be assembled, and sent using the <code>readlist</code> and <code>writelist</code> commands described below. The <code>addvars</code> command allows variables and optional values to be added to the list. If more than one variable is to be added, the list should be comma-separated and not contain white space. The <code>rmvars</code> command can be used to remove individual variables from the list, while the <code>clearlist</code> command removes all variables from the list.</p>
-<dt><code>cooked</code></p>
-<dd>Display server messages in prettyprint format.</p>
-<dt><code>debug more | less | off</code></p>
-<dd>Turns internal query program debugging on and off.</p>
-<dt><code>delay </code><i>milliseconds</i></p>
-<dd>Specify a time interval to be added to timestamps included in requests which require authentication. This is used to enable (unreliable) server reconfiguration over long delay network paths or between machines whose clocks are unsynchronized. Actually the server does not now require timestamps in authenticated requests, so this command may be obsolete.</p>
-<dt><code>host </code><i>name</i></p>
-<dd>Set the host to which future queries will be sent. The name may be either a DNS name or a numeric address.</p>
-<dt><code>hostnames [yes | no]</code></p>
-<dd>If <code>yes</code> is specified, host names are printed in information displays. If <code>no</code> is specified, numeric addresses are printed instead. The default is <code>yes</code>, unless modified using the command line <code>-n</code> switch.</p>
-<dt><code>keyid </code><i>keyid</i></p>
-<dd>This command specifies the key number to be used to authenticate configuration requests. This must correspond to a key number the server has been configured to use for this purpose.</p>
-<dt><code>ntpversion 1 | 2 | 3 | 4</code></p>
-<dd>Sets the NTP version number which <code>ntpq</code> claims in packets. Defaults to 2, Note that mode-6 control messages (and modes, for that matter) didn&#8217;t exist in NTP version 1.</p>
-<dt><code>passwd</code></p>
-<dd>This command prompts for a password to authenticate configuration requests. The password must correspond to the key configured for NTP server for this purpose.</p>
-<dt><code>quit</code></p>
-<dd>Exit <code>ntpq</code>46</p>
-<dt><code>raw</code></p>
-<dd>Display server messages as received and without reformatting.</p>
-<dt><code>timeout </code><i>milliseconds</i></p>
-<dd>Specify a timeout period for responses to server queries. The default is about 5000 milliseconds. Note that since <code>ntpq</code> retries each query once after a timeout, the total waiting time for a timeout will be twice the timeout value set.</dl>
+</dd><dt><code>clearvars</code></dt>
+<dd>The arguments to this command consist of a list of items of the form <i>name</i><code> = </code><i>value</i>, where the <code>= </code><i>value</i> is ignored, and can be omitted in read requests. <code>ntpq</code> maintains an internal list in which data to be included in control messages can be assembled, and sent using the <code>readlist</code> and <code>writelist</code> commands described below. The <code>addvars</code> command allows variables and optional values to be added to the list. If more than one variable is to be added, the list should be comma-separated and not contain white space. The <code>rmvars</code> command can be used to remove individual variables from the list, while the <code>clearlist</code> command removes all variables from the list.</dd>
+<dt><code>cooked</code></dt>
+<dd>Display server messages in prettyprint format.</dd>
+<dt><code>debug more | less | off</code></dt>
+<dd>Turns internal query program debugging on and off.</dd>
+<dt><code>delay </code><i>milliseconds</i></dt>
+<dd>Specify a time interval to be added to timestamps included in requests which require authentication. This is used to enable (unreliable) server reconfiguration over long delay network paths or between machines whose clocks are unsynchronized. Actually the server does not now require timestamps in authenticated requests, so this command may be obsolete.</dd>
+<dt><code>host </code><i>name</i></dt>
+<dd>Set the host to which future queries will be sent. The name may be either a DNS name or a numeric address.</dd>
+<dt><code>hostnames [yes | no]</code></dt>
+<dd>If <code>yes</code> is specified, host names are printed in information displays. If <code>no</code> is specified, numeric addresses are printed instead. The default is <code>yes</code>, unless modified using the command line <code>-n</code> switch.</dd>
+<dt><code>keyid </code><i>keyid</i></dt>
+<dd>This command specifies the key number to be used to authenticate configuration requests. This must correspond to a key number the server has been configured to use for this purpose.</dd>
+<dt><code>ntpversion 1 | 2 | 3 | 4</code></dt>
+<dd>Sets the NTP version number which <code>ntpq</code> claims in packets. Defaults to 2, Note that mode-6 control messages (and modes, for that matter) didn&#8217;t exist in NTP version 1.</dd>
+<dt><code>passwd</code></dt>
+<dd>This command prompts for a password to authenticate configuration requests. The password must correspond to the key configured for NTP server for this purpose.</dd>
+<dt><code>quit</code></dt>
+<dd>Exit <code>ntpq</code>46</dd>
+<dt><code>raw</code></dt>
+<dd>Display server messages as received and without reformatting.</dd>
+<dt><code>timeout </code><i>milliseconds</i></dt>
+<dd>Specify a timeout period for responses to server queries. The default is about 5000 milliseconds. Note that since <code>ntpq</code> retries each query once after a timeout, the total waiting time for a timeout will be twice the timeout value set.</dd></dl>
 </dl>
 <h2>Control Message Commands</h2>
 <p>Association IDs are used to identify system, peer and clock variables. System variables are assigned an association ID of zero and system name space, while each association is assigned a nonzero association ID and peer namespace. Most control commands send a single mode-6 message to the server and expect a single response message. The exceptions are the <code>peers</code> command, which sends a series of messages, and the <code>mreadlist</code> and <code>mreadvar</code> commands, which iterate over a range of associations. </p>
 <dl>
 <dd>
-<dl>
-<dt><code>associations</code></p>
-<dd>Display a list of mobilized associations in the form <code>ind assid status conf reach auth condition last_event cnt</code> </p>
+</dd><dl>
+<dt><code>associations</code></dt>
+<dd>Display a list of mobilized associations in the form <code>ind assid status conf reach auth condition last_event cnt</code> </dd>
 <table BORDER WIDTH=100%>
 <tr VALIGN=top>
 <td>Variable </td>
@@ -128,28 +128,28 @@ description: "ntpq – standard NTP query program"
 </td>
 </tr>
 </table>
-<dt><code>clockvar </code><i>assocID</i><code> [</code><i>name</i><code> [ = </code><i>value</i><code> [&#8230;]] [&#8230;]</code></p>
+<dt><code>clockvar </code><i>assocID</i><code> [</code><i>name</i><code> [ = </code><i>value</i><code> [&#8230;]] [&#8230;]</code></dt>
 <dd>
-<dt><code>cv </code><i>assocID</i><code> [</code><i>name</i><code> [ = </code><i>value</i><code> [&#8230;] ][&#8230;]</code></p>
-<dd>Display a list of clock variables for those assocations supporting a reference clock.</p>
-<dt><code>:config [&#8230;]</code></p>
-<dd>Send the remainder of the command line, including whitespace, to the server as a run-time configuration command in the same format as the configuration file. This command is experimental until further notice and clarification. Authentication is of course required.</p>
-<dt><code>config-from-file </code><i>filename</i></p>
-<dd>Send the each line of <i>filename</i> to the server as run-time configuration commands in the same format as the configuration file. This command is experimental until further notice and clarification. Authentication is of course required.</p>
-<dt><code>keyid</code></p>
-<dd>Specify the key ID to use for write requests.</p>
-<dt><code>lassociations</code></p>
-<dd>Perform the same function as the associations command, execept display mobilized and unmobilized associations.</p>
-<dt><code>mreadvar </code><i>assocID</i><i>assocID</i><code> [ </code><i>variable_name</i><code> [ = </code><i>value</i><code>[ &#8230; ]</code></p>
+</dd><dt><code>cv </code><i>assocID</i><code> [</code><i>name</i><code> [ = </code><i>value</i><code> [&#8230;] ][&#8230;]</code></dt>
+<dd>Display a list of clock variables for those assocations supporting a reference clock.</dd>
+<dt><code>:config [&#8230;]</code></dt>
+<dd>Send the remainder of the command line, including whitespace, to the server as a run-time configuration command in the same format as the configuration file. This command is experimental until further notice and clarification. Authentication is of course required.</dd>
+<dt><code>config-from-file </code><i>filename</i></dt>
+<dd>Send the each line of <i>filename</i> to the server as run-time configuration commands in the same format as the configuration file. This command is experimental until further notice and clarification. Authentication is of course required.</dd>
+<dt><code>keyid</code></dt>
+<dd>Specify the key ID to use for write requests.</dd>
+<dt><code>lassociations</code></dt>
+<dd>Perform the same function as the associations command, execept display mobilized and unmobilized associations.</dd>
+<dt><code>mreadvar </code><i>assocID</i><i>assocID</i><code> [ </code><i>variable_name</i><code> [ = </code><i>value</i><code>[ &#8230; ]</code></dt>
 <dd>
-<dt><code>mrv </code><i>assocID</i><i>assocID</i><code> [ </code><i>variable_name</i><code> [ = </code><i>value</i><code>[ &#8230; ]</code></p>
-<dd>Perform the same function as the <code>readvar</code> command, except for a range of association IDs. This range is determined from the association list cached by the most recent <code>associations</code> command.</p>
-<dt><code>passociations</code></p>
-<dd>Perform the same function as the <code>associations command</code>, except that it uses previously stored data rather than making a new query.</p>
-<dt><code>passwd</code></p>
-<dd>Specify the password to use for write requests.</p>
-<dt><code>peers</code></p>
-<dd>Display a list of peers in the form <code>[tally]remote refid st t when pool reach delay offset jitter</code> </p>
+</dd><dt><code>mrv </code><i>assocID</i><i>assocID</i><code> [ </code><i>variable_name</i><code> [ = </code><i>value</i><code>[ &#8230; ]</code></dt>
+<dd>Perform the same function as the <code>readvar</code> command, except for a range of association IDs. This range is determined from the association list cached by the most recent <code>associations</code> command.</dd>
+<dt><code>passociations</code></dt>
+<dd>Perform the same function as the <code>associations command</code>, except that it uses previously stored data rather than making a new query.</dd>
+<dt><code>passwd</code></dt>
+<dd>Specify the password to use for write requests.</dd>
+<dt><code>peers</code></dt>
+<dd>Display a list of peers in the form <code>[tally]remote refid st t when pool reach delay offset jitter</code> </dd>
 <table BORDER WIDTH=100%>
 <tr VALIGN=top>
 <td>Variable </td>
@@ -212,14 +212,14 @@ description: "ntpq – standard NTP query program"
 </td>
 </tr>
 </table>
-<dt><code>readvar </code><i>assocID</i><i>name</i><code> [ = </code><i>value</i><code> ] [,&#8230;]</code></p>
+<dt><code>readvar </code><i>assocID</i><i>name</i><code> [ = </code><i>value</i><code> ] [,&#8230;]</code></dt>
 <dd>
-<dt><code>rv </code><i>assocID</i><code> [ </code><i>name</i><code> ] [,&#8230;]</code></p>
-<dd>Display the specified variables. If <i>assocID</i> is zero, the variables are from the system variables name space, otherwise they are from the peer variables name space. The <i>assocID</i> is required, as the same name can occur in both spaces. If no <i>name</i> is included, all operative variables in the name space are displayed. In this case only, if the <i>assocID</i> is omitted, it is assumed zero. Multiple names are specified with comma separators and without whitespace. Note that time values are represented in milliseconds and frequency values in parts-per-million (PPM). Some NTP timestamps are represented in the format YYYYMMDDTTTT, where YYYY is the year, MM the month of year, DD the day of month and TTTT the time of day.</p>
-<dt><code>saveconfig </code><i>filename</i></p>
-<dd>Write the current configuration, including any runtime modifications given with <code>:config</code> or <code>config-from-file</code>, to the ntpd host&#8217;s file <i>filename</i>46 This command will be rejected by the server unless saveconfigdir appears in the <code>ntpd</code> configuration file. <i>filename</i> can use strftime() format specifiers to substitute the current date and time, for example, <code>saveconfig ntp-%Y%m%d-%H%M%S.conf</code>46 The filename used is stored in system variable <code>savedconfig</code>46 Authentication is required.</p>
-<dt><code>writevar </code><i>assocID</i><i>name</i><code> = </code><i>value</i><code> [,&#8230;]</code></p>
-<dd>Write the specified variables. If the <i>assocID</i> is zero, the variables are from the system variables name space, otherwise they are from the peer variables name space. The <i>assocID</i> is required, as the same name can occur in both spaces.</dl>
+</dd><dt><code>rv </code><i>assocID</i><code> [ </code><i>name</i><code> ] [,&#8230;]</code></dt>
+<dd>Display the specified variables. If <i>assocID</i> is zero, the variables are from the system variables name space, otherwise they are from the peer variables name space. The <i>assocID</i> is required, as the same name can occur in both spaces. If no <i>name</i> is included, all operative variables in the name space are displayed. In this case only, if the <i>assocID</i> is omitted, it is assumed zero. Multiple names are specified with comma separators and without whitespace. Note that time values are represented in milliseconds and frequency values in parts-per-million (PPM). Some NTP timestamps are represented in the format YYYYMMDDTTTT, where YYYY is the year, MM the month of year, DD the day of month and TTTT the time of day.</dd>
+<dt><code>saveconfig </code><i>filename</i></dt>
+<dd>Write the current configuration, including any runtime modifications given with <code>:config</code> or <code>config-from-file</code>, to the ntpd host&#8217;s file <i>filename</i>46 This command will be rejected by the server unless saveconfigdir appears in the <code>ntpd</code> configuration file. <i>filename</i> can use strftime() format specifiers to substitute the current date and time, for example, <code>saveconfig ntp-%Y%m%d-%H%M%S.conf</code>46 The filename used is stored in system variable <code>savedconfig</code>46 Authentication is required.</dd>
+<dt><code>writevar </code><i>assocID</i><i>name</i><code> = </code><i>value</i><code> [,&#8230;]</code></dt>
+<dd>Write the specified variables. If the <i>assocID</i> is zero, the variables are from the system variables name space, otherwise they are from the peer variables name space. The <i>assocID</i> is required, as the same name can occur in both spaces.</dd></dl>
 </dl>
 <h2>Status Words And Kiss Codes</h2>
 <p>The current state of the operating program is shown in a set of status words maintained by the system and each association separately. These words are displayed in the <code>rv</code> and <code>as</code> commands both in hexadecimal and decoded short tip strings. The codes, tips and short explanations are on the Event Messages and Status Words page. The page also includes a list of system and peer messages, the code for the latest of which is included in the status word. </p>
@@ -350,11 +350,11 @@ description: "ntpq – standard NTP query program"
 </table>
 <dl>
 <dd>
-<dl>
-<dt>The jitter and wander statistics are exponentially-weighted RMS averages. The system jitter is defined in the NTPv4 specification; the clock jitter statistic is computed by the clock discipline module.</p>
+</dd><dl>
+<dt>The jitter and wander statistics are exponentially-weighted RMS averages. The system jitter is defined in the NTPv4 specification; the clock jitter statistic is computed by the clock discipline module.</dt>
 <dd>
-<dt>When the NTPv4 daemon is compiled with the OpenSSL software library, additional system variables are displayed, including some or all of the following, depending on the particular Autokey dance:</p>
-<dd></dl>
+</dd><dt>When the NTPv4 daemon is compiled with the OpenSSL software library, additional system variables are displayed, including some or all of the following, depending on the particular Autokey dance:</dt>
+<dd></dd></dl>
 </dl>
 <table BORDER WIDTH=100%>
 <tr VALIGN=top>

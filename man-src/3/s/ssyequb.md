@@ -19,7 +19,7 @@ description: "ssyequb.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SSYEQUB computes row and column scalings intended to equilibrate a
  symmetric matrix A and reduce its condition number
@@ -30,11 +30,11 @@ description: "ssyequb.f –"
  smallest possible condition number over all possible diagonal
  scalings.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the details of the factorization are stored
@@ -93,18 +93,18 @@ description: "ssyequb.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> Livne, O.E. and Golub, G.H., &#8216;Scaling by Binormalization&#8217;, </p>
+</dt><dd> Livne, O.E. and Golub, G.H., &#8216;Scaling by Binormalization&#8217;, </dd>
 <p>&nbsp;<wbr>Numerical Algorithms, vol. 35, no. 1, pp. 97-120, January 2004.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>DOI 10.1023/B:NUMA.0000016606.32820.69&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Tech report version:&nbsp;<wbr><a rel="nofollow" href="http://ruready.utah.edu/archive/papers/bin.pdf">http://ruready.utah.edu/archive/papers/bin.pdf</a>&nbsp;<wbr></dl>
@@ -112,3 +112,4 @@ description: "ssyequb.f –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

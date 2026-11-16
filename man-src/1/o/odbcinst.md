@@ -16,42 +16,42 @@ description: "odbcinst – An unixODBC tool for manipulating configuration files
 <h2>OPTIONS</h2>
 <h3>ACTIONS</h3>
 <dl>
-<dt>-i</p>
-<dd> Install (add section to config file) new <i>OBJECT</i>. </p>
-<dt>-u</p>
-<dd> Uninstall (remove section from config file) existing <i>OBJECT</i>. </p>
-<dt>-q</p>
-<dd> Query the config files and print the options for specified <i>OBJECT</i>. </p>
-<dt>-j</p>
-<dd> Prints current configuration of unixODBC, listing (among others) the paths to the configuration files. </p>
-<dt>-c</p>
-<dd> Calls SQLCreateDataSource </p>
-<dt>-m</p>
-<dd> Calls SQLManageDataSources </p>
-<dt>&#8211;version</p>
-<dd> Prints program version and exits. </p>
+<dt>-i</dt>
+<dd> Install (add section to config file) new <i>OBJECT</i>. </dd>
+<dt>-u</dt>
+<dd> Uninstall (remove section from config file) existing <i>OBJECT</i>. </dd>
+<dt>-q</dt>
+<dd> Query the config files and print the options for specified <i>OBJECT</i>. </dd>
+<dt>-j</dt>
+<dd> Prints current configuration of unixODBC, listing (among others) the paths to the configuration files. </dd>
+<dt>-c</dt>
+<dd> Calls SQLCreateDataSource </dd>
+<dt>-m</dt>
+<dd> Calls SQLManageDataSources </dd>
+<dt>&#8211;version</dt>
+<dd> Prints program version and exits. </dd>
 </dl>
 <h3>OBJECTS</h3>
 <dl>
-<dt>-d</p>
-<dd> The <i>ACTION</i> affect drivers (and thus the odbcinst.ini configuration file). </p>
-<dt>-s</p>
-<dd> The <i>ACTION</i> affect data sources (and thus the user or system odbc.ini configuration file). </p>
+<dt>-d</dt>
+<dd> The <i>ACTION</i> affect drivers (and thus the odbcinst.ini configuration file). </dd>
+<dt>-s</dt>
+<dd> The <i>ACTION</i> affect data sources (and thus the user or system odbc.ini configuration file). </dd>
 </dl>
 <h3>OPTIONS</h3>
 <dl>
-<dt>-f <i>FILE</i></p>
-<dd> The <i>FILE</i> is template file, describing the configuration of installed <i>OBJECT</i> (only valid for the -i <i>ACTION</i>). </p>
-<dt>-r</p>
-<dd> Same as the -f <i>OPTION</i>, only take the standard input as the template file. </p>
-<dt>-n <i>NAME</i></p>
-<dd> Specifies the <i>NAME</i> of the <i>OBJECT</i>. </p>
-<dt>-v</p>
-<dd> Turn off verbose mode. This turns off all information, warning and error messages. </p>
-<dt>-l</p>
-<dd> The specified data source is system-wide. Has any effect only with the -s <i>OBJECT</i>. </p>
-<dt>-h</p>
-<dd> The specified data source is user-specific. Has any effect only with the -s <i>OBJECT</i>. </p>
+<dt>-f <i>FILE</i></dt>
+<dd> The <i>FILE</i> is template file, describing the configuration of installed <i>OBJECT</i> (only valid for the -i <i>ACTION</i>). </dd>
+<dt>-r</dt>
+<dd> Same as the -f <i>OPTION</i>, only take the standard input as the template file. </dd>
+<dt>-n <i>NAME</i></dt>
+<dd> Specifies the <i>NAME</i> of the <i>OBJECT</i>. </dd>
+<dt>-v</dt>
+<dd> Turn off verbose mode. This turns off all information, warning and error messages. </dd>
+<dt>-l</dt>
+<dd> The specified data source is system-wide. Has any effect only with the -s <i>OBJECT</i>. </dd>
+<dt>-h</dt>
+<dd> The specified data source is user-specific. Has any effect only with the -s <i>OBJECT</i>. </dd>
 </dl>
 <h2>RETURN VALUES</h2>
 <p> This command returns zero on success and non-zero value on failure. </p>
@@ -59,15 +59,15 @@ description: "odbcinst – An unixODBC tool for manipulating configuration files
 <p> <i>/etc/odbinst.ini</i></p>
 <dl>
 <dt>
-<dd> Configuration file containing all the database drivers specifications. See <code><a href="/docs/linux/man/5-odbcinst-ini/">odbcinst.ini</a></code>(5) for more details.</dl>
+</dt><dd> Configuration file containing all the database drivers specifications. See <code><a href="/docs/linux/man/5-odbcinst-ini/">odbcinst.ini</a></code>(5) for more details.</dd></dl>
 <p> <i>/etc/odbc.ini</i></p>
 <dl>
 <dt>
-<dd> System-wide data sources specifications. See <code><a href="/docs/linux/man/5-odbc-ini/">odbc.ini</a></code>(5) for more details.</dl>
+</dt><dd> System-wide data sources specifications. See <code><a href="/docs/linux/man/5-odbc-ini/">odbc.ini</a></code>(5) for more details.</dd></dl>
 <p> <i>$HOME/.odbc.ini</i></p>
 <dl>
 <dt>
-<dd> User-specific data sources specifications. See <code><a href="/docs/linux/man/5-odbc-ini/">odbc.ini</a></code>(5) for more details.</dl>
+</dt><dd> User-specific data sources specifications. See <code><a href="/docs/linux/man/5-odbc-ini/">odbc.ini</a></code>(5) for more details.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-odbcinst-ini/">odbcinst.ini</a></code>(5), <code><a href="/docs/linux/man/5-odbc-ini/">odbc.ini</a></code>(5) </p>
 <h2>AUTHORS</h2>

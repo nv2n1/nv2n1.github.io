@@ -21,10 +21,10 @@ description: "check-regexp – test regular expressions from the command line"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> check-regexp was written by Lorenzo Bettini &lt;<a rel="nofollow" href="http://www.lorenzobettini.it">www.lorenzobettini.it</a>&gt;. This man page was written by Cesare Tirabassi &lt;norsetto [at] ubuntu.com&gt;. </p>
 <h2>Index</h2>

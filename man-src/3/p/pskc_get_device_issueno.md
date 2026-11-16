@@ -13,8 +13,8 @@ description: "pskc_get_device_issueno – API function"
 const char *pskc_get_device_issueno(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage DeviceInfo IssueNo value. This element contains the issue number in case there are devices with the same serial number so that they can be distinguished by different issue numbers.</p>
 <h2>Returns</h2>

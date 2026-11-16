@@ -15,57 +15,57 @@ description: "smmixer – get/set Linux soundcard packet radio modem driver mixe
 <h2>Options</h2>
 <p><code>smmixer</code> accepts the following option: </p>
 <dl>
-<dt><code>-i</code></p>
-<dd>The <i>device</i> argument specifies the soundcard modem device which should be configured or interrogated. It will usually have the following form: <i>sm[0-3].</i> </p>
+<dt><code>-i</code></dt>
+<dd>The <i>device</i> argument specifies the soundcard modem device which should be configured or interrogated. It will usually have the following form: <i>sm[0-3].</i> </dd>
 </dl>
 <h2>Parameters</h2>
 <p>The <code>AD1848 (WSS)</code> mixer accepts the following parameters:</p>
 <dl>
-<dt><code>ol=val</code></p>
-<dd>sets the level of the left output to the specified value. Legal values are from -100..0dB.</p>
-<dt><code>or=val</code></p>
-<dd>sets the level of the right output to the specified value. Legal values are from -100..0dB.</p>
-<dt><code>o=val</code></p>
-<dd>sets the level of both outputs to the specified value. Legal values are from -100..0dB.</p>
-<dt><code>il=val</code></p>
-<dd>sets the level of the left input to the specified value. Legal values are from 0..43dB.</p>
-<dt><code>ir=val</code></p>
-<dd>sets the level of the right input to the specified value. Legal values are from 0..43dB.</p>
-<dt><code>i=val</code></p>
-<dd>sets the level of both inputs to the specified value. Legal values are from 0..43dB.</p>
-<dt><code>sl=val</code></p>
-<dd>sets the source of the left input to the specified value. Legal values are <i>line, aux1, mic</i> or <i>dac.</i></p>
-<dt><code>sr=val</code></p>
-<dd>sets the source of the right input to the specified value. Legal values are <i>line, aux1, mic</i> or <i>dac.</i></p>
-<dt><code>s=val</code></p>
-<dd>sets the source of both inputs to the specified value. Legal values are <i>line, aux1, mic</i> or <i>dac.</i> </p>
+<dt><code>ol=val</code></dt>
+<dd>sets the level of the left output to the specified value. Legal values are from -100..0dB.</dd>
+<dt><code>or=val</code></dt>
+<dd>sets the level of the right output to the specified value. Legal values are from -100..0dB.</dd>
+<dt><code>o=val</code></dt>
+<dd>sets the level of both outputs to the specified value. Legal values are from -100..0dB.</dd>
+<dt><code>il=val</code></dt>
+<dd>sets the level of the left input to the specified value. Legal values are from 0..43dB.</dd>
+<dt><code>ir=val</code></dt>
+<dd>sets the level of the right input to the specified value. Legal values are from 0..43dB.</dd>
+<dt><code>i=val</code></dt>
+<dd>sets the level of both inputs to the specified value. Legal values are from 0..43dB.</dd>
+<dt><code>sl=val</code></dt>
+<dd>sets the source of the left input to the specified value. Legal values are <i>line, aux1, mic</i> or <i>dac.</i></dd>
+<dt><code>sr=val</code></dt>
+<dd>sets the source of the right input to the specified value. Legal values are <i>line, aux1, mic</i> or <i>dac.</i></dd>
+<dt><code>s=val</code></dt>
+<dd>sets the source of both inputs to the specified value. Legal values are <i>line, aux1, mic</i> or <i>dac.</i> </dd>
 <p> The <code>CT1335 (SB2.x)</code> mixer accepts the following parameter:</p>
-<dt><code>o=val</code></p>
-<dd>sets the output level to the specified value. Legal values are from -46..0dB. </p>
+<dt><code>o=val</code></dt>
+<dd>sets the output level to the specified value. Legal values are from -46..0dB. </dd>
 <p> The <code>CT1345 (SBPro)</code> mixer accepts the following parameters:</p>
-<dt><code>ol=val</code></p>
-<dd>sets the level of the left output to the specified value. Legal values are from -46..0dB.</p>
-<dt><code>or=val</code></p>
-<dd>sets the level of the right output to the specified value. Legal values are from -46..0dB.</p>
-<dt><code>o=val</code></p>
-<dd>sets the level of both outputs to the specified value. Legal values are from -46..0dB.</p>
-<dt><code>s=val</code></p>
-<dd>sets the input source to the specified value. Legal values are <i>mic, cd</i> or <i>line.</i> </p>
+<dt><code>ol=val</code></dt>
+<dd>sets the level of the left output to the specified value. Legal values are from -46..0dB.</dd>
+<dt><code>or=val</code></dt>
+<dd>sets the level of the right output to the specified value. Legal values are from -46..0dB.</dd>
+<dt><code>o=val</code></dt>
+<dd>sets the level of both outputs to the specified value. Legal values are from -46..0dB.</dd>
+<dt><code>s=val</code></dt>
+<dd>sets the input source to the specified value. Legal values are <i>mic, cd</i> or <i>line.</i> </dd>
 <p> The <code>CT1745 (SB16, SB32 AWE)</code> mixer accepts the following parameters:</p>
-<dt><code>ol=val</code></p>
-<dd>sets the level of the left output to the specified value. Legal values are from -62..18dB.</p>
-<dt><code>or=val</code></p>
-<dd>sets the level of the right output to the specified value. Legal values are from -62..18dB.</p>
-<dt><code>o=val</code></p>
-<dd>sets the level of both outputs to the specified value. Legal values are from -62..18dB.</p>
-<dt><code>il=val</code></p>
-<dd>sets the level of the left input to the specified value. Legal values are from -62..18dB.</p>
-<dt><code>ir=val</code></p>
-<dd>sets the level of the right input to the specified value. Legal values are from -62..18dB.</p>
-<dt><code>i=val</code></p>
-<dd>sets the level of both inputs to the specified value. Legal values are from -62..18dB.</p>
-<dt><code>s=val</code></p>
-<dd>enables the specified value as a source. Legal values are <i>line, line.l, line.r, midi, midi.l, midi.r, cd, cd.l, cd.r</i> or <i>mic.</i> </p>
+<dt><code>ol=val</code></dt>
+<dd>sets the level of the left output to the specified value. Legal values are from -62..18dB.</dd>
+<dt><code>or=val</code></dt>
+<dd>sets the level of the right output to the specified value. Legal values are from -62..18dB.</dd>
+<dt><code>o=val</code></dt>
+<dd>sets the level of both outputs to the specified value. Legal values are from -62..18dB.</dd>
+<dt><code>il=val</code></dt>
+<dd>sets the level of the left input to the specified value. Legal values are from -62..18dB.</dd>
+<dt><code>ir=val</code></dt>
+<dd>sets the level of the right input to the specified value. Legal values are from -62..18dB.</dd>
+<dt><code>i=val</code></dt>
+<dd>sets the level of both inputs to the specified value. Legal values are from -62..18dB.</dd>
+<dt><code>s=val</code></dt>
+<dd>enables the specified value as a source. Legal values are <i>line, line.l, line.r, midi, midi.l, midi.r, cd, cd.l, cd.r</i> or <i>mic.</i> </dd>
 </dl>
 <h2>Considerations</h2>
 <p>It is important that the audio levels of your radio match those of the soundcard. To help achieve this, use the <i>smdiag</i> utility. </p>

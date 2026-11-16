@@ -55,12 +55,12 @@ description: "ricci_selinux – Security Enhanced Linux Policy for the ricci pro
 <p> Policy governs the access confined processes have to these ports. SELinux ricci policy is very flexible allowing users to setup their ricci processes in as secure a method as possible. </p>
 <p> The following port types are defined for ricci: </p>
 <dl>
-<dt><code>ricci_modcluster_port_t</code></p>
+<dt><code>ricci_modcluster_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 16851 udp 16851 </p>
-<dt><code>ricci_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 16851 udp 16851 </dd>
+<dt><code>ricci_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 11111 udp 11111</dl>
+</dd><dd>Default Defined Ports: tcp 11111 udp 11111</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ricci_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -152,8 +152,8 @@ description: "ricci_selinux – Security Enhanced Linux Policy for the ricci pro
 <p> <code>ricci_modcluster_var_run_t</code> </p>
 <p> &#8211; Set files with the ricci_modcluster_var_run_t type, if you want to store the ricci modcluster files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/clumond.sock, /var/run/modclusterd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/clumond.sock, /var/run/modclusterd.pid </dd>
 </dl>
 <p> <code>ricci_modclusterd_exec_t</code> </p>
 <p> &#8211; Set files with the ricci_modclusterd_exec_t type, if you want to transition an executable to the ricci_modclusterd_t domain. </p>

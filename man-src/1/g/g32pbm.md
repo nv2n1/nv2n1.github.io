@@ -15,18 +15,18 @@ description: "g32pbm – convert a Group 3 fax file into a portable bitmap"
 <p> Reads a Group 3 fax file (raw or digifax) as input. If no filename is given, stdin is used. Produces a portable bitmap as output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd> Tells <i>g32pbm</i> to interpret bits least-significant first, instead of the default most-significant first (&quot;-reversebits&quot;). Some fax modems do it one way and others do it the other way. If you get a whole bunch of &quot;invalid code&quot; messages (nearly one per line), try using this flag.</p>
-<dt><code>-s</code></p>
-<dd> Double each horizontal row of the fax file in the pbm file (&quot;-stretch)&quot;. You can use this to adjust the aspect ratio of a &quot;normal resolution&quot; fax file to match that of a &quot;fine resolution&quot; fax file. This might not seem like it belongs here, but it&#8217;s <i>much</i> faster than using pnmscale|pgmtopbm later. <code>-s </code> is activated automatically if the file is specified on the command line and its name starts with &quot;fn&#8230;&quot; (fax/normal).</p>
-<dt><code>-l(aserjet)</code></p>
-<dd> Instead of a portable bitmap (PBM), output HP laserjet files, suitable for direct printing on a HP laserjet or desjket.</p>
-<dt><code>-d &lt;dpi&gt;</code></p>
-<dd> Scale output to &lt;dpi&gt; dots per inch before printing. Normal FAX resolution is 204&#215;196 dpi (fine mode), or 204&#215;98 dpi (normal mode). In LaerJet mode, only the values 75, 150 and 300 are allowed for &lt;dpi&gt;.</p>
-<dt><code>-t</code></p>
-<dd> turn image by 90 degrees clockwise. Multiple -t commands increase angle, that is, -t -t will turn it upside down, and so on.</p>
-<dt><code>-?</code></p>
-<dd> Print a short command syntax.</dl>
+<dt><code>-r</code></dt>
+<dd> Tells <i>g32pbm</i> to interpret bits least-significant first, instead of the default most-significant first (&quot;-reversebits&quot;). Some fax modems do it one way and others do it the other way. If you get a whole bunch of &quot;invalid code&quot; messages (nearly one per line), try using this flag.</dd>
+<dt><code>-s</code></dt>
+<dd> Double each horizontal row of the fax file in the pbm file (&quot;-stretch)&quot;. You can use this to adjust the aspect ratio of a &quot;normal resolution&quot; fax file to match that of a &quot;fine resolution&quot; fax file. This might not seem like it belongs here, but it&#8217;s <i>much</i> faster than using pnmscale|pgmtopbm later. <code>-s </code> is activated automatically if the file is specified on the command line and its name starts with &quot;fn&#8230;&quot; (fax/normal).</dd>
+<dt><code>-l(aserjet)</code></dt>
+<dd> Instead of a portable bitmap (PBM), output HP laserjet files, suitable for direct printing on a HP laserjet or desjket.</dd>
+<dt><code>-d &lt;dpi&gt;</code></dt>
+<dd> Scale output to &lt;dpi&gt; dots per inch before printing. Normal FAX resolution is 204&#215;196 dpi (fine mode), or 204&#215;98 dpi (normal mode). In LaerJet mode, only the values 75, 150 and 300 are allowed for &lt;dpi&gt;.</dd>
+<dt><code>-t</code></dt>
+<dd> turn image by 90 degrees clockwise. Multiple -t commands increase angle, that is, -t -t will turn it upside down, and so on.</dd>
+<dt><code>-?</code></dt>
+<dd> Print a short command syntax.</dd></dl>
 <h2>REFERENCES</h2>
 <p> The standard for Group 3 fax is defined in CCITT Recommendation T.4.</p>
 <h2>BUGS</h2>

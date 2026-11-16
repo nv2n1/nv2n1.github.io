@@ -11,21 +11,13 @@ std::next_permutation - std::next_permutation
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class BidirIt &gt;                                                             (until C++20)
-
 bool next_permutation( BidirIt first, BidirIt last );
-
 template&lt; class BidirIt &gt;                                                             (since C++20)
-
 constexpr bool next_permutation( BidirIt first, BidirIt last );               (1)
-
 template&lt; class BidirIt, class Compare &gt;                                                            (until C++20)
-
 bool next_permutation( BidirIt first, BidirIt last, Compare comp );               (2)
-
 template&lt; class BidirIt, class Compare &gt;                                                            (since C++20)
-
 constexpr bool next_permutation( BidirIt first, BidirIt last, Compare comp );</code></pre> 
 Transforms the range [first, last) into the next permutation from the set of all permutations that are lexicographically ordered with respect to operator&lt; or comp. Returns true if such permutation exists, otherwise transforms the range into the first permutation (as if by std::sort(first, last)) and returns false. 
 
@@ -91,12 +83,9 @@ At most N/2 swaps, where N = std::distance(first, last). Averaged over the entir
 
 The following code prints all three permutations of the string &quot;aba&quot; 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::string s = &quot;aba&quot;;
     std::sort(s.begin(), s.end());

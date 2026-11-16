@@ -139,34 +139,34 @@ description: "antivirus_selinux – Security Enhanced Linux Policy for the antiv
 <p> <code>antivirus_conf_t</code> </p>
 <p> &#8211; Set files with the antivirus_conf_t type, if you want to treat the files as antivirus configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/amavis(d)?.conf, /etc/amavisd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/amavis(d)?.conf, /etc/amavisd(/.*)? </dd>
 </dl>
 <p> <code>antivirus_db_t</code> </p>
 <p> &#8211; Set files with the antivirus_db_t type, if you want to treat the files as antivirus database content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/clamav(/.*)?, /var/amavis(/.*)?, /var/lib/clamd.*, /var/lib/amavis(/.*)?, /var/lib/clamav(/.*)?, /var/virusmails(/.*)?, /var/opt/f-secure(/.*)?, /var/spool/amavisd(/.*)?, /var/lib/clamav-unofficial-sigs(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/clamav(/.*)?, /var/amavis(/.*)?, /var/lib/clamd.*, /var/lib/amavis(/.*)?, /var/lib/clamav(/.*)?, /var/virusmails(/.*)?, /var/opt/f-secure(/.*)?, /var/spool/amavisd(/.*)?, /var/lib/clamav-unofficial-sigs(/.*)? </dd>
 </dl>
 <p> <code>antivirus_exec_t</code> </p>
 <p> &#8211; Set files with the antivirus_exec_t type, if you want to transition an executable to the antivirus_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/amavisd.*, /usr/sbin/amavi, /usr/sbin/clamd, /usr/bin/clamscan, /usr/bin/clamdscan, /usr/bin/freshclam, /usr/sbin/clamav-milter, /usr/lib/AntiVir/antivir </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/amavisd.*, /usr/sbin/amavi, /usr/sbin/clamd, /usr/bin/clamscan, /usr/bin/clamdscan, /usr/bin/freshclam, /usr/sbin/clamav-milter, /usr/lib/AntiVir/antivir </dd>
 </dl>
 <p> <code>antivirus_home_t</code> </p>
 <p> &#8211; Set files with the antivirus_home_t type, if you want to store antivirus files in the users home directory. </p>
 <p> <code>antivirus_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the antivirus_initrc_exec_t type, if you want to transition an executable to the antivirus_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/clamd.*, /etc/rc.d/init.d/amavis, /etc/rc.d/init.d/amavisd-snmp </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/clamd.*, /etc/rc.d/init.d/amavis, /etc/rc.d/init.d/amavisd-snmp </dd>
 </dl>
 <p> <code>antivirus_log_t</code> </p>
 <p> &#8211; Set files with the antivirus_log_t type, if you want to treat the data as antivirus log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/clamd.*, /var/log/clamav.*, /var/log/freshclam.*, /var/log/amavisd.log.*, /var/log/clamav/freshclam.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/clamd.*, /var/log/clamav.*, /var/log/freshclam.*, /var/log/amavisd.log.*, /var/log/clamav/freshclam.* </dd>
 </dl>
 <p> <code>antivirus_tmp_t</code> </p>
 <p> &#8211; Set files with the antivirus_tmp_t type, if you want to store antivirus temporary files in the /tmp directories. </p>
@@ -175,8 +175,8 @@ description: "antivirus_selinux – Security Enhanced Linux Policy for the antiv
 <p> <code>antivirus_var_run_t</code> </p>
 <p> &#8211; Set files with the antivirus_var_run_t type, if you want to store the antivirus files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/clamd.*, /var/run/clamav.*, /var/run/amavis(d)?(/.*)?, /var/run/amavis(d)?/clamd.pid, /var/run/amavisd-snmp-subagent.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/clamd.*, /var/run/clamav.*, /var/run/amavis(d)?(/.*)?, /var/run/amavis(d)?/clamd.pid, /var/run/amavisd-snmp-subagent.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

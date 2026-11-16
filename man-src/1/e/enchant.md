@@ -15,18 +15,18 @@ description: "Enchant – a spellchecker"
 <p> <code>Enchant</code> is an ispell-compatible spellchecker.</p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><code>-a</code></p>
-<dd> List suggestions in ispell pipe mode format.</p>
-<dt><code>-d dict</code></p>
-<dd> Use dictionary &lt;dict&gt;.</p>
-<dt><code>-h</code></p>
-<dd> Show short help.</p>
-<dt><code>-l</code></p>
-<dd> List only the misspellings.</p>
-<dt><code>-L</code></p>
-<dd> Include the line number in the output.</p>
-<dt><code>-v</code></p>
-<dd> Prints the program&#8217;s version.</dl>
+<dt><code>-a</code></dt>
+<dd> List suggestions in ispell pipe mode format.</dd>
+<dt><code>-d dict</code></dt>
+<dd> Use dictionary &lt;dict&gt;.</dd>
+<dt><code>-h</code></dt>
+<dd> Show short help.</dd>
+<dt><code>-l</code></dt>
+<dd> List only the misspellings.</dd>
+<dt><code>-L</code></dt>
+<dd> Include the line number in the output.</dd>
+<dt><code>-v</code></dt>
+<dd> Prints the program&#8217;s version.</dd></dl>
 <h2>ENCHANT ORDERING FILE</h2>
 <p> Enchant has a global and a per-user ordering file named <i>enchant.ordering</i>. It lets the user specify which spelling backend to use for individual languages in the case when you care which backend gets used. The global file is located in <i>$(datadir)/enchant</i> and the per-user file is located in <i>~/.enchant</i>. The per-user file takes precedence, if found. </p>
 <p> The ordering file takes the form language_tag:&lt;comma-separated list of spelling backends&gt;. I am currently aware of the following backends: aspell, myspell, ispell, uspell, hspell, voikko, and zemberek. &#8216;*&#8217; is used to mean &quot;use this ordering for all languages, unless instructed otherwise.&quot; For example: </p>

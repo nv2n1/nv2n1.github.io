@@ -22,16 +22,16 @@ void XFixesChangeSaveSet (Display *dpy,
  int <i>map</i>);</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>window</i></p>
-<dd>Specifies which window.</p>
-<dt><i>mode</i></p>
-<dd>Specifies the save set operation (SetModeInsert/SetModeDelete).</p>
-<dt><i>target</i></p>
-<dd>Specifies the target when executing the save set (SaveSetNearest/SaveSetRoot). In SaveSetNearest mode, the save set member window will be reparented to the nearest window not owned by the save set client. In SaveSetRoot mode, the save set member window will be reparented to the root window.</p>
-<dt><i>map</i></p>
-<dd>Specifies the map mode (SaveSetMap/SaveSetUnmap) which selects whether the save setmember window will be mapped or unmapped during save set processing.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>window</i></dt>
+<dd>Specifies which window.</dd>
+<dt><i>mode</i></dt>
+<dd>Specifies the save set operation (SetModeInsert/SetModeDelete).</dd>
+<dt><i>target</i></dt>
+<dd>Specifies the target when executing the save set (SaveSetNearest/SaveSetRoot). In SaveSetNearest mode, the save set member window will be reparented to the nearest window not owned by the save set client. In SaveSetRoot mode, the save set member window will be reparented to the root window.</dd>
+<dt><i>map</i></dt>
+<dd>Specifies the map mode (SaveSetMap/SaveSetUnmap) which selects whether the save setmember window will be mapped or unmapped during save set processing.</dd></dl>
 <h2>Description</h2>
 <p><code>Xfixes</code> is a simple library designed to interface the X Fixes Extension. This extension provides application with work arounds for various limitations in the core protocol.</p>
 <h2>Restrictions</h2>

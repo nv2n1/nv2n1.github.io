@@ -20,6 +20,6 @@ description: "QuantLib::AmericanPayoffAtHit – Analytic formula for American ex
 <p>Analytic formula for American exercise payoff at-hit options. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>calculate greeks</dl>
+<dd>calculate greeks</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

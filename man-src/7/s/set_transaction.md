@@ -19,10 +19,10 @@ where <i>transaction_mode</i> is one of:
 <p> The available transaction characteristics are the transaction isolation level and the transaction access mode (read/write or read-only). </p>
 <p> The isolation level of a transaction determines what data the transaction can see when other transactions are running concurrently:</p>
 <dl>
-<dt><code>READ COMMITTED</code></p>
-<dd>A statement can only see rows committed before it began. This is the default.</p>
-<dt><code>SERIALIZABLE</code></p>
-<dd>All statements of the current transaction can only see rows committed before the first query or data-modification statement was executed in this transaction.</dl>
+<dt><code>READ COMMITTED</code></dt>
+<dd>A statement can only see rows committed before it began. This is the default.</dd>
+<dt><code>SERIALIZABLE</code></dt>
+<dd>All statements of the current transaction can only see rows committed before the first query or data-modification statement was executed in this transaction.</dd></dl>
 <p> The SQL standard defines two additional levels, READ UNCOMMITTED and REPEATABLE READ. In PostgreSQL READ UNCOMMITTED is treated as READ COMMITTED, while REPEATABLE READ is treated as SERIALIZABLE. </p>
 <p> The transaction isolation level cannot be changed after the first query or data-modification statement (<code>SELECT</code>, <code>INSERT</code>, <code>DELETE</code>, <code>UPDATE</code>, <code>FETCH</code>, or <code>COPY</code>) of a transaction has been executed. See in the documentation for more information about transaction isolation and concurrency control. </p>
 <p> The transaction access mode determines whether the transaction is read/write or read-only. Read/write is the default. When a transaction is read-only, the following SQL commands are disallowed: INSERT, UPDATE, DELETE, and COPY FROM if the table they would write to is not a temporary table; all CREATE, ALTER, and DROP commands; COMMENT, GRANT, REVOKE, TRUNCATE; and EXPLAIN ANALYZE and EXECUTE if the command they would execute is among those listed. This is a high-level notion of read-only that does not prevent all writes to disk.</p>

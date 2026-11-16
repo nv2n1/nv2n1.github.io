@@ -17,12 +17,12 @@ description: "XmFontListEntryCreate — A font list function that creates a font
 <h2>Description</h2>
 <p><code>XmFontListEntryCreate</code> creates a font list entry that contains either a font or font set and is identified by a tag.</p>
 <dl COMPACT>
-<dt><i>tag</i></p>
-<dd>Specifies a NULL terminated string for the tag of the font list entry. The tag may be specified as <code>XmFONTLIST_DEFAULT_TAG</code>, which is used to identify the default font list element in a font list.</p>
-<dt><i>type</i></p>
-<dd>Specifies whether the <i>font</i> argument is a font structure or a font set. Valid values are <code>XmFONT_IS_FONT</code> and <code>XmFONT_IS_FONTSET</code>.</p>
-<dt><i>font</i></p>
-<dd>Specifies either an <code>XFontSet</code> returned by <code>XCreateFontSet</code> or a pointer to an <code>XFontStruct</code> returned by <code>XLoadQueryFont</code>.</dl>
+<dt><i>tag</i></dt>
+<dd>Specifies a NULL terminated string for the tag of the font list entry. The tag may be specified as <code>XmFONTLIST_DEFAULT_TAG</code>, which is used to identify the default font list element in a font list.</dd>
+<dt><i>type</i></dt>
+<dd>Specifies whether the <i>font</i> argument is a font structure or a font set. Valid values are <code>XmFONT_IS_FONT</code> and <code>XmFONT_IS_FONTSET</code>.</dd>
+<dt><i>font</i></dt>
+<dd>Specifies either an <code>XFontSet</code> returned by <code>XCreateFontSet</code> or a pointer to an <code>XFontStruct</code> returned by <code>XLoadQueryFont</code>.</dd></dl>
 <p> The toolkit does not copy the X Font structure specified by the <i>font</i> argument. Therefore, an application programmer must not free <code>XFontStruct</code> or <code>XFontSet</code> until all font lists and/or font entries that reference it have been freed.</p>
 <h2>Return</h2>
 <p>Returns a font list entry. The function allocates space to hold the returned font list entry. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmFontListEntryFree</code>.</p>

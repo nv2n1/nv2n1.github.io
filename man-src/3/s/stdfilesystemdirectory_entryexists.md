@@ -12,7 +12,6 @@ std::filesystem::directory_entry::exists - std::filesystem::directory_entry::exi
 
 <pre><code>bool exists() const;
 (since C++ 17)
-
     bool exists(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object exists. Effectively returns std::filesystem::exists(status()) or std::filesystem::exists(status(ec)), respectively 
 

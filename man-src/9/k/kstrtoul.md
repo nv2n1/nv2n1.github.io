@@ -15,15 +15,15 @@ kstrtoul - convert a string to an unsigned long
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>The start of the string. The string must be null-terminated, and may also include a single newline before its terminating null. The first character may also be a plus sign, but not a minus sign.</dl>
+<dl><dd></dd><dd>The start of the string. The string must be null-terminated, and may also include a single newline before its terminating null. The first character may also be a plus sign, but not a minus sign.</dd></dl>
  
 
  <i>base</i>
-<dl><dd>The number base to use. The maximum supported base is 16. If base is given as 0, then the base of the string is automatically detected with the conventional semantics - If it begins with 0x the number will be parsed as a hexadecimal (case insensitive), if it otherwise begins with 0, it will be parsed as an octal number. Otherwise it will be parsed as a decimal.</dl>
+<dl><dd>The number base to use. The maximum supported base is 16. If base is given as 0, then the base of the string is automatically detected with the conventional semantics - If it begins with 0x the number will be parsed as a hexadecimal (case insensitive), if it otherwise begins with 0, it will be parsed as an octal number. Otherwise it will be parsed as a decimal.</dd></dl>
  
 
  <i>res</i>
-<dl><dd>Where to write the result of the conversion on success.</dl>
+<dl><dd>Where to write the result of the conversion on success.</dd></dl>
 
 <h2>Description</h2>
 

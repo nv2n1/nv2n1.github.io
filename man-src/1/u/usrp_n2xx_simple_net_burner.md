@@ -16,22 +16,22 @@ description: "usrp_n2xx_simple_net_burner – USRP N-Series FPGA/Firmware Burner
 <h2>OPTIONS</h2>
 <p> This program works best when only an IP address is specified.</p>
 <dl>
-<dt>Device IP Address:</p>
-<dd> &#8211;addr=<i>&quot;Address&quot;</i> (default: 192.168.10.2)</p>
-<dt>This help information:</p>
-<dd> &#8211;help</p>
-<dt>Custom Firmware Filepath:</p>
-<dd> &#8211;fw=<i>&quot;filepath&quot;</i></p>
-<dt>Custom FPGA Filepath:</p>
-<dd> &#8211;fpga=<i>&quot;filepath&quot;</i></p>
-<dt>Don&#8217;t burn firmware:</p>
-<dd> &#8211;no_fw</p>
-<dt>Don&#8217;t burn FPGA:</p>
-<dd> &#8211;no_fpga</p>
-<dt>Automatically reboot USRP device after burning</p>
-<dd> &#8211;auto_reboot</p>
-<dt>List all USRP devices without burning</p>
-<dd> &#8211;list</dl>
+<dt>Device IP Address:</dt>
+<dd> &#8211;addr=<i>&quot;Address&quot;</i> (default: 192.168.10.2)</dd>
+<dt>This help information:</dt>
+<dd> &#8211;help</dd>
+<dt>Custom Firmware Filepath:</dt>
+<dd> &#8211;fw=<i>&quot;filepath&quot;</i></dd>
+<dt>Custom FPGA Filepath:</dt>
+<dd> &#8211;fpga=<i>&quot;filepath&quot;</i></dd>
+<dt>Don&#8217;t burn firmware:</dt>
+<dd> &#8211;no_fw</dd>
+<dt>Don&#8217;t burn FPGA:</dt>
+<dd> &#8211;no_fpga</dd>
+<dt>Automatically reboot USRP device after burning</dt>
+<dd> &#8211;auto_reboot</dd>
+<dt>List all USRP devices without burning</dt>
+<dd> &#8211;list</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Selecting a USRP device with a non-standard IP address</h3>
 <p> usrp_n2xx_simple_net_burner &#8211;addr=192.168.10.3</p>

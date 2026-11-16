@@ -29,28 +29,28 @@ description: "par – parallel command processing"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>c</p>
 <p> The command-line options are as follows: </p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Command to be run on each of the arguments following the command-line options, where the first line of the input file(s) begins with a pound-sign (#).</p>
-<dt><code>-d</code></p>
-<dd> Print debugging information on standard error (stderr). Repeat the option up to three times for more verbosity.</p>
-<dt><code>-e</code></p>
-<dd> Split args by spaces, rather than using sh -c. Note: <code>-e</code> is incompatible with the <code>-i</code> option.</p>
-<dt><code>-f</code></p>
-<dd> No input file or STDIN, just run a quantity of the command specified with -c.</p>
-<dt><code>-i</code></p>
-<dd> Run commands interactively through (multiple) <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) processes.</p>
-<dt><code>-l</code></p>
-<dd> Prefix of logfile name, as in prefix.N where N is the <code>par</code> process number ([0..]). </p>
+<dt><code>-c</code></dt>
+<dd> Command to be run on each of the arguments following the command-line options, where the first line of the input file(s) begins with a pound-sign (#).</dd>
+<dt><code>-d</code></dt>
+<dd> Print debugging information on standard error (stderr). Repeat the option up to three times for more verbosity.</dd>
+<dt><code>-e</code></dt>
+<dd> Split args by spaces, rather than using sh -c. Note: <code>-e</code> is incompatible with the <code>-i</code> option.</dd>
+<dt><code>-f</code></dt>
+<dd> No input file or STDIN, just run a quantity of the command specified with -c.</dd>
+<dt><code>-i</code></dt>
+<dd> Run commands interactively through (multiple) <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) processes.</dd>
+<dt><code>-l</code></dt>
+<dd> Prefix of logfile name, as in prefix.N where N is the <code>par</code> process number ([0..]). </dd>
 <p> Default: par.log.&lt;time&gt;.[0..]</p>
-<dt><code>-n</code></p>
-<dd> Number of simultaneous processes. </p>
+<dt><code>-n</code></dt>
+<dd> Number of simultaneous processes. </dd>
 <p> Default: 3</p>
-<dt><code>-p N</code></p>
-<dd> Pause N seconds between running commands.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode. Omit the typical processing logs and do not create the log files from -l, instead the children inherit stdout and stderr from <code>par.</code> <code>-q</code> is mutually exclusive with the <code>-x</code> and <code>-l</code> options and the option appearing last will take precedence.</p>
-<dt><code>-x</code></p>
-<dd> View par logs in real-time via an <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1). </p>
+<dt><code>-p N</code></dt>
+<dd> Pause N seconds between running commands.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode. Omit the typical processing logs and do not create the log files from -l, instead the children inherit stdout and stderr from <code>par.</code> <code>-q</code> is mutually exclusive with the <code>-x</code> and <code>-l</code> options and the option appearing last will take precedence.</dd>
+<dt><code>-x</code></dt>
+<dd> View par logs in real-time via an <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1). </dd>
 </dl>
 <h2>FILES</h2>
 <pre>

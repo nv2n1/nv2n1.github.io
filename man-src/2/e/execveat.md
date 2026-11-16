@@ -22,25 +22,25 @@ description: "execveat – execute program relative to a directory file descript
 <p> If <i>pathname</i> is an empty string and the <code>AT_EMPTY_PATH</code> flag is specified, then the file descriptor <i>dirfd</i> specifies the file to be executed (i.e., <i>dirfd</i> refers to an executable file, rather than a directory). </p>
 <p> The <i>flags</i> argument is a bit mask that can include zero or more of the following flags:</p>
 <dl>
-<dt><code>AT_EMPTY_PATH</code></p>
-<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag).</p>
-<dt><code>AT_SYMLINK_NOFOLLOW</code></p>
-<dd> If the file identified by <i>dirfd</i> and a non-NULL <i>pathname</i> is a symbolic link, then the call fails with the error <code>ELOOP</code>.</dl>
+<dt><code>AT_EMPTY_PATH</code></dt>
+<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag).</dd>
+<dt><code>AT_SYMLINK_NOFOLLOW</code></dt>
+<dd> If the file identified by <i>dirfd</i> and a non-NULL <i>pathname</i> is a symbolic link, then the call fails with the error <code>ELOOP</code>.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>execveat</code>() does not return. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <p> The same errors that occur for <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) can also occur for <code>execveat</code>(). The following additional errors can occur for <code>execveat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid flag specified in <i>flags</i>.</p>
-<dt><code>ELOOP</code></p>
-<dd> <i>flags</i> includes <code>AT_SYMLINK_NOFOLLOW</code> and the file identified by <i>dirfd</i> and a non-NULL <i>pathname</i> is a symbolic link.</p>
-<dt><code>ENOENT</code></p>
-<dd> The program identified by <i>dirfd</i> and <i>pathname</i> requires the use of an interpreter program (such as a script starting with &quot;#!&quot;), but the file descriptor <i>dirfd</i> was opened with the <code>O_CLOEXEC</code> flag, with the result that the program file is inaccessible to the launched interpreter. See BUGS.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid flag specified in <i>flags</i>.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> <i>flags</i> includes <code>AT_SYMLINK_NOFOLLOW</code> and the file identified by <i>dirfd</i> and a non-NULL <i>pathname</i> is a symbolic link.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The program identified by <i>dirfd</i> and <i>pathname</i> requires the use of an interpreter program (such as a script starting with &quot;#!&quot;), but the file descriptor <i>dirfd</i> was opened with the <code>O_CLOEXEC</code> flag, with the result that the program file is inaccessible to the launched interpreter. See BUGS.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>execveat</code>() was added to Linux in kernel 3.19. GNU C library support is pending.</p>
 <h2>CONFORMING TO</h2>

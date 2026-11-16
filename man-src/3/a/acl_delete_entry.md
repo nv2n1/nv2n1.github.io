@@ -20,8 +20,8 @@ description: "acl_delete_entry – delete an ACL entry"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_delete_entry function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl_p</i> is not a valid pointer to an ACL. </p>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl_p</i> is not a valid pointer to an ACL. </dd>
 <p> The argument <i>entry_d</i> is not a valid pointer to an ACL entry.</dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
@@ -30,3 +30,4 @@ description: "acl_delete_entry – delete an ACL entry"
 <h2>AUTHOR</h2>
 <p> Derived from the FreeBSD manual pages written by An Robert N M Watson Aq rwatson [at] FreeBSD.org , and adapted for Linux by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
 <h2>Index</h2>
+</p>

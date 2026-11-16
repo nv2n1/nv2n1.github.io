@@ -17,14 +17,14 @@ description: "ldns-key2ds – transform a DNSKEY RR to a DS RR"
 <p> By default it takes a pick of algorithm similar to the key algorithm, SHA1 for RSASHA1, and so on. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd> Ignore SEP flag (i.e. make DS records for any key) </p>
-<dt><code>-n</code></p>
-<dd> Write the result DS Resource Record to stdout instead of a file </p>
-<dt><code>-1</code></p>
-<dd> Use SHA1 as the hash function. </p>
-<dt><code>-2</code></p>
-<dd> Use SHA256 as the hash function </p>
+<dt><code>-f</code></dt>
+<dd> Ignore SEP flag (i.e. make DS records for any key) </dd>
+<dt><code>-n</code></dt>
+<dd> Write the result DS Resource Record to stdout instead of a file </dd>
+<dt><code>-1</code></dt>
+<dd> Use SHA1 as the hash function. </dd>
+<dt><code>-2</code></dt>
+<dd> Use SHA256 as the hash function </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by the ldns team as an example for ldns usage. </p>

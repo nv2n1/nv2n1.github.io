@@ -23,32 +23,30 @@ int listen(int sockfd, int backlog);
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EADDRINUSE</code></p>
-<dd> Another socket is already listening on the same port.</p>
-<dt><code>EADDRINUSE</code></p>
-<dd> (Internet domain sockets) The socket referred to by <i>sockfd</i> had not previously been bound to an address and, upon attempting to bind it to an ephemeral port, it was determined that all port numbers in the ephemeral port range are currently in use. See the discussion of <i>/proc/sys/net/ipv4/ip_local_port_range</i> in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7).</p>
-<dt><code>EBADF</code></p>
-<dd> The argument <i>sockfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> The socket is not of a type that supports the <code>listen</code>() operation.</dl>
+<dt><code>EADDRINUSE</code></dt>
+<dd> Another socket is already listening on the same port.</dd>
+<dt><code>EADDRINUSE</code></dt>
+<dd> (Internet domain sockets) The socket referred to by <i>sockfd</i> had not previously been bound to an address and, upon attempting to bind it to an ephemeral port, it was determined that all port numbers in the ephemeral port range are currently in use. See the discussion of <i>/proc/sys/net/ipv4/ip_local_port_range</i> in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7).</dd>
+<dt><code>EBADF</code></dt>
+<dd> The argument <i>sockfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> The socket is not of a type that supports the <code>listen</code>() operation.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.4BSD (<code>listen</code>() first appeared in 4.2BSD).</p>
 <h2>NOTES</h2>
 <p> To accept connections, the following steps are performed:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1.</p>
-<dd> A socket is created with <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2).</p>
-<dt>2.</p>
-<dd> The socket is bound to a local address using <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), so that other sockets may be <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2)ed to it.</p>
-<dt>3.</p>
-<dd> A willingness to accept incoming connections and a queue limit for incoming connections are specified with <code>listen</code>().</p>
-<dt>4.</p>
-<dd> Connections are accepted with <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2).</dl>
+<dt>1.</dt>
+<dd> A socket is created with <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2).</dd>
+<dt>2.</dt>
+<dd> The socket is bound to a local address using <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), so that other sockets may be <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2)ed to it.</dd>
+<dt>3.</dt>
+<dd> A willingness to accept incoming connections and a queue limit for incoming connections are specified with <code>listen</code>().</dd>
+<dt>4.</dt>
+<dd> Connections are accepted with <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2).</dd></dl>
 </dl>
 <p> POSIX.1 does not require the inclusion of <i>&lt;sys/types.h&gt;</i>, and this header file is not required on Linux. However, some historical (BSD) implementations required this header file, and portable applications are probably wise to include it. </p>
 <p> The behavior of the <i>backlog</i> argument on TCP sockets changed with Linux 2.2. Now it specifies the queue length for <i>completely</i> established sockets waiting to be accepted, instead of the number of incomplete connection requests. The maximum length of the queue for incomplete sockets can be set using <i>/proc/sys/net/ipv4/tcp_max_syn_backlog</i>. When syncookies are enabled there is no logical maximum length and this setting is ignored. See <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7) for more information. </p>

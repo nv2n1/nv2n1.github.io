@@ -11,15 +11,10 @@ std::chrono::time_zone::to_sys - std::chrono::time_zone::to_sys
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Duration&gt;
-
 auto to_sys(const std::chrono::local_time&lt;Duration&gt; &amp;tp) const(since C++ 20)
-
     -&gt; std::chrono::sys_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;;
-
 template &lt;class Duration&gt;
-
 auto to_sys(const std::chrono::local_time&lt;Duration&gt; &amp;tp, std::chrono::choose z) const(since C++ 20)
-
     -&gt; std::chrono::sys_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;;</code></pre> 
 Converts the local_time tp in this time zone to the corresponding sys_time. 
 1) Throws an exception if the conversion is ambiguous or if tp represents a nonexistent time. 

@@ -14,12 +14,12 @@ description: "sun2amd – converts Sun automount maps to Amd maps"
 <p><code>sun2amd</code> is used to convert Sun style automount maps to Amd style automount maps. By default <code>sun2amd</code> reads from stdin and writes to stdout. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Help</p>
-<dt><code>-i</code></p>
-<dd>Read Sun map information from specified file.</p>
-<dt><code>-o</code></p>
-<dd>Write Amd map information to specified file. </p>
+<dt><code>-h</code></dt>
+<dd>Help</dd>
+<dt><code>-i</code></dt>
+<dd>Read Sun map information from specified file.</dd>
+<dt><code>-o</code></dt>
+<dd>Write Amd map information to specified file. </dd>
 </dl>
 <h2>Example</h2>
 <p>To convert a Sun automount file called auto_foo to an Amd file called auto.amd type: <code>sun2amd</code> -i auto_foo -o auto.amd </p>

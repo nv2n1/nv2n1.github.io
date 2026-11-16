@@ -20,6 +20,6 @@ description: "QuantLib::SeedGenerator – Random seed generator."
 <p> Random number generator used for automatic generation of initialization seeds. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>correct initialization of the single instance is tested.</dl>
+<dd>correct initialization of the single instance is tested.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

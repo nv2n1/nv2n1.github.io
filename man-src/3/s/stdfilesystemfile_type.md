@@ -11,31 +11,18 @@ std::filesystem::file_type - std::filesystem::file_type
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;filesystem&gt;
-
 enum class file_type {
-
     none = /* unspecified */,
-
     not_found = /* unspecified */,
-
     regular = /* unspecified */,
-
     directory = /* unspecified */,
-
     symlink = /* unspecified */,
-
     block = /* unspecified */,      (since C++17)
-
     character = /* unspecified */,
-
     fifo = /* unspecified */,
-
     socket = /* unspecified */,
-
     unknown = /* unspecified */,
-
     /* implementation-defined */
-
 };</code></pre> 
 file_type defines constants that indicate a type of a file or directory a path refers to. The value of the enumerators are distinct. 
 &nbsp;This section is incomplete 

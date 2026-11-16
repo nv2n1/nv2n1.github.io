@@ -16,18 +16,18 @@ description: "genccode – generate C or platform specific assembly code from an
 <p> If <code>genccode</code> is called with no <i>filename</i> it terminates gracefully.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd>Print help about usage and exit.</p>
-<dt><code>-a</code>, <code>&#8211;assembly</code><i> name</i></p>
-<dd>Output assembly code instead of C code. Use <code>-h</code> to see the list of available types of assembly to generate and to specify for this option.</p>
-<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></p>
-<dd>Set the destination directory to <i>destination</i>. The default destination directory is the current directory.</p>
-<dt><code>-n</code>, <code>&#8211;name</code><i> name</i></p>
-<dd>Set the data name to <i>name</i> instead of the default. This name is also used as the base name of the output. The default name is made of the <i>icudt</i> prefix, followed by a two-digit version number corresponding to the current version of the ICU release, and a single letter indicating the endianness of the data (the letter <i>b</i> indicated big endian data, and the letter <i>l</i> indicates little endian ones).</p>
-<dt><code>-f</code>, <code>&#8211;filename</code><i> name</i></p>
-<dd>Normally, an ICU data file such as mydata.icu will be turned into mydata_icu.c and mydata_icu.o. However, if this parameter was set to &quot;somedata&quot;, the output files will be somedata.o and somedata.c, respectively.</p>
-<dt><code>-e</code>, <code>&#8211;entrypoint</code><i> name</i></p>
-<dd>Set the data entry point (used for linking against the data in a shared library form) to <i>name</i>. The default entry point name is made of the data (set by the <code>-n</code>, <code>&#8211;name</code> option) followed by an underscore and the type of the data (set by the <code>-t</code>, <code>&#8211;type</code> option).</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Print help about usage and exit.</dd>
+<dt><code>-a</code>, <code>&#8211;assembly</code><i> name</i></dt>
+<dd>Output assembly code instead of C code. Use <code>-h</code> to see the list of available types of assembly to generate and to specify for this option.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></dt>
+<dd>Set the destination directory to <i>destination</i>. The default destination directory is the current directory.</dd>
+<dt><code>-n</code>, <code>&#8211;name</code><i> name</i></dt>
+<dd>Set the data name to <i>name</i> instead of the default. This name is also used as the base name of the output. The default name is made of the <i>icudt</i> prefix, followed by a two-digit version number corresponding to the current version of the ICU release, and a single letter indicating the endianness of the data (the letter <i>b</i> indicated big endian data, and the letter <i>l</i> indicates little endian ones).</dd>
+<dt><code>-f</code>, <code>&#8211;filename</code><i> name</i></dt>
+<dd>Normally, an ICU data file such as mydata.icu will be turned into mydata_icu.c and mydata_icu.o. However, if this parameter was set to &quot;somedata&quot;, the output files will be somedata.o and somedata.c, respectively.</dd>
+<dt><code>-e</code>, <code>&#8211;entrypoint</code><i> name</i></dt>
+<dd>Set the data entry point (used for linking against the data in a shared library form) to <i>name</i>. The default entry point name is made of the data (set by the <code>-n</code>, <code>&#8211;name</code> option) followed by an underscore and the type of the data (set by the <code>-t</code>, <code>&#8211;type</code> option).</dd></dl>
 <h2>Version</h2>
 <p>70.1</p>
 <h2>Copyright</h2>

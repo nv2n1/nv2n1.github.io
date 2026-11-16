@@ -14,12 +14,12 @@ description: "gnutls_pcert_import_openpgp – API function"
 <p> <code>int gnutls_pcert_import_openpgp(gnutls_pcert_st * </code><i>pcert</i><code>, gnutls_openpgp_crt_t </code><i>crt</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pcert_st * pcert</p>
-<dd> The pcert structure</p>
-<dt>gnutls_openpgp_crt_t crt</p>
-<dd> The raw certificate to be imported</p>
-<dt>unsigned int flags</p>
-<dd> zero for now</dl>
+<dt>gnutls_pcert_st * pcert</dt>
+<dd> The pcert structure</dd>
+<dt>gnutls_openpgp_crt_t crt</dt>
+<dd> The raw certificate to be imported</dd>
+<dt>unsigned int flags</dt>
+<dd> zero for now</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This convenience function will import the given certificate to a <code>gnutls_pcert_st</code> structure. The structure must be deinitialized afterwards using <code>gnutls_pcert_deinit()</code>;</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pcert_import_openpgp – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

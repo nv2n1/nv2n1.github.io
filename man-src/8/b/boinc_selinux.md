@@ -51,12 +51,12 @@ description: "boinc_selinux – Security Enhanced Linux Policy for the boinc pro
 <p> Policy governs the access confined processes have to these ports. SELinux boinc policy is very flexible allowing users to setup their boinc processes in as secure a method as possible. </p>
 <p> The following port types are defined for boinc: </p>
 <dl>
-<dt><code>boinc_client_port_t</code></p>
+<dt><code>boinc_client_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1043 udp 1034 </p>
-<dt><code>boinc_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 1043 udp 1034 </dd>
+<dt><code>boinc_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 31416</dl>
+</dd><dd>Default Defined Ports: tcp 31416</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type boinc_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>boinc_log_t</code> </p>
@@ -118,8 +118,8 @@ description: "boinc_selinux – Security Enhanced Linux Policy for the boinc pro
 <p> <code>boinc_project_var_lib_t</code> </p>
 <p> &#8211; Set files with the boinc_project_var_lib_t type, if you want to store the boinc project files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/boinc/slots(/.*)?, /var/lib/boinc/projects(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/boinc/slots(/.*)?, /var/lib/boinc/projects(/.*)? </dd>
 </dl>
 <p> <code>boinc_tmp_t</code> </p>
 <p> &#8211; Set files with the boinc_tmp_t type, if you want to store boinc temporary files in the /tmp directories. </p>

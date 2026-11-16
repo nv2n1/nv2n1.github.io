@@ -34,14 +34,14 @@ description: "newsfeeds – Determine where Usenet articles are sent"
 <p> Control messages follow slightly different propagation rules than normal articles; see <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8) for the details. Note that most subscriptions should have <tt>&quot;!junk,!control,!control.*&quot;</tt> in their pattern list due to those propagation rules (and since <tt>&quot;junk&quot;</tt> is a special internal newsgroup; see <i>wanttrash</i> in <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5) for more details on what it&#8217;s used for) and that the best way to keep control messages local to a site is with a distribution. </p>
 <p> A subscription can be further modified by specifying distributions that the site should or should not receive. The default is to send all articles to all sites that subscribe to any of the groups where it has been posted, but if an article has a Distribution: header and any <i>distribution</i>s are specified, then they are checked according to the following rules:</p>
 <dl>
-<dt>1.</p>
-<dd>If the Distribution: header matches any of the values in the sub-field, the article is sent.</p>
-<dt>2.</p>
-<dd>If a <i>distribution</i> starts with an exclamation point, and it matches the Distribution: header, the article is not sent.</p>
-<dt>3.</p>
-<dd>If the Distribution: header does not match any <i>distribution</i> in the site&#8217;s entry and no negations were used, the article is not sent.</p>
-<dt>4.</p>
-<dd>If the Distribution: header does not match any <i>distribution</i> in the site&#8217;s entry and any <i>distribution</i> started with an exclamation point, the article is sent.</dl>
+<dt>1.</dt>
+<dd>If the Distribution: header matches any of the values in the sub-field, the article is sent.</dd>
+<dt>2.</dt>
+<dd>If a <i>distribution</i> starts with an exclamation point, and it matches the Distribution: header, the article is not sent.</dd>
+<dt>3.</dt>
+<dd>If the Distribution: header does not match any <i>distribution</i> in the site&#8217;s entry and no negations were used, the article is not sent.</dd>
+<dt>4.</dt>
+<dd>If the Distribution: header does not match any <i>distribution</i> in the site&#8217;s entry and any <i>distribution</i> started with an exclamation point, the article is sent.</dd></dl>
 <p> If an article has more than one distribution specified, then each one is handled according according to the above rules. If any of the specified distributions indicate that the article should be sent, it is; if none do, it is not sent. In other words, the rules are used as a logical or. </p>
 <p> It is almost definitely a mistake to have a single feed that specifies distributions that start with an exclamation point along with some that don&#8217;t. </p>
 <p> Distributions are text words, not patterns; entries like <tt>&quot;*&quot;</tt> or <tt>&quot;all&quot;</tt> have no special meaning. </p>
@@ -63,57 +63,57 @@ description: "newsfeeds – Determine where Usenet articles are sent"
 <h2>Flag Values</h2>
 <p>The <i>flags</i> parameter specifies miscellaneous parameters, including the type of feed, what information should be sent to it, and various limitations on what articles should be sent to a site. They may be specified in any order and should be separated by commas. Flags that take values should have the value immediately after the flag letter with no whitespace. The valid flags are:</p>
 <dl>
-<dt><code>&lt;</code> <i>size</i></p>
-<dd>An article will only be sent to this site if it is less than <i>size</i> bytes long. The default is no limit.</p>
-<dt><code>&gt;</code> <i>size</i></p>
-<dd>An article will only be sent to this site if it is greater than <i>size</i> bytes long. The default is no limit.</p>
-<dt><code>A</code> <i>checks</i></p>
-<dd>An article will only be sent to this site if it meets the requirements specified in <i>checks</i>, which should be chosen from the following set. <i>checks</i> can be multiple letters if appropriate. Note that this flag is not effective on funnel targets; it has to be used on every funnel entry (for instance, <code>Af</code> is not effective on the <i>innfeed!</i> funnel target and therefore has to be specified on every funnelled news site).</p>
+<dt><code>&lt;</code> <i>size</i></dt>
+<dd>An article will only be sent to this site if it is less than <i>size</i> bytes long. The default is no limit.</dd>
+<dt><code>&gt;</code> <i>size</i></dt>
+<dd>An article will only be sent to this site if it is greater than <i>size</i> bytes long. The default is no limit.</dd>
+<dt><code>A</code> <i>checks</i></dt>
+<dd>An article will only be sent to this site if it meets the requirements specified in <i>checks</i>, which should be chosen from the following set. <i>checks</i> can be multiple letters if appropriate. Note that this flag is not effective on funnel targets; it has to be used on every funnel entry (for instance, <code>Af</code> is not effective on the <i>innfeed!</i> funnel target and therefore has to be specified on every funnelled news site).</dd>
 <dl>
 <dd>
-<dl>
-<dt>c</p>
-<dd>Exclude all kinds of control messages.</p>
-<dt>C</p>
-<dd>Only send control messages, not regular articles.</p>
-<dt>d</p>
-<dd>Only send articles with a Distribution: header. Combined with a particular distribution value in the <i>distribution</i> part of the site entry, this can be used to limit articles sent to a site to just those with a particuliar distribution.</p>
-<dt>e</p>
-<dd>Only send articles where every newsgroup listed in the Newsgroups: header exists in the <i>active</i> file.</p>
-<dt>f</p>
-<dd>Don&#8217;t send articles rejected by filters. This is only useful when <i>dontrejectfiltered</i> is set to true in <i>inn.conf</i>. With that variable set, this lets one accept all articles but not propagate filtered ones to some sites.</p>
-<dt>j</p>
-<dd>Propagate articles according to their Newsgroups: header. This is only useful when <i>wanttrash</i> is set to true in <i>inn.conf</i>. With that variable set, articles accepted and filed in <tt>&quot;junk&quot;</tt> (due to <i>wanttrash</i>) are fed to peers based on their subscription pattern applied to the Newsgroups: header as though they were accepted and all those groups were locally carried. Otherwise, they are propagated to sites that receive the <tt>&quot;junk&quot;</tt> newsgroup. </p>
+</dd><dl>
+<dt>c</dt>
+<dd>Exclude all kinds of control messages.</dd>
+<dt>C</dt>
+<dd>Only send control messages, not regular articles.</dd>
+<dt>d</dt>
+<dd>Only send articles with a Distribution: header. Combined with a particular distribution value in the <i>distribution</i> part of the site entry, this can be used to limit articles sent to a site to just those with a particuliar distribution.</dd>
+<dt>e</dt>
+<dd>Only send articles where every newsgroup listed in the Newsgroups: header exists in the <i>active</i> file.</dd>
+<dt>f</dt>
+<dd>Don&#8217;t send articles rejected by filters. This is only useful when <i>dontrejectfiltered</i> is set to true in <i>inn.conf</i>. With that variable set, this lets one accept all articles but not propagate filtered ones to some sites.</dd>
+<dt>j</dt>
+<dd>Propagate articles according to their Newsgroups: header. This is only useful when <i>wanttrash</i> is set to true in <i>inn.conf</i>. With that variable set, articles accepted and filed in <tt>&quot;junk&quot;</tt> (due to <i>wanttrash</i>) are fed to peers based on their subscription pattern applied to the Newsgroups: header as though they were accepted and all those groups were locally carried. Otherwise, they are propagated to sites that receive the <tt>&quot;junk&quot;</tt> newsgroup. </dd>
 <p> This variable is useful if you want to run <font SIZE="-1">INN</font> with a minimal <i>active</i> file and propagate all posts.</p>
-<dt>o</p>
-<dd>Only send articles for which overview data was stored.</p>
-<dt>O</p>
-<dd>Send articles to this site that don&#8217;t have an Injection-Info: or X-Trace: header, even if the <tt>&quot;O&quot;</tt> flag is also given.</p>
-<dt>p</p>
-<dd>Only check the exclusions against the Path: header of articles; don&#8217;t check the site name. This is useful if your site names aren&#8217;t the same as the Path: entries added by those remote sites, or for program feeds where the site name is arbitrary and unrelated to the Path: header.</dl>
+<dt>o</dt>
+<dd>Only send articles for which overview data was stored.</dd>
+<dt>O</dt>
+<dd>Send articles to this site that don&#8217;t have an Injection-Info: or X-Trace: header, even if the <tt>&quot;O&quot;</tt> flag is also given.</dd>
+<dt>p</dt>
+<dd>Only check the exclusions against the Path: header of articles; don&#8217;t check the site name. This is useful if your site names aren&#8217;t the same as the Path: entries added by those remote sites, or for program feeds where the site name is arbitrary and unrelated to the Path: header.</dd></dl>
 </dl>
 <dl>
-<dd>If both <tt>&quot;c&quot;</tt> and <tt>&quot;C&quot;</tt> are given, the last specified one takes precedence.</dl>
-<dt><code>B</code> <i>high</i>/<i>low</i></p>
-<dd>If a site is being fed by a file, channel, or exploder (see below), the server will normally start trying to write the information as soon as possible. Providing a buffer may give better system performance and help smooth out overall load if a large batch of news comes in. The value of the this flag should be two numbers separated by a slash. <i>high</i> specifies the point at which the server can start draining the feed&#8217;s I/O buffer, and <i>low</i> specifies when to stop writing and begin buffering again; the units are bytes. The default is to do no buffering, sending output as soon as it is possible to do so.</p>
-<dt><code>C</code> <i>count</i></p>
-<dd>If this flag is specified, an article will only be sent to this site if the number of groups it is posted to, plus the square of the number of groups followups would appear in, is no more than <i>count</i>. <tt>30</tt> is a good value for this flag, allowing crossposts to up to 29 groups when followups are set to a single group or poster and only allowing crossposts to 5 groups when followups aren&#8217;t set.</p>
-<dt><code>F</code> <i>name</i></p>
-<dd>Specifies the name of the file that should be used if it&#8217;s necessary to begin spooling for the site (see below). If <i>name</i> is not an absolute path, it is taken to be relative to <i>pathoutgoing</i> in <i>inn.conf</i>. If <i>name</i> is a directory, the file <i>togo</i> in that directory will be used as the file name.</p>
-<dt><code>G</code> <i>count</i></p>
-<dd>If this flag is specified, an article will only be sent to this site if it is posted to no more than <i>count</i> newsgroups. This has the problem of filtering out many FAQs, as well as newsgroup creation postings and similar administrative announcements. Either the <code>C</code> flag or the <code>U</code> flag is a better solution.</p>
-<dt><code>H</code> <i>count</i></p>
-<dd>If this flag is specified, an article will only be sent to this site if it has <i>count</i> or fewer sites in its Path: line. This flag should only be used as a rough guide because of the loose interpretation of the Path: header; some sites put the poster&#8217;s name in the header, and some sites that might logically be considered to be one hop become two because they put the posting workstation&#8217;s name in the header. The default value for <i>count</i> if not specified is one. (Also see the <code>O</code> flag, which is sometimes more appropriate for some uses of this flag.)</p>
-<dt><code>I</code> <i>size</i></p>
-<dd>The flag specifies the size of the internal buffer for a file feed. If there are more file feeds than allowed by the system, they will be buffered internally in least-recently-used order. If the internal buffer grows bigger then <i>size</i> bytes, however, the data will be written out to the appropriate file. The default value is <tt>16</tt>&nbsp;<wbr><font SIZE="-1">KB</font>.</p>
-<dt><code>N</code> <i>status</i></p>
-<dd>Restricts the articles sent to this site to those in newsgroups with the moderation status given by <i>status</i>. If <i>status</i> is <tt>&quot;m&quot;</tt>, only articles in moderated groups are sent; if <i>status</i> is <tt>&quot;u&quot;</tt>, only articles in unmoderated groups are sent.</p>
-<dt><code>O</code> <i>originator</i></p>
-<dd>If this flag is specified, an article will only be sent to this site if it contains an Injection-Info: header (or an X-Trace: header if no Injection-Info: header is found) and the first field of this header matches <i>originator</i>. <i>originator</i> is a <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3) expression without commas or a list of such expressions, separated by <tt>&quot;/&quot;</tt>. The article is never sent if the first character of the pattern begins with <tt>&quot;@&quot;</tt> and the rest of the pattern matches. One use of this flag is to restrict the feed to locally generated posts by using an <i>originator</i> pattern that matches the Injection-Info: header added by the local server.</p>
-<dt><code>P</code> <i>priority</i></p>
-<dd>The nice priority that this channel or program feed should receive. This should be a positive number between 0 and 20 and is the priority that the new process will run with. This flag can be used to raise the priority to normal if you&#8217;re using the <i>nicekids</i> parameter in <i>inn.conf</i>.</p>
-<dt><code>Q</code> <i>hashfeed</i></p>
-<dd>Specifies the <i>hashfeed</i> match expression for this site. It must be in the form <tt>&quot;value/mod&quot;</tt> or <tt>&quot;start-end/mod&quot;</tt>. The Message-ID of the article is hashed using <font SIZE="-1">MD5</font>, which results in a 128-bit hash. The lowest 32 bits are then taken by default as the hashfeed value (which is an integer). If the hashfeed value modulus <tt>&quot;mod&quot;</tt> plus one equals <tt>&quot;value&quot;</tt> or is between <tt>&quot;start&quot;</tt> and <tt>&quot;end&quot;</tt>, the article will be fed to this site. All these numbers must be integers. </p>
+<dd>If both <tt>&quot;c&quot;</tt> and <tt>&quot;C&quot;</tt> are given, the last specified one takes precedence.</dd></dl>
+<dt><code>B</code> <i>high</i>/<i>low</i></dt>
+<dd>If a site is being fed by a file, channel, or exploder (see below), the server will normally start trying to write the information as soon as possible. Providing a buffer may give better system performance and help smooth out overall load if a large batch of news comes in. The value of the this flag should be two numbers separated by a slash. <i>high</i> specifies the point at which the server can start draining the feed&#8217;s I/O buffer, and <i>low</i> specifies when to stop writing and begin buffering again; the units are bytes. The default is to do no buffering, sending output as soon as it is possible to do so.</dd>
+<dt><code>C</code> <i>count</i></dt>
+<dd>If this flag is specified, an article will only be sent to this site if the number of groups it is posted to, plus the square of the number of groups followups would appear in, is no more than <i>count</i>. <tt>30</tt> is a good value for this flag, allowing crossposts to up to 29 groups when followups are set to a single group or poster and only allowing crossposts to 5 groups when followups aren&#8217;t set.</dd>
+<dt><code>F</code> <i>name</i></dt>
+<dd>Specifies the name of the file that should be used if it&#8217;s necessary to begin spooling for the site (see below). If <i>name</i> is not an absolute path, it is taken to be relative to <i>pathoutgoing</i> in <i>inn.conf</i>. If <i>name</i> is a directory, the file <i>togo</i> in that directory will be used as the file name.</dd>
+<dt><code>G</code> <i>count</i></dt>
+<dd>If this flag is specified, an article will only be sent to this site if it is posted to no more than <i>count</i> newsgroups. This has the problem of filtering out many FAQs, as well as newsgroup creation postings and similar administrative announcements. Either the <code>C</code> flag or the <code>U</code> flag is a better solution.</dd>
+<dt><code>H</code> <i>count</i></dt>
+<dd>If this flag is specified, an article will only be sent to this site if it has <i>count</i> or fewer sites in its Path: line. This flag should only be used as a rough guide because of the loose interpretation of the Path: header; some sites put the poster&#8217;s name in the header, and some sites that might logically be considered to be one hop become two because they put the posting workstation&#8217;s name in the header. The default value for <i>count</i> if not specified is one. (Also see the <code>O</code> flag, which is sometimes more appropriate for some uses of this flag.)</dd>
+<dt><code>I</code> <i>size</i></dt>
+<dd>The flag specifies the size of the internal buffer for a file feed. If there are more file feeds than allowed by the system, they will be buffered internally in least-recently-used order. If the internal buffer grows bigger then <i>size</i> bytes, however, the data will be written out to the appropriate file. The default value is <tt>16</tt>&nbsp;<wbr><font SIZE="-1">KB</font>.</dd>
+<dt><code>N</code> <i>status</i></dt>
+<dd>Restricts the articles sent to this site to those in newsgroups with the moderation status given by <i>status</i>. If <i>status</i> is <tt>&quot;m&quot;</tt>, only articles in moderated groups are sent; if <i>status</i> is <tt>&quot;u&quot;</tt>, only articles in unmoderated groups are sent.</dd>
+<dt><code>O</code> <i>originator</i></dt>
+<dd>If this flag is specified, an article will only be sent to this site if it contains an Injection-Info: header (or an X-Trace: header if no Injection-Info: header is found) and the first field of this header matches <i>originator</i>. <i>originator</i> is a <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3) expression without commas or a list of such expressions, separated by <tt>&quot;/&quot;</tt>. The article is never sent if the first character of the pattern begins with <tt>&quot;@&quot;</tt> and the rest of the pattern matches. One use of this flag is to restrict the feed to locally generated posts by using an <i>originator</i> pattern that matches the Injection-Info: header added by the local server.</dd>
+<dt><code>P</code> <i>priority</i></dt>
+<dd>The nice priority that this channel or program feed should receive. This should be a positive number between 0 and 20 and is the priority that the new process will run with. This flag can be used to raise the priority to normal if you&#8217;re using the <i>nicekids</i> parameter in <i>inn.conf</i>.</dd>
+<dt><code>Q</code> <i>hashfeed</i></dt>
+<dd>Specifies the <i>hashfeed</i> match expression for this site. It must be in the form <tt>&quot;value/mod&quot;</tt> or <tt>&quot;start-end/mod&quot;</tt>. The Message-ID of the article is hashed using <font SIZE="-1">MD5</font>, which results in a 128-bit hash. The lowest 32 bits are then taken by default as the hashfeed value (which is an integer). If the hashfeed value modulus <tt>&quot;mod&quot;</tt> plus one equals <tt>&quot;value&quot;</tt> or is between <tt>&quot;start&quot;</tt> and <tt>&quot;end&quot;</tt>, the article will be fed to this site. All these numbers must be integers. </dd>
 <p> It is a deterministic way to control the flow of articles and to split a feed. For instance: </p>
 <pre> Q1/2 Feeds about 50% of all articles to this site.
  Q2/2 Feeds the other 50% of all articles.</pre>
@@ -125,10 +125,10 @@ description: "newsfeeds – Determine where Usenet articles are sent"
 <p> You can use an extended syntax of the form <tt>&quot;value/mod_offset&quot;</tt> or <tt>&quot;start-end/mod_offset&quot;</tt>. As <font SIZE="-1">MD5</font> generates a 128-bit return value, it is possible to specify from which byte-offset the 32-bit integer used by hashfeed starts. The default value for <tt>&quot;offset&quot;</tt> is <tt>&quot;_0&quot;</tt> and thirteen overlapping values from <tt>&quot;_0&quot;</tt> to <tt>&quot;_12&quot;</tt> can be used. Only up to four totally independent values exist: <tt>&quot;_0&quot;</tt>, <tt>&quot;_4&quot;</tt>, <tt>&quot;_8&quot;</tt> and <tt>&quot;_12&quot;</tt>. </p>
 <p> Therefore, it allows to a generate a second level of deterministic distribution. Indeed, if a news server is fed <tt>&quot;Q1/2&quot;</tt>, it can go on splitting thanks to <tt>&quot;Q1-3/9_4&quot;</tt> for instance. Up to four levels of deterministic distribution can be used. </p>
 <p> The algorithm is compatible with the one used by Diablo 5.1 and up. If you want to use the legacy quickhashing method used by Diablo before 5.1, you can put an <tt>&quot;@&quot;</tt> sign just after the <code>Q</code> flag (for instance <tt>&quot;Q@1-3/10&quot;</tt>, but the distribution of the messages is not perfect with this legacy method whose use is discouraged and for which offsets cannot be used).</p>
-<dt><code>S</code> <i>size</i></p>
-<dd>If the amount of data queued for the site gets to be larger than <i>size</i> bytes, the server will switch to spooling, appending to a file specified by the <code>F</code> flag, or <i>pathoutgoing</i>/<i>sitename</i> if <code>F</code> is not specified. Spooling usually happens only for channel or exploder feeds, when the spawned program isn&#8217;t keeping up with its input.</p>
-<dt><code>T</code> <i>type</i></p>
-<dd>This flag specifies the type of feed for this site. <i>type</i> should be a letter chosen from the following set: </p>
+<dt><code>S</code> <i>size</i></dt>
+<dd>If the amount of data queued for the site gets to be larger than <i>size</i> bytes, the server will switch to spooling, appending to a file specified by the <code>F</code> flag, or <i>pathoutgoing</i>/<i>sitename</i> if <code>F</code> is not specified. Spooling usually happens only for channel or exploder feeds, when the spawned program isn&#8217;t keeping up with its input.</dd>
+<dt><code>T</code> <i>type</i></dt>
+<dd>This flag specifies the type of feed for this site. <i>type</i> should be a letter chosen from the following set: </dd>
 <pre> c Channel
  f File
  l Log entry only
@@ -136,52 +136,52 @@ description: "newsfeeds – Determine where Usenet articles are sent"
  p Program
  x Exploder</pre>
 <p>Each feed is described below in &#8220;<font SIZE="-1">FEED</font> <font SIZE="-1">TYPES</font>&#8221;. The default is <code>Tf</code>, for a file feed.</p>
-<dt><code>U</code> <i>count</i></p>
-<dd>If this flag is specified, an article will only be sent to this site if followups to this article would be posted to no more than <i>count</i> newsgroups. (Also see <code>C</code> for a more complex way of handling this.)</p>
-<dt><code>W</code> <i>items</i></p>
-<dd>For a file, channel, or exploder feed, this flag controls what information will be sent to this site. For a program feed, only the asterisk (<tt>&quot;*&quot;</tt>) has any effect. <i>items</i> should be chosen from the following set:</p>
+<dt><code>U</code> <i>count</i></dt>
+<dd>If this flag is specified, an article will only be sent to this site if followups to this article would be posted to no more than <i>count</i> newsgroups. (Also see <code>C</code> for a more complex way of handling this.)</dd>
+<dt><code>W</code> <i>items</i></dt>
+<dd>For a file, channel, or exploder feed, this flag controls what information will be sent to this site. For a program feed, only the asterisk (<tt>&quot;*&quot;</tt>) has any effect. <i>items</i> should be chosen from the following set:</dd>
 <dl>
 <dd>
-<dl>
-<dt>b</p>
-<dd>Size of the article (in wire format, meaning with <font SIZE="-1">CRLF</font> at the end of each line, periods doubled at the beginning of lines, and ending in a line with a single period) in bytes.</p>
-<dt>e</p>
-<dd>The time the article will expire as seconds since epoch if it has an Expires: header, <tt>0</tt> otherwise.</p>
-<dt>f</p>
-<dd>The storage <font SIZE="-1">API</font> token of the article (the same as <tt>&quot;n&quot;</tt>). The article can be retrieved given the storage <font SIZE="-1">API</font> token by using <i><a href="/docs/linux/man/8-sm/">sm</a></i>(8).</p>
-<dt>g</p>
-<dd>The newsgroup the article is in; if cross-posted, then the first of the groups to which the article was posted that this site gets. (The difference from <tt>&quot;G&quot;</tt> is that this sends the newsgroup to which the article was posted even if it is a control message.)</p>
-<dt>h</p>
-<dd>The history hash key of the article (derived from the message <font SIZE="-1">ID</font>).</p>
-<dt>m</p>
-<dd>The message <font SIZE="-1">ID</font> of the article.</p>
-<dt>n</p>
-<dd>The storage <font SIZE="-1">API</font> token of the article. The article can be retrieved given the storage <font SIZE="-1">API</font> token by using <i><a href="/docs/linux/man/8-sm/">sm</a></i>(8).</p>
-<dt>p</p>
-<dd>The time the article was posted a seconds since epoch.</p>
-<dt>s</p>
-<dd>The site that fed the article to the server. This is taken from either the Path: header or the <font SIZE="-1">IP</font> address of the sending site depending on the value of <i>logipaddr</i> in <i>inn.conf</i>. If <i>logipaddr</i> is true and the <font SIZE="-1">IP</font> address is <tt>0.0.0.0</tt> (meaning that the article was fed from localhost by a program like <i>rnews</i>(8)), the Path: header value will be sent instead.</p>
-<dt>t</p>
-<dd>The time the article was received as seconds since epoch.</p>
-<dt>*</p>
-<dd>The names of the appropriate funnel entries, or all sites that get the article (see below for more details).</p>
-<dt>D</p>
-<dd>The value of the Distribution: header of the article, or <tt>&quot;?&quot;</tt> if there is no such header in the article.</p>
-<dt>G</p>
-<dd>Where the article is stored. If the newsgroup is crossposted, this is generally the first of the groups to which it was posted that this site receives; however, control messages are filed in control or control.* (which is the difference between this item and <tt>&quot;g&quot;</tt>).</p>
-<dt>H</p>
-<dd>All of the headers, followed by a blank line. The Xref header will already be present, and a Bytes header containing the article&#8217;s size in bytes as in the <tt>&quot;b&quot;</tt> item will be added to the headers. If used, this should be the only item in the list.</p>
-<dt>N</p>
-<dd>The value of the Newsgroups: header.</p>
-<dt>P</p>
-<dd>The value of the Path: header.</p>
-<dt>O</p>
-<dd>Overview data for the article.</p>
-<dt>R</p>
-<dd>Information needed for replication (the Xref header without the site name).</dl>
+</dd><dl>
+<dt>b</dt>
+<dd>Size of the article (in wire format, meaning with <font SIZE="-1">CRLF</font> at the end of each line, periods doubled at the beginning of lines, and ending in a line with a single period) in bytes.</dd>
+<dt>e</dt>
+<dd>The time the article will expire as seconds since epoch if it has an Expires: header, <tt>0</tt> otherwise.</dd>
+<dt>f</dt>
+<dd>The storage <font SIZE="-1">API</font> token of the article (the same as <tt>&quot;n&quot;</tt>). The article can be retrieved given the storage <font SIZE="-1">API</font> token by using <i><a href="/docs/linux/man/8-sm/">sm</a></i>(8).</dd>
+<dt>g</dt>
+<dd>The newsgroup the article is in; if cross-posted, then the first of the groups to which the article was posted that this site gets. (The difference from <tt>&quot;G&quot;</tt> is that this sends the newsgroup to which the article was posted even if it is a control message.)</dd>
+<dt>h</dt>
+<dd>The history hash key of the article (derived from the message <font SIZE="-1">ID</font>).</dd>
+<dt>m</dt>
+<dd>The message <font SIZE="-1">ID</font> of the article.</dd>
+<dt>n</dt>
+<dd>The storage <font SIZE="-1">API</font> token of the article. The article can be retrieved given the storage <font SIZE="-1">API</font> token by using <i><a href="/docs/linux/man/8-sm/">sm</a></i>(8).</dd>
+<dt>p</dt>
+<dd>The time the article was posted a seconds since epoch.</dd>
+<dt>s</dt>
+<dd>The site that fed the article to the server. This is taken from either the Path: header or the <font SIZE="-1">IP</font> address of the sending site depending on the value of <i>logipaddr</i> in <i>inn.conf</i>. If <i>logipaddr</i> is true and the <font SIZE="-1">IP</font> address is <tt>0.0.0.0</tt> (meaning that the article was fed from localhost by a program like <i>rnews</i>(8)), the Path: header value will be sent instead.</dd>
+<dt>t</dt>
+<dd>The time the article was received as seconds since epoch.</dd>
+<dt>*</dt>
+<dd>The names of the appropriate funnel entries, or all sites that get the article (see below for more details).</dd>
+<dt>D</dt>
+<dd>The value of the Distribution: header of the article, or <tt>&quot;?&quot;</tt> if there is no such header in the article.</dd>
+<dt>G</dt>
+<dd>Where the article is stored. If the newsgroup is crossposted, this is generally the first of the groups to which it was posted that this site receives; however, control messages are filed in control or control.* (which is the difference between this item and <tt>&quot;g&quot;</tt>).</dd>
+<dt>H</dt>
+<dd>All of the headers, followed by a blank line. The Xref header will already be present, and a Bytes header containing the article&#8217;s size in bytes as in the <tt>&quot;b&quot;</tt> item will be added to the headers. If used, this should be the only item in the list.</dd>
+<dt>N</dt>
+<dd>The value of the Newsgroups: header.</dd>
+<dt>P</dt>
+<dd>The value of the Path: header.</dd>
+<dt>O</dt>
+<dd>Overview data for the article.</dd>
+<dt>R</dt>
+<dd>Information needed for replication (the Xref header without the site name).</dd></dl>
 </dl>
 <dl>
-<dd>More than one letter can be given. If multiple items are specified, they will be written in the order specified separated by spaces. (<tt>&quot;H&quot;</tt> should be the only item if given, but if it&#8217;s not a newline will be sent before the beginning of the headers.) The default is <code>Wn</code>. </p>
+<dd>More than one letter can be given. If multiple items are specified, they will be written in the order specified separated by spaces. (<tt>&quot;H&quot;</tt> should be the only item if given, but if it&#8217;s not a newline will be sent before the beginning of the headers.) The default is <code>Wn</code>. </dd>
 <p> The <tt>&quot;H&quot;</tt> and <tt>&quot;O&quot;</tt> items are intended for use by programs that create news overview databases or require similar information. <code>WnteO</code> is the flag to generate input needed by the <i><a href="/docs/linux/man/8-overchan/">overchan</a></i>(8) program. </p>
 <p> The asterisk (<tt>&quot;*&quot;</tt>) has special meaning. Normally it expands to a space-separated list of all sites that received the current article. If, however, this site is a target of a funnel feed (in other words, if it is named by other sites which have the <code>Tm</code> flag), then the asterisk expands to the names of the funnel feeds that received the article. Similarly, if the site is a program feed, an asterisk in the <i>parameter</i> field will be expanded into the list of funnel feeds that received the article. A program feed cannot get the site list unless it is the target of other <code>Tm</code> feeds.</dl>
 </dl>
@@ -242,3 +242,4 @@ description: "newsfeeds – Determine where Usenet articles are sent"
 <p> <tt>$Id:</tt> newsfeeds.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/8-buffchan/">buffchan</a></i>(8), <i><a href="/docs/linux/man/8-controlchan/">controlchan</a></i>(8), <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/8-innfeed/">innfeed</a></i>(8), <i><a href="/docs/linux/man/8-innxmit/">innxmit</a></i>(8), <i><a href="/docs/linux/man/8-nntpsend/">nntpsend</a></i>(8), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>
+</p>

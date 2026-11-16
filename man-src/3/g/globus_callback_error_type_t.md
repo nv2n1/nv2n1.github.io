@@ -40,8 +40,6 @@ description: "Globus Callback –"
 <p> Module descriptor. </p>
 <p> <code>Deprecated</code></p>
 <dl>
-<dt>
-<dd>
 </dl>
 <p> Backward compatible name</p>
 <h2>Typedef Documentation</h2>
@@ -57,25 +55,25 @@ description: "Globus Callback –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>Error Handling Helpers</code></dl>
+</dt><dd> <code>Error Handling Helpers</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_CALLBACK_ERROR_INVALID_CALLBACK_HANDLE </i></p>
-<dd> The callback handle is not valid or it has already been destroyed</p>
-<dt><i>GLOBUS_CALLBACK_ERROR_INVALID_SPACE </i></p>
-<dd> The space handle is not valid or it has already been destroyed</p>
-<dt><i>GLOBUS_CALLBACK_ERROR_MEMORY_ALLOC </i></p>
-<dd> Could not allocate memory for an internal structure</p>
-<dt><i>GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT </i></p>
-<dd> One of the arguments is NULL or out of range</p>
-<dt><i>GLOBUS_CALLBACK_ERROR_ALREADY_CANCELED </i></p>
-<dd> Attempt to unregister callback again</p>
-<dt><i>GLOBUS_CALLBACK_ERROR_NO_ACTIVE_CALLBACK </i></p>
-<dd> Attempt to retrieve info about a callback not in callers&#8217;s stack</dl>
+<dt><i>GLOBUS_CALLBACK_ERROR_INVALID_CALLBACK_HANDLE </i></dt>
+<dd> The callback handle is not valid or it has already been destroyed</dd>
+<dt><i>GLOBUS_CALLBACK_ERROR_INVALID_SPACE </i></dt>
+<dd> The space handle is not valid or it has already been destroyed</dd>
+<dt><i>GLOBUS_CALLBACK_ERROR_MEMORY_ALLOC </i></dt>
+<dd> Could not allocate memory for an internal structure</dd>
+<dt><i>GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT </i></dt>
+<dd> One of the arguments is NULL or out of range</dd>
+<dt><i>GLOBUS_CALLBACK_ERROR_ALREADY_CANCELED </i></dt>
+<dd> Attempt to unregister callback again</dd>
+<dt><i>GLOBUS_CALLBACK_ERROR_NO_ACTIVE_CALLBACK </i></dt>
+<dd> Attempt to retrieve info about a callback not in callers&#8217;s stack</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">Enumeration Type Documentation</a></p>
+<dt><a href="#lbAO">Enumeration Type Documentation</a></dt>
 <dd>
-<dt><a href="#lbAQ">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAQ">Author</a></dt>
+<dd></dd></dl>

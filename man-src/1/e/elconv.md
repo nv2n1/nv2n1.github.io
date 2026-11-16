@@ -16,8 +16,8 @@ description: "elconv – conversion program for ELOG messages"
 <h2>OPTIONS</h2>
 <p> <code>elconv</code> accepts the following option:</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> verbose output</dl>
+<dt><code>-v</code></dt>
+<dd> verbose output</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-elog/">elog</a></code>(1), <code><a href="/docs/linux/man/8-elogd/">elogd</a></code>(8). </p>
 <p> The full documentation for <code>ELOG</code> is maintained as an html manual. You can reach it from the package document directory.</p>

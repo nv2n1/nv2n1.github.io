@@ -17,44 +17,44 @@ dcmmkdir[options][dcmfile - in...]
 <p> The <code>dcmmkdir</code> utility creates a <i>DICOMDIR</i> file from the specified referenced DICOM files according to the DICOM Part 11 Media Storage Application Profiles. </p>
 <p> Currently the following profiles are supported (others might be added later): </p>
 <dl>
-<dt>&bull;</p>
-<dd> General Purpose CD-R Interchange (STD-GEN-CD)</p>
-<dt>&bull;</p>
-<dd> General Purpose Interchange on DVD-RAM Media (STD-GEN-DVD-RAM)</p>
-<dt>&bull;</p>
-<dd> General Purpose DVD with Compression Interchange (STD-GEN-DVD-JPEG/J2K)</p>
-<dt>&bull;</p>
-<dd> General Purpose MIME Interchange (STD-GEN-MIME)</p>
-<dt>&bull;</p>
-<dd> General Purpose USB and Flash Memory with Compression Interchange (STD-GEN-USB/MMC/CF/SD-JPEG/J2K)</p>
-<dt>&bull;</p>
-<dd> DVD Interchange with MPEG2 MP@ML (STD-DVD-MPEG2-MPML)</p>
-<dt>&bull;</p>
-<dd> Basic Cardiac X-Ray Angiographic Studies on CD-R Media (STD-XABC-CD)</p>
-<dt>&bull;</p>
-<dd> 1024 X-Ray Angiographic Studies on CD-R Media (STD-XA1K-CD)</p>
-<dt>&bull;</p>
-<dd> 1024 X-Ray Angiographic Studies on DVD Media (STD-XA1K-DVD)</p>
-<dt>&bull;</p>
-<dd> Dental Radiograph Interchange (STD-DEN-CD)</p>
-<dt>&bull;</p>
-<dd> CT/MR Studies on various Media (STD-CTMR-xxxx)</p>
-<dt>&bull;</p>
-<dd> Ultrasound Single Frame for Image Display (STD-US-ID-SF-xxxx)</p>
-<dt>&bull;</p>
-<dd> Ultrasound Single Frame with Spatial Calibration (STD-US-SC-SF-xxxx)</p>
-<dt>&bull;</p>
-<dd> Ultrasound Single Frame with Combined Calibration (STD-US-CC-SF-xxxx)</p>
-<dt>&bull;</p>
-<dd> Ultrasound Single &amp; Multi-Frame for Image Display (STD-US-ID-MF-xxxx)</p>
-<dt>&bull;</p>
-<dd> Ultrasound Single &amp; Multi-Frame with Spatial Calibration (STD-US-SC-MF-xxxx)</p>
-<dt>&bull;</p>
-<dd> Ultrasound Single &amp; Multi-Frame with Combined Calibration (STD-US-CC-MF-xxxx)</p>
-<dt>&bull;</p>
-<dd> 12-lead ECG Interchange on Diskette (STD-WVFM-ECG-FD)</p>
-<dt>&bull;</p>
-<dd> Hemodynamic Waveform Interchange on Diskette (STD-WVFM-HD-FD)</dl>
+<dt>&bull;</dt>
+<dd> General Purpose CD-R Interchange (STD-GEN-CD)</dd>
+<dt>&bull;</dt>
+<dd> General Purpose Interchange on DVD-RAM Media (STD-GEN-DVD-RAM)</dd>
+<dt>&bull;</dt>
+<dd> General Purpose DVD with Compression Interchange (STD-GEN-DVD-JPEG/J2K)</dd>
+<dt>&bull;</dt>
+<dd> General Purpose MIME Interchange (STD-GEN-MIME)</dd>
+<dt>&bull;</dt>
+<dd> General Purpose USB and Flash Memory with Compression Interchange (STD-GEN-USB/MMC/CF/SD-JPEG/J2K)</dd>
+<dt>&bull;</dt>
+<dd> DVD Interchange with MPEG2 MP@ML (STD-DVD-MPEG2-MPML)</dd>
+<dt>&bull;</dt>
+<dd> Basic Cardiac X-Ray Angiographic Studies on CD-R Media (STD-XABC-CD)</dd>
+<dt>&bull;</dt>
+<dd> 1024 X-Ray Angiographic Studies on CD-R Media (STD-XA1K-CD)</dd>
+<dt>&bull;</dt>
+<dd> 1024 X-Ray Angiographic Studies on DVD Media (STD-XA1K-DVD)</dd>
+<dt>&bull;</dt>
+<dd> Dental Radiograph Interchange (STD-DEN-CD)</dd>
+<dt>&bull;</dt>
+<dd> CT/MR Studies on various Media (STD-CTMR-xxxx)</dd>
+<dt>&bull;</dt>
+<dd> Ultrasound Single Frame for Image Display (STD-US-ID-SF-xxxx)</dd>
+<dt>&bull;</dt>
+<dd> Ultrasound Single Frame with Spatial Calibration (STD-US-SC-SF-xxxx)</dd>
+<dt>&bull;</dt>
+<dd> Ultrasound Single Frame with Combined Calibration (STD-US-CC-SF-xxxx)</dd>
+<dt>&bull;</dt>
+<dd> Ultrasound Single &amp; Multi-Frame for Image Display (STD-US-ID-MF-xxxx)</dd>
+<dt>&bull;</dt>
+<dd> Ultrasound Single &amp; Multi-Frame with Spatial Calibration (STD-US-SC-MF-xxxx)</dd>
+<dt>&bull;</dt>
+<dd> Ultrasound Single &amp; Multi-Frame with Combined Calibration (STD-US-CC-MF-xxxx)</dd>
+<dt>&bull;</dt>
+<dd> 12-lead ECG Interchange on Diskette (STD-WVFM-ECG-FD)</dd>
+<dt>&bull;</dt>
+<dd> Hemodynamic Waveform Interchange on Diskette (STD-WVFM-HD-FD)</dd></dl>
 <p> This tool extends <code>dcmgpdir</code> which can only create General Purpose <i>DICOMDIR</i> files. The default behaviour of <code>dcmmkdir</code> (with <i>&#8211;general-purpose</i>) is equivalent to that of <code>dcmgpdir</code>.</p>
 <h2>PARAMETERS</h2>
 <pre>

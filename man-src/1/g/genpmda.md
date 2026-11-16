@@ -17,28 +17,28 @@ description: "genpmda – Performance Co-Pilot PMDA Generator"
 <p> An example of the config file format accepted by <code>genpmda</code> is given below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>Required options:</code></p>
+<dt><code>Required options:</code></dt>
 <dd>
-<dt><code>-c</code><i> config</i></p>
-<dd> input <i>config</i> file, see example below</p>
-<dt><code>-i</code><i> IAM</i></p>
-<dd> pmda name <i>IAM</i>, should appear in <i>stdpmid</i> or the <code>-D</code> option must be used to specify a <i>domain</i>.</p>
-<dt><code>Other options:</code></p>
+</dd><dt><code>-c</code><i> config</i></dt>
+<dd> input <i>config</i> file, see example below</dd>
+<dt><code>-i</code><i> IAM</i></dt>
+<dd> pmda name <i>IAM</i>, should appear in <i>stdpmid</i> or the <code>-D</code> option must be used to specify a <i>domain</i>.</dd>
+<dt><code>Other options:</code></dt>
 <dd>
-<dt><code>-d</code></p>
-<dd> generate an Install script for a daemon PMDA (default is DSO)</p>
-<dt><code>-t</code><i> topdir</i></p>
-<dd> use <i>topdir</i> in generated GNUmakefile, default <code>../../..</code></p>
-<dt><code>-n</code><i> pmns</i></p>
-<dd> use <i>pmns</i> as root of the namespace (default matches <code>-i</code> flag)</p>
-<dt><code>-D</code><i> domain</i></p>
-<dd> use <i>domain</i> number in the generated <code>pmns</code> and <code>domain.h</code> (if <code>-s</code> is not given)</p>
-<dt><code>-s</code><i> stdpmid</i></p>
-<dd> path to <i>stdpmid</i> (default <code>../../pmns/stdpmid</code>)</p>
-<dt><code>-o</code><i> dir</i></p>
-<dd> use <i>dir</i> for generated source code, default <code>./generated</code></p>
-<dt><code>-v</code></p>
-<dd> print verbose messages about what <code>genpmda</code> is doing.</dl>
+</dd><dt><code>-d</code></dt>
+<dd> generate an Install script for a daemon PMDA (default is DSO)</dd>
+<dt><code>-t</code><i> topdir</i></dt>
+<dd> use <i>topdir</i> in generated GNUmakefile, default <code>../../..</code></dd>
+<dt><code>-n</code><i> pmns</i></dt>
+<dd> use <i>pmns</i> as root of the namespace (default matches <code>-i</code> flag)</dd>
+<dt><code>-D</code><i> domain</i></dt>
+<dd> use <i>domain</i> number in the generated <code>pmns</code> and <code>domain.h</code> (if <code>-s</code> is not given)</dd>
+<dt><code>-s</code><i> stdpmid</i></dt>
+<dd> path to <i>stdpmid</i> (default <code>../../pmns/stdpmid</code>)</dd>
+<dt><code>-o</code><i> dir</i></dt>
+<dd> use <i>dir</i> for generated source code, default <code>./generated</code></dd>
+<dt><code>-v</code></dt>
+<dd> print verbose messages about what <code>genpmda</code> is doing.</dd></dl>
 <p> Example:<br />
 &nbsp;<wbr>Generate an&nbsp;<wbr>&quot;example&quot;&nbsp;<wbr>pmda using domain 99: </p>
 <p>&nbsp;<wbr><code>genpmda -D 99 -v -i EXAMPLE -c example.conf</code> </p>

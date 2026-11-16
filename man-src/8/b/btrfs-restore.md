@@ -14,61 +14,62 @@ description: "btrfs-restore – try to restore files from a damaged btrfs filesy
 <p><code>btrfs restore</code> is used to try to salvage files from a damaged filesystem and restore them into <i>&lt;path&gt;</i> or just list the subvolume tree roots. The filesystem image is not modified. If the filesystem is damaged and cannot be repaired by the other tools (<code><a href="/docs/linux/man/8-btrfs-check/">btrfs-check</a></code>(8) or <code><a href="/docs/linux/man/8-btrfs-rescue/">btrfs-rescue</a></code>(8)), <code>btrfs restore</code> could be used to retrieve file data, as far as the metadata are readable. The checks done by restore are less strict and the process is usually able to get far enough to retrieve data from the whole filesystem. This comes at a cost that some data might be incomplete or from older versions if they&#8217;re available. There are several options to attempt restoration of various file metadata type. You can try a dry run first to see how well the process goes and use further options to extend the set of restored metadata. For images with damaged tree structures, there are several options to point the process to some spare copy.</p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- It is recommended to read the following btrfs wiki page if your data is not salvaged with default option: m[blue]<code><a rel="nofollow" href="https://btrfs.wiki.kernel.org/index.php/Restore">https://btrfs.wiki.kernel.org/index.php/Restore</a></code>m[] </p>
+ It is recommended to read the following btrfs wiki page if your data is not salvaged with default option: m[blue]<code><a rel="nofollow" href="https://btrfs.wiki.kernel.org/index.php/Restore">https://btrfs.wiki.kernel.org/index.php/Restore</a></code>m[] </dd>
 <h2>Options</h2>
 <p>-s|&#8211;snapshots</p>
 <dl>
-<dd>get also snapshots that are skipped by default</dl>
+<dd>get also snapshots that are skipped by default</dd></dl>
 <p> -x|&#8211;xattr</p>
 <dl>
-<dd>get extended attributes</dl>
+<dd>get extended attributes</dd></dl>
 <p> -m|&#8211;metadata</p>
 <dl>
-<dd>restore owner, mode and times for files and directories</dl>
+<dd>restore owner, mode and times for files and directories</dd></dl>
 <p> -S|&#8211;symlinks</p>
 <dl>
-<dd>restore symbolic links as well as normal files</dl>
+<dd>restore symbolic links as well as normal files</dd></dl>
 <p> -v|&#8211;verbose</p>
 <dl>
-<dd>be verbose and print what is being restored</dl>
+<dd>be verbose and print what is being restored</dd></dl>
 <p> -i|&#8211;ignore-errors</p>
 <dl>
-<dd>ignore errors during restoration and continue</dl>
+<dd>ignore errors during restoration and continue</dd></dl>
 <p> -o|&#8211;overwrite</p>
 <dl>
-<dd>overwrite directories/files in <i>&lt;path&gt;</i>, eg. for repeated runs</dl>
+<dd>overwrite directories/files in <i>&lt;path&gt;</i>, eg. for repeated runs</dd></dl>
 <p> -t <i>&lt;bytenr&gt;</i></p>
 <dl>
-<dd>use <i>&lt;bytenr&gt;</i> to read the root tree</dl>
+<dd>use <i>&lt;bytenr&gt;</i> to read the root tree</dd></dl>
 <p> -f <i>&lt;bytenr&gt;</i></p>
 <dl>
-<dd>only restore files that are under specified subvolume root pointed by <i>&lt;bytenr&gt;</i></dl>
+<dd>only restore files that are under specified subvolume root pointed by <i>&lt;bytenr&gt;</i></dd></dl>
 <p> -u|&#8211;super <i>&lt;mirror&gt;</i></p>
 <dl>
-<dd>use given superblock mirror identified by <i>&lt;mirror&gt;</i>, it can be 0,1 or 2</dl>
+<dd>use given superblock mirror identified by <i>&lt;mirror&gt;</i>, it can be 0,1 or 2</dd></dl>
 <p> -r|&#8211;root <i>&lt;rootid&gt;</i></p>
 <dl>
-<dd>only restore files that are under a specified subvolume whose objectid is <i>&lt;rootid&gt;</i></dl>
+<dd>only restore files that are under a specified subvolume whose objectid is <i>&lt;rootid&gt;</i></dd></dl>
 <p> -d</p>
 <dl>
-<dd>find directory</dl>
+<dd>find directory</dd></dl>
 <p> -l|&#8211;list-roots</p>
 <dl>
-<dd>list subvolume tree roots, can be used as argument for <i>-r</i></dl>
+<dd>list subvolume tree roots, can be used as argument for <i>-r</i></dd></dl>
 <p> -D|&#8211;dry-run</p>
 <dl>
-<dd>dry run (only list files that would be recovered)</dl>
+<dd>dry run (only list files that would be recovered)</dd></dl>
 <p> &#8211;path-regex <i>&lt;regex&gt;</i></p>
 <dl>
-<dd>restore only filenames matching a regular expression (<code><a href="/docs/linux/man/7-regex/">regex</a></code>(7)) with a mandatory format </p>
+<dd>restore only filenames matching a regular expression (<code><a href="/docs/linux/man/7-regex/">regex</a></code>(7)) with a mandatory format </dd>
 <p> <code>^/(|home(|/username(|/Desktop(|/.*))))$</code> </p>
 <p> The format is not very comfortable and restores all files in the directories in the whole path, so this is not useful for restoring single file in a deep hierarchy.</dl>
 <p> -c</p>
 <dl>
-<dd>ignore case (&#8211;path-regex only)</dl>
+<dd>ignore case (&#8211;path-regex only)</dd></dl>
 <h2>Exit Status</h2>
 <p><code>btrfs restore</code> returns a zero exit status if it succeeds. Non zero is returned in case of failure.</p>
 <h2>Availability</h2>
 <p><code>btrfs</code> is part of btrfs-progs. Please refer to the btrfs wiki m[blue]<code><a rel="nofollow" href="http://btrfs.wiki.kernel.org">http://btrfs.wiki.kernel.org</a></code>m[] for further details.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-mkfs-btrfs/">mkfs.btrfs</a></code>(8), <code><a href="/docs/linux/man/8-btrfs-rescue/">btrfs-rescue</a></code>(8), <code><a href="/docs/linux/man/8-btrfs-check/">btrfs-check</a></code>(8) </p>
+</dl>

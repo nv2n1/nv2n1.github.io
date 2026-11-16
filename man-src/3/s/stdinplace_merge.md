@@ -11,25 +11,17 @@ std::inplace_merge - std::inplace_merge
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class BidirIt&gt;
     (1)
-
         void inplace_merge(BidirIt first, BidirIt middle, BidirIt last);
-
 template &lt;class ExecutionPolicy, class BidirIt&gt;
 (2)(since C++ 17)
-
     void inplace_merge(ExecutionPolicy &amp;&amp;policy, BidirIt first, BidirIt middle, BidirIt last);
-
 template &lt;class BidirIt, class Compare&gt;
 (3)
-
     void inplace_merge(BidirIt first, BidirIt middle, BidirIt last, Compare comp);
-
 template &lt;class ExecutionPolicy, class BidirIt, class Compare&gt;
 (4)(since C++ 17)
-
     void inplace_merge(ExecutionPolicy &amp;&amp;policy, BidirIt first, BidirIt middle, BidirIt last, Compare comp);</code></pre> 
 Merges two consecutive sorted ranges [first, middle) and [middle, last) into one sorted range [first, last). For equivalent elements in the original two ranges, the elements from the first range (preserving their original order) precede the elements from the second range (preserving their original order). 
 1) Elements are compared using operator&lt; and the ranges must be sorted with respect to the same. 
@@ -83,14 +75,10 @@ This function attempts to allocate a temporary buffer. If the allocation fails, 
 
 The following code is an implementation of merge sort. 
  // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
 template &lt;class Iter&gt;
-
 void merge_sort(Iter first, Iter last)
-
 {
     if (last - first &gt; 1) {
         Iter middle = first + (last - first) / 2;
@@ -100,7 +88,6 @@ void merge_sort(Iter first, Iter last)
     }
 }
 int main()
-
 {
     std::vector&lt;int&gt; v{8, 2, -2, 0, 11, 11, 1, 7, 3};
     merge_sort(v.begin(), v.end());

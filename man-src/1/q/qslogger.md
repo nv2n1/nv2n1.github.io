@@ -25,17 +25,17 @@ url: "/docs/linux/man/1-qslogger/"
 
 <dl>
 <dt>-r &lt;expression&gt;
-<dd> Specifies a regular expression which shall be used to determine the severity (syslog level) for each log line. The default pattern '^\[[0-9a-zA-Z :]+\] \[([a-z]+)\] ' can be used for Apache error log messages but you may configure your own pattern matching and other log format too. Use brackets to define the string enclosing the severity string. Default level (if severity can't be determined) is defined by the option '-d' (see below).
-<dt>-t &lt;tag&gt;
-<dd> Defines the tag name which shall be used to define the origin of the messages, e.g. 'httpd'.
-<dt>-f &lt;facility&gt;
-<dd> Defines the syslog facility. Default is 'daemon'.
-<dt>-l &lt;level&gt;
-<dd> Defines the minimal severity a message must have in order to be forwarded. Default is 'DEBUG'.
-<dt>-d &lt;level&gt;
-<dd> The default severity if the specified pattern (-r) does not match and the message's serverity can't be determined. Default is 'NOTICE'.
-<dt>-p
-<dd> Writes data also to stdout (for piped logging).</dl>
+</dt><dd> Specifies a regular expression which shall be used to determine the severity (syslog level) for each log line. The default pattern '^\[[0-9a-zA-Z :]+\] \[([a-z]+)\] ' can be used for Apache error log messages but you may configure your own pattern matching and other log format too. Use brackets to define the string enclosing the severity string. Default level (if severity can't be determined) is defined by the option '-d' (see below).
+</dd><dt>-t &lt;tag&gt;
+</dt><dd> Defines the tag name which shall be used to define the origin of the messages, e.g. 'httpd'.
+</dd><dt>-f &lt;facility&gt;
+</dt><dd> Defines the syslog facility. Default is 'daemon'.
+</dd><dt>-l &lt;level&gt;
+</dt><dd> Defines the minimal severity a message must have in order to be forwarded. Default is 'DEBUG'.
+</dd><dt>-d &lt;level&gt;
+</dt><dd> The default severity if the specified pattern (-r) does not match and the message's serverity can't be determined. Default is 'NOTICE'.
+</dd><dt>-p
+</dt><dd> Writes data also to stdout (for piped logging).</dd></dl>
 
 <h2>EXAMPLE</h2>
 

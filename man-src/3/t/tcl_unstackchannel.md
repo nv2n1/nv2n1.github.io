@@ -20,11 +20,11 @@ Tcl_Channel
 <code>Tcl_GetTopChannel</code>(<i>channel</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter for error reporting.</p>
-<dd>Tcl_ChannelType <i>*typePtr</i> (in) The new channel I/O procedures to use for <i>channel</i>.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to channel I/O procedures.</p>
-<dd>int <i>mask</i> (in) Conditions under which <i>channel</i> will be used: OR-ed combination of <code>TCL_READABLE</code>, <code>TCL_WRITABLE</code> and <code>TCL_EXCEPTION</code>. This can be a subset of the operations currently allowed on <i>channel</i>.</p>
-<dd>Tcl_Channel <i>channel</i> (in) An existing Tcl channel such as returned by <code>Tcl_CreateChannel</code>. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter for error reporting.</dd>
+<dd>Tcl_ChannelType <i>*typePtr</i> (in) The new channel I/O procedures to use for <i>channel</i>.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to channel I/O procedures.</dd>
+<dd>int <i>mask</i> (in) Conditions under which <i>channel</i> will be used: OR-ed combination of <code>TCL_READABLE</code>, <code>TCL_WRITABLE</code> and <code>TCL_EXCEPTION</code>. This can be a subset of the operations currently allowed on <i>channel</i>.</dd>
+<dd>Tcl_Channel <i>channel</i> (in) An existing Tcl channel such as returned by <code>Tcl_CreateChannel</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p>These functions are for use by extensions that add processing layers to Tcl I/O channels. Examples include compression and encryption modules. These functions transparently stack and unstack a new channel on top of an existing one. Any number of channels can be stacked together. </p>

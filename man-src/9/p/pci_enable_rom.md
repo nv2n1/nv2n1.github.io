@@ -15,7 +15,7 @@ pci_enable_rom - enable ROM decoding for a PCI device
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>PCI device to enable</dl>
+<dl><dd></dd><dd>PCI device to enable</dd></dl>
 
 <h2>Description</h2>
 

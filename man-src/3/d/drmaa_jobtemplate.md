@@ -13,19 +13,19 @@ description: "drmaa_allocate_job_template, drmaa_delete_job_template, drmaa_set_
 <p> <code>#include drmaa.h</code> </p>
 <pre>
 <code>int drmaa_allocate_job_template(
-<dl><dt><dd>drmaa_job_template_t **jt,
+<dl><dt></dt><dd>drmaa_job_template_t **jt,
 char *error_diagnosis,
 size_t error_diag_len
-</dl>
+</dd></dl>
 </code></pre>
 <p> <code>); </p>
 <p> </code></p>
 <pre>
 <code>int drmaa_delete_job_template(
-<dl><dt><dd>drmaa_job_template_t *jt,
+<dl><dt></dt><dd>drmaa_job_template_t *jt,
 char *error_diagnosis,
 size_t error_diag_len
-</dl>
+</dd></dl>
 </code></pre>
 <p> <code>); </p>
 <p> </code></p>
@@ -68,25 +68,25 @@ size_t error_diag_len
 <p> </code></p>
 <pre>
 <code>int drmaa_get_next_attr_value(
-<dl><dt><dd>drmaa_attr_values_t* values,
+<dl><dt></dt><dd>drmaa_attr_values_t* values,
 char *value,
 int value_len
-</dl>
+</dd></dl>
 </code></pre>
 <p> <code>); </p>
 <p> </code></p>
 <pre>
 <code>int drmaa_get_num_attr_values(
-<dl><dt><dd>drmaa_attr_values_t* values,
+<dl><dt></dt><dd>drmaa_attr_values_t* values,
 int *size
-</dl>
+</dd></dl>
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
 <pre>
 <code>void drmaa_release_attr_values(
-<dl><dt><dd>drmaa_attr_values_t* values
-</dl>
+<dl><dt></dt><dd>drmaa_attr_values_t* values
+</dd></dl>
 </code></pre>
 <p> <code>); </p>
 <p> </code></p>
@@ -110,23 +110,21 @@ int *size
 <p> The drmaa_release_attr_values() function releases all resources associated with the DRMAA values string vector, <i>values</i>. </p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, drmaa_allocate_job_template(), drmaa_delete_job_template(), drmaa_set_attribute(), drmaa_get_attribute(), drmaa_set_vector_attribute(), drmaa_get_vector_attribute(), and drmaa_get_next_attr_value() return DRMAA_ERRNO_SUCCESS. Other values indicate an error. Up to <i>error_diag_len</i> characters of error related diagnosis information is then provided in the buffer <i>error_diagnosis</i>. </p>
 <h2>ERRORS</h2>

@@ -775,125 +775,125 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <h3>enum <code>_Evas_Button_Flags</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EVAS_BUTTON_NONE </i></p>
-<dd>No extra mouse button data.</p>
-<dt><i>EVAS_BUTTON_DOUBLE_CLICK </i></p>
-<dd>This mouse button press was the 2nd press of a double click.</p>
-<dt><i>EVAS_BUTTON_TRIPLE_CLICK </i></p>
-<dd>This mouse button press was the 3rd press of a triple click.</dl>
+<dt><i>EVAS_BUTTON_NONE </i></dt>
+<dd>No extra mouse button data.</dd>
+<dt><i>EVAS_BUTTON_DOUBLE_CLICK </i></dt>
+<dd>This mouse button press was the 2nd press of a double click.</dd>
+<dt><i>EVAS_BUTTON_TRIPLE_CLICK </i></dt>
+<dd>This mouse button press was the 3rd press of a triple click.</dd></dl>
 <h3>enum <code>_Evas_Callback_Type</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EVAS_CALLBACK_MOUSE_IN </i></p>
-<dd>Mouse In Event.</p>
-<dt><i>EVAS_CALLBACK_MOUSE_OUT </i></p>
-<dd>Mouse Out Event.</p>
-<dt><i>EVAS_CALLBACK_MOUSE_DOWN </i></p>
-<dd>Mouse Button Down Event.</p>
-<dt><i>EVAS_CALLBACK_MOUSE_UP </i></p>
-<dd>Mouse Button Up Event.</p>
-<dt><i>EVAS_CALLBACK_MOUSE_MOVE </i></p>
-<dd>Mouse Move Event.</p>
-<dt><i>EVAS_CALLBACK_MOUSE_WHEEL </i></p>
-<dd>Mouse Wheel Event.</p>
-<dt><i>EVAS_CALLBACK_FREE </i></p>
-<dd>Object Being Freed (Called after Del).</p>
-<dt><i>EVAS_CALLBACK_KEY_DOWN </i></p>
-<dd>Key Press Event.</p>
-<dt><i>EVAS_CALLBACK_KEY_UP </i></p>
-<dd>Key Release Event.</p>
-<dt><i>EVAS_CALLBACK_FOCUS_IN </i></p>
-<dd>Focus In Event.</p>
-<dt><i>EVAS_CALLBACK_FOCUS_OUT </i></p>
-<dd>Focus Out Event.</p>
-<dt><i>EVAS_CALLBACK_SHOW </i></p>
-<dd>Show Event.</p>
-<dt><i>EVAS_CALLBACK_HIDE </i></p>
-<dd>Hide Event.</p>
-<dt><i>EVAS_CALLBACK_MOVE </i></p>
-<dd>Move Event.</p>
-<dt><i>EVAS_CALLBACK_RESIZE </i></p>
-<dd>Resize Event.</p>
-<dt><i>EVAS_CALLBACK_RESTACK </i></p>
-<dd>Restack Event.</p>
-<dt><i>EVAS_CALLBACK_DEL </i></p>
-<dd>Object Being Deleted (called before Free).</p>
-<dt><i>EVAS_CALLBACK_HOLD </i></p>
-<dd>Events go on/off hold.</p>
-<dt><i>EVAS_CALLBACK_CHANGED_SIZE_HINTS </i></p>
-<dd>Size hints changed event.</p>
-<dt><i>EVAS_CALLBACK_IMAGE_PRELOADED </i></p>
-<dd>Image as been preloaded.</dl>
+<dt><i>EVAS_CALLBACK_MOUSE_IN </i></dt>
+<dd>Mouse In Event.</dd>
+<dt><i>EVAS_CALLBACK_MOUSE_OUT </i></dt>
+<dd>Mouse Out Event.</dd>
+<dt><i>EVAS_CALLBACK_MOUSE_DOWN </i></dt>
+<dd>Mouse Button Down Event.</dd>
+<dt><i>EVAS_CALLBACK_MOUSE_UP </i></dt>
+<dd>Mouse Button Up Event.</dd>
+<dt><i>EVAS_CALLBACK_MOUSE_MOVE </i></dt>
+<dd>Mouse Move Event.</dd>
+<dt><i>EVAS_CALLBACK_MOUSE_WHEEL </i></dt>
+<dd>Mouse Wheel Event.</dd>
+<dt><i>EVAS_CALLBACK_FREE </i></dt>
+<dd>Object Being Freed (Called after Del).</dd>
+<dt><i>EVAS_CALLBACK_KEY_DOWN </i></dt>
+<dd>Key Press Event.</dd>
+<dt><i>EVAS_CALLBACK_KEY_UP </i></dt>
+<dd>Key Release Event.</dd>
+<dt><i>EVAS_CALLBACK_FOCUS_IN </i></dt>
+<dd>Focus In Event.</dd>
+<dt><i>EVAS_CALLBACK_FOCUS_OUT </i></dt>
+<dd>Focus Out Event.</dd>
+<dt><i>EVAS_CALLBACK_SHOW </i></dt>
+<dd>Show Event.</dd>
+<dt><i>EVAS_CALLBACK_HIDE </i></dt>
+<dd>Hide Event.</dd>
+<dt><i>EVAS_CALLBACK_MOVE </i></dt>
+<dd>Move Event.</dd>
+<dt><i>EVAS_CALLBACK_RESIZE </i></dt>
+<dd>Resize Event.</dd>
+<dt><i>EVAS_CALLBACK_RESTACK </i></dt>
+<dd>Restack Event.</dd>
+<dt><i>EVAS_CALLBACK_DEL </i></dt>
+<dd>Object Being Deleted (called before Free).</dd>
+<dt><i>EVAS_CALLBACK_HOLD </i></dt>
+<dd>Events go on/off hold.</dd>
+<dt><i>EVAS_CALLBACK_CHANGED_SIZE_HINTS </i></dt>
+<dd>Size hints changed event.</dd>
+<dt><i>EVAS_CALLBACK_IMAGE_PRELOADED </i></dt>
+<dd>Image as been preloaded.</dd></dl>
 <h3>enum <code>_Evas_Colorspace</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EVAS_COLORSPACE_ARGB8888 </i></p>
-<dd>ARGB 32 bits per pixel, high-byte is Alpha, accessed 1 32bit word at a time.</p>
-<dt><i>EVAS_COLORSPACE_YCBCR422P601_PL </i></p>
-<dd>YCbCr 4:2:2 Planar, ITU.BT-601 specifications.</dl>
+<dt><i>EVAS_COLORSPACE_ARGB8888 </i></dt>
+<dd>ARGB 32 bits per pixel, high-byte is Alpha, accessed 1 32bit word at a time.</dd>
+<dt><i>EVAS_COLORSPACE_YCBCR422P601_PL </i></dt>
+<dd>YCbCr 4:2:2 Planar, ITU.BT-601 specifications.</dd></dl>
 <p> The data poitned to is just an array of row pointer, pointing to the Y rows, then the Cb, then Cr rows</p>
 <dl COMPACT>
-<dt><i>EVAS_COLORSPACE_YCBCR422P709_PL </i></p>
-<dd>YCbCr 4:2:2 Planar, ITU.BT-709 specifications.</dl>
+<dt><i>EVAS_COLORSPACE_YCBCR422P709_PL </i></dt>
+<dd>YCbCr 4:2:2 Planar, ITU.BT-709 specifications.</dd></dl>
 <p> The data poitned to is just an array of row pointer, pointing to the Y rows, then the Cb, then Cr rows</p>
 <dl COMPACT>
-<dt><i>EVAS_COLORSPACE_RGB565_A5P </i></p>
-<dd>16bit rgb565 + Alpha plane at end &#8211; 5 bits of the 8 being used per alpha byte</dl>
+<dt><i>EVAS_COLORSPACE_RGB565_A5P </i></dt>
+<dd>16bit rgb565 + Alpha plane at end &#8211; 5 bits of the 8 being used per alpha byte</dd></dl>
 <h3>enum <code>_Evas_Event_Flags</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EVAS_EVENT_FLAG_NONE </i></p>
-<dd>No fancy flags set.</p>
-<dt><i>EVAS_EVENT_FLAG_ON_HOLD </i></p>
-<dd>This event is being delivered but should be put &#8216;on hold&#8217; until the on hold flag is unset.</dl>
+<dt><i>EVAS_EVENT_FLAG_NONE </i></dt>
+<dd>No fancy flags set.</dd>
+<dt><i>EVAS_EVENT_FLAG_ON_HOLD </i></dt>
+<dd>This event is being delivered but should be put &#8216;on hold&#8217; until the on hold flag is unset.</dd></dl>
 <p> the event should be used for informational purposes and maybe some indications visually, but not actually perform anything</p>
 <h3>enum <code>_Evas_Font_Hinting_Flags</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EVAS_FONT_HINTING_NONE </i></p>
-<dd>No font hinting.</p>
-<dt><i>EVAS_FONT_HINTING_AUTO </i></p>
-<dd>Automatic font hinting.</p>
-<dt><i>EVAS_FONT_HINTING_BYTECODE </i></p>
-<dd>Bytecode font hinting.</dl>
+<dt><i>EVAS_FONT_HINTING_NONE </i></dt>
+<dd>No font hinting.</dd>
+<dt><i>EVAS_FONT_HINTING_AUTO </i></dt>
+<dd>Automatic font hinting.</dd>
+<dt><i>EVAS_FONT_HINTING_BYTECODE </i></dt>
+<dd>Bytecode font hinting.</dd></dl>
 <h3>enum <code>_Evas_Object_Pointer_Mode</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EVAS_OBJECT_POINTER_MODE_AUTOGRAB </i></p>
-<dd>default, X11-like</dl>
+<dt><i>EVAS_OBJECT_POINTER_MODE_AUTOGRAB </i></dt>
+<dd>default, X11-like</dd></dl>
 <h3>enum <code>_Evas_Render_Op</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EVAS_RENDER_BLEND </i></p>
-<dd>default op: d = d*(1-sa) + s</p>
-<dt><i>EVAS_RENDER_BLEND_REL </i></p>
-<dd>d = d*(1 &#8211; sa) + s*da</p>
-<dt><i>EVAS_RENDER_COPY </i></p>
-<dd>d = s</p>
-<dt><i>EVAS_RENDER_COPY_REL </i></p>
-<dd>d = s*da</p>
-<dt><i>EVAS_RENDER_ADD </i></p>
-<dd>d = d + s</p>
-<dt><i>EVAS_RENDER_ADD_REL </i></p>
-<dd>d = d + s*da</p>
-<dt><i>EVAS_RENDER_SUB </i></p>
-<dd>d = d &#8211; s</p>
-<dt><i>EVAS_RENDER_SUB_REL </i></p>
-<dd>d = d &#8211; s*da</p>
-<dt><i>EVAS_RENDER_TINT </i></p>
-<dd>d = d*s + d*(1 &#8211; sa) + s*(1 &#8211; da)</p>
-<dt><i>EVAS_RENDER_TINT_REL </i></p>
-<dd>d = d*(1 &#8211; sa + s)</p>
-<dt><i>EVAS_RENDER_MASK </i></p>
-<dd>d = d*sa</p>
-<dt><i>EVAS_RENDER_MUL </i></p>
-<dd>d = d*s</dl>
+<dt><i>EVAS_RENDER_BLEND </i></dt>
+<dd>default op: d = d*(1-sa) + s</dd>
+<dt><i>EVAS_RENDER_BLEND_REL </i></dt>
+<dd>d = d*(1 &#8211; sa) + s*da</dd>
+<dt><i>EVAS_RENDER_COPY </i></dt>
+<dd>d = s</dd>
+<dt><i>EVAS_RENDER_COPY_REL </i></dt>
+<dd>d = s*da</dd>
+<dt><i>EVAS_RENDER_ADD </i></dt>
+<dd>d = d + s</dd>
+<dt><i>EVAS_RENDER_ADD_REL </i></dt>
+<dd>d = d + s*da</dd>
+<dt><i>EVAS_RENDER_SUB </i></dt>
+<dd>d = d &#8211; s</dd>
+<dt><i>EVAS_RENDER_SUB_REL </i></dt>
+<dd>d = d &#8211; s*da</dd>
+<dt><i>EVAS_RENDER_TINT </i></dt>
+<dd>d = d*s + d*(1 &#8211; sa) + s*(1 &#8211; da)</dd>
+<dt><i>EVAS_RENDER_TINT_REL </i></dt>
+<dd>d = d*(1 &#8211; sa + s)</dd>
+<dt><i>EVAS_RENDER_MASK </i></dt>
+<dd>d = d*sa</dd>
+<dt><i>EVAS_RENDER_MUL </i></dt>
+<dd>d = d*s</dd></dl>
 <h2>Function Documentation</h2>
 <h3>EAPI int evas_alloc_error (void)</h3>
 <p>Return if any allocation errors have occured during the prior function. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The allocation error flag</dl>
+<dd>The allocation error flag</dd></dl>
 <p> This function will return if any memory allocation errors occured during, and what kind they were. The return value will be one of EVAS_ALLOC_ERROR_NONE, EVAS_ALLOC_ERROR_FATAL or EVAS_ALLOC_ERROR_RECOVERED with each meaning something different. </p>
 <p> EVAS_ALLOC_ERROR_NONE means that no errors occured at all and the function worked as expected. </p>
 <p> EVAS_ALLOC_ERROR_FATAL means the function was completely unable to perform its job and will have exited as cleanly as possible. The programmer should consider this as a sign of very low memory and should try and safely recover from the prior functions failure (or try free up memory elsewhere and try again after more memory is freed). </p>
@@ -939,16 +939,16 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Returns the pointer attached by <code>evas_data_attach_set()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The canvas to attach the pointer to</dl>
+<dd><i>e</i> The canvas to attach the pointer to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The pointer attached</dl>
+<dd>The pointer attached</dd></dl>
 <h3>EAPI void evas_data_attach_set (<code>Evas</code> * e, void * data)</h3>
 <p>Attaches a specific pointer to the evas for fetching later. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The canvas to attach the pointer to<br />
- <i>data</i> The pointer to attach</dl>
+ <i>data</i> The pointer to attach</dd></dl>
 <h3>EAPI void evas_event_feed_hold (<code>Evas</code> * e, int hold, unsigned int timestamp, const void * data)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed. </p>
@@ -992,17 +992,17 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Retrieve the object that currently has focus. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The Evas canvas to query focus on.</dl>
+<dd><i>e</i> The Evas canvas to query focus on.</dd></dl>
 <p> Returns the object that currently has focus, NULL otherwise. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_object_focus_set</code> </p>
+<dd><code>evas_object_focus_set</code> </dd>
 <p> <code>evas_object_focus_get</code> </p>
 <p> <code>evas_object_key_grab</code> </p>
 <p> <code>evas_object_key_ungrab</code></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The object that has focus or NULL is there is not one.</dl>
+<dd>The object that has focus or NULL is there is not one.</dd></dl>
 <h3>EAPI <code>Evas_List</code>* evas_font_available_list (const <code>Evas</code> * e)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed.</p>
@@ -1035,48 +1035,48 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p> Locks can be keys like caps lock, num lock or scroll lock, as well as user defined. This allows custom locks to be added to the evas system at run time. It is then possible to set and unset the lock for other parts of the program to check and act on. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_lock_get</code> </p>
+<dd><code>evas_key_lock_get</code> </dd>
 <p> <code>evas_key_lock_del</code> </p>
 <p> <code>evas_key_lock_on</code> </p>
 <p> <code>evas_key_lock_off</code></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the key to remove from the modifier list.</dl>
+ <i>keyname</i> The name of the key to remove from the modifier list.</dd></dl>
 <h3>EAPI void evas_key_lock_del (<code>Evas</code> * e, const char * keyname)</h3>
 <p>Removes The keyname from the current list of locks. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_lock_get</code> </p>
+<dd><code>evas_key_lock_get</code> </dd>
 <p> <code>evas_key_lock_add</code> </p>
 <p> <code>evas_key_lock_on</code> </p>
 <p> <code>evas_key_lock_off</code></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the key to remove from the lock list.</dl>
+ <i>keyname</i> The name of the key to remove from the lock list.</dd></dl>
 <h3>EAPI const <code>Evas_Lock</code>* evas_key_lock_get (const <code>Evas</code> * e)</h3>
 <p>Returns a handle to the locks available in the system. </p>
 <p> This is required to check for locks with the evas_key_lock_is_set_get function. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_lock_add</code> </p>
+<dd><code>evas_key_lock_add</code> </dd>
 <p> <code>evas_key_lock_del</code> </p>
 <p> <code>evas_key_lock_on</code> </p>
 <p> <code>evas_key_lock_off</code> </p>
 <p> evas_key_lock_is_set_get</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas</dl>
+<dd><i>e</i> The pointer to the Evas Canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An Evas_Lock handle to query the lock subsystem with evas_key_lock_is_set_get, or NULL on error.</dl>
+<dd>An Evas_Lock handle to query the lock subsystem with evas_key_lock_is_set_get, or NULL on error.</dd></dl>
 <h3>EAPI Evas_Bool evas_key_lock_is_set (const <code>Evas_Lock</code> * l, const char * keyname)</h3>
 <p>Checks the state of a given lock. </p>
 <p> If the lock is set, such as caps lock, this function returns true. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_lock_get</code> </p>
+<dd><code>evas_key_lock_get</code> </dd>
 <p> <code>evas_key_lock_add</code> </p>
 <p> <code>evas_key_lock_del</code> </p>
 <p> <code>evas_key_lock_on</code> </p>
@@ -1085,37 +1085,37 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <dl COMPACT>
 <dd><i>l</i> The current lock set as returned by evas_key_lock_get.<br />
  <i>keyname</i> The name of the lock to add the the list.<br />
- <i>1</i> if the keyname kock is set, 0 otherwise.</dl>
+ <i>1</i> if the keyname kock is set, 0 otherwise.</dd></dl>
 <h3>EAPI void evas_key_lock_off (<code>Evas</code> * e, const char * keyname)</h3>
 <p>Disables or turns off the lock with name keyname. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_lock_get</code> </p>
+<dd><code>evas_key_lock_get</code> </dd>
 <p> <code>evas_key_lock_add</code> </p>
 <p> <code>evas_key_lock_del</code> </p>
 <p> <code>evas_key_lock_on</code></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the lock to un-set.</dl>
+ <i>keyname</i> The name of the lock to un-set.</dd></dl>
 <h3>EAPI void evas_key_lock_on (<code>Evas</code> * e, const char * keyname)</h3>
 <p>Enables or turns on the lock with name keyname. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_lock_get</code> </p>
+<dd><code>evas_key_lock_get</code> </dd>
 <p> <code>evas_key_lock_add</code> </p>
 <p> <code>evas_key_lock_del</code> </p>
 <p> <code>evas_key_lock_off</code></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the lock to set.</dl>
+ <i>keyname</i> The name of the lock to set.</dd></dl>
 <h3>EAPI void evas_key_modifier_add (<code>Evas</code> * e, const char * keyname)</h3>
 <p>Adds the keyname to the current list of modifiers. </p>
 <p> Modifiers can be keys like shift, alt and ctrl, as well as user defined. This allows custom modifiers to be added to the evas system as run time. It is then possible to set and unset the modifier for other parts of the program to check and act on. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_modifier_del</code> </p>
+<dd><code>evas_key_modifier_del</code> </dd>
 <p> <code>evas_key_modifier_get</code> </p>
 <p> <code>evas_key_modifier_on</code> </p>
 <p> <code>evas_key_modifier_off</code> </p>
@@ -1123,12 +1123,12 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the modifier to add to the list.</dl>
+ <i>keyname</i> The name of the modifier to add to the list.</dd></dl>
 <h3>EAPI void evas_key_modifier_del (<code>Evas</code> * e, const char * keyname)</h3>
 <p>Removes the keyname from the current list of modifiers. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_modifier_add</code> </p>
+<dd><code>evas_key_modifier_add</code> </dd>
 <p> <code>evas_key_modifier_get</code> </p>
 <p> <code>evas_key_modifier_on</code> </p>
 <p> <code>evas_key_modifier_off</code> </p>
@@ -1136,29 +1136,29 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the key to remove from the modifiers list.</dl>
+ <i>keyname</i> The name of the key to remove from the modifiers list.</dd></dl>
 <h3>EAPI const <code>Evas_Modifier</code>* evas_key_modifier_get (const <code>Evas</code> * e)</h3>
 <p>Returns a handle to the modifiers available in the system. </p>
 <p> This is required to check for modifiers with the evas_key_modifier_is_set_get function. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_modifier_add</code> </p>
+<dd><code>evas_key_modifier_add</code> </dd>
 <p> <code>evas_key_modifier_del</code> </p>
 <p> <code>evas_key_modifier_on</code> </p>
 <p> <code>evas_key_modifier_off</code> </p>
 <p> evas_key_modifier_is_set_get</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas</dl>
+<dd><i>e</i> The pointer to the Evas Canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An Evas_Modifier handle to query the modifier subsystem with evas_key_modifier_is_set_get, or NULL on error.</dl>
+<dd>An Evas_Modifier handle to query the modifier subsystem with evas_key_modifier_is_set_get, or NULL on error.</dd></dl>
 <h3>EAPI Evas_Bool evas_key_modifier_is_set (const <code>Evas_Modifier</code> * m, const char * keyname)</h3>
 <p>Checks the state of a given modifier. </p>
 <p> If the modifier is set, such as shift being pressed this function returns true. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_modifier_add</code> </p>
+<dd><code>evas_key_modifier_add</code> </dd>
 <p> <code>evas_key_modifier_del</code> </p>
 <p> <code>evas_key_modifier_get</code> </p>
 <p> <code>evas_key_modifier_on</code> </p>
@@ -1166,49 +1166,49 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>m</i> The current modifier set as returned by evas_key_modifier_get.<br />
- <i>keyname</i> The name of the key to check its status.</dl>
+ <i>keyname</i> The name of the key to check its status.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the keyname is on, 0 otherwise.</dl>
+<dd>1 if the keyname is on, 0 otherwise.</dd></dl>
 <h3>EAPI <code>Evas_Modifier_Mask</code> evas_key_modifier_mask_get (const <code>Evas</code> * e, const char * keyname)</h3>
 <p>Creates a bit mask from the keyname for use with events to check for the presence of the keyname modifier. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_modifier_add</code> </p>
+<dd><code>evas_key_modifier_add</code> </dd>
 <p> <code>evas_key_modifier_get</code> </p>
 <p> <code>evas_key_modifier_on</code> </p>
 <p> <code>evas_key_modifier_off</code> </p>
 <p> evas_key_modifier_is_set_get</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>keyname</i> The name of the modifier to create the mask for.</dl>
+<dd><i>keyname</i> The name of the modifier to create the mask for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the bit mask or 0 if the keyname wasn&#8217;t registered as a modifier.</dl>
+<dd>the bit mask or 0 if the keyname wasn&#8217;t registered as a modifier.</dd></dl>
 <h3>EAPI void evas_key_modifier_off (<code>Evas</code> * e, const char * keyname)</h3>
 <p>Disables or turns off the modifier with name keyname. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_modifier_add</code> </p>
+<dd><code>evas_key_modifier_add</code> </dd>
 <p> <code>evas_key_modifier_get</code> </p>
 <p> <code>evas_key_modifier_on</code> </p>
 <p> evas_key_modifier_is_set_get</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the modifier to un-set.</dl>
+ <i>keyname</i> The name of the modifier to un-set.</dd></dl>
 <h3>EAPI void evas_key_modifier_on (<code>Evas</code> * e, const char * keyname)</h3>
 <p>Enables or turns on the modifier with name keyname. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_key_modifier_add</code> </p>
+<dd><code>evas_key_modifier_add</code> </dd>
 <p> <code>evas_key_modifier_get</code> </p>
 <p> <code>evas_key_modifier_off</code> </p>
 <p> evas_key_modifier_is_set_get</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>keyname</i> The name of the modifier to set.</dl>
+ <i>keyname</i> The name of the modifier to set.</dd></dl>
 <h3>EAPI void evas_norender (<code>Evas</code> * e)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed.</p>
@@ -1216,52 +1216,52 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Get the evas object above obj. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> an Evas_Object</dl>
+<dd><i>obj</i> an Evas_Object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the Evas_Object directly above</dl>
+<dd>the Evas_Object directly above</dd></dl>
 <h3>EAPI <code>Evas_Object</code>* evas_object_below_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Get the evas object below obj. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> an Evas_Object</dl>
+<dd><i>obj</i> an Evas_Object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the Evas_Object directly below</dl>
+<dd>the Evas_Object directly below</dd></dl>
 <h3>EAPI <code>Evas_Object</code>* evas_object_bottom_get (const <code>Evas</code> * e)</h3>
 <p>Get the lowest evas object on the Evas e. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> an Evas</dl>
+<dd><i>e</i> an Evas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the lowest object</dl>
+<dd>the lowest object</dd></dl>
 <h3>EAPI Evas_Bool evas_object_focus_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Test if the object has focus. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to be tested.</dl>
+<dd><i>obj</i> The object to be tested.</dd></dl>
 <p> If the passed object is the currently focused object 1 is returned, 0 otherwise. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_object_focus_set</code> </p>
+<dd><code>evas_object_focus_set</code> </dd>
 <p> <code>evas_focus_get</code> </p>
 <p> <code>evas_object_key_grab</code> </p>
 <p> <code>evas_object_key_ungrab</code></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the object has the focus, 0 otherwise.</dl>
+<dd>1 if the object has the focus, 0 otherwise.</dd></dl>
 <h3>EAPI void evas_object_focus_set (<code>Evas_Object</code> * obj, Evas_Bool focus)</h3>
 <p>Sets focus to the given object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The object to be focused or unfocused.<br />
- <i>focus</i> set or remove focus to the object.</dl>
+ <i>focus</i> set or remove focus to the object.</dd></dl>
 <p> Changing focus only affects where key events go. There can be only one object focused at any time. </p>
 <p> If the parameter (focus) is set, the passed object will be set as the currently focused object. It will receive all keyboard events that are not exclusive key grabs on other objects. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_object_focus_get</code> </p>
+<dd><code>evas_object_focus_get</code> </dd>
 <p> <code>evas_focus_get</code> </p>
 <p> <code>evas_object_key_grab</code> </p>
 <p> <code>evas_object_key_ungrab</code></dl>
@@ -1385,7 +1385,7 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p> modifiers and not_modifiers are bit masks of all the modifiers that are required and not required respectively for the new grab. Modifiers can be things such as shift and ctrl as well as user defigned types via evas_key_modifier_add. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_object_key_ungrab</code> </p>
+<dd><code>evas_object_key_ungrab</code> </dd>
 <p> <code>evas_object_focus_set</code> </p>
 <p> <code>evas_object_focus_get</code> </p>
 <p> <code>evas_focus_get</code> </p>
@@ -1396,16 +1396,16 @@ description: "Evas.h – These routines are used for Evas library interaction."
  <i>keyname</i> the key to request events for.<br />
  <i>modifiers</i> a mask of modifiers that should be present to trigger the event.<br />
  <i>not_modifiers</i> a mask of modifiers that should not be present to trigger the event.<br />
- <i>exclusive</i> request that the obj is the only object receiving the keyname events.</dl>
+ <i>exclusive</i> request that the obj is the only object receiving the keyname events.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Boolean indicating whether the grab succeeded</dl>
+<dd>Boolean indicating whether the grab succeeded</dd></dl>
 <h3>EAPI void evas_object_key_ungrab (<code>Evas_Object</code> * obj, const char * keyname, <code>Evas_Modifier_Mask</code> modifiers, <code>Evas_Modifier_Mask</code> not_modifiers)</h3>
 <p>Request that the grab on obj be removed. </p>
 <p> Removes the grab on obj if keyname, modifiers, and not_modifiers match. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_object_key_grab</code> </p>
+<dd><code>evas_object_key_grab</code> </dd>
 <p> <code>evas_object_focus_set</code> </p>
 <p> <code>evas_object_focus_get</code> </p>
 <p> <code>evas_focus_get</code></dl>
@@ -1414,26 +1414,26 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <dd><i>obj</i> the object that has an existing grab.<br />
  <i>keyname</i> the key the grab is for.<br />
  <i>modifiers</i> a mask of modifiers that should be present to trigger the event.<br />
- <i>not_modifiers</i> a mask of modifiers that should not be present to trigger the event.</dl>
+ <i>not_modifiers</i> a mask of modifiers that should not be present to trigger the event.</dd></dl>
 <h3>EAPI void evas_object_lower (<code>Evas_Object</code> * obj)</h3>
 <p>Lower obj to the bottom of its layer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> the object to lower</dl>
+<dd><i>obj</i> the object to lower</dd></dl>
 <h3>EAPI Evas_Object_Pointer_Mode evas_object_pointer_mode_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Determine how pointer will behave. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i></dl>
+<dd><i>obj</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>pointer behavior.</dl>
+<dd>pointer behavior.</dd></dl>
 <h3>EAPI void evas_object_pointer_mode_set (<code>Evas_Object</code> * obj, Evas_Object_Pointer_Mode setting)</h3>
 <p>Set pointer behavior. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i><br />
- <i>setting</i> desired behavior.</dl>
+ <i>setting</i> desired behavior.</dd></dl>
 <p> This function has direct effect on event callbacks related to mouse. </p>
 <p> If setting is EVAS_OBJECT_POINTER_MODE_AUTOGRAB, then when mouse is down at this object, events will be restricted to it as source, mouse moves, for example, will be emitted even if outside this object area. </p>
 <p> If setting is EVAS_OBJECT_POINTER_MODE_NOGRAB, then events will be emitted just when inside this object area. </p>
@@ -1442,26 +1442,26 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Raise obj to the top of its layer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> the object to raise</dl>
+<dd><i>obj</i> the object to raise</dd></dl>
 <h3>EAPI <code>Evas_Object</code>* evas_object_rectangle_add (<code>Evas</code> * e)</h3>
 <p>Adds a rectangle to the given evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.</dl>
+<dd><i>e</i> The given evas.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new rectangle object.</dl>
+<dd>The new rectangle object.</dd></dl>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Find a documentation group to put this under.</dl>
+<dd>Find a documentation group to put this under.</dd></dl>
 <h3>EAPI <code>Evas_List</code>* evas_object_smart_members_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Gets the list of the member objects of an Evas_Object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> the Evas_Object you want to get the list of member objects</dl>
+<dd><i>obj</i> the Evas_Object you want to get the list of member objects</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns the list of the member objects of <i>obj</i>. The returned list should be freed with <code>evas_list_free()</code> when you no longer need it</dl>
+<dd>Returns the list of the member objects of <i>obj</i>. The returned list should be freed with <code>evas_list_free()</code> when you no longer need it</dd></dl>
 <p> References evas_list_append().</p>
 <h3>EAPI void evas_object_stack_above (<code>Evas_Object</code> * obj, <code>Evas_Object</code> * above)</h3>
 <p>Stack obj immediately above above. </p>
@@ -1470,7 +1470,7 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> the object to stack<br />
- <i>above</i> the object above which to stack</dl>
+ <i>above</i> the object above which to stack</dd></dl>
 <h3>EAPI void evas_object_stack_below (<code>Evas_Object</code> * obj, <code>Evas_Object</code> * below)</h3>
 <p>Stack obj immediately below below. </p>
 <p> If obj is a member of a smart object, then below must also be a member of the same smart object. </p>
@@ -1478,20 +1478,20 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> the object to stack<br />
- <i>below</i> the object below which to stack</dl>
+ <i>below</i> the object below which to stack</dd></dl>
 <h3>EAPI <code>Evas_Object</code>* evas_object_text_add (<code>Evas</code> * e)</h3>
 <p>Creates a new text Evas_Object on the provided Evas canvas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The Evas canvas to create the text object upon.</dl>
+<dd><i>e</i> The Evas canvas to create the text object upon.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>evas_object_text_font_source_set</code> </p>
+<dd><code>evas_object_text_font_source_set</code> </dd>
 <p> <code>evas_object_text_font_set</code> </p>
 <p> <code>evas_object_text_text_set</code></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>NULL on error, A pointer to a new Evas_Object on success.</dl>
+<dd>NULL on error, A pointer to a new Evas_Object on success.</dd></dl>
 <h3>EAPI Evas_Coord evas_object_text_ascent_get (const <code>Evas_Object</code> * obj)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed.</p>
@@ -1508,10 +1508,10 @@ description: "Evas.h – These routines are used for Evas library interaction."
  <i>cx</i> A pointer to an Evas_Coord to store the X value in (can be NULL).<br />
  <i>cy</i> A pointer to an Evas_Coord to store the Y value in (can be NULL).<br />
  <i>cw</i> A pointer to an Evas_Coord to store the Width value in (can be NULL).<br />
- <i>ch</i> A pointer to an Evas_Coord to store the Height value in (can be NULL).</dl>
+ <i>ch</i> A pointer to an Evas_Coord to store the Height value in (can be NULL).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on error, 1 on success.</dl>
+<dd>0 on error, 1 on success.</dd></dl>
 <h3>EAPI Evas_Coord evas_object_text_descent_get (const <code>Evas_Object</code> * obj)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed.</p>
@@ -1522,7 +1522,7 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <dl COMPACT>
 <dd><i>obj</i> The evas text object to query for font information.<br />
  <i>font</i> A pointer to the location to store the font name in (may be NULL).<br />
- <i>size</i> A pointer to the location to store the font size in (may be NULL).</dl>
+ <i>size</i> A pointer to the location to store the font size in (may be NULL).</dd></dl>
 <h3>EAPI void evas_object_text_font_set (<code>Evas_Object</code> * obj, const char * font, Evas_Font_Size size)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed.</p>
@@ -1581,16 +1581,16 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Retrieves the text currently being displayed by the given evas text object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas text object.</dl>
+<dd><i>obj</i> The given evas text object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The text currently being displayed. Do not free it.</dl>
+<dd>The text currently being displayed. Do not free it.</dd></dl>
 <h3>EAPI void evas_object_text_text_set (<code>Evas_Object</code> * obj, const char * text)</h3>
 <p>Sets the text to be displayed by the given evas text object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> Evas text object.<br />
- <i>text</i> Text to display.</dl>
+ <i>text</i> Text to display.</dd></dl>
 <h3>EAPI Evas_Coord evas_object_text_vert_advance_get (const <code>Evas_Object</code> * obj)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed.</p>
@@ -1598,49 +1598,49 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Adds a textblock to the given evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.</dl>
+<dd><i>e</i> The given evas.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new textblock object.</dl>
+<dd>The new textblock object.</dd></dl>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Find a documentation group to put this under.</dl>
+<dd>Find a documentation group to put this under.</dd></dl>
 <h3>EAPI const Evas_Textblock_Style* evas_object_textblock_style_get (const <code>Evas_Object</code> * obj)</h3>
 <p>to be documented. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> to be documented.</dl>
+<dd><i>obj</i> to be documented.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>to be documented.</dl>
+<dd>to be documented.</dd></dl>
 <h3>EAPI void evas_object_textblock_style_set (<code>Evas_Object</code> * obj, Evas_Textblock_Style * ts)</h3>
 <p>to be documented. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> to be documented.<br />
- <i>ts</i> to be documented.</dl>
+ <i>ts</i> to be documented.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns no value.</dl>
+<dd>Returns no value.</dd></dl>
 <p> References evas_list_append(), and evas_list_remove().</p>
 <h3>EAPI void evas_object_textblock_text_markup_set (<code>Evas_Object</code> * obj, const char * text)</h3>
 <p>to be documented. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ts</i> to be documented.<br />
- <i>text</i> to be documented.</dl>
+ <i>text</i> to be documented.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Return no value.</dl>
+<dd>Return no value.</dd></dl>
 <p> References _Evas_List::data, and _Evas_List::next.</p>
 <h3>EAPI <code>Evas_Object</code>* evas_object_top_get (const <code>Evas</code> * e)</h3>
 <p>Get the highest evas object on the Evas e. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> an Evas</dl>
+<dd><i>e</i> an Evas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the highest object</dl>
+<dd>the highest object</dd></dl>
 <h3>EAPI void evas_obscured_clear (<code>Evas</code> * e)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed. </p>
@@ -1666,31 +1666,31 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Get the Evas_Smart_Class of an Evas_Smart. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>s</i> the Evas_Smart</dl>
+<dd><i>s</i> the Evas_Smart</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the Evas_Smart_Class</dl>
+<dd>the Evas_Smart_Class</dd></dl>
 <h3>EAPI <code>Evas_Smart</code>* evas_smart_class_new (const <code>Evas_Smart_Class</code> * sc)</h3>
 <p>Creates an Evas_Smart from an Evas_Smart_Class. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>Evas_Smart_Class</i> the smart class definition</dl>
+<dd><i>Evas_Smart_Class</i> the smart class definition</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>an Evas_Smart</dl>
+<dd>an Evas_Smart</dd></dl>
 <p> References _Evas_Smart_Class::version.</p>
 <h3>EAPI void* evas_smart_data_get (const <code>Evas_Smart</code> * s)</h3>
 <p>Get the data pointer set on an Evas_Smart. </p>
 <p> This data pointer is set either as the final parameter to evas_smart_new or as the data field in the Evas_Smart_Class passed in to evas_smart_class_new </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>Evas_Smart</i></dl>
+<dd><i>Evas_Smart</i></dd></dl>
 <h3>EAPI void evas_smart_free (<code>Evas_Smart</code> * s)</h3>
 <p>Free an Evas_Smart. </p>
 <p> If this smart was created using <code>evas_smart_class_new()</code>, the associated Evas_Smart_Class will not be freed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>s</i> the Evas_Smart to free</dl>
+<dd><i>s</i> the Evas_Smart to free</dd></dl>
 <h3>EAPI int evas_string_char_next_get (const char * str, int pos, int * decoded)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed.</p>
@@ -1701,32 +1701,32 @@ description: "Evas.h – These routines are used for Evas library interaction."
 <p>Destroys a textblock style. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>The</i> textblock style to free.</dl>
+<dd><i>The</i> textblock style to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns no value.</dl>
+<dd>Returns no value.</dd></dl>
 <h3>EAPI const char* evas_textblock_style_get (const Evas_Textblock_Style * ts)</h3>
 <p>to be documented. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ts</i> to be documented.</dl>
+<dd><i>ts</i> to be documented.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>to be documented.</dl>
+<dd>to be documented.</dd></dl>
 <h3>EAPI Evas_Textblock_Style* evas_textblock_style_new (void)</h3>
 <p>Creates a new textblock style. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new textblock style.</dl>
+<dd>The new textblock style.</dd></dl>
 <h3>EAPI void evas_textblock_style_set (Evas_Textblock_Style * ts, const char * text)</h3>
 <p>to be documented. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ts</i> to be documented.<br />
- <i>text</i> to be documented.</dl>
+ <i>text</i> to be documented.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns no value.</dl>
+<dd>Returns no value.</dd></dl>
 <p> References _Evas_List::data, and _Evas_List::next.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

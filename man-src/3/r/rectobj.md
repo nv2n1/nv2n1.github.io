@@ -229,20 +229,20 @@ description: "RectObj — The RectObj widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNancestorSensitive</code></p>
-<dd>Specifies whether the immediate parent of the gadget receives input events. Use the function <code>XtSetSensitive</code> if you are changing the argument to preserve data integrity (see <code>XmNsensitive</code>). The default is the bitwise AND of the parent&#8217;s <code>XmNsensitive</code> and <code>XmNancestorSensitive</code> resources.</p>
-<dt><code>XmNborderWidth</code></p>
-<dd>Specifies the width of the border placed around the RectObj&#8217;s rectangular display area.</p>
-<dt><code>XmNheight</code></p>
-<dd>Specifies the inside height (excluding the border) of the RectObj&#8217;s rectangular display area.</p>
-<dt><code>XmNsensitive</code></p>
-<dd>Determines whether a RectObj receives input events. If a RectObj is sensitive, the parent dispatches to the gadget all keyboard, mouse button, motion, window enter/leave, and focus events. Insensitive gadgets do not receive these events. Use the function <code>XtSetSensitive</code> to change the sensitivity argument. Using <code>XtSetSensitive</code> ensures that if a parent widget has <code>XmNsensitive</code> set to False, the ancestor-sensitive flag of all its children is appropriately set.</p>
-<dt><code>XmNwidth</code></p>
-<dd>Specifies the inside width (excluding the border) of the RectObj&#8217;s rectangular display area.</p>
-<dt><code>XmNx</code></p>
-<dd>Specifies the x-coordinate of the upper left outside corner of the RectObj&#8217;s rectangular display area. The value is relative to the upper left inside corner of the parent window.</p>
-<dt><code>XmNy</code></p>
-<dd>Specifies the y-coordinate of the upper left outside corner of the RectObj&#8217;s rectangular display area. The value is relative to the upper left inside corner of the parent window.</dl>
+<dt><code>XmNancestorSensitive</code></dt>
+<dd>Specifies whether the immediate parent of the gadget receives input events. Use the function <code>XtSetSensitive</code> if you are changing the argument to preserve data integrity (see <code>XmNsensitive</code>). The default is the bitwise AND of the parent&#8217;s <code>XmNsensitive</code> and <code>XmNancestorSensitive</code> resources.</dd>
+<dt><code>XmNborderWidth</code></dt>
+<dd>Specifies the width of the border placed around the RectObj&#8217;s rectangular display area.</dd>
+<dt><code>XmNheight</code></dt>
+<dd>Specifies the inside height (excluding the border) of the RectObj&#8217;s rectangular display area.</dd>
+<dt><code>XmNsensitive</code></dt>
+<dd>Determines whether a RectObj receives input events. If a RectObj is sensitive, the parent dispatches to the gadget all keyboard, mouse button, motion, window enter/leave, and focus events. Insensitive gadgets do not receive these events. Use the function <code>XtSetSensitive</code> to change the sensitivity argument. Using <code>XtSetSensitive</code> ensures that if a parent widget has <code>XmNsensitive</code> set to False, the ancestor-sensitive flag of all its children is appropriately set.</dd>
+<dt><code>XmNwidth</code></dt>
+<dd>Specifies the inside width (excluding the border) of the RectObj&#8217;s rectangular display area.</dd>
+<dt><code>XmNx</code></dt>
+<dd>Specifies the x-coordinate of the upper left outside corner of the RectObj&#8217;s rectangular display area. The value is relative to the upper left inside corner of the parent window.</dd>
+<dt><code>XmNy</code></dt>
+<dd>Specifies the y-coordinate of the upper left outside corner of the RectObj&#8217;s rectangular display area. The value is relative to the upper left inside corner of the parent window.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>RectObj inherits behavior and a resource from <code>Object</code>. For a description of this resource, refer to the <code>Object</code> reference page. </p>
 <table BORDER>

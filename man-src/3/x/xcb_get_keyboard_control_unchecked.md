@@ -10,12 +10,7 @@ description: "xcb_get_keyboard_control –"
 <p>xcb_get_keyboard_control &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_get_keyboard_control_cookie_t xcb_get_keyboard_control(xcb_connection_t *conn,</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_get_keyboard_control_reply_t {
@@ -34,45 +29,45 @@ xcb_get_keyboard_control_cookie_t xcb_get_keyboard_control(xcb_connection_t *con
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_get_keyboard_control_reply_t *<code>xcb_get_keyboard_control_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_get_keyboard_control_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_GET_KEYBOARD_CONTROL</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>global_auto_repeat</i></p>
-<dd>One of the following values:</p>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_GET_KEYBOARD_CONTROL</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>global_auto_repeat</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_AUTO_REPEAT_MODE_OFF</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_AUTO_REPEAT_MODE_ON</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_AUTO_REPEAT_MODE_DEFAULT</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_AUTO_REPEAT_MODE_OFF</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_AUTO_REPEAT_MODE_ON</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_AUTO_REPEAT_MODE_DEFAULT</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>led_mask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>key_click_percent</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>bell_percent</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>bell_pitch</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>bell_duration</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>auto_repeats</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>led_mask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>key_click_percent</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>bell_percent</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>bell_pitch</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>bell_duration</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>auto_repeats</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_get_keyboard_control_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_get_keyboard_control_reply</i>. </p>

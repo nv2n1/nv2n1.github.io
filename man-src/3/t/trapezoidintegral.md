@@ -11,9 +11,7 @@ description: "ql/math/integrals/trapezoidintegral.hpp – integral of a one-dime
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/math/integrals/integral.hpp&gt;
-
 #include &lt;ql/utilities/null.hpp&gt;
-
 #include &lt;ql/errors.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>TrapezoidIntegral&lt; IntegrationPolicy &gt;</code><br />

@@ -17,10 +17,10 @@ description: "dh_gencontrol – generate and install control file"
 <p> <code>Note</code> that if you use <code>dh_gencontrol</code>, you must also use <i><a href="/docs/linux/man/1-dh_builddeb/">dh_builddeb</a></i>(1) to build the packages. Otherwise, your build may fail to build as <code>dh_gencontrol</code> (via <i><a href="/docs/linux/man/1-dpkg-gencontrol/">dpkg-gencontrol</a></i>(1)) declares which packages are built. As debhelper automatically generates dbgsym packages, it some times adds additional packages, which will be built by <i><a href="/docs/linux/man/1-dh_builddeb/">dh_builddeb</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8212;</code> <i>params</i></p>
-<dd> Pass <i>params</i> to <i><a href="/docs/linux/man/1-dpkg-gencontrol/">dpkg-gencontrol</a></i>(1).</p>
-<dt><code>-u</code><i>params</i>, <code>&#8211;dpkg-gencontrol-params=</code><i>params</i></p>
-<dd> This is another way to pass <i>params</i> to <i><a href="/docs/linux/man/1-dpkg-gencontrol/">dpkg-gencontrol</a></i>(1). It is deprecated; use <code>&#8212;</code> instead.</dl>
+<dt><code>&#8212;</code> <i>params</i></dt>
+<dd> Pass <i>params</i> to <i><a href="/docs/linux/man/1-dpkg-gencontrol/">dpkg-gencontrol</a></i>(1).</dd>
+<dt><code>-u</code><i>params</i>, <code>&#8211;dpkg-gencontrol-params=</code><i>params</i></dt>
+<dd> This is another way to pass <i>params</i> to <i><a href="/docs/linux/man/1-dpkg-gencontrol/">dpkg-gencontrol</a></i>(1). It is deprecated; use <code>&#8212;</code> instead.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

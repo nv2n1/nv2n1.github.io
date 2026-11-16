@@ -16,22 +16,22 @@ description: "dpkg-realpath – print the resolved pathname with DPKG_ROOT suppo
 <p> This is intended to be used by other <code>dpkg</code> helpers, or by maintainer scripts instead of using <code><a href="/docs/linux/man/1-realpath/">realpath</a></code>(1) or <code><a href="/docs/linux/man/1-readlink/">readlink</a></code>(1) to canonicalize pathnames, as these latter commands do not support canonicalization relative to a different root than <i>/</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> Use a <font SIZE="-1">NUL</font> byte to end output lines instead of a new line character (since dpkg 1.20.6).</p>
-<dt><code>&#8211;instdir</code> <i>directory</i></p>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> Use a <font SIZE="-1">NUL</font> byte to end output lines instead of a new line character (since dpkg 1.20.6).</dd>
+<dt><code>&#8211;instdir</code> <i>directory</i></dt>
 <dd>
-<dt><code>&#8211;root</code> <i>directory</i></p>
-<dd> Set the root directory to <i>directory</i>, which is the base directory that pathnames get canonicalized against. Defaults to &laquo;<code>/</code>&raquo;.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Show the usage message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version and exit.</dl>
+</dd><dt><code>&#8211;root</code> <i>directory</i></dt>
+<dd> Set the root directory to <i>directory</i>, which is the base directory that pathnames get canonicalized against. Defaults to &laquo;<code>/</code>&raquo;.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></p>
-<dd> If set and the <code>&#8211;instdir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the filesystem root directory.</p>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></p>
-<dd> Sets the color mode. The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dl>
+<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></dt>
+<dd> If set and the <code>&#8211;instdir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the filesystem root directory.</dd>
+<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dd> Sets the color mode. The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-realpath/">realpath</a></code>(1), <code><a href="/docs/linux/man/1-readlink/">readlink</a></code>(1). </p>
 <h2>Index</h2>

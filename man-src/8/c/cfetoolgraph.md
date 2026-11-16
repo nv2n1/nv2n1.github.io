@@ -17,30 +17,30 @@ description: "cfetoolgraph – create graphs from a cfetool database"
 <p> If the <code>-d</code>, <code>-w</code> and <code>-y</code> options are all omitted, the default is to only graph the weekly database.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></p>
-<dd>The directory in which the database specified by <i>name</i> can be found.</p>
-<dt><code>&#8211;daily</code>|<code>-d</code></p>
-<dd>Graph the daily averages database.</p>
-<dt><code>&#8211;weekly</code>|<code>-w</code></p>
-<dd>Graph the weekly averages database.</p>
-<dt><code>&#8211;yearly</code>|<code>-y</code></p>
-<dd>Graph the yearly averages database.</p>
-<dt><code>&#8211;timestamps</code>|<code>-T</code></p>
-<dd>Time-stamp the output filenames with the current time, in order to give a unique name.</p>
-<dt><code>&#8211;resolution</code>|<code>-r</code></p>
-<dd>Generate high resolution data (), instead of averaging data over periods of one hour to generate simpler and smoother graphs.</p>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd>Prints a short help message and then exits.</dl>
+<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></dt>
+<dd>The directory in which the database specified by <i>name</i> can be found.</dd>
+<dt><code>&#8211;daily</code>|<code>-d</code></dt>
+<dd>Graph the daily averages database.</dd>
+<dt><code>&#8211;weekly</code>|<code>-w</code></dt>
+<dd>Graph the weekly averages database.</dd>
+<dt><code>&#8211;yearly</code>|<code>-y</code></dt>
+<dd>Graph the yearly averages database.</dd>
+<dt><code>&#8211;timestamps</code>|<code>-T</code></dt>
+<dd>Time-stamp the output filenames with the current time, in order to give a unique name.</dd>
+<dt><code>&#8211;resolution</code>|<code>-r</code></dt>
+<dd>Generate high resolution data (), instead of averaging data over periods of one hour to generate simpler and smoother graphs.</dd>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Prints a short help message and then exits.</dd></dl>
 <h2>Example</h2>
 <pre> % cfetoolgraph temperature --path /my/path --resolution</pre>
 <p>Create graph files of the weekly database in high resolution in the <tt>&quot;/my/path/temperature/weekly-snapshot&quot;</tt> directory.</p>
 <h2>Authors</h2>
 <p>The code and documentation were contributed by Stanford Linear Accelerator Center, a department of Stanford University. This documentation was written by</p>
 <dl>
-<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</p>
+<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</dt>
 <dd>
-<dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</p>
-<dd></dl>
+</dd><dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</dt>
+<dd></dd></dl>
 <h2>Copyright And Disclaimer</h2>
 <pre> Copyright 2004 Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt; and
  Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt;

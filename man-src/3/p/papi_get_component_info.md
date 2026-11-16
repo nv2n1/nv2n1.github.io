@@ -30,10 +30,11 @@ For full details, see @ref PAPI_component_info_t.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_executable_info</code> </p>
+<dd><code>PAPI_get_executable_info</code> </dd>
 <p> <code>PAPI_get_hardware_info</code> </p>
 <p> <code>PAPI_get_dmem_info</code> </p>
 <p> <code>PAPI_get_opt</code> </p>
 <p> <code>PAPI_component_info_t</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

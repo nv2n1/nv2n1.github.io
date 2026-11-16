@@ -18,12 +18,12 @@ description: "debconf – developers guide"
 <p> Like the postinst, the config script is passed two parameters when it is run. The first tells what action is being performed, and the second is the version of the package that is currently installed. So, like in a postinst, you can use dpkg &#8211;compare-versions on $2 to make some behavior happen only on upgrade from a particular version of a package, and things like that. </p>
 <p> The config script can be run in one of three ways:</p>
 <dl>
-<dt><code>1</code></p>
-<dd>If a package is pre-configured, with dpkg-preconfigure, its config script is run, and is passed the parameters &quot;configure&quot;, and installed-version.</p>
-<dt><code>2</code></p>
-<dd>When a package&#8217;s postinst is run, debconf will try to run the config script then too, and it will be passed the same parameters it was passed when it is pre-configured. This is necessary because the package might not have been pre-configured, and the config script still needs to get a chance to run. See HACKS for details.</p>
-<dt><code>3</code></p>
-<dd>If a package is reconfigured, with dpkg-reconfigure, its config script it run, and is passed the parameters &quot;reconfigure&quot; and installed-version.</dl>
+<dt><code>1</code></dt>
+<dd>If a package is pre-configured, with dpkg-preconfigure, its config script is run, and is passed the parameters &quot;configure&quot;, and installed-version.</dd>
+<dt><code>2</code></dt>
+<dd>When a package&#8217;s postinst is run, debconf will try to run the config script then too, and it will be passed the same parameters it was passed when it is pre-configured. This is necessary because the package might not have been pre-configured, and the config script still needs to get a chance to run. See HACKS for details.</dd>
+<dt><code>3</code></dt>
+<dd>If a package is reconfigured, with dpkg-reconfigure, its config script it run, and is passed the parameters &quot;reconfigure&quot; and installed-version.</dd></dl>
 <p> Note that since a typical package install or upgrade using apt runs steps 1 and 2, the config script will typically be run twice. It should do nothing the second time (to ask questions twice in a row is annoying), and it should definitely be idempotent. Luckily, debconf avoids repeating questions by default, so this is generally easy to accomplish. </p>
 <p> Note that the config script is run before the package is unpacked. It should only use commands that are in essential packages. The only dependency of your package that is guaranteed to be met when its config script is run is a dependency (possibly versioned) on debconf itself. </p>
 <p> The config script should not need to modify the filesystem at all. It just examines the state of the system, and asks questions, and debconf stores the answers to be acted on later by the postinst script. Conversely, the postinst script should almost never use debconf to ask questions, but should instead act on the answers to questions asked by the config script.</p>
@@ -52,43 +52,43 @@ This is another question, of boolean type. </p>
 <p> For some real-life examples of templates files, see /var/lib/dpkg/info/debconf.templates, and other .templates files in that directory. </p>
 <p> Let&#8217;s look at each of the fields in turn..</p>
 <dl>
-<dt><code>Template</code></p>
-<dd>The name of the template, in the &#8216;Template&#8217; field, is generally prefixed with the name of the package. After that the namespace is wide open; you can use a simple flat layout like the one above, or set up &quot;subdirectories&quot; containing related questions.</p>
-<dt><code>Type</code></p>
-<dd>The type of the template determines what kind of widget is displayed to the user. The currently supported types are:</p>
+<dt><code>Template</code></dt>
+<dd>The name of the template, in the &#8216;Template&#8217; field, is generally prefixed with the name of the package. After that the namespace is wide open; you can use a simple flat layout like the one above, or set up &quot;subdirectories&quot; containing related questions.</dd>
+<dt><code>Type</code></dt>
+<dd>The type of the template determines what kind of widget is displayed to the user. The currently supported types are:</dd>
 <dl>
 <dd>
+</dd><dl>
+<dt><code>string</code></dt>
+<dd>Results in a free-form input field that the user can type any string into.</dd>
+<dt><code>password</code></dt>
+<dd>Prompts the user for a password. Use this with caution; be aware that the password the user enters will be written to debconf&#8217;s database. You should probably clean that value out of the database as soon as is possible.</dd>
+<dt><code>boolean</code></dt>
+<dd>A true/false choice.</dd>
+<dt><code>select</code></dt>
+<dd>A choice between one of a number of values. The choices must be specified in a field named &#8216;Choices&#8217;. Separate the possible values with commas and spaces, like this:</dd>
 <dl>
-<dt><code>string</code></p>
-<dd>Results in a free-form input field that the user can type any string into.</p>
-<dt><code>password</code></p>
-<dd>Prompts the user for a password. Use this with caution; be aware that the password the user enters will be written to debconf&#8217;s database. You should probably clean that value out of the database as soon as is possible.</p>
-<dt><code>boolean</code></p>
-<dd>A true/false choice.</p>
-<dt><code>select</code></p>
-<dd>A choice between one of a number of values. The choices must be specified in a field named &#8216;Choices&#8217;. Separate the possible values with commas and spaces, like this:</p>
-<dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Choices: yes, no, maybe</dl>
-<dt><code>multiselect</code></p>
-<dd>Like the select data type, except the user can choose any number of items from the choices list (or choose none of them).</p>
-<dt><code>note</code></p>
-<dd>Rather than being a question per se, this datatype indicates a note that can be displayed to the user. It should be used only for important notes that the user really should see, since debconf will go to great pains to make sure the user sees it; halting the install for them to press a key. It&#8217;s best to use these only for warning about very serious problems, and the error datatype is often more suitable.</p>
-<dt><code>error</code></p>
-<dd>This datatype is used for error messages, such as input validation errors. Debconf will show a question of this type even if the priority is too high or the user has already seen it.</p>
-<dt><code>title</code></p>
-<dd>This datatype is used for titles, to be set with the SETTITLE command.</p>
-<dt><code>text</code></p>
-<dd>This datatype can be used for fragments of text, such as labels, that can be used for cosmetic reasons in the displays of some frontends. Other frontends will not use it at all. There is no point in using this datatype yet, since no frontends support it well. It may even be removed in the future.</dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Choices: yes, no, maybe</dd></dl>
+<dt><code>multiselect</code></dt>
+<dd>Like the select data type, except the user can choose any number of items from the choices list (or choose none of them).</dd>
+<dt><code>note</code></dt>
+<dd>Rather than being a question per se, this datatype indicates a note that can be displayed to the user. It should be used only for important notes that the user really should see, since debconf will go to great pains to make sure the user sees it; halting the install for them to press a key. It&#8217;s best to use these only for warning about very serious problems, and the error datatype is often more suitable.</dd>
+<dt><code>error</code></dt>
+<dd>This datatype is used for error messages, such as input validation errors. Debconf will show a question of this type even if the priority is too high or the user has already seen it.</dd>
+<dt><code>title</code></dt>
+<dd>This datatype is used for titles, to be set with the SETTITLE command.</dd>
+<dt><code>text</code></dt>
+<dd>This datatype can be used for fragments of text, such as labels, that can be used for cosmetic reasons in the displays of some frontends. Other frontends will not use it at all. There is no point in using this datatype yet, since no frontends support it well. It may even be removed in the future.</dd></dl>
 </dl>
-<dt><code>Default</code></p>
+<dt><code>Default</code></dt>
 <dd>
-<dl>
-<dd>The &#8216;Default&#8217; field tells debconf what the default value should be. For multiselect, it can be a list of choices, separated by commas and spaces, similar to the &#8216;Choices&#8217; field. For select, it should be one of the choices. For boolean, it is &quot;true&quot; or &quot;false&quot;, while it can be anything for a string, and it is ignored for passwords. </p>
+</dd><dl>
+<dd>The &#8216;Default&#8217; field tells debconf what the default value should be. For multiselect, it can be a list of choices, separated by commas and spaces, similar to the &#8216;Choices&#8217; field. For select, it should be one of the choices. For boolean, it is &quot;true&quot; or &quot;false&quot;, while it can be anything for a string, and it is ignored for passwords. </dd>
 <p> Don&#8217;t make the mistake of thinking that the default field contains the &quot;value&quot; of the question, or that it can be used to change the value of the question. It does not, and cannot, it just provides a default value for the first time the question is displayed. To provide a default that changes on the fly, you&#8217;d have to use the SET command to change the value of a question.</dl>
-<dt><code>Description</code></p>
+<dt><code>Description</code></dt>
 <dd>
-<dl>
-<dd>The &#8216;Description&#8217; field, like the description of a Debian package, has two parts: A short description and an extended description. Note that some debconf frontends don&#8217;t display the long description, or might only display it if the user asks for help. So the short description should be able to stand on its own. </p>
+</dd><dl>
+<dd>The &#8216;Description&#8217; field, like the description of a Debian package, has two parts: A short description and an extended description. Note that some debconf frontends don&#8217;t display the long description, or might only display it if the user asks for help. So the short description should be able to stand on its own. </dd>
 <p> If you can&#8217;t think up a long description, then first, think some more. Post to debian-devel. Ask for help. Take a writing class! That extended description is important. If after all that you still can&#8217;t come up with anything, leave it blank. There is no point in duplicating the short description. </p>
 <p> Text in the extended description will be word-wrapped, unless it is prefixed by additional whitespace (beyond the one required space). You can break it up into separate paragraphs by putting &quot; .&quot; on a line by itself between them.</dl>
 </dl>
@@ -103,75 +103,75 @@ This is another question, of boolean type. </p>
 <p> Generally you&#8217;ll want to use a language-specific library that handles the nuts and bolts of setting up these connections to debconf and communicating with it. </p>
 <p> For now, here are the commands in the protocol. This is not the definitive definition, see Debian policy&#8217;s debconf specification document for that.</p>
 <dl>
-<dt><code>VERSION number</code></p>
-<dd>You generally don&#8217;t need to use this command. It exchanges with debconf the protocol version number that is being used. The current protocol version is 2.0, and versions in the 2.x series will be backwards-compatible. You may specify the protocol version number you are speaking and debconf will return the version of the protocol it speaks in the extended result code. If the version you specify is too low, debconf will reply with numeric code 30.</p>
-<dt><code>CAPB capabilities</code></p>
+<dt><code>VERSION number</code></dt>
+<dd>You generally don&#8217;t need to use this command. It exchanges with debconf the protocol version number that is being used. The current protocol version is 2.0, and versions in the 2.x series will be backwards-compatible. You may specify the protocol version number you are speaking and debconf will return the version of the protocol it speaks in the extended result code. If the version you specify is too low, debconf will reply with numeric code 30.</dd>
+<dt><code>CAPB capabilities</code></dt>
 <dd>
-<dl>
-<dd>You generally don&#8217;t need to use this command. It exchanges with debconf a list of supported capabilities (separated by spaces). Capabilities that both you and debconf support will be used, and debconf will reply with all the capabilities it supports. </p>
+</dd><dl>
+<dd>You generally don&#8217;t need to use this command. It exchanges with debconf a list of supported capabilities (separated by spaces). Capabilities that both you and debconf support will be used, and debconf will reply with all the capabilities it supports. </dd>
 <p> If &#8216;escape&#8217; is found among your capabilities, debconf will expect commands you send it to have backslashes and newlines escaped (as \ and 
  respectively) and will in turn escape backslashes and newlines in its replies. This can be used, for example, to substitute multi-line strings into templates, or to get multi-line extended descriptions reliably using METAGET. In this mode, you must escape input text yourself (you can use <code><a href="/docs/linux/man/1-debconf-escape/">debconf-escape</a></code>(1) to help with this if you want), but the confmodule libraries will unescape replies for you.</dl>
-<dt><code>SETTITLE question</code></p>
+<dt><code>SETTITLE question</code></dt>
 <dd>
-<dl>
-<dd>This sets the title debconf displays to the user, using the short description of the template for the specified question. The template should be of type title. You rarely need to use this command since debconf can automatically generate a title based on your package&#8217;s name. </p>
+</dd><dl>
+<dd>This sets the title debconf displays to the user, using the short description of the template for the specified question. The template should be of type title. You rarely need to use this command since debconf can automatically generate a title based on your package&#8217;s name. </dd>
 <p> Setting the title from a template means they are stored in the same place as the rest of the debconf questions, and allows them to be translated.</dl>
-<dt><code>TITLE string</code></p>
-<dd>This sets the title debconf displays to the user to the specified string. Use of the SETTITLE command is normally to be preferred as it allows for translation of the title.</p>
-<dt><code>INPUT priority question</code></p>
+<dt><code>TITLE string</code></dt>
+<dd>This sets the title debconf displays to the user to the specified string. Use of the SETTITLE command is normally to be preferred as it allows for translation of the title.</dd>
+<dt><code>INPUT priority question</code></dt>
 <dd>
-<dl>
-<dd>Ask debconf to prepare to display a question to the user. The question is not actually displayed until a GO command is issued; this lets several INPUT commands be given in series, to build up a set of questions, which might all be asked on a single screen. </p>
+</dd><dl>
+<dd>Ask debconf to prepare to display a question to the user. The question is not actually displayed until a GO command is issued; this lets several INPUT commands be given in series, to build up a set of questions, which might all be asked on a single screen. </dd>
 <p> The priority field tells debconf how important it is that this question be shown to the user. The priority values are:</p>
 <dl>
-<dt><code>low</code></p>
-<dd>Very trivial items that have defaults that will work in the vast majority of cases; only control freaks see these.</p>
-<dt><code>medium</code></p>
-<dd>Normal items that have reasonable defaults.</p>
-<dt><code>high</code></p>
-<dd>Items that don&#8217;t have a reasonable default.</p>
-<dt><code>critical</code></p>
-<dd>Items that will probably break the system without user intervention.</dl>
+<dt><code>low</code></dt>
+<dd>Very trivial items that have defaults that will work in the vast majority of cases; only control freaks see these.</dd>
+<dt><code>medium</code></dt>
+<dd>Normal items that have reasonable defaults.</dd>
+<dt><code>high</code></dt>
+<dd>Items that don&#8217;t have a reasonable default.</dd>
+<dt><code>critical</code></dt>
+<dd>Items that will probably break the system without user intervention.</dd></dl>
 <p> Debconf decides if the question is actually displayed, based on its priority, and whether the user has seen it before, and which frontend is being used. If the question will not be displayed, debconf replies with code 30.</dl>
-<dt><code>GO</code></p>
+<dt><code>GO</code></dt>
 <dd>
-<dl>
-<dd>Tells debconf to display the accumulated set of questions (from INPUT commands) to the user. </p>
+</dd><dl>
+<dd>Tells debconf to display the accumulated set of questions (from INPUT commands) to the user. </dd>
 <p> If the backup capability is supported and the user indicates they want to back up a step, debconf replies with code 30.</dl>
-<dt><code>CLEAR</code></p>
-<dd>Clears the accumulated set of questions (from INPUT commands) without displaying them.</p>
-<dt><code>BEGINBLOCK</code></p>
+<dt><code>CLEAR</code></dt>
+<dd>Clears the accumulated set of questions (from INPUT commands) without displaying them.</dd>
+<dt><code>BEGINBLOCK</code></dt>
 <dd>
-<dt><code>ENDBLOCK</code></p>
-<dd>Some debconf frontends can display a number of questions to the user at once. Maybe in the future a frontend will even be able to group these questions into blocks on screen. BEGINBLOCK and ENDBLOCK can be placed around a set of INPUT commands to indicate blocks of questions (and blocks can even be nested). Since no debconf frontend is so sophisticated yet, these commands are ignored for now.</p>
-<dt><code>STOP</code></p>
-<dd>This command tells debconf that you&#8217;re done talking to it. Often debconf can detect termination of your program and this command is not necessary.</p>
-<dt><code>GET question</code></p>
-<dd>After using INPUT and GO to display a question, you can use this command to get the value the user entered. The value is returned in the extended result code.</p>
-<dt><code>SET question value</code></p>
-<dd>This sets the value of a question, and it can be used to override the default value with something your program calculates on the fly.</p>
-<dt><code>RESET question</code></p>
-<dd>This resets the question to its default value (as is specified in the &#8216;Default&#8217; field of its template).</p>
-<dt><code>SUBST question key value</code></p>
-<dd>Questions can have substitutions embedded in their &#8216;Description&#8217; and &#8216;Choices&#8217; fields (use of substitutions in &#8216;Choices&#8217; fields is a bit of a hack though; a better mechanism will eventually be developed). These substitutions look like &quot;${key}&quot;. When the question is displayed, the substitutions are replaced with their values. This command can be used to set the value of a substitution. This is useful if you need to display some message to the user that you can&#8217;t hard-code in the templates file.</p>
-<dd>Do not try to use SUBST to change the default value of a question; it won&#8217;t work since there is a SET command explicitly for that purpose.</p>
-<dt><code>FGET question flag</code></p>
-<dd>Questions can have flags associated with them. The flags can have a value of &quot;true&quot; or &quot;false&quot;. This command returns the value of a flag.</p>
-<dt><code>FSET question flag value</code></p>
+</dd><dt><code>ENDBLOCK</code></dt>
+<dd>Some debconf frontends can display a number of questions to the user at once. Maybe in the future a frontend will even be able to group these questions into blocks on screen. BEGINBLOCK and ENDBLOCK can be placed around a set of INPUT commands to indicate blocks of questions (and blocks can even be nested). Since no debconf frontend is so sophisticated yet, these commands are ignored for now.</dd>
+<dt><code>STOP</code></dt>
+<dd>This command tells debconf that you&#8217;re done talking to it. Often debconf can detect termination of your program and this command is not necessary.</dd>
+<dt><code>GET question</code></dt>
+<dd>After using INPUT and GO to display a question, you can use this command to get the value the user entered. The value is returned in the extended result code.</dd>
+<dt><code>SET question value</code></dt>
+<dd>This sets the value of a question, and it can be used to override the default value with something your program calculates on the fly.</dd>
+<dt><code>RESET question</code></dt>
+<dd>This resets the question to its default value (as is specified in the &#8216;Default&#8217; field of its template).</dd>
+<dt><code>SUBST question key value</code></dt>
+<dd>Questions can have substitutions embedded in their &#8216;Description&#8217; and &#8216;Choices&#8217; fields (use of substitutions in &#8216;Choices&#8217; fields is a bit of a hack though; a better mechanism will eventually be developed). These substitutions look like &quot;${key}&quot;. When the question is displayed, the substitutions are replaced with their values. This command can be used to set the value of a substitution. This is useful if you need to display some message to the user that you can&#8217;t hard-code in the templates file.</dd>
+<dd>Do not try to use SUBST to change the default value of a question; it won&#8217;t work since there is a SET command explicitly for that purpose.</dd>
+<dt><code>FGET question flag</code></dt>
+<dd>Questions can have flags associated with them. The flags can have a value of &quot;true&quot; or &quot;false&quot;. This command returns the value of a flag.</dd>
+<dt><code>FSET question flag value</code></dt>
 <dd>
-<dl>
-<dd>This sets the value of a question&#8217;s flag. The value must be either &quot;true&quot; or &quot;false&quot;. </p>
+</dd><dl>
+<dd>This sets the value of a question&#8217;s flag. The value must be either &quot;true&quot; or &quot;false&quot;. </dd>
 <p> One common flag is the &quot;seen&quot; flag. It is normally only set if a user has already seen a question. Debconf usually only displays questions to users if they have the seen flag set to &quot;false&quot; (or if it is reconfiguring a package). Sometimes you want the user to see a question again &#8212; in these cases you can set the seen flag to false to force debconf to redisplay it.</dl>
-<dt><code>METAGET question field</code></p>
-<dd>This returns the value of any field of a question&#8217;s associated template (the Description, for example).</p>
-<dt><code>REGISTER template question</code></p>
-<dd>This creates a new question that is bound to a template. By default each template has an associated question with the same name. However, any number of questions can really be associated with a template, and this lets you create more such questions.</p>
-<dt><code>UNREGISTER question</code></p>
-<dd>This removes a question from the database.</p>
-<dt><code>PURGE</code></p>
-<dd>Call this in your postrm when your package is purged. It removes all of your package&#8217;s questions from debconf&#8217;s database.</p>
-<dt><code>X_LOADTEMPLATEFILE /path/to/templates [owner]</code></p>
-<dd>This extension loads the specified template file into debconf&#8217;s database. The owner defaults to the package that is being configured with debconf.</dl>
+<dt><code>METAGET question field</code></dt>
+<dd>This returns the value of any field of a question&#8217;s associated template (the Description, for example).</dd>
+<dt><code>REGISTER template question</code></dt>
+<dd>This creates a new question that is bound to a template. By default each template has an associated question with the same name. However, any number of questions can really be associated with a template, and this lets you create more such questions.</dd>
+<dt><code>UNREGISTER question</code></dt>
+<dd>This removes a question from the database.</dd>
+<dt><code>PURGE</code></dt>
+<dd>Call this in your postrm when your package is purged. It removes all of your package&#8217;s questions from debconf&#8217;s database.</dd>
+<dt><code>X_LOADTEMPLATEFILE /path/to/templates [owner]</code></dt>
+<dd>This extension loads the specified template file into debconf&#8217;s database. The owner defaults to the package that is being configured with debconf.</dd></dl>
 <p> Here is a simple example of the debconf protocol in action. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>INPUT medium debconf/frontend<br />
 &nbsp;<wbr>&nbsp;<wbr>30 question skipped<br />
@@ -211,16 +211,16 @@ This is another question, of boolean type. </p>
 <h2>The Postinst Script</h2>
 <p>The last section had an example of a postinst script that uses debconf to get the value of a question, and act on it. Here are some things to keep in mind when writing postinst scripts that use debconf:</p>
 <dl>
-<dt><code>*</code></p>
-<dd>Avoid asking questions in the postinst. Instead, the config script should ask questions using debconf, so that pre-configuration will work.</p>
-<dt><code>*</code></p>
-<dd>Always source /usr/share/debconf/confmodule at the top of your postinst, even if you won&#8217;t be running any db_* commands in it. This is required to make sure the config script gets a chance to run (see HACKS for details).</p>
-<dt><code>*</code></p>
-<dd>Avoid outputting anything to stdout in your postinst, since that can confuse debconf, and postinst should not be verbose anyway. Output to stderr is ok, if you must.</p>
-<dt><code>*</code></p>
-<dd>If your postinst launches a daemon, make sure you tell debconf to STOP at the end, since debconf can become a little confused about when your postinst is done otherwise.</p>
-<dt><code>*</code></p>
-<dd>Make your postinst script accept a first parameter of &quot;reconfigure&quot;. It can treat it just like &quot;configure&quot;. This will be used in a later version of debconf to let postinsts know when they are reconfigured.</dl>
+<dt><code>*</code></dt>
+<dd>Avoid asking questions in the postinst. Instead, the config script should ask questions using debconf, so that pre-configuration will work.</dd>
+<dt><code>*</code></dt>
+<dd>Always source /usr/share/debconf/confmodule at the top of your postinst, even if you won&#8217;t be running any db_* commands in it. This is required to make sure the config script gets a chance to run (see HACKS for details).</dd>
+<dt><code>*</code></dt>
+<dd>Avoid outputting anything to stdout in your postinst, since that can confuse debconf, and postinst should not be verbose anyway. Output to stderr is ok, if you must.</dd>
+<dt><code>*</code></dt>
+<dd>If your postinst launches a daemon, make sure you tell debconf to STOP at the end, since debconf can become a little confused about when your postinst is done otherwise.</dd>
+<dt><code>*</code></dt>
+<dd>Make your postinst script accept a first parameter of &quot;reconfigure&quot;. It can treat it just like &quot;configure&quot;. This will be used in a later version of debconf to let postinsts know when they are reconfigured.</dd></dl>
 <h2>Other Scripts</h2>
 <p>Besides the config script and postinst, you can use debconf in any of the other maintainer scripts. Most commonly, you&#8217;ll be using debconf in your postrm, to call the PURGE command when your package is purged, to clean out its entries in the debconf database. (This is automatically set up for you by <code><a href="/docs/linux/man/1-dh_installdebconf/">dh_installdebconf</a></code>(1)<code>,</code> by the way.) </p>
 <p> A more involved use of debconf would be if you want to use it in the postrm when your package is purged, to ask a question about deleting something. Or maybe you find you need to use it in the preinst or prerm for some reason. All of these uses will work, though they&#8217;ll probably involve asking questions and acting on the answers in the same program, rather than separating the two activities as is done in the config and postinst scripts. </p>
@@ -238,27 +238,27 @@ This is another question, of boolean type. </p>
 <h2>Debugging</h2>
 <p>So you have a package that&#8217;s supposed to use debconf, but it doesn&#8217;t quite work. Maybe debconf is just not asking that question you set up. Or maybe something weirder is happening; it spins forever in some kind of loop, or worse. Luckily, debconf has plenty of debugging facilities.</p>
 <dl>
-<dt><code>DEBCONF_DEBUG</code></p>
+<dt><code>DEBCONF_DEBUG</code></dt>
 <dd>
-<dl>
-<dd>The first thing to reach for is the DEBCONF_DEBUG environment variable. If you set and export DEBCONF_DEBUG=developer, debconf will output to stderr a dump of the debconf protocol as your program runs. It&#8217;ll look something like this &#8212; the typo is made clear: </p>
+</dd><dl>
+<dd>The first thing to reach for is the DEBCONF_DEBUG environment variable. If you set and export DEBCONF_DEBUG=developer, debconf will output to stderr a dump of the debconf protocol as your program runs. It&#8217;ll look something like this &#8212; the typo is made clear: </dd>
 <p>&nbsp;<wbr>debconf&nbsp;<wbr>(developer):&nbsp;<wbr>&lt;&#8211; input high debconf/frontand<br />
 &nbsp;<wbr>debconf&nbsp;<wbr>(developer): &#8211;&gt;&nbsp;<wbr>10&nbsp;<wbr>&quot;debconf/frontand&quot;&nbsp;<wbr>doesn&#8217;t exist<br />
 &nbsp;<wbr>debconf&nbsp;<wbr>(developer):&nbsp;<wbr>&lt;&#8211; go<br />
 &nbsp;<wbr>debconf&nbsp;<wbr>(developer): &#8211;&gt;&nbsp;<wbr>0 ok </p>
 <p> It&#8217;s rather useful to use debconf&#8217;s readline frontend when you&#8217;re debugging (in the author&#8217;s opinion), as the questions don&#8217;t get in the way, and all the debugging output is easily preserved and logged.</dl>
-<dt><code>DEBCONF_C_VALUES</code></p>
+<dt><code>DEBCONF_C_VALUES</code></dt>
 <dd>
-<dl>
-<dd>If this environment variable is set to &#8216;true&#8217;, the frontend will display the values in Choices-C fields (if present) of select and multiselect templates rather than the descriptive values.</dl>
-<dt><code>debconf-communicate</code></p>
-<dd>Another useful tool is the <code><a href="/docs/linux/man/1-debconf-communicate/">debconf-communicate</a></code>(1) program. Fire it up and you can speak the raw debconf protocol to debconf, interactively. This is a great way to try stuff out on the fly.</p>
-<dt><code>debconf-show</code></p>
-<dd>If a user is reporting a problem, <code><a href="/docs/linux/man/1-debconf-show/">debconf-show</a></code>(1) can be used to dump out all the questions owned by your package, displaying their values and whether the user has seen them.</p>
-<dt><code>.debconfrc</code></p>
+</dd><dl>
+<dd>If this environment variable is set to &#8216;true&#8217;, the frontend will display the values in Choices-C fields (if present) of select and multiselect templates rather than the descriptive values.</dd></dl>
+<dt><code>debconf-communicate</code></dt>
+<dd>Another useful tool is the <code><a href="/docs/linux/man/1-debconf-communicate/">debconf-communicate</a></code>(1) program. Fire it up and you can speak the raw debconf protocol to debconf, interactively. This is a great way to try stuff out on the fly.</dd>
+<dt><code>debconf-show</code></dt>
+<dd>If a user is reporting a problem, <code><a href="/docs/linux/man/1-debconf-show/">debconf-show</a></code>(1) can be used to dump out all the questions owned by your package, displaying their values and whether the user has seen them.</dd>
+<dt><code>.debconfrc</code></dt>
 <dd>
-<dl>
-<dd>To avoid the often tedious build/install/debug cycle, it can be useful to load up your templates with <code><a href="/docs/linux/man/1-debconf-loadtemplate/">debconf-loadtemplate</a></code>(1) and run your config script by hand with the <code><a href="/docs/linux/man/1-debconf/">debconf</a></code>(1) command. However, you still have to do that as root, right? Not so good. And ideally you&#8217;d like to be able to see what a fresh installation of your package looks like, with a clean debconf database. </p>
+</dd><dl>
+<dd>To avoid the often tedious build/install/debug cycle, it can be useful to load up your templates with <code><a href="/docs/linux/man/1-debconf-loadtemplate/">debconf-loadtemplate</a></code>(1) and run your config script by hand with the <code><a href="/docs/linux/man/1-debconf/">debconf</a></code>(1) command. However, you still have to do that as root, right? Not so good. And ideally you&#8217;d like to be able to see what a fresh installation of your package looks like, with a clean debconf database. </dd>
 <p> It turns out that if you set up a ~/.debconfrc file for a normal user, pointing at a personal config.dat and template.dat for the user, you can load up templates and run config scripts all you like, without any root access. If you want to start over with a clean database, just blow away the *.dat files. </p>
 <p> For details about setting this up, see <code><a href="/docs/linux/man/5-debconf-conf/">debconf.conf</a></code>(5)<code>,</code> and note that /etc/debconf.conf makes a good template for a personal ~/.debconfrc file.</dl>
 </dl>
@@ -445,3 +445,4 @@ This is another question, of boolean type. </p>
 <p> <code><a href="/docs/linux/man/5-debconf-conf/">debconf.conf</a></code>(5) has much useful information, including some info about the backend database.</p>
 <h2>Author</h2>
 <p>Joey Hess &lt;joeyh [at] debian.org&gt;</p>
+</p>

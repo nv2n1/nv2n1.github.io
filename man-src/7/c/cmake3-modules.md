@@ -178,12 +178,12 @@ VARIABLE - variable to store the result
 <pre>CHECK_Fortran_SOURCE_COMPILES(&lt;code&gt; &lt;var&gt; [FAIL_REGEX &lt;fail-regex&gt;])</pre>
 <p>The arguments are:</p>
 <dl>
-<dt><code>&lt;code&gt;</code></p>
-<dd>Source code to try to compile. It must define a PROGRAM entry point.</p>
-<dt><code>&lt;var&gt;</code></p>
-<dd>Variable to store whether the source code compiled. Will be created as an internal cache variable.</p>
-<dt><code>&lt;fail-regex&gt;</code></p>
-<dd>Fail if test output matches this regex. </p>
+<dt><code>&lt;code&gt;</code></dt>
+<dd>Source code to try to compile. It must define a PROGRAM entry point.</dd>
+<dt><code>&lt;var&gt;</code></dt>
+<dd>Variable to store whether the source code compiled. Will be created as an internal cache variable.</dd>
+<dt><code>&lt;fail-regex&gt;</code></dt>
+<dd>Fail if test output matches this regex. </dd>
 <p> The following variables may be set before calling this macro to modify the way the check is run: </p>
 <pre>CMAKE_REQUIRED_FLAGS = string of compile command line flags
 CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
@@ -204,53 +204,53 @@ CMAKE_REQUIRED_QUIET = execute quietly without messages</pre>
 <h3>CheckIncludeFileCXX</h3>
 <p>Provides a macro to check if a header file can be included in <code>CXX</code>.</p>
 <dl>
-<dt><code>CHECK_INCLUDE_FILE_CXX</code></p>
+<dt><code>CHECK_INCLUDE_FILE_CXX</code></dt>
 <dd>
 <pre>CHECK_INCLUDE_FILE_CXX(&lt;include&gt; &lt;variable&gt; [&lt;flags&gt;])</pre>
 <p>Check if the given <code>&lt;include&gt;</code> file may be included in a <code>CXX</code> source file and store the result in an internal cache entry named <code>&lt;variable&gt;</code>. The optional third argument may be used to add compilation flags to the check (or use <code>CMAKE_REQUIRED_FLAGS</code> below). </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar)</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>list of include directories</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>execute quietly without messages </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar)</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>list of include directories</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>execute quietly without messages </dd>
 <p> See modules <code>CheckIncludeFile</code> and <code>CheckIncludeFiles</code> to check for one or more <code>C</code> headers.</dl>
 <h3>CheckIncludeFile</h3>
 <p>Provides a macro to check if a header file can be included in <code>C</code>.</p>
 <dl>
-<dt><code>CHECK_INCLUDE_FILE</code></p>
+<dt><code>CHECK_INCLUDE_FILE</code></dt>
 <dd>
 <pre>CHECK_INCLUDE_FILE(&lt;include&gt; &lt;variable&gt; [&lt;flags&gt;])</pre>
 <p>Check if the given <code>&lt;include&gt;</code> file may be included in a <code>C</code> source file and store the result in an internal cache entry named <code>&lt;variable&gt;</code>. The optional third argument may be used to add compilation flags to the check (or use <code>CMAKE_REQUIRED_FLAGS</code> below). </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar)</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>list of include directories</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>execute quietly without messages </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar)</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>list of include directories</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>execute quietly without messages </dd>
 <p> See the <code>CheckIncludeFiles</code> module to check for multiple headers at once. See the <code>CheckIncludeFileCXX</code> module to check for headers using the <code>CXX</code> language.</dl>
 <h3>CheckIncludeFiles</h3>
 <p>Provides a macro to check if a list of one or more header files can be included together in <code>C</code>.</p>
 <dl>
-<dt><code>CHECK_INCLUDE_FILES</code></p>
+<dt><code>CHECK_INCLUDE_FILES</code></dt>
 <dd>
 <pre>CHECK_INCLUDE_FILES(&quot;&lt;includes&gt;&quot; &lt;variable&gt;)</pre>
 <p>Check if the given <code>&lt;includes&gt;</code> list may be included together in a <code>C</code> source file and store the result in an internal cache entry named <code>&lt;variable&gt;</code>. Specify the <code>&lt;includes&gt;</code> argument as a <i>;-list</i> of header file names. </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar)</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>list of include directories</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>execute quietly without messages </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar)</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>list of include directories</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>execute quietly without messages </dd>
 <p> See modules <code>CheckIncludeFile</code> and <code>CheckIncludeFileCXX</code> to check for a single header file in <code>C</code> or <code>CXX</code> languages.</dl>
 <h3>CheckLanguage</h3>
 <p>Check if a language can be enabled </p>
@@ -425,22 +425,22 @@ vc110, vc110sp1, vc110sp2, vc110sp3, vc110sp4</pre>
 <h3>CMakeFindPackageMode</h3>
 <p>This file is executed by cmake when invoked with &#8211;find-package. It expects that the following variables are set using -D:</p>
 <dl>
-<dt><code>NAME</code></p>
-<dd>name of the package</p>
-<dt><code>COMPILER_ID</code></p>
-<dd>the CMake compiler ID for which the result is, i.e. GNU/Intel/Clang/MSVC, etc.</p>
-<dt><code>LANGUAGE</code></p>
-<dd>language for which the result will be used, i.e. C/CXX/Fortan/ASM</p>
-<dt><code>MODE</code></p>
+<dt><code>NAME</code></dt>
+<dd>name of the package</dd>
+<dt><code>COMPILER_ID</code></dt>
+<dd>the CMake compiler ID for which the result is, i.e. GNU/Intel/Clang/MSVC, etc.</dd>
+<dt><code>LANGUAGE</code></dt>
+<dd>language for which the result will be used, i.e. C/CXX/Fortan/ASM</dd>
+<dt><code>MODE</code></dt>
 <dd>
-<dt><code>EXIST</code></p>
-<dd>only check for existence of the given package</p>
-<dt><code>COMPILE</code></p>
-<dd>print the flags needed for compiling an object file which uses the given package</p>
-<dt><code>LINK</code></p>
-<dd>print the flags needed for linking when using the given package</p>
-<dt><code>QUIET</code></p>
-<dd>if TRUE, don&#8217;t print anything</dl>
+</dd><dt><code>EXIST</code></dt>
+<dd>only check for existence of the given package</dd>
+<dt><code>COMPILE</code></dt>
+<dd>print the flags needed for compiling an object file which uses the given package</dd>
+<dt><code>LINK</code></dt>
+<dd>print the flags needed for linking when using the given package</dd>
+<dt><code>QUIET</code></dt>
+<dd>if TRUE, don&#8217;t print anything</dd></dl>
 <h3>CMakeForceCompiler</h3>
 <p>Deprecated. Do not use. </p>
 <p> The macros provided by this module were once intended for use by cross-compiling toolchain files when CMake was not able to automatically detect the compiler identification. Since the introduction of this module, CMake&#8217;s compiler identification capabilities have improved and can now be taught to recognize any compiler. Furthermore, the suite of information CMake detects from a compiler is now too extensive to be provided by toolchain files using these macros. </p>
@@ -466,92 +466,92 @@ CMAKE_FORCE_CXX_COMPILER (chc12 MetrowerksHicross)</pre>
 <h3>Variables specific to the graphviz support</h3>
 <p>CMake can generate graphviz files, showing the dependencies between the targets in a project and also external libraries which are linked against. When CMake is run with the &#8211;graphviz=foo option, it will produce</p>
 <dl>
-<dt>&bull;</p>
-<dd>a foo.dot file showing all dependencies in the project</p>
-<dt>&bull;</p>
-<dd>a foo.dot.&lt;target&gt; file for each target, file showing on which other targets the respective target depends</p>
-<dt>&bull;</p>
-<dd>a foo.dot.&lt;target&gt;.dependers file, showing which other targets depend on the respective target </p>
+<dt>&bull;</dt>
+<dd>a foo.dot file showing all dependencies in the project</dd>
+<dt>&bull;</dt>
+<dd>a foo.dot.&lt;target&gt; file for each target, file showing on which other targets the respective target depends</dd>
+<dt>&bull;</dt>
+<dd>a foo.dot.&lt;target&gt;.dependers file, showing which other targets depend on the respective target </dd>
 <p> This can result in huge graphs. Using the file CMakeGraphVizOptions.cmake the look and content of the generated graphs can be influenced. This file is searched first in ${CMAKE_BINARY_DIR} and then in ${CMAKE_SOURCE_DIR}. If found, it is read and the variables set in it are used to adjust options for the generated graphviz files.</p>
-<dt><code>GRAPHVIZ_GRAPH_TYPE</code></p>
-<dd>The graph type</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &quot;digraph&quot;</p>
-<dt><code>GRAPHVIZ_GRAPH_NAME</code></p>
-<dd>The graph name.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &quot;GG&quot;</p>
-<dt><code>GRAPHVIZ_GRAPH_HEADER</code></p>
-<dd>The header written at the top of the graphviz file.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &quot;node [n fontsize = &quot;12&quot;];&quot;</p>
-<dt><code>GRAPHVIZ_NODE_PREFIX</code></p>
-<dd>The prefix for each node in the graphviz file.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &quot;node&quot;</p>
-<dt><code>GRAPHVIZ_EXECUTABLES</code></p>
-<dd>Set this to FALSE to exclude executables from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : TRUE</p>
-<dt><code>GRAPHVIZ_STATIC_LIBS</code></p>
-<dd>Set this to FALSE to exclude static libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : TRUE</p>
-<dt><code>GRAPHVIZ_SHARED_LIBS</code></p>
-<dd>Set this to FALSE to exclude shared libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : TRUE</p>
-<dt><code>GRAPHVIZ_MODULE_LIBS</code></p>
-<dd>Set this to FALSE to exclude module libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : TRUE</p>
-<dt><code>GRAPHVIZ_EXTERNAL_LIBS</code></p>
-<dd>Set this to FALSE to exclude external libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : TRUE</p>
-<dt><code>GRAPHVIZ_IGNORE_TARGETS</code></p>
-<dd>A list of regular expressions for ignoring targets.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : empty</p>
-<dt><code>GRAPHVIZ_GENERATE_PER_TARGET</code></p>
-<dd>Set this to FALSE to exclude per target graphs <code>foo.dot.&lt;target&gt;</code>.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : TRUE</p>
-<dt><code>GRAPHVIZ_GENERATE_DEPENDERS</code></p>
-<dd>Set this to FALSE to exclude depender graphs <code>foo.dot.&lt;target&gt;.dependers</code>.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : TRUE</dl>
+<dt><code>GRAPHVIZ_GRAPH_TYPE</code></dt>
+<dd>The graph type</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;digraph&quot;</dd>
+<dt><code>GRAPHVIZ_GRAPH_NAME</code></dt>
+<dd>The graph name.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;GG&quot;</dd>
+<dt><code>GRAPHVIZ_GRAPH_HEADER</code></dt>
+<dd>The header written at the top of the graphviz file.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;node [n fontsize = &quot;12&quot;];&quot;</dd>
+<dt><code>GRAPHVIZ_NODE_PREFIX</code></dt>
+<dd>The prefix for each node in the graphviz file.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;node&quot;</dd>
+<dt><code>GRAPHVIZ_EXECUTABLES</code></dt>
+<dd>Set this to FALSE to exclude executables from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : TRUE</dd>
+<dt><code>GRAPHVIZ_STATIC_LIBS</code></dt>
+<dd>Set this to FALSE to exclude static libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : TRUE</dd>
+<dt><code>GRAPHVIZ_SHARED_LIBS</code></dt>
+<dd>Set this to FALSE to exclude shared libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : TRUE</dd>
+<dt><code>GRAPHVIZ_MODULE_LIBS</code></dt>
+<dd>Set this to FALSE to exclude module libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : TRUE</dd>
+<dt><code>GRAPHVIZ_EXTERNAL_LIBS</code></dt>
+<dd>Set this to FALSE to exclude external libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : TRUE</dd>
+<dt><code>GRAPHVIZ_IGNORE_TARGETS</code></dt>
+<dd>A list of regular expressions for ignoring targets.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : empty</dd>
+<dt><code>GRAPHVIZ_GENERATE_PER_TARGET</code></dt>
+<dd>Set this to FALSE to exclude per target graphs <code>foo.dot.&lt;target&gt;</code>.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : TRUE</dd>
+<dt><code>GRAPHVIZ_GENERATE_DEPENDERS</code></dt>
+<dd>Set this to FALSE to exclude depender graphs <code>foo.dot.&lt;target&gt;.dependers</code>.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : TRUE</dd></dl>
 <h3>CMakePackageConfigHelpers</h3>
 <p>Helpers functions for creating config files that can be included by other projects to find and use a package. </p>
 <p> Adds the <code>configure_package_config_file()</code> and <code>write_basic_package_version_file()</code> commands.</p>
 <h3>Generating a Package Configuration File</h3>
 <dl>
-<dt><code>configure_package_config_file</code></p>
-<dd>Create a config file for a project: </p>
+<dt><code>configure_package_config_file</code></dt>
+<dd>Create a config file for a project: </dd>
 <pre>configure_package_config_file(&lt;input&gt; &lt;output&gt;
  INSTALL_DESTINATION &lt;path&gt;
  [PATH_VARS &lt;var1&gt; &lt;var2&gt; ... &lt;varN&gt;]
@@ -568,14 +568,14 @@ set(FOO_ICONS_DIR &quot;@CMAKE_INSTALL_PREFIX@/share/icons&quot; )
 set(FOO_CONFIG_DIR &quot;${installedPrefix}/@CONFIG_INSTALL_DIR@&quot; )</pre>
 <p>All 4 options shown above are not sufficient, since the first 3 hardcode the absolute directory locations, and the 4th case works only if the logic to determine the <code>installedPrefix</code> is correct, and if <code>CONFIG_INSTALL_DIR</code> contains a relative path, which in general cannot be guaranteed. This has the effect that the resulting <code>FooConfig.cmake</code> file would work poorly under Windows and OSX, where users are used to choose the install location of a binary package at install time, independent from how <code>CMAKE_INSTALL_PREFIX</code> was set at build/cmake time. </p>
 <p> Using <code>configure_package_config_file</code> helps. If used correctly, it makes the resulting <code>FooConfig.cmake</code> file relocatable. Usage:</p>
-<dt>1.</p>
-<dd>write a <code>FooConfig.cmake.in</code> file as you are used to</p>
-<dt>2.</p>
-<dd>insert a line containing only the string <code>@PACKAGE_INIT@</code></p>
-<dt>3.</p>
-<dd>instead of <code>set(FOO_DIR &quot;@SOME_INSTALL_DIR@&quot;)</code>, use <code>set(FOO_DIR &quot;@PACKAGE_SOME_INSTALL_DIR@&quot;)</code> (this must be after the <code>@PACKAGE_INIT@</code> line)</p>
-<dt>4.</p>
-<dd>instead of using the normal <code>configure_file()</code>, use <code>configure_package_config_file()</code> </p>
+<dt>1.</dt>
+<dd>write a <code>FooConfig.cmake.in</code> file as you are used to</dd>
+<dt>2.</dt>
+<dd>insert a line containing only the string <code>@PACKAGE_INIT@</code></dd>
+<dt>3.</dt>
+<dd>instead of <code>set(FOO_DIR &quot;@SOME_INSTALL_DIR@&quot;)</code>, use <code>set(FOO_DIR &quot;@PACKAGE_SOME_INSTALL_DIR@&quot;)</code> (this must be after the <code>@PACKAGE_INIT@</code> line)</dd>
+<dt>4.</dt>
+<dd>instead of using the normal <code>configure_file()</code>, use <code>configure_package_config_file()</code> </dd>
 <p> The <code>&lt;input&gt;</code> and <code>&lt;output&gt;</code> arguments are the input and output file, the same way as in <code>configure_file()</code>. </p>
 <p> The <code>&lt;path&gt;</code> given to <code>INSTALL_DESTINATION</code> must be the destination where the <code>FooConfig.cmake</code> file will be installed to. This path can either be absolute, or relative to the <code>INSTALL_PREFIX</code> path. </p>
 <p> The variables <code>&lt;var1&gt;</code> to <code>&lt;varN&gt;</code> given as <code>PATH_VARS</code> are the variables which contain install destinations. For each of them the macro will create a helper variable <code>PACKAGE_&lt;var&#8230;&gt;</code>. These helper variables must be used in the <code>FooConfig.cmake.in</code> file for setting the installed location. They are calculated by <code>configure_package_config_file</code> so that they are always relative to the installed location of the package. This works both for relative and also for absolute locations. For absolute locations it works only if the absolute location is a subdirectory of <code>INSTALL_PREFIX</code>. </p>
@@ -586,8 +586,8 @@ set(FOO_CONFIG_DIR &quot;${installedPrefix}/@CONFIG_INSTALL_DIR@&quot; )</pre>
 <p> For an example see below the documentation for <code>write_basic_package_version_file()</code>.</dl>
 <h3>Generating a Package Version File</h3>
 <dl>
-<dt><code>write_basic_package_version_file</code></p>
-<dd>Create a version file for a project: </p>
+<dt><code>write_basic_package_version_file</code></dt>
+<dd>Create a version file for a project: </dd>
 <pre>write_basic_package_version_file(&lt;filename&gt;
  [VERSION &lt;major.minor.patch&gt;]
  COMPATIBILITY &lt;AnyNewerVersion|SameMajorVersion|ExactVersion&gt; )</pre>
@@ -664,24 +664,24 @@ cmake_pop_check_state()</pre>
 <h3>Variables specific to CPack Bundle generator</h3>
 <p>Installers built on Mac OS X using the Bundle generator use the aforementioned DragNDrop (CPACK_DMG_xxx) variables, plus the following Bundle-specific parameters (CPACK_BUNDLE_xxx).</p>
 <dl>
-<dt><code>CPACK_BUNDLE_NAME</code></p>
-<dd>The name of the generated bundle. This appears in the OSX finder as the bundle name. Required.</p>
-<dt><code>CPACK_BUNDLE_PLIST</code></p>
-<dd>Path to an OSX plist file that will be used for the generated bundle. This assumes that the caller has generated or specified their own Info.plist file. Required.</p>
-<dt><code>CPACK_BUNDLE_ICON</code></p>
-<dd>Path to an OSX icon file that will be used as the icon for the generated bundle. This is the icon that appears in the OSX finder for the bundle, and in the OSX dock when the bundle is opened. Required.</p>
-<dt><code>CPACK_BUNDLE_STARTUP_COMMAND</code></p>
-<dd>Path to a startup script. This is a path to an executable or script that will be run whenever an end-user double-clicks the generated bundle in the OSX Finder. Optional.</p>
-<dt><code>CPACK_BUNDLE_APPLE_CERT_APP</code></p>
-<dd>The name of your Apple supplied code signing certificate for the application. The name usually takes the form &quot;Developer ID Application: [Name]&quot; or &quot;3rd Party Mac Developer Application: [Name]&quot;. If this variable is not set the application will not be signed.</p>
-<dt><code>CPACK_BUNDLE_APPLE_ENTITLEMENTS</code></p>
-<dd>The name of the plist file that contains your apple entitlements for sandboxing your application. This file is required for submission to the Mac App Store.</p>
-<dt><code>CPACK_BUNDLE_APPLE_CODESIGN_FILES</code></p>
-<dd>A list of additional files that you wish to be signed. You do not need to list the main application folder, or the main executable. You should list any frameworks and plugins that are included in your app bundle.</p>
-<dt><code>CPACK_BUNDLE_APPLE_CODESIGN_PARAMETER</code></p>
-<dd>Additional parameter that will passed to codesign. Default value: &quot;&#8211;deep -f&quot;</p>
-<dt><code>CPACK_COMMAND_CODESIGN</code></p>
-<dd>Path to the codesign(1) command used to sign applications with an Apple cert. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</dl>
+<dt><code>CPACK_BUNDLE_NAME</code></dt>
+<dd>The name of the generated bundle. This appears in the OSX finder as the bundle name. Required.</dd>
+<dt><code>CPACK_BUNDLE_PLIST</code></dt>
+<dd>Path to an OSX plist file that will be used for the generated bundle. This assumes that the caller has generated or specified their own Info.plist file. Required.</dd>
+<dt><code>CPACK_BUNDLE_ICON</code></dt>
+<dd>Path to an OSX icon file that will be used as the icon for the generated bundle. This is the icon that appears in the OSX finder for the bundle, and in the OSX dock when the bundle is opened. Required.</dd>
+<dt><code>CPACK_BUNDLE_STARTUP_COMMAND</code></dt>
+<dd>Path to a startup script. This is a path to an executable or script that will be run whenever an end-user double-clicks the generated bundle in the OSX Finder. Optional.</dd>
+<dt><code>CPACK_BUNDLE_APPLE_CERT_APP</code></dt>
+<dd>The name of your Apple supplied code signing certificate for the application. The name usually takes the form &quot;Developer ID Application: [Name]&quot; or &quot;3rd Party Mac Developer Application: [Name]&quot;. If this variable is not set the application will not be signed.</dd>
+<dt><code>CPACK_BUNDLE_APPLE_ENTITLEMENTS</code></dt>
+<dd>The name of the plist file that contains your apple entitlements for sandboxing your application. This file is required for submission to the Mac App Store.</dd>
+<dt><code>CPACK_BUNDLE_APPLE_CODESIGN_FILES</code></dt>
+<dd>A list of additional files that you wish to be signed. You do not need to list the main application folder, or the main executable. You should list any frameworks and plugins that are included in your app bundle.</dd>
+<dt><code>CPACK_BUNDLE_APPLE_CODESIGN_PARAMETER</code></dt>
+<dd>Additional parameter that will passed to codesign. Default value: &quot;&#8211;deep -f&quot;</dd>
+<dt><code>CPACK_COMMAND_CODESIGN</code></dt>
+<dd>Path to the codesign(1) command used to sign applications with an Apple cert. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</dd></dl>
 <h3>CPackComponent</h3>
 <p>Build binary and source package installers</p>
 <h3>Variables concerning CPack Components</h3>
@@ -689,34 +689,34 @@ cmake_pop_check_state()</pre>
 <p> For certain kinds of binary installers (including the graphical installers on Mac OS X and Windows), CPack generates installers that allow users to select individual application components to install. The contents of each of the components are identified by the COMPONENT argument of CMake&#8217;s INSTALL command. These components can be annotated with user-friendly names and descriptions, inter-component dependencies, etc., and grouped in various ways to customize the resulting installer. See the cpack_add_* commands, described below, for more information about component-specific installations. </p>
 <p> Component-specific installation allows users to select specific sets of components to install during the install process. Installation components are identified by the COMPONENT argument of CMake&#8217;s INSTALL commands, and should be further described by the following CPack commands:</p>
 <dl>
-<dt><code>CPACK_COMPONENTS_ALL</code></p>
-<dd>The list of component to install. </p>
+<dt><code>CPACK_COMPONENTS_ALL</code></dt>
+<dd>The list of component to install. </dd>
 <p> The default value of this variable is computed by CPack and contains all components defined by the project. The user may set it to only include the specified components.</p>
-<dt><code>CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL</code></p>
-<dd>Enable/Disable component install for CPack generator &lt;GENNAME&gt;. </p>
+<dt><code>CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL</code></dt>
+<dd>Enable/Disable component install for CPack generator &lt;GENNAME&gt;. </dd>
 <p> Each CPack Generator (RPM, DEB, ARCHIVE, NSIS, DMG, etc&#8230;) has a legacy default behavior. e.g. RPM builds monolithic whereas NSIS builds component. One can change the default behavior by setting this variable to 0/1 or OFF/ON.</p>
-<dt><code>CPACK_COMPONENTS_GROUPING</code></p>
-<dd>Specify how components are grouped for multi-package component-aware CPack generators. </p>
+<dt><code>CPACK_COMPONENTS_GROUPING</code></dt>
+<dd>Specify how components are grouped for multi-package component-aware CPack generators. </dd>
 <p> Some generators like RPM or ARCHIVE family (TGZ, ZIP, &#8230;) generates several packages files when asked for component packaging. They group the component differently depending on the value of this variable:</p>
-<dt>&bull;</p>
-<dd>ONE_PER_GROUP (default): creates one package file per component group</p>
-<dt>&bull;</p>
-<dd>ALL_COMPONENTS_IN_ONE : creates a single package with all (requested) component</p>
-<dt>&bull;</p>
-<dd>IGNORE : creates one package per component, i.e. IGNORE component group </p>
+<dt>&bull;</dt>
+<dd>ONE_PER_GROUP (default): creates one package file per component group</dd>
+<dt>&bull;</dt>
+<dd>ALL_COMPONENTS_IN_ONE : creates a single package with all (requested) component</dd>
+<dt>&bull;</dt>
+<dd>IGNORE : creates one package per component, i.e. IGNORE component group </dd>
 <p> One can specify different grouping for different CPack generator by using a CPACK_PROJECT_CONFIG_FILE.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DISPLAY_NAME</code></p>
-<dd>The name to be displayed for a component.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DESCRIPTION</code></p>
-<dd>The description of a component.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_GROUP</code></p>
-<dd>The group of a component.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DEPENDS</code></p>
-<dd>The dependencies (list of components) on which this component depends.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_REQUIRED</code></p>
-<dd>True is this component is required.</p>
-<dt><code>cpack_add_component</code></p>
-<dd>Describes a CPack installation component named by the COMPONENT argument to a CMake INSTALL command. </p>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DISPLAY_NAME</code></dt>
+<dd>The name to be displayed for a component.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DESCRIPTION</code></dt>
+<dd>The description of a component.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_GROUP</code></dt>
+<dd>The group of a component.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DEPENDS</code></dt>
+<dd>The dependencies (list of components) on which this component depends.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_REQUIRED</code></dt>
+<dd>True is this component is required.</dd>
+<dt><code>cpack_add_component</code></dt>
+<dd>Describes a CPack installation component named by the COMPONENT argument to a CMake INSTALL command. </dd>
 <pre>cpack_add_component(compname
  [DISPLAY_NAME name]
  [DESCRIPTION description]
@@ -738,8 +738,8 @@ cmake_pop_check_state()</pre>
 <p> INSTALL_TYPES lists the installation types of which this component is a part. When one of these installations types is selected, this component will automatically be selected. Installation types are described with the cpack_add_install_type command, detailed below. </p>
 <p> DOWNLOADED indicates that this component should be downloaded on-the-fly by the installer, rather than packaged in with the installer itself. For more information, see the cpack_configure_downloads command. </p>
 <p> ARCHIVE_FILE provides a name for the archive file created by CPack to be used for downloaded components. If not supplied, CPack will create a file with some name based on CPACK_PACKAGE_FILE_NAME and the name of the component. See cpack_configure_downloads for more information.</p>
-<dt><code>cpack_add_component_group</code></p>
-<dd>Describes a group of related CPack installation components. </p>
+<dt><code>cpack_add_component_group</code></dt>
+<dd>Describes a group of related CPack installation components. </dd>
 <pre>cpack_add_component_group(groupname
  [DISPLAY_NAME name]
  [DESCRIPTION description]
@@ -753,14 +753,14 @@ cmake_pop_check_state()</pre>
 <p> PARENT_GROUP, if supplied, names the parent group of this group. Parent groups are used to establish a hierarchy of groups, providing an arbitrary hierarchy of groups. </p>
 <p> EXPANDED indicates that, by default, the group should show up as &quot;expanded&quot;, so that the user immediately sees all of the components within the group. Otherwise, the group will initially show up as a single entry. </p>
 <p> BOLD_TITLE indicates that the group title should appear in bold, to call the user&#8217;s attention to the group.</p>
-<dt><code>cpack_add_install_type</code></p>
-<dd>Add a new installation type containing a set of predefined component selections to the graphical installer. </p>
+<dt><code>cpack_add_install_type</code></dt>
+<dd>Add a new installation type containing a set of predefined component selections to the graphical installer. </dd>
 <pre>cpack_add_install_type(typename
  [DISPLAY_NAME name])</pre>
 <p>The cpack_add_install_type command identifies a set of preselected components that represents a common use case for an application. For example, a &quot;Developer&quot; install type might include an application along with its header and library files, while an &quot;End user&quot; install type might just include the application&#8217;s executable. Each component identifies itself with one or more install types via the INSTALL_TYPES argument to cpack_add_component. </p>
 <p> DISPLAY_NAME is the displayed name of the install type, which will typically show up in a drop-down box within a graphical installer. This value can be any string.</p>
-<dt><code>cpack_configure_downloads</code></p>
-<dd>Configure CPack to download selected components on-the-fly as part of the installation process. </p>
+<dt><code>cpack_configure_downloads</code></dt>
+<dd>Configure CPack to download selected components on-the-fly as part of the installation process. </dd>
 <pre>cpack_configure_downloads(site
  [UPLOAD_DIRECTORY dirname]
  [ALL]
@@ -777,12 +777,12 @@ cmake_pop_check_state()</pre>
 <h3>Variables specific to CPack Cygwin generator</h3>
 <p>The following variable is specific to installers build on and/or for Cygwin:</p>
 <dl>
-<dt><code>CPACK_CYGWIN_PATCH_NUMBER</code></p>
-<dd>The Cygwin patch number. FIXME: This documentation is incomplete.</p>
-<dt><code>CPACK_CYGWIN_PATCH_FILE</code></p>
-<dd>The Cygwin patch file. FIXME: This documentation is incomplete.</p>
-<dt><code>CPACK_CYGWIN_BUILD_SCRIPT</code></p>
-<dd>The Cygwin build script. FIXME: This documentation is incomplete.</dl>
+<dt><code>CPACK_CYGWIN_PATCH_NUMBER</code></dt>
+<dd>The Cygwin patch number. FIXME: This documentation is incomplete.</dd>
+<dt><code>CPACK_CYGWIN_PATCH_FILE</code></dt>
+<dd>The Cygwin patch file. FIXME: This documentation is incomplete.</dd>
+<dt><code>CPACK_CYGWIN_BUILD_SCRIPT</code></dt>
+<dd>The Cygwin build script. FIXME: This documentation is incomplete.</dd></dl>
 <h3>CPackDeb</h3>
 <p>The built in (binary) CPack Deb generator (Unix only)</p>
 <h3>Variables specific to CPack Debian (DEB) generator</h3>
@@ -792,319 +792,319 @@ cmake_pop_check_state()</pre>
 <p> <code>CPACK_DEBIAN_&lt;COMPONENT&gt;_XXXX</code> variables may be used in order to have <code>component</code> specific values. Note however that <code>&lt;COMPONENT&gt;</code> refers to the <code>grouping name</code> written in upper case. It may be either a component name or a component GROUP name. </p>
 <p> Here are some CPackDeb wiki resources that are here for historic reasons and are no longer maintained but may still prove useful:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackConfiguration">https://cmake.org/Wiki/CMake:CPackConfiguration</a></i></p>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackPackageGenerators#DEB_.28UNIX_only.29">https://cmake.org/Wiki/CMake:CPackPackageGenerators#DEB_.28UNIX_only.29</a></i> </p>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackConfiguration">https://cmake.org/Wiki/CMake:CPackConfiguration</a></i></dd>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackPackageGenerators#DEB_.28UNIX_only.29">https://cmake.org/Wiki/CMake:CPackPackageGenerators#DEB_.28UNIX_only.29</a></i> </dd>
 <p> List of CPackRPM specific variables:</p>
-<dt><code>CPACK_DEB_PACKAGE_COMPONENT</code></p>
-<dd>Enable component packaging for CPackRPM</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : OFF </p>
+<dt><code>CPACK_DEB_PACKAGE_COMPONENT</code></dt>
+<dd>Enable component packaging for CPackRPM</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : OFF </dd>
 <p> If enabled (ON) multiple packages are generated. By default a single package containing files of all components is generated.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_NAME</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_NAME</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_NAME</code></p>
-<dd>Set Package control field (variable is automatically transformed to lower case).</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd><code>CPACK_PACKAGE_NAME</code> for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_NAME</code> suffixed with -&lt;COMPONENT&gt; for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_NAME</code></dt>
+<dd>Set Package control field (variable is automatically transformed to lower case).</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_PACKAGE_NAME</code> for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_NAME</code> suffixed with -&lt;COMPONENT&gt; for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-Source">https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-Source</a></i></p>
-<dt><code>CPACK_DEBIAN_FILE_NAME</code></p>
+<dt><code>CPACK_DEBIAN_FILE_NAME</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_FILE_NAME</code></p>
-<dd>Package file name.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : <code>&lt;CPACK_PACKAGE_FILE_NAME&gt;[-&lt;component&gt;].deb</code> </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_FILE_NAME</code></dt>
+<dd>Package file name.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : <code>&lt;CPACK_PACKAGE_FILE_NAME&gt;[-&lt;component&gt;].deb</code> </dd>
 <p> This may be set to <code>DEB-DEFAULT</code> to allow CPackDeb to generate package file name by itself in deb format: </p>
 <pre>&lt;PackageName&gt;_&lt;VersionNumber&gt;-&lt;DebianRevisionNumber&gt;_&lt;DebianArchitecture&gt;.deb</pre>
 <p>Alternatively provided package file name must end with <code>.deb</code> suffix. </p>
 <p> <code>NOTE:</code> Preferred setting of this variable is <code>DEB-DEFAULT</code> but for backward compatibility with CPackDeb in CMake prior to version 3.6 this feature is disabled by default. </p>
 <p> <code>NOTE:</code> By using non default filenames duplicate names may occur. Duplicate files get overwritten and it is up to the packager to set the variables in a manner that will prevent such errors.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_VERSION</code></p>
-<dd>The Debian package version</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : <code>CPACK_PACKAGE_VERSION</code></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_RELEASE</code></p>
-<dd>The Debian package release &#8211; Debian revision number.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : 1 </p>
+<dt><code>CPACK_DEBIAN_PACKAGE_VERSION</code></dt>
+<dd>The Debian package version</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : <code>CPACK_PACKAGE_VERSION</code></dd>
+<dt><code>CPACK_DEBIAN_PACKAGE_RELEASE</code></dt>
+<dd>The Debian package release &#8211; Debian revision number.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : 1 </dd>
 <p> This is the numbering of the DEB package itself, i.e. the version of the packaging and not the version of the content (see <code>CPACK_DEBIAN_PACKAGE_VERSION</code>). One may change the default value if the previous packaging was buggy and/or you want to put here a fancy Linux distro specific numbering.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_ARCHITECTURE</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_ARCHITECTURE</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_ARCHITECTURE</code></p>
-<dd>The Debian package architecture</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : Output of <code>dpkg &#8211;print-architecture</code> (or <code>i386</code> if <code>dpkg</code> is not found)</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_DEPENDS</code></p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_ARCHITECTURE</code></dt>
+<dd>The Debian package architecture</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : Output of <code>dpkg &#8211;print-architecture</code> (or <code>i386</code> if <code>dpkg</code> is not found)</dd>
+<dt><code>CPACK_DEBIAN_PACKAGE_DEPENDS</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_DEPENDS</code></p>
-<dd>Sets the Debian dependencies of this package.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_DEPENDS</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_DEPENDS</code></dt>
+<dd>Sets the Debian dependencies of this package.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_DEPENDS</code> for component-based installations. </dd>
 <p> <code>NOTE:</code> If <code>CPACK_DEBIAN_PACKAGE_SHLIBDEPS</code> or more specifically <code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SHLIBDEPS</code> is set for this component, the discovered dependencies will be appended to <code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_DEPENDS</code> instead of <code>CPACK_DEBIAN_PACKAGE_DEPENDS</code>. If <code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_DEPENDS</code> is an empty string, only the automatically discovered dependencies will be set for this component. </p>
 <p> Example: </p>
 <pre>set(CPACK_DEBIAN_PACKAGE_DEPENDS &quot;libc6 (&gt;= 2.3.1-6), libc6 (&lt; 2.4)&quot;)</pre>
-<dt><code>CPACK_DEBIAN_ENABLE_COMPONENT_DEPENDS</code></p>
-<dd>Sets inter component dependencies if listed with <code>CPACK_COMPONENT_&lt;compName&gt;_DEPENDS</code> variables.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211;</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_MAINTAINER</code></p>
-<dd>The Debian package maintainer</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : <code>CPACK_PACKAGE_CONTACT</code></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_DESCRIPTION</code></p>
+<dt><code>CPACK_DEBIAN_ENABLE_COMPONENT_DEPENDS</code></dt>
+<dd>Sets inter component dependencies if listed with <code>CPACK_COMPONENT_&lt;compName&gt;_DEPENDS</code> variables.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211;</dd>
+<dt><code>CPACK_DEBIAN_PACKAGE_MAINTAINER</code></dt>
+<dd>The Debian package maintainer</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : <code>CPACK_PACKAGE_CONTACT</code></dd>
+<dt><code>CPACK_DEBIAN_PACKAGE_DESCRIPTION</code></dt>
 <dd>
-<dt><code>CPACK_COMPONENT_&lt;COMPONENT&gt;_DESCRIPTION</code></p>
-<dd>The Debian package description</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_DESCRIPTION</code> if set or</p>
-<dt>&bull;</p>
-<dd><code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_SECTION</code></p>
+</dd><dt><code>CPACK_COMPONENT_&lt;COMPONENT&gt;_DESCRIPTION</code></dt>
+<dd>The Debian package description</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_DESCRIPTION</code> if set or</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></dd>
+<dt><code>CPACK_DEBIAN_PACKAGE_SECTION</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SECTION</code></p>
-<dd>Set Section control field e.g. admin, devel, doc, &#8230;</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : &quot;devel&quot; </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SECTION</code></dt>
+<dd>Set Section control field e.g. admin, devel, doc, &#8230;</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;devel&quot; </dd>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections">https://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections</a></i></p>
-<dt><code>CPACK_DEBIAN_COMPRESSION_TYPE</code></p>
-<dd>The compression used for creating the Debian package.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : &quot;gzip&quot; </p>
+<dt><code>CPACK_DEBIAN_COMPRESSION_TYPE</code></dt>
+<dd>The compression used for creating the Debian package.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;gzip&quot; </dd>
 <p> Possible values are:</p>
-<dt>&bull;</p>
-<dd>lzma</p>
-<dt>&bull;</p>
-<dd>xz</p>
-<dt>&bull;</p>
-<dd>bzip2</p>
-<dt>&bull;</p>
-<dd>gzip</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_PRIORITY</code></p>
+<dt>&bull;</dt>
+<dd>lzma</dd>
+<dt>&bull;</dt>
+<dd>xz</dd>
+<dt>&bull;</dt>
+<dd>bzip2</dd>
+<dt>&bull;</dt>
+<dd>gzip</dd>
+<dt><code>CPACK_DEBIAN_PACKAGE_PRIORITY</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_PRIORITY</code></p>
-<dd>Set Priority control field e.g. required, important, standard, optional, extra</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : &quot;optional&quot; </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_PRIORITY</code></dt>
+<dd>Set Priority control field e.g. required, important, standard, optional, extra</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;optional&quot; </dd>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-archive.html#s-priorities">https://www.debian.org/doc/debian-policy/ch-archive.html#s-priorities</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_HOMEPAGE</code></p>
-<dd>The URL of the web site for this package, preferably (when applicable) the site from which the original source can be obtained and any additional upstream documentation or information may be found.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+<dt><code>CPACK_DEBIAN_PACKAGE_HOMEPAGE</code></dt>
+<dd>The URL of the web site for this package, preferably (when applicable) the site from which the original source can be obtained and any additional upstream documentation or information may be found.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> <code>NOTE:</code> The content of this field is a simple URL without any surrounding characters such as &lt;&gt;.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_SHLIBDEPS</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_SHLIBDEPS</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SHLIBDEPS</code></p>
-<dd>May be set to ON in order to use <code>dpkg-shlibdeps</code> to generate better package dependency list.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_SHLIBDEPS</code> if set or</p>
-<dt>&bull;</p>
-<dd>OFF </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SHLIBDEPS</code></dt>
+<dd>May be set to ON in order to use <code>dpkg-shlibdeps</code> to generate better package dependency list.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_SHLIBDEPS</code> if set or</dd>
+<dt>&bull;</dt>
+<dd>OFF </dd>
 <p> <code>NOTE:</code> You may need set <code>CMAKE_INSTALL_RPATH</code> to an appropriate value if you use this feature, because if you don&#8217;t <code>dpkg-shlibdeps</code> may fail to find your own shared libs. See <i><a rel="nofollow" href="https://cmake.org/Wiki/CMake_RPATH_handling">https://cmake.org/Wiki/CMake_RPATH_handling</a></i>.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_DEBUG</code></p>
-<dd>May be set when invoking cpack in order to trace debug information during CPackDeb run.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211;</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_PREDEPENDS</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_DEBUG</code></dt>
+<dd>May be set when invoking cpack in order to trace debug information during CPackDeb run.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211;</dd>
+<dt><code>CPACK_DEBIAN_PACKAGE_PREDEPENDS</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_PREDEPENDS</code></p>
-<dd>Sets the <i>Pre-Depends</i> field of the Debian package. Like <code>Depends</code>, except that it also forces <code>dpkg</code> to complete installation of the packages named before even starting the installation of the package which declares the pre-dependency.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_PREDEPENDS</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_PREDEPENDS</code></dt>
+<dd>Sets the <i>Pre-Depends</i> field of the Debian package. Like <code>Depends</code>, except that it also forces <code>dpkg</code> to complete installation of the packages named before even starting the installation of the package which declares the pre-dependency.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_PREDEPENDS</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps">http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_ENHANCES</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_ENHANCES</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_ENHANCES</code></p>
-<dd>Sets the <i>Enhances</i> field of the Debian package. Similar to <code>Suggests</code> but works in the opposite direction: declares that a package can enhance the functionality of another package.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_ENHANCES</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_ENHANCES</code></dt>
+<dd>Sets the <i>Enhances</i> field of the Debian package. Similar to <code>Suggests</code> but works in the opposite direction: declares that a package can enhance the functionality of another package.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_ENHANCES</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps">http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_BREAKS</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_BREAKS</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_BREAKS</code></p>
-<dd>Sets the <i>Breaks</i> field of the Debian package. When a binary package (P) declares that it breaks other packages (B), <code>dpkg</code> will not allow the package (P) which declares <i>Breaks</i> be <code>unpacked</code> unless the packages that will be broken (B) are deconfigured first. As long as the package (P) is configured, the previously deconfigured packages (B) cannot be reconfigured again.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_BREAKS</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_BREAKS</code></dt>
+<dd>Sets the <i>Breaks</i> field of the Debian package. When a binary package (P) declares that it breaks other packages (B), <code>dpkg</code> will not allow the package (P) which declares <i>Breaks</i> be <code>unpacked</code> unless the packages that will be broken (B) are deconfigured first. As long as the package (P) is configured, the previously deconfigured packages (B) cannot be reconfigured again.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_BREAKS</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-relationships.html#s-breaks">https://www.debian.org/doc/debian-policy/ch-relationships.html#s-breaks</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_CONFLICTS</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_CONFLICTS</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_CONFLICTS</code></p>
-<dd>Sets the <i>Conflicts</i> field of the Debian package. When one binary package declares a conflict with another using a <i>Conflicts</i> field, <code>dpkg</code> will not allow them to be unpacked on the system at the same time.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_CONFLICTS</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_CONFLICTS</code></dt>
+<dd>Sets the <i>Conflicts</i> field of the Debian package. When one binary package declares a conflict with another using a <i>Conflicts</i> field, <code>dpkg</code> will not allow them to be unpacked on the system at the same time.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_CONFLICTS</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-relationships.html#s-conflicts">https://www.debian.org/doc/debian-policy/ch-relationships.html#s-conflicts</a></i> </p>
 <p> <code>NOTE:</code> This is a stronger restriction than <code>Breaks</code>, which prevents the broken package from being configured while the breaking package is in the &quot;Unpacked&quot; state but allows both packages to be unpacked at the same time.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_PROVIDES</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_PROVIDES</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_PROVIDES</code></p>
-<dd>Sets the <i>Provides</i> field of the Debian package. A virtual package is one which appears in the <i>Provides</i> control field of another package.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_PROVIDES</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_PROVIDES</code></dt>
+<dd>Sets the <i>Provides</i> field of the Debian package. A virtual package is one which appears in the <i>Provides</i> control field of another package.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_PROVIDES</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-relationships.html#s-virtual">https://www.debian.org/doc/debian-policy/ch-relationships.html#s-virtual</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_REPLACES</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_REPLACES</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_REPLACES</code></p>
-<dd>Sets the <i>Replaces</i> field of the Debian package. Packages can declare in their control file that they should overwrite files in certain other packages, or completely replace other packages.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_REPLACES</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_REPLACES</code></dt>
+<dd>Sets the <i>Replaces</i> field of the Debian package. Packages can declare in their control file that they should overwrite files in certain other packages, or completely replace other packages.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_REPLACES</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps">http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_RECOMMENDS</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_RECOMMENDS</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_RECOMMENDS</code></p>
-<dd>Sets the <i>Recommends</i> field of the Debian package. Allows packages to declare a strong, but not absolute, dependency on other packages.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_RECOMMENDS</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_RECOMMENDS</code></dt>
+<dd>Sets the <i>Recommends</i> field of the Debian package. Allows packages to declare a strong, but not absolute, dependency on other packages.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_RECOMMENDS</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps">http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_SUGGESTS</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_SUGGESTS</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SUGGESTS</code></p>
-<dd>Sets the <i>Suggests</i> field of the Debian package. Allows packages to declare a suggested package install grouping.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_SUGGESTS</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SUGGESTS</code></dt>
+<dd>Sets the <i>Suggests</i> field of the Debian package. Allows packages to declare a suggested package install grouping.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_SUGGESTS</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps">http://www.debian.org/doc/debian-policy/ch-relationships.html#s-binarydeps</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : OFF </p>
+</dd><dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : OFF </dd>
 <p> Allows to generate shlibs control file automatically. Compatibility is defined by <code>CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS_POLICY</code> variable value. </p>
 <p> <code>NOTE:</code> Libraries are only considered if they have both library name and version set. This can be done by setting SOVERSION property with <code>set_target_properties()</code> command.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS_POLICY</code></p>
-<dd>Compatibility policy for auto-generated shlibs control file.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &quot;=&quot; </p>
+<dt><code>CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS_POLICY</code></dt>
+<dd>Compatibility policy for auto-generated shlibs control file.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;=&quot; </dd>
 <p> Defines compatibility policy for auto-generated shlibs control file. Possible values: &quot;=&quot;, &quot;&gt;=&quot; </p>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-sharedlibs.html#s-sharedlibs-shlibdeps">https://www.debian.org/doc/debian-policy/ch-sharedlibs.html#s-sharedlibs-shlibdeps</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_CONTROL_EXTRA</code></p>
-<dd>This variable allow advanced user to add custom script to the control.tar.gz. Typical usage is for conffiles, postinst, postrm, prerm.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_CONTROL_EXTRA</code></dt>
+<dd>This variable allow advanced user to add custom script to the control.tar.gz. Typical usage is for conffiles, postinst, postrm, prerm.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> Usage: </p>
 <pre>set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA
  &quot;${CMAKE_CURRENT_SOURCE_DIR/prerm;${CMAKE_CURRENT_SOURCE_DIR}/postrm&quot;)</pre>
 <p><code>NOTE:</code> The original permissions of the files will be used in the final package unless the variable <code>CPACK_DEBIAN_PACKAGE_CONTROL_STRICT_PERMISSION</code> is set. In particular, the scripts should have the proper executable flag prior to the generation of the package.</p>
-<dt><code>CPACK_DEBIAN_PACKAGE_CONTROL_STRICT_PERMISSION</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_CONTROL_STRICT_PERMISSION</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_CONTROL_STRICT_PERMISSION</code></p>
-<dd>This variable indicates if the Debian policy on control files should be strictly followed.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : FALSE </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_CONTROL_STRICT_PERMISSION</code></dt>
+<dd>This variable indicates if the Debian policy on control files should be strictly followed.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : FALSE </dd>
 <p> Usage: </p>
 <pre>set(CPACK_DEBIAN_PACKAGE_CONTROL_STRICT_PERMISSION TRUE)</pre>
 <p><code>NOTE:</code> This overrides the permissions on the original files, following the rules set by Debian policy <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-files.html#s-permissions-owners">https://www.debian.org/doc/debian-policy/ch-files.html#s-permissions-owners</a></i></p>
-<dt><code>CPACK_DEBIAN_PACKAGE_SOURCE</code></p>
+<dt><code>CPACK_DEBIAN_PACKAGE_SOURCE</code></dt>
 <dd>
-<dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SOURCE</code></p>
-<dd>Sets the <code>Source</code> field of the binary Debian package. When the binary package name is not the same as the source package name (in particular when several components/binaries are generated from one source) the source from which the binary has been generated should be indicated with the field <code>Source</code>.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default :</p>
-<dt>&bull;</p>
-<dd>An empty string for non-component based installations</p>
-<dt>&bull;</p>
-<dd><code>CPACK_DEBIAN_PACKAGE_SOURCE</code> for component-based installations. </p>
+</dd><dt><code>CPACK_DEBIAN_&lt;COMPONENT&gt;_PACKAGE_SOURCE</code></dt>
+<dd>Sets the <code>Source</code> field of the binary Debian package. When the binary package name is not the same as the source package name (in particular when several components/binaries are generated from one source) the source from which the binary has been generated should be indicated with the field <code>Source</code>.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default :</dd>
+<dt>&bull;</dt>
+<dd>An empty string for non-component based installations</dd>
+<dt>&bull;</dt>
+<dd><code>CPACK_DEBIAN_PACKAGE_SOURCE</code> for component-based installations. </dd>
 <p> See <i><a rel="nofollow" href="https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-Source">https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-Source</a></i> </p>
 <p> <code>NOTE:</code> This value is not interpreted. It is possible to pass an optional revision number of the referenced source package as well.</dl>
 <h3>CPackDMG</h3>
@@ -1112,45 +1112,45 @@ cmake_pop_check_state()</pre>
 <h3>Variables specific to CPack DragNDrop generator</h3>
 <p>The following variables are specific to the DragNDrop installers built on Mac OS X:</p>
 <dl>
-<dt><code>CPACK_DMG_VOLUME_NAME</code></p>
-<dd>The volume name of the generated disk image. Defaults to CPACK_PACKAGE_FILE_NAME.</p>
-<dt><code>CPACK_DMG_FORMAT</code></p>
-<dd>The disk image format. Common values are UDRO (UDIF read-only), UDZO (UDIF zlib-compressed) or UDBZ (UDIF bzip2-compressed). Refer to hdiutil(1) for more information on other available formats. Defaults to UDZO.</p>
-<dt><code>CPACK_DMG_DS_STORE</code></p>
-<dd>Path to a custom DS_Store file. This .DS_Store file e.g. can be used to specify the Finder window position/geometry and layout (such as hidden toolbars, placement of the icons etc.). This file has to be generated by the Finder (either manually or through AppleScript) using a normal folder from which the .DS_Store file can then be extracted.</p>
-<dt><code>CPACK_DMG_DS_STORE_SETUP_SCRIPT</code></p>
-<dd>Path to a custom AppleScript file. This AppleScript is used to generate a .DS_Store file which specifies the Finder window position/geometry and layout (such as hidden toolbars, placement of the icons etc.). By specifying a custom AppleScript there is no need to use CPACK_DMG_DS_STORE, as the .DS_Store that is generated by the AppleScript will be packaged.</p>
-<dt><code>CPACK_DMG_BACKGROUND_IMAGE</code></p>
-<dd>Path to an image file to be used as the background. This file will be copied to .background/background.&lt;ext&gt;, where ext is the original image file extension. The background image is installed into the image before CPACK_DMG_DS_STORE_SETUP_SCRIPT is executed or CPACK_DMG_DS_STORE is installed. By default no background image is set.</p>
-<dt><code>CPACK_DMG_DISABLE_APPLICATIONS_SYMLINK</code></p>
-<dd>Default behaviour is to include a symlink to <code>/Applications</code> in the DMG. Set this option to <code>ON</code> to avoid adding the symlink.</p>
-<dt><code>CPACK_DMG_SLA_DIR</code></p>
-<dd>Directory where license and menu files for different languages are stored. Setting this causes CPack to look for a <code>&lt;language&gt;.menu.txt</code> and <code>&lt;language&gt;.license.txt</code> file for every language defined in <code>CPACK_DMG_SLA_LANGUAGES</code>. If both this variable and <code>CPACK_RESOURCE_FILE_LICENSE</code> are set, CPack will only look for the menu files and use the same license file for all languages.</p>
-<dt><code>CPACK_DMG_SLA_LANGUAGES</code></p>
-<dd>Languages for which a license agreement is provided when mounting the generated DMG. A menu file consists of 9 lines of text. The first line is is the name of the language itself, uppercase, in English (e.g. German). The other lines are translations of the following strings:</p>
-<dt>&bull;</p>
-<dd>Agree</p>
-<dt>&bull;</p>
-<dd>Disagree</p>
-<dt>&bull;</p>
-<dd>Print</p>
-<dt>&bull;</p>
-<dd>Save&#8230;</p>
-<dt>&bull;</p>
-<dd>You agree to the terms of the License Agreement when you click the &quot;Agree&quot; button.</p>
-<dt>&bull;</p>
-<dd>Software License Agreement</p>
-<dt>&bull;</p>
-<dd>This text cannot be saved. The disk may be full or locked, or the file may be locked.</p>
-<dt>&bull;</p>
-<dd>Unable to print. Make sure you have selected a printer. </p>
+<dt><code>CPACK_DMG_VOLUME_NAME</code></dt>
+<dd>The volume name of the generated disk image. Defaults to CPACK_PACKAGE_FILE_NAME.</dd>
+<dt><code>CPACK_DMG_FORMAT</code></dt>
+<dd>The disk image format. Common values are UDRO (UDIF read-only), UDZO (UDIF zlib-compressed) or UDBZ (UDIF bzip2-compressed). Refer to hdiutil(1) for more information on other available formats. Defaults to UDZO.</dd>
+<dt><code>CPACK_DMG_DS_STORE</code></dt>
+<dd>Path to a custom DS_Store file. This .DS_Store file e.g. can be used to specify the Finder window position/geometry and layout (such as hidden toolbars, placement of the icons etc.). This file has to be generated by the Finder (either manually or through AppleScript) using a normal folder from which the .DS_Store file can then be extracted.</dd>
+<dt><code>CPACK_DMG_DS_STORE_SETUP_SCRIPT</code></dt>
+<dd>Path to a custom AppleScript file. This AppleScript is used to generate a .DS_Store file which specifies the Finder window position/geometry and layout (such as hidden toolbars, placement of the icons etc.). By specifying a custom AppleScript there is no need to use CPACK_DMG_DS_STORE, as the .DS_Store that is generated by the AppleScript will be packaged.</dd>
+<dt><code>CPACK_DMG_BACKGROUND_IMAGE</code></dt>
+<dd>Path to an image file to be used as the background. This file will be copied to .background/background.&lt;ext&gt;, where ext is the original image file extension. The background image is installed into the image before CPACK_DMG_DS_STORE_SETUP_SCRIPT is executed or CPACK_DMG_DS_STORE is installed. By default no background image is set.</dd>
+<dt><code>CPACK_DMG_DISABLE_APPLICATIONS_SYMLINK</code></dt>
+<dd>Default behaviour is to include a symlink to <code>/Applications</code> in the DMG. Set this option to <code>ON</code> to avoid adding the symlink.</dd>
+<dt><code>CPACK_DMG_SLA_DIR</code></dt>
+<dd>Directory where license and menu files for different languages are stored. Setting this causes CPack to look for a <code>&lt;language&gt;.menu.txt</code> and <code>&lt;language&gt;.license.txt</code> file for every language defined in <code>CPACK_DMG_SLA_LANGUAGES</code>. If both this variable and <code>CPACK_RESOURCE_FILE_LICENSE</code> are set, CPack will only look for the menu files and use the same license file for all languages.</dd>
+<dt><code>CPACK_DMG_SLA_LANGUAGES</code></dt>
+<dd>Languages for which a license agreement is provided when mounting the generated DMG. A menu file consists of 9 lines of text. The first line is is the name of the language itself, uppercase, in English (e.g. German). The other lines are translations of the following strings:</dd>
+<dt>&bull;</dt>
+<dd>Agree</dd>
+<dt>&bull;</dt>
+<dd>Disagree</dd>
+<dt>&bull;</dt>
+<dd>Print</dd>
+<dt>&bull;</dt>
+<dd>Save&#8230;</dd>
+<dt>&bull;</dt>
+<dd>You agree to the terms of the License Agreement when you click the &quot;Agree&quot; button.</dd>
+<dt>&bull;</dt>
+<dd>Software License Agreement</dd>
+<dt>&bull;</dt>
+<dd>This text cannot be saved. The disk may be full or locked, or the file may be locked.</dd>
+<dt>&bull;</dt>
+<dd>Unable to print. Make sure you have selected a printer. </dd>
 <p> For every language in this list, CPack will try to find files <code>&lt;language&gt;.menu.txt</code> and <code>&lt;language&gt;.license.txt</code> in the directory specified by the <code>CPACK_DMG_SLA_DIR</code> variable.</p>
-<dt><code>CPACK_COMMAND_HDIUTIL</code></p>
-<dd>Path to the hdiutil(1) command used to operate on disk image files on Mac OS X. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</p>
-<dt><code>CPACK_COMMAND_SETFILE</code></p>
-<dd>Path to the SetFile(1) command used to set extended attributes on files and directories on Mac OS X. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</p>
-<dt><code>CPACK_COMMAND_REZ</code></p>
-<dd>Path to the Rez(1) command used to compile resources on Mac OS X. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</dl>
+<dt><code>CPACK_COMMAND_HDIUTIL</code></dt>
+<dd>Path to the hdiutil(1) command used to operate on disk image files on Mac OS X. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</dd>
+<dt><code>CPACK_COMMAND_SETFILE</code></dt>
+<dd>Path to the SetFile(1) command used to set extended attributes on files and directories on Mac OS X. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</dd>
+<dt><code>CPACK_COMMAND_REZ</code></dt>
+<dd>Path to the Rez(1) command used to compile resources on Mac OS X. This variable can be used to override the automatically detected command (or specify its location if the auto-detection fails to find it.)</dd></dl>
 <h3>CPackIFW</h3>
 <p>This module looks for the location of the command line utilities supplied with the Qt Installer Framework (<i>QtIFW</i>). </p>
 <p> The module also defines several commands to control the behavior of the CPack <code>IFW</code> generator.</p>
@@ -1163,77 +1163,77 @@ cmake_pop_check_state()</pre>
 <p>You can use the following variables to change behavior of CPack <code>IFW</code> generator.</p>
 <h3>Debug</h3>
 <dl>
-<dt><code>CPACK_IFW_VERBOSE</code></p>
-<dd>Set to <code>ON</code> to enable addition debug output. By default is <code>OFF</code>.</dl>
+<dt><code>CPACK_IFW_VERBOSE</code></dt>
+<dd>Set to <code>ON</code> to enable addition debug output. By default is <code>OFF</code>.</dd></dl>
 <h3>Package</h3>
 <dl>
-<dt><code>CPACK_IFW_PACKAGE_TITLE</code></p>
-<dd>Name of the installer as displayed on the title bar. By default used <code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code>.</p>
-<dt><code>CPACK_IFW_PACKAGE_PUBLISHER</code></p>
-<dd>Publisher of the software (as shown in the Windows Control Panel). By default used <code>CPACK_PACKAGE_VENDOR</code>.</p>
-<dt><code>CPACK_IFW_PRODUCT_URL</code></p>
-<dd>URL to a page that contains product information on your web site.</p>
-<dt><code>CPACK_IFW_PACKAGE_ICON</code></p>
-<dd>Filename for a custom installer icon. The actual file is &#8216;.icns&#8217; (Mac OS X), &#8216;.ico&#8217; (Windows). No functionality on Unix.</p>
-<dt><code>CPACK_IFW_PACKAGE_WINDOW_ICON</code></p>
-<dd>Filename for a custom window icon in PNG format for the Installer application.</p>
-<dt><code>CPACK_IFW_PACKAGE_LOGO</code></p>
-<dd>Filename for a logo is used as QWizard::LogoPixmap.</p>
-<dt><code>CPACK_IFW_PACKAGE_START_MENU_DIRECTORY</code></p>
-<dd>Name of the default program group for the product in the Windows Start menu. </p>
+<dt><code>CPACK_IFW_PACKAGE_TITLE</code></dt>
+<dd>Name of the installer as displayed on the title bar. By default used <code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code>.</dd>
+<dt><code>CPACK_IFW_PACKAGE_PUBLISHER</code></dt>
+<dd>Publisher of the software (as shown in the Windows Control Panel). By default used <code>CPACK_PACKAGE_VENDOR</code>.</dd>
+<dt><code>CPACK_IFW_PRODUCT_URL</code></dt>
+<dd>URL to a page that contains product information on your web site.</dd>
+<dt><code>CPACK_IFW_PACKAGE_ICON</code></dt>
+<dd>Filename for a custom installer icon. The actual file is &#8216;.icns&#8217; (Mac OS X), &#8216;.ico&#8217; (Windows). No functionality on Unix.</dd>
+<dt><code>CPACK_IFW_PACKAGE_WINDOW_ICON</code></dt>
+<dd>Filename for a custom window icon in PNG format for the Installer application.</dd>
+<dt><code>CPACK_IFW_PACKAGE_LOGO</code></dt>
+<dd>Filename for a logo is used as QWizard::LogoPixmap.</dd>
+<dt><code>CPACK_IFW_PACKAGE_START_MENU_DIRECTORY</code></dt>
+<dd>Name of the default program group for the product in the Windows Start menu. </dd>
 <p> By default used <code>CPACK_IFW_PACKAGE_NAME</code>.</p>
-<dt><code>CPACK_IFW_TARGET_DIRECTORY</code></p>
-<dd>Default target directory for installation. By default used &quot;@ApplicationsDir@/<code>CPACK_PACKAGE_INSTALL_DIRECTORY</code>&quot; </p>
+<dt><code>CPACK_IFW_TARGET_DIRECTORY</code></dt>
+<dd>Default target directory for installation. By default used &quot;@ApplicationsDir@/<code>CPACK_PACKAGE_INSTALL_DIRECTORY</code>&quot; </dd>
 <p> You can use predefined variables.</p>
-<dt><code>CPACK_IFW_ADMIN_TARGET_DIRECTORY</code></p>
-<dd>Default target directory for installation with administrator rights. </p>
+<dt><code>CPACK_IFW_ADMIN_TARGET_DIRECTORY</code></dt>
+<dd>Default target directory for installation with administrator rights. </dd>
 <p> You can use predefined variables.</p>
-<dt><code>CPACK_IFW_PACKAGE_GROUP</code></p>
-<dd>The group, which will be used to configure the root package</p>
-<dt><code>CPACK_IFW_PACKAGE_NAME</code></p>
-<dd>The root package name, which will be used if configuration group is not specified</p>
-<dt><code>CPACK_IFW_PACKAGE_MAINTENANCE_TOOL_NAME</code></p>
-<dd>Filename of the generated maintenance tool. The platform-specific executable file extension is appended. </p>
+<dt><code>CPACK_IFW_PACKAGE_GROUP</code></dt>
+<dd>The group, which will be used to configure the root package</dd>
+<dt><code>CPACK_IFW_PACKAGE_NAME</code></dt>
+<dd>The root package name, which will be used if configuration group is not specified</dd>
+<dt><code>CPACK_IFW_PACKAGE_MAINTENANCE_TOOL_NAME</code></dt>
+<dd>Filename of the generated maintenance tool. The platform-specific executable file extension is appended. </dd>
 <p> By default used <i>QtIFW</i> defaults (<code>maintenancetool</code>).</p>
-<dt><code>CPACK_IFW_PACKAGE_MAINTENANCE_TOOL_INI_FILE</code></p>
-<dd>Filename for the configuration of the generated maintenance tool. </p>
+<dt><code>CPACK_IFW_PACKAGE_MAINTENANCE_TOOL_INI_FILE</code></dt>
+<dd>Filename for the configuration of the generated maintenance tool. </dd>
 <p> By default used <i>QtIFW</i> defaults (<code>maintenancetool.ini</code>).</p>
-<dt><code>CPACK_IFW_PACKAGE_ALLOW_NON_ASCII_CHARACTERS</code></p>
-<dd>Set to <code>ON</code> if the installation path can contain non-ASCII characters. </p>
+<dt><code>CPACK_IFW_PACKAGE_ALLOW_NON_ASCII_CHARACTERS</code></dt>
+<dd>Set to <code>ON</code> if the installation path can contain non-ASCII characters. </dd>
 <p> Is <code>ON</code> for <i>QtIFW</i> less 2.0 tools.</p>
-<dt><code>CPACK_IFW_PACKAGE_ALLOW_SPACE_IN_PATH</code></p>
-<dd>Set to <code>OFF</code> if the installation path cannot contain space characters. </p>
+<dt><code>CPACK_IFW_PACKAGE_ALLOW_SPACE_IN_PATH</code></dt>
+<dd>Set to <code>OFF</code> if the installation path cannot contain space characters. </dd>
 <p> Is <code>ON</code> for <i>QtIFW</i> less 2.0 tools.</p>
-<dt><code>CPACK_IFW_PACKAGE_CONTROL_SCRIPT</code></p>
-<dd>Filename for a custom installer control script.</p>
-<dt><code>CPACK_IFW_REPOSITORIES_ALL</code></p>
-<dd>The list of remote repositories. </p>
+<dt><code>CPACK_IFW_PACKAGE_CONTROL_SCRIPT</code></dt>
+<dd>Filename for a custom installer control script.</dd>
+<dt><code>CPACK_IFW_REPOSITORIES_ALL</code></dt>
+<dd>The list of remote repositories. </dd>
 <p> The default value of this variable is computed by CPack and contains all repositories added with command <code>cpack_ifw_add_repository()</code> or updated with command <code>cpack_ifw_update_repository()</code>.</p>
-<dt><code>CPACK_IFW_DOWNLOAD_ALL</code></p>
-<dd>If this is <code>ON</code> all components will be downloaded. By default is <code>OFF</code> or used value from <code>CPACK_DOWNLOAD_ALL</code> if set</dl>
+<dt><code>CPACK_IFW_DOWNLOAD_ALL</code></dt>
+<dd>If this is <code>ON</code> all components will be downloaded. By default is <code>OFF</code> or used value from <code>CPACK_DOWNLOAD_ALL</code> if set</dd></dl>
 <h3>Components</h3>
 <dl>
-<dt><code>CPACK_IFW_RESOLVE_DUPLICATE_NAMES</code></p>
-<dd>Resolve duplicate names when installing components with groups.</p>
-<dt><code>CPACK_IFW_PACKAGES_DIRECTORIES</code></p>
-<dd>Additional prepared packages dirs that will be used to resolve dependent components.</dl>
+<dt><code>CPACK_IFW_RESOLVE_DUPLICATE_NAMES</code></dt>
+<dd>Resolve duplicate names when installing components with groups.</dd>
+<dt><code>CPACK_IFW_PACKAGES_DIRECTORIES</code></dt>
+<dd>Additional prepared packages dirs that will be used to resolve dependent components.</dd></dl>
 <h3>Tools</h3>
 <dl>
-<dt><code>CPACK_IFW_FRAMEWORK_VERSION</code></p>
-<dd>The version of used <i>QtIFW</i> tools.</p>
-<dt><code>CPACK_IFW_BINARYCREATOR_EXECUTABLE</code></p>
-<dd>The path to &quot;binarycreator&quot; command line client. </p>
+<dt><code>CPACK_IFW_FRAMEWORK_VERSION</code></dt>
+<dd>The version of used <i>QtIFW</i> tools.</dd>
+<dt><code>CPACK_IFW_BINARYCREATOR_EXECUTABLE</code></dt>
+<dd>The path to &quot;binarycreator&quot; command line client. </dd>
 <p> This variable is cached and can be configured user if need.</p>
-<dt><code>CPACK_IFW_REPOGEN_EXECUTABLE</code></p>
-<dd>The path to &quot;repogen&quot; command line client. </p>
+<dt><code>CPACK_IFW_REPOGEN_EXECUTABLE</code></dt>
+<dd>The path to &quot;repogen&quot; command line client. </dd>
 <p> This variable is cached and can be configured user if need.</dl>
 <h3>Commands</h3>
 <p>The module defines the following commands: </p>
 <p> <center> &#8212;-<br />
  </center> </p>
 <dl>
-<dt><code>cpack_ifw_configure_component</code></p>
-<dd>Sets the arguments specific to the CPack IFW generator. </p>
+<dt><code>cpack_ifw_configure_component</code></dt>
+<dd>Sets the arguments specific to the CPack IFW generator. </dd>
 <pre>cpack_ifw_configure_component(&lt;compname&gt; [COMMON] [ESSENTIAL]
  [NAME &lt;name&gt;]
  [VERSION &lt;version&gt;]
@@ -1252,8 +1252,8 @@ cmake_pop_check_state()</pre>
 <p> <code>LICENSES</code> pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component. You can specify more then one license. </p>
 <p> <center> &#8212;-<br />
  </center> </p>
-<dt><code>cpack_ifw_configure_component_group</code></p>
-<dd>Sets the arguments specific to the CPack IFW generator. </p>
+<dt><code>cpack_ifw_configure_component_group</code></dt>
+<dd>Sets the arguments specific to the CPack IFW generator. </dd>
 <pre>cpack_ifw_configure_component_group(&lt;groupname&gt;
  [NAME &lt;name&gt;]
  [VERSION &lt;version&gt;]
@@ -1268,8 +1268,8 @@ cmake_pop_check_state()</pre>
 <p> <code>LICENSES</code> pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component group. You can specify more then one license. </p>
 <p> <center> &#8212;-<br />
  </center> </p>
-<dt><code>cpack_ifw_add_repository</code></p>
-<dd>Add <i>QtIFW</i> specific remote repository to binary installer. </p>
+<dt><code>cpack_ifw_add_repository</code></dt>
+<dd>Add <i>QtIFW</i> specific remote repository to binary installer. </dd>
 <pre>cpack_ifw_add_repository(&lt;reponame&gt; [DISABLED]
  URL &lt;url&gt;
  [USERNAME &lt;username&gt;]
@@ -1283,8 +1283,8 @@ cmake_pop_check_state()</pre>
 <p> <code>DISPLAY_NAME</code> is string to display instead of the URL. </p>
 <p> <center> &#8212;-<br />
  </center> </p>
-<dt><code>cpack_ifw_update_repository</code></p>
-<dd>Update <i>QtIFW</i> specific repository from remote repository. </p>
+<dt><code>cpack_ifw_update_repository</code></dt>
+<dd>Update <i>QtIFW</i> specific repository from remote repository. </dd>
 <pre>cpack_ifw_update_repository(&lt;reponame&gt;
  [[ADD|REMOVE] URL &lt;url&gt;]|
  [REPLACE OLD_URL &lt;old_url&gt; NEW_URL &lt;new_url&gt;]]
@@ -1326,67 +1326,67 @@ cpack_ifw_add_repository(myrepo
 <h3>See Also</h3>
 <p>Qt Installer Framework Manual:</p>
 <dl>
-<dt><code>Index page</code></p>
-<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/index.html">http://doc.qt.io/qtinstallerframework/index.html</a></i></p>
-<dt><code>Component Scripting</code></p>
-<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/scripting.html">http://doc.qt.io/qtinstallerframework/scripting.html</a></i></p>
-<dt><code>Predefined Variables</code></p>
-<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/scripting.html#predefined-variables">http://doc.qt.io/qtinstallerframework/scripting.html#predefined-variables</a></i></p>
-<dt><code>Promoting Updates</code></p>
-<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/ifw-updates.html">http://doc.qt.io/qtinstallerframework/ifw-updates.html</a></i></p>
-<dt><code>Download Qt Installer Framework for you platform from Qt site:</code></p>
-<dd><i><a rel="nofollow" href="http://download.qt.io/official_releases/qt-installer-framework">http://download.qt.io/official_releases/qt-installer-framework</a></i></dl>
+<dt><code>Index page</code></dt>
+<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/index.html">http://doc.qt.io/qtinstallerframework/index.html</a></i></dd>
+<dt><code>Component Scripting</code></dt>
+<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/scripting.html">http://doc.qt.io/qtinstallerframework/scripting.html</a></i></dd>
+<dt><code>Predefined Variables</code></dt>
+<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/scripting.html#predefined-variables">http://doc.qt.io/qtinstallerframework/scripting.html#predefined-variables</a></i></dd>
+<dt><code>Promoting Updates</code></dt>
+<dd><i><a rel="nofollow" href="http://doc.qt.io/qtinstallerframework/ifw-updates.html">http://doc.qt.io/qtinstallerframework/ifw-updates.html</a></i></dd>
+<dt><code>Download Qt Installer Framework for you platform from Qt site:</code></dt>
+<dd><i><a rel="nofollow" href="http://download.qt.io/official_releases/qt-installer-framework">http://download.qt.io/official_releases/qt-installer-framework</a></i></dd></dl>
 <h3>CPackNSIS</h3>
 <p>CPack NSIS generator specific options</p>
 <h3>Variables specific to CPack NSIS generator</h3>
 <p>The following variables are specific to the graphical installers built on Windows using the Nullsoft Installation System.</p>
 <dl>
-<dt><code>CPACK_NSIS_INSTALL_ROOT</code></p>
-<dd>The default installation directory presented to the end user by the NSIS installer is under this root dir. The full directory presented to the end user is: ${CPACK_NSIS_INSTALL_ROOT}/${CPACK_PACKAGE_INSTALL_DIRECTORY}</p>
-<dt><code>CPACK_NSIS_MUI_ICON</code></p>
-<dd>An icon filename. The name of a <code>*.ico</code> file used as the main icon for the generated install program.</p>
-<dt><code>CPACK_NSIS_MUI_UNIICON</code></p>
-<dd>An icon filename. The name of a <code>*.ico</code> file used as the main icon for the generated uninstall program.</p>
-<dt><code>CPACK_NSIS_INSTALLER_MUI_ICON_CODE</code></p>
-<dd>undocumented.</p>
-<dt><code>CPACK_NSIS_MUI_WELCOMEFINISHPAGE_BITMAP</code></p>
-<dd>The filename of a bitmap to use as the NSIS MUI_WELCOMEFINISHPAGE_BITMAP.</p>
-<dt><code>CPACK_NSIS_MUI_UNWELCOMEFINISHPAGE_BITMAP</code></p>
-<dd>The filename of a bitmap to use as the NSIS MUI_UNWELCOMEFINISHPAGE_BITMAP.</p>
-<dt><code>CPACK_NSIS_EXTRA_PREINSTALL_COMMANDS</code></p>
-<dd>Extra NSIS commands that will be added to the beginning of the install Section, before your install tree is available on the target system.</p>
-<dt><code>CPACK_NSIS_EXTRA_INSTALL_COMMANDS</code></p>
-<dd>Extra NSIS commands that will be added to the end of the install Section, after your install tree is available on the target system.</p>
-<dt><code>CPACK_NSIS_EXTRA_UNINSTALL_COMMANDS</code></p>
-<dd>Extra NSIS commands that will be added to the uninstall Section, before your install tree is removed from the target system.</p>
-<dt><code>CPACK_NSIS_COMPRESSOR</code></p>
-<dd>The arguments that will be passed to the NSIS SetCompressor command.</p>
-<dt><code>CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL</code></p>
-<dd>Ask about uninstalling previous versions first. If this is set to &quot;ON&quot;, then an installer will look for previous installed versions and if one is found, ask the user whether to uninstall it before proceeding with the install.</p>
-<dt><code>CPACK_NSIS_MODIFY_PATH</code></p>
-<dd>Modify PATH toggle. If this is set to &quot;ON&quot;, then an extra page will appear in the installer that will allow the user to choose whether the program directory should be added to the system PATH variable.</p>
-<dt><code>CPACK_NSIS_DISPLAY_NAME</code></p>
-<dd>The display name string that appears in the Windows Add/Remove Program control panel</p>
-<dt><code>CPACK_NSIS_PACKAGE_NAME</code></p>
-<dd>The title displayed at the top of the installer.</p>
-<dt><code>CPACK_NSIS_INSTALLED_ICON_NAME</code></p>
-<dd>A path to the executable that contains the installer icon.</p>
-<dt><code>CPACK_NSIS_HELP_LINK</code></p>
-<dd>URL to a web site providing assistance in installing your application.</p>
-<dt><code>CPACK_NSIS_URL_INFO_ABOUT</code></p>
-<dd>URL to a web site providing more information about your application.</p>
-<dt><code>CPACK_NSIS_CONTACT</code></p>
-<dd>Contact information for questions and comments about the installation process.</p>
-<dt><code>CPACK_NSIS_CREATE_ICONS_EXTRA</code></p>
-<dd>Additional NSIS commands for creating start menu shortcuts.</p>
-<dt><code>CPACK_NSIS_DELETE_ICONS_EXTRA</code></p>
-<dd>Additional NSIS commands to uninstall start menu shortcuts.</p>
-<dt><code>CPACK_NSIS_EXECUTABLES_DIRECTORY</code></p>
-<dd>Creating NSIS start menu links assumes that they are in &#8216;bin&#8217; unless this variable is set. For example, you would set this to &#8216;exec&#8217; if your executables are in an exec directory.</p>
-<dt><code>CPACK_NSIS_MUI_FINISHPAGE_RUN</code></p>
-<dd>Specify an executable to add an option to run on the finish page of the NSIS installer.</p>
-<dt><code>CPACK_NSIS_MENU_LINKS</code></p>
-<dd>Specify links in [application] menu. This should contain a list of pair &quot;link&quot; &quot;link name&quot;. The link may be an URL or a path relative to installation prefix. Like: </p>
+<dt><code>CPACK_NSIS_INSTALL_ROOT</code></dt>
+<dd>The default installation directory presented to the end user by the NSIS installer is under this root dir. The full directory presented to the end user is: ${CPACK_NSIS_INSTALL_ROOT}/${CPACK_PACKAGE_INSTALL_DIRECTORY}</dd>
+<dt><code>CPACK_NSIS_MUI_ICON</code></dt>
+<dd>An icon filename. The name of a <code>*.ico</code> file used as the main icon for the generated install program.</dd>
+<dt><code>CPACK_NSIS_MUI_UNIICON</code></dt>
+<dd>An icon filename. The name of a <code>*.ico</code> file used as the main icon for the generated uninstall program.</dd>
+<dt><code>CPACK_NSIS_INSTALLER_MUI_ICON_CODE</code></dt>
+<dd>undocumented.</dd>
+<dt><code>CPACK_NSIS_MUI_WELCOMEFINISHPAGE_BITMAP</code></dt>
+<dd>The filename of a bitmap to use as the NSIS MUI_WELCOMEFINISHPAGE_BITMAP.</dd>
+<dt><code>CPACK_NSIS_MUI_UNWELCOMEFINISHPAGE_BITMAP</code></dt>
+<dd>The filename of a bitmap to use as the NSIS MUI_UNWELCOMEFINISHPAGE_BITMAP.</dd>
+<dt><code>CPACK_NSIS_EXTRA_PREINSTALL_COMMANDS</code></dt>
+<dd>Extra NSIS commands that will be added to the beginning of the install Section, before your install tree is available on the target system.</dd>
+<dt><code>CPACK_NSIS_EXTRA_INSTALL_COMMANDS</code></dt>
+<dd>Extra NSIS commands that will be added to the end of the install Section, after your install tree is available on the target system.</dd>
+<dt><code>CPACK_NSIS_EXTRA_UNINSTALL_COMMANDS</code></dt>
+<dd>Extra NSIS commands that will be added to the uninstall Section, before your install tree is removed from the target system.</dd>
+<dt><code>CPACK_NSIS_COMPRESSOR</code></dt>
+<dd>The arguments that will be passed to the NSIS SetCompressor command.</dd>
+<dt><code>CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL</code></dt>
+<dd>Ask about uninstalling previous versions first. If this is set to &quot;ON&quot;, then an installer will look for previous installed versions and if one is found, ask the user whether to uninstall it before proceeding with the install.</dd>
+<dt><code>CPACK_NSIS_MODIFY_PATH</code></dt>
+<dd>Modify PATH toggle. If this is set to &quot;ON&quot;, then an extra page will appear in the installer that will allow the user to choose whether the program directory should be added to the system PATH variable.</dd>
+<dt><code>CPACK_NSIS_DISPLAY_NAME</code></dt>
+<dd>The display name string that appears in the Windows Add/Remove Program control panel</dd>
+<dt><code>CPACK_NSIS_PACKAGE_NAME</code></dt>
+<dd>The title displayed at the top of the installer.</dd>
+<dt><code>CPACK_NSIS_INSTALLED_ICON_NAME</code></dt>
+<dd>A path to the executable that contains the installer icon.</dd>
+<dt><code>CPACK_NSIS_HELP_LINK</code></dt>
+<dd>URL to a web site providing assistance in installing your application.</dd>
+<dt><code>CPACK_NSIS_URL_INFO_ABOUT</code></dt>
+<dd>URL to a web site providing more information about your application.</dd>
+<dt><code>CPACK_NSIS_CONTACT</code></dt>
+<dd>Contact information for questions and comments about the installation process.</dd>
+<dt><code>CPACK_NSIS_CREATE_ICONS_EXTRA</code></dt>
+<dd>Additional NSIS commands for creating start menu shortcuts.</dd>
+<dt><code>CPACK_NSIS_DELETE_ICONS_EXTRA</code></dt>
+<dd>Additional NSIS commands to uninstall start menu shortcuts.</dd>
+<dt><code>CPACK_NSIS_EXECUTABLES_DIRECTORY</code></dt>
+<dd>Creating NSIS start menu links assumes that they are in &#8216;bin&#8217; unless this variable is set. For example, you would set this to &#8216;exec&#8217; if your executables are in an exec directory.</dd>
+<dt><code>CPACK_NSIS_MUI_FINISHPAGE_RUN</code></dt>
+<dd>Specify an executable to add an option to run on the finish page of the NSIS installer.</dd>
+<dt><code>CPACK_NSIS_MENU_LINKS</code></dt>
+<dd>Specify links in [application] menu. This should contain a list of pair &quot;link&quot; &quot;link name&quot;. The link may be an URL or a path relative to installation prefix. Like: </dd>
 <pre>set(CPACK_NSIS_MENU_LINKS
  &quot;doc/cmake- [at] CMake_VERSION_MAJOR@.@CMake_VERSION_MINOR@/cmake.html&quot;
  &quot;CMake Help&quot; &quot;<a rel="nofollow" href="https://cmake.org">https://cmake.org</a>&quot; &quot;CMake Web Site&quot;)</pre>
@@ -1396,8 +1396,8 @@ cpack_ifw_add_repository(myrepo
 <h3>Variables specific to CPack PackageMaker generator</h3>
 <p>The following variable is specific to installers built on Mac OS X using PackageMaker:</p>
 <dl>
-<dt><code>CPACK_OSX_PACKAGE_VERSION</code></p>
-<dd>The version of Mac OS X that the resulting PackageMaker archive should be compatible with. Different versions of Mac OS X support different features. For example, CPack can only build component-based installers for Mac OS X 10.4 or newer, and can only build installers that download component son-the-fly for Mac OS X 10.5 or newer. If left blank, this value will be set to the minimum version of Mac OS X that supports the requested features. Set this variable to some value (e.g., 10.4) only if you want to guarantee that your installer will work on that version of Mac OS X, and don&#8217;t mind missing extra features available in the installer shipping with later versions of Mac OS X.</dl>
+<dt><code>CPACK_OSX_PACKAGE_VERSION</code></dt>
+<dd>The version of Mac OS X that the resulting PackageMaker archive should be compatible with. Different versions of Mac OS X support different features. For example, CPack can only build component-based installers for Mac OS X 10.4 or newer, and can only build installers that download component son-the-fly for Mac OS X 10.5 or newer. If left blank, this value will be set to the minimum version of Mac OS X that supports the requested features. Set this variable to some value (e.g., 10.4) only if you want to guarantee that your installer will work on that version of Mac OS X, and don&#8217;t mind missing extra features available in the installer shipping with later versions of Mac OS X.</dd></dl>
 <h3>CPackRPM</h3>
 <p>The built in (binary) CPack RPM generator (Unix only)</p>
 <h3>Variables specific to CPack RPM generator</h3>
@@ -1407,460 +1407,460 @@ cpack_ifw_add_repository(myrepo
 <p> <code>NOTE:</code> <i>&lt;COMPONENT&gt;</i> part of variables is preferred to be in upper case (for e.g. if component is named <i>foo</i> then use <i>CPACK_RPM_FOO_XXXX</i> variable name format) as is with other <i>CPACK_&lt;COMPONENT&gt;_XXXX</i> variables. For the purposes of back compatibility (CMake/CPack version 3.5 and lower) support for same cased component (e.g. <i>fOo</i> would be used as <i>CPACK_RPM_fOo_XXXX</i>) is still supported for variables defined in older versions of CMake/CPack but is not guaranteed for variables that will be added in the future. For the sake of back compatibility same cased component variables also override upper cased versions where both are present. </p>
 <p> Here are some CPackRPM wiki resources that are here for historic reasons and are no longer maintained but may still prove useful:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackConfiguration">https://cmake.org/Wiki/CMake:CPackConfiguration</a></i></p>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29">https://cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29</a></i> </p>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackConfiguration">https://cmake.org/Wiki/CMake:CPackConfiguration</a></i></dd>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29">https://cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29</a></i> </dd>
 <p> List of CPackRPM specific variables:</p>
-<dt><code>CPACK_RPM_PACKAGE_COMPONENT</code></p>
-<dd>Enable component packaging for CPackRPM</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : OFF </p>
+<dt><code>CPACK_RPM_PACKAGE_COMPONENT</code></dt>
+<dd>Enable component packaging for CPackRPM</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : OFF </dd>
 <p> If enabled (ON) multiple packages are generated. By default a single package containing files of all components is generated.</p>
-<dt><code>CPACK_RPM_PACKAGE_SUMMARY</code></p>
+<dt><code>CPACK_RPM_PACKAGE_SUMMARY</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_SUMMARY</code></p>
-<dd>The RPM package summary.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : <code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></p>
-<dt><code>CPACK_RPM_PACKAGE_NAME</code></p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_SUMMARY</code></dt>
+<dd>The RPM package summary.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : <code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></dd>
+<dt><code>CPACK_RPM_PACKAGE_NAME</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_NAME</code></p>
-<dd>The RPM package name.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : <code>CPACK_PACKAGE_NAME</code></p>
-<dt><code>CPACK_RPM_FILE_NAME</code></p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_NAME</code></dt>
+<dd>The RPM package name.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : <code>CPACK_PACKAGE_NAME</code></dd>
+<dt><code>CPACK_RPM_FILE_NAME</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_FILE_NAME</code></p>
-<dd>Package file name.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_FILE_NAME</code></dt>
+<dd>Package file name.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
 <dd>
-<dt><code>Default</code></p>
-<dd><code>&lt;CPACK_PACKAGE_FILE_NAME&gt;[-&lt;component&gt;].rpm</code> with spaces replaced by &#8216;-&#8216; </p>
+</dd><dt><code>Default</code></dt>
+<dd><code>&lt;CPACK_PACKAGE_FILE_NAME&gt;[-&lt;component&gt;].rpm</code> with spaces replaced by &#8216;-&#8216; </dd>
 <p> This may be set to <code>RPM-DEFAULT</code> to allow rpmbuild tool to generate package file name by itself. Alternatively provided package file name must end with <code>.rpm</code> suffix. </p>
 <p> <code>NOTE:</code> By using user provided spec file, rpm macro extensions such as for generating debuginfo packages or by simply using multiple components more than one rpm file may be generated, either from a single spec file or from multiple spec files (each component execution produces it&#8217;s own spec file). In such cases duplicate file names may occur as a result of this variable setting or spec file content structure. Duplicate files get overwritten and it is up to the packager to set the variables in a manner that will prevent such errors.</p>
-<dt><code>CPACK_RPM_PACKAGE_VERSION</code></p>
-<dd>The RPM package version.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : <code>CPACK_PACKAGE_VERSION</code></p>
-<dt><code>CPACK_RPM_PACKAGE_ARCHITECTURE</code></p>
+<dt><code>CPACK_RPM_PACKAGE_VERSION</code></dt>
+<dd>The RPM package version.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : <code>CPACK_PACKAGE_VERSION</code></dd>
+<dt><code>CPACK_RPM_PACKAGE_ARCHITECTURE</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_ARCHITECTURE</code></p>
-<dd>The RPM package architecture.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : Native architecture output by <code>uname -m</code> </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_ARCHITECTURE</code></dt>
+<dd>The RPM package architecture.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : Native architecture output by <code>uname -m</code> </dd>
 <p> This may be set to <code>noarch</code> if you know you are building a noarch package.</p>
-<dt><code>CPACK_RPM_PACKAGE_RELEASE</code></p>
-<dd>The RPM package release.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : 1 </p>
+<dt><code>CPACK_RPM_PACKAGE_RELEASE</code></dt>
+<dd>The RPM package release.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : 1 </dd>
 <p> This is the numbering of the RPM package itself, i.e. the version of the packaging and not the version of the content (see <code>CPACK_RPM_PACKAGE_VERSION</code>). One may change the default value if the previous packaging was buggy and/or you want to put here a fancy Linux distro specific numbering. </p>
 <p> <code>NOTE:</code> This is the string that goes into the RPM <code>Release:</code> field. Some distros (e.g. Fedora, CentOS) require <code>1%{?dist}</code> format and not just a number. <code>%{?dist}</code> part can be added by setting <code>CPACK_RPM_PACKAGE_RELEASE_DIST</code>.</p>
-<dt><code>CPACK_RPM_PACKAGE_RELEASE_DIST</code></p>
-<dd>The dist tag that is added RPM <code>Release:</code> field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : OFF </p>
+<dt><code>CPACK_RPM_PACKAGE_RELEASE_DIST</code></dt>
+<dd>The dist tag that is added RPM <code>Release:</code> field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : OFF </dd>
 <p> This is the reported <code>%{dist}</code> tag from the current distribution or empty <code>%{dist}</code> if RPM macro is not set. If this variable is set then RPM <code>Release:</code> field value is set to <code>${CPACK_RPM_PACKAGE_RELEASE}%{?dist}</code>.</p>
-<dt><code>CPACK_RPM_PACKAGE_LICENSE</code></p>
-<dd>The RPM package license policy.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : &quot;unknown&quot;</p>
-<dt><code>CPACK_RPM_PACKAGE_GROUP</code></p>
+<dt><code>CPACK_RPM_PACKAGE_LICENSE</code></dt>
+<dd>The RPM package license policy.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;unknown&quot;</dd>
+<dt><code>CPACK_RPM_PACKAGE_GROUP</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_GROUP</code></p>
-<dd>The RPM package group.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : &quot;unknown&quot;</p>
-<dt><code>CPACK_RPM_PACKAGE_VENDOR</code></p>
-<dd>The RPM package vendor.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : CPACK_PACKAGE_VENDOR if set or &quot;unknown&quot;</p>
-<dt><code>CPACK_RPM_PACKAGE_URL</code></p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_GROUP</code></dt>
+<dd>The RPM package group.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : &quot;unknown&quot;</dd>
+<dt><code>CPACK_RPM_PACKAGE_VENDOR</code></dt>
+<dd>The RPM package vendor.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : CPACK_PACKAGE_VENDOR if set or &quot;unknown&quot;</dd>
+<dt><code>CPACK_RPM_PACKAGE_URL</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_URL</code></p>
-<dd>The projects URL.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211;</p>
-<dt><code>CPACK_RPM_PACKAGE_DESCRIPTION</code></p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_URL</code></dt>
+<dd>The projects URL.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211;</dd>
+<dt><code>CPACK_RPM_PACKAGE_DESCRIPTION</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_DESCRIPTION</code></p>
-<dd>RPM package description.</p>
-<dt>&bull;</p>
-<dd>Mandatory : YES</p>
-<dt>&bull;</p>
-<dd>Default : <code>CPACK_COMPONENT_&lt;compName&gt;_DESCRIPTION</code> (component based installers only) if set, <code>CPACK_PACKAGE_DESCRIPTION_FILE</code> if set or &quot;no package description available&quot;</p>
-<dt><code>CPACK_RPM_COMPRESSION_TYPE</code></p>
-<dd>RPM compression type.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_DESCRIPTION</code></dt>
+<dd>RPM package description.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : YES</dd>
+<dt>&bull;</dt>
+<dd>Default : <code>CPACK_COMPONENT_&lt;compName&gt;_DESCRIPTION</code> (component based installers only) if set, <code>CPACK_PACKAGE_DESCRIPTION_FILE</code> if set or &quot;no package description available&quot;</dd>
+<dt><code>CPACK_RPM_COMPRESSION_TYPE</code></dt>
+<dd>RPM compression type.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to override RPM compression type to be used to build the RPM. For example some Linux distribution now default to lzma or xz compression whereas older cannot use such RPM. Using this one can enforce compression type to be used. </p>
 <p> Possible values are:</p>
-<dt>&bull;</p>
-<dd>lzma</p>
-<dt>&bull;</p>
-<dd>xz</p>
-<dt>&bull;</p>
-<dd>bzip2</p>
-<dt>&bull;</p>
-<dd>gzip</p>
-<dt><code>CPACK_RPM_PACKAGE_AUTOREQ</code></p>
+<dt>&bull;</dt>
+<dd>lzma</dd>
+<dt>&bull;</dt>
+<dd>xz</dd>
+<dt>&bull;</dt>
+<dd>bzip2</dd>
+<dt>&bull;</dt>
+<dd>gzip</dd>
+<dt><code>CPACK_RPM_PACKAGE_AUTOREQ</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_AUTOREQ</code></p>
-<dd>RPM spec autoreq field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_AUTOREQ</code></dt>
+<dd>RPM spec autoreq field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to enable (1, yes) or disable (0, no) automatic shared libraries dependency detection. Dependencies are added to requires list. </p>
 <p> <code>NOTE:</code> By default automatic dependency detection is enabled by rpm generator.</p>
-<dt><code>CPACK_RPM_PACKAGE_AUTOPROV</code></p>
+<dt><code>CPACK_RPM_PACKAGE_AUTOPROV</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_AUTOPROV</code></p>
-<dd>RPM spec autoprov field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_AUTOPROV</code></dt>
+<dd>RPM spec autoprov field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to enable (1, yes) or disable (0, no) automatic listing of shared libraries that are provided by the package. Shared libraries are added to provides list. </p>
 <p> <code>NOTE:</code> By default automatic provides detection is enabled by rpm generator.</p>
-<dt><code>CPACK_RPM_PACKAGE_AUTOREQPROV</code></p>
+<dt><code>CPACK_RPM_PACKAGE_AUTOREQPROV</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_AUTOREQPROV</code></p>
-<dd>RPM spec autoreqprov field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_AUTOREQPROV</code></dt>
+<dd>RPM spec autoreqprov field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> Variable enables/disables autoreq and autoprov at the same time. See <code>CPACK_RPM_PACKAGE_AUTOREQ</code> and <code>CPACK_RPM_PACKAGE_AUTOPROV</code> for more details. </p>
 <p> <code>NOTE:</code> By default automatic detection feature is enabled by rpm.</p>
-<dt><code>CPACK_RPM_PACKAGE_REQUIRES</code></p>
+<dt><code>CPACK_RPM_PACKAGE_REQUIRES</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES</code></p>
-<dd>RPM spec requires field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES</code></dt>
+<dd>RPM spec requires field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set RPM dependencies (requires). Note that you must enclose the complete requires string between quotes, for example: </p>
 <pre>set(CPACK_RPM_PACKAGE_REQUIRES &quot;python &gt;= 2.5.0, cmake &gt;= 2.8&quot;)</pre>
 <p>The required package list of an RPM file could be printed with: </p>
 <pre>rpm -qp --requires file.rpm</pre>
-<dt><code>CPACK_RPM_PACKAGE_CONFLICTS</code></p>
+<dt><code>CPACK_RPM_PACKAGE_CONFLICTS</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_CONFLICTS</code></p>
-<dd>RPM spec conflicts field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_CONFLICTS</code></dt>
+<dd>RPM spec conflicts field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set negative RPM dependencies (conflicts). Note that you must enclose the complete requires string between quotes, for example: </p>
 <pre>set(CPACK_RPM_PACKAGE_CONFLICTS &quot;libxml2&quot;)</pre>
 <p>The conflicting package list of an RPM file could be printed with: </p>
 <pre>rpm -qp --conflicts file.rpm</pre>
-<dt><code>CPACK_RPM_PACKAGE_REQUIRES_PRE</code></p>
+<dt><code>CPACK_RPM_PACKAGE_REQUIRES_PRE</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_PRE</code></p>
-<dd>RPM spec requires(pre) field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_PRE</code></dt>
+<dd>RPM spec requires(pre) field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set RPM preinstall dependencies (requires(pre)). Note that you must enclose the complete requires string between quotes, for example: </p>
 <pre>set(CPACK_RPM_PACKAGE_REQUIRES_PRE &quot;shadow-utils, initscripts&quot;)</pre>
-<dt><code>CPACK_RPM_PACKAGE_REQUIRES_POST</code></p>
+<dt><code>CPACK_RPM_PACKAGE_REQUIRES_POST</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_POST</code></p>
-<dd>RPM spec requires(post) field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_POST</code></dt>
+<dd>RPM spec requires(post) field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set RPM postinstall dependencies (requires(post)). Note that you must enclose the complete requires string between quotes, for example: </p>
 <pre>set(CPACK_RPM_PACKAGE_REQUIRES_POST &quot;shadow-utils, initscripts&quot;)</pre>
-<dt><code>CPACK_RPM_PACKAGE_REQUIRES_POSTUN</code></p>
+<dt><code>CPACK_RPM_PACKAGE_REQUIRES_POSTUN</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_POSTUN</code></p>
-<dd>RPM spec requires(postun) field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_POSTUN</code></dt>
+<dd>RPM spec requires(postun) field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set RPM postuninstall dependencies (requires(postun)). Note that you must enclose the complete requires string between quotes, for example: </p>
 <pre>set(CPACK_RPM_PACKAGE_REQUIRES_POSTUN &quot;shadow-utils, initscripts&quot;)</pre>
-<dt><code>CPACK_RPM_PACKAGE_REQUIRES_PREUN</code></p>
+<dt><code>CPACK_RPM_PACKAGE_REQUIRES_PREUN</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_PREUN</code></p>
-<dd>RPM spec requires(preun) field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_REQUIRES_PREUN</code></dt>
+<dd>RPM spec requires(preun) field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set RPM preuninstall dependencies (requires(preun)). Note that you must enclose the complete requires string between quotes, for example: </p>
 <pre>set(CPACK_RPM_PACKAGE_REQUIRES_PREUN &quot;shadow-utils, initscripts&quot;)</pre>
-<dt><code>CPACK_RPM_PACKAGE_SUGGESTS</code></p>
+<dt><code>CPACK_RPM_PACKAGE_SUGGESTS</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_SUGGESTS</code></p>
-<dd>RPM spec suggest field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_SUGGESTS</code></dt>
+<dd>RPM spec suggest field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set weak RPM dependencies (suggests). Note that you must enclose the complete requires string between quotes.</p>
-<dt><code>CPACK_RPM_PACKAGE_PROVIDES</code></p>
+<dt><code>CPACK_RPM_PACKAGE_PROVIDES</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_PROVIDES</code></p>
-<dd>RPM spec provides field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_PROVIDES</code></dt>
+<dd>RPM spec provides field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set RPM dependencies (provides). The provided package list of an RPM file could be printed with: </p>
 <pre>rpm -qp --provides file.rpm</pre>
-<dt><code>CPACK_RPM_PACKAGE_OBSOLETES</code></p>
+<dt><code>CPACK_RPM_PACKAGE_OBSOLETES</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_OBSOLETES</code></p>
-<dd>RPM spec obsoletes field.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;component&gt;_PACKAGE_OBSOLETES</code></dt>
+<dd>RPM spec obsoletes field.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set RPM packages that are obsoleted by this one.</p>
-<dt><code>CPACK_RPM_PACKAGE_RELOCATABLE</code></p>
-<dd>build a relocatable RPM.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : CPACK_PACKAGE_RELOCATABLE </p>
+<dt><code>CPACK_RPM_PACKAGE_RELOCATABLE</code></dt>
+<dd>build a relocatable RPM.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : CPACK_PACKAGE_RELOCATABLE </dd>
 <p> If this variable is set to TRUE or ON CPackRPM will try to build a relocatable RPM package. A relocatable RPM may be installed using: </p>
 <pre>rpm --prefix or --relocate</pre>
 <p>in order to install it at an alternate place see <a href="/docs/linux/man/8-rpm/">rpm</a>(8). Note that currently this may fail if <code>CPACK_SET_DESTDIR</code> is set to <code>ON</code>. If <code>CPACK_SET_DESTDIR</code> is set then you will get a warning message but if there is file installed with absolute path you&#8217;ll get unexpected behavior.</p>
-<dt><code>CPACK_RPM_SPEC_INSTALL_POST</code></p>
-<dd>Deprecated &#8211; use <code>CPACK_RPM_POST_INSTALL_SCRIPT_FILE</code> instead.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211;</p>
-<dt>&bull;</p>
-<dd>Deprecated: YES </p>
+<dt><code>CPACK_RPM_SPEC_INSTALL_POST</code></dt>
+<dd>Deprecated &#8211; use <code>CPACK_RPM_POST_INSTALL_SCRIPT_FILE</code> instead.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211;</dd>
+<dt>&bull;</dt>
+<dd>Deprecated: YES </dd>
 <p> This way of specifying post-install script is deprecated, use <code>CPACK_RPM_POST_INSTALL_SCRIPT_FILE</code>. May be used to set an RPM post-install command inside the spec file. For example setting it to <code>/bin/true</code> may be used to prevent rpmbuild to strip binaries.</p>
-<dt><code>CPACK_RPM_SPEC_MORE_DEFINE</code></p>
-<dd>RPM extended spec definitions lines.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+<dt><code>CPACK_RPM_SPEC_MORE_DEFINE</code></dt>
+<dd>RPM extended spec definitions lines.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to add any <code>%define</code> lines to the generated spec file.</p>
-<dt><code>CPACK_RPM_PACKAGE_DEBUG</code></p>
-<dd>Toggle CPackRPM debug output.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+<dt><code>CPACK_RPM_PACKAGE_DEBUG</code></dt>
+<dd>Toggle CPackRPM debug output.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be set when invoking cpack in order to trace debug information during CPack RPM run. For example you may launch CPack like this: </p>
 <pre>cpack -D CPACK_RPM_PACKAGE_DEBUG=1 -G RPM</pre>
-<dt><code>CPACK_RPM_USER_BINARY_SPECFILE</code></p>
+<dt><code>CPACK_RPM_USER_BINARY_SPECFILE</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;componentName&gt;_USER_BINARY_SPECFILE</code></p>
-<dd>A user provided spec file.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_&lt;componentName&gt;_USER_BINARY_SPECFILE</code></dt>
+<dd>A user provided spec file.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be set by the user in order to specify a USER binary spec file to be used by CPackRPM instead of generating the file. The specified file will be processed by configure_file( @ONLY).</p>
-<dt><code>CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE</code></p>
-<dd>Spec file template.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+<dt><code>CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE</code></dt>
+<dd>Spec file template.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> If set CPack will generate a template for USER specified binary spec file and stop with an error. For example launch CPack like this: </p>
 <pre>cpack -D CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE=1 -G RPM</pre>
 <p>The user may then use this file in order to hand-craft is own binary spec file which may be used with <code>CPACK_RPM_USER_BINARY_SPECFILE</code>.</p>
-<dt><code>CPACK_RPM_PRE_INSTALL_SCRIPT_FILE</code></p>
+<dt><code>CPACK_RPM_PRE_INSTALL_SCRIPT_FILE</code></dt>
 <dd>
-<dt><code>CPACK_RPM_PRE_UNINSTALL_SCRIPT_FILE</code></p>
-<dd>Path to file containing pre (un)install script.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_PRE_UNINSTALL_SCRIPT_FILE</code></dt>
+<dd>Path to file containing pre (un)install script.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to embed a pre (un)installation script in the spec file. The referred script file (or both) will be read and directly put after the <code>%pre</code> or <code>%preun</code> section If <code>CPACK_RPM_PACKAGE_COMPONENT</code> is set to ON the (un)install script for each component can be overridden with <code>CPACK_RPM_&lt;COMPONENT&gt;_PRE_INSTALL_SCRIPT_FILE</code> and <code>CPACK_RPM_&lt;COMPONENT&gt;_PRE_UNINSTALL_SCRIPT_FILE</code>. One may verify which scriptlet has been included with: </p>
 <pre>rpm -qp --scripts package.rpm</pre>
-<dt><code>CPACK_RPM_POST_INSTALL_SCRIPT_FILE</code></p>
+<dt><code>CPACK_RPM_POST_INSTALL_SCRIPT_FILE</code></dt>
 <dd>
-<dt><code>CPACK_RPM_POST_UNINSTALL_SCRIPT_FILE</code></p>
-<dd>Path to file containing post (un)install script.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt><code>CPACK_RPM_POST_UNINSTALL_SCRIPT_FILE</code></dt>
+<dd>Path to file containing post (un)install script.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to embed a post (un)installation script in the spec file. The referred script file (or both) will be read and directly put after the <code>%post</code> or <code>%postun</code> section. If <code>CPACK_RPM_PACKAGE_COMPONENT</code> is set to ON the (un)install script for each component can be overridden with <code>CPACK_RPM_&lt;COMPONENT&gt;_POST_INSTALL_SCRIPT_FILE</code> and <code>CPACK_RPM_&lt;COMPONENT&gt;_POST_UNINSTALL_SCRIPT_FILE</code>. One may verify which scriptlet has been included with: </p>
 <pre>rpm -qp --scripts package.rpm</pre>
-<dt><code>CPACK_RPM_USER_FILELIST</code></p>
+<dt><code>CPACK_RPM_USER_FILELIST</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;COMPONENT&gt;_USER_FILELIST</code></p>
+</dd><dt><code>CPACK_RPM_&lt;COMPONENT&gt;_USER_FILELIST</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to explicitly specify <code>%(&lt;directive&gt;)</code> file line in the spec file. Like <code>%config(noreplace)</code> or any other directive that be found in the <code>%files</code> section. Since CPackRPM is generating the list of files (and directories) the user specified files of the <code>CPACK_RPM_&lt;COMPONENT&gt;_USER_FILELIST</code> list will be removed from the generated list.</p>
-<dt><code>CPACK_RPM_CHANGELOG_FILE</code></p>
-<dd>RPM changelog file.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+<dt><code>CPACK_RPM_CHANGELOG_FILE</code></dt>
+<dd>RPM changelog file.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to embed a changelog in the spec file. The referred file will be read and directly put after the <code>%changelog</code> section.</p>
-<dt><code>CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST</code></p>
-<dd>list of path to be excluded.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : /etc /etc/init.d /usr /usr/share /usr/share/doc /usr/bin /usr/lib /usr/lib64 /usr/include </p>
+<dt><code>CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST</code></dt>
+<dd>list of path to be excluded.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : /etc /etc/init.d /usr /usr/share /usr/share/doc /usr/bin /usr/lib /usr/lib64 /usr/include </dd>
 <p> May be used to exclude path (directories or files) from the auto-generated list of paths discovered by CPack RPM. The defaut value contains a reasonable set of values if the variable is not defined by the user. If the variable is defined by the user then CPackRPM will NOT any of the default path. If you want to add some path to the default list then you can use <code>CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION</code> variable.</p>
-<dt><code>CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION</code></p>
-<dd>additional list of path to be excluded.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+<dt><code>CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION</code></dt>
+<dd>additional list of path to be excluded.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to add more exclude path (directories or files) from the initial default list of excluded paths. See <code>CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST</code>.</p>
-<dt><code>CPACK_RPM_RELOCATION_PATHS</code></p>
-<dd>Packages relocation paths list.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+<dt><code>CPACK_RPM_RELOCATION_PATHS</code></dt>
+<dd>Packages relocation paths list.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to specify more than one relocation path per relocatable RPM. Variable contains a list of relocation paths that if relative are prefixed by the value of <code>CPACK_RPM_&lt;COMPONENT&gt;_PACKAGE_PREFIX</code> or by the value of <code>CPACK_PACKAGING_INSTALL_PREFIX</code> if the component version is not provided. Variable is not component based as its content can be used to set a different path prefix for e.g. binary dir and documentation dir at the same time. Only prefixes that are required by a certain component are added to that component &#8211; component must contain at least one file/directory/symbolic link with <code>CPACK_RPM_RELOCATION_PATHS</code> prefix for a certain relocation path to be added. Package will not contain any relocation paths if there are no files/directories/symbolic links on any of the provided prefix locations. Packages that either do not contain any relocation paths or contain files/directories/symbolic links that are outside relocation paths print out an <code>AUTHOR_WARNING</code> that RPM will be partially relocatable.</p>
-<dt><code>CPACK_RPM_&lt;COMPONENT&gt;_PACKAGE_PREFIX</code></p>
-<dd>Per component relocation path install prefix.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : CPACK_PACKAGING_INSTALL_PREFIX </p>
+<dt><code>CPACK_RPM_&lt;COMPONENT&gt;_PACKAGE_PREFIX</code></dt>
+<dd>Per component relocation path install prefix.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : CPACK_PACKAGING_INSTALL_PREFIX </dd>
 <p> May be used to set per component <code>CPACK_PACKAGING_INSTALL_PREFIX</code> for relocatable RPM packages.</p>
-<dt><code>CPACK_RPM_NO_INSTALL_PREFIX_RELOCATION</code></p>
+<dt><code>CPACK_RPM_NO_INSTALL_PREFIX_RELOCATION</code></dt>
 <dd>
-<dt><code>CPACK_RPM_NO_&lt;COMPONENT&gt;_INSTALL_PREFIX_RELOCATION</code></p>
-<dd>Removal of default install prefix from relocation paths list.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
+</dd><dt><code>CPACK_RPM_NO_&lt;COMPONENT&gt;_INSTALL_PREFIX_RELOCATION</code></dt>
+<dd>Removal of default install prefix from relocation paths list.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
 <dd>
-<dt><code>Default</code></p>
-<dd>CPACK_PACKAGING_INSTALL_PREFIX or CPACK_RPM_&lt;COMPONENT&gt;_PACKAGE_PREFIX are treated as one of relocation paths </p>
+</dd><dt><code>Default</code></dt>
+<dd>CPACK_PACKAGING_INSTALL_PREFIX or CPACK_RPM_&lt;COMPONENT&gt;_PACKAGE_PREFIX are treated as one of relocation paths </dd>
 <p> May be used to remove CPACK_PACKAGING_INSTALL_PREFIX and CPACK_RPM_&lt;COMPONENT&gt;_PACKAGE_PREFIX from relocatable RPM prefix paths.</p>
-<dt><code>CPACK_RPM_ADDITIONAL_MAN_DIRS</code></p>
+<dt><code>CPACK_RPM_ADDITIONAL_MAN_DIRS</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; </p>
+</dd><dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; </dd>
 <p> May be used to set additional man dirs that could potentially be compressed by brp-compress RPM macro. Variable content must be a list of regular expressions that point to directories containing man files or to man files directly. Note that in order to compress man pages a path must also be present in brp-compress RPM script and that brp-compress script must be added to RPM configuration by the operating system. </p>
 <p> Regular expressions that are added by default were taken from brp-compress RPM macro:</p>
-<dt>&bull;</p>
-<dd>/usr/man/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/man/.*/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/info.*</p>
-<dt>&bull;</p>
-<dd>/usr/share/man/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/share/man/.*/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/share/info.*</p>
-<dt>&bull;</p>
-<dd>/usr/kerberos/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/X11R6/man/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/lib/perl5/man/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/share/doc/.*/man/man.*</p>
-<dt>&bull;</p>
-<dd>/usr/lib/.*/man/man.*</p>
-<dt><code>CPACK_RPM_DEFAULT_USER</code></p>
+<dt>&bull;</dt>
+<dd>/usr/man/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/man/.*/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/info.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/share/man/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/share/man/.*/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/share/info.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/kerberos/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/X11R6/man/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/lib/perl5/man/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/share/doc/.*/man/man.*</dd>
+<dt>&bull;</dt>
+<dd>/usr/lib/.*/man/man.*</dd>
+<dt><code>CPACK_RPM_DEFAULT_USER</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_USER</code></p>
-<dd>default user ownership of RPM content</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : root </p>
+</dd><dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_USER</code></dt>
+<dd>default user ownership of RPM content</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : root </dd>
 <p> Value should be user name and not UID. Note that &lt;compName&gt; must be in upper-case.</p>
-<dt><code>CPACK_RPM_DEFAULT_GROUP</code></p>
+<dt><code>CPACK_RPM_DEFAULT_GROUP</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_GROUP</code></p>
-<dd>default group ownership of RPM content</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : root </p>
+</dd><dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_GROUP</code></dt>
+<dd>default group ownership of RPM content</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : root </dd>
 <p> Value should be group name and not GID. Note that &lt;compName&gt; must be in upper-case.</p>
-<dt><code>CPACK_RPM_DEFAULT_FILE_PERMISSIONS</code></p>
+<dt><code>CPACK_RPM_DEFAULT_FILE_PERMISSIONS</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_FILE_PERMISSIONS</code></p>
-<dd>default permissions used for packaged files</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; (system default) </p>
+</dd><dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_FILE_PERMISSIONS</code></dt>
+<dd>default permissions used for packaged files</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; (system default) </dd>
 <p> Accepted values are lists with <code>PERMISSIONS</code>. Valid permissions are:</p>
-<dt>&bull;</p>
-<dd>OWNER_READ</p>
-<dt>&bull;</p>
-<dd>OWNER_WRITE</p>
-<dt>&bull;</p>
-<dd>OWNER_EXECUTE</p>
-<dt>&bull;</p>
-<dd>GROUP_READ</p>
-<dt>&bull;</p>
-<dd>GROUP_WRITE</p>
-<dt>&bull;</p>
-<dd>GROUP_EXECUTE</p>
-<dt>&bull;</p>
-<dd>WORLD_READ</p>
-<dt>&bull;</p>
-<dd>WORLD_WRITE</p>
-<dt>&bull;</p>
-<dd>WORLD_EXECUTE </p>
+<dt>&bull;</dt>
+<dd>OWNER_READ</dd>
+<dt>&bull;</dt>
+<dd>OWNER_WRITE</dd>
+<dt>&bull;</dt>
+<dd>OWNER_EXECUTE</dd>
+<dt>&bull;</dt>
+<dd>GROUP_READ</dd>
+<dt>&bull;</dt>
+<dd>GROUP_WRITE</dd>
+<dt>&bull;</dt>
+<dd>GROUP_EXECUTE</dd>
+<dt>&bull;</dt>
+<dd>WORLD_READ</dd>
+<dt>&bull;</dt>
+<dd>WORLD_WRITE</dd>
+<dt>&bull;</dt>
+<dd>WORLD_EXECUTE </dd>
 <p> Note that &lt;compName&gt; must be in upper-case.</p>
-<dt><code>CPACK_RPM_DEFAULT_DIR_PERMISSIONS</code></p>
+<dt><code>CPACK_RPM_DEFAULT_DIR_PERMISSIONS</code></dt>
 <dd>
-<dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_DIR_PERMISSIONS</code></p>
-<dd>default permissions used for packaged directories</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : &#8211; (system default) </p>
+</dd><dt><code>CPACK_RPM_&lt;compName&gt;_DEFAULT_DIR_PERMISSIONS</code></dt>
+<dd>default permissions used for packaged directories</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : &#8211; (system default) </dd>
 <p> Accepted values are lists with PERMISSIONS. Valid permissions are the same as for <code>CPACK_RPM_DEFAULT_FILE_PERMISSIONS</code>. Note that &lt;compName&gt; must be in upper-case.</dl>
 <h3>Packaging of Symbolic Links</h3>
 <p>CPackRPM supports packaging of symbolic links: </p>
@@ -1873,10 +1873,10 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/&lt;symlink_name&gt;
 <p> Symbolic links that point to locations outside packaging path produce a warning and are treated as non relocatable permanent symbolic links. </p>
 <p> Currently there are a few limitations though:</p>
 <dl>
-<dt>&bull;</p>
-<dd>For component based packaging component interdependency is not checked when processing symbolic links. Symbolic links pointing to content of a different component are treated the same way as if pointing to location that will not be packaged.</p>
-<dt>&bull;</p>
-<dd>Symbolic links pointing to a location through one or more intermediate symbolic links will not be handled differently &#8211; if the intermediate symbolic link(s) is also on a relocatable path, relocating it during package installation may cause initial symbolic link to point to an invalid location.</dl>
+<dt>&bull;</dt>
+<dd>For component based packaging component interdependency is not checked when processing symbolic links. Symbolic links pointing to content of a different component are treated the same way as if pointing to location that will not be packaged.</dd>
+<dt>&bull;</dt>
+<dd>Symbolic links pointing to a location through one or more intermediate symbolic links will not be handled differently &#8211; if the intermediate symbolic link(s) is also on a relocatable path, relocating it during package installation may cause initial symbolic link to point to an invalid location.</dd></dl>
 <h3>CPack</h3>
 <p>Build binary and source package installers.</p>
 <h3>Variables common to all CPack generators</h3>
@@ -1887,153 +1887,153 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/&lt;symlink_name&gt;
 <p> If set, the CPACK_PROJECT_CONFIG_FILE is included automatically on a per-generator basis. It only need contain overrides. </p>
 <p> Here&#8217;s how it works:</p>
 <dl>
-<dt>&bull;</p>
-<dd>cpack runs</p>
-<dt>&bull;</p>
-<dd>it includes CPackConfig.cmake</p>
-<dt>&bull;</p>
-<dd>it iterates over the generators listed in that file&#8217;s CPACK_GENERATOR list variable (unless told to use just a specific one via -G on the command line&#8230;)</p>
-<dt>&bull;</p>
-<dd>foreach generator, it then</p>
-<dt>&bull;</p>
-<dd>sets CPACK_GENERATOR to the one currently being iterated</p>
-<dt>&bull;</p>
-<dd>includes the CPACK_PROJECT_CONFIG_FILE</p>
-<dt>&bull;</p>
-<dd>produces the package for that generator </p>
+<dt>&bull;</dt>
+<dd>cpack runs</dd>
+<dt>&bull;</dt>
+<dd>it includes CPackConfig.cmake</dd>
+<dt>&bull;</dt>
+<dd>it iterates over the generators listed in that file&#8217;s CPACK_GENERATOR list variable (unless told to use just a specific one via -G on the command line&#8230;)</dd>
+<dt>&bull;</dt>
+<dd>foreach generator, it then</dd>
+<dt>&bull;</dt>
+<dd>sets CPACK_GENERATOR to the one currently being iterated</dd>
+<dt>&bull;</dt>
+<dd>includes the CPACK_PROJECT_CONFIG_FILE</dd>
+<dt>&bull;</dt>
+<dd>produces the package for that generator </dd>
 <p> This is the key: For each generator listed in CPACK_GENERATOR in CPackConfig.cmake, cpack will <i>reset</i> CPACK_GENERATOR internally to <i>the one currently being used</i> and then include the CPACK_PROJECT_CONFIG_FILE. </p>
 <p> Before including this CPack module in your CMakeLists.txt file, there are a variety of variables that can be set to customize the resulting installers. The most commonly-used variables are:</p>
-<dt><code>CPACK_PACKAGE_NAME</code></p>
-<dd>The name of the package (or application). If not specified, defaults to the project name.</p>
-<dt><code>CPACK_PACKAGE_VENDOR</code></p>
-<dd>The name of the package vendor. (e.g., &quot;Kitware&quot;).</p>
-<dt><code>CPACK_PACKAGE_DIRECTORY</code></p>
-<dd>The directory in which CPack is doing its packaging. If it is not set then this will default (internally) to the build dir. This variable may be defined in CPack config file or from the cpack command line option &quot;-B&quot;. If set the command line option override the value found in the config file.</p>
-<dt><code>CPACK_PACKAGE_VERSION_MAJOR</code></p>
-<dd>Package major Version</p>
-<dt><code>CPACK_PACKAGE_VERSION_MINOR</code></p>
-<dd>Package minor Version</p>
-<dt><code>CPACK_PACKAGE_VERSION_PATCH</code></p>
-<dd>Package patch Version</p>
-<dt><code>CPACK_PACKAGE_DESCRIPTION_FILE</code></p>
-<dd>A text file used to describe the project. Used, for example, the introduction screen of a CPack-generated Windows installer to describe the project.</p>
-<dt><code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></p>
-<dd>Short description of the project (only a few words).</p>
-<dt><code>CPACK_PACKAGE_FILE_NAME</code></p>
-<dd>The name of the package file to generate, not including the extension. For example, cmake-2.6.1-Linux-i686. The default value is: </p>
+<dt><code>CPACK_PACKAGE_NAME</code></dt>
+<dd>The name of the package (or application). If not specified, defaults to the project name.</dd>
+<dt><code>CPACK_PACKAGE_VENDOR</code></dt>
+<dd>The name of the package vendor. (e.g., &quot;Kitware&quot;).</dd>
+<dt><code>CPACK_PACKAGE_DIRECTORY</code></dt>
+<dd>The directory in which CPack is doing its packaging. If it is not set then this will default (internally) to the build dir. This variable may be defined in CPack config file or from the cpack command line option &quot;-B&quot;. If set the command line option override the value found in the config file.</dd>
+<dt><code>CPACK_PACKAGE_VERSION_MAJOR</code></dt>
+<dd>Package major Version</dd>
+<dt><code>CPACK_PACKAGE_VERSION_MINOR</code></dt>
+<dd>Package minor Version</dd>
+<dt><code>CPACK_PACKAGE_VERSION_PATCH</code></dt>
+<dd>Package patch Version</dd>
+<dt><code>CPACK_PACKAGE_DESCRIPTION_FILE</code></dt>
+<dd>A text file used to describe the project. Used, for example, the introduction screen of a CPack-generated Windows installer to describe the project.</dd>
+<dt><code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></dt>
+<dd>Short description of the project (only a few words).</dd>
+<dt><code>CPACK_PACKAGE_FILE_NAME</code></dt>
+<dd>The name of the package file to generate, not including the extension. For example, cmake-2.6.1-Linux-i686. The default value is: </dd>
 <pre>${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CPACK_SYSTEM_NAME}.</pre>
-<dt><code>CPACK_PACKAGE_INSTALL_DIRECTORY</code></p>
-<dd>Installation directory on the target system. This may be used by some CPack generators like NSIS to create an installation directory e.g., &quot;CMake 2.5&quot; below the installation prefix. All installed element will be put inside this directory.</p>
-<dt><code>CPACK_PACKAGE_ICON</code></p>
-<dd>A branding image that will be displayed inside the installer (used by GUI installers).</p>
-<dt><code>CPACK_PROJECT_CONFIG_FILE</code></p>
-<dd>CPack-time project CPack configuration file. This file included at cpack time, once per generator after CPack has set CPACK_GENERATOR to the actual generator being used. It allows per-generator setting of CPACK_* variables at cpack time.</p>
-<dt><code>CPACK_RESOURCE_FILE_LICENSE</code></p>
-<dd>License to be embedded in the installer. It will typically be displayed to the user by the produced installer (often with an explicit &quot;Accept&quot; button, for graphical installers) prior to installation. This license file is NOT added to installed file but is used by some CPack generators like NSIS. If you want to install a license file (may be the same as this one) along with your project you must add an appropriate CMake INSTALL command in your CMakeLists.txt.</p>
-<dt><code>CPACK_RESOURCE_FILE_README</code></p>
-<dd>ReadMe file to be embedded in the installer. It typically describes in some detail the purpose of the project during the installation. Not all CPack generators uses this file.</p>
-<dt><code>CPACK_RESOURCE_FILE_WELCOME</code></p>
-<dd>Welcome file to be embedded in the installer. It welcomes users to this installer. Typically used in the graphical installers on Windows and Mac OS X.</p>
-<dt><code>CPACK_MONOLITHIC_INSTALL</code></p>
-<dd>Disables the component-based installation mechanism. When set the component specification is ignored and all installed items are put in a single &quot;MONOLITHIC&quot; package. Some CPack generators do monolithic packaging by default and may be asked to do component packaging by setting CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL to 1/TRUE.</p>
-<dt><code>CPACK_GENERATOR</code></p>
-<dd>List of CPack generators to use. If not specified, CPack will create a set of options CPACK_BINARY_&lt;GENNAME&gt; (e.g., CPACK_BINARY_NSIS) allowing the user to enable/disable individual generators. This variable may be used on the command line as well as in: </p>
+<dt><code>CPACK_PACKAGE_INSTALL_DIRECTORY</code></dt>
+<dd>Installation directory on the target system. This may be used by some CPack generators like NSIS to create an installation directory e.g., &quot;CMake 2.5&quot; below the installation prefix. All installed element will be put inside this directory.</dd>
+<dt><code>CPACK_PACKAGE_ICON</code></dt>
+<dd>A branding image that will be displayed inside the installer (used by GUI installers).</dd>
+<dt><code>CPACK_PROJECT_CONFIG_FILE</code></dt>
+<dd>CPack-time project CPack configuration file. This file included at cpack time, once per generator after CPack has set CPACK_GENERATOR to the actual generator being used. It allows per-generator setting of CPACK_* variables at cpack time.</dd>
+<dt><code>CPACK_RESOURCE_FILE_LICENSE</code></dt>
+<dd>License to be embedded in the installer. It will typically be displayed to the user by the produced installer (often with an explicit &quot;Accept&quot; button, for graphical installers) prior to installation. This license file is NOT added to installed file but is used by some CPack generators like NSIS. If you want to install a license file (may be the same as this one) along with your project you must add an appropriate CMake INSTALL command in your CMakeLists.txt.</dd>
+<dt><code>CPACK_RESOURCE_FILE_README</code></dt>
+<dd>ReadMe file to be embedded in the installer. It typically describes in some detail the purpose of the project during the installation. Not all CPack generators uses this file.</dd>
+<dt><code>CPACK_RESOURCE_FILE_WELCOME</code></dt>
+<dd>Welcome file to be embedded in the installer. It welcomes users to this installer. Typically used in the graphical installers on Windows and Mac OS X.</dd>
+<dt><code>CPACK_MONOLITHIC_INSTALL</code></dt>
+<dd>Disables the component-based installation mechanism. When set the component specification is ignored and all installed items are put in a single &quot;MONOLITHIC&quot; package. Some CPack generators do monolithic packaging by default and may be asked to do component packaging by setting CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL to 1/TRUE.</dd>
+<dt><code>CPACK_GENERATOR</code></dt>
+<dd>List of CPack generators to use. If not specified, CPack will create a set of options CPACK_BINARY_&lt;GENNAME&gt; (e.g., CPACK_BINARY_NSIS) allowing the user to enable/disable individual generators. This variable may be used on the command line as well as in: </dd>
 <pre>cpack -D CPACK_GENERATOR=&quot;ZIP;TGZ&quot; /path/to/build/tree</pre>
-<dt><code>CPACK_OUTPUT_CONFIG_FILE</code></p>
-<dd>The name of the CPack binary configuration file. This file is the CPack configuration generated by the CPack module for binary installers. Defaults to CPackConfig.cmake.</p>
-<dt><code>CPACK_PACKAGE_EXECUTABLES</code></p>
-<dd>Lists each of the executables and associated text label to be used to create Start Menu shortcuts. For example, setting this to the list ccmake;CMake will create a shortcut named &quot;CMake&quot; that will execute the installed executable ccmake. Not all CPack generators use it (at least NSIS, WIX and OSXX11 do).</p>
-<dt><code>CPACK_STRIP_FILES</code></p>
-<dd>List of files to be stripped. Starting with CMake 2.6.0 CPACK_STRIP_FILES will be a boolean variable which enables stripping of all files (a list of files evaluates to TRUE in CMake, so this change is compatible).</p>
-<dt><code>CPACK_VERBATIM_VARIABLES</code></p>
-<dd>If set to TRUE, values of variables prefixed with <i>CPACK</i> will be escaped before being written to the configuration files, so that the cpack program receives them exactly as they were specified. If not, characters like quotes and backslashes can cause parsing errors or alter the value received by the cpack program. Defaults to FALSE for backwards compatibility.</p>
-<dt>&bull;</p>
-<dd>Mandatory : NO</p>
-<dt>&bull;</p>
-<dd>Default : FALSE </p>
+<dt><code>CPACK_OUTPUT_CONFIG_FILE</code></dt>
+<dd>The name of the CPack binary configuration file. This file is the CPack configuration generated by the CPack module for binary installers. Defaults to CPackConfig.cmake.</dd>
+<dt><code>CPACK_PACKAGE_EXECUTABLES</code></dt>
+<dd>Lists each of the executables and associated text label to be used to create Start Menu shortcuts. For example, setting this to the list ccmake;CMake will create a shortcut named &quot;CMake&quot; that will execute the installed executable ccmake. Not all CPack generators use it (at least NSIS, WIX and OSXX11 do).</dd>
+<dt><code>CPACK_STRIP_FILES</code></dt>
+<dd>List of files to be stripped. Starting with CMake 2.6.0 CPACK_STRIP_FILES will be a boolean variable which enables stripping of all files (a list of files evaluates to TRUE in CMake, so this change is compatible).</dd>
+<dt><code>CPACK_VERBATIM_VARIABLES</code></dt>
+<dd>If set to TRUE, values of variables prefixed with <i>CPACK</i> will be escaped before being written to the configuration files, so that the cpack program receives them exactly as they were specified. If not, characters like quotes and backslashes can cause parsing errors or alter the value received by the cpack program. Defaults to FALSE for backwards compatibility.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory : NO</dd>
+<dt>&bull;</dt>
+<dd>Default : FALSE </dd>
 <p> The following CPack variables are specific to source packages, and will not affect binary packages:</p>
-<dt><code>CPACK_SOURCE_PACKAGE_FILE_NAME</code></p>
-<dd>The name of the source package. For example cmake-2.6.1.</p>
-<dt><code>CPACK_SOURCE_STRIP_FILES</code></p>
-<dd>List of files in the source tree that will be stripped. Starting with CMake 2.6.0 CPACK_SOURCE_STRIP_FILES will be a boolean variable which enables stripping of all files (a list of files evaluates to TRUE in CMake, so this change is compatible).</p>
-<dt><code>CPACK_SOURCE_GENERATOR</code></p>
-<dd>List of generators used for the source packages. As with CPACK_GENERATOR, if this is not specified then CPack will create a set of options (e.g., CPACK_SOURCE_ZIP) allowing users to select which packages will be generated.</p>
-<dt><code>CPACK_SOURCE_OUTPUT_CONFIG_FILE</code></p>
-<dd>The name of the CPack source configuration file. This file is the CPack configuration generated by the CPack module for source installers. Defaults to CPackSourceConfig.cmake.</p>
-<dt><code>CPACK_SOURCE_IGNORE_FILES</code></p>
-<dd>Pattern of files in the source tree that won&#8217;t be packaged when building a source package. This is a list of regular expression patterns (that must be properly escaped), e.g., /CVS/;/\.svn/;\.swp$;\.#;/#;.*~;cscope.* </p>
+<dt><code>CPACK_SOURCE_PACKAGE_FILE_NAME</code></dt>
+<dd>The name of the source package. For example cmake-2.6.1.</dd>
+<dt><code>CPACK_SOURCE_STRIP_FILES</code></dt>
+<dd>List of files in the source tree that will be stripped. Starting with CMake 2.6.0 CPACK_SOURCE_STRIP_FILES will be a boolean variable which enables stripping of all files (a list of files evaluates to TRUE in CMake, so this change is compatible).</dd>
+<dt><code>CPACK_SOURCE_GENERATOR</code></dt>
+<dd>List of generators used for the source packages. As with CPACK_GENERATOR, if this is not specified then CPack will create a set of options (e.g., CPACK_SOURCE_ZIP) allowing users to select which packages will be generated.</dd>
+<dt><code>CPACK_SOURCE_OUTPUT_CONFIG_FILE</code></dt>
+<dd>The name of the CPack source configuration file. This file is the CPack configuration generated by the CPack module for source installers. Defaults to CPackSourceConfig.cmake.</dd>
+<dt><code>CPACK_SOURCE_IGNORE_FILES</code></dt>
+<dd>Pattern of files in the source tree that won&#8217;t be packaged when building a source package. This is a list of regular expression patterns (that must be properly escaped), e.g., /CVS/;/\.svn/;\.swp$;\.#;/#;.*~;cscope.* </dd>
 <p> The following variables are for advanced uses of CPack:</p>
-<dt><code>CPACK_CMAKE_GENERATOR</code></p>
-<dd>What CMake generator should be used if the project is CMake project. Defaults to the value of CMAKE_GENERATOR few users will want to change this setting.</p>
-<dt><code>CPACK_INSTALL_CMAKE_PROJECTS</code></p>
-<dd>List of four values that specify what project to install. The four values are: Build directory, Project Name, Project Component, Directory. If omitted, CPack will build an installer that installs everything.</p>
-<dt><code>CPACK_SYSTEM_NAME</code></p>
-<dd>System name, defaults to the value of ${CMAKE_SYSTEM_NAME}.</p>
-<dt><code>CPACK_PACKAGE_VERSION</code></p>
-<dd>Package full version, used internally. By default, this is built from CPACK_PACKAGE_VERSION_MAJOR, CPACK_PACKAGE_VERSION_MINOR, and CPACK_PACKAGE_VERSION_PATCH.</p>
-<dt><code>CPACK_TOPLEVEL_TAG</code></p>
-<dd>Directory for the installed files.</p>
-<dt><code>CPACK_INSTALL_COMMANDS</code></p>
-<dd>Extra commands to install components.</p>
-<dt><code>CPACK_INSTALLED_DIRECTORIES</code></p>
-<dd>Extra directories to install.</p>
-<dt><code>CPACK_PACKAGE_INSTALL_REGISTRY_KEY</code></p>
-<dd>Registry key used when installing this project. This is only used by installer for Windows. The default value is based on the installation directory.</p>
-<dt><code>CPACK_CREATE_DESKTOP_LINKS</code></p>
-<dd>List of desktop links to create. Each desktop link requires a corresponding start menu shortcut as created by <code>CPACK_PACKAGE_EXECUTABLES</code>.</p>
-<dt><code>CPACK_BINARY_&lt;GENNAME&gt;</code></p>
-<dd>CPack generated options for binary generators. The CPack.cmake module generates (when CPACK_GENERATOR is not set) a set of CMake options (see CMake option command) which may then be used to select the CPack generator(s) to be used when launching the package target. </p>
+<dt><code>CPACK_CMAKE_GENERATOR</code></dt>
+<dd>What CMake generator should be used if the project is CMake project. Defaults to the value of CMAKE_GENERATOR few users will want to change this setting.</dd>
+<dt><code>CPACK_INSTALL_CMAKE_PROJECTS</code></dt>
+<dd>List of four values that specify what project to install. The four values are: Build directory, Project Name, Project Component, Directory. If omitted, CPack will build an installer that installs everything.</dd>
+<dt><code>CPACK_SYSTEM_NAME</code></dt>
+<dd>System name, defaults to the value of ${CMAKE_SYSTEM_NAME}.</dd>
+<dt><code>CPACK_PACKAGE_VERSION</code></dt>
+<dd>Package full version, used internally. By default, this is built from CPACK_PACKAGE_VERSION_MAJOR, CPACK_PACKAGE_VERSION_MINOR, and CPACK_PACKAGE_VERSION_PATCH.</dd>
+<dt><code>CPACK_TOPLEVEL_TAG</code></dt>
+<dd>Directory for the installed files.</dd>
+<dt><code>CPACK_INSTALL_COMMANDS</code></dt>
+<dd>Extra commands to install components.</dd>
+<dt><code>CPACK_INSTALLED_DIRECTORIES</code></dt>
+<dd>Extra directories to install.</dd>
+<dt><code>CPACK_PACKAGE_INSTALL_REGISTRY_KEY</code></dt>
+<dd>Registry key used when installing this project. This is only used by installer for Windows. The default value is based on the installation directory.</dd>
+<dt><code>CPACK_CREATE_DESKTOP_LINKS</code></dt>
+<dd>List of desktop links to create. Each desktop link requires a corresponding start menu shortcut as created by <code>CPACK_PACKAGE_EXECUTABLES</code>.</dd>
+<dt><code>CPACK_BINARY_&lt;GENNAME&gt;</code></dt>
+<dd>CPack generated options for binary generators. The CPack.cmake module generates (when CPACK_GENERATOR is not set) a set of CMake options (see CMake option command) which may then be used to select the CPack generator(s) to be used when launching the package target. </dd>
 <p> Provide options to choose generators we might check here if the required tools for the generates exist and set the defaults according to the results</dl>
 <h3>CPackWIX</h3>
 <p>CPack WiX generator specific options</p>
 <h3>Variables specific to CPack WiX generator</h3>
 <p>The following variables are specific to the installers built on Windows using WiX.</p>
 <dl>
-<dt><code>CPACK_WIX_UPGRADE_GUID</code></p>
-<dd>Upgrade GUID (<code>Product/@UpgradeCode</code>) </p>
+<dt><code>CPACK_WIX_UPGRADE_GUID</code></dt>
+<dd>Upgrade GUID (<code>Product/@UpgradeCode</code>) </dd>
 <p> Will be automatically generated unless explicitly provided. </p>
 <p> It should be explicitly set to a constant generated globally unique identifier (GUID) to allow your installers to replace existing installations that use the same GUID. </p>
 <p> You may for example explicitly set this variable in your CMakeLists.txt to the value that has been generated per default. You should not use GUIDs that you did not generate yourself or which may belong to other projects. </p>
 <p> A GUID shall have the following fixed length syntax: </p>
 <pre>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</pre>
 <p>(each X represents an uppercase hexadecimal digit)</p>
-<dt><code>CPACK_WIX_PRODUCT_GUID</code></p>
-<dd>Product GUID (<code>Product/@Id</code>) </p>
+<dt><code>CPACK_WIX_PRODUCT_GUID</code></dt>
+<dd>Product GUID (<code>Product/@Id</code>) </dd>
 <p> Will be automatically generated unless explicitly provided. </p>
 <p> If explicitly provided this will set the Product Id of your installer. </p>
 <p> The installer will abort if it detects a pre-existing installation that uses the same GUID. </p>
 <p> The GUID shall use the syntax described for CPACK_WIX_UPGRADE_GUID.</p>
-<dt><code>CPACK_WIX_LICENSE_RTF</code></p>
-<dd>RTF License File </p>
+<dt><code>CPACK_WIX_LICENSE_RTF</code></dt>
+<dd>RTF License File </dd>
 <p> If CPACK_RESOURCE_FILE_LICENSE has an .rtf extension it is used as-is. </p>
 <p> If CPACK_RESOURCE_FILE_LICENSE has an .txt extension it is implicitly converted to RTF by the WiX Generator. The expected encoding of the .txt file is UTF-8. </p>
 <p> With CPACK_WIX_LICENSE_RTF you can override the license file used by the WiX Generator in case CPACK_RESOURCE_FILE_LICENSE is in an unsupported format or the .txt -&gt; .rtf conversion does not work as expected.</p>
-<dt><code>CPACK_WIX_PRODUCT_ICON</code></p>
-<dd>The Icon shown next to the program name in Add/Remove programs. </p>
+<dt><code>CPACK_WIX_PRODUCT_ICON</code></dt>
+<dd>The Icon shown next to the program name in Add/Remove programs. </dd>
 <p> If set, this icon is used in place of the default icon.</p>
-<dt><code>CPACK_WIX_UI_REF</code></p>
-<dd>This variable allows you to override the Id of the <code>&lt;UIRef&gt;</code> element in the WiX template. </p>
+<dt><code>CPACK_WIX_UI_REF</code></dt>
+<dd>This variable allows you to override the Id of the <code>&lt;UIRef&gt;</code> element in the WiX template. </dd>
 <p> The default is <code>WixUI_InstallDir</code> in case no CPack components have been defined and <code>WixUI_FeatureTree</code> otherwise.</p>
-<dt><code>CPACK_WIX_UI_BANNER</code></p>
-<dd>The bitmap will appear at the top of all installer pages other than the welcome and completion dialogs. </p>
+<dt><code>CPACK_WIX_UI_BANNER</code></dt>
+<dd>The bitmap will appear at the top of all installer pages other than the welcome and completion dialogs. </dd>
 <p> If set, this image will replace the default banner image. </p>
 <p> This image must be 493 by 58 pixels.</p>
-<dt><code>CPACK_WIX_UI_DIALOG</code></p>
-<dd>Background bitmap used on the welcome and completion dialogs. </p>
+<dt><code>CPACK_WIX_UI_DIALOG</code></dt>
+<dd>Background bitmap used on the welcome and completion dialogs. </dd>
 <p> If this variable is set, the installer will replace the default dialog image. </p>
 <p> This image must be 493 by 312 pixels.</p>
-<dt><code>CPACK_WIX_PROGRAM_MENU_FOLDER</code></p>
-<dd>Start menu folder name for launcher. </p>
+<dt><code>CPACK_WIX_PROGRAM_MENU_FOLDER</code></dt>
+<dd>Start menu folder name for launcher. </dd>
 <p> If this variable is not set, it will be initialized with CPACK_PACKAGE_NAME</p>
-<dt><code>CPACK_WIX_CULTURES</code></p>
-<dd>Language(s) of the installer </p>
+<dt><code>CPACK_WIX_CULTURES</code></dt>
+<dd>Language(s) of the installer </dd>
 <p> Languages are compiled into the WixUI extension library. To use them, simply provide the name of the culture. If you specify more than one culture identifier in a comma or semicolon delimited list, the first one that is found will be used. You can find a list of supported languages at: <i><a rel="nofollow" href="http://wix.sourceforge.net/manual-wix3/WixUI_localization.htm">http://wix.sourceforge.net/manual-wix3/WixUI_localization.htm</a></i></p>
-<dt><code>CPACK_WIX_TEMPLATE</code></p>
-<dd>Template file for WiX generation </p>
+<dt><code>CPACK_WIX_TEMPLATE</code></dt>
+<dd>Template file for WiX generation </dd>
 <p> If this variable is set, the specified template will be used to generate the WiX wxs file. This should be used if further customization of the output is required. </p>
 <p> If this variable is not set, the default MSI template included with CMake will be used.</p>
-<dt><code>CPACK_WIX_PATCH_FILE</code></p>
-<dd>Optional list of XML files with fragments to be inserted into generated WiX sources </p>
+<dt><code>CPACK_WIX_PATCH_FILE</code></dt>
+<dd>Optional list of XML files with fragments to be inserted into generated WiX sources </dd>
 <p> This optional variable can be used to specify an XML file that the WiX generator will use to inject fragments into its generated source files. </p>
 <p> Patch files understood by the CPack WiX generator roughly follow this RELAX NG compact schema: </p>
 <pre>start = CPackWiXPatch
@@ -2049,10 +2049,10 @@ fragmentContent = element * - CPackWiXFragment
 }</pre>
 <p>Currently fragments can be injected into most Component, File and Directory elements. </p>
 <p> The following additional special Ids can be used:</p>
-<dt>&bull;</p>
-<dd><code>#PRODUCT</code> for the <code>&lt;Product&gt;</code> element.</p>
-<dt>&bull;</p>
-<dd><code>#PRODUCTFEATURE</code> for the root <code>&lt;Feature&gt;</code> element. </p>
+<dt>&bull;</dt>
+<dd><code>#PRODUCT</code> for the <code>&lt;Product&gt;</code> element.</dd>
+<dt>&bull;</dt>
+<dd><code>#PRODUCTFEATURE</code> for the root <code>&lt;Feature&gt;</code> element. </dd>
 <p> The following example illustrates how this works. </p>
 <p> Given that the WiX generator creates the following XML element: </p>
 <pre>&lt;Component Id=&quot;CM_CP_applications.bin.my_libapp.exe&quot; Guid=&quot;*&quot;/&gt;</pre>
@@ -2063,38 +2063,38 @@ fragmentContent = element * - CPackWiXFragment
  Name=&quot;MyVariableName&quot; Value=&quot;MyVariableValue&quot;/&gt;
  &lt;/CPackWiXFragment&gt;
 &lt;/CPackWiXPatch&gt;</pre>
-<dt><code>CPACK_WIX_EXTRA_SOURCES</code></p>
-<dd>Extra WiX source files </p>
+<dt><code>CPACK_WIX_EXTRA_SOURCES</code></dt>
+<dd>Extra WiX source files </dd>
 <p> This variable provides an optional list of extra WiX source files (.wxs) that should be compiled and linked. The full path to source files is required.</p>
-<dt><code>CPACK_WIX_EXTRA_OBJECTS</code></p>
-<dd>Extra WiX object files or libraries </p>
+<dt><code>CPACK_WIX_EXTRA_OBJECTS</code></dt>
+<dd>Extra WiX object files or libraries </dd>
 <p> This variable provides an optional list of extra WiX object (.wixobj) and/or WiX library (.wixlib) files. The full path to objects and libraries is required.</p>
-<dt><code>CPACK_WIX_EXTENSIONS</code></p>
-<dd>This variable provides a list of additional extensions for the WiX tools light and candle.</p>
-<dt><code>CPACK_WIX_&lt;TOOL&gt;_EXTENSIONS</code></p>
-<dd>This is the tool specific version of CPACK_WIX_EXTENSIONS. <code>&lt;TOOL&gt;</code> can be either LIGHT or CANDLE.</p>
-<dt><code>CPACK_WIX_&lt;TOOL&gt;_EXTRA_FLAGS</code></p>
-<dd>This list variable allows you to pass additional flags to the WiX tool <code>&lt;TOOL&gt;</code>. </p>
+<dt><code>CPACK_WIX_EXTENSIONS</code></dt>
+<dd>This variable provides a list of additional extensions for the WiX tools light and candle.</dd>
+<dt><code>CPACK_WIX_&lt;TOOL&gt;_EXTENSIONS</code></dt>
+<dd>This is the tool specific version of CPACK_WIX_EXTENSIONS. <code>&lt;TOOL&gt;</code> can be either LIGHT or CANDLE.</dd>
+<dt><code>CPACK_WIX_&lt;TOOL&gt;_EXTRA_FLAGS</code></dt>
+<dd>This list variable allows you to pass additional flags to the WiX tool <code>&lt;TOOL&gt;</code>. </dd>
 <p> Use it at your own risk. Future versions of CPack may generate flags which may be in conflict with your own flags. </p>
 <p> <code>&lt;TOOL&gt;</code> can be either LIGHT or CANDLE.</p>
-<dt><code>CPACK_WIX_CMAKE_PACKAGE_REGISTRY</code></p>
-<dd>If this variable is set the generated installer will create an entry in the windows registry key <code>HKEY_LOCAL_MACHINE\Software\Kitware\CMake\Packages\&lt;package&gt;</code> The value for <code>&lt;package&gt;</code> is provided by this variable. </p>
+<dt><code>CPACK_WIX_CMAKE_PACKAGE_REGISTRY</code></dt>
+<dd>If this variable is set the generated installer will create an entry in the windows registry key <code>HKEY_LOCAL_MACHINE\Software\Kitware\CMake\Packages\&lt;package&gt;</code> The value for <code>&lt;package&gt;</code> is provided by this variable. </dd>
 <p> Assuming you also install a CMake configuration file this will allow other CMake projects to find your package with the <code>find_package()</code> command.</p>
-<dt><code>CPACK_WIX_PROPERTY_&lt;PROPERTY&gt;</code></p>
-<dd>This variable can be used to provide a value for the Windows Installer property <code>&lt;PROPERTY&gt;</code> </p>
+<dt><code>CPACK_WIX_PROPERTY_&lt;PROPERTY&gt;</code></dt>
+<dd>This variable can be used to provide a value for the Windows Installer property <code>&lt;PROPERTY&gt;</code> </dd>
 <p> The following list contains some example properties that can be used to customize information under &quot;Programs and Features&quot; (also known as &quot;Add or Remove Programs&quot;)</p>
-<dt>&bull;</p>
-<dd>ARPCOMMENTS &#8211; Comments</p>
-<dt>&bull;</p>
-<dd>ARPHELPLINK &#8211; Help and support information URL</p>
-<dt>&bull;</p>
-<dd>ARPURLINFOABOUT &#8211; General information URL</p>
-<dt>&bull;</p>
-<dd>ARPURLUPDATEINFO &#8211; Update information URL</p>
-<dt>&bull;</p>
-<dd>ARPHELPTELEPHONE &#8211; Help and support telephone number</p>
-<dt>&bull;</p>
-<dd>ARPSIZE &#8211; Size (in kilobytes) of the application</dl>
+<dt>&bull;</dt>
+<dd>ARPCOMMENTS &#8211; Comments</dd>
+<dt>&bull;</dt>
+<dd>ARPHELPLINK &#8211; Help and support information URL</dd>
+<dt>&bull;</dt>
+<dd>ARPURLINFOABOUT &#8211; General information URL</dd>
+<dt>&bull;</dt>
+<dd>ARPURLUPDATEINFO &#8211; Update information URL</dd>
+<dt>&bull;</dt>
+<dd>ARPHELPTELEPHONE &#8211; Help and support telephone number</dd>
+<dt>&bull;</dt>
+<dd>ARPSIZE &#8211; Size (in kilobytes) of the application</dd></dl>
 <h3>CTest</h3>
 <p>Configure a project for testing with CTest/CDash </p>
 <p> Include this module in the top CMakeLists.txt file of a project to enable testing with CTest and dashboard submissions to CDash: </p>
@@ -2121,14 +2121,14 @@ set(CTEST_DROP_SITE_CDASH TRUE)</pre>
 <p>This module provides the <code>ctest_coverage_collect_gcov</code> function. </p>
 <p> This function runs gcov on all .gcda files found in the binary tree and packages the resulting .gcov files into a tar file. This tarball also contains the following:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>data.json</i> defines the source and build directories for use by CDash.</p>
-<dt>&bull;</p>
-<dd><i>Labels.json</i> indicates any <code>LABELS</code> that have been set on the source files.</p>
-<dt>&bull;</p>
-<dd>The <i>uncovered</i> directory holds any uncovered files found by <code>CTEST_EXTRA_COVERAGE_GLOB</code>. </p>
+<dt>&bull;</dt>
+<dd><i>data.json</i> defines the source and build directories for use by CDash.</dd>
+<dt>&bull;</dt>
+<dd><i>Labels.json</i> indicates any <code>LABELS</code> that have been set on the source files.</dd>
+<dt>&bull;</dt>
+<dd>The <i>uncovered</i> directory holds any uncovered files found by <code>CTEST_EXTRA_COVERAGE_GLOB</code>. </dd>
 <p> After generating this tar file, it can be sent to CDash for display with the <code>ctest_submit(CDASH_UPLOAD)</code> command.</p>
-<dt><code>cdash_coverage_collect_gcov</code></p>
+<dt><code>cdash_coverage_collect_gcov</code></dt>
 <dd>
 <pre>ctest_coverage_collect_gcov(TARBALL &lt;tarfile&gt;
  [SOURCE &lt;source_dir&gt;][BUILD &lt;build_dir&gt;]
@@ -2136,22 +2136,22 @@ set(CTEST_DROP_SITE_CDASH TRUE)</pre>
  [GCOV_OPTIONS &lt;options&gt;...]
  )</pre>
 <p>Run gcov and package a tar file for CDash. The options are:</p>
-<dt><code>TARBALL &lt;tarfile&gt;</code></p>
-<dd>Specify the location of the <code>.tar</code> file to be created for later upload to CDash. Relative paths will be interpreted with respect to the top-level build directory.</p>
-<dt><code>SOURCE &lt;source_dir&gt;</code></p>
-<dd>Specify the top-level source directory for the build. Default is the value of <code>CTEST_SOURCE_DIRECTORY</code>.</p>
-<dt><code>BUILD &lt;build_dir&gt;</code></p>
-<dd>Specify the top-level build directory for the build. Default is the value of <code>CTEST_BINARY_DIRECTORY</code>.</p>
-<dt><code>GCOV_COMMAND &lt;gcov_command&gt;</code></p>
-<dd>Specify the full path to the <code>gcov</code> command on the machine. Default is the value of <code>CTEST_COVERAGE_COMMAND</code>.</p>
-<dt><code>GCOV_OPTIONS &lt;options&gt;&#8230;</code></p>
-<dd>Specify options to be passed to gcov. The <code>gcov</code> command is run as <code>gcov &lt;options&gt;&#8230; -o &lt;gcov-dir&gt; &lt;file&gt;.gcda</code>. If not specified, the default option is just <code>-b</code>.</p>
-<dt><code>GLOB</code></p>
-<dd>Recursively search for .gcda files in build_dir rather than determining search locations by reading TargetDirectories.txt.</p>
-<dt><code>DELETE</code></p>
-<dd>Delete coverage files after they&#8217;ve been packaged into the .tar.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress non-error messages that otherwise would have been printed out by this function.</dl>
+</dd><dt><code>TARBALL &lt;tarfile&gt;</code></dt>
+<dd>Specify the location of the <code>.tar</code> file to be created for later upload to CDash. Relative paths will be interpreted with respect to the top-level build directory.</dd>
+<dt><code>SOURCE &lt;source_dir&gt;</code></dt>
+<dd>Specify the top-level source directory for the build. Default is the value of <code>CTEST_SOURCE_DIRECTORY</code>.</dd>
+<dt><code>BUILD &lt;build_dir&gt;</code></dt>
+<dd>Specify the top-level build directory for the build. Default is the value of <code>CTEST_BINARY_DIRECTORY</code>.</dd>
+<dt><code>GCOV_COMMAND &lt;gcov_command&gt;</code></dt>
+<dd>Specify the full path to the <code>gcov</code> command on the machine. Default is the value of <code>CTEST_COVERAGE_COMMAND</code>.</dd>
+<dt><code>GCOV_OPTIONS &lt;options&gt;&#8230;</code></dt>
+<dd>Specify options to be passed to gcov. The <code>gcov</code> command is run as <code>gcov &lt;options&gt;&#8230; -o &lt;gcov-dir&gt; &lt;file&gt;.gcda</code>. If not specified, the default option is just <code>-b</code>.</dd>
+<dt><code>GLOB</code></dt>
+<dd>Recursively search for .gcda files in build_dir rather than determining search locations by reading TargetDirectories.txt.</dd>
+<dt><code>DELETE</code></dt>
+<dd>Delete coverage files after they&#8217;ve been packaged into the .tar.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Suppress non-error messages that otherwise would have been printed out by this function.</dd></dl>
 <h3>CTestScriptMode</h3>
 <p>This file is read by ctest in script mode (-S)</p>
 <h3>CTestUseLaunchers</h3>
@@ -2222,23 +2222,23 @@ ExternalData_Add_Target(MyData)</pre>
 <p>When test <code>MyTest</code> runs the <code>DATA{MyInput.png}</code> argument will be replaced by the full path to a real instance of the data file <code>MyInput.png</code> on disk. If the source tree contains a content link such as <code>MyInput.png.md5</code> then the <code>MyData</code> target creates a real <code>MyInput.png</code> in the build tree.</p>
 <h3>Module Functions</h3>
 <dl>
-<dt><code>ExternalData_Expand_Arguments</code></p>
-<dd>The <code>ExternalData_Expand_Arguments</code> function evaluates <code>DATA{}</code> references in its arguments and constructs a new list of arguments: </p>
+<dt><code>ExternalData_Expand_Arguments</code></dt>
+<dd>The <code>ExternalData_Expand_Arguments</code> function evaluates <code>DATA{}</code> references in its arguments and constructs a new list of arguments: </dd>
 <pre>ExternalData_Expand_Arguments(
  &lt;target&gt; # Name of data management target
  &lt;outVar&gt; # Output variable
  [args...] # Input arguments, DATA{} allowed
  )</pre>
 <p>It replaces each <code>DATA{}</code> reference in an argument with the full path of a real data file on disk that will exist after the <code>&lt;target&gt;</code> builds.</p>
-<dt><code>ExternalData_Add_Test</code></p>
-<dd>The <code>ExternalData_Add_Test</code> function wraps around the CMake <code>add_test()</code> command but supports <code>DATA{}</code> references in its arguments: </p>
+<dt><code>ExternalData_Add_Test</code></dt>
+<dd>The <code>ExternalData_Add_Test</code> function wraps around the CMake <code>add_test()</code> command but supports <code>DATA{}</code> references in its arguments: </dd>
 <pre>ExternalData_Add_Test(
  &lt;target&gt; # Name of data management target
  ... # Arguments of add_test(), DATA{} allowed
  )</pre>
 <p>It passes its arguments through <code>ExternalData_Expand_Arguments</code> and then invokes the <code>add_test()</code> command using the results.</p>
-<dt><code>ExternalData_Add_Target</code></p>
-<dd>The <code>ExternalData_Add_Target</code> function creates a custom target to manage local instances of data files stored externally: </p>
+<dt><code>ExternalData_Add_Target</code></dt>
+<dd>The <code>ExternalData_Add_Target</code> function creates a custom target to manage local instances of data files stored externally: </dd>
 <pre>ExternalData_Add_Target(
  &lt;target&gt; # Name of data management target
  )</pre>
@@ -2246,36 +2246,36 @@ ExternalData_Add_Target(MyData)</pre>
 <h3>Module Variables</h3>
 <p>The following variables configure behavior. They should be set before calling any of the functions provided by this module.</p>
 <dl>
-<dt><code>ExternalData_BINARY_ROOT</code></p>
-<dd>The <code>ExternalData_BINARY_ROOT</code> variable may be set to the directory to hold the real data files named by expanded <code>DATA{}</code> references. The default is <code>CMAKE_BINARY_DIR</code>. The directory layout will mirror that of content links under <code>ExternalData_SOURCE_ROOT</code>.</p>
-<dt><code>ExternalData_CUSTOM_SCRIPT_&lt;key&gt;</code></p>
-<dd>Specify a full path to a <code>.cmake</code> custom fetch script identified by <code>&lt;key&gt;</code> in entries of the <code>ExternalData_URL_TEMPLATES</code> list. See <i>Custom Fetch Scripts</i>.</p>
-<dt><code>ExternalData_LINK_CONTENT</code></p>
-<dd>The <code>ExternalData_LINK_CONTENT</code> variable may be set to the name of a supported hash algorithm to enable automatic conversion of real data files referenced by the <code>DATA{}</code> syntax into content links. For each such <code>&lt;file&gt;</code> a content link named <code>&lt;file&gt;&lt;ext&gt;</code> is created. The original file is renamed to the form <code>.ExternalData_&lt;algo&gt;_&lt;hash&gt;</code> to stage it for future transmission to one of the locations in the list of URL templates (by means outside the scope of this module). The data fetch rule created for the content link will use the staged object if it cannot be found using any URL template.</p>
-<dt><code>ExternalData_NO_SYMLINKS</code></p>
-<dd>The real data files named by expanded <code>DATA{}</code> references may be made available under <code>ExternalData_BINARY_ROOT</code> using symbolic links on some platforms. The <code>ExternalData_NO_SYMLINKS</code> variable may be set to disable use of symbolic links and enable use of copies instead.</p>
-<dt><code>ExternalData_OBJECT_STORES</code></p>
-<dd>The <code>ExternalData_OBJECT_STORES</code> variable may be set to a list of local directories that store objects using the layout <code>&lt;dir&gt;/%(algo)/%(hash)</code>. These directories will be searched first for a needed object. If the object is not available in any store then it will be fetched remotely using the URL templates and added to the first local store listed. If no stores are specified the default is a location inside the build tree.</p>
-<dt><code>ExternalData_SERIES_PARSE</code></p>
+<dt><code>ExternalData_BINARY_ROOT</code></dt>
+<dd>The <code>ExternalData_BINARY_ROOT</code> variable may be set to the directory to hold the real data files named by expanded <code>DATA{}</code> references. The default is <code>CMAKE_BINARY_DIR</code>. The directory layout will mirror that of content links under <code>ExternalData_SOURCE_ROOT</code>.</dd>
+<dt><code>ExternalData_CUSTOM_SCRIPT_&lt;key&gt;</code></dt>
+<dd>Specify a full path to a <code>.cmake</code> custom fetch script identified by <code>&lt;key&gt;</code> in entries of the <code>ExternalData_URL_TEMPLATES</code> list. See <i>Custom Fetch Scripts</i>.</dd>
+<dt><code>ExternalData_LINK_CONTENT</code></dt>
+<dd>The <code>ExternalData_LINK_CONTENT</code> variable may be set to the name of a supported hash algorithm to enable automatic conversion of real data files referenced by the <code>DATA{}</code> syntax into content links. For each such <code>&lt;file&gt;</code> a content link named <code>&lt;file&gt;&lt;ext&gt;</code> is created. The original file is renamed to the form <code>.ExternalData_&lt;algo&gt;_&lt;hash&gt;</code> to stage it for future transmission to one of the locations in the list of URL templates (by means outside the scope of this module). The data fetch rule created for the content link will use the staged object if it cannot be found using any URL template.</dd>
+<dt><code>ExternalData_NO_SYMLINKS</code></dt>
+<dd>The real data files named by expanded <code>DATA{}</code> references may be made available under <code>ExternalData_BINARY_ROOT</code> using symbolic links on some platforms. The <code>ExternalData_NO_SYMLINKS</code> variable may be set to disable use of symbolic links and enable use of copies instead.</dd>
+<dt><code>ExternalData_OBJECT_STORES</code></dt>
+<dd>The <code>ExternalData_OBJECT_STORES</code> variable may be set to a list of local directories that store objects using the layout <code>&lt;dir&gt;/%(algo)/%(hash)</code>. These directories will be searched first for a needed object. If the object is not available in any store then it will be fetched remotely using the URL templates and added to the first local store listed. If no stores are specified the default is a location inside the build tree.</dd>
+<dt><code>ExternalData_SERIES_PARSE</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_PARSE_PREFIX</code></p>
+</dd><dt><code>ExternalData_SERIES_PARSE_PREFIX</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_PARSE_NUMBER</code></p>
+</dd><dt><code>ExternalData_SERIES_PARSE_NUMBER</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_PARSE_SUFFIX</code></p>
+</dd><dt><code>ExternalData_SERIES_PARSE_SUFFIX</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_MATCH</code></p>
-<dd>See <i>Referencing File Series</i>.</p>
-<dt><code>ExternalData_SOURCE_ROOT</code></p>
-<dd>The <code>ExternalData_SOURCE_ROOT</code> variable may be set to the highest source directory containing any path named by a <code>DATA{}</code> reference. The default is <code>CMAKE_SOURCE_DIR</code>. <code>ExternalData_SOURCE_ROOT</code> and <code>CMAKE_SOURCE_DIR</code> must refer to directories within a single source distribution (e.g. they come together in one tarball).</p>
-<dt><code>ExternalData_TIMEOUT_ABSOLUTE</code></p>
-<dd>The <code>ExternalData_TIMEOUT_ABSOLUTE</code> variable sets the download absolute timeout, in seconds, with a default of <code>300</code> seconds. Set to <code>0</code> to disable enforcement.</p>
-<dt><code>ExternalData_TIMEOUT_INACTIVITY</code></p>
-<dd>The <code>ExternalData_TIMEOUT_INACTIVITY</code> variable sets the download inactivity timeout, in seconds, with a default of <code>60</code> seconds. Set to <code>0</code> to disable enforcement.</p>
-<dt><code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code></p>
-<dd>Specify a custom URL component to be substituted for URL template placeholders of the form <code>%(algo:&lt;key&gt;)</code>, where <code>&lt;key&gt;</code> is a valid C identifier, when fetching an object referenced via hash algorithm <code>&lt;algo&gt;</code>. If not defined, the default URL component is just <code>&lt;algo&gt;</code> for any <code>&lt;key&gt;</code>.</p>
-<dt><code>ExternalData_URL_TEMPLATES</code></p>
-<dd>The <code>ExternalData_URL_TEMPLATES</code> may be set to provide a list of of URL templates using the placeholders <code>%(algo)</code> and <code>%(hash)</code> in each template. Data fetch rules try each URL template in order by substituting the hash algorithm name for <code>%(algo)</code> and the hash value for <code>%(hash)</code>. Alternatively one may use <code>%(algo:&lt;key&gt;)</code> with <code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code> variables to gain more flexibility in remote URLs.</dl>
+</dd><dt><code>ExternalData_SERIES_MATCH</code></dt>
+<dd>See <i>Referencing File Series</i>.</dd>
+<dt><code>ExternalData_SOURCE_ROOT</code></dt>
+<dd>The <code>ExternalData_SOURCE_ROOT</code> variable may be set to the highest source directory containing any path named by a <code>DATA{}</code> reference. The default is <code>CMAKE_SOURCE_DIR</code>. <code>ExternalData_SOURCE_ROOT</code> and <code>CMAKE_SOURCE_DIR</code> must refer to directories within a single source distribution (e.g. they come together in one tarball).</dd>
+<dt><code>ExternalData_TIMEOUT_ABSOLUTE</code></dt>
+<dd>The <code>ExternalData_TIMEOUT_ABSOLUTE</code> variable sets the download absolute timeout, in seconds, with a default of <code>300</code> seconds. Set to <code>0</code> to disable enforcement.</dd>
+<dt><code>ExternalData_TIMEOUT_INACTIVITY</code></dt>
+<dd>The <code>ExternalData_TIMEOUT_INACTIVITY</code> variable sets the download inactivity timeout, in seconds, with a default of <code>60</code> seconds. Set to <code>0</code> to disable enforcement.</dd>
+<dt><code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code></dt>
+<dd>Specify a custom URL component to be substituted for URL template placeholders of the form <code>%(algo:&lt;key&gt;)</code>, where <code>&lt;key&gt;</code> is a valid C identifier, when fetching an object referenced via hash algorithm <code>&lt;algo&gt;</code>. If not defined, the default URL component is just <code>&lt;algo&gt;</code> for any <code>&lt;key&gt;</code>.</dd>
+<dt><code>ExternalData_URL_TEMPLATES</code></dt>
+<dd>The <code>ExternalData_URL_TEMPLATES</code> may be set to provide a list of of URL templates using the placeholders <code>%(algo)</code> and <code>%(hash)</code> in each template. Data fetch rules try each URL template in order by substituting the hash algorithm name for <code>%(algo)</code> and the hash value for <code>%(hash)</code>. Alternatively one may use <code>%(algo:&lt;key&gt;)</code> with <code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code> variables to gain more flexibility in remote URLs.</dd></dl>
 <h3>Referencing Files</h3>
 <h3>Referencing Single Files</h3>
 <p>The <code>DATA{}</code> syntax is literal and the <code>&lt;name&gt;</code> is a full or relative path within the source tree. The source tree must contain either a real data file at <code>&lt;name&gt;</code> or a &quot;content link&quot; at <code>&lt;name&gt;&lt;ext&gt;</code> containing a hash of the real file using a hash algorithm corresponding to <code>&lt;ext&gt;</code>. For example, the argument <code>DATA{img.png}</code> may be satisfied by either a real <code>img.png</code> file in the current source directory or a <code>img.png.md5</code> file containing its MD5 sum.</p>
@@ -2311,167 +2311,167 @@ SHA512 .sha512 US Secure Hash Algorithms, RFC 4634</pre>
 <h3>Custom Fetch Scripts</h3>
 <p>When a data file must be fetched from one of the URL templates specified in the <code>ExternalData_URL_TEMPLATES</code> variable, it is normally downloaded using the <code>file(DOWNLOAD)</code> command. One may specify usage of a custom fetch script by using a URL template of the form <code>ExternalDataCustomScript://&lt;key&gt;/&lt;loc&gt;</code>. The <code>&lt;key&gt;</code> must be a C identifier, and the <code>&lt;loc&gt;</code> must contain the <code>%(algo)</code> and <code>%(hash)</code> placeholders. A variable corresponding to the key, <code>ExternalData_CUSTOM_SCRIPT_&lt;key&gt;</code>, must be set to the full path to a <code>.cmake</code> script file. The script will be included to perform the actual fetch, and provided with the following variables:</p>
 <dl>
-<dt><code>ExternalData_CUSTOM_LOCATION</code></p>
-<dd>When a custom fetch script is loaded, this variable is set to the location part of the URL, which will contain the substituted hash algorithm name and content hash value.</p>
-<dt><code>ExternalData_CUSTOM_FILE</code></p>
-<dd>When a custom fetch script is loaded, this variable is set to the full path to a file in which the script must store the fetched content. The name of the file is unspecified and should not be interpreted in any way. </p>
+<dt><code>ExternalData_CUSTOM_LOCATION</code></dt>
+<dd>When a custom fetch script is loaded, this variable is set to the location part of the URL, which will contain the substituted hash algorithm name and content hash value.</dd>
+<dt><code>ExternalData_CUSTOM_FILE</code></dt>
+<dd>When a custom fetch script is loaded, this variable is set to the full path to a file in which the script must store the fetched content. The name of the file is unspecified and should not be interpreted in any way. </dd>
 <p> The custom fetch script is expected to store fetched content in the file or set a variable:</p>
-<dt><code>ExternalData_CUSTOM_ERROR</code></p>
-<dd>When a custom fetch script fails to fetch the requested content, it must set this variable to a short one-line message describing the reason for failure.</dl>
+<dt><code>ExternalData_CUSTOM_ERROR</code></dt>
+<dd>When a custom fetch script fails to fetch the requested content, it must set this variable to a short one-line message describing the reason for failure.</dd></dl>
 <h3>ExternalProject</h3>
 <p>Create custom targets to build projects in external trees</p>
 <dl>
-<dt><code>ExternalProject_Add</code></p>
-<dd>The <code>ExternalProject_Add</code> function creates a custom target to drive download, update/patch, configure, build, install and test steps of an external project: </p>
+<dt><code>ExternalProject_Add</code></dt>
+<dd>The <code>ExternalProject_Add</code> function creates a custom target to drive download, update/patch, configure, build, install and test steps of an external project: </dd>
 <pre>ExternalProject_Add(&lt;name&gt; [&lt;option&gt;...])</pre>
 <p>General options are:</p>
-<dt><code>DEPENDS &lt;projects&gt;&#8230;</code></p>
-<dd>Targets on which the project depends</p>
-<dt><code>PREFIX &lt;dir&gt;</code></p>
-<dd>Root dir for entire project</p>
-<dt><code>LIST_SEPARATOR &lt;sep&gt;</code></p>
-<dd>Sep to be replaced by ; in cmd lines</p>
-<dt><code>TMP_DIR &lt;dir&gt;</code></p>
-<dd>Directory to store temporary files</p>
-<dt><code>STAMP_DIR &lt;dir&gt;</code></p>
-<dd>Directory to store step timestamps</p>
-<dt><code>EXCLUDE_FROM_ALL 1</code></p>
-<dd>The &quot;all&quot; target does not depend on this </p>
+<dt><code>DEPENDS &lt;projects&gt;&#8230;</code></dt>
+<dd>Targets on which the project depends</dd>
+<dt><code>PREFIX &lt;dir&gt;</code></dt>
+<dd>Root dir for entire project</dd>
+<dt><code>LIST_SEPARATOR &lt;sep&gt;</code></dt>
+<dd>Sep to be replaced by ; in cmd lines</dd>
+<dt><code>TMP_DIR &lt;dir&gt;</code></dt>
+<dd>Directory to store temporary files</dd>
+<dt><code>STAMP_DIR &lt;dir&gt;</code></dt>
+<dd>Directory to store step timestamps</dd>
+<dt><code>EXCLUDE_FROM_ALL 1</code></dt>
+<dd>The &quot;all&quot; target does not depend on this </dd>
 <p> Download step options are:</p>
-<dt><code>DOWNLOAD_NAME &lt;fname&gt;</code></p>
-<dd>File name to store (if not end of URL)</p>
-<dt><code>DOWNLOAD_DIR &lt;dir&gt;</code></p>
-<dd>Directory to store downloaded files</p>
-<dt><code>DOWNLOAD_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Command to download source tree</p>
-<dt><code>DOWNLOAD_NO_PROGRESS 1</code></p>
-<dd>Disable download progress reports</p>
-<dt><code>CVS_REPOSITORY &lt;cvsroot&gt;</code></p>
-<dd>CVSROOT of CVS repository</p>
-<dt><code>CVS_MODULE &lt;mod&gt;</code></p>
-<dd>Module to checkout from CVS repo</p>
-<dt><code>CVS_TAG &lt;tag&gt;</code></p>
-<dd>Tag to checkout from CVS repo</p>
-<dt><code>SVN_REPOSITORY &lt;url&gt;</code></p>
-<dd>URL of Subversion repo</p>
-<dt><code>SVN_REVISION -r&lt;rev&gt;</code></p>
-<dd>Revision to checkout from Subversion repo</p>
-<dt><code>SVN_USERNAME &lt;username&gt;</code></p>
-<dd>Username for Subversion checkout and update</p>
-<dt><code>SVN_PASSWORD &lt;password&gt;</code></p>
-<dd>Password for Subversion checkout and update</p>
-<dt><code>SVN_TRUST_CERT 1</code></p>
-<dd>Trust the Subversion server site certificate</p>
-<dt><code>GIT_REPOSITORY &lt;url&gt;</code></p>
-<dd>URL of git repo</p>
-<dt><code>GIT_TAG &lt;tag&gt;</code></p>
-<dd>Git branch name, commit id or tag</p>
-<dt><code>GIT_REMOTE_NAME &lt;name&gt;</code></p>
-<dd>The optional name of the remote, default to <code>origin</code></p>
-<dt><code>GIT_SUBMODULES &lt;module&gt;&#8230;</code></p>
-<dd>Git submodules that shall be updated, all if empty</p>
-<dt><code>GIT_SHALLOW 1</code></p>
-<dd>Tell Git to clone with <code>&#8211;depth 1</code>. Use when <code>GIT_TAG</code> is not specified or when it names a branch in order to download only the tip of the branch without the rest of its history.</p>
-<dt><code>HG_REPOSITORY &lt;url&gt;</code></p>
-<dd>URL of mercurial repo</p>
-<dt><code>HG_TAG &lt;tag&gt;</code></p>
-<dd>Mercurial branch name, commit id or tag</p>
-<dt><code>URL /&#8230;/src.tgz</code></p>
-<dd>Full path or URL of source</p>
-<dt><code>URL_HASH ALGO=value</code></p>
-<dd>Hash of file at URL</p>
-<dt><code>URL_MD5 md5</code></p>
-<dd>Equivalent to URL_HASH MD5=md5</p>
-<dt><code>TLS_VERIFY &lt;bool&gt;</code></p>
-<dd>Should certificate for https be checked</p>
-<dt><code>TLS_CAINFO &lt;file&gt;</code></p>
-<dd>Path to a certificate authority file</p>
-<dt><code>TIMEOUT &lt;seconds&gt;</code></p>
-<dd>Time allowed for file download operations</p>
-<dt><code>DOWNLOAD_NO_EXTRACT 1</code></p>
-<dd>Just download the file and do not extract it; the full path to the downloaded file is available as <code>&lt;DOWNLOADED_FILE&gt;</code>. </p>
+<dt><code>DOWNLOAD_NAME &lt;fname&gt;</code></dt>
+<dd>File name to store (if not end of URL)</dd>
+<dt><code>DOWNLOAD_DIR &lt;dir&gt;</code></dt>
+<dd>Directory to store downloaded files</dd>
+<dt><code>DOWNLOAD_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Command to download source tree</dd>
+<dt><code>DOWNLOAD_NO_PROGRESS 1</code></dt>
+<dd>Disable download progress reports</dd>
+<dt><code>CVS_REPOSITORY &lt;cvsroot&gt;</code></dt>
+<dd>CVSROOT of CVS repository</dd>
+<dt><code>CVS_MODULE &lt;mod&gt;</code></dt>
+<dd>Module to checkout from CVS repo</dd>
+<dt><code>CVS_TAG &lt;tag&gt;</code></dt>
+<dd>Tag to checkout from CVS repo</dd>
+<dt><code>SVN_REPOSITORY &lt;url&gt;</code></dt>
+<dd>URL of Subversion repo</dd>
+<dt><code>SVN_REVISION -r&lt;rev&gt;</code></dt>
+<dd>Revision to checkout from Subversion repo</dd>
+<dt><code>SVN_USERNAME &lt;username&gt;</code></dt>
+<dd>Username for Subversion checkout and update</dd>
+<dt><code>SVN_PASSWORD &lt;password&gt;</code></dt>
+<dd>Password for Subversion checkout and update</dd>
+<dt><code>SVN_TRUST_CERT 1</code></dt>
+<dd>Trust the Subversion server site certificate</dd>
+<dt><code>GIT_REPOSITORY &lt;url&gt;</code></dt>
+<dd>URL of git repo</dd>
+<dt><code>GIT_TAG &lt;tag&gt;</code></dt>
+<dd>Git branch name, commit id or tag</dd>
+<dt><code>GIT_REMOTE_NAME &lt;name&gt;</code></dt>
+<dd>The optional name of the remote, default to <code>origin</code></dd>
+<dt><code>GIT_SUBMODULES &lt;module&gt;&#8230;</code></dt>
+<dd>Git submodules that shall be updated, all if empty</dd>
+<dt><code>GIT_SHALLOW 1</code></dt>
+<dd>Tell Git to clone with <code>&#8211;depth 1</code>. Use when <code>GIT_TAG</code> is not specified or when it names a branch in order to download only the tip of the branch without the rest of its history.</dd>
+<dt><code>HG_REPOSITORY &lt;url&gt;</code></dt>
+<dd>URL of mercurial repo</dd>
+<dt><code>HG_TAG &lt;tag&gt;</code></dt>
+<dd>Mercurial branch name, commit id or tag</dd>
+<dt><code>URL /&#8230;/src.tgz</code></dt>
+<dd>Full path or URL of source</dd>
+<dt><code>URL_HASH ALGO=value</code></dt>
+<dd>Hash of file at URL</dd>
+<dt><code>URL_MD5 md5</code></dt>
+<dd>Equivalent to URL_HASH MD5=md5</dd>
+<dt><code>TLS_VERIFY &lt;bool&gt;</code></dt>
+<dd>Should certificate for https be checked</dd>
+<dt><code>TLS_CAINFO &lt;file&gt;</code></dt>
+<dd>Path to a certificate authority file</dd>
+<dt><code>TIMEOUT &lt;seconds&gt;</code></dt>
+<dd>Time allowed for file download operations</dd>
+<dt><code>DOWNLOAD_NO_EXTRACT 1</code></dt>
+<dd>Just download the file and do not extract it; the full path to the downloaded file is available as <code>&lt;DOWNLOADED_FILE&gt;</code>. </dd>
 <p> Update/Patch step options are:</p>
-<dt><code>UPDATE_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Source work-tree update command</p>
-<dt><code>UPDATE_DISCONNECTED 1</code></p>
-<dd>Never update automatically from the remote repository</p>
-<dt><code>PATCH_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Command to patch downloaded source </p>
+<dt><code>UPDATE_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Source work-tree update command</dd>
+<dt><code>UPDATE_DISCONNECTED 1</code></dt>
+<dd>Never update automatically from the remote repository</dd>
+<dt><code>PATCH_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Command to patch downloaded source </dd>
 <p> Configure step options are:</p>
-<dt><code>SOURCE_DIR &lt;dir&gt;</code></p>
-<dd>Source dir to be used for build</p>
-<dt><code>CONFIGURE_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Build tree configuration command</p>
-<dt><code>CMAKE_COMMAND /&#8230;/cmake</code></p>
-<dd>Specify alternative cmake executable</p>
-<dt><code>CMAKE_GENERATOR &lt;gen&gt;</code></p>
-<dd>Specify generator for native build</p>
-<dt><code>CMAKE_GENERATOR_PLATFORM &lt;platform&gt;</code></p>
-<dd>Generator-specific platform name</p>
-<dt><code>CMAKE_GENERATOR_TOOLSET &lt;toolset&gt;</code></p>
-<dd>Generator-specific toolset name</p>
-<dt><code>CMAKE_ARGS &lt;arg&gt;&#8230;</code></p>
-<dd>Arguments to CMake command line. These arguments are passed to CMake command line, and can contain arguments other than cache values, see also <code>CMake Options</code>. Arguments in the form <code>-Dvar:string=on</code> are always passed to the command line, and therefore cannot be changed by the user. Arguments may use <code>generator expressions</code>.</p>
-<dt><code>CMAKE_CACHE_ARGS &lt;arg&gt;&#8230;</code></p>
-<dd>Initial cache arguments, of the form <code>-Dvar:string=on</code>. These arguments are written in a pre-load a script that populates CMake cache, see also <code>cmake -C</code>. This allows one to overcome command line length limits. These arguments are <code>set()</code> using the <code>FORCE</code> argument, and therefore cannot be changed by the user. Arguments may use <code>generator expressions</code>.</p>
-<dt><code>CMAKE_CACHE_DEFAULT_ARGS &lt;arg&gt;&#8230;</code></p>
-<dd>Initial default cache arguments, of the form <code>-Dvar:string=on</code>. These arguments are written in a pre-load a script that populates CMake cache, see also <code>cmake -C</code>. This allows one to overcome command line length limits. These arguments can be used as default value that will be set if no previous value is found in the cache, and that the user can change later. Arguments may use <code>generator expressions</code>. </p>
+<dt><code>SOURCE_DIR &lt;dir&gt;</code></dt>
+<dd>Source dir to be used for build</dd>
+<dt><code>CONFIGURE_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Build tree configuration command</dd>
+<dt><code>CMAKE_COMMAND /&#8230;/cmake</code></dt>
+<dd>Specify alternative cmake executable</dd>
+<dt><code>CMAKE_GENERATOR &lt;gen&gt;</code></dt>
+<dd>Specify generator for native build</dd>
+<dt><code>CMAKE_GENERATOR_PLATFORM &lt;platform&gt;</code></dt>
+<dd>Generator-specific platform name</dd>
+<dt><code>CMAKE_GENERATOR_TOOLSET &lt;toolset&gt;</code></dt>
+<dd>Generator-specific toolset name</dd>
+<dt><code>CMAKE_ARGS &lt;arg&gt;&#8230;</code></dt>
+<dd>Arguments to CMake command line. These arguments are passed to CMake command line, and can contain arguments other than cache values, see also <code>CMake Options</code>. Arguments in the form <code>-Dvar:string=on</code> are always passed to the command line, and therefore cannot be changed by the user. Arguments may use <code>generator expressions</code>.</dd>
+<dt><code>CMAKE_CACHE_ARGS &lt;arg&gt;&#8230;</code></dt>
+<dd>Initial cache arguments, of the form <code>-Dvar:string=on</code>. These arguments are written in a pre-load a script that populates CMake cache, see also <code>cmake -C</code>. This allows one to overcome command line length limits. These arguments are <code>set()</code> using the <code>FORCE</code> argument, and therefore cannot be changed by the user. Arguments may use <code>generator expressions</code>.</dd>
+<dt><code>CMAKE_CACHE_DEFAULT_ARGS &lt;arg&gt;&#8230;</code></dt>
+<dd>Initial default cache arguments, of the form <code>-Dvar:string=on</code>. These arguments are written in a pre-load a script that populates CMake cache, see also <code>cmake -C</code>. This allows one to overcome command line length limits. These arguments can be used as default value that will be set if no previous value is found in the cache, and that the user can change later. Arguments may use <code>generator expressions</code>. </dd>
 <p> Build step options are:</p>
-<dt><code>BINARY_DIR &lt;dir&gt;</code></p>
-<dd>Specify build dir location</p>
-<dt><code>BUILD_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Command to drive the native build</p>
-<dt><code>BUILD_IN_SOURCE 1</code></p>
-<dd>Use source dir for build dir</p>
-<dt><code>BUILD_ALWAYS 1</code></p>
-<dd>No stamp file, build step always runs</p>
-<dt><code>BUILD_BYPRODUCTS &lt;file&gt;&#8230;</code></p>
-<dd>Files that will be generated by the build command but may or may not have their modification time updated by subsequent builds. </p>
+<dt><code>BINARY_DIR &lt;dir&gt;</code></dt>
+<dd>Specify build dir location</dd>
+<dt><code>BUILD_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Command to drive the native build</dd>
+<dt><code>BUILD_IN_SOURCE 1</code></dt>
+<dd>Use source dir for build dir</dd>
+<dt><code>BUILD_ALWAYS 1</code></dt>
+<dd>No stamp file, build step always runs</dd>
+<dt><code>BUILD_BYPRODUCTS &lt;file&gt;&#8230;</code></dt>
+<dd>Files that will be generated by the build command but may or may not have their modification time updated by subsequent builds. </dd>
 <p> Install step options are:</p>
-<dt><code>INSTALL_DIR &lt;dir&gt;</code></p>
-<dd>Installation prefix</p>
-<dt><code>INSTALL_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Command to drive install after build </p>
+<dt><code>INSTALL_DIR &lt;dir&gt;</code></dt>
+<dd>Installation prefix</dd>
+<dt><code>INSTALL_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Command to drive install after build </dd>
 <p> Test step options are:</p>
-<dt><code>TEST_BEFORE_INSTALL 1</code></p>
-<dd>Add test step executed before install step</p>
-<dt><code>TEST_AFTER_INSTALL 1</code></p>
-<dd>Add test step executed after install step</p>
-<dt><code>TEST_EXCLUDE_FROM_MAIN 1</code></p>
-<dd>Main target does not depend on the test step</p>
-<dt><code>TEST_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Command to drive test </p>
+<dt><code>TEST_BEFORE_INSTALL 1</code></dt>
+<dd>Add test step executed before install step</dd>
+<dt><code>TEST_AFTER_INSTALL 1</code></dt>
+<dd>Add test step executed after install step</dd>
+<dt><code>TEST_EXCLUDE_FROM_MAIN 1</code></dt>
+<dd>Main target does not depend on the test step</dd>
+<dt><code>TEST_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Command to drive test </dd>
 <p> Output logging options are:</p>
-<dt><code>LOG_DOWNLOAD 1</code></p>
-<dd>Wrap download in script to log output</p>
-<dt><code>LOG_UPDATE 1</code></p>
-<dd>Wrap update in script to log output</p>
-<dt><code>LOG_CONFIGURE 1</code></p>
-<dd>Wrap configure in script to log output</p>
-<dt><code>LOG_BUILD 1</code></p>
-<dd>Wrap build in script to log output</p>
-<dt><code>LOG_TEST 1</code></p>
-<dd>Wrap test in script to log output</p>
-<dt><code>LOG_INSTALL 1</code></p>
-<dd>Wrap install in script to log output </p>
+<dt><code>LOG_DOWNLOAD 1</code></dt>
+<dd>Wrap download in script to log output</dd>
+<dt><code>LOG_UPDATE 1</code></dt>
+<dd>Wrap update in script to log output</dd>
+<dt><code>LOG_CONFIGURE 1</code></dt>
+<dd>Wrap configure in script to log output</dd>
+<dt><code>LOG_BUILD 1</code></dt>
+<dd>Wrap build in script to log output</dd>
+<dt><code>LOG_TEST 1</code></dt>
+<dd>Wrap test in script to log output</dd>
+<dt><code>LOG_INSTALL 1</code></dt>
+<dd>Wrap install in script to log output </dd>
 <p> Steps can be given direct access to the terminal if possible. With the <code>Ninja</code> generator, this places the steps in the <code>console</code> <code>pool</code>. Options are:</p>
-<dt><code>USES_TERMINAL_DOWNLOAD 1</code></p>
-<dd>Give download terminal access.</p>
-<dt><code>USES_TERMINAL_UPDATE 1</code></p>
-<dd>Give update terminal access.</p>
-<dt><code>USES_TERMINAL_CONFIGURE 1</code></p>
-<dd>Give configure terminal access.</p>
-<dt><code>USES_TERMINAL_BUILD 1</code></p>
-<dd>Give build terminal access.</p>
-<dt><code>USES_TERMINAL_TEST 1</code></p>
-<dd>Give test terminal access.</p>
-<dt><code>USES_TERMINAL_INSTALL 1</code></p>
-<dd>Give install terminal access. </p>
+<dt><code>USES_TERMINAL_DOWNLOAD 1</code></dt>
+<dd>Give download terminal access.</dd>
+<dt><code>USES_TERMINAL_UPDATE 1</code></dt>
+<dd>Give update terminal access.</dd>
+<dt><code>USES_TERMINAL_CONFIGURE 1</code></dt>
+<dd>Give configure terminal access.</dd>
+<dt><code>USES_TERMINAL_BUILD 1</code></dt>
+<dd>Give build terminal access.</dd>
+<dt><code>USES_TERMINAL_TEST 1</code></dt>
+<dd>Give test terminal access.</dd>
+<dt><code>USES_TERMINAL_INSTALL 1</code></dt>
+<dd>Give install terminal access. </dd>
 <p> Other options are:</p>
-<dt><code>STEP_TARGETS &lt;step-target&gt;&#8230;</code></p>
-<dd>Generate custom targets for these steps</p>
-<dt><code>INDEPENDENT_STEP_TARGETS &lt;step-target&gt;&#8230;</code></p>
-<dd>Generate custom targets for these steps that do not depend on other external projects even if a dependency is set </p>
+<dt><code>STEP_TARGETS &lt;step-target&gt;&#8230;</code></dt>
+<dd>Generate custom targets for these steps</dd>
+<dt><code>INDEPENDENT_STEP_TARGETS &lt;step-target&gt;&#8230;</code></dt>
+<dd>Generate custom targets for these steps that do not depend on other external projects even if a dependency is set </dd>
 <p> The <code>*_DIR</code> options specify directories for the project, with default directories computed as follows. If the <code>PREFIX</code> option is given to <code>ExternalProject_Add()</code> or the <code>EP_PREFIX</code> directory property is set, then an external project is built and installed under the specified prefix: </p>
 <pre>TMP_DIR = &lt;prefix&gt;/tmp
 STAMP_DIR = &lt;prefix&gt;/src/&lt;name&gt;-stamp
@@ -2489,43 +2489,43 @@ INSTALL_DIR = &lt;base&gt;/Install/&lt;name&gt;</pre>
 <p>If no <code>PREFIX</code>, <code>EP_PREFIX</code>, or <code>EP_BASE</code> is specified then the default is to set <code>PREFIX</code> to <code>&lt;name&gt;-prefix</code>. Relative paths are interpreted with respect to the build directory corresponding to the source directory in which <code>ExternalProject_Add</code> is invoked. </p>
 <p> If <code>SOURCE_DIR</code> is explicitly set to an existing directory the project will be built from it. Otherwise a download step must be specified using one of the <code>DOWNLOAD_COMMAND</code>, <code>CVS_*</code>, <code>SVN_*</code>, or <code>URL</code> options. The <code>URL</code> option may refer locally to a directory or source tarball, or refer to a remote tarball (e.g. <code><a rel="nofollow" href="http://.../src.tgz">http://&#8230;/src.tgz</a></code>). </p>
 <p> If <code>UPDATE_DISCONNECTED</code> is set, the update step is not executed automatically when building the main target. The update step can still be added as a step target and called manually. This is useful if you want to allow one to build the project when you are disconnected from the network (you might still need the network for the download step). This is disabled by default. The directory property <code>EP_UPDATE_DISCONNECTED</code> can be used to change the default value for all the external projects in the current directory and its subdirectories.</p>
-<dt><code>ExternalProject_Add_Step</code></p>
-<dd>The <code>ExternalProject_Add_Step</code> function adds a custom step to an external project: </p>
+<dt><code>ExternalProject_Add_Step</code></dt>
+<dd>The <code>ExternalProject_Add_Step</code> function adds a custom step to an external project: </dd>
 <pre>ExternalProject_Add_Step(&lt;name&gt; &lt;step&gt; [&lt;option&gt;...])</pre>
 <p>Options are:</p>
-<dt><code>COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Command line invoked by this step</p>
-<dt><code>COMMENT &lt;text&gt;&#8230;</code></p>
-<dd>Text printed when step executes</p>
-<dt><code>DEPENDEES &lt;step&gt;&#8230;</code></p>
-<dd>Steps on which this step depends</p>
-<dt><code>DEPENDERS &lt;step&gt;&#8230;</code></p>
-<dd>Steps that depend on this step</p>
-<dt><code>DEPENDS &lt;file&gt;&#8230;</code></p>
-<dd>Files on which this step depends</p>
-<dt><code>BYPRODUCTS &lt;file&gt;&#8230;</code></p>
-<dd>Files that will be generated by this step but may or may not have their modification time updated by subsequent builds.</p>
-<dt><code>ALWAYS 1</code></p>
-<dd>No stamp file, step always runs</p>
-<dt><code>EXCLUDE_FROM_MAIN 1</code></p>
-<dd>Main target does not depend on this step</p>
-<dt><code>WORKING_DIRECTORY &lt;dir&gt;</code></p>
-<dd>Working directory for command</p>
-<dt><code>LOG 1</code></p>
-<dd>Wrap step in script to log output</p>
-<dt><code>USES_TERMINAL 1</code></p>
-<dd>Give the step direct access to the terminal if possible. </p>
+<dt><code>COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Command line invoked by this step</dd>
+<dt><code>COMMENT &lt;text&gt;&#8230;</code></dt>
+<dd>Text printed when step executes</dd>
+<dt><code>DEPENDEES &lt;step&gt;&#8230;</code></dt>
+<dd>Steps on which this step depends</dd>
+<dt><code>DEPENDERS &lt;step&gt;&#8230;</code></dt>
+<dd>Steps that depend on this step</dd>
+<dt><code>DEPENDS &lt;file&gt;&#8230;</code></dt>
+<dd>Files on which this step depends</dd>
+<dt><code>BYPRODUCTS &lt;file&gt;&#8230;</code></dt>
+<dd>Files that will be generated by this step but may or may not have their modification time updated by subsequent builds.</dd>
+<dt><code>ALWAYS 1</code></dt>
+<dd>No stamp file, step always runs</dd>
+<dt><code>EXCLUDE_FROM_MAIN 1</code></dt>
+<dd>Main target does not depend on this step</dd>
+<dt><code>WORKING_DIRECTORY &lt;dir&gt;</code></dt>
+<dd>Working directory for command</dd>
+<dt><code>LOG 1</code></dt>
+<dd>Wrap step in script to log output</dd>
+<dt><code>USES_TERMINAL 1</code></dt>
+<dd>Give the step direct access to the terminal if possible. </dd>
 <p> The command line, comment, working directory, and byproducts of every standard and custom step are processed to replace tokens <code>&lt;SOURCE_DIR&gt;</code>, <code>&lt;BINARY_DIR&gt;</code>, <code>&lt;INSTALL_DIR&gt;</code>, and <code>&lt;TMP_DIR&gt;</code> with corresponding property values. </p>
 <p> Any builtin step that specifies a <code>&lt;step&gt;_COMMAND cmd&#8230;</code> or custom step that specifies a <code>COMMAND cmd&#8230;</code> may specify additional command lines using the form <code>COMMAND cmd&#8230;</code>. At build time the commands will be executed in order and aborted if any one fails. For example: </p>
 <pre>... BUILD_COMMAND make COMMAND echo done ...</pre>
 <p>specifies to run <code>make</code> and then <code>echo done</code> during the build step. Whether the current working directory is preserved between commands is not defined. Behavior of shell operators like <code>&amp;&amp;</code> is not defined. </p>
 <p> Arguments to <code>&lt;step&gt;_COMMAND</code> or <code>COMMAND</code> options may use <code>generator expressions</code>.</p>
-<dt><code>ExternalProject_Get_Property</code></p>
-<dd>The <code>ExternalProject_Get_Property</code> function retrieves external project target properties: </p>
+<dt><code>ExternalProject_Get_Property</code></dt>
+<dd>The <code>ExternalProject_Get_Property</code> function retrieves external project target properties: </dd>
 <pre>ExternalProject_Get_Property(&lt;name&gt; [prop1 [prop2 [...]]])</pre>
 <p>It stores property values in variables of the same name. Property names correspond to the keyword argument names of <code>ExternalProject_Add</code>.</p>
-<dt><code>ExternalProject_Add_StepTargets</code></p>
-<dd>The <code>ExternalProject_Add_StepTargets</code> function generates custom targets for the steps listed: </p>
+<dt><code>ExternalProject_Add_StepTargets</code></dt>
+<dd>The <code>ExternalProject_Add_StepTargets</code> function generates custom targets for the steps listed: </dd>
 <pre>ExternalProject_Add_StepTargets(&lt;name&gt; [NO_DEPENDS] [step1 [step2 [...]]])</pre>
 <p>If <code>NO_DEPENDS</code> is set, the target will not depend on the dependencies of the complete project. This is usually safe to use for the download, update, and patch steps that do not require that all the dependencies are updated and built. Using <code>NO_DEPENDS</code> for other of the default steps might break parallel builds, so you should avoid, it. For custom steps, you should consider whether or not the custom commands requires that the dependencies are configured, built and installed. </p>
 <p> If <code>STEP_TARGETS</code> or <code>INDEPENDENT_STEP_TARGETS</code> is set then <code>ExternalProject_Add_StepTargets</code> is automatically called at the end of matching calls to <code>ExternalProject_Add_Step</code>. Pass <code>STEP_TARGETS</code> or <code>INDEPENDENT_STEP_TARGETS</code> explicitly to individual <code>ExternalProject_Add</code> calls, or implicitly to all <code>ExternalProject_Add</code> calls by setting the directory properties <code>EP_STEP_TARGETS</code> and <code>EP_INDEPENDENT_STEP_TARGETS</code>. The <code>INDEPENDENT</code> version of the argument and of the property will call <code>ExternalProject_Add_StepTargets</code> with the <code>NO_DEPENDS</code> argument. </p>
@@ -2533,8 +2533,8 @@ INSTALL_DIR = &lt;base&gt;/Install/&lt;name&gt;</pre>
 <p> This functionality is provided to make it easy to drive the steps independently of each other by specifying targets on build command lines. For example, you may be submitting to a sub-project based dashboard, where you want to drive the configure portion of the build, then submit to the dashboard, followed by the build portion, followed by tests. If you invoke a custom target that depends on a step halfway through the step dependency chain, then all the previous steps will also run to ensure everything is up to date. </p>
 <p> For example, to drive configure, build and test steps independently for each <code>ExternalProject_Add</code> call in your project, write the following line prior to any <code>ExternalProject_Add</code> calls in your <code>CMakeLists.txt</code> file: </p>
 <pre>set_property(DIRECTORY PROPERTY EP_STEP_TARGETS configure build test)</pre>
-<dt><code>ExternalProject_Add_StepDependencies</code></p>
-<dd>The <code>ExternalProject_Add_StepDependencies</code> function add some dependencies for some external project step: </p>
+<dt><code>ExternalProject_Add_StepDependencies</code></dt>
+<dd>The <code>ExternalProject_Add_StepDependencies</code> function add some dependencies for some external project step: </dd>
 <pre>ExternalProject_Add_StepDependencies(&lt;name&gt; &lt;step&gt; [target1 [target2 [...]]])</pre>
 <p>This function takes care to set both target and file level dependencies, and will ensure that parallel builds will not break. It should be used instead of <code>add_dependencies()</code> when adding a dependency for some of the step targets generated by <code>ExternalProject</code>.</dl>
 <h3>FeatureSummary</h3>
@@ -2563,32 +2563,32 @@ Foo , Foo provides cool stuff.</pre>
 <p>The FEATURE_SUMMARY() macro can be used to print information about enabled or disabled packages or features of a project. By default, only the names of the features/packages will be printed and their required version when one was specified. Use SET_PACKAGE_PROPERTIES() to add more useful information, like e.g. a download URL for the respective package or their purpose in the project. </p>
 <p> The WHAT option is the only mandatory option. Here you specify what information will be printed:</p>
 <dl>
-<dt><code>ALL</code></p>
-<dd>print everything</p>
-<dt><code>ENABLED_FEATURES</code></p>
-<dd>the list of all features which are enabled</p>
-<dt><code>DISABLED_FEATURES</code></p>
-<dd>the list of all features which are disabled</p>
-<dt><code>PACKAGES_FOUND</code></p>
-<dd>the list of all packages which have been found</p>
-<dt><code>PACKAGES_NOT_FOUND</code></p>
-<dd>the list of all packages which have not been found</p>
-<dt><code>OPTIONAL_PACKAGES_FOUND</code></p>
-<dd>only those packages which have been found which have the type OPTIONAL</p>
-<dt><code>OPTIONAL_PACKAGES_NOT_FOUND</code></p>
-<dd>only those packages which have not been found which have the type OPTIONAL</p>
-<dt><code>RECOMMENDED_PACKAGES_FOUND</code></p>
-<dd>only those packages which have been found which have the type RECOMMENDED</p>
-<dt><code>RECOMMENDED_PACKAGES_NOT_FOUND</code></p>
-<dd>only those packages which have not been found which have the type RECOMMENDED</p>
-<dt><code>REQUIRED_PACKAGES_FOUND</code></p>
-<dd>only those packages which have been found which have the type REQUIRED</p>
-<dt><code>REQUIRED_PACKAGES_NOT_FOUND</code></p>
-<dd>only those packages which have not been found which have the type REQUIRED</p>
-<dt><code>RUNTIME_PACKAGES_FOUND</code></p>
-<dd>only those packages which have been found which have the type RUNTIME</p>
-<dt><code>RUNTIME_PACKAGES_NOT_FOUND</code></p>
-<dd>only those packages which have not been found which have the type RUNTIME </p>
+<dt><code>ALL</code></dt>
+<dd>print everything</dd>
+<dt><code>ENABLED_FEATURES</code></dt>
+<dd>the list of all features which are enabled</dd>
+<dt><code>DISABLED_FEATURES</code></dt>
+<dd>the list of all features which are disabled</dd>
+<dt><code>PACKAGES_FOUND</code></dt>
+<dd>the list of all packages which have been found</dd>
+<dt><code>PACKAGES_NOT_FOUND</code></dt>
+<dd>the list of all packages which have not been found</dd>
+<dt><code>OPTIONAL_PACKAGES_FOUND</code></dt>
+<dd>only those packages which have been found which have the type OPTIONAL</dd>
+<dt><code>OPTIONAL_PACKAGES_NOT_FOUND</code></dt>
+<dd>only those packages which have not been found which have the type OPTIONAL</dd>
+<dt><code>RECOMMENDED_PACKAGES_FOUND</code></dt>
+<dd>only those packages which have been found which have the type RECOMMENDED</dd>
+<dt><code>RECOMMENDED_PACKAGES_NOT_FOUND</code></dt>
+<dd>only those packages which have not been found which have the type RECOMMENDED</dd>
+<dt><code>REQUIRED_PACKAGES_FOUND</code></dt>
+<dd>only those packages which have been found which have the type REQUIRED</dd>
+<dt><code>REQUIRED_PACKAGES_NOT_FOUND</code></dt>
+<dd>only those packages which have not been found which have the type REQUIRED</dd>
+<dt><code>RUNTIME_PACKAGES_FOUND</code></dt>
+<dd>only those packages which have been found which have the type RUNTIME</dd>
+<dt><code>RUNTIME_PACKAGES_NOT_FOUND</code></dt>
+<dd>only those packages which have not been found which have the type RUNTIME </dd>
 <p> With the exception of the <code>ALL</code> value, these values can be combined in order to customize the output. For example: </p>
 <pre>feature_summary(WHAT ENABLED_FEATURES DISABLED_FEATURES)</pre>
 <p>If a FILENAME is given, the information is printed into this file. If APPEND is used, it is appended to this file, otherwise the file is overwritten if it already existed. If the VAR option is used, the information is &quot;printed&quot; into the specified variable. If FILENAME is not used, the information is printed to the terminal. Using the DESCRIPTION option a description or headline can be set which will be printed above the actual content. If INCLUDE_QUIET_PACKAGES is given, packages which have been searched with find_package(&#8230; QUIET) will also be listed. By default they are skipped. If FATAL_ON_MISSING_REQUIRED_PACKAGES is given, CMake will abort if a package which is marked as REQUIRED has not been found. </p>
@@ -2688,12 +2688,12 @@ AVIFILE_FOUND, If false, don't try to use AVIFILE</pre>
 <p>Find <code>bison</code> executable and provide a macro to generate custom build rules. </p>
 <p> The module defines the following variables:</p>
 <dl>
-<dt><code>BISON_EXECUTABLE</code></p>
-<dd>path to the <code>bison</code> program</p>
-<dt><code>BISON_VERSION</code></p>
-<dd>version of <code>bison</code></p>
-<dt><code>BISON_FOUND</code></p>
-<dd>true if the program was found </p>
+<dt><code>BISON_EXECUTABLE</code></dt>
+<dd>path to the <code>bison</code> program</dd>
+<dt><code>BISON_VERSION</code></dt>
+<dd>version of <code>bison</code></dd>
+<dt><code>BISON_FOUND</code></dt>
+<dd>true if the program was found </dd>
 <p> The minimum required version of <code>bison</code> can be specified using the standard CMake syntax, e.g. <code>find_package(BISON 2.1.3)</code>. </p>
 <p> If <code>bison</code> is found, the module defines the macro: </p>
 <pre>BISON_TARGET(&lt;Name&gt; &lt;YaccInput&gt; &lt;CodeOutput&gt;
@@ -2703,25 +2703,25 @@ AVIFILE_FOUND, If false, don't try to use AVIFILE</pre>
  )</pre>
 <p>which will create a custom rule to generate a parser. <code>&lt;YaccInput&gt;</code> is the path to a yacc file. <code>&lt;CodeOutput&gt;</code> is the name of the source file generated by bison. A header file is also be generated, and contains the token list. </p>
 <p> The options are:</p>
-<dt><code>COMPILE_FLAGS &lt;flags&gt;</code></p>
-<dd>Specify flags to be added to the <code>bison</code> command line.</p>
-<dt><code>DEFINES_FILE &lt;file&gt;</code></p>
-<dd>Specify a non-default header <code>&lt;file&gt;</code> to be generated by <code>bison</code>.</p>
-<dt><code>VERBOSE &lt;file&gt;</code></p>
-<dd>Tell <code>bison</code> to write verbose descriptions of the grammar and parser to the given <code>&lt;file&gt;</code>. </p>
+<dt><code>COMPILE_FLAGS &lt;flags&gt;</code></dt>
+<dd>Specify flags to be added to the <code>bison</code> command line.</dd>
+<dt><code>DEFINES_FILE &lt;file&gt;</code></dt>
+<dd>Specify a non-default header <code>&lt;file&gt;</code> to be generated by <code>bison</code>.</dd>
+<dt><code>VERBOSE &lt;file&gt;</code></dt>
+<dd>Tell <code>bison</code> to write verbose descriptions of the grammar and parser to the given <code>&lt;file&gt;</code>. </dd>
 <p> The macro defines the following variables:</p>
-<dt><code>BISON_&lt;Name&gt;_DEFINED</code></p>
-<dd>true is the macro ran successfully</p>
-<dt><code>BISON_&lt;Name&gt;_INPUT</code></p>
-<dd>The input source file, an alias for &lt;YaccInput&gt;</p>
-<dt><code>BISON_&lt;Name&gt;_OUTPUT_SOURCE</code></p>
-<dd>The source file generated by bison</p>
-<dt><code>BISON_&lt;Name&gt;_OUTPUT_HEADER</code></p>
-<dd>The header file generated by bison</p>
-<dt><code>BISON_&lt;Name&gt;_OUTPUTS</code></p>
-<dd>The sources files generated by bison</p>
-<dt><code>BISON_&lt;Name&gt;_COMPILE_FLAGS</code></p>
-<dd>Options used in the <code>bison</code> command line </p>
+<dt><code>BISON_&lt;Name&gt;_DEFINED</code></dt>
+<dd>true is the macro ran successfully</dd>
+<dt><code>BISON_&lt;Name&gt;_INPUT</code></dt>
+<dd>The input source file, an alias for &lt;YaccInput&gt;</dd>
+<dt><code>BISON_&lt;Name&gt;_OUTPUT_SOURCE</code></dt>
+<dd>The source file generated by bison</dd>
+<dt><code>BISON_&lt;Name&gt;_OUTPUT_HEADER</code></dt>
+<dd>The header file generated by bison</dd>
+<dt><code>BISON_&lt;Name&gt;_OUTPUTS</code></dt>
+<dd>The sources files generated by bison</dd>
+<dt><code>BISON_&lt;Name&gt;_COMPILE_FLAGS</code></dt>
+<dd>Options used in the <code>bison</code> command line </dd>
 <p> Example usage: </p>
 <pre>find_package(BISON)
 BISON_TARGET(MyParser parser.y ${CMAKE_CURRENT_BINARY_DIR}/parser.cpp
@@ -2751,19 +2751,19 @@ BLA_F95 if set on tries to find the f95 interfaces for BLAS/LAPACK</pre>
 <p>Find provider for <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3). </p>
 <p> Checks if OS supports <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3) via either libc or custom library. This module defines the following variables:</p>
 <dl>
-<dt><code>Backtrace_HEADER</code></p>
-<dd>The header file needed for <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3). Cached. Could be forcibly set by user.</p>
-<dt><code>Backtrace_INCLUDE_DIRS</code></p>
-<dd>The include directories needed to use <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3) header.</p>
-<dt><code>Backtrace_LIBRARIES</code></p>
-<dd>The libraries (linker flags) needed to use <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3), if any.</p>
-<dt><code>Backtrace_FOUND</code></p>
-<dd>Is set if and only if <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3) support detected. </p>
+<dt><code>Backtrace_HEADER</code></dt>
+<dd>The header file needed for <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3). Cached. Could be forcibly set by user.</dd>
+<dt><code>Backtrace_INCLUDE_DIRS</code></dt>
+<dd>The include directories needed to use <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3) header.</dd>
+<dt><code>Backtrace_LIBRARIES</code></dt>
+<dd>The libraries (linker flags) needed to use <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3), if any.</dd>
+<dt><code>Backtrace_FOUND</code></dt>
+<dd>Is set if and only if <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3) support detected. </dd>
 <p> The following cache variables are also available to set or use:</p>
-<dt><code>Backtrace_LIBRARY</code></p>
-<dd>The external library providing backtrace, if any.</p>
-<dt><code>Backtrace_INCLUDE_DIR</code></p>
-<dd>The directory holding the <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3) header. </p>
+<dt><code>Backtrace_LIBRARY</code></dt>
+<dd>The external library providing backtrace, if any.</dd>
+<dt><code>Backtrace_INCLUDE_DIR</code></dt>
+<dd>The directory holding the <a href="/docs/linux/man/3-backtrace/">backtrace</a>(3) header. </dd>
 <p> Typical usage is to generate of header file using configure_file() with the contents like the following: </p>
 <pre>#cmakedefine01 Backtrace_FOUND
 #if Backtrace_FOUND
@@ -3190,28 +3190,28 @@ CURL_VERSION_STRING - the version of curl found (since CMake 2.8.8)</pre>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>CURSES_FOUND</code></p>
-<dd>True if Curses is found.</p>
-<dt><code>CURSES_INCLUDE_DIRS</code></p>
-<dd>The include directories needed to use Curses.</p>
-<dt><code>CURSES_LIBRARIES</code></p>
-<dd>The libraries needed to use Curses.</p>
-<dt><code>CURSES_HAVE_CURSES_H</code></p>
-<dd>True if curses.h is available.</p>
-<dt><code>CURSES_HAVE_NCURSES_H</code></p>
-<dd>True if ncurses.h is available.</p>
-<dt><code>CURSES_HAVE_NCURSES_NCURSES_H</code></p>
-<dd>True if <code>ncurses/ncurses.h</code> is available.</p>
-<dt><code>CURSES_HAVE_NCURSES_CURSES_H</code></p>
-<dd>True if <code>ncurses/curses.h</code> is available. </p>
+<dt><code>CURSES_FOUND</code></dt>
+<dd>True if Curses is found.</dd>
+<dt><code>CURSES_INCLUDE_DIRS</code></dt>
+<dd>The include directories needed to use Curses.</dd>
+<dt><code>CURSES_LIBRARIES</code></dt>
+<dd>The libraries needed to use Curses.</dd>
+<dt><code>CURSES_HAVE_CURSES_H</code></dt>
+<dd>True if curses.h is available.</dd>
+<dt><code>CURSES_HAVE_NCURSES_H</code></dt>
+<dd>True if ncurses.h is available.</dd>
+<dt><code>CURSES_HAVE_NCURSES_NCURSES_H</code></dt>
+<dd>True if <code>ncurses/ncurses.h</code> is available.</dd>
+<dt><code>CURSES_HAVE_NCURSES_CURSES_H</code></dt>
+<dd>True if <code>ncurses/curses.h</code> is available. </dd>
 <p> Set <code>CURSES_NEED_NCURSES</code> to <code>TRUE</code> before the <code>find_package(Curses)</code> call if NCurses functionality is required.</dl>
 <h3>Backward Compatibility</h3>
 <p>The following variable are provided for backward compatibility:</p>
 <dl>
-<dt><code>CURSES_INCLUDE_DIR</code></p>
-<dd>Path to Curses include. Use <code>CURSES_INCLUDE_DIRS</code> instead.</p>
-<dt><code>CURSES_LIBRARY</code></p>
-<dd>Path to Curses library. Use <code>CURSES_LIBRARIES</code> instead.</dl>
+<dt><code>CURSES_INCLUDE_DIR</code></dt>
+<dd>Path to Curses include. Use <code>CURSES_INCLUDE_DIRS</code> instead.</dd>
+<dt><code>CURSES_LIBRARY</code></dt>
+<dd>Path to Curses library. Use <code>CURSES_LIBRARIES</code> instead.</dd></dl>
 <h3>FindCVS</h3>
 <p>The module defines the following variables: </p>
 <pre>CVS_EXECUTABLE - path to cvs command line client
@@ -3304,10 +3304,10 @@ DCMTK_DIR - (optional) Source directory for DCMTK</pre>
 <h3>Compatibility</h3>
 <p>This module is able to find a version of DCMTK that does or does not export a <i>DCMTKConfig.cmake</i> file. It applies a two step process:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Step 1: Attempt to find DCMTK version providing a <i>DCMTKConfig.cmake</i> file.</p>
-<dt>&bull;</p>
-<dd>Step 2: If step 1 failed, rely on <i>FindDCMTK.cmake</i> to set <i>DCMTK_*</i> variables details below. </p>
+<dt>&bull;</dt>
+<dd>Step 1: Attempt to find DCMTK version providing a <i>DCMTKConfig.cmake</i> file.</dd>
+<dt>&bull;</dt>
+<dd>Step 2: If step 1 failed, rely on <i>FindDCMTK.cmake</i> to set <i>DCMTK_*</i> variables details below. </dd>
 <p> <i>Recent DCMTK</i> provides a <i>DCMTKConfig.cmake</i> <code>package configuration file</code>. To exclusively use the package configuration file (recommended when possible), pass the <i>NO_MODULE</i> option to <code>find_package()</code>. For example, <i>find_package(DCMTK NO_MODULE)</i>. This requires official DCMTK snapshot <i>3.6.1_20140617</i> or newer. </p>
 <p> Until all clients update to the more recent DCMTK, build systems will need to support different versions of DCMTK. </p>
 <p> On any given system, the following combinations of DCMTK versions could be considered: <center></p>
@@ -3600,12 +3600,12 @@ It creates a custom target &quot;pofiles&quot;.</pre>
 <h3>FindGit</h3>
 <p>The module defines the following variables:</p>
 <dl>
-<dt><code>GIT_EXECUTABLE</code></p>
-<dd>Path to Git command-line client.</p>
-<dt><code>Git_FOUND</code>, <code>GIT_FOUND</code></p>
-<dd>True if the Git command-line client was found.</p>
-<dt><code>GIT_VERSION_STRING</code></p>
-<dd>The version of Git found. </p>
+<dt><code>GIT_EXECUTABLE</code></dt>
+<dd>Path to Git command-line client.</dd>
+<dt><code>Git_FOUND</code>, <code>GIT_FOUND</code></dt>
+<dd>True if the Git command-line client was found.</dd>
+<dt><code>GIT_VERSION_STRING</code></dt>
+<dd>The version of Git found. </dd>
 <p> Example usage: </p>
 <pre>find_package(Git)
 if(Git_FOUND)
@@ -3626,8 +3626,8 @@ GLEW_FOUND - true if GLEW has been found and can be used</pre>
 <h3>IMPORTED Targets</h3>
 <p>This module defines the <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>GLUT::GLUT</code></p>
-<dd>Defined if the system has GLUT.</dl>
+<dt><code>GLUT::GLUT</code></dt>
+<dd>Defined if the system has GLUT.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module sets the following variables: </p>
 <pre>GLUT_INCLUDE_DIR, where to find GL/glut.h, etc.
@@ -3679,31 +3679,31 @@ GSL_LIBRARY_DEBUG - Location of the debug GSL library (if any).</pre>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>GTest::GTest</code></p>
-<dd>The Google Test <code>gtest</code> library, if found; adds Thread::Thread automatically</p>
-<dt><code>GTest::Main</code></p>
-<dd>The Google Test <code>gtest_main</code> library, if found</dl>
+<dt><code>GTest::GTest</code></dt>
+<dd>The Google Test <code>gtest</code> library, if found; adds Thread::Thread automatically</dd>
+<dt><code>GTest::Main</code></dt>
+<dd>The Google Test <code>gtest_main</code> library, if found</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>GTEST_FOUND</code></p>
-<dd>Found the Google Testing framework</p>
-<dt><code>GTEST_INCLUDE_DIRS</code></p>
-<dd>the directory containing the Google Test headers </p>
+<dt><code>GTEST_FOUND</code></dt>
+<dd>Found the Google Testing framework</dd>
+<dt><code>GTEST_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the Google Test headers </dd>
 <p> The library variables below are set as normal variables. These contain debug/optimized keywords when a debugging library is found.</p>
-<dt><code>GTEST_LIBRARIES</code></p>
-<dd>The Google Test <code>gtest</code> library; note it also requires linking with an appropriate thread library</p>
-<dt><code>GTEST_MAIN_LIBRARIES</code></p>
-<dd>The Google Test <code>gtest_main</code> library</p>
-<dt><code>GTEST_BOTH_LIBRARIES</code></p>
-<dd>Both <code>gtest</code> and <code>gtest_main</code></dl>
+<dt><code>GTEST_LIBRARIES</code></dt>
+<dd>The Google Test <code>gtest</code> library; note it also requires linking with an appropriate thread library</dd>
+<dt><code>GTEST_MAIN_LIBRARIES</code></dt>
+<dd>The Google Test <code>gtest_main</code> library</dd>
+<dt><code>GTEST_BOTH_LIBRARIES</code></dt>
+<dd>Both <code>gtest</code> and <code>gtest_main</code></dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>GTEST_ROOT</code></p>
-<dd>The root directory of the Google Test installation (may also be set as an environment variable)</p>
-<dt><code>GTEST_MSVC_SEARCH</code></p>
-<dd>If compiling with MSVC, this variable can be set to <code>MD</code> or <code>MT</code> (the default) to enable searching a GTest build tree</dl>
+<dt><code>GTEST_ROOT</code></dt>
+<dd>The root directory of the Google Test installation (may also be set as an environment variable)</dd>
+<dt><code>GTEST_MSVC_SEARCH</code></dt>
+<dd>If compiling with MSVC, this variable can be set to <code>MD</code> or <code>MT</code> (the default) to enable searching a GTest build tree</dd></dl>
 <h3>Example usage</h3>
 <pre>enable_testing()
 find_package(GTest REQUIRED)
@@ -3714,12 +3714,12 @@ add_test(AllTestsInFoo foo)</pre>
 <p>If you would like each Google test to show up in CTest as a test you may use the following macro: </p>
 <pre>GTEST_ADD_TESTS(executable extra_args files...)</pre>
 <dl>
-<dt><code>executable</code></p>
-<dd>the path to the test executable</p>
-<dt><code>extra_args</code></p>
-<dd>a list of extra arguments to be passed to executable enclosed in quotes (or <code>&quot;&quot;</code> for none)</p>
-<dt><code>files&#8230;</code></p>
-<dd>a list of source files to search for tests and test fixtures. Or <code>AUTO</code> to find them from executable target </p>
+<dt><code>executable</code></dt>
+<dd>the path to the test executable</dd>
+<dt><code>extra_args</code></dt>
+<dd>a list of extra arguments to be passed to executable enclosed in quotes (or <code>&quot;&quot;</code> for none)</dd>
+<dt><code>files&#8230;</code></dt>
+<dd>a list of source files to search for tests and test fixtures. Or <code>AUTO</code> to find them from executable target </dd>
 <p> However, note that this macro will slow down your tests by running an executable for each test and test fixture. </p>
 <p> Example usage: </p>
 <pre>set(FooTestArgs --foo 1 --bar 2)
@@ -4042,27 +4042,27 @@ JPEG_FOUND, If false, do not try to use JPEG.</pre>
 <p>Find the KDE3 include and library dirs, KDE preprocessors and define a some macros </p>
 <p> This module defines the following variables:</p>
 <dl>
-<dt><code>KDE3_DEFINITIONS</code></p>
-<dd>compiler definitions required for compiling KDE software</p>
-<dt><code>KDE3_INCLUDE_DIR</code></p>
-<dd>the KDE include directory</p>
-<dt><code>KDE3_INCLUDE_DIRS</code></p>
-<dd>the KDE and the Qt include directory, for use with include_directories()</p>
-<dt><code>KDE3_LIB_DIR</code></p>
-<dd>the directory where the KDE libraries are installed, for use with link_directories()</p>
-<dt><code>QT_AND_KDECORE_LIBS</code></p>
-<dd>this contains both the Qt and the kdecore library</p>
-<dt><code>KDE3_DCOPIDL_EXECUTABLE</code></p>
-<dd>the dcopidl executable</p>
-<dt><code>KDE3_DCOPIDL2CPP_EXECUTABLE</code></p>
-<dd>the dcopidl2cpp executable</p>
-<dt><code>KDE3_KCFGC_EXECUTABLE</code></p>
-<dd>the kconfig_compiler executable</p>
-<dt><code>KDE3_FOUND</code></p>
-<dd>set to TRUE if all of the above has been found </p>
+<dt><code>KDE3_DEFINITIONS</code></dt>
+<dd>compiler definitions required for compiling KDE software</dd>
+<dt><code>KDE3_INCLUDE_DIR</code></dt>
+<dd>the KDE include directory</dd>
+<dt><code>KDE3_INCLUDE_DIRS</code></dt>
+<dd>the KDE and the Qt include directory, for use with include_directories()</dd>
+<dt><code>KDE3_LIB_DIR</code></dt>
+<dd>the directory where the KDE libraries are installed, for use with link_directories()</dd>
+<dt><code>QT_AND_KDECORE_LIBS</code></dt>
+<dd>this contains both the Qt and the kdecore library</dd>
+<dt><code>KDE3_DCOPIDL_EXECUTABLE</code></dt>
+<dd>the dcopidl executable</dd>
+<dt><code>KDE3_DCOPIDL2CPP_EXECUTABLE</code></dt>
+<dd>the dcopidl2cpp executable</dd>
+<dt><code>KDE3_KCFGC_EXECUTABLE</code></dt>
+<dd>the kconfig_compiler executable</dd>
+<dt><code>KDE3_FOUND</code></dt>
+<dd>set to TRUE if all of the above has been found </dd>
 <p> The following user adjustable options are provided:</p>
-<dt><code>KDE3_BUILD_TESTS</code></p>
-<dd>enable this to build KDE testcases </p>
+<dt><code>KDE3_BUILD_TESTS</code></dt>
+<dd>enable this to build KDE testcases </dd>
 <p> It also adds the following macros (from KDE3Macros.cmake) SRCS_VAR is always the variable which contains the list of source files for your application or library. </p>
 <p> KDE3_AUTOMOC(file1 &#8230; fileN) </p>
 <pre>Call this if you want to have automatic moc file handling.
@@ -4201,32 +4201,32 @@ LIBXSLT_DEFINITIONS - Compiler switches required for using LibXslt
 LIBXSLT_VERSION_STRING - version of LibXslt found (since CMake 2.8.8)</pre>
 <p>Additionally, the following two variables are set (but not required for using xslt):</p>
 <dl>
-<dt><code>LIBXSLT_EXSLT_LIBRARIES</code></p>
-<dd>Link to these if you need to link against the exslt library.</p>
-<dt><code>LIBXSLT_XSLTPROC_EXECUTABLE</code></p>
-<dd>Contains the full path to the xsltproc executable if found.</dl>
+<dt><code>LIBXSLT_EXSLT_LIBRARIES</code></dt>
+<dd>Link to these if you need to link against the exslt library.</dd>
+<dt><code>LIBXSLT_XSLTPROC_EXECUTABLE</code></dt>
+<dd>Contains the full path to the xsltproc executable if found.</dd></dl>
 <h3>FindLTTngUST</h3>
 <p>This module finds the <i>LTTng-UST</i> library.</p>
 <h3>Imported target</h3>
 <p>This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>LTTng::UST</code></p>
-<dd>The LTTng-UST library, if found</dl>
+<dt><code>LTTng::UST</code></dt>
+<dd>The LTTng-UST library, if found</dd></dl>
 <h3>Result variables</h3>
 <p>This module sets the following</p>
 <dl>
-<dt><code>LTTNGUST_FOUND</code></p>
-<dd><code>TRUE</code> if system has LTTng-UST</p>
-<dt><code>LTTNGUST_INCLUDE_DIRS</code></p>
-<dd>The LTTng-UST include directories</p>
-<dt><code>LTTNGUST_LIBRARIES</code></p>
-<dd>The libraries needed to use LTTng-UST</p>
-<dt><code>LTTNGUST_VERSION_STRING</code></p>
-<dd>The LTTng-UST version</p>
-<dt><code>LTTNGUST_HAS_TRACEF</code></p>
-<dd><code>TRUE</code> if the <code>tracef()</code> API is available in the system&#8217;s LTTng-UST</p>
-<dt><code>LTTNGUST_HAS_TRACELOG</code></p>
-<dd><code>TRUE</code> if the <code>tracelog()</code> API is available in the system&#8217;s LTTng-UST</dl>
+<dt><code>LTTNGUST_FOUND</code></dt>
+<dd><code>TRUE</code> if system has LTTng-UST</dd>
+<dt><code>LTTNGUST_INCLUDE_DIRS</code></dt>
+<dd>The LTTng-UST include directories</dd>
+<dt><code>LTTNGUST_LIBRARIES</code></dt>
+<dd>The libraries needed to use LTTng-UST</dd>
+<dt><code>LTTNGUST_VERSION_STRING</code></dt>
+<dd>The LTTng-UST version</dd>
+<dt><code>LTTNGUST_HAS_TRACEF</code></dt>
+<dd><code>TRUE</code> if the <code>tracef()</code> API is available in the system&#8217;s LTTng-UST</dd>
+<dt><code>LTTNGUST_HAS_TRACELOG</code></dt>
+<dd><code>TRUE</code> if the <code>tracelog()</code> API is available in the system&#8217;s LTTng-UST</dd></dl>
 <h3>FindLua50</h3>
 <p>Locate Lua library This module defines </p>
 <pre>LUA50_FOUND, if false, do not try to link to Lua
@@ -4266,99 +4266,99 @@ LUA_VERSION_PATCH - the patch version of Lua</pre>
 <p>Finds Matlab installations and provides Matlab tools and libraries to cmake. </p>
 <p> This package first intention is to find the libraries associated with Matlab in order to be able to build Matlab extensions (mex files). It can also be used:</p>
 <dl>
-<dt>&bull;</p>
-<dd>run specific commands in Matlab</p>
-<dt>&bull;</p>
-<dd>declare Matlab unit test</p>
-<dt>&bull;</p>
-<dd>retrieve various information from Matlab (mex extensions, versions and release queries, &#8230;) </p>
+<dt>&bull;</dt>
+<dd>run specific commands in Matlab</dd>
+<dt>&bull;</dt>
+<dd>declare Matlab unit test</dd>
+<dt>&bull;</dt>
+<dd>retrieve various information from Matlab (mex extensions, versions and release queries, &#8230;) </dd>
 <p> The module supports the following components:</p>
-<dt>&bull;</p>
-<dd><code>MX_LIBRARY</code> and <code>ENG_LIBRARY</code> respectively the MX and ENG libraries of Matlab</p>
-<dt>&bull;</p>
-<dd><code>MAIN_PROGRAM</code> the Matlab binary program. </p>
+<dt>&bull;</dt>
+<dd><code>MX_LIBRARY</code> and <code>ENG_LIBRARY</code> respectively the MX and ENG libraries of Matlab</dd>
+<dt>&bull;</dt>
+<dd><code>MAIN_PROGRAM</code> the Matlab binary program. </dd>
 <p> <code>NOTE:</code> The version given to the <code>find_package()</code> directive is the Matlab <code>version</code>, which should not be confused with the Matlab <i>release</i> name (eg. <i>R2014</i>). The <code>matlab_get_version_from_release_name()</code> and <code>matlab_get_release_name_from_version()</code> allow a mapping from the release name to the version. </p>
 <p> The variable <code>Matlab_ROOT_DIR</code> may be specified in order to give the path of the desired Matlab version. Otherwise, the behaviour is platform specific:</p>
-<dt>&bull;</p>
-<dd>Windows: The installed versions of Matlab are retrieved from the Windows registry</p>
-<dt>&bull;</p>
-<dd>OS X: The installed versions of Matlab are given by the MATLAB paths in <code>/Application</code>. If no such application is found, it falls back to the one that might be accessible from the PATH.</p>
-<dt>&bull;</p>
-<dd>Unix: The desired Matlab should be accessible from the PATH. </p>
+<dt>&bull;</dt>
+<dd>Windows: The installed versions of Matlab are retrieved from the Windows registry</dd>
+<dt>&bull;</dt>
+<dd>OS X: The installed versions of Matlab are given by the MATLAB paths in <code>/Application</code>. If no such application is found, it falls back to the one that might be accessible from the PATH.</dd>
+<dt>&bull;</dt>
+<dd>Unix: The desired Matlab should be accessible from the PATH. </dd>
 <p> Additional information is provided when <code>MATLAB_FIND_DEBUG</code> is set. When a Matlab binary is found automatically and the <code>MATLAB_VERSION</code> is not given, the version is queried from Matlab directly. On Windows, it can make a window running Matlab appear. </p>
 <p> The mapping of the release names and the version of Matlab is performed by defining pairs (name, version). The variable <code>MATLAB_ADDITIONAL_VERSIONS</code> may be provided before the call to the <code>find_package()</code> in order to handle additional versions. </p>
 <p> A Matlab scripts can be added to the set of tests using the <code>matlab_add_unit_test()</code>. By default, the Matlab unit test framework will be used (&gt;= 2013a) to run this script, but regular <code>.m</code> files returning an exit code can be used as well (0 indicating a success).</dl>
 <h3>Module Input Variables</h3>
 <p>Users or projects may set the following variables to configure the module behaviour:</p>
 <dl>
-<dt><code>Matlab_ROOT_DIR</code></p>
-<dd>the root of the Matlab installation.</p>
-<dt><code>MATLAB_FIND_DEBUG</code></p>
-<dd>outputs debug information</p>
-<dt><code>MATLAB_ADDITIONAL_VERSIONS</code></p>
-<dd>additional versions of Matlab for the automatic retrieval of the installed versions.</dl>
+<dt><code>Matlab_ROOT_DIR</code></dt>
+<dd>the root of the Matlab installation.</dd>
+<dt><code>MATLAB_FIND_DEBUG</code></dt>
+<dd>outputs debug information</dd>
+<dt><code>MATLAB_ADDITIONAL_VERSIONS</code></dt>
+<dd>additional versions of Matlab for the automatic retrieval of the installed versions.</dd></dl>
 <h3>Variables defined by the module</h3>
 <h3>Result variables</h3>
 <dl>
-<dt><code>Matlab_FOUND</code></p>
-<dd><code>TRUE</code> if the Matlab installation is found, <code>FALSE</code> otherwise. All variable below are defined if Matlab is found.</p>
-<dt><code>Matlab_ROOT_DIR</code></p>
-<dd>the final root of the Matlab installation determined by the FindMatlab module.</p>
-<dt><code>Matlab_MAIN_PROGRAM</code></p>
-<dd>the Matlab binary program. Available only if the component <code>MAIN_PROGRAM</code> is given in the <code>find_package()</code> directive.</p>
-<dt><code>Matlab_INCLUDE_DIRS</code></p>
-<dd>the path of the Matlab libraries headers</p>
-<dt><code>Matlab_MEX_LIBRARY</code></p>
-<dd>library for mex, always available.</p>
-<dt><code>Matlab_MX_LIBRARY</code></p>
-<dd>mx library of Matlab (arrays). Available only if the component <code>MX_LIBRARY</code> has been requested.</p>
-<dt><code>Matlab_ENG_LIBRARY</code></p>
-<dd>Matlab engine library. Available only if the component <code>ENG_LIBRARY</code> is requested.</p>
-<dt><code>Matlab_LIBRARIES</code></p>
-<dd>the whole set of libraries of Matlab</p>
-<dt><code>Matlab_MEX_COMPILER</code></p>
-<dd>the mex compiler of Matlab. Currently not used. Available only if the component <code>MEX_COMPILER</code> is asked</dl>
+<dt><code>Matlab_FOUND</code></dt>
+<dd><code>TRUE</code> if the Matlab installation is found, <code>FALSE</code> otherwise. All variable below are defined if Matlab is found.</dd>
+<dt><code>Matlab_ROOT_DIR</code></dt>
+<dd>the final root of the Matlab installation determined by the FindMatlab module.</dd>
+<dt><code>Matlab_MAIN_PROGRAM</code></dt>
+<dd>the Matlab binary program. Available only if the component <code>MAIN_PROGRAM</code> is given in the <code>find_package()</code> directive.</dd>
+<dt><code>Matlab_INCLUDE_DIRS</code></dt>
+<dd>the path of the Matlab libraries headers</dd>
+<dt><code>Matlab_MEX_LIBRARY</code></dt>
+<dd>library for mex, always available.</dd>
+<dt><code>Matlab_MX_LIBRARY</code></dt>
+<dd>mx library of Matlab (arrays). Available only if the component <code>MX_LIBRARY</code> has been requested.</dd>
+<dt><code>Matlab_ENG_LIBRARY</code></dt>
+<dd>Matlab engine library. Available only if the component <code>ENG_LIBRARY</code> is requested.</dd>
+<dt><code>Matlab_LIBRARIES</code></dt>
+<dd>the whole set of libraries of Matlab</dd>
+<dt><code>Matlab_MEX_COMPILER</code></dt>
+<dd>the mex compiler of Matlab. Currently not used. Available only if the component <code>MEX_COMPILER</code> is asked</dd></dl>
 <h3>Cached variables</h3>
 <dl>
-<dt><code>Matlab_MEX_EXTENSION</code></p>
-<dd>the extension of the mex files for the current platform (given by Matlab).</p>
-<dt><code>Matlab_ROOT_DIR</code></p>
-<dd>the location of the root of the Matlab installation found. If this value is changed by the user, the result variables are recomputed.</dl>
+<dt><code>Matlab_MEX_EXTENSION</code></dt>
+<dd>the extension of the mex files for the current platform (given by Matlab).</dd>
+<dt><code>Matlab_ROOT_DIR</code></dt>
+<dd>the location of the root of the Matlab installation found. If this value is changed by the user, the result variables are recomputed.</dd></dl>
 <h3>Provided macros</h3>
 <dl>
-<dt><code>matlab_get_version_from_release_name()</code></p>
-<dd>returns the version from the release name</p>
-<dt><code>matlab_get_release_name_from_version()</code></p>
-<dd>returns the release name from the Matlab version</dl>
+<dt><code>matlab_get_version_from_release_name()</code></dt>
+<dd>returns the version from the release name</dd>
+<dt><code>matlab_get_release_name_from_version()</code></dt>
+<dd>returns the release name from the Matlab version</dd></dl>
 <h3>Provided functions</h3>
 <dl>
-<dt><code>matlab_add_mex()</code></p>
-<dd>adds a target compiling a MEX file.</p>
-<dt><code>matlab_add_unit_test()</code></p>
-<dd>adds a Matlab unit test file as a test to the project.</p>
-<dt><code>matlab_extract_all_installed_versions_from_registry()</code></p>
-<dd>parses the registry for all Matlab versions. Available on Windows only. The part of the registry parsed is dependent on the host processor</p>
-<dt><code>matlab_get_all_valid_matlab_roots_from_registry()</code></p>
-<dd>returns all the possible Matlab paths, according to a previously given list. Only the existing/accessible paths are kept. This is mainly useful for the searching all possible Matlab installation.</p>
-<dt><code>matlab_get_mex_suffix()</code></p>
-<dd>returns the suffix to be used for the mex files (platform/architecture dependent)</p>
-<dt><code>matlab_get_version_from_matlab_run()</code></p>
-<dd>returns the version of Matlab, given the full directory of the Matlab program.</dl>
+<dt><code>matlab_add_mex()</code></dt>
+<dd>adds a target compiling a MEX file.</dd>
+<dt><code>matlab_add_unit_test()</code></dt>
+<dd>adds a Matlab unit test file as a test to the project.</dd>
+<dt><code>matlab_extract_all_installed_versions_from_registry()</code></dt>
+<dd>parses the registry for all Matlab versions. Available on Windows only. The part of the registry parsed is dependent on the host processor</dd>
+<dt><code>matlab_get_all_valid_matlab_roots_from_registry()</code></dt>
+<dd>returns all the possible Matlab paths, according to a previously given list. Only the existing/accessible paths are kept. This is mainly useful for the searching all possible Matlab installation.</dd>
+<dt><code>matlab_get_mex_suffix()</code></dt>
+<dd>returns the suffix to be used for the mex files (platform/architecture dependent)</dd>
+<dt><code>matlab_get_version_from_matlab_run()</code></dt>
+<dd>returns the version of Matlab, given the full directory of the Matlab program.</dd></dl>
 <h3>Known issues</h3>
 <dl>
-<dt><code>Symbol clash in a MEX target</code></p>
-<dd>By default, every symbols inside a MEX file defined with the command <code>matlab_add_mex()</code> have hidden visibility, except for the entry point. This is the default behaviour of the MEX compiler, which lowers the risk of symbol collision between the libraries shipped with Matlab, and the libraries to which the MEX file is linking to. This is also the default on Windows platforms. </p>
+<dt><code>Symbol clash in a MEX target</code></dt>
+<dd>By default, every symbols inside a MEX file defined with the command <code>matlab_add_mex()</code> have hidden visibility, except for the entry point. This is the default behaviour of the MEX compiler, which lowers the risk of symbol collision between the libraries shipped with Matlab, and the libraries to which the MEX file is linking to. This is also the default on Windows platforms. </dd>
 <p> However, this is not sufficient in certain case, where for instance your MEX file is linking against libraries that are already loaded by Matlab, even if those libraries have different SONAMES. A possible solution is to hide the symbols of the libraries to which the MEX target is linking to. This can be achieved in GNU GCC compilers with the linker option <code>-Wl,&#8211;exclude-libs,ALL</code>.</p>
-<dt><code>Tests using GPU resources</code></p>
-<dd>in case your MEX file is using the GPU and in order to be able to run unit tests on this MEX file, the GPU resources should be properly released by Matlab. A possible solution is to make Matlab aware of the use of the GPU resources in the session, which can be performed by a command such as <code>D = gpuDevice()</code> at the beginning of the test script (or via a fixture).</dl>
+<dt><code>Tests using GPU resources</code></dt>
+<dd>in case your MEX file is using the GPU and in order to be able to run unit tests on this MEX file, the GPU resources should be properly released by Matlab. A possible solution is to make Matlab aware of the use of the GPU resources in the session, which can be performed by a command such as <code>D = gpuDevice()</code> at the beginning of the test script (or via a fixture).</dd></dl>
 <h3>Reference</h3>
 <dl>
-<dt><code>Matlab_ROOT_DIR</code></p>
-<dd>The root folder of the Matlab installation. If set before the call to <code>find_package()</code>, the module will look for the components in that path. If not set, then an automatic search of Matlab will be performed. If set, it should point to a valid version of Matlab.</p>
-<dt><code>MATLAB_FIND_DEBUG</code></p>
-<dd>If set, the lookup of Matlab and the intermediate configuration steps are outputted to the console.</p>
-<dt><code>MATLAB_ADDITIONAL_VERSIONS</code></p>
-<dd>If set, specifies additional versions of Matlab that may be looked for. The variable should be a list of strings, organised by pairs of release name and versions, such as follows: </p>
+<dt><code>Matlab_ROOT_DIR</code></dt>
+<dd>The root folder of the Matlab installation. If set before the call to <code>find_package()</code>, the module will look for the components in that path. If not set, then an automatic search of Matlab will be performed. If set, it should point to a valid version of Matlab.</dd>
+<dt><code>MATLAB_FIND_DEBUG</code></dt>
+<dd>If set, the lookup of Matlab and the intermediate configuration steps are outputted to the console.</dd>
+<dt><code>MATLAB_ADDITIONAL_VERSIONS</code></dt>
+<dd>If set, specifies additional versions of Matlab that may be looked for. The variable should be a list of strings, organised by pairs of release name and versions, such as follows: </dd>
 <pre>set(MATLAB_ADDITIONAL_VERSIONS
  &quot;release_name1=corresponding_version1&quot;
  &quot;release_name2=corresponding_version2&quot;
@@ -4370,42 +4370,42 @@ LUA_VERSION_PATCH - the patch version of Lua</pre>
  &quot;R2013a=8.1&quot;
  &quot;R2012b=8.0&quot;)</pre>
 <p>The order of entries in this list matters when several versions of Matlab are installed. The priority is set according to the ordering in this list.</p>
-<dt><code>matlab_get_version_from_release_name</code></p>
-<dd>Returns the version of Matlab (17.58) from a release name (R2017k)</p>
-<dt><code>matlab_get_release_name_from_version</code></p>
-<dd>Returns the release name (R2017k) from the version of Matlab (17.58)</p>
-<dt><code>matlab_extract_all_installed_versions_from_registry</code></p>
-<dd>This function parses the registry and founds the Matlab versions that are installed. The found versions are returned in <i>matlab_versions</i>. Set <i>win64</i> to <i>TRUE</i> if the 64 bit version of Matlab should be looked for The returned list contains all versions under <code>HKLM\SOFTWARE\Mathworks\MATLAB</code> or an empty list in case an error occurred (or nothing found). </p>
+<dt><code>matlab_get_version_from_release_name</code></dt>
+<dd>Returns the version of Matlab (17.58) from a release name (R2017k)</dd>
+<dt><code>matlab_get_release_name_from_version</code></dt>
+<dd>Returns the release name (R2017k) from the version of Matlab (17.58)</dd>
+<dt><code>matlab_extract_all_installed_versions_from_registry</code></dt>
+<dd>This function parses the registry and founds the Matlab versions that are installed. The found versions are returned in <i>matlab_versions</i>. Set <i>win64</i> to <i>TRUE</i> if the 64 bit version of Matlab should be looked for The returned list contains all versions under <code>HKLM\SOFTWARE\Mathworks\MATLAB</code> or an empty list in case an error occurred (or nothing found). </dd>
 <p> <code>NOTE:</code> Only the versions are provided. No check is made over the existence of the installation referenced in the registry,</p>
-<dt><code>matlab_get_all_valid_matlab_roots_from_registry</code></p>
-<dd>Populates the Matlab root with valid versions of Matlab. The returned matlab_roots is organized in pairs <code>(version_number,matlab_root_path)</code>. </p>
+<dt><code>matlab_get_all_valid_matlab_roots_from_registry</code></dt>
+<dd>Populates the Matlab root with valid versions of Matlab. The returned matlab_roots is organized in pairs <code>(version_number,matlab_root_path)</code>. </dd>
 <pre>matlab_get_all_valid_matlab_roots_from_registry(
  matlab_versions
  matlab_roots)</pre>
-<dt><code>matlab_versions</code></p>
-<dd>the versions of each of the Matlab installations</p>
-<dt><code>matlab_roots</code></p>
-<dd>the location of each of the Matlab installations</p>
-<dt><code>matlab_get_mex_suffix</code></p>
-<dd>Returns the extension of the mex files (the suffixes). This function should not be called before the appropriate Matlab root has been found. </p>
+<dt><code>matlab_versions</code></dt>
+<dd>the versions of each of the Matlab installations</dd>
+<dt><code>matlab_roots</code></dt>
+<dd>the location of each of the Matlab installations</dd>
+<dt><code>matlab_get_mex_suffix</code></dt>
+<dd>Returns the extension of the mex files (the suffixes). This function should not be called before the appropriate Matlab root has been found. </dd>
 <pre>matlab_get_mex_suffix(
  matlab_root
  mex_suffix)</pre>
-<dt><code>matlab_root</code></p>
-<dd>the root of the Matlab installation</p>
-<dt><code>mex_suffix</code></p>
-<dd>the variable name in which the suffix will be returned.</p>
-<dt><code>matlab_get_version_from_matlab_run</code></p>
-<dd>This function runs Matlab program specified on arguments and extracts its version. </p>
+<dt><code>matlab_root</code></dt>
+<dd>the root of the Matlab installation</dd>
+<dt><code>mex_suffix</code></dt>
+<dd>the variable name in which the suffix will be returned.</dd>
+<dt><code>matlab_get_version_from_matlab_run</code></dt>
+<dd>This function runs Matlab program specified on arguments and extracts its version. </dd>
 <pre>matlab_get_version_from_matlab_run(
  matlab_binary_path
  matlab_list_versions)</pre>
-<dt><code>matlab_binary_path</code></p>
-<dd>the location of the <i>matlab</i> binary executable</p>
-<dt><code>matlab_list_versions</code></p>
-<dd>the version extracted from Matlab</p>
-<dt><code>matlab_add_unit_test</code></p>
-<dd>Adds a Matlab unit test to the test set of cmake/ctest. This command requires the component <code>MAIN_PROGRAM</code>. The unit test uses the Matlab unittest framework (default, available starting Matlab 2013b+) except if the option <code>NO_UNITTEST_FRAMEWORK</code> is given. </p>
+<dt><code>matlab_binary_path</code></dt>
+<dd>the location of the <i>matlab</i> binary executable</dd>
+<dt><code>matlab_list_versions</code></dt>
+<dd>the version extracted from Matlab</dd>
+<dt><code>matlab_add_unit_test</code></dt>
+<dd>Adds a Matlab unit test to the test set of cmake/ctest. This command requires the component <code>MAIN_PROGRAM</code>. The unit test uses the Matlab unittest framework (default, available starting Matlab 2013b+) except if the option <code>NO_UNITTEST_FRAMEWORK</code> is given. </dd>
 <p> The function expects one Matlab test script file to be given. In the case <code>NO_UNITTEST_FRAMEWORK</code> is given, the unittest script file should contain the script to be run, plus an exit command with the exit value. This exit value will be passed to the ctest framework (0 success, non 0 failure). Additional arguments accepted by <code>add_test()</code> can be passed through <code>TEST_ARGS</code> (eg. <code>CONFIGURATION &lt;config&gt; &#8230;</code>). </p>
 <pre>matlab_add_unit_test(
  NAME &lt;name&gt;
@@ -4418,24 +4418,24 @@ LUA_VERSION_PATCH - the patch version of Lua</pre>
  [NO_UNITTEST_FRAMEWORK]
  )</pre>
 <p>The function arguments are:</p>
-<dt><code>NAME</code></p>
-<dd>name of the unittest in ctest.</p>
-<dt><code>UNITTEST_FILE</code></p>
-<dd>the matlab unittest file. Its path will be automatically added to the Matlab path.</p>
-<dt><code>UNITTEST_PRECOMMAND</code></p>
-<dd>Matlab script command to be ran before the file containing the test (eg. GPU device initialisation based on CMake variables).</p>
-<dt><code>TIMEOUT</code></p>
-<dd>the test timeout in seconds. Defaults to 180 seconds as the Matlab unit test may hang.</p>
-<dt><code>ADDITIONAL_PATH</code></p>
-<dd>a list of paths to add to the Matlab path prior to running the unit test.</p>
-<dt><code>MATLAB_ADDITIONAL_STARTUP_OPTIONS</code></p>
-<dd>a list of additional option in order to run Matlab from the command line.</p>
-<dt><code>TEST_ARGS</code></p>
-<dd>Additional options provided to the add_test command. These options are added to the default options (eg. &quot;CONFIGURATIONS Release&quot;)</p>
-<dt><code>NO_UNITTEST_FRAMEWORK</code></p>
-<dd>when set, indicates that the test should not use the unittest framework of Matlab (available for versions &gt;= R2013a).</p>
-<dt><code>matlab_add_mex</code></p>
-<dd>Adds a Matlab MEX target. This commands compiles the given sources with the current tool-chain in order to produce a MEX file. The final name of the produced output may be specified, as well as additional link libraries, and a documentation entry for the MEX file. Remaining arguments of the call are passed to the <code>add_library()</code> command. </p>
+<dt><code>NAME</code></dt>
+<dd>name of the unittest in ctest.</dd>
+<dt><code>UNITTEST_FILE</code></dt>
+<dd>the matlab unittest file. Its path will be automatically added to the Matlab path.</dd>
+<dt><code>UNITTEST_PRECOMMAND</code></dt>
+<dd>Matlab script command to be ran before the file containing the test (eg. GPU device initialisation based on CMake variables).</dd>
+<dt><code>TIMEOUT</code></dt>
+<dd>the test timeout in seconds. Defaults to 180 seconds as the Matlab unit test may hang.</dd>
+<dt><code>ADDITIONAL_PATH</code></dt>
+<dd>a list of paths to add to the Matlab path prior to running the unit test.</dd>
+<dt><code>MATLAB_ADDITIONAL_STARTUP_OPTIONS</code></dt>
+<dd>a list of additional option in order to run Matlab from the command line.</dd>
+<dt><code>TEST_ARGS</code></dt>
+<dd>Additional options provided to the add_test command. These options are added to the default options (eg. &quot;CONFIGURATIONS Release&quot;)</dd>
+<dt><code>NO_UNITTEST_FRAMEWORK</code></dt>
+<dd>when set, indicates that the test should not use the unittest framework of Matlab (available for versions &gt;= R2013a).</dd>
+<dt><code>matlab_add_mex</code></dt>
+<dd>Adds a Matlab MEX target. This commands compiles the given sources with the current tool-chain in order to produce a MEX file. The final name of the produced output may be specified, as well as additional link libraries, and a documentation entry for the MEX file. Remaining arguments of the call are passed to the <code>add_library()</code> command. </dd>
 <pre>matlab_add_mex(
  NAME &lt;name&gt;
  SRC src1 [src2 ...]
@@ -4444,16 +4444,16 @@ LUA_VERSION_PATCH - the patch version of Lua</pre>
  [LINK_TO target1 target2 ...]
  [...]
 )</pre>
-<dt><code>NAME</code></p>
-<dd>name of the target.</p>
-<dt><code>SRC</code></p>
-<dd>list of tje source files.</p>
-<dt><code>LINK_TO</code></p>
-<dd>a list of additional link dependencies. The target links to <code>libmex</code> by default. If <code>Matlab_MX_LIBRARY</code> is defined, it also links to <code>libmx</code>.</p>
-<dt><code>OUTPUT_NAME</code></p>
-<dd>if given, overrides the default name. The default name is the name of the target without any prefix and with <code>Matlab_MEX_EXTENSION</code> suffix.</p>
-<dt><code>DOCUMENTATION</code></p>
-<dd>if given, the file <code>file.txt</code> will be considered as being the documentation file for the MEX file. This file is copied into the same folder without any processing, with the same name as the final mex file, and with extension <i>.m</i>. In that case, typing <code>help &lt;name&gt;</code> in Matlab prints the documentation contained in this file. </p>
+<dt><code>NAME</code></dt>
+<dd>name of the target.</dd>
+<dt><code>SRC</code></dt>
+<dd>list of tje source files.</dd>
+<dt><code>LINK_TO</code></dt>
+<dd>a list of additional link dependencies. The target links to <code>libmex</code> by default. If <code>Matlab_MX_LIBRARY</code> is defined, it also links to <code>libmx</code>.</dd>
+<dt><code>OUTPUT_NAME</code></dt>
+<dd>if given, overrides the default name. The default name is the name of the target without any prefix and with <code>Matlab_MEX_EXTENSION</code> suffix.</dd>
+<dt><code>DOCUMENTATION</code></dt>
+<dd>if given, the file <code>file.txt</code> will be considered as being the documentation file for the MEX file. This file is copied into the same folder without any processing, with the same name as the final mex file, and with extension <i>.m</i>. In that case, typing <code>help &lt;name&gt;</code> in Matlab prints the documentation contained in this file. </dd>
 <p> The documentation file is not processed and should be in the following format: </p>
 <pre>% This is the documentation
 function ret = mex_target_output_name(input1)</pre>
@@ -4547,21 +4547,21 @@ OpenCL_LIBRARY - the path to the OpenCL library</pre>
 <h3>Result Variables</h3>
 <p>This module sets the following variables:</p>
 <dl>
-<dt><code>OPENGL_FOUND</code></p>
-<dd>True, if the system has OpenGL.</p>
-<dt><code>OPENGL_XMESA_FOUND</code></p>
-<dd>True, if the system has XMESA.</p>
-<dt><code>OPENGL_GLU_FOUND</code></p>
-<dd>True, if the system has GLU.</p>
-<dt><code>OPENGL_INCLUDE_DIR</code></p>
-<dd>Path to the OpenGL include directory.</p>
-<dt><code>OPENGL_LIBRARIES</code></p>
-<dd>Paths to the OpenGL and GLU libraries. </p>
+<dt><code>OPENGL_FOUND</code></dt>
+<dd>True, if the system has OpenGL.</dd>
+<dt><code>OPENGL_XMESA_FOUND</code></dt>
+<dd>True, if the system has XMESA.</dd>
+<dt><code>OPENGL_GLU_FOUND</code></dt>
+<dd>True, if the system has GLU.</dd>
+<dt><code>OPENGL_INCLUDE_DIR</code></dt>
+<dd>Path to the OpenGL include directory.</dd>
+<dt><code>OPENGL_LIBRARIES</code></dt>
+<dd>Paths to the OpenGL and GLU libraries. </dd>
 <p> If you want to use just GL you can use these values:</p>
-<dt><code>OPENGL_gl_LIBRARY</code></p>
-<dd>Path to the OpenGL library.</p>
-<dt><code>OPENGL_glu_LIBRARY</code></p>
-<dd>Path to the GLU library.</dl>
+<dt><code>OPENGL_gl_LIBRARY</code></dt>
+<dd>Path to the OpenGL library.</dd>
+<dt><code>OPENGL_glu_LIBRARY</code></dt>
+<dd>Path to the GLU library.</dd></dl>
 <h3>OSX Specific</h3>
 <p>On OSX default to using the framework version of OpenGL. People will have to change the cache values of OPENGL_glu_LIBRARY and OPENGL_gl_LIBRARY to use OpenGL with X11 on OSX.</p>
 <h3>FindOpenMP</h3>
@@ -4586,14 +4586,14 @@ OPENMP_FOUND - true if openmp is detected</pre>
  automatically</pre>
 <p>The following environment variables are also respected for finding the OSG and it&#8217;s various components. CMAKE_PREFIX_PATH can also be used for this (see find_library() CMake documentation).</p>
 <dl>
-<dt><code>&lt;MODULE&gt;_DIR</code></p>
-<dd>(where MODULE is of the form &quot;OSGVOLUME&quot; and there is a FindosgVolume.cmake file)</p>
-<dt><code>OSG_DIR</code></p>
+<dt><code>&lt;MODULE&gt;_DIR</code></dt>
+<dd>(where MODULE is of the form &quot;OSGVOLUME&quot; and there is a FindosgVolume.cmake file)</dd>
+<dt><code>OSG_DIR</code></dt>
 <dd>
-<dt><code>OSGDIR</code></p>
+</dd><dt><code>OSGDIR</code></dt>
 <dd>
-<dt><code>OSG_ROOT</code></p>
-<dd>[CMake 2.8.10]: The CMake variable OSG_DIR can now be used as well to influence detection, instead of needing to specify an environment variable. </p>
+</dd><dt><code>OSG_ROOT</code></dt>
+<dd>[CMake 2.8.10]: The CMake variable OSG_DIR can now be used as well to influence detection, instead of needing to specify an environment variable. </dd>
 <p> This module defines the following output variables: </p>
 <pre>OPENSCENEGRAPH_FOUND - Was the OSG and all of the specified components found?</pre>
 <pre>OPENSCENEGRAPH_VERSION - The version of the OSG which was found</pre>
@@ -4611,25 +4611,25 @@ target_link_libraries(foo ${OPENSCENEGRAPH_LIBRARIES})</pre>
 <h3>Imported Targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>OpenSSL::SSL</code></p>
-<dd>The OpenSSL <code>ssl</code> library, if found.</p>
-<dt><code>OpenSSL::Crypto</code></p>
-<dd>The OpenSSL <code>crypto</code> library, if found.</dl>
+<dt><code>OpenSSL::SSL</code></dt>
+<dd>The OpenSSL <code>ssl</code> library, if found.</dd>
+<dt><code>OpenSSL::Crypto</code></dt>
+<dd>The OpenSSL <code>crypto</code> library, if found.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>OPENSSL_FOUND</code></p>
-<dd>System has the OpenSSL library.</p>
-<dt><code>OPENSSL_INCLUDE_DIR</code></p>
-<dd>The OpenSSL include directory.</p>
-<dt><code>OPENSSL_CRYPTO_LIBRARY</code></p>
-<dd>The OpenSSL crypto library.</p>
-<dt><code>OPENSSL_SSL_LIBRARY</code></p>
-<dd>The OpenSSL SSL library.</p>
-<dt><code>OPENSSL_LIBRARIES</code></p>
-<dd>All OpenSSL libraries.</p>
-<dt><code>OPENSSL_VERSION</code></p>
-<dd>This is set to <code>$major.$minor.$revision$patch</code> (e.g. <code>0.9.8s</code>).</dl>
+<dt><code>OPENSSL_FOUND</code></dt>
+<dd>System has the OpenSSL library.</dd>
+<dt><code>OPENSSL_INCLUDE_DIR</code></dt>
+<dd>The OpenSSL include directory.</dd>
+<dt><code>OPENSSL_CRYPTO_LIBRARY</code></dt>
+<dd>The OpenSSL crypto library.</dd>
+<dt><code>OPENSSL_SSL_LIBRARY</code></dt>
+<dd>The OpenSSL SSL library.</dd>
+<dt><code>OPENSSL_LIBRARIES</code></dt>
+<dd>All OpenSSL libraries.</dd>
+<dt><code>OPENSSL_VERSION</code></dt>
+<dd>This is set to <code>$major.$minor.$revision$patch</code> (e.g. <code>0.9.8s</code>).</dd></dl>
 <h3>Hints</h3>
 <p>Set <code>OPENSSL_ROOT_DIR</code> to the root directory of an OpenSSL installation. Set <code>OPENSSL_USE_STATIC_LIBS</code> to <code>TRUE</code> to look for static libraries. Set <code>OPENSSL_MSVC_STATIC_RT</code> set <code>TRUE</code> to choose the MT version of the lib.</p>
 <h3>FindOpenThreads</h3>
@@ -4777,8 +4777,8 @@ target_link_libraries(foo ${OPENSCENEGRAPH_LIBRARIES})</pre>
 <h3>FindPackageHandleStandardArgs</h3>
 <p>This module provides a function intended to be used in <i>Find Modules</i> implementing <code>find_package(&lt;PackageName&gt;)</code> calls. It handles the <code>REQUIRED</code>, <code>QUIET</code> and version-related arguments of <code>find_package</code>. It also sets the <code>&lt;PackageName&gt;_FOUND</code> variable. The package is considered found if all variables listed contain valid results, e.g. valid filepaths.</p>
 <dl>
-<dt><code>find_package_handle_standard_args</code></p>
-<dd>There are two signatures: </p>
+<dt><code>find_package_handle_standard_args</code></dt>
+<dd>There are two signatures: </dd>
 <pre>find_package_handle_standard_args(&lt;PackageName&gt;
  (DEFAULT_MSG|&lt;custom-failure-message&gt;)
  &lt;required-var&gt;...
@@ -4793,20 +4793,20 @@ find_package_handle_standard_args(&lt;PackageName&gt;
  )</pre>
 <p>The <code>&lt;PackageName&gt;_FOUND</code> variable will be set to <code>TRUE</code> if all the variables <code>&lt;required-var&gt;&#8230;</code> are valid and any optional constraints are satisfied, and <code>FALSE</code> otherwise. A success or failure message may be displayed based on the results and on whether the <code>REQUIRED</code> and/or <code>QUIET</code> option was given to the <code>find_package()</code> call. </p>
 <p> The options are:</p>
-<dt><code>(DEFAULT_MSG|&lt;custom-failure-message&gt;)</code></p>
-<dd>In the simple signature this specifies the failure message. Use <code>DEFAULT_MSG</code> to ask for a default message to be computed (recommended). Not valid in the full signature.</p>
-<dt><code>FOUND_VAR &lt;result-var&gt;</code></p>
-<dd>Obsolete. Specifies either <code>&lt;PackageName&gt;_FOUND</code> or <code>&lt;PACKAGENAME&gt;_FOUND</code> as the result variable. This exists only for compatibility with older versions of CMake and is now ignored. Result variables of both names are always set for compatibility.</p>
-<dt><code>REQUIRED_VARS &lt;required-var&gt;&#8230;</code></p>
-<dd>Specify the variables which are required for this package. These may be named in the generated failure message asking the user to set the missing variable values. Therefore these should typically be cache entries such as <code>FOO_LIBRARY</code> and not output variables like <code>FOO_LIBRARIES</code>.</p>
-<dt><code>VERSION_VAR &lt;version-var&gt;</code></p>
-<dd>Specify the name of a variable that holds the version of the package that has been found. This version will be checked against the (potentially) specified required version given to the <code>find_package()</code> call, including its <code>EXACT</code> option. The default messages include information about the required version and the version which has been actually found, both if the version is ok or not.</p>
-<dt><code>HANDLE_COMPONENTS</code></p>
-<dd>Enable handling of package components. In this case, the command will report which components have been found and which are missing, and the <code>&lt;PackageName&gt;_FOUND</code> variable will be set to <code>FALSE</code> if any of the required components (i.e. not the ones listed after the <code>OPTIONAL_COMPONENTS</code> option of <code>find_package()</code>) are missing.</p>
-<dt><code>CONFIG_MODE</code></p>
-<dd>Specify that the calling find module is a wrapper around a call to <code>find_package(&lt;PackageName&gt; NO_MODULE)</code>. This implies a <code>VERSION_VAR</code> value of <code>&lt;PackageName&gt;_VERSION</code>. The command will automatically check whether the package configuration file was found.</p>
-<dt><code>FAIL_MESSAGE &lt;custom-failure-message&gt;</code></p>
-<dd>Specify a custom failure message instead of using the default generated message. Not recommended. </p>
+<dt><code>(DEFAULT_MSG|&lt;custom-failure-message&gt;)</code></dt>
+<dd>In the simple signature this specifies the failure message. Use <code>DEFAULT_MSG</code> to ask for a default message to be computed (recommended). Not valid in the full signature.</dd>
+<dt><code>FOUND_VAR &lt;result-var&gt;</code></dt>
+<dd>Obsolete. Specifies either <code>&lt;PackageName&gt;_FOUND</code> or <code>&lt;PACKAGENAME&gt;_FOUND</code> as the result variable. This exists only for compatibility with older versions of CMake and is now ignored. Result variables of both names are always set for compatibility.</dd>
+<dt><code>REQUIRED_VARS &lt;required-var&gt;&#8230;</code></dt>
+<dd>Specify the variables which are required for this package. These may be named in the generated failure message asking the user to set the missing variable values. Therefore these should typically be cache entries such as <code>FOO_LIBRARY</code> and not output variables like <code>FOO_LIBRARIES</code>.</dd>
+<dt><code>VERSION_VAR &lt;version-var&gt;</code></dt>
+<dd>Specify the name of a variable that holds the version of the package that has been found. This version will be checked against the (potentially) specified required version given to the <code>find_package()</code> call, including its <code>EXACT</code> option. The default messages include information about the required version and the version which has been actually found, both if the version is ok or not.</dd>
+<dt><code>HANDLE_COMPONENTS</code></dt>
+<dd>Enable handling of package components. In this case, the command will report which components have been found and which are missing, and the <code>&lt;PackageName&gt;_FOUND</code> variable will be set to <code>FALSE</code> if any of the required components (i.e. not the ones listed after the <code>OPTIONAL_COMPONENTS</code> option of <code>find_package()</code>) are missing.</dd>
+<dt><code>CONFIG_MODE</code></dt>
+<dd>Specify that the calling find module is a wrapper around a call to <code>find_package(&lt;PackageName&gt; NO_MODULE)</code>. This implies a <code>VERSION_VAR</code> value of <code>&lt;PackageName&gt;_VERSION</code>. The command will automatically check whether the package configuration file was found.</dd>
+<dt><code>FAIL_MESSAGE &lt;custom-failure-message&gt;</code></dt>
+<dd>Specify a custom failure message instead of using the default generated message. Not recommended. </dd>
 <p> Example for the simple signature: </p>
 <pre>find_package_handle_standard_args(LibXml2 DEFAULT_MSG
  LIBXML2_LIBRARY LIBXML2_INCLUDE_DIR)</pre>
@@ -4872,13 +4872,13 @@ PIKE_EXECUTABLE = full path to the pike binary</pre>
 <p> Finds the <code>pkg-config</code> executable and add the <code>pkg_check_modules()</code> and <code>pkg_search_module()</code> commands. </p>
 <p> In order to find the <code>pkg-config</code> executable, it uses the <code>PKG_CONFIG_EXECUTABLE</code> variable or the <code>PKG_CONFIG</code> environment variable first.</p>
 <dl>
-<dt><code>pkg_get_variable</code></p>
-<dd>Retrieves the value of a variable from a package: </p>
+<dt><code>pkg_get_variable</code></dt>
+<dd>Retrieves the value of a variable from a package: </dd>
 <pre>pkg_get_variable(&lt;RESULT&gt; &lt;MODULE&gt; &lt;VARIABLE&gt;)</pre>
 <p>For example: </p>
 <pre>pkg_get_variable(GI_GIRDIR gobject-introspection-1.0 girdir)</pre>
-<dt><code>pkg_check_modules</code></p>
-<dd>Checks for all the given modules. </p>
+<dt><code>pkg_check_modules</code></dt>
+<dd>Checks for all the given modules. </dd>
 <pre>pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] [QUIET]
  [NO_CMAKE_PATH] [NO_CMAKE_ENVIRONMENT_PATH]
  [IMPORTED_TARGET]
@@ -4924,46 +4924,46 @@ PKG_CONFIG_VERSION_STRING ... the version of the pkg-config program found
 <p>Defines for example: </p>
 <pre>XRENDER_LIBRARIES=Xrender;X11``
 XRENDER_STATIC_LIBRARIES=Xrender;X11;pthread;Xau;Xdmcp</pre>
-<dt><code>pkg_search_module</code></p>
-<dd>Same as <code>pkg_check_modules()</code>, but instead it checks for given modules and uses the first working one. </p>
+<dt><code>pkg_search_module</code></dt>
+<dd>Same as <code>pkg_check_modules()</code>, but instead it checks for given modules and uses the first working one. </dd>
 <pre>pkg_search_module(&lt;PREFIX&gt; [REQUIRED] [QUIET]
  [NO_CMAKE_PATH] [NO_CMAKE_ENVIRONMENT_PATH]
  [IMPORTED_TARGET]
  &lt;MODULE&gt; [&lt;MODULE&gt;]*)</pre>
 <p>Examples </p>
 <pre>pkg_search_module (BAR libxml-2.0 libxml2 libxml&gt;=2)</pre>
-<dt><code>PKG_CONFIG_EXECUTABLE</code></p>
-<dd>Path to the pkg-config executable.</p>
-<dt><code>PKG_CONFIG_USE_CMAKE_PREFIX_PATH</code></p>
-<dd>Whether <code>pkg_check_modules()</code> and <code>pkg_search_module()</code> should add the paths in <code>CMAKE_PREFIX_PATH</code>, <code>CMAKE_FRAMEWORK_PATH</code>, and <code>CMAKE_APPBUNDLE_PATH</code> cache and environment variables to <code>pkg-config</code> search path. </p>
+<dt><code>PKG_CONFIG_EXECUTABLE</code></dt>
+<dd>Path to the pkg-config executable.</dd>
+<dt><code>PKG_CONFIG_USE_CMAKE_PREFIX_PATH</code></dt>
+<dd>Whether <code>pkg_check_modules()</code> and <code>pkg_search_module()</code> should add the paths in <code>CMAKE_PREFIX_PATH</code>, <code>CMAKE_FRAMEWORK_PATH</code>, and <code>CMAKE_APPBUNDLE_PATH</code> cache and environment variables to <code>pkg-config</code> search path. </dd>
 <p> If this variable is not set, this behavior is enabled by default if <code>CMAKE_MINIMUM_REQUIRED_VERSION</code> is 3.1 or later, disabled otherwise.</dl>
 <h3>FindPNG</h3>
 <p>Find libpng, the official reference library for the PNG image format.</p>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>PNG::PNG</code></p>
-<dd>The libpng library, if found.</dl>
+<dt><code>PNG::PNG</code></dt>
+<dd>The libpng library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>PNG_INCLUDE_DIRS</code></p>
-<dd>where to find png.h, etc.</p>
-<dt><code>PNG_LIBRARIES</code></p>
-<dd>the libraries to link against to use PNG.</p>
-<dt><code>PNG_DEFINITIONS</code></p>
-<dd>You should add_definitons(${PNG_DEFINITIONS}) before compiling code that includes png library files.</p>
-<dt><code>PNG_FOUND</code></p>
-<dd>If false, do not try to use PNG.</p>
-<dt><code>PNG_VERSION_STRING</code></p>
-<dd>the version of the PNG library found (since CMake 2.8.8)</dl>
+<dt><code>PNG_INCLUDE_DIRS</code></dt>
+<dd>where to find png.h, etc.</dd>
+<dt><code>PNG_LIBRARIES</code></dt>
+<dd>the libraries to link against to use PNG.</dd>
+<dt><code>PNG_DEFINITIONS</code></dt>
+<dd>You should add_definitons(${PNG_DEFINITIONS}) before compiling code that includes png library files.</dd>
+<dt><code>PNG_FOUND</code></dt>
+<dd>If false, do not try to use PNG.</dd>
+<dt><code>PNG_VERSION_STRING</code></dt>
+<dd>the version of the PNG library found (since CMake 2.8.8)</dd></dl>
 <h3>Obsolete variables</h3>
 <p>The following variables may also be set, for backwards compatibility:</p>
 <dl>
-<dt><code>PNG_LIBRARY</code></p>
-<dd>where to find the PNG library.</p>
-<dt><code>PNG_INCLUDE_DIR</code></p>
-<dd>where to find the PNG headers (same as PNG_INCLUDE_DIRS) </p>
+<dt><code>PNG_LIBRARY</code></dt>
+<dd>where to find the PNG library.</dd>
+<dt><code>PNG_INCLUDE_DIR</code></dt>
+<dd>where to find the PNG headers (same as PNG_INCLUDE_DIRS) </dd>
 <p> Since PNG depends on the ZLib compression library, none of the above will be defined unless ZLib can be found.</dl>
 <h3>FindPostgreSQL</h3>
 <p>Find the PostgreSQL installation. </p>
@@ -4982,42 +4982,42 @@ PostgreSQL_VERSION_STRING - the version of PostgreSQL found (since CMake 2.8.8)<
 <p>Locate and configure the Google Protocol Buffers library. </p>
 <p> The following variables can be set and are optional:</p>
 <dl>
-<dt><code>Protobuf_SRC_ROOT_FOLDER</code></p>
-<dd>When compiling with MSVC, if this cache variable is set the protobuf-default VS project build locations (vsprojects/Debug and vsprojects/Release or vsprojects/x64/Debug and vsprojects/x64/Release) will be searched for libraries and binaries.</p>
-<dt><code>Protobuf_IMPORT_DIRS</code></p>
-<dd>List of additional directories to be searched for imported .proto files.</p>
-<dt><code>Protobuf_DEBUG</code></p>
-<dd>Show debug messages. </p>
+<dt><code>Protobuf_SRC_ROOT_FOLDER</code></dt>
+<dd>When compiling with MSVC, if this cache variable is set the protobuf-default VS project build locations (vsprojects/Debug and vsprojects/Release or vsprojects/x64/Debug and vsprojects/x64/Release) will be searched for libraries and binaries.</dd>
+<dt><code>Protobuf_IMPORT_DIRS</code></dt>
+<dd>List of additional directories to be searched for imported .proto files.</dd>
+<dt><code>Protobuf_DEBUG</code></dt>
+<dd>Show debug messages. </dd>
 <p> Defines the following variables:</p>
-<dt><code>Protobuf_FOUND</code></p>
-<dd>Found the Google Protocol Buffers library (libprotobuf &amp; header files)</p>
-<dt><code>Protobuf_VERSION</code></p>
-<dd>Version of package found.</p>
-<dt><code>Protobuf_INCLUDE_DIRS</code></p>
-<dd>Include directories for Google Protocol Buffers</p>
-<dt><code>Protobuf_LIBRARIES</code></p>
-<dd>The protobuf libraries</p>
-<dt><code>Protobuf_PROTOC_LIBRARIES</code></p>
-<dd>The protoc libraries</p>
-<dt><code>Protobuf_LITE_LIBRARIES</code></p>
-<dd>The protobuf-lite libraries </p>
+<dt><code>Protobuf_FOUND</code></dt>
+<dd>Found the Google Protocol Buffers library (libprotobuf &amp; header files)</dd>
+<dt><code>Protobuf_VERSION</code></dt>
+<dd>Version of package found.</dd>
+<dt><code>Protobuf_INCLUDE_DIRS</code></dt>
+<dd>Include directories for Google Protocol Buffers</dd>
+<dt><code>Protobuf_LIBRARIES</code></dt>
+<dd>The protobuf libraries</dd>
+<dt><code>Protobuf_PROTOC_LIBRARIES</code></dt>
+<dd>The protoc libraries</dd>
+<dt><code>Protobuf_LITE_LIBRARIES</code></dt>
+<dd>The protobuf-lite libraries </dd>
 <p> The following cache variables are also available to set or use:</p>
-<dt><code>Protobuf_LIBRARY</code></p>
-<dd>The protobuf library</p>
-<dt><code>Protobuf_PROTOC_LIBRARY</code></p>
-<dd>The protoc library</p>
-<dt><code>Protobuf_INCLUDE_DIR</code></p>
-<dd>The include directory for protocol buffers</p>
-<dt><code>Protobuf_PROTOC_EXECUTABLE</code></p>
-<dd>The protoc compiler</p>
-<dt><code>Protobuf_LIBRARY_DEBUG</code></p>
-<dd>The protobuf library (debug)</p>
-<dt><code>Protobuf_PROTOC_LIBRARY_DEBUG</code></p>
-<dd>The protoc library (debug)</p>
-<dt><code>Protobuf_LITE_LIBRARY</code></p>
-<dd>The protobuf lite library</p>
-<dt><code>Protobuf_LITE_LIBRARY_DEBUG</code></p>
-<dd>The protobuf lite library (debug) </p>
+<dt><code>Protobuf_LIBRARY</code></dt>
+<dd>The protobuf library</dd>
+<dt><code>Protobuf_PROTOC_LIBRARY</code></dt>
+<dd>The protoc library</dd>
+<dt><code>Protobuf_INCLUDE_DIR</code></dt>
+<dd>The include directory for protocol buffers</dd>
+<dt><code>Protobuf_PROTOC_EXECUTABLE</code></dt>
+<dd>The protoc compiler</dd>
+<dt><code>Protobuf_LIBRARY_DEBUG</code></dt>
+<dd>The protobuf library (debug)</dd>
+<dt><code>Protobuf_PROTOC_LIBRARY_DEBUG</code></dt>
+<dd>The protoc library (debug)</dd>
+<dt><code>Protobuf_LITE_LIBRARY</code></dt>
+<dd>The protobuf lite library</dd>
+<dt><code>Protobuf_LITE_LIBRARY_DEBUG</code></dt>
+<dd>The protobuf lite library (debug) </dd>
 <p> Example: </p>
 <pre>find_package(Protobuf REQUIRED)
 include_directories(${Protobuf_INCLUDE_DIRS})
@@ -5027,22 +5027,22 @@ protobuf_generate_python(PROTO_PY foo.proto)
 add_executable(bar bar.cc ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <p><code>NOTE:</code> The <code>protobuf_generate_cpp</code> and <code>protobuf_generate_python</code> functions and <code>add_executable()</code> or <code>add_library()</code> calls only work properly within the same directory.</p>
-<dt><code>protobuf_generate_cpp</code></p>
-<dd>Add custom commands to process <code>.proto</code> files to C++: </p>
+<dt><code>protobuf_generate_cpp</code></dt>
+<dd>Add custom commands to process <code>.proto</code> files to C++: </dd>
 <pre>protobuf_generate_cpp (&lt;SRCS&gt; &lt;HDRS&gt; [&lt;ARGN&gt;...])</pre>
-<dt><code>SRCS</code></p>
-<dd>Variable to define with autogenerated source files</p>
-<dt><code>HDRS</code></p>
-<dd>Variable to define with autogenerated header files</p>
-<dt><code>ARGN</code></p>
-<dd><code>.proto</code> files</p>
-<dt><code>protobuf_generate_python</code></p>
-<dd>Add custom commands to process <code>.proto</code> files to Python: </p>
+<dt><code>SRCS</code></dt>
+<dd>Variable to define with autogenerated source files</dd>
+<dt><code>HDRS</code></dt>
+<dd>Variable to define with autogenerated header files</dd>
+<dt><code>ARGN</code></dt>
+<dd><code>.proto</code> files</dd>
+<dt><code>protobuf_generate_python</code></dt>
+<dd>Add custom commands to process <code>.proto</code> files to Python: </dd>
 <pre>protobuf_generate_python (&lt;PY&gt; [&lt;ARGN&gt;...])</pre>
-<dt><code>PY</code></p>
-<dd>Variable to define with autogenerated Python files</p>
-<dt><code>ARGN</code></p>
-<dd><code>.proto</code> filess</dl>
+<dt><code>PY</code></dt>
+<dd>Variable to define with autogenerated Python files</dd>
+<dt><code>ARGN</code></dt>
+<dd><code>.proto</code> filess</dd></dl>
 <h3>FindPythonInterp</h3>
 <p>Find python interpreter </p>
 <p> This module finds if Python interpreter is installed and determines where the executables are. This code sets the following variables: </p>
@@ -5208,75 +5208,75 @@ target_link_libraries(myexe Qt4::QtGui Qt4::QtXml)</pre>
 <p> Targets are aware of their dependencies, so for example it is not necessary to list <code>Qt4::QtCore</code> if another Qt library is listed, and it is not necessary to list <code>Qt4::QtGui</code> if <code>Qt4::QtDeclarative</code> is listed. Targets may be tested for existence in the usual way with the <code>if(TARGET)</code> command. </p>
 <p> The Qt toolkit may contain both debug and release libraries. <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> will choose the appropriate version based on the build configuration.</p>
 <dl>
-<dt><code>Qt4::QtCore</code></p>
-<dd>The QtCore target</p>
-<dt><code>Qt4::QtGui</code></p>
-<dd>The QtGui target</p>
-<dt><code>Qt4::Qt3Support</code></p>
-<dd>The Qt3Support target</p>
-<dt><code>Qt4::QtAssistant</code></p>
-<dd>The QtAssistant target</p>
-<dt><code>Qt4::QtAssistantClient</code></p>
-<dd>The QtAssistantClient target</p>
-<dt><code>Qt4::QAxContainer</code></p>
-<dd>The QAxContainer target (Windows only)</p>
-<dt><code>Qt4::QAxServer</code></p>
-<dd>The QAxServer target (Windows only)</p>
-<dt><code>Qt4::QtDBus</code></p>
-<dd>The QtDBus target</p>
-<dt><code>Qt4::QtDeclarative</code></p>
-<dd>The QtDeclarative target</p>
-<dt><code>Qt4::QtDesigner</code></p>
-<dd>The QtDesigner target</p>
-<dt><code>Qt4::QtDesignerComponents</code></p>
-<dd>The QtDesignerComponents target</p>
-<dt><code>Qt4::QtHelp</code></p>
-<dd>The QtHelp target</p>
-<dt><code>Qt4::QtMotif</code></p>
-<dd>The QtMotif target</p>
-<dt><code>Qt4::QtMultimedia</code></p>
-<dd>The QtMultimedia target</p>
-<dt><code>Qt4::QtNetwork</code></p>
-<dd>The QtNetwork target</p>
-<dt><code>Qt4::QtNsPLugin</code></p>
-<dd>The QtNsPLugin target</p>
-<dt><code>Qt4::QtOpenGL</code></p>
-<dd>The QtOpenGL target</p>
-<dt><code>Qt4::QtScript</code></p>
-<dd>The QtScript target</p>
-<dt><code>Qt4::QtScriptTools</code></p>
-<dd>The QtScriptTools target</p>
-<dt><code>Qt4::QtSql</code></p>
-<dd>The QtSql target</p>
-<dt><code>Qt4::QtSvg</code></p>
-<dd>The QtSvg target</p>
-<dt><code>Qt4::QtTest</code></p>
-<dd>The QtTest target</p>
-<dt><code>Qt4::QtUiTools</code></p>
-<dd>The QtUiTools target</p>
-<dt><code>Qt4::QtWebKit</code></p>
-<dd>The QtWebKit target</p>
-<dt><code>Qt4::QtXml</code></p>
-<dd>The QtXml target</p>
-<dt><code>Qt4::QtXmlPatterns</code></p>
-<dd>The QtXmlPatterns target</p>
-<dt><code>Qt4::phonon</code></p>
-<dd>The phonon target</dl>
+<dt><code>Qt4::QtCore</code></dt>
+<dd>The QtCore target</dd>
+<dt><code>Qt4::QtGui</code></dt>
+<dd>The QtGui target</dd>
+<dt><code>Qt4::Qt3Support</code></dt>
+<dd>The Qt3Support target</dd>
+<dt><code>Qt4::QtAssistant</code></dt>
+<dd>The QtAssistant target</dd>
+<dt><code>Qt4::QtAssistantClient</code></dt>
+<dd>The QtAssistantClient target</dd>
+<dt><code>Qt4::QAxContainer</code></dt>
+<dd>The QAxContainer target (Windows only)</dd>
+<dt><code>Qt4::QAxServer</code></dt>
+<dd>The QAxServer target (Windows only)</dd>
+<dt><code>Qt4::QtDBus</code></dt>
+<dd>The QtDBus target</dd>
+<dt><code>Qt4::QtDeclarative</code></dt>
+<dd>The QtDeclarative target</dd>
+<dt><code>Qt4::QtDesigner</code></dt>
+<dd>The QtDesigner target</dd>
+<dt><code>Qt4::QtDesignerComponents</code></dt>
+<dd>The QtDesignerComponents target</dd>
+<dt><code>Qt4::QtHelp</code></dt>
+<dd>The QtHelp target</dd>
+<dt><code>Qt4::QtMotif</code></dt>
+<dd>The QtMotif target</dd>
+<dt><code>Qt4::QtMultimedia</code></dt>
+<dd>The QtMultimedia target</dd>
+<dt><code>Qt4::QtNetwork</code></dt>
+<dd>The QtNetwork target</dd>
+<dt><code>Qt4::QtNsPLugin</code></dt>
+<dd>The QtNsPLugin target</dd>
+<dt><code>Qt4::QtOpenGL</code></dt>
+<dd>The QtOpenGL target</dd>
+<dt><code>Qt4::QtScript</code></dt>
+<dd>The QtScript target</dd>
+<dt><code>Qt4::QtScriptTools</code></dt>
+<dd>The QtScriptTools target</dd>
+<dt><code>Qt4::QtSql</code></dt>
+<dd>The QtSql target</dd>
+<dt><code>Qt4::QtSvg</code></dt>
+<dd>The QtSvg target</dd>
+<dt><code>Qt4::QtTest</code></dt>
+<dd>The QtTest target</dd>
+<dt><code>Qt4::QtUiTools</code></dt>
+<dd>The QtUiTools target</dd>
+<dt><code>Qt4::QtWebKit</code></dt>
+<dd>The QtWebKit target</dd>
+<dt><code>Qt4::QtXml</code></dt>
+<dd>The QtXml target</dd>
+<dt><code>Qt4::QtXmlPatterns</code></dt>
+<dd>The QtXmlPatterns target</dd>
+<dt><code>Qt4::phonon</code></dt>
+<dd>The phonon target</dd></dl>
 <h3>Result Variables</h3>
 <p>Below is a detailed list of variables that FindQt4.cmake sets.</p>
 <dl>
-<dt><code>Qt4_FOUND</code></p>
-<dd>If false, don&#8217;t try to use Qt 4.</p>
-<dt><code>QT_FOUND</code></p>
-<dd>If false, don&#8217;t try to use Qt. This variable is for compatibility only.</p>
-<dt><code>QT4_FOUND</code></p>
-<dd>If false, don&#8217;t try to use Qt 4. This variable is for compatibility only.</p>
-<dt><code>QT_VERSION_MAJOR</code></p>
-<dd>The major version of Qt found.</p>
-<dt><code>QT_VERSION_MINOR</code></p>
-<dd>The minor version of Qt found.</p>
-<dt><code>QT_VERSION_PATCH</code></p>
-<dd>The patch version of Qt found.</dl>
+<dt><code>Qt4_FOUND</code></dt>
+<dd>If false, don&#8217;t try to use Qt 4.</dd>
+<dt><code>QT_FOUND</code></dt>
+<dd>If false, don&#8217;t try to use Qt. This variable is for compatibility only.</dd>
+<dt><code>QT4_FOUND</code></dt>
+<dd>If false, don&#8217;t try to use Qt 4. This variable is for compatibility only.</dd>
+<dt><code>QT_VERSION_MAJOR</code></dt>
+<dd>The major version of Qt found.</dd>
+<dt><code>QT_VERSION_MINOR</code></dt>
+<dd>The minor version of Qt found.</dd>
+<dt><code>QT_VERSION_PATCH</code></dt>
+<dd>The patch version of Qt found.</dd></dl>
 <h3>FindQt</h3>
 <p>Searches for all installed versions of Qt. </p>
 <p> This should only be used if your project can work with multiple versions of Qt. If not, you should just directly use FindQt4 or FindQt3. If multiple versions of Qt are found on the machine, then The user must set the option DESIRED_QT_VERSION to the version they want to use. If only one version of qt is found on the machine, then the DESIRED_QT_VERSION is set to that version and the matching FindQt3 or FindQt4 module is included. Once the user sets DESIRED_QT_VERSION, then the FindQt3 or FindQt4 module is included. </p>
@@ -5308,19 +5308,19 @@ RTI_FOUND = Set to FALSE if any HLA RTI was not found</pre>
 <p> The minimum required version of Ruby can be specified using the standard syntax, e.g. find_package(Ruby 1.8) </p>
 <p> It also determines what the name of the library is. This code sets the following variables:</p>
 <dl>
-<dt><code>RUBY_EXECUTABLE</code></p>
-<dd>full path to the ruby binary</p>
-<dt><code>RUBY_INCLUDE_DIRS</code></p>
-<dd>include dirs to be used when using the ruby library</p>
-<dt><code>RUBY_LIBRARY</code></p>
-<dd>full path to the ruby library</p>
-<dt><code>RUBY_VERSION</code></p>
-<dd>the version of ruby which was found, e.g. &quot;1.8.7&quot;</p>
-<dt><code>RUBY_FOUND</code></p>
-<dd>set to true if ruby ws found successfully </p>
+<dt><code>RUBY_EXECUTABLE</code></dt>
+<dd>full path to the ruby binary</dd>
+<dt><code>RUBY_INCLUDE_DIRS</code></dt>
+<dd>include dirs to be used when using the ruby library</dd>
+<dt><code>RUBY_LIBRARY</code></dt>
+<dd>full path to the ruby library</dd>
+<dt><code>RUBY_VERSION</code></dt>
+<dd>the version of ruby which was found, e.g. &quot;1.8.7&quot;</dd>
+<dt><code>RUBY_FOUND</code></dt>
+<dd>set to true if ruby ws found successfully </dd>
 <p> Also:</p>
-<dt><code>RUBY_INCLUDE_PATH</code></p>
-<dd>same as RUBY_INCLUDE_DIRS, only provided for compatibility reasons, don&#8217;t use it</dl>
+<dt><code>RUBY_INCLUDE_PATH</code></dt>
+<dd>same as RUBY_INCLUDE_DIRS, only provided for compatibility reasons, don&#8217;t use it</dd></dl>
 <h3>FindSDL_image</h3>
 <p>Locate SDL_image library </p>
 <p> This module defines: </p>
@@ -5449,20 +5449,20 @@ SQUISH_CLIENT_EXECUTABLE_FOUND Was the client executable found?</pre>
  [SETTINGSGROUP group] [PRE_COMMAND command] [POST_COMMAND command] )</pre>
 <p>The arguments have the following meaning:</p>
 <dl>
-<dt><code>cmakeTestName</code></p>
-<dd>this will be used as the first argument for add_test()</p>
-<dt><code>AUT targetName</code></p>
-<dd>the name of the cmake target which will be used as AUT, i.e. the executable which will be tested.</p>
-<dt><code>SUITE suiteName</code></p>
-<dd>this is either the full path to the squish suite, or just the last directory of the suite, i.e. the suite name. In this case the CMakeLists.txt which calls squish_add_test() must be located in the parent directory of the suite directory.</p>
-<dt><code>TEST squishTestName</code></p>
-<dd>the name of the squish test, i.e. the name of the subdirectory of the test inside the suite directory.</p>
-<dt><code>SETTINGSGROUP group</code></p>
-<dd>if specified, the given settings group will be used for executing the test. If not specified, the groupname will be &quot;CTest_&lt;username&gt;&quot;</p>
-<dt><code>PRE_COMMAND command</code></p>
-<dd>if specified, the given command will be executed before starting the squish test.</p>
-<dt><code>POST_COMMAND command</code></p>
-<dd>same as PRE_COMMAND, but after the squish test has been executed. </p>
+<dt><code>cmakeTestName</code></dt>
+<dd>this will be used as the first argument for add_test()</dd>
+<dt><code>AUT targetName</code></dt>
+<dd>the name of the cmake target which will be used as AUT, i.e. the executable which will be tested.</dd>
+<dt><code>SUITE suiteName</code></dt>
+<dd>this is either the full path to the squish suite, or just the last directory of the suite, i.e. the suite name. In this case the CMakeLists.txt which calls squish_add_test() must be located in the parent directory of the suite directory.</dd>
+<dt><code>TEST squishTestName</code></dt>
+<dd>the name of the squish test, i.e. the name of the subdirectory of the test inside the suite directory.</dd>
+<dt><code>SETTINGSGROUP group</code></dt>
+<dd>if specified, the given settings group will be used for executing the test. If not specified, the groupname will be &quot;CTest_&lt;username&gt;&quot;</dd>
+<dt><code>PRE_COMMAND command</code></dt>
+<dd>if specified, the given command will be executed before starting the squish test.</dd>
+<dt><code>POST_COMMAND command</code></dt>
+<dd>same as PRE_COMMAND, but after the squish test has been executed. </dd>
 <pre>enable_testing()
 find_package(Squish 4.0)
 if (SQUISH_FOUND)
@@ -5590,26 +5590,26 @@ CMAKE_HP_PTHREADS_INIT - are we using hp pthreads</pre>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>TIFF::TIFF</code></p>
-<dd>The TIFF library, if found.</dl>
+<dt><code>TIFF::TIFF</code></dt>
+<dd>The TIFF library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>TIFF_FOUND</code></p>
-<dd>true if the TIFF headers and libraries were found</p>
-<dt><code>TIFF_INCLUDE_DIR</code></p>
-<dd>the directory containing the TIFF headers</p>
-<dt><code>TIFF_INCLUDE_DIRS</code></p>
-<dd>the directory containing the TIFF headers</p>
-<dt><code>TIFF_LIBRARIES</code></p>
-<dd>TIFF libraries to be linked</dl>
+<dt><code>TIFF_FOUND</code></dt>
+<dd>true if the TIFF headers and libraries were found</dd>
+<dt><code>TIFF_INCLUDE_DIR</code></dt>
+<dd>the directory containing the TIFF headers</dd>
+<dt><code>TIFF_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the TIFF headers</dd>
+<dt><code>TIFF_LIBRARIES</code></dt>
+<dd>TIFF libraries to be linked</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>TIFF_INCLUDE_DIR</code></p>
-<dd>the directory containing the TIFF headers</p>
-<dt><code>TIFF_LIBRARY</code></p>
-<dd>the path to the TIFF library</dl>
+<dt><code>TIFF_INCLUDE_DIR</code></dt>
+<dd>the directory containing the TIFF headers</dd>
+<dt><code>TIFF_LIBRARY</code></dt>
+<dd>the path to the TIFF library</dd></dl>
 <h3>FindUnixCommands</h3>
 <p>Find Unix commands, including the ones from Cygwin </p>
 <p> This module looks for the Unix commands bash, cp, gzip, mv, rm, and tar and stores the result in the variables BASH, CP, GZIP, MV, RM, and TAR.</p>
@@ -5714,14 +5714,14 @@ WXWINDOWS_INCLUDE_PATH</pre>
 <p> An XCTest bundle is a CFBundle with a special product-type and bundle extension. The Mac Developer Library provides more information in the <i>Testing with Xcode</i> document.</p>
 <h3>Module Functions</h3>
 <dl>
-<dt><code>xctest_add_bundle</code></p>
-<dd>The <code>xctest_add_bundle</code> function creates a XCTest bundle named &lt;target&gt; which will test the target &lt;testee&gt;. Supported target types for testee are Frameworks and App Bundles: </p>
+<dt><code>xctest_add_bundle</code></dt>
+<dd>The <code>xctest_add_bundle</code> function creates a XCTest bundle named &lt;target&gt; which will test the target &lt;testee&gt;. Supported target types for testee are Frameworks and App Bundles: </dd>
 <pre>xctest_add_bundle(
  &lt;target&gt; # Name of the XCTest bundle
  &lt;testee&gt; # Target name of the testee
  )</pre>
-<dt><code>xctest_add_test</code></p>
-<dd>The <code>xctest_add_test</code> function adds an XCTest bundle to the project to be run by <code><a href="/docs/linux/man/1-ctest/">ctest</a>(1)</code>. The test will be named &lt;name&gt; and tests &lt;bundle&gt;: </p>
+<dt><code>xctest_add_test</code></dt>
+<dd>The <code>xctest_add_test</code> function adds an XCTest bundle to the project to be run by <code><a href="/docs/linux/man/1-ctest/">ctest</a>(1)</code>. The test will be named &lt;name&gt; and tests &lt;bundle&gt;: </dd>
 <pre>xctest_add_test(
  &lt;name&gt; # Test name
  &lt;bundle&gt; # Target name of XCTest bundle
@@ -5730,64 +5730,64 @@ WXWINDOWS_INCLUDE_PATH</pre>
 <h3>Module Variables</h3>
 <p>The following variables are set by including this module:</p>
 <dl>
-<dt><code>XCTest_FOUND</code></p>
-<dd>True if the XCTest Framework and executable were found.</p>
-<dt><code>XCTest_EXECUTABLE</code></p>
-<dd>The path to the xctest command line tool used to execute XCTest bundles.</p>
-<dt><code>XCTest_INCLUDE_DIRS</code></p>
-<dd>The directory containing the XCTest Framework headers.</p>
-<dt><code>XCTest_LIBRARIES</code></p>
-<dd>The location of the XCTest Framework.</dl>
+<dt><code>XCTest_FOUND</code></dt>
+<dd>True if the XCTest Framework and executable were found.</dd>
+<dt><code>XCTest_EXECUTABLE</code></dt>
+<dd>The path to the xctest command line tool used to execute XCTest bundles.</dd>
+<dt><code>XCTest_INCLUDE_DIRS</code></dt>
+<dd>The directory containing the XCTest Framework headers.</dd>
+<dt><code>XCTest_LIBRARIES</code></dt>
+<dd>The location of the XCTest Framework.</dd></dl>
 <h3>FindXalanC</h3>
 <p>Find the Apache Xalan-C++ XSL transform processor headers and libraries.</p>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>XalanC::XalanC</code></p>
-<dd>The Xalan-C++ <code>xalan-c</code> library, if found.</dl>
+<dt><code>XalanC::XalanC</code></dt>
+<dd>The Xalan-C++ <code>xalan-c</code> library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>XalanC_FOUND</code></p>
-<dd>true if the Xalan headers and libraries were found</p>
-<dt><code>XalanC_VERSION</code></p>
-<dd>Xalan release version</p>
-<dt><code>XalanC_INCLUDE_DIRS</code></p>
-<dd>the directory containing the Xalan headers; note <code>XercesC_INCLUDE_DIRS</code> is also required</p>
-<dt><code>XalanC_LIBRARIES</code></p>
-<dd>Xalan libraries to be linked; note <code>XercesC_LIBRARIES</code> is also required</dl>
+<dt><code>XalanC_FOUND</code></dt>
+<dd>true if the Xalan headers and libraries were found</dd>
+<dt><code>XalanC_VERSION</code></dt>
+<dd>Xalan release version</dd>
+<dt><code>XalanC_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the Xalan headers; note <code>XercesC_INCLUDE_DIRS</code> is also required</dd>
+<dt><code>XalanC_LIBRARIES</code></dt>
+<dd>Xalan libraries to be linked; note <code>XercesC_LIBRARIES</code> is also required</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>XalanC_INCLUDE_DIR</code></p>
-<dd>the directory containing the Xalan headers</p>
-<dt><code>XalanC_LIBRARY</code></p>
-<dd>the Xalan library</dl>
+<dt><code>XalanC_INCLUDE_DIR</code></dt>
+<dd>the directory containing the Xalan headers</dd>
+<dt><code>XalanC_LIBRARY</code></dt>
+<dd>the Xalan library</dd></dl>
 <h3>FindXercesC</h3>
 <p>Find the Apache Xerces-C++ validating XML parser headers and libraries.</p>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>XercesC::XercesC</code></p>
-<dd>The Xerces-C++ <code>xerces-c</code> library, if found.</dl>
+<dt><code>XercesC::XercesC</code></dt>
+<dd>The Xerces-C++ <code>xerces-c</code> library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>XercesC_FOUND</code></p>
-<dd>true if the Xerces headers and libraries were found</p>
-<dt><code>XercesC_VERSION</code></p>
-<dd>Xerces release version</p>
-<dt><code>XercesC_INCLUDE_DIRS</code></p>
-<dd>the directory containing the Xerces headers</p>
-<dt><code>XercesC_LIBRARIES</code></p>
-<dd>Xerces libraries to be linked</dl>
+<dt><code>XercesC_FOUND</code></dt>
+<dd>true if the Xerces headers and libraries were found</dd>
+<dt><code>XercesC_VERSION</code></dt>
+<dd>Xerces release version</dd>
+<dt><code>XercesC_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the Xerces headers</dd>
+<dt><code>XercesC_LIBRARIES</code></dt>
+<dd>Xerces libraries to be linked</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>XercesC_INCLUDE_DIR</code></p>
-<dd>the directory containing the Xerces headers</p>
-<dt><code>XercesC_LIBRARY</code></p>
-<dd>the Xerces library</dl>
+<dt><code>XercesC_INCLUDE_DIR</code></dt>
+<dd>the directory containing the Xerces headers</dd>
+<dt><code>XercesC_LIBRARY</code></dt>
+<dd>the Xerces library</dd></dl>
 <h3>FindX11</h3>
 <p>Find X11 installation </p>
 <p> Try to find X11 on UNIX systems. The following values are defined </p>
@@ -5869,43 +5869,43 @@ ZLIB_PATCH_VERSION - The patch version of zlib</pre>
 <h3>Module Variables</h3>
 <p>Variables that indicate if the mangling is found:</p>
 <dl>
-<dt><code>FortranCInterface_GLOBAL_FOUND</code></p>
-<dd>Global subroutines and functions.</p>
-<dt><code>FortranCInterface_MODULE_FOUND</code></p>
-<dd>Module subroutines and functions (declared by &quot;MODULE PROCEDURE&quot;). </p>
+<dt><code>FortranCInterface_GLOBAL_FOUND</code></dt>
+<dd>Global subroutines and functions.</dd>
+<dt><code>FortranCInterface_MODULE_FOUND</code></dt>
+<dd>Module subroutines and functions (declared by &quot;MODULE PROCEDURE&quot;). </dd>
 <p> This module also provides the following variables to specify the detected mangling, though a typical use case does not need to reference them and can use the <i>Module Functions</i> below.</p>
-<dt><code>FortranCInterface_GLOBAL_PREFIX</code></p>
-<dd>Prefix for a global symbol without an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL_SUFFIX</code></p>
-<dd>Suffix for a global symbol without an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL_CASE</code></p>
-<dd>The case for a global symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</p>
-<dt><code>FortranCInterface_GLOBAL__PREFIX</code></p>
-<dd>Prefix for a global symbol with an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL__SUFFIX</code></p>
-<dd>Suffix for a global symbol with an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL__CASE</code></p>
-<dd>The case for a global symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</p>
-<dt><code>FortranCInterface_MODULE_PREFIX</code></p>
-<dd>Prefix for a module symbol without an underscore.</p>
-<dt><code>FortranCInterface_MODULE_MIDDLE</code></p>
-<dd>Middle of a module symbol without an underscore that appears between the name of the module and the name of the symbol.</p>
-<dt><code>FortranCInterface_MODULE_SUFFIX</code></p>
-<dd>Suffix for a module symbol without an underscore.</p>
-<dt><code>FortranCInterface_MODULE_CASE</code></p>
-<dd>The case for a module symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</p>
-<dt><code>FortranCInterface_MODULE__PREFIX</code></p>
-<dd>Prefix for a module symbol with an underscore.</p>
-<dt><code>FortranCInterface_MODULE__MIDDLE</code></p>
-<dd>Middle of a module symbol with an underscore that appears between the name of the module and the name of the symbol.</p>
-<dt><code>FortranCInterface_MODULE__SUFFIX</code></p>
-<dd>Suffix for a module symbol with an underscore.</p>
-<dt><code>FortranCInterface_MODULE__CASE</code></p>
-<dd>The case for a module symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dl>
+<dt><code>FortranCInterface_GLOBAL_PREFIX</code></dt>
+<dd>Prefix for a global symbol without an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL_SUFFIX</code></dt>
+<dd>Suffix for a global symbol without an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL_CASE</code></dt>
+<dd>The case for a global symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd>
+<dt><code>FortranCInterface_GLOBAL__PREFIX</code></dt>
+<dd>Prefix for a global symbol with an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL__SUFFIX</code></dt>
+<dd>Suffix for a global symbol with an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL__CASE</code></dt>
+<dd>The case for a global symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd>
+<dt><code>FortranCInterface_MODULE_PREFIX</code></dt>
+<dd>Prefix for a module symbol without an underscore.</dd>
+<dt><code>FortranCInterface_MODULE_MIDDLE</code></dt>
+<dd>Middle of a module symbol without an underscore that appears between the name of the module and the name of the symbol.</dd>
+<dt><code>FortranCInterface_MODULE_SUFFIX</code></dt>
+<dd>Suffix for a module symbol without an underscore.</dd>
+<dt><code>FortranCInterface_MODULE_CASE</code></dt>
+<dd>The case for a module symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd>
+<dt><code>FortranCInterface_MODULE__PREFIX</code></dt>
+<dd>Prefix for a module symbol with an underscore.</dd>
+<dt><code>FortranCInterface_MODULE__MIDDLE</code></dt>
+<dd>Middle of a module symbol with an underscore that appears between the name of the module and the name of the symbol.</dd>
+<dt><code>FortranCInterface_MODULE__SUFFIX</code></dt>
+<dd>Suffix for a module symbol with an underscore.</dd>
+<dt><code>FortranCInterface_MODULE__CASE</code></dt>
+<dd>The case for a module symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd></dl>
 <h3>Module Functions</h3>
 <dl>
-<dt><code>FortranCInterface_HEADER</code></p>
-<dd>The <code>FortranCInterface_HEADER</code> function is provided to generate a C header file containing macros to mangle symbol names: </p>
+<dt><code>FortranCInterface_HEADER</code></dt>
+<dd>The <code>FortranCInterface_HEADER</code> function is provided to generate a C header file containing macros to mangle symbol names: </dd>
 <pre>FortranCInterface_HEADER(&lt;file&gt;
  [MACRO_NAMESPACE &lt;macro-ns&gt;]
  [SYMBOL_NAMESPACE &lt;ns&gt;]
@@ -5916,27 +5916,27 @@ ZLIB_PATCH_VERSION - The patch version of zlib</pre>
 #define FortranCInterface_MODULE (mod,name, MOD,NAME) ...
 #define FortranCInterface_MODULE_(mod,name, MOD,NAME) ...</pre>
 <p>These macros mangle four categories of Fortran symbols, respectively:</p>
-<dt>&bull;</p>
-<dd>Global symbols without &#8216;_&#8217;: <code>call mysub()</code></p>
-<dt>&bull;</p>
-<dd>Global symbols with &#8216;_&#8217; : <code>call my_sub()</code></p>
-<dt>&bull;</p>
-<dd>Module symbols without &#8216;_&#8217;: <code>use mymod; call mysub()</code></p>
-<dt>&bull;</p>
-<dd>Module symbols with &#8216;_&#8217; : <code>use mymod; call my_sub()</code> </p>
+<dt>&bull;</dt>
+<dd>Global symbols without &#8216;_&#8217;: <code>call mysub()</code></dd>
+<dt>&bull;</dt>
+<dd>Global symbols with &#8216;_&#8217; : <code>call my_sub()</code></dd>
+<dt>&bull;</dt>
+<dd>Module symbols without &#8216;_&#8217;: <code>use mymod; call mysub()</code></dd>
+<dt>&bull;</dt>
+<dd>Module symbols with &#8216;_&#8217; : <code>use mymod; call my_sub()</code> </dd>
 <p> If mangling for a category is not known, its macro is left undefined. All macros require raw names in both lower case and upper case. </p>
 <p> The options are:</p>
-<dt><code>MACRO_NAMESPACE</code></p>
-<dd>Replace the default <code>FortranCInterface_</code> prefix with a given namespace <code>&lt;macro-ns&gt;</code>.</p>
-<dt><code>SYMBOLS</code></p>
-<dd>List symbols to mangle automatically with C preprocessor definitions: </p>
+<dt><code>MACRO_NAMESPACE</code></dt>
+<dd>Replace the default <code>FortranCInterface_</code> prefix with a given namespace <code>&lt;macro-ns&gt;</code>.</dd>
+<dt><code>SYMBOLS</code></dt>
+<dd>List symbols to mangle automatically with C preprocessor definitions: </dd>
 <pre>&lt;function&gt; ==&gt; #define &lt;ns&gt;&lt;function&gt; ...
 &lt;module&gt;:&lt;function&gt; ==&gt; #define &lt;ns&gt;&lt;module&gt;_&lt;function&gt; ...</pre>
 <p>If the mangling for some symbol is not known then no preprocessor definition is created, and a warning is displayed.</p>
-<dt><code>SYMBOL_NAMESPACE</code></p>
-<dd>Prefix all preprocessor definitions generated by the <code>SYMBOLS</code> option with a given namespace <code>&lt;ns&gt;</code>.</p>
-<dt><code>FortranCInterface_VERIFY</code></p>
-<dd>The <code>FortranCInterface_VERIFY</code> function is provided to verify that the Fortran and C/C++ compilers work together: </p>
+<dt><code>SYMBOL_NAMESPACE</code></dt>
+<dd>Prefix all preprocessor definitions generated by the <code>SYMBOLS</code> option with a given namespace <code>&lt;ns&gt;</code>.</dd>
+<dt><code>FortranCInterface_VERIFY</code></dt>
+<dd>The <code>FortranCInterface_VERIFY</code> function is provided to verify that the Fortran and C/C++ compilers work together: </dd>
 <pre>FortranCInterface_VERIFY([CXX] [QUIET])</pre>
 <p>It tests whether a simple test executable using Fortran and C (and C++ when the CXX option is given) compiles and links successfully. The result is stored in the cache entry <code>FortranCInterface_VERIFIED_C</code> (or <code>FortranCInterface_VERIFIED_CXX</code> if <code>CXX</code> is given) as a boolean. If the check fails and <code>QUIET</code> is not given the function terminates with a fatal error message describing the problem. The purpose of this check is to stop a build early for incompatible compiler combinations. The test is built in the <code>Release</code> configuration.</dl>
 <h3>Example Usage</h3>
@@ -6111,36 +6111,36 @@ other</pre>
 <p> <code>CMAKE_INSTALL_FULL_&lt;dir&gt;</code> The absolute path generated from the corresponding <code>CMAKE_INSTALL_&lt;dir&gt;</code> value. If the value is not already an absolute path, an absolute path is constructed typically by prepending the value of the <code>CMAKE_INSTALL_PREFIX</code> variable. However, there are some <i>special cases</i> as documented below. </p>
 <p> where <code>&lt;dir&gt;</code> is one of:</p>
 <dl>
-<dt><code>BINDIR</code></p>
-<dd>user executables (<code>bin</code>)</p>
-<dt><code>SBINDIR</code></p>
-<dd>system admin executables (<code>sbin</code>)</p>
-<dt><code>LIBEXECDIR</code></p>
-<dd>program executables (<code>libexec</code>)</p>
-<dt><code>SYSCONFDIR</code></p>
-<dd>read-only single-machine data (<code>etc</code>)</p>
-<dt><code>SHAREDSTATEDIR</code></p>
-<dd>modifiable architecture-independent data (<code>com</code>)</p>
-<dt><code>LOCALSTATEDIR</code></p>
-<dd>modifiable single-machine data (<code>var</code>)</p>
-<dt><code>LIBDIR</code></p>
-<dd>object code libraries (<code>lib</code> or <code>lib64</code> or <code>lib/&lt;multiarch-tuple&gt;</code> on Debian)</p>
-<dt><code>INCLUDEDIR</code></p>
-<dd>C header files (<code>include</code>)</p>
-<dt><code>OLDINCLUDEDIR</code></p>
-<dd>C header files for non-gcc (<code>/usr/include</code>)</p>
-<dt><code>DATAROOTDIR</code></p>
-<dd>read-only architecture-independent data root (<code>share</code>)</p>
-<dt><code>DATADIR</code></p>
-<dd>read-only architecture-independent data (<code>DATAROOTDIR</code>)</p>
-<dt><code>INFODIR</code></p>
-<dd>info documentation (<code>DATAROOTDIR/info</code>)</p>
-<dt><code>LOCALEDIR</code></p>
-<dd>locale-dependent data (<code>DATAROOTDIR/locale</code>)</p>
-<dt><code>MANDIR</code></p>
-<dd>man documentation (<code>DATAROOTDIR/man</code>)</p>
-<dt><code>DOCDIR</code></p>
-<dd>documentation root (<code>DATAROOTDIR/doc/PROJECT_NAME</code>) </p>
+<dt><code>BINDIR</code></dt>
+<dd>user executables (<code>bin</code>)</dd>
+<dt><code>SBINDIR</code></dt>
+<dd>system admin executables (<code>sbin</code>)</dd>
+<dt><code>LIBEXECDIR</code></dt>
+<dd>program executables (<code>libexec</code>)</dd>
+<dt><code>SYSCONFDIR</code></dt>
+<dd>read-only single-machine data (<code>etc</code>)</dd>
+<dt><code>SHAREDSTATEDIR</code></dt>
+<dd>modifiable architecture-independent data (<code>com</code>)</dd>
+<dt><code>LOCALSTATEDIR</code></dt>
+<dd>modifiable single-machine data (<code>var</code>)</dd>
+<dt><code>LIBDIR</code></dt>
+<dd>object code libraries (<code>lib</code> or <code>lib64</code> or <code>lib/&lt;multiarch-tuple&gt;</code> on Debian)</dd>
+<dt><code>INCLUDEDIR</code></dt>
+<dd>C header files (<code>include</code>)</dd>
+<dt><code>OLDINCLUDEDIR</code></dt>
+<dd>C header files for non-gcc (<code>/usr/include</code>)</dd>
+<dt><code>DATAROOTDIR</code></dt>
+<dd>read-only architecture-independent data root (<code>share</code>)</dd>
+<dt><code>DATADIR</code></dt>
+<dd>read-only architecture-independent data (<code>DATAROOTDIR</code>)</dd>
+<dt><code>INFODIR</code></dt>
+<dd>info documentation (<code>DATAROOTDIR/info</code>)</dd>
+<dt><code>LOCALEDIR</code></dt>
+<dd>locale-dependent data (<code>DATAROOTDIR/locale</code>)</dd>
+<dt><code>MANDIR</code></dt>
+<dd>man documentation (<code>DATAROOTDIR/man</code>)</dd>
+<dt><code>DOCDIR</code></dt>
+<dd>documentation root (<code>DATAROOTDIR/doc/PROJECT_NAME</code>) </dd>
 <p> If the includer does not define a value the above-shown default will be used and the value will appear in the cache for editing by the user.</dl>
 <h3>Special Cases</h3>
 <p>The following values of <code>CMAKE_INSTALL_PREFIX</code> are special: </p>
@@ -6150,26 +6150,26 @@ other</pre>
 <h3>InstallRequiredSystemLibraries</h3>
 <p>Include this module to search for compiler-provided system runtime libraries and add install rules for them. Some optional variables may be set prior to including the module to adjust behavior:</p>
 <dl>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code></p>
-<dd>Specify additional runtime libraries that may not be detected. After inclusion any detected libraries will be appended to this.</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP</code></p>
-<dd>Set to TRUE to skip calling the <code>install(PROGRAMS)</code> command to allow the includer to specify its own install rule, using the value of <code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code> to get the list of libraries.</p>
-<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES</code></p>
-<dd>Set to TRUE to install the debug runtime libraries when available with MSVC tools.</p>
-<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES_ONLY</code></p>
-<dd>Set to TRUE to install only the debug runtime libraries with MSVC tools even if the release runtime libraries are also available.</p>
-<dt><code>CMAKE_INSTALL_UCRT_LIBRARIES</code></p>
-<dd>Set to TRUE to install the Windows Universal CRT libraries for app-local deployment (e.g. to Windows XP). This is meaningful only with MSVC from Visual Studio 2015 or higher.</p>
-<dt><code>CMAKE_INSTALL_MFC_LIBRARIES</code></p>
-<dd>Set to TRUE to install the MSVC MFC runtime libraries.</p>
-<dt><code>CMAKE_INSTALL_OPENMP_LIBRARIES</code></p>
-<dd>Set to TRUE to install the MSVC OpenMP runtime libraries</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION</code></p>
-<dd>Specify the <code>install(PROGRAMS)</code> command <code>DESTINATION</code> option. If not specified, the default is <code>bin</code> on Windows and <code>lib</code> elsewhere.</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS</code></p>
-<dd>Set to TRUE to disable warnings about required library files that do not exist. (For example, Visual Studio Express editions may not provide the redistributable files.)</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_COMPONENT</code></p>
-<dd>Specify the <code>install(PROGRAMS)</code> command <code>COMPONENT</code> option. If not specified, no such option will be used.</dl>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code></dt>
+<dd>Specify additional runtime libraries that may not be detected. After inclusion any detected libraries will be appended to this.</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP</code></dt>
+<dd>Set to TRUE to skip calling the <code>install(PROGRAMS)</code> command to allow the includer to specify its own install rule, using the value of <code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code> to get the list of libraries.</dd>
+<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES</code></dt>
+<dd>Set to TRUE to install the debug runtime libraries when available with MSVC tools.</dd>
+<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES_ONLY</code></dt>
+<dd>Set to TRUE to install only the debug runtime libraries with MSVC tools even if the release runtime libraries are also available.</dd>
+<dt><code>CMAKE_INSTALL_UCRT_LIBRARIES</code></dt>
+<dd>Set to TRUE to install the Windows Universal CRT libraries for app-local deployment (e.g. to Windows XP). This is meaningful only with MSVC from Visual Studio 2015 or higher.</dd>
+<dt><code>CMAKE_INSTALL_MFC_LIBRARIES</code></dt>
+<dd>Set to TRUE to install the MSVC MFC runtime libraries.</dd>
+<dt><code>CMAKE_INSTALL_OPENMP_LIBRARIES</code></dt>
+<dd>Set to TRUE to install the MSVC OpenMP runtime libraries</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION</code></dt>
+<dd>Specify the <code>install(PROGRAMS)</code> command <code>DESTINATION</code> option. If not specified, the default is <code>bin</code> on Windows and <code>lib</code> elsewhere.</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS</code></dt>
+<dd>Set to TRUE to disable warnings about required library files that do not exist. (For example, Visual Studio Express editions may not provide the redistributable files.)</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_COMPONENT</code></dt>
+<dd>Specify the <code>install(PROGRAMS)</code> command <code>COMPONENT</code> option. If not specified, no such option will be used.</dd></dl>
 <h3>MacroAddFileDependencies</h3>
 <p>MACRO_ADD_FILE_DEPENDENCIES(&lt;_file&gt; depend_files&#8230;) </p>
 <p> Using the macro MACRO_ADD_FILE_DEPENDENCIES() is discouraged. There are usually better ways to specify the correct dependencies. </p>
@@ -6204,10 +6204,10 @@ VARIABLE - variable to store the result to</pre>
 <p> Check if the CXX compiler accepts a flag. </p>
 <pre>CHECK_CXX_ACCEPTS_FLAG(&lt;flags&gt; &lt;variable&gt;)</pre>
 <dl>
-<dt><code>&lt;flags&gt;</code></p>
-<dd>the flags to try</p>
-<dt><code>&lt;variable&gt;</code></p>
-<dd>variable to store the result</dl>
+<dt><code>&lt;flags&gt;</code></dt>
+<dd>the flags to try</dd>
+<dt><code>&lt;variable&gt;</code></dt>
+<dd>variable to store the result</dd></dl>
 <h3>TestForANSIForScope</h3>
 <p>Check for ANSI for scope support </p>
 <p> Check if the compiler restricts the scope of variables declared in a for-init-statement to the loop body. </p>
@@ -6379,16 +6379,16 @@ Create_javah(TARGET target_headers
 )</pre>
 <p>Both signatures share same options.</p>
 <dl>
-<dt><code>CLASSES &lt;class&gt;&#8230;</code></p>
-<dd>Specifies Java classes used to generate headers.</p>
-<dt><code>CLASSPATH &lt;classpath&gt;&#8230;</code></p>
-<dd>Specifies various paths to look up classes. Here .class files, jar files or targets created by command add_jar can be used.</p>
-<dt><code>DEPENDS &lt;depend&gt;&#8230;</code></p>
-<dd>Targets on which the javah target depends</p>
-<dt><code>OUTPUT_NAME &lt;path&gt;</code></p>
-<dd>Concatenates the resulting header files for all the classes listed by option CLASSES into &lt;path&gt;. Same behavior as option &#8216;-o&#8217; of javah tool.</p>
-<dt><code>OUTPUT_DIR &lt;path&gt;</code></p>
-<dd>Sets the directory where the header files will be generated. Same behavior as option &#8216;-d&#8217; of javah tool. If not specified, ${CMAKE_CURRENT_BINARY_DIR} is used as output directory.</dl>
+<dt><code>CLASSES &lt;class&gt;&#8230;</code></dt>
+<dd>Specifies Java classes used to generate headers.</dd>
+<dt><code>CLASSPATH &lt;classpath&gt;&#8230;</code></dt>
+<dd>Specifies various paths to look up classes. Here .class files, jar files or targets created by command add_jar can be used.</dd>
+<dt><code>DEPENDS &lt;depend&gt;&#8230;</code></dt>
+<dd>Targets on which the javah target depends</dd>
+<dt><code>OUTPUT_NAME &lt;path&gt;</code></dt>
+<dd>Concatenates the resulting header files for all the classes listed by option CLASSES into &lt;path&gt;. Same behavior as option &#8216;-o&#8217; of javah tool.</dd>
+<dt><code>OUTPUT_DIR &lt;path&gt;</code></dt>
+<dd>Sets the directory where the header files will be generated. Same behavior as option &#8216;-d&#8217; of javah tool. If not specified, ${CMAKE_CURRENT_BINARY_DIR} is used as output directory.</dd></dl>
 <h3>UseJavaSymlinks</h3>
 <p>Helper script for UseJava.cmake</p>
 <h3>UsePkgConfig</h3>

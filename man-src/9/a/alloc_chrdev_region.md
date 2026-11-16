@@ -15,19 +15,19 @@ alloc_chrdev_region - register a range of char device numbers
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>output parameter for first assigned number</dl>
+<dl><dd></dd><dd>output parameter for first assigned number</dd></dl>
  
 
  <i>baseminor</i>
-<dl><dd>first of the requested range of minor numbers</dl>
+<dl><dd>first of the requested range of minor numbers</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the number of minor numbers required</dl>
+<dl><dd>the number of minor numbers required</dd></dl>
  
 
  <i>name</i>
-<dl><dd>the name of the associated device or driver</dl>
+<dl><dd>the name of the associated device or driver</dd></dl>
 
 <h2>Description</h2>
 

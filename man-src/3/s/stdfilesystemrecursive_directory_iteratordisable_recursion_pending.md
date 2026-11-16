@@ -32,16 +32,11 @@ The behavior is undefined if *this is the end iterator.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/a/b/c&quot;);
     fs::create_directories(&quot;sandbox/a/b/d/e&quot;);

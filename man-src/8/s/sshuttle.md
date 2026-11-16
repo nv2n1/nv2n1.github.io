@@ -58,7 +58,7 @@ KeyboardInterrupt
 c : Keyboard interrupt: exiting.
 c : SW#8:192.168.42.121:47523: deleting
 c : SW#6:192.168.42.106:50035: deleting</pre>
-</dl>
+</dd></dl>
 <p> Test connection to a remote server, with automatic hostname and subnet guessing:</p>
 <dl>
 <dd>
@@ -80,7 +80,7 @@ c : Accept: 192.168.42.121:60554 -&gt; 77.141.99.22:22.
 firewall manager: undoing changes.
 c : Keyboard interrupt: exiting.
 c : SW#6:192.168.42.121:60554: deleting</pre>
-</dl>
+</dd></dl>
 <h2>Discussion</h2>
 <p>When it starts, sshuttle creates an ssh session to the server specified by the <code>-r</code> option. If <code>-r</code> is omitted, it will start both its client and server locally, which is sometimes useful for testing. </p>
 <p> After connecting to the remote server, sshuttle uploads its (python) source code to the remote end and executes it there. Thus, you don&#8217;t need to install sshuttle on the remote server, and there are never sshuttle version conflicts between client and server. </p>

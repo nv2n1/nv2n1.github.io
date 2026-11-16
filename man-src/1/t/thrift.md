@@ -18,10 +18,10 @@ description: "thrift – program to do something"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. For a complete description, see the Info files.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version of program.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>bar</code>(1), <code><a href="/docs/linux/man/1-baz/">baz</a></code>(1).<br />
  The programs are documented fully by <i>The Rise and Fall of a Fooish Bar</i>, available via the Info system.</p>

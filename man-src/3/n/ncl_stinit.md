@@ -25,40 +25,40 @@ CALL STINIT (U,LU,V,LV,P,LP,M,N,WRK,LW)
 <h2>Description</h2>
 
 <dl><dt>U
-<dd>(REAL 2-dimensional array, dimensioned LU x n: n &gt;= N, input): By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
-<dt>LU
-<dd>(INTEGER, input): Actual value of the first dimension of array U.
-<dt>V
-<dd>(REAL 2-dimensional array, dimensioned LV x n: n &gt;= N, input): By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
-<dt>LV
-<dd>(INTEGER, input): Actual value of the first dimension of array V.
-<dt>P
-<dd>(REAL, input, DUMMY): This argument is currently ignored and may be assigned a dummy value.
-<dt>LP
-<dd>(INTEGER, input, DUMMY): The first dimension of array P. Not currently used, this argument should be assigned the integer value 0.
-<dt>M
-<dd>(INTEGER, input): Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, U and V.
-<dt>N
-<dd>(INTEGER, input): Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, U and V.
-<dt>WRK
-<dd>(REAL, array dimensioned n: n &gt;= LW, input/output): Work array used to store normalized values of the U and V vector components while the streamlines are calculated. It also holds bit flags indicating whether a grid location is eligible for starting a streamline or placing a directional arrowhead.
-<dt>LW
-<dd>(INTEGER, input): Assumed size of the array WRK. Currently it must greater or equal to 2*M*N.</dl>
+</dt><dd>(REAL 2-dimensional array, dimensioned LU x n: n &gt;= N, input): By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
+</dd><dt>LU
+</dt><dd>(INTEGER, input): Actual value of the first dimension of array U.
+</dd><dt>V
+</dt><dd>(REAL 2-dimensional array, dimensioned LV x n: n &gt;= N, input): By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
+</dd><dt>LV
+</dt><dd>(INTEGER, input): Actual value of the first dimension of array V.
+</dd><dt>P
+</dt><dd>(REAL, input, DUMMY): This argument is currently ignored and may be assigned a dummy value.
+</dd><dt>LP
+</dt><dd>(INTEGER, input, DUMMY): The first dimension of array P. Not currently used, this argument should be assigned the integer value 0.
+</dd><dt>M
+</dt><dd>(INTEGER, input): Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, U and V.
+</dd><dt>N
+</dt><dd>(INTEGER, input): Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, U and V.
+</dd><dt>WRK
+</dt><dd>(REAL, array dimensioned n: n &gt;= LW, input/output): Work array used to store normalized values of the U and V vector components while the streamlines are calculated. It also holds bit flags indicating whether a grid location is eligible for starting a streamline or placing a directional arrowhead.
+</dd><dt>LW
+</dt><dd>(INTEGER, input): Assumed size of the array WRK. Currently it must greater or equal to 2*M*N.</dd></dl>
 
 <h2>C-Binding Description</h2>
 
 The C-binding argument descriptions are the same as the FORTRAN argument descriptions, with the following exceptions: 
 
 <dl><dt>lu
-<dd>The second dimension of u in the calling program.
-<dt>lv
-<dd>The second dimension of v in the calling program.
-<dt>lp
-<dd>The second dimension of p in the calling program.
-<dt>m
-<dd>Number of contiguous elements along the second dimension containing data to be processed in each of the arrays, u and v.
-<dt>n
-<dd>Number of contiguous elements along the first dimension containing data to be processed in each of the arrays, u and v.</dl>
+</dt><dd>The second dimension of u in the calling program.
+</dd><dt>lv
+</dt><dd>The second dimension of v in the calling program.
+</dd><dt>lp
+</dt><dd>The second dimension of p in the calling program.
+</dd><dt>m
+</dt><dd>Number of contiguous elements along the second dimension containing data to be processed in each of the arrays, u and v.
+</dd><dt>n
+</dt><dd>Number of contiguous elements along the first dimension containing data to be processed in each of the arrays, u and v.</dd></dl>
 
 <h2>Usage</h2>
 

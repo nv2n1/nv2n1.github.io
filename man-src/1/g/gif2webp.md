@@ -17,26 +17,26 @@ description: "gif2webp – Convert a GIF image to WebP"
 <h2>OPTIONS</h2>
 <p> The basic options are:</p>
 <dl>
-<dt><code>-o</code><i> string</i></p>
-<dd> Specify the name of the output WebP file. If omitted, <code>gif2webp</code> will perform conversion but only report statistics.</p>
-<dt><code>-h, -help</code></p>
-<dd> Usage information.</p>
-<dt><code>-version</code></p>
-<dd> Print the version number (as major.minor.revision) and exit.</p>
-<dt><code>-lossy</code></p>
-<dd> Encode the image using lossy compression.</p>
-<dt><code>-q</code><i> float</i></p>
+<dt><code>-o</code><i> string</i></dt>
+<dd> Specify the name of the output WebP file. If omitted, <code>gif2webp</code> will perform conversion but only report statistics.</dd>
+<dt><code>-h, -help</code></dt>
+<dd> Usage information.</dd>
+<dt><code>-version</code></dt>
+<dd> Print the version number (as major.minor.revision) and exit.</dd>
+<dt><code>-lossy</code></dt>
+<dd> Encode the image using lossy compression.</dd>
+<dt><code>-q</code><i> float</i></dt>
 <dd> Specify the compression factor for RGB channels between 0 and 100. The default is 75.<br />
  In case of lossless compression (default), a small factor enables faster compression speed, but produces a larger file. Maximum compression is achieved by using a value of 100.<br />
- In case of lossy compression (specified by the -lossy option), a small factor produces a smaller file with lower quality. Best quality is achieved by using a value of 100.</p>
-<dt><code>-m</code><i> int</i></p>
-<dd> Specify the compression method to use. This parameter controls the trade off between encoding speed and the compressed file size and quality. Possible values range from 0 to 6. Default value is 4. When higher values are used, the encoder will spend more time inspecting additional encoding possibilities and decide on the quality gain. Lower value can result is faster processing time at the expense of larger file size and lower compression quality.</p>
-<dt><code>-f</code><i> int</i></p>
-<dd> For lossy encoding only (specified by the -lossy option). Specify the strength of the deblocking filter, between 0 (no filtering) and 100 (maximum filtering). A value of 0 will turn off any filtering. Higher value will increase the strength of the filtering process applied after decoding the picture. The higher the value the smoother the picture will appear. Typical values are usually in the range of 20 to 50.</p>
-<dt><code>-v</code></p>
-<dd> Print extra information.</p>
-<dt><code>-quiet</code></p>
-<dd> Do not print anything. </p>
+ In case of lossy compression (specified by the -lossy option), a small factor produces a smaller file with lower quality. Best quality is achieved by using a value of 100.</dd>
+<dt><code>-m</code><i> int</i></dt>
+<dd> Specify the compression method to use. This parameter controls the trade off between encoding speed and the compressed file size and quality. Possible values range from 0 to 6. Default value is 4. When higher values are used, the encoder will spend more time inspecting additional encoding possibilities and decide on the quality gain. Lower value can result is faster processing time at the expense of larger file size and lower compression quality.</dd>
+<dt><code>-f</code><i> int</i></dt>
+<dd> For lossy encoding only (specified by the -lossy option). Specify the strength of the deblocking filter, between 0 (no filtering) and 100 (maximum filtering). A value of 0 will turn off any filtering. Higher value will increase the strength of the filtering process applied after decoding the picture. The higher the value the smoother the picture will appear. Typical values are usually in the range of 20 to 50.</dd>
+<dt><code>-v</code></dt>
+<dd> Print extra information.</dd>
+<dt><code>-quiet</code></dt>
+<dd> Do not print anything. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please report all bugs to our issue tracker: <a rel="nofollow" href="http://code.google.com/p/webp/issues">http://code.google.com/p/webp/issues</a><br />

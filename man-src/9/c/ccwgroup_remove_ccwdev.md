@@ -14,11 +14,11 @@ description: "ccwgroup_remove_ccwdev – remove function for slave devices"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>ccw device to be removed</dl>
+</dd><dd>ccw device to be removed</dd></dl>
 <h2>Description</h2>
 <p>This is a remove function for ccw devices that are slave devices in a ccw group device. It sets the ccw device offline and also deregisters the embedding ccw group device.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

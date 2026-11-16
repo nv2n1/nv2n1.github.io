@@ -19,17 +19,17 @@ url: "/docs/linux/man/1-function/"
 
 <dl>
 <dt>*
-<dd> -d DESCRIPTION or --description=DESCRIPTION is a description of what the function does, suitable as a completion description
-<dt>*
-<dd> -e or --on-event EVENT_NAME tells fish to run this function when the specified named event is emitted. Fish internally generates named events e.g. when showing the prompt.
-<dt>*
-<dd> -j PID or --on-job-exit PID tells fish to run this function when the job with group id PID exits. Instead of PID, the string 'caller' can be specified. This is only legal when in a command substitution, and will result in the handler being triggered by the exit of the job which created this command substitution.
-<dt>*
-<dd> -p PID or --on-process-exit PID tells fish to run this function when the fish child process with process id PID exits
-<dt>*
-<dd> -s or --on-signal SIGSPEC tells fish to run this function when the signal SIGSPEC is delivered. SIGSPEC can be a signal number, or the signal name, such as SIGHUP (or just HUP)
-<dt>*
-<dd> -v or --on-variable VARIABLE_NAME tells fish to run this function when the variable VARIABLE_NAME changes value</dl>
+</dt><dd> -d DESCRIPTION or --description=DESCRIPTION is a description of what the function does, suitable as a completion description
+</dd><dt>*
+</dt><dd> -e or --on-event EVENT_NAME tells fish to run this function when the specified named event is emitted. Fish internally generates named events e.g. when showing the prompt.
+</dd><dt>*
+</dt><dd> -j PID or --on-job-exit PID tells fish to run this function when the job with group id PID exits. Instead of PID, the string 'caller' can be specified. This is only legal when in a command substitution, and will result in the handler being triggered by the exit of the job which created this command substitution.
+</dd><dt>*
+</dt><dd> -p PID or --on-process-exit PID tells fish to run this function when the fish child process with process id PID exits
+</dd><dt>*
+</dt><dd> -s or --on-signal SIGSPEC tells fish to run this function when the signal SIGSPEC is delivered. SIGSPEC can be a signal number, or the signal name, such as SIGHUP (or just HUP)
+</dd><dt>*
+</dt><dd> -v or --on-variable VARIABLE_NAME tells fish to run this function when the variable VARIABLE_NAME changes value</dd></dl>
  
 
  
@@ -54,9 +54,9 @@ end
 
 <dl>
 <dt>*
-<dd> fish_prompt, which is emitted whenever a new fish prompt is about to be displayed
-<dt>*
-<dd> fish_command_not_found, which is emitted whenever a command lookup failed</dl>
+</dt><dd> fish_prompt, which is emitted whenever a new fish prompt is about to be displayed
+</dd><dt>*
+</dt><dd> fish_command_not_found, which is emitted whenever a command lookup failed</dd></dl>
  
 
 <h3>Example</h3>

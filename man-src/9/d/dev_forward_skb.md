@@ -15,11 +15,11 @@ dev_forward_skb - loopback an skb to another netif
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>destination network device</dl>
+<dl><dd></dd><dd>destination network device</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>buffer to forward</dl>
+<dl><dd>buffer to forward</dd></dl>
 
 <h2>Description</h2>
 

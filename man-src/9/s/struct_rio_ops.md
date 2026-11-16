@@ -32,60 +32,60 @@ description: "struct_rio_ops – Low-level RIO configuration space operations"
 <h2>Members</h2>
 <p>lcread</p>
 <dl>
-<dd>Callback to perform local (master port) read of config space.</dl>
+<dd>Callback to perform local (master port) read of config space.</dd></dl>
 <p> lcwrite</p>
 <dl>
-<dd>Callback to perform local (master port) write of config space.</dl>
+<dd>Callback to perform local (master port) write of config space.</dd></dl>
 <p> cread</p>
 <dl>
-<dd>Callback to perform network read of config space.</dl>
+<dd>Callback to perform network read of config space.</dd></dl>
 <p> cwrite</p>
 <dl>
-<dd>Callback to perform network write of config space.</dl>
+<dd>Callback to perform network write of config space.</dd></dl>
 <p> dsend</p>
 <dl>
-<dd>Callback to send a doorbell message.</dl>
+<dd>Callback to send a doorbell message.</dd></dl>
 <p> pwenable</p>
 <dl>
-<dd>Callback to enable/disable port-write message handling.</dl>
+<dd>Callback to enable/disable port-write message handling.</dd></dl>
 <p> open_outb_mbox</p>
 <dl>
-<dd>Callback to initialize outbound mailbox.</dl>
+<dd>Callback to initialize outbound mailbox.</dd></dl>
 <p> close_outb_mbox</p>
 <dl>
-<dd>Callback to shut down outbound mailbox.</dl>
+<dd>Callback to shut down outbound mailbox.</dd></dl>
 <p> open_inb_mbox</p>
 <dl>
-<dd>Callback to initialize inbound mailbox.</dl>
+<dd>Callback to initialize inbound mailbox.</dd></dl>
 <p> close_inb_mbox</p>
 <dl>
-<dd>Callback to shut down inbound mailbox.</dl>
+<dd>Callback to shut down inbound mailbox.</dd></dl>
 <p> add_outb_message</p>
 <dl>
-<dd>Callback to add a message to an outbound mailbox queue.</dl>
+<dd>Callback to add a message to an outbound mailbox queue.</dd></dl>
 <p> add_inb_buffer</p>
 <dl>
-<dd>Callback to add a buffer to an inbound mailbox queue.</dl>
+<dd>Callback to add a buffer to an inbound mailbox queue.</dd></dl>
 <p> get_inb_message</p>
 <dl>
-<dd>Callback to get a message from an inbound mailbox queue.</dl>
+<dd>Callback to get a message from an inbound mailbox queue.</dd></dl>
 <p> map_inb</p>
 <dl>
-<dd>Callback to map RapidIO address region into local memory space.</dl>
+<dd>Callback to map RapidIO address region into local memory space.</dd></dl>
 <p> unmap_inb</p>
 <dl>
-<dd>Callback to unmap RapidIO address region mapped with <code>map_inb</code>.</dl>
+<dd>Callback to unmap RapidIO address region mapped with <code>map_inb</code>.</dd></dl>
 <p> query_mport</p>
 <dl>
-<dd>Callback to query mport device attributes.</dl>
+<dd>Callback to query mport device attributes.</dd></dl>
 <p> map_outb</p>
 <dl>
-<dd>Callback to map outbound address region into local memory space.</dl>
+<dd>Callback to map outbound address region into local memory space.</dd></dl>
 <p> unmap_outb</p>
 <dl>
-<dd>Callback to unmap outbound RapidIO address region.</dl>
+<dd>Callback to unmap outbound RapidIO address region.</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

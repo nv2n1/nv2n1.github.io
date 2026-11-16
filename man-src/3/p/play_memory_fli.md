@@ -10,9 +10,7 @@ description: "play_memory_fli – Plays a FLI or FLC animation from memory. Alle
 <p>play_memory_fli &#8211; Plays a FLI or FLC animation from memory. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int play_memory_fli(const void *fli_data, BITMAP *bmp, int loop,
-
                     int (*callback)());</code></pre>
 <h2>Description</h2>
 <p>Plays an Autodesk Animator FLI or FLC animation on the specified BITMAP, reading the data from a copy of the file which is held in memory. You can obtain the `fli_data&#8217; pointer by allocating a block of memory and reading an FLI file into it, or by importing an FLI into a grabber datafile. If `loop&#8217; is not zero, the player will cycle when it reaches the end of the file, otherwise it will play through the animation once and then return. Read the beginning of chapter &quot;FLIC routines&quot; for a description of the callback parameter. Playing animations from memory is obviously faster than cuing them directly from disk, and is particularly useful with short, looped FLI&#8217;s. Animations can easily get very large, though, so in most cases you will probably be better just using play_fli(). You can think of this function as a wrapper on top of open_memory_fli(), next_fli_frame() and close_fli(). Example: </p>

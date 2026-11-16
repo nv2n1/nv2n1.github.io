@@ -11,7 +11,6 @@ description: "sc::StateRecv –"
 <p> <code>StateRecv</code> is a concrete specialization of <code>MsgStateRecv</code> that does the receive part of <code>point</code> to <code>point</code> communication in a <code>MessageGrp</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateRecv</code>.</p>
 <h3>Public Member Functions</h3>
@@ -21,8 +20,6 @@ description: "sc::StateRecv –"
  <i>Specify the source node. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void next_buffer ()
-
-
 Specializations must implement next_buffer().</code></pre>
 <h2>Detailed Description</h2>
 <p><code>StateRecv</code> is a concrete specialization of <code>MsgStateRecv</code> that does the receive part of <code>point</code> to <code>point</code> communication in a <code>MessageGrp</code>.</p>

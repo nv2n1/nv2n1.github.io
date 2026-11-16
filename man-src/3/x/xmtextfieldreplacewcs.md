@@ -20,14 +20,14 @@ description: "XmTextFieldReplaceWcs — A TextField function that replaces part 
 <p> An example text replacement would be to replace the second and third characters in the text string. To accomplish this, the parameter <i>from_pos</i> must be 1 and <i>to_pos</i> must be 3. To insert a string after the fourth character, both parameters, <i>from_pos</i> and <i>to_pos</i>, must be 4. </p>
 <p> This routine calls the widget&#8217;s <code>XmNvalueChangedCallback</code> and verification callbacks, either <code>XmNmodifyVerifyCallback</code> or <code>XmNmodifyVerifyCallbackWcs</code>, or both. If both verification callback lists are registered, the procedures of the <code>XmNmodifyVerifyCallback</code> list are executed first and the resulting data is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callbacks. If the <code>XmNcursorPosition</code> resource is greater than or is the same value as <i>from_pos</i>, the <code>XmNmotionVerifyCallback</code> is called.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</p>
-<dt><i>from_pos</i></p>
-<dd>Specifies the start position of the text to be replaced</p>
-<dt><i>to_pos</i></p>
-<dd>Specifies the end position of the text to be replaced</p>
-<dt><i>wcstring</i></p>
-<dd>Specifies the wide character string value to be added to the TextField widget</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd>
+<dt><i>from_pos</i></dt>
+<dd>Specifies the start position of the text to be replaced</dd>
+<dt><i>to_pos</i></dt>
+<dd>Specifies the end position of the text to be replaced</dd>
+<dt><i>wcstring</i></dt>
+<dd>Specifies the wide character string value to be added to the TextField widget</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextfieldreplace/">XmTextFieldReplace</a></code>(3).</p>

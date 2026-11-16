@@ -39,14 +39,14 @@ description: "QuantLib::EndCriteria – Criteria to end optimization process:."
 <h2>Detailed Description</h2>
 <p>Criteria to end optimization process:. </p>
 <dl>
-<dt>*</p>
-<dd>maximum number of iterations AND minimum number of iterations around stationary point</p>
-<dt> *</p>
-<dd>x (independent variable) stationary point</p>
-<dt> *</p>
-<dd>y=f(x) (dependent variable) stationary point</p>
-<dt> *</p>
-<dd>stationary gradient</dl>
+<dt>*</dt>
+<dd>maximum number of iterations AND minimum number of iterations around stationary point</dd>
+<dt> *</dt>
+<dd>x (independent variable) stationary point</dd>
+<dt> *</dt>
+<dd>y=f(x) (dependent variable) stationary point</dd>
+<dt> *</dt>
+<dd>stationary gradient</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

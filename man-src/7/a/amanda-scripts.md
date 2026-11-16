@@ -13,9 +13,9 @@ description: "amanda-scripts – Configuring and using the Script API"
 <h2>Scripts</h2>
 <p>This section lists the scripts included with Amanda, see the individual man page for instructions on using them. For complete How-To information, consult the Amanda wiki at <a rel="nofollow" href="http://wiki.zmanda.com.">http://wiki.zmanda.com.</a> </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amzfs-snapshot/">amzfs-snapshot</a></code>(8), &#8211; create/destroy zfs snapshot.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amzfs-snapshot/">amzfs-snapshot</a></code>(8), &#8211; create/destroy zfs snapshot.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-script-email/">script-email</a></code>(8), &#8211; send email.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-script-email/">script-email</a></code>(8), &#8211; send email.</dd></dl>
 <p> Script properties work just like application properties: they are insensitive to case, and &#8211; (dash) and _ (underscore) may be used interchangeably.</p>
 <h2>Scripts Output Property</h2>
 <p>A pre-dle-amcheck, pre-dle-estimate or pre-dle-backup executed on the client can output property on stdout that are sent to the application. If the output line matches &quot;PROPERTY str1 str2&quot;, Amanda sets a property called &quot;str1&quot; by the value of &quot;str2&quot;, that property is sent to the application.</p>
@@ -25,7 +25,7 @@ description: "amanda-scripts – Configuring and using the Script API"
 <h2>Authors</h2>
 <p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
 <p> <code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

@@ -100,11 +100,11 @@ void (*sensors_fatal_error)(const char *proc, const char *err);
  <i>/etc/sensors.conf</i></p>
 <dl>
 <dt>
-<dd> The system-wide <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. /etc/sensors3.conf is tried first, and if it doesn&#8217;t exist, /etc/sensors.conf is used instead.</dl>
+</dt><dd> The system-wide <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. /etc/sensors3.conf is tried first, and if it doesn&#8217;t exist, /etc/sensors.conf is used instead.</dd></dl>
 <p> <i>/etc/sensors.d</i></p>
 <dl>
 <dt>
-<dd> A directory where you can put additional libsensors configuration files. Files found in this directory will be processed in alphabetical order after the default configuration file. Files with names that start with a dot are ignored.</dl>
+</dt><dd> A directory where you can put additional libsensors configuration files. Files found in this directory will be processed in alphabetical order after the default configuration file. Files with names that start with a dot are ignored.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5) </p>
 <h2>AUTHOR</h2>

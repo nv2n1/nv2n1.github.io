@@ -18,22 +18,22 @@ description: "Tcl_StandardChannels – How the Tcl library deals with the standa
 <p>Standard channels are initialized by the Tcl library in three cases: when explicitly requested, when implicitly required before returning channel information, or when implicitly required during registration of a new channel. </p>
 <p> These cases differ in how they handle unavailable platform- specific standard channels. (A channel is not &#8220;available&#8221; if it could not be successfully opened; for example, in a Tcl application run as a Windows NT service.)</p>
 <dl COMPACT>
-<dt>1)</p>
-<dd>A single standard channel is initialized when it is explicitly specified in a call to <code>Tcl_SetStdChannel</code>. The states of the other standard channels are unaffected.</p>
+<dt>1)</dt>
+<dd>A single standard channel is initialized when it is explicitly specified in a call to <code>Tcl_SetStdChannel</code>. The states of the other standard channels are unaffected.</dd>
 <dl COMPACT>
-<dd>Missing platform-specific standard channels do not matter here. This approach is not available at the script level.</dl>
-<dt>2)</p>
-<dd>All uninitialized standard channels are initialized to platform-specific default values:</p>
+<dd>Missing platform-specific standard channels do not matter here. This approach is not available at the script level.</dd></dl>
+<dt>2)</dt>
+<dd>All uninitialized standard channels are initialized to platform-specific default values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>(a)</p>
-<dd>when open channels are listed with <code>Tcl_GetChannelNames</code> (or the <code>file channels</code> script command), or</p>
-<dt>(b)</p>
-<dd>when information about any standard channel is requested with a call to <code>Tcl_GetStdChannel</code>, or with a call to <code>Tcl_GetChannel</code> which specifies one of the standard names (<code>stdin</code>, <code>stdout</code> and <code>stderr</code>).</dl>
+</dd><dl COMPACT>
+<dt>(a)</dt>
+<dd>when open channels are listed with <code>Tcl_GetChannelNames</code> (or the <code>file channels</code> script command), or</dd>
+<dt>(b)</dt>
+<dd>when information about any standard channel is requested with a call to <code>Tcl_GetStdChannel</code>, or with a call to <code>Tcl_GetChannel</code> which specifies one of the standard names (<code>stdin</code>, <code>stdout</code> and <code>stderr</code>).</dd></dl>
 <p> In case of missing platform-specific standard channels, the Tcl standard channels are considered as initialized and then immediately closed. This means that the first three Tcl channels then opened by the application are designated as the Tcl standard channels.</dl>
-<dt>3)</p>
-<dd>All uninitialized standard channels are initialized to platform-specific default values when a user-requested channel is registered with <code>Tcl_RegisterChannel</code>.</dl>
+<dt>3)</dt>
+<dd>All uninitialized standard channels are initialized to platform-specific default values when a user-requested channel is registered with <code>Tcl_RegisterChannel</code>.</dd></dl>
 <p> In case of unavailable platform-specific standard channels the channel whose creation caused the initialization of the Tcl standard channels is made a normal channel. The next three Tcl channels opened by the application are designated as the Tcl standard channels. In other words, of the first four Tcl channels opened by the application the second to fourth are designated as the Tcl standard channels.</p>
 <h2>Re-Initialization Of Tcl Standard Channels</h2>
 <p>Once a Tcl standard channel is initialized through one of the methods above, closing this Tcl standard channel will cause the next call to <code>Tcl_CreateChannel</code> to make the new channel the new standard channel, too. If more than one Tcl standard channel was closed <code>Tcl_CreateChannel</code> will fill the empty slots in the order <code>stdin</code>, <code>stdout</code> and <code>stderr</code>. </p>

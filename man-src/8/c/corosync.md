@@ -14,16 +14,16 @@ description: "corosync – The Corosync Cluster Engine."
 <p><code>corosync</code> Corosync provides clustering infracture such as membership, messaging and quorum.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Start application in foreground.</p>
-<dt><code>-p</code></p>
-<dd>Do not set process priority.</p>
-<dt><code>-r</code></p>
-<dd>Set round robin realtime scheduling (default).</p>
-<dt><code>-t</code></p>
-<dd>Test configuration and then exit.</p>
-<dt><code>-v</code></p>
-<dd>Display version and SVN revision of Corosync and exit.</dl>
+<dt><code>-f</code></dt>
+<dd>Start application in foreground.</dd>
+<dt><code>-p</code></dt>
+<dd>Do not set process priority.</dd>
+<dt><code>-r</code></dt>
+<dd>Set round robin realtime scheduling (default).</dd>
+<dt><code>-t</code></dt>
+<dd>Test configuration and then exit.</dd>
+<dt><code>-v</code></dt>
+<dd>Display version and SVN revision of Corosync and exit.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-corosync_overview/">corosync_overview</a></code>(8), <code><a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a></code>(5), <code><a href="/docs/linux/man/8-cpg_overview/">cpg_overview</a></code>(8), <code><a href="/docs/linux/man/8-votequorum_overview/">votequorum_overview</a></code>(8), <code><a href="/docs/linux/man/8-sam_overview/">sam_overview</a></code>(8), <code><a href="/docs/linux/man/8-cmap_overview/">cmap_overview</a></code>(8), <code><a href="/docs/linux/man/8-quorum_overview/">quorum_overview</a></code>(8)</p>
 <h2>Author</h2>

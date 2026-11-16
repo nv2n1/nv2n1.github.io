@@ -13,8 +13,8 @@ description: "pskc_get_key_policy_expirydate – API function"
 const struct tm *pskc_get_key_policy_expirydate(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Policy ExpiryDate. This element denote the expiry of the validity period of a key.</p>
 <h2>Returns</h2>

@@ -22,9 +22,9 @@ CALL TDPRPI (XI2D, YI2D, XIPA, YIPA)
 
 The arguments of TDPRPI are as follows:
 <dl><dt>XI2D and YI2D
-<dd>(input expressions of type REAL) - the coordinates of a point in the projection plane.
-<dt>XIPA and YIPA
-<dd>(output variables of type REAL) - the parallelogram coordinates of that point in the reference parallelogram that projects into (XI2D,YI2D). (The parallelogram is as defined by a prior call to TDPARA.)</dl>
+</dt><dd>(input expressions of type REAL) - the coordinates of a point in the projection plane.
+</dd><dt>XIPA and YIPA
+</dt><dd>(output variables of type REAL) - the parallelogram coordinates of that point in the reference parallelogram that projects into (XI2D,YI2D). (The parallelogram is as defined by a prior call to TDPARA.)</dd></dl>
 
 <h2>C-Binding Description</h2>
 

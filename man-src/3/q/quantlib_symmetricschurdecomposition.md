@@ -19,11 +19,11 @@ description: "QuantLib::SymmetricSchurDecomposition – symmetric threshold Jaco
 <p> Given a real symmetric matrix S, the Schur decomposition finds the eigenvalues and eigenvectors of S. If D is the diagonal matrix formed by the eigenvalues and U the unitarian matrix of the eigenvectors we can write the Schur decomposition as [ S = U dot D dot U^T , ,] where $ dot $ is the standard matrix product and $ ^T $ is the transpose operator. This class implements the Schur decomposition using the symmetric threshold Jacobi algorithm. For details on the different Jacobi transfomations see &#8216;Matrix computation,&#8217; second edition, by Golub and Van Loan, The Johns Hopkins University Press</p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking their properties.</dl>
+<dd>the correctness of the returned values is tested by checking their properties.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>SymmetricSchurDecomposition</code> (const <code>Matrix</code> &amp; s)</h3>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>s must be symmetric</dl>
+<dd>s must be symmetric</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

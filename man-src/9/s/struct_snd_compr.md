@@ -26,35 +26,35 @@ struct_snd_compr -
 <h2>Members</h2>
 
 name
-<dl><dd>DSP device name</dl>
+<dl><dd>DSP device name</dd></dl>
  
 
  dev
-<dl><dd>associated device instance</dl>
+<dl><dd>associated device instance</dd></dl>
  
 
  ops
-<dl><dd>pointer to DSP callbacks</dl>
+<dl><dd>pointer to DSP callbacks</dd></dl>
  
 
  private_data
-<dl><dd>pointer to DSP pvt data</dl>
+<dl><dd>pointer to DSP pvt data</dd></dl>
  
 
  card
-<dl><dd>sound card pointer</dl>
+<dl><dd>sound card pointer</dd></dl>
  
 
  direction
-<dl><dd>Playback or capture direction</dl>
+<dl><dd>Playback or capture direction</dd></dl>
  
 
  lock
-<dl><dd>device lock</dl>
+<dl><dd>device lock</dd></dl>
  
 
  device
-<dl><dd>device id</dl>
+<dl><dd>device id</dd></dl>
 
 <h2>Copyright</h2>
 

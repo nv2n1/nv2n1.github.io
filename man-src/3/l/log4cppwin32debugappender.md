@@ -32,7 +32,7 @@ description: "log4cpp::Win32DebugAppender –"
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> Name used by the base classes only.</dl>
+<dd><i>name</i> Name used by the base classes only.</dd></dl>
 <h3>log4cpp::Win32DebugAppender::~Win32DebugAppender () [virtual]</h3>
 <p>Destructor.</p>
 <h2>Member Function Documentation</h2>
@@ -40,7 +40,7 @@ description: "log4cpp::Win32DebugAppender –"
 <p>Method that does the actual work. In this case, it simply sets up the layout and calls the OutputDebugString API. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Event for which we are logging.</dl>
+<dd><i>event</i> Event for which we are logging.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::Win32DebugAppender::close () [virtual]</h3>
 <p>Close method. This is called by the framework, but there is nothing to do for the OutputDebugString API, so it simply returns. </p>

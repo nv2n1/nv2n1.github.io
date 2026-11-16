@@ -21,25 +21,23 @@ description: "qhold – hold pbs batch jobs"
 <p> The qhold command sends a <i>Hold Job</i> batch request to the server as described in the general section. </font></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h hold_list</p>
-<dd> Defines the types of holds to be placed on the job.</p>
+<dt>-h hold_list</dt>
+<dd> Defines the types of holds to be placed on the job.</dd>
 <dt>
-<dd> The <i> argument is a string consisting of one or more of the letters &quot;</i><code>u</code>&quot;, &quot;<code>o</code>&quot;, or &quot;<code>s</code>&quot; in any combination. The hold type associated with each letter is:</p>
+</dt><dd> The <i> argument is a string consisting of one or more of the letters &quot;</i><code>u</code>&quot;, &quot;<code>o</code>&quot;, or &quot;<code>s</code>&quot; in any combination. The hold type associated with each letter is:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>u &#8211;</p>
-<dd> <font SIZE="-1"><code></p>
-<dt>o &#8211;</p>
-<dd> </code></font><font SIZE="-2"><code></p>
-<dt>s &#8211;</p>
-<dd> </code></font><font SIZE="-3"><code></dl>
+<dt>u &#8211;</dt>
+<dd> <font SIZE="-1"><code></dd>
+<dt>o &#8211;</dt>
+<dd> </code></font><font SIZE="-2"><code></dd>
+<dt>s &#8211;</dt>
+<dd> </code></font><font SIZE="-3"><code></dd></dl>
 </dl>
-<dt>-t array_range</p>
-<dd> The array_range argument is an integer id or a range of integers. Multiple ids or id ranges can be combined in a comma delimted list. Examples: -t 1-100 or -t 1,10,50-100</p>
+<dt>-t array_range</dt>
+<dd> The array_range argument is an integer id or a range of integers. Multiple ids or id ranges can be combined in a comma delimted list. Examples: -t 1-100 or -t 1,10,50-100</dd>
 <dt>
-<dd> If an array range isn&#8217;t specified, the command tries to operate on the entire array. The command acts on the array (or specified range of the array) just as it would on an individual job.</dl>
+</dt><dd> If an array range isn&#8217;t specified, the command tries to operate on the entire array. The command acts on the array (or specified range of the array) just as it would on an individual job.</dd></dl>
 <p> </code></font></p>
 <h2>OPERANDS</h2>
 <p> The qhold command accepts one or more <i> operands of the form: </i><code> </p>

@@ -13,19 +13,19 @@ description: "PAPI_stop –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_stop(&nbsp;<wbr>int&nbsp;<wbr>&nbsp;<wbr>EventSet, long long&nbsp;<wbr>*&nbsp;<wbr>values&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br />
- <i>values</i> &#8212; an array to hold the counter values of the counting events</dl>
+ <i>values</i> &#8212; an array to hold the counter values of the counting events</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_OK</i><br />
  <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
  <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br />
  <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
- <i>PAPI_ENOTRUN</i> The EventSet is currently not running.</dl>
+ <i>PAPI_ENOTRUN</i> The EventSet is currently not running.</dd></dl>
 <p> <code>PAPI_stop</code> halts the counting of a previously defined event set and the counter values contained in that EventSet are copied into the values array Assumes an initialized PAPI library and a properly added event set. </p>
 <p> <code>Example:</code></p>
 <dl COMPACT>
@@ -50,9 +50,9 @@ description: "PAPI_stop –"
 * printf(&quot;%lld
 &quot;,values[0]);
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_create_eventset</code> <code>PAPI_start</code></dl>
+<dd><code>PAPI_create_eventset</code> <code>PAPI_start</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

@@ -10,7 +10,7 @@ description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 <p>openjade &#8211; apply a DSSSL stylesheet to an SGML or XML document </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>openjade</code> [<code>-vCegG2s</code>] [<code>-b&nbsp;</code><i>encoding</i>] [<code>-f&nbsp;</code><i>error_file</i>] [<code>-c&nbsp;</code><i>catalog_sysid</i>] [<code>-D&nbsp;</code><i>dir</i>] [<code>-a&nbsp;</code><i>link_type</i>] [<code>-A&nbsp;</code><i>arch</i>] [<code>-E&nbsp;</code><i>max_errors</i>] [<code>-i&nbsp;</code><i>entity</i>] [<code>-w&nbsp;</code><i>warning_type</i>] [<code>-d&nbsp;</code><i>dsssl_spec</i>] [<code>-V&nbsp;</code><i>variable[=value</i>]] [<code>-t&nbsp;</code><i>output_type</i>] [<code>-o&nbsp;</code><i>output_file</i>] [<i>sysid</i>&#8230;] </p>
+<dt> <code>openjade</code> [<code>-vCegG2s</code>] [<code>-b&nbsp;</code><i>encoding</i>] [<code>-f&nbsp;</code><i>error_file</i>] [<code>-c&nbsp;</code><i>catalog_sysid</i>] [<code>-D&nbsp;</code><i>dir</i>] [<code>-a&nbsp;</code><i>link_type</i>] [<code>-A&nbsp;</code><i>arch</i>] [<code>-E&nbsp;</code><i>max_errors</i>] [<code>-i&nbsp;</code><i>entity</i>] [<code>-w&nbsp;</code><i>warning_type</i>] [<code>-d&nbsp;</code><i>dsssl_spec</i>] [<code>-V&nbsp;</code><i>variable[=value</i>]] [<code>-t&nbsp;</code><i>output_type</i>] [<code>-o&nbsp;</code><i>output_file</i>] [<i>sysid</i>&#8230;] </dt>
 </dl>
 <h2>Description</h2>
 <p>&nbsp;<code>openjade</code>&nbsp;is an implementation of the ISO/IEC 10179:1996 standard DSSSL language. The DSSSL engine receives as input an SGML or XML document and transforms it into formats like: </p>
@@ -19,7 +19,7 @@ description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 <p> * TeX format </p>
 <p> * MIF format that can be rendered and printed with Framemaker </p>
 <p> * SGML or XML format. This is used in conjunction with non-standard flow object classes to generate SGML, thus allowing <code>openjade</code> to be used for SGML/XML transformations. </p>
-<dd>The system identifier of the document to be processed is specified as an argument to <code>openjade</code>. If this is omitted, standard input will be read. </p>
+<dd>The system identifier of the document to be processed is specified as an argument to <code>openjade</code>. If this is omitted, standard input will be read. </dd>
 <p> <code>openjade</code> determines the system identifier for the DSSSL specification as follows: </p>
 <p> 1. If the -d option is specified, it will use the argument as the system identifier. </p>
 <p> 2. Otherwise, it will look for processing instructions in the prolog of the document. Two kinds of processing instruction are recognized: </p>
@@ -33,16 +33,16 @@ description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 <p> The DSSSL specification must be an SGML document conforming to the DSSSL architecture. For an example, see <i>dsssl/demo.dsl</i>. </p>
 <p> <code>openjade</code> supports the following options in addition to the normal OpenSP (see <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>) options (note that all options are case-sensitive, ie <code>-g</code> and <code>-G</code> are different options): </p>
 <dl COMPACT>
-<dt><code>-d </code><i>dsssl_spec</i></p>
-<dd>This specifies that dsssl_spec is the system identifier of the DSSSL specification to be used. </p>
-<dt><code>-G</code></p>
-<dd>Debug mode. When an error occurs in the evaluation of an expression, <code>openjade</code> will display a stack trace. Note that this disables tail-call optimization. </p>
-<dt><code>-c </code><i>filename</i></p>
-<dd>The filename arguments specify catalog files rather than the document entity. The document entity is specified by the first DOCUMENT entry in the catalog files. </p>
-<dt><code>-s</code></p>
-<dd>Strict compliance mode. Currently the only effect is that jade doesn&#8217;t use any predefined character names, sdata-entity mappings or name-characters. This is useful for checking that your stylesheet is portable to other DSSSL implementations and that it is strictly compliant to the DSSSL specifications. </p>
-<dt><code>-t </code><i>output_type</i></p>
-<dd><i>output_type</i> specifies the type of output as follows: </p>
+<dt><code>-d </code><i>dsssl_spec</i></dt>
+<dd>This specifies that dsssl_spec is the system identifier of the DSSSL specification to be used. </dd>
+<dt><code>-G</code></dt>
+<dd>Debug mode. When an error occurs in the evaluation of an expression, <code>openjade</code> will display a stack trace. Note that this disables tail-call optimization. </dd>
+<dt><code>-c </code><i>filename</i></dt>
+<dd>The filename arguments specify catalog files rather than the document entity. The document entity is specified by the first DOCUMENT entry in the catalog files. </dd>
+<dt><code>-s</code></dt>
+<dd>Strict compliance mode. Currently the only effect is that jade doesn&#8217;t use any predefined character names, sdata-entity mappings or name-characters. This is useful for checking that your stylesheet is portable to other DSSSL implementations and that it is strictly compliant to the DSSSL specifications. </dd>
+<dt><code>-t </code><i>output_type</i></dt>
+<dd><i>output_type</i> specifies the type of output as follows: </dd>
 <p> <code>fot </code> An XML representation of the flow object tree </p>
 <p> <code>rtf</code> <code>rtf-95 </code> RTF (used for SGML/XML to RTF transformations) Microsoft&#8217;s Rich Text Format. rtf-95 produces output optimized for Word 95 rather than Word 97. </p>
 <p> <code>tex</code> TeX (used for SGML/XML to TeX transformations) </p>
@@ -50,16 +50,16 @@ description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 <p> <code>xml</code> <code>xml-raw</code> XML (used for SGML/XML to XML transformations). xml-raw doesn&#8217;t emit linebreaks in tags. </p>
 <p> <code>html </code> HTML (used for SGML/XML to HTML transformations) </p>
 <p> <code>mif</code> MIF (used for SGML/XML to MIF transformations) </p>
-<dt><code>-o </code><i>output_file</i></p>
-<dd>Write output to <i>output_file</i> instead of the default. The default filename is the name of the last input file with its extension replaced by the name of the type of output. If there is no input filename, then the extension is added onto jade-out. </p>
-<dt><code>-V </code><i>variable</i></p>
-<dd>This is equivalent to doing (define variable #t) except that this definition will take priority over any definition of variable in a style-sheet. </p>
-<dt><code>-V </code><i>variable=value</i></p>
-<dd>This is equivalent to doing (define <i>variable</i> &quot;<i>value</i>&quot;) except that this definition will take priority over any definition of variable in a style-sheet. </p>
-<dt><code>-V (define </code><i>variable</i> <i>value</i>)</p>
-<dd>This is equivalent to doing (define variable value) except that this definition will take priority over any definition of variable in a style-sheet. Note that you will probably have to use some escaping mechanism for the spaces to get the entire scheme expression parsed as one cmdline argument. </p>
-<dt><code>-w</code><i>type</i></p>
-<dd>Control warnings and errors. Multiple <code>-w</code> options are allowed. The following values of type enable warnings: </p>
+<dt><code>-o </code><i>output_file</i></dt>
+<dd>Write output to <i>output_file</i> instead of the default. The default filename is the name of the last input file with its extension replaced by the name of the type of output. If there is no input filename, then the extension is added onto jade-out. </dd>
+<dt><code>-V </code><i>variable</i></dt>
+<dd>This is equivalent to doing (define variable #t) except that this definition will take priority over any definition of variable in a style-sheet. </dd>
+<dt><code>-V </code><i>variable=value</i></dt>
+<dd>This is equivalent to doing (define <i>variable</i> &quot;<i>value</i>&quot;) except that this definition will take priority over any definition of variable in a style-sheet. </dd>
+<dt><code>-V (define </code><i>variable</i> <i>value</i>)</dt>
+<dd>This is equivalent to doing (define variable value) except that this definition will take priority over any definition of variable in a style-sheet. Note that you will probably have to use some escaping mechanism for the spaces to get the entire scheme expression parsed as one cmdline argument. </dd>
+<dt><code>-w</code><i>type</i></dt>
+<dd>Control warnings and errors. Multiple <code>-w</code> options are allowed. The following values of type enable warnings: </dd>
 <p> <code>xml</code> Warn about constructs that are not allowed by XML. </p>
 <p> <code>mixed</code> Warn about mixed content models that do not allow #pcdata anywhere. </p>
 <p> <code>sgmldecl</code> Warn about various dubious constructions in the SGML declaration. </p>

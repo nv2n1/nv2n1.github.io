@@ -16,14 +16,14 @@ description: "acyclic – make directed graph acyclic"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-n</code></p>
-<dd> No output is produced, though the return value will indicate whether the graph is acyclic or not.</p>
-<dt><code>-v</code></p>
-<dd> Print information about whether the file is acyclic, has a cycle or is undirected.</p>
-<dt><code>-o</code><i> outfile</i></p>
-<dd> causes the output to be written to the specified file; by default, output is written to <code>stdout</code>.</p>
-<dt><code>-?</code></p>
-<dd> option causes the program to print usage information.</dl>
+<dt><code>-n</code></dt>
+<dd> No output is produced, though the return value will indicate whether the graph is acyclic or not.</dd>
+<dt><code>-v</code></dt>
+<dd> Print information about whether the file is acyclic, has a cycle or is undirected.</dd>
+<dt><code>-o</code><i> outfile</i></dt>
+<dd> causes the output to be written to the specified file; by default, output is written to <code>stdout</code>.</dd>
+<dt><code>-?</code></dt>
+<dd> option causes the program to print usage information.</dd></dl>
 <h2>RETURN CODES</h2>
 <p> <code>acyclic</code> returns <code>0</code> if the graph is acyclic; <code>1</code> if the graph has a cycle; <code>2</code> if the graph is undirected; and <code>255</code> if there are any errors.</p>
 <h2>BUGS</h2>

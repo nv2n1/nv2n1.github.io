@@ -28,9 +28,9 @@ url: "/docs/linux/man/1-beakerlib-analyze/"
 </pre>
 <dl>
 <dt>par1
-<dd> <font SIZE="-1">TODO</font> description
-<dt>par2
-<dd> <font SIZE="-1">TODO</font> description</dl>
+</dt><dd> <font SIZE="-1">TODO</font> description
+</dd><dt>par2
+</dt><dd> <font SIZE="-1">TODO</font> description</dd></dl>
  
 
  Return 0 if... <font SIZE="-1">TODO</font>
@@ -39,13 +39,12 @@ url: "/docs/linux/man/1-beakerlib-analyze/"
 
 <dl>
 <dt>&bull;
-<dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
-<dt>&bull;
-<dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
-<dt>&bull;
-<dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; 
-
-</dl>
+</dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; 
+</dd></dl>
 
 <h2>Index</h2>
 

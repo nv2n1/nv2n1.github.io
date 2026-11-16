@@ -18,12 +18,12 @@ mogautomount[--verbose | -v] mogautomount[--help | -h]
 <p> You can do this at runtime without restarting mogstored, assuming you can add new block devices at runtime via your SCSI/SATA/etc controller.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;help | -h</p>
-<dd> this help</p>
-<dt>&#8211;verbose | -verbose</p>
-<dd> be verbose</p>
-<dt>&#8211;chmod-mountpoints</p>
-<dd> If a mogile device isn&#8217;t mounted yet, check to make sure the underlying filesystem has the directory set to be not readable or writable at all (chmod 0). This could help prevent mogstored from accidentally writing to the underlying filesystem.</dl>
+<dt>&#8211;help | -h</dt>
+<dd> this help</dd>
+<dt>&#8211;verbose | -verbose</dt>
+<dd> be verbose</dd>
+<dt>&#8211;chmod-mountpoints</dt>
+<dd> If a mogile device isn&#8217;t mounted yet, check to make sure the underlying filesystem has the directory set to be not readable or writable at all (chmod 0). This could help prevent mogstored from accidentally writing to the underlying filesystem.</dd></dl>
 <h2>RETURN CODE</h2>
 <p> 0 on success or inaction because no action needed to happen. </p>
 <p> 1 on partial failure (some mounts succeed). </p>
@@ -37,7 +37,7 @@ mogautomount[--verbose | -v] mogautomount[--help | -h]
 <h2>POD ERRORS</h2>
 <p> Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl>
-<dt>Around line 134:</p>
-<dd> &#8216;=end&#8217; without a target? </p>
+<dt>Around line 134:</dt>
+<dd> &#8216;=end&#8217; without a target? </dd>
 </dl>
 <h2>Index</h2>

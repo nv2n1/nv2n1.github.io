@@ -21,46 +21,46 @@ description: "pcre_table – format of Postfix PCRE tables"
 <h2>Table Format</h2>
 <p>The general form of a PCRE table is:</p>
 <dl>
-<dt><code>/</code><i>pattern</i><code>/</code><i>flags result</i></p>
-<dd>When <i>pattern</i> matches the input string, use the corresponding <i>result</i> value.</p>
-<dt><code>!/</code><i>pattern</i><code>/</code><i>flags result</i></p>
-<dd>When <i>pattern</i> does <code>not</code> match the input string, use the corresponding <i>result</i> value.</p>
-<dt><code>if /</code><i>pattern</i><code>/</code><i>flags</i></p>
+<dt><code>/</code><i>pattern</i><code>/</code><i>flags result</i></dt>
+<dd>When <i>pattern</i> matches the input string, use the corresponding <i>result</i> value.</dd>
+<dt><code>!/</code><i>pattern</i><code>/</code><i>flags result</i></dt>
+<dd>When <i>pattern</i> does <code>not</code> match the input string, use the corresponding <i>result</i> value.</dd>
+<dt><code>if /</code><i>pattern</i><code>/</code><i>flags</i></dt>
 <dd>
-<dt><code>endif</code></p>
-<dd>Match the input string against the patterns between <code>if</code> and <code>endif</code>, if and only if that same input string also matches <i>pattern</i>. The <code>if</code>..<code>endif</code> can nest. </p>
+</dd><dt><code>endif</code></dt>
+<dd>Match the input string against the patterns between <code>if</code> and <code>endif</code>, if and only if that same input string also matches <i>pattern</i>. The <code>if</code>..<code>endif</code> can nest. </dd>
 <p> Note: do not prepend whitespace to patterns inside <code>if</code>..<code>endif</code>. </p>
 <p> This feature is available in Postfix 2.1 and later.</p>
-<dt><code>if !/</code><i>pattern</i><code>/</code><i>flags</i></p>
+<dt><code>if !/</code><i>pattern</i><code>/</code><i>flags</i></dt>
 <dd>
-<dt><code>endif</code></p>
-<dd>Match the input string against the patterns between <code>if</code> and <code>endif</code>, if and only if that same input string does <code>not</code> match <i>pattern</i>. The <code>if</code>..<code>endif</code> can nest. </p>
+</dd><dt><code>endif</code></dt>
+<dd>Match the input string against the patterns between <code>if</code> and <code>endif</code>, if and only if that same input string does <code>not</code> match <i>pattern</i>. The <code>if</code>..<code>endif</code> can nest. </dd>
 <p> Note: do not prepend whitespace to patterns inside <code>if</code>..<code>endif</code>. </p>
 <p> This feature is available in Postfix 2.1 and later.</p>
-<dt>blank lines and comments</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>multi-line text</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
+<dt>blank lines and comments</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>multi-line text</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd></dl>
 <p> Each pattern is a perl-like regular expression. The expression delimiter can be any non-alphanumerical character, except whitespace or characters that have special meaning (traditionally the forward slash is used). The regular expression can contain whitespace. </p>
 <p> By default, matching is case-insensitive, and newlines are not treated as special characters. The behavior is controlled by flags, which are toggled by appending one or more of the following characters after the pattern:</p>
 <dl>
-<dt><code>i</code> (default: on)</p>
-<dd>Toggles the case sensitivity flag. By default, matching is case insensitive.</p>
-<dt><code>m</code> (default: off)</p>
-<dd>Toggles the PCRE_MULTILINE flag. When this flag is on, the <code>^</code> and <code>$</code> metacharacters match immediately after and immediately before a newline character, respectively, in addition to matching at the start and end of the subject string.</p>
-<dt><code>s</code> (default: on)</p>
-<dd>Toggles the PCRE_DOTALL flag. When this flag is on, the <code>.</code> metacharacter matches the newline character. With Postfix versions prior to 2.0, the flag is off by default, which is inconvenient for multi-line message header matching.</p>
-<dt><code>x</code> (default: off)</p>
-<dd>Toggles the pcre extended flag. When this flag is on, whitespace characters in the pattern (other than in a character class) are ignored. To include a whitespace character as part of the pattern, escape it with backslash. </p>
+<dt><code>i</code> (default: on)</dt>
+<dd>Toggles the case sensitivity flag. By default, matching is case insensitive.</dd>
+<dt><code>m</code> (default: off)</dt>
+<dd>Toggles the PCRE_MULTILINE flag. When this flag is on, the <code>^</code> and <code>$</code> metacharacters match immediately after and immediately before a newline character, respectively, in addition to matching at the start and end of the subject string.</dd>
+<dt><code>s</code> (default: on)</dt>
+<dd>Toggles the PCRE_DOTALL flag. When this flag is on, the <code>.</code> metacharacter matches the newline character. With Postfix versions prior to 2.0, the flag is off by default, which is inconvenient for multi-line message header matching.</dd>
+<dt><code>x</code> (default: off)</dt>
+<dd>Toggles the pcre extended flag. When this flag is on, whitespace characters in the pattern (other than in a character class) are ignored. To include a whitespace character as part of the pattern, escape it with backslash. </dd>
 <p> Note: do not use <code>#</code><i>comment</i> after patterns.</p>
-<dt><code>A</code> (default: off)</p>
-<dd>Toggles the PCRE_ANCHORED flag. When this flag is on, the pattern is forced to be &quot;anchored&quot;, that is, it is constrained to match only at the start of the string which is being searched (the &quot;subject string&quot;). This effect can also be achieved by appropriate constructs in the pattern itself.</p>
-<dt><code>E</code> (default: off)</p>
-<dd>Toggles the PCRE_DOLLAR_ENDONLY flag. When this flag is on, a <code>$</code> metacharacter in the pattern matches only at the end of the subject string. Without this flag, a dollar also matches immediately before the final character if it is a newline character (but not before any other newline characters). This flag is ignored if PCRE_MULTILINE flag is set.</p>
-<dt><code>U</code> (default: off)</p>
-<dd>Toggles the ungreedy matching flag. When this flag is on, the pattern matching engine inverts the &quot;greediness&quot; of the quantifiers so that they are not greedy by default, but become greedy if followed by &quot;?&quot;. This flag can also set by a (?U) modifier within the pattern.</p>
-<dt><code>X</code> (default: off)</p>
-<dd>Toggles the PCRE_EXTRA flag. When this flag is on, any backslash in a pattern that is followed by a letter that has no special meaning causes an error, thus reserving these combinations for future expansion.</dl>
+<dt><code>A</code> (default: off)</dt>
+<dd>Toggles the PCRE_ANCHORED flag. When this flag is on, the pattern is forced to be &quot;anchored&quot;, that is, it is constrained to match only at the start of the string which is being searched (the &quot;subject string&quot;). This effect can also be achieved by appropriate constructs in the pattern itself.</dd>
+<dt><code>E</code> (default: off)</dt>
+<dd>Toggles the PCRE_DOLLAR_ENDONLY flag. When this flag is on, a <code>$</code> metacharacter in the pattern matches only at the end of the subject string. Without this flag, a dollar also matches immediately before the final character if it is a newline character (but not before any other newline characters). This flag is ignored if PCRE_MULTILINE flag is set.</dd>
+<dt><code>U</code> (default: off)</dt>
+<dd>Toggles the ungreedy matching flag. When this flag is on, the pattern matching engine inverts the &quot;greediness&quot; of the quantifiers so that they are not greedy by default, but become greedy if followed by &quot;?&quot;. This flag can also set by a (?U) modifier within the pattern.</dd>
+<dt><code>X</code> (default: off)</dt>
+<dd>Toggles the PCRE_EXTRA flag. When this flag is on, any backslash in a pattern that is followed by a letter that has no special meaning causes an error, thus reserving these combinations for future expansion.</dd></dl>
 <h2>Search Order</h2>
 <p>Patterns are applied in the order as specified in the table, until a pattern is found that matches the input string. </p>
 <p> Each pattern is applied to the entire input string. Depending on the application, that string is an entire client hostname, an entire client IP address, or an entire mail address. Thus, no parent domain or parent network search is done, and <i>user [at] domain</i> mail addresses are not broken up into their <i>user</i> and <i>domain</i> constituent parts, nor is <i>user+foo</i> broken up into <i>user</i> and <i>foo</i>.</p>

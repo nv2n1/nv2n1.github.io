@@ -18,10 +18,10 @@ description: "cgcc – Compiler wrapper to run Sparse after compiling"
 <p> By providing the same interface as the C compiler, <code>cgcc</code> allows projects to run Sparse as part of their build without modifying their build system, by using <code>cgcc</code> as the compiler. For many projects, setting <code>CC=cgcc</code> on the <code>make</code> command-line will work.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>REAL_CC</code></p>
-<dd> If set, <code>cgcc</code> will use this as the compiler to invoke, rather than the default <code>cc</code>.</p>
-<dt><code>CHECK</code></p>
-<dd> If set, <code>cgcc</code> will use this as the Sparse program to invoke, rather than the default <code>sparse</code>.</dl>
+<dt><code>REAL_CC</code></dt>
+<dd> If set, <code>cgcc</code> will use this as the compiler to invoke, rather than the default <code>cc</code>.</dd>
+<dt><code>CHECK</code></dt>
+<dd> If set, <code>cgcc</code> will use this as the Sparse program to invoke, rather than the default <code>sparse</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sparse/">sparse</a></code>(1) </p>
 <h2>Index</h2>

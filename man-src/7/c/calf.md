@@ -24,14 +24,14 @@ description: "calf – a audio plugin library"
 &nbsp;<wbr>*&nbsp;<wbr>LV2&nbsp;<wbr>(experimental, SVN only, some features may not work, host support for several features may vary)</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&nbsp;<wbr>How to use Calf plugins:</code></p>
+<dt><code>&nbsp;<wbr>How to use Calf plugins:</code></dt>
 <dd>
-<dt><code>&nbsp;<wbr>* LADSPA plugins</code></p>
-<dd>Calf is installed as calf.so library in your LADSPA directory (typically /usr/lib/ladspa). It means that typical LADSPA host should be able to find Calf&#8217;s plugins. </p>
-<dt><code>&nbsp;<wbr>* DSSI plugins</code></p>
-<dd>The calf.so module is also installed in your DSSI plugin directory, which means your DSSI host (like jack-dssi-host or rosegarden) should find it and include its plugins in the plugin list. </p>
-<dt><code>&nbsp;<wbr>* JACK client application</code></p>
-<dd>You can also use Calf plugins as one or more separate applications, connecting to other applications using JACK Audio Connection Kit (version 0.103 or newer is required). To run the client, type: </p>
+</dd><dt><code>&nbsp;<wbr>* LADSPA plugins</code></dt>
+<dd>Calf is installed as calf.so library in your LADSPA directory (typically /usr/lib/ladspa). It means that typical LADSPA host should be able to find Calf&#8217;s plugins. </dd>
+<dt><code>&nbsp;<wbr>* DSSI plugins</code></dt>
+<dd>The calf.so module is also installed in your DSSI plugin directory, which means your DSSI host (like jack-dssi-host or rosegarden) should find it and include its plugins in the plugin list. </dd>
+<dt><code>&nbsp;<wbr>* JACK client application</code></dt>
+<dd>You can also use Calf plugins as one or more separate applications, connecting to other applications using JACK Audio Connection Kit (version 0.103 or newer is required). To run the client, type: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>calfjackhost monosynth&nbsp;<wbr>! </p>
 <p> (! means &quot;connect&quot;, last &quot;!&quot; means &quot;connect to output&quot;) </p>
 <p> Other examples: </p>

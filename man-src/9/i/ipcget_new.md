@@ -14,16 +14,16 @@ description: "ipcget_new – create a new ipc object"
 <p><i>ns</i></p>
 <dl>
 <dd>
-<dd>ipc namespace</dl>
+</dd><dd>ipc namespace</dd></dl>
 <p> <i>ids</i></p>
 <dl>
-<dd>ipc identifier set</dl>
+<dd>ipc identifier set</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>the actual creation routine to call</dl>
+<dd>the actual creation routine to call</dd></dl>
 <p> <i>params</i></p>
 <dl>
-<dd>its parameters</dl>
+<dd>its parameters</dd></dl>
 <h2>Description</h2>
 <p>This routine is called by sys_msgget, <code>sys_semget</code> and <code>sys_shmget</code> when the key is IPC_PRIVATE.</p>
 <h2>Copyright</h2>

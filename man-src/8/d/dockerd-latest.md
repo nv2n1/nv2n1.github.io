@@ -173,7 +173,7 @@ Isolation specifies the type of isolation technology used by containers. Note th
 <pre> $ sudo service docker stop
  $ sudo rm -rf /var/lib/docker
  $ sudo service docker start</pre>
-</dl>
+</dd></dl>
 <p> Example use: dockerd &#8211;storage-opt dm.basesize=20G</p>
 <h3>dm.fs</h3>
 <p>Specifies the filesystem type to use for the base device. The supported options are ext4 and xfs. The default is ext4. </p>
@@ -226,7 +226,7 @@ Isolation specifies the type of isolation technology used by containers. Note th
  [...]
  Udev Sync Supported: true
  [...]</pre>
-</dl>
+</dd></dl>
 <p> When udev sync support is true, then devicemapper and udev can coordinate the activation and deactivation of devices for containers. </p>
 <p> When udev sync support is false, a race condition occurs between the devicemapper and udev during create and cleanup. The race condition results in errors and failures. (For information on these failures, see </p>
 <p> &lt;<a rel="nofollow" href="https://github.com/docker/docker/issues/4036">https://github.com/docker/docker/issues/4036</a>&gt;) </p>
@@ -234,7 +234,7 @@ Isolation specifies the type of isolation technology used by containers. Note th
 <dl>
 <dd>
 <pre> $ dockerd --storage-opt dm.override_udev_sync_check=true</pre>
-</dl>
+</dd></dl>
 <p> When this value is true, the driver continues and simply warns you the errors are happening. </p>
 <p> <code>Note</code>: The ideal is to pursue a docker daemon and environment that does support synchronizing with udev. For further discussion on this topic, see </p>
 <p> &lt;<a rel="nofollow" href="https://github.com/docker/docker/issues/4036">https://github.com/docker/docker/issues/4036</a>&gt;. Otherwise, set this flag for migrating existing Docker daemons to a daemon with a supported environment.</p>
@@ -251,7 +251,7 @@ Isolation specifies the type of isolation technology used by containers. Note th
 <dl>
 <dd>
 <pre>$ sudo dockerd --storage-opt dm.xfs_nospace_max_retries=0</pre>
-</dl>
+</dd></dl>
 <h2>ZFS options</h2>
 <h3>zfs.fsname</h3>
 <p>Set zfs filesystem under which docker will create its own datasets. By default docker will pick up the zfs filesystem where docker graph (/var/lib/docker) is located. </p>
@@ -273,7 +273,7 @@ Isolation specifies the type of isolation technology used by containers. Note th
 <dl>
 <dd>
 <pre>dockerd --authorization-plugin=plugin1 --authorization-plugin=plugin2,...</pre>
-</dl>
+</dd></dl>
 <p> The PLUGIN_ID value is either the plugin&#8217;s name or a path to its specification file. The plugin&#8217;s implementation determines whether you can specify a name or path. Consult with your Docker administrator to get information about the plugins available to you. </p>
 <p> Once a plugin is installed, requests made to the daemon through the command line or Docker&#8217;s remote API are allowed or denied by the plugin. If you have multiple plugins installed, at least one must allow the request for it to complete. </p>
 <p> For information about how to create an authorization plugin, see &lt;<a rel="nofollow" href="https://docs.docker.com/engine/extend/authorization/">https://docs.docker.com/engine/extend/authorization/</a>&gt; section in the Docker extend section of this documentation.</p>

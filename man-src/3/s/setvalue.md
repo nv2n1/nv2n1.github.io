@@ -10,13 +10,7 @@ description: "QuantLib::IntervalPrice – interval price"
 <p>QuantLib::IntervalPrice &#8211; interval price </p>
 <h2>Synopsis</h2>
 <pre><code>static TimeSeries&lt; IntervalPrice &gt; makeSeries (const std::vector&lt; Date &gt; &amp;d, const std::vector&lt; Real &gt; &amp;open, const std::vector&lt; Real &gt; &amp;close, const std::vector&lt; Real &gt; &amp;high, const std::vector&lt; Real &gt; &amp;low)
-
-
-
 static std::vector&lt; Real &gt; extractValues (const TimeSeries&lt; IntervalPrice &gt; &amp;, IntervalPrice::Type)
-
-
-
 static TimeSeries&lt; Real &gt; extractComponent (const TimeSeries&lt; IntervalPrice &gt; &amp;, enum IntervalPrice::Type)</code></pre>
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>Open</code>, <code>Close</code>, <code>High</code>, <code>Low</code> }</p>
@@ -33,13 +27,7 @@ static TimeSeries&lt; Real &gt; extractComponent (const TimeSeries&lt; IntervalP
 <p>static std::vector&lt; Real &gt; extractValues (const TimeSeries&lt; IntervalPrice &gt; &amp;, IntervalPrice::Type)</p>
 <p>static TimeSeries&lt; Real &gt; extractComponent (const TimeSeries&lt; IntervalPrice &gt; &amp;, enum IntervalPrice::Type) <code>Helper functions</code> </p>
 <pre><code>static TimeSeries&lt; IntervalPrice &gt; makeSeries (const std::vector&lt; Date &gt; &amp;d, const std::vector&lt; Real &gt; &amp;open, const std::vector&lt; Real &gt; &amp;close, const std::vector&lt; Real &gt; &amp;high, const std::vector&lt; Real &gt; &amp;low)
-
-
-
 static std::vector&lt; Real &gt; extractValues (const TimeSeries&lt; IntervalPrice &gt; &amp;, IntervalPrice::Type)
-
-
-
 static TimeSeries&lt; Real &gt; extractComponent (const TimeSeries&lt; IntervalPrice &gt; &amp;, enum IntervalPrice::Type)</code></pre>
 <h2>Detailed Description</h2>
 <p>interval price</p>

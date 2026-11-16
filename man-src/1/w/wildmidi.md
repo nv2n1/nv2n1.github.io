@@ -21,85 +21,85 @@ description: "wildmidi – example player for libWildMidi"
 <p> You can have more than one <i>midifile</i> on the command line and <code>wildmidi</code> will pass them to libWildMidi for processing, one after the other. You can also use wildcards, for example: <code>wildmidi *.mid</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code> | <code>&#8211;reverb</code></p>
-<dd> Turns on an 8 point reverb engine that adds depth to the final mix.</dl>
+<dt><code>-b</code> | <code>&#8211;reverb</code></dt>
+<dd> Turns on an 8 point reverb engine that adds depth to the final mix.</dd></dl>
 <dl>
-<dt><code>-c</code> <i>config-file</i> | <code>&#8211;config</code> <i>config-file</i></p>
-<dd> Uses the configuration file stated by <i>config-file</i> instead of /etc/wildmidi/wildmidi.cfg</dl>
+<dt><code>-c</code> <i>config-file</i> | <code>&#8211;config</code> <i>config-file</i></dt>
+<dd> Uses the configuration file stated by <i>config-file</i> instead of /etc/wildmidi/wildmidi.cfg</dd></dl>
 <dl>
-<dt><code>-d</code> <i>audiodev</i> | <code>&#8211;device=</code><i>audiodev</i></p>
-<dd> Send the audio to <i>audiodev</i> instead of the default. ALSA defaults to the system &quot;default&quot; while OSS defaults to &quot;/dev/dsp&quot;. Other environments do not support this option.</dl>
+<dt><code>-d</code> <i>audiodev</i> | <code>&#8211;device=</code><i>audiodev</i></dt>
+<dd> Send the audio to <i>audiodev</i> instead of the default. ALSA defaults to the system &quot;default&quot; while OSS defaults to &quot;/dev/dsp&quot;. Other environments do not support this option.</dd></dl>
 <dl>
-<dt><code>-e</code> | <code>&#8211;enhanced</code></p>
-<dd> Switches to a gauss based resampling algorithm which can improve the shape of the sound.</dl>
+<dt><code>-e</code> | <code>&#8211;enhanced</code></dt>
+<dd> Switches to a gauss based resampling algorithm which can improve the shape of the sound.</dd></dl>
 <dl>
-<dt><code>-h</code> | <code>&#8211;help</code></p>
-<dd> Displays command line options</dl>
+<dt><code>-h</code> | <code>&#8211;help</code></dt>
+<dd> Displays command line options</dd></dl>
 <dl>
-<dt><code>-l</code> | <code>&#8211;log_vol</code></p>
-<dd> Some MIDI files have been recorded on hardware that uses a volume curve, making them sound really badly mixed on other MIDI devices. Use this option to use volume curves.</dl>
+<dt><code>-l</code> | <code>&#8211;log_vol</code></dt>
+<dd> Some MIDI files have been recorded on hardware that uses a volume curve, making them sound really badly mixed on other MIDI devices. Use this option to use volume curves.</dd></dl>
 <dl>
-<dt><code>-m</code> <i>volume-level</i> | <code>&#8211;mastervol=</code><i>volume-level</i></p>
-<dd> Set the overall volume level to <i>volume-level</i>. The minimum is 0 and the maximum is 127, with the default being 100.</dl>
+<dt><code>-m</code> <i>volume-level</i> | <code>&#8211;mastervol=</code><i>volume-level</i></dt>
+<dd> Set the overall volume level to <i>volume-level</i>. The minimum is 0 and the maximum is 127, with the default being 100.</dd></dl>
 <dl>
-<dt><code>-o</code> <i>wav-file</i> | <code>&#8211;wavout=</code><i>wav-file</i></p>
-<dd> Records the audio in wav format to <i>wav-file</i>.</dl>
+<dt><code>-o</code> <i>wav-file</i> | <code>&#8211;wavout=</code><i>wav-file</i></dt>
+<dd> Records the audio in wav format to <i>wav-file</i>.</dd></dl>
 <dl>
-<dt><code>-r</code> <i>sndrate</i> | <code>&#8211;rate=</code><i>sndrate</i></p>
-<dd> Set the audio output rate to <i>sndrate</i>. The default rate is 32072.</dl>
+<dt><code>-r</code> <i>sndrate</i> | <code>&#8211;rate=</code><i>sndrate</i></dt>
+<dd> Set the audio output rate to <i>sndrate</i>. The default rate is 32072.</dd></dl>
 <dl>
-<dt><code>-w</code> | <code>&#8211;wholetempo</code></p>
-<dd> Round down tempo to whole number</dl>
+<dt><code>-w</code> | <code>&#8211;wholetempo</code></dt>
+<dd> Round down tempo to whole number</dd></dl>
 <dl>
-<dt><code>-n</code> | <code>&#8211;roundtempo</code></p>
-<dd> Round tempo to nearest whole number</dl>
+<dt><code>-n</code> | <code>&#8211;roundtempo</code></dt>
+<dd> Round tempo to nearest whole number</dd></dl>
 <dl>
-<dt><code>-v</code> | <code>&#8211;version</code></p>
-<dd> Display version and copyright information</dl>
+<dt><code>-v</code> | <code>&#8211;version</code></dt>
+<dd> Display version and copyright information</dd></dl>
 <h2>TEST OPTIONS</h2>
 <p> These options are not designed for general use. Instead these options are designed to make it easier to listen to specific sound samples. </p>
 <p> Note: These options are not displayed by <code>-h</code> | <code>&#8211;help</code> </p>
 <dl>
-<dt><code>-k</code> <i>N</i> | <code>&#8211;test_bank=</code><i>N</i></p>
-<dd> Set the test bank to <i>N</i>. Range is 0 to 127.</dl>
+<dt><code>-k</code> <i>N</i> | <code>&#8211;test_bank=</code><i>N</i></dt>
+<dd> Set the test bank to <i>N</i>. Range is 0 to 127.</dd></dl>
 <dl>
-<dt><code>-p</code> <i>N</i> | <code>&#8211;test_patch=</code><i>N</i></p>
-<dd> Set the test patch to <i>N</i>. Range is 0 to 127.</dl>
+<dt><code>-p</code> <i>N</i> | <code>&#8211;test_patch=</code><i>N</i></dt>
+<dd> Set the test patch to <i>N</i>. Range is 0 to 127.</dd></dl>
 <dl>
-<dt><code>-t</code> | <code>&#8211;test_midi</code></p>
-<dd> Plays the built in test midi which plays all 127 notes.</dl>
+<dt><code>-t</code> | <code>&#8211;test_midi</code></dt>
+<dd> Plays the built in test midi which plays all 127 notes.</dd></dl>
 <h2>USER INTERFACE</h2>
 <p> The player accepts limited user input that allows some interaction while playing midi files. </p>
 <dl>
-<dt><code>+</code></p>
-<dd> Turns the master volume up.</dl>
+<dt><code>+</code></dt>
+<dd> Turns the master volume up.</dd></dl>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> Turns the master volume down.</dl>
+<dt><code>&#8211;</code></dt>
+<dd> Turns the master volume down.</dd></dl>
 <dl>
-<dt><code>e</code></p>
-<dd> Turns enhanced resampling on and off.</dl>
+<dt><code>e</code></dt>
+<dd> Turns enhanced resampling on and off.</dd></dl>
 <dl>
-<dt><code>l</code></p>
-<dd> Turns volume curves on and off.</dl>
+<dt><code>l</code></dt>
+<dd> Turns volume curves on and off.</dd></dl>
 <dl>
-<dt><code>r</code></p>
-<dd> Turns the final mix reverb on and off.</dl>
+<dt><code>r</code></dt>
+<dd> Turns the final mix reverb on and off.</dd></dl>
 <dl>
-<dt><code>n</code></p>
-<dd> Play the next midi on the command line.</dl>
+<dt><code>n</code></dt>
+<dd> Play the next midi on the command line.</dd></dl>
 <dl>
-<dt><code>p</code></p>
-<dd> Pause the playback. Note: since the audio is buffered it will stop when the audio buffer is empty.</dl>
+<dt><code>p</code></dt>
+<dd> Pause the playback. Note: since the audio is buffered it will stop when the audio buffer is empty.</dd></dl>
 <dl>
-<dt><code>.</code></p>
-<dd> Seek forward 1 second. Note: Clears active midi events and will only play midi events from after the new position.</dl>
+<dt><code>.</code></dt>
+<dd> Seek forward 1 second. Note: Clears active midi events and will only play midi events from after the new position.</dd></dl>
 <dl>
-<dt><code>,</code></p>
-<dd> Seek backwards 1 second. Note: Clears active midi events and will only play midi events from after the new position.</dl>
+<dt><code>,</code></dt>
+<dd> Seek backwards 1 second. Note: Clears active midi events and will only play midi events from after the new position.</dd></dl>
 <dl>
-<dt><code>q</code></p>
-<dd> Quit wildmidi.</dl>
+<dt><code>q</code></dt>
+<dd> Quit wildmidi.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-wildmidi-cfg/">wildmidi.cfg</a></code>(5) </p>
 <h2>AUTHOR</h2>

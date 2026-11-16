@@ -13,26 +13,26 @@ description: "vpSetRawVoxels – specify an array of volume data"
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpSetRawVoxels(</code><i>vpc, voxels, size, xstride, ystride, zstride</i><code>)</code></p>
+<dt> <code>vpSetRawVoxels(</code><i>vpc, voxels, size, xstride, ystride, zstride</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>void *<i>voxels;</i></p>
-<dd>int <i>size;</i></p>
-<dd>int <i>xstride, ystride, zstride;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>void *<i>voxels;</i></dd>
+<dd>int <i>size;</i></dd>
+<dd>int <i>xstride, ystride, zstride;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>voxels</i></p>
-<dd>3D array of voxels.</p>
-<dt><i>size</i></p>
-<dd>Size of the voxel array in bytes.</p>
-<dt><i>xstride</i></p>
-<dd>Number of bytes from the beginning of one voxel to the beginning of the next voxel in the first array dimension.</p>
-<dt><i>ystride</i></p>
-<dd>Number of bytes from the beginning of one voxel to the beginning of the next voxel in the second array dimension.</p>
-<dt><i>zstride</i></p>
-<dd>Number of bytes from the beginning of one voxel to the beginning of the next voxel in the third array dimension.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>voxels</i></dt>
+<dd>3D array of voxels.</dd>
+<dt><i>size</i></dt>
+<dd>Size of the voxel array in bytes.</dd>
+<dt><i>xstride</i></dt>
+<dd>Number of bytes from the beginning of one voxel to the beginning of the next voxel in the first array dimension.</dd>
+<dt><i>ystride</i></dt>
+<dd>Number of bytes from the beginning of one voxel to the beginning of the next voxel in the second array dimension.</dd>
+<dt><i>zstride</i></dt>
+<dd>Number of bytes from the beginning of one voxel to the beginning of the next voxel in the third array dimension.</dd></dl>
 <h2>Description</h2>
 <p><code>vpSetRawVoxels</code> is used to specify a 3D array that contains the volume data. The array must be large enough for the volume dimensions specified with <code>vpSetVolumeSize</code> and the voxel size specified with <code>vpSetVoxelSize</code>. The data in the array may be initialized before or after calling <code>vpSetRawVoxels</code>. </p>
 <p> Some of the VolPack routines operate faster if the volume is stored in z-major order (<i>xstride &lt; ystride &lt; zstride</i>) but it is not strictly necessary. </p>

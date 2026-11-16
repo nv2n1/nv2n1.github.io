@@ -15,8 +15,8 @@ description: "snmpget – communicates with a network entity using SNMP GET requ
 <p> <code>snmpget</code> is an SNMP application that uses the SNMP GET request to query for information on a network entity. One or more object identifiers (OIDs) may be given as arguments on the command line. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-Cf</code></p>
-<dd> If <code>-Cf</code> is <i>not</i> specified, some applications (<code>snmpdelta</code>, <code>snmpget</code>, <code>snmpgetnext</code> and <code>snmpstatus</code>) will try to fix errors returned by the agent that you were talking to and resend the request. The only time this is really useful is if you specified a OID that didn&#8217;t exist in your request and you&#8217;re using SNMPv1 which requires &quot;all or nothing&quot; kinds of requests.</dl>
+<dt><code>-Cf</code></dt>
+<dd> If <code>-Cf</code> is <i>not</i> specified, some applications (<code>snmpdelta</code>, <code>snmpget</code>, <code>snmpgetnext</code> and <code>snmpstatus</code>) will try to fix errors returned by the agent that you were talking to and resend the request. The only time this is really useful is if you specified a OID that didn&#8217;t exist in your request and you&#8217;re using SNMPv1 which requires &quot;all or nothing&quot; kinds of requests.</dd></dl>
 <p> In addition to this option, <code>snmpget</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. Note that <code>snmpget</code> REQUIRES an argument specifying the agent to query and at least one OID argument, as described there.</p>
 <h2>EXAMPLES</h2>
 <p> The command: </p>

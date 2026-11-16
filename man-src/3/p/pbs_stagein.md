@@ -10,7 +10,6 @@ description: "pbs_stagein – request that files for a pbs batch job be staged i
 <p>pbs_stagein &#8211; request that files for a pbs batch job be staged in.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>int pbs_stagein(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*location,
 char&nbsp;<wbr>*extend)</pre>

@@ -24,8 +24,8 @@ int getgrgid_r(gid_t gid, struct group *grp,
 <p> <code>getgrnam_r</code>(), <code>getgrgid_r</code>():</p>
 <dl>
 <dt>
-<dd> _POSIX_C_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+</dt><dd> _POSIX_C_SOURCE<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>getgrnam</code>() function returns a pointer to a structure containing the broken-out fields of the record in the group database (e.g., the local group file <i>/etc/group</i>, NIS, and LDAP) that matches the group name <i>name</i>. </p>
 <p> The <code>getgrgid</code>() function returns a pointer to a structure containing the broken-out fields of the record in the group database that matches the group ID <i>gid</i>. </p>
@@ -47,24 +47,24 @@ int getgrgid_r(gid_t gid, struct group *grp,
 <p> On success, <code>getgrnam_r</code>() and <code>getgrgid_r</code>() return zero, and set <i>*result</i> to <i>grp</i>. If no matching group record was found, these functions return 0 and store NULL in <i>*result</i>. In case of error, an error number is returned, and NULL is stored in <i>*result</i>.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>0</code> or <code>ENOENT</code> or <code>ESRCH</code> or <code>EBADF</code> or <code>EPERM</code> or &#8230;</p>
-<dd> The given <i>name</i> or <i>gid</i> was not found.</p>
-<dt><code>EINTR</code></p>
-<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EIO</code></p>
-<dd> I/O error.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to allocate <i>group</i> structure.</p>
-<dt><code>ERANGE</code></p>
-<dd> Insufficient buffer space supplied.</dl>
+<dt><code>0</code> or <code>ENOENT</code> or <code>ESRCH</code> or <code>EBADF</code> or <code>EPERM</code> or &#8230;</dt>
+<dd> The given <i>name</i> or <i>gid</i> was not found.</dd>
+<dt><code>EINTR</code></dt>
+<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EIO</code></dt>
+<dd> I/O error.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to allocate <i>group</i> structure.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> Insufficient buffer space supplied.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/group</i></p>
-<dd> local group database file</dl>
+<dt><i>/etc/group</i></dt>
+<dd> local group database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

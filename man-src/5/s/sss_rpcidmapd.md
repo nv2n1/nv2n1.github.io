@@ -18,7 +18,7 @@ description: "sss_rpcidmapd – sss plugin configuration directives for rpc.idma
 <p> <code>Configuration attributes</code> </p>
 <p> memcache (bool)</p>
 <dl>
-<dd>Indicates whether or not to use memcache optimisation technique. </p>
+<dd>Indicates whether or not to use memcache optimisation technique. </dd>
 <p> Default: True</dl>
 <h2>Sssd Integration</h2>
 <p>The sss plugin requires the <i>NSS Responder</i> to be enabled in sssd. </p>
@@ -37,14 +37,14 @@ Nobody-User = nfsnobody
 Nobody-Group = nfsnobody
 [Translation]
 Method = sss</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sssd/">sssd</a></code>(8), <code><a href="/docs/linux/man/5-idmapd-conf/">idmapd.conf</a></code>(5)</p>
 <h2>Authors</h2>
 <p><code>Noam Meltzer</code><br />
  Primary Data Inc.</p>
 <dl>
-<dd>Developer (2013-2014)</dl>
+<dd>Developer (2013-2014)</dd></dl>
 <p> <code>Noam Meltzer</code> &lt;tsnoam [at] gmail.com&gt;</p>
 <dl>
-<dd>Developer (2014-)</dl>
+<dd>Developer (2014-)</dd></dl>

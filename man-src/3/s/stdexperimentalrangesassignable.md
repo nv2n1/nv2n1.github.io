@@ -11,22 +11,14 @@ std::experimental::ranges::Assignable - std::experimental::ranges::Assignable
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class T, class U&gt;
-
     concept bool Assignable =
-
         std::is_lvalue_reference&lt;T&gt;::value &amp;&amp;
-
         CommonReference&lt;
-
             const std::remove_reference_t&lt;T&gt; &amp;, (ranges TS)
-
                                                     const std::remove_reference_t&lt;U&gt; &amp;&gt; &amp;&amp;
-
         requires(T t, U &amp;&amp;u)
 {
-
     {
         t = std::forward&lt;U&gt;(u)
         } -&gt; Same&lt;T&gt; &amp;&amp;;

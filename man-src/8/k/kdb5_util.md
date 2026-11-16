@@ -16,22 +16,22 @@ description: "kdb5_util – Kerberos database maintenance utility"
 <p> Note that some KDC database modules may not support all kdb5_util commands.</p>
 <h2>Command-Line Options</h2>
 <dl>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>specifies the Kerberos realm of the database.</p>
-<dt><code>-d</code> <i>dbname</i></p>
-<dd>specifies the name under which the principal database is stored; by default the database is that listed in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>. The password policy database and lock files are also derived from this value.</p>
-<dt><code>-k</code> <i>mkeytype</i></p>
-<dd>specifies the key type of the master key in the database. The default is given by the <code>master_key_type</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</p>
-<dt><code>-kv</code> <i>mkeyVNO</i></p>
-<dd>Specifies the version number of the master key in the database; the default is 1. Note that 0 is not allowed.</p>
-<dt><code>-M</code> <i>mkeyname</i></p>
-<dd>principal name for the master key in the database. If not specified, the name is determined by the <code>master_key_name</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</p>
-<dt><code>-m</code></p>
-<dd>specifies that the master database password should be read from the keyboard rather than fetched from a file on disk.</p>
-<dt><code>-sf</code> <i>stash_file</i></p>
-<dd>specifies the stash filename of the master database password. If not specified, the filename is determined by the <code>key_stash_file</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</p>
-<dt><code>-P</code> <i>password</i></p>
-<dd>specifies the master database password. Using this option may expose the password to other users on the system via the process list.</dl>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>specifies the Kerberos realm of the database.</dd>
+<dt><code>-d</code> <i>dbname</i></dt>
+<dd>specifies the name under which the principal database is stored; by default the database is that listed in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>. The password policy database and lock files are also derived from this value.</dd>
+<dt><code>-k</code> <i>mkeytype</i></dt>
+<dd>specifies the key type of the master key in the database. The default is given by the <code>master_key_type</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</dd>
+<dt><code>-kv</code> <i>mkeyVNO</i></dt>
+<dd>Specifies the version number of the master key in the database; the default is 1. Note that 0 is not allowed.</dd>
+<dt><code>-M</code> <i>mkeyname</i></dt>
+<dd>principal name for the master key in the database. If not specified, the name is determined by the <code>master_key_name</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</dd>
+<dt><code>-m</code></dt>
+<dd>specifies that the master database password should be read from the keyboard rather than fetched from a file on disk.</dd>
+<dt><code>-sf</code> <i>stash_file</i></dt>
+<dd>specifies the stash filename of the master database password. If not specified, the filename is determined by the <code>key_stash_file</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</dd>
+<dt><code>-P</code> <i>password</i></dt>
+<dd>specifies the master database password. Using this option may expose the password to other users on the system via the process list.</dd></dl>
 <h2>Commands</h2>
 <h3>create</h3>
 <p><code>create</code> [<code>-s</code>] </p>
@@ -46,43 +46,43 @@ description: "kdb5_util – Kerberos database maintenance utility"
 <p><code>dump</code> [<code>-b7</code>|<code>-ov</code>|<code>-r13</code>] [<code>-verbose</code>] [<code>-mkey_convert</code>] [<code>-new_mkey_file</code> <i>mkey_file</i>] [<code>-rev</code>] [<code>-recurse</code>] [<i>filename</i> [<i>principals</i>&#8230;]] </p>
 <p> Dumps the current Kerberos and KADM5 database into an ASCII file. By default, the database is dumped in current format, &quot;kdb5_util load_dump version 7&quot;. If filename is not specified, or is the string &quot;-&quot;, the dump is sent to standard output. Options:</p>
 <dl>
-<dt><code>-b7</code></p>
-<dd>causes the dump to be in the Kerberos 5 Beta 7 format (&quot;kdb5_util load_dump version 4&quot;). This was the dump format produced on releases prior to 1.2.2.</p>
-<dt><code>-ov</code></p>
-<dd>causes the dump to be in &quot;ovsec_adm_export&quot; format.</p>
-<dt><code>-r13</code></p>
-<dd>causes the dump to be in the Kerberos 5 1.3 format (&quot;kdb5_util load_dump version 5&quot;). This was the dump format produced on releases prior to 1.8.</p>
-<dt><code>-r18</code></p>
-<dd>causes the dump to be in the Kerberos 5 1.8 format (&quot;kdb5_util load_dump version 6&quot;). This was the dump format produced on releases prior to 1.11.</p>
-<dt><code>-verbose</code></p>
-<dd>causes the name of each principal and policy to be printed as it is dumped.</p>
-<dt><code>-mkey_convert</code></p>
-<dd>prompts for a new master key. This new master key will be used to re-encrypt principal key data in the dumpfile. The principal keys themselves will not be changed.</p>
-<dt><code>-new_mkey_file</code> <i>mkey_file</i></p>
-<dd>the filename of a stash file. The master key in this stash file will be used to re-encrypt the key data in the dumpfile. The key data in the database will not be changed.</p>
-<dt><code>-rev</code></p>
-<dd>dumps in reverse order. This may recover principals that do not dump normally, in cases where database corruption has occurred.</p>
-<dt><code>-recurse</code></p>
-<dd>causes the dump to walk the database recursively (btree only). This may recover principals that do not dump normally, in cases where database corruption has occurred. In cases of such corruption, this option will probably retrieve more principals than the <code>-rev</code> option will.</dl>
+<dt><code>-b7</code></dt>
+<dd>causes the dump to be in the Kerberos 5 Beta 7 format (&quot;kdb5_util load_dump version 4&quot;). This was the dump format produced on releases prior to 1.2.2.</dd>
+<dt><code>-ov</code></dt>
+<dd>causes the dump to be in &quot;ovsec_adm_export&quot; format.</dd>
+<dt><code>-r13</code></dt>
+<dd>causes the dump to be in the Kerberos 5 1.3 format (&quot;kdb5_util load_dump version 5&quot;). This was the dump format produced on releases prior to 1.8.</dd>
+<dt><code>-r18</code></dt>
+<dd>causes the dump to be in the Kerberos 5 1.8 format (&quot;kdb5_util load_dump version 6&quot;). This was the dump format produced on releases prior to 1.11.</dd>
+<dt><code>-verbose</code></dt>
+<dd>causes the name of each principal and policy to be printed as it is dumped.</dd>
+<dt><code>-mkey_convert</code></dt>
+<dd>prompts for a new master key. This new master key will be used to re-encrypt principal key data in the dumpfile. The principal keys themselves will not be changed.</dd>
+<dt><code>-new_mkey_file</code> <i>mkey_file</i></dt>
+<dd>the filename of a stash file. The master key in this stash file will be used to re-encrypt the key data in the dumpfile. The key data in the database will not be changed.</dd>
+<dt><code>-rev</code></dt>
+<dd>dumps in reverse order. This may recover principals that do not dump normally, in cases where database corruption has occurred.</dd>
+<dt><code>-recurse</code></dt>
+<dd>causes the dump to walk the database recursively (btree only). This may recover principals that do not dump normally, in cases where database corruption has occurred. In cases of such corruption, this option will probably retrieve more principals than the <code>-rev</code> option will.</dd></dl>
 <h3>load</h3>
 <p><code>load</code> [<code>-b7</code>|<code>-ov</code>|<code>-r13</code>] [<code>-hash</code>] [<code>-verbose</code>] [<code>-update</code>] <i>filename</i> [<i>dbname</i>] </p>
 <p> Loads a database dump from the named file into the named database. If no option is given to determine the format of the dump file, the format is detected automatically and handled as appropriate. Unless the <code>-update</code> option is given, <code>load</code> creates a new database containing only the data in the dump file, overwriting the contents of any previously existing database. Note that when using the LDAP KDC database module, the <code>-update</code> flag is required. </p>
 <p> Options:</p>
 <dl>
-<dt><code>-b7</code></p>
-<dd>requires the database to be in the Kerberos 5 Beta 7 format (&quot;kdb5_util load_dump version 4&quot;). This was the dump format produced on releases prior to 1.2.2.</p>
-<dt><code>-ov</code></p>
-<dd>requires the database to be in &quot;ovsec_adm_import&quot; format. Must be used with the <code>-update</code> option.</p>
-<dt><code>-r13</code></p>
-<dd>requires the database to be in Kerberos 5 1.3 format (&quot;kdb5_util load_dump version 5&quot;). This was the dump format produced on releases prior to 1.8.</p>
-<dt><code>-r18</code></p>
-<dd>requires the database to be in Kerberos 5 1.8 format (&quot;kdb5_util load_dump version 6&quot;). This was the dump format produced on releases prior to 1.11.</p>
-<dt><code>-hash</code></p>
-<dd>requires the database to be stored as a hash. If this option is not specified, the database will be stored as a btree. This option is not recommended, as databases stored in hash format are known to corrupt data and lose principals.</p>
-<dt><code>-verbose</code></p>
-<dd>causes the name of each principal and policy to be printed as it is dumped.</p>
-<dt><code>-update</code></p>
-<dd>records from the dump file are added to or updated in the existing database. Otherwise, a new database is created containing only what is in the dump file and the old one destroyed upon successful completion. </p>
+<dt><code>-b7</code></dt>
+<dd>requires the database to be in the Kerberos 5 Beta 7 format (&quot;kdb5_util load_dump version 4&quot;). This was the dump format produced on releases prior to 1.2.2.</dd>
+<dt><code>-ov</code></dt>
+<dd>requires the database to be in &quot;ovsec_adm_import&quot; format. Must be used with the <code>-update</code> option.</dd>
+<dt><code>-r13</code></dt>
+<dd>requires the database to be in Kerberos 5 1.3 format (&quot;kdb5_util load_dump version 5&quot;). This was the dump format produced on releases prior to 1.8.</dd>
+<dt><code>-r18</code></dt>
+<dd>requires the database to be in Kerberos 5 1.8 format (&quot;kdb5_util load_dump version 6&quot;). This was the dump format produced on releases prior to 1.11.</dd>
+<dt><code>-hash</code></dt>
+<dd>requires the database to be stored as a hash. If this option is not specified, the database will be stored as a btree. This option is not recommended, as databases stored in hash format are known to corrupt data and lose principals.</dd>
+<dt><code>-verbose</code></dt>
+<dd>causes the name of each principal and policy to be printed as it is dumped.</dd>
+<dt><code>-update</code></dt>
+<dd>records from the dump file are added to or updated in the existing database. Otherwise, a new database is created containing only what is in the dump file and the old one destroyed upon successful completion. </dd>
 <p> If specified, <i>dbname</i> overrides the value specified on the command line or the default.</dl>
 <h3>ark</h3>
 <p><code>ark</code> [<code>-e</code> <i>enc</i>:<i>salt</i>,&#8230;] <i>principal</i> </p>
@@ -102,12 +102,12 @@ description: "kdb5_util – Kerberos database maintenance utility"
 <p><code>purge_mkeys</code> [<code>-f</code>] [<code>-n</code>] [<code>-v</code>] </p>
 <p> Delete master keys from the master key principal that are not used to protect any principals. This command can be used to remove old master keys all principal keys are protected by a newer master key.</p>
 <dl>
-<dt><code>-f</code></p>
-<dd>does not prompt for confirmation.</p>
-<dt><code>-n</code></p>
-<dd>performs a dry run, showing master keys that would be purged, but not actually purging any keys.</p>
-<dt><code>-v</code></p>
-<dd>gives more verbose output.</dl>
+<dt><code>-f</code></dt>
+<dd>does not prompt for confirmation.</dd>
+<dt><code>-n</code></dt>
+<dd>performs a dry run, showing master keys that would be purged, but not actually purging any keys.</dd>
+<dt><code>-v</code></dt>
+<dd>gives more verbose output.</dd></dl>
 <h3>update_princ_encryption</h3>
 <p><code>update_princ_encryption</code> [<code>-f</code>] [<code>-n</code>] [<code>-v</code>] [<i>princ-pattern</i>] </p>
 <p> Update all principal records (or only those matching the <i>princ-pattern</i> glob pattern) to re-encrypt the key data using the active database master key, if they are encrypted using a different version, and give a count at the end of the number of principals updated. If the <code>-f</code> option is not given, ask for confirmation before starting to make changes. The <code>-v</code> option causes each principal processed to be listed, with an indication as to whether it needed updating or not. The <code>-n</code> option performs a dry run, only showing the actions which would have been taken.</p>
@@ -117,89 +117,89 @@ description: "kdb5_util – Kerberos database maintenance utility"
 <p> The <i>dumptype</i> parameter specifies the name of an output table (see below). </p>
 <p> Options:</p>
 <dl>
-<dt><code>-H</code></p>
-<dd>suppress writing the field names in a header line</p>
-<dt><code>-c</code></p>
-<dd>use comma separated values (CSV) format, with minimal quoting, instead of the default tab-separated (unquoted, unescaped) format</p>
-<dt><code>-e</code></p>
-<dd>write empty hexadecimal string fields as empty fields instead of as &quot;-1&quot;.</p>
-<dt><code>-n</code></p>
-<dd>produce numeric output for fields that normally have symbolic output, such as enctypes and flag names. Also requests output of time stamps as decimal POSIX time_t values.</p>
-<dt><code>-o</code> <i>outfile</i></p>
-<dd>write the dump to the specified output file instead of to standard output </p>
+<dt><code>-H</code></dt>
+<dd>suppress writing the field names in a header line</dd>
+<dt><code>-c</code></dt>
+<dd>use comma separated values (CSV) format, with minimal quoting, instead of the default tab-separated (unquoted, unescaped) format</dd>
+<dt><code>-e</code></dt>
+<dd>write empty hexadecimal string fields as empty fields instead of as &quot;-1&quot;.</dd>
+<dt><code>-n</code></dt>
+<dd>produce numeric output for fields that normally have symbolic output, such as enctypes and flag names. Also requests output of time stamps as decimal POSIX time_t values.</dd>
+<dt><code>-o</code> <i>outfile</i></dt>
+<dd>write the dump to the specified output file instead of to standard output </dd>
 <p> Dump types:</p>
-<dt><code>keydata</code></p>
-<dd>principal encryption key information, including actual key data (which is still encrypted in the master key)</p>
-<dt><code>name</code></p>
-<dd>principal name</p>
-<dt><code>keyindex</code></p>
-<dd>index of this key in the principal&#8217;s key list</p>
-<dt><code>kvno</code></p>
-<dd>key version number</p>
-<dt><code>enctype</code></p>
-<dd>encryption type</p>
-<dt><code>key</code></p>
-<dd>key data as a hexadecimal string</p>
-<dt><code>salttype</code></p>
-<dd>salt type</p>
-<dt><code>salt</code></p>
-<dd>salt data as a hexadecimal string</p>
-<dt><code>keyinfo</code></p>
-<dd>principal encryption key information (as in <code>keydata</code> above), excluding actual key data</p>
-<dt><code>princ_flags</code></p>
-<dd>principal boolean attributes. Flag names print as hexadecimal numbers if the <code>-n</code> option is specified, and all flag positions are printed regardless of whether or not they are set. If <code>-n</code> is not specified, print all known flag names for each principal, but only print hexadecimal flag names if the corresponding flag is set.</p>
-<dt><code>name</code></p>
-<dd>principal name</p>
-<dt><code>flag</code></p>
-<dd>flag name</p>
-<dt><code>value</code></p>
-<dd>boolean value (0 for clear, or 1 for set)</p>
-<dt><code>princ_lockout</code></p>
-<dd>state information used for tracking repeated password failures</p>
-<dt><code>name</code></p>
-<dd>principal name</p>
-<dt><code>last_success</code></p>
-<dd>time stamp of most recent successful authentication</p>
-<dt><code>last_failed</code></p>
-<dd>time stamp of most recent failed authentication</p>
-<dt><code>fail_count</code></p>
-<dd>count of failed attempts</p>
-<dt><code>princ_meta</code></p>
-<dd>principal metadata</p>
-<dt><code>name</code></p>
-<dd>principal name</p>
-<dt><code>modby</code></p>
-<dd>name of last principal to modify this principal</p>
-<dt><code>modtime</code></p>
-<dd>timestamp of last modification</p>
-<dt><code>lastpwd</code></p>
-<dd>timestamp of last password change</p>
-<dt><code>policy</code></p>
-<dd>policy object name</p>
-<dt><code>mkvno</code></p>
-<dd>key version number of the master key that encrypts this principal&#8217;s key data</p>
-<dt><code>hist_kvno</code></p>
-<dd>key version number of the history key that encrypts the key history data for this principal</p>
-<dt><code>princ_stringattrs</code></p>
-<dd>string attributes (key/value pairs)</p>
-<dt><code>name</code></p>
-<dd>principal name</p>
-<dt><code>key</code></p>
-<dd>attribute name</p>
-<dt><code>value</code></p>
-<dd>attribute value</p>
-<dt><code>princ_tktpolicy</code></p>
-<dd>per-principal ticket policy data, including maximum ticket lifetimes</p>
-<dt><code>name</code></p>
-<dd>principal name</p>
-<dt><code>expiration</code></p>
-<dd>principal expiration date</p>
-<dt><code>pw_expiration</code></p>
-<dd>password expiration date</p>
-<dt><code>max_life</code></p>
-<dd>maximum ticket lifetime</p>
-<dt><code>max_renew_life</code></p>
-<dd>maximum renewable ticket lifetime </p>
+<dt><code>keydata</code></dt>
+<dd>principal encryption key information, including actual key data (which is still encrypted in the master key)</dd>
+<dt><code>name</code></dt>
+<dd>principal name</dd>
+<dt><code>keyindex</code></dt>
+<dd>index of this key in the principal&#8217;s key list</dd>
+<dt><code>kvno</code></dt>
+<dd>key version number</dd>
+<dt><code>enctype</code></dt>
+<dd>encryption type</dd>
+<dt><code>key</code></dt>
+<dd>key data as a hexadecimal string</dd>
+<dt><code>salttype</code></dt>
+<dd>salt type</dd>
+<dt><code>salt</code></dt>
+<dd>salt data as a hexadecimal string</dd>
+<dt><code>keyinfo</code></dt>
+<dd>principal encryption key information (as in <code>keydata</code> above), excluding actual key data</dd>
+<dt><code>princ_flags</code></dt>
+<dd>principal boolean attributes. Flag names print as hexadecimal numbers if the <code>-n</code> option is specified, and all flag positions are printed regardless of whether or not they are set. If <code>-n</code> is not specified, print all known flag names for each principal, but only print hexadecimal flag names if the corresponding flag is set.</dd>
+<dt><code>name</code></dt>
+<dd>principal name</dd>
+<dt><code>flag</code></dt>
+<dd>flag name</dd>
+<dt><code>value</code></dt>
+<dd>boolean value (0 for clear, or 1 for set)</dd>
+<dt><code>princ_lockout</code></dt>
+<dd>state information used for tracking repeated password failures</dd>
+<dt><code>name</code></dt>
+<dd>principal name</dd>
+<dt><code>last_success</code></dt>
+<dd>time stamp of most recent successful authentication</dd>
+<dt><code>last_failed</code></dt>
+<dd>time stamp of most recent failed authentication</dd>
+<dt><code>fail_count</code></dt>
+<dd>count of failed attempts</dd>
+<dt><code>princ_meta</code></dt>
+<dd>principal metadata</dd>
+<dt><code>name</code></dt>
+<dd>principal name</dd>
+<dt><code>modby</code></dt>
+<dd>name of last principal to modify this principal</dd>
+<dt><code>modtime</code></dt>
+<dd>timestamp of last modification</dd>
+<dt><code>lastpwd</code></dt>
+<dd>timestamp of last password change</dd>
+<dt><code>policy</code></dt>
+<dd>policy object name</dd>
+<dt><code>mkvno</code></dt>
+<dd>key version number of the master key that encrypts this principal&#8217;s key data</dd>
+<dt><code>hist_kvno</code></dt>
+<dd>key version number of the history key that encrypts the key history data for this principal</dd>
+<dt><code>princ_stringattrs</code></dt>
+<dd>string attributes (key/value pairs)</dd>
+<dt><code>name</code></dt>
+<dd>principal name</dd>
+<dt><code>key</code></dt>
+<dd>attribute name</dd>
+<dt><code>value</code></dt>
+<dd>attribute value</dd>
+<dt><code>princ_tktpolicy</code></dt>
+<dd>per-principal ticket policy data, including maximum ticket lifetimes</dd>
+<dt><code>name</code></dt>
+<dd>principal name</dd>
+<dt><code>expiration</code></dt>
+<dd>principal expiration date</dd>
+<dt><code>pw_expiration</code></dt>
+<dd>password expiration date</dd>
+<dt><code>max_life</code></dt>
+<dd>maximum ticket lifetime</dd>
+<dt><code>max_renew_life</code></dt>
+<dd>maximum renewable ticket lifetime </dd>
 <p> Examples: </p>
 <pre>$ kdb5_util tabdump -o keyinfo.txt keyinfo
 $ cat keyinfo.txt

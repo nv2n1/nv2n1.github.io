@@ -14,22 +14,22 @@ description: "relay_open – create a new relay channel"
 <p><i>base_filename</i></p>
 <dl>
 <dd>
-<dd>base name of files to create, <code>NULL</code> for buffering only</dl>
+</dd><dd>base name of files to create, <code>NULL</code> for buffering only</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>dentry of parent directory, <code>NULL</code> for root directory or buffer</dl>
+<dd>dentry of parent directory, <code>NULL</code> for root directory or buffer</dd></dl>
 <p> <i>subbuf_size</i></p>
 <dl>
-<dd>size of sub-buffers</dl>
+<dd>size of sub-buffers</dd></dl>
 <p> <i>n_subbufs</i></p>
 <dl>
-<dd>number of sub-buffers</dl>
+<dd>number of sub-buffers</dd></dl>
 <p> <i>cb</i></p>
 <dl>
-<dd>client callback functions</dl>
+<dd>client callback functions</dd></dl>
 <p> <i>private_data</i></p>
 <dl>
-<dd>user-defined data</dl>
+<dd>user-defined data</dd></dl>
 <h2>Description</h2>
 <p>Returns channel pointer if successful, <code>NULL</code> otherwise. </p>
 <p> Creates a channel buffer for each cpu using the sizes and attributes specified. The created channel buffer files will be named base_filename0&#8230;base_filenameN-1. File permissions will be <code>S_IRUSR</code>. </p>

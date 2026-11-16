@@ -24,14 +24,14 @@ description: "getpeereid – get the effective credentials of a UNIX-domain peer
 <h2>ERRORS</h2>
 <p> The Fn getpeereid function fails if:</p>
 <dl>
-<dt><code>Bq </code>Er EBADF</p>
-<dd> The argument Fa s is not a valid descriptor.</p>
-<dt><code>Bq </code>Er ENOTSOCK</p>
-<dd> The argument Fa s is a file, not a socket.</p>
-<dt><code>Bq </code>Er ENOTCONN</p>
-<dd> The argument Fa s does not refer to a socket on which <a href="/docs/linux/man/2-connect/">connect</a>(2) or <a href="/docs/linux/man/2-listen/">listen</a>(2) have been called.</p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument Fa s does not refer to a socket of type <code>SOCK_STREAM</code> or the kernel returned invalid data.</dl>
+<dt><code>Bq </code>Er EBADF</dt>
+<dd> The argument Fa s is not a valid descriptor.</dd>
+<dt><code>Bq </code>Er ENOTSOCK</dt>
+<dd> The argument Fa s is a file, not a socket.</dd>
+<dt><code>Bq </code>Er ENOTCONN</dt>
+<dd> The argument Fa s does not refer to a socket on which <a href="/docs/linux/man/2-connect/">connect</a>(2) or <a href="/docs/linux/man/2-listen/">listen</a>(2) have been called.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument Fa s does not refer to a socket of type <code>SOCK_STREAM</code> or the kernel returned invalid data.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-connect/">connect</a>(2), <a href="/docs/linux/man/2-getpeername/">getpeername</a>(2), <a href="/docs/linux/man/2-getsockname/">getsockname</a>(2), <a href="/docs/linux/man/2-getsockopt/">getsockopt</a>(2), <a href="/docs/linux/man/2-listen/">listen</a>(2), unix(4)</p>
 <h2>HISTORY</h2>

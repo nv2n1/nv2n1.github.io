@@ -20,28 +20,28 @@ git check - ignore[&lt;options&gt;]&lt;pathname&gt;... git check - ignore[&lt;op
 <p> -q, &#8211;quiet</p>
 <dl>
 <dt>
-<dd> Don&#8217;t output anything, just set exit status. This is only valid with a single pathname.</dl>
+</dt><dd> Don&#8217;t output anything, just set exit status. This is only valid with a single pathname.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Instead of printing the paths that are excluded, for each path that matches an exclude pattern, print the exclude pattern together with the path. (Matching an exclude pattern usually means the path is excluded, but if the pattern begins with <i>!</i> then it is a negated pattern and matching it means the path is NOT excluded.) </p>
+</dt><dd> Instead of printing the paths that are excluded, for each path that matches an exclude pattern, print the exclude pattern together with the path. (Matching an exclude pattern usually means the path is excluded, but if the pattern begins with <i>!</i> then it is a negated pattern and matching it means the path is NOT excluded.) </dd>
 <p> For precedence rules within and between exclude sources, see <code><a href="/docs/linux/man/5-gitignore/">gitignore</a></code>(5).</dl>
 <p> &#8211;stdin</p>
 <dl>
 <dt>
-<dd> Read pathnames from the standard input, one per line, instead of from the command-line.</dl>
+</dt><dd> Read pathnames from the standard input, one per line, instead of from the command-line.</dd></dl>
 <p> -z</p>
 <dl>
 <dt>
-<dd> The output format is modified to be machine-parsable (see below). If <code>&#8211;stdin</code> is also given, input paths are separated with a NUL character instead of a linefeed character.</dl>
+</dt><dd> The output format is modified to be machine-parsable (see below). If <code>&#8211;stdin</code> is also given, input paths are separated with a NUL character instead of a linefeed character.</dd></dl>
 <p> -n, &#8211;non-matching</p>
 <dl>
 <dt>
-<dd> Show given paths which don&#8217;t match any pattern. This only makes sense when <code>&#8211;verbose</code> is enabled, otherwise it would not be possible to distinguish between paths which match a pattern and those which don&#8217;t.</dl>
+</dt><dd> Show given paths which don&#8217;t match any pattern. This only makes sense when <code>&#8211;verbose</code> is enabled, otherwise it would not be possible to distinguish between paths which match a pattern and those which don&#8217;t.</dd></dl>
 <p> &#8211;no-index</p>
 <dl>
 <dt>
-<dd> Don&#8217;t look in the index when undertaking the checks. This can be used to debug why a path became tracked by e.g. <code>git add .</code> and was not ignored by the rules as expected by the user or when developing patterns including negation to match a path previously added with <code>git add -f</code>.</dl>
+</dt><dd> Don&#8217;t look in the index when undertaking the checks. This can be used to debug why a path became tracked by e.g. <code>git add .</code> and was not ignored by the rules as expected by the user or when developing patterns including negation to match a path previously added with <code>git add -f</code>.</dd></dl>
 <h2>OUTPUT</h2>
 <p> By default, any of the given pathnames which match an ignore pattern will be output, one per line. If no pattern matches a given path, nothing will be output for that path; this means that path will not be ignored. </p>
 <p> If <code>&#8211;verbose</code> is specified, the output is a series of lines of the form: </p>
@@ -55,15 +55,15 @@ git check - ignore[&lt;options&gt;]&lt;pathname&gt;... git check - ignore[&lt;op
 <p> 0</p>
 <dl>
 <dt>
-<dd> One or more of the provided paths is ignored.</dl>
+</dt><dd> One or more of the provided paths is ignored.</dd></dl>
 <p> 1</p>
 <dl>
 <dt>
-<dd> None of the provided paths are ignored.</dl>
+</dt><dd> None of the provided paths are ignored.</dd></dl>
 <p> 128</p>
 <dl>
 <dt>
-<dd> A fatal error was encountered.</dl>
+</dt><dd> A fatal error was encountered.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-gitignore/">gitignore</a></code>(5) <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) <code><a href="/docs/linux/man/1-git-ls-files/">git-ls-files</a></code>(1)</p>
 <h2>GIT</h2>

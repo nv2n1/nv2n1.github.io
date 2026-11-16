@@ -15,34 +15,34 @@ description: "kgb-add-project – helper script for adding new projects to kgb-b
 <p> <code>kgb-add-project</code> allows one to add new projects to <code>kgb-bot</code>&#8216;s configuration file from the command line. It writes the new config to stdout unless <i>&#8211;save|&#8211;write</i> is given.</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>&#8211;file</code> configfile</p>
-<dd> Optional. Defaults to <i>/etc/kgb-bot/kgb.conf</i>.</p>
-<dt><code>&#8211;dir</code> configdir</p>
-<dd> Optional. Defaults to <i>/etc/kgb-bot/kgb.conf.d/</i>. Used for writing config snippets for projects with <code>&#8211;save|&#8211;write</code>.</p>
-<dt><code>&#8211;net|network</code> ircnetwork</p>
-<dd> Optional. Defaults to <code>oftc</code>. Needs to be in the <i>networks</i> section of the configuration file.</p>
-<dt><code>&#8211;save|&#8211;write</code></p>
-<dd> Optional. Write new config back to file instead of stdout.</p>
-<dt><code>project-id</code></p>
-<dd> <code>project-id</code> to be added.</p>
-<dt><code>irchannel</code></p>
-<dd> <font SIZE="-1">IRC</font> channel where the new project sends its messages. If the channel doesn&#8217;t start with a character denoting <font SIZE="-1">IRC</font> channel (<tt>&quot;#&amp;+&quot;</tt>), then a hash sign is prepended.</p>
-<dt><code>password</code></p>
-<dd> Password for the new project.</dl>
+<dt><code>&#8211;file</code> configfile</dt>
+<dd> Optional. Defaults to <i>/etc/kgb-bot/kgb.conf</i>.</dd>
+<dt><code>&#8211;dir</code> configdir</dt>
+<dd> Optional. Defaults to <i>/etc/kgb-bot/kgb.conf.d/</i>. Used for writing config snippets for projects with <code>&#8211;save|&#8211;write</code>.</dd>
+<dt><code>&#8211;net|network</code> ircnetwork</dt>
+<dd> Optional. Defaults to <code>oftc</code>. Needs to be in the <i>networks</i> section of the configuration file.</dd>
+<dt><code>&#8211;save|&#8211;write</code></dt>
+<dd> Optional. Write new config back to file instead of stdout.</dd>
+<dt><code>project-id</code></dt>
+<dd> <code>project-id</code> to be added.</dd>
+<dt><code>irchannel</code></dt>
+<dd> <font SIZE="-1">IRC</font> channel where the new project sends its messages. If the channel doesn&#8217;t start with a character denoting <font SIZE="-1">IRC</font> channel (<tt>&quot;#&amp;+&quot;</tt>), then a hash sign is prepended.</dd>
+<dt><code>password</code></dt>
+<dd> Password for the new project.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> <code>kgb-add-project</code> my-project \#projectchannel RudFiarced0</p>
 <h2>CAVEATS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <code>kgb-add-project</code> sorts the top-level sections of the configuration file in a fixed order and re-orders the subsections alphabetically.</p>
-<dt>&bull;</p>
-<dd> The output of <code>kgb-add-project</code> does not contain the comments that were present in the source configuration file.</dl>
+<dt>&bull;</dt>
+<dd> <code>kgb-add-project</code> sorts the top-level sections of the configuration file in a fixed order and re-orders the subsections alphabetically.</dd>
+<dt>&bull;</dt>
+<dd> The output of <code>kgb-add-project</code> does not contain the comments that were present in the source configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>App::KGB</p>
+<dt>App::KGB</dt>
 <dd>
-<dt><i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1)</p>
-<dd></dl>
+</dd><dt><i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1)</dt>
+<dd></dd></dl>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyright (C) 2012 Damyan Ivanov </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

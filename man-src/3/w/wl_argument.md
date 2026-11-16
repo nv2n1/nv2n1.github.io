@@ -11,9 +11,7 @@ description: "wl_argument –"
 <p> A union representing all of the basic data types that can be passed along the wayland wire format.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;wayland-util.h&gt;
-
 Public Attributes</code></pre>
 <p> int32_t <code>i</code> </p>
 <p> uint32_t <code>u</code> </p>

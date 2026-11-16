@@ -14,10 +14,10 @@ description: "usb_add_function – add a function to a configuration"
 <p><i>config</i></p>
 <dl>
 <dd>
-<dd>the configuration</dl>
+</dd><dd>the configuration</dd></dl>
 <p> <i>function</i></p>
 <dl>
-<dd>the function being added</dl>
+<dd>the function being added</dd></dl>
 <h2>Context</h2>
 <p>single threaded during gadget setup</p>
 <h2>Description</h2>
@@ -26,5 +26,5 @@ description: "usb_add_function – add a function to a configuration"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

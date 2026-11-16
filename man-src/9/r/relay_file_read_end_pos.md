@@ -15,15 +15,15 @@ relay_file_read_end_pos - return the new read position
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>relay channel buffer</dl>
+<dl><dd></dd><dd>relay channel buffer</dd></dl>
  
 
  <i>read_pos</i>
-<dl><dd>file read position</dl>
+<dl><dd>file read position</dd></dl>
  
 
  <i>count</i>
-<dl><dd>number of bytes to be read</dl>
+<dl><dd>number of bytes to be read</dd></dl>
 
 <h2>Copyright</h2>
 

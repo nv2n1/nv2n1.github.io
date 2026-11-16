@@ -11,10 +11,8 @@ std::experimental::filesystem::equivalent - std::experimental::filesystem::equiv
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     bool equivalent(const path &amp;p1, const path &amp;p2);
 (1)(filesystem TS)
-
     bool equivalent(const path &amp;p1, const path &amp;p2, error_code &amp;ec);</code></pre> 
 Checks whether the paths p1 and p2 refer to the same file or directory and have the same file status as determined by status (symlinks are followed). 
 If p1 or p2 does not exist or if their file type is not file, directory, or symlink (as determined by is_other), an error is reported. 
@@ -43,15 +41,10 @@ In particular, all hard links for the same file or directory are equivalent, and
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     // hard link equivalency
     fs::path p1 = &quot;.&quot;;

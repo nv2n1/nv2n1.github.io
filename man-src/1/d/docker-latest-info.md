@@ -23,7 +23,7 @@ description: "docker-info – Display system-wide information"
 <p> Here is a sample output for a daemon running on Ubuntu, using the overlay storage driver: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker -D info
 Containers: 14
@@ -76,12 +76,12 @@ Insecure registries:
  myinsecurehost:5000
  127.0.0.0/8
 </pre>
-</dl>
+</dd></dl>
 <p> The global -D option tells all docker commands to output debug information. </p>
 <p> The example below shows the output for a daemon running on Red Hat Enterprise Linux, using the devicemapper storage driver. As can be seen in the output, additional information about the devicemapper storage driver is shown: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker info
 Containers: 14
@@ -133,7 +133,7 @@ Insecure registries:
  127.0.0.0/8
 Registries: docker.io (secure), 127.0.0.0/8 (insecure)
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
 <h2>Index</h2>

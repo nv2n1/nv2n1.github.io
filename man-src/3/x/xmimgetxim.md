@@ -15,8 +15,8 @@ description: "XmImGetXIM — An input manager function that retrieves the input 
 <h2>Description</h2>
 <p><code>XmImGetXIM</code> retrieves the XIM data structure representing the input method that the input manager has opened for the specified widget. If an input method has not been opened by a previous call to <code>XmImRegister</code>, the first time this routine is called it opens an input method using the <code>XmNinputMethod</code> resource for the VendorShell. If the <code>XmNinputMethod</code> is NULL, an input method is opened using the current locale. If it cannot open an input method, the function returns NULL.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of a widget registered with the input manager</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of a widget registered with the input manager</dd></dl>
 <h2>Return</h2>
 <p>Returns the input method for the current locale associated with the specified widget&#8217;s input manager; otherwise, returns NULL. The application is responsible for freeing the returned XIM by calling <code>XmImCloseXIM</code>.</p>
 <h2>Related</h2>

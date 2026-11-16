@@ -54,8 +54,8 @@ description: "audisp_remote_selinux – Security Enhanced Linux Policy for the a
 <p> <code>audisp_remote_exec_t</code> </p>
 <p> &#8211; Set files with the audisp_remote_exec_t type, if you want to transition an executable to the audisp_remote_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/audisp-remote, /usr/sbin/audisp-remote </p>
+<dt>Paths:</dt>
+<dd>/sbin/audisp-remote, /usr/sbin/audisp-remote </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

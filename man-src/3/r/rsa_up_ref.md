@@ -24,61 +24,61 @@ description: "RSA functions –"
 <p>Free an allocation RSA object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rsa</i> the RSA object to free.</dl>
+<dd><i>rsa</i> the RSA object to free.</dd></dl>
 <h3>void* RSA_get_app_data (const RSA *rsa)</h3>
 <p>Get the application data for the RSA object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rsa</i> the rsa object to get the parameter for</dl>
+<dd><i>rsa</i> the rsa object to get the parameter for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the data object</dl>
+<dd>the data object</dd></dl>
 <h3>const RSA_METHOD* RSA_get_method (const RSA *rsa)</h3>
 <p>Return the RSA_METHOD used for this RSA object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rsa</i> the object to get the method from.</dl>
+<dd><i>rsa</i> the object to get the method from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the method used for this RSA object.</dl>
+<dd>the method used for this RSA object.</dd></dl>
 <h3>RSA* RSA_new (void)</h3>
 <p>Same as <code>RSA_new_method()</code> using NULL as engine. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a newly allocated RSA object. Free with <code>RSA_free()</code>.</dl>
+<dd>a newly allocated RSA object. Free with <code>RSA_free()</code>.</dd></dl>
 <h3>RSA* RSA_new_method (ENGINE *engine)</h3>
 <p>Allocate a new RSA object using the engine, if NULL is specified as the engine, use the default RSA engine as returned by ENGINE_get_default_RSA(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>engine</i> Specific what ENGINE RSA provider should be used.</dl>
+<dd><i>engine</i> Specific what ENGINE RSA provider should be used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a newly allocated RSA object. Free with <code>RSA_free()</code>.</dl>
+<dd>a newly allocated RSA object. Free with <code>RSA_free()</code>.</dd></dl>
 <h3>int RSA_set_app_data (RSA *rsa, void *arg)</h3>
 <p>Set the application data for the RSA object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>rsa</i> the rsa object to set the parameter for<br />
- <i>arg</i> the data object to store</dl>
+ <i>arg</i> the data object to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success.</dl>
+<dd>1 on success.</dd></dl>
 <h3>int RSA_set_method (RSA *rsa, const RSA_METHOD *method)</h3>
 <p>Set a new method for the RSA keypair. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>rsa</i> rsa parameter.<br />
- <i>method</i> the new method for the RSA parameter.</dl>
+ <i>method</i> the new method for the RSA parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success.</dl>
+<dd>1 on success.</dd></dl>
 <h3>int RSA_up_ref (RSA *rsa)</h3>
 <p>Add an extra reference to the RSA object. The object should be free with <code>RSA_free()</code> to drop the reference. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rsa</i> the object to add reference counting too.</dl>
+<dd><i>rsa</i> the object to add reference counting too.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the current reference count, can&#8217;t safely be used except for debug printing.</dl>
+<dd>the current reference count, can&#8217;t safely be used except for debug printing.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Heimdal crypto library from the source code.</p>

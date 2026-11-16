@@ -14,20 +14,20 @@ description: "nfnl_osf – OS fingerprint loader utility"
 <p>The <code>nfnl_osf</code> utility allows to load a set of operating system signatures into the kernel for later matching against using iptables&#8217; <code>osf</code> match. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code><i> fingerprints</i></p>
-<dd>Read signatures from file <i>fingerprints</i>. </p>
-<dt><code>-d</code></p>
-<dd>Instead of adding the signatures from <i>fingerprints</i> into the kernel, remove them. </p>
+<dt><code>-f</code><i> fingerprints</i></dt>
+<dd>Read signatures from file <i>fingerprints</i>. </dd>
+<dt><code>-d</code></dt>
+<dd>Instead of adding the signatures from <i>fingerprints</i> into the kernel, remove them. </dd>
 </dl>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command succeeded, otherwise a negative return code indicates the type of error which happened: </p>
 <dl>
-<dt><code>-1</code></p>
-<dd>Illegal arguments passed, fingerprints file not readable or failure in netlink communication. </p>
-<dt><code>-ENOENT</code></p>
-<dd>Fingerprints file not specified. </p>
-<dt><code>-EINVAL</code></p>
-<dd>Netlink handle initialization failed or fingerprints file format invalid. </p>
+<dt><code>-1</code></dt>
+<dd>Illegal arguments passed, fingerprints file not readable or failure in netlink communication. </dd>
+<dt><code>-ENOENT</code></dt>
+<dd>Fingerprints file not specified. </dd>
+<dt><code>-EINVAL</code></dt>
+<dd>Netlink handle initialization failed or fingerprints file format invalid. </dd>
 </dl>
 <h2>Files</h2>
 <p>An up to date set of operating system signatures can be downloaded from <a rel="nofollow" href="http://www.openbsd.org/cgi-bin/cvsweb/src/etc/pf.os">http://www.openbsd.org/cgi-bin/cvsweb/src/etc/pf.os</a> .</p>

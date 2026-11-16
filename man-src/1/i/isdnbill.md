@@ -14,41 +14,41 @@ description: "isdnbill – report isdn costs"
 <p> For better results, use isdnrep. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> show version </p>
-<dt><code>-a</code></p>
-<dd> show all connections </p>
-<dt><code>-e</code></p>
-<dd> show incomplete calls </p>
-<dt><code>-f</code></p>
-<dd> recalculate costs _always_ </p>
-<dt><code>-i</code></p>
-<dd> show incoming calls </p>
-<dt><code>-m</code></p>
-<dd> prices without VAT </p>
-<dt><code>-n</code></p>
-<dd> do _not_ replace numbers with aliases </p>
-<dt><code>-o</code></p>
-<dd> show outgoing calls </p>
-<dt><code>-t</code></p>
-<dd> show only current connections </p>
-<dt><code>-vn</code></p>
-<dd> verbose level n </p>
-<dt><code>-Nnnn</code></p>
-<dd> show only calls with the specified number </p>
-<dt><code>-I</code></p>
-<dd> show only calls on the internal S0 bus </p>
-<dt><code>-E</code></p>
-<dd> show only calls on the external S0 bus </p>
+<dt><code>-V</code></dt>
+<dd> show version </dd>
+<dt><code>-a</code></dt>
+<dd> show all connections </dd>
+<dt><code>-e</code></dt>
+<dd> show incomplete calls </dd>
+<dt><code>-f</code></dt>
+<dd> recalculate costs _always_ </dd>
+<dt><code>-i</code></dt>
+<dd> show incoming calls </dd>
+<dt><code>-m</code></dt>
+<dd> prices without VAT </dd>
+<dt><code>-n</code></dt>
+<dd> do _not_ replace numbers with aliases </dd>
+<dt><code>-o</code></dt>
+<dd> show outgoing calls </dd>
+<dt><code>-t</code></dt>
+<dd> show only current connections </dd>
+<dt><code>-vn</code></dt>
+<dd> verbose level n </dd>
+<dt><code>-Nnnn</code></dt>
+<dd> show only calls with the specified number </dd>
+<dt><code>-I</code></dt>
+<dd> show only calls on the internal S0 bus </dd>
+<dt><code>-E</code></dt>
+<dd> show only calls on the external S0 bus </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/var/log/isdn.log</code> or <code>/var/lib/isdn/calls</code></p>
-<dd> isdnlog log file with information about all calls. </p>
-<dt><code>/etc/isdn/isdn.conf</code></p>
-<dd> general configuration </p>
-<dt><code>/etc/isdn/callerid.conf</code></p>
-<dd> aliases for telephone numbers </p>
+<dt><code>/var/log/isdn.log</code> or <code>/var/lib/isdn/calls</code></dt>
+<dd> isdnlog log file with information about all calls. </dd>
+<dt><code>/etc/isdn/isdn.conf</code></dt>
+<dd> general configuration </dd>
+<dt><code>/etc/isdn/callerid.conf</code></dt>
+<dd> aliases for telephone numbers </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-isdnlog/">isdnlog</a>(5) <a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8) <a href="/docs/linux/man/1-isdnrep/">isdnrep</a>(1)</code> </p>

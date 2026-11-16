@@ -18,77 +18,77 @@ description: "git-cola – A highly caffeinated Git GUI"
 <p> &#8211;repo=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Run <i>git-cola</i> on the git repository in &lt;path&gt;.</dl>
+</dt><dd> Run <i>git-cola</i> on the git repository in &lt;path&gt;.</dd></dl>
 <p> &#8211;style=&lt;style&gt;</p>
 <dl>
 <dt>
-<dd> Launch <i>git-cola</i> with a different stylesheet.</dl>
+</dt><dd> Launch <i>git-cola</i> with a different stylesheet.</dd></dl>
 <p> &#8211;classic</p>
 <dl>
 <dt>
-<dd> Launch the standalone <i>cola classic</i> tool.</dl>
+</dt><dd> Launch the standalone <i>cola classic</i> tool.</dd></dl>
 <h2>GUI STYLES</h2>
 <p> <i>git-cola</i> ships with an alternate &quot;dark&quot; stylesheet. Specify &#8211;style=dark or provide an external stylesheet with &#8211;style=PATH.</p>
 <h2>CONFIG VARIABLES</h2>
 <p> cola.savewindowsettings</p>
 <dl>
 <dt>
-<dd> Whether <i>git-cola</i> should remember its window settings.</dl>
+</dt><dd> Whether <i>git-cola</i> should remember its window settings.</dd></dl>
 <p> cola.fontdiff</p>
 <dl>
 <dt>
-<dd> Specifies the font to use for <i>git-cola</i>&#8216;s diff display.</dl>
+</dt><dd> Specifies the font to use for <i>git-cola</i>&#8216;s diff display.</dd></dl>
 <p> gui.diffcontext</p>
 <dl>
 <dt>
-<dd> The number of diff context lines used and displayed by <i>git-cola</i></dl>
+</dt><dd> The number of diff context lines used and displayed by <i>git-cola</i></dd></dl>
 <p> gui.editor</p>
 <dl>
 <dt>
-<dd> The default text editor is controlled by gui.editor. The config variable overrides the EDITOR environment variable.</dl>
+</dt><dd> The default text editor is controlled by gui.editor. The config variable overrides the EDITOR environment variable.</dd></dl>
 <p> gui.historybrowser</p>
 <dl>
 <dt>
-<dd> Specifies the history browser to use when visualizing history.</dl>
+</dt><dd> Specifies the history browser to use when visualizing history.</dd></dl>
 <p> diff.tool</p>
 <dl>
 <dt>
-<dd> The default diff tool to use. The config variable overrides the GIT_DIFF_TOOL environment variable.</dl>
+</dt><dd> The default diff tool to use. The config variable overrides the GIT_DIFF_TOOL environment variable.</dd></dl>
 <p> merge.tool</p>
 <dl>
 <dt>
-<dd> The default merge tool to use. The config variable overrides the GIT_MERGE_TOOL environment variable.</dl>
+</dt><dd> The default merge tool to use. The config variable overrides the GIT_MERGE_TOOL environment variable.</dd></dl>
 <p> user.email</p>
 <dl>
 <dt>
-<dd> Your email address to be recorded in any newly created commits. Can be overridden by the <i>GIT_AUTHOR_EMAIL</i>, <i>GIT_COMMITTER_EMAIL</i>, and <i>EMAIL</i> environment variables. See linkgit:git-commit-tree[1].</dl>
+</dt><dd> Your email address to be recorded in any newly created commits. Can be overridden by the <i>GIT_AUTHOR_EMAIL</i>, <i>GIT_COMMITTER_EMAIL</i>, and <i>EMAIL</i> environment variables. See linkgit:git-commit-tree[1].</dd></dl>
 <p> user.name</p>
 <dl>
 <dt>
-<dd> Your full name to be recorded in any newly created commits. Can be overridden by the <i>GIT_AUTHOR_NAME</i> and <i>GIT_COMMITTER_NAME</i> environment variables. See linkgit:git-commit-tree[1].</dl>
+</dt><dd> Your full name to be recorded in any newly created commits. Can be overridden by the <i>GIT_AUTHOR_NAME</i> and <i>GIT_COMMITTER_NAME</i> environment variables. See linkgit:git-commit-tree[1].</dd></dl>
 <p> See linkgit:git-config[1] for more details.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> EDITOR</p>
 <dl>
 <dt>
-<dd> Specifies the default editor to use. This is ignored when the git config variable gui.editor is defined.</dl>
+</dt><dd> Specifies the default editor to use. This is ignored when the git config variable gui.editor is defined.</dd></dl>
 <p> GIT_DIFF_TOOL</p>
 <dl>
 <dt>
-<dd> Specifies the default diff tool to use. This is ignored when the git config variable diff.tool is defined.</dl>
+</dt><dd> Specifies the default diff tool to use. This is ignored when the git config variable diff.tool is defined.</dd></dl>
 <p> GIT_MERGE_TOOL</p>
 <dl>
 <dt>
-<dd> Specifies the default merge tool to use. This is ignored when the git config variable merge.tool is defined.</dl>
+</dt><dd> Specifies the default merge tool to use. This is ignored when the git config variable merge.tool is defined.</dd></dl>
 <h2>SOURCE</h2>
 <p> A <i>git-cola</i> development repository can be obtained via git: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git clone <a href="git://github.com/davvid/git-cola.git">git://github.com/davvid/git-cola.git</a>
 </pre>
-</dl>
+</dd></dl>
 <h2>STYLESHEETS</h2>
 <p> git-cola ships with an alternative stylesheet called <i>dark</i>. You can use this stylesheet by running git cola &#8211;style=dark. </p>
 <p> You can also skin git-cola by providing your own Qt stylesheet. E.g. git cola &#8211;style=/path/to/style.qss. </p>
@@ -97,30 +97,30 @@ git clone <a href="git://github.com/davvid/git-cola.git">git://github.com/davvid
 <p> <i>git-cola</i> homepage</p>
 <dl>
 <dt>
-<dd> m[blue]<code><a rel="nofollow" href="http://cola.tuxfamily.org/">http://cola.tuxfamily.org/</a></code>m[]</dl>
+</dt><dd> m[blue]<code><a rel="nofollow" href="http://cola.tuxfamily.org/">http://cola.tuxfamily.org/</a></code>m[]</dd></dl>
 <p> <i>git-cola</i> sources on github</p>
 <dl>
 <dt>
-<dd> m[blue]<code><a rel="nofollow" href="http://github.com/davvid/git-cola/tree/master">http://github.com/davvid/git-cola/tree/master</a></code>m[]</dl>
+</dt><dd> m[blue]<code><a rel="nofollow" href="http://github.com/davvid/git-cola/tree/master">http://github.com/davvid/git-cola/tree/master</a></code>m[]</dd></dl>
 <h2>SEE ALSO</h2>
 <p> linkgit:git-difftool[1]</p>
 <dl>
 <dt>
-<dd> Compare changes using common merge tools. (New in git-1.6.3).</dl>
+</dt><dd> Compare changes using common merge tools. (New in git-1.6.3).</dd></dl>
 <p> linkgit:gitk[1]</p>
 <dl>
 <dt>
-<dd> The git repository browser. Shows branches, commit history and file differences. gitk is the utility started by <i>git-cola</i>&#8216;s Repository Visualize actions.</dl>
+</dt><dd> The git repository browser. Shows branches, commit history and file differences. gitk is the utility started by <i>git-cola</i>&#8216;s Repository Visualize actions.</dd></dl>
 <h2>GIT</h2>
 <p> <i>git-cola</i> is independently developed from the linkgit:git[7] suite, but you can use it just like any other git command, e.g. git cola.</p>
 <h2>AUTHOR</h2>
 <p> Written by David Aguilar &lt;m[blue]<code>davvid [at] gmail.com</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> davvid [at] gmail.com</p>
+<dt> 1.</dt>
+<dd> davvid [at] gmail.com</dd>
 <dl>
 <dt>
-<dd> mailto:davvid [at] gmail.com</dl>
+</dt><dd> mailto:davvid [at] gmail.com</dd></dl>
 </dl>
 <h2>Index</h2>

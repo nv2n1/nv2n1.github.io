@@ -14,8 +14,8 @@ description: "gnutls_cipher_list – API function"
 <p> <code>const gnutls_cipher_algorithm_t * gnutls_cipher_list( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get a list of supported cipher algorithms. Note that not necessarily all ciphers are supported as TLS cipher suites. For example, DES is not supported as a cipher suite, but is supported for other purposes (e.g., PKCS<code>8</code> or similar). </p>
 <p> This function is not thread safe.</p>
@@ -30,6 +30,6 @@ description: "gnutls_cipher_list – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

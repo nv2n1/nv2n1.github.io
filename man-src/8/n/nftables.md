@@ -19,73 +19,73 @@ description: "nft – Administration tool of the nftables framework for packet f
 <p> <code>General options:</code> </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Show help message and all options.</dl>
+<dd>Show help message and all options.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Show version.</dl>
+<dd>Show version.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
-<dd>Show long version information, including compile-time configuration.</dl>
+<dd>Show long version information, including compile-time configuration.</dd></dl>
 <p> <code>Ruleset input handling options that specify to how to load rulesets:</code> </p>
 <p> <code>-f</code>, <code>&#8211;file </code><i>filename</i></p>
 <dl>
-<dd>Read input from <i>filename</i>. If <i>filename</i> is -, read from stdin.</dl>
+<dd>Read input from <i>filename</i>. If <i>filename</i> is -, read from stdin.</dd></dl>
 <p> <code>-D</code>, <code>&#8211;define </code><i>name=value</i></p>
 <dl>
-<dd>Define a variable. You can only combine this option with <i>-f</i>.</dl>
+<dd>Define a variable. You can only combine this option with <i>-f</i>.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;interactive</code></p>
 <dl>
-<dd>Read input from an interactive readline CLI. You can use quit to exit, or use the EOF marker, normally this is CTRL-D.</dl>
+<dd>Read input from an interactive readline CLI. You can use quit to exit, or use the EOF marker, normally this is CTRL-D.</dd></dl>
 <p> <code>-I</code>, <code>&#8211;includepath directory</code></p>
 <dl>
-<dd>Add the directory <i>directory</i> to the list of directories to be searched for included files. This option may be specified multiple times.</dl>
+<dd>Add the directory <i>directory</i> to the list of directories to be searched for included files. This option may be specified multiple times.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;check</code></p>
 <dl>
-<dd>Check commands validity without actually applying the changes.</dl>
+<dd>Check commands validity without actually applying the changes.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;optimize</code></p>
 <dl>
-<dd>Optimize your ruleset. You can combine this option with <i>-c</i> to inspect the proposed optimizations.</dl>
+<dd>Optimize your ruleset. You can combine this option with <i>-c</i> to inspect the proposed optimizations.</dd></dl>
 <p> <code>Ruleset list output formatting that modify the output of the list ruleset command:</code> </p>
 <p> <code>-a</code>, <code>&#8211;handle</code></p>
 <dl>
-<dd>Show object handles in output.</dl>
+<dd>Show object handles in output.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;stateless</code></p>
 <dl>
-<dd>Omit stateful information of rules and stateful objects.</dl>
+<dd>Omit stateful information of rules and stateful objects.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;terse</code></p>
 <dl>
-<dd>Omit contents of sets from output.</dl>
+<dd>Omit contents of sets from output.</dd></dl>
 <p> <code>-S</code>, <code>&#8211;service</code></p>
 <dl>
-<dd>Translate ports to service names as defined by /etc/services.</dl>
+<dd>Translate ports to service names as defined by /etc/services.</dd></dl>
 <p> <code>-N</code>, <code>&#8211;reversedns</code></p>
 <dl>
-<dd>Translate IP address to names via reverse DNS lookup. This may slow down your listing since it generates network traffic.</dl>
+<dd>Translate IP address to names via reverse DNS lookup. This may slow down your listing since it generates network traffic.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;guid</code></p>
 <dl>
-<dd>Translate numeric UID/GID to names as defined by /etc/passwd and /etc/group.</dl>
+<dd>Translate numeric UID/GID to names as defined by /etc/passwd and /etc/group.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;numeric</code></p>
 <dl>
-<dd>Print fully numerical output.</dl>
+<dd>Print fully numerical output.</dd></dl>
 <p> <code>-y</code>, <code>&#8211;numeric-priority</code></p>
 <dl>
-<dd>Display base chain priority numerically.</dl>
+<dd>Display base chain priority numerically.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;numeric-protocol</code></p>
 <dl>
-<dd>Display layer 4 protocol numerically.</dl>
+<dd>Display layer 4 protocol numerically.</dd></dl>
 <p> <code>-T</code>, <code>&#8211;numeric-time</code></p>
 <dl>
-<dd>Show time, day and hour values in numeric format.</dl>
+<dd>Show time, day and hour values in numeric format.</dd></dl>
 <p> <code>Command output formatting:</code> </p>
 <p> <code>-e</code>, <code>&#8211;echo</code></p>
 <dl>
-<dd>When inserting items into the ruleset using <code>add</code>, <code>insert</code> or <code>replace</code> commands, print notifications just like <code>nft monitor</code>.</dl>
+<dd>When inserting items into the ruleset using <code>add</code>, <code>insert</code> or <code>replace</code> commands, print notifications just like <code>nft monitor</code>.</dd></dl>
 <p> <code>-j</code>, <code>&#8211;json</code></p>
 <dl>
-<dd>Format output in JSON. See <a href="/docs/linux/man/5-libnftables-json/">libnftables-json</a>(5) for a schema description.</dl>
+<dd>Format output in JSON. See <a href="/docs/linux/man/5-libnftables-json/">libnftables-json</a>(5) for a schema description.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;debug</code> <i>level</i></p>
 <dl>
-<dd>Enable debugging output. The debug level can be any of <code>scanner</code>, <code>parser</code>, <code>eval</code>, <code>netlink</code>, <code>mnl</code>, <code>proto-ctx</code>, <code>segtree</code>, <code>all</code>. You can combine more than one by separating by the <i>,</i> symbol, for example <i>-d eval,mnl</i>.</dl>
+<dd>Enable debugging output. The debug level can be any of <code>scanner</code>, <code>parser</code>, <code>eval</code>, <code>netlink</code>, <code>mnl</code>, <code>proto-ctx</code>, <code>segtree</code>, <code>all</code>. You can combine more than one by separating by the <i>,</i> symbol, for example <i>-d eval,mnl</i>.</dd></dl>
 <h2>Input File Formats</h2>
 <h3>Lexical Conventions</h3>
 <p>Input is parsed line-wise. When the last character of a line, just before the newline character, is a non-quoted backslash (\), the next line is treated as a continuation. Multiple commands on the same line can be separated using a semicolon (;). </p>
@@ -95,7 +95,7 @@ description: "nft – Administration tool of the nftables framework for packet f
 <dl>
 <dd>
 <pre><code>include</code> <i>filename</i></pre>
-</dl>
+</dd></dl>
 <p> Other files can be included by using the <code>include</code> statement. The directories to be searched for include files can be specified using the <code>-I</code>/<code>&#8211;includepath</code> option. You can override this behaviour either by prepending &#8216;./&#8217; to your path to force inclusion of files located in the current working directory (i.e. relative path) or / for file location expressed as an absolute path. </p>
 <p> If <code>-I</code>/<code>&#8211;includepath</code> is not specified, then nft relies on the default directory that is specified at compile time. You can retrieve this default directory via the <code>-h</code>/<code>&#8211;help</code> option. </p>
 <p> Include statements support the usual shell wildcard symbols (<code>,?,[]). Having no matches for an include statement is not an error, if wildcard symbols are used in the include statement. This allows having potentially empty include directories for statements like </code><code>include &quot;/etc/firewall/rules/</code><code>&quot;</code>. The wildcard matches are loaded in alphabetical order. Files beginning with dot (.) are not matched by include statements.</p>
@@ -106,7 +106,7 @@ description: "nft – Administration tool of the nftables framework for packet f
 <code>undefine</code> <i>variable</i>
 <code>redefine</code> <i>variable</i> <code>=</code> <i>expr</i>
 <code>$variable</code></pre>
-</dl>
+</dd></dl>
 <p> Symbolic variables can be defined using the <code>define</code> statement. Variable references are expressions and can be used to initialize other variables. The scope of a definition is the current block and all blocks contained within. Symbolic variables can be undefined using the <code>undefine</code> statement, and modified using the <code>redefine</code> statement. </p>
 <p> <code>Using symbolic variables</code>. </p>
 <dl>
@@ -117,7 +117,7 @@ define int_ifs = { $int_if1, $int_if2 }
 redefine int_if2 = wlan0
 undefine int_if2
 filter input iif $int_ifs accept</pre>
-</dl>
+</dd></dl>
 <h2>Address Families</h2>
 <p>Address families determine the type of packets which are processed. For each address family, the kernel contains so called hooks at specific stages of the packet processing paths, which invoke nftables if rules for these hooks exist. </p>
 <table>
@@ -275,7 +275,7 @@ filter input iif $int_ifs accept</pre>
 <dl>
 <dd>
 <pre>{<code>list</code> | <code>flush</code>} <code>ruleset</code> [<i>family</i>]</pre>
-</dl>
+</dd></dl>
 <p> The <code>ruleset</code> keyword is used to identify the whole set of tables, chains, etc. currently in place in kernel. The following <code>ruleset</code> commands exist: </p>
 <table>
 <tr VALIGN=top>
@@ -302,7 +302,7 @@ filter input iif $int_ifs accept</pre>
 {<code>delete</code> | <code>list</code> | <code>flush</code>} <code>table</code> [<i>family</i>] <i>table</i>
 <code>list tables</code> [<i>family</i>]
 <code>delete table</code> [<i>family</i>] <code>handle</code> <i>handle</i></pre>
-</dl>
+</dd></dl>
 <p> Tables are containers for chains, sets and stateful objects. They are identified by their address family and their name. The address family must be one of <code>ip</code>, <code>ip6</code>, <code>inet</code>, <code>arp</code>, <code>bridge</code>, <code>netdev</code>. The <code>inet</code> address family is a dummy family which is used to create hybrid IPv4/IPv6 tables. The <code>meta expression nfproto</code> keyword can be used to test which family (ipv4 or ipv6) context the packet is being processed in. When no address family is specified, <code>ip</code> is used by default. The only difference between add and create is that the former will not return an error if the specified table already exists while <code>create</code> will return an error. </p>
 <p> <code>Table 4. Table flags</code> </p>
 <table BORDER>
@@ -334,7 +334,7 @@ add rule inet mytable myin counter
 add table inet mytable { flags dormant; }
 # make table active again:
 add table inet mytable</pre>
-</dl>
+</dd></dl>
 <table>
 <tr VALIGN=top>
 <td>
@@ -373,7 +373,7 @@ add table inet mytable</pre>
 <code>list chains</code> [<i>family</i>]
 <code>delete chain</code> [<i>family</i>] <i>table</i> <code>handle</code> <i>handle</i>
 <code>rename chain</code> [<i>family</i>] <i>table</i> <i>chain</i> <i>newname</i></pre>
-</dl>
+</dd></dl>
 <p> Chains are containers for rules. They exist in two kinds, base chains and regular chains. A base chain is an entry point for packets from the networking stack, a regular chain may be used as jump target and is used for better rule organization. </p>
 <table>
 <tr VALIGN=top>
@@ -465,11 +465,11 @@ add table inet mytable</pre>
 </table>
 <p> Apart from the special cases illustrated above (e.g. <code>nat</code> type not supporting <code>forward</code> hook or <code>route</code> type only supporting <code>output</code> hook), there are three further quirks worth noticing: </p>
 <dl>
-<dd>&bull; The netdev family supports merely two combinations, namely <code>filter</code> type with <code>ingress</code> hook and <code>filter</code> type with <code>egress</code> hook. Base chains in this family also require the <code>device</code> parameter to be present since they exist per interface only.</dl>
+<dd>&bull; The netdev family supports merely two combinations, namely <code>filter</code> type with <code>ingress</code> hook and <code>filter</code> type with <code>egress</code> hook. Base chains in this family also require the <code>device</code> parameter to be present since they exist per interface only.</dd></dl>
 <dl>
-<dd>&bull; The arp family supports only the <code>input</code> and <code>output</code> hooks, both in chains of type <code>filter</code>.</dl>
+<dd>&bull; The arp family supports only the <code>input</code> and <code>output</code> hooks, both in chains of type <code>filter</code>.</dd></dl>
 <dl>
-<dd>&bull; The inet family also supports the <code>ingress</code> hook (since Linux kernel 5.10), to filter IPv4 and IPv6 packet at the same location as the netdev <code>ingress</code> hook. This inet hook allows you to share sets and maps between the usual <code>prerouting</code>, <code>input</code>, <code>forward</code>, <code>output</code>, <code>postrouting</code> and this <code>ingress</code> hook.</dl>
+<dd>&bull; The inet family also supports the <code>ingress</code> hook (since Linux kernel 5.10), to filter IPv4 and IPv6 packet at the same location as the netdev <code>ingress</code> hook. This inet hook allows you to share sets and maps between the usual <code>prerouting</code>, <code>input</code>, <code>forward</code>, <code>output</code>, <code>postrouting</code> and this <code>ingress</code> hook.</dd></dl>
 <p> The <code>priority</code> parameter accepts a signed integer value or a standard priority name which specifies the order in which chains with the same <code>hook</code> value are traversed. The ordering is ascending, i.e. lower priority values have precedence over higher ones. </p>
 <p> Standard priority values can be replaced with easily memorizable names. Not all names make sense in every family with every hook (see the compatibility matrices below) but their numerical value can still be used for prioritizing chains. </p>
 <p> These names and values are defined and made available based on what priorities are used by xtables when registering their default chains. </p>
@@ -606,7 +606,7 @@ add table inet mytable</pre>
 <pre>{<code>add</code> | <code>insert</code>} <code>rule</code> [<i>family</i>] <i>table</i> <i>chain</i> [<code>handle</code> <i>handle</i> | <code>index</code> <i>index</i>] <i>statement</i> ... [<code>comment</code> <i>comment</i>]
 <code>replace rule</code> [<i>family</i>] <i>table</i> <i>chain</i> <code>handle</code> <i>handle</i> <i>statement</i> ... [<code>comment</code> <i>comment</i>]
 <code>delete rule</code> [<i>family</i>] <i>table</i> <i>chain</i> <code>handle</code> <i>handle</i></pre>
-</dl>
+</dd></dl>
 <p> Rules are added to chains in the given table. If the family is not specified, the ip family is used. Rules are constructed from two kinds of components according to a set of grammatical rules: expressions and statements. </p>
 <p> The add and insert commands support an optional location specifier, which is either a <i>handle</i> or the <i>index</i> (starting at zero) of an existing rule. Internally, rule locations are always identified by <i>handle</i> and the translation from <i>index</i> happens in userspace. This has two potential implications in case a concurrent ruleset change happens after the translation was done: The effective rule index might change if a rule was inserted or deleted before the referred one. If the referred rule was deleted, the command is rejected by the kernel just as if an invalid <i>handle</i> was given. </p>
 <p> A <i>comment</i> is a single word or a double-quoted (&quot;) multi-word string which can be used to make notes regarding the actual rule. <code>Note:</code> If you use bash for adding rules, you have to escape the quotation marks, e.g. \&quot;enable ssh for servers\&quot;. </p>
@@ -646,7 +646,7 @@ add table inet mytable</pre>
 <pre>nft add rule filter output ip daddr 192.168.0.0/24 accept # 'ip filter' is assumed
 # same command, slightly more verbose
 nft add rule ip filter output ip daddr 192.168.0.0/24 accept</pre>
-</dl>
+</dd></dl>
 <p> <code>delete rule from inet table</code>. </p>
 <dl>
 <dd>
@@ -659,20 +659,20 @@ table inet filter {
  ...
 # delete the rule with handle 5
 nft delete rule inet filter input handle 5</pre>
-</dl>
+</dd></dl>
 <h2>Sets</h2>
 <p>nftables offers two kinds of set concepts. Anonymous sets are sets that have no specific name. The set members are enclosed in curly braces, with commas to separate elements when creating the rule the set is used in. Once that rule is removed, the set is removed as well. They cannot be updated, i.e. once an anonymous set is declared it cannot be changed anymore except by removing/altering the rule that uses the anonymous set. </p>
 <p> <code>Using anonymous sets to accept particular subnets and ports</code>. </p>
 <dl>
 <dd>
 <pre>nft add rule filter input ip saddr { 10.0.0.0/8, 192.168.0.0/16 } tcp dport { 22, 443 } accept</pre>
-</dl>
+</dd></dl>
 <p> Named sets are sets that need to be defined first before they can be referenced in rules. Unlike anonymous sets, elements can be added to or removed from a named set at any time. Sets are referenced from rules using an @ prefixed to the sets name. </p>
 <p> <code>Using named sets to accept addresses and ports</code>. </p>
 <dl>
 <dd>
 <pre>nft add rule filter input ip saddr @allowed_hosts tcp dport @allowed_ports accept</pre>
-</dl>
+</dd></dl>
 <p> The sets allowed_hosts and allowed_ports need to be created first. The next section describes nft set syntax in more detail. </p>
 <dl>
 <dd>
@@ -681,7 +681,7 @@ nft delete rule inet filter input handle 5</pre>
 <code>list sets</code> [<i>family</i>]
 <code>delete set</code> [<i>family</i>] <i>table</i> <code>handle</code> <i>handle</i>
 {<code>add</code> | <code>delete</code>} <code>element</code> [<i>family</i>] <i>table</i> <i>set</i> <code>{</code> <i>element</i>[<code>,</code> ...] <code>}</code></pre>
-</dl>
+</dd></dl>
 <p> Sets are element containers of a user-defined data type, they are uniquely identified by a user-defined name and attached to tables. Their behaviour can be tuned with the flags that can be specified at set creation time. </p>
 <table>
 <tr VALIGN=top>
@@ -808,7 +808,7 @@ nft delete rule inet filter input handle 5</pre>
 <pre><code>add map</code> [<i>family</i>] <i>table</i> <i>map</i> <code>{ type</code> <i>type</i> | <code>typeof</code> <i>expression</i> [<code>flags</code> <i>flags</i> <code>;</code>] [<code>elements = {</code> <i>element</i>[<code>,</code> ...] <code>} ;</code>] [<code>size</code> <i>size</i> <code>;</code>] [<code>comment</code> <i>comment</i> <code>;</code><i>] [</i><i></i><code>policy</code><i> 'policy</i> <code>;</code>] <code>}</code>
 {<code>delete</code> | <code>list</code> | <code>flush</code>} <code>map</code> [<i>family</i>] <i>table</i> <i>map</i>
 <code>list maps</code> [<i>family</i>]</pre>
-</dl>
+</dd></dl>
 <p> Maps store data based on some specific key used as input. They are uniquely identified by a user-defined name and attached to tables. </p>
 <table>
 <tr VALIGN=top>
@@ -924,7 +924,7 @@ nft delete rule inet filter input handle 5</pre>
 <i>ELEMENT</i> := <i>key_expression</i> <i>OPTIONS</i> [<code>:</code> <i>value_expression</i>]
 <i>OPTIONS</i> := [<code>timeout</code> <i>TIMESPEC</i>] [<code>expires</code> <i>TIMESPEC</i>] [<code>comment</code> <i>string</i>]
 <i>TIMESPEC</i> := [<i>num</i><code>d</code>][<i>num</i><code>h</code>][<i>num</i><code>m</code>][<i>num</i>[<code>s</code>]]</pre>
-</dl>
+</dd></dl>
 <p> Element-related commands allow to change contents of named sets and maps. <i>key_expression</i> is typically a value matching the set type. <i>value_expression</i> is not allowed in sets but mandatory when adding to maps, where it matches the data part in its type definition. When deleting from maps, it may be specified but is optional as <i>key_expression</i> uniquely identifies the element. </p>
 <p> <code>create</code> command is similar to <code>add</code> with the exception that none of the listed elements may already exist. </p>
 <p> <code>get</code> command is useful to check if an element is contained in a set which may be non-trivial in very large and/or interval sets. In the latter case, the containing interval is returned instead of just the element itself. </p>
@@ -964,7 +964,7 @@ nft delete rule inet filter input handle 5</pre>
 <code>list flowtables</code> [<i>family</i>]
 {<code>delete</code> | <code>list</code>} <code>flowtable</code> [<i>family</i>] <i>table</i> <i>flowtable</i>
 <code>delete</code> <code>flowtable</code> [<i>family</i>] <i>table</i> <code>handle</code> <i>handle</i></pre>
-</dl>
+</dd></dl>
 <p> Flowtables allow you to accelerate packet forwarding in software. Flowtables entries are represented through a tuple that is composed of the input interface, source and destination address, source and destination port; and layer 3/4 protocols. Each entry also caches the destination interface and the gateway address &#8211; to update the destination link-layer address &#8211; to forward packets. The ttl and hoplimit fields are also decremented. Hence, flowtables provides an alternative path that allow packets to bypass the classic forwarding path. Flowtables reside in the ingress hook that is located before the prerouting hook. You can select which flows you want to offload through the flow expression from the forward chain. Flowtables are identified by their address family and their name. The address family must be one of ip, ip6, or inet. The inet address family is a dummy family which is used to create hybrid IPv4/IPv6 tables. When no address family is specified, ip is used by default. </p>
 <p> The <code>priority</code> can be a signed integer or <code>filter</code> which stands for 0. Addition and subtraction can be used to set relative priority, e.g. filter + 5 equals to 5. </p>
 <table>
@@ -996,7 +996,7 @@ nft delete rule inet filter input handle 5</pre>
 <pre><code>list { secmarks | synproxys | flow tables | meters | hooks }</code> [<i>family</i>]
 <code>list { secmarks | synproxys | flow tables | meters | hooks } table</code> [<i>family</i>] <i>table</i>
 <code>list ct { timeout | expectation | helper | helpers } table</code> [<i>family</i>] <i>table</i></pre>
-</dl>
+</dd></dl>
 <p> Inspect configured objects. <code>list hooks</code> shows the full hook pipeline, including those registered by kernel modules, such as nf_conntrack.</p>
 <h2>Stateful Objects</h2>
 <dl>
@@ -1006,7 +1006,7 @@ nft delete rule inet filter input handle 5</pre>
 <code>list counters</code> [<i>family</i>]
 <code>list quotas</code> [<i>family</i>]
 <code>list limits</code> [<i>family</i>]</pre>
-</dl>
+</dd></dl>
 <p> Stateful objects are attached to tables and are identified by a unique name. They group stateful information from rules, to reference them in rules the keywords &quot;type name&quot; are used e.g. &quot;counter name&quot;. </p>
 <table>
 <tr VALIGN=top>
@@ -1044,7 +1044,7 @@ nft delete rule inet filter input handle 5</pre>
 <pre><code>add</code> <code>ct helper</code> [<i>family</i>] <i>table</i> <i>name</i> <code>{ type</code> <i>type</i> <code>protocol</code> <i>protocol</i> <code>;</code> [<code>l3proto</code> <i>family</i> <code>;</code>] <code>}</code>
 <code>delete</code> <code>ct helper</code> [<i>family</i>] <i>table</i> <i>name</i>
 <code>list</code> <code>ct helpers</code></pre>
-</dl>
+</dd></dl>
 <p> Ct helper is used to define connection tracking helpers that can then be used in combination with the <code>ct helper set</code> statement. <i>type</i> and <i>protocol</i> are mandatory, l3proto is derived from the table family by default, i.e. in the inet table the kernel will try to load both the ipv4 and ipv6 helper backends, if they are supported by the kernel. </p>
 <p> <code>Table 11. conntrack helper specifications</code> </p>
 <table BORDER>
@@ -1105,14 +1105,14 @@ table inet myhelpers {
  tcp dport 21 ct helper set &quot;ftp-standard&quot;
  }
 }</pre>
-</dl>
+</dd></dl>
 <h3>Ct Timeout</h3>
 <dl>
 <dd>
 <pre><code>add</code> <code>ct timeout</code> [<i>family</i>] <i>table</i> <i>name</i> <code>{ protocol</code> <i>protocol</i> <code>; policy = {</code> <i>state</i><code>:</code> <i>value</i> [<code>,</code> ...] <code>} ;</code> [<code>l3proto</code> <i>family</i> <code>;</code>] <code>}</code>
 <code>delete</code> <code>ct timeout</code> [<i>family</i>] <i>table</i> <i>name</i>
 <code>list</code> <code>ct timeouts</code></pre>
-</dl>
+</dd></dl>
 <p> Ct timeout is used to update connection tracking timeout values.Timeout policies are assigned with the <code>ct timeout set</code> statement. <i>protocol</i> and <i>policy</i> are mandatory, l3proto is derived from the table family by default. </p>
 <p> <code>Table 12. conntrack timeout specifications</code> </p>
 <table BORDER>
@@ -1187,7 +1187,7 @@ table inet myhelpers {
  ct timeout set &quot;customtimeout&quot;
  }
 }</pre>
-</dl>
+</dd></dl>
 <p> <code>testing the updated timeout policy</code>. </p>
 <dl>
 <dd>
@@ -1196,14 +1196,14 @@ It should display:
 [UPDATE] tcp 6 120 ESTABLISHED src=172.16.19.128 dst=172.16.19.1
 sport=22 dport=41360 [UNREPLIED] src=172.16.19.1 dst=172.16.19.128
 sport=41360 dport=22</pre>
-</dl>
+</dd></dl>
 <h3>Ct Expectation</h3>
 <dl>
 <dd>
 <pre><code>add</code> <code>ct expectation</code> [<i>family</i>] <i>table</i> <i>name</i> <code>{ protocol</code> <i>protocol</i> <code>; dport</code> <i>dport</i> <code>; timeout</code> <i>timeout</i> <code>; size</code> <i>size</i> <code>; [*l3proto</code> <i>family</i> <code>;</code>] <code>}</code>
 <code>delete</code> <code>ct expectation</code> [<i>family</i>] <i>table</i> <i>name</i>
 <code>list</code> <code>ct expectations</code></pre>
-</dl>
+</dd></dl>
 <p> Ct expectation is used to create connection expectations. Expectations are assigned with the <code>ct expectation set</code> statement. <i>protocol</i>, <i>dport</i>, <i>timeout</i> and <i>size</i> are mandatory, l3proto is derived from the table family by default. </p>
 <p> <code>Table 13. conntrack expectation specifications</code> </p>
 <table BORDER>
@@ -1284,14 +1284,14 @@ sport=41360 dport=22</pre>
  ct expectation set &quot;expect&quot;
  }
 }</pre>
-</dl>
+</dd></dl>
 <h3>Counter</h3>
 <dl>
 <dd>
 <pre><code>add</code> <code>counter</code> [<i>family</i>] <i>table</i> <i>name</i> [<code>{</code> [ <code>packets</code> <i>packets</i> <code>bytes</code> <i>bytes</i> <i>;</i> ] [ <code>comment</code> <i>comment</i> <i>;</i> <code>}</code>]
 <code>delete</code> <code>counter</code> [<i>family</i>] <i>table</i> <i>name</i>
 <code>list</code> <code>counters</code></pre>
-</dl>
+</dd></dl>
 <p> <code>Table 14. Counter specifications</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -1333,14 +1333,14 @@ sport=41360 dport=22</pre>
 <dd>
 <pre>nft add counter filter http
 nft add rule filter input tcp dport 80 counter name \&quot;http\&quot;</pre>
-</dl>
+</dd></dl>
 <p> <code>Using named counters with maps</code>. </p>
 <dl>
 <dd>
 <pre>nft add counter filter http
 nft add counter filter https
 nft add rule filter input counter name tcp dport map { 80 : \&quot;http\&quot;, 443 : \&quot;https\&quot; }</pre>
-</dl>
+</dd></dl>
 <h3>Quota</h3>
 <dl>
 <dd>
@@ -1348,7 +1348,7 @@ nft add rule filter input counter name tcp dport map { 80 : \&quot;http\&quot;, 
 BYTE_UNIT := bytes | kbytes | mbytes
 <code>delete</code> <code>quota</code> [<i>family</i>] <i>table</i> <i>name</i>
 <code>list</code> <code>quotas</code></pre>
-</dl>
+</dd></dl>
 <p> <code>Table 15. Quota specifications</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -1390,14 +1390,14 @@ BYTE_UNIT := bytes | kbytes | mbytes
 <dd>
 <pre>nft add quota filter user123 { over 20 mbytes }
 nft add rule filter input ip saddr 192.168.10.123 quota name \&quot;user123\&quot;</pre>
-</dl>
+</dd></dl>
 <p> <code>Using named quotas with maps</code>. </p>
 <dl>
 <dd>
 <pre>nft add quota filter user123 { over 20 mbytes }
 nft add quota filter user124 { over 20 mbytes }
 nft add rule filter input quota name ip saddr map { 192.168.10.123 : \&quot;user123\&quot;, 192.168.10.124 : \&quot;user124\&quot; }</pre>
-</dl>
+</dd></dl>
 <h2>Expressions</h2>
 <p>Expressions represent values, either constants like network addresses, port numbers, etc., or data gathered from the packet during ruleset evaluation. Expressions can be combined using binary, logical, relational and other types of expressions to form complex or relational (match) expressions. They are also used as arguments to certain types of operations, like NAT, packet marking etc. </p>
 <p> Each expression has a data type, which determines the size, parsing and representation of symbolic values and type compatibility with other expressions.</p>
@@ -1405,7 +1405,7 @@ nft add rule filter input quota name ip saddr map { 192.168.10.123 : \&quot;user
 <dl>
 <dd>
 <pre><code>describe</code> <i>expression</i> | <i>data type</i></pre>
-</dl>
+</dd></dl>
 <p> The <code>describe</code> command shows information about the type of an expression and its data type. A data type may also be given, in which nft will display more information about the type. </p>
 <p> <code>The describe command</code>. </p>
 <dl>
@@ -1421,7 +1421,7 @@ ack 0x10
 urg 0x20
 ecn 0x40
 cwr 0x80</pre>
-</dl>
+</dd></dl>
 <h2>Data Types</h2>
 <p>Data types determine the size, parsing and representation of symbolic values and type compatibility of expressions. A number of global data types exist, in addition some expression types define further data types specific to the expression type. Most data types have a fixed size, some however may have a dynamic size, f.i. the string type. Some types also have predefined symbolic constants. Those can be listed using the nft <code>describe</code> command: </p>
 <dl>
@@ -1431,7 +1431,7 @@ datatype ct_state (conntrack state) (basetype bitmask, integer), 32 bits
 pre-defined symbolic constants (in hexadecimal):
 invalid 0x00000001
 new ...</pre>
-</dl>
+</dd></dl>
 <p> Types may be derived from lower order types, f.i. the IPv4 address type is derived from the integer type, meaning an IPv4 address can also be specified as an integer value. </p>
 <p> In certain contexts (set and map definitions), it is necessary to explicitly specify a data type. Each type has a name which is used for this.</p>
 <h3>Integer Type</h3>
@@ -1507,7 +1507,7 @@ new ...</pre>
 filter input iifname eth0
 # Weird interface name
 filter input iifname &quot;(eth0)&quot;</pre>
-</dl>
+</dd></dl>
 <h3>Link Layer Address Type</h3>
 <table BORDER>
 <tr VALIGN=top>
@@ -1535,7 +1535,7 @@ filter input iifname &quot;(eth0)&quot;</pre>
 <dd>
 <pre># Ethernet destination MAC address
 filter input ether daddr 20:c9:d0:43:12:d9</pre>
-</dl>
+</dd></dl>
 <h3>Ipv4 Address Type</h3>
 <table BORDER>
 <tr VALIGN=top>
@@ -1565,7 +1565,7 @@ filter input ether daddr 20:c9:d0:43:12:d9</pre>
 filter output ip daddr 127.0.0.1
 # host name
 filter output ip daddr localhost</pre>
-</dl>
+</dd></dl>
 <h3>Ipv6 Address Type</h3>
 <table BORDER>
 <tr VALIGN=top>
@@ -1593,14 +1593,14 @@ filter output ip daddr localhost</pre>
 <dd>
 <pre># abbreviated loopback address
 filter output ip6 daddr ::1</pre>
-</dl>
+</dd></dl>
 <p> <code>IPv6 address specification with bracket notation</code>. </p>
 <dl>
 <dd>
 <pre># without [] the port number (22) would be parsed as part of the
 # ipv6 address
 ip6 nat prerouting tcp dport 2222 dnat to [1ce::d0]:22</pre>
-</dl>
+</dd></dl>
 <h3>Boolean Type</h3>
 <table BORDER>
 <tr VALIGN=top>
@@ -1683,7 +1683,7 @@ filter input fib daddr . iif oif exists
 filter input exthdr frag missing
 # match if TCP timestamp option is present
 filter input tcp option timestamp exists</pre>
-</dl>
+</dd></dl>
 <h3>Icmp Type Type</h3>
 <table BORDER>
 <tr VALIGN=top>
@@ -1824,7 +1824,7 @@ filter input tcp option timestamp exists</pre>
 <dd>
 <pre># match ping packets
 filter output icmp type { echo-request, echo-reply }</pre>
-</dl>
+</dd></dl>
 <h3>Icmp Code Type</h3>
 <table BORDER>
 <tr VALIGN=top>
@@ -2079,7 +2079,7 @@ filter output icmp type { echo-request, echo-reply }</pre>
 <dd>
 <pre># match ICMPv6 ping packets
 filter output icmpv6 type { echo-request, echo-reply }</pre>
-</dl>
+</dd></dl>
 <h3>Icmpv6 Code Type</h3>
 <table BORDER>
 <tr VALIGN=top>
@@ -2592,7 +2592,7 @@ filter output icmpv6 type { echo-request, echo-reply }</pre>
 <dd>
 <pre><code>meta</code> {<code>length</code> | <code>nfproto</code> | <code>l4proto</code> | <code>protocol</code> | <code>priority</code>}
 [<code>meta</code>] {<code>mark</code> | <code>iif</code> | <code>iifname</code> | <code>iiftype</code> | <code>oif</code> | <code>oifname</code> | <code>oiftype</code> | <code>skuid</code> | <code>skgid</code> | <code>nftrace</code> | <code>rtclassid</code> | <code>ibrname</code> | <code>obrname</code> | <code>pkttype</code> | <code>cpu</code> | <code>iifgroup</code> | <code>oifgroup</code> | <code>cgroup</code> | <code>random</code> | <code>ipsec</code> | <code>iifkind</code> | <code>oifkind</code> | <code>time</code> | <code>hour</code> | <code>day</code> }</pre>
-</dl>
+</dd></dl>
 <p> A meta expression refers to meta data associated with a packet. </p>
 <p> There are two types of meta expressions: unqualified and qualified meta expressions. Qualified meta expressions require the meta keyword before the meta key, unqualified meta expressions can be specified by using the meta key directly or as qualified meta expressions. Meta l4proto is useful to match a particular transport protocol that is part of either an IPv4 or IPv6 packet. It will also skip any IPv6 extension headers present in an IPv6 packet. </p>
 <p> meta iif, oif, iifname and oifname are used to match the interface a packet arrived on or is about to be sent out on. </p>
@@ -2600,7 +2600,7 @@ filter output icmpv6 type { echo-request, echo-reply }</pre>
 <dl>
 <dd>
 <pre>filter input meta iif &quot;foo&quot;</pre>
-</dl>
+</dd></dl>
 <p> Then this rule can only be added if the interface &quot;foo&quot; exists. Also, the rule will continue to match even if the interface &quot;foo&quot; is renamed to &quot;bar&quot;. </p>
 <p> This is because internally the interface index is used. In case of dynamically created interfaces, such as tun/tap or dialup interfaces (ppp for example), it might be better to use iifname or oifname instead. </p>
 <p> In these cases, the name is used so the interface doesn&#8217;t have to exist to add such a rule, it will stop matching if the interface gets renamed and it will match again in case interface gets deleted and later a new interface with the same name is created. </p>
@@ -2993,13 +2993,13 @@ filter forward meta iifkind { &quot;tun&quot;, &quot;veth&quot; }
 filter output oif eth0
 # incoming packet was subject to ipsec processing
 raw prerouting meta ipsec exists accept</pre>
-</dl>
+</dd></dl>
 <h3>Socket Expression</h3>
 <dl>
 <dd>
 <pre><code>socket</code> {<code>transparent</code> | <code>mark</code> | <code>wildcard</code>}
 <code>socket</code> <code>cgroupv2</code> <code>level</code> <i>NUM</i></pre>
-</dl>
+</dd></dl>
 <p> Socket expression can be used to search for an existing open TCP/UDP socket and its attributes that can be associated with a packet. It looks for an established or non-zero bound listening socket (possibly with a non-local address). You can also use it to match on the socket cgroupv2 at a given ancestor level, e.g. if the socket belongs to cgroupv2 <i>a/b</i>, ancestor level 1 checks for a matching on cgroup <i>a</i> and ancestor level 2 checks for a matching on cgroup <i>b</i>. </p>
 <p> <code>Table 31. Available socket attributes</code> </p>
 <table BORDER>
@@ -3079,12 +3079,12 @@ table inet x {
  socket cgroupv2 level 1 &quot;user.slice&quot; counter
  }
 }</pre>
-</dl>
+</dd></dl>
 <h3>Osf Expression</h3>
 <dl>
 <dd>
 <pre><code>osf</code> [<code>ttl</code> {<code>loose</code> | <code>skip</code>}] {<code>name</code> | <code>version</code>}</pre>
-</dl>
+</dd></dl>
 <p> The osf expression does passive operating system fingerprinting. This expression compares some data (Window Size, MSS, options and their order, DF, and others) from packets with the SYN bit set. </p>
 <p> <code>Table 32. Available osf attributes</code> </p>
 <table BORDER>
@@ -3127,7 +3127,7 @@ table inet x {
 <pre>If no TTL attribute is passed, make a true IP header and fingerprint TTL true comparison. This generally works for LANs.
 * loose: Check if the IP header's TTL is less than the fingerprint one. Works for globally-routable addresses.
 * skip: Do not compare the TTL at all.</pre>
-</dl>
+</dd></dl>
 <p> <code>Using osf expression</code>. </p>
 <dl>
 <dd>
@@ -3138,12 +3138,12 @@ table inet x {
  osf ttl skip name &quot;Linux&quot;
  }
 }</pre>
-</dl>
+</dd></dl>
 <h3>Fib Expressions</h3>
 <dl>
 <dd>
 <pre><code>fib</code> {<code>saddr</code> | <code>daddr</code> | <code>mark</code> | <code>iif</code> | <code>oif</code>} [<code>.</code> ...] {<code>oif</code> | <code>oifname</code> | <code>type</code>}</pre>
-</dl>
+</dd></dl>
 <p> A fib expression queries the fib (forwarding information base) to obtain information such as the output interface index a particular address would use. The input is a tuple of elements that is used as input to the fib lookup functions. </p>
 <p> <code>Table 33. fib expression specific types</code> </p>
 <table BORDER>
@@ -3196,12 +3196,12 @@ If only 'saddr oif' is given, then oif can be any interface index or zero.
 filter prerouting fib daddr . iif type != { local, broadcast, multicast } drop
 # perform lookup in a specific 'blackhole' table (0xdead, needs ip appropriate ip rule)
 filter prerouting meta mark set 0xdead fib daddr . mark type vmap { blackhole : drop, prohibit : jump prohibited, unreachable : drop }</pre>
-</dl>
+</dd></dl>
 <h3>Routing Expressions</h3>
 <dl>
 <dd>
 <pre><code>rt</code> [<code>ip</code> | <code>ip6</code>] {<code>classid</code> | <code>nexthop</code> | <code>mtu</code> | <code>ipsec</code>}</pre>
-</dl>
+</dd></dl>
 <p> A routing expression refers to routing data associated with a packet. </p>
 <p> <code>Table 34. Routing expression types</code> </p>
 <table BORDER>
@@ -3275,13 +3275,13 @@ inet filter output rt ip nexthop 192.168.0.1
 inet filter output rt ip6 nexthop fd00::1
 # outgoing packet will be encapsulated/encrypted by ipsec
 filter output rt ipsec exists</pre>
-</dl>
+</dd></dl>
 <h3>Ipsec Expressions</h3>
 <dl>
 <dd>
 <pre><code>ipsec</code> {<code>in</code> | <code>out</code>} [ <code>spnum</code> <i>NUM</i> ] {<code>reqid</code> | <code>spi</code>}
 <code>ipsec</code> {<code>in</code> | <code>out</code>} [ <code>spnum</code> <i>NUM</i> ] {<code>ip</code> | <code>ip6</code>} {<code>saddr</code> | <code>daddr</code>}</pre>
-</dl>
+</dd></dl>
 <p> An ipsec expression refers to ipsec data associated with a packet. </p>
 <p> The <i>in</i> or <i>out</i> keyword needs to be used to specify if the expression should examine inbound or outbound policies. The <i>in</i> keyword can be used in the prerouting, input and forward hooks. The <i>out</i> keyword applies to forward, output and postrouting hooks. The optional keyword spnum can be used to match a specific state in a chain, it defaults to 0. </p>
 <p> <code>Table 36. Ipsec expression types</code> </p>
@@ -3333,7 +3333,7 @@ filter output rt ipsec exists</pre>
 <dl>
 <dd>
 <pre><code>numgen</code> {<code>inc</code> | <code>random</code>} <code>mod</code> <i>NUM</i> [ <code>offset</code> <i>NUM</i> ]</pre>
-</dl>
+</dd></dl>
 <p> Create a number generator. The <code>inc</code> or <code>random</code> keywords control its operation mode: In <code>inc</code> mode, the last returned value is simply incremented. In <code>random</code> mode, a new random number is returned. The value after <code>mod</code> keyword specifies an upper boundary (read: modulus) which is not reached by returned numbers. The optional <code>offset</code> allows to increment the returned value by a fixed offset. </p>
 <p> A typical use-case for <code>numgen</code> is load-balancing: </p>
 <p> <code>Using numgen expression</code>. </p>
@@ -3345,13 +3345,13 @@ add rule nat prerouting dnat to numgen inc mod 2 map \
 # probability-based with odd bias using intervals:
 add rule nat prerouting dnat to numgen random mod 10 map \
  { 0-2 : 192.168.10.100, 3-9 : 192.168.20.200 }</pre>
-</dl>
+</dd></dl>
 <h3>Hash Expressions</h3>
 <dl>
 <dd>
 <pre><code>jhash</code> {<code>ip saddr</code> | <code>ip6 daddr</code> | <code>tcp dport</code> | <code>udp sport</code> | <code>ether saddr</code>} [<code>.</code> ...] <code>mod</code> <i>NUM</i> [ <code>seed</code> <i>NUM</i> ] [ <code>offset</code> <i>NUM</i> ]
 <code>symhash</code> <code>mod</code> <i>NUM</i> [ <code>offset</code> <i>NUM</i> ]</pre>
-</dl>
+</dd></dl>
 <p> Use a hashing function to generate a number. The functions available are <code>jhash</code>, known as Jenkins Hash, and <code>symhash</code>, for Symmetric Hash. The <code>jhash</code> requires an expression to determine the parameters of the packet header to apply the hashing, concatenations are possible as well. The value after <code>mod</code> keyword specifies an upper boundary (read: modulus) which is not reached by returned numbers. The optional <code>seed</code> is used to specify an init value used as seed in the hashing function. The optional <code>offset</code> allows to increment the returned value by a fixed offset. </p>
 <p> A typical use-case for <code>jhash</code> and <code>symhash</code> is load-balancing: </p>
 <p> <code>Using hash expressions</code>. </p>
@@ -3363,14 +3363,14 @@ add rule nat prerouting dnat to jhash ip saddr mod 2 map \
 # symmetric load balancing between 2 ip addresses:
 add rule nat prerouting dnat to symhash mod 2 map \
  { 0 : 192.168.10.100, 1 : 192.168.20.200 }</pre>
-</dl>
+</dd></dl>
 <h2>Payload Expressions</h2>
 <p>Payload expressions refer to data from the packet&#8217;s payload.</p>
 <h3>Ethernet Header Expression</h3>
 <dl>
 <dd>
 <pre><code>ether</code> {<code>daddr</code> | <code>saddr</code> | <code>type</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 37. Ethernet header expression types</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -3411,7 +3411,7 @@ add rule nat prerouting dnat to symhash mod 2 map \
 <dl>
 <dd>
 <pre><code>vlan</code> {<code>id</code> | <code>dei</code> | <code>pcp</code> | <code>type</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 38. VLAN header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -3461,7 +3461,7 @@ add rule nat prerouting dnat to symhash mod 2 map \
 <dl>
 <dd>
 <pre><code>arp</code> {<code>htype</code> | <code>ptype</code> | <code>hlen</code> | <code>plen</code> | <code>operation</code> | <code>saddr</code> { <code>ip</code> | <code>ether</code> } | <code>daddr</code> { <code>ip</code> | <code>ether</code> }</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 39. ARP header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -3556,7 +3556,7 @@ add rule nat prerouting dnat to symhash mod 2 map \
 <dl>
 <dd>
 <pre><code>ip</code> {<code>version</code> | <code>hdrlength</code> | <code>dscp</code> | <code>ecn</code> | <code>length</code> | <code>id</code> | <code>frag-off</code> | <code>ttl</code> | <code>protocol</code> | <code>checksum</code> | <code>saddr</code> | <code>daddr</code> }</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 40. IPv4 header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -3678,7 +3678,7 @@ add rule nat prerouting dnat to symhash mod 2 map \
 <dl>
 <dd>
 <pre><code>icmp</code> {<code>type</code> | <code>code</code> | <code>checksum</code> | <code>id</code> | <code>sequence</code> | <code>gateway</code> | <code>mtu</code>}</pre>
-</dl>
+</dd></dl>
 <p> This expression refers to ICMP header fields. When using it in <code>inet</code>, <code>bridge</code> or <code>netdev</code> families, it will cause an implicit dependency on IPv4 to be created. To match on unusual cases like ICMP over IPv6, one has to add an explicit <code>meta protocol ip6</code> match to the rule. </p>
 <p> <code>Table 41. ICMP header expression</code> </p>
 <table BORDER>
@@ -3756,7 +3756,7 @@ add rule nat prerouting dnat to symhash mod 2 map \
 <dl>
 <dd>
 <pre><code>igmp</code> {<code>type</code> | <code>mrt</code> | <code>checksum</code> | <code>group</code>}</pre>
-</dl>
+</dd></dl>
 <p> This expression refers to IGMP header fields. When using it in <code>inet</code>, <code>bridge</code> or <code>netdev</code> families, it will cause an implicit dependency on IPv4 to be created. To match on unusual cases like IGMP over IPv6, one has to add an explicit <code>meta protocol ip6</code> match to the rule. </p>
 <p> <code>Table 42. IGMP header expression</code> </p>
 <table BORDER>
@@ -3807,7 +3807,7 @@ add rule nat prerouting dnat to symhash mod 2 map \
 <dl>
 <dd>
 <pre><code>ip6</code> {<code>version</code> | <code>dscp</code> | <code>ecn</code> | <code>flowlabel</code> | <code>length</code> | <code>nexthdr</code> | <code>hoplimit</code> | <code>saddr</code> | <code>daddr</code>}</pre>
-</dl>
+</dd></dl>
 <p> This expression refers to the ipv6 header fields. Caution when using <code>ip6 nexthdr</code>, the value only refers to the next header, i.e. <code>ip6 nexthdr tcp</code> will only match if the ipv6 packet does not contain any extension headers. Packets that are fragmented or e.g. contain a routing extension headers will not be matched. Please use <code>meta l4proto</code> if you wish to match the real transport header and ignore any additional extension headers instead. </p>
 <p> <code>Table 43. IPv6 header expression</code> </p>
 <table BORDER>
@@ -3904,12 +3904,12 @@ add rule nat prerouting dnat to symhash mod 2 map \
 <dd>
 <pre># matching if first extension header indicates a fragment
 ip6 nexthdr ipv6-frag</pre>
-</dl>
+</dd></dl>
 <h3>Icmpv6 Header Expression</h3>
 <dl>
 <dd>
 <pre><code>icmpv6</code> {<code>type</code> | <code>code</code> | <code>checksum</code> | <code>parameter-problem</code> | <code>packet-too-big</code> | <code>id</code> | <code>sequence</code> | <code>max-delay</code>}</pre>
-</dl>
+</dd></dl>
 <p> This expression refers to ICMPv6 header fields. When using it in <code>inet</code>, <code>bridge</code> or <code>netdev</code> families, it will cause an implicit dependency on IPv6 to be created. To match on unusual cases like ICMPv6 over IPv4, one has to add an explicit <code>meta protocol ip</code> match to the rule. </p>
 <p> <code>Table 44. ICMPv6 header expression</code> </p>
 <table BORDER>
@@ -3996,7 +3996,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>tcp</code> {<code>sport</code> | <code>dport</code> | <code>sequence</code> | <code>ackseq</code> | <code>doff</code> | <code>reserved</code> | <code>flags</code> | <code>window</code> | <code>checksum</code> | <code>urgptr</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 45. TCP header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4100,7 +4100,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>udp</code> {<code>sport</code> | <code>dport</code> | <code>length</code> | <code>checksum</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 46. UDP header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4150,7 +4150,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>udplite</code> {<code>sport</code> | <code>dport</code> | <code>checksum</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 47. UDP-Lite header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4212,7 +4212,7 @@ ip6 nexthdr ipv6-frag</pre>
 <i>ASCONF_ACK_FIELD</i> := <code>seqno</code>
 <i>FORWARD_TSN_FIELD</i> := <code>new-cum-tsn</code>
 <i>ASCONF_FIELD</i> := <code>seqno</code></pre>
-</dl>
+</dd></dl>
 <p> <code>Table 48. SCTP header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4479,7 +4479,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>dccp</code> {<code>sport</code> | <code>dport</code> | <code>type</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 50. DCCP header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4520,7 +4520,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>ah</code> {<code>nexthdr</code> | <code>hdrlength</code> | <code>reserved</code> | <code>spi</code> | <code>sequence</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 51. AH header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4579,7 +4579,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>esp</code> {<code>spi</code> | <code>sequence</code>}</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 52. ESP header expression</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4649,7 +4649,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>@</code><i>base</i><code>,</code><i>offset</i><code>,</code><i>length</i></pre>
-</dl>
+</dd></dl>
 <p> The raw payload expression instructs to load <i>length</i> bits starting at <i>offset</i> bits. Bit 0 refers to the very first bit &#8212; in the C programming language, this corresponds to the topmost bit, i.e. 0x80 in case of an octet. They are useful to match headers that do not have a human-readable template expression yet. Note that nft will not add dependencies for Raw payload expressions. If you e.g. want to match protocol fields of a transport header with protocol number 5, you need to manually exclude packets that have a different transport header, for instance by using <code>meta l4proto 5</code> before the raw expression. </p>
 <p> <code>Table 54. Supported payload protocol bases</code> </p>
 <table BORDER>
@@ -4684,18 +4684,18 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre>inet filter input meta l4proto {tcp, udp} @th,16,16 { 53, 80 }</pre>
-</dl>
+</dd></dl>
 <p> The above can also be written as </p>
 <dl>
 <dd>
 <pre>inet filter input meta l4proto {tcp, udp} th dport { 53, 80 }</pre>
-</dl>
+</dd></dl>
 <p> it is more convenient, but like the raw expression notation no dependencies are created or checked. It is the users responsibility to restrict matching to those header types that have a notion of ports. Otherwise, rules using raw expressions will errnously match unrelated packets, e.g. mis-interpreting ESP packets SPI field as a port. </p>
 <p> <code>Rewrite arp packet target hardware address if target protocol address matches a given address</code>. </p>
 <dl>
 <dd>
 <pre>input meta iifname enp2s0 arp ptype 0x0800 arp htype 1 arp hlen 6 arp plen 4 @nh,192,32 0xc0a88f10 @nh,144,48 set 0x112233445566 accept</pre>
-</dl>
+</dd></dl>
 <h3>Extension Header Expressions</h3>
 <p>Extension header expressions refer to data from variable-sized protocol headers, such as IPv6 extension headers, TCP options and IPv4 options. </p>
 <p> nftables currently supports matching (finding) a given ipv6 extension header, TCP option or IPv4 option. </p>
@@ -4709,14 +4709,14 @@ ip6 nexthdr ipv6-frag</pre>
 <code>srh</code> {<code>flags</code> | <code>tag</code> | <code>sid</code> | <code>seg-left</code>}
 <code>tcp option</code> {<code>eol</code> | <code>nop</code> | <code>maxseg</code> | <code>window</code> | <code>sack-perm</code> | <code>sack</code> | <code>sack0</code> | <code>sack1</code> | <code>sack2</code> | <code>sack3</code> | <code>timestamp</code>} <i>tcp_option_field</i>
 <code>ip option</code> { lsrr | ra | rr | ssrr } <i>ip_option_field</i></pre>
-</dl>
+</dd></dl>
 <p> The following syntaxes are valid only in a relational expression with boolean type on right-hand side for checking header existence only: </p>
 <dl>
 <dd>
 <pre><code>exthdr</code> {<code>hbh</code> | <code>frag</code> | <code>rt</code> | <code>dst</code> | <code>mh</code>}
 <code>tcp option</code> {<code>eol</code> | <code>nop</code> | <code>maxseg</code> | <code>window</code> | <code>sack-perm</code> | <code>sack</code> | <code>sack0</code> | <code>sack1</code> | <code>sack2</code> | <code>sack3</code> | <code>timestamp</code>}
 <code>ip option</code> { lsrr | ra | rr | ssrr }</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 55. IPv6 extension headers</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4879,11 +4879,11 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre><code>tcp option</code></pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>tcp option</code> <code>@</code><i>number</i><code>,</code><i>offset</i><code>,</code><i>length</i></pre>
-</dl>
+</dd></dl>
 <p> <code>Table 57. IP Options</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -4933,22 +4933,22 @@ ip6 nexthdr ipv6-frag</pre>
 <dl>
 <dd>
 <pre>filter input tcp option sack-perm exists counter</pre>
-</dl>
+</dd></dl>
 <p> <code>matching TCP options</code>. </p>
 <dl>
 <dd>
 <pre>filter input tcp option maxseg size lt 536</pre>
-</dl>
+</dd></dl>
 <p> <code>matching IPv6 exthdr</code>. </p>
 <dl>
 <dd>
 <pre>ip6 filter input frag more-fragments 1 counter</pre>
-</dl>
+</dd></dl>
 <p> <code>finding IP option</code>. </p>
 <dl>
 <dd>
 <pre>filter input ip option lsrr exists counter</pre>
-</dl>
+</dd></dl>
 <h3>Conntrack Expressions</h3>
 <p>Conntrack expressions refer to meta data of the connection tracking entry associated with a packet. </p>
 <p> There are three types of conntrack expressions. Some conntrack expressions require the flow direction before the conntrack key, others must be used directly because they are direction agnostic. The <code>packets</code>, <code>bytes</code> and <code>avgpkt</code> keywords can be used with or without a direction. If the direction is omitted, the sum of the original and the reply direction is returned. The same is true for the <code>zone</code>, if a direction is given, the zone is only matched if the zone id is tied to the given direction. </p>
@@ -4958,7 +4958,7 @@ ip6 nexthdr ipv6-frag</pre>
 <code>ct</code> [<code>original</code> | <code>reply</code>] {<code>l3proto</code> | <code>protocol</code> | <code>bytes</code> | <code>packets</code> | <code>avgpkt</code> | <code>zone</code>}
 <code>ct</code> {<code>original</code> | <code>reply</code>} {<code>proto-src</code> | <code>proto-dst</code>}
 <code>ct</code> {<code>original</code> | <code>reply</code>} {<code>ip</code> | <code>ip6</code>} {<code>saddr</code> | <code>daddr</code>}</pre>
-</dl>
+</dd></dl>
 <p> The conntrack-specific types in this table are described in the sub-section CONNTRACK TYPES above. </p>
 <p> <code>Table 58. Conntrack expressions</code> </p>
 <table BORDER>
@@ -5145,7 +5145,7 @@ ip6 nexthdr ipv6-frag</pre>
 <dd>
 <pre>nft add set filter ssh_flood '{ type ipv4_addr; flags dynamic; }'
 nft add rule filter input tcp dport 22 add @ssh_flood '{ ip saddr ct count over 2 }' reject</pre>
-</dl>
+</dd></dl>
 <h2>Statements</h2>
 <p>Statements represent actions to be performed. They can alter control flow (return, jump to a different chain, accept or drop the packet) or can perform actions, such as logging, rejecting a packet, etc. </p>
 <p> Statements exist in two kinds. Terminal statements unconditionally terminate evaluation of the current rule, non-terminal statements either only conditionally or never terminate evaluation of the current rule, in other words, they are passive from the ruleset evaluation perspective. There can be an arbitrary amount of non-terminal statements in a rule, but only a single terminal statement as the final statement.</p>
@@ -5155,7 +5155,7 @@ nft add rule filter input tcp dport 22 add @ssh_flood '{ ip saddr ct count over 
 <dd>
 <pre>{<code>accept</code> | <code>drop</code> | <code>queue</code> | <code>continue</code> | <code>return</code>}
 {<code>jump</code> | <code>goto</code>} <i>chain</i></pre>
-</dl>
+</dd></dl>
 <p> <code>accept</code> and <code>drop</code> are absolute verdicts &#8212; they terminate ruleset evaluation immediately. </p>
 <table>
 <tr VALIGN=top>
@@ -5215,12 +5215,12 @@ nft add rule filter input tcp dport 22 add @ssh_flood '{ ip saddr ct count over 
 # chain, drop all packets from eth0 with different source addresses.
 filter input iif eth0 ip saddr 192.168.0.0/24 jump from_lan
 filter input iif eth0 drop</pre>
-</dl>
+</dd></dl>
 <h3>Payload Statement</h3>
 <dl>
 <dd>
 <pre><i>payload_expression</i> <code>set</code> <i>value</i></pre>
-</dl>
+</dd></dl>
 <p> The payload statement alters packet content. It can be used for example to set ip DSCP (diffserv) header field or ipv6 flow labels. </p>
 <p> <code>route some packets instead of bridging</code>. </p>
 <dl>
@@ -5228,17 +5228,17 @@ filter input iif eth0 drop</pre>
 <pre># redirect tcp:http from 192.160.0.0/16 to local machine for routing instead of bridging
 # assumes 00:11:22:33:44:55 is local MAC address.
 bridge input meta iif eth0 ip saddr 192.168.0.0/16 tcp dport 80 meta pkttype set unicast ether daddr set 00:11:22:33:44:55</pre>
-</dl>
+</dd></dl>
 <p> <code>Set IPv4 DSCP header field</code>. </p>
 <dl>
 <dd>
 <pre>ip forward ip dscp set 42</pre>
-</dl>
+</dd></dl>
 <h3>Extension Header Statement</h3>
 <dl>
 <dd>
 <pre><i>extension_header_expression</i> <code>set</code> <i>value</i></pre>
-</dl>
+</dd></dl>
 <p> The extension header statement alters packet content in variable-sized headers. This can currently be used to alter the TCP Maximum segment size of packets, similar to TCPMSS. </p>
 <p> <code>change tcp mss</code>. </p>
 <dl>
@@ -5246,14 +5246,14 @@ bridge input meta iif eth0 ip saddr 192.168.0.0/16 tcp dport 80 meta pkttype set
 <pre>tcp flags syn tcp option maxseg size set 1360
 # set a size based on route information:
 tcp flags syn tcp option maxseg size set rt mtu</pre>
-</dl>
+</dd></dl>
 <h3>Log Statement</h3>
 <dl>
 <dd>
 <pre><code>log</code> [<code>prefix</code> <i>quoted_string</i>] [<code>level</code> <i>syslog-level</i>] [<code>flags</code> <i>log-flags</i>]
 <code>log</code> <code>group</code> <i>nflog_group</i> [<code>prefix</code> <i>quoted_string</i>] [<code>queue-threshold</code> <i>value</i>] [<code>snaplen</code> <i>size</i>]
 <code>log level audit</code></pre>
-</dl>
+</dd></dl>
 <p> The log statement enables logging of matching packets. When this statement is used from a rule, the Linux kernel will print some information on all matching packets, such as header fields, via the kernel log (where it can be read with <a href="/docs/linux/man/1-dmesg/">dmesg</a>(1) or read in the syslog). </p>
 <p> In the second form of invocation (if <i>nflog_group</i> is specified), the Linux kernel will pass the packet to nfnetlink_log which will send the log through a netlink socket to the specified group. One userspace process may subscribe to the group to receive the logs, see man(8) ulogd for the Netfilter userspace log daemon and libnetfilter_log documentation for details in case you would like to develop a custom program to digest your logs. </p>
 <p> In the third form of invocation (if level audit is specified), the Linux kernel writes a message into the audit buffer suitably formatted for reading with auditd. Therefore no further formatting options (such as prefix or flags) are allowed in this mode. </p>
@@ -5371,7 +5371,7 @@ ip filter output log flags skuid flags ip options
 ip filter output log flags tcp sequence,options
 # enable all supported log flags
 ip6 filter output log flags all</pre>
-</dl>
+</dd></dl>
 <h3>Reject Statement</h3>
 <dl>
 <dd>
@@ -5380,7 +5380,7 @@ ip6 filter output log flags all</pre>
  <code>icmpv6</code> <i>icmpv6_code</i> |
  <code>icmpx</code> <i>icmpx_code</i> |
  <code>tcp reset</code></pre>
-</dl>
+</dd></dl>
 <p> A reject statement is used to send back an error packet in response to the matched packet otherwise it is equivalent to drop so it is a terminating statement, ending rule traversal. This statement is only valid in base chains using the <code>input</code>, <code>forward</code> or <code>output</code> hooks, and user-defined chains which are only called from those chains. </p>
 <p> <code>Table 61. different ICMP reject variants are meant for use in different table families</code> </p>
 <table BORDER>
@@ -5426,13 +5426,13 @@ ip6 filter output log flags all</pre>
 <dd>
 <pre><code>counter</code> <code>packets</code> <i>number</i> <code>bytes</code> <i>number</i>
 <code>counter</code> { <code>packets</code> <i>number</i> | <code>bytes</code> <i>number</i> }</pre>
-</dl>
+</dd></dl>
 <h3>Conntrack Statement</h3>
 <p>The conntrack statement can be used to set the conntrack mark and conntrack labels. </p>
 <dl>
 <dd>
 <pre><code>ct</code> {<code>mark</code> | <code>event</code> | <code>label</code> | <code>zone</code>} <code>set</code> <i>value</i></pre>
-</dl>
+</dd></dl>
 <p> The ct statement sets meta data associated with a connection. The zone id has to be assigned before a conntrack lookup takes place, i.e. this has to be done in prerouting and possibly output (if locally generated packets need to be placed in a distinct zone), with a hook priority of <code>raw</code> (-300). </p>
 <p> Unlike iptables, where the helper assignment happens in the raw table, the helper needs to be assigned after a conntrack entry has been found, i.e. it will not work when used with hook priorities equal or before -200. </p>
 <p> <code>Table 62. Conntrack statement types</code> </p>
@@ -5493,7 +5493,7 @@ ip6 filter output log flags all</pre>
 <dl>
 <dd>
 <pre>ct mark set meta mark</pre>
-</dl>
+</dd></dl>
 <p> <code>set zone mapped via interface</code>. </p>
 <dl>
 <dd>
@@ -5507,18 +5507,18 @@ ip6 filter output log flags all</pre>
  ct zone set oif map { &quot;eth1&quot; : 1, &quot;veth1&quot; : 2 }
  }
 }</pre>
-</dl>
+</dd></dl>
 <p> <code>restrict events reported by ctnetlink</code>. </p>
 <dl>
 <dd>
 <pre>ct event set new,related,destroy</pre>
-</dl>
+</dd></dl>
 <h3>Notrack Statement</h3>
 <p>The notrack statement allows to disable connection tracking for certain packets. </p>
 <dl>
 <dd>
 <pre><code>notrack</code></pre>
-</dl>
+</dd></dl>
 <p> Note that for this statement to be effective, it has to be applied to packets before a conntrack lookup happens. Therefore, it needs to sit in a chain with either prerouting or output hook and a hook priority of -300 (<code>raw</code>) or less. </p>
 <p> See SYNPROXY STATEMENT for an example usage.</p>
 <h3>Meta Statement</h3>
@@ -5526,7 +5526,7 @@ ip6 filter output log flags all</pre>
 <dl>
 <dd>
 <pre><code>meta</code> {<code>mark</code> | <code>priority</code> | <code>pkttype</code> | <code>nftrace</code>} <code>set</code> <i>value</i></pre>
-</dl>
+</dd></dl>
 <p> A meta statement sets meta data associated with a packet. </p>
 <p> <code>Table 63. Meta statement types</code> </p>
 <table BORDER>
@@ -5580,7 +5580,7 @@ ip6 filter output log flags all</pre>
 <code>limit rate</code> [<code>over</code>] <i>byte_number</i> <i>BYTE_UNIT</i> <code>/</code> <i>TIME_UNIT</i> [<code>burst</code> <i>byte_number</i> <i>BYTE_UNIT</i>]
 <i>TIME_UNIT</i> := <code>second</code> | <code>minute</code> | <code>hour</code> | <code>day</code>
 <i>BYTE_UNIT</i> := <code>bytes</code> | <code>kbytes</code> | <code>mbytes</code></pre>
-</dl>
+</dd></dl>
 <p> A limit statement matches at a limited rate using a token bucket filter. A rule using this statement will match until this limit is reached. It can be used in combination with the log statement to give limited logging. The optional <code>over</code> keyword makes it match over the specified rate. Default <code>burst</code> is 5. if you specify <code>burst</code>, it must be non-zero value. </p>
 <p> <code>Table 64. limit statement values</code> </p>
 <table BORDER>
@@ -5620,7 +5620,7 @@ ip6 filter output log flags all</pre>
 <i>PORT_SPEC</i> := <i>port</i> | <i>port</i> <code>-</code> <i>port</i>
 <i>FLAGS</i> := <i>FLAG</i> [<code>,</code> <i>FLAGS</i>]
 <i>FLAG</i> := <code>persistent</code> | <code>random</code> | <code>fully-random</code></pre>
-</dl>
+</dd></dl>
 <p> The nat statements are only valid from nat chain types. </p>
 <p> The <code>snat</code> and <code>masquerade</code> statements specify that the source address of the packet should be modified. While <code>snat</code> is only valid in the postrouting and input chains, <code>masquerade</code> makes sense only in postrouting. The dnat and redirect statements are only valid in the prerouting and output chains, they specify that the destination address of the packet should be modified. You can use non-base chains which are called from base chains of nat chain type too. All future packets in this connection will also be mangled, and rules should cease being examined. </p>
 <p> The <code>masquerade</code> statement is a special form of snat which always uses the outgoing interface&#8217;s IP address to translate to. It is particularly useful on gateways with dynamic (public) IP addresses. </p>
@@ -5706,20 +5706,20 @@ add rule inet nat prerouting dnat ip to 10.0.2.99
 add rule inet nat prerouting dnat ip6 to fe80::dead
 # this masquerades both ipv4 and ipv6:
 add rule inet nat postrouting meta oif ppp0 masquerade</pre>
-</dl>
+</dd></dl>
 <h3>Tproxy Statement</h3>
 <p>Tproxy redirects the packet to a local socket without changing the packet header in any way. If any of the arguments is missing the data of the incoming packet is used as parameter. Tproxy matching requires another rule that ensures the presence of transport protocol header is specified. </p>
 <dl>
 <dd>
 <pre><code>tproxy to</code> <i>address</i><code>:</code><i>port</i>
 <code>tproxy to</code> {<i>address</i> | <code>:</code><i>port</i>}</pre>
-</dl>
+</dd></dl>
 <p> This syntax can be used in <code>ip/ip6</code> tables where network layer protocol is obvious. Either IP address or port can be specified, but at least one of them is necessary. </p>
 <dl>
 <dd>
 <pre><code>tproxy</code> {<code>ip</code> | <code>ip6</code>} <code>to</code> <i>address</i>[<code>:</code><i>port</i>]
 <code>tproxy to :</code><i>port</i></pre>
-</dl>
+</dd></dl>
 <p> This syntax can be used in <code>inet</code> tables. The <code>ip/ip6</code> parameter defines the family the rule will match. The <code>address</code> parameter must be of this family. When only <code>port</code> is defined, the address family should not be specified. In this case the rule will match for both families. </p>
 <p> <code>Table 67. tproxy attributes</code> </p>
 <table BORDER>
@@ -5768,13 +5768,13 @@ table inet x {
  udp dport 155 tproxy ip6 to [dead::beef]:smux
  }
 }</pre>
-</dl>
+</dd></dl>
 <h3>Synproxy Statement</h3>
 <p>This statement will process TCP three-way-handshake parallel in netfilter context to protect either local or backend system. This statement requires connection tracking because sequence numbers need to be translated. </p>
 <dl>
 <dd>
 <pre><code>synproxy</code> [<code>mss</code> <i>mss_value</i>] [<code>wscale</code> <i>wscale_value</i>] [<i>SYNPROXY_FLAGS</i>]</pre>
-</dl>
+</dd></dl>
 <p> <code>Table 68. synproxy statement attributes</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -5854,7 +5854,7 @@ will be out-of-flow packets that were not matched by SYNPROXY.
  ct state invalid drop
  }
  }</pre>
-</dl>
+</dd></dl>
 <h3>Flow Statement</h3>
 <p>A flow statement allows us to select what flows you want to accelerate forwarding through layer 3 network stack bypass. You have to specify the flowtable name where you want to offload this flow. </p>
 <p> <code>flow add @</code><i>flowtable</i></p>
@@ -5868,7 +5868,7 @@ will be out-of-flow packets that were not matched by SYNPROXY.
 <i>QUEUE_FLAGS</i> := <i>QUEUE_FLAG</i> [<code>,</code> <i>QUEUE_FLAGS</i>]
 <i>QUEUE_FLAG</i> := <code>bypass</code> | <code>fanout</code>
 <i>QUEUE_EXPRESSION</i> := <code>numgen</code> | <code>hash</code> | <code>symhash</code> | <code>MAP STATEMENT</code></pre>
-</dl>
+</dd></dl>
 <p> QUEUE_EXPRESSION can be used to compute a queue number at run-time with the hash or numgen expressions. It also allows to use the map statement to assign fixed queue numbers based on external inputs such as the source ip address or interface names. </p>
 <p> <code>Table 70. queue statement values</code> </p>
 <table BORDER>
@@ -5934,7 +5934,7 @@ will be out-of-flow packets that were not matched by SYNPROXY.
 <dd>
 <pre><code>dup to</code> <i>device</i>
 <code>dup to</code> <i>address</i> <code>device</code> <i>device</i></pre>
-</dl>
+</dd></dl>
 <p> <code>Table 72. Dup statement values</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -5972,7 +5972,7 @@ netdev ingress dup to &quot;eth0&quot;
 dup to &quot;eth0&quot;
 # combine with map dst addr to gateways
 dup to ip daddr map { 192.168.7.1 : &quot;eth0&quot;, 192.168.7.2 : &quot;eth1&quot; }</pre>
-</dl>
+</dd></dl>
 <h3>Fwd Statement</h3>
 <p>The fwd statement is used to redirect a raw packet to another interface. It is only available in the netdev family ingress and egress hooks. It is similar to the dup statement except that no copy is made. </p>
 <p> <code>fwd to</code> <i>device</i></p>
@@ -5981,7 +5981,7 @@ dup to ip daddr map { 192.168.7.1 : &quot;eth0&quot;, 192.168.7.2 : &quot;eth1&q
 <dl>
 <dd>
 <pre>{<code>add</code> | <code>update</code>} <code>@</code><i>setname</i> <code>{</code> <i>expression</i> [<code>timeout</code> <i>timeout</i>] [<code>comment</code> <i>string</i>] <code>}</code></pre>
-</dl>
+</dd></dl>
 <p> <code>Example for simple blacklist</code>. </p>
 <dl>
 <dd>
@@ -6010,7 +6010,7 @@ nft list set ip filter flood
 nft list set ip filter blackhole
 # manually add two addresses to the blackhole.
 nft add element filter blackhole { 10.2.3.4, 10.23.1.42 }</pre>
-</dl>
+</dd></dl>
 <h3>Map Statement</h3>
 <p>The map statement is used to lookup data based on some specific input key. </p>
 <dl>
@@ -6018,7 +6018,7 @@ nft add element filter blackhole { 10.2.3.4, 10.23.1.42 }</pre>
 <pre><i>expression</i> <code>map</code> <code>{</code> <i>MAP_ELEMENTS</i> <code>}</code>
 <i>MAP_ELEMENTS</i> := <i>MAP_ELEMENT</i> [<code>,</code> <i>MAP_ELEMENTS</i>]
 <i>MAP_ELEMENT</i> := <i>key</i> <code>:</code> <i>value</i></pre>
-</dl>
+</dd></dl>
 <p> The <i>key</i> is a value returned by <i>expression</i>. </p>
 <p> <code>Using the map statement</code>. </p>
 <dl>
@@ -6031,7 +6031,7 @@ nft add rule ip nat prerouting dnat tcp dport map { 80 : 192.168.1.100, 8888 : 1
 # packets from net 192.168.1.0/24 will appear as originating from 10.0.0.1,
 # packets from net 192.168.2.0/24 will appear as originating from 10.0.0.2
 nft add rule ip nat postrouting snat to ip saddr map { 192.168.1.0/24 : 10.0.0.1, 192.168.2.0/24 : 10.0.0.2 }</pre>
-</dl>
+</dd></dl>
 <h3>Vmap Statement</h3>
 <p>The verdict map (vmap) statement works analogous to the map statement, but contains verdicts as values. </p>
 <dl>
@@ -6039,13 +6039,13 @@ nft add rule ip nat postrouting snat to ip saddr map { 192.168.1.0/24 : 10.0.0.1
 <pre><i>expression</i> <code>vmap</code> <code>{</code> <i>VMAP_ELEMENTS</i> <code>}</code>
 <i>VMAP_ELEMENTS</i> := <i>VMAP_ELEMENT</i> [<code>,</code> <i>VMAP_ELEMENTS</i>]
 <i>VMAP_ELEMENT</i> := <i>key</i> <code>:</code> <i>verdict</i></pre>
-</dl>
+</dd></dl>
 <p> <code>Using the vmap statement</code>. </p>
 <dl>
 <dd>
 <pre># jump to different chains depending on layer 4 protocol type:
 nft add rule ip filter input ip protocol vmap { tcp : jump tcp-chain, udp : jump udp-chain , icmp : jump icmp-chain }</pre>
-</dl>
+</dd></dl>
 <h2>Additional Commands</h2>
 <p>These are some additional commands included in nft.</p>
 <h3>Monitor</h3>
@@ -6055,7 +6055,7 @@ nft add rule ip filter input ip protocol vmap { tcp : jump tcp-chain, udp : jump
 <pre><code>monitor</code> [<code>new</code> | <code>destroy</code>] <i>MONITOR_OBJECT</i>
 <code>monitor</code> <code>trace</code>
 <i>MONITOR_OBJECT</i> := <code>tables</code> | <code>chains</code> | <code>sets</code> | <code>rules</code> | <code>elements</code> | <code>ruleset</code></pre>
-</dl>
+</dd></dl>
 <p> To filter events related to a concrete object, use one of the keywords in <i>MONITOR_OBJECT</i>. </p>
 <p> To filter events related to a concrete action, use keyword <code>new</code> or <code>destroy</code>. </p>
 <p> The second form of invocation takes no further options and exclusively prints events generated for packets with <code>nftrace</code> enabled. </p>
@@ -6064,28 +6064,28 @@ nft add rule ip filter input ip protocol vmap { tcp : jump tcp-chain, udp : jump
 <dl>
 <dd>
 <pre>% nft monitor</pre>
-</dl>
+</dd></dl>
 <p> <code>Listen to deleted rules, report in JSON format</code>. </p>
 <dl>
 <dd>
 <pre>% nft -j monitor destroy rules</pre>
-</dl>
+</dd></dl>
 <p> <code>Listen to both new and destroyed chains, in native nft format</code>. </p>
 <dl>
 <dd>
 <pre>% nft monitor chains</pre>
-</dl>
+</dd></dl>
 <p> <code>Listen to ruleset events such as table, chain, rule, set, counters and quotas, in native nft format</code>. </p>
 <dl>
 <dd>
 <pre>% nft monitor ruleset</pre>
-</dl>
+</dd></dl>
 <p> <code>Trace incoming packets from host 10.0.0.1</code>. </p>
 <dl>
 <dd>
 <pre>% nft add rule filter input ip saddr 10.0.0.1 meta nftrace set 1
 % nft monitor trace</pre>
-</dl>
+</dd></dl>
 <h2>Error Reporting</h2>
 <p>When an error is detected, nft shows the line(s) containing the error, the position of the erroneous parts in the input stream and marks up the erroneous parts using carets (^). If the error results from the combination of two expressions or statements, the part imposing the constraints which are violated is marked using tildes (~). </p>
 <p> For errors returned by the kernel, nft cannot detect which parts of the input caused the error and the entire command is marked. </p>
@@ -6095,28 +6095,28 @@ nft add rule ip filter input ip protocol vmap { tcp : jump tcp-chain, udp : jump
 <pre>&lt;cmdline&gt;:1:19-22: Error: Interface does not exist
 filter output oif eth0
  ^^^^</pre>
-</dl>
+</dd></dl>
 <p> <code>Error caused by invalid combination of two expressions</code>. </p>
 <dl>
 <dd>
 <pre>&lt;cmdline&gt;:1:28-36: Error: Right hand side of relational expression (==) must be constant
 filter output tcp dport == tcp dport
  ~~ ^^^^^^^^^</pre>
-</dl>
+</dd></dl>
 <p> <code>Error returned by the kernel</code>. </p>
 <dl>
 <dd>
 <pre>&lt;cmdline&gt;:0:0-23: Error: Could not process rule: Operation not permitted
 filter output oif wlan0
 ^^^^^^^^^^^^^^^^^^^^^^^</pre>
-</dl>
+</dd></dl>
 <h2>Exit Status</h2>
 <p>On success, nft exits with a status of 0. Unspecified errors cause it to exit with a status of 1, memory allocation errors with a status of 2, unable to open Netlink socket with 3.</p>
 <h2>See Also</h2>
 <dl>
 <dd>
 <pre><a href="//www.systutorials.com/docs/linux/man/3-libnftables/">libnftables</a>(3), <a href="//www.systutorials.com/docs/linux/man/5-libnftables-json/">libnftables-json</a>(5), <a href="//www.systutorials.com/docs/linux/man/8-iptables/">iptables</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-ip6tables/">ip6tables</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-arptables/">arptables</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-ebtables/">ebtables</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-ip/">ip</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-tc/">tc</a>(8)</pre>
-</dl>
+</dd></dl>
 <p> There is an official wiki at: <a rel="nofollow" href="https://wiki.nftables.org">https://wiki.nftables.org</a></p>
 <h2>Authors</h2>
 <p>nftables was written by Patrick McHardy and Pablo Neira Ayuso, among many other contributors from the Netfilter community.</p>

@@ -10,14 +10,14 @@ description: "vfs_media_harmony – Allow multiple Avid clients to share a netwo
 <p>vfs_media_harmony &#8211; Allow multiple Avid clients to share a network drive.</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = media_harmony</dl>
+<dd>vfs objects = media_harmony</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_media_harmony VFS module allows Avid editorial workstations to share a network drive. It does this by: </p>
 <dl>
-<dd>1. Giving each client their own copy of the Avid msmMMOB.mdb and msmFMID.pmr files and Creating directories.</dl>
+<dd>1. Giving each client their own copy of the Avid msmMMOB.mdb and msmFMID.pmr files and Creating directories.</dd></dl>
 <dl>
-<dd>2. Allowing each client to explicitly control the write time the Avid application sees on Avid media directories.</dl>
+<dd>2. Allowing each client to explicitly control the write time the Avid application sees on Avid media directories.</dd></dl>
 <p> This module is stackable.</p>
 <h2>Configuration</h2>
 <p>vfs_media_harmony automatically redirects requests from clients for Avid database files or an Avid Creating directory to a client-specific version of the file. No configuration beyond enabling the module is needed to get this portion of its functionality working. </p>
@@ -38,7 +38,7 @@ description: "vfs_media_harmony – Allow multiple Avid clients to share a netwo
  m[blue]<code>cache locked write times = no</code>m[]
  m[blue]<code>veto files = /.DS_Store/._@/.Trash@/.Spotlight@/.hidden/.hotfiles@/.vol/</code>m[]
  m[blue]<code>delete veto files = yes</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> Create the files that will allow users david and susan to control their own Avid database refreshes: </p>
 <dl>
 <dd>
@@ -46,13 +46,13 @@ description: "vfs_media_harmony – Allow multiple Avid clients to share a netwo
  '/avid/OMFI MediaFiles_192.168.1.11_susan' \
  '/avid/Avid MediaFiles/MXF/1_192.168.1.10_david' \
  '/avid/Avid MediaFiles/MXF/1_192.168.1.11_susan'</pre>
-</dl>
+</dd></dl>
 <p> Trigger an Avid database refresh for user david: </p>
 <dl>
 <dd>
 <pre> touch '/avid/OMFI MediaFiles_192.168.1.10_david' \
  '/avid/Avid MediaFiles/MXF/1_192.168.1.10_david'</pre>
-</dl>
+</dd></dl>
 <p> If you have a large number of Avid media folders to manage, you can give each editor a suitably modified version of examples/scripts/vfs/media_harmony/trigger_avid_update.py to create and update these files.</p>
 <h2>Caveats</h2>
 <p>vfs_media_harmony is designed to work with Avid editing applications that look in the Avid MediaFiles or OMFI MediaFiles directories for media. It is not designed to work as expected in all circumstances for general use. For example: It is possible to open a client-specific file such as msmMMOB.mdb_192.168.1.10_userx even though it doesn&#8217;t show up in a directory listing.</p>

@@ -68,12 +68,12 @@ description: "githooks – Hooks used by Git"
 <dl>
 <dd>
 <pre>&lt;local ref&gt; SP &lt;local object name&gt; SP &lt;remote ref&gt; SP &lt;remote object name&gt; LF</pre>
-</dl>
+</dd></dl>
 <p> For instance, if the command <code>git push origin master:foreign</code> were run the hook would receive a line like the following: </p>
 <dl>
 <dd>
 <pre>refs/heads/master 67890 refs/heads/foreign 12345</pre>
-</dl>
+</dd></dl>
 <p> although the full object name would be supplied. If the foreign ref does not yet exist the <code>&lt;remote object name&gt;</code> will be the all-zeroes object name. If a ref is to be deleted, the <code>&lt;local ref&gt;</code> will be supplied as <code>(delete)</code> and the <code>&lt;local object name&gt;</code> will be the all-zeroes object name. If the local commit was specified by something other than a name which could be expanded (such as <code>HEAD~</code>, or an object name) it will be supplied as it was originally given. </p>
 <p> If this hook exits with a non-zero status, <code>git push</code> will abort without pushing anything. Information about why the push is rejected may be sent to the user by writing to standard error.</p>
 <h3>pre-receive</h3>
@@ -82,7 +82,7 @@ description: "githooks – Hooks used by Git"
 <dl>
 <dd>
 <pre>&lt;old-value&gt; SP &lt;new-value&gt; SP &lt;ref-name&gt; LF</pre>
-</dl>
+</dd></dl>
 <p> where <code>&lt;old-value&gt;</code> is the old object name stored in the ref, <code>&lt;new-value&gt;</code> is the new object name to be stored in the ref and <code>&lt;ref-name&gt;</code> is the full name of the ref. When creating a new ref, <code>&lt;old-value&gt;</code> is the all-zeroes object name. </p>
 <p> If the hook exits with non-zero status, none of the refs will be updated. If the hook exits with zero, updating of individual refs can still be prevented by the <i>update</i> hook. </p>
 <p> Both standard output and standard error output are forwarded to <code>git send-pack</code> on the other end, so you can simply <code>echo</code> messages for the user. </p>
@@ -92,11 +92,11 @@ description: "githooks – Hooks used by Git"
 <p>This hook is invoked by <code><a href="/docs/linux/man/1-git-receive-pack/">git-receive-pack</a></code>(1) when it reacts to <code>git push</code> and updates reference(s) in its repository. Just before updating the ref on the remote repository, the update hook is invoked. Its exit status determines the success or failure of the ref update. </p>
 <p> The hook executes once for each ref to be updated, and takes three parameters: </p>
 <dl>
-<dd>&bull; the name of the ref being updated,</dl>
+<dd>&bull; the name of the ref being updated,</dd></dl>
 <dl>
-<dd>&bull; the old object name stored in the ref,</dl>
+<dd>&bull; the old object name stored in the ref,</dd></dl>
 <dl>
-<dd>&bull; and the new object name to be stored in the ref.</dl>
+<dd>&bull; and the new object name to be stored in the ref.</dd></dl>
 <p> A zero exit from the update hook allows the ref to be updated. Exiting with a non-zero status prevents <code>git receive-pack</code> from updating that ref. </p>
 <p> This hook can be used to prevent <i>forced</i> update on certain refs by making sure that the object name is a commit object that is a descendant of the commit object named by the old object name. That is, to enforce a &quot;fast-forward only&quot; policy. </p>
 <p> It could also be used to log the old..new status. However, it does not know the entire set of branches, so it would end up firing one e-mail per ref when used naively, though. The <i>post-receive</i> hook is more suited to that. </p>
@@ -110,3 +110,5 @@ description: "githooks – Hooks used by Git"
 <dd>
 <pre># Version and features negotiation.
 S: PKT-LINE(version=1
+</dd></dl>
+</pre>

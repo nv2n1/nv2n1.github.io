@@ -57,12 +57,12 @@ description: "zabbix_selinux – Security Enhanced Linux Policy for the zabbix p
 <p> Policy governs the access confined processes have to these ports. SELinux zabbix policy is very flexible allowing users to setup their zabbix processes in as secure a method as possible. </p>
 <p> The following port types are defined for zabbix: </p>
 <dl>
-<dt><code>zabbix_agent_port_t</code></p>
+<dt><code>zabbix_agent_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 10050 </p>
-<dt><code>zabbix_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 10050 </dd>
+<dt><code>zabbix_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 10051</dl>
+</dd><dd>Default Defined Ports: tcp 10051</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type zabbix_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -116,16 +116,16 @@ description: "zabbix_selinux – Security Enhanced Linux Policy for the zabbix p
 <p> <code>zabbix_agent_exec_t</code> </p>
 <p> &#8211; Set files with the zabbix_agent_exec_t type, if you want to transition an executable to the zabbix_agent_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/zabbix_agentd, /usr/sbin/zabbix_agentd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/zabbix_agentd, /usr/sbin/zabbix_agentd </dd>
 </dl>
 <p> <code>zabbix_agent_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the zabbix_agent_initrc_exec_t type, if you want to transition an executable to the zabbix_agent_initrc_t domain. </p>
 <p> <code>zabbix_exec_t</code> </p>
 <p> &#8211; Set files with the zabbix_exec_t type, if you want to transition an executable to the zabbix_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/zabbix_server, /usr/sbin/zabbix_proxy, /usr/sbin/zabbix_server, /usr/sbin/zabbix_proxy_mysql, /usr/sbin/zabbix_proxy_pgsql, /usr/sbin/zabbix_server_mysql, /usr/sbin/zabbix_server_pgsql, /usr/sbin/zabbix_proxy_sqlite3, /usr/sbin/zabbix_server_sqlite3 </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/zabbix_server, /usr/sbin/zabbix_proxy, /usr/sbin/zabbix_server, /usr/sbin/zabbix_proxy_mysql, /usr/sbin/zabbix_proxy_pgsql, /usr/sbin/zabbix_server_mysql, /usr/sbin/zabbix_server_pgsql, /usr/sbin/zabbix_proxy_sqlite3, /usr/sbin/zabbix_server_sqlite3 </dd>
 </dl>
 <p> <code>zabbix_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the zabbix_initrc_exec_t type, if you want to transition an executable to the zabbix_initrc_t domain. </p>
@@ -134,8 +134,8 @@ description: "zabbix_selinux – Security Enhanced Linux Policy for the zabbix p
 <p> <code>zabbix_script_exec_t</code> </p>
 <p> &#8211; Set files with the zabbix_script_exec_t type, if you want to transition an executable to the zabbix_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/zabbix/externalscripts(/.*)?, /var/lib/zabbix/externalscripts(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/zabbix/externalscripts(/.*)?, /var/lib/zabbix/externalscripts(/.*)? </dd>
 </dl>
 <p> <code>zabbix_tmp_t</code> </p>
 <p> &#8211; Set files with the zabbix_tmp_t type, if you want to store zabbix temporary files in the /tmp directories. </p>
@@ -144,8 +144,8 @@ description: "zabbix_selinux – Security Enhanced Linux Policy for the zabbix p
 <p> <code>zabbix_var_lib_t</code> </p>
 <p> &#8211; Set files with the zabbix_var_lib_t type, if you want to store the zabbix files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/zabbix(/.*)?, /var/lib/zabbixsrv(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/zabbix(/.*)?, /var/lib/zabbixsrv(/.*)? </dd>
 </dl>
 <p> <code>zabbix_var_run_t</code> </p>
 <p> &#8211; Set files with the zabbix_var_run_t type, if you want to store the zabbix files under the /run or /var/run directory. </p>

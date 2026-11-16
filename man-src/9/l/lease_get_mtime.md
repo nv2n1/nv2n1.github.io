@@ -15,11 +15,11 @@ lease_get_mtime - get the last modified time of an inode
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>the inode</dl>
+<dl><dd></dd><dd>the inode</dd></dl>
  
 
  <i>time</i>
-<dl><dd>pointer to a timespec which will contain the last modified time</dl>
+<dl><dd>pointer to a timespec which will contain the last modified time</dd></dl>
 
 <h2>Description</h2>
 

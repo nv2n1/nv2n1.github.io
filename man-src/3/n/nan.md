@@ -19,7 +19,7 @@ description: "nan, nanf, nanl – return ‘Not a Number’"
 <p> <code>nan</code>(), <code>nanf</code>(), <code>nanl</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return a representation (determined by <i>tagp</i>) of a quiet NaN. If the implementation does not support quiet NaNs, these functions return zero. </p>
 <p> The call <i>nan(char-sequence)</i> is equivalent to: </p>

@@ -10,12 +10,12 @@ description: "irq_percpu_is_enabled – Check whether the per cpu irq is enabled
 <p>irq_percpu_is_enabled &#8211; Check whether the per cpu irq is enabled</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool irq_percpu_is_enabled(unsigned int&nbsp;<wbr></code><i>irq</i><code>);</code></dl>
+<dt> <code>bool irq_percpu_is_enabled(unsigned int&nbsp;<wbr></code><i>irq</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>Linux irq number to check for</dl>
+</dd><dd>Linux irq number to check for</dd></dl>
 <h2>Description</h2>
 <p>Must be called from a non migratable context. Returns the enable state of a per cpu interrupt on the current cpu.</p>
 <h2>Copyright</h2>

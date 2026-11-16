@@ -15,7 +15,7 @@ usb_unanchor_urb - unanchors an URB
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>pointer to the urb to anchor</dl>
+<dl><dd></dd><dd>pointer to the urb to anchor</dd></dl>
 
 <h2>Description</h2>
 

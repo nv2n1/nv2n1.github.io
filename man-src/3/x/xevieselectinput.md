@@ -22,12 +22,12 @@ Status XevieSendEvent (Display *<i>dpy</i>,
 Status XevieEnd (Display *<i>dpy</i>);</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>event_mask</i></p>
-<dd>Specifies the mask of events to redirect.</p>
-<dt><i>datatype</i></p>
-<dd>XEVIE_MODIFIED or XEVIE_UNMODIFIED &#8211; whether the Xevie client has changed or synthesised this event. </p>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>event_mask</i></dt>
+<dd>Specifies the mask of events to redirect.</dd>
+<dt><i>datatype</i></dt>
+<dd>XEVIE_MODIFIED or XEVIE_UNMODIFIED &#8211; whether the Xevie client has changed or synthesised this event. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>X Event Interception Extension (XEvIE) </code> is designed for users who need to intercept all the Keyboard and Mouse events. Programs can determine which events should be forwarded to other clients and modify the events if necessary. </p>

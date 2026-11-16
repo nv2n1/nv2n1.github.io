@@ -11,15 +11,10 @@ std::experimental::ranges::CommonReference - std::experimental::ranges::CommonRe
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class T, class U &gt;
-
 concept bool CommonReference =
-
 Same&lt;ranges::common_reference_t&lt;T, U&gt;, ranges::common_reference_t&lt;U, T&gt;&gt; &amp;&amp;  (ranges TS)
-
 ConvertibleTo&lt;T, ranges::common_reference_t&lt;T, U&gt;&gt; &amp;&amp;
-
 ConvertibleTo&lt;U, ranges::common_reference_t&lt;T, U&gt;&gt;;</code></pre> 
 The concept CommonReference&lt;T, U&gt; specifies that two types T and U share a common reference type (as computed by ranges::common_reference_t) to which both can be converted. 
 CommonReference&lt;T, U&gt; is satisfied only if, given expressions t and u such that decltype((t)) is T and decltype((u)) is U, 

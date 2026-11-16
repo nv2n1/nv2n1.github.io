@@ -17,38 +17,38 @@ description: "nuauth – NUFW authentication server"
 <p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h </code></p>
-<dd>Issues usage details and exits.</p>
-<dt><code>-V </code></p>
-<dd>Issues version and exits.</p>
-<dt><code>-v </code></p>
-<dd>Increases verbosity level. Multiple switches are accepted and each of them increases the verbosity level by one. Default verbosity level is 2, max is 10.</p>
-<dt><code>-l </code><i>port</i></p>
-<dd>Specifies TCP port to listen on for clients. Default value : 4129</p>
-<dt><code>-L </code><i>address</i></p>
-<dd>Address to listen on for NuFW packets. Default : 127.0.0.1</p>
-<dt><code>-C </code><i>address</i></p>
-<dd>Address to listen on for clients packets. Default : 0.0.0.0</p>
-<dt><code>-d </code><i>address</i></p>
-<dd>Network address of the nufw (gateway) servers. Only NuFW servers at those addresses will be allowed to talk to nuauth.</p>
-<dt><code>-p </code><i>port</i></p>
-<dd>This option is DEPRECATED and was in use only in v1 of the protocol, which was proof of concept, non-encrypted. </p>
+<dt><code>-h </code></dt>
+<dd>Issues usage details and exits.</dd>
+<dt><code>-V </code></dt>
+<dd>Issues version and exits.</dd>
+<dt><code>-v </code></dt>
+<dd>Increases verbosity level. Multiple switches are accepted and each of them increases the verbosity level by one. Default verbosity level is 2, max is 10.</dd>
+<dt><code>-l </code><i>port</i></dt>
+<dd>Specifies TCP port to listen on for clients. Default value : 4129</dd>
+<dt><code>-L </code><i>address</i></dt>
+<dd>Address to listen on for NuFW packets. Default : 127.0.0.1</dd>
+<dt><code>-C </code><i>address</i></dt>
+<dd>Address to listen on for clients packets. Default : 0.0.0.0</dd>
+<dt><code>-d </code><i>address</i></dt>
+<dd>Network address of the nufw (gateway) servers. Only NuFW servers at those addresses will be allowed to talk to nuauth.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd>This option is DEPRECATED and was in use only in v1 of the protocol, which was proof of concept, non-encrypted. </dd>
 <p> Specifies UDP port to send data to when addressing the nufw (gateway) server. Nufw server must be setup to listen on that port. Default value : 4128</p>
-<dt><code>-t </code><i>seconds</i></p>
-<dd>Specifies timeout to forget packets not identified, and identification packets matching nothing. Default value : 15 s.</p>
-<dt><code>-D </code></p>
-<dd>Run as a daemon. If started as a daemon, nuauth logs message to syslog. If you don&#8217;t specify this option, messages go to the console nuauth is running on, both on STDOUT and STDERR. Unless you are debugging something, you should run nuauth with this option.</dl>
+<dt><code>-t </code><i>seconds</i></dt>
+<dd>Specifies timeout to forget packets not identified, and identification packets matching nothing. Default value : 15 s.</dd>
+<dt><code>-D </code></dt>
+<dd>Run as a daemon. If started as a daemon, nuauth logs message to syslog. If you don&#8217;t specify this option, messages go to the console nuauth is running on, both on STDOUT and STDERR. Unless you are debugging something, you should run nuauth with this option.</dd></dl>
 <h2>Signals</h2>
 <p>The <code>nuauth</code> daemon is designed to deal with several signals : HUP, USR1, USR2, and POLL.</p>
 <dl>
-<dt><code>HUP </code></p>
-<dd>Reload configuration. The <code>nuauth</code> daemon reloads its configuration when receiving this signal. Since 2.2.19, it also refreshes the CRL file content.</p>
-<dt><code>USR1 </code></p>
-<dd>Increases verbosity. The daemon then acts as if it had been launched with one supplementary &#8216;-v&#8217;.A line is also added to the system log to mention the signal event.</p>
-<dt><code>USR2 </code></p>
-<dd>Decreases verbosity. The daemon then acts as if it had been launched with one less &#8216;-v&#8217;. A line is also added to the system log to mention the signal event.</p>
-<dt><code>POLL </code></p>
-<dd>Logs an &quot;audit&quot; line, mentioning how many network datagrams were received and sent since daemon startup.</dl>
+<dt><code>HUP </code></dt>
+<dd>Reload configuration. The <code>nuauth</code> daemon reloads its configuration when receiving this signal. Since 2.2.19, it also refreshes the CRL file content.</dd>
+<dt><code>USR1 </code></dt>
+<dd>Increases verbosity. The daemon then acts as if it had been launched with one supplementary &#8216;-v&#8217;.A line is also added to the system log to mention the signal event.</dd>
+<dt><code>USR2 </code></dt>
+<dd>Decreases verbosity. The daemon then acts as if it had been launched with one less &#8216;-v&#8217;. A line is also added to the system log to mention the signal event.</dd>
+<dt><code>POLL </code></dt>
+<dd>Logs an &quot;audit&quot; line, mentioning how many network datagrams were received and sent since daemon startup.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-nufw/">nufw</a>(8)</p>
 <h2>Author</h2>

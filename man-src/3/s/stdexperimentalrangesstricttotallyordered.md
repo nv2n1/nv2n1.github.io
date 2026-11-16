@@ -11,94 +11,63 @@ std::experimental::ranges::StrictTotallyOrdered,std::experimental::ranges::Stric
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class T&gt;
-
     concept bool StrictTotallyOrdered =
-
         EqualityComparable&lt;T&gt; &amp;&amp;
-
         requires(const std::remove_reference_t&lt;T&gt; &amp;a,
-
                  const std::remove_reference_t&lt;T&gt; &amp;b)
 {
     (1)(ranges TS)
-
     {
         a &lt; b
         } -&gt; Boolean &amp;&amp;;
-
     {
         a &gt; b
         } -&gt; Boolean &amp;&amp;;
-
     {
         a &lt;= b
         } -&gt; Boolean &amp;&amp;;
-
     {
         a &gt;= b
         } -&gt; Boolean &amp;&amp;;
 };
-
 template &lt;class T, class U&gt;
-
 concept bool StrictTotallyOrderedWith =
-
     StrictTotallyOrdered&lt;T&gt; &amp;&amp;
-
         StrictTotallyOrdered&lt;U&gt; &amp;&amp;
-
             CommonReference&lt;
-
                 const std::remove_reference_t&lt;T&gt; &amp;,
-
                 const std::remove_reference_t&lt;U&gt; &amp;&gt; &amp;&amp;
-
                 StrictTotallyOrdered&lt;
-
                     ranges::common_reference_t&lt;
-
                         const std::remove_reference_t&lt;T&gt; &amp;,
-
                         const std::remove_reference_t&lt;U&gt; &amp;&gt;&gt; &amp;&amp;
-
                     EqualityComparableWith&lt;T, U&gt; &amp;&amp;
     (2)(ranges TS)
-
         requires(const std::remove_reference_t&lt;T&gt; &amp;t,
-
                  const std::remove_reference_t&lt;U&gt; &amp;u)
 {
-
     {
         t &lt; u
         } -&gt; Boolean &amp;&amp;;
-
     {
         t &gt; u
         } -&gt; Boolean &amp;&amp;;
-
     {
         t &lt;= u
         } -&gt; Boolean &amp;&amp;;
-
     {
         t &gt;= u
         } -&gt; Boolean &amp;&amp;;
-
     {
         u &lt; t
         } -&gt; Boolean &amp;&amp;;
-
     {
         u &gt; t
         } -&gt; Boolean &amp;&amp;;
-
     {
         u &lt;= t
         } -&gt; Boolean &amp;&amp;;
-
     {
         u &gt;= t
         } -&gt; Boolean &amp;&amp;;

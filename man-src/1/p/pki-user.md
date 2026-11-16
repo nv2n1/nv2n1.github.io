@@ -19,27 +19,27 @@ pki[CLI options]&lt;subsystem&gt; - user pki[CLI options]&lt;subsystem&gt; - use
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user</code></p>
 <dl>
 <dt>
-<dd> This command is to list available user commands for the subsystem.</dl>
+</dt><dd> This command is to list available user commands for the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list users in the subsystem.</dl>
+</dt><dd> This command is to list users in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-show</code> &lt;user ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view a user details in the subsystem.</dl>
+</dt><dd> This command is to view a user details in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-add</code> &lt;user ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to add a user into the subsystem.</dl>
+</dt><dd> This command is to add a user into the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-mod</code> &lt;user ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify a user in the subsystem.</dl>
+</dt><dd> This command is to modify a user in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-del</code> &lt;user ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a user from the subsystem.</dl>
+</dt><dd> This command is to delete a user from the subsystem.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>
@@ -62,7 +62,7 @@ pki[CLI options]&lt;subsystem&gt; - user pki[CLI options]&lt;subsystem&gt; - use
 <p> <code><a href="/docs/linux/man/1-pki-user-cert/">pki-user-cert</a></code>(1)</p>
 <dl>
 <dt>
-<dd> User certificate management commands</dl>
+</dt><dd> User certificate management commands</dd></dl>
 <h2>AUTHORS</h2>
 <p> Ade Lee &lt;alee [at] redhat.com&gt;, Endi Dewata &lt;edewata [at] redhat.com&gt;, and Matthew Harmsen &lt;mharmsen [at] redhat.com&gt;. </p>
 <h2>COPYRIGHT</h2>

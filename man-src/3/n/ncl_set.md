@@ -21,31 +21,31 @@ CALL SET(VL,VR,VB,VT,WL,WR,WB,WT,LF)
 <h2>Description</h2>
 
 <dl><dt>VL
-<dd>(an input expression of type REAL) defines the left margin of the viewport in fractional coordinates.
-<dt>VR
-<dd>(an input expression of type REAL) defines the right margin of the viewport in fractional coordinates.
-<dt>VB
-<dd>(an input expression of type REAL) defines the bottom margin of the viewport in fractional coordinates.
-<dt>VT
-<dd>(an input expression of type REAL) defines the top margin of the viewport in fractional coordinates.
-<dt>WL
-<dd>(an input expression of type REAL) defines the left margin of the window in user coordinates.
-<dt>WR
-<dd>(an input expression of type REAL) defines the right margin of the window in user coordinates.
-<dt>WB
-<dd>(an input expression of type REAL) defines the bottom margin of the window in user coordinates.
-<dt>WT
-<dd>(an input expression of type REAL) defines the top margin of the window in user coordinates.
-<dt>LF
-<dd>(an input expression of type INTEGER) defines the linear/log nature of the mapping, as follows:
-<dl><dd><dl><dt>1
-<dd>linear X, linear Y
-<dt>2
-<dd>linear X, log Y
-<dt>3
-<dd>log X, linear Y
-<dt>4
-<dd>log X, log Y</dl></dl>
+</dt><dd>(an input expression of type REAL) defines the left margin of the viewport in fractional coordinates.
+</dd><dt>VR
+</dt><dd>(an input expression of type REAL) defines the right margin of the viewport in fractional coordinates.
+</dd><dt>VB
+</dt><dd>(an input expression of type REAL) defines the bottom margin of the viewport in fractional coordinates.
+</dd><dt>VT
+</dt><dd>(an input expression of type REAL) defines the top margin of the viewport in fractional coordinates.
+</dd><dt>WL
+</dt><dd>(an input expression of type REAL) defines the left margin of the window in user coordinates.
+</dd><dt>WR
+</dt><dd>(an input expression of type REAL) defines the right margin of the window in user coordinates.
+</dd><dt>WB
+</dt><dd>(an input expression of type REAL) defines the bottom margin of the window in user coordinates.
+</dd><dt>WT
+</dt><dd>(an input expression of type REAL) defines the top margin of the window in user coordinates.
+</dd><dt>LF
+</dt><dd>(an input expression of type INTEGER) defines the linear/log nature of the mapping, as follows:
+</dd><dl><dd></dd><dl><dt>1
+</dt><dd>linear X, linear Y
+</dd><dt>2
+</dt><dd>linear X, log Y
+</dd><dt>3
+</dt><dd>log X, linear Y
+</dd><dt>4
+</dt><dd>log X, log Y</dd></dl></dl>
 </dl>
 
 <h2>C-Binding Description</h2>

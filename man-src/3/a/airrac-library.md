@@ -21,12 +21,12 @@ description: "airrac-library –"
 <p> AirRAC makes an extensive use of existing open-source libraries for increased functionality, speed and accuracy. In particular the Boost (C++ Standard Extensions: <a rel="nofollow" href="http://www.boost.org)">http://www.boost.org)</a> library is used. </p>
 <p> The library covers the following areas:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Calculation of yields from statistics on tickets/coupons</p>
-<dt>&bull;</p>
-<dd> Yield rules: storage, engine, management</p>
-<dt>&bull;</p>
-<dd> Retrieval of yields for specific booking requests or product assesment</dl>
+<dt>&bull;</dt>
+<dd> Calculation of yields from statistics on tickets/coupons</dd>
+<dt>&bull;</dt>
+<dd> Yield rules: storage, engine, management</dd>
+<dt>&bull;</dt>
+<dd> Retrieval of yields for specific booking requests or product assesment</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-airrac/">airrac</a>(1)</code>, <code><a href="/docs/linux/man/1-airrac-config/">airrac-config</a></code>(1)</p>
 <h2>SUPPORT</h2>

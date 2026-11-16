@@ -24,8 +24,8 @@ description: "pamexec – Execute a shell command on each image in a Netpbm imag
 <p> To run your command on a subset of the images in the stream, use <code>pampick</code> to select the desired images from the input stream and pipe the result to <code>pamexec</code>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-check</code></p>
-<dd> This causes <code>pamexec</code> to exit without processing any further images if the command has a nonzero exit status. </p>
+<dt><code>-check</code></dt>
+<dd> This causes <code>pamexec</code> to exit without processing any further images if the command has a nonzero exit status. </dd>
 </dl>
 <h2>APPLICATIONS</h2>
 <p> To make an animated GIF movie: </p>

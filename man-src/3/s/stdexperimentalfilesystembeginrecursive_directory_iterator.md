@@ -25,14 +25,10 @@ noexcept</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/a/b&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;);

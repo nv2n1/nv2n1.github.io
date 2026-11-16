@@ -13,21 +13,21 @@ description: "ginq_text_path (Inquire text path) – retrieves the current text 
 <p> void ginq_text_path(Gint *err_ind, Gtext_path *text_path);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>text_path</p>
-<dd>(Output) &#8211; Returns the current text path as set by default or by a call to gset_text_path. Legal values are:</p>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>text_path</dt>
+<dd>(Output) &#8211; Returns the current text path as set by default or by a call to gset_text_path. Legal values are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GPATH_RIGHT</p>
-<dd>Draw successive characters in the string such that character n+l appears to the right of character n. This is text path &quot;right&quot; and is the default.</p>
-<dt>GPATH_LEFT</p>
-<dd>Draw character n+1 to the left of character n. This is text path &quot;left&quot;.</p>
-<dt>GPATH_UP</p>
-<dd>Draw character n+1 above character n. This is text path &quot;up&quot;.</p>
-<dt>GPATH_DOWN</p>
-<dd>Draw character n+1 below character n. This is text path &quot;down&quot;.</dl>
+</dd><dl COMPACT>
+<dt>GPATH_RIGHT</dt>
+<dd>Draw successive characters in the string such that character n+l appears to the right of character n. This is text path &quot;right&quot; and is the default.</dd>
+<dt>GPATH_LEFT</dt>
+<dd>Draw character n+1 to the left of character n. This is text path &quot;left&quot;.</dd>
+<dt>GPATH_UP</dt>
+<dd>Draw character n+1 above character n. This is text path &quot;up&quot;.</dd>
+<dt>GPATH_DOWN</dt>
+<dd>Draw character n+1 below character n. This is text path &quot;down&quot;.</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

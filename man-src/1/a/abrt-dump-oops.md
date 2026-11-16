@@ -30,7 +30,7 @@ url: "/docs/linux/man/1-abrt-dump-oops/"
  /etc/abrt/plugins/oops.conf
 <dl>
 <dt>
-<dd> Configuration file where user can disable detection of non-fatal MCEs</dl>
+</dt><dd> Configuration file where user can disable detection of non-fatal MCEs</dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -39,55 +39,55 @@ url: "/docs/linux/man/1-abrt-dump-oops/"
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -s
 <dl>
 <dt>
-<dd> Log to syslog</dl>
+</dt><dd> Log to syslog</dd></dl>
  
 
  -o
 <dl>
 <dt>
-<dd> Print found oopses on standard output</dl>
+</dt><dd> Print found oopses on standard output</dd></dl>
  
 
  -d DIR
 <dl>
 <dt>
-<dd> Create new problem directory in DIR for every oops found</dl>
+</dt><dd> Create new problem directory in DIR for every oops found</dd></dl>
  
 
  -D
 <dl>
 <dt>
-<dd> Same as -d DumpLocation, DumpLocation is specified in abrt.conf</dl>
+</dt><dd> Same as -d DumpLocation, DumpLocation is specified in abrt.conf</dd></dl>
  
 
  -u PROBLEM
 <dl>
 <dt>
-<dd> Save the extracted information in PROBLEM directory</dl>
+</dt><dd> Save the extracted information in PROBLEM directory</dd></dl>
  
 
  -x
 <dl>
 <dt>
-<dd> Make the problem directory world readable. Usable only with -d/-D</dl>
+</dt><dd> Make the problem directory world readable. Usable only with -d/-D</dd></dl>
  
 
  -t
 <dl>
 <dt>
-<dd> Throttle problem directory creation to 1 per second</dl>
+</dt><dd> Throttle problem directory creation to 1 per second</dd></dl>
  
 
  -m
 <dl>
 <dt>
-<dd> Print search string(s) for <i>abrt-watch-log</i> to stdout and exit</dl>
+</dt><dd> Print search string(s) for <i>abrt-watch-log</i> to stdout and exit</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -101,7 +101,7 @@ url: "/docs/linux/man/1-abrt-dump-oops/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

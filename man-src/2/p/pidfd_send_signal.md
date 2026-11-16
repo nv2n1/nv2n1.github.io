@@ -20,36 +20,36 @@ int pidfd_send_signal(int pidfd, int sig, siginfo_t *info,
 <p> If the <i>info</i> argument points to a <i>siginfo_t</i> buffer, that buffer should be populated as described in <code><a href="/docs/linux/man/2-rt_sigqueueinfo/">rt_sigqueueinfo</a></code>(2). </p>
 <p> If the <i>info</i> argument is a NULL pointer, this is equivalent to specifying a pointer to a <i>siginfo_t</i> buffer whose fields match the values that are implicitly supplied when a signal is sent using <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2): </p>
 <dl>
-<dt>*</p>
-<dd> <i>si_signo</i> is set to the signal number;</p>
-<dt>*</p>
-<dd> <i>si_errno</i> is set to 0;</p>
-<dt>*</p>
-<dd> <i>si_code</i> is set to <code>SI_USER</code>;</p>
-<dt>*</p>
-<dd> <i>si_pid</i> is set to the caller&#8217;s PID; and</p>
-<dt>*</p>
-<dd> <i>si_uid</i> is set to the caller&#8217;s real user ID.</dl>
+<dt>*</dt>
+<dd> <i>si_signo</i> is set to the signal number;</dd>
+<dt>*</dt>
+<dd> <i>si_errno</i> is set to 0;</dd>
+<dt>*</dt>
+<dd> <i>si_code</i> is set to <code>SI_USER</code>;</dd>
+<dt>*</dt>
+<dd> <i>si_pid</i> is set to the caller&#8217;s PID; and</dd>
+<dt>*</dt>
+<dd> <i>si_uid</i> is set to the caller&#8217;s real user ID.</dd></dl>
 <p> The calling process must either be in the same PID namespace as the process referred to by <i>pidfd</i>, or be in an ancestor of that namespace. </p>
 <p> The <i>flags</i> argument is reserved for future use; currently, this argument must be specified as 0.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>pidfd_send_signal</code>() returns 0. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>pidfd</i> is not a valid PID file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>sig</i> is not a valid signal.</p>
-<dt><code>EINVAL</code></p>
-<dd> The calling process is not in a PID namespace from which it can send a signal to the target process.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>flags</i> is not 0.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process does not have permission to send the signal to the target process.</p>
-<dt><code>EPERM</code></p>
-<dd> <i>pidfd</i> doesn&#8217;t refer to the calling process, and <i>info.si_code</i> is invalid (see <code><a href="/docs/linux/man/2-rt_sigqueueinfo/">rt_sigqueueinfo</a></code>(2)).</p>
-<dt><code>ESRCH</code></p>
-<dd> The target process does not exist (i.e., it has terminated and been waited on).</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>pidfd</i> is not a valid PID file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>sig</i> is not a valid signal.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The calling process is not in a PID namespace from which it can send a signal to the target process.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>flags</i> is not 0.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process does not have permission to send the signal to the target process.</dd>
+<dt><code>EPERM</code></dt>
+<dd> <i>pidfd</i> doesn&#8217;t refer to the calling process, and <i>info.si_code</i> is invalid (see <code><a href="/docs/linux/man/2-rt_sigqueueinfo/">rt_sigqueueinfo</a></code>(2)).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The target process does not exist (i.e., it has terminated and been waited on).</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>pidfd_send_signal</code>() first appeared in Linux 5.1.</p>
 <h2>CONFORMING TO</h2>
@@ -59,12 +59,12 @@ int pidfd_send_signal(int pidfd, int sig, siginfo_t *info,
 <h3>PID file descriptors</h3>
 <p> The <i>pidfd</i> argument is a PID file descriptor, a file descriptor that refers to process. Such a file descriptor can be obtained in any of the following ways:</p>
 <dl>
-<dt>*</p>
-<dd> by opening a <i>/proc/[pid]</i> directory;</p>
-<dt>*</p>
-<dd> using <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2); or</p>
-<dt>*</p>
-<dd> via the PID file descriptor that is returned by a call to <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) or <code><a href="/docs/linux/man/2-clone3/">clone3</a></code>(2) that specifies the <code>CLONE_PIDFD</code> flag.</dl>
+<dt>*</dt>
+<dd> by opening a <i>/proc/[pid]</i> directory;</dd>
+<dt>*</dt>
+<dd> using <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2); or</dd>
+<dt>*</dt>
+<dd> via the PID file descriptor that is returned by a call to <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) or <code><a href="/docs/linux/man/2-clone3/">clone3</a></code>(2) that specifies the <code>CLONE_PIDFD</code> flag.</dd></dl>
 <p> The <code>pidfd_send_signal</code>() system call allows the avoidance of race conditions that occur when using traditional interfaces (such as <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2)) to signal a process. The problem is that the traditional interfaces specify the target process via a process ID (PID), with the result that the sender may accidentally send a signal to the wrong process if the originally intended target process has terminated and its PID has been recycled for another process. By contrast, a PID file descriptor is a stable reference to a specific process; if that process terminates, <code>pidfd_send_signal</code>() fails with the error <code>ESRCH</code>.</p>
 <h2>EXAMPLES</h2>
 <p> #define _GNU_SOURCE #include &lt;limits.h&gt; #include &lt;signal.h&gt; #include &lt;fcntl.h&gt; #include &lt;stdio.h&gt; #include &lt;string.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; #include &lt;sys/syscall.h&gt; </p>

@@ -10,7 +10,6 @@ description: "pbs_rescquery, avail, totpool, usepool – query resource availabi
 <p>pbs_rescquery, avail, totpool, usepool &#8211; query resource availability</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>int pbs_rescquery(int connect, char&nbsp;<wbr>**resourcelist, int arraysize,
 int *available, int *allocated, int *reserved, int *down )
@@ -19,25 +18,26 @@ int totpool(int connect, int update)
 int usepool(int connect, int update)</pre>
 <h2>Description</h2>
 <dl>
-<dt> <code>pbs_rescquery</code></p>
+<dt> <code>pbs_rescquery</code></dt>
 <dd>
-<dd>Issue a request to the batch server to query the availability of resources. <i> is the connection returned by </i><code>pbs_connect</code>(). <i> is an array of one or more strings specifying the resources to be queried. is the is the number of strings in resourcelist. and are integer arrays of size arraysize. The amount of resource specified in the corresponding resourcelist string which is available, already allocated, reserved, and down/off-line is returned in the integer arrays.</p>
+</dd><dd>Issue a request to the batch server to query the availability of resources. <i> is the connection returned by </i><code>pbs_connect</code>(). <i> is an array of one or more strings specifying the resources to be queried. is the is the number of strings in resourcelist. and are integer arrays of size arraysize. The amount of resource specified in the corresponding resourcelist string which is available, already allocated, reserved, and down/off-line is returned in the integer arrays.</dd>
 <dd>At the present time the only resources which may be specified is &quot;nodes&quot;. It may be specified as<br />
- </i><code> </p>
+ </i><code> </dd>
 <p> <code><br />
  where specification is what a user specifies in the -l option arguement list for nodes, see qsub(1B) and the various pbs_resource_* man pages.</p>
-<dd>Where the node resourcelist is a simple type, such as &quot;nodes&quot;, &quot;nodes=&quot;, or &quot;nodes=type</code>&quot;, the numbers returned reflect the actual number of nodes (of the specified type) which are <code>available</code>, <code>allocated</code>, <code>reserved</code>, or <code>down</code>.</p>
-<dd>For a more complex node resourcelist, such as &quot;nodes=2&quot; or &quot;nodes=type1:type2&quot;, only the value returned in <i>available</i> has meaning. If the number in <i>available</i> is positive, it is the number of nodes requried to satisified the specification and that some set of nodes are available which will satisify it, see <i>avail ().</i> If the number in <i>available</i> is zero, some number of nodes requried to satisified the specification are currently unavailable, the request might be satisifed at a later time. If the number in <i>available</i> is negative, no combination of known nodes can satisified the specification.</p>
-<dt> <code>avail</code></p>
+<dd>Where the node resourcelist is a simple type, such as &quot;nodes&quot;, &quot;nodes=&quot;, or &quot;nodes=type</code>&quot;, the numbers returned reflect the actual number of nodes (of the specified type) which are <code>available</code>, <code>allocated</code>, <code>reserved</code>, or <code>down</code>.</dd>
+<dd>For a more complex node resourcelist, such as &quot;nodes=2&quot; or &quot;nodes=type1:type2&quot;, only the value returned in <i>available</i> has meaning. If the number in <i>available</i> is positive, it is the number of nodes requried to satisified the specification and that some set of nodes are available which will satisify it, see <i>avail ().</i> If the number in <i>available</i> is zero, some number of nodes requried to satisified the specification are currently unavailable, the request might be satisifed at a later time. If the number in <i>available</i> is negative, no combination of known nodes can satisified the specification.</dd>
+<dt> <code>avail</code></dt>
 <dd>
-<dd>The <i>avail ()</i> call is provided as conversion aid for scheduler written for early versions of PBS. The avail() routine uses pbs_rescquery() and returns a character string answer. <i> is the connection returned by </i><code>pbs_connect</code>(). <i> is a single node=specification</i> specification as discussed above. If the nodes to satisify the specification are currently available, the return value is the character string <code>yes .</code> If the nodes are currently unavailable, the return is the character string <code>no .</code> If the specification could never be satified, the return is the string <code>never .</code> An error in the specification returns the character string <code>? .</code></p>
-<dt> <code>totpool</code></p>
+</dd><dd>The <i>avail ()</i> call is provided as conversion aid for scheduler written for early versions of PBS. The avail() routine uses pbs_rescquery() and returns a character string answer. <i> is the connection returned by </i><code>pbs_connect</code>(). <i> is a single node=specification</i> specification as discussed above. If the nodes to satisify the specification are currently available, the return value is the character string <code>yes .</code> If the nodes are currently unavailable, the return is the character string <code>no .</code> If the specification could never be satified, the return is the string <code>never .</code> An error in the specification returns the character string <code>? .</code></dd>
+<dt> <code>totpool</code></dt>
 <dd>
-<dd>The <i>totpool ()</i> function returns the total number of nodes know to the PBS server. This is the sum of the number of nodes available, allocated, reserved, and down. The parameter <i> is the connection returned by pbs_connect(). The parameter if non-zero, causes totpool() to issue a pbs_rescquery() call to obtain fresh information. If zero, numbers from the prior pbs_rescquery() are used.</p>
-<dt> </i><code>usepool</code></p>
-<dd><i>usepool ()</i></p>
-<dd>returns the number of nodes currently in use, the sum of allocated, reserved, and down. The parameter <i> is the connection returned by pbs_connect(). The parameter if non-zero, causes totpool() to issue a pbs_rescquery() call to obtain fresh information. If zero, numbers from the prior pbs_rescquery() are used.</dl>
+</dd><dd>The <i>totpool ()</i> function returns the total number of nodes know to the PBS server. This is the sum of the number of nodes available, allocated, reserved, and down. The parameter <i> is the connection returned by pbs_connect(). The parameter if non-zero, causes totpool() to issue a pbs_rescquery() call to obtain fresh information. If zero, numbers from the prior pbs_rescquery() are used.</dd>
+<dt> </i><code>usepool</code></dt>
+<dd><i>usepool ()</i></dd>
+<dd>returns the number of nodes currently in use, the sum of allocated, reserved, and down. The parameter <i> is the connection returned by pbs_connect(). The parameter if non-zero, causes totpool() to issue a pbs_rescquery() call to obtain fresh information. If zero, numbers from the prior pbs_rescquery() are used.</dd></dl>
 <p> </i></p>
+</code>
 <h2>See Also</h2>
 <p>qsub(1B), pbs_connect(3B), pbs_disconnect(3B), pbs_rescreserve(3B) and pbs_resources(7B)</p>
 <h2>Diagnostics</h2>

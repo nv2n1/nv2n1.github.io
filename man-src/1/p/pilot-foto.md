@@ -73,7 +73,6 @@ description: "pilot-foto – Palm ‘Foto’ Image Installer/Remover/Fetcher/Con
             pilot-foto -i <code>*.jpg</code>
             pilot-foto -f <code>MyImage</code>
             pilot-foto -c <code>MyImage.jpg.pdb</code>
-        
 </pre>
 <h2>PROBLEMS</h2>
 <p> Palm has not published their database format for the thumbnails. So, pilot-foto puts a generic penguin thumbnail for every image uploaded. Fotos can be accessed by a named list on the handheld as well as the thumbnails. This has been tried on a couple of handhelds. It is possible that a foreign palm or different model will not like it. </p>

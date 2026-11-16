@@ -12,7 +12,6 @@ std::swap(std::unique_ptr) - std::swap(std::unique_ptr)
 
 <pre><code>template &lt;class T, class Deleter&gt;
 (since C++ 11)
-
     void swap(unique_ptr&lt;T, Deleter&gt; &amp;lhs, unique_ptr&lt;T, Deleter&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::unique_ptr. Swaps the pointers of lhs and rhs. Calls lhs.swap(rhs). 
 This function does not participate in overload resolution unless std::is_swappable&lt;D&gt;::value is true. <i>(since C++17)</i> 

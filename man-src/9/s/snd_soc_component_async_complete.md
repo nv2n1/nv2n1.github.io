@@ -14,7 +14,7 @@ description: "snd_soc_component_async_complete – Ensure asynchronous I/O has c
 <p><i>component</i></p>
 <dl>
 <dd>
-<dd>Component for which to wait</dl>
+</dd><dd>Component for which to wait</dd></dl>
 <h2>Description</h2>
 <p>This function blocks until all asynchronous I/O which has previously been scheduled using <code>snd_soc_component_update_bits_async</code> has completed.</p>
 <h2>Copyright</h2>

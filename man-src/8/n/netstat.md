@@ -74,30 +74,30 @@ description: "netstat – Print network connections, routing tables, interface s
 <h3>State</h3>
 <p>The state of the socket. Since there are no states in raw mode and usually no states used in UDP and UDPLite, this column may be left blank. Normally this can be one of several values:</p>
 <dl>
-<dt><i>ESTABLISHED</i></p>
-<dd>The socket has an established connection.</p>
-<dt><i>SYN_SENT</i></p>
-<dd>The socket is actively attempting to establish a connection.</p>
-<dt><i>SYN_RECV</i></p>
-<dd>A connection request has been received from the network.</p>
-<dt><i>FIN_WAIT1</i></p>
-<dd>The socket is closed, and the connection is shutting down.</p>
-<dt><i>FIN_WAIT2</i></p>
-<dd>Connection is closed, and the socket is waiting for a shutdown from the remote end.</p>
-<dt><i>TIME_WAIT</i></p>
-<dd>The socket is waiting after close to handle packets still in the network.</p>
-<dt><i>CLOSE</i></p>
-<dd>The socket is not being used.</p>
-<dt><i>CLOSE_WAIT</i></p>
-<dd>The remote end has shut down, waiting for the socket to close.</p>
-<dt><i>LAST_ACK</i></p>
-<dd>The remote end has shut down, and the socket is closed. Waiting for acknowledgement.</p>
-<dt><i>LISTEN</i></p>
-<dd>The socket is listening for incoming connections. Such sockets are not included in the output unless you specify the <code>&#8211;listening</code> (<code>-l</code>) or <code>&#8211;all</code> (<code>-a</code>) option.</p>
-<dt><i>CLOSING</i></p>
-<dd>Both sockets are shut down but we still don&#8217;t have all our data sent.</p>
-<dt><i>UNKNOWN</i></p>
-<dd>The state of the socket is unknown.</dl>
+<dt><i>ESTABLISHED</i></dt>
+<dd>The socket has an established connection.</dd>
+<dt><i>SYN_SENT</i></dt>
+<dd>The socket is actively attempting to establish a connection.</dd>
+<dt><i>SYN_RECV</i></dt>
+<dd>A connection request has been received from the network.</dd>
+<dt><i>FIN_WAIT1</i></dt>
+<dd>The socket is closed, and the connection is shutting down.</dd>
+<dt><i>FIN_WAIT2</i></dt>
+<dd>Connection is closed, and the socket is waiting for a shutdown from the remote end.</dd>
+<dt><i>TIME_WAIT</i></dt>
+<dd>The socket is waiting after close to handle packets still in the network.</dd>
+<dt><i>CLOSE</i></dt>
+<dd>The socket is not being used.</dd>
+<dt><i>CLOSE_WAIT</i></dt>
+<dd>The remote end has shut down, waiting for the socket to close.</dd>
+<dt><i>LAST_ACK</i></dt>
+<dd>The remote end has shut down, and the socket is closed. Waiting for acknowledgement.</dd>
+<dt><i>LISTEN</i></dt>
+<dd>The socket is listening for incoming connections. Such sockets are not included in the output unless you specify the <code>&#8211;listening</code> (<code>-l</code>) or <code>&#8211;all</code> (<code>-a</code>) option.</dd>
+<dt><i>CLOSING</i></dt>
+<dd>Both sockets are shut down but we still don&#8217;t have all our data sent.</dd>
+<dt><i>UNKNOWN</i></dt>
+<dd>The state of the socket is unknown.</dd></dl>
 <h3>User</h3>
 <p>The username or the user id (UID) of the owner of the socket.</p>
 <h3>PID/Program name</h3>
@@ -114,37 +114,37 @@ description: "netstat – Print network connections, routing tables, interface s
 <h3>Type</h3>
 <p>There are several types of socket access:</p>
 <dl>
-<dt><i>SOCK_DGRAM</i></p>
-<dd>The socket is used in Datagram (connectionless) mode.</p>
-<dt><i>SOCK_STREAM</i></p>
-<dd>This is a stream (connection) socket.</p>
-<dt><i>SOCK_RAW</i></p>
-<dd>The socket is used as a raw socket.</p>
-<dt><i>SOCK_RDM</i></p>
-<dd>This one serves reliably-delivered messages.</p>
-<dt><i>SOCK_SEQPACKET</i></p>
-<dd>This is a sequential packet socket.</p>
-<dt><i>SOCK_PACKET</i></p>
-<dd>Raw interface access socket.</p>
-<dt><i>UNKNOWN</i></p>
-<dd>Who ever knows what the future will bring us &#8211; just fill in here :-)</dl>
+<dt><i>SOCK_DGRAM</i></dt>
+<dd>The socket is used in Datagram (connectionless) mode.</dd>
+<dt><i>SOCK_STREAM</i></dt>
+<dd>This is a stream (connection) socket.</dd>
+<dt><i>SOCK_RAW</i></dt>
+<dd>The socket is used as a raw socket.</dd>
+<dt><i>SOCK_RDM</i></dt>
+<dd>This one serves reliably-delivered messages.</dd>
+<dt><i>SOCK_SEQPACKET</i></dt>
+<dd>This is a sequential packet socket.</dd>
+<dt><i>SOCK_PACKET</i></dt>
+<dd>Raw interface access socket.</dd>
+<dt><i>UNKNOWN</i></dt>
+<dd>Who ever knows what the future will bring us &#8211; just fill in here :-)</dd></dl>
 <h3>State</h3>
 <p>This field will contain one of the following Keywords:</p>
 <dl>
-<dt><i>FREE</i></p>
-<dd>The socket is not allocated</p>
-<dt><i>LISTENING </i></p>
-<dd>The socket is listening for a connection request. Such sockets are only included in the output if you specify the <code>&#8211;listening</code> (<code>-l</code>) or <code>&#8211;all</code> (<code>-a</code>) option.</p>
-<dt><i>CONNECTING</i></p>
-<dd>The socket is about to establish a connection.</p>
-<dt><i>CONNECTED</i></p>
-<dd>The socket is connected.</p>
-<dt><i>DISCONNECTING</i></p>
-<dd>The socket is disconnecting.</p>
-<dt><i>(empty)</i></p>
-<dd>The socket is not connected to another one.</p>
-<dt><i>UNKNOWN</i></p>
-<dd>This state should never happen.</dl>
+<dt><i>FREE</i></dt>
+<dd>The socket is not allocated</dd>
+<dt><i>LISTENING </i></dt>
+<dd>The socket is listening for a connection request. Such sockets are only included in the output if you specify the <code>&#8211;listening</code> (<code>-l</code>) or <code>&#8211;all</code> (<code>-a</code>) option.</dd>
+<dt><i>CONNECTING</i></dt>
+<dd>The socket is about to establish a connection.</dd>
+<dt><i>CONNECTED</i></dt>
+<dd>The socket is connected.</dd>
+<dt><i>DISCONNECTING</i></dt>
+<dd>The socket is disconnecting.</dd>
+<dt><i>(empty)</i></dt>
+<dd>The socket is not connected to another one.</dd>
+<dt><i>UNKNOWN</i></dt>
+<dd>This state should never happen.</dd></dl>
 <h3>PID/Program name</h3>
 <p>Process ID (PID) and process name of the process that has the socket open. More info available in <code>Active Internet connections</code> section written above.</p>
 <h3>Path</h3>

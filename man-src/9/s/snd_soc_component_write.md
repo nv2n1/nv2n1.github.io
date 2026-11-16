@@ -15,15 +15,15 @@ snd_soc_component_write - Write register value
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>Component to write to</dl>
+<dl><dd></dd><dd>Component to write to</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>Register to write</dl>
+<dl><dd>Register to write</dd></dl>
  
 
  <i>val</i>
-<dl><dd>Value to write to the register</dl>
+<dl><dd>Value to write to the register</dd></dl>
 
 <h2>Return</h2>
 

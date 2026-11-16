@@ -101,7 +101,7 @@ struct ibv_qp_create_send_ops_flags {
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_query_qp</code>(3), <code>ibv_create_rwq_ind_table</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

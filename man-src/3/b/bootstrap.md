@@ -37,25 +37,23 @@ description: "QuantLib::CompoundForward – compound-forward structure"
 <p> compound-forward structure </p>
 <p> <code>Tests</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> the correctness of the curve is tested by reproducing the input data.</p>
-<dt>*</p>
-<dd> the correctness of the curve is tested by checking the consistency between returned rates and swaps priced on the curve.</dl>
+<dt>*</dt>
+<dd> the correctness of the curve is tested by reproducing the input data.</dd>
+<dt>*</dt>
+<dd> the correctness of the curve is tested by checking the consistency between returned rates and swaps priced on the curve.</dd></dl>
 </dl>
 <p> <code>Bug</code></p>
 <dl>
 <dt>
-<dd> swap rates are not reproduced exactly when using indexed coupons. Apparently, some assumption about the swap fixings is hard-coded into the bootstrapping algorithm.</dl>
+</dt><dd> swap rates are not reproduced exactly when using indexed coupons. Apparently, some assumption about the swap fixings is hard-coded into the bootstrapping algorithm.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Rate</code> zeroYieldImpl (Time t) const [protected, virtual]</h3>
 <p> Returns the zero yield rate for the given date calculating it from the instantaneous forward rate. </p>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> This is just a default, highly inefficient and possibly wildly inaccurate implementation. Derived classes should implement their own zeroYield method.</dl>
+</dt><dd> This is just a default, highly inefficient and possibly wildly inaccurate implementation. Derived classes should implement their own zeroYield method.</dd></dl>
 <p> Reimplemented from <code>ForwardRateStructure</code>.</p>
 <h3><code>DiscountFactor</code> discountImpl (Time t) const [protected, virtual]</h3>
 <p> Returns the discount factor for the given date calculating it from the instantaneous forward rate. </p>
@@ -63,5 +61,5 @@ description: "QuantLib::CompoundForward – compound-forward structure"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

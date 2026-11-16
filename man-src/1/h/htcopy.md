@@ -19,27 +19,27 @@ description: "htcopy – HTTP client with LCGDM extensions"
 <p> Both the source and/or the destination can be a local path or a HTTP URL. Depending on the combination, it will do an upload, a download, or trigger a third-party copy. Local copies are not supported. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h/&#8211;help</p>
-<dd> Shows the command help. </p>
-<dt>-v/&#8211;verbose</p>
-<dd> Enable the verbose mode. It can be specified more than once (-vvv) to increase the verbosity. </p>
-<dt>-l/&#8211;log &lt;log file&gt;</p>
-<dd> Specified into which file the extended output (as HTTP headers) must be printed. </p>
-<dt>-n/&#8211;stream-number &lt;number of streams&gt;</p>
-<dd> Number of streams to use. </p>
-<dt>-b, &#8211;buffer-size &lt;buffer size&gt;</p>
-<dd> Internal buffer size. </p>
-<dt>-E/&#8211;user-cert &lt;user certificate&gt;</p>
-<dd> The path to the user certificate in PEM format. </p>
-<dt>&#8211;user-key &lt;user private key&gt;</p>
-<dd> The user private key in PEM format, if the user certificate doesn&#8217;t include it. </p>
-<dt>&#8211;key-pass &lt;private key password&gt;</p>
-<dd> Allows to pass the private key password as an argument. </p>
-<dt>&#8211;ca-path &lt;CA path&gt;</p>
-<dd> Use the certificate directory to verify the remote certificate. </p>
-<dt>&#8211;ca-bundle &lt;CA file&gt;</p>
-<dd> Use the certificate file to verify the remote certificate. </p>
-<dt>&#8211;insecure</p>
-<dd> Do no check the peer certificate. </p>
+<dt>-h/&#8211;help</dt>
+<dd> Shows the command help. </dd>
+<dt>-v/&#8211;verbose</dt>
+<dd> Enable the verbose mode. It can be specified more than once (-vvv) to increase the verbosity. </dd>
+<dt>-l/&#8211;log &lt;log file&gt;</dt>
+<dd> Specified into which file the extended output (as HTTP headers) must be printed. </dd>
+<dt>-n/&#8211;stream-number &lt;number of streams&gt;</dt>
+<dd> Number of streams to use. </dd>
+<dt>-b, &#8211;buffer-size &lt;buffer size&gt;</dt>
+<dd> Internal buffer size. </dd>
+<dt>-E/&#8211;user-cert &lt;user certificate&gt;</dt>
+<dd> The path to the user certificate in PEM format. </dd>
+<dt>&#8211;user-key &lt;user private key&gt;</dt>
+<dd> The user private key in PEM format, if the user certificate doesn&#8217;t include it. </dd>
+<dt>&#8211;key-pass &lt;private key password&gt;</dt>
+<dd> Allows to pass the private key password as an argument. </dd>
+<dt>&#8211;ca-path &lt;CA path&gt;</dt>
+<dd> Use the certificate directory to verify the remote certificate. </dd>
+<dt>&#8211;ca-bundle &lt;CA file&gt;</dt>
+<dd> Use the certificate file to verify the remote certificate. </dd>
+<dt>&#8211;insecure</dt>
+<dd> Do no check the peer certificate. </dd>
 </dl>
 <h2>Index</h2>

@@ -22,18 +22,18 @@ description: "Hash Traverse Functions – Functions that iterate through hash ta
 <dl COMPACT>
 <dd><i>hash</i> The given hash.<br />
  <i>for_each_func</i> The function that each entry is passed to.<br />
- <i>user_data</i> a pointer passed to calls of for_each_func</dl>
+ <i>user_data</i> a pointer passed to calls of for_each_func</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE on success, FALSE otherwise.</dl>
+<dd>TRUE on success, FALSE otherwise.</dd></dl>
 <h3>EAPI Ecore_List* ecore_hash_keys (Ecore_Hash * hash)</h3>
 <p>Retrieves an ecore_list of all keys in the given hash. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash.</dl>
+<dd><i>hash</i> The given hash.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>new ecore_list on success, NULL otherwise</dl>
+<dd>new ecore_list on success, NULL otherwise</dd></dl>
 <p> References ecore_list_append(), ecore_list_first_goto(), and ecore_list_new(). </p>
 <p> Referenced by ecore_plugin_available_get().</p>
 <h2>Author</h2>

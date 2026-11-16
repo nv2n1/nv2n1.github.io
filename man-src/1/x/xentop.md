@@ -15,42 +15,42 @@ description: "xentop – displays real-time information about a Xen system and d
 <p> <code>xentop</code> displays information about the Xen system and domains, in a continually-updating manner. Command-line options and interactive commands can change the detail and format of the information displayed by <code>xentop</code>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</p>
-<dt><code>-d</code>, <code>&#8211;delay</code>=<i>SECONDS</i></p>
-<dd> seconds between updates (default 3)</p>
-<dt><code>-n</code>, <code>&#8211;networks</code></p>
-<dd> output network information</p>
-<dt><code>-x</code>, <code>&#8211;vbds</code></p>
-<dd> output vbd block device data</p>
-<dt><code>-r</code>, <code>&#8211;repeat-header</code></p>
-<dd> repeat table header before each domain</p>
-<dt><code>-v</code>, <code>&#8211;vcpus</code></p>
-<dd> output VCPU data</p>
-<dt><code>-b</code>, <code>&#8211;batch</code></p>
-<dd> output data in batch mode (to stdout)</p>
-<dt><code>-i</code>, <code>&#8211;iterations</code>=<i>ITERATIONS</i></p>
-<dd> maximum number of iterations xentop should produce before ending </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd>
+<dt><code>-d</code>, <code>&#8211;delay</code>=<i>SECONDS</i></dt>
+<dd> seconds between updates (default 3)</dd>
+<dt><code>-n</code>, <code>&#8211;networks</code></dt>
+<dd> output network information</dd>
+<dt><code>-x</code>, <code>&#8211;vbds</code></dt>
+<dd> output vbd block device data</dd>
+<dt><code>-r</code>, <code>&#8211;repeat-header</code></dt>
+<dd> repeat table header before each domain</dd>
+<dt><code>-v</code>, <code>&#8211;vcpus</code></dt>
+<dd> output VCPU data</dd>
+<dt><code>-b</code>, <code>&#8211;batch</code></dt>
+<dd> output data in batch mode (to stdout)</dd>
+<dt><code>-i</code>, <code>&#8211;iterations</code>=<i>ITERATIONS</i></dt>
+<dd> maximum number of iterations xentop should produce before ending </dd>
 </dl>
 <h2>INTERACTIVE COMMANDS</h2>
 <p> All interactive commands are case-insensitive.</p>
 <dl>
-<dt><code>D</code></p>
-<dd> set delay between updates</p>
-<dt><code>N</code></p>
-<dd> toggle display of network information</p>
-<dt><code>Q, Esc</code></p>
-<dd> quit</p>
-<dt><code>R</code></p>
-<dd> toggle table header before each domain</p>
-<dt><code>S</code></p>
-<dd> cycle sort order</p>
-<dt><code>V</code></p>
-<dd> toggle display of VCPU information</p>
-<dt><code>Arrows</code></p>
-<dd> scroll domain display </p>
+<dt><code>D</code></dt>
+<dd> set delay between updates</dd>
+<dt><code>N</code></dt>
+<dd> toggle display of network information</dd>
+<dt><code>Q, Esc</code></dt>
+<dd> quit</dd>
+<dt><code>R</code></dt>
+<dd> toggle table header before each domain</dd>
+<dt><code>S</code></dt>
+<dd> cycle sort order</dd>
+<dt><code>V</code></dt>
+<dd> toggle display of VCPU information</dd>
+<dt><code>Arrows</code></dt>
+<dd> scroll domain display </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Written by Judy Fischbach, David Hendricks, and Josh Triplett </p>

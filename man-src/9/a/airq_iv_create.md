@@ -14,14 +14,14 @@ description: "airq_iv_create – create an interrupt vector"
 <p><i>bits</i></p>
 <dl>
 <dd>
-<dd>number of bits in the interrupt vector</dl>
+</dd><dd>number of bits in the interrupt vector</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>allocation flags</dl>
+<dd>allocation flags</dd></dl>
 <h2>Description</h2>
 <p>Returns a pointer to an interrupt vector structure</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

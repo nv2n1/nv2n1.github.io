@@ -12,10 +12,8 @@ description: "police – policing action"
 <p><code>tc</code> &#8230; <code>action police [</code> <code>rate</code><i> RATE </i><code>burst</code> <i>BYTES</i>[<code>/</code><i>BYTES</i>] ] [ <code>pkts_rate</code><i> RATE </i><code>pkts_burst</code> <i>PACKETS</i>] [ <code>mtu</code> <i>BYTES</i>[<code>/</code><i>BYTES</i>] ] [ <code>peakrate</code><i> RATE</i> ] [ <code>overhead</code><i> BYTES</i> ] [ <code>linklayer</code><i> TYPE</i> ] [ <i>CONTROL</i> ]<br />
  <code>tc</code> &#8230; <code>filter</code> &#8230; [ <code>estimator</code> <i>SAMPLE AVERAGE </i>] <code>action police avrate</code> <i>RATE</i> [ <i>CONTROL</i> ] </p>
 <pre><code>CONTROL :=
-
 conform-exceed EXCEEDACT[/NOTEXCEEDACT
 EXCEEDACT/NOTEXCEEDACT := {
-
     pipe | ok | reclassify | drop | continue | goto chain CHAIN_INDEX }</code></pre>
 <h2>Description</h2>
 <p>The <code>police</code> action allows limiting of the byte or packet rate of traffic matched by the filter it is attached to. </p>
@@ -24,45 +22,45 @@ EXCEEDACT/NOTEXCEEDACT := {
 <p> At least one of the <code>rate</code> and <code>pkt_rate</code> parameters must be configured.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>rate</code><i> RATE</i></p>
-<dd>The maximum byte rate of packets passing this action. Those exceeding it will be treated as defined by the <code>conform-exceed</code> option.</p>
-<dt><code>burst</code><i> BYTES</i>[<code>/</code><i>BYTES</i>]</p>
-<dd>Set the maximum allowed burst in bytes, optionally followed by a slash (&#8216;/&#8217;) sign and cell size which must be a power of 2.</p>
-<dt><code>pkt_rate</code><i> RATE</i></p>
-<dd>The maximum packet rate or packets passing this action. Those exceeding it will be treated as defined by the <code>conform-exceed</code> option.</p>
-<dt><code>pkt_burst</code><i> PACKETS</i></p>
-<dd>Set the maximum allowed burst in packets.</p>
-<dt><code>mtu</code><i> BYTES</i>[<code>/</code><i>BYTES</i>]</p>
-<dd>This is the maximum packet size handled by the policer (larger ones will be handled like they exceeded the configured rate). Setting this value correctly will improve the scheduler&#8217;s precision. Value formatting is identical to <code>burst</code> above. Defaults to unlimited.</p>
-<dt><code>peakrate</code><i> RATE</i></p>
-<dd>Set the maximum bucket depletion rate, exceeding <code>rate</code>.</p>
-<dt><code>avrate</code><i> RATE</i></p>
-<dd>Make use of an in-kernel bandwidth rate estimator and match the given <i>RATE</i> against it.</p>
-<dt><code>overhead</code><i> BYTES</i></p>
-<dd>Account for protocol overhead of encapsulating output devices when computing <code>rate</code> and <code>peakrate</code>.</p>
-<dt><code>linklayer</code><i> TYPE</i></p>
-<dd>Specify the link layer type. <i>TYPE</i> may be one of <code>ethernet</code> (the default), <code>atm</code> or <code>adsl</code> (which are synonyms). It is used to align the precomputed rate tables to ATM cell sizes, for <code>ethernet</code> no action is taken.</p>
-<dt><code>estimator</code><i> SAMPLE AVERAGE</i></p>
-<dd>Fine-tune the in-kernel packet rate estimator. <i>SAMPLE</i> and <i>AVERAGE</i> are time values and control the frequency in which samples are taken and over what timespan an average is built.</p>
-<dt><code>conform-exceed</code><i> EXCEEDACT</i>[<code>/</code><i>NOTEXCEEDACT</i>]</p>
-<dd>Define how to handle packets which exceed or conform the configured bandwidth limit. Possible values are:</p>
+<dt><code>rate</code><i> RATE</i></dt>
+<dd>The maximum byte rate of packets passing this action. Those exceeding it will be treated as defined by the <code>conform-exceed</code> option.</dd>
+<dt><code>burst</code><i> BYTES</i>[<code>/</code><i>BYTES</i>]</dt>
+<dd>Set the maximum allowed burst in bytes, optionally followed by a slash (&#8216;/&#8217;) sign and cell size which must be a power of 2.</dd>
+<dt><code>pkt_rate</code><i> RATE</i></dt>
+<dd>The maximum packet rate or packets passing this action. Those exceeding it will be treated as defined by the <code>conform-exceed</code> option.</dd>
+<dt><code>pkt_burst</code><i> PACKETS</i></dt>
+<dd>Set the maximum allowed burst in packets.</dd>
+<dt><code>mtu</code><i> BYTES</i>[<code>/</code><i>BYTES</i>]</dt>
+<dd>This is the maximum packet size handled by the policer (larger ones will be handled like they exceeded the configured rate). Setting this value correctly will improve the scheduler&#8217;s precision. Value formatting is identical to <code>burst</code> above. Defaults to unlimited.</dd>
+<dt><code>peakrate</code><i> RATE</i></dt>
+<dd>Set the maximum bucket depletion rate, exceeding <code>rate</code>.</dd>
+<dt><code>avrate</code><i> RATE</i></dt>
+<dd>Make use of an in-kernel bandwidth rate estimator and match the given <i>RATE</i> against it.</dd>
+<dt><code>overhead</code><i> BYTES</i></dt>
+<dd>Account for protocol overhead of encapsulating output devices when computing <code>rate</code> and <code>peakrate</code>.</dd>
+<dt><code>linklayer</code><i> TYPE</i></dt>
+<dd>Specify the link layer type. <i>TYPE</i> may be one of <code>ethernet</code> (the default), <code>atm</code> or <code>adsl</code> (which are synonyms). It is used to align the precomputed rate tables to ATM cell sizes, for <code>ethernet</code> no action is taken.</dd>
+<dt><code>estimator</code><i> SAMPLE AVERAGE</i></dt>
+<dd>Fine-tune the in-kernel packet rate estimator. <i>SAMPLE</i> and <i>AVERAGE</i> are time values and control the frequency in which samples are taken and over what timespan an average is built.</dd>
+<dt><code>conform-exceed</code><i> EXCEEDACT</i>[<code>/</code><i>NOTEXCEEDACT</i>]</dt>
+<dd>Define how to handle packets which exceed or conform the configured bandwidth limit. Possible values are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>continue</p>
-<dd>Don&#8217;t do anything, just continue with the next action in line.</p>
-<dt>drop</p>
-<dd>Drop the packet immediately.</p>
-<dt>shot</p>
-<dd>This is a synonym to <code>drop</code>.</p>
-<dt>ok</p>
-<dd>Accept the packet. This is the default for conforming packets.</p>
-<dt>pass</p>
-<dd>This is a synonym to <code>ok</code>.</p>
-<dt>reclassify</p>
-<dd>Treat the packet as non-matching to the filter this action is attached to and continue with the next filter in line (if any). This is the default for exceeding packets.</p>
-<dt>pipe</p>
-<dd>Pass the packet to the next action in line.</dl>
+</dd><dl>
+<dt>continue</dt>
+<dd>Don&#8217;t do anything, just continue with the next action in line.</dd>
+<dt>drop</dt>
+<dd>Drop the packet immediately.</dd>
+<dt>shot</dt>
+<dd>This is a synonym to <code>drop</code>.</dd>
+<dt>ok</dt>
+<dd>Accept the packet. This is the default for conforming packets.</dd>
+<dt>pass</dt>
+<dd>This is a synonym to <code>ok</code>.</dd>
+<dt>reclassify</dt>
+<dd>Treat the packet as non-matching to the filter this action is attached to and continue with the next filter in line (if any). This is the default for exceeding packets.</dd>
+<dt>pipe</dt>
+<dd>Pass the packet to the next action in line.</dd></dl>
 </dl>
 </dl>
 <h2>Examples</h2>
@@ -70,7 +68,7 @@ EXCEEDACT/NOTEXCEEDACT := {
 <dl>
 <dd># tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match u32 0 0 \<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>police rate 1mbit burst 100k
-</dl>
+</dd></dl>
 <p> As an action can not live on it&#8217;s own, there always has to be a filter involved as link between qdisc and action. The example above uses <code>u32</code> for that, which is configured to effectively match any packet (passing it to the <code>police</code> action thereby). </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8) </p>

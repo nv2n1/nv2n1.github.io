@@ -11,7 +11,6 @@ description: "sc::ElectronDensity –"
 <p> This is a <code>Volume</code> that computer the electron density.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;density.h&gt;</code></pre>
 <p> Inherits <code>sc::Volume</code>.</p>
 <h3>Public Member Functions</h3>

@@ -35,67 +35,67 @@ description: "atomic-scan – Scan for CVEs in a container or image"
 <p> List all the scanners atomic knows about and display their default scan types. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan --list
 </pre>
-</dl>
+</dd></dl>
 <p> Scan an image named &#8216;foo1&#8217;. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan foo1
 </pre>
-</dl>
+</dd></dl>
 <p> Scan images named &#8216;foo1&#8217; and &#8216;foo2&#8217; and produce a detailed report. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan foo1 foo2
 </pre>
-</dl>
+</dd></dl>
 <p> Scan all containers. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan --containers
 </pre>
-</dl>
+</dd></dl>
 <p> Scan all containers and images and create a detailed report. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan --all
 </pre>
-</dl>
+</dd></dl>
 <p> Scan a rootfs mounted at /tmp/chroot </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan --rootfs /tmp/chroot
 </pre>
-</dl>
+</dd></dl>
 <p> Scan an image called &#8216;foo1&#8217; with a scanner called &#8216;custom_scanner&#8217; and its default scan_type </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan --scanner custom_scanner foo1
 </pre>
-</dl>
+</dd></dl>
 <p> Scan an image called &#8216;foo1&#8217; with a scanner called &#8216;custom_scanner&#8217; and a scan type of &#8216;list_rpms&#8217; </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic scan --scanner custom_scanner --scan_type list_rpms foo1
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> Initial revision by Brent Baude (bbaude at redhat dot com) September 2015 Updated for new atomic scan architecture by Brent Baude (bbaude at redhat dot com) May 2016 </p>
 <h2>Index</h2>

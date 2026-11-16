@@ -11,7 +11,6 @@ description: "selinux_restorecon_set_sehandle – set a labeling handle for use 
 <p> <a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3)</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/restorecon.h&gt;
-
 #include &lt;selinux/label.h&gt;
 void selinux_restorecon_set_sehandle(struct selabel_handle *handle);</code></pre>
 <h2>Description</h2>

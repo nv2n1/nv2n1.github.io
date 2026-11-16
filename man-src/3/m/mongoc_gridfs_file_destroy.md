@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_destroy() – Destroys the mongoc_gridfs_file_t
 mongoc_gridfs_file_destroy (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Destroys the <code>mongoc_gridfs_file_t</code> instance and any resources associated with it. </p>
 <h2>Colophon</h2>

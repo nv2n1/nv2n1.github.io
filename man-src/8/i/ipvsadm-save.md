@@ -15,7 +15,7 @@ description: "ipvsadm-save – save the IPVS table to stdout"
 <h2>Options</h2>
 <p>The option that is recognized by <code>ipvsadm-save</code> is:</p>
 <dl>
-<dt><code>-n</code></p>
-<dd>print out the table in numeric format.</dl>
+<dt><code>-n</code></dt>
+<dd>print out the table in numeric format.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipvsadm/">ipvsadm</a>(8), the LVS-HOWTO. </p>

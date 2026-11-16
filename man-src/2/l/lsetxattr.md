@@ -31,32 +31,32 @@ int fsetxattr(int fd, const char &amp;nbsp; *name,
 <p> An extended attribute name is a null-terminated string. The <i>name</i> includes a namespace prefix; there may be several, disjoint namespaces associated with an individual inode. The <i>value</i> of an extended attribute is a chunk of arbitrary textual or binary data of specified length. </p>
 <p> By default (i.e., <i>flags</i> is zero), the extended attribute will be created if it does not exist, or the value will be replaced if the attribute already exists. To modify these semantics, one of the following values can be specified in <i>flags</i>:</p>
 <dl>
-<dt><code>XATTR_CREATE</code></p>
-<dd> Perform a pure create, which fails if the named attribute exists already.</p>
-<dt><code>XATTR_REPLACE</code></p>
-<dd> Perform a pure replace operation, which fails if the named attribute does not already exist.</dl>
+<dt><code>XATTR_CREATE</code></dt>
+<dd> Perform a pure create, which fails if the named attribute exists already.</dd>
+<dt><code>XATTR_REPLACE</code></dt>
+<dd> Perform a pure replace operation, which fails if the named attribute does not already exist.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On failure, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EDQUOT</code></p>
-<dd> Disk quota limits meant that there is insufficient space remaining to store the extended attribute.</p>
-<dt><code>EEXIST</code></p>
-<dd> <code>XATTR_CREATE</code> was specified, and the attribute exists already.</p>
-<dt><code>ENODATA</code></p>
-<dd> <code>XATTR_REPLACE</code> was specified, and the attribute does not exist.</p>
-<dt><code>ENOSPC</code></p>
-<dd> There is insufficient space remaining to store the extended attribute.</p>
-<dt><code>ENOTSUP</code></p>
-<dd> The namespace prefix of <i>name</i> is not valid.</p>
-<dt><code>ENOTSUP</code></p>
-<dd> Extended attributes are not supported by the filesystem, or are disabled,</p>
-<dt><code>EPERM</code></p>
-<dd> The file is marked immutable or append-only. (See <code><a href="/docs/linux/man/2-ioctl_iflags/">ioctl_iflags</a></code>(2).)</dl>
+<dt><code>EDQUOT</code></dt>
+<dd> Disk quota limits meant that there is insufficient space remaining to store the extended attribute.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <code>XATTR_CREATE</code> was specified, and the attribute exists already.</dd>
+<dt><code>ENODATA</code></dt>
+<dd> <code>XATTR_REPLACE</code> was specified, and the attribute does not exist.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> There is insufficient space remaining to store the extended attribute.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> The namespace prefix of <i>name</i> is not valid.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> Extended attributes are not supported by the filesystem, or are disabled,</dd>
+<dt><code>EPERM</code></dt>
+<dd> The file is marked immutable or append-only. (See <code><a href="/docs/linux/man/2-ioctl_iflags/">ioctl_iflags</a></code>(2).)</dd></dl>
 <p> In addition, the errors documented in <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) can also occur.</p>
 <dl>
-<dt><code>ERANGE</code></p>
-<dd> The size of <i>name</i> or <i>value</i> exceeds a filesystem-specific limit.</dl>
+<dt><code>ERANGE</code></dt>
+<dd> The size of <i>name</i> or <i>value</i> exceeds a filesystem-specific limit.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls have been available on Linux since kernel 2.4; glibc support is provided since version 2.3.</p>
 <h2>CONFORMING TO</h2>

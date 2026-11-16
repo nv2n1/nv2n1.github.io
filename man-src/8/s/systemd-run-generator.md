@@ -20,7 +20,7 @@ description: "systemd-run-generator – Generator for invoking commands specifie
 <dl>
 <dd>
 <pre># systemd-nspawn -D mycontainer -b systemd.run='&quot;adduser test&quot;'</pre>
-</dl>
+</dd></dl>
 <p> (Note the requirement for double quoting in the command line above. The first level of quoting (&#8221;) is processed and removed by the command shell used to invoke <code>systemd-nspawn</code>. The second level of quoting (&quot;&quot;) is propagated to the kernel command line of the container and processed and removed by <code>systemd-run-generator</code>. Both together make sure both words of the specified command line <code>adduser test</code> end up in the generated unit file together and are neither split apart by the command shell nor by the generator.)</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></code>(7), <code>systemd-nspawn</code>(7), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5) </p>

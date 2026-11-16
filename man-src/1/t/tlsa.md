@@ -17,59 +17,59 @@ description: "tlsa – Create and verify RFC-6698 TLSA DNS records"
 <p> <code>&#8211;create</code></p>
 <dl>
 <dt>
-<dd> Create a TLSA record</dl>
+</dt><dd> Create a TLSA record</dd></dl>
 <p> <code>&#8211;verify</code></p>
 <dl>
 <dt>
-<dd> Verify a TLSA record</dl>
+</dt><dd> Verify a TLSA record</dd></dl>
 <p> <code>&#8211;protocol</code> tcp | udp | sctp</p>
 <dl>
 <dt>
-<dd> Use a specific transport protocol (default: tcp)</dl>
+</dt><dd> Use a specific transport protocol (default: tcp)</dd></dl>
 <p> <code>&#8211;resolvconf</code> FILE</p>
 <dl>
 <dt>
-<dd> Specify a custom resolv.conf file (default: /etc/resolv.conf). Pass empty value (&#8211;resolvconf=&quot;&quot;) to disable default.</dl>
+</dt><dd> Specify a custom resolv.conf file (default: /etc/resolv.conf). Pass empty value (&#8211;resolvconf=&quot;&quot;) to disable default.</dd></dl>
 <p> <code>&#8211;port</code> PORT</p>
 <dl>
 <dt>
-<dd> Use specified port (default: 443)</dl>
+</dt><dd> Use specified port (default: 443)</dd></dl>
 <p> <code>&#8211;starttls</code> no | smtp | imap | pop3 | ftp</p>
 <dl>
 <dt>
-<dd> Start script type for protocols which need special commands to start a TLS connection. Supported are &#8216;ftp&#8217; (port 21), &#8216;smtp&#8217; (port 25), &#8216;pop3&#8217; (port 110) and &#8216;imap&#8217; (port 143). The default selects the type based on the port number. The value &#8216;no&#8217; overrides auto detection.</dl>
+</dt><dd> Start script type for protocols which need special commands to start a TLS connection. Supported are &#8216;ftp&#8217; (port 21), &#8216;smtp&#8217; (port 25), &#8216;pop3&#8217; (port 110) and &#8216;imap&#8217; (port 143). The default selects the type based on the port number. The value &#8216;no&#8217; overrides auto detection.</dd></dl>
 <p> <code>&#8211;only-rr</code></p>
 <dl>
 <dt>
-<dd> Only print the DNS TLSA record</dl>
+</dt><dd> Only print the DNS TLSA record</dd></dl>
 <p> <code>&#8211;certificate</code> file.crt</p>
 <dl>
 <dt>
-<dd> Use specified certificate file, instead of retrieving the certificate from the server. Can be a single cert or a complete chain.</dl>
+</dt><dd> Use specified certificate file, instead of retrieving the certificate from the server. Can be a single cert or a complete chain.</dd></dl>
 <p> <code>&#8211;ca-cert</code> directory</p>
 <dl>
 <dt>
-<dd> Use specified directory containing CA bundles for CA validation (default: /etc/pki/tls/certs)</dl>
+</dt><dd> Use specified directory containing CA bundles for CA validation (default: /etc/pki/tls/certs)</dd></dl>
 <p> <code>&#8211;rootkey</code> filename</p>
 <dl>
 <dt>
-<dd> Use specified file to read the DNSSEC root key (in anchor or bind format)</dl>
+</dt><dd> Use specified file to read the DNSSEC root key (in anchor or bind format)</dd></dl>
 <p> <code>&#8211;output</code> rfc | generic | both</p>
 <dl>
 <dt>
-<dd> Output format of TLSA record. &quot;TLSA&quot; for rfc, &quot;TYPE52&quot; for generic (default: rfc)</dl>
+</dt><dd> Output format of TLSA record. &quot;TLSA&quot; for rfc, &quot;TYPE52&quot; for generic (default: rfc)</dd></dl>
 <p> <code>&#8211;usage</code> 0 | 1 | 2 | 3</p>
 <dl>
 <dt>
-<dd> Usage type: public CA (0), EE match validated by public CA (1), private CA (2), private EE (3) (default: 3)</dl>
+</dt><dd> Usage type: public CA (0), EE match validated by public CA (1), private CA (2), private EE (3) (default: 3)</dd></dl>
 <p> <code>&#8211;selector</code> 0 | 1</p>
 <dl>
 <dt>
-<dd> The selector type describes what the type covers &#8211; full certificate (0) or public key (1) (default: 0)</dl>
+</dt><dd> The selector type describes what the type covers &#8211; full certificate (0) or public key (1) (default: 0)</dd></dl>
 <p> <code>&#8211;mtype</code> 0 | 1 | 2</p>
 <dl>
 <dt>
-<dd> Type of the TLSA data. Exact match on content (0), SHA256 (1) or SHA512 (2) (default: 0)</dl>
+</dt><dd> Type of the TLSA data. Exact match on content (0), SHA256 (1) or SHA512 (2) (default: 0)</dd></dl>
 <p> If neither create or verify is specified, create is used.</p>
 <h2>REQUIREMENTS</h2>
 <p> tlsa requires the following python libraries: unbound, m2crypto, argparse and ipaddr</p>

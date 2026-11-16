@@ -14,10 +14,10 @@ description: "sas_expander_alloc – allocate an rphy for an end device"
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>which port</dl>
+</dd><dd>which port</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>SAS_EDGE_EXPANDER_DEVICE or SAS_FANOUT_EXPANDER_DEVICE</dl>
+<dd>SAS_EDGE_EXPANDER_DEVICE or SAS_FANOUT_EXPANDER_DEVICE</dd></dl>
 <h2>Description</h2>
 <p>Allocates an SAS remote PHY structure, connected to <i>parent</i>.</p>
 <h2>Return</h2>
@@ -25,8 +25,8 @@ description: "sas_expander_alloc – allocate an rphy for an end device"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

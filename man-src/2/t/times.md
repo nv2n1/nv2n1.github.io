@@ -27,8 +27,8 @@ description: "times – get process times"
 <p> <code>times</code>() returns the number of clock ticks that have elapsed since an arbitrary point in the past. The return value may overflow the possible range of type <i>clock_t</i>. On error, <i>(clock_t)&nbsp;-1</i> is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>tms</i> points outside the process&#8217;s address space.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>tms</i> points outside the process&#8217;s address space.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.</p>
 <h2>NOTES</h2>

@@ -18,29 +18,29 @@ description: "plmpower – control Insteon/X10 devices via SmartLabs PLM 2412S"
 <p> Once everything is working, configure <code>powermand</code> to run <code>plmpower</code> as a coprocess as described in <a href="/docs/linux/man/5-powerman-conf/">powerman.conf</a>(5).</p>
 <h2>Options</h2>
 <dl>
-<dt><i>-d, &#8211;device serial-port</i></p>
-<dd>Specify the path to the special file connected to the PLM&#8217;s serial port.</p>
-<dt><i>-t, &#8211;timeout msec</i></p>
-<dd>Set the Insteon timeout to the specified number of milliseconds (default 1000).</p>
-<dt><i>-x, &#8211;x10-attempts number</i></p>
-<dd>Set the number of times to run every X10 command (default 3). X10 does not provide an ACK/NAK mechanism like Insteon so we cannot be certain that any particular X10 command completed, therefore X10 commands are issued multiple times to increase confidence.</dl>
+<dt><i>-d, &#8211;device serial-port</i></dt>
+<dd>Specify the path to the special file connected to the PLM&#8217;s serial port.</dd>
+<dt><i>-t, &#8211;timeout msec</i></dt>
+<dd>Set the Insteon timeout to the specified number of milliseconds (default 1000).</dd>
+<dt><i>-x, &#8211;x10-attempts number</i></dt>
+<dd>Set the number of times to run every X10 command (default 3). X10 does not provide an ACK/NAK mechanism like Insteon so we cannot be certain that any particular X10 command completed, therefore X10 commands are issued multiple times to increase confidence.</dd></dl>
 <h2>Interactive Commands</h2>
 <p>The following commands are accepted at the plmpower&gt; prompt. Address arguments may be Insteon (e.g. 1A.2B.3C) or X10 (e.g. G12).</p>
 <dl>
-<dt><i>help</i></p>
-<dd>Display help on the available commands.</p>
-<dt><i>info</i></p>
-<dd>Get info about the PLM.</p>
-<dt><i>reset</i></p>
-<dd>Reset the PLM (clears the all-link db).</p>
-<dt><i>on addr</i></p>
-<dd>Turn on device.</p>
-<dt><i>off addr</i></p>
-<dd>Turn off device.</p>
-<dt><i>status addr</i></p>
-<dd>Query status of device (Insteon only).</p>
-<dt><i>ping addr</i></p>
-<dd>Time round trip request/response to device (Insteon only). </p>
+<dt><i>help</i></dt>
+<dd>Display help on the available commands.</dd>
+<dt><i>info</i></dt>
+<dd>Get info about the PLM.</dd>
+<dt><i>reset</i></dt>
+<dd>Reset the PLM (clears the all-link db).</dd>
+<dt><i>on addr</i></dt>
+<dd>Turn on device.</dd>
+<dt><i>off addr</i></dt>
+<dd>Turn off device.</dd>
+<dt><i>status addr</i></dt>
+<dd>Query status of device (Insteon only).</dd>
+<dt><i>ping addr</i></dt>
+<dd>Time round trip request/response to device (Insteon only). </dd>
 </dl>
 <h2>Files</h2>
 <p>/usr/sbin/plmpower<br />

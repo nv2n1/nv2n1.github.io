@@ -19,21 +19,22 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <h3>Core bug fixes</h3>
 <p> This is not an exhaustive list. It is intended to cover only the significant user-visible changes.</p>
 <dl>
-<dt>&quot;UNIVERSAL::isa()&quot;</p>
-<dd> A bug in the caching mechanism used by <tt>&quot;UNIVERSAL::isa()&quot;</tt> that affected base.pm has been fixed. The bug has existed since the 5.005 releases, but wasn&#8217;t tickled by base.pm in those releases.</p>
-<dt>Memory leaks</p>
-<dd> Various cases of memory leaks and attempts to access uninitialized memory have been cured. See &#8220;Known Problems&#8221; below for further issues.</p>
-<dt>Numeric conversions</p>
-<dd> Numeric conversions did not recognize changes in the string value properly in certain circumstances. </p>
+<dt>&quot;UNIVERSAL::isa()&quot;</dt>
+<dd> A bug in the caching mechanism used by <tt>&quot;UNIVERSAL::isa()&quot;</tt> that affected base.pm has been fixed. The bug has existed since the 5.005 releases, but wasn&#8217;t tickled by base.pm in those releases.</dd>
+<dt>Memory leaks</dt>
+<dd> Various cases of memory leaks and attempts to access uninitialized memory have been cured. See &#8220;Known Problems&#8221; below for further issues.</dd>
+<dt>Numeric conversions</dt>
+<dd> Numeric conversions did not recognize changes in the string value properly in certain circumstances. </dd>
 <p> In other situations, large unsigned numbers (those above 2**31) could sometimes lose their unsignedness, causing bogus results in arithmetic operations. </p>
 <p> Integer modulus on large unsigned integers sometimes returned incorrect values. </p>
 <p> Perl 5.6.0 generated &#8220;not a number&#8221; warnings on certain conversions where previous versions didn&#8217;t. </p>
 <p> These problems have all been rectified. </p>
 <p> Infinity is now recognized as a number.</p>
-<dt>qw(a\b)</p>
-<dd> In Perl 5.6.0, qw(a\b) produced a string with two backslashes instead of one, in a departure from the behavior in previous versions. The older behavior has been reinstated.</p>
-<dt><code>caller()</code></p>
-<dd> <code>caller()</code> could cause core dumps in certain situations. Carp was sometimes affected by this problem.</p>
-<dt>Bugs in regular expressions</p>
-<dd> Pattern matches on overloaded values are now handled correctly. </p>
+<dt>qw(a\b)</dt>
+<dd> In Perl 5.6.0, qw(a\b) produced a string with two backslashes instead of one, in a departure from the behavior in previous versions. The older behavior has been reinstated.</dd>
+<dt><code>caller()</code></dt>
+<dd> <code>caller()</code> could cause core dumps in certain situations. Carp was sometimes affected by this problem.</dd>
+<dt>Bugs in regular expressions</dt>
+<dd> Pattern matches on overloaded values are now handled correctly. </dd>
 <p> Perl 5.6.0 parsed m/
+</p></dl>

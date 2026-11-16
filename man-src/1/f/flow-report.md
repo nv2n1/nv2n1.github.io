@@ -89,16 +89,16 @@ Report type Summarization Key Elements.-- -- -- -- -- -- -- -- -- -- -- -- -- --
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-s</code><i> stat_fname</i></p>
-<dd> Report configuration filename. Defaults to <i>/etc/flow-tools/cfg/stat</i>.</p>
-<dt><code>-S</code><i> stat_definition</i></p>
-<dd> Select the active definition.</p>
-<dt><code>-v</code><i> variable binding</i></p>
-<dd> Set a variable FOO=bar.</p>
-<dt><code>-h</code></p>
-<dd> Display help. -hh will list the available reports.</dl>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-s</code><i> stat_fname</i></dt>
+<dd> Report configuration filename. Defaults to <i>/etc/flow-tools/cfg/stat</i>.</dd>
+<dt><code>-S</code><i> stat_definition</i></dt>
+<dd> Select the active definition.</dd>
+<dt><code>-v</code><i> variable binding</i></dt>
+<dd> Set a variable FOO=bar.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help. -hh will list the available reports.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> An example of report configuration file </p>
 <pre>

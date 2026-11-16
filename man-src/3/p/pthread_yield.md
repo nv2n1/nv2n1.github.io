@@ -11,7 +11,6 @@ description: "pthread_yield – yield the processor"
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;pthread.h&gt;
-
 int pthread_yield(void);</code></pre>
 <p> Compile and link with <i>-pthread</i>.</p>
 <h2>Description</h2>

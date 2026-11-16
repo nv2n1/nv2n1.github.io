@@ -60,42 +60,42 @@ description: "sqlite3 – A command line interface for SQLite version 3"
 <h2>OPTIONS</h2>
 <p> <code>sqlite3</code> has the following options:</p>
 <dl>
-<dt><code>-init&nbsp;<wbr></code><i>file</i></p>
-<dd> Read and execute commands from <i>file</i> , which can contain a mix of SQL statements and meta-commands.</p>
-<dt><code>-echo</code></p>
-<dd> Print commands before execution.</p>
-<dt><code>-[no]header</code></p>
-<dd> Turn headers on or off.</p>
-<dt><code>-bail</code></p>
-<dd> Stop after hitting an error.</p>
-<dt><code>-interactive</code></p>
-<dd> Force interactive I/O.</p>
-<dt><code>-batch</code></p>
-<dd> Force batch I/O.</p>
-<dt><code>-column</code></p>
-<dd> Query results will be displayed in a table like form, using whitespace characters to separate the columns and align the output.</p>
-<dt><code>-cmd&nbsp;<wbr></code><i>command</i></p>
-<dd> Run <i>command</i> before reading stdin.</p>
-<dt><code>-csv</code></p>
-<dd> Set output mode to CSV (comma separated values).</p>
-<dt><code>-html</code></p>
-<dd> Query results will be output as simple HTML tables.</p>
-<dt><code>-line</code></p>
-<dd> Query results will be displayed with one value per line, rows separated by a blank line. Designed to be easily parsed by scripts or other programs</p>
-<dt><code>-list</code></p>
-<dd> Query results will be displayed with the separator (|, by default) character between each field value. The default.</p>
-<dt><code>-separator&nbsp;<wbr></code><i>separator</i></p>
-<dd> Set output field separator. Default is &#8216;|&#8217;.</p>
-<dt><code>-nullvalue&nbsp;<wbr></code><i>string</i></p>
-<dd> Set string used to represent NULL values. Default is &#8221; (empty string).</p>
-<dt><code>-stats</code></p>
-<dd> Print memory stats before each finalize.</p>
-<dt><code>-version</code></p>
-<dd> Show SQLite version.</p>
-<dt><code>-vfs&nbsp;<wbr></code><i>name</i></p>
-<dd> Use <i>name</i> as the default VFS.</p>
-<dt><code>-help</code></p>
-<dd> Show help on options and exit. </p>
+<dt><code>-init&nbsp;<wbr></code><i>file</i></dt>
+<dd> Read and execute commands from <i>file</i> , which can contain a mix of SQL statements and meta-commands.</dd>
+<dt><code>-echo</code></dt>
+<dd> Print commands before execution.</dd>
+<dt><code>-[no]header</code></dt>
+<dd> Turn headers on or off.</dd>
+<dt><code>-bail</code></dt>
+<dd> Stop after hitting an error.</dd>
+<dt><code>-interactive</code></dt>
+<dd> Force interactive I/O.</dd>
+<dt><code>-batch</code></dt>
+<dd> Force batch I/O.</dd>
+<dt><code>-column</code></dt>
+<dd> Query results will be displayed in a table like form, using whitespace characters to separate the columns and align the output.</dd>
+<dt><code>-cmd&nbsp;<wbr></code><i>command</i></dt>
+<dd> Run <i>command</i> before reading stdin.</dd>
+<dt><code>-csv</code></dt>
+<dd> Set output mode to CSV (comma separated values).</dd>
+<dt><code>-html</code></dt>
+<dd> Query results will be output as simple HTML tables.</dd>
+<dt><code>-line</code></dt>
+<dd> Query results will be displayed with one value per line, rows separated by a blank line. Designed to be easily parsed by scripts or other programs</dd>
+<dt><code>-list</code></dt>
+<dd> Query results will be displayed with the separator (|, by default) character between each field value. The default.</dd>
+<dt><code>-separator&nbsp;<wbr></code><i>separator</i></dt>
+<dd> Set output field separator. Default is &#8216;|&#8217;.</dd>
+<dt><code>-nullvalue&nbsp;<wbr></code><i>string</i></dt>
+<dd> Set string used to represent NULL values. Default is &#8221; (empty string).</dd>
+<dt><code>-stats</code></dt>
+<dd> Print memory stats before each finalize.</dd>
+<dt><code>-version</code></dt>
+<dd> Show SQLite version.</dd>
+<dt><code>-vfs&nbsp;<wbr></code><i>name</i></dt>
+<dd> Use <i>name</i> as the default VFS.</dd>
+<dt><code>-help</code></dt>
+<dd> Show help on options and exit. </dd>
 </dl>
 <h2>INIT FILE</h2>
 <p> <code>sqlite3</code> reads an initialization file to set the configuration of the interactive environment. Throughout initialization, any previously specified setting can be overridden. The sequence of initialization is as follows: </p>

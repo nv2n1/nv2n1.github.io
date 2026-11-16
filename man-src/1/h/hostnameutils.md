@@ -39,12 +39,12 @@ description: "gethostname, gethostbyname, gethostbyaddr, getservbyname – get l
 <p> The following example shows how to get the port number of the FTP service: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &gt;/opt/sge/default/lx-amd64/getservbyname -number ftp
 21
 </pre>
-</dl>
+</dd></dl>
 <p> The next example shows the output of <code>gethostname -all</code> when the host alias file contains this line: </p>
 <p> gridmaster extern_name extern_name.mydomain </p>
 <p> The local host resolving must also provide the alias name &quot;gridmaster&quot;. Each xxQS_NAMExx host that wants to use the cluster must be able to resolve the host name &quot;gridmaster&quot;. </p>
@@ -52,7 +52,7 @@ description: "gethostname, gethostbyname, gethostbyaddr, getservbyname – get l
 <p> The host alias file must be readable from each host (use e.g. NFS shared file location). </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &gt;/opt/sge/default/lx-amd64/gethostname -all
 Hostname: extern_name.mydomain
@@ -60,22 +60,22 @@ SGE name: gridmaster
 Aliases:  loghost gridmaster
 Host Address(es): 192.168.143.99
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell.</dl>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">EXAMPLES</a></p>
+<dt><a href="#lbAN">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAO">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbAO">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAP">SEE ALSO</a></p>
+</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAQ">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAQ">COPYRIGHT</a></dt>
+<dd></dd></dl>

@@ -16,40 +16,40 @@ description: "Lintian::Inspect::Changelog::Version — Parse a literal version s
 <p>A class for parsing literal version strings</p>
 <h2>Class Methods</h2>
 <dl COMPACT>
-<dt>new ()</p>
-<dd>Creates a new Lintian::Inspect::Changelog::Version object.</dl>
+<dt>new ()</dt>
+<dd>Creates a new Lintian::Inspect::Changelog::Version object.</dd></dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>set (<font SIZE="-1">LITERAL, NATIVE</font>)</p>
-<dd>Set the various members in the Lintian::Inspect::Changelog::Version object using the <font SIZE="-1">LITERAL</font> version string and the <font SIZE="-1">NATIVE</font> boolean selector.</p>
-<dt>literal</p>
+<dt>set (<font SIZE="-1">LITERAL, NATIVE</font>)</dt>
+<dd>Set the various members in the Lintian::Inspect::Changelog::Version object using the <font SIZE="-1">LITERAL</font> version string and the <font SIZE="-1">NATIVE</font> boolean selector.</dd>
+<dt>literal</dt>
 <dd>
-<dt>epoch</p>
+</dd><dt>epoch</dt>
 <dd>
-<dt>no_epoch</p>
+</dd><dt>no_epoch</dt>
 <dd>
-<dt>upstream</p>
+</dd><dt>upstream</dt>
 <dd>
-<dt>maintainer_revision</p>
+</dd><dt>maintainer_revision</dt>
 <dd>
-<dt>debian_source</p>
+</dd><dt>debian_source</dt>
 <dd>
-<dt>debian_no_epoch</p>
+</dd><dt>debian_no_epoch</dt>
 <dd>
-<dt>source_nmu</p>
+</dd><dt>source_nmu</dt>
 <dd>
-<dt>binary_nmu</p>
+</dd><dt>binary_nmu</dt>
 <dd>
-<dt>without_source_nmu</p>
+</dd><dt>without_source_nmu</dt>
 <dd>
-<dt>debian_without_backport</p>
+</dd><dt>debian_without_backport</dt>
 <dd>
-<dt>backport_release</p>
+</dd><dt>backport_release</dt>
 <dd>
-<dt>backport_revision</p>
+</dd><dt>backport_revision</dt>
 <dd>
-<dt>without_backport</p>
-<dd></dl>
+</dd><dt>without_backport</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

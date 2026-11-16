@@ -10,21 +10,13 @@ description: "std::filesystem::last_write_time – std::filesystem::last_write_t
 <p>std::filesystem::last_write_time &#8211; std::filesystem::last_write_time</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;filesystem&gt;
-
     std::filesystem::file_time_type last_write_time(const std::filesystem::path &amp;p);
-
 std::filesystem::file_time_type last_write_time(const std::filesystem::path &amp;p, (1)(since C++ 17)
-
                                                                                     std::error_code &amp;ec) noexcept;
-
 void last_write_time(const std::filesystem::path &amp;p,
-
                      std::filesystem::file_time_type new_time);
-
 void last_write_time(const std::filesystem::path &amp;p, (2)(since C++ 17)
-
                                                          std::filesystem::file_time_type new_time,
-
                      std::error_code &amp;ec) noexcept;</code></pre>
 <p>1) Returns the time of the last modification of p, determined as if by accessing the member st_mtime of the POSIX stat (symlinks are followed) The non-throwing overload returns file_time_type::min() on errors.<br />
 2) Changes the time of the last modification of p, as if by POSIX futimens (symlinks are followed) </p>
@@ -42,21 +34,13 @@ ec &#8211; out-parameter for error reporting in the non-throwing overload</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 using namespace std::chrono_literals;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;example.bin&quot;;
     std::ofstream(p.c_str()).put('a'); // create file

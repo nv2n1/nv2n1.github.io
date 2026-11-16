@@ -15,7 +15,7 @@ pci_bus_add_devices - start driver for PCI devices
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>bus to check for new devices</dl>
+<dl><dd></dd><dd>bus to check for new devices</dd></dl>
 
 <h2>Description</h2>
 

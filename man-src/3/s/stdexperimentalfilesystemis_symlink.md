@@ -11,13 +11,10 @@ std::experimental::filesystem::is_symlink - std::experimental::filesystem::is_sy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     bool is_symlink(file_status s);
 (1)(filesystem TS)
-
     bool is_symlink(const path &amp;p);
 (2)(filesystem TS)
-
     bool is_symlink(const path &amp;p, error_code &amp;ec);</code></pre> 
 Checks if the given file status or path corresponds to a symbolic link, as if determined by the POSIX S_IFLNK. 
 1) Equivalent to s.type() == file_type::symlink. 
@@ -49,25 +46,16 @@ The information provided by this function is usually also provided as a byproduc
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 #include &lt;unistd.h&gt;
-
 #include &lt;sys/socket.h&gt;
-
 #include &lt;sys/un.h&gt;
-
 #include &lt;sys/stat.h&gt;
 namespace fs = std::experimental::filesystem;
 void demo_status(const fs::path &amp;p, fs::file_status s)
-
 {
     std::cout &lt;&lt; p;
     // alternative: switch(s.type()) { case fs::file_type::regular: ...}
@@ -88,9 +76,7 @@ void demo_status(const fs::path &amp;p, fs::file_status s)
     if (!fs::exists(s))
         std::cout &lt;&lt; &quot; does not exist\n&quot;;
 }
-
 int main()
-
 {
     // create files of different kinds
     fs::create_directory(&quot;sandbox&quot;);

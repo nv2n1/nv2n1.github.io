@@ -10,7 +10,6 @@ description: "quad3d, quad3d_f – Draws a 3d quad onto the specified bitmap. Al
 <p>quad3d, quad3d_f &#8211; Draws a 3d quad onto the specified bitmap. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void quad3d(BITMAP *bmp, int type, BITMAP *tex, V3D *v1, *v2, *v3, *v4);
 void quad3d_f(BITMAP *bmp, int type, BITMAP *tex, V3D_f *v1, *v2, *v3, *v4);</code></pre>
 <h2>Description</h2>

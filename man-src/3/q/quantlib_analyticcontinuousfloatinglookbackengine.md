@@ -19,6 +19,6 @@ description: "QuantLib::AnalyticContinuousFloatingLookbackEngine – Pricing eng
 <p> Formula from &#8216;Option Pricing Formulas&#8217;, E.G. Haug, McGraw-Hill, 1998, p.61-62 </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>returned values verified against results from literature</dl>
+<dd>returned values verified against results from literature</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

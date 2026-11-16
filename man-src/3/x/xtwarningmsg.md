@@ -11,26 +11,26 @@ description: "XtErrorMsg, XtSetErrorMsgHandler, XtWarningMsg, XtSetWarningMsgHan
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtErrorMsg(const char *<i>name</i>, const char *<i>type</i>, const char *<i>class</i>, const char *<i>defaultMsg</i>, String *<i>params</i>, Cardinal *<i>num_params</i>);</p>
-<dd>void XtSetErrorMsgHandler(XtErrorMsgHandler <i>msg_handler</i>);</p>
-<dd>void XtSetWarningMsgHandler(XtErrorMsgHandler <i>msg_handler</i>);</p>
-<dd>void XtWarningMsg(const char *<i>name</i>, const char *<i>type</i>, const char *<i>class</i>, const char *<i>defaultMsg</i>, String *<i>params</i>, Cardinal *<i>num_params</i>);</dl>
+<dd>void XtErrorMsg(const char *<i>name</i>, const char *<i>type</i>, const char *<i>class</i>, const char *<i>defaultMsg</i>, String *<i>params</i>, Cardinal *<i>num_params</i>);</dd>
+<dd>void XtSetErrorMsgHandler(XtErrorMsgHandler <i>msg_handler</i>);</dd>
+<dd>void XtSetWarningMsgHandler(XtErrorMsgHandler <i>msg_handler</i>);</dd>
+<dd>void XtWarningMsg(const char *<i>name</i>, const char *<i>type</i>, const char *<i>class</i>, const char *<i>defaultMsg</i>, String *<i>params</i>, Cardinal *<i>num_params</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>class</i></p>
-<dd>Specifies the resource class of the error message.</p>
-<dt><i>default</i></p>
-<dd>Specifies the default message to use.</p>
-<dt><i>name</i></p>
-<dd>Specifies the general kind of error.</p>
-<dt><i>type</i></p>
-<dd>Specifies the detailed name of the error.</p>
-<dt><i>msg_handler</i></p>
-<dd>Specifies the new fatal error procedure, which should not return or the nonfatal error procedure, which usually returns.</p>
-<dt><i>num_params</i></p>
-<dd>Specifies the number of values in the parameter list.</p>
-<dt><i>params</i></p>
-<dd>Specifies a pointer to a list of values to be stored in the message.</dl>
+<dt><i>class</i></dt>
+<dd>Specifies the resource class of the error message.</dd>
+<dt><i>default</i></dt>
+<dd>Specifies the default message to use.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the general kind of error.</dd>
+<dt><i>type</i></dt>
+<dd>Specifies the detailed name of the error.</dd>
+<dt><i>msg_handler</i></dt>
+<dd>Specifies the new fatal error procedure, which should not return or the nonfatal error procedure, which usually returns.</dd>
+<dt><i>num_params</i></dt>
+<dd>Specifies the number of values in the parameter list.</dd>
+<dt><i>params</i></dt>
+<dd>Specifies a pointer to a list of values to be stored in the message.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtErrorMsg</code> function has been superceded by <code>XtAppErrorMsg</code>. </p>
 <p> The <code>XtSetErrorMsgHandler</code> function has been superceded by <code>XtAppSetErrorMsgHandler</code>. </p>

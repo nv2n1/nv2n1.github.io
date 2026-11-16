@@ -19,7 +19,7 @@ description: "sggsvd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SGGSVD computes the generalized singular value decomposition (GSVD)
  of an M-by-N real matrix A and P-by-N real matrix B:
@@ -81,11 +81,11 @@ description: "sggsvd.f –"
                       X = Q*( I   0    )
                             ( 0 inv(R) ).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBU</i> </p>
+</dt><dd> <i>JOBU</i> </dd>
 <pre>
           JOBU is CHARACTER*1
           = 'U':  Orthogonal matrix U is computed;
@@ -238,7 +238,7 @@ LDQ &gt;= 1 otherwise.</p>
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   TOLA    REAL
   TOLB    REAL
@@ -249,22 +249,22 @@ LDQ &gt;= 1 otherwise.</p>
           The size of TOLA and TOLB may affect the size of backward
           errors of the decomposition.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 331 of file sggsvd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

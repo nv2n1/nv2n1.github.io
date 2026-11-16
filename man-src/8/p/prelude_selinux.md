@@ -55,9 +55,9 @@ description: "prelude_selinux – Security Enhanced Linux Policy for the prelude
 <p> Policy governs the access confined processes have to these ports. SELinux prelude policy is very flexible allowing users to setup their prelude processes in as secure a method as possible. </p>
 <p> The following port types are defined for prelude: </p>
 <dl>
-<dt><code>prelude_port_t</code></p>
+<dt><code>prelude_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 4690 udp 4690</dl>
+</dd><dd>Default Defined Ports: tcp 4690 udp 4690</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type prelude_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>anon_inodefs_t</code> </p>
@@ -110,8 +110,8 @@ description: "prelude_selinux – Security Enhanced Linux Policy for the prelude
 <p> <code>prelude_audisp_exec_t</code> </p>
 <p> &#8211; Set files with the prelude_audisp_exec_t type, if you want to transition an executable to the prelude_audisp_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/audisp-prelude, /usr/sbin/audisp-prelude </p>
+<dt>Paths:</dt>
+<dd>/sbin/audisp-prelude, /usr/sbin/audisp-prelude </dd>
 </dl>
 <p> <code>prelude_audisp_var_run_t</code> </p>
 <p> &#8211; Set files with the prelude_audisp_var_run_t type, if you want to store the prelude audisp files under the /run or /var/run directory. </p>
@@ -124,8 +124,8 @@ description: "prelude_selinux – Security Enhanced Linux Policy for the prelude
 <p> <code>prelude_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the prelude_initrc_exec_t type, if you want to transition an executable to the prelude_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/prelude-lml, /etc/rc.d/init.d/prelude-manager, /etc/rc.d/init.d/prelude-correlator </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/prelude-lml, /etc/rc.d/init.d/prelude-manager, /etc/rc.d/init.d/prelude-correlator </dd>
 </dl>
 <p> <code>prelude_lml_exec_t</code> </p>
 <p> &#8211; Set files with the prelude_lml_exec_t type, if you want to transition an executable to the prelude_lml_t domain. </p>
@@ -138,8 +138,8 @@ description: "prelude_selinux – Security Enhanced Linux Policy for the prelude
 <p> <code>prelude_spool_t</code> </p>
 <p> &#8211; Set files with the prelude_spool_t type, if you want to store the prelude files under the /var/spool directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/spool/prelude(/.*)?, /var/spool/prelude-manager(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/spool/prelude(/.*)?, /var/spool/prelude-manager(/.*)? </dd>
 </dl>
 <p> <code>prelude_var_lib_t</code> </p>
 <p> &#8211; Set files with the prelude_var_lib_t type, if you want to store the prelude files under the /var/lib directory. </p>

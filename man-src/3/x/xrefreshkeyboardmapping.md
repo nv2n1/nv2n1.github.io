@@ -10,40 +10,40 @@ description: "XLookupKeysym, XRefreshKeyboardMapping, XLookupString, XRebindKeys
 <p>XLookupKeysym, XRefreshKeyboardMapping, XLookupString, XRebindKeysym &#8211; handle keyboard input events in Latin-1 </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>KeySym XLookupKeysym(XKeyEvent *<i>key_event</i>, int <i>index</i>);</p>
-<dd>int XRefreshKeyboardMapping(XMappingEvent *<i>event_map</i>);</p>
-<dd>int XLookupString(XKeyEvent *<i>event_struct</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, XComposeStatus *<i>status_in_out</i>);</p>
-<dd>int XRebindKeysym(Display *<i>display</i>, KeySym <i>keysym</i>, KeySym <i>list</i>[], int <i>mod_count</i>, unsigned char *<i>string</i>, int <i>num_bytes</i>);</dl>
+<dd>KeySym XLookupKeysym(XKeyEvent *<i>key_event</i>, int <i>index</i>);</dd>
+<dd>int XRefreshKeyboardMapping(XMappingEvent *<i>event_map</i>);</dd>
+<dd>int XLookupString(XKeyEvent *<i>event_struct</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, XComposeStatus *<i>status_in_out</i>);</dd>
+<dd>int XRebindKeysym(Display *<i>display</i>, KeySym <i>keysym</i>, KeySym <i>list</i>[], int <i>mod_count</i>, unsigned char *<i>string</i>, int <i>num_bytes</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>buffer_return</i></p>
-<dd>Returns the translated characters.</p>
-<dt><i>bytes_buffer</i></p>
-<dd>Specifies the length of the buffer. No more than bytes_buffer of translation are returned.</p>
-<dt><i>num_bytes</i></p>
-<dd>Specifies the number of bytes in the string argument.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>event_map</i></p>
-<dd>Specifies the mapping event that is to be used.</p>
-<dt><i>event_struct</i></p>
-<dd>Specifies the key event structure to be used. You can pass <code>XKeyPressedEvent</code> or <code>XKeyReleasedEvent</code>.</p>
-<dt><i>index</i></p>
-<dd>Specifies the index into the KeySyms list for the event&#8217;s KeyCode.</p>
-<dt><i>key_event</i></p>
-<dd>Specifies the <code>KeyPress</code> or <code>KeyRelease</code> event.</p>
-<dt><i>keysym</i></p>
-<dd>Specifies the KeySym that is to be returned.</p>
-<dt><i>keysym_return</i></p>
-<dd>Returns the KeySym computed from the event if this argument is not NULL.</p>
-<dt><i>list</i></p>
-<dd>Specifies the KeySyms to be used as modifiers.</p>
-<dt><i>mod_count</i></p>
-<dd>Specifies the number of modifiers in the modifier list.</p>
-<dt><i>status_in_out</i></p>
-<dd>Specifies or returns the <code>XComposeStatus</code> structure or NULL.</p>
-<dt><i>string</i></p>
-<dd>Specifies the string that is copied and will be returned by <code>XLookupString</code>.</dl>
+<dt><i>buffer_return</i></dt>
+<dd>Returns the translated characters.</dd>
+<dt><i>bytes_buffer</i></dt>
+<dd>Specifies the length of the buffer. No more than bytes_buffer of translation are returned.</dd>
+<dt><i>num_bytes</i></dt>
+<dd>Specifies the number of bytes in the string argument.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>event_map</i></dt>
+<dd>Specifies the mapping event that is to be used.</dd>
+<dt><i>event_struct</i></dt>
+<dd>Specifies the key event structure to be used. You can pass <code>XKeyPressedEvent</code> or <code>XKeyReleasedEvent</code>.</dd>
+<dt><i>index</i></dt>
+<dd>Specifies the index into the KeySyms list for the event&#8217;s KeyCode.</dd>
+<dt><i>key_event</i></dt>
+<dd>Specifies the <code>KeyPress</code> or <code>KeyRelease</code> event.</dd>
+<dt><i>keysym</i></dt>
+<dd>Specifies the KeySym that is to be returned.</dd>
+<dt><i>keysym_return</i></dt>
+<dd>Returns the KeySym computed from the event if this argument is not NULL.</dd>
+<dt><i>list</i></dt>
+<dd>Specifies the KeySyms to be used as modifiers.</dd>
+<dt><i>mod_count</i></dt>
+<dd>Specifies the number of modifiers in the modifier list.</dd>
+<dt><i>status_in_out</i></dt>
+<dd>Specifies or returns the <code>XComposeStatus</code> structure or NULL.</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the string that is copied and will be returned by <code>XLookupString</code>.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XLookupKeysym</code> function uses a given keyboard event and the index you specified to return the KeySym from the list that corresponds to the KeyCode member in the <code>XKeyPressedEvent</code> or <code>XKeyReleasedEvent</code> structure. If no KeySym is defined for the KeyCode of the event, <code>XLookupKeysym</code> returns <code>NoSymbol</code>. </p>
 <p> The <code>XRefreshKeyboardMapping</code> function refreshes the stored modifier and keymap information. You usually call this function when a <code>MappingNotify</code> event with a request member of <code>MappingKeyboard</code> or <code>MappingModifier</code> occurs. The result is to update Xlib&#8217;s knowledge of the keyboard. </p>

@@ -18,39 +18,33 @@ description: "condor_router_history Display the history for routed jobs"
 <p> <code>&#8211;h</code></p>
 <dl>
 <dt>
-<dd> Display usage information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information and exit.</dd>
+</dl>
 <p> <code>&#8211;show_records</code></p>
 <dl>
 <dt>
-<dd> Displays individual records in addition to the summary.</p>
-<dt>
-<dd></dl>
+</dt><dd> Displays individual records in addition to the summary.</dd>
+</dl>
 <p> <code>&#8211;show_iwd</code></p>
 <dl>
 <dt>
-<dd> Include working directory in displayed records.</p>
-<dt>
-<dd></dl>
+</dt><dd> Include working directory in displayed records.</dd>
+</dl>
 <p> <code>&#8211;age </code> <i>days</i></p>
 <dl>
 <dt>
-<dd> Set the ending time of the summary to be <i>days</i> days ago.</p>
-<dt>
-<dd></dl>
+</dt><dd> Set the ending time of the summary to be <i>days</i> days ago.</dd>
+</dl>
 <p> <code>&#8211;days </code> <i>days</i></p>
 <dl>
 <dt>
-<dd> Set the number of days to summarize.</p>
-<dt>
-<dd></dl>
+</dt><dd> Set the number of days to summarize.</dd>
+</dl>
 <p> <code>&#8211;start </code> <i>YYYY-MM-DD HH:MM</i></p>
 <dl>
 <dt>
-<dd> Set the start time of the summary.</p>
-<dt>
-<dd></dl>
+</dt><dd> Set the start time of the summary.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_router_history</i> will exit with a status of 0 (zero) upon success, and non-zero otherwise. </p>
 <h2>Author</h2>

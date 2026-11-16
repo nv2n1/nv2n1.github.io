@@ -14,12 +14,12 @@ description: "ccw_device_get_id – obtain a ccw device id"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>device to obtain the id for</dl>
+</dd><dd>device to obtain the id for</dd></dl>
 <p> <i>dev_id</i></p>
 <dl>
-<dd>where to fill in the values</dl>
+<dd>where to fill in the values</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

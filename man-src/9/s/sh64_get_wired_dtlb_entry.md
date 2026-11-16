@@ -14,9 +14,9 @@ description: "sh64_get_wired_dtlb_entry – Allocate a wired (locked-in) entry i
 <p><i>void</i></p>
 <dl>
 <dd>
-<dd>no arguments</dl>
+</dd><dd>no arguments</dd></dl>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

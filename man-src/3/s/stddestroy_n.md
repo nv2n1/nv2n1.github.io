@@ -10,13 +10,9 @@ description: "std::destroy_n – std::destroy_n"
 <p>std::destroy_n &#8211; std::destroy_n</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;memory&gt;
-
 template&lt; class ForwardIt, class Size &gt;                                   (1) (since C++17)
-
 ForwardIt destroy_n( ForwardIt first, Size n );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class Size &gt;            (2) (since C++17)
-
 ForwardIt destroy_n( ExecutionPolicy&amp;&amp; policy, ForwardIt first, Size n );</code></pre>
 <p>1) Destroys the n objects in the range starting at first, as if by for (; n &gt; 0; (void)++first, &#8211;n)<br />
     std::destroy_at(std::addressof(*first));<br />
@@ -50,9 +46,7 @@ No increment, assignment, comparison, or indirection through valid instances of 
 <p>The following example demonstrates how to use destroy_n to destroy a contiguous sequence of elements.<br />
  // Run this code </p>
 <pre><code>#include &lt;memory&gt;
-
 #include &lt;new&gt;
-
 #include &lt;iostream&gt;
 struct Tracer {
     int value;
@@ -63,7 +57,6 @@ struct Tracer {
     }
 };
 int main()
-
 {
     alignas(Tracer) unsigned char buffer[sizeof(Tracer) * 8];
     for (int i = 0; i &lt; 8; ++i)

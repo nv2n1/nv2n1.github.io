@@ -21,38 +21,38 @@ description: "winicontopam – convert a Microsoft Windows icon file into a Netp
 <h2>OPTIONS</h2>
 <p> In addition to the options common to all programs based on libnetpbm (most notably <code>-quiet</code>, see Common Options ), <code>winicontopam</code> recognizes the following command line options: </p>
 <dl>
-<dt><code>-allimages</code></p>
-<dd> Convert all images in the input. </p>
+<dt><code>-allimages</code></dt>
+<dd> Convert all images in the input. </dd>
 <p> You may not specify this together with <code>-image</code>. </p>
 <p> By default, <code>winicontopam</code> converts only the one &amp;lsquo;best quality&amp;rsquo; image (largest, then most bits per pixel). </p>
-<dt><code>-image=</code><i>index</i></p>
-<dd> Convert image number <i>index</i> (starting with zero). </p>
+<dt><code>-image=</code><i>index</i></dt>
+<dd> Convert image number <i>index</i> (starting with zero). </dd>
 <p> You may not specify this together with <code>-allimages</code>. </p>
 <p> By default, <code>winicontopam</code> converts the &amp;lsquo;best quality&amp;rsquo; image (largest, then most bits per pixel). </p>
-<dt><code>-andmasks</code></p>
-<dd> If the image to be extracted contains both 8-bit transparency data and AND mask, write a five-channel Netpbm PAM file with the AND mask stored to the fifth plane. </p>
-<dt><code>-verbose</code></p>
-<dd> Print more messages </p>
+<dt><code>-andmasks</code></dt>
+<dd> If the image to be extracted contains both 8-bit transparency data and AND mask, write a five-channel Netpbm PAM file with the AND mask stored to the fifth plane. </dd>
+<dt><code>-verbose</code></dt>
+<dd> Print more messages </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-pamtowinicon/">pamtowinicon</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-winicontoppm/">winicontoppm</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-pamsplit/">pamsplit</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code>pam</code>(1)<br />
 &nbsp;<wbr></p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-winicon/">winicon</a></code>(1) </p>
-</dl>
+</dd></dl>
 <p> For information on the PNG format, see <a rel="nofollow" href="http://schaik.com/png">http://schaik.com/png</a> . </p>
 <h2>HISTORY</h2>
 <p> <code>winicontopam</code> was new in Netpbm 10.63 (June 2013). It obsoleted <code>winicontoppm</code> by providing more function and conforming better to Netpbm conventions. </p>

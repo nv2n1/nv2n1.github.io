@@ -23,40 +23,40 @@ description: "update-mime – create or update MIME information"
 <p> Mime types of the form &quot;class/*&quot; and even &quot;*/*&quot; are now acceptable (they were previously disallowed). When using &quot;class/*&quot;, it is probably a good idea to add a &quot;priority=[1-4]&quot; option so specific rules using the default priority will get chosen first. If using &quot;*/*&quot;, though, you probably want to add a &quot;priority=0&quot; option to make that rule a &quot;last resort&quot;.</p>
 <h3>Commands</h3>
 <dl>
-<dt><code>&lt;program-string&gt;</code></p>
-<dd>Specifies the program to run to view a file of the given content-type. <code>This option setting cannot be omitted.</code> An implicit &quot;view=&quot; can be considered before it. When writing an entry that has no viewer, use a value of <i>false</i> in this space.</p>
-<dt><code>compose=&lt;program-string&gt;</code></p>
-<dd>The &quot;compose&quot; command may be used to specify a program that can be used to compose a new body or body part in the given format. Its intended use is to support mail composing agents that support the composition of multiple types of mail using external composing agents. The result of the composing program may be data that is not yet suitable for mail transport &#8212; that is, a Content-Transfer-Encoding may need to be applied to the data.</p>
-<dt><code>composetyped=&lt;program-string&gt;</code></p>
-<dd>The &quot;composetyped&quot; command is similar to &quot;compose&quot;, but is to be used when the composing program needs to specify the Content-type header field to be applied to the composed data. The &quot;compose&quot; option is simpler, and is preferred for use with existing (non-mail-oriented) programs for composing data in a given format. The &quot;composetyped&quot; option is necessary when the Content-type information must include auxiliary parameters, and the composition program must then know enough about mail formats to produce output that includes the mail type information.</p>
-<dt><code>edit=&lt;program-string&gt;</code></p>
-<dd>The &quot;edit&quot; command may be used to specify a program that can be used to edit a body or body part in the given format. In many cases, it may be identical in content to the &quot;compose&quot; command.</p>
-<dt><code>print=&lt;program-string&gt;</code></p>
-<dd>The &quot;print&quot; command may be used to specify a program that can be used to print a message or body part in the given format.</dl>
+<dt><code>&lt;program-string&gt;</code></dt>
+<dd>Specifies the program to run to view a file of the given content-type. <code>This option setting cannot be omitted.</code> An implicit &quot;view=&quot; can be considered before it. When writing an entry that has no viewer, use a value of <i>false</i> in this space.</dd>
+<dt><code>compose=&lt;program-string&gt;</code></dt>
+<dd>The &quot;compose&quot; command may be used to specify a program that can be used to compose a new body or body part in the given format. Its intended use is to support mail composing agents that support the composition of multiple types of mail using external composing agents. The result of the composing program may be data that is not yet suitable for mail transport &#8212; that is, a Content-Transfer-Encoding may need to be applied to the data.</dd>
+<dt><code>composetyped=&lt;program-string&gt;</code></dt>
+<dd>The &quot;composetyped&quot; command is similar to &quot;compose&quot;, but is to be used when the composing program needs to specify the Content-type header field to be applied to the composed data. The &quot;compose&quot; option is simpler, and is preferred for use with existing (non-mail-oriented) programs for composing data in a given format. The &quot;composetyped&quot; option is necessary when the Content-type information must include auxiliary parameters, and the composition program must then know enough about mail formats to produce output that includes the mail type information.</dd>
+<dt><code>edit=&lt;program-string&gt;</code></dt>
+<dd>The &quot;edit&quot; command may be used to specify a program that can be used to edit a body or body part in the given format. In many cases, it may be identical in content to the &quot;compose&quot; command.</dd>
+<dt><code>print=&lt;program-string&gt;</code></dt>
+<dd>The &quot;print&quot; command may be used to specify a program that can be used to print a message or body part in the given format.</dd></dl>
 <h3>Modifiers</h3>
 <p>These options are modifiers to all the commands specified on the command line.</p>
 <dl>
-<dt><code>test=&lt;conditional&gt;</code></p>
-<dd>The &quot;test&quot; option may be used to test some external condition (e.g., the machine architecture, or the window system in use) to determine whether or not the mailcap line applies. It specifies a program to be run to test some condition. If the test fails, a subsequent mailcap entry will be sought. Multiple test options are not permitted &#8212; since a test can call a program, it can already be arbitrarily complex. </p>
+<dt><code>test=&lt;conditional&gt;</code></dt>
+<dd>The &quot;test&quot; option may be used to test some external condition (e.g., the machine architecture, or the window system in use) to determine whether or not the mailcap line applies. It specifies a program to be run to test some condition. If the test fails, a subsequent mailcap entry will be sought. Multiple test options are not permitted &#8212; since a test can call a program, it can already be arbitrarily complex. </dd>
 <p> <code>Note:</code> When testing for X by looking at the <i>DISPLAY</i> environment variable, please use one of: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;test=test -z&nbsp;&quot;$DISPLAY&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(no X)<br />
 &nbsp;<wbr>&nbsp;or&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;test=test -n&nbsp;&quot;$DISPLAY&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(have X) </p>
 <p> Many programs recognize these strings and optimize for them.</p>
-<dt><code>needsterminal</code></p>
-<dd>The &quot;needsterminal&quot; option, if given, indicates that the commands must be run on an interactive terminal. This is needed to inform window-oriented user agents that an interactive terminal is needed. (The decision is not left exclusively to the command because in some circumstances it may not be possible for such programs to tell whether or not they are on interactive terminals.) The needsterminal command applies to the view, compose and edit commands, if they exist. Note that this is NOT a test &#8212; it is a requirement for the environment in which the program will be executed, and will typically cause the creation of a terminal window when not executed on either a real terminal or a terminal window.</p>
-<dt><code>copiousoutput</code></p>
-<dd>The &quot;copiousoutput&quot; option, if given, indicates that the output from the view-command will be an extended stream of output and is to be interpreted as advice to the UA (User Agent mail-reading program) that the output should be either paged or made scrollable. Note that it is probably a mistake if needsterminal and copiousoutput are both specified.</dl>
+<dt><code>needsterminal</code></dt>
+<dd>The &quot;needsterminal&quot; option, if given, indicates that the commands must be run on an interactive terminal. This is needed to inform window-oriented user agents that an interactive terminal is needed. (The decision is not left exclusively to the command because in some circumstances it may not be possible for such programs to tell whether or not they are on interactive terminals.) The needsterminal command applies to the view, compose and edit commands, if they exist. Note that this is NOT a test &#8212; it is a requirement for the environment in which the program will be executed, and will typically cause the creation of a terminal window when not executed on either a real terminal or a terminal window.</dd>
+<dt><code>copiousoutput</code></dt>
+<dd>The &quot;copiousoutput&quot; option, if given, indicates that the output from the view-command will be an extended stream of output and is to be interpreted as advice to the UA (User Agent mail-reading program) that the output should be either paged or made scrollable. Note that it is probably a mistake if needsterminal and copiousoutput are both specified.</dd></dl>
 <h3>Content-Type Info</h3>
 <p>These options provide additional information about the given content-type.</p>
 <dl>
-<dt><code>description=&lt;string&gt;</code></p>
-<dd>The &quot;description&quot; option simply provides a textual description that describes the type of data, to be used optionally by mail readers that wish to describe the data before offering to display it.</p>
-<dt><code>textualnewlines</code></p>
-<dd>The &quot;textualnewlines&quot; option, if given, indicates that this type of data is line-oriented and that, if encoded in a binary format, all newlines should be converted to canonical form (CRLF) before encoding, and will be in that form after decoding. In general, this is needed only if there is line-oriented data of some type other than text/* or non-line-oriented data that is a subtype of text.</p>
-<dt><code>x11-bitmap=&lt;pathname&gt;</code></p>
-<dd>The &quot;x11-bitmap&quot; option names a file, in X11 bitmap (xbm) format, which points to an appropriate icon to be used to visually denote the presence of this kind of data.</p>
-<dt><code>nametemplate=&lt;string&gt;</code></p>
-<dd>The &quot;nametemplate&quot; option gives a file name format, in which %s will be replaced by a short unique string to give the name of the temporary file to be passed to the viewing command. This is only expected to be relevant in environments where filename extensions are meaningful, e.g., one could specify that a GIF file being passed to a gif viewer should have a name ending in &quot;.gif&quot; by using &quot;nametemplate=%s.gif&quot;.</dl>
+<dt><code>description=&lt;string&gt;</code></dt>
+<dd>The &quot;description&quot; option simply provides a textual description that describes the type of data, to be used optionally by mail readers that wish to describe the data before offering to display it.</dd>
+<dt><code>textualnewlines</code></dt>
+<dd>The &quot;textualnewlines&quot; option, if given, indicates that this type of data is line-oriented and that, if encoded in a binary format, all newlines should be converted to canonical form (CRLF) before encoding, and will be in that form after decoding. In general, this is needed only if there is line-oriented data of some type other than text/* or non-line-oriented data that is a subtype of text.</dd>
+<dt><code>x11-bitmap=&lt;pathname&gt;</code></dt>
+<dd>The &quot;x11-bitmap&quot; option names a file, in X11 bitmap (xbm) format, which points to an appropriate icon to be used to visually denote the presence of this kind of data.</dd>
+<dt><code>nametemplate=&lt;string&gt;</code></dt>
+<dd>The &quot;nametemplate&quot; option gives a file name format, in which %s will be replaced by a short unique string to give the name of the temporary file to be passed to the viewing command. This is only expected to be relevant in environments where filename extensions are meaningful, e.g., one could specify that a GIF file being passed to a gif viewer should have a name ending in &quot;.gif&quot; by using &quot;nametemplate=%s.gif&quot;.</dd></dl>
 <h2>Dependencies</h2>
 <p>Packages that wish to provide MIME access to themselves should <code>not</code> depend on, recommend, or suggest <code>mime-support,</code> as the the file they create in <i>/usr/lib/mime/packages</i> will cause <code>update-mime</code> to be automatically run via a Dpkg trigger.</p>
 <h2>Desktop Entries</h2>

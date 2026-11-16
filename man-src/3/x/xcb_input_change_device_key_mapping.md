@@ -10,25 +10,23 @@ description: "xcb_input_change_device_key_mapping –"
 <p>xcb_input_change_device_key_mapping &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xinput.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_input_change_device_key_mapping(xcb_connection_t *conn, uint8_t device_id, xcb_input_key_code_t first_keycode, uint8_t keysyms_per_keycode, uint8_t keycode_count, const xcb_keysym_t *keysyms);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>device_id</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>first_keycode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>keysyms_per_keycode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>keycode_count</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>keysyms</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>device_id</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>first_keycode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>keysyms_per_keycode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>keycode_count</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>keysyms</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

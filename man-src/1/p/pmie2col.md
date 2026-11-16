@@ -16,10 +16,10 @@ description: "pmie2col – convert pmie output to multi-column format"
 <p> The precision of the tabulated values from <code>pmie</code> can be specified with the <code>-p</code> option (default is 2 decimal places). This option can and will override any width setting in order to present the requested precision. </p>
 <p> The <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) configuration must follow these rules:</p>
 <dl>
-<dt>(1)</p>
-<dd> Each <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) expression is of the form &#8220;NAME = expr;&#8221;. NAME will be used as the column heading, and must contain no white space, although special characters can be escaped by enclosing NAME in single quotes.</p>
-<dt>(2)</p>
-<dd> The &#8220;expr&#8221; must be a valid <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) expression that produces a singular value.</dl>
+<dt>(1)</dt>
+<dd> Each <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) expression is of the form &#8220;NAME = expr;&#8221;. NAME will be used as the column heading, and must contain no white space, although special characters can be escaped by enclosing NAME in single quotes.</dd>
+<dt>(2)</dt>
+<dd> The &#8220;expr&#8221; must be a valid <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) expression that produces a singular value.</dd></dl>
 <p> In addition, <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) must be run with the <code>-v</code> command line option. </p>
 <p> It is also possible to use the <code>-e</code> command line to <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) and output lines will be prefixed by a timestamp.</p>
 <h2>EXAMPLE</h2>

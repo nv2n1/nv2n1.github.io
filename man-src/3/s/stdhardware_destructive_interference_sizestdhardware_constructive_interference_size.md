@@ -10,13 +10,9 @@ description: "std::hardware_destructive_interference_size,std::hardware_construc
 <p>std::hardware_destructive_interference_size,std::hardware_constructive_interference_size &#8211; std::hardware_destructive_interference_size,std::hardware_constructive_interference_size</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;new&gt;
-
 inline constexpr std::size_t                                          (1) (since C++17)
-
 hardware_destructive_interference_size = /*implementation-defined*/;
-
 inline constexpr std::size_t                                          (2) (since C++17)
-
 hardware_constructive_interference_size = /*implementation-defined*/;</code></pre>
 <p>1) Minimum offset between two objects to avoid false sharing. Guaranteed to be at least alignof(std::max_align_t) struct keep_apart {<br />
     alignas(std::hardware_destructive_interference_size) std::atomic&lt;int&gt; cat;<br />
@@ -27,13 +23,11 @@ hardware_constructive_interference_size = /*implementation-defined*/;</code></pr
     std::atomic&lt;int&gt; dog;
     int puppy;
 };
-
 struct kennel {
     // Other data members...
     alignas(sizeof(together)) together pack;
     // Other data members...
 };
-
 static_assert(sizeof(together) &lt;= std::hardware_constructive_interference_size);
 </code></pre>
 <h2>Notes</h2>

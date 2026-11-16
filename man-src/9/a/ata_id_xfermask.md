@@ -14,7 +14,7 @@ description: "ata_id_xfermask – Compute xfermask from the given IDENTIFY data"
 <p><i>id</i></p>
 <dl>
 <dd>
-<dd>IDENTIFY data to compute xfer mask from</dl>
+</dd><dd>IDENTIFY data to compute xfer mask from</dd></dl>
 <h2>Description</h2>
 <p>Compute the xfermask for this device. This is not as trivial as it seems if we must consider early devices correctly. </p>
 <p> FIXME: pre IDE drive timing (do we care ?). </p>
@@ -24,5 +24,5 @@ description: "ata_id_xfermask – Compute xfermask from the given IDENTIFY data"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

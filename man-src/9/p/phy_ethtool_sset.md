@@ -14,10 +14,10 @@ description: "phy_ethtool_sset – generic ethtool sset function, handles all th
 <p><i>phydev</i></p>
 <dl>
 <dd>
-<dd>target phy_device struct</dl>
+</dd><dd>target phy_device struct</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>ethtool_cmd</dl>
+<dd>ethtool_cmd</dd></dl>
 <h2>Description</h2>
 <p>A few notes about parameter checking: &#8211; We don&#8217;t set port or transceiver, so we don&#8217;t care what they were set to. &#8211; <code>phy_start_aneg</code> will make sure forced settings are sane, and choose the next best ones from the ones selected, so we don&#8217;t care if ethtool tries to give us bad values.</p>
 <h2>Copyright</h2>

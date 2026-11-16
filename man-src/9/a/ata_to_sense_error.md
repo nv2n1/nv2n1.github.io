@@ -14,30 +14,30 @@ description: "ata_to_sense_error – convert ATA error to SCSI error"
 <p><i>id</i></p>
 <dl>
 <dd>
-<dd>ATA device number</dl>
+</dd><dd>ATA device number</dd></dl>
 <p> <i>drv_stat</i></p>
 <dl>
-<dd>value contained in ATA status register</dl>
+<dd>value contained in ATA status register</dd></dl>
 <p> <i>drv_err</i></p>
 <dl>
-<dd>value contained in ATA error register</dl>
+<dd>value contained in ATA error register</dd></dl>
 <p> <i>sk</i></p>
 <dl>
-<dd>the sense key we&#8217;ll fill out</dl>
+<dd>the sense key we&#8217;ll fill out</dd></dl>
 <p> <i>asc</i></p>
 <dl>
-<dd>the additional sense code we&#8217;ll fill out</dl>
+<dd>the additional sense code we&#8217;ll fill out</dd></dl>
 <p> <i>ascq</i></p>
 <dl>
-<dd>the additional sense code qualifier we&#8217;ll fill out</dl>
+<dd>the additional sense code qualifier we&#8217;ll fill out</dd></dl>
 <p> <i>verbose</i></p>
 <dl>
-<dd>be verbose</dl>
+<dd>be verbose</dd></dl>
 <h2>Description</h2>
 <p>Converts an ATA error into a SCSI error. Fill out pointers to SK, ASC, and ASCQ bytes for later use in fixed or descriptor format sense blocks. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

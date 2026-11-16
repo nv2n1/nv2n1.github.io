@@ -11,9 +11,7 @@ std::ends - std::ends
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ostream&gt;
-
 template&lt; class CharT, class Traits &gt;
-
 std::basic_ostream&lt;CharT, Traits&gt;&amp; ends( std::basic_ostream&lt;CharT, Traits&gt;&amp; os );</code></pre> 
 Inserts a null character into the output sequence os as if by calling os.put(CharT()). 
 This is an output-only I/O manipulator, it may be called with an expression such as out &lt;&lt; std::ends for any out of type std::basic_ostream. 
@@ -34,11 +32,8 @@ os (reference to the stream after insertion of the null character)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;strstream&gt;
-
 int main()
-
 {
     std::ostrstream oss;
     oss &lt;&lt; &quot;Sample text: &quot; &lt;&lt; 42 &lt;&lt; std::ends;

@@ -15,41 +15,41 @@ description: "pycodestyle – pycodestyle documentation"
 <h2>INTRODUCTION</h2>
 <p> pycodestyle is a tool to check your Python code against some of the style conventions in <i>PEP 8</i>.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Features</i></p>
-<dt>&bull;</p>
-<dd> <i>Disclaimer</i></p>
-<dt>&bull;</p>
-<dd> <i>Installation</i></p>
-<dt>&bull;</p>
-<dd> <i>Example usage and output</i></p>
-<dt>&bull;</p>
-<dd> <i>Configuration</i></p>
-<dt>&bull;</p>
-<dd> <i>Error codes</i></p>
-<dt>&bull;</p>
-<dd> <i>Related tools</i></dl>
+<dt>&bull;</dt>
+<dd> <i>Features</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Disclaimer</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Installation</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Example usage and output</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Configuration</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Error codes</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Related tools</i></dd></dl>
 <h3>Features</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Plugin architecture: Adding new checks is easy.</p>
-<dt>&bull;</p>
-<dd> Parseable output: Jump to error location in your editor.</p>
-<dt>&bull;</p>
-<dd> Small: Just one Python file, requires only stdlib. You can use just the <code>pycodestyle.py</code> file for this purpose.</p>
-<dt>&bull;</p>
-<dd> Comes with a comprehensive test suite.</dl>
+<dt>&bull;</dt>
+<dd> Plugin architecture: Adding new checks is easy.</dd>
+<dt>&bull;</dt>
+<dd> Parseable output: Jump to error location in your editor.</dd>
+<dt>&bull;</dt>
+<dd> Small: Just one Python file, requires only stdlib. You can use just the <code>pycodestyle.py</code> file for this purpose.</dd>
+<dt>&bull;</dt>
+<dd> Comes with a comprehensive test suite.</dd></dl>
 <h3>Disclaimer</h3>
 <p> This utility does not enforce every single rule of PEP 8. It helps to verify that some coding conventions are applied but it does not intend to be exhaustive. Some rules cannot be expressed with a simple algorithm, and other rules are only guidelines which you could circumvent when you need to. </p>
 <p> Always remember this statement from <i>PEP 8</i>: <i>A style guide is about consistency. Consistency with this style guide is important. Consistency within a project is more important. Consistency within one module or function is most important.</i> </p>
 <p> Among other things, these features are currently not in the scope of the <code>pycodestyle</code> library:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>naming conventions</code>: this kind of feature is supported through plugins. Install <i>flake8</i> and the <i>pep8-naming extension</i> to use this feature.</p>
-<dt>&bull;</p>
-<dd> <code>docstring conventions</code>: they are not in the scope of this library; see the <i>pydocstyle project</i>.</p>
-<dt>&bull;</p>
-<dd> <code>automatic fixing</code>: see the section <i>PEP8 Fixers</i> in the <i>related tools</i> page.</dl>
+<dt>&bull;</dt>
+<dd> <code>naming conventions</code>: this kind of feature is supported through plugins. Install <i>flake8</i> and the <i>pep8-naming extension</i> to use this feature.</dd>
+<dt>&bull;</dt>
+<dd> <code>docstring conventions</code>: they are not in the scope of this library; see the <i>pydocstyle project</i>.</dd>
+<dt>&bull;</dt>
+<dd> <code>automatic fixing</code>: see the section <i>PEP8 Fixers</i> in the <i>related tools</i> page.</dd></dl>
 <h3>Installation</h3>
 <p> You can install, upgrade, uninstall <code>pycodestyle.py</code> with these commands: </p>
 <pre>
@@ -212,12 +212,12 @@ being processed.Allowed options are : exclude, filename, select,<br />
 <p> The behaviour may be configured at two levels, the user and project levels. </p>
 <p> At the user level, settings are read from the following locations:</p>
 <dl>
-<dt><code>If on Windows:</code></p>
-<dd> <code>~\.pep8</code></p>
-<dt><code>Otherwise, if the XDG_CONFIG_HOME</code> environment variable is defined:</p>
-<dd> <code>XDG_CONFIG_HOME/pep8</code></p>
-<dt><code>Else if XDG_CONFIG_HOME</code> is not defined:</p>
-<dd> <code>~/.config/pep8</code> </p>
+<dt><code>If on Windows:</code></dt>
+<dd> <code>~\.pep8</code></dd>
+<dt><code>Otherwise, if the XDG_CONFIG_HOME</code> environment variable is defined:</dt>
+<dd> <code>XDG_CONFIG_HOME/pep8</code></dd>
+<dt><code>Else if XDG_CONFIG_HOME</code> is not defined:</dt>
+<dd> <code>~/.config/pep8</code> </dd>
 <p> Example: </p>
 <pre>
 [pep8]
@@ -1340,88 +1340,88 @@ import pycodestyle LINES_SLICE = slice(14, &#8211; 20) class StyleGuide(pycodest
 <h2>PYCODESTYLE API</h2>
 <p> The library provides classes which are usable by third party tools.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Checker Classes</i></p>
-<dt>&bull;</p>
-<dd> <i>Report Classes</i></p>
-<dt>&bull;</p>
-<dd> <i>Utilities</i></dl>
+<dt>&bull;</dt>
+<dd> <i>Checker Classes</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Report Classes</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Utilities</i></dd></dl>
 <h3>Checker Classes</h3>
 <p> The <code>StyleGuide</code> class is used to configure a style guide checker instance to check multiple files. </p>
 <p> The <code>Checker</code> class can be used to check a single file.</p>
 <dl>
-<dt><code>class pycodestyle.StyleGuide(parse_argv=False, config_file=None, parser=None, paths=None, report=None, **kwargs)</code></p>
-<dd> Initialize a PEP-8 instance with few options.</p>
-<dt><code>init_report(reporter=None)</code></p>
-<dd> Initialize the report instance.</p>
-<dt><code>check_files(paths=None)</code></p>
-<dd> Run all checks on the paths.</p>
-<dt><code>input_file(filename, lines=None, expected=None, line_offset=0)</code></p>
-<dd> Run all checks on a Python source file.</p>
-<dt><code>input_dir(dirname)</code></p>
-<dd> Check all files in this directory and all subdirectories.</p>
-<dt><code>excluded(filename, parent=None)</code></p>
-<dd> Check if the file should be excluded. </p>
+<dt><code>class pycodestyle.StyleGuide(parse_argv=False, config_file=None, parser=None, paths=None, report=None, **kwargs)</code></dt>
+<dd> Initialize a PEP-8 instance with few options.</dd>
+<dt><code>init_report(reporter=None)</code></dt>
+<dd> Initialize the report instance.</dd>
+<dt><code>check_files(paths=None)</code></dt>
+<dd> Run all checks on the paths.</dd>
+<dt><code>input_file(filename, lines=None, expected=None, line_offset=0)</code></dt>
+<dd> Run all checks on a Python source file.</dd>
+<dt><code>input_dir(dirname)</code></dt>
+<dd> Check all files in this directory and all subdirectories.</dd>
+<dt><code>excluded(filename, parent=None)</code></dt>
+<dd> Check if the file should be excluded. </dd>
 <p> Check if &#8216;options.exclude&#8217; contains a pattern that matches filename.</p>
-<dt><code>ignore_code(code)</code></p>
-<dd> Check if the error code should be ignored. </p>
+<dt><code>ignore_code(code)</code></dt>
+<dd> Check if the error code should be ignored. </dd>
 <p> If &#8216;options.select&#8217; contains a prefix of the error code, return False. Else, if &#8216;options.ignore&#8217; contains a prefix of the error code, return True.</p>
-<dt><code>get_checks(argument_name)</code></p>
-<dd> Get all the checks for this category. </p>
+<dt><code>get_checks(argument_name)</code></dt>
+<dd> Get all the checks for this category. </dd>
 <p> Find all globally visible functions where the first argument name starts with argument_name and which contain selected tests.</p>
-<dt><code>class pycodestyle.Checker(filename=None, lines=None, report=None, **kwargs)</code></p>
-<dd> Load a Python source file, tokenize it, check coding style.</p>
-<dt><code>readline()</code></p>
-<dd> Get the next line from the input buffer.</p>
-<dt><code>run_check(check, argument_names)</code></p>
-<dd> Run a check plugin.</p>
-<dt><code>check_physical(line)</code></p>
-<dd> Run all physical checks on a raw input line.</p>
-<dt><code>build_tokens_line()</code></p>
-<dd> Build a logical line from tokens.</p>
-<dt><code>check_logical()</code></p>
-<dd> Build a line from tokens and run all logical checks on it.</p>
-<dt><code>check_ast()</code></p>
-<dd> Build the file&#8217;s AST and run all AST checks.</p>
-<dt><code>generate_tokens()</code></p>
-<dd> Tokenize the file, run physical line checks and yield tokens.</p>
-<dt><code>check_all(expected=None, line_offset=0)</code></p>
-<dd> Run all checks on the input file.</dl>
+<dt><code>class pycodestyle.Checker(filename=None, lines=None, report=None, **kwargs)</code></dt>
+<dd> Load a Python source file, tokenize it, check coding style.</dd>
+<dt><code>readline()</code></dt>
+<dd> Get the next line from the input buffer.</dd>
+<dt><code>run_check(check, argument_names)</code></dt>
+<dd> Run a check plugin.</dd>
+<dt><code>check_physical(line)</code></dt>
+<dd> Run all physical checks on a raw input line.</dd>
+<dt><code>build_tokens_line()</code></dt>
+<dd> Build a logical line from tokens.</dd>
+<dt><code>check_logical()</code></dt>
+<dd> Build a line from tokens and run all logical checks on it.</dd>
+<dt><code>check_ast()</code></dt>
+<dd> Build the file&#8217;s AST and run all AST checks.</dd>
+<dt><code>generate_tokens()</code></dt>
+<dd> Tokenize the file, run physical line checks and yield tokens.</dd>
+<dt><code>check_all(expected=None, line_offset=0)</code></dt>
+<dd> Run all checks on the input file.</dd></dl>
 <h3>Report Classes</h3>
 <dl>
-<dt><code>class pycodestyle.BaseReport(options)</code></p>
-<dd> Collect the results of the checks.</p>
-<dt><code>start()</code></p>
-<dd> Start the timer.</p>
-<dt><code>stop()</code></p>
-<dd> Stop the timer.</p>
-<dt><code>init_file(filename, lines, expected, line_offset)</code></p>
-<dd> Signal a new file.</p>
-<dt><code>increment_logical_line()</code></p>
-<dd> Signal a new logical line.</p>
-<dt><code>error(line_number, offset, text, check)</code></p>
-<dd> Report an error, according to options.</p>
-<dt><code>get_file_results()</code></p>
-<dd> Return the count of errors and warnings for this file.</p>
-<dt><code>get_count(prefix=&#8221;)</code></p>
-<dd> Return the total count of errors and warnings.</p>
-<dt><code>get_statistics(prefix=&#8221;)</code></p>
-<dd> Get statistics for message codes that start with the prefix. </p>
+<dt><code>class pycodestyle.BaseReport(options)</code></dt>
+<dd> Collect the results of the checks.</dd>
+<dt><code>start()</code></dt>
+<dd> Start the timer.</dd>
+<dt><code>stop()</code></dt>
+<dd> Stop the timer.</dd>
+<dt><code>init_file(filename, lines, expected, line_offset)</code></dt>
+<dd> Signal a new file.</dd>
+<dt><code>increment_logical_line()</code></dt>
+<dd> Signal a new logical line.</dd>
+<dt><code>error(line_number, offset, text, check)</code></dt>
+<dd> Report an error, according to options.</dd>
+<dt><code>get_file_results()</code></dt>
+<dd> Return the count of errors and warnings for this file.</dd>
+<dt><code>get_count(prefix=&#8221;)</code></dt>
+<dd> Return the total count of errors and warnings.</dd>
+<dt><code>get_statistics(prefix=&#8221;)</code></dt>
+<dd> Get statistics for message codes that start with the prefix. </dd>
 <p> prefix=&#8221; matches all errors and warnings prefix=&#8217;E&#8217; matches all errors prefix=&#8217;W&#8217; matches all warnings prefix=&#8217;E4&#8242; matches all errors that have to do with imports</p>
-<dt><code>print_statistics(prefix=&#8221;)</code></p>
-<dd> Print overall statistics (number of errors and warnings).</p>
-<dt><code>print_benchmark()</code></p>
-<dd> Print benchmark numbers.</p>
-<dt><code>class pycodestyle.FileReport(options)</code></p>
-<dd> Collect the results of the checks and print only the filenames.</p>
-<dt><code>class pycodestyle.StandardReport(options)</code></p>
-<dd> Collect and print the results of the checks.</p>
-<dt><code>class pycodestyle.DiffReport(options)</code></p>
-<dd> Collect and print the results for the changed lines only.</dl>
+<dt><code>print_statistics(prefix=&#8221;)</code></dt>
+<dd> Print overall statistics (number of errors and warnings).</dd>
+<dt><code>print_benchmark()</code></dt>
+<dd> Print benchmark numbers.</dd>
+<dt><code>class pycodestyle.FileReport(options)</code></dt>
+<dd> Collect the results of the checks and print only the filenames.</dd>
+<dt><code>class pycodestyle.StandardReport(options)</code></dt>
+<dd> Collect and print the results of the checks.</dd>
+<dt><code>class pycodestyle.DiffReport(options)</code></dt>
+<dd> Collect and print the results for the changed lines only.</dd></dl>
 <h3>Utilities</h3>
 <dl>
-<dt><code>pycodestyle.expand_indent(line)</code></p>
-<dd> Return the amount of indentation. </p>
+<dt><code>pycodestyle.expand_indent(line)</code></dt>
+<dd> Return the amount of indentation. </dd>
 <p> Tabs are expanded to the next multiple of 8. </p>
 <pre>
 &gt;&gt;&gt; expand_indent('    ')
@@ -1433,8 +1433,8 @@ import pycodestyle LINES_SLICE = slice(14, &#8211; 20) class StyleGuide(pycodest
 &gt;&gt;&gt; expand_indent('        	')
 16
 </pre>
-<dt><code>pycodestyle.mute_string(text)</code></p>
-<dd> Replace contents with &#8216;xxx&#8217; to prevent syntax matching. </p>
+<dt><code>pycodestyle.mute_string(text)</code></dt>
+<dd> Replace contents with &#8216;xxx&#8217; to prevent syntax matching. </dd>
 <pre>
 &gt;&gt;&gt; mute_string('&quot;abc&quot;')
 '&quot;xxx&quot;'
@@ -1443,49 +1443,49 @@ import pycodestyle LINES_SLICE = slice(14, &#8211; 20) class StyleGuide(pycodest
 &gt;&gt;&gt; mute_string(&quot;r'abc'&quot;)
 &quot;r'xxx'&quot;
 </pre>
-<dt><code>pycodestyle.read_config(options, args, arglist, parser)</code></p>
-<dd> Read and parse configurations. </p>
+<dt><code>pycodestyle.read_config(options, args, arglist, parser)</code></dt>
+<dd> Read and parse configurations. </dd>
 <p> If a config file is specified on the command line with the &quot;&#8211;config&quot; option, then only it is used for configuration. </p>
 <p> Otherwise, the user configuration (~/.config/pep8) and any local configurations in the current directory or above will be merged together (in that order) using the read method of ConfigParser.</p>
-<dt><code>pycodestyle.process_options(arglist=None, parse_argv=False, config_file=None)</code></p>
-<dd> Process options passed either via arglist or via command line args. </p>
+<dt><code>pycodestyle.process_options(arglist=None, parse_argv=False, config_file=None)</code></dt>
+<dd> Process options passed either via arglist or via command line args. </dd>
 <p> Passing in the <code>config_file</code> parameter allows other tools, such as flake8 to specify their own options to be processed in pep8.</p>
-<dt><code>pycodestyle.register_check(func_or_cls, codes=None)</code></p>
-<dd> Register a new check object.</dl>
+<dt><code>pycodestyle.register_check(func_or_cls, codes=None)</code></dt>
+<dd> Register a new check object.</dd></dl>
 <h2>DEVELOPER&#8217;S NOTES</h2>
 <h3>Source code</h3>
 <p> The source code is currently <i>available on GitHub</i> under the terms and conditions of the <i>Expat license</i>. Fork away!</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Source code</i> and <i>issue tracker</i> on GitHub.</p>
-<dt>&bull;</p>
-<dd> <i>Continuous tests</i> against Python 2.6 through 3.4 and PyPy, on <i>Travis-CI platform</i>.</dl>
+<dt>&bull;</dt>
+<dd> <i>Source code</i> and <i>issue tracker</i> on GitHub.</dd>
+<dt>&bull;</dt>
+<dd> <i>Continuous tests</i> against Python 2.6 through 3.4 and PyPy, on <i>Travis-CI platform</i>.</dd></dl>
 <h3>Direction</h3>
 <p> Some high-level aims and directions to bear in mind for contributions:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>pycodestyle</code> is intended to be as fast as possible. Using the <code>ast</code> module defeats that purpose. The <i>pep8-naming</i> plugin exists for this sort of functionality.</p>
-<dt>&bull;</p>
-<dd> If you want to provide extensibility / plugins, please see <i>flake8</i> &#8211; <code>pycodestyle</code> doesn&#8217;t want or need a plugin architecture.</p>
-<dt>&bull;</p>
-<dd> Python 2.6 support is still deemed important.</p>
-<dt>&bull;</p>
-<dd> <code>pycodestyle</code> aims to have no external dependencies.</dl>
+<dt>&bull;</dt>
+<dd> <code>pycodestyle</code> is intended to be as fast as possible. Using the <code>ast</code> module defeats that purpose. The <i>pep8-naming</i> plugin exists for this sort of functionality.</dd>
+<dt>&bull;</dt>
+<dd> If you want to provide extensibility / plugins, please see <i>flake8</i> &#8211; <code>pycodestyle</code> doesn&#8217;t want or need a plugin architecture.</dd>
+<dt>&bull;</dt>
+<dd> Python 2.6 support is still deemed important.</dd>
+<dt>&bull;</dt>
+<dd> <code>pycodestyle</code> aims to have no external dependencies.</dd></dl>
 <h3>Contribute</h3>
 <p> You can add checks to this program by writing plugins. Each plugin is a simple function that is called for each line of source code, either physical or logical. </p>
 <p> Physical line:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Raw line of text from the input file. </p>
+<dt>&bull;</dt>
+<dd> Raw line of text from the input file. </dd>
 <p> Logical line:</p>
-<dt>&bull;</p>
-<dd> Multi-line statements converted to a single line.</p>
-<dt>&bull;</p>
-<dd> Stripped left and right.</p>
-<dt>&bull;</p>
-<dd> Contents of strings replaced with <code>&quot;xxx&quot;</code> of same length.</p>
-<dt>&bull;</p>
-<dd> Comments removed. </p>
+<dt>&bull;</dt>
+<dd> Multi-line statements converted to a single line.</dd>
+<dt>&bull;</dt>
+<dd> Stripped left and right.</dd>
+<dt>&bull;</dt>
+<dd> Contents of strings replaced with <code>&quot;xxx&quot;</code> of same length.</dd>
+<dt>&bull;</dt>
+<dd> Comments removed. </dd>
 <p> The check function requests physical or logical lines by the name of the first argument: </p>
 <pre>
 def maximum_line_length(physical_line)
@@ -1493,24 +1493,24 @@ def extraneous_whitespace(logical_line)
 def blank_lines(logical_line, blank_lines, indent_level, line_number)
 </pre>
 <p> The last example above demonstrates how check plugins can request additional information with extra arguments. All attributes of the <code>Checker</code> object are available. Some examples:</p>
-<dt>&bull;</p>
-<dd> <code>lines</code>: a list of the raw lines from the input file</p>
-<dt>&bull;</p>
-<dd> <code>tokens</code>: the tokens that contribute to this logical line</p>
-<dt>&bull;</p>
-<dd> <code>line_number</code>: line number in the input file</p>
-<dt>&bull;</p>
-<dd> <code>total_lines</code>: number of lines in the input file</p>
-<dt>&bull;</p>
-<dd> <code>blank_lines</code>: blank lines before this one</p>
-<dt>&bull;</p>
-<dd> <code>indent_char</code>: indentation character in this file (<code>&quot; &quot;</code> or <code>&quot;	&quot;</code>)</p>
-<dt>&bull;</p>
-<dd> <code>indent_level</code>: indentation (with tabs expanded to multiples of 8)</p>
-<dt>&bull;</p>
-<dd> <code>previous_indent_level</code>: indentation on previous line</p>
-<dt>&bull;</p>
-<dd> <code>previous_logical</code>: previous logical line </p>
+<dt>&bull;</dt>
+<dd> <code>lines</code>: a list of the raw lines from the input file</dd>
+<dt>&bull;</dt>
+<dd> <code>tokens</code>: the tokens that contribute to this logical line</dd>
+<dt>&bull;</dt>
+<dd> <code>line_number</code>: line number in the input file</dd>
+<dt>&bull;</dt>
+<dd> <code>total_lines</code>: number of lines in the input file</dd>
+<dt>&bull;</dt>
+<dd> <code>blank_lines</code>: blank lines before this one</dd>
+<dt>&bull;</dt>
+<dd> <code>indent_char</code>: indentation character in this file (<code>&quot; &quot;</code> or <code>&quot;	&quot;</code>)</dd>
+<dt>&bull;</dt>
+<dd> <code>indent_level</code>: indentation (with tabs expanded to multiples of 8)</dd>
+<dt>&bull;</dt>
+<dd> <code>previous_indent_level</code>: indentation on previous line</dd>
+<dt>&bull;</dt>
+<dd> <code>previous_logical</code>: previous logical line </dd>
 <p> Check plugins can also maintain per-file state. If you need this, declare a parameter named <code>checker_state</code>. You will be passed a dict, which will be the same one for all lines in the same file but a different one for different files. Each check plugin gets its own dict, so you don&#8217;t need to worry about clobbering the state of other plugins. </p>
 <p> The docstring of each check function shall be the relevant part of text from <i>PEP 8</i>. It is printed if the user enables <code>&#8211;show-pep8</code>. Several docstrings contain examples directly from the <i>PEP 8</i> document. </p>
 <pre><code>
@@ -1530,556 +1530,556 @@ $ python pycodestyle.py --verbose pycodestyle.py
 <h3>2.0.0 (2016-05-31)</h3>
 <p> Announcements:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Repository renamed to <i>pycodestyle</i>; Issue #466 / #481.</p>
-<dt>&bull;</p>
-<dd> Added joint Code of Conduct as member of PyCQA; #483 </p>
+<dt>&bull;</dt>
+<dd> Repository renamed to <i>pycodestyle</i>; Issue #466 / #481.</dd>
+<dt>&bull;</dt>
+<dd> Added joint Code of Conduct as member of PyCQA; #483 </dd>
 <p> Changes:</p>
-<dt>&bull;</p>
-<dd> Added tox test support for Python 3.5 and pypy3</p>
-<dt>&bull;</p>
-<dd> Added check E275 for whitespace on <i>from &#8230; import &#8230;</i> lines; #489 / #491</p>
-<dt>&bull;</p>
-<dd> Added W503 to the list of codes ignored by default ignore list; #498</p>
-<dt>&bull;</p>
-<dd> Removed use of project level <i>.pep8</i> configuration file; #364 </p>
+<dt>&bull;</dt>
+<dd> Added tox test support for Python 3.5 and pypy3</dd>
+<dt>&bull;</dt>
+<dd> Added check E275 for whitespace on <i>from &#8230; import &#8230;</i> lines; #489 / #491</dd>
+<dt>&bull;</dt>
+<dd> Added W503 to the list of codes ignored by default ignore list; #498</dd>
+<dt>&bull;</dt>
+<dd> Removed use of project level <i>.pep8</i> configuration file; #364 </dd>
 <p> Bugs:</p>
-<dt>&bull;</p>
-<dd> Fixed bug with treating <i>~</i> operator as binary; #383 / #384</p>
-<dt>&bull;</p>
-<dd> Identify binary operators as unary; #484 / #485</dl>
+<dt>&bull;</dt>
+<dd> Fixed bug with treating <i>~</i> operator as binary; #383 / #384</dd>
+<dt>&bull;</dt>
+<dd> Identify binary operators as unary; #484 / #485</dd></dl>
 <h3>1.7.0 (2016-01-12)</h3>
 <p> Announcements:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Repository moved to PyCQA Organization on GitHub: <i><a rel="nofollow" href="https://github.com/pycqa/pep8">https://github.com/pycqa/pep8</a></i> </p>
+<dt>&bull;</dt>
+<dd> Repository moved to PyCQA Organization on GitHub: <i><a rel="nofollow" href="https://github.com/pycqa/pep8">https://github.com/pycqa/pep8</a></i> </dd>
 <p> Changes:</p>
-<dt>&bull;</p>
-<dd> Reverted the fix in #368, &quot;options passed on command line are only ones accepted&quot; feature. This has many unintended consequences in pep8 and flake8 and needs to be reworked when I have more time.</p>
-<dt>&bull;</p>
-<dd> Added support for Python 3.5. (Issue #420 &amp; #459)</p>
-<dt>&bull;</p>
-<dd> Added support for multi-line config_file option parsing. (Issue #429)</p>
-<dt>&bull;</p>
-<dd> Improved parameter parsing. (Issues #420 &amp; #456) </p>
+<dt>&bull;</dt>
+<dd> Reverted the fix in #368, &quot;options passed on command line are only ones accepted&quot; feature. This has many unintended consequences in pep8 and flake8 and needs to be reworked when I have more time.</dd>
+<dt>&bull;</dt>
+<dd> Added support for Python 3.5. (Issue #420 &amp; #459)</dd>
+<dt>&bull;</dt>
+<dd> Added support for multi-line config_file option parsing. (Issue #429)</dd>
+<dt>&bull;</dt>
+<dd> Improved parameter parsing. (Issues #420 &amp; #456) </dd>
 <p> Bugs:</p>
-<dt>&bull;</p>
-<dd> Fixed BytesWarning on Python 3. (Issue #459)</dl>
+<dt>&bull;</dt>
+<dd> Fixed BytesWarning on Python 3. (Issue #459)</dd></dl>
 <h3>1.6.2 (2015-02-15)</h3>
 <p> Changes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Added check for breaking around a binary operator. (Issue #197, Pull #305) </p>
+<dt>&bull;</dt>
+<dd> Added check for breaking around a binary operator. (Issue #197, Pull #305) </dd>
 <p> Bugs:</p>
-<dt>&bull;</p>
-<dd> Restored config_file parameter in process_options(). (Issue #380)</dl>
+<dt>&bull;</dt>
+<dd> Restored config_file parameter in process_options(). (Issue #380)</dd></dl>
 <h3>1.6.1 (2015-02-08)</h3>
 <p> Changes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Assign variables before referenced. (Issue #287) </p>
+<dt>&bull;</dt>
+<dd> Assign variables before referenced. (Issue #287) </dd>
 <p> Bugs:</p>
-<dt>&bull;</p>
-<dd> Exception thrown due to unassigned <code>local_dir</code> variable. (Issue #377)</dl>
+<dt>&bull;</dt>
+<dd> Exception thrown due to unassigned <code>local_dir</code> variable. (Issue #377)</dd></dl>
 <h3>1.6.0 (2015-02-06)</h3>
 <p> News:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Ian Lee &lt;<i>ianlee1521 [at] gmail.com</i>&gt; joined the project as a maintainer. </p>
+<dt>&bull;</dt>
+<dd> Ian Lee &lt;<i>ianlee1521 [at] gmail.com</i>&gt; joined the project as a maintainer. </dd>
 <p> Changes:</p>
-<dt>&bull;</p>
-<dd> Report E731 for lambda assignment. (Issue #277)</p>
-<dt>&bull;</p>
-<dd> Report E704 for one-liner def instead of E701. Do not report this error in the default configuration. (Issue #277)</p>
-<dt>&bull;</p>
-<dd> Replace codes E111, E112 and E113 with codes E114, E115 and E116 for bad indentation of comments. (Issue #274)</p>
-<dt>&bull;</p>
-<dd> Report E266 instead of E265 when the block comment starts with multiple <code>#</code>. (Issue #270)</p>
-<dt>&bull;</p>
-<dd> Report E402 for import statements not at the top of the file. (Issue #264)</p>
-<dt>&bull;</p>
-<dd> Do not enforce whitespaces around <code>**</code> operator. (Issue #292)</p>
-<dt>&bull;</p>
-<dd> Strip whitespace from around paths during normalization. (Issue #339 / #343)</p>
-<dt>&bull;</p>
-<dd> Update <code>&#8211;format</code> documentation. (Issue #198 / Pull Request #310)</p>
-<dt>&bull;</p>
-<dd> Add <code>.tox/</code> to default excludes. (Issue #335)</p>
-<dt>&bull;</p>
-<dd> Do not report E121 or E126 in the default configuration. (Issues #256 / #316)</p>
-<dt>&bull;</p>
-<dd> Allow spaces around the equals sign in an annotated function. (Issue #357)</p>
-<dt>&bull;</p>
-<dd> Allow trailing backslash if in an inline comment. (Issue #374)</p>
-<dt>&bull;</p>
-<dd> If <code>&#8211;config</code> is used, only that configuration is processed. Otherwise, merge the user and local configurations are merged. (Issue #368 / #369) </p>
+<dt>&bull;</dt>
+<dd> Report E731 for lambda assignment. (Issue #277)</dd>
+<dt>&bull;</dt>
+<dd> Report E704 for one-liner def instead of E701. Do not report this error in the default configuration. (Issue #277)</dd>
+<dt>&bull;</dt>
+<dd> Replace codes E111, E112 and E113 with codes E114, E115 and E116 for bad indentation of comments. (Issue #274)</dd>
+<dt>&bull;</dt>
+<dd> Report E266 instead of E265 when the block comment starts with multiple <code>#</code>. (Issue #270)</dd>
+<dt>&bull;</dt>
+<dd> Report E402 for import statements not at the top of the file. (Issue #264)</dd>
+<dt>&bull;</dt>
+<dd> Do not enforce whitespaces around <code>**</code> operator. (Issue #292)</dd>
+<dt>&bull;</dt>
+<dd> Strip whitespace from around paths during normalization. (Issue #339 / #343)</dd>
+<dt>&bull;</dt>
+<dd> Update <code>&#8211;format</code> documentation. (Issue #198 / Pull Request #310)</dd>
+<dt>&bull;</dt>
+<dd> Add <code>.tox/</code> to default excludes. (Issue #335)</dd>
+<dt>&bull;</dt>
+<dd> Do not report E121 or E126 in the default configuration. (Issues #256 / #316)</dd>
+<dt>&bull;</dt>
+<dd> Allow spaces around the equals sign in an annotated function. (Issue #357)</dd>
+<dt>&bull;</dt>
+<dd> Allow trailing backslash if in an inline comment. (Issue #374)</dd>
+<dt>&bull;</dt>
+<dd> If <code>&#8211;config</code> is used, only that configuration is processed. Otherwise, merge the user and local configurations are merged. (Issue #368 / #369) </dd>
 <p> Bug fixes:</p>
-<dt>&bull;</p>
-<dd> Don&#8217;t crash if Checker.build_tokens_line() returns None. (Issue #306)</p>
-<dt>&bull;</p>
-<dd> Don&#8217;t crash if os.path.expanduser() throws an ImportError. (Issue #297)</p>
-<dt>&bull;</p>
-<dd> Missing space around keyword parameter equal not always reported, E251. (Issue #323)</p>
-<dt>&bull;</p>
-<dd> Fix false positive E711/E712/E713. (Issues #330 and #336)</p>
-<dt>&bull;</p>
-<dd> Do not skip physical checks if the newline is escaped. (Issue #319)</p>
-<dt>&bull;</p>
-<dd> Flush sys.stdout to avoid race conditions with printing. See flake8 bug: <i><a rel="nofollow" href="https://gitlab.com/pycqa/flake8/issues/17">https://gitlab.com/pycqa/flake8/issues/17</a></i> for more details. (Issue #363)</dl>
+<dt>&bull;</dt>
+<dd> Don&#8217;t crash if Checker.build_tokens_line() returns None. (Issue #306)</dd>
+<dt>&bull;</dt>
+<dd> Don&#8217;t crash if os.path.expanduser() throws an ImportError. (Issue #297)</dd>
+<dt>&bull;</dt>
+<dd> Missing space around keyword parameter equal not always reported, E251. (Issue #323)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive E711/E712/E713. (Issues #330 and #336)</dd>
+<dt>&bull;</dt>
+<dd> Do not skip physical checks if the newline is escaped. (Issue #319)</dd>
+<dt>&bull;</dt>
+<dd> Flush sys.stdout to avoid race conditions with printing. See flake8 bug: <i><a rel="nofollow" href="https://gitlab.com/pycqa/flake8/issues/17">https://gitlab.com/pycqa/flake8/issues/17</a></i> for more details. (Issue #363)</dd></dl>
 <h3>1.5.7 (2014-05-29)</h3>
 <p> Bug fixes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Skip the traceback on &quot;Broken pipe&quot; signal. (Issue #275)</p>
-<dt>&bull;</p>
-<dd> Do not exit when an option in <code>setup.cfg</code> or <code>tox.ini</code> is not recognized.</p>
-<dt>&bull;</p>
-<dd> Check the last line even if it does not end with a newline. (Issue #286)</p>
-<dt>&bull;</p>
-<dd> Always open files in universal newlines mode in Python 2. (Issue #288)</dl>
+<dt>&bull;</dt>
+<dd> Skip the traceback on &quot;Broken pipe&quot; signal. (Issue #275)</dd>
+<dt>&bull;</dt>
+<dd> Do not exit when an option in <code>setup.cfg</code> or <code>tox.ini</code> is not recognized.</dd>
+<dt>&bull;</dt>
+<dd> Check the last line even if it does not end with a newline. (Issue #286)</dd>
+<dt>&bull;</dt>
+<dd> Always open files in universal newlines mode in Python 2. (Issue #288)</dd></dl>
 <h3>1.5.6 (2014-04-14)</h3>
 <p> Bug fixes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Check the last line even if it has no end-of-line. (Issue #273)</dl>
+<dt>&bull;</dt>
+<dd> Check the last line even if it has no end-of-line. (Issue #273)</dd></dl>
 <h3>1.5.5 (2014-04-10)</h3>
 <p> Bug fixes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Fix regression with E22 checks and inline comments. (Issue #271)</dl>
+<dt>&bull;</dt>
+<dd> Fix regression with E22 checks and inline comments. (Issue #271)</dd></dl>
 <h3>1.5.4 (2014-04-07)</h3>
 <p> Bug fixes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Fix negative offset with E303 before a multi-line docstring. (Issue #269)</dl>
+<dt>&bull;</dt>
+<dd> Fix negative offset with E303 before a multi-line docstring. (Issue #269)</dd></dl>
 <h3>1.5.3 (2014-04-04)</h3>
 <p> Bug fixes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Fix wrong offset computation when error is on the last char of a physical line. (Issue #268)</dl>
+<dt>&bull;</dt>
+<dd> Fix wrong offset computation when error is on the last char of a physical line. (Issue #268)</dd></dl>
 <h3>1.5.2 (2014-04-04)</h3>
 <p> Changes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Distribute a universal wheel file. </p>
+<dt>&bull;</dt>
+<dd> Distribute a universal wheel file. </dd>
 <p> Bug fixes:</p>
-<dt>&bull;</p>
-<dd> Report correct line number for E303 with comments. (Issue #60)</p>
-<dt>&bull;</p>
-<dd> Do not allow newline after parameter equal. (Issue #252)</p>
-<dt>&bull;</p>
-<dd> Fix line number reported for multi-line strings. (Issue #220)</p>
-<dt>&bull;</p>
-<dd> Fix false positive E121/E126 with multi-line strings. (Issue #265)</p>
-<dt>&bull;</p>
-<dd> Fix E501 not detected in comments with Python 2.5.</p>
-<dt>&bull;</p>
-<dd> Fix caret position with <code>&#8211;show-source</code> when line contains tabs.</dl>
+<dt>&bull;</dt>
+<dd> Report correct line number for E303 with comments. (Issue #60)</dd>
+<dt>&bull;</dt>
+<dd> Do not allow newline after parameter equal. (Issue #252)</dd>
+<dt>&bull;</dt>
+<dd> Fix line number reported for multi-line strings. (Issue #220)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive E121/E126 with multi-line strings. (Issue #265)</dd>
+<dt>&bull;</dt>
+<dd> Fix E501 not detected in comments with Python 2.5.</dd>
+<dt>&bull;</dt>
+<dd> Fix caret position with <code>&#8211;show-source</code> when line contains tabs.</dd></dl>
 <h3>1.5.1 (2014-03-27)</h3>
 <p> Bug fixes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Fix a crash with E125 on multi-line strings. (Issue #263)</dl>
+<dt>&bull;</dt>
+<dd> Fix a crash with E125 on multi-line strings. (Issue #263)</dd></dl>
 <h3>1.5 (2014-03-26)</h3>
 <p> Changes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Report E129 instead of E125 for visually indented line with same indent as next logical line. (Issue #126)</p>
-<dt>&bull;</p>
-<dd> Report E265 for space before block comment. (Issue #190)</p>
-<dt>&bull;</p>
-<dd> Report E713 and E714 when operators <code>not in</code> and <code>is not</code> are recommended. (Issue #236)</p>
-<dt>&bull;</p>
-<dd> Allow long lines in multiline strings and comments if they cannot be wrapped. (Issue #224).</p>
-<dt>&bull;</p>
-<dd> Optionally disable physical line checks inside multiline strings, using <code># noqa</code>. (Issue #242)</p>
-<dt>&bull;</p>
-<dd> Change text for E121 to report &quot;continuation line under-indented for hanging indent&quot; instead of indentation not being a multiple of 4.</p>
-<dt>&bull;</p>
-<dd> Report E131 instead of E121 / E126 if the hanging indent is not consistent within the same continuation block. It helps when error E121 or E126 is in the <code>ignore</code> list.</p>
-<dt>&bull;</p>
-<dd> Report E126 instead of E121 when the continuation line is hanging with extra indentation, even if indentation is not a multiple of 4. </p>
+<dt>&bull;</dt>
+<dd> Report E129 instead of E125 for visually indented line with same indent as next logical line. (Issue #126)</dd>
+<dt>&bull;</dt>
+<dd> Report E265 for space before block comment. (Issue #190)</dd>
+<dt>&bull;</dt>
+<dd> Report E713 and E714 when operators <code>not in</code> and <code>is not</code> are recommended. (Issue #236)</dd>
+<dt>&bull;</dt>
+<dd> Allow long lines in multiline strings and comments if they cannot be wrapped. (Issue #224).</dd>
+<dt>&bull;</dt>
+<dd> Optionally disable physical line checks inside multiline strings, using <code># noqa</code>. (Issue #242)</dd>
+<dt>&bull;</dt>
+<dd> Change text for E121 to report &quot;continuation line under-indented for hanging indent&quot; instead of indentation not being a multiple of 4.</dd>
+<dt>&bull;</dt>
+<dd> Report E131 instead of E121 / E126 if the hanging indent is not consistent within the same continuation block. It helps when error E121 or E126 is in the <code>ignore</code> list.</dd>
+<dt>&bull;</dt>
+<dd> Report E126 instead of E121 when the continuation line is hanging with extra indentation, even if indentation is not a multiple of 4. </dd>
 <p> Bug fixes:</p>
-<dt>&bull;</p>
-<dd> Allow the checkers to report errors on empty files. (Issue #240)</p>
-<dt>&bull;</p>
-<dd> Fix ignoring too many checks when <code>&#8211;select</code> is used with codes declared in a flake8 extension. (Issue #216)</p>
-<dt>&bull;</p>
-<dd> Fix regression with multiple brackets. (Issue #214)</p>
-<dt>&bull;</p>
-<dd> Fix <code>StyleGuide</code> to parse the local configuration if the keyword argument <code>paths</code> is specified. (Issue #246)</p>
-<dt>&bull;</p>
-<dd> Fix a false positive E124 for hanging indent. (Issue #254)</p>
-<dt>&bull;</p>
-<dd> Fix a false positive E126 with embedded colon. (Issue #144)</p>
-<dt>&bull;</p>
-<dd> Fix a false positive E126 when indenting with tabs. (Issue #204)</p>
-<dt>&bull;</p>
-<dd> Fix behaviour when <code>exclude</code> is in the configuration file and the current directory is not the project directory. (Issue #247)</p>
-<dt>&bull;</p>
-<dd> The logical checks can return <code>None</code> instead of an empty iterator. (Issue #250)</p>
-<dt>&bull;</p>
-<dd> Do not report multiple E101 if only the first indentation starts with a tab. (Issue #237)</p>
-<dt>&bull;</p>
-<dd> Fix a rare false positive W602. (Issue #34)</dl>
+<dt>&bull;</dt>
+<dd> Allow the checkers to report errors on empty files. (Issue #240)</dd>
+<dt>&bull;</dt>
+<dd> Fix ignoring too many checks when <code>&#8211;select</code> is used with codes declared in a flake8 extension. (Issue #216)</dd>
+<dt>&bull;</dt>
+<dd> Fix regression with multiple brackets. (Issue #214)</dd>
+<dt>&bull;</dt>
+<dd> Fix <code>StyleGuide</code> to parse the local configuration if the keyword argument <code>paths</code> is specified. (Issue #246)</dd>
+<dt>&bull;</dt>
+<dd> Fix a false positive E124 for hanging indent. (Issue #254)</dd>
+<dt>&bull;</dt>
+<dd> Fix a false positive E126 with embedded colon. (Issue #144)</dd>
+<dt>&bull;</dt>
+<dd> Fix a false positive E126 when indenting with tabs. (Issue #204)</dd>
+<dt>&bull;</dt>
+<dd> Fix behaviour when <code>exclude</code> is in the configuration file and the current directory is not the project directory. (Issue #247)</dd>
+<dt>&bull;</dt>
+<dd> The logical checks can return <code>None</code> instead of an empty iterator. (Issue #250)</dd>
+<dt>&bull;</dt>
+<dd> Do not report multiple E101 if only the first indentation starts with a tab. (Issue #237)</dd>
+<dt>&bull;</dt>
+<dd> Fix a rare false positive W602. (Issue #34)</dd></dl>
 <h3>1.4.6 (2013-07-02)</h3>
 <p> Changes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Honor <code># noqa</code> for errors E711 and E712. (Issue #180)</p>
-<dt>&bull;</p>
-<dd> When both a <code>tox.ini</code> and a <code>setup.cfg</code> are present in the project directory, merge their contents. The <code>tox.ini</code> file takes precedence (same as before). (Issue #182)</p>
-<dt>&bull;</p>
-<dd> Give priority to <code>&#8211;select</code> over <code>&#8211;ignore</code>. (Issue #188)</p>
-<dt>&bull;</p>
-<dd> Compare full path when excluding a file. (Issue #186)</p>
-<dt>&bull;</p>
-<dd> New option <code>&#8211;hang-closing</code> to switch to the alternative style of closing bracket indentation for hanging indent. Add error E133 for closing bracket which is missing indentation. (Issue #103)</p>
-<dt>&bull;</p>
-<dd> Accept both styles of closing bracket indentation for hanging indent. Do not report error E123 in the default configuration. (Issue #103) </p>
+<dt>&bull;</dt>
+<dd> Honor <code># noqa</code> for errors E711 and E712. (Issue #180)</dd>
+<dt>&bull;</dt>
+<dd> When both a <code>tox.ini</code> and a <code>setup.cfg</code> are present in the project directory, merge their contents. The <code>tox.ini</code> file takes precedence (same as before). (Issue #182)</dd>
+<dt>&bull;</dt>
+<dd> Give priority to <code>&#8211;select</code> over <code>&#8211;ignore</code>. (Issue #188)</dd>
+<dt>&bull;</dt>
+<dd> Compare full path when excluding a file. (Issue #186)</dd>
+<dt>&bull;</dt>
+<dd> New option <code>&#8211;hang-closing</code> to switch to the alternative style of closing bracket indentation for hanging indent. Add error E133 for closing bracket which is missing indentation. (Issue #103)</dd>
+<dt>&bull;</dt>
+<dd> Accept both styles of closing bracket indentation for hanging indent. Do not report error E123 in the default configuration. (Issue #103) </dd>
 <p> Bug fixes:</p>
-<dt>&bull;</p>
-<dd> Do not crash when running AST checks and the document contains null bytes. (Issue #184)</p>
-<dt>&bull;</p>
-<dd> Correctly report other E12 errors when E123 is ignored. (Issue #103)</p>
-<dt>&bull;</p>
-<dd> Fix false positive E261/E262 when the file contains a BOM. (Issue #193)</p>
-<dt>&bull;</p>
-<dd> Fix E701, E702 and E703 not detected sometimes. (Issue #196)</p>
-<dt>&bull;</p>
-<dd> Fix E122 not detected in some cases. (Issue #201 and #208)</p>
-<dt>&bull;</p>
-<dd> Fix false positive E121 with multiple brackets. (Issue #203)</dl>
+<dt>&bull;</dt>
+<dd> Do not crash when running AST checks and the document contains null bytes. (Issue #184)</dd>
+<dt>&bull;</dt>
+<dd> Correctly report other E12 errors when E123 is ignored. (Issue #103)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive E261/E262 when the file contains a BOM. (Issue #193)</dd>
+<dt>&bull;</dt>
+<dd> Fix E701, E702 and E703 not detected sometimes. (Issue #196)</dd>
+<dt>&bull;</dt>
+<dd> Fix E122 not detected in some cases. (Issue #201 and #208)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive E121 with multiple brackets. (Issue #203)</dd></dl>
 <h3>1.4.5 (2013-03-06)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> When no path is specified, do not try to read from stdin. The feature was added in 1.4.3, but it is not supported on Windows. Use <code>&#8211;</code> filename argument to read from stdin. This usage is supported since 1.3.4. (Issue #170)</p>
-<dt>&bull;</p>
-<dd> Do not require <code>setuptools</code> in setup.py. It works around an issue with <code>pip</code> and Python 3. (Issue #172)</p>
-<dt>&bull;</p>
-<dd> Add <code>__pycache__</code> to the ignore list.</p>
-<dt>&bull;</p>
-<dd> Change misleading message for E251. (Issue #171)</p>
-<dt>&bull;</p>
-<dd> Do not report false E302 when the source file has a coding cookie or a comment on the first line. (Issue #174)</p>
-<dt>&bull;</p>
-<dd> Reorganize the tests and add tests for the API and for the command line usage and options. (Issues #161 and #162)</p>
-<dt>&bull;</p>
-<dd> Ignore all checks which are not explicitly selected when <code>select</code> is passed to the <code>StyleGuide</code> constructor.</dl>
+<dt>&bull;</dt>
+<dd> When no path is specified, do not try to read from stdin. The feature was added in 1.4.3, but it is not supported on Windows. Use <code>&#8211;</code> filename argument to read from stdin. This usage is supported since 1.3.4. (Issue #170)</dd>
+<dt>&bull;</dt>
+<dd> Do not require <code>setuptools</code> in setup.py. It works around an issue with <code>pip</code> and Python 3. (Issue #172)</dd>
+<dt>&bull;</dt>
+<dd> Add <code>__pycache__</code> to the ignore list.</dd>
+<dt>&bull;</dt>
+<dd> Change misleading message for E251. (Issue #171)</dd>
+<dt>&bull;</dt>
+<dd> Do not report false E302 when the source file has a coding cookie or a comment on the first line. (Issue #174)</dd>
+<dt>&bull;</dt>
+<dd> Reorganize the tests and add tests for the API and for the command line usage and options. (Issues #161 and #162)</dd>
+<dt>&bull;</dt>
+<dd> Ignore all checks which are not explicitly selected when <code>select</code> is passed to the <code>StyleGuide</code> constructor.</dd></dl>
 <h3>1.4.4 (2013-02-24)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Report E227 or E228 instead of E225 for whitespace around bitwise, shift or modulo operators. (Issue #166)</p>
-<dt>&bull;</p>
-<dd> Change the message for E226 to make clear that it is about arithmetic operators.</p>
-<dt>&bull;</p>
-<dd> Fix a false positive E128 for continuation line indentation with tabs.</p>
-<dt>&bull;</p>
-<dd> Fix regression with the <code>&#8211;diff</code> option. (Issue #169)</p>
-<dt>&bull;</p>
-<dd> Fix the <code>TestReport</code> class to print the unexpected warnings and errors.</dl>
+<dt>&bull;</dt>
+<dd> Report E227 or E228 instead of E225 for whitespace around bitwise, shift or modulo operators. (Issue #166)</dd>
+<dt>&bull;</dt>
+<dd> Change the message for E226 to make clear that it is about arithmetic operators.</dd>
+<dt>&bull;</dt>
+<dd> Fix a false positive E128 for continuation line indentation with tabs.</dd>
+<dt>&bull;</dt>
+<dd> Fix regression with the <code>&#8211;diff</code> option. (Issue #169)</dd>
+<dt>&bull;</dt>
+<dd> Fix the <code>TestReport</code> class to print the unexpected warnings and errors.</dd></dl>
 <h3>1.4.3 (2013-02-22)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Hide the <code>&#8211;doctest</code> and <code>&#8211;testsuite</code> options when installed.</p>
-<dt>&bull;</p>
-<dd> Fix crash with AST checkers when the syntax is invalid. (Issue #160)</p>
-<dt>&bull;</p>
-<dd> Read from standard input if no path is specified.</p>
-<dt>&bull;</p>
-<dd> Initiate a graceful shutdown on <code>Control+C</code>.</p>
-<dt>&bull;</p>
-<dd> Allow changing the <code>checker_class</code> for the <code>StyleGuide</code>.</dl>
+<dt>&bull;</dt>
+<dd> Hide the <code>&#8211;doctest</code> and <code>&#8211;testsuite</code> options when installed.</dd>
+<dt>&bull;</dt>
+<dd> Fix crash with AST checkers when the syntax is invalid. (Issue #160)</dd>
+<dt>&bull;</dt>
+<dd> Read from standard input if no path is specified.</dd>
+<dt>&bull;</dt>
+<dd> Initiate a graceful shutdown on <code>Control+C</code>.</dd>
+<dt>&bull;</dt>
+<dd> Allow changing the <code>checker_class</code> for the <code>StyleGuide</code>.</dd></dl>
 <h3>1.4.2 (2013-02-10)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Support AST checkers provided by third-party applications.</p>
-<dt>&bull;</p>
-<dd> Register new checkers with <code>register_check(func_or_cls, codes)</code>.</p>
-<dt>&bull;</p>
-<dd> Allow constructing a <code>StyleGuide</code> with a custom parser.</p>
-<dt>&bull;</p>
-<dd> Accept visual indentation without parenthesis after the <code>if</code> statement. (Issue #151)</p>
-<dt>&bull;</p>
-<dd> Fix UnboundLocalError when using <code># noqa</code> with continued lines. (Issue #158)</p>
-<dt>&bull;</p>
-<dd> Re-order the lines for the <code>StandardReport</code>.</p>
-<dt>&bull;</p>
-<dd> Expand tabs when checking E12 continuation lines. (Issue #155)</p>
-<dt>&bull;</p>
-<dd> Refactor the testing class <code>TestReport</code> and the specific test functions into a separate test module.</dl>
+<dt>&bull;</dt>
+<dd> Support AST checkers provided by third-party applications.</dd>
+<dt>&bull;</dt>
+<dd> Register new checkers with <code>register_check(func_or_cls, codes)</code>.</dd>
+<dt>&bull;</dt>
+<dd> Allow constructing a <code>StyleGuide</code> with a custom parser.</dd>
+<dt>&bull;</dt>
+<dd> Accept visual indentation without parenthesis after the <code>if</code> statement. (Issue #151)</dd>
+<dt>&bull;</dt>
+<dd> Fix UnboundLocalError when using <code># noqa</code> with continued lines. (Issue #158)</dd>
+<dt>&bull;</dt>
+<dd> Re-order the lines for the <code>StandardReport</code>.</dd>
+<dt>&bull;</dt>
+<dd> Expand tabs when checking E12 continuation lines. (Issue #155)</dd>
+<dt>&bull;</dt>
+<dd> Refactor the testing class <code>TestReport</code> and the specific test functions into a separate test module.</dd></dl>
 <h3>1.4.1 (2013-01-18)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Allow sphinx.ext.autodoc syntax for comments. (Issue #110)</p>
-<dt>&bull;</p>
-<dd> Report E703 instead of E702 for the trailing semicolon. (Issue #117)</p>
-<dt>&bull;</p>
-<dd> Honor <code># noqa</code> in addition to <code># nopep8</code>. (Issue #149)</p>
-<dt>&bull;</p>
-<dd> Expose the <code>OptionParser</code> factory for better extensibility.</dl>
+<dt>&bull;</dt>
+<dd> Allow sphinx.ext.autodoc syntax for comments. (Issue #110)</dd>
+<dt>&bull;</dt>
+<dd> Report E703 instead of E702 for the trailing semicolon. (Issue #117)</dd>
+<dt>&bull;</dt>
+<dd> Honor <code># noqa</code> in addition to <code># nopep8</code>. (Issue #149)</dd>
+<dt>&bull;</dt>
+<dd> Expose the <code>OptionParser</code> factory for better extensibility.</dd></dl>
 <h3>1.4 (2012-12-22)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Report E226 instead of E225 for optional whitespace around common operators (<code>*</code>, <code>**</code>, <code>/</code>, <code>+</code> and <code>&#8211;</code>). This new error code is ignored in the default configuration because PEP 8 recommends to &quot;use your own judgement&quot;. (Issue #96)</p>
-<dt>&bull;</p>
-<dd> Lines with a <code># nopep8</code> at the end will not issue errors on line length E501 or continuation line indentation E12*. (Issue #27)</p>
-<dt>&bull;</p>
-<dd> Fix AssertionError when the source file contains an invalid line ending <code>&quot;
-&quot;</code>. (Issue #119)</p>
-<dt>&bull;</p>
-<dd> Read the <code>[pep8]</code> section of <code>tox.ini</code> or <code>setup.cfg</code> if present. (Issue #93 and #141)</p>
-<dt>&bull;</p>
-<dd> Add the Sphinx-based documentation, and publish it on <i><a rel="nofollow" href="https://pycodestyle.readthedocs.io/">https://pycodestyle.readthedocs.io/</a></i>. (Issue #105)</dl>
+<dt>&bull;</dt>
+<dd> Report E226 instead of E225 for optional whitespace around common operators (<code>*</code>, <code>**</code>, <code>/</code>, <code>+</code> and <code>&#8211;</code>). This new error code is ignored in the default configuration because PEP 8 recommends to &quot;use your own judgement&quot;. (Issue #96)</dd>
+<dt>&bull;</dt>
+<dd> Lines with a <code># nopep8</code> at the end will not issue errors on line length E501 or continuation line indentation E12*. (Issue #27)</dd>
+<dt>&bull;</dt>
+<dd> Fix AssertionError when the source file contains an invalid line ending <code>&quot;
+&quot;</code>. (Issue #119)</dd>
+<dt>&bull;</dt>
+<dd> Read the <code>[pep8]</code> section of <code>tox.ini</code> or <code>setup.cfg</code> if present. (Issue #93 and #141)</dd>
+<dt>&bull;</dt>
+<dd> Add the Sphinx-based documentation, and publish it on <i><a rel="nofollow" href="https://pycodestyle.readthedocs.io/">https://pycodestyle.readthedocs.io/</a></i>. (Issue #105)</dd></dl>
 <h3>1.3.4 (2012-12-18)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix false positive E124 and E128 with comments. (Issue #100)</p>
-<dt>&bull;</p>
-<dd> Fix error on stdin when running with bpython. (Issue #101)</p>
-<dt>&bull;</p>
-<dd> Fix false positive E401. (Issue #104)</p>
-<dt>&bull;</p>
-<dd> Report E231 for nested dictionary in list. (Issue #142)</p>
-<dt>&bull;</p>
-<dd> Catch E271 at the beginning of the line. (Issue #133)</p>
-<dt>&bull;</p>
-<dd> Fix false positive E126 for multi-line comments. (Issue #138)</p>
-<dt>&bull;</p>
-<dd> Fix false positive E221 when operator is preceded by a comma. (Issue #135)</p>
-<dt>&bull;</p>
-<dd> Fix <code>&#8211;diff</code> failing on one-line hunk. (Issue #137)</p>
-<dt>&bull;</p>
-<dd> Fix the <code>&#8211;exclude</code> switch for directory paths. (Issue #111)</p>
-<dt>&bull;</p>
-<dd> Use <code>&#8211;</code> filename to read from standard input. (Issue #128)</dl>
+<dt>&bull;</dt>
+<dd> Fix false positive E124 and E128 with comments. (Issue #100)</dd>
+<dt>&bull;</dt>
+<dd> Fix error on stdin when running with bpython. (Issue #101)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive E401. (Issue #104)</dd>
+<dt>&bull;</dt>
+<dd> Report E231 for nested dictionary in list. (Issue #142)</dd>
+<dt>&bull;</dt>
+<dd> Catch E271 at the beginning of the line. (Issue #133)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive E126 for multi-line comments. (Issue #138)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive E221 when operator is preceded by a comma. (Issue #135)</dd>
+<dt>&bull;</dt>
+<dd> Fix <code>&#8211;diff</code> failing on one-line hunk. (Issue #137)</dd>
+<dt>&bull;</dt>
+<dd> Fix the <code>&#8211;exclude</code> switch for directory paths. (Issue #111)</dd>
+<dt>&bull;</dt>
+<dd> Use <code>&#8211;</code> filename to read from standard input. (Issue #128)</dd></dl>
 <h3>1.3.3 (2012-06-27)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix regression with continuation line checker. (Issue #98)</dl>
+<dt>&bull;</dt>
+<dd> Fix regression with continuation line checker. (Issue #98)</dd></dl>
 <h3>1.3.2 (2012-06-26)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Revert to the previous behaviour for <code>&#8211;show-pep8</code>: do not imply <code>&#8211;first</code>. (Issue #89)</p>
-<dt>&bull;</p>
-<dd> Add E902 for IO errors. (Issue #87)</p>
-<dt>&bull;</p>
-<dd> Fix false positive for E121, and missed E124. (Issue #92)</p>
-<dt>&bull;</p>
-<dd> Set a sensible default path for config file on Windows. (Issue #95)</p>
-<dt>&bull;</p>
-<dd> Allow <code>verbose</code> in the configuration file. (Issue #91)</p>
-<dt>&bull;</p>
-<dd> Show the enforced <code>max-line-length</code> in the error message. (Issue #86)</dl>
+<dt>&bull;</dt>
+<dd> Revert to the previous behaviour for <code>&#8211;show-pep8</code>: do not imply <code>&#8211;first</code>. (Issue #89)</dd>
+<dt>&bull;</dt>
+<dd> Add E902 for IO errors. (Issue #87)</dd>
+<dt>&bull;</dt>
+<dd> Fix false positive for E121, and missed E124. (Issue #92)</dd>
+<dt>&bull;</dt>
+<dd> Set a sensible default path for config file on Windows. (Issue #95)</dd>
+<dt>&bull;</dt>
+<dd> Allow <code>verbose</code> in the configuration file. (Issue #91)</dd>
+<dt>&bull;</dt>
+<dd> Show the enforced <code>max-line-length</code> in the error message. (Issue #86)</dd></dl>
 <h3>1.3.1 (2012-06-18)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Explain which configuration options are expected. Accept and recommend the options names with hyphen instead of underscore. (Issue #82)</p>
-<dt>&bull;</p>
-<dd> Do not read the user configuration when used as a module (except if <code>config_file=True</code> is passed to the <code>StyleGuide</code> constructor).</p>
-<dt>&bull;</p>
-<dd> Fix wrong or missing cases for the E12 series.</p>
-<dt>&bull;</p>
-<dd> Fix cases where E122 was missed. (Issue #81)</dl>
+<dt>&bull;</dt>
+<dd> Explain which configuration options are expected. Accept and recommend the options names with hyphen instead of underscore. (Issue #82)</dd>
+<dt>&bull;</dt>
+<dd> Do not read the user configuration when used as a module (except if <code>config_file=True</code> is passed to the <code>StyleGuide</code> constructor).</dd>
+<dt>&bull;</dt>
+<dd> Fix wrong or missing cases for the E12 series.</dd>
+<dt>&bull;</dt>
+<dd> Fix cases where E122 was missed. (Issue #81)</dd></dl>
 <h3>1.3 (2012-06-15)</h3>
 <p> <code>WARNING:</code> The internal API is backwards incompatible.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Remove global configuration and refactor the library around a <code>StyleGuide</code> class; add the ability to configure various reporters. (Issue #35 and #66)</p>
-<dt>&bull;</p>
-<dd> Read user configuration from <code>~/.config/pep8</code> and local configuration from <code>./.pep8</code>. (Issue #22)</p>
-<dt>&bull;</p>
-<dd> Fix E502 for backslash embedded in multi-line string. (Issue #68)</p>
-<dt>&bull;</p>
-<dd> Fix E225 for Python 3 iterable unpacking (PEP 3132). (Issue #72)</p>
-<dt>&bull;</p>
-<dd> Enable the new checkers from the E12 series in the default configuration.</p>
-<dt>&bull;</p>
-<dd> Suggest less error-prone alternatives for E712 errors.</p>
-<dt>&bull;</p>
-<dd> Rewrite checkers to run faster (E22, E251, E27).</p>
-<dt>&bull;</p>
-<dd> Fixed a crash when parsed code is invalid (too many closing brackets).</p>
-<dt>&bull;</p>
-<dd> Fix E127 and E128 for continuation line indentation. (Issue #74)</p>
-<dt>&bull;</p>
-<dd> New option <code>&#8211;format</code> to customize the error format. (Issue #23)</p>
-<dt>&bull;</p>
-<dd> New option <code>&#8211;diff</code> to check only modified code. The unified diff is read from STDIN. Example: <code>hg diff | pep8 &#8211;diff</code> (Issue #39)</p>
-<dt>&bull;</p>
-<dd> Correctly report the count of failures and set the exit code to 1 when the <code>&#8211;doctest</code> or the <code>&#8211;testsuite</code> fails.</p>
-<dt>&bull;</p>
-<dd> Correctly detect the encoding in Python 3. (Issue #69)</p>
-<dt>&bull;</p>
-<dd> Drop support for Python 2.3, 2.4 and 3.0. (Issue #78)</dl>
+<dt>&bull;</dt>
+<dd> Remove global configuration and refactor the library around a <code>StyleGuide</code> class; add the ability to configure various reporters. (Issue #35 and #66)</dd>
+<dt>&bull;</dt>
+<dd> Read user configuration from <code>~/.config/pep8</code> and local configuration from <code>./.pep8</code>. (Issue #22)</dd>
+<dt>&bull;</dt>
+<dd> Fix E502 for backslash embedded in multi-line string. (Issue #68)</dd>
+<dt>&bull;</dt>
+<dd> Fix E225 for Python 3 iterable unpacking (PEP 3132). (Issue #72)</dd>
+<dt>&bull;</dt>
+<dd> Enable the new checkers from the E12 series in the default configuration.</dd>
+<dt>&bull;</dt>
+<dd> Suggest less error-prone alternatives for E712 errors.</dd>
+<dt>&bull;</dt>
+<dd> Rewrite checkers to run faster (E22, E251, E27).</dd>
+<dt>&bull;</dt>
+<dd> Fixed a crash when parsed code is invalid (too many closing brackets).</dd>
+<dt>&bull;</dt>
+<dd> Fix E127 and E128 for continuation line indentation. (Issue #74)</dd>
+<dt>&bull;</dt>
+<dd> New option <code>&#8211;format</code> to customize the error format. (Issue #23)</dd>
+<dt>&bull;</dt>
+<dd> New option <code>&#8211;diff</code> to check only modified code. The unified diff is read from STDIN. Example: <code>hg diff | pep8 &#8211;diff</code> (Issue #39)</dd>
+<dt>&bull;</dt>
+<dd> Correctly report the count of failures and set the exit code to 1 when the <code>&#8211;doctest</code> or the <code>&#8211;testsuite</code> fails.</dd>
+<dt>&bull;</dt>
+<dd> Correctly detect the encoding in Python 3. (Issue #69)</dd>
+<dt>&bull;</dt>
+<dd> Drop support for Python 2.3, 2.4 and 3.0. (Issue #78)</dd></dl>
 <h3>1.2 (2012-06-01)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Add E121 through E128 for continuation line indentation. These checks are disabled by default. If you want to force all checks, use switch <code>&#8211;select=E,W</code>. Patch by Sam Vilain. (Issue #64)</p>
-<dt>&bull;</p>
-<dd> Add E721 for direct type comparisons. (Issue #47)</p>
-<dt>&bull;</p>
-<dd> Add E711 and E712 for comparisons to singletons. (Issue #46)</p>
-<dt>&bull;</p>
-<dd> Fix spurious E225 and E701 for function annotations. (Issue #29)</p>
-<dt>&bull;</p>
-<dd> Add E502 for explicit line join between brackets.</p>
-<dt>&bull;</p>
-<dd> Fix E901 when printing source with <code>&#8211;show-source</code>.</p>
-<dt>&bull;</p>
-<dd> Report all errors for each checker, instead of reporting only the first occurrence for each line.</p>
-<dt>&bull;</p>
-<dd> Option <code>&#8211;show-pep8</code> implies <code>&#8211;first</code>.</dl>
+<dt>&bull;</dt>
+<dd> Add E121 through E128 for continuation line indentation. These checks are disabled by default. If you want to force all checks, use switch <code>&#8211;select=E,W</code>. Patch by Sam Vilain. (Issue #64)</dd>
+<dt>&bull;</dt>
+<dd> Add E721 for direct type comparisons. (Issue #47)</dd>
+<dt>&bull;</dt>
+<dd> Add E711 and E712 for comparisons to singletons. (Issue #46)</dd>
+<dt>&bull;</dt>
+<dd> Fix spurious E225 and E701 for function annotations. (Issue #29)</dd>
+<dt>&bull;</dt>
+<dd> Add E502 for explicit line join between brackets.</dd>
+<dt>&bull;</dt>
+<dd> Fix E901 when printing source with <code>&#8211;show-source</code>.</dd>
+<dt>&bull;</dt>
+<dd> Report all errors for each checker, instead of reporting only the first occurrence for each line.</dd>
+<dt>&bull;</dt>
+<dd> Option <code>&#8211;show-pep8</code> implies <code>&#8211;first</code>.</dd></dl>
 <h3>1.1 (2012-05-24)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Add E901 for syntax errors. (Issues #63 and #30)</p>
-<dt>&bull;</p>
-<dd> Add E271, E272, E273 and E274 for extraneous whitespace around keywords. (Issue #57)</p>
-<dt>&bull;</p>
-<dd> Add <code>tox.ini</code> configuration file for tests. (Issue #61)</p>
-<dt>&bull;</p>
-<dd> Add <code>.travis.yml</code> configuration file for continuous integration. (Issue #62)</dl>
+<dt>&bull;</dt>
+<dd> Add E901 for syntax errors. (Issues #63 and #30)</dd>
+<dt>&bull;</dt>
+<dd> Add E271, E272, E273 and E274 for extraneous whitespace around keywords. (Issue #57)</dd>
+<dt>&bull;</dt>
+<dd> Add <code>tox.ini</code> configuration file for tests. (Issue #61)</dd>
+<dt>&bull;</dt>
+<dd> Add <code>.travis.yml</code> configuration file for continuous integration. (Issue #62)</dd></dl>
 <h3>1.0.1 (2012-04-06)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix inconsistent version numbers.</dl>
+<dt>&bull;</dt>
+<dd> Fix inconsistent version numbers.</dd></dl>
 <h3>1.0 (2012-04-04)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix W602 <code>raise</code> to handle multi-char names. (Issue #53)</dl>
+<dt>&bull;</dt>
+<dd> Fix W602 <code>raise</code> to handle multi-char names. (Issue #53)</dd></dl>
 <h3>0.7.0 (2012-03-26)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Now <code>&#8211;first</code> prints only the first occurrence of each error. The <code>&#8211;repeat</code> flag becomes obsolete because it is the default behaviour. (Issue #6)</p>
-<dt>&bull;</p>
-<dd> Allow specifying <code>&#8211;max-line-length</code>. (Issue #36)</p>
-<dt>&bull;</p>
-<dd> Make the shebang more flexible. (Issue #26)</p>
-<dt>&bull;</p>
-<dd> Add testsuite to the bundle. (Issue #25)</p>
-<dt>&bull;</p>
-<dd> Fixes for Jython. (Issue #49)</p>
-<dt>&bull;</p>
-<dd> Add PyPI classifiers. (Issue #43)</p>
-<dt>&bull;</p>
-<dd> Fix the <code>&#8211;exclude</code> option. (Issue #48)</p>
-<dt>&bull;</p>
-<dd> Fix W602, accept <code>raise</code> with 3 arguments. (Issue #34)</p>
-<dt>&bull;</p>
-<dd> Correctly select all tests if <code>DEFAULT_IGNORE == &#8221;</code>.</dl>
+<dt>&bull;</dt>
+<dd> Now <code>&#8211;first</code> prints only the first occurrence of each error. The <code>&#8211;repeat</code> flag becomes obsolete because it is the default behaviour. (Issue #6)</dd>
+<dt>&bull;</dt>
+<dd> Allow specifying <code>&#8211;max-line-length</code>. (Issue #36)</dd>
+<dt>&bull;</dt>
+<dd> Make the shebang more flexible. (Issue #26)</dd>
+<dt>&bull;</dt>
+<dd> Add testsuite to the bundle. (Issue #25)</dd>
+<dt>&bull;</dt>
+<dd> Fixes for Jython. (Issue #49)</dd>
+<dt>&bull;</dt>
+<dd> Add PyPI classifiers. (Issue #43)</dd>
+<dt>&bull;</dt>
+<dd> Fix the <code>&#8211;exclude</code> option. (Issue #48)</dd>
+<dt>&bull;</dt>
+<dd> Fix W602, accept <code>raise</code> with 3 arguments. (Issue #34)</dd>
+<dt>&bull;</dt>
+<dd> Correctly select all tests if <code>DEFAULT_IGNORE == &#8221;</code>.</dd></dl>
 <h3>0.6.1 (2010-10-03)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix inconsistent version numbers. (Issue #21)</dl>
+<dt>&bull;</dt>
+<dd> Fix inconsistent version numbers. (Issue #21)</dd></dl>
 <h3>0.6.0 (2010-09-19)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Test suite reorganized and enhanced in order to check more failures with fewer test files. Read the <code>run_tests</code> docstring for details about the syntax.</p>
-<dt>&bull;</p>
-<dd> Fix E225: accept <code>print &gt;&gt;sys.stderr, &quot;&#8230;&quot;</code> syntax.</p>
-<dt>&bull;</p>
-<dd> Fix E501 for lines containing multibyte encoded characters. (Issue #7)</p>
-<dt>&bull;</p>
-<dd> Fix E221, E222, E223, E224 not detected in some cases. (Issue #16)</p>
-<dt>&bull;</p>
-<dd> Fix E211 to reject <code>v = dic[&#8216;a&#8217;] [&#8216;b&#8217;]</code>. (Issue #17)</p>
-<dt>&bull;</p>
-<dd> Exit code is always 1 if any error or warning is found. (Issue #10)</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;ignore</code> checks are now really ignored, especially in conjunction with <code>&#8211;count</code>. (Issue #8)</p>
-<dt>&bull;</p>
-<dd> Blank lines with spaces yield W293 instead of W291: some developers want to ignore this warning and indent the blank lines to paste their code easily in the Python interpreter.</p>
-<dt>&bull;</p>
-<dd> Fix E301: do not require a blank line before an indented block. (Issue #14)</p>
-<dt>&bull;</p>
-<dd> Fix E203 to accept NumPy slice notation <code>a[0, :]</code>. (Issue #13)</p>
-<dt>&bull;</p>
-<dd> Performance improvements.</p>
-<dt>&bull;</p>
-<dd> Fix decoding and checking non-UTF8 files in Python 3.</p>
-<dt>&bull;</p>
-<dd> Fix E225: reject <code>True+False</code> when running on Python 3.</p>
-<dt>&bull;</p>
-<dd> Fix an exception when the line starts with an operator.</p>
-<dt>&bull;</p>
-<dd> Allow a new line before closing <code>)</code>, <code>}</code> or <code>]</code>. (Issue #5)</dl>
+<dt>&bull;</dt>
+<dd> Test suite reorganized and enhanced in order to check more failures with fewer test files. Read the <code>run_tests</code> docstring for details about the syntax.</dd>
+<dt>&bull;</dt>
+<dd> Fix E225: accept <code>print &gt;&gt;sys.stderr, &quot;&#8230;&quot;</code> syntax.</dd>
+<dt>&bull;</dt>
+<dd> Fix E501 for lines containing multibyte encoded characters. (Issue #7)</dd>
+<dt>&bull;</dt>
+<dd> Fix E221, E222, E223, E224 not detected in some cases. (Issue #16)</dd>
+<dt>&bull;</dt>
+<dd> Fix E211 to reject <code>v = dic[&#8216;a&#8217;] [&#8216;b&#8217;]</code>. (Issue #17)</dd>
+<dt>&bull;</dt>
+<dd> Exit code is always 1 if any error or warning is found. (Issue #10)</dd>
+<dt>&bull;</dt>
+<dd> <code>&#8211;ignore</code> checks are now really ignored, especially in conjunction with <code>&#8211;count</code>. (Issue #8)</dd>
+<dt>&bull;</dt>
+<dd> Blank lines with spaces yield W293 instead of W291: some developers want to ignore this warning and indent the blank lines to paste their code easily in the Python interpreter.</dd>
+<dt>&bull;</dt>
+<dd> Fix E301: do not require a blank line before an indented block. (Issue #14)</dd>
+<dt>&bull;</dt>
+<dd> Fix E203 to accept NumPy slice notation <code>a[0, :]</code>. (Issue #13)</dd>
+<dt>&bull;</dt>
+<dd> Performance improvements.</dd>
+<dt>&bull;</dt>
+<dd> Fix decoding and checking non-UTF8 files in Python 3.</dd>
+<dt>&bull;</dt>
+<dd> Fix E225: reject <code>True+False</code> when running on Python 3.</dd>
+<dt>&bull;</dt>
+<dd> Fix an exception when the line starts with an operator.</dd>
+<dt>&bull;</dt>
+<dd> Allow a new line before closing <code>)</code>, <code>}</code> or <code>]</code>. (Issue #5)</dd></dl>
 <h3>0.5.0 (2010-02-17)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Changed the <code>&#8211;count</code> switch to print to sys.stderr and set exit code to 1 if any error or warning is found.</p>
-<dt>&bull;</p>
-<dd> E241 and E242 are removed from the standard checks. If you want to include these checks, use switch <code>&#8211;select=E,W</code>. (Issue #4)</p>
-<dt>&bull;</p>
-<dd> Blank line is not mandatory before the first class method or nested function definition, even if there&#8217;s a docstring. (Issue #1)</p>
-<dt>&bull;</p>
-<dd> Add the switch <code>&#8211;version</code>.</p>
-<dt>&bull;</p>
-<dd> Fix decoding errors with Python 3. (Issue #13 [1])</p>
-<dt>&bull;</p>
-<dd> Add <code>&#8211;select</code> option which is mirror of <code>&#8211;ignore</code>.</p>
-<dt>&bull;</p>
-<dd> Add checks E261 and E262 for spaces before inline comments.</p>
-<dt>&bull;</p>
-<dd> New check W604 warns about deprecated usage of backticks.</p>
-<dt>&bull;</p>
-<dd> New check W603 warns about the deprecated operator <code>&lt;&gt;</code>.</p>
-<dt>&bull;</p>
-<dd> Performance improvement, due to rewriting of E225.</p>
-<dt>&bull;</p>
-<dd> E225 now accepts:</p>
-<dt>&bull;</p>
-<dd> no whitespace after unary operator or similar. (Issue #9 [1])</p>
-<dt>&bull;</p>
-<dd> lambda function with argument unpacking or keyword defaults.</p>
-<dt>&bull;</p>
-<dd> Reserve &quot;2 blank lines&quot; for module-level logical blocks. (E303)</p>
-<dt>&bull;</p>
-<dd> Allow multi-line comments. (E302, issue #10 [1])</dl>
+<dt>&bull;</dt>
+<dd> Changed the <code>&#8211;count</code> switch to print to sys.stderr and set exit code to 1 if any error or warning is found.</dd>
+<dt>&bull;</dt>
+<dd> E241 and E242 are removed from the standard checks. If you want to include these checks, use switch <code>&#8211;select=E,W</code>. (Issue #4)</dd>
+<dt>&bull;</dt>
+<dd> Blank line is not mandatory before the first class method or nested function definition, even if there&#8217;s a docstring. (Issue #1)</dd>
+<dt>&bull;</dt>
+<dd> Add the switch <code>&#8211;version</code>.</dd>
+<dt>&bull;</dt>
+<dd> Fix decoding errors with Python 3. (Issue #13 [1])</dd>
+<dt>&bull;</dt>
+<dd> Add <code>&#8211;select</code> option which is mirror of <code>&#8211;ignore</code>.</dd>
+<dt>&bull;</dt>
+<dd> Add checks E261 and E262 for spaces before inline comments.</dd>
+<dt>&bull;</dt>
+<dd> New check W604 warns about deprecated usage of backticks.</dd>
+<dt>&bull;</dt>
+<dd> New check W603 warns about the deprecated operator <code>&lt;&gt;</code>.</dd>
+<dt>&bull;</dt>
+<dd> Performance improvement, due to rewriting of E225.</dd>
+<dt>&bull;</dt>
+<dd> E225 now accepts:</dd>
+<dt>&bull;</dt>
+<dd> no whitespace after unary operator or similar. (Issue #9 [1])</dd>
+<dt>&bull;</dt>
+<dd> lambda function with argument unpacking or keyword defaults.</dd>
+<dt>&bull;</dt>
+<dd> Reserve &quot;2 blank lines&quot; for module-level logical blocks. (E303)</dd>
+<dt>&bull;</dt>
+<dd> Allow multi-line comments. (E302, issue #10 [1])</dd></dl>
 <h3>0.4.2 (2009-10-22)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Decorators on classes and class methods are OK now.</dl>
+<dt>&bull;</dt>
+<dd> Decorators on classes and class methods are OK now.</dd></dl>
 <h3>0.4 (2009-10-20)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Support for all versions of Python from 2.3 to 3.1.</p>
-<dt>&bull;</p>
-<dd> New and greatly expanded self tests.</p>
-<dt>&bull;</p>
-<dd> Added <code>&#8211;count</code> option to print the total number of errors and warnings.</p>
-<dt>&bull;</p>
-<dd> Further improvements to the handling of comments and blank lines. (Issue #1 [1] and others changes.)</p>
-<dt>&bull;</p>
-<dd> Check all py files in directory when passed a directory (Issue #2 [1]). This also prevents an exception when traversing directories with non <code>*.py</code> files.</p>
-<dt>&bull;</p>
-<dd> E231 should allow commas to be followed by <code>)</code>. (Issue #3 [1])</p>
-<dt>&bull;</p>
-<dd> Spaces are no longer required around the equals sign for keyword arguments or default parameter values.</p>
-<dt>[1]</p>
-<dd> These issues refer to the <i>previous issue tracker</i>.</dl>
+<dt>&bull;</dt>
+<dd> Support for all versions of Python from 2.3 to 3.1.</dd>
+<dt>&bull;</dt>
+<dd> New and greatly expanded self tests.</dd>
+<dt>&bull;</dt>
+<dd> Added <code>&#8211;count</code> option to print the total number of errors and warnings.</dd>
+<dt>&bull;</dt>
+<dd> Further improvements to the handling of comments and blank lines. (Issue #1 [1] and others changes.)</dd>
+<dt>&bull;</dt>
+<dd> Check all py files in directory when passed a directory (Issue #2 [1]). This also prevents an exception when traversing directories with non <code>*.py</code> files.</dd>
+<dt>&bull;</dt>
+<dd> E231 should allow commas to be followed by <code>)</code>. (Issue #3 [1])</dd>
+<dt>&bull;</dt>
+<dd> Spaces are no longer required around the equals sign for keyword arguments or default parameter values.</dd>
+<dt>[1]</dt>
+<dd> These issues refer to the <i>previous issue tracker</i>.</dd></dl>
 <h3>0.3.1 (2009-09-14)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fixes for comments: do not count them when checking for blank lines between items.</p>
-<dt>&bull;</p>
-<dd> Added setup.py for pypi upload and easy_installability.</dl>
+<dt>&bull;</dt>
+<dd> Fixes for comments: do not count them when checking for blank lines between items.</dd>
+<dt>&bull;</dt>
+<dd> Added setup.py for pypi upload and easy_installability.</dd></dl>
 <h3>0.2 (2007-10-16)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Loads of fixes and improvements.</dl>
+<dt>&bull;</dt>
+<dd> Loads of fixes and improvements.</dd></dl>
 <h3>0.1 (2006-10-01)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> First release.</p>
-<dt>&bull;</p>
-<dd> Online documentation: <i><a rel="nofollow" href="https://pycodestyle.readthedocs.io/">https://pycodestyle.readthedocs.io/</a></i></p>
-<dt>&bull;</p>
-<dd> Source code and issue tracker: <i><a rel="nofollow" href="https://github.com/pycqa/pycodestyle">https://github.com/pycqa/pycodestyle</a></i></p>
-<dt>&bull;</p>
-<dd> <i>genindex</i></p>
-<dt>&bull;</p>
-<dd> <i>search</i> </p>
+<dt>&bull;</dt>
+<dd> First release.</dd>
+<dt>&bull;</dt>
+<dd> Online documentation: <i><a rel="nofollow" href="https://pycodestyle.readthedocs.io/">https://pycodestyle.readthedocs.io/</a></i></dd>
+<dt>&bull;</dt>
+<dd> Source code and issue tracker: <i><a rel="nofollow" href="https://github.com/pycqa/pycodestyle">https://github.com/pycqa/pycodestyle</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i>genindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>search</i> </dd>
 <p> Created by Johann C. Rocholl. </p>
 <p> Maintained by Florent Xicluna and Ian Lee. </p>
 <p> The <code>pycodestyle</code> library is provided under the terms and conditions of the Expat license: </p>

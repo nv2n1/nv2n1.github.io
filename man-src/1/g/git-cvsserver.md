@@ -28,27 +28,27 @@ git - cvsserver[options][pserver | server][&lt;directory&gt;...]
 <p> &#8211;base-path &lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Prepend <i>path</i> to requested CVSROOT</dl>
+</dt><dd> Prepend <i>path</i> to requested CVSROOT</dd></dl>
 <p> &#8211;strict-paths</p>
 <dl>
 <dt>
-<dd> Don&#8217;t allow recursing into subdirectories</dl>
+</dt><dd> Don&#8217;t allow recursing into subdirectories</dd></dl>
 <p> &#8211;export-all</p>
 <dl>
 <dt>
-<dd> Don&#8217;t check for gitcvs.enabled in config. You also have to specify a list of allowed directories (see below) if you want to use this option.</dl>
+</dt><dd> Don&#8217;t check for gitcvs.enabled in config. You also have to specify a list of allowed directories (see below) if you want to use this option.</dd></dl>
 <p> -V, &#8211;version</p>
 <dl>
 <dt>
-<dd> Print version information and exit</dl>
+</dt><dd> Print version information and exit</dd></dl>
 <p> -h, -H, &#8211;help</p>
 <dl>
 <dt>
-<dd> Print usage information and exit</dl>
+</dt><dd> Print usage information and exit</dd></dl>
 <p> &lt;directory&gt;</p>
 <dl>
 <dt>
-<dd> You can specify a list of allowed directories. If no directories are given, all are allowed. This is an additional restriction, gitcvs access still needs to be enabled by the gitcvs.enabled config option unless <i>&#8211;export-all</i> was given, too.</dl>
+</dt><dd> You can specify a list of allowed directories. If no directories are given, all are allowed. This is an additional restriction, gitcvs access still needs to be enabled by the gitcvs.enabled config option unless <i>&#8211;export-all</i> was given, too.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This application is a CVS emulation layer for Git. </p>
 <p> It is highly functional. However, not all methods are implemented, and for those methods that are implemented, not all switches are implemented. </p>
@@ -59,118 +59,118 @@ git - cvsserver[options][pserver | server][&lt;directory&gt;...]
 <h2>INSTALLATION</h2>
 <dl>
 <dt>
-<dd> 1. If you are going to offer CVS access via pserver, add a line in /etc/inetd.conf like </p>
+</dt><dd> 1. If you are going to offer CVS access via pserver, add a line in /etc/inetd.conf like </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    cvspserver stream tcp nowait nobody git-cvsserver pserver
 </pre>
-</dl>
+</dd></dl>
 <p> Note: Some inetd servers let you specify the name of the executable independently of the value of argv[0] (i.e. the name the program assumes it was executed with). In this case the correct line in /etc/inetd.conf looks like </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    cvspserver stream tcp nowait nobody /usr/bin/git-cvsserver git-cvsserver pserver
 </pre>
-</dl>
+</dd></dl>
 <p> Only anonymous access is provided by pserve by default. To commit you will have to create pserver accounts, simply add a gitcvs.authdb setting in the config file of the repositories you want the cvsserver to allow writes to, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    [gitcvs]
         authdb = /etc/cvsserver/passwd
 </pre>
-</dl>
+</dd></dl>
 <p> The format of these files is username followed by the crypted password, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    myuser:$1Oyx5r9mdGZ2
    myuser:$1$BA)@$vbnMJMDym7tA32AamXrm./
 </pre>
-</dl>
+</dd></dl>
 <p> You can use the <i>htpasswd</i> facility that comes with Apache to make these files, but Apache&#8217;s MD5 crypt method differs from the one used by most C library&#8217;s crypt() function, so don&#8217;t use the -m option. </p>
 <p> Alternatively you can produce the password with perl&#8217;s crypt() operator: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    perl -e 'my ($user, $pass) = @ARGV; printf &quot;%s:%s
 &quot;, $user, crypt($user, $pass)' $USER password
 </pre>
-</dl>
+</dd></dl>
 <p> Then provide your password via the pserver method, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    cvs -d:pserver:someuser:somepassword &lt;at&gt; server/path/repo.git co &lt;HEAD_name&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> No special setup is needed for SSH access, other than having Git tools in the PATH. If you have clients that do not accept the CVS_SERVER environment variable, you can rename <i>git-cvsserver</i> to cvs. </p>
 <p> Note: Newer CVS versions (&gt;= 1.12.11) also support specifying CVS_SERVER directly in CVSROOT like </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 cvs -d &quot;:ext;CVS_SERVER=git cvsserver:user [at] server/path/repo.git&quot; co &lt;HEAD_name&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> This has the advantage that it will be saved in your <i>CVS/Root</i> files and you don&#8217;t need to worry about always setting the correct environment variable. SSH users restricted to <i>git-shell</i> don&#8217;t need to override the default with CVS_SERVER (and shouldn&#8217;t) as <i>git-shell</i> understands cvs to mean <i>git-cvsserver</i> and pretends that the other end runs the real <i>cvs</i> better.</dl>
 <dl>
 <dt>
-<dd> 2. For each repo that you want accessible from CVS you need to edit config in the repo and add the following section. </p>
+</dt><dd> 2. For each repo that you want accessible from CVS you need to edit config in the repo and add the following section. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    [gitcvs]
         enabled=1
         # optional for debugging
         logfile=/path/to/logfile
 </pre>
-</dl>
+</dd></dl>
 <p> Note: you need to ensure each user that is going to invoke <i>git-cvsserver</i> has write access to the log file and to the database (see Database Backend. If you want to offer write access over SSH, the users of course also need write access to the Git repository itself. </p>
 <p> You also need to ensure that each repository is &quot;bare&quot; (without a Git index file) for cvs commit to work. See <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7). </p>
 <p> All configuration variables can also be overridden for a specific method of access. Valid method names are &quot;ext&quot; (for SSH access) and &quot;pserver&quot;. The following example configuration would disable pserver access while still allowing access over SSH. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [gitcvs] enabled = 0
     [gitcvs "ext"] enabled = 1
 </code></pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> 3. If you didn&#8217;t specify the CVSROOT/CVS_SERVER directly in the checkout command, automatically saving it in your <i>CVS/Root</i> files, then you need to set them explicitly in your environment. CVSROOT should be set as per normal, but the directory should point at the appropriate Git repo. As above, for SSH clients <i>not</i> restricted to <i>git-shell</i>, CVS_SERVER should be set to <i>git-cvsserver</i>. </p>
+</dt><dd> 3. If you didn&#8217;t specify the CVSROOT/CVS_SERVER directly in the checkout command, automatically saving it in your <i>CVS/Root</i> files, then you need to set them explicitly in your environment. CVSROOT should be set as per normal, but the directory should point at the appropriate Git repo. As above, for SSH clients <i>not</i> restricted to <i>git-shell</i>, CVS_SERVER should be set to <i>git-cvsserver</i>. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
      export CVSROOT=:ext:user [at] server:/var/git/project.git
      export CVS_SERVER=&quot;git cvsserver&quot;
 </pre>
+</dd></dl>
 </dl>
-</dl>
 <dl>
 <dt>
-<dd> 4. For SSH clients that will make commits, make sure their server-side .ssh/environment files (or .bashrc, etc., according to their specific shell) export appropriate values for GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_COMMITTER_NAME, and GIT_COMMITTER_EMAIL. For SSH clients whose login shell is bash, .bashrc may be a reasonable alternative.</dl>
+</dt><dd> 4. For SSH clients that will make commits, make sure their server-side .ssh/environment files (or .bashrc, etc., according to their specific shell) export appropriate values for GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_COMMITTER_NAME, and GIT_COMMITTER_EMAIL. For SSH clients whose login shell is bash, .bashrc may be a reasonable alternative.</dd></dl>
 <dl>
 <dt>
-<dd> 5. Clients should now be able to check out the project. Use the CVS <i>module</i> name to indicate what Git <i>head</i> you want to check out. This also sets the name of your newly checked-out directory, unless you tell it otherwise with -d &lt;dir_name&gt;. For example, this checks out <i>master</i> branch to the project-master directory: </p>
+</dt><dd> 5. Clients should now be able to check out the project. Use the CVS <i>module</i> name to indicate what Git <i>head</i> you want to check out. This also sets the name of your newly checked-out directory, unless you tell it otherwise with -d &lt;dir_name&gt;. For example, this checks out <i>master</i> branch to the project-master directory: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
      cvs co -d project-master master
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>DATABASE BACKEND</h2>
 <p> <i>git-cvsserver</i> uses one database per Git head (i.e. CVS module) to store information about the repository to maintain consistent CVS revision numbers. The database needs to be updated (i.e. written to) after every commit. </p>
@@ -184,49 +184,49 @@ cvs -d &quot;:ext;CVS_SERVER=git cvsserver:user [at] server/path/repo.git&quot; 
 <p> gitcvs.dbname</p>
 <dl>
 <dt>
-<dd> Database name. The exact meaning depends on the selected database driver, for SQLite this is a filename. Supports variable substitution (see below). May not contain semicolons (;). Default: <i>%Ggitcvs.%m.sqlite</i></dl>
+</dt><dd> Database name. The exact meaning depends on the selected database driver, for SQLite this is a filename. Supports variable substitution (see below). May not contain semicolons (;). Default: <i>%Ggitcvs.%m.sqlite</i></dd></dl>
 <p> gitcvs.dbdriver</p>
 <dl>
 <dt>
-<dd> Used DBI driver. You can specify any available driver for this here, but it might not work. cvsserver is tested with <i>DBD::SQLite</i>, reported to work with <i>DBD::Pg</i>, and reported <code>not</code> to work with <i>DBD::mysql</i>. Please regard this as an experimental feature. May not contain colons (:). Default: <i>SQLite</i></dl>
+</dt><dd> Used DBI driver. You can specify any available driver for this here, but it might not work. cvsserver is tested with <i>DBD::SQLite</i>, reported to work with <i>DBD::Pg</i>, and reported <code>not</code> to work with <i>DBD::mysql</i>. Please regard this as an experimental feature. May not contain colons (:). Default: <i>SQLite</i></dd></dl>
 <p> gitcvs.dbuser</p>
 <dl>
 <dt>
-<dd> Database user. Only useful if setting dbdriver, since SQLite has no concept of database users. Supports variable substitution (see below).</dl>
+</dt><dd> Database user. Only useful if setting dbdriver, since SQLite has no concept of database users. Supports variable substitution (see below).</dd></dl>
 <p> gitcvs.dbpass</p>
 <dl>
 <dt>
-<dd> Database password. Only useful if setting dbdriver, since SQLite has no concept of database passwords.</dl>
+</dt><dd> Database password. Only useful if setting dbdriver, since SQLite has no concept of database passwords.</dd></dl>
 <p> gitcvs.dbTableNamePrefix</p>
 <dl>
 <dt>
-<dd> Database table name prefix. Supports variable substitution (see below). Any non-alphabetic characters will be replaced with underscores.</dl>
+</dt><dd> Database table name prefix. Supports variable substitution (see below). Any non-alphabetic characters will be replaced with underscores.</dd></dl>
 <p> All variables can also be set per access method, see above. </p>
 <p> <font SIZE="+1"> <code>Variable substitution</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> In dbdriver and dbuser you can use the following variables: </p>
 <p> %G</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> Git directory name</dl>
+</dt><dd> Git directory name</dd></dl>
 <p> %g</p>
 <dl>
 <dt>
-<dd> Git directory name, where all characters except for alpha-numeric ones, ., and &#8211; are replaced with _ (this should make it easier to use the directory name in a filename if wanted)</dl>
+</dt><dd> Git directory name, where all characters except for alpha-numeric ones, ., and &#8211; are replaced with _ (this should make it easier to use the directory name in a filename if wanted)</dd></dl>
 <p> %m</p>
 <dl>
 <dt>
-<dd> CVS module/Git head name</dl>
+</dt><dd> CVS module/Git head name</dd></dl>
 <p> %a</p>
 <dl>
 <dt>
-<dd> access method (one of &quot;ext&quot; or &quot;pserver&quot;)</dl>
+</dt><dd> access method (one of &quot;ext&quot; or &quot;pserver&quot;)</dd></dl>
 <p> %u</p>
 <dl>
 <dt>
-<dd> Name of the user running <i>git-cvsserver</i>. If no name can be determined, the numeric uid is used.</dl>
+</dt><dd> Name of the user running <i>git-cvsserver</i>. If no name can be determined, the numeric uid is used.</dd></dl>
 </dl>
 <p> </font></p>
 <h2>ENVIRONMENT</h2>
@@ -238,31 +238,31 @@ cvs -d &quot;:ext;CVS_SERVER=git cvsserver:user [at] server/path/repo.git&quot; 
 <p> To get a checkout with the Eclipse CVS client: </p>
 <dl>
 <dt>
-<dd> 1. Select &quot;Create a new project &rarr; From CVS checkout&quot;</dl>
+</dt><dd> 1. Select &quot;Create a new project &rarr; From CVS checkout&quot;</dd></dl>
 <dl>
 <dt>
-<dd> 2. Create a new location. See the notes below for details on how to choose the right protocol.</dl>
+</dt><dd> 2. Create a new location. See the notes below for details on how to choose the right protocol.</dd></dl>
 <dl>
 <dt>
-<dd> 3. Browse the <i>modules</i> available. It will give you a list of the heads in the repository. You will not be able to browse the tree from there. Only the heads.</dl>
+</dt><dd> 3. Browse the <i>modules</i> available. It will give you a list of the heads in the repository. You will not be able to browse the tree from there. Only the heads.</dd></dl>
 <dl>
 <dt>
-<dd> 4. Pick <i>HEAD</i> when it asks what branch/tag to check out. Untick the &quot;launch commit wizard&quot; to avoid committing the .project file.</dl>
+</dt><dd> 4. Pick <i>HEAD</i> when it asks what branch/tag to check out. Untick the &quot;launch commit wizard&quot; to avoid committing the .project file.</dd></dl>
 <p> Protocol notes: If you are using anonymous access via pserver, just select that. Those using SSH access should choose the <i>ext</i> protocol, and configure <i>ext</i> access on the Preferences&rarr;Team&rarr;CVS&rarr;ExtConnection pane. Set CVS_SERVER to &quot;git cvsserver&quot;. Note that password support is not good when using <i>ext</i>, you will definitely want to have SSH keys setup. </p>
 <p> Alternatively, you can just use the non-standard extssh protocol that Eclipse offer. In that case CVS_SERVER is ignored, and you will have to replace the cvs utility on the server with <i>git-cvsserver</i> or manipulate your .bashrc so that calling <i>cvs</i> effectively calls <i>git-cvsserver</i>.</p>
 <h2>CLIENTS KNOWN TO WORK</h2>
 <dl>
 <dt>
-<dd> &bull; CVS 1.12.9 on Debian</dl>
+</dt><dd> &bull; CVS 1.12.9 on Debian</dd></dl>
 <dl>
 <dt>
-<dd> &bull; CVS 1.11.17 on MacOSX (from Fink package)</dl>
+</dt><dd> &bull; CVS 1.11.17 on MacOSX (from Fink package)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Eclipse 3.0, 3.1.2 on MacOSX (see Eclipse CVS Client Notes)</dl>
+</dt><dd> &bull; Eclipse 3.0, 3.1.2 on MacOSX (see Eclipse CVS Client Notes)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; TortoiseCVS</dl>
+</dt><dd> &bull; TortoiseCVS</dd></dl>
 <h2>OPERATIONS SUPPORTED</h2>
 <p> All the operations required for normal use are supported, including checkout, diff, status, update, log, add, remove, commit. </p>
 <p> Most CVS command arguments that read CVS tags or revision numbers (typically -r) work, and also support any git refspec (tag, branch, commit ID, etc). However, CVS revision numbers for non-default branches are not well emulated, and cvs log does not show tags or branches at all. (Non-main-branch CVS revision numbers superficially resemble CVS revision numbers, but they actually encode a git commit ID directly, rather than represent the number of revisions since the branch point.) </p>

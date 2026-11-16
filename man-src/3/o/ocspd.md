@@ -31,35 +31,27 @@ url: "/docs/linux/man/3-ocspd/"
  # All rights reserved
  [ ocspd ]
  default_ocspd   = OCSPD_default
- 
- 
  [ OCSPD_default ]
  dir              = /etc/ocspd
  md               = sha1
- 
  ocspd_certificate = $dir/certs/ocspd_cert.pem
  ocspd_key         = $dir/private/ocspd_key.pem
  pidfile           = $dir/ocspd.pid
- 
  user                    = ocspd
  group                   = daemon
  bind                    = *
  port                    = 2560
  max_childs_num          = 5
  max_req_size            = 8192
- 
  request          = ocsp_req
  response         = ocsp_response
- 
  dbms                    = dbms_ldap     # Example using the LDAP for CRL
                                          # retrivial
  #dbms                   = dbms_file     # Example using file for CRL
  engine = HSM                            # ENGINE section
- 
  ####################################################################
  [ ocsp_req ]
  default_keyfile         = key.pem
- 
  ####################################################################
  [ ocsp_response ]
  dir                     = /etc/ocspd
@@ -117,91 +109,82 @@ url: "/docs/linux/man/3-ocspd/"
 </pre>
 <p> Let&#8217;s analyze the options in detail.</p>
 <dl COMPACT>
-<dt><code>default_ocspd section</code></p>
-<dd> In this section of the configuration file are set the general options used by the responder, some of which are available using the command line options too ( see <i><a href="/docs/linux/man/3-ocspd/">ocspd</a></i>(3)).</p>
+<dt><code>default_ocspd section</code></dt>
+<dd> In this section of the configuration file are set the general options used by the responder, some of which are available using the command line options too ( see <i><a href="/docs/linux/man/3-ocspd/">ocspd</a></i>(3)).</dd>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt><code>dir</code></p>
-<dd> specifies the directory where everything is kept.</p>
-<dt><code>md</code></p>
-<dd> specifies the digest to be used. Default is sha1.</p>
-<dt><code>ocspd_certificate</code></p>
-<dd> path to the certificate to be used by the responder.</p>
-<dt><code>ocspd_key</code></p>
-<dd> path to the private key file to be used by the responder.</p>
-<dt><code>pidfile</code></p>
-<dd> path to the pid file where the responder will write its pid when starting.</p>
-<dt><code>user</code></p>
-<dd> user id the responder will try to run as, this must be a valid <font SIZE="-1">UID</font>. If not specified the responder will run as the user who started the daemon.</p>
-<dt><code>group</code></p>
-<dd> group id the responder will try to run as, this must be a valid <font SIZE="-1">GID</font>. If not specified the responder will run as the user who started the daemon.</p>
-<dt><code>bind</code></p>
-<dd> address to listen to. You can force the responder to listen to just one of the available addresses. If you want the responder to listen to every available interface, simply use &#8216;*&#8217; (default).</p>
-<dt><code>port</code></p>
-<dd> specifies the port to listen to.</p>
-<dt><code>threads_num</code></p>
-<dd> Number of threads that shall be created at startup time, the more threads, the better for handling very high traffic. We expect to have better performances on multi-threaded machines and processors. </p>
+<dt><code>dir</code></dt>
+<dd> specifies the directory where everything is kept.</dd>
+<dt><code>md</code></dt>
+<dd> specifies the digest to be used. Default is sha1.</dd>
+<dt><code>ocspd_certificate</code></dt>
+<dd> path to the certificate to be used by the responder.</dd>
+<dt><code>ocspd_key</code></dt>
+<dd> path to the private key file to be used by the responder.</dd>
+<dt><code>pidfile</code></dt>
+<dd> path to the pid file where the responder will write its pid when starting.</dd>
+<dt><code>user</code></dt>
+<dd> user id the responder will try to run as, this must be a valid <font SIZE="-1">UID</font>. If not specified the responder will run as the user who started the daemon.</dd>
+<dt><code>group</code></dt>
+<dd> group id the responder will try to run as, this must be a valid <font SIZE="-1">GID</font>. If not specified the responder will run as the user who started the daemon.</dd>
+<dt><code>bind</code></dt>
+<dd> address to listen to. You can force the responder to listen to just one of the available addresses. If you want the responder to listen to every available interface, simply use &#8216;*&#8217; (default).</dd>
+<dt><code>port</code></dt>
+<dd> specifies the port to listen to.</dd>
+<dt><code>threads_num</code></dt>
+<dd> Number of threads that shall be created at startup time, the more threads, the better for handling very high traffic. We expect to have better performances on multi-threaded machines and processors. </dd>
 <p> From version 1.5+ the server is not pre-forked, instead it is a pre-threaded one. In order to run the server needs support for <font SIZE="-1">POSIX1</font>.c as found in most modern UNiX systems.</p>
-<dt><code>max_client_num</code></p>
-<dd> Size of the system socket queue: when all service threads are busy, up to this number of unserved requests are accepted in queue and will be processed as soon as a thread becomes available; additional connection requests will be denied. Default: 30.</p>
-<dt><code>chroot_dir</code></p>
-<dd> Chroot the application into the specified directory, watch out because if you chroot the application, all the paths should be relative to the new root for <font SIZE="-1">CRL</font> reloading or (better solution) you have to download the CRLs from <font SIZE="-1">HTTP</font> or <font SIZE="-1">LDAP</font>. If you chroot and you do not provide support for privileges dropping, privileges will not be dropped and an error will be written in the logfile, but the server will continue to run assuming the <i>chroot()</i> is sufficiently isolated to prevent abuse of the machine.</p>
-<dt><code>max_req_size</code></p>
-<dd> maximum size of received request, if a received request is bigger it will be trashed. Usually simple requests are 200/300 bytes long (more or less).</dl>
+<dt><code>max_client_num</code></dt>
+<dd> Size of the system socket queue: when all service threads are busy, up to this number of unserved requests are accepted in queue and will be processed as soon as a thread becomes available; additional connection requests will be denied. Default: 30.</dd>
+<dt><code>chroot_dir</code></dt>
+<dd> Chroot the application into the specified directory, watch out because if you chroot the application, all the paths should be relative to the new root for <font SIZE="-1">CRL</font> reloading or (better solution) you have to download the CRLs from <font SIZE="-1">HTTP</font> or <font SIZE="-1">LDAP</font>. If you chroot and you do not provide support for privileges dropping, privileges will not be dropped and an error will be written in the logfile, but the server will continue to run assuming the <i>chroot()</i> is sufficiently isolated to prevent abuse of the machine.</dd>
+<dt><code>max_req_size</code></dt>
+<dd> maximum size of received request, if a received request is bigger it will be trashed. Usually simple requests are 200/300 bytes long (more or less).</dd></dl>
 </dl>
 <dl COMPACT>
-<dt>
-<dd></dl>
-<dt><code>request section</code></p>
-<dd> Currently not used</p>
-<dt><code>response section</code></p>
-<dd> Here are kept options tied to responses&#8217; building.</p>
-<dt><code>dbms section</code></p>
-<dd> Here are kept options tied to the revoked certificates&#8217; list.</p>
+</dl>
+<dt><code>request section</code></dt>
+<dd> Currently not used</dd>
+<dt><code>response section</code></dt>
+<dd> Here are kept options tied to responses&#8217; building.</dd>
+<dt><code>dbms section</code></dt>
+<dd> Here are kept options tied to the revoked certificates&#8217; list.</dd>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt><code>ocsp_add_response_certs</code></p>
-<dd> specifies path to a file containing certificates to be added to the response (usually the whole certification chain). Certificates have to be in <font SIZE="-1">PEM</font> format one after another (a simple cat of the certificates will do fine).</p>
-<dt><code>ocsp_add_response_keyid</code></p>
-<dd> specifies if adding of the key id to the response.</p>
-<dt><code>next_update_days</code></p>
-<dd> specifies the number of days till next update is available. A response will be valid in the period following the request till the days+mins.</p>
-<dt><code>next_update_mins</code></p>
-<dd> specifies the number of minutes till next update is available. A response will be valid in the period following the request till the days+mins.</p>
-<dt><code>ca_url</code></p>
-<dd> specifies the <font SIZE="-1">URI</font> where the <font SIZE="-1">CA</font> certificate (which identifies the single <font SIZE="-1">CA</font>) is located. Three different protocols are implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should carry the path to the <font SIZE="-1">CA</font> file (i.e. file:///etc/ocspd/certs/ca.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</p>
-<dt><code>crl_url</code></p>
-<dd> specifies the <font SIZE="-1">URI</font> where the <font SIZE="-1">CRL</font> (list of revoked certificates, actually used for building responses) is located. Three different protocols are actually implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should have the path to the crl file (i.e. file:///etc/ocspd/crls/cacrl.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</p>
-<dt><code>crl_entry_dn</code></p>
-<dd> specifies, if ldap:// protocol is chosen within the <code>crl_url</code> parameter, the entry where to look for the certificateRevocationList attribute where the <font SIZE="-1">CRL</font> should be present (usually this is also the base of the <font SIZE="-1">LDAP</font> tree, but different installations are also possible).</dl>
+<dt><code>ocsp_add_response_certs</code></dt>
+<dd> specifies path to a file containing certificates to be added to the response (usually the whole certification chain). Certificates have to be in <font SIZE="-1">PEM</font> format one after another (a simple cat of the certificates will do fine).</dd>
+<dt><code>ocsp_add_response_keyid</code></dt>
+<dd> specifies if adding of the key id to the response.</dd>
+<dt><code>next_update_days</code></dt>
+<dd> specifies the number of days till next update is available. A response will be valid in the period following the request till the days+mins.</dd>
+<dt><code>next_update_mins</code></dt>
+<dd> specifies the number of minutes till next update is available. A response will be valid in the period following the request till the days+mins.</dd>
+<dt><code>ca_url</code></dt>
+<dd> specifies the <font SIZE="-1">URI</font> where the <font SIZE="-1">CA</font> certificate (which identifies the single <font SIZE="-1">CA</font>) is located. Three different protocols are implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should carry the path to the <font SIZE="-1">CA</font> file (i.e. file:///etc/ocspd/certs/ca.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</dd>
+<dt><code>crl_url</code></dt>
+<dd> specifies the <font SIZE="-1">URI</font> where the <font SIZE="-1">CRL</font> (list of revoked certificates, actually used for building responses) is located. Three different protocols are actually implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should have the path to the crl file (i.e. file:///etc/ocspd/crls/cacrl.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</dd>
+<dt><code>crl_entry_dn</code></dt>
+<dd> specifies, if ldap:// protocol is chosen within the <code>crl_url</code> parameter, the entry where to look for the certificateRevocationList attribute where the <font SIZE="-1">CRL</font> should be present (usually this is also the base of the <font SIZE="-1">LDAP</font> tree, but different installations are also possible).</dd></dl>
 </dl>
 <dl COMPACT>
-<dt>
-<dd></dl>
-<dt><font SIZE="-1"><code>ENGINE</code></font><code> section</code></p>
+</dl>
+<dt><font SIZE="-1"><code>ENGINE</code></font><code> section</code></dt>
 <dd>
+</dd><dl COMPACT>
 <dl COMPACT>
-<dt>
-<dd>
-<dl COMPACT>
-<dt><code>engine_id</code></p>
-<dd> Specifies the <font SIZE="-1">ENGINE</font> id to be used &#8211; check OpenSSL and your <font SIZE="-1">HSM</font> vendor to get more info about this parameter.</p>
-<dt><code>engine_pre</code></p>
-<dd> Some <font SIZE="-1">HSM</font> need initialisation before access to the crypto accelerated functions is granted. It is possible, by using the &#8216;engine_pre&#8217; options to issue needed commands directly to the <font SIZE="-1">HSM</font>. </p>
+<dt><code>engine_id</code></dt>
+<dd> Specifies the <font SIZE="-1">ENGINE</font> id to be used &#8211; check OpenSSL and your <font SIZE="-1">HSM</font> vendor to get more info about this parameter.</dd>
+<dt><code>engine_pre</code></dt>
+<dd> Some <font SIZE="-1">HSM</font> need initialisation before access to the crypto accelerated functions is granted. It is possible, by using the &#8216;engine_pre&#8217; options to issue needed commands directly to the <font SIZE="-1">HSM</font>. </dd>
 <p> The format is as follows:<br />
 0.engine_pre&nbsp;<wbr>=&nbsp;<wbr>cmd:values<br />
 1.engine_pre&nbsp;<wbr>=&nbsp;<wbr>cmd2:values<br />
 &#8230; It is possible to have as many commands as needed.</p>
-<dt><code>engine_post</code></p>
-<dd> Some HSMs need to perform commands after the <font SIZE="-1">ENGINE</font> initialisation which are taken from the &#8216;engine_post&#8217; option. Usage and format is exactly the same as &#8216;engine_pre&#8217;, the difference is that commands are sent to the <font SIZE="-1">HSM</font> after the <i>ENGINE_init()</i> function. Refer to your <font SIZE="-1">HSM</font> documentation for more informations</dl>
+<dt><code>engine_post</code></dt>
+<dd> Some HSMs need to perform commands after the <font SIZE="-1">ENGINE</font> initialisation which are taken from the &#8216;engine_post&#8217; option. Usage and format is exactly the same as &#8216;engine_pre&#8217;, the difference is that commands are sent to the <font SIZE="-1">HSM</font> after the <i>ENGINE_init()</i> function. Refer to your <font SIZE="-1">HSM</font> documentation for more informations</dd></dl>
 </dl>
 <dl COMPACT>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>Author</h2>
 <p> Massimiliano Pala &lt;madwolf [at] openca.org&gt;</p>
@@ -210,8 +193,8 @@ url: "/docs/linux/man/3-ocspd/"
 <h2>Pod Errors</h2>
 <p> Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl COMPACT>
-<dt>Around line 162:</p>
-<dd> &#8216;=item&#8217; outside of any &#8216;=over&#8217;</p>
-<dt>Around line 348:</p>
-<dd> You forgot a &#8216;=back&#8217; before &#8216;=head1&#8217; </p>
+<dt>Around line 162:</dt>
+<dd> &#8216;=item&#8217; outside of any &#8216;=over&#8217;</dd>
+<dt>Around line 348:</dt>
+<dd> You forgot a &#8216;=back&#8217; before &#8216;=head1&#8217; </dd>
 </dl>

@@ -116,13 +116,9 @@ is_error_condition_enum&lt;std::errc&gt; extends the type trait std::is_error_co
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;system_error&gt;
-
 #include &lt;thread&gt;
-
 int main()
-
 {
     try {
         std::thread().detach(); // detaching a not-a-thread

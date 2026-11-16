@@ -15,7 +15,7 @@ security_module_enable - Load given security module on boot ?
 <h2>Arguments</h2>
 
 <i>module</i>
-<dl><dd><dd>the name of the module</dl>
+<dl><dd></dd><dd>the name of the module</dd></dl>
 
 <h2>Description</h2>
 

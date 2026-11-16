@@ -15,11 +15,11 @@ disk_expand_part_tbl - expand disk-&gt;part_tbl
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>disk to expand part_tbl for</dl>
+<dl><dd></dd><dd>disk to expand part_tbl for</dd></dl>
  
 
  <i>partno</i>
-<dl><dd>expand such that this partno can fit in</dl>
+<dl><dd>expand such that this partno can fit in</dd></dl>
 
 <h2>Description</h2>
 

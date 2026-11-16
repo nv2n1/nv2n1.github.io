@@ -15,7 +15,7 @@ synchronize_irq - wait for pending IRQ handlers (on other CPUs)
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>interrupt number to wait for</dl>
+<dl><dd></dd><dd>interrupt number to wait for</dd></dl>
 
 <h2>Description</h2>
 

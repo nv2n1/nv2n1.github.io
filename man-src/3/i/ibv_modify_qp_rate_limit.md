@@ -37,9 +37,9 @@ struct ibv_qp_rate_limit_attr {
 <p> <code>ibv_create_qp</code>(3), <code>ibv_destroy_qp</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_query_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Alex Rosenbaum &lt;alexr [at] mellanox.com&gt;</p>
+<dt>Alex Rosenbaum &lt;alexr [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Bodong Wang &lt;bodong [at] mellanox.com&gt;</p>
+</dd><dt>Bodong Wang &lt;bodong [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -14,12 +14,12 @@ description: "x_edit – convert between binary and ASCII crossover correction t
 <h2>DESCRIPTION</h2>
 <p> The purpose of <code>x_edit</code> is to convert between ASCII and binary versions of the crossover correction tables.</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> Name of ASCII correction table [stdin], write binary table to file given by <code>-O</code> [stdout].</p>
-<dt><code>-X</code></p>
-<dd> Name of binary correction table [stdin], write ASCII table to file given by <code>-O</code> [stdout].</p>
-<dt><code>-O</code></p>
-<dd> Name of output correction table [stdout].</dl>
+<dt><code>-A</code></dt>
+<dd> Name of ASCII correction table [stdin], write binary table to file given by <code>-O</code> [stdout].</dd>
+<dt><code>-X</code></dt>
+<dd> Name of binary correction table [stdin], write ASCII table to file given by <code>-O</code> [stdout].</dd>
+<dt><code>-O</code></dt>
+<dd> Name of output correction table [stdout].</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To convert the binary file crossover_corr.b to ASCII and write to stdout, run </p>
 <p> <code>x_edit -X</code>crossover_corr.b &gt; corrections.d </p>

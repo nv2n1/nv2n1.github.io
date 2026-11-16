@@ -15,7 +15,7 @@ posix_unblock_lock - stop waiting for a file lock
 <h2>Arguments</h2>
 
 <i>waiter</i>
-<dl><dd><dd>the lock which was waiting</dl>
+<dl><dd></dd><dd>the lock which was waiting</dd></dl>
 
 <h2>Description</h2>
 

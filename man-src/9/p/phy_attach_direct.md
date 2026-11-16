@@ -15,19 +15,19 @@ phy_attach_direct - attach a network device to a given PHY device pointer
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device to attach</dl>
+<dl><dd></dd><dd>network device to attach</dd></dl>
  
 
  <i>phydev</i>
-<dl><dd>Pointer to phy_device to attach</dl>
+<dl><dd>Pointer to phy_device to attach</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>PHY device's dev_flags</dl>
+<dl><dd>PHY device's dev_flags</dd></dl>
  
 
  <i>interface</i>
-<dl><dd>PHY device's interface</dl>
+<dl><dd>PHY device's interface</dd></dl>
 
 <h2>Description</h2>
 

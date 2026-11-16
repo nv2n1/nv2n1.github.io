@@ -11,15 +11,10 @@ std::filesystem::copy_symlink - std::filesystem::copy_symlink
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     void copy_symlink(const std::filesystem::path &amp;from, (1)(since C++ 17)
-
                                                              const std::filesystem::path &amp;to);
-
 void copy_symlink(const std::filesystem::path &amp;from,
-
                   const std::filesystem::path &amp;to, (2)(since C++ 17)
-
                                                        std::error_code &amp;ec) noexcept;</code></pre> 
 Copies a symlink to another location. 
 1) Effectively calls f(read_symlink(from), to) where f is create_symlink or create_directory_symlink depending on whether from resolves to a file or directory. 

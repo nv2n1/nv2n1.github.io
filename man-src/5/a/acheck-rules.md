@@ -27,103 +27,103 @@ description: "set.rules – Rules set for acheck"
 <p>A list starts at a `<i>list</i>&#8216; statement, and stops at the first `<i>end_list</i>&#8216; or at the end of the file. </p>
 <p> Mandatory fields:</p>
 <dl>
-<dt><i>type</i> type</p>
+<dt><i>type</i> type</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>until</i>, perform the list until the current line matches `<i>test</i>&#8216;</p>
+</dd><dl>
+<dt><i>until</i>, perform the list until the current line matches `<i>test</i>&#8216;</dt>
 <dd>
-<dt><i>while</i>, perform the lint while the current line matches `<i>test</i>&#8216;</p>
+</dd><dt><i>while</i>, perform the lint while the current line matches `<i>test</i>&#8216;</dt>
 <dd>
-<dt><i>loop</i>, perform the list `<i>test</i>&#8216; times</p>
-<dd></dl>
+</dd><dt><i>loop</i>, perform the list `<i>test</i>&#8216; times</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dd></dl>
-<dt><i>test</i> regex / number</p>
-<dd>A regex for `<i>until</i>&#8216; and `<i>while</i>&#8216; lists. The number of times the list must be performed for `<i>loop</i>&#8216;, or `<i>0</i>&#8216; for infinite loop.</dl>
+<dd></dd></dl>
+<dt><i>test</i> regex / number</dt>
+<dd>A regex for `<i>until</i>&#8216; and `<i>while</i>&#8216; lists. The number of times the list must be performed for `<i>loop</i>&#8216;, or `<i>0</i>&#8216; for infinite loop.</dd></dl>
 <p> Optional fields:</p>
 <dl>
-<dt><i>name</i> name</p>
-<dd>Use this to give the list a name.</p>
-<dt><i>spell</i> yes / no</p>
-<dd>Set it to `<i>yes</i>&#8216; (default) or `<i>no</i>&#8216;, if you want or don&#8217;t want spelling to be checked in the lines matching this list. This value will be inherited by the nested lists.</dl>
+<dt><i>name</i> name</dt>
+<dd>Use this to give the list a name.</dd>
+<dt><i>spell</i> yes / no</dt>
+<dd>Set it to `<i>yes</i>&#8216; (default) or `<i>no</i>&#8216;, if you want or don&#8217;t want spelling to be checked in the lines matching this list. This value will be inherited by the nested lists.</dd></dl>
 <p> Sub-rules:</p>
 <dl>
-<dt><i>list</i> [name]</p>
+<dt><i>list</i> [name]</dt>
 <dd>
-<dt><i>rule</i> [name]</p>
+</dd><dt><i>rule</i> [name]</dt>
 <dd>
-<dt><i>comment</i> [name]</p>
-<dd>Followed by the name of the sub-rule or its definition for an anonymous sub-rule.</dl>
+</dd><dt><i>comment</i> [name]</dt>
+<dd>Followed by the name of the sub-rule or its definition for an anonymous sub-rule.</dd></dl>
 <h2>rule</h2>
 <p>A rule starts at a `<i>rule</i>&#8216; statement, and stops at the first `<i>end_rule</i>&#8216; or at the beginning of a comment or a list. </p>
 <p> Mandatory fields:</p>
 <dl>
-<dt><i>type</i> type</p>
+<dt><i>type</i> type</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>fix</i>, rule provides fixes and hints thought a menu</p>
+</dd><dl>
+<dt><i>fix</i>, rule provides fixes and hints thought a menu</dt>
 <dd>
-<dt><i>autofix</i>, rule fixes the mistake with no interaction</p>
+</dd><dt><i>autofix</i>, rule fixes the mistake with no interaction</dt>
 <dd>
-<dt><i>warning</i>, rule issues a warning</p>
+</dd><dt><i>warning</i>, rule issues a warning</dt>
 <dd>
-<dt><i>error</i>, rule issues an error</p>
+</dd><dt><i>error</i>, rule issues an error</dt>
 <dd>
-<dt><i>nop</i>, special rule that do nothing, no other field is required</p>
-<dd></dl>
+</dd><dt><i>nop</i>, special rule that do nothing, no other field is required</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dd></dl>
-<dt><i>regex</i> regex</p>
-<dd>The regex to be match to found this error. Patterns can be captures and then used in the `<i>fix</i>&#8216; expression.</p>
-<dt><i>fix</i> expr</p>
-<dd>Provides a correction for the rule, this field can be repeated to provides more than one choice. Only the first one will be used for `<i>autofix</i>&#8216; rules. `<i>warning</i>&#8216; and `<i>error</i>&#8216; do not provides fixes. The captured patterns can be used here with variables `<i></i>$1<i></i>&#8216;, `<i></i>$2<i></i>&#8216;, and so on.</p>
-<dt><i>hint</i> text</p>
-<dd>Provides some explanations, this will be used as reviewer comments in review mode.</dl>
+<dd></dd></dl>
+<dt><i>regex</i> regex</dt>
+<dd>The regex to be match to found this error. Patterns can be captures and then used in the `<i>fix</i>&#8216; expression.</dd>
+<dt><i>fix</i> expr</dt>
+<dd>Provides a correction for the rule, this field can be repeated to provides more than one choice. Only the first one will be used for `<i>autofix</i>&#8216; rules. `<i>warning</i>&#8216; and `<i>error</i>&#8216; do not provides fixes. The captured patterns can be used here with variables `<i></i>$1<i></i>&#8216;, `<i></i>$2<i></i>&#8216;, and so on.</dd>
+<dt><i>hint</i> text</dt>
+<dd>Provides some explanations, this will be used as reviewer comments in review mode.</dd></dl>
 <p> Optional fields:</p>
 <dl>
-<dt><i>name</i> name</p>
-<dd>Use this to give the rule a name.</p>
-<dt><i>valid</i> [name]</p>
-<dd>Provides a validation test, it can be named or anonymous. For anonymous validation, the test definition must follow. This field can be repeated more than once, if any of the validation test succeed, the rule does not apply.</dl>
+<dt><i>name</i> name</dt>
+<dd>Use this to give the rule a name.</dd>
+<dt><i>valid</i> [name]</dt>
+<dd>Provides a validation test, it can be named or anonymous. For anonymous validation, the test definition must follow. This field can be repeated more than once, if any of the validation test succeed, the rule does not apply.</dd></dl>
 <h2>valid</h2>
 <p>A validation test starts at a `<i>valid</i>&#8216; statement, and stops at the first `<i>end_valid</i>&#8216; or at the beginning of a rule, a comment, a list or another validation test. </p>
 <p> Mandatory field:</p>
 <dl>
-<dt><i>pre</i> regex</p>
+<dt><i>pre</i> regex</dt>
 <dd>
-<dt><i>in</i> regex&gt;</p>
+</dd><dt><i>in</i> regex&gt;</dt>
 <dd>
-<dt><i>post</i> regex</p>
-<dd>Try the regex before, in or after the match of the regex rule. At least one of these test must be provided. If all tests are successful, the rule won&#8217;t apply.</dl>
+</dd><dt><i>post</i> regex</dt>
+<dd>Try the regex before, in or after the match of the regex rule. At least one of these test must be provided. If all tests are successful, the rule won&#8217;t apply.</dd></dl>
 <p> Optional field:</p>
 <dl>
-<dt><i>name</i> name</p>
-<dd>Use this to give the validation test a name.</dl>
+<dt><i>name</i> name</dt>
+<dd>Use this to give the validation test a name.</dd></dl>
 <h2>comment</h2>
 <p>A comment starts at a `<i>comment</i>&#8216; statement, and stops at the first `<i>end_comment</i>&#8216; or at the beginning of a rule, a comment or a list. </p>
 <p> Comments are just skipped, no other rule and no spelling are performed on them. </p>
 <p> Mandatory field:</p>
 <dl>
-<dt><i>skip</i> regex</p>
-<dd>A regex matching the text of the comment. Do not use `<i>start</i>&#8216; and `<i>stop</i>&#8216; with this.</p>
-<dt><i>start</i> regex</p>
+<dt><i>skip</i> regex</dt>
+<dd>A regex matching the text of the comment. Do not use `<i>start</i>&#8216; and `<i>stop</i>&#8216; with this.</dd>
+<dt><i>start</i> regex</dt>
 <dd>
-<dt><i>stop</i> regex</p>
-<dd>Regexs defining the beginning and the end of the comment, all the text between will be considered as comment. Do not use `<i>skip</i>&#8216; with this.</dl>
+</dd><dt><i>stop</i> regex</dt>
+<dd>Regexs defining the beginning and the end of the comment, all the text between will be considered as comment. Do not use `<i>skip</i>&#8216; with this.</dd></dl>
 <p> Optional fields:</p>
 <dl>
-<dt><i>name</i> name</p>
-<dd>Use this to give the comment a name.</p>
-<dt><i>start_offset</i></p>
+<dt><i>name</i> name</dt>
+<dd>Use this to give the comment a name.</dd>
+<dt><i>start_offset</i></dt>
 <dd>
-<dt><i>stop_offset</i></p>
-<dd>Defines where the comment really starts or end. Values are `<i>s</i>&#8216; for the place the match starts, `<i>s+&lt;n&gt;</i>&#8216; for <i>n</i> characters after the match starts, `<i>e</i>&#8216; for the place the match ends, or `<i>e-&lt;n&gt;</i>&#8216; for <i>n</i> characters before the match ends. Defaults are `<i>s</i>&#8216; for `<i>start</i>&#8216; matches and `<i>e</i>&#8216; for `<i>stop</i>&#8216; matches.</dl>
+</dd><dt><i>stop_offset</i></dt>
+<dd>Defines where the comment really starts or end. Values are `<i>s</i>&#8216; for the place the match starts, `<i>s+&lt;n&gt;</i>&#8216; for <i>n</i> characters after the match starts, `<i>e</i>&#8216; for the place the match ends, or `<i>e-&lt;n&gt;</i>&#8216; for <i>n</i> characters before the match ends. Defaults are `<i>s</i>&#8216; for `<i>start</i>&#8216; matches and `<i>e</i>&#8216; for `<i>stop</i>&#8216; matches.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-acheck/">acheck</a></i>(1), <i><a href="/docs/linux/man/5-acheck/">acheck</a></i>(5)</p>
 <h2>Author</h2>

@@ -11,31 +11,16 @@ description: "sc::BcastStateRecv –"
 <p> <code>BcastStateRecv</code> does the receive part of a broadcast of an object to all nodes.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateRecv</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>BcastStateRecv (const Ref&lt; MessageGrp &gt; &amp;, int source=0)
-
-
 Create the BcastStateRecv.
-
-
 void source (int s)
-
-
 Set the source node.
-
-
-
 Protected Member Functions
 void next_buffer ()
-
-
 Specializations must implement next_buffer().
-
-
-
 Protected Attributes
 int source_</code></pre>
 <h2>Detailed Description</h2>

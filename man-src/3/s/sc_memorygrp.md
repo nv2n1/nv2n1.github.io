@@ -11,209 +11,73 @@ description: "sc::MemoryGrp –"
 <p> The <code>MemoryGrp</code> abstract class provides a way of accessing distributed memory in a parallel machine.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;memory.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::MsgMemoryGrp</code>, and <code>sc::ProcMemoryGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>MemoryGrp (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 int me () const
-
-
 Returns who I am.
-
-
 int n () const
-
-
 Returns how many nodes there are.
-
-
 virtual void set_localsize (size_t)=0
-
-
 Set the size of locally held memory.
-
-
 size_t localsize ()
-
-
 Returns the amount of memory residing locally on me().
-
-
 virtual void * localdata ()=0
-
-
 Returns a pointer to the local data.
-
-
 distsize_t localoffset ()
-
-
 Returns the global offset to this node's memory.
-
-
 int size (int node)
-
-
 Returns the amount of memory residing on node.
-
-
 distsize_t offset (int node)
-
-
 Returns the global offset to node's memory.
-
-
 distsize_t totalsize ()
-
-
 Returns the sum of all memory allocated on all nodes.
-
-
 virtual void activate ()
-
-
 Activate is called before the memory is to be used.
-
-
 virtual void deactivate ()
-
-
 Deactivate is called after the memory has been used.
-
-
 virtual void * obtain_writeonly (distsize_t offset, int size)=0
-
-
 This gives write access to the memory location. No locking is done.
-
-
 virtual void * obtain_readwrite (distsize_t offset, int size)=0
-
-
 Only one thread can have an unreleased obtain_readwrite at a time.
-
-
 virtual void * obtain_readonly (distsize_t offset, int size)=0
-
-
 This gives read access to the memory location. No locking is done.
-
-
 virtual void release_readonly (void *data, distsize_t offset, int size)=0
-
-
 This is called when read access is no longer needed.
-
-
 virtual void release_writeonly (void *data, distsize_t offset, int size)=0
-
-
 This is called when write access is no longer needed.
-
-
 virtual void release_readwrite (void *data, distsize_t offset, int size)=0
-
-
 This is called when read/write access is no longer needed.
-
-
 virtual void sum_reduction (double *data, distsize_t doffset, int dsize)
-
-
-
 virtual void sum_reduction_on_node (double *data, size_t doffset, int dsize, int node=-1)
-
-
-
 virtual void sync ()=0
-
-
 Synchronizes all the nodes.
-
-
 virtual void * malloc_local (size_t nbyte)
-
-
 Allocate data that will be accessed locally only.
-
-
 virtual double * malloc_local_double (size_t ndouble)
-
-
-
 virtual void free_local (void *data)
-
-
 Free data that was allocated with malloc_local_double.
-
-
 virtual void free_local_double (double *data)
-
-
-
 virtual void catchup ()
-
-
 Processes outstanding requests.
-
-
 virtual void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Prints out information about the object.
-
-
-
 Static Public Member Functions
 static MemoryGrp * initial_memorygrp (int &amp;argc, char **argv)
-
-
 Create a memory group.
-
-
 static MemoryGrp * initial_memorygrp ()
-
-
-
 static void set_default_memorygrp (const Ref&lt; MemoryGrp &gt; &amp;)
-
-
 The default memory group contains the primary memory group to be used by an application.
-
-
 static MemoryGrp * get_default_memorygrp ()
-
-
 Returns the default memory group.
-
-
-
 Protected Member Functions
 void obtain_local_lock (size_t start, size_t fence)
-
-
-
 void release_local_lock (size_t start, size_t fence)
-
-
-
 Protected Attributes
 int me_
-
-
-
 int n_
-
-
-
 distsize_t * offsets_
-
-
-
 int debug_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>MemoryGrp</code> abstract class provides a way of accessing distributed memory in a parallel machine. </p>

@@ -13,14 +13,14 @@ description: "setfont – load EGA/VGA console screen font"
 <h2>Description</h2>
 <p>The <code>setfont</code> command reads a font from the file <i>font.new</i> and loads it into the EGA/VGA character generator, and optionally outputs the previous font. It can also load various mapping tables and output the previous versions. If no args are given (or only the option &#8211;<i>N</i> for some number <i>N</i>), then a default (8x<i>N</i>) font is loaded (see below). One may give several small fonts, all containing a Unicode table, and <code>setfont</code> will combine them and load the union. Typical use:</p>
 <dl>
-<dt><code>setfont</code></p>
-<dd>Load a default font.</p>
-<dt><code>setfont drdos8x16</code></p>
-<dd>Load a given font (here the 448-glyph drdos font).</p>
-<dt><code>setfont cybercafe -u cybercafe</code></p>
-<dd>Load a given font that does not have a Unicode map and provide one explicitly.</p>
-<dt><code>setfont LatArCyrHeb-19 -m 8859-2</code></p>
-<dd>Load a given font (here a 512-glyph font combining several character sets) and indicate that one&#8217;s local character set is ISO 8859-2.</dl>
+<dt><code>setfont</code></dt>
+<dd>Load a default font.</dd>
+<dt><code>setfont drdos8x16</code></dt>
+<dd>Load a given font (here the 448-glyph drdos font).</dd>
+<dt><code>setfont cybercafe -u cybercafe</code></dt>
+<dd>Load a given font that does not have a Unicode map and provide one explicitly.</dd>
+<dt><code>setfont LatArCyrHeb-19 -m 8859-2</code></dt>
+<dd>Load a given font (here a 512-glyph font combining several character sets) and indicate that one&#8217;s local character set is ISO 8859-2.</dd></dl>
 <p> Note: if a font has more than 256 glyphs, only 8 out of 16 colors can be used simultaneously. It can make console perception worse (loss of intensity and even some colors). </p>
 <h2>Font Formats</h2>
 <p>The standard Linux font format is the PSF font. It has a header describing font properties like character size, followed by the glyph bitmaps, optionally followed by a Unicode mapping table giving the Unicode value for each glyph. Several other (obsolete) font formats are recognized. If the input file has code page format (probably with suffix .cp), containing three fonts with sizes e.g. 8&#215;8, 8&#215;14 and 8&#215;16, then one of the options -8 or -14 or -16 must be used to select one. Raw font files are binary files of size 256*<i>N</i> bytes, containing bit images for each of 256 characters, one byte per scan line, and <i>N</i> bytes per character (0 &lt; <i>N</i> &lt;= 32). Most fonts have a width of 8 bits, but with the framebuffer device (fb) other widths can be used.</p>
@@ -39,41 +39,41 @@ description: "setfont – load EGA/VGA console screen font"
 <p> One may add a Unicode mapping table to a psf font using <code><a href="/docs/linux/man/1-psfaddtable/">psfaddtable</a></code>(1).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h </code><i>H</i></p>
-<dd>Override font height.</p>
-<dt><code>-d</code></p>
-<dd>Doubles the size of the font, by replicating all of its pixels vertically and horizontally. This is suitable for high pixel density (e.g. &quot;4k&quot;) displays on which the standard fonts are too small to be easily legible. Due to kernel limitations, this is suitable only for 16&#215;16 or smaller fonts.</p>
-<dt><code>-m </code><i>file</i></p>
-<dd>Load console map or Unicode console map from <i>file</i>.</p>
-<dt><code>-o </code><i>file</i></p>
-<dd>Save previous font in <i>file</i>.</p>
-<dt><code>-O </code><i>file</i></p>
-<dd>Save previous font and Unicode map in <i>file</i>.</p>
-<dt><code>-om </code><i>file</i></p>
-<dd>Store console map in <i>file</i>.</p>
-<dt><code>-ou </code><i>file</i></p>
-<dd>Save previous Unicode map in <i>file</i>.</p>
-<dt><code>-u </code><i>file</i></p>
-<dd>Load Unicode table describing the font from <i>file</i>.</p>
-<dt><code>-C </code><i>console</i></p>
-<dd>Set the font for the indicated console. (May require root permissions.)</p>
-<dt><code>-v</code></p>
-<dd>Be verbose.</p>
-<dt><code>-V</code></p>
-<dd>Print version and exit. </p>
+<dt><code>-h </code><i>H</i></dt>
+<dd>Override font height.</dd>
+<dt><code>-d</code></dt>
+<dd>Doubles the size of the font, by replicating all of its pixels vertically and horizontally. This is suitable for high pixel density (e.g. &quot;4k&quot;) displays on which the standard fonts are too small to be easily legible. Due to kernel limitations, this is suitable only for 16&#215;16 or smaller fonts.</dd>
+<dt><code>-m </code><i>file</i></dt>
+<dd>Load console map or Unicode console map from <i>file</i>.</dd>
+<dt><code>-o </code><i>file</i></dt>
+<dd>Save previous font in <i>file</i>.</dd>
+<dt><code>-O </code><i>file</i></dt>
+<dd>Save previous font and Unicode map in <i>file</i>.</dd>
+<dt><code>-om </code><i>file</i></dt>
+<dd>Store console map in <i>file</i>.</dd>
+<dt><code>-ou </code><i>file</i></dt>
+<dd>Save previous Unicode map in <i>file</i>.</dd>
+<dt><code>-u </code><i>file</i></dt>
+<dd>Load Unicode table describing the font from <i>file</i>.</dd>
+<dt><code>-C </code><i>console</i></dt>
+<dd>Set the font for the indicated console. (May require root permissions.)</dd>
+<dt><code>-v</code></dt>
+<dd>Be verbose.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version and exit. </dd>
 </dl>
 <h2>Note</h2>
 <p>PC video hardware allows one to use the &quot;intensity&quot; bit either to indicate brightness, or to address 512 (instead of 256) glyphs in the font. So, if the font has more than 256 glyphs, the console will be reduced to 8 (instead of 16) colors.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/share/consolefonts</i></p>
-<dd>The default font directory.</dl>
+<dt><i>/usr/share/consolefonts</i></dt>
+<dd>The default font directory.</dd></dl>
 <dl>
-<dt><i>/usr/share/unimaps</i></p>
-<dd>The default directory for Unicode maps.</dl>
+<dt><i>/usr/share/unimaps</i></dt>
+<dd>The default directory for Unicode maps.</dd></dl>
 <dl>
-<dt><i>/usr/share/consoletrans</i></p>
-<dd>The default directory for screen mappings.</dl>
+<dt><i>/usr/share/consoletrans</i></dt>
+<dd>The default directory for screen mappings.</dd></dl>
 <p> The default font is a file <i>default</i> (or <i>default8x</i>N if the -N option was given for some number N) perhaps with suitable extension (like .psf).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-psfaddtable/">psfaddtable</a></code>(1), <code><a href="/docs/linux/man/1-unicode_start/">unicode_start</a></code>(1), <code><a href="/docs/linux/man/8-loadunimap/">loadunimap</a></code>(8), <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7), <code><a href="/docs/linux/man/8-mapscrn/">mapscrn</a></code>(8) </p>

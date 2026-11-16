@@ -15,14 +15,14 @@ description: "sum – checksum and count the blocks in a file"
 <p> Print checksum and block counts for each FILE. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>
-<dt><code>-r</code></p>
-<dd> use BSD sum algorithm, use 1K blocks</p>
-<dt><code>-s</code>, <code>&#8211;sysv</code></p>
-<dd> use System V sum algorithm, use 512 bytes blocks</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-r</code></dt>
+<dd> use BSD sum algorithm, use 1K blocks</dd>
+<dt><code>-s</code>, <code>&#8211;sysv</code></dt>
+<dd> use System V sum algorithm, use 512 bytes blocks</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Kayvan Aghaiepour and David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

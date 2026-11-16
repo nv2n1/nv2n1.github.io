@@ -20,270 +20,270 @@ description: "indent – changes the appearance of a C program by inserting or d
 <p> In version 1.2 and more recent versions, the GNU style of indenting is the default.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-bad</code>, <code>&#8211;blank-lines-after-declarations</code></p>
+<dt><code>-bad</code>, <code>&#8211;blank-lines-after-declarations</code></dt>
 <dd> Force blank lines after the declarations.<br />
- See <code>&nbsp;<wbr>BLANK LINES</code>.</p>
-<dt><code>-bap</code>, <code>&#8211;blank-lines-after-procedures</code></p>
+ See <code>&nbsp;<wbr>BLANK LINES</code>.</dd>
+<dt><code>-bap</code>, <code>&#8211;blank-lines-after-procedures</code></dt>
 <dd> Force blank lines after procedure bodies.<br />
- See <code>&nbsp;<wbr>BLANK LINES</code>.</p>
-<dt><code>-bbb</code>, <code>&#8211;blank-lines-before-block-comments</code></p>
+ See <code>&nbsp;<wbr>BLANK LINES</code>.</dd>
+<dt><code>-bbb</code>, <code>&#8211;blank-lines-before-block-comments</code></dt>
 <dd> Force blank lines before block comments.<br />
- See <code>&nbsp;<wbr>BLANK LINES</code>.</p>
-<dt><code>-bbo</code>, <code>&#8211;break-before-boolean-operator</code></p>
+ See <code>&nbsp;<wbr>BLANK LINES</code>.</dd>
+<dt><code>-bbo</code>, <code>&#8211;break-before-boolean-operator</code></dt>
 <dd> Prefer to break long lines before boolean operators.<br />
- See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</p>
-<dt><code>-bc</code>, <code>&#8211;blank-lines-after-commas</code></p>
+ See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</dd>
+<dt><code>-bc</code>, <code>&#8211;blank-lines-after-commas</code></dt>
 <dd> Force newline after comma in declaration.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-bl</code>, <code>&#8211;braces-after-if-line</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-bl</code>, <code>&#8211;braces-after-if-line</code></dt>
 <dd> Put braces on line after <code>if</code>, etc.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-blf</code>, <code>&#8211;braces-after-func-def-line</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-blf</code>, <code>&#8211;braces-after-func-def-line</code></dt>
 <dd> Put braces on line following function definition line.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-bli</code><i>n</i>, <code>&#8211;brace-indent</code><i>n</i></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-bli</code><i>n</i>, <code>&#8211;brace-indent</code><i>n</i></dt>
 <dd> Indent braces <i>n</i> spaces.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-bls</code>, <code>&#8211;braces-after-struct-decl-line</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-bls</code>, <code>&#8211;braces-after-struct-decl-line</code></dt>
 <dd> Put braces on the line after <code>struct</code> declaration lines.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-br</code>, <code>&#8211;braces-on-if-line</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-br</code>, <code>&#8211;braces-on-if-line</code></dt>
 <dd> Put braces on line with <code>if</code>, etc.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-brf</code>, <code>&#8211;braces-on-func-def-line</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-brf</code>, <code>&#8211;braces-on-func-def-line</code></dt>
 <dd> Put braces on function definition line.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-brs</code>, <code>&#8211;braces-on-struct-decl-line</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-brs</code>, <code>&#8211;braces-on-struct-decl-line</code></dt>
 <dd> Put braces on <code>struct</code> declaration line.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-bs</code>, <code>&#8211;Bill-Shannon</code>, <code>&#8211;blank-before-sizeof</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-bs</code>, <code>&#8211;Bill-Shannon</code>, <code>&#8211;blank-before-sizeof</code></dt>
 <dd> Put a space between <code>sizeof</code> and its argument.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-c</code><i>n</i>, <code>&#8211;comment-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-c</code><i>n</i>, <code>&#8211;comment-indentation</code><i>n</i></dt>
 <dd> Put comments to the right of code in column <i>n</i>.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-cbi</code><i>n</i>, <code>&#8211;case-brace-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-cbi</code><i>n</i>, <code>&#8211;case-brace-indentation</code><i>n</i></dt>
 <dd> Indent braces after a case label N spaces.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-cd</code><i>n</i>, <code>&#8211;declaration-comment-column</code><i>n</i></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-cd</code><i>n</i>, <code>&#8211;declaration-comment-column</code><i>n</i></dt>
 <dd> Put comments to the right of the declarations in column <i>n</i>.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-cdb</code>, <code>&#8211;comment-delimiters-on-blank-lines</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-cdb</code>, <code>&#8211;comment-delimiters-on-blank-lines</code></dt>
 <dd> Put comment delimiters on blank lines.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-cdw</code>, <code>&#8211;cuddle-do-while</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-cdw</code>, <code>&#8211;cuddle-do-while</code></dt>
 <dd> Cuddle while of <code>do {} while;</code> and preceding &#8216;}&#8217;.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-ce</code>, <code>&#8211;cuddle-else</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-ce</code>, <code>&#8211;cuddle-else</code></dt>
 <dd> Cuddle else and preceding &#8216;}&#8217;.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-ci</code><i>n</i>, <code>&#8211;continuation-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-ci</code><i>n</i>, <code>&#8211;continuation-indentation</code><i>n</i></dt>
 <dd> Continuation indent of <i>n</i> spaces.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-cli</code><i>n</i>, <code>&#8211;case-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-cli</code><i>n</i>, <code>&#8211;case-indentation</code><i>n</i></dt>
 <dd> Case label indent of <i>n</i> spaces.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-cp</code><i>n</i>, <code>&#8211;else-endif-column</code><i>n</i></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-cp</code><i>n</i>, <code>&#8211;else-endif-column</code><i>n</i></dt>
 <dd> Put comments to the right of <code>#else</code> and <code> #endif</code> statements in column <i>n</i>.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-cs</code>, <code>&#8211;space-after-cast</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-cs</code>, <code>&#8211;space-after-cast</code></dt>
 <dd> Put a space after a cast operator.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-d</code><i>n</i>, <code>&#8211;line-comments-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-d</code><i>n</i>, <code>&#8211;line-comments-indentation</code><i>n</i></dt>
 <dd> Set indentation of comments not to the right of code to <i>n</i> spaces.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-bfda</code>, <code>&#8211;break-function-decl-args</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-bfda</code>, <code>&#8211;break-function-decl-args</code></dt>
 <dd> Break the line before all arguments in a declaration.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-bfde</code>, <code>&#8211;break-function-decl-args-end</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-bfde</code>, <code>&#8211;break-function-decl-args-end</code></dt>
 <dd> Break the line after the last argument in a declaration.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-dj</code><i>n</i>, <code>&#8211;left-justify-declarations</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-dj</code><i>n</i>, <code>&#8211;left-justify-declarations</code></dt>
 <dd> If -cd 0 is used then comments after declarations are left justified behind the declaration.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-di</code><i>n</i>, <code>&#8211;declaration-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-di</code><i>n</i>, <code>&#8211;declaration-indentation</code><i>n</i></dt>
 <dd> Put variables in column <i>n</i>.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-fc1</code>, <code>&#8211;format-first-column-comments</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-fc1</code>, <code>&#8211;format-first-column-comments</code></dt>
 <dd> Format comments in the first column.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-fca</code>, <code>&#8211;format-all-comments</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-fca</code>, <code>&#8211;format-all-comments</code></dt>
 <dd> Do not disable all formatting of comments.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-gnu</code>, <code>&#8211;gnu-style</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-gnu</code>, <code>&#8211;gnu-style</code></dt>
 <dd> Use GNU coding style. This is the default.<br />
- See <code>&nbsp;<wbr>COMMON STYLES</code>.</p>
-<dt><code>-hnl</code>, <code>&#8211;honour-newlines</code></p>
+ See <code>&nbsp;<wbr>COMMON STYLES</code>.</dd>
+<dt><code>-hnl</code>, <code>&#8211;honour-newlines</code></dt>
 <dd> Prefer to break long lines at the position of newlines in the input.<br />
- See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</p>
-<dt><code>-i</code><i>n</i>, <code>&#8211;indent-level</code><i>n</i></p>
+ See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</dd>
+<dt><code>-i</code><i>n</i>, <code>&#8211;indent-level</code><i>n</i></dt>
 <dd> Set indentation level to <i>n</i> spaces.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-il</code><i>n</i>, <code>&#8211;indent-label</code><i>n</i></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-il</code><i>n</i>, <code>&#8211;indent-label</code><i>n</i></dt>
 <dd> Set offset for labels to column <i>n</i>.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-ip</code><i>n</i>, <code>&#8211;parameter-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-ip</code><i>n</i>, <code>&#8211;parameter-indentation</code><i>n</i></dt>
 <dd> Indent parameter types in old-style function definitions by <i>n</i> spaces.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-kr</code>, <code>&#8211;k-and-r-style</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-kr</code>, <code>&#8211;k-and-r-style</code></dt>
 <dd> Use Kernighan &amp; Ritchie coding style.<br />
- See <code>&nbsp;<wbr>COMMON STYLES</code>.</p>
-<dt><code>-l</code><i>n</i>, <code>&#8211;line-length</code><i>n</i></p>
+ See <code>&nbsp;<wbr>COMMON STYLES</code>.</dd>
+<dt><code>-l</code><i>n</i>, <code>&#8211;line-length</code><i>n</i></dt>
 <dd> Set maximum line length for non-comment lines to <i>n</i>.<br />
- See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</p>
-<dt><code>-lc</code><i>n</i>, <code>&#8211;comment-line-length</code><i>n</i></p>
+ See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</dd>
+<dt><code>-lc</code><i>n</i>, <code>&#8211;comment-line-length</code><i>n</i></dt>
 <dd> Set maximum line length for comment formatting to <i>n</i>.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-linux</code>, <code>&#8211;linux-style</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-linux</code>, <code>&#8211;linux-style</code></dt>
 <dd> Use Linux coding style.<br />
- See <code>&nbsp;<wbr>COMMON STYLES</code>.</p>
-<dt><code>-lp</code>, <code>&#8211;continue-at-parentheses</code></p>
+ See <code>&nbsp;<wbr>COMMON STYLES</code>.</dd>
+<dt><code>-lp</code>, <code>&#8211;continue-at-parentheses</code></dt>
 <dd> Line up continued lines at parentheses.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-lps</code>, <code>&#8211;leave-preprocessor-space</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-lps</code>, <code>&#8211;leave-preprocessor-space</code></dt>
 <dd> Leave space between &#8216;#&#8217; and preprocessor directive.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-nlps</code>, <code>&#8211;remove-preprocessor-space</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-nlps</code>, <code>&#8211;remove-preprocessor-space</code></dt>
 <dd> Remove space between &#8216;#&#8217; and preprocessor directive.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-nbad</code>, <code>&#8211;no-blank-lines-after-declarations</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-nbad</code>, <code>&#8211;no-blank-lines-after-declarations</code></dt>
 <dd> Do not force blank lines after declarations.<br />
- See <code>&nbsp;<wbr>BLANK LINES</code>.</p>
-<dt><code>-nbap</code>, <code>&#8211;no-blank-lines-after-procedures</code></p>
+ See <code>&nbsp;<wbr>BLANK LINES</code>.</dd>
+<dt><code>-nbap</code>, <code>&#8211;no-blank-lines-after-procedures</code></dt>
 <dd> Do not force blank lines after procedure bodies.<br />
- See <code>&nbsp;<wbr>BLANK LINES</code>.</p>
-<dt><code>-nbbo</code>, <code>&#8211;break-after-boolean-operator</code></p>
+ See <code>&nbsp;<wbr>BLANK LINES</code>.</dd>
+<dt><code>-nbbo</code>, <code>&#8211;break-after-boolean-operator</code></dt>
 <dd> Do not prefer to break long lines before boolean operators.<br />
- See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</p>
-<dt><code>-nbc</code>, <code>&#8211;no-blank-lines-after-commas</code></p>
+ See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</dd>
+<dt><code>-nbc</code>, <code>&#8211;no-blank-lines-after-commas</code></dt>
 <dd> Do not force newlines after commas in declarations.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-nbfda</code>, <code>&#8211;dont-break-function-decl-args</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-nbfda</code>, <code>&#8211;dont-break-function-decl-args</code></dt>
 <dd> Don&#8217;t put each argument in a function declaration on a separate line.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-ncdb</code>, <code>&#8211;no-comment-delimiters-on-blank-lines</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-ncdb</code>, <code>&#8211;no-comment-delimiters-on-blank-lines</code></dt>
 <dd> Do not put comment delimiters on blank lines.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-ncdw</code>, <code>&#8211;dont-cuddle-do-while</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-ncdw</code>, <code>&#8211;dont-cuddle-do-while</code></dt>
 <dd> Do not cuddle <code>}</code> and the <code>while</code> of a <code>do {} while;</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-nce</code>, <code>&#8211;dont-cuddle-else</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-nce</code>, <code>&#8211;dont-cuddle-else</code></dt>
 <dd> Do not cuddle <code>}</code> and <code>else</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-ncs</code>, <code>&#8211;no-space-after-casts</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-ncs</code>, <code>&#8211;no-space-after-casts</code></dt>
 <dd> Do not put a space after cast operators.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-ndj</code><i>n</i>, <code>&#8211;dont-left-justify-declarations</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-ndj</code><i>n</i>, <code>&#8211;dont-left-justify-declarations</code></dt>
 <dd> Comments after declarations are treated the same as comments after other statements.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-nfc1</code>, <code>&#8211;dont-format-first-column-comments</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-nfc1</code>, <code>&#8211;dont-format-first-column-comments</code></dt>
 <dd> Do not format comments in the first column as normal.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-nfca</code>, <code>&#8211;dont-format-comments</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-nfca</code>, <code>&#8211;dont-format-comments</code></dt>
 <dd> Do not format any comments.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-nhnl</code>, <code>&#8211;ignore-newlines</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-nhnl</code>, <code>&#8211;ignore-newlines</code></dt>
 <dd> Do not prefer to break long lines at the position of newlines in the input.<br />
- See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</p>
-<dt><code>-nip</code>, <code>&#8211;no-parameter-indentation</code></p>
+ See <code>&nbsp;<wbr>BREAKING LONG LINES</code>.</dd>
+<dt><code>-nip</code>, <code>&#8211;no-parameter-indentation</code></dt>
 <dd> Zero width indentation for parameters.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-nlp</code>, <code>&#8211;dont-line-up-parentheses</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-nlp</code>, <code>&#8211;dont-line-up-parentheses</code></dt>
 <dd> Do not line up parentheses.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-npcs</code>, <code>&#8211;no-space-after-function-call-names</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-npcs</code>, <code>&#8211;no-space-after-function-call-names</code></dt>
 <dd> Do not put space after the function in function calls.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-nprs</code>, <code>&#8211;no-space-after-parentheses</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-nprs</code>, <code>&#8211;no-space-after-parentheses</code></dt>
 <dd> Do not put a space after every &#8216;(&#8216; and before every &#8216;)&#8217;.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-npsl</code>, <code>&#8211;dont-break-procedure-type</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-npsl</code>, <code>&#8211;dont-break-procedure-type</code></dt>
 <dd> Put the type of a procedure on the same line as its name.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-nsaf</code>, <code>&#8211;no-space-after-for</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-nsaf</code>, <code>&#8211;no-space-after-for</code></dt>
 <dd> Do not put a space after every <code>for</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-nsai</code>, <code>&#8211;no-space-after-if</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-nsai</code>, <code>&#8211;no-space-after-if</code></dt>
 <dd> Do not put a space after every <code>if</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-nsaw</code>, <code>&#8211;no-space-after-while</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-nsaw</code>, <code>&#8211;no-space-after-while</code></dt>
 <dd> Do not put a space after every <code>while</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-nsc</code>, <code>&#8211;dont-star-comments</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-nsc</code>, <code>&#8211;dont-star-comments</code></dt>
 <dd> Do not put the &#8216;*&#8217; character at the left of comments.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-nsob</code>, <code>&#8211;leave-optional-blank-lines</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-nsob</code>, <code>&#8211;leave-optional-blank-lines</code></dt>
 <dd> Do not swallow optional blank lines.<br />
- See <code>&nbsp;<wbr>BLANK LINES</code>.</p>
-<dt><code>-nss</code>, <code>&#8211;dont-space-special-semicolon</code></p>
+ See <code>&nbsp;<wbr>BLANK LINES</code>.</dd>
+<dt><code>-nss</code>, <code>&#8211;dont-space-special-semicolon</code></dt>
 <dd> Do not force a space before the semicolon after certain statements. Disables &#8216;-ss&#8217;.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-nut</code>, <code>&#8211;no-tabs</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-nut</code>, <code>&#8211;no-tabs</code></dt>
 <dd> Use spaces instead of tabs.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-nv</code>, <code>&#8211;no-verbosity</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-nv</code>, <code>&#8211;no-verbosity</code></dt>
 <dd> Disable verbose mode.<br />
- See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>.</p>
-<dt><code>-orig</code>, <code>&#8211;original</code></p>
+ See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>.</dd>
+<dt><code>-orig</code>, <code>&#8211;original</code></dt>
 <dd> Use the original Berkeley coding style.<br />
- See <code>&nbsp;<wbr>COMMON STYLES</code>.</p>
-<dt><code>-npro</code>, <code>&#8211;ignore-profile</code></p>
+ See <code>&nbsp;<wbr>COMMON STYLES</code>.</dd>
+<dt><code>-npro</code>, <code>&#8211;ignore-profile</code></dt>
 <dd> Do not read &#8216;.indent.pro&#8217; files.<br />
- See <code>&nbsp;<wbr>INVOKING INDENT</code>.</p>
-<dt><code>-pcs</code>, <code>&#8211;space-after-procedure-calls</code></p>
+ See <code>&nbsp;<wbr>INVOKING INDENT</code>.</dd>
+<dt><code>-pcs</code>, <code>&#8211;space-after-procedure-calls</code></dt>
 <dd> Insert a space between the name of the procedure being called and the &#8216;(&#8216;.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-pi</code><i>n</i>, <code>&#8211;paren-indentation</code><i>n</i></p>
-<dd> Specify the extra indentation per open parentheses &#8216;(&#8216; when a statement is broken.See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-pmt</code>, <code>&#8211;preserve-mtime</code></p>
-<dd> Preserve access and modification times on output files.See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>.</p>
-<dt><code>-ppi</code><i>n</i>, <code>&#8211;preprocessor-indentation</code><i>n</i></p>
-<dd> Specify the indentation for preprocessor conditional statements.See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-prs</code>, <code>&#8211;space-after-parentheses</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-pi</code><i>n</i>, <code>&#8211;paren-indentation</code><i>n</i></dt>
+<dd> Specify the extra indentation per open parentheses &#8216;(&#8216; when a statement is broken.See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-pmt</code>, <code>&#8211;preserve-mtime</code></dt>
+<dd> Preserve access and modification times on output files.See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>.</dd>
+<dt><code>-ppi</code><i>n</i>, <code>&#8211;preprocessor-indentation</code><i>n</i></dt>
+<dd> Specify the indentation for preprocessor conditional statements.See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-prs</code>, <code>&#8211;space-after-parentheses</code></dt>
 <dd> Put a space after every &#8216;(&#8216; and before every &#8216;)&#8217;.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-psl</code>, <code>&#8211;procnames-start-lines</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-psl</code>, <code>&#8211;procnames-start-lines</code></dt>
 <dd> Put the type of a procedure on the line before its name.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-saf</code>, <code>&#8211;space-after-for</code></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-saf</code>, <code>&#8211;space-after-for</code></dt>
 <dd> Put a space after each <code>for</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-sai</code>, <code>&#8211;space-after-if</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-sai</code>, <code>&#8211;space-after-if</code></dt>
 <dd> Put a space after each <code>if</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-saw</code>, <code>&#8211;space-after-while</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-saw</code>, <code>&#8211;space-after-while</code></dt>
 <dd> Put a space after each <code>while</code>.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-sbi</code><i>n</i>, <code>&#8211;struct-brace-indentation</code><i>n</i></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-sbi</code><i>n</i>, <code>&#8211;struct-brace-indentation</code><i>n</i></dt>
 <dd> Indent braces of a struct, union or enum N spaces.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-sc</code>, <code>&#8211;start-left-side-of-comments</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-sc</code>, <code>&#8211;start-left-side-of-comments</code></dt>
 <dd> Put the &#8216;*&#8217; character at the left of comments.<br />
- See <code>&nbsp;<wbr>COMMENTS</code>.</p>
-<dt><code>-sob</code>, <code>&#8211;swallow-optional-blank-lines</code></p>
+ See <code>&nbsp;<wbr>COMMENTS</code>.</dd>
+<dt><code>-sob</code>, <code>&#8211;swallow-optional-blank-lines</code></dt>
 <dd> Swallow optional blank lines.<br />
- See <code>&nbsp;<wbr>BLANK LINES</code>.</p>
-<dt><code>-ss</code>, <code>&#8211;space-special-semicolon</code></p>
+ See <code>&nbsp;<wbr>BLANK LINES</code>.</dd>
+<dt><code>-ss</code>, <code>&#8211;space-special-semicolon</code></dt>
 <dd> On one-line <code>for</code> and <code>while</code> statements, force a blank before the semicolon.<br />
- See <code>&nbsp;<wbr>STATEMENTS</code>.</p>
-<dt><code>-st</code>, <code>&#8211;standard-output</code></p>
+ See <code>&nbsp;<wbr>STATEMENTS</code>.</dd>
+<dt><code>-st</code>, <code>&#8211;standard-output</code></dt>
 <dd> Write to standard output.<br />
- See <code>&nbsp;<wbr>INVOKING INDENT</code>.</p>
-<dt><code>-T</code></p>
+ See <code>&nbsp;<wbr>INVOKING INDENT</code>.</dd>
+<dt><code>-T</code></dt>
 <dd> Tell <code>indent</code> the name of typenames.<br />
- See <code>&nbsp;<wbr>DECLARATIONS</code>.</p>
-<dt><code>-ts</code><i>n</i>, <code>&#8211;tab-size</code><i>n</i></p>
+ See <code>&nbsp;<wbr>DECLARATIONS</code>.</dd>
+<dt><code>-ts</code><i>n</i>, <code>&#8211;tab-size</code><i>n</i></dt>
 <dd> Set tab size to <i>n</i> spaces.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-ut</code>, <code>&#8211;use-tabs</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-ut</code>, <code>&#8211;use-tabs</code></dt>
 <dd> Use tabs. This is the default.<br />
- See <code>&nbsp;<wbr>INDENTATION</code>.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
+ See <code>&nbsp;<wbr>INDENTATION</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd> Enable verbose mode.<br />
- See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>.</p>
-<dt><code>-version</code></p>
+ See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>.</dd>
+<dt><code>-version</code></dt>
 <dd> Output the version number of <code>indent</code>.<br />
- See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>. </p>
+ See <code>&nbsp;<wbr>MISCELLANEOUS OPTIONS</code>. </dd>
 </dl>
 <h2>INVOKING INDENT</h2>
 <p> As of version 1.3, the format of the <code>indent</code> command is: </p>
@@ -672,3 +672,4 @@ cleanup1:<br />
 <p> Currently there are two options that allow one to interfere with the algorithm that determines where to break a line. </p>
 <p> The &#8216;-bbo&#8217; option causes GNU <code>indent</code> to prefer to break long lines before the boolean operators <code>&amp;&amp;</code> and <code>||</code>. The &#8216;-nbbo&#8217; option causes GNU <code>indent</code> not have that preference. For example, the default option &#8216;-bbo&#8217; (together with &#8216;&#8211;line-length60&#8217; and &#8216;&#8211;ignore-newlines&#8217;) makes code look like this: </p>
 <p>if (mask &amp;&amp; ((mask[0] == &#8216;
+</p>

@@ -24,7 +24,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p>The following are valid actions for all supported device types. </p>
 <p> <i>open</i> &lt;device&gt; &lt;name&gt; &#8211;type &lt;device_type&gt;</p>
 <dl>
-<dd>Opens (creates a mapping with) &lt;name&gt; backed by device &lt;device&gt;. </p>
+<dd>Opens (creates a mapping with) &lt;name&gt; backed by device &lt;device&gt;. </dd>
 <p> Device type can be <i>plain</i>, <i>luks</i> (default), <i>luks1</i>, <i>luks2</i>, <i>loopaes</i> or <i>tcrypt</i>. </p>
 <p> For backward compatibility there are <code>open</code> command aliases: </p>
 <p> <code>create</code> (argument-order &lt;name&gt; &lt;device&gt;): open &#8211;type plain<br />
@@ -35,16 +35,16 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <code>&lt;options&gt;</code> are type specific and are described below for individual device types. For <code>create</code>, the order of the &lt;name&gt; and &lt;device&gt; options is inverted for historical reasons, all other aliases use the standard <code>&lt;device&gt; &lt;name&gt;</code> order.</dl>
 <p> <i>close</i> &lt;name&gt;</p>
 <dl>
-<dd>Removes the existing mapping &lt;name&gt; and wipes the key from kernel memory. </p>
+<dd>Removes the existing mapping &lt;name&gt; and wipes the key from kernel memory. </dd>
 <p> For backward compatibility there are <code>close</code> command aliases: <code>remove</code>, <code>plainClose</code>, <code>luksClose</code>, <code>loopaesClose</code>, <code>tcryptClose</code> (all behaves exactly the same, device type is determined automatically from active device). </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;deferred] </p>
 </dl>
 <p> <i>status</i> &lt;name&gt;</p>
 <dl>
-<dd>Reports the status for the mapping &lt;name&gt;.</dl>
+<dd>Reports the status for the mapping &lt;name&gt;.</dd></dl>
 <p> <i>resize</i> &lt;name&gt;</p>
 <dl>
-<dd>Resizes an active mapping &lt;name&gt;. </p>
+<dd>Resizes an active mapping &lt;name&gt;. </dd>
 <p> If &#8211;size (in 512-bytes sectors) or &#8211;device-size are not specified, the size is computed from the underlying device. For LUKS it is the size of the underlying device without the area reserved for LUKS header (see data payload offset in <code>luksDump</code> command). For plain crypt device, the whole device size is used. </p>
 <p> Note that this does not change the raw device geometry, it just changes how many sectors of the raw device are represented in the mapped device. </p>
 <p> If cryptsetup detected volume key for active device loaded in kernel keyring service, resize action would first try to retrieve the key using a token and only if it failed it&#8217;d ask for a passphrase to unlock a keyslot (LUKS) or to derive a volume key again (plain mode). The kernel keyring is used by default for LUKS2 devices. </p>
@@ -52,7 +52,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 </dl>
 <p> <i>refresh</i> &lt;name&gt;</p>
 <dl>
-<dd>Refreshes parameters of active mapping &lt;name&gt;. </p>
+<dd>Refreshes parameters of active mapping &lt;name&gt;. </dd>
 <p> Updates parameters of active device &lt;name&gt; without need to deactivate the device (and umount filesystem). Currently it supports parameters refresh on following devices: LUKS1, LUKS2 (including authenticated encryption), plain crypt and loopaes. </p>
 <p> Mandatory parametrs are identical to those of an open action for respective device type. </p>
 <p> You may change following parameters on all devices &#8211;perf-same_cpu_crypt, &#8211;perf-submit_from_crypt_cpus and &#8211;allow-discards. </p>
@@ -64,7 +64,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 </dl>
 <p> <i>reencrypt</i> &lt;device&gt; or &#8211;active-name &lt;name&gt; [&lt;new_name&gt;]</p>
 <dl>
-<dd>Run resilient reencryption (LUKS2 device only). </p>
+<dd>Run resilient reencryption (LUKS2 device only). </dd>
 <p> There are 3 basic modes of operation: </p>
 <p> &bull; device reencryption (<i>reencrypt</i>) </p>
 <p> &bull; device encryption (<i>reencrypt</i> &#8211;encrypt) </p>
@@ -83,7 +83,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <i>open</i> &#8211;type plain &lt;device&gt; &lt;name&gt;<br />
  <i>create</i> &lt;name&gt; &lt;device&gt; (<code>OBSOLETE syntax</code>)</p>
 <dl>
-<dd>Opens (creates a mapping with) &lt;name&gt; backed by device &lt;device&gt;. </p>
+<dd>Opens (creates a mapping with) &lt;name&gt; backed by device &lt;device&gt;. </dd>
 <p> <code>&lt;options&gt;</code> can be [&#8211;hash, &#8211;cipher, &#8211;verify-passphrase, &#8211;sector-size, &#8211;key-file, &#8211;keyfile-offset, &#8211;key-size, &#8211;offset, &#8211;skip, &#8211;size, &#8211;readonly, &#8211;shared, &#8211;allow-discards, &#8211;refresh] </p>
 <p> Example: &#8216;cryptsetup open &#8211;type plain /dev/sda10 e1&#8217; maps the raw encrypted device /dev/sda10 to the mapped (decrypted) device /dev/mapper/e1, which can then be mounted, fsck-ed or have a filesystem created on it.</dl>
 <h2>Luks Extension</h2>
@@ -96,7 +96,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> The following are valid LUKS actions: </p>
 <p> <i>luksFormat</i> &lt;device&gt; [&lt;key file&gt;]</p>
 <dl>
-<dd>Initializes a LUKS partition and sets the initial passphrase (for key-slot 0), either via prompting or via &lt;key file&gt;. Note that if the second argument is present, then the passphrase is taken from the file given there, without the need to use the &#8211;key-file option. Also note that for both forms of reading the passphrase from a file you can give &#8216;-&#8216; as file name, which results in the passphrase being read from stdin and the safety-question being skipped. </p>
+<dd>Initializes a LUKS partition and sets the initial passphrase (for key-slot 0), either via prompting or via &lt;key file&gt;. Note that if the second argument is present, then the passphrase is taken from the file given there, without the need to use the &#8211;key-file option. Also note that for both forms of reading the passphrase from a file you can give &#8216;-&#8216; as file name, which results in the passphrase being read from stdin and the safety-question being skipped. </dd>
 <p> You can only call luksFormat on a LUKS device that is not mapped. </p>
 <p> To use LUKS2, specify <i>&#8211;type luks2</i>. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;hash, &#8211;cipher, &#8211;verify-passphrase, &#8211;key-size, &#8211;key-slot, &#8211;key-file (takes precedence over optional second argument), &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;use-random | &#8211;use-urandom, &#8211;uuid, &#8211;master-key-file, &#8211;iter-time, &#8211;header, &#8211;pbkdf-force-iterations, &#8211;force-password, &#8211;disable-locks]. </p>
@@ -105,44 +105,44 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <i>open</i> &#8211;type luks &lt;device&gt; &lt;name&gt;<br />
  <i>luksOpen</i> &lt;device&gt; &lt;name&gt; (<code>old syntax</code>)</p>
 <dl>
-<dd>Opens the LUKS device &lt;device&gt; and sets up a mapping &lt;name&gt; after successful verification of the supplied passphrase. </p>
+<dd>Opens the LUKS device &lt;device&gt; and sets up a mapping &lt;name&gt; after successful verification of the supplied passphrase. </dd>
 <p> First, the passphrase is searched in LUKS tokens. If it&#8217;s not found in any token and also the passphrase is not supplied via &#8211;key-file, the command prompts for it interactively. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;readonly, &#8211;test-passphrase, &#8211;allow-discards, &#8211;header, &#8211;key-slot, &#8211;master-key-file, &#8211;token-id, &#8211;token-only, &#8211;disable-keyring, &#8211;disable-locks, &#8211;type, &#8211;refresh, &#8211;serialize-memory-hard-pbkdf].</dl>
 <p> <i>luksSuspend</i> &lt;name&gt;</p>
 <dl>
-<dd>Suspends an active device (all IO operations will block and accesses to the device will wait indefinitely) and wipes the encryption key from kernel memory. Needs kernel 2.6.19 or later. </p>
+<dd>Suspends an active device (all IO operations will block and accesses to the device will wait indefinitely) and wipes the encryption key from kernel memory. Needs kernel 2.6.19 or later. </dd>
 <p> After this operation you have to use <i>luksResume</i> to reinstate the encryption key and unblock the device or <i>close</i> to remove the mapped device. </p>
 <p> <code>WARNING:</code> never suspend the device on which the cryptsetup binary resides. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;header, &#8211;disable-locks].</dl>
 <p> <i>luksResume</i> &lt;name&gt;</p>
 <dl>
-<dd>Resumes a suspended device and reinstates the encryption key. Prompts interactively for a passphrase if &#8211;key-file is not given. </p>
+<dd>Resumes a suspended device and reinstates the encryption key. Prompts interactively for a passphrase if &#8211;key-file is not given. </dd>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;keyfile-size, &#8211;header, &#8211;disable-keyring, &#8211;disable-locks, &#8211;type]</dl>
 <p> <i>luksAddKey</i> &lt;device&gt; [&lt;key file with new key&gt;]</p>
 <dl>
-<dd>Adds a new passphrase. An existing passphrase must be supplied interactively or via &#8211;key-file. The new passphrase to be added can be specified interactively or read from the file given as positional argument. </p>
+<dd>Adds a new passphrase. An existing passphrase must be supplied interactively or via &#8211;key-file. The new passphrase to be added can be specified interactively or read from the file given as positional argument. </dd>
 <p> <code>NOTE:</code> with &#8211;unbound option the action creates new unbound LUKS2 keyslot. The keyslot cannot be used for device activation. If you don&#8217;t pass new key via &#8211;master-key-file option, new random key is generated. Existing passphrase for any active keyslot is not required. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;new-keyfile-offset, &#8211;new-keyfile-size, &#8211;key-slot, &#8211;master-key-file, &#8211;force-password, &#8211;header, &#8211;disable-locks, &#8211;iter-time, &#8211;pbkdf, &#8211;pbkdf-force-iterations, &#8211;unbound, &#8211;type, &#8211;keyslot-cipher, &#8211;keyslot-key-size].</dl>
 <p> <i>luksRemoveKey</i> &lt;device&gt; [&lt;key file with passphrase to be removed&gt;]</p>
 <dl>
-<dd>Removes the supplied passphrase from the LUKS device. The passphrase to be removed can be specified interactively, as the positional argument or via &#8211;key-file. </p>
+<dd>Removes the supplied passphrase from the LUKS device. The passphrase to be removed can be specified interactively, as the positional argument or via &#8211;key-file. </dd>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;header, &#8211;disable-locks, &#8211;type] </p>
 <p> <code>WARNING:</code> If you read the passphrase from stdin (without further argument or with &#8216;-&#8216; as an argument to &#8211;key-file), batch-mode (-q) will be implicitly switched on and no warning will be given when you remove the last remaining passphrase from a LUKS container. Removing the last passphrase makes the LUKS container permanently inaccessible.</dl>
 <p> <i>luksChangeKey</i> &lt;device&gt; [&lt;new key file&gt;]</p>
 <dl>
-<dd>Changes an existing passphrase. The passphrase to be changed must be supplied interactively or via &#8211;key-file. The new passphrase can be supplied interactively or in a file given as positional argument. </p>
+<dd>Changes an existing passphrase. The passphrase to be changed must be supplied interactively or via &#8211;key-file. The new passphrase can be supplied interactively or in a file given as positional argument. </dd>
 <p> If a key-slot is specified (via &#8211;key-slot), the passphrase for that key-slot must be given and the new passphrase will overwrite the specified key-slot. If no key-slot is specified and there is still a free key-slot, then the new passphrase will be put into a free key-slot before the key-slot containing the old passphrase is purged. If there is no free key-slot, then the key-slot with the old passphrase is overwritten directly. </p>
 <p> <code>WARNING:</code> If a key-slot is overwritten, a media failure during this operation can cause the overwrite to fail after the old passphrase has been wiped and make the LUKS container inaccessible. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;new-keyfile-offset, &#8211;iter-time, &#8211;pbkdf, &#8211;pbkdf-force-iterations, &#8211;new-keyfile-size, &#8211;key-slot, &#8211;force-password, &#8211;header, &#8211;disable-locks, &#8211;type, &#8211;keyslot-cipher, &#8211;keyslot-key-size].</dl>
 <p> <i>luksConvertKey</i> &lt;device&gt;</p>
 <dl>
-<dd>Converts an existing LUKS2 keyslot to new pbkdf parameters. The passphrase for keyslot to be converted must be supplied interactively or via &#8211;key-file. If no &#8211;pbkdf parameters are specified LUKS2 default pbkdf values will apply. </p>
+<dd>Converts an existing LUKS2 keyslot to new pbkdf parameters. The passphrase for keyslot to be converted must be supplied interactively or via &#8211;key-file. If no &#8211;pbkdf parameters are specified LUKS2 default pbkdf values will apply. </dd>
 <p> If a keyslot is specified (via &#8211;key-slot), the passphrase for that keyslot must be given. If no keyslot is specified and there is still a free keyslot, then the new parameters will be put into a free keyslot before the keyslot containing the old parameters is purged. If there is no free keyslot, then the keyslot with the old parameters is overwritten directly. </p>
 <p> <code>WARNING:</code> If a keyslot is overwritten, a media failure during this operation can cause the overwrite to fail after the old parameters have been wiped and make the LUKS container inaccessible. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;key-slot, &#8211;header, &#8211;disable-locks, &#8211;iter-time, &#8211;pbkdf, &#8211;pbkdf-force-iterations, &#8211;pbkdf-memory, &#8211;pbkdf-parallel, &#8211;keyslot-cipher, &#8211;keyslot-key-size].</dl>
 <p> <i>luksKillSlot</i> &lt;device&gt; &lt;key slot number&gt;</p>
 <dl>
-<dd>Wipe the key-slot number &lt;key slot&gt; from the LUKS device. Except running in batch-mode (-q) a remaining passphrase must be supplied, either interactively or via &#8211;key-file. This command can remove the last remaining key-slot, but requires an interactive confirmation when doing so. Removing the last passphrase makes a LUKS container permanently inaccessible. </p>
+<dd>Wipe the key-slot number &lt;key slot&gt; from the LUKS device. Except running in batch-mode (-q) a remaining passphrase must be supplied, either interactively or via &#8211;key-file. This command can remove the last remaining key-slot, but requires an interactive confirmation when doing so. Removing the last passphrase makes a LUKS container permanently inaccessible. </dd>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;header, &#8211;disable-locks, &#8211;type]. </p>
 <p> <code>WARNING:</code> If you read the passphrase from stdin (without further argument or with &#8216;-&#8216; as an argument to &#8211;key-file), batch-mode (-q) will be implicitly switched on and no warning will be given when you remove the last remaining passphrase from a LUKS container. Removing the last passphrase makes the LUKS container permanently inaccessible. </p>
 <p> <code>NOTE:</code> If there is no passphrase provided (on stdin or through &#8211;key-file argument) and batch-mode (-q) is active, the key-slot is removed without any other warning. </p>
@@ -150,19 +150,19 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <i>erase</i> &lt;device&gt;<br />
  <i>luksErase</i> &lt;device&gt;</p>
 <dl>
-<dd>Erase all keyslots and make the LUKS container permanently inaccessible. You do not need to provide any password for this operation. </p>
+<dd>Erase all keyslots and make the LUKS container permanently inaccessible. You do not need to provide any password for this operation. </dd>
 <p> <code>WARNING:</code> This operation is irreversible.</dl>
 <p> <i>luksUUID</i> &lt;device&gt;</p>
 <dl>
 <dd>Print the UUID of a LUKS device.<br />
- Set new UUID if <i>&#8211;uuid</i> option is specified.</dl>
+ Set new UUID if <i>&#8211;uuid</i> option is specified.</dd></dl>
 <p> <i>isLuks</i> &lt;device&gt;</p>
 <dl>
-<dd>Returns true, if &lt;device&gt; is a LUKS device, false otherwise. Use option -v to get human-readable feedback. &#8216;Command successful.&#8217; means the device is a LUKS device. </p>
+<dd>Returns true, if &lt;device&gt; is a LUKS device, false otherwise. Use option -v to get human-readable feedback. &#8216;Command successful.&#8217; means the device is a LUKS device. </dd>
 <p> By specifying &#8211;type you may query for specific LUKS version.</dl>
 <p> <i>luksDump</i> &lt;device&gt;</p>
 <dl>
-<dd>Dump the header information of a LUKS device. </p>
+<dd>Dump the header information of a LUKS device. </dd>
 <p> If the &#8211;dump-master-key option is used, the LUKS device master key is dumped instead of the keyslot info. Together with &#8211;master-key-file option, master key is dumped to a file instead of standard output. Beware that the master key cannot be changed without reencryption and can be used to decrypt the data stored in the LUKS container without a passphrase and even without the LUKS header. This means that if the master key is compromised, the whole device has to be erased to prevent further access. Use this option carefully. </p>
 <p> To dump the master key, a passphrase has to be supplied, either interactively or via &#8211;key-file. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;dump-master-key, &#8211;key-file, &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;header, &#8211;disable-locks, &#8211;master-key-file, &#8211;type]. </p>
@@ -170,17 +170,17 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <i>luksHeaderBackup</i> &lt;device&gt; &#8211;header-backup-file &lt;file&gt;</p>
 <dl>
 <dd>Stores a binary backup of the LUKS header and keyslot area.<br />
- Note: Using &#8216;-&#8216; as filename writes the header backup to a file named &#8216;-&#8216;. </p>
+ Note: Using &#8216;-&#8216; as filename writes the header backup to a file named &#8216;-&#8216;. </dd>
 <p> <code>WARNING:</code> This backup file and a passphrase valid at the time of backup allows decryption of the LUKS data area, even if the passphrase was later changed or removed from the LUKS device. Also note that with a header backup you lose the ability to securely wipe the LUKS device by just overwriting the header and key-slots. You either need to securely erase all header backups in addition or overwrite the encrypted data area as well. The second option is less secure, as some sectors can survive, e.g. due to defect management.</dl>
 <p> <i>luksHeaderRestore</i> &lt;device&gt; &#8211;header-backup-file &lt;file&gt;</p>
 <dl>
 <dd>Restores a binary backup of the LUKS header and keyslot area from the specified file.<br />
- Note: Using &#8216;-&#8216; as filename reads the header backup from a file named &#8216;-&#8216;. </p>
+ Note: Using &#8216;-&#8216; as filename reads the header backup from a file named &#8216;-&#8216;. </dd>
 <p> <code>WARNING:</code> Header and keyslots will be replaced, only the passphrases from the backup will work afterward. </p>
 <p> This command requires that the master key size and data offset of the LUKS header already on the device and of the header backup match. Alternatively, if there is no LUKS header on the device, the backup will also be written to it.</dl>
 <p> <i>token</i> &lt;add|remove|import|export&gt; &lt;device&gt;</p>
 <dl>
-<dd>Action <i>add</i> creates new keyring token to enable auto-activation of the device. For the auto-activation, the passphrase must be stored in keyring with the specified description. Usually, the passphrase should be stored in <i>user</i> or <i>user-session</i> keyring. The <i>token</i> command is supported only for LUKS2. </p>
+<dd>Action <i>add</i> creates new keyring token to enable auto-activation of the device. For the auto-activation, the passphrase must be stored in keyring with the specified description. Usually, the passphrase should be stored in <i>user</i> or <i>user-session</i> keyring. The <i>token</i> command is supported only for LUKS2. </dd>
 <p> For adding new keyring token, option &#8211;key-description is mandatory. Also, new token is assigned to key slot specified with &#8211;key-slot option or to all active key slots in the case &#8211;key-slot option is omitted. </p>
 <p> To remove existing token, specify the token ID which should be removed with &#8211;token-id option. </p>
 <p> <code>WARNING:</code> The action <i>token remove</i> removes any token type, not just <i>keyring</i> type from token slot specified by &#8211;token-id option. </p>
@@ -189,14 +189,14 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <code>&lt;options&gt;</code> can be [&#8211;header, &#8211;token-id, &#8211;key-slot, &#8211;key-description, &#8211;disable-locks, &#8211;disable-keyring, &#8211;json-file].</dl>
 <p> <i>convert</i> &lt;device&gt; &#8211;type &lt;format&gt;</p>
 <dl>
-<dd>Converts the device between LUKS1 and LUKS2 format (if possible). The conversion will not be performed if there is an additional LUKS2 feature or LUKS1 has unsupported header size. </p>
+<dd>Converts the device between LUKS1 and LUKS2 format (if possible). The conversion will not be performed if there is an additional LUKS2 feature or LUKS1 has unsupported header size. </dd>
 <p> Conversion (both directions) must be performed on inactive device. There must not be active dm-crypt mapping established for LUKS header requested for conversion. </p>
 <p> <code>&#8211;type</code> option is mandatory with following accepted values: <i>luks1</i> or <i>luks2</i>. </p>
 <p> <code>WARNING:</code> The <i>convert</i> action can destroy the LUKS header in the case of a crash during conversion or if a media error occurs. Always create a header backup before performing this operation! </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;header, &#8211;type].</dl>
 <p> <i>config</i> &lt;device&gt;</p>
 <dl>
-<dd>Set permanent configuration options (store to LUKS header). The <i>config</i> command is supported only for LUKS2. </p>
+<dd>Set permanent configuration options (store to LUKS header). The <i>config</i> command is supported only for LUKS2. </dd>
 <p> The permanent options can be <i>&#8211;priority</i> to set priority (normal, prefer, ignore) for keyslot (specified by <i>&#8211;key-slot</i>) or <i>&#8211;label</i> and <i>&#8211;subsystem</i>. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;priority, &#8211;label, &#8211;subsystem, &#8211;key-slot, &#8211;header]. </p>
 </dl>
@@ -205,7 +205,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <i>open</i> &#8211;type loopaes &lt;device&gt; &lt;name&gt; &#8211;key-file &lt;keyfile&gt;<br />
  <i>loopaesOpen</i> &lt;device&gt; &lt;name&gt; &#8211;key-file &lt;keyfile&gt; (<code>old syntax</code>)</p>
 <dl>
-<dd>Opens the loop-AES &lt;device&gt; and sets up a mapping &lt;name&gt;. </p>
+<dd>Opens the loop-AES &lt;device&gt; and sets up a mapping &lt;name&gt;. </dd>
 <p> If the key file is encrypted with GnuPG, then you have to use &#8211;key-file=- and decrypt it before use, e.g. like this:<br />
  gpg &#8211;decrypt &lt;keyfile&gt; | cryptsetup loopaesOpen &#8211;key-file=- &lt;device&gt; &lt;name&gt; </p>
 <p> <code>WARNING:</code> The loop-AES extension cannot use the direct input of key file on real terminal because the keys are separated by end-of-line and only part of the multi-key file would be read.<br />
@@ -236,14 +236,14 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <i>open</i> &#8211;type tcrypt &lt;device&gt; &lt;name&gt;<br />
  <i>tcryptOpen</i> &lt;device&gt; &lt;name&gt; (<code>old syntax</code>)</p>
 <dl>
-<dd>Opens the TCRYPT (a TrueCrypt-compatible) &lt;device&gt; and sets up a mapping &lt;name&gt;. </p>
+<dd>Opens the TCRYPT (a TrueCrypt-compatible) &lt;device&gt; and sets up a mapping &lt;name&gt;. </dd>
 <p> <code>&lt;options&gt;</code> can be [&#8211;key-file, &#8211;tcrypt-hidden, &#8211;tcrypt-system, &#8211;tcrypt-backup, &#8211;readonly, &#8211;test-passphrase, &#8211;allow-discards, &#8211;veracrypt, &#8211;veracrypt-pim, &#8211;veracrypt-query-pim]. </p>
 <p> The keyfile parameter allows a combination of file content with the passphrase and can be repeated. Note that using keyfiles is compatible with TCRYPT and is different from LUKS keyfile logic. </p>
 <p> <code>WARNING:</code> Option <code>&#8211;allow-discards</code> cannot be combined with option <code>&#8211;tcrypt-hidden</code>. For normal mapping, it can cause the <code>destruction of hidden volume</code> (hidden volume appears as unused space for outer volume so this space can be discarded). </p>
 </dl>
 <p> <i>tcryptDump</i> &lt;device&gt;</p>
 <dl>
-<dd>Dump the header information of a TCRYPT device. </p>
+<dd>Dump the header information of a TCRYPT device. </dd>
 <p> If the &#8211;dump-master-key option is used, the TCRYPT device master key is dumped instead of TCRYPT header info. Beware that the master key (or concatenated master keys if cipher chain is used) can be used to decrypt the data stored in the TCRYPT container without a passphrase. This means that if the master key is compromised, the whole device has to be erased to prevent further access. Use this option carefully. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;dump-master-key, &#8211;key-file, &#8211;tcrypt-hidden, &#8211;tcrypt-system, &#8211;tcrypt-backup]. </p>
 <p> The keyfile parameter allows a combination of file content with the passphrase and can be repeated.</dl>
@@ -252,240 +252,240 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <h2>Miscellaneous</h2>
 <p><i>repair</i> &lt;device&gt;</p>
 <dl>
-<dd>Tries to repair the device metadata if possible. Currently supported only for LUKS device type. </p>
+<dd>Tries to repair the device metadata if possible. Currently supported only for LUKS device type. </dd>
 <p> This command is useful to fix some known benign LUKS metadata header corruptions. Only basic corruptions of unused keyslot are fixable. This command will only change the LUKS header, not any key-slot data. You may enforce LUKS version by adding &#8211;type option. </p>
 <p> <code>WARNING:</code> Always create a binary backup of the original header before calling this command.</dl>
 <p> <i>benchmark</i> &lt;options&gt;</p>
 <dl>
-<dd>Benchmarks ciphers and KDF (key derivation function). Without parameters, it tries to measure few common configurations. </p>
+<dd>Benchmarks ciphers and KDF (key derivation function). Without parameters, it tries to measure few common configurations. </dd>
 <p> To benchmark other ciphers or modes, you need to specify <code>&#8211;cipher</code> and <code>&#8211;key-size</code> options or <code>&#8211;hash</code> for KDF test. </p>
 <p> <code>NOTE:</code> This benchmark is using memory only and is only informative. You cannot directly predict real storage encryption speed from it. </p>
 <p> For testing block ciphers, this benchmark requires kernel userspace crypto API to be available (introduced in Linux kernel 2.6.38). If you are configuring kernel yourself, enable &quot;User-space interface for symmetric key cipher algorithms&quot; in &quot;Cryptographic API&quot; section (CRYPTO_USER_API_SKCIPHER .config option). </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;cipher, &#8211;key-size, &#8211;hash].</dl>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;verbose, -v</code></p>
-<dd>Print more information on command execution.</p>
-<dt><code>&#8211;debug or &#8211;debug-json</code></p>
-<dd>Run in debug mode with full diagnostic logs. Debug output lines are always prefixed by &#8216;#&#8217;. If &#8211;debug-json is used, additional LUKS2 JSON data structures are printed.</p>
-<dt><code>&#8211;type &lt;device-type&gt;</code></p>
-<dd>Specifies required device type, for more info read <i>BASIC COMMANDS</i> section.</p>
-<dt><code>&#8211;hash, -h </code><i>&lt;hash-spec&gt;</i></p>
-<dd>Specifies the passphrase hash for <i>open</i> (for plain and loopaes device types). </p>
+<dt><code>&#8211;verbose, -v</code></dt>
+<dd>Print more information on command execution.</dd>
+<dt><code>&#8211;debug or &#8211;debug-json</code></dt>
+<dd>Run in debug mode with full diagnostic logs. Debug output lines are always prefixed by &#8216;#&#8217;. If &#8211;debug-json is used, additional LUKS2 JSON data structures are printed.</dd>
+<dt><code>&#8211;type &lt;device-type&gt;</code></dt>
+<dd>Specifies required device type, for more info read <i>BASIC COMMANDS</i> section.</dd>
+<dt><code>&#8211;hash, -h </code><i>&lt;hash-spec&gt;</i></dt>
+<dd>Specifies the passphrase hash for <i>open</i> (for plain and loopaes device types). </dd>
 <p> Specifies the hash used in the LUKS key setup scheme and volume key digest for <i>luksFormat</i>. The specified hash is used as hash-parameter for PBKDF2 and for the AF splitter. </p>
 <p> The specified hash name is passed to the compiled-in crypto backend. Different backends may support different hashes. For <i>luksFormat</i>, the hash algorithm must provide at least 160 bits of output, which excludes, e.g., MD5. Do not use a non-crypto hash like <code>&quot;crc32&quot;</code> as this breaks security. </p>
 <p> Values compatible with old version of cryptsetup are <code>&quot;ripemd160&quot;</code> for <i>open &#8211;type plain</i> and <code>&quot;sha1&quot;</code> for <i>luksFormat</i>. </p>
 <p> Use <i>cryptsetup &#8211;help</i> to show the defaults.</p>
-<dt><code>&#8211;cipher, -c </code><i>&lt;cipher-spec&gt;</i></p>
-<dd>Set the cipher specification string. </p>
+<dt><code>&#8211;cipher, -c </code><i>&lt;cipher-spec&gt;</i></dt>
+<dd>Set the cipher specification string. </dd>
 <p> <i>cryptsetup &#8211;help</i> shows the compiled-in defaults. The current default in the distributed sources is &quot;aes-cbc-essiv:sha256&quot; for plain dm-crypt and &quot;aes-xts-plain64&quot; for LUKS. </p>
 <p> If a hash is part of the cipher specification, then it is used as part of the IV generation. For example, ESSIV needs a hash function, while &quot;plain64&quot; does not and hence none is specified. </p>
 <p> For XTS mode you can optionally set a key size of 512 bits with the -s option. Key size for XTS mode is twice that for other modes for the same security level. </p>
 <p> XTS mode requires kernel 2.6.24 or later and plain64 requires kernel 2.6.33 or later. More information can be found in the FAQ.</p>
-<dt><code>&#8211;verify-passphrase, -y</code></p>
-<dd>When interactively asking for a passphrase, ask for it twice and complain if both inputs do not match. Advised when creating a regular mapping for the first time, or when running <i>luksFormat</i>. Ignored on input from file or stdin.</p>
-<dt><code>&#8211;key-file, -d </code><i>name</i></p>
-<dd>Read the passphrase from file. </p>
+<dt><code>&#8211;verify-passphrase, -y</code></dt>
+<dd>When interactively asking for a passphrase, ask for it twice and complain if both inputs do not match. Advised when creating a regular mapping for the first time, or when running <i>luksFormat</i>. Ignored on input from file or stdin.</dd>
+<dt><code>&#8211;key-file, -d </code><i>name</i></dt>
+<dd>Read the passphrase from file. </dd>
 <p> If the name given is &quot;-&quot;, then the passphrase will be read from stdin. In this case, reading will not stop at newline characters. </p>
 <p> With LUKS, passphrases supplied via &#8211;key-file are always the existing passphrases requested by a command, except in the case of <i>luksFormat</i> where &#8211;key-file is equivalent to the positional key file argument. </p>
 <p> If you want to set a new passphrase via key file, you have to use a positional argument to <i>luksAddKey</i>. </p>
 <p> See section <code>NOTES ON PASSPHRASE PROCESSING</code> for more information.</p>
-<dt><code>&#8211;keyfile-offset </code><i>value</i></p>
-<dd>Skip <i>value</i> bytes at the beginning of the key file. Works with all commands that accept key files.</p>
-<dt><code>&#8211;keyfile-size, -l </code><i>value</i></p>
-<dd>Read a maximum of <i>value</i> bytes from the key file. The default is to read the whole file up to the compiled-in maximum that can be queried with &#8211;help. Supplying more data than the compiled-in maximum aborts the operation. </p>
+<dt><code>&#8211;keyfile-offset </code><i>value</i></dt>
+<dd>Skip <i>value</i> bytes at the beginning of the key file. Works with all commands that accept key files.</dd>
+<dt><code>&#8211;keyfile-size, -l </code><i>value</i></dt>
+<dd>Read a maximum of <i>value</i> bytes from the key file. The default is to read the whole file up to the compiled-in maximum that can be queried with &#8211;help. Supplying more data than the compiled-in maximum aborts the operation. </dd>
 <p> This option is useful to cut trailing newlines, for example. If &#8211;keyfile-offset is also given, the size count starts after the offset. Works with all commands that accept key files.</p>
-<dt><code>&#8211;new-keyfile-offset </code><i>value</i></p>
-<dd>Skip <i>value</i> bytes at the start when adding a new passphrase from key file with <i>luksAddKey</i>.</p>
-<dt><code>&#8211;new-keyfile-size </code><i>value</i></p>
-<dd>Read a maximum of <i>value</i> bytes when adding a new passphrase from key file with <i>luksAddKey</i>. The default is to read the whole file up to the compiled-in maximum length that can be queried with &#8211;help. Supplying more than the compiled in maximum aborts the operation. When &#8211;new-keyfile-offset is also given, reading starts after the offset.</p>
-<dt><code>&#8211;master-key-file</code></p>
-<dd>Use a master key stored in a file. </p>
+<dt><code>&#8211;new-keyfile-offset </code><i>value</i></dt>
+<dd>Skip <i>value</i> bytes at the start when adding a new passphrase from key file with <i>luksAddKey</i>.</dd>
+<dt><code>&#8211;new-keyfile-size </code><i>value</i></dt>
+<dd>Read a maximum of <i>value</i> bytes when adding a new passphrase from key file with <i>luksAddKey</i>. The default is to read the whole file up to the compiled-in maximum length that can be queried with &#8211;help. Supplying more than the compiled in maximum aborts the operation. When &#8211;new-keyfile-offset is also given, reading starts after the offset.</dd>
+<dt><code>&#8211;master-key-file</code></dt>
+<dd>Use a master key stored in a file. </dd>
 <p> For <i>luksFormat</i> this allows creating a LUKS header with this specific master key. If the master key was taken from an existing LUKS header and all other parameters are the same, then the new header decrypts the data encrypted with the header the master key was taken from. </p>
 <p> Action <i>luksDump</i> together with &#8211;dump-master-key option: The volume (master) key is stored in a file instead of being printed out to standard output. </p>
 <p> <code>WARNING:</code> If you create your own master key, you need to make sure to do it right. Otherwise, you can end up with a low-entropy or otherwise partially predictable master key which will compromise security. </p>
 <p> For <i>luksAddKey</i> this allows adding a new passphrase without having to know an existing one. </p>
 <p> For <i>open</i> this allows one to open the LUKS device without giving a passphrase.</p>
-<dt><code>&#8211;dump-master-key</code></p>
-<dd>For <i>luksDump</i> this option includes the master key in the displayed information. Use with care, as the master key can be used to bypass the passphrases, see also option &#8211;master-key-file.</p>
-<dt><code>&#8211;json-file</code></p>
-<dd>Read token json from a file or write token to it. See <i>token</i> action for more information. &#8211;json-file=- reads json from standard input or writes it to standard output respectively.</p>
-<dt><code>&#8211;use-random</code></p>
+<dt><code>&#8211;dump-master-key</code></dt>
+<dd>For <i>luksDump</i> this option includes the master key in the displayed information. Use with care, as the master key can be used to bypass the passphrases, see also option &#8211;master-key-file.</dd>
+<dt><code>&#8211;json-file</code></dt>
+<dd>Read token json from a file or write token to it. See <i>token</i> action for more information. &#8211;json-file=- reads json from standard input or writes it to standard output respectively.</dd>
+<dt><code>&#8211;use-random</code></dt>
 <dd>
-<dt><code>&#8211;use-urandom</code></p>
-<dd>For <i>luksFormat</i> these options define which kernel random number generator will be used to create the master key (which is a long-term key). </p>
+</dd><dt><code>&#8211;use-urandom</code></dt>
+<dd>For <i>luksFormat</i> these options define which kernel random number generator will be used to create the master key (which is a long-term key). </dd>
 <p> See <code>NOTES ON RANDOM NUMBER GENERATORS</code> for more information. Use <i>cryptsetup &#8211;help</i> to show the compiled-in default random number generator. </p>
 <p> <code>WARNING:</code> In a low-entropy situation (e.g. in an embedded system), both selections are problematic. Using /dev/urandom can lead to weak keys. Using /dev/random can block a long time, potentially forever, if not enough entropy can be harvested by the kernel.</p>
-<dt><code>&#8211;key-slot, -S &lt;0-7&gt;</code></p>
+<dt><code>&#8211;key-slot, -S &lt;0-7&gt;</code></dt>
 <dd>For LUKS operations that add key material, this options allows you to specify which key slot is selected for the new key. This option can be used for <i>luksFormat</i>, and <i>luksAddKey</i>.<br />
- In addition, for <i>open</i>, this option selects a specific key-slot to compare the passphrase against. If the given passphrase would only match a different key-slot, the operation fails.</p>
-<dt><code>&#8211;key-size, -s &lt;bits&gt;</code></p>
-<dd>Sets key size in bits. The argument has to be a multiple of 8. The possible key-sizes are limited by the cipher and mode used. </p>
+ In addition, for <i>open</i>, this option selects a specific key-slot to compare the passphrase against. If the given passphrase would only match a different key-slot, the operation fails.</dd>
+<dt><code>&#8211;key-size, -s &lt;bits&gt;</code></dt>
+<dd>Sets key size in bits. The argument has to be a multiple of 8. The possible key-sizes are limited by the cipher and mode used. </dd>
 <p> See /proc/crypto for more information. Note that key-size in /proc/crypto is stated in bytes. </p>
 <p> This option can be used for <i>open &#8211;type plain</i> or <i>luksFormat</i>. All other LUKS actions will use the key-size specified in the LUKS header. Use <i>cryptsetup &#8211;help</i> to show the compiled-in defaults.</p>
-<dt><code>&#8211;size, -b &lt;number of 512 byte sectors&gt;</code></p>
-<dd>Set the size of the device in sectors of 512 bytes. This option is only relevant for the <i>open</i> and <i>resize</i> actions.</p>
-<dt><code>&#8211;offset, -o &lt;number of 512 byte sectors&gt;</code></p>
-<dd>Start offset in the backend device in 512-byte sectors. This option is only relevant for the <i>open</i> action with plain or loopaes device types or for LUKS devices in <i>luksFormat</i>. </p>
+<dt><code>&#8211;size, -b &lt;number of 512 byte sectors&gt;</code></dt>
+<dd>Set the size of the device in sectors of 512 bytes. This option is only relevant for the <i>open</i> and <i>resize</i> actions.</dd>
+<dt><code>&#8211;offset, -o &lt;number of 512 byte sectors&gt;</code></dt>
+<dd>Start offset in the backend device in 512-byte sectors. This option is only relevant for the <i>open</i> action with plain or loopaes device types or for LUKS devices in <i>luksFormat</i>. </dd>
 <p> For LUKS, the &#8211;offset option sets the data offset (payload) of data device and must be be aligned to 4096-byte sectors (must be multiple of 8). This option cannot be combined with &#8211;align-payload option.</p>
-<dt><code>&#8211;skip, -p &lt;number of 512 byte sectors&gt;</code></p>
-<dd>Start offset used in IV calculation in 512-byte sectors (how many sectors of the encrypted data to skip at the beginning). This option is only relevant for the <i>open</i> action with plain or loopaes device types. </p>
+<dt><code>&#8211;skip, -p &lt;number of 512 byte sectors&gt;</code></dt>
+<dd>Start offset used in IV calculation in 512-byte sectors (how many sectors of the encrypted data to skip at the beginning). This option is only relevant for the <i>open</i> action with plain or loopaes device types. </dd>
 <p> Hence, if &#8211;offset <i>n</i>, and &#8211;skip <i>s</i>, sector <i>n</i> (the first sector of the encrypted device) will get a sector number of <i>s</i> for the IV calculation.</p>
-<dt><code>&#8211;device-size </code><i>size[units]</i></p>
-<dd>Instead of real device size, use specified value. </p>
+<dt><code>&#8211;device-size </code><i>size[units]</i></dt>
+<dd>Instead of real device size, use specified value. </dd>
 <p> With <i>reencrypt</i> action it means that only specified area (from the start of the device to the specified size) will be reencrypted. </p>
 <p> With <i>resize</i> action it sets new size of the device. </p>
 <p> If no unit suffix is specified, the size is in bytes. </p>
 <p> Unit suffix can be S for 512 byte sectors, K/M/G/T (or KiB,MiB,GiB,TiB) for units with 1024 base or KB/MB/GB/TB for 1000 base (SI scale). </p>
 <p> <code>WARNING:</code> This is destructive operation when used with reencrypt command.</p>
-<dt><code>&#8211;readonly, -r</code></p>
-<dd>set up a read-only mapping.</p>
-<dt><code>&#8211;shared</code></p>
-<dd>Creates an additional mapping for one common ciphertext device. Arbitrary mappings are supported. This option is only relevant for the <i>open &#8211;type plain</i> action. Use &#8211;offset, &#8211;size and &#8211;skip to specify the mapped area.</p>
-<dt><code>&#8211;pbkdf &lt;PBKDF spec&gt;</code></p>
-<dd>Set Password-Based Key Derivation Function (PBKDF) algorithm for LUKS keyslot. The PBKDF can be: <i>pbkdf2</i> (for PBKDF2 according to RFC2898), <i>argon2i</i> for Argon2i or <i>argon2id</i> for Argon2id (see <a rel="nofollow" href="https://www.cryptolux.org/index.php/Argon2">https://www.cryptolux.org/index.php/Argon2</a> for more info). </p>
+<dt><code>&#8211;readonly, -r</code></dt>
+<dd>set up a read-only mapping.</dd>
+<dt><code>&#8211;shared</code></dt>
+<dd>Creates an additional mapping for one common ciphertext device. Arbitrary mappings are supported. This option is only relevant for the <i>open &#8211;type plain</i> action. Use &#8211;offset, &#8211;size and &#8211;skip to specify the mapped area.</dd>
+<dt><code>&#8211;pbkdf &lt;PBKDF spec&gt;</code></dt>
+<dd>Set Password-Based Key Derivation Function (PBKDF) algorithm for LUKS keyslot. The PBKDF can be: <i>pbkdf2</i> (for PBKDF2 according to RFC2898), <i>argon2i</i> for Argon2i or <i>argon2id</i> for Argon2id (see <a rel="nofollow" href="https://www.cryptolux.org/index.php/Argon2">https://www.cryptolux.org/index.php/Argon2</a> for more info). </dd>
 <p> For LUKS1, only PBKDF2 is accepted (no need to use this option). The default PBKDF2 for LUKS2 is set during compilation time and is available in <i>cryptsetup &#8211;help</i> output. </p>
 <p> A PBKDF is used for increasing dictionary and brute-force attack cost for keyslot passwords. The parameters can be time, memory and parallel cost. </p>
 <p> For PBKDF2, only time cost (number of iterations) applies. For Argon2i/id, there is also memory cost (memory required during the process of key derivation) and parallel cost (number of threads that run in parallel during the key derivation. </p>
 <p> Note that increasing memory cost also increases time, so the final parameter values are measured by a benchmark. The benchmark tries to find iteration time (<i>&#8211;iter-time</i>) with required memory cost <i>&#8211;pbkdf-memory</i>. If it is not possible, the memory cost is decreased as well. The parallel cost <i>&#8211;pbkdf-parallel</i> is constant, is is checked against available CPU cores (if not available, it is decreased) and the maximum parallel cost is 4. </p>
 <p> You can see all PBKDF parameters for particular LUKS2 keyslot with <i>luksDump</i> command. </p>
 <p> <code>NOTE:</code> If you do not want to use benchmark and want to specify all parameters directly, use <i>&#8211;pbkdf-force-iterations</i> with <i>&#8211;pbkdf-memory</i> and <i>&#8211;pbkdf-parallel</i>. This will override the values without benchmarking. Note it can cause extremely long unlocking time. Use only is specified cases, for example, if you know that the formatted device will be used on some small embedded system. In this case, the LUKS PBKDF2 digest will be set to the minimum iteration count.</p>
-<dt><code>&#8211;iter-time, -i &lt;number of milliseconds&gt;</code></p>
-<dd>The number of milliseconds to spend with PBKDF passphrase processing. This option is only relevant for LUKS operations that set or change passphrases, such as <i>luksFormat</i> or <i>luksAddKey</i>. Specifying 0 as parameter selects the compiled-in default.</p>
-<dt><code>&#8211;pbkdf-memory &lt;number&gt;</code></p>
-<dd>Set the memory cost for PBKDF (for Argon2i/id the number represents kilobytes). Note that it is maximal value, PBKDF benchmark or available physical memory can decrease it. This option is not available for PBKDF2.</p>
-<dt><code>&#8211;pbkdf-parallel &lt;number&gt;</code></p>
-<dd>Set the parallel cost for PBKDF (number of threads, up to 4). Note that it is maximal value, it is decreased automatically if CPU online count is lower. This option is not available for PBKDF2.</p>
-<dt><code>&#8211;pbkdf-force-iterations &lt;num&gt;</code></p>
-<dd>Avoid PBKDF benchmark and set time cost (iterations) directly. It can be used for LUKS/LUKS2 device only. See <i>&#8211;pbkdf</i> option for more info.</p>
-<dt><code>&#8211;batch-mode, -q</code></p>
-<dd>Suppresses all confirmation questions. Use with care! </p>
+<dt><code>&#8211;iter-time, -i &lt;number of milliseconds&gt;</code></dt>
+<dd>The number of milliseconds to spend with PBKDF passphrase processing. This option is only relevant for LUKS operations that set or change passphrases, such as <i>luksFormat</i> or <i>luksAddKey</i>. Specifying 0 as parameter selects the compiled-in default.</dd>
+<dt><code>&#8211;pbkdf-memory &lt;number&gt;</code></dt>
+<dd>Set the memory cost for PBKDF (for Argon2i/id the number represents kilobytes). Note that it is maximal value, PBKDF benchmark or available physical memory can decrease it. This option is not available for PBKDF2.</dd>
+<dt><code>&#8211;pbkdf-parallel &lt;number&gt;</code></dt>
+<dd>Set the parallel cost for PBKDF (number of threads, up to 4). Note that it is maximal value, it is decreased automatically if CPU online count is lower. This option is not available for PBKDF2.</dd>
+<dt><code>&#8211;pbkdf-force-iterations &lt;num&gt;</code></dt>
+<dd>Avoid PBKDF benchmark and set time cost (iterations) directly. It can be used for LUKS/LUKS2 device only. See <i>&#8211;pbkdf</i> option for more info.</dd>
+<dt><code>&#8211;batch-mode, -q</code></dt>
+<dd>Suppresses all confirmation questions. Use with care! </dd>
 <p> If the -y option is not specified, this option also switches off the passphrase verification for <i>luksFormat</i>.</p>
-<dt><code>&#8211;progress-frequency &lt;seconds&gt;</code></p>
-<dd>Print separate line every &lt;seconds&gt; with wipe progress.</p>
-<dt><code>&#8211;timeout, -t &lt;number of seconds&gt;</code></p>
+<dt><code>&#8211;progress-frequency &lt;seconds&gt;</code></dt>
+<dd>Print separate line every &lt;seconds&gt; with wipe progress.</dd>
+<dt><code>&#8211;timeout, -t &lt;number of seconds&gt;</code></dt>
 <dd>The number of seconds to wait before timeout on passphrase input via terminal. It is relevant every time a passphrase is asked, for example for <i>open</i>, <i>luksFormat</i> or <i>luksAddKey</i>. It has no effect if used in conjunction with &#8211;key-file.<br />
- This option is useful when the system should not stall if the user does not input a passphrase, e.g. during boot. The default is a value of 0 seconds, which means to wait forever.</p>
-<dt><code>&#8211;tries, -T</code></p>
-<dd>How often the input of the passphrase shall be retried. This option is relevant every time a passphrase is asked, for example for <i>open</i>, <i>luksFormat</i> or <i>luksAddKey</i>. The default is 3 tries.</p>
-<dt><code>&#8211;align-payload &lt;number of 512 byte sectors&gt;</code></p>
-<dd>Align payload at a boundary of <i>value</i> 512-byte sectors. This option is relevant for <i>luksFormat</i>. </p>
+ This option is useful when the system should not stall if the user does not input a passphrase, e.g. during boot. The default is a value of 0 seconds, which means to wait forever.</dd>
+<dt><code>&#8211;tries, -T</code></dt>
+<dd>How often the input of the passphrase shall be retried. This option is relevant every time a passphrase is asked, for example for <i>open</i>, <i>luksFormat</i> or <i>luksAddKey</i>. The default is 3 tries.</dd>
+<dt><code>&#8211;align-payload &lt;number of 512 byte sectors&gt;</code></dt>
+<dd>Align payload at a boundary of <i>value</i> 512-byte sectors. This option is relevant for <i>luksFormat</i>. </dd>
 <p> If not specified, cryptsetup tries to use the topology info provided by the kernel for the underlying device to get the optimal alignment. If not available (or the calculated value is a multiple of the default) data is by default aligned to a 1MiB boundary (i.e. 2048 512-byte sectors). </p>
 <p> For a detached LUKS header, this option specifies the offset on the data device. See also the &#8211;header option. </p>
 <p> <code>WARNING:</code> This option is DEPRECATED and has often unexpected impact to the data offset and keyslot area size (for LUKS2) due to the complex rounding. For fixed data device offset use <i>&#8211;offset</i> option instead. </p>
-<dt><code>&#8211;uuid=</code><i>UUID</i></p>
-<dd>Use the provided <i>UUID</i> for the <i>luksFormat</i> command instead of generating a new one. Changes the existing UUID when used with the <i>luksUUID</i> command. </p>
+<dt><code>&#8211;uuid=</code><i>UUID</i></dt>
+<dd>Use the provided <i>UUID</i> for the <i>luksFormat</i> command instead of generating a new one. Changes the existing UUID when used with the <i>luksUUID</i> command. </dd>
 <p> The UUID must be provided in the standard UUID format, e.g. 12345678-1234-1234-1234-123456789abc.</p>
-<dt><code>&#8211;allow-discards</code></p>
-<dd>Allow the use of discard (TRIM) requests for the device. This option is only relevant for <i>open</i> action. </p>
+<dt><code>&#8211;allow-discards</code></dt>
+<dd>Allow the use of discard (TRIM) requests for the device. This option is only relevant for <i>open</i> action. </dd>
 <p> <code>WARNING:</code> This command can have a negative security impact because it can make filesystem-level operations visible on the physical device. For example, information leaking filesystem type, used space, etc. may be extractable from the physical device if the discarded blocks can be located later. If in doubt, do not use it. </p>
 <p> A kernel version of 3.1 or later is needed. For earlier kernels, this option is ignored.</p>
-<dt><code>&#8211;perf-same_cpu_crypt</code></p>
-<dd>Perform encryption using the same cpu that IO was submitted on. The default is to use an unbound workqueue so that encryption work is automatically balanced between available CPUs. This option is only relevant for <i>open</i> action. </p>
+<dt><code>&#8211;perf-same_cpu_crypt</code></dt>
+<dd>Perform encryption using the same cpu that IO was submitted on. The default is to use an unbound workqueue so that encryption work is automatically balanced between available CPUs. This option is only relevant for <i>open</i> action. </dd>
 <p> <code>NOTE:</code> This option is available only for low-level dm-crypt performance tuning, use only if you need a change to default dm-crypt behaviour. Needs kernel 4.0 or later.</p>
-<dt><code>&#8211;perf-submit_from_crypt_cpus</code></p>
-<dd>Disable offloading writes to a separate thread after encryption. There are some situations where offloading write bios from the encryption threads to a single thread degrades performance significantly. The default is to offload write bios to the same thread. This option is only relevant for <i>open</i> action. </p>
+<dt><code>&#8211;perf-submit_from_crypt_cpus</code></dt>
+<dd>Disable offloading writes to a separate thread after encryption. There are some situations where offloading write bios from the encryption threads to a single thread degrades performance significantly. The default is to offload write bios to the same thread. This option is only relevant for <i>open</i> action. </dd>
 <p> <code>NOTE:</code> This option is available only for low-level dm-crypt performance tuning, use only if you need a change to default dm-crypt behaviour. Needs kernel 4.0 or later.</p>
-<dt><code>&#8211;test-passphrase</code></p>
-<dd>Do not activate the device, just verify passphrase. This option is only relevant for <i>open</i> action (the device mapping name is not mandatory if this option is used).</p>
-<dt><code>&#8211;header</code> &lt;device or file storing the LUKS header&gt;</p>
-<dd>Use a detached (separated) metadata device or file where the LUKS header is stored. This option allows one to store ciphertext and LUKS header on different devices. </p>
+<dt><code>&#8211;test-passphrase</code></dt>
+<dd>Do not activate the device, just verify passphrase. This option is only relevant for <i>open</i> action (the device mapping name is not mandatory if this option is used).</dd>
+<dt><code>&#8211;header</code> &lt;device or file storing the LUKS header&gt;</dt>
+<dd>Use a detached (separated) metadata device or file where the LUKS header is stored. This option allows one to store ciphertext and LUKS header on different devices. </dd>
 <p> This option is only relevant for LUKS devices and can be used with the <i>luksFormat</i>, <i>open</i>, <i>luksSuspend</i>, <i>luksResume</i>, <i>status</i> and <i>resize</i> commands. </p>
 <p> For <i>luksFormat</i> with a file name as the argument to &#8211;header, the file will be automatically created if it does not exist. See the cryptsetup FAQ for header size calculation. </p>
 <p> For other commands that change the LUKS header (e.g. <i>luksAddKey</i>), specify the device or file with the LUKS header directly as the LUKS device. </p>
 <p> If used with <i>luksFormat</i>, the &#8211;align-payload option is taken as absolute sector alignment on ciphertext device and can be zero. </p>
 <p> <code>WARNING:</code> There is no check whether the ciphertext device specified actually belongs to the header given. In fact, you can specify an arbitrary device as the ciphertext device for <i>open</i> with the &#8211;header option. Use with care.</p>
-<dt><code>&#8211;header-backup-file &lt;file&gt;</code></p>
-<dd>Specify file with header backup for <i>luksHeaderBackup</i> or <i>luksHeaderRestore</i> actions.</p>
-<dt><code>&#8211;force-password</code></p>
-<dd>Do not use password quality checking for new LUKS passwords. </p>
+<dt><code>&#8211;header-backup-file &lt;file&gt;</code></dt>
+<dd>Specify file with header backup for <i>luksHeaderBackup</i> or <i>luksHeaderRestore</i> actions.</dd>
+<dt><code>&#8211;force-password</code></dt>
+<dd>Do not use password quality checking for new LUKS passwords. </dd>
 <p> This option applies only to <i>luksFormat</i>, <i>luksAddKey</i> and <i>luksChangeKey</i> and is ignored if cryptsetup is built without password quality checking support. </p>
 <p> For more info about password quality check, see the manual page for <code><a href="/docs/linux/man/5-pwquality-conf/">pwquality.conf</a>(5)</code> and <code><a href="/docs/linux/man/5-passwdqc-conf/">passwdqc.conf</a>(5)</code>.</p>
-<dt><code>&#8211;deferred</code></p>
-<dd>Defers device removal in <i>close</i> command until the last user closes it.</p>
-<dt><code>&#8211;disable-locks</code></p>
-<dd>Disable lock protection for metadata on disk. This option is valid only for LUKS2 and ignored for other formats. </p>
+<dt><code>&#8211;deferred</code></dt>
+<dd>Defers device removal in <i>close</i> command until the last user closes it.</dd>
+<dt><code>&#8211;disable-locks</code></dt>
+<dd>Disable lock protection for metadata on disk. This option is valid only for LUKS2 and ignored for other formats. </dd>
 <p> <code>WARNING:</code> Do not use this option unless you run cryptsetup in a restricted environment where locking is impossible to perform (where /run directory cannot be used).</p>
-<dt><code>&#8211;disable-keyring</code></p>
-<dd>Do not load volume key in kernel keyring and store it directly in the dm-crypt target instead. This option is supported only for the LUKS2 format.</p>
-<dt><code>&#8211;key-description &lt;text&gt;</code></p>
-<dd>Set key description in keyring for use with <i>token</i> command.</p>
-<dt><code>&#8211;priority &lt;normal|prefer|ignore&gt;</code></p>
-<dd>Set a priority for LUKS2 keyslot. The <i>prefer</i> priority marked slots are tried before <i>normal</i> priority. The <i>ignored</i> priority means, that slot is never used, if not explicitly requested by <i>&#8211;key-slot</i> option.</p>
-<dt><code>&#8211;token-id</code></p>
-<dd>Specify what token to use in actions <i>token</i>, <i>open</i> or <i>resize</i>. If omitted, all available tokens will be checked before proceeding further with passphrase prompt.</p>
-<dt><code>&#8211;token-only</code></p>
-<dd>Do not proceed further with action (any of <i>token</i>, <i>open</i> or <i>resize</i>) if token activation failed. Without the option, action asks for passphrase to proceed further.</p>
-<dt><code>&#8211;sector-size &lt;bytes&gt;</code></p>
-<dd>Set sector size for use with disk encryption. It must be power of two and in range 512 &#8211; 4096 bytes. The default is 512 bytes sectors. This option is available only in the LUKS2 mode. </p>
+<dt><code>&#8211;disable-keyring</code></dt>
+<dd>Do not load volume key in kernel keyring and store it directly in the dm-crypt target instead. This option is supported only for the LUKS2 format.</dd>
+<dt><code>&#8211;key-description &lt;text&gt;</code></dt>
+<dd>Set key description in keyring for use with <i>token</i> command.</dd>
+<dt><code>&#8211;priority &lt;normal|prefer|ignore&gt;</code></dt>
+<dd>Set a priority for LUKS2 keyslot. The <i>prefer</i> priority marked slots are tried before <i>normal</i> priority. The <i>ignored</i> priority means, that slot is never used, if not explicitly requested by <i>&#8211;key-slot</i> option.</dd>
+<dt><code>&#8211;token-id</code></dt>
+<dd>Specify what token to use in actions <i>token</i>, <i>open</i> or <i>resize</i>. If omitted, all available tokens will be checked before proceeding further with passphrase prompt.</dd>
+<dt><code>&#8211;token-only</code></dt>
+<dd>Do not proceed further with action (any of <i>token</i>, <i>open</i> or <i>resize</i>) if token activation failed. Without the option, action asks for passphrase to proceed further.</dd>
+<dt><code>&#8211;sector-size &lt;bytes&gt;</code></dt>
+<dd>Set sector size for use with disk encryption. It must be power of two and in range 512 &#8211; 4096 bytes. The default is 512 bytes sectors. This option is available only in the LUKS2 mode. </dd>
 <p> Note that if sector size is higher than underlying device hardware sector and there is not integrity protection that uses data journal, using this option can increase risk on incomplete sector writes during a power fail. </p>
 <p> If used together with <i>&#8211;integrity</i> option and dm-integrity journal, the atomicity of writes is guaranteed in all cases (but it cost write performance &#8211; data has to be written twice). </p>
 <p> Increasing sector size from 512 bytes to 4096 bytes can provide better performance on most of the modern storage devices and also with some hw encryption accelerators.</p>
-<dt><code>&#8211;persistent</code></p>
-<dd>If used with LUKS2 devices and activation commands like <i>open</i>, the specified activation flags are persistently written into metadata and used next time automatically even for normal activation. (No need to use cryptab or other system configuration files.) Only <i>&#8211;allow-discards</i>, <i>&#8211;perf-same_cpu_crypt</i>, <i>&#8211;perf-submit_from_crypt_cpus</i> and <i>&#8211;integrity-no-journal</i> can be stored persistently.</p>
-<dt><code>&#8211;refresh</code></p>
-<dd>Refreshes an active device with new set of parameters. See action <i>refresh</i> description for more details.</p>
-<dt><code>&#8211;label &lt;LABEL&gt;</code></p>
-<dd><code>&#8211;subsystem &lt;SUBSYSTEM&gt;</code> Set label and subsystem description for LUKS2 device, can be used in <i>config</i> and <i>format</i> actions. The label and subsystem are optional fields and can be later used in udev scripts for triggering user actions once device marked by these labels is detected.</p>
-<dt><code>&#8211;integrity &lt;integrity algorithm&gt;</code></p>
-<dd>Specify integrity algorithm to be used for authenticated disk encryption in LUKS2. </p>
+<dt><code>&#8211;persistent</code></dt>
+<dd>If used with LUKS2 devices and activation commands like <i>open</i>, the specified activation flags are persistently written into metadata and used next time automatically even for normal activation. (No need to use cryptab or other system configuration files.) Only <i>&#8211;allow-discards</i>, <i>&#8211;perf-same_cpu_crypt</i>, <i>&#8211;perf-submit_from_crypt_cpus</i> and <i>&#8211;integrity-no-journal</i> can be stored persistently.</dd>
+<dt><code>&#8211;refresh</code></dt>
+<dd>Refreshes an active device with new set of parameters. See action <i>refresh</i> description for more details.</dd>
+<dt><code>&#8211;label &lt;LABEL&gt;</code></dt>
+<dd><code>&#8211;subsystem &lt;SUBSYSTEM&gt;</code> Set label and subsystem description for LUKS2 device, can be used in <i>config</i> and <i>format</i> actions. The label and subsystem are optional fields and can be later used in udev scripts for triggering user actions once device marked by these labels is detected.</dd>
+<dt><code>&#8211;integrity &lt;integrity algorithm&gt;</code></dt>
+<dd>Specify integrity algorithm to be used for authenticated disk encryption in LUKS2. </dd>
 <p> <code>WARNING: This extension is EXPERIMENTAL</code> and requires dm-integrity kernel target (available since kernel version 4.12). For native AEAD modes, also enable &quot;User-space interface for AEAD cipher algorithms&quot; in &quot;Cryptographic API&quot; section (CONFIG_CRYPTO_USER_API_AEAD .config option). </p>
 <p> For more info, see <i>AUTHENTICATED DISK ENCRYPTION</i> section.</p>
-<dt><code>&#8211;luks2-metadata-size &lt;size&gt;</code></p>
-<dd>This option can be used to enlarge the LUKS2 metadata (JSON) area. The size includes 4096 bytes for binary metadata (usable JSON area is smaller of the binary area). According to LUKS2 specification, only these values are valid: 16, 32, 64, 128, 256, 512, 1024, 2048 and 4096 kB The &lt;size&gt; can be specified with unit suffix (for example 128k).</p>
-<dt><code>&#8211;luks2-keyslots-size &lt;size&gt;</code></p>
-<dd>This option can be used to set specific size of the LUKS2 binary keyslot area (key material is encrypted there). The value must be aligned to multiple of 4096 bytes with maximum size 128MB. The &lt;size&gt; can be specified with unit suffix (for example 128k).</p>
-<dt><code>&#8211;keyslot-cipher &lt;cipher-spec&gt;</code></p>
-<dd>This option can be used to set specific cipher encryption for the LUKS2 keyslot area.</p>
-<dt><code>&#8211;keyslot-key-size &lt;bits&gt;</code></p>
-<dd>This option can be used to set specific key size for the LUKS2 keyslot area.</p>
-<dt><code>&#8211;integrity-no-journal</code></p>
-<dd>Activate device with integrity protection without using data journal (direct write of data and integrity tags). Note that without journal power fail can cause non-atomic write and data corruption. Use only if journalling is performed on a different storage layer.</p>
-<dt><code>&#8211;integrity-no-wipe</code></p>
-<dd>Skip wiping of device authentication (integrity) tags. If you skip this step, sectors will report invalid integrity tag until an application write to the sector. </p>
+<dt><code>&#8211;luks2-metadata-size &lt;size&gt;</code></dt>
+<dd>This option can be used to enlarge the LUKS2 metadata (JSON) area. The size includes 4096 bytes for binary metadata (usable JSON area is smaller of the binary area). According to LUKS2 specification, only these values are valid: 16, 32, 64, 128, 256, 512, 1024, 2048 and 4096 kB The &lt;size&gt; can be specified with unit suffix (for example 128k).</dd>
+<dt><code>&#8211;luks2-keyslots-size &lt;size&gt;</code></dt>
+<dd>This option can be used to set specific size of the LUKS2 binary keyslot area (key material is encrypted there). The value must be aligned to multiple of 4096 bytes with maximum size 128MB. The &lt;size&gt; can be specified with unit suffix (for example 128k).</dd>
+<dt><code>&#8211;keyslot-cipher &lt;cipher-spec&gt;</code></dt>
+<dd>This option can be used to set specific cipher encryption for the LUKS2 keyslot area.</dd>
+<dt><code>&#8211;keyslot-key-size &lt;bits&gt;</code></dt>
+<dd>This option can be used to set specific key size for the LUKS2 keyslot area.</dd>
+<dt><code>&#8211;integrity-no-journal</code></dt>
+<dd>Activate device with integrity protection without using data journal (direct write of data and integrity tags). Note that without journal power fail can cause non-atomic write and data corruption. Use only if journalling is performed on a different storage layer.</dd>
+<dt><code>&#8211;integrity-no-wipe</code></dt>
+<dd>Skip wiping of device authentication (integrity) tags. If you skip this step, sectors will report invalid integrity tag until an application write to the sector. </dd>
 <p> <code>NOTE:</code> Even some writes to the device can fail if the write is not aligned to page size and page-cache initiates read of a sector with invalid integrity tag.</p>
-<dt><code>&#8211;unbound</code></p>
-<dd>Creates new LUKS2 unbound keyslot. See <i>luksAddKey</i> action for more details.</p>
-<dt><code>&#8211;tcrypt-hidden</code></p>
-<dd><code>&#8211;tcrypt-system</code> <code>&#8211;tcrypt-backup</code> Specify which TrueCrypt on-disk header will be used to open the device. See <i>TCRYPT</i> section for more info.</p>
-<dt><code>&#8211;veracrypt</code></p>
-<dd>Allow VeraCrypt compatible mode. Only for TCRYPT extension. See <i>TCRYPT</i> section for more info.</p>
-<dt><code>&#8211;veracrypt-pim</code></p>
-<dd><code>&#8211;veracrypt-query-pim</code> Use a custom Personal Iteration Multiplier (PIM) for VeraCrypt device. See <i>TCRYPT</i> section for more info.</p>
-<dt><code>&#8211;serialize-memory-hard-pbkdf</code></p>
-<dd>Use a global lock to serialize unlocking of keyslots using memory-hard PBKDF. </p>
+<dt><code>&#8211;unbound</code></dt>
+<dd>Creates new LUKS2 unbound keyslot. See <i>luksAddKey</i> action for more details.</dd>
+<dt><code>&#8211;tcrypt-hidden</code></dt>
+<dd><code>&#8211;tcrypt-system</code> <code>&#8211;tcrypt-backup</code> Specify which TrueCrypt on-disk header will be used to open the device. See <i>TCRYPT</i> section for more info.</dd>
+<dt><code>&#8211;veracrypt</code></dt>
+<dd>Allow VeraCrypt compatible mode. Only for TCRYPT extension. See <i>TCRYPT</i> section for more info.</dd>
+<dt><code>&#8211;veracrypt-pim</code></dt>
+<dd><code>&#8211;veracrypt-query-pim</code> Use a custom Personal Iteration Multiplier (PIM) for VeraCrypt device. See <i>TCRYPT</i> section for more info.</dd>
+<dt><code>&#8211;serialize-memory-hard-pbkdf</code></dt>
+<dd>Use a global lock to serialize unlocking of keyslots using memory-hard PBKDF. </dd>
 <p> <code>NOTE:</code> This is (ugly) workaround for a specific situation when multiple devices are activated in parallel and system instead of reporting out of memory starts unconditionally stop processes using out-of-memory killer. </p>
 <p> <code>DO NOT USE</code> this switch until you are implementing boot environment with parallel devices activation!</p>
-<dt><code>&#8211;encrypt</code></p>
-<dd>Initialize (and run) device encryption (<i>reencrypt</i> action parameter)</p>
-<dt><code>&#8211;decrypt</code></p>
-<dd>Initialize (and run) device decryption (<i>reencrypt</i> action parameter)</p>
-<dt><code>&#8211;init-only</code></p>
-<dd>Initialize reencryption (any variant) operation in LUKS2 metadata only and exit. If any reencrypt operation is already initialized in metadata, the command with &#8211;init-only parameter fails.</p>
-<dt><code>&#8211;resume-only</code></p>
-<dd>Resume reencryption (any variant) operation already described in LUKS2 metadata. If no reencrypt operation is initialized, the command with &#8211;resume-only parameter fails. Useful for resuming reencrypt operation without accidentally triggering new reencryption operation.</p>
-<dt><code>&#8211;resilience &lt;mode&gt;</code></p>
-<dd>Reencryption resilience mode can be one of <i>checksum</i>, <i>journal</i> or <i>none</i>. </p>
+<dt><code>&#8211;encrypt</code></dt>
+<dd>Initialize (and run) device encryption (<i>reencrypt</i> action parameter)</dd>
+<dt><code>&#8211;decrypt</code></dt>
+<dd>Initialize (and run) device decryption (<i>reencrypt</i> action parameter)</dd>
+<dt><code>&#8211;init-only</code></dt>
+<dd>Initialize reencryption (any variant) operation in LUKS2 metadata only and exit. If any reencrypt operation is already initialized in metadata, the command with &#8211;init-only parameter fails.</dd>
+<dt><code>&#8211;resume-only</code></dt>
+<dd>Resume reencryption (any variant) operation already described in LUKS2 metadata. If no reencrypt operation is initialized, the command with &#8211;resume-only parameter fails. Useful for resuming reencrypt operation without accidentally triggering new reencryption operation.</dd>
+<dt><code>&#8211;resilience &lt;mode&gt;</code></dt>
+<dd>Reencryption resilience mode can be one of <i>checksum</i>, <i>journal</i> or <i>none</i>. </dd>
 <p> <i>checksum</i>: default mode, where individual checksums of ciphertext hotzone sectors are stored, so the recovery process can detect which sectors where already reencrypted. It requires that the device sector write is atomic. </p>
 <p> <i>journal</i>: the hotzone is journaled in the binary area (so the data are written twice). </p>
 <p> <i>none</i>: performance mode. There is no protection and the only way it&#8217;s safe to interrupt the reencryption is similar to old offline reencryption utility. (ctrl+c). </p>
 <p> The option is ignored if reencryption with datashift mode is in progress.</p>
-<dt><code>&#8211;resilience-hash &lt;hash&gt;</code></p>
-<dd>The hash algorithm used with &quot;&#8211;resilience checksum&quot; only. The default hash is sha256. With other resilience modes, the hash parameter is ignored.</p>
-<dt><code>&#8211;hotzone-size &lt;size&gt;</code></p>
-<dd>This option can be used to set an upper limit on the size of reencryption area (hotzone). The &lt;size&gt; can be specified with unit suffix (for example 50M). Note that actual hotzone size may be less than specified &lt;size&gt; due to other limitations (free space in keyslots area or available memory).</p>
-<dt><code>&#8211;reduce-device-size &lt;size&gt;</code></p>
-<dd>Initialize LUKS2 reencryption with data device size reduction (currently only &#8211;encrypt variant is supported). </p>
+<dt><code>&#8211;resilience-hash &lt;hash&gt;</code></dt>
+<dd>The hash algorithm used with &quot;&#8211;resilience checksum&quot; only. The default hash is sha256. With other resilience modes, the hash parameter is ignored.</dd>
+<dt><code>&#8211;hotzone-size &lt;size&gt;</code></dt>
+<dd>This option can be used to set an upper limit on the size of reencryption area (hotzone). The &lt;size&gt; can be specified with unit suffix (for example 50M). Note that actual hotzone size may be less than specified &lt;size&gt; due to other limitations (free space in keyslots area or available memory).</dd>
+<dt><code>&#8211;reduce-device-size &lt;size&gt;</code></dt>
+<dd>Initialize LUKS2 reencryption with data device size reduction (currently only &#8211;encrypt variant is supported). </dd>
 <p> Last &lt;size&gt; sectors of &lt;device&gt; will be used to properly initialize device reencryption. That means any data at last &lt;size&gt; sectors will be lost. </p>
 <p> It could be useful if you added some space to underlying partition or logical volume (so last &lt;size&gt; sectors contains no data). </p>
 <p> Recommended minimal size is twice the default LUKS2 header size (&#8211;reduce-device-size 32M) for &#8211;encrypt use case. Be sure to have enough (at least &#8211;reduce-device-size value of free space at the end of &lt;device&gt;). </p>
 <p> WARNING: This is a destructive operation and cannot be reverted. Use with extreme care &#8211; accidentally overwritten filesystems are usually unrecoverable.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Show the program version.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Show short option help.</p>
-<dt><code>&#8211;help, -?</code></p>
-<dd>Show help text and default parameters.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd>Show the program version.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Show short option help.</dd>
+<dt><code>&#8211;help, -?</code></dt>
+<dd>Show help text and default parameters.</dd></dl>
 <h2>Return Codes</h2>
 <p>Cryptsetup returns 0 on success and a non-zero value on error. </p>
 <p> Error codes are: 1 wrong parameters, 2 no permission (bad passphrase), 3 out of memory, 4 wrong device specified, 5 device already exists or device is busy.</p>

@@ -21,46 +21,46 @@ description: "flow-dscan – Detect scanning and other suspicious network activi
 <p> A SIGUSR1 signal will instruct flow-dscan to dump its internal state.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Do not detach and run in the background. Alerts go to stderr.</p>
-<dt><code>-B</code></p>
-<dd> Do not detach and run in the background. Alerts go to syslog.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-D</code><i> iplist_depth</i></p>
-<dd> Depth of IP host list for detecting host scanning.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-i</code><i> input_filter</i></p>
-<dd> Input interface filter list.</p>
-<dt><code>-I</code><i> output_filter</i></p>
-<dd> Output interface filter list.</p>
-<dt><code>-l</code></p>
-<dd> Load state from <i>/var/tmp/dscan.state</i> or the filename specified with -s.</p>
-<dt><code>-L</code><i> suppress_list</i></p>
-<dd> Basename of suppress files. There are two suppress files for input and output traffic. The suppress file syntax is </p>
+<dt><code>-b</code></dt>
+<dd> Do not detach and run in the background. Alerts go to stderr.</dd>
+<dt><code>-B</code></dt>
+<dd> Do not detach and run in the background. Alerts go to syslog.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-D</code><i> iplist_depth</i></dt>
+<dd> Depth of IP host list for detecting host scanning.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-i</code><i> input_filter</i></dt>
+<dd> Input interface filter list.</dd>
+<dt><code>-I</code><i> output_filter</i></dt>
+<dd> Output interface filter list.</dd>
+<dt><code>-l</code></dt>
+<dd> Load state from <i>/var/tmp/dscan.state</i> or the filename specified with -s.</dd>
+<dt><code>-L</code><i> suppress_list</i></dt>
+<dd> Basename of suppress files. There are two suppress files for input and output traffic. The suppress file syntax is </dd>
 <p> IP_address protocol source_port destination_port </p>
 <p> A &#8216;-&#8216; can be used as a wildcard in the protocol, source_port, and destination_port fields. Only a single protocol, source_port, and destination_port is supported per IP address.</p>
-<dt><code>-m</code></p>
-<dd> Multicast address filter. Use to ignore multicast addresses.</p>
-<dt><code>-O</code><i> excessive_octets</i></p>
-<dd> Trigger an alert if a flow is processed with the octets field exceeding <i>excessive_octets</i>.</p>
-<dt><code>-p</code></p>
-<dd> Dump state to <i>/var/tmp/dscan.state</i> or the filename specified with -s.</p>
-<dt><code>-P</code><i> excessive_packets</i></p>
-<dd> Trigger an alert if a flow is processed with the packets field exceeding <i>excessive_packets</i>.</p>
-<dt><code>-s</code><i> statefile</i></p>
-<dd> State filename. Defaults to <i>/var/tmp/dscan.state</i></p>
-<dt><code>-S</code><i> port_scan_trigger</i></p>
-<dd> Number of ports a IP address must have used to be considered scanning.</p>
-<dt><code>-t</code><i> ager_timeout</i></p>
-<dd> How long to keep flows around. Default to 90000. This is measured in flows processed.</p>
-<dt><code>-T</code><i> excessive_time</i></p>
-<dd> Trigger an alert if a flow is processed with the End-Start field exceeding <i>excessive_time</i>.</p>
-<dt><code>-w</code></p>
-<dd> Filter (ignore) candidate inbound www traffic, ie IP protocol 6, source port 80, and destination port &gt; 1023.</p>
-<dt><code>-W</code></p>
-<dd> Filter (ignore) candidate outbound www traffic, ie IP protocol 6, destination port 80, and source port &gt; 1023.</dl>
+<dt><code>-m</code></dt>
+<dd> Multicast address filter. Use to ignore multicast addresses.</dd>
+<dt><code>-O</code><i> excessive_octets</i></dt>
+<dd> Trigger an alert if a flow is processed with the octets field exceeding <i>excessive_octets</i>.</dd>
+<dt><code>-p</code></dt>
+<dd> Dump state to <i>/var/tmp/dscan.state</i> or the filename specified with -s.</dd>
+<dt><code>-P</code><i> excessive_packets</i></dt>
+<dd> Trigger an alert if a flow is processed with the packets field exceeding <i>excessive_packets</i>.</dd>
+<dt><code>-s</code><i> statefile</i></dt>
+<dd> State filename. Defaults to <i>/var/tmp/dscan.state</i></dd>
+<dt><code>-S</code><i> port_scan_trigger</i></dt>
+<dd> Number of ports a IP address must have used to be considered scanning.</dd>
+<dt><code>-t</code><i> ager_timeout</i></dt>
+<dd> How long to keep flows around. Default to 90000. This is measured in flows processed.</dd>
+<dt><code>-T</code><i> excessive_time</i></dt>
+<dd> Trigger an alert if a flow is processed with the End-Start field exceeding <i>excessive_time</i>.</dd>
+<dt><code>-w</code></dt>
+<dd> Filter (ignore) candidate inbound www traffic, ie IP protocol 6, source port 80, and destination port &gt; 1023.</dd>
+<dt><code>-W</code></dt>
+<dd> Filter (ignore) candidate outbound www traffic, ie IP protocol 6, destination port 80, and source port &gt; 1023.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> In a topology where 25 is the only output interface run flow-dscan over the data in <i>/flows/krc4</i>. Ignore www and multicast traffic, store the internal state in <i>dscan.statefile</i> on exit. Use empty suppress list files <i>dscan.suppress.src</i> and <i>dscan.suppress.dst</i>. The output produced by flow-dscan typically must be manually inspected by using flow-filter and flow-print. Many of the alerts will be false until the suppress lists are populated for the local environment. </p>
 <p> <code>flow-cat /flows/krc4 | flow-dscan -I25 -b -m -s dscan.statefile -p -W</code></p>

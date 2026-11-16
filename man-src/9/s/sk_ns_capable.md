@@ -10,18 +10,18 @@ description: "sk_ns_capable – General socket capability test"
 <p>sk_ns_capable &#8211; General socket capability test</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool sk_ns_capable(const struct sock&nbsp;<wbr>*&nbsp;<wbr></code><i>sk</i><code>, struct user_namespace&nbsp;<wbr>*&nbsp;<wbr></code><i>user_ns</i><code>, int&nbsp;<wbr></code><i>cap</i><code>);</code></dl>
+<dt> <code>bool sk_ns_capable(const struct sock&nbsp;<wbr>*&nbsp;<wbr></code><i>sk</i><code>, struct user_namespace&nbsp;<wbr>*&nbsp;<wbr></code><i>user_ns</i><code>, int&nbsp;<wbr></code><i>cap</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>sk</i></p>
 <dl>
 <dd>
-<dd>Socket to use a capability on or through</dl>
+</dd><dd>Socket to use a capability on or through</dd></dl>
 <p> <i>user_ns</i></p>
 <dl>
-<dd>The user namespace of the capability to use</dl>
+<dd>The user namespace of the capability to use</dd></dl>
 <p> <i>cap</i></p>
 <dl>
-<dd>The capability to use</dl>
+<dd>The capability to use</dd></dl>
 <h2>Description</h2>
 <p>Test to see if the opener of the socket had when the socket was created and the current process has the capability <i>cap</i> in the user namespace <i>user_ns</i>.</p>
 <h2>Copyright</h2>

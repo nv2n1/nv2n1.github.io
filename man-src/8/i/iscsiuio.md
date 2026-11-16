@@ -18,27 +18,27 @@ description: "iscsiuio – iSCSI UserSpace I/O driver"
 <h2>Parameters</h2>
 <p>There are very few parameters when running this application.</p>
 <dl>
-<dt><code>-d</code><i>&lt;debug</i><code>level&gt;</code></p>
-<dd>This is to enable debug mode where debug messages will be sent to stdout The following debug modes are supported</dl>
+<dt><code>-d</code><i>&lt;debug</i><code>level&gt;</code></dt>
+<dd>This is to enable debug mode where debug messages will be sent to stdout The following debug modes are supported</dd></dl>
 <dl>
-<dd>DEBUG 4 &#8211; Print all messages </p>
+<dd>DEBUG 4 &#8211; Print all messages </dd>
 <p> INFO 3 &#8211; Print messages needed to follow the uIP code (default) </p>
 <p> WARN 2 &#8211; Print warning messages </p>
 <p> ERROR 1 &#8211; Only print critical errors</dl>
 <dl>
 <dt>
-<dt><code>-f</code></p>
+</dt><dt><code>-f</code></dt>
 <dd>
-<dd>This is to enable foreground mode so that this application doesn&#8217;t get sent into the background.</dl>
+</dd><dd>This is to enable foreground mode so that this application doesn&#8217;t get sent into the background.</dd></dl>
 <dl>
-<dt><code>-v</code></p>
-<dd>This is to print the version.</dl>
+<dt><code>-v</code></dt>
+<dd>This is to print the version.</dd></dl>
 <dl>
-<dt><code>-p</code><i>&lt;pidfile&gt;</i></p>
-<dd>Use pidfile (default /var/run/iscsiuio.pid )</dl>
+<dt><code>-p</code><i>&lt;pidfile&gt;</i></dt>
+<dd>Use pidfile (default /var/run/iscsiuio.pid )</dd></dl>
 <dl>
-<dt><code>-h</code></p>
-<dd>Display this help and exit. </p>
+<dt><code>-h</code></dt>
+<dd>Display this help and exit. </dd>
 </dl>
 <h2>Author</h2>
 <p>Benjamin Li &#8211; benli [at] broadcom.com </p>

@@ -42,57 +42,57 @@ description: "globus_error_openssl.h – Globus Generic Error."
 <p>Get the OpenSSL Error Data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The globus object that represents the error</dl>
+<dd><i>error</i> The globus object that represents the error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The error data for the OpenSSL error</dl>
+<dd>The error data for the OpenSSL error</dd></dl>
 <h3>int globus_error_openssl_error_get_data_flags (globus_object_t *error)</h3>
 <p>Get the OpenSSL Error Data Flags </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The globus object that represents the error</dl>
+<dd><i>error</i> The globus object that represents the error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The error data flags for the OpenSSL error</dl>
+<dd>The error data flags for the OpenSSL error</dd></dl>
 <h3>const char* globus_error_openssl_error_get_filename (globus_object_t *error)</h3>
 <p>Get the OpenSSL filename where the error occurred </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The globus object that represents the error</dl>
+<dd><i>error</i> The globus object that represents the error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The filename where the OpenSSL error occurred</dl>
+<dd>The filename where the OpenSSL error occurred</dd></dl>
 <h3>const char* globus_error_openssl_error_get_function (globus_object_t *error)</h3>
 <p>Get the OpenSSL filename where the error occurred </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The globus object that represents the error</dl>
+<dd><i>error</i> The globus object that represents the error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The function name where the OpenSSL error occurred</dl>
+<dd>The function name where the OpenSSL error occurred</dd></dl>
 <h3>const char* globus_error_openssl_error_get_library (globus_object_t *error)</h3>
 <p>Get the OpenSSL library the error occurred in </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The globus object that represents the error</dl>
+<dd><i>error</i> The globus object that represents the error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The library name where the OpenSSL error occurred</dl>
+<dd>The library name where the OpenSSL error occurred</dd></dl>
 <h3>int globus_error_openssl_error_get_linenumber (globus_object_t *error)</h3>
 <p>Get the OpenSSL line number where the error occurred </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The globus object that represents the error</dl>
+<dd><i>error</i> The globus object that represents the error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The line number where the OpenSSL error occurred</dl>
+<dd>The line number where the OpenSSL error occurred</dd></dl>
 <h3>const char* globus_error_openssl_error_get_reason (globus_object_t *error)</h3>
 <p>Get the OpenSSL reason for the error </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The globus object that represents the error</dl>
+<dd><i>error</i> The globus object that represents the error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The reason for the OpenSSL error</dl>
+<dd>The reason for the OpenSSL error</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gsi_openssl_error from the source code.</p>

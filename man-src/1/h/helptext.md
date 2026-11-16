@@ -37,13 +37,13 @@ url: "/docs/linux/man/1-helptext/"
  Next you will need to assign parameters to the location such as the coordinate system and datum you want to use, the project area's boundary coordinates, and the default resolution for raster data:
 <dl>
 <dt>
-<dd> Start by chosing between, X,Y, Latitude-Longitude, UTM, or dqother&quot; coordinate system. This choice depends on your data and the use you will make of it. You are then prompted for a single line of text describing the project area, for example &quot;Topo Map of the Alps&quot;.</dl>
+</dt><dd> Start by chosing between, X,Y, Latitude-Longitude, UTM, or dqother&quot; coordinate system. This choice depends on your data and the use you will make of it. You are then prompted for a single line of text describing the project area, for example &quot;Topo Map of the Alps&quot;.</dd></dl>
  
 
  Next you are requested for some more information about the projection. Note that the prompts vary from projection to projection, an example follows:
 <dl>
 <dt>
-<dd> (if you chose &quot;D - Other Projection&quot;) &quot;specify projection name&quot;: dqlist&quot; gives you the list of all available projections, examples are dqtmerc&quot; for Transverse Mercator, &quot;lcc&quot; for Lambert Conformal Conic, dqmoll&quot; for Mollweide, etc. specify datum name: again use &quot;list&quot; to get a list of available datums, examples are &quot;wgs84&quot;, &quot;nad27&quot;, &quot;eur79&quot;, etc. Enter Central Parallel: 0 if you want the Equator as the central parallel Enter Central Meridian: 0 if you want the Greenwich meridian as central meridian Enter Scale Factor at the Central Meridian Enter plural form of map units: for example, meters</dl>
+</dt><dd> (if you chose &quot;D - Other Projection&quot;) &quot;specify projection name&quot;: dqlist&quot; gives you the list of all available projections, examples are dqtmerc&quot; for Transverse Mercator, &quot;lcc&quot; for Lambert Conformal Conic, dqmoll&quot; for Mollweide, etc. specify datum name: again use &quot;list&quot; to get a list of available datums, examples are &quot;wgs84&quot;, &quot;nad27&quot;, &quot;eur79&quot;, etc. Enter Central Parallel: 0 if you want the Equator as the central parallel Enter Central Meridian: 0 if you want the Greenwich meridian as central meridian Enter Scale Factor at the Central Meridian Enter plural form of map units: for example, meters</dd></dl>
  
 
  The next step is the description of the project area's boundary coordinates and the definition of the default raster resolution: 

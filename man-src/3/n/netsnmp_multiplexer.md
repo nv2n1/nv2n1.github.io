@@ -18,14 +18,14 @@ description: "multiplexer – Splits mode requests into calls to different handl
 <p> The multiplexer helper lets you split the calling chain depending on the calling mode (get vs getnext vs set). Useful if you want different routines to handle different aspects of SNMP requests, which is very common for GET vs SET type actions. </p>
 <p> Functionally: </p>
 <dl>
-<dt>1.</p>
-<dd>GET requests call the get_method</p>
-<dt>2.</p>
-<dd>GETNEXT requests call the getnext_method, or if not present, the get_method.</p>
-<dt>3.</p>
-<dd>GETBULK requests call the getbulk_method, or if not present, the getnext_method, or if even that isn&#8217;t present the get_method.</p>
-<dt>4.</p>
-<dd>SET requests call the set_method, or if not present return a SNMP_ERR_NOTWRITABLE error.</dl>
+<dt>1.</dt>
+<dd>GET requests call the get_method</dd>
+<dt>2.</dt>
+<dd>GETNEXT requests call the getnext_method, or if not present, the get_method.</dd>
+<dt>3.</dt>
+<dd>GETBULK requests call the getbulk_method, or if not present, the getnext_method, or if even that isn&#8217;t present the get_method.</dd>
+<dt>4.</dt>
+<dd>SET requests call the set_method, or if not present return a SNMP_ERR_NOTWRITABLE error.</dd></dl>
 <h2>Function Documentation</h2>
 <h3><code>netsnmp_mib_handler</code>* netsnmp_get_multiplexer_handler (<code>netsnmp_mib_handler_methods</code> * req)</h3>
 <p>returns a multiplixer handler given a <code>netsnmp_mib_handler_methods</code> structure of subhandlers. </p>

@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::has_signaling_NaN – std::numeric_limits<
 <h2>Synopsis</h2>
 <pre><code>static const bool has_signaling_NaN;
 (until C++ 11)
-
     static constexpr bool has_signaling_NaN;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::has_signaling_NaN is true for all types T capable of representing the special value &quot;Signaling Not-A-Number&quot;. This constant is meaningful for all floating-point types and is guaranteed to be true if std::numeric_limits&lt;T&gt;::is_iec559 == true. </p>

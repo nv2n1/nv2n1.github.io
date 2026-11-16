@@ -15,20 +15,20 @@ description: "getcert"
 <p> Adds a CA configuration to <i>certmonger</i>, which can subsequently be used to enroll certificates. The configuration will use the bundled <i>scep-submit</i> helper. The <i>add-scep-ca</i> command is more or less a wrapper for the <i>add-ca</i> command. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> NAME</p>
-<dd> The nickname to give to this CA configuration. This same value can later be passed in to <i>getcert</i>&#8216;s <i>request</i>, <i>resubmit</i>, and <i>start-tracking</i> commands using the <code>-c</code> flag.</p>
-<dt><code>-u</code> URL</p>
-<dd> The location of the SCEP server&#8217;s enrollment interface. This option must be specified.</p>
-<dt><code>-R</code> ca-certificate-file</p>
-<dd> The location of a PEM-formatted copy of the SCEP server&#8217;s CA&#8217;s certificate. A discovered value is supplied by the certmonger daemon for use in verifying the signature on data returned by the SCEP server, but it is not used for verifying HTTPS server certificates. This option must be specified if the URL is an <i>https</i> location.</p>
-<dt><code>-r</code> ra-certificate-file</p>
-<dd> The location of a PEM-formatted copy of the SCEP server&#8217;s RA&#8217;s certificate. A discovered value is normally supplied by the certmonger daemon, but one can be specified for troubleshooting purposes.</p>
-<dt><code>-I</code> other-certificates-file</p>
-<dd> The location of a file containing other PEM-formatted certificates which may be needed in order to properly verify signed responses sent by the SCEP server back to the client. A discovered set is normally supplied by the certmonger daemon, but can be specified for troubleshooting purposes.</p>
-<dt><code>-i</code> identifier</p>
-<dd> A CA identifier value which will passed to the server when the <i>scep-submit</i> helper is used to retrieve copies of the server&#8217;s certificates.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </p>
+<dt><code>-c</code> NAME</dt>
+<dd> The nickname to give to this CA configuration. This same value can later be passed in to <i>getcert</i>&#8216;s <i>request</i>, <i>resubmit</i>, and <i>start-tracking</i> commands using the <code>-c</code> flag.</dd>
+<dt><code>-u</code> URL</dt>
+<dd> The location of the SCEP server&#8217;s enrollment interface. This option must be specified.</dd>
+<dt><code>-R</code> ca-certificate-file</dt>
+<dd> The location of a PEM-formatted copy of the SCEP server&#8217;s CA&#8217;s certificate. A discovered value is supplied by the certmonger daemon for use in verifying the signature on data returned by the SCEP server, but it is not used for verifying HTTPS server certificates. This option must be specified if the URL is an <i>https</i> location.</dd>
+<dt><code>-r</code> ra-certificate-file</dt>
+<dd> The location of a PEM-formatted copy of the SCEP server&#8217;s RA&#8217;s certificate. A discovered value is normally supplied by the certmonger daemon, but one can be specified for troubleshooting purposes.</dd>
+<dt><code>-I</code> other-certificates-file</dt>
+<dd> The location of a file containing other PEM-formatted certificates which may be needed in order to properly verify signed responses sent by the SCEP server back to the client. A discovered set is normally supplied by the certmonger daemon, but can be specified for troubleshooting purposes.</dd>
+<dt><code>-i</code> identifier</dt>
+<dd> A CA identifier value which will passed to the server when the <i>scep-submit</i> helper is used to retrieve copies of the server&#8217;s certificates.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

@@ -15,44 +15,44 @@ description: "apt_auth.conf – Login configuration file for APT sources and pro
 <p>The format defined here is similar to the format of the ~/.netrc file used by <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) and similar programs interacting with servers. It is a simple token-based format with the following tokens being recognized; Unknown tokens will be ignored. Tokens may be separated by spaces, tabs or newlines. </p>
 <p> machine <i>[protocol://]</i><i>hostname</i>[:<i>port</i>][/<i>path</i>]</p>
 <dl>
-<dd>Entries are looked up by searching for the <i>machine</i> token matching the hostname of the URI apt needs login information for. Extending the netrc-format a portnumber can be specified. If no port is given the token matches for all ports. Similar the path is optional and only needed and useful if multiple repositories with different login information reside on the same server. A machine token with a path matches if the path in the URI starts with the path given in the token. Once a match is made, the subsequent tokens are processed, stopping when the end of file is reached or another <i>machine</i> token is encountered. </p>
+<dd>Entries are looked up by searching for the <i>machine</i> token matching the hostname of the URI apt needs login information for. Extending the netrc-format a portnumber can be specified. If no port is given the token matches for all ports. Similar the path is optional and only needed and useful if multiple repositories with different login information reside on the same server. A machine token with a path matches if the path in the URI starts with the path given in the token. Once a match is made, the subsequent tokens are processed, stopping when the end of file is reached or another <i>machine</i> token is encountered. </dd>
 <p> If protocol is not specified, the entry only matches https and tor+https.</dl>
 <p> login <i>name</i></p>
 <dl>
-<dd>The username to be used.</dl>
+<dd>The username to be used.</dd></dl>
 <p> password <i>string</i></p>
 <dl>
-<dd>The password to be used.</dl>
+<dd>The password to be used.</dd></dl>
 <h2>Example</h2>
 <p>Supplying login information for a user named apt with the password debian for the <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5) entry</p>
 <dl>
 <dd>
 <pre>deb <a rel="nofollow" href="https://example.org/debian">https://example.org/debian</a> bullseye main</pre>
-</dl>
+</dd></dl>
 <p> could be done in the entry directly:</p>
 <dl>
 <dd>
 <pre>deb <a rel="nofollow" href="https://apt:debian@example.org/debian">https://apt:debian@example.org/debian</a> bullseye main</pre>
-</dl>
+</dd></dl>
 <p> Alternatively an entry like the following in the auth.conf file could be used:</p>
 <dl>
 <dd>
 <pre>machine example.org
 login apt
 password debian</pre>
-</dl>
+</dd></dl>
 <p> Or alternatively within a single line:</p>
 <dl>
 <dd>
 <pre>machine example.org login apt password debian</pre>
-</dl>
+</dd></dl>
 <p> If you need to be more specific all of these lines will also apply to the example entry:</p>
 <dl>
 <dd>
 <pre>machine example.org/deb login apt password debian
 machine example.org/debian login apt password debian
 machine example.org/debian/ login apt password debian</pre>
-</dl>
+</dd></dl>
 <p> On the other hand neither of the following lines apply:</p>
 <dl>
 <dd>
@@ -61,17 +61,17 @@ machine example.org/deb/ login apt password debian
 machine example.org/ubuntu login apt password debian
 machine example.orga login apt password debian
 machine example.net login apt password debian</pre>
-</dl>
+</dd></dl>
 <h2>Notes</h2>
 <p>Basic support for this feature is present since version 0.7.25, but was undocumented for years. The documentation was added in version 1.5 changing also the implementation slightly. For maximum backward compatibility you should avoid multiple machine tokens with the same hostname, but if you need multiple they should all have a path specified in the machine token. </p>
 <p> Login information in auth.conf are more flexible than those in sources.list. For example, login information can be specified for parts of a repository only, or if the sources.list entry redirects elsewhere, login information for the redirect destination can be supplied.</p>
 <h2>Files</h2>
 <p>/etc/apt/auth.conf</p>
 <dl>
-<dd>Login information for APT sources and proxies in a netrc-like format. Configuration Item: Dir::Etc::netrc.</dl>
+<dd>Login information for APT sources and proxies in a netrc-like format. Configuration Item: Dir::Etc::netrc.</dd></dl>
 <p> /etc/apt/auth.conf.d/*.conf</p>
 <dl>
-<dd>Login information for APT sources and proxies in a netrc-like format. Configuration Item: Dir::Etc::netrcparts.</dl>
+<dd>Login information for APT sources and proxies in a netrc-like format. Configuration Item: Dir::Etc::netrcparts.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5)</p>
 <h2>Bugs</h2>
@@ -79,10 +79,11 @@ machine example.net login apt password debian</pre>
 <h2>Author</h2>
 <p><code>APT team</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>APT bug page</p>
+<dt> 1.</dt>
+<dd>APT bug page</dd>
 <dl>
-<dd><a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dl>
+<dd><a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dd></dl>
+</dl>

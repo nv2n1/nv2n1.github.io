@@ -20,12 +20,12 @@ description: "ax25_call, netrom_call, rose_call, tcp_call – make an AX.25, NET
 <p> For <code>tcp_call</code> the remote_addr parameter must be a dotted-quad IP address or a hostname and the remote_port must be a service name (see <a href="/docs/linux/man/5-services/">services</a>(5)) or a port number.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Enables zlib based compression on the incoming connection. Compression algorithm is the same as in LinuxNode (see <a href="/docs/linux/man/8-node/">node</a>(8)).</p>
-<dt><code>-i paclen</code></p>
-<dd>The maximum frame length to be used on the incoming connection. The default is 256 for ax25_call and rose_call, 236 for netrom_call and 1024 for tcp_call.</p>
-<dt><code>-o paclen</code></p>
-<dd>The maximum frame length to be used on the outgoing connection. The default is 256 for ax25_call and rose_call, 236 for netrom_call and 1024 for tcp_call.</dl>
+<dt><code>-c</code></dt>
+<dd>Enables zlib based compression on the incoming connection. Compression algorithm is the same as in LinuxNode (see <a href="/docs/linux/man/8-node/">node</a>(8)).</dd>
+<dt><code>-i paclen</code></dt>
+<dd>The maximum frame length to be used on the incoming connection. The default is 256 for ax25_call and rose_call, 236 for netrom_call and 1024 for tcp_call.</dd>
+<dt><code>-o paclen</code></dt>
+<dd>The maximum frame length to be used on the outgoing connection. The default is 256 for ax25_call and rose_call, 236 for netrom_call and 1024 for tcp_call.</dd></dl>
 <h2>Files</h2>
 <p>/etc/ax25/axports<br />
  /etc/ax25/nrports<br />

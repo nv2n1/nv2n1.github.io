@@ -19,7 +19,7 @@ description: "cheevr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CHEEVR computes selected eigenvalues and, optionally, eigenvectors
  of a complex Hermitian matrix A.  Eigenvalues and eigenvectors can
@@ -69,11 +69,11 @@ description: "cheevr.f –"
  which do not handle NaNs and infinities in the ieee standard default
  manner.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBZ</i> </p>
+</dt><dd> <i>JOBZ</i> </dd>
 <pre>
           JOBZ is CHARACTER*1
           = 'N':  Compute eigenvalues only;
@@ -269,18 +269,18 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Inderjit Dhillon, IBM Almaden, USA </p>
+</dt><dd> Inderjit Dhillon, IBM Almaden, USA </dd>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Ken Stanley, Computer Science Division, University of California at Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Jason Riedy, Computer Science Division, University of California at Berkeley, USA&nbsp;<wbr> </p>
@@ -289,3 +289,4 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

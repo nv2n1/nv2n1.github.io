@@ -11,10 +11,8 @@ std::experimental::erase_if(std::forward_list) - std::experimental::erase_if(std
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / forward_list&gt;
-
     template &lt;class T, class Alloc, class Pred&gt;
     (library fundamentals TS v2)
-
         void erase_if(std::forward_list&lt;T, Alloc&gt; &amp;c, Pred pred);
 Erases all elements that satisfy the predicate pred from the container.Equivalent to c.remove_if(pred);
 </code></pre>

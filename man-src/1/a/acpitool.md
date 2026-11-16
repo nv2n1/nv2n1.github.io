@@ -20,53 +20,53 @@ description: "acpitool – a Linux ACPI client, allowing you to query or set ACP
 <p> If you have an <code>IBM Thinkpad</code> laptop, it can once again set the LCD brightness level, and also eject the ultrabay device. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a, &#8211;ac_adapter </code></p>
-<dd> Show AC adapter presence</p>
-<dt><code>-A </code></p>
-<dd> Show supported Asus ACPI extensions (LCD brightness level, video out routing DSDT/acpi4asus info)</p>
-<dt><code>-b</code></p>
-<dd> Show battery status information, available batteries only.</p>
-<dt><code>-B, &#8211;battery</code></p>
-<dd> Show detailed battery status information, for all battery entries found.</p>
-<dt><code>-c, &#8211;cpu</code></p>
-<dd> Show CPU information (type, speed, PM capabilities, throttling states, c-state usage, frequency scaling).</p>
-<dt><code>-e</code></p>
-<dd> Show just about everything : more info on the batteries, ACPI version, kernel version, CPU, . . .</p>
-<dt><code>-f, &#8211;fan</code></p>
-<dd> Show fan status (shows fan info specific to Toshiba or IBM Thinkpad, if applicable).</p>
-<dt><code>-F x</code></p>
-<dd> Force the fan on (x=1) or switch back to auto mode (x=0). Works only on Toshiba laptops. The fan is switched off ONLY if it was forced on first, not if it was switched on automatically. Requires write access to <i>/proc/acpi/toshiba/fan</i></p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show help text.</p>
-<dt><code>-j</code></p>
-<dd> Eject Thinkpad ultrabay device. Requires write acces to <i>/proc/acpi/ibm/bay</i></p>
-<dt><code>-l x</code></p>
+<dt><code>-a, &#8211;ac_adapter </code></dt>
+<dd> Show AC adapter presence</dd>
+<dt><code>-A </code></dt>
+<dd> Show supported Asus ACPI extensions (LCD brightness level, video out routing DSDT/acpi4asus info)</dd>
+<dt><code>-b</code></dt>
+<dd> Show battery status information, available batteries only.</dd>
+<dt><code>-B, &#8211;battery</code></dt>
+<dd> Show detailed battery status information, for all battery entries found.</dd>
+<dt><code>-c, &#8211;cpu</code></dt>
+<dd> Show CPU information (type, speed, PM capabilities, throttling states, c-state usage, frequency scaling).</dd>
+<dt><code>-e</code></dt>
+<dd> Show just about everything : more info on the batteries, ACPI version, kernel version, CPU, . . .</dd>
+<dt><code>-f, &#8211;fan</code></dt>
+<dd> Show fan status (shows fan info specific to Toshiba or IBM Thinkpad, if applicable).</dd>
+<dt><code>-F x</code></dt>
+<dd> Force the fan on (x=1) or switch back to auto mode (x=0). Works only on Toshiba laptops. The fan is switched off ONLY if it was forced on first, not if it was switched on automatically. Requires write access to <i>/proc/acpi/toshiba/fan</i></dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show help text.</dd>
+<dt><code>-j</code></dt>
+<dd> Eject Thinkpad ultrabay device. Requires write acces to <i>/proc/acpi/ibm/bay</i></dd>
+<dt><code>-l x</code></dt>
 <dd> Set LCD brightness level to x, where x is in the range 0..7. Works only on Toshiba and IBM Thinkpad laptops. Requires write access to <i>/proc/acpi/tochiba/lcd</i> or <i>/proc/acpi/ibm/brightness</i><br />
- Illegal values for x will result in the value being set to either 0 or 7.</p>
-<dt><code>-m x</code></p>
-<dd> Switch the mail led on (x=1) or off (x=0). Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/mled</i> </p>
-<dt><code>-n x</code></p>
-<dd> Switch the wireless led on (x=1) or off (x=0). Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/wled</i> </p>
-<dt><code>-o x</code></p>
-<dd> Switch the LCD panel on (x=1) or off (x=0). Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/lcd</i> </p>
-<dt><code>-s, &#8211;suspend to memory</code></p>
-<dd> Put the machine into sleep state S3, if possible. Requires write access to <i>/proc/acpi/sleep </i> (kernel 2.4.x) or <i>/sys/power/state</i> (kernel 2.6.x)</p>
-<dt><code>-S, &#8211;suspend to disk ?</code></p>
-<dd> Put the machine into sleep state S4, if possible. Requires write access to <i>/proc/acpi/sleep </i> (kernel 2.4.x) or <i>/sys/power/state</i> (kernel 2.6.x)</p>
-<dt><code>-t, &#8211;thermal</code></p>
-<dd> Show thermal zone(s) information, including trip_points.</p>
-<dt><code>-T, &#8211;Toshiba</code></p>
-<dd> Show supported Toshiba ACPI extensions, currently being LCD brightness level, video out routing (what display is the video chip sending to) and fan status (on/off, forced or not).</p>
-<dt><code>-v</code></p>
-<dd> Show more verbose output when something is not found. Makes sense only when used together with other options.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show acpitool version number and release date, then exit.</p>
-<dt><code>-w</code></p>
-<dd> Show the wakeup capable devices. (Available since ACPI 20040715, check your version).</p>
-<dt><code>-W x</code></p>
-<dd> Enable/disable wakeup capable device x. Run &#8216;acpitool -w&#8217; to see valid numbers for x. Requires write access to <i>/proc/acpi/wakeup</i></p>
-<dt><code>-z x</code></p>
-<dd> Set Asus LCD brightness level to x, where x is 0..15. Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/brn</i></dl>
+ Illegal values for x will result in the value being set to either 0 or 7.</dd>
+<dt><code>-m x</code></dt>
+<dd> Switch the mail led on (x=1) or off (x=0). Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/mled</i> </dd>
+<dt><code>-n x</code></dt>
+<dd> Switch the wireless led on (x=1) or off (x=0). Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/wled</i> </dd>
+<dt><code>-o x</code></dt>
+<dd> Switch the LCD panel on (x=1) or off (x=0). Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/lcd</i> </dd>
+<dt><code>-s, &#8211;suspend to memory</code></dt>
+<dd> Put the machine into sleep state S3, if possible. Requires write access to <i>/proc/acpi/sleep </i> (kernel 2.4.x) or <i>/sys/power/state</i> (kernel 2.6.x)</dd>
+<dt><code>-S, &#8211;suspend to disk ?</code></dt>
+<dd> Put the machine into sleep state S4, if possible. Requires write access to <i>/proc/acpi/sleep </i> (kernel 2.4.x) or <i>/sys/power/state</i> (kernel 2.6.x)</dd>
+<dt><code>-t, &#8211;thermal</code></dt>
+<dd> Show thermal zone(s) information, including trip_points.</dd>
+<dt><code>-T, &#8211;Toshiba</code></dt>
+<dd> Show supported Toshiba ACPI extensions, currently being LCD brightness level, video out routing (what display is the video chip sending to) and fan status (on/off, forced or not).</dd>
+<dt><code>-v</code></dt>
+<dd> Show more verbose output when something is not found. Makes sense only when used together with other options.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show acpitool version number and release date, then exit.</dd>
+<dt><code>-w</code></dt>
+<dd> Show the wakeup capable devices. (Available since ACPI 20040715, check your version).</dd>
+<dt><code>-W x</code></dt>
+<dd> Enable/disable wakeup capable device x. Run &#8216;acpitool -w&#8217; to see valid numbers for x. Requires write access to <i>/proc/acpi/wakeup</i></dd>
+<dt><code>-z x</code></dt>
+<dd> Set Asus LCD brightness level to x, where x is 0..15. Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/brn</i></dd></dl>
 <h2>REMARKS</h2>
 <p> This program absolutely requires a Linux kernel with ACPI support enabled. This program will not work without it. </p>
 <p> IBM Thinkpad support is part of the Linux kernel since kernel 2.6.10. </p>

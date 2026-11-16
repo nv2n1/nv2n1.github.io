@@ -20,14 +20,14 @@ description: "llvm-cxxmap – Mangled name remapping tool"
 <p> where <code>&lt;symbol-1&gt;</code> is a symbol from <i>symbol-file-1</i> and <code>&lt;symbol-2&gt;</code> is a symbol from <i>symbol-file-2</i>. Mappings for which the two symbols are identical are omitted.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-remapping-file=file, -r=file</code></p>
-<dd> Specify a file containing a list of equivalence rules that should be used to determine whether two symbols are equivalent. Required. See <i>REMAPPING FILE</i>.</p>
-<dt><code>-output=file, -o=file</code></p>
-<dd> Specify a file to write the list of matched names to. If unspecified, the list will be written to stdout.</p>
-<dt><code>-Wambiguous</code></p>
-<dd> Produce a warning if there are multiple equivalent (but distinct) symbols in <i>symbol-file-2</i>.</p>
-<dt><code>-Wincomplete</code></p>
-<dd> Produce a warning if <i>symbol-file-1</i> contains a symbol for which there is no equivalent symbol in <i>symbol-file-2</i>.</dl>
+<dt><code>-remapping-file=file, -r=file</code></dt>
+<dd> Specify a file containing a list of equivalence rules that should be used to determine whether two symbols are equivalent. Required. See <i>REMAPPING FILE</i>.</dd>
+<dt><code>-output=file, -o=file</code></dt>
+<dd> Specify a file to write the list of matched names to. If unspecified, the list will be written to stdout.</dd>
+<dt><code>-Wambiguous</code></dt>
+<dd> Produce a warning if there are multiple equivalent (but distinct) symbols in <i>symbol-file-2</i>.</dd>
+<dt><code>-Wincomplete</code></dt>
+<dd> Produce a warning if <i>symbol-file-1</i> contains a symbol for which there is no equivalent symbol in <i>symbol-file-2</i>.</dd></dl>
 <h2>REMAPPING FILE</h2>
 <p> The remapping file is a text file containing lines of the form </p>
 <pre>

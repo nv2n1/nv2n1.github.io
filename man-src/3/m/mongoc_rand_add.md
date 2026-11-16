@@ -17,13 +17,13 @@ mongoc_rand_add(const void *buf,
 <p>Mixes num bytes of data into the mongoc random number generator. Entropy specifies a lower bound estimate of the randomness contained in buf. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>buf</code></p>
-<dd>A buffer.</dl>
+<dt><code>buf</code></dt>
+<dd>A buffer.</dd></dl>
 <dl COMPACT>
-<dt><code>num</code></p>
-<dd>An int of number of bytes in buf.</dl>
+<dt><code>num</code></dt>
+<dd>An int of number of bytes in buf.</dd></dl>
 <dl COMPACT>
-<dt><code>entropy</code></p>
-<dd>A double of randomness estimate in buf.</dl>
+<dt><code>entropy</code></dt>
+<dd>A double of randomness estimate in buf.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

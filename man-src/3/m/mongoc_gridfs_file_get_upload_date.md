@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_get_upload_date() – Fetches the specified upl
 mongoc_gridfs_file_get_upload_date (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the specified upload date of the gridfs file in milliseconds since the UNIX epoch. </p>
 <h2>Returns</h2>

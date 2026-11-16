@@ -78,7 +78,7 @@ description: "Object — The Object widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNdestroyCallback</code></p>
-<dd>Specifies a list of callbacks that is called when the gadget is destroyed.</dl>
+<dt><code>XmNdestroyCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when the gadget is destroyed.</dd></dl>
 <h3>Translations</h3>
 <p>There are no translation for Object.</p>

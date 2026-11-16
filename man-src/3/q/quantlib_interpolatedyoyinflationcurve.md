@@ -39,7 +39,7 @@ description: "QuantLib::InterpolatedYoYInflationCurve – Inflation term structu
 <p>Inflation term structure based on interpolated year-on-year rates. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The provided rates are not YY inflation-swap quotes.</dl>
+<dd>The provided rates are not YY inflation-swap quotes.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>InterpolatedYoYInflationCurve</code> (const <code>Date</code> &amp; referenceDate, const <code>Calendar</code> &amp; calendar, const <code>DayCounter</code> &amp; dayCounter, const <code>Period</code> &amp; lag, <code>Frequency</code> frequency, Rate baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; yTS, const Interpolator &amp; interpolator = Interpolator()) [protected]</h3>
 <p>Protected version for use when descendents don&#8217;t want to (or can&#8217;t) provide the points for interpolation on construction.</p>

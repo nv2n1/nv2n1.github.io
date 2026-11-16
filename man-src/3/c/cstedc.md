@@ -19,7 +19,7 @@ description: "cstedc.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CSTEDC computes all eigenvalues and, optionally, eigenvectors of a
  symmetric tridiagonal matrix using the divide and conquer method.
@@ -33,11 +33,11 @@ description: "cstedc.f –"
  It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.  See SLAED3 for details.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>COMPZ</i> </p>
+</dt><dd> <i>COMPZ</i> </dd>
 <pre>
           COMPZ is CHARACTER*1
           = 'N':  Compute eigenvalues only.
@@ -160,18 +160,18 @@ Z is COMPLEX array, dimension(LDZ, N) On entry, if COMPZ = 'V', then Z contains 
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 212 of file cstedc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

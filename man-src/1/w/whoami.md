@@ -14,10 +14,10 @@ description: "whoami – print effective userid"
 <h2>DESCRIPTION</h2>
 <p> Print the user name associated with the current effective user ID. Same as id <code>-un</code>.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Richard Mlynarik.</p>
 <h2>REPORTING BUGS</h2>

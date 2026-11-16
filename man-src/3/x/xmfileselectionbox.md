@@ -14,33 +14,33 @@ description: "XmFileSelectionBox — The FileSelectionBox widget class"
 <p>FileSelectionBox traverses through directories, views the files and subdirectories in them, and then selects files. </p>
 <p> A FileSelectionBox has five main areas:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>A text input field for displaying and editing a directory mask used to select the files to be displayed</p>
-<dt> &bull;</p>
-<dd>An optional text input field for displaying and editing a filter mask used to select the files to be displayed.</p>
-<dt> &bull;</p>
-<dd>A scrollable list of filenames</p>
-<dt> &bull;</p>
-<dd>A scrollable list of subdirectories</p>
-<dt> &bull;</p>
-<dd>A text input field for displaying and editing a filename</p>
-<dt> &bull;</p>
-<dd>A group of PushButtons, labeled <code>OK</code>, <code>Filter</code>, <code>Cancel</code>, and <code>Help</code>. The layout direction of the buttons depends on the <code>XmNlayoutDirection</code> resource.</dl>
+<dt> &bull;</dt>
+<dd>A text input field for displaying and editing a directory mask used to select the files to be displayed</dd>
+<dt> &bull;</dt>
+<dd>An optional text input field for displaying and editing a filter mask used to select the files to be displayed.</dd>
+<dt> &bull;</dt>
+<dd>A scrollable list of filenames</dd>
+<dt> &bull;</dt>
+<dd>A scrollable list of subdirectories</dd>
+<dt> &bull;</dt>
+<dd>A text input field for displaying and editing a filename</dd>
+<dt> &bull;</dt>
+<dd>A group of PushButtons, labeled <code>OK</code>, <code>Filter</code>, <code>Cancel</code>, and <code>Help</code>. The layout direction of the buttons depends on the <code>XmNlayoutDirection</code> resource.</dd></dl>
 <p> ####Additional children may be added to the FileSelectionBox after creation. FileSelectionBox inherits the layout functionality provided by SelectionBox for any additional children. To remove the list of filenames, the list of subdirectories, or both from the FileSelectionBox after creation, unmanage the appropriate widgets and their labels. The list and label widgets are obtained through a call to the <code>XmFileSelectionBoxGetChild</code> function. To remove either the directory list or the file list, unmanage the parent of the appropriate list widget and unmanage the corresponding label. </p>
 <p> The user can specify resources in a resource file for the automatically created widgets and gadgets of FileSelectionBox. The following list identifies the names of these widgets (or gadgets) and the associated FileSelectionBox areas:</p>
 <dl COMPACT>
-<dt>FilterLabel</p>
-<dd><code>FilterText</code></p>
-<dt>Filter Text</p>
-<dd><code>TextField</code></p>
-<dt>Directory List</p>
-<dd><code>DirList</code></p>
-<dt>Directory List Label</p>
-<dd><code>Dir</code></p>
-<dt>DirL</p>
-<dd><code>Label</code></p>
-<dt>DirText</p>
-<dd><code>TextField</code></dl>
+<dt>FilterLabel</dt>
+<dd><code>FilterText</code></dd>
+<dt>Filter Text</dt>
+<dd><code>TextField</code></dd>
+<dt>Directory List</dt>
+<dd><code>DirList</code></dd>
+<dt>Directory List Label</dt>
+<dd><code>Dir</code></dd>
+<dt>DirL</dt>
+<dd><code>Label</code></dd>
+<dt>DirText</dt>
+<dd><code>TextField</code></dd></dl>
 <p> The directory mask is a string specifying the base directory to be examined and a search pattern. Ordinarily, the directory list displays the subdirectories of the base directory, as well as the base directory itself and its parent directory. The file list ordinarily displays all files and/or subdirectories in the base directory that match the search pattern. </p>
 <p> Optionally, the search pattern mask and the base directory can be displayed in two separate text fields. This option is controlled by the <code>XmNpathMode</code> resource. Using this alternate display does not change the meaning of resources that control the content of these fields: <code>XmNdirectory</code>, <code>XmNdirMask</code>, <code>XmNpattern</code>. </p>
 <p> A procedure specified by the <code>XmNqualifySearchDataProc</code> resource extracts the base directory and search pattern from the directory mask. If the directory specification is empty, the current working directory is used. If the search pattern is empty, a pattern that matches all files is used. </p>
@@ -49,52 +49,52 @@ description: "XmFileSelectionBox — The FileSelectionBox widget class"
 <p> The user can select a file by scrolling through the list of filenames and selecting the desired file or by entering the filename directly into the text edit area. Selecting a file from the list causes that filename to appear in the file selection text edit area. </p>
 <p> The user may select a new file as many times as desired. The application is not notified until the user takes one of the following actions:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>Selects the <code>OK</code> PushButton</p>
-<dt> &bull;</p>
-<dd>Presses <code>KActivate</code> while the selection text edit area has the keyboard focus</p>
-<dt> &bull;</p>
-<dd>Double clicks or presses <code>KActivate</code> on an item in the file list</dl>
+<dt> &bull;</dt>
+<dd>Selects the <code>OK</code> PushButton</dd>
+<dt> &bull;</dt>
+<dd>Presses <code>KActivate</code> while the selection text edit area has the keyboard focus</dd>
+<dt> &bull;</dt>
+<dd>Double clicks or presses <code>KActivate</code> on an item in the file list</dd></dl>
 <p> FileSelectionBox initiates a directory and file search when any of the following occurs:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>The FileSelectionBox is initialized</p>
-<dt> &bull;</p>
-<dd>The function <code>XtSetValues</code> is used to change <code>XmNdirMask</code>, <code>XmNdirectory</code>, <code>XmNpattern</code>, or <code>XmNfileTypeMask</code></p>
-<dt> &bull;</p>
-<dd>The user activates the <code>Filter</code> PushButton</p>
-<dt> &bull;</p>
-<dd>The user double clicks or presses <code>KActivate</code> on an item in the directory list</p>
-<dt> &bull;</p>
-<dd>The application calls <code>XmFileSelectionDoSearch</code></p>
-<dt> &bull;</p>
-<dd>The user presses <code>KActivate</code> while the directory mask text edit area has the keyboard focus</dl>
+<dt> &bull;</dt>
+<dd>The FileSelectionBox is initialized</dd>
+<dt> &bull;</dt>
+<dd>The function <code>XtSetValues</code> is used to change <code>XmNdirMask</code>, <code>XmNdirectory</code>, <code>XmNpattern</code>, or <code>XmNfileTypeMask</code></dd>
+<dt> &bull;</dt>
+<dd>The user activates the <code>Filter</code> PushButton</dd>
+<dt> &bull;</dt>
+<dd>The user double clicks or presses <code>KActivate</code> on an item in the directory list</dd>
+<dt> &bull;</dt>
+<dd>The application calls <code>XmFileSelectionDoSearch</code></dd>
+<dt> &bull;</dt>
+<dd>The user presses <code>KActivate</code> while the directory mask text edit area has the keyboard focus</dd></dl>
 <p> When a file search is initiated, the FileSelectionBox takes the following actions:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>Constructs an <code>XmFileSelectionBoxCallbackStruct</code> structure with values appropriate for the action that initiated the search</p>
-<dt> &bull;</p>
-<dd>Calls the <code>XmNqualifySearchDataProc</code> with the callback structure as the data input argument</p>
-<dt> &bull;</p>
-<dd>Sets <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code> to False</p>
-<dt> &bull;</p>
-<dd>Calls the <code>XmNdirSearchProc</code> with the qualified data returned by the <code>XmNqualifySearchDataProc</code></dl>
+<dt> &bull;</dt>
+<dd>Constructs an <code>XmFileSelectionBoxCallbackStruct</code> structure with values appropriate for the action that initiated the search</dd>
+<dt> &bull;</dt>
+<dd>Calls the <code>XmNqualifySearchDataProc</code> with the callback structure as the data input argument</dd>
+<dt> &bull;</dt>
+<dd>Sets <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code> to False</dd>
+<dt> &bull;</dt>
+<dd>Calls the <code>XmNdirSearchProc</code> with the qualified data returned by the <code>XmNqualifySearchDataProc</code></dd></dl>
 <p> If <code>XmNdirectoryValid</code> is True, the FileSelectionBox takes the following additional actions:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>Sets <code>XmNlistUpdated</code> to False</p>
-<dt> &bull;</p>
-<dd>Calls the <code>XmNfileSearchProc</code> with the qualified data returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</p>
-<dt> &bull;</p>
-<dd>If <code>XmNlistUpdated</code> is True and the file list is empty, displays the <code>XmNnoMatchString</code> in the file list and clears the selection text and <code>XmNdirSpec</code></p>
-<dt> &bull;</p>
-<dd>If <code>XmNlistUpdated</code> is True and the file list is not empty, sets the selection text and <code>XmNdirSpec</code> to the qualified <i>dir</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</p>
-<dt> &bull;</p>
-<dd>Sets the directory mask text and <code>XmNdirMask</code> to the qualified <i>mask</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</p>
-<dt> &bull;</p>
-<dd>Sets <code>XmNdirectory</code> to the qualified <i>dir</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</p>
-<dt> &bull;</p>
-<dd>Sets <code>XmNpattern</code> to the qualified <i>pattern</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</dl>
+<dt> &bull;</dt>
+<dd>Sets <code>XmNlistUpdated</code> to False</dd>
+<dt> &bull;</dt>
+<dd>Calls the <code>XmNfileSearchProc</code> with the qualified data returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</dd>
+<dt> &bull;</dt>
+<dd>If <code>XmNlistUpdated</code> is True and the file list is empty, displays the <code>XmNnoMatchString</code> in the file list and clears the selection text and <code>XmNdirSpec</code></dd>
+<dt> &bull;</dt>
+<dd>If <code>XmNlistUpdated</code> is True and the file list is not empty, sets the selection text and <code>XmNdirSpec</code> to the qualified <i>dir</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</dd>
+<dt> &bull;</dt>
+<dd>Sets the directory mask text and <code>XmNdirMask</code> to the qualified <i>mask</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</dd>
+<dt> &bull;</dt>
+<dd>Sets <code>XmNdirectory</code> to the qualified <i>dir</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</dd>
+<dt> &bull;</dt>
+<dd>Sets <code>XmNpattern</code> to the qualified <i>pattern</i> returned by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>)</dd></dl>
 <p> FileSelectionBox uses the <code>XmQTactivatable</code> trait.</p>
 <h3>Data Transfer Behavior</h3>
 <p>Child widgets of a FileSelectionBox support the data transfer operations and targets associated with their widget classes. </p>
@@ -966,118 +966,118 @@ description: "XmFileSelectionBox — The FileSelectionBox widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNdirectory</code></p>
-<dd>Specifies the base directory used in combination with <code>XmNpattern</code> in determining the files and directories to be displayed. The default value is determined by the <code>XmNqualifySearchDataProc</code> and depends on the initial values of <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code>. If the default is NULL or empty, the current working directory is used.</p>
-<dt><code>XmNdirectoryValid</code></p>
-<dd>Specifies an attribute that is set only by the directory search procedure. The value is set to True if the directory passed to the directory search procedure can actually be searched. If this value is False the file search procedure is not called, and <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code> are not changed.</p>
-<dt><code>XmNdirListItems</code></p>
-<dd>Specifies the items in the directory list. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</p>
-<dt><code>XmNdirListItemCount</code></p>
-<dd>Specifies the number of items in the directory list. The value must not be negative.</p>
-<dt><code>XmNdirListLabelString</code></p>
-<dd>Specifies the label string of the directory list. The default for this resource depends on the locale. In the C locale the default is <code>Directories</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNdirMask</code></p>
-<dd>Specifies the directory mask used in determining the files and directories to be displayed. The default value is determined by the <code>XmNqualifySearchDataProc</code> and depends on the initial values of <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code>.</p>
-<dt><code>XmNdirSearchProc</code></p>
-<dd>Specifies a directory search procedure to replace the default directory search procedure. FileSelectionBox&#8217;s default directory search procedure fulfills the needs of most applications. Because it is impossible to cover the requirements of all applications, you can replace the default search procedure.</p>
-<dd>The directory search procedure is called with two arguments: the FileSelectionBox widget and a pointer to an <code>XmFileSelectionBoxCallbackStruct</code> structure. The callback structure is generated by the <code>XmNqualifySearchDataProc</code> and contains all information required to conduct a directory search, including the directory mask and a qualified base directory and search pattern. Once called, it is up to the search routine to generate a new list of directories and update the FileSelectionBox widget by using <code>XtSetValues</code>.</p>
-<dd>The search procedure must set <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code>. If it generates a new list of directories, it must also set <code>XmNdirListItems</code> and <code>XmNdirListItemCount</code>.</p>
-<dd>If the search procedure cannot search the specified directory, it must warn the user and set <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code> to False, unless it prompts and subsequently obtains a valid directory. If the directory is valid but is the same as the current <code>XmNdirectory</code>, the search procedure must set <code>XmNdirectoryValid</code> to True, but it may elect not to generate a new list of directories. In this case, it must set <code>XmNlistUpdated</code> to False.</p>
-<dd>If the search procedure generates a new list of directories, it must set <code>XmNdirListItems</code> to the new list of directories and <code>XmNdirListItemCount</code> to the number of items in the list. If there are no directories, it sets <code>XmNdirListItems</code> to NULL and <code>XmNdirListItemCount</code> to 0 (zero). In either case, it must set <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code> to True.</p>
-<dd>The search procedure ordinarily should not change the callback structure. But if the original directory is not valid, the search procedure may obtain a new directory from the user. In this case, it should set the <i>dir</i> member of the callback structure to the new directory, call the <code>XmNqualifySearchDataProc</code> with the callback struct as the input argument, and copy the qualified data returned by the <code>XmNqualifySearchDataProc</code> into the callback struct.</p>
-<dt><code>XmNdirSpec</code></p>
-<dd>Specifies the full file path specification. This is the <code>XmNtextString</code> resource in SelectionBox, renamed for FileSelectionBox. The default value is determined by the FileSelectionBox after conducting the initial directory and file search.</p>
-<dt><code>XmNdirTextLabelString</code></p>
-<dd>Uses the specified <code>XmString</code> as the label above the TextField directory. The resource takes effect when the <code>XmNpathMode</code> resource has a value of <code>XmPATH_MODE_RELATIVE</code>. It is ignored when the <code>XmNpathMode</code> resource has a value of <code>XmPATH_MODE_FULL</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNfileFilterStyle</code></p>
-<dd>Specifies whether or not the &quot;hidden&quot; files (those whose names begin with . (period) in POSIX systems) will be listed in the file and directory scrolling lists (where the default directory search procedure is used). The possible values are:</p>
+<dt><code>XmNdirectory</code></dt>
+<dd>Specifies the base directory used in combination with <code>XmNpattern</code> in determining the files and directories to be displayed. The default value is determined by the <code>XmNqualifySearchDataProc</code> and depends on the initial values of <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code>. If the default is NULL or empty, the current working directory is used.</dd>
+<dt><code>XmNdirectoryValid</code></dt>
+<dd>Specifies an attribute that is set only by the directory search procedure. The value is set to True if the directory passed to the directory search procedure can actually be searched. If this value is False the file search procedure is not called, and <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code> are not changed.</dd>
+<dt><code>XmNdirListItems</code></dt>
+<dd>Specifies the items in the directory list. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</dd>
+<dt><code>XmNdirListItemCount</code></dt>
+<dd>Specifies the number of items in the directory list. The value must not be negative.</dd>
+<dt><code>XmNdirListLabelString</code></dt>
+<dd>Specifies the label string of the directory list. The default for this resource depends on the locale. In the C locale the default is <code>Directories</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNdirMask</code></dt>
+<dd>Specifies the directory mask used in determining the files and directories to be displayed. The default value is determined by the <code>XmNqualifySearchDataProc</code> and depends on the initial values of <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code>.</dd>
+<dt><code>XmNdirSearchProc</code></dt>
+<dd>Specifies a directory search procedure to replace the default directory search procedure. FileSelectionBox&#8217;s default directory search procedure fulfills the needs of most applications. Because it is impossible to cover the requirements of all applications, you can replace the default search procedure.</dd>
+<dd>The directory search procedure is called with two arguments: the FileSelectionBox widget and a pointer to an <code>XmFileSelectionBoxCallbackStruct</code> structure. The callback structure is generated by the <code>XmNqualifySearchDataProc</code> and contains all information required to conduct a directory search, including the directory mask and a qualified base directory and search pattern. Once called, it is up to the search routine to generate a new list of directories and update the FileSelectionBox widget by using <code>XtSetValues</code>.</dd>
+<dd>The search procedure must set <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code>. If it generates a new list of directories, it must also set <code>XmNdirListItems</code> and <code>XmNdirListItemCount</code>.</dd>
+<dd>If the search procedure cannot search the specified directory, it must warn the user and set <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code> to False, unless it prompts and subsequently obtains a valid directory. If the directory is valid but is the same as the current <code>XmNdirectory</code>, the search procedure must set <code>XmNdirectoryValid</code> to True, but it may elect not to generate a new list of directories. In this case, it must set <code>XmNlistUpdated</code> to False.</dd>
+<dd>If the search procedure generates a new list of directories, it must set <code>XmNdirListItems</code> to the new list of directories and <code>XmNdirListItemCount</code> to the number of items in the list. If there are no directories, it sets <code>XmNdirListItems</code> to NULL and <code>XmNdirListItemCount</code> to 0 (zero). In either case, it must set <code>XmNdirectoryValid</code> and <code>XmNlistUpdated</code> to True.</dd>
+<dd>The search procedure ordinarily should not change the callback structure. But if the original directory is not valid, the search procedure may obtain a new directory from the user. In this case, it should set the <i>dir</i> member of the callback structure to the new directory, call the <code>XmNqualifySearchDataProc</code> with the callback struct as the input argument, and copy the qualified data returned by the <code>XmNqualifySearchDataProc</code> into the callback struct.</dd>
+<dt><code>XmNdirSpec</code></dt>
+<dd>Specifies the full file path specification. This is the <code>XmNtextString</code> resource in SelectionBox, renamed for FileSelectionBox. The default value is determined by the FileSelectionBox after conducting the initial directory and file search.</dd>
+<dt><code>XmNdirTextLabelString</code></dt>
+<dd>Uses the specified <code>XmString</code> as the label above the TextField directory. The resource takes effect when the <code>XmNpathMode</code> resource has a value of <code>XmPATH_MODE_RELATIVE</code>. It is ignored when the <code>XmNpathMode</code> resource has a value of <code>XmPATH_MODE_FULL</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNfileFilterStyle</code></dt>
+<dd>Specifies whether or not the &quot;hidden&quot; files (those whose names begin with . (period) in POSIX systems) will be listed in the file and directory scrolling lists (where the default directory search procedure is used). The possible values are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmFILTER_NONE</code></p>
-<dd>Does not filter hidden files.</p>
-<dt><code>XmFILTER_HIDDEN_FILES</code></p>
-<dd>Restricts the list of possible file names, such as those beginning with . (period).</dl>
+</dd><dl COMPACT>
+<dt><code>XmFILTER_NONE</code></dt>
+<dd>Does not filter hidden files.</dd>
+<dt><code>XmFILTER_HIDDEN_FILES</code></dt>
+<dd>Restricts the list of possible file names, such as those beginning with . (period).</dd></dl>
 </dl>
-<dt><code>XmNfileListItems</code></p>
-<dd>Specifies the items in the file list. This is the <code>XmNlistItems</code> resource in SelectionBox, renamed for FileSelectionBox. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</p>
-<dt><code>XmNfileListItemCount</code></p>
-<dd>Specifies the number of items in the file list. This is the <code>XmNlistItemCount</code> resource in SelectionBox, renamed for FileSelectionBox. The value must not be negative.</p>
-<dt><code>XmNfileListLabelString</code></p>
-<dd>Specifies the label string of the file list. This is the <code>XmNlistLabelString</code> resource in SelectionBox, renamed for FileSelectionBox. The default for this resource depends on the locale. In the C locale the default is <code>Files</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNfileSearchProc</code></p>
-<dd>Specifies a file search procedure to replace the default file search procedure. FileSelectionBox&#8217;s default file search procedure fulfills the needs of most applications. Because it is impossible to cover the requirements of all applications, you can replace the default search procedure.</p>
-<dd>The file search procedure is called with two arguments: the FileSelectionBox widget and a pointer to an <code>XmFileSelectionBoxCallbackStruct</code> structure. The callback structure is generated by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>). It contains all information required to conduct a file search, including the directory mask and a qualified base directory and search pattern. Once this procedure is called, it is up to the search routine to generate a new list of files and update the FileSelectionBox widget by using <code>XtSetValues</code>.</p>
-<dd>The search procedure must set <code>XmNlistUpdated</code>. If it generates a new list of files, it must also set <code>XmNfileListItems</code> and <code>XmNfileListItemCount</code>.</p>
-<dd>It is recommended that the search procedure always generate a new list of files. If the <i>mask</i> member of the callback structure is the same as the <i>mask</i> member of the callback struct in the preceding call to the search procedure, the procedure may elect not to generate a new list of files. In this case it must set <code>XmNlistUpdated</code> to False.</p>
-<dd>If the search procedure generates a new list of files, it must set <code>XmNfileListItems</code> to the new list of files and <code>XmNfileListItemCount</code> to the number of items in the list. If there are no files, it sets <code>XmNfileListItems</code> to NULL and <code>XmNfileListItemCount</code> to 0 (zero). In either case it must set <code>XmNlistUpdated</code> to True.</p>
-<dd>In constructing the list of files, the search procedure should include only files of the types specified by the widget&#8217;s <code>XmNfileTypeMask</code>.</p>
-<dd>Setting <code>XmNdirSpec</code> is optional, but recommended. Set this attribute to the full file specification of the directory searched. The directory specification is displayed below the directory and file lists.</p>
-<dt><code>XmNfileTypeMask</code></p>
-<dd>Specifies the type of files listed in the file list. The possible values are</p>
+<dt><code>XmNfileListItems</code></dt>
+<dd>Specifies the items in the file list. This is the <code>XmNlistItems</code> resource in SelectionBox, renamed for FileSelectionBox. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</dd>
+<dt><code>XmNfileListItemCount</code></dt>
+<dd>Specifies the number of items in the file list. This is the <code>XmNlistItemCount</code> resource in SelectionBox, renamed for FileSelectionBox. The value must not be negative.</dd>
+<dt><code>XmNfileListLabelString</code></dt>
+<dd>Specifies the label string of the file list. This is the <code>XmNlistLabelString</code> resource in SelectionBox, renamed for FileSelectionBox. The default for this resource depends on the locale. In the C locale the default is <code>Files</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNfileSearchProc</code></dt>
+<dd>Specifies a file search procedure to replace the default file search procedure. FileSelectionBox&#8217;s default file search procedure fulfills the needs of most applications. Because it is impossible to cover the requirements of all applications, you can replace the default search procedure.</dd>
+<dd>The file search procedure is called with two arguments: the FileSelectionBox widget and a pointer to an <code>XmFileSelectionBoxCallbackStruct</code> structure. The callback structure is generated by the <code>XmNqualifySearchDataProc</code> (and possibly modified by the <code>XmNdirSearchProc</code>). It contains all information required to conduct a file search, including the directory mask and a qualified base directory and search pattern. Once this procedure is called, it is up to the search routine to generate a new list of files and update the FileSelectionBox widget by using <code>XtSetValues</code>.</dd>
+<dd>The search procedure must set <code>XmNlistUpdated</code>. If it generates a new list of files, it must also set <code>XmNfileListItems</code> and <code>XmNfileListItemCount</code>.</dd>
+<dd>It is recommended that the search procedure always generate a new list of files. If the <i>mask</i> member of the callback structure is the same as the <i>mask</i> member of the callback struct in the preceding call to the search procedure, the procedure may elect not to generate a new list of files. In this case it must set <code>XmNlistUpdated</code> to False.</dd>
+<dd>If the search procedure generates a new list of files, it must set <code>XmNfileListItems</code> to the new list of files and <code>XmNfileListItemCount</code> to the number of items in the list. If there are no files, it sets <code>XmNfileListItems</code> to NULL and <code>XmNfileListItemCount</code> to 0 (zero). In either case it must set <code>XmNlistUpdated</code> to True.</dd>
+<dd>In constructing the list of files, the search procedure should include only files of the types specified by the widget&#8217;s <code>XmNfileTypeMask</code>.</dd>
+<dd>Setting <code>XmNdirSpec</code> is optional, but recommended. Set this attribute to the full file specification of the directory searched. The directory specification is displayed below the directory and file lists.</dd>
+<dt><code>XmNfileTypeMask</code></dt>
+<dd>Specifies the type of files listed in the file list. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmFILE_REGULAR</code></p>
-<dd>Restricts the file list to contain only regular files.</p>
-<dt><code>XmFILE_DIRECTORY</code></p>
-<dd>Restricts the file list to contain only directories.</p>
-<dt><code>XmFILE_ANY_TYPE</code></p>
-<dd>Allows the list to contain all file types including directories.</dl>
+</dd><dl COMPACT>
+<dt><code>XmFILE_REGULAR</code></dt>
+<dd>Restricts the file list to contain only regular files.</dd>
+<dt><code>XmFILE_DIRECTORY</code></dt>
+<dd>Restricts the file list to contain only directories.</dd>
+<dt><code>XmFILE_ANY_TYPE</code></dt>
+<dd>Allows the list to contain all file types including directories.</dd></dl>
 </dl>
-<dt><code>XmNfilterLabelString</code></p>
-<dd>Specifies the label string for the text entry field for the directory mask. The default for this resource depends on the locale. In the C locale the default is <code>Filter</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNlistUpdated</code></p>
-<dd>Specifies an attribute that is set only by the directory and file search procedures. This resource is set to True if the search procedure updated the directory or file list.</p>
-<dt><code>XmNnoMatchString</code></p>
-<dd>Specifies a string to be displayed in the file list if the list of files is empty.</p>
-<dt><code>XmNpattern</code></p>
-<dd>Specifies the search pattern used in combination with <code>XmNdirectory</code> in determining the files and directories to be displayed. The default value is determined by <code>XmNqualifySearchDataProc</code> and depends on the initial values of <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code>. If the default is NULL or empty, a pattern that matches all files is used.</p>
-<dt><code>XmNpathMode</code></p>
-<dd>Specifies whether or not an additional text field will be used to display and edit the filter. The possible values are</p>
+<dt><code>XmNfilterLabelString</code></dt>
+<dd>Specifies the label string for the text entry field for the directory mask. The default for this resource depends on the locale. In the C locale the default is <code>Filter</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNlistUpdated</code></dt>
+<dd>Specifies an attribute that is set only by the directory and file search procedures. This resource is set to True if the search procedure updated the directory or file list.</dd>
+<dt><code>XmNnoMatchString</code></dt>
+<dd>Specifies a string to be displayed in the file list if the list of files is empty.</dd>
+<dt><code>XmNpattern</code></dt>
+<dd>Specifies the search pattern used in combination with <code>XmNdirectory</code> in determining the files and directories to be displayed. The default value is determined by <code>XmNqualifySearchDataProc</code> and depends on the initial values of <code>XmNdirMask</code>, <code>XmNdirectory</code>, and <code>XmNpattern</code>. If the default is NULL or empty, a pattern that matches all files is used.</dd>
+<dt><code>XmNpathMode</code></dt>
+<dd>Specifies whether or not an additional text field will be used to display and edit the filter. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmPATH_MODE_FULL</code></p>
-<dd>Specifies that no additional text field will be used to display the filter. There will just be a single text field to display <code>XmNdirMask</code>.</p>
-<dt><code>XmPATH_MODE_RELATIVE</code></p>
-<dd>Specifies that there will be two text field displays, one to display the <code>XmNdirectory</code> and one to display the <code>XmNpattern</code>. In this instance, the <code>XmNfilterLabelString</code> resource applies to the text field for <code>XmNpattern</code> and <code>XmNdirTextLabelString</code> applies to the text field for <code>XmNdirectory</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmPATH_MODE_FULL</code></dt>
+<dd>Specifies that no additional text field will be used to display the filter. There will just be a single text field to display <code>XmNdirMask</code>.</dd>
+<dt><code>XmPATH_MODE_RELATIVE</code></dt>
+<dd>Specifies that there will be two text field displays, one to display the <code>XmNdirectory</code> and one to display the <code>XmNpattern</code>. In this instance, the <code>XmNfilterLabelString</code> resource applies to the text field for <code>XmNpattern</code> and <code>XmNdirTextLabelString</code> applies to the text field for <code>XmNdirectory</code>.</dd></dl>
 </dl>
-<dt><code>XmNqualifySearchDataProc</code></p>
-<dd>Specifies a search data qualification procedure to replace the default data qualification procedure. FileSelectionBox&#8217;s default data qualification procedure fulfills the needs of most applications. Because it is impossible to cover the requirements of all applications, you can replace the default procedure.</p>
-<dd>The data qualification procedure is called to generate a qualified directory mask, base directory, and search pattern for use by the directory and file search procedures. It is called with three arguments: the FileSelectionBox widget and pointers to two <code>XmFileSelectionBoxCallbackStruct</code> structures. The first callback structure contains the input data. The second callback structure contains the output data, to be filled in by the data qualification procedure.</p>
-<dd>If the input <i>dir</i> and <i>pattern</i> members are not NULL, the procedure must copy them to the corresponding members of the output callback structure.</p>
-<dd>If the input <i>dir</i> is NULL, the procedure constructs the output <i>dir</i> as follows: If the input <i>mask</i> member is NULL, the procedure uses the widget&#8217;s <code>XmNdirectory</code> as the output <i>dir</i>; otherwise, it extracts the output <i>dir</i> from the input <i>mask</i>. If the resulting output <i>dir</i> is empty, the procedure uses the current working directory instead.</p>
-<dd>If the input <i>pattern</i> is NULL, the procedure constructs the output <i>pattern</i> as follows: If the input <i>mask</i> member is NULL, the procedure uses the widget&#8217;s <code>XmNpattern</code> as the output <i>pattern</i>; otherwise, it extracts the output <i>pattern</i> from the input <i>mask</i>. If the resulting output <i>pattern</i> is empty, the procedure uses a pattern that matches all files instead.</p>
-<dd>The data qualification procedure constructs the output <i>mask</i> from the output <i>dir</i> and <i>pattern</i>. The procedure must ensure that the output <i>dir</i>, <i>pattern</i>, and <i>mask</i> are fully qualified.</p>
-<dd>If the input <i>value</i> member is not NULL, the procedure must copy it to the output <i>value</i> member; otherwise, the procedure must copy the widget&#8217;s <code>XmNdirSpec</code> to the output <i>value</i>.</p>
-<dd>The data qualification procedure must calculate the lengths of the output <i>value</i>, <i>mask</i>, <i>dir</i>, and <i>pattern</i> members and must fill in the corresponding length members of the output callback struct.</p>
-<dd>The data qualification procedure must copy the input <i>reason</i> and <i>event</i> members to the corresponding output members.</dl>
+<dt><code>XmNqualifySearchDataProc</code></dt>
+<dd>Specifies a search data qualification procedure to replace the default data qualification procedure. FileSelectionBox&#8217;s default data qualification procedure fulfills the needs of most applications. Because it is impossible to cover the requirements of all applications, you can replace the default procedure.</dd>
+<dd>The data qualification procedure is called to generate a qualified directory mask, base directory, and search pattern for use by the directory and file search procedures. It is called with three arguments: the FileSelectionBox widget and pointers to two <code>XmFileSelectionBoxCallbackStruct</code> structures. The first callback structure contains the input data. The second callback structure contains the output data, to be filled in by the data qualification procedure.</dd>
+<dd>If the input <i>dir</i> and <i>pattern</i> members are not NULL, the procedure must copy them to the corresponding members of the output callback structure.</dd>
+<dd>If the input <i>dir</i> is NULL, the procedure constructs the output <i>dir</i> as follows: If the input <i>mask</i> member is NULL, the procedure uses the widget&#8217;s <code>XmNdirectory</code> as the output <i>dir</i>; otherwise, it extracts the output <i>dir</i> from the input <i>mask</i>. If the resulting output <i>dir</i> is empty, the procedure uses the current working directory instead.</dd>
+<dd>If the input <i>pattern</i> is NULL, the procedure constructs the output <i>pattern</i> as follows: If the input <i>mask</i> member is NULL, the procedure uses the widget&#8217;s <code>XmNpattern</code> as the output <i>pattern</i>; otherwise, it extracts the output <i>pattern</i> from the input <i>mask</i>. If the resulting output <i>pattern</i> is empty, the procedure uses a pattern that matches all files instead.</dd>
+<dd>The data qualification procedure constructs the output <i>mask</i> from the output <i>dir</i> and <i>pattern</i>. The procedure must ensure that the output <i>dir</i>, <i>pattern</i>, and <i>mask</i> are fully qualified.</dd>
+<dd>If the input <i>value</i> member is not NULL, the procedure must copy it to the output <i>value</i> member; otherwise, the procedure must copy the widget&#8217;s <code>XmNdirSpec</code> to the output <i>value</i>.</dd>
+<dd>The data qualification procedure must calculate the lengths of the output <i>value</i>, <i>mask</i>, <i>dir</i>, and <i>pattern</i> members and must fill in the corresponding length members of the output callback struct.</dd>
+<dd>The data qualification procedure must copy the input <i>reason</i> and <i>event</i> members to the corresponding output members.</dd></dl>
 <p> The values of the <code>XmNdirSearchProc</code> and <code>XmNfileSearchProc</code> are procedure pointers of type <code>XmSearchProc</code>, defined as follows: </p>
 <pre>void (* XmSearchProc) (<i>w, search_data</i>)
  Widget <i>w</i>;
  XtPointer <i>search_data</i>;</pre>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>The FileSelectionBox widget</p>
-<dt><i>search_data</i></p>
-<dd>Pointer to an <code>XmFileSelectionBoxCallbackStruct</code> containing information for conducting a search</dl>
+<dt><i>w</i></dt>
+<dd>The FileSelectionBox widget</dd>
+<dt><i>search_data</i></dt>
+<dd>Pointer to an <code>XmFileSelectionBoxCallbackStruct</code> containing information for conducting a search</dd></dl>
 <p> The value of the <code>XmNqualifySearchDataProc</code> resource is a procedure pointer of type <code>XmQualifyProc</code>, defined as follows: </p>
 <pre>void (* XmQualifyProc) (<i>w, input_data, output_data</i>)
  Widget <i>w</i>;
  XtPointer <i>input_data</i>;
  XtPointer <i>output_data</i>;</pre>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>The FileSelectionBox widget</p>
-<dt><i>input_data</i></p>
-<dd>Pointer to an <code>XmFileSelectionBoxCallbackStruct</code> containing input data to be qualified</p>
-<dt><i>output_data</i></p>
-<dd>Pointer to an <code>XmFileSelectionBoxCallbackStruct</code> containing output data to be filled in by the qualification procedure</dl>
+<dt><i>w</i></dt>
+<dd>The FileSelectionBox widget</dd>
+<dt><i>input_data</i></dt>
+<dd>Pointer to an <code>XmFileSelectionBoxCallbackStruct</code> containing input data to be qualified</dd>
+<dt><i>output_data</i></dt>
+<dd>Pointer to an <code>XmFileSelectionBoxCallbackStruct</code> containing output data to be filled in by the qualification procedure</dd></dl>
 <h3>Inherited Resources</h3>
 <p>FileSelectionBox inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -3296,26 +3296,26 @@ description: "XmFileSelectionBox — The FileSelectionBox widget class"
  int <i>pattern_length</i>;
 } XmFileSelectionBoxCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><i>value</i></p>
-<dd>Specifies the current value of <code>XmNdirSpec</code></p>
-<dt><i>length</i></p>
-<dd>Specifies the number of bytes in <i>value</i> This member is obsolete and exists for compatibility with earlier releases.</p>
-<dt><i>mask</i></p>
-<dd>Specifies the current value of <code>XmNdirMask</code></p>
-<dt><i>mask_length</i></p>
-<dd>Specifies the number of bytes in <i>mask</i> This member is obsolete and exists for compatibility with earlier releases.</p>
-<dt><i>dir</i></p>
-<dd>Specifies the current base directory</p>
-<dt><i>dir_length</i></p>
-<dd>Specifies the number of bytes in <i>dir</i> This member is obsolete and exists for compatibility with earlier releases.</p>
-<dt><i>pattern</i></p>
-<dd>Specifies the current search pattern</p>
-<dt><i>pattern_length</i></p>
-<dd>Specifies the number of bytes in <i>pattern</i> This member is obsolete and exists for compatibility with earlier releases.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the current value of <code>XmNdirSpec</code></dd>
+<dt><i>length</i></dt>
+<dd>Specifies the number of bytes in <i>value</i> This member is obsolete and exists for compatibility with earlier releases.</dd>
+<dt><i>mask</i></dt>
+<dd>Specifies the current value of <code>XmNdirMask</code></dd>
+<dt><i>mask_length</i></dt>
+<dd>Specifies the number of bytes in <i>mask</i> This member is obsolete and exists for compatibility with earlier releases.</dd>
+<dt><i>dir</i></dt>
+<dd>Specifies the current base directory</dd>
+<dt><i>dir_length</i></dt>
+<dd>Specifies the number of bytes in <i>dir</i> This member is obsolete and exists for compatibility with earlier releases.</dd>
+<dt><i>pattern</i></dt>
+<dd>Specifies the current search pattern</dd>
+<dt><i>pattern_length</i></dt>
+<dd>Specifies the number of bytes in <i>pattern</i> This member is obsolete and exists for compatibility with earlier releases.</dd></dl>
 <h3>Translations</h3>
 <p>XmFileSelectionBox inherits translations from XmSelectionBox.</p>
 <h3>Accelerators</h3>
@@ -3323,50 +3323,50 @@ description: "XmFileSelectionBox — The FileSelectionBox widget class"
 <h3>Action Routines</h3>
 <p>The XmFileSelectionBox action routines are</p>
 <dl COMPACT>
-<dt>SelectionBoxUpOrDown(<code>Previous|Next|First|Last</code>):</p>
-<dd>If neither the selection text nor the directory mask (filter) text has the focus, this action does nothing.</p>
-<dd>If the selection text has the focus, the term <i>list</i> in the following description refers to the file list, and the term <i>text</i> refers to the selection text. If the directory mask text has the focus, <i>list</i> refers to the directory list, and <i>text</i> refers to the directory mask text.</p>
-<dd>When called with an argument of <code>Previous</code>, or 0 (zero) for compatibility, this action selects the previous item in the list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>Next</code>, or 1 for compatibility, this action selects the next item in the list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>First</code>, or 2 for compatibility, this action selects the first item in the list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>Last</code>, or 3 for compatibility, this action selects the last item in the list and replaces the text with that item.</p>
-<dt>SelectionBoxRestore():</p>
-<dd>If neither the selection text nor the directory mask (filter) text has the focus, this action does nothing.</p>
-<dd>If the selection text has the focus, this action replaces the selection text with the selected item in the file list. If no item in the file list is selected, it clears the selection text.</p>
-<dd>If the directory mask text has the focus, this action replaces the directory mask text with a new directory mask constructed from the <code>XmNdirectory</code> and <code>XmNpattern</code> resources.</dl>
+<dt>SelectionBoxUpOrDown(<code>Previous|Next|First|Last</code>):</dt>
+<dd>If neither the selection text nor the directory mask (filter) text has the focus, this action does nothing.</dd>
+<dd>If the selection text has the focus, the term <i>list</i> in the following description refers to the file list, and the term <i>text</i> refers to the selection text. If the directory mask text has the focus, <i>list</i> refers to the directory list, and <i>text</i> refers to the directory mask text.</dd>
+<dd>When called with an argument of <code>Previous</code>, or 0 (zero) for compatibility, this action selects the previous item in the list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>Next</code>, or 1 for compatibility, this action selects the next item in the list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>First</code>, or 2 for compatibility, this action selects the first item in the list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>Last</code>, or 3 for compatibility, this action selects the last item in the list and replaces the text with that item.</dd>
+<dt>SelectionBoxRestore():</dt>
+<dd>If neither the selection text nor the directory mask (filter) text has the focus, this action does nothing.</dd>
+<dd>If the selection text has the focus, this action replaces the selection text with the selected item in the file list. If no item in the file list is selected, it clears the selection text.</dd>
+<dd>If the directory mask text has the focus, this action replaces the directory mask text with a new directory mask constructed from the <code>XmNdirectory</code> and <code>XmNpattern</code> resources.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>The FileSelectionBox widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>Calls the activate callbacks for the cancel button if it is sensitive. If no cancel button exists and the parent of the FileSelectionBox is a manager, it passes the event to the parent.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Selection Text:</p>
-<dd>Calls the selection text widget&#8217;s <code>XmNactivateCallback</code> callbacks. If <code>XmNmustMatch</code> is True and the selection text does not match an item in the file list, it calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, it calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Directory Mask Text:</p>
-<dd>Calls the directory mask text widget&#8217;s <code>XmNactivateCallback</code> callbacks, initiates a directory and file search, and calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</p>
-<dt><code>&lt;Btn1Down&gt;</code><code>(2+)</code>&nbsp;<wbr>or&nbsp;<wbr><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Directory List:</p>
-<dd>Calls the directory list widget&#8217;s <code>XmNdefaultActionCallback</code> callbacks, initiates a directory and file search, and calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</p>
-<dt><code>&lt;Btn1Down&gt;</code><code>(2+)</code>&nbsp;<wbr>or&nbsp;<wbr><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in File List:</p>
-<dd>Calls the file list widget&#8217;s <code>XmNdefaultActionCallback</code> callbacks and calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>&nbsp;<wbr>in Directory List:</p>
-<dd>Generates a new directory mask, using the selected list item as the directory and the pattern extracted from the current directory mask text as the search pattern. If the search pattern is empty, it uses a pattern that matches all files in the directory. Replaces the directory mask text with the new directory mask.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>&nbsp;<wbr>in File List:</p>
-<dd>Replaces the selection text with the selected list item.</p>
-<dt><code>&lt;Btn2Down&gt;</code> in File List:</p>
-<dd>Drags the content of one or more selected list items using the drag and drop facility. If <code>&lt;Btn2Down</code> is pressed on an unselected item, drags only that item, excluding any other selected items.</p>
-<dd>This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures of the file list, possibly multiple times, for the <code>_MOTIF_DROP</code> selection.</p>
-<dt><code>&lt;Btn2Down&gt;</code> in Directory List:</p>
-<dd>Drags the content of one or more selected list items using the drag and drop facility. If <code>&lt;Btn2Down</code> is pressed on an unselected item, it drags only that item, excluding any other selected items.</p>
-<dd>This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures of the directory list, possibly multiple times, for the <code>_MOTIF_DROP</code> selection.</p>
-<dt><code>&lt;Apply Button Activated&gt;</code>:</p>
-<dd>Initiates a directory and file search. Calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</p>
-<dt><code>&lt;OK Button Activated&gt;</code>:</p>
-<dd>If <code>XmNmustMatch</code> is True and the selection text does not match an item in the file list, calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</p>
-<dt><code>&lt;Cancel Button Activated&gt;</code>:</p>
-<dd>Calls the <code>XmNcancelCallback</code> callbacks with reason <code>XmCR_CANCEL</code>.</p>
-<dt><code>&lt;Help Button Activated&gt;</code>:</p>
-<dd>Calls the <code>XmNhelpCallback</code> callbacks with reason <code>XmCR_HELP</code>.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>If no button, list widget, or text widget has the keyboard focus, if <code>XmNmustMatch</code> is True and the selection text does not match an item in the file list, it calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, it calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</dl>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>Calls the activate callbacks for the cancel button if it is sensitive. If no cancel button exists and the parent of the FileSelectionBox is a manager, it passes the event to the parent.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Selection Text:</dt>
+<dd>Calls the selection text widget&#8217;s <code>XmNactivateCallback</code> callbacks. If <code>XmNmustMatch</code> is True and the selection text does not match an item in the file list, it calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, it calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Directory Mask Text:</dt>
+<dd>Calls the directory mask text widget&#8217;s <code>XmNactivateCallback</code> callbacks, initiates a directory and file search, and calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</dd>
+<dt><code>&lt;Btn1Down&gt;</code><code>(2+)</code>&nbsp;<wbr>or&nbsp;<wbr><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in Directory List:</dt>
+<dd>Calls the directory list widget&#8217;s <code>XmNdefaultActionCallback</code> callbacks, initiates a directory and file search, and calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</dd>
+<dt><code>&lt;Btn1Down&gt;</code><code>(2+)</code>&nbsp;<wbr>or&nbsp;<wbr><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>&nbsp;<wbr>in File List:</dt>
+<dd>Calls the file list widget&#8217;s <code>XmNdefaultActionCallback</code> callbacks and calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>&nbsp;<wbr>in Directory List:</dt>
+<dd>Generates a new directory mask, using the selected list item as the directory and the pattern extracted from the current directory mask text as the search pattern. If the search pattern is empty, it uses a pattern that matches all files in the directory. Replaces the directory mask text with the new directory mask.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>&nbsp;<wbr>in File List:</dt>
+<dd>Replaces the selection text with the selected list item.</dd>
+<dt><code>&lt;Btn2Down&gt;</code> in File List:</dt>
+<dd>Drags the content of one or more selected list items using the drag and drop facility. If <code>&lt;Btn2Down</code> is pressed on an unselected item, drags only that item, excluding any other selected items.</dd>
+<dd>This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures of the file list, possibly multiple times, for the <code>_MOTIF_DROP</code> selection.</dd>
+<dt><code>&lt;Btn2Down&gt;</code> in Directory List:</dt>
+<dd>Drags the content of one or more selected list items using the drag and drop facility. If <code>&lt;Btn2Down</code> is pressed on an unselected item, it drags only that item, excluding any other selected items.</dd>
+<dd>This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures of the directory list, possibly multiple times, for the <code>_MOTIF_DROP</code> selection.</dd>
+<dt><code>&lt;Apply Button Activated&gt;</code>:</dt>
+<dd>Initiates a directory and file search. Calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</dd>
+<dt><code>&lt;OK Button Activated&gt;</code>:</dt>
+<dd>If <code>XmNmustMatch</code> is True and the selection text does not match an item in the file list, calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</dd>
+<dt><code>&lt;Cancel Button Activated&gt;</code>:</dt>
+<dd>Calls the <code>XmNcancelCallback</code> callbacks with reason <code>XmCR_CANCEL</code>.</dd>
+<dt><code>&lt;Help Button Activated&gt;</code>:</dt>
+<dd>Calls the <code>XmNhelpCallback</code> callbacks with reason <code>XmCR_HELP</code>.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>If no button, list widget, or text widget has the keyboard focus, if <code>XmNmustMatch</code> is True and the selection text does not match an item in the file list, it calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, it calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

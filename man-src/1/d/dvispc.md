@@ -34,14 +34,14 @@ description: "dvispc – Modify a DVI file to be page-independent in specials"
 <p> (3) The mode <code>-s</code> lists all specials found in the input DVI as-is, with a preceding number which denotes the page where it appears. For example, </p>
 <dl>
 <dt>
-<dd> [1]<br />
+</dt><dd> [1]<br />
  {color push Black}<br />
  {color pop}<br />
  {color push rgb 1 0 0}<br />
  {color pop}<br />
  [2]<br />
  {color push Black}<br />
- {color pop}</dl>
+ {color pop}</dd></dl>
 <p> This feature is equivalent to a program <code>dvispecials</code> in TeX-Guy package &lt;<a rel="nofollow" href="http://www-masu.ist.osaka-u.ac.jp/%7Ekakugawa/TeX-Guy/">http://www-masu.ist.osaka-u.ac.jp/%7Ekakugawa/TeX-Guy/</a>&gt; and <code>dvii -s</code> &lt;<a rel="nofollow" href="https://ctan.org/pkg/dvii">https://ctan.org/pkg/dvii</a>&gt;. </p>
 <p> (4) The mode <code>-a</code> and <code>-x</code> correspond to <code>dv2dt</code> and <code>dt2dv</code> in the dtl (= DVI Text Language) package respectively. By default <code>dvispc -a</code> formats the output text in its own style, but DTL-compatible format is available with <code>-t</code> option. Also, <code>dvispc -x</code> can accept DTL-compatible text input.</p>
 <h2>SUPPORTED SPECIALS</h2>

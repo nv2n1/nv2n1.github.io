@@ -81,22 +81,22 @@ given($foo)
 <h2>Modules and Pragmata</h2>
 <h3>New Core Modules</h3>
 <dl>
-<dt>&bull;</p>
-<dd> A new pragma, <tt>&quot;feature&quot;</tt>, has been added; see above in &#8220;Core Enhancements&#8221;.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;assertions::compat&quot;</tt>, also available on <font SIZE="-1">CPAN</font>, allows the use of assertions on perl versions prior to 5.9.0 (that is the first one to natively support them).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::BigInt::FastCalc&quot;</tt> is an XS-enabled, and thus faster, version of <tt>&quot;Math::BigInt::Calc&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Compress::Zlib&quot;</tt> is an interface to the zlib compression library. It comes with a bundled version of zlib, so having a working zlib is not a prerequisite to install it. It&#8217;s used by <tt>&quot;Archive::Tar&quot;</tt> (see below).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;IO::Zlib&quot;</tt> is an <tt>&quot;IO::&quot;</tt>-style interface to <tt>&quot;Compress::Zlib&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Archive::Tar&quot;</tt> is a module to manipulate <tt>&quot;tar&quot;</tt> archives.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Digest::SHA&quot;</tt> is a module used to calculate many types of <font SIZE="-1">SHA</font> digests, has been included for <font SIZE="-1">SHA</font> support in the <font SIZE="-1">CPAN</font> module.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::CBuilder&quot;</tt> and <tt>&quot;ExtUtils::ParseXS&quot;</tt> have been added.</dl>
+<dt>&bull;</dt>
+<dd> A new pragma, <tt>&quot;feature&quot;</tt>, has been added; see above in &#8220;Core Enhancements&#8221;.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;assertions::compat&quot;</tt>, also available on <font SIZE="-1">CPAN</font>, allows the use of assertions on perl versions prior to 5.9.0 (that is the first one to natively support them).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::BigInt::FastCalc&quot;</tt> is an XS-enabled, and thus faster, version of <tt>&quot;Math::BigInt::Calc&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Compress::Zlib&quot;</tt> is an interface to the zlib compression library. It comes with a bundled version of zlib, so having a working zlib is not a prerequisite to install it. It&#8217;s used by <tt>&quot;Archive::Tar&quot;</tt> (see below).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IO::Zlib&quot;</tt> is an <tt>&quot;IO::&quot;</tt>-style interface to <tt>&quot;Compress::Zlib&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Archive::Tar&quot;</tt> is a module to manipulate <tt>&quot;tar&quot;</tt> archives.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Digest::SHA&quot;</tt> is a module used to calculate many types of <font SIZE="-1">SHA</font> digests, has been included for <font SIZE="-1">SHA</font> support in the <font SIZE="-1">CPAN</font> module.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::CBuilder&quot;</tt> and <tt>&quot;ExtUtils::ParseXS&quot;</tt> have been added.</dd></dl>
 <h2>Utility Changes</h2>
 <h3>ptar</h3>
 <p> <tt>&quot;ptar&quot;</tt> is a pure perl implementation of <tt>&quot;tar&quot;</tt>, that comes with <tt>&quot;Archive::Tar&quot;</tt>.</p>
@@ -167,25 +167,26 @@ if (defined $$x) {<br />
 <p> Previously when running with warnings enabled globally via <tt>&quot;-w&quot;</tt>, selective disabling of specific warning categories would actually turn off all warnings. This is now fixed; now <tt>&quot;no warnings 'io';&quot;</tt> will only turn off warnings in the <tt>&quot;io&quot;</tt> class. Previously it would erroneously turn off all warnings.</p>
 <h3>Smaller fixes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;FindBin&quot;</tt> now works better with directories where access rights are more restrictive than usual.</p>
-<dt>&bull;</p>
-<dd> Several memory leaks in ithreads were closed. Also, ithreads were made less memory-intensive.</p>
-<dt>&bull;</p>
-<dd> Trailing spaces are now trimmed from <tt>$!</tt> and <tt>$^E</tt>.</p>
-<dt>&bull;</p>
-<dd> Operations that require perl to read a process&#8217;s list of groups, such as reads of <tt>$(</tt> and <tt>$)</tt>, now dynamically allocate memory rather than using a fixed sized array. The fixed size array could cause C stack exhaustion on systems configured to use large numbers of groups.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO::scalar&quot;</tt> now works better with non-default <tt>$/</tt> settings.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;x&quot;</tt> repetition operator is now able to operate on <tt>&quot;qw//&quot;</tt> lists. This used to raise a syntax error.</p>
-<dt>&bull;</p>
-<dd> The debugger now traces correctly execution in eval(&quot;&quot;)uated code that contains #line directives.</p>
-<dt>&bull;</p>
-<dd> The value of the <tt>&quot;open&quot;</tt> pragma is no longer ignored for three-argument opens.</p>
-<dt>&bull;</p>
-<dd> Perl will now use the C library calls <tt>&quot;unsetenv&quot;</tt> and <tt>&quot;clearenv&quot;</tt> if present to delete keys from <tt>%ENV</tt> and delete <tt>%ENV</tt> entirely, thanks to a patch from Alan Burlison.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;FindBin&quot;</tt> now works better with directories where access rights are more restrictive than usual.</dd>
+<dt>&bull;</dt>
+<dd> Several memory leaks in ithreads were closed. Also, ithreads were made less memory-intensive.</dd>
+<dt>&bull;</dt>
+<dd> Trailing spaces are now trimmed from <tt>$!</tt> and <tt>$^E</tt>.</dd>
+<dt>&bull;</dt>
+<dd> Operations that require perl to read a process&#8217;s list of groups, such as reads of <tt>$(</tt> and <tt>$)</tt>, now dynamically allocate memory rather than using a fixed sized array. The fixed size array could cause C stack exhaustion on systems configured to use large numbers of groups.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO::scalar&quot;</tt> now works better with non-default <tt>$/</tt> settings.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;x&quot;</tt> repetition operator is now able to operate on <tt>&quot;qw//&quot;</tt> lists. This used to raise a syntax error.</dd>
+<dt>&bull;</dt>
+<dd> The debugger now traces correctly execution in eval(&quot;&quot;)uated code that contains #line directives.</dd>
+<dt>&bull;</dt>
+<dd> The value of the <tt>&quot;open&quot;</tt> pragma is no longer ignored for three-argument opens.</dd>
+<dt>&bull;</dt>
+<dd> Perl will now use the C library calls <tt>&quot;unsetenv&quot;</tt> and <tt>&quot;clearenv&quot;</tt> if present to delete keys from <tt>%ENV</tt> and delete <tt>%ENV</tt> entirely, thanks to a patch from Alan Burlison.</dd></dl>
 <h3>More Unicode Fixes</h3>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> <i>chr()</i> on a negative value now gives <tt>&quot;
+</dd></dl>

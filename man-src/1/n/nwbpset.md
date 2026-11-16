@@ -29,27 +29,27 @@ description: "nwbpset – Create a bindery property or set its value"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> <code>-h</code> is used to print out a short help text.</dl>
+</dt><dd> <code>-h</code> is used to print out a short help text.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> <code>server</code> is the name of the server you want to use.</dl>
+</dt><dd> <code>server</code> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user</i></p>
 <dl>
 <dt>
-<dd> <code>user</code> is the user name to use for login.</dl>
+</dt><dd> <code>user</code> is the user name to use for login.</dd></dl>
 <p> <code>-P</code> <i>password</i></p>
 <dl>
 <dt>
-<dd> <code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwbpset prompts for a password.</dl>
+</dt><dd> <code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwbpset prompts for a password.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> <code>-n</code> should be given if no password is required for the login.</dl>
+</dt><dd> <code>-n</code> should be given if no password is required for the login.</dd></dl>
 <p> <code>-C</code></p>
 <dl>
 <dt>
-<dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dl>
+</dt><dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dd></dl>
 <h2>AUTHORS</h2>
 <p> nwbpset was written by Volker Lendecke. See the Changes file of ncpfs for other contributors. </p>
 <h2>Index</h2>

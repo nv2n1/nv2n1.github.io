@@ -23,16 +23,16 @@ description: "tf – TinyFugue, a MUD client"
 <p> With <code>host</code> and <code>port</code> arguments, <i>TF</i> will define a temporary world and try to connect to it. The <code>host</code> may be an IP number or regular name format. </p>
 <p> OPTIONS</p>
 <dl>
-<dt>-f<i>file</i></p>
-<dd> Load <i>file</i> instead of $HOME/.tfrc at startup.</p>
-<dt>-f</p>
-<dd> Do not load any personal configuration file. The library will still be loaded.</p>
-<dt>-l</p>
-<dd> Disable automatic login.</p>
-<dt>-n</p>
-<dd> Do not connect to any world at startup.</p>
-<dt>-q</p>
-<dd> Quiet login (overrides %{quiet} flag). </p>
+<dt>-f<i>file</i></dt>
+<dd> Load <i>file</i> instead of $HOME/.tfrc at startup.</dd>
+<dt>-f</dt>
+<dd> Do not load any personal configuration file. The library will still be loaded.</dd>
+<dt>-l</dt>
+<dd> Disable automatic login.</dd>
+<dt>-n</dt>
+<dd> Do not connect to any world at startup.</dd>
+<dt>-q</dt>
+<dd> Quiet login (overrides %{quiet} flag). </dd>
 </dl>
 <h2>FEATURES</h2>
 <p> Among other things, <i>TF</i> allows you to: </p>

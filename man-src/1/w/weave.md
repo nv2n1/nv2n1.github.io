@@ -20,8 +20,8 @@ description: "weave – translate WEB to TeX"
 <p> The environment variable WEBINPUTS is used to search for the input files, or the system default if WEBINPUTS is not set. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>$TEXMFMAIN/tex/plain/base/webmac.tex</i></p>
-<dd> TeX macros used by <code>weave</code> output.</dl>
+<dt><i>$TEXMFMAIN/tex/plain/base/webmac.tex</i></dt>
+<dd> TeX macros used by <code>weave</code> output.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tangle/">tangle</a></code>(1) for references, authors, and other information. </p>
 <h2>Index</h2>

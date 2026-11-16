@@ -12,13 +12,12 @@ rdma_dereg_mr - deregisters a registered memory region.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 struct ibv_mr *rdma_dereg_mr
-
     (struct ibv_mr *mr);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>mr
-<dd>A reference to a registered memory buffer.</dl>
+</dt><dd>A reference to a registered memory buffer.</dd></dl>
 
 <h2>Description</h2>
 

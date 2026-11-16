@@ -15,12 +15,12 @@ description: "repo-graph – output a full package dependency graph in dot forma
 <p> <code>repo-graph</code> is a program that generates a full package dependency list from a yum repository and outputs it in dot format. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a help message, and then quit.</p>
-<dt><code>&#8211;repoid=REPOID</code></p>
-<dd> Specify repo ids to query, can be specified multiple times (default is all enabled).</p>
-<dt><code>-c CONFIG</code></p>
-<dd> Config file to use (defaults to /etc/yum.conf). </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a help message, and then quit.</dd>
+<dt><code>&#8211;repoid=REPOID</code></dt>
+<dd> Specify repo ids to query, can be specified multiple times (default is all enabled).</dd>
+<dt><code>-c CONFIG</code></dt>
+<dd> Config file to use (defaults to /etc/yum.conf). </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

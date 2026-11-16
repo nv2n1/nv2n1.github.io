@@ -23,24 +23,24 @@ description: "QwtCompassWindArrow –"
 <p>An indicator for the wind direction. </p>
 <p> <code>QwtCompassWindArrow</code> shows the direction where the wind comes from. </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>QPalette::Light </p>
+<dt>&bull;</dt>
+<dd>QPalette::Light </dd>
 <p>&nbsp;<wbr>Used for Style1, or the light half of Style2</p>
-<dt>&bull;</p>
-<dd>QPalette::Dark </p>
+<dt>&bull;</dt>
+<dd>QPalette::Dark </dd>
 <p>&nbsp;<wbr>Used for the dark half of Style2</dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtDial</code>, <code>QwtCompass</code></dl>
+<dd><code>QwtDial</code>, <code>QwtCompass</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtCompassWindArrow::Style</code></h3>
 <p>Style of the arrow. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Style1 </i></p>
-<dd>A needle pointing to the center.</p>
-<dt><i>Style2 </i></p>
-<dd>A needle pointing to the center.</dl>
+<dt><i>Style1 </i></dt>
+<dd>A needle pointing to the center.</dd>
+<dt><i>Style2 </i></dt>
+<dd>A needle pointing to the center.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtCompassWindArrow::QwtCompassWindArrow (<code>Style</code>style, const QColor &amp;light = Qt::white, const QColor &amp;dark = Qt::gray)</h3>
 <p>Constructor </p>
@@ -48,7 +48,7 @@ description: "QwtCompassWindArrow –"
 <dl COMPACT>
 <dd><i>style</i> Arrow style<br />
  <i>light</i> Light color<br />
- <i>dark</i> Dark color</dl>
+ <i>dark</i> Dark color</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtCompassWindArrow::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle </p>
@@ -56,7 +56,7 @@ description: "QwtCompassWindArrow –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>length</i> Length of the needle<br />
- <i>colorGroup</i> Color group, used for painting</dl>
+ <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> Implements <code>QwtDialNeedle</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

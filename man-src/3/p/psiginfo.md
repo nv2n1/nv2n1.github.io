@@ -10,7 +10,6 @@ description: "psignal, psiginfo – print signal description"
 <p>psignal, psiginfo &#8211; print signal description</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 void psignal(int sig, const char *s);
 void psiginfo(const siginfo_t *pinfo, const char *s);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>psignal</code>():<br />
@@ -47,10 +46,10 @@ void psiginfo(const siginfo_t *pinfo, const char *s);</code></pre>
 <h2>Bugs</h2>
 <p>In glibc versions up to 2.12, <code>psiginfo</code>() had the following bugs:</p>
 <dl>
-<dt>*</p>
-<dd>In some circumstances, a trailing newline is not printed.</p>
-<dt>*</p>
-<dd>Additional details are not displayed for real-time signals.</dl>
+<dt>*</dt>
+<dd>In some circumstances, a trailing newline is not printed.</dd>
+<dt>*</dt>
+<dd>Additional details are not displayed for real-time signals.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/3-perror/">perror</a></code>(3), <code><a href="/docs/linux/man/3-strsignal/">strsignal</a></code>(3), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)</p>
 <h2>Colophon</h2>

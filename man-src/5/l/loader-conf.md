@@ -18,45 +18,45 @@ description: "loader.conf – Configuration file for systemd-boot"
 <p>The following configuration options in loader.conf are understood: </p>
 <p> default</p>
 <dl>
-<dd>A glob pattern to select the default entry. The default entry may be changed in the boot menu itself, in which case the name of the selected entry will be stored as an EFI variable, overriding this option.</dl>
+<dd>A glob pattern to select the default entry. The default entry may be changed in the boot menu itself, in which case the name of the selected entry will be stored as an EFI variable, overriding this option.</dd></dl>
 <p> timeout</p>
 <dl>
-<dd>How long the boot menu should be shown before the default entry is booted, in seconds. This may be changed in the boot menu itself and will be stored as an EFI variable in that case, overriding this option. </p>
+<dd>How long the boot menu should be shown before the default entry is booted, in seconds. This may be changed in the boot menu itself and will be stored as an EFI variable in that case, overriding this option. </dd>
 <p> If the timeout is disabled, the default entry will be booted immediately. The menu can be shown by pressing and holding a key before systemd-boot is launched.</dl>
 <p> console-mode</p>
 <dl>
-<dd>This option configures the resolution of the console. Takes a number or one of the special values listed below. The following values may be used: </p>
+<dd>This option configures the resolution of the console. Takes a number or one of the special values listed below. The following values may be used: </dd>
 <p> 0</p>
 <dl>
-<dd>Standard UEFI 80&#215;25 mode</dl>
+<dd>Standard UEFI 80&#215;25 mode</dd></dl>
 <p> 1</p>
 <dl>
-<dd>80&#215;50 mode, not supported by all devices</dl>
+<dd>80&#215;50 mode, not supported by all devices</dd></dl>
 <p> 2</p>
 <dl>
-<dd>the first non-standard mode provided by the device firmware, if any</dl>
+<dd>the first non-standard mode provided by the device firmware, if any</dd></dl>
 <p> auto</p>
 <dl>
-<dd>Pick a suitable mode automatically using heuristics</dl>
+<dd>Pick a suitable mode automatically using heuristics</dd></dl>
 <p> max</p>
 <dl>
-<dd>Pick the highest-numbered available mode</dl>
+<dd>Pick the highest-numbered available mode</dd></dl>
 <p> keep</p>
 <dl>
-<dd>Keep the mode selected by firmware (the default)</dl>
+<dd>Keep the mode selected by firmware (the default)</dd></dl>
 </dl>
 <p> editor</p>
 <dl>
-<dd>Takes a boolean argument. Enable (the default) or disable the editor. The editor should be disabled if the machine can be accessed by unauthorized persons.</dl>
+<dd>Takes a boolean argument. Enable (the default) or disable the editor. The editor should be disabled if the machine can be accessed by unauthorized persons.</dd></dl>
 <p> auto-entries</p>
 <dl>
-<dd>Takes a boolean argument. Enable (the default) or disable entries for other boot entries found on the boot partition. In particular, this may be useful when loader entries are created to show replacement descriptions for those entries.</dl>
+<dd>Takes a boolean argument. Enable (the default) or disable entries for other boot entries found on the boot partition. In particular, this may be useful when loader entries are created to show replacement descriptions for those entries.</dd></dl>
 <p> auto-firmware</p>
 <dl>
-<dd>Takes a boolean argument. Enable (the default) or disable the &quot;Reboot into firmware&quot; entry.</dl>
+<dd>Takes a boolean argument. Enable (the default) or disable the &quot;Reboot into firmware&quot; entry.</dd></dl>
 <p> random-seed-mode</p>
 <dl>
-<dd>Takes one of &quot;off&quot;, &quot;with-system-token&quot; and &quot;always&quot;. If &quot;off&quot; no random seed data is read off the ESP, nor passed to the OS. If &quot;with-system-token&quot; (the default) <code>systemd-boot</code> will read a random seed from the ESP (from the file /loader/random-seed) only if the <i>LoaderSystemToken</i> EFI variable is set, and then derive the random seed to pass to the OS from the combination. If &quot;always&quot; the boot loader will do so even if <i>LoaderSystemToken</i> is not set. This mode is useful in environments where protection against OS image reuse is not a concern, and the random seed shall be used even with no further setup in place. Use <code>bootctl random-seed</code> to initialize both the random seed file in the ESP and the system token EFI variable. </p>
+<dd>Takes one of &quot;off&quot;, &quot;with-system-token&quot; and &quot;always&quot;. If &quot;off&quot; no random seed data is read off the ESP, nor passed to the OS. If &quot;with-system-token&quot; (the default) <code>systemd-boot</code> will read a random seed from the ESP (from the file /loader/random-seed) only if the <i>LoaderSystemToken</i> EFI variable is set, and then derive the random seed to pass to the OS from the combination. If &quot;always&quot; the boot loader will do so even if <i>LoaderSystemToken</i> is not set. This mode is useful in environments where protection against OS image reuse is not a concern, and the random seed shall be used even with no further setup in place. Use <code>bootctl random-seed</code> to initialize both the random seed file in the ESP and the system token EFI variable. </dd>
 <p> See m[blue]<code>Random Seeds</code>m[]<font SIZE="-2">[1]</font> for further information.</dl>
 <h2>Example</h2>
 <dl>
@@ -65,13 +65,14 @@ description: "loader.conf – Configuration file for systemd-boot"
 timeout 0
 default 01234567890abcdef1234567890abdf0-*
 editor no</pre>
-</dl>
+</dd></dl>
 <p> The menu will not be shown by default (the menu can still be shown by pressing and holding a key during boot). One of the entries with files with a name starting with &quot;01234567890abcdef1234567890abdf0-&quot; will be selected by default. If more than one entry matches, the one with the highest priority will be selected (generally the one with the highest version number). The editor will be disabled, so it is not possible to alter the kernel command line.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-systemd-boot/">systemd-boot</a></code>(7), <code><a href="/docs/linux/man/1-bootctl/">bootctl</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Random Seeds</p>
+<dt> 1.</dt>
+<dd>Random Seeds</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/RANDOM_SEEDS">https://systemd.io/RANDOM_SEEDS</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/RANDOM_SEEDS">https://systemd.io/RANDOM_SEEDS</a></dd></dl>
+</dl>

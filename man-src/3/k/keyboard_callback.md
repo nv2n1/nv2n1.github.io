@@ -21,9 +21,7 @@ description: "keyboard_callback – User specified keyboard callback handler. Al
       return (((key &gt;&gt; 8) + 1) 
    }
    END_OF_FUNCTION(enigma_scrambler)
-   
    ...
-   
       install_timer();
    LOCK_FUNCTION(enigma_scrambler);
    install_keyboard();

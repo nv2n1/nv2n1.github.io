@@ -15,16 +15,16 @@ description: "i2cset – set I2C registers"
 <p>i2cset is a small helper program to set registers visible through the I2C bus. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd>Display the version and exit.</p>
-<dt><code>-f</code></p>
-<dd>Force access to the device even if it is already busy. By default, i2cset will refuse to access a device which is already under the control of a kernel driver. Using this flag is dangerous, it can seriously confuse the kernel driver in question. It can also cause i2cset to silently write to the wrong register. So use at your own risk and only if you know what you&#8217;re doing.</p>
-<dt><code>-y</code></p>
-<dd>Disable interactive mode. By default, i2cset will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</p>
-<dt><code>-m mask</code></p>
-<dd>The <i>mask</i> parameter, if specified, describes which bits of <i>value</i> will be actually written to <i>data-address</i>. Bits set to 1 in the mask are taken from <i>value</i>, while bits set to 0 will be read from <i>data-address</i> and thus preserved by the operation. Please note that this parameter assumes that the read and write operations for the specified mode are symmetrical for the device you are accessing. This may or may not be the case, as neither I2C nor SMBus guarantees this.</p>
-<dt><code>-r</code></p>
-<dd>Read back the value right after writing it, and compare the result with the value written. This used to be the default behavior. The same limitations apply as those of option <code>-m</code>.</dl>
+<dt><code>-V</code></dt>
+<dd>Display the version and exit.</dd>
+<dt><code>-f</code></dt>
+<dd>Force access to the device even if it is already busy. By default, i2cset will refuse to access a device which is already under the control of a kernel driver. Using this flag is dangerous, it can seriously confuse the kernel driver in question. It can also cause i2cset to silently write to the wrong register. So use at your own risk and only if you know what you&#8217;re doing.</dd>
+<dt><code>-y</code></dt>
+<dd>Disable interactive mode. By default, i2cset will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</dd>
+<dt><code>-m mask</code></dt>
+<dd>The <i>mask</i> parameter, if specified, describes which bits of <i>value</i> will be actually written to <i>data-address</i>. Bits set to 1 in the mask are taken from <i>value</i>, while bits set to 0 will be read from <i>data-address</i> and thus preserved by the operation. Please note that this parameter assumes that the read and write operations for the specified mode are symmetrical for the device you are accessing. This may or may not be the case, as neither I2C nor SMBus guarantees this.</dd>
+<dt><code>-r</code></dt>
+<dd>Read back the value right after writing it, and compare the result with the value written. This used to be the default behavior. The same limitations apply as those of option <code>-m</code>.</dd></dl>
 <p> There are three required options to i2cset. <i>i2cbus</i> indicates the number or name of the I2C bus to be scanned. This number should correspond to one of the busses listed by <i>i2cdetect -l</i>. <i>chip-address</i> specifies the address of the chip on that bus, and is an integer between 0x03 and 0x77. <i>data-address</i> specifies the address on that chip to write to, and is an integer between 0x00 and 0xFF. </p>
 <p> The <i>value</i> parameter, if specified, is the value to write to that location on the chip. If this parameter is omited, then a short write is issued. For most chips, it simply sets an internal pointer to the target location, but doesn&#8217;t actually write to that location. For a few chips though, in particular simple ones with a single register, this short write is an actual write. </p>
 <p> The <i>mode</i> parameter, if specified, is one of the letters <code>b</code> or <code>w</code>, corresponding to a write size of a single byte or a 16-bit word, respectively. A <code>p</code> can also be appended to the <i>mode</i> parameter to enable PEC. If the <i>mode</i> parameter is omitted, i2cset defaults to byte mode without PEC. The <i>value</i> provided must be within range for the specified data type (0x00-0xFF for bytes, 0x0000-0xFFFF for words).</p>

@@ -29,124 +29,124 @@ description: "dd_rescue – Data recovery and protection tool"
 <p> The following options may be used to modify the behavior of <code>dd_rescue .</code></p>
 <h3>General options</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> This option tells <code>dd_rescue</code> to output a list of options and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> tells <code>dd_rescue</code> to be less verbose.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> makes <code>dd_rescue</code> more verbose.</p>
-<dt><code>-c&nbsp;<wbr></code><i>0/1</i>,&nbsp;<wbr><code>&#8211;color=</code><i>0/1</i></p>
-<dd> controls whether <code>dd_rescue</code> uses colors. By default it does, unless the terminal type from TERM is unknown or dumb or ends in -m or -mono.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> makes <code>dd_rescue</code> skip some sanity checks (e.g. automatically setting reverse direction when input and output file are the same and ipos &lt; opos).</p>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> tells <code>dd_rescue</code> to ask before overwriting existing files.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> This option tells <code>dd_rescue</code> to output a list of options and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> tells <code>dd_rescue</code> to be less verbose.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> makes <code>dd_rescue</code> more verbose.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>0/1</i>,&nbsp;<wbr><code>&#8211;color=</code><i>0/1</i></dt>
+<dd> controls whether <code>dd_rescue</code> uses colors. By default it does, unless the terminal type from TERM is unknown or dumb or ends in -m or -mono.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> makes <code>dd_rescue</code> skip some sanity checks (e.g. automatically setting reverse direction when input and output file are the same and ipos &lt; opos).</dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> tells <code>dd_rescue</code> to ask before overwriting existing files.</dd></dl>
 <h3>Block sizes</h3>
 <dl>
-<dt><code>-b&nbsp;<wbr></code><i>softbs</i>,&nbsp;<wbr><code>&#8211;softbs=</code><i>softbs</i>,&nbsp;<wbr><code>&#8211;bs=</code><i>softbs</i></p>
-<dd> sets the (larger) block size to <i>softbs</i> bytes. <code>dd_rescue</code> will transfer chunks of that size unless a read error is encountered (or the end of the input file or the maximum transfer size has been reached). The default value for this is 64k for buffered I/O and 1M for direct I/O.</p>
-<dt><code>-B&nbsp;<wbr></code><i>hardbs</i>,&nbsp;<wbr><code>&#8211;hardbs=</code><i>hardbs</i>,&nbsp;<wbr><code>&#8211;block-size=</code><i>hardbs</i></p>
+<dt><code>-b&nbsp;<wbr></code><i>softbs</i>,&nbsp;<wbr><code>&#8211;softbs=</code><i>softbs</i>,&nbsp;<wbr><code>&#8211;bs=</code><i>softbs</i></dt>
+<dd> sets the (larger) block size to <i>softbs</i> bytes. <code>dd_rescue</code> will transfer chunks of that size unless a read error is encountered (or the end of the input file or the maximum transfer size has been reached). The default value for this is 64k for buffered I/O and 1M for direct I/O.</dd>
+<dt><code>-B&nbsp;<wbr></code><i>hardbs</i>,&nbsp;<wbr><code>&#8211;hardbs=</code><i>hardbs</i>,&nbsp;<wbr><code>&#8211;block-size=</code><i>hardbs</i></dt>
 <dd> sets the (smaller) fallback block size to <i>hardbs</i> bytes. When <code>dd_rescue</code> encounters read errors, it will fall back to copying data in chunks of this size. This value defaults to 4k for buffered I/O and 512 bytes for direct I/O.<br />
- <i>hardbs</i> should be equal to or smaller than <i>softbs</i>. If both block sizes are identical, no fallback mechanism (and thus no retry) will take place on read errors.</p>
-<dt><code>-y&nbsp;<wbr></code><i>syncsize</i>,&nbsp;<wbr><code>&#8211;syncfreq=</code><i>syncsize</i></p>
-<dd> tells <code>dd_rescue</code> to call fsync() on the output file every <i>syncsize</i> bytes (will be rounded to multiples of <i>softbs</i> sized blocks). It will also update the progress indicator at least as often. By default, <i>syncsize</i> is set to 0, meaning that fsync() is only issued at the end of the copy operation.</dl>
+ <i>hardbs</i> should be equal to or smaller than <i>softbs</i>. If both block sizes are identical, no fallback mechanism (and thus no retry) will take place on read errors.</dd>
+<dt><code>-y&nbsp;<wbr></code><i>syncsize</i>,&nbsp;<wbr><code>&#8211;syncfreq=</code><i>syncsize</i></dt>
+<dd> tells <code>dd_rescue</code> to call fsync() on the output file every <i>syncsize</i> bytes (will be rounded to multiples of <i>softbs</i> sized blocks). It will also update the progress indicator at least as often. By default, <i>syncsize</i> is set to 0, meaning that fsync() is only issued at the end of the copy operation.</dd></dl>
 <h3>Positions and length</h3>
 <dl>
-<dt><code>-s&nbsp;<wbr></code><i>ipos</i>,&nbsp;<wbr><code>&#8211;ipos=</code><i>ipos</i>,&nbsp;<wbr><code>&#8211;input-position=</code><i>ipos</i></p>
+<dt><code>-s&nbsp;<wbr></code><i>ipos</i>,&nbsp;<wbr><code>&#8211;ipos=</code><i>ipos</i>,&nbsp;<wbr><code>&#8211;input-position=</code><i>ipos</i></dt>
 <dd> sets the starting position of the <i>infile</i> to <i>ipos</i>. Note that ipos is specified in bytes (but suffixes can be used, see above), not in terms of <i>softbs</i> or <i>hardbs</i> sized blocks. The default value for this is 0. When reverse direction copy is used, an <i>ipos</i> of 0 is treated specially, meaning the end of file.<br />
- Negative positions result in an error message.</p>
-<dt><code>-S&nbsp;<wbr></code><i>opos</i>,&nbsp;<wbr><code>&#8211;opos=</code><i>opos</i>,&nbsp;<wbr><code>&#8211;output-position=</code><i>opos</i></p>
-<dd> sets the starting position of the <i>outfile</i> to <i>opos</i>. If not specified, <i>opos</i> is set to <i>ipos</i>, so the file offsets in input and output file are the same. For reverse direction copy, an explicit <i>opos</i> of 0 will position at the end of the output file.</p>
-<dt><code>-x</code>, <code>&#8211;extend</code>, <code>&#8211;append</code></p>
-<dd> changes the interpretation of the output position to start at the end of the existing output file, making appending to a file convenient. If the output file does not exist, an error will be reported and <code>dd_rescue</code> aborted.</p>
-<dt><code>-m&nbsp;<wbr></code><i>maxxfer</i>,&nbsp;<wbr><code>&#8211;maxxfer=</code><i>maxxfer</i>,&nbsp;<wbr><code>&#8211;max-size=</code><i>maxxfer</i></p>
-<dd> specifies the maximum number of bytes (suffixes apply, but it&#8217;s NOT counted in blocks) that <code>dd_rescue </code> copies. If EOF is encountered before <i>maxxfer</i> bytes have been transferred, this option will be silently ignored.</p>
-<dt><code>-M</code>, <code>&#8211;noextend</code></p>
-<dd> tells <code>dd_rescue</code> to not extend the output file. This option is particularly helpful when overwriting a file with random data or zeroes for safe data destruction. If the output file does not exist, an error message will be generated and the program be aborted.</dl>
+ Negative positions result in an error message.</dd>
+<dt><code>-S&nbsp;<wbr></code><i>opos</i>,&nbsp;<wbr><code>&#8211;opos=</code><i>opos</i>,&nbsp;<wbr><code>&#8211;output-position=</code><i>opos</i></dt>
+<dd> sets the starting position of the <i>outfile</i> to <i>opos</i>. If not specified, <i>opos</i> is set to <i>ipos</i>, so the file offsets in input and output file are the same. For reverse direction copy, an explicit <i>opos</i> of 0 will position at the end of the output file.</dd>
+<dt><code>-x</code>, <code>&#8211;extend</code>, <code>&#8211;append</code></dt>
+<dd> changes the interpretation of the output position to start at the end of the existing output file, making appending to a file convenient. If the output file does not exist, an error will be reported and <code>dd_rescue</code> aborted.</dd>
+<dt><code>-m&nbsp;<wbr></code><i>maxxfer</i>,&nbsp;<wbr><code>&#8211;maxxfer=</code><i>maxxfer</i>,&nbsp;<wbr><code>&#8211;max-size=</code><i>maxxfer</i></dt>
+<dd> specifies the maximum number of bytes (suffixes apply, but it&#8217;s NOT counted in blocks) that <code>dd_rescue </code> copies. If EOF is encountered before <i>maxxfer</i> bytes have been transferred, this option will be silently ignored.</dd>
+<dt><code>-M</code>, <code>&#8211;noextend</code></dt>
+<dd> tells <code>dd_rescue</code> to not extend the output file. This option is particularly helpful when overwriting a file with random data or zeroes for safe data destruction. If the output file does not exist, an error message will be generated and the program be aborted.</dd></dl>
 <h3>Error handling</h3>
 <dl>
-<dt><code>-e&nbsp;<wbr></code><i>maxerr</i>,&nbsp;<wbr><code>&#8211;maxerr=</code><i>maxerr</i></p>
-<dd> tells <code>dd_rescue</code> to exit, after <i>maxerr</i> read errors have been encountered. By default, this is set to 0, resulting in <code>dd_rescue</code> trying to move on until it hits EOF (or <i>maxxfer</i> bytes have been transferred).</p>
-<dt><code>-w</code>, <code>&#8211;abort_we</code></p>
+<dt><code>-e&nbsp;<wbr></code><i>maxerr</i>,&nbsp;<wbr><code>&#8211;maxerr=</code><i>maxerr</i></dt>
+<dd> tells <code>dd_rescue</code> to exit, after <i>maxerr</i> read errors have been encountered. By default, this is set to 0, resulting in <code>dd_rescue</code> trying to move on until it hits EOF (or <i>maxxfer</i> bytes have been transferred).</dd>
+<dt><code>-w</code>, <code>&#8211;abort_we</code></dt>
 <dd> makes <code>dd_rescue</code> abort on any write errors. By default, on reported write errors, <code>dd_rescue</code> tries to rewrite the blocks with small block size writes, so a small failure in a larger block will not cause the whole block not to be written. Note that this may be handled similarly by your Operating System kernel with buffered writes without the user or dd_rescue noticing; the write retry logic in dd_rescue is mostly useful for direct I/O writes where write errors can be reliably detected.<br />
  Write error detection with buffered writes is unreliable; the kernel reports success and traces of the failing writeback operations later may only appear in your syslog. dd_rescue does try to notice the user by calling fsync() and carefully checking the return values of fsync() and close() calls.<br />
- Note that <code>dd_rescue</code> does exit if writes to the output file result in the Operating System reporting that no space is left.</dl>
+ Note that <code>dd_rescue</code> does exit if writes to the output file result in the Operating System reporting that no space is left.</dd></dl>
 <h3>Sparse files and write avoidance</h3>
 <dl>
-<dt><code>-A</code>, <code>&#8211;alwayswrite</code></p>
-<dd> changes the behavior of <code>dd_rescue</code> to write zeroes to the output file when the input file could not be read. By default, it just skips over, leaving whatever content was in the output file at the file position before. The default behavior may be desired, if e.g. previous copy operations may have resulted in good data being in place; it may be undesired if the output file may contain garbage (or sensitive information) that should rather be overwritten with zeroes.</p>
-<dt><code>-a</code>, <code>&#8211;sparse</code></p>
-<dd> will make <code>dd_rescue</code> look for empty blocks (of at least half of <i>softbs</i> size), i.e. blocks filled with zeroes. Rather than writing those zeroes to the output file, it will then skip forward in the output file, resulting in a sparse file, saving space in the output file system (if it supports sparse files). Note that if the output file does already exist and already has data stored at the location where zeroes are skipped over, this will result in an incomplete copy in that the output file is different from the input file at the location where blocks of zeroes were skipped over. <code>dd_rescue</code> tries to detect this and issue a warning, but it does not prevent this from happening</p>
-<dt><code>-W</code>, <code>&#8211;avoidwrite</code></p>
-<dd> results in <code>dd_rescue</code> reading a block ( <i>softbs</i> sized) from the output file prior to writing it. If it is already identical with the data that would be written to it, the writes are actually avoided. This option may be useful for devices, where e.g. writes should be avoided (e.g. because they may impact the remaining lifetime or because they are very slow compared to reads).</dl>
+<dt><code>-A</code>, <code>&#8211;alwayswrite</code></dt>
+<dd> changes the behavior of <code>dd_rescue</code> to write zeroes to the output file when the input file could not be read. By default, it just skips over, leaving whatever content was in the output file at the file position before. The default behavior may be desired, if e.g. previous copy operations may have resulted in good data being in place; it may be undesired if the output file may contain garbage (or sensitive information) that should rather be overwritten with zeroes.</dd>
+<dt><code>-a</code>, <code>&#8211;sparse</code></dt>
+<dd> will make <code>dd_rescue</code> look for empty blocks (of at least half of <i>softbs</i> size), i.e. blocks filled with zeroes. Rather than writing those zeroes to the output file, it will then skip forward in the output file, resulting in a sparse file, saving space in the output file system (if it supports sparse files). Note that if the output file does already exist and already has data stored at the location where zeroes are skipped over, this will result in an incomplete copy in that the output file is different from the input file at the location where blocks of zeroes were skipped over. <code>dd_rescue</code> tries to detect this and issue a warning, but it does not prevent this from happening</dd>
+<dt><code>-W</code>, <code>&#8211;avoidwrite</code></dt>
+<dd> results in <code>dd_rescue</code> reading a block ( <i>softbs</i> sized) from the output file prior to writing it. If it is already identical with the data that would be written to it, the writes are actually avoided. This option may be useful for devices, where e.g. writes should be avoided (e.g. because they may impact the remaining lifetime or because they are very slow compared to reads).</dd></dl>
 <h3>Other optimization</h3>
 <dl>
-<dt><code>-R</code>, <code>&#8211;repeat</code></p>
+<dt><code>-R</code>, <code>&#8211;repeat</code></dt>
 <dd> tells <code>dd_rescue</code> to only read one block ( <i>softbs</i> sized) and then repeatedly write it to the output file. Note that this results in never hitting EOF on the input file and should be used with a limit for the transfer size (options -m or -M) or when filling up an output device completely.<br />
- This option is automatically set, if the input file name equals &quot;/dev/zero&quot;.</p>
-<dt><code>-u</code>, <code>&#8211;rmvtrim</code></p>
+ This option is automatically set, if the input file name equals &quot;/dev/zero&quot;.</dd>
+<dt><code>-u</code>, <code>&#8211;rmvtrim</code></dt>
 <dd> instructs <code>dd_rescue</code> to remove the output file after writing to it has completed and issue a FITRIM on the file system that contains the output file. This makes only sense if writing zeros (or random numbers) as opposed to useful content from another file. (dd_rescue will ask for confirmation if this is specified with a normal input file and no -f (&#8211;force) is used.) This option may be used to ensure that all empty blocks of a file system are filled with zeros (rather than containing fragments of deleted files with possibly sensitive information).<br />
- The FITRIM ioctl (on Linux) tells the flash storage to consider the freed space as unused (like the fstrim tool or the discard option) by issuing ATA TRIM commands. This will only succeed with superuser privileges (but the error can otherwise be safely ignored). This is useful to ensure full performance of flash memory / SSDs. Note that FITRIM can take a while on large file systems, especially if the file systems are not mounted with the discard option and have not been trimmed (with e.g. fstrim) for a while. Not all file systems and not all flash-based storage support this.</p>
-<dt><code>-k</code>, <code>&#8211;splice</code></p>
-<dd> tells <code>dd_rescue</code> to use the Linux in-kernel zerocopy splice() copy operation rather than reading blocks into a user space buffer. Note that this operation mode does prevent the support of a number of <code>dd_rescue</code> features that can normally be used, such as falling back to smaller block sizes, avoiding writes, sparse mode, repeat optimization, reverse direction copy. A warning is issued to make the user aware.</p>
-<dt><code>-P</code>, <code>&#8211;fallocate</code></p>
+ The FITRIM ioctl (on Linux) tells the flash storage to consider the freed space as unused (like the fstrim tool or the discard option) by issuing ATA TRIM commands. This will only succeed with superuser privileges (but the error can otherwise be safely ignored). This is useful to ensure full performance of flash memory / SSDs. Note that FITRIM can take a while on large file systems, especially if the file systems are not mounted with the discard option and have not been trimmed (with e.g. fstrim) for a while. Not all file systems and not all flash-based storage support this.</dd>
+<dt><code>-k</code>, <code>&#8211;splice</code></dt>
+<dd> tells <code>dd_rescue</code> to use the Linux in-kernel zerocopy splice() copy operation rather than reading blocks into a user space buffer. Note that this operation mode does prevent the support of a number of <code>dd_rescue</code> features that can normally be used, such as falling back to smaller block sizes, avoiding writes, sparse mode, repeat optimization, reverse direction copy. A warning is issued to make the user aware.</dd>
+<dt><code>-P</code>, <code>&#8211;fallocate</code></dt>
 <dd> results in <code>dd_rescue</code> calling fallocate() on the output file, telling the file system how much space to preallocate for the output file. (The size is determined by the expected last position, as inferred from the input file length and <i>maxxfer</i> ). On file systems that support it, this results in them making better allocation decisions, avoiding fragmentation. (Note that it does not make sense to use sparse together with fallocate().)<br />
- This option is only available if dd_rescue is compiled with fallocate() support. For optimal support, it should be compiled with the libfallocate library.</dl>
+ This option is only available if dd_rescue is compiled with fallocate() support. For optimal support, it should be compiled with the libfallocate library.</dd></dl>
 <h3>Misc options</h3>
 <dl>
-<dt><code>-r</code>, <code>&#8211;reverse</code></p>
+<dt><code>-r</code>, <code>&#8211;reverse</code></dt>
 <dd> tells <code>dd_rescue</code> to copy in reverse direction, starting at <i>ipos</i> (with special case 0 meaning EOF) and working towards the beginning of the file. This is especially helpful if the input file has a bad spot which can be extremely slow to skip over, so approaching it from both directions saves a lot of time (and may prevent further damage).<br />
- Note that <code>dd_rescue</code> does automatically switch to reverse direction copy, if input and output file are identical and the input position is smaller than the output position, similar to the intelligence that memmove() uses to prevent loss of data when overlapping areas are copied. The option -f / &#8211;force does prevent this intelligence from happening.</p>
-<dt><code>-p</code>, <code>&#8211;preserve</code></p>
+ Note that <code>dd_rescue</code> does automatically switch to reverse direction copy, if input and output file are identical and the input position is smaller than the output position, similar to the intelligence that memmove() uses to prevent loss of data when overlapping areas are copied. The option -f / &#8211;force does prevent this intelligence from happening.</dd>
+<dt><code>-p</code>, <code>&#8211;preserve</code></dt>
 <dd> When copying files, this option does result in file metadata (timestamps, ownership, access rights, xattrs) to be copied, similar to the option with the same name in the cp program.<br />
- Note that ACLs and xattrs will only be copied if <code>dd_rescue</code> has been compiled with libxattr support and the library can be dynamically loaded on the system. Also note that failing to copy the attributes with <i>-p</i> is not considered a failure and thus won&#8217;t negatively affect the exit code of dd_rescue.</p>
-<dt><code>-t</code>, <code>&#8211;truncate</code></p>
-<dd> tells <code>dd_rescue</code> to open the output file with O_TRUNC, resulting in the output file (if it is a regular file) to be truncated to 0 bytes before writing to it, removing all previous content that the file may have contained. By default, <code>dd_rescue</code> does not remove previous content.</p>
-<dt><code>-T</code>, <code>&#8211;trunclast</code></p>
-<dd> tells <code>dd_rescue</code> to truncate the output file to the highest copied position after the copy operation completed, thus ensuring there&#8217;s no data beyond the end of the data that has been copied in this run.</p>
-<dt><code>-d</code>, <code>&#8211;odir_in</code></p>
+ Note that ACLs and xattrs will only be copied if <code>dd_rescue</code> has been compiled with libxattr support and the library can be dynamically loaded on the system. Also note that failing to copy the attributes with <i>-p</i> is not considered a failure and thus won&#8217;t negatively affect the exit code of dd_rescue.</dd>
+<dt><code>-t</code>, <code>&#8211;truncate</code></dt>
+<dd> tells <code>dd_rescue</code> to open the output file with O_TRUNC, resulting in the output file (if it is a regular file) to be truncated to 0 bytes before writing to it, removing all previous content that the file may have contained. By default, <code>dd_rescue</code> does not remove previous content.</dd>
+<dt><code>-T</code>, <code>&#8211;trunclast</code></dt>
+<dd> tells <code>dd_rescue</code> to truncate the output file to the highest copied position after the copy operation completed, thus ensuring there&#8217;s no data beyond the end of the data that has been copied in this run.</dd>
+<dt><code>-d</code>, <code>&#8211;odir_in</code></dt>
 <dd> instructs <code>dd_rescue</code> to open <i>infile</i> with O_DIRECT, bypassing the kernel buffers. While this option has a negative effect on performance (the kernel does read-ahead for buffered I/O), it will result in errors to be detected more quickly (kernel won&#8217;t retry) and allows for smaller I/O units (hardware sector size, 512bytes for most hard disks).<br />
- O_DIRECT may not be available on all platforms.</p>
-<dt><code>-D</code>, <code>&#8211;odir_out</code></p>
-<dd> tells <code>dd_rescue</code> to open <i>outfile</i> with O_DIRECT, bypassing kernel buffers. This has a significant negative effect on performance, as the program needs to wait for writes to hit the disks as opposed to the asynchronous nature of buffered writeback. On the flip side, the return status from writing is reliable this way and smaller I/O chunks (hardware sector size, 512bytes) are possible.</dl>
+ O_DIRECT may not be available on all platforms.</dd>
+<dt><code>-D</code>, <code>&#8211;odir_out</code></dt>
+<dd> tells <code>dd_rescue</code> to open <i>outfile</i> with O_DIRECT, bypassing kernel buffers. This has a significant negative effect on performance, as the program needs to wait for writes to hit the disks as opposed to the asynchronous nature of buffered writeback. On the flip side, the return status from writing is reliable this way and smaller I/O chunks (hardware sector size, 512bytes) are possible.</dd></dl>
 <h3>Logging</h3>
 <dl>
-<dt><code>-l&nbsp;<wbr></code><i>logfile</i>,&nbsp;<wbr><code>&#8211;logfile=</code><i>logfile</i></p>
-<dd> Unless in quiet mode, <code>dd_rescue</code> does produce constant updates on the status of the copy operation to stderr. With this option, these updates are also written to the specified <i>logfile</i>. The control characters (to move the cursor up to overwrite the existing status lines) are not written to the logfile.</p>
-<dt><code>-o&nbsp;<wbr></code><i>bbfile</i>,&nbsp;<wbr><code>&#8211;bbfile=</code><i>bbfile</i></p>
-<dd> instructs <code>dd_rescue</code> to write a list of bad blocks to <i>bbfile</i>. The file will contain a list of numbers (ASCII), one per line, where the numbers indicate the offset in terms of <i>hardbs</i> sized blocks. The file format is compatible with that of badblocks. Using dd_rescue on a block device (partition) and setting <i>hardbs</i> to the block size of a file system that you want to create, you should be able to feed the <i>bbfile</i> to mke2fs with the option -l.</dl>
+<dt><code>-l&nbsp;<wbr></code><i>logfile</i>,&nbsp;<wbr><code>&#8211;logfile=</code><i>logfile</i></dt>
+<dd> Unless in quiet mode, <code>dd_rescue</code> does produce constant updates on the status of the copy operation to stderr. With this option, these updates are also written to the specified <i>logfile</i>. The control characters (to move the cursor up to overwrite the existing status lines) are not written to the logfile.</dd>
+<dt><code>-o&nbsp;<wbr></code><i>bbfile</i>,&nbsp;<wbr><code>&#8211;bbfile=</code><i>bbfile</i></dt>
+<dd> instructs <code>dd_rescue</code> to write a list of bad blocks to <i>bbfile</i>. The file will contain a list of numbers (ASCII), one per line, where the numbers indicate the offset in terms of <i>hardbs</i> sized blocks. The file format is compatible with that of badblocks. Using dd_rescue on a block device (partition) and setting <i>hardbs</i> to the block size of a file system that you want to create, you should be able to feed the <i>bbfile</i> to mke2fs with the option -l.</dd></dl>
 <h3>Multiple output files</h3>
 <dl>
-<dt><code>-Y&nbsp;<wbr></code><i>ofileX</i>,&nbsp;<wbr><code>&#8211;outfile=</code><i>ofileX</i>,&nbsp;<wbr><code>&#8211;of=</code><i>ofileX</i></p>
-<dd> If you want to copy data to multiple files simultaneously, you can specify this option. It can be specified multiple times, so many copies can be made. Note that these files are secondary output files; they share file position with the primary output file <i>outfile</i>. Errors when writing to a secondary output file are ignored.</dl>
+<dt><code>-Y&nbsp;<wbr></code><i>ofileX</i>,&nbsp;<wbr><code>&#8211;outfile=</code><i>ofileX</i>,&nbsp;<wbr><code>&#8211;of=</code><i>ofileX</i></dt>
+<dd> If you want to copy data to multiple files simultaneously, you can specify this option. It can be specified multiple times, so many copies can be made. Note that these files are secondary output files; they share file position with the primary output file <i>outfile</i>. Errors when writing to a secondary output file are ignored.</dd></dl>
 <h3>Data protection by overwriting with random numbers</h3>
 <dl>
-<dt><code>-z&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;random=</code><i>RANDSEED</i></p>
+<dt><code>-z&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;random=</code><i>RANDSEED</i></dt>
 <dd>
-<dt><code>-Z&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;frandom=</code><i>RANDSEED</i></p>
+</dd><dt><code>-Z&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;frandom=</code><i>RANDSEED</i></dt>
 <dd>
-<dt><code>-2&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;shred2=</code><i>RANDSEED</i></p>
+</dd><dt><code>-2&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;shred2=</code><i>RANDSEED</i></dt>
 <dd>
-<dt><code>-3&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;shred3=</code><i>RANDSEED</i></p>
+</dd><dt><code>-3&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;shred3=</code><i>RANDSEED</i></dt>
 <dd>
-<dt><code>-4&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;shred4=</code><i>RANDSEED</i></p>
+</dd><dt><code>-4&nbsp;<wbr></code><i>RANDSEED</i>,&nbsp;<wbr><code>&#8211;shred4=</code><i>RANDSEED</i></dt>
 <dd> When you want to overwrite a file, partition or disk with random data, using /dev/urandom (on Linux) as input is not a very good idea; the interface has not been designed to yield a high bandwidth. It&#8217;s better to use a user space Pseudo Random Number Generator (PRNG). With option -z / &#8211;random, the C library&#8217;s PRNG is used. With -Z / &#8211;frandom and the -2/-3/-4 / &#8211;shred2/3/4 options, an RC4 based PRNG is used.<br />
  Note that in this mode, there is no <i>infile</i> so the first non-option argument is the output file.<br />
  The PRNG needs seeding; the C libraries PRNG takes a 32bit integer (4 bytes); the RC4 based PRNG takes 256 bytes. If <i>RANDSEED</i> is an integer, the integer number will be used to seed the C library&#8217;s PRNG. For the RC4 method, the C library&#8217;s PRNG then generates the 256 bytes to seed it. This creates repeatable PRNG data. The RANDSEED value of 0 is special; it will create a seedval that&#8217;s based on the current time and the process&#8217; PID and should be different for multiple runs of <code>dd_rescue .</code><br />
  If <i>RANDSEED</i> is not an integer, it&#8217;s assumed to be a file name from which the seed values can be read. <code>dd_rescue</code> will read 4 or 256 bytes from the file to seed the C library&#8217;s or the RC4 PRNG. For good pseudo random numbers, using /dev/urandom to seed is a good idea.<br />
  The modes -2/-3/-4 resp. &#8211;shred2/&#8211;shred3/&#8211;shred4 will overwrite the output file multiple times; after each pass, fsync() will ensure that the data does indeed hit the file. The last pass for these modes will overwrite the file with zeroes. The rationale behind doing this is to make it easier to hide that important data may have been overwritten, to make it easier for intelligent storage systems (such as SSDs) to recycle the empty blocks and to allow for better compression of a file system image containing such data.<br />
- With -2 / &#8211;shred2, one pass with RC4 generated PRNG is happening and then zeroes are written. With -3 / &#8211;shred3, there are two passes with RC4 PRNG generated random numbers and a zero pass; the second PRNG pass writes the inverse (bit-wise reversed) numbers from the first pass. -4 / &#8211;shred4 works like -3 / &#8211;shred3, with an additional pass with independent random numbers as third pass.</dl>
+ With -2 / &#8211;shred2, one pass with RC4 generated PRNG is happening and then zeroes are written. With -3 / &#8211;shred3, there are two passes with RC4 PRNG generated random numbers and a zero pass; the second PRNG pass writes the inverse (bit-wise reversed) numbers from the first pass. -4 / &#8211;shred4 works like -3 / &#8211;shred3, with an additional pass with independent random numbers as third pass.</dd></dl>
 <h3>Plugins</h3>
 <p> Since version 1.42, <code>dd_rescue</code> has an interface for plugins. Plugins have the ability to analyze the copied data or to transform it prior to it being written.</p>
 <dl>
-<dt><code>-L&nbsp;<wbr></code><i>plugin1[=param1[:param2[:..]]][,plugin2[=..][,..]]</i></p>
+<dt><code>-L&nbsp;<wbr></code><i>plugin1[=param1[:param2[:..]]][,plugin2[=..][,..]]</i></dt>
 <dd>
-<dt><code>&#8211;plugins=</code><i>plugin1[=param1[:param2[:..]]][,plugin2[=..][,..]]</i></p>
+</dd><dt><code>&#8211;plugins=</code><i>plugin1[=param1[:param2[:..]]][,plugin2[=..][,..]]</i></dt>
 <dd> loads plugins plugin1 &#8230; and passes parameters to it. All plugins should support at least the help parameter and provide information on their usage.<br />
  Plugins may impose limits on dd_rescue. Plugins that look at the data can&#8217;t work with splice, as this avoids copying data to user space. Also the interface currently does not facilitate reverse direction copy. Some plugins may impose further restrictions w.r.t. alignment of data in the file or not using sparse detection.<br />
- See section <code>PLUGINS</code> for an overview of available plugins. </p>
+ See section <code>PLUGINS</code> for an overview of available plugins. </dd>
 </dl>
 <h2>PLUGINS</h2>
 <h3>null</h3>
@@ -180,18 +180,18 @@ description: "dd_rescue – Data recovery and protection tool"
 <p> On successful completion, <code>dd_rescue</code> returns an exit code of 0. Any other exit code indicates that the program has aborted because of an error condition or that copying of the data has not been entirely successful. </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>dd_rescue -k -P -p -t infile outfile</code></p>
-<dd> copies <i>infile</i> to <i>outfile</i> and does truncate the output file on opening (so deleting any previous data in it), copies mode, times, ownership at the end, uses fallocate to reserve the space for the output file and uses efficient in kernel splice copy method.</p>
-<dt><code>dd_rescue -A -d -D -b 512&nbsp;<wbr>/dev/sda&nbsp;<wbr>/dev/sda</code></p>
-<dd> reads the contents of every sector of disk sda and writes it back to the same location. Typical hard disks reallocate flaky and faulty sectors on writes, so this operation may result in the complete disk being usable again when there were errors before. Unreadable blocks however will contain zeroes after this.</p>
-<dt><code>dd_rescue -2&nbsp;<wbr>/dev/urandom -M outfile</code></p>
-<dd> overwrites the file <i>outfile</i> twice; once with good pseudo random numbers and then with zeroes.</p>
-<dt><code>dd_rescue -t -a image1.raw image2.raw</code></p>
-<dd> copies a file system image and looks for empty blocks to create a sparse output file to save disk space. (If the source file system has been used a bit, on that file system creating a large file with zeroes and removing it again prior to this operation will result in more sectors with zeroes. <code>dd_rescue -u&nbsp;<wbr>/dev/zero DUMMY</code> will achieve this &#8230;)</p>
-<dt><code>dd_rescue -ATL hash=md5:output,lzo=compress:bench,MD5:output in out.lzo</code></p>
-<dd> copies the file <i>in</i> to <i>out.lzo</i> with using lzo (lzo1x_1) compression and calculating an md5 hash (checksum) on both files. The md5 hashes for both are also written to stdout in the md5sum output format. Note that the compress parameter to lzo is not strictly required here; the plugin could have deduced it from the file names. This example shows that you can specify multiple plugins with multiple parameters; the plugins are forming a filter chain. You can specify the same plugin multiple times.</p>
-<dt><code>dd_rescue -L hash=sha512:set_xattr:fallb,null=change infile&nbsp;<wbr>/dev/null</code></p>
-<dd> reads the file <i>infile</i> and computes its sha512 hash. It stores it in the input file&#8217;s user.checksum.sha512 attribute (and falls back to writing it to CHECKSUMS.sha512 if xattrs can&#8217;t be written). Note the use of the null plugin with faking data change with the change parameter; this causes the hash plugin to write to the input file which it would not normally have done. Of course this will fail if you don&#8217;t have the appropriate privileges to write xattrs to infile nor to write the checksum to CHECKSUMS.sha512.</dl>
+<dt><code>dd_rescue -k -P -p -t infile outfile</code></dt>
+<dd> copies <i>infile</i> to <i>outfile</i> and does truncate the output file on opening (so deleting any previous data in it), copies mode, times, ownership at the end, uses fallocate to reserve the space for the output file and uses efficient in kernel splice copy method.</dd>
+<dt><code>dd_rescue -A -d -D -b 512&nbsp;<wbr>/dev/sda&nbsp;<wbr>/dev/sda</code></dt>
+<dd> reads the contents of every sector of disk sda and writes it back to the same location. Typical hard disks reallocate flaky and faulty sectors on writes, so this operation may result in the complete disk being usable again when there were errors before. Unreadable blocks however will contain zeroes after this.</dd>
+<dt><code>dd_rescue -2&nbsp;<wbr>/dev/urandom -M outfile</code></dt>
+<dd> overwrites the file <i>outfile</i> twice; once with good pseudo random numbers and then with zeroes.</dd>
+<dt><code>dd_rescue -t -a image1.raw image2.raw</code></dt>
+<dd> copies a file system image and looks for empty blocks to create a sparse output file to save disk space. (If the source file system has been used a bit, on that file system creating a large file with zeroes and removing it again prior to this operation will result in more sectors with zeroes. <code>dd_rescue -u&nbsp;<wbr>/dev/zero DUMMY</code> will achieve this &#8230;)</dd>
+<dt><code>dd_rescue -ATL hash=md5:output,lzo=compress:bench,MD5:output in out.lzo</code></dt>
+<dd> copies the file <i>in</i> to <i>out.lzo</i> with using lzo (lzo1x_1) compression and calculating an md5 hash (checksum) on both files. The md5 hashes for both are also written to stdout in the md5sum output format. Note that the compress parameter to lzo is not strictly required here; the plugin could have deduced it from the file names. This example shows that you can specify multiple plugins with multiple parameters; the plugins are forming a filter chain. You can specify the same plugin multiple times.</dd>
+<dt><code>dd_rescue -L hash=sha512:set_xattr:fallb,null=change infile&nbsp;<wbr>/dev/null</code></dt>
+<dd> reads the file <i>infile</i> and computes its sha512 hash. It stores it in the input file&#8217;s user.checksum.sha512 attribute (and falls back to writing it to CHECKSUMS.sha512 if xattrs can&#8217;t be written). Note the use of the null plugin with faking data change with the change parameter; this causes the hash plugin to write to the input file which it would not normally have done. Of course this will fail if you don&#8217;t have the appropriate privileges to write xattrs to infile nor to write the checksum to CHECKSUMS.sha512.</dd></dl>
 <p> See also README.dd_rescue and <a href="/docs/linux/man/1-ddr_lzo/">ddr_lzo</a>(1) to learn about the possibilities.</p>
 <h2>TESTING</h2>
 <p> Untested code is buggy, almost always. I happen to have a damaged hard disk that I use for testing dd_rescue from time to time. But to allow for automated testing of error recovery, it&#8217;s better to have predictable failures for the program to deal with. So there is a fault injection framework.<br />

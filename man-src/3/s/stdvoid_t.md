@@ -11,10 +11,8 @@ std::void_t - std::void_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class...&gt;
     (since C++ 17)
-
         using void_t = void;</code></pre> 
 Utility metafunction that maps a sequence of any types to the type void 
 
@@ -76,27 +74,20 @@ struct is_iterable&lt;T, std::void_t&lt;decltype(std::declval&lt;T&gt;().begin()
 }; 
 &nbsp;<wbr>&nbsp;// An iterator trait which value_type is always the value_type of the 
 &nbsp;<wbr>&nbsp;// iterated container, even with back_insert_iterator which value_type is void <pre><code>template &lt;typename T, typename = void&gt;
-
 struct iterator_trait
-
     : std::iterator_traits&lt;T&gt; {
 };
-
 template &lt;typename T&gt;
-
 struct iterator_trait&lt;T, std::void_t&lt;typename T::container_type&gt;&gt;
-
     : std::iterator_traits&lt;typename T::container_type::iterator&gt; {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; is_iterable&lt;std::vector&lt;double&gt;&gt;::value &lt;&lt; '\n';
     std::cout &lt;&lt; is_iterable&lt;std::map&lt;int, double&gt;&gt;::value &lt;&lt; '\n';
     std::cout &lt;&lt; is_iterable&lt;double&gt;::value &lt;&lt; '\n';
     std::cout &lt;&lt; is_iterable&lt;A&gt;::value &lt;&lt; '\n';
-
     std::vector&lt;int&gt; v;
     std::cout &lt;&lt; std::is_same&lt;iterator_trait&lt;decltype(std::back_inserter(v))&gt;::value_type, iterator_trait&lt;decltype(v.cbegin())&gt;::value_type&gt;::value &lt;&lt; '\n';
 }

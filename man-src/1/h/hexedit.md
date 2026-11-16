@@ -24,13 +24,13 @@ url: "/docs/linux/man/1-hexedit/"
 
 <dl>
 <dt><i>-s, --sector</i>
-<dd> Format the display to have entire sectors.
-<dt><i>-m, --maximize</i>
-<dd> Try to maximize the display.
-<dt><i>--color</i>
-<dd> Display colors. This feature is only available if your operating system supports it.
-<dt><i>-h, --help</i>
-<dd> Show the usage.</dl>
+</dt><dd> Format the display to have entire sectors.
+</dd><dt><i>-m, --maximize</i>
+</dt><dd> Try to maximize the display.
+</dd><dt><i>--color</i>
+</dt><dd> Display colors. This feature is only available if your operating system supports it.
+</dd><dt><i>-h, --help</i>
+</dt><dd> Show the usage.</dd></dl>
 
 <h2>COMMANDS (quickly)</h2>
 

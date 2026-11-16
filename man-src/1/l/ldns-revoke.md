@@ -15,8 +15,8 @@ description: "ldns-revoke – sets the revoke bit of a DNSKEY"
 <p> <code>ldns-revoke</code> is used to revoke a public DNSKEY RR. When run it will read <i>file</i> with a DNSKEY RR in it, sets the revoke bit and write back the output to <i>file</i> . </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd> Write the result to stdout instead of a file </p>
+<dt><code>-n</code></dt>
+<dd> Write the result to stdout instead of a file </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by the ldns team as an example for ldns usage. </p>

@@ -15,48 +15,48 @@ description: "cvsgraph – A CVS/RCS repository grapher"
 <p> <code>CvsGraph</code> generates images and image maps from CVS/RCS repository files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Deprecated, use -O&#8217;branch_dupbox=-1&#8242; for same functionality.</p>
-<dt><code>-c</code> <i>file</i></p>
-<dd> Read alternate config from <i>file</i>.</p>
-<dt><code>-d</code> <i>level</i></p>
-<dd> Enable debug mode at <i>level</i>. The amount of information is determined by a bitwise or of the following: 1=config lexer, 2=config parser, 4=rcsfile lexer, 8=rcsfile parser, 16=rcsfile structure. The <i>level</i> argument may be in decimal, octal or hexadecimal format.</p>
-<dt><code>-h</code></p>
-<dd> A brief description of possible options.</p>
-<dt><code>-i</code></p>
-<dd> Generate an image map instead of an image.</p>
-<dt><code>-I</code> <i>file</i></p>
+<dt><code>-b</code></dt>
+<dd> Deprecated, use -O&#8217;branch_dupbox=-1&#8242; for same functionality.</dd>
+<dt><code>-c</code> <i>file</i></dt>
+<dd> Read alternate config from <i>file</i>.</dd>
+<dt><code>-d</code> <i>level</i></dt>
+<dd> Enable debug mode at <i>level</i>. The amount of information is determined by a bitwise or of the following: 1=config lexer, 2=config parser, 4=rcsfile lexer, 8=rcsfile parser, 16=rcsfile structure. The <i>level</i> argument may be in decimal, octal or hexadecimal format.</dd>
+<dt><code>-h</code></dt>
+<dd> A brief description of possible options.</dd>
+<dt><code>-i</code></dt>
+<dd> Generate an image map instead of an image.</dd>
+<dt><code>-I</code> <i>file</i></dt>
 <dd> Also write an image map to <i>file</i>. This can be useful if you want to generate both image and image map simultaneously. This halves the total time spent on accessing the repository file because it is parsed only once.<br />
  However, keeping track of auto-generated files can be a bit of a hack if used in HTTP requests (unless you pass both image and HTML file in one HTTP stream).<br />
  Note 1: most time is used for the image-drawing routines (actually libgd), so you might want to think twice in CGI apps.<br />
- Note 2: you can still use &#8216;<code>-o</code>&#8216; to specify an output file for the image. And, if you also specify &#8216;<code>-i</code>&#8216;, then you&#8217;ll get two image maps, for whatever purpose that might be.</p>
-<dt><code>-k</code></p>
+ Note 2: you can still use &#8216;<code>-o</code>&#8216; to specify an output file for the image. And, if you also specify &#8216;<code>-i</code>&#8216;, then you&#8217;ll get two image maps, for whatever purpose that might be.</dd>
+<dt><code>-k</code></dt>
 <dd> Deprecated, use -O&#8217;auto_stretch=-1&#8242; for same functionality.<br />
- This function is <code>not</code> stable.</p>
-<dt><code>-M</code> <i>name</i></p>
-<dd> Deprecated, use -O&#8217;map_name=&quot;AMapName&quot;&#8217; for same functionality.</p>
-<dt><code>-m</code> <i>mod</i></p>
-<dd> Use <i>mod</i> as the CVS module. This option overrides <code>cvsmodule</code> in the configuration file.</p>
-<dt><code>-O</code> <i>cfg_option=value[;opt=val[&#8230;]]</i></p>
-<dd> Set <i>cfg_option</i> to <i>value</i>. Multiple <code>-O</code> are allowed as well as multiple options can be set simultaneously by separating them with &#8216;;&#8217;. See <code><a href="/docs/linux/man/5-cvsgraph-conf/">cvsgraph.conf</a>(5)</code> for a detailed list of options. See also <code>CONFIGURATION</code> below.</p>
-<dt><code>-o</code> <i>file</i></p>
-<dd> Output to <i>file</i>. Otherwise, output is written to standard output.</p>
-<dt><code>-q</code></p>
-<dd> Be quiet (i.e. no warnings)</p>
-<dt><code>-r</code> <i>path</i></p>
-<dd> Use <i>path</i> as the CVS root. This option overrides <code>cvsroot</code> in the configuration file.</p>
-<dt><code>-s</code></p>
-<dd> Deprecated, use -O&#8217;strip_untagged=-1&#8242; for same functionality.</p>
-<dt><code>-S</code></p>
-<dd> Deprecated, use -O&#8217;strip_first_rev=-1&#8242; for same functionality.</p>
-<dt><code>-u</code></p>
-<dd> Deprecated, use -O&#8217;upside_down=-1&#8242; for same functionality.</p>
-<dt><code>-V</code></p>
-<dd> Print version and exit.</p>
-<dt><code>-x</code> <i>{3,4,x}</i></p>
-<dd> Set the HTML level of compliance for image maps. Use <i>3</i> for HTML 3.x, <i>4</i> for HTML 4.x and <i>x</i> for XHTML. Default is HTML 3.x compatibility.</p>
-<dt><code>-[0-9]</code> <i>txt</i></p>
-<dd> Use <i>txt</i> for expansion</dl>
+ This function is <code>not</code> stable.</dd>
+<dt><code>-M</code> <i>name</i></dt>
+<dd> Deprecated, use -O&#8217;map_name=&quot;AMapName&quot;&#8217; for same functionality.</dd>
+<dt><code>-m</code> <i>mod</i></dt>
+<dd> Use <i>mod</i> as the CVS module. This option overrides <code>cvsmodule</code> in the configuration file.</dd>
+<dt><code>-O</code> <i>cfg_option=value[;opt=val[&#8230;]]</i></dt>
+<dd> Set <i>cfg_option</i> to <i>value</i>. Multiple <code>-O</code> are allowed as well as multiple options can be set simultaneously by separating them with &#8216;;&#8217;. See <code><a href="/docs/linux/man/5-cvsgraph-conf/">cvsgraph.conf</a>(5)</code> for a detailed list of options. See also <code>CONFIGURATION</code> below.</dd>
+<dt><code>-o</code> <i>file</i></dt>
+<dd> Output to <i>file</i>. Otherwise, output is written to standard output.</dd>
+<dt><code>-q</code></dt>
+<dd> Be quiet (i.e. no warnings)</dd>
+<dt><code>-r</code> <i>path</i></dt>
+<dd> Use <i>path</i> as the CVS root. This option overrides <code>cvsroot</code> in the configuration file.</dd>
+<dt><code>-s</code></dt>
+<dd> Deprecated, use -O&#8217;strip_untagged=-1&#8242; for same functionality.</dd>
+<dt><code>-S</code></dt>
+<dd> Deprecated, use -O&#8217;strip_first_rev=-1&#8242; for same functionality.</dd>
+<dt><code>-u</code></dt>
+<dd> Deprecated, use -O&#8217;upside_down=-1&#8242; for same functionality.</dd>
+<dt><code>-V</code></dt>
+<dd> Print version and exit.</dd>
+<dt><code>-x</code> <i>{3,4,x}</i></dt>
+<dd> Set the HTML level of compliance for image maps. Use <i>3</i> for HTML 3.x, <i>4</i> for HTML 4.x and <i>x</i> for XHTML. Default is HTML 3.x compatibility.</dd>
+<dt><code>-[0-9]</code> <i>txt</i></dt>
+<dd> Use <i>txt</i> for expansion</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> <code>CvsGraph</code> starts with reading a configuration file. If the &#8216;<code>-c</code>&#8216; option is given on the command line, then it is read. Otherwise, <code>cvsgraph</code> first looks for a configuration file in the current directory using <i>./cvsgraph.conf</i> and, if not found, tries to open <i>/etc/cvsgraph.conf</i>. Defaults and command line overrides will be used if no configuration file can be opened. The format of the configuration file is described in <code><a href="/docs/linux/man/5-cvsgraph-conf/">cvsgraph.conf</a>(5)</code>. Configuration parameters entered on the command line have always precedence over the configuration file. Configuration options are processed in the following order:<br />
  &#8211; configuration file<br />
@@ -74,8 +74,8 @@ description: "cvsgraph – A CVS/RCS repository grapher"
  Generation of image maps conforms to the HTML standard and maps rectangular regions of the image where revisions and branches are drawn. Additionally, an extra rectangular region is generated between revisions to support diff generation.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/cvsgraph.conf</i></p>
-<dd> Configuration file read for default layout parameters.</dl>
+<dt><i>/etc/cvsgraph.conf</i></dt>
+<dd> Configuration file read for default layout parameters.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>CvsGraph</code> is written and maintained by B. Stultiens.<br />
  Send comments and bug reports to <i>cvsgraph [at] akhphd.au.dk</i> (read the mailnote in the README file first) and visit the homepage at:<br />

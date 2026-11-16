@@ -10,7 +10,6 @@ description: "uuid_compare – compare whether two UUIDs are the same"
 <p>uuid_compare &#8211; compare whether two UUIDs are the same</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;uuid.h&gt;
-
 int uuid_compare(uuid_t uu1, uuid_t uu2)</code></pre>
 <h2>Description</h2>
 <p>The <code>uuid_compare</code> function compares the two supplied uuid variables <i>uu1</i> and <i>uu2</i> to each other.</p>

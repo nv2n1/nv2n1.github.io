@@ -21,11 +21,11 @@ git write - tree[--missing - ok][--prefix = &lt;prefix&gt; / ]
 <p> &#8211;missing-ok</p>
 <dl>
 <dt>
-<dd> Normally <i>git write-tree</i> ensures that the objects referenced by the directory exist in the object database. This option disables this check.</dl>
+</dt><dd> Normally <i>git write-tree</i> ensures that the objects referenced by the directory exist in the object database. This option disables this check.</dd></dl>
 <p> &#8211;prefix=&lt;prefix&gt;/</p>
 <dl>
 <dt>
-<dd> Writes a tree object that represents a subdirectory <code>&lt;prefix&gt;</code>. This can be used to write the tree object for a subproject that is in the named subdirectory.</dl>
+</dt><dd> Writes a tree object that represents a subdirectory <code>&lt;prefix&gt;</code>. This can be used to write the tree object for a subproject that is in the named subdirectory.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

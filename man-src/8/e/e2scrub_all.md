@@ -14,14 +14,14 @@ description: "e2scrub_all – check all mounted ext[234] file systems for errors
 <p>Searches the system for all LVM logical volumes containing an ext2, ext3, or ext4 file system, and checks them for problems. The checking is performed by invoking the <code>e2scrub</code> tool, which will look for corruptions. Corrupt file systems will be tagged as having errors so that fsck will be invoked before the next mount. If no errors are encountered, <code>fstrim</code> will be called on the file system if it is mounted. See the <code>e2scrub</code> manual page for more information about how the checking is performed.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd>Print what commands <code>e2scrub_all</code> would execute to initiate the e2scrub operations. (Note: these commands will not actually be executed; however, since <code>e2scrub_all</code> needs to run some additional, privileged commands to query the system to determine which <code>e2scrub</code> commands would be executed, it still needs to be run as root.)</p>
-<dt><code>-r</code></p>
-<dd>Remove e2scrub snapshots but do not check anything.</p>
-<dt><code>-A</code></p>
-<dd>Scrub all ext[234] file systems even if they are not mounted.</p>
-<dt><code>-V</code></p>
-<dd>Print version information and exit.</dl>
+<dt><code>-n</code></dt>
+<dd>Print what commands <code>e2scrub_all</code> would execute to initiate the e2scrub operations. (Note: these commands will not actually be executed; however, since <code>e2scrub_all</code> needs to run some additional, privileged commands to query the system to determine which <code>e2scrub</code> commands would be executed, it still needs to be run as root.)</dd>
+<dt><code>-r</code></dt>
+<dd>Remove e2scrub snapshots but do not check anything.</dd>
+<dt><code>-A</code></dt>
+<dd>Scrub all ext[234] file systems even if they are not mounted.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version information and exit.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-e2scrub/">e2scrub</a></code>(8)</p>
 <h2>Author</h2>

@@ -95,28 +95,28 @@ description: "canna_selinux – Security Enhanced Linux Policy for the canna pro
 <p> <code>canna_exec_t</code> </p>
 <p> &#8211; Set files with the canna_exec_t type, if you want to transition an executable to the canna_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/catdic, /usr/sbin/jserver, /usr/bin/cannaping, /usr/sbin/cannaserver </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/catdic, /usr/sbin/jserver, /usr/bin/cannaping, /usr/sbin/cannaserver </dd>
 </dl>
 <p> <code>canna_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the canna_initrc_exec_t type, if you want to transition an executable to the canna_initrc_t domain. </p>
 <p> <code>canna_log_t</code> </p>
 <p> &#8211; Set files with the canna_log_t type, if you want to treat the data as canna log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/wnn(/.*)?, /var/log/canna(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/wnn(/.*)?, /var/log/canna(/.*)? </dd>
 </dl>
 <p> <code>canna_var_lib_t</code> </p>
 <p> &#8211; Set files with the canna_var_lib_t type, if you want to store the canna files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/wnn/dic(/.*)?, /var/lib/canna/dic(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/wnn/dic(/.*)?, /var/lib/canna/dic(/.*)? </dd>
 </dl>
 <p> <code>canna_var_run_t</code> </p>
 <p> &#8211; Set files with the canna_var_run_t type, if you want to store the canna files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/wnn-unix(/.*), /var/run/.iroha_unix/.*, /var/run/.iroha_unix </p>
+<dt>Paths:</dt>
+<dd>/var/run/wnn-unix(/.*), /var/run/.iroha_unix/.*, /var/run/.iroha_unix </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

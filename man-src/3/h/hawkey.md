@@ -13,202 +13,202 @@ description: "hawkey – Hawkey Documentation"
 <h2>API CHANGES</h2>
 <h3>Contents</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>API Changes</i></p>
-<dt>&bull;</p>
-<dd> <i>Introduction</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.2.10</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.2.11</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.0</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>Query: key for reponame filtering</i></p>
-<dt>&bull;</p>
-<dd> <i>Repo initialization</i></p>
-<dt>&bull;</p>
-<dd> <i>Query installs obsoleted</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Query: filtering by repository with the reponame key</i></p>
-<dt>&bull;</p>
-<dd> <i>Package: removed methods for direct EVR comparison</i></p>
-<dt>&bull;</p>
-<dd> <i>Repo initialization</i></p>
-<dt>&bull;</p>
-<dd> <i>Query installs obsoleted</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.1</i></p>
-<dt>&bull;</p>
-<dd> <i>Query: hy_query_filter_package_in() takes a new parameter</i></p>
-<dt>&bull;</p>
-<dd> <i>Removed hy_query_filter_obsoleting()</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.2</i></p>
-<dt>&bull;</p>
-<dd> <i>Removed hy_packagelist_of_obsoletes.</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.3</i></p>
-<dt>&bull;</p>
-<dd> <i>Renamed hy_package_get_nvra to hy_package_get_nevra</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.4</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>pkg.__repr__() is more verbose now</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.8</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>New parameter rootdir to hy_sack_create()</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Forms recognized by Subject are no longer an instance-scope setting</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.9</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>Flags for hy_sack_create</i></p>
-<dt>&bull;</p>
-<dd> <i>hy_sack_get_cache_path is renamed to hy_sack_get_cache_dir</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>make_cache_dir for Sack&#8217;s constructor</i></p>
-<dt>&bull;</p>
-<dd> <i>cache_path property of Sack renamed to cache_dir</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.3.11</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>hy_goal_package_obsoletes() removed, hy_goal_list_obsoleted_by_package() provided instead</i></p>
-<dt>&bull;</p>
-<dd> <i>hy_goal_list_erasures() does not report obsoletes</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.4.5</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>Query: hy_query_filter_latest() now filter latest packages ignoring architecture</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.4.13</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>Deprecated hy_package_get_update_*</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.4.15</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>hy_goal_write_debugdata() takes a directory parameter</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Goal.write_debugdata() takes a directory parameter</i></p>
-<dt>&bull;</p>
-<dd> <i>Package: string attributes are represented by Unicode object</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.4.18</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>Deprecated hy_advisory_get_filenames</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Repo() does not accept cost keyword argument</i></p>
-<dt>&bull;</p>
-<dd> <i>Deprecated _hawkey.Advisory.filenames</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.4.19</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Advisory attributes in Unicode</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.5.2</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>hy_chksum_str returns NULL</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.5.3</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>New parameter logfile to hy_sack_create()</i></p>
-<dt>&bull;</p>
-<dd> <i>Deprecated hy_create_cmdline_repo()</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>New optional parameter logfile to Sack constructor</i></p>
-<dt>&bull;</p>
-<dd> <i>cache_path property of Sack renamed to cache_dir</i></p>
-<dt>&bull;</p>
-<dd> <i>Deprecated Sack method create_cmdline_repo()</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.5.4</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Goal: install() takes a new optional parameter</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.5.5</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>Renamed hy_sack_load_yum_repo to hy_sack_load_repo</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Sack method load_yum_repo has been renamed to Sack.load_repo()</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.5.7</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Package: file attribute is represented by list of Unicode objects</i></p>
-<dt>&bull;</p>
-<dd> <i>Sack: list_arches method returns list of Unicode objects</i></p>
-<dt>&bull;</p>
-<dd> <i>Changes in 0.5.9</i></p>
-<dt>&bull;</p>
-<dd> <i>Core</i></p>
-<dt>&bull;</p>
-<dd> <i>Deprecated hy_goal_req_has_distupgrade(), hy_goal_req_has_erase() and hy_goal_req_has_upgrade() functions</i></p>
-<dt>&bull;</p>
-<dd> <i>Python bindings</i></p>
-<dt>&bull;</p>
-<dd> <i>Deprecated Goal methods Goal.req_has_distupgrade_all(), Goal.req_has_erase() and Goal.req_has_upgrade_all()</i></dl>
+<dt>&bull;</dt>
+<dd> <i>API Changes</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Introduction</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.2.10</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.2.11</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.0</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Query: key for reponame filtering</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Repo initialization</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Query installs obsoleted</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Query: filtering by repository with the reponame key</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Package: removed methods for direct EVR comparison</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Repo initialization</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Query installs obsoleted</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.1</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Query: hy_query_filter_package_in() takes a new parameter</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Removed hy_query_filter_obsoleting()</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.2</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Removed hy_packagelist_of_obsoletes.</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.3</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Renamed hy_package_get_nvra to hy_package_get_nevra</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.4</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>pkg.__repr__() is more verbose now</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.8</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>New parameter rootdir to hy_sack_create()</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Forms recognized by Subject are no longer an instance-scope setting</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.9</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Flags for hy_sack_create</i></dd>
+<dt>&bull;</dt>
+<dd> <i>hy_sack_get_cache_path is renamed to hy_sack_get_cache_dir</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>make_cache_dir for Sack&#8217;s constructor</i></dd>
+<dt>&bull;</dt>
+<dd> <i>cache_path property of Sack renamed to cache_dir</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.3.11</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>hy_goal_package_obsoletes() removed, hy_goal_list_obsoleted_by_package() provided instead</i></dd>
+<dt>&bull;</dt>
+<dd> <i>hy_goal_list_erasures() does not report obsoletes</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.4.5</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Query: hy_query_filter_latest() now filter latest packages ignoring architecture</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.4.13</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Deprecated hy_package_get_update_*</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.4.15</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>hy_goal_write_debugdata() takes a directory parameter</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Goal.write_debugdata() takes a directory parameter</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Package: string attributes are represented by Unicode object</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.4.18</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Deprecated hy_advisory_get_filenames</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Repo() does not accept cost keyword argument</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Deprecated _hawkey.Advisory.filenames</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.4.19</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Advisory attributes in Unicode</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.5.2</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>hy_chksum_str returns NULL</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.5.3</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>New parameter logfile to hy_sack_create()</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Deprecated hy_create_cmdline_repo()</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>New optional parameter logfile to Sack constructor</i></dd>
+<dt>&bull;</dt>
+<dd> <i>cache_path property of Sack renamed to cache_dir</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Deprecated Sack method create_cmdline_repo()</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.5.4</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Goal: install() takes a new optional parameter</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.5.5</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Renamed hy_sack_load_yum_repo to hy_sack_load_repo</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Sack method load_yum_repo has been renamed to Sack.load_repo()</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.5.7</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Package: file attribute is represented by list of Unicode objects</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Sack: list_arches method returns list of Unicode objects</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Changes in 0.5.9</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Core</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Deprecated hy_goal_req_has_distupgrade(), hy_goal_req_has_erase() and hy_goal_req_has_upgrade() functions</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Python bindings</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Deprecated Goal methods Goal.req_has_distupgrade_all(), Goal.req_has_erase() and Goal.req_has_upgrade_all()</i></dd></dl>
 <h3>Introduction</h3>
 <p> This document describes the API changes the library users should be aware of before upgrading to each respective version. It is our plan to have the amount of changes requiring changing the client code go to a minimum after the library hits the 1.0.0 version. </p>
 <p> Depracated API items (classes, methods, etc.) are designated as such in this document. The first release where support for such items can be dropped entirely must be issued at <i>least five months</i> after the issue of the release that announced the deprecation and at the same time have, relatively to the deprecating release, either:</p>
 <dl>
-<dt>&bull;</p>
-<dd> a higher major version number, or</p>
-<dt>&bull;</p>
-<dd> a higher minor version number, or</p>
-<dt>&bull;</p>
-<dd> a patchlevel number that is <i>by at least five</i> greater. </p>
+<dt>&bull;</dt>
+<dd> a higher major version number, or</dd>
+<dt>&bull;</dt>
+<dd> a higher minor version number, or</dd>
+<dt>&bull;</dt>
+<dd> a patchlevel number that is <i>by at least five</i> greater. </dd>
 <p> These criteria are likely to tighten in the future as hawkey matures. </p>
 <p> Actual changes in the API are then announced in this document as well. ABI changes including changes in functions&#8217; parameter counts or types or removal of public symbols from <code>libhawkey</code> imply an increase in the library&#8217;s SONAME version.</dl>
 <h3>Changes in 0.2.10</h3>
@@ -526,32 +526,32 @@ goal.actions | hawkey.UPGRADE_ALL
 <h2>FAQ</h2>
 <h3>Contents</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>FAQ</i></p>
-<dt>&bull;</p>
-<dd> <i>Getting Started</i></p>
-<dt>&bull;</p>
-<dd> <i>How do I build it?</i></p>
-<dt>&bull;</p>
-<dd> <i>Are there examples using hawkey?</i></p>
-<dt>&bull;</p>
-<dd> <i>Using Hawkey</i></p>
-<dt>&bull;</p>
-<dd> <i>How do I obtain the repo metadata files to feed to Hawkey?</i></p>
-<dt>&bull;</p>
-<dd> <i>Why is a tool to do the downloads not integrated into Hawkey?</i></dl>
+<dt>&bull;</dt>
+<dd> <i>FAQ</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Getting Started</i></dd>
+<dt>&bull;</dt>
+<dd> <i>How do I build it?</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Are there examples using hawkey?</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Using Hawkey</i></dd>
+<dt>&bull;</dt>
+<dd> <i>How do I obtain the repo metadata files to feed to Hawkey?</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Why is a tool to do the downloads not integrated into Hawkey?</i></dd></dl>
 <h3>Getting Started</h3>
 <h3>How do I build it?</h3>
 <p> See the <i>README</i>.</p>
 <h3>Are there examples using hawkey?</h3>
 <p> Yes, look at:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>unit tests</i></p>
-<dt>&bull;</p>
-<dd> <i>The Hawkey Testing Hack</i></p>
-<dt>&bull;</p>
-<dd> a more complex example is <i>DNF</i>, the Yum fork using hawkey for backend.</dl>
+<dt>&bull;</dt>
+<dd> <i>unit tests</i></dd>
+<dt>&bull;</dt>
+<dd> <i>The Hawkey Testing Hack</i></dd>
+<dt>&bull;</dt>
+<dd> a more complex example is <i>DNF</i>, the Yum fork using hawkey for backend.</dd></dl>
 <h3>Using Hawkey</h3>
 <h3>How do I obtain the repo metadata files to feed to Hawkey?</h3>
 <p> It is entirely up to you. Hawkey does not provide any means to do this automatically, for instance from your <i>/etc/yum.repos.d</i> configuration. Use or build tools to do that. For instance, both Yum and DNF deals with the same problem and inside they employ <i>urlgrabber</i> to fetch the files. A general solution if you work in C is for instance <i>libcurl</i>. If you are building a nice downloading library that integrates well with hawkey, let us know.</p>
@@ -560,26 +560,26 @@ goal.actions | hawkey.UPGRADE_ALL
 <h2>PYTHON-HAWKEY TUTORIAL</h2>
 <h3>Contents</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>python-hawkey Tutorial</i></p>
-<dt>&bull;</p>
-<dd> <i>Setup</i></p>
-<dt>&bull;</p>
-<dd> <i>The Sack Object</i></p>
-<dt>&bull;</p>
-<dd> <i>Loading RPMDB</i></p>
-<dt>&bull;</p>
-<dd> <i>Loading Repositories</i></p>
-<dt>&bull;</p>
-<dd> <i>Case for Loading the Filelists</i></p>
-<dt>&bull;</p>
-<dd> <i>Building and Reusing the Repo Cache</i></p>
-<dt>&bull;</p>
-<dd> <i>Queries</i></p>
-<dt>&bull;</p>
-<dd> <i>Resolving things with Goals</i></p>
-<dt>&bull;</p>
-<dd> <i>Selector Installs</i> </p>
+<dt>&bull;</dt>
+<dd> <i>python-hawkey Tutorial</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Setup</i></dd>
+<dt>&bull;</dt>
+<dd> <i>The Sack Object</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Loading RPMDB</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Loading Repositories</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Case for Loading the Filelists</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Building and Reusing the Repo Cache</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Queries</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Resolving things with Goals</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Selector Installs</i> </dd>
 <p> <code>IMPORTANT:</code> Please consult every usage of the library with <code>reference-py</code> to be sure what are you doing. The examples mentioned here are supposed to be as simple as possible and may ignore some minor corner cases.</dl>
 <h3>Setup</h3>
 <p> First of, make sure hawkey is installed on your system, this should work from your terminal: </p>
@@ -618,18 +618,18 @@ goal.actions | hawkey.UPGRADE_ALL
 <h3>Case for Loading the Filelists</h3>
 <p> What the <code>load_filelists=True</code> argument to <code>load_repo()</code> above does is instruct hawkey to process the <code>&lt;hash&gt;filelists.xml.gz</code> file we passed in and which contains structured list of absolute paths to all files of all packages within the repo. This information can be used for two purposes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Finding a package providing given file. For instance, you need the file <code>/usr/share/man/man3/fprintf.3.gz</code> which is not installed. Consulting filelists (directly or through hawkey) can reveal the file is in the <code>man-pages</code> package.</p>
-<dt>&bull;</p>
-<dd> Depsolving. Some packages require concrete files as their dependencies. To know if these are resolvable and how, the solver needs to know what package provides what files. </p>
+<dt>&bull;</dt>
+<dd> Finding a package providing given file. For instance, you need the file <code>/usr/share/man/man3/fprintf.3.gz</code> which is not installed. Consulting filelists (directly or through hawkey) can reveal the file is in the <code>man-pages</code> package.</dd>
+<dt>&bull;</dt>
+<dd> Depsolving. Some packages require concrete files as their dependencies. To know if these are resolvable and how, the solver needs to know what package provides what files. </dd>
 <p> Some files provided by a package (e.g those in <code>/usr/bin</code>) are always visible even without loading the filelists. Well-behaved packages requiring only those can be thus resolved directly. Unortunately, there are packages that don&#8217;t behave and it is hard to tell in advance when you&#8217;ll deal with one. </p>
 <p> The strategy for using <code>load_filelists=True</code> is thus:</p>
-<dt>&bull;</p>
-<dd> Use it if you know you&#8217;ll do resolving (i.e. you&#8217;ll use <code>Goal</code>).</p>
-<dt>&bull;</p>
-<dd> Use it if you know you&#8217;ll be trying to match files to their packages.</p>
-<dt>&bull;</p>
-<dd> Use it if you are not sure.</dl>
+<dt>&bull;</dt>
+<dd> Use it if you know you&#8217;ll do resolving (i.e. you&#8217;ll use <code>Goal</code>).</dd>
+<dt>&bull;</dt>
+<dd> Use it if you know you&#8217;ll be trying to match files to their packages.</dd>
+<dt>&bull;</dt>
+<dd> Use it if you are not sure.</dd></dl>
 <h3>Building and Reusing the Repo Cache</h3>
 <p> Internally to hold the package information and perform canonical resolving hawkey uses <i>Libsolv</i>. One great benefit this library offers is providing writing and reading of metadata cache files in libsolv&#8217;s own binary format (files with <code>.solv</code> extension, typically). At a cost of few hundreds of milliseconds, using the solv files reduces repo load times from seconds to tens of milliseconds. It is thus a good idea to write and use the solv files every time you plan to use the same repo for more than one Sack (which is at least every time your hawkey program is run). To do that use <code>build_cache=True</code> with <code>load_repo()</code> and <code>load_system_repo()</code>: </p>
 <pre>
@@ -645,12 +645,12 @@ goal.actions | hawkey.UPGRADE_ALL
 <h3>Queries</h3>
 <p> Query is the means in hawkey of finding a package based on one or more criteria (name, version, repository of origin). Its interface is loosely based on <i>Django&#8217;s QuerySets</i>, the main concepts being:</p>
 <dl>
-<dt>&bull;</p>
-<dd> a fresh Query object matches all packages in the Sack and the selection is gradually narrowed down by calls to <code>Query.filter()</code></p>
-<dt>&bull;</p>
-<dd> applying a <code>Query.filter()</code> does not start to evaluate the Query, i.e. the Query is lazy. Query is only evaluated when we explicitly tell it to or when we start to iterate it.</p>
-<dt>&bull;</p>
-<dd> use Python keyword arguments to <code>Query.filter()</code> to specify the filtering criteria. </p>
+<dt>&bull;</dt>
+<dd> a fresh Query object matches all packages in the Sack and the selection is gradually narrowed down by calls to <code>Query.filter()</code></dd>
+<dt>&bull;</dt>
+<dd> applying a <code>Query.filter()</code> does not start to evaluate the Query, i.e. the Query is lazy. Query is only evaluated when we explicitly tell it to or when we start to iterate it.</dd>
+<dt>&bull;</dt>
+<dd> use Python keyword arguments to <code>Query.filter()</code> to specify the filtering criteria. </dd>
 <p> For instance, let&#8217;s say I want to find all installed packages which name ends with <code>gtk</code>: </p>
 <pre>
 &gt;&gt;&gt; q = hawkey.Query(sack).filter(reponame=hawkey.SYSTEM_REPO_NAME, name__glob='*gtk')
@@ -744,12 +744,12 @@ True
 <h2>PYTHON-HAWKEY REFERENCE MANUAL</h2>
 <h3>Contents</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>python-hawkey Reference Manual</i></p>
-<dt>&bull;</p>
-<dd> <i>Introduction</i></p>
-<dt>&bull;</p>
-<dd> <i>Contents</i></dl>
+<dt>&bull;</dt>
+<dd> <i>python-hawkey Reference Manual</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Introduction</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Contents</i></dd></dl>
 <h3>Introduction</h3>
 <p> This reference manual describes Python API to the library. For a quick start take a look at <code>tutorial-py</code>. To be sure that you are familiar with our deprecation policy, see <code>changes</code>. </p>
 <p> <code>NOTE:</code> The API consists of exactly those elements described in this document, items not documented here can change from release to release. Opening a <i>bugzilla</i> if certain needed functionality is not exposed is the right thing to do. </p>
@@ -758,65 +758,65 @@ True
 <p> API Documentation Contents</p>
 <h3>Sack&#8212;The fundamental hawkey structure</h3>
 <dl>
-<dt><code>class hawkey.Sack</code></p>
-<dd> Instances of <code>hawkey.Sack</code> represent collections of packages. An application typically needs at least one instance because it provides much of the hawkey&#8217;s functionality. </p>
+<dt><code>class hawkey.Sack</code></dt>
+<dd> Instances of <code>hawkey.Sack</code> represent collections of packages. An application typically needs at least one instance because it provides much of the hawkey&#8217;s functionality. </dd>
 <p> <code>WARNING:</code> Any package instance is not supposed to work interchangeably between <code>hawkey.Query</code>, <code>hawkey.Selector</code> or <code>hawkey.Goal</code> created from different <code>hawkey.Sack</code>. Usually for common tasks there is no need to initialize two or more <i>Sacks</i> in your program. Sacks cannot be deeply copied.</p>
-<dt><code>cache_dir</code></p>
-<dd> A read-only string property giving the path to the location where a metadata cache is stored.</p>
-<dt><code>installonly</code></p>
-<dd> A write-only sequence of strings property setting the provide names of packages that should only ever be installed, never upgraded.</p>
-<dt><code>installonly_limit</code></p>
-<dd> A write-only integer property setting how many installonly packages with the same name are allowed to be installed concurrently. If <code>0</code>, any number of packages can be installed.</p>
-<dt><code>__init__(cachedir=_CACHEDIR, arch=_ARCH, rootdir=_ROOTDIR, pkgcls=hawkey.Package, pkginitval=None, make_cache_dir=False, logfile=_LOGFILE)</code></p>
-<dd> Initialize the sack with a default cache directory, log file location set to <code>hawkey.log</code> in the cache directory, an automatically detected architecture and the current root (<code>/</code>) as an installroot. The cache is disabled by default. </p>
+<dt><code>cache_dir</code></dt>
+<dd> A read-only string property giving the path to the location where a metadata cache is stored.</dd>
+<dt><code>installonly</code></dt>
+<dd> A write-only sequence of strings property setting the provide names of packages that should only ever be installed, never upgraded.</dd>
+<dt><code>installonly_limit</code></dt>
+<dd> A write-only integer property setting how many installonly packages with the same name are allowed to be installed concurrently. If <code>0</code>, any number of packages can be installed.</dd>
+<dt><code>__init__(cachedir=_CACHEDIR, arch=_ARCH, rootdir=_ROOTDIR, pkgcls=hawkey.Package, pkginitval=None, make_cache_dir=False, logfile=_LOGFILE)</code></dt>
+<dd> Initialize the sack with a default cache directory, log file location set to <code>hawkey.log</code> in the cache directory, an automatically detected architecture and the current root (<code>/</code>) as an installroot. The cache is disabled by default. </dd>
 <p> <i>cachedir</i> is a string giving a path of a cache location. </p>
 <p> <i>arch</i> is a string specifying an architecture. </p>
 <p> <i>rootdir</i> is a string giving a path to an installroot. </p>
 <p> <i>pkgcls</i> is a class of packages retrieved from the sack. The class&#8217; <code>__init__</code> method must accept two arguments. The first argument is a tuple of the sack and the ID of the package. The second argument is the <i>pkginitval</i> argument. <i>pkginitval</i> cannot be <code>None</code> if <i>pkgcls</i> is specified. </p>
 <p> <i>make_cache_dir</i> is a boolean that specifies whether the cache should be used to speedup loading of repositories or not (see <i>building_and_reusing_the_repo_cache-label</i>). </p>
 <p> <i>logfile</i> is a string giving a path of a log file location.</p>
-<dt><code>__len__()</code></p>
-<dd> Returns the number of the packages loaded into the sack.</p>
-<dt><code>add_cmdline_package(filename)</code></p>
-<dd> Add a package to a command line repository and return it. The package is specified as a string <i>filename</i> of an RPM file. The command line repository will be automatically created if doesn&#8217;t exist already. It could be referenced later by <code>hawkey.CMDLINE_REPO_NAME</code> name.</p>
-<dt><code>add_excludes(packages)</code></p>
-<dd> Add a sequence of packages that cannot be fetched by Queries nor Selectors.</p>
-<dt><code>add_includes(packages)</code></p>
-<dd> Add a sequence of the only packages that can be fetched by Queries or Selectors. </p>
+<dt><code>__len__()</code></dt>
+<dd> Returns the number of the packages loaded into the sack.</dd>
+<dt><code>add_cmdline_package(filename)</code></dt>
+<dd> Add a package to a command line repository and return it. The package is specified as a string <i>filename</i> of an RPM file. The command line repository will be automatically created if doesn&#8217;t exist already. It could be referenced later by <code>hawkey.CMDLINE_REPO_NAME</code> name.</dd>
+<dt><code>add_excludes(packages)</code></dt>
+<dd> Add a sequence of packages that cannot be fetched by Queries nor Selectors.</dd>
+<dt><code>add_includes(packages)</code></dt>
+<dd> Add a sequence of the only packages that can be fetched by Queries or Selectors. </dd>
 <p> This is the inverse operation of <code>add_excludes()</code>. Any package that is not in the union of all the included packages is excluded. This works in conjunction with exclude and doesn&#8217;t override it. So, if you both include and exclude the same package, the package is considered excluded no matter of the order.</p>
-<dt><code>disable_repo(name)</code></p>
-<dd> Disable the repository identified by a string <i>name</i>. Packages in that repository cannot be fetched by Queries nor Selectors.</p>
-<dt><code>enable_repo(name)</code></p>
-<dd> Enable the repository identified by a string <i>name</i>. Packages in that repository can be fetched by Queries or Selectors. </p>
+<dt><code>disable_repo(name)</code></dt>
+<dd> Disable the repository identified by a string <i>name</i>. Packages in that repository cannot be fetched by Queries nor Selectors.</dd>
+<dt><code>enable_repo(name)</code></dt>
+<dd> Enable the repository identified by a string <i>name</i>. Packages in that repository can be fetched by Queries or Selectors. </dd>
 <p> <code>WARNING:</code> Execution of <code>add_excludes()</code>, <code>add_includes()</code>, <code>disable_repo()</code> or <code>enable_repo()</code> methods could cause inconsistent results in previously evaluated <code>Query</code>, <code>Selector</code> or <code>Goal</code>. The rule of thumb is to exclude/include packages, enable/disable repositories at first and then do actual computing using <code>Query</code>, <code>Selector</code> or <code>Goal</code>. For more details see <i>developer discussion</i>.</p>
-<dt><code>evr_cmp(evr1, evr2)</code></p>
-<dd> Compare two EVR strings and return a negative integer if <i>evr1</i> &lt; <i>evr2</i>, zero if <i>evr1</i> == <i>evr2</i> or a positive integer if <i>evr1</i> &gt; <i>evr2</i>.</p>
-<dt><code>get_running_kernel()</code></p>
-<dd> Detect and return the package of the currently running kernel. If the package cannot be found, <code>None</code> is returned.</p>
-<dt><code>list_arches()</code></p>
-<dd> List strings giving all the supported architectures.</p>
-<dt><code>load_system_repo(repo=None, build_cache=False)</code></p>
-<dd> Load the information about the packages in the system repository (in Fedora it is the RPM database) into the sack. This makes the dependency solving aware of the already installed packages. The system repository is always set to <code>hawkey.SYSTEM_REPO_NAME</code>. The information is not written to the cache by default. </p>
+<dt><code>evr_cmp(evr1, evr2)</code></dt>
+<dd> Compare two EVR strings and return a negative integer if <i>evr1</i> &lt; <i>evr2</i>, zero if <i>evr1</i> == <i>evr2</i> or a positive integer if <i>evr1</i> &gt; <i>evr2</i>.</dd>
+<dt><code>get_running_kernel()</code></dt>
+<dd> Detect and return the package of the currently running kernel. If the package cannot be found, <code>None</code> is returned.</dd>
+<dt><code>list_arches()</code></dt>
+<dd> List strings giving all the supported architectures.</dd>
+<dt><code>load_system_repo(repo=None, build_cache=False)</code></dt>
+<dd> Load the information about the packages in the system repository (in Fedora it is the RPM database) into the sack. This makes the dependency solving aware of the already installed packages. The system repository is always set to <code>hawkey.SYSTEM_REPO_NAME</code>. The information is not written to the cache by default. </dd>
 <p> <i>repo</i> is an optional <code>Repo</code> object that represents the system repository. The object is updated during the loading. </p>
 <p> <i>build_cache</i> is a boolean that specifies whether the information should be written to the cache (see <i>building_and_reusing_the_repo_cache-label</i>).</p>
-<dt><code>load_repo(repo, build_cache=False, load_filelists=False, load_presto=False, load_updateinfo=False)</code></p>
-<dd> Load the information about the packages in a <code>Repo</code> into the sack. This makes the dependency solving aware of these packages. The information is not written to the cache by default. </p>
+<dt><code>load_repo(repo, build_cache=False, load_filelists=False, load_presto=False, load_updateinfo=False)</code></dt>
+<dd> Load the information about the packages in a <code>Repo</code> into the sack. This makes the dependency solving aware of these packages. The information is not written to the cache by default. </dd>
 <p> <i>repo</i> is the <code>Repo</code> object to be processed. At least its <code>Repo.repomd_fn</code> must be set. If the cache has to be updated, <code>Repo.primary_fn</code> is needed too. Some information about the loading process and some results of it are written into the internal state of the repository object. </p>
 <p> <i>build_cache</i> is a boolean that specifies whether the information should be written to the cache (see <i>building_and_reusing_the_repo_cache-label</i>). </p>
 <p> <i>load_filelists</i>, <i>load_presto</i> and <i>load_updateinfo</i> are booleans that specify whether the <code>Repo.filelists_fn</code>, <code>Repo.presto_fn</code> and <code>Repo.updateinfo_fn</code> files of the repository should be processed. These files may contain information needed for dependency solving, downloading or querying of some packages. Enable it if you are not sure (see <i>case_for_loading_the_filelists-label</i>).</dl>
 <h3>Error handling</h3>
 <p> When an error or an unexpected event occurs during a Hawkey routine, an exception is raised:</p>
 <dl>
-<dt>&bull;</p>
-<dd> if it is a general error that could be common to other Python programs, one of the standard Python built-in exceptions is raised. For instance, <code>IOError</code> and <code>TypeError</code> can be raised from Hawkey.</p>
-<dt>&bull;</p>
-<dd> programming errors within Hawkey that cause unexpected or invalid states raise the standard <code>AssertionError</code>. These should be reported as bugs against Hawkey.</p>
-<dt>&bull;</p>
-<dd> programming errors due to incorrect use of the library usually produce <code>hawkey.ValueException</code> or one of its subclasses, <code>QueryException</code> (poorly formed Query) or <code>ArchException</code> (unrecognized architecture).</p>
-<dt>&bull;</p>
-<dd> sometimes there is a close call between blaming the error on an input parameter or on something else, beyond the programmer&#8217;s control. <code>hawkey.RuntimeException</code> is generally used in this case.</p>
-<dt>&bull;</p>
-<dd> <code>hawkey.ValidationException</code> is raised when a function call performs a preliminary check before proceeding with the main operation and this check fails. </p>
+<dt>&bull;</dt>
+<dd> if it is a general error that could be common to other Python programs, one of the standard Python built-in exceptions is raised. For instance, <code>IOError</code> and <code>TypeError</code> can be raised from Hawkey.</dd>
+<dt>&bull;</dt>
+<dd> programming errors within Hawkey that cause unexpected or invalid states raise the standard <code>AssertionError</code>. These should be reported as bugs against Hawkey.</dd>
+<dt>&bull;</dt>
+<dd> programming errors due to incorrect use of the library usually produce <code>hawkey.ValueException</code> or one of its subclasses, <code>QueryException</code> (poorly formed Query) or <code>ArchException</code> (unrecognized architecture).</dd>
+<dt>&bull;</dt>
+<dd> sometimes there is a close call between blaming the error on an input parameter or on something else, beyond the programmer&#8217;s control. <code>hawkey.RuntimeException</code> is generally used in this case.</dd>
+<dt>&bull;</dt>
+<dd> <code>hawkey.ValidationException</code> is raised when a function call performs a preliminary check before proceeding with the main operation and this check fails. </dd>
 <p> The class hierarchy for Hawkey exceptions is: </p>
 <pre><code>
 + --hawkey.Exception + --hawkey.ValueException | +--hawkey.QueryException | +--hawkey.ArchException + --hawkey.RuntimeException + --hawkey.ValidationException
@@ -824,36 +824,36 @@ True
 </dl>
 <h3>Module level constants</h3>
 <dl>
-<dt><code>hawkey.CMDLINE_REPO_NAME</code></p>
-<dd> The string name of the command line repository.</p>
-<dt><code>hawkey.SYSTEM_REPO_NAME</code></p>
-<dd> The string name of the system repository.</dl>
+<dt><code>hawkey.CMDLINE_REPO_NAME</code></dt>
+<dd> The string name of the command line repository.</dd>
+<dt><code>hawkey.SYSTEM_REPO_NAME</code></dt>
+<dd> The string name of the system repository.</dd></dl>
 <h3>Repositories</h3>
 <dl>
-<dt><code>class hawkey.Repo</code></p>
-<dd> Instances of <code>hawkey.Repo</code> point to metadata of packages that are available to be installed. The metadata are expected to be in the &quot;rpm-md&quot; format. <i>librepo</i> may help you with downloading the required files.</p>
-<dt><code>cost</code></p>
-<dd> An integer specifying a relative cost of accessing this repository. This value is compared when the priorities of two repositories are the same. The repository with <i>the lowest cost</i> is picked. It is useful to make the library prefer on-disk repositories to remote ones.</p>
-<dt><code>filelists_fn</code></p>
-<dd> A valid string path to the readable &quot;filelists&quot; XML file if set.</p>
-<dt><code>name</code></p>
-<dd> A string name of the repository.</p>
-<dt><code>presto_fn</code></p>
-<dd> A valid string path to the readable &quot;prestodelta.xml&quot; (also called &quot;deltainfo.xml&quot;) file if set.</p>
-<dt><code>primary_fn</code></p>
-<dd> A valid string path to the readable &quot;primary&quot; XML file if set.</p>
-<dt><code>priority</code></p>
-<dd> An integer priority value of this repository. If there is more than one candidate package for a particular operation, the one from the repository with <i>the lowest priority</i> value is picked, possibly despite being less convenient otherwise (e.g. by being a lower version).</p>
-<dt><code>repomd_fn</code></p>
-<dd> A valid string path to the readable &quot;repomd.xml&quot; file if set.</p>
-<dt><code>updateinfo_fn</code></p>
-<dd> A valid string path to the readable &quot;updateinfo.xml&quot; file if set.</p>
-<dt><code>__init__(name)</code></p>
-<dd> Initialize the repository with empty <code>repomd_fn</code>, <code>primary_fn</code>, <code>filelists_fn</code> and <code>presto_fn</code>. The priority and the cost are set to <code>0</code>. </p>
+<dt><code>class hawkey.Repo</code></dt>
+<dd> Instances of <code>hawkey.Repo</code> point to metadata of packages that are available to be installed. The metadata are expected to be in the &quot;rpm-md&quot; format. <i>librepo</i> may help you with downloading the required files.</dd>
+<dt><code>cost</code></dt>
+<dd> An integer specifying a relative cost of accessing this repository. This value is compared when the priorities of two repositories are the same. The repository with <i>the lowest cost</i> is picked. It is useful to make the library prefer on-disk repositories to remote ones.</dd>
+<dt><code>filelists_fn</code></dt>
+<dd> A valid string path to the readable &quot;filelists&quot; XML file if set.</dd>
+<dt><code>name</code></dt>
+<dd> A string name of the repository.</dd>
+<dt><code>presto_fn</code></dt>
+<dd> A valid string path to the readable &quot;prestodelta.xml&quot; (also called &quot;deltainfo.xml&quot;) file if set.</dd>
+<dt><code>primary_fn</code></dt>
+<dd> A valid string path to the readable &quot;primary&quot; XML file if set.</dd>
+<dt><code>priority</code></dt>
+<dd> An integer priority value of this repository. If there is more than one candidate package for a particular operation, the one from the repository with <i>the lowest priority</i> value is picked, possibly despite being less convenient otherwise (e.g. by being a lower version).</dd>
+<dt><code>repomd_fn</code></dt>
+<dd> A valid string path to the readable &quot;repomd.xml&quot; file if set.</dd>
+<dt><code>updateinfo_fn</code></dt>
+<dd> A valid string path to the readable &quot;updateinfo.xml&quot; file if set.</dd>
+<dt><code>__init__(name)</code></dt>
+<dd> Initialize the repository with empty <code>repomd_fn</code>, <code>primary_fn</code>, <code>filelists_fn</code> and <code>presto_fn</code>. The priority and the cost are set to <code>0</code>. </dd>
 <p> <i>name</i> is a string giving the name of the repository. The name should not be equal to <code>hawkey.SYSTEM_REPO_NAME</code> nor <code>hawkey.CMDLINE_REPO_NAME</code> </p>
 <p> Indices:</p>
-<dt>&bull;</p>
-<dd> <i>genindex</i></dl>
+<dt>&bull;</dt>
+<dd> <i>genindex</i></dd></dl>
 <h2>DESIGN RATIONALE</h2>
 <h3>Selectors are not Queries</h3>
 <p> Since both a Query and a Selector work to limit the set of all Sack&#8217;s packages to a subset, it can be suggested the two concepts should be the same and e.g. Queries should be used for Goal specifications instead of Selectors: </p>
@@ -868,26 +868,26 @@ hy_goal_install_query(q)
 <p> <i>Implementation note</i>: Selectors reflect the kind of specifications that can be directly translated into Libsolv jobs, without actually searching for a concrete package to put there. In other words, Selectors are specifically designed not to iterate over the package data (with exceptions, like glob matching) like Queries do. While Hawkey mostly aims to hide any twists and complexities of the underlying library, in this case the combined reasons warrant a concession. </p>
 <p> Indices and tables</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>genindex</i></p>
-<dt>&bull;</p>
-<dd> <i>modindex</i></p>
-<dt>&bull;</p>
-<dd> <i>search</i></dl>
+<dt>&bull;</dt>
+<dd> <i>genindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>modindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>search</i></dd></dl>
 <h2>AUTHOR</h2>
 <p> Aleš Kozumplík</p>
 <h2>COPYRIGHT</h2>
 <p> 2012-2015, Red Hat, Licensed under GPLv2+ </p>
 <h2>Index</h2>
-<dt><a href="#lbDS">FAQ</a></p>
+<dt><a href="#lbDS">FAQ</a></dt>
 <dd>
-<dt><a href="#lbEA">PYTHON-HAWKEY TUTORIAL</a></p>
+</dd><dt><a href="#lbEA">PYTHON-HAWKEY TUTORIAL</a></dt>
 <dd>
-<dt><a href="#lbEL">PYTHON-HAWKEY REFERENCE MANUAL</a></p>
+</dd><dt><a href="#lbEL">PYTHON-HAWKEY REFERENCE MANUAL</a></dt>
 <dd>
-<dt><a href="#lbET">DESIGN RATIONALE</a></p>
+</dd><dt><a href="#lbET">DESIGN RATIONALE</a></dt>
 <dd>
-<dt><a href="#lbEV">AUTHOR</a></p>
+</dd><dt><a href="#lbEV">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbEW">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbEW">COPYRIGHT</a></dt>
+<dd></dd></dl>

@@ -24,10 +24,8 @@ If str() was called on a dynamic ostrstream and freeze(false) was not called aft
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     {
         std::ostrstream s; // dynamic buffer
@@ -39,7 +37,6 @@ int main()
         std::ostrstream s;
         s &lt;&lt; 1.23;
         std::cout &lt;&lt; s.str() &lt;&lt; '\n';
-
         //        buf.freeze(false);
     } // destructor called, memory leaked
 }

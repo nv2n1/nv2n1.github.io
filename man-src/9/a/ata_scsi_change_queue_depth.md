@@ -14,10 +14,10 @@ description: "ata_scsi_change_queue_depth – SCSI callback for queue depth conf
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>SCSI device to configure queue depth for</dl>
+</dd><dd>SCSI device to configure queue depth for</dd></dl>
 <p> <i>queue_depth</i></p>
 <dl>
-<dd>new queue depth</dl>
+<dd>new queue depth</dd></dl>
 <h2>Description</h2>
 <p>This is libata standard hostt-&gt;change_queue_depth callback. SCSI will call into this callback when user tries to set queue depth via sysfs. </p>
 <p> LOCKING: SCSI layer (we don&#8217;t care)</p>
@@ -26,5 +26,5 @@ description: "ata_scsi_change_queue_depth – SCSI callback for queue depth conf
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

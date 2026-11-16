@@ -10,7 +10,6 @@ description: "wcspbrk – search a wide-character string for any of a set of wid
 <p>wcspbrk &#8211; search a wide-character string for any of a set of wide characters</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wchar_t *wcspbrk(const wchar_t *wcs, const wchar_t *accept);</code></pre>
 <h2>Description</h2>
 <p>The <code>wcspbrk</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-strpbrk/">strpbrk</a></code>(3) function. It searches for the first occurrence in the wide-character string pointed to by <i>wcs</i> of any of the characters in the wide-character string pointed to by <i>accept</i>.</p>

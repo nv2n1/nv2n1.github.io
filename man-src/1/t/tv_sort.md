@@ -25,10 +25,10 @@ description: "tv_sort – Sort XMLTV listings files by date, and add stop times.
 <h2>EXAMPLES</h2>
 <p> At a typical Unix shell or Windows command prompt:</p>
 <dl>
-<dt>tv_sort &lt;in.xml &gt;out.xml</p>
+<dt>tv_sort &lt;in.xml &gt;out.xml</dt>
 <dd>
-<dt>tv_sort in.xml &#8211;output out.xml</p>
-<dd></dl>
+</dd><dt>tv_sort in.xml &#8211;output out.xml</dt>
+<dd></dd></dl>
 <p> These are different ways of saying the same thing.</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com </p>

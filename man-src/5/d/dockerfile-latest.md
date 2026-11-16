@@ -26,7 +26,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <dl>
 <dd>
 <pre> docker build -t repository/tag .</pre>
-</dl>
+</dd></dl>
 <p> &#8212; specifies a repository and tag at which to save the new image if the build<br />
 &nbsp;<wbr>&nbsp;<wbr>succeeds. The Docker daemon runs the steps one-by-one, committing the result<br />
 &nbsp;<wbr>&nbsp;<wbr>to a new image if necessary, before finally outputting the ID of the new<br />
@@ -60,7 +60,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  RUN &lt;command&gt;
  # Executable form
  RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</pre>
-</dl>
+</dd></dl>
 <p> &#8212; The <code>RUN</code> instruction executes any commands in a new layer on top of the current<br />
 &nbsp;<wbr>&nbsp;<wbr>image and commits the results. The committed image is used for the next step in<br />
 &nbsp;<wbr>&nbsp;<wbr>Dockerfile. </p>
@@ -81,7 +81,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  CMD [&quot;param1&quot;, &quot;param2&quot;]`
  # the command is run in a shell - /bin/sh -c
  CMD command param1 param2</pre>
-</dl>
+</dd></dl>
 <p> &#8212; There should be only one <code>CMD</code> in a Dockerfile. If more than one <code>CMD</code> is listed, only<br />
 &nbsp;<wbr>&nbsp;<wbr>the last&nbsp;<wbr><code>CMD</code>&nbsp;<wbr>takes effect.<br />
 &nbsp;<wbr>&nbsp;<wbr>The main purpose of a&nbsp;<wbr><code>CMD</code>&nbsp;<wbr>is to provide defaults for an executing container.<br />
@@ -96,7 +96,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <dd>
 <pre> FROM ubuntu
  CMD echo &quot;This is a test.&quot; | wc -</pre>
-</dl>
+</dd></dl>
 <p> &#8212; If you run <code>command</code> without a shell, then you must express the command as a<br />
 &nbsp;<wbr>&nbsp;<wbr>JSON array and give the full path to the executable. This array form is the<br />
 &nbsp;<wbr>&nbsp;<wbr>preferred form of&nbsp;<wbr><code>CMD</code>. All additional parameters must be individually expressed<br />
@@ -105,7 +105,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <dd>
 <pre> FROM ubuntu
  CMD [&quot;/usr/bin/wc&quot;,&quot;--help&quot;]</pre>
-</dl>
+</dd></dl>
 <p> &#8212; To make the container run the same executable every time, use <code>ENTRYPOINT</code> in<br />
 &nbsp;<wbr>&nbsp;<wbr>combination with&nbsp;<wbr><code>CMD</code>.<br />
 &nbsp;<wbr>&nbsp;<wbr>If the user specifies arguments to docker run, the specified commands<br />
@@ -120,7 +120,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <pre> LABEL &lt;key&gt;[ &lt;value&gt;]
  LABEL &lt;key&gt;[ &lt;value&gt;]
  ...</pre>
-</dl>
+</dd></dl>
 <p> The <code>LABEL</code> instruction adds metadata to an image. A <code>LABEL</code> is a<br />
 &nbsp;<wbr>&nbsp;<wbr>key-value pair. To specify a&nbsp;<wbr><code>LABEL</code>&nbsp;<wbr>without a value, simply use an empty<br />
 &nbsp;<wbr>&nbsp;<wbr>string. To include spaces within a&nbsp;<wbr><code>LABEL</code>&nbsp;<wbr>value, use quotes and<br />
@@ -132,7 +132,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  LABEL com.example.vendor.is-beta &quot;&quot;
  LABEL com.example.vendor.is-beta=
  LABEL com.example.vendor.is-beta=&quot;&quot;</pre>
-</dl>
+</dd></dl>
 <p> An image can have more than one label. To specify multiple labels, separate<br />
 &nbsp;<wbr>&nbsp;<wbr>each key-value pair by a space. </p>
 <p> Labels are additive including LABELs in FROM images. As the system<br />
@@ -164,7 +164,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <pre> ADD &lt;src&gt; &lt;dest&gt;
  # Required for paths with whitespace
  ADD [&quot;&lt;src&gt;&quot;,... &quot;&lt;dest&gt;&quot;]</pre>
-</dl>
+</dd></dl>
 <p> The <code>ADD</code> instruction copies new files, directories<br />
 &nbsp;<wbr>&nbsp;<wbr>or remote file URLs to the filesystem of the container at path&nbsp;<wbr>&lt;dest&gt;.<br />
 &nbsp;<wbr>&nbsp;<wbr>Multiple&nbsp;<wbr>&lt;src&gt;&nbsp;<wbr>resources may be specified but if they are files or directories<br />
@@ -183,7 +183,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <pre> COPY &lt;src&gt; &lt;dest&gt;
  # Required for paths with whitespace
  COPY [&quot;&lt;src&gt;&quot;,... &quot;&lt;dest&gt;&quot;]</pre>
-</dl>
+</dd></dl>
 <p> The <code>COPY</code> instruction copies new files from &lt;src&gt; and<br />
 &nbsp;<wbr>&nbsp;<wbr>adds them to the filesystem of the container at path&nbsp;<wbr>&lt;dest&gt;. The&nbsp;<wbr>&lt;src&gt;&nbsp;<wbr>must be<br />
 &nbsp;<wbr>&nbsp;<wbr>the path to a file or directory relative to the source directory that is<br />
@@ -201,7 +201,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]`
  # run command in a shell - /bin/sh -c
  ENTRYPOINT command param1 param2</pre>
-</dl>
+</dd></dl>
 <p> &#8212; An <code>ENTRYPOINT</code> helps you configure a<br />
 &nbsp;<wbr>&nbsp;<wbr>container that can be run as an executable. When you specify an&nbsp;<wbr><code>ENTRYPOINT</code>,<br />
 &nbsp;<wbr>&nbsp;<wbr>the whole container runs as if it was only that executable.&nbsp;<wbr>&nbsp;<wbr>The&nbsp;<wbr><code>ENTRYPOINT</code><br />
@@ -218,7 +218,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <dd>
 <pre> FROM ubuntu
  ENTRYPOINT wc -l -</pre>
-</dl>
+</dd></dl>
 <p> This means that the Dockerfile&#8217;s image always takes stdin as input (that&#8217;s<br />
 &nbsp;<wbr>&nbsp;<wbr>what&nbsp;<wbr>&quot;-&quot;&nbsp;<wbr>means), and prints the number of lines&nbsp;<wbr>(that&#8217;s what&nbsp;<wbr>&quot;-l&quot;&nbsp;<wbr>means). To<br />
 &nbsp;<wbr>&nbsp;<wbr>make this optional but default, use a&nbsp;<wbr><code>CMD</code>: </p>
@@ -227,7 +227,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <pre> FROM ubuntu
  CMD [&quot;-l&quot;, &quot;-&quot;]
  ENTRYPOINT [&quot;/usr/bin/wc&quot;]</pre>
-</dl>
+</dd></dl>
 <p> <code>VOLUME</code><br />
 &nbsp;<wbr>&nbsp;<wbr>&#8212; VOLUME&nbsp;<wbr>[&quot;/data&quot;]<br />
 &nbsp;<wbr>&nbsp;<wbr>The&nbsp;<wbr><code>VOLUME</code>&nbsp;<wbr>instruction creates a mount point with the specified name and marks<br />
@@ -254,7 +254,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  WORKDIR b
  WORKDIR c
  RUN pwd</pre>
-</dl>
+</dd></dl>
 <p> In the above example, the output of the <code>pwd</code> command is <code>a/b/c</code>. </p>
 <p> <code>ARG</code><br />
 &#8212; ARG&nbsp;<wbr>&lt;name&gt;[=&lt;default value&gt;] </p>
@@ -265,7 +265,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <dl>
 <dd>
 <pre> One or more build-args were not consumed, failing build.</pre>
-</dl>
+</dd></dl>
 <p> The Dockerfile author can define a single variable by specifying ARG once or many<br />
 &nbsp;<wbr>&nbsp;<wbr>variables by specifying ARG more than once. For example, a valid Dockerfile: </p>
 <dl>
@@ -274,7 +274,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  ARG user1
  ARG buildno
  ...</pre>
-</dl>
+</dd></dl>
 <p> A Dockerfile author may optionally specify a default value for an ARG instruction: </p>
 <dl>
 <dd>
@@ -282,7 +282,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  ARG user1=someuser
  ARG buildno=1
  ...</pre>
-</dl>
+</dd></dl>
 <p> If an ARG value has a default and if there is no value passed at build-time, the<br />
 &nbsp;<wbr>&nbsp;<wbr>builder uses the default. </p>
 <p> An ARG variable definition comes into effect from the line on which it is<br />
@@ -295,12 +295,12 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  3 ARG user
  4 USER $user
  ...</pre>
-</dl>
+</dd></dl>
 <p> A user builds this file by calling: </p>
 <dl>
 <dd>
 <pre> $ docker build --build-arg user=what_user Dockerfile</pre>
-</dl>
+</dd></dl>
 <p> The USER at line 2 evaluates to some_user as the user variable is defined on the<br />
 &nbsp;<wbr>&nbsp;<wbr>subsequent line 3. The USER at line 4 evaluates to what_user as user is<br />
 &nbsp;<wbr>&nbsp;<wbr>defined and the what_user value was passed on the command line. Prior to its definition by an<br />
@@ -308,7 +308,7 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <dl>
 <dd><code>Warning:</code> It is not recommended to use build-time variables for<br />
 &nbsp;<wbr>passing secrets like github keys, user credentials etc. Build-time variable<br />
-&nbsp;<wbr>values are visible to any user of the image with the docker history command.</dl>
+&nbsp;<wbr>values are visible to any user of the image with the docker history command.</dd></dl>
 <p> You can use an ARG or an ENV instruction to specify variables that are<br />
 &nbsp;<wbr>&nbsp;<wbr>available to the RUN instruction. Environment variables defined using the<br />
 &nbsp;<wbr>&nbsp;<wbr>ENV instruction always override an ARG instruction of the same name. Consider<br />
@@ -319,12 +319,12 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  2 ARG CONT_IMG_VER
  3 ENV CONT_IMG_VER v1.0.0
  4 RUN echo $CONT_IMG_VER</pre>
-</dl>
+</dd></dl>
 <p> Then, assume this image is built with this command: </p>
 <dl>
 <dd>
 <pre> $ docker build --build-arg CONT_IMG_VER=v2.0.1 Dockerfile</pre>
-</dl>
+</dd></dl>
 <p> In this case, the RUN instruction uses v1.0.0 instead of the ARG setting<br />
 &nbsp;<wbr>&nbsp;<wbr>passed by the user:v2.0.1 This behavior is similar to a shell<br />
 &nbsp;<wbr>&nbsp;<wbr>script where a locally scoped variable overrides the variables passed as<br />
@@ -337,13 +337,13 @@ description: "Dockerfile – automate the steps of creating a Docker image"
  2 ARG CONT_IMG_VER
  3 ENV CONT_IMG_VER ${CONT_IMG_VER:-v1.0.0}
  4 RUN echo $CONT_IMG_VER</pre>
-</dl>
+</dd></dl>
 <p> Unlike an ARG instruction, ENV values are always persisted in the built<br />
 &nbsp;<wbr>&nbsp;<wbr>image. Consider a docker build without the &#8211;build-arg flag: </p>
 <dl>
 <dd>
 <pre> $ docker build Dockerfile</pre>
-</dl>
+</dd></dl>
 <p> Using this Dockerfile example, CONT_IMG_VER is still persisted in the image but<br />
 &nbsp;<wbr>&nbsp;<wbr>its value would be v1.0.0 as it is the default set in line 3 by the ENV instruction. </p>
 <p> The variable expansion technique in this example allows you to pass arguments<br />
@@ -352,8 +352,8 @@ description: "Dockerfile – automate the steps of creating a Docker image"
 <p> Docker has a set of predefined ARG variables that you can use without a<br />
 &nbsp;<wbr>&nbsp;<wbr>corresponding ARG instruction in the Dockerfile.</p>
 <dl>
-<dt>step]</p>
-<dd>item HTTP_PROXY item http_proxy item HTTPS_PROXY item https_proxy item FTP_PROXY item ftp_proxy item NO_PROXY item no_proxy</dl>
+<dt>step]</dt>
+<dd>item HTTP_PROXY item http_proxy item HTTPS_PROXY item https_proxy item FTP_PROXY item ftp_proxy item NO_PROXY item no_proxy</dd></dl>
 <p> To use these, simply pass them on the command line using the &#8211;build-arg<br />
 &nbsp;<wbr>&nbsp;<wbr>&lt;varname&gt;=&lt;value&gt;&nbsp;<wbr>flag. </p>
 <p> <code>ONBUILD</code><br />

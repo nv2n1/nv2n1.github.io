@@ -10,9 +10,7 @@ description: "pthread_testcancel – request delivery of any pending cancellatio
 <p>pthread_testcancel &#8211; request delivery of any pending cancellation request</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 void pthread_testcancel(void);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>Calling <code>pthread_testcancel</code>() creates a cancellation point within the calling thread, so that a thread that is otherwise executing code that contains no cancellation points will respond to a cancellation request. </p>

@@ -11,15 +11,10 @@ std::swap(std::stack) - std::swap(std::stack)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class T, class Container&gt;
-
 void swap(stack&lt;T, Container&gt; &amp;lhs, (until C++ 17)
-
                                         stack&lt;T, Container&gt; &amp;rhs);
-
 template &lt;class T, class Container&gt;
-
 void swap(stack&lt;T, Container&gt; &amp;lhs, (since C++ 17)
-
                                         stack&lt;T, Container&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::stack. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 This overload only participates in overload resolution if std::is_swappable&lt;Container&gt;::value is true. <i>(since C++17)</i> 

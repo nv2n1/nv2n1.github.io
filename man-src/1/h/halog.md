@@ -17,65 +17,63 @@ description: "halog – HAProxy log statistics reporter"
 <h2>OPTIONS</h2>
 <h3>Input filters (several filters may be combined)</h3>
 <dl>
-<dt><code>-H</code></p>
-<dd> Only match lines containing HTTP logs (ignore TCP)</p>
-<dt><code>-E</code></p>
-<dd> Only match lines without any error (no 5xx status)</p>
-<dt><code>-e</code></p>
-<dd> Only match lines with errors (status 5xx or negative)</p>
-<dt><code>-rt</code>|<code>-RT</code> &lt;time&gt;</p>
-<dd> Only match response times larger|smaller than &lt;time&gt;</p>
-<dt><code>-Q</code>|<code>-QS</code></p>
-<dd> Only match queued requests (any queue|server queue)</p>
-<dt><code>-tcn</code>|<code>-TCN</code> &lt;code&gt;</p>
-<dd> Only match requests with/without termination code &lt;code&gt;</p>
-<dt><code>-hs</code>|<code>-HS</code> &lt;[min][:][max]&gt;</p>
-<dd> Only match requests with HTTP status codes within/not within min..max. Any of them may be omitted. Exact code is checked for if no &#8216;:&#8217; is specified.</dl>
+<dt><code>-H</code></dt>
+<dd> Only match lines containing HTTP logs (ignore TCP)</dd>
+<dt><code>-E</code></dt>
+<dd> Only match lines without any error (no 5xx status)</dd>
+<dt><code>-e</code></dt>
+<dd> Only match lines with errors (status 5xx or negative)</dd>
+<dt><code>-rt</code>|<code>-RT</code> &lt;time&gt;</dt>
+<dd> Only match response times larger|smaller than &lt;time&gt;</dd>
+<dt><code>-Q</code>|<code>-QS</code></dt>
+<dd> Only match queued requests (any queue|server queue)</dd>
+<dt><code>-tcn</code>|<code>-TCN</code> &lt;code&gt;</dt>
+<dd> Only match requests with/without termination code &lt;code&gt;</dd>
+<dt><code>-hs</code>|<code>-HS</code> &lt;[min][:][max]&gt;</dt>
+<dd> Only match requests with HTTP status codes within/not within min..max. Any of them may be omitted. Exact code is checked for if no &#8216;:&#8217; is specified.</dd></dl>
 <h3>Modifiers</h3>
 <dl>
-<dt><code>-v</code></p>
-<dd> Invert the input filtering condition</p>
-<dt><code>-q</code></p>
-<dd> Don&#8217;t report errors/warnings</p>
-<dt><code>-m</code> &lt;lines&gt;</p>
-<dd> Limit output to the first &lt;lines&gt; lines</dl>
+<dt><code>-v</code></dt>
+<dd> Invert the input filtering condition</dd>
+<dt><code>-q</code></dt>
+<dd> Don&#8217;t report errors/warnings</dd>
+<dt><code>-m</code> &lt;lines&gt;</dt>
+<dd> Limit output to the first &lt;lines&gt; lines</dd></dl>
 <h3>Output filters &#8211; only one may be used at a time</h3>
 <dl>
-<dt><code>-c</code></p>
-<dd> Only report the number of lines that would have been printed</p>
-<dt><code>-pct</code></p>
-<dd> Output connect and response times percentiles</p>
-<dt><code>-st</code></p>
-<dd> Output number of requests per HTTP status code</p>
-<dt><code>-cc</code></p>
-<dd> Output number of requests per cookie code (2 chars)</p>
-<dt><code>-tc</code></p>
-<dd> Output number of requests per termination code (2 chars)</p>
-<dt><code>-srv</code></p>
-<dd> Output statistics per server (time, requests, errors)</p>
-<dt><code>-u</code>*</p>
+<dt><code>-c</code></dt>
+<dd> Only report the number of lines that would have been printed</dd>
+<dt><code>-pct</code></dt>
+<dd> Output connect and response times percentiles</dd>
+<dt><code>-st</code></dt>
+<dd> Output number of requests per HTTP status code</dd>
+<dt><code>-cc</code></dt>
+<dd> Output number of requests per cookie code (2 chars)</dd>
+<dt><code>-tc</code></dt>
+<dd> Output number of requests per termination code (2 chars)</dd>
+<dt><code>-srv</code></dt>
+<dd> Output statistics per server (time, requests, errors)</dd>
+<dt><code>-u</code>*</dt>
 <dd> Output statistics per URL (time, requests, errors)<br />
- Additional characters indicate the output sorting key:</p>
+ Additional characters indicate the output sorting key:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-u</code></p>
-<dd> URL</p>
-<dt><code>-uc</code></p>
-<dd> Request count</p>
-<dt><code>-ue</code></p>
-<dd> Error count</p>
-<dt><code>-ua</code></p>
-<dd> Average response time</p>
-<dt><code>-ut</code></p>
-<dd> Average total time</p>
-<dt><code>-uao</code>, <code>-uto</code></p>
-<dd> Average times computed on valid (&#8216;OK&#8217;) requests</p>
-<dt><code>-uba</code></p>
-<dd> Average bytes returned</p>
-<dt><code>-ubt</code></p>
-<dd> Total bytes returned</dl>
+<dt><code>-u</code></dt>
+<dd> URL</dd>
+<dt><code>-uc</code></dt>
+<dd> Request count</dd>
+<dt><code>-ue</code></dt>
+<dd> Error count</dd>
+<dt><code>-ua</code></dt>
+<dd> Average response time</dd>
+<dt><code>-ut</code></dt>
+<dd> Average total time</dd>
+<dt><code>-uao</code>, <code>-uto</code></dt>
+<dd> Average times computed on valid (&#8216;OK&#8217;) requests</dd>
+<dt><code>-uba</code></dt>
+<dd> Average bytes returned</dd>
+<dt><code>-ubt</code></dt>
+<dd> Total bytes returned</dd></dl>
 </dl>
 </dl>
 <h2>SEE ALSO</h2>

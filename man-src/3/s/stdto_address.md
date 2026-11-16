@@ -10,15 +10,11 @@ description: "std::to_address – std::to_address"
 <p>std::to_address &#8211; std::to_address</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class Ptr&gt;
     (1)(since C++ 20)
-
         auto to_address(const Ptr &amp;p) noexcept;
-
 template &lt;class T&gt;
 (2)(since C++ 20)
-
     constexpr T *to_address(T *p) noexcept;</code></pre>
 <p>Obtain the address represented by p without forming a reference to the pointee.<br />
 1) Fancy pointer overload: If the expression std::pointer_traits&lt;Ptr&gt;::to_address(p) is well-formed, returns the result of that expression. Otherwise, returns std::to_address(p.operator-&gt;()).<br />
@@ -54,9 +50,7 @@ template &lt;class T&gt;
 <p>// Run this code </p>
 <pre><code>#include &lt;memory&gt;
 template &lt;class A&gt;
-
 auto allocator_new(A &amp;a)
-
 {
     auto p = a.allocate(1);
     try {
@@ -68,15 +62,12 @@ auto allocator_new(A &amp;a)
     return p;
 }
 template &lt;class A&gt;
-
 void allocator_delete(A &amp;a, typename std::allocator_traits&lt;A&gt;::pointer p)
-
 {
     std::allocator_traits&lt;A&gt;::destroy(a, std::to_address(p));
     a.deallocate(p, 1);
 }
 int main()
-
 {
     std::allocator&lt;int&gt; a;
     auto p = allocator_new(a);

@@ -12,15 +12,15 @@ description: "mlmmj-bounce – bounce handling utility for mlmmj"
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-bounce</code> <i>-L /path/to/list </i>[<i>-a john=doe.org | -d</i>]<i> </i>[<i>-n num | -p</i>]</p>
 <dl>
-<dt> <code>-a</code>: Address string that bounces</p>
-<dt> <code>-d</code>: Parse the mail to extract the address via the DSN (RFC1891)</p>
-<dt> <code>-h</code>: This help</p>
-<dt> <code>-L</code>: Full path to list directory</p>
-<dt> <code>-n</code>: Message number in the archive that bounced</p>
-<dt> <code>-p</code>: Send out a probe</p>
-<dt> <code>-V</code>: Print version</dl>
+<dt> <code>-a</code>: Address string that bounces</dt>
+<dt> <code>-d</code>: Parse the mail to extract the address via the DSN (RFC1891)</dt>
+<dt> <code>-h</code>: This help</dt>
+<dt> <code>-L</code>: Full path to list directory</dt>
+<dt> <code>-n</code>: Message number in the archive that bounced</dt>
+<dt> <code>-p</code>: Send out a probe</dt>
+<dt> <code>-V</code>: Print version</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>mlmmj-bounce is used to handle mails that are bouncing. When a mail arrives to the system, mlmmj-bounce will register in &lt;listdir&gt;/bounce/&lt;addrstring&gt; info about which number that bounced at what time. An example of such a line could be: </p>
+<dd>mlmmj-bounce is used to handle mails that are bouncing. When a mail arrives to the system, mlmmj-bounce will register in &lt;listdir&gt;/bounce/&lt;addrstring&gt; info about which number that bounced at what time. An example of such a line could be: </dd>
 <p> 109:1094409801 # Sun Sep 5 20:43:21 2004 </p>
 <p> The above shows that message number 109 bounced 1094409801 seconds after epoch which is in human date stamps is Sunday September 5th 20:43:21 2004. </p>
 <p> The last bounce mail received to the address is saved in &lt;listdir&gt;/bounce/&lt;addrstring&gt;.lastmsg. </p>
@@ -29,8 +29,8 @@ description: "mlmmj-bounce – bounce handling utility for mlmmj"
 <p> This manual page was written by the following persons:</p>
 <dl>
 <dt>
-<dd>S&oslash;ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</p>
+</dt><dd>S&oslash;ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</dd>
 <dt>
-<dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </p>
+</dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
 <h2>Index</h2>

@@ -18,10 +18,10 @@ description: "mongoc_remove_flags_t – Flags for deletion operations"
 <p>These flags correspond to the MongoDB wire protocol. They may be bitwise or&#8217;d together. They may change the number of documents that are removed during a remove command. </p>
 <h2>Flag Values</h2>
 <dl COMPACT>
-<dt><code>MONGOC_REMOVE_NONE</code></p>
-<dd>Specify no removal flags. All matching documents will be removed.</dl>
+<dt><code>MONGOC_REMOVE_NONE</code></dt>
+<dd>Specify no removal flags. All matching documents will be removed.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_REMOVE_SINGLE_REMOVE</code></p>
-<dd>Only remove the first matching document from the selector.</dl>
+<dt><code>MONGOC_REMOVE_SINGLE_REMOVE</code></dt>
+<dd>Only remove the first matching document from the selector.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

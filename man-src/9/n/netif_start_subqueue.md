@@ -15,11 +15,11 @@ netif_start_subqueue - allow sending packets on subqueue
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
  
 
  <i>queue_index</i>
-<dl><dd>sub queue index</dl>
+<dl><dd>sub queue index</dd></dl>
 
 <h2>Description</h2>
 

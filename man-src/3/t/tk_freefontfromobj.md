@@ -24,12 +24,12 @@ void
 <code>Tk_FreeFont(</code><i>tkfont</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting. If <code>NULL</code>, then no error messages are left after errors.</p>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window in which font will be used.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) Gives name or description of font. See documentation for the <code>font</code> command for details on acceptable formats. Internal rep will be modified to cache corresponding Tk_Font.</p>
-<dd>const char <i>*string</i> (in) Same as <i>objPtr</i> except description of font is passed as a string and resulting Tk_Font is not cached.</p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting. If <code>NULL</code>, then no error messages are left after errors.</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window in which font will be used.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) Gives name or description of font. See documentation for the <code>font</code> command for details on acceptable formats. Internal rep will be modified to cache corresponding Tk_Font.</dd>
+<dd>const char <i>*string</i> (in) Same as <i>objPtr</i> except description of font is passed as a string and resulting Tk_Font is not cached.</dd>
 <dd>Tk_Font <i>tkfont</i> (in) Opaque font token.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p><code>Tk_AllocFontFromObj</code> finds the font indicated by <i>objPtr</i> and returns a token that represents the font. The return value can be used in subsequent calls to procedures such as <code>Tk_GetFontMetrics</code>, <code>Tk_MeasureChars</code>, and <code>Tk_FreeFont</code>. The Tk_Font token will remain valid until <code>Tk_FreeFontFromObj</code> or <code>Tk_FreeFont</code> is called to release it. <i>ObjPtr</i> can contain either a symbolic name or a font description; see the documentation for the <code>font</code> command for a description of the valid formats. If <code>Tk_AllocFontFromObj</code> is unsuccessful (because, for example, <i>objPtr</i> did not contain a valid font specification) then it returns <code>NULL</code> and leaves an error message in <i>interp</i>&#8216;s result if <i>interp</i> is not <code>NULL</code>. <code>Tk_AllocFontFromObj</code> caches information about the return value in <i>objPtr</i>, which speeds up future calls to procedures such as <code>Tk_AllocFontFromObj</code> and <code>Tk_GetFontFromObj</code>. </p>
 <p> <code>Tk_GetFont</code> is identical to <code>Tk_AllocFontFromObj</code> except that the description of the font is specified with a string instead of an object. This prevents <code>Tk_GetFont</code> from caching the matching Tk_Font, so <code>Tk_GetFont</code> is less efficient than <code>Tk_AllocFontFromObj</code>. </p>

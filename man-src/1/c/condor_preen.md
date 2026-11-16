@@ -18,35 +18,23 @@ description: "condor_preen remove extraneous files from HTCondor directories"
 <p> <code>-mail</code></p>
 <dl>
 <dt>
-<dd> Send mail to the user defined in the PREEN_ADMIN configuration variable, instead of writing to the standard output.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Send mail to the user defined in the PREEN_ADMIN configuration variable, instead of writing to the standard output.</dd>
+</dl>
 <p> <code>-remove</code></p>
 <dl>
 <dt>
-<dd> Remove the offending files and directories rather than reporting on them.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Remove the offending files and directories rather than reporting on them.</dd>
+</dl>
 <p> <code>-verbose</code></p>
 <dl>
 <dt>
-<dd> List all files found in the Condor directories, even those which are not considered extraneous.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> List all files found in the Condor directories, even those which are not considered extraneous.</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Print extra debugging information as the command executes.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Print extra debugging information as the command executes.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_preen</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Author</h2>

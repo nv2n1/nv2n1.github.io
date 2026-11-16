@@ -11,16 +11,16 @@ description: "XkbAllocCompatMap – Allocate a new compatibility map if you do n
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbAllocCompatMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>num_si</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description in which to allocate compat map</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of compatibility map components to allocate</p>
-<dt><i>&#8211; num_si</i></p>
-<dd>number of symbol interpretations to allocate</dl>
+</dd><dd>keyboard description in which to allocate compat map</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of compatibility map components to allocate</dd>
+<dt><i>&#8211; num_si</i></dt>
+<dd>number of symbol interpretations to allocate</dd></dl>
 <h2>Description</h2>
 <p><i>xkb </i> specifies the keyboard description for which compatibility maps are to be allocated. The compatibility map is the <i>compat </i> field in this structure. </p>
 <p> <i>which </i> specifies the compatibility map components to be allocated (see XkbGetCompatMap). <i>which </i> is an inclusive OR of the bits shown in Table 1. </p>
@@ -77,10 +77,10 @@ description: "XkbAllocCompatMap – Allocate a new compatibility map if you do n
  } XkbSymInterpretRec,*XkbSymInterpretPtr;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbgetcompatmap/">XkbGetCompatMap</a></code>(3)</p>
 <h2>Notes</h2>

@@ -32,26 +32,26 @@ The normal action of the SCSI READ CAPACITY command is to fetch the number of bl
 
 Arguments to long options are mandatory for short options as well.
 <dl><dt>
-<dt><b>--16</b>
-<dd><dd>Use the 16 byte cdb variant of the READ CAPACITY command. See the '--long' option. <b>-b</b>, <b>--brief</b> outputs two hex numbers (prefixed with '0x' and space separated) to stdout. The first number is the maximum number of blocks on the device (which is one plus the lba of the last accessible block). The second number is the size in bytes of each block. If the operation fails then &quot;0x0 0x0&quot; is written to stdout.
-<dt><b>-h</b>, <b>--help</b>
-<dd>print out the usage message then exit.
-<dt><b>-H</b>, <b>--hex</b>
-<dd>output the response to the READ CAPACITY command (either the 10 or 16 byte cdb variant) in ASCII hexadecimal on stdout.
-<dt><b>-L</b>, <b>--lba</b>=<i>LBA</i>
-<dd>used in conjunction with <i>--pmi</i> option. This variant of READ CAPACITY will yield the last block address after <i>LBA</i> prior to a delay. For a disk, given a <i>LBA</i> it yields the highest numbered block on the same cylinder (i.e. before the heads need to move). <i>LBA</i> is assumed to be decimal unless prefixed by &quot;0x&quot; or it has a trailing &quot;h&quot;. Defaults to 0. This option was made obsolete in SBC-3 revision 26.
-<dt><b>-l</b>, <b>--long</b>
-<dd>Use the 16 byte cdb variant of the READ CAPACITY command. The default action is to use the 10 byte cdb variant which limits the maximum block address to (2**32 - 2). When a 10 byte cdb READ CAPACITY command is used on a device whose size is too large then a last block address of 0xffffffff is returned (if the device complies with SBC-2 or later).
-<dt><b>-O</b>, <b>--old</b>
-<dd>switch to older style options.
-<dt><b>-p</b>, <b>--pmi</b>
-<dd>partial medium indicator: for finding the next block address prior to some delay (e.g. head movement). In the absence of this option, the total number of blocks and the block size of the device are output. Used in conjunction with the <i>--lba=LBA</i> option. This option was made obsolete in SBC-3 revision 26.
-<dt><b>-r</b>, <b>--raw</b>
-<dd>output response in binary to stdout.
-<dt><b>-v</b>, <b>--verbose</b>
-<dd>increase level of verbosity. Can be used multiple times.
-<dt><b>-V</b>, <b>--version</b>
-<dd>outputs version string then exits.</dl>
+</dt><dt><b>--16</b>
+</dt><dd></dd><dd>Use the 16 byte cdb variant of the READ CAPACITY command. See the '--long' option. <b>-b</b>, <b>--brief</b> outputs two hex numbers (prefixed with '0x' and space separated) to stdout. The first number is the maximum number of blocks on the device (which is one plus the lba of the last accessible block). The second number is the size in bytes of each block. If the operation fails then &quot;0x0 0x0&quot; is written to stdout.
+</dd><dt><b>-h</b>, <b>--help</b>
+</dt><dd>print out the usage message then exit.
+</dd><dt><b>-H</b>, <b>--hex</b>
+</dt><dd>output the response to the READ CAPACITY command (either the 10 or 16 byte cdb variant) in ASCII hexadecimal on stdout.
+</dd><dt><b>-L</b>, <b>--lba</b>=<i>LBA</i>
+</dt><dd>used in conjunction with <i>--pmi</i> option. This variant of READ CAPACITY will yield the last block address after <i>LBA</i> prior to a delay. For a disk, given a <i>LBA</i> it yields the highest numbered block on the same cylinder (i.e. before the heads need to move). <i>LBA</i> is assumed to be decimal unless prefixed by &quot;0x&quot; or it has a trailing &quot;h&quot;. Defaults to 0. This option was made obsolete in SBC-3 revision 26.
+</dd><dt><b>-l</b>, <b>--long</b>
+</dt><dd>Use the 16 byte cdb variant of the READ CAPACITY command. The default action is to use the 10 byte cdb variant which limits the maximum block address to (2**32 - 2). When a 10 byte cdb READ CAPACITY command is used on a device whose size is too large then a last block address of 0xffffffff is returned (if the device complies with SBC-2 or later).
+</dd><dt><b>-O</b>, <b>--old</b>
+</dt><dd>switch to older style options.
+</dd><dt><b>-p</b>, <b>--pmi</b>
+</dt><dd>partial medium indicator: for finding the next block address prior to some delay (e.g. head movement). In the absence of this option, the total number of blocks and the block size of the device are output. Used in conjunction with the <i>--lba=LBA</i> option. This option was made obsolete in SBC-3 revision 26.
+</dd><dt><b>-r</b>, <b>--raw</b>
+</dt><dd>output response in binary to stdout.
+</dd><dt><b>-v</b>, <b>--verbose</b>
+</dt><dd>increase level of verbosity. Can be used multiple times.
+</dd><dt><b>-V</b>, <b>--version</b>
+</dt><dd>outputs version string then exits.</dd></dl>
 
 <h2>Notes</h2>
 
@@ -65,25 +65,25 @@ The exit status of sg_readcap is 0 when it is successful. Otherwise see the <a H
 
 The options in this section were the only ones available prior to sg3_utils version 1.23 . In sg3_utils version 1.23 and later these older options can be selected by either setting the SG3_UTILS_OLD_OPTS environment variable or using '--old' (or '-O) as the first option.
 <dl><dt><b>-16</b>
-<dd>Use the 16 byte cdb variant of the READ CAPACITY command. Equivalent to <i>--long</i> in the main description.
-<dt><b>-b</b>
-<dd>utility outputs two hex numbers (prefixed with '0x' and space separated) to stdout. The first number is the maximum number of blocks on the device (which is one plus the lba of the last accessible block). The second number is the size of each block. If the operation fails then &quot;0x0 0x0&quot; is written to stdout. Equivalent to <i>--brief</i> in the main description.
-<dt><b>-h</b>
-<dd>output the usage message then exit. Giving the <i>-?</i> option also outputs the usage message then exits.
-<dt><b>-H</b>
-<dd>output the response to the READ CAPACITY command (either the 10 or 16 byte cdb variant) in ASCII hexadecimal on stdout.
-<dt><b>-lba</b>=<i>LBA</i>
-<dd>used in conjunction with <i>-pmi</i> option. This variant of READ CAPACITY will yield the last block address after <i>LBA</i> prior to a delay. Equivalent to <i>--lba=LBA</i> in the main description.
-<dt><b>-N</b>
-<dd>switch to the newer style options.
-<dt><b>-pmi</b>
-<dd>partial medium indicator: for finding the next block address prior to some delay (e.g. head movement). In the absence of this switch, the total number of blocks and the block size of the device are output. Equivalent to <i>--pmi</i> in the main description.
-<dt><b>-r</b>
-<dd>output response in binary (to stdout).
-<dt><b>-v</b>
-<dd>verbose: print out cdb of issued commands prior to execution. '-vv' and '-vvv' are also accepted yielding greater verbosity.
-<dt><b>-V</b>
-<dd>outputs version string then exits.</dl>
+</dt><dd>Use the 16 byte cdb variant of the READ CAPACITY command. Equivalent to <i>--long</i> in the main description.
+</dd><dt><b>-b</b>
+</dt><dd>utility outputs two hex numbers (prefixed with '0x' and space separated) to stdout. The first number is the maximum number of blocks on the device (which is one plus the lba of the last accessible block). The second number is the size of each block. If the operation fails then &quot;0x0 0x0&quot; is written to stdout. Equivalent to <i>--brief</i> in the main description.
+</dd><dt><b>-h</b>
+</dt><dd>output the usage message then exit. Giving the <i>-?</i> option also outputs the usage message then exits.
+</dd><dt><b>-H</b>
+</dt><dd>output the response to the READ CAPACITY command (either the 10 or 16 byte cdb variant) in ASCII hexadecimal on stdout.
+</dd><dt><b>-lba</b>=<i>LBA</i>
+</dt><dd>used in conjunction with <i>-pmi</i> option. This variant of READ CAPACITY will yield the last block address after <i>LBA</i> prior to a delay. Equivalent to <i>--lba=LBA</i> in the main description.
+</dd><dt><b>-N</b>
+</dt><dd>switch to the newer style options.
+</dd><dt><b>-pmi</b>
+</dt><dd>partial medium indicator: for finding the next block address prior to some delay (e.g. head movement). In the absence of this switch, the total number of blocks and the block size of the device are output. Equivalent to <i>--pmi</i> in the main description.
+</dd><dt><b>-r</b>
+</dt><dd>output response in binary (to stdout).
+</dd><dt><b>-v</b>
+</dt><dd>verbose: print out cdb of issued commands prior to execution. '-vv' and '-vvv' are also accepted yielding greater verbosity.
+</dd><dt><b>-V</b>
+</dt><dd>outputs version string then exits.</dd></dl>
 
 <h2>Authors</h2>
 

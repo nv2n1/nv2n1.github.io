@@ -133,26 +133,26 @@ description: "cciss – HP Smart Array block driver"
 <p> cciss/c2d0: 36.38GB RAID 0</p>
 <h3>Files in /sys</h3>
 <dl>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/model</i></p>
-<dd>Displays the SCSI INQUIRY page 0 model for logical drive <i>Y</i> of controller <i>X</i>.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/rev</i></p>
-<dd>Displays the SCSI INQUIRY page 0 revision for logical drive <i>Y</i> of controller <i>X</i>.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/unique_id</i></p>
-<dd>Displays the SCSI INQUIRY page 83 serial number for logical drive <i>Y</i> of controller <i>X</i>.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/vendor</i></p>
-<dd>Displays the SCSI INQUIRY page 0 vendor for logical drive <i>Y</i> of controller <i>X</i>.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/block:cciss!cXdY</i></p>
-<dd>A symbolic link to <i>/sys/block/cciss!cXdY</i>.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/rescan</i></p>
-<dd>When this file is written to, the driver rescans the controller to discover any new, removed, or modified logical drives.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/resettable</i></p>
-<dd>A value of 1 displayed in this file indicates that the &quot;reset_devices=1&quot; kernel parameter (used by <code>kdump</code>) is honored by this controller. A value of 0 indicates that the &quot;reset_devices=1&quot; kernel parameter will not be honored. Some models of Smart Array are not able to honor this parameter.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/lunid</i></p>
-<dd>Displays the 8-byte LUN ID used to address logical drive <i>Y</i> of controller <i>X</i>.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/raid_level</i></p>
-<dd>Displays the RAID level of logical drive <i>Y</i> of controller <i>X</i>.</p>
-<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/usage_count</i></p>
-<dd>Displays the usage count (number of opens) of logical drive <i>Y</i> of controller <i>X</i>.</dl>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/model</i></dt>
+<dd>Displays the SCSI INQUIRY page 0 model for logical drive <i>Y</i> of controller <i>X</i>.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/rev</i></dt>
+<dd>Displays the SCSI INQUIRY page 0 revision for logical drive <i>Y</i> of controller <i>X</i>.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/unique_id</i></dt>
+<dd>Displays the SCSI INQUIRY page 83 serial number for logical drive <i>Y</i> of controller <i>X</i>.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/vendor</i></dt>
+<dd>Displays the SCSI INQUIRY page 0 vendor for logical drive <i>Y</i> of controller <i>X</i>.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/block:cciss!cXdY</i></dt>
+<dd>A symbolic link to <i>/sys/block/cciss!cXdY</i>.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/rescan</i></dt>
+<dd>When this file is written to, the driver rescans the controller to discover any new, removed, or modified logical drives.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/resettable</i></dt>
+<dd>A value of 1 displayed in this file indicates that the &quot;reset_devices=1&quot; kernel parameter (used by <code>kdump</code>) is honored by this controller. A value of 0 indicates that the &quot;reset_devices=1&quot; kernel parameter will not be honored. Some models of Smart Array are not able to honor this parameter.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/lunid</i></dt>
+<dd>Displays the 8-byte LUN ID used to address logical drive <i>Y</i> of controller <i>X</i>.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/raid_level</i></dt>
+<dd>Displays the RAID level of logical drive <i>Y</i> of controller <i>X</i>.</dd>
+<dt><i>/sys/bus/pci/devices/&lt;dev&gt;/ccissX/cXdY/usage_count</i></dt>
+<dd>Displays the usage count (number of opens) of logical drive <i>Y</i> of controller <i>X</i>.</dd></dl>
 <h3>SCSI tape drive and medium changer support</h3>
 <p>SCSI sequential access devices and medium changer devices are supported and appropriate device nodes are automatically created (e.g., <i>/dev/st0</i>, <i>/dev/st1</i>, etc.; see <code><a href="/docs/linux/man/4-st/">st</a></code>(4) for more details.) You must enable &quot;SCSI tape drive support for Smart Array 5xxx&quot; and &quot;SCSI support&quot; in your kernel configuration to be able to use SCSI tape drives with your Smart Array 5xxx controller. </p>
 <p> Additionally, note that the driver will not engage the SCSI core at init time. The driver must be directed to dynamically engage the SCSI core via the <i>/proc</i> filesystem entry, which the &quot;block&quot; side of the driver creates as <i>/proc/driver/cciss/cciss*</i> at run time. This is because at driver init time, the SCSI core may not yet be initialized (because the driver is a block driver) and attempting to register it with the SCSI core in such a case would cause a hang. This is best done via an initialization script (typically in <i>/etc/init.d</i>, but could vary depending on distribution). For example: </p>
@@ -166,11 +166,11 @@ description: "cciss – HP Smart Array block driver"
 <p> This causes the driver to:</p>
 <dl>
 <dd>
-<dl>
-<dt>1.</p>
-<dd>query the adapter about changes to the physical SCSI buses and/or fiber channel arbitrated loop, and</p>
-<dt>2.</p>
-<dd>make note of any new or removed sequential access devices or medium changers.</dl>
+</dd><dl>
+<dt>1.</dt>
+<dd>query the adapter about changes to the physical SCSI buses and/or fiber channel arbitrated loop, and</dd>
+<dt>2.</dt>
+<dd>make note of any new or removed sequential access devices or medium changers.</dd></dl>
 </dl>
 <p> The driver will output messages indicating which devices have been added or removed and the controller, bus, target, and lun used to address each device. The driver then notifies the SCSI midlayer of these changes. </p>
 <p> Note that the naming convention of the <i>/proc</i> filesystem entries contains a number in addition to the driver name (e.g., &quot;cciss0&quot; instead of just &quot;cciss&quot;, which you might expect). </p>
@@ -178,14 +178,14 @@ description: "cciss – HP Smart Array block driver"
 <h3>SCSI error handling for tape drives and medium changers</h3>
 <p>The Linux SCSI midlayer provides an error-handling protocol that is initiated whenever a SCSI command fails to complete within a certain amount of time (which can vary depending on the command). The <code>cciss</code> driver participates in this protocol to some extent. The normal protocol is a four-step process:</p>
 <dl>
-<dt>*</p>
-<dd>First, the device is told to abort the command.</p>
-<dt>*</p>
-<dd>If that doesn&#8217;t work, the device is reset.</p>
-<dt>*</p>
-<dd>If that doesn&#8217;t work, the SCSI bus is reset.</p>
-<dt>*</p>
-<dd>If that doesn&#8217;t work, the host bus adapter is reset.</dl>
+<dt>*</dt>
+<dd>First, the device is told to abort the command.</dd>
+<dt>*</dt>
+<dd>If that doesn&#8217;t work, the device is reset.</dd>
+<dt>*</dt>
+<dd>If that doesn&#8217;t work, the SCSI bus is reset.</dd>
+<dt>*</dt>
+<dd>If that doesn&#8217;t work, the host bus adapter is reset.</dd></dl>
 <p> The <code>cciss</code> driver is a block driver as well as a SCSI driver and only the tape drives and medium changers are presented to the SCSI midlayer. Furthermore, unlike more straightforward SCSI drivers, disk I/O continues through the block side during the SCSI error-recovery process. Therefore, the <code>cciss</code> driver implements only the first two of these actions, aborting the command, and resetting the device. Note also that most tape drives will not oblige in aborting commands, and sometimes it appears they will not even obey a reset command, though in most circumstances they will. If the command cannot be aborted and the device cannot be reset, the device will be set offline. </p>
 <p> In the event that the error-handling code is triggered and a tape drive is successfully reset or the tardy command is successfully aborted, the tape drive may still not allow I/O to continue until some command is issued that positions the tape to a known position. Typically you must rewind the tape (by issuing <i>mt -f /dev/st0 rewind</i> for example) before I/O can proceed again to a tape drive that was reset.</p>
 <h2>See Also</h2>

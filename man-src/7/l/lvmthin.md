@@ -12,26 +12,26 @@ description: "lvmthin — LVM thin provisioning"
 <p>Blocks in a standard <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) Logical Volume (LV) are allocated when the LV is created, but blocks in a thin provisioned LV are allocated as they are written. Because of this, a thin provisioned LV is given a virtual size, and can then be much larger than physically available storage. The amount of physical storage provided for thin provisioned LVs can be increased later as the need arises. Blocks in a standard LV are allocated (during creation) from the Volume Group (VG), but blocks in a thin LV are allocated (during use) from a special &quot;thin pool LV&quot;. The thin pool LV contains blocks of physical storage, and blocks in thin LVs just reference blocks in the thin pool LV. A thin pool LV must be created before thin LVs can be created within it. A thin pool LV is created by combining two standard LVs: a large data LV that will hold blocks for thin LVs, and a metadata LV that will hold metadata. The metadata tracks which data blocks belong to each thin LV. Snapshots of thin LVs are efficient because the data blocks common to a thin LV and any of its snapshots are shared. Snapshots may be taken of thin LVs or of other thin snapshots. Blocks common to recursive snapshots are also shared in the thin pool. There is no limit to or degradation from sequences of snapshots. As thin LVs or snapshot LVs are written to, they consume data blocks in the thin pool. As free data blocks in the pool decrease, more free blocks may need to be supplied. This is done by extending the thin pool data LV with additional physical space from the VG. Removing thin LVs or snapshots from the thin pool can also free blocks in the thin pool. However, removing LVs is not always an effective way of freeing space in a thin pool because the amount is limited to the number of blocks not shared with other LVs in the pool. Incremental block allocation from thin pools can cause thin LVs to become fragmented. Standard LVs generally avoid this problem by allocating all the blocks at once during creation. </p>
 <h2>Thin Terms</h2>
 <dl>
-<dt>ThinDataLV</p>
+<dt>ThinDataLV</dt>
 <dd>thin data LV<br />
  large LV created in a VG<br />
- used by thin pool to store ThinLV blocks </p>
-<dt>ThinMetaLV</p>
+ used by thin pool to store ThinLV blocks </dd>
+<dt>ThinMetaLV</dt>
 <dd>thin metadata LV<br />
  small LV created in a VG<br />
- used by thin pool to track data block usage </p>
-<dt>ThinPoolLV</p>
+ used by thin pool to track data block usage </dd>
+<dt>ThinPoolLV</dt>
 <dd>thin pool LV<br />
  combination of ThinDataLV and ThinMetaLV<br />
- contains ThinLVs and SnapLVs </p>
-<dt>ThinLV</p>
+ contains ThinLVs and SnapLVs </dd>
+<dt>ThinLV</dt>
 <dd>thin LV<br />
  created from ThinPoolLV<br />
- appears blank after creation </p>
-<dt>SnapLV</p>
+ appears blank after creation </dd>
+<dt>SnapLV</dt>
 <dd>snapshot LV<br />
  created from ThinPoolLV<br />
- appears as a snapshot of another LV after creation </p>
+ appears as a snapshot of another LV after creation </dd>
 </dl>
 <h2>Thin Usage</h2>
 <p>The primary method for using lvm thin provisioning:</p>
@@ -305,14 +305,14 @@ thin1 vg Vwi-aotz-- 100.00g pool0 2.70</pre>
 <p> <i>disabling</i> </p>
 <p> There are multiple ways that extension of thin pools could be prevented: </p>
 <dl>
-<dt>&bull;</p>
-<dd>If the dmeventd daemon is not running, no monitoring or automatic extension will occur. </p>
-<dt>&bull;</p>
-<dd>Even when dmeventd is running, all monitoring can be disabled with the lvm.conf monitoring setting. </p>
-<dt>&bull;</p>
-<dd>To activate or create a thin pool LV without interacting with dmeventd, the &#8211;ignoremonitoring option can be used. With this option, the command will not ask dmeventd to monitor the thin pool LV. </p>
-<dt>&bull;</p>
-<dd>Setting thin_pool_autoextend_threshould to 100 disables automatic extension of thin pool LVs, even if they are being monitored by dmeventd. </p>
+<dt>&bull;</dt>
+<dd>If the dmeventd daemon is not running, no monitoring or automatic extension will occur. </dd>
+<dt>&bull;</dt>
+<dd>Even when dmeventd is running, all monitoring can be disabled with the lvm.conf monitoring setting. </dd>
+<dt>&bull;</dt>
+<dd>To activate or create a thin pool LV without interacting with dmeventd, the &#8211;ignoremonitoring option can be used. With this option, the command will not ask dmeventd to monitor the thin pool LV. </dd>
+<dt>&bull;</dt>
+<dd>Setting thin_pool_autoextend_threshould to 100 disables automatic extension of thin pool LVs, even if they are being monitored by dmeventd. </dd>
 </dl>
 <p> <i>Example</i><br />
  If thin_pool_autoextend_threshold is 70 and thin_pool_autoextend_percent is 20, whenever a pool exceeds 70% usage, it will be extended by another 20%. For a 1G pool, using 700M will trigger a resize to 1.2G. When the usage exceeds 840M, the pool will be extended to 1.44G, and so on.</p>
@@ -339,14 +339,14 @@ thin1 vg Vwi-aotz-- 100.00g pool0 2.70</pre>
 <p><i>causes</i> </p>
 <p> A thin pool may run out of data space for any of the following reasons: </p>
 <dl>
-<dt>&bull;</p>
-<dd>Automatic extension of the thin pool is disabled, and the thin pool is not manually extended. (Disabling automatic extension is not recommended.) </p>
-<dt>&bull;</p>
-<dd>The dmeventd daemon is not running and the thin pool is not manually extended. (Disabling dmeventd is not recommended.) </p>
-<dt>&bull;</p>
-<dd>Automatic extension of the thin pool is too slow given the rate of writes to thin LVs in the pool. (This can be addressed by tuning the thin_pool_autoextend_threshold and thin_pool_autoextend_percent. See &quot;Automatic extend settings&quot;.) </p>
-<dt>&bull;</p>
-<dd>The VG does not have enough free blocks to extend the thin pool. </p>
+<dt>&bull;</dt>
+<dd>Automatic extension of the thin pool is disabled, and the thin pool is not manually extended. (Disabling automatic extension is not recommended.) </dd>
+<dt>&bull;</dt>
+<dd>The dmeventd daemon is not running and the thin pool is not manually extended. (Disabling dmeventd is not recommended.) </dd>
+<dt>&bull;</dt>
+<dd>Automatic extension of the thin pool is too slow given the rate of writes to thin LVs in the pool. (This can be addressed by tuning the thin_pool_autoextend_threshold and thin_pool_autoextend_percent. See &quot;Automatic extend settings&quot;.) </dd>
+<dt>&bull;</dt>
+<dd>The VG does not have enough free blocks to extend the thin pool. </dd>
 </dl>
 <h3>Metadata space exhaustion</h3>
 <p>If thin pool metadata space is exhausted (or a thin pool metadata operation fails), errors will be returned for IO operations on thin LVs. </p>
@@ -374,23 +374,23 @@ thin1 vg Vwi-aotz-- 100.00g pool0 2.70</pre>
 <p> To see the default values of these settings, run: </p>
 <p> <code>lvmconfig &#8211;type default &#8211;withcomment</code></p>
 <dl>
-<dd><code>activation/thin_pool_autoextend_threshold</code></dl>
+<dd><code>activation/thin_pool_autoextend_threshold</code></dd></dl>
 <p> <code>lvmconfig &#8211;type default &#8211;withcomment</code></p>
 <dl>
-<dd><code>activation/thin_pool_autoextend_percent</code></dl>
+<dd><code>activation/thin_pool_autoextend_percent</code></dd></dl>
 <p> To change these values globally, edit <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5). </p>
 <p> To change these values on a per-VG or per-LV basis, attach a &quot;profile&quot; to the VG or LV. A profile is a collection of config settings, saved in a local text file (using the lvm.conf format). lvm looks for profiles in the profile_dir directory, e.g. /etc/lvm/profile/. Once attached to a VG or LV, lvm will process the VG or LV using the settings from the attached profile. A profile is named and referenced by its file name. </p>
 <p> To use a profile to customize the lvextend settings for an LV: </p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>Create a file containing settings, saved in profile_dir. For the profile_dir location, run:<br />
- <code>lvmconfig config/profile_dir</code> </p>
-<dt>&bull;</p>
+ <code>lvmconfig config/profile_dir</code> </dd>
+<dt>&bull;</dt>
 <dd>Attach the profile to an LV, using the command:<br />
- <code>lvchange &#8211;metadataprofile ProfileName VG/ThinPoolLV</code> </p>
-<dt>&bull;</p>
+ <code>lvchange &#8211;metadataprofile ProfileName VG/ThinPoolLV</code> </dd>
+<dt>&bull;</dt>
 <dd>Extend the LV using the profile settings:<br />
- <code>lvextend &#8211;use-policies VG/ThinPoolLV</code> </p>
+ <code>lvextend &#8211;use-policies VG/ThinPoolLV</code> </dd>
 </dl>
 <p> <i>Example</i> </p>
 <pre># lvmconfig config/profile_dir
@@ -404,25 +404,25 @@ activation {
 # lvextend --use-policies vg/pool0</pre>
 <p><i>Notes</i></p>
 <dl>
-<dt>&bull;</p>
-<dd>A profile is attached to a VG or LV by name, where the name references a local file in profile_dir. If the VG is moved to another machine, the file with the profile also needs to be moved. </p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>A profile is attached to a VG or LV by name, where the name references a local file in profile_dir. If the VG is moved to another machine, the file with the profile also needs to be moved. </dd>
+<dt>&bull;</dt>
 <dd>Only certain settings can be used in a VG or LV profile, see:<br />
- <code>lvmconfig &#8211;type profilable-metadata.</code> </p>
-<dt>&bull;</p>
-<dd>An LV without a profile of its own will inherit the VG profile. </p>
-<dt>&bull;</p>
+ <code>lvmconfig &#8211;type profilable-metadata.</code> </dd>
+<dt>&bull;</dt>
+<dd>An LV without a profile of its own will inherit the VG profile. </dd>
+<dt>&bull;</dt>
 <dd>Remove a profile from an LV using the command:<br />
- <code>lvchange &#8211;detachprofile VG/ThinPoolLV.</code> </p>
-<dt>&bull;</p>
-<dd>Commands can also have profiles applied to them. The settings that can be applied to a command are different than the settings that can be applied to a VG or LV. See lvmconfig &#8211;type profilable-command. To apply a profile to a command, write a profile, save it in the profile directory, and run the command using the option: &#8211;commandprofile ProfileName. </p>
+ <code>lvchange &#8211;detachprofile VG/ThinPoolLV.</code> </dd>
+<dt>&bull;</dt>
+<dd>Commands can also have profiles applied to them. The settings that can be applied to a command are different than the settings that can be applied to a VG or LV. See lvmconfig &#8211;type profilable-command. To apply a profile to a command, write a profile, save it in the profile directory, and run the command using the option: &#8211;commandprofile ProfileName. </dd>
 </dl>
 <h3>Zeroing</h3>
 <p>When a thin pool provisions a new data block for a thin LV, the new block is first overwritten with zeros. The zeroing mode is indicated by the &quot;z&quot; attribute displayed by lvs. The option -Z (or &#8211;zero) can be added to commands to specify the zeroing mode. </p>
 <p> Command to set the zeroing mode when creating a thin pool LV:<br />
  <code>lvconvert &#8211;type thin-pool -Z{y|n}</code> </p>
 <dl>
-<dd><code>&#8211;poolmetadata VG/ThinMetaLV VG/ThinDataLV</code></dl>
+<dd><code>&#8211;poolmetadata VG/ThinMetaLV VG/ThinDataLV</code></dd></dl>
 <p> Command to change the zeroing mode of an existing thin pool LV:<br />
  <code>lvchange -Z{y|n} VG/ThinPoolLV</code> </p>
 <p> If zeroing mode is changed from &quot;n&quot; to &quot;y&quot;, previously provisioned blocks are not zeroed. </p>
@@ -439,7 +439,7 @@ activation {
 <p> Command to set the discard mode when creating a thin pool LV:<br />
  <code>lvconvert &#8211;discards {ignore|nopassdown|passdown}</code> </p>
 <dl>
-<dd><code>&#8211;type thin-pool &#8211;poolmetadata VG/ThinMetaLV VG/ThinDataLV</code></dl>
+<dd><code>&#8211;type thin-pool &#8211;poolmetadata VG/ThinMetaLV VG/ThinDataLV</code></dd></dl>
 <p> Command to change the discard mode of an existing thin pool LV:<br />
  <code>lvchange &#8211;discards {ignore|nopassdown|passdown} VG/ThinPoolLV</code> </p>
 <p> <i>Example</i> </p>
@@ -481,7 +481,7 @@ pool0 passdown
 <p> Convert ExampleLV into a read only external LV with the new name NewExternalOriginLV, and create a new thin LV that is given the previous name of ExampleLV. </p>
 <p> <code>lvconvert &#8211;type thin &#8211;thinpool VG/ThinPoolLV</code> </p>
 <dl>
-<dd><code>&#8211;originname NewExternalOriginLV VG/ExampleLV</code></dl>
+<dd><code>&#8211;originname NewExternalOriginLV VG/ExampleLV</code></dd></dl>
 <p> <i>Example</i> </p>
 <pre># lvcreate -n lv_example -L 10G vg
 # lvs
@@ -510,7 +510,7 @@ pool0 passdown
  -V VirtualSize specifies the virtual size of the thin LV. </p>
 <p> <code>lvcreate &#8211;type thin -V VirtualSize -L LargeSize</code></p>
 <dl>
-<dd><code>-n ThinLV &#8211;thinpool VG/ThinPoolLV</code></dl>
+<dd><code>-n ThinLV &#8211;thinpool VG/ThinPoolLV</code></dd></dl>
 <p> Equivalent to:<br />
  <code>lvcreate &#8211;type thin-pool -L LargeSize VG/ThinPoolLV</code><br />
  <code>lvcreate -n ThinLV -V VirtualSize &#8211;thinpool VG/ThinPoolLV</code> </p>

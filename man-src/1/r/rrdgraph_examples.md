@@ -67,8 +67,8 @@ description: "rrdgraph_examples – Examples for rrdtool graph"
 <h3>Offsetting a line on the y-axis</h3>
 <p> Depending on your needs you can do this in two ways:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Offset the data, then graph this </p>
+<dt>&bull;</dt>
+<dd> Offset the data, then graph this </dd>
 <pre>
     DEF:mydata=my.rrd:ds:AVERAGE
 </pre>
@@ -77,8 +77,8 @@ description: "rrdgraph_examples – Examples for rrdtool graph"
     CDEF:data=mydata,100,+
     LINE1:data#FF0000:&quot;Data with offset&quot;
 </pre>
-<dt>&bull;</p>
-<dd> Graph the original data, with an offset </p>
+<dt>&bull;</dt>
+<dd> Graph the original data, with an offset </dd>
 <pre>
     DEF:mydata=my.rrd:ds:AVERAGE
 </pre>
@@ -94,12 +94,12 @@ description: "rrdgraph_examples – Examples for rrdtool graph"
 <h3>Drawing dashed lines</h3>
 <p> Also works for <font SIZE="-1">HRULE</font> and <font SIZE="-1">VRULE</font></p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> default style: &#8211; &#8211; &#8211; &#8211; &#8211;<br />
-&nbsp;<wbr>LINE1:data#FF0000:&#8220;dashed line&#8221;:dashes</p>
-<dt>&bull;</p>
+&nbsp;<wbr>LINE1:data#FF0000:&#8220;dashed line&#8221;:dashes</dd>
+<dt>&bull;</dt>
 <dd> more fancy style with offset: &#8211; &#8211; &#8212; &#8211; &#8212; &#8211;<br />
-&nbsp;<wbr>LINE1:data#FF0000:&#8220;another dashed line&#8221;:dashes=15,5,5,10:dash-offset=10</dl>
+&nbsp;<wbr>LINE1:data#FF0000:&#8220;another dashed line&#8221;:dashes=15,5,5,10:dash-offset=10</dd></dl>
 <h3>Time ranges</h3>
 <pre><code>
 Last four weeks : --start end - 4w --end 00 : 00 January 2001 : --start 20010101 --end start + 31d January 2001 : --start 20010101 --end 20010201 Last hour : --start end - 1h Last 24 hours : &lt;nothing at all&gt; Yesterday : --end 00 : 00

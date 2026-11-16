@@ -14,12 +14,12 @@ description: "rio_pw_enable – Enables/disables port-write handling by a master
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port associated with port-write handling</dl>
+</dd><dd>Master port associated with port-write handling</dd></dl>
 <p> <i>enable</i></p>
 <dl>
-<dd>1=enable, 0=disable</dl>
+<dd>1=enable, 0=disable</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

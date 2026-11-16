@@ -21,45 +21,45 @@ int query_module(const char *name, int which, void *buf,
 <p> <code>query_module</code>() requests information from the kernel about loadable modules. The returned information is placed in the buffer pointed to by <i>buf</i>. The caller must specify the size of <i>buf</i> in <i>bufsize</i>. The precise nature and format of the returned information depend on the operation specified by <i>which</i>. Some operations require <i>name</i> to identify a currently loaded module, some allow <i>name</i> to be NULL, indicating the kernel proper. </p>
 <p> The following values can be specified for <i>which</i>:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Returns success, if the kernel supports <code>query_module</code>(). Used to probe for availability of the system call.</p>
-<dt><code>QM_MODULES</code></p>
-<dd> Returns the names of all loaded modules. The returned buffer consists of a sequence of null-terminated strings; <i>ret</i> is set to the number of modules.</p>
-<dt><code>QM_DEPS</code></p>
-<dd> Returns the names of all modules used by the indicated module. The returned buffer consists of a sequence of null-terminated strings; <i>ret</i> is set to the number of modules.</p>
-<dt><code>QM_REFS</code></p>
-<dd> Returns the names of all modules using the indicated module. This is the inverse of <code>QM_DEPS</code>. The returned buffer consists of a sequence of null-terminated strings; <i>ret</i> is set to the number of modules.</p>
-<dt><code>QM_SYMBOLS</code></p>
-<dd> Returns the symbols and values exported by the kernel or the indicated module. The returned buffer is an array of structures of the following form</p>
+<dt><code>0</code></dt>
+<dd> Returns success, if the kernel supports <code>query_module</code>(). Used to probe for availability of the system call.</dd>
+<dt><code>QM_MODULES</code></dt>
+<dd> Returns the names of all loaded modules. The returned buffer consists of a sequence of null-terminated strings; <i>ret</i> is set to the number of modules.</dd>
+<dt><code>QM_DEPS</code></dt>
+<dd> Returns the names of all modules used by the indicated module. The returned buffer consists of a sequence of null-terminated strings; <i>ret</i> is set to the number of modules.</dd>
+<dt><code>QM_REFS</code></dt>
+<dd> Returns the names of all modules using the indicated module. This is the inverse of <code>QM_DEPS</code>. The returned buffer consists of a sequence of null-terminated strings; <i>ret</i> is set to the number of modules.</dd>
+<dt><code>QM_SYMBOLS</code></dt>
+<dd> Returns the symbols and values exported by the kernel or the indicated module. The returned buffer is an array of structures of the following form</dd>
 <dt>
-<dd> struct module_symbol {<br />
+</dt><dd> struct module_symbol {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long value;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long name; };</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long name; };</dd>
 <dt>
-<dd> followed by null-terminated strings. The value of <i>name</i> is the character offset of the string relative to the start of <i>buf</i>; <i>ret</i> is set to the number of symbols.</p>
-<dt><code>QM_INFO</code></p>
-<dd> Returns miscellaneous information about the indicated module. The output buffer format is:</p>
+</dt><dd> followed by null-terminated strings. The value of <i>name</i> is the character offset of the string relative to the start of <i>buf</i>; <i>ret</i> is set to the number of symbols.</dd>
+<dt><code>QM_INFO</code></dt>
+<dd> Returns miscellaneous information about the indicated module. The output buffer format is:</dd>
 <dt>
-<dd> struct module_info {<br />
+</dt><dd> struct module_info {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long address;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long size;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long flags; };</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long flags; };</dd>
 <dt>
-<dd> where <i>address</i> is the kernel address at which the module resides, <i>size</i> is the size of the module in bytes, and <i>flags</i> is a mask of <code>MOD_RUNNING</code>, <code>MOD_AUTOCLEAN</code>, and so on, that indicates the current status of the module (see the Linux kernel source file <i>include/linux/module.h</i>). <i>ret</i> is set to the size of the <i>module_info</i> structure.</dl>
+</dt><dd> where <i>address</i> is the kernel address at which the module resides, <i>size</i> is the size of the module in bytes, and <i>flags</i> is a mask of <code>MOD_RUNNING</code>, <code>MOD_AUTOCLEAN</code>, and so on, that indicates the current status of the module (see the Linux kernel source file <i>include/linux/module.h</i>). <i>ret</i> is set to the size of the <i>module_info</i> structure.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> At least one of <i>name</i>, <i>buf</i>, or <i>ret</i> was outside the program&#8217;s accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid <i>which</i>; or <i>name</i> is NULL (indicating &quot;the kernel&quot;), but this is not permitted with the specified value of <i>which</i>.</p>
-<dt><code>ENOENT</code></p>
-<dd> No module by that <i>name</i> exists.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The buffer size provided was too small. <i>ret</i> is set to the minimum size needed.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>query_module</code>() is not supported in this version of the kernel (e.g., the kernel is version 2.6 or later).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> At least one of <i>name</i>, <i>buf</i>, or <i>ret</i> was outside the program&#8217;s accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid <i>which</i>; or <i>name</i> is NULL (indicating &quot;the kernel&quot;), but this is not permitted with the specified value of <i>which</i>.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> No module by that <i>name</i> exists.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The buffer size provided was too small. <i>ret</i> is set to the minimum size needed.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>query_module</code>() is not supported in this version of the kernel (e.g., the kernel is version 2.6 or later).</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is present on Linux only up until kernel 2.4; it was removed in Linux 2.6.</p>
 <h2>CONFORMING TO</h2>

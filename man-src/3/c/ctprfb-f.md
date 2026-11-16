@@ -21,10 +21,10 @@ description: "ctprfb.f –"
 <pre> CTPRFB applies a complex &quot;triangular-pentagonal&quot; block reflector H or its 
  conjugate transpose H**H to a complex matrix C, which is composed of two 
  blocks A and B, either from the left or right.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'L': apply H or H**H from the Left
  = 'R': apply H or H**H from the Right</pre>
@@ -114,13 +114,13 @@ description: "ctprfb.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -146,13 +146,13 @@ description: "ctprfb.f –"
  [V1]
  - V2 is lower trapezoidal (last L rows of K-by-K lower triangular)
  If DIRECT = 'B' and STOREV = 'R': V = [V2 V1]
- 
  - V2 is upper trapezoidal (last L columns of K-by-K upper triangular)
  If STOREV = 'C' and SIDE = 'L', V is M-by-K with V2 L-by-K.
  If STOREV = 'C' and SIDE = 'R', V is N-by-K with V2 L-by-K.
  If STOREV = 'R' and SIDE = 'L', V is K-by-M with V2 K-by-L.
  If STOREV = 'R' and SIDE = 'R', V is K-by-N with V2 K-by-L.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 251 of file ctprfb.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

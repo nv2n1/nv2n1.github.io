@@ -11,18 +11,18 @@ description: "ndb_drop_table – drop an NDB table"
 <p> ndb_drop_table &#8211; drop an NDB table </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndb_drop_table </code><i>options</i></dl>
+<dt> <code>ndb_drop_table </code><i>options</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ndb_drop_table</code></p>
-<dd>drops the specified NDB table. (If you try to use this on a table created with a storage engine other than NDB, it fails with the error 723: No such table exists.) This operation is extremely fast &#8212; in some cases, it can be an order of magnitude faster than using DROP TABLE on an NDB table from MySQL. </p>
+<dd>drops the specified NDB table. (If you try to use this on a table created with a storage engine other than NDB, it fails with the error 723: No such table exists.) This operation is extremely fast &#8212; in some cases, it can be an order of magnitude faster than using DROP TABLE on an NDB table from MySQL. </dd>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ndb_drop_table -c <i>connect_string</i> <i>tbl_name</i> -d <i>db_name</i>
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Additional Options</code>: None.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008, 2010, Oracle and/or its affiliates. All rights reserved. </p>

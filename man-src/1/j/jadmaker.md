@@ -15,12 +15,12 @@ description: "jadmaker – JAD File Generator"
 <p> Script to generate JAD file from JAR file. </p>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-f, &#8211;force</code></p>
-<dd> Force rewriting of JAD file even if exists.</p>
-<dt><code>-u, &#8211;url URL</code></p>
-<dd> Define URL to be included in JAD file. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-f, &#8211;force</code></dt>
+<dd> Force rewriting of JAD file even if exists.</dd>
+<dt><code>-u, &#8211;url URL</code></dt>
+<dd> Define URL to be included in JAD file. </dd>
 </dl>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.cihar.com">http://bugs.cihar.com</a>&gt;. </p>

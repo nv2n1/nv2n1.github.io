@@ -19,16 +19,16 @@ description: "sddm – the simple desktop display manager"
 <p> Distributions without pam and systemd will need to put the <code>sddm</code> user into the <code>video</code> group, otherwise errors regarding GL and drm devices might be experienced.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;test-mode</code></p>
-<dd> Start daemon in test mode.</p>
-<dt><code>&#8211;help</code>,<code> -h</code></p>
-<dd> Show help message and exit.</dl>
+<dt><code>&#8211;test-mode</code></dt>
+<dd> Start daemon in test mode.</dd>
+<dt><code>&#8211;help</code>,<code> -h</code></dt>
+<dd> Show help message and exit.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/sddm.conf</code></p>
-<dd> System configuration file</p>
-<dt><code>/usr/share/sddm/themes</code></p>
-<dd> Where sddm looks for themes</dl>
+<dt><code>/etc/sddm.conf</code></dt>
+<dd> System configuration file</dd>
+<dt><code>/usr/share/sddm/themes</code></dt>
+<dd> Where sddm looks for themes</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-sddm-conf/">sddm.conf</a></code>(5) </p>
 <p> The full documentation for sddm is available at <i><a rel="nofollow" href="https://github.com/sddm/sddm">https://github.com/sddm/sddm</a></i> </p>

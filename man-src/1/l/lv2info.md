@@ -13,14 +13,14 @@ description: "lv2info – print information about an installed LV2 plugin."
 <p> <code>lv2info PLUGIN_URI</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p FILE</p>
-<dd> Write Turtle description of plugin to FILE </p>
-<dt>-m FILE</p>
-<dd> Add record of plugin to manifest FILE </p>
-<dt>&#8211;help</code></p>
-<dd> Display help and exit </p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version information and exit </p>
+<dt><code>-p FILE</dt>
+<dd> Write Turtle description of plugin to FILE </dd>
+<dt>-m FILE</dt>
+<dd> Add record of plugin to manifest FILE </dd>
+<dt>&#8211;help</code></dt>
+<dd> Display help and exit </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version information and exit </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>lilv(3),</code> <code><a href="/docs/linux/man/1-lv2ls/">lv2ls</a>(1)</code> </p>

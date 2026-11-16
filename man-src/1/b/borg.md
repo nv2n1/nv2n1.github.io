@@ -64,84 +64,84 @@ export BORG_REPO='<a href="ssh://user@host:port/path/to/repo'">ssh://user@host:p
 <h3>Environment Variables</h3>
 <p> Borg uses some environment variables for automation:</p>
 <dl>
-<dt><code>General:</code></p>
+<dt><code>General:</code></dt>
 <dd>
-<dt><code>BORG_REPO</code></p>
-<dd> When set, use the value to give the default repository location. If a command needs an archive parameter, you can abbreviate as <i>::archive</i>. If a command needs a repository parameter, you can either leave it away or abbreviate as <i>::</i>, if a positional parameter is required.</p>
-<dt><code>BORG_PASSPHRASE</code></p>
-<dd> When set, use the value to answer the passphrase question for encrypted repositories.</p>
-<dt><code>BORG_DISPLAY_PASSPHRASE</code></p>
-<dd> When set, use the value to answer the &quot;display the passphrase for verification&quot; question when defining a new passphrase for encrypted repositories.</p>
-<dt><code>BORG_LOGGING_CONF</code></p>
-<dd> When set, use the given filename as <i>INI</i>-style logging configuration.</p>
-<dt><code>BORG_RSH</code></p>
-<dd> When set, use this command instead of <code>ssh</code>. This can be used to specify ssh options, such as a custom identity file <code>ssh -i /path/to/private/key</code>. See <code>man ssh</code> for other options.</p>
-<dt><code>BORG_REMOTE_PATH</code></p>
-<dd> When set, use the given path/filename as remote path (default is &quot;borg&quot;). Using <code>&#8211;remote-path PATH</code> commandline option overrides the environment variable.</p>
-<dt><code>BORG_FILES_CACHE_TTL</code></p>
-<dd> When set to a numeric value, this determines the maximum &quot;time to live&quot; for the files cache entries (default: 20). The files cache is used to quickly determine whether a file is unchanged. The FAQ explains this more detailed in: <i>always_chunking</i></p>
-<dt><code>TMPDIR</code></p>
-<dd> where temporary files are stored (might need a lot of temporary space for some operations)</p>
-<dt><code>Some automatic answerers (if set, they automatically answer confirmation questions):</code></p>
+</dd><dt><code>BORG_REPO</code></dt>
+<dd> When set, use the value to give the default repository location. If a command needs an archive parameter, you can abbreviate as <i>::archive</i>. If a command needs a repository parameter, you can either leave it away or abbreviate as <i>::</i>, if a positional parameter is required.</dd>
+<dt><code>BORG_PASSPHRASE</code></dt>
+<dd> When set, use the value to answer the passphrase question for encrypted repositories.</dd>
+<dt><code>BORG_DISPLAY_PASSPHRASE</code></dt>
+<dd> When set, use the value to answer the &quot;display the passphrase for verification&quot; question when defining a new passphrase for encrypted repositories.</dd>
+<dt><code>BORG_LOGGING_CONF</code></dt>
+<dd> When set, use the given filename as <i>INI</i>-style logging configuration.</dd>
+<dt><code>BORG_RSH</code></dt>
+<dd> When set, use this command instead of <code>ssh</code>. This can be used to specify ssh options, such as a custom identity file <code>ssh -i /path/to/private/key</code>. See <code>man ssh</code> for other options.</dd>
+<dt><code>BORG_REMOTE_PATH</code></dt>
+<dd> When set, use the given path/filename as remote path (default is &quot;borg&quot;). Using <code>&#8211;remote-path PATH</code> commandline option overrides the environment variable.</dd>
+<dt><code>BORG_FILES_CACHE_TTL</code></dt>
+<dd> When set to a numeric value, this determines the maximum &quot;time to live&quot; for the files cache entries (default: 20). The files cache is used to quickly determine whether a file is unchanged. The FAQ explains this more detailed in: <i>always_chunking</i></dd>
+<dt><code>TMPDIR</code></dt>
+<dd> where temporary files are stored (might need a lot of temporary space for some operations)</dd>
+<dt><code>Some automatic answerers (if set, they automatically answer confirmation questions):</code></dt>
 <dd>
-<dt><code>BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=no (or =yes)</code></p>
-<dd> For &quot;Warning: Attempting to access a previously unknown unencrypted repository&quot;</p>
-<dt><code>BORG_RELOCATED_REPO_ACCESS_IS_OK=no (or =yes)</code></p>
-<dd> For &quot;Warning: The repository at location &#8230; was previously located at &#8230;&quot;</p>
-<dt><code>BORG_CHECK_I_KNOW_WHAT_I_AM_DOING=NO (or =YES)</code></p>
-<dd> For &quot;Warning: &#8216;check &#8211;repair&#8217; is an experimental feature that might result in data loss.&quot;</p>
-<dt><code>BORG_DELETE_I_KNOW_WHAT_I_AM_DOING=NO (or =YES)</code></p>
-<dd> For &quot;You requested to completely DELETE the repository <i>including</i> all archives it contains:&quot; </p>
+</dd><dt><code>BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=no (or =yes)</code></dt>
+<dd> For &quot;Warning: Attempting to access a previously unknown unencrypted repository&quot;</dd>
+<dt><code>BORG_RELOCATED_REPO_ACCESS_IS_OK=no (or =yes)</code></dt>
+<dd> For &quot;Warning: The repository at location &#8230; was previously located at &#8230;&quot;</dd>
+<dt><code>BORG_CHECK_I_KNOW_WHAT_I_AM_DOING=NO (or =YES)</code></dt>
+<dd> For &quot;Warning: &#8216;check &#8211;repair&#8217; is an experimental feature that might result in data loss.&quot;</dd>
+<dt><code>BORG_DELETE_I_KNOW_WHAT_I_AM_DOING=NO (or =YES)</code></dt>
+<dd> For &quot;You requested to completely DELETE the repository <i>including</i> all archives it contains:&quot; </dd>
 <p> Note: answers are case sensitive. setting an invalid answer value might either give the default answer or ask you interactively, depending on whether retries are allowed (they by default are allowed). So please test your scripts interactively before making them a non-interactive script.</p>
-<dt><code>Directories:</code></p>
+<dt><code>Directories:</code></dt>
 <dd>
-<dt><code>BORG_KEYS_DIR</code></p>
-<dd> Default to &#8216;~/.config/borg/keys&#8217;. This directory contains keys for encrypted repositories.</p>
-<dt><code>BORG_SECURITY_DIR</code></p>
-<dd> Default to &#8216;~/.config/borg/security&#8217;. This directory is used by Borg to track various pieces of security-related data.</p>
-<dt><code>BORG_CACHE_DIR</code></p>
-<dd> Default to &#8216;~/.cache/borg&#8217;. This directory contains the local cache and might need a lot of space for dealing with big repositories).</p>
-<dt><code>Building:</code></p>
+</dd><dt><code>BORG_KEYS_DIR</code></dt>
+<dd> Default to &#8216;~/.config/borg/keys&#8217;. This directory contains keys for encrypted repositories.</dd>
+<dt><code>BORG_SECURITY_DIR</code></dt>
+<dd> Default to &#8216;~/.config/borg/security&#8217;. This directory is used by Borg to track various pieces of security-related data.</dd>
+<dt><code>BORG_CACHE_DIR</code></dt>
+<dd> Default to &#8216;~/.cache/borg&#8217;. This directory contains the local cache and might need a lot of space for dealing with big repositories).</dd>
+<dt><code>Building:</code></dt>
 <dd>
-<dt><code>BORG_OPENSSL_PREFIX</code></p>
-<dd> Adds given OpenSSL header file directory to the default locations (setup.py).</p>
-<dt><code>BORG_LZ4_PREFIX</code></p>
-<dd> Adds given LZ4 header file directory to the default locations (setup.py). </p>
+</dd><dt><code>BORG_OPENSSL_PREFIX</code></dt>
+<dd> Adds given OpenSSL header file directory to the default locations (setup.py).</dd>
+<dt><code>BORG_LZ4_PREFIX</code></dt>
+<dd> Adds given LZ4 header file directory to the default locations (setup.py). </dd>
 <p> Please note:</p>
-<dt>&bull;</p>
-<dd> be very careful when using the &quot;yes&quot; sayers, the warnings with prompt exist for your / your data&#8217;s security/safety</p>
-<dt>&bull;</p>
-<dd> also be very careful when putting your passphrase into a script, make sure it has appropriate file permissions (e.g. mode 600, root:root).</dl>
+<dt>&bull;</dt>
+<dd> be very careful when using the &quot;yes&quot; sayers, the warnings with prompt exist for your / your data&#8217;s security/safety</dd>
+<dt>&bull;</dt>
+<dd> also be very careful when putting your passphrase into a script, make sure it has appropriate file permissions (e.g. mode 600, root:root).</dd></dl>
 <h3>Resource Usage</h3>
 <p> Borg might use a lot of resources depending on the size of the data set it is dealing with. </p>
 <p> If one uses Borg in a client/server way (with a ssh: repository), the resource usage occurs in part on the client and in another part on the server. </p>
 <p> If one uses Borg as a single process (with a filesystem repo), all the resource usage occurs in that one process, so just add up client + server to get the approximate resource usage.</p>
 <dl>
-<dt><code>CPU client:</code></p>
-<dd> borg create: does chunking, hashing, compression, crypto (high CPU usage) chunks cache sync: quite heavy on CPU, doing lots of hashtable operations. borg extract: crypto, decompression (medium to high CPU usage) borg check: similar to extract, but depends on options given. borg prune / borg delete archive: low to medium CPU usage borg delete repo: done on the server It won&#8217;t go beyond 100% of 1 core as the code is currently single-threaded. Especially higher zlib and lzma compression levels use significant amounts of CPU cycles. Crypto might be cheap on the CPU (if hardware accelerated) or expensive (if not).</p>
-<dt><code>CPU server:</code></p>
-<dd> It usually doesn&#8217;t need much CPU, it just deals with the key/value store (repository) and uses the repository index for that. </p>
+<dt><code>CPU client:</code></dt>
+<dd> borg create: does chunking, hashing, compression, crypto (high CPU usage) chunks cache sync: quite heavy on CPU, doing lots of hashtable operations. borg extract: crypto, decompression (medium to high CPU usage) borg check: similar to extract, but depends on options given. borg prune / borg delete archive: low to medium CPU usage borg delete repo: done on the server It won&#8217;t go beyond 100% of 1 core as the code is currently single-threaded. Especially higher zlib and lzma compression levels use significant amounts of CPU cycles. Crypto might be cheap on the CPU (if hardware accelerated) or expensive (if not).</dd>
+<dt><code>CPU server:</code></dt>
+<dd> It usually doesn&#8217;t need much CPU, it just deals with the key/value store (repository) and uses the repository index for that. </dd>
 <p> borg check: the repository check computes the checksums of all chunks (medium CPU usage) borg delete repo: low CPU usage</p>
-<dt><code>CPU (only for client/server operation):</code></p>
-<dd> When using borg in a client/server way with a <i>ssh:-type</i> repo, the ssh processes used for the transport layer will need some CPU on the client and on the server due to the crypto they are doing &#8211; esp. if you are pumping big amounts of data.</p>
-<dt><code>Memory (RAM) client:</code></p>
-<dd> The chunks index and the files index are read into memory for performance reasons. Might need big amounts of memory (see below). Compression, esp. lzma compression with high levels might need substantial amounts of memory.</p>
-<dt><code>Memory (RAM) server:</code></p>
-<dd> The server process will load the repository index into memory. Might need considerable amounts of memory, but less than on the client (see below).</p>
-<dt><code>Chunks index (client only):</code></p>
-<dd> Proportional to the amount of data chunks in your repo. Lots of chunks in your repo imply a big chunks index. It is possible to tweak the chunker params (see create options).</p>
-<dt><code>Files index (client only):</code></p>
-<dd> Proportional to the amount of files in your last backups. Can be switched off (see create options), but next backup might be much slower if you do. The speed benefit of using the files cache is proportional to file size.</p>
-<dt><code>Repository index (server only):</code></p>
-<dd> Proportional to the amount of data chunks in your repo. Lots of chunks in your repo imply a big repository index. It is possible to tweak the chunker params (see create options) to influence the amount of chunks being created.</p>
-<dt><code>Temporary files (client):</code></p>
-<dd> Reading data and metadata from a FUSE mounted repository will consume up to the size of all deduplicated, small chunks in the repository. Big chunks won&#8217;t be locally cached.</p>
-<dt><code>Temporary files (server):</code></p>
-<dd> None.</p>
-<dt><code>Cache files (client only):</code></p>
-<dd> Contains the chunks index and files index (plus a collection of single- archive chunk indexes which might need huge amounts of disk space, depending on archive count and size &#8211; see FAQ about how to reduce).</p>
-<dt><code>Network (only for client/server operation):</code></p>
-<dd> If your repository is remote, all deduplicated (and optionally compressed/ encrypted) data of course has to go over the connection (ssh: repo url). If you use a locally mounted network filesystem, additionally some copy operations used for transaction support also go over the connection. If you backup multiple sources to one target repository, additional traffic happens for cache resynchronization. </p>
+<dt><code>CPU (only for client/server operation):</code></dt>
+<dd> When using borg in a client/server way with a <i>ssh:-type</i> repo, the ssh processes used for the transport layer will need some CPU on the client and on the server due to the crypto they are doing &#8211; esp. if you are pumping big amounts of data.</dd>
+<dt><code>Memory (RAM) client:</code></dt>
+<dd> The chunks index and the files index are read into memory for performance reasons. Might need big amounts of memory (see below). Compression, esp. lzma compression with high levels might need substantial amounts of memory.</dd>
+<dt><code>Memory (RAM) server:</code></dt>
+<dd> The server process will load the repository index into memory. Might need considerable amounts of memory, but less than on the client (see below).</dd>
+<dt><code>Chunks index (client only):</code></dt>
+<dd> Proportional to the amount of data chunks in your repo. Lots of chunks in your repo imply a big chunks index. It is possible to tweak the chunker params (see create options).</dd>
+<dt><code>Files index (client only):</code></dt>
+<dd> Proportional to the amount of files in your last backups. Can be switched off (see create options), but next backup might be much slower if you do. The speed benefit of using the files cache is proportional to file size.</dd>
+<dt><code>Repository index (server only):</code></dt>
+<dd> Proportional to the amount of data chunks in your repo. Lots of chunks in your repo imply a big repository index. It is possible to tweak the chunker params (see create options) to influence the amount of chunks being created.</dd>
+<dt><code>Temporary files (client):</code></dt>
+<dd> Reading data and metadata from a FUSE mounted repository will consume up to the size of all deduplicated, small chunks in the repository. Big chunks won&#8217;t be locally cached.</dd>
+<dt><code>Temporary files (server):</code></dt>
+<dd> None.</dd>
+<dt><code>Cache files (client only):</code></dt>
+<dd> Contains the chunks index and files index (plus a collection of single- archive chunk indexes which might need huge amounts of disk space, depending on archive count and size &#8211; see FAQ about how to reduce).</dd>
+<dt><code>Network (only for client/server operation):</code></dt>
+<dd> If your repository is remote, all deduplicated (and optionally compressed/ encrypted) data of course has to go over the connection (ssh: repo url). If you use a locally mounted network filesystem, additionally some copy operations used for transaction support also go over the connection. If you backup multiple sources to one target repository, additional traffic happens for cache resynchronization. </dd>
 <p> In case you are interested in more details (like formulas), please see <i>internals</i>.</dl>
 <h3>Units</h3>
 <p> To display quantities, Borg takes care of respecting the usual conventions of scale. Disk sizes are displayed in <i>decimal</i>, using powers of ten (so <code>kB</code> means 1000 bytes). For memory usage, <i>binary prefixes</i> are used, and are indicated using the <i>IEC binary prefixes</i>, using powers of two (so <code>KiB</code> means 1024 bytes).</p>
@@ -196,10 +196,10 @@ $ borg init / path / to / repo<br />
 <p> Make sure you use a good passphrase. Not too short, not too simple. The real encryption / decryption key is encrypted with / locked by your passphrase. If an attacker gets your key, he can&#8217;t unlock and use it without knowing the passphrase. </p>
 <p> Be careful with special or non-ascii characters in your passphrase:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Borg processes the passphrase as unicode (and encodes it as utf-8), so it does not have problems dealing with even the strangest characters.</p>
-<dt>&bull;</p>
-<dd> BUT: that does not necessarily apply to your OS / VM / keyboard configuration. </p>
+<dt>&bull;</dt>
+<dd> Borg processes the passphrase as unicode (and encodes it as utf-8), so it does not have problems dealing with even the strangest characters.</dd>
+<dt>&bull;</dt>
+<dd> BUT: that does not necessarily apply to your OS / VM / keyboard configuration. </dd>
 <p> So better use a long passphrase made from simple ascii chars than one that includes non-ascii stuff or characters that are hard/impossible to enter on a different keyboard layout. </p>
 <p> You can change your passphrase for existing repos at any time, it won&#8217;t affect the encryption/decryption key or other secrets.</dl>
 <h2>BORG CREATE</h2>
@@ -351,8 +351,8 @@ now:<br />
 ~</p>
 <h3>Notes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> the &#8211;exclude patterns are not like tar. In tar &#8211;exclude .bundler/gems will exclude foo/.bundler/gems. In borg it will not, you need to use &#8211;exclude &#8216;*/.bundler/gems&#8217; to get the same effect. See <code>borg help patterns</code> for more information.</dl>
+<dt>&bull;</dt>
+<dd> the &#8211;exclude patterns are not like tar. In tar &#8211;exclude .bundler/gems will exclude foo/.bundler/gems. In borg it will not, you need to use &#8211;exclude &#8216;*/.bundler/gems&#8217; to get the same effect. See <code>borg help patterns</code> for more information.</dd></dl>
 <h2>BORG EXTRACT</h2>
 <p>usage : borg extract[-h][&#8211;critical][&#8211;error][&#8211;warning][&#8211;info][&#8211;debug]<br />
                     [&#8211;lock &#8211; wait N][&#8211;show &#8211; rc][&#8211;no &#8211; files &#8211; cache][&#8211;umask M]<br />
@@ -412,8 +412,8 @@ $ borg extract / path / to / repo::my &#8211; files<br />
         sdx |<br />
     dd of = / dev / sdx bs = 10M</p>
 <dl>
-<dt><code>Note: currently, extract always writes into the current working directory (.),</code></p>
-<dd> so make sure you <code>cd</code> to the right place before calling <code>borg extract</code>.</dl>
+<dt><code>Note: currently, extract always writes into the current working directory (.),</code></dt>
+<dd> so make sure you <code>cd</code> to the right place before calling <code>borg extract</code>.</dd></dl>
 <h2>BORG CHECK</h2>
 <p>usage: borg check [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
@@ -449,31 +449,31 @@ optional arguments:<br />
 <p> The check command verifies the consistency of a repository and the corresponding archives. </p>
 <p> First, the underlying repository data files are checked:</p>
 <dl>
-<dt>&bull;</p>
-<dd> For all segments the segment magic (header) is checked</p>
-<dt>&bull;</p>
-<dd> For all objects stored in the segments, all metadata (e.g. crc and size) and all data is read. The read data is checked by size and CRC. Bit rot and other types of accidental damage can be detected this way.</p>
-<dt>&bull;</p>
-<dd> If we are in repair mode and a integrity error is detected for a segment, we try to recover as many objects from the segment as possible.</p>
-<dt>&bull;</p>
-<dd> In repair mode, it makes sure that the index is consistent with the data stored in the segments.</p>
-<dt>&bull;</p>
-<dd> If you use a remote repo server via ssh:, the repo check is executed on the repo server without causing significant network traffic.</p>
-<dt>&bull;</p>
-<dd> The repository check can be skipped using the &#8211;archives-only option. </p>
+<dt>&bull;</dt>
+<dd> For all segments the segment magic (header) is checked</dd>
+<dt>&bull;</dt>
+<dd> For all objects stored in the segments, all metadata (e.g. crc and size) and all data is read. The read data is checked by size and CRC. Bit rot and other types of accidental damage can be detected this way.</dd>
+<dt>&bull;</dt>
+<dd> If we are in repair mode and a integrity error is detected for a segment, we try to recover as many objects from the segment as possible.</dd>
+<dt>&bull;</dt>
+<dd> In repair mode, it makes sure that the index is consistent with the data stored in the segments.</dd>
+<dt>&bull;</dt>
+<dd> If you use a remote repo server via ssh:, the repo check is executed on the repo server without causing significant network traffic.</dd>
+<dt>&bull;</dt>
+<dd> The repository check can be skipped using the &#8211;archives-only option. </dd>
 <p> Second, the consistency and correctness of the archive metadata is verified:</p>
-<dt>&bull;</p>
-<dd> Is the repo manifest present? If not, it is rebuilt from archive metadata chunks (this requires reading and decrypting of all metadata and data).</p>
-<dt>&bull;</p>
-<dd> Check if archive metadata chunk is present. if not, remove archive from manifest.</p>
-<dt>&bull;</p>
-<dd> For all files (items) in the archive, for all chunks referenced by these files, check if chunk is present. If a chunk is not present and we are in repair mode, replace it with a same-size replacement chunk of zeros. If a previously lost chunk reappears (e.g. via a later backup) and we are in repair mode, the all-zero replacement chunk will be replaced by the correct chunk. This requires reading of archive and file metadata, but not data.</p>
-<dt>&bull;</p>
-<dd> If we are in repair mode and we checked all the archives: delete orphaned chunks from the repo.</p>
-<dt>&bull;</p>
-<dd> if you use a remote repo server via ssh:, the archive check is executed on the client machine (because if encryption is enabled, the checks will require decryption and this is always done client-side, because key access will be required).</p>
-<dt>&bull;</p>
-<dd> The archive checks can be time consuming, they can be skipped using the &#8211;repository-only option.</dl>
+<dt>&bull;</dt>
+<dd> Is the repo manifest present? If not, it is rebuilt from archive metadata chunks (this requires reading and decrypting of all metadata and data).</dd>
+<dt>&bull;</dt>
+<dd> Check if archive metadata chunk is present. if not, remove archive from manifest.</dd>
+<dt>&bull;</dt>
+<dd> For all files (items) in the archive, for all chunks referenced by these files, check if chunk is present. If a chunk is not present and we are in repair mode, replace it with a same-size replacement chunk of zeros. If a previously lost chunk reappears (e.g. via a later backup) and we are in repair mode, the all-zero replacement chunk will be replaced by the correct chunk. This requires reading of archive and file metadata, but not data.</dd>
+<dt>&bull;</dt>
+<dd> If we are in repair mode and we checked all the archives: delete orphaned chunks from the repo.</dd>
+<dt>&bull;</dt>
+<dd> if you use a remote repo server via ssh:, the archive check is executed on the client machine (because if encryption is enabled, the checks will require decryption and this is always done client-side, because key access will be required).</dd>
+<dt>&bull;</dt>
+<dd> The archive checks can be time consuming, they can be skipped using the &#8211;repository-only option.</dd></dl>
 <h2>BORG RENAME</h2>
 <p>usage: borg rename [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
                    [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
@@ -685,10 +685,10 @@ optional arguments:<br />
 <p> This command displays some detailed information about the specified archive. </p>
 <p> Please note that the deduplicated sizes of the individual archives do not add up to the deduplicated size of the repository (&quot;all archives&quot;), because the two are meaning different things:</p>
 <dl>
-<dt><code>This archive / deduplicated size = amount of data stored ONLY for this archive</code></p>
-<dd> = unique chunks of this archive.</p>
-<dt><code>All archives / deduplicated size = amount of data stored in the repo</code></p>
-<dd> = all chunks in the repository.</dl>
+<dt><code>This archive / deduplicated size = amount of data stored ONLY for this archive</code></dt>
+<dd> = unique chunks of this archive.</dd>
+<dt><code>All archives / deduplicated size = amount of data stored in the repo</code></dt>
+<dd> = all chunks in the repository.</dd></dl>
 <h3>Examples</h3>
 <pre>
 $ borg info /path/to/repo::root-2016-02-15
@@ -737,8 +737,8 @@ optional arguments:<br />
 <p> The BORG_MOUNT_DATA_CACHE_ENTRIES environment variable is meant for advanced users to tweak the performance. It sets the number of cached data chunks; additional memory usage can be up to ~8 MiB times this number. The default is the number of CPU cores. </p>
 <p> For mount options, see the fuse(8) manual page. Additional mount options supported by borg:</p>
 <dl>
-<dt>&bull;</p>
-<dd> allow_damaged_files: by default damaged files (where missing chunks were replaced with runs of zeros by borg check &#8211;repair) are not readable and return EIO (I/O error). Set this option to read such files. </p>
+<dt>&bull;</dt>
+<dd> allow_damaged_files: by default damaged files (where missing chunks were replaced with runs of zeros by borg check &#8211;repair) are not readable and return EIO (I/O error). Set this option to read such files. </dd>
 <p> When the daemonized process receives a signal or crashes, it does not unmount. Unmounting in these cases could cause an active rsync or similar process to unintentionally delete data. </p>
 <p> When running in the foreground ^C/SIGINT unmounts cleanly, but other signals or crashes do not.</dl>
 <h2>BORG UMOUNT</h2>
@@ -980,10 +980,10 @@ no key file found for repository
 <p> attic offered a &quot;passphrase&quot; encryption mode, but this was removed in borg 1.0 and replaced by the &quot;repokey&quot; mode (which stores the passphrase-protected encryption key into the repository config). </p>
 <p> Thus, to upgrade a &quot;passphrase&quot; attic repo to a &quot;repokey&quot; borg repo, 2 steps are needed, in this order:</p>
 <dl>
-<dt>&bull;</p>
-<dd> borg upgrade repo</p>
-<dt>&bull;</p>
-<dd> borg migrate-to-repokey repo</dl>
+<dt>&bull;</dt>
+<dd> borg upgrade repo</dd>
+<dt>&bull;</dt>
+<dd> borg migrate-to-repokey repo</dd></dl>
 <h2>BORG BREAK-LOCK</h2>
 <p>usage: borg break-lock [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br />
                        [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br />
@@ -1067,14 +1067,14 @@ borg create / path / to / repo::{hostname} - {user} - {utcnow}... borg create / 
 <p> For example, <code>borg debug-put-obj</code> and <code>borg debug-delete-obj</code> will only do what their name suggests: put objects into repo / delete objects from repo. </p>
 <p> Please note:</p>
 <dl>
-<dt>&bull;</p>
-<dd> they will not update the chunks cache (chunks index) about the object</p>
-<dt>&bull;</p>
-<dd> they will not update the manifest (so no automatic chunks index resync is triggered)</p>
-<dt>&bull;</p>
-<dd> they will not check whether the object is in use (e.g. before delete-obj)</p>
-<dt>&bull;</p>
-<dd> they will not update any metadata which may point to the object </p>
+<dt>&bull;</dt>
+<dd> they will not update the chunks cache (chunks index) about the object</dd>
+<dt>&bull;</dt>
+<dd> they will not update the manifest (so no automatic chunks index resync is triggered)</dd>
+<dt>&bull;</dt>
+<dd> they will not check whether the object is in use (e.g. before delete-obj)</dd>
+<dt>&bull;</dt>
+<dd> they will not update any metadata which may point to the object </dd>
 <p> They exist to improve debugging capabilities without direct system access, e.g. in case you ever run into some severe malfunction. Use them only if you know what you are doing or if a trusted Borg developer tells you what to do.</dl>
 <h2>ADDITIONAL NOTES</h2>
 <p> Here are misc. notes about topics that are maybe not covered in enough detail in the usage section.</p>
@@ -1083,34 +1083,34 @@ borg create / path / to / repo::{hostname} - {user} - {utcnow}... borg create / 
 <p> If you are interested only in a subset of that output, you can give e.g. <code>&#8211;filter=AME</code> and it will only show regular files with A, M or E status (see below). </p>
 <p> A uppercase character represents the status of a regular file relative to the &quot;files&quot; cache (not relative to the repo &#8212; this is an issue if the files cache is not used). Metadata is stored in any case and for &#8216;A&#8217; and &#8216;M&#8217; also new data chunks are stored. For &#8216;U&#8217; all data chunks refer to already existing chunks.</p>
 <dl>
-<dt>&bull;</p>
-<dd> &#8216;A&#8217; = regular file, added (see also <i>a_status_oddity</i> in the FAQ)</p>
-<dt>&bull;</p>
-<dd> &#8216;M&#8217; = regular file, modified</p>
-<dt>&bull;</p>
-<dd> &#8216;U&#8217; = regular file, unchanged</p>
-<dt>&bull;</p>
-<dd> &#8216;E&#8217; = regular file, an error happened while accessing/reading <i>this</i> file </p>
+<dt>&bull;</dt>
+<dd> &#8216;A&#8217; = regular file, added (see also <i>a_status_oddity</i> in the FAQ)</dd>
+<dt>&bull;</dt>
+<dd> &#8216;M&#8217; = regular file, modified</dd>
+<dt>&bull;</dt>
+<dd> &#8216;U&#8217; = regular file, unchanged</dd>
+<dt>&bull;</dt>
+<dd> &#8216;E&#8217; = regular file, an error happened while accessing/reading <i>this</i> file </dd>
 <p> A lowercase character means a file type other than a regular file, borg usually just stores their metadata:</p>
-<dt>&bull;</p>
-<dd> &#8216;d&#8217; = directory</p>
-<dt>&bull;</p>
-<dd> &#8216;b&#8217; = block device</p>
-<dt>&bull;</p>
-<dd> &#8216;c&#8217; = char device</p>
-<dt>&bull;</p>
-<dd> &#8216;h&#8217; = regular file, hardlink (to already seen inodes)</p>
-<dt>&bull;</p>
-<dd> &#8216;s&#8217; = symlink</p>
-<dt>&bull;</p>
-<dd> &#8216;f&#8217; = fifo </p>
+<dt>&bull;</dt>
+<dd> &#8216;d&#8217; = directory</dd>
+<dt>&bull;</dt>
+<dd> &#8216;b&#8217; = block device</dd>
+<dt>&bull;</dt>
+<dd> &#8216;c&#8217; = char device</dd>
+<dt>&bull;</dt>
+<dd> &#8216;h&#8217; = regular file, hardlink (to already seen inodes)</dd>
+<dt>&bull;</dt>
+<dd> &#8216;s&#8217; = symlink</dd>
+<dt>&bull;</dt>
+<dd> &#8216;f&#8217; = fifo </dd>
 <p> Other flags used include:</p>
-<dt>&bull;</p>
-<dd> &#8216;i&#8217; = backup data was read from standard input (stdin)</p>
-<dt>&bull;</p>
-<dd> &#8216;-&#8216; = dry run, item was <i>not</i> backed up</p>
-<dt>&bull;</p>
-<dd> &#8216;?&#8217; = missing status code (if you see this, please file a bug report!)</dl>
+<dt>&bull;</dt>
+<dd> &#8216;i&#8217; = backup data was read from standard input (stdin)</dd>
+<dt>&bull;</dt>
+<dd> &#8216;-&#8216; = dry run, item was <i>not</i> backed up</dd>
+<dt>&bull;</dt>
+<dd> &#8216;?&#8217; = missing status code (if you see this, please file a bug report!)</dd></dl>
 <h3>&#8211;chunker-params</h3>
 <p> The chunker params influence how input files are cut into pieces (chunks) which are then considered for deduplication. They also have a big impact on resource usage (RAM and disk space) as the amount of resources needed is (also) determined by the total amount of chunks in the repository (see <i>Indexes / Caches memory usage</i> for details). </p>
 <p> <code>&#8211;chunker-params=10,23,16,4095</code> results in a fine-grained deduplication and creates a big amount of chunks and thus uses a lot of resources to manage them. This is good for relatively small data volumes and if the machine has a good amount of free RAM and disk space. </p>
@@ -1119,10 +1119,10 @@ borg create / path / to / repo::{hostname} - {user} - {utcnow}... borg create / 
 <p> In the worst case (all files are big and were touched in between backups), this will store all content into the repository again. </p>
 <p> Usually, it is not that bad though:</p>
 <dl>
-<dt>&bull;</p>
-<dd> usually most files are not touched, so it will just re-use the old chunks it already has in the repo</p>
-<dt>&bull;</p>
-<dd> files smaller than the (both old and new) minimum chunksize result in only one chunk anyway, so the resulting chunks are same and deduplication will apply </p>
+<dt>&bull;</dt>
+<dd> usually most files are not touched, so it will just re-use the old chunks it already has in the repo</dd>
+<dt>&bull;</dt>
+<dd> files smaller than the (both old and new) minimum chunksize result in only one chunk anyway, so the resulting chunks are same and deduplication will apply </dd>
 <p> If you switch chunker params to save resources for an existing repo that already has some backup archives, you will see an increasing effect over time, when more and more files have been touched and stored again using the bigger chunksize <code>and</code> all references to the smaller older chunks have been removed (by deleting / pruning archives). </p>
 <p> If you want to see an immediate big effect on resource usage, you better start a new repository when changing chunker params. </p>
 <p> For more details, see <i>chunker_details</i>.</dl>
@@ -1196,3 +1196,4 @@ rm data/**/{6..13}
 <h2>COPYRIGHT</h2>
 <p> 2010-2014 Jonas Borgström, 2015-2016 The Borg Collective (see AUTHORS file) </p>
 <h2>Index</h2>
+</p>

@@ -14,14 +14,14 @@ description: "gshhs – Extract ASCII listings from binary GSHHS or WDBII data f
 <h2>DESCRIPTION</h2>
 <p> <code>gshhs</code> reads the binary coastline (GSHHS) or political boundary or river (WDBII) files and extracts an ASCII listing. It automatically handles byte-swabbing between different architectures. Optionally, only segment header info can be displayed. The header info has the format <i>ID npoints hierarchical-level source area f_area west east south north container ancestor</i>, where hierarchical levels for coastline polygons go from 1 (shoreline) to 4 (lake inside island inside lake inside land). Source is either W (World Vector Shoreline) or C (CIA World Data Bank II); lower case is used if a lake is a river-lake. The <i>west east south north</i> is the enclosing rectangle, area is the polygon area in km^2 while f_area is the actual area of the ancestor polygon, container is the ID of the polygon that contains this polygon (-1 if none), and ancestor is the ID of the polygon in the full resolution set that was reduced to yield this polygon (-1 if full resolution). For line data the header is simply <i>ID npoints hierarchical-level source west east south north</i></p>
 <dl>
-<dt><i>binaryfile.b</i></p>
-<dd> GSHHS or WDBII binary data file as distributed with the GSHHS data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used.</p>
-<dt><code>-I</code></p>
-<dd> Only output information for the polygon that matches <i>id</i> [default outputs all polygons].</p>
-<dt><code>-L</code></p>
-<dd> Only output a listing of polygon or line segment headers [default outputs headers and data records].</p>
-<dt><code>-M</code></p>
-<dd> Start all header records with the GMT multiple segment indicator &#8216;&gt;&#8217; [Default uses P for polygons and L for lines].</dl>
+<dt><i>binaryfile.b</i></dt>
+<dd> GSHHS or WDBII binary data file as distributed with the GSHHS data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used.</dd>
+<dt><code>-I</code></dt>
+<dd> Only output information for the polygon that matches <i>id</i> [default outputs all polygons].</dd>
+<dt><code>-L</code></dt>
+<dd> Only output a listing of polygon or line segment headers [default outputs headers and data records].</dd>
+<dt><code>-M</code></dt>
+<dd> Start all header records with the GMT multiple segment indicator &#8216;&gt;&#8217; [Default uses P for polygons and L for lines].</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To convert the entire intermediate GSHHS binary data to ASCII, run </p>
 <p> <code>gshhs</code> gshhs_i.b &gt; gshhs_i.txt </p>

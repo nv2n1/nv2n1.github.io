@@ -28,36 +28,36 @@ description: "ppmcie – draw a CIE color chart as a PPM image"
 <p> CIE charts, by their very nature, contain a very large number of colors. If you&#8217;re encoding the chart for a color mapped device or file format, you&#8217;ll need to use <code>ppmquant</code> or <code>ppmdither</code> to reduce the number of colors in the image. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-rec709</code>|<code>-cie</code>|<code>-ebu</code>|<code>-hdtv</code>|<code>-ntsc</code>|<code>-smpte</code></p>
-<dd> Select a standard color system whose gamut to plot. The default is <code>-rec709</code>, which chooses CIE Rec. 709, gamma-corrected. This is the only color system for which <code>ppmcie</code>&#8216;s output is a true PPM image. See explanation above. <code>-ebu</code> chooses the primaries used in the PAL and SECAM broadcasting standards. <code>-ntsc</code> chooses the primaries specified by the NTSC broadcasting system (few modern monitors actually cover this range). <code>-smpte</code> selects the primaries recommended by the Society of Motion Picture and Television Engineers (SMPTE) in standards RP-37 and RP-145, and <code>-hdtv</code> uses the much broader <i>HDTV ideal</i> primaries. <code>-cie</code> chooses a color system that has the largest possible gamut within the spectrum of the chart. This is the same color system as you get with the <code>-cie</code> option to John Walker&#8217;s <code>cietoppm</code> program. </p>
-<dt><code>-xy</code></p>
-<dd> plot CIE 1931 x y chromaticities. This is the default.</p>
-<dt><code>-upvp</code></p>
-<dd> plot u&#8217; v&#8217; 1976 chromaticities rather than CIE 1931 x y chromaticities. The advantage of u&#8217; v&#8217; coordinates is that equal intervals of distance on the u&#8217; v&#8217; plane correspond roughly to the eye&#8217;s ability to discriminate colors.</p>
-<dt><code>-red</code><i> rx ry</i></p>
-<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the red illuminant of a custom color system and selects the custom system.</p>
-<dt><code>-green</code><i> gx gy</i></p>
-<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the green illuminant of the color system and selects the custom system.</p>
-<dt><code>-blue</code><i> bx by</i></p>
-<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the blue illuminant of the color system and selects the custom system.</p>
-<dt><code>-white</code><i> wx wy</i></p>
-<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the white point of the color system and selects the custom system.</p>
-<dt><code>-size</code><i> edge</i></p>
-<dd> Create a pixmap of <i>edge</i> by <i>edge</i> pixels. The default is 512&#215;512.</p>
-<dt><code>-xsize|-width</code><i> width</i></p>
-<dd> Sets the width of the generated image to <i>width</i> pixels. The default width is 512 pixels. If the height and width of the image are not the same, the CIE diagram will be stretched in the longer dimension.</p>
-<dt><code>-ysize|-height</code><i> height</i></p>
-<dd> Sets the height of the generated image to <i>height</i> pixels. The default height is 512 pixels. If the height and width of the image are not the same, the CIE diagram will be stretched in the longer dimension.</p>
-<dt><code>-noblack</code></p>
-<dd> Don&#8217;t plot the black body chromaticity curve.</p>
-<dt><code>-nowpoint</code></p>
-<dd> Don&#8217;t plot the color system&#8217;s white point.</p>
-<dt><code>-nolabel</code></p>
-<dd> Omit the label.</p>
-<dt><code>-noaxes</code></p>
-<dd> Don&#8217;t plot axes.</p>
-<dt><code>-full</code></p>
-<dd> Plot the entire CIE tongue in full intensity; don&#8217;t enhance the gamut of the specified color system. </p>
+<dt><code>-rec709</code>|<code>-cie</code>|<code>-ebu</code>|<code>-hdtv</code>|<code>-ntsc</code>|<code>-smpte</code></dt>
+<dd> Select a standard color system whose gamut to plot. The default is <code>-rec709</code>, which chooses CIE Rec. 709, gamma-corrected. This is the only color system for which <code>ppmcie</code>&#8216;s output is a true PPM image. See explanation above. <code>-ebu</code> chooses the primaries used in the PAL and SECAM broadcasting standards. <code>-ntsc</code> chooses the primaries specified by the NTSC broadcasting system (few modern monitors actually cover this range). <code>-smpte</code> selects the primaries recommended by the Society of Motion Picture and Television Engineers (SMPTE) in standards RP-37 and RP-145, and <code>-hdtv</code> uses the much broader <i>HDTV ideal</i> primaries. <code>-cie</code> chooses a color system that has the largest possible gamut within the spectrum of the chart. This is the same color system as you get with the <code>-cie</code> option to John Walker&#8217;s <code>cietoppm</code> program. </dd>
+<dt><code>-xy</code></dt>
+<dd> plot CIE 1931 x y chromaticities. This is the default.</dd>
+<dt><code>-upvp</code></dt>
+<dd> plot u&#8217; v&#8217; 1976 chromaticities rather than CIE 1931 x y chromaticities. The advantage of u&#8217; v&#8217; coordinates is that equal intervals of distance on the u&#8217; v&#8217; plane correspond roughly to the eye&#8217;s ability to discriminate colors.</dd>
+<dt><code>-red</code><i> rx ry</i></dt>
+<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the red illuminant of a custom color system and selects the custom system.</dd>
+<dt><code>-green</code><i> gx gy</i></dt>
+<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the green illuminant of the color system and selects the custom system.</dd>
+<dt><code>-blue</code><i> bx by</i></dt>
+<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the blue illuminant of the color system and selects the custom system.</dd>
+<dt><code>-white</code><i> wx wy</i></dt>
+<dd> specifies the CIE <i>x</i> and <i>y</i> co-ordinates of the white point of the color system and selects the custom system.</dd>
+<dt><code>-size</code><i> edge</i></dt>
+<dd> Create a pixmap of <i>edge</i> by <i>edge</i> pixels. The default is 512&#215;512.</dd>
+<dt><code>-xsize|-width</code><i> width</i></dt>
+<dd> Sets the width of the generated image to <i>width</i> pixels. The default width is 512 pixels. If the height and width of the image are not the same, the CIE diagram will be stretched in the longer dimension.</dd>
+<dt><code>-ysize|-height</code><i> height</i></dt>
+<dd> Sets the height of the generated image to <i>height</i> pixels. The default height is 512 pixels. If the height and width of the image are not the same, the CIE diagram will be stretched in the longer dimension.</dd>
+<dt><code>-noblack</code></dt>
+<dd> Don&#8217;t plot the black body chromaticity curve.</dd>
+<dt><code>-nowpoint</code></dt>
+<dd> Don&#8217;t plot the color system&#8217;s white point.</dd>
+<dt><code>-nolabel</code></dt>
+<dd> Omit the label.</dd>
+<dt><code>-noaxes</code></dt>
+<dd> Don&#8217;t plot axes.</dd>
+<dt><code>-full</code></dt>
+<dd> Plot the entire CIE tongue in full intensity; don&#8217;t enhance the gamut of the specified color system. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>

@@ -11,28 +11,20 @@ std::rel_ops::operator!=,&gt;,&lt;=,&gt;= - std::rel_ops::operator!=,&gt;,&lt;=,
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;utility&gt;
-
     template &lt;class T&gt;
     (1)(deprecated in C++ 20)
-
         bool
         operator!=(const T &amp;lhs, const T &amp;rhs);
-
 template &lt;class T&gt;
 (2)(deprecated in C++ 20)
-
     bool
     operator&gt;(const T &amp;lhs, const T &amp;rhs);
-
 template &lt;class T&gt;
 (3)(deprecated in C++ 20)
-
     bool
     operator&lt;=(const T &amp;lhs, const T &amp;rhs);
-
 template &lt;class T&gt;
 (4)(deprecated in C++ 20)
-
     bool
     operator&gt;=(const T &amp;lhs, const T &amp;rhs);</code></pre> 
 Given a user-defined operator== and operator&lt; for objects of type T, implements the usual semantics of other comparison operators. 
@@ -107,23 +99,19 @@ As of C++20, std::rel_ops are deprecated in favor of operator&lt;=&gt;.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
 struct Foo {
     int n;
 };
 bool operator==(const Foo &amp;lhs, const Foo &amp;rhs)
-
 {
     return lhs.n == rhs.n;
 }
 bool operator&lt;(const Foo &amp;lhs, const Foo &amp;rhs)
-
 {
     return lhs.n &lt; rhs.n;
 }
 int main()
-
 {
     Foo f1 = {1};
     Foo f2 = {2};

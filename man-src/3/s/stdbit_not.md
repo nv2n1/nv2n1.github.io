@@ -11,10 +11,8 @@ std::bit_not&lt;void&gt; - std::bit_not&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class bit_not&lt;void&gt;;</code></pre> 
 std::bit_not&lt;&gt; is a specialization of std::bit_not with parameter and return type deduced. 
 

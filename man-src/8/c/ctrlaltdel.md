@@ -14,19 +14,19 @@ description: "ctrlaltdel – set the function of the Ctrl-Alt-Del combination"
 <p>Based on examination of the <i>linux/kernel/reboot.c</i> code, it is clear that there are two supported functions that the &lt;Ctrl-Alt-Del&gt; sequence can perform. </p>
 <p> <code>hard</code></p>
 <dl>
-<dd>Immediately reboot the computer without calling <code><a href="/docs/linux/man/2-sync/">sync</a></code>(2) and without any other preparation. This is the default.</dl>
+<dd>Immediately reboot the computer without calling <code><a href="/docs/linux/man/2-sync/">sync</a></code>(2) and without any other preparation. This is the default.</dd></dl>
 <p> <code>soft</code></p>
 <dl>
-<dd>Make the kernel send the <code>SIGINT</code> (interrupt) signal to the <code>init</code> process (this is always the process with PID 1). If this option is used, the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) program must support this feature. Since there are now several <code><a href="/docs/linux/man/8-init/">init</a></code>(8) programs in the Linux community, please consult the documentation for the version that you are currently using.</dl>
+<dd>Make the kernel send the <code>SIGINT</code> (interrupt) signal to the <code>init</code> process (this is always the process with PID 1). If this option is used, the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) program must support this feature. Since there are now several <code><a href="/docs/linux/man/8-init/">init</a></code>(8) programs in the Linux community, please consult the documentation for the version that you are currently using.</dd></dl>
 <p> When the command is run without any argument, it will display the current setting. </p>
 <p> The function of <code>ctrlaltdel</code> is usually set in the <i>/etc/rc.local</i> file.</p>
 <h2>Options</h2>
 <p><code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/rc.local</i></p>
 <h2>Authors</h2>

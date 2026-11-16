@@ -10,30 +10,30 @@ description: "XCreateGC, XCopyGC, XChangeGC, XGetGCValues, XFreeGC, XGContextFro
 <p>XCreateGC, XCopyGC, XChangeGC, XGetGCValues, XFreeGC, XGContextFromGC, XGCValues &#8211; create or free graphics contexts and graphics context structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>GC XCreateGC(Display *<i>display</i>, Drawable <i>d</i>, unsigned long <i>valuemask</i>, XGCValues *<i>values</i>);</p>
-<dd>int XCopyGC(Display *<i>display</i>, GC <i>src</i>, unsigned long <i>valuemask</i>, GC <i>dest</i>);</p>
-<dd>int XChangeGC(Display *<i>display</i>, GC <i>gc</i>, unsigned long <i>valuemask</i>, XGCValues *<i>values</i>);</p>
-<dd>Status XGetGCValues(Display *<i>display</i>, GC <i>gc</i>, unsigned long <i>valuemask</i>, XGCValues *<i>values_return</i>);</p>
-<dd>int XFreeGC(Display *<i>display</i>, GC <i>gc</i>);</p>
-<dd>GContext XGContextFromGC(GC <i>gc</i>);</dl>
+<dd>GC XCreateGC(Display *<i>display</i>, Drawable <i>d</i>, unsigned long <i>valuemask</i>, XGCValues *<i>values</i>);</dd>
+<dd>int XCopyGC(Display *<i>display</i>, GC <i>src</i>, unsigned long <i>valuemask</i>, GC <i>dest</i>);</dd>
+<dd>int XChangeGC(Display *<i>display</i>, GC <i>gc</i>, unsigned long <i>valuemask</i>, XGCValues *<i>values</i>);</dd>
+<dd>Status XGetGCValues(Display *<i>display</i>, GC <i>gc</i>, unsigned long <i>valuemask</i>, XGCValues *<i>values_return</i>);</dd>
+<dd>int XFreeGC(Display *<i>display</i>, GC <i>gc</i>);</dd>
+<dd>GContext XGContextFromGC(GC <i>gc</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>d</i></p>
-<dd>Specifies the drawable.</p>
-<dt><i>dest</i></p>
-<dd>Specifies the destination GC.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>src</i></p>
-<dd>Specifies the components of the source GC.</p>
-<dt><i>valuemask</i></p>
-<dd>Specifies which components in the GC are to be set, copied, changed, or returned. This argument is the bitwise inclusive OR of zero or more of the valid GC component mask bits.</p>
-<dt><i>values</i></p>
-<dd>Specifies any values as specified by the valuemask.</p>
-<dt><i>values_return</i></p>
-<dd>Returns the GC values in the specified <code>XGCValues</code> structure.</dl>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable.</dd>
+<dt><i>dest</i></dt>
+<dd>Specifies the destination GC.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>src</i></dt>
+<dd>Specifies the components of the source GC.</dd>
+<dt><i>valuemask</i></dt>
+<dd>Specifies which components in the GC are to be set, copied, changed, or returned. This argument is the bitwise inclusive OR of zero or more of the valid GC component mask bits.</dd>
+<dt><i>values</i></dt>
+<dd>Specifies any values as specified by the valuemask.</dd>
+<dt><i>values_return</i></dt>
+<dd>Returns the GC values in the specified <code>XGCValues</code> structure.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XCreateGC</code> function creates a graphics context and returns a GC. The GC can be used with any destination drawable having the same root and depth as the specified drawable. Use with other drawables results in a <code>BadMatch</code> error. </p>
 <p> <code>XCreateGC</code> can generate <code>BadAlloc</code>, <code>BadDrawable</code>, <code>BadFont</code>, <code>BadMatch</code>, <code>BadPixmap</code>, and <code>BadValue</code> errors. </p>
@@ -341,10 +341,10 @@ description: "XCreateGC, XCopyGC, XChangeGC, XGetGCValues, XFreeGC, XGContextFro
 <p> Here sn is the sine of the angle of the line, and cs is the cosine of the angle of the line. A pixel is part of the line and so is drawn if the center of the pixel is fully inside the bounding box (which is viewed as having infinitely thin edges). If the center of the pixel is exactly on the bounding box, it is part of the line if and only if the interior is immediately to its right (x increasing direction). Pixels with centers on a horizontal edge are a special case and are part of the line if and only if the interior or the boundary is immediately below (y increasing direction) and the interior or the boundary is immediately to the right (x increasing direction). </p>
 <p> Thin lines (zero line-width) are one-pixel-wide lines drawn using an unspecified, device-dependent algorithm. There are only two constraints on this algorithm.</p>
 <dl COMPACT>
-<dt>1.</p>
-<dd>If a line is drawn unclipped from [x1,y1] to [x2,y2] and if another line is drawn unclipped from [x1+dx,y1+dy] to [x2+dx,y2+dy], a point [x,y] is touched by drawing the first line if and only if the point [x+dx,y+dy] is touched by drawing the second line.</p>
-<dt>2.</p>
-<dd>The effective set of points comprising a line cannot be affected by clipping. That is, a point is touched in a clipped line if and only if the point lies inside the clipping region and the point would be touched by the line when drawn unclipped.</dl>
+<dt>1.</dt>
+<dd>If a line is drawn unclipped from [x1,y1] to [x2,y2] and if another line is drawn unclipped from [x1+dx,y1+dy] to [x2+dx,y2+dy], a point [x,y] is touched by drawing the first line if and only if the point [x+dx,y+dy] is touched by drawing the second line.</dd>
+<dt>2.</dt>
+<dd>The effective set of points comprising a line cannot be affected by clipping. That is, a point is touched in a clipped line if and only if the point lies inside the clipping region and the point would be touched by the line when drawn unclipped.</dd></dl>
 <p> A wide line drawn from [x1,y1] to [x2,y2] always draws the same pixels as a wide line drawn from [x2,y2] to [x1,y1], not counting cap-style and join-style. It is recommended that this property be true for thin lines, but this is not required. A line-width of zero may differ from a line-width of one in which pixels are drawn. This permits the use of many manufacturers&#8217; line drawing hardware, which may run many times faster than the more precisely specified wide lines. </p>
 <p> In general, drawing a thin line will be faster than drawing a wide line of width one. However, because of their different drawing algorithms, thin lines may not mix well aesthetically with wide lines. If it is desirable to obtain precise and uniform results across all displays, a client should always use a line-width of one rather than a line-width of zero. </p>
 <p> The line-style defines which sections of a line are drawn: </p>
@@ -510,22 +510,22 @@ description: "XCreateGC, XCopyGC, XChangeGC, XGetGCValues, XFreeGC, XGContextFro
 <p> The graphics-exposure flag controls <code>GraphicsExpose</code> event generation for <code>XCopyArea</code> and <code>XCopyPlane</code> requests (and any similar requests defined by extensions).</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadDrawable</code></p>
-<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</p>
-<dt><code>BadFont</code></p>
-<dd>A value for a Font or GContext argument does not name a defined Font.</p>
-<dt><code>BadGC</code></p>
-<dd>A value for a GContext argument does not name a defined GContext.</p>
-<dt><code>BadMatch</code></p>
-<dd>An <code>InputOnly</code> window is used as a Drawable.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadPixmap</code></p>
-<dd>A value for a Pixmap argument does not name a defined Pixmap.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadDrawable</code></dt>
+<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</dd>
+<dt><code>BadFont</code></dt>
+<dd>A value for a Font or GContext argument does not name a defined Font.</dd>
+<dt><code>BadGC</code></dt>
+<dd>A value for a GContext argument does not name a defined GContext.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>An <code>InputOnly</code> window is used as a Drawable.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadPixmap</code></dt>
+<dd>A value for a Pixmap argument does not name a defined Pixmap.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-xcopyarea/">XCopyArea</a>(3), <a href="/docs/linux/man/3-xcreateregion/">XCreateRegion</a>(3), <a href="/docs/linux/man/3-xdrawarc/">XDrawArc</a>(3), <a href="/docs/linux/man/3-xdrawline/">XDrawLine</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3), <a href="/docs/linux/man/3-xdrawtext/">XDrawText</a>(3), <a href="/docs/linux/man/3-xfillrectangle/">XFillRectangle</a>(3), <a href="/docs/linux/man/3-xquerybestsize/">XQueryBestSize</a>(3), <a href="/docs/linux/man/3-xsetarcmode/">XSetArcMode</a>(3), <a href="/docs/linux/man/3-xsetcliporigin/">XSetClipOrigin</a>(3), <a href="/docs/linux/man/3-xsetfillstyle/">XSetFillStyle</a>(3), <a href="/docs/linux/man/3-xsetfont/">XSetFont</a>(3), <a href="/docs/linux/man/3-xsetlineattributes/">XSetLineAttributes</a>(3), <a href="/docs/linux/man/3-xsetstate/">XSetState</a>(3), <a href="/docs/linux/man/3-xsettile/">XSetTile</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

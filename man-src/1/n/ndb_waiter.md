@@ -11,97 +11,97 @@ description: "ndb_waiter – wait for MySQL Cluster to reach a given status"
 <p> ndb_waiter &#8211; wait for MySQL Cluster to reach a given status </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndb_waiter </code><i>options</i></dl>
+<dt> <code>ndb_waiter </code><i>options</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ndb_waiter</code></p>
-<dd>repeatedly (each 100 milliseconds) prints out the status of all cluster data nodes until either the cluster reaches a given status or the <code>&#8211;timeout</code> limit is exceeded, then exits. By default, it waits for the cluster to achieve STARTED status, in which all nodes have started and connected to the cluster. This can be overridden using the <code>&#8211;no-contact</code> and <code>&#8211;not-started</code> options (see Additional Options). </p>
+<dd>repeatedly (each 100 milliseconds) prints out the status of all cluster data nodes until either the cluster reaches a given status or the <code>&#8211;timeout</code> limit is exceeded, then exits. By default, it waits for the cluster to achieve STARTED status, in which all nodes have started and connected to the cluster. This can be overridden using the <code>&#8211;no-contact</code> and <code>&#8211;not-started</code> options (see Additional Options). </dd>
 <p> The node states reported by this utility are as follows: </p>
 <dl>
 <dt>
-<dd> * NO_CONTACT: The node cannot be contacted.</dl>
+</dt><dd> * NO_CONTACT: The node cannot be contacted.</dd></dl>
 <dl>
 <dt>
-<dd> * UNKNOWN: The node can be contacted, but its status is not yet known. Usually, this means that the node has received a START or RESTART command from the management server, but has not yet acted on it.</dl>
+</dt><dd> * UNKNOWN: The node can be contacted, but its status is not yet known. Usually, this means that the node has received a START or RESTART command from the management server, but has not yet acted on it.</dd></dl>
 <dl>
 <dt>
-<dd> * NOT_STARTED: The node has stopped, but remains in contact with the cluster. This is seen when restarting the node using the management client&#8217;s RESTART command.</dl>
+</dt><dd> * NOT_STARTED: The node has stopped, but remains in contact with the cluster. This is seen when restarting the node using the management client&#8217;s RESTART command.</dd></dl>
 <dl>
 <dt>
-<dd> * STARTING: The node&#8217;s <code>ndbd</code> process has started, but the node has not yet joined the cluster.</dl>
+</dt><dd> * STARTING: The node&#8217;s <code>ndbd</code> process has started, but the node has not yet joined the cluster.</dd></dl>
 <dl>
 <dt>
-<dd> * STARTED: The node is operational, and has joined the cluster.</dl>
+</dt><dd> * STARTED: The node is operational, and has joined the cluster.</dd></dl>
 <dl>
 <dt>
-<dd> * SHUTTING_DOWN: The node is shutting down.</dl>
+</dt><dd> * SHUTTING_DOWN: The node is shutting down.</dd></dl>
 <dl>
 <dt>
-<dd> * SINGLE USER MODE: This is shown for all cluster data nodes when the cluster is in single user mode.</dl>
+</dt><dd> * SINGLE USER MODE: This is shown for all cluster data nodes when the cluster is in single user mode.</dd></dl>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ndb_waiter [-c <i>connect_string</i>]
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Additional Options</code>: </p>
 <dl>
 <dt>
-<dd> * <code>&#8211;no-contact</code>, <code>-n</code> </p>
+</dt><dd> * <code>&#8211;no-contact</code>, <code>-n</code> </dd>
 <p> Instead of waiting for the STARTED state, <code>ndb_waiter</code> continues running until the cluster reaches NO_CONTACT status before exiting.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;not-started</code> </p>
+</dt><dd> * <code>&#8211;not-started</code> </dd>
 <p> Instead of waiting for the STARTED state, <code>ndb_waiter</code> continues running until the cluster reaches NOT_STARTED status before exiting.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;timeout=</code><i>seconds</i>, <code>-t </code><i>seconds</i> </p>
+</dt><dd> * <code>&#8211;timeout=</code><i>seconds</i>, <code>-t </code><i>seconds</i> </dd>
 <p> Time to wait. The program exits if the desired state is not achieved within this number of seconds. The default is 120 seconds (1200 reporting cycles).</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;single-user</code> </p>
+</dt><dd> * <code>&#8211;single-user</code> </dd>
 <p> The program waits for the cluster to enter single user mode.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;nowait-nodes=</code><i>list</i> </p>
+</dt><dd> * <code>&#8211;nowait-nodes=</code><i>list</i> </dd>
 <p> When this option is used, ndb_waiter does not wait for the nodes whose IDs are listed. The list is comma-delimited; ranges can be indicated by dashes, as shown here: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>ndb_waiter --nowait-nodes=1,3,7-9</code>
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  <font SIZE="+1"> <code>Important</code> </font><br />
- Do <i>not</i> use this option together with the <code>&#8211;wait-nodes</code> option. </p>
+ Do <i>not</i> use this option together with the <code>&#8211;wait-nodes</code> option. </dd>
 </dl>
 <p> This option was added in MySQL Cluster NDB 6.2.1.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;wait-nodes=</code><i>list</i>, <code>-w </code><i>list</i> </p>
+</dt><dd> * <code>&#8211;wait-nodes=</code><i>list</i>, <code>-w </code><i>list</i> </dd>
 <p> When this option is used, <code>ndb_waiter</code> waits only for the nodes whose IDs are listed. The list is comma-delimited; ranges can be indicated by dashes, as shown here: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>ndb_waiter --wait-nodes=2,4-6,10</code>
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  <font SIZE="+1"> <code>Important</code> </font><br />
- Do <i>not</i> use this option together with the <code>&#8211;nowait-nodes</code> option. </p>
+ Do <i>not</i> use this option together with the <code>&#8211;nowait-nodes</code> option. </dd>
 </dl>
 <p> This option was added in MySQL Cluster NDB 6.3.34, 7.0.15, and 7.1.4.</dl>
 <p> <code>Sample Output</code>. Shown here is the output from <code>ndb_waiter</code> when run against a 4-node cluster in which two nodes have been shut down and then started again manually. Duplicate reports (indicated by lq&#8230;rq) are omitted. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt;./ ndb_waiter - c localhost
                            Connecting to mgmsrv
@@ -149,11 +149,11 @@ State node 4 STARTED
 Waiting for cluster enter state STARTED
 NDBT_ProgramExit: 0 - OK
 </code></pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If no connectstring is specified, then <code>ndb_waiter</code> tries to connect to a management on localhost, and reports Connecting to mgmsrv at (null). </p>
 </dl>
 <h2>COPYRIGHT</h2>

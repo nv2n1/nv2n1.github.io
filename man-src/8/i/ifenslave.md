@@ -15,22 +15,22 @@ description: "ifenslave – Attach and detach slave network devices to a bonding
 <p> The kernel must have support for bonding devices for to be useful.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a, -all-interfaces</code></p>
-<dd>Show information about all interfaces.</p>
-<dt><code>-c, -change-active</code></p>
-<dd>Change active slave.</p>
-<dt><code>-d, -detach</code></p>
-<dd>Removes slave interfaces from the bonding device.</p>
-<dt><code>-f, -force</code></p>
-<dd>Force actions to be taken if one of the specified interfaces appears not to belong to an Ethernet device.</p>
-<dt><code>-h, -help</code></p>
-<dd>Display a help message and exit.</p>
-<dt><code>-u, -usage</code></p>
-<dd>Show usage information and exit.</p>
-<dt><code>-v, -verbose</code></p>
-<dd>Print warning and debug messages.</p>
-<dt><code>-V, -version</code></p>
-<dd>Show version information and exit.</dl>
+<dt><code>-a, -all-interfaces</code></dt>
+<dd>Show information about all interfaces.</dd>
+<dt><code>-c, -change-active</code></dt>
+<dd>Change active slave.</dd>
+<dt><code>-d, -detach</code></dt>
+<dd>Removes slave interfaces from the bonding device.</dd>
+<dt><code>-f, -force</code></dt>
+<dd>Force actions to be taken if one of the specified interfaces appears not to belong to an Ethernet device.</dd>
+<dt><code>-h, -help</code></dt>
+<dd>Display a help message and exit.</dd>
+<dt><code>-u, -usage</code></dt>
+<dd>Show usage information and exit.</dd>
+<dt><code>-v, -verbose</code></dt>
+<dd>Print warning and debug messages.</dd>
+<dt><code>-V, -version</code></dt>
+<dd>Show version information and exit.</dd></dl>
 <p> If not options are given, the default action will be to enslave interfaces.</p>
 <h2>Example</h2>
 <p>The following example shows how to setup a bonding device and enslave two real Ethernet devices to it: </p>

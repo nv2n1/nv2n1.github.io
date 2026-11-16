@@ -27,23 +27,17 @@ x &#8211; argument to bind to f</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;double&gt; a = {0, 30, 45, 60, 90, 180};
     std::vector&lt;double&gt; r(a.size());
     double pi = std::acos(-1);
     std::transform(a.begin(), a.end(), r.begin(),
                    std::bind1st(std::multiplies&lt;double&gt;(), pi / 180.));
-
     // equivalent lambda: [pi](double a){ return a*pi/180.; });
     for (size_t n = 0; n &lt; a.size(); ++n)
         std::cout &lt;&lt; a[n] &lt;&lt; &quot; deg = &quot; &lt;&lt; r[n] &lt;&lt; &quot; rad

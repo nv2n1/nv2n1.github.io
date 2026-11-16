@@ -15,7 +15,7 @@ blk_set_runtime_active - Force runtime status of the queue to be active
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the queue of the device</dl>
+<dl><dd></dd><dd>the queue of the device</dd></dl>
 
 <h2>Description</h2>
 

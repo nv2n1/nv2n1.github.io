@@ -17,16 +17,16 @@ description: "jmtpfs – FUSE based MTP filesystem"
 <h2>OPTIONS</h2>
 <h3>FUSE Options:</h3>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show fuse help options.</dl>
+<dt><code>-h</code></dt>
+<dd> Show fuse help options.</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-l</code> or <code>&#8211;listDevices</code></p>
-<dd> list available mtp devices (busLocation, devNum, productId, vendorId, product, vendor) and then exit.</p>
-<dt><code>-device=&lt;busnum&gt;,&lt;devnum&gt;</code></p>
-<dd> Device to mount. If not specified the first device found is used.</p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd> Show jmtpfs and FUSE version information. </p>
+<dt><code>-l</code> or <code>&#8211;listDevices</code></dt>
+<dd> list available mtp devices (busLocation, devNum, productId, vendorId, product, vendor) and then exit.</dd>
+<dt><code>-device=&lt;busnum&gt;,&lt;devnum&gt;</code></dt>
+<dd> Device to mount. If not specified the first device found is used.</dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd> Show jmtpfs and FUSE version information. </dd>
 </dl>
 <h2>UNMOUNT DEVICE</h2>
 <p> Use <code>fusermount -u &lt;mountpoint&gt;</code> to umount the device. </p>

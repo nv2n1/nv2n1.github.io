@@ -11,13 +11,9 @@ std::bind - std::bind
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class F, class... Args &gt;             (1) (since C++11)
-
 /*unspecified*/ bind( F&amp;&amp; f, Args&amp;&amp;... args );
-
 template&lt; class R, class F, class... Args &gt;    (2) (since C++11)
-
 /*unspecified*/ bind( F&amp;&amp; f, Args&amp;&amp;... args );</code></pre> 
 The function template bind generates a forwarding call wrapper for f. Calling this wrapper is equivalent to invoking f with some of its arguments bound to args. 
 
@@ -75,19 +71,14 @@ Duplicate placeholders in the same bind expression (multiple _1's for example) a
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;functional&gt;
 void f(int n1, int n2, int n3, const int &amp;n4, int n5)
-
 {
     std::cout &lt;&lt; n1 &lt;&lt; ' ' &lt;&lt; n2 &lt;&lt; ' ' &lt;&lt; n3 &lt;&lt; ' ' &lt;&lt; n4 &lt;&lt; ' ' &lt;&lt; n5 &lt;&lt; '\n';
 }
 int g(int n1)
-
 {
     return n1;
 }
@@ -99,7 +90,6 @@ struct Foo {
     int data = 10;
 };
 int main()
-
 {
     using namespace std::placeholders; // for _1, _2, _3...
                                        // demonstrates argument reordering and pass-by-reference

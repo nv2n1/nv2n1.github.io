@@ -15,11 +15,11 @@ sk_stream_wait_connect - Wait for a socket to get into the connected state
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>sock to wait on</dl>
+<dl><dd></dd><dd>sock to wait on</dd></dl>
  
 
  <i>timeo_p</i>
-<dl><dd>for how long to wait</dl>
+<dl><dd>for how long to wait</dd></dl>
 
 <h2>Description</h2>
 

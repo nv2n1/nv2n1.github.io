@@ -10,9 +10,7 @@ description: "pthread_equal – compare thread IDs"
 <p>pthread_equal &#8211; compare thread IDs</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_equal(pthread_t t1, pthread_t t2);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_equal</code>() function compares two thread identifiers.</p>

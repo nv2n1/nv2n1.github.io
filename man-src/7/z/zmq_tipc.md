@@ -25,7 +25,7 @@ Publishing the same service with overlapping lower/upper ID's will
 cause connection requests to be distributed over these in a round-robin
 manner.
 Connecting a socket</pre>
-</dl>
+</dd></dl>
 <p> When connecting a socket to a peer address using <i>zmq_connect()</i> with the <i>tipc</i> transport, the <i>endpoint</i> shall be interpreted as a service ID, followed by a comma and the instance ID. </p>
 <p> The instance ID must be within the lower/upper range of a published port name for the endpoint to be valid.</p>
 <h2>Examples</h2>

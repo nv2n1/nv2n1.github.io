@@ -14,12 +14,12 @@ description: "gnutls_pkcs11_obj_export_url – API function"
 <p> <code>int gnutls_pkcs11_obj_export_url(gnutls_pkcs11_obj_t </code><i>obj</i><code>, gnutls_pkcs11_url_type_t </code><i>detailed</i><code>, char ** </code><i>url</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs11_obj_t obj</p>
-<dd> Holds the PKCS 11 certificate</p>
-<dt>gnutls_pkcs11_url_type_t detailed</p>
-<dd> non zero if a detailed URL is required</p>
-<dt>char ** url</p>
-<dd> will contain an allocated url</dl>
+<dt>gnutls_pkcs11_obj_t obj</dt>
+<dd> Holds the PKCS 11 certificate</dd>
+<dt>gnutls_pkcs11_url_type_t detailed</dt>
+<dd> non zero if a detailed URL is required</dd>
+<dt>char ** url</dt>
+<dd> will contain an allocated url</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export a URL identifying the given certificate.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pkcs11_obj_export_url – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

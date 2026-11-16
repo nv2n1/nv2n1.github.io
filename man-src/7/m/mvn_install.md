@@ -17,10 +17,10 @@ description: "mvn_install – install Maven artifacts"
 <h2>Options</h2>
 <p><code>-X</code></p>
 <dl>
-<dd>Enable debugging output. This option causes XMvn installer to write verbose debugging information to standard output.</dl>
+<dd>Enable debugging output. This option causes XMvn installer to write verbose debugging information to standard output.</dd></dl>
 <p> <code>-J</code> directory</p>
 <dl>
-<dd>Specify alternative API documentation directory. By default API documentation is searched for in <code>target/site/apidocs</code> directory. The <code>-J</code> option allows to override this default location.</dl>
+<dd>Specify alternative API documentation directory. By default API documentation is searched for in <code>target/site/apidocs</code> directory. The <code>-J</code> option allows to override this default location.</dd></dl>
 <h2>Author</h2>
 <p>Written by Mikolaj Izdebski.</p>
 <h2>Reporting Bugs</h2>

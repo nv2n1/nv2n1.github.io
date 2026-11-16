@@ -14,10 +14,10 @@ description: "gnutls_pkcs12_bag_decrypt – API function"
 <p> <code>int gnutls_pkcs12_bag_decrypt(gnutls_pkcs12_bag_t </code><i>bag</i><code>, const char * </code><i>pass</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs12_bag_t bag</p>
-<dd> The bag</p>
-<dt>const char * pass</p>
-<dd> The password used for encryption, must be ASCII.</dl>
+<dt>gnutls_pkcs12_bag_t bag</dt>
+<dd> The bag</dd>
+<dt>const char * pass</dt>
+<dd> The password used for encryption, must be ASCII.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will decrypt the given encrypted bag and return 0 on success.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_pkcs12_bag_decrypt – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

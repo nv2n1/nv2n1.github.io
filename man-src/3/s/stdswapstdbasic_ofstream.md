@@ -11,7 +11,6 @@ std::swap(std::basic_ofstream) - std::swap(std::basic_ofstream)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits&gt;
-
 void swap(basic_ofstream&lt;CharT, Traits&gt; &amp;lhs, basic_ofstream&lt;CharT, Traits&gt; &amp;rhs);</code></pre> 
 Specializes the std::swap algorithm for std::basic_ofstream. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

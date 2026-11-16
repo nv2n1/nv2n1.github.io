@@ -10,11 +10,7 @@ description: "selabel_partial_match – determine whether a direct or partial ma
 <p>selabel_partial_match &#8211; determine whether a direct or partial match is possible on a file path &#8211; Only supported on file backend.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdbool.h&gt;
-
-
 #include &lt;selinux/selinux.h&gt;
-
-
 #include &lt;selinux/label.h&gt;</code></pre>
 <p> <code>bool selabel_partial_match(struct selabel_handle *</code><i>hnd</i><code>,</code> <code>const char *</code><i>key</i><code>);</code></p>
 <h2>Description</h2>

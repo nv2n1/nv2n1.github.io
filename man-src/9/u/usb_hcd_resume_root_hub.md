@@ -15,7 +15,7 @@ usb_hcd_resume_root_hub - called by HCD to resume its root hub
 <h2>Arguments</h2>
 
 <i>hcd</i>
-<dl><dd><dd>host controller for this root hub</dl>
+<dl><dd></dd><dd>host controller for this root hub</dd></dl>
 
 <h2>Description</h2>
 

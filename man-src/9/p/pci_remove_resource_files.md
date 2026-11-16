@@ -15,7 +15,7 @@ pci_remove_resource_files - cleanup resource files
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>dev to cleanup</dl>
+<dl><dd></dd><dd>dev to cleanup</dd></dl>
 
 <h2>Description</h2>
 

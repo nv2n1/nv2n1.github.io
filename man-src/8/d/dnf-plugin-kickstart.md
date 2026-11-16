@@ -13,16 +13,16 @@ description: "dnf.plugin.kickstart – DNF kickstart Plugin"
 <p><code>dnf kickstart &lt;ks-file&gt;</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt><code>&lt;ks-file&gt;</code></p>
-<dd>Path to the kickstart file.</dl>
+<dt><code>&lt;ks-file&gt;</code></dt>
+<dd>Path to the kickstart file.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt><code>dnf kickstart mykickstart.ks</code></p>
-<dd>Install the packages defined in <code>mykickstart.ks</code>.</dl>
+<dt><code>dnf kickstart mykickstart.ks</code></dt>
+<dd>Install the packages defined in <code>mykickstart.ks</code>.</dd></dl>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd><i>Anaconda Kickstart file documentation</i></dl>
+<dt>&bull;</dt>
+<dd><i>Anaconda Kickstart file documentation</i></dd></dl>
 <h2>Author</h2>
 <p>See AUTHORS in your Core DNF Plugins distribution</p>
 <h2>Copyright</h2>

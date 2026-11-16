@@ -17,19 +17,19 @@ description: "guilt-refresh – Refresh topmost applied patch"
 <p> &#8211;git</p>
 <dl>
 <dt>
-<dd> Generate a patch which uses all the features offered by the git diff format (e.g., rename and copy detection).</dl>
+</dt><dd> Generate a patch which uses all the features offered by the git diff format (e.g., rename and copy detection).</dd></dl>
 <p> &#8211;diffstat</p>
 <dl>
 <dt>
-<dd> Include a diffstat output in the patch file. Useful for cases where patches will be submitted with other tools. </p>
+</dt><dd> Include a diffstat output in the patch file. Useful for cases where patches will be submitted with other tools. </dd>
 <p> If the command line option is omitted, the corresponding git-config option &quot;guilt.diffstat&quot; will be queried. So this would enable diffstat output by default: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git config --global guilt.diffstat true
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
@@ -39,10 +39,10 @@ git config --global guilt.diffstat true
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

@@ -14,34 +14,35 @@ description: "DebianNet – create, remove, enable or disable entry in /etc/inet
 <p> For shell scripts you can also use the <code>update-inetd</code> command. See <code><a href="/docs/linux/man/8-update-inetd/">update-inetd</a></code>(8) for further information.</p>
 <h2>Variables</h2>
 <dl COMPACT>
-<dt>$DebianNet::INETD_CONF</p>
-<dd>Contains a scalar filename to use as the inetd config file (e.g. for testing purposes). </p>
+<dt>$DebianNet::INETD_CONF</dt>
+<dd>Contains a scalar filename to use as the inetd config file (e.g. for testing purposes). </dd>
 <p> Defaults to <i>/etc/inetd.conf</i>.</p>
-<dt>$DebianNet::SEP</p>
-<dd>Contains the entry comment characters. This is only necessary if you have to deal with two (or more) services of the same name. </p>
+<dt>$DebianNet::SEP</dt>
+<dd>Contains the entry comment characters. This is only necessary if you have to deal with two (or more) services of the same name. </dd>
 <p> Defaults to &quot;<code>#&lt;off&gt;# </code>&quot; as the comment characters.</p>
-<dt>$DebianNet::MULTI</p>
-<dd>Contains a boolean that decides whether to disable/remove more than one entry at a time. If you try to remove more than one entry at a time without using this option the program will show a warning and will ask the user whether to continue. </p>
+<dt>$DebianNet::MULTI</dt>
+<dd>Contains a boolean that decides whether to disable/remove more than one entry at a time. If you try to remove more than one entry at a time without using this option the program will show a warning and will ask the user whether to continue. </dd>
 <p> Defaults to false.</p>
-<dt>$DebianNet::VERBOSE</p>
-<dd>Contains a boolean to select whether to explain verbosely what is being done. </p>
+<dt>$DebianNet::VERBOSE</dt>
+<dd>Contains a boolean to select whether to explain verbosely what is being done. </dd>
 <p> Defaults to false.</dl>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>$rc = DebianNet::add_service($newentry, $group)</p>
-<dd>Add <tt>$newentry</tt> to the group <tt>$group</tt> of the <i>/etc/inetd.conf</i> file. If the entry already exist it will be enabled (it will also detect entries with different program options). Using <tt>$group</tt> is optional (the default group is the group <font SIZE="-1">OTHER</font>). If the group does not exist the entry will be placed at the end of the file. </p>
+<dt>$rc = DebianNet::add_service($newentry, $group)</dt>
+<dd>Add <tt>$newentry</tt> to the group <tt>$group</tt> of the <i>/etc/inetd.conf</i> file. If the entry already exist it will be enabled (it will also detect entries with different program options). Using <tt>$group</tt> is optional (the default group is the group <font SIZE="-1">OTHER</font>). If the group does not exist the entry will be placed at the end of the file. </dd>
 <p> Returns 1 on success, and -1 on failure. This function might call <code>exit</code>() due to debconf prompt answers.</p>
-<dt>$rc = DebianNet::remove_service($entry)</p>
-<dd>Remove <tt>$entry</tt> from <i>/etc/inetd.conf</i>. You can use a regular expression to remove the entry. </p>
+<dt>$rc = DebianNet::remove_service($entry)</dt>
+<dd>Remove <tt>$entry</tt> from <i>/etc/inetd.conf</i>. You can use a regular expression to remove the entry. </dd>
 <p> Returns 1 on success, and -1 on failure.</p>
-<dt>$rc = DebianNet::disable_service($service, $pattern)</p>
-<dd>Disable <tt>$service</tt> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. Using <tt>$pattern</tt> is optional (see <code>enable_service()</code>). </p>
+<dt>$rc = DebianNet::disable_service($service, $pattern)</dt>
+<dd>Disable <tt>$service</tt> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. Using <tt>$pattern</tt> is optional (see <code>enable_service()</code>). </dd>
 <p> Returns 1 on success, and -1 on failure.</p>
-<dt>$rc = DebianNet::enable_service($service, $pattern)</p>
-<dd>Enable <tt>$service</tt> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. Using <tt>$pattern</tt> is optional. It can be used to select a service. You only need this option if you have two (or more) services of the same name. </p>
+<dt>$rc = DebianNet::enable_service($service, $pattern)</dt>
+<dd>Enable <tt>$service</tt> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. Using <tt>$pattern</tt> is optional. It can be used to select a service. You only need this option if you have two (or more) services of the same name. </dd>
 <p> An example: you have three <i>ftp</i> entries in the <i>/etc/inetd.conf</i> file (all disabled by default) and you want to enable the entry which uses the <i>vsftpd</i> daemon. To do this, use the pattern &quot;<i>vsftpd</i>&quot; (or any other regular expression that matches this entry). </p>
 <p> Returns 1 on success, and -1 on failure.</dl>
 <h2>Changes</h2>
 <h3>Version 1.13</h3>
 <p>New variables: <tt>$VERSION</tt>, <tt>$VERBOSE</tt>, <tt>$MULTI</tt>, <tt>$SEP</tt>, <tt>$INETD_CONF</tt>. </p>
 <p> Deprecated variables: <tt>$version</tt>, <tt>$verbose</tt>, <tt>$multi</tt>, <tt>$sep</tt>, <tt>$inetdcf</tt>.</p>
+</p>

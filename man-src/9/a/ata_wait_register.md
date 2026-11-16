@@ -10,27 +10,27 @@ description: "ata_wait_register – wait until register value changes"
 <p>ata_wait_register &#8211; wait until register value changes</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u32 ata_wait_register(struct ata_port&nbsp;<wbr>*&nbsp;<wbr></code><i>ap</i><code>, void&nbsp;<wbr>__iomem&nbsp;<wbr>*&nbsp;<wbr></code><i>reg</i><code>, u32&nbsp;<wbr></code><i>mask</i><code>, u32&nbsp;<wbr></code><i>val</i><code>, unsigned long&nbsp;<wbr></code><i>interval</i><code>, unsigned long&nbsp;<wbr></code><i>timeout</i><code>);</code></dl>
+<dt> <code>u32 ata_wait_register(struct ata_port&nbsp;<wbr>*&nbsp;<wbr></code><i>ap</i><code>, void&nbsp;<wbr>__iomem&nbsp;<wbr>*&nbsp;<wbr></code><i>reg</i><code>, u32&nbsp;<wbr></code><i>mask</i><code>, u32&nbsp;<wbr></code><i>val</i><code>, unsigned long&nbsp;<wbr></code><i>interval</i><code>, unsigned long&nbsp;<wbr></code><i>timeout</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>ATA port to wait register for, can be NULL</dl>
+</dd><dd>ATA port to wait register for, can be NULL</dd></dl>
 <p> <i>reg</i></p>
 <dl>
-<dd>IO-mapped register</dl>
+<dd>IO-mapped register</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>Mask to apply to read register value</dl>
+<dd>Mask to apply to read register value</dd></dl>
 <p> <i>val</i></p>
 <dl>
-<dd>Wait condition</dl>
+<dd>Wait condition</dd></dl>
 <p> <i>interval</i></p>
 <dl>
-<dd>polling interval in milliseconds</dl>
+<dd>polling interval in milliseconds</dd></dl>
 <p> <i>timeout</i></p>
 <dl>
-<dd>timeout in milliseconds</dl>
+<dd>timeout in milliseconds</dd></dl>
 <h2>Description</h2>
 <p>Waiting for some bits of register to change is a common operation for ATA controllers. This function reads 32bit LE IO-mapped register <i>reg</i> and tests for the following condition. </p>
 <p> (*<i>reg</i> &amp; mask) != val </p>
@@ -41,5 +41,5 @@ description: "ata_wait_register – wait until register value changes"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -105,7 +105,7 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>org.antlr.runtime.tree.TreeAdaptor.addChild()</code></dl>
+</dt><dd> <code>org.antlr.runtime.tree.TreeAdaptor.addChild()</code></dd></dl>
 <p> Referenced by antlr3DebugListenerNew(), dbgAddChild(), dbgAddChildToken(), and simulateTreeConstruction().</p>
 <h3>void(* <code>ANTLR3_DEBUG_EVENT_LISTENER_struct::becomeRoot</code>)(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> newRoot, <code>pANTLR3_BASE_TREE</code> oldRoot)</h3>
 <p> Make a node the new root of an existing root. See </p>
@@ -115,7 +115,7 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>org.antlr.runtime.tree.TreeAdaptor.becomeRoot()</code></dl>
+</dt><dd> <code>org.antlr.runtime.tree.TreeAdaptor.becomeRoot()</code></dd></dl>
 <p> Referenced by antlr3DebugListenerNew(), dbgBecomeRoot(), and dbgBecomeRootToken().</p>
 <h3>void(* <code>ANTLR3_DEBUG_EVENT_LISTENER_struct::beginBacktrack</code>)(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int level)</h3>
 <p> Referenced by antlr3DebugListenerNew(), and beginBacktrack().</p>
@@ -134,7 +134,7 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>t</i></dl>
+</dt><dd> <i>t</i></dd></dl>
 <p> Referenced by antlr3DebugListenerNew().</p>
 <h3>void(* <code>ANTLR3_DEBUG_EVENT_LISTENER_struct::consumeToken</code>)(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_COMMON_TOKEN</code> t)</h3>
 <p> An input token was consumed; matched by any kind of element. Trigger after the token was matched by things like <code>match()</code>, <code>matchAny()</code>. </p>
@@ -240,5 +240,5 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBV">Author</a></p>
-<dd></dl>
+<dt><a href="#lbBV">Author</a></dt>
+<dd></dd></dl>

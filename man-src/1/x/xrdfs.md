@@ -19,63 +19,63 @@ xrdfs[--no - cwd] host[:port][command[args]] command : help, chmod, ls, locate, 
 <p> <code>&#8211;no-cwd</code></p>
 <dl>
 <dt>
-<dd> No CWD is being preset in interactive mode. </p>
+</dt><dd> No CWD is being preset in interactive mode. </dd>
 </dl>
 <h2>COMMANDS</h2>
 <p> <code>chmod</code> <i>path</i> <i>&lt;user&gt;&lt;group&gt;&lt;other&gt;</i></p>
 <dl>
 <dt>
-<dd> Modify permissions of the <i>path</i>. Permission string example: <i>rwxr-x&#8211;x</i> </p>
+</dt><dd> Modify permissions of the <i>path</i>. Permission string example: <i>rwxr-x&#8211;x</i> </dd>
 </dl>
 <p> <code>ls</code> <i>[-l]</i> <i>[-u]</i> <i>[dirname]</i></p>
 <dl>
 <dt>
-<dd> Get directory listing.<br />
+</dt><dd> Get directory listing.<br />
  <i>-l</i> stat every entry and pring long listing<br />
- <i>-u</i> print paths as URLs </p>
+ <i>-u</i> print paths as URLs </dd>
 </dl>
 <p> <code>locate</code> <i>[-n]</i> <i>[-r]</i> <i>[-d]</i> <i>&lt;path&gt;</i></p>
 <dl>
 <dt>
-<dd> Get the locations of the path.<br />
+</dt><dd> Get the locations of the path.<br />
  <i>-r</i> refresh, don&#8217;t use cached locations<br />
  <i>-n</i> make the server return the response immediately even though it may be incomplete<br />
  <i>-d</i> do a recursive, deep locate in order to find data servers<br />
  <i>-m</i> prefer host names to IP addresses<br />
- <i>-i</i> ignore network dependencies (IPv6/IPv4) </p>
+ <i>-i</i> ignore network dependencies (IPv6/IPv4) </dd>
 </dl>
 <p> <code>mkdir</code> <i>[-p] [-m&lt;user&gt;&lt;group&gt;&lt;other&gt;] &lt;dirname&gt;</i></p>
 <dl>
 <dt>
-<dd> Creates a directory/tree of directories.<br />
+</dt><dd> Creates a directory/tree of directories.<br />
  <i>-p</i> create the entire directory tree recursively<br />
- <i>-m</i><code>&lt;user&gt;&lt;group&gt;&lt;other&gt;</code> permissions for newly created directories </p>
+ <i>-m</i><code>&lt;user&gt;&lt;group&gt;&lt;other&gt;</code> permissions for newly created directories </dd>
 </dl>
 <p> <code>mv</code> <i>&lt;path1&gt; &lt;path2&gt;</i></p>
 <dl>
 <dt>
-<dd> Move path1 to path2 locally on the same server. </p>
+</dt><dd> Move path1 to path2 locally on the same server. </dd>
 </dl>
 <p> <code>stat</code> <i>&lt;path&gt;</i></p>
 <dl>
 <dt>
-<dd> Get info about the file or directory.<br />
+</dt><dd> Get info about the file or directory.<br />
  <i>-q</i> query optional flag query parameter that makes xrdfs return error code to the shell if the requested flag combination is not present; flags may be combined together using &#8216;|&#8217; or &#8216;&amp;&#8217;<br />
- Available flags: <code>XBitSet</code>, <code>IsDir</code>, <code>Other</code>, <code>Offline</code>, <code>POSCPending</code>, <code>IsReadable</code>, <code>IsWriteable</code> </p>
+ Available flags: <code>XBitSet</code>, <code>IsDir</code>, <code>Other</code>, <code>Offline</code>, <code>POSCPending</code>, <code>IsReadable</code>, <code>IsWriteable</code> </dd>
 </dl>
 <p> <code>statvfs</code> <i>&lt;path&gt;</i></p>
 <dl>
 <dt>
-<dd> Get info about a virtual file system. </p>
+</dt><dd> Get info about a virtual file system. </dd>
 </dl>
 <p> <code>query</code> <i>&lt;code&gt; &lt;params&gt;</i></p>
 <dl>
 <dt>
-<dd> Obtain server information. Query codes:<br />
- <i>config</i> <code>&lt;what&gt;</code> Server configuration; &lt;what&gt; is one of the following:</p>
+</dt><dd> Obtain server information. Query codes:<br />
+ <i>config</i> <code>&lt;what&gt;</code> Server configuration; &lt;what&gt; is one of the following:</dd>
 <dl>
 <dt>
-<dd> bind_max &#8211; the maximum number of parallel streams<br />
+</dt><dd> bind_max &#8211; the maximum number of parallel streams<br />
  chksum &#8211; the supported checksum<br />
  pio_max &#8211; maximum number of parallel I/O requests<br />
  readv_ior_max &#8211; maximum size of a readv element<br />
@@ -88,7 +88,7 @@ xrdfs[--no - cwd] host[:port][command[args]] command : help, chmod, ls, locate, 
  role &#8211; the role in a cluster<br />
  sitename &#8211; the site name<br />
  version &#8211; the version of the server
-</dl>
+</dd></dl>
 <p> <i>checksumcancel</i> <code>&lt;path&gt;</code> File checksum cancelation<br />
  <i>checksum</i> <code>&lt;path&gt;</code> File checksum<br />
  <i>opaque</i> <code>&lt;arg&gt;</code> Implementation dependent<br />
@@ -97,7 +97,7 @@ xrdfs[--no - cwd] host[:port][command[args]] command : help, chmod, ls, locate, 
  <i>stats</i> <code>&lt;what&gt;</code> Server stats; &lt;what&gt; is a list of letters indicating information to be returned:</p>
 <dl>
 <dt>
-<dd> a &#8211; all statistics<br />
+</dt><dd> a &#8211; all statistics<br />
  p &#8211; protocol statistics<br />
  b &#8211; buffer usage statistics<br />
  s &#8211; scheduling statistics<br />
@@ -106,51 +106,51 @@ xrdfs[--no - cwd] host[:port][command[args]] command : help, chmod, ls, locate, 
  i &#8211; server identification<br />
  z &#8211; synchronized statistics<br />
  l &#8211; connection statistics
-</dl>
+</dd></dl>
 <p> <i>xattr</i> <code>&lt;path&gt;</code> Extended attributes </p>
 </dl>
 <p> <code>rm</code> <i>&lt;filename&gt;</i></p>
 <dl>
 <dt>
-<dd> Remove a file. </p>
+</dt><dd> Remove a file. </dd>
 </dl>
 <p> <code>rmdir</code> <i>&lt;dirname&gt;</i></p>
 <dl>
 <dt>
-<dd> Remove a directory. </p>
+</dt><dd> Remove a directory. </dd>
 </dl>
 <p> <code>truncate</code> <i>&lt;filename&gt; &lt;length&gt;</i></p>
 <dl>
 <dt>
-<dd> Truncate a file. </p>
+</dt><dd> Truncate a file. </dd>
 </dl>
 <p> <code>prepare</code> <i>[-c]</i> <i>[-f]</i> <i>[-s]</i> <i>[-w]</i> <i>[-p priority]</i> <i>filenames</i></p>
 <dl>
 <dt>
-<dd> Prepare one or more files for access.<br />
+</dt><dd> Prepare one or more files for access.<br />
  <i>-c</i> co-locate staged files if possible<br />
  <i>-f</i> refresh file access time even if the location is known<br />
  <i>-s</i> stage the files to disk if they are not online<br />
  <i>-w</i> whe files will be accessed for modification<br />
- <i>-p</i> priority of the request, 0 (lowest) &#8211; 3 (highest) </p>
+ <i>-p</i> priority of the request, 0 (lowest) &#8211; 3 (highest) </dd>
 </dl>
 <p> <code>cat</code> <i>[-o localfile]</i> <i>file</i></p>
 <dl>
 <dt>
-<dd> Print contents of a file to stdout<br />
- <i>-o</i> print to the specified local file </p>
+</dt><dd> Print contents of a file to stdout<br />
+ <i>-o</i> print to the specified local file </dd>
 </dl>
 <p> <code>tail</code> <i>[-c bytes] [-f]</i> <i>file</i></p>
 <dl>
 <dt>
-<dd> Output last part of files to stdout.<br />
+</dt><dd> Output last part of files to stdout.<br />
  <i>-c</i> num_bytes out last num_bytes<br />
- <i>-f</i> output appended data as file grows </p>
+ <i>-f</i> output appended data as file grows </dd>
 </dl>
 <p> <code>spaceinfo</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> Get space statistics for given path. </p>
+</dt><dd> Get space statistics for given path. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> For the list of available environment variables please refere to xrdcopy(1) </p>

@@ -15,22 +15,22 @@ description: "flow-tag – Apply tags to flow files."
 <p> The <code>flow-tag</code> utility is used to add or modify source and destination tags in flow records. Tags are 32 bit identifiers derived from rules and fields in a flow record. Tags can be used to group flows with common prefixes, autonomous systems, next hops, exporter id and/or input/output interface. <code>flow-stat</code> can be used with tagged flows to produce group based reports. For example, all outbound traffic for a customer where the customer is defined by a list of IP prefixes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-k</code></p>
-<dd> Keep time from input.</p>
-<dt><code>-t</code><i> tag_fname</i></p>
-<dd> Load tags from <i>tag_name</i>. Defaults to <i>/etc/flow-tools/cfg/tag</i></p>
-<dt><code>-T</code><i> active_def</i><code>|</code></p>
-<dd> Use <i>active_def</i> as the active tag definition(s).</p>
-<dt><code>-v</code><i> variable binding</i></p>
-<dd> Set a variable FOO=bar.</dl>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-k</code></dt>
+<dd> Keep time from input.</dd>
+<dt><code>-t</code><i> tag_fname</i></dt>
+<dd> Load tags from <i>tag_name</i>. Defaults to <i>/etc/flow-tools/cfg/tag</i></dd>
+<dt><code>-T</code><i> active_def</i><code>|</code></dt>
+<dd> Use <i>active_def</i> as the active tag definition(s).</dd>
+<dt><code>-v</code><i> variable binding</i></dt>
+<dd> Set a variable FOO=bar.</dd></dl>
 <p> The configuration file is a collection of actions and definitions. An action is triggered by a definition and a definition is invoked only if listed with the <i>-T</i> flag. Lines begining with # are treated as comments and ignored. </p>
 <p> Words in the configuration file of the form @VAR or @{VAR:default} will be expanded at run-time by setting variable names with the -v option. </p>
 <pre><code>

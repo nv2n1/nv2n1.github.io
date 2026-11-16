@@ -11,17 +11,11 @@ std::filesystem::perm_options - std::filesystem::perm_options
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;filesystem&gt;
-
 enum class perm_options {
-
     replace = /* unspecified */,
-
     add = /* unspecified */,        (since C++17)
-
     remove = /* unspecified */,
-
     nofollow = /* unspecified */
-
 };</code></pre> 
 This type represents available options that control the behavior of the function permissions(). 
 perm_options satisfies the requirements of BitmaskType (which means the bitwise operators operator&amp;, operator|, operator^, operator~, operator&amp;=, operator|=, and operator^= are defined for this type) 
@@ -40,16 +34,11 @@ nofollow permissions will be changed on the symlink itself, rather than on the f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;fstream&gt;
-
 #include &lt;bitset&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 void demo_perms(fs::perms p)
-
 {
     std::cout &lt;&lt; ((p &amp; fs::perms::owner_read) != fs::perms::none ? &quot;r&quot; : &quot;-&quot;)
               &lt;&lt; ((p &amp; fs::perms::owner_write) != fs::perms::none ? &quot;w&quot; : &quot;-&quot;)
@@ -62,9 +51,7 @@ void demo_perms(fs::perms p)
               &lt;&lt; ((p &amp; fs::perms::others_exec) != fs::perms::none ? &quot;x&quot; : &quot;-&quot;)
               &lt;&lt; '\n';
 }
-
 int main()
-
 {
     std::ofstream(&quot;test.txt&quot;); // create file
     std::cout &lt;&lt; &quot;Created file with permissions: &quot;;

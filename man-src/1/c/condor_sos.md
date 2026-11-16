@@ -20,27 +20,23 @@ description: "condor_sos Issue a command that will be service with a higher prio
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Print extra debugging information as the command executes.</p>
-<dt>
-<dd></dl>
+</dt><dd> Print extra debugging information as the command executes.</dd>
+</dl>
 <p> <code>-timeoutmult </code> <i>value</i></p>
 <dl>
 <dt>
-<dd> Multiply any timeouts set for the command by the integer <i>value</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Multiply any timeouts set for the command by the integer <i>value</i> .</dd>
+</dl>
 <h2>Examples</h2>
 <p> The example command </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>condor_sos -timeoutmult 5 condor_hold -all </p>

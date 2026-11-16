@@ -14,7 +14,7 @@ description: "deb-override – Debian archive override file"
 <p>While most information about a package can be found in the control file, some is managed centrally by the distribution czars rather than by the maintainer in order to offer some global consistency. This information is found in the override file. </p>
 <p> The override file has a simple whitespace-delimited format. Comments are allowed (denoted with a <code>#</code>). </p>
 <dl>
-<dd><i>package</i> <i>priority</i> <i>section</i> [<i>maintainer-info</i>]</dl>
+<dd><i>package</i> <i>priority</i> <i>section</i> [<i>maintainer-info</i>]</dd></dl>
 <p> <i>package</i> is the name of the package. Entries in the override file for packages not found in the tree of binary packages are ignored. </p>
 <p> <i>priority</i> and <i>section</i> correspond to the respective control fields available in the .deb. The allowed values are specific to each distribution archive. </p>
 <p> <i>maintainer-info</i>, if present, can be either the name of a maintainer for an unconditional override, or else <i>old-maintainer</i> <code>=&gt;</code> <i>new-maintainer</i> to perform a substitution. </p>

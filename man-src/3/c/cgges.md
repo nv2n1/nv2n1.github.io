@@ -19,7 +19,7 @@ description: "cgges.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CGGES computes for a pair of N-by-N complex nonsymmetric matrices
  (A,B), the generalized eigenvalues, the generalized complex Schur
@@ -43,11 +43,11 @@ description: "cgges.f –"
      and T are upper triangular and,
      in addition, the diagonal elements of T are non - negative real numbers.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVSL</i> </p>
+</dt><dd> <i>JOBVSL</i> </dd>
 <pre>
           JOBVSL is CHARACTER*1
           = 'N':  do not compute the left Schur vectors;
@@ -205,14 +205,14 @@ description: "cgges.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 269 of file cgges.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

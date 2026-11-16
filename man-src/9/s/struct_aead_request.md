@@ -21,30 +21,30 @@ description: "struct_aead_request – AEAD request"
 <h2>Members</h2>
 <p>base</p>
 <dl>
-<dd>Common attributes for async crypto requests</dl>
+<dd>Common attributes for async crypto requests</dd></dl>
 <p> assoclen</p>
 <dl>
-<dd>Length in bytes of associated data for authentication</dl>
+<dd>Length in bytes of associated data for authentication</dd></dl>
 <p> cryptlen</p>
 <dl>
-<dd>Length of data to be encrypted or decrypted</dl>
+<dd>Length of data to be encrypted or decrypted</dd></dl>
 <p> iv</p>
 <dl>
-<dd>Initialisation vector</dl>
+<dd>Initialisation vector</dd></dl>
 <p> src</p>
 <dl>
-<dd>Source data</dl>
+<dd>Source data</dd></dl>
 <p> dst</p>
 <dl>
-<dd>Destination data</dl>
+<dd>Destination data</dd></dl>
 <p> __ctx[]</p>
 <dl>
-<dd>Start of private context data</dl>
+<dd>Start of private context data</dd></dl>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

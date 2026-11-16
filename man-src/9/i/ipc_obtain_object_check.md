@@ -14,10 +14,10 @@ description: "ipc_obtain_object_check –"
 <p><i>ids</i></p>
 <dl>
 <dd>
-<dd>ipc identifier set</dl>
+</dd><dd>ipc identifier set</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>ipc id to look for</dl>
+<dd>ipc id to look for</dd></dl>
 <h2>Description</h2>
 <p>Similar to <code>ipc_obtain_object_idr</code> but also checks the ipc object reference counter. </p>
 <p> Call inside the RCU critical section. The ipc object is *not* locked on exit.</p>

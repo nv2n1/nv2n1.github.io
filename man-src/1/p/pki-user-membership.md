@@ -19,19 +19,19 @@ pki[CLI options]&lt;subsystem&gt; - user - membership pki[CLI options]&lt;subsys
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-membership</code></p>
 <dl>
 <dt>
-<dd> This command is to list available user membership commands for the subsystem.</dl>
+</dt><dd> This command is to list available user membership commands for the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-membership-find</code> &lt;user ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list groups in which the subsystem user is a member.</dl>
+</dt><dd> This command is to list groups in which the subsystem user is a member.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-membership-add</code> &lt;user ID&gt; &lt;group ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to add the subsystem user into a group.</dl>
+</dt><dd> This command is to add the subsystem user into a group.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-membership-del</code> &lt;user ID&gt; &lt;group ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete the subsystem user from a group.</dl>
+</dt><dd> This command is to delete the subsystem user from a group.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

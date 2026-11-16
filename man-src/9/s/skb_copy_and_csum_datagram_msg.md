@@ -15,15 +15,15 @@ skb_copy_and_csum_datagram_msg - Copy and checksum skb to user iovec.
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>skbuff</dl>
+<dl><dd></dd><dd>skbuff</dd></dl>
  
 
  <i>hlen</i>
-<dl><dd>hardware length</dl>
+<dl><dd>hardware length</dd></dl>
  
 
  <i>msg</i>
-<dl><dd>destination</dl>
+<dl><dd>destination</dd></dl>
 
 <h2>Description</h2>
 

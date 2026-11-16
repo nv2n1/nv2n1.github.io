@@ -65,154 +65,154 @@ description: "QwtAbstractScale –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <p> Creates a default <code>QwtScaleDraw</code> and a <code>QwtLinearScaleEngine</code>. The initial scale boundaries are set to [ 0.0, 100.0 ] </p>
 <p> The <code>scaleStepSize()</code> is initialized to 0.0, <code>scaleMaxMajor()</code> to 5 and scaleMaxMajor to 3.</p>
 <h2>Member Function Documentation</h2>
 <h3>const <code>QwtAbstractScaleDraw</code> * QwtAbstractScale::abstractScaleDraw () const [protected]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale draw</dl>
+<dd>Scale draw</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAbstractScaleDraw()</code></dl>
+<dd><code>setAbstractScaleDraw()</code></dd></dl>
 <h3><code>QwtAbstractScaleDraw</code> * QwtAbstractScale::abstractScaleDraw () [protected]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale draw</dl>
+<dd>Scale draw</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAbstractScaleDraw()</code></dl>
+<dd><code>setAbstractScaleDraw()</code></dd></dl>
 <h3>double QwtAbstractScale::invTransform (intvalue) const</h3>
 <p>Translate a widget coordinate into a scale value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Widget coordinate</dl>
+<dd><i>value</i> Widget coordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Corresponding scale coordinate for value</dl>
+<dd>Corresponding scale coordinate for value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleMap()</code>, <code>transform()</code></dl>
+<dd><code>scaleMap()</code>, <code>transform()</code></dd></dl>
 <h3>bool QwtAbstractScale::isInverted () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the scale is increasing in opposite direction to the widget coordinates</dl>
+<dd>True, when the scale is increasing in opposite direction to the widget coordinates</dd></dl>
 <h3>double QwtAbstractScale::lowerBound () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Lower bound of the scale</dl>
+<dd>Lower bound of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLowerBound()</code>, <code>setScale()</code>, <code>upperBound()</code></dl>
+<dd><code>setLowerBound()</code>, <code>setScale()</code>, <code>upperBound()</code></dd></dl>
 <h3>double QwtAbstractScale::maximum () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The boundary with the larger value</dl>
+<dd>The boundary with the larger value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minimum()</code>, <code>lowerBound()</code>, <code>upperBound()</code></dl>
+<dd><code>minimum()</code>, <code>lowerBound()</code>, <code>upperBound()</code></dd></dl>
 <h3>double QwtAbstractScale::minimum () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The boundary with the smaller value</dl>
+<dd>The boundary with the smaller value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maximum()</code>, <code>lowerBound()</code>, <code>upperBound()</code></dl>
+<dd><code>maximum()</code>, <code>lowerBound()</code>, <code>upperBound()</code></dd></dl>
 <h3>void QwtAbstractScale::rescale (doublelowerBound, doubleupperBound, doublestepSize) [protected]</h3>
 <p>Recalculate the scale division and update the scale. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>lowerBound</i> Lower limit of the scale interval<br />
  <i>upperBound</i> Upper limit of the scale interval<br />
- <i>stepSize</i> Major step size</dl>
+ <i>stepSize</i> Major step size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleChange()</code></dl>
+<dd><code>scaleChange()</code></dd></dl>
 <h3>const <code>QwtScaleDiv</code> &amp; QwtAbstractScale::scaleDiv () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale boundaries and positions of the ticks</dl>
+<dd>Scale boundaries and positions of the ticks</dd></dl>
 <p> The scale division might have been assigned explicitly or calculated implicitly by <code>rescale()</code>.</p>
 <h3>const <code>QwtScaleEngine</code> * QwtAbstractScale::scaleEngine () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale engine</dl>
+<dd>Scale engine</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleEngine()</code></dl>
+<dd><code>setScaleEngine()</code></dd></dl>
 <h3><code>QwtScaleEngine</code> * QwtAbstractScale::scaleEngine ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale engine</dl>
+<dd>Scale engine</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleEngine()</code></dl>
+<dd><code>setScaleEngine()</code></dd></dl>
 <h3>const <code>QwtScaleMap</code> &amp; QwtAbstractScale::scaleMap () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Map to translate between scale and widget coordinates</dl>
+<dd>Map to translate between scale and widget coordinates</dd></dl>
 <h3>int QwtAbstractScale::scaleMaxMajor () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Maximal number of major tick intervals</dl>
+<dd>Maximal number of major tick intervals</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleMaxMajor()</code>, <code>scaleMaxMinor()</code></dl>
+<dd><code>setScaleMaxMajor()</code>, <code>scaleMaxMinor()</code></dd></dl>
 <h3>int QwtAbstractScale::scaleMaxMinor () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Maximal number of minor tick intervals</dl>
+<dd>Maximal number of minor tick intervals</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleMaxMinor()</code>, <code>scaleMaxMajor()</code></dl>
+<dd><code>setScaleMaxMinor()</code>, <code>scaleMaxMajor()</code></dd></dl>
 <h3>double QwtAbstractScale::scaleStepSize () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Hint for the step size of the scale</dl>
+<dd>Hint for the step size of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleStepSize()</code>, <code>QwtScaleEngine::divideScale()</code></dl>
+<dd><code>setScaleStepSize()</code>, <code>QwtScaleEngine::divideScale()</code></dd></dl>
 <h3>void QwtAbstractScale::setAbstractScaleDraw (<code>QwtAbstractScaleDraw</code> *scaleDraw) [protected]</h3>
 <p>Set a scale draw. scaleDraw has to be created with new and will be deleted in the destructor or the next call of <code>setAbstractScaleDraw()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>abstractScaleDraw()</code></dl>
+<dd><code>abstractScaleDraw()</code></dd></dl>
 <h3>void QwtAbstractScale::setLowerBound (doublevalue)</h3>
 <p>Set the lower bound of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Lower bound</dl>
+<dd><i>value</i> Lower bound</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>lowerBound()</code>, <code>setScale()</code>, <code>setUpperBound()</code></dl>
+<dd><code>lowerBound()</code>, <code>setScale()</code>, <code>setUpperBound()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>For inverted scales the lower bound is greater than the upper bound</dl>
+<dd>For inverted scales the lower bound is greater than the upper bound</dd></dl>
 <h3>void QwtAbstractScale::setScale (doublelowerBound, doubleupperBound)</h3>
 <p>Specify a scale. Define a scale by an interval </p>
 <p> The ticks are calculated using <code>scaleMaxMinor()</code>, <code>scaleMaxMajor()</code> and <code>scaleStepSize()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>lowerBound</i> lower limit of the scale interval<br />
- <i>upperBound</i> upper limit of the scale interval</dl>
+ <i>upperBound</i> upper limit of the scale interval</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>For inverted scales the lower bound is greater than the upper bound</dl>
+<dd>For inverted scales the lower bound is greater than the upper bound</dd></dl>
 <h3>void QwtAbstractScale::setScale (const <code>QwtInterval</code> &amp;interval)</h3>
 <p>Specify a scale. Define a scale by an interval </p>
 <p> The ticks are calculated using <code>scaleMaxMinor()</code>, <code>scaleMaxMajor()</code> and <code>scaleStepSize()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Interval</dl>
+<dd><i>interval</i> Interval</dd></dl>
 <h3>void QwtAbstractScale::setScale (const <code>QwtScaleDiv</code> &amp;scaleDiv)</h3>
 <p>Specify a scale. <code>scaleMaxMinor()</code>, <code>scaleMaxMajor()</code> and <code>scaleStepSize()</code> and have no effect. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDiv</i> Scale division</dl>
+<dd><i>scaleDiv</i> Scale division</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>setAutoScale()</dl>
+<dd>setAutoScale()</dd></dl>
 <h3>void QwtAbstractScale::setScaleEngine (<code>QwtScaleEngine</code> *scaleEngine)</h3>
 <p>Set a scale engine. The scale engine is responsible for calculating the scale division and provides a transformation between scale and widget coordinates. </p>
 <p> scaleEngine has to be created with new and will be deleted in the destructor or the next call of setScaleEngine.</p>
@@ -221,57 +221,57 @@ description: "QwtAbstractScale –"
 <p> The default value is 5. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ticks</i> Maximal number of major ticks.</dl>
+<dd><i>ticks</i> Maximal number of major ticks.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleMaxMajor()</code>, <code>setScaleMaxMinor()</code>, <code>setScaleStepSize()</code>, <code>QwtScaleEngine::divideInterval()</code></dl>
+<dd><code>scaleMaxMajor()</code>, <code>setScaleMaxMinor()</code>, <code>setScaleStepSize()</code>, <code>QwtScaleEngine::divideInterval()</code></dd></dl>
 <h3>void QwtAbstractScale::setScaleMaxMinor (intticks)</h3>
 <p>Set the maximum number of minor tick intervals. The scale&#8217;s minor ticks are calculated automatically such that the number of minor intervals does not exceed ticks. The default value is 3. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ticks</i> Maximal number of minor ticks.</dl>
+<dd><i>ticks</i> Maximal number of minor ticks.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleMaxMajor()</code>, <code>setScaleMaxMinor()</code>, <code>setScaleStepSize()</code>, <code>QwtScaleEngine::divideInterval()</code></dl>
+<dd><code>scaleMaxMajor()</code>, <code>setScaleMaxMinor()</code>, <code>setScaleStepSize()</code>, <code>QwtScaleEngine::divideInterval()</code></dd></dl>
 <h3>void QwtAbstractScale::setScaleStepSize (doublestepSize)</h3>
 <p>Set the step size used for calculating a scale division. The step size is hint for calculating the intervals for the major ticks of the scale. A value of 0.0 is interpreted as no hint. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>stepSize</i> Hint for the step size of the scale</dl>
+<dd><i>stepSize</i> Hint for the step size of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleStepSize()</code>, <code>QwtScaleEngine::divideScale()</code></dl>
+<dd><code>scaleStepSize()</code>, <code>QwtScaleEngine::divideScale()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Position and distance between the major ticks also depends on <code>scaleMaxMajor()</code>.</dl>
+<dd>Position and distance between the major ticks also depends on <code>scaleMaxMajor()</code>.</dd></dl>
 <h3>void QwtAbstractScale::setUpperBound (doublevalue)</h3>
 <p>Set the upper bound of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Upper bound</dl>
+<dd><i>value</i> Upper bound</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>upperBound()</code>, <code>setScale()</code>, <code>setLowerBound()</code></dl>
+<dd><code>upperBound()</code>, <code>setScale()</code>, <code>setLowerBound()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>For inverted scales the lower bound is greater than the upper bound</dl>
+<dd>For inverted scales the lower bound is greater than the upper bound</dd></dl>
 <h3>int QwtAbstractScale::transform (doublevalue) const</h3>
 <p>Translate a scale value into a widget coordinate </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Scale value</dl>
+<dd><i>value</i> Scale value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Corresponding widget coordinate for value</dl>
+<dd>Corresponding widget coordinate for value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleMap()</code>, <code>invTransform()</code></dl>
+<dd><code>scaleMap()</code>, <code>invTransform()</code></dd></dl>
 <h3>double QwtAbstractScale::upperBound () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Upper bound of the scale</dl>
+<dd>Upper bound of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setUpperBound()</code>, <code>setScale()</code>, <code>lowerBound()</code></dl>
+<dd><code>setUpperBound()</code>, <code>setScale()</code>, <code>lowerBound()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

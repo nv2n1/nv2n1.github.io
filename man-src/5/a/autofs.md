@@ -15,26 +15,26 @@ description: "autofs – Format of the automounter maps"
 <p>This is a description of the text file format. Other methods of specifying these files may exist. All empty lines or lines beginning with # are ignored. The basic format of one line in such maps is: </p>
 <p> <code>key&nbsp;<wbr></code>[<code>-options</code>]&nbsp;<wbr><code>location</code></p>
 <dl>
-<dt><code>key</code></p>
-<dd>For indirect mounts this is the part of the path name between the mount point and the path into the filesystem when it is mounted. Usually you can think about the key as a sub-directory name below the autofs managed mount point. </p>
+<dt><code>key</code></dt>
+<dd>For indirect mounts this is the part of the path name between the mount point and the path into the filesystem when it is mounted. Usually you can think about the key as a sub-directory name below the autofs managed mount point. </dd>
 <p> For direct mounts this is the full path of each mount point. This map is always associated with the /- mount point in the master map.</p>
-<dt><code>options</code></p>
-<dd>Zero or more options may be given. Options can also be given in the <code>auto.master</code> file in which case both values are cumulative (this is a difference from SunOS). The options are a list of comma separated options as customary for the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) command. </p>
+<dt><code>options</code></dt>
+<dd>Zero or more options may be given. Options can also be given in the <code>auto.master</code> file in which case both values are cumulative (this is a difference from SunOS). The options are a list of comma separated options as customary for the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) command. </dd>
 <p> There are several special options</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-fstype=</code></p>
-<dd>is used to specify a filesystem type if the filesystem is not of the default NFS type. This option is processed by the automounter and not by the mount command.</p>
-<dt><code>-strict</code></p>
-<dd>is used to treat errors when mounting file systems as fatal. This is important when multiple file systems should be mounted (`multi-mounts&#8217;). If this option is given, no file system is mounted at all if at least one file system can&#8217;t be mounted.</p>
-<dt><code>-use-weight-only</code></p>
-<dd>is used to make the weight the sole factor in selecting a server when multiple servers are present in a map entry. and</p>
-<dt><code>-no-use-weight-only</code></p>
-<dd>can be used to negate the option if it is present in the master map entry for the map but is not wanted for the given mount.</dl>
+</dd><dl>
+<dt><code>-fstype=</code></dt>
+<dd>is used to specify a filesystem type if the filesystem is not of the default NFS type. This option is processed by the automounter and not by the mount command.</dd>
+<dt><code>-strict</code></dt>
+<dd>is used to treat errors when mounting file systems as fatal. This is important when multiple file systems should be mounted (`multi-mounts&#8217;). If this option is given, no file system is mounted at all if at least one file system can&#8217;t be mounted.</dd>
+<dt><code>-use-weight-only</code></dt>
+<dd>is used to make the weight the sole factor in selecting a server when multiple servers are present in a map entry. and</dd>
+<dt><code>-no-use-weight-only</code></dt>
+<dd>can be used to negate the option if it is present in the master map entry for the map but is not wanted for the given mount.</dd></dl>
 </dl>
-<dt><code>location</code></p>
-<dd>The location specifies from where the file system is to be mounted. In the most cases this will be an NFS volume and the usual notation <i>host:pathname</i> is used to indicate the remote filesystem and path to be mounted. If the filesystem to be mounted begins with a / (such as local <i>/dev</i> entries or smbfs shares) a : needs to be prefixed (e.g. <i>:/dev/sda1</i>).</dl>
+<dt><code>location</code></dt>
+<dd>The location specifies from where the file system is to be mounted. In the most cases this will be an NFS volume and the usual notation <i>host:pathname</i> is used to indicate the remote filesystem and path to be mounted. If the filesystem to be mounted begins with a / (such as local <i>/dev</i> entries or smbfs shares) a : needs to be prefixed (e.g. <i>:/dev/sda1</i>).</dd></dl>
 <h2>Example</h2>
 <p>Indirect map:</p>
 <dl>
@@ -48,19 +48,19 @@ floppy -fstype=auto :/dev/fd0
 server -rw,hard,intr / -ro myserver.me.org:/ \
  /usr myserver.me.org:/usr \
  /home myserver.me.org:/home</pre>
-</dl>
+</dd></dl>
 <p> In the first line we have a NFS remote mount of the kernel directory on <i><a href="ftp://ftp.kernel.org">ftp.kernel.org</a></i>. This is mounted read-only. The second line mounts an ext2 volume from a local ide drive. The third makes a share exported from a Windows machine available for automounting. The rest should be fairly self-explanatory. The last entry (the last three lines) is an example of a multi-map (see below). If you use the automounter for a filesystem without access permissions (like <code>vfat</code>), users usually can&#8217;t write on such a filesystem because it is mounted as user <code>root</code>. You can solve this problem by passing the option <i>gid=&lt;gid&gt;</i>, e.g. <i>gid=floppy</i>. The filesystem is then mounted as group <code>floppy</code> instead of <code>root</code>. Then you can add the users to this group, and they can write to the filesystem. Here&#8217;s an example entry for an autofs map:</p>
 <dl>
 <dd>
 <pre>floppy-vfat -fstype=vfat,sync,gid=floppy,umask=002 :/dev/fd0</pre>
-</dl>
+</dd></dl>
 <p> Direct map:</p>
 <dl>
 <dd>
 <pre>/nfs/apps/mozilla bogus:/usr/local/moxill
 /nfs/data/budgets tiger:/usr/local/budgets
 /tst/sbin bogus:/usr/sbin</pre>
-</dl>
+</dd></dl>
 <h2>Features</h2>
 <h3>Map Key Substitution</h3>
 <p>An &amp; character in the <code>location</code> is expanded to the value of the <code>key</code> field that matched the line (which probably only makes sense together with a wildcard key).</p>
@@ -69,7 +69,7 @@ server -rw,hard,intr / -ro myserver.me.org:/ \
 <dl>
 <dd>
 <pre>* server:/export/home/&amp;</pre>
-</dl>
+</dd></dl>
 <p> The special character &#8216;&amp;&#8217; will be replaced by the provided key. So, in the example above, a lookup for the key &#8216;foo&#8217; would yield a mount of server:/export/home/foo.</p>
 <h3>Variable Substitution</h3>
 <p>The following special variables will be substituted in the location field of an automounter map entry if prefixed with $ as customary from shell scripts (curly braces can be used to separate the field name): </p>
@@ -81,7 +81,7 @@ HOST Hostname (uname -n)
 OSNAME Operating System (uname -s)
 OSREL Release of OS (uname -r)
 OSVERS Version of OS (uname -v)</pre>
-</dl>
+</dd></dl>
 <p> autofs provides additional variables that are set based on the user requesting the mount: </p>
 <dl>
 <dd>
@@ -91,7 +91,7 @@ GROUP The user group name
 GID The user group ID
 HOME The user home directory
 SHOST Short hostname (domain part removed if present)</pre>
-</dl>
+</dd></dl>
 <p> If a program map is used these standard environment variables will have a prefix of &quot;AUTOFS_&quot; to prevent interpreted languages like python from being able to load and execute arbitray code from a user home directory. </p>
 <p> Additional entries can be defined with the -Dvariable=Value map-option to <code><a href="/docs/linux/man/8-automount/">automount</a></code>(8).</p>
 <h3>Executable Maps</h3>
@@ -102,7 +102,7 @@ SHOST Short hostname (domain part removed if present)</pre>
 <dl>
 <dd>
 <pre><code>key [ -options ] [[/] location [/relative-mount-point [ -options ] location...]...</code></pre>
-</dl>
+</dd></dl>
 <p> This may extend over multiple lines, quoting the line-breaks with `\&#8217;. If present, the per-mountpoint mount-options are appended to the default mount-options. This behaviour may be overridden by the append_options configuration setting.</p>
 <h3>Replicated Server</h3>
 <p>A mount location can specify multiple hosts for a location, portentially with a different export path for the same file system. Historically these different locations are read-only and provide the same replicated file system. </p>
@@ -120,21 +120,21 @@ Multiple weighted, replicated hosts different (potentially) paths:
 &lt;path&gt; host1(3):/path/pathA host2(5):/path/pathB
 Anything else is questionable and unsupported, but these variations will also work:
 &lt;path&gt; host1(3),host:/blah</pre>
-</dl>
+</dd></dl>
 <h2>Unsupported</h2>
 <p>This version of the automounter supports direct maps stored in FILE, NIS, NISPLUS and LDAP only.</p>
 <h2>Amd Format</h2>
 <p>This is a description of the text file format. Other methods of specifying mount map entries may be required for different map sources. All empty lines or lines beginning with # are ignored. The basic format of one line in such maps is: </p>
 <p> <code>key location-list</code></p>
 <dl>
-<dt><code>key</code></p>
-<dd>A <code>key</code> is a path (or a single path component alone) that may end in the wildcard key, &quot;*&quot;, or the wildcard key alone and must not begin with the &quot;/&quot; character.</p>
-<dt><code>location-list</code></p>
-<dd>Following the <code>key</code> is a mount <code>location-list</code>.</p>
-<dt>A <code>location-list</code> list has the following syntax:</p>
+<dt><code>key</code></dt>
+<dd>A <code>key</code> is a path (or a single path component alone) that may end in the wildcard key, &quot;*&quot;, or the wildcard key alone and must not begin with the &quot;/&quot; character.</dd>
+<dt><code>location-list</code></dt>
+<dd>Following the <code>key</code> is a mount <code>location-list</code>.</dd>
+<dt>A <code>location-list</code> list has the following syntax:</dt>
 <dd>
-<dt><code>location[&nbsp;<wbr>location[&nbsp;<wbr>&#8230;&nbsp;<wbr>]]&nbsp;<wbr>[|| location[&nbsp;<wbr>location[&nbsp;<wbr>&#8230;&nbsp;<wbr>]]</code></p>
-<dd></dl>
+</dd><dt><code>location[&nbsp;<wbr>location[&nbsp;<wbr>&#8230;&nbsp;<wbr>]]&nbsp;<wbr>[|| location[&nbsp;<wbr>location[&nbsp;<wbr>&#8230;&nbsp;<wbr>]]</code></dt>
+<dd></dd></dl>
 <p> A mount <code>location-list</code> can use the cut operator, <code>||</code>, to specify locations that should be tried if none of the locations to the left of it where selected for a mount attempt. </p>
 <p> A mount <code>location</code> consists of an optional colon seperated list of <code>selectors</code>, followed by a colon seperated list of <code>option:=value</code> pairs. </p>
 <p> The <code>selectors</code> that may be used return a value or boolean result. Those that return a value may be to used with the comparison operators <code>==</code> and <code>!=</code> and those that return a boolean result may be negated with the <code>!</code>. </p>
@@ -143,112 +143,112 @@ Anything else is questionable and unsupported, but these variations will also wo
 <p> The <code>selectors</code> that take no arguments are:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>arch</code></p>
-<dd>The machine architecture which, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</p>
-<dt><code>karch</code></p>
-<dd>The machine kernel architecture which, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</p>
-<dt><code>os</code></p>
-<dd>The operating system name, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</p>
-<dt><code>osver</code></p>
-<dd>The operating system version, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</p>
-<dt><code>full_os</code></p>
-<dd>The full operating system name, if not set in the confugration this selector has no value.</p>
-<dt><code>vendor</code></p>
-<dd>The operating system vendor name, if not set in the confugration this selector has the value &quot;unknown&quot;.</p>
-<dt><code>byte</code></p>
-<dd>The endianess of the hardware.</p>
-<dt><code>cluster</code></p>
-<dd>The name of the local cluster. It has a value only if it is set in the configuration.</p>
-<dt><code>autodir</code></p>
-<dd>The base path under which external mounts are done if they are needed. Most mounts are done in place but some can&#8217;t be and this is the base path under which those mounts will be done.</p>
-<dt><code>domain</code></p>
-<dd>The local domain name. It is set to the value of the configuration option <code>sub_domain</code>. If sub_domain is not given in the configuration it is set to the domain part of the local host name, as given by <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2).</p>
-<dt><code>host</code></p>
-<dd>The local host name, without the domain part, as given by <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2).</p>
-<dt><code>hostd</code></p>
-<dd>The full host name. If <code>sub_domain</code> is given in the configuration this is set to the contatenation of <code>host</code> and <code>sub_domain</code> deperated by a <code>.</code>. If <code>sub_domain</code> is not set in the configuration the value of <code>domain</code> is used instead of <code>sub_domain</code>.</p>
-<dt><code>uid</code></p>
-<dd>The numeric value of the uid of the user that first requested the mount. Note this is usual the same as that used by amd but can be different within autofs.</p>
-<dt><code>gid</code></p>
-<dd>The numeric value of the gid of the user that first requested the mount. Note this is usual the same as that used by amd but can be different within autofs.</p>
-<dt><code>key</code></p>
-<dd>The string value of the key being looked up.</p>
-<dt><code>map</code></p>
-<dd>The string value of the map name used to lookup <code>key</code>s.</p>
-<dt><code>path</code></p>
-<dd>The string value of the full path to the mount being requested.</p>
-<dt><code>dollar</code></p>
-<dd>Evaluates to the string &quot;$&quot;.</dl>
+</dd><dl>
+<dt><code>arch</code></dt>
+<dd>The machine architecture which, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</dd>
+<dt><code>karch</code></dt>
+<dd>The machine kernel architecture which, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</dd>
+<dt><code>os</code></dt>
+<dd>The operating system name, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</dd>
+<dt><code>osver</code></dt>
+<dd>The operating system version, if not set in the confugration, is obtained using <a href="/docs/linux/man/2-uname/">uname</a>(2).</dd>
+<dt><code>full_os</code></dt>
+<dd>The full operating system name, if not set in the confugration this selector has no value.</dd>
+<dt><code>vendor</code></dt>
+<dd>The operating system vendor name, if not set in the confugration this selector has the value &quot;unknown&quot;.</dd>
+<dt><code>byte</code></dt>
+<dd>The endianess of the hardware.</dd>
+<dt><code>cluster</code></dt>
+<dd>The name of the local cluster. It has a value only if it is set in the configuration.</dd>
+<dt><code>autodir</code></dt>
+<dd>The base path under which external mounts are done if they are needed. Most mounts are done in place but some can&#8217;t be and this is the base path under which those mounts will be done.</dd>
+<dt><code>domain</code></dt>
+<dd>The local domain name. It is set to the value of the configuration option <code>sub_domain</code>. If sub_domain is not given in the configuration it is set to the domain part of the local host name, as given by <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2).</dd>
+<dt><code>host</code></dt>
+<dd>The local host name, without the domain part, as given by <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2).</dd>
+<dt><code>hostd</code></dt>
+<dd>The full host name. If <code>sub_domain</code> is given in the configuration this is set to the contatenation of <code>host</code> and <code>sub_domain</code> deperated by a <code>.</code>. If <code>sub_domain</code> is not set in the configuration the value of <code>domain</code> is used instead of <code>sub_domain</code>.</dd>
+<dt><code>uid</code></dt>
+<dd>The numeric value of the uid of the user that first requested the mount. Note this is usual the same as that used by amd but can be different within autofs.</dd>
+<dt><code>gid</code></dt>
+<dd>The numeric value of the gid of the user that first requested the mount. Note this is usual the same as that used by amd but can be different within autofs.</dd>
+<dt><code>key</code></dt>
+<dd>The string value of the key being looked up.</dd>
+<dt><code>map</code></dt>
+<dd>The string value of the map name used to lookup <code>key</code>s.</dd>
+<dt><code>path</code></dt>
+<dd>The string value of the full path to the mount being requested.</dd>
+<dt><code>dollar</code></dt>
+<dd>Evaluates to the string &quot;$&quot;.</dd></dl>
 </dl>
 <dl>
-<dt>The <code>selectors</code> that take one argument are:</p>
+<dt>The <code>selectors</code> that take one argument are:</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><code>in_network(network) , network(network) , netnumber(network) , wire(network)</code></p>
-<dd>These <code>selectors</code> are all the same. <code>in_network()</code> is the preferred usage. The <code>network</code> argument is an address (which may include a subnet mask) or network name. The function compares <code>network</code> against each interface and returns true if <code>network</code> belongs to the network the interface is connected to.</p>
-<dt><code>xhost(hostname)</code></p>
-<dd>The <code>xhost()</code> selector compares <code>hostname</code> to the <code>${host}</code> and if it doesn&#8217;t match it attempts to lookup the cannonical name of <code>hostname</code> and compares it to {host} as well.</p>
-<dt><code>exists(filename)</code></p>
-<dd>Returns true if <code>filename</code> exits as determined by <a href="/docs/linux/man/2-lstat/">lstat</a>(2).</p>
-<dt><code>true()</code></p>
-<dd>Evaluates to true, the argument is ignored and may be empty.</p>
-<dt><code>false()</code></p>
-<dd>Evaluates to false, the argument is ignored and may be empty.</dl>
+</dd><dl>
+<dt><code>in_network(network) , network(network) , netnumber(network) , wire(network)</code></dt>
+<dd>These <code>selectors</code> are all the same. <code>in_network()</code> is the preferred usage. The <code>network</code> argument is an address (which may include a subnet mask) or network name. The function compares <code>network</code> against each interface and returns true if <code>network</code> belongs to the network the interface is connected to.</dd>
+<dt><code>xhost(hostname)</code></dt>
+<dd>The <code>xhost()</code> selector compares <code>hostname</code> to the <code>${host}</code> and if it doesn&#8217;t match it attempts to lookup the cannonical name of <code>hostname</code> and compares it to {host} as well.</dd>
+<dt><code>exists(filename)</code></dt>
+<dd>Returns true if <code>filename</code> exits as determined by <a href="/docs/linux/man/2-lstat/">lstat</a>(2).</dd>
+<dt><code>true()</code></dt>
+<dd>Evaluates to true, the argument is ignored and may be empty.</dd>
+<dt><code>false()</code></dt>
+<dd>Evaluates to false, the argument is ignored and may be empty.</dd></dl>
 </dl>
-<dt>The <code>selectors</code> that take up to two arguments are:</p>
+<dt>The <code>selectors</code> that take up to two arguments are:</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><code>netgrp(netgroup[,hostname])</code></p>
-<dd>The <code>netgrp()</code> selector returns true if hostname is a member of the netgroup <code>netgroup</code>. If <code>hostname</code> is not given <code>${host}</code> is used for the comparison.</p>
-<dt><code>netgrpd(netgroup[,hostname])</code></p>
-<dd>The <code>netgrpd()i</code> selector behaves the same as <code>netgrp()</code> except that if <code>hostname</code> is not given <code>${hostd}</code>, the fully qualified hostname, is used instead of <code>${host}</code>.</dl>
+</dd><dl>
+<dt><code>netgrp(netgroup[,hostname])</code></dt>
+<dd>The <code>netgrp()</code> selector returns true if hostname is a member of the netgroup <code>netgroup</code>. If <code>hostname</code> is not given <code>${host}</code> is used for the comparison.</dd>
+<dt><code>netgrpd(netgroup[,hostname])</code></dt>
+<dd>The <code>netgrpd()i</code> selector behaves the same as <code>netgrp()</code> except that if <code>hostname</code> is not given <code>${hostd}</code>, the fully qualified hostname, is used instead of <code>${host}</code>.</dd></dl>
 </dl>
-<dt>The <code>options</code> that may be used are:</p>
+<dt>The <code>options</code> that may be used are:</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><code>type</code></p>
-<dd>This is the mount filesystem <code>type</code>. It can have a value of <code>auto</code>, <code>link</code>, <code>linkx</code>, <code>host</code>, <code>lofs</code>, <code>ext2-4</code>, <code>xfs</code>, <code>nfs</code>, <code>nfsl</code> or <code>cdfs</code>. Other types that are not yet implemented or are not available iin autofs are <code>nfsx</code>, <code>lustre</code>, <code>jfs</code>, <code>program</code>, <code>cachefs</code> and <code>direct</code>.</p>
-<dt><code>maptype</code></p>
-<dd>The <code>maptype</code> option specifies the type of the map source and can have a value of <code>file</code>, <code>nis</code>, <code>nisplus</code>, <code>exec</code>, <code>ldap</code> or <code>hesiod</code>. Map sources either not yet implemented or not available in autofs are <code>sss</code>, <code>ndbm</code>, <code>passwd</code> and <code>union</code>.</p>
-<dt><code>fs</code></p>
-<dd>The option <code>fs</code> is used to specify the local filesystem. The meaning of this option (and whether or not it is used) is dependent on the mount filesystem <code>type</code>.</p>
-<dt><code>rhost</code></p>
-<dd>The remote host name for network mount requests.</p>
-<dt><code>rfs</code></p>
-<dd>The remote host filesystem path for network mount requests.</p>
-<dt><code>dev</code></p>
-<dd>Must resolve to the device file for local device mount requests.</p>
-<dt><code>sublink</code></p>
-<dd>The <code>sublink</code> option is used to specify a subdirectory within the mount location to which this entry will point.</p>
-<dt><code>pref</code></p>
-<dd>The <code>pref</code> option is used to specify a prefix that is prepended to the lookup key before looking up the map entry key.</p>
-<dt><code>opts</code></p>
-<dd>The <code>opts</code> option is used to specify mount options to be used for the mount. If a &quot;<code>&#8211;</code>&quot; is given it is ignored. Options that may be used are dependend on the mount filesystem.</p>
-<dt><code>addopts</code></p>
-<dd>The <code>addopts</code> option is used to specify additional mount options used in addition to the default mount options for the mount location.</p>
-<dt><code>remopts</code></p>
-<dd>The <code>addopts</code> option is used to specify mount options used instead the options given in <code>opts</code> when the mount location is on a remote retwork.</dl>
+</dd><dl>
+<dt><code>type</code></dt>
+<dd>This is the mount filesystem <code>type</code>. It can have a value of <code>auto</code>, <code>link</code>, <code>linkx</code>, <code>host</code>, <code>lofs</code>, <code>ext2-4</code>, <code>xfs</code>, <code>nfs</code>, <code>nfsl</code> or <code>cdfs</code>. Other types that are not yet implemented or are not available iin autofs are <code>nfsx</code>, <code>lustre</code>, <code>jfs</code>, <code>program</code>, <code>cachefs</code> and <code>direct</code>.</dd>
+<dt><code>maptype</code></dt>
+<dd>The <code>maptype</code> option specifies the type of the map source and can have a value of <code>file</code>, <code>nis</code>, <code>nisplus</code>, <code>exec</code>, <code>ldap</code> or <code>hesiod</code>. Map sources either not yet implemented or not available in autofs are <code>sss</code>, <code>ndbm</code>, <code>passwd</code> and <code>union</code>.</dd>
+<dt><code>fs</code></dt>
+<dd>The option <code>fs</code> is used to specify the local filesystem. The meaning of this option (and whether or not it is used) is dependent on the mount filesystem <code>type</code>.</dd>
+<dt><code>rhost</code></dt>
+<dd>The remote host name for network mount requests.</dd>
+<dt><code>rfs</code></dt>
+<dd>The remote host filesystem path for network mount requests.</dd>
+<dt><code>dev</code></dt>
+<dd>Must resolve to the device file for local device mount requests.</dd>
+<dt><code>sublink</code></dt>
+<dd>The <code>sublink</code> option is used to specify a subdirectory within the mount location to which this entry will point.</dd>
+<dt><code>pref</code></dt>
+<dd>The <code>pref</code> option is used to specify a prefix that is prepended to the lookup key before looking up the map entry key.</dd>
+<dt><code>opts</code></dt>
+<dd>The <code>opts</code> option is used to specify mount options to be used for the mount. If a &quot;<code>&#8211;</code>&quot; is given it is ignored. Options that may be used are dependend on the mount filesystem.</dd>
+<dt><code>addopts</code></dt>
+<dd>The <code>addopts</code> option is used to specify additional mount options used in addition to the default mount options for the mount location.</dd>
+<dt><code>remopts</code></dt>
+<dd>The <code>addopts</code> option is used to specify mount options used instead the options given in <code>opts</code> when the mount location is on a remote retwork.</dd></dl>
 </dl>
-<dt>A number of <code>options</code> aren&#8217;t available or aren&#8217;t yet implemented</p>
-<dd>within autofs, these are:</p>
+<dt>A number of <code>options</code> aren&#8217;t available or aren&#8217;t yet implemented</dt>
+<dd>within autofs, these are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>cache</code></p>
-<dd>The <code>cache option</code> isn&#8217;t used by autofs. The map entry cache is continually updated and stale entries cleaned on re-load when map changes are detected so these configuration entries are not used. The <code>regex</code> map key matching is not implemented and may not be due to the potential overhead of the full map scans needed on every key lookup.</p>
-<dt><code>cachedir</code></p>
-<dd>The <code>cachefs</code> filesystem is not available on Linux, a different implementation is used for caching network mounted file systems.</p>
-<dt><code>mount , unmount , umount</code></p>
-<dd>These <code>options</code> are used by the amd <code>program</code> mount type which is not yet implemented.</p>
-<dt><code>delay</code></p>
-<dd>This <code>option</code> is not used by the autofs implementation and is ignored.</dl>
+</dd><dl>
+<dt><code>cache</code></dt>
+<dd>The <code>cache option</code> isn&#8217;t used by autofs. The map entry cache is continually updated and stale entries cleaned on re-load when map changes are detected so these configuration entries are not used. The <code>regex</code> map key matching is not implemented and may not be due to the potential overhead of the full map scans needed on every key lookup.</dd>
+<dt><code>cachedir</code></dt>
+<dd>The <code>cachefs</code> filesystem is not available on Linux, a different implementation is used for caching network mounted file systems.</dd>
+<dt><code>mount , unmount , umount</code></dt>
+<dd>These <code>options</code> are used by the amd <code>program</code> mount type which is not yet implemented.</dd>
+<dt><code>delay</code></dt>
+<dd>This <code>option</code> is not used by the autofs implementation and is ignored.</dd></dl>
 </dl>
 </dl>
 <h2>Features</h2>
@@ -265,7 +265,7 @@ Anything else is questionable and unsupported, but these variations will also wo
 <dl>
 <dd>
 <pre>/test file,amd:/etc/amd.test</pre>
-</dl>
+</dd></dl>
 <p> And the following map in /etc/amd.test: </p>
 <dl>
 <dd>
@@ -273,7 +273,7 @@ Anything else is questionable and unsupported, but these variations will also wo
 apps rfs:=/autofs
 util rhost:=zeus;rfs:=/work/util
 local rfs:=/shared;sublink:=local</pre>
-</dl>
+</dd></dl>
 <p> In the first line we have an NFS remote mount of the exported directory /autofs from host bilbo which would be mounted on /test/apps. Next another nfs mount for the exported directory /work/util from host zeus. This would be mounted on /test/util. </p>
 <p> Finally we have an example of the use of the <code>sublink</code> option. In this case the filesystem bilbo:/shared would be mounted on a path external the automount directory (under the direcory given by configuration option auto_dir) and the path /test/local either symlinked or bind mounted (depending on the setting autofs_use_lofs) to the &quot;local&quot; subdirectory of the external mount.</p>
 <h2>See Also</h2>

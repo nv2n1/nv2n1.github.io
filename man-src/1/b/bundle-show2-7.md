@@ -15,6 +15,6 @@ description: "bundle-show – Shows all the gems in your bundle, or the path to 
 <p> Calling show with [GEM] will list the exact location of that gem on your machine.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;paths</code></p>
-<dd>List the paths of all gems that are required by your [<code>Gemfile(5)</code>][Gemfile(5)], sorted by gem name. </p>
+<dt><code>&#8211;paths</code></dt>
+<dd>List the paths of all gems that are required by your [<code>Gemfile(5)</code>][Gemfile(5)], sorted by gem name. </dd>
 </dl>

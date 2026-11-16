@@ -14,7 +14,7 @@ description: "usb_get_dev – increments the reference count of the usb device s
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device being referenced</dl>
+</dd><dd>the device being referenced</dd></dl>
 <h2>Description</h2>
 <p>Each live reference to a device should be refcounted. </p>
 <p> Drivers for USB interfaces should normally record such references in their <code>probe</code> methods, when they bind to an interface, and release them by calling <code>usb_put_dev</code>, in their <code>disconnect</code> methods.</p>

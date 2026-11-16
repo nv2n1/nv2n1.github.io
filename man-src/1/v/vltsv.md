@@ -19,8 +19,8 @@ description: "vltsv – mutual converter between TSV and Villa database"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below. For a complete description, see the file:///usr/share/doc/qdbm-doc/spex.html#villacli.</p>
 <dl>
-<dt><code>-bin</code></p>
-<dd> treat records as Base64 format.</dl>
+<dt><code>-bin</code></dt>
+<dd> treat records as Base64 format.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> For example, to make a database to search `/etc/password&#8217; by a user name, perform the following command.<br />
  <code> cat /etc/passwd | tr &#8216;:&#8217; &#8216; &#8216; | vltsv import casket</code> </p>

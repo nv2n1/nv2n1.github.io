@@ -11,15 +11,10 @@ operator&lt;&lt;,&gt;&gt;(std::normal_distribution) - operator&lt;&lt;,&gt;&gt;(
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class ResultType&gt;
-
 std::basic_ostream&lt;CharT, Traits&gt; &amp;operator&lt;&lt;(std::basic_ostream&lt;CharT, Traits&gt; &amp;ost, (1)
-
                                                                                           const normal_distribution&lt;ResultType&gt; &amp;d);
-
 template &lt;class CharT, class Traits, class ResultType&gt;
-
 std::basic_istream&lt;CharT, Traits&gt; &amp;operator&gt;&gt;(std::basic_istream&lt;CharT, Traits&gt; &amp;ist, (2)
-
                                                                                           normal_distribution&lt;ResultType&gt; &amp;d);</code></pre> 
 Performs stream input and output operations on pseudo-random number distribution d. 
 1) Writes a textual representation of the distribution parameters and internal state to ost as textual representation. The formatting flags and fill character of ost are unchanged. 

@@ -15,42 +15,42 @@ description: "zebra – a routing manager for use with associated Quagga compone
 <h2>Options</h2>
 <p>Options available for the <code>zebra</code> command:</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;batch</code></p>
-<dd>Runs in batch mode, <code>zebra</code> parses its config and exits.</p>
-<dt><code>-d</code>, <code>&#8211;daemon</code></p>
-<dd>Runs in daemon mode, forking and exiting from tty.</p>
-<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></p>
-<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/zebra.conf</i>.</p>
-<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></p>
-<dd>Specify the group to run as. Default is <i>quagga</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>A brief message.</p>
-<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></p>
-<dd>When zebra starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart zebra. The likely default is <i>/var/run/zebra.pid</i>.</p>
-<dt><code>-k</code>, <code>&#8211;keep_kernel</code></p>
-<dd>On startup, don&#8217;t delete self inserted routes.</p>
-<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></p>
-<dd>Specify the port that the zebra VTY will listen on. This defaults to 2601, as specified in <i>/etc/services</i>.</p>
-<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></p>
-<dd>Specify the address that the zebra VTY will listen on. Default is all interfaces.</p>
-<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></p>
-<dd>Specify the user to run as. Default is <i>quagga</i>.</p>
-<dt><code>-r</code>, <code>&#8211;retain</code></p>
-<dd>When the program terminates, retain routes added by <code>zebra</code>.</p>
-<dt><code>-s</code>, <code>&#8211;nl-bufsize </code><i>netlink-buffer-size</i></p>
-<dd>Set netlink receive buffer size. There are cases where zebra daemon can&#8217;t handle flood of netlink messages from kernel. If you ever see &quot;recvmsg overrun&quot; messages in zebra log, you are in trouble. </p>
+<dt><code>-b</code>, <code>&#8211;batch</code></dt>
+<dd>Runs in batch mode, <code>zebra</code> parses its config and exits.</dd>
+<dt><code>-d</code>, <code>&#8211;daemon</code></dt>
+<dd>Runs in daemon mode, forking and exiting from tty.</dd>
+<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></dt>
+<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/zebra.conf</i>.</dd>
+<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></dt>
+<dd>Specify the group to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>A brief message.</dd>
+<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></dt>
+<dd>When zebra starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart zebra. The likely default is <i>/var/run/zebra.pid</i>.</dd>
+<dt><code>-k</code>, <code>&#8211;keep_kernel</code></dt>
+<dd>On startup, don&#8217;t delete self inserted routes.</dd>
+<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></dt>
+<dd>Specify the port that the zebra VTY will listen on. This defaults to 2601, as specified in <i>/etc/services</i>.</dd>
+<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></dt>
+<dd>Specify the address that the zebra VTY will listen on. Default is all interfaces.</dd>
+<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></dt>
+<dd>Specify the user to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-r</code>, <code>&#8211;retain</code></dt>
+<dd>When the program terminates, retain routes added by <code>zebra</code>.</dd>
+<dt><code>-s</code>, <code>&#8211;nl-bufsize </code><i>netlink-buffer-size</i></dt>
+<dd>Set netlink receive buffer size. There are cases where zebra daemon can&#8217;t handle flood of netlink messages from kernel. If you ever see &quot;recvmsg overrun&quot; messages in zebra log, you are in trouble. </dd>
 <p> Solution is to increase receive buffer of netlink socket. Note that kernel doesn&#8217;t allow to increase it over maximum value defined in <i>/proc/sys/net/core/rmem_max</i>. If you want to do it, you have to increase maximum before starting zebra. </p>
 <p> Note that this affects Linux only.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Print the version and exit.</dl>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Print the version and exit.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/usr/local/sbin/zebra</code></p>
-<dd>The default location of the <code>zebra</code> binary.</p>
-<dt><code>/usr/local/etc/zebra.conf</code></p>
-<dd>The default location of the <code>zebra</code> config file.</p>
-<dt><code>$(PWD)/zebra.log</code></p>
-<dd>If the <code>zebra</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>zebra</code>.</dl>
+<dt><code>/usr/local/sbin/zebra</code></dt>
+<dd>The default location of the <code>zebra</code> binary.</dd>
+<dt><code>/usr/local/etc/zebra.conf</code></dt>
+<dd>The default location of the <code>zebra</code> config file.</dd>
+<dt><code>$(PWD)/zebra.log</code></dt>
+<dd>If the <code>zebra</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>zebra</code>.</dd></dl>
 <h2>Warning</h2>
 <p>This man page is intended to be a quick reference for command line options. The definitive document is the Info file <code>Quagga</code>.</p>
 <h2>Diagnostics</h2>

@@ -18,15 +18,15 @@ ALTER FOREIGN DATA WRAPPER <i>name</i> OWNER TO <i>new_owner</i></pre>
 <p> Only superusers can alter foreign-data wrappers. Additionally, only superusers can own foreign-data wrappers.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of an existing foreign-data wrapper.</p>
-<dt><code>VALIDATOR </code><i>valfunction</i></p>
-<dd>Specifies a new foreign-data wrapper validator function. </p>
+<dt><i>name</i></dt>
+<dd>The name of an existing foreign-data wrapper.</dd>
+<dt><code>VALIDATOR </code><i>valfunction</i></dt>
+<dd>Specifies a new foreign-data wrapper validator function. </dd>
 <p> Note that it is possible that after changing the validator the options to the foreign-data wrapper, servers, and user mappings have become invalid. It is up to the user to make sure that these options are correct before using the foreign-data wrapper.</p>
-<dt><code>NO VALIDATOR</code></p>
-<dd>This is used to specify that the foreign-data wrapper should no longer have a validator function.</p>
-<dt><code>OPTIONS ( [ ADD | SET | DROP ] </code><i>option</i><code> [&#8216;</code><i>value</i><code>&#8216;] [, &#8230; ] )</code></p>
-<dd>Change options for the foreign-data wrapper. ADD, SET, and DROP specify the action to be performed. ADD is assumed if no operation is explicitly specified. Option names must be unique; names and values are also validated using the foreign data wrapper library.</dl>
+<dt><code>NO VALIDATOR</code></dt>
+<dd>This is used to specify that the foreign-data wrapper should no longer have a validator function.</dd>
+<dt><code>OPTIONS ( [ ADD | SET | DROP ] </code><i>option</i><code> [&#8216;</code><i>value</i><code>&#8216;] [, &#8230; ] )</code></dt>
+<dd>Change options for the foreign-data wrapper. ADD, SET, and DROP specify the action to be performed. ADD is assumed if no operation is explicitly specified. Option names must be unique; names and values are also validated using the foreign data wrapper library.</dd></dl>
 <h2>Examples</h2>
 <p>Change a foreign-data wrapper dbi, add option foo, drop bar: </p>
 <pre>ALTER FOREIGN DATA WRAPPER dbi OPTIONS (ADD foo '1', DROP 'bar');</pre>

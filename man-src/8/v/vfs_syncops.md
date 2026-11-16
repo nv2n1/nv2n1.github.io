@@ -10,7 +10,7 @@ description: "vfs_syncops – Ensure meta data operations are performed synchron
 <p>vfs_syncops &#8211; Ensure meta data operations are performed synchronously.</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = syncops</dl>
+<dd>vfs objects = syncops</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> Some filesystems (even some journaled filesystems) require that a fsync() be performed on many meta data operations to ensure that the operation is guaranteed to remain in the filesystem after a power failure. This is particularly important for some cluster filesystems which are participating in a node failover system with clustered Samba. On those filesystems the vfs_syncops VFS module provides a way to perform those operations safely. </p>
@@ -27,7 +27,7 @@ description: "vfs_syncops – Ensure meta data operations are performed synchron
  m[blue]<code>path = /data/share</code>m[]
  m[blue]<code>vfs objects = syncops</code>m[]
  m[blue]<code>syncops:onclose = no</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 4.1.0 of the Samba suite.</p>
 <h2>Author</h2>

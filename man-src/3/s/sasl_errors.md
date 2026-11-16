@@ -19,80 +19,76 @@ The following are the general error codes that may be returned by calls into the
 <h2>Common Result Codes</h2>
 
 <dl><dt>SASL_OK
-<dd>Success
-<dt>SASL_CONTINUE
-<dd>Another step is needed in authentication
-<dt>SASL_FAIL
-<dd>Generic Failure
-<dt>SASL_NOMEM
-<dd>Memory shortage failure
-<dt>SASL_BUFOVER
-<dd>Overflowed buffer
-<dt>SASL_NOMECH
-<dd>Mechanism not supported / No mechanisms matched requirements
-<dt>SASL_BADPROT
-<dd>Bad / Invalid Protocol or Protocol cancel
-<dt>SASL_NOTDONE
-<dd>Can't request information / Not applicable until later in exchange
-<dt>SASL_BADPARAM
-<dd>Invalid Parameter Supplied
-<dt>SASL_TRYAGAIN
-<dd>Transient Failure (e.g. weak key)
-<dt>SASL_BADMAC
-<dd>Integrity Check Failed
-<dt>SASL_NOTINIT
-<dd>SASL library not initialized 
-
-</dl>
+</dt><dd>Success
+</dd><dt>SASL_CONTINUE
+</dt><dd>Another step is needed in authentication
+</dd><dt>SASL_FAIL
+</dt><dd>Generic Failure
+</dd><dt>SASL_NOMEM
+</dt><dd>Memory shortage failure
+</dd><dt>SASL_BUFOVER
+</dt><dd>Overflowed buffer
+</dd><dt>SASL_NOMECH
+</dt><dd>Mechanism not supported / No mechanisms matched requirements
+</dd><dt>SASL_BADPROT
+</dt><dd>Bad / Invalid Protocol or Protocol cancel
+</dd><dt>SASL_NOTDONE
+</dt><dd>Can't request information / Not applicable until later in exchange
+</dd><dt>SASL_BADPARAM
+</dt><dd>Invalid Parameter Supplied
+</dd><dt>SASL_TRYAGAIN
+</dt><dd>Transient Failure (e.g. weak key)
+</dd><dt>SASL_BADMAC
+</dt><dd>Integrity Check Failed
+</dd><dt>SASL_NOTINIT
+</dt><dd>SASL library not initialized 
+</dd></dl>
 
 <h2>Client-only Result Codes</h2>
 
 <dl><dt>SASL_INTERACT
-<dd>Needs user interaction
-<dt>SASL_BADSERV
-<dd>Server failed mutual authentication step
-<dt>SASL_WRONGMECH
-<dd>Mechanism does not support requested feature 
-
-</dl>
+</dt><dd>Needs user interaction
+</dd><dt>SASL_BADSERV
+</dt><dd>Server failed mutual authentication step
+</dd><dt>SASL_WRONGMECH
+</dt><dd>Mechanism does not support requested feature 
+</dd></dl>
 
 <h2>Server-only Result Codes</h2>
 
 <dl><dt>SASL_BADAUTH
-<dd>Authentication Failure
-<dt>SASL_NOAUTHZ
-<dd>Authorization Failure
-<dt>SASL_TOOWEAK
-<dd>Mechanism too weak for this user
-<dt>SASL_ENCRYPT
-<dd>Encryption needed to use mechanism
-<dt>SASL_TRANS
-<dd>One time use of a plaintext password will enable requested mechanism for user
-<dt>SASL_EXPIRED
-<dd>Passphrase expired, must be reset
-<dt>SASL_DISABLED
-<dd>Account Disabled
-<dt>SASL_NOUSER
-<dd>User Not Found
-<dt>SASL_BADVERS
-<dd>Version mismatch with plug-in
-<dt>SASL_NOVERIFY
-<dd>USer exists, but no verifier for user 
-
-</dl>
+</dt><dd>Authentication Failure
+</dd><dt>SASL_NOAUTHZ
+</dt><dd>Authorization Failure
+</dd><dt>SASL_TOOWEAK
+</dt><dd>Mechanism too weak for this user
+</dd><dt>SASL_ENCRYPT
+</dt><dd>Encryption needed to use mechanism
+</dd><dt>SASL_TRANS
+</dt><dd>One time use of a plaintext password will enable requested mechanism for user
+</dd><dt>SASL_EXPIRED
+</dt><dd>Passphrase expired, must be reset
+</dd><dt>SASL_DISABLED
+</dt><dd>Account Disabled
+</dd><dt>SASL_NOUSER
+</dt><dd>User Not Found
+</dd><dt>SASL_BADVERS
+</dt><dd>Version mismatch with plug-in
+</dd><dt>SASL_NOVERIFY
+</dt><dd>USer exists, but no verifier for user 
+</dd></dl>
 
 <h2>Password Setting Result Codes</h2>
 
 <dl><dt>SASL_PWLOCK
-<dd>Passphrase locked
-<dt>SASL_NOCHANGE
-<dd>Requested change was not needed
-<dt>SASL_WEAKPASS
-<dd>Passphrase is too week for security policy.
-<dt>SASL_NOUSERPASS
-<dd>User supplied passwords are not permitted 
-
-</dl>
+</dt><dd>Passphrase locked
+</dd><dt>SASL_NOCHANGE
+</dt><dd>Requested change was not needed
+</dd><dt>SASL_WEAKPASS
+</dt><dd>Passphrase is too week for security policy.
+</dd><dt>SASL_NOUSERPASS
+</dt><dd>User supplied passwords are not permitted 
+</dd></dl>
 
 <h2>Conforming To</h2>
 

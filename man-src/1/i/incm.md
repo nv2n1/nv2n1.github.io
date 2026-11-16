@@ -15,34 +15,34 @@ description: "incm – Incorporating new mails for Mew"
 <p> The <code>incm</code> utility incorporates new mails from the mbox or the maildir to Mew&#8217;s inbox folder. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Retrieve all mails from maildir/{cur,new} for maildir.</p>
-<dt><code>-b</code></p>
-<dd> Backup mails. mbox: No truncate mbox file. maildir: To maildir/cur directory.</p>
-<dt><code>-c</code></p>
-<dd> Use the Content-Length: field, instead of the &quot;From &quot; line, as a mail separator for mbox.</p>
-<dt><code>-d</code><i> path</i></p>
-<dd> Path to mbox/maildir. If <i>path</i> is a file, mbox is assumed. If <i>path</i> is a directory, maildir is assumed.</p>
-<dt><code>-m</code><i> path</i></p>
-<dd> The same as the <code>-d</code> option.</p>
-<dt><code>-s</code></p>
-<dd> Read one mail from stdin instead of mbox/maildir.</p>
-<dt><code>-i</code><i> inboxdir</i></p>
-<dd> A path to the inbox directory.</p>
-<dt><code>-u</code></p>
-<dd> Don&#8217;t touch &quot;.mew-mtime&quot;.</p>
-<dt><code>-f</code></p>
-<dd> Preserve Unix From (Envelope Sender) line in mbox case.</p>
-<dt><code>-p</code><i> mode</i></p>
-<dd> Specify file mode that creates in mbox case.</p>
-<dt><code>-o</code></p>
-<dd> Use the suffix when creating messages.</p>
-<dt><code>-x</code><i> suffix</i></p>
-<dd> Use this <i>suffix</i>.</p>
-<dt><code>-h</code></p>
-<dd> Display this help message.</p>
-<dt><code>-v</code></p>
-<dd> Display the version.</dl>
+<dt><code>-a</code></dt>
+<dd> Retrieve all mails from maildir/{cur,new} for maildir.</dd>
+<dt><code>-b</code></dt>
+<dd> Backup mails. mbox: No truncate mbox file. maildir: To maildir/cur directory.</dd>
+<dt><code>-c</code></dt>
+<dd> Use the Content-Length: field, instead of the &quot;From &quot; line, as a mail separator for mbox.</dd>
+<dt><code>-d</code><i> path</i></dt>
+<dd> Path to mbox/maildir. If <i>path</i> is a file, mbox is assumed. If <i>path</i> is a directory, maildir is assumed.</dd>
+<dt><code>-m</code><i> path</i></dt>
+<dd> The same as the <code>-d</code> option.</dd>
+<dt><code>-s</code></dt>
+<dd> Read one mail from stdin instead of mbox/maildir.</dd>
+<dt><code>-i</code><i> inboxdir</i></dt>
+<dd> A path to the inbox directory.</dd>
+<dt><code>-u</code></dt>
+<dd> Don&#8217;t touch &quot;.mew-mtime&quot;.</dd>
+<dt><code>-f</code></dt>
+<dd> Preserve Unix From (Envelope Sender) line in mbox case.</dd>
+<dt><code>-p</code><i> mode</i></dt>
+<dd> Specify file mode that creates in mbox case.</dd>
+<dt><code>-o</code></dt>
+<dd> Use the suffix when creating messages.</dd>
+<dt><code>-x</code><i> suffix</i></dt>
+<dd> Use this <i>suffix</i>.</dd>
+<dt><code>-h</code></dt>
+<dd> Display this help message.</dd>
+<dt><code>-v</code></dt>
+<dd> Display the version.</dd></dl>
 <h3>mbox</h3>
 <p> For mbox, the mail separator is &quot;From &quot; in the beginning of lines. The <code>incm</code> utility does not convert &quot;&gt;From &quot; to &quot;From &quot; in the beginning of lines in the body. On Solaris, Content-Length: should be used with the <code>-c</code> option to tell the end of mail. </p>
 <p> To lock mbox, a lock file(&quot;&lt;user&gt;.lock&quot;), flock() or lockf(), and open(O_EXLOCK) are used. </p>

@@ -18,14 +18,14 @@ description: "barrybackup – Barry Project’s backup program for the BlackBerr
 <p> The backup files are compressed tarballs containing specially named files for each record of the databases.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> <code>&#8211;debug-output</code> Enables low level protocol debug output written to stdout/stderr.</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> Specify which X display to use.</p>
-<dt><code>-?</code></p>
-<dd> <code>&#8211;help</code> Show summary of options.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options. </p>
+<dt><code>-d</code></dt>
+<dd> <code>&#8211;debug-output</code> Enables low level protocol debug output written to stdout/stderr.</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> Specify which X display to use.</dd>
+<dt><code>-?</code></dt>
+<dd> <code>&#8211;help</code> Show summary of options.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options. </dd>
 </dl>
 <h2>TAR FORMAT</h2>
 <p> Backups are stored in tar format, compressed with gzip. Backup files are named with the following pattern: </p>

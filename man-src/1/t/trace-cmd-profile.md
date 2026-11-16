@@ -22,104 +22,104 @@ description: "trace-cmd-profile – profile tasks running live"
 <p> <code>-p</code> <i>tracer</i></p>
 <dl>
 <dt>
-<dd> Set a tracer plugin to run instead of function graph tracing set to depth of 1. To not run any tracer, use <code>-p nop</code>.</dl>
+</dt><dd> Set a tracer plugin to run instead of function graph tracing set to depth of 1. To not run any tracer, use <code>-p nop</code>.</dd></dl>
 <p> <code>-S</code></p>
 <dl>
 <dt>
-<dd> Only enable the tracer or events speficied on the command line. With this option, the function_graph tracer is not enabled, nor are any events (like sched_switch), unless they are specifically specified on the command line (i.e. -p function -e sched_switch -e sched_wakeup)</dl>
+</dt><dd> Only enable the tracer or events speficied on the command line. With this option, the function_graph tracer is not enabled, nor are any events (like sched_switch), unless they are specifically specified on the command line (i.e. -p function -e sched_switch -e sched_wakeup)</dd></dl>
 <p> <code>-G</code></p>
 <dl>
 <dt>
-<dd> Set interrupt (soft and hard) events as global (associated to CPU instead of tasks).</dl>
+</dt><dd> Set interrupt (soft and hard) events as global (associated to CPU instead of tasks).</dd></dl>
 <p> <code>-o</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Write the output of the profile to <i>file</i>. This supersedes <code>&#8211;stderr</code></dl>
+</dt><dd> Write the output of the profile to <i>file</i>. This supersedes <code>&#8211;stderr</code></dd></dl>
 <p> <code>-H</code> <i>event-hooks</i></p>
 <dl>
 <dt>
-<dd> Add custom event matching to connect any two events together. Format is: [&lt;start_system&gt;:]&lt;start_event&gt;,&lt;start_match&gt;[,&lt;start_pid&gt;]/ [&lt;end_system&gt;:]&lt;end_event&gt;,&lt;end_match&gt;[,&lt;flags&gt;] </p>
+</dt><dd> Add custom event matching to connect any two events together. Format is: [&lt;start_system&gt;:]&lt;start_event&gt;,&lt;start_match&gt;[,&lt;start_pid&gt;]/ [&lt;end_system&gt;:]&lt;end_event&gt;,&lt;end_match&gt;[,&lt;flags&gt;] </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 The start_system:start_event (start_system is optional), is the event that
 starts the timing.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 start_match is the field in the start event that is to match with the
 end_match in the end event.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 start_pid is optional, as matches are attached to the tasks that run
 the events, if another field should be used to find that task, then
 it is specified with start_pid.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 end_system:end_event is the event that ends the timing (end_system is
 optional).
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 end_match is the field in end_match that wil match the start event field
 start_match.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 flags are optional and can be the following (case insensitive):
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 p : The two events are pinned to the same CPU (start and end happen
     on the same CPU always).
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 s : The event should have a stack traced with it (enable stack tracing
     for the start event).
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 g : The event is global (not associated to a task). start_pid is
     not applicable with this flag.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>&#8211;stderr</code></p>
 <dl>
 <dt>
-<dd> Redirect the output to stderr. The output of the command being executed is not changed. This allows watching the command execute and saving the output of the profile to another file.</dl>
+</dt><dd> Redirect the output to stderr. The output of the command being executed is not changed. This allows watching the command execute and saving the output of the profile to another file.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  ---
 # trace-cmd profile -F sleep 1
@@ -157,10 +157,10 @@ task: sleep-1121
                      return_to_handler (0xffffffff816c8458)
                      stub_execve (0xffffffff816c6929)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: sched_switch:S (1) Total: 1000513242 Avg: 1000513242 Max: 1000513242 Min:1000513242
         |
@@ -174,10 +174,10 @@ Event: sched_switch:S (1) Total: 1000513242 Avg: 1000513242 Max: 1000513242 Min:
              return_to_handler (0xffffffff816c8458)
              tracesys_phase2 (0xffffffff816c65b0)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: sched_wakeup:1121 (1) Total: 43405 Avg: 43405 Max: 43405 Min:43405
         |
@@ -203,10 +203,10 @@ Event: sched_wakeup:1121 (1) Total: 43405 Avg: 43405 Max: 43405 Min:43405
              SyS_splice (0xffffffff81206c1f)
              tracesys_phase2 (0xffffffff816c65b0)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: func: sys_nanosleep() (1) Total: 1000598016 Avg: 1000598016 Max: 1000598016 Min:1000598016
 Event: func: sys_munmap() (1) Total: 14300 Avg: 14300 Max: 14300 Min:14300
@@ -239,10 +239,10 @@ Event: func: sys_execve() (5) Total: 1625251 Avg: 325050 Max: 1605698 Min:3570
              stub_execve (0xffffffff816c6929)
              stub_execve (0xffffffff816c6929)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: func: syscall_trace_enter_phase2() (38) Total: 21544 Avg: 566 Max: 1066 Min:329
 Event: func: syscall_trace_enter_phase1() (38) Total: 9202 Avg: 242 Max: 376 Min:150
@@ -266,10 +266,10 @@ Event: func: __do_page_fault() (53) Total: 257672 Avg: 4861 Max: 27745 Min:458
              trace_do_page_fault (0xffffffff810478b2)
              trace_page_fault (0xffffffff816c7dd2)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: func: syscall_trace_leave() (38) Total: 26145 Avg: 688 Max: 1264 Min:381
 Event: func: __sb_end_write() (1) Total: 373 Avg: 373 Max: 373 Min:373
@@ -308,10 +308,10 @@ Event: func: smp_trace_irq_work_interrupt() (6) Total: 236459 Avg: 39409 Max: 10
                    SyS_write (0xffffffff811d7acf)
                    tracesys_phase2 (0xffffffff816c65b0)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: sys_enter:35 (1) Total: 1000599765 Avg: 1000599765 Max: 1000599765 Min:1000599765
 Event: sys_enter:11 (1) Total: 55025 Avg: 55025 Max: 55025 Min:55025
@@ -418,10 +418,10 @@ Event: softirq_raise:SCHED (2) Total: 241249 Avg: 120624 Max: 239076 Min:2173
              SyS_execve (0xffffffff811ded1e)
              return_to_handler (0xffffffff816c8458)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: softirq_raise:HI (3) Total: 72472 Avg: 24157 Max: 64186 Min:3430
 Event: softirq_entry:RCU (2) Total: 3191 Avg: 1595 Max: 1788 Min:1403
@@ -452,10 +452,10 @@ Event: softirq_entry:RCU (2) Total: 3191 Avg: 1595 Max: 1788 Min:1403
              return_to_handler (0xffffffff816c8458)
              stub_execve (0xffffffff816c6929)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  Event: softirq_entry:SCHED (2) Total: 2289 Avg: 1144 Max: 1350 Min:939
  Event: softirq_entry:HI (3) Total: 180146 Avg: 60048 Max: 178969 Min:499
@@ -494,23 +494,23 @@ Event: softirq_entry:RCU (2) Total: 3191 Avg: 1595 Max: 1788 Min:1403
               return_to_handler (0xffffffff816c8458)
 ---
 </pre>
-</dl>
+</dd></dl>
 <p> The above uses <code>-F</code> to follow the sleep task. It filters only on events that pertain to sleep. Note, in order to follow forks, you need to also include the <code>-c</code> flag. </p>
 <p> Other tasks will appear in the profile as well if events reference more than one task (like sched_switch and sched_wakeup do. The &quot;prev_pid&quot; and &quot;next_pid&quot; of sched_switch, and the &quot;common_pid&quot; and &quot;pid&quot; of sched_wakeup). </p>
 <p> Stack traces are attached to events that are related to them. </p>
 <p> Taking a look at the above output: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: sched_switch:R (2) Total: 234559 Avg: 117279 Max: 129886 Min:104673
 </pre>
-</dl>
+</dd></dl>
 <p> This shows that task was preempted (it&#8217;s in the running <i>R</i> state). It was preempted twice <i>(2)</i> for a total of 234,559 nanoseconds, with a average preempt time of 117,279 ns, and maximum of 128,886 ns and minimum of 104,673 ns. </p>
 <p> The tree shows where it was preempted: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 |
 + ftrace_raw_event_sched_switch (0xffffffff8109f310)
@@ -543,19 +543,19 @@ Event: sched_switch:R (2) Total: 234559 Avg: 117279 Max: 129886 Min:104673
            return_to_handler (0xffffffff816c8458)
            stub_execve (0xffffffff816c6929)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: sched_switch:S (1) Total: 1000513242 Avg: 1000513242 Max: 1000513242 Min:10005132
 </pre>
-</dl>
+</dd></dl>
 <p> This shows that the task was scheduled out in the INTERRUPTIBLE state once for a total of 1,000,513,242 ns (~1s), which makes sense as the task was a &quot;sleep 1&quot;. </p>
 <p> After the schedule events, the function events are shown. By default the profiler will use the function graph tracer if the depth setting is supported by the kernel. It will set the depth to one which will only trace the first function that enters the kernel. It will also record the amount of time it was in the kernel. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: func: sys_nanosleep() (1) Total: 1000598016 Avg: 1000598016 Max: 1000598016 Min:1000598016
 Event: func: sys_munmap() (1) Total: 14300 Avg: 14300 Max: 14300 Min:14300
@@ -572,36 +572,36 @@ Event: func: SyS_brk() (4) Total: 2407 Avg: 601 Max: 1564 Min:206
 Event: func: do_notify_resume() (2) Total: 4095 Avg: 2047 Max: 2521 Min:1574
 Event: func: sys_execve() (5) Total: 1625251 Avg: 325050 Max: 1605698 Min:3570
 </pre>
-</dl>
+</dd></dl>
 <p> Count of times the event was hit is always in parenthesis <i>(5)</i>. </p>
 <p> The function graph trace may produce too much overhead as it is still triggering (just not tracing) on all functions. To limit functions just to system calls (not interrupts), add the following option: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -l 'sys_*' -l 'SyS_*'
 </pre>
-</dl>
+</dd></dl>
 <p> To disable function graph tracing totally, use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -p nop
 </pre>
-</dl>
+</dd></dl>
 <p> To use function tracing instead (note, this will not record timings, but just the count of times a function is hit): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -p function
 </pre>
-</dl>
+</dd></dl>
 <p> Following the functions are the events that are recorded. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: sys_enter:35 (1) Total: 1000599765 Avg: 1000599765 Max: 1000599765 Min:1000599765
 Event: sys_enter:11 (1) Total: 55025 Avg: 55025 Max: 55025 Min:55025
@@ -616,11 +616,11 @@ Event: sys_enter:9 (8) Total: 49583 Avg: 6197 Max: 14137 Min:2362
 Event: sys_enter:12 (4) Total: 108493 Avg: 27123 Max: 104079 Min:922
 Event: sys_enter:59 (5) Total: 1631608 Avg: 326321 Max: 1607529 Min:4563
 </pre>
-</dl>
+</dd></dl>
 <p> These are the raw system call events, with the raw system call ID after the &quot;sys_enter:&quot; For example, &quot;59&quot; is <a href="/docs/linux/man/2-execve/">execve</a>(2). Why did it execute 5 times? Looking at a strace of this run, we can see: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 execve("/usr/lib64/ccache/sleep", [ "sleep", "1" ], [/* 27 vars */]&lt;unfinished...&gt;&lt;... execve resumed&gt;) = -1 ENOENT(No such file or directory)
                                                                                                               execve("/usr/local/sbin/sleep", [ "sleep", "1" ], [/* 27 vars */]&lt;unfinished...&gt;&lt;... execve resumed&gt;) = -1 ENOENT(No such file or directory)
@@ -628,12 +628,12 @@ execve("/usr/lib64/ccache/sleep", [ "sleep", "1" ], [/* 27 vars */]&lt;unfinishe
                                                                                                                                                                                                                                                                                                                                      execve("/usr/sbin/sleep", [ "sleep", "1" ], [/* 27 vars */]&lt;unfinished...&gt;&lt;... execve resumed&gt;) = -1 ENOENT(No such file or directory)
                                                                                                                                                                                                                                                                                                                                                                                                                                            execve("/usr/bin/sleep", [ "sleep", "1" ], [/* 27 vars */]&lt;unfinished...&gt;&lt;... execve resumed&gt;) = 0
 </code></pre>
-</dl>
+</dd></dl>
 <p> It attempted to execve the &quot;sleep&quot; command for each path in $PATH until it found one. </p>
 <p> The page_fault_user events show what userspace address took a page fault. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Event: softirq_raise:RCU (3) Total: 252931 Avg: 84310 Max: 243288 Min:4639
 Event: softirq_raise:SCHED (2) Total: 241249 Avg: 120624 Max: 239076 Min:2173
@@ -654,7 +654,7 @@ Event: softirq_raise:SCHED (2) Total: 241249 Avg: 120624 Max: 239076 Min:2173
              trace_irq_work_interrupt (0xffffffff816c7aaa)
              irq_exit (0xffffffff8107dd66)
 </pre>
-</dl>
+</dd></dl>
 <p> The timings for the softirq_raise events measure the time it took from the raised softirq to the time it executed. </p>
 <p> The timings for the softirq_entry events measure the time the softirq took to execute. </p>
 <p> The stack traces for the softirqs (and possibly other events) are used when an event has a stack attached to it. This can happen if the profile ran more stacks than just the sched events, or when events are dropped and stacks </p>
@@ -662,7 +662,7 @@ Event: softirq_raise:SCHED (2) Total: 241249 Avg: 120624 Max: 239076 Min:2173
 <p> If only the time of kmalloc is needed to be seen, and where it was recorded, using the <code>-S</code> option and enabling function_graph and stack tracing for just the function needed will give the profile of only that function. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 -- -
 #trace - cmd profile - S - p function_graph - l '*kmalloc*' - l '*kmalloc*:stacktrace' sleep 1
@@ -680,7 +680,7 @@ Event: softirq_raise:SCHED (2) Total: 241249 Avg: 120624 Max: 239076 Min:2173
                                                                           system_call_fastpath(0xffffffff816c63d2)
                                                                               [..]-- -
 </code></pre>
-</dl>
+</dd></dl>
 <p> To watch the command run but save the output of the profile to a file use &#8211;stderr, and redirect stderr to a file </p>
 <p> # trace-cmd profile &#8211;stderr cyclictest -p 80 -n -t1 2&gt; profile.out </p>
 <p> Or simple use <code>-o</code> </p>
@@ -695,10 +695,10 @@ Event: softirq_raise:SCHED (2) Total: 241249 Avg: 120624 Max: 239076 Min:2173
 <p> Copyright (C) 2014 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

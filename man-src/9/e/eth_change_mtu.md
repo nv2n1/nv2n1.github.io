@@ -15,11 +15,11 @@ eth_change_mtu - set new MTU size
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
  
 
  <i>new_mtu</i>
-<dl><dd>new Maximum Transfer Unit</dl>
+<dl><dd>new Maximum Transfer Unit</dd></dl>
 
 <h2>Description</h2>
 

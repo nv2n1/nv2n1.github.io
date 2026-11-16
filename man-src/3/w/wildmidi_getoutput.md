@@ -17,14 +17,14 @@ description: "WildMidi_GetOutput – retrieve raw audio data"
 <p>Places <i>size</i> bytes of audio data from a <i>handle</i>, previously opened by <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3), into a buffer pointer to by <i>buffer</i>. </p>
 <p> <i>buffer</i> must be at least <i>size</i> bytes, with <i>size</i> being a multiple of 4 as the data is stored in 16bit interleaved stereo format. </p>
 <dl COMPACT>
-<dt><i>handle</i></p>
-<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dl>
+<dt><i>handle</i></dt>
+<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dd></dl>
 <dl COMPACT>
-<dt><i>buffer</i></p>
-<dd>The location supplied by the calling program where libWildMidi is to store the audio data. The audio data will be stored as signed 16bit interleaved stereo in little endian byte order.</dl>
+<dt><i>buffer</i></dt>
+<dd>The location supplied by the calling program where libWildMidi is to store the audio data. The audio data will be stored as signed 16bit interleaved stereo in little endian byte order.</dd></dl>
 <dl COMPACT>
-<dt><i>size</i></p>
-<dd>The size of the buffer in bytes. Since libWildMidi processes the audio in 16bit interleaved stereo format, this value needs to be a multiple of 4.</dl>
+<dt><i>size</i></dt>
+<dd>The size of the buffer in bytes. Since libWildMidi processes the audio in 16bit interleaved stereo format, this value needs to be a multiple of 4.</dd></dl>
 <h2>Return Value</h2>
 <p>Returns -1 on error along with an error message sent to stderr, 0 when there is no more audio data, otherwise the number of bytes of audio data written to <i>buffer</i>. </p>
 <p> NOTE: if the return value is less than the size you gave, this does not denote an error, it simply means the lib reached the end of the midi before it could fill the buffer. </p>

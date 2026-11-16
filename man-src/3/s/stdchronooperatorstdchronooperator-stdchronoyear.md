@@ -10,19 +10,12 @@ description: "std::chrono::operator+,std::chrono::operator-(std::chrono::year) â
 <p>std::chrono::operator+,std::chrono::operator-(std::chrono::year) &#8211; std::chrono::operator+,std::chrono::operator-(std::chrono::year)</p>
 <h2>Synopsis</h2>
 <pre><code>constexpr std::chrono::year operator+(const std::chrono::year &amp;y, (1)(since C++ 20)
-
                                                                       const std::chrono::years &amp;ys) noexcept;
-
 constexpr std::chrono::year operator+(const std::chrono::years &amp;ys, (2)(since C++ 20)
-
                                                                         const std::chrono::year &amp;y) noexcept;
-
 constexpr std::chrono::year operator-(const std::chrono::year &amp;y, (3)(since C++ 20)
-
                                                                       const std::chrono::years &amp;ys) noexcept;
-
 constexpr std::chrono::years operator-(const std::chrono::year &amp;y1, (4)(since C++ 20)
-
                                                                         const std::chrono::year &amp;y2) noexcept;</code></pre>
 <p>1-2) Adds ys.count() years to y.<br />
 3) Subtracts ys.count() years from y.<br />
@@ -39,19 +32,10 @@ The result of subtracting two year values is a duration of type std::chrono::yea
 &nbsp;Reason: no example </p>
 <h2>See also</h2>
 <pre><code>operator++      increments or decrements the month
-
 operator++(int) (public member function of std::chrono::month)
-
 operator--
-
 operator--(int)
 adds or subtracts a number of months
-
 operator+=      (public member function of std::chrono::month)
-
 operator-=
-
-
-
-
 </code></pre>

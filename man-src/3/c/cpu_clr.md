@@ -43,38 +43,38 @@ description: "CPU_SET, CPU_CLR, CPU_ISSET, CPU_ZERO, CPU_COUNT, CPU_AND, CPU_OR,
 <p> The <i>cpu_set_t</i> data type is implemented as a bit mask. However, the data structure should be treated as opaque: all manipulation of CPU sets should be done via the macros described in this page. </p>
 <p> The following macros are provided to operate on the CPU set <i>set</i>:</p>
 <dl COMPACT>
-<dt><code>CPU_ZERO</code>()</p>
-<dd>Clears <i>set</i>, so that it contains no CPUs.</p>
-<dt><code>CPU_SET</code>()</p>
-<dd>Add CPU <i>cpu</i> to <i>set</i>.</p>
-<dt><code>CPU_CLR</code>()</p>
-<dd>Remove CPU <i>cpu</i> from <i>set</i>.</p>
-<dt><code>CPU_ISSET</code>()</p>
-<dd>Test to see if CPU <i>cpu</i> is a member of <i>set</i>.</p>
-<dt><code>CPU_COUNT</code>()</p>
-<dd>Return the number of CPUs in <i>set</i>.</dl>
+<dt><code>CPU_ZERO</code>()</dt>
+<dd>Clears <i>set</i>, so that it contains no CPUs.</dd>
+<dt><code>CPU_SET</code>()</dt>
+<dd>Add CPU <i>cpu</i> to <i>set</i>.</dd>
+<dt><code>CPU_CLR</code>()</dt>
+<dd>Remove CPU <i>cpu</i> from <i>set</i>.</dd>
+<dt><code>CPU_ISSET</code>()</dt>
+<dd>Test to see if CPU <i>cpu</i> is a member of <i>set</i>.</dd>
+<dt><code>CPU_COUNT</code>()</dt>
+<dd>Return the number of CPUs in <i>set</i>.</dd></dl>
 <p> Where a <i>cpu</i> argument is specified, it should not produce side effects, since the above macros may evaluate the argument more than once. </p>
 <p> The first CPU on the system corresponds to a <i>cpu</i> value of 0, the next CPU corresponds to a <i>cpu</i> value of 1, and so on. No assumptions should be made about particular CPUs being available, or the set of CPUs being contiguous, since CPUs can be taken offline dynamically or be otherwise absent. The constant <code>CPU_SETSIZE</code> (currently 1024) specifies a value one greater than the maximum CPU number that can be stored in <i>cpu_set_t</i>. </p>
 <p> The following macros perform logical operations on CPU sets:</p>
 <dl COMPACT>
-<dt><code>CPU_AND</code>()</p>
-<dd>Store the intersection of the sets <i>srcset1</i> and <i>srcset2</i> in <i>destset</i> (which may be one of the source sets).</p>
-<dt><code>CPU_OR</code>()</p>
-<dd>Store the union of the sets <i>srcset1</i> and <i>srcset2</i> in <i>destset</i> (which may be one of the source sets).</p>
-<dt><code>CPU_XOR</code>()</p>
-<dd>Store the XOR of the sets <i>srcset1</i> and <i>srcset2</i> in <i>destset</i> (which may be one of the source sets). The XOR means the set of CPUs that are in either <i>srcset1</i> or <i>srcset2</i>, but not both.</p>
-<dt><code>CPU_EQUAL</code>()</p>
-<dd>Test whether two CPU set contain exactly the same CPUs.</dl>
+<dt><code>CPU_AND</code>()</dt>
+<dd>Store the intersection of the sets <i>srcset1</i> and <i>srcset2</i> in <i>destset</i> (which may be one of the source sets).</dd>
+<dt><code>CPU_OR</code>()</dt>
+<dd>Store the union of the sets <i>srcset1</i> and <i>srcset2</i> in <i>destset</i> (which may be one of the source sets).</dd>
+<dt><code>CPU_XOR</code>()</dt>
+<dd>Store the XOR of the sets <i>srcset1</i> and <i>srcset2</i> in <i>destset</i> (which may be one of the source sets). The XOR means the set of CPUs that are in either <i>srcset1</i> or <i>srcset2</i>, but not both.</dd>
+<dt><code>CPU_EQUAL</code>()</dt>
+<dd>Test whether two CPU set contain exactly the same CPUs.</dd></dl>
 <h3>Dynamically sized CPU sets</h3>
 <p>Because some applications may require the ability to dynamically size CPU sets (e.g., to allocate sets larger than that defined by the standard <i>cpu_set_t</i> data type), glibc nowadays provides a set of macros to support this. </p>
 <p> The following macros are used to allocate and deallocate CPU sets:</p>
 <dl COMPACT>
-<dt><code>CPU_ALLOC</code>()</p>
-<dd>Allocate a CPU set large enough to hold CPUs in the range 0 to <i>num_cpus-1</i>.</p>
-<dt><code>CPU_ALLOC_SIZE</code>()</p>
-<dd>Return the size in bytes of the CPU set that would be needed to hold CPUs in the range 0 to <i>num_cpus-1</i>. This macro provides the value that can be used for the <i>setsize</i> argument in the <code>CPU_*_S</code>() macros described below.</p>
-<dt><code>CPU_FREE</code>()</p>
-<dd>Free a CPU set previously allocated by <code>CPU_ALLOC</code>().</dl>
+<dt><code>CPU_ALLOC</code>()</dt>
+<dd>Allocate a CPU set large enough to hold CPUs in the range 0 to <i>num_cpus-1</i>.</dd>
+<dt><code>CPU_ALLOC_SIZE</code>()</dt>
+<dd>Return the size in bytes of the CPU set that would be needed to hold CPUs in the range 0 to <i>num_cpus-1</i>. This macro provides the value that can be used for the <i>setsize</i> argument in the <code>CPU_*_S</code>() macros described below.</dd>
+<dt><code>CPU_FREE</code>()</dt>
+<dd>Free a CPU set previously allocated by <code>CPU_ALLOC</code>().</dd></dl>
 <p> The macros whose names end with &quot;_S&quot; are the analogs of the similarly named macros without the suffix. These macros perform the same tasks as their analogs, but operate on the dynamically allocated CPU set(s) whose size is <i>setsize</i> bytes.</p>
 <h2>Return Value</h2>
 <p><code>CPU_ISSET</code>() and <code>CPU_ISSET_S</code>() return nonzero if <i>cpu</i> is in <i>set</i>; otherwise, it returns 0. </p>

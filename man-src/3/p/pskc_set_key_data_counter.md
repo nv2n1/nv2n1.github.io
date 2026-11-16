@@ -13,10 +13,10 @@ description: "pskc_set_key_data_counter – API function"
 void pskc_set_key_data_counter(pskc_key_t *key, uint64_t counter);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>uint64_t counter</p>
-<dd>counter value to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>uint64_t counter</dt>
+<dd>counter value to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Data Counter value. This element contains the event counter for event-based OTP algorithms.</p>
 <h2>Since</h2>

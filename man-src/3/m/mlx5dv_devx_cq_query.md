@@ -35,7 +35,7 @@ url: "/docs/linux/man/3-mlx5dv_devx_cq_query/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 int mlx5dv_devx_qp_modify(struct ibv_qp *qp, const void *in, size_t inlen,
                           void *out, size_t outlen);
@@ -59,7 +59,7 @@ int mlx5dv_devx_ind_tbl_modify(struct ibv_rwq_ind_table *ind_tbl,
 int mlx5dv_devx_ind_tbl_query(struct ibv_rwq_ind_table *ind_tbl,
                               const void *in, size_t inlen,
                               void *out, size_t outlen);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -75,15 +75,15 @@ int mlx5dv_devx_ind_tbl_query(struct ibv_rwq_ind_table *ind_tbl,
 
 <dl>
 <dt>qp/cq/wq/srq/ind_tbl
-<dd> The ibv_xxx object to issue the action on.
-<dt>in
-<dd> A buffer which contains the command's input data provided in a device specification format.
-<dt>inlen
-<dd> The size of in buffer in bytes.
-<dt>out
-<dd> A buffer which contains the command's output data according to the device specification format.
-<dt>outlen
-<dd> The size of out buffer in bytes.</dl>
+</dt><dd> The ibv_xxx object to issue the action on.
+</dd><dt>in
+</dt><dd> A buffer which contains the command's input data provided in a device specification format.
+</dd><dt>inlen
+</dt><dd> The size of in buffer in bytes.
+</dd><dt>out
+</dt><dd> A buffer which contains the command's output data according to the device specification format.
+</dd><dt>outlen
+</dt><dd> The size of out buffer in bytes.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

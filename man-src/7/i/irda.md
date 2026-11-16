@@ -11,14 +11,8 @@ description: "irda – The Linux-IrDA protocol stack"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;linux/irda.h&gt;
 stream_s = socket(PF_INET, SOCK_STREAM, 0);
-
-
 seqpkt_s = socket(PF_INET, SOCK_SEQPACKET, 0);
-
-
 dgram_s = socket(PF_INET, SOCK_DGRAM, IRDAPROTO_UNITDATA);
-
-
 ultra_s = socket(PF_INET, SOCK_DGRAM, IRDAPROTO_ULTRA);</code></pre>
 <h2>Description</h2>
 <p><code>Linux-IrDA</code> is a complete implementation of the various <i>IrDA protocols</i> and <i>IrDA drivers</i> for Linux. </p>
@@ -29,18 +23,18 @@ ultra_s = socket(PF_INET, SOCK_DGRAM, IRDAPROTO_ULTRA);</code></pre>
 <h2>Sockets Type</h2>
 <p>The Linux-IrDA socket interface offers 4 types of sockets:</p>
 <dl>
-<dt><code>Stream socket &#8211; SOCK_STREAM, 0</code></p>
+<dt><code>Stream socket &#8211; SOCK_STREAM, 0</code></dt>
 <dd>Stream sockets provides a reliable, stream oriented, full duplex connection between two sockets on top of <i>IrTTP</i>, similar to TCP sockets. IrTTP guarantees that the data arrives in order and manages flow control, IrLAP retransmits lost packets.<br />
- Stream sockets does not preserve record boundaries.</p>
-<dt><code>SeqPacket socket &#8211; SOCK_SEQPACKET, 0</code></p>
+ Stream sockets does not preserve record boundaries.</dd>
+<dt><code>SeqPacket socket &#8211; SOCK_SEQPACKET, 0</code></dt>
 <dd>SeqPacket sockets provides a reliable, datagram oriented, full duplex connection between two sockets on top of <i>IrTTP</i>. IrTTP guarantees that the data arrives in order and manages flow control, IrLAP retransmits lost packets.<br />
- SeqPacket sockets preserve record boundaries. Large datagrams will be fragmented as needed.</p>
-<dt><code>Datagram socket &#8211; SOCK_DGRAM, IRDAPROTO_UNITDATA</code></p>
+ SeqPacket sockets preserve record boundaries. Large datagrams will be fragmented as needed.</dd>
+<dt><code>Datagram socket &#8211; SOCK_DGRAM, IRDAPROTO_UNITDATA</code></dt>
 <dd>SeqPacket sockets provides a reliable, datagram oriented, full duplex connection between two sockets on top of <i>IrLMP</i>. There is no guarantee that the data arrives in order and there is no flow control, however IrLAP retransmits lost packets.<br />
- Datagram sockets preserve record boundaries. No fragmentation is provided, datagrams larger than the IrDA link MTU are truncated or discarded.</p>
-<dt><code>Ultra socket &#8211; SOCK_DGRAM, IRDAPROTO_ULTRA</code></p>
+ Datagram sockets preserve record boundaries. No fragmentation is provided, datagrams larger than the IrDA link MTU are truncated or discarded.</dd>
+<dt><code>Ultra socket &#8211; SOCK_DGRAM, IRDAPROTO_ULTRA</code></dt>
 <dd>Ultra sockets provides a connectionless, unreliable datagram packet service on top of <i>IrLAP-Ultra</i>. Ultra datagrams are sent and received only when no IrLAP connection is established and otherwise discarded. They are always transmitted at 9600 bauds. Datagrams may be lost or reordered, and there is no flow control.<br />
- Ultra sockets preserve record boundaries. No fragmentation is provided, datagrams larger than the Ultra MTU (382 bytes) are truncated or discarded.</dl>
+ Ultra sockets preserve record boundaries. No fragmentation is provided, datagrams larger than the Ultra MTU (382 bytes) are truncated or discarded.</dd></dl>
 <h2>Address Format</h2>
 <p>An <code>IrDA socket address</code> is defined as a combination of an IrDA interface address and a <i>service name</i>. Service names are automatically resolved to lsap through the <i>IrIAP</i> protocol. </p>
 <pre> struct sockaddr_irda {
@@ -54,28 +48,28 @@ ultra_s = socket(PF_INET, SOCK_DGRAM, IRDAPROTO_ULTRA);</code></pre>
 <p>IrDA sockets supports some protocol specific socket options that can be set with <i><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></i>(2) and read with <i><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></i>(2). The socket option level for IrDA is SOL_IRLMP. </p>
 <p> Options that can be set:</p>
 <dl>
-<dt><code>IRLMP_IAS_SET</code></p>
-<dd>Set an entry in the local IAS database.</p>
-<dt><code>IRLMP_IAS_DEL</code></p>
-<dd>Delete an entry from the local IAS database.</p>
-<dt><code>IRLMP_MAX_SDU_SIZE</code></p>
-<dd>Set maximum receive MTU for SeqPacket sockets.</p>
-<dt><code>IRLMP_HINTS_SET</code></p>
-<dd>Set IrDA hint bits to be advertised to peers.</p>
-<dt><code>IRLMP_HINT_MASK_SET</code></p>
-<dd>Set IrDA hint bits filter to be used when performing discovery.</dl>
+<dt><code>IRLMP_IAS_SET</code></dt>
+<dd>Set an entry in the local IAS database.</dd>
+<dt><code>IRLMP_IAS_DEL</code></dt>
+<dd>Delete an entry from the local IAS database.</dd>
+<dt><code>IRLMP_MAX_SDU_SIZE</code></dt>
+<dd>Set maximum receive MTU for SeqPacket sockets.</dd>
+<dt><code>IRLMP_HINTS_SET</code></dt>
+<dd>Set IrDA hint bits to be advertised to peers.</dd>
+<dt><code>IRLMP_HINT_MASK_SET</code></dt>
+<dd>Set IrDA hint bits filter to be used when performing discovery.</dd></dl>
 <p> Options that can be get:</p>
 <dl>
-<dt><code>IRLMP_ENUMDEVICES</code></p>
-<dd>Perform link level discovery and return the content of the discovery log.</p>
-<dt><code>IRLMP_MAX_SDU_SIZE</code></p>
-<dd>Get maximum receive MTU.</p>
-<dt><code>IRLMP_IAS_GET</code></p>
-<dd>Get an entry from the local IAS database.</p>
-<dt><code>IRLMP_IAS_QUERY</code></p>
-<dd>Query an entry in IAS database of a peer using IrIAP.</p>
-<dt><code>IRLMP_WAITDEVICE</code></p>
-<dd>Block until a new device is discovered. Experimental feature, use with caution.</dl>
+<dt><code>IRLMP_ENUMDEVICES</code></dt>
+<dd>Perform link level discovery and return the content of the discovery log.</dd>
+<dt><code>IRLMP_MAX_SDU_SIZE</code></dt>
+<dd>Get maximum receive MTU.</dd>
+<dt><code>IRLMP_IAS_GET</code></dt>
+<dd>Get an entry from the local IAS database.</dd>
+<dt><code>IRLMP_IAS_QUERY</code></dt>
+<dd>Query an entry in IAS database of a peer using IrIAP.</dd>
+<dt><code>IRLMP_WAITDEVICE</code></dt>
+<dd>Block until a new device is discovered. Experimental feature, use with caution.</dd></dl>
 <h2>Author</h2>
 <p>Jean Tourrilhes &#8211; jt [at] hpl.hp.com</p>
 <h2>See Also</h2>

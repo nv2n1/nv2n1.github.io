@@ -13,10 +13,10 @@ description: "PAPI_unlock –"
 <h2>Detailed Description</h2>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lck</i> an integer value specifying one of the two user locks: PAPI_USR1_LOCK or PAPI_USR2_LOCK</dl>
+<dd><i>lck</i> an integer value specifying one of the two user locks: PAPI_USR1_LOCK or PAPI_USR2_LOCK</dd></dl>
 <p> <code>PAPI_unlock()</code> unlocks the mutex acquired by a call to <code>PAPI_lock</code> . </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_thread_init</code></dl>
+<dd><code>PAPI_thread_init</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

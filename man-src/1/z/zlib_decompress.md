@@ -11,32 +11,32 @@ description: "zlib_decompress – decompress mysqlpump ZLIB-compressed output"
 <p> zlib_decompress &#8211; decompress mysqlpump ZLIB-compressed output </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>zlib_decompress </code><i>input_file</i><i>output_file</i></dl>
+<dt> <code>zlib_decompress </code><i>input_file</i><i>output_file</i></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>zlib_decompress</code> utility decompresses <code>mysqlpump</code> output that was created using ZLIB compression. </p>
+<dd>The <code>zlib_decompress</code> utility decompresses <code>mysqlpump</code> output that was created using ZLIB compression. </dd>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If MySQL was configured with the <code>-DWITH_ZLIB=system</code> option, <code>zlib_decompress</code> is not built. In this case, the system <code>openssl zlib</code> command can be used instead. </p>
 </dl>
 <p> Invoke <code>zlib_decompress</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>zlib_decompress </code><i>input_file</i><i>output_file</i>
 </pre>
-</dl>
+</dd></dl>
 <p> Example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>mysqlpump --compress-output=ZLIB &gt; dump.zlib</code>
 shell&gt; <code>zlib_decompress dump.zlib dump.txt</code>
 </pre>
-</dl>
+</dd></dl>
 <p> To see a help message, invoke <code>zlib_decompress</code> with no arguments. </p>
 <p> To decompress <code>mysqlpump</code> LZ4-compressed output, use <code>lz4_decompress</code>. See <code><a href="/docs/linux/man/1-lz4_decompress/">lz4_decompress</a></code>(1).</p>
 <h2>COPYRIGHT</h2>

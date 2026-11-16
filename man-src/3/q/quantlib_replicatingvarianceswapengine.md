@@ -29,6 +29,6 @@ description: "QuantLib::ReplicatingVarianceSwapEngine – Variance-swap pricing 
 <p> as described in Demeterfi, Derman, Kamal &amp; Zou, &#8216;A Guide to Volatility and Variance Swaps&#8217;, 1999 </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>returned variances verified against results from literature</dl>
+<dd>returned variances verified against results from literature</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

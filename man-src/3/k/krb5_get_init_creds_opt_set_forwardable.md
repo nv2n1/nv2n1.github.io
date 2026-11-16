@@ -32,16 +32,16 @@ typedef struct {
 </code></pre>
 <p> Fa prompt is the prompt that should shown to the user If Fa hidden is set, the prompter function shouldn&#8217;t echo the output to the display device. Fa reply must be preallocated; it will not be allocated by the prompter function. Possible values for the Fa type element are: </p>
 <dl>
-<dt><code>KRB5_PROMPT_TYPE_PASSWORD</code></p>
+<dt><code>KRB5_PROMPT_TYPE_PASSWORD</code></dt>
 <dd>
-<dt><code>KRB5_PROMPT_TYPE_NEW_PASSWORD</code></p>
+</dd><dt><code>KRB5_PROMPT_TYPE_NEW_PASSWORD</code></dt>
 <dd>
-<dt><code>KRB5_PROMPT_TYPE_NEW_PASSWORD_AGAIN</code></p>
+</dd><dt><code>KRB5_PROMPT_TYPE_NEW_PASSWORD_AGAIN</code></dt>
 <dd>
-<dt><code>KRB5_PROMPT_TYPE_PREAUTH</code></p>
+</dd><dt><code>KRB5_PROMPT_TYPE_PREAUTH</code></dt>
 <dd>
-<dt><code>KRB5_PROMPT_TYPE_INFO</code></p>
-<dd></dl>
+</dd><dt><code>KRB5_PROMPT_TYPE_INFO</code></dt>
+<dd></dd></dl>
 <p> Fn krb5_prompter_posix is the default prompter function in a POSIX environment. It matches the Fa krb5_prompter_fct and can be used in the Fa krb5_get_init_creds functions. Fn krb5_prompter_posix doesn&#8217;t require Fa prompter_data. </p>
 <p> If the Fa start_time is zero, then the requested ticket will be valid beginning immediately. Otherwise, the Fa start_time indicates how far in the future the ticket should be postdated. </p>
 <p> If the Fa in_tkt_service name is <code>non-NULL</code> that principal name will be used as the server name for the initial ticket request. The realm of the name specified will be ignored and will be set to the realm of the client name. If no in_tkt_service name is specified, krbtgt/CLIENT-REALM [at] CLIENT-REALM will be used. </p>

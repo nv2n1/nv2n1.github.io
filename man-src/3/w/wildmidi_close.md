@@ -16,8 +16,8 @@ description: "WildMidi_Close – Close an open midi handle"
 <h2>Description</h2>
 <p>Finish processing MIDI data or file. </p>
 <dl COMPACT>
-<dt><i>handle</i></p>
-<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dl>
+<dt><i>handle</i></dt>
+<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dd></dl>
 <h2>Return Value</h2>
 <p>returns -1 on error, otherwise returns 0 </p>
 <h2>See Also</h2>

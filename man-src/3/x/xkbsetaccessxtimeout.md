@@ -11,24 +11,24 @@ description: "XkbSetAccessXTimeout – Configures the AccessXTimeout options for
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetAccessXTimeout</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned short </code><i>timeout</i><code>,</code> <code>unsigned int </code><i>ctrls_mask</i><code>,</code> <code>unsigned int </code><i>ctrls_values</i><code>,</code> <code>unsigned short </code><i>opts_mask</i><code>,</code> <code>unsigned short </code><i>opts_values</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device to configure, or XkbUseCoreKbd</p>
-<dt><i>&#8211; timeout</i></p>
-<dd>seconds idle until AccessXTimeout occurs</p>
-<dt><i>&#8211; ctrls_mask</i></p>
-<dd>boolean controls to modify</p>
-<dt><i>&#8211; ctrls_values</i></p>
-<dd>new bits for controls selected by ctrls_mask</p>
-<dt><i>&#8211; opts_mask</i></p>
-<dd>ax_options to change</p>
-<dt><i>&#8211; opts_values</i></p>
-<dd>new bits for ax_options selected by opts_mask</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device to configure, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; timeout</i></dt>
+<dd>seconds idle until AccessXTimeout occurs</dd>
+<dt><i>&#8211; ctrls_mask</i></dt>
+<dd>boolean controls to modify</dd>
+<dt><i>&#8211; ctrls_values</i></dt>
+<dd>new bits for controls selected by ctrls_mask</dd>
+<dt><i>&#8211; opts_mask</i></dt>
+<dd>ax_options to change</dd>
+<dt><i>&#8211; opts_values</i></dt>
+<dd>new bits for ax_options selected by opts_mask</dd></dl>
 <h2>Description</h2>
 <p>In environments where computers are shared, features such as SlowKeys present a problem: if SlowKeys is on, the keyboard can appear to be unresponsive because keys are not accepted until they are held for a certain period of time. To help solve this problem, Xkb provides an AccessXTimeout control to automatically change the enabled/disabled state of any boolean controls and to change the value of the AccessXKeys and AccessXFeedback control attributes if the keyboard is idle for a specified period of time. </p>
 <p> When a timeout as specified by AccessXTimeout occurs and a control is consequently modified, Xkb generates an XkbControlsNotify event. For more information on XkbControlsNotify events. </p>
@@ -37,10 +37,10 @@ description: "XkbSetAccessXTimeout – Configures the AccessXTimeout options for
 <p> <i>XkbSetAccessXTimeout </i> sends a request to configure the AccessXTimeout control to the server. It does not wait for a reply, and normally returns True. If a compatible version of the Xkb extension is not available in the server, <i>XkbSetAccessXTimeout </i> returns False.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSetAccessXTimeout</i> function returns True when a compatible version of the Xkb extension is available in the server.</p>
-<dt>False</p>
-<dd>The <i>XkbSetAccessXTimeout</i> function returns False when a compatible version of the Xkb extension is not available in the server.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSetAccessXTimeout</i> function returns True when a compatible version of the Xkb extension is available in the server.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetAccessXTimeout</i> function returns False when a compatible version of the Xkb extension is not available in the server.</dd></dl>
 <h2>Structures</h2>
 <p>The complete description of an Xkb keyboard is given by an XkbDescRec. The component structures in the XkbDescRec represent the major Xkb components. </p>
 <pre>typedef struct {

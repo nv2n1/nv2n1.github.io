@@ -20,12 +20,12 @@ description: "Ecore Input Method Library Functions – Utility functions that se
 <p>Initialises the Ecore_IMF library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of times the library has been initialised without being shut down.</dl>
+<dd>Number of times the library has been initialised without being shut down.</dd></dl>
 <p> References ecore_event_type_new().</p>
 <h3>EAPI int ecore_imf_shutdown (void)</h3>
 <p>Shuts down the Ecore_IMF library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of times the library has been initialised without being shut down.</dl>
+<dd>Number of times the library has been initialised without being shut down.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

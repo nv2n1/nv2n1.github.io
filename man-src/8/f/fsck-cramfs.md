@@ -15,38 +15,38 @@ description: "fsck.cramfs – fsck compressed ROM file system"
 <h2>Options</h2>
 <p><code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Enable verbose messaging.</dl>
+<dd>Enable verbose messaging.</dd></dl>
 <p> <code>-b</code>, <code>&#8211;blocksize</code> <i>blocksize</i></p>
 <dl>
-<dd>Use this blocksize, defaults to page size. Must be equal to what was set at creation time. Only used for <code>&#8211;extract</code>.</dl>
+<dd>Use this blocksize, defaults to page size. Must be equal to what was set at creation time. Only used for <code>&#8211;extract</code>.</dd></dl>
 <p> <code>&#8211;extract</code>[=<i>directory</i>]</p>
 <dl>
-<dd>Test to uncompress the whole file system. Optionally extract contents of the <i>file</i> to <i>directory</i>.</dl>
+<dd>Test to uncompress the whole file system. Optionally extract contents of the <i>file</i> to <i>directory</i>.</dd></dl>
 <p> <code>-a</code></p>
 <dl>
-<dd>This option is silently ignored.</dl>
+<dd>This option is silently ignored.</dd></dl>
 <p> <code>-y</code></p>
 <dl>
-<dd>This option is silently ignored.</dl>
+<dd>This option is silently ignored.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>0</code></p>
 <dl>
-<dd>success</dl>
+<dd>success</dd></dl>
 <p> <code>4</code></p>
 <dl>
-<dd>file system was left uncorrected</dl>
+<dd>file system was left uncorrected</dd></dl>
 <p> <code>8</code></p>
 <dl>
-<dd>operation error, such as unable to allocate memory</dl>
+<dd>operation error, such as unable to allocate memory</dd></dl>
 <p> <code>16</code></p>
 <dl>
-<dd>usage information was printed</dl>
+<dd>usage information was printed</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-mkfs-cramfs/">mkfs.cramfs</a></code>(8)</p>
 <h2>Reporting Bugs</h2>

@@ -15,11 +15,11 @@ skb_pull - remove data from the start of a buffer
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to use</dl>
+<dl><dd></dd><dd>buffer to use</dd></dl>
  
 
  <i>len</i>
-<dl><dd>amount of data to remove</dl>
+<dl><dd>amount of data to remove</dd></dl>
 
 <h2>Description</h2>
 

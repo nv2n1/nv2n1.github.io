@@ -30,37 +30,37 @@ ColorPage HR6 V1 0x0458 0x2004</pre>
 <p>To use your scanner with this backend, you need at least two entries in the configuration file <i>/etc/sane.d/u12.conf</i> </p>
 <dl>
 <dd><i>[usb] vendor-id product-id</i><br />
- <i>device /dev/usbscanner</i></dl>
+ <i>device /dev/usbscanner</i></dd></dl>
 <p> <i>[usb]</i> tells the backend, that the following devicename (here <i>/dev/usbscanner</i>) has to be interpreted as USB scanner device. If vendor- and product-id has not been specified, the backend tries to detect this by its own. If device is set to <i>auto</i> then the next matching device is used. </p>
 <p> <code>The Options:</code> </p>
 <p> option warmup t</p>
 <dl>
-<dd><i>t</i> specifies the warmup period in seconds</dl>
+<dd><i>t</i> specifies the warmup period in seconds</dd></dl>
 <p> option lampOff t</p>
 <dl>
-<dd><i>t</i> is the time in seconds for switching off the lamps in standby mode</dl>
+<dd><i>t</i> is the time in seconds for switching off the lamps in standby mode</dd></dl>
 <p> option lOffonEnd b</p>
 <dl>
-<dd><i>b</i> specifies the behaviour when closing the backend, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dl>
+<dd><i>b</i> specifies the behaviour when closing the backend, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dd></dl>
 <p> See the <i>u12.conf</i> file for examples. </p>
 <p> <code>Note:</code> You have to make sure, that the USB subsystem is loaded correctly and you have access to the device-node. For more details see <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) manpage. You might use <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) to check that you have access to your device. </p>
 <p> <code>Note:</code><br />
  If there&#8217;s no configuration file, the backend defaults to <code>device auto</code></p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/u12.conf</i></p>
-<dd>The backend configuration file</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-u12.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-u12.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/etc/sane.d/u12.conf</i></dt>
+<dd>The backend configuration file</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-u12.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-u12.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_U12</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_U12</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_U12=10 </p>
 </dl>
 <h2>See Also</h2>

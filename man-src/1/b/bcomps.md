@@ -16,24 +16,24 @@ description: "bcomps – biconnected components filter for graphs"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-s</code></p>
-<dd> No output graph is printed. Implies the <code>-v </code> flag.</p>
-<dt><code>-t</code></p>
-<dd> Print the underlying block-cutvertex tree.</p>
-<dt><code>-x</code></p>
-<dd> Each biconnected component is printed as a separate root graph.</p>
-<dt><code>-v</code></p>
-<dd> Prints number of blocks and cutvertices.</p>
-<dt><code>-o</code><i> outfile</i></p>
-<dd> If specified, each root graph will be written to a different file with the names derived from <i>outfile</i>. In particular, if both <code>-o</code> and <code>-x</code> flags are used, then each block is written to a different file. If <i>outfile</i> does not have a suffix, the nth block of the ith graph is written to <i>outfile_n_i</i>. However, the 0th block of the 0th graph is written to <i>outfile</i>. </p>
+<dt><code>-s</code></dt>
+<dd> No output graph is printed. Implies the <code>-v </code> flag.</dd>
+<dt><code>-t</code></dt>
+<dd> Print the underlying block-cutvertex tree.</dd>
+<dt><code>-x</code></dt>
+<dd> Each biconnected component is printed as a separate root graph.</dd>
+<dt><code>-v</code></dt>
+<dd> Prints number of blocks and cutvertices.</dd>
+<dt><code>-o</code><i> outfile</i></dt>
+<dd> If specified, each root graph will be written to a different file with the names derived from <i>outfile</i>. In particular, if both <code>-o</code> and <code>-x</code> flags are used, then each block is written to a different file. If <i>outfile</i> does not have a suffix, the nth block of the ith graph is written to <i>outfile_n_i</i>. However, the 0th block of the 0th graph is written to <i>outfile</i>. </dd>
 <p> If <i>outfile</i> has a suffix, i.e., has the form <i>base.sfx</i>, then the files will have the same name as above, except appended with <i>.sfx</i>. </p>
 <p> The block-cutvertex tree of ith graph is written to <i>outfile_n_T</i>, with an appended suffix if specified.</dl>
 <p> By default, each input graph is printed, with each block given as a subgraph whose name is a concatenation of the name of the input graph, the string &quot;_bcc_&quot; and the number of the block.</p>
 <h2>OPERANDS</h2>
 <p> The following operand is supported:</p>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>RETURN CODES</h2>
 <p> <code>bcomps</code> returns <code>0</code> if all the input graphs are biconnected; and non-zero if any graph has multiple blocks, or any error occurred.</p>
 <h2>BUGS</h2>

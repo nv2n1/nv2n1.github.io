@@ -15,21 +15,21 @@ description: "codepage – extract a codepage from an MSDOS codepage file"
 <p> The <code>codepage</code> command extracts codepages from an MSDOS codepage file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-c </i></p>
-<dd> Input file is a single codepage </p>
-<dt><i>-L </i></p>
-<dd> Print header info (you don&#8217;t want to see this). </p>
-<dt><i>-l </i></p>
-<dd> List all codepages contained in the file. </p>
-<dt><i>-a</i></p>
-<dd> Extract all codepages from the file </p>
-<dt><i>nnn</i></p>
-<dd> (3 digits): extract codepage <i>nnn</i> from the file. </p>
+<dt><i>-c </i></dt>
+<dd> Input file is a single codepage </dd>
+<dt><i>-L </i></dt>
+<dd> Print header info (you don&#8217;t want to see this). </dd>
+<dt><i>-l </i></dt>
+<dd> List all codepages contained in the file. </dd>
+<dt><i>-a</i></dt>
+<dd> Extract all codepages from the file </dd>
+<dt><i>nnn</i></dt>
+<dd> (3 digits): extract codepage <i>nnn</i> from the file. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To create a file 850.cp, with codepage 850 from a file ega.cpi, execute: </p>
 <dl>
 <dt>
-<dd> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>codepage ega.cpi 850
-</dl>
+</dt><dd> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>codepage ega.cpi 850
+</dd></dl>
 <h2>Index</h2>

@@ -13,41 +13,41 @@ description: "arm4.conf – ARM 4 agent configuration file"
 <h2>Description</h2>
 <p>The agent has a number of configurable options that are controlled through the configuration file. The agent and it&#8217;s utilities can use either the default file at <i>/etc/arm4.conf</i>, or a file passed in as a command line argument. While the options are passed to the programs as they start, they generally affect persistent global objects shuch as the shared memory regions that remain after the program exits. Because of this, many options will only be changed when the shared memory objects are recreated.</p>
 <dl>
-<dt>Options may be set in one of two ways:</p>
+<dt>Options may be set in one of two ways:</dt>
 <dd>&lt;<i>option</i>&gt; &lt;<i>value</i>&gt;<br />
- &lt;<i>option</i>&gt; = &lt;<i>value</i>&gt; Blank lines and lines starting with <i>#</i> are considered to be comment lines. The different configuration options are:</p>
-<dt><code>hostname</code></p>
-<dd>overrides the default hostname. The default value is the same as returned by running the command <code>uname -n</code>.</p>
-<dt><code>user</code></p>
-<dd>the user name or UID for the daemon. The defaults is to run as the current user.</p>
-<dt><code>group</code></p>
-<dd>the group name or GID for the daemon. The defaults is to run as the current group.</p>
-<dt><code>umask</code></p>
-<dd>the umask used for the creation of shared objects.</p>
-<dt><code>instance</code></p>
-<dd>specify the <i>ARM 4</i> instance number. Refer to user guide for more information on running multiple instances. The default instance is 0.</p>
-<dt><code>log_filename</code></p>
-<dd>specify a file that will log all error messags from the the <code>arm4_daemon</code> process.</p>
-<dt><code>schema_location</code></p>
-<dd>specify a location for the schema files. This may be a local directory or a URL. This does not include the name of the schema file itself.</p>
-<dt><code>db</code></p>
-<dd>specify the database to use as the back end. The supported back ends are <code>bdb</code> for Berkeley databases, and <code>sqlite</code> for Sqlite3 databases.</p>
-<dt><code>db_home_dir</code></p>
-<dd>the home directory for the <i>ARM 4</i> instance databases. The default is <i>/var/lib/arm4/data</i>.</p>
-<dt><code>db_backup_dir</code></p>
-<dd>the parent directory for the database archives. When a new archive is created, a time stamped directory is created as a child of this directory. The default is <i>/var/lib/arm4/data/backup</i>.</p>
-<dt></dl>
+ &lt;<i>option</i>&gt; = &lt;<i>value</i>&gt; Blank lines and lines starting with <i>#</i> are considered to be comment lines. The different configuration options are:</dd>
+<dt><code>hostname</code></dt>
+<dd>overrides the default hostname. The default value is the same as returned by running the command <code>uname -n</code>.</dd>
+<dt><code>user</code></dt>
+<dd>the user name or UID for the daemon. The defaults is to run as the current user.</dd>
+<dt><code>group</code></dt>
+<dd>the group name or GID for the daemon. The defaults is to run as the current group.</dd>
+<dt><code>umask</code></dt>
+<dd>the umask used for the creation of shared objects.</dd>
+<dt><code>instance</code></dt>
+<dd>specify the <i>ARM 4</i> instance number. Refer to user guide for more information on running multiple instances. The default instance is 0.</dd>
+<dt><code>log_filename</code></dt>
+<dd>specify a file that will log all error messags from the the <code>arm4_daemon</code> process.</dd>
+<dt><code>schema_location</code></dt>
+<dd>specify a location for the schema files. This may be a local directory or a URL. This does not include the name of the schema file itself.</dd>
+<dt><code>db</code></dt>
+<dd>specify the database to use as the back end. The supported back ends are <code>bdb</code> for Berkeley databases, and <code>sqlite</code> for Sqlite3 databases.</dd>
+<dt><code>db_home_dir</code></dt>
+<dd>the home directory for the <i>ARM 4</i> instance databases. The default is <i>/var/lib/arm4/data</i>.</dd>
+<dt><code>db_backup_dir</code></dt>
+<dd>the parent directory for the database archives. When a new archive is created, a time stamped directory is created as a child of this directory. The default is <i>/var/lib/arm4/data/backup</i>.</dd>
+<dt></dt></dl>
 <h2>Berkeley DB Specific Configuration Options</h2>
 <dd>
-<dl>
-<dt><code>db_log_file_size</code></p>
-<dd>sets the transaction file size for the Berkeley DB. This should be large enough that no single transaction can span multiple files or memory allocation errors will occur. The <code>db_file_size</code> parameter must always be smaller than the <code>db_buffer_size</code>. Refer to the Berkeley DB documentation for more information.</p>
-<dt><code>db_buffer_size</code></p>
-<dd>sets the size of memory allocated for transactions. It should be large enough to hold all active transactions or memory allocation errors will occur. the <code>db_buffer_size</code> parameter should always be larger than <code>db_file_size</code>. Refer to the Berkeley DB documentation for more information.</p>
-<dt><code>db_key</code></p>
-<dd>multiple instances of the Berkeley database share common memory regions. In cases where this is undesireable, the <code>db_key</code> can be set explicitly. Refer to the Berkeley DB documentation for more information.</p>
-<dt><code>checkpoint</code></p>
-<dd>specifies the database checkpoint interval in seconds. A value less than or equal to zero disables checkpointing, except on database close. It is also possible to initiate a checkpoint operation using <i><a href="/docs/linux/man/1-arm4_control/">arm4_control</a>(1)</i>.</dl>
+</dd><dl>
+<dt><code>db_log_file_size</code></dt>
+<dd>sets the transaction file size for the Berkeley DB. This should be large enough that no single transaction can span multiple files or memory allocation errors will occur. The <code>db_file_size</code> parameter must always be smaller than the <code>db_buffer_size</code>. Refer to the Berkeley DB documentation for more information.</dd>
+<dt><code>db_buffer_size</code></dt>
+<dd>sets the size of memory allocated for transactions. It should be large enough to hold all active transactions or memory allocation errors will occur. the <code>db_buffer_size</code> parameter should always be larger than <code>db_file_size</code>. Refer to the Berkeley DB documentation for more information.</dd>
+<dt><code>db_key</code></dt>
+<dd>multiple instances of the Berkeley database share common memory regions. In cases where this is undesireable, the <code>db_key</code> can be set explicitly. Refer to the Berkeley DB documentation for more information.</dd>
+<dt><code>checkpoint</code></dt>
+<dd>specifies the database checkpoint interval in seconds. A value less than or equal to zero disables checkpointing, except on database close. It is also possible to initiate a checkpoint operation using <i><a href="/docs/linux/man/1-arm4_control/">arm4_control</a>(1)</i>.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/arm4.conf</i></p>
 <h2>Reporting Bugs</h2>

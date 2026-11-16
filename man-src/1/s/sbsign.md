@@ -15,17 +15,17 @@ description: "sbsign – UEFI secure boot signing tool"
 <p> Sign an EFI boot image for use with secure boot.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;engine</code> &lt;eng&gt;</p>
-<dd> use the specified engine to load the key</p>
-<dt><code>&#8211;key</code> &lt;keyfile&gt;</p>
-<dd> signing key (PEM-encoded RSA private key)</p>
-<dt><code>&#8211;cert</code> &lt;certfile&gt;</p>
-<dd> certificate (x509 certificate)</p>
-<dt> <code>&#8211;addcert</code> &lt;addcertfile&gt; additional intermediate certificates in a file</p>
-<dt><code>&#8211;detached</code></p>
+<dt><code>&#8211;engine</code> &lt;eng&gt;</dt>
+<dd> use the specified engine to load the key</dd>
+<dt><code>&#8211;key</code> &lt;keyfile&gt;</dt>
+<dd> signing key (PEM-encoded RSA private key)</dd>
+<dt><code>&#8211;cert</code> &lt;certfile&gt;</dt>
+<dd> certificate (x509 certificate)</dd>
+<dt> <code>&#8211;addcert</code> &lt;addcertfile&gt; additional intermediate certificates in a file</dt>
+<dt><code>&#8211;detached</code></dt>
 <dd>
-<dd>write a detached signature, instead of a signed binary</p>
-<dt><code>&#8211;output</code> &lt;file&gt;</p>
-<dd> write signed data to &lt;file&gt; (default &lt;efi-boot-image&gt;.signed, or &lt;efi-boot-image&gt;.pk7 for detached signatures) </p>
+</dd><dd>write a detached signature, instead of a signed binary</dd>
+<dt><code>&#8211;output</code> &lt;file&gt;</dt>
+<dd> write signed data to &lt;file&gt; (default &lt;efi-boot-image&gt;.signed, or &lt;efi-boot-image&gt;.pk7 for detached signatures) </dd>
 </dl>
 <h2>Index</h2>

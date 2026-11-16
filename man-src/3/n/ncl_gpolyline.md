@@ -13,10 +13,10 @@ description: "gpolyline (Polyline) – This output primitive draws line segments
 <p> void gpolyline(const Gpoint_list *point_list);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>point_list.num_points</p>
-<dd>(Gint, Input) &#8211; The number of points in the line to be drawn. Must be larger than one.</p>
-<dt>point_list.points</p>
-<dd>(Gint *, Input) &#8211; The X and Y coordinates (specified in world coordinates) of the point_list.num_points points to be connected by line segments.</dl>
+<dt>point_list.num_points</dt>
+<dd>(Gint, Input) &#8211; The number of points in the line to be drawn. Must be larger than one.</dd>
+<dt>point_list.points</dt>
+<dd>(Gint *, Input) &#8211; The X and Y coordinates (specified in world coordinates) of the point_list.num_points points to be connected by line segments.</dd></dl>
 <h2>Usage</h2>
 <p>Note that the coordinate pairs must be in world coordinates and not user coordinates. Among other things, this means that the log scaling and mirror-imaging features available via the c_set call and the SPPS functions for drawing lines are not applicable here.</p>
 <h2>Access</h2>

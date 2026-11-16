@@ -10,17 +10,13 @@ description: "sd_get_seats, sd_get_sessions, sd_get_uids, sd_get_machine_names â
 <p>sd_get_seats, sd_get_sessions, sd_get_uids, sd_get_machine_names &#8211; Determine available seats, sessions, logged in users and virtual machines/containers</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-login.h&gt;
-
 int sd_get_seats(char ***seats);
-
 int sd_get_sessions(char ***sessions);
-
 int sd_get_uids(uid_t **users);
-
 int sd_get_machine_names(char ***machines);</code></pre>
 <h2>Description</h2>
 <p><code>sd_get_seats()</code></p>
-<dd>may be used to determine all currently available local seats. Returns a <code>NULL</code> terminated array of seat identifiers. The returned array and all strings it references need to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. Note that instead of an empty array <code>NULL</code> may be returned and should be considered equivalent to an empty array. </p>
+<dd>may be used to determine all currently available local seats. Returns a <code>NULL</code> terminated array of seat identifiers. The returned array and all strings it references need to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. Note that instead of an empty array <code>NULL</code> may be returned and should be considered equivalent to an empty array. </dd>
 <p> Similarly, <code>sd_get_sessions()</code> may be used to determine all current login sessions. </p>
 <p> Similarly, <code>sd_get_uids()</code> may be used to determine all Unix users who currently have login sessions. </p>
 <p> Similarly, <code>sd_get_machine_names()</code> may be used to determine all current virtual machines and containers on the system. </p>

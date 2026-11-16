@@ -113,8 +113,8 @@ description: "fenced_selinux – Security Enhanced Linux Policy for the fenced p
 <p> <code>fenced_exec_t</code> </p>
 <p> &#8211; Set files with the fenced_exec_t type, if you want to transition an executable to the fenced_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/fenced, /usr/sbin/fence_node, /usr/sbin/fence_tool, /usr/sbin/fence_virtd, /usr/sbin/fence_sanlockd, /usr/share/cluster/fence_scsi_check.pl, /usr/share/cluster/fence_scsi_check_hardreboot </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/fenced, /usr/sbin/fence_node, /usr/sbin/fence_tool, /usr/sbin/fence_virtd, /usr/sbin/fence_sanlockd, /usr/share/cluster/fence_scsi_check.pl, /usr/share/cluster/fence_scsi_check_hardreboot </dd>
 </dl>
 <p> <code>fenced_lock_t</code> </p>
 <p> &#8211; Set files with the fenced_lock_t type, if you want to treat the files as fenced lock data, stored under the /var/lock directory </p>
@@ -127,8 +127,8 @@ description: "fenced_selinux – Security Enhanced Linux Policy for the fenced p
 <p> <code>fenced_var_run_t</code> </p>
 <p> &#8211; Set files with the fenced_var_run_t type, if you want to store the fenced files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/fence.*, /var/run/cluster/fence_scsi.*, /var/run/cluster/mpath.devices, /var/run/cluster/fenced_override </p>
+<dt>Paths:</dt>
+<dd>/var/run/fence.*, /var/run/cluster/fence_scsi.*, /var/run/cluster/mpath.devices, /var/run/cluster/fenced_override </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

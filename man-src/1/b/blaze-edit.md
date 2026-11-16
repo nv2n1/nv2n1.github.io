@@ -16,45 +16,45 @@ description: "blaze-edit – edit a blog post or a page in the BlazeBlogger repo
 <p> <code>blaze-edit</code> enables you to edit a blog post or a page in your favourite text editor. </p>
 <p> Note that inside your posts and pages, you can use several special placeholders to be replaced by appropriate data later, when the static content is being generated; the case is not significant, and supported placeholders are as follows:</p>
 <dl>
-<dt><code>%root%</code></p>
-<dd> Relative path to the root directory of the blog; to be used inside links.</p>
-<dt><code>%home%</code></p>
-<dd> Relative path to the website home (index) page; to be used inside links.</p>
-<dt><code>%page[</code><i>id</i><code>]%</code></p>
-<dd> Relative path to the page with given <i>id</i>; to be used inside links.</p>
-<dt><code>%post[</code><i>id</i><code>]%</code></p>
-<dd> Relative path to the post with given <i>id</i>; to be used inside links.</p>
-<dt><code>%tag[</code><i>name</i><code>]%</code></p>
-<dd> Relative path to the tag with given <i>name</i>; to be used inside links.</dl>
+<dt><code>%root%</code></dt>
+<dd> Relative path to the root directory of the blog; to be used inside links.</dd>
+<dt><code>%home%</code></dt>
+<dd> Relative path to the website home (index) page; to be used inside links.</dd>
+<dt><code>%page[</code><i>id</i><code>]%</code></dt>
+<dd> Relative path to the page with given <i>id</i>; to be used inside links.</dd>
+<dt><code>%post[</code><i>id</i><code>]%</code></dt>
+<dd> Relative path to the post with given <i>id</i>; to be used inside links.</dd>
+<dt><code>%tag[</code><i>name</i><code>]%</code></dt>
+<dd> Relative path to the tag with given <i>name</i>; to be used inside links.</dd></dl>
 <p> You can also use a special form, <code>&lt;!&#8211; break &#8211;&gt;</code>, to mark the end of a part to be displayed on index page.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</p>
-<dt><code>-p</code>, <code>&#8211;page</code></p>
-<dd> Edit page instead of blog post.</p>
-<dt><code>-P</code>, <code>&#8211;post</code></p>
-<dd> Edit blog post; this is the default option.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Force creating a new, empty raw file when it does not already exist, although the <tt>&quot;core.processor&quot;</tt> is enabled in the configuration; just be warned that this will rewrite whatever content is in the existing target file.</p>
-<dt><code>-C</code>, <code>&#8211;no-processor</code></p>
-<dd> Disable the use of external processor; just be warned that you will be editing the target (i.e. potentially previously processed) file instead of the raw source. Unless the <tt>&quot;core.processor&quot;</tt> is enabled in the configuration, this is the default behaviour.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Avoid displaying messages that are not necessary.</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Display all messages. This is the default option.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</dd>
+<dt><code>-p</code>, <code>&#8211;page</code></dt>
+<dd> Edit page instead of blog post.</dd>
+<dt><code>-P</code>, <code>&#8211;post</code></dt>
+<dd> Edit blog post; this is the default option.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Force creating a new, empty raw file when it does not already exist, although the <tt>&quot;core.processor&quot;</tt> is enabled in the configuration; just be warned that this will rewrite whatever content is in the existing target file.</dd>
+<dt><code>-C</code>, <code>&#8211;no-processor</code></dt>
+<dd> Disable the use of external processor; just be warned that you will be editing the target (i.e. potentially previously processed) file instead of the raw source. Unless the <tt>&quot;core.processor&quot;</tt> is enabled in the configuration, this is the default behaviour.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Avoid displaying messages that are not necessary.</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Display all messages. This is the default option.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>EDITOR</code></font></p>
-<dd> Unless the BlazeBlogger specific option <i>core.editor</i> is set, blaze-edit tries to use system wide settings to decide which editor to run. If neither of these options are supplied, the <code>vi</code> is used instead as a considerably reasonable choice.</dl>
+<dt><font SIZE="-1"><code>EDITOR</code></font></dt>
+<dd> Unless the BlazeBlogger specific option <i>core.editor</i> is set, blaze-edit tries to use system wide settings to decide which editor to run. If neither of these options are supplied, the <code>vi</code> is used instead as a considerably reasonable choice.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>.blaze/config</i></p>
-<dd> BlazeBlogger configuration file.</dl>
+<dt><i>.blaze/config</i></dt>
+<dd> BlazeBlogger configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1).</p>
 <h2>BUGS</h2>

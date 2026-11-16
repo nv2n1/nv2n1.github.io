@@ -32,20 +32,20 @@ unsigned char *CMSG_DATA(struct cmsghdr *cmsg);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char cmsg_data[];&nbsp;*/ }; </p>
 <p> The sequence of <i>cmsghdr</i> structures should never be accessed directly. Instead, use only the following macros:</p>
 <dl>
-<dt>*</p>
-<dd> <code>CMSG_FIRSTHDR</code>() returns a pointer to the first <i>cmsghdr</i> in the ancillary data buffer associated with the passed <i>msghdr</i>. It returns NULL if there isn&#8217;t enough space for a <i>cmsghdr</i> in the buffer.</p>
-<dt>*</p>
-<dd> <code>CMSG_NXTHDR</code>() returns the next valid <i>cmsghdr</i> after the passed <i>cmsghdr</i>. It returns NULL when there isn&#8217;t enough space left in the buffer.</p>
+<dt>*</dt>
+<dd> <code>CMSG_FIRSTHDR</code>() returns a pointer to the first <i>cmsghdr</i> in the ancillary data buffer associated with the passed <i>msghdr</i>. It returns NULL if there isn&#8217;t enough space for a <i>cmsghdr</i> in the buffer.</dd>
+<dt>*</dt>
+<dd> <code>CMSG_NXTHDR</code>() returns the next valid <i>cmsghdr</i> after the passed <i>cmsghdr</i>. It returns NULL when there isn&#8217;t enough space left in the buffer.</dd>
 <dt>
-<dd> When initializing a buffer that will contain a series of <i>cmsghdr</i> structures (e.g., to be sent with <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2)), that buffer should first be zero-initialized to ensure the correct operation of <code>CMSG_NXTHDR</code>().</p>
-<dt>*</p>
-<dd> <code>CMSG_ALIGN</code>(), given a length, returns it including the required alignment. This is a constant expression.</p>
-<dt>*</p>
-<dd> <code>CMSG_SPACE</code>() returns the number of bytes an ancillary element with payload of the passed data length occupies. This is a constant expression.</p>
-<dt>*</p>
-<dd> <code>CMSG_DATA</code>() returns a pointer to the data portion of a <i>cmsghdr</i>. The pointer returned cannot be assumed to be suitably aligned for accessing arbitrary payload data types. Applications should not cast it to a pointer type matching the payload, but should instead use <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3) to copy data to or from a suitably declared object.</p>
-<dt>*</p>
-<dd> <code>CMSG_LEN</code>() returns the value to store in the <i>cmsg_len</i> member of the <i>cmsghdr</i> structure, taking into account any necessary alignment. It takes the data length as an argument. This is a constant expression.</dl>
+</dt><dd> When initializing a buffer that will contain a series of <i>cmsghdr</i> structures (e.g., to be sent with <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2)), that buffer should first be zero-initialized to ensure the correct operation of <code>CMSG_NXTHDR</code>().</dd>
+<dt>*</dt>
+<dd> <code>CMSG_ALIGN</code>(), given a length, returns it including the required alignment. This is a constant expression.</dd>
+<dt>*</dt>
+<dd> <code>CMSG_SPACE</code>() returns the number of bytes an ancillary element with payload of the passed data length occupies. This is a constant expression.</dd>
+<dt>*</dt>
+<dd> <code>CMSG_DATA</code>() returns a pointer to the data portion of a <i>cmsghdr</i>. The pointer returned cannot be assumed to be suitably aligned for accessing arbitrary payload data types. Applications should not cast it to a pointer type matching the payload, but should instead use <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3) to copy data to or from a suitably declared object.</dd>
+<dt>*</dt>
+<dd> <code>CMSG_LEN</code>() returns the value to store in the <i>cmsg_len</i> member of the <i>cmsghdr</i> structure, taking into account any necessary alignment. It takes the data length as an argument. This is a constant expression.</dd></dl>
 <p> To create ancillary data, first initialize the <i>msg_controllen</i> member of the <i>msghdr</i> with the length of the control message buffer. Use <code>CMSG_FIRSTHDR</code>() on the <i>msghdr</i> to get the first control message and <code>CMSG_NXTHDR</code>() to get all subsequent ones. In each control message, initialize <i>cmsg_len</i> (with <code>CMSG_LEN</code>()), the other <i>cmsghdr</i> header fields, and the data portion using <code>CMSG_DATA</code>(). Finally, the <i>msg_controllen</i> field of the <i>msghdr</i> should be set to the sum of the <code>CMSG_SPACE</code>() of the length of all control messages in the buffer. For more information on the <i>msghdr</i>, see <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2).</p>
 <h2>CONFORMING TO</h2>
 <p> This ancillary data model conforms to the POSIX.1g draft, 4.4BSD-Lite, the IPv6 advanced API described in RFC 2292 and SUSv2. <code>CMSG_FIRSTHDR</code>(), <code>CMSG_NXTHDR</code>(), and <code>CMSG_DATA</code>() are specified in POSIX.1-2008. <code>CMSG_SPACE</code>() and <code>CMSG_LEN</code>() will be included in the next POSIX release (Issue 8). </p>

@@ -17,16 +17,16 @@ description: "gdnc – GNUstep Distributed Notification Center"
 <h2>OPTIONS</h2>
 <p> To attach <code>gdnc</code> to a remote session use the</p>
 <dl>
-<dt><code>-NSHost </code><i>hostname</p>
-<dd> argument.</dl>
+<dt><code>-NSHost </code><i>hostname</dt>
+<dd> argument.</dd></dl>
 <p> To run a copy of the server to handle public notifications (available to all users on the local machine)</p>
 <dl>
-<dt></i><code>-GSPublic YES</p>
-<dd></dl>
+<dt></i><code>-GSPublic YES</dt>
+<dd></dd></dl>
 <p> To run a copy of the server to handle network-public notifications (available to all users able to connect to the local machine on the network)</p>
 <dl>
-<dt>-GSNetwork YES</p>
-<dd></dl>
+<dt>-GSNetwork YES</dt>
+<dd></dd></dl>
 <p> </code></p>
 <h2>DIAGNOSTICS</h2>
 <p> <code>gdomap -L GDNCServer</code> will lookup instances of gdnc which were launched with the NSHost, GSPublic, or GSNetwork command line arguments. </p>

@@ -11,7 +11,6 @@ description: "sc::PrimPairsCints –"
 <p> <code>PrimPairsCints</code> contains primitive pair data.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;primpairs.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>

@@ -11,7 +11,6 @@ description: "sc::PsiFile11 –"
 <p> <code>PsiFile11</code> is a Psi gradient file.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;psifile11.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>

@@ -15,15 +15,15 @@ description: "ns-slapd – The main Directory Server daemon"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-v</code></p>
-<dd>Show version of program.</p>
-<dt><code>-D configdir</code></p>
-<dd>Specifies the configuration directory pointing at the instance to be started (e.g. /etc/dirsrv/slapd-localhost)</p>
-<dt><code>-d debuglevel</code></p>
-<dd>Specifies the debuglevel to be used</p>
-<dt><code>-i pidlogfile</code></p>
+<dt><code>-v</code></dt>
+<dd>Show version of program.</dd>
+<dt><code>-D configdir</code></dt>
+<dd>Specifies the configuration directory pointing at the instance to be started (e.g. /etc/dirsrv/slapd-localhost)</dd>
+<dt><code>-d debuglevel</code></dt>
+<dd>Specifies the debuglevel to be used</dd>
+<dt><code>-i pidlogfile</code></dt>
 <dd>Specifies file where the pid of the process will be stored
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>ns-slapd was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

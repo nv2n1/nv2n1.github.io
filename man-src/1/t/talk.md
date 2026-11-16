@@ -15,12 +15,12 @@ description: "talk – talk to another user"
 <p> <code>Talk</code> is a visual communication program which copies lines from your terminal to that of another user. </p>
 <p> Options available:</p>
 <dl>
-<dt><i>person</i></p>
-<dd> If you wish to talk to someone on your own machine, then <i>person</i> is just the person&#8217;s login name. If you wish to talk to a user on another host, then <i>person</i> is of the form `user [at] host&#8217; ( or `host.user&#8217; or `host!user&#8217; or `host:user&#8217; ).</p>
-<dt><i>-x</i></p>
-<dd> If you wish to talk to a user who has dot character in username, the <i>-x</i> argument will force `user [at] host&#8217; form of the <i>person</i> and talk will take dots as part of user name.</p>
-<dt><i>ttyname</i></p>
-<dd> If you wish to talk to a user who is logged in more than once, the <i>ttyname</i> argument may be used to indicate the appropriate terminal name, where <i>ttyname</i> is of the form `ttyXX&#8217; or `pts/X&#8217;</dl>
+<dt><i>person</i></dt>
+<dd> If you wish to talk to someone on your own machine, then <i>person</i> is just the person&#8217;s login name. If you wish to talk to a user on another host, then <i>person</i> is of the form `user [at] host&#8217; ( or `host.user&#8217; or `host!user&#8217; or `host:user&#8217; ).</dd>
+<dt><i>-x</i></dt>
+<dd> If you wish to talk to a user who has dot character in username, the <i>-x</i> argument will force `user [at] host&#8217; form of the <i>person</i> and talk will take dots as part of user name.</dd>
+<dt><i>ttyname</i></dt>
+<dd> If you wish to talk to a user who is logged in more than once, the <i>ttyname</i> argument may be used to indicate the appropriate terminal name, where <i>ttyname</i> is of the form `ttyXX&#8217; or `pts/X&#8217;</dd></dl>
 <p> When first called, <code>talk</code> contacts the talk daemon on the other user&#8217;s machine, which sends the message </p>
 <blockquote>
 <pre><code>
@@ -34,10 +34,10 @@ Message from TalkDaemon[at] his_machine... talk : connection requested by your_n
 <p> If you do not want to receive talk requests, you may block them using the <a href="/docs/linux/man/1-mesg/">mesg</a>(1) command. By default, talk requests are normally not blocked. Certain commands, in particular <a href="/docs/linux/man/1-nroff/">nroff</a>(1), pine(1), and <a href="/docs/linux/man/1-pr/">pr</a>(1), may block messages temporarily in order to prevent messy output. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/hosts </code></p>
-<dd> to find the recipient&#8217;s machine</p>
-<dt><code>/var/run/utmp </code></p>
-<dd> to find the recipient&#8217;s tty</dl>
+<dt><code>/etc/hosts </code></dt>
+<dd> to find the recipient&#8217;s machine</dd>
+<dt><code>/var/run/utmp </code></dt>
+<dd> to find the recipient&#8217;s tty</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mail/">mail</a>(1), <a href="/docs/linux/man/1-mesg/">mesg</a>(1), <a href="/docs/linux/man/1-who/">who</a>(1), <a href="/docs/linux/man/1-write/">write</a>(1), talkd(8)</p>
 <h2>BUGS</h2>

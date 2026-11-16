@@ -15,12 +15,12 @@ description: "debuginfo-install – install debuginfo packages and their depende
 <p> <code>debuginfo-install</code> is a program which installs the RPMs needed to debug the specified package. The package argument can be a wildcard, but will only match installed packages. <code>debuginfo-install</code> will then enable any debuginfo repositories, and install the relevant debuginfo rpm. </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Download and install all the RPMs needed to debug the kernel RPM:</p>
-<dd> <code>debuginfo-install</code> kernel</dl>
+<dt>Download and install all the RPMs needed to debug the kernel RPM:</dt>
+<dd> <code>debuginfo-install</code> kernel</dd></dl>
 <h2>WARNING MESSAGES</h2>
 <dl>
-<dt>Could not find debuginfo for:</p>
-<dd> You may sometimes see warning messages about certain packages not being found if you run debuginfo-install for a wildcard or glob. Debuginfo packages are not necessary for &quot;noarch&quot; RPMs; these will generate a warning message. Additionally, On 64-bit systems, no multilib debuginfo packages are published, so if you have 32-bit packages installed, these will also generate warning messages.</dl>
+<dt>Could not find debuginfo for:</dt>
+<dd> You may sometimes see warning messages about certain packages not being found if you run debuginfo-install for a wildcard or glob. Debuginfo packages are not necessary for &quot;noarch&quot; RPMs; these will generate a warning message. Additionally, On 64-bit systems, no multilib debuginfo packages are published, so if you have 32-bit packages installed, these will also generate warning messages.</dd></dl>
 <h2>FILES</h2>
 <p> As debuginfo-install uses YUM libraries for retrieving all the information, it relies on YUM configuration for its default values like which repositories to use. Consult YUM documentation for details: </p>
 <pre>

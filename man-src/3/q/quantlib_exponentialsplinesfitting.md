@@ -18,3 +18,4 @@ description: "QuantLib::ExponentialSplinesFitting – Exponential-splines fittin
 <h2>Detailed Description</h2>
 <p>Exponential-splines fitting method. </p>
 <p> Fits a discount function to the exponential form [ d(t) = um_{i=1}^9 c_i 
+</p>

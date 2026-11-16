@@ -15,16 +15,16 @@ description: "mkfifo – make FIFOs (named pipes)"
 <p> Create named pipes (FIFOs) with the given NAMEs. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-m</code>, <code>&#8211;mode</code>=<i>,MODE/</i></p>
-<dd> set file permission bits to MODE, not a=rw &#8211; umask</p>
-<dt><code>-Z</code></p>
-<dd> set the SELinux security context to default type</p>
-<dt><code>&#8211;context</code>[=<i>,CTX/</i>]</p>
-<dd> like <code>-Z</code>, or if CTX is specified then set the SELinux or SMACK security context to CTX</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-m</code>, <code>&#8211;mode</code>=<i>,MODE/</i></dt>
+<dd> set file permission bits to MODE, not a=rw &#8211; umask</dd>
+<dt><code>-Z</code></dt>
+<dd> set the SELinux security context to default type</dd>
+<dt><code>&#8211;context</code>[=<i>,CTX/</i>]</dt>
+<dd> like <code>-Z</code>, or if CTX is specified then set the SELinux or SMACK security context to CTX</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

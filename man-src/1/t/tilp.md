@@ -18,35 +18,35 @@ description: "TiLP2 – a communication program for TI calculators (‘Tilp Is a
 <p> Take care: options must be passed before the filename! </p>
 <p> <code>tilp</code> accepts the following options: </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a list of all command line options. </p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Output the version info. </p>
-<dt><code>&#8211;no-gui</code>, <code>-n</code></p>
-<dd> Send file(s) without launching any Graphical User Interface. All information is displayed in the console. Beware: using this switch disables any overwrite check. Use it with care! </p>
-<dt><code>&#8211;silent</code>, <code>-s</code></p>
-<dd> Skip questions in no GUI mode. Should be used with &#8211;no-gui switch. </p>
-<dt><code>&#8211;calc=</code><i>CALC</i>, <i>CALC</i></p>
-<dd> Select a calculator type: v200, ti92+, ti92, ti89t, ti89, ti86, ti85, ti84+, ti83+, ti83, ti82, ti73 or nspire. </p>
-<dt><code>&#8211;cable=</code><i>CABLE</i>, <i>CABLE</i></p>
-<dd> Select a link cable type: GrayLink, BlackLink, Parallel, SilverLink, DirectLink, VTi, TiEmu. </p>
-<dt><code>&#8211;port=</code><i>PORT</i>, <code>-p</code><i>PORT</i></p>
-<dd> Specify on which port the link cable is plugged on. Can be null, 1, 2, 3 or 4. </p>
-<dt><code>&#8211;timeout=</code><i>TIMEOUT</i>, <code>-t</code><i>TIMEOUT</i></p>
-<dd> in tenth of seconds (0.1 s). The program waits for a response of the calculator during that amount of time. Once this delay is elapsed, the program sends a timeout error. The default value is 1 second. </p>
-<dt><code>&#8211;delay=</code><i>DELAY</i>, <code>-d</code><i>DELAY</i></p>
-<dd> in microseconds. This is the time which separates the transmission of 2 bytes (in the old cables). The default value is 5 microseconds. Decreasing this value increases the transfer speed but decreases the reliability of the transmission. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a list of all command line options. </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output the version info. </dd>
+<dt><code>&#8211;no-gui</code>, <code>-n</code></dt>
+<dd> Send file(s) without launching any Graphical User Interface. All information is displayed in the console. Beware: using this switch disables any overwrite check. Use it with care! </dd>
+<dt><code>&#8211;silent</code>, <code>-s</code></dt>
+<dd> Skip questions in no GUI mode. Should be used with &#8211;no-gui switch. </dd>
+<dt><code>&#8211;calc=</code><i>CALC</i>, <i>CALC</i></dt>
+<dd> Select a calculator type: v200, ti92+, ti92, ti89t, ti89, ti86, ti85, ti84+, ti83+, ti83, ti82, ti73 or nspire. </dd>
+<dt><code>&#8211;cable=</code><i>CABLE</i>, <i>CABLE</i></dt>
+<dd> Select a link cable type: GrayLink, BlackLink, Parallel, SilverLink, DirectLink, VTi, TiEmu. </dd>
+<dt><code>&#8211;port=</code><i>PORT</i>, <code>-p</code><i>PORT</i></dt>
+<dd> Specify on which port the link cable is plugged on. Can be null, 1, 2, 3 or 4. </dd>
+<dt><code>&#8211;timeout=</code><i>TIMEOUT</i>, <code>-t</code><i>TIMEOUT</i></dt>
+<dd> in tenth of seconds (0.1 s). The program waits for a response of the calculator during that amount of time. Once this delay is elapsed, the program sends a timeout error. The default value is 1 second. </dd>
+<dt><code>&#8211;delay=</code><i>DELAY</i>, <code>-d</code><i>DELAY</i></dt>
+<dd> in microseconds. This is the time which separates the transmission of 2 bytes (in the old cables). The default value is 5 microseconds. Decreasing this value increases the transfer speed but decreases the reliability of the transmission. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Quickly send (no GUI) a file to a TI-89 through a BlackLink cable on the second serial port (/dev/ttyS1 or COM2), setting the timeout to 2s: </p>
 <dl>
-<dt>tilp &#8211;calc=ti89 &#8211;cable=BlackLink &#8211;port=2 &#8211;timeout=20 &#8211;no-gui group.89g</p>
+<dt>tilp &#8211;calc=ti89 &#8211;cable=BlackLink &#8211;port=2 &#8211;timeout=20 &#8211;no-gui group.89g</dt>
 <dd>
-<dt>Starting at version 1.13, a new and shorter syntax can be used:</p>
+</dd><dt>Starting at version 1.13, a new and shorter syntax can be used:</dt>
 <dd>
-<dt>tilp ti89 blacklink -p2 -t20 -n group.89g</p>
+</dd><dt>tilp ti89 blacklink -p2 -t20 -n group.89g</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>CONFIG FILE FORMAT</h2>
 <p> This section describes the format of the .tilp config file which is in the home directory of the user (*nix, Win32), or the old tilp.ini file formerly stored alongside the program (Win32). The file is separated into several sections (hardware, gui, calc, external programs, fonts, screen, misc). A line preceded by the &#8216;#&#8217; symbol is a comment. Each line has the following format: option=something. Every line can be put in any order. Beware: any comment added to the file will be overwritten! Here&#8217;s a description of the options and their possible values: </p>
 <p> <code>version=</code> Which version of TiLP has written the config file. Used to display the Release the file and to keep compatibility. </p>

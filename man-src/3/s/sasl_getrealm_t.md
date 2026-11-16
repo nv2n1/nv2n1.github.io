@@ -10,8 +10,6 @@ description: "sasl_getrealm_t – Realm Acquisition Callback"
 <p>sasl_getrealm_t &#8211; Realm Acquisition Callback </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_getrealm_t(void *context, int id,
 const char **availrealms,
 const char **result)</code></pre>

@@ -15,26 +15,26 @@ bool bson_iter_as_bool(const bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Fetches the current field as if it were a boolean. </p>
 <p> <code><a href="/docs/linux/man/3-bson_iter_as_bool/">bson_iter_as_bool</a>(3)</code> currently knows how to determine a boolean value from the following types: </p>
 <dl>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_BOOL</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_DOUBLE</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_INT32</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_INT64</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_NULL</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_UNDEFINED</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_UTF8 </p>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_BOOL</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_DOUBLE</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_INT32</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_INT64</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_NULL</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_UNDEFINED</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_UTF8 </dd>
 <p> BSON_TYPE_UTF8 will always equate to <code>true</code> \&amp;. </p>
 </dl>
 <h2>RETURNS</h2>

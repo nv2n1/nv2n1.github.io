@@ -26,134 +26,134 @@ description: "cmake-properties – CMake Properties Reference"
 <p> The features listed here may be used with the <code>target_compile_features()</code> command. See the <code><a href="/docs/linux/man/7-cmake3-compile-features/">cmake3-compile-features</a>(7)</code> manual for information on compile features and a list of supported compilers. </p>
 <p> The features known to this version of CMake are:</p>
 <dl>
-<dt><code>c_function_prototypes</code></p>
-<dd>Function prototypes, as defined in <code>ISO/IEC 9899:1990</code>.</p>
-<dt><code>c_restrict</code></p>
-<dd><code>restrict</code> keyword, as defined in <code>ISO/IEC 9899:1999</code>.</p>
-<dt><code>c_static_assert</code></p>
-<dd>Static assert, as defined in <code>ISO/IEC 9899:2011</code>.</p>
-<dt><code>c_variadic_macros</code></p>
-<dd>Variadic macros, as defined in <code>ISO/IEC 9899:1999</code>.</dl>
+<dt><code>c_function_prototypes</code></dt>
+<dd>Function prototypes, as defined in <code>ISO/IEC 9899:1990</code>.</dd>
+<dt><code>c_restrict</code></dt>
+<dd><code>restrict</code> keyword, as defined in <code>ISO/IEC 9899:1999</code>.</dd>
+<dt><code>c_static_assert</code></dt>
+<dd>Static assert, as defined in <code>ISO/IEC 9899:2011</code>.</dd>
+<dt><code>c_variadic_macros</code></dt>
+<dd>Variadic macros, as defined in <code>ISO/IEC 9899:1999</code>.</dd></dl>
 <h3>Cmake_Cxx_Known_Features</h3>
 <p>List of C++ features known to this version of CMake. </p>
 <p> The features listed in this global property may be known to be available to the C++ compiler. If the feature is available with the C++ compiler, it will be listed in the <code>CMAKE_CXX_COMPILE_FEATURES</code> variable. </p>
 <p> The features listed here may be used with the <code>target_compile_features()</code> command. See the <code><a href="/docs/linux/man/7-cmake3-compile-features/">cmake3-compile-features</a>(7)</code> manual for information on compile features and a list of supported compilers. </p>
 <p> The features known to this version of CMake are:</p>
 <dl>
-<dt><code>cxx_aggregate_default_initializers</code></p>
-<dd>Aggregate default initializers, as defined in <i>N3605</i>.</p>
-<dt><code>cxx_alias_templates</code></p>
-<dd>Template aliases, as defined in <i>N2258</i>.</p>
-<dt><code>cxx_alignas</code></p>
-<dd>Alignment control <code>alignas</code>, as defined in <i>N2341</i>.</p>
-<dt><code>cxx_alignof</code></p>
-<dd>Alignment control <code>alignof</code>, as defined in <i>N2341</i>.</p>
-<dt><code>cxx_attributes</code></p>
-<dd>Generic attributes, as defined in <i>N2761</i>.</p>
-<dt><code>cxx_attribute_deprecated</code></p>
-<dd><code>[[deprecated]]</code> attribute, as defined in <i>N3760</i>.</p>
-<dt><code>cxx_auto_type</code></p>
-<dd>Automatic type deduction, as defined in <i>N1984</i>.</p>
-<dt><code>cxx_binary_literals</code></p>
-<dd>Binary literals, as defined in <i>N3472</i>.</p>
-<dt><code>cxx_constexpr</code></p>
-<dd>Constant expressions, as defined in <i>N2235</i>.</p>
-<dt><code>cxx_contextual_conversions</code></p>
-<dd>Contextual conversions, as defined in <i>N3323</i>.</p>
-<dt><code>cxx_decltype_incomplete_return_types</code></p>
-<dd>Decltype on incomplete return types, as defined in <i>N3276</i>.</p>
-<dt><code>cxx_decltype</code></p>
-<dd>Decltype, as defined in <i>N2343</i>.</p>
-<dt><code>cxx_decltype_auto</code></p>
-<dd><code>decltype(auto)</code> semantics, as defined in <i>N3638</i>.</p>
-<dt><code>cxx_default_function_template_args</code></p>
-<dd>Default template arguments for function templates, as defined in <i>DR226</i></p>
-<dt><code>cxx_defaulted_functions</code></p>
-<dd>Defaulted functions, as defined in <i>N2346</i>.</p>
-<dt><code>cxx_defaulted_move_initializers</code></p>
-<dd>Defaulted move initializers, as defined in <i>N3053</i>.</p>
-<dt><code>cxx_delegating_constructors</code></p>
-<dd>Delegating constructors, as defined in <i>N1986</i>.</p>
-<dt><code>cxx_deleted_functions</code></p>
-<dd>Deleted functions, as defined in <i>N2346</i>.</p>
-<dt><code>cxx_digit_separators</code></p>
-<dd>Digit separators, as defined in <i>N3781</i>.</p>
-<dt><code>cxx_enum_forward_declarations</code></p>
-<dd>Enum forward declarations, as defined in <i>N2764</i>.</p>
-<dt><code>cxx_explicit_conversions</code></p>
-<dd>Explicit conversion operators, as defined in <i>N2437</i>.</p>
-<dt><code>cxx_extended_friend_declarations</code></p>
-<dd>Extended friend declarations, as defined in <i>N1791</i>.</p>
-<dt><code>cxx_extern_templates</code></p>
-<dd>Extern templates, as defined in <i>N1987</i>.</p>
-<dt><code>cxx_final</code></p>
-<dd>Override control <code>final</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</p>
-<dt><code>cxx_func_identifier</code></p>
-<dd>Predefined <code>__func__</code> identifier, as defined in <i>N2340</i>.</p>
-<dt><code>cxx_generalized_initializers</code></p>
-<dd>Initializer lists, as defined in <i>N2672</i>.</p>
-<dt><code>cxx_generic_lambdas</code></p>
-<dd>Generic lambdas, as defined in <i>N3649</i>.</p>
-<dt><code>cxx_inheriting_constructors</code></p>
-<dd>Inheriting constructors, as defined in <i>N2540</i>.</p>
-<dt><code>cxx_inline_namespaces</code></p>
-<dd>Inline namespaces, as defined in <i>N2535</i>.</p>
-<dt><code>cxx_lambdas</code></p>
-<dd>Lambda functions, as defined in <i>N2927</i>.</p>
-<dt><code>cxx_lambda_init_captures</code></p>
-<dd>Initialized lambda captures, as defined in <i>N3648</i>.</p>
-<dt><code>cxx_local_type_template_args</code></p>
-<dd>Local and unnamed types as template arguments, as defined in <i>N2657</i>.</p>
-<dt><code>cxx_long_long_type</code></p>
-<dd><code>long long</code> type, as defined in <i>N1811</i>.</p>
-<dt><code>cxx_noexcept</code></p>
-<dd>Exception specifications, as defined in <i>N3050</i>.</p>
-<dt><code>cxx_nonstatic_member_init</code></p>
-<dd>Non-static data member initialization, as defined in <i>N2756</i>.</p>
-<dt><code>cxx_nullptr</code></p>
-<dd>Null pointer, as defined in <i>N2431</i>.</p>
-<dt><code>cxx_override</code></p>
-<dd>Override control <code>override</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</p>
-<dt><code>cxx_range_for</code></p>
-<dd>Range-based for, as defined in <i>N2930</i>.</p>
-<dt><code>cxx_raw_string_literals</code></p>
-<dd>Raw string literals, as defined in <i>N2442</i>.</p>
-<dt><code>cxx_reference_qualified_functions</code></p>
-<dd>Reference qualified functions, as defined in <i>N2439</i>.</p>
-<dt><code>cxx_relaxed_constexpr</code></p>
-<dd>Relaxed constexpr, as defined in <i>N3652</i>.</p>
-<dt><code>cxx_return_type_deduction</code></p>
-<dd>Return type deduction on normal functions, as defined in <i>N3386</i>.</p>
-<dt><code>cxx_right_angle_brackets</code></p>
-<dd>Right angle bracket parsing, as defined in <i>N1757</i>.</p>
-<dt><code>cxx_rvalue_references</code></p>
-<dd>R-value references, as defined in <i>N2118</i>.</p>
-<dt><code>cxx_sizeof_member</code></p>
-<dd>Size of non-static data members, as defined in <i>N2253</i>.</p>
-<dt><code>cxx_static_assert</code></p>
-<dd>Static assert, as defined in <i>N1720</i>.</p>
-<dt><code>cxx_strong_enums</code></p>
-<dd>Strongly typed enums, as defined in <i>N2347</i>.</p>
-<dt><code>cxx_thread_local</code></p>
-<dd>Thread-local variables, as defined in <i>N2659</i>.</p>
-<dt><code>cxx_trailing_return_types</code></p>
-<dd>Automatic function return type, as defined in <i>N2541</i>.</p>
-<dt><code>cxx_unicode_literals</code></p>
-<dd>Unicode string literals, as defined in <i>N2442</i>.</p>
-<dt><code>cxx_uniform_initialization</code></p>
-<dd>Uniform initialization, as defined in <i>N2640</i>.</p>
-<dt><code>cxx_unrestricted_unions</code></p>
-<dd>Unrestricted unions, as defined in <i>N2544</i>.</p>
-<dt><code>cxx_user_literals</code></p>
-<dd>User-defined literals, as defined in <i>N2765</i>.</p>
-<dt><code>cxx_variable_templates</code></p>
-<dd>Variable templates, as defined in <i>N3651</i>.</p>
-<dt><code>cxx_variadic_macros</code></p>
-<dd>Variadic macros, as defined in <i>N1653</i>.</p>
-<dt><code>cxx_variadic_templates</code></p>
-<dd>Variadic templates, as defined in <i>N2242</i>.</p>
-<dt><code>cxx_template_template_parameters</code></p>
-<dd>Template template parameters, as defined in <code>ISO/IEC 14882:1998</code>.</dl>
+<dt><code>cxx_aggregate_default_initializers</code></dt>
+<dd>Aggregate default initializers, as defined in <i>N3605</i>.</dd>
+<dt><code>cxx_alias_templates</code></dt>
+<dd>Template aliases, as defined in <i>N2258</i>.</dd>
+<dt><code>cxx_alignas</code></dt>
+<dd>Alignment control <code>alignas</code>, as defined in <i>N2341</i>.</dd>
+<dt><code>cxx_alignof</code></dt>
+<dd>Alignment control <code>alignof</code>, as defined in <i>N2341</i>.</dd>
+<dt><code>cxx_attributes</code></dt>
+<dd>Generic attributes, as defined in <i>N2761</i>.</dd>
+<dt><code>cxx_attribute_deprecated</code></dt>
+<dd><code>[[deprecated]]</code> attribute, as defined in <i>N3760</i>.</dd>
+<dt><code>cxx_auto_type</code></dt>
+<dd>Automatic type deduction, as defined in <i>N1984</i>.</dd>
+<dt><code>cxx_binary_literals</code></dt>
+<dd>Binary literals, as defined in <i>N3472</i>.</dd>
+<dt><code>cxx_constexpr</code></dt>
+<dd>Constant expressions, as defined in <i>N2235</i>.</dd>
+<dt><code>cxx_contextual_conversions</code></dt>
+<dd>Contextual conversions, as defined in <i>N3323</i>.</dd>
+<dt><code>cxx_decltype_incomplete_return_types</code></dt>
+<dd>Decltype on incomplete return types, as defined in <i>N3276</i>.</dd>
+<dt><code>cxx_decltype</code></dt>
+<dd>Decltype, as defined in <i>N2343</i>.</dd>
+<dt><code>cxx_decltype_auto</code></dt>
+<dd><code>decltype(auto)</code> semantics, as defined in <i>N3638</i>.</dd>
+<dt><code>cxx_default_function_template_args</code></dt>
+<dd>Default template arguments for function templates, as defined in <i>DR226</i></dd>
+<dt><code>cxx_defaulted_functions</code></dt>
+<dd>Defaulted functions, as defined in <i>N2346</i>.</dd>
+<dt><code>cxx_defaulted_move_initializers</code></dt>
+<dd>Defaulted move initializers, as defined in <i>N3053</i>.</dd>
+<dt><code>cxx_delegating_constructors</code></dt>
+<dd>Delegating constructors, as defined in <i>N1986</i>.</dd>
+<dt><code>cxx_deleted_functions</code></dt>
+<dd>Deleted functions, as defined in <i>N2346</i>.</dd>
+<dt><code>cxx_digit_separators</code></dt>
+<dd>Digit separators, as defined in <i>N3781</i>.</dd>
+<dt><code>cxx_enum_forward_declarations</code></dt>
+<dd>Enum forward declarations, as defined in <i>N2764</i>.</dd>
+<dt><code>cxx_explicit_conversions</code></dt>
+<dd>Explicit conversion operators, as defined in <i>N2437</i>.</dd>
+<dt><code>cxx_extended_friend_declarations</code></dt>
+<dd>Extended friend declarations, as defined in <i>N1791</i>.</dd>
+<dt><code>cxx_extern_templates</code></dt>
+<dd>Extern templates, as defined in <i>N1987</i>.</dd>
+<dt><code>cxx_final</code></dt>
+<dd>Override control <code>final</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</dd>
+<dt><code>cxx_func_identifier</code></dt>
+<dd>Predefined <code>__func__</code> identifier, as defined in <i>N2340</i>.</dd>
+<dt><code>cxx_generalized_initializers</code></dt>
+<dd>Initializer lists, as defined in <i>N2672</i>.</dd>
+<dt><code>cxx_generic_lambdas</code></dt>
+<dd>Generic lambdas, as defined in <i>N3649</i>.</dd>
+<dt><code>cxx_inheriting_constructors</code></dt>
+<dd>Inheriting constructors, as defined in <i>N2540</i>.</dd>
+<dt><code>cxx_inline_namespaces</code></dt>
+<dd>Inline namespaces, as defined in <i>N2535</i>.</dd>
+<dt><code>cxx_lambdas</code></dt>
+<dd>Lambda functions, as defined in <i>N2927</i>.</dd>
+<dt><code>cxx_lambda_init_captures</code></dt>
+<dd>Initialized lambda captures, as defined in <i>N3648</i>.</dd>
+<dt><code>cxx_local_type_template_args</code></dt>
+<dd>Local and unnamed types as template arguments, as defined in <i>N2657</i>.</dd>
+<dt><code>cxx_long_long_type</code></dt>
+<dd><code>long long</code> type, as defined in <i>N1811</i>.</dd>
+<dt><code>cxx_noexcept</code></dt>
+<dd>Exception specifications, as defined in <i>N3050</i>.</dd>
+<dt><code>cxx_nonstatic_member_init</code></dt>
+<dd>Non-static data member initialization, as defined in <i>N2756</i>.</dd>
+<dt><code>cxx_nullptr</code></dt>
+<dd>Null pointer, as defined in <i>N2431</i>.</dd>
+<dt><code>cxx_override</code></dt>
+<dd>Override control <code>override</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</dd>
+<dt><code>cxx_range_for</code></dt>
+<dd>Range-based for, as defined in <i>N2930</i>.</dd>
+<dt><code>cxx_raw_string_literals</code></dt>
+<dd>Raw string literals, as defined in <i>N2442</i>.</dd>
+<dt><code>cxx_reference_qualified_functions</code></dt>
+<dd>Reference qualified functions, as defined in <i>N2439</i>.</dd>
+<dt><code>cxx_relaxed_constexpr</code></dt>
+<dd>Relaxed constexpr, as defined in <i>N3652</i>.</dd>
+<dt><code>cxx_return_type_deduction</code></dt>
+<dd>Return type deduction on normal functions, as defined in <i>N3386</i>.</dd>
+<dt><code>cxx_right_angle_brackets</code></dt>
+<dd>Right angle bracket parsing, as defined in <i>N1757</i>.</dd>
+<dt><code>cxx_rvalue_references</code></dt>
+<dd>R-value references, as defined in <i>N2118</i>.</dd>
+<dt><code>cxx_sizeof_member</code></dt>
+<dd>Size of non-static data members, as defined in <i>N2253</i>.</dd>
+<dt><code>cxx_static_assert</code></dt>
+<dd>Static assert, as defined in <i>N1720</i>.</dd>
+<dt><code>cxx_strong_enums</code></dt>
+<dd>Strongly typed enums, as defined in <i>N2347</i>.</dd>
+<dt><code>cxx_thread_local</code></dt>
+<dd>Thread-local variables, as defined in <i>N2659</i>.</dd>
+<dt><code>cxx_trailing_return_types</code></dt>
+<dd>Automatic function return type, as defined in <i>N2541</i>.</dd>
+<dt><code>cxx_unicode_literals</code></dt>
+<dd>Unicode string literals, as defined in <i>N2442</i>.</dd>
+<dt><code>cxx_uniform_initialization</code></dt>
+<dd>Uniform initialization, as defined in <i>N2640</i>.</dd>
+<dt><code>cxx_unrestricted_unions</code></dt>
+<dd>Unrestricted unions, as defined in <i>N2544</i>.</dd>
+<dt><code>cxx_user_literals</code></dt>
+<dd>User-defined literals, as defined in <i>N2765</i>.</dd>
+<dt><code>cxx_variable_templates</code></dt>
+<dd>Variable templates, as defined in <i>N3651</i>.</dd>
+<dt><code>cxx_variadic_macros</code></dt>
+<dd>Variadic macros, as defined in <i>N1653</i>.</dd>
+<dt><code>cxx_variadic_templates</code></dt>
+<dd>Variadic templates, as defined in <i>N2242</i>.</dd>
+<dt><code>cxx_template_template_parameters</code></dt>
+<dd>Template template parameters, as defined in <code>ISO/IEC 14882:1998</code>.</dd></dl>
 <h3>Debug_Configurations</h3>
 <p>Specify which configurations are for debugging. </p>
 <p> The value must be a semi-colon separated list of configuration names. Currently this property is used only by the target_link_libraries command (see its documentation for details). Additional uses may be defined in the future. </p>
@@ -361,16 +361,16 @@ EndGlobalSection</pre>
 <p>Set the Android target architecture. </p>
 <p> This is a string property that could be set to the one of the following values:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>armv7-a</code>: &quot;ARMv7-A (armv7-a)&quot;</p>
-<dt>&bull;</p>
-<dd><code>armv7-a-hard</code>: &quot;ARMv7-A, hard-float ABI (armv7-a)&quot;</p>
-<dt>&bull;</p>
-<dd><code>arm64-v8a</code>: &quot;ARMv8-A, 64bit (arm64-v8a)&quot;</p>
-<dt>&bull;</p>
-<dd><code>x86</code>: &quot;x86 (x86)&quot;</p>
-<dt>&bull;</p>
-<dd><code>x86_64</code>: &quot;x86_64 (x86_64)&quot; </p>
+<dt>&bull;</dt>
+<dd><code>armv7-a</code>: &quot;ARMv7-A (armv7-a)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>armv7-a-hard</code>: &quot;ARMv7-A, hard-float ABI (armv7-a)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>arm64-v8a</code>: &quot;ARMv8-A, 64bit (arm64-v8a)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>x86</code>: &quot;x86 (x86)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>x86_64</code>: &quot;x86_64 (x86_64)&quot; </dd>
 <p> This property is initialized by the value of the <code>CMAKE_ANDROID_ARCH</code> variable if it is set when a target is created.</dl>
 <h3>Android_Assets_Directories</h3>
 <p>Set the Android assets directories to copy into the main assets folder before build. This a string property that contains the directory paths separated by semicolon. This property is initialized by the value of the <code>CMAKE_ANDROID_ASSETS_DIRECTORIES</code> variable if it is set when a target is created.</p>
@@ -438,10 +438,10 @@ EndGlobalSection</pre>
 <p> AUTOMOC is a boolean specifying whether CMake will handle the Qt <code>moc</code> preprocessor automatically, i.e. without having to use the <code>QT4_WRAP_CPP()</code> or QT5_WRAP_CPP() macro. Currently Qt4 and Qt5 are supported. </p>
 <p> When this property is set <code>ON</code>, CMake will scan the source files at build time and invoke moc accordingly.</p>
 <dl>
-<dt>&bull;</p>
-<dd>If an <code>#include</code> statement like <code>#include &quot;moc_foo.cpp&quot;</code> is found, the <code>Q_OBJECT</code> class declaration is expected in the header, and <code>moc</code> is run on the header file. A <code>moc_foo.cpp</code> file will be generated from the source&#8217;s header into the <code>CMAKE_CURRENT_BINARY_DIR</code> directory. This allows the compiler to find the included <code>moc_foo.cpp</code> file regardless of the location the original source. However, if multiple source files in different directories do this then their generated moc files would collide. In this case a diagnostic will be issued.</p>
-<dt>&bull;</p>
-<dd>If an <code>#include</code> statement like <code>#include &quot;foo.moc&quot;</code> is found, then a <code>Q_OBJECT</code> is expected in the current source file and <code>moc</code> is run on the file itself. Additionally, header files with the same base name (like <code>foo.h</code>) or <code>_p</code> appended to the base name (like <code>foo_p.h</code>) are parsed for <code>Q_OBJECT</code> macros, and if found, <code>moc</code> is also executed on those files. <code>AUTOMOC</code> checks multiple header alternative extensions, such as <code>hpp</code>, <code>hxx</code> etc when searching for headers. The resulting moc files, which are not included as shown above in any of the source files are included in a generated <code>&lt;targetname&gt;_automoc.cpp</code> file, which is compiled as part of the target. </p>
+<dt>&bull;</dt>
+<dd>If an <code>#include</code> statement like <code>#include &quot;moc_foo.cpp&quot;</code> is found, the <code>Q_OBJECT</code> class declaration is expected in the header, and <code>moc</code> is run on the header file. A <code>moc_foo.cpp</code> file will be generated from the source&#8217;s header into the <code>CMAKE_CURRENT_BINARY_DIR</code> directory. This allows the compiler to find the included <code>moc_foo.cpp</code> file regardless of the location the original source. However, if multiple source files in different directories do this then their generated moc files would collide. In this case a diagnostic will be issued.</dd>
+<dt>&bull;</dt>
+<dd>If an <code>#include</code> statement like <code>#include &quot;foo.moc&quot;</code> is found, then a <code>Q_OBJECT</code> is expected in the current source file and <code>moc</code> is run on the file itself. Additionally, header files with the same base name (like <code>foo.h</code>) or <code>_p</code> appended to the base name (like <code>foo_p.h</code>) are parsed for <code>Q_OBJECT</code> macros, and if found, <code>moc</code> is also executed on those files. <code>AUTOMOC</code> checks multiple header alternative extensions, such as <code>hpp</code>, <code>hxx</code> etc when searching for headers. The resulting moc files, which are not included as shown above in any of the source files are included in a generated <code>&lt;targetname&gt;_automoc.cpp</code> file, which is compiled as part of the target. </dd>
 <p> This property is initialized by the value of the <code>CMAKE_AUTOMOC</code> variable if it is set when a target is created. </p>
 <p> Additional command line options for moc can be set via the <code>AUTOMOC_MOC_OPTIONS</code> property. </p>
 <p> By enabling the <code>CMAKE_AUTOMOC_RELAXED_MODE</code> variable the rules for searching the files which will be processed by moc can be relaxed. See the documentation for this variable for more details. </p>
@@ -941,22 +941,22 @@ set_target_properties(dynamicFramework PROPERTIES
 <p> An executable target with <code>MACOSX_BUNDLE</code> enabled will be built as an application bundle on OS X. By default its <code>Info.plist</code> file is created by configuring a template called <code>MacOSXBundleInfo.plist.in</code> located in the <code>CMAKE_MODULE_PATH</code>. This property specifies an alternative template file name which may be a full path. </p>
 <p> The following target properties may be set to specify content to be configured into the file:</p>
 <dl>
-<dt><code>MACOSX_BUNDLE_BUNDLE_NAME</code></p>
-<dd>Sets <code>CFBundleName</code>.</p>
-<dt><code>MACOSX_BUNDLE_BUNDLE_VERSION</code></p>
-<dd>Sets <code>CFBundleVersion</code>.</p>
-<dt><code>MACOSX_BUNDLE_COPYRIGHT</code></p>
-<dd>Sets <code>NSHumanReadableCopyright</code>.</p>
-<dt><code>MACOSX_BUNDLE_GUI_IDENTIFIER</code></p>
-<dd>Sets <code>CFBundleIdentifier</code>.</p>
-<dt><code>MACOSX_BUNDLE_ICON_FILE</code></p>
-<dd>Sets <code>CFBundleIconFile</code>.</p>
-<dt><code>MACOSX_BUNDLE_INFO_STRING</code></p>
-<dd>Sets <code>CFBundleGetInfoString</code>.</p>
-<dt><code>MACOSX_BUNDLE_LONG_VERSION_STRING</code></p>
-<dd>Sets <code>CFBundleLongVersionString</code>.</p>
-<dt><code>MACOSX_BUNDLE_SHORT_VERSION_STRING</code></p>
-<dd>Sets <code>CFBundleShortVersionString</code>. </p>
+<dt><code>MACOSX_BUNDLE_BUNDLE_NAME</code></dt>
+<dd>Sets <code>CFBundleName</code>.</dd>
+<dt><code>MACOSX_BUNDLE_BUNDLE_VERSION</code></dt>
+<dd>Sets <code>CFBundleVersion</code>.</dd>
+<dt><code>MACOSX_BUNDLE_COPYRIGHT</code></dt>
+<dd>Sets <code>NSHumanReadableCopyright</code>.</dd>
+<dt><code>MACOSX_BUNDLE_GUI_IDENTIFIER</code></dt>
+<dd>Sets <code>CFBundleIdentifier</code>.</dd>
+<dt><code>MACOSX_BUNDLE_ICON_FILE</code></dt>
+<dd>Sets <code>CFBundleIconFile</code>.</dd>
+<dt><code>MACOSX_BUNDLE_INFO_STRING</code></dt>
+<dd>Sets <code>CFBundleGetInfoString</code>.</dd>
+<dt><code>MACOSX_BUNDLE_LONG_VERSION_STRING</code></dt>
+<dd>Sets <code>CFBundleLongVersionString</code>.</dd>
+<dt><code>MACOSX_BUNDLE_SHORT_VERSION_STRING</code></dt>
+<dd>Sets <code>CFBundleShortVersionString</code>. </dd>
 <p> CMake variables of the same name may be set to affect all targets in a directory that do not have each specific property set. If a custom <code>Info.plist</code> is specified by this property it may of course hard-code all the settings instead of using the target properties.</dl>
 <h3>Macosx_Bundle</h3>
 <p>Build an executable as an Application Bundle on OS X or iOS. </p>
@@ -966,14 +966,14 @@ set_target_properties(dynamicFramework PROPERTIES
 <p> A library target with <code>FRAMEWORK</code> enabled will be built as a framework on OS X. By default its <code>Info.plist</code> file is created by configuring a template called <code>MacOSXFrameworkInfo.plist.in</code> located in the <code>CMAKE_MODULE_PATH</code>. This property specifies an alternative template file name which may be a full path. </p>
 <p> The following target properties may be set to specify content to be configured into the file:</p>
 <dl>
-<dt><code>MACOSX_FRAMEWORK_BUNDLE_VERSION</code></p>
-<dd>Sets <code>CFBundleVersion</code>.</p>
-<dt><code>MACOSX_FRAMEWORK_ICON_FILE</code></p>
-<dd>Sets <code>CFBundleIconFile</code>.</p>
-<dt><code>MACOSX_FRAMEWORK_IDENTIFIER</code></p>
-<dd>Sets <code>CFBundleIdentifier</code>.</p>
-<dt><code>MACOSX_FRAMEWORK_SHORT_VERSION_STRING</code></p>
-<dd>Sets <code>CFBundleShortVersionString</code>. </p>
+<dt><code>MACOSX_FRAMEWORK_BUNDLE_VERSION</code></dt>
+<dd>Sets <code>CFBundleVersion</code>.</dd>
+<dt><code>MACOSX_FRAMEWORK_ICON_FILE</code></dt>
+<dd>Sets <code>CFBundleIconFile</code>.</dd>
+<dt><code>MACOSX_FRAMEWORK_IDENTIFIER</code></dt>
+<dd>Sets <code>CFBundleIdentifier</code>.</dd>
+<dt><code>MACOSX_FRAMEWORK_SHORT_VERSION_STRING</code></dt>
+<dd>Sets <code>CFBundleShortVersionString</code>. </dd>
 <p> CMake variables of the same name may be set to affect all targets in a directory that do not have each specific property set. If a custom <code>Info.plist</code> is specified by this property it may of course hard-code all the settings instead of using the target properties.</dl>
 <h3>Macosx_Rpath</h3>
 <p>Whether this target on OS X or iOS is located at runtime using rpaths. </p>
@@ -1009,20 +1009,20 @@ set_target_properties(dynamicFramework PROPERTIES
 <p> Contents of <code>OUTPUT_NAME</code> and the variants listed below may use <code>generator expressions</code>. </p>
 <p> See also the variants:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>ARCHIVE_OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>ARCHIVE_OUTPUT_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>LIBRARY_OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>LIBRARY_OUTPUT_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>RUNTIME_OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>RUNTIME_OUTPUT_NAME</code></dl>
+<dt>&bull;</dt>
+<dd><code>OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>ARCHIVE_OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>ARCHIVE_OUTPUT_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>LIBRARY_OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>LIBRARY_OUTPUT_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>RUNTIME_OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>RUNTIME_OUTPUT_NAME</code></dd></dl>
 <h3>PDB_NAME_&lt;CONFIG&gt;</h3>
 <p>Per-configuration output name for the MS debug symbol <code>.pdb</code> file generated by the linker for an executable or shared library target. </p>
 <p> This is the configuration-specific version of <code>PDB_NAME</code>. </p>

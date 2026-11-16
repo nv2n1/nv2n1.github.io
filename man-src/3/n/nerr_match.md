@@ -10,7 +10,6 @@ description: "nerr_match"
 <p>nerr_match</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;util/neo_err.h&gt;
-
 int nerr_match(NEOERR *err, NERR_TYPE type);
 </code></pre>
 <h2>Arguments</h2>

@@ -15,7 +15,7 @@ xprt_write_space - wake the task waiting for transport output buffer space
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>transport with waiting tasks</dl>
+<dl><dd></dd><dd>transport with waiting tasks</dd></dl>
 
 <h2>Description</h2>
 

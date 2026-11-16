@@ -21,7 +21,6 @@ int ldap_extended_operation(
     LDAPControl **sctrls,
     LDAPControl **cctrls,
     int *msgidp);
-
 int ldap_extended_operation_s(
     LDAP *ld,
     const char *requestoid,

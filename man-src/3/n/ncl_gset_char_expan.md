@@ -13,8 +13,8 @@ description: "gset_char_expan (Set character expansion factor) – sets the widt
 <p> void gset_char_expan(Gdouble char_expan);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>char_expan</p>
-<dd>(Input) &#8211; Specifies a deviation of the width to height ratio for characters drawn using the GTX output primitive. char_expan of 10.0 would specify a character that is 10 times as wide as normal. char_expan of 0.1 would request characters that are 1/10th as wide as normal. The character height remains unchanged. char_expan &gt; 0. By default char_expan = 1.0</dl>
+<dt>char_expan</dt>
+<dd>(Input) &#8211; Specifies a deviation of the width to height ratio for characters drawn using the GTX output primitive. char_expan of 10.0 would specify a character that is 10 times as wide as normal. char_expan of 0.1 would request characters that are 1/10th as wide as normal. The character height remains unchanged. char_expan &gt; 0. By default char_expan = 1.0</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

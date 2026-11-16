@@ -42,8 +42,8 @@ description: "ptchown_selinux – Security Enhanced Linux Policy for the ptchown
 <p> <code>ptchown_exec_t</code> </p>
 <p> &#8211; Set files with the ptchown_exec_t type, if you want to transition an executable to the ptchown_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/pt_chown, /usr/libexec/pt_chown </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/pt_chown, /usr/libexec/pt_chown </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

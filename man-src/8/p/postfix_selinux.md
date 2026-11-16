@@ -40,8 +40,8 @@ description: "postfix_selinux – Security Enhanced Linux Policy for the postfix
 <p> <code>postfix_exec_t </code> </p>
 <p> &#8211; Set files with the postfix_exec_t type, if you want to transition an executable to the postfix_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/postfix/postfix-script.*, /usr/libexec/postfix/.* </p>
+<dt>Paths:</dt>
+<dd>/etc/postfix/postfix-script.*, /usr/libexec/postfix/.* </dd>
 </dl>
 <p> <code>postfix_initrc_exec_t </code> </p>
 <p> &#8211; Set files with the postfix_initrc_exec_t type, if you want to transition an executable to the postfix_initrc_t domain. </p>
@@ -58,8 +58,8 @@ description: "postfix_selinux – Security Enhanced Linux Policy for the postfix
 <p> <code>postfix_master_exec_t </code> </p>
 <p> &#8211; Set files with the postfix_master_exec_t type, if you want to transition an executable to the postfix_master_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/postcat, /usr/sbin/postfix, /usr/libexec/postfix/master, /usr/sbin/postkick, /usr/sbin/postsuper, /usr/sbin/postalias, /usr/sbin/postlock, /usr/sbin/postlog </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/postcat, /usr/sbin/postfix, /usr/libexec/postfix/master, /usr/sbin/postkick, /usr/sbin/postsuper, /usr/sbin/postalias, /usr/sbin/postlock, /usr/sbin/postlog </dd>
 </dl>
 <p> <code>postfix_pickup_exec_t </code> </p>
 <p> &#8211; Set files with the postfix_pickup_exec_t type, if you want to transition an executable to the postfix_pickup_t domain. </p>
@@ -88,8 +88,8 @@ description: "postfix_selinux – Security Enhanced Linux Policy for the postfix
 <p> <code>postfix_smtp_exec_t </code> </p>
 <p> &#8211; Set files with the postfix_smtp_exec_t type, if you want to transition an executable to the postfix_smtp_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/postfix/lmtp, /usr/libexec/postfix/smtp, /usr/libexec/postfix/scache </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/postfix/lmtp, /usr/libexec/postfix/smtp, /usr/libexec/postfix/scache </dd>
 </dl>
 <p> <code>postfix_smtp_tmp_t </code> </p>
 <p> &#8211; Set files with the postfix_smtp_tmp_t type, if you want to store postfix smtp temporary files in the /tmp directories. </p>
@@ -104,8 +104,8 @@ description: "postfix_selinux – Security Enhanced Linux Policy for the postfix
 <p> <code>postfix_spool_maildrop_t </code> </p>
 <p> &#8211; Set files with the postfix_spool_maildrop_t type, if you want to treat the files as postfix spool maildrop data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/spool/postfix/defer(/.*)?, /var/spool/postfix/deferred(/.*)?, /var/spool/postfix/maildrop(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/spool/postfix/defer(/.*)?, /var/spool/postfix/deferred(/.*)?, /var/spool/postfix/maildrop(/.*)? </dd>
 </dl>
 <p> <code>postfix_spool_t </code> </p>
 <p> &#8211; Set files with the postfix_spool_t type, if you want to store the postfix files under the /var/spool directory. </p>
@@ -123,9 +123,9 @@ description: "postfix_selinux – Security Enhanced Linux Policy for the postfix
 <p> Policy governs the access confined processes have to these ports. SELinux postfix policy is very flexible allowing users to setup their postfix processes in as secure a method as possible. </p>
 <p> The following port types are defined for postfix: </p>
 <dl>
-<dt><code>postfix_policyd_port_t </code></p>
+<dt><code>postfix_policyd_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 10031</dl>
+</dd><dd>Default Defined Ports: tcp 10031</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux postfix policy is very flexible allowing users to setup their postfix processes in as secure a method as possible. </p>

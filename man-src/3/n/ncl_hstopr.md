@@ -13,57 +13,39 @@ HSTOPR - Specifies various REAL arrays to be used by the the Histogram utility.
 
  void c_hstopr (char *string, float *array, int larr)
 <h2>Description</h2><dl COMPACT><dt>STRING
-<dd>Character, input -- Selects an internal parameter. The possibilities are: 
-
- 
+</dt><dd>Character, input -- Selects an internal parameter. The possibilities are: 
 &nbsp;<wbr>&nbsp;<wbr>'WIN=ON'&nbsp;<wbr>or&nbsp;<wbr>'WIN=OFF' 
- 
 &nbsp;<wbr>&nbsp;<wbr>'SPA=ON'&nbsp;<wbr>or&nbsp;<wbr>'SPA=OFF' 
- 
 &nbsp;<wbr>&nbsp;<wbr>'MVA=ON'&nbsp;<wbr>or&nbsp;<wbr>'MVA=OFF' 
-
  WIN defines the portion of the frame that will receive the histogram. SPA determines the spacing between histogram bars. MVA requests a test to detect input special values which denote missing data.
-<dt>ARRAY
-<dd>Real, input -- It has a different use depending upon which parameter is specified by argument STRING. See the examples following argument LARR.
-<dt>LARR
-<dd>Integer, input -- Dimension of ARRAY. 
-
+</dd><dt>ARRAY
+</dt><dd>Real, input -- It has a different use depending upon which parameter is specified by argument STRING. See the examples following argument LARR.
+</dd><dt>LARR
+</dt><dd>Integer, input -- Dimension of ARRAY. 
  The following arrays may be defined by this routine: 
-
  Windowing: 
-
  <pre>STRING is 'WIN=ON'
 LARR = 4
 ARRAY(1) = XMIN
 ARRAY(2) = XMAX
 ARRAY(3) = YMIN
-ARRAY(4) = YMAX</pre><dd>These coordinates define a rectangular region of the total frame in NDC's where the current histogram is to be plotted. The range of allowed values is between 0. and 1. in both dimensions. 
-
+ARRAY(4) = YMAX</pre></dd><dd>These coordinates define a rectangular region of the total frame in NDC's where the current histogram is to be plotted. The range of allowed values is between 0. and 1. in both dimensions. 
  For example, XMIN=0., XMAX=.5, YMIN=.5, and YMAX=1. would specify the upper left quadrant of the frame. 
-
  IF 'WIN=OFF', the default window for the histogram will be the entire frame. 
-
  Spacing: 
-
  <pre>STRING is 'SPA=ON'
 LARR = 2
 ARRAY(1) = SPAC
-ARRAY(2) = OVERLP</pre><dd>SPAC determines the spacing of histogram bars between 0. (no spacing) and 4. (maximum spacing). Default spacing is SPAC = 2.0. 
-
+ARRAY(2) = OVERLP</pre></dd><dd>SPAC determines the spacing of histogram bars between 0. (no spacing) and 4. (maximum spacing). Default spacing is SPAC = 2.0. 
  OVERLP determines the overlap of adjacent histogram bars when two datasets are compared. Valid values are -4.0 (maximum overlap) to 4.0 (little or no overlap). The Default is 0. 
-
  When STRING = 'SPA=OFF', there is no spacing or overlap. 
-
  Detecting missing values: 
-
  <pre>STRING is 'MVA=ON'
 LARR = 2
 ARRAY(1) = SETMVA
-ARRAY(2) = SETEPS</pre><dd>SETMVA is the special value used to denote missing data. The default value is -9999. 
-
+ARRAY(2) = SETEPS</pre></dd><dd>SETMVA is the special value used to denote missing data. The default value is -9999. 
  SETEPS is an epsilon to use in the special value test. If the difference between a data point and SETMVA is less than SETEPS, then the data point is assumed to be a missing value. The Default is 1.E-10. 
-
- When STRING = 'MVA=OFF', there is no testing for missing values.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+ When STRING = 'MVA=OFF', there is no testing for missing values.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>HSTOPR is called to set parameters of type REAL before entry HISTGR is called to generate the histogram. Options are the portion of the frame to receive the graphic, and the amount of spacing and overlap of histogram bars. 
 
  For a complete list of parameters available in this utility, see the histogram_params man page.

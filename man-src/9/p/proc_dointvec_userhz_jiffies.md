@@ -14,19 +14,19 @@ description: "proc_dointvec_userhz_jiffies – read a vector of integers as 1/US
 <p><i>table</i></p>
 <dl>
 <dd>
-<dd>the sysctl table</dl>
+</dd><dd>the sysctl table</dd></dl>
 <p> <i>write</i></p>
 <dl>
-<dd><code>TRUE</code> if this is a write to the sysctl file</dl>
+<dd><code>TRUE</code> if this is a write to the sysctl file</dd></dl>
 <p> <i>buffer</i></p>
 <dl>
-<dd>the user buffer</dl>
+<dd>the user buffer</dd></dl>
 <p> <i>lenp</i></p>
 <dl>
-<dd>the size of the user buffer</dl>
+<dd>the size of the user buffer</dd></dl>
 <p> <i>ppos</i></p>
 <dl>
-<dd>pointer to the file position</dl>
+<dd>pointer to the file position</dd></dl>
 <h2>Description</h2>
 <p>Reads/writes up to table-&gt;maxlen/sizeof(unsigned int) integer values from/to the user buffer, treated as an ASCII string. The values read are assumed to be in 1/USER_HZ seconds, and are converted into jiffies. </p>
 <p> Returns 0 on success.</p>

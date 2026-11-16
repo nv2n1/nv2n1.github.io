@@ -14,20 +14,20 @@ description: "get_bbt_block – Get the first valid eraseblock suitable to store
 <p><i>this</i></p>
 <dl>
 <dd>
-<dd>the NAND device</dl>
+</dd><dd>the NAND device</dd></dl>
 <p> <i>td</i></p>
 <dl>
-<dd>the BBT description</dl>
+<dd>the BBT description</dd></dl>
 <p> <i>md</i></p>
 <dl>
-<dd>the mirror BBT descriptor</dl>
+<dd>the mirror BBT descriptor</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>the CHIP selector</dl>
+<dd>the CHIP selector</dd></dl>
 <h2>Description</h2>
 <p>This functions returns a positive block number pointing a valid eraseblock suitable to store a BBT (i.e. in the range reserved for BBT), or -ENOSPC if all blocks are already used of marked bad. If td-&gt;pages[chip] was already pointing to a valid block we re-use it, otherwise we search for the next valid one.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

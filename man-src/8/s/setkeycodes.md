@@ -15,7 +15,7 @@ description: "setkeycodes – load kernel scancode-to-keycode mapping table entr
 <h2>Theory</h2>
 <p>The usual PC keyboard produces a series of scancodes for each key press and key release. (Scancodes are shown by <code>showkey -s</code>, see <code><a href="/docs/linux/man/1-showkey/">showkey</a></code>(1) ) The kernel parses this stream of scancodes, and converts it to a stream of keycodes (key press/release events). (Keycodes are shown by <code>showkey</code>.) Apart from a few scancodes with special meaning, and apart from the sequence produced by the Pause key, and apart from shiftstate related scancodes, and apart from the key up/down bit, the stream of scancodes consists of unescaped scancodes xx (7 bits) and escaped scancodes e0 xx (8+7 bits). To these scancodes or scancode pairs, a corresponding keycode can be assigned (in the range 1-127). For example, if you have a Macro key that produces e0 6f according to <code><a href="/docs/linux/man/1-showkey/">showkey</a></code>(1), the command</p>
 <dl>
-<dd><code>setkeycodes e06f 112</code></dl>
+<dd><code>setkeycodes e06f 112</code></dd></dl>
 <p> will assign the keycode 112 to it, and then <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1) can be used to define the function of this key. </p>
 <p> Some older kernels might hardwire a low scancode range to the equivalent keycodes; setkeycodes will fail when you try to remap these.</p>
 <h2>2.6 Kernels</h2>

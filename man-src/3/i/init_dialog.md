@@ -16,10 +16,8 @@ description: "init_dialog – Low level initialisation of a dialog. Allegro game
 <p> This function provides lower level access to the same functionality as do_dialog(), but allows you to combine a dialog box with your own program control structures. It initialises a dialog, returning a pointer to a player object that can be used with update_dialog() and shutdown_dialog(). With these functions, you could implement your own version of do_dialog() with the lines: </p>
 <pre><code>
 DIALOG_PLAYER *player = init_dialog(dialog, focus_obj);
-
 while (update_dialog(player))
     ;
-
 return shutdown_dialog(player);
 </code></pre>
 <p> Note that you are responsible for showing and hiding the mouse cursor, which do_dialog would otherwise do for you, or saving and restoring the screen contents, as popup_dialog would do for you. </p>

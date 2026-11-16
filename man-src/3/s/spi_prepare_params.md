@@ -18,15 +18,15 @@ description: "SPI_prepare_params – prepare a statement, without executing it y
 <h2>Arguments</h2>
 <p>const char * <i>command</i></p>
 <dl COMPACT>
-<dd>command string</dl>
+<dd>command string</dd></dl>
 <p> ParserSetupHook <i>parserSetup</i></p>
 <dl COMPACT>
-<dd>Parser hook setup function</dl>
+<dd>Parser hook setup function</dd></dl>
 <p> void * <i>parserSetupArg</i></p>
 <dl COMPACT>
-<dd>passthrough argument for <i>parserSetup</i></dl>
+<dd>passthrough argument for <i>parserSetup</i></dd></dl>
 <p> int <i>cursorOptions</i></p>
 <dl COMPACT>
-<dd>integer bit mask of cursor options; zero produces default behavior</dl>
+<dd>integer bit mask of cursor options; zero produces default behavior</dd></dl>
 <h2>Return Value</h2>
 <p><code>SPI_prepare_params</code> has the same return conventions as <code>SPI_prepare</code>.</p>

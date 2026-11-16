@@ -16,26 +16,26 @@ description: "lkbib – search bibliographic databases"
 <h2>OPTIONS</h2>
 <p> Whitespace is permitted between a command-line option and its argument.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display a usage message and exit.</p>
-<dt><code>-i</code><i>string</i></p>
-<dd> When searching files for which no index exists, ignore the contents of fields whose names are in <i>string</i>.</p>
-<dt><code>-p</code><i>filename</i></p>
-<dd> Search <i>filename</i>. Multiple <code>-p</code> options can be used.</p>
-<dt><code>-t</code><i>n</i></p>
-<dd> Only require the first <i>n</i> characters of keys to be given. Initially <i>n</i> is~6.</p>
-<dt><code>-v</code></p>
-<dd> <code>&#8211;version</code> Display version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a usage message and exit.</dd>
+<dt><code>-i</code><i>string</i></dt>
+<dd> When searching files for which no index exists, ignore the contents of fields whose names are in <i>string</i>.</dd>
+<dt><code>-p</code><i>filename</i></dt>
+<dd> Search <i>filename</i>. Multiple <code>-p</code> options can be used.</dd>
+<dt><code>-t</code><i>n</i></dt>
+<dd> Only require the first <i>n</i> characters of keys to be given. Initially <i>n</i> is~6.</dd>
+<dt><code>-v</code></dt>
+<dd> <code>&#8211;version</code> Display version information and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>REFER</i></p>
-<dd> Default database.</dl>
+<dt><i>REFER</i></dt>
+<dd> Default database.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/:dict/:papers/:Ind</i></p>
-<dd> Default database to be used if the <i>REFER</i> environment variable is not set.</p>
-<dt>filename<i>.i</i></p>
-<dd> Index files.</dl>
+<dt><i>/usr/:dict/:papers/:Ind</i></dt>
+<dd> Default database to be used if the <i>REFER</i> environment variable is not set.</dd>
+<dt>filename<i>.i</i></dt>
+<dd> Index files.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-refer/">refer</a></i>(1), <i><a href="/docs/linux/man/1-lookbib/">lookbib</a></i>(1), <i><a href="/docs/linux/man/1-indxbib/">indxbib</a></i>(1) </p>
 <h2>Index</h2>

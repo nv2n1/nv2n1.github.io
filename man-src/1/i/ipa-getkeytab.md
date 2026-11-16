@@ -21,32 +21,32 @@ description: "ipa-getkeytab – Get a keytab for a Kerberos principal"
 <p> This is used during IPA client enrollment to retrieve a host service principal and store it in /etc/krb5.keytab. It is possible to retrieve the keytab without Kerberos credentials if the host was pre-created with a one-time password. The keytab can be retrieved by binding as the host and authenticating with this one-time password. The <code>-D|&#8211;binddn</code> and <code>-w|&#8211;bindpw</code> options are used for this authentication.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p principal-name</code></p>
-<dd> The non-realm part of the full principal name.</p>
-<dt><code>-k keytab-file</code></p>
-<dd> The keytab file where to append the new key (will be created if it does not exist).</p>
-<dt><code>-e encryption-types</code></p>
-<dd> The list of encryption types to use to generate keys. ipa-getkeytab will use local client defaults if not provided. Valid values depend on the Kerberos library version and configuration. Common values are: aes256-cts aes128-cts des3-hmac-sha1 arcfour-hmac des-hmac-sha1 des-cbc-md5 des-cbc-crc</p>
-<dt><code>-s ipaserver</code></p>
-<dd> The IPA server to retrieve the keytab from (FQDN). If this option is not provided the server name is read from the IPA configuration file (/etc/ipa/default.conf). Cannot be used together with <code>-H</code>.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode. Only errors are displayed.</p>
-<dt><code>&#8211;permitted-enctypes</code></p>
-<dd> This options returns a description of the permitted encryption types, like this: Supported encryption types: AES-256 CTS mode with 96-bit SHA-1 HMAC AES-128 CTS mode with 96-bit SHA-1 HMAC Triple DES cbc mode with HMAC/sha1 ArcFour with HMAC/md5 DES cbc mode with CRC-32 DES cbc mode with RSA-MD5 DES cbc mode with RSA-MD4</p>
-<dt><code>-P, &#8211;password</code></p>
-<dd> Use this password for the key instead of one randomly generated.</p>
-<dt><code>-D, &#8211;binddn</code></p>
-<dd> The LDAP DN to bind as when retrieving a keytab without Kerberos credentials. Generally used with the <code>-w</code> option.</p>
-<dt><code>-w, &#8211;bindpw</code></p>
-<dd> The LDAP password to use when not binding with Kerberos. <code>-D</code> and <code>-w</code> can not be used together with <code>-Y</code>.</p>
-<dt><code>&#8211;cacert</code></p>
-<dd> The path to the IPA CA certificate used to validate LDAPS/STARTTLS connections. Defaults to /etc/ipa/ca.crt</p>
-<dt><code>-H, &#8211;ldapuri</code></p>
-<dd> LDAP URI. If ldap:// is specified, STARTTLS is initiated by default. Can not be used with <code>-s</code>.</p>
-<dt><code>-Y, &#8211;mech</code></p>
-<dd> SASL mechanism to use if <code>-D</code> and <code>-w</code> are not specified. Use either GSSAPI or EXTERNAL.</p>
-<dt><code>-r</code></p>
-<dd> Retrieve mode. Retrieve an existing key from the server instead of generating a new one. This is incompatibile with the &#8211;password option, and will work only against a IPA server more recent than version 3.3. The user requesting the keytab must have access to the keys for this operation to succeed.</dl>
+<dt><code>-p principal-name</code></dt>
+<dd> The non-realm part of the full principal name.</dd>
+<dt><code>-k keytab-file</code></dt>
+<dd> The keytab file where to append the new key (will be created if it does not exist).</dd>
+<dt><code>-e encryption-types</code></dt>
+<dd> The list of encryption types to use to generate keys. ipa-getkeytab will use local client defaults if not provided. Valid values depend on the Kerberos library version and configuration. Common values are: aes256-cts aes128-cts des3-hmac-sha1 arcfour-hmac des-hmac-sha1 des-cbc-md5 des-cbc-crc</dd>
+<dt><code>-s ipaserver</code></dt>
+<dd> The IPA server to retrieve the keytab from (FQDN). If this option is not provided the server name is read from the IPA configuration file (/etc/ipa/default.conf). Cannot be used together with <code>-H</code>.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode. Only errors are displayed.</dd>
+<dt><code>&#8211;permitted-enctypes</code></dt>
+<dd> This options returns a description of the permitted encryption types, like this: Supported encryption types: AES-256 CTS mode with 96-bit SHA-1 HMAC AES-128 CTS mode with 96-bit SHA-1 HMAC Triple DES cbc mode with HMAC/sha1 ArcFour with HMAC/md5 DES cbc mode with CRC-32 DES cbc mode with RSA-MD5 DES cbc mode with RSA-MD4</dd>
+<dt><code>-P, &#8211;password</code></dt>
+<dd> Use this password for the key instead of one randomly generated.</dd>
+<dt><code>-D, &#8211;binddn</code></dt>
+<dd> The LDAP DN to bind as when retrieving a keytab without Kerberos credentials. Generally used with the <code>-w</code> option.</dd>
+<dt><code>-w, &#8211;bindpw</code></dt>
+<dd> The LDAP password to use when not binding with Kerberos. <code>-D</code> and <code>-w</code> can not be used together with <code>-Y</code>.</dd>
+<dt><code>&#8211;cacert</code></dt>
+<dd> The path to the IPA CA certificate used to validate LDAPS/STARTTLS connections. Defaults to /etc/ipa/ca.crt</dd>
+<dt><code>-H, &#8211;ldapuri</code></dt>
+<dd> LDAP URI. If ldap:// is specified, STARTTLS is initiated by default. Can not be used with <code>-s</code>.</dd>
+<dt><code>-Y, &#8211;mech</code></dt>
+<dd> SASL mechanism to use if <code>-D</code> and <code>-w</code> are not specified. Use either GSSAPI or EXTERNAL.</dd>
+<dt><code>-r</code></dt>
+<dd> Retrieve mode. Retrieve an existing key from the server instead of generating a new one. This is incompatibile with the &#8211;password option, and will work only against a IPA server more recent than version 3.3. The user requesting the keytab must have access to the keys for this operation to succeed.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Add and retrieve a keytab for the NFS service principal on the host foo.example.com and save it in the file /tmp/nfs.keytab and retrieve just the des-cbc-crc key. </p>
 <p>#&nbsp;<wbr>ipa-getkeytab -p nfs/foo.example.com -k&nbsp;<wbr>/tmp/nfs.keytab -e des-cbc-crc </p>

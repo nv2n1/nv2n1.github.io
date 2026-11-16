@@ -15,16 +15,16 @@ description: "era_invalidate – Provide a list of blocks that have changed sinc
 <p> This tool cannot be run on live metadata unless the <code>&#8211;metadata-snap</code> option is used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-o</code> {output file}</p>
-<dd>Write output to a file rather than stdout.</p>
-<dt><code>&#8211;metadata-snapshot</code></p>
-<dd>Use the metadata snapshot rather than the current superblock.</p>
-<dt><code>&#8211;written-since</code> {era nr}</p>
-<dd>Blocks written since the given era will be listed.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-o</code> {output file}</dt>
+<dd>Write output to a file rather than stdout.</dd>
+<dt><code>&#8211;metadata-snapshot</code></dt>
+<dd>Use the metadata snapshot rather than the current superblock.</dd>
+<dt><code>&#8211;written-since</code> {era nr}</dt>
+<dd>Blocks written since the given era will be listed.</dd></dl>
 <h2>Example</h2>
 <p>List the blocks that may have been written since the beginning of era 13 on the metadata device /dev/vg/metadata: </p>
 <pre> $ era_invalidate --written-since 13 /dev/vg/metadata</pre>

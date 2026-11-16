@@ -14,21 +14,21 @@ description: "rhsmcertd – Periodically scans and updates the entitlement certi
 <p>Red Hat provides content updates and support by issuing <i>subscriptions</i> for its products. These subscriptions are applied to systems (machines). Red Hat Subscription Manager is a tool which allows administrators to manage those subscriptions by registering systems and people, applying subscriptions, and viewing subscriptions. When subscriptions are applied to a system or when new subscriptions are available, the subscription management system issues that machine an X.509 certificate which contains all of the details of that subscription. The <code>rhsmcertd</code> process runs periodically to check for changes in the subscriptions available to a machine by updating the entitlement certificates installed on the machine and by installing new entitlement certificates as they&#8217;re available. At a defined interval, the process checks with the subscription management service to see if any new subscriptions are available to the system. If there are, it pulls in the associated subscription certificates. If any subscriptions have expired and new subscriptions are available, then the <code>rhsmcertd</code> process will automatically request those subscriptions. This <code>rhsmcertd</code> process invokes the <code>rhsmcertd-worker.py</code> script to perform the certificate add and update operations. Both the certificate interval and the auto-attach interval are configurable and can be reset through the <code>rhsmcertd</code> daemon itself or by editing the Subscription Manager <code>/etc/rhsm/rhsm.conf</code> file. <code>rhsmcertd</code> is started with the machine, by default, and is always running in the background. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Prints the specific help information for the given command. </p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd>Records more verbose output to the <code>/var/log/rhsm/rhsmcertd.log</code> log file. </p>
-<dt><code>-n, &#8211;now</code></p>
-<dd>Runs the <code>rhsmcertd</code> scan immediately, rather than waiting for the next scheduled interval. </p>
-<dt><code>-c, &#8211;cert-check-interval=MINUTES</code></p>
-<dd>Resets the interval for checking for new subscription certificates. This value is in minutes. The default is 240, or four hours. This interval is in effect until the daemon restarts, and then the values in the <code>/etc/rhsm/rhsm.conf</code> file are used (unless the argument is passed again). </p>
-<dt><code>-i, &#8211;auto-attach-interval=MINUTES</code></p>
-<dd>Resets the interval for checking for and replacing expired subscriptions. This value is in minutes. The default is 1440, or 24 hours. This interval is in effect until the daemon restarts, and then the values in the <code>/etc/rhsm/rhsm.conf</code> file are used (unless the argument is passed again). </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Prints the specific help information for the given command. </dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd>Records more verbose output to the <code>/var/log/rhsm/rhsmcertd.log</code> log file. </dd>
+<dt><code>-n, &#8211;now</code></dt>
+<dd>Runs the <code>rhsmcertd</code> scan immediately, rather than waiting for the next scheduled interval. </dd>
+<dt><code>-c, &#8211;cert-check-interval=MINUTES</code></dt>
+<dd>Resets the interval for checking for new subscription certificates. This value is in minutes. The default is 240, or four hours. This interval is in effect until the daemon restarts, and then the values in the <code>/etc/rhsm/rhsm.conf</code> file are used (unless the argument is passed again). </dd>
+<dt><code>-i, &#8211;auto-attach-interval=MINUTES</code></dt>
+<dd>Resets the interval for checking for and replacing expired subscriptions. This value is in minutes. The default is 1440, or 24 hours. This interval is in effect until the daemon restarts, and then the values in the <code>/etc/rhsm/rhsm.conf</code> file are used (unless the argument is passed again). </dd>
 </dl>
 <h2>Usage Examples</h2>
 <dl>
-<dt><code>NOTE</code></p>
-<dd>Be sure to stop the running <code>rhsmcertd</code> daemon before making any configuration changes, or the new configuration is not applied. </p>
+<dt><code>NOTE</code></dt>
+<dd>Be sure to stop the running <code>rhsmcertd</code> daemon before making any configuration changes, or the new configuration is not applied. </dd>
 </dl>
 <h3>Resetting The Certificate Scan Interval</h3>
 <pre>service rhsmcertd stop
@@ -46,9 +46,9 @@ rhsmcertd 180 480</pre>
 <p>This usage is still allowed, but it is deprecated and not recommended.</p>
 <h2>Associated Files</h2>
 <dl>
-<dd>* /usr/share/rhsm/certmgr.py</p>
-<dd>* /etc/rhsm/rhsm.conf</p>
-<dd>* /var/log/rhsm/rhsmcertd.log </p>
+<dd>* /usr/share/rhsm/certmgr.py</dd>
+<dd>* /etc/rhsm/rhsm.conf</dd>
+<dd>* /var/log/rhsm/rhsmcertd.log </dd>
 </dl>
 <h2>Bugs</h2>
 <p>This daemon is part of Red Hat Subscription Manager. To file bugs against this daemon, go to <a rel="nofollow" href="https://bugzilla.redhat.com,">https://bugzilla.redhat.com,</a> and select Red Hat &gt; Red Hat Enterprise Linux &gt; subscription-manager. </p>

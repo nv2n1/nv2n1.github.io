@@ -11,17 +11,14 @@ std::nothrow - std::nothrow
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;new&gt;
-
     extern const std::nothrow_t nothrow;</code></pre> 
 std::nothrow is a constant of type std::nothrow_t used to disambiguate the overloads of throwing and non-throwing allocation_functions. 
 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;new&gt;
 int main()
-
 {
     try {
         while (true) {

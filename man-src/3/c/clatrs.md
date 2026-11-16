@@ -19,7 +19,7 @@ description: "clatrs.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLATRS solves one of the triangular systems
     A * x = s*b,  A**T * x = s*b,  or  A**H * x = s*b,
@@ -32,11 +32,11 @@ description: "clatrs.f –"
  CTRSV is called. If the matrix A is singular (A(j,j) = 0 for some j),
  then s is set to 0 and a non-trivial solution to A*x = 0 is returned.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the matrix A is upper or lower triangular.
@@ -124,18 +124,18 @@ description: "clatrs.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 A rough bound on x is computed;
 if that is less than overflow, CTRSV
@@ -188,8 +188,9 @@ if that is less than overflow, CTRSV
   and we can safely call CTRSV if 1/M(n) and 1/G(n) are both greater
   than max(underflow, 1/overflow).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 239 of file clatrs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -11,15 +11,10 @@ operator==,!=(std::unordered_set) - operator==,!=(std::unordered_set)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Key, class Hash, class KeyEqual, class Allocator&gt;
-
 bool operator==(const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;lhs, (1)
-
                                                                               const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;rhs);
-
 template &lt;class Key, class Hash, class KeyEqual, class Allocator&gt;
-
 bool operator!=(const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;lhs, (2)
-
                                                                               const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;rhs);</code></pre> 
 Compares the contents of two unordered containers. 
 The contents of two unordered containers lhs and rhs are equal if the following conditions hold: 

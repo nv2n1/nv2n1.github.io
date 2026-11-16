@@ -13,11 +13,11 @@ CURVE - draws the curve defined by a specified series of points in the user coor
 
  void c_curve (float *px, float *py, int np)
 <h2>Description</h2><dl COMPACT><dt>PX
-<dd>(an input array of type REAL) defines the X user coordinates of the curve. Array PX is of length NP.
-<dt>PY
-<dd>(an input array of type REAL) defines the Y user coordinates of the curve. Array PY is of length NP.
-<dt>NP
-<dd>(an input expression of type INTEGER) specifies the number of points in the curve.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input array of type REAL) defines the X user coordinates of the curve. Array PX is of length NP.
+</dd><dt>PY
+</dt><dd>(an input array of type REAL) defines the Y user coordinates of the curve. Array PY is of length NP.
+</dd><dt>NP
+</dt><dd>(an input expression of type INTEGER) specifies the number of points in the curve.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>If the routine SET was not called, or if it was called with a linear mapping in both the X and Y coordinates, then the GKS routine GPL is called to output a polyline of length NP points. If the mapping in either axis is logarithmic, the input coordinates are transformed and drawn ten points at a time. (The last segment may be less than ten points.) 
 
  Polyline type, line width, and color can also be set by calling the GKS routines GSLN, GSLWSC, GSCR, and GSPLCI, before calling CURVE.

@@ -24,16 +24,15 @@ Console.WriteLine (&quot;Hello, World&quot;);
 <h2>OPTIONS</h2>
 <p> The commands accept all of the commands that are available to the <i>mcs</i> command, so you can reference assemblies, specify paths, language level and so on from the command line. In addition, the following command line options are supported:</p>
 <dl>
-<dt><i>&#8211;attach</i></p>
-<dd> This is an advanced option and should only be used if you have a deep understanding of multi-threading. This option is availble on the <i>csharp</i> command and allows the compiler to be injected into other processes. This is done by injecting the C# shell in a separate thread that runs concurrently with your application. This means that you must take special measures to avoid crashing the target application while using it. For example, you might have to take the proper locks before issuing any commands that might affect the target process state, or sending commands through a method dispatcher.</p>
-<dt><i>-e EXPRESSION</i></p>
-<dd> This will evaluate the specified C# EXPRESSION and exit</dl>
+<dt><i>&#8211;attach</i></dt>
+<dd> This is an advanced option and should only be used if you have a deep understanding of multi-threading. This option is availble on the <i>csharp</i> command and allows the compiler to be injected into other processes. This is done by injecting the C# shell in a separate thread that runs concurrently with your application. This means that you must take special measures to avoid crashing the target application while using it. For example, you might have to take the proper locks before issuing any commands that might affect the target process state, or sending commands through a method dispatcher.</dd>
+<dt><i>-e EXPRESSION</i></dt>
+<dd> This will evaluate the specified C# EXPRESSION and exit</dd></dl>
 <h2>OPERATION</h2>
 <p> Once you launch the csharp command, you will be greeted with the interactive prompt: </p>
 <pre>
 $ csharp
 Mono C# Shell, type &quot;help;&quot; for help
- 
 Enter statements below.
 csharp&gt;
 </pre>
@@ -119,47 +118,47 @@ Interrupted !System.Threading.ThreadAbortException : Thread was being aborted<br
 <p> The command set is similar to many other applications (cursor keys) and incorporates some of the Emacs commands for editing as well as a history mechanism to </p>
 <p> The following keyboard input is supported:</p>
 <dl>
-<dt><i>Home Key, Control-a</i></p>
-<dd> Goes to the beginning of the line.</p>
-<dt><i>End Key, Control-e</i></p>
-<dd> Goes to the end of the line.</p>
-<dt><i>Left Arrow Key, Control-b</i></p>
-<dd> Moves the cursor back one character.</p>
-<dt><i>Right Arrow Key, Control-f</i></p>
-<dd> Moves the cursor forward one character.</p>
-<dt><i>Up Arrow Key, Control-p</i></p>
-<dd> Goes back in the history, replaces the current line with the previous line in the history.</p>
-<dt><i>Down Arrow Key, Control-n</i></p>
-<dd> Moves forward in the history, replaces the current line with the next lien in the history.</p>
-<dt><i>Return</i></p>
-<dd> Executes the current line if the statement or expression is complete, or waits for further input.</p>
-<dt><i>Control-C</i></p>
-<dd> Cancel the current line being edited. This will kill any currently in-progress edits or partial editing and go back to a toplevel definition.</p>
-<dt><i>Backspace Key</i></p>
-<dd> Deletes the character before the cursor</p>
-<dt><i>Delete Key, Control-d</i></p>
-<dd> Deletes the character at the current cursor position.</p>
-<dt><i>Control-k</i></p>
-<dd> Erases the contents of the line until the end of the line and places the result in the cut and paste buffer.</p>
-<dt><i>Alt-D</i></p>
-<dd> Deletes the word starting at the cursor position and appends into the cut and paste buffer. By pressing Alt-d repeatedly, multiple words can be appended into the paste buffer.</p>
-<dt><i>Control-Y</i></p>
-<dd> Pastes the content of the kill buffer at the current cursor position.</p>
-<dt><i>Control-Q</i></p>
-<dd> This is the quote character. It allows the user to enter control-characters that are otherwise taken by the command editing facility. Press Control-Q followed by the character you want to insert, and it will be inserted verbatim into the command line.</p>
-<dt><i>Control-D</i></p>
-<dd> Terminates the program. This terminates the input for the program.</dl>
+<dt><i>Home Key, Control-a</i></dt>
+<dd> Goes to the beginning of the line.</dd>
+<dt><i>End Key, Control-e</i></dt>
+<dd> Goes to the end of the line.</dd>
+<dt><i>Left Arrow Key, Control-b</i></dt>
+<dd> Moves the cursor back one character.</dd>
+<dt><i>Right Arrow Key, Control-f</i></dt>
+<dd> Moves the cursor forward one character.</dd>
+<dt><i>Up Arrow Key, Control-p</i></dt>
+<dd> Goes back in the history, replaces the current line with the previous line in the history.</dd>
+<dt><i>Down Arrow Key, Control-n</i></dt>
+<dd> Moves forward in the history, replaces the current line with the next lien in the history.</dd>
+<dt><i>Return</i></dt>
+<dd> Executes the current line if the statement or expression is complete, or waits for further input.</dd>
+<dt><i>Control-C</i></dt>
+<dd> Cancel the current line being edited. This will kill any currently in-progress edits or partial editing and go back to a toplevel definition.</dd>
+<dt><i>Backspace Key</i></dt>
+<dd> Deletes the character before the cursor</dd>
+<dt><i>Delete Key, Control-d</i></dt>
+<dd> Deletes the character at the current cursor position.</dd>
+<dt><i>Control-k</i></dt>
+<dd> Erases the contents of the line until the end of the line and places the result in the cut and paste buffer.</dd>
+<dt><i>Alt-D</i></dt>
+<dd> Deletes the word starting at the cursor position and appends into the cut and paste buffer. By pressing Alt-d repeatedly, multiple words can be appended into the paste buffer.</dd>
+<dt><i>Control-Y</i></dt>
+<dd> Pastes the content of the kill buffer at the current cursor position.</dd>
+<dt><i>Control-Q</i></dt>
+<dd> This is the quote character. It allows the user to enter control-characters that are otherwise taken by the command editing facility. Press Control-Q followed by the character you want to insert, and it will be inserted verbatim into the command line.</dd>
+<dt><i>Control-D</i></dt>
+<dd> Terminates the program. This terminates the input for the program.</dd></dl>
 <h2>STATIC PROPERTIES AND METHODS</h2>
 <p> Since the methods and properties of the base class from where the statements and expressions are executed are static, they can be invoked directly from the shell. These are the available properties and methods:</p>
 <dl>
-<dt><i>void LoadAssembly(string assembly)</i></p>
-<dd> Loads the given assembly. This is equivalent to passing the compiler the -r: flag with the specified string.</p>
-<dt><i>void LoadPackage(string package)</i></p>
-<dd> Imports the package specified. This is equivalent to invoking the compiler with the -pkg: flag with the specified string.</p>
-<dt><i>string Prompt { get; set } </i></p>
-<dd> The prompt used by the shell. It defaults to the value &quot;csharp&gt; &quot;. <i>string ContinuationPrompt { get; set; } </i> The prompt used by the shell when further input is required to complete the expression or statement.</p>
-<dt><i>void ShowVars()</i></p>
-<dd> Displays all the variables that have been defined so far and their types. In the csharp shell declaring new variables will shadow previous variable declarations, this is different than C# when compiled. <i>void ShowUsing()</i> Displays all the using statements in effect. <i>TimeSpan Time (Action a)</i> Handy routine to time the time that some code takes to execute. The parameter is an Action delegate, and the return value is a TimeSpan. For example:</dl>
+<dt><i>void LoadAssembly(string assembly)</i></dt>
+<dd> Loads the given assembly. This is equivalent to passing the compiler the -r: flag with the specified string.</dd>
+<dt><i>void LoadPackage(string package)</i></dt>
+<dd> Imports the package specified. This is equivalent to invoking the compiler with the -pkg: flag with the specified string.</dd>
+<dt><i>string Prompt { get; set } </i></dt>
+<dd> The prompt used by the shell. It defaults to the value &quot;csharp&gt; &quot;. <i>string ContinuationPrompt { get; set; } </i> The prompt used by the shell when further input is required to complete the expression or statement.</dd>
+<dt><i>void ShowVars()</i></dt>
+<dd> Displays all the variables that have been defined so far and their types. In the csharp shell declaring new variables will shadow previous variable declarations, this is different than C# when compiled. <i>void ShowUsing()</i> Displays all the using statements in effect. <i>TimeSpan Time (Action a)</i> Handy routine to time the time that some code takes to execute. The parameter is an Action delegate, and the return value is a TimeSpan. For example:</dd></dl>
 <pre><code>
 csharp &gt; Time(() = &gt; { for (int i = 0; i &lt; 5; i++) Console.WriteLine (i); });
 0 1 2 3 4 00 : 00 : 00.0043230 csharp &gt;

@@ -19,11 +19,11 @@ typedef struct {
  unsigned int count;
 } XResType;</pre>
 <dl COMPACT>
-<dd>Bool XResQueryExtension(Display *<i>dpy</i>, int *<i>event_base_return</i>, int *<i>error_base_return</i>);</p>
-<dd>Status XResQueryVersion(Display *<i>dpy</i>, int *<i>major_version_return</i>, int *<i>minor_version_return</i>);</p>
-<dd>Status XResQueryClients(Display *<i>dpy</i>, int *<i>num_clients</i>, XResClient **<i>clients</i>);</p>
-<dd>Status XResQueryClientResources(Display *<i>dpy</i>, XID <i>xid</i>, int *<i>num_types</i>, XResType **<i>types</i>);</p>
-<dd>Status XResQueryClientPixmapBytes(Display *<i>dpy</i>, XID <i>xid</i>, unsigned long *<i>bytes</i>);</dl>
+<dd>Bool XResQueryExtension(Display *<i>dpy</i>, int *<i>event_base_return</i>, int *<i>error_base_return</i>);</dd>
+<dd>Status XResQueryVersion(Display *<i>dpy</i>, int *<i>major_version_return</i>, int *<i>minor_version_return</i>);</dd>
+<dd>Status XResQueryClients(Display *<i>dpy</i>, int *<i>num_clients</i>, XResClient **<i>clients</i>);</dd>
+<dd>Status XResQueryClientResources(Display *<i>dpy</i>, XID <i>xid</i>, int *<i>num_types</i>, XResType **<i>types</i>);</dd>
+<dd>Status XResQueryClientPixmapBytes(Display *<i>dpy</i>, XID <i>xid</i>, unsigned long *<i>bytes</i>);</dd></dl>
 <h2>Description</h2>
 <p><code>X-Resource</code> is an extension that allows a client to query the X server about its usage of various resources. It should not be confused with the X resource database access functions. </p>
 <p> <code>XResQueryExtension</code> returns <code>True</code> if the <i>XRes</i> extension is available on the given display. A client must call <code>XResQueryExtension</code> before calling any other XRes function in order to negotiate a compatible protocol version; otherwise the client will get undefined behavior (XRes may or may not work). </p>

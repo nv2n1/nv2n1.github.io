@@ -59,9 +59,9 @@ description: "neutron_selinux – Security Enhanced Linux Policy for the neutron
 <p> Policy governs the access confined processes have to these ports. SELinux neutron policy is very flexible allowing users to setup their neutron processes in as secure a method as possible. </p>
 <p> The following port types are defined for neutron: </p>
 <dl>
-<dt><code>neutron_port_t</code></p>
+<dt><code>neutron_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8775,9696,9697</dl>
+</dd><dd>Default Defined Ports: tcp 8775,9696,9697</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type neutron_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -126,40 +126,40 @@ description: "neutron_selinux – Security Enhanced Linux Policy for the neutron
 <p> <code>neutron_exec_t</code> </p>
 <p> &#8211; Set files with the neutron_exec_t type, if you want to transition an executable to the neutron_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/neutron-server, /usr/bin/quantum-server, /usr/bin/neutron-l3-agent, /usr/bin/neutron-rootwrap, /usr/bin/quantum-l3-agent, /usr/bin/neutron-ryu-agent, /usr/bin/quantum-ryu-agent, /usr/bin/neutron-dhcp-agent, /usr/bin/quantum-dhcp-agent, /usr/bin/neutron-lbaas-agent, /usr/bin/neutron-ovs-cleanup, /usr/bin/quantum-ovs-cleanup, /usr/bin/neutron-netns-cleanup, /usr/bin/neutron-metadata-agent, /usr/bin/neutron-ns-metadata-proxy, /usr/bin/neutron-linuxbridge-agent, /usr/bin/neutron-openvswitch-agent, /usr/bin/quantum-linuxbridge-agent, /usr/bin/quantum-openvswitch-agent </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/neutron-server, /usr/bin/quantum-server, /usr/bin/neutron-l3-agent, /usr/bin/neutron-rootwrap, /usr/bin/quantum-l3-agent, /usr/bin/neutron-ryu-agent, /usr/bin/quantum-ryu-agent, /usr/bin/neutron-dhcp-agent, /usr/bin/quantum-dhcp-agent, /usr/bin/neutron-lbaas-agent, /usr/bin/neutron-ovs-cleanup, /usr/bin/quantum-ovs-cleanup, /usr/bin/neutron-netns-cleanup, /usr/bin/neutron-metadata-agent, /usr/bin/neutron-ns-metadata-proxy, /usr/bin/neutron-linuxbridge-agent, /usr/bin/neutron-openvswitch-agent, /usr/bin/quantum-linuxbridge-agent, /usr/bin/quantum-openvswitch-agent </dd>
 </dl>
 <p> <code>neutron_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the neutron_initrc_exec_t type, if you want to transition an executable to the neutron_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/neutron.*, /etc/rc.d/init.d/quantum.* </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/neutron.*, /etc/rc.d/init.d/quantum.* </dd>
 </dl>
 <p> <code>neutron_log_t</code> </p>
 <p> &#8211; Set files with the neutron_log_t type, if you want to treat the data as neutron log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/neutron(/.*)?, /var/log/quantum(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/neutron(/.*)?, /var/log/quantum(/.*)? </dd>
 </dl>
 <p> <code>neutron_tmp_t</code> </p>
 <p> &#8211; Set files with the neutron_tmp_t type, if you want to store neutron temporary files in the /tmp directories. </p>
 <p> <code>neutron_unit_file_t</code> </p>
 <p> &#8211; Set files with the neutron_unit_file_t type, if you want to treat the files as neutron unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/neutron.*, /usr/lib/systemd/system/quantum.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/neutron.*, /usr/lib/systemd/system/quantum.* </dd>
 </dl>
 <p> <code>neutron_var_lib_t</code> </p>
 <p> &#8211; Set files with the neutron_var_lib_t type, if you want to store the neutron files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/neutron(/.*)?, /var/lib/quantum(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/neutron(/.*)?, /var/lib/quantum(/.*)? </dd>
 </dl>
 <p> <code>neutron_var_run_t</code> </p>
 <p> &#8211; Set files with the neutron_var_run_t type, if you want to store the neutron files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/neutron(/.*)?, /var/run/quantum(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/neutron(/.*)?, /var/run/quantum(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

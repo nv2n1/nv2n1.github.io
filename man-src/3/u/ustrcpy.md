@@ -10,7 +10,6 @@ description: "ustrcpy – Copies a string into another one. Allegro game program
 <p>ustrcpy &#8211; Copies a string into another one. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrcpy(char *dest, const char *src);</code></pre>
 <h2>Description</h2>
 <p>This function copies `src&#8217; (including the terminating null character into `dest&#8217;. You should try to avoid this function because it is very easy to overflow the destination buffer. Use ustrzcpy instead.</p>

@@ -13,11 +13,10 @@ MAPTRN - Projects points. <pre><code>SUPCON is an alternate name for the routine
  void c_maptrn (float rlat, float rlon, float *uval, 
  float *vval)
 <h2>Description</h2><dl COMPACT><dt>RLAT and RLON
-<dd>(input expressions, of type REAL) are the latitude and longitude, respectively, of a point on the globe. RLAT must be between -90. and +90., inclusive; RLON must be between -540. and +540., inclusive.
-<dt>UVAL and VVAL
-<dd>(output variables, of type REAL) define the point (UVAL,VVAL) that is the projection in the u/v plane of (RLAT,RLON). The units of UVAL and VVAL depend on the projection. 
-
- If the point is not projectable, UVAL is returned equal to 1.E12. If the point is projectable, but outside the boundary of the map (as defined by the last call to MAPSET and by the value of the parameter 'EL'), the routine MAPTRN, unlike MAPTRA, still returns its u and v coordinates.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(input expressions, of type REAL) are the latitude and longitude, respectively, of a point on the globe. RLAT must be between -90. and +90., inclusive; RLON must be between -540. and +540., inclusive.
+</dd><dt>UVAL and VVAL
+</dt><dd>(output variables, of type REAL) define the point (UVAL,VVAL) that is the projection in the u/v plane of (RLAT,RLON). The units of UVAL and VVAL depend on the projection. 
+ If the point is not projectable, UVAL is returned equal to 1.E12. If the point is projectable, but outside the boundary of the map (as defined by the last call to MAPSET and by the value of the parameter 'EL'), the routine MAPTRN, unlike MAPTRA, still returns its u and v coordinates.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: cpex03, mpex09, bnchmk.
 <h2>Access</h2>To use MAPTRN or c_maptrn, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the ezmap man page for a description of all EZMAP error messages and/or informational messages.

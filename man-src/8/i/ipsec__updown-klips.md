@@ -17,4 +17,4 @@ description: "ipsec__updown.klips – klips manipulation script"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

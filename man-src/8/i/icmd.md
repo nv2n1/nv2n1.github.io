@@ -15,46 +15,46 @@ description: "ipmiutil_cmd – a tool to send specific IPMI commands via the com
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-p</p>
-<dd>Port to use. Defaults to RMCP port 623.</p>
-<dt>-q</p>
-<dd>Quiet mode. Show only minimal header information.</p>
-<dt>-s</p>
-<dd>Skips the GetDeviceID command</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-p</dt>
+<dd>Port to use. Defaults to RMCP port 623.</dd>
+<dt>-q</dt>
+<dd>Quiet mode. Show only minimal header information.</dd>
+<dt>-s</dt>
+<dd>Skips the GetDeviceID command</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Parameters</h2>
 <p>The following parameters are used by icmd. Each is represented as a two-digit hex byte. The parameters have no default values. </p>
 <dl>
-<dt>bus</p>
-<dd>This byte contains the bus number for this command, usually 00. </p>
-<dt>rsSa</p>
-<dd>This is the resource slave address, usually 0x20 for the BMC. </p>
-<dt>netFn/lun</p>
-<dd>This byte combines the net Function and Lun. The 2 low-order bits are the Lun and the 6 high-order bits are the net Function. This representation is consistent with the DOS CMDTOOL/IPMITOOL. </p>
-<dt>cmd</p>
-<dd>This byte contains the IPMI command. </p>
-<dt>[data bytes]</p>
-<dd>This is a sequence of zero to 16 bytes that represent data bytes specific to this command. </p>
+<dt>bus</dt>
+<dd>This byte contains the bus number for this command, usually 00. </dd>
+<dt>rsSa</dt>
+<dd>This is the resource slave address, usually 0x20 for the BMC. </dd>
+<dt>netFn/lun</dt>
+<dd>This byte combines the net Function and Lun. The 2 low-order bits are the Lun and the 6 high-order bits are the net Function. This representation is consistent with the DOS CMDTOOL/IPMITOOL. </dd>
+<dt>cmd</dt>
+<dd>This byte contains the IPMI command. </dd>
+<dt>[data bytes]</dt>
+<dd>This is a sequence of zero to 16 bytes that represent data bytes specific to this command. </dd>
 </dl>
 <h2>Examples</h2>
 <p>icmd 00 20 18 01<br />

@@ -26,19 +26,19 @@ description: "systemd.device – Device unit configuration"
 <p>Unit settings of device units may either be configured via unit files, or directly from the udev database. The following udev device properties are understood by the service manager: </p>
 <p> <i>SYSTEMD_WANTS=</i>, <i>SYSTEMD_USER_WANTS=</i></p>
 <dl>
-<dd>Adds dependencies of type <i>Wants=</i> from the device unit to the specified units. <i>SYSTEMD_WANTS=</i> is read by the system service manager, <i>SYSTEMD_USER_WANTS=</i> by user service manager instances. These properties may be used to activate arbitrary units when a specific device becomes available. </p>
+<dd>Adds dependencies of type <i>Wants=</i> from the device unit to the specified units. <i>SYSTEMD_WANTS=</i> is read by the system service manager, <i>SYSTEMD_USER_WANTS=</i> by user service manager instances. These properties may be used to activate arbitrary units when a specific device becomes available. </dd>
 <p> Note that this and the other udev device properties are not taken into account unless the device is tagged with the &quot;systemd&quot; tag in the udev database, because otherwise the device is not exposed as a systemd unit (see above). </p>
 <p> Note that systemd will only act on <i>Wants=</i> dependencies when a device first becomes active. It will not act on them if they are added to devices that are already active. Use <i>SYSTEMD_READY=</i> (see below) to configure when a udev device shall be considered active, and thus when to trigger the dependencies. </p>
 <p> The specified property value should be a space-separated list of valid unit names. If a unit template name is specified (that is, a unit name containing an &quot;@&quot; character indicating a unit name to use for multiple instantiation, but with an empty instance name following the &quot;@&quot;), it will be automatically instantiated by the device&#8217;s &quot;sysfs&quot; path (that is: the path is escaped and inserted as instance name into the template unit name). This is useful in order to instantiate a specific template unit once for each device that appears and matches specific properties.</dl>
 <p> <i>SYSTEMD_ALIAS=</i></p>
 <dl>
-<dd>Adds an additional alias name to the device unit. This must be an absolute path that is automatically transformed into a unit name. (See above.)</dl>
+<dd>Adds an additional alias name to the device unit. This must be an absolute path that is automatically transformed into a unit name. (See above.)</dd></dl>
 <p> <i>SYSTEMD_READY=</i></p>
 <dl>
-<dd>If set to 0, systemd will consider this device unplugged even if it shows up in the udev tree. If this property is unset or set to 1, the device will be considered plugged if it is visible in the udev tree. </p>
+<dd>If set to 0, systemd will consider this device unplugged even if it shows up in the udev tree. If this property is unset or set to 1, the device will be considered plugged if it is visible in the udev tree. </dd>
 <p> This option is useful for devices that initially show up in an uninitialized state in the tree, and for which a &quot;changed&quot; event is generated the moment they are fully set up. Note that <i>SYSTEMD_WANTS=</i> (see above) is not acted on as long as <i>SYSTEMD_READY=0</i> is set for a device.</dl>
 <p> <i>ID_MODEL_FROM_DATABASE=</i>, <i>ID_MODEL=</i></p>
 <dl>
-<dd>If set, this property is used as description string for the device unit.</dl>
+<dd>If set, this property is used as description string for the device unit.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/7-systemd-directives/">systemd.directives</a></code>(7) </p>

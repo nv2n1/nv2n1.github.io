@@ -12,9 +12,9 @@ Bivar_params - This document briefly describes all Bivar parameters.
 
  The Bivar parameter descriptions appear below in alphabetical order. Each description begins with a line giving the parameter name and the intrinsic FORTRAN type of the parameter.
 <dl COMPACT><dt>'ITY' - Integer
-<dd>Interpolation Type. The default value, 0, says that quintic interpolation should be done. The value 1 says to use linear interpolation.
-<dt>'TTY' - Integer
-<dd>Triangulation Type. The default value, 0, says to use a triangulation due to C. L. Lawson that maximizes the minimum angle occurring in the triangles. The value 1 says to use the Delaunay triangulation, which ensures triangles whose circumscribed circles have no data points in their interiors.</dl><h2>See Also</h2>Online: bivar, idbvip, idsfft, idpltr, idgeti, idgetr, idseti, idsetr, ncarg_cbind 
+</dt><dd>Interpolation Type. The default value, 0, says that quintic interpolation should be done. The value 1 says to use linear interpolation.
+</dd><dt>'TTY' - Integer
+</dt><dd>Triangulation Type. The default value, 0, says to use a triangulation due to C. L. Lawson that maximizes the minimum angle occurring in the triangles. The value 1 says to use the Delaunay triangulation, which ensures triangles whose circumscribed circles have no data points in their interiors.</dd></dl><h2>See Also</h2>Online: bivar, idbvip, idsfft, idpltr, idgeti, idgetr, idseti, idsetr, ncarg_cbind 
 
  Hardcopy: NCAR Graphics Contouring and Mapping Tutorial; NCAR Graphics Fundamentals, UNIX Version
 <h2>Copyright</h2>Copyright (C) 1987-2009 

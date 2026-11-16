@@ -1133,78 +1133,78 @@ description: "XmNotebook — The Notebook widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNbackPageBackground</code></p>
-<dd>Specifies the background color for drawing back pages. The default is a lower-intensity version of <code>XmNframeBackground</code>.</p>
-<dt><code>XmNbackPageForeground</code></p>
-<dd>Specifies the forground color for drawing back pages. The default is taken from the application&#8217;s default foreground color.</p>
-<dt><code>XmNbackPageNumber</code></p>
-<dd>Specifies the number of lines to draw for back pages. The minimum value is 1, and the maximum value is (<code>XmNbackPageSize</code> / 2).</p>
-<dt><code>XmNbackPagePlacement</code></p>
-<dd>Specifies where to place the back pages. The default is dependent on the <code>XmNlayoutDirection</code> resource of the Notebook&#8217;s instance parents. It can have one of the following values:</p>
+<dt><code>XmNbackPageBackground</code></dt>
+<dd>Specifies the background color for drawing back pages. The default is a lower-intensity version of <code>XmNframeBackground</code>.</dd>
+<dt><code>XmNbackPageForeground</code></dt>
+<dd>Specifies the forground color for drawing back pages. The default is taken from the application&#8217;s default foreground color.</dd>
+<dt><code>XmNbackPageNumber</code></dt>
+<dd>Specifies the number of lines to draw for back pages. The minimum value is 1, and the maximum value is (<code>XmNbackPageSize</code> / 2).</dd>
+<dt><code>XmNbackPagePlacement</code></dt>
+<dd>Specifies where to place the back pages. The default is dependent on the <code>XmNlayoutDirection</code> resource of the Notebook&#8217;s instance parents. It can have one of the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmBOTTOM_RIGHT</code></p>
-<dd>Displays back pages on the Notebook&#8217;s bottom and right sides.</p>
-<dt><code>XmBOTTOM_LEFT</code></p>
-<dd>Displays back pages on the Notebook&#8217;s bottom and left sides.</p>
-<dt><code>XmTOP_RIGHT</code></p>
-<dd>Displays back pages on the Notebook&#8217;s top and right sides.</p>
-<dt><code>XmTOP_LEFT</code></p>
-<dd>Displays back pages on the Notebook&#8217;s top and left sides.</dl>
+</dd><dl COMPACT>
+<dt><code>XmBOTTOM_RIGHT</code></dt>
+<dd>Displays back pages on the Notebook&#8217;s bottom and right sides.</dd>
+<dt><code>XmBOTTOM_LEFT</code></dt>
+<dd>Displays back pages on the Notebook&#8217;s bottom and left sides.</dd>
+<dt><code>XmTOP_RIGHT</code></dt>
+<dd>Displays back pages on the Notebook&#8217;s top and right sides.</dd>
+<dt><code>XmTOP_LEFT</code></dt>
+<dd>Displays back pages on the Notebook&#8217;s top and left sides.</dd></dl>
 </dl>
-<dt><code>XmNbackPageSize</code></p>
-<dd>Specifies the thickness of the back page rendering.</p>
-<dt><code>XmNbindingPixmap</code></p>
-<dd>Specifies the pixmap or bitmap for stippling or tiling the binding when <code>XmNbindingType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_OVERLAP_ONLY</code>.</p>
-<dt><code>XmNbindingType</code></p>
-<dd>Specifies the binding type. It can have one of the following values:</p>
+<dt><code>XmNbackPageSize</code></dt>
+<dd>Specifies the thickness of the back page rendering.</dd>
+<dt><code>XmNbindingPixmap</code></dt>
+<dd>Specifies the pixmap or bitmap for stippling or tiling the binding when <code>XmNbindingType</code> is <code>XmPIXMAP</code> or <code>XmPIXMAP_OVERLAP_ONLY</code>.</dd>
+<dt><code>XmNbindingType</code></dt>
+<dd>Specifies the binding type. It can have one of the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmNONE</code></p>
-<dd>Displays no binding.</p>
-<dt><code>XmSOLID</code></p>
-<dd>Displays a solid binding in the foreground color of the Notebook within the binding area specified by <code>XmNbindingWidth</code>.</p>
-<dt><code>XmSPIRAL</code></p>
-<dd>Displays a spiral binding in the foreground color of the Notebook within the area specified by <code>XmNbindingWidth</code> and within the area outside of the frame equal to the area specified by <code>XmNbindingWidth</code>.</p>
-<dt><code>XmPIXMAP</code></p>
-<dd>Displays the binding with the pixmap or bitmap specified by <code>XmNbindingPixmap</code> as a stipple or tile. It uses the foreground color of the Notebook for stippling. The binding width is decided by the larger value of <code>XmNbindingWidth</code> and the width of the pixmap or bitmap.</p>
-<dt><code>XmPIXMAP_OVERLAP_ONLY</code></p>
-<dd>Displays the binding with the pixmap or bitmap specified by <code>XmNbindingPixmap</code> as a stipple or tile. It uses the foreground color of the Notebook for stippling. The binding is displayed only within the binding area specified by <code>XmNbindingWidth</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmNONE</code></dt>
+<dd>Displays no binding.</dd>
+<dt><code>XmSOLID</code></dt>
+<dd>Displays a solid binding in the foreground color of the Notebook within the binding area specified by <code>XmNbindingWidth</code>.</dd>
+<dt><code>XmSPIRAL</code></dt>
+<dd>Displays a spiral binding in the foreground color of the Notebook within the area specified by <code>XmNbindingWidth</code> and within the area outside of the frame equal to the area specified by <code>XmNbindingWidth</code>.</dd>
+<dt><code>XmPIXMAP</code></dt>
+<dd>Displays the binding with the pixmap or bitmap specified by <code>XmNbindingPixmap</code> as a stipple or tile. It uses the foreground color of the Notebook for stippling. The binding width is decided by the larger value of <code>XmNbindingWidth</code> and the width of the pixmap or bitmap.</dd>
+<dt><code>XmPIXMAP_OVERLAP_ONLY</code></dt>
+<dd>Displays the binding with the pixmap or bitmap specified by <code>XmNbindingPixmap</code> as a stipple or tile. It uses the foreground color of the Notebook for stippling. The binding is displayed only within the binding area specified by <code>XmNbindingWidth</code>.</dd></dl>
 </dl>
-<dt><code>XmNbindingWidth</code></p>
-<dd>Specifies the width of the Notebook binding. If <code>XmNbindingType</code> is <code>XmPIXMAP</code> and the width of the pixmap specified in <code>XmNbindingPixmap</code> is greater than <code>XmNbindingWidth</code>, then this resource is ignored and the width of the pixmap is used as the width of the Notebook binding instead.</p>
-<dt><code>XmNcurrentPageNumber</code></p>
-<dd>Specifies the page number of the currently displayed page. Initially, it is set to <code>XmNfirstPageNumber</code>. If it is set to less than <code>XmNfirstPageNumber</code>, then it is set to <code>XmNfirstPageNumber</code>. If it is set to <code>XmNlastPageNumber</code>, then it is set to <code>XmNlastPageNumber</code>.</p>
-<dt><code>XmNfirstPageNumber</code></p>
-<dd>Specifies the page number for the first page of the Notebook. The Notebook does not scroll to any page numbers below this value.</p>
-<dt><code>XmNframeBackground</code></p>
-<dd>Specifies the background color for drawing the Notebook&#8217;s frame.</p>
-<dt><code>XmNframeShadowThickness</code></p>
-<dd>Specifies the shadow thickness around the Notebook&#8217;s frame.</p>
-<dt><code>XmNinnerMarginHeight</code></p>
-<dd>Specifies the margin on the top and bottom sides of the page, status area, and page scroller widgets.</p>
-<dt><code>XmNinnerMarginWidth</code></p>
-<dd>Specifies the margin on the left and right sides of the page, status area, and page scroller widgets.</p>
-<dt><code>XmNlastPageNumber</code></p>
-<dd>Specifies the page number for the last page of the Notebook. The Notebook does not scroll to any page numbers above this value. The default page number is the largest page number of managed page, major tab, or minor tab widgets. If this is set to a value that is less than <code>XmNfirstPageNumber</code>, the behavior of the Notebook is undefined.</p>
-<dt><code>XmNmajorTabSpacing</code></p>
-<dd>Specifies the spacing distance between major tabs. If <code>XmNframeShadowThickness</code> is greater than <code>XmNmajorTabSpacing</code>, then this resource is ignored and the size of <code>XmNframeShadowThickness</code> is used as the spacing distance between major tabs.</p>
-<dt><code>XmNminorTabSpacing</code></p>
-<dd>Specifies the spacing distance between minor tabs. If <code>XmNframeShadowThickness</code> is greater than <code>XmNminorTabSpacing</code>, then this resource is ignored and the size of <code>XmNframeShadowThickness</code> is used as the spacing distance between minor tabs.</p>
-<dt><code>XmNorientation</code></p>
-<dd>Specifies the orientation of the Notebook. It can have one of the following values:</p>
+<dt><code>XmNbindingWidth</code></dt>
+<dd>Specifies the width of the Notebook binding. If <code>XmNbindingType</code> is <code>XmPIXMAP</code> and the width of the pixmap specified in <code>XmNbindingPixmap</code> is greater than <code>XmNbindingWidth</code>, then this resource is ignored and the width of the pixmap is used as the width of the Notebook binding instead.</dd>
+<dt><code>XmNcurrentPageNumber</code></dt>
+<dd>Specifies the page number of the currently displayed page. Initially, it is set to <code>XmNfirstPageNumber</code>. If it is set to less than <code>XmNfirstPageNumber</code>, then it is set to <code>XmNfirstPageNumber</code>. If it is set to <code>XmNlastPageNumber</code>, then it is set to <code>XmNlastPageNumber</code>.</dd>
+<dt><code>XmNfirstPageNumber</code></dt>
+<dd>Specifies the page number for the first page of the Notebook. The Notebook does not scroll to any page numbers below this value.</dd>
+<dt><code>XmNframeBackground</code></dt>
+<dd>Specifies the background color for drawing the Notebook&#8217;s frame.</dd>
+<dt><code>XmNframeShadowThickness</code></dt>
+<dd>Specifies the shadow thickness around the Notebook&#8217;s frame.</dd>
+<dt><code>XmNinnerMarginHeight</code></dt>
+<dd>Specifies the margin on the top and bottom sides of the page, status area, and page scroller widgets.</dd>
+<dt><code>XmNinnerMarginWidth</code></dt>
+<dd>Specifies the margin on the left and right sides of the page, status area, and page scroller widgets.</dd>
+<dt><code>XmNlastPageNumber</code></dt>
+<dd>Specifies the page number for the last page of the Notebook. The Notebook does not scroll to any page numbers above this value. The default page number is the largest page number of managed page, major tab, or minor tab widgets. If this is set to a value that is less than <code>XmNfirstPageNumber</code>, the behavior of the Notebook is undefined.</dd>
+<dt><code>XmNmajorTabSpacing</code></dt>
+<dd>Specifies the spacing distance between major tabs. If <code>XmNframeShadowThickness</code> is greater than <code>XmNmajorTabSpacing</code>, then this resource is ignored and the size of <code>XmNframeShadowThickness</code> is used as the spacing distance between major tabs.</dd>
+<dt><code>XmNminorTabSpacing</code></dt>
+<dd>Specifies the spacing distance between minor tabs. If <code>XmNframeShadowThickness</code> is greater than <code>XmNminorTabSpacing</code>, then this resource is ignored and the size of <code>XmNframeShadowThickness</code> is used as the spacing distance between minor tabs.</dd>
+<dt><code>XmNorientation</code></dt>
+<dd>Specifies the orientation of the Notebook. It can have one of the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmHORIZONTAL</code></p>
-<dd>Places the binding beside the pages, in the left or right side of the frame.</p>
-<dt><code>XmVERTICAL</code></p>
-<dd>Places the binding above or below the pages, in the top or the bottom of the frame.</dl>
+</dd><dl COMPACT>
+<dt><code>XmHORIZONTAL</code></dt>
+<dd>Places the binding beside the pages, in the left or right side of the frame.</dd>
+<dt><code>XmVERTICAL</code></dt>
+<dd>Places the binding above or below the pages, in the top or the bottom of the frame.</dd></dl>
 </dl>
-<dt><code>XmNpageChangedCallback</code></p>
-<dd>Specifies the list of callbacks to call whenever the <code>XmNcurrentPageNumber</code>, representing the current page number, is changed. This includes the point when the widget is realized and the page number is initialized. The callback structure is <code>XmNotebookCallbackStruct</code>. The reason is <code>XmCR_MAJOR_TAB</code>, <code>XmCR_MINOR_TAB</code>, <code>XmCR_PAGE_SCROLLER_INCREMENT</code>, <code>XmCR_PAGE_SCROLLER_DECREMENT</code>, or <code>XmCR_NONE</code>, depending upon what action caused the Notebook to display a new page.</dl>
+<dt><code>XmNpageChangedCallback</code></dt>
+<dd>Specifies the list of callbacks to call whenever the <code>XmNcurrentPageNumber</code>, representing the current page number, is changed. This includes the point when the widget is realized and the page number is initialized. The callback structure is <code>XmNotebookCallbackStruct</code>. The reason is <code>XmCR_MAJOR_TAB</code>, <code>XmCR_MINOR_TAB</code>, <code>XmCR_PAGE_SCROLLER_INCREMENT</code>, <code>XmCR_PAGE_SCROLLER_DECREMENT</code>, or <code>XmCR_NONE</code>, depending upon what action caused the Notebook to display a new page.</dd></dl>
 <table BORDER>
 <tr>
 <td>
@@ -1316,26 +1316,26 @@ description: "XmNotebook — The Notebook widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNnotebookChildType</code></p>
-<dd>Specifies the child type of the Notebook. It can be one of the following types:</p>
+<dt><code>XmNnotebookChildType</code></dt>
+<dd>Specifies the child type of the Notebook. It can be one of the following types:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmPAGE</code></p>
-<dd>The child is a page of the Notebook. This is the default when the child does not have the <code>XmQTactivatable</code>, <code>XmQTaccessTextual</code>, or <code>XmQTnavigator</code> trait.</p>
-<dt><code>XmMAJOR_TAB</code></p>
-<dd>The child is a major tab. This is the default when the child has the <code>XmQTactivatable</code> trait.</p>
-<dt><code>XmMINOR_TAB</code></p>
-<dd>The child is a minor tab.</p>
-<dt><code>XmSTATUS_AREA</code></p>
-<dd>The child is a status area. This is the default when the child has the <code>XmQTaccessTextual</code> trait and does not have the <code>XmQTactivatable</code> trait.</p>
-<dt><code>XmPAGE_SCROLLER</code></p>
-<dd>The child is the page scroller. The default page scroller is destroyed, if it exists. Any previously created page scrollers are unmanaged. This is the default when the child has the <code>XmQTnavigator</code> trait and does have the <code>XmQTactivatable</code> trait or the <code>XmQTaccessTextual</code> trait.</dl>
+</dd><dl COMPACT>
+<dt><code>XmPAGE</code></dt>
+<dd>The child is a page of the Notebook. This is the default when the child does not have the <code>XmQTactivatable</code>, <code>XmQTaccessTextual</code>, or <code>XmQTnavigator</code> trait.</dd>
+<dt><code>XmMAJOR_TAB</code></dt>
+<dd>The child is a major tab. This is the default when the child has the <code>XmQTactivatable</code> trait.</dd>
+<dt><code>XmMINOR_TAB</code></dt>
+<dd>The child is a minor tab.</dd>
+<dt><code>XmSTATUS_AREA</code></dt>
+<dd>The child is a status area. This is the default when the child has the <code>XmQTaccessTextual</code> trait and does not have the <code>XmQTactivatable</code> trait.</dd>
+<dt><code>XmPAGE_SCROLLER</code></dt>
+<dd>The child is the page scroller. The default page scroller is destroyed, if it exists. Any previously created page scrollers are unmanaged. This is the default when the child has the <code>XmQTnavigator</code> trait and does have the <code>XmQTactivatable</code> trait or the <code>XmQTaccessTextual</code> trait.</dd></dl>
 </dl>
-<dt><code>XmNpageNumber</code></p>
-<dd>Specifies the page number associated with the widget. If the widget is a page, the number specifies the page number of the widget. If the widget is not a page, the number specifies the page number of the associated page. If none is supplied by the application, Notebook generates the smallest unallocated page number when the child is managed. This resource is ignored for the page scroller.</p>
-<dt><code>XmNresizable</code></p>
-<dd>Specifies whether this child can request a resize.</dl>
+<dt><code>XmNpageNumber</code></dt>
+<dd>Specifies the page number associated with the widget. If the widget is a page, the number specifies the page number of the widget. If the widget is not a page, the number specifies the page number of the associated page. If none is supplied by the application, Notebook generates the smallest unallocated page number when the child is managed. This resource is ignored for the page scroller.</dd>
+<dt><code>XmNresizable</code></dt>
+<dd>Specifies whether this child can request a resize.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Notebook inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -2430,45 +2430,45 @@ description: "XmNotebook — The Notebook widget class"
  Widget <i>prev_page_widget</i>;
 } XmNotebookCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Specifies the reason for the callback.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</p>
-<dt><i>page_number</i></p>
-<dd>Indicates the page number to be displayed.</p>
-<dt><i>page_widget</i></p>
-<dd>Indicates the page widget that has the new page number. It is NULL if no page widget with the page number is found.</p>
-<dt><i>prev_page_number</i></p>
-<dd>Indicates the page number of the currently displayed page. If the callback procedure is being called at widget initialization, this page number will be returned as <code>XmUNSPECIFIED_PAGE_NUMBER</code>.</p>
-<dt><i>prev_page_widget</i></p>
-<dd>Indicates the currently displayed page widget. If the callback procedure is being called at widget initialization, NULL will be returned.</dl>
+<dt><i>reason</i></dt>
+<dd>Specifies the reason for the callback.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</dd>
+<dt><i>page_number</i></dt>
+<dd>Indicates the page number to be displayed.</dd>
+<dt><i>page_widget</i></dt>
+<dd>Indicates the page widget that has the new page number. It is NULL if no page widget with the page number is found.</dd>
+<dt><i>prev_page_number</i></dt>
+<dd>Indicates the page number of the currently displayed page. If the callback procedure is being called at widget initialization, this page number will be returned as <code>XmUNSPECIFIED_PAGE_NUMBER</code>.</dd>
+<dt><i>prev_page_widget</i></dt>
+<dd>Indicates the currently displayed page widget. If the callback procedure is being called at widget initialization, NULL will be returned.</dd></dl>
 <h3>Translations</h3>
 <p>Notebook inherits translations from Manager.</p>
 <h3>Accelerators</h3>
 <p>Notebook accelerators are added to all major tab and minor tab children of XmNotebook. Notebook accelerators are listed below. These accelerators might not directly correspond to a translation table.</p>
 <dl COMPACT>
-<dt><code>&lt;osfBeginLine&gt;</code><code>:</code></p>
-<dd>TraverseTab(<code>Home</code>)</p>
-<dt><code>&lt;osfEndLine&gt;</code><code>:</code></p>
-<dd>TraverseTab(<code>End</code>)</p>
-<dt><code>&lt;osfLeft&gt;</code><code>:</code></p>
-<dd>TraverseTab(<code>Previous</code>)</p>
-<dt><code>&lt;osfRight&gt;</code><code>:</code></p>
-<dd>TraverseTab(<code>Next</code>)</p>
-<dt><code>&lt;osfUp&gt;</code><code>:</code></p>
-<dd>TraverseTab(<code>Previous</code>)</p>
-<dt><code>&lt;osfDown&gt;</code><code>:</code></p>
-<dd>TraverseTab(<code>Next</code>)</dl>
+<dt><code>&lt;osfBeginLine&gt;</code><code>:</code></dt>
+<dd>TraverseTab(<code>Home</code>)</dd>
+<dt><code>&lt;osfEndLine&gt;</code><code>:</code></dt>
+<dd>TraverseTab(<code>End</code>)</dd>
+<dt><code>&lt;osfLeft&gt;</code><code>:</code></dt>
+<dd>TraverseTab(<code>Previous</code>)</dd>
+<dt><code>&lt;osfRight&gt;</code><code>:</code></dt>
+<dd>TraverseTab(<code>Next</code>)</dd>
+<dt><code>&lt;osfUp&gt;</code><code>:</code></dt>
+<dd>TraverseTab(<code>Previous</code>)</dd>
+<dt><code>&lt;osfDown&gt;</code><code>:</code></dt>
+<dd>TraverseTab(<code>Next</code>)</dd></dl>
 <h3>Action Routines</h3>
 <p>Notebook action routines are described below:</p>
 <dl COMPACT>
-<dt>TraverseTab(<code>Home|End|Next|Previous</code>)</p>
-<dd>Moves the focus on major or minor tabs.</dl>
+<dt>TraverseTab(<code>Home|End|Next|Previous</code>)</dt>
+<dd>Moves the focus on major or minor tabs.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>The Notebook widget has the additional behavior described below:</p>
 <dl COMPACT>
-<dt><code>&lt;Tab&gt;</code></p>
-<dd>Notebook intercepts tab group traversal when traversal is entering or leaving major or minor tabs. It does this to support major tabs and minor tabs as two separate tab groups when they are actually treated as one by traversal. If a minor tab has keyboard focus and a user or program action specifies <code>XmTRAVERSE_PREV_TAB_GROUP</code>, keyboard focus will go to a major tab. If a major tab has keyboard focus and a user or program action specifies <code>XmTRAVERSE_NEXT_TAB_GROUP</code>, keyboard focus will go to a minor tab.</dl>
+<dt><code>&lt;Tab&gt;</code></dt>
+<dd>Notebook intercepts tab group traversal when traversal is entering or leaving major or minor tabs. It does this to support major tabs and minor tabs as two separate tab groups when they are actually treated as one by traversal. If a minor tab has keyboard focus and a user or program action specifies <code>XmTRAVERSE_PREV_TAB_GROUP</code>, keyboard focus will go to a major tab. If a major tab has keyboard focus and a user or program action specifies <code>XmTRAVERSE_NEXT_TAB_GROUP</code>, keyboard focus will go to a minor tab.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

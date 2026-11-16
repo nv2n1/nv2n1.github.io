@@ -10,7 +10,7 @@ proxyndp - Shorewall6 Proxy NDP file
 
 <h2>Synopsis</h2>
 
-<dl><dt> <b>/etc/shorewall6/proxyndp</b></dl>
+<dl><dt> <b>/etc/shorewall6/proxyndp</b></dt></dl>
 
 <h2>Description</h2>
 
@@ -19,31 +19,30 @@ proxyndp - Shorewall6 Proxy NDP file
  The columns in the file are as follows. 
 
  <b>ADDRESS</b> - <i>address</i>
-<dl><dd>IPv6 Address.</dl>
+</dd><dl><dd>IPv6 Address.</dd></dl>
  
 
  <b>INTERFACE</b> - <i>interface</i> (Optional)
-<dl><dd>Local interface where system with the ip address in ADDRESS is connected. Only required when the HAVEROUTE column is left empty or is set to <b>no</b> or <b>No</b>.</dl>
+<dl><dd>Local interface where system with the ip address in ADDRESS is connected. Only required when the HAVEROUTE column is left empty or is set to <b>no</b> or <b>No</b>.</dd></dl>
  
 
  <b>EXTERNAL</b> - <i>interface</i>
-<dl><dd>External Interface to be used to access this system from the Internet.</dl>
+<dl><dd>External Interface to be used to access this system from the Internet.</dd></dl>
  
 
  <b>HAVEROUTE</b> - [<b>-</b>|<b>Yes</b>|<b>No</b>]
-<dl><dd>If there is already a route from the firewall to the host whose address is given, enter <b>Yes</b> or <b>yes</b> in this column. Otherwise, enter <b>no</b> or <b>No</b> or leave the column empty and Shorewall will add the route for you. If Shorewall6 adds the route, its persistence depends on the value of the<b>PERSISTENT</b> column contains <b>Yes</b>; otherwise, <b>shorewall6 stop</b> or <b>shorewall clear6</b> will delete the route.</dl>
+<dl><dd>If there is already a route from the firewall to the host whose address is given, enter <b>Yes</b> or <b>yes</b> in this column. Otherwise, enter <b>no</b> or <b>No</b> or leave the column empty and Shorewall will add the route for you. If Shorewall6 adds the route, its persistence depends on the value of the<b>PERSISTENT</b> column contains <b>Yes</b>; otherwise, <b>shorewall6 stop</b> or <b>shorewall clear6</b> will delete the route.</dd></dl>
  
 
  <b>PERSISTENT</b> - [<b>-</b>|<b>Yes</b>|<b>No</b>]
-<dl><dd>If HAVEROUTE is <b>No</b> or <b>no</b>, then the value of this column determines if the route added by Shorewall persists after a <b>shorewall6 stop</b> or a <b>shorewall6 clear</b>. If this column contains <b>Yes</b> or <b>yes</b> then the route persists; If the column is empty or contains <b>No</b> or <b>no</b> then the route is deleted by <b>shorewall6 stop</b> or <b>shorewall6 clear</b>.</dl>
+<dl><dd>If HAVEROUTE is <b>No</b> or <b>no</b>, then the value of this column determines if the route added by Shorewall persists after a <b>shorewall6 stop</b> or a <b>shorewall6 clear</b>. If this column contains <b>Yes</b> or <b>yes</b> then the route persists; If the column is empty or contains <b>No</b> or <b>no</b> then the route is deleted by <b>shorewall6 stop</b> or <b>shorewall6 clear</b>.</dd></dl>
 
 <h2>Example</h2>
 
 Example 1:
 <dl><dd>Host with IPv6 2001:470:b:227::44 is connected to interface eth1 and we want hosts attached via eth0 to be able to access it using that address. 
-
-<dl><dd><pre> #ADDRESS INTERFACE EXTERNAL
- 2001:470:b:227::44 eth1 eth0</pre></dl></dl>
+</dd><dl><dd><pre> #ADDRESS INTERFACE EXTERNAL
+ 2001:470:b:227::44 eth1 eth0</pre></dd></dl></dl>
 
 <h2>Files</h2>
 
@@ -58,6 +57,7 @@ m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_ba
 <h2>Notes</h2>
 
 <dl><dt> 1.
-<dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a>
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dl>
+</dt><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a>
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dd></dl>
  
+</dl>

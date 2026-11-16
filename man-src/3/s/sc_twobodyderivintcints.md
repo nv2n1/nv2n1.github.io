@@ -11,7 +11,6 @@ description: "sc::TwoBodyDerivIntCints –"
 <p> This implements electron repulsion derivative integrals in the IntV3 library.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;tbintcints.h&gt;</code></pre>
 <p> Inherits <code>sc::TwoBodyDerivInt</code>.</p>
 <h3>Public Member Functions</h3>

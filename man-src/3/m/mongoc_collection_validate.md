@@ -16,17 +16,17 @@ mongoc_collection_validate (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>options</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>options</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>reply</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>reply</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function is a helper function to execute the <code>validate</code> MongoDB command. </p>
 <p> Currently, the only supported options are <code>full</code> , which is a boolean and <code>scandata</code> , also a boolean. </p>

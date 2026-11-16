@@ -18,7 +18,7 @@ description: "globus_gsi_callback_constants.h –"
 <p>Globus GSI Callback. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Meder, Sam Lang</dl>
+<dd>Sam Meder, Sam Lang</dd></dl>
 <h2>Macro Definition Documentation</h2>
 <h3>#define GLOBUS_GSI_CALLBACK_VERIFY_DEPTH 100</h3>
 <p>Constant passed to SSL_CTX_set_verify_depth() and SSL_set_verify_depth() to increase allowed certificate depth to 100 rather than the OpenSSL default of 9. 100 is an arbitrarily chosen large value.</p>

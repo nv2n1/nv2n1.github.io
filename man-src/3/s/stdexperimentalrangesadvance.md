@@ -11,47 +11,30 @@ std::experimental::ranges::advance - std::experimental::ranges::advance
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
-
     namespace
 {
     (ranges TS)
-
         constexpr /* unspecified */ advance = /* unspecified */;
     (customization point object)
 }
-
 Call signature
-
     template &lt;Iterator I&gt;
     (1)
-
         constexpr void advance(I &amp;i, ranges::difference_type_t&lt;I&gt; n);
-
 template &lt;Iterator I, Sentinel&lt;I&gt; S&gt;
 (2)
-
     constexpr void advance(I &amp;i, S bound);
-
 template &lt;Iterator I, Sentinel&lt;I&gt; S&gt;
 (3)
-
     constexpr ranges::difference_type_t&lt;I&gt; advance(I &amp;i, ranges::difference_type_t&lt;I&gt; n, S bound);
 Advances the iterator i n times, or until bound is reached, whichever comes first.
-
 1) If I models RandomAccessIterator, equivalent to i += n. Otherwise, increments (or decrements if n is negative) i n times. The behavior is undefined if n is negative and I does not model BidirectionalIterator.
-
 2) If Assignable&lt;I&amp;, S&gt; is satisfied, equivalent to &#123;&#123;{1}}}.
-
 Otherwise, if [i, bound) does not denote a range, the behavior is undefined.
-
 Otherwise, if SizedSentinel&lt;S, I&gt; is satisfied, equivalent to ranges::advance(i, bound - i).
-
 Otherwise, increments i until i == bound.
-
 3) If SizedSentinel&lt;S, I&gt; is satisfied, equivalent to ranges::advance(i, bound) if |n| &gt;= |bound - i|, and ranges::advance(i, n) otherwise.
-
 Otherwise, increments (or decrements if n is negative) i either n times or until i == bound, whichever comes first.
-
 If n &gt; 0, [i, bound) shall denote a range; if n == 0, either [i, bound) or [bound, i) shall denote a range; if n &lt; 0, [bound, i) shall denote a range, I and S shall be the same type, and I must model BidirectionalIterator. Otherwise, the behavior is undefined.</code></pre> 
 Customization point objects 
 The name ranges::advance denotes a customization point object, which is a function_object of a literal Semiregular class type (denoted, for exposition purposes, as AdvanceT). All instances of AdvanceT are equal. Thus, ranges::advance can be copied freely and its copies can be used interchangeably. 

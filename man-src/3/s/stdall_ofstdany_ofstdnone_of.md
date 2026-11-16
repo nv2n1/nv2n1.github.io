@@ -11,41 +11,23 @@ std::all_of,std::any_of,std::none_of - std::all_of,std::any_of,std::none_of
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                                      (since C++11)
-
 bool all_of( InputIt first, InputIt last, UnaryPredicate p );                                        (until C++20)
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                                      (since C++20)
-
 constexpr bool all_of( InputIt first, InputIt last, UnaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class UnaryPredicate &gt;                         (2) (since C++17)
-
 bool all_of( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, UnaryPredicate p );
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                                                     (since C++11)
-
 bool any_of( InputIt first, InputIt last, UnaryPredicate p );                                                       (until C++20)
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                              (1)                    (since C++20)
-
 constexpr bool any_of( InputIt first, InputIt last, UnaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class UnaryPredicate &gt;                             (4)            (since C++17)
-
 bool any_of( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, UnaryPredicate p );      (3)
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                                                                    (since C++11)
-
 bool none_of( InputIt first, InputIt last, UnaryPredicate p );                                                                     (until C++20)
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                                      (5)                           (since C++20)
-
 constexpr bool none_of( InputIt first, InputIt last, UnaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class UnaryPredicate &gt;                                            (6)            (since C++17)
-
 bool none_of( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, UnaryPredicate p );</code></pre> 
 1) Checks if unary predicate p returns true for all elements in the range [first, last). 
 3) Checks if unary predicate p returns true for at least one element in the range [first, last). 
@@ -120,18 +102,12 @@ Third version
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v(10, 2);
     std::partial_sum(v.cbegin(), v.cend(), v.begin());

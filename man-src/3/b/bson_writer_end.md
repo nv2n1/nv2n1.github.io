@@ -15,8 +15,8 @@ void bson_writer_end(bson_writer_t *writer);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>writer</code></p>
-<dd> A <code>bson_writer_t</code> \&amp;.</dl>
+<dt><code>writer</code></dt>
+<dd> A <code>bson_writer_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Complete writing of a <code>bson_writer_t</code> to the buffer supplied. </p>
 <h2>COLOPHON</h2>

@@ -20,10 +20,8 @@ This destruction is empty: the members of this basic_streambuf (the pointers and
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
 int main()
-
 {
     std::filebuf *fbp = new std::filebuf;
     fbp-&gt;open(&quot;test.txt&quot;, std::ios_base::out);

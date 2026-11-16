@@ -10,10 +10,8 @@ description: "std::is_compound – std::is_compound"
 <p>std::is_compound &#8211; std::is_compound</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_compound;</code></pre>
 <p>If T is a compound type (that is, array, function, object pointer, function pointer, member object pointer, member function pointer, reference, class, union, or enumeration, including any cv-qualified variants), provides the member constant value equal true. For any other type, value is false. </p>
 <h2>Template parameters</h2>
@@ -44,7 +42,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
 {

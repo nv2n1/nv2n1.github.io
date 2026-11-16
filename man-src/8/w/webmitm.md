@@ -14,14 +14,14 @@ description: "webmitm – HTTP / HTTPS monkey-in-the-middle"
 <p><code>webmitm</code> transparently proxies and sniffs HTTP / HTTPS traffic redirected by <a href="/docs/linux/man/8-dnsspoof/">dnsspoof</a>(8), capturing most &quot;secure&quot; SSL-encrypted webmail logins and form submissions.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Enable debugging mode. May be specified multiple times to greater effect.</p>
-<dt><code>host</code></p>
-<dd>Specify a host to proxy to. If none given, only requests containing an HTTP/1.1 Host: header or absolute URI will be relayed transparently.</dl>
+<dt><code>-d</code></dt>
+<dd>Enable debugging mode. May be specified multiple times to greater effect.</dd>
+<dt><code>host</code></dt>
+<dd>Specify a host to proxy to. If none given, only requests containing an HTTP/1.1 Host: header or absolute URI will be relayed transparently.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>webmitm.crt</i></p>
-<dd>SSL certificate</dl>
+<dt><i>webmitm.crt</i></dt>
+<dd>SSL certificate</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-dsniff/">dsniff</a>(8), <a href="/docs/linux/man/8-dnsspoof/">dnsspoof</a>(8)</p>
 <h2>Author</h2>

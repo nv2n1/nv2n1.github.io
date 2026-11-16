@@ -10,13 +10,7 @@ description: "QuantLib::ExtendedEqualJumpsBinomialTree – Base class for equal 
 <p>QuantLib::ExtendedEqualJumpsBinomialTree &#8211; Base class for equal jumps binomial tree. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Real probUp (Time stepTime) const =0
-
-
-
 virtual Real dxStep (Time stepTime) const =0
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>ExtendedBinomialTree&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -25,13 +19,7 @@ Protected Attributes</code></pre>
 <p> <code>Real</code> <code>probability</code> (Size i, Size, Size branch) const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual Real probUp (Time stepTime) const =0
-
-
-
 virtual Real dxStep (Time stepTime) const =0
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Real</code> <code>dx_</code> </p>
 <p> <code>Real</code> <code>pu_</code> </p>

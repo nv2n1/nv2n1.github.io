@@ -12,16 +12,12 @@ std::error_condition::error_condition - std::error_condition::error_condition
 
 <pre><code>error_condition() noexcept;
 (1)(since C++ 11)
-
     error_condition(const error_condition &amp;other) noexcept;
 (2)(since C++ 11)(implicitly declared)
-
     error_condition(int val, const error_category &amp;cat) noexcept;
 (3)(since C++ 11)
-
     template &lt;class ErrorConditionEnum&gt;
     (4)(since C++ 11)
-
         error_condition(ErrorConditionEnum e) noexcept;</code></pre> 
 Constructs new error condition. 
 1) Default constructor. Initializes the error condition with generic category and error code 0. 

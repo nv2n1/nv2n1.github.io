@@ -16,17 +16,17 @@ mongoc_socket_send (mongoc_socket_t *sock,
  int64_t expire_at);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>buf</code></p>
-<dd>A buffer to send.</dl>
+<dt><code>buf</code></dt>
+<dd>A buffer to send.</dd></dl>
 <dl COMPACT>
-<dt><code>buflen</code></p>
-<dd>A size_t with the number of bytes in buf.</dl>
+<dt><code>buflen</code></dt>
+<dd>A size_t with the number of bytes in buf.</dd></dl>
 <dl COMPACT>
-<dt><code>expire_at</code></p>
-<dd>A int64_t with an absolute timeout for the operation or 0. The timeout is in monotonic time using microseconds. You can retrieve the current monotonic time with <code>bson_get_monotonic_time(3)</code> \&amp;.</dl>
+<dt><code>expire_at</code></dt>
+<dd>A int64_t with an absolute timeout for the operation or 0. The timeout is in monotonic time using microseconds. You can retrieve the current monotonic time with <code>bson_get_monotonic_time(3)</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Sends buflen bytes in buf to the destination. If a timeout expired, the number of bytes sent will be returned or -1 if no bytes were sent. </p>
 <h2>Returns</h2>

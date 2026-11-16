@@ -65,27 +65,27 @@ description: "cpfind – Feature matching for panoramic stitching"
 <p> For speed reasons cpfind is using images, which are scaled to their half width and height, to find keypoints. With the switch &#8211;fullscale cpfind is working on the full scale images. This takes longer but can provide &#8220;better&#8221; and/or more control points. </p>
 <p> The feature description step can be fine-tuned by the parameters:</p>
 <dl>
-<dt><code>&#8211;sieve1width</code> &lt;int&gt;</p>
-<dd> Sieve 1: Number of buckets on width (default: 10)</p>
-<dt><code>&#8211;sieve1height</code> &lt;int&gt;</p>
-<dd> Sieve 1: Number of buckets on height (default: 10)</p>
-<dt><code>&#8211;sieve1size</code> &lt;int&gt;</p>
-<dd> Sieve 1: Max points per bucket (default: 100)</p>
-<dt><code>&#8211;kdtreesteps</code> &lt;int&gt;</p>
-<dd> KDTree: search steps (default: 200)</p>
-<dt><code>&#8211;kdtreeseconddist</code> &lt;double&gt;</p>
-<dd></dl>
+<dt><code>&#8211;sieve1width</code> &lt;int&gt;</dt>
+<dd> Sieve 1: Number of buckets on width (default: 10)</dd>
+<dt><code>&#8211;sieve1height</code> &lt;int&gt;</dt>
+<dd> Sieve 1: Number of buckets on height (default: 10)</dd>
+<dt><code>&#8211;sieve1size</code> &lt;int&gt;</dt>
+<dd> Sieve 1: Max points per bucket (default: 100)</dd>
+<dt><code>&#8211;kdtreesteps</code> &lt;int&gt;</dt>
+<dd> KDTree: search steps (default: 200)</dd>
+<dt><code>&#8211;kdtreeseconddist</code> &lt;double&gt;</dt>
+<dd></dd></dl>
 <p> KDTree: distance of 2nd match (default: 0.25) </p>
 <p> Cpfind stores maximal sieve1width * sieve1height * sieve1size keypoints per image. If you have only a small overlap, e.g. for 360 degree panorama shoot with fisheye images, you can get better results if you increase sieve1size. You can also try to increase sieve1width and/or sieve1height.</p>
 <h3>Feature matching</h3>
 <p> Fine-tuning of the matching step by the following parameters:</p>
 <dl>
-<dt><code>&#8211;ransaciter</code> &lt;int&gt;</p>
-<dd> Ransac: iterations (default: 1000)</p>
-<dt><code>&#8211;ransacdist</code> &lt;int&gt;</p>
-<dd> Ransac: homography estimation distance threshold (pixels) (default: 25)</p>
-<dt><code>&#8211;ransacmode</code> (auto, hom, rpy, rpyv, rpyb)</p>
-<dd> Select the model used in the ransac step. </p>
+<dt><code>&#8211;ransaciter</code> &lt;int&gt;</dt>
+<dd> Ransac: iterations (default: 1000)</dd>
+<dt><code>&#8211;ransacdist</code> &lt;int&gt;</dt>
+<dd> Ransac: homography estimation distance threshold (pixels) (default: 25)</dd>
+<dt><code>&#8211;ransacmode</code> (auto, hom, rpy, rpyv, rpyb)</dt>
+<dd> Select the model used in the ransac step. </dd>
 <p> hom: Assume a homography. Only applicable for non-wide angle<br />
 &nbsp;<wbr>&nbsp;<wbr>views. Uses the original panomatic code. It is also more flexible<br />
 &nbsp;<wbr>&nbsp;<wbr>than required and can generate false matches, particularly if most<br />
@@ -103,75 +103,75 @@ panotools optimizer, it tends to shrink the fov to 0. </p>
 &nbsp;<wbr>the&nbsp;<wbr>&#8220;b&#8221;&nbsp;<wbr>distortion parameter.&nbsp;<wbr>&nbsp;<wbr>Probably very fragile, just<br />
 &nbsp;<wbr>implemented for testing. </p>
 <p> auto: Use homography for images with hfov &lt; 65 degrees and rpy otherwise.</p>
-<dt><code>&#8211;minmatches</code> &lt;int&gt;</p>
-<dd> Minimum matches (default: 4)</p>
-<dt><code>&#8211;sieve2width</code> &lt;int&gt;</p>
-<dd> Sieve 2: Number of buckets on width (default: 5)</p>
-<dt><code>&#8211;sieve2height</code> &lt;int&gt;</p>
-<dd> Sieve 2: Number of buckets on height (default: 5)</p>
-<dt><code>&#8211;sieve2size</code> &lt;int&gt;</p>
-<dd> Sieve 2: Max points per bucket (default: 2) </p>
+<dt><code>&#8211;minmatches</code> &lt;int&gt;</dt>
+<dd> Minimum matches (default: 4)</dd>
+<dt><code>&#8211;sieve2width</code> &lt;int&gt;</dt>
+<dd> Sieve 2: Number of buckets on width (default: 5)</dd>
+<dt><code>&#8211;sieve2height</code> &lt;int&gt;</dt>
+<dd> Sieve 2: Number of buckets on height (default: 5)</dd>
+<dt><code>&#8211;sieve2size</code> &lt;int&gt;</dt>
+<dd> Sieve 2: Max points per bucket (default: 2) </dd>
 <p> Cpfind generates between minmatches and sieve2width * sieve2height * sieve2size control points between an image pair. (Default setting is between 4 and 50 (=5*5*2) control points per image pair.) If less then minmatches control points are found for a given image pairs these control points are disregarded and this image pair is considers as not connected. For narrow overlaps you can try to decrease minmatches, but this increases the risk of getting wrong control points.</dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;celesteRadius</code> &lt;int&gt;</p>
-<dd> Radius for celeste (default 20)</p>
-<dt><code>&#8211;celesteThreshold</code> &lt;double&gt;</p>
-<dd> Threshold for celeste (default 0.5)</p>
-<dt><code>&#8211;celeste</code></p>
-<dd> Run celeste sky identification after loading images, this ignores all features associated with &#8216;clouds&#8217;.</p>
-<dt><code>-p &lt;string</code>, <code>&#8211;keypath</code> &lt;string&gt;</p>
-<dd> Path to cache keyfiles</p>
-<dt><code>&#8211;clean</code></p>
-<dd> Clean up cached keyfiles</p>
-<dt><code>-c</code>, <code>&#8211;cache</code></p>
-<dd> Caches keypoints to external file</p>
-<dt><code>&#8211;kall</code></p>
-<dd> Write keyfiles for all images</p>
-<dt><code>-k</code> &lt;int&gt;, <code>&#8211;writekeyfile</code> &lt;int&gt;</p>
-<dd> Write a keyfile for this image number (accepted multiple times)</p>
-<dt><code>-o</code> &lt;string&gt;, <code>&#8211;output</code> &lt;string&gt;</p>
-<dd> Output file, required</p>
-<dt><code>-n</code> &lt;int&gt;, <code>&#8211;ncores</code> &lt;int&gt;</p>
-<dd> Number of CPU/Cores (default:autodetect)</p>
-<dt><code>-t</code>, <code>&#8211;test</code></p>
-<dd> Enables test mode</p>
-<dt><code>&#8211;fullscale</code></p>
-<dd> Uses full scale image to detect keypoints (default:false)</p>
-<dt><code>&#8211;sieve1width</code> &lt;int&gt;</p>
-<dd> Sieve 1 : Number of buckets on width (default : 10)</p>
-<dt><code>&#8211;sieve1height</code> &lt;int&gt;</p>
-<dd> Sieve 1 : Number of buckets on height (default : 10)</p>
-<dt><code>&#8211;sieve1size</code> &lt;int&gt;</p>
-<dd> Sieve 1 : Max points per bucket (default : 100)</p>
-<dt><code>&#8211;kdtreesteps</code> &lt;int&gt;</p>
-<dd> KDTree : search steps (default : 200)</p>
-<dt><code>&#8211;kdtreeseconddist</code> &lt;double&gt;</p>
-<dd> KDTree : distance of 2nd match (default : 0.15)</p>
-<dt><code>&#8211;multirow</code></p>
-<dd> Enable heuristic multi row matching (default: off)</p>
-<dt><code>&#8211;linearmatch</code></p>
-<dd> Enable linear images matching (default : all pairs)</p>
-<dt><code>&#8211;linearmatchlen</code> &lt;int&gt;</p>
-<dd> Number of images to match in linear matching (default:1)</p>
-<dt><code>&#8211;minmatches</code> &lt;int&gt;</p>
-<dd> Minimum matches (default : 4)</p>
-<dt><code>&#8211;ransaciter</code> &lt;int&gt;</p>
-<dd> Ransac : iterations (default : 1000)</p>
-<dt><code>&#8211;ransacdist</code> &lt;int&gt;</p>
-<dd> Ransac : homography estimation distance threshold (pixels) (default : 25)</p>
-<dt><code>&#8211;sieve2width</code> &lt;int&gt;</p>
-<dd> Sieve 2 : Number of buckets on width (default : 5)</p>
-<dt><code>&#8211;sieve2height</code> &lt;int&gt;</p>
-<dd> Sieve 2 : Number of buckets on height (default : 5)</p>
-<dt><code>&#8211;sieve2size</code> &lt;int&gt;</p>
-<dd> Sieve 2 : Max points per bucket (default : 2)</p>
-<dt><code>&#8212;</code>, <code>&#8211;ignore_rest</code></p>
-<dd> Ignores the rest of the labeled arguments following this flag.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Displays version information and exits.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Displays usage information and exits.</dl>
+<dt><code>&#8211;celesteRadius</code> &lt;int&gt;</dt>
+<dd> Radius for celeste (default 20)</dd>
+<dt><code>&#8211;celesteThreshold</code> &lt;double&gt;</dt>
+<dd> Threshold for celeste (default 0.5)</dd>
+<dt><code>&#8211;celeste</code></dt>
+<dd> Run celeste sky identification after loading images, this ignores all features associated with &#8216;clouds&#8217;.</dd>
+<dt><code>-p &lt;string</code>, <code>&#8211;keypath</code> &lt;string&gt;</dt>
+<dd> Path to cache keyfiles</dd>
+<dt><code>&#8211;clean</code></dt>
+<dd> Clean up cached keyfiles</dd>
+<dt><code>-c</code>, <code>&#8211;cache</code></dt>
+<dd> Caches keypoints to external file</dd>
+<dt><code>&#8211;kall</code></dt>
+<dd> Write keyfiles for all images</dd>
+<dt><code>-k</code> &lt;int&gt;, <code>&#8211;writekeyfile</code> &lt;int&gt;</dt>
+<dd> Write a keyfile for this image number (accepted multiple times)</dd>
+<dt><code>-o</code> &lt;string&gt;, <code>&#8211;output</code> &lt;string&gt;</dt>
+<dd> Output file, required</dd>
+<dt><code>-n</code> &lt;int&gt;, <code>&#8211;ncores</code> &lt;int&gt;</dt>
+<dd> Number of CPU/Cores (default:autodetect)</dd>
+<dt><code>-t</code>, <code>&#8211;test</code></dt>
+<dd> Enables test mode</dd>
+<dt><code>&#8211;fullscale</code></dt>
+<dd> Uses full scale image to detect keypoints (default:false)</dd>
+<dt><code>&#8211;sieve1width</code> &lt;int&gt;</dt>
+<dd> Sieve 1 : Number of buckets on width (default : 10)</dd>
+<dt><code>&#8211;sieve1height</code> &lt;int&gt;</dt>
+<dd> Sieve 1 : Number of buckets on height (default : 10)</dd>
+<dt><code>&#8211;sieve1size</code> &lt;int&gt;</dt>
+<dd> Sieve 1 : Max points per bucket (default : 100)</dd>
+<dt><code>&#8211;kdtreesteps</code> &lt;int&gt;</dt>
+<dd> KDTree : search steps (default : 200)</dd>
+<dt><code>&#8211;kdtreeseconddist</code> &lt;double&gt;</dt>
+<dd> KDTree : distance of 2nd match (default : 0.15)</dd>
+<dt><code>&#8211;multirow</code></dt>
+<dd> Enable heuristic multi row matching (default: off)</dd>
+<dt><code>&#8211;linearmatch</code></dt>
+<dd> Enable linear images matching (default : all pairs)</dd>
+<dt><code>&#8211;linearmatchlen</code> &lt;int&gt;</dt>
+<dd> Number of images to match in linear matching (default:1)</dd>
+<dt><code>&#8211;minmatches</code> &lt;int&gt;</dt>
+<dd> Minimum matches (default : 4)</dd>
+<dt><code>&#8211;ransaciter</code> &lt;int&gt;</dt>
+<dd> Ransac : iterations (default : 1000)</dd>
+<dt><code>&#8211;ransacdist</code> &lt;int&gt;</dt>
+<dd> Ransac : homography estimation distance threshold (pixels) (default : 25)</dd>
+<dt><code>&#8211;sieve2width</code> &lt;int&gt;</dt>
+<dd> Sieve 2 : Number of buckets on width (default : 5)</dd>
+<dt><code>&#8211;sieve2height</code> &lt;int&gt;</dt>
+<dd> Sieve 2 : Number of buckets on height (default : 5)</dd>
+<dt><code>&#8211;sieve2size</code> &lt;int&gt;</dt>
+<dd> Sieve 2 : Max points per bucket (default : 2)</dd>
+<dt><code>&#8212;</code>, <code>&#8211;ignore_rest</code></dt>
+<dd> Ignores the rest of the labeled arguments following this flag.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Displays version information and exits.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Displays usage information and exits.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Anael Orlinski, Pablo d&#8217;Angelo, Antoine Deleforge, Thomas Modes </p>
 <h2>Index</h2>

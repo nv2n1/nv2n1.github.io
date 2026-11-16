@@ -14,7 +14,7 @@ description: "dev_remove_pack – remove packet handler"
 <p><i>pt</i></p>
 <dl>
 <dd>
-<dd>packet type declaration</dl>
+</dd><dd>packet type declaration</dd></dl>
 <h2>Description</h2>
 <p>Remove a protocol handler that was previously added to the kernel protocol handlers by <code>dev_add_pack</code>. The passed packet_type is removed from the kernel lists and can be freed or reused once this function returns. </p>
 <p> This call sleeps to guarantee that no CPU is looking at the packet type after return.</p>

@@ -18,12 +18,12 @@ description: "x11perfcomp – X11 server performance comparison program"
 <h2>OPTIONS</h2>
 <p> <i>x11perfcomp</i> accepts the options listed below:</p>
 <dl>
-<dt><code>-r</code></p>
-<dd> Specifies that the output should also include relative server performance.</p>
-<dt><code>-ro</code></p>
-<dd> Specifies that the output should include only relative server performance.</p>
-<dt><code>-l label_file</code></p>
-<dd> Specifies a label file to use.</dl>
+<dt><code>-r</code></dt>
+<dd> Specifies that the output should also include relative server performance.</dd>
+<dt><code>-ro</code></dt>
+<dd> Specifies that the output should include only relative server performance.</dd>
+<dt><code>-l label_file</code></dt>
+<dd> Specifies a label file to use.</dd></dl>
 <h2>X DEFAULTS</h2>
 <p> There are no X defaults used by this program.</p>
 <h2>SEE ALSO</h2>

@@ -11,17 +11,11 @@ std::distance - std::distance
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class InputIt &gt;
-
 typename std::iterator_traits&lt;InputIt&gt;::difference_type             (until C++17)
-
 distance( InputIt first, InputIt last );
-
 template&lt; class InputIt &gt;
-
 constexpr typename std::iterator_traits&lt;InputIt&gt;::difference_type   (since C++17)
-
 distance( InputIt first, InputIt last );</code></pre> 
 Returns the number of hops from first to last. 
 The behavior is undefined if last is not reachable from first by (possibly repeatedly) incrementing first. <i>(until C++11)</i> 
@@ -48,12 +42,9 @@ However, if InputIt additionally meets the requirements of LegacyRandomAccessIte
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4};
     std::cout &lt;&lt; &quot;distance(first, last) = &quot;

@@ -21,34 +21,32 @@ description: "aa_puts – output string to AA-lib output buffers."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int x</code></p>
-<dd> X coordinate of the first character.</p>
-<dt><code>int y</code></p>
-<dd> Y coordinate of the first character.</p>
-<dt><code>enum aa_attribute attr</code></p>
-<dd> Attribute to use. </p>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int x</code></dt>
+<dd> X coordinate of the first character.</dd>
+<dt><code>int y</code></dt>
+<dd> Y coordinate of the first character.</dd>
+<dt><code>enum aa_attribute attr</code></dt>
+<dd> Attribute to use. </dd>
 <p> Possible values for an <code>enum aa_attribute</code> are as follows:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>AA_NORMAL</code></p>
-<dd> Normal characters.</p>
-<dt><code>AA_DIM</code></p>
-<dd> Dark characters.</p>
-<dt><code>AA_BOLD</code></p>
-<dd> Bright characters.</p>
-<dt><code>AA_BOLDFONT</code></p>
-<dd> Characters rendered in bold font.</p>
-<dt><code>AA_REVERSE</code></p>
-<dd> Reversed (black on whilte) characters.</p>
-<dt><code>AA_SPECIAL</code></p>
-<dd> Render characters in a way easilly visible on the screen. The exact rendering is driver dependent, but this mode ought to be used to output texts you want to make easilly visible in the image.</dl>
+<dt><code>AA_NORMAL</code></dt>
+<dd> Normal characters.</dd>
+<dt><code>AA_DIM</code></dt>
+<dd> Dark characters.</dd>
+<dt><code>AA_BOLD</code></dt>
+<dd> Bright characters.</dd>
+<dt><code>AA_BOLDFONT</code></dt>
+<dd> Characters rendered in bold font.</dd>
+<dt><code>AA_REVERSE</code></dt>
+<dd> Reversed (black on whilte) characters.</dd>
+<dt><code>AA_SPECIAL</code></dt>
+<dd> Render characters in a way easilly visible on the screen. The exact rendering is driver dependent, but this mode ought to be used to output texts you want to make easilly visible in the image.</dd></dl>
 </dl>
-<dt><code>const char *s</code></p>
-<dd> String to output.</dl>
+<dt><code>const char *s</code></dt>
+<dd> String to output.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Output given string to AA-lib output buffers. To see the effect you need to call aa_flush too.</p>
 <h2>SEE ALSO</h2>

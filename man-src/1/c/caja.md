@@ -17,40 +17,40 @@ description: "Caja – The MATE File Manager"
 <p> This manual page briefly documents the <code>caja</code> command.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;browser</code></p>
-<dd> Open a browser window.</p>
-<dt><code>-c, &#8211;check</code></p>
-<dd> Perform a quick set of self-check tests.</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>-g, &#8211;geometry=</code><i>GEOMETRY</i></p>
-<dd> Create the initial window with the given geometry.</p>
-<dt><code>-n, &#8211;no-default-window</code></p>
-<dd> Only create windows for explicitly specified URIs.</p>
-<dt><code>&#8211;no-desktop</code></p>
-<dd> Do not manage the desktop (ignore the preference set in the preferences dialog).</p>
-<dt><code>-q, &#8211;quit</code></p>
-<dd> Quit Caja.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print current version information and exit.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>&#8211;browser</code></dt>
+<dd> Open a browser window.</dd>
+<dt><code>-c, &#8211;check</code></dt>
+<dd> Perform a quick set of self-check tests.</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>-g, &#8211;geometry=</code><i>GEOMETRY</i></dt>
+<dd> Create the initial window with the given geometry.</dd>
+<dt><code>-n, &#8211;no-default-window</code></dt>
+<dd> Only create windows for explicitly specified URIs.</dd>
+<dt><code>&#8211;no-desktop</code></dt>
+<dd> Do not manage the desktop (ignore the preference set in the preferences dialog).</dd>
+<dt><code>-q, &#8211;quit</code></dt>
+<dd> Quit Caja.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print current version information and exit.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <p> This program also accepts the standard GTK options. </p>
 <h2>EXAMPLES</h2>
 <p> <code>caja <a href="ftp://ftp.kernel.org/">ftp://ftp.kernel.org/</a></code></p>
 <dl>
 <dt>
-<dd> Open a new Caja window on the Linux Kernel ftp server.</dl>
+</dt><dd> Open a new Caja window on the Linux Kernel ftp server.</dd></dl>
 <p> <code>caja &#8211;no-desktop /home/user/</code></p>
 <dl>
 <dt>
-<dd> Open a Caja window in &quot;user&#8217;s&quot; home directory without managing the desktop.</dl>
+</dt><dd> Open a Caja window in &quot;user&#8217;s&quot; home directory without managing the desktop.</dd></dl>
 <p> <code>caja -g 600&#215;400</code></p>
 <dl>
 <dt>
-<dd> Open a Caja window that is 600 pixels wide by 400 pixels high.</dl>
+</dt><dd> Open a Caja window that is 600 pixels wide by 400 pixels high.</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/caja/issues">http://github.com/mate-desktop/caja/issues</a></p>

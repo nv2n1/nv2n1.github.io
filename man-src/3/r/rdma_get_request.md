@@ -12,17 +12,15 @@ rdma_get_request - Retrieves the next pending connection request event.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_get_request
-
     (struct rdma_cm_id *listen,
-
      struct rdma_cm_id **id);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>listen
-<dd>Listening rdma_cm_id.
-<dt>id
-<dd>rdma_cm_id associated with the new connection.</dl>
+</dt><dd>Listening rdma_cm_id.
+</dd><dt>id
+</dt><dd>rdma_cm_id associated with the new connection.</dd></dl>
 
 <h2>Description</h2>
 

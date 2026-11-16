@@ -14,13 +14,13 @@ description: "ata_link_next – link iteration helper"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>the previous link, NULL to start</dl>
+</dd><dd>the previous link, NULL to start</dd></dl>
 <p> <i>ap</i></p>
 <dl>
-<dd>ATA port containing links to iterate</dl>
+<dd>ATA port containing links to iterate</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>iteration mode, one of ATA_LITER_*</dl>
+<dd>iteration mode, one of ATA_LITER_*</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: Host lock or EH context.</p>
 <h2>Return</h2>
@@ -28,5 +28,5 @@ description: "ata_link_next – link iteration helper"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

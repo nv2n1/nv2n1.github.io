@@ -28,8 +28,8 @@ int get_kernel_syms(struct kernel_sym *table);
 <h2>ERRORS</h2>
 <p> There is only one possible error return:</p>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd> <code>get_kernel_syms</code>() is not supported in this version of the kernel.</dl>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>get_kernel_syms</code>() is not supported in this version of the kernel.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is present on Linux only up until kernel 2.4; it was removed in Linux 2.6.</p>
 <h2>CONFORMING TO</h2>

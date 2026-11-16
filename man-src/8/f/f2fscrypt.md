@@ -17,15 +17,15 @@ description: "f2fscrypt – f2fs filesystem encryption utility"
 <p><code>f2fscrypt</code> performs encryption management for f2fs file systems.</p>
 <h2>Commands</h2>
 <dl>
-<dt><code>f2fscrypt add_key -S </code>[<code> -k </code><i>keyring</i> ] [<code>-v</code>] [<code>-q</code>] [ <i> path</i> &#8230; ]</p>
-<dd>Prompts the user for a passphrase and inserts it into the specified keyring. If no keyring is specified, f2fscrypt will use the session keyring if it exists or the user session keyring if it does not.</p>
-<dd>If one or more directory paths are specified, f2fscrypt will try to set the policy of those directories to use the key just entered by the user.</p>
-<dt><code>f2fscrypt get_policy </code><i>path</i> &#8230;</p>
-<dd>Print the policy for the directories specified on the command line.</p>
-<dt><code>f2fscrypt new_session</code></p>
-<dd>Give the invoking process (typically a shell) a new session keyring, discarding its old session keyring.</p>
-<dt><code>f2fscrypt set_policy </code><i>policy path</i> &#8230;</p>
-<dd>Sets the policy for the directories specified on the command line. All directories must be empty to set the policy; if the directory already has a policy established, f2fscrypt will validate that the policy matches what was specified. A policy is an encryption key identifier consisting of 16 hexadecimal characters.</dl>
+<dt><code>f2fscrypt add_key -S </code>[<code> -k </code><i>keyring</i> ] [<code>-v</code>] [<code>-q</code>] [ <i> path</i> &#8230; ]</dt>
+<dd>Prompts the user for a passphrase and inserts it into the specified keyring. If no keyring is specified, f2fscrypt will use the session keyring if it exists or the user session keyring if it does not.</dd>
+<dd>If one or more directory paths are specified, f2fscrypt will try to set the policy of those directories to use the key just entered by the user.</dd>
+<dt><code>f2fscrypt get_policy </code><i>path</i> &#8230;</dt>
+<dd>Print the policy for the directories specified on the command line.</dd>
+<dt><code>f2fscrypt new_session</code></dt>
+<dd>Give the invoking process (typically a shell) a new session keyring, discarding its old session keyring.</dd>
+<dt><code>f2fscrypt set_policy </code><i>policy path</i> &#8230;</dt>
+<dd>Sets the policy for the directories specified on the command line. All directories must be empty to set the policy; if the directory already has a policy established, f2fscrypt will validate that the policy matches what was specified. A policy is an encryption key identifier consisting of 16 hexadecimal characters.</dd></dl>
 <h2>Notes</h2>
 <p>The target directory must be empty.</p>
 <h2>Example</h2>

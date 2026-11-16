@@ -11,37 +11,36 @@ description: "bbox – prints out the bounding box of a rawppm or rawpbm image"
 <p> bbox &#8211; prints out the bounding box of a rawppm or rawpbm image </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>bbox</code> [<code>-l</code>] [<code>-r</code>] [<code>-h</code>] [<code>-V</code>] [<i>rawpbmfile</i>]</dl>
+<dt> <code>bbox</code> [<code>-l</code>] [<code>-r</code>] [<code>-h</code>] [<code>-V</code>] [<i>rawpbmfile</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>bbox</code></p>
-<dd>reads a rawppm or rawpbm file and prints out the bounding box of the image (as postscript comment and in postscript points, i.e. 1/72dpi) as well as the high resolution bounding box. Input is read from standard input if no filename is specified. Example output: </p>
+<dd>reads a rawppm or rawpbm file and prints out the bounding box of the image (as postscript comment and in postscript points, i.e. 1/72dpi) as well as the high resolution bounding box. Input is read from standard input if no filename is specified. Example output: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
           %%BoundingBox: 12 253 829 837
           %%HiResBoundingBox: 12.500000 253.000000 828.500000 837.00000
-          
 </pre>
-</dl>
+</dd></dl>
 <p> <code>bbox</code> has only very limited memory requirements as it reads the input line by line and thus needs to store only one picture line in memory.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h | &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show summary of options.</dl>
+</dt><dd> Show summary of options.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
 <dt>
-<dd> Show version of program.</dl>
+</dt><dd> Show version of program.</dd></dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> resolution of picture in dpi</dl>
+</dt><dd> resolution of picture in dpi</dd></dl>
 <p> <code>-l</code></p>
 <dl>
 <dt>
-<dd> loose bounding box (integer bounding box is expanded by 1 point, hires bounding box is expanded by 0.5 points)</dl>
+</dt><dd> loose bounding box (integer bounding box is expanded by 1 point, hires bounding box is expanded by 0.5 points)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ps2eps (1)</p>
 <h2>AUTHOR</h2>
@@ -55,7 +54,7 @@ description: "bbox – prints out the bounding box of a rawppm or rawpbm image"
 <p> <code>Roland Bless</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2003 Roland Bless </p>
 <h2>Index</h2>

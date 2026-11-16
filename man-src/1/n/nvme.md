@@ -23,147 +23,147 @@ description: "nvme – the dumb pci-e storage utility"
 <p> <code><a href="/docs/linux/man/1-nvme-admin-passthru/">nvme-admin-passthru</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Admin Passthrough Command</dl>
+</dt><dd> Admin Passthrough Command</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-compare/">nvme-compare</a></code>(1)</p>
 <dl>
 <dt>
-<dd> IO Compare</dl>
+</dt><dd> IO Compare</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-error-log/">nvme-error-log</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Retrieve error logs</dl>
+</dt><dd> Retrieve error logs</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-flush/">nvme-flush</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Submit flush</dl>
+</dt><dd> Submit flush</dd></dl>
 <p> <code>nvme-dms</code>(1)</p>
 <dl>
 <dt>
-<dd> Submit Data Set Management</dl>
+</dt><dd> Submit Data Set Management</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-format/">nvme-format</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Format namespace(s)</dl>
+</dt><dd> Format namespace(s)</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-fw-activate/">nvme-fw-activate</a></code>(1)</p>
 <dl>
 <dt>
-<dd> F/W Activate</dl>
+</dt><dd> F/W Activate</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-fw-download/">nvme-fw-download</a></code>(1)</p>
 <dl>
 <dt>
-<dd> F/W Download</dl>
+</dt><dd> F/W Download</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-fw-log/">nvme-fw-log</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Retrieve f/w log</dl>
+</dt><dd> Retrieve f/w log</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-get-feature/">nvme-get-feature</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Get Features</dl>
+</dt><dd> Get Features</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-get-log/">nvme-get-log</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Generic Get Log</dl>
+</dt><dd> Generic Get Log</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-smart-log/">nvme-smart-log</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Retrieve Smart Log</dl>
+</dt><dd> Retrieve Smart Log</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-get-ns-id/">nvme-get-ns-id</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Retrieve namespace identifier</dl>
+</dt><dd> Retrieve namespace identifier</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-help/">nvme-help</a></code>(1)</p>
 <dl>
 <dt>
-<dd> NVMe CLI Help</dl>
+</dt><dd> NVMe CLI Help</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-id-ctrl/">nvme-id-ctrl</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Identify Controller</dl>
+</dt><dd> Identify Controller</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-id-ns/">nvme-id-ns</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Identify Namespace</dl>
+</dt><dd> Identify Namespace</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-create-ns/">nvme-create-ns</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Create a new namespace</dl>
+</dt><dd> Create a new namespace</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-delete-ns/">nvme-delete-ns</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Delete existing namespace</dl>
+</dt><dd> Delete existing namespace</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-attach-ns/">nvme-attach-ns</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Attach namespace</dl>
+</dt><dd> Attach namespace</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-detach-ns/">nvme-detach-ns</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Detach namespace</dl>
+</dt><dd> Detach namespace</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-io-passthru/">nvme-io-passthru</a></code>(1)</p>
 <dl>
 <dt>
-<dd> IO Passthrough Command</dl>
+</dt><dd> IO Passthrough Command</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-list-ns/">nvme-list-ns</a></code>(1)</p>
 <dl>
 <dt>
-<dd> List all nvme namespaces</dl>
+</dt><dd> List all nvme namespaces</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-list/">nvme-list</a></code>(1)</p>
 <dl>
 <dt>
-<dd> List all nvme controllers</dl>
+</dt><dd> List all nvme controllers</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-list-ctrl/">nvme-list-ctrl</a></code>(1)</p>
 <dl>
 <dt>
-<dd> List controller in NVMe subsystem</dl>
+</dt><dd> List controller in NVMe subsystem</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-read/">nvme-read</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Issue IO Read Command</dl>
+</dt><dd> Issue IO Read Command</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-write/">nvme-write</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Issue IO Write Command</dl>
+</dt><dd> Issue IO Write Command</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-write-zeroes/">nvme-write-zeroes</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Issue IO Write Zeroes Command</dl>
+</dt><dd> Issue IO Write Zeroes Command</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-write-uncor/">nvme-write-uncor</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Issue IO Write Uncorrectable Command</dl>
+</dt><dd> Issue IO Write Uncorrectable Command</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-resv-acquire/">nvme-resv-acquire</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Acquire Namespace Reservation</dl>
+</dt><dd> Acquire Namespace Reservation</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-resv-register/">nvme-resv-register</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Register Namespace Reservation</dl>
+</dt><dd> Register Namespace Reservation</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-resv-release/">nvme-resv-release</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Release Namespace Reservation</dl>
+</dt><dd> Release Namespace Reservation</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-resv-report/">nvme-resv-report</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Report Reservation Capabilities</dl>
+</dt><dd> Report Reservation Capabilities</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-security-recv/">nvme-security-recv</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Security Receive</dl>
+</dt><dd> Security Receive</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-security-send/">nvme-security-send</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Security Send</dl>
+</dt><dd> Security Send</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-set-feature/">nvme-set-feature</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Set Feature</dl>
+</dt><dd> Set Feature</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nvme-show-regs/">nvme-show-regs</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Show NVMe Controller Registers</dl>
+</dt><dd> Show NVMe Controller Registers</dd></dl>
 <h2>FURTHER DOCUMENTATION</h2>
 <p> See the freely available references on the m[blue]<code>Official NVM-Express Site</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>AUTHORS</h2>
@@ -174,15 +174,15 @@ description: "nvme – the dumb pci-e storage utility"
 <p> Part of the nvme suite</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Official NVM-Express Site</p>
+<dt> 1.</dt>
+<dd> Official NVM-Express Site</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://nvmexpress.org">http://nvmexpress.org</a></dl>
-<dt> 2.</p>
-<dd> Keith Busch</p>
+</dt><dd> <a rel="nofollow" href="http://nvmexpress.org">http://nvmexpress.org</a></dd></dl>
+<dt> 2.</dt>
+<dd> Keith Busch</dd>
 <dl>
 <dt>
-<dd> mailto:keith.busch [at] intel.com</dl>
+</dt><dd> mailto:keith.busch [at] intel.com</dd></dl>
 </dl>
 <h2>Index</h2>

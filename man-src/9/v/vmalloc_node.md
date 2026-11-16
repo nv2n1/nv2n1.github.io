@@ -14,10 +14,10 @@ description: "vmalloc_node – allocate memory on a specific node"
 <p><i>size</i></p>
 <dl>
 <dd>
-<dd>allocation size</dl>
+</dd><dd>allocation size</dd></dl>
 <p> <i>node</i></p>
 <dl>
-<dd>numa node</dl>
+<dd>numa node</dd></dl>
 <h2>Description</h2>
 <p>Allocate enough pages to cover <i>size</i> from the page level allocator and map them into contiguous kernel virtual space. </p>
 <p> For tight control over page level allocator and protection flags use <code>__vmalloc</code> instead.</p>

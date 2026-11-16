@@ -22,20 +22,20 @@ description: "setrichacl – Set Rich Access Control Lists"
 <p> Setting ACLs or changing the file permission bits is allowed to the file owner, to processes which have the <code>write_acl</code> permission, and to processes which have the <code>CAP_FOWNER</code> capability.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;modify</code> <i>acl</i>, <code>-m</code> <i>acl</i></p>
-<dd> Modify the ACL of <i>file</i> by replacing existing entries with the entries in <i>acl</i>, and adding all new entries. When the permissions of an entry are empty, remove the entry.</p>
-<dt><code>&#8211;modify-file</code> <i>acl_file</i>, <code>-M</code> <i>acl_file</i></p>
-<dd> Identical to <code>&#8211;modify</code>, but read the ACL from <i>acl_file</i> instead. If the file is &#8220;-&#8220;, read from standard input.</p>
-<dt><code>&#8211;set</code> <i>acl</i>, <code>-s</code> <i>acl</i></p>
-<dd> Set the ACL of <i>file</i> to <i>acl</i>. Any previous ACL is replaced. ACL entries are separated by whitespace, newlines, or commas.</p>
-<dt><code>&#8211;set-file</code> <i>acl_file</i>, <code>-S</code> <i>acl_file</i></p>
-<dd> Identical to <code>&#8211;set</code>, but read the ACL from <i>acl_file</i> instead. If the file is &#8220;-&#8220;, read from standard input.</p>
-<dt><code>&#8211;remove</code>, <code>-b</code></p>
-<dd> Remove all extended permissions and revert to the file permission bits only.</p>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd> Display the version of <code>setrichacl</code> and exit.</p>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> Display command-line usage help text.</dl>
+<dt><code>&#8211;modify</code> <i>acl</i>, <code>-m</code> <i>acl</i></dt>
+<dd> Modify the ACL of <i>file</i> by replacing existing entries with the entries in <i>acl</i>, and adding all new entries. When the permissions of an entry are empty, remove the entry.</dd>
+<dt><code>&#8211;modify-file</code> <i>acl_file</i>, <code>-M</code> <i>acl_file</i></dt>
+<dd> Identical to <code>&#8211;modify</code>, but read the ACL from <i>acl_file</i> instead. If the file is &#8220;-&#8220;, read from standard input.</dd>
+<dt><code>&#8211;set</code> <i>acl</i>, <code>-s</code> <i>acl</i></dt>
+<dd> Set the ACL of <i>file</i> to <i>acl</i>. Any previous ACL is replaced. ACL entries are separated by whitespace, newlines, or commas.</dd>
+<dt><code>&#8211;set-file</code> <i>acl_file</i>, <code>-S</code> <i>acl_file</i></dt>
+<dd> Identical to <code>&#8211;set</code>, but read the ACL from <i>acl_file</i> instead. If the file is &#8220;-&#8220;, read from standard input.</dd>
+<dt><code>&#8211;remove</code>, <code>-b</code></dt>
+<dd> Remove all extended permissions and revert to the file permission bits only.</dd>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd> Display the version of <code>setrichacl</code> and exit.</dd>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Display command-line usage help text.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Andreas Grünbacher &lt;agruenba [at] redhat.com&gt;. </p>
 <p> Please send your bug reports, suggested features and comments to the above address.</p>

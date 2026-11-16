@@ -12,10 +12,8 @@ std::atomic&lt;T&gt;::atomic - std::atomic&lt;T&gt;::atomic
 
 <pre><code>atomic() noexcept = default;
 (1)(since C++ 11)
-
     constexpr atomic(T desired) noexcept;
 (2)(since C++ 11)
-
     atomic(const atomic &amp;) = delete;
 (3)(since C++ 11)</code></pre> 
 Constructs new atomic variable. 

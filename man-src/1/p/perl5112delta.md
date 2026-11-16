@@ -24,99 +24,99 @@ description: "perl5112delta – what is new for perl v5.11.2"
 <h2>Modules and Pragmata</h2>
 <h3>New Modules and Pragmata</h3>
 <dl>
-<dt>&quot;legacy&quot;</p>
-<dd> Preserves legacy behaviors or enable new non-default behaviors. Currently the only behaviour concerns semantics for the 128 characters on <font SIZE="-1">ASCII</font> systems that have the 8th bit set.</dl>
+<dt>&quot;legacy&quot;</dt>
+<dd> Preserves legacy behaviors or enable new non-default behaviors. Currently the only behaviour concerns semantics for the 128 characters on <font SIZE="-1">ASCII</font> systems that have the 8th bit set.</dd></dl>
 <h3>Pragmata Changes</h3>
 <dl>
-<dt>&quot;diagnostics&quot;</p>
-<dd> Supports %.0f formatting internally.</p>
-<dt>&quot;overload&quot;</p>
-<dd> Allow overloading of &#8216;qr&#8217;.</dl>
+<dt>&quot;diagnostics&quot;</dt>
+<dd> Supports %.0f formatting internally.</dd>
+<dt>&quot;overload&quot;</dt>
+<dd> Allow overloading of &#8216;qr&#8217;.</dd></dl>
 <h3>Updated Modules</h3>
 <dl>
-<dt>&quot;B::Concise&quot;</p>
-<dd> Optimize reversing an array in-place, avoid using defined <tt>%hash</tt> in core code and tests.</p>
-<dt>&quot;B::Deparse&quot;</p>
-<dd> Teach B::Deparse about in-place reverse.</p>
-<dt>&quot;Carp&quot;</p>
-<dd> Refine Carp <i>caller()</i> fix and add tests.</p>
-<dt>&quot;Compress::Zlib&quot;</p>
-<dd> Updated to 2.022.</p>
-<dt>&quot;CPANPLUS&quot;</p>
-<dd> Updated to 0.89_09.</p>
-<dt>&quot;Encode&quot;</p>
-<dd> Updated to 2.38.</p>
-<dt>&quot;ExtUtils::CBuilder&quot;</p>
-<dd> Updated to 0.27.</p>
-<dt>&quot;Env&quot;</p>
-<dd> Add <font SIZE="-1">EXISTS</font> and <font SIZE="-1">DELETE</font> methods to Env.pm.</p>
-<dt>&quot;File::Fetch&quot;</p>
-<dd> Updated to 0.22.</p>
-<dt>&quot;I8N::Langinfo&quot;</p>
-<dd> Correctly document export of I18N::Langinfo.</p>
-<dt>&quot;I8N::LangTags&quot;</p>
-<dd> In I18N::LangTags::Detect, avoid using defined <tt>@array</tt> and defined <tt>%hash</tt>.</p>
-<dt>&quot;IO::Compress&quot;</p>
-<dd> Updated to 2.022.</p>
-<dt>&quot;IPC::Cmd&quot;</p>
-<dd> Updated to 0.54.</p>
-<dt>&quot;List::Util&quot;</p>
-<dd> Updated to 1.22.</p>
-<dt>&quot;Locale::Maketext&quot;</p>
-<dd> In Locale::Maketext, avoid using defined <tt>@array</tt> and defined <tt>%hash</tt>. Convert the odd Locale::Maketext test out from Test to Test::More.</p>
-<dt>&quot;Module::Build&quot;</p>
-<dd> Updated to 0.35_08.</p>
-<dt>&quot;Module::CoreList&quot;</p>
-<dd> Implemented <i>is_deprecated()</i>.</p>
-<dt>&quot;Pod::Simple&quot;</p>
-<dd> Updated to 3.10.</p>
-<dt>&quot;Scalar::Util&quot;</p>
-<dd> Updated to 1.22.</p>
-<dt>&quot;Switch&quot;</p>
-<dd> Updated to 2.16.</dl>
+<dt>&quot;B::Concise&quot;</dt>
+<dd> Optimize reversing an array in-place, avoid using defined <tt>%hash</tt> in core code and tests.</dd>
+<dt>&quot;B::Deparse&quot;</dt>
+<dd> Teach B::Deparse about in-place reverse.</dd>
+<dt>&quot;Carp&quot;</dt>
+<dd> Refine Carp <i>caller()</i> fix and add tests.</dd>
+<dt>&quot;Compress::Zlib&quot;</dt>
+<dd> Updated to 2.022.</dd>
+<dt>&quot;CPANPLUS&quot;</dt>
+<dd> Updated to 0.89_09.</dd>
+<dt>&quot;Encode&quot;</dt>
+<dd> Updated to 2.38.</dd>
+<dt>&quot;ExtUtils::CBuilder&quot;</dt>
+<dd> Updated to 0.27.</dd>
+<dt>&quot;Env&quot;</dt>
+<dd> Add <font SIZE="-1">EXISTS</font> and <font SIZE="-1">DELETE</font> methods to Env.pm.</dd>
+<dt>&quot;File::Fetch&quot;</dt>
+<dd> Updated to 0.22.</dd>
+<dt>&quot;I8N::Langinfo&quot;</dt>
+<dd> Correctly document export of I18N::Langinfo.</dd>
+<dt>&quot;I8N::LangTags&quot;</dt>
+<dd> In I18N::LangTags::Detect, avoid using defined <tt>@array</tt> and defined <tt>%hash</tt>.</dd>
+<dt>&quot;IO::Compress&quot;</dt>
+<dd> Updated to 2.022.</dd>
+<dt>&quot;IPC::Cmd&quot;</dt>
+<dd> Updated to 0.54.</dd>
+<dt>&quot;List::Util&quot;</dt>
+<dd> Updated to 1.22.</dd>
+<dt>&quot;Locale::Maketext&quot;</dt>
+<dd> In Locale::Maketext, avoid using defined <tt>@array</tt> and defined <tt>%hash</tt>. Convert the odd Locale::Maketext test out from Test to Test::More.</dd>
+<dt>&quot;Module::Build&quot;</dt>
+<dd> Updated to 0.35_08.</dd>
+<dt>&quot;Module::CoreList&quot;</dt>
+<dd> Implemented <i>is_deprecated()</i>.</dd>
+<dt>&quot;Pod::Simple&quot;</dt>
+<dd> Updated to 3.10.</dd>
+<dt>&quot;Scalar::Util&quot;</dt>
+<dd> Updated to 1.22.</dd>
+<dt>&quot;Switch&quot;</dt>
+<dd> Updated to 2.16.</dd></dl>
 <h2>Utility Changes</h2>
 <dl>
-<dt><i>a2p</i></p>
-<dd> Fixed bugs with the <i>match()</i> operator in list context, remove mention of $[.</dl>
+<dt><i>a2p</i></dt>
+<dd> Fixed bugs with the <i>match()</i> operator in list context, remove mention of $[.</dd></dl>
 <h2>Performance Enhancements</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Reversing an array to itself (as in <tt>&quot;@a = reverse @a&quot;</tt>) in void context now happens in-place and is several orders of magnitude faster than it used to be. It will also preserve non-existent elements whenever possible, i.e. for non magical arrays or tied arrays with <tt>&quot;EXISTS&quot;</tt> and <tt>&quot;DELETE&quot;</tt> methods.</dl>
+<dt>&bull;</dt>
+<dd> Reversing an array to itself (as in <tt>&quot;@a = reverse @a&quot;</tt>) in void context now happens in-place and is several orders of magnitude faster than it used to be. It will also preserve non-existent elements whenever possible, i.e. for non magical arrays or tied arrays with <tt>&quot;EXISTS&quot;</tt> and <tt>&quot;DELETE&quot;</tt> methods.</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <p> Several new diagnostics, see perldiag for details.</p>
 <dl>
-<dt>&quot;Bad plugin affecting keyword &#8216;%s&#8217;&quot;</p>
+<dt>&quot;Bad plugin affecting keyword &#8216;%s&#8217;&quot;</dt>
 <dd>
-<dt>&quot;gmtime(%.0f) too large&quot;</p>
+</dd><dt>&quot;gmtime(%.0f) too large&quot;</dt>
 <dd>
-<dt>&quot;Lexing code attempted to stuff non-Latin-1 character into Latin-1 input&quot;</p>
+</dd><dt>&quot;Lexing code attempted to stuff non-Latin-1 character into Latin-1 input&quot;</dt>
 <dd>
-<dt>&quot;Lexing code internal error (%s)&quot;</p>
+</dd><dt>&quot;Lexing code internal error (%s)&quot;</dt>
 <dd>
-<dt>&quot;localtime(%.0f) too large&quot;</p>
+</dd><dt>&quot;localtime(%.0f) too large&quot;</dt>
 <dd>
-<dt>&quot;Overloaded dereference did not return a reference&quot;</p>
+</dd><dt>&quot;Overloaded dereference did not return a reference&quot;</dt>
 <dd>
-<dt>&quot;Overloaded qr did not return a REGEXP&quot;</p>
+</dd><dt>&quot;Overloaded qr did not return a REGEXP&quot;</dt>
 <dd>
-<dt>&quot;Perl_pmflag() is deprecated, and will be removed from the XS API&quot;</p>
-<dd></dl>
+</dd><dt>&quot;Perl_pmflag() is deprecated, and will be removed from the XS API&quot;</dt>
+<dd></dd></dl>
 <p> One diagnostic has been removed:</p>
 <dl>
-<dt>&quot;Runaway format&quot;</p>
-<dd></dl>
+<dt>&quot;Runaway format&quot;</dt>
+<dd></dd></dl>
 <h2>Changed Internals</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Perl_pmflag&quot;</tt> has been removed from the public <font SIZE="-1">API</font>. Calling it now generates a deprecation warning, and it will be removed in a future release. Although listed as part of the <font SIZE="-1">API</font>, it was never documented, and only ever used in <i>toke.c</i>, and prior to 5.10, <i>regcomp.c</i>. In core, it has been replaced by a static function.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Perl_pmflag&quot;</tt> has been removed from the public <font SIZE="-1">API</font>. Calling it now generates a deprecation warning, and it will be removed in a future release. Although listed as part of the <font SIZE="-1">API</font>, it was never documented, and only ever used in <i>toke.c</i>, and prior to 5.10, <i>regcomp.c</i>. In core, it has been replaced by a static function.</dd></dl>
 <h2>New Tests</h2>
 <dl>
-<dt><i>t/op/while_readdir.t</i></p>
-<dd> Test that a bare readdir in while loop sets <tt>$_</tt>.</dl>
+<dt><i>t/op/while_readdir.t</i></dt>
+<dd> Test that a bare readdir in while loop sets <tt>$_</tt>.</dd></dl>
 <h2>Known Problems</h2>
 <dl>
-<dt>Known test failures on <font SIZE="-1">VMS</font></p>
-<dd> Perl 5.11.2 fails a small set of core and <font SIZE="-1">CPAN</font> tests as of this release. With luck, that&#8217;ll be sorted out for 5.11.3.</dl>
+<dt>Known test failures on <font SIZE="-1">VMS</font></dt>
+<dd> Perl 5.11.2 fails a small set of core and <font SIZE="-1">CPAN</font> tests as of this release. With luck, that&#8217;ll be sorted out for 5.11.3.</dd></dl>
 <h2>Deprecations</h2>
 <p> The following items are now deprecated.</p>
 <h3>Use of := to mean an empty attribute list is now deprecated.</h3>

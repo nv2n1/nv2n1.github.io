@@ -14,54 +14,54 @@ description: "expr – evaluate expressions"
  <code>expr</code> <i>,OPTION/</i></p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Print the value of EXPRESSION to standard output. A blank line below separates increasing precedence groups. EXPRESSION may be:</p>
 <dl>
-<dt>ARG1 | ARG2</p>
-<dd> ARG1 if it is neither null nor 0, otherwise ARG2</p>
-<dt>ARG1 &amp; ARG2</p>
-<dd> ARG1 if neither argument is null or 0, otherwise 0</p>
-<dt>ARG1 &lt; ARG2</p>
-<dd> ARG1 is less than ARG2</p>
-<dt>ARG1 &lt;= ARG2</p>
-<dd> ARG1 is less than or equal to ARG2</p>
-<dt>ARG1 = ARG2</p>
-<dd> ARG1 is equal to ARG2</p>
-<dt>ARG1 != ARG2</p>
-<dd> ARG1 is unequal to ARG2</p>
-<dt>ARG1 &gt;= ARG2</p>
-<dd> ARG1 is greater than or equal to ARG2</p>
-<dt>ARG1 &gt; ARG2</p>
-<dd> ARG1 is greater than ARG2</p>
-<dt>ARG1 + ARG2</p>
-<dd> arithmetic sum of ARG1 and ARG2</p>
-<dt>ARG1 &#8211; ARG2</p>
-<dd> arithmetic difference of ARG1 and ARG2</p>
-<dt>ARG1 * ARG2</p>
-<dd> arithmetic product of ARG1 and ARG2</p>
-<dt>ARG1 / ARG2</p>
-<dd> arithmetic quotient of ARG1 divided by ARG2</p>
-<dt>ARG1 % ARG2</p>
-<dd> arithmetic remainder of ARG1 divided by ARG2</p>
-<dt>STRING : REGEXP</p>
-<dd> anchored pattern match of REGEXP in STRING</p>
-<dt>match STRING REGEXP</p>
-<dd> same as STRING : REGEXP</p>
-<dt>substr STRING POS LENGTH</p>
-<dd> substring of STRING, POS counted from 1</p>
-<dt>index STRING CHARS</p>
-<dd> index in STRING where any CHARS is found, or 0</p>
-<dt>length STRING</p>
-<dd> length of STRING</p>
-<dt>+ TOKEN</p>
-<dd> interpret TOKEN as a string, even if it is a</p>
+<dt>ARG1 | ARG2</dt>
+<dd> ARG1 if it is neither null nor 0, otherwise ARG2</dd>
+<dt>ARG1 &amp; ARG2</dt>
+<dd> ARG1 if neither argument is null or 0, otherwise 0</dd>
+<dt>ARG1 &lt; ARG2</dt>
+<dd> ARG1 is less than ARG2</dd>
+<dt>ARG1 &lt;= ARG2</dt>
+<dd> ARG1 is less than or equal to ARG2</dd>
+<dt>ARG1 = ARG2</dt>
+<dd> ARG1 is equal to ARG2</dd>
+<dt>ARG1 != ARG2</dt>
+<dd> ARG1 is unequal to ARG2</dd>
+<dt>ARG1 &gt;= ARG2</dt>
+<dd> ARG1 is greater than or equal to ARG2</dd>
+<dt>ARG1 &gt; ARG2</dt>
+<dd> ARG1 is greater than ARG2</dd>
+<dt>ARG1 + ARG2</dt>
+<dd> arithmetic sum of ARG1 and ARG2</dd>
+<dt>ARG1 &#8211; ARG2</dt>
+<dd> arithmetic difference of ARG1 and ARG2</dd>
+<dt>ARG1 * ARG2</dt>
+<dd> arithmetic product of ARG1 and ARG2</dd>
+<dt>ARG1 / ARG2</dt>
+<dd> arithmetic quotient of ARG1 divided by ARG2</dd>
+<dt>ARG1 % ARG2</dt>
+<dd> arithmetic remainder of ARG1 divided by ARG2</dd>
+<dt>STRING : REGEXP</dt>
+<dd> anchored pattern match of REGEXP in STRING</dd>
+<dt>match STRING REGEXP</dt>
+<dd> same as STRING : REGEXP</dd>
+<dt>substr STRING POS LENGTH</dt>
+<dd> substring of STRING, POS counted from 1</dd>
+<dt>index STRING CHARS</dt>
+<dd> index in STRING where any CHARS is found, or 0</dd>
+<dt>length STRING</dt>
+<dd> length of STRING</dd>
+<dt>+ TOKEN</dt>
+<dd> interpret TOKEN as a string, even if it is a</dd>
 <dt>
-<dd> keyword like &#8216;match&#8217; or an operator like &#8216;/&#8217;</p>
-<dt>( EXPRESSION )</p>
-<dd> value of EXPRESSION</dl>
+</dt><dd> keyword like &#8216;match&#8217; or an operator like &#8216;/&#8217;</dd>
+<dt>( EXPRESSION )</dt>
+<dd> value of EXPRESSION</dd></dl>
 <p> Beware that many operators need to be escaped or quoted for shells. Comparisons are arithmetic if both ARGs are numbers, else lexicographical. Pattern matches return the string matched between \( and \) or null; if \( and \) are not used, they return the number of characters matched or 0. </p>
 <p> Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.</p>
 <h2>AUTHOR</h2>

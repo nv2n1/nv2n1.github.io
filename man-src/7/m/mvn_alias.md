@@ -16,10 +16,10 @@ description: "mvn_alias – add alias(es) for Maven artifact(s)"
 <h2>Operands</h2>
 <p><code>artifact-coordinates</code></p>
 <dl>
-<dd>Artifact coordinates specify artifact(s) that this rule applies to. Coordinates are in format <code>groupId:artifactId[:extension[:classifier]][:version]</code>. If extension is specified then version must be specified too. If any part is omitted or equal to empty string then it matches any string. Wildcards and brace expansions are supported in each part. For more information see XMvn Configuration Reference.</dl>
+<dd>Artifact coordinates specify artifact(s) that this rule applies to. Coordinates are in format <code>groupId:artifactId[:extension[:classifier]][:version]</code>. If extension is specified then version must be specified too. If any part is omitted or equal to empty string then it matches any string. Wildcards and brace expansions are supported in each part. For more information see XMvn Configuration Reference.</dd></dl>
 <p> <code>alias</code></p>
 <dl>
-<dd>Coordinates specifying artifact alias (alternative name under which matching artifacts will be available). Coordinates are in format <code>groupId:artifactId[:extension[:classifier]][:version]</code>. If extension is specified then version must be specified too. If any part is omitted or equal to empty string then corresponding part from <code>artifact-coordinates</code> will be substituted. Backreferences are supported in form <code>@n</code>, where <code>n</code> is an integer corresponding to brace in <code>artifact-coordinates</code>.</dl>
+<dd>Coordinates specifying artifact alias (alternative name under which matching artifacts will be available). Coordinates are in format <code>groupId:artifactId[:extension[:classifier]][:version]</code>. If extension is specified then version must be specified too. If any part is omitted or equal to empty string then corresponding part from <code>artifact-coordinates</code> will be substituted. Backreferences are supported in form <code>@n</code>, where <code>n</code> is an integer corresponding to brace in <code>artifact-coordinates</code>.</dd></dl>
 <h2>Author</h2>
 <p>Originally written by Mikolaj Izdebski. Versions 3.0.0 and later were written by Stanislav Ochotnicky.</p>
 <h2>Reporting Bugs</h2>

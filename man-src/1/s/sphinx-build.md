@@ -18,80 +18,80 @@ description: "sphinx-build – Sphinx documentation generator tool"
 <p> By default, everything that is outdated is built. Output only for selected files can be built by specifying individual filenames. </p>
 <p> List of available builders:</p>
 <dl>
-<dt><code>html</code></p>
-<dd> HTML file generation. This is the default builder.</p>
-<dt><code>dirhtml</code></p>
-<dd> HTML file generation with every HTML file named &quot;index.html&quot; in a separate directory.</p>
-<dt><code>singlehtml</code></p>
-<dd> HTML file generation with all content in a single HTML file.</p>
-<dt><code>htmlhelp</code></p>
-<dd> Generates files for CHM (compiled help files) generation.</p>
-<dt><code>qthelp</code></p>
-<dd> Generates files for Qt help collection generation.</p>
-<dt><code>devhelp</code></p>
-<dd> Generates files for the GNOME Devhelp help viewer.</p>
-<dt><code>latex</code></p>
-<dd> Generates LaTeX output that can be compiled to a PDF document.</p>
-<dt><code>man</code></p>
-<dd> Generates manual pages.</p>
-<dt><code>texinfo</code></p>
-<dd> Generates Texinfo output that can be processed by <code>makeinfo</code> to generate an Info document.</p>
-<dt><code>epub</code></p>
-<dd> Generates an ePub e-book version of the HTML output.</p>
-<dt><code>text</code></p>
-<dd> Generates a plain-text version of the documentation.</p>
-<dt><code>gettext</code></p>
-<dd> Generates Gettext message catalogs for content translation.</p>
-<dt><code>changes</code></p>
-<dd> Generates HTML files listing changed/added/deprecated items for the current version of the documented project.</p>
-<dt><code>linkcheck</code></p>
-<dd> Checks the integrity of all external links in the source.</p>
-<dt><code>pickle / json</code></p>
-<dd> Generates serialized HTML files for use in web applications.</p>
-<dt><code>xml</code></p>
-<dd> Generates Docutils-native XML files.</p>
-<dt><code>pseudoxml</code></p>
-<dd> Generates compact pretty-printed &quot;pseudo-XML&quot; files displaying the internal structure of the intermediate document trees.</dl>
+<dt><code>html</code></dt>
+<dd> HTML file generation. This is the default builder.</dd>
+<dt><code>dirhtml</code></dt>
+<dd> HTML file generation with every HTML file named &quot;index.html&quot; in a separate directory.</dd>
+<dt><code>singlehtml</code></dt>
+<dd> HTML file generation with all content in a single HTML file.</dd>
+<dt><code>htmlhelp</code></dt>
+<dd> Generates files for CHM (compiled help files) generation.</dd>
+<dt><code>qthelp</code></dt>
+<dd> Generates files for Qt help collection generation.</dd>
+<dt><code>devhelp</code></dt>
+<dd> Generates files for the GNOME Devhelp help viewer.</dd>
+<dt><code>latex</code></dt>
+<dd> Generates LaTeX output that can be compiled to a PDF document.</dd>
+<dt><code>man</code></dt>
+<dd> Generates manual pages.</dd>
+<dt><code>texinfo</code></dt>
+<dd> Generates Texinfo output that can be processed by <code>makeinfo</code> to generate an Info document.</dd>
+<dt><code>epub</code></dt>
+<dd> Generates an ePub e-book version of the HTML output.</dd>
+<dt><code>text</code></dt>
+<dd> Generates a plain-text version of the documentation.</dd>
+<dt><code>gettext</code></dt>
+<dd> Generates Gettext message catalogs for content translation.</dd>
+<dt><code>changes</code></dt>
+<dd> Generates HTML files listing changed/added/deprecated items for the current version of the documented project.</dd>
+<dt><code>linkcheck</code></dt>
+<dd> Checks the integrity of all external links in the source.</dd>
+<dt><code>pickle / json</code></dt>
+<dd> Generates serialized HTML files for use in web applications.</dd>
+<dt><code>xml</code></dt>
+<dd> Generates Docutils-native XML files.</dd>
+<dt><code>pseudoxml</code></dt>
+<dd> Generates compact pretty-printed &quot;pseudo-XML&quot; files displaying the internal structure of the intermediate document trees.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i>&nbsp;<wbr>&lt;builder&gt;</i></p>
-<dd> Builder to use; defaults to html. See the full list of builders above.</p>
-<dt><code>-a</code></p>
-<dd> Generate output for all files; without this option only output for new and changed files is generated.</p>
-<dt><code>-E</code></p>
-<dd> Ignore cached files, forces to re-read all source files from disk.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>&lt;path&gt;</i></p>
-<dd> Path to cached files; defaults to &lt;outdir&gt;/.doctrees.</p>
-<dt><code>-j</code><i>&nbsp;<wbr>&lt;N&gt;</i></p>
-<dd> Build in parallel with N processes where possible.</p>
-<dt><code>-c</code><i>&nbsp;<wbr>&lt;path&gt;</i></p>
-<dd> Locate the conf.py file in the specified path instead of &lt;sourcedir&gt;.</p>
-<dt><code>-C</code></p>
-<dd> Specify that no conf.py file at all is to be used. Configuration can only be set with the -D option.</p>
-<dt><code>-D</code><i>&nbsp;<wbr>&lt;setting=value&gt;</i></p>
-<dd> Override a setting from the configuration file.</p>
-<dt><code>-t</code><i>&nbsp;<wbr>&lt;tag&gt;</i></p>
-<dd> Define <i>tag</i> for use in &quot;only&quot; blocks.</p>
-<dt><code>-A</code><i>&nbsp;<wbr>&lt;name=value&gt;</i></p>
-<dd> Pass a value into the HTML templates (only for HTML builders).</p>
-<dt><code>-n</code></p>
-<dd> Run in nit-picky mode, warn about all missing references.</p>
-<dt><code>-v</code></p>
-<dd> Increase verbosity (can be repeated).</p>
-<dt><code>-N</code></p>
-<dd> Prevent colored output.</p>
-<dt><code>-q</code></p>
-<dd> Quiet operation, just print warnings and errors on stderr.</p>
-<dt><code>-Q</code></p>
-<dd> Very quiet operation, don&#8217;t print anything except for errors.</p>
-<dt><code>-w</code><i>&nbsp;<wbr>&lt;file&gt;</i></p>
-<dd> Write warnings and errors into the given file, in addition to stderr.</p>
-<dt><code>-W</code></p>
-<dd> Turn warnings into errors.</p>
-<dt><code>-T</code></p>
-<dd> Show full traceback on exception.</p>
-<dt><code>-P</code></p>
-<dd> Run Pdb on exception.</dl>
+<dt><code>-b</code><i>&nbsp;<wbr>&lt;builder&gt;</i></dt>
+<dd> Builder to use; defaults to html. See the full list of builders above.</dd>
+<dt><code>-a</code></dt>
+<dd> Generate output for all files; without this option only output for new and changed files is generated.</dd>
+<dt><code>-E</code></dt>
+<dd> Ignore cached files, forces to re-read all source files from disk.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>&lt;path&gt;</i></dt>
+<dd> Path to cached files; defaults to &lt;outdir&gt;/.doctrees.</dd>
+<dt><code>-j</code><i>&nbsp;<wbr>&lt;N&gt;</i></dt>
+<dd> Build in parallel with N processes where possible.</dd>
+<dt><code>-c</code><i>&nbsp;<wbr>&lt;path&gt;</i></dt>
+<dd> Locate the conf.py file in the specified path instead of &lt;sourcedir&gt;.</dd>
+<dt><code>-C</code></dt>
+<dd> Specify that no conf.py file at all is to be used. Configuration can only be set with the -D option.</dd>
+<dt><code>-D</code><i>&nbsp;<wbr>&lt;setting=value&gt;</i></dt>
+<dd> Override a setting from the configuration file.</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>&lt;tag&gt;</i></dt>
+<dd> Define <i>tag</i> for use in &quot;only&quot; blocks.</dd>
+<dt><code>-A</code><i>&nbsp;<wbr>&lt;name=value&gt;</i></dt>
+<dd> Pass a value into the HTML templates (only for HTML builders).</dd>
+<dt><code>-n</code></dt>
+<dd> Run in nit-picky mode, warn about all missing references.</dd>
+<dt><code>-v</code></dt>
+<dd> Increase verbosity (can be repeated).</dd>
+<dt><code>-N</code></dt>
+<dd> Prevent colored output.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet operation, just print warnings and errors on stderr.</dd>
+<dt><code>-Q</code></dt>
+<dd> Very quiet operation, don&#8217;t print anything except for errors.</dd>
+<dt><code>-w</code><i>&nbsp;<wbr>&lt;file&gt;</i></dt>
+<dd> Write warnings and errors into the given file, in addition to stderr.</dd>
+<dt><code>-W</code></dt>
+<dd> Turn warnings into errors.</dd>
+<dt><code>-T</code></dt>
+<dd> Show full traceback on exception.</dd>
+<dt><code>-P</code></dt>
+<dd> Run Pdb on exception.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-sphinx-quickstart/">sphinx-quickstart</a>(1)</i></p>
 <h2>AUTHOR</h2>

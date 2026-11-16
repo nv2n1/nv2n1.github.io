@@ -431,13 +431,13 @@ Left Right Description and pseudocode == == == == == == == == == == == == == == 
  Notes:
 <dl>
 <dt>1. Empty hashes or arrays match.
-<dd>
-<dt>2. That is, each element smartmatches the element of the same index in the other array.[3]
-<dd>
-<dt>3. If a circular reference is found, fall back to referential equality.
-<dd>
-<dt>4. Either an actual number, or a string that looks like one.
-<dd></dl>
+</dt><dd>
+</dd><dt>2. That is, each element smartmatches the element of the same index in the other array.[3]
+</dt><dd>
+</dd><dt>3. If a circular reference is found, fall back to referential equality.
+</dt><dd>
+</dd><dt>4. Either an actual number, or a string that looks like one.
+</dt><dd></dd></dl>
  
 
  The smartmatch implicitly dereferences any non-blessed hash or array reference, so the <tt>&quot;</tt>HASH<tt>&quot;</tt> and <tt>&quot;</tt>ARRAY<tt>&quot;</tt> entries apply in those cases. For blessed references, the <tt>&quot;</tt>Object<tt>&quot;</tt> entries apply. Smartmatches involving hashes only consider hash keys, never hash values. 
@@ -1007,11 +1007,11 @@ $x = $y or $z;
  Here is what C has that Perl doesn't:
 <dl>
 <dt>unary &amp;
-<dd> Address-of operator. (But see the <tt>&quot;\&quot;</tt> operator for taking a reference.)
-<dt>unary *
-<dd> Dereference-address operator. (Perl's prefix dereferencing operators are typed: <tt>&quot;$&quot;</tt>, <tt>&quot;@&quot;</tt>, <tt>&quot;%&quot;</tt>, and <tt>&quot;&amp;&quot;</tt>.)
-<dt>(<font SIZE="-1">TYPE</font>)
-<dd> Type-casting operator.</dl>
+</dt><dd> Address-of operator. (But see the <tt>&quot;\&quot;</tt> operator for taking a reference.)
+</dd><dt>unary *
+</dt><dd> Dereference-address operator. (Perl's prefix dereferencing operators are typed: <tt>&quot;$&quot;</tt>, <tt>&quot;@&quot;</tt>, <tt>&quot;%&quot;</tt>, and <tt>&quot;&amp;&quot;</tt>.)
+</dd><dt>(<font SIZE="-1">TYPE</font>)
+</dt><dd> Type-casting operator.</dd></dl>
 
 <h3>Quote and Quote-like Operators</h3>
 
@@ -1122,16 +1122,12 @@ s{foo} #Replace foo
 
 <dl>
 <dt>[1]
-<dd> The result is the character specified by the hexadecimal number between the braces. See ``[8]'' below for details on which character. 
-
+</dt><dd> The result is the character specified by the hexadecimal number between the braces. See ``[8]'' below for details on which character. 
  Only hexadecimal digits are valid between the braces. If an invalid character is encountered, a warning will be issued and the invalid character and all subsequent characters (valid or invalid) within the braces will be discarded. 
-
  If there are no valid digits between the braces, the generated character is the <font SIZE="-1">NULL</font> character (<tt>&quot;\x{00}&quot;</tt>). However, an explicit empty brace (<tt>&quot;\x{}&quot;</tt>) will not cause a warning (currently).
-<dt>[2]
-<dd> The result is the character specified by the hexadecimal number in the range 0x00 to 0xFF. See ``[8]'' below for details on which character. 
-
+</dd><dt>[2]
+</dt><dd> The result is the character specified by the hexadecimal number in the range 0x00 to 0xFF. See ``[8]'' below for details on which character. 
  Only hexadecimal digits are valid following <tt>&quot;\x&quot;</tt>. When <tt>&quot;\x&quot;</tt> is followed by fewer than two valid digits, any valid digits will be zero-padded. This means that <tt>&quot;\x7&quot;</tt> will be interpreted as <tt>&quot;\x07&quot;</tt>, and a lone <tt>&quot;\x&quot;</tt> will be interpreted as <tt>&quot;\x00&quot;</tt>. Except at the end of a string, having fewer than two valid digits will result in a warning. Note that although the warning says the illegal character is ignored, it is only ignored as part of the escape and will still be used as the subsequent character in the string. For example: 
-
  <pre>
   Original    Result    Warns?
   &quot;\x7&quot;       &quot;\x07&quot;    no
@@ -1139,14 +1135,12 @@ s{foo} #Replace foo
   &quot;\x7q&quot;      &quot;\x07q&quot;   yes
   &quot;\xq&quot;       &quot;\x00q&quot;   yes
 </pre>
-<dt>[3]
-<dd> The result is the Unicode character or character sequence given by <i>name</i>. See charnames.
-<dt>[4]
-<dd> <tt>&quot;\N{U+</tt>hexadecimal number<tt>}&quot;</tt> means the Unicode character whose Unicode code point is <i>hexadecimal number</i>.
-<dt>[5]
-<dd> The character following <tt>&quot;\c&quot;</tt> is mapped to some other character as shown in the table: 
-
- 
+</dd><dt>[3]
+</dt><dd> The result is the Unicode character or character sequence given by <i>name</i>. See charnames.
+</dd><dt>[4]
+</dt><dd> <tt>&quot;\N{U+</tt>hexadecimal number<tt>}&quot;</tt> means the Unicode character whose Unicode code point is <i>hexadecimal number</i>.
+</dd><dt>[5]
+</dt><dd> The character following <tt>&quot;\c&quot;</tt> is mapped to some other character as shown in the table: 
 Sequence Value
    \c @chr(0)
    \cA chr(1)
@@ -1162,29 +1156,20 @@ Sequence Value
    \c_ chr(31)
    \c ? chr(127) #(on ASCII platforms; see below for link to
 #EBCDIC discussion)
- 
-
  In other words, it's the character whose code point has had 64 xor'd with its uppercase. <tt>&quot;\c?&quot;</tt> is <font SIZE="-1">DELETE</font> on <font SIZE="-1">ASCII</font> platforms because <tt>&quot;ord(&quot;?&quot;) ^ 64&quot;</tt> is 127, and <tt>&quot;\c@&quot;</tt> is <font SIZE="-1">NULL</font> because the ord of <tt>&quot;@&quot;</tt> is 64, so xor'ing 64 itself produces 0. 
-
  Also, <tt>&quot;\c\</tt>X<tt>&quot;</tt> yields <tt>&quot; chr(28) . &quot;</tt>X<tt>&quot;&quot;</tt> for any <i>X</i>, but cannot come at the end of a string, because the backslash would be parsed as escaping the end quote. 
-
  On <font SIZE="-1">ASCII</font> platforms, the resulting characters from the list above are the complete set of <font SIZE="-1">ASCII</font> controls. This isn't the case on <font SIZE="-1">EBCDIC</font> platforms; see ``<font SIZE="-1">OPERATOR DIFFERENCES''</font> in perlebcdic for a full discussion of the differences between these for <font SIZE="-1">ASCII</font> versus <font SIZE="-1">EBCDIC</font> platforms. 
-
  Use of any other character following the <tt>&quot;c&quot;</tt> besides those listed above is discouraged, and as of Perl v5.20, the only characters actually allowed are the printable <font SIZE="-1">ASCII</font> ones, minus the left brace <tt>&quot;{&quot;</tt>. What happens for any of the allowed other characters is that the value is derived by xor'ing with the seventh bit, which is 64, and a warning raised if enabled. Using the non-allowed characters generates a fatal error. 
-
  To get platform independent controls, you can use <tt>&quot;\N{...}&quot;</tt>.
-<dt>[6]
-<dd> The result is the character specified by the octal number between the braces. See ``[8]'' below for details on which character. 
-
+</dd><dt>[6]
+</dt><dd> The result is the character specified by the octal number between the braces. See ``[8]'' below for details on which character. 
  If a character that isn't an octal digit is encountered, a warning is raised, and the value is based on the octal digits before it, discarding it and all following characters up to the closing brace. It is a fatal error if there are no octal digits at all.
-<dt>[7]
-<dd> The result is the character specified by the three-digit octal number in the range 000 to 777 (but best to not use above 077, see next paragraph). See ``[8]'' below for details on which character. 
-
+</dd><dt>[7]
+</dt><dd> The result is the character specified by the three-digit octal number in the range 000 to 777 (but best to not use above 077, see next paragraph). See ``[8]'' below for details on which character. 
  Some contexts allow 2 or even 1 digit, but any usage without exactly three digits, the first being a zero, may give unintended results. (For example, in a regular expression it may be confused with a backreference; see ``Octal escapes'' in perlrebackslash.) Starting in Perl 5.14, you may use <tt>&quot;\o{}&quot;</tt> instead, which avoids all these problems. Otherwise, it is best to use this construct only for ordinals <tt>&quot;\077&quot;</tt> and below, remembering to pad to the left with zeros to make three digits. For larger ordinals, either use <tt>&quot;\o{}&quot;</tt>, or convert to something else, such as to hex and use <tt>&quot;\N{U+}&quot;</tt> (which is portable between platforms with different character sets) or <tt>&quot;\x{}&quot;</tt> instead.
-<dt>[8]
-<dd> Several constructs above specify a character by a number. That number gives the character's position in the character set encoding (indexed from 0). This is called synonymously its ordinal, code position, or code point. Perl works on platforms that have a native encoding currently of either ASCII/Latin1 or <font SIZE="-1">EBCDIC,</font> each of which allow specification of 256 characters. In general, if the number is 255 (0xFF, 0377) or below, Perl interprets this in the platform's native encoding. If the number is 256 (0x100, 0400) or above, Perl interprets it as a Unicode code point and the result is the corresponding Unicode character. For example <tt>&quot;\x{50}&quot;</tt> and <tt>&quot;\o{120}&quot;</tt> both are the number 80 in decimal, which is less than 256, so the number is interpreted in the native character set encoding. In <font SIZE="-1">ASCII</font> the character in the 80th position (indexed from 0) is the letter <tt>&quot;P&quot;</tt>, and in <font SIZE="-1">EBCDIC</font> it is the ampersand symbol <tt>&quot;&amp;&quot;</tt>. <tt>&quot;\x{100}&quot;</tt> and <tt>&quot;\o{400}&quot;</tt> are both 256 in decimal, so the number is interpreted as a Unicode code point no matter what the native encoding is. The name of the character in the 256th position (indexed by 0) in Unicode is <tt>&quot;LATIN CAPITAL LETTER A WITH MACRON&quot;</tt>. 
-
- An exception to the above rule is that <tt>&quot;\N{U+</tt>hex number<tt>}&quot;</tt> is always interpreted as a Unicode code point, so that <tt>&quot;\N{U+0050}&quot;</tt> is <tt>&quot;P&quot;</tt> even on <font SIZE="-1">EBCDIC</font> platforms.</dl>
+</dd><dt>[8]
+</dt><dd> Several constructs above specify a character by a number. That number gives the character's position in the character set encoding (indexed from 0). This is called synonymously its ordinal, code position, or code point. Perl works on platforms that have a native encoding currently of either ASCII/Latin1 or <font SIZE="-1">EBCDIC,</font> each of which allow specification of 256 characters. In general, if the number is 255 (0xFF, 0377) or below, Perl interprets this in the platform's native encoding. If the number is 256 (0x100, 0400) or above, Perl interprets it as a Unicode code point and the result is the corresponding Unicode character. For example <tt>&quot;\x{50}&quot;</tt> and <tt>&quot;\o{120}&quot;</tt> both are the number 80 in decimal, which is less than 256, so the number is interpreted in the native character set encoding. In <font SIZE="-1">ASCII</font> the character in the 80th position (indexed from 0) is the letter <tt>&quot;P&quot;</tt>, and in <font SIZE="-1">EBCDIC</font> it is the ampersand symbol <tt>&quot;&amp;&quot;</tt>. <tt>&quot;\x{100}&quot;</tt> and <tt>&quot;\o{400}&quot;</tt> are both 256 in decimal, so the number is interpreted as a Unicode code point no matter what the native encoding is. The name of the character in the 256th position (indexed by 0) in Unicode is <tt>&quot;LATIN CAPITAL LETTER A WITH MACRON&quot;</tt>. 
+ An exception to the above rule is that <tt>&quot;\N{U+</tt>hex number<tt>}&quot;</tt> is always interpreted as a Unicode code point, so that <tt>&quot;\N{U+0050}&quot;</tt> is <tt>&quot;P&quot;</tt> even on <font SIZE="-1">EBCDIC</font> platforms.</dd></dl>
  
 
  <font SIZE="-1"><b>NOTE</b></font>: Unlike C and other languages, Perl has no <tt>&quot;\v&quot;</tt> escape sequence for the vertical tab (<font SIZE="-1">VT,</font> which is 11 in both <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font>), but you may use <tt>&quot;\N{VT}&quot;</tt>, <tt>&quot;\ck&quot;</tt>, <tt>&quot;\N{U+0b}&quot;</tt>, or <tt>&quot;\x0b&quot;</tt>. (<tt>&quot;\v&quot;</tt> does have meaning in regular expression patterns in Perl, see perlre.) 
@@ -1249,25 +1234,18 @@ Sequence Value
  Here are the quote-like operators that apply to pattern matching and related activities.
 <dl>
 <dt>&quot;qr/<i>STRING</i>/msixpodualn&quot;
-<dd> This operator quotes (and possibly compiles) its <i></i><font SIZE="-1"><i>STRING</i></font><i></i> as a regular expression. <i></i><font SIZE="-1"><i>STRING</i></font><i></i> is interpolated the same way as <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> in <tt>&quot;m/</tt>PATTERN<tt>/&quot;</tt>. If <tt>&quot;'&quot;</tt> is used as the delimiter, no variable interpolation is done. Returns a Perl value which may be used instead of the corresponding <tt>&quot;/</tt>STRING<tt>/msixpodualn&quot;</tt> expression. The returned value is a normalized version of the original pattern. It magically differs from a string containing the same characters: <tt>&quot;ref(qr/x/)&quot;</tt> returns ``Regexp''; however, dereferencing it is not well defined (you currently get the normalized version of the original pattern, but this may change). 
-
+</dt><dd> This operator quotes (and possibly compiles) its <i></i><font SIZE="-1"><i>STRING</i></font><i></i> as a regular expression. <i></i><font SIZE="-1"><i>STRING</i></font><i></i> is interpolated the same way as <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> in <tt>&quot;m/</tt>PATTERN<tt>/&quot;</tt>. If <tt>&quot;'&quot;</tt> is used as the delimiter, no variable interpolation is done. Returns a Perl value which may be used instead of the corresponding <tt>&quot;/</tt>STRING<tt>/msixpodualn&quot;</tt> expression. The returned value is a normalized version of the original pattern. It magically differs from a string containing the same characters: <tt>&quot;ref(qr/x/)&quot;</tt> returns ``Regexp''; however, dereferencing it is not well defined (you currently get the normalized version of the original pattern, but this may change). 
  For example, 
-
  <pre>
     $rex = qr/my.STRING/is;
     print $rex;                 # prints (?si-xm:my.STRING)
     s/$rex/foo/;
 </pre> 
-
  is equivalent to 
-
  <pre>
     s/my.STRING/foo/is;
 </pre> 
-
  The result may be used as a subpattern in a match: 
-
- 
 $re = qr / $pattern / ;
 $string = ~ / foo${re} bar / ;
 #can be interpolated in other
@@ -1277,11 +1255,7 @@ $string = ~ / foo${re} bar / ;
          $string = ~ / $re /
     ;
 # or this way
- 
-
  Since Perl may compile the pattern at the moment of execution of the <tt>&quot;qr()&quot;</tt> operator, using <tt>&quot;qr()&quot;</tt> may have speed advantages in some situations, notably if the result of <tt>&quot;qr()&quot;</tt> is used standalone: 
-
- 
 sub match
 {
     my $patterns = shift;
@@ -1298,13 +1272,8 @@ sub match
     }
     @_;
 }
- 
-
  Precompilation of the pattern into an internal representation at the moment of <tt>&quot;qr()&quot;</tt> avoids the need to recompile the pattern every time a match <tt>&quot;/$pat/&quot;</tt> is attempted. (Perl has many other internal optimizations, but none would be triggered in the above example if we did not use <tt>&quot;qr()&quot;</tt> operator.) 
-
  Options (specified by the following modifiers) are: 
-
- 
 m Treat string as multiple lines.s Treat string as single line.(Make.match a newline)
     i Do case -insensitive pattern matching.x Use extended regular expressions; specifying two
         x's means \t and the SPACE character are ignored within
@@ -1321,61 +1290,48 @@ specifying two a's adds the further restriction that no ASCII character will mat
         ASCII one under / i.l Use the current run - time locale's rules. u Use Unicode rules.d Use Unicode or
     native charset,
     as in 5.12 and earlier.n Non - capture mode.Don't let () fill in $1, $2, etc...
- 
-
  If a precompiled pattern is embedded in a larger pattern then the effect of <tt>&quot;msixpluadn&quot;</tt> will be propagated appropriately. The effect that the <tt>&quot;/o&quot;</tt> modifier has is not propagated, being restricted to those patterns explicitly using it. 
-
  The <tt>&quot;/a&quot;</tt>, <tt>&quot;/d&quot;</tt>, <tt>&quot;/l&quot;</tt>, and <tt>&quot;/u&quot;</tt> modifiers (added in Perl 5.14) control the character set rules, but <tt>&quot;/a&quot;</tt> is the only one you are likely to want to specify explicitly; the other three are selected automatically by various pragmas. 
-
  See perlre for additional information on valid syntax for <i></i><font SIZE="-1"><i>STRING</i></font><i></i>, and for a detailed look at the semantics of regular expressions. In particular, all modifiers except the largely obsolete <tt>&quot;/o&quot;</tt> are further explained in ``Modifiers'' in perlre. <tt>&quot;/o&quot;</tt> is described in the next section.
-<dt>&quot;m/<i>PATTERN</i>/msixpodualngc&quot;
-<dd>
-<dt>&quot;/<i>PATTERN</i>/msixpodualngc&quot;
-<dd> Searches a string for a pattern match, and in scalar context returns true if it succeeds, false if it fails. If no string is specified via the <tt>&quot;=~&quot;</tt> or <tt>&quot;!~&quot;</tt> operator, the <tt>$_</tt> string is searched. (The string specified with <tt>&quot;=~&quot;</tt> need not be an lvalue---it may be the result of an expression evaluation, but remember the <tt>&quot;=~&quot;</tt> binds rather tightly.) See also perlre. 
-
+</dd><dt>&quot;m/<i>PATTERN</i>/msixpodualngc&quot;
+</dt><dd>
+</dd><dt>&quot;/<i>PATTERN</i>/msixpodualngc&quot;
+</dt><dd> Searches a string for a pattern match, and in scalar context returns true if it succeeds, false if it fails. If no string is specified via the <tt>&quot;=~&quot;</tt> or <tt>&quot;!~&quot;</tt> operator, the <tt>$_</tt> string is searched. (The string specified with <tt>&quot;=~&quot;</tt> need not be an lvalue---it may be the result of an expression evaluation, but remember the <tt>&quot;=~&quot;</tt> binds rather tightly.) See also perlre. 
  Options are as described in <tt>&quot;qr//&quot;</tt> above; in addition, the following match process modifiers are available: 
-
  <pre>
  g  Match globally, i.e., find all occurrences.
  c  Do not reset search position on a failed match when /g is
     in effect.
 </pre> 
-
  If <tt>&quot;/&quot;</tt> is the delimiter then the initial <tt>&quot;m&quot;</tt> is optional. With the <tt>&quot;m&quot;</tt> you can use any pair of non-whitespace (<font SIZE="-1">ASCII</font>) characters as delimiters. This is particularly useful for matching path names that contain <tt>&quot;/&quot;</tt>, to avoid <font SIZE="-1">LTS</font> (leaning toothpick syndrome). If <tt>&quot;?&quot;</tt> is the delimiter, then a match-only-once rule applies, described in <tt>&quot;m?</tt>PATTERN<tt>?&quot;</tt> below. If <tt>&quot;'&quot;</tt> (single quote) is the delimiter, no variable interpolation is performed on the <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i>. When using a delimiter character valid in an identifier, whitespace is required after the <tt>&quot;m&quot;</tt>. 
-
  <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> may contain variables, which will be interpolated every time the pattern search is evaluated, except for when the delimiter is a single quote. (Note that <tt>$(</tt>, <tt>$)</tt>, and <tt>$|</tt> are not interpolated because they look like end-of-string tests.) Perl will not recompile the pattern unless an interpolated variable that it contains changes. You can force Perl to skip the test and never recompile by adding a <tt>&quot;/o&quot;</tt> (which stands for ``once'') after the trailing delimiter. Once upon a time, Perl would recompile regular expressions unnecessarily, and this modifier was useful to tell it not to do so, in the interests of speed. But now, the only reasons to use <tt>&quot;/o&quot;</tt> are one of:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt>1.
-<dd> The variables are thousands of characters long and you know that they don't change, and you need to wring out the last little bit of speed by having Perl skip testing for that. (There is a maintenance penalty for doing this, as mentioning <tt>&quot;/o&quot;</tt> constitutes a promise that you won't change the variables in the pattern. If you do change them, Perl won't even notice.)
-<dt>2.
-<dd> you want the pattern to use the initial values of the variables regardless of whether they change or not. (But there are saner ways of accomplishing this than using <tt>&quot;/o&quot;</tt>.)
-<dt>3.
-<dd> If the pattern contains embedded code, such as 
-
+</dt><dd> The variables are thousands of characters long and you know that they don't change, and you need to wring out the last little bit of speed by having Perl skip testing for that. (There is a maintenance penalty for doing this, as mentioning <tt>&quot;/o&quot;</tt> constitutes a promise that you won't change the variables in the pattern. If you do change them, Perl won't even notice.)
+</dd><dt>2.
+</dt><dd> you want the pattern to use the initial values of the variables regardless of whether they change or not. (But there are saner ways of accomplishing this than using <tt>&quot;/o&quot;</tt>.)
+</dd><dt>3.
+</dt><dd> If the pattern contains embedded code, such as 
  <pre>
     use re 'eval';
     $code = 'foo(?{ $x })';
     /$code/
 </pre> 
-
- then perl will recompile each time, even though the pattern string hasn't changed, to ensure that the current value of <tt>$x</tt> is seen each time. Use <tt>&quot;/o&quot;</tt> if you want to avoid this.</dl>
+ then perl will recompile each time, even though the pattern string hasn't changed, to ensure that the current value of <tt>$x</tt> is seen each time. Use <tt>&quot;/o&quot;</tt> if you want to avoid this.</dd></dl>
 </dl>
 
 <dl>
 <dt>
-<dd> 
-
- The bottom line is that using <tt>&quot;/o&quot;</tt> is almost never a good idea.</dl>
+</dt><dd> 
+ The bottom line is that using <tt>&quot;/o&quot;</tt> is almost never a good idea.</dd></dl>
 
 <dt>The empty pattern &quot;//&quot;
-<dd> If the <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> evaluates to the empty string, the last <i>successfully</i> matched regular expression is used instead. In this case, only the <tt>&quot;g&quot;</tt> and <tt>&quot;c&quot;</tt> flags on the empty pattern are honored; the other flags are taken from the original pattern. If no match has previously succeeded, this will (silently) act instead as a genuine empty pattern (which will always match). 
+</dt><dd> If the <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> evaluates to the empty string, the last <i>successfully</i> matched regular expression is used instead. In this case, only the <tt>&quot;g&quot;</tt> and <tt>&quot;c&quot;</tt> flags on the empty pattern are honored; the other flags are taken from the original pattern. If no match has previously succeeded, this will (silently) act instead as a genuine empty pattern (which will always match). 
 
  Note that it's possible to confuse Perl into thinking <tt>&quot;//&quot;</tt> (the empty regex) is really <tt>&quot;//&quot;</tt> (the defined-or operator). Perl is usually pretty good about this, but some pathological cases might trigger this, such as <tt>&quot;$x///&quot;</tt> (is that <tt>&quot;($x) / (//)&quot;</tt> or <tt>&quot;$x // /&quot;</tt>?) and <tt>&quot;print $fh //&quot;</tt> (<tt>&quot;print $fh(//&quot;</tt> or <tt>&quot;print($fh //&quot;</tt>?). In all of these examples, Perl will assume you meant defined-or. If you meant the empty regex, just use parentheses or spaces to disambiguate, or even prefix the empty regex with an <tt>&quot;m&quot;</tt> (so <tt>&quot;//&quot;</tt> becomes <tt>&quot;m//&quot;</tt>).
-<dt>Matching in list context
-<dd> If the <tt>&quot;/g&quot;</tt> option is not used, <tt>&quot;m//&quot;</tt> in list context returns a list consisting of the subexpressions matched by the parentheses in the pattern, that is, (<tt>$1</tt>, <tt>$2</tt>, <tt>$3</tt>...) (Note that here <tt>$1</tt> etc. are also set). When there are no parentheses in the pattern, the return value is the list <tt>&quot;(1)&quot;</tt> for success. With or without parentheses, an empty list is returned upon failure. 
+</dd><dt>Matching in list context
+</dt><dd> If the <tt>&quot;/g&quot;</tt> option is not used, <tt>&quot;m//&quot;</tt> in list context returns a list consisting of the subexpressions matched by the parentheses in the pattern, that is, (<tt>$1</tt>, <tt>$2</tt>, <tt>$3</tt>...) (Note that here <tt>$1</tt> etc. are also set). When there are no parentheses in the pattern, the return value is the list <tt>&quot;(1)&quot;</tt> for success. With or without parentheses, an empty list is returned upon failure. 
 
  Examples: 
 
@@ -1402,8 +1358,8 @@ if (($F1, $F2, $Etc) = ($foo = ~ / ^(\S +)\s + (\S +)\s *(.*) /))
  The <tt>&quot;/g&quot;</tt> modifier specifies global pattern matching---that is, matching as many times as possible within the string. How it behaves depends on the context. In list context, it returns a list of the substrings matched by any capturing parentheses in the regular expression. If there are no parentheses, it returns a list of all the matched strings, as if there were parentheses around the whole pattern. 
 
  In scalar context, each execution of <tt>&quot;m//g&quot;</tt> finds the next match, returning true if it matches, and false if there is no further match. The position after the last match can be read or set using the <tt>&quot;pos()&quot;</tt> function; see ``pos'' in perlfunc. A failed match normally resets the search position to the beginning of the string, but you can avoid that by adding the <tt>&quot;/c&quot;</tt> modifier (for example, <tt>&quot;m//gc&quot;</tt>). Modifying the target string also resets the search position.
-<dt>&quot;\G <i>assertion</i>&quot;
-<dd> You can intermix <tt>&quot;m//g&quot;</tt> matches with <tt>&quot;m/\G.../g&quot;</tt>, where <tt>&quot;\G&quot;</tt> is a zero-width assertion that matches the exact position where the previous <tt>&quot;m//g&quot;</tt>, if any, left off. Without the <tt>&quot;/g&quot;</tt> modifier, the <tt>&quot;\G&quot;</tt> assertion still anchors at <tt>&quot;pos()&quot;</tt> as it was at the start of the operation (see ``pos'' in perlfunc), but the match is of course only attempted once. Using <tt>&quot;\G&quot;</tt> without <tt>&quot;/g&quot;</tt> on a target string that has not previously had a <tt>&quot;/g&quot;</tt> match applied to it is the same as using the <tt>&quot;\A&quot;</tt> assertion to match the beginning of the string. Note also that, currently, <tt>&quot;\G&quot;</tt> is only properly supported when anchored at the very beginning of the pattern. 
+</dd><dt>&quot;\G <i>assertion</i>&quot;
+</dt><dd> You can intermix <tt>&quot;m//g&quot;</tt> matches with <tt>&quot;m/\G.../g&quot;</tt>, where <tt>&quot;\G&quot;</tt> is a zero-width assertion that matches the exact position where the previous <tt>&quot;m//g&quot;</tt>, if any, left off. Without the <tt>&quot;/g&quot;</tt> modifier, the <tt>&quot;\G&quot;</tt> assertion still anchors at <tt>&quot;pos()&quot;</tt> as it was at the start of the operation (see ``pos'' in perlfunc), but the match is of course only attempted once. Using <tt>&quot;\G&quot;</tt> without <tt>&quot;/g&quot;</tt> on a target string that has not previously had a <tt>&quot;/g&quot;</tt> match applied to it is the same as using the <tt>&quot;\A&quot;</tt> assertion to match the beginning of the string. Note also that, currently, <tt>&quot;\G&quot;</tt> is only properly supported when anchored at the very beginning of the pattern. 
 
  Examples: 
 
@@ -1513,8 +1469,8 @@ EOL
  lowercase line-noise lowercase lowercase line-noise lowercase
  lowercase line-noise MiXeD line-noise. That's all!
 </pre>
-<dt>&quot;m?<i>PATTERN</i>?msixpodualngc&quot;
-<dd> This is just like the <tt>&quot;m/</tt>PATTERN<tt>/&quot;</tt> search, except that it matches only once between calls to the <tt>&quot;reset()&quot;</tt> operator. This is a useful optimization when you want to see only the first occurrence of something in each file of a set of files, for instance. Only <tt>&quot;m??&quot;</tt> patterns local to the current package are reset. 
+</dd><dt>&quot;m?<i>PATTERN</i>?msixpodualngc&quot;
+</dt><dd> This is just like the <tt>&quot;m/</tt>PATTERN<tt>/&quot;</tt> search, except that it matches only once between calls to the <tt>&quot;reset()&quot;</tt> operator. This is a useful optimization when you want to see only the first occurrence of something in each file of a set of files, for instance. Only <tt>&quot;m??&quot;</tt> patterns local to the current package are reset. 
 
  
 while (&lt;&gt;) {
@@ -1538,8 +1494,8 @@ continue
  The match-once behavior is controlled by the match delimiter being <tt>&quot;?&quot;</tt>; with any other delimiter this is the normal <tt>&quot;m//&quot;</tt> operator. 
 
  In the past, the leading <tt>&quot;m&quot;</tt> in <tt>&quot;m?</tt>PATTERN<tt>?&quot;</tt> was optional, but omitting it would produce a deprecation warning. As of v5.22.0, omitting it produces a syntax error. If you encounter this construct in older code, you can just add <tt>&quot;m&quot;</tt>.
-<dt>&quot;s/<i>PATTERN</i>/<i>REPLACEMENT</i>/msixpodualngcer&quot;
-<dd> Searches a string for a pattern, and if found, replaces that pattern with the replacement text and returns the number of substitutions made. Otherwise it returns false (a value that is both an empty string (<tt>&quot;&quot;</tt>) and numeric zero (<tt>0</tt>) as described in ``Relational Operators''). 
+</dd><dt>&quot;s/<i>PATTERN</i>/<i>REPLACEMENT</i>/msixpodualngcer&quot;
+</dt><dd> Searches a string for a pattern, and if found, replaces that pattern with the replacement text and returns the number of substitutions made. Otherwise it returns false (a value that is both an empty string (<tt>&quot;&quot;</tt>) and numeric zero (<tt>0</tt>) as described in ``Relational Operators''). 
 
  If the <tt>&quot;/r&quot;</tt> (non-destructive) option is used then it runs the substitution on a copy of the string and instead of returning the number of substitutions, it returns the copy whether or not a substitution occurred. The original string is never changed when <tt>&quot;/r&quot;</tt> is used. The copy will always be a plain string, even if the input is an object or a tied variable. 
 
@@ -1639,100 +1595,67 @@ $program = ~s{
     1 while s/(\d)(\d\d\d)(?!\d)/$1,$2/g;
 #expand tabs to 8 - column spacing
     1 while s /\t + / ' ' x(length($ &amp;) * 8 - length($`) % 8) / e;
-</dl>
+</dd></dl>
 
 <h3>Quote-Like Operators</h3>
 
 <dl>
 <dt>&quot;q/<i>STRING</i>/&quot;
-<dd>
-<dt>'<i>STRING</i>'
-<dd> A single-quoted, literal string. A backslash represents a backslash unless followed by the delimiter or another backslash, in which case the delimiter or backslash is interpolated. 
-
- 
+</dt><dd>
+</dd><dt>'<i>STRING</i>'
+</dt><dd> A single-quoted, literal string. A backslash represents a backslash unless followed by the delimiter or another backslash, in which case the delimiter or backslash is interpolated. 
 $foo = q !I said, "You said, 'She said it.'" !;
 $bar = q('This is it.');
 $baz = '\n';
 #a two - character string
-
-<dt>&quot;qq/<i>STRING</i>/&quot;
-<dd>
-<dt>&quot;<i></i><font SIZE="-1"><i>STRING</i></font><i></i>&quot;
-<dd> A double-quoted, interpolated string. 
-
- 
+</dd><dt>&quot;qq/<i>STRING</i>/&quot;
+</dt><dd>
+</dd><dt>&quot;<i></i><font SIZE="-1"><i>STRING</i></font><i></i>&quot;
+</dt><dd> A double-quoted, interpolated string. 
 $_.= qq(***The previous line contains the naughty word "$1".\n) if /\b(tcl | java | python)\b / i;
 # : -)
     $baz = "\n";
 #a one - character string
-
-<dt>&quot;qx/<i>STRING</i>/&quot;
-<dd>
-<dt>&quot;`<i>STRING</i>`&quot;
-<dd> A string which is (possibly) interpolated and then executed as a system command with <i>/bin/sh</i> or its equivalent. Shell wildcards, pipes, and redirections will be honored. The collected standard output of the command is returned; standard error is unaffected. In scalar context, it comes back as a single (potentially multi-line) string, or <tt>&quot;undef&quot;</tt> if the command failed. In list context, returns a list of lines (however you've defined lines with <tt>$/</tt> or <tt>$INPUT_RECORD_SEPARATOR</tt>), or an empty list if the command failed. 
-
+</dd><dt>&quot;qx/<i>STRING</i>/&quot;
+</dt><dd>
+</dd><dt>&quot;`<i>STRING</i>`&quot;
+</dt><dd> A string which is (possibly) interpolated and then executed as a system command with <i>/bin/sh</i> or its equivalent. Shell wildcards, pipes, and redirections will be honored. The collected standard output of the command is returned; standard error is unaffected. In scalar context, it comes back as a single (potentially multi-line) string, or <tt>&quot;undef&quot;</tt> if the command failed. In list context, returns a list of lines (however you've defined lines with <tt>$/</tt> or <tt>$INPUT_RECORD_SEPARATOR</tt>), or an empty list if the command failed. 
  Because backticks do not affect standard error, use shell file descriptor syntax (assuming the shell supports this) if you care to address this. To capture a command's <font SIZE="-1">STDERR</font> and <font SIZE="-1">STDOUT</font> together: 
-
  <pre>
     $output = `cmd 2&gt;&amp;1`;
 </pre> 
-
  To capture a command's <font SIZE="-1">STDOUT</font> but discard its <font SIZE="-1">STDERR:</font> 
-
  <pre>
     $output = `cmd 2&gt;/dev/null`;
 </pre> 
-
  To capture a command's <font SIZE="-1">STDERR</font> but discard its <font SIZE="-1">STDOUT</font> (ordering is important here): 
-
  <pre>
     $output = `cmd 2&gt;&amp;1 1&gt;/dev/null`;
 </pre> 
-
  To exchange a command's <font SIZE="-1">STDOUT</font> and <font SIZE="-1">STDERR</font> in order to capture the <font SIZE="-1">STDERR</font> but leave its <font SIZE="-1">STDOUT</font> to come out the old <font SIZE="-1">STDERR:</font> 
-
  <pre>
     $output = `cmd 3&gt;&amp;1 1&gt;&amp;2 2&gt;&amp;3 3&gt;&amp;-`;
 </pre> 
-
  To read both a command's <font SIZE="-1">STDOUT</font> and its <font SIZE="-1">STDERR</font> separately, it's easiest to redirect them separately to files, and then read from those files when the program is done: 
-
  <pre>
     system(&quot;program args 1&gt;program.stdout 2&gt;program.stderr&quot;);
 </pre> 
-
  The <font SIZE="-1">STDIN</font> filehandle used by the command is inherited from Perl's <font SIZE="-1">STDIN.</font> For example: 
-
- 
 open(SPLAT, "stuff") || die "can't open stuff: $!";
 open(STDIN, "&lt;&amp;SPLAT") || die "can't dupe SPLAT: $!";
 print STDOUT `sort`;
- 
-
  will print the sorted contents of the file named <i>``stuff''</i>. 
-
  Using single-quote as a delimiter protects the command from Perl's double-quote interpolation, passing it on to the shell instead: 
-
- 
 $perl_info = qx(ps $$);
 #that 's Perl' s $$
     $shell_info = qx 'ps $$';
 #that 's the new shell' s $$
- 
-
  How that string gets evaluated is entirely subject to the command interpreter on your system. On most platforms, you will have to protect shell metacharacters if you want them treated literally. This is in practice difficult to do, as it's unclear how to escape which characters. See perlsec for a clean and safe example of a manual <tt>&quot;fork()&quot;</tt> and <tt>&quot;exec()&quot;</tt> to emulate backticks safely. 
-
  On some platforms (notably DOS-like ones), the shell may not be capable of dealing with multiline commands, so putting newlines in the string may not get you what you want. You may be able to evaluate multiple commands in a single line by separating them with the command separator character, if your shell supports that (for example, <tt>&quot;;&quot;</tt> on many Unix shells and <tt>&quot;&amp;&quot;</tt> on the Windows <font SIZE="-1">NT</font> <tt>&quot;cmd&quot;</tt> shell). 
-
  Perl will attempt to flush all files opened for output before starting the child process, but this may not be supported on some platforms (see perlport). To be safe, you may need to set <tt>$|</tt> (<tt>$AUTOFLUSH</tt> in <tt>&quot;English&quot;</tt>) or call the <tt>&quot;autoflush()&quot;</tt> method of <tt>&quot;IO::Handle&quot;</tt> on any open handles. 
-
  Beware that some command shells may place restrictions on the length of the command line. You must ensure your strings don't exceed this limit after any necessary interpolations. See the platform-specific release notes for more details about your particular environment. 
-
  Using this operator can lead to programs that are difficult to port, because the shell commands called vary between systems, and may in fact not be present at all. As one example, the <tt>&quot;type&quot;</tt> command under the <font SIZE="-1">POSIX</font> shell is very different from the <tt>&quot;type&quot;</tt> command under <font SIZE="-1">DOS.</font> That doesn't mean you should go out of your way to avoid backticks when they're the right way to get something done. Perl was made to be a glue language, and one of the things it glues together is commands. Just understand what you're getting yourself into. 
-
  Like <tt>&quot;system&quot;</tt>, backticks put the child process exit code in <tt>$?</tt>. If you'd like to manually inspect failure, you can check all possible failure modes by inspecting <tt>$?</tt> like this: 
-
- 
     if ($? == -1) {
         print "failed to execute: $!\n";
     }
@@ -1745,97 +1668,63 @@ $perl_info = qx(ps $$);
     {
         printf "child exited with value %d\n", $ ? &gt;&gt; 8;
     }
- 
-
  Use the open pragma to control the I/O layers used when reading the output of the command, for example: 
-
  <pre>
   use open IN =&gt; &quot;:encoding(UTF-8)&quot;;
   my $x = `cmd-producing-utf-8`;
 </pre> 
-
  <tt>&quot;qx//&quot;</tt> can also be called like a function with ``readpipe'' in perlfunc. 
-
  See ``I/O Operators'' for more discussion.
-<dt>&quot;qw/<i>STRING</i>/&quot;
-<dd> Evaluates to a list of the words extracted out of <i></i><font SIZE="-1"><i>STRING</i></font><i></i>, using embedded whitespace as the word delimiters. It can be understood as being roughly equivalent to: 
-
+</dd><dt>&quot;qw/<i>STRING</i>/&quot;
+</dt><dd> Evaluates to a list of the words extracted out of <i></i><font SIZE="-1"><i>STRING</i></font><i></i>, using embedded whitespace as the word delimiters. It can be understood as being roughly equivalent to: 
  <pre>
     split(&quot; &quot;, q/STRING/);
 </pre> 
-
  the differences being that it only splits on <font SIZE="-1">ASCII</font> whitespace, generates a real list at compile time, and in scalar context it returns the last element in the list. So this expression: 
-
  <pre>
     qw(foo bar baz)
 </pre> 
-
  is semantically equivalent to the list: 
-
  <pre>
     &quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;
 </pre> 
-
  Some frequently seen examples: 
-
  <pre>
     use POSIX qw( setlocale localeconv )
     @EXPORT = qw( foo bar baz );
 </pre> 
-
  A common mistake is to try to separate the words with commas or to put comments into a multi-line <tt>&quot;qw&quot;</tt>-string. For this reason, the <tt>&quot;use warnings&quot;</tt> pragma and the <b>-w</b> switch (that is, the <tt>$^W</tt> variable) produces warnings if the <i></i><font SIZE="-1"><i>STRING</i></font><i></i> contains the <tt>&quot;,&quot;</tt> or the <tt>&quot;#&quot;</tt> character.
-<dt>&quot;tr/<i>SEARCHLIST</i>/<i>REPLACEMENTLIST</i>/cdsr&quot;
-<dd>
-<dt>&quot;y/<i>SEARCHLIST</i>/<i>REPLACEMENTLIST</i>/cdsr&quot;
-<dd> Transliterates all occurrences of the characters found (or not found if the <tt>&quot;/c&quot;</tt> modifier is specified) in the search list with the positionally corresponding character in the replacement list, possibly deleting some, depending on the modifiers specified. It returns the number of characters replaced or deleted. If no string is specified via the <tt>&quot;=~&quot;</tt> or <tt>&quot;!~&quot;</tt> operator, the <tt>$_</tt> string is transliterated. 
-
+</dd><dt>&quot;tr/<i>SEARCHLIST</i>/<i>REPLACEMENTLIST</i>/cdsr&quot;
+</dt><dd>
+</dd><dt>&quot;y/<i>SEARCHLIST</i>/<i>REPLACEMENTLIST</i>/cdsr&quot;
+</dt><dd> Transliterates all occurrences of the characters found (or not found if the <tt>&quot;/c&quot;</tt> modifier is specified) in the search list with the positionally corresponding character in the replacement list, possibly deleting some, depending on the modifiers specified. It returns the number of characters replaced or deleted. If no string is specified via the <tt>&quot;=~&quot;</tt> or <tt>&quot;!~&quot;</tt> operator, the <tt>$_</tt> string is transliterated. 
  For <b>sed</b> devotees, <tt>&quot;y&quot;</tt> is provided as a synonym for <tt>&quot;tr&quot;</tt>. 
-
  If the <tt>&quot;/r&quot;</tt> (non-destructive) option is present, a new copy of the string is made and its characters transliterated, and this copy is returned no matter whether it was modified or not: the original string is always left unchanged. The new copy is always a plain string, even if the input string is an object or a tied variable. 
-
  Unless the <tt>&quot;/r&quot;</tt> option is used, the string specified with <tt>&quot;=~&quot;</tt> must be a scalar variable, an array element, a hash element, or an assignment to one of those; in other words, an lvalue. 
-
  If the characters delimiting <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> and <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> are single quotes (<tt>&quot;tr'</tt>SEARCHLIST<tt>'</tt>REPLACEMENTLIST<tt>'&quot;</tt>), the only interpolation is removal of <tt>&quot;\&quot;</tt> from pairs of <tt>&quot;\\&quot;</tt>. 
-
  Otherwise, a character range may be specified with a hyphen, so <tt>&quot;tr/A-J/0-9/&quot;</tt> does the same replacement as <tt>&quot;tr/ACEGIBDFHJ/0246813579/&quot;</tt>. 
-
  If the <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> is delimited by bracketing quotes, the <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> must have its own pair of quotes, which may or may not be bracketing quotes; for example, <tt>&quot;tr[aeiouy][yuoiea]&quot;</tt> or <tt>&quot;tr(+\-*/)/ABCD/&quot;</tt>. 
-
  Characters may be literals, or (if the delimiters aren't single quotes) any of the escape sequences accepted in double-quoted strings. But there is never any variable interpolation, so <tt>&quot;$&quot;</tt> and <tt>&quot;@&quot;</tt> are always treated as literals. A hyphen at the beginning or end, or preceded by a backslash is also always considered a literal. Escape sequence details are in the table near the beginning of this section. 
-
  Note that <tt>&quot;tr&quot;</tt> does <b>not</b> do regular expression character classes such as <tt>&quot;\d&quot;</tt> or <tt>&quot;\pL&quot;</tt>. The <tt>&quot;tr&quot;</tt> operator is not equivalent to the <tt><a HREF="/docs/linux/man/1-tr/">tr</a>(1)</tt> utility. <tt>&quot;tr[a-z][A-Z]&quot;</tt> will uppercase the 26 letters ``a'' through ``z'', but for case changing not confined to <font SIZE="-1">ASCII,</font> use <tt>&quot;lc&quot;</tt>, <tt>&quot;uc&quot;</tt>, <tt>&quot;lcfirst&quot;</tt>, <tt>&quot;ucfirst&quot;</tt> (all documented in perlfunc), or the substitution operator <tt>&quot;s/</tt>PATTERN<tt>/</tt>REPLACEMENT<tt>/&quot;</tt> (with <tt>&quot;\U&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\L&quot;</tt>, and <tt>&quot;\l&quot;</tt> string-interpolation escapes in the <i></i><font SIZE="-1"><i>REPLACEMENT</i></font><i></i> portion). 
-
  Most ranges are unportable between character sets, but certain ones signal Perl to do special handling to make them portable. There are two classes of portable ranges. The first are any subsets of the ranges <tt>&quot;A-Z&quot;</tt>, <tt>&quot;a-z&quot;</tt>, and <tt>&quot;0-9&quot;</tt>, when expressed as literal characters. 
-
  <pre>
   tr/h-k/H-K/
 </pre> 
-
  capitalizes the letters <tt>&quot;h&quot;</tt>, <tt>&quot;i&quot;</tt>, <tt>&quot;j&quot;</tt>, and <tt>&quot;k&quot;</tt> and nothing else, no matter what the platform's character set is. In contrast, all of 
-
  <pre>
   tr/\x68-\x6B/\x48-\x4B/
   tr/h-\x6B/H-\x4B/
   tr/\x68-k/\x48-K/
 </pre> 
-
  do the same capitalizations as the previous example when run on <font SIZE="-1">ASCII</font> platforms, but something completely different on <font SIZE="-1">EBCDIC</font> ones. 
-
  The second class of portable ranges is invoked when one or both of the range's end points are expressed as <tt>&quot;\N{...}&quot;</tt> 
-
- 
 $string = ~tr /\N{U + 20} -\N
 {
     U + 7E
 } // d;
- 
-
  removes from <tt>$string</tt> all the platform's characters which are equivalent to any of Unicode U+0020, U+0021, ... U+007D, U+007E. This is a portable range, and has the same effect on every platform it is run on. In this example, these are the <font SIZE="-1">ASCII</font> printable characters. So after this is run, <tt>$string</tt> has only controls and characters which have no <font SIZE="-1">ASCII</font> equivalents. 
-
  But, even for portable ranges, it is not generally obvious what is included without having to look things up in the manual. A sound principle is to use only ranges that both begin from, and end at, either <font SIZE="-1">ASCII</font> alphabetics of equal case (<tt>&quot;b-e&quot;</tt>, <tt>&quot;B-E&quot;</tt>), or digits (<tt>&quot;1-4&quot;</tt>). Anything else is unclear (and unportable unless <tt>&quot;\N{...}&quot;</tt> is used). If in doubt, spell out the character sets in full. 
-
  Options: 
-
  <pre>
     c   Complement the SEARCHLIST.
     d   Delete found but unreplaced characters.
@@ -1843,32 +1732,20 @@ $string = ~tr /\N{U + 20} -\N
         untouched.
     s   Squash duplicate replaced characters.
 </pre> 
-
  If the <tt>&quot;/d&quot;</tt> modifier is specified, any characters specified by <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> not found in <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> are deleted. (Note that this is slightly more flexible than the behavior of some <b>tr</b> programs, which delete anything they find in the <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i>, period.) 
-
  If the <tt>&quot;/s&quot;</tt> modifier is specified, sequences of characters, all in a row, that were transliterated to the same character are squashed down to a single instance of that character. 
-
  <pre>
  my $a = &quot;aaaba&quot;
  $a =~ tr/a/a/s     # $a now is &quot;aba&quot;
 </pre> 
-
  If the <tt>&quot;/d&quot;</tt> modifier is used, the <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is always interpreted exactly as specified. Otherwise, if the <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is shorter than the <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i>, the final character, if any, is replicated until it is long enough. There won't be a final character if and only if the <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is empty, in which case <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is copied from <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i>. An empty <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is useful for counting characters in a class, or for squashing character sequences in a class. 
-
- 
     tr/abcd//            tr/abcd/abcd/
     tr/abcd/AB/          tr/abcd/ABBB/
     tr/abcd//d           s/[abcd]//g
     tr/abcd/AB/d         (tr/ab/AB/ + s/[cd]//g)  - but run together
- 
-
  If the <tt>&quot;/c&quot;</tt> modifier is specified, the characters to be transliterated are the ones <font SIZE="-1">NOT</font> in <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i>, that is, it is complemented. If <tt>&quot;/d&quot;</tt> and/or <tt>&quot;/s&quot;</tt> are also specified, they apply to the complemented <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i>. Recall, that if <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is empty (except under <tt>&quot;/d&quot;</tt>) a copy of <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> is used instead. That copy is made after complementing under <tt>&quot;/c&quot;</tt>. <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> is sorted by code point order after complementing, and any <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is applied to that sorted result. This means that under <tt>&quot;/c&quot;</tt>, the order of the characters specified in <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> is irrelevant. This can lead to different results on <font SIZE="-1">EBCDIC</font> systems if <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> contains more than one character, hence it is generally non-portable to use <tt>&quot;/c&quot;</tt> with such a <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i>. 
-
  Another way of describing the operation is this: If <tt>&quot;/c&quot;</tt> is specified, the <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> is sorted by code point order, then complemented. If <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is empty and <tt>&quot;/d&quot;</tt> is not specified, <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> is replaced by a copy of <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> (as modified under <tt>&quot;/c&quot;</tt>), and these potentially modified lists are used as the basis for what follows. Any character in the target string that isn't in <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> is passed through unchanged. Every other character in the target string is replaced by the character in <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> that positionally corresponds to its mate in <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i>, except that under <tt>&quot;/s&quot;</tt>, the 2nd and following characters are squeezed out in a sequence of characters in a row that all translate to the same character. If <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> is longer than <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i>, characters in the target string that match a character in <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> that doesn't have a correspondence in <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> are either deleted from the target string if <tt>&quot;/d&quot;</tt> is specified; or replaced by the final character in <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> if <tt>&quot;/d&quot;</tt> isn't specified. 
-
  Some examples: 
-
- 
 $ARGV[1] = ~tr / A - Z / a - z / ;
 #canonicalize to lower case ASCII
     $cnt = tr /*/*/;
@@ -1918,38 +1795,24 @@ tr[\200 -\377]
     A / a / #transliterate all the A 's in $foo to ' a',
 #return 0 if any were found and changed.
 #Otherwise return 1
- 
-
  If multiple transliterations are given for a character, only the first one is used: 
-
  <pre>
  tr/AAA/XYZ/
 </pre> 
-
  will transliterate any A to X. 
-
  Because the transliteration table is built at compile time, neither the <i></i><font SIZE="-1"><i>SEARCHLIST</i></font><i></i> nor the <i></i><font SIZE="-1"><i>REPLACEMENTLIST</i></font><i></i> are subjected to double quote interpolation. That means that if you want to use variables, you must use an <tt>&quot;eval()&quot;</tt>: 
-
- 
 eval "tr/$oldlist/$newlist/";
 die $ @ if $ @;
 eval "tr/$oldlist/$newlist/, 1" or die $ @;
-
-<dt>&quot;&lt;&lt;<i>EOF</i>&quot;
-<dd> A line-oriented form of quoting is based on the shell ``here-document'' syntax. Following a <tt>&quot;&lt;&lt;&quot;</tt> you specify a string to terminate the quoted material, and all lines following the current line down to the terminating string are the value of the item. 
-
+</dd><dt>&quot;&lt;&lt;<i>EOF</i>&quot;
+</dt><dd> A line-oriented form of quoting is based on the shell ``here-document'' syntax. Following a <tt>&quot;&lt;&lt;&quot;</tt> you specify a string to terminate the quoted material, and all lines following the current line down to the terminating string are the value of the item. 
  Prefixing the terminating string with a <tt>&quot;~&quot;</tt> specifies that you want to use ``Indented Here-docs'' (see below). 
-
  The terminating string may be either an identifier (a word), or some quoted text. An unquoted identifier works like double quotes. There may not be a space between the <tt>&quot;&lt;&lt;&quot;</tt> and the identifier, unless the identifier is explicitly quoted. The terminating string must appear by itself (unquoted and with no surrounding whitespace) on the terminating line. 
-
  If the terminating string is quoted, the type of quotes used determine the treatment of the text.
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt>Double Quotes
-<dd> Double quotes indicate that the text will be interpolated using exactly the same rules as normal double quoted strings. 
-
+</dt><dd> Double quotes indicate that the text will be interpolated using exactly the same rules as normal double quoted strings. 
  <pre>
        print &lt;&lt;EOF;
     The price is $Price.
@@ -1958,11 +1821,9 @@ eval "tr/$oldlist/$newlist/, 1" or die $ @;
     The price is $Price.
     EOF
 </pre>
-<dt>Single Quotes
-<dd> Single quotes indicate the text is to be treated literally with no interpolation of its content. This is similar to single quoted strings except that backslashes have no special meaning, with <tt>&quot;\\&quot;</tt> being treated as two backslashes and not one as they would in every other quoting construct. 
-
+</dd><dt>Single Quotes
+</dt><dd> Single quotes indicate the text is to be treated literally with no interpolation of its content. This is similar to single quoted strings except that backslashes have no special meaning, with <tt>&quot;\\&quot;</tt> being treated as two backslashes and not one as they would in every other quoting construct. 
  Just as in the shell, a backslashed bareword following the <tt>&quot;&lt;&lt;&quot;</tt> means the same thing as a single-quoted string does: 
-
  <pre>
         $cost = &lt;&lt;'VISTA';  # hasta la ...
     That'll be $10 please, ma'am.
@@ -1971,45 +1832,32 @@ eval "tr/$oldlist/$newlist/, 1" or die $ @;
     That'll be $10 please, ma'am.
     VISTA
 </pre> 
-
  This is the only form of quoting in perl where there is no need to worry about escaping content, something that code generators can and do make good use of.
-<dt>Backticks
-<dd> The content of the here doc is treated just as it would be if the string were embedded in backticks. Thus the content is interpolated as though it were double quoted and then executed via the shell, with the results of the execution returned. 
-
+</dd><dt>Backticks
+</dt><dd> The content of the here doc is treated just as it would be if the string were embedded in backticks. Thus the content is interpolated as though it were double quoted and then executed via the shell, with the results of the execution returned. 
  <pre>
        print &lt;&lt; `EOC`; # execute command and get results
     echo hi there
     EOC
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>Indented Here-docs
-<dd> The here-doc modifier <tt>&quot;~&quot;</tt> allows you to indent your here-docs to make the code more readable: 
-
- 
+</dt><dd> The here-doc modifier <tt>&quot;~&quot;</tt> allows you to indent your here-docs to make the code more readable: 
 if ($some_var) {
     print &lt;&lt; ~EOF;
     This is a here - doc
                          EOF
 }
- 
-
  This will print... 
-
  <pre>
     This is a here-doc
 </pre> 
-
  ...with no leading whitespace. 
-
  The delimiter is used to determine the <b>exact</b> whitespace to remove from the beginning of each line. All lines <b>must</b> have at least the same starting whitespace (except lines only containing a newline) or perl will croak. Tabs and spaces can be mixed, but are matched exactly. One tab will not be equal to 8 spaces! 
-
  Additional beginning whitespace (beyond what preceded the delimiter) will be preserved: 
-
  <pre>
     print &lt;&lt;~EOF;
       This text is not indented
@@ -2017,30 +1865,23 @@ if ($some_var) {
                 This text is indented with two tabs
       EOF
 </pre> 
-
  Finally, the modifier may be used with all of the forms mentioned above: 
-
  <pre>
     &lt;&lt;~\EOF;
     &lt;&lt;~'EOF'
     &lt;&lt;~&quot;EOF&quot;
     &lt;&lt;~`EOF`
 </pre> 
-
  And whitespace may be used between the <tt>&quot;~&quot;</tt> and quoted delimiters: 
-
  <pre>
     &lt;&lt;~ 'EOF'; # ... &quot;EOF&quot;, `EOF`
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  It is possible to stack multiple here-docs in a row: 
-
- 
 print &lt;&lt; "foo", &lt;&lt; "bar";
 #you can stack them
     I said foo.foo
@@ -2048,63 +1889,48 @@ print &lt;&lt; "foo", &lt;&lt; "bar";
             myfunc(&lt;&lt; "THIS", 23, &lt;&lt; 'THAT');
 Here's a line or two.THIS
                      and here's another. THAT
- 
-
  Just don't forget that you have to put a semicolon on the end to finish the statement, as Perl doesn't know you're not going to try to do this: 
-
  <pre>
        print &lt;&lt;ABC
     179231
     ABC
        + 20;
 </pre> 
-
  If you want to remove the line terminator from your here-docs, use <tt>&quot;chomp()&quot;</tt>. 
-
  <pre>
     chomp($string = &lt;&lt;'END');
     This is a string.
     END
 </pre> 
-
  If you want your here-docs to be indented with the rest of the code, use the <tt>&quot;&lt;&lt;~FOO&quot;</tt> construct described under ``Indented Here-docs'': 
-
  <pre>
     $quote = &lt;&lt;~'FINIS';
        The Road goes ever on and on,
        down from the door where it began.
        FINIS
 </pre> 
-
  If you use a here-doc within a delimited construct, such as in <tt>&quot;s///eg&quot;</tt>, the quoted material must still come on the line following the <tt>&quot;&lt;&lt;FOO&quot;</tt> marker, which means it may be inside the delimited construct: 
-
  <pre>
     s/this/&lt;&lt;E . 'that'
     the other
     E
      . 'more '/eg;
 </pre> 
-
  It works this way as of Perl 5.18. Historically, it was inconsistent, and you would have to write 
-
  <pre>
     s/this/&lt;&lt;E . 'that'
      . 'more '/eg;
     the other
     E
 </pre> 
-
  outside of string evals. 
-
  Additionally, quoting rules for the end-of-string identifier are unrelated to Perl's quoting rules. <tt>&quot;q()&quot;</tt>, <tt>&quot;qq()&quot;</tt>, and the like are not supported in place of <tt>''</tt> and <tt>&quot;&quot;</tt>, and the only interpolation is for backslashing the quoting character: 
-
  <pre>
     print &lt;&lt; &quot;abc\&quot;def&quot;;
     testing...
     abc&quot;def
 </pre> 
-
- Finally, quoted strings cannot span multiple lines. The general rule is that the identifier must be a string literal. Stick with that, and you should be safe.</dl>
+ Finally, quoted strings cannot span multiple lines. The general rule is that the identifier must be a string literal. Stick with that, and you should be safe.</dd></dl>
 </dl>
 
 <h3>Gory details of parsing quoted constructs</h3>
@@ -2118,116 +1944,78 @@ Here's a line or two.THIS
  Some passes discussed below are performed concurrently, but because their results are the same, we consider them individually. For different quoting constructs, Perl performs different numbers of passes, from one to four, but these passes are always performed in the same order.
 <dl>
 <dt>Finding the end
-<dd> The first pass is finding the end of the quoted construct. This results in saving to a safe location a copy of the text (between the starting and ending delimiters), normalized as necessary to avoid needing to know what the original delimiters were. 
-
+</dt><dd> The first pass is finding the end of the quoted construct. This results in saving to a safe location a copy of the text (between the starting and ending delimiters), normalized as necessary to avoid needing to know what the original delimiters were. 
  If the construct is a here-doc, the ending delimiter is a line that has a terminating string as the content. Therefore <tt>&quot;&lt;&lt;EOF&quot;</tt> is terminated by <tt>&quot;EOF&quot;</tt> immediately followed by <tt>&quot;\n&quot;</tt> and starting from the first column of the terminating line. When searching for the terminating line of a here-doc, nothing is skipped. In other words, lines after the here-doc syntax are compared with the terminating string line by line. 
-
  For the constructs except here-docs, single characters are used as starting and ending delimiters. If the starting delimiter is an opening punctuation (that is <tt>&quot;(&quot;</tt>, <tt>&quot;[&quot;</tt>, <tt>&quot;{&quot;</tt>, or <tt>&quot;&lt;&quot;</tt>), the ending delimiter is the corresponding closing punctuation (that is <tt>&quot;)&quot;</tt>, <tt>&quot;]&quot;</tt>, <tt>&quot;}&quot;</tt>, or <tt>&quot;&gt;&quot;</tt>). If the starting delimiter is an unpaired character like <tt>&quot;/&quot;</tt> or a closing punctuation, the ending delimiter is the same as the starting delimiter. Therefore a <tt>&quot;/&quot;</tt> terminates a <tt>&quot;qq//&quot;</tt> construct, while a <tt>&quot;]&quot;</tt> terminates both <tt>&quot;qq[]&quot;</tt> and <tt>&quot;qq]]&quot;</tt> constructs. 
-
  When searching for single-character delimiters, escaped delimiters and <tt>&quot;\\&quot;</tt> are skipped. For example, while searching for terminating <tt>&quot;/&quot;</tt>, combinations of <tt>&quot;\\&quot;</tt> and <tt>&quot;\/&quot;</tt> are skipped. If the delimiters are bracketing, nested pairs are also skipped. For example, while searching for a closing <tt>&quot;]&quot;</tt> paired with the opening <tt>&quot;[&quot;</tt>, combinations of <tt>&quot;\\&quot;</tt>, <tt>&quot;\]&quot;</tt>, and <tt>&quot;\[&quot;</tt> are all skipped, and nested <tt>&quot;[&quot;</tt> and <tt>&quot;]&quot;</tt> are skipped as well. However, when backslashes are used as the delimiters (like <tt>&quot;qq\\&quot;</tt> and <tt>&quot;tr\\\&quot;</tt>), nothing is skipped. During the search for the end, backslashes that escape delimiters or other backslashes are removed (exactly speaking, they are not copied to the safe location). 
-
  For constructs with three-part delimiters (<tt>&quot;s///&quot;</tt>, <tt>&quot;y///&quot;</tt>, and <tt>&quot;tr///&quot;</tt>), the search is repeated once more. If the first delimiter is not an opening punctuation, the three delimiters must be the same, such as <tt>&quot;s!!!&quot;</tt> and <tt>&quot;tr)))&quot;</tt>, in which case the second delimiter terminates the left part and starts the right part at once. If the left part is delimited by bracketing punctuation (that is <tt>&quot;()&quot;</tt>, <tt>&quot;[]&quot;</tt>, <tt>&quot;{}&quot;</tt>, or <tt>&quot;&lt;&gt;&quot;</tt>), the right part needs another pair of delimiters such as <tt>&quot;s(){}&quot;</tt> and <tt>&quot;tr[]//&quot;</tt>. In these cases, whitespace and comments are allowed between the two parts, although the comment must follow at least one whitespace character; otherwise a character expected as the start of the comment may be regarded as the starting delimiter of the right part. 
-
  During this search no attention is paid to the semantics of the construct. Thus: 
-
  <pre>
     &quot;$hash{&quot;$foo/$bar&quot;}&quot;
 </pre> 
-
  or: 
-
  <pre>
     m/
       bar       # NOT a comment, this slash / terminated m//!
      /x
 </pre> 
-
  do not form legal quoted expressions. The quoted part ends on the first <tt>&quot;&quot;&quot;</tt> and <tt>&quot;/&quot;</tt>, and the rest happens to be a syntax error. Because the slash that terminated <tt>&quot;m//&quot;</tt> was followed by a <tt>&quot;SPACE&quot;</tt>, the example above is not <tt>&quot;m//x&quot;</tt>, but rather <tt>&quot;m//&quot;</tt> with no <tt>&quot;/x&quot;</tt> modifier. So the embedded <tt>&quot;#&quot;</tt> is interpreted as a literal <tt>&quot;#&quot;</tt>. 
-
  Also no attention is paid to <tt>&quot;\c\&quot;</tt> (multichar control char syntax) during this search. Thus the second <tt>&quot;\&quot;</tt> in <tt>&quot;qq/\c\/&quot;</tt> is interpreted as a part of <tt>&quot;\/&quot;</tt>, and the following <tt>&quot;/&quot;</tt> is not recognized as a delimiter. Instead, use <tt>&quot;\034&quot;</tt> or <tt>&quot;\x1c&quot;</tt> at the end of quoted constructs.
-<dt>Interpolation
-<dd> The next step is interpolation in the text obtained, which is now delimiter-independent. There are multiple cases.
-<dl>
-<dt>
-<dd>
+</dd><dt>Interpolation
+</dt><dd> The next step is interpolation in the text obtained, which is now delimiter-independent. There are multiple cases.
+</dd><dl>
 <dl>
 <dt>&quot;&lt;&lt;'EOF'&quot;
-<dd> No interpolation is performed. Note that the combination <tt>&quot;\\&quot;</tt> is left intact, since escaped delimiters are not available for here-docs.
-<dt>&quot;m''&quot;, the pattern of &quot;s'''&quot;
-<dd> No interpolation is performed at this stage. Any backslashed sequences including <tt>&quot;\\&quot;</tt> are treated at the stage to ``parsing regular expressions''.
-<dt>'', &quot;q//&quot;, &quot;tr'''&quot;, &quot;y'''&quot;, the replacement of &quot;s'''&quot;
-<dd> The only interpolation is removal of <tt>&quot;\&quot;</tt> from pairs of <tt>&quot;\\&quot;</tt>. Therefore <tt>&quot;-&quot;</tt> in <tt>&quot;tr'''&quot;</tt> and <tt>&quot;y'''&quot;</tt> is treated literally as a hyphen and no character range is available. <tt>&quot;\1&quot;</tt> in the replacement of <tt>&quot;s'''&quot;</tt> does not work as <tt>$1</tt>.
-<dt>&quot;tr///&quot;, &quot;y///&quot;
-<dd> No variable interpolation occurs. String modifying combinations for case and quoting such as <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, and <tt>&quot;\E&quot;</tt> are not recognized. The other escape sequences such as <tt>&quot;\200&quot;</tt> and <tt>&quot;\t&quot;</tt> and backslashed characters such as <tt>&quot;\\&quot;</tt> and <tt>&quot;\-&quot;</tt> are converted to appropriate literals. The character <tt>&quot;-&quot;</tt> is treated specially and therefore <tt>&quot;\-&quot;</tt> is treated as a literal <tt>&quot;-&quot;</tt>.
-<dt>&quot;&quot;, &quot;``&quot;, &quot;qq//&quot;, &quot;qx//&quot;, &quot;&lt;file*glob&gt;&quot;, &quot;&lt;&lt;&quot;EOF&quot;&quot;
-<dd> <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\l&quot;</tt>, <tt>&quot;\F&quot;</tt> (possibly paired with <tt>&quot;\E&quot;</tt>) are converted to corresponding Perl constructs. Thus, <tt>&quot;$foo\Qbaz$bar&quot;</tt> is converted to <tt>&quot;$foo . (quotemeta(&quot;baz&quot; . $bar))&quot;</tt> internally. The other escape sequences such as <tt>&quot;\200&quot;</tt> and <tt>&quot;\t&quot;</tt> and backslashed characters such as <tt>&quot;\\&quot;</tt> and <tt>&quot;\-&quot;</tt> are replaced with appropriate expansions. 
-
+</dt><dd> No interpolation is performed. Note that the combination <tt>&quot;\\&quot;</tt> is left intact, since escaped delimiters are not available for here-docs.
+</dd><dt>&quot;m''&quot;, the pattern of &quot;s'''&quot;
+</dt><dd> No interpolation is performed at this stage. Any backslashed sequences including <tt>&quot;\\&quot;</tt> are treated at the stage to ``parsing regular expressions''.
+</dd><dt>'', &quot;q//&quot;, &quot;tr'''&quot;, &quot;y'''&quot;, the replacement of &quot;s'''&quot;
+</dt><dd> The only interpolation is removal of <tt>&quot;\&quot;</tt> from pairs of <tt>&quot;\\&quot;</tt>. Therefore <tt>&quot;-&quot;</tt> in <tt>&quot;tr'''&quot;</tt> and <tt>&quot;y'''&quot;</tt> is treated literally as a hyphen and no character range is available. <tt>&quot;\1&quot;</tt> in the replacement of <tt>&quot;s'''&quot;</tt> does not work as <tt>$1</tt>.
+</dd><dt>&quot;tr///&quot;, &quot;y///&quot;
+</dt><dd> No variable interpolation occurs. String modifying combinations for case and quoting such as <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, and <tt>&quot;\E&quot;</tt> are not recognized. The other escape sequences such as <tt>&quot;\200&quot;</tt> and <tt>&quot;\t&quot;</tt> and backslashed characters such as <tt>&quot;\\&quot;</tt> and <tt>&quot;\-&quot;</tt> are converted to appropriate literals. The character <tt>&quot;-&quot;</tt> is treated specially and therefore <tt>&quot;\-&quot;</tt> is treated as a literal <tt>&quot;-&quot;</tt>.
+</dd><dt>&quot;&quot;, &quot;``&quot;, &quot;qq//&quot;, &quot;qx//&quot;, &quot;&lt;file*glob&gt;&quot;, &quot;&lt;&lt;&quot;EOF&quot;&quot;
+</dt><dd> <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\l&quot;</tt>, <tt>&quot;\F&quot;</tt> (possibly paired with <tt>&quot;\E&quot;</tt>) are converted to corresponding Perl constructs. Thus, <tt>&quot;$foo\Qbaz$bar&quot;</tt> is converted to <tt>&quot;$foo . (quotemeta(&quot;baz&quot; . $bar))&quot;</tt> internally. The other escape sequences such as <tt>&quot;\200&quot;</tt> and <tt>&quot;\t&quot;</tt> and backslashed characters such as <tt>&quot;\\&quot;</tt> and <tt>&quot;\-&quot;</tt> are replaced with appropriate expansions. 
  Let it be stressed that <i>whatever falls between </i>&quot;\Q&quot;<i> and </i>&quot;\E&quot;<i></i> is interpolated in the usual way. Something like <tt>&quot;\Q\\E&quot;</tt> has no <tt>&quot;\E&quot;</tt> inside. Instead, it has <tt>&quot;\Q&quot;</tt>, <tt>&quot;\\&quot;</tt>, and <tt>&quot;E&quot;</tt>, so the result is the same as for <tt>&quot;\\\\E&quot;</tt>. As a general rule, backslashes between <tt>&quot;\Q&quot;</tt> and <tt>&quot;\E&quot;</tt> may lead to counterintuitive results. So, <tt>&quot;\Q\t\E&quot;</tt> is converted to <tt>&quot;quotemeta(&quot;\t&quot;)&quot;</tt>, which is the same as <tt>&quot;\\\t&quot;</tt> (since <font SIZE="-1">TAB</font> is not alphanumeric). Note also that: 
-
  <pre>
   $str = '\t';
   return &quot;\Q$str&quot;;
 </pre> 
-
  may be closer to the conjectural <i>intention</i> of the writer of <tt>&quot;\Q\t\E&quot;</tt>. 
-
  Interpolated scalars and arrays are converted internally to the <tt>&quot;join&quot;</tt> and <tt>&quot;.&quot;</tt> catenation operations. Thus, <tt>&quot;$foo XXX '@arr'&quot;</tt> becomes: 
-
  <pre>
   $foo . &quot; XXX '&quot; . (join $&quot;, @arr) . &quot;'&quot;;
 </pre> 
-
  All operations above are performed simultaneously, left to right. 
-
  Because the result of <tt>&quot;\Q </tt>STRING<tt> \E&quot;</tt> has all metacharacters quoted, there is no way to insert a literal <tt>&quot;$&quot;</tt> or <tt>&quot;@&quot;</tt> inside a <tt>&quot;\Q\E&quot;</tt> pair. If protected by <tt>&quot;\&quot;</tt>, <tt>&quot;$&quot;</tt> will be quoted to become <tt>&quot;\\\$&quot;</tt>; if not, it is interpreted as the start of an interpolated scalar. 
-
  Note also that the interpolation code needs to make a decision on where the interpolated scalar ends. For instance, whether <tt>&quot;a $x -&gt; {c}&quot;</tt> really means: 
-
- 
 "a ".$x." -&gt; {c}";
- 
-
  or: 
-
- 
 "a ".$x-&gt;{c};
- 
-
  Most of the time, the longest possible text that does not include spaces between components and which contains matching braces or brackets. because the outcome may be determined by voting based on heuristic estimators, the result is not strictly predictable. Fortunately, it's usually correct for ambiguous cases.
-<dt>the replacement of &quot;s///&quot;
-<dd> Processing of <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\l&quot;</tt>, <tt>&quot;\F&quot;</tt> and interpolation happens as with <tt>&quot;qq//&quot;</tt> constructs. 
-
+</dd><dt>the replacement of &quot;s///&quot;
+</dt><dd> Processing of <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\l&quot;</tt>, <tt>&quot;\F&quot;</tt> and interpolation happens as with <tt>&quot;qq//&quot;</tt> constructs. 
  It is at this step that <tt>&quot;\1&quot;</tt> is begrudgingly converted to <tt>$1</tt> in the replacement text of <tt>&quot;s///&quot;</tt>, in order to correct the incorrigible <i>sed</i> hackers who haven't picked up the saner idiom yet. A warning is emitted if the <tt>&quot;use warnings&quot;</tt> pragma or the <b>-w</b> command-line flag (that is, the <tt>$^W</tt> variable) was set.
-<dt>&quot;RE&quot; in &quot;m?RE?&quot;, &quot;/RE/&quot;, &quot;m/RE/&quot;, &quot;s/RE/foo/&quot;,
-<dd> Processing of <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\l&quot;</tt>, <tt>&quot;\F&quot;</tt>, <tt>&quot;\E&quot;</tt>, and interpolation happens (almost) as with <tt>&quot;qq//&quot;</tt> constructs. 
-
+</dd><dt>&quot;RE&quot; in &quot;m?RE?&quot;, &quot;/RE/&quot;, &quot;m/RE/&quot;, &quot;s/RE/foo/&quot;,
+</dt><dd> Processing of <tt>&quot;\Q&quot;</tt>, <tt>&quot;\U&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\l&quot;</tt>, <tt>&quot;\F&quot;</tt>, <tt>&quot;\E&quot;</tt>, and interpolation happens (almost) as with <tt>&quot;qq//&quot;</tt> constructs. 
  Processing of <tt>&quot;\N{...}&quot;</tt> is also done here, and compiled into an intermediate form for the regex compiler. (This is because, as mentioned below, the regex compilation may be done at execution time, and <tt>&quot;\N{...}&quot;</tt> is a compile-time construct.) 
-
  However any other combinations of <tt>&quot;\&quot;</tt> followed by a character are not substituted but only skipped, in order to parse them as regular expressions at the following step. As <tt>&quot;\c&quot;</tt> is skipped at this step, <tt>&quot;@&quot;</tt> of <tt>&quot;\c@&quot;</tt> in <font SIZE="-1">RE</font> is possibly treated as an array symbol (for example <tt>@foo</tt>), even though the same text in <tt>&quot;qq//&quot;</tt> gives interpolation of <tt>&quot;\c@&quot;</tt>. 
-
  Code blocks such as <tt>&quot;(?{BLOCK})&quot;</tt> are handled by temporarily passing control back to the perl parser, in a similar way that an interpolated array subscript expression such as <tt>&quot;foo$array[1+f(&quot;[xyz&quot;)]bar&quot;</tt> would be. 
-
  Moreover, inside <tt>&quot;(?{BLOCK})&quot;</tt>, <tt>&quot;(?# comment )&quot;</tt>, and a <tt>&quot;#&quot;</tt>-comment in a <tt>&quot;/x&quot;</tt>-regular expression, no processing is performed whatsoever. This is the first step at which the presence of the <tt>&quot;/x&quot;</tt> modifier is relevant. 
-
  Interpolation in patterns has several quirks: <tt>$|</tt>, <tt>$(</tt>, <tt>$)</tt>, <tt>&quot;@+&quot;</tt> and <tt>&quot;@-&quot;</tt> are not interpolated, and constructs <tt>$var[SOMETHING]</tt> are voted (by several different estimators) to be either an array element or <tt>$var</tt> followed by an <font SIZE="-1">RE</font> alternative. This is where the notation <tt>&quot;${arr[$bar]}&quot;</tt> comes handy: <tt>&quot;/${arr[0-9]}/&quot;</tt> is interpreted as array element <tt>&quot;-9&quot;</tt>, not as a regular expression from the variable <tt>$arr</tt> followed by a digit, which would be the interpretation of <tt>&quot;/$arr[0-9]/&quot;</tt>. Since voting among different estimators may occur, the result is not predictable. 
-
  The lack of processing of <tt>&quot;\\&quot;</tt> creates specific restrictions on the post-processed text. If the delimiter is <tt>&quot;/&quot;</tt>, one cannot get the combination <tt>&quot;\/&quot;</tt> into the result of this step. <tt>&quot;/&quot;</tt> will finish the regular expression, <tt>&quot;\/&quot;</tt> will be stripped to <tt>&quot;/&quot;</tt> on the previous step, and <tt>&quot;\\/&quot;</tt> will be left as is. Because <tt>&quot;/&quot;</tt> is equivalent to <tt>&quot;\/&quot;</tt> inside a regular expression, this does not matter unless the delimiter happens to be character special to the <font SIZE="-1">RE</font> engine, such as in <tt>&quot;s*foo*bar*&quot;</tt>, <tt>&quot;m[foo]&quot;</tt>, or <tt>&quot;m?foo?&quot;</tt>; or an alphanumeric char, as in: 
-
  <pre>
   m m ^ a \s* b mmx;
 </pre> 
-
- In the <font SIZE="-1">RE</font> above, which is intentionally obfuscated for illustration, the delimiter is <tt>&quot;m&quot;</tt>, the modifier is <tt>&quot;mx&quot;</tt>, and after delimiter-removal the <font SIZE="-1">RE</font> is the same as for <tt>&quot;m/ ^ a \s* b /mx&quot;</tt>. There's more than one reason you're encouraged to restrict your delimiters to non-alphanumeric, non-whitespace choices.</dl>
+ In the <font SIZE="-1">RE</font> above, which is intentionally obfuscated for illustration, the delimiter is <tt>&quot;m&quot;</tt>, the modifier is <tt>&quot;mx&quot;</tt>, and after delimiter-removal the <font SIZE="-1">RE</font> is the same as for <tt>&quot;m/ ^ a \s* b /mx&quot;</tt>. There's more than one reason you're encouraged to restrict your delimiters to non-alphanumeric, non-whitespace choices.</dd></dl>
 </dl>
 
 <dl>
 <dt>
-<dd> 
-
- This step is the last one for all constructs except regular expressions, which are processed further.</dl>
+</dt><dd> 
+ This step is the last one for all constructs except regular expressions, which are processed further.</dd></dl>
 
 <dt>parsing regular expressions
-<dd> Previous steps were performed during the compilation of Perl code, but this one happens at run time, although it may be optimized to be calculated at compile time if appropriate. After preprocessing described above, and possibly after evaluation if concatenation, joining, casing translation, or metaquoting are involved, the resulting <i>string</i> is passed to the <font SIZE="-1">RE</font> engine for compilation. 
+</dt><dd> Previous steps were performed during the compilation of Perl code, but this one happens at run time, although it may be optimized to be calculated at compile time if appropriate. After preprocessing described above, and possibly after evaluation if concatenation, joining, casing translation, or metaquoting are involved, the resulting <i>string</i> is passed to the <font SIZE="-1">RE</font> engine for compilation. 
 
  Whatever happens in the <font SIZE="-1">RE</font> engine might be better discussed in perlre, but for the sake of continuity, we shall do so here. 
 
@@ -2240,10 +2028,10 @@ Here's a line or two.THIS
  The terminator of runtime <tt>&quot;(?{...})&quot;</tt> is found by temporarily switching control to the perl parser, which should stop at the point where the logically balancing terminating <tt>&quot;}&quot;</tt> is found. 
 
  It is possible to inspect both the string given to <font SIZE="-1">RE</font> engine and the resulting finite automaton. See the arguments <tt>&quot;debug&quot;</tt>/<tt>&quot;debugcolor&quot;</tt> in the <tt>&quot;use re&quot;</tt> pragma, as well as Perl's <b>-Dr</b> command-line switch documented in ``Command Switches'' in perlrun.
-<dt>Optimization of regular expressions
-<dd> This step is listed for completeness only. Since it does not change semantics, details of this step are not documented and are subject to change without notice. This step is performed over the finite automaton that was generated during the previous pass. 
+</dd><dt>Optimization of regular expressions
+</dt><dd> This step is listed for completeness only. Since it does not change semantics, details of this step are not documented and are subject to change without notice. This step is performed over the finite automaton that was generated during the previous pass. 
 
- It is at this stage that <tt>&quot;split()&quot;</tt> silently optimizes <tt>&quot;/^/&quot;</tt> to mean <tt>&quot;/^/m&quot;</tt>.</dl>
+ It is at this stage that <tt>&quot;split()&quot;</tt> silently optimizes <tt>&quot;/^/&quot;</tt> to mean <tt>&quot;/^/m&quot;</tt>.</dd></dl>
 
 <h3>I/O Operators</h3>
 

@@ -16,12 +16,12 @@ description: "checkpto – Helper program for Hugin’s Makefile assistant"
 <p> <code>checkpto</code> is used by the Assistant Makefile when creating a new project.</p>
 <h2>FURTHER SWITCHES</h2>
 <dl>
-<dt><code>&#8211;print-output-info</code></p>
-<dd> Print more information about the output</p>
-<dt><code>-generate-argfile=file</code></p>
-<dd> Generate Exiftool argfile</p>
-<dt><code>-no-gpano</code></p>
-<dd> Don&#8217;t include GPano tags in argfile</dl>
+<dt><code>&#8211;print-output-info</code></dt>
+<dd> Print more information about the output</dd>
+<dt><code>-generate-argfile=file</code></dt>
+<dd> Generate Exiftool argfile</dd>
+<dt><code>-no-gpano</code></dt>
+<dd> Don&#8217;t include GPano tags in argfile</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
 <h2>Index</h2>

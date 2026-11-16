@@ -14,13 +14,13 @@ description: "vsprintf – Format a string and place it in a buffer"
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>The buffer to place the result into</dl>
+</dd><dd>The buffer to place the result into</dd></dl>
 <p> <i>fmt</i></p>
 <dl>
-<dd>The format string to use</dl>
+<dd>The format string to use</dd></dl>
 <p> <i>args</i></p>
 <dl>
-<dd>Arguments for the format string</dl>
+<dd>Arguments for the format string</dd></dl>
 <h2>Description</h2>
 <p>The function returns the number of characters written into <i>buf</i>. Use <code>vsnprintf</code> or <code>vscnprintf</code> in order to avoid buffer overflows. </p>
 <p> If you&#8217;re not already dealing with a va_list consider using <code>sprintf</code>. </p>

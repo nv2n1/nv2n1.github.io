@@ -15,8 +15,8 @@ description: "ibv_devinfo – query RDMA devices"
 <p> Print information about RDMA devices available for use from userspace. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;ib-dev</code>=<i>DEVICE</i></p>
-<dd> use IB device <i>DEVICE</i> (default first device found) </p>
+<dt><code>-d</code>, <code>&#8211;ib-dev</code>=<i>DEVICE</i></dt>
+<dd> use IB device <i>DEVICE</i> (default first device found) </dd>
 <p> <code>-i</code>, <code>&#8211;ib-port</code>=<i>PORT</i> query port <i>PORT</i> (default all ports) </p>
 <p> <code>-l</code>, <code>&#8211;list</code> only list names of RDMA devices </p>
 <p> <code>-v</code>, <code>&#8211;verbose</code> print all available information about RDMA devices </p>
@@ -25,9 +25,9 @@ description: "ibv_devinfo – query RDMA devices"
 <p> <code><a href="/docs/linux/man/1-ibv_devices/">ibv_devices</a></code>(1) </p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak</p>
-<dd> &lt;<i>dotanba [at] gmail.com</i>&gt;</p>
-<dt>Roland Dreier</p>
-<dd> &lt;<i>rolandd [at] cisco.com</i>&gt; </p>
+<dt>Dotan Barak</dt>
+<dd> &lt;<i>dotanba [at] gmail.com</i>&gt;</dd>
+<dt>Roland Dreier</dt>
+<dd> &lt;<i>rolandd [at] cisco.com</i>&gt; </dd>
 </dl>
 <h2>Index</h2>

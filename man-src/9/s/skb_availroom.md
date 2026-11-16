@@ -14,7 +14,7 @@ description: "skb_availroom – bytes at buffer end"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>buffer to check</dl>
+</dd><dd>buffer to check</dd></dl>
 <h2>Description</h2>
 <p>Return the number of bytes of free space at the tail of an sk_buff allocated by <code>sk_stream_alloc</code></p>
 <h2>Copyright</h2>

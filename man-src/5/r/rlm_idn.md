@@ -11,10 +11,10 @@ description: "rlm_idn – FreeRADIUS Module"
 <h2>Description</h2>
 <p>When instantiated, the <i>rlm_idn</i> module provides an xlat for performing IDNA encoding of internationalized domain names. Decoding and other similar encodings like plain punycode are not currently supported. For example, the following unlang expression would evaluate to TRUE: &quot;%{idn:fūbar.site}&quot; == &quot;xn--fbar-v7a.site&quot; Each instance of rlm_idn may take the following parameters:</p>
 <dl>
-<dt>use_std3_ascii_rules</p>
-<dd>This boolean is set by default and prohibits e.g. underscores in domain names.</p>
-<dt>allow_unassigned</p>
-<dd>This boolean is unset by default, which prohibits use of unassigned Unicode points.</dl>
+<dt>use_std3_ascii_rules</dt>
+<dd>This boolean is set by default and prohibits e.g. underscores in domain names.</dd>
+<dt>allow_unassigned</dt>
+<dd>This boolean is unset by default, which prohibits use of unassigned Unicode points.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/raddb/radiusd.conf</i></p>
 <h2>References</h2>

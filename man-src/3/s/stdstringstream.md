@@ -10,23 +10,14 @@ description: "std::basic_stringstream – std::basic_stringstream"
 <p>std::basic_stringstream &#8211; std::basic_stringstream</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;sstream&gt;
-
 template&lt;
-
 class CharT,                             (until C++11)
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_stringstream;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;,  (since C++11)
-
 class Allocator = std::allocator&lt;CharT&gt;
-
 &gt; class basic_stringstream;</code></pre>
 <p>The class template std::basic_stringstream implements input/output operations on memory (std::basic_string) based streams. It essentially wraps a raw string device implementation (std::basic_stringbuf) into a higher-level interface (std::basic_iostream). The complete interface to unique std::basic_stringbuf members is provided.<br />
 &nbsp;std-basic stringstream-inheritance.svg<br />

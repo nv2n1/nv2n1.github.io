@@ -10,7 +10,6 @@ description: "ureadkey – Returns the next unicode character from the keyboard 
 <p>ureadkey &#8211; Returns the next unicode character from the keyboard buffer. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int ureadkey(int *scancode);</code></pre>
 <h2>Description</h2>
 <p>Returns the next character from the keyboard buffer, in Unicode format. If the buffer is empty, it waits until a key is pressed. You can see if there are queued keypresses with keypressed(). The return value contains the Unicode value of the key, and if not NULL, the pointer argument will be set to the scancode. Unlike readkey(), this function is able to return character values greater than 255. Example: </p>
@@ -19,11 +18,9 @@ int ureadkey(int *scancode);</code></pre>
 if (val == 0x00F1)
     allegro_message(&quot;You pressed n with tilde
 &quot;);
-
 if (val == 0x00DF)
     allegro_message(&quot;You pressed sharp s
 &quot;);
-
 You should be able to find Unicode character maps at
 http://www.unicode.org/. Remember that on DOS you must specify a custom
 keyboard map (like those found in `keyboard.dat') usually with the help of

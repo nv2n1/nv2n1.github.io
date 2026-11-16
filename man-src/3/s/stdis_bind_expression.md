@@ -10,10 +10,8 @@ description: "std::is_bind_expression – std::is_bind_expression"
 <p>std::is_bind_expression &#8211; std::is_bind_expression</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_bind_expression;</code></pre>
 <p>If T is the type produced by a call to std::bind, this template is derived from std::true_type. For any other type, this template is derived from std::false_type.<br />
 This template may be specialized for a user-defined type T to implement UnaryTypeTrait with BaseCharacteristic of std::true_type to indicate that T should be treated by std::bind as if it were the type of a bind subexpression: when a bind-generated function object is invoked, a bound argument of this type will be invoked as a function object and will be given all the unbound arguments passed to the bind-generated object.<br />
@@ -37,9 +35,7 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;functional&gt;
 struct MyBind {
     typedef int result_type;
@@ -53,15 +49,12 @@ namespace std
 template &lt;&gt;
 struct is_bind_expression&lt;MyBind&gt; : public true_type {
 };
-
 } // namespace std
 int f(int n1, int n2)
-
 {
     return n1 + n2;
 }
 int main()
-
 {
     // as if bind(f, bind(MyBind(), _1, _2), 2)
     auto b = std::bind(f, MyBind(), 2);

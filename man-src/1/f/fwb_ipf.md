@@ -17,55 +17,55 @@ description: "fwb_ipf – Policy compiler for ipfilter"
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-f FILE</p>
-<dd> Specify the name of the data file to be processed. </p>
-<dt>-o output.fw</p>
-<dd> Specify output file name </p>
-<dt>-d wdir</p>
-<dd> Specify working directory. Compiler creates firewall activation script and ipfilter configuration files in this directory. If this parameter is missing, then all files will be placed in the current working directory. </p>
-<dt>-v</p>
-<dd> Be verbose: compiler prints diagnostic messages when it works. </p>
-<dt>-V</p>
-<dd> Print version number and quit. </p>
-<dt>-i</p>
-<dd> When this option is present, the last argument on the command line is supposed to be firewall object ID rather than its name </p>
-<dt>-x</p>
-<dd> Generate debugging information while working. This option is intended for debugging only and may produce lots of cryptic messages. </p>
+<dt>-f FILE</dt>
+<dd> Specify the name of the data file to be processed. </dd>
+<dt>-o output.fw</dt>
+<dd> Specify output file name </dd>
+<dt>-d wdir</dt>
+<dd> Specify working directory. Compiler creates firewall activation script and ipfilter configuration files in this directory. If this parameter is missing, then all files will be placed in the current working directory. </dd>
+<dt>-v</dt>
+<dd> Be verbose: compiler prints diagnostic messages when it works. </dd>
+<dt>-V</dt>
+<dd> Print version number and quit. </dd>
+<dt>-i</dt>
+<dd> When this option is present, the last argument on the command line is supposed to be firewall object ID rather than its name </dd>
+<dt>-x</dt>
+<dd> Generate debugging information while working. This option is intended for debugging only and may produce lots of cryptic messages. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> Support for ipf returned in version 1.0.1 of Firewall Builder </p>
 <p> Supported features: </p>
 <dl>
-<dt>o</p>
-<dd> both ipf.conf and nat.conf files are generated </p>
-<dt>o</p>
-<dd> negation in policy rules </p>
-<dt>o</p>
-<dd> stateful inspection in individual rule can be turned off in rule options dialog. By default compiler adds &quot;keep state&quot; or &quot;modulate state&quot; to each rule with action &#8216;pass&#8217; </p>
-<dt>o</p>
-<dd> rule options dialog provides a choice of icmp or tcp rst replies for rules with action &quot;Reject&quot; </p>
-<dt>o</p>
-<dd> compiler adds flag &quot;allow-opts&quot; if match on ip options is needed </p>
-<dt>o</p>
-<dd> compiler can generate rules matching on TCP flags </p>
-<dt>o</p>
-<dd> compiler can generate script adding ip aliases for NAT rules using addresses that do not belong to any interface of the firewall </p>
-<dt>o</p>
-<dd> compiler always adds rule &quot;block quick all&quot; at the very bottom of the script to ensure &quot;block all by default&quot; policy even if the policy is empty. </p>
-<dt>o</p>
-<dd> Address ranges in both policy and NAT </p>
+<dt>o</dt>
+<dd> both ipf.conf and nat.conf files are generated </dd>
+<dt>o</dt>
+<dd> negation in policy rules </dd>
+<dt>o</dt>
+<dd> stateful inspection in individual rule can be turned off in rule options dialog. By default compiler adds &quot;keep state&quot; or &quot;modulate state&quot; to each rule with action &#8216;pass&#8217; </dd>
+<dt>o</dt>
+<dd> rule options dialog provides a choice of icmp or tcp rst replies for rules with action &quot;Reject&quot; </dd>
+<dt>o</dt>
+<dd> compiler adds flag &quot;allow-opts&quot; if match on ip options is needed </dd>
+<dt>o</dt>
+<dd> compiler can generate rules matching on TCP flags </dd>
+<dt>o</dt>
+<dd> compiler can generate script adding ip aliases for NAT rules using addresses that do not belong to any interface of the firewall </dd>
+<dt>o</dt>
+<dd> compiler always adds rule &quot;block quick all&quot; at the very bottom of the script to ensure &quot;block all by default&quot; policy even if the policy is empty. </dd>
+<dt>o</dt>
+<dd> Address ranges in both policy and NAT </dd>
 </dl>
 <p> Features that are not supported (yet) </p>
 <dl>
-<dt>o</p>
-<dd> negation in NAT </p>
-<dt>o</p>
-<dd> custom services </p>
+<dt>o</dt>
+<dd> negation in NAT </dd>
+<dt>o</dt>
+<dd> custom services </dd>
 </dl>
 <p> Features that won&#8217;t be supported (at least not anytime soon) </p>
 <dl>
-<dt>o</p>
-<dd> policy routing </p>
+<dt>o</dt>
+<dd> policy routing </dd>
 </dl>
 <h2>URL</h2>
 <p> Firewall Builder home page is located at the following URL: <code><a rel="nofollow" href="http://www.fwbuilder.org/">http://www.fwbuilder.org/</a></code> </p>

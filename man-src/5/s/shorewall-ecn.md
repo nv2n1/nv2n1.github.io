@@ -10,16 +10,16 @@ description: "ecn – Shorewall ECN file"
 <p>ecn &#8211; Shorewall ECN file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>/etc/shorewall/ecn</code></dl>
+<dt> <code>/etc/shorewall/ecn</code></dt></dl>
 <h2>Description</h2>
-<dd>Use this file to list the destinations for which you want to disable ECN (Explicit Congestion Notification). </p>
+<dd>Use this file to list the destinations for which you want to disable ECN (Explicit Congestion Notification). </dd>
 <p> The columns in the file are as follows. </p>
 <p> <code>INTERFACE</code> &#8211; <i>interface</i></p>
 <dl>
-<dd>Interface through which host(s) communicate with the firewall</dl>
+<dd>Interface through which host(s) communicate with the firewall</dd></dl>
 <p> <code>HOST(S)</code> (Optional) &#8211; [<code>&#8211;</code>|<i>address-or-address-range</i>[<code>,</code><i>address-or-address-range</i>]&#8230;]</p>
 <dl>
-<dd>Comma-separated list of host and/or network addresses. If left empty or supplied as &quot;-&quot;, 0.0.0.0/0 is assumed. If your kernel and iptables include iprange match support then IP address ranges are also permitted.</dl>
+<dd>Comma-separated list of host and/or network addresses. If left empty or supplied as &quot;-&quot;, 0.0.0.0/0 is assumed. If your kernel and iptables include iprange match support then IP address ranges are also permitted.</dd></dl>
 <h2>Files</h2>
 <p>/etc/shorewall/ecn</p>
 <h2>See Also</h2>

@@ -13,32 +13,32 @@ description: "proxymap – Postfix lookup table proxy server"
 <h2>Description</h2>
 <p>The <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) server provides read-only or read-write table lookup service to Postfix processes. These services are implemented with distinct service names: <code>proxymap</code> and <code>proxywrite</code>, respectively. The purpose of these services is:</p>
 <dl>
-<dt>&bull;</p>
-<dd>To overcome chroot restrictions. For example, a chrooted SMTP server needs access to the system passwd file in order to reject mail for non-existent local addresses, but it is not practical to maintain a copy of the passwd file in the chroot jail. The solution: </p>
+<dt>&bull;</dt>
+<dd>To overcome chroot restrictions. For example, a chrooted SMTP server needs access to the system passwd file in order to reject mail for non-existent local addresses, but it is not practical to maintain a copy of the passwd file in the chroot jail. The solution: </dd>
 <pre>local_recipient_maps =
  proxy:unix:passwd.byname $alias_maps</pre>
-<dt>&bull;</p>
-<dd>To consolidate the number of open lookup tables by sharing one open table among multiple processes. For example, making mysql connections from every Postfix daemon process results in &quot;too many connections&quot; errors. The solution: </p>
+<dt>&bull;</dt>
+<dd>To consolidate the number of open lookup tables by sharing one open table among multiple processes. For example, making mysql connections from every Postfix daemon process results in &quot;too many connections&quot; errors. The solution: </dd>
 <pre>virtual_alias_maps =
  proxy:mysql:/etc/postfix/virtual_alias.cf</pre>
 <p>The total number of connections is limited by the number of proxymap server processes.</p>
-<dt>&bull;</p>
-<dd>To provide single-updater functionality for lookup tables that do not reliably support multiple writers (i.e. all file-based tables).</dl>
+<dt>&bull;</dt>
+<dd>To provide single-updater functionality for lookup tables that do not reliably support multiple writers (i.e. all file-based tables).</dd></dl>
 <p> The <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) server implements the following requests:</p>
 <dl>
-<dt><code>open</code> <i>maptype:mapname flags</i></p>
-<dd>Open the table with type <i>maptype</i> and name <i>mapname</i>, as controlled by <i>flags</i>. The reply includes the <i>maptype</i> dependent flags (to distinguish a fixed string table from a regular expression table).</p>
-<dt><code>lookup</code> <i>maptype:mapname flags key</i></p>
-<dd>Look up the data stored under the requested key. The reply is the request completion status code and the lookup result value. The <i>maptype:mapname</i> and <i>flags</i> are the same as with the <code>open</code> request.</p>
-<dt><code>update</code> <i>maptype:mapname flags key value</i></p>
-<dd>Update the data stored under the requested key. The reply is the request completion status code. The <i>maptype:mapname</i> and <i>flags</i> are the same as with the <code>open</code> request. </p>
+<dt><code>open</code> <i>maptype:mapname flags</i></dt>
+<dd>Open the table with type <i>maptype</i> and name <i>mapname</i>, as controlled by <i>flags</i>. The reply includes the <i>maptype</i> dependent flags (to distinguish a fixed string table from a regular expression table).</dd>
+<dt><code>lookup</code> <i>maptype:mapname flags key</i></dt>
+<dd>Look up the data stored under the requested key. The reply is the request completion status code and the lookup result value. The <i>maptype:mapname</i> and <i>flags</i> are the same as with the <code>open</code> request.</dd>
+<dt><code>update</code> <i>maptype:mapname flags key value</i></dt>
+<dd>Update the data stored under the requested key. The reply is the request completion status code. The <i>maptype:mapname</i> and <i>flags</i> are the same as with the <code>open</code> request. </dd>
 <p> To implement single-updater maps, specify a process limit of 1 in the master.cf file entry for the <code>proxywrite</code> service. </p>
 <p> This request is supported in Postfix 2.5 and later.</p>
-<dt><code>delete</code> <i>maptype:mapname flags key</i></p>
-<dd>Delete the data stored under the requested key. The reply is the request completion status code. The <i>maptype:mapname</i> and <i>flags</i> are the same as with the <code>open</code> request. </p>
+<dt><code>delete</code> <i>maptype:mapname flags key</i></dt>
+<dd>Delete the data stored under the requested key. The reply is the request completion status code. The <i>maptype:mapname</i> and <i>flags</i> are the same as with the <code>open</code> request. </dd>
 <p> This request is supported in Postfix 2.5 and later.</p>
-<dt><code>sequence</code> <i>maptype:mapname flags function</i></p>
-<dd>Iterate over the specified database. The <i>function</i> is one of DICT_SEQ_FUN_FIRST or DICT_SEQ_FUN_NEXT. The reply is the request completion status code and a lookup key and result value, if found. </p>
+<dt><code>sequence</code> <i>maptype:mapname flags function</i></dt>
+<dd>Iterate over the specified database. The <i>function</i> is one of DICT_SEQ_FUN_FIRST or DICT_SEQ_FUN_NEXT. The reply is the request completion status code and a lookup key and result value, if found. </dd>
 <p> This request is supported in Postfix 2.9 and later.</dl>
 <p> The request completion status is one of OK, RETRY, NOKEY (lookup failed because the key was not found), BAD (malformed request) or DENY (the table is not approved for proxy read or update access). </p>
 <p> There is no <code>close</code> command, nor are tables implicitly closed when a client disconnects. The purpose is to share tables among multiple client processes.</p>
@@ -59,30 +59,30 @@ description: "proxymap – Postfix lookup table proxy server"
 <p>On busy mail systems a long time may pass before <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) relevant changes to <code>main.cf</code> are picked up. Use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>max_idle (100s)</code></p>
-<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</p>
-<dt><code>max_use (100)</code></p>
-<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>proxy_read_maps (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The lookup tables that the <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) server is allowed to access for the read-only service.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>proxy_read_maps (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The lookup tables that the <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) server is allowed to access for the read-only service.</dd></dl>
 <p> Available in Postfix 2.5 and later:</p>
 <dl>
-<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</p>
-<dt><code>proxy_write_maps (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The lookup tables that the <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) server is allowed to access for the read-write service.</dl>
+<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</dd>
+<dt><code>proxy_write_maps (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The lookup tables that the <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) server is allowed to access for the read-write service.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options</pre>

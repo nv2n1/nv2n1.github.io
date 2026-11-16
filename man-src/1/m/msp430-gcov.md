@@ -19,12 +19,12 @@ description: "gcov – coverage testing tool"
 <p> <code>gcov</code> is a test coverage program. Use it in concert with <font SIZE="-1">GCC</font> to analyze your programs to help create more efficient, faster running code. You can use <code>gcov</code> as a profiling tool to help discover where your optimization efforts will best affect your code. You can also use <code>gcov</code> along with the other profiling tool, <code>gprof</code>, to assess which parts of your code use the greatest amount of computing time. </p>
 <p> Profiling tools help you analyze your code&#8217;s performance. Using a profiler such as <code>gcov</code> or <code>gprof</code>, you can find out some basic performance statistics, such as: </p>
 <dl>
-<dt>*</p>
-<dd> how often each line of code executes </p>
-<dt>*</p>
-<dd> what lines of code are actually executed </p>
-<dt>*</p>
-<dd> how much computing time each section of code uses</dl>
+<dt>*</dt>
+<dd> how often each line of code executes </dd>
+<dt>*</dt>
+<dd> what lines of code are actually executed </dd>
+<dt>*</dt>
+<dd> how much computing time each section of code uses</dd></dl>
 <p> Once you know these things about how your code works when compiled, you can look at each module to see which modules should be optimized. <code>gcov</code> helps you determine where to work on optimization. </p>
 <p> Software developers also use coverage testing in concert with testsuites, to make sure software is actually good enough for a release. Testsuites can verify that a program works as expected; a coverage program tests to see how much of the program is exercised by the testsuite. Developers can then determine what kinds of test cases need to be added to the testsuites to create both better testing and a better final product. </p>
 <p> You should compile your code without optimization if you plan to use <code>gcov</code> because the optimization, by combining some lines of code into one function, may not give you as much information as you need to look for `hot spots&#8217; where the code is using a great deal of computer time. Likewise, because <code>gcov</code> accumulates statistics by line (at the lowest resolution), it works best with a programming style that places only one statement on each line. If you use complicated macros that expand to loops or to other control structures, the statistics are less helpful&#8212;they only report on the line where the macro call appears. If your complex macros behave like functions, you can replace them with inline functions to solve this problem. </p>
@@ -32,38 +32,38 @@ description: "gcov – coverage testing tool"
 <p> <code>gcov</code> works only on code compiled with <font SIZE="-1">GCC</font>. It is not compatible with any other profiling or test coverage mechanism.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8212;help</code></p>
-<dd> Display help about using <code>gcov</code> (on the standard output), and exit without doing any further processing. </p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8212;help</code></dt>
+<dd> Display help about using <code>gcov</code> (on the standard output), and exit without doing any further processing. </dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8212;version</code></p>
-<dd> Display the <code>gcov</code> version number (on the standard output), and exit without doing any further processing. </p>
-<dt><code>-b</code></p>
+</dd><dt><code>&#8212;version</code></dt>
+<dd> Display the <code>gcov</code> version number (on the standard output), and exit without doing any further processing. </dd>
+<dt><code>-b</code></dt>
 <dd>
-<dt><code>&#8212;branch-probabilities</code></p>
-<dd> Write branch frequencies to the output file, and write branch summary info to the standard output. This option allows you to see how often each branch in your program was taken. </p>
-<dt><code>-c</code></p>
+</dd><dt><code>&#8212;branch-probabilities</code></dt>
+<dd> Write branch frequencies to the output file, and write branch summary info to the standard output. This option allows you to see how often each branch in your program was taken. </dd>
+<dt><code>-c</code></dt>
 <dd>
-<dt><code>&#8212;branch-counts</code></p>
-<dd> Write branch frequencies as the number of branches taken, rather than the percentage of branches taken. </p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8212;branch-counts</code></dt>
+<dd> Write branch frequencies as the number of branches taken, rather than the percentage of branches taken. </dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8212;no-output</code></p>
-<dd> Do not create the <code>gcov</code> output file. </p>
-<dt><code>-l</code></p>
+</dd><dt><code>&#8212;no-output</code></dt>
+<dd> Do not create the <code>gcov</code> output file. </dd>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>&#8212;long-file-names</code></p>
-<dd> Create long file names for included source files. For example, if the header file <i>x.h</i> contains code, and was included in the file <i>a.c</i>, then running <code>gcov</code> on the file <i>a.c</i> will produce an output file called <i>a.c.x.h.gcov</i> instead of <i>x.h.gcov</i>. This can be useful if <i>x.h</i> is included in multiple source files. </p>
-<dt><code>-f</code></p>
+</dd><dt><code>&#8212;long-file-names</code></dt>
+<dd> Create long file names for included source files. For example, if the header file <i>x.h</i> contains code, and was included in the file <i>a.c</i>, then running <code>gcov</code> on the file <i>a.c</i> will produce an output file called <i>a.c.x.h.gcov</i> instead of <i>x.h.gcov</i>. This can be useful if <i>x.h</i> is included in multiple source files. </dd>
+<dt><code>-f</code></dt>
 <dd>
-<dt><code>&#8212;function-summaries</code></p>
-<dd> Output summaries for each function in addition to the file level summary. </p>
-<dt><code>-o</code> <i>directory</i></p>
+</dd><dt><code>&#8212;function-summaries</code></dt>
+<dd> Output summaries for each function in addition to the file level summary. </dd>
+<dt><code>-o</code> <i>directory</i></dt>
 <dd>
-<dt><code>&#8212;object-directory</code> <i>directory</i></p>
-<dd> The directory where the object files live. Gcov will search for <i>.bb</i>, <i>.bbg</i>, and <i>.da</i> files in this directory.</dl>
+</dd><dt><code>&#8212;object-directory</code> <i>directory</i></dt>
+<dd> The directory where the object files live. Gcov will search for <i>.bb</i>, <i>.bbg</i>, and <i>.da</i> files in this directory.</dd></dl>
 <p> When using <code>gcov</code>, you must first compile your program with two special <font SIZE="-1">GCC</font> options: <code>-fprofile-arcs -ftest-coverage</code>. This tells the compiler to generate additional information needed by gcov (basically a flow graph of the program) and also includes additional code in the object files for generating the extra profiling information needed by gcov. These additional files are placed in the directory where the source code is located. </p>
 <p> Running the program will cause profile output to be generated. For each source file compiled with <code>-fprofile-arcs</code>, an accompanying <i>.da</i> file will be placed in the source directory. </p>
 <p> Running <code>gcov</code> with your program&#8217;s source file names as arguments will now produce a listing of the code along with frequency of execution for each line. For example, if your program is called <i>tmp.c</i>, this is what you see when you use the basic <code>gcov</code> facility: </p>

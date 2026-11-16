@@ -21,26 +21,26 @@ description: "ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print,
 <p> void ldns_zone_print(FILE *output, const ldns_zone *z); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_print</i>()</p>
-<dd>Prints the data in the resource record to the given file stream (in presentation format) </p>
+<dt> <i>ldns_rr_print</i>()</dt>
+<dd>Prints the data in the resource record to the given file stream (in presentation format) </dd>
 <p> .br <code>output</code>: the file stream to print to .br <code>rr</code>: the resource record to print .br Returns void</dl>
 <dl>
-<dt> <i>ldns_rdf_print</i>()</p>
-<dd>Prints the data in the rdata field to the given file stream (in presentation format) </p>
+<dt> <i>ldns_rdf_print</i>()</dt>
+<dd>Prints the data in the rdata field to the given file stream (in presentation format) </dd>
 <p> .br <code>output</code>: the file stream to print to .br <code>rdf</code>: the rdata field to print .br Returns void</dl>
 <dl>
-<dt> <i>ldns_pkt_print</i>()</p>
-<dd>Prints the data in the DNS packet to the given file stream (in presentation format) </p>
+<dt> <i>ldns_pkt_print</i>()</dt>
+<dd>Prints the data in the DNS packet to the given file stream (in presentation format) </dd>
 <p> .br <code>output</code>: the file stream to print to .br <code>pkt</code>: the packet to print .br Returns void</dl>
 <dl>
-<dt> <i>ldns_rr_list_print</i>()</p>
-<dd>print a rr_list to output .br <code>output</code>: the fd to print to .br <code>list</code>: the rr_list to print</dl>
+<dt> <i>ldns_rr_list_print</i>()</dt>
+<dd>print a rr_list to output .br <code>output</code>: the fd to print to .br <code>list</code>: the rr_list to print</dd></dl>
 <dl>
-<dt> <i>ldns_resolver_print</i>()</p>
-<dd>Print a resolver (in sofar that is possible) state to output. .br <code>output</code>: the fd to print to .br <code>r</code>: the resolver to print</dl>
+<dt> <i>ldns_resolver_print</i>()</dt>
+<dd>Print a resolver (in sofar that is possible) state to output. .br <code>output</code>: the fd to print to .br <code>r</code>: the resolver to print</dd></dl>
 <dl>
-<dt> <i>ldns_zone_print</i>()</p>
-<dd>Print a zone structure * to output. Note the SOA record is included in this output .br <code>output</code>: the fd to print to .br <code>z</code>: the zone to print</dl>
+<dt> <i>ldns_zone_print</i>()</dt>
+<dd>Print a zone structure * to output. Note the SOA record is included in this output .br <code>output</code>: the fd to print to .br <code>z</code>: the zone to print</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

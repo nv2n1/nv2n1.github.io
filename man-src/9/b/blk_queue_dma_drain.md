@@ -14,16 +14,16 @@ description: "blk_queue_dma_drain – Set up a drain buffer for excess dma."
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>the request queue for the device</dl>
+</dd><dd>the request queue for the device</dd></dl>
 <p> <i>dma_drain_needed</i></p>
 <dl>
-<dd>fn which returns non-zero if drain is necessary</dl>
+<dd>fn which returns non-zero if drain is necessary</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>physically contiguous buffer</dl>
+<dd>physically contiguous buffer</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of the buffer in bytes</dl>
+<dd>size of the buffer in bytes</dd></dl>
 <h2>Description</h2>
 <p>Some devices have excess DMA problems and can&#8217;t simply discard (or zero fill) the unwanted piece of the transfer. They have to have a real area of memory to transfer it into. The use case for this is ATAPI devices in DMA mode. If the packet command causes a transfer bigger than the transfer size some HBAs will lock up if there aren&#8217;t DMA elements to contain the excess transfer. What this API does is adjust the queue so that the buf is always appended silently to the scatterlist.</p>
 <h2>Note</h2>

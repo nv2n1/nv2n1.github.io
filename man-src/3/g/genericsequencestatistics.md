@@ -67,6 +67,6 @@ description: "QuantLib::GenericSequenceStatistics – Statistics analysis of N-d
 <p> For most of the statistics this class relies on the StatisticsType underlying class to provide 1-D methods that will be iterated for all the components of the N-D data. These lifted methods are the union of all the methods that might be requested to the 1-D underlying StatisticsType class, with the usual compile-time checks provided by the template approach. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dl>
+<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

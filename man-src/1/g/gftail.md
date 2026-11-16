@@ -14,40 +14,40 @@ description: "gftail – manual page for gftail (glusterfs-coreutils) 0.2.0"
 <h2>DESCRIPTION</h2>
 <p> Print the last 10 lines (default) of the file to standard output.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;bytes</code>=<i>K</i></p>
-<dd> output the last K bytes</p>
-<dt><code>-f</code>, <code>&#8211;follow</code></p>
-<dd> output appended data as the file grows</p>
-<dt><code>-n</code>, <code>&#8211;lines</code>=<i>K</i></p>
-<dd> output the last K lines, instead of the last 10</p>
-<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></p>
-<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify the port on which to connect</p>
-<dt><code>-s</code>, <code>&#8211;sleep-internal</code>=<i>N</i></p>
-<dd> with <code>-f</code>, sleep for approximately N microseconds (default is 50,000)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;bytes</code>=<i>K</i></dt>
+<dd> output the last K bytes</dd>
+<dt><code>-f</code>, <code>&#8211;follow</code></dt>
+<dd> output appended data as the file grows</dd>
+<dt><code>-n</code>, <code>&#8211;lines</code>=<i>K</i></dt>
+<dd> output the last K lines, instead of the last 10</dd>
+<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
+<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>-s</code>, <code>&#8211;sleep-internal</code>=<i>N</i></dt>
+<dd> with <code>-f</code>, sleep for approximately N microseconds (default is 50,000)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gftail <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></p>
+</dt><dd> gftail <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></dd>
 <dt>
-<dd> Tail the last 10 lines of the file /file on the Gluster volume groot on host localhost.</p>
+</dt><dd> Tail the last 10 lines of the file /file on the Gluster volume groot on host localhost.</dd>
 <dt>
-<dd> gftail -c 100 <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></p>
+</dt><dd> gftail -c 100 <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></dd>
 <dt>
-<dd> Tail the last 100 bytes of the file /file on the Gluster volume groot on host localhost.</p>
+</dt><dd> Tail the last 100 bytes of the file /file on the Gluster volume groot on host localhost.</dd>
 <dt>
-<dd> gftail -f <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></p>
+</dt><dd> gftail -f <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></dd>
 <dt>
-<dd> Tail the last 10 lines of the file /file on the Gluster volume groot on host localhost, following the file until an interrupt is received.</p>
+</dt><dd> Tail the last 10 lines of the file /file on the Gluster volume groot on host localhost, following the file until an interrupt is received.</dd>
 <dt>
-<dd> gfcli (localhost/groot)&gt; tail /example</p>
+</dt><dd> gfcli (localhost/groot)&gt; tail /example</dd>
 <dt>
-<dd> In the context of a shell with a connection established, tail the file example on the root of the Gluster volume groot on localhost.</dl>
+</dt><dd> In the context of a shell with a connection established, tail the file example on the root of the Gluster volume groot on localhost.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

@@ -15,15 +15,15 @@ d_add_ci - lookup or allocate new dentry with case-exact name
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>the negative dentry that was passed to the parent's lookup func</dl>
+<dl><dd></dd><dd>the negative dentry that was passed to the parent's lookup func</dd></dl>
  
 
  <i>inode</i>
-<dl><dd>the inode case-insensitive lookup has found</dl>
+<dl><dd>the inode case-insensitive lookup has found</dd></dl>
  
 
  <i>name</i>
-<dl><dd>the case-exact name to be associated with the returned dentry</dl>
+<dl><dd>the case-exact name to be associated with the returned dentry</dd></dl>
 
 <h2>Description</h2>
 

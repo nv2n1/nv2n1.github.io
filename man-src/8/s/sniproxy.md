@@ -14,12 +14,12 @@ description: "SNIProxy – transparent session based TLS and HTTP proxy"
 <p>Proxies incoming HTTP and TLS connections based on the hostname contained in the initial request of the TCP session. This enables HTTPS name-based virtual hosting to separate backend servers without installing the private key on the proxy machine. </p>
 <h2>Options</h2>
 <dl>
-<dt>-c <i>config</i></p>
-<dd>Specify configuration file to use. The default is /etc/sniproxy.conf. </p>
-<dt>-f</p>
-<dd>Run in foreground. Do not daemonize or drop privileges. </p>
-<dt>-n <i>file-descriptor-limit</i></p>
-<dd>Specify the maximum file descriptor resource limit. SNIProxy will attempt to set the maximum file descriptor limit to the value specified. </p>
-<dt>-V</p>
-<dd>Print the version of SNIProxy and exit. </p>
+<dt>-c <i>config</i></dt>
+<dd>Specify configuration file to use. The default is /etc/sniproxy.conf. </dd>
+<dt>-f</dt>
+<dd>Run in foreground. Do not daemonize or drop privileges. </dd>
+<dt>-n <i>file-descriptor-limit</i></dt>
+<dd>Specify the maximum file descriptor resource limit. SNIProxy will attempt to set the maximum file descriptor limit to the value specified. </dd>
+<dt>-V</dt>
+<dd>Print the version of SNIProxy and exit. </dd>
 </dl>

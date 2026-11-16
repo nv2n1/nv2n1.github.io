@@ -16,18 +16,18 @@ description: "ldapdiff – Tool to synchronize ldap servers using ldif formatted
 <p> This manual page was written for the Debian distribution because the original program does not have a manual page.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c conffile</code></p>
-<dd> Name of the configuration file. Default: ./ldapdiff.conf</p>
-<dt><code>-f ldiffile</code></p>
-<dd> ldif input file to be compared to the running server. If this option is not set, stdin will be used.</p>
-<dt><code>-l logfile</code></p>
-<dd> Name of the logfile. Default: stdout</p>
-<dt><code>-p profile</code></p>
-<dd> Name of the profile to use from the configuration file.</p>
-<dt><code>-s local[0-7]</code></p>
-<dd> Log to syslog.</p>
-<dt><code>-v</code></p>
-<dd> Show version of program. </p>
+<dt><code>-c conffile</code></dt>
+<dd> Name of the configuration file. Default: ./ldapdiff.conf</dd>
+<dt><code>-f ldiffile</code></dt>
+<dd> ldif input file to be compared to the running server. If this option is not set, stdin will be used.</dd>
+<dt><code>-l logfile</code></dt>
+<dd> Name of the logfile. Default: stdout</dd>
+<dt><code>-p profile</code></dt>
+<dd> Name of the profile to use from the configuration file.</dd>
+<dt><code>-s local[0-7]</code></dt>
+<dd> Log to syslog.</dd>
+<dt><code>-v</code></dt>
+<dd> Show version of program. </dd>
 </dl>
 <h2>RETURN VALUES</h2>
 <p> <code>0 </code> -&gt; ok </p>

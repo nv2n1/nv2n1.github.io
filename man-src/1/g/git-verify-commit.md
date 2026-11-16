@@ -19,15 +19,15 @@ description: "git-verify-commit – Check the GPG signature of commits"
 <p> &#8211;raw</p>
 <dl>
 <dt>
-<dd> Print the raw gpg status output to standard error instead of the normal human-readable output.</dl>
+</dt><dd> Print the raw gpg status output to standard error instead of the normal human-readable output.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Print the contents of the commit object before validating it.</dl>
+</dt><dd> Print the contents of the commit object before validating it.</dd></dl>
 <p> &lt;commit&gt;&#8230;</p>
 <dl>
 <dt>
-<dd> SHA-1 identifiers of Git commit objects.</dl>
+</dt><dd> SHA-1 identifiers of Git commit objects.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

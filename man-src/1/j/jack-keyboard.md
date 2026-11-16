@@ -13,35 +13,35 @@ description: "jack-keyboard – A virtual keyboard for JACK MIDI"
 <p> <code>jack-keyboard</code> [ <code>-C</code> ] [ <code>-G</code> ] [ <code>-K</code> ] [ <code>-T</code> ] [ <code>-V</code> ] [ <code>-a </code><i>input port</i> ] [ <code>-k</code> ] [ <code>-r </code><i>rate</i> ] [ <code>-t</code> ] [ <code>-u</code> ] [ <code>-c </code><i>channel</i> ] [ <code>-b </code><i>bank</i> ] [ <code>-p </code><i>program</i> ] [ <code>-l </code><i>layout</i> ] </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-C</code></p>
-<dd> Enable &quot;keyboard cue&quot; &#8211; two horizontal lines over a part of keyboard; keys under the lower line are mapped to the lower row of your PC keyboard; keys under the upper line are mapped to the upper row.</p>
-<dt><code>-G</code></p>
-<dd> Disable GUI. It makes <code>jack-keyboard</code> look like it did before version 2.0.</p>
-<dt><code>-K</code></p>
-<dd> Grab the keyboard. This makes <code>jack-keyboard</code> receive keyboard events even when it does not have focus. In other words, you can play while mousing in a different window. </p>
+<dt><code>-C</code></dt>
+<dd> Enable &quot;keyboard cue&quot; &#8211; two horizontal lines over a part of keyboard; keys under the lower line are mapped to the lower row of your PC keyboard; keys under the upper line are mapped to the upper row.</dd>
+<dt><code>-G</code></dt>
+<dd> Disable GUI. It makes <code>jack-keyboard</code> look like it did before version 2.0.</dd>
+<dt><code>-K</code></dt>
+<dd> Grab the keyboard. This makes <code>jack-keyboard</code> receive keyboard events even when it does not have focus. In other words, you can play while mousing in a different window. </dd>
 <p> Note: It&#8217;s not reliable yet. It does not work when some other application keeps the keyboard grabbed. It does not work with GNOME. Even when it seems to work, some keyboard events may get lost.</p>
-<dt><code>-T</code></p>
-<dd> Toggle titlebar, on which channel/bank/program information is shown. With -G option, it disables titlebar; otherwise it enables it.</p>
-<dt><code>-V</code></p>
-<dd> Print version number to standard output and exit.</p>
-<dt><code>-a </code><i>input port</i></p>
-<dd> Automatically connect to the named input port. Note that this may cause problems with LASH.</p>
-<dt><code>-k</code></p>
-<dd> Allow connecting to other instances of jack-keyboard (see PIANOLA MODE below). Without this option, <code>jack-keyboard</code> will refuse to connect to any JACK client whose name starts in &quot;jack-keyboard&quot;; this is to prevent loops. Note that it&#8217;s impossible to connect instance of <code>jack-keyboard</code> to itself, even with this option set.</p>
-<dt><code>-r </code><i>rate</i></p>
-<dd> Set rate limit to <i>rate</i>, in Kbaud. Limit defined by the MIDI specification is 31.25. By default this parameter is zero, that is, rate limiting is disabled.</p>
-<dt><code>-t</code></p>
-<dd> Send all MIDI messages with zero time offset, making them play as soon as they reach the synth. This was the default behavior before version 1.6.</p>
-<dt><code>-u</code></p>
-<dd> By default, <code>jack-keyboard</code> does not send program/bank change messages after reconnecting, so the newly connected instrument remains at previous settings. This option changes that behaviour.</p>
-<dt><code>-c </code><i>channel</i></p>
-<dd> Set initial MIDI channel to <i>channel</i>; by default it&#8217;s 1.</p>
-<dt><code>-b </code><i>bank</i></p>
-<dd> Set initial MIDI bank to <i>bank</i>. With this option, <code>jack-keyboard</code> will send the bank/program change once, when it connects.</p>
-<dt><code>-p </code><i>program</i></p>
-<dd> Set initial MIDI program to <i>program</i>. With this option, <code>jack-keyboard</code> will send the bank/program change once, when it connects.</p>
-<dt><code>-l </code><i>layout</i></p>
-<dd> Specify the layout of computer keyboard being used. Valid arguments are QWERTY, QWERTZ, AZERTY and DVORAK. Default is QWERTY.</dl>
+<dt><code>-T</code></dt>
+<dd> Toggle titlebar, on which channel/bank/program information is shown. With -G option, it disables titlebar; otherwise it enables it.</dd>
+<dt><code>-V</code></dt>
+<dd> Print version number to standard output and exit.</dd>
+<dt><code>-a </code><i>input port</i></dt>
+<dd> Automatically connect to the named input port. Note that this may cause problems with LASH.</dd>
+<dt><code>-k</code></dt>
+<dd> Allow connecting to other instances of jack-keyboard (see PIANOLA MODE below). Without this option, <code>jack-keyboard</code> will refuse to connect to any JACK client whose name starts in &quot;jack-keyboard&quot;; this is to prevent loops. Note that it&#8217;s impossible to connect instance of <code>jack-keyboard</code> to itself, even with this option set.</dd>
+<dt><code>-r </code><i>rate</i></dt>
+<dd> Set rate limit to <i>rate</i>, in Kbaud. Limit defined by the MIDI specification is 31.25. By default this parameter is zero, that is, rate limiting is disabled.</dd>
+<dt><code>-t</code></dt>
+<dd> Send all MIDI messages with zero time offset, making them play as soon as they reach the synth. This was the default behavior before version 1.6.</dd>
+<dt><code>-u</code></dt>
+<dd> By default, <code>jack-keyboard</code> does not send program/bank change messages after reconnecting, so the newly connected instrument remains at previous settings. This option changes that behaviour.</dd>
+<dt><code>-c </code><i>channel</i></dt>
+<dd> Set initial MIDI channel to <i>channel</i>; by default it&#8217;s 1.</dd>
+<dt><code>-b </code><i>bank</i></dt>
+<dd> Set initial MIDI bank to <i>bank</i>. With this option, <code>jack-keyboard</code> will send the bank/program change once, when it connects.</dd>
+<dt><code>-p </code><i>program</i></dt>
+<dd> Set initial MIDI program to <i>program</i>. With this option, <code>jack-keyboard</code> will send the bank/program change once, when it connects.</dd>
+<dt><code>-l </code><i>layout</i></dt>
+<dd> Specify the layout of computer keyboard being used. Valid arguments are QWERTY, QWERTZ, AZERTY and DVORAK. Default is QWERTY.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>jack-keyboard</code> is a virtual MIDI keyboard &#8211; a program that allows you to send JACK MIDI events (play ;-) using your PC keyboard. It&#8217;s somewhat similar to <code>vkeybd</code>, except it uses JACK MIDI instead of ALSA, and the keyboard mapping is much better &#8211; it uses the same layout as trackers (like Impulse Tracker) did, so you have two and half octaves under your fingers.</p>
 <h2>KEY BINDINGS</h2>

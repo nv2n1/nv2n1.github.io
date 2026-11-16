@@ -25,6 +25,6 @@ description: "QuantLib::MCDigitalEngine – Pricing engine for digital options u
 <p> Uses the Brownian Bridge correction for the barrier found in <i> Going to Extremes: Correcting Simulation Bias in Exotic </i><code>Option</code> Valuation &#8211; D.R. Beaglehole, P.H. Dybvig and G. Zhou Financial Analysts Journal; Jan/Feb 1997; 53, 1. pg. 62-68 and <i> Simulating path-dependent options: A new approach &#8211; M. El Babsiri and G. Noel Journal of Derivatives; Winter 1998; 6, 2; pg. 65-83 </i> </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value in case of cash-or-nothing at-hit digital payoff is tested by reproducing known good results.</dl>
+<dd>the correctness of the returned value in case of cash-or-nothing at-hit digital payoff is tested by reproducing known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

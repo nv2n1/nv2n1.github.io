@@ -38,31 +38,31 @@ nvme create - ns&lt;device&gt;[--nsze = &lt;nsze&gt; | -s&lt;nsze&gt;]
  -s, --nsze
 <dl>
 <dt>
-<dd> The namespace size.</dl>
+</dt><dd> The namespace size.</dd></dl>
  
 
  -c, --ncap
 <dl>
 <dt>
-<dd> The namespace capacity.</dl>
+</dt><dd> The namespace capacity.</dd></dl>
  
 
  -f, --flbas
 <dl>
 <dt>
-<dd> The namespace formatted logical block size setting.</dl>
+</dt><dd> The namespace formatted logical block size setting.</dd></dl>
  
 
  -d, --dps
 <dl>
 <dt>
-<dd> The data protection settings.</dl>
+</dt><dd> The data protection settings.</dd></dl>
  
 
  -m, --nmic
 <dl>
 <dt>
-<dd> Namespace multipath and sharing capabilities.</dl>
+</dt><dd> Namespace multipath and sharing capabilities.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

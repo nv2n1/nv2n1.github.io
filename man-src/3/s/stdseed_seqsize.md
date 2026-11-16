@@ -30,11 +30,8 @@ Constant time.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::seed_seq s1 = {-1, 0, 1};
     std::cout &lt;&lt; s1.size() &lt;&lt; '\n';

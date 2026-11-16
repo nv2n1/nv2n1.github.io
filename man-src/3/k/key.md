@@ -26,30 +26,23 @@ if (key[KEY_SPACE])
    KEY_0 ... KEY_9,
    KEY_0_PAD ... KEY_9_PAD,
    KEY_F1 ... KEY_F12,
-   
    KEY_ESC, KEY_TILDE, KEY_MINUS, KEY_EQUALS,
    KEY_BACKSPACE, KEY_TAB, KEY_OPENBRACE, KEY_CLOSEBRACE,
    KEY_ENTER, KEY_COLON, KEY_QUOTE, KEY_BACKSLASH,
    KEY_BACKSLASH2, KEY_COMMA, KEY_STOP, KEY_SLASH,
    KEY_SPACE,
-   
    KEY_INSERT, KEY_DEL, KEY_HOME, KEY_END, KEY_PGUP,
    KEY_PGDN, KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN,
-   
    KEY_SLASH_PAD, KEY_ASTERISK, KEY_MINUS_PAD,
    KEY_PLUS_PAD, KEY_DEL_PAD, KEY_ENTER_PAD,
-   
    KEY_PRTSCR, KEY_PAUSE,
-   
    KEY_ABNT_C1, KEY_YEN, KEY_KANA, KEY_CONVERT, KEY_NOCONVERT,
    KEY_AT, KEY_CIRCUMFLEX, KEY_COLON2, KEY_KANJI,
-   
    KEY_LSHIFT, KEY_RSHIFT,
    KEY_LCONTROL, KEY_RCONTROL,
    KEY_ALT, KEY_ALTGR,
    KEY_LWIN, KEY_RWIN, KEY_MENU,
    KEY_SCRLOCK, KEY_NUMLOCK, KEY_CAPSLOCK
-   
    KEY_EQUALS_PAD, KEY_BACKQUOTE, KEY_SEMICOLON, KEY_COMMAND
 </pre>
 <p> Finally, you may notice an `odd&#8217; behaviour of the KEY_PAUSE key. This key only generates an interrupt when it is pressed, not when it is released. For this reason, Allegro pretends the pause key is a `state&#8217; key, which is the only way to make it usable. </p>

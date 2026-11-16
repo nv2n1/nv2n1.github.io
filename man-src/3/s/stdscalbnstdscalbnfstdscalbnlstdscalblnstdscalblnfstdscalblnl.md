@@ -50,18 +50,12 @@ The GNU implementation does not set errno regardless of math_errhandling </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;scalbn(7, -4) = &quot; &lt;&lt; std::scalbn(7, -4) &lt;&lt; '
 '

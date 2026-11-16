@@ -12,13 +12,7 @@ description: "std::_Fwd_list_node_base –"
 <p> Inherited by <code>std::_Fwd_list_node&lt; _Tp &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void _M_reverse_after () noexcept
-
-
-
 _Fwd_list_node_base * _M_transfer_after (_Fwd_list_node_base *__begin, _Fwd_list_node_base *__end)
-
-
-
 Public Attributes</code></pre>
 <p> <code>_Fwd_list_node_base</code> * <code>_M_next</code></p>
 <h2>Detailed Description</h2>

@@ -10,16 +10,16 @@ description: "ipsec_addconn – load a given policy into the pluto IKE daemon"
 <p>ipsec_addconn &#8211; load a given policy into the pluto IKE daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> <i>addconn</i> &#8211;configsetup [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;noexport] [&#8211;warningsfatal]</p>
-<dt> <code>ipsec</code> <i>addconn</i> &#8211;liststack [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;noexport] [&#8211;warningsfatal]</p>
-<dt> <code>ipsec</code> <i>addconn</i> &#8211;checkconfig [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</p>
-<dt> <code>ipsec</code> <i>addconn</i> &#8211;autoall [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</p>
-<dt> <code>ipsec</code> <i>addconn</i> [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal] <i>name1</i> [<i>name2 ..</i>]</p>
-<dt> <code>ipsec</code> <i>addconn</i> [&#8211;listall] [&#8211;liststart] [&#8211;listroute] [&#8211;listadd] [&#8211;listignore] [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</p>
-<dt> <code>ipsec</code> <i>addconn &#8211;help</i></dl>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;configsetup [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;noexport] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;liststack [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;noexport] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;checkconfig [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;autoall [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal] <i>name1</i> [<i>name2 ..</i>]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> [&#8211;listall] [&#8211;liststart] [&#8211;listroute] [&#8211;listadd] [&#8211;listignore] [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn &#8211;help</i></dt></dl>
 <h2>Description</h2>
 <p><i>ipsec addconn</i></p>
-<dd>takes a config file (or stdin) containing the format of ipsec.conf, or the format of individual &quot;conn&quot; sections, and uses that information to load named or all connections defined in that configuration file into the running libreswan pluto IKE daemon. If no configuration file is specified, the default configuration file is used. If no pluto socket is specified, the default socket location will be used. </p>
+<dd>takes a config file (or stdin) containing the format of ipsec.conf, or the format of individual &quot;conn&quot; sections, and uses that information to load named or all connections defined in that configuration file into the running libreswan pluto IKE daemon. If no configuration file is specified, the default configuration file is used. If no pluto socket is specified, the default socket location will be used. </dd>
 <p> When <i>&#8211;addall</i> is used, all connections defined in the config file will be operated on. Otherwise, only the specified connection names will be affected. </p>
 <p> When addcon is run, connections that have the <i>auto=</i> option set to <i>add</i>, <i>start</i> or <i>route</i> will be loaded, routed or initiated. If a connection was loaded or initiated already, it will be replaced. </p>
 <p> When <i>&#8211;configsetup</i> is specified, the configuration file is parsed for the <i>config setup</i> section and printed to the terminal usable as a shell script. These are prefaced with <i>export </i> unless <i>&#8211;noexport</i> is specified. </p>
@@ -30,4 +30,4 @@ description: "ipsec_addconn – load a given policy into the pluto IKE daemon"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

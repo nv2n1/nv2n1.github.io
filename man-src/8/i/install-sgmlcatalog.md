@@ -14,8 +14,8 @@ description: "install-sgmlcatalog – maintain transitional SGML catalog"
 <p><code>install-sgmlcatalog</code> removes entries from the transitional SGML catalog file <code>/etc/sgml/transitional.cat</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;remove</code><i>&nbsp;package</i></p>
-<dd>Indicates to remove the entry for the package <i>package</i>.</dl>
+<dt><code>&#8211;remove</code><i>&nbsp;package</i></dt>
+<dd>Indicates to remove the entry for the package <i>package</i>.</dd></dl>
 <h2>Author</h2>
 <p>Ardo van Rangelrooij &lt;ardo [at] debian.org&gt;<br />
  Christian Schwarz (original version)</p>

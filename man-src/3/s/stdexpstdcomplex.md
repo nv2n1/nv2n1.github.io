@@ -11,9 +11,7 @@ std::exp(std::complex) - std::exp(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
-
     complex&lt;T&gt; exp(const complex&lt;T&gt; &amp;z);</code></pre> 
 Compute base-e exponential of z, that is e (Euler's number, 2.7182818) raised to the z power. 
 
@@ -55,10 +53,8 @@ The exponential function is an entire function in the complex plane and has no b
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;complex&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     const double pi = std::acos(-1);
     const std::complex&lt;double&gt; i(0, 1);

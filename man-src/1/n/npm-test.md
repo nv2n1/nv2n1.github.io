@@ -12,29 +12,27 @@ description: "npm-test – Test a package"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm test [-- &lt;args&gt;]
 aliases: t, tst
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> This runs a package&#8217;s &quot;test&quot; script, if one was provided.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help run-script</p>
-<dt>&bull;</p>
-<dd> npm help scripts</p>
-<dt>&bull;</p>
-<dd> npm help start</p>
-<dt>&bull;</p>
-<dd> npm help restart</p>
-<dt>&bull;</p>
-<dd> npm help stop </p>
+<dt>&bull;</dt>
+<dd> npm help run-script</dd>
+<dt>&bull;</dt>
+<dd> npm help scripts</dd>
+<dt>&bull;</dt>
+<dd> npm help start</dd>
+<dt>&bull;</dt>
+<dd> npm help restart</dd>
+<dt>&bull;</dt>
+<dd> npm help stop </dd>
 </dl>
 </dl>
 <h2>Index</h2>

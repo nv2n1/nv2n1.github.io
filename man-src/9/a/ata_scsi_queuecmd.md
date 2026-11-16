@@ -14,10 +14,10 @@ description: "ata_scsi_queuecmd – Issue SCSI cdb to libata-managed device"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>SCSI host of command to be sent</dl>
+</dd><dd>SCSI host of command to be sent</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>SCSI command to be sent</dl>
+<dd>SCSI command to be sent</dd></dl>
 <h2>Description</h2>
 <p>In some cases, this function translates SCSI commands into ATA taskfiles, and queues the taskfiles to be sent to hardware. In other cases, this function simulates a SCSI device by evaluating and responding to certain SCSI commands. This creates the overall effect of ATA and ATAPI devices appearing as SCSI devices. </p>
 <p> LOCKING: ATA host lock</p>
@@ -26,5 +26,5 @@ description: "ata_scsi_queuecmd – Issue SCSI cdb to libata-managed device"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

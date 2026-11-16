@@ -18,6 +18,6 @@ description: "systemd-modules-load.service, systemd-modules-load – Load kernel
 <p>systemd-modules-load.service understands the following kernel command line parameters: </p>
 <p> <i>modules_load=</i>, <i>rd.modules_load=</i></p>
 <dl>
-<dd>Takes a comma-separated list of kernel modules to statically load during early boot. The option prefixed with &quot;rd.&quot; is read by the initial RAM disk only.</dl>
+<dd>Takes a comma-separated list of kernel modules to statically load during early boot. The option prefixed with &quot;rd.&quot; is read by the initial RAM disk only.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-modules-load-d/">modules-load.d</a></code>(5), </p>

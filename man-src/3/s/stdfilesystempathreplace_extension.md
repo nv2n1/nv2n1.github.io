@@ -14,13 +14,10 @@ std::filesystem::path::replace_extension - std::filesystem::path::replace_extens
 (1)(since C++ 17)
         Replaces the extension with replacement
     or removes it when the default value of replacement is used.
-
        Firstly,
     if this path has an extension(), it is removed from the generic - format view of the pathname.
-
                                                                       Then,
     a dot character is appended to the generic - format view of the pathname, if replacement is not empty or does not begin with a dot character.
-
                                                                                                              Then replacement is appended as if by
                                                                                                              operator+=(replacement)
 </code></pre>
@@ -44,12 +41,9 @@ The type of replacement is std::filesystem::path even though it is not intended 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::path p = &quot;/foo/bar.jpeg&quot;;
     std::cout &lt;&lt; &quot;Was: &quot; &lt;&lt; p &lt;&lt; '\n';

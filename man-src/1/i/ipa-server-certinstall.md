@@ -18,16 +18,16 @@ description: "ipa-server-certinstall – Install new SSL server certificates"
 <p> The service(s) are not automatically restarted. In order to use the newly installed certificate(s) you will need to manually restart the Directory and/or Apache servers.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;dirsrv</code></p>
-<dd> Install the certificate on the Directory Server</p>
-<dt><code>-w</code>, <code>&#8211;http</code></p>
-<dd> Install the certificate in the Apache Web Server</p>
-<dt><code>&#8211;pin</code>=<i>PIN</i></p>
-<dd> The password to unlock the private key</p>
-<dt><code>&#8211;cert-name</code>=<i>NAME</i></p>
-<dd> Name of the certificate to install</p>
-<dt><code>&#8211;dirman-password</code>=<i>DIRMAN_PASSWORD</i></p>
-<dd> Directory Manager password</dl>
+<dt><code>-d</code>, <code>&#8211;dirsrv</code></dt>
+<dd> Install the certificate on the Directory Server</dd>
+<dt><code>-w</code>, <code>&#8211;http</code></dt>
+<dd> Install the certificate in the Apache Web Server</dd>
+<dt><code>&#8211;pin</code>=<i>PIN</i></dt>
+<dd> The password to unlock the private key</dd>
+<dt><code>&#8211;cert-name</code>=<i>NAME</i></dt>
+<dd> Name of the certificate to install</dd>
+<dt><code>&#8211;dirman-password</code>=<i>DIRMAN_PASSWORD</i></dt>
+<dd> Directory Manager password</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the installation was successful </p>
 <p> 1 if an error occurred </p>

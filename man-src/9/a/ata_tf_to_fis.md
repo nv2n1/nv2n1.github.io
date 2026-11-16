@@ -14,21 +14,21 @@ description: "ata_tf_to_fis – Convert ATA taskfile to SATA FIS structure"
 <p><i>tf</i></p>
 <dl>
 <dd>
-<dd>Taskfile to convert</dl>
+</dd><dd>Taskfile to convert</dd></dl>
 <p> <i>pmp</i></p>
 <dl>
-<dd>Port multiplier port</dl>
+<dd>Port multiplier port</dd></dl>
 <p> <i>is_cmd</i></p>
 <dl>
-<dd>This FIS is for command</dl>
+<dd>This FIS is for command</dd></dl>
 <p> <i>fis</i></p>
 <dl>
-<dd>Buffer into which data will output</dl>
+<dd>Buffer into which data will output</dd></dl>
 <h2>Description</h2>
 <p>Converts a standard ATA taskfile to a Serial ATA FIS structure (Register &#8211; Host to Device). </p>
 <p> LOCKING: Inherited from caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

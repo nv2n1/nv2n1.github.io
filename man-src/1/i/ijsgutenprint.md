@@ -18,12 +18,12 @@ description: "ijsgutenprint – Ghostscript driver for Gutenprint"
 <h2>OPTIONS</h2>
 <p> <i>ijsgutenprint</i> accepts the following Ghostscript IJS options. The Gutenprint-specific options are not documented here.</p>
 <dl>
-<dt><code>-dIjsUseOutputFD</code></p>
-<dd> This option should be specified whenever output from Ghostscript will go to stdout or into a pipe. It may be specified in all other cases, with only a slight performance degradation.</p>
-<dt><code>-sIjsParams</code>=<i>Option1</i>=<i>Value1</i>,<i>Option2</i>=<i>Value2</i></p>
-<dd> This parameter contains a single string containing a comma-separated list of sub-options.</p>
-<dt><code>-sDeviceManufacturer</code>=<i>vendor</i> <code>-sDeviceModel</code>=<i>name</i></p>
-<dd> This option must be supplied. There is no default. The IJS driver requires the <i>vendor</i> (it&#8217;s part of the protocol), but the ijsgutenprint driver ignores it.</dl>
+<dt><code>-dIjsUseOutputFD</code></dt>
+<dd> This option should be specified whenever output from Ghostscript will go to stdout or into a pipe. It may be specified in all other cases, with only a slight performance degradation.</dd>
+<dt><code>-sIjsParams</code>=<i>Option1</i>=<i>Value1</i>,<i>Option2</i>=<i>Value2</i></dt>
+<dd> This parameter contains a single string containing a comma-separated list of sub-options.</dd>
+<dt><code>-sDeviceManufacturer</code>=<i>vendor</i> <code>-sDeviceModel</code>=<i>name</i></dt>
+<dd> This option must be supplied. There is no default. The IJS driver requires the <i>vendor</i> (it&#8217;s part of the protocol), but the ijsgutenprint driver ignores it.</dd></dl>
 <h2>HISTORY</h2>
 <p> The Ghostscript <code>stp</code> driver was originally written by Henryk Richter (buggs [at] comlab.uni-rostock.de), and was integrated into Gutenprint during the 3.1 development series. Gutenprint (which was named Gimp-Print prior to release 5.0) itself was originally written by Michael Sweet &lt;mike [at] easysw.com&gt;, who released up to version 2.0; Robert Krawitz released version 3.0. The Gutenprint development team (<a rel="nofollow" href="http://gimp-print.sourceforge.net)">http://gimp-print.sourceforge.net)</a> now maintains the entire package. </p>
 <p> The IJS driver was originally written by Russell Lang, and incorporated into Gutenprint (known then as Gimp-Print) in early 2002. This driver corresponds with the IJS protocol 0.32. </p>

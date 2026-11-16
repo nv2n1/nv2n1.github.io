@@ -16,6 +16,6 @@ description: "ovs-parse-backtrace – parses ovs-appctl backtrace output"
 <p> The <code>ovs-appctl backtrace</code> output must be supplied on standard input. The binary that produced the output should be supplied as the sole non-option argument. For best results, the binary should have debug symbols.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Prints a usage message and exits.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Prints a usage message and exits.</dd></dl>
 <p> <code>&#8211;version</code> Prints the version and exits.</p>

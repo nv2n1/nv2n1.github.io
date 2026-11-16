@@ -14,19 +14,19 @@ description: "pcxtoppm – convert a PCX file into a portable pixmap"
 <h2>DESCRIPTION</h2>
 <p> Reads a PCX file as input. Produces a portable pixmap as output. Supported PCX types are:</p>
 <dl>
-<dt>Colormapped files with 2-16 colors.</p>
-<dd> &quot;Packed pixel&quot; format (1, 2 or 4 bits/pixel, 1 plane) or bitplane format (1 bit/pixel, 1-4 planes). The program checks the colormap and uses an internal one if the provided colormap is completely black.</p>
-<dt>Colormapped files with 256 colors</p>
-<dd> 8 bits/pixel, 1 plane, colormap at the end of the file.</p>
-<dt>24bit truecolor files</p>
-<dd> 24bit RGB: 8 bits/pixel, 3 planes.</p>
-<dt>32bit truecolor files</p>
-<dd> 24bit RGB + 8bit intensity: 8 bits/pixel, 4 planes. </p>
+<dt>Colormapped files with 2-16 colors.</dt>
+<dd> &quot;Packed pixel&quot; format (1, 2 or 4 bits/pixel, 1 plane) or bitplane format (1 bit/pixel, 1-4 planes). The program checks the colormap and uses an internal one if the provided colormap is completely black.</dd>
+<dt>Colormapped files with 256 colors</dt>
+<dd> 8 bits/pixel, 1 plane, colormap at the end of the file.</dd>
+<dt>24bit truecolor files</dt>
+<dd> 24bit RGB: 8 bits/pixel, 3 planes.</dd>
+<dt>32bit truecolor files</dt>
+<dd> 24bit RGB + 8bit intensity: 8 bits/pixel, 4 planes. </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-stdpalette</code></p>
-<dd> Enforce the use of the internal colormap for files with 16 colors or less. </p>
+<dt><code>-stdpalette</code></dt>
+<dd> Enforce the use of the internal colormap for files with 16 colors or less. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmtopcx/">ppmtopcx</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>

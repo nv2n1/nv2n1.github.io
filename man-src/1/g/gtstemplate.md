@@ -16,13 +16,13 @@ description: "gtstemplate – generates of a template used to create new object 
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>&#8211;no-extra-data</code></p>
+<dt><code>&#8211;no-extra-data</code></dt>
 <dd>
-<dt><code>&#8211;no-extra-method</code></p>
+</dd><dt><code>&#8211;no-extra-method</code></dt>
 <dd>
-<dt><code>&#8211;overload=</code><i>METHOD</i></p>
+</dd><dt><code>&#8211;overload=</code><i>METHOD</i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> gtstemplate was written by Stephane Popinet &lt;popinet [at] users.sourceforge.net&gt;. </p>
 <p> This manual page was written by Ruben Molina &lt;rmolina [at] udea.edu.co&gt;, for the Debian project (but may be used by others). </p>

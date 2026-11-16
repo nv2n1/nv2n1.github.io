@@ -20,14 +20,14 @@ description: "QuantLib::AnalyticContinuousGeometricAveragePriceAsianEngine – P
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by reproducing results available in literature, and results obtained using a discrete average approximation.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by reproducing results available in literature, and results obtained using a discrete average approximation.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd></dl>
 </dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>handle seasoned options</dl>
+<dd>handle seasoned options</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

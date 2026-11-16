@@ -14,12 +14,12 @@ description: "ata_pci_remove_one – PCI layer callback for device removal"
 <p><i>pdev</i></p>
 <dl>
 <dd>
-<dd>PCI device that was removed</dl>
+</dd><dd>PCI device that was removed</dd></dl>
 <h2>Description</h2>
 <p>PCI layer indicates to libata via this hook that hot-unplug or module unload event has occurred. Detach all ports. Resource release is handled via devres. </p>
 <p> LOCKING: Inherited from PCI layer (may sleep).</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

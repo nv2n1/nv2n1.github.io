@@ -40,14 +40,14 @@ int timer_gettime(timer_t timerid, struct itimerspec *curr_value);
 <h2>ERRORS</h2>
 <p> These functions may fail with the following errors:</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>new_value</i>, <i>old_value</i>, or <i>curr_value</i> is not a valid pointer.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>timerid</i> is invalid.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>new_value</i>, <i>old_value</i>, or <i>curr_value</i> is not a valid pointer.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>timerid</i> is invalid.</dd></dl>
 <p> <code>timer_settime</code>() may fail with the following errors:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>new_value.it_value</i> is negative; or <i>new_value.it_value.tv_nsec</i> is negative or greater than 999,999,999.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>new_value.it_value</i> is negative; or <i>new_value.it_value.tv_nsec</i> is negative or greater than 999,999,999.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls are available since Linux 2.6.</p>
 <h2>CONFORMING TO</h2>

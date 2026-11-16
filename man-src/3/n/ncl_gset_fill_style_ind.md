@@ -13,25 +13,25 @@ description: "gset_fill_style_ind (Set fill are style index) – sets the fill a
 <p> void gset_fill_style_ind(Gint fill_style_ind);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>fill_style_ind</p>
-<dd>(Input) &#8211; Specifies workstation-dependent options for hatch or pattern fills. Pattern fill options are not supported in NCAR Graphics. Hatch fill options are:</p>
+<dt>fill_style_ind</dt>
+<dd>(Input) &#8211; Specifies workstation-dependent options for hatch or pattern fills. Pattern fill options are not supported in NCAR Graphics. Hatch fill options are:</dd>
 <dl COMPACT>
 <dd>
+</dd><dl COMPACT>
+<dt>1</dt>
+<dd>Horizontal lines (default)</dd>
+<dt>2</dt>
+<dd>Vertical lines</dd>
+<dt>3</dt>
+<dd>Lines of positive slope</dd>
+<dt>4</dt>
+<dd>Lines of negative slope</dd>
+<dt>5</dt>
+<dd>Horizontal and vertical lines</dd>
+<dt>6</dt>
+<dd>Lines of positive and negative slope</dd>
 <dl COMPACT>
-<dt>1</p>
-<dd>Horizontal lines (default)</p>
-<dt>2</p>
-<dd>Vertical lines</p>
-<dt>3</p>
-<dd>Lines of positive slope</p>
-<dt>4</p>
-<dd>Lines of negative slope</p>
-<dt>5</p>
-<dd>Horizontal and vertical lines</p>
-<dt>6</p>
-<dd>Lines of positive and negative slope</p>
-<dl COMPACT>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 </dl>
 </dl>

@@ -49,11 +49,11 @@ description: "docker – Docker image and container command line interface"
 <p> For specific client examples please see the man page for the specific Docker command. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 man docker-run
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. </p>
 <h2>Index</h2>

@@ -14,17 +14,17 @@ description: "nand_block_checkbad – [GENERIC] Check if a block is marked bad"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>ofs</i></p>
 <dl>
-<dd>offset from device start</dl>
+<dd>offset from device start</dd></dl>
 <p> <i>allowbbt</i></p>
 <dl>
-<dd>1, if its allowed to access the bbt area</dl>
+<dd>1, if its allowed to access the bbt area</dd></dl>
 <h2>Description</h2>
 <p>Check, if the block is bad. Either by reading the bad block table or calling of the scan function.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

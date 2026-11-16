@@ -30,16 +30,16 @@ int
 <code>Tcl_VarEvalVA</code>(<i>interp, argList</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to execute the script. The interpreter&#8217;s result is modified to hold the result or error message from the script.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) A Tcl object containing the script to execute.</p>
-<dd>int <i>flags</i> (in) ORed combination of flag bits that specify additional options. <code>TCL_EVAL_GLOBAL</code> and <code>TCL_EVAL_DIRECT</code> are currently supported.</p>
-<dd>const char <i>*fileName</i> (in) Name of a file containing a Tcl script.</p>
-<dd>int <i>objc</i> (in) The number of objects in the array pointed to by <i>objPtr</i>; this is also the number of words in the command.</p>
-<dd>Tcl_Obj <i>**objv</i> (in) Points to an array of pointers to objects; each object holds the value of a single word in the command to execute.</p>
-<dd>int <i>numBytes</i> (in) The number of bytes in <i>script</i>, not including any null terminating character. If -1, then all characters up to the first null byte are used.</p>
-<dd>const char <i>*script</i> (in) Points to first byte of script to execute (null-terminated and UTF-8).</p>
-<dd>char <i>*part</i> (in) String forming part of a Tcl script.</p>
-<dd>va_list <i>argList</i> (in) An argument list which must have been initialized using <code>va_start</code>, and cleared using <code>va_end</code>. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to execute the script. The interpreter&#8217;s result is modified to hold the result or error message from the script.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) A Tcl object containing the script to execute.</dd>
+<dd>int <i>flags</i> (in) ORed combination of flag bits that specify additional options. <code>TCL_EVAL_GLOBAL</code> and <code>TCL_EVAL_DIRECT</code> are currently supported.</dd>
+<dd>const char <i>*fileName</i> (in) Name of a file containing a Tcl script.</dd>
+<dd>int <i>objc</i> (in) The number of objects in the array pointed to by <i>objPtr</i>; this is also the number of words in the command.</dd>
+<dd>Tcl_Obj <i>**objv</i> (in) Points to an array of pointers to objects; each object holds the value of a single word in the command to execute.</dd>
+<dd>int <i>numBytes</i> (in) The number of bytes in <i>script</i>, not including any null terminating character. If -1, then all characters up to the first null byte are used.</dd>
+<dd>const char <i>*script</i> (in) Points to first byte of script to execute (null-terminated and UTF-8).</dd>
+<dd>char <i>*part</i> (in) String forming part of a Tcl script.</dd>
+<dd>va_list <i>argList</i> (in) An argument list which must have been initialized using <code>va_start</code>, and cleared using <code>va_end</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p>The procedures described here are invoked to execute Tcl scripts in various forms. <code>Tcl_EvalObjEx</code> is the core procedure and is used by many of the others. It executes the commands in the script stored in <i>objPtr</i> until either an error occurs or the end of the script is reached. If this is the first time <i>objPtr</i> has been executed, its commands are compiled into bytecode instructions which are then executed. The bytecodes are saved in <i>objPtr</i> so that the compilation step can be skipped if the object is evaluated again in the future. </p>
@@ -56,10 +56,10 @@ int
 <h2>Flag Bits</h2>
 <p>Any ORed combination of the following values may be used for the <i>flags</i> argument to procedures such as <code>Tcl_EvalObjEx</code>:</p>
 <dl COMPACT>
-<dt><code>TCL_EVAL_DIRECT</code></p>
-<dd>This flag is only used by <code>Tcl_EvalObjEx</code>; it is ignored by other procedures. If this flag bit is set, the script is not compiled to bytecodes; instead it is executed directly as is done by <code>Tcl_EvalEx</code>. The <code>TCL_EVAL_DIRECT</code> flag is useful in situations where the contents of an object are going to change immediately, so the bytecodes will not be reused in a future execution. In this case, it is faster to execute the script directly.</p>
-<dt><code>TCL_EVAL_GLOBAL</code></p>
-<dd>If this flag is set, the script is processed at global level. This means that it is evaluated in the global namespace and its variable context consists of global variables only (it ignores any Tcl procedures at are active). </p>
+<dt><code>TCL_EVAL_DIRECT</code></dt>
+<dd>This flag is only used by <code>Tcl_EvalObjEx</code>; it is ignored by other procedures. If this flag bit is set, the script is not compiled to bytecodes; instead it is executed directly as is done by <code>Tcl_EvalEx</code>. The <code>TCL_EVAL_DIRECT</code> flag is useful in situations where the contents of an object are going to change immediately, so the bytecodes will not be reused in a future execution. In this case, it is faster to execute the script directly.</dd>
+<dt><code>TCL_EVAL_GLOBAL</code></dt>
+<dd>If this flag is set, the script is processed at global level. This means that it is evaluated in the global namespace and its variable context consists of global variables only (it ignores any Tcl procedures at are active). </dd>
 </dl>
 <h2>Miscellaneous Details</h2>
 <p>During the processing of a Tcl command it is legal to make nested calls to evaluate other commands (this is how procedures and some control structures are implemented). If a code other than <code>TCL_OK</code> is returned from a nested <code>Tcl_EvalObjEx</code> invocation, then the caller should normally return immediately, passing that same return code back to its caller, and so on until the top-level application is reached. A few commands, like <code>for</code>, will check for certain return codes, like <code>TCL_BREAK</code> and <code>TCL_CONTINUE</code>, and process them specially without returning. </p>

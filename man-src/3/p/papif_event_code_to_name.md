@@ -13,10 +13,10 @@ description: "PAPIF_event_code_to_name –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_event_code_to_name(&nbsp;<wbr>C_INT EventCode, C_STRING EventName, C_INT check&nbsp;<wbr>)</code></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_event_code_to_name</code></dl>
+<dd><code>PAPI_event_code_to_name</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

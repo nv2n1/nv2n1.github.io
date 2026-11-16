@@ -92,8 +92,8 @@ description: "pads_selinux – Security Enhanced Linux Policy for the pads proce
 <p> <code>pads_config_t</code> </p>
 <p> &#8211; Set files with the pads_config_t type, if you want to treat the files as pads configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pads.conf, /etc/pads-assets.csv, /etc/pads-ether-codes, /etc/pads-signature-list </p>
+<dt>Paths:</dt>
+<dd>/etc/pads.conf, /etc/pads-assets.csv, /etc/pads-ether-codes, /etc/pads-signature-list </dd>
 </dl>
 <p> <code>pads_exec_t</code> </p>
 <p> &#8211; Set files with the pads_exec_t type, if you want to transition an executable to the pads_t domain. </p>

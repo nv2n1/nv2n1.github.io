@@ -20,15 +20,15 @@ url: "/docs/linux/man/3-gnutls_x509_crl_privkey_sign/"
 
 <dl>
 <dt>gnutls_x509_crl_t crl
-<dd> should contain a gnutls_x509_crl_t structure
-<dt>gnutls_x509_crt_t issuer
-<dd> is the certificate of the certificate issuer
-<dt>gnutls_privkey_t issuer_key
-<dd> holds the issuer's private key
-<dt>gnutls_digest_algorithm_t dig
-<dd> The message digest to use. GNUTLS_DIG_SHA1 is the safe choice unless you know what you're doing.
-<dt>unsigned int flags
-<dd> must be 0</dl>
+</dt><dd> should contain a gnutls_x509_crl_t structure
+</dd><dt>gnutls_x509_crt_t issuer
+</dt><dd> is the certificate of the certificate issuer
+</dd><dt>gnutls_privkey_t issuer_key
+</dt><dd> holds the issuer's private key
+</dd><dt>gnutls_digest_algorithm_t dig
+</dt><dd> The message digest to use. GNUTLS_DIG_SHA1 is the safe choice unless you know what you're doing.
+</dd><dt>unsigned int flags
+</dt><dd> must be 0</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -57,7 +57,7 @@ url: "/docs/linux/man/3-gnutls_x509_crl_privkey_sign/"
  The full documentation for <b>gnutls</b> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <b>
 <dl>
 <dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
-<dd> </b></dl>
+</dt><dd> </b></dd></dl>
  
 
  

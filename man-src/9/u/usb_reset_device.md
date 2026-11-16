@@ -14,7 +14,7 @@ description: "usb_reset_device – warn interface drivers and perform a USB port
 <p><i>udev</i></p>
 <dl>
 <dd>
-<dd>device to reset (not in SUSPENDED or NOTATTACHED state)</dl>
+</dd><dd>device to reset (not in SUSPENDED or NOTATTACHED state)</dd></dl>
 <h2>Description</h2>
 <p>Warns all drivers bound to registered interfaces (using their pre_reset method), performs the port reset, and then lets the drivers know that the reset is over (using their post_reset method).</p>
 <h2>Return</h2>

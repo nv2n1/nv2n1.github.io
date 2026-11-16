@@ -11,15 +11,10 @@ std::placeholders::_1,std::placeholders::_2,...,std::placeholders::_N - std::pla
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 /*see below*/ _1;
-
 /*see below*/ _2;
-
 .
-
 .
-
 /*see below*/ _N;</code></pre> 
 The std::placeholders namespace contains the placeholder objects [_1, . . . _N] where N is an implementation defined maximum number. 
 When used as an argument in a std::bind expression, the placeholder objects are stored in the generated function object, and when that function object is invoked with unbound arguments, each placeholder _N is replaced by the corresponding Nth unbound argument. 
@@ -31,18 +26,14 @@ The types of the placeholder objects are DefaultConstructible and CopyConstructi
 
 The following code shows the creation of function objects with a placeholder argument. 
  // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
 void goodbye(const std::string &amp;s)
-
 {
     std::cout &lt;&lt; &quot;Goodbye &quot; &lt;&lt; s &lt;&lt; '\n';
 }
 class Object
 {
-
   public:
     void hello(const std::string &amp;s)
     {
@@ -50,7 +41,6 @@ class Object
     }
 };
 int main()
-
 {
     typedef std::function&lt;void(const std::string &amp;)&gt; ExampleFunction;
     Object instance;

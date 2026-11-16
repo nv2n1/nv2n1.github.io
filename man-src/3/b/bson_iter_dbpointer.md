@@ -18,23 +18,23 @@ void bson_iter_dbpointer(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>collection_len</code></p>
-<dd> A location for the length of the collection name.</dl>
+<dt><code>collection_len</code></dt>
+<dd> A location for the length of the collection name.</dd></dl>
 <dl>
-<dt><code>collection</code></p>
-<dd> A location for the collection name..</dl>
+<dt><code>collection</code></dt>
+<dd> A location for the collection name..</dd></dl>
 <dl>
-<dt><code>oid</code></p>
-<dd> A location for a <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A location for a <code>bson_oid_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Fetches the contents of a BSON_TYPE_DBPOINTER element. </p>
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> The BSON_TYPE_DBPOINTER field type is deprecated by the BSON spec and should not be used in new code.</dl>
+</dt><dd> The BSON_TYPE_DBPOINTER field type is deprecated by the BSON spec and should not be used in new code.</dd></dl>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
 <h2>Index</h2>

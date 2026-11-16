@@ -21,7 +21,6 @@ The 'go test' command expects to find test, benchmark, and example functions in 
               {
                   fmt.Println(value)
               }
-
           // Unordered output: 4
           // 2
           // 1

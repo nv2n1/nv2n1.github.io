@@ -13,13 +13,13 @@ description: "pingd.conf – pingd configuration file"
 <h2>Pingd Configuration Options</h2>
 <dl>
 <dt>
-<dt><i>ping_period num</i></p>
+</dt><dt><i>ping_period num</i></dt>
 <dd>
-<dd>Specify the period time in milliseconds that ICMP pings should be regularly sent out. Default is 15000.</p>
-<dt><i>pingd_server_port port</i></p>
-<dd>Specify the alternate default port the pingd server should listen for requests off of. Default is 9125.</p>
-<dt><i>host string</i></p>
-<dd>Specify a host the pingd daemon whould regularly ping. Can be specified as many times as necessary.</dl>
+</dd><dd>Specify the period time in milliseconds that ICMP pings should be regularly sent out. Default is 15000.</dd>
+<dt><i>pingd_server_port port</i></dt>
+<dd>Specify the alternate default port the pingd server should listen for requests off of. Default is 9125.</dd>
+<dt><i>host string</i></dt>
+<dd>Specify a host the pingd daemon whould regularly ping. Can be specified as many times as necessary.</dd></dl>
 <h2>Files</h2>
 <p>/etc/pingd.conf</p>
 <h2>See Also</h2>

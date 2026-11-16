@@ -10,7 +10,7 @@ description: "vfs_commit – flush dirty data at specified intervals"
 <p>vfs_commit &#8211; flush dirty data at specified intervals</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = commit</dl>
+<dd>vfs objects = commit</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_commit VFS module keeps track of the amount of data written to a file and synchronizes it to disk when a specified amount accumulates. </p>
@@ -19,14 +19,14 @@ description: "vfs_commit – flush dirty data at specified intervals"
 <h2>Options</h2>
 <p>commit:dthresh = BYTES</p>
 <dl>
-<dd>Synchronize file data each time the specified number of bytes has been written. </p>
+<dd>Synchronize file data each time the specified number of bytes has been written. </dd>
 <p> The following suffixes may be applied to BYTES: </p>
 <dl>
-<dd>&bull; K &#8211; BYTES is a number of kilobytes</dl>
+<dd>&bull; K &#8211; BYTES is a number of kilobytes</dd></dl>
 <dl>
-<dd>&bull; M &#8211; BYTES is a number of megabytes</dl>
+<dd>&bull; M &#8211; BYTES is a number of megabytes</dd></dl>
 <dl>
-<dd>&bull; G &#8211; BYTES is a number of gigabytes</dl>
+<dd>&bull; G &#8211; BYTES is a number of gigabytes</dd></dl>
 </dl>
 <h2>Examples</h2>
 <p>Synchronize the file data on the [precious] share after every 512 kilobytes (524288 bytes) of data is written: </p>
@@ -36,7 +36,7 @@ description: "vfs_commit – flush dirty data at specified intervals"
  m[blue]<code>path = /data/precious</code>m[]
  m[blue]<code>vfs objects = commit</code>m[]
  m[blue]<code>commit:dthresh = 512K</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Caveats</h2>
 <p>On some systems, the data synchronization performed by commit may reduce performance.</p>
 <h2>Version</h2>

@@ -17,10 +17,10 @@ description: "quotatab – Descriptions of devices with disk quotas"
 <h2>Example</h2>
 <p># comment</p>
 <dl>
-<dd>/dev/sda2: Home directories.|This becomes second line.</dl>
+<dd>/dev/sda2: Home directories.|This becomes second line.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/quotatab</code></p>
-<dd>list of device descriptions</dl>
+<dt><code>/etc/quotatab</code></dt>
+<dd>list of device descriptions</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8). </p>

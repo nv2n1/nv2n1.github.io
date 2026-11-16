@@ -14,12 +14,12 @@ description: "gnutls_x509_crq_set_key_rsa_raw – API function"
 <p> <code>int gnutls_x509_crq_set_key_rsa_raw(gnutls_x509_crq_t </code><i>crq</i><code>, const gnutls_datum_t * </code><i>m</i><code>, const gnutls_datum_t * </code><i>e</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a <code>gnutls_x509_crq_t</code> structure</p>
-<dt>const gnutls_datum_t * m</p>
-<dd> holds the modulus</p>
-<dt>const gnutls_datum_t * e</p>
-<dd> holds the public exponent</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a <code>gnutls_x509_crq_t</code> structure</dd>
+<dt>const gnutls_datum_t * m</dt>
+<dd> holds the modulus</dd>
+<dt>const gnutls_datum_t * e</dt>
+<dd> holds the public exponent</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the public parameters from the given private key to the request. Only RSA keys are currently supported.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_crq_set_key_rsa_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

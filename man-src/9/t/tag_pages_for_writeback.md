@@ -15,15 +15,15 @@ tag_pages_for_writeback - tag pages to be written by write_cache_pages
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>address space structure to write</dl>
+<dl><dd></dd><dd>address space structure to write</dd></dl>
  
 
  <i>start</i>
-<dl><dd>starting page index</dl>
+<dl><dd>starting page index</dd></dl>
  
 
  <i>end</i>
-<dl><dd>ending page index (inclusive)</dl>
+<dl><dd>ending page index (inclusive)</dd></dl>
 
 <h2>Description</h2>
 

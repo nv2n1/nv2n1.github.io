@@ -14,14 +14,14 @@ description: "single_erase – [GENERIC] NAND standard block erase command funct
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>the page address of the block which will be erased</dl>
+<dd>the page address of the block which will be erased</dd></dl>
 <h2>Description</h2>
 <p>Standard erase command for NAND chips. Returns NAND status.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

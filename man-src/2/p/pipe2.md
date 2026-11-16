@@ -28,42 +28,40 @@ int pipe2(int pipefd[2], int flags);
 <p> <code>pipe</code>() creates a pipe, a unidirectional data channel that can be used for interprocess communication. The array <i>pipefd</i> is used to return two file descriptors referring to the ends of the pipe. <i>pipefd[0]</i> refers to the read end of the pipe. <i>pipefd[1]</i> refers to the write end of the pipe. Data written to the write end of the pipe is buffered by the kernel until it is read from the read end of the pipe. For further details, see <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7). </p>
 <p> If <i>flags</i> is 0, then <code>pipe2</code>() is the same as <code>pipe</code>(). The following values can be bitwise ORed in <i>flags</i> to obtain different behavior:</p>
 <dl>
-<dt><code>O_CLOEXEC</code></p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the two new file descriptors. See the description of the same flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</p>
-<dt><code>O_DIRECT</code> (since Linux 3.4)</p>
-<dd> Create a pipe that performs I/O in &quot;packet&quot; mode. Each <code><a href="/docs/linux/man/2-write/">write</a></code>(2) to the pipe is dealt with as a separate packet, and <code><a href="/docs/linux/man/2-read/">read</a></code>(2)s from the pipe will read one packet at a time. Note the following points:</p>
+<dt><code>O_CLOEXEC</code></dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the two new file descriptors. See the description of the same flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd>
+<dt><code>O_DIRECT</code> (since Linux 3.4)</dt>
+<dd> Create a pipe that performs I/O in &quot;packet&quot; mode. Each <code><a href="/docs/linux/man/2-write/">write</a></code>(2) to the pipe is dealt with as a separate packet, and <code><a href="/docs/linux/man/2-read/">read</a></code>(2)s from the pipe will read one packet at a time. Note the following points:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> Writes of greater than <code>PIPE_BUF</code> bytes (see <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7)) will be split into multiple packets. The constant <code>PIPE_BUF</code> is defined in <i>&lt;limits.h&gt;</i>.</p>
-<dt>*</p>
-<dd> If a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) specifies a buffer size that is smaller than the next packet, then the requested number of bytes are read, and the excess bytes in the packet are discarded. Specifying a buffer size of <code>PIPE_BUF</code> will be sufficient to read the largest possible packets (see the previous point).</p>
-<dt>*</p>
-<dd> Zero-length packets are not supported. (A <code><a href="/docs/linux/man/2-read/">read</a></code>(2) that specifies a buffer size of zero is a no-op, and returns 0.)</dl>
+<dt>*</dt>
+<dd> Writes of greater than <code>PIPE_BUF</code> bytes (see <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7)) will be split into multiple packets. The constant <code>PIPE_BUF</code> is defined in <i>&lt;limits.h&gt;</i>.</dd>
+<dt>*</dt>
+<dd> If a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) specifies a buffer size that is smaller than the next packet, then the requested number of bytes are read, and the excess bytes in the packet are discarded. Specifying a buffer size of <code>PIPE_BUF</code> will be sufficient to read the largest possible packets (see the previous point).</dd>
+<dt>*</dt>
+<dd> Zero-length packets are not supported. (A <code><a href="/docs/linux/man/2-read/">read</a></code>(2) that specifies a buffer size of zero is a no-op, and returns 0.)</dd></dl>
 </dl>
 <dt>
-<dd> Older kernels that do not support this flag will indicate this via an <code>EINVAL</code> error.</p>
+</dt><dd> Older kernels that do not support this flag will indicate this via an <code>EINVAL</code> error.</dd>
 <dt>
-<dd> Since Linux 4.5, it is possible to change the <code>O_DIRECT</code> setting of a pipe file descriptor using <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</p>
-<dt><code>O_NONBLOCK</code></p>
-<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file descriptions referred to by the new file descriptors. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</dl>
+</dt><dd> Since Linux 4.5, it is possible to change the <code>O_DIRECT</code> setting of a pipe file descriptor using <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</dd>
+<dt><code>O_NONBLOCK</code></dt>
+<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file descriptions referred to by the new file descriptors. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, <i>errno</i> is set appropriately, and <i>pipefd</i> is left unchanged. </p>
 <p> On Linux (and other systems), <code>pipe</code>() does not modify <i>pipefd</i> on failure. A requirement standardizing this behavior was added in POSIX.1-2008 TC2. The Linux-specific <code>pipe2</code>() system call likewise does not modify <i>pipefd</i> on failure.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>pipefd</i> is not valid.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>pipe2</code>()) Invalid value in <i>flags</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The user hard limit on memory that can be allocated for pipes has been reached and the caller is not privileged; see <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pipefd</i> is not valid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>pipe2</code>()) Invalid value in <i>flags</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The user hard limit on memory that can be allocated for pipes has been reached and the caller is not privileged; see <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7).</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>pipe2</code>() was added to Linux in version 2.6.27; glibc support is available starting with version 2.9.</p>
 <h2>CONFORMING TO</h2>

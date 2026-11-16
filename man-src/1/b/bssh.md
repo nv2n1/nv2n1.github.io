@@ -18,16 +18,16 @@ description: "bssh/bvnc/bshell – Browse for SSH/VNC servers on the local netwo
 <p> If the binary is called as bssh only ssh servers will be shown. If the binary is called as bvnc only VNC servers will be shown. If the binary is called as bshell both VNC and SSH servers are shown.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s | &#8211;ssh</code></p>
-<dd> Browse for SSH servers (and only SSH servers) regardless under which name the binary is called.</p>
-<dt><code>-v | &#8211;vnc</code></p>
-<dd> Browse for VNC servers (and only VNC servers) regardless under which name the binary is called.</p>
-<dt><code>-S | &#8211;shell</code></p>
-<dd> Browse for both VNC and SSH servers regardless under which name the binary is called.</p>
-<dt><code>-d | &#8211;domain=</code> <i>DOMAIN</i></p>
-<dd> Browse in the specified domain. If omitted bssh/bvnc/bshell will browse in the default browsing domain (usually .local)</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show help.</dl>
+<dt><code>-s | &#8211;ssh</code></dt>
+<dd> Browse for SSH servers (and only SSH servers) regardless under which name the binary is called.</dd>
+<dt><code>-v | &#8211;vnc</code></dt>
+<dd> Browse for VNC servers (and only VNC servers) regardless under which name the binary is called.</dd>
+<dt><code>-S | &#8211;shell</code></dt>
+<dd> Browse for both VNC and SSH servers regardless under which name the binary is called.</dd>
+<dt><code>-d | &#8211;domain=</code> <i>DOMAIN</i></dt>
+<dd> Browse in the specified domain. If omitted bssh/bvnc/bshell will browse in the default browsing domain (usually .local)</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The Avahi Developers &lt;avahi (at) lists (dot) freedesktop (dot) org&gt;; Avahi is available from <code><a rel="nofollow" href="http://avahi.org/">http://avahi.org/</a></code></p>
 <h2>SEE ALSO</h2>

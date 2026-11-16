@@ -12,8 +12,8 @@ description: "runc-delete – delete any resources held by the container"
 <p><code>runc delete</code> [<code>&#8211;force</code>|<code>-f</code>] <i>container-id</i> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;force</code>|<code>-f</code></p>
-<dd>Forcibly delete the running container, using <code>SIGKILL</code> <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) to stop it first. </p>
+<dt><code>&#8211;force</code>|<code>-f</code></dt>
+<dd>Forcibly delete the running container, using <code>SIGKILL</code> <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) to stop it first. </dd>
 </dl>
 <h2>Examples</h2>
 <p>If the container id is <code>ubuntu01</code> and <code>runc list</code> currently shows its status as <code>stopped</code>, the following will delete resources held for <code>ubuntu01</code>, removing it from the <code>runc list</code>:  </p>

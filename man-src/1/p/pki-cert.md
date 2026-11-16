@@ -19,43 +19,43 @@ pki[CLI options]&lt;subsystem&gt; - cert pki[CLI options]&lt;subsystem&gt; - cer
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert</code></p>
 <dl>
 <dt>
-<dd> This command is to list available certificate commands for the subsystem. Different subsystems may have different certificate commands.</dl>
+</dt><dd> This command is to list available certificate commands for the subsystem. Different subsystems may have different certificate commands.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list certificates in the subsystem.</dl>
+</dt><dd> This command is to list certificates in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-show</code> &lt;certificate ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view a certificate details in the subsystem.</dl>
+</dt><dd> This command is to view a certificate details in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-revoke</code> &lt;certificate ID&gt;</p>
 <dl>
 <dt>
-<dd> This command is to revoke a certificate.</dl>
+</dt><dd> This command is to revoke a certificate.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-hold</code> &lt;certificate ID&gt;</p>
 <dl>
 <dt>
-<dd> This command is to place a certificate on hold temporarily.</dl>
+</dt><dd> This command is to place a certificate on hold temporarily.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-release-hold</code> &lt;certificate ID&gt;</p>
 <dl>
 <dt>
-<dd> This command is to release a certificate that has been placed on hold.</dl>
+</dt><dd> This command is to release a certificate that has been placed on hold.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-request-profile-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list available certificate request templates.</dl>
+</dt><dd> This command is to list available certificate request templates.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-request-profile-show</code> &lt;profile ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view a certificate request template.</dl>
+</dt><dd> This command is to view a certificate request template.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-request-submit</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to submit a certificate request.</dl>
+</dt><dd> This command is to submit a certificate request.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert-request-review</code> &lt;request ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to review a certificate request.</dl>
+</dt><dd> This command is to review a certificate request.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>
@@ -71,7 +71,7 @@ pki[CLI options]&lt;subsystem&gt; - cert pki[CLI options]&lt;subsystem&gt; - cer
 <p> where the file is in the following format: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
 &lt;CertSearchRequest&gt;
@@ -116,7 +116,7 @@ pki[CLI options]&lt;subsystem&gt; - cert pki[CLI options]&lt;subsystem&gt; - cer
     &lt;certTypeSecureEmail&gt;&lt;/certTypeSecureEmail&gt;
 &lt;/CertSearchRequest&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> To view a particular certificate: </p>
 <p> <code>pki ca-cert-show &lt;certificate ID&gt;</code> </p>
 <h3>Revoking Certificates</h3>

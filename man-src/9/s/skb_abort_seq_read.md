@@ -14,7 +14,7 @@ description: "skb_abort_seq_read – Abort a sequential read of skb data"
 <p><i>st</i></p>
 <dl>
 <dd>
-<dd>state variable</dl>
+</dd><dd>state variable</dd></dl>
 <h2>Description</h2>
 <p>Must be called if <code>skb_seq_read</code> was not called until it returned 0.</p>
 <h2>Copyright</h2>

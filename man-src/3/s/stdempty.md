@@ -11,39 +11,27 @@ std::empty - std::empty
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto empty(const C &amp;c) -&gt; decltype(c.empty());
 (until C++ 20)
-
     template &lt;class C&gt;
     (since C++ 20)
-
         [[nodiscard]] constexpr auto empty(const C &amp;c) -&gt; decltype(c.empty());
-
 template &lt;class T, std::size_t N&gt;
 (since C++ 17)
-
     constexpr bool empty(const T (&amp;array)[N]) noexcept;
 (1)(until C++ 20)
-
     template &lt;class T, std::size_t N&gt;
     (since C++ 20)
-
         [[nodiscard]] constexpr bool empty(const T (&amp;array)[N]) noexcept;
 (2)
-
     template &lt;class E&gt;
     (since C++ 17)
-
         constexpr bool empty(std::initializer_list&lt;E&gt; il) noexcept;
 (3)(until C++ 20)
-
     template &lt;class E&gt;
     (since C++ 20)
-
         [[nodiscard]] constexpr bool empty(std::initializer_list&lt;E&gt; il) noexcept;</code></pre> 
 Returns whether the given container is empty. 
 1) returns c.empty() 
@@ -97,12 +85,9 @@ Third version
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 template &lt;class T&gt;
-
 void print(const T &amp;container)
-
 {
     if (!std::empty(container)) {
         std::cout &lt;&lt; &quot;Elements:\n&quot;;
@@ -113,7 +98,6 @@ void print(const T &amp;container)
     }
 }
 int main()
-
 {
     std::vector&lt;int&gt; c = {1, 2, 3};
     print(c);

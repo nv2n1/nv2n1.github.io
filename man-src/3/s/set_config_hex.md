@@ -10,7 +10,6 @@ description: "set_config_hex – Writes a hexadecimal integer in the configurati
 <p>set_config_hex &#8211; Writes a hexadecimal integer in the configuration file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_config_hex(const char *section, const char *name, int val);</code></pre>
 <h2>Description</h2>
 <p>Writes an integer variable to the current config file, in hexadecimal format. See the comments about set_config_string(). </p>

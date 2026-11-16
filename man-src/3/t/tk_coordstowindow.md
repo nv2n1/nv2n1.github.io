@@ -14,9 +14,9 @@ Tk_Window
 <code>Tk_CoordsToWindow</code>(<i>rootX, rootY, tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>rootX</i> (in) X-coordinate (in root window coordinates).</p>
-<dd>int <i>rootY</i> (in) Y-coordinate (in root window coordinates).</p>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window that identifies application. </p>
+<dd>int <i>rootX</i> (in) X-coordinate (in root window coordinates).</dd>
+<dd>int <i>rootY</i> (in) Y-coordinate (in root window coordinates).</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window that identifies application. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_CoordsToWindow</code> locates the window that contains a given point. The point is specified in root coordinates with <i>rootX</i> and <i>rootY</i> (if a virtual-root window manager is in use then <i>rootX</i> and <i>rootY</i> are in the coordinate system of the virtual root window). The return value from the procedure is a token for the window that contains the given point. If the point is not in any window, or if the containing window is not in the same application as <i>tkwin</i>, then NULL is returned. </p>

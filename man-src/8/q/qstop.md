@@ -16,7 +16,7 @@ description: "qstop – stop pbs batch job processing at a destination"
 <h2>Operands</h2>
 <p>The qstop command accepts one or more <i> operands. The operands are one of three forms:</p>
 <dl>
-<dd></i><code> </p>
+<dd></i><code> </dd>
 </dl>
 <p> If is specified, the request is to stop that queue at the default server. If the form is given, the request is to stop all the queues at that server. If a full destination identifier, is given, the request is to stop the named queue at the named server. </code></p>
 <h2>Standard Error</h2>

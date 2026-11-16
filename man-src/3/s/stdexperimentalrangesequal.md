@@ -11,72 +11,42 @@ std::experimental::ranges::equal - std::experimental::ranges::equal
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / algorithm&gt;
-
     template &lt;InputIterator I1, Sentinel&lt;I1&gt; S1, InputIterator I2, Sentinel&lt;I2&gt; S2,
-
               class Pred = ranges::equal_to&lt;&gt;,
-
               class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
     (1)(ranges TS)
-
         requires IndirectlyComparable&lt;I1, I2, Pred, Proj1, Proj2&gt;
-
 bool equal(I1 first1, S1 last1, I2 first2, S2 last2, Pred pred = Pred{},
-
            Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
-
 template &lt;InputRange R1, InputRange R2, class Pred = ranges::equal_to&lt;&gt;,
-
           class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
-
 requires IndirectlyComparable &lt; ranges::iterator_t&lt;R1&gt;, ranges::iterator_t&lt;R2&gt;, (2)
 (ranges TS)
-
     Pred,
     Proj1, Proj2 &gt;
-
                bool equal(R1 &amp;&amp;r1, R2 &amp;&amp;r2, Pred pred = Pred{},
-
                           Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
-
 template &lt;InputIterator I1, Sentinel&lt;I1&gt; S1, class I2,
-
           class Pred = ranges::equal_to&lt;&gt;,
-
           class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
     (ranges TS)
-
         requires InputIterator&lt;std::decay_t&lt;I2&gt;&gt; &amp;&amp; !Range&lt;I2&gt; &amp;&amp;
     (3)(deprecated)
-
         IndirectlyComparable&lt;I1, std::decay_t&lt;I2&gt;, Pred, Proj1, Proj2&gt;
-
     bool equal(I1 first1, S1 last1, I2 &amp;&amp;first2_, Pred pred = Pred{},
-
                Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
-
 template &lt;InputRange R1, class I2, class Pred = ranges::equal_to&lt;&gt;,
-
           class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
-
 requires InputIterator&lt;std::decay_t&lt;I2&gt;&gt; &amp;&amp; !Range&lt;I2&gt; &amp;&amp; (4)(ranges TS)
-
                                                               IndirectlyComparable&lt;ranges::iterator_t&lt;R1&gt;, std::decay_t&lt;I2&gt;, Pred, Proj1, Proj2&gt;(deprecated)
-
                                                                   bool
                                                                   equal(R1 &amp;&amp; r1, I2 &amp;&amp;first2_, Pred pred = Pred{},
-
                                                                         Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
 1) Returns true if the range [first1, last1) is equal to the range [first2, last2), and false otherwise.
-
 2) Same as (1), but uses r1 as the first source range and r2 as the second source range, as if using ranges::begin(r1) as first1, ranges::end(r1) as last1, ranges::begin(r2) as first2, and ranges::end(r2) as last2.
-
 3) Same as (1), except that the second range is considered to end when either the first range is exhausted or the first mismatch is detected. Equivalent to return last1 == ranges::mismatch(first1, last1, std::forward&lt;I2&gt;(first2_), comp, proj1, proj2).in1();
-
 4) Same as (3), but uses r1 as the first source range, as if using ranges::begin(r1) as first1 and ranges::end(r1) as last1.
-
 Two ranges are considered equal if they have the same number of elements and, for every iterator i in the range [first1,last1), ranges::invoke(pred, ranges::invoke(proj1, *i), ranges::invoke(proj2, *(first2 + (i - first1)))) is true.
-
 Notwithstanding the declarations depicted above, the actual number and order of template parameters for algorithm declarations is unspecified. Thus, if explicit template arguments are used when calling an algorithm, the program is probably non-portable.
 </code></pre>
 

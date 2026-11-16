@@ -24,10 +24,8 @@ Unlike test(), does not throw exceptions: the behavior is undefined if pos is ou
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     std::bitset&lt;8&gt; b1(42);
     for (std::size_t i = 0; i &lt; b1.size(); ++i) {

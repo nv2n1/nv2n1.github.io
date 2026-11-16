@@ -14,12 +14,12 @@ description: "gnutls_session_get_id – API function"
 <p> <code>int gnutls_session_get_id(gnutls_session_t </code><i>session</i><code>, void * </code><i>session_id</i><code>, size_t * </code><i>session_id_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>void * session_id</p>
-<dd> is a pointer to space to hold the session id.</p>
-<dt>size_t * session_id_size</p>
-<dd> initially should contain the maximum <i>session_id</i> size and will be updated.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>void * session_id</dt>
+<dd> is a pointer to space to hold the session id.</dd>
+<dt>size_t * session_id_size</dt>
+<dd> initially should contain the maximum <i>session_id</i> size and will be updated.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns the current session ID. This can be used if you want to check if the next session you tried to resume was actually resumed. That is because resumed sessions share the same session ID with the original session. </p>
 <p> The session ID is selected by the server, that identify the current session. In TLS 1.0 and SSL 3.0 session id is always less than 32 bytes.</p>
@@ -34,6 +34,6 @@ description: "gnutls_session_get_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

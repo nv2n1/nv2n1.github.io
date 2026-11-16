@@ -14,10 +14,10 @@ description: "snd_pcm_lib_alloc_vmalloc_32_buffer – allocate 32-bit-addressabl
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the substream to allocate the buffer to</dl>
+</dd><dd>the substream to allocate the buffer to</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>the requested buffer size, in bytes</dl>
+<dd>the requested buffer size, in bytes</dd></dl>
 <h2>Description</h2>
 <p>This function works like <code>snd_pcm_lib_alloc_vmalloc_buffer</code>, but uses <code>vmalloc_32</code>, i.e., the pages are allocated from 32-bit-addressable memory.</p>
 <h2>Return</h2>

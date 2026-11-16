@@ -21,10 +21,11 @@ description: "struct_usb_os_desc_ext_prop – describes one “Extended Property
 <h2>Members</h2>
 <p>entry</p>
 <dl>
-<dd>used to keep a list of extended properties</dl>
+<dd>used to keep a list of extended properties</dd></dl>
 <p> type</p>
 <dl>
-<dd>Extended Property type</dl>
+<dd>Extended Property type</dd></dl>
 <p> name_len</p>
 <dl>
 <dd>Extended Property unicode name length, including terminating &#8216;
+</dd></dl>

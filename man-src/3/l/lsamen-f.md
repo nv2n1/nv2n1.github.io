@@ -23,10 +23,10 @@ description: "lsamen.f –"
  LSAMEN returns .TRUE. if CA and CB are equivalent except for case
  and .FALSE. otherwise. LSAMEN also returns .FALSE. if LEN( CA )
  or LEN( CB ) is less than N.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The number of characters in CA and CB to be compared.</pre>
 <p><i>CA</i> </p>
@@ -38,13 +38,13 @@ description: "lsamen.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 75 of file lsamen.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

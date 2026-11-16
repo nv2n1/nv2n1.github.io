@@ -14,13 +14,13 @@ description: "blkdev_get – open a block device"
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>block_device to open</dl>
+</dd><dd>block_device to open</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>FMODE_* mask</dl>
+<dd>FMODE_* mask</dd></dl>
 <p> <i>holder</i></p>
 <dl>
-<dd>exclusive holder identifier</dl>
+<dd>exclusive holder identifier</dd></dl>
 <h2>Description</h2>
 <p>Open <i>bdev</i> with <i>mode</i>. If <i>mode</i> includes <code>FMODE_EXCL</code>, <i>bdev</i> is open with exclusive access. Specifying <code>FMODE_EXCL</code> with <code>NULL</code><i>holder</i> is invalid. Exclusive opens may nest for the same <i>holder</i>. </p>
 <p> On success, the reference count of <i>bdev</i> is unchanged. On failure, <i>bdev</i> is put.</p>

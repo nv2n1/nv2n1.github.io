@@ -24,21 +24,21 @@ pptpsetup - Point-to-Point Tunneling Protocol setup
 <h2>Options</h2>
 
 <dl><dt>--create <font SIZE="-1">TUNNEL</font>
-<dd>create a tunnel named <font SIZE="-1">TUNNEL</font>
-<dt>--delete <font SIZE="-1">TUNNEL</font>
-<dd>delete the file /etc/ppp/peers/TUNNEL and any lines from /etc/ppp/chap-secrets that contains ``<font SIZE="-1">TUNNEL''</font> as a single word
-<dt>--server <font SIZE="-1">SERVER</font>
-<dd>the <font SIZE="-1">IP</font> address or host name of the server
-<dt>--domain <font SIZE="-1">DOMAIN</font>
-<dd>the authentication domain name (optional)
-<dt>--username <font SIZE="-1">USERNAME</font>
-<dd>the username you are to use
-<dt>--password <font SIZE="-1">PASSWORD</font>
-<dd>the password you are to use. If you don't specify a password, pptpsetup will ask for one.
-<dt>--encrypt
-<dd>whether encryption is required
-<dt>--start
-<dd>whether the connection should be started after configuration.</dl>
+</dt><dd>create a tunnel named <font SIZE="-1">TUNNEL</font>
+</dd><dt>--delete <font SIZE="-1">TUNNEL</font>
+</dt><dd>delete the file /etc/ppp/peers/TUNNEL and any lines from /etc/ppp/chap-secrets that contains ``<font SIZE="-1">TUNNEL''</font> as a single word
+</dd><dt>--server <font SIZE="-1">SERVER</font>
+</dt><dd>the <font SIZE="-1">IP</font> address or host name of the server
+</dd><dt>--domain <font SIZE="-1">DOMAIN</font>
+</dt><dd>the authentication domain name (optional)
+</dd><dt>--username <font SIZE="-1">USERNAME</font>
+</dt><dd>the username you are to use
+</dd><dt>--password <font SIZE="-1">PASSWORD</font>
+</dt><dd>the password you are to use. If you don't specify a password, pptpsetup will ask for one.
+</dd><dt>--encrypt
+</dt><dd>whether encryption is required
+</dd><dt>--start
+</dt><dd>whether the connection should be started after configuration.</dd></dl>
 
 <h2>Author</h2>
 
@@ -47,9 +47,9 @@ Nelson Ferraz &lt;nferraz at gmail.com&gt;, based on James Cameron's <font SIZE=
 <h2>See Also</h2>
 
 <dl><dt><font SIZE="-1">PPTP</font> Client Debian <font SIZE="-1">HOWTO</font>
-<dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-debian.phtml">http://pptpclient.sourceforge.net/howto-debian.phtml</a>
-<dt><font SIZE="-1">PPTP</font> Client Diagnosis <font SIZE="-1">HOWTO</font>
-<dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-diagnosis.phtml">http://pptpclient.sourceforge.net/howto-diagnosis.phtml</a></dl>
+</dt><dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-debian.phtml">http://pptpclient.sourceforge.net/howto-debian.phtml</a>
+</dd><dt><font SIZE="-1">PPTP</font> Client Diagnosis <font SIZE="-1">HOWTO</font>
+</dt><dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-diagnosis.phtml">http://pptpclient.sourceforge.net/howto-diagnosis.phtml</a></dd></dl>
 
 <h2>Copyright</h2>
 

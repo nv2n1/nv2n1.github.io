@@ -19,26 +19,26 @@ description: "ledmon – Intel(R) LED monitor service for storage enclosures."
 <p> The ledmon application is part of Intel(R) Enclosure <font SIZE="-1">LED</font> Utilities. Only single instance of the application is allowed.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code> or <code>&#8211;config</code>=<i>path</i></p>
-<dd>Sets a path to local configuration file. If this option is specified the global configuration file and user configuration file has no effect.</p>
-<dt><code>-l</code> or <code>&#8211;log</code>=<i>path</i></p>
-<dd>Sets a path to local log file. If this option is specified the global log file <i>/var/log/ledmon.log</i> is not used.</p>
-<dt><code>-t</code> or <code>&#8211;interval</code>=<i>seconds</i></p>
-<dd>Sets time interval between scans of sysfs. The value is given in seconds. The minimum is 5 seconds the maximum is not specified.</p>
-<dt><code>&#8211;quiet</code> or <code>&#8211;error</code> or <code>&#8211;warning</code> or <code>&#8211;info</code> or <code>&#8211;debug</code> or <code>&#8211;all</code></p>
-<dd>Verbose level &#8211; &#8216;quiet&#8217; means no logging at all and &#8216;all&#8217; means to log everything. The levels are given in order. If user specifies more then one verbose option the last option comes into effect.</p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Prints this text out and exits.</p>
-<dt><code>-v</code> or <code>&#8211;version</code></p>
-<dd>Displays version of ledmon and information about the license and exits.</dl>
+<dt><code>-c</code> or <code>&#8211;config</code>=<i>path</i></dt>
+<dd>Sets a path to local configuration file. If this option is specified the global configuration file and user configuration file has no effect.</dd>
+<dt><code>-l</code> or <code>&#8211;log</code>=<i>path</i></dt>
+<dd>Sets a path to local log file. If this option is specified the global log file <i>/var/log/ledmon.log</i> is not used.</dd>
+<dt><code>-t</code> or <code>&#8211;interval</code>=<i>seconds</i></dt>
+<dd>Sets time interval between scans of sysfs. The value is given in seconds. The minimum is 5 seconds the maximum is not specified.</dd>
+<dt><code>&#8211;quiet</code> or <code>&#8211;error</code> or <code>&#8211;warning</code> or <code>&#8211;info</code> or <code>&#8211;debug</code> or <code>&#8211;all</code></dt>
+<dd>Verbose level &#8211; &#8216;quiet&#8217; means no logging at all and &#8216;all&#8217; means to log everything. The levels are given in order. If user specifies more then one verbose option the last option comes into effect.</dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Prints this text out and exits.</dd>
+<dt><code>-v</code> or <code>&#8211;version</code></dt>
+<dd>Displays version of ledmon and information about the license and exits.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/log/ledmon.log</i></p>
-<dd>Global log file, used by ledmon application. To force logging to user defined file use <i>-l</i> option switch.</p>
-<dt><i>~/.ledctl</i></p>
-<dd>User configuration file, shared between ledmon and all ledctl application instances.</p>
-<dt><i>/etc/ledcfg.conf</i></p>
-<dd>Global configuration file, shared between ledmon and all ledctl application instances.</dl>
+<dt><i>/var/log/ledmon.log</i></dt>
+<dd>Global log file, used by ledmon application. To force logging to user defined file use <i>-l</i> option switch.</dd>
+<dt><i>~/.ledctl</i></dt>
+<dd>User configuration file, shared between ledmon and all ledctl application instances.</dd>
+<dt><i>/etc/ledcfg.conf</i></dt>
+<dd>Global configuration file, shared between ledmon and all ledctl application instances.</dd></dl>
 <h2>License</h2>
 <p>Copyright (c) 2009-2016 Intel Corporation. </p>
 <p> This program is distributed under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation. See the build-in help for details on the License and the lack of warranty.</p>

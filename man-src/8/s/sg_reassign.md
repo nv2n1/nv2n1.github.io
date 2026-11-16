@@ -16,26 +16,26 @@ description: "sg_reassign – send SCSI REASSIGN BLOCKS command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;address</code>=<i>A,A&#8230;</i></p>
-<dd>where <i>A,A&#8230;</i> is a string of comma separated numbers. Each number is interpreted as decimal unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or it has a trailing &#8216;h&#8217; or &#8216;H&#8217;). If multiple logical block addresses are given they must be separated by a comma or a (single) space. A string that contains any space separators needs to be quoted. At least one address must be given.</p>
-<dt><code>-a</code>, <code>&#8211;address</code>=-</p>
-<dd>reads one or more logical block addresses from stdin. These may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator sequence of characters should resolve to a decimal number unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or has a trailing &#8216;h&#8217;). At least one address must be given.</p>
-<dt><code>-d</code>, <code>&#8211;dummy</code></p>
-<dd>prepare for but do not execute the SCSI REASSIGN BLOCKS command. Since the REASSIGN BLOCKS command is essentially irreversible, paranoid users may wish to check the invocation of this utility before reassigning defective blocks on a disk. Useful with &#8216;-vv&#8217; for those who wish to view the parameter block that will accompany the command.</p>
-<dt><code>-e</code>, <code>&#8211;eight</code>=0 | 1</p>
-<dd>when value is 1 then it sets the &#8216;LONGLBA&#8217; flag in the command indicating that the addresses in the associated parameter block are 8 byte quantities. When value is 0 then it clears the &#8216;LONGLBA&#8217; flag in the command indicating that the addresses in the associated parameter block are 4 byte quantities. If this option is not given then 4 byte quantities are assumed unless one of the address is too large.</p>
-<dt><code>-g</code>, <code>&#8211;grown</code></p>
-<dd>use the SCSI READ DEFECT DATA (10) command to determine the number of elements in the &quot;grown defect list&quot;. When this option is given there is no reassignment of blocks (i.e. this utility is passive). When this option is given then the <i>&#8211;address=</i> option is not permitted. See the discussion below concerning the relationship between reassigned blocks and the grown defect list. This list is sometimes referred to as the GLIST.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-l</code>, <code>&#8211;longlist</code>=0 | 1</p>
-<dd>sets the REASSIGN BLOCKS cdb field of the same name to the given value. Only 1000 addresses are permitted so there should be no need to specify a value of 1. The short list variant restricts the parameter block length to 2 ** 16 bytes (i.e. about 16000 4 byte addresses or 8000 8 byte addresses). Added for completeness.</p>
-<dt><code>-p</code>, <code>&#8211;primary</code></p>
-<dd>use the SCSI READ DEFECT DATA (10) command to determine the number of elements in the &quot;primary defect list&quot; which is established during the manufacturing process. When this option is given there is no reassignment of blocks (i.e. this utility is passive). When this option is given then the <i>&#8211;address=</i> option is not permitted. This list is sometimes referred to as the PLIST.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-a</code>, <code>&#8211;address</code>=<i>A,A&#8230;</i></dt>
+<dd>where <i>A,A&#8230;</i> is a string of comma separated numbers. Each number is interpreted as decimal unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or it has a trailing &#8216;h&#8217; or &#8216;H&#8217;). If multiple logical block addresses are given they must be separated by a comma or a (single) space. A string that contains any space separators needs to be quoted. At least one address must be given.</dd>
+<dt><code>-a</code>, <code>&#8211;address</code>=-</dt>
+<dd>reads one or more logical block addresses from stdin. These may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator sequence of characters should resolve to a decimal number unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or has a trailing &#8216;h&#8217;). At least one address must be given.</dd>
+<dt><code>-d</code>, <code>&#8211;dummy</code></dt>
+<dd>prepare for but do not execute the SCSI REASSIGN BLOCKS command. Since the REASSIGN BLOCKS command is essentially irreversible, paranoid users may wish to check the invocation of this utility before reassigning defective blocks on a disk. Useful with &#8216;-vv&#8217; for those who wish to view the parameter block that will accompany the command.</dd>
+<dt><code>-e</code>, <code>&#8211;eight</code>=0 | 1</dt>
+<dd>when value is 1 then it sets the &#8216;LONGLBA&#8217; flag in the command indicating that the addresses in the associated parameter block are 8 byte quantities. When value is 0 then it clears the &#8216;LONGLBA&#8217; flag in the command indicating that the addresses in the associated parameter block are 4 byte quantities. If this option is not given then 4 byte quantities are assumed unless one of the address is too large.</dd>
+<dt><code>-g</code>, <code>&#8211;grown</code></dt>
+<dd>use the SCSI READ DEFECT DATA (10) command to determine the number of elements in the &quot;grown defect list&quot;. When this option is given there is no reassignment of blocks (i.e. this utility is passive). When this option is given then the <i>&#8211;address=</i> option is not permitted. See the discussion below concerning the relationship between reassigned blocks and the grown defect list. This list is sometimes referred to as the GLIST.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-l</code>, <code>&#8211;longlist</code>=0 | 1</dt>
+<dd>sets the REASSIGN BLOCKS cdb field of the same name to the given value. Only 1000 addresses are permitted so there should be no need to specify a value of 1. The short list variant restricts the parameter block length to 2 ** 16 bytes (i.e. about 16000 4 byte addresses or 8000 8 byte addresses). Added for completeness.</dd>
+<dt><code>-p</code>, <code>&#8211;primary</code></dt>
+<dd>use the SCSI READ DEFECT DATA (10) command to determine the number of elements in the &quot;primary defect list&quot; which is established during the manufacturing process. When this option is given there is no reassignment of blocks (i.e. this utility is passive). When this option is given then the <i>&#8211;address=</i> option is not permitted. This list is sometimes referred to as the PLIST.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>Note that if the ARRE field (for reads) and/or the AWRE field (for writes) are set in the &quot;Read Write Error Recovery&quot; mode page then recoverable read and/or write errors cause automatic reassignment of the defective block. The PER bit in the same mode page controls whether a RECOVERED ERROR sense key is reported on not (PER=1 implies do report). Irrespective of the ARRE, AWRE or PER field settings, the error counter log pages reflect any errors (recovered or otherwise). Whenever a block is reassigned, a new entry is added in the &quot;grown&quot; defect list. Apart from doing selftests (see sg_senddiag or smartmontools) regularly, monitoring the grown defect list of a disk is a reasonable metric of its health. If the grown list starts growing quickly that is an ominous sign. The best grown defect lists are empty ones. The number of elements in the grown defect list can be viewed with the <i>&#8211;grown</i> option. The contents of the grown defect list can be viewed with the &#8216;sginfo -G&#8217; utility. </p>
 <p> If an unrecoverable error is detected at a logical block address then REASSIGN BLOCKS is needed to reassign the block. Also if the ARRE and/or AWRE fields are clear and a recoverable error is detected then the logical block in question may be reassigned with this utility (otherwise the error counter log pages will continually be incremented for each recovered access). </p>

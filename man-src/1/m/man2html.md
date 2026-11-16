@@ -51,44 +51,44 @@ description: "man2html – format a manual page in html"
 <h2>OPTIONS</h2>
 <p> When reading from stdin, it is not always clear how to do .so expansion. The -D option allows a script to define the working directory. </p>
 <dl>
-<dt><code>-D pathname</code></p>
-<dd> Strip the last two parts from the pathname, and do a <i>chdir</i>(<i>dir</i>) before starting the conversion.</dl>
+<dt><code>-D pathname</code></dt>
+<dd> Strip the last two parts from the pathname, and do a <i>chdir</i>(<i>dir</i>) before starting the conversion.</dd></dl>
 <p> The -E option allows the easy generation of error messages from a cgi script. </p>
 <dl>
-<dt><code>-E string</code></p>
-<dd> Output an error page containing the given error message.</dl>
+<dt><code>-E string</code></dt>
+<dd> Output an error page containing the given error message.</dd></dl>
 <p> The general form of a hyperlink generated for a man page reference is</p>
 <dl>
 <dt>
-<dd> &lt;method:cgipath&gt;&lt;man2htmlpath&gt;&lt;separator&gt;&lt;manpage&gt;</dl>
+</dt><dd> &lt;method:cgipath&gt;&lt;man2htmlpath&gt;&lt;separator&gt;&lt;manpage&gt;</dd></dl>
 <p> with a default as shown above. The parts of this hyperlink are set using the various options.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Set method:cgipath to <a rel="nofollow" href="http://localhost.">http://localhost.</a></p>
-<dt><code>-H</code><i> host[.domain][:port]</i></p>
-<dd> Set method:cgipath to http://<i>host.domain:port</i>.</p>
-<dt><code>-l</code></p>
-<dd> Set method:cgipath to lynxcgi:<i>/usr/lib</i>.</p>
-<dt><code>-L</code><i> dir</i></p>
-<dd> Set method:cgipath to lynxcgi:<i>dir</i>.</p>
-<dt><code>-M</code><i> man2htmlpath</i></p>
-<dd> Set the man2htmlpath to use. The default is <i>/cgi-bin/man/man2html</i>.</p>
-<dt><code>-p</code></p>
-<dd> Set separator to &#8216;/&#8217;.</p>
-<dt><code>-q</code></p>
-<dd> Set separator to &#8216;?&#8217;. This is the default.</p>
-<dt><code>-r</code></p>
-<dd> Use relative html paths, instead of cgi-bin paths.</dl>
+<dt><code>-h</code></dt>
+<dd> Set method:cgipath to <a rel="nofollow" href="http://localhost.">http://localhost.</a></dd>
+<dt><code>-H</code><i> host[.domain][:port]</i></dt>
+<dd> Set method:cgipath to http://<i>host.domain:port</i>.</dd>
+<dt><code>-l</code></dt>
+<dd> Set method:cgipath to lynxcgi:<i>/usr/lib</i>.</dd>
+<dt><code>-L</code><i> dir</i></dt>
+<dd> Set method:cgipath to lynxcgi:<i>dir</i>.</dd>
+<dt><code>-M</code><i> man2htmlpath</i></dt>
+<dd> Set the man2htmlpath to use. The default is <i>/cgi-bin/man/man2html</i>.</dd>
+<dt><code>-p</code></dt>
+<dd> Set separator to &#8216;/&#8217;.</dd>
+<dt><code>-q</code></dt>
+<dd> Set separator to &#8216;?&#8217;. This is the default.</dd>
+<dt><code>-r</code></dt>
+<dd> Use relative html paths, instead of cgi-bin paths.</dd></dl>
 <p> On a machine without running <code>httpd</code>, one can use <code>lynx</code> to browse the man pages, using the lynxcgi method. When some http daemon is running, lynx, or any other browser, can be used to browse the man pages, using the http method. The option -l (for `lynxcgi&#8217;) selects the former behaviour. With it, the default cgipath is <i>/usr/lib</i>. </p>
 <p> In general, a cgi script can be called by</p>
 <dl>
 <dt>
-<dd> &lt;path_to_script&gt;/&lt;more_path&gt;?&lt;query&gt;</dl>
+</dt><dd> &lt;path_to_script&gt;/&lt;more_path&gt;?&lt;query&gt;</dd></dl>
 <p> and the environment variables PATH_INFO and QUERY_STRING will be set to &lt;more_path&gt; and &lt;query&gt;, respectively. Since lynxcgi does not handle the PATH_INFO part, we generate hyperlinks with `?&#8217; as a separator by default. The option -p (for `path&#8217;) selects &#8216;/&#8217; as a separator, while the option -q (for `query&#8217;) selects &#8216;?&#8217; as a separator. </p>
 <p> The option -H <i>host</i> will specify the host to use (instead of <i>localhost</i>). A cgi script could use</p>
 <dl>
 <dt>
-<dd> man2html -H $SERVER_NAME</dl>
+</dt><dd> man2html -H $SERVER_NAME</dd></dl>
 <p> if the variable SERVER_NAME is set. This would allow your machine to act as a server and export man pages. </p>
 <h2>BUGS</h2>
 <p> There are many heuristics. The output will not always be perfect. The lynxcgi method will not work if lynx was compiled without selecting support for it. There may be problems with security. </p>

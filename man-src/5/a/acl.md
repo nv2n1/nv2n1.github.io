@@ -20,18 +20,18 @@ description: "acl – Access Control Lists"
 <p> The qualifier denotes the identifier of a user or a group, for entries with tag types of ACL_USER or ACL_GROUP, respectively. Entries with tag types other than ACL_USER or ACL_GROUP have no defined qualifiers. </p>
 <p> The following entry tag types are defined:</p>
 <dl>
-<dt><code>ACL_USER_OBJ</code></p>
-<dd>The ACL_USER_OBJ entry denotes access rights for the file owner.</p>
-<dt><code>ACL_USER</code></p>
-<dd>ACL_USER entries denote access rights for users identified by the entry&#8217;s qualifier.</p>
-<dt><code>ACL_GROUP_OBJ</code></p>
-<dd>The ACL_GROUP_OBJ entry denotes access rights for the file group.</p>
-<dt><code>ACL_GROUP</code></p>
-<dd>ACL_GROUP entries denote access rights for groups identified by the entry&#8217;s qualifier.</p>
-<dt><code>ACL_MASK</code></p>
-<dd>The ACL_MASK entry denotes the maximum access rights that can be granted by entries of type ACL_USER, ACL_GROUP_OBJ, or ACL_GROUP.</p>
-<dt><code>ACL_OTHER</code></p>
-<dd>The ACL_OTHER entry denotes access rights for processes that do not match any other entry in the ACL.</dl>
+<dt><code>ACL_USER_OBJ</code></dt>
+<dd>The ACL_USER_OBJ entry denotes access rights for the file owner.</dd>
+<dt><code>ACL_USER</code></dt>
+<dd>ACL_USER entries denote access rights for users identified by the entry&#8217;s qualifier.</dd>
+<dt><code>ACL_GROUP_OBJ</code></dt>
+<dd>The ACL_GROUP_OBJ entry denotes access rights for the file group.</dd>
+<dt><code>ACL_GROUP</code></dt>
+<dd>ACL_GROUP entries denote access rights for groups identified by the entry&#8217;s qualifier.</dd>
+<dt><code>ACL_MASK</code></dt>
+<dd>The ACL_MASK entry denotes the maximum access rights that can be granted by entries of type ACL_USER, ACL_GROUP_OBJ, or ACL_GROUP.</dd>
+<dt><code>ACL_OTHER</code></dt>
+<dd>The ACL_OTHER entry denotes access rights for processes that do not match any other entry in the ACL.</dd></dl>
 <p> When an access check is performed, the ACL_USER_OBJ and ACL_USER entries are tested against the effective user ID. The effective group ID, as well as all supplementary group IDs are tested against the ACL_GROUP_OBJ and ACL_GROUP entries.</p>
 <h2>VALID ACLs A valid ACL contains exactly one entry with each of the ACL_USER_OBJ,</h2>
 <p>ACL_GROUP_OBJ, and ACL_OTHER tag types. Entries with ACL_USER and ACL_GROUP tag types may appear zero or more times in an ACL. An ACL that contains entries of ACL_USER or ACL_GROUP tag types must contain exactly one entry of the ACL_MASK tag type. If an ACL contains no entries of ACL_USER or ACL_GROUP tag types, the ACL_MASK entry is optional. </p>
@@ -73,14 +73,14 @@ description: "acl – Access Control Lists"
 <h2>Acl Text Forms</h2>
 <p>A long and a short text form for representing ACLs is defined. In both forms, ACL entries are represented as three colon separated fields: an ACL entry tag type, an ACL entry qualifier, and the discretionary access permissions. The first field contains one of the following entry tag type keywords:</p>
 <dl>
-<dt><code>user</code></p>
-<dd>A <code>user</code> ACL entry specifies the access granted to either the file owner (entry tag type ACL_USER_OBJ) or a specified user (entry tag type ACL_USER).</p>
-<dt><code>group</code></p>
-<dd>A <code>group</code> ACL entry specifies the access granted to either the file group (entry tag type ACL_GROUP_OBJ) or a specified group (entry tag type ACL_GROUP).</p>
-<dt><code>mask</code></p>
-<dd>A <code>mask</code> ACL entry specifies the maximum access which can be granted by any ACL entry except the <code>user</code> entry for the file owner and the <code>other</code> entry (entry tag type ACL_MASK).</p>
-<dt><code>other</code></p>
-<dd>An <code>other</code> ACL entry specifies the access granted to any process that does not match any <code>user</code> or <code>group</code> ACL entries (entry tag type ACL_OTHER).</dl>
+<dt><code>user</code></dt>
+<dd>A <code>user</code> ACL entry specifies the access granted to either the file owner (entry tag type ACL_USER_OBJ) or a specified user (entry tag type ACL_USER).</dd>
+<dt><code>group</code></dt>
+<dd>A <code>group</code> ACL entry specifies the access granted to either the file group (entry tag type ACL_GROUP_OBJ) or a specified group (entry tag type ACL_GROUP).</dd>
+<dt><code>mask</code></dt>
+<dd>A <code>mask</code> ACL entry specifies the maximum access which can be granted by any ACL entry except the <code>user</code> entry for the file owner and the <code>other</code> entry (entry tag type ACL_MASK).</dd>
+<dt><code>other</code></dt>
+<dd>An <code>other</code> ACL entry specifies the access granted to any process that does not match any <code>user</code> or <code>group</code> ACL entries (entry tag type ACL_OTHER).</dd></dl>
 <p> The second field contains the user or group identifier of the user or group associated with the ACL entry for entries of entry tag type ACL_USER or ACL_GROUP, and is empty for all other entries. A user identifier can be a user name or a user ID number in decimal form. A group identifier can be a group name or a group ID number in decimal form. </p>
 <p> The third field contains the discretionary access permissions. The read, write and search/execute permissions are represented by the <code>r</code> <code>w</code> and <code>x</code> characters, in this order. Each of these characters is replaced by the <code>&#8211;</code> character to denote that a permission is absent in the ACL entry. When converting from the text form to the internal representation, permissions that are absent need not be specified. </p>
 <p> White space is permitted at the beginning and end of each ACL entry, and immediately before and after a field separator (the colon character).</p>
@@ -119,16 +119,16 @@ g:toolies:rw,u:lisa:rw,u::wr,g::r,o::r,m::r</pre>
 <p><a rel="nofollow" href="http://wt.tuxomania.net/publications/posix.1e/download.html">http://wt.tuxomania.net/publications/posix.1e/download.html</a></p>
 <h3>POSIX 1003.1e FUNCTIONS BY CATEGORY</h3>
 <dl>
-<dt><code>ACL storage management</code></p>
-<dd>acl_dup3, acl_free3, acl_init3</p>
-<dt><code>ACL entry manipulation</code></p>
-<dd>acl_copy_entry3, acl_create_entry3, acl_delete_entry3, acl_get_entry3, acl_valid3 </p>
+<dt><code>ACL storage management</code></dt>
+<dd>acl_dup3, acl_free3, acl_init3</dd>
+<dt><code>ACL entry manipulation</code></dt>
+<dd>acl_copy_entry3, acl_create_entry3, acl_delete_entry3, acl_get_entry3, acl_valid3 </dd>
 <p> acl_add_perm3, acl_calc_mask3, acl_clear_perms3, acl_delete_perm3, acl_get_permset3, acl_set_permset3 </p>
 <p> acl_get_qualifier3, acl_get_tag_type3, acl_set_qualifier3, acl_set_tag_type3</p>
-<dt><code>ACL manipulation on an object</code></p>
-<dd>acl_delete_def_file3, acl_get_fd3, acl_get_file3, acl_set_fd3, acl_set_file3</p>
-<dt><code>ACL format translation</code></p>
-<dd>acl_copy_entry3, acl_copy_ext3, acl_from_text3, acl_to_text3, acl_size3</dl>
+<dt><code>ACL manipulation on an object</code></dt>
+<dd>acl_delete_def_file3, acl_get_fd3, acl_get_file3, acl_set_fd3, acl_set_file3</dd>
+<dt><code>ACL format translation</code></dt>
+<dd>acl_copy_entry3, acl_copy_ext3, acl_from_text3, acl_to_text3, acl_size3</dd></dl>
 <h3>POSIX 1003.1e FUNCTIONS BY AVAILABILITY</h3>
 <p>The first group of functions is supported on most systems with POSIX-like access control lists, while the second group is supported on fewer systems. For applications that will be ported the second group is best avoided. </p>
 <p> acl_delete_def_file3, acl_dup3, acl_free3, acl_from_text3, acl_get_fd3, acl_get_file3, acl_init3, acl_set_fd3, acl_set_file3, acl_to_text3, acl_valid3 </p>

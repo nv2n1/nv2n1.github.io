@@ -17,28 +17,28 @@ description: "minidlnad – MiniDLNA DLNA/UPnP-AV Server"
 <pre>But there may be times when you need to temporarily alter some of these options,
 you can do this by running minidlna with the following command line switches.</pre>
 <dl>
-<dt><code>-R</code> <i>Rescan</i></p>
-<dd>This forces minidlna to rescan all of the media_dir directories. </p>
-<dt><code>-f</code> <i>config_file</i></p>
-<dd>Run minidlna with a different configuration file than the global default. </p>
-<dt><code>-p</code> <i>port</i></p>
-<dd>Allows to run minidlna on a different port. </p>
-<dt><code>-w</code> <i>presentation_url</i></p>
-<dd>Change the default presentation url address. </p>
-<dt><code>-d</code> <i>debug</i></p>
-<dd>minidlna will run in the foreground with debug output. </p>
-<dt><code>-P</code> <i>pid_filename</i></p>
-<dd>Specify a location for the PID file. </p>
-<dt><code>-m</code> <i>model</i></p>
-<dd>Force minidlna to report a specific model number. </p>
-<dt><code>-s</code> <i>serial</i></p>
-<dd>Force minidlna to report a specific serial number. </p>
-<dt><code>-t</code> <i>notify_interval</i></p>
-<dd>Change the notify interval, in seconds. Defaults to 895 seconds. </p>
-<dt><code>-h</code> <i>help</i></p>
-<dd>Show basic switch options for running minidlna. </p>
-<dt><code>-V</code> <i>Version</i></p>
-<dd>Shows the program version number and exits. </p>
+<dt><code>-R</code> <i>Rescan</i></dt>
+<dd>This forces minidlna to rescan all of the media_dir directories. </dd>
+<dt><code>-f</code> <i>config_file</i></dt>
+<dd>Run minidlna with a different configuration file than the global default. </dd>
+<dt><code>-p</code> <i>port</i></dt>
+<dd>Allows to run minidlna on a different port. </dd>
+<dt><code>-w</code> <i>presentation_url</i></dt>
+<dd>Change the default presentation url address. </dd>
+<dt><code>-d</code> <i>debug</i></dt>
+<dd>minidlna will run in the foreground with debug output. </dd>
+<dt><code>-P</code> <i>pid_filename</i></dt>
+<dd>Specify a location for the PID file. </dd>
+<dt><code>-m</code> <i>model</i></dt>
+<dd>Force minidlna to report a specific model number. </dd>
+<dt><code>-s</code> <i>serial</i></dt>
+<dd>Force minidlna to report a specific serial number. </dd>
+<dt><code>-t</code> <i>notify_interval</i></dt>
+<dd>Change the notify interval, in seconds. Defaults to 895 seconds. </dd>
+<dt><code>-h</code> <i>help</i></dt>
+<dd>Show basic switch options for running minidlna. </dd>
+<dt><code>-V</code> <i>Version</i></dt>
+<dd>Shows the program version number and exits. </dd>
 </dl>
 <h2>Version</h2>
 <p>This man page corresponds to minidlna version 1.1.0</p>

@@ -11,7 +11,6 @@ std::time - std::time
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ctime&gt;
-
 std::time_t time( std::time_t* arg );</code></pre> 
 Returns the current calendar time encoded as a std::time_t object, and also stores it in the object pointed to by arg, unless arg is a null pointer. 
 
@@ -30,10 +29,8 @@ The encoding of calendar time in std::time_t is unspecified, but most systems co
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;ctime&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::time_t result = std::time(nullptr);
     std::cout &lt;&lt; std::asctime(std::localtime(&amp;result))

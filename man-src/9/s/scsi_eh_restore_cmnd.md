@@ -14,17 +14,17 @@ description: "scsi_eh_restore_cmnd – Restore a scsi command info as part of er
 <p><i>scmd</i></p>
 <dl>
 <dd>
-<dd>SCSI command structure to restore</dl>
+</dd><dd>SCSI command structure to restore</dd></dl>
 <p> <i>ses</i></p>
 <dl>
-<dd>saved information from a coresponding call to scsi_eh_prep_cmnd</dl>
+<dd>saved information from a coresponding call to scsi_eh_prep_cmnd</dd></dl>
 <h2>Description</h2>
 <p>Undo any damage done by above <code>scsi_eh_prep_cmnd</code>.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

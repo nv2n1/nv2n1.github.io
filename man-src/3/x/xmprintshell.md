@@ -109,45 +109,45 @@ description: "XmPrintShell — a shell widget class used for printing in Motif"
 </tr>
 </table>
 <dl COMPACT>
-<dt><i>XmNstartJobCallback</i></p>
-<dd>Specifies the callback driving the beginning of rendering. It is safe for an application to start rendering after this callback has been activated. <code>XpStartJob</code> must be called to trigger this callback.</p>
-<dt><i>XmNendJobCallback</i></p>
-<dd>Specifies the callback driving the end of rendering. Notify the client that all rendering has been processed (whether on print-to-file or regular spool). <code>XpEndJob</code> is called by the print shell to trigger this callback.</p>
-<dt><i>XmNpageSetupCallback</i></p>
-<dd>Specifies the callback driving the page layout. It is safe for an app to start rendering from this callback even if the <code>XmNstartJobCallback</code> is not used.</p>
-<dt><i>XmNminX, XmNminY, XmNmaxX, XmNmaxY</i></p>
-<dd>Specify the imageable area of the page in the current print context. <code>XmPrintShell</code> also maintains a proper size at all times by updating its own widget dimension whenever an attribute, such as resolution or orientation, changes. It is sized in its <code>Initialize</code> routine so that the application can rely on a proper size before the first <code>StartPage</code> call is issued.</p>
-<dt><i>XmNdefaultPixmapResolution</i></p>
-<dd>Indicates the resolution in dpi (dot per inch) of the image files read and converted by Motif for the widget descendants of this shell. It is used to determine a scaling ratio to be applied to pixmap created thru regular pixmap/icon conversion of the following Widget resources:</p>
+<dt><i>XmNstartJobCallback</i></dt>
+<dd>Specifies the callback driving the beginning of rendering. It is safe for an application to start rendering after this callback has been activated. <code>XpStartJob</code> must be called to trigger this callback.</dd>
+<dt><i>XmNendJobCallback</i></dt>
+<dd>Specifies the callback driving the end of rendering. Notify the client that all rendering has been processed (whether on print-to-file or regular spool). <code>XpEndJob</code> is called by the print shell to trigger this callback.</dd>
+<dt><i>XmNpageSetupCallback</i></dt>
+<dd>Specifies the callback driving the page layout. It is safe for an app to start rendering from this callback even if the <code>XmNstartJobCallback</code> is not used.</dd>
+<dt><i>XmNminX, XmNminY, XmNmaxX, XmNmaxY</i></dt>
+<dd>Specify the imageable area of the page in the current print context. <code>XmPrintShell</code> also maintains a proper size at all times by updating its own widget dimension whenever an attribute, such as resolution or orientation, changes. It is sized in its <code>Initialize</code> routine so that the application can rely on a proper size before the first <code>StartPage</code> call is issued.</dd>
+<dt><i>XmNdefaultPixmapResolution</i></dt>
+<dd>Indicates the resolution in dpi (dot per inch) of the image files read and converted by Motif for the widget descendants of this shell. It is used to determine a scaling ratio to be applied to pixmap created thru regular pixmap/icon conversion of the following Widget resources:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmLabel</code>.label*Pixmap, <code>XmIconG</code>.*IconPixmap <code>XmToggleB</code>.selectPixmap, <code>XmPushBG</code>.armPixmap, <code>XmIconG</code>.*IconMask, <code>XmMessageBox</code>.symbolPixmap, <code>XmContainer</code>.*StatePixmap, &#8230;</p>
-<dt> &bull;</p>
-<dd>Leaving out the pixmap resources being used for tiling (XmNhighlightPixmap, XmNtopShadowPixmap, XmNbottomShadowPixmap, XmNbackgroundPixmap, &#8230;)</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmLabel</code>.label*Pixmap, <code>XmIconG</code>.*IconPixmap <code>XmToggleB</code>.selectPixmap, <code>XmPushBG</code>.armPixmap, <code>XmIconG</code>.*IconMask, <code>XmMessageBox</code>.symbolPixmap, <code>XmContainer</code>.*StatePixmap, &#8230;</dd>
+<dt> &bull;</dt>
+<dd>Leaving out the pixmap resources being used for tiling (XmNhighlightPixmap, XmNtopShadowPixmap, XmNbottomShadowPixmap, XmNbackgroundPixmap, &#8230;)</dd></dl>
 </dl>
-<dt><i>XmNpdmNotificationCallback</i></p>
-<dd>A callback notifying the application about the status of the PDM (see XmPrintPopupPDM). A XmPrintShellCallbackStruct is used, with reason:</p>
+<dt><i>XmNpdmNotificationCallback</i></dt>
+<dd>A callback notifying the application about the status of the PDM (see XmPrintPopupPDM). A XmPrintShellCallbackStruct is used, with reason:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_NONE</code>: no PDM available on this display for the named selection (provided in detail)</p>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_START_VXAUTH</code> : the PDM is not authorized to connect to the video display.</p>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_START_PXAUTH</code> : the PDM is not authorized to connect to the print display.</p>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_UP</code> : the PDM is up and running</p>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_OK</code> : the PDM has exited with OK status</p>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_CANCEL</code> : the PDM has exited with CANCEL</p>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_START_ERROR</code> : the PDM cannot start due to some error (usually logged)</p>
-<dt> &bull;</p>
-<dd><code>XmCR_PDM_EXIT_ERROR</code> : the PDM has exited with an error</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_NONE</code>: no PDM available on this display for the named selection (provided in detail)</dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_START_VXAUTH</code> : the PDM is not authorized to connect to the video display.</dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_START_PXAUTH</code> : the PDM is not authorized to connect to the print display.</dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_UP</code> : the PDM is up and running</dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_OK</code> : the PDM has exited with OK status</dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_CANCEL</code> : the PDM has exited with CANCEL</dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_START_ERROR</code> : the PDM cannot start due to some error (usually logged)</dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_PDM_EXIT_ERROR</code> : the PDM has exited with an error</dd></dl>
 </dl>
 </dl>
 <h3>Callback Information</h3>
@@ -170,12 +170,12 @@ description: "XmPrintShell — a shell widget class used for printing in Motif"
 <h2>Errors/Warnings</h2>
 <p><code>XmPrintShell</code> can generate the following warnings:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd><code>Not connected to a valid X Print Server: behavior undefined.</code></p>
-<dt> &bull;</p>
-<dd><code>Attempt to set an invalid resolution on a printer: %s</code></p>
-<dt> &bull;</p>
-<dd><code>Attempt to set an invalid orientation on a printer: %s</code></dl>
+<dt> &bull;</dt>
+<dd><code>Not connected to a valid X Print Server: behavior undefined.</code></dd>
+<dt> &bull;</dt>
+<dd><code>Attempt to set an invalid resolution on a printer: %s</code></dd>
+<dt> &bull;</dt>
+<dd><code>Attempt to set an invalid orientation on a printer: %s</code></dd></dl>
 <h2>Return Value</h2>
 <p>Not applicable</p>
 <h2>Examples</h2>
@@ -211,16 +211,16 @@ PrintOKCallback(...)
 }</tt></pre>
 <p>Examples of <code>XmNdefaultPixmapResolution</code> usage:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>An application reuses the same image sources it uses for the video interface, in XBM, XPM, PNG ot JPEG, to layout on its printed pages. In this case, scaling is seamless.</dl>
+<dt> &bull;</dt>
+<dd>An application reuses the same image sources it uses for the video interface, in XBM, XPM, PNG ot JPEG, to layout on its printed pages. In this case, scaling is seamless.</dd></dl>
 <pre><tt> ! icon.xpm is 30x30 pixels
  app*dialog.pushb.labelPixmap:icon.xpm
  ! print is 400dpi
  app.print*form.lab.labelPixmap:icon.xpm
  ! 120x120 pixels on the paper (auto scaling)</tt></pre>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>An application provides a new set of image files, for a given printer resolution (say 300). It doesn&#8217;t want automatic scaling by the toolkit for that resolution, it wants scaling based on these 300dpi images for higher resolution. It creates its print shell inside using the name &quot;printHiRes&quot; and adds the following in its resource file:</dl>
+<dt> &bull;</dt>
+<dd>An application provides a new set of image files, for a given printer resolution (say 300). It doesn&#8217;t want automatic scaling by the toolkit for that resolution, it wants scaling based on these 300dpi images for higher resolution. It creates its print shell inside using the name &quot;printHiRes&quot; and adds the following in its resource file:</dd></dl>
 <pre><tt> app.printHiRes.defaultPixmapResolution:300
  ! icon300.xpm is 120x120 pixels
  app.printHiRes*form.lab.labelPixmap:icon300.xpm

@@ -76,11 +76,11 @@ url: "/docs/linux/man/1-rrdtutorial/"
  Most discussions about networking talk about bits per second so lets get used to that right away. Assume a byte is eight bits and start to think in bits not bytes. The counter, however, still counts bytes! In the <font SIZE="-1">SNMP</font> world most of the counters are 32 bits. That means they are counting from 0 to 4294967295. We will use these values in the examples. The device, when asked, returns the current value of the counter. We know the time that has passes since we last asked so we now know how many bytes have been transferred ***on average*** per second. This is not very hard to calculate. First in words, then in calculations:
 <dl>
 <dt>1.
-<dd> Take the current counter, subtract the previous value from it.
-<dt>2.
-<dd> Do the same with the current time and the previous time (in seconds).
-<dt>3.
-<dd> Divide the outcome of (1) by the outcome of (2), the result is the amount of bytes per second. Multiply by eight to get the number of bits per second (bps).</dl>
+</dt><dd> Take the current counter, subtract the previous value from it.
+</dd><dt>2.
+</dt><dd> Do the same with the current time and the previous time (in seconds).
+</dd><dt>3.
+</dt><dd> Divide the outcome of (1) by the outcome of (2), the result is the amount of bytes per second. Multiply by eight to get the number of bits per second (bps).</dd></dl>
  
 
  <pre>
@@ -614,13 +614,13 @@ snmpget - v[version] - c[password] device OID
 
 <dl>
 <dt>&bull;
-<dd> Line A is a <font SIZE="-1">COUNTER</font> type, so it should continuously increment and RRDtool must calculate the differences. Also, RRDtool needs to divide the difference by the amount of time lapsed. This should end up as a straight line at 1 (the deltas are 300, the time is 300).
-<dt>&bull;
-<dd> Line B is of type <font SIZE="-1">GAUGE</font>. These are ``real'' values so they should match what we put in: a sort of a wave.
-<dt>&bull;
-<dd> Line C is of type <font SIZE="-1">DERIVE</font>. It should be a counter that can decrease. It does so between 2400 and 0, with 1800 in-between.
-<dt>&bull;
-<dd> Line D is of type <font SIZE="-1">ABSOLUTE</font>. This is like counter but it works on values without calculating the difference. The numbers are the same and as you can see (hopefully) this has a different result.</dl>
+</dt><dd> Line A is a <font SIZE="-1">COUNTER</font> type, so it should continuously increment and RRDtool must calculate the differences. Also, RRDtool needs to divide the difference by the amount of time lapsed. This should end up as a straight line at 1 (the deltas are 300, the time is 300).
+</dd><dt>&bull;
+</dt><dd> Line B is of type <font SIZE="-1">GAUGE</font>. These are ``real'' values so they should match what we put in: a sort of a wave.
+</dd><dt>&bull;
+</dt><dd> Line C is of type <font SIZE="-1">DERIVE</font>. It should be a counter that can decrease. It does so between 2400 and 0, with 1800 in-between.
+</dd><dt>&bull;
+</dt><dd> Line D is of type <font SIZE="-1">ABSOLUTE</font>. This is like counter but it works on values without calculating the difference. The numbers are the same and as you can see (hopefully) this has a different result.</dd></dl>
  
 
  This translates in the following values, starting at 23:10 and ending at 00:10 the next day (where ``u'' means unknown/unplotted): 
@@ -639,15 +639,14 @@ snmpget - v[version] - c[password] device OID
  Let's go over the data again:
 <dl>
 <dt>&bull;
-<dd> Line A: 300,600,900 and so on. The counter delta is a constant 300 and so is the time delta. A number divided by itself is always 1 (except when dividing by zero which is undefined/illegal). 
-
+</dt><dd> Line A: 300,600,900 and so on. The counter delta is a constant 300 and so is the time delta. A number divided by itself is always 1 (except when dividing by zero which is undefined/illegal). 
  Why is it that the first point is unknown? We do know what we put into the database, right? True, But we didn't have a value to calculate the delta from, so we don't know where we started. It would be wrong to assume we started at zero so we don't!
-<dt>&bull;
-<dd> Line B: There is nothing to calculate. The numbers are as they are.
-<dt>&bull;
-<dd> Line C: Again, the start-out value is unknown. The same story is holds as for line A. In this case the deltas are not constant, therefore the line is not either. If we would put the same numbers in the database as we did for line A, we would have gotten the same line. Unlike type counter, this type can decrease and I hope to show you later on why this makes a difference.
-<dt>&bull;
-<dd> Line D: Here the device calculates the deltas. Therefore we <font SIZE="-1">DO</font> know the first delta and it is plotted. We had the same input as with line A, but the meaning of this input is different and thus the line is different. In this case the deltas increase each time with 300. The time delta stays at a constant 300 and therefore the division of the two gives increasing values.</dl>
+</dd><dt>&bull;
+</dt><dd> Line B: There is nothing to calculate. The numbers are as they are.
+</dd><dt>&bull;
+</dt><dd> Line C: Again, the start-out value is unknown. The same story is holds as for line A. In this case the deltas are not constant, therefore the line is not either. If we would put the same numbers in the database as we did for line A, we would have gotten the same line. Unlike type counter, this type can decrease and I hope to show you later on why this makes a difference.
+</dd><dt>&bull;
+</dt><dd> Line D: Here the device calculates the deltas. Therefore we <font SIZE="-1">DO</font> know the first delta and it is plotted. We had the same input as with line A, but the meaning of this input is different and thus the line is different. In this case the deltas increase each time with 300. The time delta stays at a constant 300 and therefore the division of the two gives increasing values.</dd></dl>
 
 <h3>Counter Wraps</h3>
 
@@ -797,10 +796,10 @@ rrdtool graph seconds1.png-- start 920804700 --end 920806200 --height 200 --uppe
 
 
 <dt><a HREF="#lbAY">WRAPUP</a>
-<dd>
-<dt><a HREF="#lbAZ">MAILINGLIST</a>
-<dd>
-<dt><a HREF="#lbBA">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbBB">AUTHOR</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAZ">MAILINGLIST</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBA">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBB">AUTHOR</a>
+</dt><dd></dd></dl>

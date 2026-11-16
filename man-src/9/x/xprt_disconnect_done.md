@@ -15,7 +15,7 @@ xprt_disconnect_done - mark a transport as disconnected
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>transport to flag for disconnect</dl>
+<dl><dd></dd><dd>transport to flag for disconnect</dd></dl>
 
 <h2>Copyright</h2>
 

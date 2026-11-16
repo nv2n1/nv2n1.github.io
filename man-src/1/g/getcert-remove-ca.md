@@ -15,10 +15,10 @@ description: "getcert"
 <p> Remove a CA configuration from <i>certmonger</i>. Enrollment requests which reference the CA will behave as though they have no assigned CA. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> NAME</p>
-<dd> The nickname of the CA configuration to remove.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </p>
+<dt><code>-c</code> NAME</dt>
+<dd> The nickname of the CA configuration to remove.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

@@ -16,8 +16,8 @@ description: "ldns_is_rrset"
 <p> bool ldns_is_rrset(ldns_rr_list *rr_list); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_is_rrset</i>()</p>
-<dd>checks if an rr_list is a rrset. .br <code>rr_list</code>: the rr_list to check .br Returns true if it is an rrset otherwise false</dl>
+<dt> <i>ldns_is_rrset</i>()</dt>
+<dd>checks if an rr_list is a rrset. .br <code>rr_list</code>: the rr_list to check .br Returns true if it is an rrset otherwise false</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

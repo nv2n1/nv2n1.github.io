@@ -14,37 +14,37 @@ description: "ps2raster – Converts one or several PostScript file(s) to other 
 <h2>DESCRIPTION</h2>
 <p> <code>ps2raster</code> converts one or more <i>PostScript</i> files to other formats (BMP, EPS, JPEG, PDF, PNG, PPM, TIFF) using GhostScript. Input file names are read from the command line or from a file that lists them. The size of the resulting images is determined by the BoundingBox (or HiResBoundingBox, if present). As an option, a tight (HiRes)BoundingBox may be computed first. As another option, it can compute ESRI type world files used to reference, for instance, tif files and make them be recognized as geotiff.</p>
 <dl>
-<dt><i>psfiles</i></p>
-<dd> Names of <i>PostScript</i> files to be converted. The output files will have the same name (unless <code>-F</code> is used) but with the conventional extension name associated to the raster format (e.g. .jpg for the jpeg format). Use <code>-D</code> to redirect the output to a different directory.</dl>
+<dt><i>psfiles</i></dt>
+<dd> Names of <i>PostScript</i> files to be converted. The output files will have the same name (unless <code>-F</code> is used) but with the conventional extension name associated to the raster format (e.g. .jpg for the jpeg format). Use <code>-D</code> to redirect the output to a different directory.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code></p>
-<dd> Adjust the BoundingBox and HiResBoundingBox to the minimum required by the image content. Append <code>u</code> to first remove any GMT-produced time-stamps. Use <code>-A-</code> to override any automatic setting of <code>-A</code> by <code>-W</code>.</p>
-<dt><code>-C</code></p>
-<dd> Specify a single, custom option that will be passed on to GhostScript as is. Repeat to add several options [none].</p>
-<dt><code>-D</code></p>
-<dd> Sets an alternative output directory (which must exist) [Default is the same directory as the PS files]. Use <code>-D.</code> to place the output in the current directory instead.</p>
-<dt><code>-E</code></p>
-<dd> Set raster resolution in dpi [default = 720 for PDF, 300 for others].</p>
-<dt><code>-F</code></p>
-<dd> Force the output file name. By default output names are constructed using the input names as base, which are appended with an appropriate extension. Use this option to provide a different name, but without extension. Extension is still determined automatically.</p>
-<dt><code>-G</code></p>
-<dd> Full path to your GhostScript executable. NOTE: For Unix systems this is generally not necessary. However, under Windows, GhostScript is not added to the system&#8217;s path. So either you do it yourself,or give the full path here. (e.g., <code>-G</code>c:\programs\gs\gs7.05in\gswin32c).</p>
-<dt><code>-L</code></p>
-<dd> The <i>listfile</i> is an ASCII file with the names of the <i>PostScript</i> files to be converted.</p>
-<dt><code>-N</code></p>
-<dd> This option is obsolete. Use <code>-S</code> to print the GhostScript command, if applicable. Use <code>-Te</code> to save the intermediate EPS file.</p>
-<dt><code>-P</code></p>
-<dd> Force Portrait mode. All Landscape mode plots will be rotated back so that they show unrotated in Portrait mode. This is practical when converting to image formats or preparing EPS or PDF plots for inclusion in documents.</p>
-<dt><code>-Q</code></p>
-<dd> Set the anti-aliasing options for <code>g</code>raphics or <code>t</code>ext. Append the size of the subsample box (1, 2, or 4) [4]. Default is no anti-aliasing (same as <i>bits</i> = 1).</p>
-<dt><code>-S</code></p>
-<dd> Print to standard output the GhostScript command after it has been executed.</p>
-<dt><code>-T</code></p>
-<dd> Sets the output format, where <code>b</code> means BMP, <code>e</code> means EPS, <code>f</code> means PDF, <code>j</code> means JPEG, <code>g</code> means PNG, <code>G</code> means transparent PNG (untouched regions are transparent), <code>m</code> means PPM, and <code>t</code> means TIFF [default is JPEG]. For <code>bjgt</code> you can append &#8211; to get a grayscale image only. The EPS format can be combined with any of the other formats. For example, <code>-Tef</code> creates both an EPS and a PDF file.</p>
-<dt><code>-V</code></p>
-<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</p>
-<dt><code>-W</code></p>
+<dt><code>-A</code></dt>
+<dd> Adjust the BoundingBox and HiResBoundingBox to the minimum required by the image content. Append <code>u</code> to first remove any GMT-produced time-stamps. Use <code>-A-</code> to override any automatic setting of <code>-A</code> by <code>-W</code>.</dd>
+<dt><code>-C</code></dt>
+<dd> Specify a single, custom option that will be passed on to GhostScript as is. Repeat to add several options [none].</dd>
+<dt><code>-D</code></dt>
+<dd> Sets an alternative output directory (which must exist) [Default is the same directory as the PS files]. Use <code>-D.</code> to place the output in the current directory instead.</dd>
+<dt><code>-E</code></dt>
+<dd> Set raster resolution in dpi [default = 720 for PDF, 300 for others].</dd>
+<dt><code>-F</code></dt>
+<dd> Force the output file name. By default output names are constructed using the input names as base, which are appended with an appropriate extension. Use this option to provide a different name, but without extension. Extension is still determined automatically.</dd>
+<dt><code>-G</code></dt>
+<dd> Full path to your GhostScript executable. NOTE: For Unix systems this is generally not necessary. However, under Windows, GhostScript is not added to the system&#8217;s path. So either you do it yourself,or give the full path here. (e.g., <code>-G</code>c:\programs\gs\gs7.05in\gswin32c).</dd>
+<dt><code>-L</code></dt>
+<dd> The <i>listfile</i> is an ASCII file with the names of the <i>PostScript</i> files to be converted.</dd>
+<dt><code>-N</code></dt>
+<dd> This option is obsolete. Use <code>-S</code> to print the GhostScript command, if applicable. Use <code>-Te</code> to save the intermediate EPS file.</dd>
+<dt><code>-P</code></dt>
+<dd> Force Portrait mode. All Landscape mode plots will be rotated back so that they show unrotated in Portrait mode. This is practical when converting to image formats or preparing EPS or PDF plots for inclusion in documents.</dd>
+<dt><code>-Q</code></dt>
+<dd> Set the anti-aliasing options for <code>g</code>raphics or <code>t</code>ext. Append the size of the subsample box (1, 2, or 4) [4]. Default is no anti-aliasing (same as <i>bits</i> = 1).</dd>
+<dt><code>-S</code></dt>
+<dd> Print to standard output the GhostScript command after it has been executed.</dd>
+<dt><code>-T</code></dt>
+<dd> Sets the output format, where <code>b</code> means BMP, <code>e</code> means EPS, <code>f</code> means PDF, <code>j</code> means JPEG, <code>g</code> means PNG, <code>G</code> means transparent PNG (untouched regions are transparent), <code>m</code> means PPM, and <code>t</code> means TIFF [default is JPEG]. For <code>bjgt</code> you can append &#8211; to get a grayscale image only. The EPS format can be combined with any of the other formats. For example, <code>-Tef</code> creates both an EPS and a PDF file.</dd>
+<dt><code>-V</code></dt>
+<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</dd>
+<dt><code>-W</code></dt>
 <dd> Write a ESRI type world file suitable to make (e.g) .tif files be recognized as geotiff by softwares that know how to do it. Be aware, however, that different results are obtained depending on the image contents and if the <code>-B</code> option has been used or not. The trouble with the <code>-B</code> option is that it creates a frame and very likely its annotations. That introduces pixels outside the map data extent, and therefore the map extents estimation will be wrong. To avoid this problem use &#8211;BASEMAP_TYPE=inside option which plots all annotations and ticks inside the image and therefore does not compromise the coordinate computations. Pay attention also to the cases when the plot has any of the sides with whites only because than the algorithm will fail miserably as those whites will be eaten by the GhostScript. In that case you really must use <code>-B</code> or use a slightly off-white color.<br />
  Together with <code>-V</code> it prints on screen the gdal_translate (gdal_translate is a command line tool from the GDAL package) command that reads the raster + world file and creates a true geotiff file. Use <code>-W+g</code> to do a system call to gdal_translate and create a geoTIFF image right away. The output file will have a .tiff extension.<br />
  The world file naming follows the convention of jamming a &#8216;w&#8217; in the file extension. So, if output is tif <code>-Tt</code> the world file is a .tfw, for jpeg we have a .jgw and so on. This option automatically sets <code>-A</code> <code>-P</code>.<br />
@@ -53,7 +53,7 @@ description: "ps2raster – Converts one or several PostScript file(s) to other 
  For example the command <code>pscoast</code> <code>-JM0/12c</code> <code>-R</code>-10/-4/37/43 <code>-W1</code> <code>-Di</code> <code>-Bg30m</code> &#8211;BASEMAP_TYPE=inside &gt; cara.ps<br />
  adds this comment line<br />
  %%PROJ: merc -10.0 -4.0 37.0 43.0 -1113194.908 -445277.963 4413389.889 5282821.824 +proj=merc +lon_0=0 +k=-1 +x_0=0 +y_0=0 +a=6378137.0 +b=6356752.314245<br />
- where &#8216;merc&#8217; is the keyword for the coordinate conversion; the 2 to 5th elements contain the map limits, 6 to 9th the map limits in projected coordinates and the rest of the line has the regular proj4 string for this projection.</dl>
+ where &#8216;merc&#8217; is the keyword for the coordinate conversion; the 2 to 5th elements contain the map limits, 6 to 9th the map limits in projected coordinates and the rest of the line has the regular proj4 string for this projection.</dd></dl>
 <h2>NOTES</h2>
 <p> The conversion to raster images (BMP, JPEG, PNG, PPM or TIFF) inherently results in loss of details that are available in the original <i>PostScript</i> file. Choose a resolution that is large enough for the application that the image will be used for. For web pages, smaller dpi values suffice, for Word documents and PowerPoint presentations a higher dpi value is recommended. <code>ps2raster</code> uses the loss-less Flate compression technique when creating JPEG, PNG and TIFF images. </p>
 <p> EPS is a vector, not a raster format. Therefore, the <code>-E</code> option has no effect on the creation of EPS files. Using the option <code>-Te</code> will remove PageSize commands from the <i>PostScript</i> file and will adjust the BoundingBox when the <code>-A</code> option is used. Note the original and required BoundingBox is limited to integer points, hence Adobe added the optional HiResBoundingBox to add more precision in sizing. The <code>-A</code> option calculates both and writes both to the EPS file used in the rasterization (and output if <code>-Te</code> is set). </p>

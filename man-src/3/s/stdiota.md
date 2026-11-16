@@ -11,10 +11,8 @@ std::iota - std::iota
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;numeric&gt;
-
     template &lt;class ForwardIt, class T&gt;
     (since C++ 11)
-
         void iota(ForwardIt first, ForwardIt last, T value);</code></pre> 
 Fills the range [first, last) with sequentially increasing values, starting with value and repetitively evaluating ++value. 
 Equivalent operation: *(d_first)   = value;
@@ -61,18 +59,12 @@ The function is named after the integer function ⍳ from the programming langua
 
 The following example applies std::shuffle to a vector of std::list iterators since std::shuffle cannot be applied to a std::list directly. std::iota is used to populate both containers. 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;list&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;random&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::list&lt;int&gt; l(10);
     std::iota(l.begin(), l.end(), -4);

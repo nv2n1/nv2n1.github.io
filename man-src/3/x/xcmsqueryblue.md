@@ -10,19 +10,19 @@ description: "XcmsQueryBlack, XcmsQueryBlue, XcmsQueryGreen, XcmsQueryRed, XcmsQ
 <p>XcmsQueryBlack, XcmsQueryBlue, XcmsQueryGreen, XcmsQueryRed, XcmsQueryWhite &#8211; obtain black, blue, green, red, and white CCC color specifications </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XcmsQueryBlack(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</p>
-<dd>Status XcmsQueryBlue(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</p>
-<dd>Status XcmsQueryGreen(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</p>
-<dd>Status XcmsQueryRed(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</p>
-<dd>Status XcmsQueryWhite(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dl>
+<dd>Status XcmsQueryBlack(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryBlue(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryGreen(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryRed(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryWhite(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>ccc</i></p>
-<dd>Specifies the CCC. Note that the CCC&#8217;s Client White Point and White Point Adjustment procedures are ignored.</p>
-<dt><i>color_return</i></p>
-<dd>Returns the color specification in the specified target format. The white point associated with the returned color specification is the Screen White Point. The value returned in the pixel member is undefined.</p>
-<dt><i>target_format</i></p>
-<dd>Specifies the target color specification format.</dl>
+<dt><i>ccc</i></dt>
+<dd>Specifies the CCC. Note that the CCC&#8217;s Client White Point and White Point Adjustment procedures are ignored.</dd>
+<dt><i>color_return</i></dt>
+<dd>Returns the color specification in the specified target format. The white point associated with the returned color specification is the Screen White Point. The value returned in the pixel member is undefined.</dd>
+<dt><i>target_format</i></dt>
+<dd>Specifies the target color specification format.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XcmsQueryBlack</code> function returns the color specification in the specified target format for zero-intensity red, green, and blue. </p>
 <p> The <code>XcmsQueryBlue</code> function returns the color specification in the specified target format for full-intensity blue while red and green are zero. </p>

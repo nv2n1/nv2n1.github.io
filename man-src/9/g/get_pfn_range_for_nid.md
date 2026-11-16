@@ -14,13 +14,13 @@ description: "get_pfn_range_for_nid – Return the start and end page frames for
 <p><i>nid</i></p>
 <dl>
 <dd>
-<dd>The nid to return the range for. If MAX_NUMNODES, the min and max PFN are returned.</dl>
+</dd><dd>The nid to return the range for. If MAX_NUMNODES, the min and max PFN are returned.</dd></dl>
 <p> <i>start_pfn</i></p>
 <dl>
-<dd>Passed by reference. On return, it will have the node start_pfn.</dl>
+<dd>Passed by reference. On return, it will have the node start_pfn.</dd></dl>
 <p> <i>end_pfn</i></p>
 <dl>
-<dd>Passed by reference. On return, it will have the node end_pfn.</dl>
+<dd>Passed by reference. On return, it will have the node end_pfn.</dd></dl>
 <h2>Description</h2>
 <p>It returns the start and end page frame of a node based on information provided by <code>memblock_set_node</code>. If called for a node with no available memory, a warning is printed and the start and end PFNs will be 0.</p>
 <h2>Copyright</h2>

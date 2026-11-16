@@ -16,7 +16,7 @@ Tk_ItemType *
 <h2>Arguments</h2>
 <dl COMPACT>
 <dd>Tk_ItemType <i>*typePtr</i> (in) Structure that defines the new type of canvas item.
-</dl>
+</dd></dl>
 <h2>Introduction</h2>
 <p><code>Tk_CreateItemType</code> is invoked to define a new kind of canvas item described by the <i>typePtr</i> argument. An item type corresponds to a particular value of the <i>type</i> argument to the <code>create</code> widget command for canvases, and the code that implements a canvas item type is called a <i>type manager</i>. Tk defines several built-in item types, such as <code>rectangle</code> and <code>text</code> and <code>image</code>, but <code>Tk_CreateItemType</code> allows additional item types to be defined. Once <code>Tk_CreateItemType</code> returns, the new item type may be used in new or existing canvas widgets just like the built-in item types. </p>
 <p> <code>Tk_GetItemTypes</code> returns a pointer to the first in the list of all item types currently defined for canvases. The entries in the list are linked together through their <i>nextPtr</i> fields, with the end of the list marked by a NULL <i>nextPtr</i>. </p>
@@ -48,7 +48,7 @@ Tk_ItemType *
  Tk_ItemDCharsProc *<i>dCharsProc</i>;
  Tk_ItemType *<i>nextPtr</i>;
 } Tk_ItemType;</pre>
-</dl>
+</dd></dl>
 <p> The fields of a Tk_ItemType structure are described in more detail later in this manual entry. When <code>Tk_CreateItemType</code> is called, its <i>typePtr</i> argument must point to a structure with all of the fields initialized except <i>nextPtr</i>, which Tk sets to link all the types together into a list. The structure must be in permanent memory (either statically allocated or dynamically allocated but never freed); Tk retains a pointer to this structure. </p>
 <p> The second data structure manipulated by a type manager is an <i>item record</i>. For each item in a canvas there exists one item record. All of the items of a given type generally have item records with the same structure, but different types usually have different formats for their item records. The first part of each item record is a header with a standard structure defined by Tk via the type Tk_Item; the rest of the item record is defined by the type manager. A type manager must define its item records with a Tk_Item as the first field. For example, the item record for bitmap items is defined as follows:</p>
 <dl COMPACT>
@@ -62,7 +62,7 @@ Tk_ItemType *
  XColor *<i>bgColor</i>;
  GC <i>gc</i>;
 } BitmapItem;</pre>
-</dl>
+</dd></dl>
 <p> The <i>header</i> substructure contains information used by Tk to manage the item, such as its identifier, its tags, its type, and its bounding box. The fields starting with <i>x</i> belong to the type manager: Tk will never read or write them. The type manager should not need to read or write any of the fields in the header except for four fields whose names are <i>x1</i>, <i>y1</i>, <i>x2</i>, and <i>y2</i>. These fields give a bounding box for the items using integer canvas coordinates: the item should not cover any pixels with x-coordinate lower than <i>x1</i> or y-coordinate lower than <i>y1</i>, nor should it cover any pixels with x-coordinate greater than or equal to <i>x2</i> or y-coordinate greater than or equal to <i>y2</i>. It is up to the type manager to keep the bounding box up to date as the item is moved and reconfigured. </p>
 <p> Whenever Tk calls a procedure in a type manager it passes in a pointer to an item record. The argument is always passed as a pointer to a Tk_Item; the type manager will typically cast this into a pointer to its own specific type, such as BitmapItem. </p>
 <p> The third data structure used by type managers has type Tk_Canvas; it serves as an opaque handle for the canvas widget as a whole. Type managers need not know anything about the contents of this structure. A Tk_Canvas handle is typically passed in to the procedures of a type manager, and the type manager can pass the handle back to library procedures such as Tk_CanvasTkwin to fetch information about the canvas.</p>
@@ -80,12 +80,12 @@ Tk_ItemType *
  Tk_Item *<i>itemPtr</i>,
  int <i>objc</i>,
  Tcl_Obj* const <i>objv</i>[]);</pre>
-</dl>
+</dd></dl>
 <p> The <i>interp</i> argument is the interpreter in which the canvas&#8217;s <code>create</code> widget command was invoked, and <i>canvas</i> is a handle for the canvas widget. <i>itemPtr</i> is a pointer to a newly-allocated item of size <i>typePtr-&gt;itemSize</i>. Tk has already initialized the item&#8217;s header (the first <code>sizeof(Tk_ItemType)</code> bytes). The <i>objc</i> and <i>objv</i> arguments describe all of the arguments to the <code>create</code> command after the <i>type</i> argument. For example, in the widget command</p>
 <dl COMPACT>
 <dd>
 <pre><code>.c create rectangle 10 20 50 50 -fill black</code></pre>
-</dl>
+</dd></dl>
 <p> <i>objc</i> will be <code>6</code> and <i>objv</i>[0] will contain the integer object <code>10</code>. </p>
 <p> <i>createProc</i> should use <i>objc</i> and <i>objv</i> to initialize the type-specific parts of the item record and set an initial value for the bounding box in the item&#8217;s header. It should return a standard Tcl completion code and leave an error message in <i>interp-&gt;result</i> if an error occurs. If an error occurs Tk will free the item record, so <i>createProc</i> must be sure to leave the item record in a clean state if it returns an error (e.g., it must free any additional memory that it allocated for the item).</p>
 <h3>Configspecs</h3>
@@ -101,12 +101,12 @@ Tk_ItemType *
  int <i>objc</i>,
  Tcl_Obj* const <i>objv</i>[],
  int <i>flags</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>interp</i> objument identifies the interpreter in which the widget command was invoked, <i>canvas</i> is a handle for the canvas widget, and <i>itemPtr</i> is a pointer to the item being configured. <i>objc</i> and <i>objv</i> contain the configuration options. For example, if the following command is invoked:</p>
 <dl COMPACT>
 <dd>
 <pre><code>.c itemconfigure 2 -fill red -outline black</code></pre>
-</dl>
+</dd></dl>
 <p> <i>objc</i> is <code>4</code> and <i>objv</i> contains the string objects <code>-fill</code> through <code>black</code>. <i>objc</i> will always be an even value. The <i>flags</i> argument contains flags to pass to <code>Tk_ConfigureWidget</code>; currently this value is always <code>TK_CONFIG_ARGV_ONLY</code> when Tk invokes <i>typePtr-&gt;configProc</i>, but the type manager&#8217;s <i>createProc</i> procedure will usually invoke <i>configProc</i> with different flag values. </p>
 <p> <i>typePtr-&gt;configProc</i> returns a standard Tcl completion code and leaves an error message in <i>interp-&gt;result</i> if an error occurs. It must update the item&#8217;s bounding box to reflect the new configuration options.</p>
 <h3>Coordproc</h3>
@@ -119,12 +119,12 @@ Tk_ItemType *
  Tk_Item *<i>itemPtr</i>,
  int <i>objc</i>,
  Tcl_Obj* const <i>objv</i>[]);</pre>
-</dl>
+</dd></dl>
 <p> The arguments <i>interp</i>, <i>canvas</i>, and <i>itemPtr</i> all have the standard meanings, and <i>objc</i> and <i>objv</i> describe the coordinate arguments. For example, if the following widget command is invoked:</p>
 <dl COMPACT>
 <dd>
 <pre><code>.c coords 2 30 90</code></pre>
-</dl>
+</dd></dl>
 <p> <i>objc</i> will be <code>2</code> and <code>objv</code> will contain the integer objects <code>30</code> and <code>90</code>. </p>
 <p> The <i>coordProc</i> procedure should process the new coordinates, update the item appropriately (e.g., it must reset the bounding box in the item&#8217;s header), and return a standard Tcl completion code. If an error occurs, <i>coordProc</i> must leave an error message in <i>interp-&gt;result</i>.</p>
 <h3>Deleteproc</h3>
@@ -135,7 +135,7 @@ Tk_ItemType *
  Tk_Canvas <i>canvas</i>,
  Tk_Item *<i>itemPtr</i>,
  Display *<i>display</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>canvas</i> and <i>itemPtr</i> arguments have the usual interpretations, and <i>display</i> identifies the X display containing the canvas. <i>deleteProc</i> must free up any resources allocated for the item, so that Tk can free the item record. <i>deleteProc</i> should not actually free the item record; this will be done by Tk when <i>deleteProc</i> returns.</p>
 <h3>Displayproc And Alwaysredraw</h3>
 <p><i>typePtr-&gt;displayProc</i> is invoked by Tk to redraw an item on the screen. It must match the following prototype:</p>
@@ -150,7 +150,7 @@ Tk_ItemType *
  int <i>y</i>,
  int <i>width</i>,
  int <i>height</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>canvas</i> and <i>itemPtr</i> arguments have the usual meaning. <i>display</i> identifies the display containing the canvas, and <i>dst</i> specifies a drawable in which the item should be rendered; typically this is an off-screen pixmap, which Tk will copy into the canvas&#8217;s window once all relevant items have been drawn. <i>x</i>, <i>y</i>, <i>width</i>, and <i>height</i> specify a rectangular region in canvas coordinates, which is the area to be redrawn; only information that overlaps this area needs to be redrawn. Tk will not call <i>displayProc</i> unless the item&#8217;s bounding box overlaps the redraw area, but the type manager may wish to use the redraw area to optimize the redisplay of the item. </p>
 <p> Because of scrolling and the use of off-screen pixmaps for double-buffered redisplay, the item&#8217;s coordinates in <i>dst</i> will not necessarily be the same as those in the canvas. <i>displayProc</i> should call <code>Tk_CanvasDrawableCoords</code> to transform coordinates from those of the canvas to those of <i>dst</i>. </p>
 <p> Normally an item&#8217;s <i>displayProc</i> is only invoked if the item overlaps the area being displayed. However, if <i>typePtr-&gt;alwaysRedraw</i> has a non-zero value, then <i>displayProc</i> is invoked during every redisplay operation, even if the item does not overlap the area of redisplay. <i>alwaysRedraw</i> should normally be set to 0; it is only set to 1 in special cases such as window items that need to be unmapped when they are off-screen.</p>
@@ -162,7 +162,7 @@ Tk_ItemType *
  Tk_Canvas <i>canvas</i>,
  Tk_Item *<i>itemPtr</i>,
  double *<i>pointPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>canvas</i> and <i>itemPtr</i> have the usual meaning. <i>pointPtr</i> points to an array of two numbers giving the x and y coordinates of a point. <i>pointProc</i> must return a real value giving the distance from the point to the item, or 0 if the point lies inside the item.</p>
 <h3>Areaproc</h3>
 <p><i>typePtr-&gt;areaProc</i> is invoked by Tk to find out the relationship between an item and a rectangular area. It must match the following prototype:</p>
@@ -172,7 +172,7 @@ Tk_ItemType *
  Tk_Canvas <i>canvas</i>,
  Tk_Item *<i>itemPtr</i>,
  double *<i>rectPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>canvas</i> and <i>itemPtr</i> have the usual meaning. <i>rectPtr</i> points to an array of four real numbers; the first two give the x and y coordinates of the upper left corner of a rectangle, and the second two give the x and y coordinates of the lower right corner. <i>areaProc</i> must return -1 if the item lies entirely outside the given area, 0 if it lies partially inside and partially outside the area, and 1 if it lies entirely inside the area.</p>
 <h3>Postscriptproc</h3>
 <p><i>typePtr-&gt;postscriptProc</i> is invoked by Tk to generate Postscript for an item during the <code>postscript</code> widget command. If the type manager is not capable of generating Postscript then <i>typePtr-&gt;postscriptProc</i> should be NULL. The procedure must match the following prototype:</p>
@@ -183,7 +183,7 @@ Tk_ItemType *
  Tk_Canvas <i>canvas</i>,
  Tk_Item *<i>itemPtr</i>,
  int <i>prepass</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>interp</i>, <i>canvas</i>, and <i>itemPtr</i> arguments all have standard meanings; <i>prepass</i> will be described below. If <i>postscriptProc</i> completes successfully, it should append Postscript for the item to the information in <i>interp-&gt;result</i> (e.g. by calling <code>Tcl_AppendResult</code>, not <code>Tcl_SetResult</code>) and return <code>TCL_OK</code>. If an error occurs, <i>postscriptProc</i> should clear the result and replace its contents with an error message; then it should return <code>TCL_ERROR</code>. </p>
 <p> Tk provides a collection of utility procedures to simplify <i>postscriptProc</i>. For example, <code>Tk_CanvasPsColor</code> will generate Postscript to set the current color to a given Tk color and <code>Tk_CanvasPsFont</code> will set up font information. When generating Postscript, the type manager is free to change the graphics state of the Postscript interpreter, since Tk places <code>gsave</code> and <code>grestore</code> commands around the Postscript for the item. The type manager can use canvas x coordinates directly in its Postscript, but it must call <code>Tk_CanvasPsY</code> to convert y coordinates from the space of the canvas (where the origin is at the upper left) to the space of Postscript (where the origin is at the lower left). </p>
 <p> In order to generate Postscript that complies with the Adobe Document Structuring Conventions, Tk actually generates Postscript in two passes. It calls each item&#8217;s <i>postscriptProc</i> in each pass. The only purpose of the first pass is to collect font information (which is done by <code>Tk_CanvasPsFont</code>); the actual Postscript is discarded. Tk sets the <i>prepass</i> argument to <i>postscriptProc</i> to 1 during the first pass; the type manager can use <i>prepass</i> to skip all Postscript generation except for calls to <code>Tk_CanvasPsFont</code>. During the second pass <i>prepass</i> will be 0, so the type manager must generate complete Postscript.</p>
@@ -198,13 +198,13 @@ Tk_ItemType *
  double <i>originY</i>,
  double <i>scaleX</i>,
  double <i>scaleY</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>canvas</i> and <i>itemPtr</i> arguments have the usual meaning. <i>originX</i> and <i>originY</i> specify an origin relative to which the item is to be scaled, and <i>scaleX</i> and <i>scaleY</i> give the x and y scale factors. The item should adjust its coordinates so that a point in the item that used to have coordinates <i>x</i> and <i>y</i> will have new coordinates <i>x&#180;</i> and <i>y&#180;</i>, where</p>
 <dl COMPACT>
 <dd>
 <pre><i>x&#180; = originX + scaleX*(x-originX)
 y&#180; = originY + scaleY*(y-originY)</i></pre>
-</dl>
+</dd></dl>
 <p> <i>scaleProc</i> must also update the bounding box in the item&#8217;s header.</p>
 <h3>Translateproc</h3>
 <p><i>typePtr-&gt;translateProc</i> is invoked by Tk to translate a canvas item during the <code>move</code> widget command. The procedure must match the following prototype:</p>
@@ -215,7 +215,7 @@ y&#180; = originY + scaleY*(y-originY)</i></pre>
  Tk_Item *<i>itemPtr</i>,
  double <i>deltaX</i>,
  double <i>deltaY</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>canvas</i> and <i>itemPtr</i> arguments have the usual meaning, and <i>deltaX</i> and <i>deltaY</i> give the amounts that should be added to each x and y coordinate within the item. The type manager should adjust the item&#8217;s coordinates and update the bounding box in the item&#8217;s header.</p>
 <h3>Indexproc</h3>
 <p><i>typePtr-&gt;indexProc</i> is invoked by Tk to translate a string index specification into a numerical index, for example during the <code>index</code> widget command. It is only relevant for item types that support indexable text; <i>typePtr-&gt;indexProc</i> may be specified as NULL for non-textual item types. The procedure must match the following prototype:</p>
@@ -227,7 +227,7 @@ y&#180; = originY + scaleY*(y-originY)</i></pre>
  Tk_Item *<i>itemPtr</i>,
  char <i>indexString</i>,
  int *<i>indexPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>interp</i>, <i>canvas</i>, and <i>itemPtr</i> arguments all have the usual meaning. <i>indexString</i> contains a textual description of an index, and <i>indexPtr</i> points to an integer value that should be filled in with a numerical index. It is up to the type manager to decide what forms of index are supported (e.g., numbers, <code>insert</code>, <code>sel.first</code>, <code>end</code>, etc.). <i>indexProc</i> should return a Tcl completion code and set <i>interp-&gt;result</i> in the event of an error.</p>
 <h3>Icursorproc</h3>
 <p><i>typePtr-&gt;icursorProc</i> is invoked by Tk during the <code>icursor</code> widget command to set the position of the insertion cursor in a textual item. It is only relevant for item types that support an insertion cursor; <i>typePtr-&gt;icursorProc</i> may be specified as NULL for item types that do not support an insertion cursor. The procedure must match the following prototype:</p>
@@ -237,7 +237,7 @@ y&#180; = originY + scaleY*(y-originY)</i></pre>
  Tk_Canvas <i>canvas</i>,
  Tk_Item *<i>itemPtr</i>,
  int <i>index</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>canvas</i> and <i>itemPtr</i> have the usual meanings, and <i>index</i> is an index into the item&#8217;s text, as returned by a previous call to <i>typePtr-&gt;insertProc</i>. The type manager should position the insertion cursor in the item just before the character given by <i>index</i>. Whether or not to actually display the insertion cursor is determined by other information provided by <code>Tk_CanvasGetTextInfo</code>.</p>
 <h3>Selectionproc</h3>
 <p><i>typePtr-&gt;selectionProc</i> is invoked by Tk during selection retrievals; it must return part or all of the selected text in the item (if any). It is only relevant for item types that support text; <i>typePtr-&gt;selectionProc</i> may be specified as NULL for non-textual item types. The procedure must match the following prototype:</p>
@@ -249,7 +249,7 @@ y&#180; = originY + scaleY*(y-originY)</i></pre>
  int <i>offset</i>,
  char *<i>buffer</i>,
  int <i>maxBytes</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>canvas</i> and <i>itemPtr</i> have the usual meanings. <i>offset</i> is an offset in bytes into the selection where 0 refers to the first byte of the selection; it identifies the first character that is to be returned in this call. <i>buffer</i> points to an area of memory in which to store the requested bytes, and <i>maxBytes</i> specifies the maximum number of bytes to return. <i>selectionProc</i> should extract up to <i>maxBytes</i> characters from the selection and copy them to <i>maxBytes</i>; it should return a count of the number of bytes actually copied, which may be less than <i>maxBytes</i> if there are not <i>offset+maxBytes</i> bytes in the selection.</p>
 <h3>Insertproc</h3>
 <p><i>typePtr-&gt;insertProc</i> is invoked by Tk during the <code>insert</code> widget command to insert new text into a canvas item. It is only relevant for item types that support text; <i>typePtr-&gt;insertProc</i> may be specified as NULL for non-textual item types. The procedure must match the following prototype:</p>
@@ -260,7 +260,7 @@ y&#180; = originY + scaleY*(y-originY)</i></pre>
  Tk_Item *<i>itemPtr</i>,
  int <i>index</i>,
  char *<i>string</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>canvas</i> and <i>itemPtr</i> have the usual meanings. <i>index</i> is an index into the item&#8217;s text, as returned by a previous call to <i>typePtr-&gt;insertProc</i>, and <i>string</i> contains new text to insert just before the character given by <i>index</i>. The type manager should insert the text and recompute the bounding box in the item&#8217;s header.</p>
 <h3>Dcharsproc</h3>
 <p><i>typePtr-&gt;dCharsProc</i> is invoked by Tk during the <code>dchars</code> widget command to delete a range of text from a canvas item. It is only relevant for item types that support text; <i>typePtr-&gt;dCharsProc</i> may be specified as NULL for non-textual item types. The procedure must match the following prototype:</p>
@@ -271,7 +271,7 @@ y&#180; = originY + scaleY*(y-originY)</i></pre>
  Tk_Item *<i>itemPtr</i>,
  int <i>first</i>,
  int <i>last</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>canvas</i> and <i>itemPtr</i> have the usual meanings. <i>first</i> and <i>last</i> give the indices of the first and last bytes to be deleted, as returned by previous calls to <i>typePtr-&gt;indexProc</i>. The type manager should delete the specified characters and update the bounding box in the item&#8217;s header.</p>
 <h2>See Also</h2>
 <p>Tk_CanvasPsY, Tk_CanvasTextInfo, Tk_CanvasTkwin</p>

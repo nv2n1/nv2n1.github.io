@@ -15,11 +15,11 @@ pipe_buf_release - put a reference to a pipe_buffer
 <h2>Arguments</h2>
 
 <i>pipe</i>
-<dl><dd><dd>the pipe that the buffer belongs to</dl>
+<dl><dd></dd><dd>the pipe that the buffer belongs to</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>the buffer to put a reference to</dl>
+<dl><dd>the buffer to put a reference to</dd></dl>
 
 <h2>Copyright</h2>
 

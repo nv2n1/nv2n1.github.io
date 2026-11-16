@@ -11,20 +11,15 @@ std::piecewise_construct - std::piecewise_construct
 <h2>Synopsis</h2>
 
 <pre><code>constexpr piecewise_construct_t piecewise_construct         (since C++11)
-
 = std::piecewise_construct_t();                             (until C++17)
-
 inline constexpr piecewise_construct_t piecewise_construct  (since C++17)
-
 = std::piecewise_construct_t();</code></pre> 
 The constant std::piecewise_construct is an instance of an empty struct tag type std::piecewise_construct_t. 
 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;tuple&gt;
 struct Foo {
     Foo(std::tuple&lt;int, float&gt;)
@@ -37,7 +32,6 @@ struct Foo {
     }
 };
 int main()
-
 {
     std::tuple&lt;int, float&gt; t(1, 3.14);
     std::pair&lt;Foo, Foo&gt; p1(t, t);

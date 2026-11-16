@@ -14,25 +14,25 @@ description: "gnet_stats_start_copy_compat – start dumping procedure in compat
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>socket buffer to put statistics TLVs into</dl>
+</dd><dd>socket buffer to put statistics TLVs into</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>TLV type for top level statistic TLV</dl>
+<dd>TLV type for top level statistic TLV</dd></dl>
 <p> <i>tc_stats_type</i></p>
 <dl>
-<dd>TLV type for backward compatibility struct tc_stats TLV</dl>
+<dd>TLV type for backward compatibility struct tc_stats TLV</dd></dl>
 <p> <i>xstats_type</i></p>
 <dl>
-<dd>TLV type for backward compatibility xstats TLV</dl>
+<dd>TLV type for backward compatibility xstats TLV</dd></dl>
 <p> <i>lock</i></p>
 <dl>
-<dd>statistics lock</dl>
+<dd>statistics lock</dd></dl>
 <p> <i>d</i></p>
 <dl>
-<dd>dumping handle</dl>
+<dd>dumping handle</dd></dl>
 <p> <i>padattr</i></p>
 <dl>
-<dd>padding attribute</dl>
+<dd>padding attribute</dd></dl>
 <h2>Description</h2>
 <p>Initializes the dumping handle, grabs the statistic lock and appends an empty TLV header to the socket buffer for use a container for all other statistic TLVS. </p>
 <p> The dumping handle is marked to be in backward compatibility mode telling all <code>gnet_stats_copy_XXX</code> functions to fill a local copy of struct tc_stats. </p>

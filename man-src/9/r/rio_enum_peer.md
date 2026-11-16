@@ -14,23 +14,23 @@ description: "rio_enum_peer – Recursively enumerate a RIO network through a ma
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network being enumerated</dl>
+</dd><dd>RIO network being enumerated</dd></dl>
 <p> <i>port</i></p>
 <dl>
-<dd>Master port to send transactions</dl>
+<dd>Master port to send transactions</dd></dl>
 <p> <i>hopcount</i></p>
 <dl>
-<dd>Number of hops into the network</dl>
+<dd>Number of hops into the network</dd></dl>
 <p> <i>prev</i></p>
 <dl>
-<dd>Previous RIO device connected to the enumerated one</dl>
+<dd>Previous RIO device connected to the enumerated one</dd></dl>
 <p> <i>prev_port</i></p>
 <dl>
-<dd>Port on previous RIO device</dl>
+<dd>Port on previous RIO device</dd></dl>
 <h2>Description</h2>
 <p>Recursively enumerates a RIO network. Transactions are sent via the master port passed in <i>port</i>.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

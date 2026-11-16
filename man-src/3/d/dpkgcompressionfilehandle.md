@@ -46,22 +46,22 @@ description: "Dpkg::Compression::FileHandle – object dealing transparently wit
 <p>The object inherits from FileHandle so all methods that work on this object should work for Dpkg::Compression::FileHandle too. There may be exceptions though.</p>
 <h2>Public Methods</h2>
 <dl COMPACT>
-<dt>my $fh = Dpkg::Compression::FileHandle-&gt;new(%opts)</p>
-<dd>Creates a new filehandle supporting on-the-fly compression/decompression. Supported options are &#8220;filename&#8221;, &#8220;compression&#8221;, &#8220;compression_level&#8221; (see respective set_* functions) and &#8220;add_comp_ext&#8221;. If &#8220;add_comp_ext&#8221; evaluates to true, then the extension corresponding to the selected compression scheme is automatically added to the recorded filename. It&#8217;s obviously incompatible with automatic detection of the compression method.</p>
-<dt>$fh-&gt;ensure_open($mode, %opts)</p>
-<dd>Ensure the file is opened in the requested mode (&#8220;r&#8221; for read and &#8220;w&#8221; for write). The options are passed down to the compressor&#8217;s <i>spawn()</i> call, if one is used. Opens the file with the recorded filename if needed. If the file is already open but not in the requested mode, then it errors out.</p>
-<dt>$fh-&gt;set_compression($comp)</p>
-<dd>Defines the compression method used. <tt>$comp</tt> should one of the methods supported by <code>Dpkg::Compression</code> or &#8220;none&#8221; or &#8220;auto&#8221;. &#8220;none&#8221; indicates that the file is uncompressed and &#8220;auto&#8221; indicates that the method must be guessed based on the filename extension used.</p>
-<dt>$fh-&gt;set_compression_level($level)</p>
-<dd>Indicate the desired compression level. It should be a value accepted by the function <tt>&quot;compression_is_valid_level&quot;</tt> of <code>Dpkg::Compression</code>.</p>
-<dt>$fh-&gt;set_filename($name, [$add_comp_ext])</p>
-<dd>Use <tt>$name</tt> as filename when the file must be opened/created. If <tt>$add_comp_ext</tt> is passed, it indicates whether the default extension of the compression method must be automatically added to the filename (or not).</p>
-<dt>my $file = $fh-&gt;<i>get_filename()</i></p>
-<dd>Returns the filename that would be used when the filehandle must be opened (both in read and write mode). This function errors out if &#8220;add_comp_ext&#8221; is enabled while the compression method is set to &#8220;auto&#8221;. The returned filename includes the extension of the compression method if &#8220;add_comp_ext&#8221; is enabled.</p>
-<dt>$ret = $fh-&gt;<i>use_compression()</i></p>
-<dd>Returns &#8220;0&#8221; if no compression is used and the compression method used otherwise. If the compression is set to &#8220;auto&#8221;, the value returned depends on the extension of the filename obtained with the <code>get_filename</code> method.</p>
-<dt>my $real_fh = $fh-&gt;<i>get_filehandle()</i></p>
-<dd>Returns the real underlying filehandle. Useful if you want to pass it along in a derived object.</dl>
+<dt>my $fh = Dpkg::Compression::FileHandle-&gt;new(%opts)</dt>
+<dd>Creates a new filehandle supporting on-the-fly compression/decompression. Supported options are &#8220;filename&#8221;, &#8220;compression&#8221;, &#8220;compression_level&#8221; (see respective set_* functions) and &#8220;add_comp_ext&#8221;. If &#8220;add_comp_ext&#8221; evaluates to true, then the extension corresponding to the selected compression scheme is automatically added to the recorded filename. It&#8217;s obviously incompatible with automatic detection of the compression method.</dd>
+<dt>$fh-&gt;ensure_open($mode, %opts)</dt>
+<dd>Ensure the file is opened in the requested mode (&#8220;r&#8221; for read and &#8220;w&#8221; for write). The options are passed down to the compressor&#8217;s <i>spawn()</i> call, if one is used. Opens the file with the recorded filename if needed. If the file is already open but not in the requested mode, then it errors out.</dd>
+<dt>$fh-&gt;set_compression($comp)</dt>
+<dd>Defines the compression method used. <tt>$comp</tt> should one of the methods supported by <code>Dpkg::Compression</code> or &#8220;none&#8221; or &#8220;auto&#8221;. &#8220;none&#8221; indicates that the file is uncompressed and &#8220;auto&#8221; indicates that the method must be guessed based on the filename extension used.</dd>
+<dt>$fh-&gt;set_compression_level($level)</dt>
+<dd>Indicate the desired compression level. It should be a value accepted by the function <tt>&quot;compression_is_valid_level&quot;</tt> of <code>Dpkg::Compression</code>.</dd>
+<dt>$fh-&gt;set_filename($name, [$add_comp_ext])</dt>
+<dd>Use <tt>$name</tt> as filename when the file must be opened/created. If <tt>$add_comp_ext</tt> is passed, it indicates whether the default extension of the compression method must be automatically added to the filename (or not).</dd>
+<dt>my $file = $fh-&gt;<i>get_filename()</i></dt>
+<dd>Returns the filename that would be used when the filehandle must be opened (both in read and write mode). This function errors out if &#8220;add_comp_ext&#8221; is enabled while the compression method is set to &#8220;auto&#8221;. The returned filename includes the extension of the compression method if &#8220;add_comp_ext&#8221; is enabled.</dd>
+<dt>$ret = $fh-&gt;<i>use_compression()</i></dt>
+<dd>Returns &#8220;0&#8221; if no compression is used and the compression method used otherwise. If the compression is set to &#8220;auto&#8221;, the value returned depends on the extension of the filename obtained with the <code>get_filename</code> method.</dd>
+<dt>my $real_fh = $fh-&gt;<i>get_filehandle()</i></dt>
+<dd>Returns the real underlying filehandle. Useful if you want to pass it along in a derived object.</dd></dl>
 <h2>Derived Objects</h2>
 <p>If you want to create an object that inherits from Dpkg::Compression::FileHandle you must be aware that the object is a reference to a <font SIZE="-1">GLOB</font> that is returned by <i>Symbol::gensym()</i> and as such it&#8217;s not a <font SIZE="-1">HASH.</font> </p>
 <p> You can store internal data in a hash but you have to use <tt>&quot;*$self-&quot;</tt>{&#8230;}&gt; to access the associated hash like in the example below: </p>

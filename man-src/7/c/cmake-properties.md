@@ -46,28 +46,28 @@ description: "cmake-properties – CMake Properties Reference"
 <h3>High level meta features indicating C standard support</h3>
 <p>New in version 3.8. </p>
 <dl>
-<dt><code>c_std_90</code></p>
-<dd>Compiler mode is at least C 90.</p>
-<dt><code>c_std_99</code></p>
-<dd>Compiler mode is at least C 99.</p>
-<dt><code>c_std_11</code></p>
-<dd>Compiler mode is at least C 11.</p>
-<dt><code>c_std_17</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>c_std_90</code></dt>
+<dd>Compiler mode is at least C 90.</dd>
+<dt><code>c_std_99</code></dt>
+<dd>Compiler mode is at least C 99.</dd>
+<dt><code>c_std_11</code></dt>
+<dd>Compiler mode is at least C 11.</dd>
+<dt><code>c_std_17</code></dt>
+<dd>New in version 3.21. </dd>
 <p> Compiler mode is at least C 17.</p>
-<dt><code>c_std_23</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>c_std_23</code></dt>
+<dd>New in version 3.21. </dd>
 <p> Compiler mode is at least C 23.</dl>
 <h3>Low level individual compile features</h3>
 <dl>
-<dt><code>c_function_prototypes</code></p>
-<dd>Function prototypes, as defined in <code>ISO/IEC 9899:1990</code>.</p>
-<dt><code>c_restrict</code></p>
-<dd><code>restrict</code> keyword, as defined in <code>ISO/IEC 9899:1999</code>.</p>
-<dt><code>c_static_assert</code></p>
-<dd>Static assert, as defined in <code>ISO/IEC 9899:2011</code>.</p>
-<dt><code>c_variadic_macros</code></p>
-<dd>Variadic macros, as defined in <code>ISO/IEC 9899:1999</code>.</dl>
+<dt><code>c_function_prototypes</code></dt>
+<dd>Function prototypes, as defined in <code>ISO/IEC 9899:1990</code>.</dd>
+<dt><code>c_restrict</code></dt>
+<dd><code>restrict</code> keyword, as defined in <code>ISO/IEC 9899:1999</code>.</dd>
+<dt><code>c_static_assert</code></dt>
+<dd>Static assert, as defined in <code>ISO/IEC 9899:2011</code>.</dd>
+<dt><code>c_variadic_macros</code></dt>
+<dd>Variadic macros, as defined in <code>ISO/IEC 9899:1999</code>.</dd></dl>
 <h3>Cmake_Cuda_Known_Features</h3>
 <p>New in version 3.17. </p>
 <p> List of CUDA features known to this version of CMake. </p>
@@ -75,18 +75,18 @@ description: "cmake-properties – CMake Properties Reference"
 <p> The features listed here may be used with the <code>target_compile_features()</code> command. See the <code><a href="/docs/linux/man/7-cmake-compile-features/">cmake-compile-features</a>(7)</code> manual for information on compile features and a list of supported compilers. </p>
 <p> The features known to this version of CMake are:</p>
 <dl>
-<dt><code>cuda_std_03</code></p>
-<dd>Compiler mode is at least CUDA/C++ 03.</p>
-<dt><code>cuda_std_11</code></p>
-<dd>Compiler mode is at least CUDA/C++ 11.</p>
-<dt><code>cuda_std_14</code></p>
-<dd>Compiler mode is at least CUDA/C++ 14.</p>
-<dt><code>cuda_std_17</code></p>
-<dd>Compiler mode is at least CUDA/C++ 17.</p>
-<dt><code>cuda_std_20</code></p>
-<dd>Compiler mode is at least CUDA/C++ 20.</p>
-<dt><code>cuda_std_23</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>cuda_std_03</code></dt>
+<dd>Compiler mode is at least CUDA/C++ 03.</dd>
+<dt><code>cuda_std_11</code></dt>
+<dd>Compiler mode is at least CUDA/C++ 11.</dd>
+<dt><code>cuda_std_14</code></dt>
+<dd>Compiler mode is at least CUDA/C++ 14.</dd>
+<dt><code>cuda_std_17</code></dt>
+<dd>Compiler mode is at least CUDA/C++ 17.</dd>
+<dt><code>cuda_std_20</code></dt>
+<dd>Compiler mode is at least CUDA/C++ 20.</dd>
+<dt><code>cuda_std_23</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Compiler mode is at least CUDA/C++ 23.</dl>
 <h3>Cmake_Cxx_Known_Features</h3>
 <p>New in version 3.1. </p>
@@ -98,157 +98,157 @@ description: "cmake-properties – CMake Properties Reference"
 <p>New in version 3.8. </p>
 <p> The following meta features indicate general support for the associated language standard. It reflects the language support claimed by the compiler, but it does not necessarily imply complete conformance to that standard.</p>
 <dl>
-<dt><code>cxx_std_98</code></p>
-<dd>Compiler mode is at least C++ 98.</p>
-<dt><code>cxx_std_11</code></p>
-<dd>Compiler mode is at least C++ 11.</p>
-<dt><code>cxx_std_14</code></p>
-<dd>Compiler mode is at least C++ 14.</p>
-<dt><code>cxx_std_17</code></p>
-<dd>Compiler mode is at least C++ 17.</p>
-<dt><code>cxx_std_20</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>cxx_std_98</code></dt>
+<dd>Compiler mode is at least C++ 98.</dd>
+<dt><code>cxx_std_11</code></dt>
+<dd>Compiler mode is at least C++ 11.</dd>
+<dt><code>cxx_std_14</code></dt>
+<dd>Compiler mode is at least C++ 14.</dd>
+<dt><code>cxx_std_17</code></dt>
+<dd>Compiler mode is at least C++ 17.</dd>
+<dt><code>cxx_std_20</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Compiler mode is at least C++ 20.</p>
-<dt><code>cxx_std_23</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>cxx_std_23</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Compiler mode is at least C++ 23.</dl>
 <h3>Low level individual compile features</h3>
 <p>For C++ 11 and C++ 14, compilers were sometimes slow to implement certain language features. CMake provided some individual compile features to help projects determine whether specific features were available. These individual features are now less relevant and projects should generally prefer to use the high level meta features instead. Individual compile features are not provided for C++ 17 or later. </p>
 <p> See the <code><a href="/docs/linux/man/7-cmake-compile-features/">cmake-compile-features</a>(7)</code> manual for further discussion of the use of individual compile features.</p>
 <h3>Individual features from C++ 98</h3>
 <dl>
-<dt><code>cxx_template_template_parameters</code></p>
-<dd>Template template parameters, as defined in <code>ISO/IEC 14882:1998</code>.</dl>
+<dt><code>cxx_template_template_parameters</code></dt>
+<dd>Template template parameters, as defined in <code>ISO/IEC 14882:1998</code>.</dd></dl>
 <h3>Individual features from C++ 11</h3>
 <dl>
-<dt><code>cxx_alias_templates</code></p>
-<dd>Template aliases, as defined in <i>N2258</i>.</p>
-<dt><code>cxx_alignas</code></p>
-<dd>Alignment control <code>alignas</code>, as defined in <i>N2341</i>.</p>
-<dt><code>cxx_alignof</code></p>
-<dd>Alignment control <code>alignof</code>, as defined in <i>N2341</i>.</p>
-<dt><code>cxx_attributes</code></p>
-<dd>Generic attributes, as defined in <i>N2761</i>.</p>
-<dt><code>cxx_auto_type</code></p>
-<dd>Automatic type deduction, as defined in <i>N1984</i>.</p>
-<dt><code>cxx_constexpr</code></p>
-<dd>Constant expressions, as defined in <i>N2235</i>.</p>
-<dt><code>cxx_decltype_incomplete_return_types</code></p>
-<dd>Decltype on incomplete return types, as defined in <i>N3276</i>.</p>
-<dt><code>cxx_decltype</code></p>
-<dd>Decltype, as defined in <i>N2343</i>.</p>
-<dt><code>cxx_default_function_template_args</code></p>
-<dd>Default template arguments for function templates, as defined in <i>DR226</i></p>
-<dt><code>cxx_defaulted_functions</code></p>
-<dd>Defaulted functions, as defined in <i>N2346</i>.</p>
-<dt><code>cxx_defaulted_move_initializers</code></p>
-<dd>Defaulted move initializers, as defined in <i>N3053</i>.</p>
-<dt><code>cxx_delegating_constructors</code></p>
-<dd>Delegating constructors, as defined in <i>N1986</i>.</p>
-<dt><code>cxx_deleted_functions</code></p>
-<dd>Deleted functions, as defined in <i>N2346</i>.</p>
-<dt><code>cxx_enum_forward_declarations</code></p>
-<dd>Enum forward declarations, as defined in <i>N2764</i>.</p>
-<dt><code>cxx_explicit_conversions</code></p>
-<dd>Explicit conversion operators, as defined in <i>N2437</i>.</p>
-<dt><code>cxx_extended_friend_declarations</code></p>
-<dd>Extended friend declarations, as defined in <i>N1791</i>.</p>
-<dt><code>cxx_extern_templates</code></p>
-<dd>Extern templates, as defined in <i>N1987</i>.</p>
-<dt><code>cxx_final</code></p>
-<dd>Override control <code>final</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</p>
-<dt><code>cxx_func_identifier</code></p>
-<dd>Predefined <code>__func__</code> identifier, as defined in <i>N2340</i>.</p>
-<dt><code>cxx_generalized_initializers</code></p>
-<dd>Initializer lists, as defined in <i>N2672</i>.</p>
-<dt><code>cxx_inheriting_constructors</code></p>
-<dd>Inheriting constructors, as defined in <i>N2540</i>.</p>
-<dt><code>cxx_inline_namespaces</code></p>
-<dd>Inline namespaces, as defined in <i>N2535</i>.</p>
-<dt><code>cxx_lambdas</code></p>
-<dd>Lambda functions, as defined in <i>N2927</i>.</p>
-<dt><code>cxx_local_type_template_args</code></p>
-<dd>Local and unnamed types as template arguments, as defined in <i>N2657</i>.</p>
-<dt><code>cxx_long_long_type</code></p>
-<dd><code>long long</code> type, as defined in <i>N1811</i>.</p>
-<dt><code>cxx_noexcept</code></p>
-<dd>Exception specifications, as defined in <i>N3050</i>.</p>
-<dt><code>cxx_nonstatic_member_init</code></p>
-<dd>Non-static data member initialization, as defined in <i>N2756</i>.</p>
-<dt><code>cxx_nullptr</code></p>
-<dd>Null pointer, as defined in <i>N2431</i>.</p>
-<dt><code>cxx_override</code></p>
-<dd>Override control <code>override</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</p>
-<dt><code>cxx_range_for</code></p>
-<dd>Range-based for, as defined in <i>N2930</i>.</p>
-<dt><code>cxx_raw_string_literals</code></p>
-<dd>Raw string literals, as defined in <i>N2442</i>.</p>
-<dt><code>cxx_reference_qualified_functions</code></p>
-<dd>Reference qualified functions, as defined in <i>N2439</i>.</p>
-<dt><code>cxx_right_angle_brackets</code></p>
-<dd>Right angle bracket parsing, as defined in <i>N1757</i>.</p>
-<dt><code>cxx_rvalue_references</code></p>
-<dd>R-value references, as defined in <i>N2118</i>.</p>
-<dt><code>cxx_sizeof_member</code></p>
-<dd>Size of non-static data members, as defined in <i>N2253</i>.</p>
-<dt><code>cxx_static_assert</code></p>
-<dd>Static assert, as defined in <i>N1720</i>.</p>
-<dt><code>cxx_strong_enums</code></p>
-<dd>Strongly typed enums, as defined in <i>N2347</i>.</p>
-<dt><code>cxx_thread_local</code></p>
-<dd>Thread-local variables, as defined in <i>N2659</i>.</p>
-<dt><code>cxx_trailing_return_types</code></p>
-<dd>Automatic function return type, as defined in <i>N2541</i>.</p>
-<dt><code>cxx_unicode_literals</code></p>
-<dd>Unicode string literals, as defined in <i>N2442</i>.</p>
-<dt><code>cxx_uniform_initialization</code></p>
-<dd>Uniform initialization, as defined in <i>N2640</i>.</p>
-<dt><code>cxx_unrestricted_unions</code></p>
-<dd>Unrestricted unions, as defined in <i>N2544</i>.</p>
-<dt><code>cxx_user_literals</code></p>
-<dd>User-defined literals, as defined in <i>N2765</i>.</p>
-<dt><code>cxx_variadic_macros</code></p>
-<dd>Variadic macros, as defined in <i>N1653</i>.</p>
-<dt><code>cxx_variadic_templates</code></p>
-<dd>Variadic templates, as defined in <i>N2242</i>.</dl>
+<dt><code>cxx_alias_templates</code></dt>
+<dd>Template aliases, as defined in <i>N2258</i>.</dd>
+<dt><code>cxx_alignas</code></dt>
+<dd>Alignment control <code>alignas</code>, as defined in <i>N2341</i>.</dd>
+<dt><code>cxx_alignof</code></dt>
+<dd>Alignment control <code>alignof</code>, as defined in <i>N2341</i>.</dd>
+<dt><code>cxx_attributes</code></dt>
+<dd>Generic attributes, as defined in <i>N2761</i>.</dd>
+<dt><code>cxx_auto_type</code></dt>
+<dd>Automatic type deduction, as defined in <i>N1984</i>.</dd>
+<dt><code>cxx_constexpr</code></dt>
+<dd>Constant expressions, as defined in <i>N2235</i>.</dd>
+<dt><code>cxx_decltype_incomplete_return_types</code></dt>
+<dd>Decltype on incomplete return types, as defined in <i>N3276</i>.</dd>
+<dt><code>cxx_decltype</code></dt>
+<dd>Decltype, as defined in <i>N2343</i>.</dd>
+<dt><code>cxx_default_function_template_args</code></dt>
+<dd>Default template arguments for function templates, as defined in <i>DR226</i></dd>
+<dt><code>cxx_defaulted_functions</code></dt>
+<dd>Defaulted functions, as defined in <i>N2346</i>.</dd>
+<dt><code>cxx_defaulted_move_initializers</code></dt>
+<dd>Defaulted move initializers, as defined in <i>N3053</i>.</dd>
+<dt><code>cxx_delegating_constructors</code></dt>
+<dd>Delegating constructors, as defined in <i>N1986</i>.</dd>
+<dt><code>cxx_deleted_functions</code></dt>
+<dd>Deleted functions, as defined in <i>N2346</i>.</dd>
+<dt><code>cxx_enum_forward_declarations</code></dt>
+<dd>Enum forward declarations, as defined in <i>N2764</i>.</dd>
+<dt><code>cxx_explicit_conversions</code></dt>
+<dd>Explicit conversion operators, as defined in <i>N2437</i>.</dd>
+<dt><code>cxx_extended_friend_declarations</code></dt>
+<dd>Extended friend declarations, as defined in <i>N1791</i>.</dd>
+<dt><code>cxx_extern_templates</code></dt>
+<dd>Extern templates, as defined in <i>N1987</i>.</dd>
+<dt><code>cxx_final</code></dt>
+<dd>Override control <code>final</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</dd>
+<dt><code>cxx_func_identifier</code></dt>
+<dd>Predefined <code>__func__</code> identifier, as defined in <i>N2340</i>.</dd>
+<dt><code>cxx_generalized_initializers</code></dt>
+<dd>Initializer lists, as defined in <i>N2672</i>.</dd>
+<dt><code>cxx_inheriting_constructors</code></dt>
+<dd>Inheriting constructors, as defined in <i>N2540</i>.</dd>
+<dt><code>cxx_inline_namespaces</code></dt>
+<dd>Inline namespaces, as defined in <i>N2535</i>.</dd>
+<dt><code>cxx_lambdas</code></dt>
+<dd>Lambda functions, as defined in <i>N2927</i>.</dd>
+<dt><code>cxx_local_type_template_args</code></dt>
+<dd>Local and unnamed types as template arguments, as defined in <i>N2657</i>.</dd>
+<dt><code>cxx_long_long_type</code></dt>
+<dd><code>long long</code> type, as defined in <i>N1811</i>.</dd>
+<dt><code>cxx_noexcept</code></dt>
+<dd>Exception specifications, as defined in <i>N3050</i>.</dd>
+<dt><code>cxx_nonstatic_member_init</code></dt>
+<dd>Non-static data member initialization, as defined in <i>N2756</i>.</dd>
+<dt><code>cxx_nullptr</code></dt>
+<dd>Null pointer, as defined in <i>N2431</i>.</dd>
+<dt><code>cxx_override</code></dt>
+<dd>Override control <code>override</code> keyword, as defined in <i>N2928</i>, <i>N3206</i> and <i>N3272</i>.</dd>
+<dt><code>cxx_range_for</code></dt>
+<dd>Range-based for, as defined in <i>N2930</i>.</dd>
+<dt><code>cxx_raw_string_literals</code></dt>
+<dd>Raw string literals, as defined in <i>N2442</i>.</dd>
+<dt><code>cxx_reference_qualified_functions</code></dt>
+<dd>Reference qualified functions, as defined in <i>N2439</i>.</dd>
+<dt><code>cxx_right_angle_brackets</code></dt>
+<dd>Right angle bracket parsing, as defined in <i>N1757</i>.</dd>
+<dt><code>cxx_rvalue_references</code></dt>
+<dd>R-value references, as defined in <i>N2118</i>.</dd>
+<dt><code>cxx_sizeof_member</code></dt>
+<dd>Size of non-static data members, as defined in <i>N2253</i>.</dd>
+<dt><code>cxx_static_assert</code></dt>
+<dd>Static assert, as defined in <i>N1720</i>.</dd>
+<dt><code>cxx_strong_enums</code></dt>
+<dd>Strongly typed enums, as defined in <i>N2347</i>.</dd>
+<dt><code>cxx_thread_local</code></dt>
+<dd>Thread-local variables, as defined in <i>N2659</i>.</dd>
+<dt><code>cxx_trailing_return_types</code></dt>
+<dd>Automatic function return type, as defined in <i>N2541</i>.</dd>
+<dt><code>cxx_unicode_literals</code></dt>
+<dd>Unicode string literals, as defined in <i>N2442</i>.</dd>
+<dt><code>cxx_uniform_initialization</code></dt>
+<dd>Uniform initialization, as defined in <i>N2640</i>.</dd>
+<dt><code>cxx_unrestricted_unions</code></dt>
+<dd>Unrestricted unions, as defined in <i>N2544</i>.</dd>
+<dt><code>cxx_user_literals</code></dt>
+<dd>User-defined literals, as defined in <i>N2765</i>.</dd>
+<dt><code>cxx_variadic_macros</code></dt>
+<dd>Variadic macros, as defined in <i>N1653</i>.</dd>
+<dt><code>cxx_variadic_templates</code></dt>
+<dd>Variadic templates, as defined in <i>N2242</i>.</dd></dl>
 <h3>Individual features from C++ 14</h3>
 <dl>
-<dt><code>cxx_aggregate_default_initializers</code></p>
-<dd>Aggregate default initializers, as defined in <i>N3605</i>.</p>
-<dt><code>cxx_attribute_deprecated</code></p>
-<dd><code>[[deprecated]]</code> attribute, as defined in <i>N3760</i>.</p>
-<dt><code>cxx_binary_literals</code></p>
-<dd>Binary literals, as defined in <i>N3472</i>.</p>
-<dt><code>cxx_contextual_conversions</code></p>
-<dd>Contextual conversions, as defined in <i>N3323</i>.</p>
-<dt><code>cxx_decltype_auto</code></p>
-<dd><code>decltype(auto)</code> semantics, as defined in <i>N3638</i>.</p>
-<dt><code>cxx_digit_separators</code></p>
-<dd>Digit separators, as defined in <i>N3781</i>.</p>
-<dt><code>cxx_generic_lambdas</code></p>
-<dd>Generic lambdas, as defined in <i>N3649</i>.</p>
-<dt><code>cxx_lambda_init_captures</code></p>
-<dd>Initialized lambda captures, as defined in <i>N3648</i>.</p>
-<dt><code>cxx_relaxed_constexpr</code></p>
-<dd>Relaxed constexpr, as defined in <i>N3652</i>.</p>
-<dt><code>cxx_return_type_deduction</code></p>
-<dd>Return type deduction on normal functions, as defined in <i>N3386</i>.</p>
-<dt><code>cxx_variable_templates</code></p>
-<dd>Variable templates, as defined in <i>N3651</i>.</dl>
+<dt><code>cxx_aggregate_default_initializers</code></dt>
+<dd>Aggregate default initializers, as defined in <i>N3605</i>.</dd>
+<dt><code>cxx_attribute_deprecated</code></dt>
+<dd><code>[[deprecated]]</code> attribute, as defined in <i>N3760</i>.</dd>
+<dt><code>cxx_binary_literals</code></dt>
+<dd>Binary literals, as defined in <i>N3472</i>.</dd>
+<dt><code>cxx_contextual_conversions</code></dt>
+<dd>Contextual conversions, as defined in <i>N3323</i>.</dd>
+<dt><code>cxx_decltype_auto</code></dt>
+<dd><code>decltype(auto)</code> semantics, as defined in <i>N3638</i>.</dd>
+<dt><code>cxx_digit_separators</code></dt>
+<dd>Digit separators, as defined in <i>N3781</i>.</dd>
+<dt><code>cxx_generic_lambdas</code></dt>
+<dd>Generic lambdas, as defined in <i>N3649</i>.</dd>
+<dt><code>cxx_lambda_init_captures</code></dt>
+<dd>Initialized lambda captures, as defined in <i>N3648</i>.</dd>
+<dt><code>cxx_relaxed_constexpr</code></dt>
+<dd>Relaxed constexpr, as defined in <i>N3652</i>.</dd>
+<dt><code>cxx_return_type_deduction</code></dt>
+<dd>Return type deduction on normal functions, as defined in <i>N3386</i>.</dd>
+<dt><code>cxx_variable_templates</code></dt>
+<dd>Variable templates, as defined in <i>N3651</i>.</dd></dl>
 <h3>Cmake_Role</h3>
 <p>New in version 3.14. </p>
 <p> Tells what mode the current running script is in. Could be one of several values:</p>
 <dl>
-<dt><code>PROJECT</code></p>
-<dd>Running in project mode (processing a <code>CMakeLists.txt</code> file).</p>
-<dt><code>SCRIPT</code></p>
-<dd>Running in <code>-P</code> script mode.</p>
-<dt><code>FIND_PACKAGE</code></p>
-<dd>Running in <code>&#8211;find-package</code> mode.</p>
-<dt><code>CTEST</code></p>
-<dd>Running in CTest script mode.</p>
-<dt><code>CPACK</code></p>
-<dd>Running in CPack.</dl>
+<dt><code>PROJECT</code></dt>
+<dd>Running in project mode (processing a <code>CMakeLists.txt</code> file).</dd>
+<dt><code>SCRIPT</code></dt>
+<dd>Running in <code>-P</code> script mode.</dd>
+<dt><code>FIND_PACKAGE</code></dt>
+<dd>Running in <code>&#8211;find-package</code> mode.</dd>
+<dt><code>CTEST</code></dt>
+<dd>Running in CTest script mode.</dd>
+<dt><code>CPACK</code></dt>
+<dd>Running in CPack.</dd></dl>
 <h3>Debug_Configurations</h3>
 <p>Specify which configurations are for debugging. </p>
 <p> The value must be a semi-colon separated list of configuration names. Currently this property is used only by the <code>target_link_libraries()</code> command. Additional uses may be defined in the future. </p>
@@ -293,12 +293,12 @@ description: "cmake-properties – CMake Properties Reference"
 <p> Read-only property that is true on multi-configuration generators. </p>
 <p> True when using a multi-configuration generator such as:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Ninja Multi-Config</code></p>
-<dt>&bull;</p>
-<dd>Visual Studio Generators</p>
-<dt>&bull;</p>
-<dd><code>Xcode</code> </p>
+<dt>&bull;</dt>
+<dd><code>Ninja Multi-Config</code></dd>
+<dt>&bull;</dt>
+<dd>Visual Studio Generators</dd>
+<dt>&bull;</dt>
+<dd><code>Xcode</code> </dd>
 <p> Multi-config generators use <code>CMAKE_CONFIGURATION_TYPES</code> as the set of configurations and ignore <code>CMAKE_BUILD_TYPE</code>.</dl>
 <h3>Global_Depends_Debug_Mode</h3>
 <p>Enable global target dependency graph debug mode. </p>
@@ -364,12 +364,12 @@ description: "cmake-properties – CMake Properties Reference"
 <p> It is required for building the same target with multiple SDKs. A common use case is the parallel use of <code>iphoneos</code> and <code>iphonesimulator</code> SDKs. </p>
 <p> Three different states possible that control when the <code>Xcode</code> generator emits the <code>EFFECTIVE_PLATFORM_NAME</code> variable:</p>
 <dl>
-<dt>&bull;</p>
-<dd>If set to <code>ON</code> it will always be emitted</p>
-<dt>&bull;</p>
-<dd>If set to <code>OFF</code> it will never be emitted</p>
-<dt>&bull;</p>
-<dd>If unset (the default) it will only be emitted when the project was configured for an embedded Xcode SDK like iOS, tvOS, watchOS or any of the simulators. </p>
+<dt>&bull;</dt>
+<dd>If set to <code>ON</code> it will always be emitted</dd>
+<dt>&bull;</dt>
+<dd>If set to <code>OFF</code> it will never be emitted</dd>
+<dt>&bull;</dt>
+<dd>If unset (the default) it will only be emitted when the project was configured for an embedded Xcode SDK like iOS, tvOS, watchOS or any of the simulators. </dd>
 <p> <code>NOTE:</code> When this behavior is enable for generated Xcode projects, the <code>EFFECTIVE_PLATFORM_NAME</code> variable will leak into <code>Generator expressions</code> like <code>TARGET_FILE</code> and will render those mostly unusable.</dl>
 <h2>Properties On Directories</h2>
 <h3>Additional_Clean_Files</h3>
@@ -561,16 +561,16 @@ EndGlobalSection</pre>
 <p> When Cross Compiling for Android with NVIDIA Nsight Tegra Visual Studio Edition, this property sets the Android target architecture. </p>
 <p> This is a string property that could be set to the one of the following values:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>armv7-a</code>: &quot;ARMv7-A (armv7-a)&quot;</p>
-<dt>&bull;</p>
-<dd><code>armv7-a-hard</code>: &quot;ARMv7-A, hard-float ABI (armv7-a)&quot;</p>
-<dt>&bull;</p>
-<dd><code>arm64-v8a</code>: &quot;ARMv8-A, 64bit (arm64-v8a)&quot;</p>
-<dt>&bull;</p>
-<dd><code>x86</code>: &quot;x86 (x86)&quot;</p>
-<dt>&bull;</p>
-<dd><code>x86_64</code>: &quot;x86_64 (x86_64)&quot; </p>
+<dt>&bull;</dt>
+<dd><code>armv7-a</code>: &quot;ARMv7-A (armv7-a)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>armv7-a-hard</code>: &quot;ARMv7-A, hard-float ABI (armv7-a)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>arm64-v8a</code>: &quot;ARMv8-A, 64bit (arm64-v8a)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>x86</code>: &quot;x86 (x86)&quot;</dd>
+<dt>&bull;</dt>
+<dd><code>x86_64</code>: &quot;x86_64 (x86_64)&quot; </dd>
 <p> This property is initialized by the value of the <code>CMAKE_ANDROID_ARCH</code> variable if it is set when a target is created.</dl>
 <h3>Android_Assets_Directories</h3>
 <p>New in version 3.4. </p>
@@ -621,22 +621,22 @@ EndGlobalSection</pre>
 <p>New in version 3.4. </p>
 <p> When Cross Compiling for Android with NVIDIA Nsight Tegra Visual Studio Edition, this property specifies the type of STL support for the project. This is a string property that could set to the one of the following values:</p>
 <dl>
-<dt><code>none</code></p>
-<dd>No C++ Support</p>
-<dt><code>system</code></p>
-<dd>Minimal C++ without STL</p>
-<dt><code>gabi++_static</code></p>
-<dd>GAbi++ Static</p>
-<dt><code>gabi++_shared</code></p>
-<dd>GAbi++ Shared</p>
-<dt><code>gnustl_static</code></p>
-<dd>GNU libstdc++ Static</p>
-<dt><code>gnustl_shared</code></p>
-<dd>GNU libstdc++ Shared</p>
-<dt><code>stlport_static</code></p>
-<dd>STLport Static</p>
-<dt><code>stlport_shared</code></p>
-<dd>STLport Shared </p>
+<dt><code>none</code></dt>
+<dd>No C++ Support</dd>
+<dt><code>system</code></dt>
+<dd>Minimal C++ without STL</dd>
+<dt><code>gabi++_static</code></dt>
+<dd>GAbi++ Static</dd>
+<dt><code>gabi++_shared</code></dt>
+<dd>GAbi++ Shared</dd>
+<dt><code>gnustl_static</code></dt>
+<dd>GNU libstdc++ Static</dd>
+<dt><code>gnustl_shared</code></dt>
+<dd>GNU libstdc++ Shared</dd>
+<dt><code>stlport_static</code></dt>
+<dd>STLport Static</dd>
+<dt><code>stlport_shared</code></dt>
+<dd>STLport Shared </dd>
 <p> This property is initialized by the value of the <code>CMAKE_ANDROID_STL_TYPE</code> variable if it is set when a target is created.</dl>
 <h3>Archive_Output_Directory</h3>
 <p>Output directory in which to build ARCHIVE target files. </p>
@@ -668,10 +668,10 @@ EndGlobalSection</pre>
 <p> By default <i>AUTOGEN_ORIGIN_DEPENDS</i> is initialized from <code>CMAKE_AUTOGEN_ORIGIN_DEPENDS</code> which is <code>ON</code> by default. </p>
 <p> In total the dependencies of the <code>_autogen</code> target are composed from</p>
 <dl>
-<dt>&bull;</p>
-<dd>forwarded origin target dependencies (enabled by default via <i>AUTOGEN_ORIGIN_DEPENDS</i>)</p>
-<dt>&bull;</p>
-<dd>additional user defined dependencies from <code>AUTOGEN_TARGET_DEPENDS</code> </p>
+<dt>&bull;</dt>
+<dd>forwarded origin target dependencies (enabled by default via <i>AUTOGEN_ORIGIN_DEPENDS</i>)</dd>
+<dt>&bull;</dt>
+<dd>additional user defined dependencies from <code>AUTOGEN_TARGET_DEPENDS</code> </dd>
 <p> See the <code><a href="/docs/linux/man/7-cmake-qt/">cmake-qt</a>(7)</code> manual for more information on using CMake with Qt.</dl>
 <h3>Note</h3>
 <p>Disabling <i>AUTOGEN_ORIGIN_DEPENDS</i> is useful to avoid building of origin target dependencies when building the <code>_autogen</code> target only. This is especially interesting when a <code>global autogen target</code> is enabled. </p>
@@ -681,12 +681,12 @@ EndGlobalSection</pre>
 <p> Number of parallel <code>moc</code> or <code>uic</code> processes to start when using <code>AUTOMOC</code> and <code>AUTOUIC</code>. </p>
 <p> The custom <code>&lt;origin&gt;_autogen</code> target starts a number of threads of which each one parses a source file and on demand starts a <code>moc</code> or <code>uic</code> process. <code>AUTOGEN_PARALLEL</code> controls how many parallel threads (and therefore <code>moc</code> or <code>uic</code> processes) are started.</p>
 <dl>
-<dt>&bull;</p>
-<dd>An empty (or unset) value or the string <code>AUTO</code> sets the number of threads/processes to the number of physical CPUs on the host system.</p>
-<dt>&bull;</p>
-<dd>A positive non zero integer value sets the exact thread/process count.</p>
-<dt>&bull;</p>
-<dd>Otherwise a single thread/process is started. </p>
+<dt>&bull;</dt>
+<dd>An empty (or unset) value or the string <code>AUTO</code> sets the number of threads/processes to the number of physical CPUs on the host system.</dd>
+<dt>&bull;</dt>
+<dd>A positive non zero integer value sets the exact thread/process count.</dd>
+<dt>&bull;</dt>
+<dd>Otherwise a single thread/process is started. </dd>
 <p> By default <code>AUTOGEN_PARALLEL</code> is initialized from <code>CMAKE_AUTOGEN_PARALLEL</code>. </p>
 <p> See the <code><a href="/docs/linux/man/7-cmake-qt/">cmake-qt</a>(7)</code> manual for more information on using CMake with Qt.</dl>
 <h3>Autogen_Target_Depends</h3>
@@ -694,20 +694,20 @@ EndGlobalSection</pre>
 <p> Targets which have their <code>AUTOMOC</code> or <code>AUTOUIC</code> property <code>ON</code> have a corresponding <code>_autogen</code> target which generates <code>moc</code> and <code>uic</code> files. As this <code>_autogen</code> target is created at generate-time, it is not possible to define dependencies of it using e.g. <code>add_dependencies()</code>. Instead the <i>AUTOGEN_TARGET_DEPENDS</i> target property can be set to a ;-list of additional dependencies for the <code>_autogen</code> target. Dependencies can be target names or file names. </p>
 <p> In total the dependencies of the <code>_autogen</code> target are composed from</p>
 <dl>
-<dt>&bull;</p>
-<dd>forwarded origin target dependencies (enabled by default via <code>AUTOGEN_ORIGIN_DEPENDS</code>)</p>
-<dt>&bull;</p>
-<dd>additional user defined dependencies from <i>AUTOGEN_TARGET_DEPENDS</i> </p>
+<dt>&bull;</dt>
+<dd>forwarded origin target dependencies (enabled by default via <code>AUTOGEN_ORIGIN_DEPENDS</code>)</dd>
+<dt>&bull;</dt>
+<dd>additional user defined dependencies from <i>AUTOGEN_TARGET_DEPENDS</i> </dd>
 <p> See the <code><a href="/docs/linux/man/7-cmake-qt/">cmake-qt</a>(7)</code> manual for more information on using CMake with Qt.</dl>
 <h3>Use cases</h3>
 <p>If <code>AUTOMOC</code> or <code>AUTOUIC</code> depends on a file that is either</p>
 <dl>
-<dt>&bull;</p>
-<dd>a <code>GENERATED</code> non C++ file (e.g. a <code>GENERATED</code> <code>.json</code> or <code>.ui</code> file) or</p>
-<dt>&bull;</p>
-<dd>a <code>GENERATED</code> C++ file that isn&#8217;t recognized by <code>AUTOMOC</code> and <code>AUTOUIC</code> because it&#8217;s skipped by <code>SKIP_AUTOMOC</code>, <code>SKIP_AUTOUIC</code>, <code>SKIP_AUTOGEN</code> or <code>CMP0071</code> or</p>
-<dt>&bull;</p>
-<dd>a file that isn&#8217;t in the origin target&#8217;s sources </p>
+<dt>&bull;</dt>
+<dd>a <code>GENERATED</code> non C++ file (e.g. a <code>GENERATED</code> <code>.json</code> or <code>.ui</code> file) or</dd>
+<dt>&bull;</dt>
+<dd>a <code>GENERATED</code> C++ file that isn&#8217;t recognized by <code>AUTOMOC</code> and <code>AUTOUIC</code> because it&#8217;s skipped by <code>SKIP_AUTOMOC</code>, <code>SKIP_AUTOUIC</code>, <code>SKIP_AUTOGEN</code> or <code>CMP0071</code> or</dd>
+<dt>&bull;</dt>
+<dd>a file that isn&#8217;t in the origin target&#8217;s sources </dd>
 <p> it must be added to <i>AUTOGEN_TARGET_DEPENDS</i>.</dl>
 <h3>Automoc</h3>
 <p>Should the target be processed with auto-moc (for Qt projects). </p>
@@ -717,36 +717,36 @@ EndGlobalSection</pre>
 <h3>Header file processing</h3>
 <p>At configuration time, a list of header files that should be scanned by <i>AUTOMOC</i> is computed from the target&#8217;s sources.</p>
 <dl>
-<dt>&bull;</p>
-<dd>All header files in the target&#8217;s sources are added to the scan list.</p>
-<dt>&bull;</p>
-<dd>For all C++ source files <code>&lt;source_base&gt;.&lt;source_extension&gt;</code> in the target&#8217;s sources, CMake searches for</p>
-<dt>&bull;</p>
-<dd>a regular header with the same base name (<code>&lt;source_base&gt;.&lt;header_extention&gt;</code>) and</p>
-<dt>&bull;</p>
-<dd>a private header with the same base name and a <code>_p</code> suffix (<code>&lt;source_base&gt;_p.&lt;header_extention&gt;</code>) </p>
+<dt>&bull;</dt>
+<dd>All header files in the target&#8217;s sources are added to the scan list.</dd>
+<dt>&bull;</dt>
+<dd>For all C++ source files <code>&lt;source_base&gt;.&lt;source_extension&gt;</code> in the target&#8217;s sources, CMake searches for</dd>
+<dt>&bull;</dt>
+<dd>a regular header with the same base name (<code>&lt;source_base&gt;.&lt;header_extention&gt;</code>) and</dd>
+<dt>&bull;</dt>
+<dd>a private header with the same base name and a <code>_p</code> suffix (<code>&lt;source_base&gt;_p.&lt;header_extention&gt;</code>) </dd>
 <p> and adds these to the scan list. </p>
 <p> At build time, CMake scans each unknown or modified header file from the list and searches for</p>
-<dt>&bull;</p>
-<dd>a Qt macro from <code>AUTOMOC_MACRO_NAMES</code>,</p>
-<dt>&bull;</p>
-<dd>additional file dependencies from the <code>FILE</code> argument of a <code>Q_PLUGIN_METADATA</code> macro and</p>
-<dt>&bull;</p>
-<dd>additional file dependencies detected by filters defined in <code>AUTOMOC_DEPEND_FILTERS</code>. </p>
+<dt>&bull;</dt>
+<dd>a Qt macro from <code>AUTOMOC_MACRO_NAMES</code>,</dd>
+<dt>&bull;</dt>
+<dd>additional file dependencies from the <code>FILE</code> argument of a <code>Q_PLUGIN_METADATA</code> macro and</dd>
+<dt>&bull;</dt>
+<dd>additional file dependencies detected by filters defined in <code>AUTOMOC_DEPEND_FILTERS</code>. </dd>
 <p> If a Qt macro is found, then the header will be compiled by the <code>moc</code> to the output file <code>moc_&lt;base_name&gt;.cpp</code>. The complete output file path is described in the section <i>Output file location</i>. </p>
 <p> The header will be <code>moc</code> compiled again if a file from the additional file dependencies changes. </p>
 <p> Header <code>moc</code> output files <code>moc_&lt;base_name&gt;.cpp</code> can be included in source files. In the section <i>Including header moc files in sources</i> there is more information on that topic.</dl>
 <h3>Source file processing</h3>
 <p>At build time, CMake scans each unknown or modified C++ source file from the target&#8217;s sources for</p>
 <dl>
-<dt>&bull;</p>
-<dd>a Qt macro from <code>AUTOMOC_MACRO_NAMES</code>,</p>
-<dt>&bull;</p>
-<dd>includes of header <code>moc</code> files (see <i>Including header moc files in sources</i>),</p>
-<dt>&bull;</p>
-<dd>additional file dependencies from the <code>FILE</code> argument of a <code>Q_PLUGIN_METADATA</code> macro and</p>
-<dt>&bull;</p>
-<dd>additional file dependencies detected by filters defined in <code>AUTOMOC_DEPEND_FILTERS</code>. </p>
+<dt>&bull;</dt>
+<dd>a Qt macro from <code>AUTOMOC_MACRO_NAMES</code>,</dd>
+<dt>&bull;</dt>
+<dd>includes of header <code>moc</code> files (see <i>Including header moc files in sources</i>),</dd>
+<dt>&bull;</dt>
+<dd>additional file dependencies from the <code>FILE</code> argument of a <code>Q_PLUGIN_METADATA</code> macro and</dd>
+<dt>&bull;</dt>
+<dd>additional file dependencies detected by filters defined in <code>AUTOMOC_DEPEND_FILTERS</code>. </dd>
 <p> If a Qt macro is found, then the C++ source file <code>&lt;base&gt;.&lt;source_extension&gt;</code> is expected to as well contain an include statement </p>
 <pre>#include &lt;&lt;base&gt;.moc&gt; // or
 #include &quot;&lt;base&gt;.moc&quot;</pre>
@@ -761,41 +761,41 @@ EndGlobalSection</pre>
 <h3>Included moc output files</h3>
 <p><code>moc</code> output files that are included by a source file will be generated in</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include</code> for single configuration generators or in</p>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code> for <code>multi configuration</code> generators. </p>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include</code> for single configuration generators or in</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code> for <code>multi configuration</code> generators. </dd>
 <p> Where <code>&lt;AUTOGEN_BUILD_DIR&gt;</code> is the value of the target property <code>AUTOGEN_BUILD_DIR</code>. </p>
 <p> The include directory is automatically added to the target&#8217;s <code>INCLUDE_DIRECTORIES</code>.</dl>
 <h3>Not included moc output files</h3>
 <p><code>moc</code> output files that are not included in a source file will be generated in</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/&lt;SOURCE_DIR_CHECKSUM&gt;</code> for single configuration generators or in,</p>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;/&lt;SOURCE_DIR_CHECKSUM&gt;</code> for <code>multi configuration</code> generators. </p>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/&lt;SOURCE_DIR_CHECKSUM&gt;</code> for single configuration generators or in,</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;/&lt;SOURCE_DIR_CHECKSUM&gt;</code> for <code>multi configuration</code> generators. </dd>
 <p> Where <code>&lt;SOURCE_DIR_CHECKSUM&gt;</code> is a checksum computed from the relative parent directory path of the <code>moc</code> input file. This scheme allows to have <code>moc</code> input files with the same name in different directories. </p>
 <p> All not included <code>moc</code> output files will be included automatically by the CMake generated file</p>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/mocs_compilation.cpp</code>, or</p>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/mocs_compilation_$&lt;CONFIG&gt;.cpp</code>, </p>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/mocs_compilation.cpp</code>, or</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/mocs_compilation_$&lt;CONFIG&gt;.cpp</code>, </dd>
 <p> which is added to the target&#8217;s sources.</dl>
 <h3>Qt version detection</h3>
 <p><i>AUTOMOC</i> enabled targets need to know the Qt major and minor version they&#8217;re working with. The major version usually is provided by the <code>INTERFACE_QT_MAJOR_VERSION</code> property of the <code>Qt[456]Core</code> library, that the target links to. To find the minor version, CMake builds a list of available Qt versions from</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Qt6Core_VERSION_MAJOR</code> and <code>Qt6Core_VERSION_MINOR</code> variables (usually set by <code>find_package(Qt6&#8230;)</code>)</p>
-<dt>&bull;</p>
-<dd><code>Qt6Core_VERSION_MAJOR</code> and <code>Qt6Core_VERSION_MINOR</code> directory properties</p>
-<dt>&bull;</p>
-<dd><code>Qt5Core_VERSION_MAJOR</code> and <code>Qt5Core_VERSION_MINOR</code> variables (usually set by <code>find_package(Qt5&#8230;)</code>)</p>
-<dt>&bull;</p>
-<dd><code>Qt5Core_VERSION_MAJOR</code> and <code>Qt5Core_VERSION_MINOR</code> directory properties</p>
-<dt>&bull;</p>
-<dd><code>QT_VERSION_MAJOR</code> and <code>QT_VERSION_MINOR</code> variables (usually set by <code>find_package(Qt4&#8230;)</code>)</p>
-<dt>&bull;</p>
-<dd><code>QT_VERSION_MAJOR</code> and <code>QT_VERSION_MINOR</code> directory properties </p>
+<dt>&bull;</dt>
+<dd><code>Qt6Core_VERSION_MAJOR</code> and <code>Qt6Core_VERSION_MINOR</code> variables (usually set by <code>find_package(Qt6&#8230;)</code>)</dd>
+<dt>&bull;</dt>
+<dd><code>Qt6Core_VERSION_MAJOR</code> and <code>Qt6Core_VERSION_MINOR</code> directory properties</dd>
+<dt>&bull;</dt>
+<dd><code>Qt5Core_VERSION_MAJOR</code> and <code>Qt5Core_VERSION_MINOR</code> variables (usually set by <code>find_package(Qt5&#8230;)</code>)</dd>
+<dt>&bull;</dt>
+<dd><code>Qt5Core_VERSION_MAJOR</code> and <code>Qt5Core_VERSION_MINOR</code> directory properties</dd>
+<dt>&bull;</dt>
+<dd><code>QT_VERSION_MAJOR</code> and <code>QT_VERSION_MINOR</code> variables (usually set by <code>find_package(Qt4&#8230;)</code>)</dd>
+<dt>&bull;</dt>
+<dd><code>QT_VERSION_MAJOR</code> and <code>QT_VERSION_MINOR</code> directory properties </dd>
 <p> in the context of the <code>add_executable()</code> or <code>add_library()</code> call. </p>
 <p> Assumed <code>INTERFACE_QT_MAJOR_VERSION</code> is a valid number, the first entry in the list with a matching major version is taken. If no matching major version was found, an error is generated. If <code>INTERFACE_QT_MAJOR_VERSION</code> is not a valid number, the first entry in the list is taken. </p>
 <p> A <code>find_package(Qt[456]&#8230;)</code> call sets the <code>QT/Qt[56]Core_VERSION_MAJOR/MINOR</code> variables. If the call is in a different context than the <code>add_executable()</code> or <code>add_library()</code> call, e.g. in a function, then the version variables might not be available to the <i>AUTOMOC</i> enabled target. In that case the version variables can be forwarded from the <code>find_package(Qt[456]&#8230;)</code> calling context to the <code>add_executable()</code> or <code>add_library()</code> calling context as directory properties. The following Qt5 example demonstrates the procedure. </p>
@@ -832,14 +832,14 @@ set_property(TARGET myTarget PROPERTY AUTOMOC ON)</pre>
 <p> Boolean value used by <code>AUTOMOC</code> to determine if the compiler pre definitions file <code>moc_predefs.h</code> should be generated. </p>
 <p> CMake generates a <code>moc_predefs.h</code> file with compiler pre definitions from the output of the command defined in <code>CMAKE_CXX_COMPILER_PREDEFINES_COMMAND</code> when</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>AUTOMOC</code> is enabled,</p>
-<dt>&bull;</p>
-<dd><i>AUTOMOC_COMPILER_PREDEFINES</i> is enabled,</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_CXX_COMPILER_PREDEFINES_COMMAND</code> isn&#8217;t empty and</p>
-<dt>&bull;</p>
-<dd>the Qt version is greater or equal 5.8. </p>
+<dt>&bull;</dt>
+<dd><code>AUTOMOC</code> is enabled,</dd>
+<dt>&bull;</dt>
+<dd><i>AUTOMOC_COMPILER_PREDEFINES</i> is enabled,</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_CXX_COMPILER_PREDEFINES_COMMAND</code> isn&#8217;t empty and</dd>
+<dt>&bull;</dt>
+<dd>the Qt version is greater or equal 5.8. </dd>
 <p> The <code>moc_predefs.h</code> file, which is generated in <code>AUTOGEN_BUILD_DIR</code>, is passed to <code>moc</code> as the argument to the <code>&#8211;include</code> option. </p>
 <p> By default <i>AUTOMOC_COMPILER_PREDEFINES</i> is initialized from <code>CMAKE_AUTOMOC_COMPILER_PREDEFINES</code>, which is ON by default. </p>
 <p> See the <code><a href="/docs/linux/man/7-cmake-qt/">cmake-qt</a>(7)</code> manual for more information on using CMake with Qt.</dl>
@@ -849,10 +849,10 @@ set_property(TARGET myTarget PROPERTY AUTOMOC ON)</pre>
 <p> Filters are defined as <code>KEYWORD;REGULAR_EXPRESSION</code> pairs. First the file content is searched for <code>KEYWORD</code>. If it is found at least once, then file names are extracted by successively searching for <code>REGULAR_EXPRESSION</code> and taking the first match group. </p>
 <p> The file name found in the first match group is searched for</p>
 <dl>
-<dt>&bull;</p>
-<dd>first in the vicinity of the source file</p>
-<dt>&bull;</p>
-<dd>and afterwards in the target&#8217;s <code>INCLUDE_DIRECTORIES</code>. </p>
+<dt>&bull;</dt>
+<dd>first in the vicinity of the source file</dd>
+<dt>&bull;</dt>
+<dd>and afterwards in the target&#8217;s <code>INCLUDE_DIRECTORIES</code>. </dd>
 <p> If any of the extracted files changes, then the <code>moc</code> file for the source file gets rebuilt even when the source file itself doesn&#8217;t change. </p>
 <p> If any of the extracted files is <code>GENERATED</code> or if it is not in the target&#8217;s sources, then it might be necessary to add it to the <code>_autogen</code> target dependencies. See <code>AUTOGEN_TARGET_DEPENDS</code> for reference. </p>
 <p> By default <i>AUTOMOC_DEPEND_FILTERS</i> is initialized from <code>CMAKE_AUTOMOC_DEPEND_FILTERS</code>, which is empty by default. </p>
@@ -911,10 +911,10 @@ JSON_BASED_CLASS(Complex_Class, &quot;meta.json&quot;)
 <p> This property is only used if the <code>AUTOMOC</code> property is <code>ON</code> for this target. </p>
 <p> When running <code>AUTOMOC</code>, CMake searches for the strings listed in <i>AUTOMOC_MACRO_NAMES</i> in C++ source and header files. If any of the strings is found</p>
 <dl>
-<dt>&bull;</p>
-<dd>as the first non space string on a new line or</p>
-<dt>&bull;</p>
-<dd>as the first non space string after a <code>{</code> on a new line, </p>
+<dt>&bull;</dt>
+<dd>as the first non space string on a new line or</dd>
+<dt>&bull;</dt>
+<dd>as the first non space string after a <code>{</code> on a new line, </dd>
 <p> then the file will be processed by <code>moc</code>. </p>
 <p> By default <i>AUTOMOC_MACRO_NAMES</i> is initialized from <code>CMAKE_AUTOMOC_MACRO_NAMES</code>. </p>
 <p> See the <code><a href="/docs/linux/man/7-cmake-qt/">cmake-qt</a>(7)</code> manual for more information on using CMake with Qt.</dl>
@@ -935,10 +935,10 @@ JSON_BASED_CLASS(Complex_Class, &quot;meta.json&quot;)
 <h3>Reproducible builds</h3>
 <p>For reproducible builds it is recommended to keep headers that are <code>moc</code> compiled in one of the target <code>include directories</code> and set <i>AUTOMOC_PATH_PREFIX</i> to <code>ON</code>. This ensures that:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>moc</code> output files are identical on different build setups,</p>
-<dt>&bull;</p>
-<dd><code>moc</code> output files will compile correctly when the source and/or build directory is a symbolic link.</dl>
+<dt>&bull;</dt>
+<dd><code>moc</code> output files are identical on different build setups,</dd>
+<dt>&bull;</dt>
+<dd><code>moc</code> output files will compile correctly when the source and/or build directory is a symbolic link.</dd></dl>
 <h3>Autorcc</h3>
 <p>Should the target be processed with auto-rcc (for Qt projects). </p>
 <p> <i>AUTORCC</i> is a boolean specifying whether CMake will handle the Qt <code>rcc</code> code generator automatically, i.e. without having to use commands like <code>QT4_ADD_RESOURCES()</code>, <code>QT5_ADD_RESOURCES()</code>, etc. Currently, Qt versions 4 to 6 are supported. </p>
@@ -979,15 +979,15 @@ set_property(TARGET tgt PROPERTY AUTORCC_OPTIONS &quot;--compress;9&quot;)
 <pre>#include &quot;ui_&lt;ui_base&gt;.h&quot;</pre>
 <p>Once such an include statement is found in a file, CMake searches for the <code>uic</code> input file <code>&lt;ui_base&gt;.ui</code></p>
 <dl>
-<dt>&bull;</p>
-<dd>in the vicinity of the file and</p>
-<dt>&bull;</p>
-<dd>in the <code>AUTOUIC_SEARCH_PATHS</code> of the target. </p>
+<dt>&bull;</dt>
+<dd>in the vicinity of the file and</dd>
+<dt>&bull;</dt>
+<dd>in the <code>AUTOUIC_SEARCH_PATHS</code> of the target. </dd>
 <p> If the <code>&lt;ui_base&gt;.ui</code> file was found, <code>uic</code> is called on it to generate <code>ui_&lt;ui_base&gt;.h</code> in the directory</p>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include</code> for single configuration generators or in</p>
-<dt>&bull;</p>
-<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code> for <code>multi configuration</code> generators. </p>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include</code> for single configuration generators or in</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code> for <code>multi configuration</code> generators. </dd>
 <p> Where <code>&lt;AUTOGEN_BUILD_DIR&gt;</code> is the value of the target property <code>AUTOGEN_BUILD_DIR</code>. </p>
 <p> The include directory is automatically added to the target&#8217;s <code>INCLUDE_DIRECTORIES</code>.</dl>
 <h3>Modifiers</h3>
@@ -1062,17 +1062,17 @@ set_property(TARGET tgt PROPERTY AUTOUIC_OPTIONS &quot;--no-protection&quot;)
 <p> This property specifies the C standard whose features are requested to build this target. For some compilers, this results in adding a flag such as <code>-std=gnu11</code> to the compile line. For compilers that have no notion of a C standard level, such as Microsoft Visual C++ before VS 16.7, this property has no effect. </p>
 <p> Supported values are:</p>
 <dl>
-<dt><code>90</code></p>
-<dd>C89/C90</p>
-<dt><code>99</code></p>
-<dd>C99</p>
-<dt><code>11</code></p>
-<dd>C11</p>
-<dt><code>17</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>90</code></dt>
+<dd>C89/C90</dd>
+<dt><code>99</code></dt>
+<dd>C99</dd>
+<dt><code>11</code></dt>
+<dd>C11</dd>
+<dt><code>17</code></dt>
+<dd>New in version 3.21. </dd>
 <p> C17</p>
-<dt><code>23</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>23</code></dt>
+<dd>New in version 3.21. </dd>
 <p> C23 </p>
 <p> If the value requested does not result in a compile flag being added for the compiler in use, a previous standard flag will be added instead. This means that using: </p>
 <pre>set_property(TARGET tgt PROPERTY C_STANDARD 11)</pre>
@@ -1090,12 +1090,12 @@ set_property(TARGET tgt PROPERTY AUTOUIC_OPTIONS &quot;--no-protection&quot;)
 <p> By setting this target property, the target is configured to build with <code>C++/CLI</code> support. </p>
 <p> The Visual Studio generator defines the <code>clr</code> parameter depending on the value of <code>COMMON_LANGUAGE_RUNTIME</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd>property not set: native C++ (i.e. default)</p>
-<dt>&bull;</p>
-<dd>property set but empty: mixed unmanaged/managed C++</p>
-<dt>&bull;</p>
-<dd>property set to any non empty value: managed C++ </p>
+<dt>&bull;</dt>
+<dd>property not set: native C++ (i.e. default)</dd>
+<dt>&bull;</dt>
+<dd>property set but empty: mixed unmanaged/managed C++</dd>
+<dt>&bull;</dt>
+<dd>property set to any non empty value: managed C++ </dd>
 <p> Supported values: <code>&quot;&quot;</code>, <code>&quot;pure&quot;</code>, <code>&quot;safe&quot;</code> </p>
 <p> This property is only evaluated Visual Studio Generators for VS 2010 and above. </p>
 <p> To be able to build managed C++ targets with VS 2017 and above the component <code>C++/CLI support</code> must be installed, which may not be done by default. </p>
@@ -1219,12 +1219,12 @@ set_property(TARGET myptx PROPERTY CUDA_PTX_COMPILATION ON)</pre>
 <p> Select the CUDA runtime library for use by compilers targeting the CUDA language. </p>
 <p> The allowed case insensitive values are:</p>
 <dl>
-<dt><code>None</code></p>
-<dd>Link with <code>-cudart=none</code> or equivalent flag(s) to use no CUDA runtime library.</p>
-<dt><code>Shared</code></p>
-<dd>Link with <code>-cudart=shared</code> or equivalent flag(s) to use a dynamically-linked CUDA runtime library.</p>
-<dt><code>Static</code></p>
-<dd>Link with <code>-cudart=static</code> or equivalent flag(s) to use a statically-linked CUDA runtime library. </p>
+<dt><code>None</code></dt>
+<dd>Link with <code>-cudart=none</code> or equivalent flag(s) to use no CUDA runtime library.</dd>
+<dt><code>Shared</code></dt>
+<dd>Link with <code>-cudart=shared</code> or equivalent flag(s) to use a dynamically-linked CUDA runtime library.</dd>
+<dt><code>Static</code></dt>
+<dd>Link with <code>-cudart=static</code> or equivalent flag(s) to use a statically-linked CUDA runtime library. </dd>
 <p> Contents of <code>CUDA_RUNTIME_LIBRARY</code> may use <code>generator expressions</code>. </p>
 <p> If that property is not set then CMake uses an appropriate default value based on the compiler to select the CUDA runtime library. </p>
 <p> <code>NOTE:</code> This property has effect only when the <code>CUDA</code> language is enabled. To control the CUDA runtime linking when only using the CUDA SDK with the <code>C</code> or <code>C++</code> language we recommend using the <code>FindCUDAToolkit</code> module.</dl>
@@ -1241,21 +1241,21 @@ set_property(TARGET myptx PROPERTY CUDA_PTX_COMPILATION ON)</pre>
 <p> This property specifies the CUDA/C++ standard whose features are requested to build this target. For some compilers, this results in adding a flag such as <code>-std=gnu++11</code> to the compile line. </p>
 <p> Supported values are:</p>
 <dl>
-<dt><code>98</code></p>
-<dd>CUDA C++98. Note that this maps to the same as <code>03</code> internally.</p>
-<dt><code>03</code></p>
-<dd>CUDA C++03</p>
-<dt><code>11</code></p>
-<dd>CUDA C++11</p>
-<dt><code>14</code></p>
-<dd>CUDA C++14. While CMake 3.8 and later <i>recognize</i> <code>14</code> as a valid value, CMake 3.9 was the first version to include support for any compiler.</p>
-<dt><code>17</code></p>
-<dd>CUDA C++17. While CMake 3.8 and later <i>recognize</i> <code>17</code> as a valid value, CMake 3.18 was the first version to include support for any compiler.</p>
-<dt><code>20</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>98</code></dt>
+<dd>CUDA C++98. Note that this maps to the same as <code>03</code> internally.</dd>
+<dt><code>03</code></dt>
+<dd>CUDA C++03</dd>
+<dt><code>11</code></dt>
+<dd>CUDA C++11</dd>
+<dt><code>14</code></dt>
+<dd>CUDA C++14. While CMake 3.8 and later <i>recognize</i> <code>14</code> as a valid value, CMake 3.9 was the first version to include support for any compiler.</dd>
+<dt><code>17</code></dt>
+<dd>CUDA C++17. While CMake 3.8 and later <i>recognize</i> <code>17</code> as a valid value, CMake 3.18 was the first version to include support for any compiler.</dd>
+<dt><code>20</code></dt>
+<dd>New in version 3.12. </dd>
 <p> CUDA C++20. While CMake 3.12 and later <i>recognize</i> <code>20</code> as a valid value, CMake 3.18 was the first version to include support for any compiler.</p>
-<dt><code>23</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>23</code></dt>
+<dd>New in version 3.20. </dd>
 <p> CUDA C++23 </p>
 <p> If the value requested does not result in a compile flag being added for the compiler in use, a previous standard flag will be added instead. This means that using: </p>
 <pre>set_property(TARGET tgt PROPERTY CUDA_STANDARD 11)</pre>
@@ -1280,20 +1280,20 @@ set_property(TARGET myptx PROPERTY CUDA_PTX_COMPILATION ON)</pre>
 <p> This property specifies the C++ standard whose features are requested to build this target. For some compilers, this results in adding a flag such as <code>-std=gnu++11</code> to the compile line. For compilers that have no notion of a standard level, such as Microsoft Visual C++ before 2015 Update 3, this has no effect. </p>
 <p> Supported values are:</p>
 <dl>
-<dt><code>98</code></p>
-<dd>C++98</p>
-<dt><code>11</code></p>
-<dd>C++11</p>
-<dt><code>14</code></p>
-<dd>C++14</p>
-<dt><code>17</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>98</code></dt>
+<dd>C++98</dd>
+<dt><code>11</code></dt>
+<dd>C++11</dd>
+<dt><code>14</code></dt>
+<dd>C++14</dd>
+<dt><code>17</code></dt>
+<dd>New in version 3.8. </dd>
 <p> C++17</p>
-<dt><code>20</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>20</code></dt>
+<dd>New in version 3.12. </dd>
 <p> C++20</p>
-<dt><code>23</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>23</code></dt>
+<dd>New in version 3.20. </dd>
 <p> C++23 </p>
 <p> If the value requested does not result in a compile flag being added for the compiler in use, a previous standard flag will be added instead. This means that using: </p>
 <pre>set_property(TARGET tgt PROPERTY CXX_STANDARD 11)</pre>
@@ -1355,14 +1355,14 @@ set_property(TARGET myptx PROPERTY CUDA_PTX_COMPILATION ON)</pre>
 <p>Specify whether an executable exports symbols for loadable modules. </p>
 <p> Normally an executable does not export any symbols because it is the final program. It is possible for an executable to export symbols to be used by loadable modules. When this property is set to true CMake will allow other targets to &quot;link&quot; to the executable with the <code>target_link_libraries()</code> command. On all platforms a target-level dependency on the executable is created for targets that link to it. Handling of the executable on the link lines of the loadable modules varies by platform:</p>
 <dl>
-<dt>&bull;</p>
-<dd>On Windows-based systems (including Cygwin) an &quot;import library&quot; is created along with the executable to list the exported symbols. Loadable modules link to the import library to get the symbols.</p>
-<dt>&bull;</p>
-<dd>On macOS, loadable modules link to the executable itself using the <code>-bundle_loader</code> flag.</p>
-<dt>&bull;</p>
-<dd>On AIX, a linker &quot;import file&quot; is created along with the executable to list the exported symbols for import when linking other targets. Loadable modules link to the import file to get the symbols.</p>
-<dt>&bull;</p>
-<dd>On other platforms, loadable modules are simply linked without referencing the executable since the dynamic loader will automatically bind symbols when the module is loaded. </p>
+<dt>&bull;</dt>
+<dd>On Windows-based systems (including Cygwin) an &quot;import library&quot; is created along with the executable to list the exported symbols. Loadable modules link to the import library to get the symbols.</dd>
+<dt>&bull;</dt>
+<dd>On macOS, loadable modules link to the executable itself using the <code>-bundle_loader</code> flag.</dd>
+<dt>&bull;</dt>
+<dd>On AIX, a linker &quot;import file&quot; is created along with the executable to list the exported symbols for import when linking other targets. Loadable modules link to the import file to get the symbols.</dd>
+<dt>&bull;</dt>
+<dd>On other platforms, loadable modules are simply linked without referencing the executable since the dynamic loader will automatically bind symbols when the module is loaded. </dd>
 <p> This property is initialized by the value of the variable <code>CMAKE_ENABLE_EXPORTS</code> if it is set when a target is created.</dl>
 <h3>Exclude_From_All</h3>
 <p>Set this target property to a true (or false) value to exclude (or include) the target from the &quot;all&quot; target of the containing directory and its ancestors. If excluded, running e.g. <code>make</code> in the containing directory or its ancestors will not build the target by default. </p>
@@ -1443,14 +1443,14 @@ set_target_properties(dynamicFramework PROPERTIES
 <p> When building with configuration <code>&lt;CONFIG&gt;</code> the value of this property is appended to the framework file name built on disk. </p>
 <p> For example, given a framework called <code>my_fw</code>, a value of <code>_debug</code> for the <code>FRAMEWORK_MULTI_CONFIG_POSTFIX_DEBUG</code> property, and <code>Debug;Release</code> in <code>CMAKE_CONFIGURATION_TYPES</code>, the following relevant files would be created for the <code>Debug</code> and <code>Release</code> configurations:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Release/my_fw.framework/my_fw</code></p>
-<dt>&bull;</p>
-<dd><code>Release/my_fw.framework/Versions/A/my_fw</code></p>
-<dt>&bull;</p>
-<dd><code>Debug/my_fw.framework/my_fw_debug</code></p>
-<dt>&bull;</p>
-<dd><code>Debug/my_fw.framework/Versions/A/my_fw_debug</code> </p>
+<dt>&bull;</dt>
+<dd><code>Release/my_fw.framework/my_fw</code></dd>
+<dt>&bull;</dt>
+<dd><code>Release/my_fw.framework/Versions/A/my_fw</code></dd>
+<dt>&bull;</dt>
+<dd><code>Debug/my_fw.framework/my_fw_debug</code></dd>
+<dt>&bull;</dt>
+<dd><code>Debug/my_fw.framework/Versions/A/my_fw_debug</code> </dd>
 <p> For framework targets, this property is initialized by the value of the <code>CMAKE_FRAMEWORK_MULTI_CONFIG_POSTFIX_&lt;CONFIG&gt;</code> variable if it is set when a target is created. </p>
 <p> This property is ignored for non-framework targets, and when using single config generators.</dl>
 <h3>Framework_Version</h3>
@@ -1498,18 +1498,18 @@ set_target_properties(dynamicFramework PROPERTIES
 <p> The HIP/C++ standard requested to build this target. </p>
 <p> Supported values are:</p>
 <dl>
-<dt><code>98</code></p>
-<dd>HIP C++98</p>
-<dt><code>11</code></p>
-<dd>HIP C++11</p>
-<dt><code>14</code></p>
-<dd>HIP C++14</p>
-<dt><code>17</code></p>
-<dd>HIP C++17</p>
-<dt><code>20</code></p>
-<dd>HIP C++20</p>
-<dt><code>23</code></p>
-<dd>HIP C++23 </p>
+<dt><code>98</code></dt>
+<dd>HIP C++98</dd>
+<dt><code>11</code></dt>
+<dd>HIP C++11</dd>
+<dt><code>14</code></dt>
+<dd>HIP C++14</dd>
+<dt><code>17</code></dt>
+<dd>HIP C++17</dd>
+<dt><code>20</code></dt>
+<dd>HIP C++20</dd>
+<dt><code>23</code></dt>
+<dd>HIP C++23 </dd>
 <p> If the value requested does not result in a compile flag being added for the compiler in use, a previous standard flag will be added instead. This means that using: </p>
 <pre>set_property(TARGET tgt PROPERTY HIP_STANDARD 11)</pre>
 <p>with a compiler which does not support <code>-std=gnu++11</code> or an equivalent flag will not result in an error or warning, but will instead add the <code>-std=gnu++98</code> flag if supported. This &quot;decay&quot; behavior may be controlled with the <code>HIP_STANDARD_REQUIRED</code> target property. Additionally, the <code>HIP_EXTENSIONS</code> target property may be used to control whether compiler-specific extensions are enabled on a per-target basis. </p>
@@ -1845,18 +1845,18 @@ set_property(TARGET someObjs PROPERTY IMPORTED_OBJECTS
 <h3>&lt;LANG&gt;_EXTENSIONS</h3>
 <p>The variations are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>C_EXTENSIONS</code></p>
-<dt>&bull;</p>
-<dd><code>CXX_EXTENSIONS</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA_EXTENSIONS</code></p>
-<dt>&bull;</p>
-<dd><code>HIP_EXTENSIONS</code></p>
-<dt>&bull;</p>
-<dd><code>OBJC_EXTENSIONS</code></p>
-<dt>&bull;</p>
-<dd><code>OBJCXX_EXTENSIONS</code> </p>
+<dt>&bull;</dt>
+<dd><code>C_EXTENSIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>CXX_EXTENSIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA_EXTENSIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>HIP_EXTENSIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>OBJC_EXTENSIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>OBJCXX_EXTENSIONS</code> </dd>
 <p> These properties specify whether compiler-specific extensions are requested. </p>
 <p> These properties are initialized by the value of the <code>CMAKE_&lt;LANG&gt;_EXTENSIONS</code> variable if it is set when a target is created and otherwise by the value of <code>CMAKE_&lt;LANG&gt;_EXTENSIONS_DEFAULT</code> (see <code>CMP0128</code>). </p>
 <p> For supported CMake versions see the respective pages. To control language standard versions see <code>&lt;LANG&gt;_STANDARD</code>. </p>
@@ -1874,18 +1874,18 @@ set_property(TARGET someObjs PROPERTY IMPORTED_OBJECTS
 <h3>&lt;LANG&gt;_STANDARD</h3>
 <p>The variations are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>C_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>CXX_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>HIP_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>OBJC_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>OBJCXX_STANDARD</code> </p>
+<dt>&bull;</dt>
+<dd><code>C_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>CXX_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>HIP_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>OBJC_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>OBJCXX_STANDARD</code> </dd>
 <p> These properties specify language standard versions which are requested. When a newer standard is specified than is supported by the compiler, then it will fallback to the latest supported standard. This &quot;decay&quot; behavior may be controlled with the <code>&lt;LANG&gt;_STANDARD_REQUIRED</code> target property. </p>
 <p> These properties are initialized by the value of the <code>CMAKE_&lt;LANG&gt;_STANDARD</code> variable if it is set when a target is created. </p>
 <p> For supported values and CMake versions see the respective pages. To control compiler-specific extensions see <code>&lt;LANG&gt;_EXTENSIONS</code>. </p>
@@ -1893,18 +1893,18 @@ set_property(TARGET someObjs PROPERTY IMPORTED_OBJECTS
 <h3>&lt;LANG&gt;_STANDARD_REQUIRED</h3>
 <p>The variations are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>C_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>CXX_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>HIP_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>OBJC_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>OBJCXX_STANDARD_REQUIRED</code> </p>
+<dt>&bull;</dt>
+<dd><code>C_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>CXX_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>HIP_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>OBJC_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>OBJCXX_STANDARD_REQUIRED</code> </dd>
 <p> These properties specify whether the value of <code>&lt;LANG&gt;_STANDARD</code> is a requirement. When <code>OFF</code> or unset, the <code>&lt;LANG&gt;_STANDARD</code> target property is treated as optional and may &quot;decay&quot; to a previous standard if the requested is not available. </p>
 <p> These properties are initialized by the value of the <code>CMAKE_&lt;LANG&gt;_STANDARD_REQUIRED</code> variable if it is set when a target is created. </p>
 <p> For supported CMake versions see the respective pages. To control language standard versions see <code>&lt;LANG&gt;_STANDARD</code>. </p>
@@ -2008,8 +2008,8 @@ set_property(TARGET someObjs PROPERTY IMPORTED_OBJECTS
 <p>Assume the linker looks for static libraries by default. </p>
 <p> Some linkers support switches such as <code>-Bstatic</code> and <code>-Bdynamic</code> to determine whether to use static or shared libraries for <code>-lXXX</code> options. CMake uses these options to set the link type for libraries whose full paths are not known or (in some cases) are in implicit link directories for the platform. By default the linker search type is assumed to be <code>-Bdynamic</code> at the beginning of the library list. This property switches the assumption to <code>-Bstatic</code>. It is intended for use when linking an executable statically (e.g. with the GNU <code>-static</code> option).</p>
 <dl>
-<dt><code>This property is initialized by the value of the variable</code></p>
-<dd><code>CMAKE_LINK_SEARCH_START_STATIC</code> if it is set when a target is created. </p>
+<dt><code>This property is initialized by the value of the variable</code></dt>
+<dd><code>CMAKE_LINK_SEARCH_START_STATIC</code> if it is set when a target is created. </dd>
 <p> See also <code>LINK_SEARCH_END_STATIC</code>.</dl>
 <h3>Link_What_You_Use</h3>
 <p>New in version 3.7. </p>
@@ -2049,36 +2049,36 @@ set_property(TARGET someObjs PROPERTY IMPORTED_OBJECTS
 <p> An executable target with <code>MACOSX_BUNDLE</code> enabled will be built as an application bundle on macOS. By default its <code>Info.plist</code> file is created by configuring a template called <code>MacOSXBundleInfo.plist.in</code> located in the <code>CMAKE_MODULE_PATH</code>. This property specifies an alternative template file name which may be a full path. </p>
 <p> The following target properties may be set to specify content to be configured into the file:</p>
 <dl>
-<dt><code>MACOSX_BUNDLE_BUNDLE_NAME</code></p>
-<dd>Sets <code>CFBundleName</code>.</p>
-<dt><code>MACOSX_BUNDLE_BUNDLE_VERSION</code></p>
-<dd>Sets <code>CFBundleVersion</code>.</p>
-<dt><code>MACOSX_BUNDLE_COPYRIGHT</code></p>
-<dd>Sets <code>NSHumanReadableCopyright</code>.</p>
-<dt><code>MACOSX_BUNDLE_GUI_IDENTIFIER</code></p>
-<dd>Sets <code>CFBundleIdentifier</code>.</p>
-<dt><code>MACOSX_BUNDLE_ICON_FILE</code></p>
-<dd>Sets <code>CFBundleIconFile</code>.</p>
-<dt><code>MACOSX_BUNDLE_INFO_STRING</code></p>
-<dd>Sets <code>CFBundleGetInfoString</code>.</p>
-<dt><code>MACOSX_BUNDLE_LONG_VERSION_STRING</code></p>
-<dd>Sets <code>CFBundleLongVersionString</code>.</p>
-<dt><code>MACOSX_BUNDLE_SHORT_VERSION_STRING</code></p>
-<dd>Sets <code>CFBundleShortVersionString</code>. </p>
+<dt><code>MACOSX_BUNDLE_BUNDLE_NAME</code></dt>
+<dd>Sets <code>CFBundleName</code>.</dd>
+<dt><code>MACOSX_BUNDLE_BUNDLE_VERSION</code></dt>
+<dd>Sets <code>CFBundleVersion</code>.</dd>
+<dt><code>MACOSX_BUNDLE_COPYRIGHT</code></dt>
+<dd>Sets <code>NSHumanReadableCopyright</code>.</dd>
+<dt><code>MACOSX_BUNDLE_GUI_IDENTIFIER</code></dt>
+<dd>Sets <code>CFBundleIdentifier</code>.</dd>
+<dt><code>MACOSX_BUNDLE_ICON_FILE</code></dt>
+<dd>Sets <code>CFBundleIconFile</code>.</dd>
+<dt><code>MACOSX_BUNDLE_INFO_STRING</code></dt>
+<dd>Sets <code>CFBundleGetInfoString</code>.</dd>
+<dt><code>MACOSX_BUNDLE_LONG_VERSION_STRING</code></dt>
+<dd>Sets <code>CFBundleLongVersionString</code>.</dd>
+<dt><code>MACOSX_BUNDLE_SHORT_VERSION_STRING</code></dt>
+<dd>Sets <code>CFBundleShortVersionString</code>. </dd>
 <p> CMake variables of the same name may be set to affect all targets in a directory that do not have each specific property set. If a custom <code>Info.plist</code> is specified by this property it may of course hard-code all the settings instead of using the target properties.</dl>
 <h3>Macosx_Framework_Info_Plist</h3>
 <p>Specify a custom <code>Info.plist</code> template for a macOS and iOS Framework. </p>
 <p> A library target with <code>FRAMEWORK</code> enabled will be built as a framework on macOS. By default its <code>Info.plist</code> file is created by configuring a template called <code>MacOSXFrameworkInfo.plist.in</code> located in the <code>CMAKE_MODULE_PATH</code>. This property specifies an alternative template file name which may be a full path. </p>
 <p> The following target properties may be set to specify content to be configured into the file:</p>
 <dl>
-<dt><code>MACOSX_FRAMEWORK_BUNDLE_VERSION</code></p>
-<dd>Sets <code>CFBundleVersion</code>.</p>
-<dt><code>MACOSX_FRAMEWORK_ICON_FILE</code></p>
-<dd>Sets <code>CFBundleIconFile</code>.</p>
-<dt><code>MACOSX_FRAMEWORK_IDENTIFIER</code></p>
-<dd>Sets <code>CFBundleIdentifier</code>.</p>
-<dt><code>MACOSX_FRAMEWORK_SHORT_VERSION_STRING</code></p>
-<dd>Sets <code>CFBundleShortVersionString</code>. </p>
+<dt><code>MACOSX_FRAMEWORK_BUNDLE_VERSION</code></dt>
+<dd>Sets <code>CFBundleVersion</code>.</dd>
+<dt><code>MACOSX_FRAMEWORK_ICON_FILE</code></dt>
+<dd>Sets <code>CFBundleIconFile</code>.</dd>
+<dt><code>MACOSX_FRAMEWORK_IDENTIFIER</code></dt>
+<dd>Sets <code>CFBundleIdentifier</code>.</dd>
+<dt><code>MACOSX_FRAMEWORK_SHORT_VERSION_STRING</code></dt>
+<dd>Sets <code>CFBundleShortVersionString</code>. </dd>
 <p> CMake variables of the same name may be set to affect all targets in a directory that do not have each specific property set. If a custom <code>Info.plist</code> is specified by this property it may of course hard-code all the settings instead of using the target properties.</dl>
 <h3>Macosx_Rpath</h3>
 <p>Whether this target on macOS or iOS is located at runtime using rpaths. </p>
@@ -2124,14 +2124,14 @@ set_target_properties(foo PROPERTIES
 <p> Select the MSVC runtime library for use by compilers targeting the MSVC ABI. </p>
 <p> The allowed values are:</p>
 <dl>
-<dt><code>MultiThreaded</code></p>
-<dd>Compile with <code>-MT</code> or equivalent flag(s) to use a multi-threaded statically-linked runtime library.</p>
-<dt><code>MultiThreadedDLL</code></p>
-<dd>Compile with <code>-MD</code> or equivalent flag(s) to use a multi-threaded dynamically-linked runtime library.</p>
-<dt><code>MultiThreadedDebug</code></p>
-<dd>Compile with <code>-MTd</code> or equivalent flag(s) to use a multi-threaded statically-linked runtime library.</p>
-<dt><code>MultiThreadedDebugDLL</code></p>
-<dd>Compile with <code>-MDd</code> or equivalent flag(s) to use a multi-threaded dynamically-linked runtime library. </p>
+<dt><code>MultiThreaded</code></dt>
+<dd>Compile with <code>-MT</code> or equivalent flag(s) to use a multi-threaded statically-linked runtime library.</dd>
+<dt><code>MultiThreadedDLL</code></dt>
+<dd>Compile with <code>-MD</code> or equivalent flag(s) to use a multi-threaded dynamically-linked runtime library.</dd>
+<dt><code>MultiThreadedDebug</code></dt>
+<dd>Compile with <code>-MTd</code> or equivalent flag(s) to use a multi-threaded statically-linked runtime library.</dd>
+<dt><code>MultiThreadedDebugDLL</code></dt>
+<dd>Compile with <code>-MDd</code> or equivalent flag(s) to use a multi-threaded dynamically-linked runtime library. </dd>
 <p> The value is ignored on non-MSVC compilers but an unsupported value will be rejected as an error when using a compiler targeting the MSVC ABI. </p>
 <p> The value may also be the empty string (<code>&quot;&quot;</code>) in which case no runtime library selection flag will be added explicitly by CMake. Note that with Visual Studio Generators the native build system may choose to add its own default runtime library selection flag. </p>
 <p> Use <code>generator expressions</code> to support per-configuration specification. For example, the code: </p>
@@ -2164,12 +2164,12 @@ set_property(TARGET foo PROPERTY
 <p> This property specifies the OBJC standard whose features are requested to build this target. For some compilers, this results in adding a flag such as <code>-std=gnu11</code> to the compile line. </p>
 <p> Supported values are:</p>
 <dl>
-<dt><code>90</code></p>
-<dd>Objective C89/C90</p>
-<dt><code>99</code></p>
-<dd>Objective C99</p>
-<dt><code>11</code></p>
-<dd>Objective C11 </p>
+<dt><code>90</code></dt>
+<dd>Objective C89/C90</dd>
+<dt><code>99</code></dt>
+<dd>Objective C99</dd>
+<dt><code>11</code></dt>
+<dd>Objective C11 </dd>
 <p> If the value requested does not result in a compile flag being added for the compiler in use, a previous standard flag will be added instead. This means that using: </p>
 <pre>set_property(TARGET tgt PROPERTY OBJC_STANDARD 11)</pre>
 <p>with a compiler which does not support <code>-std=gnu11</code> or an equivalent flag will not result in an error or warning, but will instead add the <code>-std=gnu99</code> or <code>-std=gnu90</code> flag if supported. This &quot;decay&quot; behavior may be controlled with the <code>OBJC_STANDARD_REQUIRED</code> target property. Additionally, the <code>OBJC_EXTENSIONS</code> target property may be used to control whether compiler-specific extensions are enabled on a per-target basis. </p>
@@ -2196,18 +2196,18 @@ set_property(TARGET foo PROPERTY
 <p> This property specifies the ObjC++ standard whose features are requested to build this target. For some compilers, this results in adding a flag such as <code>-std=gnu++11</code> to the compile line. </p>
 <p> Supported values are:</p>
 <dl>
-<dt><code>98</code></p>
-<dd>Objective C++98</p>
-<dt><code>11</code></p>
-<dd>Objective C++11</p>
-<dt><code>14</code></p>
-<dd>Objective C++14</p>
-<dt><code>17</code></p>
-<dd>Objective C++17</p>
-<dt><code>20</code></p>
-<dd>Objective C++20</p>
-<dt><code>23</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>98</code></dt>
+<dd>Objective C++98</dd>
+<dt><code>11</code></dt>
+<dd>Objective C++11</dd>
+<dt><code>14</code></dt>
+<dd>Objective C++14</dd>
+<dt><code>17</code></dt>
+<dd>Objective C++17</dd>
+<dt><code>20</code></dt>
+<dd>Objective C++20</dd>
+<dt><code>23</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Objective C++23 </p>
 <p> If the value requested does not result in a compile flag being added for the compiler in use, a previous standard flag will be added instead. This means that using: </p>
 <pre>set_property(TARGET tgt PROPERTY OBJCXX_STANDARD 11)</pre>
@@ -2228,16 +2228,16 @@ set_property(TARGET foo PROPERTY
 <p> When this property is set to true, some dependencies for a static or object library may be removed at generation time if they are not necessary to build the library, since static and object libraries don&#8217;t actually link against anything. </p>
 <p> If a static or object library has dependency optimization enabled, it first discards all dependencies. Then, it looks through all of the direct and indirect dependencies that it initially had, and adds them back if they meet any of the following criteria:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The dependency was added to the library by <code>add_dependencies()</code>.</p>
-<dt>&bull;</p>
-<dd>The dependency was added to the library through a source file in the library generated by a custom command that uses the dependency.</p>
-<dt>&bull;</p>
-<dd>The dependency has any <code>PRE_BUILD</code>, <code>PRE_LINK</code>, or <code>POST_BUILD</code> custom commands associated with it.</p>
-<dt>&bull;</p>
-<dd>The dependency contains any source files that were generated by a custom command.</p>
-<dt>&bull;</p>
-<dd>The dependency contains any languages which produce side effects that are relevant to the library. Currently, all languages except C, C++, Objective-C, Objective-C++, assembly, and CUDA are assumed to produce side effects. However, side effects from one language are assumed not to be relevant to another (for example, a Fortran library is assumed to not have any side effects that are relevant for a Swift library.) </p>
+<dt>&bull;</dt>
+<dd>The dependency was added to the library by <code>add_dependencies()</code>.</dd>
+<dt>&bull;</dt>
+<dd>The dependency was added to the library through a source file in the library generated by a custom command that uses the dependency.</dd>
+<dt>&bull;</dt>
+<dd>The dependency has any <code>PRE_BUILD</code>, <code>PRE_LINK</code>, or <code>POST_BUILD</code> custom commands associated with it.</dd>
+<dt>&bull;</dt>
+<dd>The dependency contains any source files that were generated by a custom command.</dd>
+<dt>&bull;</dt>
+<dd>The dependency contains any languages which produce side effects that are relevant to the library. Currently, all languages except C, C++, Objective-C, Objective-C++, assembly, and CUDA are assumed to produce side effects. However, side effects from one language are assumed not to be relevant to another (for example, a Fortran library is assumed to not have any side effects that are relevant for a Swift library.) </dd>
 <p> As an example, assume you have a static Fortran library which depends on a static C library, which in turn depends on a static Fortran library. The top-level Fortran library has optimization enabled, but the middle C library does not. If you build the top Fortran library, the bottom Fortran library will also build, but not the middle C library, since the C library does not have any side effects that are relevant for the Fortran library. However, if you build the middle C library, the bottom Fortran library will also build, even though it does not have any side effects that are relevant to the C library, since the C library does not have optimization enabled. </p>
 <p> This property is initialized by the value of the <code>CMAKE_OPTIMIZE_DEPENDENCIES</code> variable when the target is created.</dl>
 <h3>Osx_Architectures</h3>
@@ -2252,20 +2252,20 @@ set_property(TARGET foo PROPERTY
 <p> Contents of <code>OUTPUT_NAME</code> and the variants listed below may use <code>generator expressions</code>. </p>
 <p> See also the variants:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>ARCHIVE_OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>ARCHIVE_OUTPUT_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>LIBRARY_OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>LIBRARY_OUTPUT_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>RUNTIME_OUTPUT_NAME_&lt;CONFIG&gt;</code></p>
-<dt>&bull;</p>
-<dd><code>RUNTIME_OUTPUT_NAME</code></dl>
+<dt>&bull;</dt>
+<dd><code>OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>ARCHIVE_OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>ARCHIVE_OUTPUT_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>LIBRARY_OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>LIBRARY_OUTPUT_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>RUNTIME_OUTPUT_NAME_&lt;CONFIG&gt;</code></dd>
+<dt>&bull;</dt>
+<dd><code>RUNTIME_OUTPUT_NAME</code></dd></dl>
 <h3>OUTPUT_NAME_&lt;CONFIG&gt;</h3>
 <p>Per-configuration target file base name. </p>
 <p> This is the configuration-specific version of the <code>OUTPUT_NAME</code> target property.</p>
@@ -2444,10 +2444,10 @@ Resources
 <p> When this property is set to true, the target source files will be combined into batches for faster compilation. This is done by creating a (set of) unity sources which <code>#include</code> the original sources, then compiling these unity sources instead of the originals. This is known as a <i>Unity</i> or <i>Jumbo</i> build. </p>
 <p> CMake provides different algorithms for selecting which sources are grouped together into a <i>bucket</i>. Algorithm selection is decided by the <code>UNITY_BUILD_MODE</code> target property, which has the following acceptable values:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>BATCH</code> When in this mode CMake determines which files are grouped together. The <code>UNITY_BUILD_BATCH_SIZE</code> property controls the upper limit on how many sources can be combined per unity source file.</p>
-<dt>&bull;</p>
-<dd><code>GROUP</code> When in this mode each target explicitly specifies how to group source files. Each source file that has the same <code>UNITY_GROUP</code> value will be grouped together. Any sources that don&#8217;t have this property will be compiled individually. The <code>UNITY_BUILD_BATCH_SIZE</code> property is ignored when using this mode. </p>
+<dt>&bull;</dt>
+<dd><code>BATCH</code> When in this mode CMake determines which files are grouped together. The <code>UNITY_BUILD_BATCH_SIZE</code> property controls the upper limit on how many sources can be combined per unity source file.</dd>
+<dt>&bull;</dt>
+<dd><code>GROUP</code> When in this mode each target explicitly specifies how to group source files. Each source file that has the same <code>UNITY_GROUP</code> value will be grouped together. Any sources that don&#8217;t have this property will be compiled individually. The <code>UNITY_BUILD_BATCH_SIZE</code> property is ignored when using this mode. </dd>
 <p> If no explicit <code>UNITY_BUILD_MODE</code> has been specified, CMake will default to <code>BATCH</code>. </p>
 <p> Unity builds are not currently supported for all languages. CMake version 3.22.1 supports combining <code>C</code> and <code>CXX</code> source files. For targets that mix source files from more than one language, CMake will separate the languages such that each generated unity source file only contains sources for a single language. </p>
 <p> This property is initialized by the value of the <code>CMAKE_UNITY_BUILD</code> variable when a target is created. </p>
@@ -2455,16 +2455,16 @@ Resources
 <h3>ODR (One definition rule) errors</h3>
 <p>When multiple source files are included into one source file, as is done for unity builds, it can potentially lead to ODR errors. CMake provides a number of measures to help address such problems:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Any source file that has a non-empty <code>COMPILE_OPTIONS</code>, <code>COMPILE_DEFINITIONS</code>, <code>COMPILE_FLAGS</code>, or <code>INCLUDE_DIRECTORIES</code> source property will not be combined into a unity source.</p>
-<dt>&bull;</p>
-<dd>Projects can prevent an individual source file from being combined into a unity source by setting its <code>SKIP_UNITY_BUILD_INCLUSION</code> source property to true. This can be a more effective way to prevent problems with specific files than disabling unity builds for an entire target.</p>
-<dt>&bull;</p>
-<dd>Projects can set <code>UNITY_BUILD_UNIQUE_ID</code> to cause a valid C-identifier to be generated which is unique per file in a unity build. This can be used to avoid problems with anonymous namespaces in unity builds.</p>
-<dt>&bull;</p>
-<dd>The <code>UNITY_BUILD_CODE_BEFORE_INCLUDE</code> and <code>UNITY_BUILD_CODE_AFTER_INCLUDE</code> target properties can be used to inject code into the unity source files before and after every <code>#include</code> statement.</p>
-<dt>&bull;</p>
-<dd>The order of source files added to the target via commands like <code>add_library()</code>, <code>add_executable()</code> or <code>target_sources()</code> will be preserved in the generated unity source files. This can be used to manually enforce a specific grouping based on the <code>UNITY_BUILD_BATCH_SIZE</code> target property.</dl>
+<dt>&bull;</dt>
+<dd>Any source file that has a non-empty <code>COMPILE_OPTIONS</code>, <code>COMPILE_DEFINITIONS</code>, <code>COMPILE_FLAGS</code>, or <code>INCLUDE_DIRECTORIES</code> source property will not be combined into a unity source.</dd>
+<dt>&bull;</dt>
+<dd>Projects can prevent an individual source file from being combined into a unity source by setting its <code>SKIP_UNITY_BUILD_INCLUSION</code> source property to true. This can be a more effective way to prevent problems with specific files than disabling unity builds for an entire target.</dd>
+<dt>&bull;</dt>
+<dd>Projects can set <code>UNITY_BUILD_UNIQUE_ID</code> to cause a valid C-identifier to be generated which is unique per file in a unity build. This can be used to avoid problems with anonymous namespaces in unity builds.</dd>
+<dt>&bull;</dt>
+<dd>The <code>UNITY_BUILD_CODE_BEFORE_INCLUDE</code> and <code>UNITY_BUILD_CODE_AFTER_INCLUDE</code> target properties can be used to inject code into the unity source files before and after every <code>#include</code> statement.</dd>
+<dt>&bull;</dt>
+<dd>The order of source files added to the target via commands like <code>add_library()</code>, <code>add_executable()</code> or <code>target_sources()</code> will be preserved in the generated unity source files. This can be used to manually enforce a specific grouping based on the <code>UNITY_BUILD_BATCH_SIZE</code> target property.</dd></dl>
 <h3>Unity_Build_Batch_Size</h3>
 <p>New in version 3.16. </p>
 <p> Specifies the maximum number of source files that can be combined into any one unity source file when unity builds are enabled by the <code>UNITY_BUILD</code> target property. The original source files will be distributed across as many unity source files as necessary to honor this limit. </p>
@@ -2499,8 +2499,8 @@ set_target_properties(myTarget PROPERTIES
 <p>New in version 3.18. </p>
 <p> CMake provides different algorithms for selecting which sources are grouped together into a <i>bucket</i>. Selection is decided by this property, which has the following acceptable values:</p>
 <dl>
-<dt><code>BATCH</code></p>
-<dd>When in this mode CMake determines which files are grouped together. The <code>UNITY_BUILD_BATCH_SIZE</code> property controls the upper limit on how many sources can be combined per unity source file. </p>
+<dt><code>BATCH</code></dt>
+<dd>When in this mode CMake determines which files are grouped together. The <code>UNITY_BUILD_BATCH_SIZE</code> property controls the upper limit on how many sources can be combined per unity source file. </dd>
 <p> Example usage: </p>
 <pre>add_library(example_library
  source1.cxx
@@ -2511,8 +2511,8 @@ set_target_properties(example_library PROPERTIES
  UNITY_BUILD_MODE BATCH
  UNITY_BUILD_BATCH_SIZE 2
  )</pre>
-<dt><code>GROUP</code></p>
-<dd>When in this mode each target explicitly specifies how to group source files. Each source file that has the same <code>UNITY_GROUP</code> value will be grouped together. Any sources that don&#8217;t have this property will be compiled individually. The <code>UNITY_BUILD_BATCH_SIZE</code> property is ignored when using this mode. </p>
+<dt><code>GROUP</code></dt>
+<dd>When in this mode each target explicitly specifies how to group source files. Each source file that has the same <code>UNITY_GROUP</code> value will be grouped together. Any sources that don&#8217;t have this property will be compiled individually. The <code>UNITY_BUILD_BATCH_SIZE</code> property is ignored when using this mode. </dd>
 <p> Example usage: </p>
 <pre>add_library(example_library
  source1.cxx
@@ -2667,12 +2667,12 @@ set_property(TARGET myproject PROPERTY VS_DPI_AWARE &quot;PerMonitor&quot;)</pre
 <p> Generator expressions are supported. </p>
 <p> There are reasons one might want to exclude a target / generated project from deployment:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The library or executable may not be necessary in the primary deploy/debug scenario, and excluding from deployment saves time in the develop/download/debug cycle.</p>
-<dt>&bull;</p>
-<dd>There may be insufficient space on the target device to accommodate all of the build products.</p>
-<dt>&bull;</p>
-<dd>Visual Studio 2013 requires a target device IP address be entered for each target marked for deployment. For large numbers of targets, this can be tedious. NOTE: Visual Studio <i>will</i> deploy all project dependencies of a project tagged for deployment to the IP address configured for that project even if those dependencies are not tagged for deployment.</dl>
+<dt>&bull;</dt>
+<dd>The library or executable may not be necessary in the primary deploy/debug scenario, and excluding from deployment saves time in the develop/download/debug cycle.</dd>
+<dt>&bull;</dt>
+<dd>There may be insufficient space on the target device to accommodate all of the build products.</dd>
+<dt>&bull;</dt>
+<dd>Visual Studio 2013 requires a target device IP address be entered for each target marked for deployment. For large numbers of targets, this can be tedious. NOTE: Visual Studio <i>will</i> deploy all project dependencies of a project tagged for deployment to the IP address configured for that project even if those dependencies are not tagged for deployment.</dd></dl>
 <h3>Example 1</h3>
 <p>This shows setting the variable for the target foo. </p>
 <pre>add_library(foo SHARED foo.cpp)
@@ -2779,10 +2779,10 @@ set_property(TARGET foo PROPERTY VS_SOLUTION_DEPLOY &quot;$&lt;NOT:$&lt;CONFIG:R
 <p> Tell the <code>Xcode</code> generator to embed the specified list of items into the target bundle. <code>&lt;type&gt;</code> specifies the embed build phase to use. See the Xcode documentation for the base location of each <code>&lt;type&gt;</code>. </p>
 <p> The supported values for <code>&lt;type&gt;</code> are:</p>
 <dl>
-<dt><code>FRAMEWORKS</code></p>
-<dd>The specified items will be added to the <code>Embed Frameworks</code> build phase. The items can be CMake target names or paths to frameworks or libraries.</p>
-<dt><code>APP_EXTENSIONS</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>FRAMEWORKS</code></dt>
+<dd>The specified items will be added to the <code>Embed Frameworks</code> build phase. The items can be CMake target names or paths to frameworks or libraries.</dd>
+<dt><code>APP_EXTENSIONS</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The specified items will be added to the <code>Embed App Extensions</code> build phase. They must be CMake target names. </p>
 <p> See also <code>XCODE_EMBED_&lt;type&gt;_PATH</code>, <code>XCODE_EMBED_&lt;type&gt;_REMOVE_HEADERS_ON_COPY</code> and <code>XCODE_EMBED_&lt;type&gt;_CODE_SIGN_ON_COPY</code>.</dl>
 <h3>XCODE_EMBED_&lt;type&gt;_CODE_SIGN_ON_COPY</h3>
@@ -2791,8 +2791,8 @@ set_property(TARGET foo PROPERTY VS_SOLUTION_DEPLOY &quot;$&lt;NOT:$&lt;CONFIG:R
 <p> The supported values for <code>&lt;type&gt;</code> are: </p>
 <p> <code>FRAMEWORKS</code></p>
 <dl>
-<dt><code>APP_EXTENSIONS</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>APP_EXTENSIONS</code></dt>
+<dd>New in version 3.21. </dd>
 <p> If a <code>XCODE_EMBED_&lt;type&gt;_CODE_SIGN_ON_COPY</code> property is not defined on the target, no code signing on copy will be performed for that <code>&lt;type&gt;</code>.</dl>
 <h3>XCODE_EMBED_&lt;type&gt;_PATH</h3>
 <p>New in version 3.20. </p>
@@ -2800,18 +2800,18 @@ set_property(TARGET foo PROPERTY VS_SOLUTION_DEPLOY &quot;$&lt;NOT:$&lt;CONFIG:R
 <p> The supported values for <code>&lt;type&gt;</code> are: </p>
 <p> <code>FRAMEWORKS</code></p>
 <dl>
-<dt><code>APP_EXTENSIONS</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>APP_EXTENSIONS</code></dt>
+<dd>New in version 3.21. </dd>
 </dl>
 <h3>XCODE_EMBED_&lt;type&gt;_REMOVE_HEADERS_ON_COPY</h3>
 <p>New in version 3.20. </p>
 <p> Boolean property used only by the <code>Xcode</code> generator. It specifies whether to remove headers from all the frameworks that are embedded using the <code>XCODE_EMBED_&lt;type&gt;</code> property. </p>
 <p> The supported values for <code>&lt;type&gt;</code> are:</p>
 <dl>
-<dt><code>FRAMEWORKS</code></p>
-<dd>If the <code>XCODE_EMBED_FRAMEWORKS_REMOVE_HEADERS_ON_COPY</code> property is not defined, headers will not be removed on copy by default.</p>
-<dt><code>APP_EXTENSIONS</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>FRAMEWORKS</code></dt>
+<dd>If the <code>XCODE_EMBED_FRAMEWORKS_REMOVE_HEADERS_ON_COPY</code> property is not defined, headers will not be removed on copy by default.</dd>
+<dt><code>APP_EXTENSIONS</code></dt>
+<dd>New in version 3.21. </dd>
 <p> If the <code>XCODE_EMBED_APP_EXTENSIONS_REMOVE_HEADERS_ON_COPY</code> property is not defined, headers WILL be removed on copy by default.</dl>
 <h3>Xcode_Explicit_File_Type</h3>
 <p>New in version 3.8. </p>
@@ -2823,69 +2823,69 @@ set_property(TARGET foo PROPERTY VS_SOLUTION_DEPLOY &quot;$&lt;NOT:$&lt;CONFIG:R
 <p> This property is initialized by the value of the variable <code>CMAKE_XCODE_GENERATE_SCHEME</code> if it is set when a target is created. </p>
 <p> The following target properties overwrite the default of the corresponding settings on the &quot;Diagnostic&quot; tab for each schema file. Each of those is initialized by the respective <code>CMAKE_</code> variable at target creation time.</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_ADDRESS_SANITIZER</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_ADDRESS_SANITIZER_USE_AFTER_RETURN</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_DISABLE_MAIN_THREAD_CHECKER</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_DYNAMIC_LIBRARY_LOADS</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_DYNAMIC_LINKER_API_USAGE</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_GUARD_MALLOC</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_MAIN_THREAD_CHECKER_STOP</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_MALLOC_GUARD_EDGES</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_MALLOC_SCRIBBLE</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_MALLOC_STACK</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_THREAD_SANITIZER</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_THREAD_SANITIZER_STOP</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SANITIZER</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SANITIZER_STOP</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_ZOMBIE_OBJECTS</code> </p>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_ADDRESS_SANITIZER</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_ADDRESS_SANITIZER_USE_AFTER_RETURN</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_DISABLE_MAIN_THREAD_CHECKER</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_DYNAMIC_LIBRARY_LOADS</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_DYNAMIC_LINKER_API_USAGE</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_GUARD_MALLOC</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_MAIN_THREAD_CHECKER_STOP</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_MALLOC_GUARD_EDGES</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_MALLOC_SCRIBBLE</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_MALLOC_STACK</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_THREAD_SANITIZER</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_THREAD_SANITIZER_STOP</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SANITIZER</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_UNDEFINED_BEHAVIOUR_SANITIZER_STOP</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_ZOMBIE_OBJECTS</code> </dd>
 <p> The following target properties will be applied on the &quot;Info&quot;, &quot;Arguments&quot;, and &quot;Options&quot; tab:</p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_ARGUMENTS</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_DEBUG_AS_ROOT</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_DEBUG_DOCUMENT_VERSIONING</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_ENVIRONMENT</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_EXECUTABLE</code></p>
-<dt>&bull;</p>
-<dd><code>XCODE_SCHEME_WORKING_DIRECTORY</code></dl>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_ARGUMENTS</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_DEBUG_AS_ROOT</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_DEBUG_DOCUMENT_VERSIONING</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_ENVIRONMENT</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_EXECUTABLE</code></dd>
+<dt>&bull;</dt>
+<dd><code>XCODE_SCHEME_WORKING_DIRECTORY</code></dd></dl>
 <h3>Xcode_Link_Build_Phase_Mode</h3>
 <p>New in version 3.19. </p>
 <p> When using the <code>Xcode</code> generator, libraries to be linked will be specified in the Xcode project file using either the &quot;Link Binary With Libraries&quot; build phase or directly as linker flags. The former allows Xcode to manage build paths, which may be necessary when creating Xcode archives because it may use different build paths to a regular build. </p>
 <p> This property controls usage of &quot;Link Binary With Libraries&quot; build phase for a target that is an app bundle, executable, shared library, shared framework or a module library. </p>
 <p> Possible values are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>NONE</code> The libraries will be linked by specifying the linker flags directly.</p>
-<dt>&bull;</p>
-<dd><code>BUILT_ONLY</code> The &quot;Link Binary With Libraries&quot; build phase will be used to link to another target under the following conditions:</p>
-<dt>&bull;</p>
-<dd>The target to be linked to is a regular non-imported, non-interface library target.</p>
-<dt>&bull;</p>
-<dd>The output directory of the target being built has not been changed from its default (see <code>RUNTIME_OUTPUT_DIRECTORY</code> and <code>LIBRARY_OUTPUT_DIRECTORY</code>).</p>
-<dt>&bull;</p>
-<dd><code>KNOWN_LOCATION</code> The &quot;Link Binary With Libraries&quot; build phase will be used to link to another target under the same conditions as with <code>BUILT_ONLY</code> and also:</p>
-<dt>&bull;</p>
-<dd>Imported library targets except those of type <code>UNKNOWN</code>.</p>
-<dt>&bull;</p>
-<dd>Any non-target library specified directly with a path. </p>
+<dt>&bull;</dt>
+<dd><code>NONE</code> The libraries will be linked by specifying the linker flags directly.</dd>
+<dt>&bull;</dt>
+<dd><code>BUILT_ONLY</code> The &quot;Link Binary With Libraries&quot; build phase will be used to link to another target under the following conditions:</dd>
+<dt>&bull;</dt>
+<dd>The target to be linked to is a regular non-imported, non-interface library target.</dd>
+<dt>&bull;</dt>
+<dd>The output directory of the target being built has not been changed from its default (see <code>RUNTIME_OUTPUT_DIRECTORY</code> and <code>LIBRARY_OUTPUT_DIRECTORY</code>).</dd>
+<dt>&bull;</dt>
+<dd><code>KNOWN_LOCATION</code> The &quot;Link Binary With Libraries&quot; build phase will be used to link to another target under the same conditions as with <code>BUILT_ONLY</code> and also:</dd>
+<dt>&bull;</dt>
+<dd>Imported library targets except those of type <code>UNKNOWN</code>.</dd>
+<dt>&bull;</dt>
+<dd>Any non-target library specified directly with a path. </dd>
 <p> For all other cases, the libraries will be linked by specifying the linker flags directly. </p>
 <p> <code>WARNING:</code> Libraries linked using &quot;Link Binary With Libraries&quot; are linked after the ones linked through regular linker flags. This order should be taken into account when different static libraries contain symbols with the same name, as the former ones will take precedence over the latter. </p>
 <p> <code>WARNING:</code> If two or more directories contain libraries with identical file names and some libraries are linked from those directories, the library search path lookup will end up linking libraries from the first directory. This is a known limitation of Xcode. </p>
@@ -3035,24 +3035,24 @@ set_tests_properties(dependsTest12 PROPERTIES DEPENDS &quot;baseTest1;baseTest2&
 <p> Specify environment variables that should be modified for running a test. Note that the operations performed by this property are performed after the <code>ENVIRONMENT</code> property is already applied. </p>
 <p> If set to a list of environment variables and values of the form <code>MYVAR=OP:VALUE</code>, where <code>MYVAR</code> is the case-sensitive name of an environment variable to be modified. Entries are considered in the order specified in the property&#8217;s value. The <code>OP</code> may be one of:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>reset</code>: Reset to the unmodified value, ignoring all modifications to <code>MYVAR</code> prior to this entry. Note that this will reset the variable to the value set by <code>ENVIRONMENT</code>, if it was set, and otherwise to its state from the rest of the CTest execution.</p>
-<dt>&bull;</p>
-<dd><code>set</code>: Replaces the current value of <code>MYVAR</code> with <code>VALUE</code>.</p>
-<dt>&bull;</p>
-<dd><code>unset</code>: Unsets the current value of <code>MYVAR</code>.</p>
-<dt>&bull;</p>
-<dd><code>string_append</code>: Appends <code>VALUE</code> to the current value of <code>MYVAR</code>.</p>
-<dt>&bull;</p>
-<dd><code>string_prepend</code>: Prepends <code>VALUE</code> to the current value of <code>MYVAR</code>.</p>
-<dt>&bull;</p>
-<dd><code>path_list_append</code>: Appends <code>VALUE</code> to the current value of <code>MYVAR</code> using the host platform&#8217;s path list separator (<code>;</code> on Windows and <code>:</code> elsewhere).</p>
-<dt>&bull;</p>
-<dd><code>path_list_prepend</code>: Prepends <code>VALUE</code> to the current value of <code>MYVAR</code> using the host platform&#8217;s path list separator (<code>;</code> on Windows and <code>:</code> elsewhere).</p>
-<dt>&bull;</p>
-<dd><code>cmake_list_append</code>: Appends <code>VALUE</code> to the current value of <code>MYVAR</code> using <code>;</code> as the separator.</p>
-<dt>&bull;</p>
-<dd><code>cmake_list_prepend</code>: Prepends <code>VALUE</code> to the current value of <code>MYVAR</code> using <code>;</code> as the separator. </p>
+<dt>&bull;</dt>
+<dd><code>reset</code>: Reset to the unmodified value, ignoring all modifications to <code>MYVAR</code> prior to this entry. Note that this will reset the variable to the value set by <code>ENVIRONMENT</code>, if it was set, and otherwise to its state from the rest of the CTest execution.</dd>
+<dt>&bull;</dt>
+<dd><code>set</code>: Replaces the current value of <code>MYVAR</code> with <code>VALUE</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>unset</code>: Unsets the current value of <code>MYVAR</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>string_append</code>: Appends <code>VALUE</code> to the current value of <code>MYVAR</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>string_prepend</code>: Prepends <code>VALUE</code> to the current value of <code>MYVAR</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>path_list_append</code>: Appends <code>VALUE</code> to the current value of <code>MYVAR</code> using the host platform&#8217;s path list separator (<code>;</code> on Windows and <code>:</code> elsewhere).</dd>
+<dt>&bull;</dt>
+<dd><code>path_list_prepend</code>: Prepends <code>VALUE</code> to the current value of <code>MYVAR</code> using the host platform&#8217;s path list separator (<code>;</code> on Windows and <code>:</code> elsewhere).</dd>
+<dt>&bull;</dt>
+<dd><code>cmake_list_append</code>: Appends <code>VALUE</code> to the current value of <code>MYVAR</code> using <code>;</code> as the separator.</dd>
+<dt>&bull;</dt>
+<dd><code>cmake_list_prepend</code>: Prepends <code>VALUE</code> to the current value of <code>MYVAR</code> using <code>;</code> as the separator. </dd>
 <p> Unrecognized <code>OP</code> values will result in the test failing before it is executed. This is so that future operations may be added without changing valid behavior of existing tests. </p>
 <p> The environment changes from this property do not affect other tests.</dl>
 <h3>Fail_Regular_Expression</h3>
@@ -3068,10 +3068,10 @@ set_tests_properties(dependsTest12 PROPERTIES DEPENDS &quot;baseTest1;baseTest2&
 <p> Specifies a list of fixtures for which the test is to be treated as a cleanup test. These fixture names are distinct from test case names and are not required to have any similarity to the names of tests associated with them. </p>
 <p> Fixture cleanup tests are ordinary tests with all of the usual test functionality. Setting the <code>FIXTURES_CLEANUP</code> property for a test has two primary effects:</p>
 <dl>
-<dt>&bull;</p>
-<dd>CTest will ensure the test executes after all other tests which list any of the fixtures in its <code>FIXTURES_REQUIRED</code> property.</p>
-<dt>&bull;</p>
-<dd>If CTest is asked to run only a subset of tests (e.g. using regular expressions or the <code>&#8211;rerun-failed</code> option) and the cleanup test is not in the set of tests to run, it will automatically be added if any tests in the set require any fixture listed in <code>FIXTURES_CLEANUP</code>. </p>
+<dt>&bull;</dt>
+<dd>CTest will ensure the test executes after all other tests which list any of the fixtures in its <code>FIXTURES_REQUIRED</code> property.</dd>
+<dt>&bull;</dt>
+<dd>If CTest is asked to run only a subset of tests (e.g. using regular expressions or the <code>&#8211;rerun-failed</code> option) and the cleanup test is not in the set of tests to run, it will automatically be added if any tests in the set require any fixture listed in <code>FIXTURES_CLEANUP</code>. </dd>
 <p> A cleanup test can have multiple fixtures listed in its <code>FIXTURES_CLEANUP</code> property. It will execute only once for the whole CTest run, not once for each fixture. A fixture can also have more than one cleanup test defined. If there are multiple cleanup tests for a fixture, projects can control their order with the usual <code>DEPENDS</code> test property if necessary. </p>
 <p> A cleanup test is allowed to require other fixtures, but not any fixture listed in its <code>FIXTURES_CLEANUP</code> property. For example: </p>
 <pre># Ok: Dependent fixture is different to cleanup
@@ -3115,27 +3115,27 @@ set_tests_properties(dbOnly dbWithFoo createDB setupUsers cleanupDB
  PROPERTIES RESOURCE_LOCK DbAccess)</pre>
 <p>Key points from this example:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Two fixtures are defined: <code>DB</code> and <code>Foo</code>. Tests can require a single fixture as <code>fooOnly</code> and <code>dbOnly</code> do, or they can depend on multiple fixtures like <code>dbWithFoo</code> does.</p>
-<dt>&bull;</p>
-<dd>A <code>DEPENDS</code> relationship is set up to ensure <code>setupUsers</code> happens after <code>createDB</code>, both of which are setup tests for the <code>DB</code> fixture and will therefore be executed before the <code>dbOnly</code> and <code>dbWithFoo</code> tests automatically.</p>
-<dt>&bull;</p>
-<dd>No explicit <code>DEPENDS</code> relationships were needed to make the setup tests run before or the cleanup tests run after the regular tests.</p>
-<dt>&bull;</p>
-<dd>The <code>Foo</code> fixture has no setup tests defined, only a single cleanup test.</p>
-<dt>&bull;</p>
-<dd><code>testsDone</code> is a cleanup test for both the <code>DB</code> and <code>Foo</code> fixtures. Therefore, it will only execute once regular tests for both fixtures have finished (i.e. after <code>fooOnly</code>, <code>dbOnly</code> and <code>dbWithFoo</code>). No <code>DEPENDS</code> relationship was specified for <code>testsDone</code>, so it is free to run before, after or concurrently with other cleanup tests for either fixture.</p>
-<dt>&bull;</p>
-<dd>The setup and cleanup tests never list the fixtures they are for in their own <code>FIXTURES_REQUIRED</code> property, as that would result in a dependency on themselves and be considered an error.</dl>
+<dt>&bull;</dt>
+<dd>Two fixtures are defined: <code>DB</code> and <code>Foo</code>. Tests can require a single fixture as <code>fooOnly</code> and <code>dbOnly</code> do, or they can depend on multiple fixtures like <code>dbWithFoo</code> does.</dd>
+<dt>&bull;</dt>
+<dd>A <code>DEPENDS</code> relationship is set up to ensure <code>setupUsers</code> happens after <code>createDB</code>, both of which are setup tests for the <code>DB</code> fixture and will therefore be executed before the <code>dbOnly</code> and <code>dbWithFoo</code> tests automatically.</dd>
+<dt>&bull;</dt>
+<dd>No explicit <code>DEPENDS</code> relationships were needed to make the setup tests run before or the cleanup tests run after the regular tests.</dd>
+<dt>&bull;</dt>
+<dd>The <code>Foo</code> fixture has no setup tests defined, only a single cleanup test.</dd>
+<dt>&bull;</dt>
+<dd><code>testsDone</code> is a cleanup test for both the <code>DB</code> and <code>Foo</code> fixtures. Therefore, it will only execute once regular tests for both fixtures have finished (i.e. after <code>fooOnly</code>, <code>dbOnly</code> and <code>dbWithFoo</code>). No <code>DEPENDS</code> relationship was specified for <code>testsDone</code>, so it is free to run before, after or concurrently with other cleanup tests for either fixture.</dd>
+<dt>&bull;</dt>
+<dd>The setup and cleanup tests never list the fixtures they are for in their own <code>FIXTURES_REQUIRED</code> property, as that would result in a dependency on themselves and be considered an error.</dd></dl>
 <h3>Fixtures_Setup</h3>
 <p>New in version 3.7. </p>
 <p> Specifies a list of fixtures for which the test is to be treated as a setup test. These fixture names are distinct from test case names and are not required to have any similarity to the names of tests associated with them. </p>
 <p> Fixture setup tests are ordinary tests with all of the usual test functionality. Setting the <code>FIXTURES_SETUP</code> property for a test has two primary effects:</p>
 <dl>
-<dt>&bull;</p>
-<dd>CTest will ensure the test executes before any other test which lists the fixture name(s) in its <code>FIXTURES_REQUIRED</code> property.</p>
-<dt>&bull;</p>
-<dd>If CTest is asked to run only a subset of tests (e.g. using regular expressions or the <code>&#8211;rerun-failed</code> option) and the setup test is not in the set of tests to run, it will automatically be added if any tests in the set require any fixture listed in <code>FIXTURES_SETUP</code>. </p>
+<dt>&bull;</dt>
+<dd>CTest will ensure the test executes before any other test which lists the fixture name(s) in its <code>FIXTURES_REQUIRED</code> property.</dd>
+<dt>&bull;</dt>
+<dd>If CTest is asked to run only a subset of tests (e.g. using regular expressions or the <code>&#8211;rerun-failed</code> option) and the setup test is not in the set of tests to run, it will automatically be added if any tests in the set require any fixture listed in <code>FIXTURES_SETUP</code>. </dd>
 <p> A setup test can have multiple fixtures listed in its <code>FIXTURES_SETUP</code> property. It will execute only once for the whole CTest run, not once for each fixture. A fixture can also have more than one setup test defined. If there are multiple setup tests for a fixture, projects can control their order with the usual <code>DEPENDS</code> test property if necessary. </p>
 <p> A setup test is allowed to require other fixtures, but not any fixture listed in its <code>FIXTURES_SETUP</code> property. For example: </p>
 <pre># Ok: dependent fixture is different to setup
@@ -3302,17 +3302,17 @@ set_property(SOURCE widget.ui PROPERTY AUTOUIC_OPTIONS &quot;--no-protection&quo
 <pre>set_source_files_properties(foo.cpp PROPERTIES COMPILE_OPTIONS &quot;-Wno-unused-parameter;-Wno-missing-field-initializer&quot;)</pre>
 <p>Related properties:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Prefer this property over <code>COMPILE_FLAGS</code>.</p>
-<dt>&bull;</p>
-<dd>Use <code>COMPILE_DEFINITIONS</code> to pass additional preprocessor definitions.</p>
-<dt>&bull;</p>
-<dd>Use <code>INCLUDE_DIRECTORIES</code> to pass additional include directories. </p>
+<dt>&bull;</dt>
+<dd>Prefer this property over <code>COMPILE_FLAGS</code>.</dd>
+<dt>&bull;</dt>
+<dd>Use <code>COMPILE_DEFINITIONS</code> to pass additional preprocessor definitions.</dd>
+<dt>&bull;</dt>
+<dd>Use <code>INCLUDE_DIRECTORIES</code> to pass additional include directories. </dd>
 <p> Related commands:</p>
-<dt>&bull;</p>
-<dd><code>add_compile_options()</code> for directory-wide settings</p>
-<dt>&bull;</p>
-<dd><code>target_compile_options()</code> for target-specific settings</dl>
+<dt>&bull;</dt>
+<dd><code>add_compile_options()</code> for directory-wide settings</dd>
+<dt>&bull;</dt>
+<dd><code>target_compile_options()</code> for target-specific settings</dd></dl>
 <h3>External_Object</h3>
 <p>If set to true then this is an object file. </p>
 <p> If this property is set to <code>True</code> then the source file is really an object file and should not be compiled. It will still be linked into the target though.</p>
@@ -3332,12 +3332,12 @@ set_property(SOURCE widget.ui PROPERTY AUTOUIC_OPTIONS &quot;--no-protection&quo
 <p> Tells the internal CMake engine that a source file is generated by an outside process such as another build step, or the execution of CMake itself. This information is then used to exempt the file from any existence or validity checks. </p>
 <p> Any file that is</p>
 <dl>
-<dt>&bull;</p>
-<dd>created by the execution of commands such as <code>add_custom_command()</code> and <code>file(GENERATE)</code></p>
-<dt>&bull;</p>
-<dd>listed as one of the <code>BYPRODUCTS</code> of an <code>add_custom_command()</code> or <code>add_custom_target()</code> command, or</p>
-<dt>&bull;</p>
-<dd>created by a CMake <code>AUTOGEN</code> operation such as <code>AUTOMOC</code>, <code>AUTORCC</code>, or <code>AUTOUIC</code> </p>
+<dt>&bull;</dt>
+<dd>created by the execution of commands such as <code>add_custom_command()</code> and <code>file(GENERATE)</code></dd>
+<dt>&bull;</dt>
+<dd>listed as one of the <code>BYPRODUCTS</code> of an <code>add_custom_command()</code> or <code>add_custom_target()</code> command, or</dd>
+<dt>&bull;</dt>
+<dd>created by a CMake <code>AUTOGEN</code> operation such as <code>AUTOMOC</code>, <code>AUTORCC</code>, or <code>AUTOUIC</code> </dd>
 <p> will be marked with the <code>GENERATED</code> property. </p>
 <p> When a generated file created as the <code>OUTPUT</code> of an <code>add_custom_command()</code> command is explicitly listed as a source file for any target in the same directory scope (which usually means the same <code>CMakeLists.txt</code> file), CMake will automatically create a dependency to make sure the file is generated before building that target. </p>
 <p> The Makefile Generators will remove <code>GENERATED</code> files during <code>make clean</code>. </p>
@@ -3616,3 +3616,4 @@ UNINITIALIZED = Type not yet specified.</pre>
 <p> This is the configuration-specific version of <code>COMPILE_DEFINITIONS</code>. Note that <code>Xcode</code> does not support per-configuration source file flags so this property will be ignored by the <code>Xcode</code> generator.</p>
 <h2>Copyright</h2>
 <p>2000-2022 Kitware, Inc. and Contributors</p>
+</p>

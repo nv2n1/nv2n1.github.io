@@ -14,11 +14,11 @@ description: "rio_device_probe – Tell if a RIO device structure has a matching
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the RIO device structure to match against</dl>
+</dd><dd>the RIO device structure to match against</dd></dl>
 <h2>Description</h2>
 <p>return 0 and set rio_dev-&gt;driver when drv claims rio_dev, else error</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

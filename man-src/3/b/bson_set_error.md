@@ -19,17 +19,17 @@ void bson_set_error(bson_error_t *error,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>error</code></p>
-<dd> A <code>bson_error_t</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd> A <code>bson_error_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>domain</code></p>
-<dd> A <code>uint32_t</code> \&amp;.</dl>
+<dt><code>domain</code></dt>
+<dd> A <code>uint32_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>code</code></p>
-<dd> A <code>uint32_t</code> \&amp;.</dl>
+<dt><code>code</code></dt>
+<dd> A <code>uint32_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>format</code></p>
-<dd> A <code><a href="/docs/linux/man/3-printf/">printf</a>(3)</code> style format string.</dl>
+<dt><code>format</code></dt>
+<dd> A <code><a href="/docs/linux/man/3-printf/">printf</a>(3)</code> style format string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is a helper function to set the parameters of a <code>bson_error_t</code> \&amp;. It handles the case where <code>error</code> is NULL by doing nothing. </p>
 <h2>COLOPHON</h2>

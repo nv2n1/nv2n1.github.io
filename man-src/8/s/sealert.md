@@ -18,26 +18,26 @@ description: "sealert – setroubleshoot client tool"
 <p> The audit records in the log file must be valid syntactically correct audit messages or the parser will ignore them.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b &#8211;browser </code></p>
-<dd>Launch the browser</p>
-<dt><code>-f &#8211;fix</code></p>
-<dd>Execute the fix command for the avc with the given uuid and plugin, requires &#8211;plugin option.</p>
-<dt><code>-h &#8211;help </code></p>
-<dd>Show this message</p>
-<dt><code>-s &#8211;service </code></p>
-<dd>Start sealert service, Usually used by dbus.</p>
-<dt><code>-S &#8211;noservice </code></p>
-<dd>Start sealert without dbus service as stand alone app</p>
-<dt><code>-l &#8211;lookupid id </code></p>
-<dd>Lookup alert by id, if id is wildcard * then return all alerts</p>
-<dt><code>-a &#8211;analyze file </code></p>
-<dd>Scan a log file, analyze its AVC&#8217;s</p>
-<dt><code>-u &#8211;user </code></p>
-<dd>logon as user</p>
-<dt><code>-p &#8211;password </code></p>
-<dd>set user password</p>
-<dt><code>-P &#8211;plugin</code></p>
-<dd>Set plugin name associated with the &#8211;fix option </p>
+<dt><code>-b &#8211;browser </code></dt>
+<dd>Launch the browser</dd>
+<dt><code>-f &#8211;fix</code></dt>
+<dd>Execute the fix command for the avc with the given uuid and plugin, requires &#8211;plugin option.</dd>
+<dt><code>-h &#8211;help </code></dt>
+<dd>Show this message</dd>
+<dt><code>-s &#8211;service </code></dt>
+<dd>Start sealert service, Usually used by dbus.</dd>
+<dt><code>-S &#8211;noservice </code></dt>
+<dd>Start sealert without dbus service as stand alone app</dd>
+<dt><code>-l &#8211;lookupid id </code></dt>
+<dd>Lookup alert by id, if id is wildcard * then return all alerts</dd>
+<dt><code>-a &#8211;analyze file </code></dt>
+<dd>Scan a log file, analyze its AVC&#8217;s</dd>
+<dt><code>-u &#8211;user </code></dt>
+<dd>logon as user</dd>
+<dt><code>-p &#8211;password </code></dt>
+<dd>set user password</dd>
+<dt><code>-P &#8211;plugin</code></dt>
+<dd>Set plugin name associated with the &#8211;fix option </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by John Dennis &lt;jdennis [at] redhat.com&gt; and Dan Walsh &lt;dwalsh [at] redhat.com&gt;.</p>

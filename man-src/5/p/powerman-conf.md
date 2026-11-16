@@ -12,13 +12,13 @@ description: "powerman.conf – configuration file for PowerMan"
 <p>The powerman.conf file typically includes one or more of the remote power controller (RPC) device files provided in the /etc/powerman directory; sets a few global options; instantiates RPC devices with unique names, hostnames, and ports; and maps node names to RPC&#8217;s and plug numbers. </p>
 <p> Network-attached RPC&#8217;s are instantiated with device lines of the form:</p>
 <dl>
-<dd>device &quot;name&quot; &quot;type&quot; &quot;host:port&quot;</dl>
+<dd>device &quot;name&quot; &quot;type&quot; &quot;host:port&quot;</dd></dl>
 <p> Serial-attached RPC&#8217;s are instantiated with device lines of the form:</p>
 <dl>
-<dd>device &quot;name&quot; &quot;type&quot; &quot;special file&quot; &quot;flags&quot;</dl>
+<dd>device &quot;name&quot; &quot;type&quot; &quot;special file&quot; &quot;flags&quot;</dd></dl>
 <p> where special file is the full path to a tty device, and flags is a serial parameter specification in a form similar to that used by lilo, e.g. &quot;9600,8n1&quot;. RPC&#8217;s that are accessed via coprocesses are instantiated as follows:</p>
 <dl>
-<dd>device &quot;name&quot; &quot;type&quot; &quot;process |&amp;&quot;</dl>
+<dd>device &quot;name&quot; &quot;type&quot; &quot;process |&amp;&quot;</dd></dl>
 <p> where process is the full path to a process whose standard output and input will be controlled by powerman, e.g. &quot;/usr/bin/conman -Q -j rpc0 |&amp;&quot;.</p>
 <h2>Example</h2>
 <p>The following example is a 16-node cluster that uses two 8-plug Baytech RPC-3 remote power controllers. </p>

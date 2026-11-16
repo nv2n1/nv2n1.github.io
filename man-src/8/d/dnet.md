@@ -14,66 +14,66 @@ description: "dnet – dumb networking library test program"
 <p><code>dnet Ar command Ar args Op &#8230;</code> is a simple test program for the dnet(3) library. It can be used to compose and transmit network datagrams as a Unix-style filter (e.g. reading from or writing to files and pipes) or modify the local system network configuration (including the ARP cache, firewall ruleset, network interfaces, and routing table).</p>
 <h3>Payload generation commands</h3>
 <dl>
-<dt><code>addr </code><i>address </i>[&#8230;]</p>
-<dd>Convert the <i>address</i> (specified as a hostname, IP address, or MAC address) into its binary representation on standard output.</p>
-<dt><code>hex </code><i>string </i>[&#8230;]</p>
-<dd>Convert the C-style escaped <i>string</i> (shellcode, for instance) into its binary representation on standard output.</p>
-<dt><code>rand </code><i>len</i></p>
-<dd>Write <i>len</i> random bytes to standard output.</dl>
+<dt><code>addr </code><i>address </i>[&#8230;]</dt>
+<dd>Convert the <i>address</i> (specified as a hostname, IP address, or MAC address) into its binary representation on standard output.</dd>
+<dt><code>hex </code><i>string </i>[&#8230;]</dt>
+<dd>Convert the C-style escaped <i>string</i> (shellcode, for instance) into its binary representation on standard output.</dd>
+<dt><code>rand </code><i>len</i></dt>
+<dd>Write <i>len</i> random bytes to standard output.</dd></dl>
 <h3>Packet encapsulation commands</h3>
 <dl>
-<dt> <code>eth</code> [<code>type </code><i>type </i> ] [<code>src </code><i>mac</i> ] [<code>dst </code><i>mac</i> ]</p>
+<dt> <code>eth</code> [<code>type </code><i>type </i> ] [<code>src </code><i>mac</i> ] [<code>dst </code><i>mac</i> ]</dt>
 <dd>
-<dd>Prepend the data read from standard input with an Ethernet header on standard output. The Ethernet <i>type</i> may be specified as `arp&#8217; , `ip&#8217; , or as a hex, octal, or decimal number.</p>
-<dt> <code>arp</code> [<code>op </code><i>op</i> ] [<code>sha </code><i>mac</i> ] [<code>spa </code><i>host</i> ] [<code>tha </code><i>mac</i> ] [<code>tpa </code><i>host</i> ]</p>
+</dd><dd>Prepend the data read from standard input with an Ethernet header on standard output. The Ethernet <i>type</i> may be specified as `arp&#8217; , `ip&#8217; , or as a hex, octal, or decimal number.</dd>
+<dt> <code>arp</code> [<code>op </code><i>op</i> ] [<code>sha </code><i>mac</i> ] [<code>spa </code><i>host</i> ] [<code>tha </code><i>mac</i> ] [<code>tpa </code><i>host</i> ]</dt>
 <dd>
-<dd>Prepend the data read from standard input with an ARP header on standard output. The ARP <i>op</i> may be specified as `req&#8217; , `rep&#8217; , `revreq&#8217; , `revrep&#8217; , or as a hex, octal, or decimal number.</p>
-<dt> <code>ip</code> [<code>tos </code><i>num</i> ] [<code>id </code><i>num</i> ] [<code>off </code><i>offset</i> ] [<code>ttl </code><i>num</i> ] [<code>proto </code><i>protocol</i> ] [<code>src </code><i>host</i> ] -words [<code>dst </code><i>dst</i> ]</p>
+</dd><dd>Prepend the data read from standard input with an ARP header on standard output. The ARP <i>op</i> may be specified as `req&#8217; , `rep&#8217; , `revreq&#8217; , `revrep&#8217; , or as a hex, octal, or decimal number.</dd>
+<dt> <code>ip</code> [<code>tos </code><i>num</i> ] [<code>id </code><i>num</i> ] [<code>off </code><i>offset</i> ] [<code>ttl </code><i>num</i> ] [<code>proto </code><i>protocol</i> ] [<code>src </code><i>host</i> ] -words [<code>dst </code><i>dst</i> ]</dt>
 <dd>
-<dd>Prepend the data read from standard input with an IP header on standard output. The fragmentation <i>offset</i> may be specified as a decimal number (optionally concatenated with `+&#8217; to indicate more fragments) or as a hex number. The <i>protocol</i> may be specified by name, or as a hex, octal, or decimal number.</p>
-<dt> <code>icmp</code> [<code>type </code><i>num</i> ] [<code>code </code><i>num</i> ]</p>
+</dd><dd>Prepend the data read from standard input with an IP header on standard output. The fragmentation <i>offset</i> may be specified as a decimal number (optionally concatenated with `+&#8217; to indicate more fragments) or as a hex number. The <i>protocol</i> may be specified by name, or as a hex, octal, or decimal number.</dd>
+<dt> <code>icmp</code> [<code>type </code><i>num</i> ] [<code>code </code><i>num</i> ]</dt>
 <dd>
-<dd>Prepend the data read from standard input with an ICMP header on standard output.</p>
-<dt> <code>tcp</code> [<code>sport </code><i>port</i> ] [<code>dport </code><i>port</i> ] [<code>flags </code><i>flags</i> ] [<code>seq </code><i>num</i> ] [<code>ack </code><i>num</i> ] [<code>win </code><i>num</i> ] [<code>urp </code><i>num</i> ]</p>
+</dd><dd>Prepend the data read from standard input with an ICMP header on standard output.</dd>
+<dt> <code>tcp</code> [<code>sport </code><i>port</i> ] [<code>dport </code><i>port</i> ] [<code>flags </code><i>flags</i> ] [<code>seq </code><i>num</i> ] [<code>ack </code><i>num</i> ] [<code>win </code><i>num</i> ] [<code>urp </code><i>num</i> ]</dt>
 <dd>
-<dd>Prepend the data read from standard input with a TCP header on standard output. A <i>port</i> may be specified by name or hex, octal, or decimal number. The TCP <i>flags</i> may be specified as some combination of the characters in the set `SAFRPU&#8217; or as a hex number.</p>
-<dt> <code>udp</code> [<code>sport </code><i>port</i> ] [<code>dport </code><i>port</i> ]</p>
+</dd><dd>Prepend the data read from standard input with a TCP header on standard output. A <i>port</i> may be specified by name or hex, octal, or decimal number. The TCP <i>flags</i> may be specified as some combination of the characters in the set `SAFRPU&#8217; or as a hex number.</dd>
+<dt> <code>udp</code> [<code>sport </code><i>port</i> ] [<code>dport </code><i>port</i> ]</dt>
 <dd>
-<dd>Prepend the data read from standard input with a UDP header on standard output. A <i>port</i> may be specified by name or hex, octal, or decimal number.</dl>
+</dd><dd>Prepend the data read from standard input with a UDP header on standard output. A <i>port</i> may be specified by name or hex, octal, or decimal number.</dd></dl>
 <h3>Packet transmission commands</h3>
 <dl>
-<dt><code>send </code>[<i>device</i> ]</p>
-<dd>Read a packet from standard input and send it over the network. If no <i>device</i> is specified, the packet is assumed to be an IP datagram and routed to its destination. Otherwise, the packet is assumed to be an Ethernet frame and is transmitted on the specified interface.</dl>
+<dt><code>send </code>[<i>device</i> ]</dt>
+<dd>Read a packet from standard input and send it over the network. If no <i>device</i> is specified, the packet is assumed to be an IP datagram and routed to its destination. Otherwise, the packet is assumed to be an Ethernet frame and is transmitted on the specified interface.</dd></dl>
 <h3>Kernel interface commands</h3>
 <dl>
-<dt><code>arp show</code></p>
-<dd>Display the kernel ARP cache.</p>
-<dt><code>arp get </code><i>host</i></p>
-<dd>Display the kernel ARP entry for <i>host</i></p>
-<dt><code>arp add </code><i>host mac</i></p>
-<dd>Add an ARP entry mapping the <i>mac</i> address for <i>host</i></p>
-<dt><code>arp delete </code><i>host</i></p>
-<dd>Delete the ARP entry for <i>host</i></p>
-<dt><code>fw show</code></p>
-<dd>Display the kernel firewall ruleset.</p>
-<dt> <code>fw add | delete</code> <i>action direction device </i> <i>protocol </i> <i>src </i>[: <i>port[-max]</i> ] <i>dst </i>[: <i>port[-max]</i> ] [<i>type </i>[/code] ]</p>
+<dt><code>arp show</code></dt>
+<dd>Display the kernel ARP cache.</dd>
+<dt><code>arp get </code><i>host</i></dt>
+<dd>Display the kernel ARP entry for <i>host</i></dd>
+<dt><code>arp add </code><i>host mac</i></dt>
+<dd>Add an ARP entry mapping the <i>mac</i> address for <i>host</i></dd>
+<dt><code>arp delete </code><i>host</i></dt>
+<dd>Delete the ARP entry for <i>host</i></dd>
+<dt><code>fw show</code></dt>
+<dd>Display the kernel firewall ruleset.</dd>
+<dt> <code>fw add | delete</code> <i>action direction device </i> <i>protocol </i> <i>src </i>[: <i>port[-max]</i> ] <i>dst </i>[: <i>port[-max]</i> ] [<i>type </i>[/code] ]</dt>
 <dd>
-<dd>Add a rule to or delete a rule from the active firewall ruleset. The <i>action</i> must be either `allow&#8217; or `block&#8217; The direction must be either `in&#8217; or `out&#8217; The <i>device</i> may specify an interface name, or `any&#8217; The <i>protocol</i> may be specified by name, or as a decimal number. For TCP and UDP protocols, a <i>port</i> (or range, if specified with a <i>max</i> value) may be specified in decimal and appended to the source and/or destination address. For ICMP, a <i>type</i> (and optional <i>code</i> may be specified in decimal.</p>
-<dt><code>intf show</code></p>
-<dd>Display the configuration of all network interfaces.</p>
-<dt><code>intf get </code><i>device</i></p>
-<dd>Display the configuration for the interface specified by <i>device</i></p>
-<dt> <code>intf set</code> <i>device</i> [<code>alias </code><i>host</i> ] [<code>dst </code><i>host</i> ] [<code>inet </code><i>host</i> ] [<code>link </code><i>mac</i> ] [<code>up | down</code> ] [<code>arp | noarp</code> ]</p>
+</dd><dd>Add a rule to or delete a rule from the active firewall ruleset. The <i>action</i> must be either `allow&#8217; or `block&#8217; The direction must be either `in&#8217; or `out&#8217; The <i>device</i> may specify an interface name, or `any&#8217; The <i>protocol</i> may be specified by name, or as a decimal number. For TCP and UDP protocols, a <i>port</i> (or range, if specified with a <i>max</i> value) may be specified in decimal and appended to the source and/or destination address. For ICMP, a <i>type</i> (and optional <i>code</i> may be specified in decimal.</dd>
+<dt><code>intf show</code></dt>
+<dd>Display the configuration of all network interfaces.</dd>
+<dt><code>intf get </code><i>device</i></dt>
+<dd>Display the configuration for the interface specified by <i>device</i></dd>
+<dt> <code>intf set</code> <i>device</i> [<code>alias </code><i>host</i> ] [<code>dst </code><i>host</i> ] [<code>inet </code><i>host</i> ] [<code>link </code><i>mac</i> ] [<code>up | down</code> ] [<code>arp | noarp</code> ]</dt>
 <dd>
-<dd>Configure the interface specified by <i>device</i></p>
-<dt><code>route show</code></p>
-<dd>Display the kernel routing table.</p>
-<dt><code>route get </code><i>dst</i></p>
-<dd>Display the route for the destination <i>dst</i> specified as a hostname, IP address, or network prefix in CIDR notation.</p>
-<dt><code>route add </code><i>dst gw</i></p>
-<dd>Add a route for the destination <i>dst</i> through the gateway <i>gw</i></p>
-<dt><code>route delete </code><i>dst</i></p>
-<dd>Delete the route for the destination <i>dst</i></dl>
+</dd><dd>Configure the interface specified by <i>device</i></dd>
+<dt><code>route show</code></dt>
+<dd>Display the kernel routing table.</dd>
+<dt><code>route get </code><i>dst</i></dt>
+<dd>Display the route for the destination <i>dst</i> specified as a hostname, IP address, or network prefix in CIDR notation.</dd>
+<dt><code>route add </code><i>dst gw</i></dt>
+<dd>Add a route for the destination <i>dst</i> through the gateway <i>gw</i></dd>
+<dt><code>route delete </code><i>dst</i></dt>
+<dd>Delete the route for the destination <i>dst</i></dd></dl>
 <h2>Examples</h2>
 <p>Send a UDP datagram containing random shellcode: </p>
 <blockquote>

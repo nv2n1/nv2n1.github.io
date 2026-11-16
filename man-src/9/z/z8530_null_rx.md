@@ -14,14 +14,14 @@ description: "z8530_null_rx – Discard a packet"
 <p><i>c</i></p>
 <dl>
 <dd>
-<dd>The channel the packet arrived on</dl>
+</dd><dd>The channel the packet arrived on</dd></dl>
 <p> <i>skb</i></p>
 <dl>
-<dd>The buffer</dl>
+<dd>The buffer</dd></dl>
 <h2>Description</h2>
 <p>We point the receive handler at this function when idle. Instead of processing the frames we get to throw them away.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

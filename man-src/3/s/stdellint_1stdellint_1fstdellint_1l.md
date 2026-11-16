@@ -10,11 +10,8 @@ description: "std::ellint_1,std::ellint_1f,std::ellint_1l – std::ellint_1,std:
 <p>std::ellint_1,std::ellint_1f,std::ellint_1l &#8211; std::ellint_1,std::ellint_1f,std::ellint_1l</p>
 <h2>Synopsis</h2>
 <pre><code>double ellint_1( double k, double φ );
-
 float ellint_1f( float k, float φ );                  (1) (since C++17)
-
 long double ellint_1l( long double k, long double φ );
-
 Promoted ellint_1( Arithmetic k, Arithmetic φ );      (2) (since C++17)</code></pre>
 <p>1) Computes the incomplete_elliptic_integral_of_the_first_kind of k and φ.<br />
 2) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by <code>(1)</code>. If any argument has integral_type, it is cast to double. If any argument is long double, then the return type Promoted is also long double, otherwise the return type is always double. </p>
@@ -41,11 +38,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     double hpi = std::acos(-1) / 2;
     std::cout &lt;&lt; &quot;F(0,π/2) = &quot; &lt;&lt; std::ellint_1(0, hpi) &lt;&lt; '

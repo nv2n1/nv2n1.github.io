@@ -15,7 +15,7 @@ blk_queue_invalidate_tags - invalidate all pending tags
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
 
 <h2>Description</h2>
 

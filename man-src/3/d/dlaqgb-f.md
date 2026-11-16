@@ -21,10 +21,10 @@ description: "dlaqgb.f –"
 <pre> DLAQGB equilibrates a general M by N band matrix A with KL
  subdiagonals and KU superdiagonals using the row and scaling factors
  in the vectors R and C.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -83,16 +83,16 @@ description: "dlaqgb.f –"
  LARGE and SMALL are threshold values used to decide if row scaling
  should be done based on the absolute size of the largest matrix
  element. If AMAX &gt; LARGE or AMAX &lt; SMALL, row scaling is done.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 159 of file dlaqgb.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

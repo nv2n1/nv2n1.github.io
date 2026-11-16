@@ -10,7 +10,6 @@ description: "mongoc_client_t – MongoDB Connection Abstraction"
 <p>mongoc_client_t &#8211; MongoDB Connection Abstraction</p>
 <h2>Synopsis</h2>
 <pre>typedef struct _mongoc_client_t mongoc_client_t;
- 
 typedef mongoc_stream_t *
 (*mongoc_stream_initiator_t) (const mongoc_uri_t *uri,
  const mongoc_host_list_t *host,

@@ -32,7 +32,7 @@ description: "fedfs – The Linux Federated File System implementation"
 <p> Rather than using junctions and information in an NSDB node, FedFS-enabled file-access clients locate a domain&#8217;s root by looking for DNS SRV records that advertise fileservers exporting domain root replicas. </p>
 <p> Such clients typically mount FedFS domain roots in a standard place so that files residing in a FedFS domain appear at the same location in the file namespace on all file-access clients. By convention, the top of the global FedFS namespace looks like this:</p>
 <dl>
-<dd>/<i>fstype</i>/<i>domainname</i> </p>
+<dd>/<i>fstype</i>/<i>domainname</i> </dd>
 </dl>
 <p> where <i>fstype</i> specifies a network file system protocol to use, and <i>domainname</i> specifies a FedFS domain. Currently, the Linux FedFS implementation recognizes only <code>nfs4</code> as a valid fstype.</p>
 <h3>Globally Useful Names</h3>
@@ -44,14 +44,14 @@ description: "fedfs – The Linux Federated File System implementation"
 <h2>Security</h2>
 <p>Each host in a FedFS domain plays one or more of the following roles, each of which have different security requirements.</p>
 <dl>
-<dt><i>NSDB node</i></p>
-<dd>LDAP server that contains FedFS domain information</p>
-<dt><i>FedFS fileserver</i></p>
-<dd>stores data accessible via a FedFS domain name space</p>
-<dt><i>FedFS file-access client</i></p>
-<dd>accesses data in FedFS domain name spaces</p>
-<dt><i>FedFS admin client</i></p>
-<dd>manages FedFS domain information</dl>
+<dt><i>NSDB node</i></dt>
+<dd>LDAP server that contains FedFS domain information</dd>
+<dt><i>FedFS fileserver</i></dt>
+<dd>stores data accessible via a FedFS domain name space</dd>
+<dt><i>FedFS file-access client</i></dt>
+<dd>accesses data in FedFS domain name spaces</dd>
+<dt><i>FedFS admin client</i></dt>
+<dd>manages FedFS domain information</dd></dl>
 <p> The Linux FedFS implementation provides administrative tools to manage FedFS fileset name and location records on an NSDB node. Junction resolution uses anonymous LDAP search requests, and administration takes place via authenticated LDAP modification requests. </p>
 <p> Fileservers and administrative clients use plaintext or TLS-secured transports to perform junction lookups and administrative requests. The Linux FedFS implementation provides tools for managing x.509 certificates required for LDAP over TLS. </p>
 <p> FedFS junction objects are created on fileservers by a side-band RPC protocol called the <i>FedFS ADMIN protocol</i>. This protocol is separate from network file system protocols. This allows FedFS to operate without modification to network file system protocols. The protocol uses RPCSEC GSS to secure administrative requests. </p>

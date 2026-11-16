@@ -15,18 +15,18 @@ description: "go-get – legacy GOPATH go get"
 <h2>DESCRIPTION</h2>
 <p> Get downloads the packages named by the import paths, along with their dependencies. It then installs the named packages, like &#8216;go install&#8217;.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> The -d flag instructs get to stop after downloading the packages; that is, it instructs get not to install the packages.</p>
-<dt><code>-f</code></p>
-<dd> The -f flag, valid only when -u is set, forces get -u not to verify that each package has been checked out from the source control repository implied by its import path. This can be useful if the source is a local fork of the original.</p>
-<dt><code>-fix</code></p>
-<dd> The -fix flag instructs get to run the fix tool on the downloaded packages before resolving dependencies or building the code.</p>
-<dt><code>-t</code></p>
-<dd> The -t flag instructs get to also download the packages required to build the tests for the specified packages.</p>
-<dt><code>-u</code></p>
-<dd> The -u flag instructs get to use the network to update the named packages and their dependencies. By default, get uses the network to check out missing packages but does not use it to look for updates to existing packages.</p>
-<dt><code>-v</code></p>
-<dd> The -v flag enables verbose progress and debug output.</dl>
+<dt><code>-d</code></dt>
+<dd> The -d flag instructs get to stop after downloading the packages; that is, it instructs get not to install the packages.</dd>
+<dt><code>-f</code></dt>
+<dd> The -f flag, valid only when -u is set, forces get -u not to verify that each package has been checked out from the source control repository implied by its import path. This can be useful if the source is a local fork of the original.</dd>
+<dt><code>-fix</code></dt>
+<dd> The -fix flag instructs get to run the fix tool on the downloaded packages before resolving dependencies or building the code.</dd>
+<dt><code>-t</code></dt>
+<dd> The -t flag instructs get to also download the packages required to build the tests for the specified packages.</dd>
+<dt><code>-u</code></dt>
+<dd> The -u flag instructs get to use the network to update the named packages and their dependencies. By default, get uses the network to check out missing packages but does not use it to look for updates to existing packages.</dd>
+<dt><code>-v</code></dt>
+<dd> The -v flag enables verbose progress and debug output.</dd></dl>
 <p> Get also accepts build flags to control the installation. See <code><a href="/docs/linux/man/1-go-build/">go-build</a></code>(1). </p>
 <p> When checking out a new package, get creates the target directory GOPATH/src/&lt;import-path&gt;. If the GOPATH contains multiple entries, get uses the first one. For more details see: &#8216;go help gopath&#8217;. </p>
 <p> When checking out or updating a package, get looks for a branch or tag that matches the locally installed version of Go. The most important rule is that if the local installation is running version &quot;go1&quot;, get searches for a branch or tag named &quot;go1&quot;. If no such version exists it retrieves the default branch of the package. </p>

@@ -28,14 +28,14 @@ description: "ETS – Enhanced Transmission Selection scheduler"
 &nbsp;<wbr>&nbsp;maps packets to bands based on packet priority.</p>
 <h2>Parameters</h2>
 <dl>
-<dt>strict</p>
-<dd>The number of bands that should be created in strict mode. If not given, this value is 0. </p>
-<dt>quanta</p>
-<dd>Each bandwidth-sharing band needs to know its quantum, which is the amount of bytes a band is allowed to dequeue before the scheduler moves to the next bandwidth-sharing band. The <code>quanta</code> argument lists quanta for the individual bandwidth-sharing bands. The minimum value of each quantum is 1. If <code>quanta</code> is not given, the default is no bandwidth-sharing bands, but note that when specifying a large number of <code>bands,</code> the extra ones are in bandwidth-sharing mode by default. </p>
-<dt>bands</p>
-<dd>Number of bands given explicitly. This value has to be at least large enough to cover the strict bands specified through the <code>strict</code> keyword and bandwidth-sharing bands specified in <code>quanta.</code> If a larger value is given, any extra bands are in bandwidth-sharing mode, and their quanta are deduced from the interface MTU. If no value is given, as many bands are created as necessary to cover all bands implied by the <code>strict</code> and <code>quanta</code> keywords. </p>
-<dt>priomap</p>
-<dd>The priomap maps the priority of a packet to a band. The argument is a list of numbers. The first number indicates which band the packets with priority 0 should be put to, the second is for priority 1, and so on. </p>
+<dt>strict</dt>
+<dd>The number of bands that should be created in strict mode. If not given, this value is 0. </dd>
+<dt>quanta</dt>
+<dd>Each bandwidth-sharing band needs to know its quantum, which is the amount of bytes a band is allowed to dequeue before the scheduler moves to the next bandwidth-sharing band. The <code>quanta</code> argument lists quanta for the individual bandwidth-sharing bands. The minimum value of each quantum is 1. If <code>quanta</code> is not given, the default is no bandwidth-sharing bands, but note that when specifying a large number of <code>bands,</code> the extra ones are in bandwidth-sharing mode by default. </dd>
+<dt>bands</dt>
+<dd>Number of bands given explicitly. This value has to be at least large enough to cover the strict bands specified through the <code>strict</code> keyword and bandwidth-sharing bands specified in <code>quanta.</code> If a larger value is given, any extra bands are in bandwidth-sharing mode, and their quanta are deduced from the interface MTU. If no value is given, as many bands are created as necessary to cover all bands implied by the <code>strict</code> and <code>quanta</code> keywords. </dd>
+<dt>priomap</dt>
+<dd>The priomap maps the priority of a packet to a band. The argument is a list of numbers. The first number indicates which band the packets with priority 0 should be put to, the second is for priority 1, and so on. </dd>
 <p> There can be up to 16 numbers in the list. If there are fewer, the default band that traffic with one of the unmentioned priorities goes to is the last one. </p>
 </dl>
 <h2>EXAMPLE &amp; USAGE</h2>

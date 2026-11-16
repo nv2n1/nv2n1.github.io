@@ -16,14 +16,14 @@ description: "/etc/apparmor/subdomain.conf – configuration file for fine-tunin
 <p>This variable accepts a string that is one of four values: <i>warn</i>, <i>build</i>, <i>panic</i>, or <i>build-panic</i>, and is set by default to <i>warn</i>. </p>
 <p> This setting controls the behavior of the AppArmor initscript if it cannot successfully load the AppArmor kernel module on startup. The four possible settings are:</p>
 <dl>
-<dt><i>warn</i></p>
-<dd>Log a failure message (the default behavior).</p>
-<dt><i>build</i></p>
-<dd>Attempt to build the AppArmor module against the currently running kernel. If the compilation is successful, the module will be loaded and AppArmor started; if the compilation fails, a failure message is logged.</p>
-<dt><i>panic</i></p>
-<dd>Log a failure message and drop to runlevel 1 (single user).</p>
-<dt><i>build-panic</i></p>
-<dd>Attempt to build the module against the running kernel (like <i>build</i>) and if the compilation fails, drop to runlevel 1 (single user).</dl>
+<dt><i>warn</i></dt>
+<dd>Log a failure message (the default behavior).</dd>
+<dt><i>build</i></dt>
+<dd>Attempt to build the AppArmor module against the currently running kernel. If the compilation is successful, the module will be loaded and AppArmor started; if the compilation fails, a failure message is logged.</dd>
+<dt><i>panic</i></dt>
+<dd>Log a failure message and drop to runlevel 1 (single user).</dd>
+<dt><i>build-panic</i></dt>
+<dd>Attempt to build the module against the running kernel (like <i>build</i>) and if the compilation fails, drop to runlevel 1 (single user).</dd></dl>
 <h2>Bugs</h2>
 <p>Setting the initscript to recompile the module will fail on <font SIZE="-1">SUSE,</font> as the module source is no longer installed by default. However, the module has been included with the <font SIZE="-1">SUSE</font> kernel, so no rebuilding should be necessary. </p>
 <p> If you find any additional bugs, please report them at &lt;<a rel="nofollow" href="https://bugs.launchpad.net/apparmor/+filebug">https://bugs.launchpad.net/apparmor/+filebug</a>&gt;.</p>

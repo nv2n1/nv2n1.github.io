@@ -15,15 +15,15 @@ netdev_rx_handler_register - register receive handler
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to register a handler for</dl>
+<dl><dd></dd><dd>device to register a handler for</dd></dl>
  
 
  <i>rx_handler</i>
-<dl><dd>receive handler to register</dl>
+<dl><dd>receive handler to register</dd></dl>
  
 
  <i>rx_handler_data</i>
-<dl><dd>data pointer that is used by rx handler</dl>
+<dl><dd>data pointer that is used by rx handler</dd></dl>
 
 <h2>Description</h2>
 

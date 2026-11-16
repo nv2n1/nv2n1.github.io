@@ -11,15 +11,11 @@ std::unwrap_reference,std::unwrap_ref_decay - std::unwrap_reference,std::unwrap_
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 20)
-
         struct unwrap_reference;
-
 template &lt;class T&gt;
 (2)(since C++ 20)
-
     struct unwrap_ref_decay : std::unwrap_reference&lt;std::decay_t&lt;T&gt;&gt; {
 };</code></pre> 
 1) If T is std::reference_wrapper&lt;U&gt; for some type U, provides a member typedef type that names U&amp;; otherwise, provides a member typedef type that names T. 

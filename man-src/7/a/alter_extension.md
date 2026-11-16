@@ -40,71 +40,71 @@ where <i>member_object</i> is:
 <p><code>ALTER EXTENSION</code> changes the definition of an installed extension. There are several subforms: </p>
 <p> UPDATE</p>
 <dl>
-<dd>This form updates the extension to a newer version. The extension must supply a suitable update script (or series of scripts) that can modify the currently-installed version into the requested version.</dl>
+<dd>This form updates the extension to a newer version. The extension must supply a suitable update script (or series of scripts) that can modify the currently-installed version into the requested version.</dd></dl>
 <p> SET SCHEMA</p>
 <dl>
-<dd>This form moves the extension&#8217;s objects into another schema. The extension has to be relocatable for this command to succeed.</dl>
+<dd>This form moves the extension&#8217;s objects into another schema. The extension has to be relocatable for this command to succeed.</dd></dl>
 <p> ADD <i>member_object</i></p>
 <dl>
-<dd>This form adds an existing object to the extension. This is mainly useful in extension update scripts. The object will subsequently be treated as a member of the extension; notably, it can only be dropped by dropping the extension.</dl>
+<dd>This form adds an existing object to the extension. This is mainly useful in extension update scripts. The object will subsequently be treated as a member of the extension; notably, it can only be dropped by dropping the extension.</dd></dl>
 <p> DROP <i>member_object</i></p>
 <dl>
-<dd>This form removes a member object from the extension. This is mainly useful in extension update scripts. The object is not dropped, only disassociated from the extension.</dl>
+<dd>This form removes a member object from the extension. This is mainly useful in extension update scripts. The object is not dropped, only disassociated from the extension.</dd></dl>
 <p> See Section 35.15, &#8220;Packaging Related Objects into an Extension&#8221;, in the documentation for more information about these operations. </p>
 <p> You must own the extension to use <code>ALTER EXTENSION</code>. The ADD/DROP forms require ownership of the added/dropped object as well.</p>
 <h2>Parameters</h2>
 <p><i>name</i></p>
 <dl>
-<dd>The name of an installed extension.</dl>
+<dd>The name of an installed extension.</dd></dl>
 <p> <i>new_version</i></p>
 <dl>
-<dd>The desired new version of the extension. This can be written as either an identifier or a string literal. If not specified, <code>ALTER EXTENSION UPDATE</code> attempts to update to whatever is shown as the default version in the extension&#8217;s control file.</dl>
+<dd>The desired new version of the extension. This can be written as either an identifier or a string literal. If not specified, <code>ALTER EXTENSION UPDATE</code> attempts to update to whatever is shown as the default version in the extension&#8217;s control file.</dd></dl>
 <p> <i>new_schema</i></p>
 <dl>
-<dd>The new schema for the extension.</dl>
+<dd>The new schema for the extension.</dd></dl>
 <p> <i>object_name</i>, <i>agg_name</i>, <i>function_name</i>, <i>operator_name</i></p>
 <dl>
-<dd>The name of an object to be added to or removed from the extension. Names of tables, aggregates, domains, foreign tables, functions, operators, operator classes, operator families, sequences, text search objects, types, and views can be schema-qualified.</dl>
+<dd>The name of an object to be added to or removed from the extension. Names of tables, aggregates, domains, foreign tables, functions, operators, operator classes, operator families, sequences, text search objects, types, and views can be schema-qualified.</dd></dl>
 <p> <i>agg_type</i></p>
 <dl>
-<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</dl>
+<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</dd></dl>
 <p> <i>source_type</i></p>
 <dl>
-<dd>The name of the source data type of the cast.</dl>
+<dd>The name of the source data type of the cast.</dd></dl>
 <p> <i>target_type</i></p>
 <dl>
-<dd>The name of the target data type of the cast.</dl>
+<dd>The name of the target data type of the cast.</dd></dl>
 <p> <i>argmode</i></p>
 <dl>
-<dd>The mode of a function argument: IN, OUT, INOUT, or VARIADIC. If omitted, the default is IN. Note that <code>ALTER EXTENSION</code> does not actually pay any attention to OUT arguments, since only the input arguments are needed to determine the function&#8217;s identity. So it is sufficient to list the IN, INOUT, and VARIADIC arguments.</dl>
+<dd>The mode of a function argument: IN, OUT, INOUT, or VARIADIC. If omitted, the default is IN. Note that <code>ALTER EXTENSION</code> does not actually pay any attention to OUT arguments, since only the input arguments are needed to determine the function&#8217;s identity. So it is sufficient to list the IN, INOUT, and VARIADIC arguments.</dd></dl>
 <p> <i>argname</i></p>
 <dl>
-<dd>The name of a function argument. Note that <code>ALTER EXTENSION</code> does not actually pay any attention to argument names, since only the argument data types are needed to determine the function&#8217;s identity.</dl>
+<dd>The name of a function argument. Note that <code>ALTER EXTENSION</code> does not actually pay any attention to argument names, since only the argument data types are needed to determine the function&#8217;s identity.</dd></dl>
 <p> <i>argtype</i></p>
 <dl>
-<dd>The data type(s) of the function&#8217;s arguments (optionally schema-qualified), if any.</dl>
+<dd>The data type(s) of the function&#8217;s arguments (optionally schema-qualified), if any.</dd></dl>
 <p> <i>left_type</i>, <i>right_type</i></p>
 <dl>
-<dd>The data type(s) of the operator&#8217;s arguments (optionally schema-qualified). Write NONE for the missing argument of a prefix or postfix operator.</dl>
+<dd>The data type(s) of the operator&#8217;s arguments (optionally schema-qualified). Write NONE for the missing argument of a prefix or postfix operator.</dd></dl>
 <p> PROCEDURAL</p>
 <dl>
-<dd>This is a noise word.</dl>
+<dd>This is a noise word.</dd></dl>
 <h2>Examples</h2>
 <p>To update the hstore extension to version 2.0: </p>
 <dl>
 <dd>
 <pre>ALTER EXTENSION hstore UPDATE TO '2.0';</pre>
-</dl>
+</dd></dl>
 <p> To change the schema of the hstore extension to utils: </p>
 <dl>
 <dd>
 <pre>ALTER EXTENSION hstore SET SCHEMA utils;</pre>
-</dl>
+</dd></dl>
 <p> To add an existing function to the hstore extension: </p>
 <dl>
 <dd>
 <pre>ALTER EXTENSION hstore ADD FUNCTION populate_record(anyelement, hstore);</pre>
-</dl>
+</dd></dl>
 <h2>Compatibility</h2>
 <p><code>ALTER EXTENSION</code> is a PostgreSQL extension.</p>
 <h2>See Also</h2>

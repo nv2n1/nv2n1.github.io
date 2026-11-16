@@ -21,16 +21,16 @@ int memfd_create(const char *name, unsigned int flags);
 <p> The name supplied in <i>name</i> is used as a filename and will be displayed as the target of the corresponding symbolic link in the directory <i>/proc/self/fd/</i>. The displayed name is always prefixed with <i>memfd:</i> and serves only for debugging purposes. Names do not affect the behavior of the file descriptor, and as such multiple files can have the same name without any side effects. </p>
 <p> The following values may be bitwise ORed in <i>flags</i> to change the behavior of <code>memfd_create</code>():</p>
 <dl>
-<dt><code>MFD_CLOEXEC</code></p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</p>
-<dt><code>MFD_ALLOW_SEALING</code></p>
-<dd> Allow sealing operations on this file. See the discussion of the <code>F_ADD_SEALS</code> and <code>F_GET_SEALS</code> operations in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), and also NOTES, below. The initial set of seals is empty. If this flag is not set, the initial set of seals will be <code>F_SEAL_SEAL</code>, meaning that no other seals can be set on the file.</p>
-<dt><code>MFD_HUGETLB</code> (since Linux 4.14)</p>
-<dd> The anonymous file will be created in the hugetlbfs filesystem using huge pages. See the Linux kernel source file <i>Documentation/admin-guide/mm/hugetlbpage.rst</i> for more information about hugetlbfs. Specifying both <code>MFD_HUGETLB</code> and <code>MFD_ALLOW_SEALING</code> in <i>flags</i> is supported since Linux 4.16.</p>
-<dt><code>MFD_HUGE_2MB</code>, <code>MFD_HUGE_1GB</code>, <code>&#8230;</code></p>
-<dd> Used in conjunction with <code>MFD_HUGETLB</code> to select alternative hugetlb page sizes (respectively, 2 MB, 1 GB, &#8230;) on systems that support multiple hugetlb page sizes. Definitions for known huge page sizes are included in the header file <i>&lt;linux/memfd.h&gt;.</i></p>
+<dt><code>MFD_CLOEXEC</code></dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd>
+<dt><code>MFD_ALLOW_SEALING</code></dt>
+<dd> Allow sealing operations on this file. See the discussion of the <code>F_ADD_SEALS</code> and <code>F_GET_SEALS</code> operations in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), and also NOTES, below. The initial set of seals is empty. If this flag is not set, the initial set of seals will be <code>F_SEAL_SEAL</code>, meaning that no other seals can be set on the file.</dd>
+<dt><code>MFD_HUGETLB</code> (since Linux 4.14)</dt>
+<dd> The anonymous file will be created in the hugetlbfs filesystem using huge pages. See the Linux kernel source file <i>Documentation/admin-guide/mm/hugetlbpage.rst</i> for more information about hugetlbfs. Specifying both <code>MFD_HUGETLB</code> and <code>MFD_ALLOW_SEALING</code> in <i>flags</i> is supported since Linux 4.16.</dd>
+<dt><code>MFD_HUGE_2MB</code>, <code>MFD_HUGE_1GB</code>, <code>&#8230;</code></dt>
+<dd> Used in conjunction with <code>MFD_HUGETLB</code> to select alternative hugetlb page sizes (respectively, 2 MB, 1 GB, &#8230;) on systems that support multiple hugetlb page sizes. Definitions for known huge page sizes are included in the header file <i>&lt;linux/memfd.h&gt;.</i></dd>
 <dt>
-<dd> For details on encoding huge page sizes not included in the header file, see the discussion of the similarly named constants in <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</dl>
+</dt><dd> For details on encoding huge page sizes not included in the header file, see the discussion of the similarly named constants in <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</dd></dl>
 <p> Unused bits in <i>flags</i> must be 0. </p>
 <p> As its return value, <code>memfd_create</code>() returns a new file descriptor that can be used to refer to the file. This file descriptor is opened for both reading and writing (<code>O_RDWR</code>) and <code>O_LARGEFILE</code> is set for the file descriptor. </p>
 <p> With respect to <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), the usual semantics apply for the file descriptor created by <code>memfd_create</code>(). A copy of the file descriptor is inherited by the child produced by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and refers to the same file. The file descriptor is preserved across <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), unless the close-on-exec flag has been set.</p>
@@ -38,20 +38,20 @@ int memfd_create(const char *name, unsigned int flags);
 <p> On success, <code>memfd_create</code>() returns a new file descriptor. On error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The address in <i>name</i> points to invalid memory.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>flags</i> included unknown bits.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>name</i> was too long. (The limit is 249 bytes, excluding the terminating null byte.)</p>
-<dt><code>EINVAL</code></p>
-<dd> Both <code>MFD_HUGETLB</code> and <code>MFD_ALLOW_SEALING</code> were specified in <i>flags</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOMEM</code></p>
-<dd> There was insufficient memory to create a new anonymous file.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The address in <i>name</i> points to invalid memory.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>flags</i> included unknown bits.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>name</i> was too long. (The limit is 249 bytes, excluding the terminating null byte.)</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Both <code>MFD_HUGETLB</code> and <code>MFD_ALLOW_SEALING</code> were specified in <i>flags</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> There was insufficient memory to create a new anonymous file.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>memfd_create</code>() system call first appeared in Linux 3.17; glibc support was added in version 2.27.</p>
 <h2>CONFORMING TO</h2>
@@ -64,27 +64,25 @@ int memfd_create(const char *name, unsigned int flags);
 <p> Dealing with untrusted peers imposes extra complexity on code that employs shared memory. Memory sealing enables that extra complexity to be eliminated, by allowing a process to operate secure in the knowledge that its peer can&#8217;t modify the shared memory in an undesired fashion. </p>
 <p> An example of the usage of the sealing mechanism is as follows:</p>
 <dl>
-<dt>1.</p>
-<dd> The first process creates a <code>tmpfs</code>(5) file using <code>memfd_create</code>(). The call yields a file descriptor used in subsequent steps.</p>
-<dt>2.</p>
-<dd> The first process sizes the file created in the previous step using <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2), maps it using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), and populates the shared memory with the desired data.</p>
-<dt>3.</p>
-<dd> The first process uses the <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) <code>F_ADD_SEALS</code> operation to place one or more seals on the file, in order to restrict further modifications on the file. (If placing the seal <code>F_SEAL_WRITE</code>, then it will be necessary to first unmap the shared writable mapping created in the previous step. Otherwise, behavior similar to <code>F_SEAL_WRITE</code> can be achieved by using <code>F_SEAL_FUTURE_WRITE</code>, which will prevent future writes via <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) from succeeding while keeping existing shared writable mappings).</p>
-<dt>4.</p>
-<dd> A second process obtains a file descriptor for the <code>tmpfs</code>(5) file and maps it. Among the possible ways in which this could happen are the following:</p>
+<dt>1.</dt>
+<dd> The first process creates a <code>tmpfs</code>(5) file using <code>memfd_create</code>(). The call yields a file descriptor used in subsequent steps.</dd>
+<dt>2.</dt>
+<dd> The first process sizes the file created in the previous step using <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2), maps it using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), and populates the shared memory with the desired data.</dd>
+<dt>3.</dt>
+<dd> The first process uses the <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) <code>F_ADD_SEALS</code> operation to place one or more seals on the file, in order to restrict further modifications on the file. (If placing the seal <code>F_SEAL_WRITE</code>, then it will be necessary to first unmap the shared writable mapping created in the previous step. Otherwise, behavior similar to <code>F_SEAL_WRITE</code> can be achieved by using <code>F_SEAL_FUTURE_WRITE</code>, which will prevent future writes via <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) from succeeding while keeping existing shared writable mappings).</dd>
+<dt>4.</dt>
+<dd> A second process obtains a file descriptor for the <code>tmpfs</code>(5) file and maps it. Among the possible ways in which this could happen are the following:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> The process that called <code>memfd_create</code>() could transfer the resulting file descriptor to the second process via a UNIX domain socket (see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7) and <code><a href="/docs/linux/man/3-cmsg/">cmsg</a></code>(3)). The second process then maps the file using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</p>
-<dt>*</p>
-<dd> The second process is created via <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and thus automatically inherits the file descriptor and mapping. (Note that in this case and the next, there is a natural trust relationship between the two processes, since they are running under the same user ID. Therefore, file sealing would not normally be necessary.)</p>
-<dt>*</p>
-<dd> The second process opens the file <i>/proc/&lt;pid&gt;/fd/&lt;fd&gt;</i>, where <i>&lt;pid&gt;</i> is the PID of the first process (the one that called <code>memfd_create</code>()), and <i>&lt;fd&gt;</i> is the number of the file descriptor returned by the call to <code>memfd_create</code>() in that process. The second process then maps the file using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</dl>
+<dt>*</dt>
+<dd> The process that called <code>memfd_create</code>() could transfer the resulting file descriptor to the second process via a UNIX domain socket (see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7) and <code><a href="/docs/linux/man/3-cmsg/">cmsg</a></code>(3)). The second process then maps the file using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</dd>
+<dt>*</dt>
+<dd> The second process is created via <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and thus automatically inherits the file descriptor and mapping. (Note that in this case and the next, there is a natural trust relationship between the two processes, since they are running under the same user ID. Therefore, file sealing would not normally be necessary.)</dd>
+<dt>*</dt>
+<dd> The second process opens the file <i>/proc/&lt;pid&gt;/fd/&lt;fd&gt;</i>, where <i>&lt;pid&gt;</i> is the PID of the first process (the one that called <code>memfd_create</code>()), and <i>&lt;fd&gt;</i> is the number of the file descriptor returned by the call to <code>memfd_create</code>() in that process. The second process then maps the file using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</dd></dl>
 </dl>
-<dt>5.</p>
-<dd> The second process uses the <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) <code>F_GET_SEALS</code> operation to retrieve the bit mask of seals that has been applied to the file. This bit mask can be inspected in order to determine what kinds of restrictions have been placed on file modifications. If desired, the second process can apply further seals to impose additional restrictions (so long as the <code>F_SEAL_SEAL</code> seal has not yet been applied).</dl>
+<dt>5.</dt>
+<dd> The second process uses the <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) <code>F_GET_SEALS</code> operation to retrieve the bit mask of seals that has been applied to the file. This bit mask can be inspected in order to determine what kinds of restrictions have been placed on file modifications. If desired, the second process can apply further seals to impose additional restrictions (so long as the <code>F_SEAL_SEAL</code> seal has not yet been applied).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Below are shown two example programs that demonstrate the use of <code>memfd_create</code>() and the file sealing API. </p>
 <p> The first program, <i>t_memfd_create.c</i>, creates a <code>tmpfs</code>(5) file using <code>memfd_create</code>(), sets a size for the file, maps it into memory, and optionally places some seals on the file. The program accepts up to three command-line arguments, of which the first two are required. The first argument is the name to associate with the file, the second argument is the size to be set for the file, and the optional third argument is a string of characters that specify seals to be set on file. </p>

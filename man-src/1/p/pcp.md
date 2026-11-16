@@ -31,14 +31,14 @@ Swap         12047          0      12047
 <p> The summary report includes: the OS version, a summary of the hardware inventory, the local timezone, the PCP software version, the state of the <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) process and associated Performance Metrics Domain Agents (PMDAs), as well as information about any PCP archive loggers (<code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1)) and PCP inference engines (<code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1)) that are running. </p>
 <p> With no arguments, <code>pcp</code> reports on the local host, however the following options are accepted:</p>
 <dl>
-<dt><code>-a</code> <i>archive</i></p>
-<dd> Report the PCP configuration as described in the set of PCP archive logs, <i>archive</i>, which is a comma-separated list of names, each of which may be the base name of an archive or the name of a directory containing one or more archives.</p>
-<dt><code>-h</code> <i>host</i></p>
-<dd> Report the PCP configuration on <i>host</i> rather than the local host.</p>
-<dt><code>-n</code> <i>pmnsfile</i></p>
-<dd> Load an alternative Performance Metrics Name Space (<code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)) from the file <i>pmnsfile</i>.</p>
-<dt><code>-P</code></p>
-<dd> Display <code>pmie</code> performance information &#8211; counts of rules evaluating to true, false, or indeterminate, as well as the expected rate of rule calculation, for each <code>pmie</code> process running on the default host. Refer to the individual metric help text for full details on these values.</dl>
+<dt><code>-a</code> <i>archive</i></dt>
+<dd> Report the PCP configuration as described in the set of PCP archive logs, <i>archive</i>, which is a comma-separated list of names, each of which may be the base name of an archive or the name of a directory containing one or more archives.</dd>
+<dt><code>-h</code> <i>host</i></dt>
+<dd> Report the PCP configuration on <i>host</i> rather than the local host.</dd>
+<dt><code>-n</code> <i>pmnsfile</i></dt>
+<dd> Load an alternative Performance Metrics Name Space (<code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)) from the file <i>pmnsfile</i>.</dd>
+<dt><code>-P</code></dt>
+<dd> Display <code>pmie</code> performance information &#8211; counts of rules evaluating to true, false, or indeterminate, as well as the expected rate of rule calculation, for each <code>pmie</code> process running on the default host. Refer to the individual metric help text for full details on these values.</dd></dl>
 <p> All of the displayed values are performance <i>metric</i> values and further information for each can be obtained using the command: </p>
 <pre>
 $ pminfo -dtT <i>metric</i>
@@ -46,12 +46,12 @@ $ pminfo -dtT <i>metric</i>
 <p> The complete set of <i>metric</i>s required by <code>pcp</code> to produce its output is contained in <code>$PCP_VAR_DIR/config/pmlogconf/tools/pcp-summary</code>.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$HOME/.pcp/bin</code></p>
-<dd> Per-user location for <i>command</i> scripts.</p>
-<dt><code>$PCP_BINADM_DIR</code></p>
-<dd> System location for installed <i>command</i> scripts.</p>
-<dt><code>$PCP_VAR_DIR/config/pmlogconf/tools/pcp-summary</code></p>
-<dd> <code><a href="/docs/linux/man/1-pmlogconf/">pmlogconf</a></code>(1) configuration file for collecting all of the metrics required by <code>pcp</code>.</dl>
+<dt><code>$HOME/.pcp/bin</code></dt>
+<dd> Per-user location for <i>command</i> scripts.</dd>
+<dt><code>$PCP_BINADM_DIR</code></dt>
+<dd> System location for installed <i>command</i> scripts.</dd>
+<dt><code>$PCP_VAR_DIR/config/pmlogconf/tools/pcp-summary</code></dt>
+<dd> <code><a href="/docs/linux/man/1-pmlogconf/">pmlogconf</a></code>(1) configuration file for collecting all of the metrics required by <code>pcp</code>.</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

@@ -19,88 +19,84 @@ description: "h2pas – The C header to pascal unit conversion program."
 <h2>OPTIONS</h2>
 <p> The output of <code>h2pas</code> can be controlled with the following options: </p>
 <dl>
-<dt><code>-d </code></p>
-<dd> use <i>external;</i> for all procedure and function declarations.</p>
-<dt><code>-D </code></p>
-<dd> use <code>external</code> <i>libname </i> <code>name</code> <i>&#8216;func_name&#8217;</i> for function and procedure declarations.</p>
-<dt><code>-e </code></p>
-<dd> Emit a series of constants instead of an enumeration type for the C <i>enum</i> construct.</p>
-<dt><code>-i</code></p>
-<dd> create an include file instead of a unit (omits the unit header).</p>
-<dt><code>-l</code><i> libname</i></p>
-<dd> specify the library name for external function declarations.</p>
-<dt><code>-o</code><i> outfile</i></p>
-<dd> Specify the output file name. Default is the input file name with the extension replaced by <i>.pp</i> &quot;.&quot;</p>
-<dt><code>-p</code></p>
-<dd> use the letter <code>P</code> in front of pointer type parameters instead of &quot;^&quot;.</p>
-<dt><code>-s</code></p>
-<dd> Strip comments from the input file. By default comments are converted to comments, but they may be displaced, since a comment is handled by the scanner.</p>
-<dt><code>-t</code></p>
-<dd> prepend typedef type names with the letter <code>T</code> (used to follow Borland&#8217;s convention that all types should be defined with T).</p>
-<dt><code>-v</code></p>
-<dd> replace pointer parameters by call by reference parameters. Use with care because some calls can expect a NIL pointer.</p>
-<dt><code>-w</code></p>
-<dd> Header file is a win32 header file (adds support for some special macros).</p>
-<dt><code>-x</code></p>
-<dd> handle SYS_TRAP of the PalmOS header files. </p>
+<dt><code>-d </code></dt>
+<dd> use <i>external;</i> for all procedure and function declarations.</dd>
+<dt><code>-D </code></dt>
+<dd> use <code>external</code> <i>libname </i> <code>name</code> <i>&#8216;func_name&#8217;</i> for function and procedure declarations.</dd>
+<dt><code>-e </code></dt>
+<dd> Emit a series of constants instead of an enumeration type for the C <i>enum</i> construct.</dd>
+<dt><code>-i</code></dt>
+<dd> create an include file instead of a unit (omits the unit header).</dd>
+<dt><code>-l</code><i> libname</i></dt>
+<dd> specify the library name for external function declarations.</dd>
+<dt><code>-o</code><i> outfile</i></dt>
+<dd> Specify the output file name. Default is the input file name with the extension replaced by <i>.pp</i> &quot;.&quot;</dd>
+<dt><code>-p</code></dt>
+<dd> use the letter <code>P</code> in front of pointer type parameters instead of &quot;^&quot;.</dd>
+<dt><code>-s</code></dt>
+<dd> Strip comments from the input file. By default comments are converted to comments, but they may be displaced, since a comment is handled by the scanner.</dd>
+<dt><code>-t</code></dt>
+<dd> prepend typedef type names with the letter <code>T</code> (used to follow Borland&#8217;s convention that all types should be defined with T).</dd>
+<dt><code>-v</code></dt>
+<dd> replace pointer parameters by call by reference parameters. Use with care because some calls can expect a NIL pointer.</dd>
+<dt><code>-w</code></dt>
+<dd> Header file is a win32 header file (adds support for some special macros).</dd>
+<dt><code>-x</code></dt>
+<dd> handle SYS_TRAP of the PalmOS header files. </dd>
 </dl>
 <h2>CONSTRUCTS</h2>
 <p> The following C declarations and statements are recognized: </p>
 <dl>
-<dt><code>defines</code></p>
-<dd> defines are changed into pascal constants if they are simple defines. macros are changed &#8211; wherever possible to functions; however the arguments are all integers, so these must be changed manually. Simple expressions in define staments are recognized, as are most arithmetic operators: addition, substraction, multiplication, division, logical operators, comparision operators, shift operators. The C construct ( A ? B : C) is also recognized and translated to a pascal construct with an IF statement (this is buggy, however). </p>
-<dt><code>preprocessor statements</code></p>
-<dd> the conditional preprocessing commands are recognized and translated into equivalent pascal compiler directives. The special <code>#ifdef __cplusplus</code> is also recognized and removed. </p>
-<dt><code>typedef</code></p>
-<dd> A typedef statement is changed into a pascal type statement. The following basic types are recognized:</p>
+<dt><code>defines</code></dt>
+<dd> defines are changed into pascal constants if they are simple defines. macros are changed &#8211; wherever possible to functions; however the arguments are all integers, so these must be changed manually. Simple expressions in define staments are recognized, as are most arithmetic operators: addition, substraction, multiplication, division, logical operators, comparision operators, shift operators. The C construct ( A ? B : C) is also recognized and translated to a pascal construct with an IF statement (this is buggy, however). </dd>
+<dt><code>preprocessor statements</code></dt>
+<dd> the conditional preprocessing commands are recognized and translated into equivalent pascal compiler directives. The special <code>#ifdef __cplusplus</code> is also recognized and removed. </dd>
+<dt><code>typedef</code></dt>
+<dd> A typedef statement is changed into a pascal type statement. The following basic types are recognized:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>char</i></p>
-<dd> changed to char.</p>
-<dt><i>float</i></p>
-<dd> changed to real (=double in free pascal).</p>
-<dt><i>int</i></p>
-<dd> changed to longint.</p>
-<dt><i>long</i></p>
-<dd> changed to longint.</p>
-<dt><i>long int</i></p>
-<dd> changed to longint.</p>
-<dt><i>short</i></p>
-<dd> changed to integer.</p>
-<dt><i>unsigned</i></p>
-<dd> changed to cardinal.</p>
-<dt><i>unsigned char</i></p>
-<dd> changed to byte.</p>
-<dt><i>unsigned int</i></p>
-<dd> changed to cardinal.</p>
-<dt><i>unsigned long int</i></p>
-<dd> changed to cardinal.</p>
-<dt><i>unsigned short</i></p>
-<dd> changed to word.</p>
-<dt><i>void</i></p>
-<dd> ignored.</dl>
+<dt><i>char</i></dt>
+<dd> changed to char.</dd>
+<dt><i>float</i></dt>
+<dd> changed to real (=double in free pascal).</dd>
+<dt><i>int</i></dt>
+<dd> changed to longint.</dd>
+<dt><i>long</i></dt>
+<dd> changed to longint.</dd>
+<dt><i>long int</i></dt>
+<dd> changed to longint.</dd>
+<dt><i>short</i></dt>
+<dd> changed to integer.</dd>
+<dt><i>unsigned</i></dt>
+<dd> changed to cardinal.</dd>
+<dt><i>unsigned char</i></dt>
+<dd> changed to byte.</dd>
+<dt><i>unsigned int</i></dt>
+<dd> changed to cardinal.</dd>
+<dt><i>unsigned long int</i></dt>
+<dd> changed to cardinal.</dd>
+<dt><i>unsigned short</i></dt>
+<dd> changed to word.</dd>
+<dt><i>void</i></dt>
+<dd> ignored.</dd></dl>
 </dl>
 <p> These types are also changed if they appear in the arguments of a function or procedure.</p>
-<dt><code>functions and procedures</code></p>
-<dd> functions and procedures are translated as well; pointer types may be changed to call by reference arguments (using the <code>var</code> argument) by using the <code>-p</code> command line argument. functions that have a variable number of arguments are changed to a function with an <code>array of const</code> argument.</p>
-<dt><code>specifiers</code></p>
-<dd> the <i>extern</i> specifier is recognized; however it is ignored. the <i>packed</i> specifier is also recognised and changed with the <i>PACKRECORDS</i> directive. The <i>const</i> specifier is also recognized, but is ignored. </p>
-<dt><code>modifiers</code></p>
-<dd> If the <code>-w </code> option is specified, then the following modifiers are recognized: <i>STDCALL</i> , <i>CDECL</i> , <i>CALLBACK</i> , <i>PASCAL</i> , <i>WINAPI</i> , <i>APIENTRY</i> , <i>WINGDIAPI</i> as defined in the win32 headers. If additionally the <code>-x</code> option is specified then the <i>SYS_TRAP</i> specifier is also recognized. </p>
-<dt><code>enums</code></p>
-<dd> enum constructs are changed into enumeration types; bear in mind that in C enumeration types can have values assigned to them; Free Pascal also allows this to a certain degree. If you know that values are assigned to enums, it is best to use the <code>-e</code> option to change the enus to a series of integer constants. </p>
-<dt><code>unions</code></p>
-<dd> unions are changed to variant records. </p>
-<dt><code>structs</code></p>
-<dd> are changed to pascal records, with <code>C</code> packing. </p>
-<dt>
-<dd>
+<dt><code>functions and procedures</code></dt>
+<dd> functions and procedures are translated as well; pointer types may be changed to call by reference arguments (using the <code>var</code> argument) by using the <code>-p</code> command line argument. functions that have a variable number of arguments are changed to a function with an <code>array of const</code> argument.</dd>
+<dt><code>specifiers</code></dt>
+<dd> the <i>extern</i> specifier is recognized; however it is ignored. the <i>packed</i> specifier is also recognised and changed with the <i>PACKRECORDS</i> directive. The <i>const</i> specifier is also recognized, but is ignored. </dd>
+<dt><code>modifiers</code></dt>
+<dd> If the <code>-w </code> option is specified, then the following modifiers are recognized: <i>STDCALL</i> , <i>CDECL</i> , <i>CALLBACK</i> , <i>PASCAL</i> , <i>WINAPI</i> , <i>APIENTRY</i> , <i>WINGDIAPI</i> as defined in the win32 headers. If additionally the <code>-x</code> option is specified then the <i>SYS_TRAP</i> specifier is also recognized. </dd>
+<dt><code>enums</code></dt>
+<dd> enum constructs are changed into enumeration types; bear in mind that in C enumeration types can have values assigned to them; Free Pascal also allows this to a certain degree. If you know that values are assigned to enums, it is best to use the <code>-e</code> option to change the enus to a series of integer constants. </dd>
+<dt><code>unions</code></dt>
+<dd> unions are changed to variant records. </dd>
+<dt><code>structs</code></dt>
+<dd> are changed to pascal records, with <code>C</code> packing. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

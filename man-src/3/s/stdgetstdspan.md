@@ -11,7 +11,6 @@ std::get(std::span) - std::get(std::span)
 <h2>Synopsis</h2>
 
 <pre><code>template&lt; std::size_t I, class T, std::size_t N &gt;  (since C++20)
-
 constexpr T&amp; get( std::span&lt;T,N&gt; s ) noexcept;</code></pre> 
 Obtains a reference to the Ith element of the span s. 
 The span must have static extent (i.e., N != std::dynamic_extent) and I must be an integer value in range [0, N). This is enforced at compile time as opposed to operator[]. 

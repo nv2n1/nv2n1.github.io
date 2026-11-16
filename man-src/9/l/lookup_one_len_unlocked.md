@@ -15,15 +15,15 @@ lookup_one_len_unlocked - filesystem helper to lookup single pathname component
 <h2>Arguments</h2>
 
 <i>name</i>
-<dl><dd><dd>pathname component to lookup</dl>
+<dl><dd></dd><dd>pathname component to lookup</dd></dl>
  
 
  <i>base</i>
-<dl><dd>base directory to lookup from</dl>
+<dl><dd>base directory to lookup from</dd></dl>
  
 
  <i>len</i>
-<dl><dd>maximum length <i>len</i> should be interpreted to</dl>
+<dl><dd>maximum length <i>len</i> should be interpreted to</dd></dl>
 
 <h2>Description</h2>
 

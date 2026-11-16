@@ -14,29 +14,29 @@ description: "ieee1284_find_ports – find ports on the system"
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
-<dt> <code>int ieee1284_find_ports(struct parport_list&nbsp;<wbr>*</code><i>list</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code></dl>
+<dt> <code>int ieee1284_find_ports(struct parport_list&nbsp;<wbr>*</code><i>list</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This function should be called before the other libieee1284 functions. This gives the library a chance to look around and see what&#8217;s available, and gives the program a chance to choose a port to use. </p>
+<dd>This function should be called before the other libieee1284 functions. This gives the library a chance to look around and see what&#8217;s available, and gives the program a chance to choose a port to use. </dd>
 <p> The <i>list</i> is a pointer to a parport_list structure that will be filled in on success. </p>
 <p> There are no <i>flags</i> defined; use zero for this parameter.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>E1284_OK</code></p>
 <dl>
 <dt>
-<dd> Success. <i>list</i> is filled in and must be destroyed using <code>ieee1284_free_ports</code>(3).</dl>
+</dt><dd> Success. <i>list</i> is filled in and must be destroyed using <code>ieee1284_free_ports</code>(3).</dd></dl>
 <p> <code>E1284_NOMEM</code></p>
 <dl>
 <dt>
-<dd> There is not enough memory available.</dl>
+</dt><dd> There is not enough memory available.</dd></dl>
 <p> <code>E1284_NOTIMPL</code></p>
 <dl>
 <dt>
-<dd> One or more of the supplied flags is not supported in this implementation.</dl>
+</dt><dd> One or more of the supplied flags is not supported in this implementation.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
 <h2>Index</h2>

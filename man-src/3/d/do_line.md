@@ -17,7 +17,6 @@ description: "do_line – Calculates all the points along a line. Allegro game p
 <pre><code>
 void draw_dust_particle(BITMAP *bmp, int x, int y, int d){
     ...}
-
 do_line(screen, 0, 0, SCREEN_W - 1, SCREEN_H - 2,
         dust_strength, draw_dust_particle);
 </code></pre>

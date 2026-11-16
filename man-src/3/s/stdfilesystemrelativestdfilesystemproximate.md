@@ -11,33 +11,19 @@ std::filesystem::relative,std::filesystem::proximate - std::filesystem::relative
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     path relative(const std::filesystem::path &amp;p, (1)(since C++ 17)
-
                                                       std::error_code &amp;ec);
-
 path relative(const std::filesystem::path &amp;p,
-
               const std::filesystem::path &amp;base = std::filesystem::current_path());
-
 path relative(const std::filesystem::path &amp;p, (2)(since C++ 17)
-
                                                   const std::filesystem::path &amp;base,
-
               std::error_code &amp;ec);
-
 path proximate(const std::filesystem::path &amp;p, (3)(since C++ 17)
-
                                                    std::error_code &amp;ec);
-
 path proximate(const std::filesystem::path &amp;p,
-
                const std::filesystem::path &amp;base = std::filesystem::current_path());
-
 path proximate(const std::filesystem::path &amp;p, (4)(since C++ 17)
-
                                                    const std::filesystem::path &amp;base,
-
                std::error_code &amp;ec);</code></pre> 
 1) Returns relative(p, current_path(), ec) 
 2) Returns p made relative to base. Resolves symlinks and normalizes both p and base before other processing. Effectively returns weakly_canonical(p).lexically_relative(weakly_canonical(base)) or weakly_canonical(p, ec).lexically_relative(weakly_canonical(base, ec)), except the error code form returns path() at the first error occurrence, if any. 

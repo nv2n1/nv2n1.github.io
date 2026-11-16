@@ -19,7 +19,6 @@ FONT *capitals;
 ...
     /* Create a font of only capital letters */
     capitals = extract_font_range(myfont, 'A', 'Z');
-
 /* Now transpose the characters in the font so that they will be used */
 /*  for the lower case letters a-z */
 transpose_font(capitals, 'a' - 'A');

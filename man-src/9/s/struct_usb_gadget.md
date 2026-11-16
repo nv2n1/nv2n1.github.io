@@ -41,85 +41,85 @@ description: "struct_usb_gadget – represents a usb slave device"
 <h2>Members</h2>
 <p>work</p>
 <dl>
-<dd>(internal use) Workqueue to be used for <code>sysfs_notify</code></dl>
+<dd>(internal use) Workqueue to be used for <code>sysfs_notify</code></dd></dl>
 <p> udc</p>
 <dl>
-<dd>struct usb_udc pointer for this gadget</dl>
+<dd>struct usb_udc pointer for this gadget</dd></dl>
 <p> ops</p>
 <dl>
-<dd>Function pointers used to access hardware-specific operations.</dl>
+<dd>Function pointers used to access hardware-specific operations.</dd></dl>
 <p> ep0</p>
 <dl>
-<dd>Endpoint zero, used when reading or writing responses to driver <code>setup</code> requests</dl>
+<dd>Endpoint zero, used when reading or writing responses to driver <code>setup</code> requests</dd></dl>
 <p> ep_list</p>
 <dl>
-<dd>List of other endpoints supported by the device.</dl>
+<dd>List of other endpoints supported by the device.</dd></dl>
 <p> speed</p>
 <dl>
-<dd>Speed of current connection to USB host.</dl>
+<dd>Speed of current connection to USB host.</dd></dl>
 <p> max_speed</p>
 <dl>
-<dd>Maximal speed the UDC can handle. UDC must support this and all slower speeds.</dl>
+<dd>Maximal speed the UDC can handle. UDC must support this and all slower speeds.</dd></dl>
 <p> state</p>
 <dl>
-<dd>the state we are now (attached, suspended, configured, etc)</dl>
+<dd>the state we are now (attached, suspended, configured, etc)</dd></dl>
 <p> name</p>
 <dl>
-<dd>Identifies the controller hardware type. Used in diagnostics and sometimes configuration.</dl>
+<dd>Identifies the controller hardware type. Used in diagnostics and sometimes configuration.</dd></dl>
 <p> dev</p>
 <dl>
-<dd>Driver model state for this abstract device.</dl>
+<dd>Driver model state for this abstract device.</dd></dl>
 <p> out_epnum</p>
 <dl>
-<dd>last used out ep number</dl>
+<dd>last used out ep number</dd></dl>
 <p> in_epnum</p>
 <dl>
-<dd>last used in ep number</dl>
+<dd>last used in ep number</dd></dl>
 <p> mA</p>
 <dl>
-<dd>last set mA value</dl>
+<dd>last set mA value</dd></dl>
 <p> otg_caps</p>
 <dl>
-<dd>OTG capabilities of this gadget.</dl>
+<dd>OTG capabilities of this gadget.</dd></dl>
 <p> sg_supported</p>
 <dl>
-<dd>true if we can handle scatter-gather</dl>
+<dd>true if we can handle scatter-gather</dd></dl>
 <p> is_otg</p>
 <dl>
-<dd>True if the USB device port uses a Mini-AB jack, so that the gadget driver must provide a USB OTG descriptor.</dl>
+<dd>True if the USB device port uses a Mini-AB jack, so that the gadget driver must provide a USB OTG descriptor.</dd></dl>
 <p> is_a_peripheral</p>
 <dl>
-<dd>False unless is_otg, the &#8220;A&#8221; end of a USB cable is in the Mini-AB jack, and HNP has been used to switch roles so that the &#8220;A&#8221; device currently acts as A-Peripheral, not A-Host.</dl>
+<dd>False unless is_otg, the &#8220;A&#8221; end of a USB cable is in the Mini-AB jack, and HNP has been used to switch roles so that the &#8220;A&#8221; device currently acts as A-Peripheral, not A-Host.</dd></dl>
 <p> b_hnp_enable</p>
 <dl>
-<dd>OTG device feature flag, indicating that the A-Host enabled HNP support.</dl>
+<dd>OTG device feature flag, indicating that the A-Host enabled HNP support.</dd></dl>
 <p> a_hnp_support</p>
 <dl>
-<dd>OTG device feature flag, indicating that the A-Host supports HNP at this port.</dl>
+<dd>OTG device feature flag, indicating that the A-Host supports HNP at this port.</dd></dl>
 <p> a_alt_hnp_support</p>
 <dl>
-<dd>OTG device feature flag, indicating that the A-Host only supports HNP on a different root port.</dl>
+<dd>OTG device feature flag, indicating that the A-Host only supports HNP on a different root port.</dd></dl>
 <p> hnp_polling_support</p>
 <dl>
-<dd>OTG device feature flag, indicating if the OTG device in peripheral mode can support HNP polling.</dl>
+<dd>OTG device feature flag, indicating if the OTG device in peripheral mode can support HNP polling.</dd></dl>
 <p> host_request_flag</p>
 <dl>
-<dd>OTG device feature flag, indicating if A-Peripheral or B-Peripheral wants to take host role.</dl>
+<dd>OTG device feature flag, indicating if A-Peripheral or B-Peripheral wants to take host role.</dd></dl>
 <p> quirk_ep_out_aligned_size</p>
 <dl>
-<dd>epout requires buffer size to be aligned to MaxPacketSize.</dl>
+<dd>epout requires buffer size to be aligned to MaxPacketSize.</dd></dl>
 <p> quirk_avoids_skb_reserve</p>
 <dl>
-<dd>udc/platform wants to avoid <code>skb_reserve</code> in u_ether.c to improve performance.</dl>
+<dd>udc/platform wants to avoid <code>skb_reserve</code> in u_ether.c to improve performance.</dd></dl>
 <p> is_selfpowered</p>
 <dl>
-<dd>if the gadget is self-powered.</dl>
+<dd>if the gadget is self-powered.</dd></dl>
 <p> deactivated</p>
 <dl>
-<dd>True if gadget is deactivated &#8211; in deactivated state it cannot be connected.</dl>
+<dd>True if gadget is deactivated &#8211; in deactivated state it cannot be connected.</dd></dl>
 <p> connected</p>
 <dl>
-<dd>True if gadget is connected.</dl>
+<dd>True if gadget is connected.</dd></dl>
 <h2>Description</h2>
 <p>Gadgets have a mostly-portable &#8220;gadget driver&#8221; implementing device functions, handling all usb configurations and interfaces. Gadget drivers talk to hardware-specific code indirectly, through ops vectors. That insulates the gadget driver from hardware details, and packages the hardware endpoints through generic i/o queues. The &#8220;usb_gadget&#8221; and &#8220;usb_ep&#8221; interfaces provide that insulation from the hardware. </p>
 <p> Except for the driver data, all fields in this structure are read-only to the gadget driver. That driver data is part of the &#8220;driver model&#8221; infrastructure in 2.6 (and later) kernels, and for earlier systems is grouped in a similar structure that&#8217;s not known to the rest of the kernel. </p>
@@ -127,5 +127,5 @@ description: "struct_usb_gadget – represents a usb slave device"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

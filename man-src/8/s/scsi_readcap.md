@@ -16,14 +16,14 @@ description: "scsi_readcap – do SCSI READ CAPACITY command on disks"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;brief</code></p>
-<dd>shortens the output to two hexadecimal numbers, both prefixed by &#8216;0x&#8217;. The first number is the number of blocks available and the second is the size of each blocks in bytes (e.g. &#8216;0x12a19eb0 0x200&#8217;). If an error is detected &#8216;0x0 0x0&#8217; is output and the script continues if there are more <i>DEVICE</i>s.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-l</code>, <code>&#8211;long</code></p>
-<dd>the default is to send the READ CAPACITY(10) command (i.e. the 10 byte cdb variant). When this option is given the READ CAPACITY(16) command is sent. The latter command yields more information in its response.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level or verbosity.</dl>
+<dt><code>-b</code>, <code>&#8211;brief</code></dt>
+<dd>shortens the output to two hexadecimal numbers, both prefixed by &#8216;0x&#8217;. The first number is the number of blocks available and the second is the size of each blocks in bytes (e.g. &#8216;0x12a19eb0 0x200&#8217;). If an error is detected &#8216;0x0 0x0&#8217; is output and the script continues if there are more <i>DEVICE</i>s.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-l</code>, <code>&#8211;long</code></dt>
+<dd>the default is to send the READ CAPACITY(10) command (i.e. the 10 byte cdb variant). When this option is given the READ CAPACITY(16) command is sent. The latter command yields more information in its response.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level or verbosity.</dd></dl>
 <h2>Exit Status</h2>
 <p>The exit status of this script is 0 when it is successful. Otherwise the exit status is that of the last sg_readcap utility called. See the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
 <h2>Authors</h2>

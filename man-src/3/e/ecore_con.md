@@ -93,13 +93,13 @@ description: "Ecore_Con.h – Sockets functions."
 <p> Whenever a client connection is made to an Ecore_Con_Server, a ECORE_CON_CLIENT_ADD event is emitted. Any event callbacks that are called receive a Ecore_Con_Client object, which represents a connection that that particular client. </p>
 <p> Functions are described in the following groupings: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd><code>Ecore Connection Library Functions</code></p>
-<dt>*</p>
-<dd><code>Ecore Connection Server Functions</code></p>
-<dt>*</p>
-<dd><code>Ecore Connection Client Functions</code></p>
-<dt>*</p>
-<dd><code>Ecore URL Connection Functions</code></dl>
+<dt>*</dt>
+<dd><code>Ecore Connection Library Functions</code></dd>
+<dt>*</dt>
+<dd><code>Ecore Connection Server Functions</code></dd>
+<dt>*</dt>
+<dd><code>Ecore Connection Client Functions</code></dd>
+<dt>*</dt>
+<dd><code>Ecore URL Connection Functions</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

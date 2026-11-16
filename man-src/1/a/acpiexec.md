@@ -17,42 +17,42 @@ description: "acpiexec – ACPI AML execution and debug utility"
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?</code></p>
-<dd> Display the help message</p>
-<dt><code>-b command-line</code></p>
-<dd> Batch mode command line execution (cmd1;cmd2;&#8230;)</p>
-<dt><code>-M [&lt;method&gt;]</code></p>
-<dd> Batch mode method execution (Default: MAIN)</p>
-<dt><code>-da</code></p>
-<dd> Disable method abort on error</p>
-<dt><code>-di</code></p>
-<dd> Disable execution of _STA/_INI methods during init</p>
-<dt><code>-do</code></p>
-<dd> Disable Operation Region address simulation</p>
-<dt><code>-dr</code></p>
-<dd> Disable repair of method return values</p>
-<dt><code>-dt</code></p>
-<dd> Disable allocation tracking (performance)</p>
-<dt><code>-ef</code></p>
-<dd> Enable display of final memory statistics</p>
-<dt><code>-ei</code></p>
-<dd> Enable additional tests for ACPICA interfaces</p>
-<dt><code>-em</code></p>
-<dd> Enable interpreter Serialized mode</p>
-<dt><code>-es</code></p>
-<dd> Enable interpreter Slack mode</p>
-<dt><code>-et</code></p>
-<dd> Enable debug semaphore timeour</p>
-<dt><code>-f &lt;value&gt;</code></p>
-<dd> Operation Region initialization fill value</p>
-<dt><code>-r</code></p>
-<dd> Use hardware-reduced FADT V5</p>
-<dt><code>-vi</code></p>
-<dd> Verbose initialization output</p>
-<dt><code>-vr</code></p>
-<dd> Verbose region handler output</p>
-<dt><code>-x &lt;debug-level&gt;</code></p>
-<dd> Debug output level </p>
+<dt><code>-?</code></dt>
+<dd> Display the help message</dd>
+<dt><code>-b command-line</code></dt>
+<dd> Batch mode command line execution (cmd1;cmd2;&#8230;)</dd>
+<dt><code>-M [&lt;method&gt;]</code></dt>
+<dd> Batch mode method execution (Default: MAIN)</dd>
+<dt><code>-da</code></dt>
+<dd> Disable method abort on error</dd>
+<dt><code>-di</code></dt>
+<dd> Disable execution of _STA/_INI methods during init</dd>
+<dt><code>-do</code></dt>
+<dd> Disable Operation Region address simulation</dd>
+<dt><code>-dr</code></dt>
+<dd> Disable repair of method return values</dd>
+<dt><code>-dt</code></dt>
+<dd> Disable allocation tracking (performance)</dd>
+<dt><code>-ef</code></dt>
+<dd> Enable display of final memory statistics</dd>
+<dt><code>-ei</code></dt>
+<dd> Enable additional tests for ACPICA interfaces</dd>
+<dt><code>-em</code></dt>
+<dd> Enable interpreter Serialized mode</dd>
+<dt><code>-es</code></dt>
+<dd> Enable interpreter Slack mode</dd>
+<dt><code>-et</code></dt>
+<dd> Enable debug semaphore timeour</dd>
+<dt><code>-f &lt;value&gt;</code></dt>
+<dd> Operation Region initialization fill value</dd>
+<dt><code>-r</code></dt>
+<dd> Use hardware-reduced FADT V5</dd>
+<dt><code>-vi</code></dt>
+<dd> Verbose initialization output</dd>
+<dt><code>-vr</code></dt>
+<dd> Verbose region handler output</dd>
+<dt><code>-x &lt;debug-level&gt;</code></dt>
+<dd> Debug output level </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> acpiexec was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>

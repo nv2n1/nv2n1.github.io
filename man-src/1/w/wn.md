@@ -16,85 +16,85 @@ description: "wn – command line interface to WordNet lexical database"
 <p> The command line interface is often useful when writing scripts to extract information from the WordNet database. Post-processing of the output with various scripting tools can reformat the results as desired.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print help text before search results.</p>
-<dt><code>-g</code></p>
-<dd> Display textual glosses associated with synsets.</p>
-<dt><code>-a</code></p>
-<dd> Display lexicographer file information.</p>
-<dt><code>-o</code></p>
-<dd> Display synset offset of each synset.</p>
-<dt><code>-s</code></p>
-<dd> Display each word&#8217;s sense numbers in synsets.</p>
-<dt><code>-l</code></p>
-<dd> Display the WordNet copyright notice, version number, and license.</p>
-<dt><code>-n</code><i>#</i></p>
-<dd> Perform search on sense number <i>#</i> only.</p>
-<dt><code>-over</code></p>
-<dd> Display overview of all senses of <i>searchstr</i> in all syntactic categories.</dl>
+<dt><code>-h</code></dt>
+<dd> Print help text before search results.</dd>
+<dt><code>-g</code></dt>
+<dd> Display textual glosses associated with synsets.</dd>
+<dt><code>-a</code></dt>
+<dd> Display lexicographer file information.</dd>
+<dt><code>-o</code></dt>
+<dd> Display synset offset of each synset.</dd>
+<dt><code>-s</code></dt>
+<dd> Display each word&#8217;s sense numbers in synsets.</dd>
+<dt><code>-l</code></dt>
+<dd> Display the WordNet copyright notice, version number, and license.</dd>
+<dt><code>-n</code><i>#</i></dt>
+<dd> Perform search on sense number <i>#</i> only.</dd>
+<dt><code>-over</code></dt>
+<dd> Display overview of all senses of <i>searchstr</i> in all syntactic categories.</dd></dl>
 <h3>Search Options</h3>
 <p> Note that the last letter of <i>search_option</i> generally denotes the part of speech that the search applies to: <code>n</code> for nouns, <code>v</code> for verbs, <code>a</code> for adjectives, and <code>r</code> for adverbs. Multiple searches may be done for <i>searchstr</i> with a single command by specifying all the appropriate search options. </p>
 <dl>
-<dt><code>-syns</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</p>
-<dd> Display synonyms and immediate hypernyms of synsets containing <i>searchstr</i>. Synsets are ordered by estimated frequency of use. For adjectives, if <i>searchstr</i> is in a head synset, the cluster&#8217;s satellite synsets are displayed in place of hypernyms. If <i>searchstr</i> is in a satellite synset, its head synset is also displayed.</p>
-<dt><code>-simsv</code></p>
-<dd> Display verb synonyms and immediate hypernyms of synsets containing <i>searchstr</i>. Synsets are grouped by similarity of meaning.</p>
-<dt><code>-ants</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</p>
-<dd> Display synsets containing antonyms of <i>searchstr</i>. For adjectives, if <i>searchstr</i> is in a head synset, <i>searchstr</i> has a direct antonym. The head synset for the direct antonym is displayed along with the direct antonym&#8217;s satellite synsets. If <i>searchstr</i> is in a satellite synset, <i>searchstr</i> has an indirect antonym via the head synset, which is displayed.</p>
-<dt><code>-faml</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</p>
-<dd> Display familiarity and polysemy information for <i>searchstr</i>.</p>
-<dt><code>-hype</code>(<i>n</i> | <i>v</i>)</p>
-<dd> Recursively display hypernym (superordinate) tree for <i>searchstr</i> (<i>searchstr</i> <i>IS A KIND OF _____</i> relation).</p>
-<dt><code>-hypo</code>(<i>n</i> | <i>v</i>)</p>
-<dd> Display immediate hyponyms (subordinates) for <i>searchstr</i> (<i>_____ IS A KIND OF</i> <i>searchstr</i> relation).</p>
-<dt><code>-tree</code>(<i>n</i> | <i>v</i>)</p>
-<dd> Display hyponym (subordinate) tree for <i>searchstr</i>. This is a recursive search that finds the hyponyms of each hyponym.</p>
-<dt><code>-coor</code>(<i>n</i> | <i>v</i>)</p>
-<dd> Display the coordinates (sisters) of <i>searchstr</i>. This search prints the immediate hypernym for each synset that contains <i>searchstr</i> and the hypernym&#8217;s immediate hyponyms.</p>
-<dt><code>-deri</code>(<i>n</i> | <i>v</i>)</p>
-<dd> Display derivational morphology links between noun and verb forms.</p>
-<dt><code>-domn</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</p>
-<dd> Display domain that <i>searchstr</i> has been classified in.</p>
-<dt><code>-domt</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</p>
-<dd> Display all terms classified as members of the <i>searchstr</i>&#8216;s domain.</p>
-<dt><code>-subsn</code></p>
-<dd> Display substance meronyms of <i>searchstr</i> (<i>HAS SUBSTANCE</i> relation).</p>
-<dt><code>-partn</code></p>
-<dd> Display part meronyms of <i>searchstr</i> (<i>HAS PART</i> relation).</p>
-<dt><code>-membn</code></p>
-<dd> Display member meronyms of <i>searchstr</i> (<i>HAS MEMBER</i> relation).</p>
-<dt><code>-meron</code></p>
-<dd> Display all meronyms of <i>searchstr</i> (<i>HAS PART, HAS MEMBER, HAS SUBSTANCE</i> relations).</p>
-<dt><code>-hmern</code></p>
-<dd> Display meronyms for <i>searchstr</i> tree. This is a recursive search that prints all the meronyms of <i>searchstr</i> and all of its hypernyms.</p>
-<dt><code>-sprtn</code></p>
-<dd> Display <i>part of</i> holonyms of <i>searchstr</i> (<i>PART OF</i> relation).</p>
-<dt><code>-smemn</code></p>
-<dd> Display <i>member of</i> holonyms of <i>searchstr</i> (<i>MEMBER OF</i> relation).</p>
-<dt><code>-ssubn</code></p>
-<dd> Display <i>substance of</i> holonyms of <i>searchstr</i> (<i>SUBSTANCE OF</i> relation).</p>
-<dt><code>-holon</code></p>
-<dd> Display all holonyms of <i>searchstr</i> (<i>PART OF, MEMBER OF, SUBSTANCE OF</i> relations).</p>
-<dt><code>-hholn</code></p>
-<dd> Display holonyms for <i>searchstr</i> tree. This is a recursive search that prints all the holonyms of <i>searchstr</i> and all of each holonym&#8217;s holonyms.</p>
-<dt><code>-entav</code></p>
-<dd> Display entailment relations of <i>searchstr</i>.</p>
-<dt><code>-framv</code></p>
-<dd> Display applicable verb sentence frames for <i>searchstr</i>.</p>
-<dt><code>-causv</code></p>
-<dd> Display <i>cause to</i> relations of <i>searchstr</i>.</p>
-<dt><code> -pert</code>(<i>a</i> | <i>r</i>)</p>
-<dd> Display pertainyms of <i>searchstr</i>.</p>
-<dt><code> -attr</code>(<i>n</i> | <i>a</i>)</p>
-<dd> Display adjective values for noun attribute, or noun attributes of adjective values.</p>
-<dt><code>-grep</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</p>
-<dd> List compound words containing <i>searchstr</i> as a substring.</dl>
+<dt><code>-syns</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</dt>
+<dd> Display synonyms and immediate hypernyms of synsets containing <i>searchstr</i>. Synsets are ordered by estimated frequency of use. For adjectives, if <i>searchstr</i> is in a head synset, the cluster&#8217;s satellite synsets are displayed in place of hypernyms. If <i>searchstr</i> is in a satellite synset, its head synset is also displayed.</dd>
+<dt><code>-simsv</code></dt>
+<dd> Display verb synonyms and immediate hypernyms of synsets containing <i>searchstr</i>. Synsets are grouped by similarity of meaning.</dd>
+<dt><code>-ants</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</dt>
+<dd> Display synsets containing antonyms of <i>searchstr</i>. For adjectives, if <i>searchstr</i> is in a head synset, <i>searchstr</i> has a direct antonym. The head synset for the direct antonym is displayed along with the direct antonym&#8217;s satellite synsets. If <i>searchstr</i> is in a satellite synset, <i>searchstr</i> has an indirect antonym via the head synset, which is displayed.</dd>
+<dt><code>-faml</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</dt>
+<dd> Display familiarity and polysemy information for <i>searchstr</i>.</dd>
+<dt><code>-hype</code>(<i>n</i> | <i>v</i>)</dt>
+<dd> Recursively display hypernym (superordinate) tree for <i>searchstr</i> (<i>searchstr</i> <i>IS A KIND OF _____</i> relation).</dd>
+<dt><code>-hypo</code>(<i>n</i> | <i>v</i>)</dt>
+<dd> Display immediate hyponyms (subordinates) for <i>searchstr</i> (<i>_____ IS A KIND OF</i> <i>searchstr</i> relation).</dd>
+<dt><code>-tree</code>(<i>n</i> | <i>v</i>)</dt>
+<dd> Display hyponym (subordinate) tree for <i>searchstr</i>. This is a recursive search that finds the hyponyms of each hyponym.</dd>
+<dt><code>-coor</code>(<i>n</i> | <i>v</i>)</dt>
+<dd> Display the coordinates (sisters) of <i>searchstr</i>. This search prints the immediate hypernym for each synset that contains <i>searchstr</i> and the hypernym&#8217;s immediate hyponyms.</dd>
+<dt><code>-deri</code>(<i>n</i> | <i>v</i>)</dt>
+<dd> Display derivational morphology links between noun and verb forms.</dd>
+<dt><code>-domn</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</dt>
+<dd> Display domain that <i>searchstr</i> has been classified in.</dd>
+<dt><code>-domt</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</dt>
+<dd> Display all terms classified as members of the <i>searchstr</i>&#8216;s domain.</dd>
+<dt><code>-subsn</code></dt>
+<dd> Display substance meronyms of <i>searchstr</i> (<i>HAS SUBSTANCE</i> relation).</dd>
+<dt><code>-partn</code></dt>
+<dd> Display part meronyms of <i>searchstr</i> (<i>HAS PART</i> relation).</dd>
+<dt><code>-membn</code></dt>
+<dd> Display member meronyms of <i>searchstr</i> (<i>HAS MEMBER</i> relation).</dd>
+<dt><code>-meron</code></dt>
+<dd> Display all meronyms of <i>searchstr</i> (<i>HAS PART, HAS MEMBER, HAS SUBSTANCE</i> relations).</dd>
+<dt><code>-hmern</code></dt>
+<dd> Display meronyms for <i>searchstr</i> tree. This is a recursive search that prints all the meronyms of <i>searchstr</i> and all of its hypernyms.</dd>
+<dt><code>-sprtn</code></dt>
+<dd> Display <i>part of</i> holonyms of <i>searchstr</i> (<i>PART OF</i> relation).</dd>
+<dt><code>-smemn</code></dt>
+<dd> Display <i>member of</i> holonyms of <i>searchstr</i> (<i>MEMBER OF</i> relation).</dd>
+<dt><code>-ssubn</code></dt>
+<dd> Display <i>substance of</i> holonyms of <i>searchstr</i> (<i>SUBSTANCE OF</i> relation).</dd>
+<dt><code>-holon</code></dt>
+<dd> Display all holonyms of <i>searchstr</i> (<i>PART OF, MEMBER OF, SUBSTANCE OF</i> relations).</dd>
+<dt><code>-hholn</code></dt>
+<dd> Display holonyms for <i>searchstr</i> tree. This is a recursive search that prints all the holonyms of <i>searchstr</i> and all of each holonym&#8217;s holonyms.</dd>
+<dt><code>-entav</code></dt>
+<dd> Display entailment relations of <i>searchstr</i>.</dd>
+<dt><code>-framv</code></dt>
+<dd> Display applicable verb sentence frames for <i>searchstr</i>.</dd>
+<dt><code>-causv</code></dt>
+<dd> Display <i>cause to</i> relations of <i>searchstr</i>.</dd>
+<dt><code> -pert</code>(<i>a</i> | <i>r</i>)</dt>
+<dd> Display pertainyms of <i>searchstr</i>.</dd>
+<dt><code> -attr</code>(<i>n</i> | <i>a</i>)</dt>
+<dd> Display adjective values for noun attribute, or noun attributes of adjective values.</dd>
+<dt><code>-grep</code>(<i>n</i> | <i>v</i> | <i>a</i> | <i>r</i>)</dt>
+<dd> List compound words containing <i>searchstr</i> as a substring.</dd></dl>
 <h2>SEARCH RESULTS</h2>
 <p> The results of a search are written to the standard output. For each search, the output consists a one line description of the search, followed by the search results. </p>
 <p> All searches other than <code>-over</code> list all senses matching the search results in the following general format. Items enclosed in italicized square brackets (<i>[~&#8230;~]</i>) may not be present. </p>
 <dl>
 <dt>
-<dd> One line listing the number of senses matching the search request. </p>
+</dt><dd> One line listing the number of senses matching the search request. </dd>
 <p> Each sense matching the search requested displayed as follows: </p>
 <pre><code>
 Sense n
@@ -121,24 +121,24 @@ Sense n
 <p> If the WordNet database cannot be opened, an error messages is displayed and <code>wn()</code> exits with <code>-1</code>.</p>
 <h2>ENVIRONMENT VARIABLES (UNIX)</h2>
 <dl>
-<dt><code>WNHOME</code></p>
-<dd> Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</p>
-<dt><code>WNSEARCHDIR</code></p>
-<dd> Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dl>
+<dt><code>WNHOME</code></dt>
+<dd> Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd> Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
 <h2>REGISTRY (WINDOWS)</h2>
 <dl>
-<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></p>
-<dd> Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd> Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>index.</code><i>pos</i></p>
-<dd> database index files</p>
-<dt><code>data.</code><i>pos</i></p>
-<dd> database data files</p>
-<dt><code>*.vrb</code></p>
-<dd> files of sentences illustrating the use of verbs</p>
-<dt><i>pos</i>.exc</p>
-<dd> morphology exception lists</dl>
+<dt><code>index.</code><i>pos</i></dt>
+<dd> database index files</dd>
+<dt><code>data.</code><i>pos</i></dt>
+<dd> database data files</dd>
+<dt><code>*.vrb</code></dt>
+<dd> files of sentences illustrating the use of verbs</dd>
+<dt><i>pos</i>.exc</dt>
+<dd> morphology exception lists</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wnintro/">wnintro</a></code>(1), <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1), <code><a href="/docs/linux/man/3-wnintro/">wnintro</a></code>(3), <code><a href="/docs/linux/man/5-lexnames/">lexnames</a></code>(5), <code><a href="/docs/linux/man/5-senseidx/">senseidx</a></code>(5) <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/5-wninput/">wninput</a></code>(5), <code><a href="/docs/linux/man/7-morphy/">morphy</a></code>(7), <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7), <code><a href="/docs/linux/man/7-wngroups/">wngroups</a></code>(7).</p>
 <h2>BUGS</h2>

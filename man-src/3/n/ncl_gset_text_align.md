@@ -13,37 +13,37 @@ description: "gset_text_align (Set text alignment) – sets the text alignment."
 <p> void gset_text_align(const Gtext_align *text_align);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>text_align.hor</p>
-<dd>(Input) Determines the horizontal alignment of the text to be drawn. Options are:</p>
+<dt>text_align.hor</dt>
+<dd>(Input) Determines the horizontal alignment of the text to be drawn. Options are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GHOR_NORM</p>
-<dd>Normal (default)</p>
-<dt>GHOR_LEFT</p>
-<dd>Left</p>
-<dt>GHOR_CTR</p>
-<dd>Center</p>
-<dt>GHOR_RIGHT</p>
-<dd>Right</dl>
+</dd><dl COMPACT>
+<dt>GHOR_NORM</dt>
+<dd>Normal (default)</dd>
+<dt>GHOR_LEFT</dt>
+<dd>Left</dd>
+<dt>GHOR_CTR</dt>
+<dd>Center</dd>
+<dt>GHOR_RIGHT</dt>
+<dd>Right</dd></dl>
 </dl>
-<dt>text_align.vert</p>
-<dd>(Input) Determines the vertical alignment of the text to be drawn. Options are:</p>
+<dt>text_align.vert</dt>
+<dd>(Input) Determines the vertical alignment of the text to be drawn. Options are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GVERT_NORM</p>
-<dd>Normal (default)</p>
-<dt>GVERT_TOP</p>
-<dd>Top</p>
-<dt>GVERT_CAP</p>
-<dd>Cap</p>
-<dt>GVERT_HALF</p>
-<dd>Half</p>
-<dt>GVERT_BASE</p>
-<dd>Base</p>
-<dt>GVERT_BOTTOM</p>
-<dd>Bottom</dl>
+</dd><dl COMPACT>
+<dt>GVERT_NORM</dt>
+<dd>Normal (default)</dd>
+<dt>GVERT_TOP</dt>
+<dd>Top</dd>
+<dt>GVERT_CAP</dt>
+<dd>Cap</dd>
+<dt>GVERT_HALF</dt>
+<dd>Half</dd>
+<dt>GVERT_BASE</dt>
+<dd>Base</dd>
+<dt>GVERT_BOTTOM</dt>
+<dd>Bottom</dd></dl>
 </dl>
 </dl>
 <h2>Usage</h2>

@@ -15,32 +15,32 @@ description: "fbtv – a console program for watching TV"
 <p> <code>fbtv</code> is a program for watching TV with your linux box. It runs on top of a graphic framebuffer device (/dev/fb0). You&#8217;ll need a new 2.1.x kernel to play with this. <code>fbtv</code> shares the config file ($HOME/.xawtv) with the <code>xawtv</code> application. Check the <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1) manpage for details about the config file format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o base</code></p>
-<dd> set basestring for the snapshot output files. The filename will be &quot;base-timestamp-nr.ext&quot;.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose.</p>
-<dt><code>-c device</code></p>
-<dd> video4linux device (default is /dev/video0).</p>
-<dt><code>-D driver</code></p>
-<dd> video4linux driver (default is &quot;libv4l&quot;).</p>
-<dt><code>-d device</code></p>
-<dd> framebuffer device (default is $FRAMEBUFFER; /dev/fb0 if unset)</p>
-<dt><code>-g</code></p>
-<dd> grayscaled display (works for 256 color mode only)</p>
-<dt><code>-s widthxheight</code></p>
-<dd> display the TV picture in <code>width</code> x <code>height</code> size in the upper right corner.</p>
-<dt><code>-f font</code></p>
-<dd> font for text. Default is to look for lat1-16.psf in /usr/lib/kbd/consolefonts and /usr/share/consolefonts. If you have a local X11 font server running (or the FONTSERVER environment variable set to some working server), you can also give X11 font specs here.</p>
-<dt><code>-m mode</code></p>
-<dd> video mode for TV. fbtv will look up the mode in /etc/fb.modes.</p>
-<dt><code>-j joydev</code></p>
-<dd> joystick device to use for controlling fbtv.</p>
-<dt><code>-k</code></p>
-<dd> keep capture on when switching consoles. Might be useful together with -s switch, you have a video picture while working on another console. This is more or less a dirty hack. Works only if all your consoles have the same video mode and fbcon does not use panning to speed up scrolling. For a multiheaded setup this is useful too.</p>
-<dt><code>-q</code></p>
-<dd> quiet mode. Doesn&#8217;t reserve space for the status line at the top, doesn&#8217;t display the status messages and clock. You can toggle this at runtime too (&#8216;F&#8217;).</p>
-<dt><code>-M</code></p>
-<dd> EXPERIMENTAL: Turn on backend scaler mode (write yuv to offscreen memory and let the gfx board scale up the video). Supported hardware: Matrox G200/G400 (with matroxfb) and ATI Mach64 VT/GT (with atyfb, 16bpp only). You&#8217;ll need at least bttv-0.7.16 or kernel 2.3.50.</dl>
+<dt><code>-o base</code></dt>
+<dd> set basestring for the snapshot output files. The filename will be &quot;base-timestamp-nr.ext&quot;.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>-c device</code></dt>
+<dd> video4linux device (default is /dev/video0).</dd>
+<dt><code>-D driver</code></dt>
+<dd> video4linux driver (default is &quot;libv4l&quot;).</dd>
+<dt><code>-d device</code></dt>
+<dd> framebuffer device (default is $FRAMEBUFFER; /dev/fb0 if unset)</dd>
+<dt><code>-g</code></dt>
+<dd> grayscaled display (works for 256 color mode only)</dd>
+<dt><code>-s widthxheight</code></dt>
+<dd> display the TV picture in <code>width</code> x <code>height</code> size in the upper right corner.</dd>
+<dt><code>-f font</code></dt>
+<dd> font for text. Default is to look for lat1-16.psf in /usr/lib/kbd/consolefonts and /usr/share/consolefonts. If you have a local X11 font server running (or the FONTSERVER environment variable set to some working server), you can also give X11 font specs here.</dd>
+<dt><code>-m mode</code></dt>
+<dd> video mode for TV. fbtv will look up the mode in /etc/fb.modes.</dd>
+<dt><code>-j joydev</code></dt>
+<dd> joystick device to use for controlling fbtv.</dd>
+<dt><code>-k</code></dt>
+<dd> keep capture on when switching consoles. Might be useful together with -s switch, you have a video picture while working on another console. This is more or less a dirty hack. Works only if all your consoles have the same video mode and fbcon does not use panning to speed up scrolling. For a multiheaded setup this is useful too.</dd>
+<dt><code>-q</code></dt>
+<dd> quiet mode. Doesn&#8217;t reserve space for the status line at the top, doesn&#8217;t display the status messages and clock. You can toggle this at runtime too (&#8216;F&#8217;).</dd>
+<dt><code>-M</code></dt>
+<dd> EXPERIMENTAL: Turn on backend scaler mode (write yuv to offscreen memory and let the gfx board scale up the video). Supported hardware: Matrox G200/G400 (with matroxfb) and ATI Mach64 VT/GT (with atyfb, 16bpp only). You&#8217;ll need at least bttv-0.7.16 or kernel 2.3.50.</dd></dl>
 <h2>USAGE</h2>
 <p> fbtv is supported to work much like xawtv from user&#8217;s point of view. You might have noticed that xawtv has a lot of keyboard shortcuts. They work in fbtv too (if it useful). Here is the list: </p>
 <pre>

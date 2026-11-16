@@ -11,47 +11,47 @@ description: "masktest â€“ Find differences in wildcard matching between Sambaâ€
 <p> masktest &#8211; Find differences in wildcard matching between Samba&#8217;s implementation and that of a remote server. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>masktest</code> {//server/share} [-U user%pass] [-d debuglevel] [-W workgroup] [-n numloops] [-s seed] [-a] [-E] [-M max protocol] [-f filechars] [-m maskchars] [-v]</dl>
+<dt> <code>masktest</code> {//server/share} [-U user%pass] [-d debuglevel] [-W workgroup] [-n numloops] [-s seed] [-a] [-E] [-M max protocol] [-f filechars] [-m maskchars] [-v]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>masktest is a utility for detecting differences in behaviour between Samba&#8217;s own implementation and that of a remote server. It will run generate random filenames/masks and check if these match the same files they do on the remote file as they do on the local server. It will display any differences it finds. </p>
+<dd>masktest is a utility for detecting differences in behaviour between Samba&#8217;s own implementation and that of a remote server. It will run generate random filenames/masks and check if these match the same files they do on the remote file as they do on the local server. It will display any differences it finds. </dd>
 <p> This utility is used by the Samba team to find differences in behaviour between Samba and Windows servers.</p>
 <h2>OPTIONS</h2>
 <p> -U user%pass</p>
 <dl>
 <dt>
-<dd> Specify the user and password to use when logging on on the shares. This parameter can be specified twice (once for the first server, once for the second).</dl>
+</dt><dd> Specify the user and password to use when logging on on the shares. This parameter can be specified twice (once for the first server, once for the second).</dd></dl>
 <p> -s seed</p>
 <dl>
 <dt>
-<dd> Seed the random number generator with the specified value.</dl>
+</dt><dd> Seed the random number generator with the specified value.</dd></dl>
 <p> -n numops</p>
 <dl>
 <dt>
-<dd> Set the number of operations to perform.</dl>
+</dt><dd> Set the number of operations to perform.</dd></dl>
 <p> -a</p>
 <dl>
 <dt>
-<dd> Print the operations that are performed.</dl>
+</dt><dd> Print the operations that are performed.</dd></dl>
 <p> -M max_protocol</p>
 <dl>
 <dt>
-<dd> Maximum protocol to use.</dl>
+</dt><dd> Maximum protocol to use.</dd></dl>
 <p> -f</p>
 <dl>
 <dt>
-<dd> Specify characters that can be used when generating file names. Default: abcdefghijklm.</dl>
+</dt><dd> Specify characters that can be used when generating file names. Default: abcdefghijklm.</dd></dl>
 <p> -E</p>
 <dl>
 <dt>
-<dd> Abort when difference in behaviour is found.</dl>
+</dt><dd> Abort when difference in behaviour is found.</dd></dl>
 <p> -m maskchars</p>
 <dl>
 <dt>
-<dd> Specify characters used for wildcards.</dl>
+</dt><dd> Specify characters used for wildcards.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Be verbose</dl>
+</dt><dd> Be verbose</dd></dl>
 <h2>VERSION</h2>
 <p> This man page is correct for version 4.0 of the Samba suite.</p>
 <h2>SEE ALSO</h2>
@@ -62,15 +62,15 @@ description: "masktest â€“ Find differences in wildcard matching between Sambaâ€
 <p> This manpage was written by Jelmer Vernooij.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Samba</p>
+<dt> 1.</dt>
+<dd> Samba</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dl>
-<dt> 2.</p>
-<dd> Samba Team</p>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dd></dl>
+<dt> 2.</dt>
+<dd> Samba Team</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
 <h2>Index</h2>

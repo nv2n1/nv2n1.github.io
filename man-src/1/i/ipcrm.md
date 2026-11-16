@@ -22,40 +22,40 @@ description: "ipcrm – remove certain IPC resources"
 <p> <code>-a</code>, <code>&#8211;all</code> [<code>shm</code>] [<code>msg</code>] [<code>sem</code>]</p>
 <dl>
 <dt>
-<dd> Remove all resources. When an option argument is provided, the removal is performed only for the specified resource types. </p>
+</dt><dd> Remove all resources. When an option argument is provided, the removal is performed only for the specified resource types. </dd>
 <p> <i>Warning!</i> Do not use <code>-a</code> if you are unsure how the software using the resources might react to missing objects. Some programs create these resources at startup and may not have any code to deal with an unexpected disappearance.</dl>
 <p> <code>-M</code>, <code>&#8211;shmem-key</code> <i>shmkey</i></p>
 <dl>
 <dt>
-<dd> Remove the shared memory segment created with <i>shmkey</i> after the last detach is performed.</dl>
+</dt><dd> Remove the shared memory segment created with <i>shmkey</i> after the last detach is performed.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;shmem-id</code> <i>shmid</i></p>
 <dl>
 <dt>
-<dd> Remove the shared memory segment identified by <i>shmid</i> after the last detach is performed.</dl>
+</dt><dd> Remove the shared memory segment identified by <i>shmid</i> after the last detach is performed.</dd></dl>
 <p> <code>-Q</code>, <code>&#8211;queue-key</code> <i>msgkey</i></p>
 <dl>
 <dt>
-<dd> Remove the message queue created with <i>msgkey</i>.</dl>
+</dt><dd> Remove the message queue created with <i>msgkey</i>.</dd></dl>
 <p> <code>-q</code>, <code>&#8211;queue-id</code> <i>msgid</i></p>
 <dl>
 <dt>
-<dd> Remove the message queue identified by <i>msgid</i>.</dl>
+</dt><dd> Remove the message queue identified by <i>msgid</i>.</dd></dl>
 <p> <code>-S</code>, <code>&#8211;semaphore-key</code> <i>semkey</i></p>
 <dl>
 <dt>
-<dd> Remove the semaphore created with <i>semkey</i>.</dl>
+</dt><dd> Remove the semaphore created with <i>semkey</i>.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;semaphore-id</code> <i>semid</i></p>
 <dl>
 <dt>
-<dd> Remove the semaphore identified by <i>semid</i>.</dl>
+</dt><dd> Remove the semaphore identified by <i>semid</i>.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> In its first Linux implementation, <code>ipcrm</code> used the deprecated syntax shown in the second line of the <code>SYNOPSIS</code>. Functionality present in other *nix implementations of <code>ipcrm</code> has since been added, namely the ability to delete resources by key (not just identifier), and to respect the same command-line syntax. For backward compatibility the previous syntax is still supported.</p>
 <h2>SEE ALSO</h2>

@@ -19,30 +19,30 @@ description: "ngmultidec – make ngpice sub-circuit for coupled transmission li
 <p> Standard C language scientific (exponent) notation may be used for options&#8217; numeric values.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code><i>subcircuit_name</i></p>
-<dd> Set the subcircuit name</p>
-<dt><code>-l</code><i>line_inductance</i></p>
-<dd> Set the line inductance.</p>
-<dt><code>-c</code><i>line_capacitance</i></p>
-<dd> Set the line capacitance.</p>
-<dt><code>-r</code><i>line_resistance</i></p>
-<dd> Set the line resistance.</p>
-<dt><code>-g</code><i>line_conductance</i></p>
-<dd> Set the line conductance.</p>
-<dt><code>-k</code><i>inductive_coefficient_of_coupling</i></p>
-<dd> Set the value of the inductive coefficient of coupling, whose absolute value <i>k</i> must be less than 1.0.</p>
-<dt><code>-x</code><i>line-to-line-capacitance</i></p>
-<dd> Set the line-to-line capacitance.</p>
-<dt><code>-L</code><i>length</i></p>
-<dd> Set the length of the line.</p>
-<dt><code>-n</code><i>number</i></p>
-<dd> Set the number of conductors.</p>
-<dt><code>-u</code></p>
-<dd> Write a usage message to standard error.</dl>
+<dt><code>-o</code><i>subcircuit_name</i></dt>
+<dd> Set the subcircuit name</dd>
+<dt><code>-l</code><i>line_inductance</i></dt>
+<dd> Set the line inductance.</dd>
+<dt><code>-c</code><i>line_capacitance</i></dt>
+<dd> Set the line capacitance.</dd>
+<dt><code>-r</code><i>line_resistance</i></dt>
+<dd> Set the line resistance.</dd>
+<dt><code>-g</code><i>line_conductance</i></dt>
+<dd> Set the line conductance.</dd>
+<dt><code>-k</code><i>inductive_coefficient_of_coupling</i></dt>
+<dd> Set the value of the inductive coefficient of coupling, whose absolute value <i>k</i> must be less than 1.0.</dd>
+<dt><code>-x</code><i>line-to-line-capacitance</i></dt>
+<dd> Set the line-to-line capacitance.</dd>
+<dt><code>-L</code><i>length</i></dt>
+<dd> Set the length of the line.</dd>
+<dt><code>-n</code><i>number</i></dt>
+<dd> Set the number of conductors.</dd>
+<dt><code>-u</code></dt>
+<dd> Write a usage message to standard error.</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd> <code>ngmultidec -n4 -l9e9 -c20e-12 -r5.3 -x5e12 -k0.7 -otest -L5.4 &gt; test.cir</code></dl>
+</dt><dd> <code>ngmultidec -n4 -l9e9 -c20e-12 -r5.3 -x5e12 -k0.7 -otest -L5.4 &gt; test.cir</code></dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <i>Efficient Transient Simulation of Lossy Interconnect</i>,

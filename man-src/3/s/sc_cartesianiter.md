@@ -11,94 +11,36 @@ description: "sc::CartesianIter –"
 <p> <code>CartesianIter</code> gives the ordering of the Cartesian functions within a shell for the particular integrals specialization.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;cartiter.h&gt;</code></pre>
 <p> Inherited by <code>MPQC::CartesianIterCCA</code>, <code>sc::CartesianIterCCA</code>, <code>sc::CartesianIterCints</code>, and <code>sc::CartesianIterV3</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>CartesianIter (int l)
-
-
 Initialize an iterator for the given angular momentum.
-
-
 virtual void start ()=0
-
-
 Start the iteration.
-
-
 virtual void next ()=0
-
-
 Move to the next Cartesian function.
-
-
 virtual operator int ()=0
-
-
 Returns nonzero if the iterator currently hold valid data.
-
-
 int n ()
-
-
 Returns the number of Cartesian functions.
-
-
 int a ()
-
-
 Returns the exponent of x.
-
-
 int b ()
-
-
 Returns the exponent of y.
-
-
 int c ()
-
-
 Returns the exponent of z.
-
-
 int l ()
-
-
 Returns the angular momentum.
-
-
 int l (int i)
-
-
 Returns a() if i==0, b() if i==1, and c() if i==2.
-
-
 int bfn ()
-
-
 Returns the number of the current basis function within the shell.
-
-
-
 Protected Attributes
 int a_
-
-
-
 int b_
-
-
-
 int c_
-
-
-
 int l_
-
-
-
 int bfn_</code></pre>
 <h2>Detailed Description</h2>
 <p><code>CartesianIter</code> gives the ordering of the Cartesian functions within a shell for the particular integrals specialization.</p>

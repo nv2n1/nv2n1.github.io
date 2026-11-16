@@ -10,70 +10,40 @@ description: "std::adjacent_difference – std::adjacent_difference"
 <p>std::adjacent_difference &#8211; std::adjacent_difference</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;numeric&gt;
-
     template &lt;class InputIt, class OutputIt&gt;
-
     OutputIt adjacent_difference(InputIt first, InputIt last, (until C++ 20)
-
                                                                   OutputIt d_first);
-
 template &lt;class InputIt, class OutputIt&gt;
-
 constexpr OutputIt adjacent_difference(InputIt first, InputIt last, (since C++ 20)
-
                                                                         OutputIt d_first);
-
 template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2&gt;
-
 ForwardIt2 adjacent_difference(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (2)(since C++ 17)
-
                                                                                                 ForwardIt2 d_first);
 (1)
-
     template &lt;class InputIt, class OutputIt, class BinaryOperation&gt;
-
     OutputIt adjacent_difference(InputIt first, InputIt last, (until C++ 20)
-
                                                                   OutputIt d_first,
                                  BinaryOperation op);
-
 template &lt;class InputIt, class OutputIt, class BinaryOperation&gt;
-
 constexpr OutputIt adjacent_difference(InputIt first, InputIt last, (3)(since C++ 20)
-
                                                                         OutputIt d_first,
                                        BinaryOperation op);
-
 template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryOperation&gt;
-
 ForwardIt2 adjacent_difference(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (4)(since C++ 17)
-
                                                                                                 ForwardIt2 d_first,
                                BinaryOperation op);
 Computes the differences between the second and the first of each adjacent pair of elements of the range [first, last) and writes them to the range beginning at d_first + 1. An unmodified copy of *first is written to *d_first.
-
 1,3) First, creates an accumulator acc whose type is InputIt's value type, initializes it with *first, and assigns the result to *d_first. Then, for every iterator i in [first + 1, last) in order, creates an object val whose type is InputIt's value type, initializes it with *i, computes
-
 val - acc
-
 (until C++20)
-
 val - std::move(acc)
-
 (since C++20) (overload (1)) or
-
 op(val, acc)
-
 (until C++20)
-
 op(val, std::move(acc))
-
 (since C++20) (overload (3)), assigns the result to *(d_first + (i - first)), and move assigns from val to acc.
-
 first may be equal to d_first.
-
 2,4) Performs *d_first = *first;. For every d in [1, last - first - 1], assigns *(first + d) - *(first + d - 1) (overload (2)) or op(*(first + d), *(first + d - 1)) (overload (4)) to *(d_first + d). This is executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true.
-
 The behavior is undefined if the input and output ranges overlap in any way.</code></pre>
 <p>Equivalent operation: *(d_first)   = *first;</p>
 <p>*(d_first+1) = *(first+1) &#8211; *(first);</p>
@@ -148,18 +118,12 @@ ForwardIt1, ForwardIt2 must meet the requirements of LegacyForwardIterator. The 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;numeric&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;array&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     // Default implementation - the difference b/w two adjacent items
     std::vector v{2, 4, 6, 8, 10, 12, 14, 16, 18, 20};

@@ -16,32 +16,32 @@ description: "icegridnode – The IceGrid node server."
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/icegridnode">http://doc.zeroc.com/display/Ice/icegridnode</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Displays help message. </p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Displays the Ice version. </p>
-<dt><code>&#8211;daemon</code></p>
+ Displays help message. </dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Displays the Ice version. </dd>
+<dt><code>&#8211;daemon</code></dt>
 <dd>
- Run as a daemon. </p>
-<dt><code>&#8211;pidfile</code> <code>FILE</code></p>
+ Run as a daemon. </dd>
+<dt><code>&#8211;pidfile</code> <code>FILE</code></dt>
 <dd>
- Write process ID into FILE. </p>
-<dt><code>&#8211;noclose</code></p>
+ Write process ID into FILE. </dd>
+<dt><code>&#8211;noclose</code></dt>
 <dd>
- Do not close open file descriptors. </p>
-<dt><code>&#8211;nochdir</code></p>
+ Do not close open file descriptors. </dd>
+<dt><code>&#8211;nochdir</code></dt>
 <dd>
- Do not change the current working directory. </p>
-<dt><code>&#8211;nowarn</code></p>
+ Do not change the current working directory. </dd>
+<dt><code>&#8211;nowarn</code></dt>
 <dd>
- Do not print security warnings. </p>
-<dt><code>&#8211;readonly</code></p>
+ Do not print security warnings. </dd>
+<dt><code>&#8211;readonly</code></dt>
 <dd>
- Start the collocated master registry in read-only mode. </p>
-<dt><code>&#8211;deploy</code> <code>DESCRIPTOR</code> <code>[TARGET1</code> <code>[TARGET2</code> <code>&#8230;]]</code></p>
+ Start the collocated master registry in read-only mode. </dd>
+<dt><code>&#8211;deploy</code> <code>DESCRIPTOR</code> <code>[TARGET1</code> <code>[TARGET2</code> <code>&#8230;]]</code></dt>
 <dd>
- Add or update descriptor in file DESCRIPTOR, with optional targets. </p>
+ Add or update descriptor in file DESCRIPTOR, with optional targets. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icegridadmin/">icegridadmin</a></code>(1), <code><a href="/docs/linux/man/1-icegridregistry/">icegridregistry</a></code>(1) </p>

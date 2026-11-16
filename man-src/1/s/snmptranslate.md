@@ -16,61 +16,59 @@ description: "snmptranslate – translate MIB OID names between numeric and text
 <p> OID is either a numeric or textual object identifier.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-D</code><i>[TOKEN[,&#8230;]]</i></p>
-<dd> Turn on debugging output for the given <i>TOKEN</i>(s). Try <i>ALL</i> for extremely verbose output.</p>
-<dt><code>-h</code></p>
-<dd> Display a brief usage message and then exit.</p>
-<dt><code>-m</code><i> MIBLIST</i></p>
-<dd> Specifies a colon separated list of MIB modules to load for this application. This overrides the environment variable MIBS.</p>
+<dt><code>-D</code><i>[TOKEN[,&#8230;]]</i></dt>
+<dd> Turn on debugging output for the given <i>TOKEN</i>(s). Try <i>ALL</i> for extremely verbose output.</dd>
+<dt><code>-h</code></dt>
+<dd> Display a brief usage message and then exit.</dd>
+<dt><code>-m</code><i> MIBLIST</i></dt>
+<dd> Specifies a colon separated list of MIB modules to load for this application. This overrides the environment variable MIBS.</dd>
 <dt>
-<dd> The special keyword <i>ALL</i> is used to specify all modules in all directories when searching for MIB files. Every file whose name does not begin with &quot;.&quot; will be parsed as if it were a MIB file.</p>
-<dt><code>-M</code><i> DIRLIST</i></p>
-<dd> Specifies a colon separated list of directories to search for MIBs. This overrides the environment variable MIBDIRS.</p>
-<dt><code>-T</code><i> TRANSOPTS</i></p>
-<dd> Provides control over the translation of the OID values. The following <i>TRANSOPTS</i> are available:</p>
+</dt><dd> The special keyword <i>ALL</i> is used to specify all modules in all directories when searching for MIB files. Every file whose name does not begin with &quot;.&quot; will be parsed as if it were a MIB file.</dd>
+<dt><code>-M</code><i> DIRLIST</i></dt>
+<dd> Specifies a colon separated list of directories to search for MIBs. This overrides the environment variable MIBDIRS.</dd>
+<dt><code>-T</code><i> TRANSOPTS</i></dt>
+<dd> Provides control over the translation of the OID values. The following <i>TRANSOPTS</i> are available:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-Td</code></p>
-<dd> Print full details of the specified OID.</p>
-<dt><code>-Tp</code></p>
-<dd> Print a graphical tree, rooted at the specified OID.</p>
-<dt><code>-Ta</code></p>
-<dd> Dump the loaded MIB in a trivial form.</p>
-<dt><code>-Tl</code></p>
-<dd> Dump a labeled form of all objects.</p>
-<dt><code>-To</code></p>
-<dd> Dump a numeric form of all objects.</p>
-<dt><code>-Ts</code></p>
-<dd> Dump a symbolic form of all objects.</p>
-<dt><code>-Tt</code></p>
-<dd> Dump a tree form of the loaded MIBs (mostly useful for debugging).</p>
-<dt><code>-Tz</code></p>
-<dd> Dump a numeric and labeled form of all objects (compatible with MIB2SCHEMA format).</dl>
+<dt><code>-Td</code></dt>
+<dd> Print full details of the specified OID.</dd>
+<dt><code>-Tp</code></dt>
+<dd> Print a graphical tree, rooted at the specified OID.</dd>
+<dt><code>-Ta</code></dt>
+<dd> Dump the loaded MIB in a trivial form.</dd>
+<dt><code>-Tl</code></dt>
+<dd> Dump a labeled form of all objects.</dd>
+<dt><code>-To</code></dt>
+<dd> Dump a numeric form of all objects.</dd>
+<dt><code>-Ts</code></dt>
+<dd> Dump a symbolic form of all objects.</dd>
+<dt><code>-Tt</code></dt>
+<dd> Dump a tree form of the loaded MIBs (mostly useful for debugging).</dd>
+<dt><code>-Tz</code></dt>
+<dd> Dump a numeric and labeled form of all objects (compatible with MIB2SCHEMA format).</dd></dl>
 </dl>
-<dt><code>-V</code></p>
-<dd> Display version information for the application and then exit.</p>
-<dt><code>-w</code><i> WIDTH</i></p>
-<dd> Specifies the width of <code>-Tp</code> and <code>-Td</code> output. The default is very large.</dl>
+<dt><code>-V</code></dt>
+<dd> Display version information for the application and then exit.</dd>
+<dt><code>-w</code><i> WIDTH</i></dt>
+<dd> Specifies the width of <code>-Tp</code> and <code>-Td</code> output. The default is very large.</dd></dl>
 <p> In addition to the above options, <code>snmptranslate</code> takes the OID input (<code>-I</code>), MIB parsing (<code>-M</code>) and OID output (<code>-O</code>) options described in the <code>INPUT OPTIONS</code>, <code>MIB PARSING OPTIONS</code> and <code>OUTPUT OPTIONS</code> sections of the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1) </i> manual page.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> snmptranslate -On -IR sysDescr<br />
- will translate &quot;sysDescr&quot; to a more qualified form:</p>
+ will translate &quot;sysDescr&quot; to a more qualified form:</dd>
 <dt>
-<dd> system.sysDescr</p>
-<dt>&bull;</p>
+</dt><dd> system.sysDescr</dd>
+<dt>&bull;</dt>
 <dd> snmptranslate -Onf -IR sysDescr<br />
- will translate &quot;sysDecr&quot; to:</p>
+ will translate &quot;sysDecr&quot; to:</dd>
 <dt>
-<dd> .iso.org.dod.internet.mgmt.mib-2.system.sysDescr</p>
-<dt>&bull;</p>
+</dt><dd> .iso.org.dod.internet.mgmt.mib-2.system.sysDescr</dd>
+<dt>&bull;</dt>
 <dd> snmptranslate -Td -OS system.sysDescr<br />
- will translate &quot;sysDecr&quot; into:</p>
+ will translate &quot;sysDecr&quot; into:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SNMPv2 - MIB::sysDescr sysDescr OBJECT - TYPE-- FROM SNMPv2 - MIB-- TEXTUAL CONVENTION DisplayString SYNTAX OCTET STRING(0..255) DISPLAY - HINT "255a" MAX - ACCESS read - only STATUS current DESCRIPTION "A textual description of the entity. This
     value should include the full name and version identification of the system's hardware type,
@@ -79,11 +77,11 @@ SNMPv2 - MIB::sysDescr sysDescr OBJECT - TYPE-- FROM SNMPv2 - MIB-- TEXTUAL CONV
         ::
         = {iso(1) org(3) dod(6) internet(1) mgmt(2) mib - 2(1)system(1) 1}
 </code></pre>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd> snmptranslate -Tp -OS system<br />
- will print the following tree:</p>
+ will print the following tree:</dd>
 <dt>
-<dd>
+</dt><dd>
 + &#8211;system(1) |<br />
     +&#8211; -R&#8211; String sysDescr(1) | Textual Convention:DisplayString<br />
                                                      |<br />
@@ -103,25 +101,25 @@ SNMPv2 - MIB::sysDescr sysDescr OBJECT - TYPE-- FROM SNMPv2 - MIB-- TEXTUAL CONV
                                                 Size:0..255 + &#8212; -R&#8211; TimeTicks sysORUpTime(4)<br />
                                                                      Textual<br />
                                           Convention:TimeStamp
-</dl>
+</dd></dl>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> snmptranslate -Ta | head<br />
- will produce the following dump:</p>
+ will produce the following dump:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 dump DEFINITIONS :: = BEGIN
     org ::
         = {iso 3} dod :: = {org 6} internet :: = {dod 1} directory :: = {internet 1} mgmt :: = {internet 2} experimental :: = {internet 3} private :: = {internet 4} security :: = {internet 5} snmpV2 :: = {internet 6}
 </code></pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> snmptranslate -Tl | head<br />
- will produce the following dump:</p>
+ will produce the following dump:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .iso(1).org(3)
 .iso(1).org(3).dod(6)
@@ -134,13 +132,13 @@ dump DEFINITIONS :: = BEGIN
 .iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1).system(1).sysObjectID(2)
 .iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1).system(1).sysUpTime(3)
 </pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> snmptranslate -To | head<br />
- will produce the following dump</p>
+ will produce the following dump</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .1.3
 .1.3.6
@@ -153,13 +151,13 @@ dump DEFINITIONS :: = BEGIN
 .1.3.6.1.2.1.1.2
 .1.3.6.1.2.1.1.3
 </pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> snmptranslate -Ts | head<br />
- will produce the following dump</p>
+ will produce the following dump</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .iso.org
 .iso.org.dod
@@ -172,13 +170,13 @@ dump DEFINITIONS :: = BEGIN
 .iso.org.dod.internet.mgmt.mib-2.system.sysObjectID
 .iso.org.dod.internet.mgmt.mib-2.system.sysUpTime
 </pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> snmptranslate -Tt | head<br />
- will produce the following dump</p>
+ will produce the following dump</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   org(3) type=0
     dod(6) type=0
@@ -191,7 +189,7 @@ dump DEFINITIONS :: = BEGIN
               sysObjectID(2) type=1
               sysUpTime(3) type=8
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5), RFC 2578-2580. </p>
 <h2>Index</h2>

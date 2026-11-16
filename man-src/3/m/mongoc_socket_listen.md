@@ -14,11 +14,11 @@ mongoc_socket_listen (mongoc_socket_t *sock,
  unsigned int backlog);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>backlog</code></p>
-<dd>An int containing max backlog size.</dl>
+<dt><code>backlog</code></dt>
+<dd>An int containing max backlog size.</dd></dl>
 <h2>Description</h2>
 <p>This function is similar to the BSD sockets <code>listen(3)</code> function. It is meant for socket servers. </p>
 <h2>Returns</h2>

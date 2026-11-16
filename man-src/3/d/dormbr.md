@@ -19,7 +19,7 @@ description: "dormbr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 If VECT = 'Q', DORMBR overwrites the general real M - by - N matrix C with SIDE = 'L' SIDE = 'R' TRANS = 'N' : Q *C C *Q TRANS = 'T' : Q **T *C C *Q **T If VECT = 'P', DORMBR overwrites the general real M - by - N matrix C with SIDE = 'L' SIDE = 'R' TRANS = 'N' : P *C C *P TRANS = 'T' : P **T *C C *P **T Here Q and P **T are the orthogonal matrices determined by DGEBRD when reducing a real matrix A to bidiagonal form : A = Q * B * P * *T.Q and P * *T are defined as products of elementary reflectors H(i) and G(i) respectively.Let nq = m if SIDE = 'L' and nq = n if SIDE = 'R'.Thus nq is the order of the orthogonal matrix Q or P **T that is applied.If VECT = 'Q', A is assumed to have been an NQ - by - K matrix : if nq &gt;= k, Q = H(1) H(2)...H(k);
 if nq
@@ -27,11 +27,11 @@ if nq
 if k
 &gt;= nq, P = G(1) G(2)...G(nq - 1).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>VECT</i> </p>
+</dt><dd> <i>VECT</i> </dd>
 <pre>
           VECT is CHARACTER*1
           = 'Q': apply Q or Q**T;
@@ -128,14 +128,14 @@ the routine
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 195 of file dormbr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

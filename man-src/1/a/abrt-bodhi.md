@@ -30,13 +30,13 @@ url: "/docs/linux/man/1-abrt-bodhi/"
  -v, --verbose
 <dl>
 <dt>
-<dd> Be verbose</dl>
+</dt><dd> Be verbose</dd></dl>
  
 
  -r[RELEASE], --release[RELEASE]
 <dl>
 <dt>
-<dd> Specify a release (f16|rawhide)</dl>
+</dt><dd> Specify a release (f16|rawhide)</dd></dl>
  
 
  -b, --bugs ID1,ID2,.. Specify any number of Bugzilla IDs (--bugs=1234,5678)
@@ -47,7 +47,7 @@ url: "/docs/linux/man/1-abrt-bodhi/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

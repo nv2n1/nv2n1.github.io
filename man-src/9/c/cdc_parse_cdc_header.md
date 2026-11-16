@@ -15,19 +15,19 @@ cdc_parse_cdc_header - parse the extra headers present in CDC devices
 <h2>Arguments</h2>
 
 <i>hdr</i>
-<dl><dd><dd>the place to put the results of the parsing</dl>
+<dl><dd></dd><dd>the place to put the results of the parsing</dd></dl>
  
 
  <i>intf</i>
-<dl><dd>the interface for which parsing is requested</dl>
+<dl><dd>the interface for which parsing is requested</dd></dl>
  
 
  <i>buffer</i>
-<dl><dd>pointer to the extra headers to be parsed</dl>
+<dl><dd>pointer to the extra headers to be parsed</dd></dl>
  
 
  <i>buflen</i>
-<dl><dd>length of the extra headers</dl>
+<dl><dd>length of the extra headers</dd></dl>
 
 <h2>Description</h2>
 

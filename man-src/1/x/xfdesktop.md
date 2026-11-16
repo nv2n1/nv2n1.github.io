@@ -17,47 +17,47 @@ description: "xfdesktop – The Xfce 4 Desktop Environment’s desktop manager"
 <h2>OPTIONS</h2>
 <h3>HELP OPTIONS:</h3>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</p>
-<dt><code>&#8211;help-sm-client</code></p>
-<dd> Show session management options </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd>
+<dt><code>&#8211;help-sm-client</code></dt>
+<dd> Show session management options </dd>
 </dl>
 <h3>APPLICATION OPTIONS:</h3>
 <dl>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information</p>
-<dt><code>-R, &#8211;reload</code></p>
-<dd> Causes an already-running instance of <code>xfdesktop</code> to reload all its settings and redraws the desktop background.</p>
-<dt><code>-N, &#8211;next</code></p>
-<dd> Causes an already-running instance of <code>xfdesktop</code> to advance to the next wallpaper on the current workspace.</p>
-<dt><code>-M, &#8211;menu</code></p>
-<dd> Causes an already-running instance of <code>xfdesktop</code> to pop up the applications menu at the current position of the mouse cursor.</p>
-<dt><code>-W, &#8211;windowlist</code></p>
-<dd> Causes an already-running instance of <code>xfdesktop</code> to pop up the window list menu at the current position of the mouse cursor.</p>
-<dt><code>-A, &#8211;arrange</code></p>
-<dd> Automatically arrange all the icons on the desktop</p>
-<dt><code>-D, &#8211;disable-wm-check</code></p>
-<dd> Do not wait for a window manager on startup</p>
-<dt><code>-e, &#8211;enable-debug</code></p>
-<dd> Enable debug messages</p>
-<dt><code>-d, &#8211;disable-debug</code></p>
-<dd> Disable debug messages</p>
-<dt><code>-Q, &#8211;quit</code></p>
-<dd> Cause <code>xfdesktop</code> to quit</p>
-<dt><code>&#8211;display=[DISPLAY]</code></p>
-<dd> X display to use </p>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information</dd>
+<dt><code>-R, &#8211;reload</code></dt>
+<dd> Causes an already-running instance of <code>xfdesktop</code> to reload all its settings and redraws the desktop background.</dd>
+<dt><code>-N, &#8211;next</code></dt>
+<dd> Causes an already-running instance of <code>xfdesktop</code> to advance to the next wallpaper on the current workspace.</dd>
+<dt><code>-M, &#8211;menu</code></dt>
+<dd> Causes an already-running instance of <code>xfdesktop</code> to pop up the applications menu at the current position of the mouse cursor.</dd>
+<dt><code>-W, &#8211;windowlist</code></dt>
+<dd> Causes an already-running instance of <code>xfdesktop</code> to pop up the window list menu at the current position of the mouse cursor.</dd>
+<dt><code>-A, &#8211;arrange</code></dt>
+<dd> Automatically arrange all the icons on the desktop</dd>
+<dt><code>-D, &#8211;disable-wm-check</code></dt>
+<dd> Do not wait for a window manager on startup</dd>
+<dt><code>-e, &#8211;enable-debug</code></dt>
+<dd> Enable debug messages</dd>
+<dt><code>-d, &#8211;disable-debug</code></dt>
+<dd> Disable debug messages</dd>
+<dt><code>-Q, &#8211;quit</code></dt>
+<dd> Cause <code>xfdesktop</code> to quit</dd>
+<dt><code>&#8211;display=[DISPLAY]</code></dt>
+<dd> X display to use </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>xfdesktop</code>&#8216;s behavior is affected by the following environment variables. </p>
 <dl>
-<dt><code>XDG_CONFIG_HOME</code></p>
-<dd> Specifies the root for all user-specific configuration files. If this environment variable is not present, it defaults to <i>~/.config</i></p>
-<dt><code>XDG_CONFIG_DIRS</code></p>
-<dd> Specifies a colon-separated list of system directories in which to search for configuration data. If this environment variable is not present, it defaults to <i>/etc/xdg</i> </p>
+<dt><code>XDG_CONFIG_HOME</code></dt>
+<dd> Specifies the root for all user-specific configuration files. If this environment variable is not present, it defaults to <i>~/.config</i></dd>
+<dt><code>XDG_CONFIG_DIRS</code></dt>
+<dd> Specifies a colon-separated list of system directories in which to search for configuration data. If this environment variable is not present, it defaults to <i>/etc/xdg</i> </dd>
 </dl>
 <h2>FILES</h2>
 <p> <code>xfdesktop</code> searches for a menu description file in <i>$XDG_CONFIG_DIRS/menus/xfce-applications.menu</i>. <code>xfdesktop</code> can also use a user-customized menu in <i>$XDG_CONFIG_HOME/menus/</i>. </p>

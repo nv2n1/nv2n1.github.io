@@ -18,18 +18,18 @@ description: "dsyr.f –"
 <p> <code>DSYR</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DSYR   performs the symmetric rank 1 operation
     A := alpha*x*x**T + A,
  where alpha is a real scalar, x is an n element vector and A is an
  n by n symmetric matrix.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
            On entry, UPLO specifies whether the upper or lower
@@ -91,18 +91,18 @@ description: "dsyr.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 2 Blas routine.
   -- Written on 22-October-1986.
@@ -111,8 +111,9 @@ description: "dsyr.f –"
      Sven Hammarling, Nag Central Office.
      Richard Hanson, Sandia National Labs.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 133 of file dsyr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

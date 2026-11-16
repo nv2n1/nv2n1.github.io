@@ -14,10 +14,10 @@ description: "blk_end_request_all – Helper function for drives to finish the r
 <p><i>rq</i></p>
 <dl>
 <dd>
-<dd>the request to finish</dl>
+</dd><dd>the request to finish</dd></dl>
 <p> <i>error</i></p>
 <dl>
-<dd><code>0</code> for success, &lt; <code>0</code> for error</dl>
+<dd><code>0</code> for success, &lt; <code>0</code> for error</dd></dl>
 <h2>Description</h2>
 <p>Completely finish <i>rq</i>.</p>
 <h2>Copyright</h2>

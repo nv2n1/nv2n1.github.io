@@ -17,48 +17,48 @@ description: "unicharset – character properties file used by"
 <dl>
 <dd>
 <pre>'character' 'properties' 'script' 'id'</pre>
-</dl>
+</dd></dl>
 <p> Starting with Tesseract v3.02, more information may be given for each unichar: </p>
 <dl>
 <dd>
 <pre>'character' 'properties' 'glyph_metrics' 'script' 'other_case' 'direction' 'mirror' 'normed_form'</pre>
-</dl>
+</dd></dl>
 <p> Entries: </p>
 <p> <i>character</i></p>
 <dl>
-<dd>The UTF-8 encoded string to be produced for this unichar.</dl>
+<dd>The UTF-8 encoded string to be produced for this unichar.</dd></dl>
 <p> <i>properties</i></p>
 <dl>
-<dd>An integer mask of character properties, one per bit. From least to most significant bit, these are: isalpha, islower, isupper, isdigit, ispunctuation.</dl>
+<dd>An integer mask of character properties, one per bit. From least to most significant bit, these are: isalpha, islower, isupper, isdigit, ispunctuation.</dd></dl>
 <p> <i>glyph_metrics</i></p>
 <dl>
-<dd>Ten comma-separated integers representing various standards for where this glyph is to be found within a baseline-normalized coordinate system where 128 is normalized to x-height. </p>
+<dd>Ten comma-separated integers representing various standards for where this glyph is to be found within a baseline-normalized coordinate system where 128 is normalized to x-height. </dd>
 <dl>
-<dd>&bull; min_bottom, max_bottom: the ranges where the bottom of the character can be found.</dl>
+<dd>&bull; min_bottom, max_bottom: the ranges where the bottom of the character can be found.</dd></dl>
 <dl>
-<dd>&bull; min_top, max_top: the ranges where the top of the character may be found.</dl>
+<dd>&bull; min_top, max_top: the ranges where the top of the character may be found.</dd></dl>
 <dl>
-<dd>&bull; min_width, max_width: horizontal width of the character.</dl>
+<dd>&bull; min_width, max_width: horizontal width of the character.</dd></dl>
 <dl>
-<dd>&bull; min_bearing, max_bearing: how far from the usual start position does the leftmost part of the character begin.</dl>
+<dd>&bull; min_bearing, max_bearing: how far from the usual start position does the leftmost part of the character begin.</dd></dl>
 <dl>
-<dd>&bull; min_advance, max_advance: how far from the printer&#8217;s cell left do we advance to begin the next character.</dl>
+<dd>&bull; min_advance, max_advance: how far from the printer&#8217;s cell left do we advance to begin the next character.</dd></dl>
 </dl>
 <p> <i>script</i></p>
 <dl>
-<dd>Name of the script (Latin, Common, Greek, Cyrillic, Han, null).</dl>
+<dd>Name of the script (Latin, Common, Greek, Cyrillic, Han, null).</dd></dl>
 <p> <i>other_case</i></p>
 <dl>
-<dd>The Unichar ID of the other case version of this character (upper or lower).</dl>
+<dd>The Unichar ID of the other case version of this character (upper or lower).</dd></dl>
 <p> <i>direction</i></p>
 <dl>
-<dd>The Unicode BiDi direction of this character, as defined by ICU&#8217;s enum UCharDirection. (0 = Left to Right, 1 = Right to Left, 2 = European Number&#8230;)</dl>
+<dd>The Unicode BiDi direction of this character, as defined by ICU&#8217;s enum UCharDirection. (0 = Left to Right, 1 = Right to Left, 2 = European Number&#8230;)</dd></dl>
 <p> <i>mirror</i></p>
 <dl>
-<dd>The Unichar ID of the BiDirectional mirror of this character. For example the mirror of open paren is close paren, but Latin Capital C has no mirror, so it remains a Latin Capital C.</dl>
+<dd>The Unichar ID of the BiDirectional mirror of this character. For example the mirror of open paren is close paren, but Latin Capital C has no mirror, so it remains a Latin Capital C.</dd></dl>
 <p> <i>normed_form</i></p>
 <dl>
-<dd>The UTF-8 representation of a &quot;normalized form&quot; of this unichar for the purpose of blaming a module for errors given ground truth text. For instance, a left or right single quote may normalize to an ASCII quote.</dl>
+<dd>The UTF-8 representation of a &quot;normalized form&quot; of this unichar for the purpose of blaming a module for errors given ground truth text. For instance, a left or right single quote may normalize to an ASCII quote.</dd></dl>
 <h2>Example (V2)</h2>
 <dl>
 <dd>
@@ -67,7 +67,7 @@ b 3 Latin 59
 W 5 Latin 40
 7 8 Common 66
 = 0 Common 93</pre>
-</dl>
+</dd></dl>
 <p> &quot;;&quot; is a punctuation character. Its properties are thus represented by the binary number 10000 (10 in hexadecimal). </p>
 <p> &quot;b&quot; is an alphabetic character and a lower case character. Its properties are thus represented by the binary number 00011 (3 in hexadecimal). </p>
 <p> &quot;W&quot; is an alphabetic character and an upper case character. Its properties are thus represented by the binary number 00101 (5 in hexadecimal). </p>
@@ -85,7 +85,7 @@ Y 5 59,68,216,255,91,205,0,47,91,223 Latin 33 0 2 Y
 9 8 18,66,203,255,89,156,0,39,104,173 Common 4 2 4 9
 a 3 58,65,186,198,85,164,0,26,97,185 Latin 56 0 5 a
 . . .</pre>
-</dl>
+</dd></dl>
 <h2>Caveats</h2>
 <p>Although the unicharset reader maintains the ability to read unicharsets of older formats and will assign default values to missing fields, the accuracy will be degraded. </p>
 <p> Further, most other data files are indexed by the unicharset file, so changing it without re-generating the others is likely to have dire consequences.</p>

@@ -12,7 +12,6 @@ std::atomic&lt;T&gt;::load - std::atomic&lt;T&gt;::load
 
 <pre><code>T load(std::memory_order order = std::memory_order_seq_cst) const noexcept;
 (since C++ 11)
-
     T load(std::memory_order order = std::memory_order_seq_cst) const volatile noexcept;</code></pre> 
 Atomically loads and returns the current value of the atomic variable. Memory is affected according to the value of order. 
 order must be one of std::memory_order_relaxed, std::memory_order_consume, std::memory_order_acquire or std::memory_order_seq_cst. Otherwise the behavior is undefined. 

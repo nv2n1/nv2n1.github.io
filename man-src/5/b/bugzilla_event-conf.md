@@ -20,4 +20,4 @@ This configuration file provides definitions for events which uses <i>reporter-b
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

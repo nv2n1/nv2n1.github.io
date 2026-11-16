@@ -62,8 +62,8 @@ description: "telepathy_selinux – Security Enhanced Linux Policy for the telep
 <p> <code>telepathy_msn_exec_t </code> </p>
 <p> &#8211; Set files with the telepathy_msn_exec_t type, if you want to transition an executable to the telepathy_msn_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/telepathy-butterfly, /usr/libexec/telepathy-haze </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/telepathy-butterfly, /usr/libexec/telepathy-haze </dd>
 </dl>
 <p> <code>telepathy_msn_tmp_t </code> </p>
 <p> &#8211; Set files with the telepathy_msn_tmp_t type, if you want to store telepathy msn temporary files in the /tmp directories. </p>

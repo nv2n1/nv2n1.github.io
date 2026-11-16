@@ -17,16 +17,16 @@ description: "mkd-extensions – Extensions to the Markdown text formatting synt
 <h3>pseudo-protocols</h3>
 <p>Five pseudo-protocols have been added to links</p>
 <dl>
-<dt><i>id:</i></p>
-<dd>The <i>alt text</i> is marked up and written to the output, wrapped with <i>&lt;a id=id&gt;</i> and <i>&lt;/a&gt;</i></p>
-<dt><i>class:</i></p>
-<dd>The <i>alt text</i> is marked up and written to the output, wrapped with <i>&lt;span class=class&gt;</i> and <i>&lt;/span&gt;</i></p>
-<dt><i>raw:</i></p>
-<dd>The <i>title</i> is written <i>&#8212; with no further processing &#8212;</i> to the output. The <i>alt text</i> is discarded.</p>
-<dt><i>abbr:</i></p>
-<dd>The <i>alt text</i> is marked up and written to the output, wrapped with <i>&lt;abbr title=abbr&gt;</i> and <i>&lt;/abbr&gt;</i></p>
-<dt><i>lang:</i></p>
-<dd>The <i>alt text</i> s marked up and written to the output, wrapped with <i>&lt;span lang=lang&gt;</i> and <i>&lt;/span&gt;</i></dl>
+<dt><i>id:</i></dt>
+<dd>The <i>alt text</i> is marked up and written to the output, wrapped with <i>&lt;a id=id&gt;</i> and <i>&lt;/a&gt;</i></dd>
+<dt><i>class:</i></dt>
+<dd>The <i>alt text</i> is marked up and written to the output, wrapped with <i>&lt;span class=class&gt;</i> and <i>&lt;/span&gt;</i></dd>
+<dt><i>raw:</i></dt>
+<dd>The <i>title</i> is written <i>&#8212; with no further processing &#8212;</i> to the output. The <i>alt text</i> is discarded.</dd>
+<dt><i>abbr:</i></dt>
+<dd>The <i>alt text</i> is marked up and written to the output, wrapped with <i>&lt;abbr title=abbr&gt;</i> and <i>&lt;/abbr&gt;</i></dd>
+<dt><i>lang:</i></dt>
+<dd>The <i>alt text</i> s marked up and written to the output, wrapped with <i>&lt;span lang=lang&gt;</i> and <i>&lt;/span&gt;</i></dd></dl>
 <h3>Pandoc headers</h3>
 <p>The markdown source document can have a 3-line Pandoc header in the format of </p>
 <pre> % title

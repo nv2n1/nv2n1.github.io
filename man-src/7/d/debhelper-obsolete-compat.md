@@ -14,59 +14,59 @@ description: "debhelper-obsolete-compat – List of no longer supported compat l
 <h2>Upgrade List For Compat Levels</h2>
 <p>The following is the list of now obsolete compat levels and their changes.</p>
 <dl>
-<dt>v1</p>
-<dd>This is the original debhelper compatibility level, and so it is the default one. In this mode, debhelper will use <i>debian/tmp</i> as the package tree directory for the first binary package listed in the control file, while using debian/<i>package</i> for all other packages listed in the <i>control</i> file. </p>
+<dt>v1</dt>
+<dd>This is the original debhelper compatibility level, and so it is the default one. In this mode, debhelper will use <i>debian/tmp</i> as the package tree directory for the first binary package listed in the control file, while using debian/<i>package</i> for all other packages listed in the <i>control</i> file. </dd>
 <p> This mode is deprecated.</p>
-<dt>v2</p>
-<dd>In this mode, debhelper will consistently use debian/<i>package</i> as the package tree directory for every package that is built. </p>
+<dt>v2</dt>
+<dd>In this mode, debhelper will consistently use debian/<i>package</i> as the package tree directory for every package that is built. </dd>
 <p> This mode is deprecated.</p>
-<dt>v3</p>
-<dd>This mode works like v2, with the following additions:</p>
+<dt>v3</dt>
+<dd>This mode works like v2, with the following additions:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>Debhelper config files support globbing via <code>*</code> and <code>?</code>, when appropriate. To turn this off and use those characters raw, just prefix with a backslash.</p>
-<dt>&#8211;</p>
-<dd><code>dh_makeshlibs</code> makes the <i>postinst</i> and <i>postrm</i> scripts call <code>ldconfig</code>.</p>
-<dt>&#8211;</p>
-<dd>Every file in <i>etc/</i> is automatically flagged as a conffile by <code>dh_installdeb</code>.</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>Debhelper config files support globbing via <code>*</code> and <code>?</code>, when appropriate. To turn this off and use those characters raw, just prefix with a backslash.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_makeshlibs</code> makes the <i>postinst</i> and <i>postrm</i> scripts call <code>ldconfig</code>.</dd>
+<dt>&#8211;</dt>
+<dd>Every file in <i>etc/</i> is automatically flagged as a conffile by <code>dh_installdeb</code>.</dd></dl>
 </dl>
 <dl>
-<dd>This mode is deprecated.</dl>
-<dt>v4</p>
-<dd>Changes from v3 are:</p>
+<dd>This mode is deprecated.</dd></dl>
+<dt>v4</dt>
+<dd>Changes from v3 are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd><code>dh_makeshlibs -V</code> will not include the Debian part of the version number in the generated dependency line in the shlibs file.</p>
-<dt>&#8211;</p>
-<dd>You are encouraged to put the new <code>${misc:Depends}</code> into <i>debian/control</i> to supplement the <code>${shlibs:Depends}</code> field.</p>
-<dt>&#8211;</p>
-<dd><code>dh_fixperms</code> will make all files in <i>bin/</i> directories and in <i>etc/init.d</i> executable.</p>
-<dt>&#8211;</p>
-<dd><code>dh_link</code> will correct existing links to conform with policy.</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd><code>dh_makeshlibs -V</code> will not include the Debian part of the version number in the generated dependency line in the shlibs file.</dd>
+<dt>&#8211;</dt>
+<dd>You are encouraged to put the new <code>${misc:Depends}</code> into <i>debian/control</i> to supplement the <code>${shlibs:Depends}</code> field.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_fixperms</code> will make all files in <i>bin/</i> directories and in <i>etc/init.d</i> executable.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_link</code> will correct existing links to conform with policy.</dd></dl>
 </dl>
 <dl>
-<dd>This mode is deprecated.</dl>
-<dt>v5</p>
-<dd>This is the lowest supported compatibility level. </p>
+<dd>This mode is deprecated.</dd></dl>
+<dt>v5</dt>
+<dd>This is the lowest supported compatibility level. </dd>
 <p> Changes from v4 are:</p>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>Comments are ignored in debhelper config files.</p>
-<dt>&#8211;</p>
-<dd><code>dh_strip &#8211;dbg-package</code> now specifies the name of a package to put debugging symbols in, not the packages to take the symbols from.</p>
-<dt>&#8211;</p>
-<dd><code>dh_installdocs</code> skips installing empty files.</p>
-<dt>&#8211;</p>
-<dd><code>dh_install</code> errors out if wildcards expand to nothing.</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>Comments are ignored in debhelper config files.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_strip &#8211;dbg-package</code> now specifies the name of a package to put debugging symbols in, not the packages to take the symbols from.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_installdocs</code> skips installing empty files.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_install</code> errors out if wildcards expand to nothing.</dd></dl>
 </dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7)</p>

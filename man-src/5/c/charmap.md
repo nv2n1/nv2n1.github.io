@@ -13,38 +13,38 @@ description: "charmap – character set description file"
 <h3>Syntax</h3>
 <p>The charmap file starts with a header that may consist of the following keywords:</p>
 <dl>
-<dt>&lt;<i>code_set_name</i>&gt;</p>
-<dd>is followed by the name of the character map.</p>
-<dt>&lt;<i>comment_char</i>&gt;</p>
-<dd>is followed by a character that will be used as the comment character for the rest of the file. It defaults to the number sign (#).</p>
-<dt>&lt;<i>escape_char</i>&gt;</p>
-<dd>is followed by a character that should be used as the escape character for the rest of the file to mark characters that should be interpreted in a special way. It defaults to the backslash (\).</p>
-<dt>&lt;<i>mb_cur_max</i>&gt;</p>
-<dd>is followed by the maximum number of bytes for a character. The default value is 1.</p>
-<dt>&lt;<i>mb_cur_min</i>&gt;</p>
-<dd>is followed by the minimum number of bytes for a character. This value must be less than or equal than &lt;<i>mb_cur_max</i>&gt;. If not specified, it defaults to &lt;<i>mb_cur_max</i>&gt;.</dl>
+<dt>&lt;<i>code_set_name</i>&gt;</dt>
+<dd>is followed by the name of the character map.</dd>
+<dt>&lt;<i>comment_char</i>&gt;</dt>
+<dd>is followed by a character that will be used as the comment character for the rest of the file. It defaults to the number sign (#).</dd>
+<dt>&lt;<i>escape_char</i>&gt;</dt>
+<dd>is followed by a character that should be used as the escape character for the rest of the file to mark characters that should be interpreted in a special way. It defaults to the backslash (\).</dd>
+<dt>&lt;<i>mb_cur_max</i>&gt;</dt>
+<dd>is followed by the maximum number of bytes for a character. The default value is 1.</dd>
+<dt>&lt;<i>mb_cur_min</i>&gt;</dt>
+<dd>is followed by the minimum number of bytes for a character. This value must be less than or equal than &lt;<i>mb_cur_max</i>&gt;. If not specified, it defaults to &lt;<i>mb_cur_max</i>&gt;.</dd></dl>
 <p> The character set definition section starts with the keyword <i>CHARMAP</i> in the first column. </p>
 <p> The following lines may have one of the two following forms to define the character set:</p>
 <dl>
-<dt>&lt;<i>character</i>&gt;&nbsp;<i>byte-sequence comment</i></p>
-<dd>This form defines exactly one character and its byte sequence, <i>comment</i> being optional.</p>
-<dt>&lt;<i>character</i>&gt;..&lt;<i>character</i>&gt;&nbsp;<i>byte-sequence comment</i></p>
-<dd>This form defines a character range and its byte sequence, <i>comment</i> being optional.</dl>
+<dt>&lt;<i>character</i>&gt;&nbsp;<i>byte-sequence comment</i></dt>
+<dd>This form defines exactly one character and its byte sequence, <i>comment</i> being optional.</dd>
+<dt>&lt;<i>character</i>&gt;..&lt;<i>character</i>&gt;&nbsp;<i>byte-sequence comment</i></dt>
+<dd>This form defines a character range and its byte sequence, <i>comment</i> being optional.</dd></dl>
 <p> The character set definition section ends with the string <i>END CHARMAP</i>. </p>
 <p> The character set definition section may optionally be followed by a section to define widths of characters. </p>
 <p> The <i>WIDTH_DEFAULT</i> keyword can be used to define the default width for all characters not explicitly listed. The default character width is 1. </p>
 <p> The width section for individual characters starts with the keyword <i>WIDTH</i> in the first column. </p>
 <p> The following lines may have one of the two following forms to define the widths of the characters:</p>
 <dl>
-<dt>&lt;<i>character</i>&gt;&nbsp;<i>width</i></p>
-<dd>This form defines the width of exactly one character.</p>
-<dt>&lt;<i>character</i>&gt;&#8230;&lt;<i>character</i>&gt;&nbsp;<i>width</i></p>
-<dd>This form defines the width for all the characters in the range.</dl>
+<dt>&lt;<i>character</i>&gt;&nbsp;<i>width</i></dt>
+<dd>This form defines the width of exactly one character.</dd>
+<dt>&lt;<i>character</i>&gt;&#8230;&lt;<i>character</i>&gt;&nbsp;<i>width</i></dt>
+<dd>This form defines the width for all the characters in the range.</dd></dl>
 <p> The width definition section ends with the string <i>END WIDTH</i>.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/share/i18n/charmaps</i></p>
-<dd>Usual default character map path.</dl>
+<dt><i>/usr/share/i18n/charmaps</i></dt>
+<dd>Usual default character map path.</dd></dl>
 <h2>Conforming To</h2>
 <p>POSIX.2.</p>
 <h2>Examples</h2>

@@ -10,18 +10,10 @@ description: "ip – Linux IPv4 protocol implementation"
 <p>ip &#8211; Linux IPv4 protocol implementation</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/socket.h&gt;
-
-
 #include &lt;netinet/in.h&gt;
-
-
 #include &lt;netinet/ip.h&gt;        /* superset of previous */
 tcp_socket = socket(AF_INET, SOCK_STREAM, 0);
-
-
 udp_socket = socket(AF_INET, SOCK_DGRAM, 0);
-
-
 raw_socket = socket(AF_INET, SOCK_RAW, protocol);</code></pre>
 <h2>Description</h2>
 <p>Linux implements the Internet Protocol, version 4, described in RFC 791 and RFC 1122. <code>ip</code> contains a level 2 multicasting implementation conforming to RFC 1112. It also contains an IP router including a packet filter. The programming interface is BSD-sockets compatible. For more information on sockets, see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7). An IP socket is created using <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2): struct sock_extended_err {<br />
@@ -235,3 +227,4 @@ and retrying may be necessary.</p>
 in the returned length, but is not guaranteed to do so: a security<br />
 context &quot;foo&quot; might be represented as either {&#8216;f&#8217;,&#8217;o&#8217;,&#8217;o&#8217;} of length 3<br />
 or {&#8216;f&#8217;,&#8217;o&#8217;,&#8217;o&#8217;,&#8217;
+</p>

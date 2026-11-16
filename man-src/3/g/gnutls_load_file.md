@@ -14,10 +14,10 @@ description: "gnutls_load_file – API function"
 <p> <code>int gnutls_load_file(const char * </code><i>filename</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * filename</p>
-<dd> the name of the file to load</p>
-<dt>gnutls_datum_t * data</p>
-<dd> Where the file will be stored</dl>
+<dt>const char * filename</dt>
+<dd> the name of the file to load</dd>
+<dt>gnutls_datum_t * data</dt>
+<dd> Where the file will be stored</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will load a file into a datum. The data are zero terminated but the terminating null is not included in length. The returned data are allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
@@ -32,6 +32,6 @@ description: "gnutls_load_file – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

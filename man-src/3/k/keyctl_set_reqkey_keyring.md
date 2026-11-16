@@ -19,27 +19,27 @@ long keyctl_set_reqkey_keyring(int reqkey_defl);
 <p> After this operation has been issued, keys acquired by implicit key requests, such as might be performed by open() on an AFS or NFS filesystem, will be linked by default to the specified keyring by this function. </p>
 <p> The valid values of <i>reqkey_defl</i> are:</p>
 <dl>
-<dt><code>KEY_REQKEY_DEFL_NO_CHANGE</code></p>
-<dd> This makes no change to the current setting.</p>
-<dt><code>KEY_REQKEY_DEFL_THREAD_KEYRING</code></p>
-<dd> This makes the thread-specific keyring the default destination.</p>
-<dt><code>KEY_REQKEY_DEFL_PROCESS_KEYRING</code></p>
-<dd> This makes the process-specific keyring the default destination.</p>
-<dt><code>KEY_REQKEY_DEFL_SESSION_KEYRING</code></p>
-<dd> This makes the session keyring the default destination.</p>
-<dt><code>KEY_REQKEY_DEFL_USER_KEYRING</code></p>
-<dd> This makes the UID-specific keyring the default destination.</p>
-<dt><code>KEY_REQKEY_DEFL_USER_SESSION_KEYRING</code></p>
-<dd> This makes the UID-specific session keyring the default destination.</p>
-<dt><code>KEY_REQKEY_DEFL_DEFAULT</code></p>
-<dd> This selects the default behaviour which is to use the thread-specific keyring if there is one, otherwise the process-specific keyring if there is one, otherwise the session keyring if there is one, otherwise the UID-specific session keyring.</dl>
+<dt><code>KEY_REQKEY_DEFL_NO_CHANGE</code></dt>
+<dd> This makes no change to the current setting.</dd>
+<dt><code>KEY_REQKEY_DEFL_THREAD_KEYRING</code></dt>
+<dd> This makes the thread-specific keyring the default destination.</dd>
+<dt><code>KEY_REQKEY_DEFL_PROCESS_KEYRING</code></dt>
+<dd> This makes the process-specific keyring the default destination.</dd>
+<dt><code>KEY_REQKEY_DEFL_SESSION_KEYRING</code></dt>
+<dd> This makes the session keyring the default destination.</dd>
+<dt><code>KEY_REQKEY_DEFL_USER_KEYRING</code></dt>
+<dd> This makes the UID-specific keyring the default destination.</dd>
+<dt><code>KEY_REQKEY_DEFL_USER_SESSION_KEYRING</code></dt>
+<dd> This makes the UID-specific session keyring the default destination.</dd>
+<dt><code>KEY_REQKEY_DEFL_DEFAULT</code></dt>
+<dd> This selects the default behaviour which is to use the thread-specific keyring if there is one, otherwise the process-specific keyring if there is one, otherwise the session keyring if there is one, otherwise the UID-specific session keyring.</dd></dl>
 <p> This setting is inherited across <code>fork</code>() and <code>exec</code>(). </p>
 <h2>RETURN VALUE</h2>
 <p> On success <code>keyctl_set_reqkey_keyring</code>() returns <code>0</code>. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The value of <i>reqkey_defl</i> is invalid.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The value of <i>reqkey_defl</i> is invalid.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

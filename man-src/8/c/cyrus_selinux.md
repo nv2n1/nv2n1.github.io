@@ -55,9 +55,9 @@ description: "cyrus_selinux – Security Enhanced Linux Policy for the cyrus pro
 <p> Policy governs the access confined processes have to these ports. SELinux cyrus policy is very flexible allowing users to setup their cyrus processes in as secure a method as possible. </p>
 <p> The following port types are defined for cyrus: </p>
 <dl>
-<dt><code>cyrus_imapd_port_t</code></p>
+<dt><code>cyrus_imapd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2005</dl>
+</dd><dd>Default Defined Ports: tcp 2005</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type cyrus_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -117,8 +117,8 @@ description: "cyrus_selinux – Security Enhanced Linux Policy for the cyrus pro
 <p> <code>cyrus_exec_t</code> </p>
 <p> &#8211; Set files with the cyrus_exec_t type, if you want to transition an executable to the cyrus_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/cyrus/master, /usr/lib/cyrus-imapd/cyrus-master </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/cyrus/master, /usr/lib/cyrus-imapd/cyrus-master </dd>
 </dl>
 <p> <code>cyrus_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the cyrus_initrc_exec_t type, if you want to transition an executable to the cyrus_initrc_t domain. </p>
@@ -129,8 +129,8 @@ description: "cyrus_selinux – Security Enhanced Linux Policy for the cyrus pro
 <p> <code>cyrus_var_lib_t</code> </p>
 <p> &#8211; Set files with the cyrus_var_lib_t type, if you want to store the cyrus files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/imap(/.*)?, /var/lib/imap(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/imap(/.*)?, /var/lib/imap(/.*)? </dd>
 </dl>
 <p> <code>cyrus_var_run_t</code> </p>
 <p> &#8211; Set files with the cyrus_var_run_t type, if you want to store the cyrus files under the /run or /var/run directory. </p>

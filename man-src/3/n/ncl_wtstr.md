@@ -27,23 +27,23 @@ CALL WTSTR(PX,PY,CH,IS,IO,IC)
 <h2>Description</h2>
 
 <dl><dt>PX
-<dd>(an input expression of type REAL) defines the X user coordinate where the text string is to be drawn.
-<dt>PY
-<dd>(an input expression of type REAL) defines the Y user coordinate where the text string is to be drawn.
-<dt>CH
-<dd>(an input constant or variable of type CHARACTER) is the text string to be drawn.
-<dt>IS
-<dd>(an input expression of type INTEGER) specifies the character width in plotter address units (PAUs).
-<dt>IO
-<dd>(an input expression of type INTEGER) specifies the rotation angle of the text string. IO is measured in degrees counter-clockwise from a horizontal orientation.
-<dt>IC
-<dd>(an input expression of type INTEGER) specifies the centering option, as follows:
-<dl><dd><dl><dt>&lt;0
-<dd>(PX,PY) will be in the vertical center of the left edge of the leftmost character in the original horizontal string.
-<dt>=0
-<dd>(PX,PY) will be in the center of the text extent rectangle.
-<dt>&gt;0
-<dd>(PX,PY) will be in the vertical center of the right edge of the rightmost character in the original horizontal string.</dl></dl>
+</dt><dd>(an input expression of type REAL) defines the X user coordinate where the text string is to be drawn.
+</dd><dt>PY
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate where the text string is to be drawn.
+</dd><dt>CH
+</dt><dd>(an input constant or variable of type CHARACTER) is the text string to be drawn.
+</dd><dt>IS
+</dt><dd>(an input expression of type INTEGER) specifies the character width in plotter address units (PAUs).
+</dd><dt>IO
+</dt><dd>(an input expression of type INTEGER) specifies the rotation angle of the text string. IO is measured in degrees counter-clockwise from a horizontal orientation.
+</dd><dt>IC
+</dt><dd>(an input expression of type INTEGER) specifies the centering option, as follows:
+</dd><dl><dd></dd><dl><dt>&lt;0
+</dt><dd>(PX,PY) will be in the vertical center of the left edge of the leftmost character in the original horizontal string.
+</dd><dt>=0
+</dt><dd>(PX,PY) will be in the center of the text extent rectangle.
+</dd><dt>&gt;0
+</dt><dd>(PX,PY) will be in the vertical center of the right edge of the rightmost character in the original horizontal string.</dd></dl></dl>
 </dl>
  
 

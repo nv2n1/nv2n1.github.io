@@ -14,10 +14,10 @@ description: "ata_do_set_mode – Program timings and issue SET FEATURES – XFE
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>link on which timings will be programmed</dl>
+</dd><dd>link on which timings will be programmed</dd></dl>
 <p> <i>r_failed_dev</i></p>
 <dl>
-<dd>out parameter for failed device</dl>
+<dd>out parameter for failed device</dd></dl>
 <h2>Description</h2>
 <p>Standard implementation of the function used to tune and set ATA device disk transfer mode (PIO3, UDMA6, etc.). If <code>ata_dev_set_mode</code> fails, pointer to the failing device is returned in <i>r_failed_dev</i>. </p>
 <p> LOCKING: PCI/etc. bus probe sem.</p>
@@ -26,5 +26,5 @@ description: "ata_do_set_mode – Program timings and issue SET FEATURES – XFE
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

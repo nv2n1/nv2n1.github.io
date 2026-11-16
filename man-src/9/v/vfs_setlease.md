@@ -15,19 +15,19 @@ vfs_setlease - sets a lease on an open file
 <h2>Arguments</h2>
 
 <i>filp</i>
-<dl><dd><dd>file pointer</dl>
+<dl><dd></dd><dd>file pointer</dd></dl>
  
 
  <i>arg</i>
-<dl><dd>type of lease to obtain</dl>
+<dl><dd>type of lease to obtain</dd></dl>
  
 
  <i>lease</i>
-<dl><dd>file_lock to use when adding a lease</dl>
+<dl><dd>file_lock to use when adding a lease</dd></dl>
  
 
  <i>priv</i>
-<dl><dd>private info for lm_setup when adding a lease (may be NULL if lm_setup doesn't require it)</dl>
+<dl><dd>private info for lm_setup when adding a lease (may be NULL if lm_setup doesn't require it)</dd></dl>
 
 <h2>Description</h2>
 

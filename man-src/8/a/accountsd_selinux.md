@@ -92,8 +92,8 @@ description: "accountsd_selinux – Security Enhanced Linux Policy for the accou
 <p> <code>accountsd_exec_t</code> </p>
 <p> &#8211; Set files with the accountsd_exec_t type, if you want to transition an executable to the accountsd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/accounts-daemon, /usr/lib/accountsservice/accounts-daemon </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/accounts-daemon, /usr/lib/accountsservice/accounts-daemon </dd>
 </dl>
 <p> <code>accountsd_unit_file_t</code> </p>
 <p> &#8211; Set files with the accountsd_unit_file_t type, if you want to treat the files as accountsd unit content. </p>

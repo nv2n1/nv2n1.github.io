@@ -19,116 +19,116 @@ description: "grace – command line interface xmgrace – full-featured GUI mod
  <code>gracebat</code> [ <i>option</i> | <i>filename</i> ]&#8230; </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-autoscale </code><i>x|y|xy|none</i></p>
-<dd> Set autoscale type</p>
-<dt><code>-barebones </code></p>
-<dd> Turn off all toolbars</p>
-<dt><code>-batch </code><i>file</i></p>
-<dd> Execute batch <i>file</i> on start up (i.e., after all other options have been processed and the UI initialized)</p>
-<dt><code>-block </code><i>file</i></p>
-<dd> Assume the data <i>file</i> is block data</p>
-<dt><code>-bxy </code><i>x:y:etc.</i></p>
-<dd> Form a set from the current block data set using the current set type from columns given in the argument</p>
-<dt><code>-datehint </code><i>iso|european|us|days|seconds|nohint</i></p>
-<dd> Set the hint for dates analysis</p>
-<dt><code>-dpipe </code><i>descriptor</i></p>
-<dd> Read data from descriptor on startup</p>
-<dt><code>-fixed </code><i>width height</i></p>
-<dd> Set canvas size fixed to width*height</p>
-<dt><code>-free </code></p>
-<dd> Use free page layout</p>
-<dt><code>-graph </code><i>number</i></p>
-<dd> Set the current graph number</p>
-<dt><code>-graphtype </code><i>xy|chart|fixed|polar|pie</i></p>
-<dd> Set the type of the current graph</p>
-<dt><code>-hardcopy</code></p>
-<dd> No interactive session, just print and quit</p>
-<dt><code>-hdevice </code><i>device_name</i></p>
-<dd> Set default hardcopy device. See <code>xmgrace -version</code> for a list of supported devices.</p>
-<dt><code>-install</code></p>
-<dd> Install private colormap</p>
-<dt><code>-legend load</code></p>
-<dd> Turn the graph legend on</p>
-<dt><code>-log </code><i>x|y|xy</i></p>
-<dd> Set the axis scaling of the current graph to logarithmic</p>
-<dt><code>-maxpath </code><i>length</i></p>
-<dd> Set the maximal drawing path length</p>
-<dt><code>-mono </code></p>
-<dd> Run grace in monochrome mode (affects the display only)</p>
-<dt><code>-netcdf </code><i>file</i></p>
-<dd> Assume data file is in netCDF format. This option is present only if the netCDF support was compiled in</p>
-<dt><code>-netcdfxy </code><i>X_var Y_var</i></p>
-<dd> If -netcdf was used previously, read from the netCDF file X_var and Y_var variables and create a set. If X_var is &quot;null&quot; then load the index of Y to X. This option is present only if the netCDF support was compiled in</p>
-<dt><code>-noask</code></p>
-<dd> Assume the answer is yes to all requests, if the operation would overwrite a file, grace will do so without prompting</p>
-<dt><code>-noinstall </code></p>
-<dd> Don&#8217;t use private colormap</p>
-<dt><code>-noprint </code></p>
-<dd> In batch mode, do not print</p>
-<dt><code>-nosafe </code></p>
-<dd> Disable safe mode</p>
-<dt><code>-nosigcatch </code></p>
-<dd> Don&#8217;t catch signals</p>
-<dt><code>-npipe </code><i>file</i></p>
-<dd> Read data from named pipe on startup</p>
-<dt><code>-nxy </code><i>file</i></p>
-<dd> Assume data file is in X Y1 Y2 Y3 &#8230; format</p>
-<dt><code>-param </code><i>file</i></p>
-<dd> Load parameters from <i>file</i> to the current graph</p>
-<dt><code>-pexec </code><i>string</i></p>
-<dd> Interpret string as a parameter setting</p>
-<dt><code>-pipe</code></p>
-<dd> Read data from stdin on startup</p>
-<dt><code>-printfile </code><i>file</i></p>
-<dd> Save print output to <i>file </i></p>
-<dt><code>-remove </code></p>
-<dd> Remove data file(s) after read</p>
-<dt><code>-results </code><i>file</i></p>
-<dd> Write results of some data manipulations to <i>file</i></p>
-<dt><code>-rvideo</code></p>
-<dd> Exchange the color indices for black and white</p>
-<dt><code>-safe </code></p>
-<dd> Run in the safe mode (default)</p>
-<dt><code>-saveall </code><i>file</i></p>
-<dd> Save all to <i>file</i></p>
-<dt><code>-seed </code><i>value</i></p>
-<dd> Integer seed for random number generator</p>
-<dt><code>-settype </code><i>xy|xydx|&#8230;</i></p>
-<dd> Set the type of the next data file</p>
-<dt><code>-source </code><i>disk|pipe</i></p>
-<dd> Source type of next data file</p>
-<dt><code>-timer </code><i>delay</i></p>
-<dd> Set allowed time slice for real time inputs to <i>delay</i> ms</p>
-<dt><code>-timestamp </code></p>
-<dd> Add timestamp to plot</p>
-<dt><code>-version </code></p>
-<dd> Show the program version, registered devices and build time configuration information.</p>
-<dt><code>-viewport </code><i>xmin ymin xmax ymax</i></p>
-<dd> Set the viewport for the current graph</p>
-<dt><code>-wd </code><i>path</i></p>
-<dd> Set the working directory</p>
-<dt><code>-world </code><i>xmin ymin xmax ymax</i></p>
-<dd> Set the world coordinates for the current graph</p>
-<dt><code>-usage|-help</code></p>
-<dd> This message </p>
+<dt><code>-autoscale </code><i>x|y|xy|none</i></dt>
+<dd> Set autoscale type</dd>
+<dt><code>-barebones </code></dt>
+<dd> Turn off all toolbars</dd>
+<dt><code>-batch </code><i>file</i></dt>
+<dd> Execute batch <i>file</i> on start up (i.e., after all other options have been processed and the UI initialized)</dd>
+<dt><code>-block </code><i>file</i></dt>
+<dd> Assume the data <i>file</i> is block data</dd>
+<dt><code>-bxy </code><i>x:y:etc.</i></dt>
+<dd> Form a set from the current block data set using the current set type from columns given in the argument</dd>
+<dt><code>-datehint </code><i>iso|european|us|days|seconds|nohint</i></dt>
+<dd> Set the hint for dates analysis</dd>
+<dt><code>-dpipe </code><i>descriptor</i></dt>
+<dd> Read data from descriptor on startup</dd>
+<dt><code>-fixed </code><i>width height</i></dt>
+<dd> Set canvas size fixed to width*height</dd>
+<dt><code>-free </code></dt>
+<dd> Use free page layout</dd>
+<dt><code>-graph </code><i>number</i></dt>
+<dd> Set the current graph number</dd>
+<dt><code>-graphtype </code><i>xy|chart|fixed|polar|pie</i></dt>
+<dd> Set the type of the current graph</dd>
+<dt><code>-hardcopy</code></dt>
+<dd> No interactive session, just print and quit</dd>
+<dt><code>-hdevice </code><i>device_name</i></dt>
+<dd> Set default hardcopy device. See <code>xmgrace -version</code> for a list of supported devices.</dd>
+<dt><code>-install</code></dt>
+<dd> Install private colormap</dd>
+<dt><code>-legend load</code></dt>
+<dd> Turn the graph legend on</dd>
+<dt><code>-log </code><i>x|y|xy</i></dt>
+<dd> Set the axis scaling of the current graph to logarithmic</dd>
+<dt><code>-maxpath </code><i>length</i></dt>
+<dd> Set the maximal drawing path length</dd>
+<dt><code>-mono </code></dt>
+<dd> Run grace in monochrome mode (affects the display only)</dd>
+<dt><code>-netcdf </code><i>file</i></dt>
+<dd> Assume data file is in netCDF format. This option is present only if the netCDF support was compiled in</dd>
+<dt><code>-netcdfxy </code><i>X_var Y_var</i></dt>
+<dd> If -netcdf was used previously, read from the netCDF file X_var and Y_var variables and create a set. If X_var is &quot;null&quot; then load the index of Y to X. This option is present only if the netCDF support was compiled in</dd>
+<dt><code>-noask</code></dt>
+<dd> Assume the answer is yes to all requests, if the operation would overwrite a file, grace will do so without prompting</dd>
+<dt><code>-noinstall </code></dt>
+<dd> Don&#8217;t use private colormap</dd>
+<dt><code>-noprint </code></dt>
+<dd> In batch mode, do not print</dd>
+<dt><code>-nosafe </code></dt>
+<dd> Disable safe mode</dd>
+<dt><code>-nosigcatch </code></dt>
+<dd> Don&#8217;t catch signals</dd>
+<dt><code>-npipe </code><i>file</i></dt>
+<dd> Read data from named pipe on startup</dd>
+<dt><code>-nxy </code><i>file</i></dt>
+<dd> Assume data file is in X Y1 Y2 Y3 &#8230; format</dd>
+<dt><code>-param </code><i>file</i></dt>
+<dd> Load parameters from <i>file</i> to the current graph</dd>
+<dt><code>-pexec </code><i>string</i></dt>
+<dd> Interpret string as a parameter setting</dd>
+<dt><code>-pipe</code></dt>
+<dd> Read data from stdin on startup</dd>
+<dt><code>-printfile </code><i>file</i></dt>
+<dd> Save print output to <i>file </i></dd>
+<dt><code>-remove </code></dt>
+<dd> Remove data file(s) after read</dd>
+<dt><code>-results </code><i>file</i></dt>
+<dd> Write results of some data manipulations to <i>file</i></dd>
+<dt><code>-rvideo</code></dt>
+<dd> Exchange the color indices for black and white</dd>
+<dt><code>-safe </code></dt>
+<dd> Run in the safe mode (default)</dd>
+<dt><code>-saveall </code><i>file</i></dt>
+<dd> Save all to <i>file</i></dd>
+<dt><code>-seed </code><i>value</i></dt>
+<dd> Integer seed for random number generator</dd>
+<dt><code>-settype </code><i>xy|xydx|&#8230;</i></dt>
+<dd> Set the type of the next data file</dd>
+<dt><code>-source </code><i>disk|pipe</i></dt>
+<dd> Source type of next data file</dd>
+<dt><code>-timer </code><i>delay</i></dt>
+<dd> Set allowed time slice for real time inputs to <i>delay</i> ms</dd>
+<dt><code>-timestamp </code></dt>
+<dd> Add timestamp to plot</dd>
+<dt><code>-version </code></dt>
+<dd> Show the program version, registered devices and build time configuration information.</dd>
+<dt><code>-viewport </code><i>xmin ymin xmax ymax</i></dt>
+<dd> Set the viewport for the current graph</dd>
+<dt><code>-wd </code><i>path</i></dt>
+<dd> Set the working directory</dd>
+<dt><code>-world </code><i>xmin ymin xmax ymax</i></dt>
+<dd> Set the world coordinates for the current graph</dd>
+<dt><code>-usage|-help</code></dt>
+<dd> This message </dd>
 </dl>
 <h2>RESOURCES</h2>
 <dl>
-<dt>When run in the GUI mode, the interface is a subject to X resource settings.</p>
-<dd> Please refer to the User&#8217;s Guide for a list of important ones. </p>
+<dt>When run in the GUI mode, the interface is a subject to X resource settings.</dt>
+<dd> Please refer to the User&#8217;s Guide for a list of important ones. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>GRACE_HOME</code></p>
-<dd> Specifies the directory where the Grace docs and libs are stored. Default is <code>/usr/local/grace</code></p>
-<dt><code>GRACE_HELPVIEWER</code></p>
-<dd> The shell command to run an HTML viewer for on-line browsing of the help documents. Must include at least one instance of &quot;%s&quot; which will be replaced with the actual URL by Grace. Default is <code>mozilla %s</code></p>
-<dt><code>GRACE_EDITOR</code></p>
-<dd> Specifies the editor which is used to edit sets. Default is <code>xterm -e vi</code></p>
-<dt><code>GRACE_PRINT_CMD</code></p>
-<dd> The print command.</p>
-<dt><code>GRACE_FFTW_RAM_WISDOM</code></p>
-<dd> and <code>GRACE_FFTW_WISDOM_FILE</code> A flag (0 or 1) and a file name which determine whether a FFT should use `wisdom&#8217; when using the FFTW libraries. </p>
+<dt><code>GRACE_HOME</code></dt>
+<dd> Specifies the directory where the Grace docs and libs are stored. Default is <code>/usr/local/grace</code></dd>
+<dt><code>GRACE_HELPVIEWER</code></dt>
+<dd> The shell command to run an HTML viewer for on-line browsing of the help documents. Must include at least one instance of &quot;%s&quot; which will be replaced with the actual URL by Grace. Default is <code>mozilla %s</code></dd>
+<dt><code>GRACE_EDITOR</code></dt>
+<dd> Specifies the editor which is used to edit sets. Default is <code>xterm -e vi</code></dd>
+<dt><code>GRACE_PRINT_CMD</code></dt>
+<dd> The print command.</dd>
+<dt><code>GRACE_FFTW_RAM_WISDOM</code></dt>
+<dd> and <code>GRACE_FFTW_WISDOM_FILE</code> A flag (0 or 1) and a file name which determine whether a FFT should use `wisdom&#8217; when using the FFTW libraries. </dd>
 </dl>
 <h2>FILES</h2>
 <p> In many cases, when Grace needs to access a file given with a relative <i> pathname</i> , it searches for the file along the following path: <i><br />

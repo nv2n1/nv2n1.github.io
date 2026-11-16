@@ -10,10 +10,8 @@ description: "std::is_aggregate – std::is_aggregate"
 <p>std::is_aggregate &#8211; std::is_aggregate</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 17)
-
         struct is_aggregate;</code></pre>
 <p>Checks if T is an aggregate_type. The member constant value is equal to true if T is an aggregate type and false otherwise.<br />
 The behavior is undefined if std::remove_all_extents_t&lt;T&gt; is an incomplete type other than (possibly cv-qualified) void. </p>
@@ -40,16 +38,11 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;type_traits&gt;
-
 #include &lt;new&gt;
-
 #include &lt;utility&gt;
 // constructs a T at the uninitialized memory pointed to by p
-
 // using list-initialization for aggregates and non-list initialization otherwise
-
 template &lt;class T, class... Args&gt;
-
 T *construct(T *p, Args &amp;&amp;...args)
 {
     if constexpr (std::is_aggregate_v&lt;T&gt;) {
@@ -61,7 +54,6 @@ T *construct(T *p, Args &amp;&amp;...args)
 struct A {
     int x, y;
 };
-
 struct B {
     B(int, const char *)
     {

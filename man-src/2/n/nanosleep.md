@@ -27,12 +27,12 @@ description: "nanosleep – high-resolution sleep"
 <p> On successfully sleeping for the requested interval, <code>nanosleep</code>() returns 0. If the call is interrupted by a signal handler or encounters an error, then it returns -1, with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Problem with copying information from user space.</p>
-<dt><code>EINTR</code></p>
-<dd> The pause has been interrupted by a signal that was delivered to the thread (see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)). The remaining sleep time has been written into <i>*rem</i> so that the thread can easily call <code>nanosleep</code>() again and continue with the pause.</p>
-<dt><code>EINVAL</code></p>
-<dd> The value in the <i>tv_nsec</i> field was not in the range 0 to 999999999 or <i>tv_sec</i> was negative.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Problem with copying information from user space.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The pause has been interrupted by a signal that was delivered to the thread (see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)). The remaining sleep time has been written into <i>*rem</i> so that the thread can easily call <code>nanosleep</code>() again and continue with the pause.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value in the <i>tv_nsec</i> field was not in the range 0 to 999999999 or <i>tv_sec</i> was negative.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>NOTES</h2>
@@ -41,8 +41,8 @@ description: "nanosleep – high-resolution sleep"
 <p> POSIX.1 specifies that <code>nanosleep</code>() should measure time against the <code>CLOCK_REALTIME</code> clock. However, Linux measures the time using the <code>CLOCK_MONOTONIC</code> clock. This probably does not matter, since the POSIX.1 specification for <code><a href="/docs/linux/man/2-clock_settime/">clock_settime</a></code>(2) says that discontinuous changes in <code>CLOCK_REALTIME</code> should not affect <code>nanosleep</code>():</p>
 <dl>
 <dt>
-<dd>
-<p> Setting the value of the <code>CLOCK_REALTIME</code> clock via <code><a href="/docs/linux/man/2-clock_settime/">clock_settime</a></code>(2) shall have no effect on threads that are blocked waiting for a relative time service based upon this clock, including the <code>nanosleep</code>() function; &#8230; Consequently, these time services shall expire when the requested relative interval elapses, independently of the new or old value of the clock.</dl>
+</dt><dd>
+<p> Setting the value of the <code>CLOCK_REALTIME</code> clock via <code><a href="/docs/linux/man/2-clock_settime/">clock_settime</a></code>(2) shall have no effect on threads that are blocked waiting for a relative time service based upon this clock, including the <code>nanosleep</code>() function; &#8230; Consequently, these time services shall expire when the requested relative interval elapses, independently of the new or old value of the clock.</dd></dl>
 <h3>Old behavior</h3>
 <p> In order to support applications requiring much more precise pauses (e.g., in order to control some time-critical hardware), <code>nanosleep</code>() would handle pauses of up to 2 milliseconds by busy waiting with microsecond precision when called from a thread scheduled under a real-time policy like <code>SCHED_FIFO</code> or <code>SCHED_RR</code>. This special extension was removed in kernel 2.5.39, and is thus not available in Linux 2.6.0 and later kernels.</p>
 <h2>BUGS</h2>
@@ -53,3 +53,4 @@ description: "nanosleep – high-resolution sleep"
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
+</p>

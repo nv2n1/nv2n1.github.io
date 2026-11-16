@@ -32,56 +32,56 @@ description: "ldns_buffer_write_at, ldns_buffer_write_at, ldns_buffer_write, ldn
 <p> uint32_t ldns_buffer_read_u32(ldns_buffer *buffer); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_buffer_write_at</i>()</p>
-<dd>writes the given data to the buffer at the specified position .br <code>buffer</code>: the buffer .br <code>at</code>: the position (in number of bytes) to write the data at .br <code>data</code>: pointer to the data to write to the buffer .br <code>count</code>: the number of bytes of data to write</dl>
+<dt> <i>ldns_buffer_write_at</i>()</dt>
+<dd>writes the given data to the buffer at the specified position .br <code>buffer</code>: the buffer .br <code>at</code>: the position (in number of bytes) to write the data at .br <code>data</code>: pointer to the data to write to the buffer .br <code>count</code>: the number of bytes of data to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write_at</i>()</p>
-<dd>writes the given data to the buffer at the specified position .br <code>buffer</code>: the buffer .br <code>at</code>: the position (in number of bytes) to write the data at .br <code>data</code>: pointer to the data to write to the buffer .br <code>count</code>: the number of bytes of data to write</dl>
+<dt> <i>ldns_buffer_write_at</i>()</dt>
+<dd>writes the given data to the buffer at the specified position .br <code>buffer</code>: the buffer .br <code>at</code>: the position (in number of bytes) to write the data at .br <code>data</code>: pointer to the data to write to the buffer .br <code>count</code>: the number of bytes of data to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write</i>()</p>
-<dd>writes count bytes of data to the current position of the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the data to write .br <code>count</code>: the lenght of the data to write</dl>
+<dt> <i>ldns_buffer_write</i>()</dt>
+<dd>writes count bytes of data to the current position of the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the data to write .br <code>count</code>: the lenght of the data to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write_string_at</i>()</p>
-<dd>copies the given (null-delimited) string to the specified position at the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>str</code>: the string to write</dl>
+<dt> <i>ldns_buffer_write_string_at</i>()</dt>
+<dd>copies the given (null-delimited) string to the specified position at the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>str</code>: the string to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write_string</i>()</p>
-<dd>copies the given (null-delimited) string to the current position at the buffer .br <code>buffer</code>: the buffer .br <code>str</code>: the string to write</dl>
+<dt> <i>ldns_buffer_write_string</i>()</dt>
+<dd>copies the given (null-delimited) string to the current position at the buffer .br <code>buffer</code>: the buffer .br <code>str</code>: the string to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write_u8_at</i>()</p>
-<dd>writes the given byte of data at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>data</code>: the 8 bits to write</dl>
+<dt> <i>ldns_buffer_write_u8_at</i>()</dt>
+<dd>writes the given byte of data at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>data</code>: the 8 bits to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write_u8</i>()</p>
-<dd>writes the given byte of data at the current position in the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the 8 bits to write</dl>
+<dt> <i>ldns_buffer_write_u8</i>()</dt>
+<dd>writes the given byte of data at the current position in the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the 8 bits to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write_u16_at</i>()</p>
-<dd>writes the given 2 byte integer at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>data</code>: the 16 bits to write</dl>
+<dt> <i>ldns_buffer_write_u16_at</i>()</dt>
+<dd>writes the given 2 byte integer at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>data</code>: the 16 bits to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_write_u16</i>()</p>
-<dd>writes the given 2 byte integer at the current position in the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the 16 bits to write</dl>
+<dt> <i>ldns_buffer_write_u16</i>()</dt>
+<dd>writes the given 2 byte integer at the current position in the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the 16 bits to write</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read_at</i>()</p>
-<dd>copies count bytes of data at the given position to the given data-array .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer to start .br <code>data</code>: buffer to copy to .br <code>count</code>: the length of the data to copy</dl>
+<dt> <i>ldns_buffer_read_at</i>()</dt>
+<dd>copies count bytes of data at the given position to the given data-array .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer to start .br <code>data</code>: buffer to copy to .br <code>count</code>: the length of the data to copy</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read</i>()</p>
-<dd>copies count bytes of data at the current position to the given data-array .br <code>buffer</code>: the buffer .br <code>data</code>: buffer to copy to .br <code>count</code>: the length of the data to copy</dl>
+<dt> <i>ldns_buffer_read</i>()</dt>
+<dd>copies count bytes of data at the current position to the given data-array .br <code>buffer</code>: the buffer .br <code>data</code>: buffer to copy to .br <code>count</code>: the length of the data to copy</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read_u8_at</i>()</p>
-<dd>returns the byte value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br Returns 1 byte integer</dl>
+<dt> <i>ldns_buffer_read_u8_at</i>()</dt>
+<dd>returns the byte value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br Returns 1 byte integer</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read_u8</i>()</p>
-<dd>returns the byte value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 1 byte integer</dl>
+<dt> <i>ldns_buffer_read_u8</i>()</dt>
+<dd>returns the byte value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 1 byte integer</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read_u16_at</i>()</p>
-<dd>returns the 2-byte integer value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: position in the buffer .br Returns 2 byte integer</dl>
+<dt> <i>ldns_buffer_read_u16_at</i>()</dt>
+<dd>returns the 2-byte integer value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: position in the buffer .br Returns 2 byte integer</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read_u16</i>()</p>
-<dd>returns the 2-byte integer value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 2 byte integer</dl>
+<dt> <i>ldns_buffer_read_u16</i>()</dt>
+<dd>returns the 2-byte integer value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 2 byte integer</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read_u32_at</i>()</p>
-<dd>returns the 4-byte integer value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: position in the buffer .br Returns 4 byte integer</dl>
+<dt> <i>ldns_buffer_read_u32_at</i>()</dt>
+<dd>returns the 4-byte integer value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: position in the buffer .br Returns 4 byte integer</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_read_u32</i>()</p>
-<dd>returns the 4-byte integer value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 4 byte integer</dl>
+<dt> <i>ldns_buffer_read_u32</i>()</dt>
+<dd>returns the 4-byte integer value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 4 byte integer</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

@@ -10,12 +10,7 @@ description: "xcb_alloc_color_cells –"
 <p>xcb_alloc_color_cells &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_alloc_color_cells_cookie_t xcb_alloc_color_cells(xcb_connection_t *conn, uint8_t contiguous, xcb_colormap_t cmap, uint16_t colors, uint16_t planes);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_alloc_color_cells_reply_t {
@@ -29,40 +24,40 @@ xcb_alloc_color_cells_cookie_t xcb_alloc_color_cells(xcb_connection_t *conn, uin
 } <code>xcb_alloc_color_cells_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_alloc_color_cells_reply_t *<code>xcb_alloc_color_cells_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_alloc_color_cells_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_alloc_color_cells_reply_t *<code>xcb_alloc_color_cells_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_alloc_color_cells_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>uint32_t *<code>xcb_alloc_color_cells_pixels</code>(const xcb_alloc_color_cells_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_alloc_color_cells_pixels_length</code>(const xcb_alloc_color_cells_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_alloc_color_cells_pixels_end</code>(const xcb_alloc_color_cells_reply_t *<i>reply</i>);</p>
-<dd>uint32_t *<code>xcb_alloc_color_cells_masks</code>(const xcb_alloc_color_cells_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_alloc_color_cells_masks_length</code>(const xcb_alloc_color_cells_reply_t *<i>reply</i>);</p>
+<dd>uint32_t *<code>xcb_alloc_color_cells_pixels</code>(const xcb_alloc_color_cells_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_alloc_color_cells_pixels_length</code>(const xcb_alloc_color_cells_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_alloc_color_cells_pixels_end</code>(const xcb_alloc_color_cells_reply_t *<i>reply</i>);</dd>
+<dd>uint32_t *<code>xcb_alloc_color_cells_masks</code>(const xcb_alloc_color_cells_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_alloc_color_cells_masks_length</code>(const xcb_alloc_color_cells_reply_t *<i>reply</i>);</dd>
 <dd>xcb_generic_iterator_t <code>xcb_alloc_color_cells_masks_end</code>(const xcb_alloc_color_cells_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>contiguous</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>cmap</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>colors</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>planes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>contiguous</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>cmap</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>colors</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>planes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_ALLOC_COLOR_CELLS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>pixels_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>masks_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_ALLOC_COLOR_CELLS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>pixels_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>masks_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_alloc_color_cells_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_alloc_color_cells_reply</i>. </p>

@@ -18,7 +18,7 @@ description: "sge-disable-submits, sge-enable-submits – Prevent/allow xxQS_NAM
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>-h</code>,<code>&#8211;help</code> Print usage information.</dl>
+</dt><dd> <code>-h</code>,<code>&#8211;help</code> Print usage information.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> Dave Love &lt;d.love [at] liverpool.ac.uk&gt; </p>

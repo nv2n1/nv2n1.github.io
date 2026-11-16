@@ -10,7 +10,6 @@ description: "utolower – Converts a letter to lower case. Allegro game program
 <p>utolower &#8211; Converts a letter to lower case. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int utolower(int c);</code></pre>
 <h2>Description</h2>
 <p>This function returns `c&#8217;, converting it to lower case if it is upper case. </p>

@@ -10,9 +10,7 @@ description: "ip-addrlabel – protocol address label management"
 <p>ip-addrlabel &#8211; protocol address label management</p>
 <h2>Synopsis</h2>
 <pre><code>ip addrlabel
-
 { COMMAND |
-
     help }</code></pre>
 <p> <code>ip addrlabel</code> { <code>add</code> | <code>del</code> } <code>prefix</code> <code>PREFIX</code> [ <code>dev</code> <i>DEV</i> ] [ <code>label</code> <i>NUMBER</i> ] </p>
 <pre><code>ip addrlabel { list | flush }
@@ -22,12 +20,12 @@ description: "ip-addrlabel – protocol address label management"
 <h3>ip addrlabel add &#8211; add an address label</h3>
 <p>add an address label entry to the kernel.</p>
 <dl>
-<dt><code>prefix</code><i> PREFIX</i></p>
+<dt><code>prefix</code><i> PREFIX</i></dt>
 <dd>
-<dt><code>dev</code><i> DEV</i></p>
-<dd>the outgoing interface.</p>
-<dt><code>label</code><i> NUMBER</i></p>
-<dd>the label for the prefix. 0xffffffff is reserved.</dl>
+</dd><dt><code>dev</code><i> DEV</i></dt>
+<dd>the outgoing interface.</dd>
+<dt><code>label</code><i> NUMBER</i></dt>
+<dd>the label for the prefix. 0xffffffff is reserved.</dd></dl>
 <h3>ip addrlabel del &#8211; delete an address label</h3>
 <p>delete an address label entry from the kernel. <code>Arguments:</code> coincide with the arguments of <code>ip addrlabel add</code> but the label is not required.</p>
 <h3>ip addrlabel list &#8211; list address labels</h3>

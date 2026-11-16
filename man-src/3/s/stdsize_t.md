@@ -11,17 +11,11 @@ std::size_t - std::size_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cstddef&gt;
-
 Defined in header &lt;cstdio&gt;
-
 Defined in header &lt;cstdlib&gt;
-
 Defined in header &lt;cstring&gt;
-
 Defined in header &lt;ctime&gt;
-
 Defined in header &lt;cwchar&gt;
-
 typedef /*implementation-defined*/ size_t;</code></pre> 
 std::size_t is the unsigned integer type of the result of the sizeof operator 
 as well as the sizeof... operator and the alignof operator 
@@ -38,12 +32,9 @@ When indexing C++ containers, such as std::string, std::vector, etc, the appropr
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstddef&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;array&gt;
 int main()
-
 {
     std::array&lt;std::size_t, 10&gt; a;
     for (std::size_t i = 0; i != a.size(); ++i)

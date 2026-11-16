@@ -11,80 +11,32 @@ description: "sc::OneBodyOneCenterInt –"
 <p> <code>OneBodyOneCenterInt</code> is an abstract base class for objects that compute integrals between two basis functions.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;obint.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::OneBodyOneCenterWrapper</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>int nbasis () const
-
-
 Returns the number of basis functions on center one.
-
-
 int nbasis1 () const
-
-
 Returns the number of basis functions on the center one.
-
-
 int nshell () const
-
-
 Return the number of shells on center one.
-
-
 int nshell1 () const
-
-
 Return the number of shells on the center one.
-
-
 Ref&lt; GaussianBasisSet &gt; basis ()
-
-
 Return the basis set on center one.
-
-
 Ref&lt; GaussianBasisSet &gt; basis1 ()
-
-
 Return the basis set on the center one.
-
-
 const double * buffer () const
-
-
 Returns the buffer where the integrals are placed.
-
-
 virtual void compute_shell (int)=0
-
-
 Computes the integrals for basis functions on the given shell.
-
-
 virtual void reinitialize ()
-
-
 This is called for one body integrals that take data to let them know that the data they reference has changed.
-
-
 virtual bool cloneable ()
-
-
 Return true if the clone member can be called.
-
-
 virtual Ref&lt; OneBodyOneCenterInt &gt; clone ()
-
-
 Returns a clone of this.
-
-
 Integral * integral () const
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>OneBodyOneCenterInt</code> (<code>Integral</code> *integral, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1)</p>
 <h3>Protected Attributes</h3>

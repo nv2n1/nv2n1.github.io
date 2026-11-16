@@ -11,13 +11,9 @@ std::experimental::boyer_moore_searcher,std::experimental::make_boyer_moore_sear
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/functional&gt;
-
 template&lt; class RandomIt1,
-
 class Hash = std::hash&lt;typename std::iterator_traits&lt;RandomIt1&gt;::value_type&gt;,  (library fundamentals TS)
-
 class BinaryPredicate = std::equal_to&lt;&gt; &gt;
-
 class boyer_moore_searcher;</code></pre> 
 A searcher suitable for use with std::experimental::search that implements the Boyer-Moore_string_searching_algorithm. 
 boyer_moore_searcher is CopyConstructible and CopyAssignable. 
@@ -114,14 +110,10 @@ A boyer_moore_searcher constructed with the arguments pat_first, pat_last, hf, a
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;experimental/algorithm&gt;
-
 #include &lt;experimental/functional&gt;
 int main()
-
 {
     std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
                      &quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;

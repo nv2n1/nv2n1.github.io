@@ -22,17 +22,15 @@ ssize_t readlinkat(int dirfd, const char *pathname,
 <p> <code>readlink</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>readlinkat</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _ATFILE_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _ATFILE_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>readlink</code>() places the contents of the symbolic link <i>pathname</i> in the buffer <i>buf</i>, which has size <i>bufsiz</i>. <code>readlink</code>() does not append a null byte to <i>buf</i>. It will (silently) truncate the contents (to a length of <i>bufsiz</i> characters), in case the buffer is too small to hold all of the contents.</p>
@@ -47,32 +45,32 @@ ssize_t readlinkat(int dirfd, const char *pathname,
 <p> On success, these calls return the number of bytes placed in <i>buf</i>. (If the returned value equals <i>bufsiz</i>, then truncation may have occurred.) On error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied for a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>buf</i> extends outside the process&#8217;s allocated address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>bufsiz</i> is not positive.</p>
-<dt><code>EINVAL</code></p>
-<dd> The named file (i.e., the final filename component of <i>pathname</i>) is not a symbolic link.</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred while reading from the filesystem.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in translating the pathname.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> A pathname, or a component of a pathname, was too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> The named file does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of the path prefix is not a directory.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied for a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>buf</i> extends outside the process&#8217;s allocated address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>bufsiz</i> is not positive.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The named file (i.e., the final filename component of <i>pathname</i>) is not a symbolic link.</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred while reading from the filesystem.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in translating the pathname.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> A pathname, or a component of a pathname, was too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The named file does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of the path prefix is not a directory.</dd></dl>
 <p> The following additional errors can occur for <code>readlinkat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>readlinkat</code>() was added to Linux in kernel 2.6.16; library support was added to glibc in version 2.4.</p>
 <h2>CONFORMING TO</h2>

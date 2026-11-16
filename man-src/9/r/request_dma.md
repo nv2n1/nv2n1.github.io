@@ -15,11 +15,11 @@ request_dma - request and reserve a system DMA channel
 <h2>Arguments</h2>
 
 <i>dmanr</i>
-<dl><dd><dd>DMA channel number</dl>
+<dl><dd></dd><dd>DMA channel number</dd></dl>
  
 
  <i>device_id</i>
-<dl><dd>reserving device ID string, used in /proc/dma</dl>
+<dl><dd>reserving device ID string, used in /proc/dma</dd></dl>
 
 <h2>Copyright</h2>
 

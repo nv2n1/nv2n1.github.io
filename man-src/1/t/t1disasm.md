@@ -22,7 +22,7 @@ description: "t1disasm – disassemble PostScript Type 1 font"
 <p> In <code>Subrs</code> entries in Utopia-Regular.raw will look like</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>dup 5 {
         8 111 vstem
@@ -31,11 +31,11 @@ description: "t1disasm – disassemble PostScript Type 1 font"
         return
         } |
 </code></pre>
-</dl>
+</dd></dl>
 <p> and the <code>CharStrings</code> entries like</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>/exclam {
         58 242 hsbw
@@ -54,7 +54,7 @@ description: "t1disasm – disassemble PostScript Type 1 font"
         endchar
         } |-
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>Adobe Type 1 Font Format</i> is available free from Adobe as a PDF file: <a rel="nofollow" href="http://partners.adobe.com/asn/developer/PDFS/TN/T1_SPEC.PDF">http://partners.adobe.com/asn/developer/PDFS/TN/T1_SPEC.PDF</a> </p>
 <p> <i>The Type 2 Charstring Format,</i> also available from Adobe as a PDF file, describes the newer Type 2 operators, which are also used in some multiple-master Type 1 fonts like Adobe Jenson and Kepler: <a rel="nofollow" href="http://partners.adobe.com/asn/developer/PDFS/TN/5177.Type2.pdf">http://partners.adobe.com/asn/developer/PDFS/TN/5177.Type2.pdf</a></p>

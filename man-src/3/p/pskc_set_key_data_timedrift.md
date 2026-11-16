@@ -13,10 +13,10 @@ description: "pskc_set_key_data_timedrift – API function"
 void pskc_set_key_data_timedrift(pskc_key_t *key, uint32_t timedrift);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>uint32_t timedrift</p>
-<dd>the time drift value to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>uint32_t timedrift</dt>
+<dd>the time drift value to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Data TimeDrift value. This element contains the device clock drift value for time-based OTP algorithms. The integer value (positive or negative drift) that indicates the number of time intervals that a validation server has established the device clock drifted after the last successful authentication. So, for example, if the last successful authentication established a device time value of 8 intervals from a specific start date but the validation server determines the time value at 9 intervals, the server SHOULD record the drift as -1.</p>
 <h2>Since</h2>

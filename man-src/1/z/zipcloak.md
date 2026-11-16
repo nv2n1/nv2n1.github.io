@@ -15,44 +15,44 @@ description: "zipcloak – encrypt entries in a zipfile"
 <p> zipfile Zipfile to encrypt entries in </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b&nbsp;</code>path</p>
+<dt><code>-b&nbsp;</code>path</dt>
 <dd>
-<dt><code>&#8211;temp-path </code>path</p>
-<dd> Use the directory given by path for the temporary zip file. </p>
-<dt><code>-d</code></p>
+</dd><dt><code>&#8211;temp-path </code>path</dt>
+<dd> Use the directory given by path for the temporary zip file. </dd>
+<dt><code>-d</code></dt>
 <dd>
-<dt><code>&#8211;decrypt</code></p>
-<dd> Decrypt encrypted entries (copy if given wrong password). </p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;decrypt</code></dt>
+<dd> Decrypt encrypted entries (copy if given wrong password). </dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help&nbsp;</code></p>
-<dd> Show a short help. </p>
-<dt><code>-L</code></p>
+</dd><dt><code>&#8211;help&nbsp;</code></dt>
+<dd> Show a short help. </dd>
+<dt><code>-L</code></dt>
 <dd>
-<dt><code>&#8211;license</code></p>
-<dd> Show software license. </p>
-<dt><code>-O&nbsp;</code>path</p>
+</dd><dt><code>&#8211;license</code></dt>
+<dd> Show software license. </dd>
+<dt><code>-O&nbsp;</code>path</dt>
 <dd>
-<dt><code>&#8211;output-file&nbsp;</code>zipfile</p>
-<dd> Write output to new archive zipfile, leaving original archive as is. </p>
-<dt><code>-q</code></p>
+</dd><dt><code>&#8211;output-file&nbsp;</code>zipfile</dt>
+<dd> Write output to new archive zipfile, leaving original archive as is. </dd>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> Quiet operation. Suppresses some informational messages. </p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Quiet operation. Suppresses some informational messages. </dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information. </p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Show version information. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <i>zipcloak</i> encrypts all unencrypted entries in the zipfile. This is the default action. </p>
 <dl>
-<dt>The -d option is used to decrypt encrypted entries in the zipfile.</p>
+<dt>The -d option is used to decrypt encrypted entries in the zipfile.</dt>
 <dd>
-<dt><i>zipcloak </i><code>uses original zip encryption which is considered weak.</p>
+</dd><dt><i>zipcloak </i><code>uses original zip encryption which is considered weak.</dt>
 <dd>
-<dt>Note:</p>
-<dd> The encryption code of this program is not copyrighted and is put in the public domain. It was originally written in Europe and can be freely distributed from any country including the U.S.A. (Previously if this program was imported into the U.S.A, it could not be re-exported from the U.S.A to another country.) See the file README.CR included in the source distribution for more on this. Otherwise, the Info-ZIP license applies. </p>
+</dd><dt>Note:</dt>
+<dd> The encryption code of this program is not copyrighted and is put in the public domain. It was originally written in Europe and can be freely distributed from any country including the U.S.A. (Previously if this program was imported into the U.S.A, it could not be re-exported from the U.S.A to another country.) See the file README.CR included in the source distribution for more on this. Otherwise, the Info-ZIP license applies. </dd>
 </dl>
 <p> </code></p>
 <h2>EXAMPLES</h2>

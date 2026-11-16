@@ -16,22 +16,21 @@ description: "ovp2ovf – convert a virtual property-list file into a virtual fo
 <p> The program also works with TeX VP files, producing VF and TFM files. (<code>ovp2ovf</code> is based on the WEB source code for <code><a href="/docs/linux/man/1-vptovf/">vptovf</a></code>(1).) </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> display a brief summary of syntax and options</p>
-<dt><code>-verbose</code></p>
-<dd> display progress reports</p>
-<dt><code>-version</code></p>
-<dd> output version information and exit</p>
-<dt>
-<dd></dl>
+<dt><code>-help</code></dt>
+<dd> display a brief summary of syntax and options</dd>
+<dt><code>-verbose</code></dt>
+<dd> display progress reports</dd>
+<dt><code>-version</code></dt>
+<dd> output version information and exit</dd>
+</dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>OFMFILE</i></p>
-<dd> Omega Font Metric file</p>
-<dt><i>OVFFILE</i></p>
-<dd> Omega Virtual Font file</p>
-<dt><i>OVPFILE</i></p>
-<dd> Omega Virtual Property List file</dl>
+<dt><i>OFMFILE</i></dt>
+<dd> Omega Font Metric file</dd>
+<dt><i>OVFFILE</i></dt>
+<dd> Omega Virtual Font file</dd>
+<dt><i>OVPFILE</i></dt>
+<dd> Omega Virtual Property List file</dd></dl>
 <h2>BUGS</h2>
 <p> None known, but report any found to &lt;omega [at] ens.fr&gt; (mailing list). You should also check to see if the bug is in <code><a href="/docs/linux/man/1-vptovf/">vptovf</a></code>(1). </p>
 <h2>SEE ALSO</h2>
@@ -42,7 +41,7 @@ description: "ovp2ovf – convert a virtual property-list file into a virtual fo
 <p> According to the WEB documentation: </p>
 <dl>
 <dt>
-<dd> <code>VPtoVF</code> is an extended version of the program <code>PLtoTF</code>, which is part of the standard TeXware library. <code>OVP2OVF</code> is an extended version of <code>VPtoVF</code> that allows much larger fonts. The idea of a virtual font was inspired by the work of David R. Fuchs who designed a similar set of conventions in 1984 while developing a device driver for ArborText, Inc. He wrote a somewhat similar program called <code>PLFONT</code>.</dl>
+</dt><dd> <code>VPtoVF</code> is an extended version of the program <code>PLtoTF</code>, which is part of the standard TeXware library. <code>OVP2OVF</code> is an extended version of <code>VPtoVF</code> that allows much larger fonts. The idea of a virtual font was inspired by the work of David R. Fuchs who designed a similar set of conventions in 1984 while developing a device driver for ArborText, Inc. He wrote a somewhat similar program called <code>PLFONT</code>.</dd></dl>
 <p> The primary authors of Omega are John Plaice &lt;plaice [at] cse.unsw.edu.au&gt; and Yannis Haralambous &lt;yannis [at] fluxus-virus.com&gt;. </p>
 <p> This manual page was written by C.M. Connelly &lt;cmc [at] debian.org&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
 <h2>Index</h2>

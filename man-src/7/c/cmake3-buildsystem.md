@@ -275,28 +275,28 @@ target_link_libraries(exe1 lib1 lib3)</pre>
 <h3>Runtime Output Artifacts</h3>
 <p>A <i>runtime</i> output artifact of a buildsystem target may be:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The executable file (e.g. <code>.exe</code>) of an executable target created by the <code>add_executable()</code> command.</p>
-<dt>&bull;</p>
-<dd>On DLL platforms: the executable file (e.g. <code>.dll</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </p>
+<dt>&bull;</dt>
+<dd>The executable file (e.g. <code>.exe</code>) of an executable target created by the <code>add_executable()</code> command.</dd>
+<dt>&bull;</dt>
+<dd>On DLL platforms: the executable file (e.g. <code>.dll</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </dd>
 <p> The <code>RUNTIME_OUTPUT_DIRECTORY</code> and <code>RUNTIME_OUTPUT_NAME</code> target properties may be used to control runtime output artifact locations and names in the build tree.</dl>
 <h3>Library Output Artifacts</h3>
 <p>A <i>library</i> output artifact of a buildsystem target may be:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The loadable module file (e.g. <code>.dll</code> or <code>.so</code>) of a module library target created by the <code>add_library()</code> command with the <code>MODULE</code> option.</p>
-<dt>&bull;</p>
-<dd>On non-DLL platforms: the shared library file (e.g. <code>.so</code> or <code>.dylib</code>) of a shared shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </p>
+<dt>&bull;</dt>
+<dd>The loadable module file (e.g. <code>.dll</code> or <code>.so</code>) of a module library target created by the <code>add_library()</code> command with the <code>MODULE</code> option.</dd>
+<dt>&bull;</dt>
+<dd>On non-DLL platforms: the shared library file (e.g. <code>.so</code> or <code>.dylib</code>) of a shared shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </dd>
 <p> The <code>LIBRARY_OUTPUT_DIRECTORY</code> and <code>LIBRARY_OUTPUT_NAME</code> target properties may be used to control library output artifact locations and names in the build tree.</dl>
 <h3>Archive Output Artifacts</h3>
 <p>An <i>archive</i> output artifact of a buildsystem target may be:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The static library file (e.g. <code>.lib</code> or <code>.a</code>) of a static library target created by the <code>add_library()</code> command with the <code>STATIC</code> option.</p>
-<dt>&bull;</p>
-<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. This file is only guaranteed to exist if the library exports at least one unmanaged symbol.</p>
-<dt>&bull;</p>
-<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of an executable target created by the <code>add_executable()</code> command when its <code>ENABLE_EXPORTS</code> target property is set. </p>
+<dt>&bull;</dt>
+<dd>The static library file (e.g. <code>.lib</code> or <code>.a</code>) of a static library target created by the <code>add_library()</code> command with the <code>STATIC</code> option.</dd>
+<dt>&bull;</dt>
+<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. This file is only guaranteed to exist if the library exports at least one unmanaged symbol.</dd>
+<dt>&bull;</dt>
+<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of an executable target created by the <code>add_executable()</code> command when its <code>ENABLE_EXPORTS</code> target property is set. </dd>
 <p> The <code>ARCHIVE_OUTPUT_DIRECTORY</code> and <code>ARCHIVE_OUTPUT_NAME</code> target properties may be used to control archive output artifact locations and names in the build tree.</dl>
 <h3>Directory-Scoped Commands</h3>
 <p>The <code>target_include_directories()</code>, <code>target_compile_definitions()</code> and <code>target_compile_options()</code> commands have an effect on only one target at a time. The commands <code>add_definitions()</code>, <code>add_compile_options()</code> and <code>include_directories()</code> have a similar function, but operate at directory scope instead of target scope for convenience.</p>
@@ -352,18 +352,18 @@ target_link_libraries(exe1 pic_on enable_rtti)</pre>
 <p>This way, the build specification of <code>exe1</code> is expressed entirely as linked targets, and the complexity of compiler-specific flags is encapsulated in an <code>INTERFACE</code> library target. </p>
 <p> The properties permitted to be set on or read from an <code>INTERFACE</code> library are:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Properties matching <code>INTERFACE_*</code></p>
-<dt>&bull;</p>
-<dd>Built-in properties matching <code>COMPATIBLE_INTERFACE_*</code></p>
-<dt>&bull;</p>
-<dd><code>EXPORT_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>IMPORTED</code></p>
-<dt>&bull;</p>
-<dd><code>NAME</code></p>
-<dt>&bull;</p>
-<dd>Properties matching <code>MAP_IMPORTED_CONFIG_*</code> </p>
+<dt>&bull;</dt>
+<dd>Properties matching <code>INTERFACE_*</code></dd>
+<dt>&bull;</dt>
+<dd>Built-in properties matching <code>COMPATIBLE_INTERFACE_*</code></dd>
+<dt>&bull;</dt>
+<dd><code>EXPORT_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>IMPORTED</code></dd>
+<dt>&bull;</dt>
+<dd><code>NAME</code></dd>
+<dt>&bull;</dt>
+<dd>Properties matching <code>MAP_IMPORTED_CONFIG_*</code> </dd>
 <p> <code>INTERFACE</code> libraries may be installed and exported. Any content they refer to must be installed separately: </p>
 <pre>add_library(Eigen INTERFACE)
 target_include_directories(Eigen INTERFACE

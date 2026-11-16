@@ -15,123 +15,123 @@ description: "ldapvi – LDAP client"
 <h3>Quickstart:</h3>
 <dl>
 <dt>
-<dd> ldapvi <code>&#8211;discover</code> <code>&#8211;host</code> HOSTNAME</dl>
+</dt><dd> ldapvi <code>&#8211;discover</code> <code>&#8211;host</code> HOSTNAME</dd></dl>
 <p> Perform an LDAP search and update results using a text editor.</p>
 <h3>Other usage:</h3>
 <dl>
-<dt>ldapvi <code>&#8211;out</code> [OPTION]&#8230; [FILTER] [AD]&#8230;</p>
-<dd> Print entries</p>
-<dt>ldapvi <code>&#8211;in</code> [OPTION]&#8230; [FILENAME]</p>
-<dd> Load change records</p>
-<dt>ldapvi <code>&#8211;delete</code> [OPTION]&#8230; DN&#8230;</p>
-<dd> Edit a delete record</p>
-<dt>ldapvi <code>&#8211;rename</code> [OPTION]&#8230; DN1 DN2</p>
-<dd> Edit a rename record</dl>
+<dt>ldapvi <code>&#8211;out</code> [OPTION]&#8230; [FILTER] [AD]&#8230;</dt>
+<dd> Print entries</dd>
+<dt>ldapvi <code>&#8211;in</code> [OPTION]&#8230; [FILENAME]</dt>
+<dd> Load change records</dd>
+<dt>ldapvi <code>&#8211;delete</code> [OPTION]&#8230; DN&#8230;</dt>
+<dd> Edit a delete record</dd>
+<dt>ldapvi <code>&#8211;rename</code> [OPTION]&#8230; DN1 DN2</dt>
+<dd> Edit a rename record</dd></dl>
 <h3>Connection options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;host</code> URL</p>
-<dd> Server.</p>
-<dt><code>-D</code>, <code>&#8211;user</code> USER</p>
-<dd> Search filter or DN: User to bind as. [1] Sets <code>&#8211;bind</code> simple.</p>
-<dt><code>-w</code>, <code>&#8211;password</code> SECRET</p>
-<dd> Password (also valid for SASL).</p>
-<dt><code>&#8211;bind</code> [simple,sasl]</p>
-<dd> Disable or enable SASL.</p>
-<dt><code>&#8211;bind-dialog</code> [never,auto,always]</p>
-<dd> Interactive login dialog.</dl>
+<dt><code>-h</code>, <code>&#8211;host</code> URL</dt>
+<dd> Server.</dd>
+<dt><code>-D</code>, <code>&#8211;user</code> USER</dt>
+<dd> Search filter or DN: User to bind as. [1] Sets <code>&#8211;bind</code> simple.</dd>
+<dt><code>-w</code>, <code>&#8211;password</code> SECRET</dt>
+<dd> Password (also valid for SASL).</dd>
+<dt><code>&#8211;bind</code> [simple,sasl]</dt>
+<dd> Disable or enable SASL.</dd>
+<dt><code>&#8211;bind-dialog</code> [never,auto,always]</dt>
+<dd> Interactive login dialog.</dd></dl>
 <h3>SASL options (these parameters set &#8211;bind sasl):</h3>
 <dl>
-<dt> <code>-I</code>, <code>&#8211;sasl-interactive</code> Set <code>&#8211;bind-dialog</code> always.</p>
-<dt><code>-O</code>, <code>&#8211;sasl-secprops</code> P</p>
+<dt> <code>-I</code>, <code>&#8211;sasl-interactive</code> Set <code>&#8211;bind-dialog</code> always.</dt>
+<dt><code>-O</code>, <code>&#8211;sasl-secprops</code> P</dt>
 <dd>
-<dd>SASL security properties.</p>
-<dt><code>-Q</code>, <code>&#8211;sasl-quiet</code></p>
-<dd> Set <code>&#8211;bind-dialog</code> never.</p>
-<dt><code>-R</code>, <code>&#8211;sasl-realm</code></p>
-<dd> R SASL realm.</p>
-<dt><code>-U</code>, <code>&#8211;sasl-authcid</code> AC</p>
-<dd> SASL authentication identity.</p>
-<dt><code>-X</code>, <code>&#8211;sasl-authzid</code> AZ</p>
-<dd> SASL authorization identity.</p>
-<dt><code>-Y</code>, <code>&#8211;sasl-mech</code></p>
-<dd> MECH SASL mechanism.</dl>
+</dd><dd>SASL security properties.</dd>
+<dt><code>-Q</code>, <code>&#8211;sasl-quiet</code></dt>
+<dd> Set <code>&#8211;bind-dialog</code> never.</dd>
+<dt><code>-R</code>, <code>&#8211;sasl-realm</code></dt>
+<dd> R SASL realm.</dd>
+<dt><code>-U</code>, <code>&#8211;sasl-authcid</code> AC</dt>
+<dd> SASL authentication identity.</dd>
+<dt><code>-X</code>, <code>&#8211;sasl-authzid</code> AZ</dt>
+<dd> SASL authorization identity.</dd>
+<dt><code>-Y</code>, <code>&#8211;sasl-mech</code></dt>
+<dd> MECH SASL mechanism.</dd></dl>
 <h3>Search parameters:</h3>
 <dl>
-<dt><code>-b</code>, <code>&#8211;base</code> DN</p>
-<dd> Search base.</p>
-<dt><code>-s</code>, <code>&#8211;scope</code> SCOPE</p>
-<dd> Search scope. One of base|one|sub.</p>
-<dt><code>-S</code>, <code>&#8211;sort</code> KEYS</p>
-<dd> Sort control (critical).</dl>
+<dt><code>-b</code>, <code>&#8211;base</code> DN</dt>
+<dd> Search base.</dd>
+<dt><code>-s</code>, <code>&#8211;scope</code> SCOPE</dt>
+<dd> Search scope. One of base|one|sub.</dd>
+<dt><code>-S</code>, <code>&#8211;sort</code> KEYS</dt>
+<dd> Sort control (critical).</dd></dl>
 <h3>Miscellaneous options:</h3>
 <dl>
-<dt><code>&#8211;add</code></p>
-<dd> (Only with <code>&#8211;in</code>, <code>&#8211;ldapmodify</code>:) Treat attrval records as new entries to add.</p>
-<dt><code>-o</code>, <code>&#8211;class</code> OBJCLASS</p>
-<dd> Class to add. Can be repeated. Implies <code>-A</code>.</p>
-<dt><code>&#8211;config</code></p>
-<dd> Print parameters in ldap.conf syntax.</p>
-<dt><code>-c</code> <code>&#8211;continue</code></p>
-<dd> Ignore LDAP errors and continue processing.</p>
-<dt><code>&#8211;deleteoldrdn</code></p>
-<dd> (Only with <code>&#8211;rename</code>:) Delete the old RDN.</p>
-<dt><code>-a</code>, <code>&#8211;deref</code></p>
-<dd> never|searching|finding|always</p>
-<dt><code>-d</code>, <code>&#8211;discover</code></p>
-<dd> Auto-detect naming contexts. [2]</p>
-<dt><code>-A</code>, <code>&#8211;empty</code></p>
-<dd> Don&#8217;t search, start with empty file. See <code>-o</code>.</p>
-<dt><code>&#8211;encoding</code> [ASCII|UTF-8|binary]</p>
-<dd> The encoding to allow. Default is UTF-8.</p>
-<dt><code>-H</code>, <code>&#8211;help</code></p>
-<dd> This help.</p>
-<dt><code>&#8211;ldap-conf</code></p>
-<dd> Always read libldap configuration.</p>
-<dt><code>-m</code>, <code>&#8211;may</code></p>
-<dd> Show missing optional attributes as comments.</p>
-<dt><code>-M</code>, <code>&#8211;managedsait</code></p>
-<dd> manageDsaIT control (critical).</p>
-<dt><code>&#8211;noquestions</code></p>
-<dd> Commit without asking for confirmation.</p>
-<dt>-!, <code>&#8211;noninteractive</code></p>
-<dd> Never ask any questions.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Disable progress output.</p>
-<dt><code>-R</code>, <code>&#8211;read</code> DN</p>
-<dd> Same as <code>-b</code> DN <code>-s</code> base &#8216;(objectclass=*)&#8217; + *</p>
-<dt><code>-Z</code>, <code>&#8211;starttls</code></p>
-<dd> Require startTLS.</p>
-<dt><code>&#8211;tls</code> [never|allow|try|strict]</p>
-<dd> Level of TLS strictess.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Note every update.</dl>
+<dt><code>&#8211;add</code></dt>
+<dd> (Only with <code>&#8211;in</code>, <code>&#8211;ldapmodify</code>:) Treat attrval records as new entries to add.</dd>
+<dt><code>-o</code>, <code>&#8211;class</code> OBJCLASS</dt>
+<dd> Class to add. Can be repeated. Implies <code>-A</code>.</dd>
+<dt><code>&#8211;config</code></dt>
+<dd> Print parameters in ldap.conf syntax.</dd>
+<dt><code>-c</code> <code>&#8211;continue</code></dt>
+<dd> Ignore LDAP errors and continue processing.</dd>
+<dt><code>&#8211;deleteoldrdn</code></dt>
+<dd> (Only with <code>&#8211;rename</code>:) Delete the old RDN.</dd>
+<dt><code>-a</code>, <code>&#8211;deref</code></dt>
+<dd> never|searching|finding|always</dd>
+<dt><code>-d</code>, <code>&#8211;discover</code></dt>
+<dd> Auto-detect naming contexts. [2]</dd>
+<dt><code>-A</code>, <code>&#8211;empty</code></dt>
+<dd> Don&#8217;t search, start with empty file. See <code>-o</code>.</dd>
+<dt><code>&#8211;encoding</code> [ASCII|UTF-8|binary]</dt>
+<dd> The encoding to allow. Default is UTF-8.</dd>
+<dt><code>-H</code>, <code>&#8211;help</code></dt>
+<dd> This help.</dd>
+<dt><code>&#8211;ldap-conf</code></dt>
+<dd> Always read libldap configuration.</dd>
+<dt><code>-m</code>, <code>&#8211;may</code></dt>
+<dd> Show missing optional attributes as comments.</dd>
+<dt><code>-M</code>, <code>&#8211;managedsait</code></dt>
+<dd> manageDsaIT control (critical).</dd>
+<dt><code>&#8211;noquestions</code></dt>
+<dd> Commit without asking for confirmation.</dd>
+<dt>-!, <code>&#8211;noninteractive</code></dt>
+<dd> Never ask any questions.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Disable progress output.</dd>
+<dt><code>-R</code>, <code>&#8211;read</code> DN</dt>
+<dd> Same as <code>-b</code> DN <code>-s</code> base &#8216;(objectclass=*)&#8217; + *</dd>
+<dt><code>-Z</code>, <code>&#8211;starttls</code></dt>
+<dd> Require startTLS.</dd>
+<dt><code>&#8211;tls</code> [never|allow|try|strict]</dt>
+<dd> Level of TLS strictess.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Note every update.</dd></dl>
 <h3>Shortcuts:</h3>
 <dl>
-<dt><code>&#8211;ldapsearch</code></p>
-<dd> Short for <code>&#8211;quiet</code> <code>&#8211;out</code></p>
-<dt><code>&#8211;ldapmodify</code></p>
-<dd> Short for <code>&#8211;noninteractive</code> <code>&#8211;in</code></p>
-<dt><code>&#8211;ldapdelete</code></p>
-<dd> Short for <code>&#8211;noninteractive</code> <code>&#8211;delete</code></p>
-<dt><code>&#8211;ldapmoddn</code></p>
-<dd> Short for <code>&#8211;noninteractive</code> <code>&#8211;rename</code></dl>
+<dt><code>&#8211;ldapsearch</code></dt>
+<dd> Short for <code>&#8211;quiet</code> <code>&#8211;out</code></dd>
+<dt><code>&#8211;ldapmodify</code></dt>
+<dd> Short for <code>&#8211;noninteractive</code> <code>&#8211;in</code></dd>
+<dt><code>&#8211;ldapdelete</code></dt>
+<dd> Short for <code>&#8211;noninteractive</code> <code>&#8211;delete</code></dd>
+<dt><code>&#8211;ldapmoddn</code></dt>
+<dd> Short for <code>&#8211;noninteractive</code> <code>&#8211;rename</code></dd></dl>
 <p> Environment variables: VISUAL, EDITOR, PAGER.</p>
 <h3>[1] User names can be specified as distinguished names:</h3>
 <dl>
 <dt>
-<dd> uid=foo,ou=bar,dc=acme,dc=com</p>
+</dt><dd> uid=foo,ou=bar,dc=acme,dc=com</dd>
 <dt>
-<dd> or search filters:</p>
+</dt><dd> or search filters:</dd>
 <dt>
-<dd> (uid=foo)</p>
+</dt><dd> (uid=foo)</dd>
 <dt>
-<dd> Note the use of parenthesis, which can be omitted from search filters usually but are required here. For this searching bind to work, your client library must be configured with appropriate default search parameters.</dl>
+</dt><dd> Note the use of parenthesis, which can be omitted from search filters usually but are required here. For this searching bind to work, your client library must be configured with appropriate default search parameters.</dd></dl>
 <p> [2] Repeat the search for each naming context found and present the</p>
 <dl>
-<dt>concatenation of all search results.</p>
-<dd> Conflicts with <code>&#8211;base</code>.</p>
+<dt>concatenation of all search results.</dt>
+<dd> Conflicts with <code>&#8211;base</code>.</dd>
 <dt>
-<dd> With <code>&#8211;config</code>, show a BASE configuration line for each context.</dl>
+</dt><dd> With <code>&#8211;config</code>, show a BASE configuration line for each context.</dd></dl>
 <p> A special (offline) option is <code>&#8211;diff</code>, which compares two files and writes any changes to standard output in LDIF format.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &quot;ldapvi [at] lists.askja.de&quot;.</p>

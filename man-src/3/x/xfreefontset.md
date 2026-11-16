@@ -10,22 +10,22 @@ description: "XCreateFontSet, XFreeFontSet – create and free an international 
 <p>XCreateFontSet, XFreeFontSet &#8211; create and free an international text drawing font set </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XFontSet XCreateFontSet(Display *<i>display</i>, char *<i>base_font_name_list</i>, char ***<i>missing_charset_list_return</i>, int *<i>missing_charset_count_return</i>, char **<i>def_string_return</i>);</p>
-<dd>void XFreeFontSet(Display *<i>display</i>, XFontSet <i>font_set</i>);</dl>
+<dd>XFontSet XCreateFontSet(Display *<i>display</i>, char *<i>base_font_name_list</i>, char ***<i>missing_charset_list_return</i>, int *<i>missing_charset_count_return</i>, char **<i>def_string_return</i>);</dd>
+<dd>void XFreeFontSet(Display *<i>display</i>, XFontSet <i>font_set</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>base_font_name_list</i></p>
-<dd>Specifies the base font names.</p>
-<dt><i>def_string_return</i></p>
-<dd>Returns the string drawn for missing charsets.</p>
-<dt><i>font_set</i></p>
-<dd>Specifies the font set.</p>
-<dt><i>missing_charset_count_return</i></p>
-<dd>Returns the number of missing charsets.</p>
-<dt><i>missing_charset_list_return</i></p>
-<dd>Returns the missing charsets.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>base_font_name_list</i></dt>
+<dd>Specifies the base font names.</dd>
+<dt><i>def_string_return</i></dt>
+<dd>Returns the string drawn for missing charsets.</dd>
+<dt><i>font_set</i></dt>
+<dd>Specifies the font set.</dd>
+<dt><i>missing_charset_count_return</i></dt>
+<dd>Returns the number of missing charsets.</dd>
+<dt><i>missing_charset_list_return</i></dt>
+<dd>Returns the missing charsets.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XCreateFontSet</code> function creates a font set for the specified display. The font set is bound to the current locale when <code>XCreateFontSet</code> is called. The font set may be used in subsequent calls to obtain font and character information and to image text in the locale of the font set. </p>
 <p> The base_font_name_list argument is a list of base font names that Xlib uses to load the fonts needed for the locale. The base font names are a comma-separated list. The string is null-terminated and is assumed to be in the Host Portable Character Encoding; otherwise, the result is implementation-dependent. White space immediately on either side of a separating comma is ignored. </p>
@@ -35,14 +35,14 @@ description: "XCreateFontSet, XFreeFontSet – create and free an international 
 <p> Xlib uses the following algorithm to select the fonts that will be used to display text with the <code>XFontSet</code>. </p>
 <p> For each font charset required by the locale, the base font name list is searched for the first appearance of one of the following cases that names a set of fonts that exist at the server:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>The first XLFD-conforming base font name that specifies the required charset or a superset of the required charset in its <code>CharSetRegistry</code> and <code>CharSetEncoding</code> fields. The implementation may use a base font name whose specified charset is a superset of the required charset, for example, an ISO8859-1 font for an ASCII charset.</p>
-<dt>&bull;</p>
-<dd>The first set of one or more XLFD-conforming base font names that specify one or more charsets that can be remapped to support the required charset. The Xlib implementation may recognize various mappings from a required charset to one or more other charsets and use the fonts for those charsets. For example, JIS Roman is ASCII with tilde and backslash replaced by yen and overbar; Xlib may load an ISO8859-1 font to support this character set if a JIS Roman font is not available.</p>
-<dt>&bull;</p>
-<dd>The first XLFD-conforming font name or the first non-XLFD font name for which an XLFD font name can be obtained, combined with the required charset (replacing the <code>CharSetRegistry</code> and <code>CharSetEncoding</code> fields in the XLFD font name). As in case 1, the implementation may use a charset that is a superset of the required charset.</p>
-<dt>&bull;</p>
-<dd>The first font name that can be mapped in some implementation-dependent manner to one or more fonts that support imaging text in the charset.</dl>
+<dt>&bull;</dt>
+<dd>The first XLFD-conforming base font name that specifies the required charset or a superset of the required charset in its <code>CharSetRegistry</code> and <code>CharSetEncoding</code> fields. The implementation may use a base font name whose specified charset is a superset of the required charset, for example, an ISO8859-1 font for an ASCII charset.</dd>
+<dt>&bull;</dt>
+<dd>The first set of one or more XLFD-conforming base font names that specify one or more charsets that can be remapped to support the required charset. The Xlib implementation may recognize various mappings from a required charset to one or more other charsets and use the fonts for those charsets. For example, JIS Roman is ASCII with tilde and backslash replaced by yen and overbar; Xlib may load an ISO8859-1 font to support this character set if a JIS Roman font is not available.</dd>
+<dt>&bull;</dt>
+<dd>The first XLFD-conforming font name or the first non-XLFD font name for which an XLFD font name can be obtained, combined with the required charset (replacing the <code>CharSetRegistry</code> and <code>CharSetEncoding</code> fields in the XLFD font name). As in case 1, the implementation may use a charset that is a superset of the required charset.</dd>
+<dt>&bull;</dt>
+<dd>The first font name that can be mapped in some implementation-dependent manner to one or more fonts that support imaging text in the charset.</dd></dl>
 <p> For example, assume that a locale required the charsets: </p>
 <p> ISO8859-1 JISX0208.1983 JISX0201.1976 GB2312-1980.0 </p>
 <p> The user could supply a base_font_name_list that explicitly specifies the charsets, ensuring that specific fonts are used if they exist. For example: </p>

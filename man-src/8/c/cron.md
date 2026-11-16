@@ -14,29 +14,29 @@ description: "cron – daemon to execute scheduled commands (Vixie Cron)"
 <p><i>cron</i> is started automatically from /etc/init.d on entering multi-user runlevels.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Stay in foreground mode, don&#8217;t daemonize.</p>
-<dt><code>-P</code></p>
-<dd>Don&#8217;t set PATH for child processes. Let it inherit instead.</p>
-<dt><code>-l</code></p>
-<dd>Enable LSB compliant names for /etc/cron.d files. This setting, however, does not affect the parsing of files under /etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly or /etc/cron.monthly.</p>
-<dt><code>-n</code></p>
-<dd>Include the FQDN in the subject when sending mails. By default, cron will abbreviate the hostname.</p>
-<dt><code>-L loglevel</code></p>
-<dd>Tell cron what to log about <code>jobs</code> (errors are logged regardless of this value) as the sum of the following values: </p>
+<dt><code>-f</code></dt>
+<dd>Stay in foreground mode, don&#8217;t daemonize.</dd>
+<dt><code>-P</code></dt>
+<dd>Don&#8217;t set PATH for child processes. Let it inherit instead.</dd>
+<dt><code>-l</code></dt>
+<dd>Enable LSB compliant names for /etc/cron.d files. This setting, however, does not affect the parsing of files under /etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly or /etc/cron.monthly.</dd>
+<dt><code>-n</code></dt>
+<dd>Include the FQDN in the subject when sending mails. By default, cron will abbreviate the hostname.</dd>
+<dt><code>-L loglevel</code></dt>
+<dd>Tell cron what to log about <code>jobs</code> (errors are logged regardless of this value) as the sum of the following values: </dd>
 <dl>
 <dd>
-<dl>
-<dt><code>1</code></p>
-<dd>will log the start of all cron jobs</p>
-<dt><code>2</code></p>
-<dd>will log the end of all cron jobs</p>
-<dt><code>4</code></p>
-<dd>will log all failed jobs (exit status != 0)</p>
-<dt><code>8</code></p>
-<dd>will log the process number of all cron jobs</dl>
+</dd><dl>
+<dt><code>1</code></dt>
+<dd>will log the start of all cron jobs</dd>
+<dt><code>2</code></dt>
+<dd>will log the end of all cron jobs</dd>
+<dt><code>4</code></dt>
+<dd>will log all failed jobs (exit status != 0)</dd>
+<dt><code>8</code></dt>
+<dd>will log the process number of all cron jobs</dd></dl>
 </dl>
-<dd>The default is to log the start of all jobs (1). Logging will be disabled if <i>levels</i> is set to zero (0). A value of fifteen (15) will select all options.</dl>
+<dd>The default is to log the start of all jobs (1). Logging will be disabled if <i>levels</i> is set to zero (0). A value of fifteen (15) will select all options.</dd></dl>
 <h2>Notes</h2>
 <p><i>cron</i> searches its spool area (/var/spool/cron/crontabs) for crontab files (which are named after accounts in /etc/passwd); crontabs found are loaded into memory. Note that crontabs in this directory should not be accessed directly &#8211; the <i>crontab</i> command should be used to access and update them. </p>
 <p> <i>cron</i> also reads /etc/crontab, which is in a slightly different format (see <i><a href="/docs/linux/man/5-crontab/">crontab</a></i>(5)). In Debian, the content of /etc/crontab is predefined to run programs under /etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly and /etc/cron.monthly. This configuration is specific to Debian, see the note under <code>DEBIAN SPECIFIC</code> below. </p>
@@ -57,26 +57,26 @@ description: "cron – daemon to execute scheduled commands (Vixie Cron)"
 <h2>Debian Specific</h2>
 <p>Debian introduces some changes to <i>cron</i> that were not originally available upstream. The most significant changes introduced are: </p>
 <dl>
-<dt>&#8212;</p>
-<dd>Support for /etc/cron.{hourly,daily,weekly,monthly} via /etc/crontab,</p>
-<dt>&#8212;</p>
-<dd>Support for /etc/cron.d (drop-in dir for package crontabs),</p>
-<dt>&#8212;</p>
-<dd>PAM support,</p>
-<dt>&#8212;</p>
-<dd>SELinux support,</p>
-<dt>&#8212;</p>
-<dd>auditlog support,</p>
-<dt>&#8212;</p>
-<dd>DST and other time-related changes/fixes,</p>
-<dt>&#8212;</p>
-<dd>SGID <a href="/docs/linux/man/1-crontab/">crontab</a>(1) instead of SUID root,</p>
-<dt>&#8212;</p>
-<dd>Debian-specific file locations and commands,</p>
-<dt>&#8212;</p>
-<dd>Debian-specific configuration (/etc/default/cron),</p>
-<dt>&#8212;</p>
-<dd>numerous other smaller features and fixes. </p>
+<dt>&#8212;</dt>
+<dd>Support for /etc/cron.{hourly,daily,weekly,monthly} via /etc/crontab,</dd>
+<dt>&#8212;</dt>
+<dd>Support for /etc/cron.d (drop-in dir for package crontabs),</dd>
+<dt>&#8212;</dt>
+<dd>PAM support,</dd>
+<dt>&#8212;</dt>
+<dd>SELinux support,</dd>
+<dt>&#8212;</dt>
+<dd>auditlog support,</dd>
+<dt>&#8212;</dt>
+<dd>DST and other time-related changes/fixes,</dd>
+<dt>&#8212;</dt>
+<dd>SGID <a href="/docs/linux/man/1-crontab/">crontab</a>(1) instead of SUID root,</dd>
+<dt>&#8212;</dt>
+<dd>Debian-specific file locations and commands,</dd>
+<dt>&#8212;</dt>
+<dd>Debian-specific configuration (/etc/default/cron),</dd>
+<dt>&#8212;</dt>
+<dd>numerous other smaller features and fixes. </dd>
 </dl>
 <p> Support for /etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly and /etc/cron.monthly is provided in Debian through the default setting of the /etc/crontab file (see the system-wide example in <i><a href="/docs/linux/man/5-crontab/">crontab</a></i>(5)). The default system-wide crontab contains four tasks: run every hour, every day, every week and every month. Each of these tasks will execute <code>run-parts</code> providing each one of the directories as an argument. These tasks are disabled if <code>anacron</code> is installed (except for the hourly task) to prevent conflicts between both daemons. </p>
 <p> As described above, the files under these directories have to pass some sanity checks including the following: be executable, be owned by root, not be writable by group or other and, if symlinks, point to files owned by root. Additionally, the file names must conform to the filename requirements of <code>run-parts</code>: they must be entirely made up of letters, digits and can only contain the special signs underscores (&#8216;_&#8217;) and hyphens (&#8216;-&#8216;). Any file that does not conform to these requirements will not be executed by <code>run-parts</code>. For example, any file containing dots will be ignored. This is done to prevent cron from running any of the files that are left by the Debian package management system when handling files in /etc/cron.d/ as configuration files (i.e. files ending in .dpkg-dist, .dpkg-orig, .dpkg-old, and .dpkg-new). </p>

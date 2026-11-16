@@ -11,37 +11,37 @@ description: "orage – Calendar for the Xfce Desktop Environment"
 <p> orage &#8211; Calendar for the Xfce Desktop Environment </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>orage</code> [options] [[FILE]&#8230;]</dl>
+<dt> <code>orage</code> [options] [[FILE]&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>orage</code></p>
-<dd>is a fast and easy to use graphical calendar for the Xfce Desktop Environment. It uses portable ical format and includes common calendar features like repeating appointments and multiple alarming possibilities. <code>orage</code> does not have group calendar features, but can only be used for single user. </p>
+<dd>is a fast and easy to use graphical calendar for the Xfce Desktop Environment. It uses portable ical format and includes common calendar features like repeating appointments and multiple alarming possibilities. <code>orage</code> does not have group calendar features, but can only be used for single user. </dd>
 <p> <code>orage</code> takes a list of <i>FILE</i>s for ical files that should be imported. Contents of those files are read and converted into <code>orage</code>, but those files are left untouched. </p>
 <p> For a more detailed explanation of <code>orage</code>, please see the Help menu.</p>
 <h2>OPTIONS</h2>
 <p> <code>-v</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print version information and exit.</dl>
+</dt><dd> Print version information and exit.</dd></dl>
 <p> <code>-?</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Print brief help and exit.</dl>
+</dt><dd> Print brief help and exit.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;preferences</code></p>
 <dl>
 <dt>
-<dd> Open the preferences setting window.</dl>
+</dt><dd> Open the preferences setting window.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;toggle</code></p>
 <dl>
 <dt>
-<dd> Hide <code>orage</code> if it is visible and show it if it is hidden.</dl>
+</dt><dd> Hide <code>orage</code> if it is visible and show it if it is hidden.</dd></dl>
 <p> <code>-a</code>, <code>&#8211;add-foreign file [RW]</code></p>
 <dl>
 <dt>
-<dd> Add a foreign file into <code>orage</code>. By default this file is read-only but adding RW after the filename makes it writeable.</dl>
+</dt><dd> Add a foreign file into <code>orage</code>. By default this file is read-only but adding RW after the filename makes it writeable.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;remove-foreign file</code></p>
 <dl>
 <dt>
-<dd> Remove foreign file from <code>orage</code>. The file itself is not removed or modified. If you want to remove it, you need to do that separately using proper operating system command.</dl>
+</dt><dd> Remove foreign file from <code>orage</code>. The file itself is not removed or modified. If you want to remove it, you need to do that separately using proper operating system command.</dd></dl>
 <h2>FILES</h2>
 <p> All <code>orage</code> datafiles are by default in <i>~/.local/share/orage</i> and all configuration files are in <i>~/.config/orage</i>. (Note that you can change these locations, so if you do not find them, check from the UI.)</p>
 <h2>BUGS</h2>

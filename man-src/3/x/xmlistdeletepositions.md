@@ -17,12 +17,12 @@ description: "XmListDeletePositions — A List function that deletes items from 
 <h2>Description</h2>
 <p><code>XmListDeletePositions</code> deletes noncontiguous items from a list. The function deletes all items whose corresponding positions appear in the <i>position_list</i> array. A warning message is displayed if a specified position is invalid; that is, the value is 0, a negative integer, or a number greater than the number of items in the list.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget</p>
-<dt><i>position_list</i></p>
-<dd>Specifies an array of the item positions to be deleted. The position of the first item in the list is 1; the position of the second item is 2; and so on.</p>
-<dt><i>position_count</i></p>
-<dd>Specifies the number of elements in the <i>position_list</i>.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget</dd>
+<dt><i>position_list</i></dt>
+<dd>Specifies an array of the item positions to be deleted. The position of the first item in the list is 1; the position of the second item is 2; and so on.</dd>
+<dt><i>position_count</i></dt>
+<dd>Specifies the number of elements in the <i>position_list</i>.</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>

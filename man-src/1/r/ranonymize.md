@@ -17,8 +17,8 @@ description: "ranonymize – anonymize argus(8) data fields."
 <h2>OPTIONS</h2>
 <p> Ranonymize, shares all the same options as <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code>. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-ranonymize/">ranonymize</a>(1)</code> specific options are: </p>
 <dl>
-<dt><code>-f</code></p>
-<dd> anonymization.confile </p>
+<dt><code>-f</code></dt>
+<dd> anonymization.confile </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2016 QoSient. All rights reserved.</p>

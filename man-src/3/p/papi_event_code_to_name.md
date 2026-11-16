@@ -49,7 +49,7 @@ Native event codes and names differ from platform to platform.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_event_name_to_code</code> </p>
+<dd><code>PAPI_event_name_to_code</code> </dd>
 <p> <code>PAPI_remove_event</code> </p>
 <p> <code>PAPI_get_event_info</code> </p>
 <p> <code>PAPI_enum_event</code> </p>
@@ -58,3 +58,4 @@ Native event codes and names differ from platform to platform.
 <p> PAPI_native</dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

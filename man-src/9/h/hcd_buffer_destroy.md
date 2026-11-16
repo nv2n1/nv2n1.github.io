@@ -14,7 +14,7 @@ description: "hcd_buffer_destroy – deallocate buffer pools"
 <p><i>hcd</i></p>
 <dl>
 <dd>
-<dd>the bus whose buffer pools are to be destroyed</dl>
+</dd><dd>the bus whose buffer pools are to be destroyed</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

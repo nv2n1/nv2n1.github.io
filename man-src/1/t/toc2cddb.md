@@ -17,10 +17,10 @@ description: "toc2cddb – translates a TOC file of"
 <p> <code>toc2cddb</code> translates a TOC file of <i><a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> into a cddb file and prints it to stdout. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Shows a short help message.</p>
-<dt><code>-V</code></p>
-<dd> Prints the version of toc2cddb. </p>
+<dt><code>-h</code></dt>
+<dd> Shows a short help message.</dd>
+<dt><code>-V</code></dt>
+<dd> Prints the version of toc2cddb. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> </p>

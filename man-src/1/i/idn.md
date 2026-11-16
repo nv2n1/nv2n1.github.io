@@ -18,34 +18,34 @@ description: "idn – Internationalized Domain Names command line tool"
 <p> To process a string that starts with `-&#8216;, for example `-foo&#8217;, use `&#8211;&#8216; to signal the end of parameters, as in `idn <code>&#8211;quiet</code> <code>-a</code> <code>&#8212;</code> <code>-foo</code>&#8216;. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</p>
-<dt><code>-s</code>, <code>&#8211;stringprep</code></p>
-<dd> Prepare string according to nameprep profile</p>
-<dt><code>-d</code>, <code>&#8211;punycode-decode</code></p>
-<dd> Decode Punycode</p>
-<dt><code>-e</code>, <code>&#8211;punycode-encode</code></p>
-<dd> Encode Punycode</p>
-<dt><code>-a</code>, <code>&#8211;idna-to-ascii</code></p>
-<dd> Convert to ACE according to IDNA (default mode)</p>
-<dt><code>-u</code>, <code>&#8211;idna-to-unicode</code></p>
-<dd> Convert from ACE according to IDNA</p>
-<dt><code>&#8211;allow-unassigned</code></p>
-<dd> Toggle IDNA AllowUnassigned flag (default off)</p>
-<dt><code>&#8211;usestd3asciirules</code></p>
-<dd> Toggle IDNA UseSTD3ASCIIRules flag (default off)</p>
-<dt><code>&#8211;no-tld</code></p>
-<dd> Don&#8217;t check string for TLD specific rules Only for <code>&#8211;idna-to-ascii</code> and <code>&#8211;idna-to-unicode</code></p>
-<dt><code>-n</code>, <code>&#8211;nfkc</code></p>
-<dd> Normalize string according to Unicode v3.2 NFKC</p>
-<dt><code>-p</code>, <code>&#8211;profile</code>=<i>STRING</i></p>
-<dd> Use specified stringprep profile instead Valid stringprep profiles: `Nameprep&#8217;, `iSCSI&#8217;, `Nodeprep&#8217;, `Resourceprep&#8217;, `trace&#8217;, `SASLprep&#8217;</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Print debugging information</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Silent operation</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd>
+<dt><code>-s</code>, <code>&#8211;stringprep</code></dt>
+<dd> Prepare string according to nameprep profile</dd>
+<dt><code>-d</code>, <code>&#8211;punycode-decode</code></dt>
+<dd> Decode Punycode</dd>
+<dt><code>-e</code>, <code>&#8211;punycode-encode</code></dt>
+<dd> Encode Punycode</dd>
+<dt><code>-a</code>, <code>&#8211;idna-to-ascii</code></dt>
+<dd> Convert to ACE according to IDNA (default mode)</dd>
+<dt><code>-u</code>, <code>&#8211;idna-to-unicode</code></dt>
+<dd> Convert from ACE according to IDNA</dd>
+<dt><code>&#8211;allow-unassigned</code></dt>
+<dd> Toggle IDNA AllowUnassigned flag (default off)</dd>
+<dt><code>&#8211;usestd3asciirules</code></dt>
+<dd> Toggle IDNA UseSTD3ASCIIRules flag (default off)</dd>
+<dt><code>&#8211;no-tld</code></dt>
+<dd> Don&#8217;t check string for TLD specific rules Only for <code>&#8211;idna-to-ascii</code> and <code>&#8211;idna-to-unicode</code></dd>
+<dt><code>-n</code>, <code>&#8211;nfkc</code></dt>
+<dd> Normalize string according to Unicode v3.2 NFKC</dd>
+<dt><code>-p</code>, <code>&#8211;profile</code>=<i>STRING</i></dt>
+<dd> Use specified stringprep profile instead Valid stringprep profiles: `Nameprep&#8217;, `iSCSI&#8217;, `Nodeprep&#8217;, `Resourceprep&#8217;, `trace&#8217;, `SASLprep&#8217;</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Print debugging information</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Silent operation</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Simon Josefsson.</p>
 <h2>REPORTING BUGS</h2>
@@ -59,6 +59,6 @@ description: "idn – Internationalized Domain Names command line tool"
 <p> The full documentation for <code>idn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>idn</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info idn</code></dl>
+</dt><dd> <code>info idn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

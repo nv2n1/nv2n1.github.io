@@ -15,18 +15,18 @@ description: "repomanage – list the newest or oldest RPM packages in a directo
 <p> <code>repomanage</code> is a program to manage a directory of RPM packages. It displays a list of the newest or oldest packages in a directory for easy piping to xargs or similar programs. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a help message, and then quit.</p>
-<dt><code>-o, &#8211;old</code></p>
-<dd> Print the oldest packages.</p>
-<dt><code>-n, &#8211;new</code></p>
-<dd> Print the newest packages.</p>
-<dt><code>-s, &#8211;space</code></p>
-<dd> Space-separated instead of newline-separated output.</p>
-<dt><code>-k KEEP, &#8211;keep=KEEP</code></p>
-<dd> Newest N packages to keep &#8211; defaults to 1.</p>
-<dt><code>-c, &#8211;nocheck</code></p>
-<dd> Do not check package payload signatures/digests. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a help message, and then quit.</dd>
+<dt><code>-o, &#8211;old</code></dt>
+<dd> Print the oldest packages.</dd>
+<dt><code>-n, &#8211;new</code></dt>
+<dd> Print the newest packages.</dd>
+<dt><code>-s, &#8211;space</code></dt>
+<dd> Space-separated instead of newline-separated output.</dd>
+<dt><code>-k KEEP, &#8211;keep=KEEP</code></dt>
+<dd> Newest N packages to keep &#8211; defaults to 1.</dd>
+<dt><code>-c, &#8211;nocheck</code></dt>
+<dd> Do not check package payload signatures/digests. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

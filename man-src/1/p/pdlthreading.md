@@ -125,7 +125,6 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 <p>The <tt>&quot;xchg&quot;</tt> method &quot;<code>exchanges</code>&quot; two dimensions in a piddle: </p>
 <pre> pdl&gt; $a = sequence(6,7,8,9)
  pdl&gt; $a_xchg = $a-&gt;xchg(0,3)
- 
  pdl&gt; p $a-&gt;info =&gt; PDL: Double D [6,7,8,9]
  pdl&gt; p $a_xchg-&gt;info =&gt; PDL: Double D [9,7,8,6]
  | |
@@ -245,8 +244,8 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  [80 81 82 83 84 85 86 87 88 89 90]
  ]</pre>
 <dl>
-<dt>General Strategy:</p>
-<dd>Move the dimensions you want to operate on to the start of your piddle&#8217;s dimension list. Then let <font SIZE="-1">PDL</font> thread over the higher dimensions.</dl>
+<dt>General Strategy:</dt>
+<dd>Move the dimensions you want to operate on to the start of your piddle&#8217;s dimension list. Then let <font SIZE="-1">PDL</font> thread over the higher dimensions.</dd></dl>
 <h2>Example: Conway&#8217;S Game Of Life</h2>
 <p>Okay, enough theory. Let&#8217;s do something a bit more interesting: We&#8217;ll write <code>Conway&#8217;s Game of Life</code> in <font SIZE="-1">PDL</font> and see how powerful <font SIZE="-1">PDL</font> can be! </p>
 <p> The <code>Game of Life</code> is a simulation run on a big two dimensional grid. Each cell in the grid can either be alive or dead (represented by 1 or 0). The next generation of cells in the grid is calculated with simple rules according to the number of living cells in it&#8217;s immediate neighbourhood: </p>
@@ -259,46 +258,37 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 <pre> #!/usr/bin/perl -w
  use PDL;
  use PDL::NiceSlice;
- 
  # Make a board for the game of life.
  my $nx = 20;
  my $ny = 20;
- 
  # Current generation.
  my $a = zeroes($nx, $ny);
- 
  # Next generation.
  my $n = zeroes($nx, $ny);
- 
  # Put in a simple glider.
  $a(1:3,1:3) .= pdl ( [1,1,1],
  [0,0,1],
  [0,1,0] );
- 
  for (my $i = 0; $i &lt; 100; $i++) {
  $n = zeroes($nx, $ny);
  $new_a = $a-&gt;copy;
  for ($x = 0; $x &lt; $nx; $x++) {
  for ($y = 0; $y &lt; $ny; $y++) {
- 
  # For each cell, look at the surrounding neighbours.
  for ($dx = -1; $dx &lt;= 1; $dx++) {
  for ($dy = -1; $dy &lt;= 1; $dy++) {
  $px = $x + $dx;
  $py = $y + $dy;
- 
  # Wrap around at the edges.
  if ($px &lt; 0) {$px = $nx-1};
  if ($py &lt; 0) {$py = $ny-1};
  if ($px &gt;= $nx) {$px = 0};
  if ($py &gt;= $ny) {$py = 0};
- 
  $n($x,$y) .= $n($x,$y) + $a($px,$py);
  }
  }
  # Do not count the central cell itself.
  $n($x,$y) -= $a($x,$y);
- 
  # Work out if cell lives or dies:
  # Dead cell lives if n = 3
  # Live cell dies if n is not 2 or 3
@@ -310,9 +300,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  }
  }
  }
- 
  print $a;
- 
  $a = $new_a;
  }</pre>
 <p>If you run this, you will see a small glider crawl diagonally across the grid of zeroes. On my machine, it prints out a couple of generations per second.</p>
@@ -321,23 +309,18 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 <pre> #!/usr/bin/perl -w
  use PDL;
  use PDL::NiceSlice;
- 
  my $a = zeroes(20,20);
- 
  # Put in a simple glider.
  $a(1:3,1:3) .= pdl ( [1,1,1],
  [0,0,1],
  [0,1,0] );
- 
  my $n;
  for (my $i = 0; $i &lt; 100; $i++) {
  # Calculate the number of neighbours per cell.
  $n = $a-&gt;range(ndcoords($a)-1,3,&quot;periodic&quot;)-&gt;reorder(2,3,0,1);
  $n = $n-&gt;sumover-&gt;sumover - $a;
- 
  # Calculate the next generation.
  $a = ((($n == 2) + ($n == 3))* $a) + (($n==3) * !$a);
- 
  print $a;
  }</pre>
 <p>The threaded <font SIZE="-1">PDL</font> version is much faster: </p>
@@ -582,8 +565,8 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 <p> <i>Calculating the next generation</i> </p>
 <p> At this point, the variable <tt>$n</tt> has the number of living neighbours for every cell. Now we apply the rules of the game of life to calculate the next generation.</p>
 <dl>
-<dt>If an empty cell has exactly three neighbours, a living cell is generated.</p>
-<dd>Get a list of cells that have exactly three neighbours: </p>
+<dt>If an empty cell has exactly three neighbours, a living cell is generated.</dt>
+<dd>Get a list of cells that have exactly three neighbours: </dd>
 <pre> pdl&gt; p ($n == 3)
  [
  [0 0 1 0 0 0 0 0 0 0]
@@ -599,8 +582,8 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  ]</pre>
 <p>Get a list of <code>empty</code> cells that have exactly three neighbours: </p>
 <pre> pdl&gt; p ($n == 3) * !$a</pre>
-<dt>If a living cell has less than 2 or more than 3 neighbours, it dies.</p>
-<dd>Get a list of cells that have exactly 2 or 3 neighbours: </p>
+<dt>If a living cell has less than 2 or more than 3 neighbours, it dies.</dt>
+<dd>Get a list of cells that have exactly 2 or 3 neighbours: </dd>
 <pre> pdl&gt; p (($n == 2) + ($n == 3))
  [
  [0 1 1 1 0 0 0 0 0 0]
@@ -638,23 +621,18 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  use PDL;
  use PDL::NiceSlice;
  use PDL::Graphics::TriD;
- 
  my $a = zeroes(20,20);
- 
  # Put in a simple glider.
  $a(1:3,1:3) .= pdl ( [1,1,1],
  [0,0,1],
  [0,1,0] );
- 
  my $n;
  for (my $i = 0; $i &lt; 100; $i++) {
  # Calculate the number of neighbours per cell.
  $n = $a-&gt;range(ndcoords($a)-1,3,&quot;periodic&quot;)-&gt;reorder(2,3,0,1);
  $n = $n-&gt;sumover-&gt;sumover - $a;
- 
  # Calculate the next generation.
  $a = ((($n == 2) + ($n == 3))* $a) + (($n==3) * !$a);
- 
  # Display.
  nokeeptwiddling3d();
  imagrgb [$a];
@@ -669,23 +647,18 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  use PDL::NiceSlice;
  use PDL::Graphics::TriD;
  use Time::HiRes qw(usleep);
- 
  my $a = random(100,100);
  $a = ($a &lt; 0.5);
- 
  my $n;
  while (1) {
  # Calculate the number of neighbours per cell.
  $n = $a-&gt;range(ndcoords($a)-1,3,&quot;periodic&quot;)-&gt;reorder(2,3,0,1);
  $n = $n-&gt;sumover-&gt;sumover - $a;
- 
  # Calculate the next generation.
  $a = ((($n == 2) + ($n == 3))* $a) + (($n==3) * !$a);
- 
  # Display.
  nokeeptwiddling3d();
  imagrgb [$a];
- 
  # Sleep for 0.1 seconds.
  usleep(100000);
  }</pre>

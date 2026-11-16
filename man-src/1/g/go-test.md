@@ -34,18 +34,18 @@ description: "go-test – test packages"
 <h2>OPTIONS</h2>
 <p> In addition to the build flags, the flags handled by &#8216;go test&#8217; itself are:</p>
 <dl>
-<dt><code>-args</code></p>
-<dd> Pass the remainder of the command line (everything after -args) to the test binary, uninterpreted and unchanged. Because this flag consumes the remainder of the command line, the package list (if present) must appear before this flag.</p>
-<dt><code>-c</code></p>
-<dd> Compile the test binary to pkg.test but do not run it (where pkg is the last element of the package&#8217;s import path). The file name can be changed with the -o flag.</p>
-<dt><code>-exec </code><i>xprog</i></p>
-<dd> Run the test binary using xprog. The behavior is the same as in &#8216;go run&#8217;. See &#8216;go help run&#8217; for details.</p>
-<dt><code>-i</code></p>
-<dd> Install packages that are dependencies of the test. Do not run the test.</p>
-<dt><code>-json</code></p>
-<dd> Convert test output to JSON suitable for automated processing. See &#8216;go doc test2json&#8217; for the encoding details.</p>
-<dt><code>-o </code><i>file</i></p>
-<dd> Compile the test binary to the named file. The test still runs (unless -c or -i is specified).</dl>
+<dt><code>-args</code></dt>
+<dd> Pass the remainder of the command line (everything after -args) to the test binary, uninterpreted and unchanged. Because this flag consumes the remainder of the command line, the package list (if present) must appear before this flag.</dd>
+<dt><code>-c</code></dt>
+<dd> Compile the test binary to pkg.test but do not run it (where pkg is the last element of the package&#8217;s import path). The file name can be changed with the -o flag.</dd>
+<dt><code>-exec </code><i>xprog</i></dt>
+<dd> Run the test binary using xprog. The behavior is the same as in &#8216;go run&#8217;. See &#8216;go help run&#8217; for details.</dd>
+<dt><code>-i</code></dt>
+<dd> Install packages that are dependencies of the test. Do not run the test.</dd>
+<dt><code>-json</code></dt>
+<dd> Convert test output to JSON suitable for automated processing. See &#8216;go doc test2json&#8217; for the encoding details.</dd>
+<dt><code>-o </code><i>file</i></dt>
+<dd> Compile the test binary to the named file. The test still runs (unless -c or -i is specified).</dd></dl>
 <p> The test binary also accepts flags that control execution of the test; these flags are also accessible by &#8216;go test&#8217;. See <code><a href="/docs/linux/man/7-go-testflag/">go-testflag</a></code>(7) for details. </p>
 <p> For more about build flags, see <code><a href="/docs/linux/man/1-go-build/">go-build</a></code>(1). </p>
 <p> For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).</p>

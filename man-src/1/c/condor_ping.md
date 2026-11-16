@@ -18,143 +18,96 @@ description: "condor_ping Attempt a security negotiation to determine if it succ
 <p> An authorization level may be one of the following strings. If ALL is listed, then negotiation is attempted for each of these possible authorization levels. </p>
 <p> <code>READ</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>WRITE</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>ADMINISTRATOR</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>SOAP</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>CONFIG</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>OWNER</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>DAEMON</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>NEGOTIATOR</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>ADVERTISE_MASTER</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>ADVERTISE_STARTD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>ADVERTISE_SCHEDD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>CLIENT</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <h2>Options</h2>
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Print extra debugging information as the command executes.</p>
-<dt>
-<dd></dl>
+</dt><dd> Print extra debugging information as the command executes.</dd>
+</dl>
 <p> <code>-config </code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Attempt the negotiation based on the contents of the configuration file contents in file <i>filename</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Attempt the negotiation based on the contents of the configuration file contents in file <i>filename</i> .</dd>
+</dl>
 <p> <code>-address </code> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Target the given IP address with the negotiation attempt.</p>
-<dt>
-<dd></dl>
+</dt><dd> Target the given IP address with the negotiation attempt.</dd>
+</dl>
 <p> <code>-pool </code> <i>hostname</i></p>
 <dl>
 <dt>
-<dd> Target the given <i>host</i> with the negotiation attempt. May be combined with specifications defined by <code>name</code> and <code>type</code> options.</p>
-<dt>
-<dd></dl>
+</dt><dd> Target the given <i>host</i> with the negotiation attempt. May be combined with specifications defined by <code>name</code> and <code>type</code> options.</dd>
+</dl>
 <p> <code>-name </code> <i>daemonname</i></p>
 <dl>
 <dt>
-<dd> Target the daemon given by <i>daemonname</i> with the negotiation attempt.</p>
-<dt>
-<dd></dl>
+</dt><dd> Target the daemon given by <i>daemonname</i> with the negotiation attempt.</dd>
+</dl>
 <p> <code>-type </code> <i>subsystem</i></p>
 <dl>
 <dt>
-<dd> Target the daemon identified by <i>subsystem</i> , one of the values of the predefined $(SUBSYSTEM) macro.</p>
-<dt>
-<dd></dl>
+</dt><dd> Target the daemon identified by <i>subsystem</i> , one of the values of the predefined $(SUBSYSTEM) macro.</dd>
+</dl>
 <p> <code>-quiet</code></p>
 <dl>
 <dt>
-<dd> Set exit status only; no output displayed.</p>
-<dt>
-<dd></dl>
+</dt><dd> Set exit status only; no output displayed.</dd>
+</dl>
 <p> <code>-table</code></p>
 <dl>
 <dt>
-<dd> Output is displayed with one result per line, in a table format.</p>
-<dt>
-<dd></dl>
+</dt><dd> Output is displayed with one result per line, in a table format.</dd>
+</dl>
 <p> <code>-verbose</code></p>
 <dl>
 <dt>
-<dd> Display all available output.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display all available output.</dd>
+</dl>
 <h2>Examples</h2>
 <p> The example Unix command </p>
 <p> condor_ping -address &quot;&lt;127.0.0.1:9618&gt;&quot; -table READ WRITE DAEMON </p>

@@ -10,16 +10,10 @@ description: "QuantLib::AssetSwap::arguments – Arguments for asset swap calcul
 <p>QuantLib::AssetSwap::arguments &#8211; Arguments for asset swap calculation </p>
 <h2>Synopsis</h2>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Inherits QuantLib::Swap::arguments.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Real <code>nominal</code> </p>
 <p> <code>Date</code> <code>settlementDate</code> </p>

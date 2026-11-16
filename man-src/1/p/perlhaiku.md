@@ -39,13 +39,13 @@ url: "/docs/linux/man/1-perlhaiku/"
  The following problems are encountered with Haiku revision 28311:
 <dl>
 <dt>&bull;
-<dd> Perl cannot be compiled with threading support <font SIZE="-1">ATM.</font>
-<dt>&bull;
-<dd> The <i>cpan/Socket/t/socketpair.t</i> test fails. More precisely: the subtests using datagram sockets fail. Unix datagram sockets aren't implemented in Haiku yet.
-<dt>&bull;
-<dd> A subtest of the <i>cpan/Sys-Syslog/t/syslog.t</i> test fails. This is due to Haiku not implementing <i>/dev/log</i> support yet.
-<dt>&bull;
-<dd> The tests <i>dist/Net-Ping/t/450_service.t</i> and <i>dist/Net-Ping/t/510_ping_udp.t</i> fail. This is due to bugs in Haiku's network stack implementation.</dl>
+</dt><dd> Perl cannot be compiled with threading support <font SIZE="-1">ATM.</font>
+</dd><dt>&bull;
+</dt><dd> The <i>cpan/Socket/t/socketpair.t</i> test fails. More precisely: the subtests using datagram sockets fail. Unix datagram sockets aren't implemented in Haiku yet.
+</dd><dt>&bull;
+</dt><dd> A subtest of the <i>cpan/Sys-Syslog/t/syslog.t</i> test fails. This is due to Haiku not implementing <i>/dev/log</i> support yet.
+</dd><dt>&bull;
+</dt><dd> The tests <i>dist/Net-Ping/t/450_service.t</i> and <i>dist/Net-Ping/t/510_ping_udp.t</i> fail. This is due to bugs in Haiku's network stack implementation.</dd></dl>
 
 <h2>CONTACT</h2>
 

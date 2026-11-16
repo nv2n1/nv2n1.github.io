@@ -14,72 +14,58 @@ description: "opatmmtool"
 <p> opatmmtool [-v] [-h <i>hfi</i>] [-f <i>file</i>] <i>operation</i></p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;h</p>
-<dd> Produces full help text. </p>
-<dt>-v</p>
-<dd> Produces verbose output. </p>
-<dt>-h <i>hfi</i></p>
-<dd> HFI, numbered 1..n. Default = 1. </p>
-<dt>-f <i>file</i></p>
-<dd> File parameter for <i>fileversion</i>, <i>update</i>, and <i>dumpotp</i> operations. </p>
+<dt>&#8211;h</dt>
+<dd> Produces full help text. </dd>
+<dt>-v</dt>
+<dd> Produces verbose output. </dd>
+<dt>-h <i>hfi</i></dt>
+<dd> HFI, numbered 1..n. Default = 1. </dd>
+<dt>-f <i>file</i></dt>
+<dd> File parameter for <i>fileversion</i>, <i>update</i>, and <i>dumpotp</i> operations. </dd>
 <dt>
-&nbsp;<wbr><i>operation</i>&nbsp;<wbr></p>
-<dd> Includes one of the following: </p>
+&nbsp;<wbr><i>operation</i>&nbsp;<wbr></dt>
+<dd> Includes one of the following: </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
-<p> reboot Reboots the TMM.</dl>
+</dt><dd>
+<p> reboot Reboots the TMM.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-<p> fwversion Reports the current firmware version.</dl>
+</dt><dd>
+<p> fwversion Reports the current firmware version.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-<p> fileversion Reports the file version. Requires -f <i>fw_file</i> option.</dl>
+</dt><dd>
+<p> fileversion Reports the file version. Requires -f <i>fw_file</i> option.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-<p> update Performs a firmware update. Requires -f <i>fw_file</i> option.</dl>
+</dt><dd>
+<p> update Performs a firmware update. Requires -f <i>fw_file</i> option.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-<p> dumpotp Dumps the one-time programmable (OTP) region. Requires -f <i>output_file</i> option.</dl>
+</dt><dd>
+<p> dumpotp Dumps the one-time programmable (OTP) region. Requires -f <i>output_file</i> option.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-<p> lockotp Locks the one-time programmable (OTP) region.</dl>
+</dt><dd>
+<p> lockotp Locks the one-time programmable (OTP) region.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-<p> status Displays the current GPIO pin status.</dl>
+</dt><dd>
+<p> status Displays the current GPIO pin status.</dd></dl>
 </dl>
 </dl>
 <h2>Examples</h2>
@@ -87,3 +73,4 @@ description: "opatmmtool"
  opatmmtool -v -f main.signed.bin update<br />
  opatmmtool reboot </p>
 <h2>Index</h2>
+</p>

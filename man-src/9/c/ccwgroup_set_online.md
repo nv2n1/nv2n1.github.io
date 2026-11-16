@@ -14,7 +14,7 @@ description: "ccwgroup_set_online – enable a ccwgroup device"
 <p><i>gdev</i></p>
 <dl>
 <dd>
-<dd>target ccwgroup device</dl>
+</dd><dd>target ccwgroup device</dd></dl>
 <h2>Description</h2>
 <p>This function attempts to put the ccwgroup device into the online state.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "ccwgroup_set_online – enable a ccwgroup device"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

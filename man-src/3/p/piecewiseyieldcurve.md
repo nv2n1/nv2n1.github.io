@@ -11,13 +11,9 @@ description: "ql/termstructures/yield/piecewiseyieldcurve.hpp – piecewise-inte
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/iterativebootstrap.hpp&gt;
-
 #include &lt;ql/termstructures/localbootstrap.hpp&gt;
-
 #include &lt;ql/termstructures/yield/bootstraptraits.hpp&gt;
-
 #include &lt;ql/patterns/lazyobject.hpp&gt;
-
 #include &lt;ql/quote.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>PiecewiseYieldCurve&lt; Traits, Interpolator, Bootstrap &gt;</code><br />

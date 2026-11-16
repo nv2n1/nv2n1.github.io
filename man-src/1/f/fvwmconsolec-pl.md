@@ -18,81 +18,82 @@ description: "FvwmConsoleC.pl – Command editor for fvwm command input interfac
 <p>Functions are bound to a key or key combination to be invoked. The followings are functions available and their default key bindings.</p>
 <dl>
 <dd>
-<dl>
-<dt><code>bind</code></p>
+</dd><dl>
+<dt><code>bind</code></dt>
 <dd><i>Meta-k, Ctrl-x Ctrl-b</i><br />
- List up key bindings and substitutions.</p>
-<dt><code>boh</code></p>
-<dd>Move to the beginning of history.</p>
-<dt><code>boh_ign_mode</code> <i>Esc-&lt;</i></p>
-<dd>Move to the beginning of history. If it is in search mode, continue.</p>
-<dt><code>bol</code></p>
+ List up key bindings and substitutions.</dd>
+<dt><code>boh</code></dt>
+<dd>Move to the beginning of history.</dd>
+<dt><code>boh_ign_mode</code> <i>Esc-&lt;</i></dt>
+<dd>Move to the beginning of history. If it is in search mode, continue.</dd>
+<dt><code>bol</code></dt>
 <dd><i>Home, Ctrl-a</i><br />
- Move cursor to the beginning of the line.</p>
-<dt><code>bs[(n)]</code> <i>BackSpace, Ctrl-h</i></p>
-<dd>Backspace n times. default of n is 1.</p>
-<dt><code>cancel</code></p>
+ Move cursor to the beginning of the line.</dd>
+<dt><code>bs[(n)]</code> <i>BackSpace, Ctrl-h</i></dt>
+<dd>Backspace n times. default of n is 1.</dd>
+<dt><code>cancel</code></dt>
 <dd><i>Ctrl-x Ctrl-k</i><br />
- Cancel the current input.</p>
-<dt><code>del_back_line</code></p>
-<dd>Delete the line from the beginning to the cursor.</p>
-<dt><code>del_back_word</code> <i>Ctrl-w</i></p>
-<dd>Delete the word from the beginning to the cursor.</p>
-<dt><code>del_char [(n)]</code> <i>Delete, Ctrl-d</i></p>
-<dd>Delete n characters from the cursor to the right. Default of n is 1.</p>
-<dt><code>del_forw_line</code> <i>Ctrl-k</i></p>
-<dd>Delete the line from the cursor to the end.</p>
-<dt><code>del_forw_word</code> <i>Meta-d</i></p>
-<dd>Delete the word from the cursor to the end.</p>
-<dt><code>del_line</code> <i>Ctrl-u</i></p>
-<dd>Delete the entire line.</p>
-<dt><code>enter</code></p>
+ Cancel the current input.</dd>
+<dt><code>del_back_line</code></dt>
+<dd>Delete the line from the beginning to the cursor.</dd>
+<dt><code>del_back_word</code> <i>Ctrl-w</i></dt>
+<dd>Delete the word from the beginning to the cursor.</dd>
+<dt><code>del_char [(n)]</code> <i>Delete, Ctrl-d</i></dt>
+<dd>Delete n characters from the cursor to the right. Default of n is 1.</dd>
+<dt><code>del_forw_line</code> <i>Ctrl-k</i></dt>
+<dd>Delete the line from the cursor to the end.</dd>
+<dt><code>del_forw_word</code> <i>Meta-d</i></dt>
+<dd>Delete the word from the cursor to the end.</dd>
+<dt><code>del_line</code> <i>Ctrl-u</i></dt>
+<dd>Delete the entire line.</dd>
+<dt><code>enter</code></dt>
 <dd><i>Enter, Ctrl-j, Ctrl-m</i><br />
- Perform substitution if applicable and send the line to fvwm.</p>
-<dt><code>enter_wo_subst</code> <i>Meta-Enter</i></p>
-<dd>Send the line to fvwm without any substitution.</p>
-<dt><code>eoh</code></p>
-<dd>Move to the end of history.</p>
-<dt><code>eoh_ign_mode</code> <i>Esc-&gt;</i></p>
-<dd>Move to the end of history. If it is in search mode, continue.</p>
-<dt><code>eol</code></p>
+ Perform substitution if applicable and send the line to fvwm.</dd>
+<dt><code>enter_wo_subst</code> <i>Meta-Enter</i></dt>
+<dd>Send the line to fvwm without any substitution.</dd>
+<dt><code>eoh</code></dt>
+<dd>Move to the end of history.</dd>
+<dt><code>eoh_ign_mode</code> <i>Esc-&gt;</i></dt>
+<dd>Move to the end of history. If it is in search mode, continue.</dd>
+<dt><code>eol</code></dt>
 <dd><i>End, Ctrl-e</i><br />
- Move the cursor to the end of line.</p>
-<dt><code>ins_char (str)</code></p>
-<dd>Insert string at the cursor.</p>
-<dt><code>ins_last_word</code> <i>Esc-.</i></p>
-<dd>Insert the last argument of the previous command at the cursor.</p>
-<dt><code>ins_nth_word</code> <i>Meta-[1..9]</i></p>
-<dd>Insert the n-th argument of the previous command at the cursor.</p>
-<dt><code>list_func</code> <i>Meta-l</i></p>
-<dd>List up available editing functions.</p>
-<dt><code>next_char</code> <i>Right, Ctrl-f</i></p>
-<dd>Move the cursor to the next character.</p>
-<dt><code>next_line</code> <i>Down, Ctrl-n</i></p>
-<dd>Move to the next line in history.</p>
-<dt><code>next_word</code> <i>Meta-f</i></p>
-<dd>Move the cursor to the next word.</p>
-<dt><code>prefix</code></p>
-<dd>Wait for the next character typed in for multi-key binding.</p>
-<dt><code>prev_char</code> <i>Left, Ctrl-b</i></p>
-<dd>Move the cursor to the previous character.</p>
-<dt><code>prev_line</code> <i>Up, Ctrl-p</i></p>
-<dd>Move to the previous line in history.</p>
-<dt><code>prev_word</code> <i>Meta-b</i></p>
-<dd>Move the cursor to the previous word.</p>
-<dt><code>quote</code></p>
+ Move the cursor to the end of line.</dd>
+<dt><code>ins_char (str)</code></dt>
+<dd>Insert string at the cursor.</dd>
+<dt><code>ins_last_word</code> <i>Esc-.</i></dt>
+<dd>Insert the last argument of the previous command at the cursor.</dd>
+<dt><code>ins_nth_word</code> <i>Meta-[1..9]</i></dt>
+<dd>Insert the n-th argument of the previous command at the cursor.</dd>
+<dt><code>list_func</code> <i>Meta-l</i></dt>
+<dd>List up available editing functions.</dd>
+<dt><code>next_char</code> <i>Right, Ctrl-f</i></dt>
+<dd>Move the cursor to the next character.</dd>
+<dt><code>next_line</code> <i>Down, Ctrl-n</i></dt>
+<dd>Move to the next line in history.</dd>
+<dt><code>next_word</code> <i>Meta-f</i></dt>
+<dd>Move the cursor to the next word.</dd>
+<dt><code>prefix</code></dt>
+<dd>Wait for the next character typed in for multi-key binding.</dd>
+<dt><code>prev_char</code> <i>Left, Ctrl-b</i></dt>
+<dd>Move the cursor to the previous character.</dd>
+<dt><code>prev_line</code> <i>Up, Ctrl-p</i></dt>
+<dd>Move to the previous line in history.</dd>
+<dt><code>prev_word</code> <i>Meta-b</i></dt>
+<dd>Move the cursor to the previous word.</dd>
+<dt><code>quote</code></dt>
 <dd><i>Ctrl-q</i><br />
- Insert the next character typed into the buffer literally.</p>
-<dt><code>search</code></p>
+ Insert the next character typed into the buffer literally.</dd>
+<dt><code>search</code></dt>
 <dd><i>Ctrl-s</i><br />
- Search pattern in history.</p>
-<dt><code>search_rev</code> <i>Ctrl-r</i></p>
-<dd>Search pattern in history in reverse order.</p>
-<dt><code>subst</code></p>
+ Search pattern in history.</dd>
+<dt><code>search_rev</code> <i>Ctrl-r</i></dt>
+<dd>Search pattern in history in reverse order.</dd>
+<dt><code>subst</code></dt>
 <dd><i>Meta-s</i><br />
- Substitute all patterns to strings and reprint the line. The substitutions are not nested and performed in the order that they are defined.</dl>
+ Substitute all patterns to strings and reprint the line. The substitutions are not nested and performed in the order that they are defined.</dd></dl>
 </dl>
 <h2>Configuration</h2>
 <p>The key binding can be overridden or defined in fvwm module configuration. </p>
 <dl>
 <dd>*FvwmConsole: Key 
+</dd></dl>

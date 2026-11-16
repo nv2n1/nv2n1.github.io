@@ -14,13 +14,13 @@ description: "crypto_alloc_akcipher – allocate AKCIPHER tfm handle"
 <p><i>alg_name</i></p>
 <dl>
 <dd>
-<dd>is the cra_name / name or cra_driver_name / driver name of the public key algorithm e.g. &#8220;rsa&#8221;</dl>
+</dd><dd>is the cra_name / name or cra_driver_name / driver name of the public key algorithm e.g. &#8220;rsa&#8221;</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>specifies the type of the algorithm</dl>
+<dd>specifies the type of the algorithm</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>specifies the mask for the algorithm</dl>
+<dd>specifies the mask for the algorithm</dd></dl>
 <h2>Description</h2>
 <p>Allocate a handle for public key algorithm. The returned struct crypto_akcipher is the handle that is required for any subsequent API invocation for the public key operations.</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "crypto_alloc_akcipher – allocate AKCIPHER tfm handle"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

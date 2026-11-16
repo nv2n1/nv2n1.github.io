@@ -21,12 +21,12 @@ description: "airtsp-library –"
 <p> AirTSP makes an extensive use of existing open-source libraries for increased functionality, speed and accuracy. In particular the Boost (C++ Standard Extensions: <a rel="nofollow" href="http://www.boost.org)">http://www.boost.org)</a> library is used. </p>
 <p> The library covers the following areas:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Network/graph generation</p>
-<dt>&bull;</p>
-<dd> Calculation of travel solutions from airline schedules/networks</p>
-<dt>&bull;</p>
-<dd> Flight-preiods: storage, engine, management</dl>
+<dt>&bull;</dt>
+<dd> Network/graph generation</dd>
+<dt>&bull;</dt>
+<dd> Calculation of travel solutions from airline schedules/networks</dd>
+<dt>&bull;</dt>
+<dd> Flight-preiods: storage, engine, management</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-airtsp/">airtsp</a>(1)</code>, <code><a href="/docs/linux/man/1-airtsp-config/">airtsp-config</a></code>(1)</p>
 <h2>SUPPORT</h2>

@@ -15,15 +15,15 @@ truncate_pagecache_range - unmap and remove pagecache that is hole-punched
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode</dl>
+<dl><dd></dd><dd>inode</dd></dl>
  
 
  <i>lstart</i>
-<dl><dd>offset of beginning of hole</dl>
+<dl><dd>offset of beginning of hole</dd></dl>
  
 
  <i>lend</i>
-<dl><dd>offset of last byte of hole</dl>
+<dl><dd>offset of last byte of hole</dd></dl>
 
 <h2>Description</h2>
 

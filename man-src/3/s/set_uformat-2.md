@@ -10,7 +10,6 @@ description: "set_uformat – Set the global current text encoding format. Alleg
 <p>set_uformat &#8211; Set the global current text encoding format. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_uformat(int type);</code></pre>
 <h2>Description</h2>
 <p>Sets the current text encoding format. This will affect all parts of Allegro, wherever you see a function that returns a char *, or takes a char * as a parameter. `type&#8217; should be one of these values: </p>

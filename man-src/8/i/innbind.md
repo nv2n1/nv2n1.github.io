@@ -20,8 +20,8 @@ description: "innbind – Helper program to bind sockets to privileged ports"
 <p> Note that file descriptor passing is only supported on STREAMS-based systems since it is done with ioctls over a pipe. However, it is believed that those systems are exactly the systems that can&#8217;t simply bind the inherited file descriptor. If this assumption proves to be incorrect, traditional <font SIZE="-1">BSD</font> file descriptor passing over a Unix domain socket will have to be added.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-p</code></p>
-<dd>If given as the first command-line argument, no attempt will be made to bind the inherited file descriptor and <code>innbind</code> will only try creation of a new file descriptor and passing it back via standard output. This option is primarily useful for testing.</dl>
+<dt><code>-p</code></dt>
+<dd>If given as the first command-line argument, no attempt will be made to bind the inherited file descriptor and <code>innbind</code> will only try creation of a new file descriptor and passing it back via standard output. This option is primarily useful for testing.</dd></dl>
 <h2>Security</h2>
 <p>As <code>innbind</code> is normally installed setuid root, security is even more of an issue for it than for other parts of <font SIZE="-1">INN</font>. It is a fairly short program, and if you understand C, you are encouraged to audit it yourself to be certain that it does only what it is supposed to do. The only <font SIZE="-1">INN</font> library functions it uses are the vector functions, the message functions for error reporting, and xstrdup. </p>
 <p> The ports that will be bound are restricted to prevent potential attacks made possible by the ability to bind low-numbered ports, such as exploits of the <i><a href="/docs/linux/man/1-rsh/">rsh</a></i>(1) family of commands on some systems. If <code>innbind</code> is installed setuid root, it can only be executed by the news user to prevent other users on the system from being able to bind to even those few privileged ports that it allows. </p>
@@ -29,42 +29,42 @@ description: "innbind – Helper program to bind sockets to privileged ports"
 <h2>Diagnostics</h2>
 <p><code>innbind</code> may log the following messages to syslog and print them to standard error.</p>
 <dl>
-<dt>cannot create socket for %s: %s</p>
-<dd>(Fatal) <code>innbind</code> fell back on attempting to create a new socket to bind for the given argument, and the socket creation failed.</p>
-<dt>cannot bind socket for %s: %s</p>
-<dd>(Fatal) Calling bind for the socket corresponding to the given argument failed with a system error. If the error indicates permission denied, make sure that <code>innbind</code> is setuid root. This can also be caused by trying to use IPv6 on a system whose kernel does not support it.</p>
-<dt>cannot bind to restricted port %hu in %s</p>
-<dd>(Fatal) The port number portion of the given command-line argument is for a port below 1024 which is not 119, 433, 563, or a port given to <code>&#8211;with-innd-port</code> at configure time. Other ports are not allowed for security reasons.</p>
-<dt>cannot get socket options for file descriptor %d: %s</p>
-<dd>(Fatal) <code>innbind</code> was unable to get the socket options for that file descriptor. The most likely cause of this error is passing the wrong file descriptor number to <code>innbind</code> (a file descriptor that isn&#8217;t open, or that corresponds to a regular file rather than a network socket).</p>
-<dt>cannot get <font SIZE="-1">UID</font> for %s</p>
-<dd>(Fatal) <code>innbind</code> was unable to get the <font SIZE="-1">UID</font> for the news user specified during configure (and defaulting to <tt>&quot;news&quot;</tt>). This normally means that user isn&#8217;t in the system <i>passwd</i> file.</p>
-<dt>cannot mark socket reusable for %s: %s</p>
-<dd>(Fatal) <code>innbind</code> created a new socket for the given argument but was unable to mark its bind address reusable (the <font SIZE="-1">SO_REUSEADDR</font> socket option).</p>
-<dt>cannot pass file descriptor: %s</p>
-<dd>(Fatal) <code>innbind</code> created and bound a new file descriptor but was unable to pass it back to its caller via its standard output, using the I_SENDFD <font SIZE="-1">STREAMS</font> ioctl.</p>
-<dt>invalid file descriptor %d: not <font SIZE="-1">SOCK_STREAM</font></p>
-<dd>(Fatal) The given file descriptor is not a <font SIZE="-1">SOCK_STREAM</font> socket. <code>innbind</code> can only bind <font SIZE="-1">SOCK_STREAM</font> sockets.</p>
-<dt>invalid IPv4 address %s in %s</p>
-<dd>(Fatal) The IPv4 address specified in the given command-line option could not be parsed by <i>inet_aton</i>(3). IPv4 addresses should be specified in the standard dotted-quad format (10.2.3.4).</p>
-<dt>invalid IPv6 address %s in %s</p>
-<dd>(Fatal) The IPv6 address specified in the given command-line option could not be parsed by <i>inet_pton</i>(3). IPv6 addresses should be specified in <font SIZE="-1">RFC</font>&nbsp;<wbr>4291 format (1080:0:0:0:8:800:200C:417A or 1080::8:800:200C:417A).</p>
-<dt>invalid command-line argument %s</p>
-<dd>(Fatal) The specified command-line argument could not be parsed or was not in the correct format.</p>
-<dt>invalid file descriptor %s in %s</p>
-<dd>(Fatal) The file descriptor portion of the given command-line argument is not a non-negative integer.</p>
-<dt>invalid port number %s in %s</p>
-<dd>(Fatal) The port number portion of the given command-line argument is not a non-negative integer.</p>
-<dt>invalid protocol family %s in %s</p>
-<dd>(Fatal) The protocol family portion of the given command-line argument is not a non-negative integer. It should be equal to either <font SIZE="-1">AF_INET</font> or <font SIZE="-1">AF_INET6</font> on the system where <code>innbind</code> is run.</p>
-<dt>must be run by user %s (%lu), not %lu</p>
-<dd>(Fatal) When setuid root, <code>innbind</code> may only be run by the news user as specified at configure time (<tt>&quot;news&quot;</tt> by default), for security reasons.</p>
-<dt>no addresses specified</p>
-<dd>(Fatal) No arguments were given on the command line (except maybe <code>-p</code>).</p>
-<dt>port may not be zero in %s</p>
-<dd>(Fatal) The port number portion of the given command-line argument was zero.</p>
-<dt>unknown protocol family %s in %s</p>
-<dd>(Fatal) The protocol number portion of the given command-line argument is neither <font SIZE="-1">AF_INET</font> nor <font SIZE="-1">AF_INET6</font>.</dl>
+<dt>cannot create socket for %s: %s</dt>
+<dd>(Fatal) <code>innbind</code> fell back on attempting to create a new socket to bind for the given argument, and the socket creation failed.</dd>
+<dt>cannot bind socket for %s: %s</dt>
+<dd>(Fatal) Calling bind for the socket corresponding to the given argument failed with a system error. If the error indicates permission denied, make sure that <code>innbind</code> is setuid root. This can also be caused by trying to use IPv6 on a system whose kernel does not support it.</dd>
+<dt>cannot bind to restricted port %hu in %s</dt>
+<dd>(Fatal) The port number portion of the given command-line argument is for a port below 1024 which is not 119, 433, 563, or a port given to <code>&#8211;with-innd-port</code> at configure time. Other ports are not allowed for security reasons.</dd>
+<dt>cannot get socket options for file descriptor %d: %s</dt>
+<dd>(Fatal) <code>innbind</code> was unable to get the socket options for that file descriptor. The most likely cause of this error is passing the wrong file descriptor number to <code>innbind</code> (a file descriptor that isn&#8217;t open, or that corresponds to a regular file rather than a network socket).</dd>
+<dt>cannot get <font SIZE="-1">UID</font> for %s</dt>
+<dd>(Fatal) <code>innbind</code> was unable to get the <font SIZE="-1">UID</font> for the news user specified during configure (and defaulting to <tt>&quot;news&quot;</tt>). This normally means that user isn&#8217;t in the system <i>passwd</i> file.</dd>
+<dt>cannot mark socket reusable for %s: %s</dt>
+<dd>(Fatal) <code>innbind</code> created a new socket for the given argument but was unable to mark its bind address reusable (the <font SIZE="-1">SO_REUSEADDR</font> socket option).</dd>
+<dt>cannot pass file descriptor: %s</dt>
+<dd>(Fatal) <code>innbind</code> created and bound a new file descriptor but was unable to pass it back to its caller via its standard output, using the I_SENDFD <font SIZE="-1">STREAMS</font> ioctl.</dd>
+<dt>invalid file descriptor %d: not <font SIZE="-1">SOCK_STREAM</font></dt>
+<dd>(Fatal) The given file descriptor is not a <font SIZE="-1">SOCK_STREAM</font> socket. <code>innbind</code> can only bind <font SIZE="-1">SOCK_STREAM</font> sockets.</dd>
+<dt>invalid IPv4 address %s in %s</dt>
+<dd>(Fatal) The IPv4 address specified in the given command-line option could not be parsed by <i>inet_aton</i>(3). IPv4 addresses should be specified in the standard dotted-quad format (10.2.3.4).</dd>
+<dt>invalid IPv6 address %s in %s</dt>
+<dd>(Fatal) The IPv6 address specified in the given command-line option could not be parsed by <i>inet_pton</i>(3). IPv6 addresses should be specified in <font SIZE="-1">RFC</font>&nbsp;<wbr>4291 format (1080:0:0:0:8:800:200C:417A or 1080::8:800:200C:417A).</dd>
+<dt>invalid command-line argument %s</dt>
+<dd>(Fatal) The specified command-line argument could not be parsed or was not in the correct format.</dd>
+<dt>invalid file descriptor %s in %s</dt>
+<dd>(Fatal) The file descriptor portion of the given command-line argument is not a non-negative integer.</dd>
+<dt>invalid port number %s in %s</dt>
+<dd>(Fatal) The port number portion of the given command-line argument is not a non-negative integer.</dd>
+<dt>invalid protocol family %s in %s</dt>
+<dd>(Fatal) The protocol family portion of the given command-line argument is not a non-negative integer. It should be equal to either <font SIZE="-1">AF_INET</font> or <font SIZE="-1">AF_INET6</font> on the system where <code>innbind</code> is run.</dd>
+<dt>must be run by user %s (%lu), not %lu</dt>
+<dd>(Fatal) When setuid root, <code>innbind</code> may only be run by the news user as specified at configure time (<tt>&quot;news&quot;</tt> by default), for security reasons.</dd>
+<dt>no addresses specified</dt>
+<dd>(Fatal) No arguments were given on the command line (except maybe <code>-p</code>).</dd>
+<dt>port may not be zero in %s</dt>
+<dd>(Fatal) The port number portion of the given command-line argument was zero.</dd>
+<dt>unknown protocol family %s in %s</dt>
+<dd>(Fatal) The protocol number portion of the given command-line argument is neither <font SIZE="-1">AF_INET</font> nor <font SIZE="-1">AF_INET6</font>.</dd></dl>
 <h2>Examples</h2>
 <p>As mentioned above, <code>innbind</code> is never run directly, only by <code>innd</code> and other programs that need to bind to and listen to network ports. Sample invocations by <code>innd</code> would be: </p>
 <pre> innbind 3,10,::,119</pre>

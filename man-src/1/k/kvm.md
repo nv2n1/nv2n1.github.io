@@ -14,11 +14,11 @@ description: "kvm – kvm-enabling wrapper for qemu-system-x86_64"
 <p> The script executes</p>
 <dl>
 <dt>
-<dd> <code>qemu-system-x86_64 -enable-kvm</code></dl>
+</dt><dd> <code>qemu-system-x86_64 -enable-kvm</code></dd></dl>
 <p> passing all other command-line arguments to the qemu binary. This is not the same as old kvm binary, which was using less strict construct, similar to</p>
 <dl>
 <dt>
-<dd> <code>qemu-system-x86_64 -machine accel=kvm:tcg</code></dl>
+</dt><dd> <code>qemu-system-x86_64 -machine accel=kvm:tcg</code></dd></dl>
 <p> New wrapper ensures that kvm mode is enabled, or the VM will not start, while old code falled back to emulation (tcg) mode if kvm isn&#8217;t available.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-qemu-system/">qemu-system</a></code>(1).</p>

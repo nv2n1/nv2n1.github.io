@@ -23,18 +23,12 @@ description: "chgeqz.f –"
  using the single-shift QZ method.
  Matrix pairs of this type are produced by the reduction to
  generalized upper Hessenberg form of a complex matrix pair (A,B):
- 
  A = Q1*H*Z1**H, B = Q1*T*Z1**H,
- 
  as computed by CGGHRD.
- 
  If JOB='S', then the Hessenberg-triangular pair (H,T) is
  also reduced to generalized Schur form,
- 
  H = Q*S*Z**H, T = Q*P*Z**H,
- 
  where Q and Z are unitary matrices and S and P are upper triangular.
- 
  Optionally, the unitary matrix Q from the generalized Schur
  factorization may be postmultiplied into an input matrix Q1, and the
  unitary matrix Z may be postmultiplied into an input matrix Z1.
@@ -42,9 +36,7 @@ description: "chgeqz.f –"
  the matrix pair (A,B) to generalized Hessenberg form, then the output
  matrices Q1*Q and Z1*Z are the unitary factors from the generalized
  Schur factorization of (A,B):
- 
  A = (Q1*Q)*S*(Z1*Z)**H, B = (Q1*Q)*P*(Z1*Z)**H.
- 
  To avoid overflow, eigenvalues of the matrix pair (H,T)
  (equivalently, of (A,B)) are computed as a pair of complex values
  (alpha,beta). If beta is nonzero, lambda = alpha / beta is an
@@ -59,10 +51,10 @@ description: "chgeqz.f –"
  Ref: C.B. Moler &amp; G.W. Stewart, &quot;An Algorithm for Generalized Matrix
  Eigenvalue Problems&quot;, SIAM J. Numer. Anal., 10(1973),
  pp. 241--256.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOB</i> </p>
+<dd><i>JOB</i> </dd>
 <pre> JOB is CHARACTER*1
  = 'E': Compute eigenvalues only;
  = 'S': Computer eigenvalues and the Schur form.</pre>
@@ -175,19 +167,20 @@ description: "chgeqz.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
 <pre> We assume that complex ABS works as long as its value is less than
  overflow.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 283 of file chgeqz.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

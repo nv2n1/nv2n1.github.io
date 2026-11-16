@@ -10,41 +10,41 @@ description: "halt, poweroff, reboot – Halt, power-off or reboot the machine"
 <p>halt, poweroff, reboot &#8211; Halt, power-off or reboot the machine</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>halt</code> [OPTIONS&#8230;]</p>
-<dt> <code>poweroff</code> [OPTIONS&#8230;]</p>
-<dt> <code>reboot</code> [OPTIONS&#8230;]</dl>
+<dt> <code>halt</code> [OPTIONS&#8230;]</dt>
+<dt> <code>poweroff</code> [OPTIONS&#8230;]</dt>
+<dt> <code>reboot</code> [OPTIONS&#8230;]</dt></dl>
 <h2>Description</h2>
 <p><code>halt</code>, <code>poweroff</code>, <code>reboot</code></p>
-<dd>may be used to halt, power-off, or reboot the machine. All three commands take the same options.</p>
+<dd>may be used to halt, power-off, or reboot the machine. All three commands take the same options.</dd>
 <h2>Options</h2>
 <p>The following options are understood: </p>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>Print a short help text and exit.</dl>
+<dd>Print a short help text and exit.</dd></dl>
 <p> <code>&#8211;halt</code></p>
 <dl>
-<dd>Halt the machine, regardless of which one of the three commands is invoked.</dl>
+<dd>Halt the machine, regardless of which one of the three commands is invoked.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;poweroff</code></p>
 <dl>
-<dd>Power-off the machine, regardless of which one of the three commands is invoked.</dl>
+<dd>Power-off the machine, regardless of which one of the three commands is invoked.</dd></dl>
 <p> <code>&#8211;reboot</code></p>
 <dl>
-<dd>Reboot the machine, regardless of which one of the three commands is invoked.</dl>
+<dd>Reboot the machine, regardless of which one of the three commands is invoked.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;force</code></p>
 <dl>
-<dd>Force immediate halt, power-off, or reboot. When specified once, this results in an immediate but clean shutdown by the system manager. When specified twice, this results in an immediate shutdown without contacting the system manager. See the description of <code>&#8211;force</code> in <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) for more details.</dl>
+<dd>Force immediate halt, power-off, or reboot. When specified once, this results in an immediate but clean shutdown by the system manager. When specified twice, this results in an immediate shutdown without contacting the system manager. See the description of <code>&#8211;force</code> in <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) for more details.</dd></dl>
 <p> <code>-w</code>, <code>&#8211;wtmp-only</code></p>
 <dl>
-<dd>Only write wtmp shutdown entry, do not actually halt, power-off, reboot.</dl>
+<dd>Only write wtmp shutdown entry, do not actually halt, power-off, reboot.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;no-wtmp</code></p>
 <dl>
-<dd>Do not write wtmp shutdown entry.</dl>
+<dd>Do not write wtmp shutdown entry.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;no-sync</code></p>
 <dl>
-<dd>Don&#8217;t sync hard disks/storage media before halt, power-off, reboot.</dl>
+<dd>Don&#8217;t sync hard disks/storage media before halt, power-off, reboot.</dd></dl>
 <p> <code>&#8211;no-wall</code></p>
 <dl>
-<dd>Do not send wall message before halt, power-off, reboot.</dl>
+<dd>Do not send wall message before halt, power-off, reboot.</dd></dl>
 <h2>Exit Status</h2>
 <p>On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>Notes</h2>

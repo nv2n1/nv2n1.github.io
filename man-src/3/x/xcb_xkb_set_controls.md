@@ -10,75 +10,73 @@ description: "xcb_xkb_set_controls –"
 <p>xcb_xkb_set_controls &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_xkb_set_controls(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint8_t affectInternalRealMods, uint8_t internalRealMods, uint8_t affectIgnoreLockRealMods, uint8_t ignoreLockRealMods, uint16_t affectInternalVirtualMods, uint16_t internalVirtualMods, uint16_t affectIgnoreLockVirtualMods, uint16_t ignoreLockVirtualMods, uint8_t mouseKeysDfltBtn, uint8_t groupsWrap, uint16_t accessXOptions, uint32_t affectEnabledControls, uint32_t enabledControls, uint32_t changeControls, uint16_t repeatDelay, uint16_t repeatInterval, uint16_t slowKeysDelay, uint16_t debounceDelay, uint16_t mouseKeysDelay, uint16_t mouseKeysInterval, uint16_t mouseKeysTimeToMax, uint16_t mouseKeysMaxSpeed, int16_t mouseKeysCurve, uint16_t accessXTimeout, uint32_t accessXTimeoutMask, uint32_t accessXTimeoutValues, uint16_t accessXTimeoutOptionsMask, uint16_t accessXTimeoutOptionsValues, const uint8_t *perKeyRepeat);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>affectInternalRealMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>internalRealMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>affectIgnoreLockRealMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ignoreLockRealMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>affectInternalVirtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>internalVirtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>affectIgnoreLockVirtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ignoreLockVirtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysDfltBtn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groupsWrap</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXOptions</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>affectEnabledControls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>enabledControls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>changeControls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>repeatDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>repeatInterval</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>slowKeysDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>debounceDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysDelay</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysInterval</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysTimeToMax</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysMaxSpeed</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mouseKeysCurve</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeout</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutMask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutValues</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutOptionsMask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>accessXTimeoutOptionsValues</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>perKeyRepeat</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>affectInternalRealMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>internalRealMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>affectIgnoreLockRealMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ignoreLockRealMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>affectInternalVirtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>internalVirtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>affectIgnoreLockVirtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ignoreLockVirtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysDfltBtn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groupsWrap</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXOptions</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>affectEnabledControls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>enabledControls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>changeControls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>repeatDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>repeatInterval</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>slowKeysDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>debounceDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysDelay</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysInterval</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysTimeToMax</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysMaxSpeed</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mouseKeysCurve</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeout</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutMask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutValues</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutOptionsMask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>accessXTimeoutOptionsValues</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>perKeyRepeat</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

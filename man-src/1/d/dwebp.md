@@ -17,34 +17,34 @@ description: "dwebp – decompress a WebP file to an image file"
 <h2>OPTIONS</h2>
 <p> The basic options are:</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print usage summary.</p>
-<dt><code>-version</code></p>
-<dd> Print the version number (as major.minor.revision) and exit.</p>
-<dt><code>-o</code><i> string</i></p>
-<dd> Specify the name of the output file (as PNG format by default).</p>
-<dt><code>-pam</code></p>
-<dd> Change the output format to PAM (retains alpha).</p>
-<dt><code>-ppm</code></p>
-<dd> Change the output format to PPM (discards alpha).</p>
-<dt><code>-pgm</code></p>
-<dd> Change the output format to PGM. The output consists of luma/chroma samples instead of RGB, using the ICM4 layout. This option is mainly for verification and debugging purposes.</p>
-<dt><code>-yuv</code></p>
-<dd> Change the output format to raw YUV. The output consists of luma/chroma-U/chroma-V samples instead of RGB, saved sequentially as individual planes. This option is mainly for verification and debugging purposes.</p>
-<dt><code>-nofancy</code></p>
-<dd> Don&#8217;t use the fancy upscaler for YUV420. This may lead to jaggy edges (especially the red ones), but should be faster.</p>
-<dt><code>-nofilter</code></p>
-<dd> Don&#8217;t use the in-loop filtering process even if it is required by the bitstream. This may produce visible blocks on the non-compliant output, but will make the decoding faster.</p>
-<dt><code>-mt</code></p>
-<dd> Use multi-threading for decoding, if possible.</p>
-<dt><code>-crop</code><i> x_position y_position width height</i></p>
-<dd> Crop the decoded picture to a rectangle with top-left corner at coordinates (<code>x_position</code>, <code>y_position</code>) and size <code>width</code> x <code>height</code>. This cropping area must be fully contained within the source rectangle. The top-left corner will be snapped to even coordinates if needed. This option is meant to reduce the memory needed for cropping large images. Note: the cropping is applied <i>before</i> any scaling.</p>
-<dt><code>-scale</code><i> width height</i></p>
-<dd> Rescale the decoded picture to dimension <code>width</code> x <code>height</code>. This option is mostly intended to reducing the memory needed to decode large images, when only a small version is needed (thumbnail, preview, etc.). Note: scaling is applied <i>after</i> cropping.</p>
-<dt><code>-v</code></p>
-<dd> Print extra information (decoding time in particular).</p>
-<dt><code>-noasm</code></p>
-<dd> Disable all assembly optimizations. </p>
+<dt><code>-h</code></dt>
+<dd> Print usage summary.</dd>
+<dt><code>-version</code></dt>
+<dd> Print the version number (as major.minor.revision) and exit.</dd>
+<dt><code>-o</code><i> string</i></dt>
+<dd> Specify the name of the output file (as PNG format by default).</dd>
+<dt><code>-pam</code></dt>
+<dd> Change the output format to PAM (retains alpha).</dd>
+<dt><code>-ppm</code></dt>
+<dd> Change the output format to PPM (discards alpha).</dd>
+<dt><code>-pgm</code></dt>
+<dd> Change the output format to PGM. The output consists of luma/chroma samples instead of RGB, using the ICM4 layout. This option is mainly for verification and debugging purposes.</dd>
+<dt><code>-yuv</code></dt>
+<dd> Change the output format to raw YUV. The output consists of luma/chroma-U/chroma-V samples instead of RGB, saved sequentially as individual planes. This option is mainly for verification and debugging purposes.</dd>
+<dt><code>-nofancy</code></dt>
+<dd> Don&#8217;t use the fancy upscaler for YUV420. This may lead to jaggy edges (especially the red ones), but should be faster.</dd>
+<dt><code>-nofilter</code></dt>
+<dd> Don&#8217;t use the in-loop filtering process even if it is required by the bitstream. This may produce visible blocks on the non-compliant output, but will make the decoding faster.</dd>
+<dt><code>-mt</code></dt>
+<dd> Use multi-threading for decoding, if possible.</dd>
+<dt><code>-crop</code><i> x_position y_position width height</i></dt>
+<dd> Crop the decoded picture to a rectangle with top-left corner at coordinates (<code>x_position</code>, <code>y_position</code>) and size <code>width</code> x <code>height</code>. This cropping area must be fully contained within the source rectangle. The top-left corner will be snapped to even coordinates if needed. This option is meant to reduce the memory needed for cropping large images. Note: the cropping is applied <i>before</i> any scaling.</dd>
+<dt><code>-scale</code><i> width height</i></dt>
+<dd> Rescale the decoded picture to dimension <code>width</code> x <code>height</code>. This option is mostly intended to reducing the memory needed to decode large images, when only a small version is needed (thumbnail, preview, etc.). Note: scaling is applied <i>after</i> cropping.</dd>
+<dt><code>-v</code></dt>
+<dd> Print extra information (decoding time in particular).</dd>
+<dt><code>-noasm</code></dt>
+<dd> Disable all assembly optimizations. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please report all bugs to our issue tracker: <a rel="nofollow" href="http://code.google.com/p/webp/issues">http://code.google.com/p/webp/issues</a><br />

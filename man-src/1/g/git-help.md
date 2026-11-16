@@ -27,70 +27,70 @@ git help[-a | --all[--[no - ] verbose]]
 <p> -a, &#8211;all</p>
 <dl>
 <dt>
-<dd> Prints all the available commands on the standard output. This option overrides any given command or guide name.</dl>
+</dt><dd> Prints all the available commands on the standard output. This option overrides any given command or guide name.</dd></dl>
 <p> &#8211;verbose</p>
 <dl>
 <dt>
-<dd> When used with <code>&#8211;all</code> print description for all recognized commands. This is the default.</dl>
+</dt><dd> When used with <code>&#8211;all</code> print description for all recognized commands. This is the default.</dd></dl>
 <p> -c, &#8211;config</p>
 <dl>
 <dt>
-<dd> List all available configuration variables. This is a short summary of the list in <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1).</dl>
+</dt><dd> List all available configuration variables. This is a short summary of the list in <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1).</dd></dl>
 <p> -g, &#8211;guides</p>
 <dl>
 <dt>
-<dd> Prints a list of the Git concept guides on the standard output.</dl>
+</dt><dd> Prints a list of the Git concept guides on the standard output.</dd></dl>
 <p> -i, &#8211;info</p>
 <dl>
 <dt>
-<dd> Display manual page for the command in the <i>info</i> format. The <i>info</i> program will be used for that purpose.</dl>
+</dt><dd> Display manual page for the command in the <i>info</i> format. The <i>info</i> program will be used for that purpose.</dd></dl>
 <p> -m, &#8211;man</p>
 <dl>
 <dt>
-<dd> Display manual page for the command in the <i>man</i> format. This option may be used to override a value set in the <code>help.format</code> configuration variable. </p>
+</dt><dd> Display manual page for the command in the <i>man</i> format. This option may be used to override a value set in the <code>help.format</code> configuration variable. </dd>
 <p> By default the <i>man</i> program will be used to display the manual page, but the <code>man.viewer</code> configuration variable may be used to choose other display programs (see below).</dl>
 <p> -w, &#8211;web</p>
 <dl>
 <dt>
-<dd> Display manual page for the command in the <i>web</i> (HTML) format. A web browser will be used for that purpose. </p>
+</dt><dd> Display manual page for the command in the <i>web</i> (HTML) format. A web browser will be used for that purpose. </dd>
 <p> The web browser can be specified using the configuration variable <code>help.browser</code>, or <code>web.browser</code> if the former is not set. If none of these config variables is set, the <i>git web&#8211;browse</i> helper script (called by <i>git help</i>) will pick a suitable default. See <code>git-web&#8211;browse</code>(1) for more information about this.</dl>
 <h2>CONFIGURATION VARIABLES</h2>
 <h3>help.format</h3>
 <p> If no command-line option is passed, the <code>help.format</code> configuration variable will be checked. The following values are supported for this variable; they make <i>git help</i> behave as their corresponding command- line option: </p>
 <dl>
 <dt>
-<dd> &bull; &quot;man&quot; corresponds to <i>-m|&#8211;man</i>,</dl>
+</dt><dd> &bull; &quot;man&quot; corresponds to <i>-m|&#8211;man</i>,</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &quot;info&quot; corresponds to <i>-i|&#8211;info</i>,</dl>
+</dt><dd> &bull; &quot;info&quot; corresponds to <i>-i|&#8211;info</i>,</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &quot;web&quot; or &quot;html&quot; correspond to <i>-w|&#8211;web</i>.</dl>
+</dt><dd> &bull; &quot;web&quot; or &quot;html&quot; correspond to <i>-w|&#8211;web</i>.</dd></dl>
 <h3>help.browser, web.browser and browser.&lt;tool&gt;.path</h3>
 <p> The <code>help.browser</code>, <code>web.browser</code> and <code>browser.&lt;tool&gt;.path</code> will also be checked if the <i>web</i> format is chosen (either by command-line option or configuration variable). See <i>-w|&#8211;web</i> in the OPTIONS section above and <code>git-web&#8211;browse</code>(1).</p>
 <h3>man.viewer</h3>
 <p> The <code>man.viewer</code> configuration variable will be checked if the <i>man</i> format is chosen. The following values are currently supported: </p>
 <dl>
 <dt>
-<dd> &bull; &quot;man&quot;: use the <i>man</i> program as usual,</dl>
+</dt><dd> &bull; &quot;man&quot;: use the <i>man</i> program as usual,</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &quot;woman&quot;: use <i>emacsclient</i> to launch the &quot;woman&quot; mode in emacs (this only works starting with emacsclient versions 22),</dl>
+</dt><dd> &bull; &quot;woman&quot;: use <i>emacsclient</i> to launch the &quot;woman&quot; mode in emacs (this only works starting with emacsclient versions 22),</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &quot;konqueror&quot;: use <i>kfmclient</i> to open the man page in a new konqueror tab (see <i>Note about konqueror</i> below).</dl>
+</dt><dd> &bull; &quot;konqueror&quot;: use <i>kfmclient</i> to open the man page in a new konqueror tab (see <i>Note about konqueror</i> below).</dd></dl>
 <p> Values for other tools can be used if there is a corresponding <code>man.&lt;tool&gt;.cmd</code> configuration entry (see below). </p>
 <p> Multiple values may be given to the <code>man.viewer</code> configuration variable. Their corresponding programs will be tried in the order listed in the configuration file. </p>
 <p> For example, this configuration: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         [man]
                 viewer = konqueror
                 viewer = woman
 </pre>
-</dl>
+</dd></dl>
 <p> will try to use konqueror first. But this may fail (for example, if DISPLAY is not set) and in that case emacs&#8217; woman mode will be tried. </p>
 <p> If everything fails, or if no viewer is configured, the viewer specified in the <code>GIT_MAN_VIEWER</code> environment variable will be tried. If that fails too, the <i>man</i> program will be tried anyway.</p>
 <h3>man.&lt;tool&gt;.path</h3>
@@ -103,22 +103,22 @@ git help[-a | --all[--[no - ] verbose]]
 <p> If you really want to use <i>konqueror</i>, then you can use something like the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [man] viewer = konq
     [man "konq"] cmd = A_PATH_TO / konqueror
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Note about git config &#8211;global</h3>
 <p> Note that all these configuration variables should probably be set using the <code>&#8211;global</code> flag, for example like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git config --global help.format web
 $ git config --global web.browser firefox
 </pre>
-</dl>
+</dd></dl>
 <p> as they are probably more user specific than repository specific. See <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) for more information about this.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>

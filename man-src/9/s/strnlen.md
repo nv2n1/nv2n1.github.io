@@ -15,11 +15,11 @@ strnlen - Find the length of a length-limited string
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>The string to be sized</dl>
+<dl><dd></dd><dd>The string to be sized</dd></dl>
  
 
  <i>count</i>
-<dl><dd>The maximum number of bytes to search</dl>
+<dl><dd>The maximum number of bytes to search</dd></dl>
 
 <h2>Copyright</h2>
 

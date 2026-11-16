@@ -27,81 +27,74 @@ cpanel_json_xs[-v][-f inputformat][-t outputformat]
 
 <dl>
 <dt>-v
-<dd> Be slightly more verbose.
-<dt>-f fromformat
-<dd> Read a file in the given format from <font SIZE="-1">STDIN.</font> 
-
+</dt><dd> Be slightly more verbose.
+</dd><dt>-f fromformat
+</dt><dd> Read a file in the given format from <font SIZE="-1">STDIN.</font> 
  <tt>&quot;fromformat&quot;</tt> can be one of:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt>json - a json text encoded, either utf-8, utf16-be/le, utf32-be/le
-<dd>
-<dt>storable - a Storable frozen value
-<dd>
-<dt>storable-file - a Storable file (Storable has two incompatible formats)
-<dd>
-<dt>bencode - use Convert::Bencode, if available (used by torrent files, among others)
-<dd>
-<dt>clzf - Compress::LZF format (requires that module to be installed)
-<dd>
-<dt>eval - evaluate the given code as (non-utf-8) Perl, basically the reverse of &quot;-t dump&quot;
-<dd>
-<dt>yaml - <font SIZE="-1">YAML </font>(avoid at all costs, requires the <font SIZE="-1">YAML</font> module :)
-<dd>
-<dt>string - do not attempt to decode the file data
-<dd>
-<dt>none - nothing is read, creates an &quot;undef&quot; scalar - mainly useful with &quot;-e&quot;
-<dd></dl>
+</dt><dd>
+</dd><dt>storable - a Storable frozen value
+</dt><dd>
+</dd><dt>storable-file - a Storable file (Storable has two incompatible formats)
+</dt><dd>
+</dd><dt>bencode - use Convert::Bencode, if available (used by torrent files, among others)
+</dt><dd>
+</dd><dt>clzf - Compress::LZF format (requires that module to be installed)
+</dt><dd>
+</dd><dt>eval - evaluate the given code as (non-utf-8) Perl, basically the reverse of &quot;-t dump&quot;
+</dt><dd>
+</dd><dt>yaml - <font SIZE="-1">YAML </font>(avoid at all costs, requires the <font SIZE="-1">YAML</font> module :)
+</dt><dd>
+</dd><dt>string - do not attempt to decode the file data
+</dt><dd>
+</dd><dt>none - nothing is read, creates an &quot;undef&quot; scalar - mainly useful with &quot;-e&quot;
+</dt><dd></dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>-t toformat
-<dd> Write the file in the given format to <font SIZE="-1">STDOUT.</font> 
+</dt><dd> Write the file in the given format to <font SIZE="-1">STDOUT.</font> 
 
  <tt>&quot;toformat&quot;</tt> can be one of:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt>json, json-utf-8 - json, utf-8 encoded
-<dd>
-<dt>json-pretty - as above, but pretty-printed
-<dd>
-<dt>json-utf-16le, json-utf-16be - little endian/big endian utf-16
-<dd>
-<dt>json-utf-32le, json-utf-32be - little endian/big endian utf-32
-<dd>
-<dt>storable - a Storable frozen value in network format
-<dd>
-<dt>storable-file - a Storable file in network format (Storable has two incompatible formats)
-<dd>
-<dt>bencode - use Convert::Bencode, if available (used by torrent files, among others)
-<dd>
-<dt>clzf - Compress::LZF format
-<dd>
-<dt>yaml - <font SIZE="-1">YAML</font>
-<dd>
-<dt>dump - Data::Dump
-<dd>
-<dt>dumper - Data::Dumper
-<dd>
-<dt>string - writes the data out as if it were a string
-<dd>
-<dt>none - nothing gets written, mainly useful together with &quot;-e&quot;
-<dd> Note that Data::Dumper doesn't handle self-referential data structures correctly - use ``dump'' instead.</dl>
+</dt><dd>
+</dd><dt>json-pretty - as above, but pretty-printed
+</dt><dd>
+</dd><dt>json-utf-16le, json-utf-16be - little endian/big endian utf-16
+</dt><dd>
+</dd><dt>json-utf-32le, json-utf-32be - little endian/big endian utf-32
+</dt><dd>
+</dd><dt>storable - a Storable frozen value in network format
+</dt><dd>
+</dd><dt>storable-file - a Storable file in network format (Storable has two incompatible formats)
+</dt><dd>
+</dd><dt>bencode - use Convert::Bencode, if available (used by torrent files, among others)
+</dt><dd>
+</dd><dt>clzf - Compress::LZF format
+</dt><dd>
+</dd><dt>yaml - <font SIZE="-1">YAML</font>
+</dt><dd>
+</dd><dt>dump - Data::Dump
+</dt><dd>
+</dd><dt>dumper - Data::Dumper
+</dt><dd>
+</dd><dt>string - writes the data out as if it were a string
+</dt><dd>
+</dd><dt>none - nothing gets written, mainly useful together with &quot;-e&quot;
+</dt><dd> Note that Data::Dumper doesn't handle self-referential data structures correctly - use ``dump'' instead.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>-e code
-<dd> Evaluate perl code after reading the data and before writing it out again - can be used to filter, create or extract data. The data that has been written is in <tt>$_</tt>, and whatever is in there is written out afterwards.</dl>
+</dt><dd> Evaluate perl code after reading the data and before writing it out again - can be used to filter, create or extract data. The data that has been written is in <tt>$_</tt>, and whatever is in there is written out afterwards.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

@@ -14,7 +14,7 @@ description: "bio_endio – end I/O on a bio"
 <p><i>bio</i></p>
 <dl>
 <dd>
-<dd>bio</dl>
+</dd><dd>bio</dd></dl>
 <h2>Description</h2>
 <p><code>bio_endio</code> will end I/O on the whole bio. <code>bio_endio</code> is the preferred way to end I/O on a bio. No one should call <code>bi_end_io</code> directly on a bio unless they own it and thus know that it has an end_io function.</p>
 <h2>Copyright</h2>

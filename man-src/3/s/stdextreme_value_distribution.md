@@ -11,9 +11,7 @@ std::extreme_value_distribution - std::extreme_value_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class extreme_value_distribution;</code></pre> 
 Produces random numbers according to the extreme_value_distribution (it is also known as Gumbel Type I, log-Weibull, Fisher-Tippett Type I): 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p(x;a,b) = 

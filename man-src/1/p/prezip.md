@@ -17,28 +17,28 @@ description: "prezip, preunzip, precat – prefix delta compressor for Aspell"
 <p> If no file names are given then <code>prezip</code> will compress or decompress from the standard input to the standard output. Short flags can be combined so that &quot;-c <code>-s</code>&quot; is the same as &quot;-cs&quot;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> display help</p>
-<dt><code>-d</code> <code>&#8211;decompress</code></p>
-<dd> force decompression</p>
-<dt><code>-z</code> <code>&#8211;compress</code></p>
-<dd> dorce compression</p>
-<dt><code>-L</code> <code>&#8211;license</code></p>
-<dd> display software license</p>
-<dt><code>-V</code> <code>&#8211;version</code></p>
-<dd> display version</p>
-<dt><code>-c</code> <code>&#8211;stdout</code></p>
-<dd> decompress to standard output</p>
-<dt><code>-f</code> <code>&#8211;force</code></p>
-<dd> force</p>
-<dt><code>-k</code> <code>&#8211;keep</code></p>
-<dd> keep input files</p>
-<dt><code>-s</code> <code>&#8211;sort</code></p>
-<dd> sort and remove duplicates before compressing</p>
-<dt><code>-S</code> <code>&#8211;nocwl</code></p>
-<dd> do not rename .wl suffix to .cwl (use .wl.pz instead)</p>
-<dt><code>-q</code> <code>&#8211;quiet</code></p>
-<dd> suppress all warnings</dl>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> display help</dd>
+<dt><code>-d</code> <code>&#8211;decompress</code></dt>
+<dd> force decompression</dd>
+<dt><code>-z</code> <code>&#8211;compress</code></dt>
+<dd> dorce compression</dd>
+<dt><code>-L</code> <code>&#8211;license</code></dt>
+<dd> display software license</dd>
+<dt><code>-V</code> <code>&#8211;version</code></dt>
+<dd> display version</dd>
+<dt><code>-c</code> <code>&#8211;stdout</code></dt>
+<dd> decompress to standard output</dd>
+<dt><code>-f</code> <code>&#8211;force</code></dt>
+<dd> force</dd>
+<dt><code>-k</code> <code>&#8211;keep</code></dt>
+<dd> keep input files</dd>
+<dt><code>-s</code> <code>&#8211;sort</code></dt>
+<dd> sort and remove duplicates before compressing</dd>
+<dt><code>-S</code> <code>&#8211;nocwl</code></dt>
+<dd> do not rename .wl suffix to .cwl (use .wl.pz instead)</dd>
+<dt><code>-q</code> <code>&#8211;quiet</code></dt>
+<dd> suppress all warnings</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Brian Nelson &lt;pyro [at] debian.org&gt; based on the output of help2man. Aspell is Copyright &#169; 2002 Kevin Atkinson. </p>
 <h2>Index</h2>

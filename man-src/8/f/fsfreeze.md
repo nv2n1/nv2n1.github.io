@@ -19,17 +19,17 @@ description: "fsfreeze – suspend access to a filesystem (Ext3/4, ReiserFS, JFS
 <h2>Options</h2>
 <p><code>-f</code>, <code>&#8211;freeze</code></p>
 <dl>
-<dd>This option requests the specified a filesystem to be frozen from new modifications. When this is selected, all ongoing transactions in the filesystem are allowed to complete, new write system calls are halted, other calls which modify the filesystem are halted, and all dirty data, metadata, and log information are written to disk. Any process attempting to write to the frozen filesystem will block waiting for the filesystem to be unfrozen. </p>
+<dd>This option requests the specified a filesystem to be frozen from new modifications. When this is selected, all ongoing transactions in the filesystem are allowed to complete, new write system calls are halted, other calls which modify the filesystem are halted, and all dirty data, metadata, and log information are written to disk. Any process attempting to write to the frozen filesystem will block waiting for the filesystem to be unfrozen. </dd>
 <p> Note that even after freezing, the on-disk filesystem can contain information on files that are still in the process of unlinking. These files will not be unlinked until the filesystem is unfrozen or a clean mount of the snapshot is complete.</dl>
 <p> <code>-u</code>, <code>&#8211;unfreeze</code></p>
 <dl>
-<dd>This option is used to un-freeze the filesystem and allow operations to continue. Any filesystem modifications that were blocked by the freeze are unblocked and allowed to complete.</dl>
+<dd>This option is used to un-freeze the filesystem and allow operations to continue. Any filesystem modifications that were blocked by the freeze are unblocked and allowed to complete.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Filesystem Support</h2>
 <p>This command will work only if filesystem supports has support for freezing. List of these filesystems include (2016-12-18) <code>btrfs</code>, <code>ext2/3/4</code>, <code>f2fs</code>, <code>jfs</code>, <code>nilfs2</code>, <code>reiserfs</code>, and <code>xfs</code>. Previous list may be incomplete, as more filesystems get support. If in doubt easiest way to know if a filesystem has support is create a small loopback mount and test freezing it.</p>
 <h2>Notes</h2>

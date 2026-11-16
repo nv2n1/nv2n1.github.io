@@ -10,7 +10,6 @@ description: "ustrstr – Finds the first occurrence of a string in another one.
 <p>ustrstr &#8211; Finds the first occurrence of a string in another one. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrstr(const char *s1, const char *s2);</code></pre>
 <h2>Description</h2>
 <p>This function finds the first occurrence of string `s2&#8242; in string `s1&#8242;. Example: </p>

@@ -19,12 +19,12 @@ description: "openbox — A minimalistic, highly configurable, next generation w
 &nbsp;<wbr> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xsetroot -solid grey &amp; 
 gnome-settings-daemon &amp; 
 </pre>
-</dl>
+</dd></dl>
 <p> Make sure that each line is followed by a &quot;&amp;&quot; or else the script will stop there and further commands will not be executed. You can use the /etc/xdg/openbox/autostart.sh file as an example for creating your own. </p>
 <p> The default /etc/xdg/openbox/autostart.sh runs a number of things with Openbox. </p>
 <p> Lastly, if you use <code>startx</code> to launch your X session, you can set up a ~/.xinitrc file to run <code>openbox-session</code> and follow the same directions as above regarding the autostart.sh file. </p>
@@ -33,34 +33,34 @@ gnome-settings-daemon &amp;
 <h2>OPTIONS</h2>
 <p> These are the possible options that <code>openbox</code> accepts:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show a summary of the command line options available and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version of the program and exit.</p>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace the currently running window manager.</p>
-<dt><code>&#8211;config-file FILE</code></p>
-<dd> Specify the path to the config file to use.</p>
-<dt><code>&#8211;reconfigure</code></p>
-<dd> If Openbox is already running on the display, tell it to reload its configuration.</p>
-<dt><code>&#8211;restart</code></p>
-<dd> If Openbox is already running on the display, tell it to restart. This is useful if you have upgraded Openbox and don&#8217;t want to restart X.</p>
-<dt><code>&#8211;exit</code></p>
-<dd> Exit Openbox.</p>
-<dt><code>&#8211;sm-disable</code></p>
-<dd> Do not connect to the session manager.</p>
-<dt><code>&#8211;sync</code></p>
-<dd> Run in synchronous mode (for debugging).</p>
-<dt><code>&#8211;startup CMD</code></p>
-<dd> Run CMD after starting.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Display debugging output.</p>
-<dt><code>&#8211;debug-focus</code></p>
-<dd> Display debugging output for focus handling.</p>
-<dt><code>&#8211;debug-session</code></p>
-<dd> Display debugging output for session management.</p>
-<dt><code>&#8211;debug-xinerama</code></p>
-<dd> Split the display into two fake xinerama regions, if xinerama is not already enabled. This is for debugging xinerama support.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show a summary of the command line options available and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version of the program and exit.</dd>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace the currently running window manager.</dd>
+<dt><code>&#8211;config-file FILE</code></dt>
+<dd> Specify the path to the config file to use.</dd>
+<dt><code>&#8211;reconfigure</code></dt>
+<dd> If Openbox is already running on the display, tell it to reload its configuration.</dd>
+<dt><code>&#8211;restart</code></dt>
+<dd> If Openbox is already running on the display, tell it to restart. This is useful if you have upgraded Openbox and don&#8217;t want to restart X.</dd>
+<dt><code>&#8211;exit</code></dt>
+<dd> Exit Openbox.</dd>
+<dt><code>&#8211;sm-disable</code></dt>
+<dd> Do not connect to the session manager.</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Run in synchronous mode (for debugging).</dd>
+<dt><code>&#8211;startup CMD</code></dt>
+<dd> Run CMD after starting.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Display debugging output.</dd>
+<dt><code>&#8211;debug-focus</code></dt>
+<dd> Display debugging output for focus handling.</dd>
+<dt><code>&#8211;debug-session</code></dt>
+<dd> Display debugging output for session management.</dd>
+<dt><code>&#8211;debug-xinerama</code></dt>
+<dd> Split the display into two fake xinerama regions, if xinerama is not already enabled. This is for debugging xinerama support.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> obconf (1), <a href="/docs/linux/man/1-openbox-session/">openbox-session</a>(1), <a href="/docs/linux/man/1-openbox-gnome-session/">openbox-gnome-session</a>(1), <a href="/docs/linux/man/1-openbox-kde-session/">openbox-kde-session</a>(1). </p>
 <p> The program&#8217;s full documentation is available on the website: <code><a rel="nofollow" href="http://openbox.org/">http://openbox.org/</a></code> </p>

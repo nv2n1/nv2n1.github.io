@@ -12,13 +12,12 @@ rdma_get_peer_addr - Returns the remote IP address of a bound rdma_cm_id.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 struct sockaddr *rdma_get_peer_addr
-
     (struct rdma_cm_id *id);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.</dl>
+</dt><dd>RDMA identifier.</dd></dl>
 
 <h2>Description</h2>
 

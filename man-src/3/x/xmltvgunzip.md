@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-xmltvgunzip/"
 description: "XMLTV::Gunzip - Wrapper to Compress::Zlib or"
 ---
 
-<pre> XMLTV::Gunzip - Wrapper to Compress::Zlib or </p><a HREF="//www.systutorials.com/docs/linux/man/1-gzip/">gzip</a>(1)</pre><h2>Synopsis</h2><pre> use XMLTV::Gunzip;
+<pre> XMLTV::Gunzip - Wrapper to Compress::Zlib or <a HREF="//www.systutorials.com/docs/linux/man/1-gzip/">gzip</a>(1)</pre><h2>Synopsis</h2><pre> use XMLTV::Gunzip;
  my $decompressed = gunzip($gzdata);
  my $fh = gunzip_open('file.gz') or die;
  while (&lt;$fh&gt;) { print }</pre>Compress::Zlib will be used if installed, otherwise an external gzip will be spawned. <i>gunzip()</i> returns the decompressed data and throws an exception if things go wrong; <i>gunzip_open()</i> returns a filehandle, or undef.

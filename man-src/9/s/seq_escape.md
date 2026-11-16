@@ -14,13 +14,13 @@ description: "seq_escape – print string into buffer, escaping some characters"
 <p><i>m</i></p>
 <dl>
 <dd>
-<dd>target buffer</dl>
+</dd><dd>target buffer</dd></dl>
 <p> <i>s</i></p>
 <dl>
-<dd>string</dl>
+<dd>string</dd></dl>
 <p> <i>esc</i></p>
 <dl>
-<dd>set of characters that need escaping</dl>
+<dd>set of characters that need escaping</dd></dl>
 <h2>Description</h2>
 <p>Puts string into buffer, replacing each occurrence of character from <i>esc</i> with usual octal escape. Use <code>seq_has_overflowed</code> to check for errors.</p>
 <h2>Copyright</h2>

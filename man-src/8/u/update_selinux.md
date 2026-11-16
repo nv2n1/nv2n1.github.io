@@ -18,8 +18,8 @@ description: "update_selinux – Security Enhanced Linux Policy for the update p
 <p> update_modules_exec_t </code> </p>
 <p> &#8211; Set files with the update_modules_exec_t type, if you want to transition an executable to the update_modules_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/modules-update, /sbin/modules-update, /sbin/generate-modprobe.conf, /sbin/update-modules, /usr/sbin/generate-modprobe.conf, /usr/sbin/update-modules </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/modules-update, /sbin/modules-update, /sbin/generate-modprobe.conf, /sbin/update-modules, /usr/sbin/generate-modprobe.conf, /usr/sbin/update-modules </dd>
 </dl>
 <p> <code>update_modules_tmp_t </code> </p>
 <p> &#8211; Set files with the update_modules_tmp_t type, if you want to store update modules temporary files in the /tmp directories. </p>

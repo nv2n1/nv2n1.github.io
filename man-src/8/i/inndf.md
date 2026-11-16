@@ -18,18 +18,18 @@ description: "inndf – Report free disk, inodes, and overview information"
 <p> If <i>enableoverview</i> is set to true in <i>inn.conf</i>, <code>inndf</code> can also be used to get information about the overview database. With the <code>-n</code> option, it reports a count of the total number of overview records stored. With <code>-o</code>, it reports the percentage of space used in the overview database (for those overview methods where this is meaningful data).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code> <i>filename</i></p>
-<dd><i>filename</i> should contain a list of directories to use in addition to those given by the arguments, one per line. Blank lines and anything after <tt>&quot;#&quot;</tt> on any line are ignored.</p>
-<dt><code>-F</code></p>
-<dd>Like <code>-f</code> except that the filename is <i>pathetc</i>/filesystems and it is not an error if this file doesn&#8217;t exist. (This option is used primarily by such things as <i><a href="/docs/linux/man/8-innstat/">innstat</a></i>(8), so that the news administrator can add additional file systems to check to <i>pathetc</i>/filesystems without having to modify the script.)</p>
-<dt><code>-h</code></p>
-<dd>Print a usage message and exit.</p>
-<dt><code>-i</code></p>
-<dd>Report the number of free inodes rather than the amount of free disk space.</p>
-<dt><code>-n</code></p>
-<dd>Report the total number of records in the overview database. Note that crossposted articles will have one overview record for each newsgroup they&#8217;re posted to.</p>
-<dt><code>-o</code></p>
-<dd>Report the percentage usage of the overview database space. This is only meaningful for overview methods that pre-allocate a certain amount of space rather than grow to accomodate more records. Currently, this flag is only useful for the buffindexed overview method.</dl>
+<dt><code>-f</code> <i>filename</i></dt>
+<dd><i>filename</i> should contain a list of directories to use in addition to those given by the arguments, one per line. Blank lines and anything after <tt>&quot;#&quot;</tt> on any line are ignored.</dd>
+<dt><code>-F</code></dt>
+<dd>Like <code>-f</code> except that the filename is <i>pathetc</i>/filesystems and it is not an error if this file doesn&#8217;t exist. (This option is used primarily by such things as <i><a href="/docs/linux/man/8-innstat/">innstat</a></i>(8), so that the news administrator can add additional file systems to check to <i>pathetc</i>/filesystems without having to modify the script.)</dd>
+<dt><code>-h</code></dt>
+<dd>Print a usage message and exit.</dd>
+<dt><code>-i</code></dt>
+<dd>Report the number of free inodes rather than the amount of free disk space.</dd>
+<dt><code>-n</code></dt>
+<dd>Report the total number of records in the overview database. Note that crossposted articles will have one overview record for each newsgroup they&#8217;re posted to.</dd>
+<dt><code>-o</code></dt>
+<dd>Report the percentage usage of the overview database space. This is only meaningful for overview methods that pre-allocate a certain amount of space rather than grow to accomodate more records. Currently, this flag is only useful for the buffindexed overview method.</dd></dl>
 <h2>Examples</h2>
 <p>Print the free kilobytes in <i>pathspool</i> as a simple number: </p>
 <pre> inndf &lt;pathspool in inn.conf&gt;</pre>

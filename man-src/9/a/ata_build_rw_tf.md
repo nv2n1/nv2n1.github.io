@@ -14,22 +14,22 @@ description: "ata_build_rw_tf – Build ATA taskfile for given read/write reques
 <p><i>tf</i></p>
 <dl>
 <dd>
-<dd>Target ATA taskfile</dl>
+</dd><dd>Target ATA taskfile</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>ATA device <i>tf</i> belongs to</dl>
+<dd>ATA device <i>tf</i> belongs to</dd></dl>
 <p> <i>block</i></p>
 <dl>
-<dd>Block address</dl>
+<dd>Block address</dd></dl>
 <p> <i>n_block</i></p>
 <dl>
-<dd>Number of blocks</dl>
+<dd>Number of blocks</dd></dl>
 <p> <i>tf_flags</i></p>
 <dl>
-<dd>RW/FUA etc&#8230;</dl>
+<dd>RW/FUA etc&#8230;</dd></dl>
 <p> <i>tag</i></p>
 <dl>
-<dd>tag</dl>
+<dd>tag</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: None. </p>
 <p> Build ATA taskfile <i>tf</i> for read/write request described by <i>block</i>, <i>n_block</i>, <i>tf_flags</i> and <i>tag</i> on <i>dev</i>.</p>
@@ -38,5 +38,5 @@ description: "ata_build_rw_tf – Build ATA taskfile for given read/write reques
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ description: "guilt-status – Print the status of files since the last refresh"
 <p> Each file is printed with a prefix that describes itcqs status. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 A   added
 C   copied
@@ -26,44 +26,44 @@ T   type change (e.g., mode)
 U   unmerged
 ?   untracked
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -n</p>
 <dl>
 <dt>
-<dd> Hide status prefix in the output</dl>
+</dt><dd> Hide status prefix in the output</dd></dl>
 <p> -a, -A</p>
 <dl>
 <dt>
-<dd> Display only added files</dl>
+</dt><dd> Display only added files</dd></dl>
 <p> -c, -C</p>
 <dl>
 <dt>
-<dd> Display only copied files</dl>
+</dt><dd> Display only copied files</dd></dl>
 <p> -d, -D</p>
 <dl>
 <dt>
-<dd> Display only deleted files</dl>
+</dt><dd> Display only deleted files</dd></dl>
 <p> -m, -M</p>
 <dl>
 <dt>
-<dd> Display only modified files</dl>
+</dt><dd> Display only modified files</dd></dl>
 <p> -r, -R</p>
 <dl>
 <dt>
-<dd> Display only renamed files</dl>
+</dt><dd> Display only renamed files</dd></dl>
 <p> -t, -T</p>
 <dl>
 <dt>
-<dd> Display only files with a status change (e.g., mode)</dl>
+</dt><dd> Display only files with a status change (e.g., mode)</dd></dl>
 <p> -u, -U</p>
 <dl>
 <dt>
-<dd> Display only unmerged files</dl>
+</dt><dd> Display only unmerged files</dd></dl>
 <p> -x, -X</p>
 <dl>
 <dt>
-<dd> Display only unknown files</dl>
+</dt><dd> Display only unknown files</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -72,15 +72,15 @@ U   unmerged
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
-<dt> 2.</p>
-<dd> brandon [at] ifup.org</p>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
+<dt> 2.</dt>
+<dd> brandon [at] ifup.org</dd>
 <dl>
 <dt>
-<dd> mailto:brandon [at] ifup.org</dl>
+</dt><dd> mailto:brandon [at] ifup.org</dd></dl>
 </dl>
 <h2>Index</h2>

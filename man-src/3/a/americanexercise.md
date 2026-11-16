@@ -19,7 +19,7 @@ description: "QuantLib::AmericanExercise – American exercise."
 <p> An American option can be exercised at any time between two predefined dates; the first date might be omitted, in which case the option can be exercised at any time before the expiry. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>check that everywhere the American condition is applied from earliestDate and not earlier</dl>
+<dd>check that everywhere the American condition is applied from earliestDate and not earlier</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>ConvertibleBonds.cpp</code>, and <code>EquityOption.cpp</code>. </p>
 <h2>Author</h2>

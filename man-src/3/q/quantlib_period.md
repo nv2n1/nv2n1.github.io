@@ -45,7 +45,7 @@ description: "QuantLib::Period –"
 <p>This class provides a <code>Period</code> (length + TimeUnit) class and implements a limited algebra. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>self-consistency of algebra is checked.</dl>
+<dd>self-consistency of algebra is checked.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>Repo.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h2>Friends And Related Function Documentation</h2>

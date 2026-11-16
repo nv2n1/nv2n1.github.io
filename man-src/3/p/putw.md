@@ -10,20 +10,18 @@ description: "getw, putw – input and output of words (ints)"
 <p>getw, putw &#8211; input and output of words (ints)</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
-
 int getw(FILE *stream);
-
 int putw(int w, FILE *stream);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getw</code>(), <code>putw</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.3.3:</p>
+</dd><dl>
+<dt>Since glibc 2.3.3:</dt>
 <dd>_XOPEN_SOURCE &amp;&amp; ! (_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
-<dt>Before glibc 2.3.3:</p>
-<dd>_SVID_SOURCE || _BSD_SOURCE || _XOPEN_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd>
+<dt>Before glibc 2.3.3:</dt>
+<dd>_SVID_SOURCE || _BSD_SOURCE || _XOPEN_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p><code>getw</code>() reads a word (that is, an <i>int</i>) from <i>stream</i>. It&#8217;s provided for compatibility with SVr4. We recommend you use <code><a href="/docs/linux/man/3-fread/">fread</a></code>(3) instead. </p>

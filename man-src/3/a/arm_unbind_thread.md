@@ -20,10 +20,10 @@ description: "arm_unbind_thread – unbind a thread"
 <p> <code>arm_unbind_thread()</code> indicates that the thread from which it is called is no longer performing on behalf of the transaction identified by the start handle.<br />
 &nbsp;<wbr> Call <code>arm_unbind_thread()</code> when a thread is no longer executing a transaction. The thread binding is useful for managing computing resources at a finer level of granularity than the process. It should be called when, for this transaction and this thread, either:</p>
 <dl>
-<dt>*</p>
-<dd> <code>arm_bind_thread()</code> was previously called, or</p>
-<dt>*</p>
-<dd> The <code>ARM_FLAG_BIND_THREAD</code> flag was set in the <code>arm_start_transaction()</code> call. <code>arm_stop_transaction()</code> is an implicit <code>arm_unbind_thread()</code> for any threads still bound to the transaction instance [<code>arm_bind_thread()</code> issued without a matching <code>arm_unbind_thread()</code>]. As long as the transaction is bound to the thread when the <code>arm_stop_transaction()</code> executes, there is no need nor any value in calling <code>arm_unbind_thread()</code> before calling <code>arm_stop_transaction()</code>. </p>
+<dt>*</dt>
+<dd> <code>arm_bind_thread()</code> was previously called, or</dd>
+<dt>*</dt>
+<dd> The <code>ARM_FLAG_BIND_THREAD</code> flag was set in the <code>arm_start_transaction()</code> call. <code>arm_stop_transaction()</code> is an implicit <code>arm_unbind_thread()</code> for any threads still bound to the transaction instance [<code>arm_bind_thread()</code> issued without a matching <code>arm_unbind_thread()</code>]. As long as the transaction is bound to the thread when the <code>arm_stop_transaction()</code> executes, there is no need nor any value in calling <code>arm_unbind_thread()</code> before calling <code>arm_stop_transaction()</code>. </dd>
 <p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null, there is no buffer. No sub-buffer types are currently valid with this function call, so the pointer should be null (<code>ARM_BUF4_NONE</code>).<br />
 &nbsp;<wbr> <i>flags</i> contains 32-bit flags. No values are currently defined. The field should be zero (<code>ARM_FLAG_NONE</code>).<br />
 &nbsp;<wbr> <i>tran_handle</i> is a handle returned in an out parameter from an <code>arm_start_transaction()</code> call in the same process.<br />
@@ -40,3 +40,4 @@ description: "arm_unbind_thread – unbind a thread"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_bind_thread/">arm_bind_thread</a></code>(3), <code><a href="/docs/linux/man/3-arm_start_transaction/">arm_start_transaction</a></code>(3), <code><a href="/docs/linux/man/3-arm_stop_transaction/">arm_stop_transaction</a></code>(3) </p>
 <h2>Index</h2>
+</p>

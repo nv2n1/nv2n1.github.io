@@ -12,18 +12,13 @@ std::seed_seq::seed_seq - std::seed_seq::seed_seq
 
 <pre><code>seed_seq();
 (1)(since C++ 11)
-
     seed_seq(const seed_seq &amp;) = delete;
 (2)(since C++ 11)
-
     template &lt;class InputIt&gt;
     (3)(since C++ 11)
-
         seed_seq(InputIt begin, InputIt end);
-
 template &lt;class T&gt;
 (4)(since C++ 11)
-
     seed_seq(std::initializer_list&lt;T&gt; il);</code></pre> 
 1) The default constructor creates a std::seed_seq object with an initial seed sequence of length zero. 
 2) The copy constructor is deleted: std::seed_seq is not copyable. 
@@ -48,13 +43,9 @@ InputIt must meet the requirements of LegacyInputIterator.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;iterator&gt;
-
 int main()
-
 {
     std::seed_seq s1;              // default-constructible
     std::seed_seq s2{1, 2, 3};     // can use list-initialization

@@ -20,36 +20,36 @@ description: "toast — GSM 06.10 lossy sound compression"
 <p> When files are compressed or uncompressed into other files, the ownership (if run by root), modes, accessed and modified times are maintained between both versions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> (cat) Write to the standard output; no files are changed.</p>
-<dt><code>-d</code></p>
-<dd> (decode) Decode, rather than encode, the files.</p>
-<dt><code>-f</code></p>
-<dd> (force) Force replacement of output files if they exist. If -f is omitted and toast (or untoast) is run interactively from a terminal, the user is prompted as to whether the file should be replaced.</p>
-<dt><code>-p</code></p>
-<dd> (precious) Do not delete the source files. Source files are implicitly left alone whenever -c is specified or tcat is run.</p>
-<dt><code>-C</code></p>
+<dt><code>-c</code></dt>
+<dd> (cat) Write to the standard output; no files are changed.</dd>
+<dt><code>-d</code></dt>
+<dd> (decode) Decode, rather than encode, the files.</dd>
+<dt><code>-f</code></dt>
+<dd> (force) Force replacement of output files if they exist. If -f is omitted and toast (or untoast) is run interactively from a terminal, the user is prompted as to whether the file should be replaced.</dd>
+<dt><code>-p</code></dt>
+<dd> (precious) Do not delete the source files. Source files are implicitly left alone whenever -c is specified or tcat is run.</dd>
+<dt><code>-C</code></dt>
 <dd> (LTP cut-off) Ignore most sample values when calculating the GSM long-term correlation lag during encoding. (The multiplications that do this are a bottleneck of the algorithm.) The resulting encoding process will not produce exactly the same results as GSM 06.10 would, but remains close enough to be compatible.<br />
- The <code>-C</code> option applies only to the encoder and is silently ignored by the decoder.</p>
-<dt><code>-F</code></p>
+ The <code>-C</code> option applies only to the encoder and is silently ignored by the decoder.</dd>
+<dt><code>-F</code></dt>
 <dd> (fast) On systems with a floating point processor, but without a multiplication instruction, -F sacrifices standard conformance to performance and nearly doubles the speed of the algorithm.<br />
  The resulting encoding and decoding process will not produce exactly the same results as GSM 06.10 would, but remains close enough to be compatible.<br />
- The default is standard-conforming operation.</p>
-<dt><code>-v</code></p>
-<dd> (version)&nbsp;<wbr> outputs the version of toast (or untoast or tcat) to stdout and exits.</p>
-<dt><code>-h</code></p>
-<dd> (help)&nbsp;<wbr> prints a short overview of the options.</dl>
+ The default is standard-conforming operation.</dd>
+<dt><code>-v</code></dt>
+<dd> (version)&nbsp;<wbr> outputs the version of toast (or untoast or tcat) to stdout and exits.</dd>
+<dt><code>-h</code></dt>
+<dd> (help)&nbsp;<wbr> prints a short overview of the options.</dd></dl>
 <p> Toast, untoast and tcat try to guess the appropriate audio data format from the file suffix. Command line options can also specify a format to be used for all files.<br />
  The following formats are supported:</p>
 <dl>
-<dt><code>-u</code></p>
-<dd> (&mu;U-law) 8 kHz, 8 bit &mu;U-law encoding (file suffix .u)</p>
-<dt><code>-a</code></p>
-<dd> (A-law) 8 kHz, 8 bit A-law encoding (file suffix .A)</p>
-<dt><code>-s</code></p>
-<dd> (Sun audio) 8 kHz, 8 bit &mu;U-law encoding with audio header (file suffix .au)</p>
-<dt><code>-l</code></p>
-<dd> (linear) 8 kHz, 16 bit signed linear encoding in host byte order with 13 significant bits (file suffix .l)</dl>
+<dt><code>-u</code></dt>
+<dd> (&mu;U-law) 8 kHz, 8 bit &mu;U-law encoding (file suffix .u)</dd>
+<dt><code>-a</code></dt>
+<dd> (A-law) 8 kHz, 8 bit A-law encoding (file suffix .A)</dd>
+<dt><code>-s</code></dt>
+<dd> (Sun audio) 8 kHz, 8 bit &mu;U-law encoding with audio header (file suffix .au)</dd>
+<dt><code>-l</code></dt>
+<dd> (linear) 8 kHz, 16 bit signed linear encoding in host byte order with 13 significant bits (file suffix .l)</dd></dl>
 <p> In absence of options or suffixes to specify a format, &mu;U-law encoding as forced by -u is assumed. </p>
 <h2>PECULIARITIES</h2>
 <p> A four bit magic number is prefixed to each 32 1/2-byte GSM frame, mainly because 32 1/2-bytes are rather clumsy to handle.</p>

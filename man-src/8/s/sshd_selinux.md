@@ -73,9 +73,9 @@ description: "sshd_selinux – Security Enhanced Linux Policy for the sshd proce
 <p> Policy governs the access confined processes have to these ports. SELinux sshd policy is very flexible allowing users to setup their sshd processes in as secure a method as possible. </p>
 <p> The following port types are defined for sshd: </p>
 <dl>
-<dt><code>ssh_port_t</code></p>
+<dt><code>ssh_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 22</dl>
+</dd><dd>Default Defined Ports: tcp 22</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type sshd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>auth_cache_t</code> </p>
@@ -226,16 +226,16 @@ description: "sshd_selinux – Security Enhanced Linux Policy for the sshd proce
 <p> <code>sshd_exec_t</code> </p>
 <p> &#8211; Set files with the sshd_exec_t type, if you want to transition an executable to the sshd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/sshd, /usr/sbin/gsisshd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/sshd, /usr/sbin/gsisshd </dd>
 </dl>
 <p> <code>sshd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the sshd_initrc_exec_t type, if you want to transition an executable to the sshd_initrc_t domain. </p>
 <p> <code>sshd_key_t</code> </p>
 <p> &#8211; Set files with the sshd_key_t type, if you want to treat the files as sshd key data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ssh/ssh_host.*_key, /etc/ssh/ssh_host.*_key.pub, /etc/ssh/primes </p>
+<dt>Paths:</dt>
+<dd>/etc/ssh/ssh_host.*_key, /etc/ssh/ssh_host.*_key.pub, /etc/ssh/primes </dd>
 </dl>
 <p> <code>sshd_keygen_exec_t</code> </p>
 <p> &#8211; Set files with the sshd_keygen_exec_t type, if you want to transition an executable to the sshd_keygen_t domain. </p>
@@ -250,8 +250,8 @@ description: "sshd_selinux – Security Enhanced Linux Policy for the sshd proce
 <p> <code>sshd_var_run_t</code> </p>
 <p> &#8211; Set files with the sshd_var_run_t type, if you want to store the sshd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/sshd.pid, /var/run/sshd.init.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/sshd.pid, /var/run/sshd.init.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

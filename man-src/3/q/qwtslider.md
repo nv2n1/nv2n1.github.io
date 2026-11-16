@@ -74,25 +74,25 @@ description: "QwtSlider –"
 <p>Position of the scale </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtSlider()</code>, <code>setScalePosition()</code>, <code>setOrientation()</code></dl>
+<dd><code>QwtSlider()</code>, <code>setScalePosition()</code>, <code>setOrientation()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoScale </i></p>
-<dd>The slider has no scale.</p>
-<dt><i>LeadingScale </i></p>
-<dd>The scale is right of a vertical or below a horizontal slider.</p>
-<dt><i>TrailingScale </i></p>
-<dd>The scale is left of a vertical or above a horizontal slider.</dl>
+<dt><i>NoScale </i></dt>
+<dd>The slider has no scale.</dd>
+<dt><i>LeadingScale </i></dt>
+<dd>The scale is right of a vertical or below a horizontal slider.</dd>
+<dt><i>TrailingScale </i></dt>
+<dd>The scale is left of a vertical or above a horizontal slider.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtSlider::QwtSlider (QWidget *parent = NULL) [explicit]</h3>
 <p>Construct vertical slider in QwtSlider::Trough style with a scale to the left. </p>
 <p> The scale is initialized to [0.0, 100.0] and the value set to 0.0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOrientation()</code>, <code>setScalePosition()</code>, setBackgroundStyle()</dl>
+<dd><code>setOrientation()</code>, <code>setScalePosition()</code>, setBackgroundStyle()</dd></dl>
 <h3>QwtSlider::QwtSlider (Qt::Orientationorientation, QWidget *parent = NULL) [explicit]</h3>
 <p>Construct a slider in QwtSlider::Trough style </p>
 <p> When orientation is Qt::Vertical the scale will be aligned to the left &#8211; otherwise at the the top of the slider. </p>
@@ -100,234 +100,234 @@ description: "QwtSlider –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>parent</i> Parent widget<br />
- <i>orientation</i> Orientation of the slider.</dl>
+ <i>orientation</i> Orientation of the slider.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtSlider::borderWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the border width.</dl>
+<dd>the border width.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderWidth()</code></dl>
+<dd><code>setBorderWidth()</code></dd></dl>
 <h3>void QwtSlider::changeEvent (QEvent *event) [protected], [virtual]</h3>
 <p>Handles QEvent::StyleChange and QEvent::FontChange events </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Change event</dl>
+<dd><i>event</i> Change event</dd></dl>
 <h3>void QwtSlider::drawHandle (QPainter *painter, const QRect &amp;handleRect, intpos) const [protected], [virtual]</h3>
 <p>Draw the thumb at a position </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>handleRect</i> Bounding rectangle of the handle<br />
- <i>pos</i> Position of the handle marker in widget coordinates</dl>
+ <i>pos</i> Position of the handle marker in widget coordinates</dd></dl>
 <h3>void QwtSlider::drawSlider (QPainter *painter, const QRect &amp;sliderRect) const [protected], [virtual]</h3>
 <p>Draw the slider into the specified rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>sliderRect</i> Bounding rectangle of the slider</dl>
+ <i>sliderRect</i> Bounding rectangle of the slider</dd></dl>
 <h3>QRect QwtSlider::handleRect () const [protected]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the slider handle</dl>
+<dd>Bounding rectangle of the slider handle</dd></dl>
 <h3>QSize QwtSlider::handleSize () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size of the handle.</dl>
+<dd>Size of the handle.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setHandleSize()</code></dl>
+<dd><code>setHandleSize()</code></dd></dl>
 <h3>bool QwtSlider::hasGroove () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the groove is visisble</dl>
+<dd>True, when the groove is visisble</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setGroove()</code>, <code>hasTrough()</code></dl>
+<dd><code>setGroove()</code>, <code>hasTrough()</code></dd></dl>
 <h3>bool QwtSlider::hasTrough () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the trough is visisble</dl>
+<dd>True, when the trough is visisble</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTrough()</code>, <code>hasGroove()</code></dl>
+<dd><code>setTrough()</code>, <code>hasGroove()</code></dd></dl>
 <h3>bool QwtSlider::isScrollPosition (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Determine what to do when the user presses a mouse button. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>True,when</i> <code>handleRect()</code> contains pos</dl>
+<dd><i>True,when</i> <code>handleRect()</code> contains pos</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scrolledTo()</code></dl>
+<dd><code>scrolledTo()</code></dd></dl>
 <p> Implements <code>QwtAbstractSlider</code>.</p>
 <h3>QSize QwtSlider::minimumSizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Minimum size hint</dl>
+<dd>Minimum size hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>sizeHint()</code></dl>
+<dd><code>sizeHint()</code></dd></dl>
 <h3>void QwtSlider::mousePressEvent (QMouseEvent *event) [protected], [virtual]</h3>
 <p>Mouse press event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Mouse event</dl>
+<dd><i>event</i> Mouse event</dd></dl>
 <p> Reimplemented from <code>QwtAbstractSlider</code>.</p>
 <h3>void QwtSlider::mouseReleaseEvent (QMouseEvent *event) [protected], [virtual]</h3>
 <p>Mouse release event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Mouse event</dl>
+<dd><i>event</i> Mouse event</dd></dl>
 <p> Reimplemented from <code>QwtAbstractSlider</code>.</p>
 <h3>Qt::Orientation QwtSlider::orientation () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Orientation</dl>
+<dd>Orientation</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOrientation()</code></dl>
+<dd><code>setOrientation()</code></dd></dl>
 <h3>void QwtSlider::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Qt paint event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <h3>void QwtSlider::resizeEvent (QResizeEvent *event) [protected], [virtual]</h3>
 <p>Qt resize event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Resize event</dl>
+<dd><i>event</i> Resize event</dd></dl>
 <h3>const <code>QwtScaleDraw</code> * QwtSlider::scaleDraw () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale draw of the slider</dl>
+<dd>the scale draw of the slider</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDraw()</code></dl>
+<dd><code>setScaleDraw()</code></dd></dl>
 <h3><code>QwtSlider::ScalePosition</code> QwtSlider::scalePosition () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Position of the scale</dl>
+<dd>Position of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScalePosition()</code></dl>
+<dd><code>setScalePosition()</code></dd></dl>
 <h3>double QwtSlider::scrolledTo (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Determine the value for a new position of the slider handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value for the mouse position</dl>
+<dd>Value for the mouse position</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isScrollPosition()</code></dl>
+<dd><code>isScrollPosition()</code></dd></dl>
 <p> Implements <code>QwtAbstractSlider</code>.</p>
 <h3>void QwtSlider::setBorderWidth (intwidth)</h3>
 <p>Change the slider&#8217;s border width. The border width is used for drawing the slider handle and the trough. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Border width</dl>
+<dd><i>width</i> Border width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>borderWidth()</code></dl>
+<dd><code>borderWidth()</code></dd></dl>
 <h3>void QwtSlider::setGroove (boolon)</h3>
 <p>En/Disable the groove </p>
 <p> The slider can be cutomized by showing a groove for the handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> When true, the groove is visible</dl>
+<dd><i>on</i> When true, the groove is visible</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>hasGroove()</code>, setThrough()</dl>
+<dd><code>hasGroove()</code>, setThrough()</dd></dl>
 <h3>void QwtSlider::setHandleSize (const QSize &amp;size)</h3>
 <p>Set the slider&#8217;s handle size. When the size is empty the slider handle will be painted with a default size depending on its <code>orientation()</code> and backgroundStyle(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>size</i> New size</dl>
+<dd><i>size</i> New size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>handleSize()</code></dl>
+<dd><code>handleSize()</code></dd></dl>
 <h3>void QwtSlider::setOrientation (Qt::Orientationorientation)</h3>
 <p>Set the orientation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>orientation</i> Allowed values are Qt::Horizontal and Qt::Vertical.</dl>
+<dd><i>orientation</i> Allowed values are Qt::Horizontal and Qt::Vertical.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>orientation()</code>, <code>scalePosition()</code></dl>
+<dd><code>orientation()</code>, <code>scalePosition()</code></dd></dl>
 <h3>void QwtSlider::setScaleDraw (<code>QwtScaleDraw</code> *scaleDraw)</h3>
 <p>Set a scale draw. For changing the labels of the scales, it is necessary to derive from <code>QwtScaleDraw</code> and overload <code>QwtScaleDraw::label()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDraw</i> ScaleDraw object, that has to be created with new and will be deleted in <code>~QwtSlider()</code> or the next call of <code>setScaleDraw()</code>.</dl>
+<dd><i>scaleDraw</i> ScaleDraw object, that has to be created with new and will be deleted in <code>~QwtSlider()</code> or the next call of <code>setScaleDraw()</code>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>scaleDraw()</dl>
+<dd>scaleDraw()</dd></dl>
 <h3>void QwtSlider::setScalePosition (<code>ScalePosition</code>scalePosition)</h3>
 <p>Change the position of the scale. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scalePosition</i> Position of the scale.</dl>
+<dd><i>scalePosition</i> Position of the scale.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>ScalePosition</code>, <code>scalePosition()</code></dl>
+<dd><code>ScalePosition</code>, <code>scalePosition()</code></dd></dl>
 <h3>void QwtSlider::setSpacing (intspacing)</h3>
 <p>Change the spacing between trough and scale. A spacing of 0 means, that the backbone of the scale is covered by the trough. </p>
 <p> The default setting is 4 pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> Number of pixels</dl>
+<dd><i>spacing</i> Number of pixels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>spacing()</code>;</dl>
+<dd><code>spacing()</code>;</dd></dl>
 <h3>void QwtSlider::setTrough (boolon)</h3>
 <p>En/Disable the trough </p>
 <p> The slider can be cutomized by showing a trough for the handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> When true, the groove is visible</dl>
+<dd><i>on</i> When true, the groove is visible</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>hasTrough()</code>, <code>setGroove()</code></dl>
+<dd><code>hasTrough()</code>, <code>setGroove()</code></dd></dl>
 <h3>void QwtSlider::setUpdateInterval (intinterval)</h3>
 <p>Specify the update interval for automatic scrolling. The minimal accepted value is 50 ms. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Update interval in milliseconds</dl>
+<dd><i>interval</i> Update interval in milliseconds</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setUpdateInterval()</code></dl>
+<dd><code>setUpdateInterval()</code></dd></dl>
 <h3>QSize QwtSlider::sizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>minimumSizeHint()</code></dl>
+<dd><code>minimumSizeHint()</code></dd></dl>
 <h3>QRect QwtSlider::sliderRect () const [protected]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the slider &#8211; without the scale</dl>
+<dd>Bounding rectangle of the slider &#8211; without the scale</dd></dl>
 <h3>int QwtSlider::spacing () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of pixels between slider and scale</dl>
+<dd>Number of pixels between slider and scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSpacing()</code></dl>
+<dd><code>setSpacing()</code></dd></dl>
 <h3>void QwtSlider::timerEvent (QTimerEvent *event) [protected], [virtual]</h3>
 <p>Timer event handler </p>
 <p> Handles the timer, when the mouse stays pressed inside the <code>sliderRect()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Mouse event</dl>
+<dd><i>event</i> Mouse event</dd></dl>
 <h3>int QwtSlider::updateInterval () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Update interval in milliseconds for automatic scrolling</dl>
+<dd>Update interval in milliseconds for automatic scrolling</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setUpdateInterval()</code></dl>
+<dd><code>setUpdateInterval()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -10,7 +10,6 @@ description: "putpixel – Writes a pixel into a bitmap. Allegro game programmin
 <p>putpixel &#8211; Writes a pixel into a bitmap. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void putpixel(BITMAP *bmp, int x, int y, int color);</code></pre>
 <h2>Description</h2>
 <p>Writes a pixel to the specified position in the bitmap, using the current drawing mode and the bitmap&#8217;s clipping rectangle. Example: </p>

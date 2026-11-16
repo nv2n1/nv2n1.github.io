@@ -10,25 +10,25 @@ description: "XAddConnectionWatch, XRemoveConnectionWatch, XProcessInternalConne
 <p>XAddConnectionWatch, XRemoveConnectionWatch, XProcessInternalConnection, XInternalConnectionNumbers &#8211; handle Xlib internal connections </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>typedef void (*XConnectionWatchProc)(Display *<i>display</i>, XPointer <i>client_data</i>, int <i>fd</i>, Bool <i>opening</i>, XPointer *<i>watch_data</i>);</p>
-<dd>Status XAddConnectionWatch(Display *<i>display</i>, XWatchProc <i>procedure</i>, XPointer <i>client_data</i>);</p>
-<dd>Status XRemoveConnectionWatch(Display *<i>display</i>, XWatchProc <i>procedure</i>, XPointer <i>client_data</i>);</p>
-<dd>void XProcessInternalConnection(Display *<i>display</i>, int <i>fd</i>);</p>
-<dd>Status XInternalConnectionNumbers(Display *<i>display</i>, int **<i>fd_return</i>, int *<i>count_return</i>);</dl>
+<dd>typedef void (*XConnectionWatchProc)(Display *<i>display</i>, XPointer <i>client_data</i>, int <i>fd</i>, Bool <i>opening</i>, XPointer *<i>watch_data</i>);</dd>
+<dd>Status XAddConnectionWatch(Display *<i>display</i>, XWatchProc <i>procedure</i>, XPointer <i>client_data</i>);</dd>
+<dd>Status XRemoveConnectionWatch(Display *<i>display</i>, XWatchProc <i>procedure</i>, XPointer <i>client_data</i>);</dd>
+<dd>void XProcessInternalConnection(Display *<i>display</i>, int <i>fd</i>);</dd>
+<dd>Status XInternalConnectionNumbers(Display *<i>display</i>, int **<i>fd_return</i>, int *<i>count_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>client_data</i></p>
-<dd>Specifies the additional client data.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of file descriptors.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>fd</i></p>
-<dd>Specifies the file descriptor.</p>
-<dt><i>fd_return</i></p>
-<dd>Returns the file descriptors.</p>
-<dt><i>procedure</i></p>
-<dd>Specifies the procedure to be called.</dl>
+<dt><i>client_data</i></dt>
+<dd>Specifies the additional client data.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of file descriptors.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>fd</i></dt>
+<dd>Specifies the file descriptor.</dd>
+<dt><i>fd_return</i></dt>
+<dd>Returns the file descriptors.</dd>
+<dt><i>procedure</i></dt>
+<dd>Specifies the procedure to be called.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAddConnectionWatch</code> function registers a procedure to be called each time Xlib opens or closes an internal connection for the specified display. The procedure is passed the display, the specified client_data, the file descriptor for the connection, a Boolean indicating whether the connection is being opened or closed, and a pointer to a location for private watch data. If opening is <code>True</code>, the procedure can store a pointer to private data in the location pointed to by watch_data; when the procedure is later called for this same connection and opening is <code>False</code>, the location pointed to by watch_data will hold this same private data pointer. </p>
 <p> This function can be called at any time after a display is opened. If internal connections already exist, the registered procedure will immediately be called for each of them, before <code>XAddConnectionWatch</code> returns. <code>XAddConnectionWatch</code> returns a nonzero status if the procedure is successfully registered; otherwise, it returns zero. </p>

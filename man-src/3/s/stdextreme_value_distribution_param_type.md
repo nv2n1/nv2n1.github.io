@@ -15,17 +15,8 @@ description: "std::extreme_value_distribution< _RealType >::param_type –"
  &lt; _RealType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (_RealType __a=_RealType(0), _RealType __b=_RealType(1))
-
-
-
 _RealType a () const
-
-
-
 _RealType b () const
-
-
-
 Friends</code></pre>
 <p> bool <code>operator==</code> (const <code>param_type</code> &amp;__p1, const <code>param_type</code> &amp;__p2)</p>
 <h2>Detailed Description</h2>

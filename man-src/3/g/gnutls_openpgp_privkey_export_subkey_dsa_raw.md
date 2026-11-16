@@ -14,20 +14,20 @@ description: "gnutls_openpgp_privkey_export_subkey_dsa_raw – API function"
 <p> <code>int gnutls_openpgp_privkey_export_subkey_dsa_raw(gnutls_openpgp_privkey_t </code><i>pkey</i><code>, unsigned int </code><i>idx</i><code>, gnutls_datum_t * </code><i>p</i><code>, gnutls_datum_t * </code><i>q</i><code>, gnutls_datum_t * </code><i>g</i><code>, gnutls_datum_t * </code><i>y</i><code>, gnutls_datum_t * </code><i>x</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_privkey_t pkey</p>
-<dd> Holds the certificate</p>
-<dt>unsigned int idx</p>
-<dd> Is the subkey index</p>
-<dt>gnutls_datum_t * p</p>
-<dd> will hold the p</p>
-<dt>gnutls_datum_t * q</p>
-<dd> will hold the q</p>
-<dt>gnutls_datum_t * g</p>
-<dd> will hold the g</p>
-<dt>gnutls_datum_t * y</p>
-<dd> will hold the y</p>
-<dt>gnutls_datum_t * x</p>
-<dd> will hold the x</dl>
+<dt>gnutls_openpgp_privkey_t pkey</dt>
+<dd> Holds the certificate</dd>
+<dt>unsigned int idx</dt>
+<dd> Is the subkey index</dd>
+<dt>gnutls_datum_t * p</dt>
+<dd> will hold the p</dd>
+<dt>gnutls_datum_t * q</dt>
+<dd> will hold the q</dd>
+<dt>gnutls_datum_t * g</dt>
+<dd> will hold the g</dd>
+<dt>gnutls_datum_t * y</dt>
+<dd> will hold the y</dd>
+<dt>gnutls_datum_t * x</dt>
+<dd> will hold the x</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the DSA private key&#8217;s parameters found in the given certificate. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
@@ -43,6 +43,6 @@ description: "gnutls_openpgp_privkey_export_subkey_dsa_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

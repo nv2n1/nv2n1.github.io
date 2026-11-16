@@ -15,8 +15,8 @@ description: "ngc – Next Generation init Control."
 <h2>Options</h2>
 <p>The options that your ngdc command can do, varies to what plugins that are added.</p>
 <dl>
-<dt>Please do ngdc -h, to get a full list and description.</p>
-<dd></dl>
+<dt>Please do ngdc -h, to get a full list and description.</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-initng/">initng</a>(8),</code> <code><a href="/docs/linux/man/8-ngc/">ngc</a>(8),</code> <code><a href="/docs/linux/man/8-ng-update/">ng-update</a>(8),</code> <code>gen_system_runlevel(8),</code> <code><a href="/docs/linux/man/8-install_service/">install_service</a>(8),</code> <code>system_off(8).</code></p>
 <h2>Author</h2>

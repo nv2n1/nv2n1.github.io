@@ -15,32 +15,32 @@ description: "mcookie – generate magic cookies for xauth"
 <p> <code>mcookie</code> generates a 128-bit random hexadecimal number for use with the X authority system. Typical usage:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>xauth add :0 . </code>mcookie
-</dl>
+</dd></dl>
 <p> The &quot;random&quot; number generated is actually the MD5 message digest of random information coming from one of the sources <code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2) system call, <i>/dev/urandom</i>, <i>/dev/random</i>, or the <i>libc pseudo-random functions</i>, in this preference order. See also the option <code>&#8211;file</code>.</p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;file</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Use this <i>file</i> as an additional source of randomness (for example <i>/dev/urandom</i>). When <i>file</i> is &#8216;-&#8216;, characters are read from standard input.</dl>
+</dt><dd> Use this <i>file</i> as an additional source of randomness (for example <i>/dev/urandom</i>). When <i>file</i> is &#8216;-&#8216;, characters are read from standard input.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;max-size</code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Read from <i>file</i> only this <i>number</i> of bytes. This option is meant to be used when reading additional randomness from a file or device. </p>
+</dt><dd> Read from <i>file</i> only this <i>number</i> of bytes. This option is meant to be used when reading additional randomness from a file or device. </dd>
 <p> The <i>number</i> argument may be followed by the multiplicative suffixes KiB=1024, MiB=1024*1024, and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;) or the suffixes KB=1000, MB=1000*1000, and so on for GB, TB, PB, EB, ZB and YB.</dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Inform where randomness originated, with amount of entropy read from each source.</dl>
+</dt><dd> Inform where randomness originated, with amount of entropy read from each source.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/dev/urandom</i> </p>
 <p> <i>/dev/random</i></p>

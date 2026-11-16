@@ -10,7 +10,6 @@ description: "show_os_cursor – Low level function to display the operating sys
 <p>show_os_cursor &#8211; Low level function to display the operating system cursor. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int show_os_cursor(int cursor);</code></pre>
 <h2>Description</h2>
 <p>In case you do not need Allegro&#8217;s mouse cursor API, which automatically emulates a cursor in software if no other cursor is available, you can use this low level function to try to display or hide the system cursor directly. The cursor parameter takes the same values as select_mouse_cursor. This function is very similar to calling enable_hardware_cursor, select_mouse_cursor and show_mouse, but will not try to do anything if no system cursor is available. </p>

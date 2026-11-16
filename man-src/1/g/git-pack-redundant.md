@@ -21,15 +21,15 @@ git pack - redundant[--verbose][--alt - odb]&lt;--all |.pack filename...&gt;
 <p> &#8211;all</p>
 <dl>
 <dt>
-<dd> Processes all packs. Any filenames on the command line are ignored.</dl>
+</dt><dd> Processes all packs. Any filenames on the command line are ignored.</dd></dl>
 <p> &#8211;alt-odb</p>
 <dl>
 <dt>
-<dd> Don&#8217;t require objects present in packs from alternate object directories to be present in local packs.</dl>
+</dt><dd> Don&#8217;t require objects present in packs from alternate object directories to be present in local packs.</dd></dl>
 <p> &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Outputs some statistics to stderr. Has a small performance penalty.</dl>
+</dt><dd> Outputs some statistics to stderr. Has a small performance penalty.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-git-pack-objects/">git-pack-objects</a></code>(1) <code><a href="/docs/linux/man/1-git-repack/">git-repack</a></code>(1) <code><a href="/docs/linux/man/1-git-prune-packed/">git-prune-packed</a></code>(1)</p>
 <h2>GIT</h2>

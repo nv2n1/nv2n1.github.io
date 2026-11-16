@@ -21,13 +21,13 @@ description: "docker-top – Display the running processes of a container"
 <p> Run <code>docker top</code> with the ps option of -x: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker top 8601afda2b -x
 PID      TTY       STAT       TIME         COMMAND
 16623    ?         Ss         0:00         sleep 99999
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by Ma Shimiao &lt;mashimiao.fnst [at] cn.fujitsu.com&gt; December 2015, updated by Pavel Pospisil &lt;pospispa [at] gmail.com&gt; </p>
 <h2>Index</h2>

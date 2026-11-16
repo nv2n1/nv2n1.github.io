@@ -29,75 +29,75 @@ $ osinfo - query-- fields = short - id, version os vendor = "Fedora Project" Sho
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s </code><font SIZE="-1"><code>PROPERTY</code></font>, <code>&#8211;sort-key </code><font SIZE="-1"><code>PROPERTY</code></font></p>
-<dd> Set the data sorting key. Defaults sorting the first column</p>
-<dt><code>-f </code><font SIZE="-1"><code>PROPERTY1,PROPERTY2,&#8230;</code></font>, <code>&#8211;fields </code><font SIZE="-1"><code>PROPERTY1,PROPERTY2,&#8230;</code></font></p>
-<dd> Set the visibility of properties in output</dl>
+<dt><code>-s </code><font SIZE="-1"><code>PROPERTY</code></font>, <code>&#8211;sort-key </code><font SIZE="-1"><code>PROPERTY</code></font></dt>
+<dd> Set the data sorting key. Defaults sorting the first column</dd>
+<dt><code>-f </code><font SIZE="-1"><code>PROPERTY1,PROPERTY2,&#8230;</code></font>, <code>&#8211;fields </code><font SIZE="-1"><code>PROPERTY1,PROPERTY2,&#8230;</code></font></dt>
+<dd> Set the visibility of properties in output</dd></dl>
 <h2>PROPERTY NAMES</h2>
 <h3><font SIZE="-1">OS</font></h3>
 <p> Valid property names for the <tt>&quot;os&quot;</tt> type are:</p>
 <dl>
-<dt><code>short-id</code></p>
-<dd> The short <font SIZE="-1">OS</font> identifier</p>
-<dt><code>name</code></p>
-<dd> The long <font SIZE="-1">OS</font> name</p>
-<dt><code>version</code></p>
-<dd> The <font SIZE="-1">OS</font> version string</p>
-<dt><code>family</code></p>
-<dd> The <font SIZE="-1">OS</font> kernel family</p>
-<dt><code>vendor</code></p>
-<dd> The <font SIZE="-1">OS</font> vendor</p>
-<dt><code>release-date</code></p>
-<dd> The <font SIZE="-1">OS</font> release date</p>
-<dt><code>eol-date</code></p>
-<dd> The <font SIZE="-1">OS</font> end-of-life date</p>
-<dt><code>codename</code></p>
-<dd> The <font SIZE="-1">OS</font> code name</p>
-<dt><code>id</code></p>
-<dd> The <font SIZE="-1">OS</font> identifier</dl>
+<dt><code>short-id</code></dt>
+<dd> The short <font SIZE="-1">OS</font> identifier</dd>
+<dt><code>name</code></dt>
+<dd> The long <font SIZE="-1">OS</font> name</dd>
+<dt><code>version</code></dt>
+<dd> The <font SIZE="-1">OS</font> version string</dd>
+<dt><code>family</code></dt>
+<dd> The <font SIZE="-1">OS</font> kernel family</dd>
+<dt><code>vendor</code></dt>
+<dd> The <font SIZE="-1">OS</font> vendor</dd>
+<dt><code>release-date</code></dt>
+<dd> The <font SIZE="-1">OS</font> release date</dd>
+<dt><code>eol-date</code></dt>
+<dd> The <font SIZE="-1">OS</font> end-of-life date</dd>
+<dt><code>codename</code></dt>
+<dd> The <font SIZE="-1">OS</font> code name</dd>
+<dt><code>id</code></dt>
+<dd> The <font SIZE="-1">OS</font> identifier</dd></dl>
 <h3><font SIZE="-1">PLATFORM</font></h3>
 <p> Valid property names for the <tt>&quot;platform&quot;</tt> type are:</p>
 <dl>
-<dt><code>short-id</code></p>
-<dd> The short platform identifier</p>
-<dt><code>name</code></p>
-<dd> The long platform name</p>
-<dt><code>version</code></p>
-<dd> The platform version string</p>
-<dt><code>vendor</code></p>
-<dd> The platform vendor</p>
-<dt><code>release-date</code></p>
-<dd> The platform release date</p>
-<dt><code>eol-date</code></p>
-<dd> The platform end-of-life date</p>
-<dt><code>codename</code></p>
-<dd> The platform code name</p>
-<dt><code>id</code></p>
-<dd> The platform identifier</dl>
+<dt><code>short-id</code></dt>
+<dd> The short platform identifier</dd>
+<dt><code>name</code></dt>
+<dd> The long platform name</dd>
+<dt><code>version</code></dt>
+<dd> The platform version string</dd>
+<dt><code>vendor</code></dt>
+<dd> The platform vendor</dd>
+<dt><code>release-date</code></dt>
+<dd> The platform release date</dd>
+<dt><code>eol-date</code></dt>
+<dd> The platform end-of-life date</dd>
+<dt><code>codename</code></dt>
+<dd> The platform code name</dd>
+<dt><code>id</code></dt>
+<dd> The platform identifier</dd></dl>
 <h3><font SIZE="-1">DEVICE</font></h3>
 <p> Valid property names for the <tt>&quot;device&quot;</tt> type are:</p>
 <dl>
-<dt><code>name</code></p>
-<dd> The device name</p>
-<dt><code>product</code></p>
-<dd> The device product name</p>
-<dt><code>product-id</code></p>
-<dd> The device product <font SIZE="-1">ID</font> string</p>
-<dt><code>vendor</code></p>
-<dd> The device vendor name</p>
-<dt><code>vendor-id</code></p>
-<dd> The device vendor <font SIZE="-1">ID</font> string</p>
-<dt><code>class</code></p>
-<dd> The device type class</p>
-<dt><code>bus</code></p>
-<dd> The device bus type</p>
-<dt><code>id</code></p>
-<dd> The device identifier</dl>
+<dt><code>name</code></dt>
+<dd> The device name</dd>
+<dt><code>product</code></dt>
+<dd> The device product name</dd>
+<dt><code>product-id</code></dt>
+<dd> The device product <font SIZE="-1">ID</font> string</dd>
+<dt><code>vendor</code></dt>
+<dd> The device vendor name</dd>
+<dt><code>vendor-id</code></dt>
+<dd> The device vendor <font SIZE="-1">ID</font> string</dd>
+<dt><code>class</code></dt>
+<dd> The device type class</dd>
+<dt><code>bus</code></dt>
+<dd> The device bus type</dd>
+<dt><code>id</code></dt>
+<dd> The device identifier</dd></dl>
 <h3><font SIZE="-1">DEPLOYMENT</font></h3>
 <p> Valid property names for the <tt>&quot;deployment&quot;</tt> type are:</p>
 <dl>
-<dt><code>id</code></p>
-<dd> The deployment identifier</dl>
+<dt><code>id</code></dt>
+<dd> The deployment identifier</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status will be 0 if matching entries were found, or 1 if not matches were found</p>
 <h2>SEE ALSO</h2>
@@ -109,13 +109,13 @@ $ osinfo - query-- fields = short - id, version os vendor = "Fedora Project" Sho
 <h2>LICENSE</h2>
 <p> <tt>&quot;osinfo-query&quot;</tt> is distributed under the termsof the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">EXIT STATUS</a></p>
+<dt><a href="#lbAK">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbAL">SEE ALSO</a></p>
+</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAM">AUTHORS</a></p>
+</dd><dt><a href="#lbAM">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAN">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAN">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAO">LICENSE</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAO">LICENSE</a></dt>
+<dd></dd></dl>

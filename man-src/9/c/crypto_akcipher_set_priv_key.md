@@ -14,13 +14,13 @@ description: "crypto_akcipher_set_priv_key – Invoke set private key operation"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>tfm handle</dl>
+</dd><dd>tfm handle</dd></dl>
 <p> <i>key</i></p>
 <dl>
-<dd>BER encoded private key</dl>
+<dd>BER encoded private key</dd></dl>
 <p> <i>keylen</i></p>
 <dl>
-<dd>length of the key</dl>
+<dd>length of the key</dd></dl>
 <h2>Description</h2>
 <p>Function invokes the algorithm specific set key function, which knows how to decode and interpret the encoded key</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "crypto_akcipher_set_priv_key – Invoke set private key operation"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

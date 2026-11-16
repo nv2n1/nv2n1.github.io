@@ -20,14 +20,14 @@ description: "XmCreateInformationDialog — The MessageBox InformationDialog con
 <p> Use <code>XtManageChild</code> to pop up the InformationDialog (passing the MessageBox as the widget parameter); use <code>XtUnmanageChild</code> to pop it down. </p>
 <p> <code>XmCreateInformationDialog</code> forces the value of the Shell resource <code>XmNallowShellResize</code> to True.</p>
 <dl COMPACT>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dl>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dd></dl>
 <p> For a complete definition of MessageBox and its associated resources, see <code><a href="/docs/linux/man/3-xmmessagebox/">XmMessageBox</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the MessageBox widget ID.</p>

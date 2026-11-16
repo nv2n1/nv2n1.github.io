@@ -16,22 +16,22 @@ description: "genresscript – generate resource script from PE and NE binaries"
 <p> Genresscript takes any number of PE or NE binaries, and outputs a resource script with all resources from the binaries listed. (Everything but the destination filename will be filled in in the script.) This is useful when you already have extracted images and want to create a resource script of them.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code></p>
+<dt><code>-t</code></dt>
 <dd>
-<dt><code>&#8211;type=ID</code></p>
-<dd> list resources of this type instead of group_icon</p>
-<dt><code>-b</code></p>
+</dd><dt><code>&#8211;type=ID</code></dt>
+<dd> list resources of this type instead of group_icon</dd>
+<dt><code>-b</code></dt>
 <dd>
-<dt><code>&#8211;base=PATH</code></p>
-<dd> the default extraction name of all resources</p>
-<dt><code>-s</code></p>
+</dd><dt><code>&#8211;base=PATH</code></dt>
+<dd> the default extraction name of all resources</dd>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;sort</code></p>
-<dd> sort alphabetically instead of using order in binary</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+</dd><dt><code>&#8211;sort</code></dt>
+<dd> sort alphabetically instead of using order in binary</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-extresso/">extresso</a></code>(1), <code><a href="/docs/linux/man/1-icotool/">icotool</a></code>(1), <code><a href="/docs/linux/man/1-wrestool/">wrestool</a></code>(1).</p>
 <h2>AUTHOR</h2>

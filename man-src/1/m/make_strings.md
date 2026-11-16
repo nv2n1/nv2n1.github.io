@@ -16,18 +16,18 @@ description: "make_strings – tool to build lists of localizable strings from O
 <p> <code>make_strings</code> accepts the following options: </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Prints a short list of available options.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Prints additional information while processing.</p>
-<dt><code>-L</code><i> languages</i></p>
-<dd> Specify which languages to process. Multuple <code>-L</code> options are accepted, or multiple <i>languages</i> defined in one <code>-L</code> flag.</p>
-<dt><code>&#8211;aggressive-import</code></p>
-<dd> Activates <code>&#8211;aggresive-match</code> and automatically removes &quot;dummy&quot; entries that are added by importing <i>.strings</i> files which were not created by <code>make_strings</code> program. This option is suitable when <code>make_strings</code> is run for the first time and there is an existing <i>.strings</i> file which contains a fairly accurate translation.</p>
-<dt><code>&#8211;aggressive-match</code></p>
-<dd> This option will make <code>make_strings</code> assume that matching keys should have matching translations. This can save lots of work, but it increases the risk of erroneous translation.</p>
-<dt><code>&#8211;aggressive-remove</code></p>
-<dd> Removes obsolete strings/keys. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints a short list of available options.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Prints additional information while processing.</dd>
+<dt><code>-L</code><i> languages</i></dt>
+<dd> Specify which languages to process. Multuple <code>-L</code> options are accepted, or multiple <i>languages</i> defined in one <code>-L</code> flag.</dd>
+<dt><code>&#8211;aggressive-import</code></dt>
+<dd> Activates <code>&#8211;aggresive-match</code> and automatically removes &quot;dummy&quot; entries that are added by importing <i>.strings</i> files which were not created by <code>make_strings</code> program. This option is suitable when <code>make_strings</code> is run for the first time and there is an existing <i>.strings</i> file which contains a fairly accurate translation.</dd>
+<dt><code>&#8211;aggressive-match</code></dt>
+<dd> This option will make <code>make_strings</code> assume that matching keys should have matching translations. This can save lots of work, but it increases the risk of erroneous translation.</dd>
+<dt><code>&#8211;aggressive-remove</code></dt>
+<dd> Removes obsolete strings/keys. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> make_strings -L &quot;English Swedish Russian&quot; *.[hm] </p>

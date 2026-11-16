@@ -16,24 +16,24 @@ description: "beesu – A wrapper for \"su\" that provides a graphical interface
 <p> <code>beesu</code> is dedicated to all the friends of honey bees!</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> display the software version and exit</p>
-<dt>&#8211;print-conf</p>
-<dd> display the configuration file contents and exit</p>
-<dt>-P</p>
-<dd> don&#8217;t join ARGs together</p>
-<dt>-v</p>
-<dd> verbose output</p>
-<dt>-, -l, &#8211;login</p>
-<dd> make the shell a login shell</p>
-<dt>-c COMMAND</p>
-<dd> pass a single COMMAND to the shell with -c</p>
-<dt>-f, &#8211;fast</p>
-<dd> pass -f to the shell (for csh or tcsh)</p>
-<dt>-m, &#8211;preserve-environment</p>
-<dd> do not reset environment variables</p>
-<dt>-s SHELL</p>
-<dd> run SHELL </p>
+<dt>&#8211;version</dt>
+<dd> display the software version and exit</dd>
+<dt>&#8211;print-conf</dt>
+<dd> display the configuration file contents and exit</dd>
+<dt>-P</dt>
+<dd> don&#8217;t join ARGs together</dd>
+<dt>-v</dt>
+<dd> verbose output</dd>
+<dt>-, -l, &#8211;login</dt>
+<dd> make the shell a login shell</dd>
+<dt>-c COMMAND</dt>
+<dd> pass a single COMMAND to the shell with -c</dd>
+<dt>-f, &#8211;fast</dt>
+<dd> pass -f to the shell (for csh or tcsh)</dd>
+<dt>-m, &#8211;preserve-environment</dt>
+<dd> do not reset environment variables</dd>
+<dt>-s SHELL</dt>
+<dd> run SHELL </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> <code>beesu &#8211; nautilus</code> </p>
@@ -44,7 +44,7 @@ description: "beesu – A wrapper for \"su\" that provides a graphical interface
 <p> <i>/etc/beesu.conf</i></p>
 <dl>
 <dt>
-<dd> This is the configuration file for beesu. This file allows you to restrict the usage of beesu to run only with a specified list of commands. This may prevent you to run commands that, because of your mistakes, can damage your system.</dl>
+</dt><dd> This is the configuration file for beesu. This file allows you to restrict the usage of beesu to run only with a specified list of commands. This may prevent you to run commands that, because of your mistakes, can damage your system.</dd></dl>
 <h2>BUGS</h2>
 <p> The command name could be any command. Be careful to not type something that could wipe away your system.</p>
 <h2>AUTHOR</h2>

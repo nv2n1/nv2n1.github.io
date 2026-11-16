@@ -22,15 +22,11 @@ url: "/docs/linux/man/1-guards/"
 
 <dl>
 <dt>
-<dd> +<i>xxx</i> Include the file(s) on this line if the symbol <i>xxx</i> is defined. 
-
+</dt><dd> +<i>xxx</i> Include the file(s) on this line if the symbol <i>xxx</i> is defined. 
  -<i>xxx</i> Exclude the file(s) on this line if the symbol <i>xxx</i> is defined. 
-
  +!<i>xxx</i> Include the file(s) on this line if the symbol <i>xxx</i> is not defined. 
-
  -!<i>xxx</i> Exclude the file(s) on this line if the symbol <i>xxx</i> is not defined. 
-
- - Exclude this file. Used to avoid spurious <i>--check</i> messages.</dl>
+ - Exclude this file. Used to avoid spurious <i>--check</i> messages.</dd></dl>
  
 
  The guards are processed left to right. The last guard that matches determines if the file is included. If no guard is specified, the <i>--default</i> setting determines if the file is included. 

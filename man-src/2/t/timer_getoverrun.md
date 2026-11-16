@@ -25,8 +25,8 @@ int timer_getoverrun(timer_t timerid);
 <p> On success, <code>timer_getoverrun</code>() returns the overrun count of the specified timer; this count may be 0 if no overruns have occurred. On failure, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>timerid</i> is not a valid timer ID.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>timerid</i> is not a valid timer ID.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is available since Linux 2.6.</p>
 <h2>CONFORMING TO</h2>

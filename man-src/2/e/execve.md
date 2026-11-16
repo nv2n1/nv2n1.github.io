@@ -28,12 +28,12 @@ description: "execve – execute program"
 <p> If the set-user-ID bit is set on the program file referred to by <i>pathname</i>, then the effective user ID of the calling process is changed to that of the owner of the program file. Similarly, if the set-group-ID bit is set on the program file, then the effective group ID of the calling process is set to the group of the program file. </p>
 <p> The aforementioned transformations of the effective IDs are <i>not</i> performed (i.e., the set-user-ID and set-group-ID bits are ignored) if any of the following is true:</p>
 <dl>
-<dt>*</p>
-<dd> the <i>no_new_privs</i> attribute is set for the calling thread (see <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2));</p>
-<dt>*</p>
-<dd> the underlying filesystem is mounted <i>nosuid</i> (the <code>MS_NOSUID</code> flag for <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2)); or</p>
-<dt>*</p>
-<dd> the calling process is being ptraced.</dl>
+<dt>*</dt>
+<dd> the <i>no_new_privs</i> attribute is set for the calling thread (see <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2));</dd>
+<dt>*</dt>
+<dd> the underlying filesystem is mounted <i>nosuid</i> (the <code>MS_NOSUID</code> flag for <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2)); or</dd>
+<dt>*</dt>
+<dd> the calling process is being ptraced.</dd></dl>
 <p> The capabilities of the program file (see <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7)) are also ignored if any of the above are true. </p>
 <p> The effective user ID of the process is copied to the saved set-user-ID; similarly, the effective group ID is copied to the saved set-group-ID. This copying takes place after any effective ID changes that occur because of the set-user-ID and set-group-ID mode bits. </p>
 <p> The process&#8217;s real UID and real GID, as well its supplementary group IDs, are unchanged by a call to <code>execve</code>(). </p>
@@ -42,60 +42,60 @@ description: "execve – execute program"
 <h3>Effect on process attributes</h3>
 <p> All process attributes are preserved during an <code>execve</code>(), except the following:</p>
 <dl>
-<dt>*</p>
-<dd> The dispositions of any signals that are being caught are reset to the default (<code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)).</p>
-<dt>*</p>
-<dd> Any alternate signal stack is not preserved (<code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</p>
-<dt>*</p>
-<dd> Memory mappings are not preserved (<code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)).</p>
-<dt>*</p>
-<dd> Attached System V shared memory segments are detached (<code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2)).</p>
-<dt>*</p>
-<dd> POSIX shared memory regions are unmapped (<code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3)).</p>
-<dt>*</p>
-<dd> Open POSIX message queue descriptors are closed (<code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7)).</p>
-<dt>*</p>
-<dd> Any open POSIX named semaphores are closed (<code><a href="/docs/linux/man/7-sem_overview/">sem_overview</a></code>(7)).</p>
-<dt>*</p>
-<dd> POSIX timers are not preserved (<code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2)).</p>
-<dt>*</p>
-<dd> Any open directory streams are closed (<code>opendir</code>(3)).</p>
-<dt>*</p>
-<dd> Memory locks are not preserved (<code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2)).</p>
-<dt>*</p>
-<dd> Exit handlers are not preserved (<code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3), <code>on_exit</code>(3)).</p>
-<dt>*</p>
-<dd> The floating-point environment is reset to the default (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)).</dl>
+<dt>*</dt>
+<dd> The dispositions of any signals that are being caught are reset to the default (<code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)).</dd>
+<dt>*</dt>
+<dd> Any alternate signal stack is not preserved (<code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> Memory mappings are not preserved (<code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> Attached System V shared memory segments are detached (<code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> POSIX shared memory regions are unmapped (<code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3)).</dd>
+<dt>*</dt>
+<dd> Open POSIX message queue descriptors are closed (<code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7)).</dd>
+<dt>*</dt>
+<dd> Any open POSIX named semaphores are closed (<code><a href="/docs/linux/man/7-sem_overview/">sem_overview</a></code>(7)).</dd>
+<dt>*</dt>
+<dd> POSIX timers are not preserved (<code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> Any open directory streams are closed (<code>opendir</code>(3)).</dd>
+<dt>*</dt>
+<dd> Memory locks are not preserved (<code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> Exit handlers are not preserved (<code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3), <code>on_exit</code>(3)).</dd>
+<dt>*</dt>
+<dd> The floating-point environment is reset to the default (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)).</dd></dl>
 <p> The process attributes in the preceding list are all specified in POSIX.1. The following Linux-specific process attributes are also not preserved during an <code>execve</code>():</p>
 <dl>
-<dt>*</p>
-<dd> The process&#8217;s &quot;dumpable&quot; attribute is set to the value 1, unless a set-user-ID program, a set-group-ID program, or a program with capabilities is being executed, in which case the dumpable flag may instead be reset to the value in <i>/proc/sys/fs/suid_dumpable</i>, in the circumstances described under <code>PR_SET_DUMPABLE</code> in <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2). Note that changes to the &quot;dumpable&quot; attribute may cause ownership of files in the process&#8217;s <i>/proc/[pid]</i> directory to change to <i>root:root</i>, as described in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5).</p>
-<dt>*</p>
-<dd> The <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_KEEPCAPS</code> flag is cleared.</p>
-<dt>*</p>
-<dd> (Since Linux 2.4.36 / 2.6.23) If a set-user-ID or set-group-ID program is being executed, then the parent death signal set by <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_PDEATHSIG</code> flag is cleared.</p>
-<dt>*</p>
-<dd> The process name, as set by <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_NAME</code> (and displayed by <i>ps -o comm</i>), is reset to the name of the new executable file.</p>
-<dt>*</p>
-<dd> The <code>SECBIT_KEEP_CAPS</code> <i>securebits</i> flag is cleared. See <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7).</p>
-<dt>*</p>
-<dd> The termination signal is reset to <code>SIGCHLD</code> (see <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2)).</p>
-<dt>*</p>
-<dd> The file descriptor table is unshared, undoing the effect of the <code>CLONE_FILES</code> flag of <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dl>
+<dt>*</dt>
+<dd> The process&#8217;s &quot;dumpable&quot; attribute is set to the value 1, unless a set-user-ID program, a set-group-ID program, or a program with capabilities is being executed, in which case the dumpable flag may instead be reset to the value in <i>/proc/sys/fs/suid_dumpable</i>, in the circumstances described under <code>PR_SET_DUMPABLE</code> in <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2). Note that changes to the &quot;dumpable&quot; attribute may cause ownership of files in the process&#8217;s <i>/proc/[pid]</i> directory to change to <i>root:root</i>, as described in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5).</dd>
+<dt>*</dt>
+<dd> The <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_KEEPCAPS</code> flag is cleared.</dd>
+<dt>*</dt>
+<dd> (Since Linux 2.4.36 / 2.6.23) If a set-user-ID or set-group-ID program is being executed, then the parent death signal set by <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_PDEATHSIG</code> flag is cleared.</dd>
+<dt>*</dt>
+<dd> The process name, as set by <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_NAME</code> (and displayed by <i>ps -o comm</i>), is reset to the name of the new executable file.</dd>
+<dt>*</dt>
+<dd> The <code>SECBIT_KEEP_CAPS</code> <i>securebits</i> flag is cleared. See <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7).</dd>
+<dt>*</dt>
+<dd> The termination signal is reset to <code>SIGCHLD</code> (see <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> The file descriptor table is unshared, undoing the effect of the <code>CLONE_FILES</code> flag of <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd></dl>
 <p> Note the following further points:</p>
 <dl>
-<dt>*</p>
-<dd> All threads other than the calling thread are destroyed during an <code>execve</code>(). Mutexes, condition variables, and other pthreads objects are not preserved.</p>
-<dt>*</p>
-<dd> The equivalent of <i>setlocale(LC_ALL, &quot;C&quot;)</i> is executed at program start-up.</p>
-<dt>*</p>
-<dd> POSIX.1 specifies that the dispositions of any signals that are ignored or set to the default are left unchanged. POSIX.1 specifies one exception: if <code>SIGCHLD</code> is being ignored, then an implementation may leave the disposition unchanged or reset it to the default; Linux does the former.</p>
-<dt>*</p>
-<dd> Any outstanding asynchronous I/O operations are canceled (<code><a href="/docs/linux/man/3-aio_read/">aio_read</a></code>(3), <code><a href="/docs/linux/man/3-aio_write/">aio_write</a></code>(3)).</p>
-<dt>*</p>
-<dd> For the handling of capabilities during <code>execve</code>(), see <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7).</p>
-<dt>*</p>
-<dd> By default, file descriptors remain open across an <code>execve</code>(). File descriptors that are marked close-on-exec are closed; see the description of <code>FD_CLOEXEC</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2). (If a file descriptor is closed, this will cause the release of all record locks obtained on the underlying file by this process. See <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) for details.) POSIX.1 says that if file descriptors 0, 1, and 2 would otherwise be closed after a successful <code>execve</code>(), and the process would gain privilege because the set-user-ID or set-group-ID mode bit was set on the executed file, then the system may open an unspecified file for each of these file descriptors. As a general principle, no portable program, whether privileged or not, can assume that these three file descriptors will remain closed across an <code>execve</code>().</dl>
+<dt>*</dt>
+<dd> All threads other than the calling thread are destroyed during an <code>execve</code>(). Mutexes, condition variables, and other pthreads objects are not preserved.</dd>
+<dt>*</dt>
+<dd> The equivalent of <i>setlocale(LC_ALL, &quot;C&quot;)</i> is executed at program start-up.</dd>
+<dt>*</dt>
+<dd> POSIX.1 specifies that the dispositions of any signals that are ignored or set to the default are left unchanged. POSIX.1 specifies one exception: if <code>SIGCHLD</code> is being ignored, then an implementation may leave the disposition unchanged or reset it to the default; Linux does the former.</dd>
+<dt>*</dt>
+<dd> Any outstanding asynchronous I/O operations are canceled (<code><a href="/docs/linux/man/3-aio_read/">aio_read</a></code>(3), <code><a href="/docs/linux/man/3-aio_write/">aio_write</a></code>(3)).</dd>
+<dt>*</dt>
+<dd> For the handling of capabilities during <code>execve</code>(), see <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7).</dd>
+<dt>*</dt>
+<dd> By default, file descriptors remain open across an <code>execve</code>(). File descriptors that are marked close-on-exec are closed; see the description of <code>FD_CLOEXEC</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2). (If a file descriptor is closed, this will cause the release of all record locks obtained on the underlying file by this process. See <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) for details.) POSIX.1 says that if file descriptors 0, 1, and 2 would otherwise be closed after a successful <code>execve</code>(), and the process would gain privilege because the set-user-ID or set-group-ID mode bit was set on the executed file, then the system may open an unspecified file for each of these file descriptors. As a general principle, no portable program, whether privileged or not, can assume that these three file descriptors will remain closed across an <code>execve</code>().</dd></dl>
 <h3>Interpreter scripts</h3>
 <p> An interpreter script is a text file that has execute permission enabled and whose first line is of the form: </p>
 <p> <code>#!</code><i>interpreter </i>[optional-arg] </p>
@@ -113,54 +113,54 @@ description: "execve – execute program"
 <p> On success, <code>execve</code>() does not return, on error -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>E2BIG</code></p>
-<dd> The total number of bytes in the environment (<i>envp</i>) and argument list (<i>argv</i>) is too large.</p>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied on a component of the path prefix of <i>pathname</i> or the name of a script interpreter. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EACCES</code></p>
-<dd> The file or a script interpreter is not a regular file.</p>
-<dt><code>EACCES</code></p>
-<dd> Execute permission is denied for the file or a script or ELF interpreter.</p>
-<dt><code>EACCES</code></p>
-<dd> The filesystem is mounted <i>noexec</i>.</p>
-<dt><code>EAGAIN</code> (since Linux 3.1)</p>
-<dd> Having changed its real UID using one of the <code>set*uid</code>() calls, the caller was&#8212;and is now still&#8212;above its <code>RLIMIT_NPROC</code> resource limit (see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)). For a more detailed explanation of this error, see NOTES.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> or one of the pointers in the vectors <i>argv</i> or <i>envp</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> An ELF executable had more than one PT_INTERP segment (i.e., tried to name more than one interpreter).</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred.</p>
-<dt><code>EISDIR</code></p>
-<dd> An ELF interpreter was a directory.</p>
-<dt><code>ELIBBAD</code></p>
-<dd> An ELF interpreter was not in a recognized format.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>pathname</i> or the name of a script or ELF interpreter.</p>
-<dt><code>ELOOP</code></p>
-<dd> The maximum recursion limit was reached during recursive script interpretation (see &quot;Interpreter scripts&quot;, above). Before Linux 3.8, the error produced for this case was <code>ENOEXEC</code>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> is too long.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOENT</code></p>
-<dd> The file <i>pathname</i> or a script or ELF interpreter does not exist.</p>
-<dt><code>ENOEXEC</code></p>
-<dd> An executable is not in a recognized format, is for the wrong architecture, or has some other format error that means it cannot be executed.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of the path prefix of <i>pathname</i> or a script or ELF interpreter is not a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> The filesystem is mounted <i>nosuid</i>, the user is not the superuser, and the file has the set-user-ID or set-group-ID bit set.</p>
-<dt><code>EPERM</code></p>
-<dd> The process is being traced, the user is not the superuser and the file has the set-user-ID or set-group-ID bit set.</p>
-<dt><code>EPERM</code></p>
-<dd> A &quot;capability-dumb&quot; applications would not obtain the full set of permitted capabilities granted by the executable file. See <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7).</p>
-<dt><code>ETXTBSY</code></p>
-<dd> The specified executable was open for writing by one or more processes.</dl>
+<dt><code>E2BIG</code></dt>
+<dd> The total number of bytes in the environment (<i>envp</i>) and argument list (<i>argv</i>) is too large.</dd>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied on a component of the path prefix of <i>pathname</i> or the name of a script interpreter. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EACCES</code></dt>
+<dd> The file or a script interpreter is not a regular file.</dd>
+<dt><code>EACCES</code></dt>
+<dd> Execute permission is denied for the file or a script or ELF interpreter.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The filesystem is mounted <i>noexec</i>.</dd>
+<dt><code>EAGAIN</code> (since Linux 3.1)</dt>
+<dd> Having changed its real UID using one of the <code>set*uid</code>() calls, the caller was&#8212;and is now still&#8212;above its <code>RLIMIT_NPROC</code> resource limit (see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)). For a more detailed explanation of this error, see NOTES.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> or one of the pointers in the vectors <i>argv</i> or <i>envp</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An ELF executable had more than one PT_INTERP segment (i.e., tried to name more than one interpreter).</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred.</dd>
+<dt><code>EISDIR</code></dt>
+<dd> An ELF interpreter was a directory.</dd>
+<dt><code>ELIBBAD</code></dt>
+<dd> An ELF interpreter was not in a recognized format.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>pathname</i> or the name of a script or ELF interpreter.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> The maximum recursion limit was reached during recursive script interpretation (see &quot;Interpreter scripts&quot;, above). Before Linux 3.8, the error produced for this case was <code>ENOEXEC</code>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> is too long.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The file <i>pathname</i> or a script or ELF interpreter does not exist.</dd>
+<dt><code>ENOEXEC</code></dt>
+<dd> An executable is not in a recognized format, is for the wrong architecture, or has some other format error that means it cannot be executed.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of the path prefix of <i>pathname</i> or a script or ELF interpreter is not a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The filesystem is mounted <i>nosuid</i>, the user is not the superuser, and the file has the set-user-ID or set-group-ID bit set.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The process is being traced, the user is not the superuser and the file has the set-user-ID or set-group-ID bit set.</dd>
+<dt><code>EPERM</code></dt>
+<dd> A &quot;capability-dumb&quot; applications would not obtain the full set of permitted capabilities granted by the executable file. See <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7).</dd>
+<dt><code>ETXTBSY</code></dt>
+<dd> The specified executable was open for writing by one or more processes.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD. POSIX does not document the #! behavior, but it exists (with some variations) on other UNIX systems.</p>
 <h2>NOTES</h2>

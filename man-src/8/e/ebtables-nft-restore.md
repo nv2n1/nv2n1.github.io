@@ -11,22 +11,22 @@ description: "xtables-nft — iptables using nftables kernel api"
 <h2>Description</h2>
 <p><code>xtables-nft</code> are versions of iptables that use the nftables API. This is a set of tools to help the system administrator migrate the ruleset from <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code>, <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a>(8)</code>, <code><a href="/docs/linux/man/8-arptables/">arptables</a>(8)</code>, and <code><a href="/docs/linux/man/8-ebtables/">ebtables</a>(8)</code> to <code><a href="/docs/linux/man/8-nftables/">nftables</a>(8)</code>. The <code>xtables-nft</code> set is composed of several commands:</p>
 <dl>
-<dt>&bull;</p>
-<dd>iptables-nft</p>
-<dt>&bull;</p>
-<dd>iptables-nft-save</p>
-<dt>&bull;</p>
-<dd>iptables-nft-restore</p>
-<dt>&bull;</p>
-<dd>ip6tables-nft</p>
-<dt>&bull;</p>
-<dd>ip6tables-nft-save</p>
-<dt>&bull;</p>
-<dd>ip6tables-nft-restore</p>
-<dt>&bull;</p>
-<dd>arptables-nft</p>
-<dt>&bull;</p>
-<dd>ebtables-nft These tools use the libxtables framework extensions and hook to the nf_tables kernel subsystem using the <code>nft_compat</code> module. </p>
+<dt>&bull;</dt>
+<dd>iptables-nft</dd>
+<dt>&bull;</dt>
+<dd>iptables-nft-save</dd>
+<dt>&bull;</dt>
+<dd>iptables-nft-restore</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-nft</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-nft-save</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-nft-restore</dd>
+<dt>&bull;</dt>
+<dd>arptables-nft</dd>
+<dt>&bull;</dt>
+<dd>ebtables-nft These tools use the libxtables framework extensions and hook to the nf_tables kernel subsystem using the <code>nft_compat</code> module. </dd>
 <h2>Usage</h2>
 <p>The xtables-nft tools allow you to manage the nf_tables backend using the native syntax of <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code>, <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a>(8)</code>, <code><a href="/docs/linux/man/8-arptables/">arptables</a>(8)</code>, and <code><a href="/docs/linux/man/8-ebtables/">ebtables</a>(8)</code>. </p>
 <p> You should use the xtables-nft tools exactly the same way as you would use the corresponding original tools. </p>
@@ -114,3 +114,4 @@ description: "xtables-nft — iptables using nftables kernel api"
 <p>The nftables framework is written by the Netfilter project (<a rel="nofollow" href="https://www.netfilter.org">https://www.netfilter.org</a>). </p>
 <p> This manual page was written by Arturo Borrero Gonzalez &lt;arturo [at] debian.org&gt; for the Debian project, but may be used by others. </p>
 <p> This documentation is free/libre under the terms of the GPLv2+.</p>
+</dl>

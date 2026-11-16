@@ -15,20 +15,20 @@ description: "/etc/and/and.priorities – priority database for the auto nice da
 <h2>Settings</h2>
 <p>A valid entry consists of a line of six columns, separated by one or more spaces. These columns are: (in that order) </p>
 <dl>
-<dt><code>user</code></p>
-<dd>The user ID the command is running under. May be a user name (which will be looked up in the password file and, if enabled, via NIS), or a numeric user ID, or an asterisk for any user. </p>
-<dt><code>group</code></p>
-<dd>The group ID the command is running under. May be a group name (which will be looked up in the group file and again, if enabled, via NIS), or a numeric group ID, or an asterisk for any group. </p>
-<dt><code>command</code></p>
-<dd>The name of the command, without path. May be a command, a regular expression to match multiple commands, or an asterisk for any command. Note that &quot;foobar&quot; will <code>not</code> match &quot;/usr/bin/foobar&quot; &#8211; you probably mean &quot;.*foobar&quot; or even &quot;.*foobar.*&quot;. </p>
-<dt><code>parent</code></p>
-<dd>There are two modes of operation for the parent field, determined by a keyword: <code>parent=foobar</code> will match if a process&#8217; direct parent process matches the command or regular expression after the equal sign, whereas <code>ancestor=foobar</code> will match if <i>any </i> ancestor process matches. After the keyword and the equal sign goes the name of the parent process, without path. May be a command, a regular expression to match multiple commands, or an asterisk for any command. (You can just use the asterisk if you want to ignore parents for this entry.) Note that again &quot;foobar&quot; will <code>not</code> match &quot;/usr/bin/foobar&quot;, as with command. </p>
-<dt><code>nicelevel 1</code></p>
-<dd>The nice level after lv1time CPU time was used by the command. Positive numbers and 0 are interpreted as nice levels; negative numbers are interpreted as signals to be sent to the command. A &quot;nice level&quot; of 19 will almost stop the job, -9 will actually kill it. (Like in kill -9.) lv1time can be set in <i>/etc/and.conf</i> </p>
-<dt><code>nicelevel 2</code></p>
-<dd>Same but after lv2time. </p>
-<dt><code>nicelevel 3</code></p>
-<dd>Same but after lv3time. </p>
+<dt><code>user</code></dt>
+<dd>The user ID the command is running under. May be a user name (which will be looked up in the password file and, if enabled, via NIS), or a numeric user ID, or an asterisk for any user. </dd>
+<dt><code>group</code></dt>
+<dd>The group ID the command is running under. May be a group name (which will be looked up in the group file and again, if enabled, via NIS), or a numeric group ID, or an asterisk for any group. </dd>
+<dt><code>command</code></dt>
+<dd>The name of the command, without path. May be a command, a regular expression to match multiple commands, or an asterisk for any command. Note that &quot;foobar&quot; will <code>not</code> match &quot;/usr/bin/foobar&quot; &#8211; you probably mean &quot;.*foobar&quot; or even &quot;.*foobar.*&quot;. </dd>
+<dt><code>parent</code></dt>
+<dd>There are two modes of operation for the parent field, determined by a keyword: <code>parent=foobar</code> will match if a process&#8217; direct parent process matches the command or regular expression after the equal sign, whereas <code>ancestor=foobar</code> will match if <i>any </i> ancestor process matches. After the keyword and the equal sign goes the name of the parent process, without path. May be a command, a regular expression to match multiple commands, or an asterisk for any command. (You can just use the asterisk if you want to ignore parents for this entry.) Note that again &quot;foobar&quot; will <code>not</code> match &quot;/usr/bin/foobar&quot;, as with command. </dd>
+<dt><code>nicelevel 1</code></dt>
+<dd>The nice level after lv1time CPU time was used by the command. Positive numbers and 0 are interpreted as nice levels; negative numbers are interpreted as signals to be sent to the command. A &quot;nice level&quot; of 19 will almost stop the job, -9 will actually kill it. (Like in kill -9.) lv1time can be set in <i>/etc/and.conf</i> </dd>
+<dt><code>nicelevel 2</code></dt>
+<dd>Same but after lv2time. </dd>
+<dt><code>nicelevel 3</code></dt>
+<dd>Same but after lv3time. </dd>
 </dl>
 <h2>Examples</h2>
 <p>Here are some entries from the real world (i.e. from &quot;my&quot; cluster at the Institute). As lv[123]time, 5 min., 20 min., and 1 hour is assumed. (Which is the default. See <i>/etc/and.conf</i> for details.) You might also check the default priority database that comes with <code>and.</code> # A finer default nice level<br />
@@ -58,8 +58,8 @@ description: "/etc/and/and.priorities – priority database for the auto nice da
  grid * grid_master * 0 0 0 </p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/and/and.priorities</code></p>
-<dd>The priority database (in plain text). Contains the (user, group, command, nicelevels) tuples. This is what this manual page is about. </p>
+<dt><code>/etc/and/and.priorities</code></dt>
+<dd>The priority database (in plain text). Contains the (user, group, command, nicelevels) tuples. This is what this manual page is about. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-and/">and</a></code>(8), <code>and.conf</code>(5), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code>renice</code>(8) </p>

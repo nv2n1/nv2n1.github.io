@@ -15,11 +15,11 @@ description: "akmods – manual page for akmods 0.4.0"
 <p> Checks the akmod packages and rebuilds them if needed</p>
 <h3>Available options:</h3>
 <dl>
-<dt> <code>&#8211;force</code> <code>&#8212;</code> try all, even if they failed earlier</p>
-<dt> <code>&#8211;kernels</code> &lt;kernel&gt; <code>&#8212;</code> build and install only for kernel &lt;kernel&gt;</p>
-<dt> <code>&#8211;akmod</code> &lt;akmod&gt; <code>&#8212;</code> build and install only akmod &lt;akmod&gt;</dl>
+<dt> <code>&#8211;force</code> <code>&#8212;</code> try all, even if they failed earlier</dt>
+<dt> <code>&#8211;kernels</code> &lt;kernel&gt; <code>&#8212;</code> build and install only for kernel &lt;kernel&gt;</dt>
+<dt> <code>&#8211;akmod</code> &lt;akmod&gt; <code>&#8212;</code> build and install only akmod &lt;akmod&gt;</dt></dl>
 <h2>BUGS</h2>
-<dd><a rel="nofollow" href="https://bugzilla.rpmfusion.org/buglist.cgi?product=Fedora">https://bugzilla.rpmfusion.org/buglist.cgi?product=Fedora</a>&amp;component=akmods&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED</p>
+<dd><a rel="nofollow" href="https://bugzilla.rpmfusion.org/buglist.cgi?product=Fedora">https://bugzilla.rpmfusion.org/buglist.cgi?product=Fedora</a>&amp;component=akmods&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED</dd>
 <h2>AUTHOR</h2>
 <p> Thorsten Leemhuis &lt;fedora [AT] leemhuis [DOT] info&gt;</p>
 <h2>MAINTAINER</h2>

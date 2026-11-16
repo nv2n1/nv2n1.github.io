@@ -22,11 +22,11 @@ description: "git-shell – Restricted login shell for Git-only SSH access"
 <p> <i>git receive-pack &lt;argument&gt;</i>, <i>git upload-pack &lt;argument&gt;</i>, <i>git upload-archive &lt;argument&gt;</i></p>
 <dl>
 <dt>
-<dd> Call the corresponding server-side command to support the client&#8217;s <i>git push</i>, <i>git fetch</i>, or <i>git archive &#8211;remote</i> request.</dl>
+</dt><dd> Call the corresponding server-side command to support the client&#8217;s <i>git push</i>, <i>git fetch</i>, or <i>git archive &#8211;remote</i> request.</dd></dl>
 <p> <i>cvs server</i></p>
 <dl>
 <dt>
-<dd> Imitate a CVS server. See <code><a href="/docs/linux/man/1-git-cvsserver/">git-cvsserver</a></code>(1).</dl>
+</dt><dd> Imitate a CVS server. See <code><a href="/docs/linux/man/1-git-cvsserver/">git-cvsserver</a></code>(1).</dd></dl>
 <p> If a <code>~/git-shell-commands</code> directory is present, <i>git shell</i> will also handle other, custom commands by running &quot;<code>git-shell-commands/&lt;command&gt; &lt;arguments&gt;</code>&quot; from the user&#8217;s home directory.</p>
 <h2>INTERACTIVE USE</h2>
 <p> By default, the commands above can be executed only with the <code>-c</code> option; the shell is not interactive. </p>
@@ -37,7 +37,7 @@ description: "git-shell – Restricted login shell for Git-only SSH access"
 <p> To disable interactive logins, displaying a greeting instead: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ chsh -s /usr/bin/git-shell
 $ mkdir $HOME/git-shell-commands
@@ -51,11 +51,11 @@ exit 128
 EOF
 $ chmod +x $HOME/git-shell-commands/no-interactive-login
 </pre>
-</dl>
+</dd></dl>
 <p> To enable git-cvsserver access (which should generally have the <code>no-interactive-login</code> example above as a prerequisite, as creating the git-shell-commands directory allows interactive logins): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ cat &gt;$HOME/git-shell-commands/cvs &lt;&lt;\EOF
 if ! test $# = 1 &amp;&amp; test &quot;$1&quot; = &quot;server&quot;
@@ -67,7 +67,7 @@ exec git cvsserver server
 EOF
 $ chmod +x $HOME/git-shell-commands/cvs
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), <code><a href="/docs/linux/man/1-git-daemon/">git-daemon</a></code>(1), contrib/git-shell-commands/README</p>
 <h2>GIT</h2>

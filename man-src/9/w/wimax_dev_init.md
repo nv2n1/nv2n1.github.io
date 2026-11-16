@@ -15,7 +15,7 @@ wimax_dev_init - initialize a newly allocated instance
 <h2>Arguments</h2>
 
 <i>wimax_dev</i>
-<dl><dd><dd>WiMAX device descriptor to initialize.</dl>
+<dl><dd></dd><dd>WiMAX device descriptor to initialize.</dd></dl>
 
 <h2>Description</h2>
 

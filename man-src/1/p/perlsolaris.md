@@ -43,13 +43,13 @@ description: "perlsolaris – Perl version 5 on Solaris systems"
 <h2>RESOURCES</h2>
 <p> There are many, many sources for Solaris information. A few of the important ones for perl:</p>
 <dl>
-<dt>Solaris <font SIZE="-1">FAQ</font></p>
-<dd> The Solaris <font SIZE="-1">FAQ</font> is available at &lt;<a rel="nofollow" href="http://www.science.uva.nl/pub/solaris/solaris2.html">http://www.science.uva.nl/pub/solaris/solaris2.html</a>&gt;. </p>
+<dt>Solaris <font SIZE="-1">FAQ</font></dt>
+<dd> The Solaris <font SIZE="-1">FAQ</font> is available at &lt;<a rel="nofollow" href="http://www.science.uva.nl/pub/solaris/solaris2.html">http://www.science.uva.nl/pub/solaris/solaris2.html</a>&gt;. </dd>
 <p> The Sun Managers&#8217; <font SIZE="-1">FAQ</font> is available at &lt;<a href="ftp://ftp.cs.toronto.edu/pub/jdd/sunmanagers/faq">ftp://ftp.cs.toronto.edu/pub/jdd/sunmanagers/faq</a>&gt;</p>
-<dt>Precompiled Binaries</p>
-<dd> Precompiled binaries, links to many sites, and much, much more are available at &lt;<a rel="nofollow" href="http://www.sunfreeware.com/">http://www.sunfreeware.com/</a>&gt; and &lt;<a rel="nofollow" href="http://www.blastwave.org/">http://www.blastwave.org/</a>&gt;.</p>
-<dt>Solaris Documentation</p>
-<dd> All Solaris documentation is available on-line at &lt;<a rel="nofollow" href="http://docs.sun.com/">http://docs.sun.com/</a>&gt;.</dl>
+<dt>Precompiled Binaries</dt>
+<dd> Precompiled binaries, links to many sites, and much, much more are available at &lt;<a rel="nofollow" href="http://www.sunfreeware.com/">http://www.sunfreeware.com/</a>&gt; and &lt;<a rel="nofollow" href="http://www.blastwave.org/">http://www.blastwave.org/</a>&gt;.</dd>
+<dt>Solaris Documentation</dt>
+<dd> All Solaris documentation is available on-line at &lt;<a rel="nofollow" href="http://docs.sun.com/">http://docs.sun.com/</a>&gt;.</dd></dl>
 <h2>SETTING UP</h2>
 <h3>File Extraction Problems on Solaris.</h3>
 <p> Be sure to use a tar program compiled under Solaris (not SunOS 4.x) to extract the perl-5.x.x.tar.gz file. Do not use <font SIZE="-1">GNU</font> tar compiled for SunOS4 on Solaris. (<font SIZE="-1">GNU</font> tar compiled for Solaris should be fine.) When you run SunOS4 binaries on Solaris, the run-time system magically alters pathnames matching m#lib/locale# so that when tar tries to create lib/locale.pm, a file named lib/oldlocale.pm gets created instead. If you found this advice too late and used a SunOS4-compiled tar anyway, you must find the incorrectly renamed file and move it back to lib/locale.pm.</p>
@@ -213,16 +213,16 @@ description: "perlsolaris – Perl version 5 on Solaris systems"
 <p> You should not use perl&#8217;s malloc if you are building with gcc. There are reports of core dumps, especially in the <font SIZE="-1">PDL</font> module. The problem appears to go away under -DDEBUGGING, so it has been difficult to track down. Sun&#8217;s compiler appears to be okay with or without perl&#8217;s malloc. [<font SIZE="-1">XXX</font> further investigation is needed here.]</p>
 <h2>MAKE PROBLEMS.</h2>
 <dl>
-<dt>Dynamic Loading Problems With <font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld</p>
-<dd> If you have problems with dynamic loading using gcc on SunOS or Solaris, and you are using <font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld, see the section &#8220;<font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld&#8221; above.</p>
-<dt>ld.so.1: ./perl: fatal: relocation error:</p>
-<dd> If you get this message on SunOS or Solaris, and you&#8217;re using gcc, it&#8217;s probably the <font SIZE="-1">GNU</font> as or <font SIZE="-1">GNU</font> ld problem in the previous item &#8220;<font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld&#8221;.</p>
-<dt>dlopen: stub interception failed</p>
-<dd> The primary cause of the &#8216;dlopen: stub interception failed&#8217; message is that the <font SIZE="-1">LD_LIBRARY_PATH</font> environment variable includes a directory which is a symlink to /usr/lib (such as /lib). See &#8220;<font SIZE="-1">LD_LIBRARY_PATH&#8221;</font> above.</p>
-<dt>#error &quot;No <font SIZE="-1">DATAMODEL_NATIVE</font> specified&quot;</p>
-<dd> This is a common error when trying to build perl on Solaris 2.6 with a gcc installation from Solaris 2.5 or 2.5.1. The Solaris header files changed, so you need to update your gcc installation. You can either rerun the fixincludes script from gcc or take the opportunity to update your gcc installation.</p>
-<dt>sh: ar: not found</p>
-<dd> This is a message from your shell telling you that the command &#8216;ar&#8217; was not found. You need to check your <font SIZE="-1">PATH</font> environment variable to make sure that it includes the directory with the &#8216;ar&#8217; command. This is a common problem on Solaris, where &#8216;ar&#8217; is in the /usr/ccs/bin/ directory.</dl>
+<dt>Dynamic Loading Problems With <font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld</dt>
+<dd> If you have problems with dynamic loading using gcc on SunOS or Solaris, and you are using <font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld, see the section &#8220;<font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld&#8221; above.</dd>
+<dt>ld.so.1: ./perl: fatal: relocation error:</dt>
+<dd> If you get this message on SunOS or Solaris, and you&#8217;re using gcc, it&#8217;s probably the <font SIZE="-1">GNU</font> as or <font SIZE="-1">GNU</font> ld problem in the previous item &#8220;<font SIZE="-1">GNU</font> as and <font SIZE="-1">GNU</font> ld&#8221;.</dd>
+<dt>dlopen: stub interception failed</dt>
+<dd> The primary cause of the &#8216;dlopen: stub interception failed&#8217; message is that the <font SIZE="-1">LD_LIBRARY_PATH</font> environment variable includes a directory which is a symlink to /usr/lib (such as /lib). See &#8220;<font SIZE="-1">LD_LIBRARY_PATH&#8221;</font> above.</dd>
+<dt>#error &quot;No <font SIZE="-1">DATAMODEL_NATIVE</font> specified&quot;</dt>
+<dd> This is a common error when trying to build perl on Solaris 2.6 with a gcc installation from Solaris 2.5 or 2.5.1. The Solaris header files changed, so you need to update your gcc installation. You can either rerun the fixincludes script from gcc or take the opportunity to update your gcc installation.</dd>
+<dt>sh: ar: not found</dt>
+<dd> This is a message from your shell telling you that the command &#8216;ar&#8217; was not found. You need to check your <font SIZE="-1">PATH</font> environment variable to make sure that it includes the directory with the &#8216;ar&#8217; command. This is a common problem on Solaris, where &#8216;ar&#8217; is in the /usr/ccs/bin/ directory.</dd></dl>
 <h2>MAKE TEST</h2>
 <h3>op/stat.t test 4 in Solaris</h3>
 <p> <i>op/stat.t</i> test 4 may fail if you are on a tmpfs of some sort. Building in /tmp sometimes shows this behavior. The test suite detects if you are building in /tmp, but it may not be able to catch all tmpfs situations.</p>

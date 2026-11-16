@@ -14,12 +14,12 @@ description: "rio_dev_get – Increments the reference count of the RIO device s
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device being referenced</dl>
+</dd><dd>RIO device being referenced</dd></dl>
 <h2>Description</h2>
 <p>Each live reference to a device should be refcounted. </p>
 <p> Drivers for RIO devices should normally record such references in their <code>probe</code> methods, when they bind to a device, and release them by calling <code>rio_dev_put</code>, in their <code>disconnect</code> methods.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

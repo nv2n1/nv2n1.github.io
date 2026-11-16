@@ -15,34 +15,34 @@ description: "arcemiestest – perform simple operations on EMI ES service"
 <p> <code>arcemiestest command URL [arguments]</code> </p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>sstat URL</code></p>
-<dd> takes URL of service implementing ResourceInfo capability, retrieves service description</p>
-<dt><code>submit URL filename</code></p>
-<dd> takes URL of service implementing ActivityCreation capability and file containing ADL activity description, sublits activity to service</p>
-<dt><code>stat URL ID</code></p>
-<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, retireves state of activity</p>
-<dt><code>info</code></p>
-<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, retirieves extended description of the activity</p>
-<dt><code>clean</code></p>
-<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, removes the activity from the service</p>
-<dt><code>kill</code></p>
-<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, cancels execution of the activity at the service</p>
-<dt><code>list</code></p>
-<dd> takes URL of service implementing ActivityInfo capability, retrieves identifiers of available activities</p>
-<dt><code>ivalidate</code></p>
-<dd> takes URL of service implementing ResourceInfo capability, retrieves full and partial service descriptions and validates results. </p>
+<dt><code>sstat URL</code></dt>
+<dd> takes URL of service implementing ResourceInfo capability, retrieves service description</dd>
+<dt><code>submit URL filename</code></dt>
+<dd> takes URL of service implementing ActivityCreation capability and file containing ADL activity description, sublits activity to service</dd>
+<dt><code>stat URL ID</code></dt>
+<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, retireves state of activity</dd>
+<dt><code>info</code></dt>
+<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, retirieves extended description of the activity</dd>
+<dt><code>clean</code></dt>
+<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, removes the activity from the service</dd>
+<dt><code>kill</code></dt>
+<dd> takes URL of service implementing ActivityManagement capability and identifier of activity as returned by submit command, cancels execution of the activity at the service</dd>
+<dt><code>list</code></dt>
+<dd> takes URL of service implementing ActivityInfo capability, retrieves identifiers of available activities</dd>
+<dt><code>ivalidate</code></dt>
+<dd> takes URL of service implementing ResourceInfo capability, retrieves full and partial service descriptions and validates results. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>$(ARC_LOCATION)/share/arc/schema/GLUE2.xsd</code></p>
-<dd> The schema of GLUE2 service description is used to validate response from service. </p>
+<dt><code>$(ARC_LOCATION)/share/arc/schema/GLUE2.xsd</code></dt>
+<dd> The schema of GLUE2 service description is used to validate response from service. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>X509_USER_PROXY</code></p>
-<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </p>
-<dt><code>ARC_LOCATION</code></p>
-<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </p>
+<dt><code>X509_USER_PROXY</code></dt>
+<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </dd>
+<dt><code>ARC_LOCATION</code></dt>
+<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> arcemiestest ivalidate <a rel="nofollow" href="https://testbed.eu-emi.eu/emies">https://testbed.eu-emi.eu/emies</a> </p>

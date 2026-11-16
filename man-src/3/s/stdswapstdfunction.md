@@ -12,13 +12,10 @@ std::swap(std::function) - std::swap(std::function)
 
 <pre><code>template &lt;class R, class... Args&gt;
 (since C++ 11)
-
     void swap(function&lt;R(Args...)&gt; &amp;lhs, function&lt;R(Args...)&gt; &amp;rhs);
 (until C++ 17)
-
     template &lt;class R, class... Args&gt;
     (since C++ 17)
-
         void swap(function&lt;R(Args...)&gt; &amp;lhs, function&lt;R(Args...)&gt; &amp;rhs) noexcept;</code></pre> 
 Overloads the std::swap algorithm for std::function. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

@@ -10,36 +10,14 @@ description: "QuantLib::BootstrapHelper – Base helper class for bootstrapping.
 <p>QuantLib::BootstrapHelper &#8211; Base helper class for bootstrapping. </p>
 <h2>Synopsis</h2>
 <pre><code>Real quoteError () const
-
-
-
 Real quoteValue () const
-
-
-
 bool quoteIsValid () const
-
-
-
 virtual Real impliedQuote () const =0
-
-
-
 virtual void setTermStructure (TS *)
-
-
 sets the term structure to be used for pricing
-
-
 virtual Date earliestDate () const
-
-
 earliest relevant date
-
-
 virtual Date latestDate () const
-
-
 latest relevant date</code></pre>
 <p> Inherits <code>QuantLib::Observer</code>, and <code>QuantLib::Observable</code>. Inherited by <code>RelativeDateRateHelper</code>.</p>
 <h3>Public Member Functions</h3>
@@ -47,36 +25,14 @@ latest relevant date</code></pre>
 <p> <code>BootstrapHelper</code> (Real quote)<br />
  <code>BootstrapHelper interface</code> </p>
 <pre><code>Real quoteError () const
-
-
-
 Real quoteValue () const
-
-
-
 bool quoteIsValid () const
-
-
-
 virtual Real impliedQuote () const =0
-
-
-
 virtual void setTermStructure (TS *)
-
-
 sets the term structure to be used for pricing
-
-
 virtual Date earliestDate () const
-
-
 earliest relevant date
-
-
 virtual Date latestDate () const
-
-
 latest relevant date</code></pre>
 <p> <code>Observer interface</code> </p>
 <p> virtual void <code>update</code> ()<br />
@@ -97,7 +53,7 @@ latest relevant date</code></pre>
 <p>sets the term structure to be used for pricing </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>Being a pointer and not a shared_ptr, the term structure is not guaranteed to remain allocated for the whole life of the rate helper. It is responsibility of the programmer to ensure that the pointer remains valid. It is advised that this method is called only inside the term structure being bootstrapped, setting the pointer to <code>this</code>, i.e., the term structure itself.</dl>
+<dd>Being a pointer and not a shared_ptr, the term structure is not guaranteed to remain allocated for the whole life of the rate helper. It is responsibility of the programmer to ensure that the pointer remains valid. It is advised that this method is called only inside the term structure being bootstrapped, setting the pointer to <code>this</code>, i.e., the term structure itself.</dd></dl>
 <p> Reimplemented in <code>CdsHelper</code>, <code>ZciisInflationHelper</code>, <code>YyiisInflationHelper</code>, and <code>FixedRateBondHelper</code>.</p>
 <h3><code>Date</code> earliestDate () const [virtual]</h3>
 <p>earliest relevant date </p>

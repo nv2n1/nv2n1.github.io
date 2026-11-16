@@ -11,7 +11,6 @@ std::setbuf - std::setbuf
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     void setbuf(std::FILE *stream, char *buffer);</code></pre> 
 Sets the internal buffer to use for I/O operations performed on the C stream stream. 
 If buffer is not null, equivalent to std::setvbuf(stream, buffer, _IOFBF, BUFSIZ) 
@@ -43,12 +42,9 @@ A common error is setting the buffer of stdin or stdout to an array whose lifeti
 
 setbuf may be used to disable buffering on streams that require immediate output 
  // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     using namespace std::chrono_literals;
     std::setbuf(stdout, NULL); // unbuffered stdout

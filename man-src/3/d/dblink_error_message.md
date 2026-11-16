@@ -19,15 +19,15 @@ dblink_error_message(text connname) returns text
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> Name of the connection to use.</dl>
+</dt><dd> Name of the connection to use.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns last error message, or an empty string if there has been no error in this connection.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 SELECT dblink_error_message('dtest1');
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -11,9 +11,7 @@ std::setfill - std::setfill
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iomanip&gt;
-
 template&lt; class CharT &gt;
-
 /*unspecified*/ setfill( CharT c );</code></pre> 
 When used in an expression out &lt;&lt; setfill(c) sets the fill character of the stream out to c. 
 
@@ -35,11 +33,8 @@ The current fill character may be obtained with std::ostream::fill
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;default fill: &quot; &lt;&lt; std::setw(10) &lt;&lt; 42 &lt;&lt; '\n'
               &lt;&lt; &quot;setfill('*'): &quot; &lt;&lt; std::setfill('*')

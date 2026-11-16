@@ -19,14 +19,14 @@ void bson_iter_document(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>document_len</code></p>
-<dd> A location for the length of the document in bytes.</dl>
+<dt><code>document_len</code></dt>
+<dd> A location for the length of the document in bytes.</dd></dl>
 <dl>
-<dt><code>document</code></p>
-<dd> A location for the document buffer.</dl>
+<dt><code>document</code></dt>
+<dd> A location for the document buffer.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_document/">bson_iter_document</a>(3)</code> function shall retrieve the raw buffer of a sub-document from <code>iter</code> \&amp;. <code>iter</code> </p>
 <p> <code>MUST</code> be on an element that is of type BSON_TYPE_DOCUMENT. This can be verified with <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> or the <code>BSON_ITER_HOLDS_DOCUMENT(3)</code> macro. </p>

@@ -11,17 +11,11 @@ description: "sc::MOIndexSpace –"
 <p> Class <code>MOIndexSpace</code> describes a range of molecular orbitals or similar objects that are linear combinations of basis functions (e.g.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;moindexspace.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Types</h3>
 <pre><code>enum IndexOrder { symmetry =  0, energy =  1, undefined =  2 }
-
-
 Describes the ordering of indices.
-
-
-
 Public Member Functions</code></pre>
 <p> <code>MOIndexSpace</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>MOIndexSpace</code> (std::string name, const <code>RefSCMatrix</code> &amp;full_coefs, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; basis, const <code>Ref</code>&lt; <code>Integral</code> &gt; &amp;integral, const vector&lt; int &gt; &amp;offsets, const vector&lt; int &gt; &amp;nmopi, <code>IndexOrder</code> moorder=symmetry, const <code>RefDiagSCMatrix</code> &amp;evals=0)<br />
@@ -81,7 +75,7 @@ Public Member Functions</code></pre>
  <i>offsets</i> &#8212; block offsets<br />
  <i>nmopi</i> &#8212; new block sizes<br />
  <i>moorder</i> &#8212; specifies new ordering of vectors<br />
- <i>evals</i> &#8212; used to sort the vectors</dl>
+ <i>evals</i> &#8212; used to sort the vectors</dd></dl>
 <h3>sc::MOIndexSpace::MOIndexSpace (std::string name, const <code>RefSCMatrix</code> &amp; full_coefs, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; basis, const <code>Ref</code>&lt; <code>Integral</code> &gt; &amp; integral, const <code>RefDiagSCMatrix</code> &amp; evals, int nfzc, int nfzv, <code>IndexOrder</code> moorder = energy)</h3>
 <p>This constructor should be used when the <code>MOIndexSpace</code> object is a subspace of a full orbital space. Similarly to the previous constructor, it constructs an <code>MOIndexSpace</code> object using a symmetry-blocked transformation coefficient matrix (AO by MO) for the full space, basis set, &#8216;eigenvalues&#8217; and the number of orbitals with lowest (nfzc) and highest (nfzv) eigenvalues to be dropped. The orbitals in the constructed space are ordered by energy.</p>
 <h3>sc::MOIndexSpace::MOIndexSpace (std::string name, const <code>RefSCMatrix</code> &amp; full_coefs, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; basis, const <code>Ref</code>&lt; <code>Integral</code> &gt; &amp; integral)</h3>

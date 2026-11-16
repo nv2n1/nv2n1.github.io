@@ -33,22 +33,22 @@ description: "QwtColumnRect –"
 <p>Direction of the column. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>LeftToRight </i></p>
-<dd>From left to right.</p>
-<dt><i>RightToLeft </i></p>
-<dd>From right to left.</p>
-<dt><i>BottomToTop </i></p>
-<dd>From bottom to top.</p>
-<dt><i>TopToBottom </i></p>
-<dd>From top to bottom.</dl>
+<dt><i>LeftToRight </i></dt>
+<dd>From left to right.</dd>
+<dt><i>RightToLeft </i></dt>
+<dd>From right to left.</dd>
+<dt><i>BottomToTop </i></dt>
+<dd>From bottom to top.</dd>
+<dt><i>TopToBottom </i></dt>
+<dd>From top to bottom.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>Qt::Orientation QwtColumnRect::orientation () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Orientation</dl>
+<dd>Orientation</dd></dl>
 <h3>QRectF QwtColumnRect::toRect () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A normalized QRect built from the intervals</dl>
+<dd>A normalized QRect built from the intervals</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

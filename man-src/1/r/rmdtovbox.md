@@ -20,7 +20,7 @@ url: "/docs/linux/man/1-rmdtovbox/"
 
 <dl>
 <dt><a HREF="/docs/linux/man/1-autovbox/">autovbox</a>(1), <a HREF="/docs/linux/man/1-vboxtoau/">vboxtoau</a>(1), <a HREF="/docs/linux/man/1-vboxmode/">vboxmode</a>(1), <a HREF="/docs/linux/man/5-vbox/">vbox</a>(5)
-<dd></dl>
+</dt><dd></dd></dl>
 
 <h2>AUTHOR</h2>
 

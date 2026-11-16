@@ -56,16 +56,16 @@ description: "Reading key presses –"
 <p>types of key ranges </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>brlapi_rangeType_all </i></p>
-<dd>all keys, code must be 0</p>
-<dt><i>brlapi_rangeType_type </i></p>
-<dd>all keys of a given type</p>
-<dt><i>brlapi_rangeType_command </i></p>
-<dd>all keys of a given command block, i.e. matching the key type and command parts</p>
-<dt><i>brlapi_rangeType_key </i></p>
-<dd>a given key with any flags</p>
-<dt><i>brlapi_rangeType_code </i></p>
-<dd>a given key code</dl>
+<dt><i>brlapi_rangeType_all </i></dt>
+<dd>all keys, code must be 0</dd>
+<dt><i>brlapi_rangeType_type </i></dt>
+<dd>all keys of a given type</dd>
+<dt><i>brlapi_rangeType_command </i></dt>
+<dd>all keys of a given command block, i.e. matching the key type and command parts</dd>
+<dt><i>brlapi_rangeType_key </i></dt>
+<dd>a given key with any flags</dd>
+<dt><i>brlapi_rangeType_code </i></dt>
+<dd>a given key code</dd></dl>
 <h2>Function Documentation</h2>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi__acceptAllKeys (<code>brlapi_handle_t</code> *handle)</h3>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi__acceptKeyRanges (<code>brlapi_handle_t</code> *handle, <code>brlapi_range_t</code>ranges[], unsigned intcount)</h3>
@@ -80,10 +80,10 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ranges</i> key ranges, which are inclusive<br />
- <i>count</i> number of ranges</dl>
+ <i>count</i> number of ranges</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The given codes should be raw keycodes (i.e. some driver name was given to <code>brlapi_enterTtyMode()</code>)</dl>
+<dd>The given codes should be raw keycodes (i.e. some driver name was given to <code>brlapi_enterTtyMode()</code>)</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_acceptKeys (<code>brlapi_rangeType_t</code>type, const <code>brlapi_keyCode_t</code>keys[], unsigned intcount)</h3>
 <p>Accept some key presses from the braille keyboard </p>
 <p> This function asks the server to give the provided keys to the application, and not give them to <i>brltty</i>. </p>
@@ -91,38 +91,38 @@ description: "Reading key presses –"
 <dl COMPACT>
 <dd><i>type</i> type of keys to be ignored<br />
  <i>keys</i> array of keys to be ignored<br />
- <i>count</i> number of keys</dl>
+ <i>count</i> number of keys</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The given codes should be <i>brltty</i> commands (NULL or &#8221; was given to <code>brlapi_enterTtyMode()</code>)</dl>
+<dd>The given codes should be <i>brltty</i> commands (NULL or &#8221; was given to <code>brlapi_enterTtyMode()</code>)</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_describeKeyCode (<code>brlapi_keyCode_t</code>code, <code>brlapi_describedKeyCode_t</code> *description)</h3>
 <p>Describe the components of a key code. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>code</i> the keycode to be described<br />
- <i>description</i> pointer to the structure that receives the description</dl>
+ <i>description</i> pointer to the structure that receives the description</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, -1 on error</dl>
+<dd>0 on success, -1 on error</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_expandKeyCode (<code>brlapi_keyCode_t</code>code, <code>brlapi_expandedKeyCode_t</code> *expansion)</h3>
 <p>Expand the components of a key code </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>code</i> the key code to be expanded<br />
- <i>expansion</i> pointer to the structure that receives the components</dl>
+ <i>expansion</i> pointer to the structure that receives the components</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, -1 on error</dl>
+<dd>0 on success, -1 on error</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_ignoreKeyRanges (<code>brlapi_range_t</code>ranges[], unsigned intcount)</h3>
 <p>Ignore some key presses from the braille keyboard </p>
 <p> This function asks the server to give the provided key ranges to <i>brltty</i>, rather than returning them to the application via <code>brlapi_readKey()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ranges</i> key ranges, which are inclusive<br />
- <i>count</i> number of ranges</dl>
+ <i>count</i> number of ranges</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The given codes should be raw keycodes (i.e. some driver name was given to <code>brlapi_enterTtyMode()</code>)</dl>
+<dd>The given codes should be raw keycodes (i.e. some driver name was given to <code>brlapi_enterTtyMode()</code>)</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_ignoreKeys (<code>brlapi_rangeType_t</code>type, const <code>brlapi_keyCode_t</code>keys[], unsigned intcount)</h3>
 <p>Ignore some key presses from the braille keyboard </p>
 <p> This function asks the server to give the provided keys to <i>brltty</i>, rather than returning them to the application via <code>brlapi_readKey()</code>. </p>
@@ -130,10 +130,10 @@ description: "Reading key presses –"
 <dl COMPACT>
 <dd><i>type</i> type of keys to be ignored<br />
  <i>keys</i> array of keys to be ignored<br />
- <i>count</i> number of keys</dl>
+ <i>count</i> number of keys</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The given codes should be <i>brltty</i> commands (NULL or &#8221; was given to <code>brlapi_enterTtyMode()</code>)</dl>
+<dd>The given codes should be <i>brltty</i> commands (NULL or &#8221; was given to <code>brlapi_enterTtyMode()</code>)</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_readKey (intwait, <code>brlapi_keyCode_t</code> *code)</h3>
 <p>Read a key from the braille keyboard </p>
 <p> This function returns one key press&#8217;s code. </p>
@@ -144,27 +144,27 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>wait</i> tells whether the call should block until a key is pressed (1) or should only probe key presses (0);<br />
- <i>code</i> holds the key code if a key press is indeed read.</dl>
+ <i>code</i> holds the key code if a key press is indeed read.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>-1 on error or signal interrupt and *code is then undefined, 0 if block was 0 and no key was pressed so far, or 1 and *code holds the key code.</dl>
+<dd>-1 on error or signal interrupt and *code is then undefined, 0 if block was 0 and no key was pressed so far, or 1 and *code holds the key code.</dd></dl>
 <p> Programming hints: </p>
 <p> If your application is only driven by braille command keypresses, you can just call brlapi_readKey(1, &amp;code) so that it keeps blocking, waiting for keypresses. </p>
 <p> Else, you&#8217;ll probably want to use the file descriptor returned by <code>brlapi_openConnection()</code> in your &#8216;big polling loop&#8217;. For instance: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>in a select() loop, just add it to the readfds and exceptfds file descriptor sets;</p>
-<dt>&bull;</p>
-<dd>in a gtk or atspi application, use g_io_add_watch(fileDescriptor, G_IO_IN|G_IO_ERR|G_IO_HUP, f, data) for adding a callback called f;</p>
-<dt>&bull;</p>
-<dd>in an Xt/Xaw/motif-based application, use XtAppAddInput(app_context, fileDescriptor, XtInputReadMask|XtInputExceptMask, f, data)</p>
-<dt>&bull;</p>
-<dd>etc.</dl>
+<dt>&bull;</dt>
+<dd>in a select() loop, just add it to the readfds and exceptfds file descriptor sets;</dd>
+<dt>&bull;</dt>
+<dd>in a gtk or atspi application, use g_io_add_watch(fileDescriptor, G_IO_IN|G_IO_ERR|G_IO_HUP, f, data) for adding a callback called f;</dd>
+<dt>&bull;</dt>
+<dd>in an Xt/Xaw/motif-based application, use XtAppAddInput(app_context, fileDescriptor, XtInputReadMask|XtInputExceptMask, f, data)</dd>
+<dt>&bull;</dt>
+<dd>etc.</dd></dl>
 <p> and then, when you detect inbound trafic on the file descriptor, do something like this: </p>
 <p> while (brlapi_readKey(0, &amp;code) { // process keycode code // &#8230; } </p>
 <p> The while loop is needed for processing <i>all</i> pending key presses, else some of them may be left in libbrlapi&#8217;s internal key buffer and you wouldn&#8217;t get them immediately. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>If the read is interrupted by a signal, <code>brlapi_readKey()</code> will return -1, brlapi_errno will be BRLAPI_ERROR_LIBCERR and errno will be EINTR.</dl>
+<dd>If the read is interrupted by a signal, <code>brlapi_readKey()</code> will return -1, brlapi_errno will be BRLAPI_ERROR_LIBCERR and errno will be EINTR.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for BrlAPI from the source code.</p>

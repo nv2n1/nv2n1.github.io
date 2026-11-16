@@ -33,75 +33,75 @@ description: "CREATE FUNCTION – define a new function"
 <p> The user that creates the function becomes the owner of the function.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of the function to create.</p>
-<dt><i>argmode</i></p>
-<dd>The mode of an argument: IN, OUT, INOUT, or VARIADIC. If omitted, the default is IN. Only OUT arguments can follow a VARIADIC one. Also, OUT and INOUT arguments cannot be used together with the RETURNS TABLE notation.</p>
-<dt><i>argname</i></p>
-<dd>The name of an argument. Some languages (currently only PL/pgSQL) let you use the name in the function body. For other languages the name of an input argument is just extra documentation. But the name of an output argument is significant, since it defines the column name in the result row type. (If you omit the name for an output argument, the system will choose a default column name.)</p>
-<dt><i>argtype</i></p>
-<dd>The data type(s) of the function&#8217;s arguments (optionally schema-qualified), if any. The argument types can be base, composite, or domain types, or can reference the type of a table column. </p>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of the function to create.</dd>
+<dt><i>argmode</i></dt>
+<dd>The mode of an argument: IN, OUT, INOUT, or VARIADIC. If omitted, the default is IN. Only OUT arguments can follow a VARIADIC one. Also, OUT and INOUT arguments cannot be used together with the RETURNS TABLE notation.</dd>
+<dt><i>argname</i></dt>
+<dd>The name of an argument. Some languages (currently only PL/pgSQL) let you use the name in the function body. For other languages the name of an input argument is just extra documentation. But the name of an output argument is significant, since it defines the column name in the result row type. (If you omit the name for an output argument, the system will choose a default column name.)</dd>
+<dt><i>argtype</i></dt>
+<dd>The data type(s) of the function&#8217;s arguments (optionally schema-qualified), if any. The argument types can be base, composite, or domain types, or can reference the type of a table column. </dd>
 <p> Depending on the implementation language it might also be allowed to specify &#8220;pseudotypes&#8221; such as <code>cstring</code>. Pseudotypes indicate that the actual argument type is either incompletely specified, or outside the set of ordinary SQL data types. </p>
 <p> The type of a column is referenced by writing <i>tablename</i>.<i>columnname</i>%TYPE. Using this feature can sometimes help make a function independent of changes to the definition of a table.</p>
-<dt><i>defexpr</i></p>
-<dd>An expression to be used as default value if the parameter is not specified. The expression has to be coercible to the argument type of the parameter. Only input (including INOUT) parameters can have a default value. All input parameters following a parameter with a default value must have default values as well.</p>
-<dt><i>rettype</i></p>
-<dd>The return data type (optionally schema-qualified). The return type can be a base, composite, or domain type, or can reference the type of a table column. Depending on the implementation language it might also be allowed to specify &#8220;pseudotypes&#8221; such as <code>cstring</code>. If the function is not supposed to return a value, specify <code>void</code> as the return type. </p>
+<dt><i>defexpr</i></dt>
+<dd>An expression to be used as default value if the parameter is not specified. The expression has to be coercible to the argument type of the parameter. Only input (including INOUT) parameters can have a default value. All input parameters following a parameter with a default value must have default values as well.</dd>
+<dt><i>rettype</i></dt>
+<dd>The return data type (optionally schema-qualified). The return type can be a base, composite, or domain type, or can reference the type of a table column. Depending on the implementation language it might also be allowed to specify &#8220;pseudotypes&#8221; such as <code>cstring</code>. If the function is not supposed to return a value, specify <code>void</code> as the return type. </dd>
 <p> When there are OUT or INOUT parameters, the RETURNS clause can be omitted. If present, it must agree with the result type implied by the output parameters: RECORD if there are multiple output parameters, or the same type as the single output parameter. </p>
 <p> The SETOF modifier indicates that the function will return a set of items, rather than a single item. </p>
 <p> The type of a column is referenced by writing <i>tablename</i>.<i>columnname</i>%TYPE.</p>
-<dt><i>colname</i></p>
-<dd>The name of an output column in the RETURNS TABLE syntax. This is effectively another way of declaring a named OUT parameter, except that RETURNS TABLE also implies RETURNS SETOF.</p>
-<dt><i>coltype</i></p>
-<dd>The data type of an output column in the RETURNS TABLE syntax.</p>
-<dt><i>langname</i></p>
-<dd>The name of the language that the function is implemented in. Can be SQL, C, internal, or the name of a user-defined procedural language. For backward compatibility, the name can be enclosed by single quotes.</p>
-<dt><code>WINDOW</code></p>
-<dd>WINDOW indicates that the function is a <i>window function</i> rather than a plain function. This is currently only useful for functions written in C. The WINDOW attribute cannot be changed when replacing an existing function definition.</p>
-<dt><code>IMMUTABLE</code></p>
+<dt><i>colname</i></dt>
+<dd>The name of an output column in the RETURNS TABLE syntax. This is effectively another way of declaring a named OUT parameter, except that RETURNS TABLE also implies RETURNS SETOF.</dd>
+<dt><i>coltype</i></dt>
+<dd>The data type of an output column in the RETURNS TABLE syntax.</dd>
+<dt><i>langname</i></dt>
+<dd>The name of the language that the function is implemented in. Can be SQL, C, internal, or the name of a user-defined procedural language. For backward compatibility, the name can be enclosed by single quotes.</dd>
+<dt><code>WINDOW</code></dt>
+<dd>WINDOW indicates that the function is a <i>window function</i> rather than a plain function. This is currently only useful for functions written in C. The WINDOW attribute cannot be changed when replacing an existing function definition.</dd>
+<dt><code>IMMUTABLE</code></dt>
 <dd>
-<dt><code>STABLE</code></p>
+</dd><dt><code>STABLE</code></dt>
 <dd>
-<dt><code>VOLATILE</code></p>
-<dd>These attributes inform the query optimizer about the behavior of the function. At most one choice can be specified. If none of these appear, VOLATILE is the default assumption. </p>
+</dd><dt><code>VOLATILE</code></dt>
+<dd>These attributes inform the query optimizer about the behavior of the function. At most one choice can be specified. If none of these appear, VOLATILE is the default assumption. </dd>
 <p> IMMUTABLE indicates that the function cannot modify the database and always returns the same result when given the same argument values; that is, it does not do database lookups or otherwise use information not directly present in its argument list. If this option is given, any call of the function with all-constant arguments can be immediately replaced with the function value. </p>
 <p> STABLE indicates that the function cannot modify the database, and that within a single table scan it will consistently return the same result for the same argument values, but that its result could change across SQL statements. This is the appropriate selection for functions whose results depend on database lookups, parameter variables (such as the current time zone), etc. Also note that the <code>current_timestamp</code> family of functions qualify as stable, since their values do not change within a transaction. </p>
 <p> VOLATILE indicates that the function value can change even within a single table scan, so no optimizations can be made. Relatively few database functions are volatile in this sense; some examples are random(), currval(), timeofday(). But note that any function that has side-effects must be classified volatile, even if its result is quite predictable, to prevent calls from being optimized away; an example is setval(). </p>
 <p> For additional details see in the documentation.</p>
-<dt><code>CALLED ON NULL INPUT</code></p>
+<dt><code>CALLED ON NULL INPUT</code></dt>
 <dd>
-<dt><code>RETURNS NULL ON NULL INPUT</code></p>
+</dd><dt><code>RETURNS NULL ON NULL INPUT</code></dt>
 <dd>
-<dt><code>STRICT</code></p>
-<dd>CALLED ON NULL INPUT (the default) indicates that the function will be called normally when some of its arguments are null. It is then the function author&#8217;s responsibility to check for null values if necessary and respond appropriately. </p>
+</dd><dt><code>STRICT</code></dt>
+<dd>CALLED ON NULL INPUT (the default) indicates that the function will be called normally when some of its arguments are null. It is then the function author&#8217;s responsibility to check for null values if necessary and respond appropriately. </dd>
 <p> RETURNS NULL ON NULL INPUT or STRICT indicates that the function always returns null whenever any of its arguments are null. If this parameter is specified, the function is not executed when there are null arguments; instead a null result is assumed automatically.</p>
-<dt><code>[EXTERNAL] SECURITY INVOKER</code></p>
+<dt><code>[EXTERNAL] SECURITY INVOKER</code></dt>
 <dd>
-<dt><code>[EXTERNAL] SECURITY DEFINER</code></p>
-<dd>SECURITY INVOKER indicates that the function is to be executed with the privileges of the user that calls it. That is the default. SECURITY DEFINER specifies that the function is to be executed with the privileges of the user that created it. </p>
+</dd><dt><code>[EXTERNAL] SECURITY DEFINER</code></dt>
+<dd>SECURITY INVOKER indicates that the function is to be executed with the privileges of the user that calls it. That is the default. SECURITY DEFINER specifies that the function is to be executed with the privileges of the user that created it. </dd>
 <p> The key word EXTERNAL is allowed for SQL conformance, but it is optional since, unlike in SQL, this feature applies to all functions not only external ones.</p>
-<dt><i>execution_cost</i></p>
-<dd>A positive number giving the estimated execution cost for the function, in units of cpu_operator_cost. If the function returns a set, this is the cost per returned row. If the cost is not specified, 1 unit is assumed for C-language and internal functions, and 100 units for functions in all other languages. Larger values cause the planner to try to avoid evaluating the function more often than necessary.</p>
-<dt><i>result_rows</i></p>
-<dd>A positive number giving the estimated number of rows that the planner should expect the function to return. This is only allowed when the function is declared to return a set. The default assumption is 1000 rows.</p>
-<dt><i>configuration_parameter</i></p>
+<dt><i>execution_cost</i></dt>
+<dd>A positive number giving the estimated execution cost for the function, in units of cpu_operator_cost. If the function returns a set, this is the cost per returned row. If the cost is not specified, 1 unit is assumed for C-language and internal functions, and 100 units for functions in all other languages. Larger values cause the planner to try to avoid evaluating the function more often than necessary.</dd>
+<dt><i>result_rows</i></dt>
+<dd>A positive number giving the estimated number of rows that the planner should expect the function to return. This is only allowed when the function is declared to return a set. The default assumption is 1000 rows.</dd>
+<dt><i>configuration_parameter</i></dt>
 <dd>
-<dt><i>value</i></p>
-<dd>The SET clause causes the specified configuration parameter to be set to the specified value when the function is entered, and then restored to its prior value when the function exits. SET FROM CURRENT saves the session&#8217;s current value of the parameter as the value to be applied when the function is entered. </p>
+</dd><dt><i>value</i></dt>
+<dd>The SET clause causes the specified configuration parameter to be set to the specified value when the function is entered, and then restored to its prior value when the function exits. SET FROM CURRENT saves the session&#8217;s current value of the parameter as the value to be applied when the function is entered. </dd>
 <p> See SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)] and in the documentation for more information about allowed parameter names and values.</p>
-<dt><i>definition</i></p>
-<dd>A string constant defining the function; the meaning depends on the language. It can be an internal function name, the path to an object file, an SQL command, or text in a procedural language.</p>
-<dt><i>obj_file</i><code>, </code><i>link_symbol</i></p>
-<dd>This form of the AS clause is used for dynamically loadable C language functions when the function name in the C language source code is not the same as the name of the SQL function. The string <i>obj_file</i> is the name of the file containing the dynamically loadable object, and <i>link_symbol</i> is the function&#8217;s link symbol, that is, the name of the function in the C language source code. If the link symbol is omitted, it is assumed to be the same as the name of the SQL function being defined.</p>
-<dt><i>attribute</i></p>
-<dd>The historical way to specify optional pieces of information about the function. The following attributes can appear here:</p>
+<dt><i>definition</i></dt>
+<dd>A string constant defining the function; the meaning depends on the language. It can be an internal function name, the path to an object file, an SQL command, or text in a procedural language.</dd>
+<dt><i>obj_file</i><code>, </code><i>link_symbol</i></dt>
+<dd>This form of the AS clause is used for dynamically loadable C language functions when the function name in the C language source code is not the same as the name of the SQL function. The string <i>obj_file</i> is the name of the file containing the dynamically loadable object, and <i>link_symbol</i> is the function&#8217;s link symbol, that is, the name of the function in the C language source code. If the link symbol is omitted, it is assumed to be the same as the name of the SQL function being defined.</dd>
+<dt><i>attribute</i></dt>
+<dd>The historical way to specify optional pieces of information about the function. The following attributes can appear here:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>isStrict</code></p>
-<dd>Equivalent to STRICT or RETURNS NULL ON NULL INPUT.</p>
-<dt><code>isCachable</code></p>
-<dd>isCachable is an obsolete equivalent of IMMUTABLE; it&#8217;s still accepted for backwards-compatibility reasons.</dl>
+</dd><dl>
+<dt><code>isStrict</code></dt>
+<dd>Equivalent to STRICT or RETURNS NULL ON NULL INPUT.</dd>
+<dt><code>isCachable</code></dt>
+<dd>isCachable is an obsolete equivalent of IMMUTABLE; it&#8217;s still accepted for backwards-compatibility reasons.</dd></dl>
 </dl>
 </dl>
 <p> Attribute names are not case-sensitive.</p>

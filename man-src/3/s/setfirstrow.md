@@ -10,9 +10,6 @@ description: "QuantLib::TridiagonalOperator – Base implementation for tridiago
 <p>QuantLib::TridiagonalOperator &#8211; Base implementation for tridiagonal operator. </p>
 <h2>Synopsis</h2>
 <pre><code>void swap (TridiagonalOperator &amp;)
-
-
-
 Protected Attributes</code></pre>
 <p> Inherited by <code>BSMOperator</code>, <code>DMinus</code>, <code>DPlus</code>, <code>DPlusDMinus</code>, <code>DZero</code>, and PdeOperator&lt; PdeClass &gt;.</p>
 <h3>Classes</h3>
@@ -32,9 +29,6 @@ Protected Attributes</code></pre>
  void swap (TridiagonalOperator &amp;)</p>
 <p>Protected Attributes <code>Utilities</code> </p>
 <pre><code>void swap (TridiagonalOperator &amp;)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Array</code> <code>diagonal_</code> </p>
 <p> <code>Array</code> <code>lowerDiagonal_</code> </p>
@@ -61,6 +55,6 @@ Protected Attributes</code></pre>
 <p>Base implementation for tridiagonal operator. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>to use real time-dependant algebra, you must overload the corresponding operators in the inheriting time-dependent class.</dl>
+<dd>to use real time-dependant algebra, you must overload the corresponding operators in the inheriting time-dependent class.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

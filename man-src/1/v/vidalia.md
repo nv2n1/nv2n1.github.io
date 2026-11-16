@@ -16,20 +16,20 @@ description: "vidalia – Controller GUI for tor"
 <h2>OPTIONS</h2>
 <p> <code>-help</code> Displays this usage message and exits.</p>
 <dl>
-<dt><code>-reset</code></p>
-<dd> Resets ALL stored Vidalia settings.</p>
-<dt><code>-datadir </code><i>&lt;directory&gt;</i></p>
-<dd> Sets Vidalia&#8217;s datadir to <i>&lt;directory&gt;</i></p>
-<dt><code>-pidfile </code><i>&lt;directory/pidfile&gt;</i></p>
-<dd> Sets Vidalia&#8217;s pidfile to <i>&lt;directory/pidfile&gt;</i></p>
-<dt><code>-logfile </code><i>&lt;file&gt;</i></p>
-<dd> Sets the name and location of Vidalia&#8217;s log file. If this option is specified without a <i>loglevel</i>, the default level of &#8216;notice&#8217; will be used.</p>
-<dt><code>-loglevel </code><i>[debug|info|notice|warn|error]</i></p>
-<dd> Sets the verbosity of Vidalia&#8217;s logging. If this option is specified without a <i>logfile</i>, the log messages will be printed to stdout.</p>
-<dt><code>-style </code><i>&lt;directory&gt;</i></p>
-<dd> Sets Vidalia&#8217;s interface style. [Windows|Motif|CDE|Plastique]</p>
-<dt><code>-lang </code><i>&lt;langcode&gt;</i></p>
-<dd> Sets Vidalia&#8217;s language. Run Vidalia with the <i>-help</i> option to see a list of available language codes. </p>
+<dt><code>-reset</code></dt>
+<dd> Resets ALL stored Vidalia settings.</dd>
+<dt><code>-datadir </code><i>&lt;directory&gt;</i></dt>
+<dd> Sets Vidalia&#8217;s datadir to <i>&lt;directory&gt;</i></dd>
+<dt><code>-pidfile </code><i>&lt;directory/pidfile&gt;</i></dt>
+<dd> Sets Vidalia&#8217;s pidfile to <i>&lt;directory/pidfile&gt;</i></dd>
+<dt><code>-logfile </code><i>&lt;file&gt;</i></dt>
+<dd> Sets the name and location of Vidalia&#8217;s log file. If this option is specified without a <i>loglevel</i>, the default level of &#8216;notice&#8217; will be used.</dd>
+<dt><code>-loglevel </code><i>[debug|info|notice|warn|error]</i></dt>
+<dd> Sets the verbosity of Vidalia&#8217;s logging. If this option is specified without a <i>logfile</i>, the log messages will be printed to stdout.</dd>
+<dt><code>-style </code><i>&lt;directory&gt;</i></dt>
+<dd> Sets Vidalia&#8217;s interface style. [Windows|Motif|CDE|Plastique]</dd>
+<dt><code>-lang </code><i>&lt;langcode&gt;</i></dt>
+<dd> Sets Vidalia&#8217;s language. Run Vidalia with the <i>-help</i> option to see a list of available language codes. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tor/">tor</a></code>(1) </p>

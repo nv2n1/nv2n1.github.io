@@ -13,29 +13,29 @@ description: "openct-tool – OpenCT smart card utility"
 <p> openct-tool [options] command &#8230;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> enable debugging; repeat to increase verbosity</p>
-<dt><code>-f</code> <i>configfile</i></p>
-<dd> specify config file (default @openct_conf_path@)</p>
-<dt><code>-r</code> <i>reader</i></p>
-<dd> specify index of reader to use</p>
-<dt><code>-h</code></p>
-<dd> display this message</p>
-<dt><code>-v</code></p>
-<dd> display version and exit</dl>
+<dt><code>-d</code></dt>
+<dd> enable debugging; repeat to increase verbosity</dd>
+<dt><code>-f</code> <i>configfile</i></dt>
+<dd> specify config file (default @openct_conf_path@)</dd>
+<dt><code>-r</code> <i>reader</i></dt>
+<dd> specify index of reader to use</dd>
+<dt><code>-h</code></dt>
+<dd> display this message</dd>
+<dt><code>-v</code></dt>
+<dd> display version and exit</dd></dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>list</code></p>
-<dd> list all readers found</p>
-<dt><code>atr</code></p>
-<dd> print ATR of card in selected reader</p>
-<dt><code>wait</code></p>
-<dd> wait for card to be inserted</p>
-<dt><code>rwait</code></p>
-<dd> wait for reader to be attached</p>
-<dt><code>mf</code></p>
-<dd> try to select main folder of card</p>
-<dt><code>read</code></p>
-<dd> dump memory of synchronous card </p>
+<dt><code>list</code></dt>
+<dd> list all readers found</dd>
+<dt><code>atr</code></dt>
+<dd> print ATR of card in selected reader</dd>
+<dt><code>wait</code></dt>
+<dd> wait for card to be inserted</dd>
+<dt><code>rwait</code></dt>
+<dd> wait for reader to be attached</dd>
+<dt><code>mf</code></dt>
+<dd> try to select main folder of card</dd>
+<dt><code>read</code></dt>
+<dd> dump memory of synchronous card </dd>
 </dl>
 <h2>Index</h2>

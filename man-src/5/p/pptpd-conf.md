@@ -12,34 +12,34 @@ description: "pptpd.conf – PPTP VPN daemon configuration"
 <p><code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8) reads options from this file, usually <i>/etc/pptpd.conf</i>. Most options can be overridden by the command line. The local and remote IP addresses for clients must come from the configuration file or from <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) configuration files.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>option </code><i>option-file</i></p>
-<dd>the name of an option file to be passed to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) in place of the default <i>/etc/ppp/options</i> so that PPTP specific options can be given. Equivalent to the command line <code>&#8211;option</code> option. </p>
-<dt><code>stimeout </code><i>seconds</i></p>
-<dd>number of seconds to wait for a PPTP packet before forking the <code><a href="/docs/linux/man/8-pptpctrl/">pptpctrl</a></code>(8) program to handle the client. The default is 10 seconds. This is a denial of service protection feature. Equivalent to the command line <code>&#8211;stimeout</code> option.</p>
-<dt><code>logwtmp</code></p>
-<dd>update <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) as users connect and disconnect. See <code>wtmp</code>(1).</p>
-<dt><code>debug</code></p>
-<dd>turns on debugging mode, sending debugging information to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3). Has no effect on <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) debugging. Equivalent to the command line <code>&#8211;debug</code> option.</p>
-<dt><code>bcrelay </code><i>internal-interface</i></p>
-<dd>turns on broadcast relay mode, sending all broadcasts received on the server&#8217;s internal interface to the clients. Equivalent to the command line <code>&#8211;bcrelay</code> option. </p>
-<dt><code>connections </code><i>n</i></p>
-<dd>limits the number of client connections that may be accepted. If pptpd is allocating IP addresses (e.g. <code>delegate</code> is not used) then the number of connections is also limited by the <code>remoteip</code> option. The default is 100. </p>
-<dt><code>delegate</code></p>
-<dd>delegates the allocation of client IP addresses to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8). Without this option, which is the default, pptpd manages the list of IP addresses for clients and passes the next free address to pppd. With this option, pptpd does not pass an address, and so pppd may use radius or chap-secrets to allocate an address. </p>
-<dt><code>localip </code><i>ip-specification</i></p>
-<dd>one or many IP addresses to be used at the local end of the tunnelled PPP links between the server and the client. If one address only is given, this address is used for all clients. Otherwise, one address per client must be given, and if there are no free addresses then any new clients will be refused. <code>localip</code> will be ignored if the <code>delegate</code> option is used.</p>
-<dt><code>remoteip </code><i>ip-specification</i></p>
-<dd>a list of IP addresses to assign to remote PPTP clients. Each connected client must have a different address, so there must be at least as many addresses as you have simultaneous clients, and preferably some spare, since you cannot change this list without restarting pptpd. A warning will be sent to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) when the IP address pool is exhausted. <code>remoteip</code> will be ignored if the <code>delegate</code> option is used.</p>
-<dt><code>noipparam</code></p>
-<dd>by default, the original client IP address is given to ip-up scripts using the <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) option <code>ipparam.</code> The <code>noipparam</code> option prevents this. Equivalent to the command line <code>&#8211;noipparam</code> option.</p>
-<dt><code>listen </code><i>ip-address</i></p>
-<dd>the local interface IP address to listen on for incoming PPTP connections (TCP port 1723). Equivalent to the command line <code>&#8211;listen</code> option.</p>
-<dt><code>vrf </code><i>vrf-name</i></p>
-<dd>VRF to use for the TCP listening socket as well as the GRE packets. Equivalent to the command line <code>&#8211;vrf</code> option.</p>
-<dt><code>pidfile </code><i>pid-file</i></p>
-<dd>specifies an alternate location to store the process ID file (default /var/run/pptpd.pid). Equivalent to the command line <code>&#8211;pidfile</code> option.</p>
-<dt><code>speed </code><i>speed</i></p>
-<dd>specifies a speed (in bits per second) to pass to the PPP daemon as the interface speed for the tty/pty pair. This is ignored by some PPP daemons, such as Linux&#8217;s <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8). The default is 115200 bytes per second, which some implementations interpret as meaning &quot;no limit&quot;. Equivalent to the command line <code>&#8211;speed</code> option.</dl>
+<dt><code>option </code><i>option-file</i></dt>
+<dd>the name of an option file to be passed to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) in place of the default <i>/etc/ppp/options</i> so that PPTP specific options can be given. Equivalent to the command line <code>&#8211;option</code> option. </dd>
+<dt><code>stimeout </code><i>seconds</i></dt>
+<dd>number of seconds to wait for a PPTP packet before forking the <code><a href="/docs/linux/man/8-pptpctrl/">pptpctrl</a></code>(8) program to handle the client. The default is 10 seconds. This is a denial of service protection feature. Equivalent to the command line <code>&#8211;stimeout</code> option.</dd>
+<dt><code>logwtmp</code></dt>
+<dd>update <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) as users connect and disconnect. See <code>wtmp</code>(1).</dd>
+<dt><code>debug</code></dt>
+<dd>turns on debugging mode, sending debugging information to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3). Has no effect on <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) debugging. Equivalent to the command line <code>&#8211;debug</code> option.</dd>
+<dt><code>bcrelay </code><i>internal-interface</i></dt>
+<dd>turns on broadcast relay mode, sending all broadcasts received on the server&#8217;s internal interface to the clients. Equivalent to the command line <code>&#8211;bcrelay</code> option. </dd>
+<dt><code>connections </code><i>n</i></dt>
+<dd>limits the number of client connections that may be accepted. If pptpd is allocating IP addresses (e.g. <code>delegate</code> is not used) then the number of connections is also limited by the <code>remoteip</code> option. The default is 100. </dd>
+<dt><code>delegate</code></dt>
+<dd>delegates the allocation of client IP addresses to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8). Without this option, which is the default, pptpd manages the list of IP addresses for clients and passes the next free address to pppd. With this option, pptpd does not pass an address, and so pppd may use radius or chap-secrets to allocate an address. </dd>
+<dt><code>localip </code><i>ip-specification</i></dt>
+<dd>one or many IP addresses to be used at the local end of the tunnelled PPP links between the server and the client. If one address only is given, this address is used for all clients. Otherwise, one address per client must be given, and if there are no free addresses then any new clients will be refused. <code>localip</code> will be ignored if the <code>delegate</code> option is used.</dd>
+<dt><code>remoteip </code><i>ip-specification</i></dt>
+<dd>a list of IP addresses to assign to remote PPTP clients. Each connected client must have a different address, so there must be at least as many addresses as you have simultaneous clients, and preferably some spare, since you cannot change this list without restarting pptpd. A warning will be sent to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) when the IP address pool is exhausted. <code>remoteip</code> will be ignored if the <code>delegate</code> option is used.</dd>
+<dt><code>noipparam</code></dt>
+<dd>by default, the original client IP address is given to ip-up scripts using the <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) option <code>ipparam.</code> The <code>noipparam</code> option prevents this. Equivalent to the command line <code>&#8211;noipparam</code> option.</dd>
+<dt><code>listen </code><i>ip-address</i></dt>
+<dd>the local interface IP address to listen on for incoming PPTP connections (TCP port 1723). Equivalent to the command line <code>&#8211;listen</code> option.</dd>
+<dt><code>vrf </code><i>vrf-name</i></dt>
+<dd>VRF to use for the TCP listening socket as well as the GRE packets. Equivalent to the command line <code>&#8211;vrf</code> option.</dd>
+<dt><code>pidfile </code><i>pid-file</i></dt>
+<dd>specifies an alternate location to store the process ID file (default /var/run/pptpd.pid). Equivalent to the command line <code>&#8211;pidfile</code> option.</dd>
+<dt><code>speed </code><i>speed</i></dt>
+<dd>specifies a speed (in bits per second) to pass to the PPP daemon as the interface speed for the tty/pty pair. This is ignored by some PPP daemons, such as Linux&#8217;s <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8). The default is 115200 bytes per second, which some implementations interpret as meaning &quot;no limit&quot;. Equivalent to the command line <code>&#8211;speed</code> option.</dd></dl>
 <h2>Notes</h2>
 <p>An <i>ip-specification</i> above (for the <code>localip</code> and <code>remoteip</code> tags) may be a list of IP addresses (for example 192.168.0.2,192.168.0.3), a range (for example 192.168.0.1-254 or 192.168.0-255.2) or some combination (for example 192.168.0.2,192.168.0.5-8). For some valid pairs might be (depending on use of the VPN): <code>localip </code><i>192.168.0.1</i><br />
  <code>remoteip </code><i>192.168.0.2-254</i> or <code>localip </code><i>192.168.1.2-254</i><br />

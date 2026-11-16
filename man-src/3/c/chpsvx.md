@@ -19,7 +19,7 @@ description: "chpsvx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHPSVX uses the diagonal pivoting factorization A = U*D*U**H or
  A = L*D*L**H to compute the solution to a complex system of linear
@@ -28,11 +28,11 @@ description: "chpsvx.f –"
  Error bounds on the solution and a condition estimate are also
  provided.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 The following steps are performed : 1. If FACT = 'N', the diagonal pivoting method is used to factor A as A = U * D * U * *H, if UPLO = 'U', or
                                                                                                                                                  A = L * D * L * *H,
@@ -52,11 +52,11 @@ The following steps are performed : 1. If FACT = 'N', the diagonal pivoting meth
     matrix and calculate error bounds and backward error estimates
     for it.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>FACT</i> </p>
+</dt><dd> <i>FACT</i> </dd>
 <pre>
           FACT is CHARACTER*1
           Specifies whether or not the factored form of A has been
@@ -202,18 +202,18 @@ The following steps are performed : 1. If FACT = 'N', the diagonal pivoting meth
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The packed storage scheme is illustrated by the following example
   when N = 4, UPLO = 'U':
@@ -225,8 +225,9 @@ The following steps are performed : 1. If FACT = 'N', the diagonal pivoting meth
   Packed storage of the upper triangle of A:
   AP = [ a11, a12, a22, a13, a23, a33, a14, a24, a34, a44 ]
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 277 of file chpsvx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

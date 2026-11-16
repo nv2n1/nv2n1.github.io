@@ -15,14 +15,14 @@ mongoc_gridfs_create_file_from_stream (mongoc_gridfs_t *gridfs,
  mongoc_gridfs_file_opt_t *opt);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>gridfs</code></p>
-<dd>A <code><a href="/docs/linux/man/3-mongoc_gridfs_t/">mongoc_gridfs_t</a>(3)</code> \&amp;.</dl>
+<dt><code>gridfs</code></dt>
+<dd>A <code><a href="/docs/linux/man/3-mongoc_gridfs_t/">mongoc_gridfs_t</a>(3)</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>opt</code></p>
-<dd>A <code>mongoc_gridfs_file_opt_t</code> to specify file options.</dl>
+<dt><code>opt</code></dt>
+<dd>A <code>mongoc_gridfs_file_opt_t</code> to specify file options.</dd></dl>
 <h2>Description</h2>
 <p>This function shall create a new <code>mongoc_gridfs_file_t</code> and fill it with the contents of <code>stream</code> \&amp;. Note that this function will read from <code>stream</code> until End of File, making it bet suited for file-backed streams. </p>
 <h2>Returns</h2>

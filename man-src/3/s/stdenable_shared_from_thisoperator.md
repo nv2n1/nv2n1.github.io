@@ -30,12 +30,9 @@ The private std::weak_ptr&lt;T&gt; member is not affected by this assignment ope
 
 Note: enable_shared_from_this::operator= is defined as protected in order to prevent accidental slicing but allow derived classes to have default assignment operators. 
  // Run this code <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
 class SharedInt : public std::enable_shared_from_this&lt;SharedInt&gt;
-
 {
-
   public:
     explicit SharedInt(int n)
         : mNumber(n)
@@ -51,7 +48,6 @@ class SharedInt : public std::enable_shared_from_this&lt;SharedInt&gt;
     {
         return mNumber;
     }
-
   private:
     int mNumber;
 };

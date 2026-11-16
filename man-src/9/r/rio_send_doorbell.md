@@ -14,14 +14,14 @@ description: "rio_send_doorbell – Send a doorbell message to a device"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>Doorbell message data</dl>
+<dd>Doorbell message data</dd></dl>
 <h2>Description</h2>
 <p>Send a doorbell message to a RIO device. The doorbell message has a 16-bit info field provided by the <i>data</i> argument.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

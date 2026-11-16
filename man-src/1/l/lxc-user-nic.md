@@ -16,14 +16,14 @@ description: "lxc-user-nic – Create and attach a nic to another network namesp
 <p> It will consult the configuration file <i>/etc/lxc/lxc-usernet</i> to determine the number of interfaces which the calling user is allowed to create, and which bridge he may attach them to. It tracks the number of interfaces each user has created using the file <i>/run/lxc/nics</i>. It ensures that the calling user is privileged over the network namespace to which the interface will be attached.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>pid</i></p>
-<dd> The process id for the task to whose network namespace the interface should be attached.</p>
-<dt><i>type</i></p>
-<dd> The network interface type to attach. Currently only veth is supported. With this type, two interfaces representing each tunnel endpoint are created. One endpoint will be attached to the specified bridge, while the other will be passed into the container.</p>
-<dt><i>bridge</i></p>
-<dd> The bridge to which to attach the network interface, for instance <i>lxcbr0</i>.</p>
-<dt><i>nicname</i></p>
-<dd> The desired interface name in the container. This will be <i>eth0</i> if unspecified.</dl>
+<dt><i>pid</i></dt>
+<dd> The process id for the task to whose network namespace the interface should be attached.</dd>
+<dt><i>type</i></dt>
+<dd> The network interface type to attach. Currently only veth is supported. With this type, two interfaces representing each tunnel endpoint are created. One endpoint will be attached to the specified bridge, while the other will be passed into the container.</dd>
+<dt><i>bridge</i></dt>
+<dd> The bridge to which to attach the network interface, for instance <i>lxcbr0</i>.</dd>
+<dt><i>nicname</i></dt>
+<dd> The desired interface name in the container. This will be <i>eth0</i> if unspecified.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>lxc</code>(1), <code><a href="/docs/linux/man/1-lxc-start/">lxc-start</a></code>(1), <code><a href="/docs/linux/man/5-lxc-usernet/">lxc-usernet</a></code>(5)</p>
 <h2>AUTHOR</h2>

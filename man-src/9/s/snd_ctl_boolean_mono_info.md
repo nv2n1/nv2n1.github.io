@@ -15,11 +15,11 @@ snd_ctl_boolean_mono_info - Helper function for a standard boolean info callback
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>the kcontrol instance</dl>
+<dl><dd></dd><dd>the kcontrol instance</dd></dl>
  
 
  <i>uinfo</i>
-<dl><dd>info to store</dl>
+<dl><dd>info to store</dd></dl>
 
 <h2>Description</h2>
 

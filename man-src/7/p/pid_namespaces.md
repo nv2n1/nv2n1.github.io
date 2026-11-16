@@ -43,9 +43,9 @@ description: "pid_namespaces – overview of Linux PID namespaces"
 <p> Calling <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2) on the path <i>/proc/self</i> yields the process ID of the caller in the PID namespace of the procfs mount (i.e., the PID namespace of the process that mounted the procfs). This can be useful for introspection purposes, when a process wants to discover its PID in other namespaces.</p>
 <h3>/proc files</h3>
 <dl>
-<dt><code>/proc/sys/kernel/ns_last_pid</code> (since Linux 3.3)</p>
-<dd>This file (which is virtualized per PID namespace) displays the last PID that was allocated in this PID namespace. When the next PID is allocated, the kernel will search for the lowest unallocated PID that is greater than this value, and when this file is subsequently read it will show that PID.</p>
-<dd>This file is writable by a process that has the <code>CAP_SYS_ADMIN</code> or (since Linux 5.9) <code>CAP_CHECKPOINT_RESTORE</code> capability inside the user namespace that owns the PID namespace. This makes it possible to determine the PID that is allocated to the next process that is created inside this PID namespace.</dl>
+<dt><code>/proc/sys/kernel/ns_last_pid</code> (since Linux 3.3)</dt>
+<dd>This file (which is virtualized per PID namespace) displays the last PID that was allocated in this PID namespace. When the next PID is allocated, the kernel will search for the lowest unallocated PID that is greater than this value, and when this file is subsequently read it will show that PID.</dd>
+<dd>This file is writable by a process that has the <code>CAP_SYS_ADMIN</code> or (since Linux 5.9) <code>CAP_CHECKPOINT_RESTORE</code> capability inside the user namespace that owns the PID namespace. This makes it possible to determine the PID that is allocated to the next process that is created inside this PID namespace.</dd></dl>
 <h3>Miscellaneous</h3>
 <p>When a process ID is passed over a UNIX domain socket to a process in a different PID namespace (see the description of <code>SCM_CREDENTIALS</code> in <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7)), it is translated into the corresponding PID value in the receiving process&#8217;s PID namespace.</p>
 <h2>Conforming To</h2>

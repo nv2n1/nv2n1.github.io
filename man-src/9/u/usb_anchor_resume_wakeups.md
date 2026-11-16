@@ -15,7 +15,7 @@ usb_anchor_resume_wakeups -
 <h2>Arguments</h2>
 
 <i>anchor</i>
-<dl><dd><dd>the anchor you want to resume wakeups on</dl>
+<dl><dd></dd><dd>the anchor you want to resume wakeups on</dd></dl>
 
 <h2>Description</h2>
 

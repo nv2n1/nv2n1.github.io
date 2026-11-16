@@ -19,23 +19,23 @@ ndctl zero - labels&lt;nmem0&gt;[&lt;nmem1&gt;..&lt;nmemN&gt;][&lt;options&gt;]
 <p> &lt;memory device(s)&gt;&#8230;</p>
 <dl>
 <dt>
-<dd> One or more <i>nmemX</i> device names. The keyword <i>all</i> can be specified to operate on every dimm in the system, optionally filtered by bus id (see &#8211;bus= option).</dl>
+</dt><dd> One or more <i>nmemX</i> device names. The keyword <i>all</i> can be specified to operate on every dimm in the system, optionally filtered by bus id (see &#8211;bus= option).</dd></dl>
 <p> -b, &#8211;bus=</p>
 <dl>
 <dt>
-<dd> Limit operation to memory devices (dimms) that are on the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dl>
+</dt><dd> Limit operation to memory devices (dimms) that are on the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Turn on verbose debug messages in the library (if ndctl was built with logging and debug enabled).</dl>
+</dt><dd> Turn on verbose debug messages in the library (if ndctl was built with logging and debug enabled).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> m[blue]<code>NVDIMM Namespace Specification</code>m[]<font SIZE="-2">[1]</font></p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> NVDIMM Namespace Specification</p>
+<dt> 1.</dt>
+<dd> NVDIMM Namespace Specification</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf">http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf</a></dl>
+</dt><dd> <a rel="nofollow" href="http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf">http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf</a></dd></dl>
 </dl>
 <h2>Index</h2>

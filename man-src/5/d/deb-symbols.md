@@ -23,14 +23,14 @@ description: "deb-symbols – Debian’s extended shared library information fil
 <p> Each exported <i>symbol</i> (listed as <i>name</i>@<i>version</i>, with <i>version</i> being &#8220;Base&#8221; if the library is not versioned) is associated to a <i>minimal-version</i> of its dependency template (the main dependency template is always used and will end up being combined with the dependency template referenced by <i>id-of-dependency-template</i> if present). The first alternative dependency template is numbered 1, the second one 2, etc. Each column is separated by exactly a single whitespace. </p>
 <p> Each entry for a library can also have some fields of meta-information. Those fields are stored on lines starting with an asterisk. Currently, the only valid fields are:</p>
 <dl>
-<dt><code>Build-Depends-Package</code></p>
-<dd>It indicates the name of the &#8220;-dev&#8221; package associated to the library and is used by <code>dpkg-shlibdeps</code> to make sure that the dependency generated is at least as strict as the corresponding build dependency (since dpkg 1.14.13).</p>
-<dt><code>Build-Depends-Packages</code></p>
-<dd>The same as <code>Build-Depends-Package</code> but accepts a comma-separated list of package names (since dpkg 1.20.0). This field will override any <code>Build-Depends-Package</code> field present, and is mostly useful with &#8220;-dev&#8221; packages and metapackages depending on these, say for a transition period.</p>
-<dt><code>Allow-Internal-Symbol-Groups</code></p>
-<dd>It indicates what internal symbol groups should be ignored, as a whitespace separated list, so that the symbols contained in those groups get included in the output file (since dpkg 1.20.1). This should only be necessary for toolchain packages providing those internal symbols. The available groups are system dependent, for <font SIZE="-1">ELF</font> and GNU-based systems these are <code>aeabi</code> and <code>gomp</code>.</p>
-<dt><code>Ignore-Blacklist-Groups</code></p>
-<dd>A deprecated alias for <code>Allow-Internal-Symbol-Groups</code> (since dpkg 1.20.1, supported since dpkg 1.17.6).</dl>
+<dt><code>Build-Depends-Package</code></dt>
+<dd>It indicates the name of the &#8220;-dev&#8221; package associated to the library and is used by <code>dpkg-shlibdeps</code> to make sure that the dependency generated is at least as strict as the corresponding build dependency (since dpkg 1.14.13).</dd>
+<dt><code>Build-Depends-Packages</code></dt>
+<dd>The same as <code>Build-Depends-Package</code> but accepts a comma-separated list of package names (since dpkg 1.20.0). This field will override any <code>Build-Depends-Package</code> field present, and is mostly useful with &#8220;-dev&#8221; packages and metapackages depending on these, say for a transition period.</dd>
+<dt><code>Allow-Internal-Symbol-Groups</code></dt>
+<dd>It indicates what internal symbol groups should be ignored, as a whitespace separated list, so that the symbols contained in those groups get included in the output file (since dpkg 1.20.1). This should only be necessary for toolchain packages providing those internal symbols. The available groups are system dependent, for <font SIZE="-1">ELF</font> and GNU-based systems these are <code>aeabi</code> and <code>gomp</code>.</dd>
+<dt><code>Ignore-Blacklist-Groups</code></dt>
+<dd>A deprecated alias for <code>Allow-Internal-Symbol-Groups</code> (since dpkg 1.20.1, supported since dpkg 1.17.6).</dd></dl>
 <h2>Examples</h2>
 <h3>Simple symbols file</h3>
 <pre> lib<a href="ftp://ftp.so.3">ftp.so.3</a> libftp3 #MINVER#

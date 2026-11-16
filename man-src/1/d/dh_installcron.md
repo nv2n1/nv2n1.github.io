@@ -15,20 +15,20 @@ description: "dh_installcron – install cron scripts into etc/cron.*"
 <p> <code>dh_installcron</code> is a debhelper program that is responsible for installing cron scripts.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.cron.daily</p>
+<dt>debian/<i>package</i>.cron.daily</dt>
 <dd>
-<dt>debian/<i>package</i>.cron.weekly</p>
+</dd><dt>debian/<i>package</i>.cron.weekly</dt>
 <dd>
-<dt>debian/<i>package</i>.cron.monthly</p>
+</dd><dt>debian/<i>package</i>.cron.monthly</dt>
 <dd>
-<dt>debian/<i>package</i>.cron.hourly</p>
+</dd><dt>debian/<i>package</i>.cron.hourly</dt>
 <dd>
-<dt>debian/<i>package</i>.cron.d</p>
-<dd> Installed into the appropriate <i>etc/cron.*/</i> directory in the package build directory.</dl>
+</dd><dt>debian/<i>package</i>.cron.d</dt>
+<dd> Installed into the appropriate <i>etc/cron.*/</i> directory in the package build directory.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;name=</code><i>name</i></p>
-<dd> Look for files named <i>debian/package.name.cron.*</i> and install them as <i>etc/cron.*/name</i>, instead of using the usual files and installing them as the package name.</dl>
+<dt><code>&#8211;name=</code><i>name</i></dt>
+<dd> Look for files named <i>debian/package.name.cron.*</i> and install them as <i>etc/cron.*/name</i>, instead of using the usual files and installing them as the package name.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

@@ -11,7 +11,6 @@ std::atof - std::atof
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     double atof(const char *str);</code></pre> 
 Interprets a floating point value in a byte string pointed to by str. 
 Function discards any whitespace characters (as determined by std::isspace()) until first non-whitespace character is found. Then it takes as many characters as possible to form a valid floating-point representation and converts them to a floating-point value. The valid floating-point value can be one of the following: 
@@ -43,10 +42,8 @@ double value corresponding to the contents of str on success. If the converted v
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdlib&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::atof(&quot;0.0000000123&quot;) &lt;&lt; &quot;\n&quot;
               &lt;&lt; std::atof(&quot;0.012&quot;) &lt;&lt; &quot;\n&quot;

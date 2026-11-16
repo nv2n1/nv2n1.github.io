@@ -14,16 +14,16 @@ description: "debugfs_rename – rename a file/directory in the debugfs filesyst
 <p><i>old_dir</i></p>
 <dl>
 <dd>
-<dd>a pointer to the parent dentry for the renamed object. This should be a directory dentry.</dl>
+</dd><dd>a pointer to the parent dentry for the renamed object. This should be a directory dentry.</dd></dl>
 <p> <i>old_dentry</i></p>
 <dl>
-<dd>dentry of an object to be renamed.</dl>
+<dd>dentry of an object to be renamed.</dd></dl>
 <p> <i>new_dir</i></p>
 <dl>
-<dd>a pointer to the parent dentry where the object should be moved. This should be a directory dentry.</dl>
+<dd>a pointer to the parent dentry where the object should be moved. This should be a directory dentry.</dd></dl>
 <p> <i>new_name</i></p>
 <dl>
-<dd>a pointer to a string containing the target name.</dl>
+<dd>a pointer to a string containing the target name.</dd></dl>
 <h2>Description</h2>
 <p>This function renames a file/directory in debugfs. The target must not exist for rename to succeed. </p>
 <p> This function will return a pointer to old_dentry (which is updated to reflect renaming) if it succeeds. If an error occurs, <code>NULL</code> will be returned. </p>

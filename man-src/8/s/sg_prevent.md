@@ -15,16 +15,16 @@ description: "sg_prevent – send SCSI PREVENT ALLOW MEDIUM REMOVAL command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;allow</code></p>
-<dd>allow medium removal. This is equivalent to setting to &#8216;&#8211;prevent=2&#8217;. Cannot be used with <i>&#8211;prevent=PC</i> option (i.e. either use no options (hence prevent removal), this option or <i>&#8211;prevent=PC</i>).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-p</code>, <code>&#8211;prevent</code>=<i>PC</i></p>
-<dd>where <i>PC</i> is a prevent code value. Defined values are: 0 allows removal, 1 prevents removal (default), 2 allows persistent removal while 3 prevents persistent removal. &quot;Persistent&quot; in this context means that the initiator (port) that successfully uses code 3 blocks other initiators (ports) from allowing removal. A &quot;persistent prevent&quot; state can be cleared by the owner allowing persistent removal (code 2) or a power cycle (or anything that resets the device (LU)) or some special commands (e.g. various service actions of Persistent Reserve Out, see SPC-3).</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-a</code>, <code>&#8211;allow</code></dt>
+<dd>allow medium removal. This is equivalent to setting to &#8216;&#8211;prevent=2&#8217;. Cannot be used with <i>&#8211;prevent=PC</i> option (i.e. either use no options (hence prevent removal), this option or <i>&#8211;prevent=PC</i>).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-p</code>, <code>&#8211;prevent</code>=<i>PC</i></dt>
+<dd>where <i>PC</i> is a prevent code value. Defined values are: 0 allows removal, 1 prevents removal (default), 2 allows persistent removal while 3 prevents persistent removal. &quot;Persistent&quot; in this context means that the initiator (port) that successfully uses code 3 blocks other initiators (ports) from allowing removal. A &quot;persistent prevent&quot; state can be cleared by the owner allowing persistent removal (code 2) or a power cycle (or anything that resets the device (LU)) or some special commands (e.g. various service actions of Persistent Reserve Out, see SPC-3).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Exit Status</h2>
 <p>The exit status of sg_prevent is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
 <h2>Authors</h2>

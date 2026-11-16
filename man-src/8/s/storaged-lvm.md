@@ -10,20 +10,20 @@ description: "storaged-lvm – The storaged command line tool"
 <p>storaged-lvm &#8211; The storaged command line tool</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>storaged-lvm</code> [<code>-b</code>] [<code>-f</code>] <i>COMMAND</i></dl>
+<dt> <code>storaged-lvm</code> [<code>-b</code>] [<code>-f</code>] <i>COMMAND</i></dt></dl>
 <h2>Description</h2>
 <p><code>storaged-lvm</code></p>
-<dd>is a helper program used by Storaged to query <i>the state of LVM2</i> via the lvm2app library.</p>
+<dd>is a helper program used by Storaged to query <i>the state of LVM2</i> via the lvm2app library.</dd>
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Show help options.</dl>
+<dd>Show help options.</dd></dl>
 <p> <code>-b</code></p>
 <dl>
-<dd>Print the result of <i>COMMAND</i> in binary form (serialized).</dl>
+<dd>Print the result of <i>COMMAND</i> in binary form (serialized).</dd></dl>
 <p> <code>-f</code></p>
 <dl>
-<dd>Use an alternative LVM system directory; no lock.</dl>
+<dd>Use an alternative LVM system directory; no lock.</dd></dl>
 <h2>Author</h2>
 <p>Written by Marius Vollmer &lt;marius.vollmer [at] gmail.com&gt;.</p>
 <h2>Bugs</h2>

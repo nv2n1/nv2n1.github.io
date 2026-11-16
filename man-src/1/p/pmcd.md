@@ -17,66 +17,64 @@ description: "pmcd – performance metrics collector daemon"
 <p> The agents may be processes started by <code>pmcd</code>, independent processes or Dynamic Shared Objects (DSOs, see <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3)) attached to <code>pmcd</code>&#8216;s address space. The configuration section below describes how connections to agents are specified. </p>
 <p> The options to <code>pmcd</code> are as follows.</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> Disable service advertisement. By default, <code>pmcd</code> will advertise its presence on the network using any available mechanisms (such as Avahi/DNS-SD), assisting remote monitoring tools with finding it. These mechanisms are disabled with this option.</p>
-<dt><code>-c</code> <i>config</i></p>
-<dd> On startup <code>pmcd</code> uses a configuration file from either the <i>$PCP_PMCDCONF_PATH</i>, configuration variable in <i>/etc/pcp.conf</i>, or an environment variable of the same name. However, these values may be overridden with <i>config</i> using this option. The format of this configuration file is described below.</p>
-<dt><code>-C</code> <i>dirname</i></p>
-<dd> Specify the path to the Network Security Services certificate database, for (optional) secure connections. The default is <code>/etc/pki/nssdb</code>. Refer also to the <code>-P</code> option. If it does not already exist, this database can be created using the <code>certutil</code> utility. This process and other certificate database maintenance information is provided in the <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) manual page and the online PCP tutorials.</p>
-<dt><code>-f</code></p>
-<dd> By default <code>pmcd</code> is started as a daemon. The <code>-f</code> option indicates that it should run in the foreground. This is most useful when trying to diagnose problems with misbehaving agents.</p>
-<dt><code>-H</code> <i>hostname</i></p>
-<dd> This option can be used to set the hostname that <code>pmcd</code> will use to represent this instance of itself. This is used by client tools like <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) when reporting on the (possibly remote) host. If this option is not set, the pmcd.hostname metric will match that returned by <code><a href="/docs/linux/man/1-pmhostname/">pmhostname</a></code>(1). Refer to the manual page for that tool for full details on how the hostname is evaluated.</p>
-<dt><code>-i</code> <i>ipaddress</i></p>
-<dd> This option is usually only used on hosts with more than one network interface. If no <code>-i</code> options are specified <code>pmcd</code> accepts connections made to any of its host&#8217;s IP (Internet Protocol) addresses. The <code>-i</code> option is used to specify explicitly an IP address that connections should be accepted on. <i>ipaddress</i> should be in the standard dotted form (e.g. 100.23.45.6). The <code>-i</code> option may be used multiple times to define a list of IP addresses. Connections made to any other IP addresses the host has will be refused. This can be used to limit connections to one network interface if the host is a network gateway. It is also useful if the host takes over the IP address of another host that has failed. In such a situation only the standard IP addresses of the host should be given (not the ones inherited from the failed host). This allows PCP applications to determine that a host has failed, rather than connecting to the host that has assumed the identity of the failed host.</p>
-<dt><code>-l</code> <i>logfile</i></p>
-<dd> By default a log file named <i>pmcd.log</i> is written in the directory <code>$PCP_LOG_DIR/pmcd</code>. The <code>-l</code> option causes the log file to be written to <i>logfile</i> instead of the default. If the log file cannot be created or is not writable, output is written to the standard error instead.</p>
-<dt><code>-L</code> <i>bytes</i></p>
-<dd> <i>PDU</i>s received by <code>pmcd </code> from monitoring clients are restricted to a maximum size of 65536 bytes by default to defend against Denial of Service attacks. The <code>-L </code> option may be used to change the maximum incoming <i>PDU </i> size.</p>
-<dt><code>-M</code> <i>certname</i></p>
-<dd> By default, pmcd will try to use a certificate called <code>PCP Collector certificate .</code> The <code>-M</code> option allows this to be changed.</p>
-<dt><code>-n</code> <i>pmnsfile</i></p>
-<dd> Normally <code>pmcd</code> loads the default Performance Metrics Name Space (PMNS) from <code>$PCP_VAR_DIR/pmns/root</code>, however if the <code>-n</code> option is specified an alternative namespace is loaded from the file <i>pmnsfile</i>.</p>
-<dt><code>-N</code> <i>pmnsfile</i></p>
-<dd> Same function as <code>-n</code>, except for the handling of duplicate Performance Metric Identifiers (PMIDs) in <i>pmnsfile</i> &#8211; duplicate names are allowed with <code>-n</code> they are not allowed with <code>-N</code>.</p>
-<dt><code>-P</code> <i>passfile</i></p>
-<dd> Specify the path to a file containing the Network Security Services certificate database password for (optional) secure connections, and for databases that are password protected. Refer also to the <code>-C</code> option. When using this option, great care should be exercised to ensure appropriate ownership (&quot;pcp&quot; user, typically) and permissions on this file (0400, so as to be unreadable by any user other than the user running the <code>pmcd</code> process).</p>
-<dt><code>-q</code> <i>timeout</i></p>
-<dd> The pmcd to agent version exchange protocol (new in PCP 2.0 &#8211; introduced to provide backward compatibility) uses this timeout to specify how long pmcd should wait before assuming that no version response is coming from an agent. If this timeout is reached, the agent is assumed to be an agent which does not understand the PCP 2.0 protocol. The default timeout interval is five seconds, but the <code>-q</code> option allows an alternative timeout interval (which must be greater than zero) to be specified. The unit of time is seconds.</p>
-<dt><code>-Q</code></p>
-<dd> Require that all remote client connections provide a certficate.</p>
-<dt><code>-S</code></p>
-<dd> Require that all client connections provide user credentials. This means that only unix domain sockets, or authenticated connections are permitted (requires secure sockets support). If any user or group access control requirements are specified in the pmcd configuration file, then this mode of operation is automatically entered, whether the <code>-S</code> flag is specified or not.</p>
-<dt><code>-s</code> <i>sockname</i></p>
-<dd> Specify the path to a local unix domain socket (for platforms supporting this socket family only). The default value is <i>$PCP_RUN_DIR/pmcd.socket</i>.</p>
-<dt><code>-t</code> <i>timeout</i></p>
-<dd> To prevent misbehaving clients or agents from hanging the entire Performance Metrics Collection System (PMCS), <code>pmcd</code> uses timeouts on PDU exchanges with clients and agents running as processes. By default the timeout interval is five seconds. The <code>-t</code> option allows an alternative timeout interval in seconds to be specified. If <i>timeout</i> is zero, timeouts are turned off. It is almost impossible to use the debugger interactively on an agent unless timeouts have been turned off for its &quot;parent&quot; <code>pmcd</code>.</p>
+<dt><code>-A</code></dt>
+<dd> Disable service advertisement. By default, <code>pmcd</code> will advertise its presence on the network using any available mechanisms (such as Avahi/DNS-SD), assisting remote monitoring tools with finding it. These mechanisms are disabled with this option.</dd>
+<dt><code>-c</code> <i>config</i></dt>
+<dd> On startup <code>pmcd</code> uses a configuration file from either the <i>$PCP_PMCDCONF_PATH</i>, configuration variable in <i>/etc/pcp.conf</i>, or an environment variable of the same name. However, these values may be overridden with <i>config</i> using this option. The format of this configuration file is described below.</dd>
+<dt><code>-C</code> <i>dirname</i></dt>
+<dd> Specify the path to the Network Security Services certificate database, for (optional) secure connections. The default is <code>/etc/pki/nssdb</code>. Refer also to the <code>-P</code> option. If it does not already exist, this database can be created using the <code>certutil</code> utility. This process and other certificate database maintenance information is provided in the <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) manual page and the online PCP tutorials.</dd>
+<dt><code>-f</code></dt>
+<dd> By default <code>pmcd</code> is started as a daemon. The <code>-f</code> option indicates that it should run in the foreground. This is most useful when trying to diagnose problems with misbehaving agents.</dd>
+<dt><code>-H</code> <i>hostname</i></dt>
+<dd> This option can be used to set the hostname that <code>pmcd</code> will use to represent this instance of itself. This is used by client tools like <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) when reporting on the (possibly remote) host. If this option is not set, the pmcd.hostname metric will match that returned by <code><a href="/docs/linux/man/1-pmhostname/">pmhostname</a></code>(1). Refer to the manual page for that tool for full details on how the hostname is evaluated.</dd>
+<dt><code>-i</code> <i>ipaddress</i></dt>
+<dd> This option is usually only used on hosts with more than one network interface. If no <code>-i</code> options are specified <code>pmcd</code> accepts connections made to any of its host&#8217;s IP (Internet Protocol) addresses. The <code>-i</code> option is used to specify explicitly an IP address that connections should be accepted on. <i>ipaddress</i> should be in the standard dotted form (e.g. 100.23.45.6). The <code>-i</code> option may be used multiple times to define a list of IP addresses. Connections made to any other IP addresses the host has will be refused. This can be used to limit connections to one network interface if the host is a network gateway. It is also useful if the host takes over the IP address of another host that has failed. In such a situation only the standard IP addresses of the host should be given (not the ones inherited from the failed host). This allows PCP applications to determine that a host has failed, rather than connecting to the host that has assumed the identity of the failed host.</dd>
+<dt><code>-l</code> <i>logfile</i></dt>
+<dd> By default a log file named <i>pmcd.log</i> is written in the directory <code>$PCP_LOG_DIR/pmcd</code>. The <code>-l</code> option causes the log file to be written to <i>logfile</i> instead of the default. If the log file cannot be created or is not writable, output is written to the standard error instead.</dd>
+<dt><code>-L</code> <i>bytes</i></dt>
+<dd> <i>PDU</i>s received by <code>pmcd </code> from monitoring clients are restricted to a maximum size of 65536 bytes by default to defend against Denial of Service attacks. The <code>-L </code> option may be used to change the maximum incoming <i>PDU </i> size.</dd>
+<dt><code>-M</code> <i>certname</i></dt>
+<dd> By default, pmcd will try to use a certificate called <code>PCP Collector certificate .</code> The <code>-M</code> option allows this to be changed.</dd>
+<dt><code>-n</code> <i>pmnsfile</i></dt>
+<dd> Normally <code>pmcd</code> loads the default Performance Metrics Name Space (PMNS) from <code>$PCP_VAR_DIR/pmns/root</code>, however if the <code>-n</code> option is specified an alternative namespace is loaded from the file <i>pmnsfile</i>.</dd>
+<dt><code>-N</code> <i>pmnsfile</i></dt>
+<dd> Same function as <code>-n</code>, except for the handling of duplicate Performance Metric Identifiers (PMIDs) in <i>pmnsfile</i> &#8211; duplicate names are allowed with <code>-n</code> they are not allowed with <code>-N</code>.</dd>
+<dt><code>-P</code> <i>passfile</i></dt>
+<dd> Specify the path to a file containing the Network Security Services certificate database password for (optional) secure connections, and for databases that are password protected. Refer also to the <code>-C</code> option. When using this option, great care should be exercised to ensure appropriate ownership (&quot;pcp&quot; user, typically) and permissions on this file (0400, so as to be unreadable by any user other than the user running the <code>pmcd</code> process).</dd>
+<dt><code>-q</code> <i>timeout</i></dt>
+<dd> The pmcd to agent version exchange protocol (new in PCP 2.0 &#8211; introduced to provide backward compatibility) uses this timeout to specify how long pmcd should wait before assuming that no version response is coming from an agent. If this timeout is reached, the agent is assumed to be an agent which does not understand the PCP 2.0 protocol. The default timeout interval is five seconds, but the <code>-q</code> option allows an alternative timeout interval (which must be greater than zero) to be specified. The unit of time is seconds.</dd>
+<dt><code>-Q</code></dt>
+<dd> Require that all remote client connections provide a certficate.</dd>
+<dt><code>-S</code></dt>
+<dd> Require that all client connections provide user credentials. This means that only unix domain sockets, or authenticated connections are permitted (requires secure sockets support). If any user or group access control requirements are specified in the pmcd configuration file, then this mode of operation is automatically entered, whether the <code>-S</code> flag is specified or not.</dd>
+<dt><code>-s</code> <i>sockname</i></dt>
+<dd> Specify the path to a local unix domain socket (for platforms supporting this socket family only). The default value is <i>$PCP_RUN_DIR/pmcd.socket</i>.</dd>
+<dt><code>-t</code> <i>timeout</i></dt>
+<dd> To prevent misbehaving clients or agents from hanging the entire Performance Metrics Collection System (PMCS), <code>pmcd</code> uses timeouts on PDU exchanges with clients and agents running as processes. By default the timeout interval is five seconds. The <code>-t</code> option allows an alternative timeout interval in seconds to be specified. If <i>timeout</i> is zero, timeouts are turned off. It is almost impossible to use the debugger interactively on an agent unless timeouts have been turned off for its &quot;parent&quot; <code>pmcd</code>.</dd>
 <dl>
 <dt>
-<dd>
-<p> Once <code>pmcd</code> is running, the timeout may be dynamically modified by storing an integer value (the timeout in seconds) into the metric <code>pmcd.control.timeout</code> via <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1).</dl>
-<dt><code>-T</code> <i>traceflag</i></p>
-<dd> To assist with error diagnosis for agents and/or clients of <code>pmcd</code> that are not behaving correctly, an internal event tracing mechanism is supported within <code>pmcd</code>. The value of <i>traceflag</i> is interpreted as a bit field with the following control functions:</p>
+</dt><dd>
+<p> Once <code>pmcd</code> is running, the timeout may be dynamically modified by storing an integer value (the timeout in seconds) into the metric <code>pmcd.control.timeout</code> via <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1).</dd></dl>
+<dt><code>-T</code> <i>traceflag</i></dt>
+<dd> To assist with error diagnosis for agents and/or clients of <code>pmcd</code> that are not behaving correctly, an internal event tracing mechanism is supported within <code>pmcd</code>. The value of <i>traceflag</i> is interpreted as a bit field with the following control functions:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> <code>1</code> enable client connection tracing</p>
-<dt><code>2</code></p>
-<dd> enable PDU tracing</p>
-<dt><code>256</code></p>
-<dd> unbuffered event tracing</dl>
+</dt><dd> <code>1</code> enable client connection tracing</dd>
+<dt><code>2</code></dt>
+<dd> enable PDU tracing</dd>
+<dt><code>256</code></dt>
+<dd> unbuffered event tracing</dd></dl>
 <p> By default, event tracing is buffered using a circular buffer that is over-written as new events are recorded. The default buffer size holds the last 20 events, although this number may be over-ridden by using <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1) to modify the metric <code>pmcd.control.tracebufs</code>. </p>
 <p> Similarly once <code>pmcd</code> is running, the event tracing control may be dynamically modified by storing 1 (enable) or 0 (disable) into the metrics <code>pmcd.control.traceconn</code>, <code>pmcd.control.tracepdu</code> and <code>pmcd.control.tracenobuf</code>. These metrics map to the bit fields associated with the <i>traceflag</i> argument for the <code>-T</code> option. </p>
 <p> When operating in buffered mode, the event trace buffer will be dumped whenever an agent connection is terminated by <code>pmcd</code>, or when any value is stored into the metric <code>pmcd.control.dumptrace</code> via <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1). </p>
 <p> In unbuffered mode, <code>every</code> event will be reported when it occurs.</dl>
-<dt><code>-U</code> <i>username</i></p>
-<dd> User account under which to run <code>pmcd</code>. The default is the unprivileged &quot;pcp&quot; account in current versions of PCP, but in older versions the superuser account (&quot;root&quot;) was used by default.</p>
-<dt><code>-v</code></p>
-<dd> Verify the <code>pmcd</code> configuration file, reporting on any errors then exiting with a status indicating verification success or failure.</p>
-<dt><code>-x</code> <i>file</i></p>
-<dd> Before the <code>pmcd</code> <i>logfile</i> can be opened, <code>pmcd</code> may encounter a fatal error which prevents it from starting. By default, the output describing this error is sent to <code>/dev/tty</code> but it may redirected to <i>file</i>.</dl>
+<dt><code>-U</code> <i>username</i></dt>
+<dd> User account under which to run <code>pmcd</code>. The default is the unprivileged &quot;pcp&quot; account in current versions of PCP, but in older versions the superuser account (&quot;root&quot;) was used by default.</dd>
+<dt><code>-v</code></dt>
+<dd> Verify the <code>pmcd</code> configuration file, reporting on any errors then exiting with a status indicating verification success or failure.</dd>
+<dt><code>-x</code> <i>file</i></dt>
+<dd> Before the <code>pmcd</code> <i>logfile</i> can be opened, <code>pmcd</code> may encounter a fatal error which prevents it from starting. By default, the output describing this error is sent to <code>/dev/tty</code> but it may redirected to <i>file</i>.</dd></dl>
 <p> If a PDU exchange with an agent times out, the agent has violated the requirement that it delivers metrics with little or no delay. This is deemed a protocol failure and the agent is disconnected from <code>pmcd</code>. Any subsequent requests for information from the agent will fail with a status indicating that there is no agent to provide it. </p>
 <p> It is possible to specify access control to <code>pmcd</code> based on users, groups and hosts. This allows one to prevent users, groups of users, and certain hosts from accessing the metrics provided by <code>pmcd</code> and is described in more detail in the Section on ACCESS CONTROL below.</p>
 <h2>CONFIGURATION</h2>
@@ -91,65 +89,65 @@ description: "pmcd – performance metrics collector daemon"
 <p> For DSO agents a line of the form:</p>
 <dl>
 <dt>
-<dd> <i>label</i> <i>domain-no</i> <code>dso</code> <i>entry-point</i> <i>path</i></dl>
+</dt><dd> <i>label</i> <i>domain-no</i> <code>dso</code> <i>entry-point</i> <i>path</i></dd></dl>
 <p> should appear. Where,</p>
 <dl>
 <dt>
-<dd> <i>label</i> is a string identifying the agent</p>
-<dt><i>domain-no</i></p>
-<dd> is an unsigned integer specifying the agent&#8217;s domain in the range 1 to 510</p>
-<dt><i>entry-point</i></p>
-<dd> is the name of an initialization function which will be called when the DSO is loaded</p>
-<dt><i>path</i></p>
-<dd> designates the location of the DSO and this is expected to be an absolute pathname. <code>pmcd</code> is only able to load DSO agents that have the same <i>simabi</i> (Subprogram Interface Model ABI, or calling conventions) as it does (i.e. only one of the <i>simabi</i> versions will be applicable). The <i>simabi</i> version of a running <code>pmcd</code> may be determined by fetching <code>pmcd.simabi</code>. Alternatively, the <code><a href="/docs/linux/man/1-file/">file</a></code>(1) command may be used to determine the <i>simabi</i> version from the <code>pmcd</code> executable.</p>
+</dt><dd> <i>label</i> is a string identifying the agent</dd>
+<dt><i>domain-no</i></dt>
+<dd> is an unsigned integer specifying the agent&#8217;s domain in the range 1 to 510</dd>
+<dt><i>entry-point</i></dt>
+<dd> is the name of an initialization function which will be called when the DSO is loaded</dd>
+<dt><i>path</i></dt>
+<dd> designates the location of the DSO and this is expected to be an absolute pathname. <code>pmcd</code> is only able to load DSO agents that have the same <i>simabi</i> (Subprogram Interface Model ABI, or calling conventions) as it does (i.e. only one of the <i>simabi</i> versions will be applicable). The <i>simabi</i> version of a running <code>pmcd</code> may be determined by fetching <code>pmcd.simabi</code>. Alternatively, the <code><a href="/docs/linux/man/1-file/">file</a></code>(1) command may be used to determine the <i>simabi</i> version from the <code>pmcd</code> executable.</dd>
 <dt>
-<dd> For a relative <i>path</i> the environment variable <code>PMCD_PATH</code> defines a colon (:) separated list of directories to search when trying to locate the agent DSO. The default search path is <code>$PCP_SHARE_DIR/lib:/usr/pcp/lib</code>.</dl>
+</dt><dd> For a relative <i>path</i> the environment variable <code>PMCD_PATH</code> defines a colon (:) separated list of directories to search when trying to locate the agent DSO. The default search path is <code>$PCP_SHARE_DIR/lib:/usr/pcp/lib</code>.</dd></dl>
 <p> For agents providing socket connections, a line of the form</p>
 <dl>
 <dt>
-<dd> <i>label</i> <i>domain-no</i> <code>socket</code> <i>addr-family</i> <i>address</i> [ <i>command</i> ]</dl>
+</dt><dd> <i>label</i> <i>domain-no</i> <code>socket</code> <i>addr-family</i> <i>address</i> [ <i>command</i> ]</dd></dl>
 <p> should appear. Where,</p>
 <dl>
 <dt>
-<dd> <i>label</i> is a string identifying the agent</p>
-<dt><i>domain-no</i></p>
-<dd> is an unsigned integer specifying the agent&#8217;s domain in the range 1 to 510</p>
-<dt><i>addr-family</i></p>
-<dd> designates whether the socket is in the <code>AF_INET,</code> <code>AF_INET6</code> or <code>AF_UNIX</code> domain, and the corresponding values for this parameter are <code>inet,</code> <code>ipv6</code> and <code>unix</code> respectively.</p>
-<dt><i>address</i></p>
-<dd> specifies the address of the socket within the previously specified <i>addr-family.</i> For <code>unix</code> sockets, the address should be the name of an agent&#8217;s socket on the local host (a valid address for the UNIX domain). For <code>inet</code> and <code>ipv6</code> sockets, the address may be either a port number or a port name which may be used to connect to an agent on the local host. There is no syntax for specifying an agent on a remote host as a <code>pmcd</code> deals only with agents on the same machine.</p>
-<dt><i>command</i></p>
-<dd> is an optional parameter used to specify a command line to start the agent when <code>pmcd</code> initializes. If <i>command</i> is not present, <code>pmcd</code> assumes that the specified agent has already been created. The <i>command</i> is considered to start from the first non-white character after the socket address and finish at the next newline that isn&#8217;t preceded by a backslash. After a <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) the <i>command</i> is passed unmodified to <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) to instantiate the agent.</dl>
+</dt><dd> <i>label</i> is a string identifying the agent</dd>
+<dt><i>domain-no</i></dt>
+<dd> is an unsigned integer specifying the agent&#8217;s domain in the range 1 to 510</dd>
+<dt><i>addr-family</i></dt>
+<dd> designates whether the socket is in the <code>AF_INET,</code> <code>AF_INET6</code> or <code>AF_UNIX</code> domain, and the corresponding values for this parameter are <code>inet,</code> <code>ipv6</code> and <code>unix</code> respectively.</dd>
+<dt><i>address</i></dt>
+<dd> specifies the address of the socket within the previously specified <i>addr-family.</i> For <code>unix</code> sockets, the address should be the name of an agent&#8217;s socket on the local host (a valid address for the UNIX domain). For <code>inet</code> and <code>ipv6</code> sockets, the address may be either a port number or a port name which may be used to connect to an agent on the local host. There is no syntax for specifying an agent on a remote host as a <code>pmcd</code> deals only with agents on the same machine.</dd>
+<dt><i>command</i></dt>
+<dd> is an optional parameter used to specify a command line to start the agent when <code>pmcd</code> initializes. If <i>command</i> is not present, <code>pmcd</code> assumes that the specified agent has already been created. The <i>command</i> is considered to start from the first non-white character after the socket address and finish at the next newline that isn&#8217;t preceded by a backslash. After a <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) the <i>command</i> is passed unmodified to <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) to instantiate the agent.</dd></dl>
 <p> For agents interacting with the <code>pmcd</code> via stdin/stdout, a line of the form:</p>
 <dl>
 <dt>
-<dd> <i>label</i> <i>domain-no</i> <code>pipe</code> <i>protocol</i> <i>command</i></dl>
+</dt><dd> <i>label</i> <i>domain-no</i> <code>pipe</code> <i>protocol</i> <i>command</i></dd></dl>
 <p> should appear. Where,</p>
 <dl>
 <dt>
-<dd> <i>label</i> is a string identifying the agent</p>
-<dt><i>domain-no</i></p>
-<dd> is an unsigned integer specifying the agent&#8217;s domain</p>
-<dt><i>protocol</i></p>
-<dd> The value for this parameter should be <code>binary</code>. </p>
+</dt><dd> <i>label</i> is a string identifying the agent</dd>
+<dt><i>domain-no</i></dt>
+<dd> is an unsigned integer specifying the agent&#8217;s domain</dd>
+<dt><i>protocol</i></dt>
+<dd> The value for this parameter should be <code>binary</code>. </dd>
 <dt>
-<dd> Additionally, the <i>protocol</i> can include the <code>notready</code> keyword to indicate that the agent must be marked as not being ready to process requests from <code>pmcd</code>. The agent will explicitly notify the <code>pmcd</code> when it is ready to process the requests by sending <code>PM_ERR_PMDAREADY</code> PDU.</p>
-<dt><i>command</i></p>
-<dd> specifies a command line to start the agent when <code>pmcd</code> initializes. Note that <i>command</i> is mandatory for pipe-based agents. The <i>command</i> is considered to start from the first non-white character after the <i>protocol</i> parameter and finish at the next newline that isn&#8217;t preceded by a backslash. After a <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) the <i>command</i> is passed unmodified to <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) to instantiate the agent.</dl>
+</dt><dd> Additionally, the <i>protocol</i> can include the <code>notready</code> keyword to indicate that the agent must be marked as not being ready to process requests from <code>pmcd</code>. The agent will explicitly notify the <code>pmcd</code> when it is ready to process the requests by sending <code>PM_ERR_PMDAREADY</code> PDU.</dd>
+<dt><i>command</i></dt>
+<dd> specifies a command line to start the agent when <code>pmcd</code> initializes. Note that <i>command</i> is mandatory for pipe-based agents. The <i>command</i> is considered to start from the first non-white character after the <i>protocol</i> parameter and finish at the next newline that isn&#8217;t preceded by a backslash. After a <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) the <i>command</i> is passed unmodified to <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) to instantiate the agent.</dd></dl>
 <h2>ACCESS CONTROL CONFIGURATION</h2>
 <p> The access control section of the configuration file is optional, but if present it must follow the agent configuration data. The case of reserved words is ignored, but elsewhere case is preserved. Lexical elements in the access control section are separated by whitespace or the special delimiter characters: square brackets (&#8220;[&#8221; and &#8220;]&#8221;), braces (&#8220;{&#8221; and &#8220;}&#8221;), colon (&#8220;:&#8221;), semicolon (&#8220;;&#8221;) and comma (&#8220;,&#8221;). The special characters are not treated as special in the agent configuration section. Lexical elements may be quoted (double quotes) as necessary. </p>
 <p> The access control section of the file must start with a line of the form:</p>
 <dl>
-<dt><code>[access]</code></p>
-<dd></dl>
+<dt><code>[access]</code></dt>
+<dd></dd></dl>
 <p> Leading and trailing whitespace may appear around and within the brackets and the case of the <code>access</code> keyword is ignored. No other text may appear on the line except a trailing comment. </p>
 <p> Following this line, the remainder of the configuration file should contain lines that allow or disallow operations from particular hosts or groups of hosts. </p>
 <p> There are two kinds of operations that occur via <code>pmcd</code>:</p>
 <dl>
-<dt><code>fetch</code></p>
-<dd> allows retrieval of information from <code>pmcd</code>. This may be information about a metric (e.g. its description, instance domain or help text) or a value for a metric.</p>
-<dt><code>store</code></p>
-<dd> allows <code>pmcd</code> to be used to store metric values in agents that permit store operations. This may be the actual value of the metric (e.g. resetting a counter to zero). Alternatively, it may be a value used by the PMDA to introduce a change to some aspect of monitoring of that metric (e.g. server side event filtering) &#8211; possibly even only for the active client tool performing the store operation, and not others.</dl>
+<dt><code>fetch</code></dt>
+<dd> allows retrieval of information from <code>pmcd</code>. This may be information about a metric (e.g. its description, instance domain or help text) or a value for a metric.</dd>
+<dt><code>store</code></dt>
+<dd> allows <code>pmcd</code> to be used to store metric values in agents that permit store operations. This may be the actual value of the metric (e.g. resetting a counter to zero). Alternatively, it may be a value used by the PMDA to introduce a change to some aspect of monitoring of that metric (e.g. server side event filtering) &#8211; possibly even only for the active client tool performing the store operation, and not others.</dd></dl>
 <p> Access to <code>pmcd</code> can be granted in three ways &#8211; by user, group of users, or at a host level. In the latter, all users on a host are granted the same level of access, unless the user or group access control mechanism is also in use. </p>
 <p> User names and group names will be verified using the local <code>/etc/passwd</code> and <code>/etc/groups</code> files (or an alternative directory service), using the <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3) and <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3) routines. </p>
 <p> Hosts may be identified by name, IP address, IPv6 address or by the special host specifications &#8220;&quot;unix:&quot;&#8221; or &#8220;&quot;local:&quot;&#8221;. &#8220;&quot;unix:&quot;&#8221; refers to <code>pmcd&#8217;s</code> unix domain socket, on supported platforms. &#8220;&quot;local:&quot;&#8221; is equivalent to specifying &#8220;&quot;unix:&quot;&#8221; and &#8220;localhost&#8220;. </p>
@@ -187,17 +185,17 @@ fe80*
 <p> Access for users, groups or hosts are allowed or disallowed by specifying statements of the form:</p>
 <dl>
 <dt>
-<dd> <code>allow users</code> <i>userlist</i> <code>:</code> <i>operations</i> <code>;</code><br />
+</dt><dd> <code>allow users</code> <i>userlist</i> <code>:</code> <i>operations</i> <code>;</code><br />
  <code>disallow users</code> <i>userlist</i> <code>:</code> <i>operations</i> <code>;</code><br />
  <code>allow groups</code> <i>grouplist</i> <code>:</code> <i>operations</i> <code>;</code><br />
  <code>disallow groups</code> <i>grouplist</i> <code>:</code> <i>operations</i> <code>;</code><br />
  <code>allow hosts</code> <i>hostlist</i> <code>:</code> <i>operations</i> <code>;</code><br />
- <code>disallow hosts</code> <i>hostlist</i> <code>:</code> <i>operations</i> <code>;</code></dl>
+ <code>disallow hosts</code> <i>hostlist</i> <code>:</code> <i>operations</i> <code>;</code></dd></dl>
 <dl>
-<dt><i>list</i></p>
-<dd> <i>userlist</i>, <i>grouplist</i> and <i>hostlist</i> are comma separated lists of one or more users, groups or host identifiers.</p>
-<dt><i>operations</i></p>
-<dd> is a comma separated list of the operation types described above, <code>all</code> (which allows/disallows all operations), or <code>all except</code> <i>operations</i> (which allows/disallows all operations except those listed).</dl>
+<dt><i>list</i></dt>
+<dd> <i>userlist</i>, <i>grouplist</i> and <i>hostlist</i> are comma separated lists of one or more users, groups or host identifiers.</dd>
+<dt><i>operations</i></dt>
+<dd> is a comma separated list of the operation types described above, <code>all</code> (which allows/disallows all operations), or <code>all except</code> <i>operations</i> (which allows/disallows all operations except those listed).</dd></dl>
 <p> Either plural or singular forms of <code>users</code>, <code>groups</code>, and <code>hosts</code> keywords are allowed. If this keyword is omitted, a default of <code>hosts</code> will be used. This behaviour is for backward-compatibility only, it is preferable to be explicit. </p>
 <p> Where no specific <code>allow</code> or <code>disallow</code> statement applies to an operation, the default is to allow the operation from all users, groups and hosts. In the trivial case when there is no access control section in the configuration file, all operations from all users, groups, and hosts are permitted. </p>
 <p> If a new connection to <code>pmcd</code> is attempted by a user, group or host that is not permitted to perform any operations, the connection will be closed immediately after an error response <code>PM_ERR_PERMISSION</code> has been sent to the client attempting the connection. </p>
@@ -222,7 +220,7 @@ disallow host * : all;
 <p> It is possible to limit the number of connections from a user, group or host to <code>pmcd</code>. This may be done by adding a clause of the form</p>
 <dl>
 <dt>
-<dd> <code>maximum</code> <i>n</i> <code>connections</code></dl>
+</dt><dd> <code>maximum</code> <i>n</i> <code>connections</code></dd></dl>
 <p> to the <i>operations</i> list of an <code>allow</code> statement. Such a clause may not be used in a <code>disallow</code> statement. Here, <i>n</i> is the maximum number of connections that will be accepted from the user, group or host matching the identifier(s) used in the statement. </p>
 <p> An access control statement with a list of user, group or host identifiers is equivalent to a set of access control statements, with each specifying one of the identifiers in the list and all with the same access controls (both permissions and connection limits). A group should be used if you want users to contribute to a shared connection limit. A wildcard should be used if you want hosts to contribute to a shared connection limit. </p>
 <p> When a new client requests a connection, and <code>pmcd</code> has determined that the client has permission to connect, it searches the matching list of access control statements for the most specific match containing a connection limit. For brevity, this will be called the limiting statement. If there is no limiting statement, the client is granted a connection. If there is a limiting statement and the number of <code>pmcd</code> clients with user ID, group ID, or IP addresses that match the identifier in the limiting statement is less than the connection limit in the statement, the connection is allowed. Otherwise the connection limit has been reached and the client is refused a connection. </p>
@@ -231,8 +229,8 @@ disallow host * : all;
 <p> Note also that because most specific match semantics are used when checking the connection limit, for the host-based access control case, priority is given to clients with more specific host identifiers. It is also possible to exceed connection limits in some situations. Consider the following:</p>
 <dl>
 <dt>
-<dd> allow host clank : all, maximum 5 connections;<br />
- allow host * : all except store, maximum 2 connections;</dl>
+</dt><dd> allow host clank : all, maximum 5 connections;<br />
+ allow host * : all except store, maximum 2 connections;</dd></dl>
 <p> This says that only 2 client connections at a time are permitted for all hosts other than &quot;clank&quot;, which is permitted 5. If a client from host &quot;boing&quot; is the first to connect to <code>pmcd</code>, its connection is checked against the second statement (that is the most specific match with a connection limit). As there are no other clients, the connection is accepted and contributes towards the limit for only the second statement above. If the next client connects from &quot;clank&quot;, its connection is checked against the limit for the first statement. There are no other connections from &quot;clank&quot;, so the connection is accepted. Once this connection is accepted, it counts towards <code>both</code> statements&#8217; limits because &quot;clank&quot; matches the host identifier in both statements. Remember that the decision to accept a new connection is made using only the most specific matching access control statement with a connection limit. Now, the connection limit for the second statement has been reached. Any connections from hosts other than &quot;clank&quot; will be refused. </p>
 <p> If instead, <code>pmcd</code> with no clients saw three successive connections arrived from &quot;boing&quot;, the first two would be accepted and the third refused. After that, if a connection was requested from &quot;clank&quot; it would be accepted. It matches the first statement, which is more specific than the second, so the connection limit in the first is used to determine that the client has the right to connect. Now there are 3 connections contributing to the second statement&#8217;s connection limit. Even though the connection limit for the second statement has been exceeded, the earlier connections from &quot;boing&quot; are maintained. The connection limit is only checked at the time a client attempts a connection rather than being re-evaluated every time a new client connects to <code>pmcd</code>. </p>
 <p> This gentle scheme is designed to allow reasonable limits to be imposed on a first come first served basis, with specific exceptions. </p>
@@ -260,23 +258,23 @@ disallow host * : all;
 <p> Normally <code>pmcd</code> listens for client connections on TCP/IP port number 44321 (registered at <i><a rel="nofollow" href="http://www.iana.org/">http://www.iana.org/</a></i>). Either the environment variable <code>PMCD_PORT</code> or the <code>-p</code> command line option may be used to specify alternative port number(s) when <code>pmcd</code> is started; in each case, the specification is a comma-separated list of one or more numerical port numbers. Should both methods be used or multiple <code>-p</code> options appear on the command line, <code>pmcd</code> will listen on the union of the set of ports specified via all <code>-p</code> options and the <code>PMCD_PORT</code> environment variable. If non-default ports are used with <code>pmcd</code> care should be taken to ensure that <code>PMCD_PORT</code> is also set in the environment of any client application that will connect to <code>pmcd</code>, or that the extended host specification syntax is used (see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for details).</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>$PCP_PMCDCONF_PATH</i></p>
-<dd> default configuration file</p>
-<dt><i>$PCP_PMCDOPTIONS_PATH</i></p>
-<dd> command line options to <code>pmcd</code> when launched from <code>$PCP_RC_DIR/pmcd</code> All the command line option lines should start with a hyphen as the first character.</p>
-<dt><code>$PCP_SYSCONFIG_DIR/pmcd</code></p>
-<dd> additional environment variables that will be set when <code>pmcd</code> executes. Only settings of the form &quot;PMCD_VARIABLE=value&quot; will be honoured.</p>
-<dt><code>./pmcd.log</code></p>
-<dd> (or <code>$PCP_LOG_DIR/pmcd/pmcd.log</code> when started automatically)</p>
-<dt><code>$PCP_RUN_DIR/pmcd.pid</code></p>
+<dt><i>$PCP_PMCDCONF_PATH</i></dt>
+<dd> default configuration file</dd>
+<dt><i>$PCP_PMCDOPTIONS_PATH</i></dt>
+<dd> command line options to <code>pmcd</code> when launched from <code>$PCP_RC_DIR/pmcd</code> All the command line option lines should start with a hyphen as the first character.</dd>
+<dt><code>$PCP_SYSCONFIG_DIR/pmcd</code></dt>
+<dd> additional environment variables that will be set when <code>pmcd</code> executes. Only settings of the form &quot;PMCD_VARIABLE=value&quot; will be honoured.</dd>
+<dt><code>./pmcd.log</code></dt>
+<dd> (or <code>$PCP_LOG_DIR/pmcd/pmcd.log</code> when started automatically)</dd>
+<dt><code>$PCP_RUN_DIR/pmcd.pid</code></dt>
 <dd> contains an ascii decimal representation of the process ID of <code>pmcd</code> , when it&#8217;s running.<br />
- All messages and diagnostics are directed here</p>
-<dt><code>/etc/pki/nssdb</code></p>
-<dd> default Network Security Services (NSS) certificate database directory, used for optional Secure Socket Layer connections. This database can be created and queried using the NSS <code>certutil</code> tool, amongst others.</p>
-<dt><code>/etc/passwd</code></p>
-<dd> user names, user identifiers and primary group identifiers, used for access control specifications</p>
-<dt><code>/etc/groups</code></p>
-<dd> group names, group identifiers and group members, used for access control specifications</dl>
+ All messages and diagnostics are directed here</dd>
+<dt><code>/etc/pki/nssdb</code></dt>
+<dd> default Network Security Services (NSS) certificate database directory, used for optional Secure Socket Layer connections. This database can be created and queried using the NSS <code>certutil</code> tool, amongst others.</dd>
+<dt><code>/etc/passwd</code></dt>
+<dd> user names, user identifiers and primary group identifiers, used for access control specifications</dd>
+<dt><code>/etc/groups</code></dt>
+<dd> group names, group identifiers and group members, used for access control specifications</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> In addition to the PCP environment variables described in the <code>PCP ENVIRONMENT</code> section below, the <code>PMCD_PORT</code> variable is also recognised as the TCP/IP port for incoming connections (default <i>44321</i>), and the <code>PMCD_SOCKET</code> variable is also recognised as the path to be used for the Unix domain socket. </p>
 <p> If set to the value 1, the <code>PMCD_LOCAL</code> environment variable will cause <code>pmcd</code> to run in a localhost-only mode of operation, where it binds only to the loopback interface. The <i>pmcd.feature.local</i> metric can be queried to determine if <code>pmcd</code> is running in this mode. </p>

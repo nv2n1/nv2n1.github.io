@@ -24,12 +24,12 @@ There are no parameter access routines available for the Surface utility. Theref
 2 NCLA ,THETA ,HSKIRT ,CHI ,
 3 CLO ,CINC ,ISPVAL</pre>Note that not all of the variables declared above are considered user-modifiable parameters. Definitions of only user-modifiable parameters follow: 
 
- <pre><dl><dt>IFR<dd>-1 Call FRAME first.
+ <pre><dl><dt>IFR</dt><dd>-1 Call FRAME first.
 <br>
  0 Do not call FRAME.
 <br>
 +1 Call FRAME when done (default).
-<dt>ISTP<dd>-1 Draws alternating frames, slightly offset 
+</dd><dt>ISTP</dt><dd>-1 Draws alternating frames, slightly offset 
 <br>
  (For movies, IROTS = 0).
  0 Blank frame between for stereo slide (IROTS = 1)
@@ -39,44 +39,43 @@ There are no parameter access routines available for the Surface utility. Theref
 +1 Both on same frame. (left picture to left 
 <br>
  side. IROTS = 0).
- 
-<dt>IROTS<dd>0 +Z in vertical plotting direction (CINE mode)
+</dd><dt>IROTS</dt><dd>0 +Z in vertical plotting direction (CINE mode)
 <br>
  (default).
 <br>
 +1 +Z in horizontal plotting direction (COMIC mode).
-<dt>IDRX<dd>+1 Draw lines of constant X (default).
+</dd><dt>IDRX</dt><dd>+1 Draw lines of constant X (default).
 <br>
  0 Do not.
-<dt>IDRY<dd>+1 Draw lines of constant Y (default).
+</dd><dt>IDRY</dt><dd>+1 Draw lines of constant Y (default).
 <br>
  0 Do not.
-<dt>IDRZ<dd>+1 Draw lines of constant Z (contour lines).
+</dd><dt>IDRZ</dt><dd>+1 Draw lines of constant Z (contour lines).
 <br>
  0 Do not (default).
-<dt>IUPPER<dd>+1 Draw upper side of surface.
+</dd><dt>IUPPER</dt><dd>+1 Draw upper side of surface.
 <br>
  0 Draw both sides (default).
 <br>
 -1 Draw lower side.
-<dt>ISKIRT<dd>+1 Draw a skirt around the surface.
+</dd><dt>ISKIRT</dt><dd>+1 Draw a skirt around the surface.
 <br>
  BOTTOM = HSKIRT.
 <br>
  0 Do not (default).
-<dt>NCLA<dd>Approximate number of levels of constant Z
+</dd><dt>NCLA</dt><dd>Approximate number of levels of constant Z
 <br>
  that are drawn if levels are not specified.
 <br>
  40 is the maximum and 6 is the default.
-<dt>THETA<dd>The angle in radians between eyes for stereo pairs.
+</dd><dt>THETA</dt><dd>The angle in radians between eyes for stereo pairs.
 <br>
  The default is .02.
-<dt>HSKIRT<dd>Height of skirt (if ISKIRT = 1). The default is 0.
-<dt>CHI<dd>Highest level of constant Z. The default is 0.
-<dt>CLO<dd>Lowest level of constant Z. The default is 0.
-<dt>CINC<dd>Increment between levels. The default is 0.
-<dt>IOFFP<dd>Flag to control the use of the special value feature. Do
+</dd><dt>HSKIRT</dt><dd>Height of skirt (if ISKIRT = 1). The default is 0.
+</dd><dt>CHI</dt><dd>Highest level of constant Z. The default is 0.
+</dd><dt>CLO</dt><dd>Lowest level of constant Z. The default is 0.
+</dd><dt>CINC</dt><dd>Increment between levels. The default is 0.
+</dd><dt>IOFFP</dt><dd>Flag to control the use of the special value feature. Do
 <br>
  not have both IOFFP=1 and ISKIRT=1.
 <br>
@@ -85,9 +84,9 @@ There are no parameter access routines available for the Surface utility. Theref
 +1 Feature in use. No lines are drawn to data points
 <br>
  that are equal to SPVAL.
-<dt>SPVAL<dd>Special value used to mark unknown data when 
+</dd><dt>SPVAL</dt><dd>Special value used to mark unknown data when 
 <br>
- IOFFP=1. The default is 0.</pre></dl>
+ IOFFP=1. The default is 0.</pre></dd></dl>
 
 <h2>See Also</h2>
 

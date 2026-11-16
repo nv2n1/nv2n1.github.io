@@ -10,7 +10,6 @@ description: "sasl_decode – Decode data received"
 <p>sasl_decode &#8211; Decode data received </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_decode(sasl_conn_t *conn,
                 const char *input,
                 unsigned inputlen,

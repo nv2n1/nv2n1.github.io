@@ -11,7 +11,6 @@ std::wcsncpy - std::wcsncpy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     wchar_t *wcsncpy(wchar_t *dest, const wchar_t *src, std::size_t count);</code></pre> 
 Copies at most count characters of the wide string pointed to by src (including the terminating null wide character) to wide character array pointed to by dest. 
 If count is reached before the entire string src was copied, the resulting wide character array is not null-terminated. 
@@ -35,10 +34,8 @@ In typical usage, count is the size of the destination array.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     wchar_t src[] = L&quot;hi&quot;;
     wchar_t dest[6] = {L'a', L'b', L'c', L'd', L'e', L'f'};

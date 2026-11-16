@@ -16,7 +16,7 @@ const char *
 <code>Tcl_GetNameOfExecutable</code>()</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>char <i>*argv0</i> (in) The first command-line argument to the program, which gives the application&#8217;s name. </p>
+<dd>char <i>*argv0</i> (in) The first command-line argument to the program, which gives the application&#8217;s name. </dd>
 </dl>
 <h2>Description</h2>
 <p>The <code>Tcl_FindExecutable</code> procedure computes the full path name of the executable file from which the application was invoked and saves it for Tcl&#8217;s internal use. The executable&#8217;s path name is needed for several purposes in Tcl. For example, it is needed on some platforms in the implementation of the <code>load</code> command. It is also returned by the <code>info nameofexecutable</code> command. </p>

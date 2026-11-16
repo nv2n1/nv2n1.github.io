@@ -30,10 +30,10 @@ description: "mq_getattr, mq_setattr – get/set message queue attributes"
 <p>On success <code>mq_getattr</code>() and <code>mq_setattr</code>() return 0; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EBADF</code></p>
-<dd>The message queue descriptor specified in <i>mqdes</i> is invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>newattr-&gt;mq_flags</i> contained set bits other than <code>O_NONBLOCK</code>.</dl>
+<dt><code>EBADF</code></dt>
+<dd>The message queue descriptor specified in <i>mqdes</i> is invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>newattr-&gt;mq_flags</i> contained set bits other than <code>O_NONBLOCK</code>.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

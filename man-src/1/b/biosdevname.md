@@ -15,28 +15,28 @@ description: "biosdevname – give BIOS-given name of a device"
 <p> biosdevname takes a kernel device name as an argument, and returns the BIOS-given name it &quot;should&quot; be.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i, &#8211;interface</code></p>
-<dd> Treat [args] as ethernet devs</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Enable debugging</p>
-<dt><code>-p, &#8211;policy </code><i>[physical|all_ethN]</i></p>
+<dt><code>-i, &#8211;interface</code></dt>
+<dd> Treat [args] as ethernet devs</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Enable debugging</dd>
+<dt><code>-p, &#8211;policy </code><i>[physical|all_ethN]</i></dt>
 <dd>
-<dt><code>-P, &#8211;prefix </code><i>[string]</i></p>
-<dd> string use for embedded NICs in the physical policy (default=em)</p>
-<dt><code>-x, &#8211;nopirq</code></p>
-<dd> Do not use $PIR table for mapping PCI device to slot. Some BIOS have incorrect values.</p>
-<dt><code>-s, &#8211;smbios </code><i>[x.y]</i></p>
-<dd> Require minimum SMBIOS version x.y</dl>
+</dd><dt><code>-P, &#8211;prefix </code><i>[string]</i></dt>
+<dd> string use for embedded NICs in the physical policy (default=em)</dd>
+<dt><code>-x, &#8211;nopirq</code></dt>
+<dd> Do not use $PIR table for mapping PCI device to slot. Some BIOS have incorrect values.</dd>
+<dt><code>-s, &#8211;smbios </code><i>[x.y]</i></dt>
+<dd> Require minimum SMBIOS version x.y</dd></dl>
 <h2>POLICIES</h2>
 <p> The <code>physical</code> policy is the current default. However, when invoking biosdevname in udev rules, one should always specify the policy you want, as the default has changed over time.<br />
  The <code>physical</code> policy uses the following scheme:</p>
 <dl>
-<dt>em&lt;port&gt;[_&lt;virtual instance&gt;]</p>
-<dd> for embedded NICs</p>
-<dt>p&lt;slot&gt;p&lt;port&gt;[_&lt;virtual instance&gt;]</p>
-<dd> for cards in PCI slots </p>
-<dt>The</p>
-<dd> <code>all_ethN</code> policy makes a best guess at what the device order should be, with embedded devices first, PCI cards in ascending slot order, and ports in ascending PCI bus/device/function order breadth-first. However, this policy <i>does not work</i> if your PCI devices are hot-plugged or hot-pluggable, including the virtual functions on an SR-IOV device. In a hot-plug scenario, each separate udev instance will be invoked in parallel, while the device tree is still being populated with new devices. Each udev instance will see a different PCI tree, and thus cannot provide consistent enumeration. Use of this policy should be limited to only scenarios where all PCI devices are present at boot (cold-plug). </p>
+<dt>em&lt;port&gt;[_&lt;virtual instance&gt;]</dt>
+<dd> for embedded NICs</dd>
+<dt>p&lt;slot&gt;p&lt;port&gt;[_&lt;virtual instance&gt;]</dt>
+<dd> for cards in PCI slots </dd>
+<dt>The</dt>
+<dd> <code>all_ethN</code> policy makes a best guess at what the device order should be, with embedded devices first, PCI cards in ascending slot order, and ports in ascending PCI bus/device/function order breadth-first. However, this policy <i>does not work</i> if your PCI devices are hot-plugged or hot-pluggable, including the virtual functions on an SR-IOV device. In a hot-plug scenario, each separate udev instance will be invoked in parallel, while the device tree is still being populated with new devices. Each udev instance will see a different PCI tree, and thus cannot provide consistent enumeration. Use of this policy should be limited to only scenarios where all PCI devices are present at boot (cold-plug). </dd>
 </dl>
 <h2>EXIT CODES</h2>
 <p> Returns 0 on success, with BIOS-suggested name printed to stdout.<br />

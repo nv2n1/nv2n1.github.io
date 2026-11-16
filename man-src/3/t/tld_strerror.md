@@ -13,8 +13,8 @@ description: "tld_strerror – API function"
 const char *tld_strerror(Tld_rc rc);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>Tld_rc rc</p>
-<dd>tld return code</dl>
+<dt>Tld_rc rc</dt>
+<dd>tld return code</dd></dl>
 <h2>Description</h2>
 <p>Convert a return code integer to a text string. This string can be used to output a diagnostic message to the user.</p>
 <h2>Tld_Success</h2>
@@ -39,5 +39,5 @@ const char *tld_strerror(Tld_rc rc);</code></pre>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

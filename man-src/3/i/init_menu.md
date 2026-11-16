@@ -16,10 +16,8 @@ description: "init_menu – Low level initialisation of a menu. Allegro game pro
 <p> This function provides lower level access to the same functionality as do_menu(), but allows you to combine a popup menu with your own program control structures. It initialises a menu, returning a pointer to a menu player object that can be used with update_menu() and shutdown_menu(). With these functions, you could implement your own version of do_menu() with the lines: </p>
 <pre><code>
 MENU_PLAYER *player = init_menu(menu, x, y);
-
 while (update_menu(player))
     ;
-
 return shutdown_menu(player);
 </code></pre>
 <h2>SEE ALSO</h2>

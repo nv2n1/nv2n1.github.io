@@ -26,7 +26,7 @@ description: "zmq_ctx_get – get context options"
 <h2>Errors</h2>
 <p><code>EINVAL</code></p>
 <dl>
-<dd>The requested option <i>option_name</i> is unknown.</dl>
+<dd>The requested option <i>option_name</i> is unknown.</dd></dl>
 <h2>Example</h2>
 <p><code>Setting a limit on the number of sockets</code>. </p>
 <pre><code>void *context = zmq_ctx_new();

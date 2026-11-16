@@ -54,7 +54,6 @@ rc = zsocket_bind(backend, &quot;inproc://backend&quot;);
 assert(rc == 0);
 zproxy_t *proxy = zproxy_new(ctx, frontend, backend);
 assert(proxy);
-
 //  Connect application sockets to proxy
 void *faucet = zsocket_new(ctx, ZMQ_PUSH);
 assert(faucet);
@@ -64,36 +63,29 @@ void *sink = zsocket_new(ctx, ZMQ_PULL);
 assert(sink);
 rc = zsocket_connect(sink, &quot;inproc://backend&quot;);
 assert(rc == 0);
-
 //  Send some messages and check they arrived
 zstr_send(faucet, &quot;Hello&quot;);
 char *string = zstr_recv(sink);
 assert(streq(string, &quot;Hello&quot;));
 zstr_free(&amp;string);
-
 //  Check pause/resume functionality
 zproxy_pause(proxy);
 zstr_send(faucet, &quot;World&quot;);
-
 zproxy_resume(proxy);
 string = zstr_recv(sink);
 assert(streq(string, &quot;World&quot;));
 zstr_free(&amp;string);
-
 //  Create capture socket, must be a PULL socket
 void *capture = zsocket_new(ctx, ZMQ_PULL);
 assert(capture);
 rc = zsocket_bind(capture, &quot;inproc://capture&quot;);
 assert(rc == 0);
-
 //  Switch on capturing, check that it works
 zproxy_capture(proxy, &quot;inproc://capture&quot;);
 zstr_send(faucet, &quot;Hello&quot;);
-
 string = zstr_recv(sink);
 assert(streq(string, &quot;Hello&quot;));
 zstr_free(&amp;string);
-
 string = zstr_recv(capture);
 assert(streq(string, &quot;Hello&quot;));
 zstr_free(&amp;string);
@@ -109,7 +101,8 @@ zctx_destroy(&amp;ctx);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

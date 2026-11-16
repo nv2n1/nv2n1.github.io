@@ -15,7 +15,7 @@ snd_dmaengine_pcm_close_release_chan - Close a dmaengine based PCM substream and
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
 
 <h2>Description</h2>
 

@@ -16,134 +16,134 @@ description: "xgettext – extract gettext strings from source"
 <p> Mandatory arguments to long options are mandatory for short options too. Similarly for optional arguments.</p>
 <h3>Input file location:</h3>
 <dl>
-<dt>INPUTFILE &#8230;</p>
-<dd> input files</p>
-<dt><code>-f</code>, <code>&#8211;files-from</code>=<i>FILE</i></p>
-<dd> get list of input files from FILE</p>
-<dt><code>-D</code>, <code>&#8211;directory</code>=<i>DIRECTORY</i></p>
-<dd> add DIRECTORY to list for input files search</dl>
+<dt>INPUTFILE &#8230;</dt>
+<dd> input files</dd>
+<dt><code>-f</code>, <code>&#8211;files-from</code>=<i>FILE</i></dt>
+<dd> get list of input files from FILE</dd>
+<dt><code>-D</code>, <code>&#8211;directory</code>=<i>DIRECTORY</i></dt>
+<dd> add DIRECTORY to list for input files search</dd></dl>
 <p> If input file is -, standard input is read.</p>
 <h3>Output file location:</h3>
 <dl>
-<dt><code>-d</code>, <code>&#8211;default-domain</code>=<i>NAME</i></p>
-<dd> use NAME.po for output (instead of messages.po)</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></p>
-<dd> write output to specified file</p>
-<dt><code>-p</code>, <code>&#8211;output-dir</code>=<i>DIR</i></p>
-<dd> output files will be placed in directory DIR</dl>
+<dt><code>-d</code>, <code>&#8211;default-domain</code>=<i>NAME</i></dt>
+<dd> use NAME.po for output (instead of messages.po)</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> write output to specified file</dd>
+<dt><code>-p</code>, <code>&#8211;output-dir</code>=<i>DIR</i></dt>
+<dd> output files will be placed in directory DIR</dd></dl>
 <p> If output file is -, output is written to standard output.</p>
 <h3>Choice of input file language:</h3>
 <dl>
-<dt><code>-L</code>, <code>&#8211;language</code>=<i>NAME</i></p>
-<dd> recognise the specified language (C, C++, ObjectiveC, PO, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Smalltalk, Java, JavaProperties, C#, awk, YCP, Tcl, Perl, PHP, GCC-source, NXStringTable, RST, Glade, Lua, JavaScript, Vala, Desktop)</p>
-<dt><code>-C</code>, <code>&#8211;c</code>++</p>
-<dd> shorthand for <code>&#8211;language</code>=<i>C</i>++</dl>
+<dt><code>-L</code>, <code>&#8211;language</code>=<i>NAME</i></dt>
+<dd> recognise the specified language (C, C++, ObjectiveC, PO, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Smalltalk, Java, JavaProperties, C#, awk, YCP, Tcl, Perl, PHP, GCC-source, NXStringTable, RST, Glade, Lua, JavaScript, Vala, Desktop)</dd>
+<dt><code>-C</code>, <code>&#8211;c</code>++</dt>
+<dd> shorthand for <code>&#8211;language</code>=<i>C</i>++</dd></dl>
 <p> By default the language is guessed depending on the input file name extension.</p>
 <h3>Input file interpretation:</h3>
 <dl>
-<dt><code>&#8211;from-code</code>=<i>NAME</i></p>
-<dd> encoding of input files (except for Python, Tcl, Glade)</dl>
+<dt><code>&#8211;from-code</code>=<i>NAME</i></dt>
+<dd> encoding of input files (except for Python, Tcl, Glade)</dd></dl>
 <p> By default the input files are assumed to be in ASCII.</p>
 <h3>Operation mode:</h3>
 <dl>
-<dt><code>-j</code>, <code>&#8211;join-existing</code></p>
-<dd> join messages with existing file</p>
-<dt><code>-x</code>, <code>&#8211;exclude-file</code>=<i>FILE</i>.po</p>
-<dd> entries from FILE.po are not extracted</p>
-<dt><code>-cTAG</code>, <code>&#8211;add-comments</code>=<i>TAG</i></p>
-<dd> place comment blocks starting with TAG and preceding keyword lines in output file</p>
-<dt><code>-c</code>, <code>&#8211;add-comments</code></p>
-<dd> place all comment blocks preceding keyword lines in output file</p>
-<dt><code>&#8211;check</code>=<i>NAME</i></p>
-<dd> perform syntax check on messages (ellipsis-unicode, space-ellipsis,</p>
+<dt><code>-j</code>, <code>&#8211;join-existing</code></dt>
+<dd> join messages with existing file</dd>
+<dt><code>-x</code>, <code>&#8211;exclude-file</code>=<i>FILE</i>.po</dt>
+<dd> entries from FILE.po are not extracted</dd>
+<dt><code>-cTAG</code>, <code>&#8211;add-comments</code>=<i>TAG</i></dt>
+<dd> place comment blocks starting with TAG and preceding keyword lines in output file</dd>
+<dt><code>-c</code>, <code>&#8211;add-comments</code></dt>
+<dd> place all comment blocks preceding keyword lines in output file</dd>
+<dt><code>&#8211;check</code>=<i>NAME</i></dt>
+<dd> perform syntax check on messages (ellipsis-unicode, space-ellipsis,</dd>
 <dt>
-<dd> quote-unicode, bullet-unicode)</p>
-<dt><code>&#8211;sentence-end</code>=<i>TYPE</i></p>
-<dd> type describing the end of sentence (single-space, which is the default,</p>
+</dt><dd> quote-unicode, bullet-unicode)</dd>
+<dt><code>&#8211;sentence-end</code>=<i>TYPE</i></dt>
+<dd> type describing the end of sentence (single-space, which is the default,</dd>
 <dt>
-<dd> or double-space)</dl>
+</dt><dd> or double-space)</dd></dl>
 <h3>Language specific options:</h3>
 <dl>
-<dt><code>-a</code>, <code>&#8211;extract-all</code></p>
-<dd> extract all strings (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, Tcl, Perl, PHP, GCC-source, Glade, Lua, JavaScript, Vala)</p>
-<dt><code>-kWORD</code>, <code>&#8211;keyword</code>=<i>WORD</i></p>
-<dd> look for WORD as an additional keyword</p>
-<dt><code>-k</code>, <code>&#8211;keyword</code></p>
-<dd> do not to use default keywords (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, Tcl, Perl, PHP, GCC-source, Glade, Lua, JavaScript, Vala, Desktop)</p>
-<dt><code>&#8211;flag</code>=<i>WORD</i>:ARG:FLAG</p>
-<dd> additional flag for strings inside the argument number ARG of keyword WORD</p>
+<dt><code>-a</code>, <code>&#8211;extract-all</code></dt>
+<dd> extract all strings (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, Tcl, Perl, PHP, GCC-source, Glade, Lua, JavaScript, Vala)</dd>
+<dt><code>-kWORD</code>, <code>&#8211;keyword</code>=<i>WORD</i></dt>
+<dd> look for WORD as an additional keyword</dd>
+<dt><code>-k</code>, <code>&#8211;keyword</code></dt>
+<dd> do not to use default keywords (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, Tcl, Perl, PHP, GCC-source, Glade, Lua, JavaScript, Vala, Desktop)</dd>
+<dt><code>&#8211;flag</code>=<i>WORD</i>:ARG:FLAG</dt>
+<dd> additional flag for strings inside the argument number ARG of keyword WORD</dd>
 <dt>
-<dd> (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, YCP, Tcl, Perl, PHP, GCC-source, Lua, JavaScript, Vala)</p>
-<dt><code>-T</code>, <code>&#8211;trigraphs</code></p>
-<dd> understand ANSI C trigraphs for input (only languages C, C++, ObjectiveC)</p>
-<dt><code>&#8211;its</code>=<i>FILE</i></p>
-<dd> apply ITS rules from FILE (only XML based languages)</p>
-<dt><code>&#8211;qt</code></p>
-<dd> recognize Qt format strings (only language C++)</p>
-<dt><code>&#8211;kde</code></p>
-<dd> recognize KDE 4 format strings (only language C++)</p>
-<dt><code>&#8211;boost</code></p>
-<dd> recognize Boost format strings (only language C++)</p>
-<dt><code>&#8211;debug</code></p>
-<dd> more detailed formatstring recognition result</dl>
+</dt><dd> (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, YCP, Tcl, Perl, PHP, GCC-source, Lua, JavaScript, Vala)</dd>
+<dt><code>-T</code>, <code>&#8211;trigraphs</code></dt>
+<dd> understand ANSI C trigraphs for input (only languages C, C++, ObjectiveC)</dd>
+<dt><code>&#8211;its</code>=<i>FILE</i></dt>
+<dd> apply ITS rules from FILE (only XML based languages)</dd>
+<dt><code>&#8211;qt</code></dt>
+<dd> recognize Qt format strings (only language C++)</dd>
+<dt><code>&#8211;kde</code></dt>
+<dd> recognize KDE 4 format strings (only language C++)</dd>
+<dt><code>&#8211;boost</code></dt>
+<dd> recognize Boost format strings (only language C++)</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> more detailed formatstring recognition result</dd></dl>
 <h3>Output details:</h3>
 <dl>
-<dt><code>&#8211;color</code></p>
-<dd> use colors and other text attributes always</p>
-<dt><code>&#8211;color</code>=<i>WHEN</i></p>
-<dd> use colors and other text attributes if WHEN. WHEN may be &#8216;always&#8217;, &#8216;never&#8217;, &#8216;auto&#8217;, or &#8216;html&#8217;.</p>
-<dt><code>&#8211;style</code>=<i>STYLEFILE</i></p>
-<dd> specify CSS style rule file for <code>&#8211;color</code></p>
-<dt><code>-e</code>, <code>&#8211;no-escape</code></p>
-<dd> do not use C escapes in output (default)</p>
-<dt><code>-E</code>, <code>&#8211;escape</code></p>
-<dd> use C escapes in output, no extended chars</p>
-<dt><code>&#8211;force-po</code></p>
-<dd> write PO file even if empty</p>
-<dt><code>-i</code>, <code>&#8211;indent</code></p>
-<dd> write the .po file using indented style</p>
-<dt><code>&#8211;no-location</code></p>
-<dd> do not write &#8216;#: filename:line&#8217; lines</p>
-<dt><code>-n</code>, <code>&#8211;add-location</code></p>
-<dd> generate &#8216;#: filename:line&#8217; lines (default)</p>
-<dt><code>&#8211;strict</code></p>
-<dd> write out strict Uniforum conforming .po file</p>
-<dt><code>&#8211;properties-output</code></p>
-<dd> write out a Java .properties file</p>
-<dt><code>&#8211;stringtable-output</code></p>
-<dd> write out a NeXTstep/GNUstep .strings file</p>
-<dt><code>&#8211;itstool</code></p>
-<dd> write out itstool comments</p>
-<dt><code>-w</code>, <code>&#8211;width</code>=<i>NUMBER</i></p>
-<dd> set output page width</p>
-<dt><code>&#8211;no-wrap</code></p>
-<dd> do not break long message lines, longer than the output page width, into several lines</p>
-<dt><code>-s</code>, <code>&#8211;sort-output</code></p>
-<dd> generate sorted output</p>
-<dt><code>-F</code>, <code>&#8211;sort-by-file</code></p>
-<dd> sort output by file location</p>
-<dt><code>&#8211;omit-header</code></p>
-<dd> don&#8217;t write header with &#8216;msgid &quot;&quot;&#8217; entry</p>
-<dt><code>&#8211;copyright-holder</code>=<i>STRING</i></p>
-<dd> set copyright holder in output</p>
-<dt><code>&#8211;foreign-user</code></p>
-<dd> omit FSF copyright in output for foreign user</p>
-<dt><code>&#8211;package-name</code>=<i>PACKAGE</i></p>
-<dd> set package name in output</p>
-<dt><code>&#8211;package-version</code>=<i>VERSION</i></p>
-<dd> set package version in output</p>
-<dt><code>&#8211;msgid-bugs-address</code>=<i>EMAIL</i>@ADDRESS</p>
-<dd> set report address for msgid bugs</p>
-<dt><code>-m[STRING]</code>, <code>&#8211;msgstr-prefix</code>[=<i>STRING</i>]</p>
-<dd> use STRING or &quot;&quot; as prefix for msgstr values</p>
-<dt><code>-M[STRING]</code>, <code>&#8211;msgstr-suffix</code>[=<i>STRING</i>]</p>
-<dd> use STRING or &quot;&quot; as suffix for msgstr values</dl>
+<dt><code>&#8211;color</code></dt>
+<dd> use colors and other text attributes always</dd>
+<dt><code>&#8211;color</code>=<i>WHEN</i></dt>
+<dd> use colors and other text attributes if WHEN. WHEN may be &#8216;always&#8217;, &#8216;never&#8217;, &#8216;auto&#8217;, or &#8216;html&#8217;.</dd>
+<dt><code>&#8211;style</code>=<i>STYLEFILE</i></dt>
+<dd> specify CSS style rule file for <code>&#8211;color</code></dd>
+<dt><code>-e</code>, <code>&#8211;no-escape</code></dt>
+<dd> do not use C escapes in output (default)</dd>
+<dt><code>-E</code>, <code>&#8211;escape</code></dt>
+<dd> use C escapes in output, no extended chars</dd>
+<dt><code>&#8211;force-po</code></dt>
+<dd> write PO file even if empty</dd>
+<dt><code>-i</code>, <code>&#8211;indent</code></dt>
+<dd> write the .po file using indented style</dd>
+<dt><code>&#8211;no-location</code></dt>
+<dd> do not write &#8216;#: filename:line&#8217; lines</dd>
+<dt><code>-n</code>, <code>&#8211;add-location</code></dt>
+<dd> generate &#8216;#: filename:line&#8217; lines (default)</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd> write out strict Uniforum conforming .po file</dd>
+<dt><code>&#8211;properties-output</code></dt>
+<dd> write out a Java .properties file</dd>
+<dt><code>&#8211;stringtable-output</code></dt>
+<dd> write out a NeXTstep/GNUstep .strings file</dd>
+<dt><code>&#8211;itstool</code></dt>
+<dd> write out itstool comments</dd>
+<dt><code>-w</code>, <code>&#8211;width</code>=<i>NUMBER</i></dt>
+<dd> set output page width</dd>
+<dt><code>&#8211;no-wrap</code></dt>
+<dd> do not break long message lines, longer than the output page width, into several lines</dd>
+<dt><code>-s</code>, <code>&#8211;sort-output</code></dt>
+<dd> generate sorted output</dd>
+<dt><code>-F</code>, <code>&#8211;sort-by-file</code></dt>
+<dd> sort output by file location</dd>
+<dt><code>&#8211;omit-header</code></dt>
+<dd> don&#8217;t write header with &#8216;msgid &quot;&quot;&#8217; entry</dd>
+<dt><code>&#8211;copyright-holder</code>=<i>STRING</i></dt>
+<dd> set copyright holder in output</dd>
+<dt><code>&#8211;foreign-user</code></dt>
+<dd> omit FSF copyright in output for foreign user</dd>
+<dt><code>&#8211;package-name</code>=<i>PACKAGE</i></dt>
+<dd> set package name in output</dd>
+<dt><code>&#8211;package-version</code>=<i>VERSION</i></dt>
+<dd> set package version in output</dd>
+<dt><code>&#8211;msgid-bugs-address</code>=<i>EMAIL</i>@ADDRESS</dt>
+<dd> set report address for msgid bugs</dd>
+<dt><code>-m[STRING]</code>, <code>&#8211;msgstr-prefix</code>[=<i>STRING</i>]</dt>
+<dd> use STRING or &quot;&quot; as prefix for msgstr values</dd>
+<dt><code>-M[STRING]</code>, <code>&#8211;msgstr-suffix</code>[=<i>STRING</i>]</dt>
+<dd> use STRING or &quot;&quot; as suffix for msgstr values</dd></dl>
 <h3>Informative output:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Ulrich Drepper.</p>
 <h2>REPORTING BUGS</h2>
@@ -155,6 +155,6 @@ description: "xgettext – extract gettext strings from source"
 <p> The full documentation for <code>xgettext</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>xgettext</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info xgettext</code></dl>
+</dt><dd> <code>info xgettext</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

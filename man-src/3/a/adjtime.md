@@ -32,10 +32,10 @@ int adjtime(const struct timeval *delta, struct timeval *olddelta);
 <p> On success, <code>adjtime</code>() returns 0. On failure, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The adjustment in <i>delta</i> is outside the permitted range.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller does not have sufficient privilege to adjust the time. Under Linux, the <code>CAP_SYS_TIME</code> capability is required.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The adjustment in <i>delta</i> is outside the permitted range.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller does not have sufficient privilege to adjust the time. Under Linux, the <code>CAP_SYS_TIME</code> capability is required.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

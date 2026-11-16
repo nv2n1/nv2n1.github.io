@@ -59,9 +59,9 @@ description: "tor_selinux – Security Enhanced Linux Policy for the tor process
 <p> Policy governs the access confined processes have to these ports. SELinux tor policy is very flexible allowing users to setup their tor processes in as secure a method as possible. </p>
 <p> The following port types are defined for tor: </p>
 <dl>
-<dt><code>tor_port_t</code></p>
+<dt><code>tor_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 6969,9001,9030,9050,9051,9150</dl>
+</dd><dd>Default Defined Ports: tcp 6969,9001,9030,9050,9051,9150</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type tor_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -113,8 +113,8 @@ description: "tor_selinux – Security Enhanced Linux Policy for the tor process
 <p> <code>tor_exec_t</code> </p>
 <p> &#8211; Set files with the tor_exec_t type, if you want to transition an executable to the tor_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/tor, /usr/sbin/tor </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/tor, /usr/sbin/tor </dd>
 </dl>
 <p> <code>tor_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the tor_initrc_exec_t type, if you want to transition an executable to the tor_initrc_t domain. </p>
@@ -123,8 +123,8 @@ description: "tor_selinux – Security Enhanced Linux Policy for the tor process
 <p> <code>tor_var_lib_t</code> </p>
 <p> &#8211; Set files with the tor_var_lib_t type, if you want to store the tor files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/tor(/.*)?, /var/lib/tor-data(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/tor(/.*)?, /var/lib/tor-data(/.*)? </dd>
 </dl>
 <p> <code>tor_var_log_t</code> </p>
 <p> &#8211; Set files with the tor_var_log_t type, if you want to treat the data as tor var log data, usually stored under the /var/log directory. </p>

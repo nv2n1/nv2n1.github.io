@@ -33,14 +33,8 @@ swap swaps two string streams
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i> 
 <i>(C++11)</i> <pre><code>operator= assigns a basic_stringbuf object
 (public member function of std::basic_stringbuf&lt;CharT,Traits,Allocator&gt;)
-
 (C++11)
 operator= move-assigns from another basic_istream
 (protected member function)
-
 (C++11)
-
-
-
-
 </code></pre>

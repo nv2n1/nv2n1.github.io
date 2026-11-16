@@ -172,25 +172,25 @@ description: "socket – create an endpoint for communication"
 <p> Further details of the above address families, as well as information on several other address families, can be found in <code><a href="/docs/linux/man/7-address_families/">address_families</a></code>(7). </p>
 <p> The socket has the indicated <i>type</i>, which specifies the communication semantics. Currently defined types are:</p>
 <dl>
-<dt><code>SOCK_STREAM</code></p>
-<dd> Provides sequenced, reliable, two-way, connection-based byte streams. An out-of-band data transmission mechanism may be supported.</p>
-<dt><code>SOCK_DGRAM</code></p>
-<dd> Supports datagrams (connectionless, unreliable messages of a fixed maximum length).</p>
-<dt><code>SOCK_SEQPACKET</code></p>
-<dd> Provides a sequenced, reliable, two-way connection-based data transmission path for datagrams of fixed maximum length; a consumer is required to read an entire packet with each input system call.</p>
-<dt><code>SOCK_RAW</code></p>
-<dd> Provides raw network protocol access.</p>
-<dt><code>SOCK_RDM</code></p>
-<dd> Provides a reliable datagram layer that does not guarantee ordering.</p>
-<dt><code>SOCK_PACKET</code></p>
-<dd> Obsolete and should not be used in new programs; see <code><a href="/docs/linux/man/7-packet/">packet</a></code>(7).</dl>
+<dt><code>SOCK_STREAM</code></dt>
+<dd> Provides sequenced, reliable, two-way, connection-based byte streams. An out-of-band data transmission mechanism may be supported.</dd>
+<dt><code>SOCK_DGRAM</code></dt>
+<dd> Supports datagrams (connectionless, unreliable messages of a fixed maximum length).</dd>
+<dt><code>SOCK_SEQPACKET</code></dt>
+<dd> Provides a sequenced, reliable, two-way connection-based data transmission path for datagrams of fixed maximum length; a consumer is required to read an entire packet with each input system call.</dd>
+<dt><code>SOCK_RAW</code></dt>
+<dd> Provides raw network protocol access.</dd>
+<dt><code>SOCK_RDM</code></dt>
+<dd> Provides a reliable datagram layer that does not guarantee ordering.</dd>
+<dt><code>SOCK_PACKET</code></dt>
+<dd> Obsolete and should not be used in new programs; see <code><a href="/docs/linux/man/7-packet/">packet</a></code>(7).</dd></dl>
 <p> Some socket types may not be implemented by all protocol families. </p>
 <p> Since Linux 2.6.27, the <i>type</i> argument serves a second purpose: in addition to specifying a socket type, it may include the bitwise OR of any of the following values, to modify the behavior of <code>socket</code>():</p>
 <dl>
-<dt><code>SOCK_NONBLOCK</code></p>
-<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</p>
-<dt><code>SOCK_CLOEXEC</code></p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dl>
+<dt><code>SOCK_NONBLOCK</code></dt>
+<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</dd>
+<dt><code>SOCK_CLOEXEC</code></dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd></dl>
 <p> The <i>protocol</i> specifies a particular protocol to be used with the socket. Normally only a single protocol exists to support a particular socket type within a given protocol family, in which case <i>protocol</i> can be specified as 0. However, it is possible that many protocols may exist, in which case a particular protocol must be specified in this manner. The protocol number to use is specific to the &#8220;communication domain&#8221; in which communication is to take place; see <code><a href="/docs/linux/man/5-protocols/">protocols</a></code>(5). See <code><a href="/docs/linux/man/3-getprotoent/">getprotoent</a></code>(3) on how to map protocol name strings to protocol numbers. </p>
 <p> Sockets of type <code>SOCK_STREAM</code> are full-duplex byte streams. They do not preserve record boundaries. A stream socket must be in a <i>connected</i> state before any data may be sent or received on it. A connection to another socket is created with a <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) call. Once connected, data may be transferred using <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) calls or some variant of the <code><a href="/docs/linux/man/2-send/">send</a></code>(2) and <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2) calls. When a session has been completed a <code><a href="/docs/linux/man/2-close/">close</a></code>(2) may be performed. Out-of-band data may also be transmitted as described in <code><a href="/docs/linux/man/2-send/">send</a></code>(2) and received as described in <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2). </p>
 <p> The communications protocols which implement a <code>SOCK_STREAM</code> ensure that data is not lost or duplicated. If a piece of data for which the peer protocol has buffer space cannot be successfully transmitted within a reasonable length of time, then the connection is considered to be dead. When <code>SO_KEEPALIVE</code> is enabled on the socket the protocol checks in a protocol-specific manner if the other end is still alive. A <code>SIGPIPE</code> signal is raised if a process sends or receives on a broken stream; this causes naive processes, which do not handle the signal, to exit. <code>SOCK_SEQPACKET</code> sockets employ the same system calls as <code>SOCK_STREAM</code> sockets. The only difference is that <code><a href="/docs/linux/man/2-read/">read</a></code>(2) calls will return only the amount of data requested, and any data remaining in the arriving packet will be discarded. Also all message boundaries in incoming datagrams are preserved. </p>
@@ -203,22 +203,22 @@ description: "socket – create an endpoint for communication"
 <p> On success, a file descriptor for the new socket is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Permission to create a socket of the specified type and/or protocol is denied.</p>
-<dt><code>EAFNOSUPPORT</code></p>
-<dd> The implementation does not support the specified address family.</p>
-<dt><code>EINVAL</code></p>
-<dd> Unknown protocol, or protocol family not available.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid flags in <i>type</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOBUFS</code> or <code>ENOMEM</code></p>
-<dd> Insufficient memory is available. The socket cannot be created until sufficient resources are freed.</p>
-<dt><code>EPROTONOSUPPORT</code></p>
-<dd> The protocol type or the specified protocol is not supported within this domain.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Permission to create a socket of the specified type and/or protocol is denied.</dd>
+<dt><code>EAFNOSUPPORT</code></dt>
+<dd> The implementation does not support the specified address family.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Unknown protocol, or protocol family not available.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid flags in <i>type</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOBUFS</code> or <code>ENOMEM</code></dt>
+<dd> Insufficient memory is available. The socket cannot be created until sufficient resources are freed.</dd>
+<dt><code>EPROTONOSUPPORT</code></dt>
+<dd> The protocol type or the specified protocol is not supported within this domain.</dd></dl>
 <p> Other errors may be generated by the underlying protocol modules.</p>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.4BSD. </p>

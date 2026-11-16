@@ -12,16 +12,12 @@ std::filesystem::directory_entry::directory_entry - std::filesystem::directory_e
 
 <pre><code>directory_entry() noexcept = default;
 (1)(since C++ 17)
-
     directory_entry(const directory_entry &amp;) = default;
 (2)(since C++ 17)
-
     directory_entry(directory_entry &amp;&amp;) noexcept = default;
 (3)(since C++ 17)
-
     explicit directory_entry(const std::filesystem::path &amp;p);
 (4)(since C++ 17)
-
     directory_entry(const std::filesystem::path &amp;p, std::error_code &amp;ec);</code></pre> 
 Constructs a new directory_entry object. 
 1) Default constructor. 

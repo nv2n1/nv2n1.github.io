@@ -13,34 +13,14 @@ sc::ParentClasses -
 <h2>Synopsis</h2>
 
 <pre><code>
-
 #include &lt;class.h&gt;
-
 Public Member Functions
 void init (const char *)
-
-
-
 ParentClass &amp; parent (int i)
-
-
-
 const ParentClass &amp; parent (int i) const
-
-
-
 ParentClass &amp; operator[] (int i)
-
-
-
 const ParentClass &amp; operator[] (int i) const
-
-
-
 int n () const
-
-
-
 void change_parent (ClassDesc *oldcd, ClassDesc *newcd)</code></pre>
 
 <h2>Detailed Description</h2>

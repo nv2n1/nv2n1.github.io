@@ -10,7 +10,6 @@ description: "st – SCSI tape device"
 <p>st &#8211; SCSI tape device</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/mtio.h&gt;
-
 int ioctl(int fd, int request[, (void *)arg3]);
 int ioctl(int fd, MTIOCTOP, (struct mtop *)mt_cmd);
 int ioctl(int fd, MTIOCGET, (struct mtget *)mt_status);
@@ -26,136 +25,130 @@ int ioctl(int fd, MTIOCPOS, (struct mtpos *)mt_pos);</code></pre>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_op;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;operations defined below&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_count;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;how many of them&nbsp;*/ }; Magnetic tape operations for normal tape use:</p>
 <dl>
-<dt><code>MTBSF</code></p>
-<dd>Backward space over <i>mt_count</i> filemarks.</p>
-<dt><code>MTBSFM</code></p>
-<dd>Backward space over <i>mt_count</i> filemarks. Reposition the tape to the EOT side of the last filemark.</p>
-<dt><code>MTBSR</code></p>
-<dd>Backward space over <i>mt_count</i> records (tape blocks).</p>
-<dt><code>MTBSS</code></p>
-<dd>Backward space over <i>mt_count</i> setmarks.</p>
-<dt><code>MTCOMPRESSION</code></p>
-<dd>Enable compression of tape data within the drive if <i>mt_count</i> is nonzero and disable compression if <i>mt_count</i> is zero. This command uses the MODE page 15 supported by most DATs.</p>
-<dt><code>MTEOM</code></p>
-<dd>Go to the end of the recorded media (for appending files).</p>
-<dt><code>MTERASE</code></p>
-<dd>Erase tape. With 2.6 kernel, short erase (mark tape empty) is performed if the argument is zero. Otherwise, long erase (erase all) is done.</p>
-<dt><code>MTFSF</code></p>
-<dd>Forward space over <i>mt_count</i> filemarks.</p>
-<dt><code>MTFSFM</code></p>
-<dd>Forward space over <i>mt_count</i> filemarks. Reposition the tape to the BOT side of the last filemark.</p>
-<dt><code>MTFSR</code></p>
-<dd>Forward space over <i>mt_count</i> records (tape blocks).</p>
-<dt><code>MTFSS</code></p>
-<dd>Forward space over <i>mt_count</i> setmarks.</p>
-<dt><code>MTLOAD</code></p>
-<dd>Execute the SCSI load command. A special case is available for some HP autoloaders. If <i>mt_count</i> is the constant <code>MT_ST_HPLOADER_OFFSET</code> plus a number, the number is sent to the drive to control the autoloader.</p>
-<dt><code>MTLOCK</code></p>
-<dd>Lock the tape drive door.</p>
-<dt><code>MTMKPART</code></p>
-<dd>Format the tape into one or two partitions. If <i>mt_count</i> is positive, it gives the size of partition 1 and partition 0 contains the rest of the tape. If <i>mt_count</i> is zero, the tape is formatted into one partition. From kernel version 4.6, a negative <i>mt_count</i> specifies the size of partition 0 and the rest of the tape contains partition 1. The physical ordering of partitions depends on the drive. This command is not allowed for a drive unless the partition support is enabled for the drive (see <code>MT_ST_CAN_PARTITIONS</code> below).</p>
-<dt><code>MTNOP</code></p>
-<dd>No op&#8212;flushes the driver&#8217;s buffer as a side effect. Should be used before reading status with <code>MTIOCGET</code>.</p>
-<dt><code>MTOFFL</code></p>
-<dd>Rewind and put the drive off line.</p>
-<dt><code>MTRESET</code></p>
-<dd>Reset drive.</p>
-<dt><code>MTRETEN</code></p>
-<dd>Re-tension tape.</p>
-<dt><code>MTREW</code></p>
-<dd>Rewind.</p>
-<dt><code>MTSEEK</code></p>
-<dd>Seek to the tape block number specified in <i>mt_count</i>. This operation requires either a SCSI-2 drive that supports the <code>LOCATE</code> command (device-specific address) or a Tandberg-compatible SCSI-1 drive (Tandberg, Archive Viper, Wangtek, &#8230;). The block number should be one that was previously returned by <code>MTIOCPOS</code> if device-specific addresses are used.</p>
-<dt><code>MTSETBLK</code></p>
-<dd>Set the drive&#8217;s block length to the value specified in <i>mt_count</i>. A block length of zero sets the drive to variable block size mode.</p>
-<dt><code>MTSETDENSITY</code></p>
-<dd>Set the tape density to the code in <i>mt_count</i>. The density codes supported by a drive can be found from the drive documentation.</p>
-<dt><code>MTSETPART</code></p>
-<dd>The active partition is switched to <i>mt_count</i>. The partitions are numbered from zero. This command is not allowed for a drive unless the partition support is enabled for the drive (see <code>MT_ST_CAN_PARTITIONS</code> below).</p>
-<dt><code>MTUNLOAD</code></p>
-<dd>Execute the SCSI unload command (does not eject the tape).</p>
-<dt><code>MTUNLOCK</code></p>
-<dd>Unlock the tape drive door.</p>
-<dt><code>MTWEOF</code></p>
-<dd>Write <i>mt_count</i> filemarks.</p>
-<dt><code>MTWSM</code></p>
-<dd>Write <i>mt_count</i> setmarks.</dl>
+<dt><code>MTBSF</code></dt>
+<dd>Backward space over <i>mt_count</i> filemarks.</dd>
+<dt><code>MTBSFM</code></dt>
+<dd>Backward space over <i>mt_count</i> filemarks. Reposition the tape to the EOT side of the last filemark.</dd>
+<dt><code>MTBSR</code></dt>
+<dd>Backward space over <i>mt_count</i> records (tape blocks).</dd>
+<dt><code>MTBSS</code></dt>
+<dd>Backward space over <i>mt_count</i> setmarks.</dd>
+<dt><code>MTCOMPRESSION</code></dt>
+<dd>Enable compression of tape data within the drive if <i>mt_count</i> is nonzero and disable compression if <i>mt_count</i> is zero. This command uses the MODE page 15 supported by most DATs.</dd>
+<dt><code>MTEOM</code></dt>
+<dd>Go to the end of the recorded media (for appending files).</dd>
+<dt><code>MTERASE</code></dt>
+<dd>Erase tape. With 2.6 kernel, short erase (mark tape empty) is performed if the argument is zero. Otherwise, long erase (erase all) is done.</dd>
+<dt><code>MTFSF</code></dt>
+<dd>Forward space over <i>mt_count</i> filemarks.</dd>
+<dt><code>MTFSFM</code></dt>
+<dd>Forward space over <i>mt_count</i> filemarks. Reposition the tape to the BOT side of the last filemark.</dd>
+<dt><code>MTFSR</code></dt>
+<dd>Forward space over <i>mt_count</i> records (tape blocks).</dd>
+<dt><code>MTFSS</code></dt>
+<dd>Forward space over <i>mt_count</i> setmarks.</dd>
+<dt><code>MTLOAD</code></dt>
+<dd>Execute the SCSI load command. A special case is available for some HP autoloaders. If <i>mt_count</i> is the constant <code>MT_ST_HPLOADER_OFFSET</code> plus a number, the number is sent to the drive to control the autoloader.</dd>
+<dt><code>MTLOCK</code></dt>
+<dd>Lock the tape drive door.</dd>
+<dt><code>MTMKPART</code></dt>
+<dd>Format the tape into one or two partitions. If <i>mt_count</i> is positive, it gives the size of partition 1 and partition 0 contains the rest of the tape. If <i>mt_count</i> is zero, the tape is formatted into one partition. From kernel version 4.6, a negative <i>mt_count</i> specifies the size of partition 0 and the rest of the tape contains partition 1. The physical ordering of partitions depends on the drive. This command is not allowed for a drive unless the partition support is enabled for the drive (see <code>MT_ST_CAN_PARTITIONS</code> below).</dd>
+<dt><code>MTNOP</code></dt>
+<dd>No op&#8212;flushes the driver&#8217;s buffer as a side effect. Should be used before reading status with <code>MTIOCGET</code>.</dd>
+<dt><code>MTOFFL</code></dt>
+<dd>Rewind and put the drive off line.</dd>
+<dt><code>MTRESET</code></dt>
+<dd>Reset drive.</dd>
+<dt><code>MTRETEN</code></dt>
+<dd>Re-tension tape.</dd>
+<dt><code>MTREW</code></dt>
+<dd>Rewind.</dd>
+<dt><code>MTSEEK</code></dt>
+<dd>Seek to the tape block number specified in <i>mt_count</i>. This operation requires either a SCSI-2 drive that supports the <code>LOCATE</code> command (device-specific address) or a Tandberg-compatible SCSI-1 drive (Tandberg, Archive Viper, Wangtek, &#8230;). The block number should be one that was previously returned by <code>MTIOCPOS</code> if device-specific addresses are used.</dd>
+<dt><code>MTSETBLK</code></dt>
+<dd>Set the drive&#8217;s block length to the value specified in <i>mt_count</i>. A block length of zero sets the drive to variable block size mode.</dd>
+<dt><code>MTSETDENSITY</code></dt>
+<dd>Set the tape density to the code in <i>mt_count</i>. The density codes supported by a drive can be found from the drive documentation.</dd>
+<dt><code>MTSETPART</code></dt>
+<dd>The active partition is switched to <i>mt_count</i>. The partitions are numbered from zero. This command is not allowed for a drive unless the partition support is enabled for the drive (see <code>MT_ST_CAN_PARTITIONS</code> below).</dd>
+<dt><code>MTUNLOAD</code></dt>
+<dd>Execute the SCSI unload command (does not eject the tape).</dd>
+<dt><code>MTUNLOCK</code></dt>
+<dd>Unlock the tape drive door.</dd>
+<dt><code>MTWEOF</code></dt>
+<dd>Write <i>mt_count</i> filemarks.</dd>
+<dt><code>MTWSM</code></dt>
+<dd>Write <i>mt_count</i> setmarks.</dd></dl>
 <p> Magnetic tape operations for setting of device options (by the superuser):</p>
 <dl>
-<dt><code>MTSETDRVBUFFER</code></p>
-<dd>Set various drive and driver options according to bits encoded in <i>mt_count</i>. These consist of the drive&#8217;s buffering mode, a set of Boolean driver options, the buffer write threshold, defaults for the block size and density, and timeouts (only in kernels 2.1 and later). A single operation can affect only one item in the list below (the Booleans counted as one item.)</p>
-<dd>A value having zeros in the high-order 4 bits will be used to set the drive&#8217;s buffering mode. The buffering modes are:</p>
+<dt><code>MTSETDRVBUFFER</code></dt>
+<dd>Set various drive and driver options according to bits encoded in <i>mt_count</i>. These consist of the drive&#8217;s buffering mode, a set of Boolean driver options, the buffer write threshold, defaults for the block size and density, and timeouts (only in kernels 2.1 and later). A single operation can affect only one item in the list below (the Booleans counted as one item.)</dd>
+<dd>A value having zeros in the high-order 4 bits will be used to set the drive&#8217;s buffering mode. The buffering modes are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>0</p>
-<dd>The drive will not report <code>GOOD</code> status on write commands until the data blocks are actually written to the medium.</p>
-<dt>1</p>
-<dd>The drive may report <code>GOOD</code> status on write commands as soon as all the data has been transferred to the drive&#8217;s internal buffer.</p>
-<dt>2</p>
-<dd>The drive may report <code>GOOD</code> status on write commands as soon as (a) all the data has been transferred to the drive&#8217;s internal buffer, and (b) all buffered data from different initiators has been successfully written to the medium.</dl>
+</dd><dl>
+<dt>0</dt>
+<dd>The drive will not report <code>GOOD</code> status on write commands until the data blocks are actually written to the medium.</dd>
+<dt>1</dt>
+<dd>The drive may report <code>GOOD</code> status on write commands as soon as all the data has been transferred to the drive&#8217;s internal buffer.</dd>
+<dt>2</dt>
+<dd>The drive may report <code>GOOD</code> status on write commands as soon as (a) all the data has been transferred to the drive&#8217;s internal buffer, and (b) all buffered data from different initiators has been successfully written to the medium.</dd></dl>
 </dl>
-<dd>To control the write threshold the value in <i>mt_count</i> must include the constant <code>MT_ST_WRITE_THRESHOLD</code> bitwise ORed with a block count in the low 28 bits. The block count refers to 1024-byte blocks, not the physical block size on the tape. The threshold cannot exceed the driver&#8217;s internal buffer size (see DESCRIPTION, above).</p>
-<dd>To set and clear the Boolean options the value in <i>mt_count</i> must include one of the constants <code>MT_ST_BOOLEANS</code>, <code>MT_ST_SETBOOLEANS</code>, <code>MT_ST_CLEARBOOLEANS</code>, or <code>MT_ST_DEFBOOLEANS</code> bitwise ORed with whatever combination of the following options is desired. Using <code>MT_ST_BOOLEANS</code> the options can be set to the values defined in the corresponding bits. With <code>MT_ST_SETBOOLEANS</code> the options can be selectively set and with <code>MT_ST_DEFBOOLEANS</code> selectively cleared.</p>
-<dd>The default options for a tape device are set with <code>MT_ST_DEFBOOLEANS</code>. A nonactive tape device (e.g., device with minor 32 or 160) is activated when the default options for it are defined the first time. An activated device inherits from the device activated at start-up the options not set explicitly.</p>
-<dd>The Boolean options are:</p>
+<dd>To control the write threshold the value in <i>mt_count</i> must include the constant <code>MT_ST_WRITE_THRESHOLD</code> bitwise ORed with a block count in the low 28 bits. The block count refers to 1024-byte blocks, not the physical block size on the tape. The threshold cannot exceed the driver&#8217;s internal buffer size (see DESCRIPTION, above).</dd>
+<dd>To set and clear the Boolean options the value in <i>mt_count</i> must include one of the constants <code>MT_ST_BOOLEANS</code>, <code>MT_ST_SETBOOLEANS</code>, <code>MT_ST_CLEARBOOLEANS</code>, or <code>MT_ST_DEFBOOLEANS</code> bitwise ORed with whatever combination of the following options is desired. Using <code>MT_ST_BOOLEANS</code> the options can be set to the values defined in the corresponding bits. With <code>MT_ST_SETBOOLEANS</code> the options can be selectively set and with <code>MT_ST_DEFBOOLEANS</code> selectively cleared.</dd>
+<dd>The default options for a tape device are set with <code>MT_ST_DEFBOOLEANS</code>. A nonactive tape device (e.g., device with minor 32 or 160) is activated when the default options for it are defined the first time. An activated device inherits from the device activated at start-up the options not set explicitly.</dd>
+<dd>The Boolean options are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>MT_ST_BUFFER_WRITES</code> (Default: true)</p>
-<dd>Buffer all write operations in fixed-block mode. If this option is false and the drive uses a fixed block size, then all write operations must be for a multiple of the block size. This option must be set false to write reliable multivolume archives.</p>
-<dt><code>MT_ST_ASYNC_WRITES</code> (Default: true)</p>
-<dd>When this option is true, write operations return immediately without waiting for the data to be transferred to the drive if the data fits into the driver&#8217;s buffer. The write threshold determines how full the buffer must be before a new SCSI write command is issued. Any errors reported by the drive will be held until the next operation. This option must be set false to write reliable multivolume archives.</p>
-<dt><code>MT_ST_READ_AHEAD</code> (Default: true)</p>
-<dd>This option causes the driver to provide read buffering and read-ahead in fixed-block mode. If this option is false and the drive uses a fixed block size, then all read operations must be for a multiple of the block size.</p>
-<dt><code>MT_ST_TWO_FM</code> (Default: false)</p>
-<dd>This option modifies the driver behavior when a file is closed. The normal action is to write a single filemark. If the option is true, the driver will write two filemarks and backspace over the second one.</p>
-<dd>Note: This option should not be set true for QIC tape drives since they are unable to overwrite a filemark. These drives detect the end of recorded data by testing for blank tape rather than two consecutive filemarks. Most other current drives also detect the end of recorded data and using two filemarks is usually necessary only when interchanging tapes with some other systems.</p>
-<dt><code>MT_ST_DEBUGGING</code> (Default: false)</p>
-<dd>This option turns on various debugging messages from the driver (effective only if the driver was compiled with <code>DEBUG</code> defined nonzero).</p>
-<dt><code>MT_ST_FAST_EOM</code> (Default: false)</p>
-<dd>This option causes the <code>MTEOM</code> operation to be sent directly to the drive, potentially speeding up the operation but causing the driver to lose track of the current file number normally returned by the <code>MTIOCGET</code> request. If <code>MT_ST_FAST_EOM</code> is false, the driver will respond to an <code>MTEOM</code> request by forward spacing over files.</p>
-<dt><code>MT_ST_AUTO_LOCK</code> (Default: false)</p>
-<dd>When this option is true, the drive door is locked when the device file is opened and unlocked when it is closed.</p>
-<dt><code>MT_ST_DEF_WRITES</code> (Default: false)</p>
-<dd>The tape options (block size, mode, compression, etc.) may change when changing from one device linked to a drive to another device linked to the same drive depending on how the devices are defined. This option defines when the changes are enforced by the driver using SCSI-commands and when the drives auto-detection capabilities are relied upon. If this option is false, the driver sends the SCSI-commands immediately when the device is changed. If the option is true, the SCSI-commands are not sent until a write is requested. In this case, the drive firmware is allowed to detect the tape structure when reading and the SCSI-commands are used only to make sure that a tape is written according to the correct specification.</p>
-<dt><code>MT_ST_CAN_BSR</code> (Default: false)</p>
-<dd>When read-ahead is used, the tape must sometimes be spaced backward to the correct position when the device is closed and the SCSI command to space backward over records is used for this purpose. Some older drives can&#8217;t process this command reliably and this option can be used to instruct the driver not to use the command. The end result is that, with read-ahead and fixed-block mode, the tape may not be correctly positioned within a file when the device is closed. With 2.6 kernel, the default is true for drives supporting SCSI-3.</p>
-<dt><code>MT_ST_NO_BLKLIMS</code> (Default: false)</p>
-<dd>Some drives don&#8217;t accept the <code>READ BLOCK LIMITS</code> SCSI command. If this is used, the driver does not use the command. The drawback is that the driver can&#8217;t check before sending commands if the selected block size is acceptable to the drive.</p>
-<dt><code>MT_ST_CAN_PARTITIONS</code> (Default: false)</p>
-<dd>This option enables support for several partitions within a tape. The option applies to all devices linked to a drive.</p>
-<dt><code>MT_ST_SCSI2LOGICAL</code> (Default: false)</p>
-<dd>This option instructs the driver to use the logical block addresses defined in the SCSI-2 standard when performing the seek and tell operations (both with <code>MTSEEK</code> and <code>MTIOCPOS</code> commands and when changing tape partition). Otherwise, the device-specific addresses are used. It is highly advisable to set this option if the drive supports the logical addresses because they count also filemarks. There are some drives that support only the logical block addresses.</p>
-<dt><code>MT_ST_SYSV</code> (Default: false)</p>
-<dd>When this option is enabled, the tape devices use the System V semantics. Otherwise, the BSD semantics are used. The most important difference between the semantics is what happens when a device used for reading is closed: in System V semantics the tape is spaced forward past the next filemark if this has not happened while using the device. In BSD semantics the tape position is not changed.</p>
-<dt><code>MT_NO_WAIT</code> (Default: false)</p>
-<dd>Enables immediate mode (i.e., don&#8217;t wait for the command to finish) for some commands (e.g., rewind).</dl>
+</dd><dl>
+<dt><code>MT_ST_BUFFER_WRITES</code> (Default: true)</dt>
+<dd>Buffer all write operations in fixed-block mode. If this option is false and the drive uses a fixed block size, then all write operations must be for a multiple of the block size. This option must be set false to write reliable multivolume archives.</dd>
+<dt><code>MT_ST_ASYNC_WRITES</code> (Default: true)</dt>
+<dd>When this option is true, write operations return immediately without waiting for the data to be transferred to the drive if the data fits into the driver&#8217;s buffer. The write threshold determines how full the buffer must be before a new SCSI write command is issued. Any errors reported by the drive will be held until the next operation. This option must be set false to write reliable multivolume archives.</dd>
+<dt><code>MT_ST_READ_AHEAD</code> (Default: true)</dt>
+<dd>This option causes the driver to provide read buffering and read-ahead in fixed-block mode. If this option is false and the drive uses a fixed block size, then all read operations must be for a multiple of the block size.</dd>
+<dt><code>MT_ST_TWO_FM</code> (Default: false)</dt>
+<dd>This option modifies the driver behavior when a file is closed. The normal action is to write a single filemark. If the option is true, the driver will write two filemarks and backspace over the second one.</dd>
+<dd>Note: This option should not be set true for QIC tape drives since they are unable to overwrite a filemark. These drives detect the end of recorded data by testing for blank tape rather than two consecutive filemarks. Most other current drives also detect the end of recorded data and using two filemarks is usually necessary only when interchanging tapes with some other systems.</dd>
+<dt><code>MT_ST_DEBUGGING</code> (Default: false)</dt>
+<dd>This option turns on various debugging messages from the driver (effective only if the driver was compiled with <code>DEBUG</code> defined nonzero).</dd>
+<dt><code>MT_ST_FAST_EOM</code> (Default: false)</dt>
+<dd>This option causes the <code>MTEOM</code> operation to be sent directly to the drive, potentially speeding up the operation but causing the driver to lose track of the current file number normally returned by the <code>MTIOCGET</code> request. If <code>MT_ST_FAST_EOM</code> is false, the driver will respond to an <code>MTEOM</code> request by forward spacing over files.</dd>
+<dt><code>MT_ST_AUTO_LOCK</code> (Default: false)</dt>
+<dd>When this option is true, the drive door is locked when the device file is opened and unlocked when it is closed.</dd>
+<dt><code>MT_ST_DEF_WRITES</code> (Default: false)</dt>
+<dd>The tape options (block size, mode, compression, etc.) may change when changing from one device linked to a drive to another device linked to the same drive depending on how the devices are defined. This option defines when the changes are enforced by the driver using SCSI-commands and when the drives auto-detection capabilities are relied upon. If this option is false, the driver sends the SCSI-commands immediately when the device is changed. If the option is true, the SCSI-commands are not sent until a write is requested. In this case, the drive firmware is allowed to detect the tape structure when reading and the SCSI-commands are used only to make sure that a tape is written according to the correct specification.</dd>
+<dt><code>MT_ST_CAN_BSR</code> (Default: false)</dt>
+<dd>When read-ahead is used, the tape must sometimes be spaced backward to the correct position when the device is closed and the SCSI command to space backward over records is used for this purpose. Some older drives can&#8217;t process this command reliably and this option can be used to instruct the driver not to use the command. The end result is that, with read-ahead and fixed-block mode, the tape may not be correctly positioned within a file when the device is closed. With 2.6 kernel, the default is true for drives supporting SCSI-3.</dd>
+<dt><code>MT_ST_NO_BLKLIMS</code> (Default: false)</dt>
+<dd>Some drives don&#8217;t accept the <code>READ BLOCK LIMITS</code> SCSI command. If this is used, the driver does not use the command. The drawback is that the driver can&#8217;t check before sending commands if the selected block size is acceptable to the drive.</dd>
+<dt><code>MT_ST_CAN_PARTITIONS</code> (Default: false)</dt>
+<dd>This option enables support for several partitions within a tape. The option applies to all devices linked to a drive.</dd>
+<dt><code>MT_ST_SCSI2LOGICAL</code> (Default: false)</dt>
+<dd>This option instructs the driver to use the logical block addresses defined in the SCSI-2 standard when performing the seek and tell operations (both with <code>MTSEEK</code> and <code>MTIOCPOS</code> commands and when changing tape partition). Otherwise, the device-specific addresses are used. It is highly advisable to set this option if the drive supports the logical addresses because they count also filemarks. There are some drives that support only the logical block addresses.</dd>
+<dt><code>MT_ST_SYSV</code> (Default: false)</dt>
+<dd>When this option is enabled, the tape devices use the System V semantics. Otherwise, the BSD semantics are used. The most important difference between the semantics is what happens when a device used for reading is closed: in System V semantics the tape is spaced forward past the next filemark if this has not happened while using the device. In BSD semantics the tape position is not changed.</dd>
+<dt><code>MT_NO_WAIT</code> (Default: false)</dt>
+<dd>Enables immediate mode (i.e., don&#8217;t wait for the command to finish) for some commands (e.g., rewind).</dd></dl>
 <p> An example: </p>
 <pre><code>struct mtop mt_cmd;
 mt_cmd.mt_op = MTSETDRVBUFFER;
 mt_cmd.mt_count = MT_ST_BOOLEANS |
                   MT_ST_BUFFER_WRITES | MT_ST_ASYNC_WRITES;
 ioctl(fd, MTIOCTOP, mt_cmd);
-
 The default block size for a device can be set with
 MT_ST_DEF_BLKSIZE
-
 and the default density code can be set with
 MT_ST_DEFDENSITY.
-
 The values for the parameters are or'ed
 with the operation code.
-
 With kernels 2.1.x and later, the timeout values can be set with the
 subcommand
 MT_ST_SET_TIMEOUT
-
 ORed with the timeout in seconds.
 The long timeout (used for rewinds and other commands
 that may take a long time) can be set with
 MT_ST_SET_LONG_TIMEOUT.
-
 The kernel defaults are very long to
 make sure that a successful command is not timed out with any
 drive.
@@ -165,13 +158,11 @@ These commands can be used to set more
 practical values for a specific drive.
 The timeouts set for one device
 apply for all devices linked to the same drive.
-
 Starting from kernels 2.4.19 and 2.5.43, the driver supports a status
 bit which indicates whether the drive requests cleaning.
 The method used by the
 drive to return cleaning information is set using the
 MT_ST_SEL_CLN
-
 subcommand.
 If the value is zero, the cleaning
 bit is always zero.
@@ -187,8 +178,6 @@ If the bit pattern is zero, one or more bits under the mask indicate
 the cleaning request.
 If the pattern is nonzero, the pattern must match
 the masked sense data byte.
-
-
 MTIOCGET --- get status</code></pre>
 <p> This request takes an argument of type <i>(struct mtget&nbsp;*)</i>. /* structure for MTIOCGET &#8211; mag tape get status command */ struct mtget {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_type;<br />
@@ -201,93 +190,94 @@ MTIOCGET --- get status</code></pre>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;daddr_t&nbsp;<wbr>&nbsp;mt_fileno;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;daddr_t&nbsp;<wbr>&nbsp;mt_blkno; };</p>
 <dl>
-<dt><i>mt_type</i></p>
-<dd>The header file defines many values for <i>mt_type</i>, but the current driver reports only the generic types <code>MT_ISSCSI1</code> (Generic SCSI-1 tape) and <code>MT_ISSCSI2</code> (Generic SCSI-2 tape).</p>
-<dt><i>mt_resid</i></p>
-<dd>contains the current tape partition number.</p>
-<dt><i>mt_dsreg</i></p>
-<dd>reports the drive&#8217;s current settings for block size (in the low 24 bits) and density (in the high 8 bits). These fields are defined by <code>MT_ST_BLKSIZE_SHIFT</code>, <code>MT_ST_BLKSIZE_MASK</code>, <code>MT_ST_DENSITY_SHIFT</code>, and <code>MT_ST_DENSITY_MASK</code>.</p>
-<dt><i>mt_gstat</i></p>
-<dd>reports generic (device independent) status information. The header file defines macros for testing these status bits:</p>
+<dt><i>mt_type</i></dt>
+<dd>The header file defines many values for <i>mt_type</i>, but the current driver reports only the generic types <code>MT_ISSCSI1</code> (Generic SCSI-1 tape) and <code>MT_ISSCSI2</code> (Generic SCSI-2 tape).</dd>
+<dt><i>mt_resid</i></dt>
+<dd>contains the current tape partition number.</dd>
+<dt><i>mt_dsreg</i></dt>
+<dd>reports the drive&#8217;s current settings for block size (in the low 24 bits) and density (in the high 8 bits). These fields are defined by <code>MT_ST_BLKSIZE_SHIFT</code>, <code>MT_ST_BLKSIZE_MASK</code>, <code>MT_ST_DENSITY_SHIFT</code>, and <code>MT_ST_DENSITY_MASK</code>.</dd>
+<dt><i>mt_gstat</i></dt>
+<dd>reports generic (device independent) status information. The header file defines macros for testing these status bits:</dd>
 <dl>
 <dd>
-<dl>
-<dt> <code>GMT_EOF</code>(<i>x</i>):</p>
-<dd>The tape is positioned just after a filemark (always false after an <code>MTSEEK</code> operation).</p>
-<dt> <code>GMT_BOT</code>(<i>x</i>):</p>
-<dd>The tape is positioned at the beginning of the first file (always false after an <code>MTSEEK</code> operation).</p>
-<dt> <code>GMT_EOT</code>(<i>x</i>):</p>
-<dd>A tape operation has reached the physical End Of Tape.</p>
-<dt> <code>GMT_SM</code>(<i>x</i>):</p>
-<dd>The tape is currently positioned at a setmark (always false after an <code>MTSEEK</code> operation).</p>
-<dt> <code>GMT_EOD</code>(<i>x</i>):</p>
-<dd>The tape is positioned at the end of recorded data.</p>
-<dt> <code>GMT_WR_PROT</code>(<i>x</i>):</p>
-<dd>The drive is write-protected. For some drives this can also mean that the drive does not support writing on the current medium type.</p>
-<dt> <code>GMT_ONLINE</code>(<i>x</i>):</p>
-<dd>The last <code><a href="/docs/linux/man/2-open/">open</a></code>(2) found the drive with a tape in place and ready for operation.</p>
-<dt> <code>GMT_D_6250</code>(<i>x</i>), <code>GMT_D_1600</code>(<i>x</i>), <code>GMT_D_800</code>(<i>x</i>):</p>
-<dd>This &#8220;generic&#8221; status information reports the current density setting for 9-track &#189;&quot; tape drives only.</p>
-<dt> <code>GMT_DR_OPEN</code>(<i>x</i>):</p>
-<dd>The drive does not have a tape in place.</p>
-<dt> <code>GMT_IM_REP_EN</code>(<i>x</i>):</p>
-<dd>Immediate report mode. This bit is set if there are no guarantees that the data has been physically written to the tape when the write call returns. It is set zero only when the driver does not buffer data and the drive is set not to buffer data.</p>
-<dt> <code>GMT_CLN</code>(<i>x</i>):</p>
-<dd>The drive has requested cleaning. Implemented in kernels since 2.4.19 and 2.5.43.</dl>
+</dd><dl>
+<dt> <code>GMT_EOF</code>(<i>x</i>):</dt>
+<dd>The tape is positioned just after a filemark (always false after an <code>MTSEEK</code> operation).</dd>
+<dt> <code>GMT_BOT</code>(<i>x</i>):</dt>
+<dd>The tape is positioned at the beginning of the first file (always false after an <code>MTSEEK</code> operation).</dd>
+<dt> <code>GMT_EOT</code>(<i>x</i>):</dt>
+<dd>A tape operation has reached the physical End Of Tape.</dd>
+<dt> <code>GMT_SM</code>(<i>x</i>):</dt>
+<dd>The tape is currently positioned at a setmark (always false after an <code>MTSEEK</code> operation).</dd>
+<dt> <code>GMT_EOD</code>(<i>x</i>):</dt>
+<dd>The tape is positioned at the end of recorded data.</dd>
+<dt> <code>GMT_WR_PROT</code>(<i>x</i>):</dt>
+<dd>The drive is write-protected. For some drives this can also mean that the drive does not support writing on the current medium type.</dd>
+<dt> <code>GMT_ONLINE</code>(<i>x</i>):</dt>
+<dd>The last <code><a href="/docs/linux/man/2-open/">open</a></code>(2) found the drive with a tape in place and ready for operation.</dd>
+<dt> <code>GMT_D_6250</code>(<i>x</i>), <code>GMT_D_1600</code>(<i>x</i>), <code>GMT_D_800</code>(<i>x</i>):</dt>
+<dd>This &#8220;generic&#8221; status information reports the current density setting for 9-track &#189;&quot; tape drives only.</dd>
+<dt> <code>GMT_DR_OPEN</code>(<i>x</i>):</dt>
+<dd>The drive does not have a tape in place.</dd>
+<dt> <code>GMT_IM_REP_EN</code>(<i>x</i>):</dt>
+<dd>Immediate report mode. This bit is set if there are no guarantees that the data has been physically written to the tape when the write call returns. It is set zero only when the driver does not buffer data and the drive is set not to buffer data.</dd>
+<dt> <code>GMT_CLN</code>(<i>x</i>):</dt>
+<dd>The drive has requested cleaning. Implemented in kernels since 2.4.19 and 2.5.43.</dd></dl>
 </dl>
-<dt><i>mt_erreg</i></p>
-<dd>The only field defined in <i>mt_erreg</i> is the recovered error count in the low 16 bits (as defined by <code>MT_ST_SOFTERR_SHIFT</code> and <code>MT_ST_SOFTERR_MASK</code>). Due to inconsistencies in the way drives report recovered errors, this count is often not maintained (most drives do not by default report soft errors but this can be changed with a SCSI MODE SELECT command).</p>
-<dt><i>mt_fileno</i></p>
-<dd>reports the current file number (zero-based). This value is set to -1 when the file number is unknown (e.g., after <code>MTBSS</code> or <code>MTSEEK</code>).</p>
-<dt><i>mt_blkno</i></p>
-<dd>reports the block number (zero-based) within the current file. This value is set to -1 when the block number is unknown (e.g., after <code>MTBSF</code>, <code>MTBSS</code>, or <code>MTSEEK</code>).</dl>
+<dt><i>mt_erreg</i></dt>
+<dd>The only field defined in <i>mt_erreg</i> is the recovered error count in the low 16 bits (as defined by <code>MT_ST_SOFTERR_SHIFT</code> and <code>MT_ST_SOFTERR_MASK</code>). Due to inconsistencies in the way drives report recovered errors, this count is often not maintained (most drives do not by default report soft errors but this can be changed with a SCSI MODE SELECT command).</dd>
+<dt><i>mt_fileno</i></dt>
+<dd>reports the current file number (zero-based). This value is set to -1 when the file number is unknown (e.g., after <code>MTBSS</code> or <code>MTSEEK</code>).</dd>
+<dt><i>mt_blkno</i></dt>
+<dd>reports the block number (zero-based) within the current file. This value is set to -1 when the block number is unknown (e.g., after <code>MTBSF</code>, <code>MTBSS</code>, or <code>MTSEEK</code>).</dd></dl>
 <h3>MTIOCPOS &#8212; get tape position</h3>
 <p>This request takes an argument of type <i>(struct mtpos&nbsp;*)</i> and reports the drive&#8217;s notion of the current tape block number, which is not the same as <i>mt_blkno</i> returned by <code>MTIOCGET</code>. This drive must be a SCSI-2 drive that supports the <code>READ POSITION</code> command (device-specific address) or a Tandberg-compatible SCSI-1 drive (Tandberg, Archive Viper, Wangtek, &#8230; ). /* structure for MTIOCPOS &#8211; mag tape get position command */ struct mtpos {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mt_blkno;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;current block number&nbsp;*/ };</p>
 <h2>Return Value</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>An attempt was made to write or erase a write-protected tape. (This error is not detected during <code><a href="/docs/linux/man/2-open/">open</a></code>(2).)</p>
-<dt><code>EBUSY</code></p>
-<dd>The device is already in use or the driver was unable to allocate a buffer.</p>
-<dt><code>EFAULT</code></p>
-<dd>The command parameters point to memory not belonging to the calling process.</p>
-<dt><code>EINVAL</code></p>
-<dd>An <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) had an invalid argument, or a requested block size was invalid.</p>
-<dt><code>EIO</code></p>
-<dd>The requested operation could not be completed.</p>
-<dt><code>ENOMEM</code></p>
-<dd>The byte count in <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is smaller than the next physical block on the tape. (Before 2.2.18 and 2.4.0 the extra bytes have been silently ignored.)</p>
-<dt><code>ENOSPC</code></p>
-<dd>A write operation could not be completed because the tape reached end-of-medium.</p>
-<dt><code>ENOSYS</code></p>
-<dd>Unknown <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2).</p>
-<dt><code>ENXIO</code></p>
-<dd>During opening, the tape device does not exist.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd>An attempt was made to read or write a variable-length block that is larger than the driver&#8217;s internal buffer.</p>
-<dt><code>EROFS</code></p>
-<dd>Open is attempted with <code>O_WRONLY</code> or <code>O_RDWR</code> when the tape in the drive is write-protected.</dl>
+<dt><code>EACCES</code></dt>
+<dd>An attempt was made to write or erase a write-protected tape. (This error is not detected during <code><a href="/docs/linux/man/2-open/">open</a></code>(2).)</dd>
+<dt><code>EBUSY</code></dt>
+<dd>The device is already in use or the driver was unable to allocate a buffer.</dd>
+<dt><code>EFAULT</code></dt>
+<dd>The command parameters point to memory not belonging to the calling process.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>An <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) had an invalid argument, or a requested block size was invalid.</dd>
+<dt><code>EIO</code></dt>
+<dd>The requested operation could not be completed.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>The byte count in <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is smaller than the next physical block on the tape. (Before 2.2.18 and 2.4.0 the extra bytes have been silently ignored.)</dd>
+<dt><code>ENOSPC</code></dt>
+<dd>A write operation could not be completed because the tape reached end-of-medium.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd>Unknown <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2).</dd>
+<dt><code>ENXIO</code></dt>
+<dd>During opening, the tape device does not exist.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd>An attempt was made to read or write a variable-length block that is larger than the driver&#8217;s internal buffer.</dd>
+<dt><code>EROFS</code></dt>
+<dd>Open is attempted with <code>O_WRONLY</code> or <code>O_RDWR</code> when the tape in the drive is write-protected.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/dev/st*</i></p>
-<dd>the auto-rewind SCSI tape devices</p>
-<dt><i>/dev/nst*</i></p>
-<dd>the nonrewind SCSI tape devices</dl>
+<dt><i>/dev/st*</i></dt>
+<dd>the auto-rewind SCSI tape devices</dd>
+<dt><i>/dev/nst*</i></dt>
+<dd>the nonrewind SCSI tape devices</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt>1.</p>
-<dd>When exchanging data between systems, both systems have to agree on the physical tape block size. The parameters of a drive after startup are often not the ones most operating systems use with these devices. Most systems use drives in variable-block mode if the drive supports that mode. This applies to most modern drives, including DATs, 8mm helical scan drives, DLTs, etc. It may be advisable to use these drives in variable-block mode also in Linux (i.e., use <code>MTSETBLK</code> or <code>MTSETDEFBLK</code> at system startup to set the mode), at least when exchanging data with a foreign system. The drawback of this is that a fairly large tape block size has to be used to get acceptable data transfer rates on the SCSI bus.</p>
-<dt>2.</p>
-<dd>Many programs (e.g., <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1)) allow the user to specify the blocking factor on the command line. Note that this determines the physical block size on tape only in variable-block mode.</p>
-<dt>3.</p>
-<dd>In order to use SCSI tape drives, the basic SCSI driver, a SCSI-adapter driver and the SCSI tape driver must be either configured into the kernel or loaded as modules. If the SCSI-tape driver is not present, the drive is recognized but the tape support described in this page is not available.</p>
-<dt>4.</p>
-<dd>The driver writes error messages to the console/log. The SENSE codes written into some messages are automatically translated to text if verbose SCSI messages are enabled in kernel configuration.</p>
-<dt>5.</p>
-<dd>The driver&#8217;s internal buffering allows good throughput in fixed-block mode also with small <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) byte counts. With direct transfers this is not possible and may cause a surprise when moving to the 2.6 kernel. The solution is to tell the software to use larger transfers (often telling it to use larger blocks). If this is not possible, direct transfers can be disabled.</dl>
+<dt>1.</dt>
+<dd>When exchanging data between systems, both systems have to agree on the physical tape block size. The parameters of a drive after startup are often not the ones most operating systems use with these devices. Most systems use drives in variable-block mode if the drive supports that mode. This applies to most modern drives, including DATs, 8mm helical scan drives, DLTs, etc. It may be advisable to use these drives in variable-block mode also in Linux (i.e., use <code>MTSETBLK</code> or <code>MTSETDEFBLK</code> at system startup to set the mode), at least when exchanging data with a foreign system. The drawback of this is that a fairly large tape block size has to be used to get acceptable data transfer rates on the SCSI bus.</dd>
+<dt>2.</dt>
+<dd>Many programs (e.g., <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1)) allow the user to specify the blocking factor on the command line. Note that this determines the physical block size on tape only in variable-block mode.</dd>
+<dt>3.</dt>
+<dd>In order to use SCSI tape drives, the basic SCSI driver, a SCSI-adapter driver and the SCSI tape driver must be either configured into the kernel or loaded as modules. If the SCSI-tape driver is not present, the drive is recognized but the tape support described in this page is not available.</dd>
+<dt>4.</dt>
+<dd>The driver writes error messages to the console/log. The SENSE codes written into some messages are automatically translated to text if verbose SCSI messages are enabled in kernel configuration.</dd>
+<dt>5.</dt>
+<dd>The driver&#8217;s internal buffering allows good throughput in fixed-block mode also with small <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) byte counts. With direct transfers this is not possible and may cause a surprise when moving to the 2.6 kernel. The solution is to tell the software to use larger transfers (often telling it to use larger blocks). If this is not possible, direct transfers can be disabled.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-mt/">mt</a></code>(1) </p>
 <p> The file <i>drivers/scsi/README.st</i> or <i>Documentation/scsi/st.txt</i> (kernel &gt;= 2.6) in the Linux kernel source tree contains the most recent information about the driver and its configuration possibilities</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+</dl></dl>

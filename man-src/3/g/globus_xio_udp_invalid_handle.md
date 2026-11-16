@@ -16,6 +16,6 @@ description: "Types –"
 <p>Invalid handle type </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>GLOBUS_XIO_UDP_SET_HANDLE</code></dl>
+<dd><code>GLOBUS_XIO_UDP_SET_HANDLE</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_xio from the source code.</p>

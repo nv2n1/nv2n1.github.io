@@ -21,19 +21,19 @@ CALL NGPICT(WKID,ACTION)
 <h2>Description</h2>
 
 <dl><dt>WKID
-<dd>(an input parameter of type INTEGER) which designates the workstation identifier of a workstation as it was specified in a GOPWK call.
-<dt>ACTION
-<dd>(an input parameter of type INTEGER) the value of which specifies the action to be taken on the workstation WKID. Legal values are:
-<dl><dd><dl><dt>0
-<dd>Execute an UPDATE WORKSTATION on WKID.
-<dt>1
-<dd>Execute an UPDATE WORKSTATION followed by a CLEAR WORKSTATION.
-<dt>2
-<dd>Execute an UPDATE WORKSTATION followed by a pause waiting for a mouse click or a key click.
-<dt>3
-<dd>Execute an UPDATE WORKSTATION followed by a pause followed by a CLEAR WORKSTATION after the pause has been terminated by a mouse click or a key click.
-<dt>4
-<dd>Same as 3 except a &quot;&lt;READY&gt;&quot; prompt is issued in the lower left corner of the window after the UPDATE WORKSTATION.</dl></dl>
+</dt><dd>(an input parameter of type INTEGER) which designates the workstation identifier of a workstation as it was specified in a GOPWK call.
+</dd><dt>ACTION
+</dt><dd>(an input parameter of type INTEGER) the value of which specifies the action to be taken on the workstation WKID. Legal values are:
+</dd><dl><dd></dd><dl><dt>0
+</dt><dd>Execute an UPDATE WORKSTATION on WKID.
+</dd><dt>1
+</dt><dd>Execute an UPDATE WORKSTATION followed by a CLEAR WORKSTATION.
+</dd><dt>2
+</dt><dd>Execute an UPDATE WORKSTATION followed by a pause waiting for a mouse click or a key click.
+</dd><dt>3
+</dt><dd>Execute an UPDATE WORKSTATION followed by a pause followed by a CLEAR WORKSTATION after the pause has been terminated by a mouse click or a key click.
+</dd><dt>4
+</dt><dd>Same as 3 except a &quot;&lt;READY&gt;&quot; prompt is issued in the lower left corner of the window after the UPDATE WORKSTATION.</dd></dl></dl>
 </dl>
 
 <h2>C-Binding Description</h2>

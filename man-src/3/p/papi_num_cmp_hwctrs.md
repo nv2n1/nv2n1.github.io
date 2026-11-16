@@ -16,20 +16,21 @@ description: "PAPI_num_cmp_hwctrs –"
 <p> <code>PAPI_library_init()</code> must be called in order for this function to return anything greater than 0. </p>
 <p> <code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_num_cmp_hwctrs(int&nbsp;<wbr>&nbsp;<wbr>cidx&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cidx</i> &#8212; An integer identifier for a component. By convention, component 0 is always the cpu component.</dl>
+<dd><i>cidx</i> &#8212; An integer identifier for a component. By convention, component 0 is always the cpu component.</dd></dl>
 <p> <code>Example</code></p>
 <dl COMPACT>
 <dd>
 <pre>* // Query the cpu component for the number of counters.
 * printf(* </pre>
-</dl>
+</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>On success, this function returns a value greater than zero. </p>
+<dd>On success, this function returns a value greater than zero. </dd>
 <p>&nbsp;<wbr>A zero result usually means the library has not been initialized.</dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

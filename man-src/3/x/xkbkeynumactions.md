@@ -11,14 +11,14 @@ description: "XkbKeyNumActions – Computes the number of actions associated wit
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>int XkbKeyNumActions</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>Xkb description of interest</p>
-<dt><i>&#8211; keycode</i></p>
-<dd>keycode of interest</dl>
+</dd><dd>Xkb description of interest</dd>
+<dt><i>&#8211; keycode</i></dt>
+<dd>keycode of interest</dd></dl>
 <h2>Description</h2>
 <p>A key action defines the effect key presses and releases have on the internal state of the server. For example, the expected key action associated with pressing the Shift key is to set the Shift modifier. There is zero or one key action associated with each keysym bound to each key. </p>
 <p> Just as the entire list of key symbols for the keyboard mapping is held in the <i>syms </i> field of the client map, the entire list of key actions for the keyboard mapping is held in the <i>acts </i> array of the server map. The total size of <i>acts </i> is specified by <i>size_acts, </i> and the number of entries is specified by <i>num_acts. </i> </p>
@@ -30,7 +30,6 @@ description: "XkbKeyNumActions – Computes the number of actions associated wit
 <p>The KeySymMapRec structure is defined as follows: </p>
 <pre> #define XkbNumKbdGroups 4
  #define XkbMaxKbdGroup (XkbNumKbdGroups-1)
- 
  typedef struct { /* map to keysyms for a single keycode */
  unsigned char kt_index[XkbNumKbdGroups]; /* key type index for each group */
  unsigned char group_info; /* # of groups and out of range group handling */

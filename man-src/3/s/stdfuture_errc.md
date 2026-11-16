@@ -11,17 +11,11 @@ std::future_errc - std::future_errc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;future&gt;
-
 enum class future_errc {
-
     broken_promise = /* implementation-defined */,
-
     future_already_retrieved = /* implementation-defined */,   (since C++11)
-
     promise_already_satisfied = /* implementation-defined */,
-
     no_state = /* implementation-defined */
-
 };</code></pre> 
 The scoped enumeration std::future_errc defines the error codes reported by std::future and related classes in std::future_error exception objects. Only four error codes are required, although the implementation may define additional error codes. Because the appropriate specialization of std::is_error_code_enum is provided, values of type std::future_errc are implicitly convertible to std::error_code. 
 All error codes are distinct and non-zero. <i>(since C++14)</i> 

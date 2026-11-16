@@ -15,12 +15,12 @@ description: "mtx-scite – Scite Helper Script"
 <p> <code>Scite Helper Script</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;words</code></p>
-<dd> convert spell-*.txt into spell-*.lua</p>
-<dt><code>&#8211;tree</code></p>
-<dd> converts a tree into an html tree (&#8211;source &#8211;target &#8211;numbers)</p>
-<dt><code>&#8211;file</code></p>
-<dd> converts a file into an html file (&#8211;source &#8211;target &#8211;numbers &#8211;lexer)</dl>
+<dt><code>&#8211;words</code></dt>
+<dd> convert spell-*.txt into spell-*.lua</dd>
+<dt><code>&#8211;tree</code></dt>
+<dd> converts a tree into an html tree (&#8211;source &#8211;target &#8211;numbers)</dd>
+<dt><code>&#8211;file</code></dt>
+<dd> converts a file into an html file (&#8211;source &#8211;target &#8211;numbers &#8211;lexer)</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

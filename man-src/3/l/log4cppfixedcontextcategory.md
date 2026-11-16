@@ -56,14 +56,14 @@ description: "log4cpp::FixedContextCategory –"
 <p> All handling of Appenders, etc. is delgated to the &#8216;normal&#8217; <code>Category</code> with the same name. Its intended use is for object instances that serve a single client: they contruct a <code>FixedContextCategory</code> with the client identifier as context. Unlike with regular <code>Category</code> instances one has to explicitly create <code>FixedContextCategory</code> instances using the constructor. This also implies one has to take cake of destruction of the instance as well. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.4</dl>
+<dd>0.2.4</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>log4cpp::FixedContextCategory::FixedContextCategory (const std::string &amp;name, const std::string &amp;context = &#8221;)</h3>
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> the fully qualified name of this Categories delegate <code>Category</code>.<br />
- <i>context</i> the context to fill the <code>NDC</code> field of LoggingEvents with.</dl>
+ <i>context</i> the context to fill the <code>NDC</code> field of LoggingEvents with.</dd></dl>
 <h3>log4cpp::FixedContextCategory::~FixedContextCategory () [virtual]</h3>
 <p>Destructor for <code>Category</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -72,7 +72,7 @@ description: "log4cpp::FixedContextCategory –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>priority</i> The priority of this log message.<br />
- <i>message</i> string to write in the log file</dl>
+ <i>message</i> string to write in the log file</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3>void log4cpp::FixedContextCategory::addAppender (<code>Appender</code> *appender) [virtual]</h3>
 <p>For the moment this method does nothing. </p>
@@ -85,7 +85,7 @@ description: "log4cpp::FixedContextCategory –"
 <p> This method always calls all the appenders inherited form the hierracy circumventing any evaluation of whether to log or not to log the particular log request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to log.</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3>bool log4cpp::FixedContextCategory::getAdditivity () const [virtual]</h3>
 <p>Returns the additivity flag for this <code>Category</code> instance. </p>
@@ -94,25 +94,25 @@ description: "log4cpp::FixedContextCategory –"
 <p>Returns the set of Appenders currently attached to this Catogory. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.1</dl>
+<dd>0.3.1</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The set of attached Appenders.</dl>
+<dd>The set of attached Appenders.</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3><code>Appender</code> * log4cpp::FixedContextCategory::getAppender () const [virtual]</h3>
 <p>Returns the <code>Appender</code> for this <code>Category</code>, or NULL if no <code>Appender</code> has been set. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>Appender</code>.</dl>
+<dd>The <code>Appender</code>.</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3><code>Appender</code> * log4cpp::FixedContextCategory::getAppender (const std::string &amp;name) const [virtual]</h3>
 <p>Returns the specified <code>Appender</code> for this <code>Category</code>, or NULL if the <code>Appender</code> is not attached to this <code>Category</code>. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.7</dl>
+<dd>0.2.7</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>Appender</code>.</dl>
+<dd>The <code>Appender</code>.</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3><code>Priority::Value</code> log4cpp::FixedContextCategory::getChainedPriority () const [virtual]</h3>
 <p>Starting from this <code>Category</code>, search the category hierarchy for a set priority and return it. Otherwise, return the priority of the root category. </p>
@@ -122,24 +122,24 @@ description: "log4cpp::FixedContextCategory –"
 <p>Return the context string used as <code>NDC</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the context string.</dl>
+<dd>the context string.</dd></dl>
 <h3><code>Priority::Value</code> log4cpp::FixedContextCategory::getPriority () const [virtual]</h3>
 <p>Returns the assigned <code>Priority</code>, if any, for this <code>Category</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>Priority</code> &#8211; the assigned <code>Priority</code>, can be <code>Priority::NOTSET</code></dl>
+<dd><code>Priority</code> &#8211; the assigned <code>Priority</code>, can be <code>Priority::NOTSET</code></dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3>bool log4cpp::FixedContextCategory::ownsAppender () const [virtual]</h3>
 <p>FixedContextAppenders cannot own Appenders. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false</dl>
+<dd>false</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3>bool log4cpp::FixedContextCategory::ownsAppender (<code>Appender</code> *appender) const [virtual]</h3>
 <p>FixedContextAppenders cannot own Appenders. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false</dl>
+<dd>false</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3>void log4cpp::FixedContextCategory::removeAllAppenders () [virtual]</h3>
 <p>Removes all appenders set for this <code>Category</code>. Currently a <code>Category</code> can have only one appender, but this may change in the future. </p>
@@ -151,6 +151,6 @@ description: "log4cpp::FixedContextCategory –"
 <p>Set the context string used as <code>NDC</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> the context string</dl>
+<dd><i>context</i> the context string</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

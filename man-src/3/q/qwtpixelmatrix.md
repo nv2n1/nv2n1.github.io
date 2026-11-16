@@ -33,47 +33,47 @@ description: "QwtPixelMatrix –"
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Bounding rectangle for the matrix</dl>
+<dd><i>rect</i> Bounding rectangle for the matrix</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtPixelMatrix::index (intx, inty) const [inline]</h3>
 <p>Calculate the index in the bit field corresponding to a position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> X-coordinate<br />
- <i>y</i> Y-coordinate</dl>
+ <i>y</i> Y-coordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Index, when <code>rect()</code> contains pos &#8211; otherwise -1.</dl>
+<dd>Index, when <code>rect()</code> contains pos &#8211; otherwise -1.</dd></dl>
 <h3>QRect QwtPixelMatrix::rect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <h3>void QwtPixelMatrix::setRect (const QRect &amp;rect)</h3>
 <p>Set the bounding rectangle of the matrix </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Bounding rectangle</dl>
+<dd><i>rect</i> Bounding rectangle</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>All bits are cleared</dl>
+<dd>All bits are cleared</dd></dl>
 <h3>bool QwtPixelMatrix::testAndSetPixel (intx, inty, boolon) [inline]</h3>
 <p>Set a pixel and test if a pixel has been set before. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> X-coordinate<br />
  <i>y</i> Y-coordinate<br />
- <i>on</i> Set/Clear the pixel</dl>
+ <i>on</i> Set/Clear the pixel</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true, when pos is outside of <code>rect()</code>, or when the pixel was set before.</dl>
+<dd>true, when pos is outside of <code>rect()</code>, or when the pixel was set before.</dd></dl>
 <h3>bool QwtPixelMatrix::testPixel (intx, inty) const [inline]</h3>
 <p>Test if a pixel has been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> X-coordinate<br />
- <i>y</i> Y-coordinate</dl>
+ <i>y</i> Y-coordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true, when pos is outside of <code>rect()</code>, or when the pixel has already been set.</dl>
+<dd>true, when pos is outside of <code>rect()</code>, or when the pixel has already been set.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

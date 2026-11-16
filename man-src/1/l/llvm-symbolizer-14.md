@@ -114,40 +114,40 @@ bar
                                                                                                                                                                     test.cpp : 15 : 0</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;adjust-vma &lt;offset&gt;</code></p>
-<dd> Add the specified offset to object file addresses when performing lookups. This can be used to perform lookups as if the object were relocated by the offset.</p>
-<dt><code>&#8211;basenames, -s</code></p>
-<dd> Print just the file’s name without any directories, instead of the absolute path.</p>
-<dt><code>&#8211;demangle, -C</code></p>
-<dd> Print demangled function names, if the names are mangled (e.g. the mangled name <i>_Z3bazv</i> becomes <i>baz()</i>, whilst the non-mangled name <i>foz</i> is printed as is). Defaults to true.</p>
-<dt><code>&#8211;dwp &lt;path&gt;</code></p>
-<dd> Use the specified DWP file at <code>&lt;path&gt;</code> for any CUs that have split DWARF debug data.</p>
-<dt><code>&#8211;fallback-debug-path &lt;path&gt;</code></p>
-<dd> When a separate file contains debug data, and is referenced by a GNU debug link section, use the specified path as a basis for locating the debug data if it cannot be found relative to the object.</p>
-<dt><code>&#8211;functions [=&lt;none|short|linkage&gt;], -f</code></p>
-<dd> Specify the way function names are printed (omit function name, print short function name, or print full linkage name, respectively). Defaults to <code>linkage</code>.</p>
-<dt><code>&#8211;help, -h</code></p>
-<dd> Show help and usage for this command.</p>
-<dt><code>&#8211;inlining, &#8211;inlines, -i</code></p>
-<dd> If a source code location is in an inlined function, prints all the inlined frames. This is the default.</p>
-<dt><code>&#8211;no-inlines</code></p>
-<dd> Don’t print inlined frames.</p>
-<dt><code>&#8211;no-demangle</code></p>
-<dd> Don’t print demangled function names.</p>
-<dt><code>&#8211;obj &lt;path&gt;, &#8211;exe, -e</code></p>
-<dd> Path to object file to be symbolized. If <code>&#8211;</code> is specified, read the object directly from the standard input stream.</p>
-<dt><code>&#8211;output-style &lt;LLVM|GNU|JSON&gt;</code></p>
-<dd> Specify the preferred output style. Defaults to <code>LLVM</code>. When the output style is set to <code>GNU</code>, the tool follows the style of GNU’s <code>addr2line</code>. The differences from the <code>LLVM</code> style are:</p>
-<dt>&bull;</p>
-<dd> Does not print the column of a source code location.</p>
-<dt>&bull;</p>
-<dd> Does not add an empty line after the report for an address.</p>
-<dt>&bull;</p>
-<dd> Does not replace the name of an inlined function with the name of the topmost caller when inlined frames are not shown.</p>
-<dt>&bull;</p>
-<dd> Prints an address’s debug-data discriminator when it is non-zero. One way to produce discriminators is to compile with clang’s -fdebug-info-for-profiling.</p>
-<dt><code>JSON</code> style provides a machine readable output in JSON. If addresses are</p>
-<dd> supplied via stdin, the output JSON will be a series of individual objects. Otherwise, all results will be contained in a single array. </p>
+<dt><code>&#8211;adjust-vma &lt;offset&gt;</code></dt>
+<dd> Add the specified offset to object file addresses when performing lookups. This can be used to perform lookups as if the object were relocated by the offset.</dd>
+<dt><code>&#8211;basenames, -s</code></dt>
+<dd> Print just the file’s name without any directories, instead of the absolute path.</dd>
+<dt><code>&#8211;demangle, -C</code></dt>
+<dd> Print demangled function names, if the names are mangled (e.g. the mangled name <i>_Z3bazv</i> becomes <i>baz()</i>, whilst the non-mangled name <i>foz</i> is printed as is). Defaults to true.</dd>
+<dt><code>&#8211;dwp &lt;path&gt;</code></dt>
+<dd> Use the specified DWP file at <code>&lt;path&gt;</code> for any CUs that have split DWARF debug data.</dd>
+<dt><code>&#8211;fallback-debug-path &lt;path&gt;</code></dt>
+<dd> When a separate file contains debug data, and is referenced by a GNU debug link section, use the specified path as a basis for locating the debug data if it cannot be found relative to the object.</dd>
+<dt><code>&#8211;functions [=&lt;none|short|linkage&gt;], -f</code></dt>
+<dd> Specify the way function names are printed (omit function name, print short function name, or print full linkage name, respectively). Defaults to <code>linkage</code>.</dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd> Show help and usage for this command.</dd>
+<dt><code>&#8211;inlining, &#8211;inlines, -i</code></dt>
+<dd> If a source code location is in an inlined function, prints all the inlined frames. This is the default.</dd>
+<dt><code>&#8211;no-inlines</code></dt>
+<dd> Don’t print inlined frames.</dd>
+<dt><code>&#8211;no-demangle</code></dt>
+<dd> Don’t print demangled function names.</dd>
+<dt><code>&#8211;obj &lt;path&gt;, &#8211;exe, -e</code></dt>
+<dd> Path to object file to be symbolized. If <code>&#8211;</code> is specified, read the object directly from the standard input stream.</dd>
+<dt><code>&#8211;output-style &lt;LLVM|GNU|JSON&gt;</code></dt>
+<dd> Specify the preferred output style. Defaults to <code>LLVM</code>. When the output style is set to <code>GNU</code>, the tool follows the style of GNU’s <code>addr2line</code>. The differences from the <code>LLVM</code> style are:</dd>
+<dt>&bull;</dt>
+<dd> Does not print the column of a source code location.</dd>
+<dt>&bull;</dt>
+<dd> Does not add an empty line after the report for an address.</dd>
+<dt>&bull;</dt>
+<dd> Does not replace the name of an inlined function with the name of the topmost caller when inlined frames are not shown.</dd>
+<dt>&bull;</dt>
+<dd> Prints an address’s debug-data discriminator when it is non-zero. One way to produce discriminators is to compile with clang’s -fdebug-info-for-profiling.</dd>
+<dt><code>JSON</code> style provides a machine readable output in JSON. If addresses are</dt>
+<dd> supplied via stdin, the output JSON will be a series of individual objects. Otherwise, all results will be contained in a single array. </dd>
 <p>$ llvm-symbolizer &#8211;obj=inlined.elf 0x4004be 0x400486 -p<br />
 baz() at /tmp/test.cpp:11:18<br />
  (inlined by) main at /tmp/test.cpp:15:0<br />
@@ -206,28 +206,28 @@ $ llvm-symbolizer &#8211;output-style=JSON &#8211;obj=inlined.elf 0x4004be 0x400
     ]<br />
   }<br />
 ]</p>
-<dt><code>&#8211;pretty-print, -p</code></p>
-<dd> Print human readable output. If <i>&#8211;inlining</i> is specified, the enclosing scope is prefixed by (inlined by). For JSON output, the option will cause JSON to be indented and split over new lines. Otherwise, the JSON output will be printed in a compact form. </p>
+<dt><code>&#8211;pretty-print, -p</code></dt>
+<dd> Print human readable output. If <i>&#8211;inlining</i> is specified, the enclosing scope is prefixed by (inlined by). For JSON output, the option will cause JSON to be indented and split over new lines. Otherwise, the JSON output will be printed in a compact form. </dd>
 <pre>
 $ llvm-symbolizer --obj=inlined.elf 0x4004be --inlining --pretty-print
 baz() at /tmp/test.cpp:11:18
  (inlined by) main at /tmp/test.cpp:15:0
 </pre>
-<dt><code>&#8211;print-address, &#8211;addresses, -a</code></p>
-<dd> Print address before the source code location. Defaults to false. </p>
+<dt><code>&#8211;print-address, &#8211;addresses, -a</code></dt>
+<dd> Print address before the source code location. Defaults to false. </dd>
 <p>$ llvm &#8211; symbolizer&#8211; obj = inlined.elf&#8211; print &#8211; address 0x4004be 0x4004be baz() / tmp / test.cpp : 11 : 18 main / tmp / test.cpp : 15 : 0 $ llvm &#8211; symbolizer&#8211; obj = inlined.elf 0x4004be &#8211;pretty &#8211; print&#8211; print &#8211; address 0x4004be : baz() at / tmp / test.cpp : 11 : 18(inlined by)main at / tmp / test.cpp : 15 : 0</p>
-<dt><code>&#8211;print-source-context-lines &lt;N&gt;</code></p>
-<dd> Print <code>N</code> lines of source context for each symbolized address. </p>
+<dt><code>&#8211;print-source-context-lines &lt;N&gt;</code></dt>
+<dd> Print <code>N</code> lines of source context for each symbolized address. </dd>
 <pre><code>
 $ llvm - symbolizer-- obj = test.elf 0x400490 --print - source - context - lines = 3 baz() / tmp / test.cpp : 11 : 0 10 : volatile int k = 42;
 11 &gt; : return foz() + k;
 12:
 }
 </code></pre>
-<dt><code>&#8211;relativenames</code></p>
-<dd> Print the file’s path relative to the compilation directory, instead of the absolute path. If the command-line to the compiler included the full path, this will be the same as the default.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print verbose address, line and column information. </p>
+<dt><code>&#8211;relativenames</code></dt>
+<dd> Print the file’s path relative to the compilation directory, instead of the absolute path. If the command-line to the compiler included the full path, this will be the same as the default.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print verbose address, line and column information. </dd>
 <pre>
 $ llvm-symbolizer --obj=inlined.elf --verbose 0x4004be
 baz()
@@ -245,18 +245,18 @@ main
   Line: 15
   Column: 18
 </pre>
-<dt><code>&#8211;version, -v</code></p>
-<dd> Print version information for the tool.</p>
-<dt><code>@&lt;FILE&gt;</code></p>
-<dd> Read command-line options from response file <i>&lt;FILE&gt;</i>.</dl>
+<dt><code>&#8211;version, -v</code></dt>
+<dd> Print version information for the tool.</dd>
+<dt><code>@&lt;FILE&gt;</code></dt>
+<dd> Read command-line options from response file <i>&lt;FILE&gt;</i>.</dd></dl>
 <h2>WINDOWS/PDB SPECIFIC OPTIONS</h2>
 <dl>
-<dt><code>&#8211;dia</code></p>
-<dd> Use the Windows DIA SDK for symbolization. If the DIA SDK is not found, llvm-symbolizer will fall back to the native implementation.</dl>
+<dt><code>&#8211;dia</code></dt>
+<dd> Use the Windows DIA SDK for symbolization. If the DIA SDK is not found, llvm-symbolizer will fall back to the native implementation.</dd></dl>
 <h2>MACH-O SPECIFIC OPTIONS</h2>
 <dl>
-<dt><code>&#8211;default-arch &lt;arch&gt;</code></p>
-<dd> If a binary contains object files for multiple architectures (e.g. it is a Mach-O universal binary), symbolize the object file for a given architecture. You can also specify the architecture by writing <code>binary_name:arch_name</code> in the input (see example below). If the architecture is not specified in either way, the address will not be symbolized. Defaults to empty string. </p>
+<dt><code>&#8211;default-arch &lt;arch&gt;</code></dt>
+<dd> If a binary contains object files for multiple architectures (e.g. it is a Mach-O universal binary), symbolize the object file for a given architecture. You can also specify the architecture by writing <code>binary_name:arch_name</code> in the input (see example below). If the architecture is not specified in either way, the address will not be symbolized. Defaults to empty string. </dd>
 <pre>
 $ cat addr.txt
 /tmp/mach_universal_binary:i386 0x1f84
@@ -267,8 +267,8 @@ _main
 _main
 /tmp/source_x86_64.cc:8
 </pre>
-<dt><code>&#8211;dsym-hint &lt;path/to/file.dSYM&gt;</code></p>
-<dd> If the debug info for a binary isn’t present in the default location, look for the debug info at the .dSYM path provided via this option. This flag can be used multiple times.</dl>
+<dt><code>&#8211;dsym-hint &lt;path/to/file.dSYM&gt;</code></dt>
+<dd> If the debug info for a binary isn’t present in the default location, look for the debug info at the .dSYM path provided via this option. This flag can be used multiple times.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-symbolizer</code> returns 0. Other exit codes imply an internal program error.</p>
 <h2>SEE ALSO</h2>

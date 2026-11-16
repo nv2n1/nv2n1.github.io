@@ -14,16 +14,16 @@ description: "ccwgroup_create_dev – create and register a ccw group device"
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>parent device for the new device</dl>
+</dd><dd>parent device for the new device</dd></dl>
 <p> <i>gdrv</i></p>
 <dl>
-<dd>driver for the new group device</dl>
+<dd>driver for the new group device</dd></dl>
 <p> <i>num_devices</i></p>
 <dl>
-<dd>number of slave devices</dl>
+<dd>number of slave devices</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>buffer containing comma separated bus ids of slave devices</dl>
+<dd>buffer containing comma separated bus ids of slave devices</dd></dl>
 <h2>Description</h2>
 <p>Create and register a new ccw group device as a child of <i>parent</i>. Slave devices are obtained from the list of bus ids given in <i>buf</i>.</p>
 <h2>Return</h2>
@@ -33,5 +33,5 @@ description: "ccwgroup_create_dev – create and register a ccw group device"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,15 +15,15 @@ sysfs_remove_file_from_group - remove an attribute file from a group.
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object we're acting for.</dl>
+<dl><dd></dd><dd>object we're acting for.</dd></dl>
  
 
  <i>attr</i>
-<dl><dd>attribute descriptor.</dl>
+<dl><dd>attribute descriptor.</dd></dl>
  
 
  <i>group</i>
-<dl><dd>group name.</dl>
+<dl><dd>group name.</dd></dl>
 
 <h2>Copyright</h2>
 

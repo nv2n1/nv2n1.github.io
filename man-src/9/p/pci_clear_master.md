@@ -15,7 +15,7 @@ pci_clear_master - disables bus-mastering for device dev
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI device to disable</dl>
+<dl><dd></dd><dd>the PCI device to disable</dd></dl>
 
 <h2>Copyright</h2>
 

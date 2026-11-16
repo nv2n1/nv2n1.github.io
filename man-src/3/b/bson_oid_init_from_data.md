@@ -16,11 +16,11 @@ void bson_oid_init_from_data(bson_oid_t *oid,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>data</code></p>
-<dd> A buffer containing 12 bytes for the oid.</dl>
+<dt><code>data</code></dt>
+<dd> A buffer containing 12 bytes for the oid.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Initializes a <code>bson_oid_t</code> using the raw buffer provided. </p>
 <h2>COLOPHON</h2>

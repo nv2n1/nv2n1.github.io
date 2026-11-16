@@ -14,11 +14,11 @@ description: "ata_cable_ignore – return ignored PATA cable."
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>port</dl>
+</dd><dd>port</dd></dl>
 <h2>Description</h2>
 <p>Helper method for drivers which don&#8217;t use cable type to limit transfer mode.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

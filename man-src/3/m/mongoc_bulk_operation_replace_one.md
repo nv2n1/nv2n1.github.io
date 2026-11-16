@@ -19,21 +19,21 @@ mongoc_bulk_operation_replace_one (mongoc_bulk_operation_t *bulk,
 <p> Replace a single document as part of a bulk operation. This only queues the operation. To execute it, call <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> \&amp;. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>selector</code></p>
-<dd> A <code>bson_t</code> containing the selector to query.</dl>
+<dt><code>selector</code></dt>
+<dd> A <code>bson_t</code> containing the selector to query.</dd></dl>
 <dl COMPACT>
-<dt><code>document</code></p>
-<dd> A <code>bson_t</code> containing the replacement document.</dl>
+<dt><code>document</code></dt>
+<dd> A <code>bson_t</code> containing the replacement document.</dd></dl>
 <dl COMPACT>
-<dt><code>upsert</code></p>
-<dd> <code>true</code> if this should be an <code>upsert</code> \&amp;.</dl>
+<dt><code>upsert</code></dt>
+<dd> <code>true</code> if this should be an <code>upsert</code> \&amp;.</dd></dl>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>document</code> may not contain fields with keys containing <code>.</code> or <code>$</code> \&amp;.</dl>
+</dt><dd> <code>document</code> may not contain fields with keys containing <code>.</code> or <code>$</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p> Errors are propagated via <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> \&amp;. </p>
 <h2>Colophon</h2>

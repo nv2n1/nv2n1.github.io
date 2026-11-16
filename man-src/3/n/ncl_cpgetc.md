@@ -13,11 +13,11 @@ CPGETC - Retrieves the current value of an internal parameter of type CHARACTER.
 
  void c_cpgetc (char *pnam, char *cval, int len)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(CHARACTER, input) is the name of a parameter whose character value is to be retrieved. Only the first three characters of PNAM are examined. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of just 'LLT', use 'LLT - LINE LABEL TEXT'.
-<dt>CVAL
-<dd>(CHARACTER, output) is a variable in which the value of the parameter specified by PNAM is to be returned.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
+</dt><dd>(CHARACTER, input) is the name of a parameter whose character value is to be retrieved. Only the first three characters of PNAM are examined. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of just 'LLT', use 'LLT - LINE LABEL TEXT'.
+</dd><dt>CVAL
+</dt><dd>(CHARACTER, output) is a variable in which the value of the parameter specified by PNAM is to be returned.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
 <dl COMPACT><dt>len
-<dd>The size of cval as dimensioned in the calling program.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Conpack parameters. For a complete list of parameters available in this utility, see the conpack_params man page.
+</dt><dd>The size of cval as dimensioned in the calling program.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Conpack parameters. For a complete list of parameters available in this utility, see the conpack_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant example: cpex07.
 <h2>Access</h2>To use CPGETC or c_cpgetc, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the conpack man page for a description of all Conpack error messages and/or informational messages.

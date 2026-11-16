@@ -19,28 +19,28 @@ description: "grid-mapfile-add-entry – Add an entry to a gridmap file"
 <p> The full set of command-line options to <code>grid-mapfile-add-entry</code> are: </p>
 <p> <code>-help, -usage</code></p>
 <dl>
-<dd>Display the command-line options to <code>grid-mapfile-add-entry</code>.</dl>
+<dd>Display the command-line options to <code>grid-mapfile-add-entry</code>.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
-<dd>Display the version number of the <code>grid-mapfile-add-entry</code> command. The second form includes more details.</dl>
+<dd>Display the version number of the <code>grid-mapfile-add-entry</code> command. The second form includes more details.</dd></dl>
 <p> <code>-dn </code><i>DISTINGUISHED-NAME</i></p>
 <dl>
-<dd>The X.509 distinguished name to add a mapping for. The name should be in OpenSSL&#8217;s oneline format.</dl>
+<dd>The X.509 distinguished name to add a mapping for. The name should be in OpenSSL&#8217;s oneline format.</dd></dl>
 <p> <code>-ln </code><i>LOCAL-NAME</i><code>&#8230;</code></p>
 <dl>
-<dd>The POSIX user name to map the distinguished name to. This name must be a valid username. Add multiple <i>LOCAL-NAME</i> strings after the <i>-ln</i> command-line option. If any of the local names are invalid, no changes will be made to the gridmap file.</dl>
+<dd>The POSIX user name to map the distinguished name to. This name must be a valid username. Add multiple <i>LOCAL-NAME</i> strings after the <i>-ln</i> command-line option. If any of the local names are invalid, no changes will be made to the gridmap file.</dd></dl>
 <p> <code>-d, -dryrun</code></p>
 <dl>
-<dd>Verify local names and display diagnostics about what would be added to the gridmap file, but don&#8217;t actually modify the file.</dl>
+<dd>Verify local names and display diagnostics about what would be added to the gridmap file, but don&#8217;t actually modify the file.</dd></dl>
 <p> <code>-mapfile </code><i>MAPFILE</i><code>, -f </code><i>MAPFILE</i></p>
 <dl>
-<dd>Modify the gridmap file named by <i>MAPFILE</i> instead of the default.</dl>
+<dd>Modify the gridmap file named by <i>MAPFILE</i> instead of the default.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
-<dd>Don&#8217;t copy the original file to <i>MAPFILE</i>.old.</dl>
+<dd>Don&#8217;t copy the original file to <i>MAPFILE</i>.old.</dd></dl>
 <p> <code>-c</code></p>
 <dl>
-<dd>Don&#8217;t check for changes to the gridmap during program execution.</dl>
+<dd>Don&#8217;t check for changes to the gridmap during program execution.</dd></dl>
 <h2>Examples</h2>
 <p>Add a mapping between the current user&#8217;s certificate to the current user id to a gridmap file in $HOME/.gridmap: </p>
 <dl>
@@ -51,7 +51,7 @@ Modifying /home/juser/.gridmap ...
 New entry:
 &quot;/DC=org/DC=example/DC=grid/CN=Joe User&quot; juser
 (1) entry added</pre>
-</dl>
+</dd></dl>
 <p> Add a mapping between the a distinguished name and multiple local names: </p>
 <dl>
 <dd>
@@ -61,17 +61,17 @@ Modifying /home/juser/.gridmap ...
 New entry:
 &quot;/DC=org/DC=example/DC=grid/CN=Joe User&quot; local1,local2
 (1) entry added</pre>
-</dl>
+</dd></dl>
 <h2>Environment</h2>
 <p>The following environment variables affect the execution of <code>grid-mapfile-add-entry</code>: </p>
 <p> GRIDMAP</p>
 <dl>
-<dd>Path to the default gridmap to modify</dl>
+<dd>Path to the default gridmap to modify</dd></dl>
 <h2>Files</h2>
 <p>The following files affect the execution of <code>grid-mapfile-add-entry</code>: </p>
 <p> /etc/grid-security/grid-mapfile</p>
 <dl>
-<dd>Path to the default gridmap to modify if GRIDMAP environment variable is not set.</dl>
+<dd>Path to the default gridmap to modify if GRIDMAP environment variable is not set.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-grid-mapfile-check-consistency/">grid-mapfile-check-consistency</a>(8), <a href="/docs/linux/man/8-grid-mapfile-delete-entry/">grid-mapfile-delete-entry</a>(8)</p>
 <h2>Author</h2>

@@ -14,7 +14,7 @@ description: "blk_rq_unmap_user – unmap a request with user data"
 <p><i>bio</i></p>
 <dl>
 <dd>
-<dd>start of bio list</dl>
+</dd><dd>start of bio list</dd></dl>
 <h2>Description</h2>
 <p>Unmap a rq previously mapped by <code>blk_rq_map_user</code>. The caller must supply the original rq-&gt;bio from the <code>blk_rq_map_user</code> return, since the I/O completion may have changed rq-&gt;bio.</p>
 <h2>Copyright</h2>

@@ -27,7 +27,7 @@ PEERDNS=yes
 PEERROUTES=yes
 IPV4_FAILURE_FATAL=no
 ONBOOT=yes</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>Simple ethernet configuration with static IP:</code>
@@ -48,7 +48,7 @@ NAME=ethernet-em2
 UUID=51bb3904-c0fc-4dfe-83b2-0a71e7928c13
 DEVICE=em2
 ONBOOT=yes</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>WPA2 Enterprise WLAN (TTLS with inner MSCHAPV2 authentication):</code>
@@ -70,7 +70,7 @@ IPV6INIT=no
 NAME=MyCompany
 UUID=f79848ff-11a6-4810-9e1a-99039dea84c4
 ONBOOT=yes</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>Bridge and bridge port configuration:</code>
@@ -83,7 +83,7 @@ TYPE=Bridge TYPE=Ethernet
 BRIDGING_OPTS=priority=32768 BRIDGE=bridge007
 ONBOOT=yes
 BOOTPROTO=dhcp</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>Bonding configuration:</code>
@@ -96,7 +96,7 @@ TYPE=Bond TYPE=Ethernet
 BONDING_MASTER=yes MASTER=bond100
 ONBOOT=yes SLAVE=yes
 BOOTPROTO=dhcp</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>Team and team port configuration:</code>
@@ -122,27 +122,27 @@ DEVICE=eth2
 ONBOOT=yes
 TEAM_MASTER=team0
 DEVICETYPE=TeamPort</pre>
-</dl>
+</dd></dl>
 <p> The UUID values in the config files must be unique. You can use <i>uuidgen</i> command line tool to generate such values. Alternatively, you can leave out UUID entirely. In that case NetworkManager will generate a UUID based on the file name.</p>
 <h2>Differences Against Initscripts</h2>
 <p>The main differences of NetworkManager ifcfg-rh plugin and traditional initscripts are: </p>
 <p> <code>NM_CONTROLLED=yes|no</code></p>
 <dl>
-<dd>NM_CONTROLLED is NetworkManager-specific variable used by NetworkManager for determining whether the device of the <i>ifcfg</i> file should be managed. NM_CONTROLLED=yes is supposed if the variable is not present in the file. Note that if you have more <i>ifcfg</i> files for a single device, NM_CONTROLLED=no in one of the files will cause the device not to be managed. The profile may not even be the active one.</dl>
+<dd>NM_CONTROLLED is NetworkManager-specific variable used by NetworkManager for determining whether the device of the <i>ifcfg</i> file should be managed. NM_CONTROLLED=yes is supposed if the variable is not present in the file. Note that if you have more <i>ifcfg</i> files for a single device, NM_CONTROLLED=no in one of the files will cause the device not to be managed. The profile may not even be the active one.</dd></dl>
 <p> <code>New variables</code></p>
 <dl>
-<dd>NetworkManager has introduced some new variable, not present in initscripts, to be able to store data for its new features. The variables are marked as extensions in the tables below.</dl>
+<dd>NetworkManager has introduced some new variable, not present in initscripts, to be able to store data for its new features. The variables are marked as extensions in the tables below.</dd></dl>
 <p> <code>Semantic change of variables</code></p>
 <dl>
-<dd>NetworkManager had to slightly change the semantic for a few variables. </p>
+<dd>NetworkManager had to slightly change the semantic for a few variables. </dd>
 <dl>
-<dd>&bull; PEERDNS &#8211; initscripts interpret PEERDNS=no to mean &quot;never touch resolv.conf&quot;. NetworkManager interprets it to say &quot;never add automatic (DHCP, PPP, VPN, etc.) nameservers to resolv.conf&quot;.</dl>
+<dd>&bull; PEERDNS &#8211; initscripts interpret PEERDNS=no to mean &quot;never touch resolv.conf&quot;. NetworkManager interprets it to say &quot;never add automatic (DHCP, PPP, VPN, etc.) nameservers to resolv.conf&quot;.</dd></dl>
 <dl>
-<dd>&bull; ONBOOT &#8211; initscripts use ONBOOT=yes to mark the devices that are to be activated during boot. NetworkManager extents this to also mean that this profile can be used for auto-connecting at any time.</dl>
+<dd>&bull; ONBOOT &#8211; initscripts use ONBOOT=yes to mark the devices that are to be activated during boot. NetworkManager extents this to also mean that this profile can be used for auto-connecting at any time.</dd></dl>
 <dl>
-<dd>&bull; BOOTPROTO &#8211; NetworkManager supports traditional values <i>none</i> (static), <i>dhcp</i>. But it also allows additional values to enable new addressing methods. They are <i>autoip</i> for IPv4 link-local addressing using Avahi daemon and <i>shared</i> for connection sharing. When <i>shared</i> is used, NetworkManager assigns the interface 10.42.0.1, or it uses the first static address, if configured.</dl>
+<dd>&bull; BOOTPROTO &#8211; NetworkManager supports traditional values <i>none</i> (static), <i>dhcp</i>. But it also allows additional values to enable new addressing methods. They are <i>autoip</i> for IPv4 link-local addressing using Avahi daemon and <i>shared</i> for connection sharing. When <i>shared</i> is used, NetworkManager assigns the interface 10.42.0.1, or it uses the first static address, if configured.</dd></dl>
 <dl>
-<dd>&bull; HWADDR &#8211; initscripts compare the currently set hardware address of a device, while NetworkManager considers the permanent one.</dl>
+<dd>&bull; HWADDR &#8211; initscripts compare the currently set hardware address of a device, while NetworkManager considers the permanent one.</dd></dl>
 </dl>
 <p> See the next section for detailed mapping of NetworkManager properties and <i>ifcfg-rh</i> variables. Variable names, format and usage differences in NetworkManager and initscripts are documented in the tables below.</p>
 <h2>Details</h2>
@@ -160,7 +160,7 @@ DEVICETYPE=TeamPort</pre>
 <td> eap </td>
 <td> IEEE_8021X_EAP_METHODS<i>(+)</i> </td>
 <td> &nbsp;<wbr> </td>
-<td> EAP method for 802.1X authentication.<code> </p>
+<td> EAP method for 802.1X authentication.<code> 
 <p> Example: </code>IEEE_8021X_EAP_METHODS=PEAP<code> </p>
 <p> Allowed values: </code>&quot;LEAP&quot;, &quot;PWD&quot;, &quot;TLS&quot;, &quot;PEAP&quot;, &quot;TTLS&quot;, &quot;FAST&quot;
 </td>
@@ -1615,11 +1615,11 @@ DEVICETYPE=TeamPort</pre>
 <h3>Secret flags</h3>
 <p>Each secret property in a NetworkManager setting has an associated <i>flags</i> property that describes how to handle that secret. In the <i>fcfg-rh</i> plugin variables for secret flags have a <i>_FLAGS</i> suffix. The variables contain one or more of the following values (space separated). Missing (or empty) *_FLAGS variable means that the password is owned by NetworkManager. </p>
 <dl>
-<dd>&bull; user &#8211; a user-session secret agent is responsible for providing and storing this secret; when it is required, agents will be asked to provide it.</dl>
+<dd>&bull; user &#8211; a user-session secret agent is responsible for providing and storing this secret; when it is required, agents will be asked to provide it.</dd></dl>
 <dl>
-<dd>&bull; ask &#8211; the associated password is not saved but it will be requested from the user each time it is required.</dl>
+<dd>&bull; ask &#8211; the associated password is not saved but it will be requested from the user each time it is required.</dd></dl>
 <dl>
-<dd>&bull; unused &#8211; in some situations it cannot be automatically determined that a secret is required or not. This flag hints that the secret is not required and should not be requested from the user.</dl>
+<dd>&bull; unused &#8211; in some situations it cannot be automatically determined that a secret is required or not. This flag hints that the secret is not required and should not be requested from the user.</dd></dl>
 <h2>Files</h2>
 <p>/etc/sysconfig/network-scripts/ifcfg-* </p>
 <p> /etc/sysconfig/network-scripts/keys-* </p>

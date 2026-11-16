@@ -23,10 +23,10 @@ description: "mode_end_call – At the end of a series of requests, call another
 <p>returns a mode_end_call handler that can be injected into a given handler chain. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>endlist</i> The callback list for the handler to make use of.</dl>
+<dd><i>endlist</i> The callback list for the handler to make use of.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>An injectable Net-SNMP handler.</dl>
+<dd>An injectable Net-SNMP handler.</dd></dl>
 <p> Definition at line 45 of file mode_end_call.c. </p>
 <p> References netsnmp_mib_handler_s::myvoid, netsnmp_create_handler(), netsnmp_mode_end_call_helper(), and NULL.</p>
 <h3><code>netsnmp_mode_handler_list</code>* netsnmp_mode_end_call_add_mode_callback (<code>netsnmp_mode_handler_list</code> * endlist, int mode, <code>netsnmp_mib_handler</code> * callbackh)</h3>
@@ -35,9 +35,9 @@ description: "mode_end_call – At the end of a series of requests, call another
 <dl>
 <dd><i>endlist</i> the information structure for the mode_end_call helper. Can be NULL to create a new list.<br />
  <i>mode</i> the mode to be called upon. A mode of NETSNMP_MODE_END_ALL_MODES = all modes.<br />
- <i>callbackh</i> the netsnmp_mib_handler callback to call.</dl>
+ <i>callbackh</i> the netsnmp_mib_handler callback to call.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the new registration information list upon success.</dl>
+<dd>the new registration information list upon success.</dd></dl>
 <p> Definition at line 65 of file mode_end_call.c. </p>
 <p> References netsnmp_mode_handler_list_s::callback_handler, netsnmp_mode_handler_list_s::mode, netsnmp_mode_handler_list_s::next, NULL, and SNMP_MALLOC_TYPEDEF.</p>

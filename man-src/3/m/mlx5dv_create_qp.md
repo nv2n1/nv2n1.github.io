@@ -17,12 +17,12 @@ url: "/docs/linux/man/3-mlx5dv_create_qp/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct ibv_qp *mlx5dv_create_qp(struct ibv_context *context,
                                 struct ibv_qp_init_attr_ex *qp_attr,
                                 struct mlx5dv_qp_init_attr *mlx5_qp_attr)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -40,62 +40,52 @@ struct ibv_qp *mlx5dv_create_qp(struct ibv_context *context,
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 struct mlx5dv_qp_init_attr {
     uint64_t comp_mask;
     uint32_t create_flags;
     struct mlx5dv_dc_init_attr dc_init_attr;
     uint64_t send_ops_flags;
 };
-
-<dt>comp_mask
-<dd> Bitmask specifying what fields in the structure are valid: MLX5DV_QP_INIT_ATTR_MASK_QP_CREATE_FLAGS: valid values in create_flags MLX5DV_QP_INIT_ATTR_MASK_DC: valid values in dc_init_attr MLX5DV_QP_INIT_ATTR_MASK_SEND_OPS_FLAGS: valid values in send_ops_flags
-<dt>create_flags
-<dd> A bitwise OR of the various values described below.
-<dl>
+</dd><dt>comp_mask
+</dt><dd> Bitmask specifying what fields in the structure are valid: MLX5DV_QP_INIT_ATTR_MASK_QP_CREATE_FLAGS: valid values in create_flags MLX5DV_QP_INIT_ATTR_MASK_DC: valid values in dc_init_attr MLX5DV_QP_INIT_ATTR_MASK_SEND_OPS_FLAGS: valid values in send_ops_flags
+</dd><dt>create_flags
+</dt><dd> A bitwise OR of the various values described below.
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  MLX5DV_QP_CREATE_TUNNEL_OFFLOADS: Enable offloading such as checksum and LRO for incoming tunneling traffic. 
-
  MLX5DV_QP_CREATE_TIR_ALLOW_SELF_LOOPBACK_UC: Allow receiving loopback unicast traffic. 
-
  MLX5DV_QP_CREATE_TIR_ALLOW_SELF_LOOPBACK_MC: Allow receiving loopback multicast traffic. 
-
  MLX5DV_QP_CREATE_DISABLE_SCATTER_TO_CQE: Disable scatter to CQE feature which is enabled by default. 
-
  MLX5DV_QP_CREATE_ALLOW_SCATTER_TO_CQE: Allow scatter to CQE for requester even if the qp was not configured to signal all WRs. 
-
  MLX5DV_QP_CREATE_PACKET_BASED_CREDIT_MODE: Set QP to work in end-to-end packet-based credit, instead of the default message-based credits (IB spec. section 9.7.7.2). 
-
- It is the applications responsibility to make sure that the peer QP is configured with same mode.</dl>
+ It is the applications responsibility to make sure that the peer QP is configured with same mode.</dd></dl>
 
 <dt>dc_init_attr
-<dd> DC init attributes.</dl>
+</dt><dd> DC init attributes.</dd></dl>
 
 <h3>dc_init_attr</h3>
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 struct mlx5dv_dc_init_attr {
     enum mlx5dv_dc_type dc_type;
     uint64_t dct_access_key;
 };
 </code></pre>
-<dt>dc_type
-<dd> MLX5DV_DCTYPE_DCT QP type: Target DC. MLX5DV_DCTYPE_DCI QP type: Initiator DC.
-<dt>dct_access_key
-<dd> used to create a DCT QP.
-<dt>send_ops_flags
-<dd> A bitwise OR of the various values described below.
-<dl>
+</dd><dt>dc_type
+</dt><dd> MLX5DV_DCTYPE_DCT QP type: Target DC. MLX5DV_DCTYPE_DCI QP type: Initiator DC.
+</dd><dt>dct_access_key
+</dt><dd> used to create a DCT QP.
+</dd><dt>send_ops_flags
+</dt><dd> A bitwise OR of the various values described below.
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  MLX5DV_QP_EX_WITH_MR_INTERLEAVED: Enables the mlx5dv_wr_mr_interleaved() work requset on this QP. 
-
- MLX5DV_QP_EX_WITH_MR_LIST: Enables the mlx5dv_wr_mr_list() work requset on this QP.</dl>
+ MLX5DV_QP_EX_WITH_MR_LIST: Enables the mlx5dv_wr_mr_list() work requset on this QP.</dd></dl>
 </dl>
 
 <h2>NOTES</h2>

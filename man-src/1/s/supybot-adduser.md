@@ -15,16 +15,16 @@ description: "supybot-adduser – Adds a user to a Supybot users.conf file"
 <p> <code>supybot-adduser</code> adds a user to the specified users.conf file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-u</code> NAME, &#8211;username=NAME</p>
-<dd> Specifies the username to use for the new user.</p>
-<dt><code>-p</code> PASSWORD, &#8211;password=PASSWORD</p>
-<dd> Specifies the password to use for the new user.</p>
-<dt><code>-c</code> CAPABILITY, &#8211;capability=CAPABILITY</p>
-<dd> Capability the user should have; this option may be given multiple times.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-u</code> NAME, &#8211;username=NAME</dt>
+<dd> Specifies the username to use for the new user.</dd>
+<dt><code>-p</code> PASSWORD, &#8211;password=PASSWORD</dt>
+<dd> Specifies the password to use for the new user.</dd>
+<dt><code>-c</code> CAPABILITY, &#8211;capability=CAPABILITY</dt>
+<dd> Capability the user should have; this option may be given multiple times.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-python/">python</a></i>(1), <i><a href="/docs/linux/man/1-supybot/">supybot</a></i>(1), <i><a href="/docs/linux/man/1-supybot-test/">supybot-test</a></i>(1), <i><a href="/docs/linux/man/1-supybot-botchk/">supybot-botchk</a></i>(1), <i><a href="/docs/linux/man/1-supybot-wizard/">supybot-wizard</a></i>(1), <i><a href="/docs/linux/man/1-supybot-plugin-doc/">supybot-plugin-doc</a></i>(1), <i><a href="/docs/linux/man/1-supybot-plugin-create/">supybot-plugin-create</a></i>(1)</p>
 <h2>AUTHOR</h2>

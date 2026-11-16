@@ -21,10 +21,10 @@ description: "ctbmv.f –"
  x := A*x, or x := A**T*x, or x := A**H*x,
  where x is an n element vector and A is an n by n unit, or non-unit,
  upper or lower triangular band matrix, with ( k + 1 ) diagonals.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  On entry, UPLO specifies whether the matrix is an upper or
  lower triangular matrix as follows:
@@ -110,13 +110,13 @@ description: "ctbmv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -127,7 +127,8 @@ description: "ctbmv.f –"
  Jeremy Du Croz, Nag Central Office.
  Sven Hammarling, Nag Central Office.
  Richard Hanson, Sandia National Labs.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 187 of file ctbmv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

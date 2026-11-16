@@ -38,16 +38,16 @@ openjade[-vCegG2s][-b encoding][-f error_file]
 <p> The DSSSL specification must be an SGML document conforming to the DSSSL architecture. For an example, see <i>dsssl/demo.dsl</i>. </p>
 <p> <code>openjade</code> supports the following options in addition to the normal OpenSP (see <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>) options (note that all options are case-sensitive, ie <code>-g</code> and <code>-G</code> are different options): </p>
 <dl>
-<dt><code>-d </code><i>dsssl_spec</i></p>
-<dd> This specifies that dsssl_spec is the system identifier of the DSSSL specification to be used. </p>
-<dt><code>-G</code></p>
-<dd> Debug mode. When an error occurs in the evaluation of an expression, <code>openjade</code> will display a stack trace. Note that this disables tail-call optimization. </p>
-<dt><code>-c </code><i>filename</i></p>
-<dd> The filename arguments specify catalog files rather than the document entity. The document entity is specified by the first DOCUMENT entry in the catalog files. </p>
-<dt><code>-s</code></p>
-<dd> Strict compliance mode. Currently the only effect is that jade doesn&#8217;t use any predefined character names, sdata-entity mappings or name-characters. This is useful for checking that your stylesheet is portable to other DSSSL implementations and that it is strictly compliant to the DSSSL specifications. </p>
-<dt><code>-t </code><i>output_type</i></p>
-<dd> <i>output_type</i> specifies the type of output as follows: </p>
+<dt><code>-d </code><i>dsssl_spec</i></dt>
+<dd> This specifies that dsssl_spec is the system identifier of the DSSSL specification to be used. </dd>
+<dt><code>-G</code></dt>
+<dd> Debug mode. When an error occurs in the evaluation of an expression, <code>openjade</code> will display a stack trace. Note that this disables tail-call optimization. </dd>
+<dt><code>-c </code><i>filename</i></dt>
+<dd> The filename arguments specify catalog files rather than the document entity. The document entity is specified by the first DOCUMENT entry in the catalog files. </dd>
+<dt><code>-s</code></dt>
+<dd> Strict compliance mode. Currently the only effect is that jade doesn&#8217;t use any predefined character names, sdata-entity mappings or name-characters. This is useful for checking that your stylesheet is portable to other DSSSL implementations and that it is strictly compliant to the DSSSL specifications. </dd>
+<dt><code>-t </code><i>output_type</i></dt>
+<dd> <i>output_type</i> specifies the type of output as follows: </dd>
 <p> <code>fot </code> An XML representation of the flow object tree </p>
 <p> <code>rtf</code> <code>rtf-95 </code> RTF (used for SGML/XML to RTF transformations) Microsoft&#8217;s Rich Text Format. rtf-95 produces output optimized for Word 95 rather than Word 97. </p>
 <p> <code>tex</code> TeX (used for SGML/XML to TeX transformations) </p>
@@ -55,16 +55,16 @@ openjade[-vCegG2s][-b encoding][-f error_file]
 <p> <code>xml</code> <code>xml-raw</code> XML (used for SGML/XML to XML transformations). xml-raw doesn&#8217;t emit linebreaks in tags. </p>
 <p> <code>html </code> HTML (used for SGML/XML to HTML transformations) </p>
 <p> <code>mif</code> MIF (used for SGML/XML to MIF transformations) </p>
-<dt><code>-o </code><i>output_file</i></p>
-<dd> Write output to <i>output_file</i> instead of the default. The default filename is the name of the last input file with its extension replaced by the name of the type of output. If there is no input filename, then the extension is added onto jade-out. </p>
-<dt><code>-V </code><i>variable</i></p>
-<dd> This is equivalent to doing (define variable #t) except that this definition will take priority over any definition of variable in a style-sheet. </p>
-<dt><code>-V </code><i>variable=value</i></p>
-<dd> This is equivalent to doing (define <i>variable</i> &quot;<i>value</i>&quot;) except that this definition will take priority over any definition of variable in a style-sheet. </p>
-<dt><code>-V (define </code><i>variable</i> value)</p>
-<dd> This is equivalent to doing (define variable value) except that this definition will take priority over any definition of variable in a style-sheet. Note that you will probably have to use some escaping mechanism for the spaces to get the entire scheme expression parsed as one cmdline argument. </p>
-<dt><code>-w</code><i>type</i></p>
-<dd> Control warnings and errors. Multiple <code>-w</code> options are allowed. The following values of type enable warnings: </p>
+<dt><code>-o </code><i>output_file</i></dt>
+<dd> Write output to <i>output_file</i> instead of the default. The default filename is the name of the last input file with its extension replaced by the name of the type of output. If there is no input filename, then the extension is added onto jade-out. </dd>
+<dt><code>-V </code><i>variable</i></dt>
+<dd> This is equivalent to doing (define variable #t) except that this definition will take priority over any definition of variable in a style-sheet. </dd>
+<dt><code>-V </code><i>variable=value</i></dt>
+<dd> This is equivalent to doing (define <i>variable</i> &quot;<i>value</i>&quot;) except that this definition will take priority over any definition of variable in a style-sheet. </dd>
+<dt><code>-V (define </code><i>variable</i> value)</dt>
+<dd> This is equivalent to doing (define variable value) except that this definition will take priority over any definition of variable in a style-sheet. Note that you will probably have to use some escaping mechanism for the spaces to get the entire scheme expression parsed as one cmdline argument. </dd>
+<dt><code>-w</code><i>type</i></dt>
+<dd> Control warnings and errors. Multiple <code>-w</code> options are allowed. The following values of type enable warnings: </dd>
 <p> <code>xml</code> Warn about constructs that are not allowed by XML. </p>
 <p> <code>mixed</code> Warn about mixed content models that do not allow #pcdata anywhere. </p>
 <p> <code>sgmldecl</code> Warn about various dubious constructions in the SGML declaration. </p>

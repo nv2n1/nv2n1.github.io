@@ -52,7 +52,6 @@ struct drm_mode_map_dumb mreq;
 uint32_t fb;
 int ret;
 void *map;
-
 /* create dumb buffer */
 memset(&amp;creq, 0, sizeof(creq));
 creq.width = 1920;
@@ -65,7 +64,6 @@ if (ret &lt; 0) {
 }
 /* creq.pitch, creq.handle and creq.size are filled by this ioctl with
  * the requested values and can be used now. */
-
 /* create framebuffer object for the dumb-buffer */
 ret = drmModeAddFB(fd, 1920, 1080, 24, 32, creq.pitch, creq.handle, &amp;fb);
 if (ret) {
@@ -73,7 +71,6 @@ if (ret) {
     ...
 }
 /* the framebuffer &quot;fb&quot; can now used for scanout with KMS */
-
 /* prepare buffer for memory mapping */
 memset(&amp;mreq, 0, sizeof(mreq));
 mreq.handle = creq.handle;
@@ -83,14 +80,12 @@ if (ret) {
     ...
 }
 /* mreq.offset now contains the new offset that can be used with mmap() */
-
 /* perform actual memory mapping */
 map = mmap(0, creq.size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, mreq.offset);
 if (map == MAP_FAILED) {
     /* memory-mapping failed; see &quot;errno&quot; */
     ...
 }
-
 /* clear the framebuffer to 0 */
 memset(map, 0, creq.size);</code></pre>
 <h2>Reporting Bugs</h2>

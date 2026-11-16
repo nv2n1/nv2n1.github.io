@@ -14,7 +14,7 @@ description: "idr_destroy – release all cached layers within an idr tree"
 <p><i>idp</i></p>
 <dl>
 <dd>
-<dd>idr handle</dl>
+</dd><dd>idr handle</dd></dl>
 <h2>Description</h2>
 <p>Free all id mappings and all idp_layers. After this function, <i>idp</i> is completely unused and can be freed / recycled. The caller is responsible for ensuring that no one else accesses <i>idp</i> during or after <code>idr_destroy</code>. </p>
 <p> A typical clean-up sequence for objects stored in an idr tree will use <code>idr_for_each</code> to free all objects, if necessary, then <code>idr_destroy</code> to free up the id mappings and cached idr_layers.</p>

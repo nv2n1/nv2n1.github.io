@@ -17,11 +17,11 @@ description: "QuantLib::BicubicSpline – bicubic-spline interpolation between d
 <p>bicubic-spline interpolation between discrete points </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>revise end conditions</dl>
+<dd>revise end conditions</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>BicubicSpline</code> (const I1 &amp; xBegin, const I1 &amp; xEnd, const I2 &amp; yBegin, const I2 &amp; yEnd, const M &amp; zData)</h3>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>the $ x $ and $ y $ values must be sorted.</dl>
+<dd>the $ x $ and $ y $ values must be sorted.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

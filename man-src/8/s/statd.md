@@ -17,10 +17,10 @@ description: "rpc.statd – NSM service daemon"
 <p> Network file systems must also detect when lock state is lost because a remote host has rebooted. After an NFS client reboots, an NFS server must release all file locks held by applications that were running on that client. After a server reboots, a client must remind the server of file locks held by applications running on that client. </p>
 <p> For NFS version 2 [RFC1094] and NFS version 3 [RFC1813], the <i>Network Status Monitor</i> protocol (or NSM for short) is used to notify NFS peers of reboots. On Linux, two separate user-space components constitute the NSM service:</p>
 <dl>
-<dt><code>rpc.statd</code></p>
-<dd>A daemon that listens for reboot notifications from other hosts, and manages the list of hosts to be notified when the local system reboots</p>
-<dt><code>sm-notify</code></p>
-<dd>A helper program that notifies NFS peers after the local system reboots</dl>
+<dt><code>rpc.statd</code></dt>
+<dd>A daemon that listens for reboot notifications from other hosts, and manages the list of hosts to be notified when the local system reboots</dd>
+<dt><code>sm-notify</code></dt>
+<dd>A helper program that notifies NFS peers after the local system reboots</dd></dl>
 <p> The local NFS lock manager alerts its local <code>rpc.statd</code> of each remote peer that should be monitored. When the local system reboots, the <code>sm-notify</code> command notifies the NSM service on monitored peers of the reboot. When a remote reboots, that peer notifies the local <code>rpc.statd</code>, which in turn passes the reboot notification back to the local NFS lock manager.</p>
 <h2>Nsm Operation In Detail</h2>
 <p>The first file locking interaction between an NFS client and server causes the NFS lock managers on both peers to contact their local NSM service to store information about the opposite peer. On Linux, the local lock manager contacts <code>rpc.statd</code>. </p>
@@ -34,36 +34,36 @@ description: "rpc.statd – NSM service daemon"
 <p> Part of NFS lock recovery is rediscovering which peers need to be monitored again. The <code>sm-notify</code> command clears the monitor list on persistent storage after each reboot.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>,<code> &#8211;no-syslog</code></p>
-<dd>Causes <code>rpc.statd</code> to write log messages on <i>stderr</i> instead of to the system log, if the <code>-F</code> option was also specified.</p>
-<dt><code>-F</code>,<code> &#8211;foreground</code></p>
-<dd>Keeps <code>rpc.statd</code> attached to its controlling terminal so that NSM operation can be monitored directly or run under a debugger. If this option is not specified, <code>rpc.statd</code> backgrounds itself soon after it starts.</p>
-<dt><code>-h</code>,<code> -?</code>,<code> &#8211;help</code></p>
-<dd>Causes <code>rpc.statd</code> to display usage information on <i>stderr</i> and then exit.</p>
-<dt><code>-H,</code><i></i><code> &#8211;ha-callout </code><i>prog</i></p>
-<dd>Specifies a high availability callout program. If this option is not specified, no callouts are performed. See the <code>High-availability callouts</code> section below for details.</p>
-<dt><code>-L</code>,<code> &#8211;no-notify</code></p>
-<dd>Prevents <code>rpc.statd</code> from running the <code>sm-notify</code> command when it starts up, preserving the existing NSM state number and monitor list.</p>
-<dd>Note: the <code>sm-notify</code> command contains a check to ensure it runs only once after each system reboot. This prevents spurious reboot notification if <code>rpc.statd</code> restarts without the <code>-L</code> option.</p>
-<dt><code>-n, </code><i></i><code>&#8211;name </code><i>ipaddr</i><code> | </code><i>hostname</i></p>
-<dd>Specifies the bind address used for RPC listener sockets. The <i>ipaddr</i> form can be expressed as either an IPv4 or an IPv6 presentation address. If this option is not specified, <code>rpc.statd</code> uses a wildcard address as the transport bind address.</p>
-<dd>This string is also passed to the <code>sm-notify</code> command to be used as the source address from which to send reboot notification requests. See <code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8) for details.</p>
-<dt><code>-N</code></p>
-<dd>Causes <code>rpc.statd</code> to run the <code>sm-notify</code> command, and then exit. Since the <code>sm-notify</code> command can also be run directly, this option is deprecated.</p>
-<dt><code>-o,</code><i></i><code> &#8211;outgoing-port </code><i>port</i></p>
-<dd>Specifies the source port number the <code>sm-notify</code> command should use when sending reboot notifications. See <code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8) for details.</p>
-<dt><code>-p,</code><i></i><code> &#8211;port </code><i>port</i></p>
-<dd>Specifies the port number used for RPC listener sockets. If this option is not specified, <code>rpc.statd</code> will try to consult <i>/etc/services</i>, if gets port succeed, set the same port for all listener socket, otherwise chooses a random ephemeral port for each listener socket.</p>
-<dd>This option can be used to fix the port value of its listeners when SM_NOTIFY requests must traverse a firewall between clients and servers.</p>
-<dt><code>-T,</code><i></i><code> &#8211;nlm-port </code><i>port</i></p>
-<dd>Specifies the port number that <i>lockd</i> should listen on for <code>NLM</code> requests. This sets both the TCP and UDP ports unless the UDP port is set separately.</p>
-<dt><code>-U,</code><i></i><code> &#8211;nlm-udp-port </code><i>port</i></p>
-<dd>Specifies the UDP port number that <i>lockd</i> should listen on for <code>NLM</code> requests.</p>
-<dt><code>-P, </code><i></i><code>&#8211;state-directory-path</code><i> pathname</i></p>
-<dd>Specifies the pathname of the parent directory where NSM state information resides. If this option is not specified, <code>rpc.statd</code> uses <i>/var/lib/nfs/statd</i> by default.</p>
-<dd>After starting, <code>rpc.statd</code> attempts to set its effective UID and GID to the owner and group of this directory.</p>
-<dt><code>-v</code>, <code>-V</code>, <code>&#8211;version</code></p>
-<dd>Causes <code>rpc.statd</code> to display version information on <i>stderr</i> and then exit.</dl>
+<dt><code>-d</code>,<code> &#8211;no-syslog</code></dt>
+<dd>Causes <code>rpc.statd</code> to write log messages on <i>stderr</i> instead of to the system log, if the <code>-F</code> option was also specified.</dd>
+<dt><code>-F</code>,<code> &#8211;foreground</code></dt>
+<dd>Keeps <code>rpc.statd</code> attached to its controlling terminal so that NSM operation can be monitored directly or run under a debugger. If this option is not specified, <code>rpc.statd</code> backgrounds itself soon after it starts.</dd>
+<dt><code>-h</code>,<code> -?</code>,<code> &#8211;help</code></dt>
+<dd>Causes <code>rpc.statd</code> to display usage information on <i>stderr</i> and then exit.</dd>
+<dt><code>-H,</code><i></i><code> &#8211;ha-callout </code><i>prog</i></dt>
+<dd>Specifies a high availability callout program. If this option is not specified, no callouts are performed. See the <code>High-availability callouts</code> section below for details.</dd>
+<dt><code>-L</code>,<code> &#8211;no-notify</code></dt>
+<dd>Prevents <code>rpc.statd</code> from running the <code>sm-notify</code> command when it starts up, preserving the existing NSM state number and monitor list.</dd>
+<dd>Note: the <code>sm-notify</code> command contains a check to ensure it runs only once after each system reboot. This prevents spurious reboot notification if <code>rpc.statd</code> restarts without the <code>-L</code> option.</dd>
+<dt><code>-n, </code><i></i><code>&#8211;name </code><i>ipaddr</i><code> | </code><i>hostname</i></dt>
+<dd>Specifies the bind address used for RPC listener sockets. The <i>ipaddr</i> form can be expressed as either an IPv4 or an IPv6 presentation address. If this option is not specified, <code>rpc.statd</code> uses a wildcard address as the transport bind address.</dd>
+<dd>This string is also passed to the <code>sm-notify</code> command to be used as the source address from which to send reboot notification requests. See <code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8) for details.</dd>
+<dt><code>-N</code></dt>
+<dd>Causes <code>rpc.statd</code> to run the <code>sm-notify</code> command, and then exit. Since the <code>sm-notify</code> command can also be run directly, this option is deprecated.</dd>
+<dt><code>-o,</code><i></i><code> &#8211;outgoing-port </code><i>port</i></dt>
+<dd>Specifies the source port number the <code>sm-notify</code> command should use when sending reboot notifications. See <code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8) for details.</dd>
+<dt><code>-p,</code><i></i><code> &#8211;port </code><i>port</i></dt>
+<dd>Specifies the port number used for RPC listener sockets. If this option is not specified, <code>rpc.statd</code> will try to consult <i>/etc/services</i>, if gets port succeed, set the same port for all listener socket, otherwise chooses a random ephemeral port for each listener socket.</dd>
+<dd>This option can be used to fix the port value of its listeners when SM_NOTIFY requests must traverse a firewall between clients and servers.</dd>
+<dt><code>-T,</code><i></i><code> &#8211;nlm-port </code><i>port</i></dt>
+<dd>Specifies the port number that <i>lockd</i> should listen on for <code>NLM</code> requests. This sets both the TCP and UDP ports unless the UDP port is set separately.</dd>
+<dt><code>-U,</code><i></i><code> &#8211;nlm-udp-port </code><i>port</i></dt>
+<dd>Specifies the UDP port number that <i>lockd</i> should listen on for <code>NLM</code> requests.</dd>
+<dt><code>-P, </code><i></i><code>&#8211;state-directory-path</code><i> pathname</i></dt>
+<dd>Specifies the pathname of the parent directory where NSM state information resides. If this option is not specified, <code>rpc.statd</code> uses <i>/var/lib/nfs/statd</i> by default.</dd>
+<dd>After starting, <code>rpc.statd</code> attempts to set its effective UID and GID to the owner and group of this directory.</dd>
+<dt><code>-v</code>, <code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Causes <code>rpc.statd</code> to display version information on <i>stderr</i> and then exit.</dd></dl>
 <h2>Configuration File</h2>
 <p>Many of the options that can be set on the command line can also be controlled through values set in the <code>[statd]</code> or, in some cases, the <code>[lockd]</code> sections of the <i>/etc/nfs.conf</i> configuration file. Values recognized in the <code>[statd]</code> section include <code>port</code>, <code>outgoing-port</code>, <code>name</code>, <code>state-directory-path</code>, and <code>ha-callout</code> which each have the same effect as the option with the same name. </p>
 <p> The values recognized in the <code>[lockd]</code> section include <code>port</code> and <code>udp-port</code> which have the same effect as the <code>&#8211;nlm-port</code> and <code>&#8211;nlm-udp-port</code> options, respectively.</p>
@@ -75,10 +75,10 @@ description: "rpc.statd – NSM service daemon"
 <h2>Additional Notes</h2>
 <p>Lock recovery after a reboot is critical to maintaining data integrity and preventing unnecessary application hangs. To help <code>rpc.statd</code> match SM_NOTIFY requests to NLM requests, a number of best practices should be observed, including:</p>
 <dl>
-<dd>The UTS nodename of your systems should match the DNS names that NFS peers use to contact them</p>
-<dd>The UTS nodenames of your systems should always be fully qualified domain names</p>
-<dd>The forward and reverse DNS mapping of the UTS nodenames should be consistent</p>
-<dd>The hostname the client uses to mount the server should match the server&#8217;s <i>mon_name</i> in SM_NOTIFY requests it sends</dl>
+<dd>The UTS nodename of your systems should match the DNS names that NFS peers use to contact them</dd>
+<dd>The UTS nodenames of your systems should always be fully qualified domain names</dd>
+<dd>The forward and reverse DNS mapping of the UTS nodenames should be consistent</dd>
+<dd>The hostname the client uses to mount the server should match the server&#8217;s <i>mon_name</i> in SM_NOTIFY requests it sends</dd></dl>
 <p> Unmounting an NFS file system does not necessarily stop either the NFS client or server from monitoring each other. Both may continue monitoring each other for a time in case subsequent NFS traffic between the two results in fresh mounts and additional file locking. </p>
 <p> On Linux, if the <code>lockd</code> kernel module is unloaded during normal operation, all remote NFS peers are unmonitored. This can happen on an NFS client, for example, if an automounter removes all NFS mount points due to inactivity.</p>
 <h3>High-availability callouts</h3>
@@ -88,20 +88,20 @@ description: "rpc.statd – NSM service daemon"
 <p>TI-RPC is a pre-requisite for supporting NFS on IPv6. If TI-RPC support is built into <code>rpc.statd</code>, it attempts to start listeners on network transports marked &#8216;visible&#8217; in <i>/etc/netconfig</i>. As long as at least one network transport listener starts successfully, <code>rpc.statd</code> will operate.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>RPC_STATD_NO_NOTIFY=</code></p>
-<dd>If set to a positive integer, has the same effect as <i>&#8211;no-notify</i>.</dl>
+<dt><code>RPC_STATD_NO_NOTIFY=</code></dt>
+<dd>If set to a positive integer, has the same effect as <i>&#8211;no-notify</i>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/lib/nfs/statd/sm</i></p>
-<dd>directory containing monitor list</p>
-<dt><i>/var/lib/nfs/statd/sm.bak</i></p>
-<dd>directory containing notify list</p>
-<dt><i>/var/lib/nfs/statd/state</i></p>
-<dd>NSM state number for this host</p>
-<dt><i>/var/run/run.statd.pid</i></p>
-<dd>pid file</p>
-<dt><i>/etc/netconfig</i></p>
-<dd>network transport capability database</dl>
+<dt><i>/var/lib/nfs/statd/sm</i></dt>
+<dd>directory containing monitor list</dd>
+<dt><i>/var/lib/nfs/statd/sm.bak</i></dt>
+<dd>directory containing notify list</dd>
+<dt><i>/var/lib/nfs/statd/state</i></dt>
+<dd>NSM state number for this host</dd>
+<dt><i>/var/run/run.statd.pid</i></dt>
+<dd>pid file</dd>
+<dt><i>/etc/netconfig</i></dt>
+<dd>network transport capability database</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code>rpc.nfsd</code>(8), <code><a href="/docs/linux/man/8-rpcbind/">rpcbind</a></code>(8), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8), <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a></code>(5) </p>
 <p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br />

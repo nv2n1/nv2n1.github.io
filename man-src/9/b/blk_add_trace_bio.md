@@ -15,19 +15,19 @@ blk_add_trace_bio - Add a trace for a bio oriented action
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>queue the io is for</dl>
+<dl><dd></dd><dd>queue the io is for</dd></dl>
  
 
  <i>bio</i>
-<dl><dd>the source bio</dl>
+<dl><dd>the source bio</dd></dl>
  
 
  <i>what</i>
-<dl><dd>the action</dl>
+<dl><dd>the action</dd></dl>
  
 
  <i>error</i>
-<dl><dd>error, if any</dl>
+<dl><dd>error, if any</dd></dl>
 
 <h2>Description</h2>
 

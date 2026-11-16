@@ -14,11 +14,11 @@ description: "rio_build_route_tables – Generate route tables from switch route
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network to run route tables scan on</dl>
+</dd><dd>RIO network to run route tables scan on</dd></dl>
 <h2>Description</h2>
 <p>For each switch device, generate a route table by copying existing route entries from the switch.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

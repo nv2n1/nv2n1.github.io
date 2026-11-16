@@ -11,35 +11,23 @@ std::norm(std::complex) - std::norm(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
     (until C++ 20)
-
         T norm(const std::complex&lt;T&gt; &amp;z);
-
 template &lt;class T&gt;
 (since C++ 20)
-
     constexpr T norm(const std::complex&lt;T&gt; &amp;z);
-
 float norm(float z);
-
 template &lt;class DoubleOrInteger&gt;
 (1)(since C++ 11)
-
     double norm(DoubleOrInteger z);
 (until C++ 20)
-
     long double norm(long double z);
 (2)
-
     constexpr float norm(float z);
-
 template &lt;class DoubleOrInteger&gt;
 (since C++ 20)
-
     constexpr double norm(DoubleOrInteger z);
-
 constexpr long double norm(long double z);</code></pre> 
 1) Returns the squared magnitude of the complex number z. 
 2) Additional overloads are provided for float, double, long double, and all integer types, which are treated as complex numbers with zero imaginary component. <i>(since C++11)</i> 

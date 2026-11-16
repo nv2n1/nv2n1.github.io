@@ -16,16 +16,16 @@ description: "brecsum – Generate SHA1 sums of raw Blackberry database records.
 <p> This is mainly useful for verifying the integrity of restored data during testing.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d db</code></p>
-<dd> Specify the database to download and sum. This option may be given multiple times to fetch more than one database. See btool&#8217;s -t option to retrieve a list of databases on your device.</p>
-<dt><code>-p pin</code></p>
-<dd> Specify the PIN of the device to talk to. Only needed if there are multiple Blackberries plugged into your system at once.</p>
-<dt><code>-P pass</code></p>
-<dd> Simplistic method to specify device password. In a real application, this would be done using a more secure prompt.</p>
-<dt><code>-v</code></p>
-<dd> Dump verbose protocol data during operation.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options. </p>
+<dt><code>-d db</code></dt>
+<dd> Specify the database to download and sum. This option may be given multiple times to fetch more than one database. See btool&#8217;s -t option to retrieve a list of databases on your device.</dd>
+<dt><code>-p pin</code></dt>
+<dd> Specify the PIN of the device to talk to. Only needed if there are multiple Blackberries plugged into your system at once.</dd>
+<dt><code>-P pass</code></dt>
+<dd> Simplistic method to specify device password. In a real application, this would be done using a more secure prompt.</dd>
+<dt><code>-v</code></dt>
+<dd> Dump verbose protocol data during operation.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options. </dd>
 </dl>
 <h2>RETURN STATUS</h2>
 <p> In the event of a fatal error, the message will be written to stderr, with an error code of 1. </p>

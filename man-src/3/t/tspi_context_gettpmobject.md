@@ -21,10 +21,10 @@ description: "Context_GetTpmObject – get the handle of the TPM object associat
 <code>#include &lt;tss/tspi.h&gt;</code>
 <br>
 <dl COMPACT><dt><code>TSS_RESULT Tspi_Context_GetTpmObject(TSS_HCONTEXT </code><i>hContext</i><code>, TSS_HTPM* </code><i>phTPM</i><code>); </code></pre>
-</dl>
+</dt></dl>
 <h2>Description</h2>
 <p><code>Tspi_Context_GetTpmObject</code> retrieves the TPM object of a context. Only one instance of this</p>
-<dd>object exists for a given context and implicitly represents a TPM owner. This function is normally called at the beginning of a program, right after the context is established. You must have a context established prior to calling this function. </p>
+<dd>object exists for a given context and implicitly represents a TPM owner. This function is normally called at the beginning of a program, right after the context is established. You must have a context established prior to calling this function. </dd>
 <h2>Parameters</h2>
 <h3>hContext</h3>
 <p>The <i>hContext</i> parameter is the handle of the context object (already existing).</p>
@@ -33,12 +33,12 @@ description: "Context_GetTpmObject – get the handle of the TPM object associat
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_GetTpmObject</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hContext</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
-<dd>One or more of the parameters is incorrect. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hContext</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dd>One or more of the parameters is incorrect. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Context_GetTpmObject</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>

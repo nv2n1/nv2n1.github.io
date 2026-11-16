@@ -10,9 +10,9 @@ description: "gssntlmssp – GSSAPI NTLM Security Service Provider mechanism"
 <p>gssntlmssp &#8211; GSSAPI NTLM Security Service Provider mechanism</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>gssntlmssp_v1 2.16.840.1.113730.3.8.15.X /usr/lib64/gssntlmssp/gssntlmssp.so </code> [<i>options</i>]</dl>
+<dt> <code>gssntlmssp_v1 2.16.840.1.113730.3.8.15.X /usr/lib64/gssntlmssp/gssntlmssp.so </code> [<i>options</i>]</dt></dl>
 <h2>Description</h2>
-<dd>A GSSAPI NTLM mechanism that allows to perform NTLM authentication in GSSAPI programs.</p>
+<dd>A GSSAPI NTLM mechanism that allows to perform NTLM authentication in GSSAPI programs.</dd>
 <h2>See Also</h2>
 <p><code>gssapi</code>(8).</p>
 <h2>Authors</h2>

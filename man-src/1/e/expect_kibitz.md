@@ -15,15 +15,13 @@ description: "kibitz – allow two people to interact with one shell"
 <h2>INTRODUCTION</h2>
 <p> <code>kibitz</code> allows two (or more) people to interact with one shell (or any arbitrary program). Uses include:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> A novice user can ask an expert user for help. Using <code>kibitz</code>, the expert can see what the user is doing, and offer advice or show how to do it right.</p>
-<dt>&bull;</p>
-<dd> By running <code>kibitz</code> and then starting a full-screen editor, people may carry out a conversation, retaining the ability to scroll backwards, save the entire conversation, or even edit it while in progress.</p>
-<dt>&bull;</p>
-<dd> People can team up on games, document editing, or other cooperative tasks where each person has strengths and weaknesses that complement one another.</dl>
+<dt>&bull;</dt>
+<dd> A novice user can ask an expert user for help. Using <code>kibitz</code>, the expert can see what the user is doing, and offer advice or show how to do it right.</dd>
+<dt>&bull;</dt>
+<dd> By running <code>kibitz</code> and then starting a full-screen editor, people may carry out a conversation, retaining the ability to scroll backwards, save the entire conversation, or even edit it while in progress.</dd>
+<dt>&bull;</dt>
+<dd> People can team up on games, document editing, or other cooperative tasks where each person has strengths and weaknesses that complement one another.</dd></dl>
 </dl>
 <h2>USAGE</h2>
 <p> To start <code>kibitz</code>, user1 runs kibitz with the argument of the user to kibitz. For example: </p>

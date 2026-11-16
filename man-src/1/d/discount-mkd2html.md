@@ -17,12 +17,12 @@ description: "mkd2html – markdown to html converter"
 <p> is part of discount.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-css </code><i>file</i></p>
-<dd> Specifies a CSS file.</p>
-<dt><code>-header </code><i>string</i></p>
-<dd> Specifies a line to add to the &lt;header&gt; tag.</p>
-<dt><code>-footer </code><i>string</i></p>
-<dd> Specifies a line to add before the &lt;/body&gt; tag.</dl>
+<dt><code>-css </code><i>file</i></dt>
+<dd> Specifies a CSS file.</dd>
+<dt><code>-header </code><i>string</i></dt>
+<dd> Specifies a line to add to the &lt;header&gt; tag.</dd>
+<dt><code>-footer </code><i>string</i></dt>
+<dd> Specifies a line to add before the &lt;/body&gt; tag.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> The utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>SEE ALSO</h2>

@@ -20,33 +20,33 @@ description: "pamslice – extract one line of values out of a Netpbm image"
 <p> If you want to see all the pixels in a PPM, PGM, or PBM image in ASCII decimal, <code>pnmtopnm -plain</code> is a good way to do that. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-row=</code><i>rownumber</i></p>
+<dt><code>-row=</code><i>rownumber</i></dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>This indicates that the slice is to be horizontal &#8212; i.e. one row of the<br />
 &nbsp;<wbr>&nbsp;<wbr>image &#8212; and indicates which row.&nbsp;<wbr>&nbsp;<wbr>Rows are numbered from the top<br />
-&nbsp;<wbr>&nbsp;<wbr>starting with 0. </p>
+&nbsp;<wbr>&nbsp;<wbr>starting with 0. </dd>
 <p> You cannot specify both <code>-row</code> and <code>-column</code>. </p>
-<dt><code>-column=</code><i>colnumber</i></p>
+<dt><code>-column=</code><i>colnumber</i></dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>This indicates that the slice is to be vertical &#8212; i.e. one column of the<br />
 &nbsp;<wbr>&nbsp;<wbr>image &#8212; and indicates which column.&nbsp;<wbr>&nbsp;<wbr>Columns are numbered from the left<br />
-&nbsp;<wbr>&nbsp;<wbr>starting with 0. </p>
+&nbsp;<wbr>&nbsp;<wbr>starting with 0. </dd>
 <p> You cannot specify both <code>-row</code> and <code>-column</code>. </p>
-<dt><code>-plane=</code><i>planenumber</i></p>
+<dt><code>-plane=</code><i>planenumber</i></dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>This specifies that you are interested in only one plane of the image<br />
 &nbsp;<wbr>&nbsp;<wbr>and which one.&nbsp;<wbr>&nbsp;<wbr>Planes are numbered from 0 and have meanings that vary<br />
 &nbsp;<wbr>&nbsp;<wbr>on the type of image.&nbsp;<wbr>&nbsp;<wbr>In a PPM image, Plane 0 is red, Plane 1 is<br />
-&nbsp;<wbr>&nbsp;<wbr>green, and Plane 2 is blue. </p>
+&nbsp;<wbr>&nbsp;<wbr>green, and Plane 2 is blue. </dd>
 <p> If you don&#8217;t specify <code>-plane</code>, you get all the planes &#8212; each<br />
 &nbsp;<wbr>&nbsp;<wbr>line of output has multiple numbers in addition to the sequence number.<br />
 &nbsp;<wbr>&nbsp;<wbr>If you do specify&nbsp;<wbr><code>-plane</code>, each line of output contains one<br />
 &nbsp;<wbr>&nbsp;<wbr>number in addition to the sequence number. </p>
-<dt><code>-xmgr</code></p>
+<dt><code>-xmgr</code></dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>This option causes&nbsp;<wbr><code>pamslice</code>&nbsp;<wbr>to format the output as input for a<br />
 &nbsp;<wbr>&nbsp;<wbr><code>xmgr</code>&nbsp;<wbr>so you can plot it.&nbsp;<wbr>&nbsp;<wbr>The only difference this option makes<br />
-&nbsp;<wbr>&nbsp;<wbr>is that it adds header information to the beginning of the output. </p>
+&nbsp;<wbr>&nbsp;<wbr>is that it adds header information to the beginning of the output. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) </p>

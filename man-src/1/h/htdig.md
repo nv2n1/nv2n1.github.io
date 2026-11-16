@@ -15,20 +15,20 @@ description: "htdig – retrieve HTML documents for ht://Dig search engine"
 <p> Htdig retrieves HTML documents using the HTTP protocol and gathers information from these documents which can later be used to search these documents. This program can be referred to as the search robot.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> Get the list of URLs to start indexing from standard input. This will override the default parameter <i>start_url</i> specified in the config file and the file supplied to the <i>-m</i> option.</p>
-<dt><code>-a</code></p>
-<dd> Use alternate work files. Tells htdig to append <i>.work</i> to database files, causing a second copy of the database to be built. This allows the original files to be used by htsearch during the indexing run.</p>
-<dt><code>-c </code><i>configfile</i></p>
-<dd> Use the specified <i>configfile</i> instead of the default.</p>
-<dt><code>-h </code><i>maxhops</i></p>
-<dd> Restrict the dig to documents that are at most <i>maxhops</i> links away from the starting document. This only works if option <i>-i</i> is also given.</p>
-<dt><code>-i</code></p>
-<dd> Initial. Do not use any old databases. Old databases will be erased before runing the program.</p>
-<dt><code>-m </code><i>filename</i></p>
-<dd> Minimal run. Only index the URLs given in the file <i>filename</i>, ignoring all others. URLs in the file should be formatted one URL per line. <code>-s</code> Print statistics about the dig after completion.</p>
-<dt><code>-t</code></p>
-<dd> Create an ASCII version of the document database. This database is easy to parse with other programs so that information can be extracted from it for purposes other than searching. One could gather some interesting statistics from this database. </p>
+<dt><code>&#8211;</code></dt>
+<dd> Get the list of URLs to start indexing from standard input. This will override the default parameter <i>start_url</i> specified in the config file and the file supplied to the <i>-m</i> option.</dd>
+<dt><code>-a</code></dt>
+<dd> Use alternate work files. Tells htdig to append <i>.work</i> to database files, causing a second copy of the database to be built. This allows the original files to be used by htsearch during the indexing run.</dd>
+<dt><code>-c </code><i>configfile</i></dt>
+<dd> Use the specified <i>configfile</i> instead of the default.</dd>
+<dt><code>-h </code><i>maxhops</i></dt>
+<dd> Restrict the dig to documents that are at most <i>maxhops</i> links away from the starting document. This only works if option <i>-i</i> is also given.</dd>
+<dt><code>-i</code></dt>
+<dd> Initial. Do not use any old databases. Old databases will be erased before runing the program.</dd>
+<dt><code>-m </code><i>filename</i></dt>
+<dd> Minimal run. Only index the URLs given in the file <i>filename</i>, ignoring all others. URLs in the file should be formatted one URL per line. <code>-s</code> Print statistics about the dig after completion.</dd>
+<dt><code>-t</code></dt>
+<dd> Create an ASCII version of the document database. This database is easy to parse with other programs so that information can be extracted from it for purposes other than searching. One could gather some interesting statistics from this database. </dd>
 <table>
 <tr VALIGN=top>
 <td ALIGN=center><code>Fieldname</code></td>
@@ -141,28 +141,28 @@ description: "htdig – retrieve HTML documents for ht://Dig search engine"
 </td>
 </tr>
 </table>
-<dt><code>-u </code><i>username:password</i></p>
-<dd> Tells htdig to send the supplied username and password with each HTTP request. The credentials will be encoded using the <i>&#8216;Basic&#8217;</i> authentication method. There <code>HAS</code> to be a colon (:) between the username and password.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. This increases the verbosity of the program. Using more than 2 is probably only useful for debugging purposes. The default verbose mode (using only one -v) gives a nice progress report while digging. Please consult the section below on the exact format of the progress report.</p>
-<dt></dl>
+<dt><code>-u </code><i>username:password</i></dt>
+<dd> Tells htdig to send the supplied username and password with each HTTP request. The credentials will be encoded using the <i>&#8216;Basic&#8217;</i> authentication method. There <code>HAS</code> to be a colon (:) between the username and password.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. This increases the verbosity of the program. Using more than 2 is probably only useful for debugging purposes. The default verbose mode (using only one -v) gives a nice progress report while digging. Please consult the section below on the exact format of the progress report.</dd>
+<dt></dt></dl>
 <h2>FORMAT OF THE PROGRESS REPORT GIVEN IN VERBOSE MODE</h2>
-<dd> A line is shown for each URL, with 3 numbers before the URL and some symbols after the URL. The first number is the number of documents parsed so far, the second is the DocID for this document, and the third is the hop count of the document (number of hops from one of the start_url documents). Signification of the sybols printed after the url:</p>
+<dd> A line is shown for each URL, with 3 numbers before the URL and some symbols after the URL. The first number is the number of documents parsed so far, the second is the DocID for this document, and the third is the hop count of the document (number of hops from one of the start_url documents). Signification of the sybols printed after the url:</dd>
 <dl>
 <dt>
-<dd> <i>&quot;*&quot;</i> is printed for a link already visited</p>
+</dt><dd> <i>&quot;*&quot;</i> is printed for a link already visited</dd>
 <dt>
-<dd> <i>&quot;+&quot;</i> is printed for a new link just queued</p>
+</dt><dd> <i>&quot;+&quot;</i> is printed for a new link just queued</dd>
 <dt>
-<dd> <i>&quot;-&quot;</i> is output for a link rejected for any of a number of reasons. To find out what those reasons are, you need to run htdig with at least 3 <i>-v</i> options, i.e. <i>-vvv</i>.</p>
-<dt>If there are no &quot;*&quot;, &quot;+&quot; or &quot;-&quot; symbols after the URL, it doesn&#8217;t mean the document was not parsed or was empty, but only that no links to other documents were found within it. With more verbose output, these symbols will get interspersed in several lines of debugging output.</p>
+</dt><dd> <i>&quot;-&quot;</i> is output for a link rejected for any of a number of reasons. To find out what those reasons are, you need to run htdig with at least 3 <i>-v</i> options, i.e. <i>-vvv</i>.</dd>
+<dt>If there are no &quot;*&quot;, &quot;+&quot; or &quot;-&quot; symbols after the URL, it doesn&#8217;t mean the document was not parsed or was empty, but only that no links to other documents were found within it. With more verbose output, these symbols will get interspersed in several lines of debugging output.</dt>
 <dd>
-<dt></dl>
+</dd><dt></dt></dl>
 <h2>FILES</h2>
 <dd>
-<dl>
-<dt><code>/etc/htdig/htdig.conf</code></p>
-<dd> The default configuration file. <code>/var/lib/htdig/db.docdb</code> Stores data about each document (title, url, etc.). <code>/var/lib/htdig/db.words.db, /var/lib/htdig/db.words.db_weakcmpr</code> Record which documents each word occurs in. <code>/var/lib/htdig/db.excerpts</code> Stores start of each document to show context of matches.</dl>
+</dd><dl>
+<dt><code>/etc/htdig/htdig.conf</code></dt>
+<dd> The default configuration file. <code>/var/lib/htdig/db.docdb</code> Stores data about each document (title, url, etc.). <code>/var/lib/htdig/db.words.db, /var/lib/htdig/db.words.db_weakcmpr</code> Record which documents each word occurs in. <code>/var/lib/htdig/db.excerpts</code> Stores start of each document to show context of matches.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i>htdigconfig(8)</i> , <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> , <i><a href="/docs/linux/man/1-htnotify/">htnotify</a>(1)</i> , <i><a href="/docs/linux/man/1-htsearch/">htsearch</a>(1)</i> and <i><a href="/docs/linux/man/1-rundig/">rundig</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
 <h2>AUTHOR</h2>

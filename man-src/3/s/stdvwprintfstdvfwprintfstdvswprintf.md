@@ -11,15 +11,11 @@ std::vwprintf,std::vfwprintf,std::vswprintf - std::vwprintf,std::vfwprintf,std::
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int vwprintf(const wchar_t *format, va_list vlist);
 (1)
-
     int vfwprintf(std::FILE *stream, const wchar_t *format, va_list vlist);
 (2)
-
     int vswprintf(const wchar_t *buffer, std::size_t buf_size, (3)
-
                                                                    const wchar_t *format,
                   va_list vlist);</code></pre> 
 Loads the data from locations, defined by vlist,, converts them to wide string equivalents and writes the results to a variety of sinks. 

@@ -26,14 +26,14 @@ description: "GridFTP Control API –"
 <p> Any program that uses the GridFTP Control Library must include the <code>globus_ftp_control.h</code> header. </p>
 <p> The API documentation is organized into several sections</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>GridFTP Server Control</code></p>
-<dt>&bull;</p>
-<dd> <code>GridFTP Control Client</code></p>
-<dt>&bull;</p>
-<dd> <code>GridFTP Data Connections</code></p>
-<dt>&bull;</p>
-<dd> <code>GridFTP Constants</code></dl>
+<dt>&bull;</dt>
+<dd> <code>GridFTP Server Control</code></dd>
+<dt>&bull;</dt>
+<dd> <code>GridFTP Control Client</code></dd>
+<dt>&bull;</dt>
+<dd> <code>GridFTP Data Connections</code></dd>
+<dt>&bull;</dt>
+<dd> <code>GridFTP Constants</code></dd></dl>
 <p> The Globus FTP Control library uses the standard module activation and deactivation API to initialize it&#8217;s state. Before any GridFTP functions are called, the module must be activated </p>
 <pre>
 globus_module_activate(GLOBUS_FTP_CONTROL_MODULE);

@@ -14,12 +14,12 @@ description: "CURLOPT_IPRESOLVE – specify which IP protocol version to use"
 <h2>Description</h2>
 <p>Allows an application to select what kind of IP addresses to use when resolving host names. This is only interesting when using host names that resolve addresses using more than one version of IP. The allowed values are:</p>
 <dl COMPACT>
-<dt>CURL_IPRESOLVE_WHATEVER</p>
-<dd>Default, resolves addresses to all IP versions that your system allows.</p>
-<dt>CURL_IPRESOLVE_V4</p>
-<dd>Resolve to IPv4 addresses.</p>
-<dt>CURL_IPRESOLVE_V6</p>
-<dd>Resolve to IPv6 addresses.</dl>
+<dt>CURL_IPRESOLVE_WHATEVER</dt>
+<dd>Default, resolves addresses to all IP versions that your system allows.</dd>
+<dt>CURL_IPRESOLVE_V4</dt>
+<dd>Resolve to IPv4 addresses.</dd>
+<dt>CURL_IPRESOLVE_V6</dt>
+<dd>Resolve to IPv6 addresses.</dd></dl>
 <h2>Default</h2>
 <p>CURL_IPRESOLVE_WHATEVER</p>
 <h2>Protocols</h2>

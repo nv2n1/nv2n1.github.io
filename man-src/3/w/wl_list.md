@@ -13,14 +13,9 @@ wl_list -
 <h2>Synopsis</h2>
 
 <pre><code>
-
 #include &lt;wayland-util.h&gt;
-
 Public Attributes
 struct wl_list * prev
-
-
-
 struct wl_list * next</code></pre>
 
 <h2>Detailed Description</h2>

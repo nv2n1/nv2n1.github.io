@@ -10,20 +10,16 @@ description: "std::pmr::polymorphic_allocator<T>::new_object – std::pmr::polym
 <p>std::pmr::polymorphic_allocator&lt;T&gt;::new_object &#8211; std::pmr::polymorphic_allocator&lt;T&gt;::new_object</p>
 <h2>Synopsis</h2>
 <pre><code>template&lt; class U, class CtorArgs... &gt;     (since C++20)
-
 U* new_object( CtorArgs&amp;&amp;... ctor_args );</code></pre>
 <p>Allocates and constructs an object of type U.<br />
 Equivalent to </p>
 <pre><code>U *p = allocate_object&lt;U&gt;();
-
 try {
     construct(p, std::forward&lt;CtorArgs&gt;(ctor_args)...);
-
 } catch (...) {
     deallocate_object(p);
     throw;
 }
-
 return p;
 </code></pre>
 <h2>Parameters</h2>

@@ -19,37 +19,37 @@ description: "rotatelogs – Piped logging program to rotate Apache logs"
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-l</code></p>
-<dd>Causes the use of local time rather than GMT as the base for the interval or for <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> formatting with size-based rotation.</p>
-<dt><code>-L</code> <i>linkname</i></p>
-<dd></dl>
+<dt><code>-l</code></dt>
+<dd>Causes the use of local time rather than GMT as the base for the interval or for <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> formatting with size-based rotation.</dd>
+<dt><code>-L</code> <i>linkname</i></dt>
+<dd></dd></dl>
 <dl>
-<dt><code>-p</code> <i>program</i></p>
-<dd>If given, <code>rotatelogs</code> will execute the specified program every time a new log file is opened. The filename of the newly opened file is passed as the first argument to the program. If executing after a rotation, the old log file is passed as the second argument. <code>rotatelogs</code> does not wait for the specified program to terminate before continuing to operate, and will not log any error code returned on termination. The spawned program uses the same stdin, stdout, and stderr as rotatelogs itself, and also inherits the environment.</p>
-<dt><code>-f</code></p>
-<dd>Causes the logfile to be opened immediately, as soon as <code>rotatelogs</code> starts, instead of waiting for the first logfile entry to be read (for non-busy sites, there may be a substantial delay between when the server is started and when the first request is handled, meaning that the associated logfile does not &quot;exist&quot; until then, which causes problems from some automated logging tools)</p>
-<dt><code>-D</code></p>
-<dd>Creates the parent directories of the path that the log file will be placed in if they do not already exist. This allows <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> formatting to be used in the path and not just the filename.</p>
-<dt><code>-t</code></p>
-<dd>Causes the logfile to be truncated instead of rotated. This is useful when a log is processed in real time by a command like tail, and there is no need for archived data. No suffix will be added to the filename, however format strings containing &#8216;%&#8217; characters will be respected.</p>
-<dt><code>-v</code></p>
-<dd>Produce verbose output on STDERR. The output contains the result of the configuration parsing, and all file open and close actions.</p>
-<dt><code>-e</code></p>
-<dd>Echo logs through to stdout. Useful when logs need to be further processed in real time by a further tool in the chain.</p>
-<dt><code>-c</code></p>
-<dd>Create log file for each interval, even if empty.</p>
-<dt><code>-n </code><i>number-of-files</i></p>
-<dd>Use a circular list of filenames without timestamps. With -n 3, the series of log files opened would be &quot;logfile&quot;, &quot;logfile.1&quot;, &quot;logfile.2&quot;, then overwriting &quot;logfile&quot;. Available in 2.4.5 and later.</p>
-<dt><i>logfile</i></p>
-<dd></dl>
+<dt><code>-p</code> <i>program</i></dt>
+<dd>If given, <code>rotatelogs</code> will execute the specified program every time a new log file is opened. The filename of the newly opened file is passed as the first argument to the program. If executing after a rotation, the old log file is passed as the second argument. <code>rotatelogs</code> does not wait for the specified program to terminate before continuing to operate, and will not log any error code returned on termination. The spawned program uses the same stdin, stdout, and stderr as rotatelogs itself, and also inherits the environment.</dd>
+<dt><code>-f</code></dt>
+<dd>Causes the logfile to be opened immediately, as soon as <code>rotatelogs</code> starts, instead of waiting for the first logfile entry to be read (for non-busy sites, there may be a substantial delay between when the server is started and when the first request is handled, meaning that the associated logfile does not &quot;exist&quot; until then, which causes problems from some automated logging tools)</dd>
+<dt><code>-D</code></dt>
+<dd>Creates the parent directories of the path that the log file will be placed in if they do not already exist. This allows <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> formatting to be used in the path and not just the filename.</dd>
+<dt><code>-t</code></dt>
+<dd>Causes the logfile to be truncated instead of rotated. This is useful when a log is processed in real time by a command like tail, and there is no need for archived data. No suffix will be added to the filename, however format strings containing &#8216;%&#8217; characters will be respected.</dd>
+<dt><code>-v</code></dt>
+<dd>Produce verbose output on STDERR. The output contains the result of the configuration parsing, and all file open and close actions.</dd>
+<dt><code>-e</code></dt>
+<dd>Echo logs through to stdout. Useful when logs need to be further processed in real time by a further tool in the chain.</dd>
+<dt><code>-c</code></dt>
+<dd>Create log file for each interval, even if empty.</dd>
+<dt><code>-n </code><i>number-of-files</i></dt>
+<dd>Use a circular list of filenames without timestamps. With -n 3, the series of log files opened would be &quot;logfile&quot;, &quot;logfile.1&quot;, &quot;logfile.2&quot;, then overwriting &quot;logfile&quot;. Available in 2.4.5 and later.</dd>
+<dt><i>logfile</i></dt>
+<dd></dd></dl>
 <dl>
-<dt><i>rotationtime</i></p>
-<dd>The time between log file rotations in seconds. The rotation occurs at the beginning of this interval. For example, if the rotation time is 3600, the log file will be rotated at the beginning of every hour; if the rotation time is 86400, the log file will be rotated every night at midnight. (If no data is logged during an interval, no file will be created.)</p>
-<dt><i>filesize</i>(B|K|M|G)</p>
-<dd>The maximum file size in followed by exactly one of the letters <code>B</code> (Bytes), <code>K</code> (KBytes), <code>M</code> (MBytes) or <code>G</code> (GBytes). .PP When time and size are specified, the size must be given after the time. Rotation will occur whenever either time or size limits are reached.</p>
-<dt><i>offset</i></p>
+<dt><i>rotationtime</i></dt>
+<dd>The time between log file rotations in seconds. The rotation occurs at the beginning of this interval. For example, if the rotation time is 3600, the log file will be rotated at the beginning of every hour; if the rotation time is 86400, the log file will be rotated every night at midnight. (If no data is logged during an interval, no file will be created.)</dd>
+<dt><i>filesize</i>(B|K|M|G)</dt>
+<dd>The maximum file size in followed by exactly one of the letters <code>B</code> (Bytes), <code>K</code> (KBytes), <code>M</code> (MBytes) or <code>G</code> (GBytes). .PP When time and size are specified, the size must be given after the time. Rotation will occur whenever either time or size limits are reached.</dd>
+<dt><i>offset</i></dt>
 <dd>The number of minutes offset from UTC. If omitted, zero is assumed and UTC is used. For example, to use local time in the zone UTC -5 hours, specify a value of <code>-300</code> for this argument. In most cases, <code>-l</code> should be used instead of specifying an offset.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>Examples</h2>
 <p>&nbsp; </p>
 <pre> CustomLog &quot;|bin/rotatelogs /var/log/logfile 86400&quot; common</pre>
@@ -77,48 +77,48 @@ description: "rotatelogs – Piped logging program to rotate Apache logs"
 <p> The following logfile format string substitutions should be supported by all <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> implementations, see the <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code> man page for library-specific extensions.<br />
 &nbsp;<wbr>&nbsp; </p>
 <dl>
-<dt>&bull; <font SIZE="-1"><code>%A</code></font> &#8211; full weekday name (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%a</code></font> &#8211; 3-character weekday name (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%B</code></font> &#8211; full month name (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%b</code></font> &#8211; 3-character month name (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%c</code></font> &#8211; date and time (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%d</code></font> &#8211; 2-digit day of month</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%H</code></font> &#8211; 2-digit hour (24 hour clock)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%I</code></font> &#8211; 2-digit hour (12 hour clock)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%j</code></font> &#8211; 3-digit day of year</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%M</code></font> &#8211; 2-digit minute</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%m</code></font> &#8211; 2-digit month</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%p</code></font> &#8211; am/pm of 12 hour clock (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%S</code></font> &#8211; 2-digit second</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%U</code></font> &#8211; 2-digit week of year (Sunday first day of week)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%W</code></font> &#8211; 2-digit week of year (Monday first day of week)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%w</code></font> &#8211; 1-digit weekday (Sunday first day of week)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%X</code></font> &#8211; time (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%x</code></font> &#8211; date (localized)</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%Y</code></font> &#8211; 4-digit year</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%y</code></font> &#8211; 2-digit year</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%Z</code></font> &#8211; time zone name</p>
-<dd>&nbsp; </p>
-<dt>&bull; <font SIZE="-1"><code>%%</code></font> &#8211; literal `%&#8217;</p>
-<dd>&nbsp;<wbr>&nbsp; </p>
+<dt>&bull; <font SIZE="-1"><code>%A</code></font> &#8211; full weekday name (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%a</code></font> &#8211; 3-character weekday name (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%B</code></font> &#8211; full month name (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%b</code></font> &#8211; 3-character month name (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%c</code></font> &#8211; date and time (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%d</code></font> &#8211; 2-digit day of month</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%H</code></font> &#8211; 2-digit hour (24 hour clock)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%I</code></font> &#8211; 2-digit hour (12 hour clock)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%j</code></font> &#8211; 3-digit day of year</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%M</code></font> &#8211; 2-digit minute</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%m</code></font> &#8211; 2-digit month</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%p</code></font> &#8211; am/pm of 12 hour clock (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%S</code></font> &#8211; 2-digit second</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%U</code></font> &#8211; 2-digit week of year (Sunday first day of week)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%W</code></font> &#8211; 2-digit week of year (Monday first day of week)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%w</code></font> &#8211; 1-digit weekday (Sunday first day of week)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%X</code></font> &#8211; time (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%x</code></font> &#8211; date (localized)</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%Y</code></font> &#8211; 4-digit year</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%y</code></font> &#8211; 2-digit year</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%Z</code></font> &#8211; time zone name</dt>
+<dd>&nbsp; </dd>
+<dt>&bull; <font SIZE="-1"><code>%%</code></font> &#8211; literal `%&#8217;</dt>
+<dd>&nbsp;<wbr>&nbsp; </dd>
 </dl>

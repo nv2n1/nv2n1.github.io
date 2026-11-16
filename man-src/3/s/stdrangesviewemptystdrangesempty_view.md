@@ -10,15 +10,10 @@ description: "std::ranges::view::empty,std::ranges::empty_view – std::ranges::
 <p>std::ranges::view::empty,std::ranges::empty_view &#8211; std::ranges::view::empty,std::ranges::empty_view</p>
 <h2>Synopsis</h2>
 <pre><code>template&lt;class T&gt;
-
 requires is_object_v&lt;T&gt;                                   (1) (since C++20)
-
 class empty_view : public view_interface&lt;empty_view&lt;T&gt;&gt;
-
 namespace view {
-
     template&lt;class T&gt; inline constexpr empty_view&lt;T&gt; empty{}; (2) (since C++20)
-
 }</code></pre>
 <p>1) A range adaptor that produces a View of no elements of a particular type.<br />
 2) Variable template for empty_view. </p>
@@ -47,7 +42,6 @@ friend constexpr T* end(empty_view) noexcept { return nullptr; } <code>(2)</code
 <p>// Run this code </p>
 <pre><code>#include &lt;ranges&gt;
 int main()
-
 {
     std::ranges::empty_view&lt;int&gt; e;
     static_assert(std::ranges::empty(e));

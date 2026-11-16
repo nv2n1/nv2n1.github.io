@@ -15,32 +15,32 @@ description: "trace-cmd-snapshot – take, reset, free, or show a Ftrace kernel 
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) snapshot controls or displays the Ftrace Linux kernel snapshot feature (if the kernel supports it). This is useful to &quot;freeze&quot; an instance of a live trace but without stopping the trace. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 trace - cmd start - p function trace - cmd snapshot - s trace - cmd snapshot[dumps the content of buffer at 'trace-cmd snapshot -s'] trace - cmd snapshot - s trace - cmd snapshot[dumps the new content of the buffer at the last - s operation]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-s</code></p>
 <dl>
 <dt>
-<dd> Take a snapshot of the currently running buffer.</dl>
+</dt><dd> Take a snapshot of the currently running buffer.</dd></dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> Clear out the buffer.</dl>
+</dt><dd> Clear out the buffer.</dd></dl>
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> Free the snapshot buffer. The buffer takes up memory inside the kernel. It is best to free it when not in use. The first -s operation will allocate it if it is not already allocated.</dl>
+</dt><dd> Free the snapshot buffer. The buffer takes up memory inside the kernel. It is best to free it when not in use. The first -s operation will allocate it if it is not already allocated.</dd></dl>
 <p> <code>-c</code> <i>cpu</i></p>
 <dl>
 <dt>
-<dd> Operate on a per cpu snapshot (may not be fully supported by all kernels)</dl>
+</dt><dd> Operate on a per cpu snapshot (may not be fully supported by all kernels)</dd></dl>
 <p> <code>-B</code> <i>buf</i></p>
 <dl>
 <dt>
-<dd> If a buffer instance was created, then the <code>-B</code> option will operate on the snapshot within the buffer.</dl>
+</dt><dd> If a buffer instance was created, then the <code>-B</code> option will operate on the snapshot within the buffer.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-split/">trace-cmd-split</a>(1), <a href="/docs/linux/man/1-trace-cmd-list/">trace-cmd-list</a>(1), <a href="/docs/linux/man/1-trace-cmd-listen/">trace-cmd-listen</a>(1)</p>
 <h2>AUTHOR</h2>
@@ -51,10 +51,10 @@ trace - cmd start - p function trace - cmd snapshot - s trace - cmd snapshot[dum
 <p> Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

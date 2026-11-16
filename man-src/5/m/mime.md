@@ -23,27 +23,27 @@ The <i>mime.types</i> file defines the recognized file types.
 
 Rules take two forms - a filename extension by itself and functions with test values inside parenthesis. The following functions are available:
 <dl><dt>match(&quot;pattern&quot;)
-<dd>Pattern match on filename
-<dt>ascii(offset,length)
-<dd>True if bytes are valid printable ASCII (CR, NL, TAB, BS, 32-126)
-<dt>printable(offset,length)
-<dd>True if bytes are printable 8-bit chars (CR, NL, TAB, BS, 32-126, 128-254)
-<dt>priority(number)
-<dd>Specifies the relative priority of this MIME type. The default priority is 100. Larger values have higher priority while smaller values have lower priority.
-<dt>string(offset,&quot;string&quot;)
-<dd>True if bytes are identical to string
-<dt>istring(offset,&quot;string&quot;)
-<dd>True if a case-insensitive comparison of the bytes is identical
-<dt>char(offset,value)
-<dd>True if byte is identical
-<dt>short(offset,value)
-<dd>True if 16-bit integer is identical
-<dt>int(offset,value)
-<dd>True if 32-bit integer is identical
-<dt>locale(&quot;string&quot;)
-<dd>True if current locale matches string
-<dt>contains(offset,range,&quot;string&quot;)
-<dd>True if the range contains the string</dl>
+</dt><dd>Pattern match on filename
+</dd><dt>ascii(offset,length)
+</dt><dd>True if bytes are valid printable ASCII (CR, NL, TAB, BS, 32-126)
+</dd><dt>printable(offset,length)
+</dt><dd>True if bytes are printable 8-bit chars (CR, NL, TAB, BS, 32-126, 128-254)
+</dd><dt>priority(number)
+</dt><dd>Specifies the relative priority of this MIME type. The default priority is 100. Larger values have higher priority while smaller values have lower priority.
+</dd><dt>string(offset,&quot;string&quot;)
+</dt><dd>True if bytes are identical to string
+</dd><dt>istring(offset,&quot;string&quot;)
+</dt><dd>True if a case-insensitive comparison of the bytes is identical
+</dd><dt>char(offset,value)
+</dt><dd>True if byte is identical
+</dd><dt>short(offset,value)
+</dt><dd>True if 16-bit integer is identical
+</dd><dt>int(offset,value)
+</dt><dd>True if 32-bit integer is identical
+</dd><dt>locale(&quot;string&quot;)
+</dt><dd>True if current locale matches string
+</dd><dt>contains(offset,range,&quot;string&quot;)
+</dt><dd>True if the range contains the string</dd></dl>
 
 <h2>String Constants</h2>
 

@@ -11,8 +11,8 @@ description: "mhfixmsg – rewrite MIME messages with various transformations"
 <p> mhfixmsg &#8211; rewrite MIME messages with various transformations </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mhfixmsg</code> [<i>+folder</i>] [<i>msgs</i> | <i>absolute pathname</i> | -file <i>file</i>] [<code>-decodetext</code></p>
-<dd>8bit/7bit | <code>-nodecodetext</code>] [<code>-textcharset</code> <i>charset</i> | <code>-notextcharset</code>] [<code>-reformat</code> | <code>-noreformat</code>] [<code>-replacetextplain</code> | <code>-noreplacetextplain</code>] [<code>-fixboundary</code> | <code>-nofixboundary</code>] [<code>-fixcte</code> | <code>-nofixcte</code>] [<code>-outfile</code> <i>outfile</i>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>mhfixmsg</code> [<i>+folder</i>] [<i>msgs</i> | <i>absolute pathname</i> | -file <i>file</i>] [<code>-decodetext</code></dt>
+<dd>8bit/7bit | <code>-nodecodetext</code>] [<code>-textcharset</code> <i>charset</i> | <code>-notextcharset</code>] [<code>-reformat</code> | <code>-noreformat</code>] [<code>-replacetextplain</code> | <code>-noreplacetextplain</code>] [<code>-fixboundary</code> | <code>-nofixboundary</code>] [<code>-fixcte</code> | <code>-nofixcte</code>] [<code>-outfile</code> <i>outfile</i>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mhfixmsg</code> rewrites MIME messages, applying specific transformations such as decoding of MIME-encoded message parts and repairing invalid MIME headers. </p>
 <p> MIME messages are specified in RFC 2045 to RFC 2049 (see <i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1)). The <code>mhlist</code> command is invaluable for viewing the content structure of MIME messages. <code>mhfixmsg</code> passes non-MIME messages through without any transformations. If no transformations apply to a MIME message, the original message or file is not modified or removed. </p>
@@ -30,21 +30,21 @@ description: "mhfixmsg – rewrite MIME messages with various transformations"
 <p> Combined with the <code>-verbose</code> switch, the <code>-outfile</code> switch can be used to show what transformations <code>mhfixmsg</code> would apply without actually applying them, e.g., </p>
 <dl>
 <dt>
-<dd> mhfixmsg -outfile /dev/null -verbose</dl>
+</dt><dd> mhfixmsg -outfile /dev/null -verbose</dd></dl>
 <p> As always, this usage obeys any <code>mhfixmsg</code> switches in the user&#8217;s profile. </p>
 <p> <code>-outfile</code> can be combined with <code>rcvstore</code> to add a single transformed message to a different folder, e.g., </p>
 <dl>
 <dt>
-<dd> mhfixmsg -outfile &#8211; | \</p>
+</dt><dd> mhfixmsg -outfile &#8211; | \</dd>
 <dl>
 <dt>
-<dd> /usr/libexec/nmh/rcvstore +folder</dl>
+</dt><dd> /usr/libexec/nmh/rcvstore +folder</dd></dl>
 </dl>
 <h3>Summary of Applicability</h3>
 <p> The transformations apply to the parts of a message depending on content type and/or encoding as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -decodetext   base64 and quoted-printable encoded text parts
 -textcharset  text/plain parts
@@ -52,19 +52,19 @@ description: "mhfixmsg – rewrite MIME messages with various transformations"
 -fixboundary  outermost multipart part
 -fixcte       multipart part
 </pre>
-</dl>
+</dd></dl>
 <h3>Backup of Original Message/File</h3>
 <p> If it applies any transformations to a message or file, and the <code>-outfile</code> switch is not used, <code>mhfixmsg</code> backs up the original the same way as <code>rmm</code>. That is, it uses the <i>rmmproc</i> profile component, if present. If not present, <code>mhfixmsg</code> moves the original message to a backup file. The <code>-rmmproc</code> switch may be used to override this profile component. The <code>-normmproc</code> switch disables the use of any <i>rmmproc</i> profile component and negates all prior <code>-rmmproc</code> switches. </p>
 <h3>Integration with inc</h3>
 <p> <code>mhfixmsg</code> can be used as an add-hook, as described in /usr/share/doc/nmh-1.6/README-HOOKS. Note that add-hooks are called from all <code>nmh</code> programs that add a message to a folder, not just <code>inc</code>. Alternatively, a simple shell alias or function can be used to call <code>mhfixmsg</code> immediately after a successful invocation of <code>inc</code>. For example, with bash: </p>
 <dl>
 <dt>
-<dd> alias inc=&#8217;inc &amp;&amp; mhfixmsg&#8217;</dl>
+</dt><dd> alias inc=&#8217;inc &amp;&amp; mhfixmsg&#8217;</dd></dl>
 <h3>Integration with procmail</h3>
 <p> By way of example, here is an excerpt from a procmailrc file that filters messages through <code>mhfixmsg</code> before storing them in the user&#8217;s <i>nmh-workers</i> folder. It also stores the incoming message in the <i>Backups</i> folder in a filename generated by <code>mktemp</code>, which is a non-POSIX utility to generate a temporary file. If you do not have that utility, then the <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3) function could form the basis for a substitute. Or, <code>mhfixmsg</code> could be called on the message after it is stored. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 PATH = /usr/bin:$PATH
 MAILDIR = `mhparam path`
@@ -75,7 +75,7 @@ STORE = /usr/libexec/nmh/rcvstore
 * ^TOnmh-workers [at] nongnu.org
 | tee `$MKTEMP` | $MHFIXMSG | $STORE +nmh-workers
 </pre>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <p> <code>mhfixmsg</code> looks for mhn.defaults in multiple locations: absolute pathnames are accessed directly, tilde expansion is done on usernames, and files are searched for in the user&#8217;s <i>Mail</i> directory as specified in their profile. If not found there, the directory &#8220;<i>/etc/nmh</i>&#8221; is checked. </p>
 <pre>

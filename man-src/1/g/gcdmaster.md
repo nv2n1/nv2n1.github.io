@@ -16,20 +16,20 @@ description: "gcdmaster – Graphical front end to cdrdao for composing audio CD
 <p> If a <i>toc-file</i> is specified it will be read and the referenced audio data will be displayed. It is also possible to specify a &quot;.cue&quot; file. </p>
 <p> The GUI periodically polls all configured CD-ROM and CD-recorder devices (see section DEVICE CONFIGURE DIALOG) to retrieve their status (ready, busy, no disk). This is done by sending a TEST UNIT READY command to the devices. Following problems may arise:</p>
 <dl>
-<dt>o</p>
-<dd> Some devices (e.g. the Philips CDD2600) block the SCSI bus when a TEST UNIT READY is issued while it logs in a new medium. This will cause a buffer under run for all currently recording devices that are connected to the same bus.</p>
-<dt>o</p>
-<dd> The GUI cannot detect if a device is used by another program. It will continue to poll the device which may disturb the operation of the other program.</dl>
+<dt>o</dt>
+<dd> Some devices (e.g. the Philips CDD2600) block the SCSI bus when a TEST UNIT READY is issued while it logs in a new medium. This will cause a buffer under run for all currently recording devices that are connected to the same bus.</dd>
+<dt>o</dt>
+<dd> The GUI cannot detect if a device is used by another program. It will continue to poll the device which may disturb the operation of the other program.</dd></dl>
 <p> The GUI supports recording of the same or different projects on multiple devices in parallel. However, there are some caveats and your system must meat some prerequisites:</p>
 <dl>
-<dt>o</p>
-<dd> Under Linux a kernel version &gt;= 2.2.6 should be used. The generic SCSI device of older kernels does not support parallel access to multiple devices.</p>
-<dt>o</p>
-<dd> The bandwidths of the disks that contain the source data and the involved busses must be big enough to serve all recorder devices.</p>
-<dt>o</p>
-<dd> Some recorder devices may block the SCSI bus when the disk is ejected by the software after the burning process (e.g. the Plextor PX-R412). For this reason a warning message will be displayed if the &quot;Eject&quot; button is checked in the &quot;Record&quot; dialog. Manually ejecting a disk seems not to be a problem.</p>
-<dt>o</p>
-<dd> ATAPI devices supported by the &#8216;generic-mmc&#8217; driver will block the IDE bus while writing the lead-in and lead-out. Thus parallel writing with such devices connected to the same IDE channel will not work. There is a way to avoid this blocking with some ATAPI devices but it is not implemented, yet. </p>
+<dt>o</dt>
+<dd> Under Linux a kernel version &gt;= 2.2.6 should be used. The generic SCSI device of older kernels does not support parallel access to multiple devices.</dd>
+<dt>o</dt>
+<dd> The bandwidths of the disks that contain the source data and the involved busses must be big enough to serve all recorder devices.</dd>
+<dt>o</dt>
+<dd> Some recorder devices may block the SCSI bus when the disk is ejected by the software after the burning process (e.g. the Plextor PX-R412). For this reason a warning message will be displayed if the &quot;Eject&quot; button is checked in the &quot;Record&quot; dialog. Manually ejecting a disk seems not to be a problem.</dd>
+<dt>o</dt>
+<dd> ATAPI devices supported by the &#8216;generic-mmc&#8217; driver will block the IDE bus while writing the lead-in and lead-out. Thus parallel writing with such devices connected to the same IDE channel will not work. There is a way to avoid this blocking with some ATAPI devices but it is not implemented, yet. </dd>
 </dl>
 <h2>CONCEPTS</h2>
 <p> The main idea of this GUI is to maintain a continuous stream of audio data that can be composed of several audio files. It is possible to use only portions of audio files in the audio stream which is the basic idea for the non destructive cut capability. </p>
@@ -145,14 +145,14 @@ description: "gcdmaster – Graphical front end to cdrdao for composing audio CD
 <h3>Sub-Channel Frame</h3>
 <p> Allows editing of all data that is written to the Q sub-channels of the track: </p>
 <dl>
-<dt>Copy:</p>
-<dd> Digital copy permitted when selected. </p>
-<dt>Pre Emphasis:</p>
-<dd> Audio data of track has pre emphasis when selected. </p>
-<dt>Two/Four Channel Audio:</p>
-<dd> Select &quot;Four Channel Audio&quot; if the audio data encodes more than two channels. Of course, only two real channels will be recorded on a CD-R/CD-RW in any case. </p>
-<dt>ISRC:</p>
-<dd> Allows to edit the ISRC code of the track. The first fields holds the country code; it will only accept capital letters. The second field holds the owner code, capital letters and digits are allowed. The remaining fields holds the year and a serial number and will only accept digits. All fields must be filled to set the ISRC code and all fields must be cleared to remove it. </p>
+<dt>Copy:</dt>
+<dd> Digital copy permitted when selected. </dd>
+<dt>Pre Emphasis:</dt>
+<dd> Audio data of track has pre emphasis when selected. </dd>
+<dt>Two/Four Channel Audio:</dt>
+<dd> Select &quot;Four Channel Audio&quot; if the audio data encodes more than two channels. Of course, only two real channels will be recorded on a CD-R/CD-RW in any case. </dd>
+<dt>ISRC:</dt>
+<dd> Allows to edit the ISRC code of the track. The first fields holds the country code; it will only accept capital letters. The second field holds the owner code, capital letters and digits are allowed. The remaining fields holds the year and a serial number and will only accept digits. All fields must be filled to set the ISRC code and all fields must be cleared to remove it. </dd>
 </dl>
 <h3>CD-TEXT Frame</h3>
 <p> Allows to enter and edit the CD-TEXT data of each language number for this track. All fields are optional but at least &quot;Title&quot; and &quot;Performer&quot; should be filled. </p>
@@ -164,29 +164,29 @@ description: "gcdmaster – Graphical front end to cdrdao for composing audio CD
 <p> The browser shows the SCSI address (bus,id,lun) and the vendor/model string of all available devices. If devices are not automatically detected it is possible to add devices manually to the browser (see &quot;Add Device&quot; Frame). </p>
 <p> The &quot;Status&quot; column shows the actual device status: </p>
 <dl>
-<dt>Ready:</p>
-<dd> Device has a disk loaded and is ready for an action.</p>
-<dt>Busy:</p>
-<dd> Device is active with an unspecified action.</p>
-<dt>Recording:</p>
-<dd> Device is recording.</p>
-<dt>No disk:</p>
-<dd> Device has no disk loaded.</p>
-<dt>Not available:</p>
-<dd> Device cannot be accessed.</dl>
+<dt>Ready:</dt>
+<dd> Device has a disk loaded and is ready for an action.</dd>
+<dt>Busy:</dt>
+<dd> Device is active with an unspecified action.</dd>
+<dt>Recording:</dt>
+<dd> Device is recording.</dd>
+<dt>No disk:</dt>
+<dd> Device has no disk loaded.</dd>
+<dt>Not available:</dt>
+<dd> Device cannot be accessed.</dd></dl>
 <p> The &quot;Rescan&quot; button can be used to start the automatic drive detection process. All changes will be lost and the newly detected devices take immediate effect without hitting &quot;Apply&quot;. </p>
 <p> The &quot;Delete&quot; button removes the selected device. The change takes immediate effect and all other changes will be lost. </p>
 <h3>Device Settings Frame</h3>
 <p> This frame allows to edit the settings of the currently selected device. </p>
 <dl>
-<dt>Device Type:</p>
-<dd> This option menu defines the device type which is used to control which actions can be performed with this device: CD-ROM: read only device, CD-R: CD-R recorder device, CD-RW: CD-RW/CD-R recorder device. </p>
-<dt>Driver:</p>
-<dd> Option menu to select the driver that is used to access the device. If the device is known by the internal device database the correct driver is selected automatically. Otherwise &quot;Undefined&quot; will be shown and a suitable driver must be selected before any action can be performed with this device. </p>
-<dt>Driver Options:</p>
-<dd> Enter special driver options here. The available options are described in the README (the documentation will be moved to this place soon). If the device is known by the internal device database the correct option flags are selected automatically. </p>
-<dt>Device Node:</p>
-<dd> This field is only required for operating systems that cannot access a SCSI device by the bus,id,lun triple. In this case the device node that must be used to access the device should be entered here. </p>
+<dt>Device Type:</dt>
+<dd> This option menu defines the device type which is used to control which actions can be performed with this device: CD-ROM: read only device, CD-R: CD-R recorder device, CD-RW: CD-RW/CD-R recorder device. </dd>
+<dt>Driver:</dt>
+<dd> Option menu to select the driver that is used to access the device. If the device is known by the internal device database the correct driver is selected automatically. Otherwise &quot;Undefined&quot; will be shown and a suitable driver must be selected before any action can be performed with this device. </dd>
+<dt>Driver Options:</dt>
+<dd> Enter special driver options here. The available options are described in the README (the documentation will be moved to this place soon). If the device is known by the internal device database the correct option flags are selected automatically. </dd>
+<dt>Device Node:</dt>
+<dd> This field is only required for operating systems that cannot access a SCSI device by the bus,id,lun triple. In this case the device node that must be used to access the device should be entered here. </dd>
 </dl>
 <h3>Add Device Frame</h3>
 <p> This frame can be used to manually add a device. The bus,id,lun triple of the device and the vendor/product string must be specified before the &quot;Add&quot; button has an effect. It is not possible to overwrite an existing device with the same bus,id,lun triple. Use the &quot;Delete&quot; button of the &quot;Devices&quot; frame first in this case. </p>
@@ -199,27 +199,27 @@ description: "gcdmaster – Graphical front end to cdrdao for composing audio CD
 <p> The browser shows all devices with device type CD-R or CD-RW. Only devices with &quot;Ready&quot; status are selectable. </p>
 <h3>Record Options Frame</h3>
 <dl>
-<dt>Simulate/Write:</p>
-<dd> Selects between simulated or real writing process. </p>
-<dt>Close Disk:</p>
-<dd> If selected disk will not be appendable. Otherwise the recorded session is kept open. </p>
+<dt>Simulate/Write:</dt>
+<dd> Selects between simulated or real writing process. </dd>
+<dt>Close Disk:</dt>
+<dd> If selected disk will not be appendable. Otherwise the recorded session is kept open. </dd>
 <p> Note: The drivers &#8216;generic-mmc-raw&#8217;, </p>
 <blockquote><p>man2html: unable to open or read file </p></blockquote>
-<dt>Eject:</p>
-<dd> If selected the disk will be ejected after a successful writing process. </p>
+<dt>Eject:</dt>
+<dd> If selected the disk will be ejected after a successful writing process. </dd>
 <p> Warning: This may cause buffer under runs with certain device combinations if multiple devices are recording. </p>
-<dt>Recording Speed:</p>
-<dd> May be used to set an upper limit for the used recording speed. If a recorder device does not support the speed the next lower possible speed is used. </p>
-<dt>Reload:</p>
-<dd> If selected the disk will be automatically reloaded if it appears to be not empty or not appendable. This is required after a simulation run for some devices (e.g. the Philips CDD2x00 recorder familiy). </p>
+<dt>Recording Speed:</dt>
+<dd> May be used to set an upper limit for the used recording speed. If a recorder device does not support the speed the next lower possible speed is used. </dd>
+<dt>Reload:</dt>
+<dd> If selected the disk will be automatically reloaded if it appears to be not empty or not appendable. This is required after a simulation run for some devices (e.g. the Philips CDD2x00 recorder familiy). </dd>
 <p> Warning: This may cause buffer under runs with certain device combinations if multiple devices are recording. </p>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>cdrdao:</p>
-<dd> executed for recording</p>
-<dt>$HOME/.gnome/GnomeCDMaster:</p>
-<dd> stores settings permanently </p>
+<dt>cdrdao:</dt>
+<dd> executed for recording</dd>
+<dt>$HOME/.gnome/GnomeCDMaster:</dt>
+<dd> stores settings permanently </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Andreas Mueller mueller [at] daneb.ping.de</p>

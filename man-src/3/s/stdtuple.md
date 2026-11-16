@@ -11,9 +11,7 @@ std::tuple - std::tuple
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;tuple&gt;
-
 template&lt; class... Types &gt;  (since C++11)
-
 class tuple;</code></pre> 
 Class template std::tuple is a fixed-size collection of heterogeneous values. It is a generalization of std::pair. 
 If (std::is_trivially_destructible_v&lt;Types&gt; &amp;&amp; ...) is true, the destructor of tuple is trivial. <i>(since C++17)</i> 
@@ -89,14 +87,10 @@ Until C++17, a function could not return a tuple using list-initialization: std:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;tuple&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;stdexcept&gt;
 std::tuple&lt;double, char, std::string&gt; get_student(int id)
-
 {
     if (id == 0)
         return std::make_tuple(3.8, 'A', &quot;Lisa Simpson&quot;);
@@ -107,7 +101,6 @@ std::tuple&lt;double, char, std::string&gt; get_student(int id)
     throw std::invalid_argument(&quot;id&quot;);
 }
 int main()
-
 {
     auto student0 = get_student(0);
     std::cout &lt;&lt; &quot;ID: 0, &quot;

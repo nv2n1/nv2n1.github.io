@@ -20,12 +20,12 @@ description: "usb-devices – print USB device details"
 <p> If sysfs is not mounted, a non-zero exit code is returned. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/sys/bus/usb/devices/usb*</code></p>
-<dd> The part of the sysfs tree the script walks through to assemble the printed information.</p>
-<dt><code>/proc/bus/usb/devices</code></p>
-<dd> Location where the <i>usb/devices</i> file can normally be found for Linux kernels before 2.6.31, if usbfs is mounted.</p>
-<dt><code>/sys/kernel/debug/usb/devices</code></p>
-<dd> Location where the <i>usb/devices</i> file can normally be found for Linux kernel 2.6.31 and later, if debugfs is mounted. </p>
+<dt><code>/sys/bus/usb/devices/usb*</code></dt>
+<dd> The part of the sysfs tree the script walks through to assemble the printed information.</dd>
+<dt><code>/proc/bus/usb/devices</code></dt>
+<dd> Location where the <i>usb/devices</i> file can normally be found for Linux kernels before 2.6.31, if usbfs is mounted.</dd>
+<dt><code>/sys/kernel/debug/usb/devices</code></dt>
+<dd> Location where the <i>usb/devices</i> file can normally be found for Linux kernel 2.6.31 and later, if debugfs is mounted. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-lsusb/">lsusb</a></code>(8), <code>usbview</code>(8). </p>

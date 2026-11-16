@@ -38,10 +38,10 @@ description: "sggevx.f –"
  of (A,B) satisfies
  u(j)**H * A = lambda(j) * u(j)**H * B.
  where u(j)**H is the conjugate-transpose of u(j).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>BALANC</i> </p>
+<dd><i>BALANC</i> </dd>
 <pre> BALANC is CHARACTER*1
  Specifies the balance option to be performed.
  = 'N': do not diagonally scale or permute;
@@ -223,13 +223,13 @@ description: "sggevx.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -250,7 +250,8 @@ description: "sggevx.f –"
  EPS * norm(ABNRM, BBNRM) / DIF(i).
  For further explanation of the reciprocal condition numbers RCONDE
  and RCONDV, see section 4.11 of LAPACK User's Guide.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 389 of file sggevx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

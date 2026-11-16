@@ -11,18 +11,18 @@ description: "XkbSelectEvents – Selects and / or deselects for delivery of one
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSelectEvents</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned long int </code><i>bits_to_change</i><code>,</code> <code>unsigned long int </code><i>values_for_bits</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>bits_to_change</i></p>
-<dd>determines events to be selected / deselected</p>
-<dt><i>values_for_bits</i></p>
-<dd>1=&gt;select, 0-&gt;deselect; for events in bits_to_change</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>bits_to_change</i></dt>
+<dd>determines events to be selected / deselected</dd>
+<dt><i>values_for_bits</i></dt>
+<dd>1=&gt;select, 0-&gt;deselect; for events in bits_to_change</dd></dl>
 <h2>Description</h2>
 <p>Xkb events are selected using an event mask, much the same as normal core X events are selected. However, unlike selecting core X events, where you must specify the selection status (on or off) for all possible event types whenever you wish to change the selection criteria for any one event, Xkb allows you to restrict the specification to only the event types you wish to change. This means that you do not need to remember the event selection values for all possible types each time you want to change one of them. </p>
 <p> Many Xkb event types are generated under several different circumstances. When selecting to receive an Xkb event, you may specify either that you want it delivered under all circumstances, or that you want it delivered only for a subset of the possible circumstances. </p>
@@ -137,9 +137,9 @@ description: "XkbSelectEvents – Selects and / or deselects for delivery of one
 <p> <i>XkbSelectEvents </i> returns False if the Xkb extension has not been initilialized and True otherwise.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSelectEvents </i> function returns True if the Xkb extension has been initilialized.</p>
-<dt>False</p>
-<dd>The <i>XkbSelectEvents </i> function returns False if the Xkb extension has not been initilialized.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSelectEvents </i> function returns True if the Xkb extension has been initilialized.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSelectEvents </i> function returns False if the Xkb extension has not been initilialized.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbselecteventdetails/">XkbSelectEventDetails</a></code>(3), <code>XkbUseCoreKbd</code>(3)</p>

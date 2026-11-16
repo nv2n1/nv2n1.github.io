@@ -12,7 +12,6 @@ std::experimental::filesystem::file_status::operator= - std::experimental::files
 
 <pre><code>file_status &amp;operator=(const file_status &amp;other) = default;
 (1)(filesystem TS)
-
     file_status &amp;
     operator=(file_status &amp;&amp;other) = default;
 (2)(filesystem TS)</code></pre> 

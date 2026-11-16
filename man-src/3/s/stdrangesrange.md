@@ -11,30 +11,20 @@ std::ranges::Range - std::ranges::Range
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ranges&gt;
-
     template &lt;class T&gt;
     (1)
-
         concept Range = __RangeImpl&lt;T &amp;&gt;; // exposition-only definition
-
 // exposition-only helper concept
-
 template &lt;class T&gt;
-
 concept __RangeImpl = requires(T &amp;&amp;t)
 {
     (2)
-
         ranges::begin(std::forward&lt;T&gt;(t)); // equality-preserving for forward iterators
-
     ranges::end(std::forward&lt;T&gt;(t));
 };
-
 // exposition-only helper concept
-
 template &lt;class T&gt;
 (3)
-
     concept __ForwardingRange = Range&lt;T&gt; &amp;&amp; __RangeImpl&lt;T&gt;;</code></pre> 
 1) The Range concept defines the requirements of a type that allows iteration over its elements by providing an iterator and sentinel that denote the elements of the range. 
 Formally, given an expression E such that decltype((E)) is T, T models Range only if 

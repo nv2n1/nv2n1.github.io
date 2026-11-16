@@ -18,192 +18,192 @@ description: "itweb-settings – view and modify settings for javaws and the bro
 <p> The command-line allows quickly searching, making a copy of and modifying specific settings without having to hunt through a UI.</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt>-check name</p>
-<dd> Checks that all the current settings have valid values.(No argument expected)</p>
-<dt>-get name</p>
-<dd> Shows the value of the specified settings.(Expected one or more arguments)</p>
-<dt>-headless</p>
-<dd> Disables download window, other UIs.(No argument expected)</p>
-<dt>-help</p>
-<dd> Prints out information about supported command and basic usage. Can also take an parameter, and then it prints detailed help for this command.(No argument expected)</p>
-<dt>-info name</p>
-<dd> Shows additional information about the named settings. Includes a description, the current value, the possible values, and the source of the setting.(Expected one or more arguments)</p>
-<dt>-list</p>
-<dd> Shows a list of all the IcedTea-Web settings and their current values.(No argument expected)</p>
-<dt>-reset name</p>
-<dd> Resets the specified settings to their original value.(Expected one or more arguments)</p>
-<dt>-reset all</p>
-<dd> Resets all settings to their original values.(No argument expected)</p>
-<dt>-set name value</p>
-<dd> Sets the settings to the new value specified, if it is an appropriate value.(Expected even number of arguments with param=value as valid argument)</p>
-<dt>-verbose</p>
-<dd> Enable verbose output.(No argument expected) </p>
+<dt>-check name</dt>
+<dd> Checks that all the current settings have valid values.(No argument expected)</dd>
+<dt>-get name</dt>
+<dd> Shows the value of the specified settings.(Expected one or more arguments)</dd>
+<dt>-headless</dt>
+<dd> Disables download window, other UIs.(No argument expected)</dd>
+<dt>-help</dt>
+<dd> Prints out information about supported command and basic usage. Can also take an parameter, and then it prints detailed help for this command.(No argument expected)</dd>
+<dt>-info name</dt>
+<dd> Shows additional information about the named settings. Includes a description, the current value, the possible values, and the source of the setting.(Expected one or more arguments)</dd>
+<dt>-list</dt>
+<dd> Shows a list of all the IcedTea-Web settings and their current values.(No argument expected)</dd>
+<dt>-reset name</dt>
+<dd> Resets the specified settings to their original value.(Expected one or more arguments)</dd>
+<dt>-reset all</dt>
+<dd> Resets all settings to their original values.(No argument expected)</dd>
+<dt>-set name value</dt>
+<dd> Sets the settings to the new value specified, if it is an appropriate value.(Expected even number of arguments with param=value as valid argument)</dd>
+<dt>-verbose</dt>
+<dd> Enable verbose output.(No argument expected) </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>itweb-settings</p>
-<dd> Show the GUI editor</p>
-<dt>itweb-settings -reset deployment.proxy.type</p>
+<dt>itweb-settings</dt>
+<dd> Show the GUI editor</dd>
+<dt>itweb-settings -reset deployment.proxy.type</dt>
 <dd>
-&nbsp;<wbr>Resets the value of&nbsp;<wbr>`deployment.proxy.type`&nbsp;<wbr>setting. </p>
+&nbsp;<wbr>Resets the value of&nbsp;<wbr>`deployment.proxy.type`&nbsp;<wbr>setting. </dd>
 </dl>
 <p> <code>Known properties (key and default value):</code> </p>
 <dl>
-<dt>deployment.browser.path</p>
-<dd> null (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.cache.jarcompression</p>
-<dd> 0 (Possible: are in range 0 to 10 (inclusive))</p>
-<dt>deployment.cache.max.size</p>
-<dd> -1 (Possible: are in range -1 to 2,147,483,647 (inclusive))</p>
-<dt>deployment.console.startup.mode</p>
-<dd> HIDE (Possible: [DISABLE, HIDE, SHOW, SHOW_PLUGIN_ONLY, SHOW_JAVAWS_ONLY])</p>
-<dt>deployment.javapi.cache.enabled</p>
-<dd> false (Possible: are true or false)</p>
-<dt>deployment.javaws.associations</p>
-<dd> 2 (Possible: are in range 0 to 3 (inclusive))</p>
-<dt>deployment.javaws.autodownload</p>
-<dd> false (Possible: are true or false)</p>
-<dt>deployment.javaws.installURL</p>
-<dd> null (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></p>
-<dt>deployment.javaws.shortcut</p>
-<dd> ASK_IF_HINTED (Possible: [ALWAYS, ALWAYS_IF_HINTED, ASK_USER, ASK_IF_HINTED, NEVER])</p>
-<dt>deployment.javaws.update.timeout</p>
-<dd> 500 (Possible: are in range 0 to 10,000 (inclusive))</p>
-<dt>deployment.jnlpclassloader.strict</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.jre.dir</p>
-<dd> null</p>
-<dt>deployment.log</p>
-<dd> false (Possible: are true or false)</p>
-<dt>deployment.log.file</p>
-<dd> false (Possible: are true or false)</p>
-<dt>deployment.log.file.clientapp</p>
-<dd> false (Possible: are true or false)</p>
-<dt>deployment.log.file.legacylog</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.log.headers</p>
-<dd> false (Possible: are true or false)</p>
-<dt>deployment.log.stdstreams</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.log.system</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.manifest.attributes.check</p>
-<dd> ALL (Possible: (Values that can be used alone only): [ALL, NONE] (Values that can be used in combination separated by the delimiter &quot;,&quot; with no space expected ): [ALAC, CODEBASE, ENTRYPOINT, PERMISSIONS, TRUSTED])</p>
-<dt>deployment.plugin.jvm.arguments</p>
-<dd> null</p>
-<dt>deployment.proxy.auto.config.url</p>
-<dd> null (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></p>
-<dt>deployment.proxy.bypass.list</p>
-<dd> null</p>
-<dt>deployment.proxy.bypass.local</p>
-<dd> null</p>
-<dt>deployment.proxy.<a href="ftp://ftp.host">ftp.host</a></p>
-<dd> null</p>
-<dt>deployment.proxy.<a href="ftp://ftp.port">ftp.port</a></p>
-<dd> null</p>
-<dt>deployment.proxy.http.host</p>
-<dd> null</p>
-<dt>deployment.proxy.http.port</p>
-<dd> null</p>
-<dt>deployment.proxy.https.host</p>
-<dd> null</p>
-<dt>deployment.proxy.https.port</p>
-<dd> null</p>
-<dt>deployment.proxy.override.hosts</p>
-<dd> null</p>
-<dt>deployment.proxy.same</p>
-<dd> false (Possible: are true or false)</p>
-<dt>deployment.proxy.socks.host</p>
-<dd> null</p>
-<dt>deployment.proxy.socks.port</p>
-<dd> null</p>
-<dt>deployment.proxy.type</p>
-<dd> 3 (Possible: are in range -1 to 3 (inclusive))</p>
-<dt>deployment.security.askgrantdialog.notinca</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.security.askgrantdialog.show</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.security.expired.warning</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.security.jsse.hostmismatch.warning</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.security.level</p>
-<dd> null (Possible: DENY_ALL DENY_UNSIGNED ASK_UNSIGNED ALLOW_UNSIGNED)</p>
-<dt>deployment.security.notinca.warning</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.security.sandbox.awtwarningwindow</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.security.sandbox.jnlp.enhanced</p>
-<dd> true (Possible: are true or false)</p>
-<dt>deployment.security.trusted.policy</p>
-<dd> null (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.system.cachedir</p>
-<dd> null (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.system.security.cacerts</p>
-<dd> $JAVA_HOME/lib/security/cacerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.system.security.jssecacerts</p>
-<dd> $JAVA_HOME/lib/security/jssecacerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.system.security.policy</p>
-<dd> null (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></p>
-<dt>deployment.system.security.trusted.certs</p>
-<dd> $JAVA_HOME/lib/security/trusted.certs (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.system.security.trusted.clientautcerts</p>
-<dd> $JAVA_HOME/lib/security/trusted.clientcerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.system.security.trusted.jssecerts</p>
-<dd> $JAVA_HOME/lib/security/trusted.jssecerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.cachedir</p>
-<dd> $XDG_CACHE_HOME/icedtea-web/cache (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.locksdir</p>
-<dd> $TMP/$USER/netx/locks (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.logdir</p>
-<dd> $XDG_CONFIG_HOME/icedtea-web/log (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.pcachedir</p>
-<dd> $XDG_CACHE_HOME/icedtea-web/pcache (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.runningfile</p>
-<dd> $TMP/$USER/netx/locks/netx_running (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.security.policy</p>
-<dd> $XDG_CONFIG_HOME/icedtea-web/security/java.policy (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></p>
-<dt>deployment.user.security.trusted.cacerts</p>
-<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.cacerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.security.trusted.certs</p>
-<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.certs (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.security.trusted.clientauthcerts</p>
-<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.clientcerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.security.trusted.jssecacerts</p>
-<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecacerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.security.trusted.jssecerts</p>
-<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecerts (Possible: include an absolute path to a file or directory)</p>
-<dt>deployment.user.tmp</p>
-<dd> $XDG_CACHE_HOME/icedtea-web/tmp (Possible: include an absolute path to a file or directory) </p>
+<dt>deployment.browser.path</dt>
+<dd> null (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.cache.jarcompression</dt>
+<dd> 0 (Possible: are in range 0 to 10 (inclusive))</dd>
+<dt>deployment.cache.max.size</dt>
+<dd> -1 (Possible: are in range -1 to 2,147,483,647 (inclusive))</dd>
+<dt>deployment.console.startup.mode</dt>
+<dd> HIDE (Possible: [DISABLE, HIDE, SHOW, SHOW_PLUGIN_ONLY, SHOW_JAVAWS_ONLY])</dd>
+<dt>deployment.javapi.cache.enabled</dt>
+<dd> false (Possible: are true or false)</dd>
+<dt>deployment.javaws.associations</dt>
+<dd> 2 (Possible: are in range 0 to 3 (inclusive))</dd>
+<dt>deployment.javaws.autodownload</dt>
+<dd> false (Possible: are true or false)</dd>
+<dt>deployment.javaws.installURL</dt>
+<dd> null (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></dd>
+<dt>deployment.javaws.shortcut</dt>
+<dd> ASK_IF_HINTED (Possible: [ALWAYS, ALWAYS_IF_HINTED, ASK_USER, ASK_IF_HINTED, NEVER])</dd>
+<dt>deployment.javaws.update.timeout</dt>
+<dd> 500 (Possible: are in range 0 to 10,000 (inclusive))</dd>
+<dt>deployment.jnlpclassloader.strict</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.jre.dir</dt>
+<dd> null</dd>
+<dt>deployment.log</dt>
+<dd> false (Possible: are true or false)</dd>
+<dt>deployment.log.file</dt>
+<dd> false (Possible: are true or false)</dd>
+<dt>deployment.log.file.clientapp</dt>
+<dd> false (Possible: are true or false)</dd>
+<dt>deployment.log.file.legacylog</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.log.headers</dt>
+<dd> false (Possible: are true or false)</dd>
+<dt>deployment.log.stdstreams</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.log.system</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.manifest.attributes.check</dt>
+<dd> ALL (Possible: (Values that can be used alone only): [ALL, NONE] (Values that can be used in combination separated by the delimiter &quot;,&quot; with no space expected ): [ALAC, CODEBASE, ENTRYPOINT, PERMISSIONS, TRUSTED])</dd>
+<dt>deployment.plugin.jvm.arguments</dt>
+<dd> null</dd>
+<dt>deployment.proxy.auto.config.url</dt>
+<dd> null (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></dd>
+<dt>deployment.proxy.bypass.list</dt>
+<dd> null</dd>
+<dt>deployment.proxy.bypass.local</dt>
+<dd> null</dd>
+<dt>deployment.proxy.<a href="ftp://ftp.host">ftp.host</a></dt>
+<dd> null</dd>
+<dt>deployment.proxy.<a href="ftp://ftp.port">ftp.port</a></dt>
+<dd> null</dd>
+<dt>deployment.proxy.http.host</dt>
+<dd> null</dd>
+<dt>deployment.proxy.http.port</dt>
+<dd> null</dd>
+<dt>deployment.proxy.https.host</dt>
+<dd> null</dd>
+<dt>deployment.proxy.https.port</dt>
+<dd> null</dd>
+<dt>deployment.proxy.override.hosts</dt>
+<dd> null</dd>
+<dt>deployment.proxy.same</dt>
+<dd> false (Possible: are true or false)</dd>
+<dt>deployment.proxy.socks.host</dt>
+<dd> null</dd>
+<dt>deployment.proxy.socks.port</dt>
+<dd> null</dd>
+<dt>deployment.proxy.type</dt>
+<dd> 3 (Possible: are in range -1 to 3 (inclusive))</dd>
+<dt>deployment.security.askgrantdialog.notinca</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.security.askgrantdialog.show</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.security.expired.warning</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.security.jsse.hostmismatch.warning</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.security.level</dt>
+<dd> null (Possible: DENY_ALL DENY_UNSIGNED ASK_UNSIGNED ALLOW_UNSIGNED)</dd>
+<dt>deployment.security.notinca.warning</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.security.sandbox.awtwarningwindow</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.security.sandbox.jnlp.enhanced</dt>
+<dd> true (Possible: are true or false)</dd>
+<dt>deployment.security.trusted.policy</dt>
+<dd> null (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.system.cachedir</dt>
+<dd> null (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.system.security.cacerts</dt>
+<dd> $JAVA_HOME/lib/security/cacerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.system.security.jssecacerts</dt>
+<dd> $JAVA_HOME/lib/security/jssecacerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.system.security.policy</dt>
+<dd> null (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></dd>
+<dt>deployment.system.security.trusted.certs</dt>
+<dd> $JAVA_HOME/lib/security/trusted.certs (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.system.security.trusted.clientautcerts</dt>
+<dd> $JAVA_HOME/lib/security/trusted.clientcerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.system.security.trusted.jssecerts</dt>
+<dd> $JAVA_HOME/lib/security/trusted.jssecerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.cachedir</dt>
+<dd> $XDG_CACHE_HOME/icedtea-web/cache (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.locksdir</dt>
+<dd> $TMP/$USER/netx/locks (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.logdir</dt>
+<dd> $XDG_CONFIG_HOME/icedtea-web/log (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.pcachedir</dt>
+<dd> $XDG_CACHE_HOME/icedtea-web/pcache (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.runningfile</dt>
+<dd> $TMP/$USER/netx/locks/netx_running (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.security.policy</dt>
+<dd> $XDG_CONFIG_HOME/icedtea-web/security/java.policy (Possible: include any valid url (eg. <a rel="nofollow" href="http://icedtea.classpath.org/hg/))">http://icedtea.classpath.org/hg/))</a></dd>
+<dt>deployment.user.security.trusted.cacerts</dt>
+<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.cacerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.security.trusted.certs</dt>
+<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.certs (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.security.trusted.clientauthcerts</dt>
+<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.clientcerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.security.trusted.jssecacerts</dt>
+<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecacerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.security.trusted.jssecerts</dt>
+<dd> $XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecerts (Possible: include an absolute path to a file or directory)</dd>
+<dt>deployment.user.tmp</dt>
+<dd> $XDG_CACHE_HOME/icedtea-web/tmp (Possible: include an absolute path to a file or directory) </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>$JAVA_HOME/lib/deployment.config</p>
-<dd> java-global deployment properties file. May be affected by deployment.jre.dir.</p>
-<dt>$XDG_CACHE_HOME/icedtea-web/cache</p>
-<dd> Contains cached runtime entries. Controlled by <code>deployment.user.cachedir</code> </p>
-<dt>$XDG_CACHE_HOME/icedtea-web/cache/recently_used</p>
-<dd> Additional information about items in cache</p>
-<dt>$XDG_CACHE_HOME/icedtea-web/pcache</p>
-<dd> Contains saved application data. Controlled by <code>deployment.user.pcachedir</code> </p>
-<dt>$XDG_CACHE_HOME/icedtea-web/tmp</p>
-<dd> Contains temporary runtime files. Controlled by <code>deployment.user.tmp</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/.appletTrustSettings</p>
-<dd> File responsible for various actions on applets and apps based on their codebase based on users actions.</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/deployment.properties</p>
-<dd> Users main deployment properties file.</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/generated_jnlps</p>
-<dd> Location where jnlp files generated from html pages for javaws applications desktop/menu launchers icons are stored</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/icons</p>
-<dd> Location where icons of javaws applications desktop/menu launchers icons are stored</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/log</p>
-<dd> contains file-log files (if enabled), itw-cplugin-date_time.log for native part of plugin, itw-javantx-date_time.log for everything else. Controlled by <code>deployment.user.logdir</code> </p>
-<dt>$XDG_DATA_HOME/applications/javaws</p>
-<dd> Subdirectory in users menus space, for placing custom menu shortcuts.</p>
-<dt>/etc/.java/deployment/.appletTrustSettings</p>
-<dd> File responsible for various actions on applets and apps based on their codebase based on admins actions.</p>
-<dt>/etc/.java/deployment/deployment.config</p>
-<dd> Global deployment config file. </p>
+<dt>$JAVA_HOME/lib/deployment.config</dt>
+<dd> java-global deployment properties file. May be affected by deployment.jre.dir.</dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/cache</dt>
+<dd> Contains cached runtime entries. Controlled by <code>deployment.user.cachedir</code> </dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/cache/recently_used</dt>
+<dd> Additional information about items in cache</dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/pcache</dt>
+<dd> Contains saved application data. Controlled by <code>deployment.user.pcachedir</code> </dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/tmp</dt>
+<dd> Contains temporary runtime files. Controlled by <code>deployment.user.tmp</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/.appletTrustSettings</dt>
+<dd> File responsible for various actions on applets and apps based on their codebase based on users actions.</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/deployment.properties</dt>
+<dd> Users main deployment properties file.</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/generated_jnlps</dt>
+<dd> Location where jnlp files generated from html pages for javaws applications desktop/menu launchers icons are stored</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/icons</dt>
+<dd> Location where icons of javaws applications desktop/menu launchers icons are stored</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/log</dt>
+<dd> contains file-log files (if enabled), itw-cplugin-date_time.log for native part of plugin, itw-javantx-date_time.log for everything else. Controlled by <code>deployment.user.logdir</code> </dd>
+<dt>$XDG_DATA_HOME/applications/javaws</dt>
+<dd> Subdirectory in users menus space, for placing custom menu shortcuts.</dd>
+<dt>/etc/.java/deployment/.appletTrustSettings</dt>
+<dd> File responsible for various actions on applets and apps based on their codebase based on admins actions.</dd>
+<dt>/etc/.java/deployment/deployment.config</dt>
+<dd> Global deployment config file. </dd>
 </dl>
 <p> Where $XDG_CONFIG_DIR, $XDG_CACHE_DIR and $XDG_RUNTIME_DIR are set as ~/.config, ~/.cache and /tmp or /var/tmp if not set.</p>
 <h2>BUGS</h2>

@@ -13,16 +13,16 @@ description: "bibdoiadd.pl – add DOI numbers to papers in a given bib file"
 <p> bibdoiadd [<code>-c</code> <i>config_file</i>] [<code>-C</code> 1|0] [<code>-e</code> 1|0] [<code>-f</code>] [<code>-o</code> <i>output</i>] <i>bib_file</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>config_file</i></p>
-<dd> Configuration file. If this file is absent, some defaults are used. See below for its format.</p>
-<dt><code>-C</code> 1|0</p>
-<dd> Whether to canonize names in the output (1) or not (0). By default, 1.</p>
-<dt><code>-e</code></p>
-<dd> If 1 (default), add empty doi if a doi cannot be found. This prevents repeated searches for the same entries if you add new entries to the file. Calling <tt>&quot;-e 0&quot;</tt> suppresses this behavior.</p>
-<dt><code>-f</code></p>
-<dd> Force checking doi number even if one is present</p>
-<dt><code>-o</code> <i>output</i></p>
-<dd> Output file. If this option is not used, the name for the output file is formed by adding <tt>&quot;_doi&quot;</tt> to the input file</dl>
+<dt><code>-c</code> <i>config_file</i></dt>
+<dd> Configuration file. If this file is absent, some defaults are used. See below for its format.</dd>
+<dt><code>-C</code> 1|0</dt>
+<dd> Whether to canonize names in the output (1) or not (0). By default, 1.</dd>
+<dt><code>-e</code></dt>
+<dd> If 1 (default), add empty doi if a doi cannot be found. This prevents repeated searches for the same entries if you add new entries to the file. Calling <tt>&quot;-e 0&quot;</tt> suppresses this behavior.</dd>
+<dt><code>-f</code></dt>
+<dd> Force checking doi number even if one is present</dd>
+<dt><code>-o</code> <i>output</i></dt>
+<dd> Output file. If this option is not used, the name for the output file is formed by adding <tt>&quot;_doi&quot;</tt> to the input file</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The script reads a BibTeX file. It checks whether the entries have DOIs. If not, it tries to contact <a rel="nofollow" href="http://www.crossref.org">http://www.crossref.org</a> to get the corresponding <font SIZE="-1">DOI.</font> The result is a BibTeX file with the fields <tt>&quot;doi=...&quot;</tt> added. </p>
 <p> The name of the output file is either set by the <code>-o</code> option or is derived by adding the suffix <tt>&quot;_doi&quot;</tt> to the output file. </p>

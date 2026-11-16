@@ -14,14 +14,14 @@ description: "pwd – print name of current/working directory"
 <h2>DESCRIPTION</h2>
 <p> Print the full filename of the current working directory.</p>
 <dl>
-<dt><code>-L</code>, <code>&#8211;logical</code></p>
-<dd> use PWD from environment, even if it contains symlinks</p>
-<dt><code>-P</code>, <code>&#8211;physical</code></p>
-<dd> avoid all symlinks</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-L</code>, <code>&#8211;logical</code></dt>
+<dd> use PWD from environment, even if it contains symlinks</dd>
+<dt><code>-P</code>, <code>&#8211;physical</code></dt>
+<dd> avoid all symlinks</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If no option is specified, <code>-P</code> is assumed. </p>
 <p> NOTE: your shell may have its own version of pwd, which usually supersedes the version described here. Please refer to your shell&#8217;s documentation for details about the options it supports.</p>
 <h2>AUTHOR</h2>

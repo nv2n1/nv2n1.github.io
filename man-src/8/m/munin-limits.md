@@ -12,27 +12,27 @@ description: "munin-limits – A program to check for any off-limit values"
 <p>munin-limits [options]</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;service &lt;service&gt;</code></p>
-<dd>Limit services to those of &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</p>
-<dt><code>&#8211;host &lt;host&gt;</code></p>
-<dd>Limit hosts to those of &lt;host&lt;gt&gt;. Multiple &#8211;host options may be supplied. [unset]</p>
-<dt><code>&#8211;contact &lt;contact&gt;</code></p>
-<dd>Limit contacts to those of &lt;contact&lt;gt&gt;. Multiple &#8211;contact options may be supplied. [unset]</p>
-<dt><code>&#8211;config &lt;file&gt;</code></p>
-<dd>Use &lt;file&gt; as configuration file. [/etc/munin/munin.conf]</p>
-<dt><code>&#8211;always-send &lt;severity list&gt;</code></p>
-<dd>Force sending of messages even if you normally wouldn&#8217;t. </p>
+<dt><code>&#8211;service &lt;service&gt;</code></dt>
+<dd>Limit services to those of &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</dd>
+<dt><code>&#8211;host &lt;host&gt;</code></dt>
+<dd>Limit hosts to those of &lt;host&lt;gt&gt;. Multiple &#8211;host options may be supplied. [unset]</dd>
+<dt><code>&#8211;contact &lt;contact&gt;</code></dt>
+<dd>Limit contacts to those of &lt;contact&lt;gt&gt;. Multiple &#8211;contact options may be supplied. [unset]</dd>
+<dt><code>&#8211;config &lt;file&gt;</code></dt>
+<dd>Use &lt;file&gt; as configuration file. [/etc/munin/munin.conf]</dd>
+<dt><code>&#8211;always-send &lt;severity list&gt;</code></dt>
+<dd>Force sending of messages even if you normally wouldn&#8217;t. </dd>
 <p> The &lt;severity list&gt; can be a whitespace or comma separated list of the values &#8220;ok&#8221;, &#8220;warning&#8221;, &#8220;critical&#8221; or &#8220;unknown&#8221;. </p>
 <p> This option may be specified several times, to add more values. </p>
 <p> Use of &#8220;&#8211;always-send&#8221; overrides the &#8220;always_send&#8221; value in munin.conf for configured contacts. See also &#8211;force.</p>
-<dt><code>&#8211;force</code></p>
-<dd>Alias for &#8220;&#8211;always-send ok,warning,critical,unknown&#8221;</p>
-<dt><code>&#8211;[no]force-run-as-root</code></p>
-<dd>Force running as root (stupid and unnecessary). [&#8211;noforce-root]</p>
-<dt><code>&#8211;help</code></p>
-<dd>View help message.</p>
-<dt><code>&#8211;[no]debug</code></p>
-<dd>If set, view debug messages. [&#8211;nodebug]</dl>
+<dt><code>&#8211;force</code></dt>
+<dd>Alias for &#8220;&#8211;always-send ok,warning,critical,unknown&#8221;</dd>
+<dt><code>&#8211;[no]force-run-as-root</code></dt>
+<dd>Force running as root (stupid and unnecessary). [&#8211;noforce-root]</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>View help message.</dd>
+<dt><code>&#8211;[no]debug</code></dt>
+<dd>If set, view debug messages. [&#8211;nodebug]</dd></dl>
 <h2>Description</h2>
 <p>Munin-limits is a part of the package Munin, which is used in combination with Munin&#8217;s node. Munin is a group of programs to gather data from Munin&#8217;s nodes, graph them, create html-pages, and optionally warn Nagios about any off-limit values. </p>
 <p> Munin-limits checks if any values are above or below the set limits, and saves these notes to a file. This file is later used by programs like munin-nagios (to warn nagios) and munin-html (to incorporate them in the web display). </p>

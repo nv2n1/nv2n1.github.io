@@ -11,7 +11,6 @@ std::fwide - std::fwide
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int fwide(std::FILE *stream, int mode);</code></pre> 
 If mode &gt; 0, attempts to make stream wide-oriented. If mode &lt; 0, attempts to make stream byte-oriented. If mode==0, only queries the current orientation of the stream. 
 If the orientation of the stream has already been decided (by executing output or by an earlier call to fwide), this function does nothing. 

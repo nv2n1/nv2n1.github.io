@@ -20,6 +20,6 @@ description: "QuantLib::LinearLeastSquaresRegression – general linear least sq
 <p> References: &#8216;Numerical Recipes in C&#8217;, 2nd edition, Press, Teukolsky, Vetterling, Flannery, </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking their properties.</dl>
+<dd>the correctness of the returned values is tested by checking their properties.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

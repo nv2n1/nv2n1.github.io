@@ -94,58 +94,58 @@ description: "gs – Ghostscript (PostScript and PDF language interpreter and pr
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8212;</code><i> filename arg1 &#8230;</i></p>
-<dd> Takes the next argument as a file name as usual, but takes all remaining arguments (even if they have the syntactic form of switches) and defines the name &quot;ARGUMENTS&quot; in &quot;userdict&quot; (not &quot;systemdict&quot;) as an array of those strings, <code>before</code> running the file. When Ghostscript finishes executing the file, it exits back to the shell.</p>
-<dt><code>-D</code><i>name</i><code>=</code><i>token</i></p>
+<dt><code>&#8212;</code><i> filename arg1 &#8230;</i></dt>
+<dd> Takes the next argument as a file name as usual, but takes all remaining arguments (even if they have the syntactic form of switches) and defines the name &quot;ARGUMENTS&quot; in &quot;userdict&quot; (not &quot;systemdict&quot;) as an array of those strings, <code>before</code> running the file. When Ghostscript finishes executing the file, it exits back to the shell.</dd>
+<dt><code>-D</code><i>name</i><code>=</code><i>token</i></dt>
 <dd>
-<dt> <code>-d</code><i>name</i><code>=</code><i>token</i></p>
-<dd>Define a name in &quot;systemdict&quot; with the given definition. The token must be exactly one token (as defined by the &quot;token&quot; operator) and may contain no whitespace.</p>
-<dt><code>-D</code><i>name</i></p>
+</dd><dt> <code>-d</code><i>name</i><code>=</code><i>token</i></dt>
+<dd>Define a name in &quot;systemdict&quot; with the given definition. The token must be exactly one token (as defined by the &quot;token&quot; operator) and may contain no whitespace.</dd>
+<dt><code>-D</code><i>name</i></dt>
 <dd>
-<dt> <code>-d</code><i>name</i></p>
-<dd>Define a name in &quot;systemdict&quot; with value=null.</p>
-<dt><code>-S</code><i>name</i><code>=</code><i>string</i></p>
+</dd><dt> <code>-d</code><i>name</i></dt>
+<dd>Define a name in &quot;systemdict&quot; with value=null.</dd>
+<dt><code>-S</code><i>name</i><code>=</code><i>string</i></dt>
 <dd>
-<dt> <code>-s</code><i>name</i><code>=</code><i>string</i></p>
+</dd><dt> <code>-s</code><i>name</i><code>=</code><i>string</i></dt>
 <dd>Define a name in &quot;systemdict&quot; with a given string as value. This is different from <code>-d</code>. For example, <code>-dname=35</code> is equivalent to the program fragment<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/name 35 def</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/name 35 def</dd>
 <p> whereas <code>-sname=35</code> is equivalent to<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/name (35) def</p>
-<dt><code>-P</code></p>
-<dd> Makes Ghostscript to look first in the current directory for library files. By default, Ghostscript no longer looks in the current directory, unless, of course, the first explicitly supplied directory is &quot;.&quot; in <code>-I</code>. See also the <code>INITIALIZATION FILES</code> section below, and bundled <code>Use.htm</code> for detailed discussion on search paths and how Ghostcript finds files.</p>
-<dt><code>-q</code></p>
-<dd> Quiet startup: suppress normal startup messages, and also do the equivalent of <code>-dQUIET</code>.</p>
-<dt><code>-g</code><i>number1</i><code>x</code><i>number2</i></p>
-<dd> Equivalent to <code>-dDEVICEWIDTH=</code><i>number1</i> and <code>-dDEVICEHEIGHT=</code><i>number2</i>. This is for the benefit of devices (such as X11 windows) that require (or allow) width and height to be specified.</p>
-<dt><code>-r</code><i>number</i></p>
+<dt><code>-P</code></dt>
+<dd> Makes Ghostscript to look first in the current directory for library files. By default, Ghostscript no longer looks in the current directory, unless, of course, the first explicitly supplied directory is &quot;.&quot; in <code>-I</code>. See also the <code>INITIALIZATION FILES</code> section below, and bundled <code>Use.htm</code> for detailed discussion on search paths and how Ghostcript finds files.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet startup: suppress normal startup messages, and also do the equivalent of <code>-dQUIET</code>.</dd>
+<dt><code>-g</code><i>number1</i><code>x</code><i>number2</i></dt>
+<dd> Equivalent to <code>-dDEVICEWIDTH=</code><i>number1</i> and <code>-dDEVICEHEIGHT=</code><i>number2</i>. This is for the benefit of devices (such as X11 windows) that require (or allow) width and height to be specified.</dd>
+<dt><code>-r</code><i>number</i></dt>
 <dd>
-<dt> <code>-r</code><i>number1</i><code>x</code><i>number2</i></p>
-<dd>Equivalent to <code>-dDEVICEXRESOLUTION=</code><i>number1</i> and <code>-dDEVICEYRESOLUTION=</code><i>number2</i>. This is for the benefit of devices such as printers that support multiple X and Y resolutions. If only one number is given, it is used for both X and Y resolutions.</p>
-<dt><code>-I</code><i>directories</i></p>
-<dd> Adds the designated list of directories at the head of the search path for library files.</p>
-<dt><code>&#8211;</code></p>
-<dd> This is not really a switch, but indicates to Ghostscript that standard input is coming from a file or a pipe and not interactively from the command line. Ghostscript reads from standard input until it reaches end-of-file, executing it like any other file, and then continues with processing the command line. When the command line has been entirely processed, Ghostscript exits rather than going into its interactive mode.</dl>
+</dd><dt> <code>-r</code><i>number1</i><code>x</code><i>number2</i></dt>
+<dd>Equivalent to <code>-dDEVICEXRESOLUTION=</code><i>number1</i> and <code>-dDEVICEYRESOLUTION=</code><i>number2</i>. This is for the benefit of devices such as printers that support multiple X and Y resolutions. If only one number is given, it is used for both X and Y resolutions.</dd>
+<dt><code>-I</code><i>directories</i></dt>
+<dd> Adds the designated list of directories at the head of the search path for library files.</dd>
+<dt><code>&#8211;</code></dt>
+<dd> This is not really a switch, but indicates to Ghostscript that standard input is coming from a file or a pipe and not interactively from the command line. Ghostscript reads from standard input until it reaches end-of-file, executing it like any other file, and then continues with processing the command line. When the command line has been entirely processed, Ghostscript exits rather than going into its interactive mode.</dd></dl>
 <p> Note that the normal initialization file &quot;gs_init.ps&quot; makes &quot;systemdict&quot; read-only, so the values of names defined with <code>-D</code>, <code>-d</code>, <code>-S</code>, or <code>-s</code> cannot be changed (although, of course, they can be superseded by definitions in &quot;userdict&quot; or other dictionaries.)</p>
 <h2>SPECIAL NAMES</h2>
 <dl>
-<dt><code>-dNOCACHE</code></p>
-<dd> Disables character caching. Useful only for debugging.</p>
-<dt><code>-dNOBIND</code></p>
-<dd> Disables the &quot;bind&quot; operator. Useful only for debugging.</p>
-<dt><code>-dNODISPLAY</code></p>
-<dd> Suppresses the normal initialization of the output device. This may be useful when debugging.</p>
-<dt><code>-dNOPAUSE</code></p>
-<dd> Disables the prompt and pause at the end of each page. This may be desirable for applications where another program is driving Ghostscript.</p>
-<dt><code>-dNOPLATFONTS</code></p>
-<dd> Disables the use of fonts supplied by the underlying platform (for instance X Windows). This may be needed if the platform fonts look undesirably different from the scalable fonts.</p>
-<dt><code>-dSAFER</code></p>
-<dd> Restricts file operations the job can perform. Now the default mode of operation.</p>
-<dt><code>-dWRITESYSTEMDICT</code></p>
-<dd> Leaves &quot;systemdict&quot; writable. This is necessary when running special utility programs, but is strongly discouraged as it bypasses normal Postscript security measures.</p>
-<dt><code>-sDEVICE=</code><i>device</i></p>
-<dd> Selects an alternate initial output device, as described above.</p>
-<dt><code>-sOutputFile=</code><i>filename</i></p>
-<dd> Selects an alternate output file (or pipe) for the initial output device, as described above.</dl>
+<dt><code>-dNOCACHE</code></dt>
+<dd> Disables character caching. Useful only for debugging.</dd>
+<dt><code>-dNOBIND</code></dt>
+<dd> Disables the &quot;bind&quot; operator. Useful only for debugging.</dd>
+<dt><code>-dNODISPLAY</code></dt>
+<dd> Suppresses the normal initialization of the output device. This may be useful when debugging.</dd>
+<dt><code>-dNOPAUSE</code></dt>
+<dd> Disables the prompt and pause at the end of each page. This may be desirable for applications where another program is driving Ghostscript.</dd>
+<dt><code>-dNOPLATFONTS</code></dt>
+<dd> Disables the use of fonts supplied by the underlying platform (for instance X Windows). This may be needed if the platform fonts look undesirably different from the scalable fonts.</dd>
+<dt><code>-dSAFER</code></dt>
+<dd> Restricts file operations the job can perform. Now the default mode of operation.</dd>
+<dt><code>-dWRITESYSTEMDICT</code></dt>
+<dd> Leaves &quot;systemdict&quot; writable. This is necessary when running special utility programs, but is strongly discouraged as it bypasses normal Postscript security measures.</dd>
+<dt><code>-sDEVICE=</code><i>device</i></dt>
+<dd> Selects an alternate initial output device, as described above.</dd>
+<dt><code>-sOutputFile=</code><i>filename</i></dt>
+<dd> Selects an alternate output file (or pipe) for the initial output device, as described above.</dd></dl>
 <h2>SAFER MODE</h2>
 <p> The <code>-dSAFER</code> option restricts file system accesses to those files and directories allowed by the relevant environment variables (such as GS_LIB) or by the command line parameters (see <a rel="nofollow" href="https://ghostscript.com/doc/current/Use.htm">https://ghostscript.com/doc/current/Use.htm</a> for details). </p>
 <p> SAFER mode is now the default mode of operation. Thus when running programs that need to open files or set restricted parameters you should pass the <code>-dNOSAFER</code> command line option or its synonym <code>-dDELAYSAFER</code>. </p>
@@ -153,51 +153,51 @@ description: "gs – Ghostscript (PostScript and PDF language interpreter and pr
 <h2>FILES</h2>
 <p> The locations of many Ghostscript run-time files are compiled into the executable when it is built. Run &quot;<code>gs -h</code>&quot; to find the location of Ghostscript documentation on your system, from which you can get more details. On a Debian system they are in <code>/usr</code>.</p>
 <dl>
-<dt><code>/usr/share/ghostscript/[0-9]*.[0.9]*/*</code></p>
-<dd> Startup files, utilities, and basic font definitions (where [0-9]*.[0.9]* is the ghostscript version)</p>
-<dt><code>/usr/share/fonts/type1/gsfonts/*</code></p>
-<dd> More font definitions from the gsfonts package</p>
-<dt><code>/usr/share/doc/ghostscript/examples/*</code></p>
-<dd> Ghostscript demonstration files (if ghostscript-doc package is installed)</p>
-<dt><code>/usr/share/doc/ghostscript/*</code></p>
-<dd> Diverse document files (may need to install ghostscript-doc package)</dl>
+<dt><code>/usr/share/ghostscript/[0-9]*.[0.9]*/*</code></dt>
+<dd> Startup files, utilities, and basic font definitions (where [0-9]*.[0.9]* is the ghostscript version)</dd>
+<dt><code>/usr/share/fonts/type1/gsfonts/*</code></dt>
+<dd> More font definitions from the gsfonts package</dd>
+<dt><code>/usr/share/doc/ghostscript/examples/*</code></dt>
+<dd> Ghostscript demonstration files (if ghostscript-doc package is installed)</dd>
+<dt><code>/usr/share/doc/ghostscript/*</code></dt>
+<dd> Diverse document files (may need to install ghostscript-doc package)</dd></dl>
 <h2>INITIALIZATION FILES</h2>
 <p> When looking for the initialization files &quot;gs_*.ps&quot;, the files related to fonts, or the file for the &quot;run&quot; operator, Ghostscript first tries to open the file with the name as given, using the current working directory if no directory is specified. If this fails, and the file name doesn&#8217;t specify an explicit directory or drive (for instance, doesn&#8217;t contain &quot;/&quot; on Unix systems), Ghostscript tries directories in this order:</p>
 <dl>
-<dt>1.</p>
-<dd> the directories specified by the <code>-I</code> switches in the command line (see below), if any;</p>
-<dt>2.</p>
-<dd> the directories specified by the <code>GS_LIB</code> environment variable, if any;</p>
-<dt>3.</p>
-<dd> the directories specified by the <code>GS_LIB_DEFAULT</code> macro in the Ghostscript makefile when the executable was built. <code>GS_LIB_DEFAULT</code> is &quot;/usr/share/ghostscript/[0-9]*.[0-9]*/lib&quot; on a Debian system where &quot;[0-9]*.[0-9]*&quot; represents the Ghostscript version number</dl>
+<dt>1.</dt>
+<dd> the directories specified by the <code>-I</code> switches in the command line (see below), if any;</dd>
+<dt>2.</dt>
+<dd> the directories specified by the <code>GS_LIB</code> environment variable, if any;</dd>
+<dt>3.</dt>
+<dd> the directories specified by the <code>GS_LIB_DEFAULT</code> macro in the Ghostscript makefile when the executable was built. <code>GS_LIB_DEFAULT</code> is &quot;/usr/share/ghostscript/[0-9]*.[0-9]*/lib&quot; on a Debian system where &quot;[0-9]*.[0-9]*&quot; represents the Ghostscript version number</dd></dl>
 <p> Each of these (<code>GS_LIB_DEFAULT</code>, <code>GS_LIB</code>, and <code>-I</code> parameter) may be either a single directory or a list of directories separated by &quot;:&quot;.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>GS_OPTIONS</code></p>
-<dd> String of options to be processed before the command line options</p>
-<dt><code>GS_DEVICE</code></p>
-<dd> Used to specify an output device</p>
-<dt><code>GS_FONTPATH</code></p>
-<dd> Path names used to search for fonts</p>
-<dt><code>GS_LIB</code></p>
-<dd> Path names for initialization files and fonts</p>
-<dt><code>TEMP</code></p>
-<dd> Where temporary files are made</dl>
+<dt><code>GS_OPTIONS</code></dt>
+<dd> String of options to be processed before the command line options</dd>
+<dt><code>GS_DEVICE</code></dt>
+<dd> Used to specify an output device</dd>
+<dt><code>GS_FONTPATH</code></dt>
+<dd> Path names used to search for fonts</dd>
+<dt><code>GS_LIB</code></dt>
+<dd> Path names for initialization files and fonts</dd>
+<dt><code>TEMP</code></dt>
+<dd> Where temporary files are made</dd></dl>
 <h2>X RESOURCES</h2>
 <p> Ghostscript, or more properly the X11 display device, looks for the following resources under the program name &quot;Ghostscript&quot;:</p>
 <dl>
-<dt><code>borderWidth</code></p>
-<dd> The border width in pixels (default = 1).</p>
-<dt><code>borderColor</code></p>
-<dd> The name of the border color (default = black).</p>
-<dt><code>geometry</code></p>
-<dd> The window size and placement, WxH+X+Y (default is NULL).</p>
-<dt><code>xResolution</code></p>
-<dd> The number of x pixels per inch (default is computed from <code>WidthOfScreen</code> and <code>WidthMMOfScreen</code>).</p>
-<dt><code>yResolution</code></p>
-<dd> The number of y pixels per inch (default is computed from <code>HeightOfScreen</code> and <code>HeightMMOfScreen</code>).</p>
-<dt><code>useBackingPixmap</code></p>
-<dd> Determines whether backing store is to be used for saving display window (default = true).</dl>
+<dt><code>borderWidth</code></dt>
+<dd> The border width in pixels (default = 1).</dd>
+<dt><code>borderColor</code></dt>
+<dd> The name of the border color (default = black).</dd>
+<dt><code>geometry</code></dt>
+<dd> The window size and placement, WxH+X+Y (default is NULL).</dd>
+<dt><code>xResolution</code></dt>
+<dd> The number of x pixels per inch (default is computed from <code>WidthOfScreen</code> and <code>WidthMMOfScreen</code>).</dd>
+<dt><code>yResolution</code></dt>
+<dd> The number of y pixels per inch (default is computed from <code>HeightOfScreen</code> and <code>HeightMMOfScreen</code>).</dd>
+<dt><code>useBackingPixmap</code></dt>
+<dd> Determines whether backing store is to be used for saving display window (default = true).</dd></dl>
 <p> See the usage document for a more complete list of resources. To set these resources on Unix, put them in a file such as &quot;~/.Xresources&quot; in the following form: </p>
 <pre>
         Ghostscript*geometry:    612x792-0+0

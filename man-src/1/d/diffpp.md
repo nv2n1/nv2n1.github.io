@@ -16,10 +16,10 @@ description: "diffpp – pretty-print diff outputs with GNU enscript"
 <h2>EXAMPLES</h2>
 <p> The easiest way to use <code>diffpp</code> is to use it as an input filter for enscript. If an input filter is specified for enscript it is used to pre-process the incoming data-stream. Filtering does not alter any header strings or file-timestamps which might be printed on enscript headers; only the incoming data is modified. </p>
 <dl>
-<dt><code>enscript -G2re &#8211;filter=&#8217;rcsdiff %s | diffpp %s&#8217; *.c *.h</code></p>
-<dd> Print the changes between current source files and their latest RCS-versions.</p>
-<dt><code>enscript -G2re &#8211;filter=&#8217;diff %s~ %s | diffpp %s&#8217; *.c *.h</code></p>
-<dd> Print changes between source files and the corresponding backup-files. </p>
+<dt><code>enscript -G2re &#8211;filter=&#8217;rcsdiff %s | diffpp %s&#8217; *.c *.h</code></dt>
+<dd> Print the changes between current source files and their latest RCS-versions.</dd>
+<dt><code>enscript -G2re &#8211;filter=&#8217;diff %s~ %s | diffpp %s&#8217; *.c *.h</code></dt>
+<dd> Print changes between source files and the corresponding backup-files. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-diff/">diff</a>(1), <a href="/docs/linux/man/1-enscript/">enscript</a>(1) </p>

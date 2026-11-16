@@ -14,12 +14,12 @@ description: "sa1 – Collect and store binary data in the system activity daily
 <p>The <code>sa1</code> command is a shell procedure variant of the <code>sadc</code> command and handles all of the flags and parameters of that command. The <code>sa1</code> command collects and stores binary data in the current standard system activity daily data file. The standard system activity daily data file is named <i>saDD </i>unless <code>sadc</code>&#8216;s option <code>-D </code>is used, in which case its name is <i>saYYYYMMDD</i>, where <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day. By default it is located in the <i>/var/log/sysstat</i> directory. The <i>interval </i>and <i>count</i> parameters specify that the record should be written <i>count </i>times at <i>interval</i> seconds. If no arguments are given to <code>sa1</code> then a single record is written. The <code>sa1</code> command is designed to be started automatically by the <code>cron </code>command. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;boot</code></p>
-<dd>This option tells <code>sa1 </code>that the <code>sadc</code> command should be called without specifying the <i>interval </i>and <i>count</i> parameters in order to insert a dummy record, marking the time when the counters restart from 0.</p>
-<dt><code>&#8211;rotate [ iso ]</code></p>
-<dd>Use this option to tell <code>sa1 </code>to insert a record of statistics to the standard <i>saDD</i> system activity daily data file of the previous day. This should be done shortly after midnight (on day DD+1) in order to make sure that the data file covers the whole day, including the last interval of time just before midnight. Adding the <code>iso</code> keyword tells <code>sa1</code> to use <i>saYYYYMMDD</i> instead of <i>saDD</i> as the standard system activity daily data file name.</p>
-<dt><code>&#8211;sleep</code></p>
-<dd>This option tells <code>sa1 </code>that the <code>sadc</code> command should insert a comment indicating that the system is entering or leaving sleep mode (i.e. system suspend or hibernation). </p>
+<dt><code>&#8211;boot</code></dt>
+<dd>This option tells <code>sa1 </code>that the <code>sadc</code> command should be called without specifying the <i>interval </i>and <i>count</i> parameters in order to insert a dummy record, marking the time when the counters restart from 0.</dd>
+<dt><code>&#8211;rotate [ iso ]</code></dt>
+<dd>Use this option to tell <code>sa1 </code>to insert a record of statistics to the standard <i>saDD</i> system activity daily data file of the previous day. This should be done shortly after midnight (on day DD+1) in order to make sure that the data file covers the whole day, including the last interval of time just before midnight. Adding the <code>iso</code> keyword tells <code>sa1</code> to use <i>saYYYYMMDD</i> instead of <i>saDD</i> as the standard system activity daily data file name.</dd>
+<dt><code>&#8211;sleep</code></dt>
+<dd>This option tells <code>sa1 </code>that the <code>sadc</code> command should insert a comment indicating that the system is entering or leaving sleep mode (i.e. system suspend or hibernation). </dd>
 </dl>
 <h2>Example</h2>
 <p>To collect data (including those from disks) every 10 minutes, place the following entry in your root crontab file: <code>0,10,20,30,40,50 * * * * /usr/lib/sysstat/sa1 1 1 -S DISK</code> To rotate current system activity daily data file, ensuring it is complete, place the following entry in your root crontab file: <code>0 0 * * * /usr/lib/sysstat/sa1 &#8211;rotate</code></p>
@@ -29,7 +29,7 @@ description: "sa1 – Collect and store binary data in the system activity daily
 <p><i>/var/log/sysstat/saDD</i><br />
  <i>/var/log/sysstat/saYYYYMMDD</i></p>
 <dl>
-<dd>The standard system activity daily data files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day. </p>
+<dd>The standard system activity daily data files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day. </dd>
 </dl>
 <h2>Author</h2>
 <p>Sebastien Godard (sysstat &lt;at&gt; orange.fr)</p>

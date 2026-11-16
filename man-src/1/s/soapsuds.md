@@ -19,58 +19,58 @@ description: "soapsuds – Mono’s Remoting Proxy Generator"
 <h2>INPUT SOURCES</h2>
 <p> The following sources are available (only one can be specified):</p>
 <dl>
-<dt><i>-urltoschema:url -url:url</i></p>
-<dd> Url from which to retrieve the WSDL document.</p>
-<dt><i>-types:type1,assembly[,serviceEndPoint][;type2,assembly[,serviceEndPoint]]&#8230;</i></p>
-<dd> Specifies types for which to generate a schema or proxy. If no service endpoint is provided, the one provided with the <i>-serviceendpoint</i> option is used.</p>
-<dt><i>-inputassemblyfile:file, -ia:file</i></p>
-<dd> Assembly that contains the types to export.</p>
-<dt><i>-inputschemafile:schena, -is:schema</i></p>
-<dd> Schema from which to generate proxy classes.</dl>
+<dt><i>-urltoschema:url -url:url</i></dt>
+<dd> Url from which to retrieve the WSDL document.</dd>
+<dt><i>-types:type1,assembly[,serviceEndPoint][;type2,assembly[,serviceEndPoint]]&#8230;</i></dt>
+<dd> Specifies types for which to generate a schema or proxy. If no service endpoint is provided, the one provided with the <i>-serviceendpoint</i> option is used.</dd>
+<dt><i>-inputassemblyfile:file, -ia:file</i></dt>
+<dd> Assembly that contains the types to export.</dd>
+<dt><i>-inputschemafile:schena, -is:schema</i></dt>
+<dd> Schema from which to generate proxy classes.</dd></dl>
 <h2>INPUT OPTIONS</h2>
 <p> The following options are available:</p>
 <dl>
-<dt><i>-inputdirectory:directory, -id:directory</i></p>
-<dd> Directory where DLLs are located.</p>
-<dt><i>-serviceendpoint:url, -se:url</i></p>
-<dd> Url of the service to be placed in the WSDL document.</dl>
+<dt><i>-inputdirectory:directory, -id:directory</i></dt>
+<dd> Directory where DLLs are located.</dd>
+<dt><i>-serviceendpoint:url, -se:url</i></dt>
+<dd> Url of the service to be placed in the WSDL document.</dd></dl>
 <h2>OUTPUTS</h2>
 <p> The following output options are available (more than one can be specified):</p>
 <dl>
-<dt><i>-outputassemblyfile:file, -oa:file</i></p>
-<dd> Generates the proxy code and compiles it into an assembly with the provided name.</p>
-<dt><i>-outputschemafile:file, -os:file</i></p>
-<dd> Generates a WSDL document that represents the provided types.</p>
-<dt><i>-generatecode, -gc</i></p>
-<dd> Generates proxy source code for the provided WSDL document or types.</dl>
+<dt><i>-outputassemblyfile:file, -oa:file</i></dt>
+<dd> Generates the proxy code and compiles it into an assembly with the provided name.</dd>
+<dt><i>-outputschemafile:file, -os:file</i></dt>
+<dd> Generates a WSDL document that represents the provided types.</dd>
+<dt><i>-generatecode, -gc</i></dt>
+<dd> Generates proxy source code for the provided WSDL document or types.</dd></dl>
 <h2>OUTPUT OPTIONS</h2>
 <p> The following options are available:</p>
 <dl>
-<dt><i>-outputdirectory:directory, -od:directory</i></p>
-<dd> Directory where generated files will be placed.</p>
-<dt><i>-proxynamespace:namespace, -pn:namespace</i></p>
-<dd> Namespace of the generated proxy.</p>
-<dt><i>-nowrappedproxy, -nowp</i></p>
-<dd> Do not generate a wrapped proxy.</p>
-<dt><i>-wrappedproxy, -wp</i></p>
-<dd> Generate a wrapped proxy.</p>
-<dt><i>-strongnamefile:file, -sn:file</i></p>
-<dd> Strong name file.</dl>
+<dt><i>-outputdirectory:directory, -od:directory</i></dt>
+<dd> Directory where generated files will be placed.</dd>
+<dt><i>-proxynamespace:namespace, -pn:namespace</i></dt>
+<dd> Namespace of the generated proxy.</dd>
+<dt><i>-nowrappedproxy, -nowp</i></dt>
+<dd> Do not generate a wrapped proxy.</dd>
+<dt><i>-wrappedproxy, -wp</i></dt>
+<dd> Generate a wrapped proxy.</dd>
+<dt><i>-strongnamefile:file, -sn:file</i></dt>
+<dd> Strong name file.</dd></dl>
 <h2>GENERAL OPTIONS</h2>
 <p> The following options are available:</p>
 <dl>
-<dt><i>-nologo</i></p>
-<dd> Supress the startup logo.</p>
-<dt><i>-u:username, -user:username</i></p>
-<dd> The user name to use when connecting to the server.</p>
-<dt><i>-p:password, -password:password</i></p>
-<dd> The password to use when connecting to the server.</p>
-<dt><i>-d:domain, -domain:domain</i></p>
-<dd> The domain to use when connecting to the server.</p>
-<dt><i>-httpproxyname:name, -hpn:name</i></p>
-<dd> Name of the http proxy.</p>
-<dt><i>-httpproxyport:port, -hpp:port</i></p>
-<dd> Port of the http proxy.</dl>
+<dt><i>-nologo</i></dt>
+<dd> Supress the startup logo.</dd>
+<dt><i>-u:username, -user:username</i></dt>
+<dd> The user name to use when connecting to the server.</dd>
+<dt><i>-p:password, -password:password</i></dt>
+<dd> The password to use when connecting to the server.</dd>
+<dt><i>-d:domain, -domain:domain</i></dt>
+<dd> The domain to use when connecting to the server.</dd>
+<dt><i>-httpproxyname:name, -hpn:name</i></dt>
+<dd> Name of the http proxy.</dd>
+<dt><i>-httpproxyport:port, -hpp:port</i></dt>
+<dd> Port of the http proxy.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Lluis Sanchez Gual (lluis [at] ximian.com) </p>
 <h2>LICENSE</h2>

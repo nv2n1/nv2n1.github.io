@@ -11,7 +11,6 @@ pbs_fbserver - get the pbs fall-back server name
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre> <pre>int pbs_fbserver()</pre>
 
 <h2>Description</h2>

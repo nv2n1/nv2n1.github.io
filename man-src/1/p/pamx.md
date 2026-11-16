@@ -25,33 +25,33 @@ description: "pamx – display Netpbm image in X Window System window"
 <p> <code>pamx</code> uses the resource class name <code>Xloadimage</code> for window managers which need this resource set. This is, of course, the same resource class that the conventional viewer program <code>xloadimage</code> uses. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-border=</code><i>color</i></p>
-<dd> This sets the background portion of the window which is not covered by any images to be <i>color</i>. </p>
-<dt><code>-display=</code><i>display_name</i></p>
-<dd> This names the X display in which to put the window. E.g. <code>0:0</code>. </p>
-<dt><code>-fit</code></p>
-<dd> Force image to use the default visual and colormap. This is useful if you do not want technicolor effects when the colormap focus is inside the image window, but it may reduce the quality of the displayed image. </p>
-<dt><code>-fullscreen</code></p>
-<dd> Use the entire screen to display the image. </p>
-<dt><code>-geometry=</code><i>W</i><code>x</code><i>H</i>[{<code>+</code>,<code>&#8211;</code>}<i>X</i>{<code>+</code>,<code>&#8211;</code>}<i>Y</i></p>
-<dd> This sets the size and position of the window in which <code>pamx</code> displays the image. </p>
+<dt><code>-border=</code><i>color</i></dt>
+<dd> This sets the background portion of the window which is not covered by any images to be <i>color</i>. </dd>
+<dt><code>-display=</code><i>display_name</i></dt>
+<dd> This names the X display in which to put the window. E.g. <code>0:0</code>. </dd>
+<dt><code>-fit</code></dt>
+<dd> Force image to use the default visual and colormap. This is useful if you do not want technicolor effects when the colormap focus is inside the image window, but it may reduce the quality of the displayed image. </dd>
+<dt><code>-fullscreen</code></dt>
+<dd> Use the entire screen to display the image. </dd>
+<dt><code>-geometry=</code><i>W</i><code>x</code><i>H</i>[{<code>+</code>,<code>&#8211;</code>}<i>X</i>{<code>+</code>,<code>&#8211;</code>}<i>Y</i></dt>
+<dd> This sets the size and position of the window in which <code>pamx</code> displays the image. </dd>
 <p> By default, the window size exactly matches the image size, except that if you don&#8217;t specify <code>-fullscreen</code>, the maximum is 90% of the screen dimensions. </p>
-<dt><code>-install</code></p>
-<dd> Forcibly install the image&#8217;s colormap when the window is focused. This violates ICCCM standards and only exists to allow operation with naive window managers. Use this option only if your window manager does not install colormaps properly. </p>
-<dt><code>-pixmap</code></p>
-<dd> Force the use of a pixmap as backing-store. This is provided for servers where backing-store is broken (such as some versions of the AIXWindows server). It may improve scrolling performance on servers which provide backing-store. </p>
-<dt><code>-private</code></p>
-<dd> Force <code>pamx</code> to use of a private colormap. By default, <code>pamx</code> allocates colors shared unless there are not enough colors available. </p>
-<dt><code>-verbose</code></p>
-<dd> Causes <code>pamx</code> to print various information about what it&#8217;s doing to Standard Error. </p>
-<dt><code>-visual=</code><i>visual_name</i></p>
-<dd> Force the use of a specific visual type to display an image. By default, <code>pamx</code> tries to pick the best available image for a particular image type. The available visual types are: <code>DirectColor</code>, <code>TrueColor</code>, <code>PseudoColor</code>, <code>StaticColor</code>, <code>GrayScale</code>, and <code>StaticGray</code>. You may use the shortest unique prefix of these names, and case is not significant. </p>
-<dt><code>-background=</code><i>color</i></p>
-<dd> Use <i>color</i> as the background color instead of the default (usually white but this depends on the image type) if you are transferring a monochrome image to a color display. </p>
-<dt><code>-foreground=</code><i>color</i></p>
-<dd> Use <i>color</i> as the foreground color instead of black if you are transferring a monochrome image to a color display. You can also use this to invert the foreground and background colors of a monochrome image. </p>
-<dt><code>-title=</code><i>text</i></p>
-<dd> Set the title bar title of the window. Default is the file name of the input file, or &#8216;stdin&#8217; if the image is from Standard Input. </p>
+<dt><code>-install</code></dt>
+<dd> Forcibly install the image&#8217;s colormap when the window is focused. This violates ICCCM standards and only exists to allow operation with naive window managers. Use this option only if your window manager does not install colormaps properly. </dd>
+<dt><code>-pixmap</code></dt>
+<dd> Force the use of a pixmap as backing-store. This is provided for servers where backing-store is broken (such as some versions of the AIXWindows server). It may improve scrolling performance on servers which provide backing-store. </dd>
+<dt><code>-private</code></dt>
+<dd> Force <code>pamx</code> to use of a private colormap. By default, <code>pamx</code> allocates colors shared unless there are not enough colors available. </dd>
+<dt><code>-verbose</code></dt>
+<dd> Causes <code>pamx</code> to print various information about what it&#8217;s doing to Standard Error. </dd>
+<dt><code>-visual=</code><i>visual_name</i></dt>
+<dd> Force the use of a specific visual type to display an image. By default, <code>pamx</code> tries to pick the best available image for a particular image type. The available visual types are: <code>DirectColor</code>, <code>TrueColor</code>, <code>PseudoColor</code>, <code>StaticColor</code>, <code>GrayScale</code>, and <code>StaticGray</code>. You may use the shortest unique prefix of these names, and case is not significant. </dd>
+<dt><code>-background=</code><i>color</i></dt>
+<dd> Use <i>color</i> as the background color instead of the default (usually white but this depends on the image type) if you are transferring a monochrome image to a color display. </dd>
+<dt><code>-foreground=</code><i>color</i></dt>
+<dd> Use <i>color</i> as the foreground color instead of black if you are transferring a monochrome image to a color display. You can also use this to invert the foreground and background colors of a monochrome image. </dd>
+<dt><code>-title=</code><i>text</i></dt>
+<dd> Set the title bar title of the window. Default is the file name of the input file, or &#8216;stdin&#8217; if the image is from Standard Input. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>ppmsvgalib</code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code>xzgv</code>, <code>xwud</code>, <code>xloadimage</code>, <code>xli</code> </p>
@@ -60,29 +60,30 @@ description: "pamx – display Netpbm image in X Window System window"
 <p> Jim&#8217;s code contained the following copyright notice and license: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Copyright 1989, 1993 Jim Frost </p>
 <p> Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. The author makes no representations about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty. </p>
 <p> THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. </p>
-</dl>
+</dd></dl>
 <p> Lots of other people contributed to Xloadimage, and they are listed in the file COPYRIGHT in the source code. </p>
 <h2>HISTORY</h2>
 <p> <code>pamx</code> was new in Netpbm 10.34 (May 2006). </p>
 <p> <code>pamx</code> is essentially based on the classic X displayer program <code>xloadimage</code> by Jim Frost, 1989. Bryan Henderson stripped it down and adapted it to Netpbm in March 2006. </p>
 <p> The following features of <code>xloadimage</code> are left out of <code>pamx</code>, to be more compatible with Netpbm&#8217;s philosophy of simple building blocks. Note that there are other programs in Netpbm that do most of these things: </p>
 <dl>
-<dt>&bull;</p>
-<dd> zoom in/out</p>
-<dt>&bull;</p>
-<dd> ability to accept formats other than Netpbm</p>
-<dt>&bull;</p>
-<dd> image transformations (brightening, clipping, rotating, etc)</p>
-<dt>&bull;</p>
-<dd> decompressing and other decoding of input</p>
-<dt>&bull;</p>
-<dd> ability to display on the root window</p>
-<dt>&bull;</p>
-<dd> slide show </p>
+<dt>&bull;</dt>
+<dd> zoom in/out</dd>
+<dt>&bull;</dt>
+<dd> ability to accept formats other than Netpbm</dd>
+<dt>&bull;</dt>
+<dd> image transformations (brightening, clipping, rotating, etc)</dd>
+<dt>&bull;</dt>
+<dd> decompressing and other decoding of input</dd>
+<dt>&bull;</dt>
+<dd> ability to display on the root window</dd>
+<dt>&bull;</dt>
+<dd> slide show </dd>
 <p> <code>pamx</code> also differs from <code>xloadimage</code> in that it uses Libnetpbm.</dl>
 <p> There is virtually no code from <code>xloadimage</code> actually in <code>pamx</code>, because Bryan rewrote it all to make it easier to understand. </p>
 <h2>Index</h2>
+</p>

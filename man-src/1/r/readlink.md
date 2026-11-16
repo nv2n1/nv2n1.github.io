@@ -15,26 +15,26 @@ description: "readlink – print resolved symbolic links or canonical file names
 <p> Note <a href="/docs/linux/man/1-realpath/">realpath</a>(1) is the preferred command to use for canonicalization functionality. </p>
 <p> Print value of a symbolic link or canonical file name</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;canonicalize</code></p>
-<dd> canonicalize by following every symlink in every component of the given name recursively; all but the last component must exist</p>
-<dt><code>-e</code>, <code>&#8211;canonicalize-existing</code></p>
-<dd> canonicalize by following every symlink in every component of the given name recursively, all components must exist</p>
-<dt><code>-m</code>, <code>&#8211;canonicalize-missing</code></p>
-<dd> canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence</p>
-<dt><code>-n</code>, <code>&#8211;no-newline</code></p>
-<dd> do not output the trailing delimiter</p>
-<dt> <code>-q</code>, <code>&#8211;quiet</code></p>
-<dt><code>-s</code>, <code>&#8211;silent</code></p>
+<dt><code>-f</code>, <code>&#8211;canonicalize</code></dt>
+<dd> canonicalize by following every symlink in every component of the given name recursively; all but the last component must exist</dd>
+<dt><code>-e</code>, <code>&#8211;canonicalize-existing</code></dt>
+<dd> canonicalize by following every symlink in every component of the given name recursively, all components must exist</dd>
+<dt><code>-m</code>, <code>&#8211;canonicalize-missing</code></dt>
+<dd> canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence</dd>
+<dt><code>-n</code>, <code>&#8211;no-newline</code></dt>
+<dd> do not output the trailing delimiter</dd>
+<dt> <code>-q</code>, <code>&#8211;quiet</code></dt>
+<dt><code>-s</code>, <code>&#8211;silent</code></dt>
 <dd>
-<dd>suppress most error messages (on by default)</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> report error messages</p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> end each output line with NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+</dd><dd>suppress most error messages (on by default)</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> report error messages</dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> end each output line with NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Dmitry V. Levin.</p>
 <h2>REPORTING BUGS</h2>

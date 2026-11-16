@@ -16,8 +16,8 @@ bson_reader_tell (bson_reader_t *reader);
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>reader</code></p>
-<dd> A <code>bson_reader_t</code> \&amp;.</dl>
+<dt><code>reader</code></dt>
+<dd> A <code>bson_reader_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Tells the current position within the underlying stream. </p>
 <h2>RETURNS</h2>

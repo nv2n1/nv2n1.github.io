@@ -14,13 +14,13 @@ description: "memmove – Copy one area of memory to another"
 <p><i>dest</i></p>
 <dl>
 <dd>
-<dd>Where to copy to</dl>
+</dd><dd>Where to copy to</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>Where to copy from</dl>
+<dd>Where to copy from</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>The size of the area.</dl>
+<dd>The size of the area.</dd></dl>
 <h2>Description</h2>
 <p>Unlike <code>memcpy</code>, <code>memmove</code> copes with overlapping areas.</p>
 <h2>Copyright</h2>

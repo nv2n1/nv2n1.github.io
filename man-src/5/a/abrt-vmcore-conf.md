@@ -13,7 +13,7 @@ abrt-vmcore.conf - Configuration file for Configuration file for ABRT's VMCore a
 The configuration file consists of items in the format &quot;Option = Value&quot;. Currently, only one item exists: 
 
  CopyVMcore = <i>yes</i> / <i>no</i>
-<dl><dd>Set to <i>no</i> if you want vmcore to be moved, not copied, from /var/crash to ABRT's main problem directory. Default is to copy vmcore.</dl>
+<dl><dd>Set to <i>no</i> if you want vmcore to be moved, not copied, from /var/crash to ABRT's main problem directory. Default is to copy vmcore.</dd></dl>
 
 <h2>See Also</h2>
 
@@ -21,4 +21,4 @@ The configuration file consists of items in the format &quot;Option = Value&quot
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

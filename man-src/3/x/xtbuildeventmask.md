@@ -11,11 +11,11 @@ description: "XtBuildEventMask – retrieve a widget’s event mask"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>EventMask XtBuildEventMask(Widget <i>w</i>);</dl>
+<dd>EventMask XtBuildEventMask(Widget <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtBuildEventMask</code> function returns the event mask representing the logical OR of all event masks for event handlers registered on the widget with <code>XtAddEventHandler</code> and all event translations, including accelerators, installed on the widget. This is the same event mask stored into the <code>XSetWindowAttributes</code> structure by <code>XtRealizeWidget</code> and sent to the server when event handlers and translations are installed or removed on the realized widget.</p>
 <h2>See Also</h2>

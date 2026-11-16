@@ -24,64 +24,64 @@ description: "makestrs – makes string table C source and header(s)"
 <p> The syntax for string-list file is (items in square brackets are optional):</p>
 <dl>
 <dt>
-<dd> #prefix &lt;text&gt;</dl>
+</dt><dd> #prefix &lt;text&gt;</dd></dl>
 <dl>
 <dt>
-<dd> #feature &lt;text&gt;</dl>
+</dt><dd> #feature &lt;text&gt;</dd></dl>
 <dl>
 <dt>
-<dd> #externref &lt;text&gt;</dl>
+</dt><dd> #externref &lt;text&gt;</dd></dl>
 <dl>
 <dt>
-<dd> #externdef [&lt;text&gt;]</dl>
+</dt><dd> #externdef [&lt;text&gt;]</dd></dl>
 <dl>
 <dt>
-<dd> [#ctempl &lt;text&gt;]</dl>
+</dt><dd> [#ctempl &lt;text&gt;]</dd></dl>
 <dl>
 <dt>
-<dd> #file &lt;filename&gt;</dl>
+</dt><dd> #file &lt;filename&gt;</dd></dl>
 <dl>
 <dt>
-<dd> #table &lt;tablename&gt;</dl>
+</dt><dd> #table &lt;tablename&gt;</dd></dl>
 <dl>
 <dt>
-<dd> [#htempl]</dl>
+</dt><dd> [#htempl]</dd></dl>
 <dl>
 <dt>
-<dd> &lt;text&gt;</dl>
+</dt><dd> &lt;text&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &#8230;</dl>
+</dt><dd> &#8230;</dd></dl>
 <dl>
 <dt>
-<dd> &lt;text&gt;</dl>
+</dt><dd> &lt;text&gt;</dd></dl>
 <dl>
 <dt>
-<dd> [#table &lt;tablename&gt;</dl>
+</dt><dd> [#table &lt;tablename&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &lt;text&gt;</dl>
+</dt><dd> &lt;text&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &#8230;</dl>
+</dt><dd> &#8230;</dd></dl>
 <dl>
 <dt>
-<dd> &lt;text&gt;</dl>
+</dt><dd> &lt;text&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &#8230;</dl>
+</dt><dd> &#8230;</dd></dl>
 <dl>
 <dt>
-<dd> #table &lt;tablename&gt;</dl>
+</dt><dd> #table &lt;tablename&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &#8230;]</dl>
+</dt><dd> &#8230;]</dd></dl>
 <dl>
 <dt>
-<dd> [#file &lt;filename&gt;</dl>
+</dt><dd> [#file &lt;filename&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &#8230;]</dl>
+</dt><dd> &#8230;]</dd></dl>
 <p> In words you may have one or more #file directives. Each #file may have one or more #table directives. </p>
 <p> The #prefix directive determines the string that makestr will prefix to each definition. </p>
 <p> The #feature directive determines the string that makestr will use for the feature-test macro, e.g. X[TM]STRINGDEFINES. </p>

@@ -19,7 +19,7 @@ description: "dlaneg.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLANEG computes the Sturm count, the number of negative pivots
  encountered while factoring tridiagonal T - sigma I = L D L^T.
@@ -37,11 +37,11 @@ description: "dlaneg.f –"
    Scientific Computing, v28, n5, 2006.  DOI 10.1137/050641624
    (Tech report version in LAWN 172 with the same title.)
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The order of the matrix.
@@ -78,18 +78,18 @@ description: "dlaneg.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Osni Marques, LBNL/NERSC, USA </p>
+</dt><dd> Osni Marques, LBNL/NERSC, USA </dd>
 <p>&nbsp;<wbr>Christof Voemel, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Jason Riedy, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
@@ -97,3 +97,4 @@ description: "dlaneg.f –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

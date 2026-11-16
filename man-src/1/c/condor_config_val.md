@@ -24,147 +24,123 @@ description: "condor_config_val Query or set a given HTCondor configuration vari
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> (help option) Print usage information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> (help option) Print usage information and exit.</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> (help option) Print the HTCondor version information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> (help option) Print the HTCondor version information and exit.</dd>
+</dl>
 <p> <code>-set </code> <i>var = value</i></p>
 <dl>
 <dt>
-<dd> (edit option) Sets one or more persistent configuration file variables. The new value remains if the daemon is restarted. One or more variables can be set; the syntax requires double quote marks to identify the pairing of variable name to value, and to permit spaces.</p>
-<dt>
-<dd></dl>
+</dt><dd> (edit option) Sets one or more persistent configuration file variables. The new value remains if the daemon is restarted. One or more variables can be set; the syntax requires double quote marks to identify the pairing of variable name to value, and to permit spaces.</dd>
+</dl>
 <p> <code>-unset </code> <i>var</i></p>
 <dl>
 <dt>
-<dd> (edit option) Each of the persistent configuration variables listed reverts to its previous value.</p>
-<dt>
-<dd></dl>
+</dt><dd> (edit option) Each of the persistent configuration variables listed reverts to its previous value.</dd>
+</dl>
 <p> <code>-rset </code> <i>var = value</i></p>
 <dl>
 <dt>
-<dd> (edit option) Sets one or more configuration file variables. The new value remains as long as the daemon continues running. One or more variables can be set; the syntax requires double quote marks to identify the pairing of variable name to value, and to permit spaces.</p>
-<dt>
-<dd></dl>
+</dt><dd> (edit option) Sets one or more configuration file variables. The new value remains as long as the daemon continues running. One or more variables can be set; the syntax requires double quote marks to identify the pairing of variable name to value, and to permit spaces.</dd>
+</dl>
 <p> <code>-runset </code> <i>var</i></p>
 <dl>
 <dt>
-<dd> (edit option) Each of the configuration variables listed reverts to its previous value as long as the daemon continues running.</p>
-<dt>
-<dd></dl>
+</dt><dd> (edit option) Each of the configuration variables listed reverts to its previous value as long as the daemon continues running.</dd>
+</dl>
 <p> <code>-dump</code></p>
 <dl>
 <dt>
-<dd> (view option) Display the raw value of all <i>vars</i> listed. If no <i>vars</i> are listed, then print all configuration variables and their values. The <code>-expand</code> , <code>-default</code> , and <code>-evaluate</code> options take precedence over this <code>-dump</code> option, such that the output will not be raw.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Display the raw value of all <i>vars</i> listed. If no <i>vars</i> are listed, then print all configuration variables and their values. The <code>-expand</code> , <code>-default</code> , and <code>-evaluate</code> options take precedence over this <code>-dump</code> option, such that the output will not be raw.</dd>
+</dl>
 <p> <code>-default</code></p>
 <dl>
 <dt>
-<dd> (view option) Default values are displayed.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Default values are displayed.</dd>
+</dl>
 <p> <code>-expand</code></p>
 <dl>
 <dt>
-<dd> (view option) Expanded values are displayed. This is the default.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Expanded values are displayed. This is the default.</dd>
+</dl>
 <p> <code>-raw</code></p>
 <dl>
 <dt>
-<dd> (view option) Raw values are displayed.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Raw values are displayed.</dd>
+</dl>
 <p> <code>-verbose</code></p>
 <dl>
 <dt>
-<dd> (view option) Display configuration file name and line number where the variable is set, along with the raw, expanded, and default values of the variable.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Display configuration file name and line number where the variable is set, along with the raw, expanded, and default values of the variable.</dd>
+</dl>
 <p> <code>-debug[:&lt;opts&gt;]</code></p>
 <dl>
 <dt>
-<dd> (view option) Send output to stderr , overriding a set value of TOOL_DEBUG .</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Send output to stderr , overriding a set value of TOOL_DEBUG .</dd>
+</dl>
 <p> <code>-evaluate</code></p>
 <dl>
 <dt>
-<dd> (view option) Applied only when a <code>location option</code> specifies a daemon. The value of the requested parameter will be evaluated with respect to the ClassAd of that daemon.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Applied only when a <code>location option</code> specifies a daemon. The value of the requested parameter will be evaluated with respect to the ClassAd of that daemon.</dd>
+</dl>
 <p> <code>-used</code></p>
 <dl>
 <dt>
-<dd> (view option) Applied only when a <code>location option</code> specifies a daemon. Modifies which variables are displayed to only those used by the specified daemon.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Applied only when a <code>location option</code> specifies a daemon. Modifies which variables are displayed to only those used by the specified daemon.</dd>
+</dl>
 <p> <code>-unused</code></p>
 <dl>
 <dt>
-<dd> (view option) Applied only when a <code>location option</code> specifies a daemon. Modifies which variables are displayed to only those <i>not</i> used by the specified daemon.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Applied only when a <code>location option</code> specifies a daemon. Modifies which variables are displayed to only those <i>not</i> used by the specified daemon.</dd>
+</dl>
 <p> <code>-config</code></p>
 <dl>
 <dt>
-<dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Display the current configuration file that set the variable.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Display the current configuration file that set the variable.</dd>
+</dl>
 <p> <code>-writeconfig[:upgrade] </code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> (view option) For the configuration read from files (the default), write to file <i>filename</i> all configuration variables. Values that are the same as internal, compile-time defaults will be preceded by the comment character. If the <code>:upgrade </code> <i>o</i> ption is specified, then values that are the same as the internal, compile-time defaults are omitted. Variables are in the same order as the they were read from the original configuration files.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) For the configuration read from files (the default), write to file <i>filename</i> all configuration variables. Values that are the same as internal, compile-time defaults will be preceded by the comment character. If the <code>:upgrade </code> <i>o</i> ption is specified, then values that are the same as the internal, compile-time defaults are omitted. Variables are in the same order as the they were read from the original configuration files.</dd>
+</dl>
 <p> <code>-mixedcase</code></p>
 <dl>
 <dt>
-<dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Print variable names with the same letter case used in the variable&#8217;s definition.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Print variable names with the same letter case used in the variable&#8217;s definition.</dd>
+</dl>
 <p> <code>-local-name </code> <i>&lt;name&gt;</i></p>
 <dl>
 <dt>
-<dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Inspect the values of attributes that use local names, which is useful to distinguish which daemon when there is more than one of the particular daemon running.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Inspect the values of attributes that use local names, which is useful to distinguish which daemon when there is more than one of the particular daemon running.</dd>
+</dl>
 <p> <code>-subsystem </code> <i>&lt;daemon&gt;</i></p>
 <dl>
 <dt>
-<dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Specifies the subsystem or daemon name to query, with a default value of the TOOL subsystem.</p>
-<dt>
-<dd></dl>
+</dt><dd> (view option) Applied only when the configuration is read from files (the default), and <i>not</i> when applied to a specific daemon. Specifies the subsystem or daemon name to query, with a default value of the TOOL subsystem.</dd>
+</dl>
 <p> <code>-address </code> <i>&lt;ip:port&gt;</i></p>
 <dl>
 <dt>
-<dd> (location option) Connect to the given IP address and port number.</p>
-<dt>
-<dd></dl>
+</dt><dd> (location option) Connect to the given IP address and port number.</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> (location option) Use the given central manager and an optional port number to find daemons.</p>
-<dt>
-<dd></dl>
+</dt><dd> (location option) Use the given central manager and an optional port number to find daemons.</dd>
+</dl>
 <p> <code>-name </code> <i>&lt;machine_name&gt;</i></p>
 <dl>
 <dt>
-<dd> (location option) Query the specified machine&#8217;s <i>condor_master</i> daemon for its configuration. Does not function together with any of the options: <code>-dump</code> , <code>-config</code> , or <code>-verbose</code> .</p>
-<dt>
-<dd></dl>
+</dt><dd> (location option) Query the specified machine&#8217;s <i>condor_master</i> daemon for its configuration. Does not function together with any of the options: <code>-dump</code> , <code>-config</code> , or <code>-verbose</code> .</dd>
+</dl>
 <p> <code>-master | -schedd | -startd | -collector | -negotiator</code></p>
 <dl>
 <dt>
-<dd> (location option) The specific daemon to query.</p>
-<dt>
-<dd></dl>
+</dt><dd> (location option) The specific daemon to query.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_config_val</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Examples</h2>

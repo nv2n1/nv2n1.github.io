@@ -19,38 +19,38 @@ description: "eapol_test – EAP peer and RADIUS client testing"
 <dl>
 <dd>
 <pre>eapol_test -ctest.conf -a127.0.0.1 -p1812 -ssecret -r1</pre>
-</dl>
+</dd></dl>
 <p> tries to complete EAP authentication based on the network configuration from test.conf against the RADIUS server running on the local host. A re-authentication is triggered to test fast re-authentication. The configuration file uses the same format for network blocks as wpa_supplicant.</p>
 <h2>Command Arguments</h2>
 <dl>
-<dt><code>-c configuration file path</code></p>
-<dd>A configuration to use. The configuration should use the same format for network blocks as wpa_supplicant.</p>
-<dt><code>-a AS address</code></p>
-<dd>IP address of the authentication server. The default is &#8216;127.0.0.1&#8217;.</p>
-<dt><code>-A client address</code></p>
-<dd>IP address of the client. The default is to select an address automatically.</p>
-<dt><code>-p AS port</code></p>
-<dd>UDP port of the authentication server. The default is &#8216;1812&#8217;.</p>
-<dt><code>-s AS secret</code></p>
-<dd>Shared secret with the authentication server. The default is &#8216;radius&#8217;.</p>
-<dt><code>-r count</code></p>
-<dd>Number of reauthentications.</p>
-<dt><code>-t timeout</code></p>
-<dd>Timeout in seconds. The default is 30.</p>
-<dt><code>-C info</code></p>
-<dd>RADIUS Connect-Info. The default is &#8216;CONNECT 11Mbps 802.11b&#8217;.</p>
-<dt><code>-M mac address</code></p>
-<dd>Client MAC address (Calling-Station-Id). The default is &#8217;02:00:00:00:00:01&#8242;.</p>
-<dt><code>-o file</code></p>
-<dd>Location to write out server certificate.</p>
-<dt><code>-N attr spec</code></p>
-<dd>Send arbitrary attribute specific by attr_id:syntax:value, or attr_id alone. attr_id should be the numeric ID of the attribute, and syntax should be one of &#8216;s&#8217; (string), &#8216;d&#8217; (integer), or &#8216;x&#8217; (octet string). The value is the attribute value to send. When attr_id is given alone, NULL is used as the attribute value. Multiple attributes can be specified by using the option several times.</p>
-<dt><code>-n</code></p>
-<dd>Indicates that no MPPE keys are expected.</p>
-<dt><code>-W</code></p>
-<dd>Wait for a control interface monitor before starting.</p>
-<dt><code>-S</code></p>
-<dd>Save configuration after authentication.</dl>
+<dt><code>-c configuration file path</code></dt>
+<dd>A configuration to use. The configuration should use the same format for network blocks as wpa_supplicant.</dd>
+<dt><code>-a AS address</code></dt>
+<dd>IP address of the authentication server. The default is &#8216;127.0.0.1&#8217;.</dd>
+<dt><code>-A client address</code></dt>
+<dd>IP address of the client. The default is to select an address automatically.</dd>
+<dt><code>-p AS port</code></dt>
+<dd>UDP port of the authentication server. The default is &#8216;1812&#8217;.</dd>
+<dt><code>-s AS secret</code></dt>
+<dd>Shared secret with the authentication server. The default is &#8216;radius&#8217;.</dd>
+<dt><code>-r count</code></dt>
+<dd>Number of reauthentications.</dd>
+<dt><code>-t timeout</code></dt>
+<dd>Timeout in seconds. The default is 30.</dd>
+<dt><code>-C info</code></dt>
+<dd>RADIUS Connect-Info. The default is &#8216;CONNECT 11Mbps 802.11b&#8217;.</dd>
+<dt><code>-M mac address</code></dt>
+<dd>Client MAC address (Calling-Station-Id). The default is &#8217;02:00:00:00:00:01&#8242;.</dd>
+<dt><code>-o file</code></dt>
+<dd>Location to write out server certificate.</dd>
+<dt><code>-N attr spec</code></dt>
+<dd>Send arbitrary attribute specific by attr_id:syntax:value, or attr_id alone. attr_id should be the numeric ID of the attribute, and syntax should be one of &#8216;s&#8217; (string), &#8216;d&#8217; (integer), or &#8216;x&#8217; (octet string). The value is the attribute value to send. When attr_id is given alone, NULL is used as the attribute value. Multiple attributes can be specified by using the option several times.</dd>
+<dt><code>-n</code></dt>
+<dd>Indicates that no MPPE keys are expected.</dd>
+<dt><code>-W</code></dt>
+<dd>Wait for a control interface monitor before starting.</dd>
+<dt><code>-S</code></dt>
+<dd>Save configuration after authentication.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8)</p>
 <h2>Legal</h2>

@@ -15,24 +15,24 @@ description: "ffmpegthumbnailer – fast and lightweight video thumbnailer"
 <p> <i>Ffmpegthumbnailer</i> is a lightweight video thumbnailer that can be used by file managers to create thumbnails for your video files. The thumbnailer uses ffmpeg to decode frames from the video files, so supported videoformats depend on the configuration flags of ffmpeg.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code>&lt;s&gt;</p>
-<dd> : input file</p>
-<dt><code>-o</code>&lt;s&gt;</p>
-<dd> : output file</p>
-<dt><code>-s</code>&lt;n&gt;</p>
-<dd> : thumbnail size (use 0 for original size) (default: 128)</p>
-<dt><code>-q</code>&lt;n&gt;</p>
-<dd> : image quality (0 = bad, 10 = best) (default: 8) (only for jpeg)</p>
-<dt><code>-c</code>&lt;s&gt;</p>
-<dd> : override image format (jpeg or png) (default: determined by filename)</p>
-<dt><code>-t</code>&lt;n|s&gt;</p>
-<dd> : time to seek to (percentage or absolute time hh:mm:ss) (default: 10%)</p>
-<dt><code>-a</code></p>
-<dd> : ignore aspect ratio and generate square thumbnail</p>
+<dt><code>-i</code>&lt;s&gt;</dt>
+<dd> : input file</dd>
+<dt><code>-o</code>&lt;s&gt;</dt>
+<dd> : output file</dd>
+<dt><code>-s</code>&lt;n&gt;</dt>
+<dd> : thumbnail size (use 0 for original size) (default: 128)</dd>
+<dt><code>-q</code>&lt;n&gt;</dt>
+<dd> : image quality (0 = bad, 10 = best) (default: 8) (only for jpeg)</dd>
+<dt><code>-c</code>&lt;s&gt;</dt>
+<dd> : override image format (jpeg or png) (default: determined by filename)</dd>
+<dt><code>-t</code>&lt;n|s&gt;</dt>
+<dd> : time to seek to (percentage or absolute time hh:mm:ss) (default: 10%)</dd>
+<dt><code>-a</code></dt>
+<dd> : ignore aspect ratio and generate square thumbnail</dd>
 <dt>
-<dd> <code>-f</code> : create a movie strip overlay</p>
-<dt><code>-h</code></p>
-<dd> : display this help</dl>
+</dt><dd> <code>-f</code> : create a movie strip overlay</dd>
+<dt><code>-h</code></dt>
+<dd> : display this help</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Dirk Vanden Boer.</p>
 <h2>REPORTING BUGS</h2>

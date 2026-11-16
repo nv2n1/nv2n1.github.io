@@ -11,17 +11,11 @@ std::endian - std::endian
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;type_traits&gt;
-
 enum class endian
-
 {
-
     little = /*implementation-defined*/, (1) (since C++20)
-
     big = /*implementation-defined*/,
-
     native = /*implementation-defined*/
-
 };</code></pre> 
 Indicates the endianness of all scalar_types: 
 * If all scalar types are little-endian, std::endian::native equals std::endian::little 

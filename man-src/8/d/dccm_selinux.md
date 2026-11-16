@@ -55,9 +55,9 @@ description: "dccm_selinux – Security Enhanced Linux Policy for the dccm proce
 <p> Policy governs the access confined processes have to these ports. SELinux dccm policy is very flexible allowing users to setup their dccm processes in as secure a method as possible. </p>
 <p> The following port types are defined for dccm: </p>
 <dl>
-<dt><code>dccm_port_t</code></p>
+<dt><code>dccm_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5679 udp 5679</dl>
+</dd><dd>Default Defined Ports: tcp 5679 udp 5679</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type dccm_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -109,8 +109,8 @@ description: "dccm_selinux – Security Enhanced Linux Policy for the dccm proce
 <p> <code>dccm_exec_t</code> </p>
 <p> &#8211; Set files with the dccm_exec_t type, if you want to transition an executable to the dccm_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/dccm, /usr/libexec/dcc/dccm </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/dccm, /usr/libexec/dcc/dccm </dd>
 </dl>
 <p> <code>dccm_tmp_t</code> </p>
 <p> &#8211; Set files with the dccm_tmp_t type, if you want to store dccm temporary files in the /tmp directories. </p>

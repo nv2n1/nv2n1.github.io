@@ -15,11 +15,11 @@ edd_dev_is_type - is this EDD device a 'type' device?
 <h2>Arguments</h2>
 
 <i>edev</i>
-<dl><dd><dd>target edd_device</dl>
+<dl><dd></dd><dd>target edd_device</dd></dl>
  
 
  <i>type</i>
-<dl><dd>a host bus or interface identifier string per the EDD spec</dl>
+<dl><dd>a host bus or interface identifier string per the EDD spec</dd></dl>
 
 <h2>Description</h2>
 

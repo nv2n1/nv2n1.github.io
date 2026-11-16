@@ -11,96 +11,96 @@ description: "osx – An SGML to XML converter"
 <p> osx &#8211; An SGML to XML converter </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>osx</code> [<code>-CeghnRvx</code>] [<code>-a</code><i>name</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>encoding</i>] [<code>-c</code><i>catalog_file</i>] [<code>-d</code><i>directory</i>] [<code>-D</code><i>directory</i>] [<code>-i</code><i>name</i>] [<code>-f</code><i>file</i>] [<code>-l</code><i>dtd_file</i>] [<code>-w</code><i>warning_type</i>] [<code>-x</code><i>xml_output_option</i>&#8230;] [<i>sysid</i>&#8230;]</dl>
+<dt> <code>osx</code> [<code>-CeghnRvx</code>] [<code>-a</code><i>name</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>encoding</i>] [<code>-c</code><i>catalog_file</i>] [<code>-d</code><i>directory</i>] [<code>-D</code><i>directory</i>] [<code>-i</code><i>name</i>] [<code>-f</code><i>file</i>] [<code>-l</code><i>dtd_file</i>] [<code>-w</code><i>warning_type</i>] [<code>-x</code><i>xml_output_option</i>&#8230;] [<i>sysid</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>osx</code></p>
-<dd>converts SGML to XML. <code>osx</code> parses and validates the SGML document contained in</p>
+<dd>converts SGML to XML. <code>osx</code> parses and validates the SGML document contained in</dd>
 <dl>
 <dt>
-<dd>and writes an equivalent XML document to the standard output. <code>osx</code> will warn about SGML constructs which have no XML equivalent.</dl>
+</dt><dd>and writes an equivalent XML document to the standard output. <code>osx</code> will warn about SGML constructs which have no XML equivalent.</dd></dl>
 <p> Part of an SGML System Conforming to International Standard ISO 8879 &#8212; Standard Generalized Markup Language. An SGML Extended Facilities system conforming to Annex A of International Standard ISO/IEC 10744 &#8212; Hypermedia/Time-based Structuring Language.</p>
 <h2>OPTIONS</h2>
 <p> The following options are available: </p>
 <p> <code>-a</code><i>name</i>, <code>&#8211;activate=</code><i>name</i></p>
 <dl>
 <dt>
-<dd> Make doctype or linkname <i>name</i> active.</dl>
+</dt><dd> Make doctype or linkname <i>name</i> active.</dd></dl>
 <p> <code>-A</code><i>name</i>, <code>&#8211;architecture=</code><i>name</i></p>
 <dl>
 <dt>
-<dd> Parse with respect to architecture <i>name</i>.</dl>
+</dt><dd> Parse with respect to architecture <i>name</i>.</dd></dl>
 <p> <code>-b</code><i>encoding</i>, <code>&#8211;encoding=</code><i>encoding</i></p>
 <dl>
 <dt>
-<dd> Use the BCTF <i>encoding</i> for output. By default <code>osx</code> uses UTF-8.</dl>
+</dt><dd> Use the BCTF <i>encoding</i> for output. By default <code>osx</code> uses UTF-8.</dd></dl>
 <p> <code>-c</code><i>sysid</i>, <code>&#8211;catalog=</code><i>sysid</i></p>
 <dl>
 <dt>
-<dd> Map public identifiers and entity names to system identifiers using the catalog entry file whose system identifier is <i>sysid</i>.</dl>
+</dt><dd> Map public identifiers and entity names to system identifiers using the catalog entry file whose system identifier is <i>sysid</i>.</dd></dl>
 <p> <code>-C</code>, <code>&#8211;catalogs</code></p>
 <dl>
 <dt>
-<dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-d</code><i>directory</i>, <code>&#8211;entity_output_location=</code><i>directory</i></p>
 <dl>
 <dt>
-<dd> Place output files in <i>directory</i>.</dl>
+</dt><dd> Place output files in <i>directory</i>.</dd></dl>
 <p> <code>-D</code><i>directory</i>, <code>&#8211;directory=</code><i>directory</i></p>
 <dl>
 <dt>
-<dd> Search <i>directory</i> for files specified in system identifiers. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> Search <i>directory</i> for files specified in system identifiers. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-e</code>, <code>&#8211;open-entities</code></p>
 <dl>
 <dt>
-<dd> Describe open entities in error messages.</dl>
+</dt><dd> Describe open entities in error messages.</dd></dl>
 <p> <code>-E</code><i>max_errors</i>, <code>&#8211;max-errors=</code><i>max_errors</i></p>
 <dl>
 <dt>
-<dd> Give up after <i>max_errors</i> errors.</dl>
+</dt><dd> Give up after <i>max_errors</i> errors.</dd></dl>
 <p> <code>-f</code><i>file</i>, <code>&#8211;error-file=</code><i>file</i></p>
 <dl>
 <dt>
-<dd> Redirect errors to <i>file</i>. This is useful mainly with shells that do not support redirection of stderr.</dl>
+</dt><dd> Redirect errors to <i>file</i>. This is useful mainly with shells that do not support redirection of stderr.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;open-elements</code></p>
 <dl>
 <dt>
-<dd> Describe open elements in error messages.</dl>
+</dt><dd> Describe open elements in error messages.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display a help text and exit.</dl>
+</dt><dd> Display a help text and exit.</dd></dl>
 <p> <code>-i</code><i>name</i>, <code>&#8211;include=</code><i>name</i></p>
 <dl>
 <dt>
-<dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-l</code><i>dtd-file</i>, <code>&#8211;dtd_location=</code><i>dtd-file</i></p>
 <dl>
 <dt>
-<dd> Specify that the resulting XML file should conform to the DTD in <i>dtd-file</i>.</dl>
+</dt><dd> Specify that the resulting XML file should conform to the DTD in <i>dtd-file</i>.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;error-numbers</code></p>
 <dl>
 <dt>
-<dd> Show error numbers in error messages.</dl>
+</dt><dd> Show error numbers in error messages.</dd></dl>
 <p> <code>&#8211;references</code></p>
 <dl>
 <dt>
-<dd> Show references in error messages.</dl>
+</dt><dd> Show references in error messages.</dd></dl>
 <p> <code>-R</code>, <code>&#8211;restricted</code></p>
 <dl>
 <dt>
-<dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the version number and exit.</dl>
+</dt><dd> Print the version number and exit.</dd></dl>
 <p> <code>-w</code><i>type</i>, <code>&#8211;warning=</code><i>type</i></p>
 <dl>
 <dt>
-<dd> Control warnings and errors according to type. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> Control warnings and errors according to type. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-x</code><i>xml_output_option</i>, <code>&#8211;xml-output-option=</code><i>xml_output_option</i></p>
 <dl>
 <dt>
-<dd> Control the XML output according to the value of <i>xml_output_option</i> as follows: </p>
+</dt><dd> Control the XML output according to the value of <i>xml_output_option</i> as follows: </dd>
 <p> <code>no-nl-in-tag</code> Don&#8217;t use newlines inside start-tags. Usually <code>osx</code> uses newlines inside start-tags so as to reduce the probability of excessively long lines. </p>
 <p> <code>id</code> Output attribute declarations for ID attributes. </p>
 <p> <code>notation</code> Output declarations for notations. </p>
@@ -128,10 +128,10 @@ description: "osx – An SGML to XML converter"
 <p> <code>James Clark</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <p> <code>Ian Castle</code> &lt;ian.castle [at] openjade.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <h2>Index</h2>

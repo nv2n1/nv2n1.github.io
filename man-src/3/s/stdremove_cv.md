@@ -15,10 +15,7 @@ std::remove_cv&lt; typename &gt; -
 <h3>Public Types</h3>
 
 <pre><code>typedef remove_const&lt; typename
-
-
 remove_volatile&lt; _Tp &gt;::type &gt;
-
 ::type type&quot;</code></pre>
 
 <h2>Detailed Description</h2>

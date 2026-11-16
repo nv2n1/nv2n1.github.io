@@ -11,16 +11,16 @@ description: "XkbVirtualModsToReal – Determines the mapping of virtual modifie
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbVirtualModsToReal</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>virtual_mask</i><code>,</code> <code>unsigned int *</code><i>mask_rtrn</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description for input device</p>
-<dt><i>&#8211; virtual_mask</i></p>
-<dd>virtual modifier mask to translate</p>
-<dt><i>&#8211; mask_rtrn</i></p>
-<dd>backfilled with real modifiers</dl>
+</dd><dd>keyboard description for input device</dd>
+<dt><i>&#8211; virtual_mask</i></dt>
+<dd>virtual modifier mask to translate</dd>
+<dt><i>&#8211; mask_rtrn</i></dt>
+<dd>backfilled with real modifiers</dd></dl>
 <h2>Description</h2>
 <p>Xkb maintains a <i>virtual modifier mapping, </i> which lists the virtual modifiers associated with, or bound to, each key. The real modifiers bound to a virtual modifier always include all of the modifiers bound to any of the keys that specify that virtual modifier in their virtual modifier mapping. The <i>server.vmodmap </i> array indicates which virtual modifiers are bound to each key; each entry is a bitmask for the virtual modifier bits. The <i>server.vmodmap </i> array is indexed by keycode. </p>
 <p> The <i>vmodmap </i> and <i>vmods </i> members of the server map are the &quot;master&quot; virtual modifier definitions. Xkb automatically propagates any changes to these fields to all other fields that use virtual modifier mappings. </p>
@@ -30,10 +30,10 @@ description: "XkbVirtualModsToReal – Determines the mapping of virtual modifie
 <p> If the keyboard description defined by <i>xkb </i> includes bindings for virtual modifiers, <i>XkbVirtualModsToReal </i> uses those bindings to determine the set of real modifiers that correspond to the set of virtual modifiers specified in <i>virtual_mask. </i> The <i>virtual_mask </i> parameter is a mask specifying the virtual modifiers to translate; the i-th bit (0 relative) of the mask represents the i-th virtual modifier. If <i>mask_rtrn </i> is non-NULL, <i>XkbVirtualModsToReal </i> backfills it with the resulting real modifier mask. If the keyboard description in <i>xkb </i> does not include virtual modifier bindings, <i>XkbVirtualModsToReal </i> returns False; otherwise, it returns True.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbVirtualModsToReal </i> function returns True if the keyboard description in <i>xkb </i> does include virtual modifier bindings.</p>
-<dt>False</p>
-<dd>The <i>XkbVirtualModsToReal </i> function returns False if the keyboard description in <i>xkb </i> does not include virtual modifier bindings.</dl>
+<dt>True</dt>
+<dd>The <i>XkbVirtualModsToReal </i> function returns True if the keyboard description in <i>xkb </i> does include virtual modifier bindings.</dd>
+<dt>False</dt>
+<dd>The <i>XkbVirtualModsToReal </i> function returns False if the keyboard description in <i>xkb </i> does not include virtual modifier bindings.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbgetmap/">XkbGetMap</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetvirtualmods/">XkbGetVirtualMods</a></code>(3)</p>
 <h2>Notes</h2>

@@ -18,12 +18,12 @@ description: "cacademo, cacafire – libcaca’s demonstration applications"
 <p> <code>cacafire</code> displays burning ASCII art flames.</p>
 <h2>KEYS</h2>
 <dl>
-<dt><code>Enter</code></p>
-<dd> forces an effect transition to happen</p>
-<dt><code>Space</code></p>
-<dd> pauses and resumes the program</p>
-<dt><code>Esc</code></p>
-<dd> exits the program</dl>
+<dt><code>Enter</code></dt>
+<dd> forces an effect transition to happen</dd>
+<dt><code>Space</code></dt>
+<dd> pauses and resumes the program</dd>
+<dt><code>Esc</code></dt>
+<dd> exits the program</dd></dl>
 <h2>BUGS</h2>
 <p> Please report any bugs you find to &lt;libcaca [at] lists.zoy.org&gt;.</p>
 <h2>LICENSE</h2>

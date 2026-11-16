@@ -18,18 +18,18 @@ description: "lookup_dcookie – return a directory entry’s path"
 <p> On success, <code>lookup_dcookie</code>() returns the length of the path string copied into the buffer. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The buffer was not valid.</p>
-<dt><code>EINVAL</code></p>
-<dd> The kernel has no registered cookie/directory entry mappings at the time of lookup, or the cookie does not refer to a valid directory entry.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> The name could not fit in the buffer.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The kernel could not allocate memory for the temporary buffer holding the path.</p>
-<dt><code>EPERM</code></p>
-<dd> The process does not have the capability <code>CAP_SYS_ADMIN</code> required to look up cookie values.</p>
-<dt><code>ERANGE</code></p>
-<dd> The buffer was not large enough to hold the path of the directory entry.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The buffer was not valid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The kernel has no registered cookie/directory entry mappings at the time of lookup, or the cookie does not refer to a valid directory entry.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> The name could not fit in the buffer.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The kernel could not allocate memory for the temporary buffer holding the path.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The process does not have the capability <code>CAP_SYS_ADMIN</code> required to look up cookie values.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> The buffer was not large enough to hold the path of the directory entry.</dd></dl>
 <h2>VERSIONS</h2>
 <p> Available since Linux 2.5.43. The <code>ENAMETOOLONG</code> error return was added in 2.5.70.</p>
 <h2>CONFORMING TO</h2>

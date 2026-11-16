@@ -11,26 +11,25 @@ KURVP1 - calculate values for KURVP2 usage
 
  This subroutine calculates certain values that are used by KURVP2 in order to compute an interpolatory spline under tension through a sequence of points in the plane that form a closed curve. The actual computation of the interpolated values must be done using KURVP2 .
 <h2>Description</h2><dl COMPACT><dt>N
-<dd>(integer,input) The number of input data points. (N &gt; 1)
-<dt>X
-<dd>(real,input) An array containing the X values of the points.
-<dt>Y
-<dd>(real,input) An array containing the Y values of the points. Adjacent pairs of points must be distinct.
-<dt>XP
-<dd>(real,output) An array of length N.
-<dt>YP
-<dd>(real,output) An array of length N.
-<dt>TEMP
-<dd>(real,input) Scratch space.
-<dt>S
-<dd>(real,output) An array of length N (this will be used to pass to KURVP2).
-<dt>SIGMA
-<dd>(real,input) Tension factor. Values near zero result in a cubic spline; large values (e.g. 50) result in nearly a polygonal line. A typical value is 1.
-<dt>IER
-<dd>(integer,output) An error return value. If IER is returned as 0, then no errors were detected. 
-
+</dt><dd>(integer,input) The number of input data points. (N &gt; 1)
+</dd><dt>X
+</dt><dd>(real,input) An array containing the X values of the points.
+</dd><dt>Y
+</dt><dd>(real,input) An array containing the Y values of the points. Adjacent pairs of points must be distinct.
+</dd><dt>XP
+</dt><dd>(real,output) An array of length N.
+</dd><dt>YP
+</dt><dd>(real,output) An array of length N.
+</dd><dt>TEMP
+</dt><dd>(real,input) Scratch space.
+</dd><dt>S
+</dt><dd>(real,output) An array of length N (this will be used to pass to KURVP2).
+</dd><dt>SIGMA
+</dt><dd>(real,input) Tension factor. Values near zero result in a cubic spline; large values (e.g. 50) result in nearly a polygonal line. A typical value is 1.
+</dd><dt>IER
+</dt><dd>(integer,output) An error return value. If IER is returned as 0, then no errors were detected. 
  = 1 if N is less than 2. 
- = 2 if a pair of adjacent points coincide.</dl><h2>Access</h2>To use KURVP1, load the NCAR Graphics library ngmath.
+ = 2 if a pair of adjacent points coincide.</dd></dl><h2>Access</h2>To use KURVP1, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>kurvp2, fitgrid_params. 
 
  Complete documentation for Fitgrid is available at URL 

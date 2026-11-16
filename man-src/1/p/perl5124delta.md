@@ -26,8 +26,8 @@ description: "perl5124delta – what is new for perl v5.12.4"
 <p> Updated the documentation for <code>rand()</code> in perlfunc to note that it is not cryptographically secure.</p>
 <h2>Platform Specific Notes</h2>
 <dl>
-<dt>Linux</p>
-<dd> Support Ubuntu 11.04&#8217;s new multi-arch library layout.</dl>
+<dt>Linux</dt>
+<dd> Support Ubuntu 11.04&#8217;s new multi-arch library layout.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.12.4 represents approximately 5 months of development since Perl 5.12.3 and contains approximately 200 lines of changes across 11 files from 8 authors. </p>
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.12.4: </p>

@@ -10,9 +10,7 @@ description: "pivot_sprite – Rotates a sprite around a specified point. Allegr
 <p>pivot_sprite &#8211; Rotates a sprite around a specified point. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void pivot_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y,
-
                   int cx, int cy, fixed angle);</code></pre>
 <h2>Description</h2>
 <p>Like rotate_sprite(), but aligns the point in the sprite given by (cx, cy) to (x, y) in the bitmap, then rotates around this point. </p>

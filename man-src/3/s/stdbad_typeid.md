@@ -10,7 +10,6 @@ description: "std::bad_typeid – std::bad_typeid"
 <p>std::bad_typeid &#8211; std::bad_typeid</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;typeinfo&gt;
-
 class bad_typeid : public std::exception;</code></pre>
 <p>An exception of this type is thrown when a typeid operator is applied to a dereferenced null pointer value of a polymorphic type.<br />
 &nbsp;std-bad typeid-inheritance.svg<br />
@@ -29,13 +28,11 @@ constructor <i>(public member function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;typeinfo&gt;
 struct S { // The type has to be polymorphic
     virtual void f();
 };
 int main()
-
 {
     S *p = nullptr;
     try {

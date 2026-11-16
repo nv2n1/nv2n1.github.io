@@ -19,14 +19,14 @@ description: "odidx – indexer of document files"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below. For a complete description, see the file:///usr/share/doc/qdbm-doc/spex.html#odeumcli.</p>
 <dl>
-<dt><code>-l </code><i>file</i></p>
-<dd> read a file and get list of paths of files to register. If `-&#8216; is specified, the standard input is read.</p>
-<dt><code>-wmax </code><i>num</i></p>
-<dd> specify the max number of words to be stored in the document database.</p>
-<dt><code>-tsuf </code><i>sufs</i></p>
-<dd> specify suffixes of plain text files in comma separated format. The default is `-tsuf .txt,.text&#8217;.</p>
-<dt><code>-hsuf </code><i>sufs</i></p>
-<dd> specify suffixes of HTML files in comma separated format. The default is `-hsuf .html,.htm&#8217;.</dl>
+<dt><code>-l </code><i>file</i></dt>
+<dd> read a file and get list of paths of files to register. If `-&#8216; is specified, the standard input is read.</dd>
+<dt><code>-wmax </code><i>num</i></dt>
+<dd> specify the max number of words to be stored in the document database.</dd>
+<dt><code>-tsuf </code><i>sufs</i></dt>
+<dd> specify suffixes of plain text files in comma separated format. The default is `-tsuf .txt,.text&#8217;.</dd>
+<dt><code>-hsuf </code><i>sufs</i></dt>
+<dd> specify suffixes of HTML files in comma separated format. The default is `-hsuf .html,.htm&#8217;.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> For example, to register files which are under `/home/mikio&#8217; and whose suffix are `.txt&#8217;, `.c&#8217;, or `.h&#8217;, perform the following command.<br />
  <code> odidx register -tsuf &quot;.txt,.c,.h&quot; -hsuf &quot;&quot; casket /home/mikio</code> </p>

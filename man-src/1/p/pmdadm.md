@@ -23,14 +23,14 @@ description: "pmdadm – Device Mapper PMDA"
 <p> <code>pmdadm</code> is launched by <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) and should never be executed directly. The Install and Remove scripts notify <code>pmcd</code> when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_PMDAS_DIR/dm/help</code></p>
-<dd> default help text file for the dm metrics</p>
-<dt><code>$PCP_PMDAS_DIR/dm/Install</code></p>
-<dd> installation script for the <code>pmdadm</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/dm/Remove</code></p>
-<dd> undo installation script for the <code>pmdadm</code> agent</p>
-<dt><code>$PCP_LOG_DIR/pmcd/dm.log</code></p>
-<dd> default log file for error messages from <code>pmdadm</code></dl>
+<dt><code>$PCP_PMDAS_DIR/dm/help</code></dt>
+<dd> default help text file for the dm metrics</dd>
+<dt><code>$PCP_PMDAS_DIR/dm/Install</code></dt>
+<dd> installation script for the <code>pmdadm</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/dm/Remove</code></dt>
+<dd> undo installation script for the <code>pmdadm</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/dm.log</code></dt>
+<dd> default log file for error messages from <code>pmdadm</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>

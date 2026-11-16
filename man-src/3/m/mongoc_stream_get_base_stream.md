@@ -13,8 +13,8 @@ description: "mongoc_stream_get_base_stream() – This function shall fetch the 
 mongoc_stream_get_base_stream (mongoc_stream_t *stream);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <p> This function shall fetch the underlying stream for streams that wrap a base stream. Such implementations include <code>mongoc_stream_buffered_t</code> and <code>mongoc_stream_tls_t</code> \&amp;. </p>
 <h2>Returns</h2>
 <p>A <code>mongoc_stream_t</code> or <code>NULL</code> \&amp;. </p>

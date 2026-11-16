@@ -14,19 +14,19 @@ description: "regulator_bulk_free – free multiple regulator consumers"
 <p><i>num_consumers</i></p>
 <dl>
 <dd>
-<dd>Number of consumers</dl>
+</dd><dd>Number of consumers</dd></dl>
 <p> <i>consumers</i></p>
 <dl>
-<dd>Consumer data; clients are stored here.</dl>
+<dd>Consumer data; clients are stored here.</dd></dl>
 <h2>Description</h2>
 <p>This convenience API allows consumers to free multiple regulator clients in a single API call.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

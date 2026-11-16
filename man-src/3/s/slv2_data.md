@@ -85,14 +85,14 @@ description: "Plugin data access –"
 <p> Note that normal hosts do NOT need to use this &#8211; slv2 does not load invalid plugins into plugin lists. This is included for plugin testing utilities, etc. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>true if <i>plugin</i> is valid.</dl>
+<dd>true if <i>plugin</i> is valid.</dd></dl>
 <p> Time = Query</p>
 <h3>SLV2Value slv2_plugin_get_uri (SLV2Pluginplugin)</h3>
 <p>Get the URI of <i>plugin</i>. Any serialization that refers to plugins should refer to them by this. Hosts SHOULD NOT save any filesystem paths, plugin indexes, etc. in saved files; save only the URI. </p>
 <p> The URI is a globally unique identifier for one specific plugin. Two plugins with the same URI are compatible in port signature, and should be guaranteed to work in a compatible and consistent way. If a plugin is upgraded in an incompatible way (eg if it has different ports), it MUST have a different URI than it&#8217;s predecessor. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a shared string which must not be modified or free()&#8217;d.</dl>
+<dd>a shared string which must not be modified or free()&#8217;d.</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_get_bundle_uri (SLV2Pluginplugin)</h3>
 <p>Get the (resolvable) URI of the plugins &#8216;main&#8217; bundle. This returns the URI of the bundle where the plugin itself was found. Note that the data for a plugin may be spread over many bundles, that is, slv2_plugin_get_data_uris may returns URIs which are not below this one. </p>
@@ -100,20 +100,20 @@ description: "Plugin data access –"
 <p> Note this always returns a fully qualified URI. If you want a local filesystem path, use slv2_uri_to_path. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a shared string which must not be modified or freed.</dl>
+<dd>a shared string which must not be modified or freed.</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Values slv2_plugin_get_data_uris (SLV2Pluginplugin)</h3>
 <p>Get the (resolvable) URIs of the RDF data files that define a plugin. Typical hosts should not need to use this function. </p>
 <p> Note this always returns fully qualified URIs. If you want local filesystem paths, use slv2_uri_to_path. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a list of complete URLs eg. &#8216;file:///foo/ABundle.lv2/aplug.ttl&#8217;, which is shared and must not be modified or freed.</dl>
+<dd>a list of complete URLs eg. &#8216;file:///foo/ABundle.lv2/aplug.ttl&#8217;, which is shared and must not be modified or freed.</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_get_library_uri (SLV2Pluginplugin)</h3>
 <p>Get the (resolvable) URI of the shared library for <i>plugin</i>. Note this always returns a fully qualified URI. If you want a local filesystem path, use slv2_uri_to_path. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a shared string which must not be modified or freed.</dl>
+<dd>a shared string which must not be modified or freed.</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_get_name (SLV2Pluginplugin)</h3>
 <p>Get the name of <i>plugin</i>. This is guaranteed to return the untranslated name (the doap:name in the data file without a language tag). Returned value must be freed by the caller. </p>
@@ -175,17 +175,17 @@ description: "Plugin data access –"
 <dl>
 <dd><i>plugin</i> The plugin to query.<br />
  <i>sparql_str</i> A SPARQL SELECT query.<br />
- <i>variable</i> The index of the variable to return results for (e.g. with &#8216;&lt;code&gt;SELECT ?foo ?bar&lt;/code&gt;&#8217; foo=0, bar=1).</dl>
+ <i>variable</i> The index of the variable to return results for (e.g. with &#8216;&lt;code&gt;SELECT ?foo ?bar&lt;/code&gt;&#8217; foo=0, bar=1).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>All matches for <i>variable</i>.</dl>
+<dd>All matches for <i>variable</i>.</dd></dl>
 <p> Time = Query</p>
 <h3>unsigned slv2_plugin_query_count (SLV2Pluginplugin, const char *sparql_str)</h3>
 <p>Query a plugin and return the number of results found. Note that this function will work, but is mostly meaningless for queries that are not SELECT DISTINCT. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>plugin</i> The plugin to query.<br />
- <i>sparql_str</i> A SPARQL SELECT DISTINCT query.</dl>
+ <i>sparql_str</i> A SPARQL SELECT DISTINCT query.</dd></dl>
 <p> Time = Query</p>
 <h3>SLV2Port slv2_plugin_get_port_by_index (SLV2Pluginplugin, uint32_tindex)</h3>
 <p>Get a port on this plugin by <i>index</i>. To perform multiple calls on a port, the returned value should be cached and used repeatedly. </p>
@@ -198,7 +198,7 @@ description: "Plugin data access –"
 <p> Returned value must be freed by caller using slv2_uis_free. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>plugin</i> The plugin to get the UIs for.</dl>
+<dd><i>plugin</i> The plugin to get the UIs for.</dd></dl>
 <p> Time = Query</p>
 <h3>SLV2Value slv2_plugin_get_author_name (SLV2Pluginplugin)</h3>
 <p>Get the full name of the plugin&#8217;s author. Returns NULL if author name is not present. Returned value must be freed by caller. </p>
@@ -225,44 +225,44 @@ description: "Plugin data access –"
 <p>Get the URI of a Plugin UI. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ui</i> The Plugin UI</dl>
+<dd><i>ui</i> The Plugin UI</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a shared value which must not be modified or freed.</dl>
+<dd>a shared value which must not be modified or freed.</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Values slv2_ui_get_classes (SLV2UIui)</h3>
 <p>Get the types (URIs of RDF classes) of a Plugin UI. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ui</i> The Plugin UI</dl>
+<dd><i>ui</i> The Plugin UI</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a shared value which must not be modified or freed.</dl>
+<dd>a shared value which must not be modified or freed.</dd></dl>
 <p> Time = O(1)</p>
 <h3>bool slv2_ui_is_a (SLV2UIui, SLV2Valueclass_uri)</h3>
 <p>Check whether a plugin UI is a given type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ui</i> The Plugin UI<br />
- <i>class_uri</i> The URI of the LV2 UI type to check this UI against</dl>
+ <i>class_uri</i> The URI of the LV2 UI type to check this UI against</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Value slv2_ui_get_bundle_uri (SLV2UIui)</h3>
 <p>Get the URI for a Plugin UI&#8217;s bundle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ui</i> The Plugin UI</dl>
+<dd><i>ui</i> The Plugin UI</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a shared value which must not be modified or freed.</dl>
+<dd>a shared value which must not be modified or freed.</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Value slv2_ui_get_binary_uri (SLV2UIui)</h3>
 <p>Get the URI for a Plugin UI&#8217;s shared library. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ui</i> The Plugin UI</dl>
+<dd><i>ui</i> The Plugin UI</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a shared value which must not be modified or freed.</dl>
+<dd>a shared value which must not be modified or freed.</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Values slv2_port_get_value (SLV2Pluginplugin, SLV2Portport, SLV2Valuepredicate)</h3>
 <p>Port analog of slv2_plugin_get_value. Time = Query</p>
@@ -301,12 +301,12 @@ description: "Plugin data access –"
 <p>Return a binding in <i>results</i> by index. Indices correspond to selected variables in the query in order of appearance. Returned value must be freed by caller with slv2_value_free. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL if binding value can not be expressed as an SLV2Value.</dl>
+<dd>NULL if binding value can not be expressed as an SLV2Value.</dd></dl>
 <h3>SLV2Value slv2_results_get_binding_value_by_name (SLV2Resultsresults, const char *name)</h3>
 <p>Return a binding in <i>results</i> by name. <i>name</i> corresponds to the name of the SPARQL variable (without the &#8216;?&#8217;). Returned value must be freed by caller with slv2_value_free. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>NULL if binding value can not be expressed as an SLV2Value.</dl>
+<dd>NULL if binding value can not be expressed as an SLV2Value.</dd></dl>
 <h3>const char* slv2_results_get_binding_name (SLV2Resultsresults, unsignedindex)</h3>
 <p>Return the name of a binding in <i>results</i>. Returned value is shared and must not be freed by caller. Indices correspond to selected variables in the query in order of appearance.</p>
 <h3>SLV2Value slv2_scale_point_get_label (SLV2ScalePointpoint)</h3>

@@ -18,27 +18,27 @@ description: "atalkd.conf – Configuration file used by"
 <p> The possible options and their meanings are: </p>
 <p> <code>-addr </code><i>net.node</i></p>
 <dl>
-<dd>Allows specification of the net and node numbers for this interface, specified in Appletalk numbering format (example: <code>-addr 66.6</code>).</dl>
+<dd>Allows specification of the net and node numbers for this interface, specified in Appletalk numbering format (example: <code>-addr 66.6</code>).</dd></dl>
 <p> <code>-dontroute</code></p>
 <dl>
-<dd>Disables Appletalk routing. It is the opposite of <code>-router</code>.</dl>
+<dd>Disables Appletalk routing. It is the opposite of <code>-router</code>.</dd></dl>
 <p> <code>-net first[-last]</code></p>
 <dl>
-<dd>Allows the available net to be set, optionally as a range.</dl>
+<dd>Allows the available net to be set, optionally as a range.</dd></dl>
 <p> <code>-noallmulti</code> (linux only)</p>
 <dl>
-<dd>On linux the interfaces, atalkd uses, are set to ALLMULTI by default caused by countless NICs having problems without being forced into this mode (some even don&#8217;t work with allmulti set). In case, you&#8217;ve a NIC known to support multicasts properly, you might want to set this option causing less packets to be processed</dl>
+<dd>On linux the interfaces, atalkd uses, are set to ALLMULTI by default caused by countless NICs having problems without being forced into this mode (some even don&#8217;t work with allmulti set). In case, you&#8217;ve a NIC known to support multicasts properly, you might want to set this option causing less packets to be processed</dd></dl>
 <p> <code>-phase ( 1 | 2 )</code></p>
 <dl>
-<dd>Specifies the Appletalk phase that this interface is to use (either Phase 1 or Phase 2).</dl>
+<dd>Specifies the Appletalk phase that this interface is to use (either Phase 1 or Phase 2).</dd></dl>
 <p> <code>-router</code></p>
 <dl>
-<dd>Like <code>-seed</code>, but allows single interface routing. It is the opposite of <code>-dontroute</code>.</dl>
+<dd>Like <code>-seed</code>, but allows single interface routing. It is the opposite of <code>-dontroute</code>.</dd></dl>
 <p> <code>-seed</code></p>
 <dl>
-<dd>The seed option only works if you have multiple interfaces. It also causes all missing arguments to be automagically configured from the network.</dl>
+<dd>The seed option only works if you have multiple interfaces. It also causes all missing arguments to be automagically configured from the network.</dd></dl>
 <p> <code>-zone </code><i>zonename</i></p>
 <dl>
-<dd>Specifies a specific zone that this interface should appear on (example: <code>-zone &quot;Parking Lot&quot;</code>). Please note that zones with spaces and other special characters should be enclosed in parentheses.</dl>
+<dd>Specifies a specific zone that this interface should appear on (example: <code>-zone &quot;Parking Lot&quot;</code>). Please note that zones with spaces and other special characters should be enclosed in parentheses.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8) </p>

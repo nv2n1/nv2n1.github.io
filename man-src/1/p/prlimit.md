@@ -19,133 +19,133 @@ description: "prlimit – get and set process resource limits"
 <p> Because of the nature of limits, the soft limit must be lower or equal to the high limit (also called the ceiling). To see all available resource limits, refer to the RESOURCE OPTIONS section. </p>
 <dl>
 <dt>
-<dd> &bull; <i>soft</i>:_hard_ Specify both limits.</dl>
+</dt><dd> &bull; <i>soft</i>:_hard_ Specify both limits.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>soft</i>: Specify only the soft limit.</dl>
+</dt><dd> &bull; <i>soft</i>: Specify only the soft limit.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; :<i>hard</i> Specify only the hard limit.</dl>
+</dt><dd> &bull; :<i>hard</i> Specify only the hard limit.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>value</i> Specify both limits to the same value.</dl>
+</dt><dd> &bull; <i>value</i> Specify both limits to the same value.</dd></dl>
 <h2>GENERAL OPTIONS</h2>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>&#8211;noheadings</code></p>
 <dl>
 <dt>
-<dd> Do not print a header line.</dl>
+</dt><dd> Do not print a header line.</dd></dl>
 <p> <code>-o, &#8211;output</code> <i>list</i></p>
 <dl>
 <dt>
-<dd> Define the output columns to use. If no output arrangement is specified, then a default set is used. Use <code>&#8211;help</code> to get a list of all supported columns.</dl>
+</dt><dd> Define the output columns to use. If no output arrangement is specified, then a default set is used. Use <code>&#8211;help</code> to get a list of all supported columns.</dd></dl>
 <p> <code>-p, &#8211;pid</code></p>
 <dl>
 <dt>
-<dd> Specify the process id; if none is given, the running process will be used.</dl>
+</dt><dd> Specify the process id; if none is given, the running process will be used.</dd></dl>
 <p> <code>&#8211;raw</code></p>
 <dl>
 <dt>
-<dd> Use the raw output format.</dl>
+</dt><dd> Use the raw output format.</dd></dl>
 <p> <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Verbose mode.</dl>
+</dt><dd> Verbose mode.</dd></dl>
 <p> <code>-V, &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <h2>RESOURCE OPTIONS</h2>
 <p> <code>-c, &#8211;core</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum size of a core file.</dl>
+</dt><dd> Maximum size of a core file.</dd></dl>
 <p> <code>-d, &#8211;data</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum data size.</dl>
+</dt><dd> Maximum data size.</dd></dl>
 <p> <code>-e, &#8211;nice</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum nice priority allowed to raise.</dl>
+</dt><dd> Maximum nice priority allowed to raise.</dd></dl>
 <p> <code>-f, &#8211;fsize</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum file size.</dl>
+</dt><dd> Maximum file size.</dd></dl>
 <p> <code>-i, &#8211;sigpending</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum number of pending signals.</dl>
+</dt><dd> Maximum number of pending signals.</dd></dl>
 <p> <code>-l, &#8211;memlock</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum locked-in-memory address space.</dl>
+</dt><dd> Maximum locked-in-memory address space.</dd></dl>
 <p> <code>-m, &#8211;rss</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum Resident Set Size (RSS).</dl>
+</dt><dd> Maximum Resident Set Size (RSS).</dd></dl>
 <p> <code>-n, &#8211;nofile</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum number of open files.</dl>
+</dt><dd> Maximum number of open files.</dd></dl>
 <p> <code>-q, &#8211;msgqueue</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum number of bytes in POSIX message queues.</dl>
+</dt><dd> Maximum number of bytes in POSIX message queues.</dd></dl>
 <p> <code>-r, &#8211;rtprio</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum real-time priority.</dl>
+</dt><dd> Maximum real-time priority.</dd></dl>
 <p> <code>-s, &#8211;stack</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum size of the stack.</dl>
+</dt><dd> Maximum size of the stack.</dd></dl>
 <p> <code>-t, &#8211;cpu</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> CPU time, in seconds.</dl>
+</dt><dd> CPU time, in seconds.</dd></dl>
 <p> <code>-u, &#8211;nproc</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum number of processes.</dl>
+</dt><dd> Maximum number of processes.</dd></dl>
 <p> <code>-v, &#8211;as</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Address space limit.</dl>
+</dt><dd> Address space limit.</dd></dl>
 <p> <code>-x, &#8211;locks</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Maximum number of file locks held.</dl>
+</dt><dd> Maximum number of file locks held.</dd></dl>
 <p> <code>-y, &#8211;rttime</code>[=<i>limits</i>]</p>
 <dl>
 <dt>
-<dd> Timeout for real-time tasks.</dl>
+</dt><dd> Timeout for real-time tasks.</dd></dl>
 <h2>NOTES</h2>
 <p> The <code>prlimit</code> system call is supported since Linux 2.6.36, older kernels will break this program.</p>
 <h2>EXAMPLES</h2>
 <p> <code>prlimit &#8211;pid 13134</code></p>
 <dl>
 <dt>
-<dd> Display limit values for all current resources.</dl>
+</dt><dd> Display limit values for all current resources.</dd></dl>
 <p> <code>prlimit &#8211;pid 13134 &#8211;rss &#8211;nofile=1024:4095</code></p>
 <dl>
 <dt>
-<dd> Display the limits of the RSS, and set the soft and hard limits for the number of open files to 1024 and 4095, respectively.</dl>
+</dt><dd> Display the limits of the RSS, and set the soft and hard limits for the number of open files to 1024 and 4095, respectively.</dd></dl>
 <p> <code>prlimit &#8211;pid 13134 &#8211;nproc=512:</code></p>
 <dl>
 <dt>
-<dd> Modify only the soft limit for the number of processes.</dl>
+</dt><dd> Modify only the soft limit for the number of processes.</dd></dl>
 <p> <code>prlimit &#8211;pid $$ &#8211;nproc=unlimited</code></p>
 <dl>
 <dt>
-<dd> Set for the current process both the soft and ceiling values for the number of processes to unlimited.</dl>
+</dt><dd> Set for the current process both the soft and ceiling values for the number of processes to unlimited.</dd></dl>
 <p> <code>prlimit &#8211;cpu=10 sort -u hugefile</code></p>
 <dl>
 <dt>
-<dd> Set both the soft and hard CPU time limit to ten seconds and run &#8216;sort&#8217;.</dl>
+</dt><dd> Set both the soft and hard CPU time limit to ten seconds and run &#8216;sort&#8217;.</dd></dl>
 <h2>AUTHORS</h2>
 <p> &#8211; In memory of Dennis M. Ritchie.</p>
 <h2>SEE ALSO</h2>

@@ -39,11 +39,8 @@ The implicit_conversion from floating-point to integral types also rounds toward
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; std::fixed
               &lt;&lt; &quot;trunc(+2.7) = &quot; &lt;&lt; std::trunc(+2.7) &lt;&lt; '

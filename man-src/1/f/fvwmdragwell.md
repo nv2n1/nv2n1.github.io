@@ -28,20 +28,20 @@ description: "FvwmDragWell – A XDND drag well"
 <h2>Configuration Options</h2>
 <p>FvwmDragWell reads the same .fvwm2rc file as fvwm reads when it starts up, and looks for certain configuration options: </p>
 <dl>
-<dt>*FvwmDragWell: Geometry <i>geometry</i></p>
-<dd>Completely or partially specifies the Fvwm window location and geometry, in standard X11 notation. The default size is 48&#215;48. </p>
-<dt>*FvwmDragWell: DragWellGeometry <i>geometry</i></p>
-<dd>Specifies the geometry of the drag box in the FvwmDragWell window, in the standard X11 notation. Default is 30&#215;30+9+9 </p>
-<dt>*FvwmDragWell: Colorset <i>colorset</i></p>
-<dd>The colorset is used for the background and shading of the drag well. See the man page of FvwmTheme for a description of colorsets. </p>
-<dt>*FvwmDragWell: Fore <i>Color</i></p>
-<dd>The foreground color. The default foreground color is grey60. </p>
-<dt>*FvwmDragWell: Back <i>Color</i></p>
-<dd>The background color. The default background color is black. </p>
-<dt>*FvwmDragWell: Shadow <i>Color</i></p>
-<dd>The shadow color of the button relief. The default foreground relief color is grey20. </p>
-<dt>*FvwmDragWell: Hilite <i>Color</i></p>
-<dd>The hilight color of the button relief. The default background relief color is grey90. </p>
+<dt>*FvwmDragWell: Geometry <i>geometry</i></dt>
+<dd>Completely or partially specifies the Fvwm window location and geometry, in standard X11 notation. The default size is 48&#215;48. </dd>
+<dt>*FvwmDragWell: DragWellGeometry <i>geometry</i></dt>
+<dd>Specifies the geometry of the drag box in the FvwmDragWell window, in the standard X11 notation. Default is 30&#215;30+9+9 </dd>
+<dt>*FvwmDragWell: Colorset <i>colorset</i></dt>
+<dd>The colorset is used for the background and shading of the drag well. See the man page of FvwmTheme for a description of colorsets. </dd>
+<dt>*FvwmDragWell: Fore <i>Color</i></dt>
+<dd>The foreground color. The default foreground color is grey60. </dd>
+<dt>*FvwmDragWell: Back <i>Color</i></dt>
+<dd>The background color. The default background color is black. </dd>
+<dt>*FvwmDragWell: Shadow <i>Color</i></dt>
+<dd>The shadow color of the button relief. The default foreground relief color is grey20. </dd>
+<dt>*FvwmDragWell: Hilite <i>Color</i></dt>
+<dd>The hilight color of the button relief. The default background relief color is grey90. </dd>
 </dl>
 <h2>Bugs</h2>
 <h2>CREDITS and COPYRIGHTS</h2>

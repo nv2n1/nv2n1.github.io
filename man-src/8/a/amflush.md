@@ -10,33 +10,33 @@ description: "amflush – flush Amanda backup files from holding disk to tape"
 <p>amflush &#8211; flush Amanda backup files from holding disk to tape</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amflush</code> [-b] [-f] [&#8211;exact-match] [-s] [-D&nbsp;<wbr><i>datestamp</i>] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] <i>config</i> [<i>host</i>&nbsp;<wbr>[<i>disk</i>&#8230;]&#8230;]</dl>
+<dt> <code>amflush</code> [-b] [-f] [&#8211;exact-match] [-s] [-D&nbsp;<wbr><i>datestamp</i>] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] <i>config</i> [<i>host</i>&nbsp;<wbr>[<i>disk</i>&#8230;]&#8230;]</dt></dl>
 <h2>Description</h2>
 <p><code>Amflush</code></p>
-<dd>writes Amanda backups from the holding disks to tape, and updates the Amanda info database and <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5) accordingly. It is similar to amdump, but does not perform any backup operations on Amanda clients. Backups may stay in a holding disk when something is wrong with the tape at the time <code>amdump</code> is run. When this happens, the problem must be corrected and <code>amflush</code> run by hand. </p>
+<dd>writes Amanda backups from the holding disks to tape, and updates the Amanda info database and <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5) accordingly. It is similar to amdump, but does not perform any backup operations on Amanda clients. Backups may stay in a holding disk when something is wrong with the tape at the time <code>amdump</code> is run. When this happens, the problem must be corrected and <code>amflush</code> run by hand. </dd>
 <p> The command optionally takes a set of DLE specifications (see <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7)) to narrow the DLEs for which dumps will be flushed. All dumps in holding are flushed if no expressions are given.</p>
 <h2>Options</h2>
 <p><code>-b</code></p>
 <dl>
-<dd>Run <code>amflush</code> in batch mode. All datestamps are selected unless specified. The flush is started without confirmation.</dl>
+<dd>Run <code>amflush</code> in batch mode. All datestamps are selected unless specified. The flush is started without confirmation.</dd></dl>
 <p> <code>-f</code></p>
 <dl>
-<dd>Run <code>amflush</code> in foreground. <code>Amflush</code> normally detaches itself from the tty and runs as a background process. With the <code>-f</code> option, <code>amflush</code> stays in the foreground. This is useful if <code>amflush</code> is run as part of another script that, for example, advances the tape after the flush is completed.</dl>
+<dd>Run <code>amflush</code> in foreground. <code>Amflush</code> normally detaches itself from the tty and runs as a background process. With the <code>-f</code> option, <code>amflush</code> stays in the foreground. This is useful if <code>amflush</code> is run as part of another script that, for example, advances the tape after the flush is completed.</dd></dl>
 <p> <code>-s</code></p>
 <dl>
-<dd>Write log to stdout/stderr instead of the amflush log file. Requires the <code>-f</code> option.</dl>
+<dd>Write log to stdout/stderr instead of the amflush log file. Requires the <code>-f</code> option.</dd></dl>
 <p> <code>-D datestamp</code></p>
 <dl>
-<dd>specify a datestamp expression you want to flush; see <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7) for details on the format of this expression. <code>-D 20001225-7</code> will flush all dumps from 25 december 2000 to 27 december 2000.</dl>
+<dd>specify a datestamp expression you want to flush; see <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7) for details on the format of this expression. <code>-D 20001225-7</code> will flush all dumps from 25 december 2000 to 27 december 2000.</dd></dl>
 <p> <code>&#8211;exact-match</code></p>
 <dl>
-<dd>The host and disk are parsed as exact values</dl>
+<dd>The host and disk are parsed as exact values</dd></dl>
 <p> <i>host</i> [<i>disk</i>]*</p>
 <dl>
-<dd>Specify the host and disk on which the command will work &#8212; see the description of DLE specifications in <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7).</dl>
+<dd>Specify the host and disk on which the command will work &#8212; see the description of DLE specifications in <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7).</dd></dl>
 <p> <code>-o </code><i>configoption</i></p>
 <dl>
-<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dl>
+<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dd></dl>
 <p> You can specify many host/disk expressions, only disks that match an expression will be flushed. All disks are flushed if no expressions are given. see the &quot;HOST &amp; DISK EXPRESSION&quot; section of <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) for a description. </p>
 <p> <code>Amflush</code> will look in the holding disks specified by the <i>amanda.conf</i> file in /usr/local/etc/amanda/<i>config</i> for any non-empty Amanda work directories. It then prompts you to select a directory or to process all of the directories. The work directories in the holding disks are named by the date at the time <code>amdump</code> was run, e.g. 19910215. </p>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>

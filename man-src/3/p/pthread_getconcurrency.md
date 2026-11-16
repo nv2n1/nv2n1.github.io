@@ -10,10 +10,8 @@ description: "pthread_setconcurrency, pthread_getconcurrency – set/get the con
 <p>pthread_setconcurrency, pthread_getconcurrency &#8211; set/get the concurrency level</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_setconcurrency(int new_level);
 int pthread_getconcurrency(void);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_setconcurrency</code>() function informs the implementation of the application&#8217;s desired concurrency level, specified in <i>new_level</i>. The implementation takes this only as a hint: POSIX.1 does not specify the level of concurrency that should be provided as a result of calling <code>pthread_setconcurrency</code>(). </p>
@@ -25,8 +23,8 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_setconcurrency</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>new_level</i> is negative.</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>new_level</i> is negative.</dd></dl>
 <p> POSIX.1 also documents an <code>EAGAIN</code> error (&quot;the value specified by <i>new_level</i> would cause a system resource to be exceeded&quot;).</p>
 <h2>Versions</h2>
 <p>These functions are available in glibc since version 2.1.</p>

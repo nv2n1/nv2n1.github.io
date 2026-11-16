@@ -15,10 +15,10 @@ description: "pnmsmooth – smooth out an image"
 <p> Smooths out an image by replacing each pixel with the average of its width X height neighbors. It is implemented as a C progam that generates a PGM convolution matrix and then invokes <i>pnmconvol</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-size width height</code></p>
-<dd> Specifies the size of the convolution matrix. Default size is a 3&#215;3 matrix. Width and height sizes must be odd. Maximum size of convolution matrix is limited by the maximum value for a pixel such that (width * height * 2) must not exceed the maximum pixel value.</p>
-<dt><code>-dump dumpfile</code></p>
-<dd> Generates and saves the convolution file only. Use of this option does not invoke pnmconvol.</dl>
+<dt><code>-size width height</code></dt>
+<dd> Specifies the size of the convolution matrix. Default size is a 3&#215;3 matrix. Width and height sizes must be odd. Maximum size of convolution matrix is limited by the maximum value for a pixel such that (width * height * 2) must not exceed the maximum pixel value.</dd>
+<dt><code>-dump dumpfile</code></dt>
+<dd> Generates and saves the convolution file only. Use of this option does not invoke pnmconvol.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHORS</h2>

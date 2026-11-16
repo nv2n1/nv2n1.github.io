@@ -15,10 +15,10 @@ description: "ctie – merge or apply CWEB change files"
 <p> The <code>ctie</code> program is used to process multiple change files used with the CWEB system for literate programming. The CWEB programs allow one to apply patches to a source file (the <i>masterfile</i>) by means of a single change file. <code>ctie</code> can be used to either merge up to 32 change files into a single one or to apply the changes to the <i>masterfile</i> in order to create a new master file. Output of either the new change file or the patched master file goes into <i>outputfile</i>. Any include files (indicated using the CWEB <code>@i</code> command) are fully expanded during <code>ctie</code> processing, which means that the change files are able to modify the contents of any included files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Create a single change file from the given <i>changefile</i>s.</p>
-<dt><code>-m</code></p>
-<dd> Create a new master file by applying the given <i>changefile</i>s.</dl>
+<dt><code>-c</code></dt>
+<dd> Create a single change file from the given <i>changefile</i>s.</dd>
+<dt><code>-m</code></dt>
+<dd> Create a new master file by applying the given <i>changefile</i>s.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The environment variable CWEBINPUTS is used to search for the input files, or the system default if CWEBINPUTS is not set. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching. To avoid conflicts with other programs that also use the CWEBINPUTS environment, you can be more specific and use CWEBINPUTS_ctie for special requirements in CTIE.</p>
 <h2>SEE ALSO</h2>

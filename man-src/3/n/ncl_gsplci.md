@@ -12,7 +12,7 @@ GSPLCI (Polyline color index) - sets the polyline color index.
 
  void gset_line_colr_ind(Gint line_colr_ind);
 <h2>Description</h2><dl COMPACT><dt>COLI
-<dd>(Integer, Input) - A color index.</dl><h2>Usage</h2>All lines drawn with calls to the GPL output primitive will be drawn with the color associated with index COLI until GSPLCI is called again and a new index is assigned. 
+</dt><dd>(Integer, Input) - A color index.</dd></dl><h2>Usage</h2>All lines drawn with calls to the GPL output primitive will be drawn with the color associated with index COLI until GSPLCI is called again and a new index is assigned. 
 
  For all GKS output primitives, color is assigned using a color index. The color indices run from 0 to 255, where 0 is the background color index and 1 is the foreground color index. Color values are associated with indices by calls to the GKS routine GSCR. If a color index is used that has no user-assigned color value set in a GSCR call, then a device-dependent color value will be assigned to that index.
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.

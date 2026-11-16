@@ -15,15 +15,15 @@ snd_dmaengine_pcm_set_config_from_dai_data - Initializes a dma slave config usin
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>dma_data</i>
-<dl><dd>DAI DMA data</dl>
+<dl><dd>DAI DMA data</dd></dl>
  
 
  <i>slave_config</i>
-<dl><dd>DMA slave configuration</dl>
+<dl><dd>DMA slave configuration</dd></dl>
 
 <h2>Description</h2>
 

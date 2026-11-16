@@ -20,11 +20,11 @@ description: "X Window Destroy Functions – Functions to destroy X windows."
 <p>Deletes the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The given window.</dl>
+<dd><i>win</i> The given window.</dd></dl>
 <h3>EAPI void ecore_x_window_delete_request_send (Ecore_X_Window win)</h3>
 <p>Sends a delete request to the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The given window.</dl>
+<dd><i>win</i> The given window.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

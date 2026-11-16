@@ -22,12 +22,12 @@ int io_destroy(aio_context_t ctx_id);
 <p> On success, <code>io_destroy</code>() returns 0. For the failure return, see NOTES.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The context pointed to is invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> The AIO context specified by <i>ctx_id</i> is invalid.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>io_destroy</code>() is not implemented on this architecture.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The context pointed to is invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The AIO context specified by <i>ctx_id</i> is invalid.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>io_destroy</code>() is not implemented on this architecture.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The asynchronous I/O system calls first appeared in Linux 2.5.</p>
 <h2>CONFORMING TO</h2>

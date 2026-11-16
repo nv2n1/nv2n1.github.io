@@ -11,7 +11,6 @@ std::strncat - std::strncat
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     char *strncat(char *dest, const char *src, std::size_t count);</code></pre> 
 Appends a byte string pointed to by src to a byte string pointed to by dest. At most count characters are copied. The resulting byte string is null-terminated. 
 The destination byte string must have enough space for the contents of both dest and src plus the terminating null character, except that the size of src is limited to count. 
@@ -30,10 +29,8 @@ dest
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstring&gt;
-
 #include &lt;cstdio&gt;
 int main()
-
 {
     char str[50] = &quot;Hello &quot;;
     char str2[50] = &quot;World!&quot;;

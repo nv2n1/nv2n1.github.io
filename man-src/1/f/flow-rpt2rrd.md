@@ -15,26 +15,26 @@ description: "flow-rpt2rrd – Convert flow-report CSV output to RRDtool format.
 <p> The <code>flow-rpt2rrd</code> utility processes the CSV output of flow-report into RRDtool format. The aggregates for a key are each stored as a DS in RRD filename {rrd_path,&quot;/&quot;,key,rrd_postfix,&quot;.rrd&quot;}. By default a DS is created for flows, octets, and packets. The key must be specified, for example an ip-port report could use smtp,nntp,ssh,telnet as the keys which would create a separate RRD for each key.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Set debug level to debug_level (debugging code)</p>
-<dt><code>-h</code></p>
-<dd> Help.</p>
-<dt><code>-k</code><i> keys</i><code>|</code><i>html</i></p>
-<dd> Comma separated list of key values. If the report has symbols then the key must be the symbol, ie smtp not 25. The totals_* lines may be used if they are enabled in the report. There is no default, keys must be specified with -k or -K.</p>
-<dt><code>-K</code><i> keys_file</i></p>
-<dd> Load keys from <i>keys_file</i>. See -k.</p>
-<dt><code>-f</code></p>
-<dd> Comma separated list of columns to store. Each column maps to a DS in the RRD. Defaults to flows,octets,packets</p>
-<dt><code>-n</code></p>
-<dd> Enable symbol table lookups. For example TCP port 25 = smtp. This will result in RRD file names with the symbolic names if symbol lookups were not enabled in the report.</p>
-<dt><code>-p</code><i> rrd_path</i></p>
-<dd> Set path to RRD files. Defaults to &quot;.&quot;.</p>
-<dt><code>-P</code><i> rrd_postfix</i></p>
-<dd> Set RRD file name postfix. Defaults to &quot;&quot;.</p>
-<dt><code>-r</code><i> rrd_storage</i></p>
-<dd> Set RRD storage for 5 minute, 30 minute, 2 hour, and 1 day databases. List items are : seperated. Defaults to 600:600:600:732.</p>
-<dt><code>-v</code></p>
-<dd> Enable verbose output.</dl>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Set debug level to debug_level (debugging code)</dd>
+<dt><code>-h</code></dt>
+<dd> Help.</dd>
+<dt><code>-k</code><i> keys</i><code>|</code><i>html</i></dt>
+<dd> Comma separated list of key values. If the report has symbols then the key must be the symbol, ie smtp not 25. The totals_* lines may be used if they are enabled in the report. There is no default, keys must be specified with -k or -K.</dd>
+<dt><code>-K</code><i> keys_file</i></dt>
+<dd> Load keys from <i>keys_file</i>. See -k.</dd>
+<dt><code>-f</code></dt>
+<dd> Comma separated list of columns to store. Each column maps to a DS in the RRD. Defaults to flows,octets,packets</dd>
+<dt><code>-n</code></dt>
+<dd> Enable symbol table lookups. For example TCP port 25 = smtp. This will result in RRD file names with the symbolic names if symbol lookups were not enabled in the report.</dd>
+<dt><code>-p</code><i> rrd_path</i></dt>
+<dd> Set path to RRD files. Defaults to &quot;.&quot;.</dd>
+<dt><code>-P</code><i> rrd_postfix</i></dt>
+<dd> Set RRD file name postfix. Defaults to &quot;&quot;.</dd>
+<dt><code>-r</code><i> rrd_storage</i></dt>
+<dd> Set RRD storage for 5 minute, 30 minute, 2 hour, and 1 day databases. List items are : seperated. Defaults to 600:600:600:732.</dd>
+<dt><code>-v</code></dt>
+<dd> Enable verbose output.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre><code>
 The following example shows the combined use of flow-nfilter (inline), 

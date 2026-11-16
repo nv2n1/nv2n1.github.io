@@ -12,34 +12,23 @@ std::experimental::static_pointer_cast,std::experimental::dynamic_pointer_cast, 
 
 <pre><code>template &lt;class T, class U&gt;
 (library fundamentals
-
      std::experimental::shared_ptr&lt;T&gt;
          static_pointer_cast((1)TS)
-
              const std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (library fundamentals
-
      std::experimental::shared_ptr&lt;T&gt;
          dynamic_pointer_cast((2)TS)
-
              const std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (library fundamentals
-
      std::experimental::shared_ptr&lt;T&gt;
          const_pointer_cast(const(3) TS)
-
              std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (library fundamentals
-
      std::experimental::shared_ptr&lt;T&gt;
          reinterpret_pointer_cast((4)TS)
-
              const std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;</code></pre> 
 Creates a new instance of std::experimental::shared_ptr whose stored pointer is 
 obtained from r's stored pointer using a cast expression. If r is empty, so is the 

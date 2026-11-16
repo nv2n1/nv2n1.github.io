@@ -17,7 +17,7 @@ description: "QuantLib::ConvertibleFixedCouponBond – convertible fixed-coupon 
 <p>convertible fixed-coupon bond </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Most methods inherited from <code>Bond</code> (such as yield or the yield-based dirtyPrice and cleanPrice) refer to the underlying plain-vanilla bond and do not take convertibility and callability into account.</dl>
+<dd>Most methods inherited from <code>Bond</code> (such as yield or the yield-based dirtyPrice and cleanPrice) refer to the underlying plain-vanilla bond and do not take convertibility and callability into account.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>ConvertibleBonds.cpp</code>. </p>
 <h2>Author</h2>

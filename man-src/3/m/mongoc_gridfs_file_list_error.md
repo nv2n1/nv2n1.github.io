@@ -14,11 +14,11 @@ mongoc_gridfs_file_list_error (mongoc_gridfs_file_list_t *list,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>list</code></p>
-<dd>A <code>mongoc_gridfs_file_list_t</code> \&amp;.</dl>
+<dt><code>list</code></dt>
+<dd>A <code>mongoc_gridfs_file_list_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches any error that has occurred while trying to retrieve the file list. </p>
 <h2>Errors</h2>

@@ -11,16 +11,16 @@ description: "XkbNoteNameChanges – Note the changed names in a changes structu
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbNoteNameChanges</code> <code>(XkbNameChangesPtr </code><i>old</i><code>,</code> <code>XkbNamesNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; old</i></p>
+<dt><i>&#8211; old</i></dt>
 <dd>
-<dd>XkbNameChanges structure to be updated</p>
-<dt><i>&#8211; new</i></p>
-<dd>event from which changes are to be copied</p>
-<dt><i>&#8211; wanted</i></p>
-<dd>types of names for which changes are to be noted</dl>
+</dd><dd>XkbNameChanges structure to be updated</dd>
+<dt><i>&#8211; new</i></dt>
+<dd>event from which changes are to be copied</dd>
+<dt><i>&#8211; wanted</i></dt>
+<dd>types of names for which changes are to be noted</dd></dl>
 <h2>Description</h2>
 <p>When your application receives a XkbNamesNotify event, you can note the changed names in a changes structure using <i>XkbNoteNameChanges.</i> </p>
 <p> The <i>wanted </i> parameter is the bitwise inclusive OR of the valid names mask bits shown in Table 1. <i>XkbNoteNameChanges </i> copies any changes that are reported in <i>new </i> and specified in <i>wanted </i> into the changes record specified by <i>old.</i> </p>

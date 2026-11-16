@@ -18,14 +18,14 @@ description: "ppmtoicr – convert a portable pixmap into NCSA ICR format"
 <p> Note that there is no icrtoppm tool &#8211; this transformation is one way.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-windowname</code><i>name</i></p>
-<dd> Output will be displayed in <i>name</i> (Default is to use <i>ppmfile</i> or &quot;untitled&quot; if standard input is read.)</p>
-<dt><code>-expand</code><i>expand</i></p>
-<dd> Output will be expanded on display by factor <i>expand</i> (For example, a value of 2 will cause four pixels to be displayed for every input pixel.)</p>
-<dt><code>-display</code><i>display</i></p>
-<dd> Output will be displayed on screen numbered <i>display</i></p>
-<dt><code>-rle</code></p>
-<dd> Use run-length encoded format for display. (This will nearly always result in a quicker display, but may skew the colormap.)</dl>
+<dt><code>-windowname</code><i>name</i></dt>
+<dd> Output will be displayed in <i>name</i> (Default is to use <i>ppmfile</i> or &quot;untitled&quot; if standard input is read.)</dd>
+<dt><code>-expand</code><i>expand</i></dt>
+<dd> Output will be expanded on display by factor <i>expand</i> (For example, a value of 2 will cause four pixels to be displayed for every input pixel.)</dd>
+<dt><code>-display</code><i>display</i></dt>
+<dd> Output will be displayed on screen numbered <i>display</i></dd>
+<dt><code>-rle</code></dt>
+<dd> Use run-length encoded format for display. (This will nearly always result in a quicker display, but may skew the colormap.)</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To display a <i>ppm</i> file using the protocol: </p>
 <pre>

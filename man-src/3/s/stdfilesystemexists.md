@@ -11,13 +11,10 @@ std::filesystem::exists - std::filesystem::exists
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     bool exists(std::filesystem::file_status s) noexcept;
 (1)(since C++ 17)
-
     bool exists(const std::filesystem::path &amp;p);
 (2)(since C++ 17)
-
     bool exists(const std::filesystem::path &amp;p, std::error_code &amp;ec) noexcept;</code></pre> 
 Checks if the given file status or path corresponds to an existing file or directory. 
 1) Equivalent to status_known(s) &amp;&amp; s.type() != file_type::not_found. 
@@ -46,16 +43,11 @@ The information provided by this function is usually also provided as a byproduc
 &nbsp;This section is incomplete 
 &nbsp;Reason: switch to directory_entry::exists 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 void demo_exists(const fs::path &amp;p, fs::file_status s = fs::file_status{})
-
 {
     std::cout &lt;&lt; p;
     if (fs::status_known(s) ? fs::exists(s) : fs::exists(p))
@@ -63,9 +55,7 @@ void demo_exists(const fs::path &amp;p, fs::file_status s = fs::file_status{})
     else
         std::cout &lt;&lt; &quot; does not exist\n&quot;;
 }
-
 int main()
-
 {
     fs::create_directory(&quot;sandbox&quot;);
     std::ofstream(&quot;sandbox/file&quot;); // create regular file

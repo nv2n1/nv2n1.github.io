@@ -19,7 +19,7 @@ description: "dggqrf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DGGQRF computes a generalized QR factorization of an N - by - M matrix A and an N - by - P matrix B : A = Q * R, B = Q * T * Z,
                                                                                                       where Q is an N - by - N orthogonal matrix, Z is a P - by - P orthogonal matrix, and R and T assume one of the forms : if N &gt;= M, R = (R11)M, or if N&lt;M, R = (R11 R12)N,
@@ -35,11 +35,11 @@ P
 denotes the inverse of the matrix B, and Z **T denotes the
                                              transpose of the matrix Z.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The number of rows of the matrices A and B. N &gt;= 0.
@@ -124,18 +124,18 @@ the remaining<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 The matrix Q is represented as a product of elementary reflectors
     Q = H(1) H(2)...H(k),
@@ -160,8 +160,9 @@ v(1
       : p - k + i - 1),
     and taub in TAUB(i).To form Z explicitly, use LAPACK subroutine DORGRQ.To use Z to update another matrix, use LAPACK subroutine DORMRQ.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 215 of file dggqrf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -18,30 +18,30 @@ description: "ncrename – netCDF Renamer"
 <p> According to the netCDF User&#8217;s Guide, renaming properties in netCDF files does not incur the penalty of recopying the entire file when the <i>new_name</i> is shorter than the <i>old_name</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a </code></p>
-<dd> <i>old_name</i>, <i>new_name</i> Attribute renaming. The old and new names of the attribute are specified by the associated <i>old_name</i> and <i>new_name</i> values. Global attributes are treated no differently than variable attributes. This option may be specified more than once. You cannot change the attribute name for one particular variable (unless it is uniquely named); all occurrences of the attribute of a given name will be renamed. This is considered an oversight and will be addressed in a future version of NCO.</dl>
+<dt><code>-a </code></dt>
+<dd> <i>old_name</i>, <i>new_name</i> Attribute renaming. The old and new names of the attribute are specified by the associated <i>old_name</i> and <i>new_name</i> values. Global attributes are treated no differently than variable attributes. This option may be specified more than once. You cannot change the attribute name for one particular variable (unless it is uniquely named); all occurrences of the attribute of a given name will be renamed. This is considered an oversight and will be addressed in a future version of NCO.</dd></dl>
 <dl>
-<dt><code>-d </code></p>
-<dd> <i>old_name</i>, <i>new_name</i> Dimension renaming. The old and new names of the dimension are specified by the associated <i>old_name</i> and <i>new_name</i> values. This option may be specified more than once.</p>
-<dt><code>-g </code></p>
-<dd> <i>old_name</i>, <i>new_name</i> Group renaming. The old and new names of the group are specified by the associated <i>old_name</i> and <i>new_name</i> values. This option may be specified more than once.</p>
-<dt><code>-v </code></p>
-<dd> <i>old_name</i>, <i>new_name</i> Variable renaming. The old and new names of the variable are specified by the associated <i>old_name</i> and <i>new_name</i> values. This option may be specified more than once.</p>
-<dt><code>-i </code></p>
-<dd> Interactive. <code>ncrename</code> will prompt for confirmation before overwriting an existing file.</dl>
+<dt><code>-d </code></dt>
+<dd> <i>old_name</i>, <i>new_name</i> Dimension renaming. The old and new names of the dimension are specified by the associated <i>old_name</i> and <i>new_name</i> values. This option may be specified more than once.</dd>
+<dt><code>-g </code></dt>
+<dd> <i>old_name</i>, <i>new_name</i> Group renaming. The old and new names of the group are specified by the associated <i>old_name</i> and <i>new_name</i> values. This option may be specified more than once.</dd>
+<dt><code>-v </code></dt>
+<dd> <i>old_name</i>, <i>new_name</i> Variable renaming. The old and new names of the variable are specified by the associated <i>old_name</i> and <i>new_name</i> values. This option may be specified more than once.</dd>
+<dt><code>-i </code></dt>
+<dd> Interactive. <code>ncrename</code> will prompt for confirmation before overwriting an existing file.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Rename the variable <code>p</code> to <code>pressure</code> and <code>t</code> to <code>temperature</code> in netCDF <code>in.nc</code>. In this case <code>p</code> must exist in the input file (or <code>ncrename</code> will abort), but the presence of <code>t</code> is optional:</p>
 <dl>
 <dt>
-<dd> ncrename -v p,pressure -v .t,temperature in.nc</dl>
+</dt><dd> ncrename -v p,pressure -v .t,temperature in.nc</dd></dl>
 <p> <code>ncrename</code> does not automatically attach dimensions to variables of the same name. If you want to rename a coordinate variable so that it remains a coordinate variable, you must separately rename both the dimension and the variable:</p>
 <dl>
 <dt>
-<dd> ncrename -d lon,longitude -v lon,longitude in.nc</dl>
+</dt><dd> ncrename -d lon,longitude -v lon,longitude in.nc</dd></dl>
 <p> Create netCDF <code>out.nc</code> identical to <code>in.nc</code> except the attribute <code>_FillValue</code> is changed to <code>missing_value</code> (in all variables which possess it) and the global attribute <code>Zaire</code> is changed to <code>Congo</code>:</p>
 <dl>
 <dt>
-<dd> ncrename -a _FillValue,missing_value -a Zaire,Congo in.nc out.nc</dl>
+</dt><dd> ncrename -a _FillValue,missing_value -a Zaire,Congo in.nc out.nc</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>NCO</code> manual pages written by Charlie Zender and originally formatted by Brian Mays. </p>
 <h2>REPORTING BUGS</h2>
@@ -54,7 +54,7 @@ description: "ncrename – netCDF Renamer"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <p> <code><a href="/docs/linux/man/1-ncap/">ncap</a></code>(1), <code><a href="/docs/linux/man/1-ncap2/">ncap2</a></code>(1), <code><a href="/docs/linux/man/1-ncatted/">ncatted</a></code>(1), <code><a href="/docs/linux/man/1-ncbo/">ncbo</a></code>(1), <code><a href="/docs/linux/man/1-ncdiff/">ncdiff</a></code>(1), <code><a href="/docs/linux/man/1-nces/">nces</a></code>(1), <code><a href="/docs/linux/man/1-ncecat/">ncecat</a></code>(1), <code><a href="/docs/linux/man/1-ncflint/">ncflint</a></code>(1), <code><a href="/docs/linux/man/1-ncks/">ncks</a></code>(1), <code><a href="/docs/linux/man/1-nco/">nco</a></code>(1), <code><a href="/docs/linux/man/1-ncpdq/">ncpdq</a></code>(1), <code><a href="/docs/linux/man/1-ncra/">ncra</a></code>(1), <code><a href="/docs/linux/man/1-ncrcat/">ncrcat</a></code>(1), <code><a href="/docs/linux/man/1-ncrename/">ncrename</a></code>(1), <code><a href="/docs/linux/man/1-ncwa/">ncwa</a></code>(1) </p>
 <h2>HOMEPAGE</h2>

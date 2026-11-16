@@ -20,12 +20,12 @@ int ares_save_options(ares_channel channel, struct ares_options *options, int *o
 <h2>RETURN VALUES</h2>
 <p> <code><a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a>(3)</code> can return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> The channel data was successfuly stored</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> The memory was exhausted</p>
-<dt><code>ARES_ENODATA</code></p>
-<dd> The channel data identified by <i>channel</i> were invalid.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The channel data was successfuly stored</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> The memory was exhausted</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> The channel data identified by <i>channel</i> were invalid.</dd></dl>
 <h2>NOTE</h2>
 <p> Since c-ares 1.6.0 the ares_options struct has been &quot;locked&quot; meaning that it won&#8217;t be extended to cover new functions. This function will remain functioning, but it can only return config data that can be represented in this config struct, which may no longer be the complete set of config options. <code><a href="/docs/linux/man/3-ares_dup/">ares_dup</a>(3)</code> will not have that restriction. </p>
 <p> The ares_options struct can not handle potential IPv6 name servers the ares_channel might be configured to use. The <code><a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a>(3)</code> function will only return IPv4 servers, if any. In order to retrieve all name servers an ares_channel might be using, the <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a>(3)</code> function must be used instead.</p>

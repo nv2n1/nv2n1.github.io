@@ -29,7 +29,7 @@ description: "QuantLib::LfmHullWhiteParameterization – Libor market model para
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet npvs and comparison with Black pricing.</dl>
+</dt><dd> the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet npvs and comparison with Black pricing.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

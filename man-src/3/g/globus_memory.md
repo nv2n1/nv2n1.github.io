@@ -29,9 +29,9 @@ description: "Memory Pool –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>mem_info</i> The memory management datatype<br />
+</dt><dd> <i>mem_info</i> The memory management datatype<br />
  <i>node_size</i> The size of the memory to allocated with each pop.<br />
- <i>node_count</i> The initial number of nodes allocated with the memory management structure. If it is exceeded more will be allocated.</dl>
+ <i>node_count</i> The initial number of nodes allocated with the memory management structure. If it is exceeded more will be allocated.</dd></dl>
 <h3>void* globus_memory_pop_node (globus_memory_t *mem_info)</h3>
 <p> Retrieve a memory item from a pool. Pop a chunk of memory out of the memory management structure. Similar to malloc(). When no longer using this item, return it to the pool via <code>globus_memory_push_node()</code>.</p>
 <h3><code>globus_bool_t</code> globus_memory_push_node (globus_memory_t *mem_info, void *buffer)</h3>
@@ -39,5 +39,5 @@ description: "Memory Pool –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

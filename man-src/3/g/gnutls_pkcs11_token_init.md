@@ -14,12 +14,12 @@ description: "gnutls_pkcs11_token_init – API function"
 <p> <code>int gnutls_pkcs11_token_init(const char * </code><i>token_url</i><code>, const char * </code><i>so_pin</i><code>, const char * </code><i>label</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * token_url</p>
-<dd> A PKCS <code>11</code> URL specifying a token</p>
-<dt>const char * so_pin</p>
-<dd> Security Officer&#8217;s PIN</p>
-<dt>const char * label</p>
-<dd> A name to be used for the token</dl>
+<dt>const char * token_url</dt>
+<dd> A PKCS <code>11</code> URL specifying a token</dd>
+<dt>const char * so_pin</dt>
+<dd> Security Officer&#8217;s PIN</dd>
+<dt>const char * label</dt>
+<dd> A name to be used for the token</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will initialize (format) a token. If the token is at a factory defaults state the security officer&#8217;s PIN given will be set to be the default. Otherwise it should match the officer&#8217;s PIN.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_pkcs11_token_init – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

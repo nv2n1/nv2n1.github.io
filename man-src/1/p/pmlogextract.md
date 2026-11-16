@@ -18,39 +18,39 @@ description: "pmlogextract – reduce, extract, concatenate and merge Performanc
 <h2>COMMAND LINE OPTIONS</h2>
 <p> The command line options for <code>pmlogextract</code> are as follows: </p>
 <dl>
-<dt><code>-c</code><i> configfile</i></p>
-<dd> Extract only the metrics specified in <i>configfile</i> from the <i>input</i> PCP archive log(s). The <i>configfile</i> syntax accepted by <code>pmlogextract</code> is explained in more detail in the <code>Configuration File Syntax</code> section.</dl>
+<dt><code>-c</code><i> configfile</i></dt>
+<dd> Extract only the metrics specified in <i>configfile</i> from the <i>input</i> PCP archive log(s). The <i>configfile</i> syntax accepted by <code>pmlogextract</code> is explained in more detail in the <code>Configuration File Syntax</code> section.</dd></dl>
 <dl>
-<dt><code>-d</code></p>
-<dd> Desperate mode. Normally if a fatal error occurs, all trace of the partially written PCP archive <i>output</i> is removed. With the <code>-d</code> option, the <i>output</i> archive log is not removed.</dl>
+<dt><code>-d</code></dt>
+<dd> Desperate mode. Normally if a fatal error occurs, all trace of the partially written PCP archive <i>output</i> is removed. With the <code>-d</code> option, the <i>output</i> archive log is not removed.</dd></dl>
 <dl>
-<dt><code>-f</code></p>
-<dd> For most common uses, all of the input archive logs will have been collected in the same timezone. But if this is not the case, then <code>pmlogextract</code> must choose one of the timezones from the input archive logs to be used as the timezone for the output archive log. The default is to use the timezone from the <i>last</i> input archive log. The <code>-f</code> option forces the timezone from the <i>first</i> input archive log to be used.</p>
-<dt><code>-S</code><i> starttime</i></p>
-<dd> Define the start of a time window to restrict the samples retrieved or specify a &#8220;natural&#8221; alignment of the output sample times; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). See also the <code>-w</code> option.</dl>
+<dt><code>-f</code></dt>
+<dd> For most common uses, all of the input archive logs will have been collected in the same timezone. But if this is not the case, then <code>pmlogextract</code> must choose one of the timezones from the input archive logs to be used as the timezone for the output archive log. The default is to use the timezone from the <i>last</i> input archive log. The <code>-f</code> option forces the timezone from the <i>first</i> input archive log to be used.</dd>
+<dt><code>-S</code><i> starttime</i></dt>
+<dd> Define the start of a time window to restrict the samples retrieved or specify a &#8220;natural&#8221; alignment of the output sample times; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). See also the <code>-w</code> option.</dd></dl>
 <dl>
-<dt><code>-s</code><i> samples</i></p>
-<dd> The argument <i>samples</i> defines the number of samples to be written to <i>output</i>. If <i>samples</i> is 0 or <code>-s</code> is not specified, <code>pmlogextract</code> will sample until the end of the PCP archive log, or the end of the time window as specified by <code>-T</code>, whichever comes first. The <code>-s</code> option will override the <code>-T</code> option if it occurs sooner.</dl>
+<dt><code>-s</code><i> samples</i></dt>
+<dd> The argument <i>samples</i> defines the number of samples to be written to <i>output</i>. If <i>samples</i> is 0 or <code>-s</code> is not specified, <code>pmlogextract</code> will sample until the end of the PCP archive log, or the end of the time window as specified by <code>-T</code>, whichever comes first. The <code>-s</code> option will override the <code>-T</code> option if it occurs sooner.</dd></dl>
 <dl>
-<dt><code>-T</code><i> endtime</i></p>
-<dd> Define the termination of a time window to restrict the samples retrieved or specify a &#8220;natural&#8221; alignment of the output sample times; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). See also the <code>-w</code> option.</dl>
+<dt><code>-T</code><i> endtime</i></dt>
+<dd> Define the termination of a time window to restrict the samples retrieved or specify a &#8220;natural&#8221; alignment of the output sample times; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). See also the <code>-w</code> option.</dd></dl>
 <dl>
-<dt><code>-v</code><i> volsamples</i></p>
-<dd> The <i>output</i> archive log is potentially a multi-volume data set, and the <code>-v</code> option causes <code>pmlogextract</code> to start a new volume after <i>volsamples</i> log records have been written to the archive log.</p>
+<dt><code>-v</code><i> volsamples</i></dt>
+<dd> The <i>output</i> archive log is potentially a multi-volume data set, and the <code>-v</code> option causes <code>pmlogextract</code> to start a new volume after <i>volsamples</i> log records have been written to the archive log.</dd>
 <dl>
 <dt>
-<dd>
-<p> Independent of any <code>-v</code> option, each volume of an archive is limited to no more than 2^31 bytes, so <i>pmlogextract</i> will automatically create a new volume for the archive before this limit is reached.</dl>
+</dt><dd>
+<p> Independent of any <code>-v</code> option, each volume of an archive is limited to no more than 2^31 bytes, so <i>pmlogextract</i> will automatically create a new volume for the archive before this limit is reached.</dd></dl>
 </dl>
 <dl>
-<dt><code>-w</code></p>
-<dd> Where <code>-S</code> and <code>-T</code> specify a time window within the same day, the <code>-w</code> flag will cause the data within the time window to be extracted, for every day in the archive log. For example, the options <code>-w -S @11:00 -T @15:00</code> specify that <code>pmlogextract</code> should include archive log records only for the periods from 11am to 3pm on each day. When <code>-w</code> is used, the <i>output</i> archive log will contain <i>&lt;mark&gt;</i> records to indicate the temporal discontinuity between the end of one time window and the start of the next.</dl>
+<dt><code>-w</code></dt>
+<dd> Where <code>-S</code> and <code>-T</code> specify a time window within the same day, the <code>-w</code> flag will cause the data within the time window to be extracted, for every day in the archive log. For example, the options <code>-w -S @11:00 -T @15:00</code> specify that <code>pmlogextract</code> should include archive log records only for the periods from 11am to 3pm on each day. When <code>-w</code> is used, the <i>output</i> archive log will contain <i>&lt;mark&gt;</i> records to indicate the temporal discontinuity between the end of one time window and the start of the next.</dd></dl>
 <dl>
-<dt><code>-Z</code><i> timezone</i></p>
-<dd> Use <i>timezone</i> when displaying the date and time. <i>Timezone</i> is in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dl>
+<dt><code>-Z</code><i> timezone</i></dt>
+<dd> Use <i>timezone</i> when displaying the date and time. <i>Timezone</i> is in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dd></dl>
 <dl>
-<dt><code>-z</code></p>
-<dd> Use the local timezone of the host from the input archive logs. The default is to initially use the timezone of the local host.</dl>
+<dt><code>-z</code></dt>
+<dd> Use the local timezone of the host from the input archive logs. The default is to initially use the timezone of the local host.</dd></dl>
 <h2>CONFIGURATION FILE SYNTAX</h2>
 <p> The <i>configfile</i> contains metrics of interest &#8211; only those metrics (or instances) mentioned explicitly or implicitly in the configuration file will be included in the <i>output</i> archive. Each specifications must begin on a new line, and may span multiple lines in the configuration file. Instances may also be specified, but they are optional. The format for each specification is </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>metric&nbsp;<wbr>[[instance[,instance&#8230;]]] </p>
@@ -82,29 +82,29 @@ description: "pmlogextract – reduce, extract, concatenate and merge Performanc
 <h2>METADATA CHECKS</h2>
 <p> When more than one <i>input</i> archive set is specified, <code>pmlogextract</code> performs a number of checks to ensure the metadata is consistent for metrics appearing in more than one of the <i>input</i> archive sets. These checks include:</p>
 <dl>
-<dt>*</p>
-<dd> metric data type is the same</p>
-<dt>*</p>
-<dd> metric semantics are the same</p>
-<dt>*</p>
-<dd> metric units are the same</p>
-<dt>*</p>
-<dd> metric is either always singular or always has the same instance domain</p>
-<dt>*</p>
-<dd> metrics with the same name have the same PMID</p>
-<dt>*</p>
-<dd> metrics with the same PMID have the same name</dl>
+<dt>*</dt>
+<dd> metric data type is the same</dd>
+<dt>*</dt>
+<dd> metric semantics are the same</dd>
+<dt>*</dt>
+<dd> metric units are the same</dd>
+<dt>*</dt>
+<dd> metric is either always singular or always has the same instance domain</dd>
+<dt>*</dt>
+<dd> metrics with the same name have the same PMID</dd>
+<dt>*</dt>
+<dd> metrics with the same PMID have the same name</dd></dl>
 <p> If any of these checks fail, <code>pmlogextract</code> reports the details and aborts without creating the <i>output</i> archive. </p>
 <p> To address these semantic issues, use <code><a href="/docs/linux/man/1-pmlogrewrite/">pmlogrewrite</a></code>(1) to translate the <i>input</i> archives into equivalent archives with consistent metdadata before using <code>pmlogextract</code>.</p>
 <h2>FILES</h2>
 <p> For each of the <i>input</i> and <i>output</i> archive logs, several physical files are used.</p>
 <dl>
-<dt><i>archive</i><code>.meta</p>
-<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</p>
-<dt></code><i>archive</i><code>.0</p>
-<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;) &#8211; for <i>input</i> these files may have been previously compressed with <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) or <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) and thus may have an additional <code>.bz2</code> or <code>.gz</code> suffix.</p>
-<dt><i>archive</i><code>.index</p>
-<dd> temporal index to support rapid random access to the other files in the archive log.</dl>
+<dt><i>archive</i><code>.meta</dt>
+<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</dd>
+<dt></code><i>archive</i><code>.0</dt>
+<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;) &#8211; for <i>input</i> these files may have been previously compressed with <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) or <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) and thus may have an additional <code>.bz2</code> or <code>.gz</code> suffix.</dd>
+<dt><i>archive</i><code>.index</dt>
+<dd> temporal index to support rapid random access to the other files in the archive log.</dd></dl>
 <p> </code></p>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>

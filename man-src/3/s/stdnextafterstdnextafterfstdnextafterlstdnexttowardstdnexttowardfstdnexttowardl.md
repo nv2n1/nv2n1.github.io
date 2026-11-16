@@ -23,13 +23,9 @@ long double nexttoward ( long double from, long double to ); <code>(7)</code> <i
 long double nexttowardl( long double from, long double to );<br />
 double nexttoward ( IntegralType from, long double to ); <code>(8)</code> <i>(since C++11)</i> </p>
 <pre><code>Returns the next representable value of from in the direction of to.
-
 1-3) If from equals to to, to is returned.
-
 5-7) If from equals to to, to is returned, converted from long double to the return type of the function without loss of range or precision.
-
 4) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by (1-3). If any argument has integral_type, it is cast to double. If any argument is long double, then the return type Promoted is also long double, otherwise the return type is always double.
-
 8) A set of overloads or a function template accepting the from argument of any integral_type. Equivalent to (6) (the argument is cast to double).
 </code></pre>
 <h2>Parameters</h2>
@@ -51,16 +47,11 @@ IEC 60559 recommends that from is returned whenever from==to. These functions re
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cfloat&gt;
-
 #include &lt;cfenv&gt;
 int main()
-
 {
     float from1 = 0, to1 = std::nextafter(from1, 1.f);
     std::cout &lt;&lt; &quot;The next representable float after &quot; &lt;&lt; std::setprecision(20) &lt;&lt; from1

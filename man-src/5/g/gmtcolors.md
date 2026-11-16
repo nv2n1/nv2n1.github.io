@@ -12,18 +12,18 @@ description: "gmtcolors – Explanation of color codes in GMT"
 <p>Colors can be specified in GMT as arguments to commands, generally as part of the <code>-G</code> or <code>-W</code> options to select polygon fill or outline pen. Colors are also used in color palette tables (CPT files) that help convert numerical values to colors. </p>
 <p> GMT allows several ways to represent a color:</p>
 <dl>
-<dt><code>Colorname</code></p>
-<dd>Specify one of the named colors below. All names are case-insensitive.</p>
-<dt><code>R/G/B</code></p>
-<dd>Specify <code>R</code>ed, <code>G</code>reen, and <code>B</code>lue levels. Each value is separated by a slash and is in the range from 0 (dark) to 255 (light). This representation is used to color monitors.</p>
-<dt><code>#RRGGBB</code></p>
-<dd>Specify <code>R</code>ed, <code>G</code>reen, and <code>B</code>lue levels in the way that it is done in HTML. Use two characters for each color channel, ranging from 00 (dark) to FF (light). Upper and lower case are allowed.</p>
-<dt><code>Graylevel</code></p>
-<dd>For shades of gray, R = G = B, and only one number needs to be used. This representation is popular with black and white printers.</p>
-<dt><code>H-S-V</code></p>
-<dd>Specify <code>H</code>ue in the range 0 to 360 (degrees), <code>S</code> saturation between 0 (not saturated) and 1 (fully saturated), and value <code>V</code> between 0 (dark) and 1 (light). Number are separated by hyphens. This representation can be helpful when hue varies a lot.</p>
-<dt><code>C/M/Y/K</code></p>
-<dd>Specify <code>C</code>yan, <code>M</code>agenta, <code>Y</code>ellow, and blacBD(K). Each number is in the range from 0 (no paint) to 1 (maximum paint). This representation is used by most color printers.</dl>
+<dt><code>Colorname</code></dt>
+<dd>Specify one of the named colors below. All names are case-insensitive.</dd>
+<dt><code>R/G/B</code></dt>
+<dd>Specify <code>R</code>ed, <code>G</code>reen, and <code>B</code>lue levels. Each value is separated by a slash and is in the range from 0 (dark) to 255 (light). This representation is used to color monitors.</dd>
+<dt><code>#RRGGBB</code></dt>
+<dd>Specify <code>R</code>ed, <code>G</code>reen, and <code>B</code>lue levels in the way that it is done in HTML. Use two characters for each color channel, ranging from 00 (dark) to FF (light). Upper and lower case are allowed.</dd>
+<dt><code>Graylevel</code></dt>
+<dd>For shades of gray, R = G = B, and only one number needs to be used. This representation is popular with black and white printers.</dd>
+<dt><code>H-S-V</code></dt>
+<dd>Specify <code>H</code>ue in the range 0 to 360 (degrees), <code>S</code> saturation between 0 (not saturated) and 1 (fully saturated), and value <code>V</code> between 0 (dark) and 1 (light). Number are separated by hyphens. This representation can be helpful when hue varies a lot.</dd>
+<dt><code>C/M/Y/K</code></dt>
+<dd>Specify <code>C</code>yan, <code>M</code>agenta, <code>Y</code>ellow, and blacBD(K). Each number is in the range from 0 (no paint) to 1 (maximum paint). This representation is used by most color printers.</dd></dl>
 <h2>List Of Colors</h2>
 <p>The following list contains the named colors that can be used in GMT and their equivalent color codes. <center></p>
 <table>

@@ -10,32 +10,32 @@ description: "XQueryColor, XQueryColors, XLookupColor, XParseColor – obtain co
 <p>XQueryColor, XQueryColors, XLookupColor, XParseColor &#8211; obtain color values </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XQueryColor(Display *<i>display</i>, Colormap <i>colormap</i>, XColor *<i>def_in_out</i>);</p>
-<dd>int XQueryColors(Display *<i>display</i>, Colormap <i>colormap</i>, XColor <i>defs_in_out</i>[], int <i>ncolors</i>);</p>
-<dd>Status XLookupColor(Display *<i>display</i>, Colormap <i>colormap</i>, char *<i>color_name</i>, XColor *<i>exact_def_return</i>, XColor *<i>screen_def_return</i>);</p>
-<dd>Status XParseColor(Display *<i>display</i>, Colormap <i>colormap</i>, char *<i>spec</i>, XColor *<i>exact_def_return</i>);</dl>
+<dd>int XQueryColor(Display *<i>display</i>, Colormap <i>colormap</i>, XColor *<i>def_in_out</i>);</dd>
+<dd>int XQueryColors(Display *<i>display</i>, Colormap <i>colormap</i>, XColor <i>defs_in_out</i>[], int <i>ncolors</i>);</dd>
+<dd>Status XLookupColor(Display *<i>display</i>, Colormap <i>colormap</i>, char *<i>color_name</i>, XColor *<i>exact_def_return</i>, XColor *<i>screen_def_return</i>);</dd>
+<dd>Status XParseColor(Display *<i>display</i>, Colormap <i>colormap</i>, char *<i>spec</i>, XColor *<i>exact_def_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>colormap</i></p>
-<dd>Specifies the colormap.</p>
-<dt><i>color_name</i></p>
-<dd>Specifies the color name string (for example, red) whose color definition structure you want returned.</p>
-<dt><i>def_in_out</i></p>
-<dd>Specifies and returns the RGB values for the pixel specified in the structure.</p>
-<dt><i>defs_in_out</i></p>
-<dd>Specifies and returns an array of color definition structures for the pixel specified in the structure.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>exact_def_return</i></p>
-<dd>Returns the exact RGB values.</p>
-<dt><i>ncolors</i></p>
-<dd>Specifies the number of <code>XColor</code> structures in the color definition array.</p>
-<dt><i>screen_def_return</i></p>
-<dd>Returns the closest RGB values provided by the hardware.</p>
-<dt><i>spec</i></p>
-<dd>Specifies the color name string; case is ignored.</p>
-<dt><i>exact_def_return</i></p>
-<dd>Returns the exact color value for later use and sets the <code>DoRed</code>, <code>DoGreen</code>, and <code>DoBlue</code> flags.</dl>
+<dt><i>colormap</i></dt>
+<dd>Specifies the colormap.</dd>
+<dt><i>color_name</i></dt>
+<dd>Specifies the color name string (for example, red) whose color definition structure you want returned.</dd>
+<dt><i>def_in_out</i></dt>
+<dd>Specifies and returns the RGB values for the pixel specified in the structure.</dd>
+<dt><i>defs_in_out</i></dt>
+<dd>Specifies and returns an array of color definition structures for the pixel specified in the structure.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>exact_def_return</i></dt>
+<dd>Returns the exact RGB values.</dd>
+<dt><i>ncolors</i></dt>
+<dd>Specifies the number of <code>XColor</code> structures in the color definition array.</dd>
+<dt><i>screen_def_return</i></dt>
+<dd>Returns the closest RGB values provided by the hardware.</dd>
+<dt><i>spec</i></dt>
+<dd>Specifies the color name string; case is ignored.</dd>
+<dt><i>exact_def_return</i></dt>
+<dd>Returns the exact color value for later use and sets the <code>DoRed</code>, <code>DoGreen</code>, and <code>DoBlue</code> flags.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XQueryColor</code> function returns the current RGB value for the pixel in the <code>XColor</code> structure and sets the <code>DoRed</code>, <code>DoGreen</code>, and <code>DoBlue</code> flags. The <code>XQueryColors</code> function returns the RGB value for each pixel in each <code>XColor</code> structure and sets the <code>DoRed</code>, <code>DoGreen</code>, and <code>DoBlue</code> flags in each structure. </p>
 <p> <code>XQueryColor</code> and <code>XQueryColors</code> can generate <code>BadColor</code> and <code>BadValue</code> errors. </p>
@@ -80,10 +80,10 @@ description: "XQueryColor, XQueryColors, XLookupColor, XParseColor – obtain co
 <p> All of the values (C, H, V, X, Y, Z, a, b, u, v, y, x) are floating-point values. The syntax for these values is an optional plus or minus sign, a string of digits possibly containing a decimal point, and an optional exponent field consisting of an &#8220;E&#8221; or &#8220;e&#8221; followed by an optional plus or minus followed by a string of digits.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadColor</code></p>
-<dd>A value for a Colormap argument does not name a defined Colormap.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadColor</code></dt>
+<dd>A value for a Colormap argument does not name a defined Colormap.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xalloccolor/">XAllocColor</a>(3), <a href="/docs/linux/man/3-xcreatecolormap/">XCreateColormap</a>(3), <a href="/docs/linux/man/3-xstorecolors/">XStoreColors</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

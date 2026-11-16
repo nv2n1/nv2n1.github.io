@@ -33,11 +33,8 @@ constructor <i>(public member function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::shared_ptr&lt;int&gt; p1(new int(42));
     std::weak_ptr&lt;int&gt; wp(p1);

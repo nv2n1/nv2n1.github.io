@@ -11,9 +11,9 @@ description: "bogolexer – Utility program for separating email messages into t
 <p> bogolexer &#8211; Utility program for separating email messages into tokens </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>bogolexer</code> [-p] [-q] [-h] [-n] [-v] [-x&nbsp;<wbr><i>flags</i>] [-c&nbsp;<wbr><i>file</i>] [-C] [-D] [-I&nbsp;<wbr><i>file</i>] [-O&nbsp;<wbr><i>file</i>] [-V]</dl>
+<dt> <code>bogolexer</code> [-p] [-q] [-h] [-n] [-v] [-x&nbsp;<wbr><i>flags</i>] [-c&nbsp;<wbr><i>file</i>] [-C] [-D] [-I&nbsp;<wbr><i>file</i>] [-O&nbsp;<wbr><i>file</i>] [-V]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Bogolexer is part of the bogofilter Bayesian spam filter package. </p>
+<dd>Bogolexer is part of the bogofilter Bayesian spam filter package. </dd>
 <p> It is used to separate messages into tokens and to test new versions of the lexer.l code.</p>
 <h2>OPTIONS</h2>
 <p> The <code>-p</code> option tells bogolexer to print just the tokens read from stdin, without any extra messages. </p>
@@ -35,10 +35,10 @@ description: "bogolexer – Utility program for separating email messages into t
 <p> <a href="/docs/linux/man/1-bogofilter/">bogofilter</a>(1), <a href="/docs/linux/man/1-bogotune/">bogotune</a>(1), <a href="/docs/linux/man/1-bogoupgrade/">bogoupgrade</a>(1), <a href="/docs/linux/man/1-bogoutil/">bogoutil</a>(1)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> the bogofilter project page</p>
+<dt> 1.</dt>
+<dd> the bogofilter project page</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dd></dl>
 </dl>
 <h2>Index</h2>

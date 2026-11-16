@@ -58,104 +58,104 @@ Mouse 3 R C Module FvwmPager -transient</pre>
 <p>The invocation method was shown in the synopsis section </p>
 <h2>Configuration Options</h2>
 <dl>
-<dt>*FvwmPager: Geometry <i>geometry</i></p>
-<dd>Completely or partially specifies the pager windows location and geometry, in standard X11 notation. In order to maintain an undistorted aspect ratio, you might want to leave out either the width or height dimension of the geometry specification. </p>
-<dt>*FvwmPager: Rows <i>rows</i></p>
-<dd>Tells fvwm how many rows of desks to use when laying out the pager window. </p>
-<dt>*FvwmPager: Columns <i>columns</i></p>
-<dd>Tells fvwm how many columns of desks to use when laying out the pager window. </p>
-<dt>*FvwmPager: IconGeometry <i>geometry</i></p>
-<dd>Specifies a size (optional) and location (optional) for the pager&#8217;s icon window. Since there is no easy way for FvwmPager to determine the height of the icon&#8217;s label, you will have to make an allowance for the icon label height when using negative y-coordinates in the icon location specification (used to specify a location relative to the bottom instead of the top of the screen). </p>
-<dt>*FvwmPager: StartIconic</p>
-<dd>Causes the pager to start iconified. </p>
-<dt>*FvwmPager: NoStartIconic</p>
-<dd>Causes the pager to start normally. Useful for canceling the effect of the <i>StartIconic</i> option. </p>
-<dt>*FvwmPager: LabelsBelow</p>
-<dd>Causes the pager to draw desk labels below the corresponding desk. </p>
-<dt>*FvwmPager: LabelsAbove</p>
-<dd>Causes the pager to draw desk labels above the corresponding desk. Useful for canceling the effect of the <i>LabelsBelow</i> option. </p>
-<dt>*FvwmPager: ShapeLabels</p>
-<dd>Causes the pager to hide the labels of all but the current desk. This turns off label hilighting. </p>
-<dt>*FvwmPager: NoShapeLabels</p>
-<dd>Causes the pager to show the labels of all visible desks. Useful for canceling the effect of the <i>ShapeLabels</i> option. </p>
-<dt>*FvwmPager: Font <i>font-name</i></p>
-<dd>Specified a font to use to label the desktops. If <i>font_name</i> is &quot;none&quot; then no desktop labels will be displayed. </p>
-<dt>*FvwmPager: SmallFont <i>font-name</i></p>
-<dd>Specified a font to use to label the window names in the pager. If not specified, the window labels will be omitted. Window labels seem to be fairly useless for desktop scales of 32 or greater. If <i>font_name</i> is &quot;none&quot; then no window names will be displayed. </p>
-<dt>*FvwmPager: Fore <i>color</i></p>
-<dd>Specifies the color to use to write the desktop labels, and to draw the page-grid lines. </p>
-<dt>*FvwmPager: Back <i>color</i></p>
-<dd>Specifies the background color for the window. </p>
-<dt>*FvwmPager: Hilight <i>color</i></p>
-<dd>The active page and desk label will be highlighted by using this background pattern instead of the normal background. </p>
-<dt>*FvwmPager: HilightPixmap <i>pixmap</i></p>
-<dd>The active page will be highlighted by using this background pattern instead of the normal background. </p>
-<dt>*FvwmPager: DeskHilight</p>
-<dd>Hilight the active page with the current hilight color/pixmap. Useful for canceling the effect of the <i>NoDeskHilight</i> option. </p>
-<dt>*FvwmPager: NoDeskHilight</p>
-<dd>Don&#8217;t hilight the active page. </p>
-<dt>*FvwmPager: WindowColors <i>fore back hiFore hiBack</i></p>
-<dd>Change the normal/highlight colors of the windows. <i>fore</i> and <i>hiFore</i> specify the colors as used for the font inside the windows. <i>back</i> and <i>hiBack</i> are used to fill the windows with. </p>
-<dt>*FvwmPager: WindowLabelFormat <i>format</i></p>
-<dd>This specifies a printf() like format for the labels in the mini window. Possible flags are: %t, %i, %c, and %r for the window&#8217;s title, icon title, class, or resource name, respectively. The default is &quot;%i&quot;. </p>
-<dt>*FvwmPager: Label <i>desk label</i></p>
-<dd>Assigns the text <i>label</i> to desk <i>desk</i> (or the current desk if desk is &quot;*&quot;) in the pager window. Useful for assigning symbolic names to desktops, i.e. </p>
+<dt>*FvwmPager: Geometry <i>geometry</i></dt>
+<dd>Completely or partially specifies the pager windows location and geometry, in standard X11 notation. In order to maintain an undistorted aspect ratio, you might want to leave out either the width or height dimension of the geometry specification. </dd>
+<dt>*FvwmPager: Rows <i>rows</i></dt>
+<dd>Tells fvwm how many rows of desks to use when laying out the pager window. </dd>
+<dt>*FvwmPager: Columns <i>columns</i></dt>
+<dd>Tells fvwm how many columns of desks to use when laying out the pager window. </dd>
+<dt>*FvwmPager: IconGeometry <i>geometry</i></dt>
+<dd>Specifies a size (optional) and location (optional) for the pager&#8217;s icon window. Since there is no easy way for FvwmPager to determine the height of the icon&#8217;s label, you will have to make an allowance for the icon label height when using negative y-coordinates in the icon location specification (used to specify a location relative to the bottom instead of the top of the screen). </dd>
+<dt>*FvwmPager: StartIconic</dt>
+<dd>Causes the pager to start iconified. </dd>
+<dt>*FvwmPager: NoStartIconic</dt>
+<dd>Causes the pager to start normally. Useful for canceling the effect of the <i>StartIconic</i> option. </dd>
+<dt>*FvwmPager: LabelsBelow</dt>
+<dd>Causes the pager to draw desk labels below the corresponding desk. </dd>
+<dt>*FvwmPager: LabelsAbove</dt>
+<dd>Causes the pager to draw desk labels above the corresponding desk. Useful for canceling the effect of the <i>LabelsBelow</i> option. </dd>
+<dt>*FvwmPager: ShapeLabels</dt>
+<dd>Causes the pager to hide the labels of all but the current desk. This turns off label hilighting. </dd>
+<dt>*FvwmPager: NoShapeLabels</dt>
+<dd>Causes the pager to show the labels of all visible desks. Useful for canceling the effect of the <i>ShapeLabels</i> option. </dd>
+<dt>*FvwmPager: Font <i>font-name</i></dt>
+<dd>Specified a font to use to label the desktops. If <i>font_name</i> is &quot;none&quot; then no desktop labels will be displayed. </dd>
+<dt>*FvwmPager: SmallFont <i>font-name</i></dt>
+<dd>Specified a font to use to label the window names in the pager. If not specified, the window labels will be omitted. Window labels seem to be fairly useless for desktop scales of 32 or greater. If <i>font_name</i> is &quot;none&quot; then no window names will be displayed. </dd>
+<dt>*FvwmPager: Fore <i>color</i></dt>
+<dd>Specifies the color to use to write the desktop labels, and to draw the page-grid lines. </dd>
+<dt>*FvwmPager: Back <i>color</i></dt>
+<dd>Specifies the background color for the window. </dd>
+<dt>*FvwmPager: Hilight <i>color</i></dt>
+<dd>The active page and desk label will be highlighted by using this background pattern instead of the normal background. </dd>
+<dt>*FvwmPager: HilightPixmap <i>pixmap</i></dt>
+<dd>The active page will be highlighted by using this background pattern instead of the normal background. </dd>
+<dt>*FvwmPager: DeskHilight</dt>
+<dd>Hilight the active page with the current hilight color/pixmap. Useful for canceling the effect of the <i>NoDeskHilight</i> option. </dd>
+<dt>*FvwmPager: NoDeskHilight</dt>
+<dd>Don&#8217;t hilight the active page. </dd>
+<dt>*FvwmPager: WindowColors <i>fore back hiFore hiBack</i></dt>
+<dd>Change the normal/highlight colors of the windows. <i>fore</i> and <i>hiFore</i> specify the colors as used for the font inside the windows. <i>back</i> and <i>hiBack</i> are used to fill the windows with. </dd>
+<dt>*FvwmPager: WindowLabelFormat <i>format</i></dt>
+<dd>This specifies a printf() like format for the labels in the mini window. Possible flags are: %t, %i, %c, and %r for the window&#8217;s title, icon title, class, or resource name, respectively. The default is &quot;%i&quot;. </dd>
+<dt>*FvwmPager: Label <i>desk label</i></dt>
+<dd>Assigns the text <i>label</i> to desk <i>desk</i> (or the current desk if desk is &quot;*&quot;) in the pager window. Useful for assigning symbolic names to desktops, i.e. </dd>
 <pre>*FvwmPager: Label 1 Mail
 *FvwmPager: Label 2 Maker
 *FvwmPager: Label * Matlab</pre>
 <p><code>Note</code>: There is currently a much better way to specify desk names globally (and not just in FvwmPager) using <code>DesktopName</code> command, so you should not use this option anymore. </p>
-<dt>*FvwmPager: DeskColor <i>desk color</i></p>
-<dd>Assigns the color <i>color</i> to desk <i>desk</i> (or the current desk if desk is &quot;*&quot;) in the pager window. This replaces the background color for the particular <i>desk</i>. This only works when the pager is full sized. When Iconified, the pager uses the color specified by *FvwmPager: Back. </p>
+<dt>*FvwmPager: DeskColor <i>desk color</i></dt>
+<dd>Assigns the color <i>color</i> to desk <i>desk</i> (or the current desk if desk is &quot;*&quot;) in the pager window. This replaces the background color for the particular <i>desk</i>. This only works when the pager is full sized. When Iconified, the pager uses the color specified by *FvwmPager: Back. </dd>
 <p> <code>TIP:</code> Try using *FvwmPager: DeskColor in conjunction with FvwmCpp (or FvwmM4) and FvwmBacker to assign identical colors to your various desktops and the pager representations. </p>
-<dt>*FvwmPager: Pixmap <i>pixmap</i></p>
-<dd>Use <i>pixmap</i> as background for the pager. </p>
-<dt>*FvwmPager: DeskPixmap <i>desk pixmap</i></p>
-<dd>Assigns the pixmap <i>color</i> to desk <i>desk</i> (or the current desk if desk is &quot;*&quot;) in the pager window. This replaces the background pixmap for the particular <i>desk</i>. </p>
+<dt>*FvwmPager: Pixmap <i>pixmap</i></dt>
+<dd>Use <i>pixmap</i> as background for the pager. </dd>
+<dt>*FvwmPager: DeskPixmap <i>desk pixmap</i></dt>
+<dd>Assigns the pixmap <i>color</i> to desk <i>desk</i> (or the current desk if desk is &quot;*&quot;) in the pager window. This replaces the background pixmap for the particular <i>desk</i>. </dd>
 <p> <code>TIP:</code> Try using *FvwmPager: DeskPixmap in conjunction with FvwmCpp (or FvwmM4) and FvwmBacker to assign identical pixmaps to your various desktops and the pager representations. </p>
-<dt>*FvwmPager: DeskTopScale <i>number</i></p>
-<dd>If the geometry is not specified, then a desktop reduction factor is used to calculate the pager&#8217;s size. Things in the pager window are shown at 1/<i>number</i> of the actual size. </p>
-<dt>*FvwmPager: MiniIcons</p>
-<dd>Allow the pager to display a window&#8217;s mini icon in the pager, if it has one, instead of showing the window&#8217;s name. </p>
-<dt>*FvwmPager: MoveThreshold <i>pixels</i></p>
-<dd>Defines the distance the pointer has to be moved before a window being dragged with button 2 is actually moved. The default value is three pixels. If the pointer moved less that this amount the window snaps back to its original position when the button is released. If <i>pixels</i> is less than zero the default value is used. The value set with the <i>MoveThreshold</i> command in fvwm is inherited by FvwmPager but can be overridden with this option. </p>
-<dt>*FvwmPager: SloppyFocus</p>
-<dd>If the SloppyFocus option is used, you do not need to click into the mini window in the pager to give the real window the focus. Simply putting the pointer over the window inside the pager is enough. </p>
+<dt>*FvwmPager: DeskTopScale <i>number</i></dt>
+<dd>If the geometry is not specified, then a desktop reduction factor is used to calculate the pager&#8217;s size. Things in the pager window are shown at 1/<i>number</i> of the actual size. </dd>
+<dt>*FvwmPager: MiniIcons</dt>
+<dd>Allow the pager to display a window&#8217;s mini icon in the pager, if it has one, instead of showing the window&#8217;s name. </dd>
+<dt>*FvwmPager: MoveThreshold <i>pixels</i></dt>
+<dd>Defines the distance the pointer has to be moved before a window being dragged with button 2 is actually moved. The default value is three pixels. If the pointer moved less that this amount the window snaps back to its original position when the button is released. If <i>pixels</i> is less than zero the default value is used. The value set with the <i>MoveThreshold</i> command in fvwm is inherited by FvwmPager but can be overridden with this option. </dd>
+<dt>*FvwmPager: SloppyFocus</dt>
+<dd>If the SloppyFocus option is used, you do not need to click into the mini window in the pager to give the real window the focus. Simply putting the pointer over the window inside the pager is enough. </dd>
 <p> Note: This option interferes slightly with the MouseFocus and SloppyFocus styles of fvwm. Sometimes, if you click into the pager window to change pages or desks and then move the pointer<tt>&nbsp;<wbr></tt>to<br />
  a place on the screen where a window of the new page will appear, this new window does not get the input focus. This may happen if you drag the pointer over one of the mini windows in the pager. There is nothing that can be done about this &#8211; except not using SloppyFocus in the pager. </p>
-<dt>*FvwmPager: SolidSeparators</p>
-<dd>By default the pages of the virtual desktop are separated by dashed lines in the pager window. This option causes FvwmPager to use solid lines instead. </p>
-<dt>*FvwmPager: NoSeparators</p>
-<dd>Turns off the lines separating the pages of the virtual desktop. </p>
-<dt>*FvwmPager: Balloons [<i>type</i>]</p>
-<dd>Show a balloon describing the window when the pointer is moved into a window in the pager. The default format (the window&#8217;s icon name) can be changed using BalloonStringFormat. If <i>type</i> is <i>Pager</i> balloons are just shown for an un-iconified pager; if <i>type</i> is <i>Icon</i> balloons are just shown for an iconified pager. If <i>type</i> is anything else (or null) balloons are always shown. </p>
-<dt>*FvwmPager: BalloonFore <i>color</i></p>
-<dd>Specifies the color for text in the balloon window. If omitted it defaults to the foreground color for the window being described. </p>
-<dt>*FvwmPager: BalloonBack <i>color</i></p>
-<dd>Specifies the background color for the balloon window. If omitted it defaults to the background color for the window being described. </p>
-<dt>*FvwmPager: BalloonFont <i>font-name</i></p>
-<dd>Specifies a font to use for the balloon text. Defaults to <i>fixed</i>. </p>
-<dt>*FvwmPager: BalloonBorderWidth <i>number</i></p>
-<dd>Sets the width of the balloon window&#8217;s border. Defaults to 1. </p>
-<dt>*FvwmPager: BalloonBorderColor <i>color</i></p>
-<dd>Sets the color of the balloon window&#8217;s border. Defaults to black. </p>
-<dt>*FvwmPager: BalloonYOffset <i>number</i></p>
-<dd>The balloon window is positioned to be horizontally centered against the pager window it is describing. The vertical position may be set as an offset. Negative offsets of <i>-n</i> are placed <i>n</i> pixels above the pager window, positive offsets of <i>+n</i> are placed <i>n</i> pixels below. Offsets of -1 and 1 represent the balloon window close to the original window without a gap. Offsets of 0 are not permitted, as this would permit direct transit from pager window to balloon window, causing an event loop. Defaults to +3. The offset will change sign automatically, as needed, to keep the balloon on the screen. </p>
-<dt>*FvwmPager: BalloonStringFormat format</p>
-<dd>The same as <i>*FvwmPager: WindowLabelFormat</i>, it just specifies the string to display in the balloons. The default is &quot;%i&quot;. </p>
-<dt>*FvwmPager: Colorset <i>desk colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> for <i>desk</i>. If you use an asterisk &#8216;*&#8217; in place of <i>desk</i>, the colorset is used on all desks. Please refer to the man page of the FvwmTheme module for details about colorsets. </p>
-<dt>*FvwmPager: BalloonColorset <i>desk colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> for balloons on <i>desk</i>. If you use an asterisk &#8216;*&#8217; in place of <i>desk</i>, the colorset is used on all desks. Please refer to the man page of the FvwmTheme module for details about colorsets. </p>
-<dt>*FvwmPager: HilightColorset <i>desk colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> for hilighting on <i>desk</i>. If you use an asterisk &#8216;*&#8217; in place of <i>desk</i>, the colorset is used on all desks. Please refer to the man page of the FvwmTheme module for details about colorsets. </p>
-<dt>*FvwmPager: WindowColorsets <i>colorset activecolorset</i></p>
-<dd>Uses colorsets in the same way as *FvwmPager: WindowColors. Please refer to the man page of the FvwmTheme module for details about colorsets. The shadow and hilight colors of the colorset are only used for the window borders if the *FvwmPager: Window3DBorders is specified too. </p>
-<dt>*FvwmPager: WindowBorderWidth <i>n</i></p>
-<dd>Specifies the width of the border drawn around the mini windows. This also sets the minimum size of the mini windows to (2 * <i>n</i> + 1). The default is 1. </p>
-<dt>*FvwmPager: Window3DBorders</p>
-<dd>Specifies that the mini windows should have a 3d borders based on the mini window background. This option only works if *FvwmPager: WindowColorsets is specified. </p>
-<dt>*FvwmPager: UseSkipList</p>
-<dd>Tells FvwmPager to not show the windows that are using the WindowListSkip style. </p>
+<dt>*FvwmPager: SolidSeparators</dt>
+<dd>By default the pages of the virtual desktop are separated by dashed lines in the pager window. This option causes FvwmPager to use solid lines instead. </dd>
+<dt>*FvwmPager: NoSeparators</dt>
+<dd>Turns off the lines separating the pages of the virtual desktop. </dd>
+<dt>*FvwmPager: Balloons [<i>type</i>]</dt>
+<dd>Show a balloon describing the window when the pointer is moved into a window in the pager. The default format (the window&#8217;s icon name) can be changed using BalloonStringFormat. If <i>type</i> is <i>Pager</i> balloons are just shown for an un-iconified pager; if <i>type</i> is <i>Icon</i> balloons are just shown for an iconified pager. If <i>type</i> is anything else (or null) balloons are always shown. </dd>
+<dt>*FvwmPager: BalloonFore <i>color</i></dt>
+<dd>Specifies the color for text in the balloon window. If omitted it defaults to the foreground color for the window being described. </dd>
+<dt>*FvwmPager: BalloonBack <i>color</i></dt>
+<dd>Specifies the background color for the balloon window. If omitted it defaults to the background color for the window being described. </dd>
+<dt>*FvwmPager: BalloonFont <i>font-name</i></dt>
+<dd>Specifies a font to use for the balloon text. Defaults to <i>fixed</i>. </dd>
+<dt>*FvwmPager: BalloonBorderWidth <i>number</i></dt>
+<dd>Sets the width of the balloon window&#8217;s border. Defaults to 1. </dd>
+<dt>*FvwmPager: BalloonBorderColor <i>color</i></dt>
+<dd>Sets the color of the balloon window&#8217;s border. Defaults to black. </dd>
+<dt>*FvwmPager: BalloonYOffset <i>number</i></dt>
+<dd>The balloon window is positioned to be horizontally centered against the pager window it is describing. The vertical position may be set as an offset. Negative offsets of <i>-n</i> are placed <i>n</i> pixels above the pager window, positive offsets of <i>+n</i> are placed <i>n</i> pixels below. Offsets of -1 and 1 represent the balloon window close to the original window without a gap. Offsets of 0 are not permitted, as this would permit direct transit from pager window to balloon window, causing an event loop. Defaults to +3. The offset will change sign automatically, as needed, to keep the balloon on the screen. </dd>
+<dt>*FvwmPager: BalloonStringFormat format</dt>
+<dd>The same as <i>*FvwmPager: WindowLabelFormat</i>, it just specifies the string to display in the balloons. The default is &quot;%i&quot;. </dd>
+<dt>*FvwmPager: Colorset <i>desk colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> for <i>desk</i>. If you use an asterisk &#8216;*&#8217; in place of <i>desk</i>, the colorset is used on all desks. Please refer to the man page of the FvwmTheme module for details about colorsets. </dd>
+<dt>*FvwmPager: BalloonColorset <i>desk colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> for balloons on <i>desk</i>. If you use an asterisk &#8216;*&#8217; in place of <i>desk</i>, the colorset is used on all desks. Please refer to the man page of the FvwmTheme module for details about colorsets. </dd>
+<dt>*FvwmPager: HilightColorset <i>desk colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> for hilighting on <i>desk</i>. If you use an asterisk &#8216;*&#8217; in place of <i>desk</i>, the colorset is used on all desks. Please refer to the man page of the FvwmTheme module for details about colorsets. </dd>
+<dt>*FvwmPager: WindowColorsets <i>colorset activecolorset</i></dt>
+<dd>Uses colorsets in the same way as *FvwmPager: WindowColors. Please refer to the man page of the FvwmTheme module for details about colorsets. The shadow and hilight colors of the colorset are only used for the window borders if the *FvwmPager: Window3DBorders is specified too. </dd>
+<dt>*FvwmPager: WindowBorderWidth <i>n</i></dt>
+<dd>Specifies the width of the border drawn around the mini windows. This also sets the minimum size of the mini windows to (2 * <i>n</i> + 1). The default is 1. </dd>
+<dt>*FvwmPager: Window3DBorders</dt>
+<dd>Specifies that the mini windows should have a 3d borders based on the mini window background. This option only works if *FvwmPager: WindowColorsets is specified. </dd>
+<dt>*FvwmPager: UseSkipList</dt>
+<dd>Tells FvwmPager to not show the windows that are using the WindowListSkip style. </dd>
 </dl>
 <h2>Author</h2>
 <p>Robert Nation<br />

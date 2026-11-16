@@ -12,105 +12,65 @@ std::atomic_...&lt;std::shared_ptr&gt; - std::atomic_...&lt;std::shared_ptr&gt;
 
 <pre><code>template &lt;class T&gt;
 (1)(since C++ 11)
-
     bool atomic_is_lock_free(const std::shared_ptr&lt;T&gt; *p);
 (deprecated in C++ 20)
-
     template &lt;class T&gt;
     (2)(since C++ 11)
-
         std::shared_ptr&lt;T&gt; atomic_load(const std::shared_ptr&lt;T&gt; *p);
 (deprecated in C++ 20)
-
     template &lt;class T&gt;
     (since C++ 11)
-
         std::shared_ptr&lt;T&gt; atomic_load_explicit(const std::shared_ptr&lt;T&gt; *p, (3)(deprecated in C++ 20)
-
                                                                                  std::memory_order mo);
-
 template &lt;class T&gt;
 (since C++ 11)
-
     void atomic_store(std::shared_ptr&lt;T&gt; *p, (4)(deprecated in C++ 20)
-
                                                  std::shared_ptr&lt;T&gt;
                                                      r);
-
 template &lt;class T&gt;
-
 void atomic_store_explicit(std::shared_ptr&lt;T&gt; *p, (5)(since C++ 11)
-
                                                       std::shared_ptr&lt;T&gt;
                                                           r,
                            (deprecated in C++ 20)
-
                                std::memory_order mo);
-
 template &lt;class T&gt;
 (since C++ 11)
-
     std::shared_ptr&lt;T&gt; atomic_exchange(std::shared_ptr&lt;T&gt; *p, (6)(deprecated in C++ 20)
-
                                                                   std::shared_ptr&lt;T&gt;
                                                                       r);
-
 template &lt;class T&gt;
-
 std::shared_ptr&lt;T&gt; atomic_exchange_explicit(std::shared_ptr&lt;T&gt; *p, (7)(since C++ 11)
-
                                                                        std::shared_ptr&lt;T&gt;
                                                                            r,
                                             (deprecated in C++ 20)
-
                                                 std::memory_order mo);
-
 template &lt;class T&gt;
-
 bool atomic_compare_exchange_weak(std::shared_ptr&lt;T&gt; *p, (8)(since C++ 11)
-
                                                              std::shared_ptr&lt;T&gt; *expected,
                                   (deprecated in C++ 20)
-
                                       std::shared_ptr&lt;T&gt;
                                           desired);
-
 template &lt;class T&gt;
-
 bool atomic_compare_exchange_strong(std::shared_ptr&lt;T&gt; *p, (9)(since C++ 11)
-
                                                                std::shared_ptr&lt;T&gt; *expected,
                                     (deprecated in C++ 20)
-
                                         std::shared_ptr&lt;T&gt;
                                             desired);
-
 template &lt;class T&gt;
-
 bool atomic_compare_exchange_strong_explicit(std::shared_ptr&lt;T&gt; *p,
-
                                              std::shared_ptr&lt;T&gt; *expected, (10)(since C++ 11)
-
                                                                                std::shared_ptr&lt;T&gt;
                                                                                    desired,
                                              (deprecated in C++ 20)
-
                                                  std::memory_order success,
-
                                              std::memory_order failure);
-
 template &lt;class T&gt;
-
 bool atomic_compare_exchange_weak_explicit(std::shared_ptr&lt;T&gt; *p,
-
                                            std::shared_ptr&lt;T&gt; *expected, (11)(since C++ 11)
-
                                                                              std::shared_ptr&lt;T&gt;
                                                                                  desired,
                                            (deprecated in C++ 20)
-
                                                std::memory_order success,
-
                                            std::memory_order failure);</code></pre> 
 If multiple threads of execution access the same std::shared_ptr object without synchronization and any of those accesses uses a non-const member function of shared_ptr then a data race will occur unless all such access is performed through these functions, which are overloads of the corresponding atomic access functions (std::atomic_load, std::atomic_store, etc.) 
 Note that the control block of a shared_ptr is thread-safe: different std::shared_ptr objects can be accessed using mutable operations, such as operator= or reset, simultaneously by multiple threads, even when these instances are copies, and share the same control block internally. 

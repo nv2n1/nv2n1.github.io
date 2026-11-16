@@ -76,45 +76,45 @@ char *xend = exp + plen;</p>
 <p> In general the flags should be preserved in <tt>&quot;rx-&gt;extflags&quot;</tt> after compilation, although the regex engine might want to add or delete some of them to invoke or disable some special behavior in Perl. The flags along with any special behavior they cause are documented below: </p>
 <p> The pattern modifiers:</p>
 <dl>
-<dt>&quot;/m&quot; &#8211; RXf_PMf_MULTILINE</p>
-<dd> If this is in <tt>&quot;rx-&gt;extflags&quot;</tt> it will be passed to <tt>&quot;Perl_fbm_instr&quot;</tt> by <tt>&quot;pp_split&quot;</tt> which will treat the subject string as a multi-line string.</p>
-<dt>&quot;/s&quot; &#8211; RXf_PMf_SINGLELINE</p>
+<dt>&quot;/m&quot; &#8211; RXf_PMf_MULTILINE</dt>
+<dd> If this is in <tt>&quot;rx-&gt;extflags&quot;</tt> it will be passed to <tt>&quot;Perl_fbm_instr&quot;</tt> by <tt>&quot;pp_split&quot;</tt> which will treat the subject string as a multi-line string.</dd>
+<dt>&quot;/s&quot; &#8211; RXf_PMf_SINGLELINE</dt>
 <dd>
-<dt>&quot;/i&quot; &#8211; RXf_PMf_FOLD</p>
+</dd><dt>&quot;/i&quot; &#8211; RXf_PMf_FOLD</dt>
 <dd>
-<dt>&quot;/x&quot; &#8211; RXf_PMf_EXTENDED</p>
-<dd> If present on a regex, <tt>&quot;#&quot;</tt> comments will be handled differently by the tokenizer in some cases. </p>
+</dd><dt>&quot;/x&quot; &#8211; RXf_PMf_EXTENDED</dt>
+<dd> If present on a regex, <tt>&quot;#&quot;</tt> comments will be handled differently by the tokenizer in some cases. </dd>
 <p> <font SIZE="-1">TODO:</font> Document those cases.</p>
-<dt>&quot;/p&quot; &#8211; RXf_PMf_KEEPCOPY</p>
-<dd> <font SIZE="-1">TODO:</font> Document this</p>
-<dt>Character set</p>
-<dd> The character set rules are determined by an enum that is contained in this field. This is still experimental and subject to change, but the current interface returns the rules by use of the in-line function <tt>&quot;get_regex_charset(const U32 flags)&quot;</tt>. The only currently documented value returned from it is <font SIZE="-1">REGEX_LOCALE_CHARSET,</font> which is set if <tt>&quot;use locale&quot;</tt> is in effect. If present in <tt>&quot;rx-&gt;extflags&quot;</tt>, <tt>&quot;split&quot;</tt> will use the locale dependent definition of whitespace when RXf_SKIPWHITE or RXf_WHITE is in effect. <font SIZE="-1">ASCII</font> whitespace is defined as per isSPACE, and by the internal macros <tt>&quot;is_utf8_space&quot;</tt> under <font SIZE="-1">UTF-8,</font> and <tt>&quot;isSPACE_LC&quot;</tt> under <tt>&quot;use locale&quot;</tt>.</dl>
+<dt>&quot;/p&quot; &#8211; RXf_PMf_KEEPCOPY</dt>
+<dd> <font SIZE="-1">TODO:</font> Document this</dd>
+<dt>Character set</dt>
+<dd> The character set rules are determined by an enum that is contained in this field. This is still experimental and subject to change, but the current interface returns the rules by use of the in-line function <tt>&quot;get_regex_charset(const U32 flags)&quot;</tt>. The only currently documented value returned from it is <font SIZE="-1">REGEX_LOCALE_CHARSET,</font> which is set if <tt>&quot;use locale&quot;</tt> is in effect. If present in <tt>&quot;rx-&gt;extflags&quot;</tt>, <tt>&quot;split&quot;</tt> will use the locale dependent definition of whitespace when RXf_SKIPWHITE or RXf_WHITE is in effect. <font SIZE="-1">ASCII</font> whitespace is defined as per isSPACE, and by the internal macros <tt>&quot;is_utf8_space&quot;</tt> under <font SIZE="-1">UTF-8,</font> and <tt>&quot;isSPACE_LC&quot;</tt> under <tt>&quot;use locale&quot;</tt>.</dd></dl>
 <p> Additional flags:</p>
 <dl>
-<dt>RXf_SPLIT</p>
-<dd> This flag was removed in perl 5.18.0. <tt>&quot;split ' '&quot;</tt> is now special-cased solely in the parser. RXf_SPLIT is still #defined, so you can test for it. This is how it used to work: </p>
+<dt>RXf_SPLIT</dt>
+<dd> This flag was removed in perl 5.18.0. <tt>&quot;split ' '&quot;</tt> is now special-cased solely in the parser. RXf_SPLIT is still #defined, so you can test for it. This is how it used to work: </dd>
 <p> If <tt>&quot;split&quot;</tt> is invoked as <tt>&quot;split ' '&quot;</tt> or with no arguments (which really means <tt>&quot;split(' ', $_)&quot;</tt>, see split), Perl will set this flag. The regex engine can then check for it and set the <font SIZE="-1">SKIPWHITE</font> and <font SIZE="-1">WHITE</font> extflags. To do this, the Perl engine does: </p>
 <p>if (flags &amp; RXf_SPLIT &amp;&amp; r-&gt;prelen == 1 &amp;&amp; r-&gt;precomp[0] == &#8216; &#8216;)<br />
     r-&gt;extflags |= (RXf_SKIPWHITE | RXf_WHITE);
 </dl>
 <p> These flags can be set during compilation to enable optimizations in the <tt>&quot;split&quot;</tt> operator.</p>
 <dl>
-<dt>RXf_SKIPWHITE</p>
-<dd> This flag was removed in perl 5.18.0. It is still #defined, so you can set it, but doing so will have no effect. This is how it used to work: </p>
+<dt>RXf_SKIPWHITE</dt>
+<dd> This flag was removed in perl 5.18.0. It is still #defined, so you can set it, but doing so will have no effect. This is how it used to work: </dd>
 <p> If the flag is present in <tt>&quot;rx-&gt;extflags&quot;</tt> <tt>&quot;split&quot;</tt> will delete whitespace from the start of the subject string before it&#8217;s operated on. What is considered whitespace depends on if the subject is a <font SIZE="-1">UTF-8</font> string and if the <tt>&quot;RXf_PMf_LOCALE&quot;</tt> flag is set. </p>
 <p> If RXf_WHITE is set in addition to this flag, <tt>&quot;split&quot;</tt> will behave like <tt>&quot;split &quot; &quot;&quot;</tt> under the Perl engine.</p>
-<dt>RXf_START_ONLY</p>
+<dt>RXf_START_ONLY</dt>
 <dd> Tells the split operator to split the target string on newlines (<tt>&quot;
-&quot;</tt>) without invoking the regex engine. </p>
+&quot;</tt>) without invoking the regex engine. </dd>
 <p> Perl&#8217;s engine sets this if the pattern is <tt>&quot;/^/&quot;</tt> (<tt>&quot;plen == 1 &amp;&amp; *exp == '^'&quot;</tt>), even under <tt>&quot;/^/s&quot;</tt>; see split. Of course a different regex engine might want to use the same optimizations with a different syntax.</p>
-<dt>RXf_WHITE</p>
-<dd> Tells the split operator to split the target string on whitespace without invoking the regex engine. The definition of whitespace varies depending on if the target string is a <font SIZE="-1">UTF-8</font> string and on if RXf_PMf_LOCALE is set. </p>
+<dt>RXf_WHITE</dt>
+<dd> Tells the split operator to split the target string on whitespace without invoking the regex engine. The definition of whitespace varies depending on if the target string is a <font SIZE="-1">UTF-8</font> string and on if RXf_PMf_LOCALE is set. </dd>
 <p> Perl&#8217;s engine sets this flag if the pattern is <tt>&quot;\s+&quot;</tt>.</p>
-<dt>RXf_NULL</p>
-<dd> Tells the split operator to split the target string on characters. The definition of character varies depending on if the target string is a <font SIZE="-1">UTF-8</font> string. </p>
+<dt>RXf_NULL</dt>
+<dd> Tells the split operator to split the target string on characters. The definition of character varies depending on if the target string is a <font SIZE="-1">UTF-8</font> string. </dd>
 <p> Perl&#8217;s engine sets this flag on empty patterns, this optimization makes <tt>&quot;split //&quot;</tt> much faster than it would otherwise be. It&#8217;s even faster than <tt>&quot;unpack&quot;</tt>.</p>
-<dt>RXf_NO_INPLACE_SUBST</p>
-<dd> Added in perl 5.18.0, this flag indicates that a regular expression might perform an operation that would interfere with inplace substitution. For instance it might contain lookbehind, or assign to non-magical variables (such as <tt>$REGMARK</tt> and <tt>$REGERROR</tt>) during matching. <tt>&quot;s///&quot;</tt> will skip certain optimisations when this is set.</dl>
+<dt>RXf_NO_INPLACE_SUBST</dt>
+<dd> Added in perl 5.18.0, this flag indicates that a regular expression might perform an operation that would interfere with inplace substitution. For instance it might contain lookbehind, or assign to non-magical variables (such as <tt>$REGMARK</tt> and <tt>$REGERROR</tt>) during matching. <tt>&quot;s///&quot;</tt> will skip certain optimisations when this is set.</dd></dl>
 <h3>exec</h3>
 <p>I32 exec(pTHX_ REGEXP *const rx,<br />
          char *stringarg, char *strend, char *strbeg,<br />
@@ -122,11 +122,12 @@ char *xend = exp + plen;</p>
          void *data, U32 flags);</p>
 <p> Execute a regexp. The arguments are</p>
 <dl>
-<dt>rx</p>
-<dd> The regular expression to execute.</p>
-<dt>sv</p>
-<dd> This is the <font SIZE="-1">SV</font> to be matched against. Note that the actual char array to be matched against is supplied by the arguments described below; the <font SIZE="-1">SV</font> is just used to determine UTF8ness, <tt>&quot;pos()&quot;</tt> etc.</p>
-<dt>strbeg</p>
-<dd> Pointer to the physical start of the string.</p>
-<dt>strend</p>
+<dt>rx</dt>
+<dd> The regular expression to execute.</dd>
+<dt>sv</dt>
+<dd> This is the <font SIZE="-1">SV</font> to be matched against. Note that the actual char array to be matched against is supplied by the arguments described below; the <font SIZE="-1">SV</font> is just used to determine UTF8ness, <tt>&quot;pos()&quot;</tt> etc.</dd>
+<dt>strbeg</dt>
+<dd> Pointer to the physical start of the string.</dd>
+<dt>strend</dt>
 <dd> Pointer to the character following the physical end of the string (i.e. the <tt>&quot;
+</dd></dl>

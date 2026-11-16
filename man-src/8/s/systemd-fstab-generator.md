@@ -20,37 +20,37 @@ description: "systemd-fstab-generator – Unit generator for /etc/fstab"
 <p>systemd-fstab-generator understands the following kernel command line parameters: </p>
 <p> <i>fstab=</i>, <i>rd.fstab=</i></p>
 <dl>
-<dd>Takes a boolean argument. Defaults to &quot;yes&quot;. If &quot;no&quot;, causes the generator to ignore any mounts or swap devices configured in /etc/fstab. <i>rd.fstab=</i> is honored only by the initial RAM disk (initrd) while <i>fstab=</i> is honored by both the main system and the initrd.</dl>
+<dd>Takes a boolean argument. Defaults to &quot;yes&quot;. If &quot;no&quot;, causes the generator to ignore any mounts or swap devices configured in /etc/fstab. <i>rd.fstab=</i> is honored only by the initial RAM disk (initrd) while <i>fstab=</i> is honored by both the main system and the initrd.</dd></dl>
 <p> <i>root=</i></p>
 <dl>
-<dd>Configures the operating system&#8217;s root filesystem to mount when running in the initrd. This accepts a device node path (usually /dev/disk/by-uuid/&#8230; or /dev/disk/by-label/&#8230; or similar), or the special values &quot;gpt-auto&quot; and &quot;tmpfs&quot;. </p>
+<dd>Configures the operating system&#8217;s root filesystem to mount when running in the initrd. This accepts a device node path (usually /dev/disk/by-uuid/&#8230; or /dev/disk/by-label/&#8230; or similar), or the special values &quot;gpt-auto&quot; and &quot;tmpfs&quot;. </dd>
 <p> Use &quot;gpt-auto&quot; to explicitly request automatic root file system discovery via <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8). </p>
 <p> Use &quot;tmpfs&quot; in order to mount a <code>tmpfs</code>(5) file system as root file system of the OS. This is useful in combination with <i>mount.usr=</i> (see below) in order to combine a volatile root file system with a separate, immutable /usr/ file system. Also see <i>systemd.volatile=</i> below.</dl>
 <p> <i>rootfstype=</i></p>
 <dl>
-<dd>Takes the root filesystem type that will be passed to the mount command. <i>rootfstype=</i> is honored by the initrd.</dl>
+<dd>Takes the root filesystem type that will be passed to the mount command. <i>rootfstype=</i> is honored by the initrd.</dd></dl>
 <p> <i>rootflags=</i></p>
 <dl>
-<dd>Takes the root filesystem mount options to use. <i>rootflags=</i> is honored by the initrd. </p>
+<dd>Takes the root filesystem mount options to use. <i>rootflags=</i> is honored by the initrd. </dd>
 <p> Note that unlike most kernel command line options this setting does not override settings made in configuration files (specifically: the mount option string in /etc/fstab). See <code><a href="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></code>(8).</dl>
 <p> <i>mount.usr=</i></p>
 <dl>
-<dd>Takes the /usr/ filesystem to be mounted by the initrd. If <i>mount.usrfstype=</i> or <i>mount.usrflags=</i> is set, then <i>mount.usr=</i> will default to the value set in <i>root=</i>. </p>
+<dd>Takes the /usr/ filesystem to be mounted by the initrd. If <i>mount.usrfstype=</i> or <i>mount.usrflags=</i> is set, then <i>mount.usr=</i> will default to the value set in <i>root=</i>. </dd>
 <p> Otherwise, this parameter defaults to the /usr/ entry found in /etc/fstab on the root filesystem. </p>
 <p> <i>mount.usr=</i> is honored by the initrd.</dl>
 <p> <i>mount.usrfstype=</i></p>
 <dl>
-<dd>Takes the /usr/ filesystem type that will be passed to the mount command. If <i>mount.usr=</i> or <i>mount.usrflags=</i> is set, then <i>mount.usrfstype=</i> will default to the value set in <i>rootfstype=</i>. </p>
+<dd>Takes the /usr/ filesystem type that will be passed to the mount command. If <i>mount.usr=</i> or <i>mount.usrflags=</i> is set, then <i>mount.usrfstype=</i> will default to the value set in <i>rootfstype=</i>. </dd>
 <p> Otherwise, this value will be read from the /usr/ entry in /etc/fstab on the root filesystem. </p>
 <p> <i>mount.usrfstype=</i> is honored by the initrd.</dl>
 <p> <i>mount.usrflags=</i></p>
 <dl>
-<dd>Takes the /usr/ filesystem mount options to use. If <i>mount.usr=</i> or <i>mount.usrfstype=</i> is set, then <i>mount.usrflags=</i> will default to the value set in <i>rootflags=</i>. </p>
+<dd>Takes the /usr/ filesystem mount options to use. If <i>mount.usr=</i> or <i>mount.usrfstype=</i> is set, then <i>mount.usrflags=</i> will default to the value set in <i>rootflags=</i>. </dd>
 <p> Otherwise, this value will be read from the /usr/ entry in /etc/fstab on the root filesystem. </p>
 <p> <i>mount.usrflags=</i> is honored by the initrd.</dl>
 <p> <i>systemd.volatile=</i></p>
 <dl>
-<dd>Controls whether the system shall boot up in volatile mode. Takes a boolean argument or the special value <code>state</code>. </p>
+<dd>Controls whether the system shall boot up in volatile mode. Takes a boolean argument or the special value <code>state</code>. </dd>
 <p> If false (the default), this generator makes no changes to the mount tree and the system is booted up in normal mode. </p>
 <p> If true the generator ensures <code><a href="/docs/linux/man/8-systemd-volatile-root-service/">systemd-volatile-root.service</a></code>(8) is run as part of the initial RAM disk (&quot;initrd&quot;). This service changes the mount table before transitioning to the host system, so that a volatile memory file system (&quot;tmpfs&quot;) is used as root directory, with only /usr/ mounted into it from the configured root file system, in read-only mode. This way the system operates in fully stateless mode, with all configuration and state reset at boot and lost at shutdown, as /etc/ and /var/ will be served from the (initially unpopulated) volatile memory file system. </p>
 <p> If set to <code>state</code> the generator will leave the root directory mount point unaltered, however will mount a &quot;tmpfs&quot; file system to /var/. In this mode the normal system configuration (i.e. the contents of &quot;/etc/&quot;) is in effect (and may be modified during system runtime), however the system state (i.e. the contents of &quot;/var/&quot;) is reset at boot and lost at shutdown. </p>
@@ -60,6 +60,6 @@ description: "systemd-fstab-generator – Unit generator for /etc/fstab"
 <p> Also see <i>root=tmpfs</i> above, for a method to combine a &quot;tmpfs&quot; file system with a regular /usr/ file system (as configured via <i>mount.usr=</i>). The main distinction between <i>systemd.volatile=yes</i>, and <i>root=tmpfs</i> in combination <i>mount.usr=</i> is that the former operates on top of a regular root file system and temporarily obstructs the files and directories above its /usr/ subdirectory, while the latter does not hide any files, but simply mounts a unpopulated tmpfs as root file system and combines it with a user picked /usr/ file system.</dl>
 <p> <i>systemd.swap</i></p>
 <dl>
-<dd>Takes a boolean argument or enables the option if specified without an argument. If disabled, causes the generator to ignore any swap devices configured in /etc/fstab. Defaults to enabled.</dl>
+<dd>Takes a boolean argument or enables the option if specified without an argument. If disabled, causes the generator to ignore any swap devices configured in /etc/fstab. Defaults to enabled.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/5-systemd-mount/">systemd.mount</a></code>(5), <code><a href="/docs/linux/man/5-systemd-swap/">systemd.swap</a></code>(5), <code><a href="/docs/linux/man/8-systemd-cryptsetup-generator/">systemd-cryptsetup-generator</a></code>(8), <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8), <code><a href="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></code>(7) </p>

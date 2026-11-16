@@ -23,38 +23,38 @@ description: "struct_ablkcipher_alg – asynchronous block cipher definition"
 <h2>Members</h2>
 <p>setkey</p>
 <dl>
-<dd>Set key for the transformation. This function is used to either program a supplied key into the hardware or store the key in the transformation context for programming it later. Note that this function does modify the transformation context. This function can be called multiple times during the existence of the transformation object, so one must make sure the key is properly reprogrammed into the hardware. This function is also responsible for checking the key length for validity. In case a software fallback was put in place in the <i>cra_init</i> call, this function might need to use the fallback if the algorithm doesn&#8217;t support all of the key sizes.</dl>
+<dd>Set key for the transformation. This function is used to either program a supplied key into the hardware or store the key in the transformation context for programming it later. Note that this function does modify the transformation context. This function can be called multiple times during the existence of the transformation object, so one must make sure the key is properly reprogrammed into the hardware. This function is also responsible for checking the key length for validity. In case a software fallback was put in place in the <i>cra_init</i> call, this function might need to use the fallback if the algorithm doesn&#8217;t support all of the key sizes.</dd></dl>
 <p> encrypt</p>
 <dl>
-<dd>Encrypt a scatterlist of blocks. This function is used to encrypt the supplied scatterlist containing the blocks of data. The crypto API consumer is responsible for aligning the entries of the scatterlist properly and making sure the chunks are correctly sized. In case a software fallback was put in place in the <i>cra_init</i> call, this function might need to use the fallback if the algorithm doesn&#8217;t support all of the key sizes. In case the key was stored in transformation context, the key might need to be re-programmed into the hardware in this function. This function shall not modify the transformation context, as this function may be called in parallel with the same transformation object.</dl>
+<dd>Encrypt a scatterlist of blocks. This function is used to encrypt the supplied scatterlist containing the blocks of data. The crypto API consumer is responsible for aligning the entries of the scatterlist properly and making sure the chunks are correctly sized. In case a software fallback was put in place in the <i>cra_init</i> call, this function might need to use the fallback if the algorithm doesn&#8217;t support all of the key sizes. In case the key was stored in transformation context, the key might need to be re-programmed into the hardware in this function. This function shall not modify the transformation context, as this function may be called in parallel with the same transformation object.</dd></dl>
 <p> decrypt</p>
 <dl>
-<dd>Decrypt a single block. This is a reverse counterpart to <i>encrypt</i> and the conditions are exactly the same.</dl>
+<dd>Decrypt a single block. This is a reverse counterpart to <i>encrypt</i> and the conditions are exactly the same.</dd></dl>
 <p> givencrypt</p>
 <dl>
-<dd>Update the IV for encryption. With this function, a cipher implementation may provide the function on how to update the IV for encryption.</dl>
+<dd>Update the IV for encryption. With this function, a cipher implementation may provide the function on how to update the IV for encryption.</dd></dl>
 <p> givdecrypt</p>
 <dl>
-<dd>Update the IV for decryption. This is the reverse of <i>givencrypt</i> .</dl>
+<dd>Update the IV for decryption. This is the reverse of <i>givencrypt</i> .</dd></dl>
 <p> geniv</p>
 <dl>
-<dd>The transformation implementation may use an &#8220;IV generator&#8221; provided by the kernel crypto API. Several use cases have a predefined approach how IVs are to be updated. For such use cases, the kernel crypto API provides ready-to-use implementations that can be referenced with this variable.</dl>
+<dd>The transformation implementation may use an &#8220;IV generator&#8221; provided by the kernel crypto API. Several use cases have a predefined approach how IVs are to be updated. For such use cases, the kernel crypto API provides ready-to-use implementations that can be referenced with this variable.</dd></dl>
 <p> min_keysize</p>
 <dl>
-<dd>Minimum key size supported by the transformation. This is the smallest key length supported by this transformation algorithm. This must be set to one of the pre-defined values as this is not hardware specific. Possible values for this field can be found via git grep &#8220;_MIN_KEY_SIZE&#8221; include/crypto/</dl>
+<dd>Minimum key size supported by the transformation. This is the smallest key length supported by this transformation algorithm. This must be set to one of the pre-defined values as this is not hardware specific. Possible values for this field can be found via git grep &#8220;_MIN_KEY_SIZE&#8221; include/crypto/</dd></dl>
 <p> max_keysize</p>
 <dl>
-<dd>Maximum key size supported by the transformation. This is the largest key length supported by this transformation algorithm. This must be set to one of the pre-defined values as this is not hardware specific. Possible values for this field can be found via git grep &#8220;_MAX_KEY_SIZE&#8221; include/crypto/</dl>
+<dd>Maximum key size supported by the transformation. This is the largest key length supported by this transformation algorithm. This must be set to one of the pre-defined values as this is not hardware specific. Possible values for this field can be found via git grep &#8220;_MAX_KEY_SIZE&#8221; include/crypto/</dd></dl>
 <p> ivsize</p>
 <dl>
-<dd>IV size applicable for transformation. The consumer must provide an IV of exactly that size to perform the encrypt or decrypt operation.</dl>
+<dd>IV size applicable for transformation. The consumer must provide an IV of exactly that size to perform the encrypt or decrypt operation.</dd></dl>
 <h2>Description</h2>
 <p>All fields except <i>givencrypt</i> , <i>givdecrypt</i> , <i>geniv</i> and <i>ivsize</i> are mandatory and must be filled.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

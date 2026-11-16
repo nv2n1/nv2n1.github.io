@@ -11,10 +11,8 @@ description: "qecvt, qfcvt, qgcvt – convert a floating-point number to a strin
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
 char *qecvt(long double number, int ndigits, int *decpt,
-
             int *sign);
 char *qfcvt(long double number, int ndigits, int *decpt,
-
             int *sign);
 char *qgcvt(long double number, int ndigit, char *buf);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>qecvt</code>(), <code>qfcvt</code>(), <code>qgcvt</code>(): _SVID_SOURCE</p>

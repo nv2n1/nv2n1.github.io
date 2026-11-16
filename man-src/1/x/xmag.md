@@ -34,10 +34,10 @@ description: "xmag – magnify parts of the screen"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-source</code><i> geom</i></p>
-<dd> This option specifies the size and/or location of the source region on the screen. By default, a 64&#215;64 square is provided for the user to select an area of the screen.</p>
-<dt><code>-mag</code><i> integer</i></p>
-<dd> This option indicates the magnification to be used. 5 is the default.</dl>
+<dt><code>-source</code><i> geom</i></dt>
+<dd> This option specifies the size and/or location of the source region on the screen. By default, a 64&#215;64 square is provided for the user to select an area of the screen.</dd>
+<dt><code>-mag</code><i> integer</i></dt>
+<dd> This option indicates the magnification to be used. 5 is the default.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Dave Sternlicht and Davor Matic, MIT X Consortium. </p>
 <h2>Index</h2>

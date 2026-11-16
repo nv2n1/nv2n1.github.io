@@ -15,16 +15,16 @@ description: "mglview – Execute MathGL scripts and show in an window"
 <p> <code>mglview</code> reads MGL scripts from <i>scriptfile</i> to produce plots of specified functions or data. The program will create a GUI window showing the script result. You can use <code>&#8211;</code> as file name for reading script from standard input. Another option is using *.mgld files for quick viewing 3d pictures.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-1 string</code></p>
-<dd> Set <i>string</i> as argument $1 for script.</p>
-<dt><code>&#8230;</code></p>
+<dt><code>-1 string</code></dt>
+<dd> Set <i>string</i> as argument $1 for script.</dd>
+<dt><code>&#8230;</code></dt>
 <dd>
-<dt><code>-9 string</code></p>
-<dd> Set <i>string</i> as argument $9 for script.</p>
-<dt><code>-L locname</code></p>
-<dd> Set the locale to <i>locname.</i></p>
-<dt><code>-h</code></p>
-<dd> Print help message.</dl>
+</dd><dt><code>-9 string</code></dt>
+<dd> Set <i>string</i> as argument $9 for script.</dd>
+<dt><code>-L locname</code></dt>
+<dd> Set the locale to <i>locname.</i></dd>
+<dt><code>-h</code></dt>
+<dd> Print help message.</dd></dl>
 <h2>AUTHOR</h2>
 <p> mglview was written by Alexey Balakin, <a rel="nofollow" href="http://mathgl.sourceforge.net/">http://mathgl.sourceforge.net/</a></p>
 <h2>SEE ALSO</h2>

@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_check_revocation – API function"
 <p> <code>int gnutls_x509_crt_check_revocation(gnutls_x509_crt_t </code><i>cert</i><code>, const gnutls_x509_crl_t * </code><i>crl_list</i><code>, int </code><i>crl_list_length</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>const gnutls_x509_crl_t * crl_list</p>
-<dd> should contain a list of gnutls_x509_crl_t structures</p>
-<dt>int crl_list_length</p>
-<dd> the length of the crl_list</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>const gnutls_x509_crl_t * crl_list</dt>
+<dd> should contain a list of gnutls_x509_crl_t structures</dd>
+<dt>int crl_list_length</dt>
+<dd> the length of the crl_list</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return check if the given certificate is revoked. It is assumed that the CRLs have been verified before.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_crt_check_revocation – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

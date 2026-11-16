@@ -18,7 +18,8 @@ description: "systemd-xdg-autostart-generator – User unit generator for XDG au
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/5-systemd-target/">systemd.target</a></code>(5)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>XDG autostart</p>
+<dt> 1.</dt>
+<dd>XDG autostart</dd>
 <dl>
-<dd><a rel="nofollow" href="https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html">https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html</a></dl>
+<dd><a rel="nofollow" href="https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html">https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html</a></dd></dl>
+</dl>

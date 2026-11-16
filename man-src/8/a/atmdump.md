@@ -16,14 +16,14 @@ description: "atmdump – capture or generate ATM cells"
 <p> When sending, <code>atmdump</code> expects the cell payload on standard input. If only less than 48 bytes can be read, the remaining space is padded with zero bytes.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd>displays timestamps as the interval since the last cell reception. By default, the absolute time is displayed. This options is ignored in transmit mode.</p>
-<dt><code>-t&nbsp;<wbr></code><i>type</i></p>
-<dd>selects transmit mode and specifies the payload type. A list of valid payload type numbers can be obtained by invoking <code>atmdump</code> without any arguments.</p>
-<dt><code>-g&nbsp;<wbr></code><i>gfc</i></p>
-<dd>specifies the value of the GFC field. <i>gfc</i> has to be in the range from 0 to 15, default is zero.</p>
-<dt><code>-c</code></p>
-<dd>sets the cell loss priority flag, indicating low priority. By default, CLP is not set.</dl>
+<dt><code>-i</code></dt>
+<dd>displays timestamps as the interval since the last cell reception. By default, the absolute time is displayed. This options is ignored in transmit mode.</dd>
+<dt><code>-t&nbsp;<wbr></code><i>type</i></dt>
+<dd>selects transmit mode and specifies the payload type. A list of valid payload type numbers can be obtained by invoking <code>atmdump</code> without any arguments.</dd>
+<dt><code>-g&nbsp;<wbr></code><i>gfc</i></dt>
+<dd>specifies the value of the GFC field. <i>gfc</i> has to be in the range from 0 to 15, default is zero.</dd>
+<dt><code>-c</code></dt>
+<dd>sets the cell loss priority flag, indicating low priority. By default, CLP is not set.</dd></dl>
 <h2>Restrictions</h2>
 <p>Some device drivers may not pass OAM cells transparently.</p>
 <h2>Author</h2>

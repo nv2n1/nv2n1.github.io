@@ -14,14 +14,14 @@ description: "scsi_finish_async_scan – asynchronous scan has finished"
 <p><i>data</i></p>
 <dl>
 <dd>
-<dd>cookie returned from earlier call to <code>scsi_prep_async_scan</code></dl>
+</dd><dd>cookie returned from earlier call to <code>scsi_prep_async_scan</code></dd></dl>
 <h2>Description</h2>
 <p>All the devices currently attached to this host have been found. This function announces all the devices it has found to the rest of the system.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

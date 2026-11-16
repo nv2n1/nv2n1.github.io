@@ -12,7 +12,6 @@ std::chrono::year::year - std::chrono::year::year
 
 <pre><code>year() = default;
 (since C++ 20)
-
     explicit constexpr year(int y) noexcept;
 (since C++ 20)</code></pre> 
 Constructs a year object. 

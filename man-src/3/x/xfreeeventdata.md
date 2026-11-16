@@ -10,16 +10,16 @@ description: "XGetEventData, XFreeEventData, XGenericEventCookie – retrieve an
 <p>XGetEventData, XFreeEventData, XGenericEventCookie &#8211; retrieve and free additional event data through cookies. </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Bool XGetEventData(Display *<i>display</i>, XGenericEventCookie *<i>cookie</i>);</p>
-<dd>void XFreeEventData(Display *<i>display</i>, XGenericEventCookie *<i>cookie</i>);</p>
-<dt></dl>
+<dd>Bool XGetEventData(Display *<i>display</i>, XGenericEventCookie *<i>cookie</i>);</dd>
+<dd>void XFreeEventData(Display *<i>display</i>, XGenericEventCookie *<i>cookie</i>);</dd>
+<dt></dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>cookie</i></p>
-<dd>Specifies the cookie to free or retrieve the data for. </p>
+</dd><dd>Specifies the connection to the X server.</dd>
+<dt><i>cookie</i></dt>
+<dd>Specifies the cookie to free or retrieve the data for. </dd>
 </dl>
 <h2>Structures</h2>
 <p>typedef struct {<br />

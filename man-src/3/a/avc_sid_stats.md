@@ -21,7 +21,7 @@ description: "avc_cache_stats, avc_av_stats, avc_sid_stats – obtain userspace 
 <p> <code>avc_cache_stats</code>() populates a structure whose fields reflect cache activity: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct avc_cache_stats {
     unsigned entry_lookups;
@@ -34,24 +34,24 @@ struct avc_cache_stats {
     unsigned cav_misses;
 };
 </code></pre>
-</dl>
+</dd></dl>
 <dl>
-<dt><i>entry_lookups</i></p>
-<dd> Number of queries made.</p>
-<dt><i>entry_hits</i></p>
-<dd> Number of times a decision was found in the <i>aeref</i> argument.</p>
-<dt><i>entry_misses</i></p>
-<dd> Number of times a decision was not found in the <i>aeref</i> argument.</p>
-<dt><i>entry_discards</i></p>
-<dd> Number of times a decision was not found in the <i>aeref</i> argument and the <i>aeref</i> argument was non-NULL.</p>
-<dt><i>cav_lookups</i></p>
-<dd> Number of cache lookups.</p>
-<dt><i>cav_hits</i></p>
-<dd> Number of cache hits.</p>
-<dt><i>cav_misses</i></p>
-<dd> Number of cache misses.</p>
-<dt><i>cav_probes</i></p>
-<dd> Number of entries examined while searching the cache.</dl>
+<dt><i>entry_lookups</i></dt>
+<dd> Number of queries made.</dd>
+<dt><i>entry_hits</i></dt>
+<dd> Number of times a decision was found in the <i>aeref</i> argument.</dd>
+<dt><i>entry_misses</i></dt>
+<dd> Number of times a decision was not found in the <i>aeref</i> argument.</dd>
+<dt><i>entry_discards</i></dt>
+<dd> Number of times a decision was not found in the <i>aeref</i> argument and the <i>aeref</i> argument was non-NULL.</dd>
+<dt><i>cav_lookups</i></dt>
+<dd> Number of cache lookups.</dd>
+<dt><i>cav_hits</i></dt>
+<dd> Number of cache hits.</dd>
+<dt><i>cav_misses</i></dt>
+<dd> Number of cache misses.</dd>
+<dt><i>cav_probes</i></dt>
+<dd> Number of entries examined while searching the cache.</dd></dl>
 <h2>NOTES</h2>
 <p> When the cache is flushed as a result of a call to <code>avc_reset</code>() or a policy change notification, the statistics returned by <code>avc_cache_stats</code>() are reset to zero. The SID table, however, is left unchanged. </p>
 <p> When a policy change notification is received, a call to <code>avc_av_stats</code>() is made before the cache is flushed.</p>

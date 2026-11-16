@@ -19,16 +19,16 @@ description: "dbpmda – debugger for Performance Co-Pilot PMDAs"
 <p> If the system supports <code><a href="/docs/linux/man/3-readline/">readline</a></code>(3) then this will be used to read commands when input is from a tty device, so history and command line editing are available. </p>
 <p> <code>dbpmda</code> accepts the following command line arguments:</p>
 <dl>
-<dt><code>-e</code></p>
-<dd> Echo the input to <code>stdout</code>. This is useful when the input is redirected from a file.</p>
-<dt><code>-i</code></p>
-<dd> Emulate interactive behavior and prompt for new commands, even if standard input is not a tty device.</p>
-<dt><code>-n</code> <i>pmnsfile</i></p>
-<dd> Normally <code>dbpmda</code> operates on the distributed Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative local PMNS is loaded from the file <i>pmnsfile</i>.</p>
-<dt><code>-q</code> <i>timeout</i></p>
-<dd> The pmcd to agent version exchange protocol (new in PCP 2.0 &#8211; introduced to provide backward compatibility) uses this timeout to specify how long <code>dbpmda</code> should wait before assuming that no version response is coming from an agent. If this timeout is reached, the agent is assumed to be an agent which does not understand the PCP 2.0 protocol. The default timeout interval is five seconds, but the <code>-q</code> option allows an alternative timeout interval (which must be greater than zero) to be specified. The unit of time is seconds.</p>
-<dt><code>-U</code> <i>username</i></p>
-<dd> User account under which to run <code>dbpmda</code>.</dl>
+<dt><code>-e</code></dt>
+<dd> Echo the input to <code>stdout</code>. This is useful when the input is redirected from a file.</dd>
+<dt><code>-i</code></dt>
+<dd> Emulate interactive behavior and prompt for new commands, even if standard input is not a tty device.</dd>
+<dt><code>-n</code> <i>pmnsfile</i></dt>
+<dd> Normally <code>dbpmda</code> operates on the distributed Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative local PMNS is loaded from the file <i>pmnsfile</i>.</dd>
+<dt><code>-q</code> <i>timeout</i></dt>
+<dd> The pmcd to agent version exchange protocol (new in PCP 2.0 &#8211; introduced to provide backward compatibility) uses this timeout to specify how long <code>dbpmda</code> should wait before assuming that no version response is coming from an agent. If this timeout is reached, the agent is assumed to be an agent which does not understand the PCP 2.0 protocol. The default timeout interval is five seconds, but the <code>-q</code> option allows an alternative timeout interval (which must be greater than zero) to be specified. The unit of time is seconds.</dd>
+<dt><code>-U</code> <i>username</i></dt>
+<dd> User account under which to run <code>dbpmda</code>.</dd></dl>
 <p> As there are no timeout constraints on a PMDA while using <code>dbpmda</code> (as compared to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1)), another debugger like <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) can be used on the PMDA process once it has been attached to <code>dbpmda</code>.</p>
 <h2>EXAMPLE</h2>
 <p> Below is a <code>dbpmda </code> session using the <i>simple</i> PMDA. A <code>.dbpmdarc</code> file is used to set the debugging flag, open the PMDA and display the current status of the debugger: </p>
@@ -196,8 +196,8 @@ dbpmda&gt;
 <p> <code>dbpmda</code> uses <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code>exec</code>(2) to attach to daemon PMDAs. <code>dbpmda</code> makes no attempt to detect the termination of the daemon PMDA process, so it is possible for a PMDA to exit unexpectedly without any notification. However, any further communication attempts with the PMDA will result in errors which will indicate that the PMDA is no longer responding.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>./.dbpmdarc</i></p>
-<dd> List of commands to do on startup.</dl>
+<dt><i>./.dbpmdarc</i></dt>
+<dd> List of commands to do on startup.</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

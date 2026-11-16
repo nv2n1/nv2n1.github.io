@@ -15,29 +15,26 @@ description: "flow-export – Export flow-tools files into other NetFlow package
 <p> The <code>flow-export</code> utility will convert flow-tools flow files to ASCII CSV, cflowd, pcap, wire, mySQL, and PGSQL format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-f</code><i> format</i></p>
-<dd> Export format. Supported formats are: 0 cflowd 1 pcap 2 ASCII CSV 3 MySQL 4 wire 5 PGSQL</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-m</code><i> mask_fields</i></p>
-<dd> Select fields for MySQL, PostgresSQL, cflowd, and ASCII formats. The <i>mask_fields</i> is built from a bitwise OR of the following: </p>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-f</code><i> format</i></dt>
+<dd> Export format. Supported formats are: 0 cflowd 1 pcap 2 ASCII CSV 3 MySQL 4 wire 5 PGSQL</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-m</code><i> mask_fields</i></dt>
+<dd> Select fields for MySQL, PostgresSQL, cflowd, and ASCII formats. The <i>mask_fields</i> is built from a bitwise OR of the following: </dd>
 <pre>
     UNIX_SECS       0x0000000000000001LL
     UNIX_NSECS      0x0000000000000002LL
     SYSUPTIME       0x0000000000000004LL
     EXADDR          0x0000000000000008LL
-    
     DFLOWS          0x0000000000000010LL
     DPKTS           0x0000000000000020LL
     DOCTETS         0x0000000000000040LL
     FIRST           0x0000000000000080LL
-    
     LAST            0x0000000000000100LL
     ENGINE_TYPE     0x0000000000000200LL
     ENGINE_ID       0x0000000000000400LL
-    
     SRCADDR         0x0000000000001000LL
     DSTADDR         0x0000000000002000LL
     SRC_PREFIX      0x0000000000004000LL
@@ -46,17 +43,14 @@ description: "flow-export – Export flow-tools files into other NetFlow package
     INPUT           0x0000000000020000LL
     OUTPUT          0x0000000000040000LL
     SRCPORT         0x0000000000080000LL
-    
     DSTPORT         0x0000000000100000LL
     PROT            0x0000000000200000LL
     TOS             0x0000000000400000LL
     TCP_FLAGS       0x0000000000800000LL
-    
     SRC_MASK        0x0000000001000000LL
     DST_MASK        0x0000000002000000LL
     SRC_AS          0x0000000004000000LL
     DST_AS          0x0000000008000000LL
-    
     IN_ENCAPS       0x0000000010000000LL
     OUT_ENCAPS      0x0000000020000000LL
     PEER_NEXTHOP    0x0000000040000000LL
@@ -90,7 +84,6 @@ description: "flow-export – Export flow-tools files into other NetFlow package
     PEERNEXTHOPMASK    0x00200000
     ENGINETYPEMASK     0x00400000
     ENGINEIDMASK       0x00800000
-    
     INDEX_V1_MASK      0x00043FFF
     INDEX_V5_MASK      0x00C7FFFF
     INDEX_V6_MASK      0x00FFFFFF
@@ -102,8 +95,8 @@ description: "flow-export – Export flow-tools files into other NetFlow package
     INDEX_V8_5_MASK    0x00C3CD9F
 </pre>
 <p> The default value is all fields applicable to the the flow file, or the cflowd INDEX mask applicabable to the export format.</p>
-<dt><code>-u</code><i> user:password:host:port:name:table</i></p>
-<dd> Configure MySQL or PostgresSQL Access.</dl>
+<dt><code>-u</code><i> user:password:host:port:name:table</i></dt>
+<dd> Configure MySQL or PostgresSQL Access.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Convert the flow-tools file <i>flows</i> to the cflowd file <i>flows.cflowd</i>. Include all fields. </p>
 <p> <code>flow-export -f0 &lt; flows &gt; flows.cflowd</code></p>

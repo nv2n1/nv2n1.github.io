@@ -15,33 +15,33 @@ IDBVIP - produces interpolated values at points (XI(I), YI(I)), I=1,...,NIP. Thi
  float *zd, int nip, float *xi, float *yi, float *zi, 
  int *iwk, float *wk)
 <h2>Description</h2><dl COMPACT><dt>MD
-<dd>Mode of computation (must be 1, 2, or 3, else an error return occurs.)
-<dl COMPACT><dd><dl COMPACT><dt>1
-<dd>If this is the first call to this subroutine, or if the value of NDP has been changed from the previous call, or if the contents of the XD or YD arrays have been changed from the previous call.
-<dt>2
-<dd>If the values of NDP and the XD and YD arrays are unchanged from the previous call, but new values for XI, YI are being used. If MD = 2 and NDP has been changed since the previous call to IDBVIP, an error return occurs.
-<dt>3
-<dd>If the values of NDP, NIP, XD, YD, XI, YI are unchanged from the previous call, i.e. if the only change on input to IDBVIP is in the ZD array. If MD=3 and NDP or NIP has been changed since the previous call to IDBVIP, an error return occurs.</dl></dl><dd>Between the call with MD=2 or MD=3 and the preceding call, the IWK and WK work arrays should not be disturbed.
-<dt>NDP
-<dd>Number of data points (must be 4 or greater, else an error return occurs).
-<dt>XD
-<dd>Array of dimension NDP containing the X coordinates of the data points.
-<dt>YD
-<dd>Array of dimension NDP containing the Y coordinates of the data points.
-<dt>ZD
-<dd>Array of dimension NDP containing the Z coordinates of the data points.
-<dt>NIP
-<dd>The number of output points at which interpolation is to be performed (must be 1 or greater, else an error return occurs).
-<dt>XI
-<dd>Array of dimension NIP containing the X coordinates of the output points.
-<dt>YI
-<dd>Array of dimension NIP containing the Y coordinates of the output points.
-<dt>IWK
-<dd>Integer work array of dimension at least 31*NDP + NIP.
-<dt>WK
-<dd>Real work array of dimension at least 8*NDP.
-<dt>ZI
-<dd>Array of dimension NIP where interpolated Z values are to be stored.</dl><h2></h2>Inadequate work space IWK and WK may may cause incorrect results. 
+</dt><dd>Mode of computation (must be 1, 2, or 3, else an error return occurs.)
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>1
+</dt><dd>If this is the first call to this subroutine, or if the value of NDP has been changed from the previous call, or if the contents of the XD or YD arrays have been changed from the previous call.
+</dd><dt>2
+</dt><dd>If the values of NDP and the XD and YD arrays are unchanged from the previous call, but new values for XI, YI are being used. If MD = 2 and NDP has been changed since the previous call to IDBVIP, an error return occurs.
+</dd><dt>3
+</dt><dd>If the values of NDP, NIP, XD, YD, XI, YI are unchanged from the previous call, i.e. if the only change on input to IDBVIP is in the ZD array. If MD=3 and NDP or NIP has been changed since the previous call to IDBVIP, an error return occurs.</dd></dl></dl><dd>Between the call with MD=2 or MD=3 and the preceding call, the IWK and WK work arrays should not be disturbed.
+</dd><dt>NDP
+</dt><dd>Number of data points (must be 4 or greater, else an error return occurs).
+</dd><dt>XD
+</dt><dd>Array of dimension NDP containing the X coordinates of the data points.
+</dd><dt>YD
+</dt><dd>Array of dimension NDP containing the Y coordinates of the data points.
+</dd><dt>ZD
+</dt><dd>Array of dimension NDP containing the Z coordinates of the data points.
+</dd><dt>NIP
+</dt><dd>The number of output points at which interpolation is to be performed (must be 1 or greater, else an error return occurs).
+</dd><dt>XI
+</dt><dd>Array of dimension NIP containing the X coordinates of the output points.
+</dd><dt>YI
+</dt><dd>Array of dimension NIP containing the Y coordinates of the output points.
+</dd><dt>IWK
+</dt><dd>Integer work array of dimension at least 31*NDP + NIP.
+</dd><dt>WK
+</dt><dd>Real work array of dimension at least 8*NDP.
+</dd><dt>ZI
+</dt><dd>Array of dimension NIP where interpolated Z values are to be stored.</dd></dl><h2></h2>Inadequate work space IWK and WK may may cause incorrect results. 
 
  The data points must be distinct and their projections in the X-Y plane must not be collinear, otherwise an error return occurs.
 <h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.

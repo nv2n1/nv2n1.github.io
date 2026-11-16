@@ -11,8 +11,6 @@ description: "zposv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zposv (UPLO, N, NRHS, A, LDA, B, LDB, INFO)
-
-
 ZPOSV computes the solution to system of linear equations A * X = B for PO matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zposv (characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
@@ -30,10 +28,10 @@ ZPOSV computes the solution to system of linear equations A * X = B for PO matri
  where U is an upper triangular matrix and L is a lower triangular
  matrix. The factored form of A is then used to solve the system of
  equations A * X = B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre>
@@ -76,13 +74,13 @@ ZPOSV computes the solution to system of linear equations A * X = B for PO matri
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 131 of file zposv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

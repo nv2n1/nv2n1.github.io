@@ -11,16 +11,16 @@ description: "XkbSetIndicatorMap – Downloads the changes to the server based o
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetIndicatorMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>desc</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of indicators to change</p>
-<dt><i>&#8211; desc</i></p>
-<dd>keyboard description from which the maps are taken</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of indicators to change</dd>
+<dt><i>&#8211; desc</i></dt>
+<dd>keyboard description from which the maps are taken</dd></dl>
 <h2>Description</h2>
 <p>This section discusses the effects of explicitly changing indicators depending upon different settings in the indicator map. See Tables 1 and Table 2 for information on the effects of the indicator map fields when explicit changes are made. </p>
 <table>

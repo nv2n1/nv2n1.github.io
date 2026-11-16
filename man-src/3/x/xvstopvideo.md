@@ -13,27 +13,27 @@ description: "XvStopVideo – stop active video"
 <pre><code>int XvStopVideo(Display *</code><i>dpy</i><code>, XvPortID </code><i>port</i><code>, Drawable </code><i>draw</i><code>);</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>dpy</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>port</i></p>
-<dd>Specifies the port for which video is to be stopped.</p>
-<dt><i>draw</i></p>
-<dd>Specifies the drawable associated with the named port.</dl>
+<dt><i>dpy</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>port</i></dt>
+<dd>Specifies the port for which video is to be stopped.</dd>
+<dt><i>draw</i></dt>
+<dd>Specifies the drawable associated with the named port.</dd></dl>
 <h2>Description</h2>
 <p><code><a href="/docs/linux/man/3-xvstopvideo/">XvStopVideo</a></code>(3) stops active video for the specified port and drawable. If the port is not processing video, or if it is processing video in a different drawable, the request is ignored. When video is stopped a <code><a href="/docs/linux/man/3-xvvideonotify/">XvVideoNotify</a></code>(3) event with detail XvStopped is generated for the associated drawable.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>[Success]</p>
-<dd>Returned if <code><a href="/docs/linux/man/3-xvstopvideo/">XvStopVideo</a></code>(3) completed successfully.</p>
-<dt>[XvBadExtension]</p>
-<dd>Returned if the Xv extension is unavailable.</p>
-<dt>[XvBadAlloc]</p>
-<dd>Returned if <code><a href="/docs/linux/man/3-xvstopvideo/">XvStopVideo</a></code>(3) failed to allocate memory to process the request.</dl>
+<dt>[Success]</dt>
+<dd>Returned if <code><a href="/docs/linux/man/3-xvstopvideo/">XvStopVideo</a></code>(3) completed successfully.</dd>
+<dt>[XvBadExtension]</dt>
+<dd>Returned if the Xv extension is unavailable.</dd>
+<dt>[XvBadAlloc]</dt>
+<dd>Returned if <code><a href="/docs/linux/man/3-xvstopvideo/">XvStopVideo</a></code>(3) failed to allocate memory to process the request.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt>[XvBadPort]</p>
-<dd>Generated if the requested port does not exist.</p>
-<dt>[BadDrawable]</p>
-<dd>Generated if the requested drawable does not exist.</dl>
+<dt>[XvBadPort]</dt>
+<dd>Generated if the requested port does not exist.</dd>
+<dt>[BadDrawable]</dt>
+<dd>Generated if the requested drawable does not exist.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xvgetvideo/">XvGetVideo</a></code>(3), <code><a href="/docs/linux/man/3-xvputvideo/">XvPutVideo</a></code>(3), <code><a href="/docs/linux/man/3-xvvideonotify/">XvVideoNotify</a></code>(3)</p>

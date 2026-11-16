@@ -20,23 +20,24 @@ description: "etex – extended (plain) TeX"
 <h2>OPTIONS</h2>
 <p> This version of e-TeX understands the following command line options.</p>
 <dl>
-<dt><code>-fmt</code><i>&nbsp;format</i></p>
-<dd> Use <i>format</i> as the name of the format to be used, instead of the name by which e-TeX was called or a <i>%&amp;</i> line.</p>
-<dt><code>-enc</code></p>
-<dd> Enable the encTeX extensions. This option is only effective in combination with <code>-ini</code>. For documentation of the encTeX extensions see <code><a rel="nofollow" href="http://www.olsak.net/enctex.html">http://www.olsak.net/enctex.html</a></code>.</p>
-<dt><code>-etex</code></p>
-<dd> Enable the e-TeX extensions. This option is only effective in combination with <code>-ini</code>.</p>
-<dt><code>-file-line-error</code></p>
-<dd> Print error messages in the form <i>file:line:error</i> which is similar to the way many compilers format them.</p>
-<dt><code>-no-file-line-error</code></p>
-<dd> Disable printing error messages in the <i>file:line:error</i> style.</p>
-<dt><code>-file-line-error-style</code></p>
-<dd> This is the old name of the <code>-file-line-error</code> option.</p>
-<dt><code>-halt-on-error</code></p>
-<dd> Exit with an error code when an error is encountered during processing.</p>
-<dt><code>-help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>-ini</code></p>
-<dd> Start in <i>INI</i> mode, which is used to dump formats. The <i>INI</i> mode can be used for typesetting, but no format is preloaded, and basic initializations like setting catcodes may be required.</p>
-<dt><code>-interaction</code><i>&nbsp;mode</i></p>
+<dt><code>-fmt</code><i>&nbsp;format</i></dt>
+<dd> Use <i>format</i> as the name of the format to be used, instead of the name by which e-TeX was called or a <i>%&amp;</i> line.</dd>
+<dt><code>-enc</code></dt>
+<dd> Enable the encTeX extensions. This option is only effective in combination with <code>-ini</code>. For documentation of the encTeX extensions see <code><a rel="nofollow" href="http://www.olsak.net/enctex.html">http://www.olsak.net/enctex.html</a></code>.</dd>
+<dt><code>-etex</code></dt>
+<dd> Enable the e-TeX extensions. This option is only effective in combination with <code>-ini</code>.</dd>
+<dt><code>-file-line-error</code></dt>
+<dd> Print error messages in the form <i>file:line:error</i> which is similar to the way many compilers format them.</dd>
+<dt><code>-no-file-line-error</code></dt>
+<dd> Disable printing error messages in the <i>file:line:error</i> style.</dd>
+<dt><code>-file-line-error-style</code></dt>
+<dd> This is the old name of the <code>-file-line-error</code> option.</dd>
+<dt><code>-halt-on-error</code></dt>
+<dd> Exit with an error code when an error is encountered during processing.</dd>
+<dt><code>-help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>-ini</code></dt>
+<dd> Start in <i>INI</i> mode, which is used to dump formats. The <i>INI</i> mode can be used for typesetting, but no format is preloaded, and basic initializations like setting catcodes may be required.</dd>
+<dt><code>-interaction</code><i>&nbsp;mode</i></dt>
 <dd> Sets the interaction mode. The mode can be either <i>batchmode</i>, <i>nonstopmode</i>, <i>scrollmode</i>, and <i>errorstopmode</i>. The meaning of these modes is the same as that of the corresponding 
+</dd></dl>

@@ -18,7 +18,7 @@ description: "pdfmom – produce PDF documents using the mom macro package for g
 <p> <i>pdfmom</i> accepts all the same options as <i>groff</i>. If <code>-Tps</code> is given, the options associated with <i>pdfroff</i> are accepted as well. Please note that when <i>pdfmom</i> calls <i>pdfroff</i>, the</p>
 <dl>
 <dt>
-<dd> <code>-mpdfmark -mom &#8211;no-toc</code></dl>
+</dt><dd> <code>-mpdfmark -mom &#8211;no-toc</code></dd></dl>
 <p> options are implied and should not be given on the command line. Equally, it is not necessary to supply the <code>-mom</code> or <code>-m~mom</code> options when <code>-Tps</code> is absent. </p>
 <p> PDF integration with the <i>mom</i> macros is discussed in full in the manual <i>Producing PDFs with groff and mom</i>, which was itself produced with <i>pdfmom</i>. </p>
 <p> If called with the <code>-v</code> option, <i>pdfmom</i> simply displays its version information and exits.</p>
@@ -26,7 +26,7 @@ description: "pdfmom – produce PDF documents using the mom macro package for g
 <p> <i>pdfmom</i> sometimes issues warnings of the type</p>
 <dl>
 <dt>
-<dd> &#8230;: can&#8217;t transparently output node at top level</dl>
+</dt><dd> &#8230;: can&#8217;t transparently output node at top level</dd></dl>
 <p> but this is more of an annoyance than a bug, and may safely be ignored.</p>
 <h2>AUTHORS</h2>
 <p> <i>pfdmom</i> was written by Deri James and Peter Schaffter</p>

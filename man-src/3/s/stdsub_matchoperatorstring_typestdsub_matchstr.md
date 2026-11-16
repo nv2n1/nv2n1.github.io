@@ -22,13 +22,9 @@ The first version is an implicit conversion, the second one is explicit. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;regex&gt;
-
 #include &lt;string&gt;
-
 int main()
-
 {
     std::ssub_match sm;
     std::string s = sm; // implicit conversion

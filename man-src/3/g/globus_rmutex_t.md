@@ -17,7 +17,7 @@ description: "globus_rmutex_t –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_rmutex_init()</code>, <code>globus_rmutex_destroy()</code>, <code>globus_rmutex_lock()</code>, <code>globus_rmutex_unlock()</code></dl>
+</dt><dd> <code>globus_rmutex_init()</code>, <code>globus_rmutex_destroy()</code>, <code>globus_rmutex_lock()</code>, <code>globus_rmutex_unlock()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>

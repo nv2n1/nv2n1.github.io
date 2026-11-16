@@ -18,65 +18,65 @@ description: "pdfbook2 – transform pdf files into booklets for double-sided pr
 <h2>EXAMPLE</h2>
 <p> To simply <code>create a booklet</code> from input.pdf you can use </p>
 <pre>
-<dl><dt><dd>pdfbook2 input.pdf
-</dl>
+<dl><dt></dt><dd>pdfbook2 input.pdf
+</dd></dl>
 </pre>
 <p> to create input-book.pdf. To select a special <code>type of paper</code> you can do </p>
 <pre>
-<dl><dt><dd>pdfbook2 --paper=letter input.pdf
-</dl>
+<dl><dt></dt><dd>pdfbook2 --paper=letter input.pdf
+</dd></dl>
 </pre>
 <p> for letter or </p>
 <pre>
-<dl><dt><dd>pdfbook2 --paper=a4paper input.pdf
-</dl>
+<dl><dt></dt><dd>pdfbook2 --paper=a4paper input.pdf
+</dd></dl>
 </pre>
 <p> for standard A4. To increase the <code>inner margin for binding</code> use </p>
 <pre>
-<dl><dt><dd>pdfbook2 --inner-margin=200 input.pdf
-</dl>
+<dl><dt></dt><dd>pdfbook2 --inner-margin=200 input.pdf
+</dd></dl>
 </pre>
 <p> to increase the default value of 150. You can submit <code>multiple files</code> to the script for processing like </p>
 <pre>
-<dl><dt><dd>pdfbook2 input1.pdf input2.pdf
-</dl>
+<dl><dt></dt><dd>pdfbook2 input1.pdf input2.pdf
+</dd></dl>
 </pre>
 <p> which will result in input1-book.pdf and input2-book.pdf. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program&#8217;s version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show help message and exit </p>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show help message and exit </dd>
 </dl>
 <h3>GENERAL</h3>
 <dl>
-<dt><code>-p</code>, <code>&#8211;paper</code>=<i>STR</i></p>
-<dd> Format of the output paper dimensions as latex keyword (e.g. a4paper, letterpaper, legalpaper, &#8230;)</p>
-<dt><code>-s</code>, <code>&#8211;short-edge</code></p>
-<dd> Format the booklet for short-edge double-sided printing</p>
-<dt><code>-n</code>, <code>&#8211;no-crop</code></p>
-<dd> Prevent the cropping to the content area </p>
+<dt><code>-p</code>, <code>&#8211;paper</code>=<i>STR</i></dt>
+<dd> Format of the output paper dimensions as latex keyword (e.g. a4paper, letterpaper, legalpaper, &#8230;)</dd>
+<dt><code>-s</code>, <code>&#8211;short-edge</code></dt>
+<dd> Format the booklet for short-edge double-sided printing</dd>
+<dt><code>-n</code>, <code>&#8211;no-crop</code></dt>
+<dd> Prevent the cropping to the content area </dd>
 </dl>
 <h3>MARGINS</h3>
 <dl>
-<dt><code>-o</code>, <code>&#8211;outer-margin</code>=<i>INT</i></p>
-<dd> Defines the outer margin in the booklet (default: 40)</p>
-<dt><code>-i</code>, <code>&#8211;inner-margin</code>=<i>INT</i></p>
-<dd> Defines the inner margin between the pages in the booklet (default: 150)</p>
-<dt><code>-t</code>, <code>&#8211;top-margin</code>=<i>INT</i></p>
-<dd> Defines the top margin in the booklet (default: 30)</p>
-<dt><code>-b</code>, <code>&#8211;bottom-margin</code>=<i>INT</i></p>
-<dd> Defines the bottom margin in the booklet (default: 30) </p>
+<dt><code>-o</code>, <code>&#8211;outer-margin</code>=<i>INT</i></dt>
+<dd> Defines the outer margin in the booklet (default: 40)</dd>
+<dt><code>-i</code>, <code>&#8211;inner-margin</code>=<i>INT</i></dt>
+<dd> Defines the inner margin between the pages in the booklet (default: 150)</dd>
+<dt><code>-t</code>, <code>&#8211;top-margin</code>=<i>INT</i></dt>
+<dd> Defines the top margin in the booklet (default: 30)</dd>
+<dt><code>-b</code>, <code>&#8211;bottom-margin</code>=<i>INT</i></dt>
+<dd> Defines the bottom margin in the booklet (default: 30) </dd>
 </dl>
 <h3>ADVANCED</h3>
 <dl>
-<dt><code>&#8211;signature</code>=<i>INT</i></p>
-<dd> Define the signature for the booklet handed to pdfjam, needs to be multiple of 4 (default: 4)</p>
-<dt><code>&#8211;signature*</code>=<i>INT</i></p>
-<dd> Same as &#8211;signature</p>
-<dt><code>&#8211;resolution</code>=<i>INT</i></p>
-<dd> Resolution used by ghostscript in bp (default: 72) </p>
+<dt><code>&#8211;signature</code>=<i>INT</i></dt>
+<dd> Define the signature for the booklet handed to pdfjam, needs to be multiple of 4 (default: 4)</dd>
+<dt><code>&#8211;signature*</code>=<i>INT</i></dt>
+<dd> Same as &#8211;signature</dd>
+<dt><code>&#8211;resolution</code>=<i>INT</i></dt>
+<dd> Resolution used by ghostscript in bp (default: 72) </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>pdfbook</code>(1), <code><a href="/docs/linux/man/1-pdfjam/">pdfjam</a></code>(1), <code>pdfcrop</code>(1) </p>

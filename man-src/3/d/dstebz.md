@@ -19,7 +19,7 @@ description: "dstebz.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DSTEBZ computes the eigenvalues of a symmetric tridiagonal
  matrix T.  The user may ask for all eigenvalues, all eigenvalues
@@ -32,11 +32,11 @@ description: "dstebz.f –"
  Matrix&quot;, Report CS41, Computer Science Dept., Stanford
  University, July 21, 1966.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>RANGE</i> </p>
+</dt><dd> <i>RANGE</i> </dd>
 <pre>
           RANGE is CHARACTER*1
           = 'A': (&quot;All&quot;)   all eigenvalues will be found.
@@ -193,7 +193,7 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = 'A' or 'V'.
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   RELFAC  DOUBLE PRECISION, default = 2.0e0
           The relative tolerance.  An interval (a,b] lies within
@@ -208,18 +208,18 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = 'A' or 'V'.
           the worst machine around.  Note that this has no effect
           on accuracy of the solution.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 262 of file dstebz.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

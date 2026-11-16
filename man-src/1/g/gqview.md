@@ -16,353 +16,353 @@ description: "GQview – GTK based multiformat image viewer"
 <h2>OPTIONS</h2>
 <p> <code></p>
 <dl>
-<dt>+t,&#8211;with-tools</p>
+<dt>+t,&#8211;with-tools</dt>
 <dd> </code> Force the toolbox to be shown.<br />
- <code></p>
-<dt>-t,&#8211;without-tools</p>
+ <code></dd>
+<dt>-t,&#8211;without-tools</dt>
 <dd> </code> Force the toolbox to be hidden.<br />
- <code></p>
-<dt>-f,&#8211;fullscreen</p>
+ <code></dd>
+<dt>-f,&#8211;fullscreen</dt>
 <dd> </code> Start in full screen mode.<br />
- <code></p>
-<dt>-s,&#8211;slideshow</p>
+ <code></dd>
+<dt>-s,&#8211;slideshow</dt>
 <dd> </code> Start in slideshow mode.<br />
- <code></p>
-<dt>-l,&#8211;list</p>
+ <code></dd>
+<dt>-l,&#8211;list</dt>
 <dd> </code> Open collection window for command line files.<br />
- <code></p>
-<dt>&#8211;debug</p>
+ <code></dd>
+<dt>&#8211;debug</dt>
 <dd> </code> Turn on debugging output.<br />
- <code></p>
-<dt>-v,&#8211;version</p>
+ <code></dd>
+<dt>-v,&#8211;version</dt>
 <dd> </code> Print version.<br />
- <code></p>
-<dt>-h,&#8211;help</p>
-<dd> </code> Print command line options. </p>
+ <code></dd>
+<dt>-h,&#8211;help</dt>
+<dd> </code> Print command line options. </dd>
 </dl>
 <h2>USAGE</h2>
 <p> Key naming is similar to that of <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1): <i>C-key</i> indicates that control should be held, and key should be pressed; <i>S-key</i> indicates that shift should be held and key should be pressed; these two can be combined, also, into <i>C-S-key</i>. <code></p>
 <dl>
-<dt>left-mouse-click</p>
+<dt>left-mouse-click</dt>
 <dd> </code> (on image) next image<br />
- <code></p>
-<dt>middle-mouse-click</p>
+ <code></dd>
+<dt>middle-mouse-click</dt>
 <dd> </code> (on image) previous image<br />
- <code></p>
-<dt>right-mouse</p>
+ <code></dd>
+<dt>right-mouse</dt>
 <dd> </code> context menu<br />
- <code></p>
-<dt>middle-mouse-drag</p>
+ <code></dd>
+<dt>middle-mouse-drag</dt>
 <dd> </code> drag and drop operations<br />
- <code></p>
-<dt>mouse-wheel</p>
+ <code></dd>
+<dt>mouse-wheel</dt>
 <dd> </code> (on image) Changes to the next or previous image, or if option is enabled, scrolls the image vertically.<br />
- <code></p>
-<dt>mouse-wheel+Shift-key</p>
+ <code></dd>
+<dt>mouse-wheel+Shift-key</dt>
 <dd> </code> (on image) Inverts the mouse wheel behavior between scrolling image or changing image.<br />
- <code></p>
-<dt>mouse-wheel+Control-key</p>
+ <code></dd>
+<dt>mouse-wheel+Control-key</dt>
 <dd> </code> (on image) Zooms the image in and out.
-</dl>
+</dd></dl>
 <h3>GENERAL KEYS</h3>
 <p> <code></p>
 <dl>
-<dt>PageDown</p>
+<dt>PageDown</dt>
 <dd> </code> next image<br />
- <code></p>
-<dt>PageUp</p>
+ <code></dd>
+<dt>PageUp</dt>
 <dd> </code> previous image<br />
- <code></p>
-<dt>Home</p>
+ <code></dd>
+<dt>Home</dt>
 <dd> </code> first image in list<br />
- <code></p>
-<dt>End</p>
+ <code></dd>
+<dt>End</dt>
 <dd> </code> last image in list<br />
- <code></p>
-<dt>Tab</p>
+ <code></dd>
+<dt>Tab</dt>
 <dd> </code> tab completion in path entry window<br />
- <code></p>
-<dt>Escape</p>
+ <code></dd>
+<dt>Escape</dt>
 <dd> </code> cancel completion in path entry window or stop generating thumbnails
-</dl>
+</dd></dl>
 <h3>IMAGE KEYS</h3>
 <p> Keys that are valid when the image part of the window is focused. <code></p>
 <dl>
-<dt>Arrows</p>
+<dt>Arrows</dt>
 <dd> </code> pan image<br />
- <code></p>
-<dt>Shift+Arrows</p>
+ <code></dd>
+<dt>Shift+Arrows</dt>
 <dd> </code> pan image faster<br />
- <code></p>
-<dt>Space,N</p>
+ <code></dd>
+<dt>Space,N</dt>
 <dd> </code> next image<br />
- <code></p>
-<dt>Backspace,B</p>
+ <code></dd>
+<dt>Backspace,B</dt>
 <dd> </code> previous image
-</dl>
+</dd></dl>
 <h3>FILE RELATED KEYS</h3>
 <p> <code></p>
 <dl>
-<dt>C</p>
+<dt>C</dt>
 <dd> </code> new empty collection<br />
- <code></p>
-<dt>O</p>
+ <code></dd>
+<dt>O</dt>
 <dd> </code> open collection<br />
- <code></p>
-<dt>D</p>
+ <code></dd>
+<dt>D</dt>
 <dd> </code> open the Find Duplicates window<br />
- <code></p>
-<dt>C-F</p>
+ <code></dd>
+<dt>C-F</dt>
 <dd> </code> new folder<br />
- <code></p>
-<dt>C-C</p>
+ <code></dd>
+<dt>C-C</dt>
 <dd> </code> copy file<br />
- <code></p>
-<dt>C-M</p>
+ <code></dd>
+<dt>C-M</dt>
 <dd> </code> move file<br />
- <code></p>
-<dt>C-R</p>
+ <code></dd>
+<dt>C-R</dt>
 <dd> </code> rename file<br />
- <code></p>
-<dt>C-D,Delete</p>
+ <code></dd>
+<dt>C-D,Delete</dt>
 <dd> </code> delete file<br />
- <code></p>
-<dt>C-N</p>
+ <code></dd>
+<dt>C-N</dt>
 <dd> </code> new window<br />
- <code></p>
-<dt>C-W</p>
+ <code></dd>
+<dt>C-W</dt>
 <dd> </code> close window<br />
- <code></p>
-<dt>C-Q</p>
+ <code></dd>
+<dt>C-Q</dt>
 <dd> </code> quit
-</dl>
+</dd></dl>
 <h3>EDIT MENU RELATED KEYS</h3>
 <p> <code></p>
 <dl>
-<dt>C-1,2..9,0</p>
+<dt>C-1,2..9,0</dt>
 <dd> </code> run external editor<br />
- <code></p>
-<dt>C-A</p>
+ <code></dd>
+<dt>C-A</dt>
 <dd> </code> select all files<br />
- <code></p>
-<dt>C-S-A</p>
+ <code></dd>
+<dt>C-S-A</dt>
 <dd> </code> unselect all files<br />
- <code></p>
-<dt>C-O</p>
+ <code></dd>
+<dt>C-O</dt>
 <dd> </code> go to the Configuration window<br />
- <code></p>
-<dt>C-P</p>
+ <code></dd>
+<dt>C-P</dt>
 <dd> </code> display image properties<br />
- <code></p>
-<dt>]</p>
+ <code></dd>
+<dt>]</dt>
 <dd> </code> rotate image clockwise<br />
- <code></p>
-<dt>[</p>
+ <code></dd>
+<dt>[</dt>
 <dd> </code> rotate image counterclockwise<br />
- <code></p>
-<dt>S-R</p>
+ <code></dd>
+<dt>S-R</dt>
 <dd> </code> rotate image 180 degrees<br />
- <code></p>
-<dt>S-M</p>
+ <code></dd>
+<dt>S-M</dt>
 <dd> </code> mirror image (horizontal)<br />
- <code></p>
-<dt>S-F</p>
+ <code></dd>
+<dt>S-F</dt>
 <dd> </code> flip image (vertical)
-</dl>
+</dd></dl>
 <h3>VIEW MENU RELATED KEYS</h3>
 <p> <code></p>
 <dl>
-<dt>+,=</p>
+<dt>+,=</dt>
 <dd> </code> zoom in<br />
- <code></p>
-<dt>&#8211;</p>
+ <code></dd>
+<dt>&#8211;</dt>
 <dd> </code> zoom out<br />
- <code></p>
-<dt>Z,KeyPad-/</p>
+ <code></dd>
+<dt>Z,KeyPad-/</dt>
 <dd> </code> zoom to original size<br />
- <code></p>
-<dt>X,KeyPad-*</p>
+ <code></dd>
+<dt>X,KeyPad-*</dt>
 <dd> </code> zoom to fit window<br />
- <code></p>
-<dt>1,2,3,4</p>
+ <code></dd>
+<dt>1,2,3,4</dt>
 <dd> </code> zoom in to X scale factor<br />
- <code></p>
-<dt>9,8,7</p>
+ <code></dd>
+<dt>9,8,7</dt>
 <dd> </code> zoom to -2, -3, -4, respectively<br />
- <code></p>
-<dt>T</p>
+ <code></dd>
+<dt>T</dt>
 <dd> </code> toggle thumbnail display<br />
- <code></p>
-<dt>C-L</p>
+ <code></dd>
+<dt>C-L</dt>
 <dd> </code> display files in list format<br />
- <code></p>
-<dt>C-I</p>
+ <code></dd>
+<dt>C-I</dt>
 <dd> </code> display files in icon format<br />
- <code></p>
-<dt>C-T</p>
+ <code></dd>
+<dt>C-T</dt>
 <dd> </code> toggle tree view for directories<br />
- <code></p>
-<dt>R</p>
+ <code></dd>
+<dt>R</dt>
 <dd> </code> refresh file list<br />
- <code></p>
-<dt>L</p>
+ <code></dd>
+<dt>L</dt>
 <dd> </code> toggle floating of file selection area<br />
- <code></p>
-<dt>H</p>
+ <code></dd>
+<dt>H</dt>
 <dd> </code> toggle hiding of file selection area<br />
- <code></p>
-<dt>F,V</p>
+ <code></dd>
+<dt>F,V</dt>
 <dd> </code> toggle full-screen mode<br />
- <code></p>
-<dt>S</p>
+ <code></dd>
+<dt>S</dt>
 <dd> </code> toggle slide-show mode<br />
- <code></p>
-<dt>P</p>
+ <code></dd>
+<dt>P</dt>
 <dd> </code> toggle pause of slideshow<br />
- <code></p>
-<dt>C-E</p>
+ <code></dd>
+<dt>C-E</dt>
 <dd> </code> toggle display of exif sidebar<br />
- <code></p>
-<dt>C-S</p>
+ <code></dd>
+<dt>C-S</dt>
 <dd> </code> toggle display of sort manager
-</dl>
+</dd></dl>
 <h3>COLLECTION WINDOW KEYS</h3>
 <p> <code></p>
 <dl>
-<dt>Arrows</p>
+<dt>Arrows</dt>
 <dd> </code> move selection<br />
- <code></p>
-<dt>Shift+Arrows</p>
+ <code></dd>
+<dt>Shift+Arrows</dt>
 <dd> </code> select multiple images<br />
- <code></p>
-<dt>Control+Arrows</p>
+ <code></dd>
+<dt>Control+Arrows</dt>
 <dd> </code> move selector without changing selection<br />
- <code></p>
-<dt>Space</p>
+ <code></dd>
+<dt>Space</dt>
 <dd> </code> select the image under the selector<br />
- <code></p>
-<dt>Control+Space</p>
+ <code></dd>
+<dt>Control+Space</dt>
 <dd> </code> toggle selection of the image under the selector<br />
- <code></p>
-<dt>Home</p>
+ <code></dd>
+<dt>Home</dt>
 <dd> </code> move selector to the top image<br />
- <code></p>
-<dt>End</p>
+ <code></dd>
+<dt>End</dt>
 <dd> </code> move selector to bottom image<br />
- Adding Shift or Control to Home and End has a similar effect as adding them to the arrows. <code></p>
-<dt>C-A</p>
+ Adding Shift or Control to Home and End has a similar effect as adding them to the arrows. <code></dd>
+<dt>C-A</dt>
 <dd> </code> select all images<br />
- <code></p>
-<dt>C-S-A</p>
+ <code></dd>
+<dt>C-S-A</dt>
 <dd> </code> unselect all images<br />
- <code></p>
-<dt>Delete</p>
+ <code></dd>
+<dt>Delete</dt>
 <dd> </code> remove image form collection (does not delete the file)<br />
- <code></p>
-<dt>C-L</p>
+ <code></dd>
+<dt>C-L</dt>
 <dd> </code> add images to collection form main file list<br />
- <code></p>
-<dt>N</p>
+ <code></dd>
+<dt>N</dt>
 <dd> </code> sort collection by name<br />
- <code></p>
-<dt>D</p>
+ <code></dd>
+<dt>D</dt>
 <dd> </code> sort collection by date<br />
- <code></p>
-<dt>B</p>
+ <code></dd>
+<dt>B</dt>
 <dd> </code> sort collection by file size<br />
- <code></p>
-<dt>P</p>
+ <code></dd>
+<dt>P</dt>
 <dd> </code> sort collection by pathname<br />
- <code></p>
-<dt>I</p>
+ <code></dd>
+<dt>I</dt>
 <dd> </code> sort collection by name numerically (*)<br />
- <code></p>
-<dt>Enter</p>
+ <code></dd>
+<dt>Enter</dt>
 <dd> </code> view image under selector in the main image window<br />
- <code></p>
-<dt>V</p>
+ <code></dd>
+<dt>V</dt>
 <dd> </code> view image under selector in new window<br />
- <code></p>
-<dt>C-1,2..9,0</p>
+ <code></dd>
+<dt>C-1,2..9,0</dt>
 <dd> </code> open selected image(s) in external editor<br />
- <code></p>
-<dt>S</p>
+ <code></dd>
+<dt>S</dt>
 <dd> </code> save collection<br />
- <code></p>
-<dt>C-S</p>
+ <code></dd>
+<dt>C-S</dt>
 <dd> </code> save collection as<br />
- <code></p>
-<dt>A</p>
+ <code></dd>
+<dt>A</dt>
 <dd> </code> append current collection to existing collection<br />
- <code></p>
-<dt>C-C</p>
+ <code></dd>
+<dt>C-C</dt>
 <dd> </code> copy selected files<br />
- <code></p>
-<dt>C-M</p>
+ <code></dd>
+<dt>C-M</dt>
 <dd> </code> move selected files<br />
- <code></p>
-<dt>C-R</p>
+ <code></dd>
+<dt>C-R</dt>
 <dd> </code> rename selected files<br />
- <code></p>
-<dt>C-D</p>
+ <code></dd>
+<dt>C-D</dt>
 <dd> </code> delete selected files<br />
- <code></p>
-<dt>C-W</p>
+ <code></dd>
+<dt>C-W</dt>
 <dd> </code> close window
-</dl>
+</dd></dl>
 <h3>DUPLICATES WINDOW KEYS</h3>
 <p> <code></p>
 <dl>
-<dt>C-A</p>
+<dt>C-A</dt>
 <dd> </code> select all images<br />
- <code></p>
-<dt>C-S-A</p>
+ <code></dd>
+<dt>C-S-A</dt>
 <dd> </code> unselect all images<br />
- <code></p>
-<dt>1</p>
+ <code></dd>
+<dt>1</dt>
 <dd> </code> select group 1 images<br />
- <code></p>
-<dt>2</p>
+ <code></dd>
+<dt>2</dt>
 <dd> </code> select group 2 images<br />
- <code></p>
-<dt>C-L</p>
+ <code></dd>
+<dt>C-L</dt>
 <dd> </code> add images from main window file list<br />
- <code></p>
-<dt>C</p>
+ <code></dd>
+<dt>C</dt>
 <dd> </code> add selected images to new collection<br />
- <code></p>
-<dt>Delete</p>
+ <code></dd>
+<dt>Delete</dt>
 <dd> </code> remove selected images from list<br />
- <code></p>
-<dt>C-Delete</p>
+ <code></dd>
+<dt>C-Delete</dt>
 <dd> </code> clear window<br />
- <code></p>
-<dt>Enter</p>
+ <code></dd>
+<dt>Enter</dt>
 <dd> </code> view image with focus in main window<br />
- <code></p>
-<dt>V</p>
+ <code></dd>
+<dt>V</dt>
 <dd> </code> view image with focus in new window<br />
- <code></p>
-<dt>C-1,2..9,0</p>
+ <code></dd>
+<dt>C-1,2..9,0</dt>
 <dd> </code> open selected image(s) in editor<br />
- <code></p>
-<dt>C-P</p>
+ <code></dd>
+<dt>C-P</dt>
 <dd> </code> display properties window for selected images<br />
- <code></p>
-<dt>C-C</p>
+ <code></dd>
+<dt>C-C</dt>
 <dd> </code> copy selected files<br />
- <code></p>
-<dt>C-M</p>
+ <code></dd>
+<dt>C-M</dt>
 <dd> </code> move selected files<br />
- <code></p>
-<dt>C-R</p>
+ <code></dd>
+<dt>C-R</dt>
 <dd> </code> rename selected files<br />
- <code></p>
-<dt>C-D</p>
+ <code></dd>
+<dt>C-D</dt>
 <dd> </code> delete selected files<br />
- <code></p>
-<dt>C-W</p>
-<dd> </code> close window </p>
+ <code></dd>
+<dt>C-W</dt>
+<dd> </code> close window </dd>
 </dl>
 <h2>LICENSE</h2>
 <p> Copyright (C) 1999-2004 by John Ellis. Use this software at your own risk! This software released under the GNU General Public License. Please read the COPYING file for more information.</p>

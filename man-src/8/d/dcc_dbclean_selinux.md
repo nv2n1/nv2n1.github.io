@@ -64,8 +64,8 @@ description: "dcc_dbclean_selinux – Security Enhanced Linux Policy for the dcc
 <p> <code>dcc_dbclean_exec_t</code> </p>
 <p> &#8211; Set files with the dcc_dbclean_exec_t type, if you want to transition an executable to the dcc_dbclean_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/dbclean, /usr/libexec/dcc/dbclean </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/dbclean, /usr/libexec/dcc/dbclean </dd>
 </dl>
 <p> <code>dcc_dbclean_tmp_t</code> </p>
 <p> &#8211; Set files with the dcc_dbclean_tmp_t type, if you want to store dcc dbclean temporary files in the /tmp directories. </p>

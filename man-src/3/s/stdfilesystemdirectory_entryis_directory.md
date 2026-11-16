@@ -12,7 +12,6 @@ std::filesystem::directory_entry::is_directory - std::filesystem::directory_entr
 
 <pre><code>bool is_directory() const;
 (since C++ 17)
-
     bool is_directory(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object is a directory. Effectively returns std::filesystem::is_directory(status()) or std::filesystem::is_directory(status(ec)), respectively 
 

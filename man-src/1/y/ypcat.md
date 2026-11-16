@@ -16,20 +16,20 @@ description: "ypcat – print values of all keys in a NIS database"
 <p> <code>ypcat</code> prints the values of all keys from the NIS database specified by <i>mapname,</i> which may be a map name or a map nickname.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> domain</i></p>
-<dd> Specify a domain other than the default domain as returned by <code>domainname</code>(8).</p>
-<dt><code>-h</code><i> hostname</i></p>
-<dd> Specify a hostname other than the default one as found by <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8).</p>
-<dt><code>-k</code></p>
-<dd> Display map keys. This option is useful with maps in which the values are null or the key is not part of the value.</p>
-<dt><code>-t</code></p>
-<dd> This option inhibits map nickname translation.</p>
-<dt><code>-x</code></p>
-<dd> Display the map nickname translation table.</dl>
+<dt><code>-d</code><i> domain</i></dt>
+<dd> Specify a domain other than the default domain as returned by <code>domainname</code>(8).</dd>
+<dt><code>-h</code><i> hostname</i></dt>
+<dd> Specify a hostname other than the default one as found by <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8).</dd>
+<dt><code>-k</code></dt>
+<dd> Display map keys. This option is useful with maps in which the values are null or the key is not part of the value.</dd>
+<dt><code>-t</code></dt>
+<dd> This option inhibits map nickname translation.</dd>
+<dt><code>-x</code></dt>
+<dd> Display the map nickname translation table.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/var/yp/nicknames</code></p>
-<dd> map nickname translation table.</dl>
+<dt><code>/var/yp/nicknames</code></dt>
+<dd> map nickname translation table.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>domainname</code>(8), <code><a href="/docs/linux/man/5-nicknames/">nicknames</a></code>(5), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-ypset/">ypset</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
 <h2>AUTHOR</h2>

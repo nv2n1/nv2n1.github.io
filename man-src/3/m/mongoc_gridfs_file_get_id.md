@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_get_id() – Fetches the id of a gridfs file."
 mongoc_gridfs_file_get_id (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the id of a gridfs file. </p>
 <p> The C Driver always uses an ObjectId for <code>_id</code> , but files created by other drivers may have any type of <code>_id</code> \&amp;. </p>

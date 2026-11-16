@@ -10,15 +10,13 @@ description: "insque, remque – insert/remove an item from a queue"
 <p>insque, remque &#8211; insert/remove an item from a queue</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;search.h&gt;
-
 void insque(void *elem, void *prev);
-
 void remque(void *elem);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>insque</code>(), <code>remque</code>():</p>
 <dl>
 <dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>insque</code>() and <code>remque</code>() functions manipulate doubly linked lists. Each element in the list is a structure of which the first two elements are a forward and a backward pointer. The linked list may be linear (i.e., NULL forward pointer at the end of the list and NULL backward pointer at the start of the list) or circular. </p>
 <p> The <code>insque</code>() function inserts the element pointed to by <i>elem</i> immediately after the element pointed to by <i>prev</i>. </p>
@@ -54,19 +52,12 @@ void remque(void *elem);</code></pre>
 <h2>Examples</h2>
 <p>The program below demonstrates the use of <code>insque</code>(). Here is an example run of the program: </p>
 <pre><code>$ ./a.out -c a b c
-
 Traversing completed list:
 a
 b
 c
 That was a circular list
-
-
-
 Program source
-
-
-
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;unistd.h&gt;

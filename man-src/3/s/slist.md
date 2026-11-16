@@ -10,31 +10,19 @@ description: "SLIST_EMPTY, SLIST_ENTRY, SLIST_FIRST, SLIST_FOREACH, SLIST_HEAD, 
 <p>SLIST_EMPTY, SLIST_ENTRY, SLIST_FIRST, SLIST_FOREACH, SLIST_HEAD, SLIST_HEAD_INITIALIZER, SLIST_INIT, SLIST_INSERT_AFTER, SLIST_INSERT_HEAD, SLIST_NEXT, SLIST_REMOVE, SLIST_REMOVE_HEAD &#8211; implementation of a singly linked list</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/queue.h&gt;
-
 int SLIST_EMPTY(SLIST_HEAD *head);
-
 SLIST_ENTRY(TYPE);
-
 struct TYPE *SLIST_FIRST(SLIST_HEAD *head);
-
 SLIST_FOREACH(struct TYPE *var, SLIST_HEAD *head, SLIST_ENTRY NAME);
-
 SLIST_HEAD(HEADNAME, TYPE);
-
 SLIST_HEAD SLIST_HEAD_INITIALIZER(SLIST_HEAD head);
-
 void SLIST_INIT(SLIST_HEAD *head);
-
 void SLIST_INSERT_AFTER(struct TYPE *listelm, struct TYPE *elm,
                         SLIST_ENTRY NAME);
-
 void SLIST_INSERT_HEAD(SLIST_HEAD *head, struct TYPE *elm,
                        SLIST_ENTRY NAME);
-
 struct TYPE *SLIST_NEXT(struct TYPE *elm, SLIST_ENTRY NAME);
-
 void SLIST_REMOVE(SLIST_HEAD *head, struct TYPE *elm, SLIST_ENTRY NAME);
-
 void SLIST_REMOVE_HEAD(SLIST_HEAD *head, SLIST_ENTRY NAME);</code></pre>
 <h2>Description</h2>
 <p>These macros define and operate on doubly linked lists. In the macro definitions, <i>TYPE</i> is the name of a user-defined structure, that must contain a field of type <i>SLIST_ENTRY</i>, named <i>NAME</i>. The argument <i>HEADNAME</i> is the name of a user-defined structure that must be declared using the macro <code>SLIST_HEAD</code>(). A singly linked list is headed by a structure defined by the <code>SLIST_HEAD</code>() macro. This structure contains a single pointer to the first element on the list. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of O(n) removal for arbitrary elements. New elements can be added to the list after an existing element or at the head of the list. An <i>SLIST_HEAD</i> structure is declared as follows: SLIST_HEAD(HEADNAME, TYPE) head; where <i>struct HEADNAME</i> is the structure to be defined, and <i>struct TYPE</i> is the type of the elements to be linked into the list. A pointer to the head of the list can later be declared as: struct HEADNAME *headp; (The names <i>head</i> and <i>headp</i> are user selectable.) The macro <code>SLIST_HEAD_INITIALIZER</code>() evaluates to an initializer for the list <i>head</i>. The macro <code>SLIST_EMPTY</code>() evaluates to true if there are no elements in the list. The macro <code>SLIST_ENTRY</code>() declares a structure that connects the elements in the list. The macro <code>SLIST_FIRST</code>() returns the first element in the list or NULL if the list is empty. The macro <code>SLIST_FOREACH</code>() traverses the list referenced by <i>head</i> in the forward direction, assigning each element in turn to <i>var</i>. The macro <code>SLIST_INIT</code>() initializes the list referenced by <i>head</i>. The macro <code>SLIST_INSERT_HEAD</code>() inserts the new element <i>elm</i> at the head of the list. The macro <code>SLIST_INSERT_AFTER</code>() inserts the new element <i>elm</i> after the element <i>listelm</i>. The macro <code>SLIST_NEXT</code>() returns the next element in the list. The macro <code>SLIST_REMOVE_HEAD</code>() removes the element <i>elm</i> from the head of the list. For optimum efficiency, elements being removed from the head of the list should explicitly use this macro instead of the generic <i>SLIST_REMOVE</i> macro. The macro <code>SLIST_REMOVE</code>() removes the element <i>elm</i> from the list.</p>

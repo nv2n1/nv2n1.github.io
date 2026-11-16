@@ -10,20 +10,14 @@ description: "std::is_default_constructible,std::is_trivially_default_constructi
 <p>std::is_default_constructible,std::is_trivially_default_constructible, &#8211; std::is_default_constructible,std::is_trivially_default_constructible,</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct is_default_constructible;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct is_trivially_default_constructible;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct is_nothrow_default_constructible;</code></pre>
 <p>1)&nbsp;<wbr>If std::is_constructible&lt;T&gt;::value is true, provides the member constant value<br />
 equal to true, otherwise value is false.<br />
@@ -76,12 +70,10 @@ int[10]&gt;&nbsp;<wbr>are true. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct Ex1 {
     std::string str; // member has a non-trivial default ctor
 };
-
 struct Ex2 {
     int n;
     Ex2() = default; // trivial and non-throwing

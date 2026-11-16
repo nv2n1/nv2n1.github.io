@@ -16,120 +16,120 @@ description: "xcalc – scientific calculator for X"
 <h2>OPTIONS</h2>
 <p> <i>xcalc</i> accepts all of the standard toolkit command line options along with two additional options: </p>
 <dl>
-<dt><code>-stipple</code></p>
-<dd> This option indicates that the background of the calculator should be drawn using a stipple of the foreground and background colors. On monochrome displays improves the appearance.</dl>
+<dt><code>-stipple</code></dt>
+<dd> This option indicates that the background of the calculator should be drawn using a stipple of the foreground and background colors. On monochrome displays improves the appearance.</dd></dl>
 <dl>
-<dt><code>-rpn</code></p>
-<dd> This option indicates that Reverse Polish Notation should be used. In this mode the calculator will look and behave like an HP-10C. Without this flag, it will emulate a TI-30.</dl>
+<dt><code>-rpn</code></dt>
+<dd> This option indicates that Reverse Polish Notation should be used. In this mode the calculator will look and behave like an HP-10C. Without this flag, it will emulate a TI-30.</dd></dl>
 <h2>OPERATION</h2>
 <p> <i>Pointer Usage:</i> Operations may be performed with pointer button 1, or in some cases, with the keyboard. Many common calculator operations have keyboard accelerators. To quit, press pointer button 3 on the AC key of the TI calculator, or the ON key of the HP calculator. </p>
 <p> <i>Calculator Key Usage (TI mode):</i> The numbered keys, the +/- key, and the +, -, *, /, and = keys all do exactly what you would expect them to. It should be noted that the operators obey the standard rules of precedence. Thus, entering &quot;3+4*5=&quot; results in &quot;23&quot;, not &quot;35&quot;. The parentheses can be used to override this. For example, &quot;(1+2+3)*(4+5+6)=&quot; results in &quot;6*15=90&quot;. </p>
 <p> The entire number in the calculator display can be selected, in order to paste the result of a calculation into text. </p>
 <p> The action procedures associated with each function are given below. These are useful if you are interested in defining a custom calculator. The action used for all digit keys is <code>digit(</code><i>n</i>), where <i>n</i> is the corresponding digit, 0..9.</p>
 <dl>
-<dt><code>1/x</code></p>
-<dd> Replaces the number in the display with its reciprocal. The corresponding action procedure is <code>reciprocal()</code>.</p>
-<dt><code>x^2</code></p>
-<dd> Squares the number in the display. The corresponding action procedure is <code>square()</code>.</p>
-<dt><code>SQRT</code></p>
-<dd> Takes the square root of the number in the display. The corresponding action procedure is <code>squareRoot()</code>.</p>
-<dt><code>CE/C</code></p>
-<dd> When pressed once, clears the number in the display without clearing the state of the machine. Allows you to re-enter a number if you make a mistake. Pressing it twice clears the state, also. The corresponding action procedure for TI mode is <code>clear()</code>.</p>
-<dt><code>AC</code></p>
-<dd> Clears the display, the state, and the memory. Pressing it with the third pointer button turns off the calculator, in that it exits the program. The action procedure to clear the state is <code>off()</code>; to quit, <code>quit()</code>.</p>
-<dt><code>INV</code></p>
-<dd> Invert function. See the individual function keys for details. The corresponding action procedure is <code>inverse()</code>.</p>
-<dt><code>sin</code></p>
-<dd> Computes the sine of the number in the display, as interpreted by the current DRG mode (see DRG, below). If inverted, it computes the arcsine. The corresponding action procedure is <code>sine()</code>.</p>
-<dt><code>cos</code></p>
-<dd> Computes the cosine, or arccosine when inverted. The corresponding action procedure is <code>cosine()</code>.</p>
-<dt><code>tan</code></p>
-<dd> Computes the tangent, or arctangent when inverted. The corresponding action procedure is <code>tangent()</code>.</p>
-<dt><code>DRG</code></p>
-<dd> Changes the DRG mode, as indicated by &#8216;DEG&#8217;, &#8216;RAD&#8217;, or &#8216;GRAD&#8217; at the bottom of the calculator &#8220;liquid crystal&#8221; display. When in &#8216;DEG&#8217; mode, numbers in the display are taken as being degrees. In &#8216;RAD&#8217; mode, numbers are in radians, and in &#8216;GRAD&#8217; mode, numbers are in grads. When inverted, the DRG key has a feature of converting degrees to radians to grads and vice-versa. Example: put the calculator into &#8216;DEG&#8217; mode, and enter &quot;45 INV DRG&quot;. The display should now show something along the lines of &quot;.785398&quot;, which is 45 degrees converted to radians. The corresponding action procedure is <code>degree()</code>.</p>
-<dt><code>e</code></p>
-<dd> The constant &#8216;e&#8217;. (2.7182818&#8230;). The corresponding action procedure is <code>e()</code>.</p>
-<dt><code>EE</code></p>
-<dd> Used for entering exponential numbers. For example, to get &quot;-2.3E-4&quot; you&#8217;d enter &quot;2 . 3 +/- EE 4 +/-&quot;. The corresponding action procedure is <code>scientific()</code>.</p>
-<dt><code>log</code></p>
-<dd> Calculates the log (base 10) of the number in the display. When inverted, it raises &quot;10.0&quot; to the number in the display. For example, entering &quot;3 INV log&quot; should result in &quot;1000&quot;. The corresponding action procedure is <code>logarithm()</code>.</p>
-<dt><code>ln</code></p>
-<dd> Calculates the log (base e) of the number in the display. When inverted, it raises &quot;e&quot; to the number in the display. For example, entering &quot;e ln&quot; should result in &quot;1&quot;. The corresponding action procedure is <code>naturalLog()</code>.</p>
-<dt><code>y^x</code></p>
-<dd> Raises the number on the left to the power of the number on the right. For example &quot;2 y^x 3 =&quot; results in &quot;8&quot;, which is 2^3. For a further example, &quot;(1+2+3) y^x (1+2) =&quot; equals &quot;6 y^x 3&quot; which equals &quot;216&quot;. The corresponding action procedure is <code>power()</code>.</p>
-<dt><code>not</code></p>
-<dd> Performs a bitwise not. The corresponding action procedure is <code>not()</code>.</p>
-<dt><code>and</code></p>
-<dd> Performs a bitwise and. The corresponding action procedure is <code>and()</code>.</p>
-<dt><code>or</code></p>
-<dd> Performs a bitwise or. The corresponding action procedure is <code>or()</code>.</p>
-<dt><code>xor</code></p>
-<dd> Performs a bitwise exclusive or. The corresponding action procedure is <code>xor()</code>.</p>
-<dt><code>trunc</code></p>
-<dd> Truncates the number in the display to an integer. The corresponding action procedure is <code>trunc()</code>.</p>
-<dt><code>PI</code></p>
-<dd> The constant &#8216;pi&#8217;. (3.1415927&#8230;.) The corresponding action procedure is <code>pi()</code>.</p>
-<dt><code>x!</code></p>
-<dd> Computes the factorial of the number in the display. The number in the display must be an integer in the range 0-500, though, depending on your math library, it might overflow long before that. The corresponding action procedure is <code>factorial()</code>.</p>
-<dt><code>(</code></p>
-<dd> Left parenthesis. The corresponding action procedure for TI calculators is <code>leftParen()</code>.</p>
-<dt><code>)</code></p>
-<dd> Right parenthesis. The corresponding action procedure for TI calculators is <code>rightParen()</code>.</p>
-<dt><code>base</code></p>
-<dd> Changes the number base, as indicated by &#8216;DEC&#8217;, &#8216;HEX, or &#8216;OCT&#8217; at the bottom of the calculator display. When in &#8216;DEC&#8217; mode, numbers in the display are taken as being decimal (base 10). In &#8216;HEX&#8217; mode, numbers are in hexadecimal (base 16), and in &#8216;OCT&#8217; mode, numbers are in octal (base 8). The corresponding action procedure is <code>base()</code>.</p>
-<dt><code>shl</code></p>
-<dd> Performs an arithmetic bitwise shift left, For example, entering &quot;1 shl 2&quot; should result in &quot;4&quot;. The corresponding action procedure is <code>shl()</code>.</p>
-<dt><code>shr</code></p>
-<dd> Performs an arithmetic bitwise shift right, For example, entering &quot;8 shr 1&quot; should result in &quot;4&quot;. The corresponding action procedure is <code>shr()</code>.</p>
-<dt><code>mod</code></p>
-<dd> Performs the modulo operation, which calculates the remainder when dividing the first number by the second. For example, entering &quot;14 mod 8&quot; should result in &quot;6&quot;. The corresponding action procedure is <code>mod()</code>.</p>
-<dt><code>/</code></p>
-<dd> Division. The corresponding action procedure is <code>divide()</code>.</p>
-<dt><code>*</code></p>
-<dd> Multiplication. The corresponding action procedure is <code>multiply()</code>.</p>
-<dt><code>&#8211;</code></p>
-<dd> Subtraction. The corresponding action procedure is <code>subtract()</code>.</p>
-<dt><code>+</code></p>
-<dd> Addition. The corresponding action procedure is <code>add()</code>.</p>
-<dt><code>=</code></p>
-<dd> Perform calculation. The TI-specific action procedure is <code>equal()</code>.</p>
-<dt><code>STO</code></p>
-<dd> Copies the number in the display to the memory location. The corresponding action procedure is <code>store()</code>.</p>
-<dt><code>RCL</code></p>
-<dd> Copies the number from the memory location to the display. The corresponding action procedure is <code>recall()</code>.</p>
-<dt><code>SUM</code></p>
-<dd> Adds the number in the display to the number in the memory location. The corresponding action procedure is <code>sum()</code>.</p>
-<dt><code>EXC</code></p>
-<dd> Swaps the number in the display with the number in the memory location. The corresponding action procedure for the TI calculator is <code>exchange()</code>.</p>
-<dt><code>+/-</code></p>
-<dd> Negate; change sign. The corresponding action procedure is <code>negate()</code>.</p>
-<dt><code>.</code></p>
-<dd> Decimal point. The action procedure is <code>decimal()</code>. </p>
+<dt><code>1/x</code></dt>
+<dd> Replaces the number in the display with its reciprocal. The corresponding action procedure is <code>reciprocal()</code>.</dd>
+<dt><code>x^2</code></dt>
+<dd> Squares the number in the display. The corresponding action procedure is <code>square()</code>.</dd>
+<dt><code>SQRT</code></dt>
+<dd> Takes the square root of the number in the display. The corresponding action procedure is <code>squareRoot()</code>.</dd>
+<dt><code>CE/C</code></dt>
+<dd> When pressed once, clears the number in the display without clearing the state of the machine. Allows you to re-enter a number if you make a mistake. Pressing it twice clears the state, also. The corresponding action procedure for TI mode is <code>clear()</code>.</dd>
+<dt><code>AC</code></dt>
+<dd> Clears the display, the state, and the memory. Pressing it with the third pointer button turns off the calculator, in that it exits the program. The action procedure to clear the state is <code>off()</code>; to quit, <code>quit()</code>.</dd>
+<dt><code>INV</code></dt>
+<dd> Invert function. See the individual function keys for details. The corresponding action procedure is <code>inverse()</code>.</dd>
+<dt><code>sin</code></dt>
+<dd> Computes the sine of the number in the display, as interpreted by the current DRG mode (see DRG, below). If inverted, it computes the arcsine. The corresponding action procedure is <code>sine()</code>.</dd>
+<dt><code>cos</code></dt>
+<dd> Computes the cosine, or arccosine when inverted. The corresponding action procedure is <code>cosine()</code>.</dd>
+<dt><code>tan</code></dt>
+<dd> Computes the tangent, or arctangent when inverted. The corresponding action procedure is <code>tangent()</code>.</dd>
+<dt><code>DRG</code></dt>
+<dd> Changes the DRG mode, as indicated by &#8216;DEG&#8217;, &#8216;RAD&#8217;, or &#8216;GRAD&#8217; at the bottom of the calculator &#8220;liquid crystal&#8221; display. When in &#8216;DEG&#8217; mode, numbers in the display are taken as being degrees. In &#8216;RAD&#8217; mode, numbers are in radians, and in &#8216;GRAD&#8217; mode, numbers are in grads. When inverted, the DRG key has a feature of converting degrees to radians to grads and vice-versa. Example: put the calculator into &#8216;DEG&#8217; mode, and enter &quot;45 INV DRG&quot;. The display should now show something along the lines of &quot;.785398&quot;, which is 45 degrees converted to radians. The corresponding action procedure is <code>degree()</code>.</dd>
+<dt><code>e</code></dt>
+<dd> The constant &#8216;e&#8217;. (2.7182818&#8230;). The corresponding action procedure is <code>e()</code>.</dd>
+<dt><code>EE</code></dt>
+<dd> Used for entering exponential numbers. For example, to get &quot;-2.3E-4&quot; you&#8217;d enter &quot;2 . 3 +/- EE 4 +/-&quot;. The corresponding action procedure is <code>scientific()</code>.</dd>
+<dt><code>log</code></dt>
+<dd> Calculates the log (base 10) of the number in the display. When inverted, it raises &quot;10.0&quot; to the number in the display. For example, entering &quot;3 INV log&quot; should result in &quot;1000&quot;. The corresponding action procedure is <code>logarithm()</code>.</dd>
+<dt><code>ln</code></dt>
+<dd> Calculates the log (base e) of the number in the display. When inverted, it raises &quot;e&quot; to the number in the display. For example, entering &quot;e ln&quot; should result in &quot;1&quot;. The corresponding action procedure is <code>naturalLog()</code>.</dd>
+<dt><code>y^x</code></dt>
+<dd> Raises the number on the left to the power of the number on the right. For example &quot;2 y^x 3 =&quot; results in &quot;8&quot;, which is 2^3. For a further example, &quot;(1+2+3) y^x (1+2) =&quot; equals &quot;6 y^x 3&quot; which equals &quot;216&quot;. The corresponding action procedure is <code>power()</code>.</dd>
+<dt><code>not</code></dt>
+<dd> Performs a bitwise not. The corresponding action procedure is <code>not()</code>.</dd>
+<dt><code>and</code></dt>
+<dd> Performs a bitwise and. The corresponding action procedure is <code>and()</code>.</dd>
+<dt><code>or</code></dt>
+<dd> Performs a bitwise or. The corresponding action procedure is <code>or()</code>.</dd>
+<dt><code>xor</code></dt>
+<dd> Performs a bitwise exclusive or. The corresponding action procedure is <code>xor()</code>.</dd>
+<dt><code>trunc</code></dt>
+<dd> Truncates the number in the display to an integer. The corresponding action procedure is <code>trunc()</code>.</dd>
+<dt><code>PI</code></dt>
+<dd> The constant &#8216;pi&#8217;. (3.1415927&#8230;.) The corresponding action procedure is <code>pi()</code>.</dd>
+<dt><code>x!</code></dt>
+<dd> Computes the factorial of the number in the display. The number in the display must be an integer in the range 0-500, though, depending on your math library, it might overflow long before that. The corresponding action procedure is <code>factorial()</code>.</dd>
+<dt><code>(</code></dt>
+<dd> Left parenthesis. The corresponding action procedure for TI calculators is <code>leftParen()</code>.</dd>
+<dt><code>)</code></dt>
+<dd> Right parenthesis. The corresponding action procedure for TI calculators is <code>rightParen()</code>.</dd>
+<dt><code>base</code></dt>
+<dd> Changes the number base, as indicated by &#8216;DEC&#8217;, &#8216;HEX, or &#8216;OCT&#8217; at the bottom of the calculator display. When in &#8216;DEC&#8217; mode, numbers in the display are taken as being decimal (base 10). In &#8216;HEX&#8217; mode, numbers are in hexadecimal (base 16), and in &#8216;OCT&#8217; mode, numbers are in octal (base 8). The corresponding action procedure is <code>base()</code>.</dd>
+<dt><code>shl</code></dt>
+<dd> Performs an arithmetic bitwise shift left, For example, entering &quot;1 shl 2&quot; should result in &quot;4&quot;. The corresponding action procedure is <code>shl()</code>.</dd>
+<dt><code>shr</code></dt>
+<dd> Performs an arithmetic bitwise shift right, For example, entering &quot;8 shr 1&quot; should result in &quot;4&quot;. The corresponding action procedure is <code>shr()</code>.</dd>
+<dt><code>mod</code></dt>
+<dd> Performs the modulo operation, which calculates the remainder when dividing the first number by the second. For example, entering &quot;14 mod 8&quot; should result in &quot;6&quot;. The corresponding action procedure is <code>mod()</code>.</dd>
+<dt><code>/</code></dt>
+<dd> Division. The corresponding action procedure is <code>divide()</code>.</dd>
+<dt><code>*</code></dt>
+<dd> Multiplication. The corresponding action procedure is <code>multiply()</code>.</dd>
+<dt><code>&#8211;</code></dt>
+<dd> Subtraction. The corresponding action procedure is <code>subtract()</code>.</dd>
+<dt><code>+</code></dt>
+<dd> Addition. The corresponding action procedure is <code>add()</code>.</dd>
+<dt><code>=</code></dt>
+<dd> Perform calculation. The TI-specific action procedure is <code>equal()</code>.</dd>
+<dt><code>STO</code></dt>
+<dd> Copies the number in the display to the memory location. The corresponding action procedure is <code>store()</code>.</dd>
+<dt><code>RCL</code></dt>
+<dd> Copies the number from the memory location to the display. The corresponding action procedure is <code>recall()</code>.</dd>
+<dt><code>SUM</code></dt>
+<dd> Adds the number in the display to the number in the memory location. The corresponding action procedure is <code>sum()</code>.</dd>
+<dt><code>EXC</code></dt>
+<dd> Swaps the number in the display with the number in the memory location. The corresponding action procedure for the TI calculator is <code>exchange()</code>.</dd>
+<dt><code>+/-</code></dt>
+<dd> Negate; change sign. The corresponding action procedure is <code>negate()</code>.</dd>
+<dt><code>.</code></dt>
+<dd> Decimal point. The action procedure is <code>decimal()</code>. </dd>
 </dl>
 <p> <i>Calculator Key Usage (RPN mode):</i> The number keys, CHS (change sign), +, -, *, /, and ENTR keys all do exactly what you would expect them to do. Many of the remaining keys are the same as in TI mode. The differences are detailed below. The action procedure for the ENTR key is <code>enter()</code>. </p>
 <dl>
-<dt><code>&lt;-</code></p>
-<dd> This is a backspace key that can be used if you make a mistake while entering a number. It will erase digits from the display. (See BUGS). Inverse backspace will clear the X register. The corresponding action procedure is <code>back()</code>.</p>
-<dt><code>ON</code></p>
-<dd> Clears the display, the state, and the memory. Pressing it with the third pointer button turns off the calculator, in that it exits the program. To clear state, the action procedure is <code>off</code>; to quit, <code>quit()</code>.</p>
-<dt><code>INV</code></p>
-<dd> Inverts the meaning of the function keys. This would be the <i>f</i> key on an HP calculator, but <i>xcalc</i> does not display multiple legends on each key. See the individual function keys for details.</p>
-<dt><code>10^x</code></p>
-<dd> Raises &quot;10.0&quot; to the number in the top of the stack. When inverted, it calculates the log (base 10) of the number in the display. The corresponding action procedure is <code>tenpower()</code>.</p>
-<dt><code>e^x</code></p>
-<dd> Raises &quot;e&quot; to the number in the top of the stack. When inverted, it calculates the log (base e) of the number in the display. The action procedure is <code>epower()</code>.</p>
-<dt><code>STO</code></p>
-<dd> Copies the number in the top of the stack to a memory location. There are 10 memory locations. The desired memory is specified by following this key with a digit key.</p>
-<dt><code>RCL</code></p>
-<dd> Pushes the number from the specified memory location onto the stack.</p>
-<dt><code>SUM</code></p>
-<dd> Adds the number on top of the stack to the number in the specified memory location.</p>
-<dt><code>x:y</code></p>
-<dd> Exchanges the numbers in the top two stack positions, the X and Y registers. The corresponding action procedure is <code>XexchangeY()</code>.</p>
-<dt><code>R v</code></p>
-<dd> Rolls the stack downward. When inverted, it rolls the stack upward. The corresponding action procedure is <code>roll()</code>.</p>
-<dt><i>blank</i></p>
-<dd> These keys were used for programming functions on the HP-10C. Their functionality has not been duplicated in <i>xcalc</i>.</dl>
+<dt><code>&lt;-</code></dt>
+<dd> This is a backspace key that can be used if you make a mistake while entering a number. It will erase digits from the display. (See BUGS). Inverse backspace will clear the X register. The corresponding action procedure is <code>back()</code>.</dd>
+<dt><code>ON</code></dt>
+<dd> Clears the display, the state, and the memory. Pressing it with the third pointer button turns off the calculator, in that it exits the program. To clear state, the action procedure is <code>off</code>; to quit, <code>quit()</code>.</dd>
+<dt><code>INV</code></dt>
+<dd> Inverts the meaning of the function keys. This would be the <i>f</i> key on an HP calculator, but <i>xcalc</i> does not display multiple legends on each key. See the individual function keys for details.</dd>
+<dt><code>10^x</code></dt>
+<dd> Raises &quot;10.0&quot; to the number in the top of the stack. When inverted, it calculates the log (base 10) of the number in the display. The corresponding action procedure is <code>tenpower()</code>.</dd>
+<dt><code>e^x</code></dt>
+<dd> Raises &quot;e&quot; to the number in the top of the stack. When inverted, it calculates the log (base e) of the number in the display. The action procedure is <code>epower()</code>.</dd>
+<dt><code>STO</code></dt>
+<dd> Copies the number in the top of the stack to a memory location. There are 10 memory locations. The desired memory is specified by following this key with a digit key.</dd>
+<dt><code>RCL</code></dt>
+<dd> Pushes the number from the specified memory location onto the stack.</dd>
+<dt><code>SUM</code></dt>
+<dd> Adds the number on top of the stack to the number in the specified memory location.</dd>
+<dt><code>x:y</code></dt>
+<dd> Exchanges the numbers in the top two stack positions, the X and Y registers. The corresponding action procedure is <code>XexchangeY()</code>.</dd>
+<dt><code>R v</code></dt>
+<dd> Rolls the stack downward. When inverted, it rolls the stack upward. The corresponding action procedure is <code>roll()</code>.</dd>
+<dt><i>blank</i></dt>
+<dd> These keys were used for programming functions on the HP-10C. Their functionality has not been duplicated in <i>xcalc</i>.</dd></dl>
 <p> Finally, there are two additional action procedures: <code>bell()</code>, which rings the bell; and <code>selection()</code>, which performs a cut on the entire number in the calculator&#8217;s &#8220;liquid crystal&#8221; display.</p>
 <h2>ACCELERATORS</h2>
 <p> Accelerators are shortcuts for entering commands. <i>xcalc</i> provides some sample keyboard accelerators; also users can customize accelerators. The numeric keypad accelerators provided by <i>xcalc</i> should be intuitively correct. The accelerators defined by <i>xcalc</i> on the main keyboard are given below: </p>
@@ -472,12 +472,12 @@ XCalc xcalc
 </pre>
 <h2>APPLICATION RESOURCES</h2>
 <dl>
-<dt><code>rpn</code> (Class <code>Rpn</code>)</p>
-<dd> Specifies that the rpn mode should be used. The default is TI mode.</p>
-<dt><code>stipple</code> (Class <code>Stipple</code>)</p>
-<dd> Indicates that the background should be stippled. The default is &#8220;on&#8221; for monochrome displays, and &#8220;off&#8221; for color displays.</p>
-<dt><code>cursor</code> (Class <code>Cursor</code>)</p>
-<dd> The name of the symbol used to represent the pointer. The default is &#8220;hand2&#8221;.</dl>
+<dt><code>rpn</code> (Class <code>Rpn</code>)</dt>
+<dd> Specifies that the rpn mode should be used. The default is TI mode.</dd>
+<dt><code>stipple</code> (Class <code>Stipple</code>)</dt>
+<dd> Indicates that the background should be stippled. The default is &#8220;on&#8221; for monochrome displays, and &#8220;off&#8221; for color displays.</dd>
+<dt><code>cursor</code> (Class <code>Cursor</code>)</dt>
+<dd> The name of the symbol used to represent the pointer. The default is &#8220;hand2&#8221;.</dd></dl>
 <h2>COLORS</h2>
 <p> If you would like xcalc to use its ti colors, include the following in the #ifdef COLOR section of the file you read with xrdb: </p>
 <p> *customization: -color </p>

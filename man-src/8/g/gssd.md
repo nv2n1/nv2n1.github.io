@@ -47,57 +47,57 @@ description: "rpc.gssd – RPCSEC_GSS daemon"
 <p> These encryption types are stronger than legacy single-DES encryption types. To interoperate in environments where servers support only weak encryption types, you can restrict your client to use only single-DES encryption types by specifying the <code>-l</code> option when starting <code>rpc.gssd</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-D</code></p>
-<dd>The server name passed to GSSAPI for authentication is normally the name exactly as requested. e.g. for NFS it is the server name in the &quot;servername:/path&quot; mount request. Only if this servername appears to be an IP address (IPv4 or IPv6) or an unqualified name (no dots) will a reverse DNS lookup will be performed to get the canoncial server name. </p>
+<dt><code>-D</code></dt>
+<dd>The server name passed to GSSAPI for authentication is normally the name exactly as requested. e.g. for NFS it is the server name in the &quot;servername:/path&quot; mount request. Only if this servername appears to be an IP address (IPv4 or IPv6) or an unqualified name (no dots) will a reverse DNS lookup will be performed to get the canoncial server name. </dd>
 <p> If <code>-D</code> is present, a reverse DNS lookup will <i>always</i> be used, even if the server name looks like a canonical name. So it is needed if partially qualified, or non canonical names are regularly used. </p>
 <p> Using <code>-D</code> can introduce a security vulnerability, so it is recommended that <code>-D</code> not be used, and that canonical names always be used when requesting services.</p>
-<dt><code>-f</code></p>
-<dd>Runs <code>rpc.gssd</code> in the foreground and sends output to stderr (as opposed to syslogd)</p>
-<dt><code>-n</code></p>
-<dd>When specified, UID 0 is forced to obtain user credentials which are used instead of the local system&#8217;s machine credentials.</p>
-<dt><code>-k </code><i>keytab</i></p>
-<dd>Tells <code>rpc.gssd</code> to use the keys found in <i>keytab</i> to obtain machine credentials. The default value is <i>/etc/krb5.keytab</i>.</p>
-<dt><code>-l</code></p>
-<dd>When specified, restricts <code>rpc.gssd</code> to sessions to weak encryption types such as <code>des-cbc-crc</code>. This option is available only when the local system&#8217;s Kerberos library supports settable encryption types.</p>
-<dt><code>-p </code><i>path</i></p>
-<dd>Tells <code>rpc.gssd</code> where to look for the rpc_pipefs filesystem. The default value is <i>/var/lib/nfs/rpc_pipefs</i>.</p>
-<dt><code>-d </code><i>search-path</i></p>
-<dd>This option specifies a colon separated list of directories that <code>rpc.gssd</code> searches for credential files. The default value is <i>/tmp:/run/user/%U</i>. The literal sequence &quot;%U&quot; can be specified to substitue the UID of the user for whom credentials are being searched.</p>
-<dt><code>-M</code></p>
-<dd>By default, machine credentials are stored in files in the first directory in the credential directory search path (see the <code>-d</code> option). When <code>-M</code> is set, <code>rpc.gssd</code> stores machine credentials in memory instead.</p>
-<dt><code>-v</code></p>
-<dd>Increases the verbosity of the output (can be specified multiple times).</p>
-<dt><code>-r</code></p>
-<dd>If the RPCSEC_GSS library supports setting debug level, increases the verbosity of the output (can be specified multiple times).</p>
-<dt><code>-R </code><i>realm</i></p>
-<dd>Kerberos tickets from this <i>realm</i> will be preferred when scanning available credentials cache files to be used to create a context. By default, the default realm, as configured in the Kerberos configuration file, is preferred.</p>
-<dt><code>-t </code><i>timeout</i></p>
-<dd>Timeout, in seconds, for kernel GSS contexts. This option allows you to force new kernel contexts to be negotiated after <i>timeout</i> seconds, which allows changing Kerberos tickets and identities frequently. The default is no explicit timeout, which means the kernel context will live the lifetime of the Kerberos service ticket used in its creation.</p>
-<dt><code>-T timeout</code></p>
-<dd>Timeout, in seconds, to create an RPC connection with a server while establishing an authenticated gss context for a user. The default timeout is set to 5 seconds. If you get messages like &quot;WARNING: can&#8217;t create tcp rpc_clnt to server %servername% for user with uid %uid%: RPC: Remote system error &#8211; Connection timed out&quot;, you should consider an increase of this timeout.</dl>
+<dt><code>-f</code></dt>
+<dd>Runs <code>rpc.gssd</code> in the foreground and sends output to stderr (as opposed to syslogd)</dd>
+<dt><code>-n</code></dt>
+<dd>When specified, UID 0 is forced to obtain user credentials which are used instead of the local system&#8217;s machine credentials.</dd>
+<dt><code>-k </code><i>keytab</i></dt>
+<dd>Tells <code>rpc.gssd</code> to use the keys found in <i>keytab</i> to obtain machine credentials. The default value is <i>/etc/krb5.keytab</i>.</dd>
+<dt><code>-l</code></dt>
+<dd>When specified, restricts <code>rpc.gssd</code> to sessions to weak encryption types such as <code>des-cbc-crc</code>. This option is available only when the local system&#8217;s Kerberos library supports settable encryption types.</dd>
+<dt><code>-p </code><i>path</i></dt>
+<dd>Tells <code>rpc.gssd</code> where to look for the rpc_pipefs filesystem. The default value is <i>/var/lib/nfs/rpc_pipefs</i>.</dd>
+<dt><code>-d </code><i>search-path</i></dt>
+<dd>This option specifies a colon separated list of directories that <code>rpc.gssd</code> searches for credential files. The default value is <i>/tmp:/run/user/%U</i>. The literal sequence &quot;%U&quot; can be specified to substitue the UID of the user for whom credentials are being searched.</dd>
+<dt><code>-M</code></dt>
+<dd>By default, machine credentials are stored in files in the first directory in the credential directory search path (see the <code>-d</code> option). When <code>-M</code> is set, <code>rpc.gssd</code> stores machine credentials in memory instead.</dd>
+<dt><code>-v</code></dt>
+<dd>Increases the verbosity of the output (can be specified multiple times).</dd>
+<dt><code>-r</code></dt>
+<dd>If the RPCSEC_GSS library supports setting debug level, increases the verbosity of the output (can be specified multiple times).</dd>
+<dt><code>-R </code><i>realm</i></dt>
+<dd>Kerberos tickets from this <i>realm</i> will be preferred when scanning available credentials cache files to be used to create a context. By default, the default realm, as configured in the Kerberos configuration file, is preferred.</dd>
+<dt><code>-t </code><i>timeout</i></dt>
+<dd>Timeout, in seconds, for kernel GSS contexts. This option allows you to force new kernel contexts to be negotiated after <i>timeout</i> seconds, which allows changing Kerberos tickets and identities frequently. The default is no explicit timeout, which means the kernel context will live the lifetime of the Kerberos service ticket used in its creation.</dd>
+<dt><code>-T timeout</code></dt>
+<dd>Timeout, in seconds, to create an RPC connection with a server while establishing an authenticated gss context for a user. The default timeout is set to 5 seconds. If you get messages like &quot;WARNING: can&#8217;t create tcp rpc_clnt to server %servername% for user with uid %uid%: RPC: Remote system error &#8211; Connection timed out&quot;, you should consider an increase of this timeout.</dd></dl>
 <h2>Configuration File</h2>
 <p>Many of the options that can be set on the command line can also be controlled through values set in the <code>[gssd]</code> section of the <i>/etc/nfs.conf</i> configuration file. Values recognized include:</p>
 <dl>
-<dt><code>use-memcache</code></p>
-<dd>A Boolean flag equivalent to <code>-M</code>.</p>
-<dt><code>use-machine-creds</code></p>
-<dd>A Boolean flag. Setting to <code>false</code> is equivalent to giving the <code>-n</code> flag.</p>
-<dt><code>avoid-dns</code></p>
-<dd>Setting to <code>false</code> is equivalent to providing the <code>-D</code> flag.</p>
-<dt><code>limit-to-legacy-enctypes</code></p>
-<dd>Equivalent to <code>-l</code>.</p>
-<dt><code>context-timeout</code></p>
-<dd>Equivalent to <code>-T</code>.</p>
-<dt><code>rpc-timeout</code></p>
-<dd>Equivalent to <code>-t</code>.</p>
-<dt><code>pipefs-directory</code></p>
-<dd>Equivalent to <code>-p</code>.</p>
-<dt><code>keytab-file</code></p>
-<dd>Equivalent to <code>-k</code>.</p>
-<dt><code>cred-cache-directory</code></p>
-<dd>Equivalent to <code>-d</code>.</p>
-<dt><code>preferred-realm</code></p>
-<dd>Equivalent to <code>-R</code>. </p>
+<dt><code>use-memcache</code></dt>
+<dd>A Boolean flag equivalent to <code>-M</code>.</dd>
+<dt><code>use-machine-creds</code></dt>
+<dd>A Boolean flag. Setting to <code>false</code> is equivalent to giving the <code>-n</code> flag.</dd>
+<dt><code>avoid-dns</code></dt>
+<dd>Setting to <code>false</code> is equivalent to providing the <code>-D</code> flag.</dd>
+<dt><code>limit-to-legacy-enctypes</code></dt>
+<dd>Equivalent to <code>-l</code>.</dd>
+<dt><code>context-timeout</code></dt>
+<dd>Equivalent to <code>-T</code>.</dd>
+<dt><code>rpc-timeout</code></dt>
+<dd>Equivalent to <code>-t</code>.</dd>
+<dt><code>pipefs-directory</code></dt>
+<dd>Equivalent to <code>-p</code>.</dd>
+<dt><code>keytab-file</code></dt>
+<dd>Equivalent to <code>-k</code>.</dd>
+<dt><code>cred-cache-directory</code></dt>
+<dd>Equivalent to <code>-d</code>.</dd>
+<dt><code>preferred-realm</code></dt>
+<dd>Equivalent to <code>-R</code>. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>rpc.svcgssd</code>(8), <code><a href="/docs/linux/man/1-kerberos/">kerberos</a></code>(1), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5)</p>

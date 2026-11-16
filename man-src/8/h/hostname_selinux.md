@@ -50,14 +50,14 @@ description: "hostname_selinux – Security Enhanced Linux Policy for the hostna
 <p> <code>hostname_etc_t</code> </p>
 <p> &#8211; Set files with the hostname_etc_t type, if you want to store hostname files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/hostname, /etc/machine-info </p>
+<dt>Paths:</dt>
+<dd>/etc/hostname, /etc/machine-info </dd>
 </dl>
 <p> <code>hostname_exec_t</code> </p>
 <p> &#8211; Set files with the hostname_exec_t type, if you want to transition an executable to the hostname_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/hostname, /usr/bin/hostname </p>
+<dt>Paths:</dt>
+<dd>/bin/hostname, /usr/bin/hostname </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

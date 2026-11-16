@@ -26,7 +26,7 @@ description: "sysctl.d – Configure kernel parameters at boot"
 <dl>
 <dd>
 <pre>kernel.domainname=example.com</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Disable packet filter on bridged packets (method one)</code> /etc/udev/rules.d/99-bridge.rules: </p>
 <pre><code>ACTION==&quot;add&quot;, SUBSYSTEM==&quot;module&quot;, KERNEL==&quot;bridge&quot;, RUN+=&quot;/usr/lib/systemd/systemd-sysctl --prefix=/net/bridge&quot;</code></pre>
 <p> /etc/sysctl.d/bridge.conf:</p>
@@ -35,18 +35,18 @@ description: "sysctl.d – Configure kernel parameters at boot"
 <pre>net.bridge.bridge-nf-call-ip6tables = 0
 net.bridge.bridge-nf-call-iptables = 0
 net.bridge.bridge-nf-call-arptables = 0</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 3. Disable packet filter on bridged packets (method two)</code> /etc/modules-load.d/bridge.conf:</p>
 <dl>
 <dd>
 <pre>bridge</pre>
-</dl>
+</dd></dl>
 <p> /etc/sysctl.d/bridge.conf:</p>
 <dl>
 <dd>
 <pre>net.bridge.bridge-nf-call-ip6tables = 0
 net.bridge.bridge-nf-call-iptables = 0
 net.bridge.bridge-nf-call-arptables = 0</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8), <code><a href="/docs/linux/man/5-sysctl-conf/">sysctl.conf</a></code>(5), <code><a href="/docs/linux/man/8-modprobe/">modprobe</a></code>(8) </p>

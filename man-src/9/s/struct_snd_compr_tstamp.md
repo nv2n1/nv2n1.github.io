@@ -21,23 +21,23 @@ struct_snd_compr_tstamp - timestamp descriptor
 <h2>Members</h2>
 
 byte_offset
-<dl><dd>Byte offset in ring buffer to DSP</dl>
+<dl><dd>Byte offset in ring buffer to DSP</dd></dl>
  
 
  copied_total
-<dl><dd>Total number of bytes copied from/to ring buffer to/by DSP</dl>
+<dl><dd>Total number of bytes copied from/to ring buffer to/by DSP</dd></dl>
  
 
  pcm_frames
-<dl><dd>Frames decoded or encoded by DSP. This field will evolve by large steps and should only be used to monitor encoding/decoding progress. It shall not be used for timing estimates.</dl>
+<dl><dd>Frames decoded or encoded by DSP. This field will evolve by large steps and should only be used to monitor encoding/decoding progress. It shall not be used for timing estimates.</dd></dl>
  
 
  pcm_io_frames
-<dl><dd>Frames rendered or received by DSP into a mixer or an audio output/input. This field should be used for A/V sync or time estimates.</dl>
+<dl><dd>Frames rendered or received by DSP into a mixer or an audio output/input. This field should be used for A/V sync or time estimates.</dd></dl>
  
 
  sampling_rate
-<dl><dd>sampling rate of audio</dl>
+<dl><dd>sampling rate of audio</dd></dl>
 
 <h2>Copyright</h2>
 

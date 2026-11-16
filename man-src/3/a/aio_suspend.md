@@ -19,24 +19,24 @@ Link with - lrt.
 <h2>DESCRIPTION</h2>
 <p> The <code>aio_suspend</code>() function suspends the calling thread until one of the following occurs:</p>
 <dl>
-<dt>*</p>
-<dd> One or more of the asynchronous I/O requests in the list <i>aiocb_list</i> has completed.</p>
-<dt>*</p>
-<dd> A signal is delivered.</p>
-<dt>*</p>
-<dd> <i>timeout</i> is not NULL and the specified time interval has passed. (For details of the <i>timespec</i> structure, see <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2).)</dl>
+<dt>*</dt>
+<dd> One or more of the asynchronous I/O requests in the list <i>aiocb_list</i> has completed.</dd>
+<dt>*</dt>
+<dd> A signal is delivered.</dd>
+<dt>*</dt>
+<dd> <i>timeout</i> is not NULL and the specified time interval has passed. (For details of the <i>timespec</i> structure, see <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2).)</dd></dl>
 <p> The <i>nitems</i> argument specifies the number of items in <i>aiocb_list</i>. Each item in the list pointed to by <i>aiocb_list</i> must be either NULL (and then is ignored), or a pointer to a control block on which I/O was initiated using <code><a href="/docs/linux/man/3-aio_read/">aio_read</a></code>(3), <code><a href="/docs/linux/man/3-aio_write/">aio_write</a></code>(3), or <code><a href="/docs/linux/man/3-lio_listio/">lio_listio</a></code>(3). (See <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) for a description of the <i>aiocb</i> structure.) </p>
 <p> If <code>CLOCK_MONOTONIC</code> is supported, this clock is used to measure the timeout interval (see <code><a href="/docs/linux/man/3-clock_gettime/">clock_gettime</a></code>(3)).</p>
 <h2>RETURN VALUE</h2>
 <p> If this function returns after completion of one of the I/O requests specified in <i>aiocb_list</i>, 0 is returned. Otherwise, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The call timed out before any of the indicated operations had completed.</p>
-<dt><code>EINTR</code></p>
-<dd> The call was ended by signal (possibly the completion signal of one of the operations we were waiting for); see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>aio_suspend</code>() is not implemented.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The call timed out before any of the indicated operations had completed.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The call was ended by signal (possibly the completion signal of one of the operations we were waiting for); see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>aio_suspend</code>() is not implemented.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>aio_suspend</code>() function is available since glibc 2.1.</p>
 <h2>ATTRIBUTES</h2>

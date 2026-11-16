@@ -9,14 +9,14 @@ url: "/docs/linux/man/3-xkblatchmodifiers/"
 XkbLatchModifiers - Latches and unlatches any of the eight real keyboard modifiers 
 
 <h2>Synopsis</h2><dl COMPACT><dt> <b>Bool XkbLatchModifiers</b> <b>(Display *</b><i>display</i><b>,</b> <b>unsigned int </b><i>device_spec</i><b>,</b> <b>unsigned int </b><i>affect</i><b>,</b> <b>unsigned int </b><i>values</i><b>);</b> 
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl><h2>Arguments</h2><dl COMPACT><dt><i>display</i>
-<dd><dd>connection to the X server
-<dt><i>device_spec</i>
-<dd>device ID, or XkbUseCoreKbd
-<dt><i>affect</i>
-<dd>mask of real modifiers whose lock state is to change
-<dt><i>values</i>
-<dd>1 =&gt; lock, 0 =&gt; unlock; only for modifiers selected by affect</dl><h2>Description</h2><i>XkbLatchModifiers </i> sends a request to the server to latch the real modifiers selected by both <i>affect </i> and <i>values </i> and to unlatch the real modifiers selected by <i>affect</i> , but not selected by <i>values. </i> 
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl><h2>Arguments</h2><dl COMPACT><dt><i>display</i>
+</dt><dd></dd><dd>connection to the X server
+</dd><dt><i>device_spec</i>
+</dt><dd>device ID, or XkbUseCoreKbd
+</dd><dt><i>affect</i>
+</dt><dd>mask of real modifiers whose lock state is to change
+</dd><dt><i>values</i>
+</dt><dd>1 =&gt; lock, 0 =&gt; unlock; only for modifiers selected by affect</dd></dl><h2>Description</h2><i>XkbLatchModifiers </i> sends a request to the server to latch the real modifiers selected by both <i>affect </i> and <i>values </i> and to unlatch the real modifiers selected by <i>affect</i> , but not selected by <i>values. </i> 
 
  <i>XkbLatchModifiers </i> does not wait for a reply from the server. It returns True if the request was sent, and False otherwise. 
 
@@ -33,10 +33,7 @@ XkbLatchModifiers - Latches and unlatches any of the eight real keyboard modifie
 </td></tr><tr VALIGN=top><td>Mod4Mask
 </td></tr><tr VALIGN=top><td>Mod5Mask
 </td></tr> </table><h2>Return Values</h2><dl COMPACT><dt>True
-<dd>The <i>XkbLatchModifiers </i> function returns True if a request was sent to the server to latch the real modifiers selected by both <i>affect </i> and <i>values </i> and to unlatch the real modifiers selected by <i>affect</i> , but not selected by <i>values. </i>
-<dt>False
-<dd>The <i>XkbLatchModifiers </i> function returns False if the request was not sent. 
-
- 
-
-</dl>
+</dt><dd>The <i>XkbLatchModifiers </i> function returns True if a request was sent to the server to latch the real modifiers selected by both <i>affect </i> and <i>values </i> and to unlatch the real modifiers selected by <i>affect</i> , but not selected by <i>values. </i>
+</dd><dt>False
+</dt><dd>The <i>XkbLatchModifiers </i> function returns False if the request was not sent. 
+</dd></dl>

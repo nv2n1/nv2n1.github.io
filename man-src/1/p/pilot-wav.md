@@ -48,14 +48,12 @@ description: "pilot-wav – Decodes Palm Voice Memo files to wav files you can r
                 <i>pilot-wav</i> <code>-p</code> <i>/dev/pilot</i> <code>-f</code> <i>
                     MyVoiceMemo.wav.pdb
                 </i>
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> # Convert all voice memos found in MyVoiceMemo to .wav files on your desktop machine </p>
 <p>&nbsp;<wbr> </p>
 <pre>
                 <i>pilot-wav</i> <code>-c</code> <i>MyVoiceMemo.wav.pdb</i>
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <h2>AUTHOR</h2>

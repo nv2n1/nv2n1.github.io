@@ -36,43 +36,43 @@ description: "nodeattr – query genders file"
 <p> Retrieve a comma separated list of all login nodes:</p>
 <dl>
 <dt>
-<dd> nodeattr -c login</dl>
+</dt><dd> nodeattr -c login</dd></dl>
 <p> Retrieve a hostlist formatted list of all login nodes:</p>
 <dl>
 <dt>
-<dd> nodeattr -q login</dl>
+</dt><dd> nodeattr -q login</dd></dl>
 <p> Retrieve a comma separated list of nodes with 4 cpus:</p>
 <dl>
 <dt>
-<dd> nodeattr -c cpus=4</dl>
+</dt><dd> nodeattr -c cpus=4</dd></dl>
 <p> Retrieve a comma separated list of all login and management nodes:</p>
 <dl>
 <dt>
-<dd> nodeattr -c &quot;login||mgmt&quot;</dl>
+</dt><dd> nodeattr -c &quot;login||mgmt&quot;</dd></dl>
 <p> Retrieve a comma separated list of all login nodes with 4 cpus:</p>
 <dl>
 <dt>
-<dd> nodeattr -c &quot;login&amp;&amp;cpus=4&quot;</dl>
+</dt><dd> nodeattr -c &quot;login&amp;&amp;cpus=4&quot;</dd></dl>
 <p> Retrieve a comma separated list of all nodes that are not login or management nodes:</p>
 <dl>
 <dt>
-<dd> nodeattr -c &quot;~(login||mgmt)&quot;</dl>
+</dt><dd> nodeattr -c &quot;~(login||mgmt)&quot;</dd></dl>
 <p> To use nodeattr with pdsh to run a command on all fddi nodes:</p>
 <dl>
 <dt>
-<dd> pdsh -w`nodeattr -c fddi` command</dl>
+</dt><dd> pdsh -w`nodeattr -c fddi` command</dd></dl>
 <p> To use nodeattr in a ksh script to collect a list of users on login nodes:</p>
 <dl>
 <dt>
-<dd> for i in `nodeattr -n login`; do rsh $i who; done</dl>
+</dt><dd> for i in `nodeattr -n login`; do rsh $i who; done</dd></dl>
 <p> To verify whether or not this node is a head node:</p>
 <dl>
 <dt>
-<dd> nodeattr head &amp;&amp; echo yes</dl>
+</dt><dd> nodeattr head &amp;&amp; echo yes</dd></dl>
 <p> To verify whether or not this node is a head node and ntpserver:</p>
 <dl>
 <dt>
-<dd> nodeattr -Q &quot;head&amp;&amp;ntpserver&quot; &amp;&amp; echo yes</dl>
+</dt><dd> nodeattr -Q &quot;head&amp;&amp;ntpserver&quot; &amp;&amp; echo yes</dd></dl>
 <h2>FILES</h2>
 <p> /etc/genders </p>
 <h2>SEE ALSO</h2>

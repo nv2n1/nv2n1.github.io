@@ -167,17 +167,17 @@ description: "morphy – discussion of WordNet’s morphological processing"
 <p> Morphy will allow non-words to be converted to words, if they follow one of the rules described above. For example, it will happily convert <code>plantes</code> to <code>plants</code>.</p>
 <h2>Environment Variables (Unix)</h2>
 <dl>
-<dt><code>WNHOME</code></p>
-<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</p>
-<dt><code>WNSEARCHDIR</code></p>
-<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dl>
+<dt><code>WNHOME</code></dt>
+<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
 <h2>Registry (Windows)</h2>
 <dl>
-<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></p>
-<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>pos</i>.exc</p>
-<dd>morphology exception lists</dl>
+<dt><i>pos</i>.exc</dt>
+<dd>morphology exception lists</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-wn/">wn</a></code>(1), <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1), <code><a href="/docs/linux/man/3-binsrch/">binsrch</a></code>(3), <code><a href="/docs/linux/man/3-morph/">morph</a></code>(3), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code>wninput</code>(7). </p>

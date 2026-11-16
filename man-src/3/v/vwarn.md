@@ -10,23 +10,14 @@ description: "err, verr, errx, verrx, warn, vwarn, warnx, vwarnx – formatted e
 <p>err, verr, errx, verrx, warn, vwarn, warnx, vwarnx &#8211; formatted error messages</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;err.h&gt;
-
 void err(int eval, const char *fmt, ...);
-
 void errx(int eval, const char *fmt, ...);
-
 void warn(const char *fmt, ...);
-
 void warnx(const char *fmt, ...);
-
 #include &lt;stdarg.h&gt;
-
 void verr(int eval, const char *fmt, va_list args);
-
 void verrx(int eval, const char *fmt, va_list args);
-
 void vwarn(const char *fmt, va_list args);
-
 void vwarnx(const char *fmt, va_list args);</code></pre>
 <h2>Description</h2>
 <p>The <code>err</code>() and <code>warn</code>() family of functions display a formatted error message on the standard error output. In all cases, the last component of the program name, a colon character, and a space are output. If the <i>fmt</i> argument is not NULL, the <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3)-like formatted error message is output. The output is terminated by a newline character. </p>

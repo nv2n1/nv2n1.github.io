@@ -18,22 +18,22 @@ description: "pmloglabel – check and repair a performance metrics archive labe
 <p> Note that if the temporal index is found to be corrupt, the &quot;*.index&quot; file can be safely moved aside and the archive will still be accessible, however retrievals may take longer without the index. </p>
 <p> The options control the specific information to be reported, or the specific fields to be modified:</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Modify the logged <i>hostname</i> in the archive label, for all files in the archive.</p>
-<dt><code>-l</code></p>
-<dd> Dump out the archive label, showing the log format version, the time and date for the start and (current) end of the archive, and the host from which the performance metrics values were collected.</p>
-<dt><code>-L</code></p>
-<dd> Like <code>-l</code>, just a little more verbose, showing also the timezone and creator process identifier from the archive label.</p>
-<dt><code>-p</code></p>
-<dd> Set the process identifier stored in the archive label to <i>pid</i>, for all files in the archive.</p>
-<dt><code>-s</code></p>
-<dd> Rewrite the sentinel values which precede and follow the archive label, for all files in the archive.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. Additional progress information is produced at each step.</p>
-<dt><code>-V</code></p>
-<dd> Stamp the <i>version</i> number into the magic number field at the start of the archive label, for all files in the archive.</p>
-<dt><code>-Z</code></p>
-<dd> Changes the timezone in the archive labels to <i>timezone</i> in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dl>
+<dt><code>-h</code></dt>
+<dd> Modify the logged <i>hostname</i> in the archive label, for all files in the archive.</dd>
+<dt><code>-l</code></dt>
+<dd> Dump out the archive label, showing the log format version, the time and date for the start and (current) end of the archive, and the host from which the performance metrics values were collected.</dd>
+<dt><code>-L</code></dt>
+<dd> Like <code>-l</code>, just a little more verbose, showing also the timezone and creator process identifier from the archive label.</dd>
+<dt><code>-p</code></dt>
+<dd> Set the process identifier stored in the archive label to <i>pid</i>, for all files in the archive.</dd>
+<dt><code>-s</code></dt>
+<dd> Rewrite the sentinel values which precede and follow the archive label, for all files in the archive.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. Additional progress information is produced at each step.</dd>
+<dt><code>-V</code></dt>
+<dd> Stamp the <i>version</i> number into the magic number field at the start of the archive label, for all files in the archive.</dd>
+<dt><code>-Z</code></dt>
+<dd> Changes the timezone in the archive labels to <i>timezone</i> in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following demonstrates the use of <code>pmloglabel</code> in finding and then correcting a corrupt field (PID) in the label of the temporal index of an archive named &quot;20080125&quot;. </p>
 <pre>
@@ -52,8 +52,8 @@ Performance metrics from host fw1
 <p> <code>pmloglabel</code> exits with status 0 if the archive labels are clean. If invoked incorrectly, the exit status will be 1. If corruption is detected and still exists at the end, the exit status will be 2. If requested to write out the archive labels, and some aspect of that write out fails, then the exit status will be 3.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></p>
-<dd> Default directory for PCP archives containing performance metric values collected from the host <i>hostname</i>.</dl>
+<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></dt>
+<dd> Default directory for PCP archives containing performance metric values collected from the host <i>hostname</i>.</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

@@ -12,41 +12,33 @@ rdma_post_ud_send - post a work request to send a datagram.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 int rdma_post_ud_send
-
     (struct rdma_cm_id *id,
-
      void *context,
-
      void *addr,
-
      size_t length,
-
      struct ibv_mr *mr,
-
      int flags,
-
      struct ibv_ah *ah,
-
      uint32_t remote_qpn);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference to a communication identifier where the message buffer will be posted.
-<dt>context
-<dd>User-defined context associated with the request.
-<dt>addr
-<dd>The address of the memory buffer to post.
-<dt>length
-<dd>The length of the memory buffer.
-<dt>mr
-<dd>Optional registered memory region associated with the posted buffer.
-<dt>flags
-<dd>Optional flags used to control the send operation.
-<dt>ah
-<dd>An address handle describing the address of the remote node.
-<dt>remote_qpn
-<dd>The number of the destination queue pair.</dl>
+</dt><dd>A reference to a communication identifier where the message buffer will be posted.
+</dd><dt>context
+</dt><dd>User-defined context associated with the request.
+</dd><dt>addr
+</dt><dd>The address of the memory buffer to post.
+</dd><dt>length
+</dt><dd>The length of the memory buffer.
+</dd><dt>mr
+</dt><dd>Optional registered memory region associated with the posted buffer.
+</dd><dt>flags
+</dt><dd>Optional flags used to control the send operation.
+</dd><dt>ah
+</dt><dd>An address handle describing the address of the remote node.
+</dd><dt>remote_qpn
+</dt><dd>The number of the destination queue pair.</dd></dl>
 
 <h2>Description</h2>
 

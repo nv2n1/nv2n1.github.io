@@ -15,7 +15,7 @@ usb_free_urb - frees the memory used by a urb when all users of it are finished
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>pointer to the urb to free, may be NULL</dl>
+<dl><dd></dd><dd>pointer to the urb to free, may be NULL</dd></dl>
 
 <h2>Description</h2>
 

@@ -11,47 +11,29 @@ std::replace,std::replace_if - std::replace,std::replace_if
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt, class T&gt;
-
     void replace(ForwardIt first, ForwardIt last, (until C++ 20)
-
                                                       const T &amp;old_value,
                  const T &amp;new_value);
-
 template &lt;class ForwardIt, class T&gt;
-
 constexpr void replace(ForwardIt first, ForwardIt last, (since C++ 20)
-
                                                             const T &amp;old_value,
                        const T &amp;new_value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
-
 void replace(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (2)(since C++ 17)
-
                                                                             const T &amp;old_value,
              const T &amp;new_value);
 (1)
-
     template &lt;class ForwardIt, class UnaryPredicate, class T&gt;
-
     void replace_if(ForwardIt first, ForwardIt last, (until C++ 20)
-
                                                          UnaryPredicate p,
                     const T &amp;new_value);
-
 template &lt;class ForwardIt, class UnaryPredicate, class T&gt;
-
 constexpr void replace_if(ForwardIt first, ForwardIt last, (3)(since C++ 20)
-
                                                                UnaryPredicate p,
                           const T &amp;new_value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate, class T&gt;
-
 void replace_if(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (4)(since C++ 17)
-
                                                                                UnaryPredicate p,
                 const T &amp;new_value);</code></pre> 
 Replaces all elements satisfying specific criteria with new_value in the range [first, last). 
@@ -129,14 +111,10 @@ Because the algorithm takes old_value and new_value by reference, it can have un
 
 The following code at first replaces all occurrences of 8 with 88 in a vector of integers. Then it replaces all values less than 5 with 55. 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;array&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::array&lt;int, 10&gt; s{5, 7, 4, 2, 8, 6, 1, 9, 0, 3};
     std::replace(s.begin(), s.end(), 8, 88);

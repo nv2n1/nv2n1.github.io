@@ -19,7 +19,7 @@ description: "ctrexc.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CTREXC reorders the Schur factorization of a complex matrix
  A = Q*T*Q**H, so that the diagonal element of T with row index IFST
@@ -28,11 +28,11 @@ description: "ctrexc.f –"
  Z**H*T*Z, and optionally the matrix Q of Schur vectors is updated by
  postmultplying it with Z.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>COMPQ</i> </p>
+</dt><dd> <i>COMPQ</i> </dd>
 <pre>
           COMPQ is CHARACTER*1
           = 'V':  update the matrix Q of Schur vectors;
@@ -88,14 +88,14 @@ ILST is INTEGER
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 125 of file ctrexc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

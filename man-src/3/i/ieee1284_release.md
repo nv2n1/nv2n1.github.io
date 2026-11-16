@@ -14,14 +14,14 @@ description: "ieee1284_release – release a port"
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
-<dt> <code>void ieee1284_release(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dl>
+<dt> <code>void ieee1284_release(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This function undoes the effect of <code>ieee1284_claim</code>(3) by releasing the port for use by other drivers. It is good practice to release the port whenever convenient. If it is never convenient to do so, the <code>F1284_EXCL</code> flag should be specified at initialization.</p>
+<dd>This function undoes the effect of <code>ieee1284_claim</code>(3) by releasing the port for use by other drivers. It is good practice to release the port whenever convenient. If it is never convenient to do so, the <code>F1284_EXCL</code> flag should be specified at initialization.</dd>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
 <h2>Index</h2>

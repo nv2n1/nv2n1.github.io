@@ -19,7 +19,7 @@ struct_skb_mstamp - multi resolution time stamps
 <h2>Members</h2>
 
 {unnamed_union}
-<dl><dd>anonymous</dl>
+<dl><dd>anonymous</dd></dl>
 
 <h2>Copyright</h2>
 

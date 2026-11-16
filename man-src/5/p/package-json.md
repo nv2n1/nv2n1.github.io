@@ -16,26 +16,26 @@ description: "The most important things in your package.json are the name and ve
 <p> The name is what your thing is called. </p>
 <p> Some rules:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The name must be shorter than 214 characters. This includes the scope for scoped packages.</p>
-<dt>&bull;</p>
-<dd>The name can&#8217;t start with a dot or an underscore.</p>
-<dt>&bull;</p>
-<dd>New packages must not have uppercase letters in the name.</p>
-<dt>&bull;</p>
-<dd>The name ends up being part of a URL, an argument on the command line, and a folder name. Therefore, the name can&#8217;t contain any non-URL-safe characters.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>The name must be shorter than 214 characters. This includes the scope for scoped packages.</dd>
+<dt>&bull;</dt>
+<dd>The name can&#8217;t start with a dot or an underscore.</dd>
+<dt>&bull;</dt>
+<dd>New packages must not have uppercase letters in the name.</dd>
+<dt>&bull;</dt>
+<dd>The name ends up being part of a URL, an argument on the command line, and a folder name. Therefore, the name can&#8217;t contain any non-URL-safe characters.</dd>
+<dd></dd></dl>
 <p> Some tips:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Don&#8217;t use the same name as a core Node module.</p>
-<dt>&bull;</p>
-<dd>Don&#8217;t put &quot;js&quot; or &quot;node&quot; in the name. It&#8217;s assumed that it&#8217;s js, since you&#8217;re writing a package.json file, and you can specify the engine using the &quot;engines&quot; field. (See below.)</p>
-<dt>&bull;</p>
-<dd>The name will probably be passed as an argument to require(), so it should be something short, but also reasonably descriptive.</p>
-<dt>&bull;</p>
-<dd>You may want to check the npm registry to see if there&#8217;s something by that name already, before you get too attached to it. <i><a rel="nofollow" href="https://www.npmjs.com/">https://www.npmjs.com/</a></i></p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>Don&#8217;t use the same name as a core Node module.</dd>
+<dt>&bull;</dt>
+<dd>Don&#8217;t put &quot;js&quot; or &quot;node&quot; in the name. It&#8217;s assumed that it&#8217;s js, since you&#8217;re writing a package.json file, and you can specify the engine using the &quot;engines&quot; field. (See below.)</dd>
+<dt>&bull;</dt>
+<dd>The name will probably be passed as an argument to require(), so it should be something short, but also reasonably descriptive.</dd>
+<dt>&bull;</dt>
+<dd>You may want to check the npm registry to see if there&#8217;s something by that name already, before you get too attached to it. <i><a rel="nofollow" href="https://www.npmjs.com/">https://www.npmjs.com/</a></i></dd>
+<dd></dd></dl>
 <p> A name can be optionally prefixed by a scope, e.g. <code>@myorg/mypackage</code>. See npm help 7 <code>npm-scope</code> for more detail.</p>
 <h2>version</h2>
 <p>The <i>most</i> important things in your package.json are the name and version fields. Those are actually required, and your package won&#8217;t install without them. The name and version together form an identifier that is assumed to be completely unique. Changes to the package should come along with changes to the version. </p>
@@ -57,7 +57,7 @@ description: "The most important things in your package.json are the name and ve
 <pre>{ &quot;url&quot; : &quot;<a rel="nofollow" href="https://github.com/owner/project/issues">https://github.com/owner/project/issues</a>&quot;
 , &quot;email&quot; : &quot;project [at] hostname.com&quot;
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> You can specify either one or both values. If you want to provide only a url, you can specify the value for &quot;bugs&quot; as a simple string instead of an object. </p>
 <p> If a url is provided, it will be used by the <code>npm bugs</code> command.</p>
 <h2>license</h2>
@@ -66,18 +66,18 @@ description: "The most important things in your package.json are the name and ve
 <dl>
 <dd>
 <pre>{ &quot;license&quot; : &quot;BSD-3-Clause&quot; }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> You can check the full list of SPDX license IDs <i><a rel="nofollow" href="https://spdx.org/licenses/">https://spdx.org/licenses/</a></i>. Ideally you should pick one that is OSI <i><a rel="nofollow" href="http://opensource.org/licenses/alphabetical">http://opensource.org/licenses/alphabetical</a></i> approved. </p>
 <p> If your package is licensed under multiple common licenses, use an SPDX license expression syntax version 2.0 string <i><a rel="nofollow" href="http://npmjs.com/package/spdx">http://npmjs.com/package/spdx</a></i>, like this:</p>
 <dl>
 <dd>
 <pre>{ &quot;license&quot; : &quot;(ISC OR GPL-3.0)&quot; }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> If you are using a license that hasn&#8217;t been assigned an SPDX identifier, or if you are using a custom license, use the following valid SPDX expression:</p>
 <dl>
 <dd>
 <pre>{ &quot;license&quot; : &quot;SEE LICENSE IN &lt;filename&gt;&quot; }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Then include a file named <code>&lt;filename&gt;</code> at the top level of the package. </p>
 <p> Some old packages used license objects or a &quot;licenses&quot; property containing an array of license objects:</p>
 <dl>
@@ -99,18 +99,18 @@ description: "The most important things in your package.json are the name and ve
  }
  ]
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Those styles are now deprecated. Instead, use SPDX expressions, like this:</p>
 <dl>
 <dd>
 <pre>{ &quot;license&quot;: &quot;ISC&quot; }
 { &quot;license&quot;: &quot;(MIT OR Apache-2.0)&quot; }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Finally, if you do not wish to grant others the right to use a private or unpublished package under any terms:</p>
 <dl>
 <dd>
 <pre>{ &quot;license&quot;: &quot;UNLICENSED&quot;}</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Consider also setting <code>&quot;private&quot;: true</code> to prevent accidental publication.</p>
 <h2>people fields: author, contributors</h2>
 <p>The &quot;author&quot; is one person. &quot;contributors&quot; is an array of people. A &quot;person&quot; is an object with a &quot;name&quot; field and optionally &quot;url&quot; and &quot;email&quot;, like this:</p>
@@ -120,12 +120,12 @@ description: "The most important things in your package.json are the name and ve
 , &quot;email&quot; : &quot;b@rubble.com&quot;
 , &quot;url&quot; : &quot;<a rel="nofollow" href="http://barnyrubble.tumblr.com/">http://barnyrubble.tumblr.com/</a>&quot;
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Or you can shorten that all into a single string, and npm will parse it for you:</p>
 <dl>
 <dd>
 <pre>&quot;Barney Rubble &lt;b@rubble.com&gt; (<a rel="nofollow" href="http://barnyrubble.tumblr.com/)">http://barnyrubble.tumblr.com/)</a>&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Both email and url are optional either way. </p>
 <p> npm also sets a top-level &quot;maintainers&quot; field with your npm user info.</p>
 <h2>files</h2>
@@ -133,38 +133,38 @@ description: "The most important things in your package.json are the name and ve
 <p> You can also provide a &quot;.npmignore&quot; file in the root of your package or in subdirectories, which will keep files from being included, even if they would be picked up by the files array. The <code>.npmignore</code> file works just like a <code>.gitignore</code>. </p>
 <p> Certain files are always included, regardless of settings:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>package.json</code></p>
-<dt>&bull;</p>
-<dd><code>README</code> (and its variants)</p>
-<dt>&bull;</p>
-<dd><code>CHANGELOG</code> (and its variants)</p>
-<dt>&bull;</p>
-<dd><code>LICENSE</code> / <code>LICENCE</code></p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><code>package.json</code></dd>
+<dt>&bull;</dt>
+<dd><code>README</code> (and its variants)</dd>
+<dt>&bull;</dt>
+<dd><code>CHANGELOG</code> (and its variants)</dd>
+<dt>&bull;</dt>
+<dd><code>LICENSE</code> / <code>LICENCE</code></dd>
+<dd></dd></dl>
 <p> Conversely, some files are always ignored:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>.git</code></p>
-<dt>&bull;</p>
-<dd><code>CVS</code></p>
-<dt>&bull;</p>
-<dd><code>.svn</code></p>
-<dt>&bull;</p>
-<dd><code>.hg</code></p>
-<dt>&bull;</p>
-<dd><code>.lock-wscript</code></p>
-<dt>&bull;</p>
-<dd><code>.wafpickle-N</code></p>
-<dt>&bull;</p>
-<dd><code>*.swp</code></p>
-<dt>&bull;</p>
-<dd><code>.DS_Store</code></p>
-<dt>&bull;</p>
-<dd><code>._*</code></p>
-<dt>&bull;</p>
-<dd><code>npm-debug.log</code></p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><code>.git</code></dd>
+<dt>&bull;</dt>
+<dd><code>CVS</code></dd>
+<dt>&bull;</dt>
+<dd><code>.svn</code></dd>
+<dt>&bull;</dt>
+<dd><code>.hg</code></dd>
+<dt>&bull;</dt>
+<dd><code>.lock-wscript</code></dd>
+<dt>&bull;</dt>
+<dd><code>.wafpickle-N</code></dd>
+<dt>&bull;</dt>
+<dd><code>*.swp</code></dd>
+<dt>&bull;</dt>
+<dd><code>.DS_Store</code></dd>
+<dt>&bull;</dt>
+<dd><code>._*</code></dd>
+<dt>&bull;</dt>
+<dd><code>npm-debug.log</code></dd>
+<dd></dd></dl>
 <h2>main</h2>
 <p>The main field is a module ID that is the primary entry point to your program. That is, if your package is named <code>foo</code>, and a user installs it, and then does <code>require(&quot;foo&quot;)</code>, then your main module&#8217;s exports object will be returned. </p>
 <p> This should be a module ID relative to the root of your package folder. </p>
@@ -176,7 +176,7 @@ description: "The most important things in your package.json are the name and ve
 <dl>
 <dd>
 <pre>{ &quot;bin&quot; : { &quot;myapp&quot; : &quot;./cli.js&quot; } }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> So, when you install myapp, it&#8217;ll create a symlink from the <code>cli.js</code> script to <code>/usr/local/bin/myapp</code>. </p>
 <p> If you have a single executable, and its name should be the name of the package, then you can just supply it as a string. For example:</p>
 <dl>
@@ -184,14 +184,14 @@ description: "The most important things in your package.json are the name and ve
 <pre>{ &quot;name&quot;: &quot;my-program&quot;
 , &quot;version&quot;: &quot;1.2.5&quot;
 , &quot;bin&quot;: &quot;./path/to/program&quot; }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> would be the same as this:</p>
 <dl>
 <dd>
 <pre>{ &quot;name&quot;: &quot;my-program&quot;
 , &quot;version&quot;: &quot;1.2.5&quot;
 , &quot;bin&quot; : { &quot;my-program&quot; : &quot;./path/to/program&quot; } }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>man</h2>
 <p>Specify either a single file or an array of filenames to put in place for the <code>man</code> program to find. </p>
 <p> If only a single file is provided, then it&#8217;s installed such that it is the result from <code>man &lt;pkgname&gt;</code>, regardless of its actual filename. For example:</p>
@@ -203,7 +203,7 @@ description: "The most important things in your package.json are the name and ve
 , &quot;main&quot; : &quot;foo.js&quot;
 , &quot;man&quot; : &quot;./man/doc.1&quot;
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> would link the <code>./man/doc.1</code> file in such that it is the target for <code>man foo</code> </p>
 <p> If the filename doesn&#8217;t start with the package name, then it&#8217;s prefixed. So, this:</p>
 <dl>
@@ -214,7 +214,7 @@ description: "The most important things in your package.json are the name and ve
 , &quot;main&quot; : &quot;foo.js&quot;
 , &quot;man&quot; : [ &quot;./man/foo.1&quot;, &quot;./man/bar.1&quot; ]
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> will create files to do <code>man foo</code> and <code>man foo-bar</code>. </p>
 <p> Man files must end with a number, and optionally a <code>.gz</code> suffix if they are compressed. The number dictates which man section the file is installed into.</p>
 <dl>
@@ -225,7 +225,7 @@ description: "The most important things in your package.json are the name and ve
 , &quot;main&quot; : &quot;foo.js&quot;
 , &quot;man&quot; : [ &quot;./man/foo.1&quot;, &quot;./man/foo.2&quot; ]
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> will create entries for <code>man foo</code> and <code>man 2 foo</code></p>
 <h2>directories</h2>
 <p>The CommonJS Packages <i><a rel="nofollow" href="http://wiki.commonjs.org/wiki/Packages/1.0">http://wiki.commonjs.org/wiki/Packages/1.0</a></i> spec details a few ways that you can indicate the structure of your package using a <code>directories</code> object. If you look at npm&#8217;s package.json <i><a rel="nofollow" href="https://registry.npmjs.org/npm/latest">https://registry.npmjs.org/npm/latest</a></i>, you&#8217;ll see that it has directories for doc, lib, and man. </p>
@@ -254,7 +254,7 @@ description: "The most important things in your package.json are the name and ve
  { &quot;type&quot; : &quot;svn&quot;
  , &quot;url&quot; : &quot;<a rel="nofollow" href="https://v8.googlecode.com/svn/trunk/">https://v8.googlecode.com/svn/trunk/</a>&quot;
  }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The URL should be a publicly available (perhaps read-only) url that can be handed directly to a VCS program without any modification. It should not be a url to an html project page that you put in your browser. It&#8217;s for computers. </p>
 <p> For GitHub, GitHub gist, Bitbucket, or GitLab repositories you can use the same shortcut syntax you use for <code>npm install</code>:</p>
 <dl>
@@ -263,7 +263,7 @@ description: "The most important things in your package.json are the name and ve
 &quot;repository&quot;: &quot;gist:11081aaa281&quot;
 &quot;repository&quot;: &quot;bitbucket:example/repo&quot;
 &quot;repository&quot;: &quot;gitlab:another/repo&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>scripts</h2>
 <p>The &quot;scripts&quot; property is a dictionary containing script commands that are run at various times in the lifecycle of your package. The key is the lifecycle event, and the value is the command to run at that point. </p>
 <p> See npm help 7 <code>npm-scripts</code> to find out more about writing package scripts.</p>
@@ -273,7 +273,7 @@ description: "The most important things in your package.json are the name and ve
 <dd>
 <pre>{ &quot;name&quot; : &quot;foo&quot;
 , &quot;config&quot; : { &quot;port&quot; : &quot;8080&quot; } }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> and then had a &quot;start&quot; command that then referenced the <code>npm_package_config_port</code> environment variable, then the user could override that by doing <code>npm config set foo:port 8001</code>. </p>
 <p> See npm help 7 <code>npm-config</code> and npm help 7 <code>npm-scripts</code> for more on package configs.</p>
 <h2>dependencies</h2>
@@ -281,41 +281,41 @@ description: "The most important things in your package.json are the name and ve
 <p> <code>Please do not put test harnesses or transpilers in your dependencies</code> object. See <code>devDependencies</code>, below. </p>
 <p> See npm help 7 semver for more details about specifying version ranges.</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>version</code> Must match <code>version</code> exactly</p>
-<dt>&bull;</p>
-<dd><code>&gt;version</code> Must be greater than <code>version</code></p>
-<dt>&bull;</p>
-<dd><code>&gt;=version</code> etc</p>
-<dt>&bull;</p>
-<dd><code>&lt;version</code></p>
-<dt>&bull;</p>
-<dd><code>&lt;=version</code></p>
-<dt>&bull;</p>
-<dd><code>~version</code> &quot;Approximately equivalent to version&quot; See npm help 7 semver</p>
-<dt>&bull;</p>
-<dd><code>^version</code> &quot;Compatible with version&quot; See npm help 7 semver</p>
-<dt>&bull;</p>
-<dd><code>1.2.x</code> 1.2.0, 1.2.1, etc., but not 1.3.0</p>
-<dt>&bull;</p>
-<dd><code><a rel="nofollow" href="http://...">http://&#8230;</a></code> See &#8216;URLs as Dependencies&#8217; below</p>
-<dt>&bull;</p>
-<dd><code>*</code> Matches any version</p>
-<dt>&bull;</p>
-<dd><code>&quot;&quot;</code> (just an empty string) Same as <code>*</code></p>
-<dt>&bull;</p>
-<dd><code>version1 &#8211; version2</code> Same as <code>&gt;=version1 &lt;=version2</code>.</p>
-<dt>&bull;</p>
-<dd><code>range1 || range2</code> Passes if either range1 or range2 are satisfied.</p>
-<dt>&bull;</p>
-<dd><code>git&#8230;</code> See &#8216;Git URLs as Dependencies&#8217; below</p>
-<dt>&bull;</p>
-<dd><code>user/repo</code> See &#8216;GitHub URLs&#8217; below</p>
-<dt>&bull;</p>
-<dd><code>tag</code> A specific version tagged and published as <code>tag</code> See npm help <code>npm-tag</code></p>
-<dt>&bull;</p>
-<dd><code>path/path/path</code> See Local Paths below</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><code>version</code> Must match <code>version</code> exactly</dd>
+<dt>&bull;</dt>
+<dd><code>&gt;version</code> Must be greater than <code>version</code></dd>
+<dt>&bull;</dt>
+<dd><code>&gt;=version</code> etc</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;version</code></dd>
+<dt>&bull;</dt>
+<dd><code>&lt;=version</code></dd>
+<dt>&bull;</dt>
+<dd><code>~version</code> &quot;Approximately equivalent to version&quot; See npm help 7 semver</dd>
+<dt>&bull;</dt>
+<dd><code>^version</code> &quot;Compatible with version&quot; See npm help 7 semver</dd>
+<dt>&bull;</dt>
+<dd><code>1.2.x</code> 1.2.0, 1.2.1, etc., but not 1.3.0</dd>
+<dt>&bull;</dt>
+<dd><code><a rel="nofollow" href="http://...">http://&#8230;</a></code> See &#8216;URLs as Dependencies&#8217; below</dd>
+<dt>&bull;</dt>
+<dd><code>*</code> Matches any version</dd>
+<dt>&bull;</dt>
+<dd><code>&quot;&quot;</code> (just an empty string) Same as <code>*</code></dd>
+<dt>&bull;</dt>
+<dd><code>version1 &#8211; version2</code> Same as <code>&gt;=version1 &lt;=version2</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>range1 || range2</code> Passes if either range1 or range2 are satisfied.</dd>
+<dt>&bull;</dt>
+<dd><code>git&#8230;</code> See &#8216;Git URLs as Dependencies&#8217; below</dd>
+<dt>&bull;</dt>
+<dd><code>user/repo</code> See &#8216;GitHub URLs&#8217; below</dd>
+<dt>&bull;</dt>
+<dd><code>tag</code> A specific version tagged and published as <code>tag</code> See npm help <code>npm-tag</code></dd>
+<dt>&bull;</dt>
+<dd><code>path/path/path</code> See Local Paths below</dd>
+<dd></dd></dl>
 <p> For example, these are all valid:</p>
 <dl>
 <dd>
@@ -334,7 +334,7 @@ description: "The most important things in your package.json are the name and ve
  , &quot;dyl&quot; : &quot;file:../dyl&quot;
  }
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h3>URLs as Dependencies</h3>
 <p>You may specify a tarball URL in place of a version range. </p>
 <p> This tarball will be downloaded and installed locally to your package at install time.</p>
@@ -347,7 +347,7 @@ git+<a href="ssh://user@hostname:project.git#commit-ish">ssh://user@hostname:pro
 git+<a href="ssh://user@hostname/project.git#commit-ish">ssh://user@hostname/project.git#commit-ish</a>
 git+<a rel="nofollow" href="http://user@hostname/project/blah.git#commit-ish">http://user@hostname/project/blah.git#commit-ish</a>
 git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">https://user@hostname/project/blah.git#commit-ish</a></pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The <code>commit-ish</code> can be any tag, sha, or branch which can be supplied as an argument to <code>git checkout</code>. The default is <code>master</code>.</p>
 <h2>GitHub URLs</h2>
 <p>As of version 1.1.65, you can refer to GitHub urls as just &quot;foo&quot;: &quot;user/foo-project&quot;. Just as with git URLs, a <code>commit-ish</code> suffix can be included. For example:</p>
@@ -361,7 +361,7 @@ git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">h
  &quot;mocha&quot;: &quot;visionmedia/mocha#4727d357ea&quot;
  }
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Local Paths</h2>
 <p>As of version 2.0.0 you can provide a path to a local directory that contains a package. Local paths can be saved using <code>npm install -S</code> or <code>npm install &#8211;save</code>, using any of these forms:</p>
 <dl>
@@ -370,7 +370,7 @@ git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">h
 ~/foo/bar
 ./foo/bar
 /foo/bar</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> in which case they will be normalized to a relative path and added to your <code>package.json</code>. For example:</p>
 <dl>
 <dd>
@@ -380,7 +380,7 @@ git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">h
  &quot;bar&quot;: &quot;file:../foo/bar&quot;
  }
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> This feature is helpful for local offline development and creating tests that require npm installing where you don&#8217;t want to hit an external server, but should not be used when publishing packages to the public registry.</p>
 <h2>devDependencies</h2>
 <p>If someone is planning on downloading and using your module in their program, then they probably don&#8217;t want or need to download and build the external test or documentation framework that you use. </p>
@@ -401,7 +401,7 @@ git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">h
  },
  &quot;main&quot;: &quot;lib/waza.js&quot;
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The <code>prepublish</code> script will be run before publishing, so that users can consume the functionality without requiring them to compile it themselves. In dev mode (ie, locally running <code>npm install</code>), it&#8217;ll run this script as well, so that you can test it easily.</p>
 <h2>peerDependencies</h2>
 <p>In some cases, you want to express the compatibility of your package with a host tool or library, while not necessarily doing a <code>require</code> of this host. This is usually referred to as a <i>plugin</i>. Notably, your module may be exposing a specific interface, expected and specified by the host documentation. </p>
@@ -415,13 +415,13 @@ git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">h
  &quot;tea&quot;: &quot;2.x&quot;
  }
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> This ensures your package <code>tea-latte</code> can be installed <i>along</i> with the second major version of the host package <code>tea</code> only. <code>npm install tea-latte</code> could possibly yield the following dependency graph:</p>
 <dl>
 <dd>
 <pre>|-- tea-latte [at] 1.3.5
 |-- tea [at] 2.2.0</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> <code>NOTE: npm versions 1 and 2 will automatically install peerDependencies</code> if they are not explicitly depended upon higher in the dependency tree. In the next major version of npm (npm@3), this will no longer be the case. You will receive a warning that the peerDependency is not installed instead. The behavior in npms 1 &amp; 2 was frequently confusing and could easily put you into dependency hell, a situation that npm is designed to avoid as much as possible. </p>
 <p> Trying to install another plugin with a conflicting requirement will cause an error. For this reason, make sure your plugin requirement is as broad as possible, and not to lock it down to specific patch versions. </p>
 <p> Assuming the host complies with semver <i><a rel="nofollow" href="http://semver.org/">http://semver.org/</a></i>, only changes in the host package&#8217;s major version will break your plugin. Thus, if you&#8217;ve worked with every 1.x version of the host package, use <code>&quot;^1.0&quot;</code> or <code>&quot;1.x&quot;</code> to express this. If you depend on features introduced in 1.5.2, use <code>&quot;&gt;= 1.5.2 &lt; 2&quot;</code>.</p>
@@ -446,21 +446,21 @@ if ( notGoodFooVersion(fooVersion) ) {
 if (foo) {
  foo.doFooThings()
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Entries in <code>optionalDependencies</code> will override entries of the same name in <code>dependencies</code>, so it&#8217;s usually best to only put in one place.</p>
 <h2>engines</h2>
 <p>You can specify the version of node that your stuff works on:</p>
 <dl>
 <dd>
 <pre>{ &quot;engines&quot; : { &quot;node&quot; : &quot;&gt;=0.10.3 &lt;0.12&quot; } }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> And, like with dependencies, if you don&#8217;t specify the version (or if you specify &quot;*&quot; as the version), then any version of node will do. </p>
 <p> If you specify an &quot;engines&quot; field, then npm will require that &quot;node&quot; be somewhere on that list. If &quot;engines&quot; is omitted, then npm will just assume that it works on node. </p>
 <p> You can also use the &quot;engines&quot; field to specify which versions of npm are capable of properly installing your program. For example:</p>
 <dl>
 <dd>
 <pre>{ &quot;engines&quot; : { &quot;npm&quot; : &quot;~1.0.20&quot; } }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Note that, unless the user has set the <code>engine-strict</code> config flag, this field is advisory only.</p>
 <h2>engineStrict</h2>
 <p><code>This feature was deprecated with npm 3.0.0</code> </p>
@@ -470,12 +470,12 @@ if (foo) {
 <dl>
 <dd>
 <pre>&quot;os&quot; : [ &quot;darwin&quot;, &quot;linux&quot; ]</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> You can also blacklist instead of whitelist operating systems, just prepend the blacklisted os with a &#8216;!&#8217;:</p>
 <dl>
 <dd>
 <pre>&quot;os&quot; : [ &quot;!win32&quot; ]</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The host operating system is determined by <code>process.platform</code> </p>
 <p> It is allowed to both blacklist, and whitelist, although there isn&#8217;t any good reason to do this.</p>
 <h2>cpu</h2>
@@ -483,12 +483,12 @@ if (foo) {
 <dl>
 <dd>
 <pre>&quot;cpu&quot; : [ &quot;x64&quot;, &quot;ia32&quot; ]</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Like the <code>os</code> option, you can also blacklist architectures:</p>
 <dl>
 <dd>
 <pre>&quot;cpu&quot; : [ &quot;!arm&quot;, &quot;!mips&quot; ]</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The host architecture is determined by <code>process.arch</code></p>
 <h2>preferGlobal</h2>
 <p>If your package is primarily a command-line application that should be installed globally, then set this value to <code>true</code> to provide a warning if it is installed locally. </p>
@@ -503,36 +503,37 @@ if (foo) {
 <h2>Default Values</h2>
 <p>npm will default some values based on package contents.</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>&quot;scripts&quot;: {&quot;start&quot;: &quot;node server.js&quot;}</code></p>
-<dd>If there is a <code>server.js</code> file in the root of your package, then npm will default the <code>start</code> command to <code>node server.js</code>.</p>
-<dt>&bull;</p>
-<dd><code>&quot;scripts&quot;:{&quot;preinstall&quot;: &quot;node-gyp rebuild&quot;}</code></p>
-<dd>If there is a <code>binding.gyp</code> file in the root of your package, npm will default the <code>preinstall</code> command to compile using node-gyp.</p>
-<dt>&bull;</p>
-<dd><code>&quot;contributors&quot;: [&#8230;]</code></p>
-<dd>If there is an <code>AUTHORS</code> file in the root of your package, npm will treat each line as a <code>Name &lt;email&gt; (url)</code> format, where email and url are optional. Lines which start with a <code>#</code> or are blank, will be ignored.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><code>&quot;scripts&quot;: {&quot;start&quot;: &quot;node server.js&quot;}</code></dd>
+<dd>If there is a <code>server.js</code> file in the root of your package, then npm will default the <code>start</code> command to <code>node server.js</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>&quot;scripts&quot;:{&quot;preinstall&quot;: &quot;node-gyp rebuild&quot;}</code></dd>
+<dd>If there is a <code>binding.gyp</code> file in the root of your package, npm will default the <code>preinstall</code> command to compile using node-gyp.</dd>
+<dt>&bull;</dt>
+<dd><code>&quot;contributors&quot;: [&#8230;]</code></dd>
+<dd>If there is an <code>AUTHORS</code> file in the root of your package, npm will treat each line as a <code>Name &lt;email&gt; (url)</code> format, where email and url are optional. Lines which start with a <code>#</code> or are blank, will be ignored.</dd>
+<dd></dd></dl>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help 7 semver</p>
-<dt>&bull;</p>
-<dd>npm help init</p>
-<dt>&bull;</p>
-<dd>npm help version</p>
-<dt>&bull;</p>
-<dd>npm help config</p>
-<dt>&bull;</p>
-<dd>npm help 7 config</p>
-<dt>&bull;</p>
-<dd>npm help help</p>
-<dt>&bull;</p>
-<dd>npm help 7 faq</p>
-<dt>&bull;</p>
-<dd>npm help install</p>
-<dt>&bull;</p>
-<dd>npm help publish</p>
-<dt>&bull;</p>
-<dd>npm help uninstall</p>
+<dt>&bull;</dt>
+<dd>npm help 7 semver</dd>
+<dt>&bull;</dt>
+<dd>npm help init</dd>
+<dt>&bull;</dt>
+<dd>npm help version</dd>
+<dt>&bull;</dt>
+<dd>npm help config</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 config</dd>
+<dt>&bull;</dt>
+<dd>npm help help</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 faq</dd>
+<dt>&bull;</dt>
+<dd>npm help install</dd>
+<dt>&bull;</dt>
+<dd>npm help publish</dd>
+<dt>&bull;</dt>
+<dd>npm help uninstall</dd>
 <dd>
+</dd></dl>

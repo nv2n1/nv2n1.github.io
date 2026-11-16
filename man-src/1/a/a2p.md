@@ -16,36 +16,33 @@ description: "a2p – Awk to Perl translator"
 <h3><font SIZE="-1">OPTIONS</font></h3>
 <p> Options include:</p>
 <dl>
-<dt><code>-D&lt;number&gt;</code></p>
-<dd> sets debugging flags.</p>
-<dt><code>-F&lt;character&gt;</code></p>
-<dd> tells a2p that this awk script is always invoked with this <code>-F</code> switch.</p>
-<dt><code>-n&lt;fieldlist&gt;</code></p>
-<dd> specifies the names of the input fields if input does not have to be split into an array. If you were translating an awk script that processes the password file, you might say: </p>
+<dt><code>-D&lt;number&gt;</code></dt>
+<dd> sets debugging flags.</dd>
+<dt><code>-F&lt;character&gt;</code></dt>
+<dd> tells a2p that this awk script is always invoked with this <code>-F</code> switch.</dd>
+<dt><code>-n&lt;fieldlist&gt;</code></dt>
+<dd> specifies the names of the input fields if input does not have to be split into an array. If you were translating an awk script that processes the password file, you might say: </dd>
 <pre>
         a2p -7 -nlogin.password.uid.gid.gcos.shell.home
 </pre>
 <p> Any delimiter can be used to separate the field names.</p>
-<dt><code>-&lt;number&gt;</code></p>
-<dd> causes a2p to assume that input will always have that many fields.</p>
-<dt><code>-o</code></p>
-<dd> tells a2p to use old awk behavior. The only current differences are:</p>
+<dt><code>-&lt;number&gt;</code></dt>
+<dd> causes a2p to assume that input will always have that many fields.</dd>
+<dt><code>-o</code></dt>
+<dd> tells a2p to use old awk behavior. The only current differences are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Old awk always has a line loop, even if there are no line actions, whereas new awk does not.</p>
-<dt>&bull;</p>
-<dd> In old awk, sprintf is extremely greedy about its arguments. For example, given the statement </p>
+<dt>&bull;</dt>
+<dd> Old awk always has a line loop, even if there are no line actions, whereas new awk does not.</dd>
+<dt>&bull;</dt>
+<dd> In old awk, sprintf is extremely greedy about its arguments. For example, given the statement </dd>
 <pre>
         print sprintf(some_args), extra_args;
 </pre>
 <p> old awk considers <i>extra_args</i> to be arguments to <tt>&quot;sprintf&quot;</tt>; new awk considers them arguments to <tt>&quot;print&quot;</tt>.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h3>Considerations</h3>
 <p> A2p cannot do as good a job translating as a human would, but it usually does pretty well. There are some areas where you may want to examine the perl script produced and tweak it some. Here are some of them, in no particular order. </p>
@@ -72,7 +69,6 @@ description: "a2p – Awk to Perl translator"
 <h2>SEE ALSO</h2>
 <pre>
  perl   The perl compiler/interpreter
- 
  s2p    sed to perl translator
 </pre>
 <h2>DIAGNOSTICS</h2>
@@ -80,15 +76,15 @@ description: "a2p – Awk to Perl translator"
 <p> It would be possible to emulate awk&#8217;s behavior in selecting string versus numeric operations at run time by inspection of the operands, but it would be gross and inefficient. Besides, a2p almost always guesses right. </p>
 <p> Storage for the awk syntax tree is currently static, and can run out. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">ENVIRONMENT</a></p>
+<dt><a href="#lbAG">ENVIRONMENT</a></dt>
 <dd>
-<dt><a href="#lbAH">AUTHOR</a></p>
+</dd><dt><a href="#lbAH">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAI">FILES</a></p>
+</dd><dt><a href="#lbAI">FILES</a></dt>
 <dd>
-<dt><a href="#lbAJ">SEE ALSO</a></p>
+</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAK">DIAGNOSTICS</a></p>
+</dd><dt><a href="#lbAK">DIAGNOSTICS</a></dt>
 <dd>
-<dt><a href="#lbAL">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">BUGS</a></dt>
+<dd></dd></dl>

@@ -17,12 +17,12 @@ description: "gst-feedback – generate debug info for GStreamer bug reports"
 <h2>Usage</h2>
 <p>Generate the feedback information by running <i>gst-feedback</i>:</p>
 <dl>
-<dt><code>gst-feedback</code></p>
+<dt><code>gst-feedback</code></dt>
 <dd>
-<dt>Possibly redirect output and errors to a file:</p>
+</dd><dt>Possibly redirect output and errors to a file:</dt>
 <dd>
-<dt><code>gst-feedback &amp;&gt; myfeedback</code></p>
-<dd></dl>
+</dd><dt><code>gst-feedback &amp;&gt; myfeedback</code></dt>
+<dd></dd></dl>
 <h2>Warning</h2>
 <p>The <i>gst-feedback</i> dumps a lot of information about a system, some of which may be considered sensitive. If this is a concern, review the information before posting to a public forum, such as the GStreamer bug tracking system.</p>
 <h2>See Also</h2>

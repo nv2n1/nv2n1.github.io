@@ -11,10 +11,8 @@ std::experimental::swap(std::experimental::optional) - std::experimental::swap(s
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / optional&gt;
-
     template &lt;class T&gt;
     (library fundamentals TS)
-
         void swap(optional&lt;T&gt; &amp;lhs, optional&lt;T&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Overloads the std::swap algorithm for std::experimental::optional. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

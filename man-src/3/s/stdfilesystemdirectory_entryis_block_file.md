@@ -12,7 +12,6 @@ std::filesystem::directory_entry::is_block_file - std::filesystem::directory_ent
 
 <pre><code>bool is_block_file() const;
 (since C++ 17)
-
     bool is_block_file(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object is a block device. Effectively returns std::filesystem::is_block_file(status()) or std::filesystem::is_block_file(status(ec)), respectively 
 

@@ -15,10 +15,10 @@ int
 <code>Tk_QueueWindowEvent</code>(<i>eventPtr, position</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Display <i>*display</i> (in) Display for which to control motion event collapsing.</p>
-<dd>int <i>collapse</i> (in) Indicates whether motion events should be collapsed or not.</p>
-<dd>XEvent <i>*eventPtr</i> (in) An event to add to the event queue. It is important that all unused fields of the structure be set to zero.</p>
-<dd>Tcl_QueuePosition <i>position</i> (in) Where to add the new event in the queue: <code>TCL_QUEUE_TAIL</code>, <code>TCL_QUEUE_HEAD</code>, or <code>TCL_QUEUE_MARK</code>. </p>
+<dd>Display <i>*display</i> (in) Display for which to control motion event collapsing.</dd>
+<dd>int <i>collapse</i> (in) Indicates whether motion events should be collapsed or not.</dd>
+<dd>XEvent <i>*eventPtr</i> (in) An event to add to the event queue. It is important that all unused fields of the structure be set to zero.</dd>
+<dd>Tcl_QueuePosition <i>position</i> (in) Where to add the new event in the queue: <code>TCL_QUEUE_TAIL</code>, <code>TCL_QUEUE_HEAD</code>, or <code>TCL_QUEUE_MARK</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_QueueWindowEvent</code> places a window event on Tcl&#8217;s internal event queue for eventual servicing. It creates a Tcl_Event structure, copies the event into that structure, and calls <code>Tcl_QueueEvent</code> to add the event to the queue. When the event is eventually removed from the queue it is processed just like all window events. </p>

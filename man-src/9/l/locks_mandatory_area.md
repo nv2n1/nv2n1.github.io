@@ -14,19 +14,19 @@ description: "locks_mandatory_area – Check for a conflicting lock"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>the file to check</dl>
+</dd><dd>the file to check</dd></dl>
 <p> <i>filp</i></p>
 <dl>
-<dd>how the file was opened (if it was)</dl>
+<dd>how the file was opened (if it was)</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>first byte in the file to check</dl>
+<dd>first byte in the file to check</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>lastbyte in the file to check</dl>
+<dd>lastbyte in the file to check</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd><code>F_WRLCK</code> for a write lock, else <code>F_RDLCK</code></dl>
+<dd><code>F_WRLCK</code> for a write lock, else <code>F_RDLCK</code></dd></dl>
 <h2>Description</h2>
 <p>Searches the inode&#8217;s list of locks to find any POSIX locks which conflict.</p>
 <h2>Copyright</h2>

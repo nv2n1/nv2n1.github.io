@@ -25,12 +25,12 @@ description: "pmdapdns – PowerDNS performance metrics domain agent (PMDA)"
 <p> <code>pmdapdns</code> is launched by <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and should never be executed directly. The Install and Remove scripts notify <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt>$PCP_PMDAS_DIR/pdns/Install</p>
-<dd> installation script for the <code>pmdapdns</code> agent</p>
-<dt>$PCP_PMDAS_DIR/pdns/Remove</p>
-<dd> undo installation script for the <code>pmdapdns</code> agent</p>
-<dt>$PCP_LOG_DIR/pmcd/pdns.log</p>
-<dd> default log file for error messages from <code>pmdapdns</code></dl>
+<dt>$PCP_PMDAS_DIR/pdns/Install</dt>
+<dd> installation script for the <code>pmdapdns</code> agent</dd>
+<dt>$PCP_PMDAS_DIR/pdns/Remove</dt>
+<dd> undo installation script for the <code>pmdapdns</code> agent</dd>
+<dt>$PCP_LOG_DIR/pmcd/pdns.log</dt>
+<dd> default log file for error messages from <code>pmdapdns</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1), <i>pdns_control</i>(8), and <i><a href="/docs/linux/man/1-rec_control/">rec_control</a></i>(1). </p>
 <h2>Index</h2>

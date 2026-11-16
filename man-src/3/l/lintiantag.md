@@ -16,10 +16,10 @@ description: "Lintian::Tag — Common facilities for Lintian tags found and to b
 <p>Common facilities for Lintian tags found and to be issued</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>arguments =item info =item name =item override =item processable</p>
+<dt>arguments =item info =item name =item override =item processable</dt>
 <dd>
-<dt>hint</p>
-<dd>Calculate the string representation commonly referred to as &#8216;hint&#8217;.</dl>
+</dd><dt>hint</dt>
+<dd>Calculate the string representation commonly referred to as &#8216;hint&#8217;.</dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

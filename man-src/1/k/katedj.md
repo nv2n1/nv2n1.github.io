@@ -21,10 +21,10 @@ description: "KateDJ – edits and remixes Kate streams in Ogg"
 <p> The embedded editor can test a modified stream, so it more convenient for quick modifications, while your editor of choice may be more powerful for complex modification. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Show command line help.</p>
-<dt><code>-V</code></p>
-<dd>Show version information. </p>
+<dt><code>-h</code></dt>
+<dd>Show command line help.</dd>
+<dt><code>-V</code></dt>
+<dd>Show version information. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-katedec/">katedec</a></code>(1), <code><a href="/docs/linux/man/1-kateenc/">kateenc</a></code>(1), <code><a href="/docs/linux/man/1-katalyzer/">katalyzer</a></code>(1)</p>

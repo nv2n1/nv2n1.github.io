@@ -53,7 +53,7 @@ The Color Selector widget
 <h2>sliderTogLabel</h2>The string appearing for the label of the color slider toggle 
 
 <h2>Convenience Routine</h2><h2>
-<dt></h2></dl><h2>XmCreateColorSelector - Widget creation convenience routine</h2><pre><dd>Widget XmCreateColorSelector( 
+<dt></h2></dt></dl><h2>XmCreateColorSelector - Widget creation convenience routine</h2><pre><dd>Widget XmCreateColorSelector( 
  Widget parent, /* Widget id of parent for ColorSelector */
  String name, /* Name of the created widget */
  ArgList args, /* argument list */
@@ -105,3 +105,4 @@ The Color Selector widget
  
 
 <h2>Copyright</h2>Copyright (c) 1992 by Integrated Computer Solutions, Inc.
+</dd>

@@ -18,12 +18,12 @@ description: "crond – daemon to execute scheduled commands"
 <p> When using the modtime option, <i>Cron</i> checks its crontables&#8217; modtimes every minute to check for any changes and reloads the crontables which have changed. There is no need to restart <i>Cron</i> after some of the crontables were modified. The modtime option is also used when inotify can not be initialized. </p>
 <p> <i>Cron</i> checks these files and directories:</p>
 <dl>
-<dt><i>/etc/crontab</i></p>
-<dd>system crontab. Nowadays the file is empty by default. Originally it was usually used to run daily, weekly, monthly jobs. By default these jobs are now run through anacron which reads <i>/etc/anacrontab</i> configuration file. See <code><a href="/docs/linux/man/5-anacrontab/">anacrontab</a></code>(5) for more details.</p>
-<dt><i>/etc/cron.d/</i></p>
-<dd>directory that contains system cronjobs stored for different users.</p>
-<dt><i>/var/spool/cron</i></p>
-<dd>directory that contains user crontables created by the <i>crontab</i> command.</dl>
+<dt><i>/etc/crontab</i></dt>
+<dd>system crontab. Nowadays the file is empty by default. Originally it was usually used to run daily, weekly, monthly jobs. By default these jobs are now run through anacron which reads <i>/etc/anacrontab</i> configuration file. See <code><a href="/docs/linux/man/5-anacrontab/">anacrontab</a></code>(5) for more details.</dd>
+<dt><i>/etc/cron.d/</i></dt>
+<dd>directory that contains system cronjobs stored for different users.</dd>
+<dt><i>/var/spool/cron</i></dt>
+<dd>directory that contains user crontables created by the <i>crontab</i> command.</dd></dl>
 <p> Note that the <code><a href="/docs/linux/man/1-crontab/">crontab</a></code>(1) command updates the modtime of the spool directory whenever it changes a crontab.</p>
 <h3>Daylight Saving Time and other time changes</h3>
 <p>Local time changes of less than three hours, such as those caused by the Daylight Saving Time changes, are handled in a special way. This only applies to jobs that run at a specific time and jobs that run with a granularity greater than one hour. Jobs that run more frequently are scheduled normally. </p>
@@ -34,24 +34,24 @@ description: "crond – daemon to execute scheduled commands"
 <p><i>Cron</i> supports access control with PAM if the system has PAM installed. For more information, see <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8). A PAM configuration file for <i>crond</i> is installed in <i>/etc/pam.d/crond</i>. The daemon loads the PAM environment from the pam_env module. This can be overridden by defining specific settings in the appropriate crontab file.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Prints a help message and exits.</p>
-<dt><code>-i</code></p>
-<dd>Disables inotify support.</p>
-<dt><code>-m</code></p>
-<dd>This option allows you to specify a shell command to use for sending <i>Cron</i> mail output instead of using <code>sendmail</code>(8) This command must accept a fully formatted mail message (with headers) on standard input and send it as a mail message to the recipients specified in the mail headers. Specifying the string <i>off</i> (i.e., crond -m off) will disable the sending of mail.</p>
-<dt><code>-n</code></p>
-<dd>Tells the daemon to run in the foreground. This can be useful when starting it out of init. With this option is needed to change pam setting. <i>/etc/pam.d/crond</i> must not enable <i>pam_loginuid.so</i> module.</p>
-<dt><code>-p</code></p>
-<dd>Allows <i>Cron</i> to accept any user set crontables.</p>
-<dt><code>-P</code></p>
-<dd>Don&#8217;t set PATH. PATH is instead inherited from the environment.</p>
-<dt><code>-c</code></p>
-<dd>This option enables clustering support, as described below.</p>
-<dt><code>-s</code></p>
-<dd>This option will direct <i>Cron</i> to send the job output to the system log using <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3). This is useful if your system does not have <code>sendmail</code>(8), installed or if mail is disabled.</p>
-<dt><code>-x</code></p>
-<dd>This option allows you to set debug flags.</dl>
+<dt><code>-h</code></dt>
+<dd>Prints a help message and exits.</dd>
+<dt><code>-i</code></dt>
+<dd>Disables inotify support.</dd>
+<dt><code>-m</code></dt>
+<dd>This option allows you to specify a shell command to use for sending <i>Cron</i> mail output instead of using <code>sendmail</code>(8) This command must accept a fully formatted mail message (with headers) on standard input and send it as a mail message to the recipients specified in the mail headers. Specifying the string <i>off</i> (i.e., crond -m off) will disable the sending of mail.</dd>
+<dt><code>-n</code></dt>
+<dd>Tells the daemon to run in the foreground. This can be useful when starting it out of init. With this option is needed to change pam setting. <i>/etc/pam.d/crond</i> must not enable <i>pam_loginuid.so</i> module.</dd>
+<dt><code>-p</code></dt>
+<dd>Allows <i>Cron</i> to accept any user set crontables.</dd>
+<dt><code>-P</code></dt>
+<dd>Don&#8217;t set PATH. PATH is instead inherited from the environment.</dd>
+<dt><code>-c</code></dt>
+<dd>This option enables clustering support, as described below.</dd>
+<dt><code>-s</code></dt>
+<dd>This option will direct <i>Cron</i> to send the job output to the system log using <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3). This is useful if your system does not have <code>sendmail</code>(8), installed or if mail is disabled.</dd>
+<dt><code>-x</code></dt>
+<dd>This option allows you to set debug flags.</dd></dl>
 <h2>Signals</h2>
 <p>When the <i>SIGHUP</i> is received, the <i>Cron</i> daemon will close and reopen its log file. This proves to be useful in scripts which rotate and age log files. Naturally, this is not relevant if <i>Cron</i> was built to use <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3).</p>
 <h2>Clustering Support</h2>

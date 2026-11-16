@@ -16,10 +16,10 @@ description: "quotagrpadmins – users responsible for group disk usage"
 <h2>Example</h2>
 <p># comment</p>
 <dl>
-<dd>users: root</dl>
+<dd>users: root</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/quotagrpadmins</code></p>
-<dd>list of group administrators</dl>
+<dt><code>/etc/quotagrpadmins</code></dt>
+<dd>list of group administrators</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8). </p>

@@ -14,9 +14,9 @@ description: "rio_chk_dev_access – Validate access to the specified device."
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>Pointer to RIO device control structure</dl>
+</dd><dd>Pointer to RIO device control structure</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

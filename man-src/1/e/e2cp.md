@@ -16,24 +16,24 @@ description: "e2cp – copies files from/to an e2fs filesystem"
 <h2>OPTIONS</h2>
 <p> A single `-&#8216; (dash) can be used instead of a file name to indicate standard input/output.</p>
 <dl>
-<dt><code>-0</code></p>
-<dd> Input lines terminated by a null character.</p>
-<dt><code>-a</code></p>
-<dd> Absolute directory names &#8211; create directories instead of just copying into the destination. Only valid for copying into an ext2fs filesystem.</p>
-<dt><code>-d </code><i>dest_dir</i></p>
-<dd> Destination of files to be copied. May be in the ext2fs filesystem or the host filesystem.</p>
-<dt><code>-G </code><i>gid</i></p>
-<dd> Set the default group to gid.</p>
-<dt><code>-O </code><i>uid</i></p>
-<dd> Set the default file owner to uid.</p>
-<dt><code>-p</code></p>
-<dd> Preserve host file attributes (permissions, times, etc.) when copying files.</p>
-<dt><code>-P </code><i>mode</i></p>
-<dd> Set the file permissions (ie 755, 666).</p>
-<dt><code>-s </code><i>src_dir</i></p>
-<dd> The source of the files to be copied.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose.</dl>
+<dt><code>-0</code></dt>
+<dd> Input lines terminated by a null character.</dd>
+<dt><code>-a</code></dt>
+<dd> Absolute directory names &#8211; create directories instead of just copying into the destination. Only valid for copying into an ext2fs filesystem.</dd>
+<dt><code>-d </code><i>dest_dir</i></dt>
+<dd> Destination of files to be copied. May be in the ext2fs filesystem or the host filesystem.</dd>
+<dt><code>-G </code><i>gid</i></dt>
+<dd> Set the default group to gid.</dd>
+<dt><code>-O </code><i>uid</i></dt>
+<dd> Set the default file owner to uid.</dd>
+<dt><code>-p</code></dt>
+<dd> Preserve host file attributes (permissions, times, etc.) when copying files.</dd>
+<dt><code>-P </code><i>mode</i></dt>
+<dd> Set the file permissions (ie 755, 666).</dd>
+<dt><code>-s </code><i>src_dir</i></dt>
+<dd> The source of the files to be copied.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-e2tools/">e2tools</a></code>(7), <code><a href="/docs/linux/man/1-e2ln/">e2ln</a></code>(1), <code><a href="/docs/linux/man/1-e2ls/">e2ls</a></code>(1), <code><a href="/docs/linux/man/1-e2mkdir/">e2mkdir</a></code>(1), <code><a href="/docs/linux/man/1-e2mv/">e2mv</a></code>(1), <code><a href="/docs/linux/man/1-e2rm/">e2rm</a></code>(1), <code><a href="/docs/linux/man/1-e2tail/">e2tail</a></code>(1).</p>
 <h2>AUTHOR</h2>

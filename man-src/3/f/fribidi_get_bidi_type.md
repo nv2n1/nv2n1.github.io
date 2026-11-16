@@ -21,7 +21,7 @@ url: "/docs/linux/man/3-fribidi_get_bidi_type/"
 
 <dl>
 <dt><b>FriBidiChar ch</b>
-<dd> Input character.</dl>
+</dt><dd> Input character.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

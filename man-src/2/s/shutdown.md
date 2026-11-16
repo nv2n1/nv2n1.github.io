@@ -18,14 +18,14 @@ description: "shutdown – shut down part of a full-duplex connection"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>sockfd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> An invalid value was specified in <i>how</i> (but see BUGS).</p>
-<dt><code>ENOTCONN</code></p>
-<dd> The specified socket is not connected.</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>sockfd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid value was specified in <i>how</i> (but see BUGS).</dd>
+<dt><code>ENOTCONN</code></dt>
+<dd> The specified socket is not connected.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.4BSD (<code>shutdown</code>() first appeared in 4.2BSD).</p>
 <h2>NOTES</h2>

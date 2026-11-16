@@ -16,9 +16,9 @@ description: "forward – email forwarding information file"
 <h2>Files</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>~/.forward</code></p>
-<dd>Email forwarding information.</dl>
+</dd><dl>
+<dt><code>~/.forward</code></dt>
+<dd>Email forwarding information.</dd></dl>
 </dl>
 <h2>Examples</h2>
 <p>The following file forwards mail to &#8220;user [at] example.com&#8221;, and pipes the same mail to &#8220;examplemda&#8221;.</p>
@@ -27,6 +27,6 @@ description: "forward – email forwarding information file"
 <pre># empty lines are ignored
 user [at] example.com # anything after # is ignored
 &quot;|/path/to/examplemda&quot;
-</dl></pre>
+</dd></dl></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) </p>

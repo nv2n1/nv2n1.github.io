@@ -11,9 +11,7 @@ description: "closelog, openlog, syslog, vsyslog – send messages to the system
 <h2>Synopsis</h2>
 <pre><code>#include &lt;syslog.h&gt;
 void openlog(const char *ident, int option, int facility);
-
 void syslog(int priority, const char *format, ...);
-
 void closelog(void);
 void vsyslog(int priority, const char *format, va_list ap);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>vsyslog</code>():<br />
@@ -37,66 +35,66 @@ void vsyslog(int priority, const char *format, va_list ap);</code></pre>
 <h3>Values for <i>option</i></h3>
 <p>The <i>option</i> argument to <code>openlog</code>() is a bit mask constructed by ORing together any of the following values:</p>
 <dl>
-<dt><code>LOG_CONS</code></p>
-<dd>Write directly to the system console if there is an error while sending to the system logger.</p>
-<dt><code>LOG_NDELAY</code></p>
-<dd>Open the connection immediately (normally, the connection is opened when the first message is logged). This may be useful, for example, if a subsequent <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) would make the pathname used internally by the logging facility unreachable.</p>
-<dt><code>LOG_NOWAIT</code></p>
-<dd>Don&#8217;t wait for child processes that may have been created while logging the message. (The GNU C library does not create a child process, so this option has no effect on Linux.)</p>
-<dt><code>LOG_ODELAY</code></p>
-<dd>The converse of <code>LOG_NDELAY</code>; opening of the connection is delayed until <code>syslog</code>() is called. (This is the default, and need not be specified.)</p>
-<dt><code>LOG_PERROR</code></p>
-<dd>(Not in POSIX.1-2001 or POSIX.1-2008.) Also log the message to <i>stderr</i>.</p>
-<dt><code>LOG_PID</code></p>
-<dd>Include the caller&#8217;s PID with each message.</dl>
+<dt><code>LOG_CONS</code></dt>
+<dd>Write directly to the system console if there is an error while sending to the system logger.</dd>
+<dt><code>LOG_NDELAY</code></dt>
+<dd>Open the connection immediately (normally, the connection is opened when the first message is logged). This may be useful, for example, if a subsequent <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) would make the pathname used internally by the logging facility unreachable.</dd>
+<dt><code>LOG_NOWAIT</code></dt>
+<dd>Don&#8217;t wait for child processes that may have been created while logging the message. (The GNU C library does not create a child process, so this option has no effect on Linux.)</dd>
+<dt><code>LOG_ODELAY</code></dt>
+<dd>The converse of <code>LOG_NDELAY</code>; opening of the connection is delayed until <code>syslog</code>() is called. (This is the default, and need not be specified.)</dd>
+<dt><code>LOG_PERROR</code></dt>
+<dd>(Not in POSIX.1-2001 or POSIX.1-2008.) Also log the message to <i>stderr</i>.</dd>
+<dt><code>LOG_PID</code></dt>
+<dd>Include the caller&#8217;s PID with each message.</dd></dl>
 <h3>Values for <i>facility</i></h3>
 <p>The <i>facility</i> argument is used to specify what type of program is logging the message. This lets the configuration file specify that messages from different facilities will be handled differently.</p>
 <dl>
-<dt><code>LOG_AUTH</code></p>
-<dd>security/authorization messages</p>
-<dt><code>LOG_AUTHPRIV</code></p>
-<dd>security/authorization messages (private)</p>
-<dt><code>LOG_CRON</code></p>
-<dd>clock daemon (<code>cron</code> and <code>at</code>)</p>
-<dt><code>LOG_DAEMON</code></p>
-<dd>system daemons without separate facility value</p>
-<dt><code>LOG_FTP</code></p>
-<dd>ftp daemon</p>
-<dt><code>LOG_KERN</code></p>
-<dd>kernel messages (these can&#8217;t be generated from user processes)</p>
-<dt><code>LOG_LOCAL0</code> through <code>LOG_LOCAL7</code></p>
-<dd>reserved for local use</p>
-<dt><code>LOG_LPR</code></p>
-<dd>line printer subsystem</p>
-<dt><code>LOG_MAIL</code></p>
-<dd>mail subsystem</p>
-<dt><code>LOG_NEWS</code></p>
-<dd>USENET news subsystem</p>
-<dt><code>LOG_SYSLOG</code></p>
-<dd>messages generated internally by <code>syslogd</code>(8)</p>
-<dt><code>LOG_USER</code> (default)</p>
-<dd>generic user-level messages</p>
-<dt><code>LOG_UUCP</code></p>
-<dd>UUCP subsystem</dl>
+<dt><code>LOG_AUTH</code></dt>
+<dd>security/authorization messages</dd>
+<dt><code>LOG_AUTHPRIV</code></dt>
+<dd>security/authorization messages (private)</dd>
+<dt><code>LOG_CRON</code></dt>
+<dd>clock daemon (<code>cron</code> and <code>at</code>)</dd>
+<dt><code>LOG_DAEMON</code></dt>
+<dd>system daemons without separate facility value</dd>
+<dt><code>LOG_FTP</code></dt>
+<dd>ftp daemon</dd>
+<dt><code>LOG_KERN</code></dt>
+<dd>kernel messages (these can&#8217;t be generated from user processes)</dd>
+<dt><code>LOG_LOCAL0</code> through <code>LOG_LOCAL7</code></dt>
+<dd>reserved for local use</dd>
+<dt><code>LOG_LPR</code></dt>
+<dd>line printer subsystem</dd>
+<dt><code>LOG_MAIL</code></dt>
+<dd>mail subsystem</dd>
+<dt><code>LOG_NEWS</code></dt>
+<dd>USENET news subsystem</dd>
+<dt><code>LOG_SYSLOG</code></dt>
+<dd>messages generated internally by <code>syslogd</code>(8)</dd>
+<dt><code>LOG_USER</code> (default)</dt>
+<dd>generic user-level messages</dd>
+<dt><code>LOG_UUCP</code></dt>
+<dd>UUCP subsystem</dd></dl>
 <h3>Values for <i>level</i></h3>
 <p>This determines the importance of the message. The levels are, in order of decreasing importance:</p>
 <dl>
-<dt><code>LOG_EMERG</code></p>
-<dd>system is unusable</p>
-<dt><code>LOG_ALERT</code></p>
-<dd>action must be taken immediately</p>
-<dt><code>LOG_CRIT</code></p>
-<dd>critical conditions</p>
-<dt><code>LOG_ERR</code></p>
-<dd>error conditions</p>
-<dt><code>LOG_WARNING</code></p>
-<dd>warning conditions</p>
-<dt><code>LOG_NOTICE</code></p>
-<dd>normal, but significant, condition</p>
-<dt><code>LOG_INFO</code></p>
-<dd>informational message</p>
-<dt><code>LOG_DEBUG</code></p>
-<dd>debug-level message</dl>
+<dt><code>LOG_EMERG</code></dt>
+<dd>system is unusable</dd>
+<dt><code>LOG_ALERT</code></dt>
+<dd>action must be taken immediately</dd>
+<dt><code>LOG_CRIT</code></dt>
+<dd>critical conditions</dd>
+<dt><code>LOG_ERR</code></dt>
+<dd>error conditions</dd>
+<dt><code>LOG_WARNING</code></dt>
+<dd>warning conditions</dd>
+<dt><code>LOG_NOTICE</code></dt>
+<dd>normal, but significant, condition</dd>
+<dt><code>LOG_INFO</code></dt>
+<dd>informational message</dd>
+<dt><code>LOG_DEBUG</code></dt>
+<dd>debug-level message</dd></dl>
 <p> The function <code><a href="/docs/linux/man/3-setlogmask/">setlogmask</a></code>(3) can be used to restrict logging to specified levels only.</p>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

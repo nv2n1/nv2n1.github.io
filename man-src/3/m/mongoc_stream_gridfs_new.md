@@ -13,8 +13,8 @@ description: "mongoc_stream_gridfs_new() – This function shall create a new mo
 mongoc_stream_gridfs_new (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <p> This function shall create a new <code>mongoc_gridfs_file_t</code> \&amp;. This function does not transfer ownership of <code>file</code> \&amp;. Therefore, <code>file</code> must remain valid for the lifetime of this stream. </p>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_stream_gridfs_t</code> if successful, otherwise <code>NULL</code> \&amp;. </p>

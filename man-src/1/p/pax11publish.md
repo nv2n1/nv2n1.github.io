@@ -22,26 +22,26 @@ description: "pax11publish – PulseAudio X11 Credential Utility"
 <p> xprop -root | grep ^PULSE_</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show help.</p>
-<dt><code>-d</code></p>
-<dd> Read the PulseAudio server credentials currently set on the X11 root window and dump them in a human readable form. This reads the PULSE_SERVER, PULSE_SINK, PULSE_SOURCE and PULSE_COOKIE properties.</p>
-<dt><code>-i</code></p>
-<dd> Similar to <code>-d</code>, however dumps them in a Bourne shell compatible format so they may be used together with the <i>eval</i> shell command to set the $PULSE_SERVER, $PULSE_SINK, $PULSE_SOURCE environment variables. Also reads the authentication cookie from the root window and stores it in <i>~/.config/pulse/cookie</i>.</p>
-<dt><code>-e</code></p>
-<dd> Export the currently locally used sound server, sink, source configuration to the X11 root window. This takes the data from the $PULSE_SERVER, $PULSE_SINK, $PULSE_SOURCE environment variables and combines them with the data from <i>~/.config/pulse/client.conf</i> (or <i>/etc/pulse/client.conf</i> if that file does not exist). If specific options are passed on the command line (<code>-S</code>, <code>-O</code>, <code>-I</code>, <code>-c</code>, see below), they take precedence. Also uploads the local authentication cookie <i>~/.config/pulse/cookie</i> to the X11 server.</p>
-<dt><code>-r</code></p>
-<dd> Removes the configured PulseAudio configuration from the X11 root window.</p>
-<dt><code>-D</code> <i>DISPLAY</i></p>
-<dd> Connect to the specified X11 display, instead of the default one configured in $DISPLAY.</p>
-<dt><code>-S</code> <i>SERVER</i></p>
-<dd> Only valid for <code>-e</code>: export the specified PulseAudio server as default to the X11 display instead of the one configured via local configuration.</p>
-<dt><code>-O</code> <i>SINK</i></p>
-<dd> Only valid for <code>-e</code>: export the specified sink as default sink to the X11 display instead of the one configured via local configuration.</p>
-<dt><code>-I</code> <i>SOURCE</i></p>
-<dd> Only valid for <code>-e</code>: export the specified source as default to the X11 display instead of the one configured via local configuration.</p>
-<dt><code>-c</code> <i>FILE</i></p>
-<dd> Only valid for <code>-e</code>: export the PulseAudio authentication cookie stored in the specified file to the X11 display instead of the one stored in <i>~/.config/pulse/cookie</i>.</dl>
+<dt><code>-h</code></dt>
+<dd> Show help.</dd>
+<dt><code>-d</code></dt>
+<dd> Read the PulseAudio server credentials currently set on the X11 root window and dump them in a human readable form. This reads the PULSE_SERVER, PULSE_SINK, PULSE_SOURCE and PULSE_COOKIE properties.</dd>
+<dt><code>-i</code></dt>
+<dd> Similar to <code>-d</code>, however dumps them in a Bourne shell compatible format so they may be used together with the <i>eval</i> shell command to set the $PULSE_SERVER, $PULSE_SINK, $PULSE_SOURCE environment variables. Also reads the authentication cookie from the root window and stores it in <i>~/.config/pulse/cookie</i>.</dd>
+<dt><code>-e</code></dt>
+<dd> Export the currently locally used sound server, sink, source configuration to the X11 root window. This takes the data from the $PULSE_SERVER, $PULSE_SINK, $PULSE_SOURCE environment variables and combines them with the data from <i>~/.config/pulse/client.conf</i> (or <i>/etc/pulse/client.conf</i> if that file does not exist). If specific options are passed on the command line (<code>-S</code>, <code>-O</code>, <code>-I</code>, <code>-c</code>, see below), they take precedence. Also uploads the local authentication cookie <i>~/.config/pulse/cookie</i> to the X11 server.</dd>
+<dt><code>-r</code></dt>
+<dd> Removes the configured PulseAudio configuration from the X11 root window.</dd>
+<dt><code>-D</code> <i>DISPLAY</i></dt>
+<dd> Connect to the specified X11 display, instead of the default one configured in $DISPLAY.</dd>
+<dt><code>-S</code> <i>SERVER</i></dt>
+<dd> Only valid for <code>-e</code>: export the specified PulseAudio server as default to the X11 display instead of the one configured via local configuration.</dd>
+<dt><code>-O</code> <i>SINK</i></dt>
+<dd> Only valid for <code>-e</code>: export the specified sink as default sink to the X11 display instead of the one configured via local configuration.</dd>
+<dt><code>-I</code> <i>SOURCE</i></dt>
+<dd> Only valid for <code>-e</code>: export the specified source as default to the X11 display instead of the one configured via local configuration.</dd>
+<dt><code>-c</code> <i>FILE</i></dt>
+<dd> Only valid for <code>-e</code>: export the PulseAudio authentication cookie stored in the specified file to the X11 display instead of the one stored in <i>~/.config/pulse/cookie</i>.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The PulseAudio Developers &lt;pulseaudio-discuss (at) lists (dot) freedesktop (dot) org&gt;; PulseAudio is available from <code><a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></code></p>
 <h2>SEE ALSO</h2>

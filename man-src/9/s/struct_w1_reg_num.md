@@ -25,24 +25,24 @@ description: "struct_w1_reg_num – broken out slave device id"
 <h2>Members</h2>
 <p>family</p>
 <dl>
-<dd>identifies the type of device</dl>
+<dd>identifies the type of device</dd></dl>
 <p> id</p>
 <dl>
-<dd>along with family is the unique device id</dl>
+<dd>along with family is the unique device id</dd></dl>
 <p> crc</p>
 <dl>
-<dd>checksum of the other bytes</dl>
+<dd>checksum of the other bytes</dd></dl>
 <p> crc</p>
 <dl>
-<dd>checksum of the other bytes</dl>
+<dd>checksum of the other bytes</dd></dl>
 <p> id</p>
 <dl>
-<dd>along with family is the unique device id</dl>
+<dd>along with family is the unique device id</dd></dl>
 <p> family</p>
 <dl>
-<dd>identifies the type of device</dl>
+<dd>identifies the type of device</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

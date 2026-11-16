@@ -11,7 +11,6 @@ description: "strfry – randomize a string"
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;string.h&gt;
-
 char *strfry(char *string);</code></pre>
 <h2>Description</h2>
 <p>The <code>strfry</code>() function randomizes the contents of <i>string</i> by randomly swapping characters in the string. The result is an anagram of <i>string</i>.</p>

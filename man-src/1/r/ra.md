@@ -15,36 +15,36 @@ description: "ra – read argus(8) data."
 <p> <code>Ra</code> reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from either <i>stdin</i>, an <i>argus-file</i>, or from a remote data source, which can either be an <i>argus-server</i>, or a netflow data server, filters the records it encounters based on an optional <i>filter-expression</i> and either prints the contents of the <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records that it encounters to <code>stdout</code> or appends them into an <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> datafile. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code></p>
-<dd> Print aggregate statistics for the input stream on termination.</p>
-<dt><code>-b</code></p>
-<dd> Dump the compiled transaction-matching code to standard output and stop. This is useful for debugging filter expressions.</p>
-<dt><code>-c &lt;char&gt;</code></p>
-<dd> Specify a delimiter character for output columns (default is &#8216; &#8216;).</p>
-<dt><code>-C &lt;[host]:portnum&gt; (deprecated)</code></p>
-<dd> Specify a source of Netflow data. The optional host is the local interface address where Netflow Cisco records are going to be read. If absent, then it is implied that the interface address is AF_ANY. This option is deprecated and the &#8216;-S <a href="cisco://address:port'">cisco://address:port&#8217;</a> is now the recommended option.</p>
-<dt><code>-D &lt;level&gt;</code></p>
-<dd> Print debug information corresponding to <code>&lt;level&gt;</code> to stderr, if program compiled to support debug printing. As the level increases, so does the amount of debug information <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> will print. Values range from 1-8.</p>
-<dt><code>-d</code></p>
-<dd> Toggle whether to run this program as a daemon.</p>
-<dt><code>-e &lt;regex&gt;</code></p>
-<dd> Match regular expression in flow user data fields. Prepend the regex with either &quot;s:&quot; or &quot;d:&quot; to limit the match to either the source or destination user data fields. At this time null bytes in the user data buffer terminate search. Examples include: </p>
+<dt><code>-A</code></dt>
+<dd> Print aggregate statistics for the input stream on termination.</dd>
+<dt><code>-b</code></dt>
+<dd> Dump the compiled transaction-matching code to standard output and stop. This is useful for debugging filter expressions.</dd>
+<dt><code>-c &lt;char&gt;</code></dt>
+<dd> Specify a delimiter character for output columns (default is &#8216; &#8216;).</dd>
+<dt><code>-C &lt;[host]:portnum&gt; (deprecated)</code></dt>
+<dd> Specify a source of Netflow data. The optional host is the local interface address where Netflow Cisco records are going to be read. If absent, then it is implied that the interface address is AF_ANY. This option is deprecated and the &#8216;-S <a href="cisco://address:port'">cisco://address:port&#8217;</a> is now the recommended option.</dd>
+<dt><code>-D &lt;level&gt;</code></dt>
+<dd> Print debug information corresponding to <code>&lt;level&gt;</code> to stderr, if program compiled to support debug printing. As the level increases, so does the amount of debug information <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> will print. Values range from 1-8.</dd>
+<dt><code>-d</code></dt>
+<dd> Toggle whether to run this program as a daemon.</dd>
+<dt><code>-e &lt;regex&gt;</code></dt>
+<dd> Match regular expression in flow user data fields. Prepend the regex with either &quot;s:&quot; or &quot;d:&quot; to limit the match to either the source or destination user data fields. At this time null bytes in the user data buffer terminate search. Examples include: </dd>
 <pre>
    &quot;^SSH-&quot;           - Look for ssh connections on any port.
    &quot;s:^GET&quot;          - Look for HTTP GET requests in the source buffer.
    &quot;d:^HTTP.*Unauth&quot; - Find unauthorized http response.
 </pre>
 <p> Depending on the regular expression library that the system supports, you will be able to match many types of binary, octal and hex expressions. See regex.3, pcre.3 and the web for examples. </p>
-<dt><code>-E &lt;file&gt;</code></p>
-<dd> When using a filter expression at the end of the command, this option will cause <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> to append the records that are rejected by the filter into <code>&lt;file&gt;</code></p>
-<dt><code>-F &lt;conffile&gt;</code></p>
-<dd> Use <code>&lt;conffile&gt;</code> as a source of configuration information. The format of this file is identical to <code><a href="/docs/linux/man/5-rarc/">rarc</a>(5)</code>. The data read from <code>&lt;conffile&gt;</code> overrides any prior configuration information.</p>
-<dt><code>-h</code></p>
-<dd> Print an explanation of all the arguments.</p>
-<dt><code>-H</code></p>
-<dd> Abbreviate numeric metrics, to make reading large values easier. Use the <code>-p &lt;num&gt;</code> option to specify the precision right of the decimal. </p>
-<dt><code>-L &lt;n&gt;</code></p>
-<dd> Specify how <code>ra</code> will print header labels for the output. </p>
+<dt><code>-E &lt;file&gt;</code></dt>
+<dd> When using a filter expression at the end of the command, this option will cause <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> to append the records that are rejected by the filter into <code>&lt;file&gt;</code></dd>
+<dt><code>-F &lt;conffile&gt;</code></dt>
+<dd> Use <code>&lt;conffile&gt;</code> as a source of configuration information. The format of this file is identical to <code><a href="/docs/linux/man/5-rarc/">rarc</a>(5)</code>. The data read from <code>&lt;conffile&gt;</code> overrides any prior configuration information.</dd>
+<dt><code>-h</code></dt>
+<dd> Print an explanation of all the arguments.</dd>
+<dt><code>-H</code></dt>
+<dd> Abbreviate numeric metrics, to make reading large values easier. Use the <code>-p &lt;num&gt;</code> option to specify the precision right of the decimal. </dd>
+<dt><code>-L &lt;n&gt;</code></dt>
+<dd> Specify how <code>ra</code> will print header labels for the output. </dd>
 <pre><code>
    Supported values are:
       -1  Don't print header labels.
@@ -58,7 +58,6 @@ are:
    dsrs=dsrlist     - process these dsrs
       Where a dsrlist has the format:
          [+/-]dsr[,[+/-]dsr]
- 
          Supported dsrs are:
            trans    transport information, such as source id and seq number.
            flow     flow key data (proto, saddr, sport, dir, daddr, dport)
@@ -74,7 +73,6 @@ are:
                    suser src user captured data
                    bytes(suser)
    duser dst captured user data bytes(duser)
-
       Examples are:
          -M dsrs=time,flow,metric
          -M dsrs=-suser,-duser
@@ -104,16 +102,16 @@ are:
    xml              - print output in xml format.
 </code></pre>
 <p> Illegal modes are not detectable by the standard library, and so unexpected results in command line parsing may occur if care is not taken with use of this option.</p>
-<dt><code>-n</code></p>
-<dd> Modify number to name converstion. This flag supports 4 states, specified by the modulus of the number of -n flags set. By default ra* programs do not provide hostname lookups, but they do lookup port and protocol names. The first <code>-n</code> will suppress port number to service conversion, <code>-nn</code> will suppress translation of protocol numbers to names (no lookups). <code>-nnn</code> will return you to full conversion, translating hostnames, port and protocol names, and <code>-nnnn</code> will return you to the default behavior. Because this indicator can be set in the .rarc file, multiple <code>-n</code> flags progress through the cycle.</p>
-<dt><code>-N [io]&lt;num&gt;, [io]&lt;start-end&gt;, [io]&lt;start+num&gt;</code></p>
-<dd> Process the first <code>&lt;num&gt;</code> records, the inclusive range <code>&lt;start &#8211; end&gt;</code>, or process &lt;num + 1&gt; records starting at index number <code>&lt;start&gt;</code>. The optional 1st character indicates whether the specification is applied to the input or the output stream of records, the default is input. If applied to the input, these are the range of records that match the input filter.</p>
-<dt><code>-p &lt;digits&gt;</code></p>
-<dd> Print <code>&lt;digits&gt;</code> number of units of precision for floating point values.</p>
-<dt><code>-q</code></p>
-<dd> Run in quiet mode. Configure Ra to not print out the contents of records. This can be used for a number of maintenance tasks, where you would be interested in the outcome of a program, or its progress, say with the -D option, without printing each input record.</p>
-<dt><code>-r [- | &lt;[type:]file[::soffset[:eoffset]] &#8230;&gt;]</code></p>
-<dd> Read <code>&lt;type&gt;</code> data from <code>&lt;files&gt;</code> in the order presented on the commandline. &#8216;<code>&#8211;</code>&#8216; denotes stdin. Ra supports reading <code>argus</code> type data (default), <code>cisco</code> and <code>ft</code>, flow-tools type data. If you want to read a set of files and then, when done, read stdin, use multiple occurences of the <i>-r</i> option. Ra can read <code><a href="/docs/linux/man/1-gzip/">gzip</a>(1)</code>, <code><a href="/docs/linux/man/1-bzip2/">bzip2</a>(1)</code>, <code><a href="/docs/linux/man/1-xz/">xz</a>(1)</code> and <code><a href="/docs/linux/man/1-compress/">compress</a>(1)</code> compressed data files. Byte offset values allow the specification of a range of records within an uncompressed file. Byte offsets must be aligned to record boundaries. Valid record offsets can be obtained using +offset as an output field even from compressed files. </p>
+<dt><code>-n</code></dt>
+<dd> Modify number to name converstion. This flag supports 4 states, specified by the modulus of the number of -n flags set. By default ra* programs do not provide hostname lookups, but they do lookup port and protocol names. The first <code>-n</code> will suppress port number to service conversion, <code>-nn</code> will suppress translation of protocol numbers to names (no lookups). <code>-nnn</code> will return you to full conversion, translating hostnames, port and protocol names, and <code>-nnnn</code> will return you to the default behavior. Because this indicator can be set in the .rarc file, multiple <code>-n</code> flags progress through the cycle.</dd>
+<dt><code>-N [io]&lt;num&gt;, [io]&lt;start-end&gt;, [io]&lt;start+num&gt;</code></dt>
+<dd> Process the first <code>&lt;num&gt;</code> records, the inclusive range <code>&lt;start &#8211; end&gt;</code>, or process &lt;num + 1&gt; records starting at index number <code>&lt;start&gt;</code>. The optional 1st character indicates whether the specification is applied to the input or the output stream of records, the default is input. If applied to the input, these are the range of records that match the input filter.</dd>
+<dt><code>-p &lt;digits&gt;</code></dt>
+<dd> Print <code>&lt;digits&gt;</code> number of units of precision for floating point values.</dd>
+<dt><code>-q</code></dt>
+<dd> Run in quiet mode. Configure Ra to not print out the contents of records. This can be used for a number of maintenance tasks, where you would be interested in the outcome of a program, or its progress, say with the -D option, without printing each input record.</dd>
+<dt><code>-r [- | &lt;[type:]file[::soffset[:eoffset]] &#8230;&gt;]</code></dt>
+<dd> Read <code>&lt;type&gt;</code> data from <code>&lt;files&gt;</code> in the order presented on the commandline. &#8216;<code>&#8211;</code>&#8216; denotes stdin. Ra supports reading <code>argus</code> type data (default), <code>cisco</code> and <code>ft</code>, flow-tools type data. If you want to read a set of files and then, when done, read stdin, use multiple occurences of the <i>-r</i> option. Ra can read <code><a href="/docs/linux/man/1-gzip/">gzip</a>(1)</code>, <code><a href="/docs/linux/man/1-bzip2/">bzip2</a>(1)</code>, <code><a href="/docs/linux/man/1-xz/">xz</a>(1)</code> and <code><a href="/docs/linux/man/1-compress/">compress</a>(1)</code> compressed data files. Byte offset values allow the specification of a range of records within an uncompressed file. Byte offsets must be aligned to record boundaries. Valid record offsets can be obtained using +offset as an output field even from compressed files. </dd>
 <p> Examples are: </p>
 <pre>
    -r file1 file2              read argus records from file1, then file2.
@@ -122,243 +120,241 @@ are:
    -r cisco:file               read cisco netflow records from file
    -r ft:file                  read flow-tools based records
 </pre>
-<dt><code>-R &lt;dir dir &#8230;&gt;</code></p>
-<dd> Recursively decend the directory and process all the regular files that are encountered. The function does not decend to links, or directories that begin with &#8216;.&#8217;. The feature, like the -r command, does not do any file type checking.</p>
-<dt><code>-s &lt;[-][[+[#]]field[:len[:format]] &#8230;&gt;</code></p>
-<dd> Specify the <code>fields</code> to print. <code>ra.1</code> gets the field print list either from its rarc configuration files or from the command-line. In the case where there is no configuration given <code>ra.1</code> uses a default printing field list, with default field lengths. By specifying a space separated list of fields, this option provides a means to completely redefine the list from the command line. Using the optional &#8216;-&#8216; and &#8216;+[#]&#8217; prepended to the field list, you can add or subtract fields from the configured list. Field lengths are hard constraints, and field output that exceeds the field length will be truncated, and a &#8216;*&#8217; will be inserted as the last character. When you see this, add more to the length specification for that specific field. Field lengths (len) less than 1, are not permitted and will generate an error. The optional &#8216;format&#8217; specification, uses <code>sprintf.1</code> syntax to format the value. The available fields to print are: </p>
+<dt><code>-R &lt;dir dir &#8230;&gt;</code></dt>
+<dd> Recursively decend the directory and process all the regular files that are encountered. The function does not decend to links, or directories that begin with &#8216;.&#8217;. The feature, like the -r command, does not do any file type checking.</dd>
+<dt><code>-s &lt;[-][[+[#]]field[:len[:format]] &#8230;&gt;</code></dt>
+<dd> Specify the <code>fields</code> to print. <code>ra.1</code> gets the field print list either from its rarc configuration files or from the command-line. In the case where there is no configuration given <code>ra.1</code> uses a default printing field list, with default field lengths. By specifying a space separated list of fields, this option provides a means to completely redefine the list from the command line. Using the optional &#8216;-&#8216; and &#8216;+[#]&#8217; prepended to the field list, you can add or subtract fields from the configured list. Field lengths are hard constraints, and field output that exceeds the field length will be truncated, and a &#8216;*&#8217; will be inserted as the last character. When you see this, add more to the length specification for that specific field. Field lengths (len) less than 1, are not permitted and will generate an error. The optional &#8216;format&#8217; specification, uses <code>sprintf.1</code> syntax to format the value. The available fields to print are: </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>srcid</code></p>
-<dd> argus source identifier.</p>
-<dt><code>rank</code></p>
-<dd> Ordinal value of this output flow record i.e. sequence number.</p>
-<dt><code>stime</code></p>
-<dd> record start time</p>
-<dt><code>ltime</code></p>
-<dd> record last time.</p>
-<dt><code>trans</code></p>
-<dd> aggregation record count.</p>
-<dt><code>flgs</code></p>
-<dd> flow state flags seen in transaction.</p>
-<dt><code>seq</code></p>
-<dd> argus sequence number.</p>
-<dt><code>dur</code></p>
-<dd> record total duration.</p>
-<dt><code>runtime</code></p>
-<dd> total active flow run time. This value is generated through aggregation, and is the sum of the records duration.</p>
-<dt><code>idle</code></p>
-<dd> time since the last packet activity. This value is useful in real-time processing, and is the current time &#8211; last time.</p>
-<dt><code>mean</code></p>
-<dd> average duration of aggregated records.</p>
-<dt><code>stddev</code></p>
-<dd> standard deviation of aggregated duration times.</p>
-<dt><code>sum</code></p>
-<dd> total accumulated durations of aggregated records.</p>
-<dt><code>min</code></p>
-<dd> minimum duration of aggregated records.</p>
-<dt><code>max</code></p>
-<dd> maximum duration of aggregated records.</p>
-<dt><code>smac</code></p>
-<dd> source MAC addr.</p>
-<dt><code>dmac</code></p>
-<dd> destination MAC addr.</p>
-<dt><code>soui</code></p>
-<dd> oui portion of the source MAC addr.</p>
-<dt><code>doui</code></p>
-<dd> oui portion of the destination MAC addr.</p>
-<dt><code>saddr</code></p>
-<dd> source IP addr.</p>
-<dt><code>daddr</code></p>
-<dd> destination IP addr.</p>
-<dt><code>proto</code></p>
-<dd> transaction protocol.</p>
-<dt><code>sport</code></p>
-<dd> source port number.</p>
-<dt><code>dport</code></p>
-<dd> destination port number.</p>
-<dt><code>stos</code></p>
-<dd> source TOS byte value.</p>
-<dt><code>dtos</code></p>
-<dd> destination TOS byte value.</p>
-<dt><code>sdsb</code></p>
-<dd> source diff serve byte value.</p>
-<dt><code>ddsb</code></p>
-<dd> destination diff serve byte value.</p>
-<dt><code>sco</code></p>
-<dd> source IP address country code.</p>
-<dt><code>dco</code></p>
-<dd> destination IP address country code.</p>
-<dt><code>sttl</code></p>
-<dd> src -&gt; dst TTL value.</p>
-<dt><code>dttl</code></p>
-<dd> dst -&gt; src TTL value.</p>
-<dt><code>shops</code></p>
-<dd> estimate of number of IP hops from src to this point.</p>
-<dt><code>dhops</code></p>
-<dd> estimate of number of IP hops from dst to this point.</p>
-<dt><code>sipid</code></p>
-<dd> source IP identifier.</p>
-<dt><code>dipid</code></p>
-<dd> destination IP identifier.</p>
-<dt><code>smpls</code></p>
-<dd> source MPLS identifier.</p>
-<dt><code>dmpls</code></p>
-<dd> destination MPLS identifier.</p>
-<dt><code>autoid</code></p>
-<dd> Auto generated identifier (mysql).</p>
-<dt><code>sas</code></p>
-<dd> Src origin AS</p>
-<dt><code>das</code></p>
-<dd> Dst origin AS</p>
-<dt><code>ias</code></p>
-<dd> Intermediate origin AS, AS of ICMP generator</p>
-<dt><code>cause</code></p>
-<dd> Argus record cause code. Valid values are Start, Status, Stop, Close, Error</p>
-<dt><code>nstroke</code></p>
-<dd> Number of observed keystrokes.</p>
-<dt><code>snstroke</code></p>
-<dd> Number of observed keystrokes from initiator (src) to target (dst).</p>
-<dt><code>dnstroke</code></p>
-<dd> Number of observed keystrokes from target (dst) to initiator (src).</p>
-<dt><code>pkts</code></p>
-<dd> total transaction packet count.</p>
-<dt><code>spkts</code></p>
-<dd> src -&gt; dst packet count.</p>
-<dt><code>dpkts</code></p>
-<dd> dst -&gt; src packet count.</p>
-<dt><code>bytes</code></p>
-<dd> total transaction bytes.</p>
-<dt><code>sbytes</code></p>
-<dd> src -&gt; dst transaction bytes.</p>
-<dt><code>dbytes</code></p>
-<dd> dst -&gt; src transaction bytes.</p>
-<dt><code>appbytes</code></p>
-<dd> total application bytes.</p>
-<dt><code>sappbytes</code></p>
-<dd> src -&gt; dst application bytes.</p>
-<dt><code>dappbytes</code></p>
-<dd> dst -&gt; src application bytes.</p>
-<dt><code>pcr</code></p>
-<dd> producer consumer ratio.</p>
-<dt><code>load</code></p>
-<dd> bits per second.</p>
-<dt><code>sload</code></p>
-<dd> source bits per second.</p>
-<dt><code>dload</code></p>
-<dd> destination bits per second.</p>
-<dt><code>loss</code></p>
-<dd> pkts retransmitted or dropped.</p>
-<dt><code>sloss</code></p>
-<dd> source pkts retransmitted or dropped.</p>
-<dt><code>dloss</code></p>
-<dd> destination pkts retransmitted or dropped.</p>
-<dt><code>ploss</code></p>
-<dd> percent pkts retransmitted or dropped.</p>
-<dt><code>psloss</code></p>
-<dd> percent source pkts retransmitted or dropped.</p>
-<dt><code>pdloss</code></p>
-<dd> percent destination pkts retransmitted or dropped.</p>
-<dt><code>retrans</code></p>
-<dd> pkts retransmitted.</p>
-<dt><code>sretrans</code></p>
-<dd> source pkts retransmitted.</p>
-<dt><code>dretrans</code></p>
-<dd> destination pkts retransmitted.</p>
-<dt><code>pretrans</code></p>
-<dd> percent pkts retransmitted.</p>
-<dt><code>psretrans</code></p>
-<dd> percent source pkts retransmitted.</p>
-<dt><code>pdretrans</code></p>
-<dd> percent destination pkts retransmitted.</p>
-<dt><code>sgap</code></p>
-<dd> source bytes missing in the data stream. Available after argus-3.0.4</p>
-<dt><code>dgap</code></p>
-<dd> destination bytes missing in the data stream. Available after argus-3.0.4</p>
-<dt><code>rate</code></p>
-<dd> pkts per second.</p>
-<dt><code>srate</code></p>
-<dd> source pkts per second.</p>
-<dt><code>drate</code></p>
-<dd> destination pkts per second.</p>
-<dt><code>dir</code></p>
-<dd> direction of transaction</p>
-<dt><code>sintpkt</code></p>
-<dd> source interpacket arrival time (mSec)</p>
-<dt><code>sintdist</code></p>
-<dd> source interpacket arrival time distribution</p>
-<dt><code>sintpktact</code></p>
-<dd> source active interpacket arrival time (mSec)</p>
-<dt><code>sintdistact</code></p>
-<dd> source active interpacket arrival time (mSec)</p>
-<dt><code>sintpktidl</code></p>
-<dd> source idle interpacket arrival time (mSec)</p>
-<dt><code>sintdistidl</code></p>
-<dd> source idle interpacket arrival time (mSec)</p>
-<dt><code>dintpkt</code></p>
-<dd> destination interpacket arrival time (mSec)</p>
-<dt><code>dintdist</code></p>
-<dd> destination interpacket arrival time distribution</p>
-<dt><code>dintpktact</code></p>
-<dd> destination active interpacket arrival time (mSec)</p>
-<dt><code>dintdistact</code></p>
-<dd> destination active interpacket arrival time distribution (mSec)</p>
-<dt><code>dintpktidl</code></p>
-<dd> destination idle interpacket arrival time (mSec)</p>
-<dt><code>dintdistidl</code></p>
-<dd> destination idle interpacket arrival time distribution</p>
-<dt><code>sjit</code></p>
-<dd> source jitter (mSec).</p>
-<dt><code>sjitact</code></p>
-<dd> source active jitter (mSec).</p>
-<dt><code>sjitidle</code></p>
-<dd> source idle jitter (mSec).</p>
-<dt><code>djit</code></p>
-<dd> destination jitter (mSec).</p>
-<dt><code>djitact</code></p>
-<dd> destination active jitter (mSec).</p>
-<dt><code>djitidle</code></p>
-<dd> destination idle jitter (mSec).</p>
-<dt><code>state</code></p>
-<dd> transaction state</p>
-<dt><code>label</code></p>
-<dd> Metadata label.</p>
-<dt><code>suser</code></p>
-<dd> source user data buffer.</p>
-<dt><code>duser</code></p>
-<dd> destination user data buffer.</p>
-<dt><code>swin</code></p>
-<dd> source TCP window advertisement.</p>
-<dt><code>dwin</code></p>
-<dd> destination TCP window advertisement.</p>
-<dt><code>svlan</code></p>
-<dd> source VLAN identifier.</p>
-<dt><code>dvlan</code></p>
-<dd> destination VLAN identifier.</p>
-<dt><code>svid</code></p>
-<dd> source VLAN identifier.</p>
-<dt><code>dvid</code></p>
-<dd> destination VLAN identifier.</p>
-<dt><code>svpri</code></p>
-<dd> source VLAN priority.</p>
-<dt><code>dvpri</code></p>
-<dd> destination VLAN priority.</p>
-<dt><code>srng</code></p>
-<dd> start time for the filter timerange.</p>
-<dt><code>erng</code></p>
-<dd> end time for the filter timerange.</p>
-<dt><code>stcpb</code></p>
-<dd> source TCP base sequence number</p>
-<dt><code>dtcpb</code></p>
-<dd> destination TCP base sequence number</p>
-<dt><code>tcprtt</code></p>
-<dd> TCP connection setup round-trip time, the sum of &#8216;synack&#8217; and &#8216;ackdat&#8217;.</p>
-<dt><code>synack</code></p>
-<dd> TCP connection setup time, the time between the SYN and the SYN_ACK packets.</p>
-<dt><code>ackdat</code></p>
-<dd> TCP connection setup time, the time between the SYN_ACK and the ACK packets.</p>
-<dt><code>tcpopt</code></p>
+<dt><code>srcid</code></dt>
+<dd> argus source identifier.</dd>
+<dt><code>rank</code></dt>
+<dd> Ordinal value of this output flow record i.e. sequence number.</dd>
+<dt><code>stime</code></dt>
+<dd> record start time</dd>
+<dt><code>ltime</code></dt>
+<dd> record last time.</dd>
+<dt><code>trans</code></dt>
+<dd> aggregation record count.</dd>
+<dt><code>flgs</code></dt>
+<dd> flow state flags seen in transaction.</dd>
+<dt><code>seq</code></dt>
+<dd> argus sequence number.</dd>
+<dt><code>dur</code></dt>
+<dd> record total duration.</dd>
+<dt><code>runtime</code></dt>
+<dd> total active flow run time. This value is generated through aggregation, and is the sum of the records duration.</dd>
+<dt><code>idle</code></dt>
+<dd> time since the last packet activity. This value is useful in real-time processing, and is the current time &#8211; last time.</dd>
+<dt><code>mean</code></dt>
+<dd> average duration of aggregated records.</dd>
+<dt><code>stddev</code></dt>
+<dd> standard deviation of aggregated duration times.</dd>
+<dt><code>sum</code></dt>
+<dd> total accumulated durations of aggregated records.</dd>
+<dt><code>min</code></dt>
+<dd> minimum duration of aggregated records.</dd>
+<dt><code>max</code></dt>
+<dd> maximum duration of aggregated records.</dd>
+<dt><code>smac</code></dt>
+<dd> source MAC addr.</dd>
+<dt><code>dmac</code></dt>
+<dd> destination MAC addr.</dd>
+<dt><code>soui</code></dt>
+<dd> oui portion of the source MAC addr.</dd>
+<dt><code>doui</code></dt>
+<dd> oui portion of the destination MAC addr.</dd>
+<dt><code>saddr</code></dt>
+<dd> source IP addr.</dd>
+<dt><code>daddr</code></dt>
+<dd> destination IP addr.</dd>
+<dt><code>proto</code></dt>
+<dd> transaction protocol.</dd>
+<dt><code>sport</code></dt>
+<dd> source port number.</dd>
+<dt><code>dport</code></dt>
+<dd> destination port number.</dd>
+<dt><code>stos</code></dt>
+<dd> source TOS byte value.</dd>
+<dt><code>dtos</code></dt>
+<dd> destination TOS byte value.</dd>
+<dt><code>sdsb</code></dt>
+<dd> source diff serve byte value.</dd>
+<dt><code>ddsb</code></dt>
+<dd> destination diff serve byte value.</dd>
+<dt><code>sco</code></dt>
+<dd> source IP address country code.</dd>
+<dt><code>dco</code></dt>
+<dd> destination IP address country code.</dd>
+<dt><code>sttl</code></dt>
+<dd> src -&gt; dst TTL value.</dd>
+<dt><code>dttl</code></dt>
+<dd> dst -&gt; src TTL value.</dd>
+<dt><code>shops</code></dt>
+<dd> estimate of number of IP hops from src to this point.</dd>
+<dt><code>dhops</code></dt>
+<dd> estimate of number of IP hops from dst to this point.</dd>
+<dt><code>sipid</code></dt>
+<dd> source IP identifier.</dd>
+<dt><code>dipid</code></dt>
+<dd> destination IP identifier.</dd>
+<dt><code>smpls</code></dt>
+<dd> source MPLS identifier.</dd>
+<dt><code>dmpls</code></dt>
+<dd> destination MPLS identifier.</dd>
+<dt><code>autoid</code></dt>
+<dd> Auto generated identifier (mysql).</dd>
+<dt><code>sas</code></dt>
+<dd> Src origin AS</dd>
+<dt><code>das</code></dt>
+<dd> Dst origin AS</dd>
+<dt><code>ias</code></dt>
+<dd> Intermediate origin AS, AS of ICMP generator</dd>
+<dt><code>cause</code></dt>
+<dd> Argus record cause code. Valid values are Start, Status, Stop, Close, Error</dd>
+<dt><code>nstroke</code></dt>
+<dd> Number of observed keystrokes.</dd>
+<dt><code>snstroke</code></dt>
+<dd> Number of observed keystrokes from initiator (src) to target (dst).</dd>
+<dt><code>dnstroke</code></dt>
+<dd> Number of observed keystrokes from target (dst) to initiator (src).</dd>
+<dt><code>pkts</code></dt>
+<dd> total transaction packet count.</dd>
+<dt><code>spkts</code></dt>
+<dd> src -&gt; dst packet count.</dd>
+<dt><code>dpkts</code></dt>
+<dd> dst -&gt; src packet count.</dd>
+<dt><code>bytes</code></dt>
+<dd> total transaction bytes.</dd>
+<dt><code>sbytes</code></dt>
+<dd> src -&gt; dst transaction bytes.</dd>
+<dt><code>dbytes</code></dt>
+<dd> dst -&gt; src transaction bytes.</dd>
+<dt><code>appbytes</code></dt>
+<dd> total application bytes.</dd>
+<dt><code>sappbytes</code></dt>
+<dd> src -&gt; dst application bytes.</dd>
+<dt><code>dappbytes</code></dt>
+<dd> dst -&gt; src application bytes.</dd>
+<dt><code>pcr</code></dt>
+<dd> producer consumer ratio.</dd>
+<dt><code>load</code></dt>
+<dd> bits per second.</dd>
+<dt><code>sload</code></dt>
+<dd> source bits per second.</dd>
+<dt><code>dload</code></dt>
+<dd> destination bits per second.</dd>
+<dt><code>loss</code></dt>
+<dd> pkts retransmitted or dropped.</dd>
+<dt><code>sloss</code></dt>
+<dd> source pkts retransmitted or dropped.</dd>
+<dt><code>dloss</code></dt>
+<dd> destination pkts retransmitted or dropped.</dd>
+<dt><code>ploss</code></dt>
+<dd> percent pkts retransmitted or dropped.</dd>
+<dt><code>psloss</code></dt>
+<dd> percent source pkts retransmitted or dropped.</dd>
+<dt><code>pdloss</code></dt>
+<dd> percent destination pkts retransmitted or dropped.</dd>
+<dt><code>retrans</code></dt>
+<dd> pkts retransmitted.</dd>
+<dt><code>sretrans</code></dt>
+<dd> source pkts retransmitted.</dd>
+<dt><code>dretrans</code></dt>
+<dd> destination pkts retransmitted.</dd>
+<dt><code>pretrans</code></dt>
+<dd> percent pkts retransmitted.</dd>
+<dt><code>psretrans</code></dt>
+<dd> percent source pkts retransmitted.</dd>
+<dt><code>pdretrans</code></dt>
+<dd> percent destination pkts retransmitted.</dd>
+<dt><code>sgap</code></dt>
+<dd> source bytes missing in the data stream. Available after argus-3.0.4</dd>
+<dt><code>dgap</code></dt>
+<dd> destination bytes missing in the data stream. Available after argus-3.0.4</dd>
+<dt><code>rate</code></dt>
+<dd> pkts per second.</dd>
+<dt><code>srate</code></dt>
+<dd> source pkts per second.</dd>
+<dt><code>drate</code></dt>
+<dd> destination pkts per second.</dd>
+<dt><code>dir</code></dt>
+<dd> direction of transaction</dd>
+<dt><code>sintpkt</code></dt>
+<dd> source interpacket arrival time (mSec)</dd>
+<dt><code>sintdist</code></dt>
+<dd> source interpacket arrival time distribution</dd>
+<dt><code>sintpktact</code></dt>
+<dd> source active interpacket arrival time (mSec)</dd>
+<dt><code>sintdistact</code></dt>
+<dd> source active interpacket arrival time (mSec)</dd>
+<dt><code>sintpktidl</code></dt>
+<dd> source idle interpacket arrival time (mSec)</dd>
+<dt><code>sintdistidl</code></dt>
+<dd> source idle interpacket arrival time (mSec)</dd>
+<dt><code>dintpkt</code></dt>
+<dd> destination interpacket arrival time (mSec)</dd>
+<dt><code>dintdist</code></dt>
+<dd> destination interpacket arrival time distribution</dd>
+<dt><code>dintpktact</code></dt>
+<dd> destination active interpacket arrival time (mSec)</dd>
+<dt><code>dintdistact</code></dt>
+<dd> destination active interpacket arrival time distribution (mSec)</dd>
+<dt><code>dintpktidl</code></dt>
+<dd> destination idle interpacket arrival time (mSec)</dd>
+<dt><code>dintdistidl</code></dt>
+<dd> destination idle interpacket arrival time distribution</dd>
+<dt><code>sjit</code></dt>
+<dd> source jitter (mSec).</dd>
+<dt><code>sjitact</code></dt>
+<dd> source active jitter (mSec).</dd>
+<dt><code>sjitidle</code></dt>
+<dd> source idle jitter (mSec).</dd>
+<dt><code>djit</code></dt>
+<dd> destination jitter (mSec).</dd>
+<dt><code>djitact</code></dt>
+<dd> destination active jitter (mSec).</dd>
+<dt><code>djitidle</code></dt>
+<dd> destination idle jitter (mSec).</dd>
+<dt><code>state</code></dt>
+<dd> transaction state</dd>
+<dt><code>label</code></dt>
+<dd> Metadata label.</dd>
+<dt><code>suser</code></dt>
+<dd> source user data buffer.</dd>
+<dt><code>duser</code></dt>
+<dd> destination user data buffer.</dd>
+<dt><code>swin</code></dt>
+<dd> source TCP window advertisement.</dd>
+<dt><code>dwin</code></dt>
+<dd> destination TCP window advertisement.</dd>
+<dt><code>svlan</code></dt>
+<dd> source VLAN identifier.</dd>
+<dt><code>dvlan</code></dt>
+<dd> destination VLAN identifier.</dd>
+<dt><code>svid</code></dt>
+<dd> source VLAN identifier.</dd>
+<dt><code>dvid</code></dt>
+<dd> destination VLAN identifier.</dd>
+<dt><code>svpri</code></dt>
+<dd> source VLAN priority.</dd>
+<dt><code>dvpri</code></dt>
+<dd> destination VLAN priority.</dd>
+<dt><code>srng</code></dt>
+<dd> start time for the filter timerange.</dd>
+<dt><code>erng</code></dt>
+<dd> end time for the filter timerange.</dd>
+<dt><code>stcpb</code></dt>
+<dd> source TCP base sequence number</dd>
+<dt><code>dtcpb</code></dt>
+<dd> destination TCP base sequence number</dd>
+<dt><code>tcprtt</code></dt>
+<dd> TCP connection setup round-trip time, the sum of &#8216;synack&#8217; and &#8216;ackdat&#8217;.</dd>
+<dt><code>synack</code></dt>
+<dd> TCP connection setup time, the time between the SYN and the SYN_ACK packets.</dd>
+<dt><code>ackdat</code></dt>
+<dd> TCP connection setup time, the time between the SYN_ACK and the ACK packets.</dd>
+<dt><code>tcpopt</code></dt>
 <dd> The TCP connection options seen at initiation. The <i>tcpopt</i> indicator consists of a fixed length field, that reports presence of any of the TCP options that argus tracks The format is:<br />
  M            &#8211;  Maxiumum Segment Size<br />
   w           &#8211;  Window Scale<br />
@@ -393,7 +389,7 @@ minimum packet size for traffic transmitted by the src.<br />
 dminsz<br />
 minimum packet size for traffic transmitted by the dst.<br />
 dminsz<br />
-minimum packet size for traffic transmitted by the dst.</p>
+minimum packet size for traffic transmitted by the dst.</dd>
 <p>Examles are:<br />
    -s saddr      print only the source address.<br />
    -s -bytes     removes the bytes field from list.<br />
@@ -401,8 +397,8 @@ minimum packet size for traffic transmitted by the dst.</p>
    -s spkts:18   prints src pkt count with a column width of 18.<br />
    -s smpls      print the local mpls label in the flow.
 </dl>
-<dt><code>-S &lt;[URI://][user[:pass]@]host[:portnum]&gt;</code></p>
-<dd> Specify a remote source of flow data. Read flow data from various data format and transport strategies, using the URI format to indicate the type of flow data record of interest (argus-tcp, argus-udp, cisco, jflow, sflow) and the source, as a name or an addresss, providing an option user and password for protected access. Use the optional &#8216;:portnum&#8217; to specify a port number other than the default; 561. </p>
+<dt><code>-S &lt;[URI://][user[:pass]@]host[:portnum]&gt;</code></dt>
+<dd> Specify a remote source of flow data. Read flow data from various data format and transport strategies, using the URI format to indicate the type of flow data record of interest (argus-tcp, argus-udp, cisco, jflow, sflow) and the source, as a name or an addresss, providing an option user and password for protected access. Use the optional &#8216;:portnum&#8217; to specify a port number other than the default; 561. </dd>
 <p> Examles are:<br />
 &#8211; S localhost request remote argus records from localhost, using default methods.- S user[at] localhost request argus records from localhost, as &#8216;user&#8217;.- S user:pass[at] localhost request argus records from localhost, as &#8216;user&#8217;, with &#8216;pass&#8217; password.- S 192.168.0.4:12345 request via TCP argus records from 192.168.0.4, port 12345. &#8211; S argus: // user@anubis       request argus records from anubis, via TCP port 561, as &#8216;user&#8217;.<br />
                                                                                                                                                                                                                                                                                                                                                     -S argus &#8211;<br />
@@ -415,8 +411,8 @@ minimum packet size for traffic transmitted by the dst.</p>
                                                                                                                                                            jflow: // 10.0.0.2:9898     read jflow records sent to 10.0.0.2, on port 9898.<br />
                                                                                                                                                                -S<br />
                                                                                                                                                            sflow: // localhost:6343    read sflow records sent to localhost interface, port 6343.</p>
-<dt><code>-t &lt;timerange&gt;</code></p>
-<dd> Specify the <code>&lt;time range&gt;</code> for matching <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records. This option supports a high degree of flexibility in specifing explicit and relative time ranges with support for time field wildcarding. </p>
+<dt><code>-t &lt;timerange&gt;</code></dt>
+<dd> Specify the <code>&lt;time range&gt;</code> for matching <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records. This option supports a high degree of flexibility in specifing explicit and relative time ranges with support for time field wildcarding. </dd>
 <p> The syntax for the <code>&lt;time range&gt;</code> is: </p>
 <pre><code>
 [timeComparisonInd] timeSpecification[-timeSpecification] timeComparisonInd : [x] i | n | c(default = i) x negation reverses the result of the time comparison i intersects match records that were active during this time period n includes match records that start before and end after the period c contained match records that start and end during the period timeSpecification : [[[yyyy / ] mm / ] dd.] HH[:MM[:SS]]
@@ -451,16 +447,16 @@ minimum packet size for traffic transmitted by the dst.</p>
    -t xi-5s+25s           record starts or ends 5 seconds earlier and
                           20 seconds after 'now'.
 </pre>
-<dt><code>-T &lt;secs&gt;</code></p>
-<dd> Read <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> from remote server for <code>&lt;secs&gt;</code> of time.</p>
-<dt><code>-u</code></p>
-<dd> Print time values using Unix time format (seconds from the Epoch).</p>
-<dt><code>-w &lt;file&gt; [filter-expression]</code></p>
-<dd> Append matching data to <code>&lt;file&gt;</code>, in <code>argus</code> file format. An <i>output-file</i> of &#8216;-&#8216; directs <code>ra</code> to write the <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records to stdout, allowing for &quot;chaining&quot; <code>ra*</code> style commands together. The optional filter-expression can be used to select specific output.</p>
-<dt><code>-X</code></p>
-<dd> Resets all options to their default values and overrides the rarc file contents (Use as the first option.)</p>
-<dt><code>-z</code></p>
-<dd> Modify status field to represent TCP state changes. The values of the status field when this is enabled are: </p>
+<dt><code>-T &lt;secs&gt;</code></dt>
+<dd> Read <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> from remote server for <code>&lt;secs&gt;</code> of time.</dd>
+<dt><code>-u</code></dt>
+<dd> Print time values using Unix time format (seconds from the Epoch).</dd>
+<dt><code>-w &lt;file&gt; [filter-expression]</code></dt>
+<dd> Append matching data to <code>&lt;file&gt;</code>, in <code>argus</code> file format. An <i>output-file</i> of &#8216;-&#8216; directs <code>ra</code> to write the <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records to stdout, allowing for &quot;chaining&quot; <code>ra*</code> style commands together. The optional filter-expression can be used to select specific output.</dd>
+<dt><code>-X</code></dt>
+<dd> Resets all options to their default values and overrides the rarc file contents (Use as the first option.)</dd>
+<dt><code>-z</code></dt>
+<dd> Modify status field to represent TCP state changes. The values of the status field when this is enabled are: </dd>
 <pre>
   's' - Syn Transmitted
   'S' - Syn Acknowledged
@@ -469,8 +465,8 @@ minimum packet size for traffic transmitted by the dst.</p>
   'F' - Fin Acknowledged (FIN Wait State 2)
   'R' - TCP Reset
 </pre>
-<dt><code>-Z &lt;s|d|b&gt;</code></p>
-<dd> Modify status field to reprsent actual TCP flag values. &lt;&#8216;s&#8217;rc | &#8216;d&#8217;st | &#8216;b&#8217;oth&gt;. The characters that can be present in the status field when this is enabled are: </p>
+<dt><code>-Z &lt;s|d|b&gt;</code></dt>
+<dd> Modify status field to reprsent actual TCP flag values. &lt;&#8216;s&#8217;rc | &#8216;d&#8217;st | &#8216;b&#8217;oth&gt;. The characters that can be present in the status field when this is enabled are: </dd>
 <pre>
   'F' - Fin
   'S' - Syn
@@ -496,31 +492,31 @@ minimum packet size for traffic transmitted by the dst.</p>
 <p> When attached to a remote argus, <code>ra</code> will send the filter to the argus process, which compiles the filter, and uses it to select which argus records will be transmitted to the <code>ra</code> application. If you do not want to send a filter to the remote argus, prepend the filter with the keyword &quot;local&quot;, to indicate that the filtering will be done within the local <code>ra</code> process. </p>
 <p> The <i>expression</i> consists of one or more <i>primitives.</i> Primitives usually consist of an <i>id</i> (name or number) preceded by one or more qualifiers. There are three different kinds of qualifier:</p>
 <dl>
-<dt><i>type</i></p>
-<dd> qualifiers say what kind of thing the id name or number refers to. Possible types are <code>srcid,</code> <code>encaps,</code> <code>ether,</code> <code>host,</code> <code>net,</code> <code>co,</code> <code>port,</code> <code>tos,</code> <code>ttl,</code> <code>ptks,</code> <code>bytes,</code> <code>appbytes,</code> <code>pcr,</code> <code>data,</code> <code>rate,</code> <code>load,</code> <code>loss,</code> <code>ploss,</code> <code>vid,</code> <code>vpri,</code> and <code>mid.</code> </p>
+<dt><i>type</i></dt>
+<dd> qualifiers say what kind of thing the id name or number refers to. Possible types are <code>srcid,</code> <code>encaps,</code> <code>ether,</code> <code>host,</code> <code>net,</code> <code>co,</code> <code>port,</code> <code>tos,</code> <code>ttl,</code> <code>ptks,</code> <code>bytes,</code> <code>appbytes,</code> <code>pcr,</code> <code>data,</code> <code>rate,</code> <code>load,</code> <code>loss,</code> <code>ploss,</code> <code>vid,</code> <code>vpri,</code> and <code>mid.</code> </dd>
 <p> E.g., `srcid isis`, `encaps gre&#8217;, `host sphynx&#8217;, `net 192.168.0.0/16&#8242;, `port domain&#8217;, `ttl 1&#8242;, &#8216;ptks gt 2&#8217;, &#8216;ploss lt 5&#8217;. If there is no type qualifier, <code>host</code> is assumed.</p>
-<dt><i>dir</i></p>
-<dd> qualifiers specify a particular transfer direction to and/or from <i>an id.</i> Possible directions are <code>src</code>, <code>dst</code>, <code>src or dst</code> and <code>src and dst</code>. E.g., `src sphynx&#8217;, `dst net 192.168.0.0/24&#8242;, `src or dst port ftp&#8217;, `src and dst tos 0x0a&#8217;, `src or dst vid 0x12`, `dst vpri 0x02` . If there is no dir qualifier, <code>src or dst</code> is assumed.</p>
-<dt><i>proto</i></p>
-<dd> qualifiers restrict the match to a particular protocol. Possible values are those specified in the <code>/etc/protocols</code> system file and a small number of extensions, (that should be defined but aren&#8217;t). Specific extended values are <code>&#8216;ipv4&#8217;</code>, (to specify just ip version 4), in contrast to the defined proto <code>&#8216;ipv6&#8217;</code>. The defined proto <code>&#8216;ip&#8217;</code> reduces to the filter &#8216;ipv4 or ipv6&#8217;. </p>
+<dt><i>dir</i></dt>
+<dd> qualifiers specify a particular transfer direction to and/or from <i>an id.</i> Possible directions are <code>src</code>, <code>dst</code>, <code>src or dst</code> and <code>src and dst</code>. E.g., `src sphynx&#8217;, `dst net 192.168.0.0/24&#8242;, `src or dst port ftp&#8217;, `src and dst tos 0x0a&#8217;, `src or dst vid 0x12`, `dst vpri 0x02` . If there is no dir qualifier, <code>src or dst</code> is assumed.</dd>
+<dt><i>proto</i></dt>
+<dd> qualifiers restrict the match to a particular protocol. Possible values are those specified in the <code>/etc/protocols</code> system file and a small number of extensions, (that should be defined but aren&#8217;t). Specific extended values are <code>&#8216;ipv4&#8217;</code>, (to specify just ip version 4), in contrast to the defined proto <code>&#8216;ipv6&#8217;</code>. The defined proto <code>&#8216;ip&#8217;</code> reduces to the filter &#8216;ipv4 or ipv6&#8217;. </dd>
 <p> When preceeded by <i>ether</i>, the protocol names and numbers that are valid are specified in ./include/ethernames.h.</dl>
 <p> In addition to the above, there are some special `primitive&#8217; keywords that don&#8217;t follow the pattern: <code>gateway</code>, <code>multicast</code>, and <code>broadcast</code>. All of these are described below. </p>
 <p> More complex filter expressions are built up by using the words <code>and</code>, <code>or</code> and <code>not</code> to combine primitives. E.g., `host foo and not port ftp and not port ftp-data&#8217;. To save typing, identical qualifier lists can be omitted. E.g., `tcp dst port ftp or ftp-data or domain&#8217; is exactly the same as `tcp dst port ftp or tcp dst port ftp-data or tcp dst port domain&#8217;. </p>
 <p> Allowable primitives are:</p>
 <dl>
-<dt><code>srcid </code><i>argusid</i></p>
-<dd> True if the argus identifier field in the Argus record is <i>srcid</i>, which may be an IP address, a name or a decimal/hexidecimal number.</p>
-<dt><code>seq [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the transport sequence number in the Argus record matches the <i>sequence number expression</i>.</p>
-<dt><code>encaps </code><i>type</i></p>
-<dd> True if the encapsulation used by the flow in the Argus record includes the <i>type</i>. The list of valid encapsulation types is: </p>
+<dt><code>srcid </code><i>argusid</i></dt>
+<dd> True if the argus identifier field in the Argus record is <i>srcid</i>, which may be an IP address, a name or a decimal/hexidecimal number.</dd>
+<dt><code>seq [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the transport sequence number in the Argus record matches the <i>sequence number expression</i>.</dd>
+<dt><code>encaps </code><i>type</i></dt>
+<dd> True if the encapsulation used by the flow in the Argus record includes the <i>type</i>. The list of valid encapsulation types is: </dd>
 <pre>
    eth, mpls, 802q, llc, pppoe, isl, gre, erspan, ah, ipnip, ipnip6, hdlc, chdlc,
    atm, sll, fddi, slip, arc, wlan, prism, avs, lrh, grh, teredo, udt, ipsec, juniper
-<dt><code>dst host </code><i>host</i><dd>True if the IP destination field in the Argus record is <i>host</i>,
+<dt><code>dst host </code><i>host</i></dt><dd>True if the IP destination field in the Argus record is <i>host</i>,
 which may be either an address or a name.
-<dt><code>src host </code><i>host</i><dd>True if the IP source field in the Argus record is <i>host</i>.
-<dt><code>host </code><i>host</i><dd>True if either the IP source or destination in the Argus record is <i>host</i>.
+</dd><dt><code>src host </code><i>host</i></dt><dd>True if the IP source field in the Argus record is <i>host</i>.
+</dd><dt><code>host </code><i>host</i></dt><dd>True if either the IP source or destination in the Argus record is <i>host</i>.
 Any of the above host expressions can be prepended with the keywords
 <code>ip</code>, <code>arp</code>, or <code>rarp</code> as in:
 <code>ip</code> host <i>host</i>
@@ -530,62 +526,62 @@ Any of the above host expressions can be prepended with the keywords
 <code>ether proto ip</code> and host <i>host</i>
 </pre>
 <p> If <i>host</i> is a name with multiple IP addresses, each address will be checked for a match.</p>
-<dt><code>ether dst </code><i>ehost</i></p>
-<dd> True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i>ethers</i>(3N) for numeric format).</p>
-<dt><code>ether src </code><i>ehost</i></p>
-<dd> True if the ethernet source address is <i>ehost</i>.</p>
-<dt><code>ether host </code><i>ehost</i></p>
-<dd> True if either the ethernet source or destination address is <i>ehost</i>.</p>
-<dt><code>gateway</code> <i>host</i></p>
-<dd> True if the transaction used <i>host</i> as a gateway. I.e., the ethernet source or destination address was <i>host</i> but neither the IP source nor the IP destination was <i>host</i>. <i>Host</i> must be a name and must be found in both /etc/hosts and /etc/ethers. (An equivalent expression is </p>
+</dd><dt><code>ether dst </code><i>ehost</i></dt>
+<dd> True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i>ethers</i>(3N) for numeric format).</dd>
+<dt><code>ether src </code><i>ehost</i></dt>
+<dd> True if the ethernet source address is <i>ehost</i>.</dd>
+<dt><code>ether host </code><i>ehost</i></dt>
+<dd> True if either the ethernet source or destination address is <i>ehost</i>.</dd>
+<dt><code>gateway</code> <i>host</i></dt>
+<dd> True if the transaction used <i>host</i> as a gateway. I.e., the ethernet source or destination address was <i>host</i> but neither the IP source nor the IP destination was <i>host</i>. <i>Host</i> must be a name and must be found in both /etc/hosts and /etc/ethers. (An equivalent expression is </dd>
 <pre>
 <code>ether host </code><i>ehost </i><code>and not host </code><i>host</i>
 </pre>
 <p> which can be used with either names or numbers for <i>host / ehost</i>.)</p>
-<dt><code>dst net </code><i>cidr</i></p>
-<dd> True if the IP destination address in the Argus record matches the <i>cidr</i> address.</p>
-<dt><code>src net </code><i>cidr</i></p>
-<dd> True if the IP source address in the Argus record matches the <i>cidr</i> address.</p>
-<dt><code>net </code><i>cidr</i></p>
-<dd> True if either the IP source or destination address in the Argus record matches <i>cidr</i> address.</p>
-<dt><code>dst port </code><i>port</i></p>
-<dd> True if the network transaction is IP based, using either the TCP or UDP transport protocols, and a destination port value of <i>port</i>. The <i>port</i> can be a number or a name as configured in the /etc/services file.(see <i>tcp</i>(4P) and <i>udp</i>(4P)). If a name is used, both the protocol number and port number, are checked. If a number or ambiguous name is used, the port number is checked for both UDP and TCP protocols (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will match both tcp/domain and udp/domain traffic). Port ranges can be specified using numeric values, such as <code>port 53-215</code>. </p>
-<dt><code>src port </code><i>port</i></p>
-<dd> True if the network transaction has a source port value of <i>port</i>.</p>
-<dt><code>port </code><i>port</i></p>
-<dd> True if either the source or destination port in the Argus record is <i>port</i>. Any of the above port expressions can be prepended with the keywords, <code>tcp</code> or <code>udp</code>, as in: </p>
+<dt><code>dst net </code><i>cidr</i></dt>
+<dd> True if the IP destination address in the Argus record matches the <i>cidr</i> address.</dd>
+<dt><code>src net </code><i>cidr</i></dt>
+<dd> True if the IP source address in the Argus record matches the <i>cidr</i> address.</dd>
+<dt><code>net </code><i>cidr</i></dt>
+<dd> True if either the IP source or destination address in the Argus record matches <i>cidr</i> address.</dd>
+<dt><code>dst port </code><i>port</i></dt>
+<dd> True if the network transaction is IP based, using either the TCP or UDP transport protocols, and a destination port value of <i>port</i>. The <i>port</i> can be a number or a name as configured in the /etc/services file.(see <i>tcp</i>(4P) and <i>udp</i>(4P)). If a name is used, both the protocol number and port number, are checked. If a number or ambiguous name is used, the port number is checked for both UDP and TCP protocols (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will match both tcp/domain and udp/domain traffic). Port ranges can be specified using numeric values, such as <code>port 53-215</code>. </dd>
+<dt><code>src port </code><i>port</i></dt>
+<dd> True if the network transaction has a source port value of <i>port</i>.</dd>
+<dt><code>port </code><i>port</i></dt>
+<dd> True if either the source or destination port in the Argus record is <i>port</i>. Any of the above port expressions can be prepended with the keywords, <code>tcp</code> or <code>udp</code>, as in: </dd>
 <pre>
 <code>tcp src port </code><i>port</i>
 </pre>
 <p> which matches only tcp connections.</p>
-<dt><code>ip proto </code><i>protocol</i></p>
-<dd> True if the Argus record is an ip transaction (see <i>ip</i>(4P)) of protocol type <i>protocol</i>. <i>Protocol</i> can be a number or any of the string values found in <i>/etc/protocols</i>.</p>
-<dt><code>multicast</code></p>
-<dd> True if the network transaction involved an ip multicast address. By specifing ether multicast, you can select argus records that involve an ethernet multicast address.</p>
-<dt><code>broadcast</code></p>
-<dd> True if the network transaction involved an ip broadcast address. By specifing ether broadcast, you can select argus records that involve an ethernet broadcast address.</p>
-<dt><code>ether proto </code><i>protocol</i></p>
-<dd> True if the Argus record is of ether type <i>protocol</i>. <i>Protocol</i> can be a number or a name like <i>ip</i>, <i>arp</i>, or <i>rarp</i>.</p>
-<dt><code>[src | dst] ttl [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the TTL in the Argus record equals <i>number</i>.</p>
-<dt><code>[src | dst] tos [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the TOS in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] vid [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if th VLAN id in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] vpri [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the VLAN priority in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] mid [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the MPLS Label in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] pkts [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the packet count in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] bytes [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the byte count in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] appbytes [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the application byte count in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] rate [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the rate in the Argus record (default) equals <i>number</i>.</p>
-<dt><code>[src | dst] load [gt | gte | lt | lte | eq] </code><i>number</i></p>
-<dd> True if the load in the Argus record (default) equals <i>number</i>. </p>
+<dt><code>ip proto </code><i>protocol</i></dt>
+<dd> True if the Argus record is an ip transaction (see <i>ip</i>(4P)) of protocol type <i>protocol</i>. <i>Protocol</i> can be a number or any of the string values found in <i>/etc/protocols</i>.</dd>
+<dt><code>multicast</code></dt>
+<dd> True if the network transaction involved an ip multicast address. By specifing ether multicast, you can select argus records that involve an ethernet multicast address.</dd>
+<dt><code>broadcast</code></dt>
+<dd> True if the network transaction involved an ip broadcast address. By specifing ether broadcast, you can select argus records that involve an ethernet broadcast address.</dd>
+<dt><code>ether proto </code><i>protocol</i></dt>
+<dd> True if the Argus record is of ether type <i>protocol</i>. <i>Protocol</i> can be a number or a name like <i>ip</i>, <i>arp</i>, or <i>rarp</i>.</dd>
+<dt><code>[src | dst] ttl [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the TTL in the Argus record equals <i>number</i>.</dd>
+<dt><code>[src | dst] tos [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the TOS in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] vid [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if th VLAN id in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] vpri [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the VLAN priority in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] mid [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the MPLS Label in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] pkts [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the packet count in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] bytes [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the byte count in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] appbytes [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the application byte count in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] rate [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the rate in the Argus record (default) equals <i>number</i>.</dd>
+<dt><code>[src | dst] load [gt | gte | lt | lte | eq] </code><i>number</i></dt>
+<dd> True if the load in the Argus record (default) equals <i>number</i>. </dd>
 </dl>
 <p> Ra filter expressions support primitives that are specific to flow states and can be used to select flow records that were in these states at the time they were generated. <i>normal</i>, <i>wait</i>, <i>timeout</i>, <i>est</i> or <i>con</i> </p>
 <p> Primitives that select flows that experienced fragmentation. <i>frag</i> and <i>fragonly</i> </p>
@@ -597,13 +593,13 @@ Any of the above host expressions can be prepended with the keywords
 <p> Primitives may be combined using:</p>
 <dl>
 <dt>
-<dd> A parenthesized group of primitives and operators (parentheses are special to the Shell and must be escaped).</p>
+</dt><dd> A parenthesized group of primitives and operators (parentheses are special to the Shell and must be escaped).</dd>
 <dt>
-<dd> Negation (`<code>!</code>&#8216; or `<code>not</code>&#8216;).</p>
+</dt><dd> Negation (`<code>!</code>&#8216; or `<code>not</code>&#8216;).</dd>
 <dt>
-<dd> Concatenation (`<code>and</code>&#8216;).</p>
+</dt><dd> Concatenation (`<code>and</code>&#8216;).</dd>
 <dt>
-<dd> Alternation (`<code>or</code>&#8216;).</dl>
+</dt><dd> Alternation (`<code>or</code>&#8216;).</dd></dl>
 <p> Negation has highest precedence. Alternation and concatenation have equal precedence and associate left to right. Note that explicit <code>and</code> tokens, not juxtaposition, are now required for concatenation. </p>
 <p> If an identifier is given without a keyword, the most recent keyword is assumed. For example, </p>
 <pre>
@@ -626,57 +622,57 @@ Any of the above host expressions can be prepended with the keywords
 <p> To report all TCP transactions from and to host &#8216;narly.wave.com&#8217;, reading transaction data from <i>argus-file</i> argus.data:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>ra -r argus.data - tcp and host narly.wave.com</code>
 </pre>
-</dl>
+</dd></dl>
 <p> To report all UDP based DNS traffic, reading transaction data from the remote <i>argus.server</i>:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>ra -S argus.server - udp port domain
 </code></pre>
-</dl>
+</dd></dl>
 <p> To report all UDP transactions seen by the remote <i>argus.server</i> on the port range 53-256, but not sending the filter to the remote argus process:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>ra -S argus.server - local udp port 53-256
 </code></pre>
-</dl>
+</dd></dl>
 <p> Create the <i>argus-file</i> icmp.log with all ICMP events involving the host nimrod, using data from <i>argus-file</i>, but reading the transaction data from <i>stdin</i>:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>cat </code><i>argus-file</i> | ra -r - -w icmp.log - icmp and host nimrod
 </pre>
-</dl>
+</dd></dl>
 <p> Read an <i>argus-file</i> at twice normal speed.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>ra -r argus.file -M rtime:2
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OUTPUT FORMAT</h2>
 <p> The following is a brief description of the default output of .B ra. While this is by no means the &#8216;preferred&#8217; set of data that one should generate, it represents a starting point for using flow data in general. This also looks pretty good on 80 column terminals. The format is:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <i>  time  flgs proto  shost  dir  daddr metrics state</i>
 </pre>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>time</code></p>
-<dd> The format of the <i>time</i> field is specified by the .rarc file, using syntax supported by the routine <code>strftime(3V).</code> The default is &#8216;%T&#8217;. <code>Argus</code> transactional data contains both starting and ending transaction times, with precision to the microsecond. However, <code>ra</code> by default prints out the &#8216;stime&#8217; field, the records starting time.</p>
-<dt><code>flgs</code></p>
-<dd> The <i>flgs</i> indicator consists of a fixed length field. That reports various flow record and protocol identifiers, states and attributes. The format is: </p>
+<dt><code>time</code></dt>
+<dd> The format of the <i>time</i> field is specified by the .rarc file, using syntax supported by the routine <code>strftime(3V).</code> The default is &#8216;%T&#8217;. <code>Argus</code> transactional data contains both starting and ending transaction times, with precision to the microsecond. However, <code>ra</code> by default prints out the &#8216;stime&#8217; field, the records starting time.</dd>
+<dt><code>flgs</code></dt>
+<dd> The <i>flgs</i> indicator consists of a fixed length field. That reports various flow record and protocol identifiers, states and attributes. The format is: </dd>
 <pre>
  T        -  Time Corrected/Adjusted
  N        -  Netflow Originated Data
@@ -733,39 +729,39 @@ Any of the above host expressions can be prepended with the keywords
         A  -  IP option Router Alert
         U  -  unknown IP options set
 </pre>
-<dt><code>proto</code></p>
-<dd> The proto field indicates the upper protocol used in the transaction. This field will contain the first 4 characters of the official name for the protocol used, as defined in RFC-1700, and configured using the /etc/protocols file. Argus attempts to discovery the Realtime Transport Protocol (rtp), when it is being used. When it encounters rtp, it will indicate its use in this field, with the string &#8216;rtp&#8217;. Use of the <code>-n</code> option, twice (-nn), will cause the actual protocol number to be displayed.</p>
-<dt><code>shost</code></p>
-<dd> The <i>shost</i> field is meant to convey the originator of the data in the flow. This field is protocol dependent, and for IP protocols will contain the src IP address/name. For TCP and UDP, the field will also contain the port number/name, separated by a period. </p>
+<dt><code>proto</code></dt>
+<dd> The proto field indicates the upper protocol used in the transaction. This field will contain the first 4 characters of the official name for the protocol used, as defined in RFC-1700, and configured using the /etc/protocols file. Argus attempts to discovery the Realtime Transport Protocol (rtp), when it is being used. When it encounters rtp, it will indicate its use in this field, with the string &#8216;rtp&#8217;. Use of the <code>-n</code> option, twice (-nn), will cause the actual protocol number to be displayed.</dd>
+<dt><code>shost</code></dt>
+<dd> The <i>shost</i> field is meant to convey the originator of the data in the flow. This field is protocol dependent, and for IP protocols will contain the src IP address/name. For TCP and UDP, the field will also contain the port number/name, separated by a period. </dd>
 <p> The &#8216;src&#8217; is generally the entity that first transmits a packet that is a part of a flow. However, the assignment of &#8216;src&#8217; and &#8216;dst&#8217; semantics is somewhat complicated by the notion of loss, or half-duplex monitoring, especially when connection-oriented protocol , such as TCP, are reported. In this case the &#8216;src&#8217; is the entity that initiated the flow.</p>
-<dt><code>dir</code></p>
-<dd> The <i>dir</i> field will have the direction of the transaction, as can be best determined from the datum, and is used to indicate which hosts are transmitting. For TCP, the dir field indicates the actual source of the TCP connection, and the center character indicating the state of the transaction.</p>
+<dt><code>dir</code></dt>
+<dd> The <i>dir</i> field will have the direction of the transaction, as can be best determined from the datum, and is used to indicate which hosts are transmitting. For TCP, the dir field indicates the actual source of the TCP connection, and the center character indicating the state of the transaction.</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
      -  - transaction was NORMAL
      |  - transaction was RESET
      o  - transaction TIMED OUT.
      ?  - direction of transaction is unknown.
 </pre>
-</dl>
-<dt><code>daddr</code></p>
-<dd> The <i>daddr</i> field is meant to convey the recipient of the data in the flow. Like the shost field, this field is protocol dependent, and for IP protocols will contain the dst IP address/name, and optionally the DSAP. </p>
-<dt><code>metrics</code></p>
-<dd> <i>metrics</i> represent the general sets of fields that reflect the activity of the flow. In the default output, there are 4 fields. The first 2 are the packet counts and the last 2 are the byte counts for the specific transaction. The fields are paired with the previous host fields, and represent the packets transmitted by the respective host.</p>
-<dt><code>state</code></p>
-<dd> The <i>state</i> field indicates the principle state for the transaction report, and is protocol dependent. For all the protocols, except ICMP, this field reports on the basic state of a transaction.</p>
+</dd></dl>
+<dt><code>daddr</code></dt>
+<dd> The <i>daddr</i> field is meant to convey the recipient of the data in the flow. Like the shost field, this field is protocol dependent, and for IP protocols will contain the dst IP address/name, and optionally the DSAP. </dd>
+<dt><code>metrics</code></dt>
+<dd> <i>metrics</i> represent the general sets of fields that reflect the activity of the flow. In the default output, there are 4 fields. The first 2 are the packet counts and the last 2 are the byte counts for the specific transaction. The fields are paired with the previous host fields, and represent the packets transmitted by the respective host.</dd>
+<dt><code>state</code></dt>
+<dd> The <i>state</i> field indicates the principle state for the transaction report, and is protocol dependent. For all the protocols, except ICMP, this field reports on the basic state of a transaction.</dd>
 <dt>
-<dd> <code>REQ|INT (requested|initial)</code> This indicates that this is the <i>initial</i> state report for a transaction and is seen only when the <i>argus-server</i> is in DETAIL mode. For TCP connections this is <code>REQ</code>, indicating that a connection is being requested. For the connectionless protocols, such as UDP, this is <code>INT</code>.</p>
+</dt><dd> <code>REQ|INT (requested|initial)</code> This indicates that this is the <i>initial</i> state report for a transaction and is seen only when the <i>argus-server</i> is in DETAIL mode. For TCP connections this is <code>REQ</code>, indicating that a connection is being requested. For the connectionless protocols, such as UDP, this is <code>INT</code>.</dd>
 <dt>
-<dd> <code>ACC (accepted)</code> This indicates that a request/response condition has occurred, and that a transaction has been detected between two hosts. For TCP, this indicates that a connection request has been answered, and the connection will be accepted. This is only seen when the <i>argus-server</i> is in DETAIL mode. For the connectionless protocols, this state indicates that there has been a single packet exchange between two hosts, and could qualify as a request/response transaction.</p>
+</dt><dd> <code>ACC (accepted)</code> This indicates that a request/response condition has occurred, and that a transaction has been detected between two hosts. For TCP, this indicates that a connection request has been answered, and the connection will be accepted. This is only seen when the <i>argus-server</i> is in DETAIL mode. For the connectionless protocols, this state indicates that there has been a single packet exchange between two hosts, and could qualify as a request/response transaction.</dd>
 <dt>
-<dd> <code>EST|CON (established|connected)</code> This record type indicates that the reported transaction is active, and has been established or is continuing. This should be interpreted as a state report of a currently active transaction. For TCP, the EST state is only seen in DETAIL mode, and indicates that the three way handshake has been completed for a connection.</p>
+</dt><dd> <code>EST|CON (established|connected)</code> This record type indicates that the reported transaction is active, and has been established or is continuing. This should be interpreted as a state report of a currently active transaction. For TCP, the EST state is only seen in DETAIL mode, and indicates that the three way handshake has been completed for a connection.</dd>
 <dt>
-<dd> <code>CLO (closed) </code> TCP specific, this record type indicates that the TCP connection has closed normally.</p>
+</dt><dd> <code>CLO (closed) </code> TCP specific, this record type indicates that the TCP connection has closed normally.</dd>
 <dt>
-<dd> <code>TIM (timeout)</code> Activity was not seen relating to this transaction, during the <code>argus</code> server&#8217;s timeout period for this protocol. This state is seen only when there were packets recorded since the last report for this transaction. </p>
+</dt><dd> <code>TIM (timeout)</code> Activity was not seen relating to this transaction, during the <code>argus</code> server&#8217;s timeout period for this protocol. This state is seen only when there were packets recorded since the last report for this transaction. </dd>
 </dl>
 <p> For the ICMP and ICMPv6 protocols, the <i>state</i> field displays specific aspects of the ICMP type. ICMP state can have the values: </p>
 <pre>
@@ -858,3 +854,4 @@ Carter Bullard (carter [at] qosient.com).
 <p> Postel, Jon, <i>User Datagram Protocol</i>, <font SIZE="-1">RFC</font> 768, Network Information Center, SRI International, Menlo Park, Calif., May 1980. </p>
 <p> McCanne, Steven, and Van Jacobson, <i>The BSD Packet Filter: A New Architecture for User-level Capture</i>, Lawrwnce Berkeley Laboratory, One Cyclotron Road, Berkeley, Calif., 94720, December 1992. </p>
 <h2>Index</h2>
+</dl>

@@ -16,38 +16,38 @@ description: "llmk – Light LaTeX Make"
 <p> If one or more FILE(s) are specified, <code>llmk</code> reads the TOML fields or other supported magic comments in the files. Otherwise, it will read the special configuration file <i>llmk.toml</i> in the working directory. Then, <code>llmk</code> will execute the specified workflow to typeset the LaTeX documents.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;clean</code></p>
-<dd> Remove the temporary files such as <code>*.aux</code> and <code>*.log</code>.</p>
-<dt><code>-C</code>, <code>&#8211;clobber</code></p>
-<dd> Remove all generated files including final PDFs.</p>
-<dt><code>-d</code>CAT, <code>&#8211;debug</code>=CAT</p>
-<dd> Activate debug output restricted to CAT.</p>
-<dt><code>-D</code>, <code>&#8211;debug</code></p>
-<dd> Activate all debug output (equal to &quot;&#8211;debug=all&quot;).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print this help message.</p>
-<dt><code>-n</code>, <code>&#8211;dry-run</code></p>
-<dd> Show what would have been executed.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Suppress warnings and most error messages.</p>
-<dt><code>-s</code>, <code>&#8211;silent</code></p>
-<dd> Silence messages from called programs.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Print additional information (e.g., running commands).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print the version number.</dl>
+<dt><code>-c</code>, <code>&#8211;clean</code></dt>
+<dd> Remove the temporary files such as <code>*.aux</code> and <code>*.log</code>.</dd>
+<dt><code>-C</code>, <code>&#8211;clobber</code></dt>
+<dd> Remove all generated files including final PDFs.</dd>
+<dt><code>-d</code>CAT, <code>&#8211;debug</code>=CAT</dt>
+<dd> Activate debug output restricted to CAT.</dd>
+<dt><code>-D</code>, <code>&#8211;debug</code></dt>
+<dd> Activate all debug output (equal to &quot;&#8211;debug=all&quot;).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print this help message.</dd>
+<dt><code>-n</code>, <code>&#8211;dry-run</code></dt>
+<dd> Show what would have been executed.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Suppress warnings and most error messages.</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code></dt>
+<dd> Silence messages from called programs.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print additional information (e.g., running commands).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print the version number.</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt>0</p>
-<dd> Success.</p>
-<dt>1</p>
-<dd> General error.</p>
-<dt>2</p>
-<dd> Failure executing the workflow. The exit status of the external program is reported in an error message.</p>
-<dt>3</p>
-<dd> Parser error.</p>
-<dt>4</p>
-<dd> Type error.</dl>
+<dt>0</dt>
+<dd> Success.</dd>
+<dt>1</dt>
+<dd> General error.</dd>
+<dt>2</dt>
+<dd> Failure executing the workflow. The exit status of the external program is reported in an error message.</dd>
+<dt>3</dt>
+<dd> Parser error.</dd>
+<dt>4</dt>
+<dd> Type error.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <i><a rel="nofollow" href="https://github.com/wtsnjp/llmk/issues">https://github.com/wtsnjp/llmk/issues</a></i>.<br />
  Source: <i><a rel="nofollow" href="https://github.com/wtsnjp/llmk">https://github.com/wtsnjp/llmk</a></i></p>
@@ -59,11 +59,10 @@ description: "llmk – Light LaTeX Make"
 <p> The full documentation is maintained as a PDF manual. The command</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 texdoc llmk
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

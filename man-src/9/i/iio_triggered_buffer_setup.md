@@ -14,16 +14,16 @@ description: "iio_triggered_buffer_setup – Setup triggered buffer and pollfunc
 <p><i>indio_dev</i></p>
 <dl>
 <dd>
-<dd>IIO device structure</dl>
+</dd><dd>IIO device structure</dd></dl>
 <p> <i>h</i></p>
 <dl>
-<dd>Function which will be used as pollfunc top half</dl>
+<dd>Function which will be used as pollfunc top half</dd></dl>
 <p> <i>thread</i></p>
 <dl>
-<dd>Function which will be used as pollfunc bottom half</dl>
+<dd>Function which will be used as pollfunc bottom half</dd></dl>
 <p> <i>setup_ops</i></p>
 <dl>
-<dd>Buffer setup functions to use for this device. If NULL the default setup functions for triggered buffers will be used.</dl>
+<dd>Buffer setup functions to use for this device. If NULL the default setup functions for triggered buffers will be used.</dd></dl>
 <h2>Description</h2>
 <p>This function combines some common tasks which will normally be performed when setting up a triggered buffer. It will allocate the buffer and the pollfunc. </p>
 <p> Before calling this function the indio_dev structure should already be completely initialized, but not yet registered. In practice this means that this function should be called right before <code>iio_device_register</code>. </p>
@@ -31,5 +31,5 @@ description: "iio_triggered_buffer_setup – Setup triggered buffer and pollfunc
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

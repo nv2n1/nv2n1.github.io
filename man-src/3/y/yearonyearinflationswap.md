@@ -41,7 +41,7 @@ description: "QuantLib::YearOnYearInflationSwap – Year-on-year inflation-index
 <p>re $ t_M $ is the maturity time, $ P_n(0,t) $ is the nominal discount factor at time $ t $, $ N $ is the notional, and $ I(t) $ is the inflation index value at time $ t $. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The allowAmbiguousPayments parameter is to allow for payment arithmetic being ambiguous. If the maturity is in, say, 30.01 years according to the day-counter and roll rules, does this mean that there is a payment in 0.01 years? If allowAmbiguousPayments is false, the ambiguousPaymentPeriod parameter sets the period within which the answer is no.</dl>
+<dd>The allowAmbiguousPayments parameter is to allow for payment arithmetic being ambiguous. If the maturity is in, say, 30.01 years according to the day-counter and roll rules, does this mean that there is a payment in 0.01 years? If allowAmbiguousPayments is false, the ambiguousPaymentPeriod parameter sets the period within which the answer is no.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupExpired () const [protected, virtual]</h3>
 <p>This method must leave the instrument in a consistent state when the expiration condition is met. </p>

@@ -11,19 +11,12 @@ std::variant&lt;Types...&gt;::emplace - std::variant&lt;Types...&gt;::emplace
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class T, class... Args&gt;                                                             (1) (since C++17)
-
 T&amp; emplace(Args&amp;&amp;... args);
-
 template &lt;class T, class U, class... Args&gt;                                                    (2) (since C++17)
-
 T&amp; emplace(std::initializer_list&lt;U&gt; il, Args&amp;&amp;... args);
-
 template &lt;size_t I, class... Args&gt;                                                            (3) (since C++17)
-
 std::variant_alternative_t&lt;I, variant&gt;&amp; emplace(Args&amp;&amp;... args);
-
 template &lt;size_t I, class U, class... Args&gt;                                                   (4) (since C++17)
-
 std::variant_alternative_t&lt;I, variant&gt;&amp; emplace(std::initializer_list&lt;U&gt; il, Args&amp;&amp;... args);</code></pre> 
 Creates a new value in-place, in an existing variant object 
 1) Equivalent to emplace&lt;I&gt;(std::forward&lt;Args&gt;(args)...), where I is the zero-based index of T in Types.... This overload only participates in overload resolution if std::is_constructible_v&lt;T, Args...&gt; is true, and T occurs exactly once in Types... 
@@ -75,10 +68,5 @@ int main()
 <h2>See also</h2>
 
 <pre><code>assigns a variant
-
 operator= (public member function)
-
-
-
-
 </code></pre>

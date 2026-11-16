@@ -15,30 +15,30 @@ description: "bacula-dir – Bacula Director"
  Bacula&#8217;s Director Daemon acts as the controller of the network backup system: it is responsible for scheduling and coordinating backups across the network.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c&nbsp;<wbr></code><i>file</i></p>
-<dd>Specify the configuration file to use.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>Set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd>Print timestamp in debug output.</p>
-<dt><code>-f</code></p>
-<dd>Run in foreground (for debugging).</p>
-<dt><code>-g&nbsp;<wbr></code><i>group</i></p>
-<dd>Set the group/gid to run as.</p>
-<dt><code>-m</code></p>
-<dd>Print kaboom output (for debugging)</p>
-<dt><code>-r&nbsp;<wbr></code><i>job</i></p>
-<dd>Run &lt;job&gt;.</p>
-<dt><code>-s</code></p>
-<dd>No signals (for debugging).</p>
-<dt><code>-t</code></p>
-<dd>Test the configuration file and report errors.</p>
-<dt><code>-u&nbsp;<wbr></code><i>user</i></p>
-<dd>Set the username/uid to run as.</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode.</p>
-<dt><code>-?</code></p>
-<dd>Show version and usage of program.</dl>
+<dt><code>-c&nbsp;<wbr></code><i>file</i></dt>
+<dd>Specify the configuration file to use.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>Set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd>Print timestamp in debug output.</dd>
+<dt><code>-f</code></dt>
+<dd>Run in foreground (for debugging).</dd>
+<dt><code>-g&nbsp;<wbr></code><i>group</i></dt>
+<dd>Set the group/gid to run as.</dd>
+<dt><code>-m</code></dt>
+<dd>Print kaboom output (for debugging)</dd>
+<dt><code>-r&nbsp;<wbr></code><i>job</i></dt>
+<dd>Run &lt;job&gt;.</dd>
+<dt><code>-s</code></dt>
+<dd>No signals (for debugging).</dd>
+<dt><code>-t</code></dt>
+<dd>Test the configuration file and report errors.</dd>
+<dt><code>-u&nbsp;<wbr></code><i>user</i></dt>
+<dd>Set the username/uid to run as.</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode.</dd>
+<dt><code>-?</code></dt>
+<dd>Show version and usage of program.</dd></dl>
 <h2>Tcp-Wrappers Configuration</h2>
 <p>Tcpwrappers looks for the service name of the bacula daemons in <i>hosts.allow</i> , and the service names of these daemons is configured to be different from the binary. The service names are configured to be <code>%hostname%-%component%</code> rather than <code>bacula-dir</code> (As defined in the bacula-dir.conf.in file) </p>
 <p> So the hosts.allow entry has to match <code>%hostname%-%component%</code> (servername-dir for example) instead of bacula-%component% </p>

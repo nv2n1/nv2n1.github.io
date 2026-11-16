@@ -79,7 +79,7 @@ description: "The talloc debugging support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ptr</i> The talloc chunk.<br />
- <i>f</i> The file handle to print to.</dl>
+ <i>f</i> The file handle to print to.</dd></dl>
 <p> Example: </p>
 <pre>* unsigned int *a, *b;
 * a = talloc(NULL, unsigned int);
@@ -89,7 +89,7 @@ description: "The talloc debugging support functions –"
 * </pre>
 <p><code>See Also:</code></p>
 <dl>
-<dd><code>talloc_report_full()</code></dl>
+<dd><code>talloc_report_full()</code></dd></dl>
 <h3>void talloc_report_depth_cb (const void *ptr, intdepth, intmax_depth, void(*)(const void *ptr, int depth, int max_depth, int is_ref, void *private_data)callback, void *private_data)</h3>
 <p>Walk a complete talloc hierarchy. This provides a more flexible reports than <code>talloc_report()</code>. It will recursively call the callback for the entire tree of memory referenced by the pointer. References in the tree are passed with is_ref = 1 and the pointer that is referenced. </p>
 <p> You can pass NULL for the pointer, in which case a report is printed for the top level memory context, but only if <code>talloc_enable_leak_report()</code> or <code>talloc_enable_leak_report_full()</code> has been called. </p>
@@ -100,7 +100,7 @@ description: "The talloc debugging support functions –"
  <i>depth</i> Internal parameter to control recursion. Call with 0.<br />
  <i>max_depth</i> Maximum recursion level.<br />
  <i>callback</i> Function to be called on every chunk.<br />
- <i>private_data</i> Private pointer passed to callback.</dl>
+ <i>private_data</i> Private pointer passed to callback.</dd></dl>
 <h3>void talloc_report_depth_file (const void *ptr, intdepth, intmax_depth, FILE *f)</h3>
 <p>Print a talloc hierarchy. This provides a more flexible reports than <code>talloc_report()</code>. It will let you specify the depth and max_depth. </p>
 <p> <code>Parameters:</code></p>
@@ -108,14 +108,14 @@ description: "The talloc debugging support functions –"
 <dd><i>ptr</i> The talloc chunk.<br />
  <i>depth</i> Internal parameter to control recursion. Call with 0.<br />
  <i>max_depth</i> Maximum recursion level.<br />
- <i>f</i> The file handle to print to.</dl>
+ <i>f</i> The file handle to print to.</dd></dl>
 <h3>void talloc_report_full (const void *ptr, FILE *f)</h3>
 <p>Print a summary report of all memory used by ptr. This provides a more detailed report than <code>talloc_report()</code>. It will recursively print the entire tree of memory referenced by the pointer. References in the tree are shown by giving the name of the pointer that is referenced. </p>
 <p> You can pass NULL for the pointer, in which case a report is printed for the top level memory context, but only if <code>talloc_enable_leak_report()</code> or <code>talloc_enable_leak_report_full()</code> has been called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ptr</i> The talloc chunk.<br />
- <i>f</i> The file handle to print to.</dl>
+ <i>f</i> The file handle to print to.</dd></dl>
 <p> Example: </p>
 <pre>* unsigned int *a, *b;
 * a = talloc(NULL, unsigned int);
@@ -125,19 +125,19 @@ description: "The talloc debugging support functions –"
 * </pre>
 <p><code>See Also:</code></p>
 <dl>
-<dd><code>talloc_report()</code></dl>
+<dd><code>talloc_report()</code></dd></dl>
 <h3>void talloc_set_abort_fn (void(*)(const char *reason)abort_fn)</h3>
 <p>Set a custom &#8216;abort&#8217; function that is called on serious error. The default &#8216;abort&#8217; function is abort(). </p>
 <p> The &#8216;abort&#8217; function is called when: </p>
 <dl>
-<dt>&bull;</p>
-<dd><code>talloc_get_type_abort()</code> fails</p>
-<dt>&bull;</p>
-<dd>the provided pointer is not a valid talloc context</p>
-<dt>&bull;</p>
-<dd>when the context meta data are invalid</p>
-<dt>&bull;</p>
-<dd>when access after free is detected</dl>
+<dt>&bull;</dt>
+<dd><code>talloc_get_type_abort()</code> fails</dd>
+<dt>&bull;</dt>
+<dd>the provided pointer is not a valid talloc context</dd>
+<dt>&bull;</dt>
+<dd>when the context meta data are invalid</dd>
+<dt>&bull;</dt>
+<dd>when access after free is detected</dd></dl>
 <p> Example: </p>
 <pre>* void my_abort(const char *reason)
 * {
@@ -149,25 +149,25 @@ description: "The talloc debugging support functions –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>abort_fn</i> The new &#8216;abort&#8217; function.</dl>
+<dd><i>abort_fn</i> The new &#8216;abort&#8217; function.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_set_log_fn()</code> </p>
+<dd><code>talloc_set_log_fn()</code> </dd>
 <p> <code>talloc_get_type()</code></dl>
 <h3>void talloc_set_log_fn (void(*)(const char *message)log_fn)</h3>
 <p>Set a logging function. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>log_fn</i> The logging function.</dl>
+<dd><i>log_fn</i> The logging function.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_set_log_stderr()</code> </p>
+<dd><code>talloc_set_log_stderr()</code> </dd>
 <p> <code>talloc_set_abort_fn()</code></dl>
 <h3>void talloc_set_log_stderr (void)</h3>
 <p>Set stderr as the output for logs. </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_set_log_fn()</code> </p>
+<dd><code>talloc_set_log_fn()</code> </dd>
 <p> <code>talloc_set_abort_fn()</code></dl>
 <h3>int talloc_set_memlimit (const void *ctx, size_tmax_size)</h3>
 <p>Set a max memory limit for the current context hierarchy This affects all children of this context and constrain any allocation in the hierarchy to never exceed the limit set. </p>
@@ -183,6 +183,6 @@ description: "The talloc debugging support functions –"
 <p><code>Parameters:</code></p>
 <dl>
 <dd><i>ctx</i> The talloc context to set the limit on<br />
- <i>max_size</i> The (new) max_size</dl>
+ <i>max_size</i> The (new) max_size</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for talloc from the source code.</p>

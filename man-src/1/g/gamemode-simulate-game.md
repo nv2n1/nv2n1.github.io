@@ -20,7 +20,7 @@ description: "gamemode-simulate-game – simulate a game using gamemode"
 <p> To use this with a CI you might need to start a dbus session by hand. This can be done with: </p>
 <dl>
 <dt>
-<dd> dbus-run-session &#8212; gamemode-simulate-game</dl>
+</dt><dd> dbus-run-session &#8212; gamemode-simulate-game</dd></dl>
 <p> Note that this might output to stderr, even if it exits with zero. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-gamemoded/">gamemoded</a>(8), <a href="/docs/linux/man/1-gamemoderun/">gamemoderun</a>(1), <a href="/docs/linux/man/1-dbus-run-session/">dbus-run-session</a>(1) </p>

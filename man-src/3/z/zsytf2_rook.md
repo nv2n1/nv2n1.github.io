@@ -25,10 +25,10 @@ description: "zsytf2_rook.f –"
  triangular matrices, U**T is the transpose of U, and D is symmetric and
  block diagonal with 1-by-1 and 2-by-2 diagonal blocks.
  This is the unblocked version of the algorithm, calling Level 2 BLAS.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  Specifies whether the upper or lower triangular part of the
  symmetric matrix A is stored:
@@ -79,13 +79,13 @@ description: "zsytf2_rook.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2013</dl>
+<dd>November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -117,7 +117,7 @@ description: "zsytf2_rook.f –"
  If s = 1, D(k) overwrites A(k,k), and v overwrites A(k+1:n,k).
  If s = 2, the lower triangle of D(k) overwrites A(k,k), A(k+1,k),
  and A(k+1,k+1), and v overwrites A(k+2:n,k:k+1).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dd>
@@ -130,7 +130,8 @@ description: "zsytf2_rook.f –"
  01-01-96 - Based on modifications by
  J. Lewis, Boeing Computer Services Company
  A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville abd , USA</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 195 of file zsytf2_rook.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -26,8 +26,8 @@ description: "cfengine_selinux – Security Enhanced Linux Policy for the cfengi
 <p> <code>cfengine_initrc_exec_t </code> </p>
 <p> &#8211; Set files with the cfengine_initrc_exec_t type, if you want to transition an executable to the cfengine_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/cf-serverd, /etc/rc.d/init.d/cf-execd, /etc/rc.d/init.d/cf-monitord </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/cf-serverd, /etc/rc.d/init.d/cf-execd, /etc/rc.d/init.d/cf-monitord </dd>
 </dl>
 <p> <code>cfengine_monitord_exec_t </code> </p>
 <p> &#8211; Set files with the cfengine_monitord_exec_t type, if you want to transition an executable to the cfengine_monitord_t domain. </p>

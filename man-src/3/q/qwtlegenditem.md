@@ -55,26 +55,26 @@ description: "QwtLegendItem – A legend label."
 <p> <code>QwtLegendItem</code> represents a curve on a legend. It displays an curve identifier with an explaining text. The identifier might be a combination of curve symbol and line. In readonly mode it behaves like a label, otherwise like an unstylish push button. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>QwtLegend</code>, <code>QwtPlotCurve</code></dl>
+<dd><code>QwtLegend</code>, <code>QwtPlotCurve</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtLegendItem::IdentifierMode</code></h3>
 <p>Identifier mode. </p>
 <p> Default is ShowLine | ShowText </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>identifierMode()</code>, <code>setIdentifierMode()</code></dl>
+<dd><code>identifierMode()</code>, <code>setIdentifierMode()</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtLegendItem::QwtLegendItem (QWidget * parent = 0) [explicit]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <h3>QwtLegendItem::QwtLegendItem (const <code>QwtSymbol</code> &amp; symbol, const QPen &amp; curvePen, const <code>QwtText</code> &amp; text, QWidget * parent = 0) [explicit]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>symbol</i> Curve symbol<br />
  <i>curvePen</i> Curve pen<br />
  <i>text</i> Label text<br />
- <i>parent</i> Parent widget</dl>
+ <i>parent</i> Parent widget</dd></dl>
 <h3>QwtLegendItem::~QwtLegendItem () [virtual]</h3>
 <p>Destructor. </p>
 <h2>Member Function Documentation</h2>
@@ -85,22 +85,22 @@ description: "QwtLegendItem – A legend label."
 <h3>const QPen &amp; QwtLegendItem::curvePen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The curve pen.</dl>
+<dd>The curve pen.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setCurvePen()</code></dl>
+<dd><code>setCurvePen()</code></dd></dl>
 <h3>void QwtLegendItem::drawIdentifier (QPainter * painter, const QRect &amp; rect) const [virtual]</h3>
 <p>Paint the identifier to a given rect. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>rect</i> Rect where to paint</dl>
+ <i>rect</i> Rect where to paint</dd></dl>
 <h3>void QwtLegendItem::drawItem (QPainter * painter, const QRect &amp; rect) const [virtual]</h3>
 <p>Draw the legend item to a given rect. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>rect</i> Rect where to paint the button</dl>
+ <i>rect</i> Rect where to paint the button</dd></dl>
 <h3>void QwtLegendItem::drawText (QPainter * painter, const QRect &amp; textRect) [protected, virtual]</h3>
 <p>Redraw the text. </p>
 <p> Reimplemented from <code>QwtTextLabel</code>.</p>
@@ -108,12 +108,12 @@ description: "QwtLegendItem – A legend label."
 <p>Or&#8217;d values of IdentifierMode. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setIdentifierMode()</code>, <code>IdentifierMode</code></dl>
+<dd><code>setIdentifierMode()</code>, <code>IdentifierMode</code></dd></dl>
 <h3>int QwtLegendItem::identifierWidth () const</h3>
 <p>Return the width of the identifier </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setIdentifierWidth()</code></dl>
+<dd><code>setIdentifierWidth()</code></dd></dl>
 <h3>bool QwtLegendItem::isChecked () const</h3>
 <p>Return true, if the item is checked. </p>
 <h3>bool QwtLegendItem::isDown () const [protected]</h3>
@@ -122,7 +122,7 @@ description: "QwtLegendItem – A legend label."
 <p>Return the item mode </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setItemMode()</code></dl>
+<dd><code>setItemMode()</code></dd></dl>
 <h3>void QwtLegendItem::keyPressEvent (QKeyEvent * e) [protected, virtual]</h3>
 <p>Handle key press events. </p>
 <h3>void QwtLegendItem::keyReleaseEvent (QKeyEvent * e) [protected, virtual]</h3>
@@ -142,68 +142,68 @@ description: "QwtLegendItem – A legend label."
 <p>Check/Uncheck a the item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> check/uncheck</dl>
+<dd><i>on</i> check/uncheck</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setItemMode()</code></dl>
+<dd><code>setItemMode()</code></dd></dl>
 <h3>void QwtLegendItem::setCurvePen (const QPen &amp; pen)</h3>
 <p>Set curve pen. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Curve pen</dl>
+<dd><i>pen</i> Curve pen</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>curvePen()</code></dl>
+<dd><code>curvePen()</code></dd></dl>
 <h3>void QwtLegendItem::setDown (bool down) [protected]</h3>
 <p>Set the item being down. </p>
 <h3>void QwtLegendItem::setIdentifierMode (int mode)</h3>
 <p>Set identifier mode. Default is ShowLine | ShowText. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Or&#8217;d values of IdentifierMode</dl>
+<dd><i>mode</i> Or&#8217;d values of IdentifierMode</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>identifierMode()</code></dl>
+<dd><code>identifierMode()</code></dd></dl>
 <h3>void QwtLegendItem::setIdentifierWidth (int width)</h3>
 <p>Set the width for the identifier Default is 8 pixels </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> New width</dl>
+<dd><i>width</i> New width</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>identifierMode()</code>, <code>identifierWidth()</code></dl>
+<dd><code>identifierMode()</code>, <code>identifierWidth()</code></dd></dl>
 <h3>void QwtLegendItem::setItemMode (<code>QwtLegend::LegendItemMode</code> mode)</h3>
 <p>Set the item mode The default is QwtLegend::ReadOnlyItem </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Item mode</dl>
+<dd><i>mode</i> Item mode</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>itemMode()</code></dl>
+<dd><code>itemMode()</code></dd></dl>
 <h3>void QwtLegendItem::setSpacing (int spacing)</h3>
 <p>Change the spacing </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> Spacing</dl>
+<dd><i>spacing</i> Spacing</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>spacing()</code>, <code>identifierWidth()</code>, <code>QwtTextLabel::margin()</code></dl>
+<dd><code>spacing()</code>, <code>identifierWidth()</code>, <code>QwtTextLabel::margin()</code></dd></dl>
 <h3>void QwtLegendItem::setSymbol (const <code>QwtSymbol</code> &amp; symbol)</h3>
 <p>Set curve symbol. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>symbol</i> Symbol</dl>
+<dd><i>symbol</i> Symbol</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>symbol()</code></dl>
+<dd><code>symbol()</code></dd></dl>
 <h3>void QwtLegendItem::setText (const <code>QwtText</code> &amp; text) [virtual]</h3>
 <p>Set the text to the legend item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> Text label</dl>
+<dd><i>text</i> Text label</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>QwtTextLabel::text()</code></dl>
+<dd><code>QwtTextLabel::text()</code></dd></dl>
 <p> Reimplemented from <code>QwtTextLabel</code>.</p>
 <h3>QSize QwtLegendItem::sizeHint () const [virtual]</h3>
 <p>Return a size hint. </p>
@@ -212,13 +212,13 @@ description: "QwtLegendItem – A legend label."
 <p>Return the spacing </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setSpacing()</code>, <code>identifierWidth()</code>, <code>QwtTextLabel::margin()</code></dl>
+<dd><code>setSpacing()</code>, <code>identifierWidth()</code>, <code>QwtTextLabel::margin()</code></dd></dl>
 <h3>const <code>QwtSymbol</code> &amp; QwtLegendItem::symbol () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The curve symbol.</dl>
+<dd>The curve symbol.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbol()</code></dl>
+<dd><code>setSymbol()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

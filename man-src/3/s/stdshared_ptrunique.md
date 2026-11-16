@@ -29,10 +29,8 @@ This function was deprecated in C++17 and removed in C++20 because use_count is 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     auto sp1 = std::make_shared&lt;int&gt;(5);
     std::cout &lt;&lt; std::boolalpha;

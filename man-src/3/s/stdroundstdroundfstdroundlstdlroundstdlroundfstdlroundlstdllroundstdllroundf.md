@@ -60,13 +60,9 @@ The largest representable floating-point values are exact integers in all standa
 POSIX_specifies that all cases where std::lround or std::llround raise FE_INEXACT are domain errors.<br />
 The double version of std::round behaves as if implemented as follows: </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
-
 #pragma STDC FENV_ACCESS ON
-
 double round(double x)
-
 {
     std::fenv_t save_env;
     std::feholdexcept(&amp;save_env);
@@ -88,7 +84,6 @@ double round(double x)
 <p>#include &lt;climits&gt;<br />
 &nbsp;<wbr>&nbsp;#pragma STDC FENV_ACCESS ON </p>
 <pre><code>int main()
-
 {
     // round
     std::cout &lt;&lt; &quot;round(+2.3) = &quot; &lt;&lt; std::round(2.3)

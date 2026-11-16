@@ -10,7 +10,6 @@ description: "updwtmp, logwtmp – append an entry to the wtmp file"
 <p>updwtmp, logwtmp &#8211; append an entry to the wtmp file</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;utmp.h&gt;
-
 void updwtmp(const char *wtmp_file, const struct utmp *ut);
 void logwtmp(const char *line, const char *name, const char *host);</code></pre>
 <p> For <code>logwtmp</code>(), link with <i>-lutil</i>.</p>
@@ -19,8 +18,8 @@ void logwtmp(const char *line, const char *name, const char *host);</code></pre>
 <p> <code>logwtmp</code>() constructs a utmp structure using <i>line</i>, <i>name</i>, <i>host</i>, current time and current process ID. Then it calls <code>updwtmp</code>() to append the structure to the wtmp file.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/log/wtmp</i></p>
-<dd>database of past user logins</dl>
+<dt><i>/var/log/wtmp</i></dt>
+<dd>database of past user logins</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>
@@ -43,7 +42,6 @@ void logwtmp(const char *line, const char *name, const char *host);</code></pre>
 <h2>Notes</h2>
 <p>For consistency with the other &quot;utmpx&quot; functions (see <code><a href="/docs/linux/man/3-getutxent/">getutxent</a></code>(3)), glibc provides (since version 2.1): </p>
 <pre><code>#include &lt;utmpx.h&gt;
-
 void updwtmpx(const char *wtmpx_file, const struct utmpx *utx);</code></pre>
 <p> This function performs the same task as <code>updwtmp</code>(), but differs in that it takes a <i>utmpx</i> structure as its last argument.</p>
 <h2>See Also</h2>

@@ -14,3 +14,4 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p> 2. Like Perl, PCRE2 allows repeat quantifiers on parenthesized assertions, but they do not mean what you might think. For example, (?!a){3} does not assert that the next three characters are not &quot;a&quot;. It just asserts that the next character is not &quot;a&quot; three times (in principle; PCRE2 optimizes this to run the assertion just once). Perl allows some repeat quantifiers on other assertions, for example, * (but not {3}), but these do not seem to have any use. </p>
 <p> 3. Capture groups that occur inside negative lookaround assertions are counted, but their entries in the offsets vector are set only when a negative assertion is a condition that has a matching branch (that is, the condition is false). </p>
 <p> 4. The following Perl escape sequences are not supported: \F, \l, \L, 
+</p>

@@ -16,14 +16,14 @@ description: "transport – Postfix transport table format"
 <p>The optional <code><a href="/docs/linux/man/5-transport/">transport</a></code>(5) table specifies a mapping from email addresses to message delivery transports and next-hop destinations. Message delivery transports such as <code>local</code> or <code>smtp</code> are defined in the <code>master.cf</code> file, and next-hop destinations are typically hosts or domain names. The table is searched by the <code><a href="/docs/linux/man/8-trivial-rewrite/">trivial-rewrite</a></code>(8) daemon. </p>
 <p> This mapping overrides the default <i>transport</i>:<i>nexthop</i> selection that is built into Postfix:</p>
 <dl>
-<dt><code>local_transport (default: local:$myhostname)</code></p>
-<dd>This is the default for final delivery to domains listed with <code>mydestination</code>, and for [<i>ipaddress</i>] destinations that match <code>$inet_interfaces</code> or <code>$proxy_interfaces</code>. The default <i>nexthop</i> destination is the MTA hostname.</p>
-<dt><code>virtual_transport (default: virtual:)</code></p>
-<dd>This is the default for final delivery to domains listed with <code>virtual_mailbox_domains</code>. The default <i>nexthop</i> destination is the recipient domain.</p>
-<dt><code>relay_transport (default: relay:)</code></p>
-<dd>This is the default for remote delivery to domains listed with <code>relay_domains</code>. In order of decreasing precedence, the <i>nexthop</i> destination is taken from <code>relay_transport</code>, <code>sender_dependent_relayhost_maps</code>, <code>relayhost</code>, or from the recipient domain.</p>
-<dt><code>default_transport (default: smtp:)</code></p>
-<dd>This is the default for remote delivery to other destinations. In order of decreasing precedence, the <i>nexthop</i> destination is taken from <code>sender_dependent_default_transport_maps, default_transport</code>, <code>sender_dependent_relayhost_maps</code>, <code>relayhost</code>, or from the recipient domain.</dl>
+<dt><code>local_transport (default: local:$myhostname)</code></dt>
+<dd>This is the default for final delivery to domains listed with <code>mydestination</code>, and for [<i>ipaddress</i>] destinations that match <code>$inet_interfaces</code> or <code>$proxy_interfaces</code>. The default <i>nexthop</i> destination is the MTA hostname.</dd>
+<dt><code>virtual_transport (default: virtual:)</code></dt>
+<dd>This is the default for final delivery to domains listed with <code>virtual_mailbox_domains</code>. The default <i>nexthop</i> destination is the recipient domain.</dd>
+<dt><code>relay_transport (default: relay:)</code></dt>
+<dd>This is the default for remote delivery to domains listed with <code>relay_domains</code>. In order of decreasing precedence, the <i>nexthop</i> destination is taken from <code>relay_transport</code>, <code>sender_dependent_relayhost_maps</code>, <code>relayhost</code>, or from the recipient domain.</dd>
+<dt><code>default_transport (default: smtp:)</code></dt>
+<dd>This is the default for remote delivery to other destinations. In order of decreasing precedence, the <i>nexthop</i> destination is taken from <code>sender_dependent_default_transport_maps, default_transport</code>, <code>sender_dependent_relayhost_maps</code>, <code>relayhost</code>, or from the recipient domain.</dd></dl>
 <p> Normally, the <code><a href="/docs/linux/man/5-transport/">transport</a></code>(5) table is specified as a text file that serves as input to the <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command. The result, an indexed file in <code>dbm</code> or <code>db</code> format, is used for fast searching by the mail system. Execute the command &quot;<code>postmap /etc/postfix/transport</code>&quot; to rebuild an indexed file after changing the corresponding transport table. </p>
 <p> When the table is provided via other means such as NIS, LDAP or SQL, the same lookups are done as for ordinary indexed files. </p>
 <p> Alternatively, the table can be provided as a regular-expression map where patterns are given as regular expressions, or lookups can be directed to TCP-based server. In those case, the lookups are done in a slightly different way as described below under &quot;REGULAR EXPRESSION TABLES&quot; or &quot;TCP-BASED TABLES&quot;.</p>
@@ -32,27 +32,27 @@ description: "transport – Postfix transport table format"
 <h2>Table Format</h2>
 <p>The input format for the <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command is as follows:</p>
 <dl>
-<dt><i>pattern result</i></p>
-<dd>When <i>pattern</i> matches the recipient address or domain, use the corresponding <i>result</i>.</p>
-<dt>blank lines and comments</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>multi-line text</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
+<dt><i>pattern result</i></dt>
+<dd>When <i>pattern</i> matches the recipient address or domain, use the corresponding <i>result</i>.</dd>
+<dt>blank lines and comments</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>multi-line text</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd></dl>
 <p> The <i>pattern</i> specifies an email address, a domain name, or a domain name hierarchy, as described in section &quot;TABLE LOOKUP&quot;. </p>
 <p> The <i>result</i> is of the form <i>transport:nexthop</i> and specifies how or where to deliver mail. This is described in section &quot;RESULT FORMAT&quot;.</p>
 <h2>Table Search Order</h2>
 <p>With lookups from indexed files such as DB or DBM, or from networked tables such as NIS, LDAP or SQL, patterns are tried in the order as listed below:</p>
 <dl>
-<dt><i>user+extension [at] domain transport</i>:<i>nexthop</i></p>
-<dd>Deliver mail for <i>user+extension [at] domain</i> through <i>transport</i> to <i>nexthop</i>.</p>
-<dt><i>user [at] domain transport</i>:<i>nexthop</i></p>
-<dd>Deliver mail for <i>user [at] domain</i> through <i>transport</i> to <i>nexthop</i>.</p>
-<dt><i>domain transport</i>:<i>nexthop</i></p>
-<dd>Deliver mail for <i>domain</i> through <i>transport</i> to <i>nexthop</i>.</p>
-<dt><i>.domain transport</i>:<i>nexthop</i></p>
-<dd>Deliver mail for any subdomain of <i>domain</i> through <i>transport</i> to <i>nexthop</i>. This applies only when the string <code>transport_maps</code> is not listed in the <code>parent_domain_matches_subdomains</code> configuration setting. Otherwise, a domain name matches itself and its subdomains.</p>
-<dt><code>*</code><i> transport</i>:<i>nexthop</i></p>
-<dd>The special pattern <code>*</code> represents any address (i.e. it functions as the wild-card pattern, and is unique to Postfix transport tables).</dl>
+<dt><i>user+extension [at] domain transport</i>:<i>nexthop</i></dt>
+<dd>Deliver mail for <i>user+extension [at] domain</i> through <i>transport</i> to <i>nexthop</i>.</dd>
+<dt><i>user [at] domain transport</i>:<i>nexthop</i></dt>
+<dd>Deliver mail for <i>user [at] domain</i> through <i>transport</i> to <i>nexthop</i>.</dd>
+<dt><i>domain transport</i>:<i>nexthop</i></dt>
+<dd>Deliver mail for <i>domain</i> through <i>transport</i> to <i>nexthop</i>.</dd>
+<dt><i>.domain transport</i>:<i>nexthop</i></dt>
+<dd>Deliver mail for any subdomain of <i>domain</i> through <i>transport</i> to <i>nexthop</i>. This applies only when the string <code>transport_maps</code> is not listed in the <code>parent_domain_matches_subdomains</code> configuration setting. Otherwise, a domain name matches itself and its subdomains.</dd>
+<dt><code>*</code><i> transport</i>:<i>nexthop</i></dt>
+<dd>The special pattern <code>*</code> represents any address (i.e. it functions as the wild-card pattern, and is unique to Postfix transport tables).</dd></dl>
 <p> Note 1: the null recipient address is looked up as <code>$empty_address_recipient</code>@<code>$myhostname</code> (default: mailer-daemon [at] hostname). </p>
 <p> Note 2: <i>user [at] domain</i> or <i>user+extension [at] domain</i> lookup is available in Postfix 2.0 and later.</p>
 <h2>Result Format</h2>
@@ -94,12 +94,12 @@ description: "transport – Postfix transport table format"
 <h2>Configuration Parameters</h2>
 <p>The following <code>main.cf</code> parameters are especially relevant. The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>empty_address_recipient</code></p>
-<dd>The address that is looked up instead of the null sender address.</p>
-<dt><code>parent_domain_matches_subdomains</code></p>
-<dd>List of Postfix features that use <i>domain.tld</i> patterns to match <i>sub.domain.tld</i> (as opposed to requiring <i>.domain.tld</i> patterns).</p>
-<dt><code>transport_maps</code></p>
-<dd>List of transport lookup tables.</dl>
+<dt><code>empty_address_recipient</code></dt>
+<dd>The address that is looked up instead of the null sender address.</dd>
+<dt><code>parent_domain_matches_subdomains</code></dt>
+<dd>List of Postfix features that use <i>domain.tld</i> patterns to match <i>sub.domain.tld</i> (as opposed to requiring <i>.domain.tld</i> patterns).</dd>
+<dt><code>transport_maps</code></dt>
+<dd>List of transport lookup tables.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-trivial-rewrite/">trivial-rewrite</a>(8), rewrite and resolve addresses
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), master.cf file format

@@ -19,18 +19,18 @@ description: "rapath – print traceroute path information from argus(8) data."
 <h2>RAPATH SPECIFIC OPTIONS</h2>
 <p> Rapath, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-rapath/">rapath</a>(1)</code> specific options are: </p>
 <dl>
-<dt><code>-A</code></p>
-<dd> Draw a description of the path with a legend.</p>
-<dt><code>-M</code><i> pathmodes</i></p>
-<dd> Supported pathmodes are: </p>
+<dt><code>-A</code></dt>
+<dd> Draw a description of the path with a legend.</dd>
+<dt><code>-M</code><i> pathmodes</i></dt>
+<dd> Supported pathmodes are: </dd>
 <pre>
    <code>        node</code> - print a series of nodes that represent the path (default).
    <code>        addr</code> - print the IP addresses, instead of node labels.
   <code>aspath [dist] -</code> print the series of origin AS's along the path. Optional 'dist' adds the ttl range.
    <code>      asnode</code> - print the series of nodes, preceded with their AS's along the path.
 </pre>
-<dt><code>-m</code><i> fields</i></p>
-<dd> Specify modifications to the default flow identifiers. Supported fields are: </p>
+<dt><code>-m</code><i> fields</i></dt>
+<dd> Specify modifications to the default flow identifiers. Supported fields are: </dd>
 <pre><code>
 srcid - the observation domain source identifier.saddr[/ len] - the source address, optionally as a CIDR address.daddr[/ len] - the destination address, optionally as a CIDR address.
 </code></pre>
@@ -60,7 +60,6 @@ srcid - the observation domain source identifier.saddr[/ len] - the source addre
 <p>% rapath &#8211; f ralabel.conf &#8211; r inputfile &#8211; qA &#8211; M asnode 192.168.0.68(192.168.0.68 ::128.2.42.10)AS30496 : [A-&gt;B]-&gt;AS6079 : [C-&gt;{D, E}]-&gt;AS1257 : [F] -&gt; AS11164 : [G-&gt;H]-&gt;AS5050 : [I] -&gt; AS9 : [J-&gt;{K, L}] % rapath &#8211; f ralabel.conf &#8211; r inputfile.last.month &#8211; qA &#8211; M asnode 192.168.0.68(192.168.0.68 ::128.2.42.10)A-&gt;AS30496 : [B] -&gt; AS6079 : [C-&gt;D]-&gt;AS3356 : [E-&gt;F-&gt;G-&gt;{ H, I, J, K } -&gt; { L, M, N } -&gt; O-&gt;P]-&gt;AS9 : [Q-&gt;{R, S}]</p>
 <p> This sample invocation of <code><a href="/docs/linux/man/1-rapath/">rapath</a>(1)</code> demonstrates how to use CIDR address aggregation, using the -m option, to generate path performance data from a class B subnet, to a class C subnet. </p>
 <pre><code>
-
 % rapath - f ralabel.conf - r inputfile - A - m saddr / 16 daddr / 24 - srcid 192.168.0.68 192.168.0.68(192.168.0.0 / 16 ::128.2.42.0 / 24) A-&gt;[B] -&gt; [C-&gt;{D, E}] -&gt; [F] -&gt; [G-&gt;H] -&gt; [I] -&gt; [J-&gt;{K, L}] Node SrcId SrcAddr Dir DstAddr Inode sTtl Mean StdDev Max Min Trans
                                                                                                                                                                                                  A 192.168.0.68 192.168.0.0 /
                                                                                                                                                                                                  16 -&gt; 128.2.42.0 / 24 192.168.0.1 1 0.000686 0.000037 0.000764 0.000627 18 B 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 10.22.96.1 2 0.009329 0.002719 0.019935 0.007435 18 C 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 208.59.246.2 3 0.010686 0.002619 0.020175 0.007698 18 D 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 207.172.15.85 4 0.013988 0.007116 0.032652 0.008923 11 E 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 207.172.15.67 4 0.010188 0.000218 0.010676 0.009932 7 F 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 198.32.118.161 5 0.010865 0.003557 0.019436 0.007937 18 G 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 64.57.20.251 6 0.044649 0.008916 0.076137 0.039844 18 H 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 64.57.21.146 7 0.056345 0.003985 0.065643 0.053371 18 I 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 147.73.16.120 8 0.052594 0.003037 0.061770 0.050151 18 J 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 128.2.255.249 9 0.055147 0.002541 0.064620 0.053151 18 K 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 128.2.255.212 10 0.051835 0.000326 0.052362 0.051392 9 L 192.168.0.68 192.168.0.0 / 16 -&gt; 128.2.42.0 / 24 128.2.255.205 10 0.054236 0.000658 0.055198 0.053028 9

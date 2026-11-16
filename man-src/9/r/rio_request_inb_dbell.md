@@ -14,23 +14,23 @@ description: "rio_request_inb_dbell – request inbound doorbell message service
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO master port from which to allocate the doorbell resource</dl>
+</dd><dd>RIO master port from which to allocate the doorbell resource</dd></dl>
 <p> <i>dev_id</i></p>
 <dl>
-<dd>Device specific pointer to pass on event</dl>
+<dd>Device specific pointer to pass on event</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>Doorbell info range start</dl>
+<dd>Doorbell info range start</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>Doorbell info range end</dl>
+<dd>Doorbell info range end</dd></dl>
 <p> <i>dinb</i></p>
 <dl>
-<dd>Callback to execute when doorbell is received</dl>
+<dd>Callback to execute when doorbell is received</dd></dl>
 <h2>Description</h2>
 <p>Requests ownership of an inbound doorbell resource and binds a callback function to the resource. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

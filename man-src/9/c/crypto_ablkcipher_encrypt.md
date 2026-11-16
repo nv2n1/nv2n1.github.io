@@ -14,7 +14,7 @@ description: "crypto_ablkcipher_encrypt – encrypt plaintext"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>reference to the ablkcipher_request handle that holds all information needed to perform the cipher operation</dl>
+</dd><dd>reference to the ablkcipher_request handle that holds all information needed to perform the cipher operation</dd></dl>
 <h2>Description</h2>
 <p>Encrypt plaintext data using the ablkcipher_request handle. That data structure and how it is filled with data is discussed with the ablkcipher_request_* functions.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_ablkcipher_encrypt – encrypt plaintext"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

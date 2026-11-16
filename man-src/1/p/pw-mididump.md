@@ -19,12 +19,12 @@ pw - mididump[options][FILE]
 <p> When no file is given, <code>pw-mididump</code> creates a PipeWire MIDI input stream and will print all MIDI events received on the port to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r | &#8211;remote=NAME</code></p>
-<dd> The name the remote instance to monitor. If left unspecified, a connection is made to the default PipeWire instance.</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information.</dl>
+<dt><code>-r | &#8211;remote=NAME</code></dt>
+<dd> The name the remote instance to monitor. If left unspecified, a connection is made to the default PipeWire instance.</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The PipeWire Developers &lt;<i><a rel="nofollow" href="https://gitlab.freedesktop.org/pipewire/pipewire/issues">https://gitlab.freedesktop.org/pipewire/pipewire/issues</a></i>&gt;; PipeWire is available from <i><a rel="nofollow" href="https://pipewire.org">https://pipewire.org</a></i></p>
 <h2>SEE ALSO</h2>

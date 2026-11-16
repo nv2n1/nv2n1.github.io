@@ -11,7 +11,6 @@ std::tmpfile - std::tmpfile
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cstdio&gt;
-
 std::FILE* tmpfile();</code></pre> 
 Creates and opens a temporary file with a unique auto-generated filename. 
 The file is opened as a binary file for update (as by std::fopen with access mode &quot;wb+&quot;). At least TMP_MAX files may be opened during the lifetime of a program (this limit may be shared with std::tmpnam and may be further limited by FOPEN_MAX). 
@@ -35,16 +34,11 @@ On some implementations (e.g. Windows), elevated privileges are required as the 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     std::FILE *tmpf = std::tmpfile();
     std::fputs(&quot;Hello, world&quot;, tmpf);

@@ -14,48 +14,48 @@ description: "jinfo – Configuration Info"
 <code>jinfo</code> [ option ] [server-id@]remote-hostname-or-IP </pre>
 <h2>Parameters</h2>
 <dl>
-<dt>option</p>
-<dd>Options are mutually exclusive. Option, if used, should follow immediately after the command name.</p>
-<dt>pid</p>
-<dd>process id for which the configuration info is to be printed. The process must be a Java process. To get a list of Java processes running on a machine, jps may be used.</p>
-<dt>executable</p>
-<dd>Java executable from which the core dump was produced.</p>
-<dt>core</p>
-<dd>core file for which the configuration info is to be printed.</p>
-<dt>remote-hostname-or-IP</p>
-<dd>remote debug server&#8217;s (see jsadebugd) hostname or IP address.</p>
-<dt>server-id</p>
-<dd>optional unique id, if multiple debug servers are running on the same remote host.</dl>
+<dt>option</dt>
+<dd>Options are mutually exclusive. Option, if used, should follow immediately after the command name.</dd>
+<dt>pid</dt>
+<dd>process id for which the configuration info is to be printed. The process must be a Java process. To get a list of Java processes running on a machine, jps may be used.</dd>
+<dt>executable</dt>
+<dd>Java executable from which the core dump was produced.</dd>
+<dt>core</dt>
+<dd>core file for which the configuration info is to be printed.</dd>
+<dt>remote-hostname-or-IP</dt>
+<dd>remote debug server&#8217;s (see jsadebugd) hostname or IP address.</dd>
+<dt>server-id</dt>
+<dd>optional unique id, if multiple debug servers are running on the same remote host.</dd></dl>
 <h2>Description</h2>
 <p><code>jinfo</code> prints Java configuration information for a given Java process or core file or a remote debug server. Configuration information includes Java System properties and Java virtual machine command line flags. If the given process is running on a 64-bit VM, you may need to specify the <i>-J-d64</i> option, e.g.: </p>
 <dl>
-<dd>jinfo -J-d64 -sysprops pid</dl>
+<dd>jinfo -J-d64 -sysprops pid</dd></dl>
 <p> <code>NOTE &#8211; This utility is unsupported and may or may not be available in future versions of the JDK. On Windows, jinfo only supports the -flag option of a running process.</code> </p>
 <h2>Options</h2>
 <dl>
-<dt>&lt;no option&gt;</p>
-<dd>prints both command line flags as well as System properties name, value pairs. </p>
-<dt>-flag name</p>
-<dd>prints the name and value of the given command line flag. </p>
-<dt>-flag [+|-]name</p>
-<dd>enables or disables the given boolean command line flag. </p>
-<dt>-flag name=value</p>
-<dd>sets the given command line flag to the specified value. </p>
-<dt>-flags</p>
-<dd>prints command line flags passed to the JVM. pairs. </p>
-<dt>-sysprops</p>
-<dd>prints Java System properties as name, value pairs. </p>
-<dt>-h</p>
-<dd>prints a help message</p>
-<dt>-help</p>
-<dd>prints a help message</dl>
+<dt>&lt;no option&gt;</dt>
+<dd>prints both command line flags as well as System properties name, value pairs. </dd>
+<dt>-flag name</dt>
+<dd>prints the name and value of the given command line flag. </dd>
+<dt>-flag [+|-]name</dt>
+<dd>enables or disables the given boolean command line flag. </dd>
+<dt>-flag name=value</dt>
+<dd>sets the given command line flag to the specified value. </dd>
+<dt>-flags</dt>
+<dd>prints command line flags passed to the JVM. pairs. </dd>
+<dt>-sysprops</dt>
+<dd>prints Java System properties as name, value pairs. </dd>
+<dt>-h</dt>
+<dd>prints a help message</dd>
+<dt>-help</dt>
+<dd>prints a help message</dd></dl>
 <h2>See Also</h2>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>jps</p>
-<dt>*</p>
-<dd>jsadebugd</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>jps</dd>
+<dt>*</dt>
+<dd>jsadebugd</dd></dl>
 </dl>
 <p>&nbsp;<wbr></p>

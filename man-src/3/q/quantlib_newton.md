@@ -17,9 +17,9 @@ description: "QuantLib::Newton – Newton 1-D solver"
 <p>Newton 1-D solver </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This solver requires that the passed function object implement a method Real derivative(Real).</dl>
+<dd>This solver requires that the passed function object implement a method Real derivative(Real).</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking them against known good results.</dl>
+<dd>the correctness of the returned values is tested by checking them against known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

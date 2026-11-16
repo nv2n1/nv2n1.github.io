@@ -11,18 +11,18 @@ description: "XkbGetKeyboard – Retrieves one or more components of a keyboard 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbDescPtr XkbGetKeyboard</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>bits_to_change</i></p>
-<dd>determines events to be selected / deselected</p>
-<dt><i>values_for_bits</i></p>
-<dd>1=&gt;select, 0-&gt;deselect; for events in bits_to_change</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>bits_to_change</i></dt>
+<dd>determines events to be selected / deselected</dd>
+<dt><i>values_for_bits</i></dt>
+<dd>1=&gt;select, 0-&gt;deselect; for events in bits_to_change</dd></dl>
 <h2>Description</h2>
 <p><i>XkbGetKeyboard </i> allocates and returns a pointer to a keyboard description. It queries the server for those components specified in the <i>which </i> parameter for device <i>device_spec </i> and copies the results to the XkbDescRec it allocated. The remaining fields in the keyboard description are set to NULL. The valid masks for <i>which </i> are those listed in Table 1. </p>
 <table>
@@ -99,6 +99,6 @@ description: "XkbGetKeyboard – Retrieves one or more components of a keyboard 
 <p> <i>XkbGetKeyboardByName(dpy, device_spec, </i> NULL, <i>which, which, </i> False).</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">BadAlloc</font></p>
-<dd>Unable to allocate storage </p>
+<dt><font SIZE="-1">BadAlloc</font></dt>
+<dd>Unable to allocate storage </dd>
 </dl>

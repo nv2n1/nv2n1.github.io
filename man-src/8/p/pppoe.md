@@ -15,40 +15,40 @@ description: "pppoe – user-space PPPoE client."
 <p><code>pppoe</code> is a user-space client for PPPoE (Point-to-Point Protocol over Ethernet) for Linux and other UNIX systems. <code>pppoe</code> works in concert with the <code>pppd</code> PPP daemon to provide a PPP connection over Ethernet, as is used by many DSL service providers. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-I </code><i>interface</i></p>
-<dd>The <code>-I</code> option specifies the Ethernet interface to use. Under Linux, it is typically <i>eth0</i> or <i>eth1</i>. The interface should be &quot;up&quot; before you start <code>pppoe</code>, but should <i>not</i> be configured to have an IP address. </p>
-<dt><code>-T </code><i>timeout</i></p>
-<dd>The <code>-T</code> option causes <code>pppoe</code> to exit if no session traffic is detected for <i>timeout</i> seconds. I recommend that you use this option as an extra safety measure, but if you do, you should make sure that PPP generates enough traffic so the timeout will normally not be triggered. The best way to do this is to use the <i>lcp-echo-interval</i> option to <code>pppd</code>. You should set the PPPoE timeout to be about four times the LCP echo interval. </p>
-<dt><code>-D </code><i>file_name</i></p>
-<dd>The <code>-D</code> option causes every packet to be dumped to the specified <i>file_name</i>. This is intended for debugging only; it produces huge amounts of output and greatly reduces performance. </p>
-<dt><code>-V</code></p>
-<dd>The <code>-V</code> option causes <code>pppoe</code> to print its version number and exit. </p>
-<dt><code>-A</code></p>
-<dd>The <code>-A</code> option causes <code>pppoe</code> to send a PADI packet and then print the names of access concentrators in each PADO packet it receives. Do not use this option in conjunction with <code>pppd</code>; the <code>-A</code> option is meant to be used interactively to give interesting information about the access concentrator. </p>
-<dt><code>-S </code><i>service_name</i></p>
-<dd>Specifies the desired service name. <code>pppoe</code> will only initiate sessions with access concentrators which can provide the specified service. In most cases, you should <i>not</i> specify this option. Use it only if you know that there are multiple access concentrators or know that you need a specific service name. </p>
-<dt><code>-C </code><i>ac_name</i></p>
-<dd>Specifies the desired access concentrator name. <code>pppoe</code> will only initiate sessions with the specified access concentrator. In most cases, you should <i>not</i> specify this option. Use it only if you know that there are multiple access concentrators. If both the <code>-S</code> and <code>-C</code> options are specified, they must <i>both</i> match for <code>pppoe</code> to initiate a session. </p>
-<dt><code>-U</code></p>
-<dd>Causes <code>pppoe</code> to use the Host-Uniq tag in its discovery packets. This lets you run multiple <code>pppoe</code> daemons without having their discovery packets interfere with one another. You must supply this option to <i>all</i> <code>pppoe</code> daemons if you intend to run multiple daemons simultaneously. </p>
-<dt><code>-s</code></p>
-<dd>Causes <code>pppoe</code> to use <i>synchronous</i> PPP encapsulation. If you use this option, then you <i>must</i> use the <code>sync</code> option with <code>pppd</code>. You are encouraged to use this option if it works, because it greatly reduces the CPU overhead of <code>pppoe</code>. However, it MAY be unreliable on slow machines &#8212; there is a race condition between pppd writing data and pppoe reading it. For this reason, the default setting is asynchronous. If you encounter bugs or crashes with Synchronous PPP, turn it off &#8212; don&#8217;t e-mail me for support! </p>
-<dt><code>-m </code><i>MSS</i></p>
-<dd>Causes <code>pppoe</code> to <i>clamp</i> the TCP maximum segment size at the specified value. Because of PPPoE overhead, the maximum segment size for PPPoE is smaller than for normal Ethernet encapsulation. This could cause problems for machines on a LAN behind a gateway using PPPoE. If you have a LAN behind a gateway, and the gateway connects to the Internet using PPPoE, you are strongly recommended to use a <code>-m 1412</code> option. This avoids having to set the MTU on all the hosts on the LAN. </p>
-<dt><code>-p </code><i>file</i></p>
-<dd>Causes <code>pppoe</code> to write its process-ID to the specified file. This can be used to locate and kill <code>pppoe</code> processes. </p>
-<dt><code>-e </code><i>sess:mac</i></p>
-<dd>Causes <code>pppoe</code> to skip the discovery phase and move directly to the session phase. The session is given by <i>sess</i> and the MAC address of the peer by <i>mac</i>. This mode is <i>not</i> meant for normal use; it is designed only for <code><a href="/docs/linux/man/8-pppoe-server/">pppoe-server</a></code>(8). </p>
-<dt><code>-n</code></p>
-<dd>Causes <code>pppoe</code> not to open a discovery socket. This mode is <i>not</i> meant for normal use; it is designed only for <code><a href="/docs/linux/man/8-pppoe-server/">pppoe-server</a></code>(8). </p>
-<dt><code>-k</code></p>
-<dd>Causes <code>pppoe</code> to terminate an existing session by sending a PADT frame, and then exit. You must use the <code>-e</code> option in conjunction with this option to specify the session to kill. This may be useful for killing sessions when a buggy peer does not realize the session has ended. </p>
-<dt><code>-d</code></p>
-<dd>Causes <code>pppoe</code> to perform discovery and then exit, after printing session information to standard output. The session information is printed in exactly the format expected by the <code>-e</code> option. This option lets you initiate a PPPoE discovery, perform some other work, and then start the actual PPP session. <i>Be careful</i>; if you use this option in a loop, you can create many sessions, which may annoy your peer. </p>
-<dt><code>-f disc:sess</code></p>
-<dd>The <code>-f</code> option sets the Ethernet frame types for PPPoE discovery and session frames. The types are specified as hexadecimal numbers separated by a colon. Standard PPPoE uses frame types 8863:8864. <i>You should not use this option</i> unless you are absolutely sure the peer you are dealing with uses non-standard frame types. If your ISP uses non-standard frame types, complain! </p>
-<dt><code>-h</code></p>
-<dd>The <code>-h</code> option causes <code>pppoe</code> to print usage information and exit. </p>
+<dt><code>-I </code><i>interface</i></dt>
+<dd>The <code>-I</code> option specifies the Ethernet interface to use. Under Linux, it is typically <i>eth0</i> or <i>eth1</i>. The interface should be &quot;up&quot; before you start <code>pppoe</code>, but should <i>not</i> be configured to have an IP address. </dd>
+<dt><code>-T </code><i>timeout</i></dt>
+<dd>The <code>-T</code> option causes <code>pppoe</code> to exit if no session traffic is detected for <i>timeout</i> seconds. I recommend that you use this option as an extra safety measure, but if you do, you should make sure that PPP generates enough traffic so the timeout will normally not be triggered. The best way to do this is to use the <i>lcp-echo-interval</i> option to <code>pppd</code>. You should set the PPPoE timeout to be about four times the LCP echo interval. </dd>
+<dt><code>-D </code><i>file_name</i></dt>
+<dd>The <code>-D</code> option causes every packet to be dumped to the specified <i>file_name</i>. This is intended for debugging only; it produces huge amounts of output and greatly reduces performance. </dd>
+<dt><code>-V</code></dt>
+<dd>The <code>-V</code> option causes <code>pppoe</code> to print its version number and exit. </dd>
+<dt><code>-A</code></dt>
+<dd>The <code>-A</code> option causes <code>pppoe</code> to send a PADI packet and then print the names of access concentrators in each PADO packet it receives. Do not use this option in conjunction with <code>pppd</code>; the <code>-A</code> option is meant to be used interactively to give interesting information about the access concentrator. </dd>
+<dt><code>-S </code><i>service_name</i></dt>
+<dd>Specifies the desired service name. <code>pppoe</code> will only initiate sessions with access concentrators which can provide the specified service. In most cases, you should <i>not</i> specify this option. Use it only if you know that there are multiple access concentrators or know that you need a specific service name. </dd>
+<dt><code>-C </code><i>ac_name</i></dt>
+<dd>Specifies the desired access concentrator name. <code>pppoe</code> will only initiate sessions with the specified access concentrator. In most cases, you should <i>not</i> specify this option. Use it only if you know that there are multiple access concentrators. If both the <code>-S</code> and <code>-C</code> options are specified, they must <i>both</i> match for <code>pppoe</code> to initiate a session. </dd>
+<dt><code>-U</code></dt>
+<dd>Causes <code>pppoe</code> to use the Host-Uniq tag in its discovery packets. This lets you run multiple <code>pppoe</code> daemons without having their discovery packets interfere with one another. You must supply this option to <i>all</i> <code>pppoe</code> daemons if you intend to run multiple daemons simultaneously. </dd>
+<dt><code>-s</code></dt>
+<dd>Causes <code>pppoe</code> to use <i>synchronous</i> PPP encapsulation. If you use this option, then you <i>must</i> use the <code>sync</code> option with <code>pppd</code>. You are encouraged to use this option if it works, because it greatly reduces the CPU overhead of <code>pppoe</code>. However, it MAY be unreliable on slow machines &#8212; there is a race condition between pppd writing data and pppoe reading it. For this reason, the default setting is asynchronous. If you encounter bugs or crashes with Synchronous PPP, turn it off &#8212; don&#8217;t e-mail me for support! </dd>
+<dt><code>-m </code><i>MSS</i></dt>
+<dd>Causes <code>pppoe</code> to <i>clamp</i> the TCP maximum segment size at the specified value. Because of PPPoE overhead, the maximum segment size for PPPoE is smaller than for normal Ethernet encapsulation. This could cause problems for machines on a LAN behind a gateway using PPPoE. If you have a LAN behind a gateway, and the gateway connects to the Internet using PPPoE, you are strongly recommended to use a <code>-m 1412</code> option. This avoids having to set the MTU on all the hosts on the LAN. </dd>
+<dt><code>-p </code><i>file</i></dt>
+<dd>Causes <code>pppoe</code> to write its process-ID to the specified file. This can be used to locate and kill <code>pppoe</code> processes. </dd>
+<dt><code>-e </code><i>sess:mac</i></dt>
+<dd>Causes <code>pppoe</code> to skip the discovery phase and move directly to the session phase. The session is given by <i>sess</i> and the MAC address of the peer by <i>mac</i>. This mode is <i>not</i> meant for normal use; it is designed only for <code><a href="/docs/linux/man/8-pppoe-server/">pppoe-server</a></code>(8). </dd>
+<dt><code>-n</code></dt>
+<dd>Causes <code>pppoe</code> not to open a discovery socket. This mode is <i>not</i> meant for normal use; it is designed only for <code><a href="/docs/linux/man/8-pppoe-server/">pppoe-server</a></code>(8). </dd>
+<dt><code>-k</code></dt>
+<dd>Causes <code>pppoe</code> to terminate an existing session by sending a PADT frame, and then exit. You must use the <code>-e</code> option in conjunction with this option to specify the session to kill. This may be useful for killing sessions when a buggy peer does not realize the session has ended. </dd>
+<dt><code>-d</code></dt>
+<dd>Causes <code>pppoe</code> to perform discovery and then exit, after printing session information to standard output. The session information is printed in exactly the format expected by the <code>-e</code> option. This option lets you initiate a PPPoE discovery, perform some other work, and then start the actual PPP session. <i>Be careful</i>; if you use this option in a loop, you can create many sessions, which may annoy your peer. </dd>
+<dt><code>-f disc:sess</code></dt>
+<dd>The <code>-f</code> option sets the Ethernet frame types for PPPoE discovery and session frames. The types are specified as hexadecimal numbers separated by a colon. Standard PPPoE uses frame types 8863:8864. <i>You should not use this option</i> unless you are absolutely sure the peer you are dealing with uses non-standard frame types. If your ISP uses non-standard frame types, complain! </dd>
+<dt><code>-h</code></dt>
+<dd>The <code>-h</code> option causes <code>pppoe</code> to print usage information and exit. </dd>
 </dl>
 <h2>Pppoe Background</h2>
 <p>PPPoE (Point-to-Point Protocol over Ethernet) is described in RFC 2516 and is a protocol which allows the session abstraction to be maintained over bridged Ethernet networks. </p>
@@ -59,18 +59,18 @@ description: "pppoe – user-space PPPoE client."
 <h2>Design Goals</h2>
 <p>My design goals for this PPPoE client were as follows, in descending order of importance: </p>
 <dl>
-<dt><code>o</code></p>
-<dd>It must work. </p>
-<dt><code>o</code></p>
-<dd>It must be a user-space program and not a kernel patch. </p>
-<dt><code>o</code></p>
-<dd>The code must be easy to read and maintain. </p>
-<dt><code>o</code></p>
-<dd>It must be fully compliant with RFC 2516, the proposed PPPoE standard. </p>
-<dt><code>o</code></p>
-<dd>It must never hang up forever &#8212; if the connection is broken, it must detect this and exit, allowing a wrapper script to restart the connection. </p>
-<dt><code>o</code></p>
-<dd>It must be fairly efficient. </p>
+<dt><code>o</code></dt>
+<dd>It must work. </dd>
+<dt><code>o</code></dt>
+<dd>It must be a user-space program and not a kernel patch. </dd>
+<dt><code>o</code></dt>
+<dd>The code must be easy to read and maintain. </dd>
+<dt><code>o</code></dt>
+<dd>It must be fully compliant with RFC 2516, the proposed PPPoE standard. </dd>
+<dt><code>o</code></dt>
+<dd>It must never hang up forever &#8212; if the connection is broken, it must detect this and exit, allowing a wrapper script to restart the connection. </dd>
+<dt><code>o</code></dt>
+<dd>It must be fairly efficient. </dd>
 </dl>
 <p> I believe I have achieved all of these goals, but (of course) am open to suggestions, patches and ideas. See my home page, <a rel="nofollow" href="http://www.roaringpenguin.com,">http://www.roaringpenguin.com,</a> for contact information.</p>
 <h2>Notes</h2>

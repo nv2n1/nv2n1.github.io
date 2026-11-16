@@ -88,10 +88,10 @@ description: "inode.h –"
 <p>C wrapper for DMLite INode API. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dl>
+<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This is a low-level API, so security checks will NOT be done.</dl>
+<dd>This is a low-level API, so security checks will NOT be done.</dd></dl>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>dmlite_idir</code> <code>dmlite_idir</code></h3>
 <p>Opaque directory handler</p>
@@ -104,93 +104,93 @@ description: "inode.h –"
 <p>Posible file statuses </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>kOnline </i></p>
+<dt><i>kOnline </i></dt>
 <dd>
-<dt><i>kMigrated </i></p>
-<dd></dl>
+</dd><dt><i>kMigrated </i></dt>
+<dd></dd></dl>
 <h3>enum <code>dmlite_replica_status</code></h3>
 <p>Possible replica statuses </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>kAvailable </i></p>
+<dt><i>kAvailable </i></dt>
 <dd>
-<dt><i>kBeingPopulated </i></p>
+</dd><dt><i>kBeingPopulated </i></dt>
 <dd>
-<dt><i>kToBeDeleted </i></p>
-<dd></dl>
+</dd><dt><i>kToBeDeleted </i></dt>
+<dd></dd></dl>
 <h3>enum <code>dmlite_replica_type</code></h3>
 <p>Possible replica types </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>kVolatile </i></p>
+<dt><i>kVolatile </i></dt>
 <dd>
-<dt><i>kPermanent </i></p>
-<dd></dl>
+</dd><dt><i>kPermanent </i></dt>
+<dd></dd></dl>
 <h2>Function Documentation</h2>
 <h3>int dmlite_iaddreplica (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)</h3>
 <p>Adds a new replica. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>replica</i> The replica to add. replica-&gt;fileid must point to a valid file.</dl>
+ <i>replica</i> The replica to add. replica-&gt;fileid must point to a valid file.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_ibegin (<code>dmlite_context</code> *context)</h3>
 <p>Starts a transaction. Depending on the plugin stack, it can be possible to nest several calls. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.</dl>
+<dd><i>context</i> The DM context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_iclosedir (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)</h3>
 <p>Closes a directory, freeing any internally allocated memory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>dir</i> The directory to close, as returned by dmlite_opendir.</dl>
+ <i>dir</i> The directory to close, as returned by dmlite_opendir.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_icommit (<code>dmlite_context</code> *context)</h3>
 <p>Commits the changes. Depending on the plugin stack, it can be possible to nest several calls, and there must be one icommit per ibegin for the changes to be permanent. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.</dl>
+<dd><i>context</i> The DM context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_icreate (<code>dmlite_context</code> *context, const <code>dmlite_xstat</code> *f)</h3>
 <p>Creates a new file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>f</i> Only some fields from this struct will be used. That would depend on the plugin, but usually it will be: parent, name, mode, uid, gid, size, status, checksum and ACL.</dl>
+ <i>f</i> Only some fields from this struct will be used. That would depend on the plugin, but usually it will be: parent, name, mode, uid, gid, size, status, checksum and ACL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>mode will probably be used raw (i.e. no cleanup or set of format bits)</dl>
+<dd>mode will probably be used raw (i.e. no cleanup or set of format bits)</dd></dl>
 <h3>int dmlite_ideletecomment (<code>dmlite_context</code> *context, ino_tinode)</h3>
 <p>Deletes the comment associated with an entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.</dl>
+ <i>inode</i> The file id.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_ideletereplica (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)</h3>
 <p>Deletes a replica. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>replica</i> The replica to remove.</dl>
+ <i>replica</i> The replica to remove.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_igetcomment (<code>dmlite_context</code> *context, ino_tinode, char *comment, size_tbufsize)</h3>
 <p>Gets the comment associated with an entry. </p>
 <p> <code>Parameters:</code></p>
@@ -198,20 +198,20 @@ description: "inode.h –"
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
  <i>comment</i> Where to put the comment.<br />
- <i>bufsize</i> The size of the memory pointed by comment.</dl>
+ <i>bufsize</i> The size of the memory pointed by comment.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_igetreplica (<code>dmlite_context</code> *context, int64_trid, <code>dmlite_replica</code> *buf)</h3>
 <p>Gets a specific replica using its replica id. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>rid</i> The replica id.<br />
- <i>buf</i> Where to put the retrieved data.</dl>
+ <i>buf</i> Where to put the retrieved data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_igetreplicas (<code>dmlite_context</code> *context, ino_tinode, unsigned *nreplicas, <code>dmlite_replica</code> **replicas)</h3>
 <p>Gets all the replicas associated to a file. </p>
 <p> <code>Parameters:</code></p>
@@ -219,53 +219,53 @@ description: "inode.h –"
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
  <i>nreplicas</i> The number of replicas will be put here.<br />
- <i>replicas</i> It will be initialized to an array of nreplicas replicas. Free it with <code>dmlite_replicas_free</code>.</dl>
+ <i>replicas</i> It will be initialized to an array of nreplicas replicas. Free it with <code>dmlite_replicas_free</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_imove (<code>dmlite_context</code> *context, ino_tinode, ino_tdest)</h3>
 <p>Moves a file to a different parent directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
- <i>dest</i> The destination id.</dl>
+ <i>dest</i> The destination id.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3><code>dmlite_idir</code>* dmlite_iopendir (<code>dmlite_context</code> *context, ino_tinode)</h3>
 <p>Opens a directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>inode</i> The directory ID.</dl>
+ <i>inode</i> The directory ID.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>NULL on failure. A pointer to an internal struct to be used with dmlite_ireaddir*</dl>
+<dd>NULL on failure. A pointer to an internal struct to be used with dmlite_ireaddir*</dd></dl>
 <h3>struct dirent* dmlite_ireaddir (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)</h3>
 <p>Reads a directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>dir</i> The directory to read, as returned by dmlite_opendir.</dl>
+ <i>dir</i> The directory to read, as returned by dmlite_opendir.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to a struct with the recovered data. NULL on failure, or end of dir. If an error occurred, dm_errno(context) will be different than 0.</dl>
+<dd>A pointer to a struct with the recovered data. NULL on failure, or end of dir. If an error occurred, dm_errno(context) will be different than 0.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The pointer is internally allocated. Do not free it.</dl>
+<dd>The pointer is internally allocated. Do not free it.</dd></dl>
 <h3><code>dmlite_xstat</code>* dmlite_ireaddirx (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)</h3>
 <p>Reads a directory. Extended data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>dir</i> The directory to read, as returned by dmlite_opendir.</dl>
+ <i>dir</i> The directory to read, as returned by dmlite_opendir.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to a struct with the recovered data. NULL on failure, or end of dir. If an error occurred, dm_errno(context) will be different than 0.</dl>
+<dd>A pointer to a struct with the recovered data. NULL on failure, or end of dir. If an error occurred, dm_errno(context) will be different than 0.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The pointer is internally allocated. Do not free it.</dl>
+<dd>The pointer is internally allocated. Do not free it.</dd></dl>
 <h3>int dmlite_ireadlink (<code>dmlite_context</code> *context, ino_tinode, char *path, size_tbufsize)</h3>
 <p>Reads a symbolic link. </p>
 <p> <code>Parameters:</code></p>
@@ -273,28 +273,28 @@ description: "inode.h –"
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
  <i>path</i> The link will be put here.<br />
- <i>bufsize</i> The size of the memory area pointed by path.</dl>
+ <i>bufsize</i> The size of the memory area pointed by path.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_irename (<code>dmlite_context</code> *context, ino_tinode, const char *name)</h3>
 <p>Changes the name of an entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
- <i>name</i> The new name.</dl>
+ <i>name</i> The new name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_irollback (<code>dmlite_context</code> *context)</h3>
 <p>Undo the changes. If several ibegin were nested, all the transactions will be probable be undone, regardless on the nesting level. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.</dl>
+<dd><i>context</i> The DM context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_isetchecksum (<code>dmlite_context</code> *context, ino_tinode, const char *csumtype, const char *csumvalue)</h3>
 <p>Sets the checksum of a file. </p>
 <p> <code>Parameters:</code></p>
@@ -302,30 +302,30 @@ description: "inode.h –"
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
  <i>csumtype</i> The new checksum type.<br />
- <i>csumvalue</i> The new checksum value.</dl>
+ <i>csumvalue</i> The new checksum value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_isetcomment (<code>dmlite_context</code> *context, ino_tinode, const char *comment)</h3>
 <p>Sets the comment associated with an entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
- <i>comment</i> The new comment.</dl>
+ <i>comment</i> The new comment.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_isetguid (<code>dmlite_context</code> *context, ino_tinode, const char *guid)</h3>
 <p>Sets the file Grid Unique Identifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The entry id.<br />
- <i>guid</i> The new GUID.</dl>
+ <i>guid</i> The new GUID.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_isetmode (<code>dmlite_context</code> *context, ino_tinode, uid_tuid, gid_tgid, mode_tmode, unsignednentries, <code>dmlite_aclentry</code> *acl)</h3>
 <p>Sets the mode and ACL of a file. </p>
 <p> <code>Parameters:</code></p>
@@ -336,49 +336,49 @@ description: "inode.h –"
  <i>gid</i> The new GID.<br />
  <i>mode</i> The new mode.<br />
  <i>nentries</i> The number of acl entries.<br />
- <i>acl</i> The new ACL.</dl>
+ <i>acl</i> The new ACL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This call may not validate that uid, gid, mode and acl are coherent.</dl>
+<dd>This call may not validate that uid, gid, mode and acl are coherent.</dd></dl>
 <h3>int dmlite_isetsize (<code>dmlite_context</code> *context, ino_tinode, size_tsize)</h3>
 <p>Sets the size of a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
- <i>size</i> The new size.</dl>
+ <i>size</i> The new size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_istat (<code>dmlite_context</code> *context, ino_tinode, struct stat *buf)</h3>
 <p>Does a stat of an entry using the inode instead of the path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The entry inode.<br />
- <i>buf</i> Where to put the retrieved information.</dl>
+ <i>buf</i> Where to put the retrieved information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Security checks won&#8217;t be done if you use this function, so keep in mind doing it yourself.</dl>
+<dd>Security checks won&#8217;t be done if you use this function, so keep in mind doing it yourself.</dd></dl>
 <h3>int dmlite_istatx (<code>dmlite_context</code> *context, ino_tinode, <code>dmlite_xstat</code> *buf)</h3>
 <p>Does an extended stat of an entry using the inode instead of the path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The entry inode.<br />
- <i>buf</i> Where to put the retrieved information.</dl>
+ <i>buf</i> Where to put the retrieved information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Security checks won&#8217;t be done if you use this function, so keep in mind doing it yourself.</dl>
+<dd>Security checks won&#8217;t be done if you use this function, so keep in mind doing it yourself.</dd></dl>
 <h3>int dmlite_istatx_by_name (<code>dmlite_context</code> *context, ino_tparent, const char *name, <code>dmlite_xstat</code> *buf)</h3>
 <p>Does an extended stat using the parent inode and the entry name. </p>
 <p> <code>Parameters:</code></p>
@@ -386,51 +386,51 @@ description: "inode.h –"
 <dd><i>context</i> The DM context.<br />
  <i>parent</i> The parent id.<br />
  <i>name</i> The entry name.<br />
- <i>buf</i> Where to put the retrieved information.</dl>
+ <i>buf</i> Where to put the retrieved information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_isymlink (<code>dmlite_context</code> *context, ino_tinode, const char *link)</h3>
 <p>Associates a symlink with an existing file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file that will be a symlink.<br />
- <i>link</i> The destination link.</dl>
+ <i>link</i> The destination link.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_iunlink (<code>dmlite_context</code> *context, ino_tinode)</h3>
 <p>Removes a file or directory from the database. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>inode</i> The id of the entry to remove.</dl>
+ <i>inode</i> The id of the entry to remove.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Not empty directories, or files will replicas may fail.</dl>
+<dd>Not empty directories, or files will replicas may fail.</dd></dl>
 <h3>int dmlite_iupdate_xattr (<code>dmlite_context</code> *context, ino_tinode, const <code>dmlite_any_dict</code> *xattr)</h3>
 <p>Updates the file extended attributes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The entry id.<br />
- <i>xattr</i> The new set of extended attributes.</dl>
+ <i>xattr</i> The new set of extended attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_iutime (<code>dmlite_context</code> *context, ino_tinode, const struct utimbuf *buf)</h3>
 <p>Sets the access and modification time. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>inode</i> The file id.<br />
- <i>buf</i> The timestamps.</dl>
+ <i>buf</i> The timestamps.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for dmlite from the source code.</p>

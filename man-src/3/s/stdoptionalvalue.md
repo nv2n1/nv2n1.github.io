@@ -12,12 +12,9 @@ std::optional&lt;T&gt;::value - std::optional&lt;T&gt;::value
 
 <pre><code>constexpr T &amp;value() &amp;;
 (1)(since C++ 17)
-
     constexpr const T &amp;value() const &amp;;
-
 constexpr T &amp;&amp;value() &amp;&amp;;
 (2)(since C++ 17)
-
     constexpr const T &amp;&amp;value() const &amp;&amp;;</code></pre> 
 If *this contains a value, returns a reference to the contained value. 
 Otherwise, throws a std::bad_optional_access exception. 
@@ -41,11 +38,8 @@ The dereference operator operator*() does not check if this optional contains a 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;optional&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::optional&lt;int&gt; opt = {};
     try {

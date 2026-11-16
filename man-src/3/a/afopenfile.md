@@ -23,37 +23,37 @@ description: "afOpenFile – open an audio file and create a file handle structu
 <p>afOpenFile can produce the following errors: </p>
 <p> AF_BAD_OPEN</p>
 <dl COMPACT>
-<dd>A call to open failed.</dl>
+<dd>A call to open failed.</dd></dl>
 <p> AF_BAD_READ</p>
 <dl COMPACT>
-<dd>A call to read failed</dl>
+<dd>A call to read failed</dd></dl>
 <p> AF_BAD_WRITE</p>
 <dl COMPACT>
-<dd>A call to write failed.</dl>
+<dd>A call to write failed.</dd></dl>
 <p> AF_BAD_LSEEK</p>
 <dl COMPACT>
-<dd>A call to lseek failed.</dl>
+<dd>A call to lseek failed.</dd></dl>
 <p> AF_BAD_MALLOC</p>
 <dl COMPACT>
-<dd>Memory allocation failed.</dl>
+<dd>Memory allocation failed.</dd></dl>
 <p> AF_BAD_FILEFMT</p>
 <dl COMPACT>
-<dd>setup specifies a file format which is unsupported for mode.</dl>
+<dd>setup specifies a file format which is unsupported for mode.</dd></dl>
 <p> AF_BAD_SAMPFMT</p>
 <dl COMPACT>
-<dd>The file&#8217;s sample format is not supported.</dl>
+<dd>The file&#8217;s sample format is not supported.</dd></dl>
 <p> AF_BAD_WIDTH</p>
 <dl COMPACT>
-<dd>The file&#8217;s sample width is not supported.</dl>
+<dd>The file&#8217;s sample width is not supported.</dd></dl>
 <p> AF_BAD_RATE</p>
 <dl COMPACT>
-<dd>The file&#8217;s sample rate is not supported.</dl>
+<dd>The file&#8217;s sample rate is not supported.</dd></dl>
 <p> AF_BAD_CHANNELS</p>
 <dl COMPACT>
-<dd>The number of channels in the file is not supported.</dl>
+<dd>The number of channels in the file is not supported.</dd></dl>
 <p> AF_BAD_FILESETUP</p>
 <dl COMPACT>
-<dd>setup specifies an invalid or unsupported configuration.</dl>
+<dd>setup specifies an invalid or unsupported configuration.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-afclosefile/">afCloseFile</a></code>(3), <code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3), <code><a href="/docs/linux/man/3-afinitfileformat/">afInitFileFormat</a></code>(3), <code><a href="/docs/linux/man/3-afinitsampleformat/">afInitSampleFormat</a></code>(3), <code><a href="/docs/linux/man/3-afreadframes/">afReadFrames</a></code>(3), <code><a href="/docs/linux/man/3-afwriteframes/">afWriteFrames</a></code>(3)</p>
 <h2>Author</h2>

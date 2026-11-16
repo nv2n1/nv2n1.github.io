@@ -19,7 +19,7 @@ description: "cgeevx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGEEVX computes for an N-by-N complex nonsymmetric matrix A, the
  eigenvalues and, optionally, the left and/or right eigenvectors.
@@ -47,11 +47,11 @@ description: "cgeevx.f –"
  explanation of balancing, see section 4.10.2 of the LAPACK
  Users' Guide.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>BALANC</i> </p>
+</dt><dd> <i>BALANC</i> </dd>
 <pre>
           BALANC is CHARACTER*1
           Indicates how the input matrix should be diagonally scaled
@@ -218,14 +218,14 @@ the routine
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 284 of file cgeevx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

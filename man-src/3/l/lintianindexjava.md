@@ -15,10 +15,10 @@ description: "Lintian::Index::Java – java information."
 <p>Lintian::Index::Java java information.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>add_java</p>
+<dt>add_java</dt>
 <dd>
-<dt>parse_jar</p>
-<dd></dl>
+</dd><dt>parse_jar</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

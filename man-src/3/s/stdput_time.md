@@ -11,10 +11,8 @@ std::put_time - std::put_time
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iomanip&gt;
-
     template &lt;class CharT&gt;
     (since C++ 11)
-
     /*unspecified*/ put_time(const std::tm *tmb, const CharT *fmt);</code></pre> 
 When used in an expression out &lt;&lt; put_time(tmb, fmt), converts the date and time information from a given calendar time tmb to a character string according to format string fmt, as if by calling std::strftime, std::wcsftime, or analog (depending on CharT), according to the std::time_put facet of the locale currently imbued in the output stream out. 
 
@@ -163,12 +161,9 @@ if (end.failed())
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     std::time_t t = std::time(nullptr);
     std::tm tm = *std::localtime(&amp;t);

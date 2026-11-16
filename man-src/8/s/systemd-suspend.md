@@ -23,12 +23,12 @@ description: "systemd-suspend.service, systemd-hibernate.service, systemd-hybrid
 <p><code>systemd-sleep</code> understands the following commands: </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Print a short help text and exit.</dl>
+<dd>Print a short help text and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>Print a short version string and exit.</dl>
+<dd>Print a short version string and exit.</dd></dl>
 <p> <code>suspend</code>, <code>hibernate</code>, <code>hybrid-sleep</code></p>
 <dl>
-<dd>Suspend, hibernate, or put the system to hybrid sleep.</dl>
+<dd>Suspend, hibernate, or put the system to hybrid sleep.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></code>(5), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/8-systemd-halt-service/">systemd-halt.service</a></code>(8) </p>

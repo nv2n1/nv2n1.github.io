@@ -21,32 +21,32 @@ options:<br />
 &nbsp;<wbr>-v | &#8211;verbose&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>increase verbosity&nbsp;<wbr>/&nbsp;<wbr>debug </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show usage and exit</p>
-<dt><code>-N | &#8211;dry-run</code></p>
-<dd> Only report what would be done</p>
-<dt><code>&#8211;fudge COUNT</code></p>
-<dd> Only modify partition table if the given partition would grow more than COUNT sectors (512 bytes). The default value is 20480 indicating that no change will be made unless more than 10M of space would be gained.</p>
-<dt><code>-v | &#8211;verbose</code></p>
-<dd> Give more information to stderr. </p>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show usage and exit</dd>
+<dt><code>-N | &#8211;dry-run</code></dt>
+<dd> Only report what would be done</dd>
+<dt><code>&#8211;fudge COUNT</code></dt>
+<dd> Only modify partition table if the given partition would grow more than COUNT sectors (512 bytes). The default value is 20480 indicating that no change will be made unless more than 10M of space would be gained.</dd>
+<dt><code>-v | &#8211;verbose</code></dt>
+<dd> Give more information to stderr. </dd>
 </dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>DISK</code></p>
-<dd> The device or disk image to operate on</p>
-<dt><code>PARTITION-NUMBER</code></p>
-<dd> The number of the partition to resize (counting from 1) </p>
+<dt><code>DISK</code></dt>
+<dd> The device or disk image to operate on</dd>
+<dt><code>PARTITION-NUMBER</code></dt>
+<dd> The number of the partition to resize (counting from 1) </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> Rewrite a the partition table in a disk or disk image so that the given partition takes up as much space as it can. After running, the partition will end at the end of the disk, or at the beginning of the next partition. </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Extend partition 1 in /dev/sda to fill empty space until end of disk or next partitiong</p>
+<dt>Extend partition 1 in /dev/sda to fill empty space until end of disk or next partitiong</dt>
 <dd>
-growpart&nbsp;<wbr>/dev/sda 1</p>
-<dt>Extend partition 2 in disk image my.image.</p>
+growpart&nbsp;<wbr>/dev/sda 1</dd>
+<dt>Extend partition 2 in disk image my.image.</dt>
 <dd>
-growpart my.image 2 </p>
+growpart my.image 2 </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 if the partition was sucessfully grown or if &#8211;dry-run was specified and it could be grown. The exit status is 1 if the partition could not be grown due to lack of available space. The exit status is 2 if an error occured. </p>

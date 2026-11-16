@@ -14,11 +14,11 @@ description: "ata_scsi_write_same_xlat – SATL Write Same to ATA SCT Write Same
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Command to be translated</dl>
+</dd><dd>Command to be translated</dd></dl>
 <h2>Description</h2>
 <p>Translate a SCSI WRITE SAME command to be either a DSM TRIM command or an SCT Write Same command. Based on WRITE SAME has the UNMAP flag When set translate to DSM TRIM When clear translate to SCT Write Same</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

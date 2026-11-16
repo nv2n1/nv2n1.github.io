@@ -10,15 +10,11 @@ description: "std::experimental::filesystem::copy_file – std::experimental::fi
 <p>std::experimental::filesystem::copy_file &#8211; std::experimental::filesystem::copy_file</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     bool copy_file(const path &amp;from, const path &amp;to);
 (1)(filesystem TS)
-
     bool copy_file(const path &amp;from, const path &amp;to, error_code &amp;ec);
-
 bool copy_file(const path &amp;from, const path &amp;to, copy_options options);
 (2)(filesystem TS)
-
     bool copy_file(const path &amp;from, const path &amp;to, copy_options options, error_code &amp;ec);</code></pre>
 <p>1) The default, equivalent to <code>(2)</code> with copy_options::none used as options<br />
 2) Copies a single file from from to to, using the copy options indicated by options. The behavior is undefined if there is more than one option in any of the copy_options option group present in options (even in the groups not relevant to copy_file)<br />
@@ -48,14 +44,10 @@ copy_file follows symlinks: use copy_symlink or copy with copy_options::copy_sym
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::create_directory(&quot;sandbox&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;).put('a');

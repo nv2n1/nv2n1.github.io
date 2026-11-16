@@ -101,29 +101,29 @@ description: "vdsmd – Virtual Desktops and Servers Manager @ENGINENAME@ host a
 <h3>Hook return code</h3>
 <p>Hook script must return one of the following return codes: </p>
 <dl>
-<dt><code>0</code></p>
-<dd>the hook script ended successfully.</p>
-<dt><code>1</code></p>
-<dd>the hook script failed, other hooks should be processed.</p>
-<dt><code>2</code></p>
-<dd>the hook script failed, no further hooks should be processed.</p>
-<dt><code>&gt;2</code></p>
-<dd>reserved. </p>
-<dt>If a before_&lt;action&gt; hook fails, the &lt;action&gt; would be aborted.</p>
-<dd>However, before_vm_destroy&#8217;s failure does not abort destroy(). </p>
+<dt><code>0</code></dt>
+<dd>the hook script ended successfully.</dd>
+<dt><code>1</code></dt>
+<dd>the hook script failed, other hooks should be processed.</dd>
+<dt><code>2</code></dt>
+<dd>the hook script failed, no further hooks should be processed.</dd>
+<dt><code>&gt;2</code></dt>
+<dd>reserved. </dd>
+<dt>If a before_&lt;action&gt; hook fails, the &lt;action&gt; would be aborted.</dt>
+<dd>However, before_vm_destroy&#8217;s failure does not abort destroy(). </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt> <i>/etc/vdsm/vdsm.conf</i></p>
-<dd>VDSM main configuration file. Use with great caution; some information about available variables and their meaning appear in <i>/usr/share/doc/vdsm-&lt;version&gt;/vdsm.conf.sample</i></p>
-<dt> <i>/var/log/vdsm/vdsm.log</i></p>
-<dd>Default log location for vdsm.</p>
-<dt> <i>/usr/share/doc/vdsm-&lt;version&gt;/vdsm-api.html</i></p>
-<dd>vdsm QAPI documentation.</p>
-<dt> <i>/etc/pki/vdsm</i></p>
-<dd>VDSM&#8217;s trust store: server key, certificate, and @ENGINENAME@ CA&#8217;s certificate.</p>
-<dt> <i>/rhev/data-center</i></p>
-<dd>VDSM&#8217;s image repository, or more exactly, links to NFS exports and iSCSI or FiberChannel devices which VDSM uses. </p>
+<dt> <i>/etc/vdsm/vdsm.conf</i></dt>
+<dd>VDSM main configuration file. Use with great caution; some information about available variables and their meaning appear in <i>/usr/share/doc/vdsm-&lt;version&gt;/vdsm.conf.sample</i></dd>
+<dt> <i>/var/log/vdsm/vdsm.log</i></dt>
+<dd>Default log location for vdsm.</dd>
+<dt> <i>/usr/share/doc/vdsm-&lt;version&gt;/vdsm-api.html</i></dt>
+<dd>vdsm QAPI documentation.</dd>
+<dt> <i>/etc/pki/vdsm</i></dt>
+<dd>VDSM&#8217;s trust store: server key, certificate, and @ENGINENAME@ CA&#8217;s certificate.</dd>
+<dt> <i>/rhev/data-center</i></dt>
+<dd>VDSM&#8217;s image repository, or more exactly, links to NFS exports and iSCSI or FiberChannel devices which VDSM uses. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-vdsclient/">vdsClient</a>(1)</code><br />

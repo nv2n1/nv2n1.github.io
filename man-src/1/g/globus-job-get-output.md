@@ -18,45 +18,45 @@ description: "globus-job-get-output – Retrieve the output and error streams fr
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display a help message to standard error and exit.</dl>
+</dt><dd> Display a help message to standard error and exit.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the <code>globus-job-get-output</code> program to standard output.</dl>
+</dt><dd> Display the software version of the <code>globus-job-get-output</code> program to standard output.</dd></dl>
 <p> <code>-versions</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the <code>globus-job-get-output</code> program including DiRT information to standard output.</dl>
+</dt><dd> Display the software version of the <code>globus-job-get-output</code> program including DiRT information to standard output.</dd></dl>
 <p> <code>-resource </code><i>RESOURCE</i><code>, -r </code><i>RESOURCE</i></p>
 <dl>
 <dt>
-<dd> Submit the retrieval job to the resource named by <i>RESOURCE</i> instead of the default GRAM service on the same host as the job contact.</dl>
+</dt><dd> Submit the retrieval job to the resource named by <i>RESOURCE</i> instead of the default GRAM service on the same host as the job contact.</dd></dl>
 <p> <code>-out</code></p>
 <dl>
 <dt>
-<dd> Retrieve only the standard output stream of the job. The default is to retrieve both standard output and standard error.</dl>
+</dt><dd> Retrieve only the standard output stream of the job. The default is to retrieve both standard output and standard error.</dd></dl>
 <p> <code>-err</code></p>
 <dl>
 <dt>
-<dd> Retrieve only the standard error stream of the job. The default is to retrieve both standard output and standard error.</dl>
+</dt><dd> Retrieve only the standard error stream of the job. The default is to retrieve both standard output and standard error.</dd></dl>
 <p> <code>-tail </code><i>LINES</i><code>, -t </code><i>LINES</i></p>
 <dl>
 <dt>
-<dd> Print only the last <i>LINES</i> count lines of output from the data streams being retrieved. By default, the entire output and error file data is retrieved. This option can not be used along with the <i>-f</i> or <i>-follow</i> options.</dl>
+</dt><dd> Print only the last <i>LINES</i> count lines of output from the data streams being retrieved. By default, the entire output and error file data is retrieved. This option can not be used along with the <i>-f</i> or <i>-follow</i> options.</dd></dl>
 <p> <code>-follow </code><i>LINES</i><code>, -f </code><i>LINES</i></p>
 <dl>
 <dt>
-<dd> Print the last <i>LINES</i> count lines of output from the data streams being retrieved and then wait until canceled, printing any subsequent job output that occurs. By default, the entire output and error file data is retrieved. This option can not be used along with the <i>-t</i> or <i>-tail</i> options.</dl>
+</dt><dd> Print the last <i>LINES</i> count lines of output from the data streams being retrieved and then wait until canceled, printing any subsequent job output that occurs. By default, the entire output and error file data is retrieved. This option can not be used along with the <i>-t</i> or <i>-tail</i> options.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following variables affect the execution of <code>globus-job-get-output</code>. </p>
 <p> <code>X509_USER_PROXY</code></p>
 <dl>
 <dt>
-<dd> Path to proxy credential.</dl>
+</dt><dd> Path to proxy credential.</dd></dl>
 <p> <code>X509_CERT_DIR</code></p>
 <dl>
 <dt>
-<dd> Path to trusted certificate directory.</dl>
+</dt><dd> Path to trusted certificate directory.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
 <h2>Index</h2>

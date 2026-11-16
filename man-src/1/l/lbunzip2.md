@@ -23,67 +23,67 @@ description: "lbzip2 – parallel bzip2 utility"
 <p> The default mode of operation is compression. If the utility is invoked as <code>lbunzip2</code> or <code>bunzip2</code>, the mode is switched to decompression. Calling the utility as <code>lbzcat</code> or <code>bzcat</code> selects decompression, with the decompressed byte-stream written to standard output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n </code><i>WTHRS</i></p>
-<dd> Set the number of (de)compressor threads to <i>WTHRS</i>. If this option is not specified, <code>lbzip2</code> tries to query the system for the number of online processors (if both the compilation environment and the execution environment support that), or exits with an error (if it&#8217;s unable to determine the number of processors online). </p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Don&#8217;t remove <i>FILE</i> operands after successful (de)compression. Open regular input files with more than one link. </p>
-<dt><code>-c</code>, <code>&#8211;stdout</code></p>
-<dd> Write output to standard output, even when <i>FILE</i> operands are present. Implies <code>-k</code> and excludes <code>-t</code>. </p>
-<dt><code>-t</code>, <code>&#8211;test</code></p>
-<dd> Test decompression; discard output instead of writing it to files or standard output. Implies <code>-k</code> and excludes <code>-c</code>. Roughly equivalent to passing <code>-c</code> and redirecting standard output to the bit bucket. </p>
-<dt><code>-d</code>, <code>&#8211;decompress</code></p>
-<dd> Force decompression over the mode of operation selected by the invocation name. </p>
-<dt><code>-z</code>, <code>&#8211;compress</code></p>
-<dd> Force compression over the mode of operation selected by the invocation name. </p>
-<dt><code>-1</code> .. <code>-9</code></p>
-<dd> Set the compression block size to 100K .. 900K, in 100K increments. Ignored during decompression. See also the BLOCK SIZE section below. </p>
-<dt><code>&#8211;fast</code></p>
-<dd> Alias for <code>-1</code>. </p>
-<dt><code>&#8211;best</code></p>
-<dd> Alias for <code>-9</code>. This is the default. </p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Open non-regular input files. Open input files with more than one link, breaking links when <code>-k</code> isn&#8217;t specified in addition. Try to remove each output file before opening it. By default <code>lbzip2</code> will not overwrite existing files; if you want this to happen, you should specify <code>-f</code>. If <code>-c</code> and <code>-d</code> are also given don&#8217;t reject files not in bzip2 format, just copy them without change; without <code>-f lbzip2</code> would stop after reaching a file that is not in bzip2 format. </p>
-<dt><code>-s</code>, <code>&#8211;small</code></p>
-<dd> Reduce memory usage at cost of performance. </p>
-<dt><code>-u</code>, <code>&#8211;sequential</code></p>
-<dd> Perform splitting input blocks sequentially. This may improve compression ratio and decrease CPU usage, but will degrade scalability. </p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Be more verbose. Print more detailed information about (de)compression progress to standard error: before processing each file, print a message stating the names of input and output files; during (de)compression, print a rough percentage of completeness and estimated time of arrival (only if standard error is connected to a terminal); after processing each file print a message showing compression ratio, space savings, total compression time (wall time) and average (de)compression speed (bytes of plain data processed per second). </p>
-<dt><code>-S</code></p>
-<dd> Print condition variable statistics to standard error for each completed (de)compression operation. Useful in profiling. </p>
-<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;repetitive-fast</code>, &#8211;repetitive-best<code>, </code>&#8211;exponential</p>
-<dd> Accepted for compatibility with <code>bzip2</code>, otherwise ignored. </p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help on command-line usage on standard output and exit successfully. </p>
-<dt><code>-L</code>, <code>&#8211;license</code>, <code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print license and version information on standard output and exit successfully. </p>
+<dt><code>-n </code><i>WTHRS</i></dt>
+<dd> Set the number of (de)compressor threads to <i>WTHRS</i>. If this option is not specified, <code>lbzip2</code> tries to query the system for the number of online processors (if both the compilation environment and the execution environment support that), or exits with an error (if it&#8217;s unable to determine the number of processors online). </dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Don&#8217;t remove <i>FILE</i> operands after successful (de)compression. Open regular input files with more than one link. </dd>
+<dt><code>-c</code>, <code>&#8211;stdout</code></dt>
+<dd> Write output to standard output, even when <i>FILE</i> operands are present. Implies <code>-k</code> and excludes <code>-t</code>. </dd>
+<dt><code>-t</code>, <code>&#8211;test</code></dt>
+<dd> Test decompression; discard output instead of writing it to files or standard output. Implies <code>-k</code> and excludes <code>-c</code>. Roughly equivalent to passing <code>-c</code> and redirecting standard output to the bit bucket. </dd>
+<dt><code>-d</code>, <code>&#8211;decompress</code></dt>
+<dd> Force decompression over the mode of operation selected by the invocation name. </dd>
+<dt><code>-z</code>, <code>&#8211;compress</code></dt>
+<dd> Force compression over the mode of operation selected by the invocation name. </dd>
+<dt><code>-1</code> .. <code>-9</code></dt>
+<dd> Set the compression block size to 100K .. 900K, in 100K increments. Ignored during decompression. See also the BLOCK SIZE section below. </dd>
+<dt><code>&#8211;fast</code></dt>
+<dd> Alias for <code>-1</code>. </dd>
+<dt><code>&#8211;best</code></dt>
+<dd> Alias for <code>-9</code>. This is the default. </dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Open non-regular input files. Open input files with more than one link, breaking links when <code>-k</code> isn&#8217;t specified in addition. Try to remove each output file before opening it. By default <code>lbzip2</code> will not overwrite existing files; if you want this to happen, you should specify <code>-f</code>. If <code>-c</code> and <code>-d</code> are also given don&#8217;t reject files not in bzip2 format, just copy them without change; without <code>-f lbzip2</code> would stop after reaching a file that is not in bzip2 format. </dd>
+<dt><code>-s</code>, <code>&#8211;small</code></dt>
+<dd> Reduce memory usage at cost of performance. </dd>
+<dt><code>-u</code>, <code>&#8211;sequential</code></dt>
+<dd> Perform splitting input blocks sequentially. This may improve compression ratio and decrease CPU usage, but will degrade scalability. </dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Be more verbose. Print more detailed information about (de)compression progress to standard error: before processing each file, print a message stating the names of input and output files; during (de)compression, print a rough percentage of completeness and estimated time of arrival (only if standard error is connected to a terminal); after processing each file print a message showing compression ratio, space savings, total compression time (wall time) and average (de)compression speed (bytes of plain data processed per second). </dd>
+<dt><code>-S</code></dt>
+<dd> Print condition variable statistics to standard error for each completed (de)compression operation. Useful in profiling. </dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;repetitive-fast</code>, &#8211;repetitive-best<code>, </code>&#8211;exponential</dt>
+<dd> Accepted for compatibility with <code>bzip2</code>, otherwise ignored. </dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help on command-line usage on standard output and exit successfully. </dd>
+<dt><code>-L</code>, <code>&#8211;license</code>, <code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print license and version information on standard output and exit successfully. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>LBZIP2</i>, <i>BZIP2</i>, <i>BZIP</i></p>
-<dd> Before parsing the command line, lbzip2 inserts the contents of these variables, in the order specified, between the invocation name and the rest of the command line. Tokens are separated by spaces and tabs, which cannot be escaped. </p>
+<dt><i>LBZIP2</i>, <i>BZIP2</i>, <i>BZIP</i></dt>
+<dd> Before parsing the command line, lbzip2 inserts the contents of these variables, in the order specified, between the invocation name and the rest of the command line. Tokens are separated by spaces and tabs, which cannot be escaped. </dd>
 </dl>
 <h2>OPERANDS</h2>
 <dl>
-<dt><i>FILE</i></p>
-<dd> Specify files to compress or decompress. </p>
+<dt><i>FILE</i></dt>
+<dd> Specify files to compress or decompress. </dd>
 <p> <i>FILE</i>s with <code>.bz2</code>, <code>.tbz</code>, <code>.tbz2</code> and <code>.tz2</code> name suffixes will be skipped when compressing. When decompressing, <code>.bz2</code> suffixes will be removed in output filenames; <code>.tbz</code>, <code>.tbz2</code> and <code>.tz2</code> suffixes will be replaced by <code>.tar</code>; other filenames will be suffixed with <code>.out</code>. If an <code>INT</code> or <code>TERM</code> signal is delivered to <code>lbzip2</code>, then it removes the regular output file currently open before exiting. </p>
 <p> If no FILE is given, lbzip2 works as a filter, processing standard input to standard output. In this case, <code>lbzip2</code> will decline to write compressed output to a terminal (or read compressed input from a terminal), as this would be entirely incomprehensible and therefore pointless. </p>
 </dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> if <code>lbzip2</code> finishes successfully. This presumes that whenever it tries, <code>lbzip2</code> never fails to write to standard error. </p>
-<dt><code>1</code></p>
-<dd> if <code>lbzip2</code> encounters a fatal error. </p>
-<dt><code>4</code></p>
-<dd> if <code>lbzip2</code> issues warnings without encountering a fatal error. This presumes that whenever it tries, <code>lbzip2</code> never fails to write to standard error. </p>
-<dt><code>SIGPIPE</code>, <code>SIGXFSZ</code></p>
-<dd> if <code>lbzip2</code> intends to exit with status <code>1</code> due to any fatal error, but any such signal with inherited <code>SIG_DFL</code> action was generated for <code>lbzip2</code> previously, then <code>lbzip2</code> terminates by way of one of said signals, after cleaning up any interrupted output file. </p>
-<dt><code>SIGABRT</code></p>
-<dd> if a runtime assertion fails (i.e. <code>lbzip2</code> detects a bug in itself). Hopefully whoever compiled your binary wasn&#8217;t bold enough to <code>#define NDEBUG</code>. </p>
-<dt><code>SIGINT</code>, <code>SIGTERM</code></p>
-<dd> <code>lbzip2</code> catches these signals so that it can remove an interrupted output file. In such cases, <code>lbzip2</code> exits by re-raising (one of) the received signal(s). </p>
+<dt><code>0</code></dt>
+<dd> if <code>lbzip2</code> finishes successfully. This presumes that whenever it tries, <code>lbzip2</code> never fails to write to standard error. </dd>
+<dt><code>1</code></dt>
+<dd> if <code>lbzip2</code> encounters a fatal error. </dd>
+<dt><code>4</code></dt>
+<dd> if <code>lbzip2</code> issues warnings without encountering a fatal error. This presumes that whenever it tries, <code>lbzip2</code> never fails to write to standard error. </dd>
+<dt><code>SIGPIPE</code>, <code>SIGXFSZ</code></dt>
+<dd> if <code>lbzip2</code> intends to exit with status <code>1</code> due to any fatal error, but any such signal with inherited <code>SIG_DFL</code> action was generated for <code>lbzip2</code> previously, then <code>lbzip2</code> terminates by way of one of said signals, after cleaning up any interrupted output file. </dd>
+<dt><code>SIGABRT</code></dt>
+<dd> if a runtime assertion fails (i.e. <code>lbzip2</code> detects a bug in itself). Hopefully whoever compiled your binary wasn&#8217;t bold enough to <code>#define NDEBUG</code>. </dd>
+<dt><code>SIGINT</code>, <code>SIGTERM</code></dt>
+<dd> <code>lbzip2</code> catches these signals so that it can remove an interrupted output file. In such cases, <code>lbzip2</code> exits by re-raising (one of) the received signal(s). </dd>
 </dl>
 <h2>BLOCK SIZE</h2>
 <p> <code>lbzip2</code> compresses large files in blocks. It can operate at various block sizes, ranging from 100k to 900k in 100k steps, and it allocates only as much memory as it needs to. The block size affects both the compression ratio achieved, and the amount of memory needed both for compression and decompression. Compression and decompression speed is virtually unaffected by block size, provided that the file being processed is large enough to be split among all worker threads. </p>
@@ -115,19 +115,19 @@ description: "lbzip2 – parallel bzip2 utility"
 <p> Adam Maulis at ELTE IIG; Julian Seward; Paul Sladen; Michael Thomas from Caltech HEP; Bryan Stillwell; Zsolt Bartos-Elekes; Imre Csatlos; Gabor Kovesdan; Paul Wise; Paolo Bonzini; Department of Electrical and Information Engineering at the University of Oulu; Yuta Mori. </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code>lbzip2</code> home page</p>
-<dd> <a rel="nofollow" href="http://lbzip2.org/">http://lbzip2.org/</a> </p>
-<dt><code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1)</p>
-<dd> <a rel="nofollow" href="http://www.bzip.org/">http://www.bzip.org/</a> </p>
-<dt><code><a href="/docs/linux/man/1-pbzip2/">pbzip2</a></code>(1)</p>
-<dd> <a rel="nofollow" href="http://compression.ca/pbzip2/">http://compression.ca/pbzip2/</a> </p>
-<dt><code>bzip2smp</code>(1)</p>
-<dd> <a rel="nofollow" href="http://bzip2smp.sourceforge.net/">http://bzip2smp.sourceforge.net/</a> </p>
-<dt><code>smpbzip2</code>(1)</p>
-<dd> <a rel="nofollow" href="http://home.student.utwente.nl/n.werensteijn/smpbzip2/">http://home.student.utwente.nl/n.werensteijn/smpbzip2/</a> </p>
-<dt><code>dbzip2</code>(1)</p>
-<dd> <a rel="nofollow" href="http://www.mediawiki.org/wiki/Dbzip2">http://www.mediawiki.org/wiki/Dbzip2</a> </p>
-<dt><code><a href="/docs/linux/man/1-p7zip/">p7zip</a></code>(1)</p>
-<dd> <a rel="nofollow" href="http://p7zip.sourceforge.net/">http://p7zip.sourceforge.net/</a> </p>
+<dt><code>lbzip2</code> home page</dt>
+<dd> <a rel="nofollow" href="http://lbzip2.org/">http://lbzip2.org/</a> </dd>
+<dt><code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1)</dt>
+<dd> <a rel="nofollow" href="http://www.bzip.org/">http://www.bzip.org/</a> </dd>
+<dt><code><a href="/docs/linux/man/1-pbzip2/">pbzip2</a></code>(1)</dt>
+<dd> <a rel="nofollow" href="http://compression.ca/pbzip2/">http://compression.ca/pbzip2/</a> </dd>
+<dt><code>bzip2smp</code>(1)</dt>
+<dd> <a rel="nofollow" href="http://bzip2smp.sourceforge.net/">http://bzip2smp.sourceforge.net/</a> </dd>
+<dt><code>smpbzip2</code>(1)</dt>
+<dd> <a rel="nofollow" href="http://home.student.utwente.nl/n.werensteijn/smpbzip2/">http://home.student.utwente.nl/n.werensteijn/smpbzip2/</a> </dd>
+<dt><code>dbzip2</code>(1)</dt>
+<dd> <a rel="nofollow" href="http://www.mediawiki.org/wiki/Dbzip2">http://www.mediawiki.org/wiki/Dbzip2</a> </dd>
+<dt><code><a href="/docs/linux/man/1-p7zip/">p7zip</a></code>(1)</dt>
+<dd> <a rel="nofollow" href="http://p7zip.sourceforge.net/">http://p7zip.sourceforge.net/</a> </dd>
 </dl>
 <h2>Index</h2>

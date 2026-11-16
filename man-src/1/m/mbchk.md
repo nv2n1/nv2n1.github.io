@@ -20,6 +20,6 @@ description: "mbchk – check the format of a Multiboot kernel"
 <p> The full documentation for <code>mbchk</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>mbchk</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info mbchk</code></dl>
+</dt><dd> <code>info mbchk</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

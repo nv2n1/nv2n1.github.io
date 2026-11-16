@@ -12,20 +12,14 @@ std::experimental::packaged_task&lt;R(Args...)&gt;::packaged_task(libraryfundame
 
 <pre><code>packaged_task() noexcept;
 (1)(library fundamentals TS)
-
     template &lt;class F&gt;
     (2)(library fundamentals TS)
-
         explicit packaged_task(F &amp;&amp;f);
-
 template &lt;class F, class Allocator&gt;
 (3)(library fundamentals TS)
-
     explicit packaged_task(std::allocator_arg_t, const Allocator &amp;alloc, F &amp;&amp;f);
-
 packaged_task(const packaged_task &amp;) = delete;
 (4)(library fundamentals TS)
-
     packaged_task(packaged_task &amp;&amp;rhs) noexcept;
 (5)(library fundamentals TS)</code></pre> 
 Constructs a new std::experimental::packaged_task object. 

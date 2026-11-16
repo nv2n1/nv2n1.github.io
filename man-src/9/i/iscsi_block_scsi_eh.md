@@ -14,14 +14,14 @@ description: "iscsi_block_scsi_eh – block scsi eh until session state has tran
 <p><i>cmd</i></p>
 <dl>
 <dd>
-<dd>scsi cmd passed to scsi eh handler</dl>
+</dd><dd>scsi cmd passed to scsi eh handler</dd></dl>
 <h2>Description</h2>
 <p>If the session is down this function will wait for the recovery timer to fire or for the session to be logged back in. If the recovery timer fires then FAST_IO_FAIL is returned. The caller should pass this error value to the scsi eh.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

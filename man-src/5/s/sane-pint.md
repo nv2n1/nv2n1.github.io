@@ -13,28 +13,28 @@ description: "sane-pint – SANE backend for scanners that use the PINT device d
 <h2>Device Names</h2>
 <p>This backend expects device names of the form: </p>
 <dl>
-<dd><i>special</i></dl>
+<dd><i>special</i></dd></dl>
 <p> Where <i>special</i> is the UNIX path-name for the special device that corresponds to the scanner. The special device name must be a PINT device or a symlink to such a device. For example, under NetBSD or OpenBSD, such a device name could be <i>/dev/ss0</i> or <i>/dev/scan0</i>.</p>
 <h2>Configuration</h2>
 <p>The contents of the <i>pint.conf</i>. file is a list of device names that correspond to PINT scanners. Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
 <dd>/dev/scanner<br />
  # this is a comment<br />
- /dev/ss1</dl>
+ /dev/ss1</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>@CONFIGDIR@/pint.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</p>
-<dt><i>@LIBDIR@/libsane-pint.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>@LIBDIR@/libsane-pint.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>@CONFIGDIR@/pint.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</dd>
+<dt><i>@LIBDIR@/libsane-pint.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>@LIBDIR@/libsane-pint.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. Under UNIX, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in @CONFIGDIR@. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories &quot;tmp/config&quot;, &quot;.&quot;, and &quot;@CONFIGDIR@&quot; being searched (in this order).</p>
-<dt><code>SANE_DEBUG_PINT</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity.</dl>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. Under UNIX, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in @CONFIGDIR@. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories &quot;tmp/config&quot;, &quot;.&quot;, and &quot;@CONFIGDIR@&quot; being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_PINT</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/7-sane/">sane</a>(7)</p>
 <h2>Author</h2>

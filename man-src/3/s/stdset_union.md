@@ -11,59 +11,32 @@ std::set_union - std::set_union
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 OutputIt set_union( InputIt1 first1, InputIt1 last1,                                            (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 constexpr OutputIt set_union( InputIt1 first1, InputIt1 last1,                                  (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3 &gt;
-
 ForwardIt3 set_union( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,        (2) (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first );
-
 template&lt; class InputIt1, class InputIt2,
-
 class OutputIt, class Compare &gt;                                                         (1)
-
 OutputIt set_union( InputIt1 first1, InputIt1 last1,                                                          (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first, Compare comp );
-
 template&lt; class InputIt1, class InputIt2,
-
 class OutputIt, class Compare &gt;
-
 constexpr OutputIt set_union( InputIt1 first1, InputIt1 last1,                              (3)               (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
-
 class ForwardIt3, class Compare &gt;
-
 ForwardIt3 set_union( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,            (4)           (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first, Compare comp );</code></pre> 
 Constructs a sorted union beginning at d_first consisting of the set of elements present in one or both sorted ranges [first1, last1) and [first2, last2). 
 If some element is found m times in [first1, last1) and n times in [first2, last2), then all m elements will be copied from [first1, last1) to d_first, preserving order, and then exactly std::max(n-m, 0) elements will be copied from [first2, last2) to d_first, also preserving order. 
@@ -165,14 +138,10 @@ This algorithm performs a similar task as std::merge does. Both consume two sort
 
 Example with vectors : 
  // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     {
         std::vector&lt;int&gt; v1 = {1, 2, 3, 4, 5};

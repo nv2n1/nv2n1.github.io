@@ -11,7 +11,6 @@ std::wctrans - std::wctrans
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     std::wctrans_t wctrans(const char *str);</code></pre> 
 Constructs a value of type std::wctrans_t that describes a LC_CTYPE category of wide character mapping. It may be one of the standard mappings, or a locale-specific mapping, such as &quot;tojhira&quot; or &quot;tojkana&quot;. 
 

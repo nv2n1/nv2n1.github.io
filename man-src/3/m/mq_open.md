@@ -20,22 +20,22 @@ description: "mq_open – open a message queue"
 <p><code>mq_open</code>() creates a new POSIX message queue or opens an existing queue. The queue is identified by <i>name</i>. For details of the construction of <i>name</i>, see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7). </p>
 <p> The <i>oflag</i> argument specifies flags that control the operation of the call. (Definitions of the flags values can be obtained by including <i>&lt;fcntl.h&gt;</i>.) Exactly one of the following must be specified in <i>oflag</i>:</p>
 <dl COMPACT>
-<dt><code>O_RDONLY</code></p>
-<dd>Open the queue to receive messages only.</p>
-<dt><code>O_WRONLY</code></p>
-<dd>Open the queue to send messages only.</p>
-<dt><code>O_RDWR</code></p>
-<dd>Open the queue to both send and receive messages.</dl>
+<dt><code>O_RDONLY</code></dt>
+<dd>Open the queue to receive messages only.</dd>
+<dt><code>O_WRONLY</code></dt>
+<dd>Open the queue to send messages only.</dd>
+<dt><code>O_RDWR</code></dt>
+<dd>Open the queue to both send and receive messages.</dd></dl>
 <p> Zero or more of the following flags can additionally be <i>OR</i>ed in <i>oflag</i>:</p>
 <dl COMPACT>
-<dt><code>O_CLOEXEC</code> (since Linux 2.6.26)</p>
-<dd>Set the close-on-exec flag for the message queue descriptor. See <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for a discussion of why this flag is useful.</p>
-<dt><code>O_CREAT</code></p>
-<dd>Create the message queue if it does not exist. The owner (user ID) of the message queue is set to the effective user ID of the calling process. The group ownership (group ID) is set to the effective group ID of the calling process.</p>
-<dt><code>O_EXCL</code></p>
-<dd>If <code>O_CREAT</code> was specified in <i>oflag</i>, and a queue with the given <i>name</i> already exists, then fail with the error <code>EEXIST</code>.</p>
-<dt><code>O_NONBLOCK</code></p>
-<dd>Open the queue in nonblocking mode. In circumstances where <code><a href="/docs/linux/man/3-mq_receive/">mq_receive</a></code>(3) and <code><a href="/docs/linux/man/3-mq_send/">mq_send</a></code>(3) would normally block, these functions instead fail with the error <code>EAGAIN</code>.</dl>
+<dt><code>O_CLOEXEC</code> (since Linux 2.6.26)</dt>
+<dd>Set the close-on-exec flag for the message queue descriptor. See <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for a discussion of why this flag is useful.</dd>
+<dt><code>O_CREAT</code></dt>
+<dd>Create the message queue if it does not exist. The owner (user ID) of the message queue is set to the effective user ID of the calling process. The group ownership (group ID) is set to the effective group ID of the calling process.</dd>
+<dt><code>O_EXCL</code></dt>
+<dd>If <code>O_CREAT</code> was specified in <i>oflag</i>, and a queue with the given <i>name</i> already exists, then fail with the error <code>EEXIST</code>.</dd>
+<dt><code>O_NONBLOCK</code></dt>
+<dd>Open the queue in nonblocking mode. In circumstances where <code><a href="/docs/linux/man/3-mq_receive/">mq_receive</a></code>(3) and <code><a href="/docs/linux/man/3-mq_send/">mq_send</a></code>(3) would normally block, these functions instead fail with the error <code>EAGAIN</code>.</dd></dl>
 <p> If <code>O_CREAT</code> is specified in <i>oflag</i>, then two additional arguments must be supplied. The <i>mode</i> argument specifies the permissions to be placed on the new queue, as for <code><a href="/docs/linux/man/2-open/">open</a></code>(2). (Symbolic definitions for the permissions bits can be obtained by including <i>&lt;sys/stat.h&gt;</i>.) The permissions settings are masked against the process umask. </p>
 <p> The fields of the <i>struct mq_attr</i> pointed to <i>attr</i> specify the maximum number of messages and the maximum size of messages that the queue will allow. This structure is defined as follows: </p>
 <p> struct mq_attr {<br />
@@ -50,30 +50,30 @@ description: "mq_open – open a message queue"
 <p>On success, <code>mq_open</code>() returns a message queue descriptor for use by other message queue functions. On error, <code>mq_open</code>() returns <i>(mqd_t)&nbsp;-1,</i> with <i>errno</i> set to indicate the error.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EACCES</code></p>
-<dd>The queue exists, but the caller does not have permission to open it in the specified mode.</p>
-<dt><code>EACCES</code></p>
-<dd><i>name</i> contained more than one slash.</p>
-<dt><code>EEXIST</code></p>
-<dd>Both <code>O_CREAT</code> and <code>O_EXCL</code> were specified in <i>oflag</i>, but a queue with this <i>name</i> already exists.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>name</i> doesn&#8217;t follow the format in <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd><code>O_CREAT</code> was specified in <i>oflag</i>, and <i>attr</i> was not NULL, but <i>attr-&gt;mq_maxmsg</i> or <i>attr-&gt;mq_msqsize</i> was invalid. Both of these fields must be greater than zero. In a process that is unprivileged (does not have the <code>CAP_SYS_RESOURCE</code> capability), <i>attr-&gt;mq_maxmsg</i> must be less than or equal to the <i>msg_max</i> limit, and <i>attr-&gt;mq_msgsize</i> must be less than or equal to the <i>msgsize_max</i> limit. In addition, even in a privileged process, <i>attr-&gt;mq_maxmsg</i> cannot exceed the <code>HARD_MAX</code> limit. (See <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7) for details of these limits.)</p>
-<dt><code>EMFILE</code></p>
-<dd>The per-process limit on the number of open file and message queue descriptors has been reached (see the description of <code>RLIMIT_NOFILE</code> in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd><i>name</i> was too long.</p>
-<dt><code>ENFILE</code></p>
-<dd>The system-wide limit on the total number of open files and message queues has been reached.</p>
-<dt><code>ENOENT</code></p>
-<dd>The <code>O_CREAT</code> flag was not specified in <i>oflag</i>, and no queue with this <i>name</i> exists.</p>
-<dt><code>ENOENT</code></p>
-<dd><i>name</i> was just &quot;/&quot; followed by no other characters.</p>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory.</p>
-<dt><code>ENOSPC</code></p>
-<dd>Insufficient space for the creation of a new message queue. This probably occurred because the <i>queues_max</i> limit was encountered; see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7).</dl>
+<dt><code>EACCES</code></dt>
+<dd>The queue exists, but the caller does not have permission to open it in the specified mode.</dd>
+<dt><code>EACCES</code></dt>
+<dd><i>name</i> contained more than one slash.</dd>
+<dt><code>EEXIST</code></dt>
+<dd>Both <code>O_CREAT</code> and <code>O_EXCL</code> were specified in <i>oflag</i>, but a queue with this <i>name</i> already exists.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>name</i> doesn&#8217;t follow the format in <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd><code>O_CREAT</code> was specified in <i>oflag</i>, and <i>attr</i> was not NULL, but <i>attr-&gt;mq_maxmsg</i> or <i>attr-&gt;mq_msqsize</i> was invalid. Both of these fields must be greater than zero. In a process that is unprivileged (does not have the <code>CAP_SYS_RESOURCE</code> capability), <i>attr-&gt;mq_maxmsg</i> must be less than or equal to the <i>msg_max</i> limit, and <i>attr-&gt;mq_msgsize</i> must be less than or equal to the <i>msgsize_max</i> limit. In addition, even in a privileged process, <i>attr-&gt;mq_maxmsg</i> cannot exceed the <code>HARD_MAX</code> limit. (See <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7) for details of these limits.)</dd>
+<dt><code>EMFILE</code></dt>
+<dd>The per-process limit on the number of open file and message queue descriptors has been reached (see the description of <code>RLIMIT_NOFILE</code> in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd><i>name</i> was too long.</dd>
+<dt><code>ENFILE</code></dt>
+<dd>The system-wide limit on the total number of open files and message queues has been reached.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>The <code>O_CREAT</code> flag was not specified in <i>oflag</i>, and no queue with this <i>name</i> exists.</dd>
+<dt><code>ENOENT</code></dt>
+<dd><i>name</i> was just &quot;/&quot; followed by no other characters.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd>Insufficient space for the creation of a new message queue. This probably occurred because the <i>queues_max</i> limit was encountered; see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7).</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

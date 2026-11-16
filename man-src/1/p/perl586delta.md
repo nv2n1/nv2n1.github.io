@@ -18,30 +18,30 @@ description: "perl586delta – what is new for perl v5.8.6"
 <p> On Win32, Perl can now use non-IFS compatible LSPs, which allows Perl to work in conjunction with firewalls such as McAfee Guardian. For full details see the file <i></i><font SIZE="-1"><i>README</i></font><i>.win32</i>, particularly if you&#8217;re running Win95.</p>
 <h2>Modules and Pragmata</h2>
 <dl>
-<dt>&bull;</p>
-<dd> With the <tt>&quot;base&quot;</tt> pragma, an intermediate class with no fields used to messes up private fields in the base class. This has been fixed.</p>
-<dt>&bull;</p>
-<dd> Cwd upgraded to version 3.01 (as part of the new PathTools distribution)</p>
-<dt>&bull;</p>
-<dd> Devel::PPPort upgraded to version 3.03</p>
-<dt>&bull;</p>
-<dd> File::Spec upgraded to version 3.01 (as part of the new PathTools distribution)</p>
-<dt>&bull;</p>
-<dd> Encode upgraded to version 2.08</p>
-<dt>&bull;</p>
-<dd> ExtUtils::MakeMaker remains at version 6.17, as later stable releases currently available on <font SIZE="-1">CPAN</font> have some issues with core modules on some core platforms.</p>
-<dt>&bull;</p>
-<dd> I18N::LangTags upgraded to version 0.35</p>
-<dt>&bull;</p>
-<dd> Math::BigInt upgraded to version 1.73</p>
-<dt>&bull;</p>
-<dd> Math::BigRat upgraded to version 0.13</p>
-<dt>&bull;</p>
-<dd> MIME::Base64 upgraded to version 3.05</p>
-<dt>&bull;</p>
-<dd> POSIX::sigprocmask function can now retrieve the current signal mask without also setting it.</p>
-<dt>&bull;</p>
-<dd> Time::HiRes upgraded to version 1.65</dl>
+<dt>&bull;</dt>
+<dd> With the <tt>&quot;base&quot;</tt> pragma, an intermediate class with no fields used to messes up private fields in the base class. This has been fixed.</dd>
+<dt>&bull;</dt>
+<dd> Cwd upgraded to version 3.01 (as part of the new PathTools distribution)</dd>
+<dt>&bull;</dt>
+<dd> Devel::PPPort upgraded to version 3.03</dd>
+<dt>&bull;</dt>
+<dd> File::Spec upgraded to version 3.01 (as part of the new PathTools distribution)</dd>
+<dt>&bull;</dt>
+<dd> Encode upgraded to version 2.08</dd>
+<dt>&bull;</dt>
+<dd> ExtUtils::MakeMaker remains at version 6.17, as later stable releases currently available on <font SIZE="-1">CPAN</font> have some issues with core modules on some core platforms.</dd>
+<dt>&bull;</dt>
+<dd> I18N::LangTags upgraded to version 0.35</dd>
+<dt>&bull;</dt>
+<dd> Math::BigInt upgraded to version 1.73</dd>
+<dt>&bull;</dt>
+<dd> Math::BigRat upgraded to version 0.13</dd>
+<dt>&bull;</dt>
+<dd> MIME::Base64 upgraded to version 3.05</dd>
+<dt>&bull;</dt>
+<dd> POSIX::sigprocmask function can now retrieve the current signal mask without also setting it.</dd>
+<dt>&bull;</dt>
+<dd> Time::HiRes upgraded to version 1.65</dd></dl>
 <h2>Utility Changes</h2>
 <p> Perl has a new -dt command-line flag, which enables threads support in the debugger.</p>
 <h2>Performance Enhancements</h2>

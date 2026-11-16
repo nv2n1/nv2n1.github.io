@@ -61,14 +61,14 @@ description: "acct_selinux – Security Enhanced Linux Policy for the acct proce
 <p> <code>acct_data_t</code> </p>
 <p> &#8211; Set files with the acct_data_t type, if you want to treat the files as acct content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/account(/.*)?, /var/log/account(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/account(/.*)?, /var/log/account(/.*)? </dd>
 </dl>
 <p> <code>acct_exec_t</code> </p>
 <p> &#8211; Set files with the acct_exec_t type, if you want to transition an executable to the acct_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cron.(daily|monthly)/acct, /sbin/accton, /usr/sbin/accton </p>
+<dt>Paths:</dt>
+<dd>/etc/cron.(daily|monthly)/acct, /sbin/accton, /usr/sbin/accton </dd>
 </dl>
 <p> <code>acct_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the acct_initrc_exec_t type, if you want to transition an executable to the acct_initrc_t domain. </p>

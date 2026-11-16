@@ -10,30 +10,18 @@ description: "std::condition_variable::wait_for – std::condition_variable::wai
 <p>std::condition_variable::wait_for &#8211; std::condition_variable::wait_for</p>
 <h2>Synopsis</h2>
 <pre><code>template &lt;class Rep, class Period&gt;
-
 std::cv_status wait_for(std::unique_lock&lt;std::mutex&gt; &amp;lock, (1)(since C++ 11)
-
                                                                 const std::chrono::duration&lt;Rep, Period&gt; &amp;rel_time);
-
 template &lt;class Rep, class Period, class Predicate&gt;
-
 bool wait_for(std::unique_lock&lt;std::mutex&gt; &amp;lock, (2)(since C++ 11)
-
                                                       const std::chrono::duration&lt;Rep, Period&gt; &amp;rel_time,
-
               Predicate pred);
 1) Atomically releases lock, blocks the current executing thread, and adds it to the list of threads waiting on *this. The thread will be unblocked when notify_all() or notify_one() is executed, or when the relative timeout rel_time expires. It may also be unblocked spuriously. When unblocked, regardless of the reason, lock is reacquired and wait_for() exits.
-
 If this function exits via exception, lock is also reacquired.
-
 (until C++14)
-
 2) Equivalent to return wait_until(lock, std::chrono::steady_clock::now() + rel_time, std::move(pred));. This overload may be used to ignore spurious awakenings.
-
 A steady clock is used to measure the duration. This function may block for longer than timeout_duration due to scheduling or resource contention delays.
-
 Calling this function if lock.mutex() is not locked by the current thread is undefined behavior.
-
 Calling this function if lock.mutex() is not the same mutex as the one used by all other threads that are currently waiting on the same condition variable is undefined behavior.</code></pre>
 <p>If these functions fail to meet the postcondition (lock.owns_lock()==true and lock.mutex() is locked by the calling thread), std::terminate is called. For example, this could happen if relocking the mutex throws an exception, <i>(since C++14)</i> </p>
 <h2>Parameters</h2>
@@ -56,23 +44,15 @@ The effects of notify_one()/notify_all() and each of the three atomic parts of w
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;atomic&gt;
-
 #include &lt;condition_variable&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
-
 using namespace std::chrono_literals;
 std::condition_variable cv;
-
 std::mutex cv_m;
-
 int i;
 void waits(int idx)
-
 {
     std::unique_lock&lt;std::mutex&gt; lk(cv_m);
     if (cv.wait_for(lk, idx * 100ms, [] { return i == 1; }))
@@ -83,7 +63,6 @@ void waits(int idx)
 ';
 }
 void signals()
-
 {
     std::this_thread::sleep_for(120ms);
     std::cerr &lt;&lt; &quot;Notifying...
@@ -99,7 +78,6 @@ void signals()
     cv.notify_all();
 }
 int main()
-
 {
     std::thread t1(waits, 1), t2(waits, 2), t3(waits, 3), t4(signals);
     t1.join();

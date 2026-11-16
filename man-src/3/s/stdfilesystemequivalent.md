@@ -11,15 +11,10 @@ std::filesystem::equivalent - std::filesystem::equivalent
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     bool equivalent(const std::filesystem::path &amp;p1,
-
                     const std::filesystem::path &amp;p2);
-
 bool equivalent(const std::filesystem::path &amp;p1, (1)(since C++ 17)
-
                                                      const std::filesystem::path &amp;p2,
-
                 std::error_code &amp;ec) noexcept;</code></pre> 
 Checks whether the paths p1 and p2 resolve to the same file system entity. 
 If either p1 or p2 does not exist, an error is reported. 
@@ -50,15 +45,10 @@ LWG_2937 C++17 error condition specified incorrectly corrected
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     // hard link equivalency
     fs::path p1 = &quot;.&quot;;

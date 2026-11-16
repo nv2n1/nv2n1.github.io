@@ -36,12 +36,9 @@ constructor <i>(public member function)</i> </p>
 <p>Three conditions where std::bad_array_new_length should be thrown:<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;new&gt;
-
 #include &lt;climits&gt;
 int main()
-
 {
     int negative = -1;
     int small = 1;

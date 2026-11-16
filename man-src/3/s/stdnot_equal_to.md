@@ -11,10 +11,8 @@ std::not_equal_to&lt;void&gt; - std::not_equal_to&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class not_equal_to&lt;void&gt;;</code></pre> 
 std::not_equal_to&lt;&gt; is a specialization of std::not_equal_to with parameter and return type deduced. 
 

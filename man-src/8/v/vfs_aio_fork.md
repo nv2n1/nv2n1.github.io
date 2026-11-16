@@ -10,7 +10,7 @@ description: "vfs_aio_fork – implement async I/O in Samba vfs"
 <p>vfs_aio_fork &#8211; implement async I/O in Samba vfs</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = aio_fork</dl>
+<dd>vfs objects = aio_fork</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The aio_fork VFS module enables async I/O for Samba on platforms where the system level Posix AIO interface is insufficient. Posix AIO can suffer from severe limitations. For example, on some Linux versions the real-time signals that it uses are broken under heavy load. Other systems only allow AIO when special kernel modules are loaded or only allow a certain system-wide amount of async requests being scheduled. Systems based on glibc (most Linux systems) only allow a single outstanding request per file descriptor. </p>
@@ -23,7 +23,7 @@ description: "vfs_aio_fork – implement async I/O in Samba vfs"
 <pre> <i>[cooldata]</i>
  m[blue]<code>path = /data/ice</code>m[]
  m[blue]<code>vfs objects = aio_fork</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 4.0.0 of the Samba suite.</p>
 <h2>Author</h2>

@@ -13,35 +13,35 @@ description: "opashowallports (Switch and Host) Displays basic port state and st
  [-H &#8216;<i>chassis</i>&#8216;] [-S]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text.</p>
-<dt>-C</p>
-<dd>Performs operation against chassis. Default = host.</p>
-<dt>-f <i>hostfile</i></p>
-<dd>File with list of hosts in cluster. Default is /etc/sysconfig/opa/hosts file.</p>
-<dt>-F <i>chassisfile</i></p>
-<dd>File with list of chassis in cluster. Default is /etc/sysconfig/opa/chassis file.</p>
-<dt>-h <i>hosts</i></p>
-<dd>List of hosts for which to show ports.</p>
-<dt>-H <i>chassis</i></p>
-<dd>List of chassis for which to show ports.</p>
-<dt>-S</p>
-<dd>Securely prompts for password for admin on chassis.</dl>
+<dt>&#8211;help</dt>
+<dd>Produces full help text.</dd>
+<dt>-C</dt>
+<dd>Performs operation against chassis. Default = host.</dd>
+<dt>-f <i>hostfile</i></dt>
+<dd>File with list of hosts in cluster. Default is /etc/sysconfig/opa/hosts file.</dd>
+<dt>-F <i>chassisfile</i></dt>
+<dd>File with list of chassis in cluster. Default is /etc/sysconfig/opa/chassis file.</dd>
+<dt>-h <i>hosts</i></dt>
+<dd>List of hosts for which to show ports.</dd>
+<dt>-H <i>chassis</i></dt>
+<dd>List of chassis for which to show ports.</dd>
+<dt>-S</dt>
+<dd>Securely prompts for password for admin on chassis.</dd></dl>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>HOSTS</code></p>
-<dd>List of hosts, used if -h option not supplied. </p>
-<dt><code>CHASSIS</code></p>
-<dd>List of chassis, used if -C is used and -H and -F options not supplied. </p>
-<dt><code>HOSTS_FILE</code></p>
-<dd>File containing list of hosts, used in absence of -f and -h. </p>
-<dt><code>CHASSIS_FILE</code></p>
-<dd>File containing list of chassis, used in absence of -F and -H. </p>
-<dt><code>FF_CHASSIS_LOGIN_METHOD</code></p>
-<dd>How to log into chassis. Can be Telnet or SSH. </p>
-<dt><code>FF_CHASSIS_ADMIN_PASSWORD</code></p>
-<dd>Password for admin on all chassis. Used in absence of -S option. </p>
+<dt><code>HOSTS</code></dt>
+<dd>List of hosts, used if -h option not supplied. </dd>
+<dt><code>CHASSIS</code></dt>
+<dd>List of chassis, used if -C is used and -H and -F options not supplied. </dd>
+<dt><code>HOSTS_FILE</code></dt>
+<dd>File containing list of hosts, used in absence of -f and -h. </dd>
+<dt><code>CHASSIS_FILE</code></dt>
+<dd>File containing list of chassis, used in absence of -F and -H. </dd>
+<dt><code>FF_CHASSIS_LOGIN_METHOD</code></dt>
+<dd>How to log into chassis. Can be Telnet or SSH. </dd>
+<dt><code>FF_CHASSIS_ADMIN_PASSWORD</code></dt>
+<dd>Password for admin on all chassis. Used in absence of -S option. </dd>
 </dl>
 <h2>Example</h2>
 <p>opashowallports<br />

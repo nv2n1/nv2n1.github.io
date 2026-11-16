@@ -16,10 +16,10 @@ description: "sa-awl – examine and manipulate SpamAssassin’s auto-whitelist 
 <p> The name of the file is specified after any options, as <tt>&quot;dbfile&quot;</tt>. The default is <tt>&quot;$HOME/.spamassassin/auto-whitelist&quot;</tt>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;clean</p>
-<dd> Clean out infrequently-used <font SIZE="-1">AWL</font> entries. The <tt>&quot;--min&quot;</tt> switch can be used to select the threshold at which entries are kept or deleted.</p>
-<dt>&#8211;min n</p>
-<dd> Select the threshold at which entries are kept or deleted when <tt>&quot;--clean&quot;</tt> is used. The default is <tt>2</tt>, so entries that have only been seen once are deleted.</dl>
+<dt>&#8211;clean</dt>
+<dd> Clean out infrequently-used <font SIZE="-1">AWL</font> entries. The <tt>&quot;--min&quot;</tt> switch can be used to select the threshold at which entries are kept or deleted.</dd>
+<dt>&#8211;min n</dt>
+<dd> Select the threshold at which entries are kept or deleted when <tt>&quot;--clean&quot;</tt> is used. The default is <tt>2</tt>, so entries that have only been seen once are deleted.</dd></dl>
 <h2>OUTPUT</h2>
 <p> The output looks like this: </p>
 <pre>

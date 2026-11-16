@@ -65,9 +65,9 @@ description: "ssh_selinux – Security Enhanced Linux Policy for the ssh process
 <p> Policy governs the access confined processes have to these ports. SELinux ssh policy is very flexible allowing users to setup their ssh processes in as secure a method as possible. </p>
 <p> The following port types are defined for ssh: </p>
 <dl>
-<dt><code>ssh_port_t</code></p>
+<dt><code>ssh_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 22</dl>
+</dd><dd>Default Defined Ports: tcp 22</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ssh_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cifs_t</code> </p>
@@ -132,14 +132,14 @@ description: "ssh_selinux – Security Enhanced Linux Policy for the ssh process
 <p> <code>ssh_exec_t</code> </p>
 <p> &#8211; Set files with the ssh_exec_t type, if you want to transition an executable to the ssh_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/ssh, /usr/libexec/nm-ssh-service </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/ssh, /usr/libexec/nm-ssh-service </dd>
 </dl>
 <p> <code>ssh_home_t</code> </p>
 <p> &#8211; Set files with the ssh_home_t type, if you want to store ssh files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/[^/]+/.ssh(/.*)?, /root/.ssh(/.*)?, /var/lib/one/.ssh(/.*)?, /var/lib/pgsql/.ssh(/.*)?, /var/lib/openshift/[^/]+/.ssh(/.*)?, /var/lib/amanda/.ssh(/.*)?, /var/lib/stickshift/[^/]+/.ssh(/.*)?, /var/lib/gitolite/.ssh(/.*)?, /var/lib/nocpulse/.ssh(/.*)?, /var/lib/gitolite3/.ssh(/.*)?, /var/lib/openshift/gear/[^/]+/.ssh(/.*)?, /root/.shosts, /home/[^/]+/.ssh(/.*)?, /home/[^/]+/.ansible/cp/.*, /home/[^/]+/.shosts </p>
+<dt>Paths:</dt>
+<dd>/var/lib/[^/]+/.ssh(/.*)?, /root/.ssh(/.*)?, /var/lib/one/.ssh(/.*)?, /var/lib/pgsql/.ssh(/.*)?, /var/lib/openshift/[^/]+/.ssh(/.*)?, /var/lib/amanda/.ssh(/.*)?, /var/lib/stickshift/[^/]+/.ssh(/.*)?, /var/lib/gitolite/.ssh(/.*)?, /var/lib/nocpulse/.ssh(/.*)?, /var/lib/gitolite3/.ssh(/.*)?, /var/lib/openshift/gear/[^/]+/.ssh(/.*)?, /root/.shosts, /home/[^/]+/.ssh(/.*)?, /home/[^/]+/.ansible/cp/.*, /home/[^/]+/.shosts </dd>
 </dl>
 <p> <code>ssh_keygen_exec_t</code> </p>
 <p> &#8211; Set files with the ssh_keygen_exec_t type, if you want to transition an executable to the ssh_keygen_t domain. </p>
@@ -148,24 +148,24 @@ description: "ssh_selinux – Security Enhanced Linux Policy for the ssh process
 <p> <code>ssh_keysign_exec_t</code> </p>
 <p> &#8211; Set files with the ssh_keysign_exec_t type, if you want to transition an executable to the ssh_keysign_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/openssh/ssh-keysign, /usr/libexec/openssh/ssh-keysign </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/openssh/ssh-keysign, /usr/libexec/openssh/ssh-keysign </dd>
 </dl>
 <p> <code>ssh_tmpfs_t</code> </p>
 <p> &#8211; Set files with the ssh_tmpfs_t type, if you want to store ssh files on a tmpfs file system. </p>
 <p> <code>sshd_exec_t</code> </p>
 <p> &#8211; Set files with the sshd_exec_t type, if you want to transition an executable to the sshd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/sshd, /usr/sbin/gsisshd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/sshd, /usr/sbin/gsisshd </dd>
 </dl>
 <p> <code>sshd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the sshd_initrc_exec_t type, if you want to transition an executable to the sshd_initrc_t domain. </p>
 <p> <code>sshd_key_t</code> </p>
 <p> &#8211; Set files with the sshd_key_t type, if you want to treat the files as sshd key data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ssh/ssh_host.*_key, /etc/ssh/ssh_host.*_key.pub, /etc/ssh/primes </p>
+<dt>Paths:</dt>
+<dd>/etc/ssh/ssh_host.*_key, /etc/ssh/ssh_host.*_key.pub, /etc/ssh/primes </dd>
 </dl>
 <p> <code>sshd_keygen_exec_t</code> </p>
 <p> &#8211; Set files with the sshd_keygen_exec_t type, if you want to transition an executable to the sshd_keygen_t domain. </p>
@@ -180,8 +180,8 @@ description: "ssh_selinux – Security Enhanced Linux Policy for the ssh process
 <p> <code>sshd_var_run_t</code> </p>
 <p> &#8211; Set files with the sshd_var_run_t type, if you want to store the sshd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/sshd.pid, /var/run/sshd.init.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/sshd.pid, /var/run/sshd.init.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

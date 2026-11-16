@@ -14,18 +14,18 @@ description: "gnutls_openpgp_privkey_export – API function"
 <p> <code>int gnutls_openpgp_privkey_export(gnutls_openpgp_privkey_t </code><i>key</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>, void * </code><i>output_data</i><code>, size_t * </code><i>output_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_privkey_t key</p>
-<dd> Holds the key.</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> One of gnutls_openpgp_crt_fmt_t elements.</p>
-<dt>const char * password</p>
-<dd> the password that will be used to encrypt the key. (unused for now)</p>
-<dt>unsigned int flags</p>
-<dd> (0) for future compatibility</p>
-<dt>void * output_data</p>
-<dd> will contain the key base64 encoded or raw</p>
-<dt>size_t * output_data_size</p>
-<dd> holds the size of output_data (and will be replaced by the actual size of parameters)</dl>
+<dt>gnutls_openpgp_privkey_t key</dt>
+<dd> Holds the key.</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> One of gnutls_openpgp_crt_fmt_t elements.</dd>
+<dt>const char * password</dt>
+<dd> the password that will be used to encrypt the key. (unused for now)</dd>
+<dt>unsigned int flags</dt>
+<dd> (0) for future compatibility</dd>
+<dt>void * output_data</dt>
+<dd> will contain the key base64 encoded or raw</dd>
+<dt>size_t * output_data_size</dt>
+<dd> holds the size of output_data (and will be replaced by the actual size of parameters)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given key to RAW or Base64 format. If the buffer provided is not long enough to hold the output, then GNUTLS_E_SHORT_MEMORY_BUFFER will be returned.</p>
 <h2>RETURNS</h2>
@@ -41,6 +41,6 @@ description: "gnutls_openpgp_privkey_export – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

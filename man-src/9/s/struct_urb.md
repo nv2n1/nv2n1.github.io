@@ -39,79 +39,79 @@ description: "struct_urb – USB Request Block"
 <h2>Members</h2>
 <p>urb_list</p>
 <dl>
-<dd>For use by current owner of the URB.</dl>
+<dd>For use by current owner of the URB.</dd></dl>
 <p> anchor_list</p>
 <dl>
-<dd>membership in the list of an anchor</dl>
+<dd>membership in the list of an anchor</dd></dl>
 <p> anchor</p>
 <dl>
-<dd>to anchor URBs to a common mooring</dl>
+<dd>to anchor URBs to a common mooring</dd></dl>
 <p> dev</p>
 <dl>
-<dd>Identifies the USB device to perform the request.</dl>
+<dd>Identifies the USB device to perform the request.</dd></dl>
 <p> ep</p>
 <dl>
-<dd>Points to the endpoint&#8217;s data structure. Will eventually replace <i>pipe</i>.</dl>
+<dd>Points to the endpoint&#8217;s data structure. Will eventually replace <i>pipe</i>.</dd></dl>
 <p> pipe</p>
 <dl>
-<dd>Holds endpoint number, direction, type, and more. Create these values with the eight macros available; usb_{snd,rcv}TYPEpipe(dev,endpoint), where the TYPE is &#8220;ctrl&#8221; (control), &#8220;bulk&#8221;, &#8220;int&#8221; (interrupt), or &#8220;iso&#8221; (isochronous). For example <code>usb_sndbulkpipe</code> or <code>usb_rcvintpipe</code>. Endpoint numbers range from zero to fifteen. Note that &#8220;in&#8221; endpoint two is a different endpoint (and pipe) from &#8220;out&#8221; endpoint two. The current configuration controls the existence, type, and maximum packet size of any given endpoint.</dl>
+<dd>Holds endpoint number, direction, type, and more. Create these values with the eight macros available; usb_{snd,rcv}TYPEpipe(dev,endpoint), where the TYPE is &#8220;ctrl&#8221; (control), &#8220;bulk&#8221;, &#8220;int&#8221; (interrupt), or &#8220;iso&#8221; (isochronous). For example <code>usb_sndbulkpipe</code> or <code>usb_rcvintpipe</code>. Endpoint numbers range from zero to fifteen. Note that &#8220;in&#8221; endpoint two is a different endpoint (and pipe) from &#8220;out&#8221; endpoint two. The current configuration controls the existence, type, and maximum packet size of any given endpoint.</dd></dl>
 <p> stream_id</p>
 <dl>
-<dd>the endpoint&#8217;s stream ID for bulk streams</dl>
+<dd>the endpoint&#8217;s stream ID for bulk streams</dd></dl>
 <p> status</p>
 <dl>
-<dd>This is read in non-iso completion functions to get the status of the particular request. ISO requests only use it to tell whether the URB was unlinked; detailed status for each frame is in the fields of the iso_frame-desc.</dl>
+<dd>This is read in non-iso completion functions to get the status of the particular request. ISO requests only use it to tell whether the URB was unlinked; detailed status for each frame is in the fields of the iso_frame-desc.</dd></dl>
 <p> transfer_flags</p>
 <dl>
-<dd>A variety of flags may be used to affect how URB submission, unlinking, or operation are handled. Different kinds of URB can use different flags.</dl>
+<dd>A variety of flags may be used to affect how URB submission, unlinking, or operation are handled. Different kinds of URB can use different flags.</dd></dl>
 <p> transfer_buffer</p>
 <dl>
-<dd>This identifies the buffer to (or from) which the I/O request will be performed unless URB_NO_TRANSFER_DMA_MAP is set (however, do not leave garbage in transfer_buffer even then). This buffer must be suitable for DMA; allocate it with <code>kmalloc</code> or equivalent. For transfers to &#8220;in&#8221; endpoints, contents of this buffer will be modified. This buffer is used for the data stage of control transfers.</dl>
+<dd>This identifies the buffer to (or from) which the I/O request will be performed unless URB_NO_TRANSFER_DMA_MAP is set (however, do not leave garbage in transfer_buffer even then). This buffer must be suitable for DMA; allocate it with <code>kmalloc</code> or equivalent. For transfers to &#8220;in&#8221; endpoints, contents of this buffer will be modified. This buffer is used for the data stage of control transfers.</dd></dl>
 <p> transfer_dma</p>
 <dl>
-<dd>When transfer_flags includes URB_NO_TRANSFER_DMA_MAP, the device driver is saying that it provided this DMA address, which the host controller driver should use in preference to the transfer_buffer.</dl>
+<dd>When transfer_flags includes URB_NO_TRANSFER_DMA_MAP, the device driver is saying that it provided this DMA address, which the host controller driver should use in preference to the transfer_buffer.</dd></dl>
 <p> sg</p>
 <dl>
-<dd>scatter gather buffer list, the buffer size of each element in the list (except the last) must be divisible by the endpoint&#8217;s max packet size if no_sg_constraint isn&#8217;t set in &#8216;struct usb_bus&#8217;</dl>
+<dd>scatter gather buffer list, the buffer size of each element in the list (except the last) must be divisible by the endpoint&#8217;s max packet size if no_sg_constraint isn&#8217;t set in &#8216;struct usb_bus&#8217;</dd></dl>
 <p> num_mapped_sgs</p>
 <dl>
-<dd>(internal) number of mapped sg entries</dl>
+<dd>(internal) number of mapped sg entries</dd></dl>
 <p> num_sgs</p>
 <dl>
-<dd>number of entries in the sg list</dl>
+<dd>number of entries in the sg list</dd></dl>
 <p> transfer_buffer_length</p>
 <dl>
-<dd>How big is transfer_buffer. The transfer may be broken up into chunks according to the current maximum packet size for the endpoint, which is a function of the configuration and is encoded in the pipe. When the length is zero, neither transfer_buffer nor transfer_dma is used.</dl>
+<dd>How big is transfer_buffer. The transfer may be broken up into chunks according to the current maximum packet size for the endpoint, which is a function of the configuration and is encoded in the pipe. When the length is zero, neither transfer_buffer nor transfer_dma is used.</dd></dl>
 <p> actual_length</p>
 <dl>
-<dd>This is read in non-iso completion functions, and it tells how many bytes (out of transfer_buffer_length) were transferred. It will normally be the same as requested, unless either an error was reported or a short read was performed. The URB_SHORT_NOT_OK transfer flag may be used to make such short reads be reported as errors.</dl>
+<dd>This is read in non-iso completion functions, and it tells how many bytes (out of transfer_buffer_length) were transferred. It will normally be the same as requested, unless either an error was reported or a short read was performed. The URB_SHORT_NOT_OK transfer flag may be used to make such short reads be reported as errors.</dd></dl>
 <p> setup_packet</p>
 <dl>
-<dd>Only used for control transfers, this points to eight bytes of setup data. Control transfers always start by sending this data to the device. Then transfer_buffer is read or written, if needed.</dl>
+<dd>Only used for control transfers, this points to eight bytes of setup data. Control transfers always start by sending this data to the device. Then transfer_buffer is read or written, if needed.</dd></dl>
 <p> setup_dma</p>
 <dl>
-<dd>DMA pointer for the setup packet. The caller must not use this field; setup_packet must point to a valid buffer.</dl>
+<dd>DMA pointer for the setup packet. The caller must not use this field; setup_packet must point to a valid buffer.</dd></dl>
 <p> start_frame</p>
 <dl>
-<dd>Returns the initial frame for isochronous transfers.</dl>
+<dd>Returns the initial frame for isochronous transfers.</dd></dl>
 <p> number_of_packets</p>
 <dl>
-<dd>Lists the number of ISO transfer buffers.</dl>
+<dd>Lists the number of ISO transfer buffers.</dd></dl>
 <p> interval</p>
 <dl>
-<dd>Specifies the polling interval for interrupt or isochronous transfers. The units are frames (milliseconds) for full and low speed devices, and microframes (1/8 millisecond) for highspeed and SuperSpeed devices.</dl>
+<dd>Specifies the polling interval for interrupt or isochronous transfers. The units are frames (milliseconds) for full and low speed devices, and microframes (1/8 millisecond) for highspeed and SuperSpeed devices.</dd></dl>
 <p> error_count</p>
 <dl>
-<dd>Returns the number of ISO transfers that reported errors.</dl>
+<dd>Returns the number of ISO transfers that reported errors.</dd></dl>
 <p> context</p>
 <dl>
-<dd>For use in completion functions. This normally points to request-specific driver context.</dl>
+<dd>For use in completion functions. This normally points to request-specific driver context.</dd></dl>
 <p> complete</p>
 <dl>
-<dd>Completion handler. This URB is passed as the parameter to the completion function. The completion function may then do what it likes with the URB, including resubmitting or freeing it.</dl>
+<dd>Completion handler. This URB is passed as the parameter to the completion function. The completion function may then do what it likes with the URB, including resubmitting or freeing it.</dd></dl>
 <p> iso_frame_desc[0]</p>
 <dl>
-<dd>Used to provide arrays of ISO transfer buffers and to collect the transfer status for each buffer.</dl>
+<dd>Used to provide arrays of ISO transfer buffers and to collect the transfer status for each buffer.</dd></dl>
 <h2>Description</h2>
 <p>This structure identifies USB transfer requests. URBs must be allocated by calling <code>usb_alloc_urb</code> and freed with a call to <code>usb_free_urb</code>. Initialization may be done using various usb_fill_*<code>_urb</code> functions. URBs are submitted using <code>usb_submit_urb</code>, and pending requests may be canceled using <code>usb_unlink_urb</code> or <code>usb_kill_urb</code>. </p>
 <p> Data Transfer Buffers: </p>

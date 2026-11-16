@@ -11,7 +11,6 @@ std::towctrans - std::towctrans
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwctype&gt;
-
 std::wint_t towctrans( std::wint_t wc, std::wctrans_t desc );</code></pre> 
 Maps the wide character wc using the current C locale's LC_CTYPE mapping category identified by desc. 
 If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 
@@ -29,14 +28,10 @@ The mapped value of ch using the mapping identified by desc in LC_CTYPE facet of
 
 The following example demonstrates katakana to hiragana character mapping 
  // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
 std::wstring tohira(std::wstring str)
-
 {
     std::transform(str.begin(), str.end(), str.begin(), [](wchar_t c) {
         return std::towctrans(c, std::wctrans(&quot;tojhira&quot;));
@@ -44,7 +39,6 @@ std::wstring tohira(std::wstring str)
     return str;
 }
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;ja_JP.UTF-8&quot;);
     std::wstring kana = L&quot;ヒラガナ&quot;;

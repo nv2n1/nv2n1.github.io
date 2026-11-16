@@ -15,26 +15,26 @@ description: "db2index – Directory Server script for indexing attributes"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-n</code> <i>Backend Name</i></p>
-<dd>The name of the LDBM database to reindex. Example: userRoot</p>
-<dt><code>-s</code> <i>includeSuffix</i></p>
-<dd>Specifies suffixes to be included or the subtrees to be included</p>
-<dt><code>-t</code> <i>attributeName[:indextypes[:matchingrules]]</i></p>
-<dd>The attribute to index. Optionally you can specify a comma separated list of index types: eq, sub, pres, and approx. An optional matching rule OID can also be set.</p>
-<dt><code>-T</code> <i>vlvTag</i></p>
-<dd>This is the name of the vlv index entry under cn=config.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-n</code> <i>Backend Name</i></dt>
+<dd>The name of the LDBM database to reindex. Example: userRoot</dd>
+<dt><code>-s</code> <i>includeSuffix</i></dt>
+<dd>Specifies suffixes to be included or the subtrees to be included</dd>
+<dt><code>-t</code> <i>attributeName[:indextypes[:matchingrules]]</i></dt>
+<dd>The attribute to index. Optionally you can specify a comma separated list of index types: eq, sub, pres, and approx. An optional matching rule OID can also be set.</dd>
+<dt><code>-T</code> <i>vlvTag</i></dt>
+<dd>This is the name of the vlv index entry under cn=config.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>db2index -n userRoot -t uid:eq,sub:1.3.6.1.4.1.42.2.27.9.4.76.1 -t cn:eq,pres</p>
+<dt>db2index -n userRoot -t uid:eq,sub:1.3.6.1.4.1.42.2.27.9.4.76.1 -t cn:eq,pres</dt>
 <dd>
-<dt>db2index -Z instance2 -s &#8216;dc=example,dc=com&#8217; -t uid:eq:pres:sub -t sn</p>
+</dd><dt>db2index -Z instance2 -s &#8216;dc=example,dc=com&#8217; -t uid:eq:pres:sub -t sn</dt>
 <dd>
-<dt>db2index -Z instance3</p>
-<dd></dl>
+</dd><dt>db2index -Z instance3</dt>
+<dd></dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

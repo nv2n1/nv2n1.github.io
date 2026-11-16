@@ -15,10 +15,10 @@ description: "mkcp – make a NILFS2 checkpoint"
 <p> This command is valid only for mounted NILFS2 file systems, and will fail if the <i>device</i> has no active mounts.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd>Create a snapshot.</p>
-<dt><code>-h</code></p>
-<dd>Display help message and exit.</dl>
+<dt><code>-s</code></dt>
+<dd>Create a snapshot.</dd>
+<dt><code>-h</code></dt>
+<dd>Display help message and exit.</dd></dl>
 <h2>Author</h2>
 <p>Koji Sato &lt;koji [at] osrg.net&gt;</p>
 <h2>Availability</h2>

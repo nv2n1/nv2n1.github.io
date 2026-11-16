@@ -21,14 +21,14 @@ description: "tcgetpgrp, tcsetpgrp – get and set terminal foreground process g
 <p> When successful, <code>tcsetpgrp</code>() returns 0. Otherwise, it returns -1, and <i>errno</i> is set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd><i>fd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>pgrp</i> has an unsupported value.</p>
-<dt><code>ENOTTY</code></p>
-<dd>The calling process does not have a controlling terminal, or it has one but it is not described by <i>fd</i>, or, for <code>tcsetpgrp</code>(), this controlling terminal is no longer associated with the session of the calling process.</p>
-<dt><code>EPERM</code></p>
-<dd><i>pgrp</i> has a supported value, but is not the process group ID of a process in the same session as the calling process.</dl>
+<dt><code>EBADF</code></dt>
+<dd><i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>pgrp</i> has an unsupported value.</dd>
+<dt><code>ENOTTY</code></dt>
+<dd>The calling process does not have a controlling terminal, or it has one but it is not described by <i>fd</i>, or, for <code>tcsetpgrp</code>(), this controlling terminal is no longer associated with the session of the calling process.</dd>
+<dt><code>EPERM</code></dt>
+<dd><i>pgrp</i> has a supported value, but is not the process group ID of a process in the same session as the calling process.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

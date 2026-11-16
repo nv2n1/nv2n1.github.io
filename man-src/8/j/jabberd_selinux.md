@@ -47,15 +47,15 @@ description: "jabberd_selinux – Security Enhanced Linux Policy for the jabberd
 <p> Policy governs the access confined processes have to these ports. SELinux jabberd policy is very flexible allowing users to setup their jabberd processes in as secure a method as possible. </p>
 <p> The following port types are defined for jabberd: </p>
 <dl>
-<dt><code>jabber_client_port_t</code></p>
+<dt><code>jabber_client_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5222,5223 </p>
-<dt><code>jabber_interserver_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 5222,5223 </dd>
+<dt><code>jabber_interserver_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5269,5280 </p>
-<dt><code>jabber_router_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 5269,5280 </dd>
+<dt><code>jabber_router_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5347</dl>
+</dd><dd>Default Defined Ports: tcp 5347</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type jabberd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -98,16 +98,16 @@ description: "jabberd_selinux – Security Enhanced Linux Policy for the jabberd
 <p> <code>jabberd_exec_t</code> </p>
 <p> &#8211; Set files with the jabberd_exec_t type, if you want to transition an executable to the jabberd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/sm, /usr/bin/s2s </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/sm, /usr/bin/s2s </dd>
 </dl>
 <p> <code>jabberd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the jabberd_initrc_exec_t type, if you want to transition an executable to the jabberd_initrc_t domain. </p>
 <p> <code>jabberd_router_exec_t</code> </p>
 <p> &#8211; Set files with the jabberd_router_exec_t type, if you want to transition an executable to the jabberd_router_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/c2s, /usr/bin/router </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/c2s, /usr/bin/router </dd>
 </dl>
 <p> <code>jabberd_var_lib_t</code> </p>
 <p> &#8211; Set files with the jabberd_var_lib_t type, if you want to store the jabberd files under the /var/lib directory. </p>

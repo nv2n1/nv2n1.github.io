@@ -10,9 +10,7 @@ description: "std::vector<bool> – std::vector<bool>"
 <p>std::vector&lt;bool&gt; &#8211; std::vector&lt;bool&gt;</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;vector&gt;
-
 template&lt;class Allocator&gt;
-
 class vector&lt;bool, Allocator&gt;;</code></pre>
 <p>std::vector&lt;bool&gt; is a possibly space-efficient specialization of std::vector for the type bool.<br />
 The manner in which std::vector&lt;bool&gt; is made space efficient (as well as whether it is optimized at all) is implementation defined. One potential optimization involves coalescing vector elements such that each element occupies a single bit instead of sizeof(bool) bytes.<br />

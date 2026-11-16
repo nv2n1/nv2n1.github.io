@@ -14,10 +14,10 @@ description: "gnutls_pk_bits_to_sec_param – API function"
 <p> <code>gnutls_sec_param_t gnutls_pk_bits_to_sec_param(gnutls_pk_algorithm_t </code><i>algo</i><code>, unsigned int </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pk_algorithm_t algo</p>
-<dd> is a public key algorithm</p>
-<dt>unsigned int bits</p>
-<dd> is the number of bits</dl>
+<dt>gnutls_pk_algorithm_t algo</dt>
+<dd> is a public key algorithm</dd>
+<dt>unsigned int bits</dt>
+<dd> is the number of bits</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is the inverse of <code>gnutls_sec_param_to_pk_bits()</code>. Given an algorithm and the number of bits, it will return the security parameter. This is a rough indication.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_pk_bits_to_sec_param – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

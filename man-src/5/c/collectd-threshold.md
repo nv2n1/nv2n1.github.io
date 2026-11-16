@@ -38,7 +38,6 @@ description: "collectd-threshold – Documentation of collectd’s Threshold plu
  Invert false
  Instance &quot;bar&quot;
  &lt;/Type&gt;
- 
  &lt;Plugin &quot;interface&quot;&gt;
  Instance &quot;eth0&quot;
  &lt;Type &quot;if_octets&quot;&gt;
@@ -46,20 +45,17 @@ description: "collectd-threshold – Documentation of collectd’s Threshold plu
  DataSource &quot;rx&quot;
  &lt;/Type&gt;
  &lt;/Plugin&gt;
- 
  &lt;Host &quot;hostname&quot;&gt;
  &lt;Type &quot;cpu&quot;&gt;
  Instance &quot;idle&quot;
  FailureMin 10
  &lt;/Type&gt;
- 
  &lt;Plugin &quot;memory&quot;&gt;
  &lt;Type &quot;memory&quot;&gt;
  Instance &quot;cached&quot;
  WarningMin 100000000
  &lt;/Type&gt;
  &lt;/Plugin&gt;
- 
  &lt;Type &quot;load&quot;&gt;
  DataSource &quot;midterm&quot;
  FailureMax 4
@@ -71,32 +67,32 @@ description: "collectd-threshold – Documentation of collectd’s Threshold plu
 <p>There are basically two types of configuration statements: The <tt>&quot;Host&quot;</tt>, <tt>&quot;Plugin&quot;</tt>, and <tt>&quot;Type&quot;</tt> blocks select the value for which a threshold should be configured. The <tt>&quot;Plugin&quot;</tt> and <tt>&quot;Type&quot;</tt> blocks may be specified further using the <tt>&quot;Instance&quot;</tt> option. You can combine the block by nesting the blocks, though they must be nested in the above order, i.e. <tt>&quot;Host&quot;</tt> may contain either <tt>&quot;Plugin&quot;</tt> and <tt>&quot;Type&quot;</tt> blocks, <tt>&quot;Plugin&quot;</tt> may only contain <tt>&quot;Type&quot;</tt> blocks and <tt>&quot;Type&quot;</tt> may not contain other blocks. If multiple blocks apply to the same value the most specific block is used. </p>
 <p> The other statements specify the threshold to configure. They <code>must</code> be included in a <tt>&quot;Type&quot;</tt> block. Currently the following statements are recognized:</p>
 <dl>
-<dt><code>FailureMax</code> <i>Value</i></p>
+<dt><code>FailureMax</code> <i>Value</i></dt>
 <dd>
-<dt><code>WarningMax</code> <i>Value</i></p>
-<dd>Sets the upper bound of acceptable values. If unset defaults to positive infinity. If a value is greater than <code>FailureMax</code> a <font SIZE="-1"><code>FAILURE</code></font> notification will be created. If the value is greater than <code>WarningMax</code> but less than (or equal to) <code>FailureMax</code> a <font SIZE="-1"><code>WARNING</code></font> notification will be created.</p>
-<dt><code>FailureMin</code> <i>Value</i></p>
+</dd><dt><code>WarningMax</code> <i>Value</i></dt>
+<dd>Sets the upper bound of acceptable values. If unset defaults to positive infinity. If a value is greater than <code>FailureMax</code> a <font SIZE="-1"><code>FAILURE</code></font> notification will be created. If the value is greater than <code>WarningMax</code> but less than (or equal to) <code>FailureMax</code> a <font SIZE="-1"><code>WARNING</code></font> notification will be created.</dd>
+<dt><code>FailureMin</code> <i>Value</i></dt>
 <dd>
-<dt><code>WarningMin</code> <i>Value</i></p>
-<dd>Sets the lower bound of acceptable values. If unset defaults to negative infinity. If a value is less than <code>FailureMin</code> a <font SIZE="-1"><code>FAILURE</code></font> notification will be created. If the value is less than <code>WarningMin</code> but greater than (or equal to) <code>FailureMin</code> a <font SIZE="-1"><code>WARNING</code></font> notification will be created.</p>
-<dt><code>DataSource</code> <i>DSName</i></p>
-<dd>Some data sets have more than one &#8220;data source&#8221;. Interesting examples are the <tt>&quot;if_octets&quot;</tt> data set, which has received (<tt>&quot;rx&quot;</tt>) and sent (<tt>&quot;tx&quot;</tt>) bytes and the <tt>&quot;disk_ops&quot;</tt> data set, which holds <tt>&quot;read&quot;</tt> and <tt>&quot;write&quot;</tt> operations. The system load data set, <tt>&quot;load&quot;</tt>, even has three data sources: <tt>&quot;shortterm&quot;</tt>, <tt>&quot;midterm&quot;</tt>, and <tt>&quot;longterm&quot;</tt>. </p>
+</dd><dt><code>WarningMin</code> <i>Value</i></dt>
+<dd>Sets the lower bound of acceptable values. If unset defaults to negative infinity. If a value is less than <code>FailureMin</code> a <font SIZE="-1"><code>FAILURE</code></font> notification will be created. If the value is less than <code>WarningMin</code> but greater than (or equal to) <code>FailureMin</code> a <font SIZE="-1"><code>WARNING</code></font> notification will be created.</dd>
+<dt><code>DataSource</code> <i>DSName</i></dt>
+<dd>Some data sets have more than one &#8220;data source&#8221;. Interesting examples are the <tt>&quot;if_octets&quot;</tt> data set, which has received (<tt>&quot;rx&quot;</tt>) and sent (<tt>&quot;tx&quot;</tt>) bytes and the <tt>&quot;disk_ops&quot;</tt> data set, which holds <tt>&quot;read&quot;</tt> and <tt>&quot;write&quot;</tt> operations. The system load data set, <tt>&quot;load&quot;</tt>, even has three data sources: <tt>&quot;shortterm&quot;</tt>, <tt>&quot;midterm&quot;</tt>, and <tt>&quot;longterm&quot;</tt>. </dd>
 <p> Normally, all data sources are checked against a configured threshold. If this is undesirable, or if you want to specify different limits for each data source, you can use the <code>DataSource</code> option to have a threshold apply only to one data source.</p>
-<dt><code>Invert</code> <code>true</code>|<code>false</code></p>
-<dd>If set to <code>true</code> the range of acceptable values is inverted, i.e. values between <code>FailureMin</code> and <code>FailureMax</code> (<code>WarningMin</code> and <code>WarningMax</code>) are not okay. Defaults to <code>false</code>.</p>
-<dt><code>Persist</code> <code>true</code>|<code>false</code></p>
-<dd>Sets how often notifications are generated. If set to <code>true</code> one notification will be generated for each value that is out of the acceptable range. If set to <code>false</code> (the default) then a notification is only generated if a value is out of range but the previous value was okay. </p>
+<dt><code>Invert</code> <code>true</code>|<code>false</code></dt>
+<dd>If set to <code>true</code> the range of acceptable values is inverted, i.e. values between <code>FailureMin</code> and <code>FailureMax</code> (<code>WarningMin</code> and <code>WarningMax</code>) are not okay. Defaults to <code>false</code>.</dd>
+<dt><code>Persist</code> <code>true</code>|<code>false</code></dt>
+<dd>Sets how often notifications are generated. If set to <code>true</code> one notification will be generated for each value that is out of the acceptable range. If set to <code>false</code> (the default) then a notification is only generated if a value is out of range but the previous value was okay. </dd>
 <p> This applies to missing values, too: If set to <code>true</code> a notification about a missing value is generated once every <code>Interval</code> seconds. If set to <code>false</code> only one such notification is generated until the value appears again.</p>
-<dt><code>PersistOK</code> <code>true</code>|<code>false</code></p>
-<dd>Sets how <font SIZE="-1">OKAY</font> notifications act. If set to <code>true</code> one notification will be generated for each value that is in the acceptable range. If set to <code>false</code> (the default) then a notification is only generated if a value is in range but the previous value was not.</p>
-<dt><code>Percentage</code> <code>true</code>|<code>false</code></p>
-<dd>If set to <code>true</code>, the minimum and maximum values given are interpreted as percentage value, relative to the other data sources. This is helpful for example for the &#8220;df&#8221; type, where you may want to issue a warning when less than 5&nbsp;<wbr>% of the total space is available. Defaults to <code>false</code>.</p>
-<dt><code>Hits</code> <i>Value</i></p>
-<dd>Sets the number of occurrences which the threshold must be raised before to dispatch any notification or, in other words, the number of <code>Interval</code>s that the threshold must be match before dispatch any notification.</p>
-<dt><code>Hysteresis</code> <i>Value</i></p>
-<dd>Sets the hysteresis value for threshold. The hysteresis is a method to prevent flapping between states, until a new received value for a previously matched threshold down below the threshold condition (<code>WarningMax</code>, <code>FailureMin</code> or everything else) minus the hysteresis value, the failure (respectively warning) state will be keep.</p>
-<dt><code>Interesting</code> <code>true</code>|<code>false</code></p>
-<dd>If set to <code>true</code> (the default), a notification with severity <tt>&quot;FAILURE&quot;</tt> will be created when a matching value list is no longer updated and purged from the internal cache. When this happens depends on the <i>interval</i> of the value list and the global <code>Timeout</code> setting. See the <code>Interval</code> and <code>Timeout</code> settings in <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5) for details. If set to <code>false</code>, this event will be ignored.</dl>
+<dt><code>PersistOK</code> <code>true</code>|<code>false</code></dt>
+<dd>Sets how <font SIZE="-1">OKAY</font> notifications act. If set to <code>true</code> one notification will be generated for each value that is in the acceptable range. If set to <code>false</code> (the default) then a notification is only generated if a value is in range but the previous value was not.</dd>
+<dt><code>Percentage</code> <code>true</code>|<code>false</code></dt>
+<dd>If set to <code>true</code>, the minimum and maximum values given are interpreted as percentage value, relative to the other data sources. This is helpful for example for the &#8220;df&#8221; type, where you may want to issue a warning when less than 5&nbsp;<wbr>% of the total space is available. Defaults to <code>false</code>.</dd>
+<dt><code>Hits</code> <i>Value</i></dt>
+<dd>Sets the number of occurrences which the threshold must be raised before to dispatch any notification or, in other words, the number of <code>Interval</code>s that the threshold must be match before dispatch any notification.</dd>
+<dt><code>Hysteresis</code> <i>Value</i></dt>
+<dd>Sets the hysteresis value for threshold. The hysteresis is a method to prevent flapping between states, until a new received value for a previously matched threshold down below the threshold condition (<code>WarningMax</code>, <code>FailureMin</code> or everything else) minus the hysteresis value, the failure (respectively warning) state will be keep.</dd>
+<dt><code>Interesting</code> <code>true</code>|<code>false</code></dt>
+<dd>If set to <code>true</code> (the default), a notification with severity <tt>&quot;FAILURE&quot;</tt> will be created when a matching value list is no longer updated and purged from the internal cache. When this happens depends on the <i>interval</i> of the value list and the global <code>Timeout</code> setting. See the <code>Interval</code> and <code>Timeout</code> settings in <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5) for details. If set to <code>false</code>, this event will be ignored.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5)</p>
 <h2>Author</h2>

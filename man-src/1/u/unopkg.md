@@ -22,33 +22,33 @@ description: "unopkg – LibreOffice Extension Manager"
 <p> This tool allows managing the extensions from the command line. </p>
 <h2>SUB-COMMANDS</h2>
 <dl>
-<dt><code>add</code></p>
-<dd> add the given extensions</p>
-<dt><code>remove</code></p>
-<dd> remove extensions by the given identifiers</p>
-<dt><code>reinstall</code></p>
-<dd> reinstall all deployed extensions (only for experts)</p>
-<dt><code>list</code></p>
-<dd> list information about the deployed extensions</p>
-<dt><code>gui</code></p>
-<dd> raise Extension Manager Graphical User Interface (GUI) </p>
+<dt><code>add</code></dt>
+<dd> add the given extensions</dd>
+<dt><code>remove</code></dt>
+<dd> remove extensions by the given identifiers</dd>
+<dt><code>reinstall</code></dt>
+<dd> reinstall all deployed extensions (only for experts)</dd>
+<dt><code>list</code></dt>
+<dd> list information about the deployed extensions</dd>
+<dt><code>gui</code></dt>
+<dd> raise Extension Manager Graphical User Interface (GUI) </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd> display help and exit</p>
-<dt><code>&#8211;version</code>|<code>-V</code></p>
-<dd> output version information and exit</p>
-<dt><code>&#8211;verbose</code>|<code>-v</code></p>
-<dd> verbose output</p>
-<dt><code>&#8211;force</code>|<code>-f</code></p>
-<dd> force overwriting existing extensions</p>
-<dt><code>&#8211;log-file</code> &lt;<i>file</i>&gt;</p>
-<dd> custom log file; the default one is &lt;cache-dir&gt;/log.txt</p>
-<dt><code>&#8211;shared</code>|<code>-f</code></p>
-<dd> operate on the system installation deployment context; use only when no concurrent Office process(es) are running! (only for experts)</p>
-<dt><code>&#8211;deployment-context</code> &lt;<i>context</i>&gt;</p>
-<dd> operate on explicit deployment context (only for experts) </p>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd> display help and exit</dd>
+<dt><code>&#8211;version</code>|<code>-V</code></dt>
+<dd> output version information and exit</dd>
+<dt><code>&#8211;verbose</code>|<code>-v</code></dt>
+<dd> verbose output</dd>
+<dt><code>&#8211;force</code>|<code>-f</code></dt>
+<dd> force overwriting existing extensions</dd>
+<dt><code>&#8211;log-file</code> &lt;<i>file</i>&gt;</dt>
+<dd> custom log file; the default one is &lt;cache-dir&gt;/log.txt</dd>
+<dt><code>&#8211;shared</code>|<code>-f</code></dt>
+<dd> operate on the system installation deployment context; use only when no concurrent Office process(es) are running! (only for experts)</dd>
+<dt><code>&#8211;deployment-context</code> &lt;<i>context</i>&gt;</dt>
+<dd> operate on explicit deployment context (only for experts) </dd>
 </dl>
 <h2>TROUBLESHOOTING PROBLEMS</h2>
 <p> See <code><a rel="nofollow" href="http://wiki.documentfoundation.org/BugReport">http://wiki.documentfoundation.org/BugReport</a></code> for more details about how to report bugs in LibreOffice.</p>

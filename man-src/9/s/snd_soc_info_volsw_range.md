@@ -15,11 +15,11 @@ snd_soc_info_volsw_range - single mixer info callback with range.
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>mixer control</dl>
+<dl><dd></dd><dd>mixer control</dd></dl>
  
 
  <i>uinfo</i>
-<dl><dd>control element information</dl>
+<dl><dd>control element information</dd></dl>
 
 <h2>Description</h2>
 

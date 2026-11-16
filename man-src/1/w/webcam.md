@@ -40,20 +40,20 @@ description: "webcam – capture images and upload them to a webserver using ftp
 <h2>CORRECTION OF DISTORTION</h2>
 <p> contributed by Frederic Helin, the parameters belong into the [grab] section of the config file too.</p>
 <dl>
-<dt><code>distor = 1</code></p>
-<dd> If distor param is set to 1, the correction of distortion works.</p>
-<dt><code>distor_k = 700</code></p>
-<dd> This is the coefficient of distortion. This algorithm is based on the paper &quot;Correcting Distortion of Image by Image Registration&quot; of Toru Tamaki, Tsuyoshi Yamamura and Noboru Ahnishi. More your lens has an important distortion, more &#8216;distor_k&#8217; must be neared of 0. 700 is the default value. Coefficient k of program is x100 than article.</p>
-<dt><code>distor_cx = 192</code></p>
+<dt><code>distor = 1</code></dt>
+<dd> If distor param is set to 1, the correction of distortion works.</dd>
+<dt><code>distor_k = 700</code></dt>
+<dd> This is the coefficient of distortion. This algorithm is based on the paper &quot;Correcting Distortion of Image by Image Registration&quot; of Toru Tamaki, Tsuyoshi Yamamura and Noboru Ahnishi. More your lens has an important distortion, more &#8216;distor_k&#8217; must be neared of 0. 700 is the default value. Coefficient k of program is x100 than article.</dd>
+<dt><code>distor_cx = 192</code></dt>
 <dd>
-<dt><code>distor_cy = 144</code></p>
-<dd> Coordinates of the lens optical axis: width/2 and height/2 are the default values. The axis doesn&#8217;t go through the image center. So, you can change its coordinates around the center of image to affine correction.</p>
-<dt><code>distor_zoom = 30</code></p>
-<dd> Zoom parameter is used to cache the distorted borders of image, if you don&#8217;t like this. Default value is 100.</p>
-<dt><code>distor_sensorw = 320</code></p>
+</dd><dt><code>distor_cy = 144</code></dt>
+<dd> Coordinates of the lens optical axis: width/2 and height/2 are the default values. The axis doesn&#8217;t go through the image center. So, you can change its coordinates around the center of image to affine correction.</dd>
+<dt><code>distor_zoom = 30</code></dt>
+<dd> Zoom parameter is used to cache the distorted borders of image, if you don&#8217;t like this. Default value is 100.</dd>
+<dt><code>distor_sensorw = 320</code></dt>
 <dd>
-<dt><code>distor_sensorh = 240</code></p>
-<dd> Dimensions of camera sensor. Default values are for 1/4p sensor. This parameters used to have the same k coefficient than article.</dl>
+</dd><dt><code>distor_sensorh = 240</code></dt>
+<dd> Dimensions of camera sensor. Default values are for 1/4p sensor. This parameters used to have the same k coefficient than article.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Gerd Knorr &lt;kraxel [at] bytesex.org&gt;</p>
 <h2>COPYRIGHT</h2>

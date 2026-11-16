@@ -15,7 +15,7 @@ xprt_load_transport - load a transport implementation
 <h2>Arguments</h2>
 
 <i>transport_name</i>
-<dl><dd><dd>transport to load</dl>
+<dl><dd></dd><dd>transport to load</dd></dl>
 
 <h2>Return</h2>
 

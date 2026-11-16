@@ -15,10 +15,10 @@ description: "mtx-texworks – TeXworks Startup Script"
 <p> <code>TeXworks Startup Script</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;start</code></p>
-<dd> [&#8211;verbose] start texworks</p>
-<dt><code>&#8211;test</code></p>
-<dd> report what will happen</dl>
+<dt><code>&#8211;start</code></dt>
+<dd> [&#8211;verbose] start texworks</dd>
+<dt><code>&#8211;test</code></dt>
+<dd> report what will happen</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

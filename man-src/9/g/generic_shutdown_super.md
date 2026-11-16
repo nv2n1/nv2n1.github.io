@@ -14,7 +14,7 @@ description: "generic_shutdown_super – common helper for ->kill_sb"
 <p><i>sb</i></p>
 <dl>
 <dd>
-<dd>superblock to kill</dl>
+</dd><dd>superblock to kill</dd></dl>
 <h2>Description</h2>
 <p><code>generic_shutdown_super</code> does all fs-independent work on superblock shutdown. Typical -&gt;<code>kill_sb</code> should pick all fs-specific objects that need destruction out of superblock, call <code>generic_shutdown_super</code> and release aforementioned objects. Note: dentries and inodes _are_ taken care of and do not need specific handling. </p>
 <p> Upon calling this function, the filesystem may no longer alter or rearrange the set of dentries belonging to this super_block, nor may it change the attachments of dentries to inodes.</p>

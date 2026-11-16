@@ -91,8 +91,8 @@ description: "dovecot_deliver_selinux – Security Enhanced Linux Policy for the
 <p> <code>dovecot_deliver_exec_t</code> </p>
 <p> &#8211; Set files with the dovecot_deliver_exec_t type, if you want to transition an executable to the dovecot_deliver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/dovecot/deliver, /usr/libexec/dovecot/dovecot-lda </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/dovecot/deliver, /usr/libexec/dovecot/dovecot-lda </dd>
 </dl>
 <p> <code>dovecot_deliver_tmp_t</code> </p>
 <p> &#8211; Set files with the dovecot_deliver_tmp_t type, if you want to store dovecot deliver temporary files in the /tmp directories. </p>

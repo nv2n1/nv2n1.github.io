@@ -13,61 +13,61 @@ description: "movemail.mailutils – move messages across mailboxes."
 <h2>Description</h2>
 <p>GNU movemail <code>&#8212;</code> move messages across mailboxes.</p>
 <dl COMPACT>
-<dt><code>&#8211;[no-]emacs</code></p>
-<dd>output information used by Emacs rmail interface</p>
-<dt><code>&#8211;[no-]ignore-errors</code></p>
-<dd>try to continue after errors</p>
-<dt><code>&#8211;max-messages</code>=<i>,NUMBER/</i></p>
-<dd>process at most NUMBER messages</p>
-<dt><code>-m</code>, <code>&#8211;[no-]progress-meter</code></p>
-<dd>enable progress meter</p>
-<dt><code>&#8211;[no-]notify</code></p>
-<dd>enable biff notification</p>
-<dt><code>&#8211;onerror</code>=<i>,KW[/</i>,KW&#8230;]</p>
-<dd>what to do on errors</p>
-<dt><code>-P</code>, <code>&#8211;owner</code>=<i>,MODELIST/</i></p>
-<dd>control mailbox ownership</p>
-<dt><code>-p</code>, <code>&#8211;[no-]preserve</code>, <code>&#8211;keep-messages</code></p>
-<dd>preserve the source mailbox</p>
-<dt><code>&#8211;program-id</code>=<i>,FMT/</i></p>
-<dd>set program identifier for diagnostics (default: program name)</p>
-<dt><code>-r</code>, <code>&#8211;[no-]reverse</code></p>
-<dd>reverse the sorting order</p>
-<dt><code>-u</code>, <code>&#8211;[no-]uidl</code></p>
-<dd>use UIDLs to avoid downloading the same message twice</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase verbosity level</p>
-<dd>Global debugging settings</p>
-<dt><code>&#8211;debug-level</code>=<i>,LEVEL/</i></p>
-<dd>set Mailutils debugging level</p>
-<dt> <code>&#8211;[no-]debug-line-info</code> show source info with debugging messages</p>
+<dt><code>&#8211;[no-]emacs</code></dt>
+<dd>output information used by Emacs rmail interface</dd>
+<dt><code>&#8211;[no-]ignore-errors</code></dt>
+<dd>try to continue after errors</dd>
+<dt><code>&#8211;max-messages</code>=<i>,NUMBER/</i></dt>
+<dd>process at most NUMBER messages</dd>
+<dt><code>-m</code>, <code>&#8211;[no-]progress-meter</code></dt>
+<dd>enable progress meter</dd>
+<dt><code>&#8211;[no-]notify</code></dt>
+<dd>enable biff notification</dd>
+<dt><code>&#8211;onerror</code>=<i>,KW[/</i>,KW&#8230;]</dt>
+<dd>what to do on errors</dd>
+<dt><code>-P</code>, <code>&#8211;owner</code>=<i>,MODELIST/</i></dt>
+<dd>control mailbox ownership</dd>
+<dt><code>-p</code>, <code>&#8211;[no-]preserve</code>, <code>&#8211;keep-messages</code></dt>
+<dd>preserve the source mailbox</dd>
+<dt><code>&#8211;program-id</code>=<i>,FMT/</i></dt>
+<dd>set program identifier for diagnostics (default: program name)</dd>
+<dt><code>-r</code>, <code>&#8211;[no-]reverse</code></dt>
+<dd>reverse the sorting order</dd>
+<dt><code>-u</code>, <code>&#8211;[no-]uidl</code></dt>
+<dd>use UIDLs to avoid downloading the same message twice</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase verbosity level</dd>
+<dd>Global debugging settings</dd>
+<dt><code>&#8211;debug-level</code>=<i>,LEVEL/</i></dt>
+<dd>set Mailutils debugging level</dd>
+<dt> <code>&#8211;[no-]debug-line-info</code> show source info with debugging messages</dt>
 <dd>
-<dd>Configuration handling</p>
-<dt><code>&#8211;config-file</code>=<i>,FILE/</i></p>
-<dd>load this configuration file; implies <code>&#8211;no-config</code></p>
-<dt><code>&#8211;config-lint</code></p>
-<dd>check configuration file syntax and exit</p>
-<dt><code>&#8211;config-verbose</code></p>
-<dd>verbosely log parsing of the configuration files</p>
-<dt><code>&#8211;no-config</code></p>
-<dd>do not load site and user configuration files</p>
-<dt><code>&#8211;no-site-config</code></p>
-<dd>do not load site-wide configuration file</p>
-<dt><code>&#8211;no-user-config</code></p>
-<dd>do not load user configuration file</p>
-<dt><code>&#8211;set</code>=<i>,PARAM=VALUE/</i></p>
-<dd>set configuration parameter</p>
-<dd>Informational options</p>
-<dt><code>&#8211;config-help</code></p>
-<dd>show configuration file summary</p>
-<dt><code>&#8211;show-config-options</code></p>
-<dd>show compilation options</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd>give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd>give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print program version</dl>
+</dd><dd>Configuration handling</dd>
+<dt><code>&#8211;config-file</code>=<i>,FILE/</i></dt>
+<dd>load this configuration file; implies <code>&#8211;no-config</code></dd>
+<dt><code>&#8211;config-lint</code></dt>
+<dd>check configuration file syntax and exit</dd>
+<dt><code>&#8211;config-verbose</code></dt>
+<dd>verbosely log parsing of the configuration files</dd>
+<dt><code>&#8211;no-config</code></dt>
+<dd>do not load site and user configuration files</dd>
+<dt><code>&#8211;no-site-config</code></dt>
+<dd>do not load site-wide configuration file</dd>
+<dt><code>&#8211;no-user-config</code></dt>
+<dd>do not load user configuration file</dd>
+<dt><code>&#8211;set</code>=<i>,PARAM=VALUE/</i></dt>
+<dd>set configuration parameter</dd>
+<dd>Informational options</dd>
+<dt><code>&#8211;config-help</code></dt>
+<dd>show configuration file summary</dd>
+<dt><code>&#8211;show-config-options</code></dt>
+<dd>show compilation options</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print program version</dd></dl>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;bug-mailutils [at] gnu.org&gt;.<br />
@@ -79,7 +79,7 @@ description: "movemail.mailutils – move messages across mailboxes."
 <h2>See Also</h2>
 <p>The complete GNU mailutils documentation is maintained as a Texinfo manual. If the <code>mailutils-doc</code> package is installed, the command</p>
 <dl COMPACT>
-<dd><code>info mailutils</code></dl>
+<dd><code>info mailutils</code></dd></dl>
 <p> should give you access to the complete manual.<br />
  You can also find this manual online in the GNU mailutils webpage:<br />
  <a rel="nofollow" href="https://www.gnu.org/software/mailutils/manual/index.html.">https://www.gnu.org/software/mailutils/manual/index.html.</a><br />

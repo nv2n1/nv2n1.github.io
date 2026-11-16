@@ -13,8 +13,8 @@ description: "mongoc_write_concern_get_fsync() – Fetches if an fsync should be
 mongoc_write_concern_get_fsync (const mongoc_write_concern_t *write_concern);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches if an fsync should be performed before returning success on a write operation. </p>
 <h2>Returns</h2>

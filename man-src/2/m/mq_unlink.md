@@ -21,12 +21,12 @@ int mq_unlink(const char *name);
 <p> On success <code>mq_unlink</code>() returns 0; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The caller does not have permission to unlink this message queue.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>name</i> was too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> There is no message queue with the given <i>name</i>.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The caller does not have permission to unlink this message queue.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>name</i> was too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> There is no message queue with the given <i>name</i>.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -15,18 +15,18 @@ description: "usrp2_card_burner – USRP N-Series FPGA/Firmware Burner"
 <p> <code>usrp2_card_burner [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Raw device path:</p>
-<dd> &#8211;addr=<i>&quot;Address&quot;</i> (default: 192.168.10.2)</p>
-<dt>This help information:</p>
-<dd> &#8211;help</p>
-<dt>Firmware Filepath:</p>
-<dd> &#8211;fw=<i>&quot;filepath&quot;</i></p>
-<dt>FPGA Filepath:</p>
-<dd> &#8211;fpga=<i>&quot;filepath&quot;</i></p>
-<dt>List all USRP devices without burning</p>
-<dd> &#8211;list</p>
-<dt>Override safety check</p>
-<dd> &#8211;force</dl>
+<dt>Raw device path:</dt>
+<dd> &#8211;addr=<i>&quot;Address&quot;</i> (default: 192.168.10.2)</dd>
+<dt>This help information:</dt>
+<dd> &#8211;help</dd>
+<dt>Firmware Filepath:</dt>
+<dd> &#8211;fw=<i>&quot;filepath&quot;</i></dd>
+<dt>FPGA Filepath:</dt>
+<dd> &#8211;fpga=<i>&quot;filepath&quot;</i></dd>
+<dt>List all USRP devices without burning</dt>
+<dd> &#8211;list</dd>
+<dt>Override safety check</dt>
+<dd> &#8211;force</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Standard burning procedure</h3>
 <p> usrp2_card_burner &#8211;dev=/dev/sdd1 &#8211;fw=usrp2_fw.bin &#8211;fpga=usrp2_fpga.bin</p>

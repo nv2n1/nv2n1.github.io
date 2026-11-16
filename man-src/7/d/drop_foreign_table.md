@@ -15,22 +15,22 @@ description: "DROP_FOREIGN_TABLE – remove a foreign table"
 <h2>Parameters</h2>
 <p>IF EXISTS</p>
 <dl>
-<dd>Do not throw an error if the foreign table does not exist. A notice is issued in this case.</dl>
+<dd>Do not throw an error if the foreign table does not exist. A notice is issued in this case.</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>The name (optionally schema-qualified) of the foreign table to drop.</dl>
+<dd>The name (optionally schema-qualified) of the foreign table to drop.</dd></dl>
 <p> CASCADE</p>
 <dl>
-<dd>Automatically drop objects that depend on the foreign table (such as views).</dl>
+<dd>Automatically drop objects that depend on the foreign table (such as views).</dd></dl>
 <p> RESTRICT</p>
 <dl>
-<dd>Refuse to drop the foreign table if any objects depend on it. This is the default.</dl>
+<dd>Refuse to drop the foreign table if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>To destroy two foreign tables, films and distributors: </p>
 <dl>
 <dd>
 <pre>DROP FOREIGN TABLE films, distributors;</pre>
-</dl>
+</dd></dl>
 <h2>Compatibility</h2>
 <p>This command conforms to the ISO/IEC 9075-9 (SQL/MED), except that the standard only allows one foreign table to be dropped per command, and apart from the IF EXISTS option, which is a PostgreSQL extension.</p>
 <h2>See Also</h2>

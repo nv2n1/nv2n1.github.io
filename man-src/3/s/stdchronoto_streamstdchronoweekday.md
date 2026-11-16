@@ -11,11 +11,8 @@ std::chrono::to_stream(std::chrono::weekday) - std::chrono::to_stream(std::chron
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits&gt;
-
 std::basic_ostream&lt;CharT, Traits&gt; &amp;(since C++ 20)
-
     to_stream(std::basic_ostream&lt;CharT, Traits&gt; &amp;os, const CharT *fmt,
-
               const std::chrono::weekday &amp;wd);</code></pre> 
 Outputs wd to the stream os, formatted according to the null-terminated format string fmt. 
 Format string 

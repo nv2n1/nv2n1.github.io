@@ -15,22 +15,22 @@ description: "ideviceimagemounter – Mount disk images on the device."
 <p> Mounts the specified disk image on the device. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> enable communication debugging.</p>
-<dt><code>-u, &#8211;udid UDID</code></p>
-<dd> target specific device by its 40-digit device UDID.</p>
-<dt><code>-l, &#8211;list</code></p>
-<dd> list mount information</p>
-<dt><code>-t, &#8211;imagetype NAME</code></p>
-<dd> the image type to use, default is &#8216;Developer&#8217;</p>
-<dt><code>-x, &#8211;xml</code></p>
-<dd> use XML output</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> prints usage information</p>
-<dt><code>IMAGE_FILE</code></p>
-<dd> the image filename to mount</p>
-<dt><code>IMAGE_SIGNATURE_FILE</code></p>
-<dd> corresponding signature file for image filename </p>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> enable communication debugging.</dd>
+<dt><code>-u, &#8211;udid UDID</code></dt>
+<dd> target specific device by its 40-digit device UDID.</dd>
+<dt><code>-l, &#8211;list</code></dt>
+<dd> list mount information</dd>
+<dt><code>-t, &#8211;imagetype NAME</code></dt>
+<dd> the image type to use, default is &#8216;Developer&#8217;</dd>
+<dt><code>-x, &#8211;xml</code></dt>
+<dd> use XML output</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> prints usage information</dd>
+<dt><code>IMAGE_FILE</code></dt>
+<dd> the image filename to mount</dd>
+<dt><code>IMAGE_SIGNATURE_FILE</code></dt>
+<dd> corresponding signature file for image filename </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Nikias Bassen </p>

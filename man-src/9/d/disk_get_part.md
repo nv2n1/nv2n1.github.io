@@ -15,11 +15,11 @@ disk_get_part - get partition
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>disk to look partition from</dl>
+<dl><dd></dd><dd>disk to look partition from</dd></dl>
  
 
  <i>partno</i>
-<dl><dd>partition number</dl>
+<dl><dd>partition number</dd></dl>
 
 <h2>Description</h2>
 

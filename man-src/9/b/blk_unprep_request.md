@@ -15,7 +15,7 @@ blk_unprep_request - unprepare a request
 <h2>Arguments</h2>
 
 <i>req</i>
-<dl><dd><dd>the request</dl>
+<dl><dd></dd><dd>the request</dd></dl>
 
 <h2>Description</h2>
 

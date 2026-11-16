@@ -17,20 +17,20 @@ description: "tcxmlcheck – Check information in smil input file"
 <p> <code>tcxmlcheck</code> Check a smil input file. Most of the options are used by transcode at run time.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code> <i>name</i></p>
-<dd> Specify the name of the input video/audio smil file [stdin].</p>
-<dt><code>-p</code> <i>name</i></p>
-<dd> Specify the name of the ausiliary audio smil file [none]</p>
-<dt><code>-B</code></p>
-<dd> Binary output to stdout (used by transcode) [off] Force to print to stdout the vob structure of the smil file</p>
-<dt><code>-S</code></p>
-<dd> Write stdin into shared memory (used by transcode)[off]. This is used by transcode at run time to store the vob information that will be modified by calling <code>tcxmlcheck</code> with the -V or -A options.</p>
-<dt><code>-V</code></p>
-<dd> Check only video smil file [off]. This is used by transcode at run time: it read the smil file to override some information in the vob structure.</p>
-<dt><code>-A</code></p>
-<dd> Check only ausiliary audio smil file [off]. This is used by transcode at run time: it read the smil file to override some information in the vob structure.</p>
-<dt><code>-v</code></p>
-<dd> Print the version</dl>
+<dt><code>-i</code> <i>name</i></dt>
+<dd> Specify the name of the input video/audio smil file [stdin].</dd>
+<dt><code>-p</code> <i>name</i></dt>
+<dd> Specify the name of the ausiliary audio smil file [none]</dd>
+<dt><code>-B</code></dt>
+<dd> Binary output to stdout (used by transcode) [off] Force to print to stdout the vob structure of the smil file</dd>
+<dt><code>-S</code></dt>
+<dd> Write stdin into shared memory (used by transcode)[off]. This is used by transcode at run time to store the vob information that will be modified by calling <code>tcxmlcheck</code> with the -V or -A options.</dd>
+<dt><code>-V</code></dt>
+<dd> Check only video smil file [off]. This is used by transcode at run time: it read the smil file to override some information in the vob structure.</dd>
+<dt><code>-A</code></dt>
+<dd> Check only ausiliary audio smil file [off]. This is used by transcode at run time: it read the smil file to override some information in the vob structure.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Command: </p>
 <p> <code>tcxmlcheck -i filename.smil</code> </p>

@@ -32,14 +32,14 @@ description: "systemd.preset – Service enablement presets"
 <dd>
 <pre># /lib/systemd/system-preset/99-default.preset
 disable *</pre>
-</dl>
+</dd></dl>
 <p> This disables all units. Due to the filename prefix &quot;99-&quot;, it will be read last and hence can easily be overridden by spin or administrator preset policy. </p>
 <p> <code>Example 2. Enable multiple template instances</code> </p>
 <dl>
 <dd>
 <pre># /lib/systemd/system-preset/80-dirsrv.preset
 enable dirsrv [at] .service foo bar baz</pre>
-</dl>
+</dd></dl>
 <p> This enables all three of dirsrv [at] foo.service, dirsrv [at] bar.service and dirsrv [at] baz.service. </p>
 <p> <code>Example 3. A GNOME spin</code> </p>
 <dl>
@@ -49,7 +49,7 @@ enable gdm.service
 enable colord.service
 enable accounts-daemon.service
 enable avahi-daemon.*</pre>
-</dl>
+</dd></dl>
 <p> This enables the three mentioned units, plus all avahi-daemon regardless of which unit type. A file like this could be useful for inclusion in a GNOME spin of a distribution. It will ensure that the units necessary for GNOME are properly enabled as they are installed. It leaves all other units untouched, and subject to other (later) preset files, for example like the one from the first example above. </p>
 <p> <code>Example 4. Administrator policy</code> </p>
 <dl>
@@ -59,7 +59,7 @@ enable httpd.service
 enable sshd.service
 enable postfix.service
 disable *</pre>
-</dl>
+</dd></dl>
 <p> This enables three specific services and disables all others. This is useful for administrators to specifically select the units to enable, and disable all others. Due to the filename prefix &quot;00-&quot; it will be read early and override all other preset policy files.</p>
 <h2>Motivation For The Preset Logic</h2>
 <p>Different distributions have different policies on which services shall be enabled by default when the package they are shipped in is installed. On Fedora all services stay off by default, so that installing a package will not cause a service to be enabled (with some exceptions). On Debian all services are immediately enabled by default, so that installing a package will cause its services to be enabled right-away. </p>
@@ -73,7 +73,8 @@ disable *</pre>
 <p> Fedora page introducing the use of presets: m[blue]<code>Features/PackagePresets</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Features/PackagePresets</p>
+<dt> 1.</dt>
+<dd>Features/PackagePresets</dd>
 <dl>
-<dd><a rel="nofollow" href="https://fedoraproject.org/wiki/Features/PackagePresets">https://fedoraproject.org/wiki/Features/PackagePresets</a></dl>
+<dd><a rel="nofollow" href="https://fedoraproject.org/wiki/Features/PackagePresets">https://fedoraproject.org/wiki/Features/PackagePresets</a></dd></dl>
+</dl>

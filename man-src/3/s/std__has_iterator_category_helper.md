@@ -12,9 +12,6 @@ description: "std::__has_iterator_category_helper< _Tp > –"
 <p> Inherits std::__sfinae_types.</p>
 <h3>Static Public Attributes</h3>
 <pre><code>static constexpr bool value
-
-
-
 Private Types</code></pre>
 <p> typedef char <code>__one</code></p>
 <h2>Detailed Description</h2>

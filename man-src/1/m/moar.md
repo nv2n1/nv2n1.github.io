@@ -27,17 +27,17 @@ moar-- version
  moar respects the following environment variables:
 <dl>
 <dt><font SIZE="-1">MVM_JIT_DISABLE</font>
-<dd> Disables the just-in-time compiler (<font SIZE="-1">JIT</font>). This is ignored if MoarVM was built without <font SIZE="-1">JIT</font> support.
-<dt><font SIZE="-1">MVM_SPESH_DISABLE</font>
-<dd> Disables the runtime bytecode specializer / optimizer.
-<dt><font SIZE="-1">MVM_SPESH_INLINE_DISABLE</font>
-<dd> Disables inlining of call frames inside the bytecode specializer.
-<dt><font SIZE="-1">MVM_SPESH_OSR_DISABLE</font>
-<dd> Disables the on-stack replacement feature of the bytecode specializer.
-<dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG</font>
-<dd> Tells MoarVM to insert instrumentation to detect when a thread does a write to an object it didn't allocate and doesn't have a lock for.
-<dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG_INCLUDE_LOCKED</font>
-<dd> Same as <font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG,</font> except objects that are locked are included as well.</dl>
+</dt><dd> Disables the just-in-time compiler (<font SIZE="-1">JIT</font>). This is ignored if MoarVM was built without <font SIZE="-1">JIT</font> support.
+</dd><dt><font SIZE="-1">MVM_SPESH_DISABLE</font>
+</dt><dd> Disables the runtime bytecode specializer / optimizer.
+</dd><dt><font SIZE="-1">MVM_SPESH_INLINE_DISABLE</font>
+</dt><dd> Disables inlining of call frames inside the bytecode specializer.
+</dd><dt><font SIZE="-1">MVM_SPESH_OSR_DISABLE</font>
+</dt><dd> Disables the on-stack replacement feature of the bytecode specializer.
+</dd><dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG</font>
+</dt><dd> Tells MoarVM to insert instrumentation to detect when a thread does a write to an object it didn't allocate and doesn't have a lock for.
+</dd><dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG_INCLUDE_LOCKED</font>
+</dt><dd> Same as <font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG,</font> except objects that are locked are included as well.</dd></dl>
 
 <h2>REPORTING BUGS</h2>
 

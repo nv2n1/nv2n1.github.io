@@ -15,12 +15,12 @@ description: "gobby – a collaborative text editor"
 <p> <code>gobby</code> is an editor which allows to edit text documents and source files collaboratively over a network. Changes to the documents are syncronised instantly to the other clients. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-j</code>, <code>&#8211;join</code>=<i>HOST</i>:<i>PORT</i></p>
-<dd> Joins the obby session on the specified host.</p>
-<dt><code>-n</code>, <code>&#8211;new-instance</code></p>
-<dd> Forces a new instance of Gobby to be created.</p>
-<dt><code>file(s)</code></p>
-<dd> Files passed on the command line will be opened within Gobby. If there is already a Gobby instance running they will be opened therein, otherwise a new hosted session will be created automatically.</dl>
+<dt><code>-j</code>, <code>&#8211;join</code>=<i>HOST</i>:<i>PORT</i></dt>
+<dd> Joins the obby session on the specified host.</dd>
+<dt><code>-n</code>, <code>&#8211;new-instance</code></dt>
+<dd> Forces a new instance of Gobby to be created.</dd>
+<dt><code>file(s)</code></dt>
+<dd> Files passed on the command line will be opened within Gobby. If there is already a Gobby instance running they will be opened therein, otherwise a new hosted session will be created automatically.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>gobby</code> was written by the 0x539 dev group &lt;crew [at] 0x539.de&gt;. </p>
 <h2>Index</h2>

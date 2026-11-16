@@ -17,12 +17,12 @@ description: "XmStringComponentCreate — A compound string function that create
 <h2>Description</h2>
 <p><code>XmStringComponentCreate</code> creates a new <code>XmString</code> component of type <i>c_type</i>, containing <i>value</i>. If <i>value</i> is invalid for the particular component type, this function fails and returns NULL.</p>
 <dl COMPACT>
-<dt><i>c_type</i></p>
-<dd>Specifies the type of component to be created.</p>
-<dt><i>length</i></p>
-<dd>Specifies the length in bytes of <i>value</i>. Note that this must be precisely the length of the <i>value</i> string, <i>not</i> including any trailing null characters.</p>
-<dt><i>value</i></p>
-<dd>Specifies the value to be used in the creation of the component.</dl>
+<dt><i>c_type</i></dt>
+<dd>Specifies the type of component to be created.</dd>
+<dt><i>length</i></dt>
+<dd>Specifies the length in bytes of <i>value</i>. Note that this must be precisely the length of the <i>value</i> string, <i>not</i> including any trailing null characters.</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the value to be used in the creation of the component.</dd></dl>
 <p> Refer to the <code><a href="/docs/linux/man/3-xmstringcomponenttype/">XmStringComponentType</a></code>(3) reference page for a list of the possible <code>XmString</code> component types.</p>
 <h2>Return</h2>
 <p>If <i>value</i> is invalid for <i>c_type</i>, fails and returns NULL. Otherwise, this function returns a new compound string. When the application no longer needs the returned compound string, the application should call <code>XmStringFree</code>.</p>

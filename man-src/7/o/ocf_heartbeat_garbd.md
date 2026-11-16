@@ -10,60 +10,60 @@ description: "ocf_heartbeat_garbd – Manages a galera arbitrator instance"
 <p>ocf_heartbeat_garbd &#8211; Manages a galera arbitrator instance</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>garbd</code> [start | stop | monitor | meta-data | validate-all]</dl>
+<dt> <code>garbd</code> [start | stop | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Resource script for managing Galera arbitrator.</p>
+<dd>Resource script for managing Galera arbitrator.</dd>
 <h2>Supported Parameters</h2>
 <p><code>binary</code></p>
 <dl>
-<dd>Location of the Galera arbitrator binary </p>
+<dd>Location of the Galera arbitrator binary </dd>
 <p> (optional, string, default &quot;/usr/sbin/garbd&quot;)</dl>
 <p> <code>user</code></p>
 <dl>
-<dd>User running the garbd process </p>
+<dd>User running the garbd process </dd>
 <p> (optional, string, default &quot;mysql&quot;)</dl>
 <p> <code>group</code></p>
 <dl>
-<dd>Group running garbd (for logfile permissions) </p>
+<dd>Group running garbd (for logfile permissions) </dd>
 <p> (optional, string, default &quot;mysql&quot;)</dl>
 <p> <code>log</code></p>
 <dl>
-<dd>The logfile to be used for garbd. </p>
+<dd>The logfile to be used for garbd. </dd>
 <p> (optional, string, default &quot;/var/log/garbd.log&quot;)</dl>
 <p> <code>pid</code></p>
 <dl>
-<dd>The pidfile to be used for garbd. </p>
+<dd>The pidfile to be used for garbd. </dd>
 <p> (optional, string, default &quot;/var/run/garbd.pid&quot;)</dl>
 <p> <code>options</code></p>
 <dl>
-<dd>Additional parameters which are passed to garbd on startup. </p>
+<dd>Additional parameters which are passed to garbd on startup. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>wsrep_cluster_address</code></p>
 <dl>
-<dd>The galera cluster address. This takes the form of: <a href="gcomm://node:port,node:port,node:port">gcomm://node:port,node:port,node:port</a> </p>
+<dd>The galera cluster address. This takes the form of: <a href="gcomm://node:port,node:port,node:port">gcomm://node:port,node:port,node:port</a> </dd>
 <p> Unlike Galera servers, port is mandatory for garbd. </p>
 <p> (required, string, no default)</dl>
 <p> <code>wsrep_cluster_name</code></p>
 <dl>
-<dd>The group name of the Galera cluster to connect to. </p>
+<dd>The group name of the Galera cluster to connect to. </dd>
 <p> (required, string, no default)</dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 20.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 20.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <h2>Example Crm Shell</h2>
 <p>The following is an example configuration for a garbd resource using the <code>crm</code>(8) shell: </p>
 <dl>
@@ -73,7 +73,7 @@ description: "ocf_heartbeat_garbd – Manages a galera arbitrator instance"
  wsrep_cluster_address=<i>string</i> \
  wsrep_cluster_name=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;20&quot; </pre>
-</dl>
+</dd></dl>
 <h2>Example Pcs</h2>
 <p>The following is an example configuration for a garbd resource using <code><a href="/docs/linux/man/8-pcs/">pcs</a></code>(8) </p>
 <dl>
@@ -82,7 +82,7 @@ description: "ocf_heartbeat_garbd – Manages a galera arbitrator instance"
  wsrep_cluster_address=<i>string</i> \
  wsrep_cluster_name=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;20&quot; </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/garbd_(resource_agent)">http://www.linux-ha.org/wiki/garbd_(resource_agent)</a></code>m[]</p>
 <h2>Author</h2>

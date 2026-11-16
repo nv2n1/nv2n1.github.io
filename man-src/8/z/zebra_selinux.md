@@ -57,9 +57,9 @@ description: "zebra_selinux – Security Enhanced Linux Policy for the zebra pro
 <p> Policy governs the access confined processes have to these ports. SELinux zebra policy is very flexible allowing users to setup their zebra processes in as secure a method as possible. </p>
 <p> The following port types are defined for zebra: </p>
 <dl>
-<dt><code>zebra_port_t</code></p>
+<dt><code>zebra_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2606,2608-2609,2600-2604 udp 2606,2608-2609,2600-2604</dl>
+</dd><dd>Default Defined Ports: tcp 2606,2608-2609,2600-2604 udp 2606,2608-2609,2600-2604</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type zebra_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -111,40 +111,40 @@ description: "zebra_selinux – Security Enhanced Linux Policy for the zebra pro
 <p> <code>zebra_conf_t</code> </p>
 <p> &#8211; Set files with the zebra_conf_t type, if you want to treat the files as zebra configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/zebra(/.*)?, /etc/quagga(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/zebra(/.*)?, /etc/quagga(/.*)? </dd>
 </dl>
 <p> <code>zebra_exec_t</code> </p>
 <p> &#8211; Set files with the zebra_exec_t type, if you want to transition an executable to the zebra_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/rip.*, /usr/sbin/ospf.*, /usr/sbin/bgpd, /usr/sbin/isisd, /usr/sbin/zebra, /usr/sbin/babeld </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/rip.*, /usr/sbin/ospf.*, /usr/sbin/bgpd, /usr/sbin/isisd, /usr/sbin/zebra, /usr/sbin/babeld </dd>
 </dl>
 <p> <code>zebra_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the zebra_initrc_exec_t type, if you want to transition an executable to the zebra_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/bgpd, /etc/rc.d/init.d/ripd, /etc/rc.d/init.d/ospfd, /etc/rc.d/init.d/zebra, /etc/rc.d/init.d/isisd, /etc/rc.d/init.d/ospf6d, /etc/rc.d/init.d/ripngd, /etc/rc.d/init.d/babeld </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/bgpd, /etc/rc.d/init.d/ripd, /etc/rc.d/init.d/ospfd, /etc/rc.d/init.d/zebra, /etc/rc.d/init.d/isisd, /etc/rc.d/init.d/ospf6d, /etc/rc.d/init.d/ripngd, /etc/rc.d/init.d/babeld </dd>
 </dl>
 <p> <code>zebra_log_t</code> </p>
 <p> &#8211; Set files with the zebra_log_t type, if you want to treat the data as zebra log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/zebra(/.*)?, /var/log/quagga(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/zebra(/.*)?, /var/log/quagga(/.*)? </dd>
 </dl>
 <p> <code>zebra_tmp_t</code> </p>
 <p> &#8211; Set files with the zebra_tmp_t type, if you want to store zebra temporary files in the /tmp directories. </p>
 <p> <code>zebra_unit_file_t</code> </p>
 <p> &#8211; Set files with the zebra_unit_file_t type, if you want to treat the files as zebra unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/bgpd.*, /usr/lib/systemd/system/ripd.*, /usr/lib/systemd/system/isisd.*, /usr/lib/systemd/system/ospfd.*, /usr/lib/systemd/system/zebra.*, /usr/lib/systemd/system/babeld.*, /usr/lib/systemd/system/ospf6d.*, /usr/lib/systemd/system/ripngd.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/bgpd.*, /usr/lib/systemd/system/ripd.*, /usr/lib/systemd/system/isisd.*, /usr/lib/systemd/system/ospfd.*, /usr/lib/systemd/system/zebra.*, /usr/lib/systemd/system/babeld.*, /usr/lib/systemd/system/ospf6d.*, /usr/lib/systemd/system/ripngd.* </dd>
 </dl>
 <p> <code>zebra_var_run_t</code> </p>
 <p> &#8211; Set files with the zebra_var_run_t type, if you want to store the zebra files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/quagga(/.*)?, /var/run/.zebra, /var/run/.zserv </p>
+<dt>Paths:</dt>
+<dd>/var/run/quagga(/.*)?, /var/run/.zebra, /var/run/.zserv </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

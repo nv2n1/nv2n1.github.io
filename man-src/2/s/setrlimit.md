@@ -27,78 +27,78 @@ description: "getrlimit, setrlimit, prlimit – get/set resource limits"
 <p> The value <code>RLIM_INFINITY</code> denotes no limit on a resource (both in the structure returned by <code>getrlimit</code>() and in the structure passed to <code>setrlimit</code>()). </p>
 <p> The <i>resource</i> argument must be one of:</p>
 <dl>
-<dt><code>RLIMIT_AS</code></p>
-<dd> This is the maximum size of the process&#8217;s virtual memory (address space). The limit is specified in bytes, and is rounded down to the system page size. This limit affects calls to <code><a href="/docs/linux/man/2-brk/">brk</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), and <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), which fail with the error <code>ENOMEM</code> upon exceeding this limit. In addition, automatic stack expansion fails (and generates a <code>SIGSEGV</code> that kills the process if no alternate stack has been made available via <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)). Since the value is a <i>long</i>, on machines with a 32-bit <i>long</i> either this limit is at most 2 GiB, or this resource is unlimited.</p>
-<dt><code>RLIMIT_CORE</code></p>
-<dd> This is the maximum size of a <i>core</i> file (see <code><a href="/docs/linux/man/5-core/">core</a></code>(5)) in bytes that the process may dump. When 0 no core dump files are created. When nonzero, larger dumps are truncated to this size.</p>
-<dt><code>RLIMIT_CPU</code></p>
-<dd> This is a limit, in seconds, on the amount of CPU time that the process can consume. When the process reaches the soft limit, it is sent a <code>SIGXCPU</code> signal. The default action for this signal is to terminate the process. However, the signal can be caught, and the handler can return control to the main program. If the process continues to consume CPU time, it will be sent <code>SIGXCPU</code> once per second until the hard limit is reached, at which time it is sent <code>SIGKILL</code>. (This latter point describes Linux behavior. Implementations vary in how they treat processes which continue to consume CPU time after reaching the soft limit. Portable applications that need to catch this signal should perform an orderly termination upon first receipt of <code>SIGXCPU</code>.)</p>
-<dt><code>RLIMIT_DATA</code></p>
-<dd> This is the maximum size of the process&#8217;s data segment (initialized data, uninitialized data, and heap). The limit is specified in bytes, and is rounded down to the system page size. This limit affects calls to <code><a href="/docs/linux/man/2-brk/">brk</a></code>(2), <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2), and (since Linux 4.7) <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), which fail with the error <code>ENOMEM</code> upon encountering the soft limit of this resource.</p>
-<dt><code>RLIMIT_FSIZE</code></p>
-<dd> This is the maximum size in bytes of files that the process may create. Attempts to extend a file beyond this limit result in delivery of a <code>SIGXFSZ</code> signal. By default, this signal terminates a process, but a process can catch this signal instead, in which case the relevant system call (e.g., <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-truncate/">truncate</a></code>(2)) fails with the error <code>EFBIG</code>.</p>
-<dt><code>RLIMIT_LOCKS</code> (Linux 2.4.0 to 2.4.24)</p>
-<dd> This is a limit on the combined number of <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) locks and <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) leases that this process may establish.</p>
-<dt><code>RLIMIT_MEMLOCK</code></p>
-<dd> This is the maximum number of bytes of memory that may be locked into RAM. This limit is in effect rounded down to the nearest multiple of the system page size. This limit affects <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2), and the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code>MAP_LOCKED</code> operation. Since Linux 2.6.9, it also affects the <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2) <code>SHM_LOCK</code> operation, where it sets a maximum on the total bytes in shared memory segments (see <code><a href="/docs/linux/man/2-shmget/">shmget</a></code>(2)) that may be locked by the real user ID of the calling process. The <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2) <code>SHM_LOCK</code> locks are accounted for separately from the per-process memory locks established by <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2), and <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code>MAP_LOCKED</code>; a process can lock bytes up to this limit in each of these two categories.</p>
+<dt><code>RLIMIT_AS</code></dt>
+<dd> This is the maximum size of the process&#8217;s virtual memory (address space). The limit is specified in bytes, and is rounded down to the system page size. This limit affects calls to <code><a href="/docs/linux/man/2-brk/">brk</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), and <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), which fail with the error <code>ENOMEM</code> upon exceeding this limit. In addition, automatic stack expansion fails (and generates a <code>SIGSEGV</code> that kills the process if no alternate stack has been made available via <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)). Since the value is a <i>long</i>, on machines with a 32-bit <i>long</i> either this limit is at most 2 GiB, or this resource is unlimited.</dd>
+<dt><code>RLIMIT_CORE</code></dt>
+<dd> This is the maximum size of a <i>core</i> file (see <code><a href="/docs/linux/man/5-core/">core</a></code>(5)) in bytes that the process may dump. When 0 no core dump files are created. When nonzero, larger dumps are truncated to this size.</dd>
+<dt><code>RLIMIT_CPU</code></dt>
+<dd> This is a limit, in seconds, on the amount of CPU time that the process can consume. When the process reaches the soft limit, it is sent a <code>SIGXCPU</code> signal. The default action for this signal is to terminate the process. However, the signal can be caught, and the handler can return control to the main program. If the process continues to consume CPU time, it will be sent <code>SIGXCPU</code> once per second until the hard limit is reached, at which time it is sent <code>SIGKILL</code>. (This latter point describes Linux behavior. Implementations vary in how they treat processes which continue to consume CPU time after reaching the soft limit. Portable applications that need to catch this signal should perform an orderly termination upon first receipt of <code>SIGXCPU</code>.)</dd>
+<dt><code>RLIMIT_DATA</code></dt>
+<dd> This is the maximum size of the process&#8217;s data segment (initialized data, uninitialized data, and heap). The limit is specified in bytes, and is rounded down to the system page size. This limit affects calls to <code><a href="/docs/linux/man/2-brk/">brk</a></code>(2), <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2), and (since Linux 4.7) <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), which fail with the error <code>ENOMEM</code> upon encountering the soft limit of this resource.</dd>
+<dt><code>RLIMIT_FSIZE</code></dt>
+<dd> This is the maximum size in bytes of files that the process may create. Attempts to extend a file beyond this limit result in delivery of a <code>SIGXFSZ</code> signal. By default, this signal terminates a process, but a process can catch this signal instead, in which case the relevant system call (e.g., <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-truncate/">truncate</a></code>(2)) fails with the error <code>EFBIG</code>.</dd>
+<dt><code>RLIMIT_LOCKS</code> (Linux 2.4.0 to 2.4.24)</dt>
+<dd> This is a limit on the combined number of <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) locks and <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) leases that this process may establish.</dd>
+<dt><code>RLIMIT_MEMLOCK</code></dt>
+<dd> This is the maximum number of bytes of memory that may be locked into RAM. This limit is in effect rounded down to the nearest multiple of the system page size. This limit affects <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2), and the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code>MAP_LOCKED</code> operation. Since Linux 2.6.9, it also affects the <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2) <code>SHM_LOCK</code> operation, where it sets a maximum on the total bytes in shared memory segments (see <code><a href="/docs/linux/man/2-shmget/">shmget</a></code>(2)) that may be locked by the real user ID of the calling process. The <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2) <code>SHM_LOCK</code> locks are accounted for separately from the per-process memory locks established by <code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2), and <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code>MAP_LOCKED</code>; a process can lock bytes up to this limit in each of these two categories.</dd>
 <dt>
-<dd> In Linux kernels before 2.6.9, this limit controlled the amount of memory that could be locked by a privileged process. Since Linux 2.6.9, no limits are placed on the amount of memory that a privileged process may lock, and this limit instead governs the amount of memory that an unprivileged process may lock.</p>
-<dt><code>RLIMIT_MSGQUEUE</code> (since Linux 2.6.8)</p>
-<dd> This is a limit on the number of bytes that can be allocated for POSIX message queues for the real user ID of the calling process. This limit is enforced for <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3). Each message queue that the user creates counts (until it is removed) against this limit according to the formula:</p>
+</dt><dd> In Linux kernels before 2.6.9, this limit controlled the amount of memory that could be locked by a privileged process. Since Linux 2.6.9, no limits are placed on the amount of memory that a privileged process may lock, and this limit instead governs the amount of memory that an unprivileged process may lock.</dd>
+<dt><code>RLIMIT_MSGQUEUE</code> (since Linux 2.6.8)</dt>
+<dd> This is a limit on the number of bytes that can be allocated for POSIX message queues for the real user ID of the calling process. This limit is enforced for <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3). Each message queue that the user creates counts (until it is removed) against this limit according to the formula:</dd>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since Linux 3.5:</p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since Linux 3.5:</dd>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;bytes&nbsp;=&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;sizeof(struct msg_msg)&nbsp;+<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;min(attr.mq_maxmsg, MQ_PRIO_MAX)&nbsp;*<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sizeof(struct posix_msg_tree_node)+<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For overhead&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;attr.mq_msgsize;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For message data&nbsp;*/</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For message data&nbsp;*/</dd>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Linux 3.4 and earlier:</p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Linux 3.4 and earlier:</dd>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;bytes&nbsp;=&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;sizeof(struct msg_msg&nbsp;*)&nbsp;+<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For overhead&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;attr.mq_msgsize;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For message data&nbsp;*/</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For message data&nbsp;*/</dd>
 <dt>
-<dd> where <i>attr</i> is the <i>mq_attr</i> structure specified as the fourth argument to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3), and the <i>msg_msg</i> and <i>posix_msg_tree_node</i> structures are kernel-internal structures.</p>
+</dt><dd> where <i>attr</i> is the <i>mq_attr</i> structure specified as the fourth argument to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3), and the <i>msg_msg</i> and <i>posix_msg_tree_node</i> structures are kernel-internal structures.</dd>
 <dt>
-<dd> The &quot;overhead&quot; addend in the formula accounts for overhead bytes required by the implementation and ensures that the user cannot create an unlimited number of zero-length messages (such messages nevertheless each consume some system memory for bookkeeping overhead).</p>
-<dt><code>RLIMIT_NICE</code> (since Linux 2.6.12, but see BUGS below)</p>
-<dd> This specifies a ceiling to which the process&#8217;s nice value can be raised using <code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2) or <code><a href="/docs/linux/man/2-nice/">nice</a></code>(2). The actual ceiling for the nice value is calculated as <i>20 &#8211; rlim_cur</i>. The useful range for this limit is thus from 1 (corresponding to a nice value of 19) to 40 (corresponding to a nice value of -20). This unusual choice of range was necessary because negative numbers cannot be specified as resource limit values, since they typically have special meanings. For example, <code>RLIM_INFINITY</code> typically is the same as -1. For more detail on the nice value, see <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7).</p>
-<dt><code>RLIMIT_NOFILE</code></p>
-<dd> This specifies a value one greater than the maximum file descriptor number that can be opened by this process. Attempts (<code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2), <code><a href="/docs/linux/man/2-dup/">dup</a></code>(2), etc.) to exceed this limit yield the error <code>EMFILE</code>. (Historically, this limit was named <code>RLIMIT_OFILE</code> on BSD.)</p>
+</dt><dd> The &quot;overhead&quot; addend in the formula accounts for overhead bytes required by the implementation and ensures that the user cannot create an unlimited number of zero-length messages (such messages nevertheless each consume some system memory for bookkeeping overhead).</dd>
+<dt><code>RLIMIT_NICE</code> (since Linux 2.6.12, but see BUGS below)</dt>
+<dd> This specifies a ceiling to which the process&#8217;s nice value can be raised using <code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2) or <code><a href="/docs/linux/man/2-nice/">nice</a></code>(2). The actual ceiling for the nice value is calculated as <i>20 &#8211; rlim_cur</i>. The useful range for this limit is thus from 1 (corresponding to a nice value of 19) to 40 (corresponding to a nice value of -20). This unusual choice of range was necessary because negative numbers cannot be specified as resource limit values, since they typically have special meanings. For example, <code>RLIM_INFINITY</code> typically is the same as -1. For more detail on the nice value, see <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7).</dd>
+<dt><code>RLIMIT_NOFILE</code></dt>
+<dd> This specifies a value one greater than the maximum file descriptor number that can be opened by this process. Attempts (<code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2), <code><a href="/docs/linux/man/2-dup/">dup</a></code>(2), etc.) to exceed this limit yield the error <code>EMFILE</code>. (Historically, this limit was named <code>RLIMIT_OFILE</code> on BSD.)</dd>
 <dt>
-<dd> Since Linux 4.5, this limit also defines the maximum number of file descriptors that an unprivileged process (one without the <code>CAP_SYS_RESOURCE</code> capability) may have &quot;in flight&quot; to other processes, by being passed across UNIX domain sockets. This limit applies to the <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) system call. For further details, see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7).</p>
-<dt><code>RLIMIT_NPROC</code></p>
-<dd> This is a limit on the number of extant process (or, more precisely on Linux, threads) for the real user ID of the calling process. So long as the current number of processes belonging to this process&#8217;s real user ID is greater than or equal to this limit, <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) fails with the error <code>EAGAIN</code>.</p>
+</dt><dd> Since Linux 4.5, this limit also defines the maximum number of file descriptors that an unprivileged process (one without the <code>CAP_SYS_RESOURCE</code> capability) may have &quot;in flight&quot; to other processes, by being passed across UNIX domain sockets. This limit applies to the <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) system call. For further details, see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7).</dd>
+<dt><code>RLIMIT_NPROC</code></dt>
+<dd> This is a limit on the number of extant process (or, more precisely on Linux, threads) for the real user ID of the calling process. So long as the current number of processes belonging to this process&#8217;s real user ID is greater than or equal to this limit, <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) fails with the error <code>EAGAIN</code>.</dd>
 <dt>
-<dd> The <code>RLIMIT_NPROC</code> limit is not enforced for processes that have either the <code>CAP_SYS_ADMIN</code> or the <code>CAP_SYS_RESOURCE</code> capability.</p>
-<dt><code>RLIMIT_RSS</code></p>
-<dd> This is a limit (in bytes) on the process&#8217;s resident set (the number of virtual pages resident in RAM). This limit has effect only in Linux 2.4.x, x &lt; 30, and there affects only calls to <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) specifying <code>MADV_WILLNEED</code>.</p>
-<dt><code>RLIMIT_RTPRIO</code> (since Linux 2.6.12, but see BUGS)</p>
-<dd> This specifies a ceiling on the real-time priority that may be set for this process using <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2) and <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2).</p>
+</dt><dd> The <code>RLIMIT_NPROC</code> limit is not enforced for processes that have either the <code>CAP_SYS_ADMIN</code> or the <code>CAP_SYS_RESOURCE</code> capability.</dd>
+<dt><code>RLIMIT_RSS</code></dt>
+<dd> This is a limit (in bytes) on the process&#8217;s resident set (the number of virtual pages resident in RAM). This limit has effect only in Linux 2.4.x, x &lt; 30, and there affects only calls to <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) specifying <code>MADV_WILLNEED</code>.</dd>
+<dt><code>RLIMIT_RTPRIO</code> (since Linux 2.6.12, but see BUGS)</dt>
+<dd> This specifies a ceiling on the real-time priority that may be set for this process using <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2) and <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2).</dd>
 <dt>
-<dd> For further details on real-time scheduling policies, see <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7)</p>
-<dt><code>RLIMIT_RTTIME</code> (since Linux 2.6.25)</p>
-<dd> This is a limit (in microseconds) on the amount of CPU time that a process scheduled under a real-time scheduling policy may consume without making a blocking system call. For the purpose of this limit, each time a process makes a blocking system call, the count of its consumed CPU time is reset to zero. The CPU time count is not reset if the process continues trying to use the CPU but is preempted, its time slice expires, or it calls <code><a href="/docs/linux/man/2-sched_yield/">sched_yield</a></code>(2).</p>
+</dt><dd> For further details on real-time scheduling policies, see <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7)</dd>
+<dt><code>RLIMIT_RTTIME</code> (since Linux 2.6.25)</dt>
+<dd> This is a limit (in microseconds) on the amount of CPU time that a process scheduled under a real-time scheduling policy may consume without making a blocking system call. For the purpose of this limit, each time a process makes a blocking system call, the count of its consumed CPU time is reset to zero. The CPU time count is not reset if the process continues trying to use the CPU but is preempted, its time slice expires, or it calls <code><a href="/docs/linux/man/2-sched_yield/">sched_yield</a></code>(2).</dd>
 <dt>
-<dd> Upon reaching the soft limit, the process is sent a <code>SIGXCPU</code> signal. If the process catches or ignores this signal and continues consuming CPU time, then <code>SIGXCPU</code> will be generated once each second until the hard limit is reached, at which point the process is sent a <code>SIGKILL</code> signal.</p>
+</dt><dd> Upon reaching the soft limit, the process is sent a <code>SIGXCPU</code> signal. If the process catches or ignores this signal and continues consuming CPU time, then <code>SIGXCPU</code> will be generated once each second until the hard limit is reached, at which point the process is sent a <code>SIGKILL</code> signal.</dd>
 <dt>
-<dd> The intended use of this limit is to stop a runaway real-time process from locking up the system.</p>
+</dt><dd> The intended use of this limit is to stop a runaway real-time process from locking up the system.</dd>
 <dt>
-<dd> For further details on real-time scheduling policies, see <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7)</p>
-<dt><code>RLIMIT_SIGPENDING</code> (since Linux 2.6.8)</p>
-<dd> This is a limit on the number of signals that may be queued for the real user ID of the calling process. Both standard and real-time signals are counted for the purpose of checking this limit. However, the limit is enforced only for <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3); it is always possible to use <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2) to queue one instance of any of the signals that are not already queued to the process.</p>
-<dt><code>RLIMIT_STACK</code></p>
-<dd> This is the maximum size of the process stack, in bytes. Upon reaching this limit, a <code>SIGSEGV</code> signal is generated. To handle this signal, a process must employ an alternate signal stack (<code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</p>
+</dt><dd> For further details on real-time scheduling policies, see <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7)</dd>
+<dt><code>RLIMIT_SIGPENDING</code> (since Linux 2.6.8)</dt>
+<dd> This is a limit on the number of signals that may be queued for the real user ID of the calling process. Both standard and real-time signals are counted for the purpose of checking this limit. However, the limit is enforced only for <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3); it is always possible to use <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2) to queue one instance of any of the signals that are not already queued to the process.</dd>
+<dt><code>RLIMIT_STACK</code></dt>
+<dd> This is the maximum size of the process stack, in bytes. Upon reaching this limit, a <code>SIGSEGV</code> signal is generated. To handle this signal, a process must employ an alternate signal stack (<code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</dd>
 <dt>
-<dd> Since Linux 2.6.23, this limit also determines the amount of space used for the process&#8217;s command-line arguments and environment variables; for details, see <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dl>
+</dt><dd> Since Linux 2.6.23, this limit also determines the amount of space used for the process&#8217;s command-line arguments and environment variables; for details, see <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd></dl>
 <h3>prlimit()</h3>
 <p> The Linux-specific <code>prlimit</code>() system call combines and extends the functionality of <code>setrlimit</code>() and <code>getrlimit</code>(). It can be used to both set and get the resource limits of an arbitrary process. </p>
 <p> The <i>resource</i> argument has the same meaning as for <code>setrlimit</code>() and <code>getrlimit</code>(). </p>
@@ -108,18 +108,18 @@ description: "getrlimit, setrlimit, prlimit – get/set resource limits"
 <p> On success, these system calls return 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> A pointer argument points to a location outside the accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The value specified in <i>resource</i> is not valid; or, for <code>setrlimit</code>() or <code>prlimit</code>(): <i>rlim-&gt;rlim_cur</i> was greater than <i>rlim-&gt;rlim_max</i>.</p>
-<dt><code>EPERM</code></p>
-<dd> An unprivileged process tried to raise the hard limit; the <code>CAP_SYS_RESOURCE</code> capability is required to do this.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller tried to increase the hard <code>RLIMIT_NOFILE</code> limit above the maximum defined by <i>/proc/sys/fs/nr_open</i> (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5))</p>
-<dt><code>EPERM</code></p>
-<dd> (<code>prlimit</code>()) The calling process did not have permission to set limits for the process specified by <i>pid</i>.</p>
-<dt><code>ESRCH</code></p>
-<dd> Could not find a process with the ID specified in <i>pid</i>.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> A pointer argument points to a location outside the accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value specified in <i>resource</i> is not valid; or, for <code>setrlimit</code>() or <code>prlimit</code>(): <i>rlim-&gt;rlim_cur</i> was greater than <i>rlim-&gt;rlim_max</i>.</dd>
+<dt><code>EPERM</code></dt>
+<dd> An unprivileged process tried to raise the hard limit; the <code>CAP_SYS_RESOURCE</code> capability is required to do this.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller tried to increase the hard <code>RLIMIT_NOFILE</code> limit above the maximum defined by <i>/proc/sys/fs/nr_open</i> (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5))</dd>
+<dt><code>EPERM</code></dt>
+<dd> (<code>prlimit</code>()) The calling process did not have permission to set limits for the process specified by <i>pid</i>.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> Could not find a process with the ID specified in <i>pid</i>.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>prlimit</code>() system call is available since Linux 2.6.36. Library support is available since glibc 2.13.</p>
 <h2>ATTRIBUTES</h2>

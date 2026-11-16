@@ -18,16 +18,16 @@ description: "dh_pysupport – use the python-support framework to handle Python
 <p> Appropriate dependencies on python-support, python and python<i>X.Y</i> are put in ${python:Depends}. The ${python:Versions} and ${python:Provides} optional substitution variables are made available as well.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>module dirs</i></p>
-<dd> If your package installs private python modules in non-standard directories, you can make dh_pysupport check those directories by passing their names on the command line. By default, it will check /usr/lib/$PACKAGE, /usr/share/$PACKAGE, /usr/lib/games/$PACKAGE and /usr/share/games/$PACKAGE</p>
-<dt><code>-n</code>, <code>&#8211;noscripts</code></p>
-<dd> Do not modify postinst/postrm scripts.</p>
-<dt><code>-d</code></p>
-<dd> This option is deprecated.</p>
-<dt><code>-V</code> <i>X.Y</i></p>
-<dd> Force private modules to be bytecompiled with the specific <i>X.Y</i> python version, regardless of the default python version on the system.</p>
-<dt><code>-X</code> <i>item</i>, <code>&#8211;exclude=</code><i>item</i></p>
-<dd> Exclude files that contain &#8220;item&#8221; anywhere in their filename from being taken into account to generate the python dependency. It also excludes them from byte-compilation. You may use this option multiple times to build up a list of things to exclude.</dl>
+<dt><i>module dirs</i></dt>
+<dd> If your package installs private python modules in non-standard directories, you can make dh_pysupport check those directories by passing their names on the command line. By default, it will check /usr/lib/$PACKAGE, /usr/share/$PACKAGE, /usr/lib/games/$PACKAGE and /usr/share/games/$PACKAGE</dd>
+<dt><code>-n</code>, <code>&#8211;noscripts</code></dt>
+<dd> Do not modify postinst/postrm scripts.</dd>
+<dt><code>-d</code></dt>
+<dd> This option is deprecated.</dd>
+<dt><code>-V</code> <i>X.Y</i></dt>
+<dd> Force private modules to be bytecompiled with the specific <i>X.Y</i> python version, regardless of the default python version on the system.</dd>
+<dt><code>-X</code> <i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude files that contain &#8220;item&#8221; anywhere in their filename from being taken into account to generate the python dependency. It also excludes them from byte-compilation. You may use this option multiple times to build up a list of things to exclude.</dd></dl>
 <h2>CONFORMS TO</h2>
 <p> Python policy as of 2006-08-10</p>
 <h2>SEE ALSO</h2>

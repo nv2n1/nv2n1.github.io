@@ -15,18 +15,18 @@ description: "MRF – monochrome recursive format (compressed bitmaps)"
 <p> In case the above hasn&#8217;t made it sufficiently clear, I&#8217;ll make this next point explicitly: <i>MRF cannot represent color at all.</i> Nor can it represent grayscale. It&#8217;s a specifically mono format. (If you want to compress a color or grayscale image, my advice is to use JPEG2000). </p>
 <p> First, here&#8217;s what goes where in an MRF file. I&#8217;ll explain how the compression works afterward. </p>
 <dl>
-<dt>Offset</p>
-<dd> Description</p>
-<dt>0</p>
-<dd> magic number &#8211; &#8216;MRF1&#8217; (in ASCII) </p>
-<dt>4</p>
-<dd> width (32-bit, MSB first (i.e. big-endian)) </p>
-<dt>8</p>
-<dd> height (same) </p>
-<dt>12</p>
-<dd> reserved (single byte, must be zero) </p>
-<dt>13</p>
-<dd> compressed data </p>
+<dt>Offset</dt>
+<dd> Description</dd>
+<dt>0</dt>
+<dd> magic number &#8211; &#8216;MRF1&#8217; (in ASCII) </dd>
+<dt>4</dt>
+<dd> width (32-bit, MSB first (i.e. big-endian)) </dd>
+<dt>8</dt>
+<dd> height (same) </dd>
+<dt>12</dt>
+<dd> reserved (single byte, must be zero) </dd>
+<dt>13</dt>
+<dd> compressed data </dd>
 </dl>
 <p> Note that there is no end-of-file marker in the file itself &#8211; the compressed data carries on right up to EOF. </p>
 <p> The way the picture is compressed is essentially very simple, but as they say, the devil is in the detail. So don&#8217;t be put off if it sounds confusing. </p>

@@ -11,7 +11,6 @@ description: "sepol_genbools – Rewrite a binary policy with different boolean 
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sepol/sepol.h&gt;
 int sepol_genbools(void *data, size_t len, char *boolpath);
-
 int sepol_genbools_array(void *data, size_t len, char **names, int *values, int nel);
 </code></pre>
 <h2>Description</h2>

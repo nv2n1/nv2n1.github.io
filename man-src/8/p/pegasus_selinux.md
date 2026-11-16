@@ -55,12 +55,12 @@ description: "pegasus_selinux – Security Enhanced Linux Policy for the pegasus
 <p> Policy governs the access confined processes have to these ports. SELinux pegasus policy is very flexible allowing users to setup their pegasus processes in as secure a method as possible. </p>
 <p> The following port types are defined for pegasus: </p>
 <dl>
-<dt><code>pegasus_http_port_t</code></p>
+<dt><code>pegasus_http_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5988 </p>
-<dt><code>pegasus_https_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 5988 </dd>
+<dt><code>pegasus_https_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5989</dl>
+</dd><dd>Default Defined Ports: tcp 5989</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type pegasus_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -152,14 +152,14 @@ description: "pegasus_selinux – Security Enhanced Linux Policy for the pegasus
 <p> <code>pegasus_data_t</code> </p>
 <p> &#8211; Set files with the pegasus_data_t type, if you want to treat the files as pegasus content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/Pegasus(/.*)?, /etc/Pegasus/pegasus_current.conf, /etc/Pegasus/cimserver_current.conf </p>
+<dt>Paths:</dt>
+<dd>/var/lib/Pegasus(/.*)?, /etc/Pegasus/pegasus_current.conf, /etc/Pegasus/cimserver_current.conf </dd>
 </dl>
 <p> <code>pegasus_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_exec_t type, if you want to transition an executable to the pegasus_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/cimserver, /usr/sbin/init_repository </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/cimserver, /usr/sbin/init_repository </dd>
 </dl>
 <p> <code>pegasus_mof_t</code> </p>
 <p> &#8211; Set files with the pegasus_mof_t type, if you want to treat the files as pegasus mof data. </p>
@@ -168,8 +168,8 @@ description: "pegasus_selinux – Security Enhanced Linux Policy for the pegasus
 <p> <code>pegasus_openlmi_admin_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_admin_exec_t type, if you want to transition an executable to the pegasus_openlmi_admin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/pegasus/cmpiLMI_Service-cimprovagt, /usr/libexec/pegasus/cmpiLMI_Journald-cimprovagt </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/pegasus/cmpiLMI_Service-cimprovagt, /usr/libexec/pegasus/cmpiLMI_Journald-cimprovagt </dd>
 </dl>
 <p> <code>pegasus_openlmi_logicalfile_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_logicalfile_exec_t type, if you want to transition an executable to the pegasus_openlmi_logicalfile_t domain. </p>
@@ -178,8 +178,8 @@ description: "pegasus_selinux – Security Enhanced Linux Policy for the pegasus
 <p> <code>pegasus_openlmi_storage_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_storage_exec_t type, if you want to transition an executable to the pegasus_openlmi_storage_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/pegasus/cmpiLMI_Hardware-cimprovagt, /usr/libexec/pegasus/pycmpiLMI_Storage-cimprovagt </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/pegasus/cmpiLMI_Hardware-cimprovagt, /usr/libexec/pegasus/pycmpiLMI_Storage-cimprovagt </dd>
 </dl>
 <p> <code>pegasus_openlmi_storage_lib_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_storage_lib_t type, if you want to treat the files as pegasus openlmi storage lib data. </p>
@@ -190,8 +190,8 @@ description: "pegasus_selinux – Security Enhanced Linux Policy for the pegasus
 <p> <code>pegasus_openlmi_system_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_system_exec_t type, if you want to transition an executable to the pegasus_openlmi_system_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/pegasus/cmpiLMI_Fan-cimprovagt, /usr/libexec/pegasus/cmpiLMI_Networking-cimprovagt, /usr/libexec/pegasus/cmpiLMI_PowerManagement-cimprovagt </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/pegasus/cmpiLMI_Fan-cimprovagt, /usr/libexec/pegasus/cmpiLMI_Networking-cimprovagt, /usr/libexec/pegasus/cmpiLMI_PowerManagement-cimprovagt </dd>
 </dl>
 <p> <code>pegasus_openlmi_unconfined_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_unconfined_exec_t type, if you want to transition an executable to the pegasus_openlmi_unconfined_t domain. </p>

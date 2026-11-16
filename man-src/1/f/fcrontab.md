@@ -21,43 +21,43 @@ description: "fcrontab – manipulate per-user fcrontab files"
 <p> For instance, root can create a systemwide fcrontab file, say <i>/etc/fcrontab</i>, and run &quot;<code>fcrontab</code> <i>/etc/fcrontab</i>&quot; to install the new version after each change of the file. Or (s)he can create a new fcrontab running a simple &quot;<code>fcrontab</code>&quot;, and then maintain it using &quot;<code>fcrontab</code> <code>-e</code>&quot;. Same considerations apply to a non privileged user.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u </code><i>user</i></p>
-<dd> Specify the user whose <code>fcrontab</code> will be managed, or &quot;systab&quot; for the system fcrontab. Should only be used by root. If not given, the <code>fcrontab</code> file of the user invoking <code>fcrontab</code> will be handled. It may be useful since the <code>su</code>(8) command may confuse <code>fcrontab</code>. </p>
+<dt><code>-u </code><i>user</i></dt>
+<dd> Specify the user whose <code>fcrontab</code> will be managed, or &quot;systab&quot; for the system fcrontab. Should only be used by root. If not given, the <code>fcrontab</code> file of the user invoking <code>fcrontab</code> will be handled. It may be useful since the <code>su</code>(8) command may confuse <code>fcrontab</code>. </dd>
 <dl>
 <dt>
-<dd> <code>Note:</code> the &#8216;<i>user</i>&#8216; in the synopsys is equivalent to a &#8216;<code>-u</code> <i>user</i>&#8216;.</dl>
-<dt><code>-l</code></p>
-<dd> List user&#8217;s current <code>fcrontab</code> to standard output.</p>
-<dt><code>-e</code></p>
-<dd> Edit user&#8217;s current <code>fcrontab</code> using either the editor specified by the environment variable <code>VISUAL</code>, or <code>EDITOR</code> if <code>VISUAL</code> is not set. If none or them are set, <code>/usr/bin/vi</code> will be used.</p>
-<dt><code>-r</code></p>
-<dd> Remove user&#8217;s <code>fcrontab</code>.</p>
-<dt><code>-z</code></p>
-<dd> Reinstall user&#8217;s <code>fcrontab</code> from its source code. All informations <code>fcron</code> may have kept in the binary <code>fcrontab</code> (such as the last execution time and date) will be forgotten (ie. lost).</p>
-<dt><code>-n</code></p>
-<dd> Ignore previous version. If this option is not given, <code>fcron</code> will try to keep as much information as possible between old and new version of the <code>fcrontab</code> (time and date of next execution, if job is in serial queue, etc) if the line hasn&#8217;t been modified (same fields, same shell command).</p>
-<dt><code>-c </code><i>file</i></p>
-<dd> Make <code>fcrontab</code> use config file <i>file</i> instead of default config file <i>/usr/local/etc/fcron.conf</i>. To interact with a running <code>fcron</code> process, <code>fcrontab</code> must use the same config file as the process. That way, several <code>fcron</code> processes can run simultaneously on an only system.</p>
-<dt><code>-d</code></p>
-<dd> Run in debug mode. In this mode, many informational messages will be output in order to check if anything went wrong.</p>
-<dt><code>-h</code></p>
-<dd> Display a brief description of the options.</p>
-<dt><code>-V</code></p>
-<dd> Display an informational message about <code>fcrontab</code>, including its version and the license under which it is distributed.</dl>
+</dt><dd> <code>Note:</code> the &#8216;<i>user</i>&#8216; in the synopsys is equivalent to a &#8216;<code>-u</code> <i>user</i>&#8216;.</dd></dl>
+<dt><code>-l</code></dt>
+<dd> List user&#8217;s current <code>fcrontab</code> to standard output.</dd>
+<dt><code>-e</code></dt>
+<dd> Edit user&#8217;s current <code>fcrontab</code> using either the editor specified by the environment variable <code>VISUAL</code>, or <code>EDITOR</code> if <code>VISUAL</code> is not set. If none or them are set, <code>/usr/bin/vi</code> will be used.</dd>
+<dt><code>-r</code></dt>
+<dd> Remove user&#8217;s <code>fcrontab</code>.</dd>
+<dt><code>-z</code></dt>
+<dd> Reinstall user&#8217;s <code>fcrontab</code> from its source code. All informations <code>fcron</code> may have kept in the binary <code>fcrontab</code> (such as the last execution time and date) will be forgotten (ie. lost).</dd>
+<dt><code>-n</code></dt>
+<dd> Ignore previous version. If this option is not given, <code>fcron</code> will try to keep as much information as possible between old and new version of the <code>fcrontab</code> (time and date of next execution, if job is in serial queue, etc) if the line hasn&#8217;t been modified (same fields, same shell command).</dd>
+<dt><code>-c </code><i>file</i></dt>
+<dd> Make <code>fcrontab</code> use config file <i>file</i> instead of default config file <i>/usr/local/etc/fcron.conf</i>. To interact with a running <code>fcron</code> process, <code>fcrontab</code> must use the same config file as the process. That way, several <code>fcron</code> processes can run simultaneously on an only system.</dd>
+<dt><code>-d</code></dt>
+<dd> Run in debug mode. In this mode, many informational messages will be output in order to check if anything went wrong.</dd>
+<dt><code>-h</code></dt>
+<dd> Display a brief description of the options.</dd>
+<dt><code>-V</code></dt>
+<dd> Display an informational message about <code>fcrontab</code>, including its version and the license under which it is distributed.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> <code>Fcrontab</code> returns 0 on normal exit and 1 on error.</p>
 <h2>CONFORMING TO</h2>
 <p> Should be POSIX compliant.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/local/etc/fcron.conf</i></p>
-<dd> Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code>fcron.conf</code>(5) for more details.</p>
-<dt><i>/usr/local/etc/fcron.allow</i></p>
-<dd> Users allowed to use <code>fcrontab</code> and <code>fcrondyn</code> (one name per line, special name &quot;all&quot; acts for everyone)</p>
-<dt><i>/usr/local/etc/fcron.deny</i></p>
-<dd> Users who are not allowed to use <code>fcrontab</code> and <code>fcrondyn</code> (same format as allow file)</p>
-<dt><i>/usr/local/etc/pam.d/fcron</i><code> (or </code><i>/usr/local/etc/pam.conf</i><code>)</code></p>
-<dd> PAM configuration file for <code>fcron</code>. Take a look at <a href="/docs/linux/man/8-pam/">pam</a>(8) for more details.</dl>
+<dt><i>/usr/local/etc/fcron.conf</i></dt>
+<dd> Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code>fcron.conf</code>(5) for more details.</dd>
+<dt><i>/usr/local/etc/fcron.allow</i></dt>
+<dd> Users allowed to use <code>fcrontab</code> and <code>fcrondyn</code> (one name per line, special name &quot;all&quot; acts for everyone)</dd>
+<dt><i>/usr/local/etc/fcron.deny</i></dt>
+<dd> Users who are not allowed to use <code>fcrontab</code> and <code>fcrondyn</code> (same format as allow file)</dd>
+<dt><i>/usr/local/etc/pam.d/fcron</i><code> (or </code><i>/usr/local/etc/pam.conf</i><code>)</code></dt>
+<dd> PAM configuration file for <code>fcron</code>. Take a look at <a href="/docs/linux/man/8-pam/">pam</a>(8) for more details.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fcrontab/">fcrontab</a></code>(1), </p>
 <p> <code><a href="/docs/linux/man/1-fcrondyn/">fcrondyn</a></code>(1), </p>

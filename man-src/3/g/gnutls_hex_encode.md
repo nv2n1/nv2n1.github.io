@@ -14,12 +14,12 @@ description: "gnutls_hex_encode – API function"
 <p> <code>int gnutls_hex_encode(const gnutls_datum_t * </code><i>data</i><code>, char * </code><i>result</i><code>, size_t * </code><i>result_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const gnutls_datum_t * data</p>
-<dd> contain the raw data</p>
-<dt>char * result</p>
-<dd> the place where hex data will be copied</p>
-<dt>size_t * result_size</p>
-<dd> holds the size of the result</dl>
+<dt>const gnutls_datum_t * data</dt>
+<dd> contain the raw data</dd>
+<dt>char * result</dt>
+<dd> the place where hex data will be copied</dd>
+<dt>size_t * result_size</dt>
+<dd> holds the size of the result</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given data to printable data, using the hex encoding, as used in the PSK password files. </p>
 <p> Note that the size of the result includes the null terminator.</p>
@@ -34,6 +34,6 @@ description: "gnutls_hex_encode – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -44,11 +44,10 @@ url: "/docs/linux/man/1-perlmachten/"
 
 <dl>
 <dt>op/lexassign.t
-<dd> This test may fail when first run after building perl. It does not fail subsequently. The cause is unknown.
-<dt>pragma/warnings.t
-<dd> Test 257 fails due to a failure to warn about attempts to read from a filehandle which is a duplicate of stdout when stdout is attached to a pipe. The output of the test contains a block comment which discusses a different failure, not applicable to MachTen. 
-
- The root of the problem is that Machten does not assign a file type to either end of a pipe (see stat), resulting, among other things in Perl's <tt>&quot;-p&quot;</tt> test failing on file descriptors belonging to pipes. As a result, perl becomes confused, and the test for reading from a write-only file fails. I am reluctant to patch perl to get around this, as it's clearly an <font SIZE="-1">OS</font> bug (about which Tenon has been informed), and limited in its effect on practical Perl programs.</dl>
+</dt><dd> This test may fail when first run after building perl. It does not fail subsequently. The cause is unknown.
+</dd><dt>pragma/warnings.t
+</dt><dd> Test 257 fails due to a failure to warn about attempts to read from a filehandle which is a duplicate of stdout when stdout is attached to a pipe. The output of the test contains a block comment which discusses a different failure, not applicable to MachTen. 
+ The root of the problem is that Machten does not assign a file type to either end of a pipe (see stat), resulting, among other things in Perl's <tt>&quot;-p&quot;</tt> test failing on file descriptors belonging to pipes. As a result, perl becomes confused, and the test for reading from a write-only file fails. I am reluctant to patch perl to get around this, as it's clearly an <font SIZE="-1">OS</font> bug (about which Tenon has been informed), and limited in its effect on practical Perl programs.</dd></dl>
 
 <h2>Building external modules on MachTen</h2>
 

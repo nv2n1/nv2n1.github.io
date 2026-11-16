@@ -33,14 +33,14 @@ in_addr_t inet_netof(struct in_addr in);
 <h2>DESCRIPTION</h2>
 <p> <code>inet_aton</code>() converts the Internet host address <i>cp</i> from the IPv4 numbers-and-dots notation into binary form (in network byte order) and stores it in the structure that <i>inp</i> points to. <code>inet_aton</code>() returns nonzero if the address is valid, zero if not. The address supplied in <i>cp</i> can have one of the following forms:</p>
 <dl>
-<dt><i>a.b.c.d</i></p>
-<dd> Each of the four numeric parts specifies a byte of the address; the bytes are assigned in left-to-right order to produce the binary address.</p>
-<dt><i>a.b.c</i></p>
-<dd> Parts <i>a</i> and <i>b</i> specify the first two bytes of the binary address. Part <i>c</i> is interpreted as a 16-bit value that defines the rightmost two bytes of the binary address. This notation is suitable for specifying (outmoded) Class B network addresses.</p>
-<dt><i>a.b</i></p>
-<dd> Part <i>a</i> specifies the first byte of the binary address. Part <i>b</i> is interpreted as a 24-bit value that defines the rightmost three bytes of the binary address. This notation is suitable for specifying (outmoded) Class A network addresses.</p>
-<dt><i>a</i></p>
-<dd> The value <i>a</i> is interpreted as a 32-bit value that is stored directly into the binary address without any byte rearrangement.</dl>
+<dt><i>a.b.c.d</i></dt>
+<dd> Each of the four numeric parts specifies a byte of the address; the bytes are assigned in left-to-right order to produce the binary address.</dd>
+<dt><i>a.b.c</i></dt>
+<dd> Parts <i>a</i> and <i>b</i> specify the first two bytes of the binary address. Part <i>c</i> is interpreted as a 16-bit value that defines the rightmost two bytes of the binary address. This notation is suitable for specifying (outmoded) Class B network addresses.</dd>
+<dt><i>a.b</i></dt>
+<dd> Part <i>a</i> specifies the first byte of the binary address. Part <i>b</i> is interpreted as a 24-bit value that defines the rightmost three bytes of the binary address. This notation is suitable for specifying (outmoded) Class A network addresses.</dd>
+<dt><i>a</i></dt>
+<dd> The value <i>a</i> is interpreted as a 32-bit value that is stored directly into the binary address without any byte rearrangement.</dd></dl>
 <p> In all of the above forms, components of the dotted address can be specified in decimal, octal (with a leading <i>0</i>), or hexadecimal, with a leading <i>0X</i>). Addresses in any of these forms are collectively termed <i>IPV4 numbers-and-dots notation</i>. The form that uses exactly four decimal numbers is referred to as <i>IPv4 dotted-decimal notation</i> (or sometimes: <i>IPv4 dotted-quad notation</i>). </p>
 <p> <code>inet_aton</code>() returns 1 if the supplied string was successfully interpreted, or 0 if the string is invalid (<code>errno</code> is <i>not</i> set on error). </p>
 <p> The <code>inet_addr</code>() function converts the Internet host address <i>cp</i> from IPv4 numbers-and-dots notation into binary data in network byte order. If the input is invalid, <code>INADDR_NONE</code> (usually -1) is returned. Use of this function is problematic because -1 is a valid address (255.255.255.255). Avoid its use in favor of <code>inet_aton</code>(), <code>inet_pton</code>(3), or <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), which provide a cleaner way to indicate error return. </p>
@@ -84,12 +84,12 @@ in_addr_t inet_netof(struct in_addr in);
 <p> On x86 architectures, the host byte order is Least Significant Byte first (little endian), whereas the network byte order, as used on the Internet, is Most Significant Byte first (big endian). </p>
 <p> <code>inet_lnaof</code>(), <code>inet_netof</code>(), and <code>inet_makeaddr</code>() are legacy functions that assume they are dealing with <i>classful network addresses</i>. Classful networking divides IPv4 network addresses into host and network components at byte boundaries, as follows:</p>
 <dl>
-<dt>Class A</p>
-<dd> This address type is indicated by the value 0 in the most significant bit of the (network byte ordered) address. The network address is contained in the most significant byte, and the host address occupies the remaining three bytes.</p>
-<dt>Class B</p>
-<dd> This address type is indicated by the binary value 10 in the most significant two bits of the address. The network address is contained in the two most significant bytes, and the host address occupies the remaining two bytes.</p>
-<dt>Class C</p>
-<dd> This address type is indicated by the binary value 110 in the most significant three bits of the address. The network address is contained in the three most significant bytes, and the host address occupies the remaining byte.</dl>
+<dt>Class A</dt>
+<dd> This address type is indicated by the value 0 in the most significant bit of the (network byte ordered) address. The network address is contained in the most significant byte, and the host address occupies the remaining three bytes.</dd>
+<dt>Class B</dt>
+<dd> This address type is indicated by the binary value 10 in the most significant two bits of the address. The network address is contained in the two most significant bytes, and the host address occupies the remaining two bytes.</dd>
+<dt>Class C</dt>
+<dd> This address type is indicated by the binary value 110 in the most significant three bits of the address. The network address is contained in the three most significant bytes, and the host address occupies the remaining byte.</dd></dl>
 <p> Classful network addresses are now obsolete, having been superseded by Classless Inter-Domain Routing (CIDR), which divides addresses into network and host components at arbitrary bit (rather than byte) boundaries.</p>
 <h2>EXAMPLES</h2>
 <p> An example of the use of <code>inet_aton</code>() and <code>inet_ntoa</code>() is shown below. Here are some example runs: </p>

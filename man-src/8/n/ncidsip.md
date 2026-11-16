@@ -28,30 +28,30 @@ description: "ncidsip – Inject CID info by snooping SIP invites"
 <p> The configuration file for <i>ncidsip</i> is /etc/ncid/ncidsip.conf.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-s &lt;[host][:port]&gt; | &#8211;sip=&lt;[host][:port]&gt;</code></p>
-<dd>Specifies the hostname of the SIP devie to snoop. You may also specify the UDP port by suffixing the hostname with :&lt;port&gt;, or if no hostname is wanted, just :&lt;port&gt;. If you do not specify a host, it defaults to the network interface. If you do not specify a port, it defaults to &lt;5061&gt; (Vonage default). Other Vonage ports are 5060 and 10000. The new Vonage default appears to be &lt;10000&gt;.</p>
-<dt><code>-n &lt;host[:port]&gt; | &#8211;ncid=&lt;host[:port]&gt;</code></p>
-<dd>Specifies the NCID server to connect to. Port may be specified by suffixing the hostname with :&lt;port&gt;. By default it will connect to port 3333 on &quot;localhost&quot;.</p>
-<dt><code>-i &lt;interface&gt; | &#8211;interface=&lt;interface&gt;</code></p>
-<dd>Specifies the network interface to snoop on. If this is not specified then libpcap will pick a network interface. This will generally be the first ethernet interface found.</p>
-<dt><code>-p &lt;filename&gt; | &#8211;pidfile=&lt;filename&gt;</code></p>
-<dd>Specifies the pidfile name to write. Set to <i>/var/run/ncidsip.pid</i><code> in a rc or init script when used as a service. The program will still run if it does not have permission to write a pidfile. There is no default, if pidfile is not set, no pid file will be used.</p>
-<dt>-h | &#8211;help</code></p>
-<dd>Prints this help</p>
-<dt><code>-D | &#8211;debug</code></p>
-<dd>Display the payload of all packets that matched the libpcap filter.</p>
-<dt><code>-d &lt;filename&gt; | &#8211;dumpfile &lt;filename&gt;</code></p>
-<dd>Read packets from a libpcap capture file instead of the network. Mostly only useful for development purposes.</p>
-<dt><code>-u | &#8211;usage</code></p>
-<dd>Prints this help</p>
-<dt><code>-V | &#8211;version</code></p>
-<dd>Displays the version</p>
-<dt><code>-v | &#8211;verbose</code></p>
-<dd>Displays status. Use this option to run interactive.</p>
-<dt><code>-l | &#8211;listdevs</code></p>
-<dd>Returns a list of all network device names that can be used.</p>
-<dt><code>-t | &#8211;test</code></p>
-<dd>Test for SIP packets. This option is used to check if SIP packets exist without starting the NCID server. It will display the Caller ID line generated when a call comes in, and a CANCEL line if cancel was generated.</dl>
+<dt><code>-s &lt;[host][:port]&gt; | &#8211;sip=&lt;[host][:port]&gt;</code></dt>
+<dd>Specifies the hostname of the SIP devie to snoop. You may also specify the UDP port by suffixing the hostname with :&lt;port&gt;, or if no hostname is wanted, just :&lt;port&gt;. If you do not specify a host, it defaults to the network interface. If you do not specify a port, it defaults to &lt;5061&gt; (Vonage default). Other Vonage ports are 5060 and 10000. The new Vonage default appears to be &lt;10000&gt;.</dd>
+<dt><code>-n &lt;host[:port]&gt; | &#8211;ncid=&lt;host[:port]&gt;</code></dt>
+<dd>Specifies the NCID server to connect to. Port may be specified by suffixing the hostname with :&lt;port&gt;. By default it will connect to port 3333 on &quot;localhost&quot;.</dd>
+<dt><code>-i &lt;interface&gt; | &#8211;interface=&lt;interface&gt;</code></dt>
+<dd>Specifies the network interface to snoop on. If this is not specified then libpcap will pick a network interface. This will generally be the first ethernet interface found.</dd>
+<dt><code>-p &lt;filename&gt; | &#8211;pidfile=&lt;filename&gt;</code></dt>
+<dd>Specifies the pidfile name to write. Set to <i>/var/run/ncidsip.pid</i><code> in a rc or init script when used as a service. The program will still run if it does not have permission to write a pidfile. There is no default, if pidfile is not set, no pid file will be used.</dd>
+<dt>-h | &#8211;help</code></dt>
+<dd>Prints this help</dd>
+<dt><code>-D | &#8211;debug</code></dt>
+<dd>Display the payload of all packets that matched the libpcap filter.</dd>
+<dt><code>-d &lt;filename&gt; | &#8211;dumpfile &lt;filename&gt;</code></dt>
+<dd>Read packets from a libpcap capture file instead of the network. Mostly only useful for development purposes.</dd>
+<dt><code>-u | &#8211;usage</code></dt>
+<dd>Prints this help</dd>
+<dt><code>-V | &#8211;version</code></dt>
+<dd>Displays the version</dd>
+<dt><code>-v | &#8211;verbose</code></dt>
+<dd>Displays status. Use this option to run interactive.</dd>
+<dt><code>-l | &#8211;listdevs</code></dt>
+<dd>Returns a list of all network device names that can be used.</dd>
+<dt><code>-t | &#8211;test</code></dt>
+<dd>Test for SIP packets. This option is used to check if SIP packets exist without starting the NCID server. It will display the Caller ID line generated when a call comes in, and a CANCEL line if cancel was generated.</dd></dl>
 <h2>Files</h2>
 <p>/etc/ncid/ncidsip.conf</p>
 <h2>Cid Message Format</h2>

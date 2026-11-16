@@ -11,12 +11,10 @@ std::destroying_delete_t,std::destroying_delete - std::destroying_delete_t,std::
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;new&gt;
-
     struct destroying_delete_t {
     explicit destroying_delete_t() = default;
 };
 (since C++ 20)
-
     inline constexpr destroying_delete_t destroying_delete{};
 (since C++ 20)</code></pre> 
 Tag type used to identify the destroying delete form of operator_delete. 

@@ -15,7 +15,7 @@ eventfd_ctx_get - Acquires a reference to the internal eventfd context.
 <h2>Arguments</h2>
 
 <i>ctx</i>
-<dl><dd>[in] Pointer to the eventfd context.</dl>
+<dl><dd>[in] Pointer to the eventfd context.</dd></dl>
 
 <h2>Return</h2>
 
@@ -24,3 +24,4 @@ eventfd_ctx_get - Acquires a reference to the internal eventfd context.
 <h2>Copyright</h2>
 
 
+</dd>

@@ -14,65 +14,65 @@ description: "ppmtoilbm – convert a portable pixmap into an ILBM file"
 <h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces an ILBM file as output. Supported ILBM types are:</p>
 <dl>
-<dt>Normal ILBMs with 1-16 planes.</p>
+<dt>Normal ILBMs with 1-16 planes.</dt>
 <dd>
-<dt>Amiga HAM with 3-16 planes.</p>
+</dd><dt>Amiga HAM with 3-16 planes.</dt>
 <dd>
-<dt>24 bit.</p>
+</dd><dt>24 bit.</dt>
 <dd>
-<dt>Color map (BMHD + CMAP chunk only, nPlanes = 0).</p>
+</dd><dt>Color map (BMHD + CMAP chunk only, nPlanes = 0).</dt>
 <dd>
-<dt>Unofficial direct color.</p>
-<dd> 1-16 planes for each color component.</p>
-<dt>Chunks written:</p>
-<dd> BMHD, CMAP, CAMG (only for HAM), BODY (not for colormap files) unofficial DCOL chunk for direct color ILBM</dl>
+</dd><dt>Unofficial direct color.</dt>
+<dd> 1-16 planes for each color component.</dd>
+<dt>Chunks written:</dt>
+<dd> BMHD, CMAP, CAMG (only for HAM), BODY (not for colormap files) unofficial DCOL chunk for direct color ILBM</dd></dl>
 <h2>OPTIONS</h2>
 <p> Options marked with (*) can be prefixed with a &quot;no&quot;, e.g. &quot;-nohamif&quot;. All options can be abbreviated to their shortest unique prefix.</p>
 <dl>
-<dt><code>-maxplanes | -mp n</code></p>
-<dd> (default 5, minimum 1, maximum 16) Maximum planes to write in a normal ILBM. If the pixmap does not fit into &lt;n&gt; planes, ppmtoilbm writes a HAM file (if -hamif is used), a 24bit file (if -24if is used) or a direct color file (if -dcif is used) or aborts with an error.</p>
-<dt><code>-fixplanes | -fp n</code></p>
-<dd> (min 1, max 16) If a normal ILBM is written, it will have exactly &lt;n&gt; planes.</p>
-<dt><code>-hambits | -hamplanes n</code></p>
-<dd> (default 6, min 3, max 16) Select number of planes for HAM picture. The current Amiga hardware supports 6 and 8 planes, so for now you should only use this values.</p>
-<dt><code>-normal (default)</code></p>
-<dd> Turns off -hamif/-24if/-dcif, -hamforce/-24force/-dcforce and -cmaponly. Also sets compression type to byterun1.</p>
-<dt><code>-hamif (*)</code></p>
+<dt><code>-maxplanes | -mp n</code></dt>
+<dd> (default 5, minimum 1, maximum 16) Maximum planes to write in a normal ILBM. If the pixmap does not fit into &lt;n&gt; planes, ppmtoilbm writes a HAM file (if -hamif is used), a 24bit file (if -24if is used) or a direct color file (if -dcif is used) or aborts with an error.</dd>
+<dt><code>-fixplanes | -fp n</code></dt>
+<dd> (min 1, max 16) If a normal ILBM is written, it will have exactly &lt;n&gt; planes.</dd>
+<dt><code>-hambits | -hamplanes n</code></dt>
+<dd> (default 6, min 3, max 16) Select number of planes for HAM picture. The current Amiga hardware supports 6 and 8 planes, so for now you should only use this values.</dd>
+<dt><code>-normal (default)</code></dt>
+<dd> Turns off -hamif/-24if/-dcif, -hamforce/-24force/-dcforce and -cmaponly. Also sets compression type to byterun1.</dd>
+<dt><code>-hamif (*)</code></dt>
 <dd>
-<dt><code>-24if (*)</code></p>
+</dd><dt><code>-24if (*)</code></dt>
 <dd>
-<dt><code>-dcif (*)</code></p>
-<dd> Write a HAM/24bit/direct color file if the pixmap does not fit into &lt;maxplanes&gt; planes.</p>
-<dt><code>-hamforce (*)</code></p>
+</dd><dt><code>-dcif (*)</code></dt>
+<dd> Write a HAM/24bit/direct color file if the pixmap does not fit into &lt;maxplanes&gt; planes.</dd>
+<dt><code>-hamforce (*)</code></dt>
 <dd>
-<dt><code>-24force (*)</code></p>
+</dd><dt><code>-24force (*)</code></dt>
 <dd>
-<dt><code>-dcforce (*)</code></p>
-<dd> Write a HAM/24bit/direct color file.</p>
-<dt><code>-dcbits | -dcplanes r g b</code></p>
-<dd> (default 5, min 1, max 16). Select number of bits for red, green &amp; blue in a direct color ILBM.</p>
-<dt><code>-ecs (default)</code></p>
-<dd> Shortcut for: -hamplanes 6 -maxplanes 5</p>
-<dt><code>-aga</code></p>
+</dd><dt><code>-dcforce (*)</code></dt>
+<dd> Write a HAM/24bit/direct color file.</dd>
+<dt><code>-dcbits | -dcplanes r g b</code></dt>
+<dd> (default 5, min 1, max 16). Select number of bits for red, green &amp; blue in a direct color ILBM.</dd>
+<dt><code>-ecs (default)</code></dt>
+<dd> Shortcut for: -hamplanes 6 -maxplanes 5</dd>
+<dt><code>-aga</code></dt>
 <dd>
-<dt><code>Shortcut for: -hamplanes 8 -maxplanes 8</code></p>
+</dd><dt><code>Shortcut for: -hamplanes 8 -maxplanes 8</code></dt>
 <dd>
-<dt><code>-ham6</code></p>
+</dd><dt><code>-ham6</code></dt>
 <dd>
-<dt><code>Shortcut for: -hamplanes 6 -hamforce</code></p>
+</dd><dt><code>Shortcut for: -hamplanes 6 -hamforce</code></dt>
 <dd>
-<dt><code>-ham8</code></p>
-<dd> Shortcut for: -hamplanes 8 -hamforce</p>
-<dt><code>-compress (*) (default)</code></p>
+</dd><dt><code>-ham8</code></dt>
+<dd> Shortcut for: -hamplanes 8 -hamforce</dd>
+<dt><code>-compress (*) (default)</code></dt>
 <dd>
-<dt><code>-cmethod none|byterun1</code></p>
-<dd> Compress the BODY chunk. The default compression method is byterun1. Compression requires building the ILBM image in memory; turning compression off allows stream-writing of the image, but the resulting file will usually be 30% to 50% larger. Another alternative is the -savemem option, this will keep memory requirements for compression at a minimum, but is very slow.</p>
-<dt><code>-map ppmfile</code></p>
-<dd> Write a normal ILBM using the colors in &lt;ppmfile&gt; as the colormap. The colormap file also determines the number of planes, a -maxplanes or -fixplanes option is ignored.</p>
-<dt><code>-cmaponly</code></p>
-<dd> Write a colormap file: only BMHD and CMAP chunks, no BODY chunk, nPlanes = 0.</p>
-<dt><code>-savemem</code></p>
-<dd> See the -compress option.</dl>
+</dd><dt><code>-cmethod none|byterun1</code></dt>
+<dd> Compress the BODY chunk. The default compression method is byterun1. Compression requires building the ILBM image in memory; turning compression off allows stream-writing of the image, but the resulting file will usually be 30% to 50% larger. Another alternative is the -savemem option, this will keep memory requirements for compression at a minimum, but is very slow.</dd>
+<dt><code>-map ppmfile</code></dt>
+<dd> Write a normal ILBM using the colors in &lt;ppmfile&gt; as the colormap. The colormap file also determines the number of planes, a -maxplanes or -fixplanes option is ignored.</dd>
+<dt><code>-cmaponly</code></dt>
+<dd> Write a colormap file: only BMHD and CMAP chunks, no BODY chunk, nPlanes = 0.</dd>
+<dt><code>-savemem</code></dt>
+<dd> See the -compress option.</dd></dl>
 <h2>BUGS</h2>
 <p> HAM pictures will always get a grayscale colormap; a real color selection algorithm might give better results. On the other hand, this allows row-by-row operation on HAM images, and all HAM images of the same depth (no. of planes) share a common colormap, which is useful for building HAM animations.</p>
 <h2>REFERENCES</h2>

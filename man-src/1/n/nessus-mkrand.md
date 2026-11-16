@@ -21,8 +21,8 @@ description: "nessus-mkrand – Creates a file with random bytes"
 <p> The canonical places where you will find more information about the Nessus project are: </p>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br />
- <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)</dl>
+</dt><dd> <a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br />
+ <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>nessus-mkrand</code> was written by Michel Arboi &lt;arboi [at] algoriel.fr&gt;. </p>
 <h2>Index</h2>

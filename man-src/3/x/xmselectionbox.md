@@ -13,20 +13,20 @@ description: "XmSelectionBox — The SelectionBox widget class"
 <h2>Description</h2>
 <p>SelectionBox is a general dialog widget that allows the user to select one item from a list. By default, a SelectionBox includes the following:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>A scrolling list of alternatives</p>
-<dt> &bull;</p>
-<dd>An editable text field for the selected alternative</p>
-<dt> &bull;</p>
-<dd>Labels for the list and text field</p>
-<dt> &bull;</p>
-<dd>Three or four buttons</dl>
+<dt> &bull;</dt>
+<dd>A scrolling list of alternatives</dd>
+<dt> &bull;</dt>
+<dd>An editable text field for the selected alternative</dd>
+<dt> &bull;</dt>
+<dd>Labels for the list and text field</dd>
+<dt> &bull;</dt>
+<dd>Three or four buttons</dd></dl>
 <p> The default button labels are <code>OK</code>, <code>Cancel</code>, and <code>Help</code>. By default an <code>Apply</code> button is also created; if the parent of the SelectionBox is a DialogShell, it is managed; otherwise it is unmanaged. Additional children may be added to the SelectionBox after creation. The first child is used as a work area. The value of <code>XmNchildPlacement</code> determines if the work area is placed above or below the Text area, or above or below the List area. Additional children are laid out in the following manner:</p>
 <dl COMPACT>
-<dt>Menubar</p>
-<dd>The first menu bar child is placed at the top of the window. The <code>XmQTmenuSystem</code> trait is used to check that it is the first MenuBar child.</p>
-<dt>Buttons</p>
-<dd>All <code>XmPushButton</code> widgets or gadgets, and their subclasses are placed after the <code>OK</code> button in the order of their creation (this order is checked using the <code>XmQTactivatable</code> trait). The layout direction of the buttons depends on the <code>XmNlayoutDirection</code> resource.</dl>
+<dt>Menubar</dt>
+<dd>The first menu bar child is placed at the top of the window. The <code>XmQTmenuSystem</code> trait is used to check that it is the first MenuBar child.</dd>
+<dt>Buttons</dt>
+<dd>All <code>XmPushButton</code> widgets or gadgets, and their subclasses are placed after the <code>OK</code> button in the order of their creation (this order is checked using the <code>XmQTactivatable</code> trait). The layout direction of the buttons depends on the <code>XmNlayoutDirection</code> resource.</dd></dl>
 <p> The layout of additional children that are not in the above categories is undefined. </p>
 <p> The user can select an item in two ways: by scrolling through the list and selecting the desired item or by entering the item name directly into the text edit area. Selecting an item from the list causes that item name to appear in the selection text edit area. </p>
 <p> The user may select a new item as many times as desired. The item is not actually selected until the user presses the <code>OK</code> PushButton. </p>
@@ -34,16 +34,16 @@ description: "XmSelectionBox — The SelectionBox widget class"
 <p> For SelectionBox and its subclasses, the default value for <code>XmNinitialFocus</code> is the text edit area. </p>
 <p> The user can specify resources in a resource file for the automatically created widgets and gadgets of SelectionBox. The following list identifies the names of these widgets (or gadgets) and the associated SelectionBox areas:</p>
 <dl COMPACT>
-<dt>List Items Label</p>
-<dd><code>Items</code></p>
-<dt>List Items</p>
-<dd><code>ItemsList</code></p>
-<dt>Selection Label</p>
-<dd><code>Selection</code></p>
-<dt>Selection Text</p>
-<dd><code>Text</code> or <code>TextField</code></p>
-<dt>Selection Separator</p>
-<dd><code>Separator</code></dl>
+<dt>List Items Label</dt>
+<dd><code>Items</code></dd>
+<dt>List Items</dt>
+<dd><code>ItemsList</code></dd>
+<dt>Selection Label</dt>
+<dd><code>Selection</code></dd>
+<dt>Selection Text</dt>
+<dd><code>Text</code> or <code>TextField</code></dd>
+<dt>Selection Separator</dt>
+<dd><code>Separator</code></dd></dl>
 <p> SelectionBox uses the <code>XmQTaccessTextual</code>, <code>XmQTactivatable</code>, and <code>XmQTmenuSystem</code> traits.</p>
 <h3>Descendants</h3>
 <p>SelectionBox automatically creates the descendants shown in the following table. An application can use <code>XtNameToWidget</code> to gain access to the named descendant. In addition, a user or an application can use the named descendant when specifying resource values. </p>
@@ -799,77 +799,77 @@ description: "XmSelectionBox — The SelectionBox widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNapplyCallback</code></p>
-<dd>Specifies the list of callbacks called when the user activates the <code>Apply</code> button. The callback reason is <code>XmCR_APPLY</code>.</p>
-<dt><code>XmNapplyLabelString</code></p>
-<dd>Specifies the string label for the <code>Apply</code> button. The default for this resource depends on the locale. In the C locale the default is <code>Apply</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNcancelCallback</code></p>
-<dd>Specifies the list of callbacks called when the user activates the <code>Cancel</code> button. The callback reason is <code>XmCR_CANCEL</code>.</p>
-<dt><code>XmNcancelLabelString</code></p>
-<dd>Specifies the string label for the <code>Cancel</code> button. The default for this resource depends on the locale. In the C locale the default is <code>Cancel</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNchildPlacement</code></p>
-<dd>Specifies the placement of the work area child. The possible values are</p>
+<dt><code>XmNapplyCallback</code></dt>
+<dd>Specifies the list of callbacks called when the user activates the <code>Apply</code> button. The callback reason is <code>XmCR_APPLY</code>.</dd>
+<dt><code>XmNapplyLabelString</code></dt>
+<dd>Specifies the string label for the <code>Apply</code> button. The default for this resource depends on the locale. In the C locale the default is <code>Apply</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNcancelCallback</code></dt>
+<dd>Specifies the list of callbacks called when the user activates the <code>Cancel</code> button. The callback reason is <code>XmCR_CANCEL</code>.</dd>
+<dt><code>XmNcancelLabelString</code></dt>
+<dd>Specifies the string label for the <code>Cancel</code> button. The default for this resource depends on the locale. In the C locale the default is <code>Cancel</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNchildPlacement</code></dt>
+<dd>Specifies the placement of the work area child. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmPLACE_ABOVE_SELECTION</code></p>
-<dd>Places the work area child above the Text area</p>
-<dt><code>XmPLACE_BELOW_SELECTION</code></p>
-<dd>Places the work area child below the Text area</p>
-<dt><code>XmPLACE_TOP</code></p>
-<dd>Places the work area child above the List area, and below a MenuBar, if one is present</dl>
+</dd><dl COMPACT>
+<dt><code>XmPLACE_ABOVE_SELECTION</code></dt>
+<dd>Places the work area child above the Text area</dd>
+<dt><code>XmPLACE_BELOW_SELECTION</code></dt>
+<dd>Places the work area child below the Text area</dd>
+<dt><code>XmPLACE_TOP</code></dt>
+<dd>Places the work area child above the List area, and below a MenuBar, if one is present</dd></dl>
 </dl>
-<dt><code>XmNdialogType</code></p>
-<dd>Determines the set of SelectionBox children widgets that are created and managed at initialization. The possible values are</p>
+<dt><code>XmNdialogType</code></dt>
+<dd>Determines the set of SelectionBox children widgets that are created and managed at initialization. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDIALOG_PROMPT</code></p>
-<dd>All standard children except the list and list label are created, and all except the <code>Apply</code> button are managed</p>
-<dt><code>XmDIALOG_COMMAND</code></p>
-<dd>Only the list, the selection label, and the text field are created and managed</p>
-<dt><code>XmDIALOG_SELECTION</code></p>
-<dd>All standard children are created and managed</p>
-<dt><code>XmDIALOG_FILE_SELECTION</code></p>
-<dd>All standard children are created and managed</p>
-<dt><code>XmDIALOG_WORK_AREA</code></p>
-<dd>All standard children are created, and all except the <code>Apply</code> button are managed</dl>
+</dd><dl COMPACT>
+<dt><code>XmDIALOG_PROMPT</code></dt>
+<dd>All standard children except the list and list label are created, and all except the <code>Apply</code> button are managed</dd>
+<dt><code>XmDIALOG_COMMAND</code></dt>
+<dd>Only the list, the selection label, and the text field are created and managed</dd>
+<dt><code>XmDIALOG_SELECTION</code></dt>
+<dd>All standard children are created and managed</dd>
+<dt><code>XmDIALOG_FILE_SELECTION</code></dt>
+<dd>All standard children are created and managed</dd>
+<dt><code>XmDIALOG_WORK_AREA</code></dt>
+<dd>All standard children are created, and all except the <code>Apply</code> button are managed</dd></dl>
 </dl>
-<dd>If the parent of the SelectionBox is a DialogShell, the default is <code>XmDIALOG_SELECTION</code>; otherwise, the default is <code>XmDIALOG_WORK_AREA</code>. <code>XmCreatePromptDialog</code> and <code>XmCreateSelectionDialog</code> set and append this resource to the creation <i>arglist</i> supplied by the application. This resource cannot be modified after creation.</p>
-<dt><code>XmNhelpLabelString</code></p>
-<dd>Specifies the string label for the <code>Help</code> button. The default for this resource depends on the locale. In the C locale the default is <code>Help</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNlistItems</code></p>
-<dd>Specifies the items in the SelectionBox list. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</p>
-<dt><code>XmNlistItemCount</code></p>
-<dd>Specifies the number of items in the SelectionBox list. The value must not be negative.</p>
-<dt><code>XmNlistLabelString</code></p>
-<dd>Specifies the string label to appear above the SelectionBox list containing the selection items. The default for this resource depends on the locale. In the C locale the default is <code>Items</code> unless <code>XmNdialogType</code> is <code>XmDIALOG_PROMPT</code>; in this case the default is NULL.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNlistVisibleItemCount</code></p>
-<dd>Specifies the number of items displayed in the SelectionBox list. The value must be greater than 0 (zero) unless <code>XmNdialogType</code> is <code>XmDIALOG_PROMPT</code>; in this case, the value is always 0. The default is dynamic based on the height of the list.</p>
-<dt><code>XmNminimizeButtons</code></p>
-<dd>Sets the buttons to the width of the widest button and height of the tallest button if False. If True, button width and height are not modified.</p>
-<dt><code>XmNmustMatch</code></p>
-<dd>Specifies whether the selection widget should check if the user&#8217;s selection in the text edit field has an exact match in the SelectionBox list when the <code>OK</code> button is activated. If the selection does not have an exact match, and <code>XmNmustMatch</code> is True, the <code>XmNnoMatchCallback</code> callbacks are called. If the selection does have an exact match or if <code>XmNmustMatch</code> is False, <code>XmNokCallback</code> callbacks are called.</p>
-<dt><code>XmNnoMatchCallback</code></p>
-<dd>Specifies the list of callbacks called when the user makes a selection from the text edit field that does not have an exact match with any of the items in the list box. The callback reason is <code>XmCR_NO_MATCH</code>. Callbacks in this list are called only if <code>XmNmustMatch</code> is true.</p>
-<dt><code>XmNokCallback</code></p>
-<dd>Specifies the list of callbacks called when the user activates the <code>OK</code> button. The callback reason is <code>XmCR_OK</code>. If the selection text does not match a list item, and <code>XmNmustMatch</code> is True, the <code>XmNnoMatchCallback</code> callbacks are called instead.</p>
-<dt><code>XmNokLabelString</code></p>
-<dd>Specifies the string label for the <code>OK</code> button. The default for this resource depends on the locale. In the C locale the default is <code>OK</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNselectionLabelString</code></p>
-<dd>Specifies the string label for the selection text edit field. The default for this resource depends on the locale. In the C locale the default is <code>Selection</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNtextAccelerators</code></p>
-<dd>Specifies translations added to the Text widget child of the SelectionBox. The default includes bindings for the up and down keys for auto selection of list items. This resource is ignored if <code>XmNaccelerators</code> is initialized to a nondefault value.</p>
-<dt><code>XmNtextColumns</code></p>
-<dd>Specifies the number of columns in the Text widget. The value must be greater than 0 (zero).</p>
-<dt><code>XmNtextString</code></p>
-<dd>Specifies the text in the text edit selection field.</dl>
+<dd>If the parent of the SelectionBox is a DialogShell, the default is <code>XmDIALOG_SELECTION</code>; otherwise, the default is <code>XmDIALOG_WORK_AREA</code>. <code>XmCreatePromptDialog</code> and <code>XmCreateSelectionDialog</code> set and append this resource to the creation <i>arglist</i> supplied by the application. This resource cannot be modified after creation.</dd>
+<dt><code>XmNhelpLabelString</code></dt>
+<dd>Specifies the string label for the <code>Help</code> button. The default for this resource depends on the locale. In the C locale the default is <code>Help</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNlistItems</code></dt>
+<dd>Specifies the items in the SelectionBox list. <code>XtGetValues</code> for this resource returns the list items themselves, not a copy of the list items. The application must not free the returned items.</dd>
+<dt><code>XmNlistItemCount</code></dt>
+<dd>Specifies the number of items in the SelectionBox list. The value must not be negative.</dd>
+<dt><code>XmNlistLabelString</code></dt>
+<dd>Specifies the string label to appear above the SelectionBox list containing the selection items. The default for this resource depends on the locale. In the C locale the default is <code>Items</code> unless <code>XmNdialogType</code> is <code>XmDIALOG_PROMPT</code>; in this case the default is NULL.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNlistVisibleItemCount</code></dt>
+<dd>Specifies the number of items displayed in the SelectionBox list. The value must be greater than 0 (zero) unless <code>XmNdialogType</code> is <code>XmDIALOG_PROMPT</code>; in this case, the value is always 0. The default is dynamic based on the height of the list.</dd>
+<dt><code>XmNminimizeButtons</code></dt>
+<dd>Sets the buttons to the width of the widest button and height of the tallest button if False. If True, button width and height are not modified.</dd>
+<dt><code>XmNmustMatch</code></dt>
+<dd>Specifies whether the selection widget should check if the user&#8217;s selection in the text edit field has an exact match in the SelectionBox list when the <code>OK</code> button is activated. If the selection does not have an exact match, and <code>XmNmustMatch</code> is True, the <code>XmNnoMatchCallback</code> callbacks are called. If the selection does have an exact match or if <code>XmNmustMatch</code> is False, <code>XmNokCallback</code> callbacks are called.</dd>
+<dt><code>XmNnoMatchCallback</code></dt>
+<dd>Specifies the list of callbacks called when the user makes a selection from the text edit field that does not have an exact match with any of the items in the list box. The callback reason is <code>XmCR_NO_MATCH</code>. Callbacks in this list are called only if <code>XmNmustMatch</code> is true.</dd>
+<dt><code>XmNokCallback</code></dt>
+<dd>Specifies the list of callbacks called when the user activates the <code>OK</code> button. The callback reason is <code>XmCR_OK</code>. If the selection text does not match a list item, and <code>XmNmustMatch</code> is True, the <code>XmNnoMatchCallback</code> callbacks are called instead.</dd>
+<dt><code>XmNokLabelString</code></dt>
+<dd>Specifies the string label for the <code>OK</code> button. The default for this resource depends on the locale. In the C locale the default is <code>OK</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNselectionLabelString</code></dt>
+<dd>Specifies the string label for the selection text edit field. The default for this resource depends on the locale. In the C locale the default is <code>Selection</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNtextAccelerators</code></dt>
+<dd>Specifies translations added to the Text widget child of the SelectionBox. The default includes bindings for the up and down keys for auto selection of list items. This resource is ignored if <code>XmNaccelerators</code> is initialized to a nondefault value.</dd>
+<dt><code>XmNtextColumns</code></dt>
+<dd>Specifies the number of columns in the Text widget. The value must be greater than 0 (zero).</dd>
+<dt><code>XmNtextString</code></dt>
+<dd>Specifies the text in the text edit selection field.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>SelectionBox inherits behavior and resources from the superclasses in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -2547,61 +2547,61 @@ description: "XmSelectionBox — The SelectionBox widget class"
  int <i>length</i>;
 } XmSelectionBoxCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><i>value</i></p>
-<dd>Indicates the <code>XmString</code> value selected by the user from the SelectionBox list or entered into the SelectionBox text field</p>
-<dt><i>length</i></p>
-<dd>Indicates the size in bytes of the <code>XmString</code> value This member is obsolete and exists for compatibility with earlier releases.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><i>value</i></dt>
+<dd>Indicates the <code>XmString</code> value selected by the user from the SelectionBox list or entered into the SelectionBox text field</dd>
+<dt><i>length</i></dt>
+<dd>Indicates the size in bytes of the <code>XmString</code> value This member is obsolete and exists for compatibility with earlier releases.</dd></dl>
 <h3>Translations</h3>
 <p><code>XmSelectionBox</code> inherits translations from <code>XmBulletinBoard</code>.</p>
 <h3>Accelerators</h3>
 <p>The <code>XmNtextAccelerators</code> are added to the Text descendant of <code>XmSelectionBox</code>. The default accelerators are described in the following list. </p>
 <p> The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>SelectionBoxUpOrDown(<code>Previous</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>SelectionBoxUpOrDown(<code>Next</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</p>
-<dd>SelectionBoxUpOrDown(<code>First</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</p>
-<dd>SelectionBoxUpOrDown(<code>Last</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRestore&gt;</code>:</p>
-<dd>SelectionBoxRestore()</p>
-<dt><code>s c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>SelectionBoxRestore()</dl>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>SelectionBoxUpOrDown(<code>Previous</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>SelectionBoxUpOrDown(<code>Next</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</dt>
+<dd>SelectionBoxUpOrDown(<code>First</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</dt>
+<dd>SelectionBoxUpOrDown(<code>Last</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRestore&gt;</code>:</dt>
+<dd>SelectionBoxRestore()</dd>
+<dt><code>s c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>SelectionBoxRestore()</dd></dl>
 <h3>Action Routines</h3>
 <p>The XmSelectionBox action routines are</p>
 <dl COMPACT>
-<dt>SelectionBoxUpOrDown(<code>Previous|Next|First|Last</code>):</p>
-<dd>When called with an argument of <code>Previous</code>, or 0 (zero) for compatibility, selects the previous item in the list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>Next</code>, or 1 for compatibility, selects the next item in the list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>First</code>, or 2 for compatibility, selects the first item in the list and replaces the text with that item.</p>
-<dd>When called with an argument of <code>Last</code>, or 3 for compatibility, selects the last item in the list and replaces the text with that item.</p>
-<dt>SelectionBoxRestore():</p>
-<dd>Replaces the text value with the list selection. If no item in the list is selected, clears the text.</dl>
+<dt>SelectionBoxUpOrDown(<code>Previous|Next|First|Last</code>):</dt>
+<dd>When called with an argument of <code>Previous</code>, or 0 (zero) for compatibility, selects the previous item in the list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>Next</code>, or 1 for compatibility, selects the next item in the list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>First</code>, or 2 for compatibility, selects the first item in the list and replaces the text with that item.</dd>
+<dd>When called with an argument of <code>Last</code>, or 3 for compatibility, selects the last item in the list and replaces the text with that item.</dd>
+<dt>SelectionBoxRestore():</dt>
+<dd>Replaces the text value with the list selection. If no item in the list is selected, clears the text.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>The SelectionBox widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>Calls the activate callbacks for the cancel button if it is sensitive. If no cancel button exists and the parent of the SelectionBox is a manager, passes the event to the parent.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>Calls the activate callbacks for the button with the keyboard focus. If no button has the keyboard focus, calls the activate callbacks for the default button if it is sensitive. In a List widget or single-line Text widget, the List or Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> is called before the SelectionBox actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>. In a multiline Text widget, any <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> event except <code>&lt;Key&gt;</code><code>&lt;osfEnter&gt;</code> calls the Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>, then the SelectionBox actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>. If no button has the focus, no default button exists, and the parent of the SelectionBox is a manager, passes the event to the parent.</p>
-<dt><code>&lt;OK Button Activated&gt;</code>:</p>
-<dd>If <code>XmNmustMatch</code> is True and the text does not match an item in the file list, calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</p>
-<dt><code>&lt;Apply Button Activated&gt;</code>:</p>
-<dd>Calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</p>
-<dt><code>&lt;Cancel Button Activated&gt;</code>:</p>
-<dd>Calls the <code>XmNcancelCallback</code> callbacks with reason <code>XmCR_CANCEL</code>.</p>
-<dt><code>&lt;Help Button Activated&gt;</code>:</p>
-<dd>Calls the <code>XmNhelpCallback</code> callbacks with reason <code>XmCR_HELP</code>.</p>
-<dt><code>&lt;MapWindow&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNmapCallback</code> if the SelectionBox is a child of a Dialog shell.</p>
-<dt><code>&lt;UnmapWindow&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNunmapCallback</code> if the SelectionBox is the child of a DialogShell.</dl>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>Calls the activate callbacks for the cancel button if it is sensitive. If no cancel button exists and the parent of the SelectionBox is a manager, passes the event to the parent.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>Calls the activate callbacks for the button with the keyboard focus. If no button has the keyboard focus, calls the activate callbacks for the default button if it is sensitive. In a List widget or single-line Text widget, the List or Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> is called before the SelectionBox actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>. In a multiline Text widget, any <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> event except <code>&lt;Key&gt;</code><code>&lt;osfEnter&gt;</code> calls the Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>, then the SelectionBox actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>. If no button has the focus, no default button exists, and the parent of the SelectionBox is a manager, passes the event to the parent.</dd>
+<dt><code>&lt;OK Button Activated&gt;</code>:</dt>
+<dd>If <code>XmNmustMatch</code> is True and the text does not match an item in the file list, calls the <code>XmNnoMatchCallback</code> callbacks with reason <code>XmCR_NO_MATCH</code>. Otherwise, calls the <code>XmNokCallback</code> callbacks with reason <code>XmCR_OK</code>.</dd>
+<dt><code>&lt;Apply Button Activated&gt;</code>:</dt>
+<dd>Calls the <code>XmNapplyCallback</code> callbacks with reason <code>XmCR_APPLY</code>.</dd>
+<dt><code>&lt;Cancel Button Activated&gt;</code>:</dt>
+<dd>Calls the <code>XmNcancelCallback</code> callbacks with reason <code>XmCR_CANCEL</code>.</dd>
+<dt><code>&lt;Help Button Activated&gt;</code>:</dt>
+<dd>Calls the <code>XmNhelpCallback</code> callbacks with reason <code>XmCR_HELP</code>.</dd>
+<dt><code>&lt;MapWindow&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNmapCallback</code> if the SelectionBox is a child of a Dialog shell.</dd>
+<dt><code>&lt;UnmapWindow&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNunmapCallback</code> if the SelectionBox is the child of a DialogShell.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

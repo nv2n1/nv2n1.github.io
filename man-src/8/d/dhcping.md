@@ -14,24 +14,24 @@ description: "dhcping – send a DHCP request to DHCP server to see if it’s up
 <p>This command allows the system administrator to check if a remote DHCP server is still functioning. </p>
 <p> Options are: </p>
 <dl>
-<dt><code>-v</code></p>
-<dd>Verbose, print some information. </p>
-<dt><code>-i</code></p>
-<dd>Use <font SIZE="-1">DHCPINFORM</font> packets. </p>
-<dt><code>-r</code></p>
-<dd>Use <font SIZE="-1">DHCPREQUEST</font> packets (default behaviour). </p>
-<dt><code>-q</code></p>
-<dd>Quiet, print nothing on the screen. </p>
-<dt><code>-t</code> <i>maxwait</i></p>
-<dd>Maximum time to wait for an answer from the server in seconds. Default is 3 seconds. </p>
-<dt><code>-c</code> <i>client-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></p>
-<dd>Request this <font SIZE="-1">IP</font> address. Note that this is also the <font SIZE="-1">IP</font> address the answer will be sent to. </p>
-<dt><code>-s</code> <i>server-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></p>
-<dd>Send the <font SIZE="-1">DHCP</font> packet to this <font SIZE="-1">IP</font> address. </p>
-<dt><code>-h</code> <i>client-hardware-address</i></p>
-<dd>Use this hardware-address in the <font SIZE="-1">DHCP</font> request. It can be up to sixteen octets seperated by colons (i.e. 01:02:03:04) </p>
-<dt><code>-g</code> <i>gateway-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></p>
-<dd>Use this <font SIZE="-1">IP</font> address for the gateway <font SIZE="-1">IP</font> address in the <font SIZE="-1">DHCP</font> packet. This option is currently broken.</dl>
+<dt><code>-v</code></dt>
+<dd>Verbose, print some information. </dd>
+<dt><code>-i</code></dt>
+<dd>Use <font SIZE="-1">DHCPINFORM</font> packets. </dd>
+<dt><code>-r</code></dt>
+<dd>Use <font SIZE="-1">DHCPREQUEST</font> packets (default behaviour). </dd>
+<dt><code>-q</code></dt>
+<dd>Quiet, print nothing on the screen. </dd>
+<dt><code>-t</code> <i>maxwait</i></dt>
+<dd>Maximum time to wait for an answer from the server in seconds. Default is 3 seconds. </dd>
+<dt><code>-c</code> <i>client-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></dt>
+<dd>Request this <font SIZE="-1">IP</font> address. Note that this is also the <font SIZE="-1">IP</font> address the answer will be sent to. </dd>
+<dt><code>-s</code> <i>server-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></dt>
+<dd>Send the <font SIZE="-1">DHCP</font> packet to this <font SIZE="-1">IP</font> address. </dd>
+<dt><code>-h</code> <i>client-hardware-address</i></dt>
+<dd>Use this hardware-address in the <font SIZE="-1">DHCP</font> request. It can be up to sixteen octets seperated by colons (i.e. 01:02:03:04) </dd>
+<dt><code>-g</code> <i>gateway-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></dt>
+<dd>Use this <font SIZE="-1">IP</font> address for the gateway <font SIZE="-1">IP</font> address in the <font SIZE="-1">DHCP</font> packet. This option is currently broken.</dd></dl>
 <h2>Return Values</h2>
 <p>If everything goes okay, it returns 0. If there went something wrong, it returns 1.</p>
 <h2>Setup</h2>

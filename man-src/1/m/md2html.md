@@ -13,8 +13,8 @@ description: "md2html – Convert markdown to HTML"
 <p> Usage: md2html [options] &lt;file&gt;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;dialect=DIALECT</code></p>
-<dd> Valid dialects are Gruber (the default) or Maruku Enable growl notifications</dl>
+<dt><code>&#8211;dialect=DIALECT</code></dt>
+<dd> Valid dialects are Gruber (the default) or Maruku Enable growl notifications</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs on the GitHub issue tracker: &lt;<code><a rel="nofollow" href="https://github.com/evilstreak/markdown-js/issues">https://github.com/evilstreak/markdown-js/issues</a></code>&gt; </p>
 <h2>Index</h2>

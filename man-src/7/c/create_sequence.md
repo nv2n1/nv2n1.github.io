@@ -22,33 +22,33 @@ description: "CREATE SEQUENCE – define a new sequence generator"
 <p>to examine the parameters and current state of a sequence. In particular, the last_value field of the sequence shows the last value allocated by any session. (Of course, this value might be obsolete by the time it&#8217;s printed, if other sessions are actively doing <code>nextval</code> calls.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>TEMPORARY or TEMP</code></p>
-<dd>If specified, the sequence object is created only for this session, and is automatically dropped on session exit. Existing permanent sequences with the same name are not visible (in this session) while the temporary sequence exists, unless they are referenced with schema-qualified names.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of the sequence to be created.</p>
-<dt><i>increment</i></p>
-<dd>The optional clause INCREMENT BY <i>increment</i> specifies which value is added to the current sequence value to create a new value. A positive value will make an ascending sequence, a negative one a descending sequence. The default value is 1.</p>
-<dt><i>minvalue</i></p>
+<dt><code>TEMPORARY or TEMP</code></dt>
+<dd>If specified, the sequence object is created only for this session, and is automatically dropped on session exit. Existing permanent sequences with the same name are not visible (in this session) while the temporary sequence exists, unless they are referenced with schema-qualified names.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of the sequence to be created.</dd>
+<dt><i>increment</i></dt>
+<dd>The optional clause INCREMENT BY <i>increment</i> specifies which value is added to the current sequence value to create a new value. A positive value will make an ascending sequence, a negative one a descending sequence. The default value is 1.</dd>
+<dt><i>minvalue</i></dt>
 <dd>
-<dt><code>NO MINVALUE</code></p>
-<dd>The optional clause MINVALUE <i>minvalue</i> determines the minimum value a sequence can generate. If this clause is not supplied or <code>NO MINVALUE</code> is specified, then defaults will be used. The defaults are 1 and -263-1 for ascending and descending sequences, respectively.</p>
-<dt><i>maxvalue</i></p>
+</dd><dt><code>NO MINVALUE</code></dt>
+<dd>The optional clause MINVALUE <i>minvalue</i> determines the minimum value a sequence can generate. If this clause is not supplied or <code>NO MINVALUE</code> is specified, then defaults will be used. The defaults are 1 and -263-1 for ascending and descending sequences, respectively.</dd>
+<dt><i>maxvalue</i></dt>
 <dd>
-<dt><code>NO MAXVALUE</code></p>
-<dd>The optional clause MAXVALUE <i>maxvalue</i> determines the maximum value for the sequence. If this clause is not supplied or <code>NO MAXVALUE</code> is specified, then default values will be used. The defaults are 263-1 and -1 for ascending and descending sequences, respectively.</p>
-<dt><i>start</i></p>
-<dd>The optional clause START WITH <i>start</i> allows the sequence to begin anywhere. The default starting value is <i>minvalue</i> for ascending sequences and <i>maxvalue</i> for descending ones.</p>
-<dt><i>cache</i></p>
-<dd>The optional clause CACHE <i>cache</i> specifies how many sequence numbers are to be preallocated and stored in memory for faster access. The minimum value is 1 (only one value can be generated at a time, i.e., no cache), and this is also the default.</p>
-<dt><code>CYCLE</code></p>
+</dd><dt><code>NO MAXVALUE</code></dt>
+<dd>The optional clause MAXVALUE <i>maxvalue</i> determines the maximum value for the sequence. If this clause is not supplied or <code>NO MAXVALUE</code> is specified, then default values will be used. The defaults are 263-1 and -1 for ascending and descending sequences, respectively.</dd>
+<dt><i>start</i></dt>
+<dd>The optional clause START WITH <i>start</i> allows the sequence to begin anywhere. The default starting value is <i>minvalue</i> for ascending sequences and <i>maxvalue</i> for descending ones.</dd>
+<dt><i>cache</i></dt>
+<dd>The optional clause CACHE <i>cache</i> specifies how many sequence numbers are to be preallocated and stored in memory for faster access. The minimum value is 1 (only one value can be generated at a time, i.e., no cache), and this is also the default.</dd>
+<dt><code>CYCLE</code></dt>
 <dd>
-<dt><code>NO CYCLE</code></p>
-<dd>The CYCLE option allows the sequence to wrap around when the <i>maxvalue</i> or <i>minvalue</i> has been reached by an ascending or descending sequence respectively. If the limit is reached, the next number generated will be the <i>minvalue</i> or <i>maxvalue</i>, respectively. </p>
+</dd><dt><code>NO CYCLE</code></dt>
+<dd>The CYCLE option allows the sequence to wrap around when the <i>maxvalue</i> or <i>minvalue</i> has been reached by an ascending or descending sequence respectively. If the limit is reached, the next number generated will be the <i>minvalue</i> or <i>maxvalue</i>, respectively. </dd>
 <p> If NO CYCLE is specified, any calls to <code>nextval</code> after the sequence has reached its maximum value will return an error. If neither CYCLE or NO CYCLE are specified, NO CYCLE is the default.</p>
-<dt><code>OWNED BY </code><i>table</i><code>.</code><i>column</i></p>
+<dt><code>OWNED BY </code><i>table</i><code>.</code><i>column</i></dt>
 <dd>
-<dt><code>OWNED BY NONE</code></p>
-<dd>The OWNED BY option causes the sequence to be associated with a specific table column, such that if that column (or its whole table) is dropped, the sequence will be automatically dropped as well. The specified table must have the same owner and be in the same schema as the sequence. OWNED BY NONE, the default, specifies that there is no such association.</dl>
+</dd><dt><code>OWNED BY NONE</code></dt>
+<dd>The OWNED BY option causes the sequence to be associated with a specific table column, such that if that column (or its whole table) is dropped, the sequence will be automatically dropped as well. The specified table must have the same owner and be in the same schema as the sequence. OWNED BY NONE, the default, specifies that there is no such association.</dd></dl>
 <h2>Notes</h2>
 <p>Use <code>DROP SEQUENCE</code> to remove a sequence. </p>
 <p> Sequences are based on <code>bigint</code> arithmetic, so the range cannot exceed the range of an eight-byte integer (-9223372036854775808 to 9223372036854775807). On some older platforms, there might be no compiler support for eight-byte integers, in which case sequences use regular <code>integer</code> arithmetic (range -2147483648 to +2147483647). </p>
@@ -78,11 +78,11 @@ END;</pre>
 <h2>Compatibility</h2>
 <p><code>CREATE SEQUENCE</code> conforms to the SQL standard, with the following exceptions:</p>
 <dl>
-<dt>*</p>
-<dd>The standard&#8217;s AS &lt;data type&gt; expression is not supported.</p>
-<dt>*</p>
-<dd>Obtaining the next value is done using the <code>nextval()</code> function instead of the standard&#8217;s <code>NEXT VALUE FOR</code> expression.</p>
-<dt>*</p>
-<dd>The OWNED BY clause is a PostgreSQL extension.</dl>
+<dt>*</dt>
+<dd>The standard&#8217;s AS &lt;data type&gt; expression is not supported.</dd>
+<dt>*</dt>
+<dd>Obtaining the next value is done using the <code>nextval()</code> function instead of the standard&#8217;s <code>NEXT VALUE FOR</code> expression.</dd>
+<dt>*</dt>
+<dd>The OWNED BY clause is a PostgreSQL extension.</dd></dl>
 <h2>See Also</h2>
 <p>ALTER SEQUENCE [<code><a href="/docs/linux/man/7-alter_sequence/">alter_sequence</a></code>(7)], DROP SEQUENCE [<code><a href="/docs/linux/man/7-drop_sequence/">drop_sequence</a></code>(7)] </p>

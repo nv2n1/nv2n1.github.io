@@ -18,19 +18,19 @@ description: "upscmd – UPS administration program for instant commands"
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Display the help message.</dl>
+<dd>Display the help message.</dd></dl>
 <p> <code>-l</code> <i>ups</i></p>
 <dl>
-<dd>Show the list of supported instant commands on that UPS. Some hardware may not support any of them.</dl>
+<dd>Show the list of supported instant commands on that UPS. Some hardware may not support any of them.</dd></dl>
 <p> <code>-u</code> <i>username</i></p>
 <dl>
-<dd>Set the username for the connection to the server. This is optional, and you will be prompted for this when invoking a command if -u is not used.</dl>
+<dd>Set the username for the connection to the server. This is optional, and you will be prompted for this when invoking a command if -u is not used.</dd></dl>
 <p> <code>-p</code> <i>password</i></p>
 <dl>
-<dd>Set the password to authenticate to the server. This is also optional like -u, and you will be prompted for it if necessary.</dl>
+<dd>Set the password to authenticate to the server. This is also optional like -u, and you will be prompted for it if necessary.</dd></dl>
 <p> <i>ups</i></p>
 <dl>
-<dd>Connect to this UPS. The format is upsname[@hostname[:port]]. The default hostname is &quot;localhost&quot;.</dl>
+<dd>Connect to this UPS. The format is upsname[@hostname[:port]]. The default hostname is &quot;localhost&quot;.</dd></dl>
 <h2>Unattended Mode</h2>
 <p>If you run this program inside a shell script or similar to invoke a command, you will need to specify all of the information on the command line. This means using -u and -p. Otherwise it will put up a prompt and your program will hang. </p>
 <p> This is not necessary when displaying the list, as the username and password are not required for read-only mode. </p>

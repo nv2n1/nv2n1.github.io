@@ -15,7 +15,7 @@ usb_kill_anchored_urbs - cancel transfer requests en masse
 <h2>Arguments</h2>
 
 <i>anchor</i>
-<dl><dd><dd>anchor the requests are bound to</dl>
+<dl><dd></dd><dd>anchor the requests are bound to</dd></dl>
 
 <h2>Description</h2>
 

@@ -13,16 +13,16 @@ description: "mpris-proxy – Bluetooth mpris-proxy"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> mpris-proxy [OPTION?]</dl>
+</dt><dd> mpris-proxy [OPTION?]</dd></dl>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Show version information and exit</p>
-<dt><code>-e</code>, <code>&#8211;export</code></p>
-<dd> Export remote players</dl>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Show version information and exit</dd>
+<dt><code>-e</code>, <code>&#8211;export</code></dt>
+<dd> Export remote players</dd></dl>
 <p> Usage: </p>
 <h2>Index</h2>

@@ -18,17 +18,17 @@ bool bson_append_bool(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> The name of the field.</dl>
+<dt><code>key</code></dt>
+<dd> The name of the field.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> or -1 to use strlen().</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> or -1 to use strlen().</dd></dl>
 <dl>
-<dt><code>value</code></p>
-<dd> true or false.</dl>
+<dt><code>value</code></dt>
+<dd> true or false.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_bool/">bson_append_bool</a>(3)</code> function shall append a new element to <code>bson</code> containing the boolean provided. </p>
 <h2>RETURNS</h2>

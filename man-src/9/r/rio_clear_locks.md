@@ -14,11 +14,11 @@ description: "rio_clear_locks – Release all host locks and signal enumeration 
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network to run on</dl>
+</dd><dd>RIO network to run on</dd></dl>
 <h2>Description</h2>
 <p>Marks the component tag CSR on each device with the enumeration complete flag. When complete, it then release the host locks on each device. Returns 0 on success or <code>-EINVAL</code> on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

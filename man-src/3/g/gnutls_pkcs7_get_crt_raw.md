@@ -14,14 +14,14 @@ description: "gnutls_pkcs7_get_crt_raw – API function"
 <p> <code>int gnutls_pkcs7_get_crt_raw(gnutls_pkcs7_t </code><i>pkcs7</i><code>, int </code><i>indx</i><code>, void * </code><i>certificate</i><code>, size_t * </code><i>certificate_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs7_t pkcs7</p>
-<dd> should contain a gnutls_pkcs7_t structure</p>
-<dt>int indx</p>
-<dd> contains the index of the certificate to extract</p>
-<dt>void * certificate</p>
-<dd> the contents of the certificate will be copied there (may be null)</p>
-<dt>size_t * certificate_size</p>
-<dd> should hold the size of the certificate</dl>
+<dt>gnutls_pkcs7_t pkcs7</dt>
+<dd> should contain a gnutls_pkcs7_t structure</dd>
+<dt>int indx</dt>
+<dd> contains the index of the certificate to extract</dd>
+<dt>void * certificate</dt>
+<dd> the contents of the certificate will be copied there (may be null)</dd>
+<dt>size_t * certificate_size</dt>
+<dd> should hold the size of the certificate</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return a certificate of the PKCS7 or RFC2630 certificate set. </p>
 <p> After the last certificate has been read <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>
@@ -36,6 +36,6 @@ description: "gnutls_pkcs7_get_crt_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

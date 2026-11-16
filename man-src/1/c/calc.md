@@ -18,8 +18,8 @@ description: "calc – arbitrary precision calculator"
 <h2>DESCRIPTION</h2>
 <p> CALC OPTIONS </p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Continue reading command lines even after a scan/parse error has caused the abandonment of a line. Note that this option only deals with scanning and parsing of the calc language. It does not deal with execution or run-time errors. </p>
+<dt><code>-c</code></dt>
+<dd> Continue reading command lines even after a scan/parse error has caused the abandonment of a line. Note that this option only deals with scanning and parsing of the calc language. It does not deal with execution or run-time errors. </dd>
 <p> For example: </p>
 <pre>
 calc read many_errors.cal
@@ -30,11 +30,11 @@ calc -c read many_errors.cal
 </pre>
 <p> will cause <code>calc</code> to try to process each line being read despite the scan/parse errors that it encounters. </p>
 <p> By default, calc startup resource files are silently ignored if not found. This flag will report missing startup resource files unless <code>-d</code> is also given. </p>
-<dt><code>-C</code></p>
-<dd> Permit the execution of custom builtin functions. Without this flag, calling the custom() builtin function will simply generate an error. </p>
+<dt><code>-C</code></dt>
+<dd> Permit the execution of custom builtin functions. Without this flag, calling the custom() builtin function will simply generate an error. </dd>
 <p> Use of this flag may cause <code>calc</code> to execute functions that are non-standard and that are not portable. Custom builtin functions are disabled by default for this reason. </p>
-<dt><code>-d</code></p>
-<dd> Disable the printing of the opening title. The printing of resource file debug and informational messages is also disabled as if <code>config(&quot;resource_debug&quot;, 0)</code> had been executed. </p>
+<dt><code>-d</code></dt>
+<dd> Disable the printing of the opening title. The printing of resource file debug and informational messages is also disabled as if <code>config(&quot;resource_debug&quot;, 0)</code> had been executed. </dd>
 <p> For example: </p>
 <p> calc &quot;read qtime; qtime(2)&quot; </p>
 <p> will output something like: </p>
@@ -51,18 +51,18 @@ calc -d &quot;read qtime; qtime(2)&quot;
 It's nearly ten past six.
 </pre>
 <p> This flag disables the reporting of missing calc startup resource files. </p>
-<dt><code>-D</code> calc_debug[:resource_debug[:user_debug]]</p>
-<dd> Force the initial value of config(&quot;calc_debug&quot;), config(&quot;resource_debug&quot;) and config(&quot;user_debug&quot;). </p>
+<dt><code>-D</code> calc_debug[:resource_debug[:user_debug]]</dt>
+<dd> Force the initial value of config(&quot;calc_debug&quot;), config(&quot;resource_debug&quot;) and config(&quot;user_debug&quot;). </dd>
 <p> The : separated strings are interpreted as signed 32 bit integers. After an optional leading sign a leading zero indicates octal conversion, and a leading &#8220;0x&#8221; or &#8220;0X&#8221; hexadecimal conversion. Otherwise, decimal conversion is assumed. </p>
 <p> By default, <i>calc_debug</i> is 0, <i>resource_debug</i> is 3 and <i>user_debug</i> is 0. </p>
 <p> For more information use the following <code>calc</code> command: </p>
 <pre>
 help config
 </pre>
-<dt><code>-e</code></p>
-<dd> Ignore any environment variables on startup. The getenv() builtin will still return values, however. </p>
-<dt><code>-f</code></p>
-<dd> This flag is required when using calc in <code>shell script mode</code>. It must be at the end of the initial <code>#!</code> line of the script. </p>
+<dt><code>-e</code></dt>
+<dd> Ignore any environment variables on startup. The getenv() builtin will still return values, however. </dd>
+<dt><code>-f</code></dt>
+<dd> This flag is required when using calc in <code>shell script mode</code>. It must be at the end of the initial <code>#!</code> line of the script. </dd>
 <p> This flag is normally only at the end of a calc shell script. If the first line of an executable file begins <code>#!</code> followed by the absolute pathname of the <code>calc</code> program and the flag <code>-f</code> as in: </p>
 <pre>
 <i>#!/usr/bin/calc</i>&nbsp;<wbr>[other_flags ...] <code>-f</code>
@@ -77,10 +77,10 @@ help config
 </pre>
 <p> This will cause calc to process lines in <code>filename</code> in <code>shell script mode</code>. </p>
 <p> Use of <code>-f</code> implies <code>-s</code>. In addition, <code>-d</code> and <code>-p</code> are implied if <code>-i</code> is not given. </p>
-<dt><code>-h</code></p>
-<dd> Print a help message. This option implies <code>-q</code>. This is equivalent to the <code>calc</code> command help help. The help facility is disabled unless the mode is 5 or 7. See <code>-m</code>. </p>
-<dt><code>-i</code></p>
-<dd> Become interactive if possible. This flag will cause <code>calc</code> to drop into interactive mode after the <i>calc_cmd</i> arguments on the command line are evaluated. Without this flag, <code>calc</code> will exit after they are evaluated. </p>
+<dt><code>-h</code></dt>
+<dd> Print a help message. This option implies <code>-q</code>. This is equivalent to the <code>calc</code> command help help. The help facility is disabled unless the mode is 5 or 7. See <code>-m</code>. </dd>
+<dt><code>-i</code></dt>
+<dd> Become interactive if possible. This flag will cause <code>calc</code> to drop into interactive mode after the <i>calc_cmd</i> arguments on the command line are evaluated. Without this flag, <code>calc</code> will exit after they are evaluated. </dd>
 <p> For example: </p>
 <pre>
 calc 2+5
@@ -90,8 +90,8 @@ calc 2+5
 calc -i 2+5
 </pre>
 <p> will print the value 7 and prompt the user for more <code>calc</code> commands. </p>
-<dt><code>-m</code> mode</p>
-<dd> This flag sets the permission mode of <code>calc</code>. It controls the ability for <code>calc</code> to open files and execute programs. <i>Mode</i> may be a number from 0 to 7. </p>
+<dt><code>-m</code> mode</dt>
+<dd> This flag sets the permission mode of <code>calc</code>. It controls the ability for <code>calc</code> to open files and execute programs. <i>Mode</i> may be a number from 0 to 7. </dd>
 <p> The mode value is interpreted in a way similar to that of the <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1) octal mode: </p>
 <pre><code>
 0  do not open any file, do not execute progs
@@ -110,25 +110,25 @@ calc -m 0 3&lt;a.file
 </pre>
 <p> Files presented to <code>calc</code> in this way are opened in an unknown mode. <code>Calc</code> will attempt to read or write them if directed. </p>
 <p> If the mode disables opening of files for reading, then the startup resource files are disabled as if <code>-q</code> was given. The reading of key bindings is also disabled when the mode disables opening of files for reading. </p>
-<dt><code>-O</code></p>
-<dd> Use the old classic defaults instead of the default configuration. This flag as the same effect as executing <code>config(&quot;all&quot;, &quot;oldcfg&quot;)</code> at startup time. </p>
+<dt><code>-O</code></dt>
+<dd> Use the old classic defaults instead of the default configuration. This flag as the same effect as executing <code>config(&quot;all&quot;, &quot;oldcfg&quot;)</code> at startup time. </dd>
 <p> NOTE: Older versions of calc used <code>-n</code> to setup a modified form of the default calc configuration. The <code>-n</code> flag currently does nothing. Use of the <code>-n</code> flag is now deprecated and may be used for something else in the future. </p>
-<dt><code>-p</code></p>
-<dd> Pipe processing is enabled by use of <code>-p</code>. For example: </p>
+<dt><code>-p</code></dt>
+<dd> Pipe processing is enabled by use of <code>-p</code>. For example: </dd>
 <pre>
 calc -p &quot;2^21701-1&quot; | fizzbin
 </pre>
 <p> In pipe mode, <code>calc</code> does not prompt, does not print leading tabs and does not print the initial header. The <code>-p</code> flag overrides <code>-i</code>. </p>
-<dt><code>-q</code></p>
-<dd> Disable the reading of the startup scripts. </p>
-<dt><code>-s</code></p>
-<dd> By default, all <i>calc_cmd</i> args are evaluated and executed. This flag will disable their evaluation and instead make them available as strings for the argv() builtin function. </p>
-<dt><code>-u</code></p>
-<dd> Disable buffering of stdin and stdout. </p>
-<dt><code>-v</code></p>
-<dd> Print the <code>calc</code> version number and exit. </p>
-<dt><code>&#8212;</code></p>
-<dd> The double dash indicates to calc that no more option follow. Thus calc will ignore a later argument on the command line even if it starts with a dash. This is useful when entering negative values on the command line as in: </p>
+<dt><code>-q</code></dt>
+<dd> Disable the reading of the startup scripts. </dd>
+<dt><code>-s</code></dt>
+<dd> By default, all <i>calc_cmd</i> args are evaluated and executed. This flag will disable their evaluation and instead make them available as strings for the argv() builtin function. </dd>
+<dt><code>-u</code></dt>
+<dd> Disable buffering of stdin and stdout. </dd>
+<dt><code>-v</code></dt>
+<dd> Print the <code>calc</code> version number and exit. </dd>
+<dt><code>&#8212;</code></dt>
+<dd> The double dash indicates to calc that no more option follow. Thus calc will ignore a later argument on the command line even if it starts with a dash. This is useful when entering negative values on the command line as in: </dd>
 <pre>
 calc -p -- -1 - -7
 </pre>
@@ -271,37 +271,37 @@ chmod +x /tmp/mersenne
  help config </p>
 <h2>FILES</h2>
 <dl>
-<dt>/usr/bin/calc</p>
-<dd> calc binary </p>
-<dt>/usr/share/calc/cscript/*</p>
-<dd> calc shell scripts </p>
-<dt>/usr/lib64/*.cal</p>
-<dd> calc standard resource files </p>
-<dt>/usr/lib64/help/*</p>
-<dd> help files </p>
-<dt>/usr/lib64/bindings</p>
-<dd> non-GNU-readline command line editor bindings </p>
-<dt>/usr/include/calc/*.h</p>
-<dd> include files for C interface use </p>
-<dt>/usr/lib64/libcalc.a</p>
-<dd> calc binary link library </p>
-<dt>/usr/lib64/libcustcalc.a</p>
-<dd> custom binary link library </p>
-<dt>/usr/share/calc/custom/*.cal</p>
-<dd> custom resource files </p>
-<dt>/usr/share/calc/custhelp/*</p>
-<dd> custom help files </p>
+<dt>/usr/bin/calc</dt>
+<dd> calc binary </dd>
+<dt>/usr/share/calc/cscript/*</dt>
+<dd> calc shell scripts </dd>
+<dt>/usr/lib64/*.cal</dt>
+<dd> calc standard resource files </dd>
+<dt>/usr/lib64/help/*</dt>
+<dd> help files </dd>
+<dt>/usr/lib64/bindings</dt>
+<dd> non-GNU-readline command line editor bindings </dd>
+<dt>/usr/include/calc/*.h</dt>
+<dd> include files for C interface use </dd>
+<dt>/usr/lib64/libcalc.a</dt>
+<dd> calc binary link library </dd>
+<dt>/usr/lib64/libcustcalc.a</dt>
+<dd> custom binary link library </dd>
+<dt>/usr/share/calc/custom/*.cal</dt>
+<dd> custom resource files </dd>
+<dt>/usr/share/calc/custhelp/*</dt>
+<dd> custom help files </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>CALCPATH</p>
-<dd> A :-separated list of directories used to search for calc resource filenames that do not begin with /, ./ or ~. </p>
+<dt>CALCPATH</dt>
+<dd> A :-separated list of directories used to search for calc resource filenames that do not begin with /, ./ or ~. </dd>
 <p> Default value: .:./cal:~/.cal:/usr/share/calc </p>
-<dt>CALCRC</p>
-<dd> On startup (unless -h or -q was given on the command line), <code>calc</code> searches for files along this :-separated environment variable. </p>
+<dt>CALCRC</dt>
+<dd> On startup (unless -h or -q was given on the command line), <code>calc</code> searches for files along this :-separated environment variable. </dd>
 <p> Default value: /usr/share/calc/startup:~/.calcrc:./.calcinit </p>
-<dt>CALCBINDINGS</p>
-<dd> On startup (unless <i>-h</i> or <i>-q</i> was given on the command line, or <i>-m</i> disallows opening files for reading), <code>calc</code> reads key bindings from the filename specified by this environment variable. The key binding file is searched for along the $CALCPATH list of directories. </p>
+<dt>CALCBINDINGS</dt>
+<dd> On startup (unless <i>-h</i> or <i>-q</i> was given on the command line, or <i>-m</i> disallows opening files for reading), <code>calc</code> reads key bindings from the filename specified by this environment variable. The key binding file is searched for along the $CALCPATH list of directories. </dd>
 <p> Default value: binding </p>
 <p> This variable is not used if calc was compiled with GNU-readline support. In that case, the standard readline mechanisms (see <a href="/docs/linux/man/3-readline/">readline</a>(3)) are used. </p>
 </dl>

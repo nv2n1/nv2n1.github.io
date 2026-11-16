@@ -15,7 +15,7 @@ bh_uptodate_or_lock - Test whether the buffer is uptodate
 <h2>Arguments</h2>
 
 <i>bh</i>
-<dl><dd><dd>struct buffer_head</dl>
+<dl><dd></dd><dd>struct buffer_head</dd></dl>
 
 <h2>Description</h2>
 

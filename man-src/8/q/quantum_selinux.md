@@ -24,8 +24,8 @@ description: "quantum_selinux – Security Enhanced Linux Policy for the quantum
 <p> quantum_exec_t </code> </p>
 <p> &#8211; Set files with the quantum_exec_t type, if you want to transition an executable to the quantum_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/quantum-server, /usr/bin/quantum-ryu-agent, /usr/bin/quantum-linuxbridge-agent, /usr/bin/quantum-openvswitch-agent </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/quantum-server, /usr/bin/quantum-ryu-agent, /usr/bin/quantum-linuxbridge-agent, /usr/bin/quantum-openvswitch-agent </dd>
 </dl>
 <p> <code>quantum_log_t </code> </p>
 <p> &#8211; Set files with the quantum_log_t type, if you want to treat the data as quantum log data, usually stored under the /var/log directory. </p>
@@ -43,9 +43,9 @@ description: "quantum_selinux – Security Enhanced Linux Policy for the quantum
 <p> Policy governs the access confined processes have to these ports. SELinux quantum policy is very flexible allowing users to setup their quantum processes in as secure a method as possible. </p>
 <p> The following port types are defined for quantum: </p>
 <dl>
-<dt><code>quantum_port_t </code></p>
+<dt><code>quantum_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 9696</dl>
+</dd><dd>Default Defined Ports: tcp 9696</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux quantum policy is very flexible allowing users to setup their quantum processes in as secure a method as possible. </p>

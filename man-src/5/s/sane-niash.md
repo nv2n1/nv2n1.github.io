@@ -24,10 +24,10 @@ Silitek ScanJet 4300c 047B-1002 (2)(b)</pre>
 <p>The <i>niash.conf</i> file is meant for future configuration options. Empty lines and lines starting with a hash mark (#) are ignored. Currently no configuration options exist.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-niash.a</i></p>
-<dd>The static library implementing this backend. </p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-niash.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-niash.a</i></dt>
+<dd>The static library implementing this backend. </dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-niash.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Caveats</h2>
 <p>If you use a<br />
@@ -36,8 +36,8 @@ Silitek ScanJet 4300c 047B-1002 (2)(b)</pre>
  together with Linux kernel <code>2.6</code>, kernel version <code>2.6.8</code> or newer is necessary.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_NIASH</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_DEBUG_NIASH</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_NIASH=255 </p>
 </dl>
 <h2>See Also</h2>

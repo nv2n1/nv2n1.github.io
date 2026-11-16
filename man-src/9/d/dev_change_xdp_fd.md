@@ -15,11 +15,11 @@ dev_change_xdp_fd - set or clear a bpf program for a device rx path
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>fd</i>
-<dl><dd>new program fd or negative value to clear</dl>
+<dl><dd>new program fd or negative value to clear</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,11 +15,11 @@ xprt_wake_pending_tasks - wake all tasks on a transport's pending queue
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>transport with waiting tasks</dl>
+<dl><dd></dd><dd>transport with waiting tasks</dd></dl>
  
 
  <i>status</i>
-<dl><dd>result code to plant in each task before waking it</dl>
+<dl><dd>result code to plant in each task before waking it</dd></dl>
 
 <h2>Copyright</h2>
 

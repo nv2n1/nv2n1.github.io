@@ -19,17 +19,17 @@ description: "pamtotga – convert a Netpbm image to a TrueVision Targa file"
 <p> It is unclear that anything except <code>pamtotga</code> knows about TGAs with transparency. The history behind this feature of <code>pamtotga</code> is not clear. The format <code>pamtotga</code> produces is simply the same as an ordinary RGB TGA image except with a 4th plane added for transparency. The PixelSize field of the TGA header specifies 32 bits instead of 24 and the raster has an extra byte added to each pixel, at the tail end. The value of that byte has the same meaning as in a PAM image with maxval 255. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-cmap</code></p>
-<dd> Make output Targa file of type 24 bit colormapped. Input must contain no more than 256 distinct colors. </p>
-<dt><code>-mono</code></p>
-<dd> Make output Targa file of type 8 bit monochrome. Input must be PBM or PGM or a PAM with BLACKANDWHITE or GRAYSCALE tuple type. See <code>-cmap</code>. </p>
+<dt><code>-cmap</code></dt>
+<dd> Make output Targa file of type 24 bit colormapped. Input must contain no more than 256 distinct colors. </dd>
+<dt><code>-mono</code></dt>
+<dd> Make output Targa file of type 8 bit monochrome. Input must be PBM or PGM or a PAM with BLACKANDWHITE or GRAYSCALE tuple type. See <code>-cmap</code>. </dd>
 <p> You may specify at most one of <code>-mono</code>, <code>-cmap</code>, and <code>-rgb</code>. If you specify neither, the default image type is the most highly constrained compatible type is used, where monochrome is more constrained than colormapped which is in turn more constrained than unmapped. </p>
-<dt><code>-rgb</code></p>
-<dd> Make output Targa file of type 24 bit unmapped color. See <code>-cmap</code>. </p>
-<dt><code>-norle</code></p>
-<dd> Do not use run-length encoding in the output Targa file. Run-length encoded files are smaller, but Some Targa readers can&#8217;t read run-length encoded files. </p>
-<dt><code>-name=</code><i>name</i></p>
-<dd> This is the value for the image ID stated in the header of the TGA output file. <code>pamtotga</code> truncates it as necessary to meet TGA standards. </p>
+<dt><code>-rgb</code></dt>
+<dd> Make output Targa file of type 24 bit unmapped color. See <code>-cmap</code>. </dd>
+<dt><code>-norle</code></dt>
+<dd> Do not use run-length encoding in the output Targa file. Run-length encoded files are smaller, but Some Targa readers can&#8217;t read run-length encoded files. </dd>
+<dt><code>-name=</code><i>name</i></dt>
+<dd> This is the value for the image ID stated in the header of the TGA output file. <code>pamtotga</code> truncates it as necessary to meet TGA standards. </dd>
 <p> By default, <code>pamtotga</code> uses the input file name argument, up to the first period (or the whole thing if there is no period). It truncates it as necessary to meet TGA standards. If you specify (or default to) Standard Input, <code>pamtotga</code> omits the image ID from the TGA header. </p>
 </dl>
 <h2>SEE ALSO</h2>

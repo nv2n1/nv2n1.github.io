@@ -14,13 +14,13 @@ description: "pci_find_next_ht_capability – query a device’s Hypertransport 
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device to query</dl>
+</dd><dd>PCI device to query</dd></dl>
 <p> <i>pos</i></p>
 <dl>
-<dd>Position from which to continue searching</dl>
+<dd>Position from which to continue searching</dd></dl>
 <p> <i>ht_cap</i></p>
 <dl>
-<dd>Hypertransport capability code</dl>
+<dd>Hypertransport capability code</dd></dl>
 <h2>Description</h2>
 <p>To be used in conjunction with <code>pci_find_ht_capability</code> to search for all capabilities matching <i>ht_cap</i>. <i>pos</i> should always be a value returned from <code>pci_find_ht_capability</code>. </p>
 <p> NB. To be 100% safe against broken PCI devices, the caller should take steps to avoid an infinite loop.</p>

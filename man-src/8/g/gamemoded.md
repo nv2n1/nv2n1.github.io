@@ -16,20 +16,20 @@ description: "gamemoded – daemon that optimises system performance on demand"
 <p> <code>GameMode</code> was designed primarily as a stop-gap solution to problems with the Intel and AMD CPU powersave or ondemand governors, but is intended to be expanded beyond just CPU governor states, as there are a wealth of automation tasks one might want to apply.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-r[PID], &#8211;request=[PID]</code></p>
-<dd>Toggle gamemode for process. When no PID given, requests gamemode and pauses</p>
-<dt><code>-s[PID], &#8211;status=[PID]</code></p>
-<dd>Query the status of gamemode for process When no PID given, queries the status globally</p>
-<dt><code>-d, &#8211;daemonize</code></p>
-<dd>Run the daemon as a separate process (daemonize it)</p>
-<dt><code>-l, &#8211;log-to-syslog</code></p>
-<dd>Log to syslog</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print help text</p>
-<dt><code>-t, &#8211;test</code></p>
-<dd>Run diagnostic tests on the current installation</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Print the version </p>
+<dt><code>-r[PID], &#8211;request=[PID]</code></dt>
+<dd>Toggle gamemode for process. When no PID given, requests gamemode and pauses</dd>
+<dt><code>-s[PID], &#8211;status=[PID]</code></dt>
+<dd>Query the status of gamemode for process When no PID given, queries the status globally</dd>
+<dt><code>-d, &#8211;daemonize</code></dt>
+<dd>Run the daemon as a separate process (daemonize it)</dd>
+<dt><code>-l, &#8211;log-to-syslog</code></dt>
+<dd>Log to syslog</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print help text</dd>
+<dt><code>-t, &#8211;test</code></dt>
+<dd>Run diagnostic tests on the current installation</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Print the version </dd>
 </dl>
 <h2>Usage</h2>
 <p><code>libgamemodeauto.so.0</code> can be pre-loaded into any program to request <code>gamemoded</code> begin or end the mode. See <a href="/docs/linux/man/1-gamemoderun/">gamemoderun</a>(1) for details. </p>
@@ -44,24 +44,24 @@ description: "gamemoded – daemon that optimises system performance on demand"
  /* run the process */
  /* Not required, gamemoded can clean up after game exits */
  gamemode_request_end();</pre>
-</dl>
+</dd></dl>
 <p> Atlernatively developers can define <code>GAMEMODE_AUTO</code> to mimic the behaviour of <code>libgamemodeauto.so.0</code>: </p>
 <dl>
 <dd>
 <pre>#define GAMEMODE_AUTO
 #include &quot;gamemode_client.h&quot;</pre>
-</dl>
+</dd></dl>
 <p> Or, distribute <code>libgamemodeauto.so.0</code> and either link with <code>-lgamemodeauto</code> or inject it as above with <code>LD_PRELOAD</code>.</p>
 <h2>Config</h2>
 <p><code>gamemoded</code> will load and merge <code>gamemode.ini</code> config files from these directories in the following order: </p>
 <dl>
-<dd>/usr/share/gamemode/</dl>
+<dd>/usr/share/gamemode/</dd></dl>
 <dl>
-<dd>/etc/</dl>
+<dd>/etc/</dd></dl>
 <dl>
-<dd>$XDG_CONFIG_HOME or $HOME/.config/</dl>
+<dd>$XDG_CONFIG_HOME or $HOME/.config/</dd></dl>
 <dl>
-<dd>$PWD</dl>
+<dd>$PWD</dd></dl>
 <p> Behaviour of the config file can be explained by presenting a commented example: </p>
 <dl>
 <dd>
@@ -143,7 +143,7 @@ inhibit_screensaver=1
 ; /home/me/bin/start_ethmining.sh
 ; Timeout for scripts (seconds). Scripts will be killed if they do not complete within this time.
 ;script_timeout=10</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-gamemoderun/">gamemoderun</a>(1), <a href="/docs/linux/man/1-systemd/">systemd</a>(1) </p>
 <h2>About</h2>

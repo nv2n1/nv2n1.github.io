@@ -36,70 +36,70 @@ description: "struct_usb_function – describes one function of a configuration"
 <h2>Members</h2>
 <p>name</p>
 <dl>
-<dd>For diagnostics, identifies the function.</dl>
+<dd>For diagnostics, identifies the function.</dd></dl>
 <p> strings</p>
 <dl>
-<dd>tables of strings, keyed by identifiers assigned during <code>bind</code> and by language IDs provided in control requests</dl>
+<dd>tables of strings, keyed by identifiers assigned during <code>bind</code> and by language IDs provided in control requests</dd></dl>
 <p> fs_descriptors</p>
 <dl>
-<dd>Table of full (or low) speed descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null, the function will not be available at full speed (or at low speed).</dl>
+<dd>Table of full (or low) speed descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null, the function will not be available at full speed (or at low speed).</dd></dl>
 <p> hs_descriptors</p>
 <dl>
-<dd>Table of high speed descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null, the function will not be available at high speed.</dl>
+<dd>Table of high speed descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null, the function will not be available at high speed.</dd></dl>
 <p> ss_descriptors</p>
 <dl>
-<dd>Table of super speed descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null after initiation, the function will not be available at super speed.</dl>
+<dd>Table of super speed descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null after initiation, the function will not be available at super speed.</dd></dl>
 <p> ssp_descriptors</p>
 <dl>
-<dd>Table of super speed plus descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null after initiation, the function will not be available at super speed plus.</dl>
+<dd>Table of super speed plus descriptors, using interface and string identifiers assigned during <i>bind</i>(). If this pointer is null after initiation, the function will not be available at super speed plus.</dd></dl>
 <p> config</p>
 <dl>
-<dd>assigned when <i>usb_add_function</i>() is called; this is the configuration with which this function is associated.</dl>
+<dd>assigned when <i>usb_add_function</i>() is called; this is the configuration with which this function is associated.</dd></dl>
 <p> os_desc_table</p>
 <dl>
-<dd>Table of (interface id, os descriptors) pairs. The function can expose more than one interface. If an interface is a member of an IAD, only the first interface of IAD has its entry in the table.</dl>
+<dd>Table of (interface id, os descriptors) pairs. The function can expose more than one interface. If an interface is a member of an IAD, only the first interface of IAD has its entry in the table.</dd></dl>
 <p> os_desc_n</p>
 <dl>
-<dd>Number of entries in os_desc_table</dl>
+<dd>Number of entries in os_desc_table</dd></dl>
 <p> bind</p>
 <dl>
-<dd>Before the gadget can register, all of its functions <code>bind</code> to the available resources including string and interface identifiers used in interface or class descriptors; endpoints; I/O buffers; and so on.</dl>
+<dd>Before the gadget can register, all of its functions <code>bind</code> to the available resources including string and interface identifiers used in interface or class descriptors; endpoints; I/O buffers; and so on.</dd></dl>
 <p> unbind</p>
 <dl>
-<dd>Reverses <i>bind</i>; called as a side effect of unregistering the driver which added this function.</dl>
+<dd>Reverses <i>bind</i>; called as a side effect of unregistering the driver which added this function.</dd></dl>
 <p> free_func</p>
 <dl>
-<dd>free the struct usb_function.</dl>
+<dd>free the struct usb_function.</dd></dl>
 <p> mod</p>
 <dl>
-<dd>(internal) points to the module that created this structure.</dl>
+<dd>(internal) points to the module that created this structure.</dd></dl>
 <p> set_alt</p>
 <dl>
-<dd>(REQUIRED) Reconfigures altsettings; function drivers may initialize usb_ep.driver data at this time (when it is used). Note that setting an interface to its current altsetting resets interface state, and that all interfaces have a disabled state.</dl>
+<dd>(REQUIRED) Reconfigures altsettings; function drivers may initialize usb_ep.driver data at this time (when it is used). Note that setting an interface to its current altsetting resets interface state, and that all interfaces have a disabled state.</dd></dl>
 <p> get_alt</p>
 <dl>
-<dd>Returns the active altsetting. If this is not provided, then only altsetting zero is supported.</dl>
+<dd>Returns the active altsetting. If this is not provided, then only altsetting zero is supported.</dd></dl>
 <p> disable</p>
 <dl>
-<dd>(REQUIRED) Indicates the function should be disabled. Reasons include host resetting or reconfiguring the gadget, and disconnection.</dl>
+<dd>(REQUIRED) Indicates the function should be disabled. Reasons include host resetting or reconfiguring the gadget, and disconnection.</dd></dl>
 <p> setup</p>
 <dl>
-<dd>Used for interface-specific control requests.</dl>
+<dd>Used for interface-specific control requests.</dd></dl>
 <p> req_match</p>
 <dl>
-<dd>Tests if a given class request can be handled by this function.</dl>
+<dd>Tests if a given class request can be handled by this function.</dd></dl>
 <p> suspend</p>
 <dl>
-<dd>Notifies functions when the host stops sending USB traffic.</dl>
+<dd>Notifies functions when the host stops sending USB traffic.</dd></dl>
 <p> resume</p>
 <dl>
-<dd>Notifies functions when the host restarts USB traffic.</dl>
+<dd>Notifies functions when the host restarts USB traffic.</dd></dl>
 <p> get_status</p>
 <dl>
-<dd>Returns function status as a reply to <code>GetStatus</code> request when the recipient is Interface.</dl>
+<dd>Returns function status as a reply to <code>GetStatus</code> request when the recipient is Interface.</dd></dl>
 <p> func_suspend</p>
 <dl>
-<dd>callback to be called when SetFeature(FUNCTION_SUSPEND) is reseived</dl>
+<dd>callback to be called when SetFeature(FUNCTION_SUSPEND) is reseived</dd></dl>
 <h2>Description</h2>
 <p>A single USB function uses one or more interfaces, and should in most cases support operation at both full and high speeds. Each function is associated by <i>usb_add_function</i>() with a one configuration; that function causes <i>bind</i>() to be called so resources can be allocated as part of setting up a gadget driver. Those resources include endpoints, which should be allocated using <i>usb_ep_autoconfig</i>(). </p>
 <p> To support dual speed operation, a function driver provides descriptors for both high and full speed operation. Except in rare cases that don&#8217;t involve bulk endpoints, each speed needs different endpoint descriptors. </p>
@@ -108,5 +108,5 @@ description: "struct_usb_function – describes one function of a configuration"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

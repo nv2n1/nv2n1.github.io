@@ -12,8 +12,8 @@ description: "XvFreeEncodingInfo – free encoding information"
 <p><code>void XvFreeEncodingInfo(XvEncodingInfo *</code><i>p_encoding_info</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>p_encoding_info</i></p>
-<dd>Pointer to where the encoding information is located.</dl>
+<dt><i>p_encoding_info</i></dt>
+<dd>Pointer to where the encoding information is located.</dd></dl>
 <h2>Description</h2>
 <p><code><a href="/docs/linux/man/3-xvfreeencodinginfo/">XvFreeEncodingInfo</a></code>(3) frees encoding information that was returned by <code><a href="/docs/linux/man/3-xvqueryencodings/">XvQueryEncodings</a></code>(3). The data structure used for encoding information is defined in the reference page for <code><a href="/docs/linux/man/3-xvqueryencodings/">XvQueryEncodings</a></code>(3).</p>
 <h2>See Also</h2>

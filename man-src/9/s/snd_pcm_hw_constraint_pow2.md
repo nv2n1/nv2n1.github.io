@@ -15,15 +15,15 @@ snd_pcm_hw_constraint_pow2 - add a hw constraint power-of-2 rule
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>cond</i>
-<dl><dd>condition bits</dl>
+<dl><dd>condition bits</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the power-of-2 constraint</dl>
+<dl><dd>hw_params variable to apply the power-of-2 constraint</dd></dl>
 
 <h2>Return</h2>
 

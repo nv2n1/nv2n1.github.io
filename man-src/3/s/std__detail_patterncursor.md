@@ -12,9 +12,6 @@ description: "std::__detail::_PatternCursor –"
 <p> Inherited by <code>std::__detail::_SpecializedCursor&lt; _FwdIterT &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>virtual bool _M_at_end () const =0
-
-
-
 virtual void _M_next ()=0</code></pre>
 <h2>Detailed Description</h2>
 <p>ABC for pattern matching. </p>

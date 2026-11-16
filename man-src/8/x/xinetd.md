@@ -17,51 +17,51 @@ description: "xinetd – the extended Internet services daemon"
 <p> BEWARE of xinetd reload termination handling. For services with type = INTERNAL, SIGTERM signal will be sent. For services without type = INTERNAL, SIGKILL signall will be sent. Take this into an account when dealing with proper handling of the SIGTERM and SIGKILL. It is important to be aware of this as your xinetd service could be killed on a xinetd reload.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Enables debug mode. This produces a lot of debugging output, and it makes it possible to use a debugger on <code>xinetd</code>.</p>
-<dt><code>-syslog</code><i> syslog_facility</i></p>
-<dd>This option enables syslog logging of <code>xinetd</code>-produced messages using the specified syslog facility. The following facility names are supported: <i>daemon,</i> <i>auth,</i> <i>user,</i> <i>local[0-7]</i> (check <i>syslog.conf(5)</i> for their meanings). This option is ineffective in debug mode since all relevant messages are sent to the terminal.</p>
-<dt><code>-filelog</code><i> logfile</i></p>
-<dd><code>xinetd</code>-produced messages will be placed in the specified file. Messages are always appended to the file. If the file does not exist, it will be created. This option is ineffective in debug mode since all relevant messages are sent to the terminal.</p>
-<dt><code>-f</code><i> config_file</i></p>
-<dd>Determines the file that <code>xinetd</code> uses for configuration. The default is <i>/etc/xinetd.conf</i>.</p>
-<dt><code>-pidfile</code> pid_file</p>
-<dd>The process ID is written to the file. This option is ineffective in debug mode.</p>
-<dt><code>-dontfork</code></p>
-<dd>Tells xinetd to stay in the foreground rather than detaching itself, to support being run from init or daemontools. This option automatically sets <code>-stayalive</code> (see below).</p>
-<dt><code>-stayalive</code></p>
-<dd>Tells xinetd to stay running even if no services are specified.</p>
-<dt><code>-limit</code><i> proc_limit</i></p>
-<dd>This option places a limit on the number of concurrently running processes that can be started by <code>xinetd.</code> Its purpose is to prevent process table overflows.</p>
-<dt><code>-logprocs</code><i> limit</i></p>
-<dd>This option places a limit on the number of concurrently running servers for remote userid acquisition.</p>
-<dt><code>-version</code></p>
-<dd>This option causes xinetd to print out its version information.</p>
-<dt><code>-inetd_compat</code></p>
-<dd>This option causes xinetd to read /etc/inetd.conf in addition to the standard xinetd config files. /etc/inetd.conf is read after the standard xinetd config files.</p>
-<dt><code>-cc</code><i> interval</i></p>
-<dd>This option instructs <code>xinetd</code> to perform periodic consistency checks on its internal state every <i>interval</i> seconds.</dl>
+<dt><code>-d</code></dt>
+<dd>Enables debug mode. This produces a lot of debugging output, and it makes it possible to use a debugger on <code>xinetd</code>.</dd>
+<dt><code>-syslog</code><i> syslog_facility</i></dt>
+<dd>This option enables syslog logging of <code>xinetd</code>-produced messages using the specified syslog facility. The following facility names are supported: <i>daemon,</i> <i>auth,</i> <i>user,</i> <i>local[0-7]</i> (check <i>syslog.conf(5)</i> for their meanings). This option is ineffective in debug mode since all relevant messages are sent to the terminal.</dd>
+<dt><code>-filelog</code><i> logfile</i></dt>
+<dd><code>xinetd</code>-produced messages will be placed in the specified file. Messages are always appended to the file. If the file does not exist, it will be created. This option is ineffective in debug mode since all relevant messages are sent to the terminal.</dd>
+<dt><code>-f</code><i> config_file</i></dt>
+<dd>Determines the file that <code>xinetd</code> uses for configuration. The default is <i>/etc/xinetd.conf</i>.</dd>
+<dt><code>-pidfile</code> pid_file</dt>
+<dd>The process ID is written to the file. This option is ineffective in debug mode.</dd>
+<dt><code>-dontfork</code></dt>
+<dd>Tells xinetd to stay in the foreground rather than detaching itself, to support being run from init or daemontools. This option automatically sets <code>-stayalive</code> (see below).</dd>
+<dt><code>-stayalive</code></dt>
+<dd>Tells xinetd to stay running even if no services are specified.</dd>
+<dt><code>-limit</code><i> proc_limit</i></dt>
+<dd>This option places a limit on the number of concurrently running processes that can be started by <code>xinetd.</code> Its purpose is to prevent process table overflows.</dd>
+<dt><code>-logprocs</code><i> limit</i></dt>
+<dd>This option places a limit on the number of concurrently running servers for remote userid acquisition.</dd>
+<dt><code>-version</code></dt>
+<dd>This option causes xinetd to print out its version information.</dd>
+<dt><code>-inetd_compat</code></dt>
+<dd>This option causes xinetd to read /etc/inetd.conf in addition to the standard xinetd config files. /etc/inetd.conf is read after the standard xinetd config files.</dd>
+<dt><code>-cc</code><i> interval</i></dt>
+<dd>This option instructs <code>xinetd</code> to perform periodic consistency checks on its internal state every <i>interval</i> seconds.</dd></dl>
 <p> The <i>syslog</i> and <i>filelog</i> options are mutually exclusive. If none is specified, the default is syslog using the <i>daemon</i> facility. You should not confuse <code>xinetd</code> messages with messages related to service logging. The latter are logged only if this is specified via the configuration file.</p>
 <h2>Controlling Xinetd</h2>
 <p><code>xinetd</code> performs certain actions when it receives certain signals. The actions associated with the specific signals can be redefined by editing <i>config.h</i> and recompiling.</p>
 <dl>
-<dt><code>SIGHUP</code></p>
-<dd>causes a hard reconfiguration, which means that <code>xinetd</code> re-reads the configuration file and terminates the servers for services that are no longer available. Access control is performed again on running servers by checking the remote location, access times and server instances. If the number of server instances is lowered, some arbitrarily picked servers will be killed to satisfy the limit; this will happen <i>after</i> any servers are terminated because of failing the remote location or access time checks. Also, if the <code>INTERCEPT</code> flag was clear and is set, any running servers for that service will be terminated; <i>the purpose of this is to ensure that after a hard reconfiguration there will be no running servers that can accept packets from addresses that do not meet the access control criteria</i>.</p>
-<dt><code>SIGQUIT</code></p>
-<dd>causes program termination.</p>
-<dt><code>SIGTERM</code></p>
-<dd>terminates all running servers before terminating <code>xinetd</code>.</p>
-<dt><code>SIGUSR1</code></p>
-<dd>causes an internal state dump (the default dump file is <i>/var/run/xinetd.dump</i>; to change the filename, edit <i>config.h</i> and recompile).</p>
-<dt><code>SIGIOT</code></p>
-<dd>causes an internal consistency check to verify that the data structures used by the program have not been corrupted. When the check is completed <code>xinetd</code> will generate a message that says if the check was successful or not.</dl>
+<dt><code>SIGHUP</code></dt>
+<dd>causes a hard reconfiguration, which means that <code>xinetd</code> re-reads the configuration file and terminates the servers for services that are no longer available. Access control is performed again on running servers by checking the remote location, access times and server instances. If the number of server instances is lowered, some arbitrarily picked servers will be killed to satisfy the limit; this will happen <i>after</i> any servers are terminated because of failing the remote location or access time checks. Also, if the <code>INTERCEPT</code> flag was clear and is set, any running servers for that service will be terminated; <i>the purpose of this is to ensure that after a hard reconfiguration there will be no running servers that can accept packets from addresses that do not meet the access control criteria</i>.</dd>
+<dt><code>SIGQUIT</code></dt>
+<dd>causes program termination.</dd>
+<dt><code>SIGTERM</code></dt>
+<dd>terminates all running servers before terminating <code>xinetd</code>.</dd>
+<dt><code>SIGUSR1</code></dt>
+<dd>causes an internal state dump (the default dump file is <i>/var/run/xinetd.dump</i>; to change the filename, edit <i>config.h</i> and recompile).</dd>
+<dt><code>SIGIOT</code></dt>
+<dd>causes an internal consistency check to verify that the data structures used by the program have not been corrupted. When the check is completed <code>xinetd</code> will generate a message that says if the check was successful or not.</dd></dl>
 <p> On reconfiguration the log files are closed and reopened. This allows removal of old log files.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/xinetd.conf</code></p>
-<dd>default configuration file</p>
-<dt><code>/var/run/xinetd.dump</code></p>
-<dd>default dump file</dl>
+<dt><code>/etc/xinetd.conf</code></dt>
+<dd>default configuration file</dd>
+<dt><code>/var/run/xinetd.dump</code></dt>
+<dd>default dump file</dd></dl>
 <h2>See Also</h2>
 <p><i>inetd(8),</i> </p>
 <p> <i><a href="/docs/linux/man/5-xinetd-conf/">xinetd.conf</a>(5),</i> </p>

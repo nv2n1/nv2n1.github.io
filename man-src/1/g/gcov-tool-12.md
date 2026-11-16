@@ -31,118 +31,109 @@ description: "gcov-tool – offline gcda profile processing tool"
 <p> <code>gcov-tool</code> is an offline tool to process gcc&#8217;s gcda profile files. </p>
 <p> Current gcov-tool supports the following functionalities:</p>
 <dl>
-<dt>*</p>
-<dd> merge two sets of profiles with weights.</p>
-<dt>*</p>
-<dd> read one set of profile and rewrite profile contents. One can scale or normalize the count values.</dl>
+<dt>*</dt>
+<dd> merge two sets of profiles with weights.</dd>
+<dt>*</dt>
+<dd> read one set of profile and rewrite profile contents. One can scale or normalize the count values.</dd></dl>
 <p> Examples of the use cases for this tool are:</p>
 <dl>
-<dt>*</p>
-<dd> Collect the profiles for different set of inputs, and use this tool to merge them. One can specify the weight to factor in the relative importance of each input.</p>
-<dt>*</p>
-<dd> Rewrite the profile after removing a subset of the gcda files, while maintaining the consistency of the summary and the histogram.</p>
-<dt>*</p>
-<dd> It can also be used to debug or libgcov code as the tools shares the majority code as the runtime library.</dl>
+<dt>*</dt>
+<dd> Collect the profiles for different set of inputs, and use this tool to merge them. One can specify the weight to factor in the relative importance of each input.</dd>
+<dt>*</dt>
+<dd> Rewrite the profile after removing a subset of the gcda files, while maintaining the consistency of the summary and the histogram.</dd>
+<dt>*</dt>
+<dd> It can also be used to debug or libgcov code as the tools shares the majority code as the runtime library.</dd></dl>
 <p> Note that for the merging operation, this profile generated offline may contain slight different values from the online merged profile. Here are a list of typical differences:</p>
 <dl>
-<dt>*</p>
-<dd> histogram difference: This offline tool recomputes the histogram after merging the counters. The resulting histogram, therefore, is precise. The online merging does not have this capability &#8212; the histogram is merged from two histograms and the result is an approximation.</p>
-<dt>*</p>
-<dd> summary checksum difference: Summary checksum uses a <font SIZE="-1">CRC32</font> operation. The value depends on the link list order of gcov-info objects. This order is different in gcov-tool from that in the online merge. It&#8217;s expected to have different summary checksums. It does not really matter as the compiler does not use this checksum anywhere.</p>
-<dt>*</p>
-<dd> value profile counter values difference: Some counter values for value profile are runtime dependent, like heap addresses. It&#8217;s normal to see some difference in these kind of counters.</dl>
+<dt>*</dt>
+<dd> histogram difference: This offline tool recomputes the histogram after merging the counters. The resulting histogram, therefore, is precise. The online merging does not have this capability &#8212; the histogram is merged from two histograms and the result is an approximation.</dd>
+<dt>*</dt>
+<dd> summary checksum difference: Summary checksum uses a <font SIZE="-1">CRC32</font> operation. The value depends on the link list order of gcov-info objects. This order is different in gcov-tool from that in the online merge. It&#8217;s expected to have different summary checksums. It does not really matter as the compiler does not use this checksum anywhere.</dd>
+<dt>*</dt>
+<dd> value profile counter values difference: Some counter values for value profile are runtime dependent, like heap addresses. It&#8217;s normal to see some difference in these kind of counters.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd> Display help about using <code>gcov-tool</code> (on the standard output), and exit without doing any further processing.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Display help about using <code>gcov-tool</code> (on the standard output), and exit without doing any further processing.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display the <code>gcov-tool</code> version number (on the standard output), and exit without doing any further processing.</p>
-<dt><code>merge</code></p>
-<dd> Merge two profile directories.</p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the <code>gcov-tool</code> version number (on the standard output), and exit without doing any further processing.</dd>
+<dt><code>merge</code></dt>
+<dd> Merge two profile directories.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-o</code> <i>directory</i></p>
+<dt><code>-o</code> <i>directory</i></dt>
 <dd>
-<dt><code>&#8211;output</code> <i>directory</i></p>
-<dd> Set the output profile directory. Default output directory name is <i>merged_profile</i>.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;output</code> <i>directory</i></dt>
+<dd> Set the output profile directory. Default output directory name is <i>merged_profile</i>.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Set the verbose mode.</p>
-<dt><code>-w</code> <i>w1</i><code>,</code><i>w2</i></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Set the verbose mode.</dd>
+<dt><code>-w</code> <i>w1</i><code>,</code><i>w2</i></dt>
 <dd>
-<dt><code>&#8211;weight</code> <i>w1</i><code>,</code><i>w2</i></p>
-<dd> Set the merge weights of the <i>directory1</i> and <i>directory2</i>, respectively. The default weights are 1 for both.</dl>
+</dd><dt><code>&#8211;weight</code> <i>w1</i><code>,</code><i>w2</i></dt>
+<dd> Set the merge weights of the <i>directory1</i> and <i>directory2</i>, respectively. The default weights are 1 for both.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>rewrite</code></p>
-<dd> Read the specified profile directory and rewrite to a new directory.</p>
+</dl>
+<dt><code>rewrite</code></dt>
+<dd> Read the specified profile directory and rewrite to a new directory.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-n</code> <i>long_long_value</i></p>
+<dt><code>-n</code> <i>long_long_value</i></dt>
 <dd>
-<dt><code>&#8211;normalize &lt;long_long_value&gt;</code></p>
-<dd> Normalize the profile. The specified value is the max counter value in the new profile.</p>
-<dt><code>-o</code> <i>directory</i></p>
+</dd><dt><code>&#8211;normalize &lt;long_long_value&gt;</code></dt>
+<dd> Normalize the profile. The specified value is the max counter value in the new profile.</dd>
+<dt><code>-o</code> <i>directory</i></dt>
 <dd>
-<dt><code>&#8211;output</code> <i>directory</i></p>
-<dd> Set the output profile directory. Default output name is <i>rewrite_profile</i>.</p>
-<dt><code>-s</code> <i>float_or_simple-frac_value</i></p>
+</dd><dt><code>&#8211;output</code> <i>directory</i></dt>
+<dd> Set the output profile directory. Default output name is <i>rewrite_profile</i>.</dd>
+<dt><code>-s</code> <i>float_or_simple-frac_value</i></dt>
 <dd>
-<dt><code>&#8211;scale</code> <i>float_or_simple-frac_value</i></p>
-<dd> Scale the profile counters. The specified value can be in floating point value, or simple fraction value form, such 1, 2, 2/3, and 5/3.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;scale</code> <i>float_or_simple-frac_value</i></dt>
+<dd> Scale the profile counters. The specified value can be in floating point value, or simple fraction value form, such 1, 2, 2/3, and 5/3.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Set the verbose mode.</dl>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Set the verbose mode.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>overlap</code></p>
-<dd> Compute the overlap score between the two specified profile directories. The overlap score is computed based on the arc profiles. It is defined as the sum of min (p1_counter[i] / p1_sum_all, p2_counter[i] / p2_sum_all), for all arc counter i, where p1_counter[i] and p2_counter[i] are two matched counters and p1_sum_all and p2_sum_all are the sum of counter values in profile 1 and profile 2, respectively.</p>
+</dl>
+<dt><code>overlap</code></dt>
+<dd> Compute the overlap score between the two specified profile directories. The overlap score is computed based on the arc profiles. It is defined as the sum of min (p1_counter[i] / p1_sum_all, p2_counter[i] / p2_sum_all), for all arc counter i, where p1_counter[i] and p2_counter[i] are two matched counters and p1_sum_all and p2_sum_all are the sum of counter values in profile 1 and profile 2, respectively.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-f</code></p>
+<dt><code>-f</code></dt>
 <dd>
-<dt><code>&#8211;function</code></p>
-<dd> Print function level overlap score.</p>
-<dt><code>-F</code></p>
+</dd><dt><code>&#8211;function</code></dt>
+<dd> Print function level overlap score.</dd>
+<dt><code>-F</code></dt>
 <dd>
-<dt><code>&#8211;fullname</code></p>
-<dd> Print full gcda filename.</p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;fullname</code></dt>
+<dd> Print full gcda filename.</dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;hotonly</code></p>
-<dd> Only print info for hot objects/functions.</p>
-<dt><code>-o</code></p>
+</dd><dt><code>&#8211;hotonly</code></dt>
+<dd> Only print info for hot objects/functions.</dd>
+<dt><code>-o</code></dt>
 <dd>
-<dt><code>&#8211;object</code></p>
-<dd> Print object level overlap score.</p>
-<dt><code>-t</code> <i>float</i></p>
+</dd><dt><code>&#8211;object</code></dt>
+<dd> Print object level overlap score.</dd>
+<dt><code>-t</code> <i>float</i></dt>
 <dd>
-<dt><code>&#8211;hot_threshold &lt;float&gt;</code></p>
-<dd> Set the threshold for hot counter value.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;hot_threshold &lt;float&gt;</code></dt>
+<dd> Set the threshold for hot counter value.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Set the verbose mode.</dl>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Set the verbose mode.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>gpl</code>(7), <code>gfdl</code>(7), <code>fsf-funding</code>(7), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/1-gcov/">gcov</a></code>(1) and the Info entry for <i>gcc</i>.</p>

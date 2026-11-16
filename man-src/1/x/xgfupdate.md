@@ -16,10 +16,10 @@ description: "xgfupdate – updates an Xgridfit program file to the latest versi
 <p>&nbsp;<wbr>&nbsp;<wbr>$xgfupdate infile&nbsp;<wbr>&gt;&nbsp;<wbr>outfile</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/share/xgridfit/util/xgf-update.xsl</i></p>
-<dd> An XSLT script that does the updating.</p>
-<dt><i>/usr/share/xgridfit/util/add-blanks.sed</i></p>
-<dd> A Sed script that does some formatting of the output.</dl>
+<dt><i>/usr/share/xgridfit/util/xgf-update.xsl</i></dt>
+<dd> An XSLT script that does the updating.</dd>
+<dt><i>/usr/share/xgridfit/util/add-blanks.sed</i></dt>
+<dd> A Sed script that does some formatting of the output.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xgridfit/">xgridfit</a></code>(1), <code><a href="/docs/linux/man/1-xmlstarlet/">xmlstarlet</a></code>(1).</p>
 <h2>AUTHOR</h2>

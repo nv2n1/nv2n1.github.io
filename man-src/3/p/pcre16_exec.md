@@ -13,11 +13,9 @@ description: "PCRE – Perl-compatible regular expressions"
 int pcre_exec(const pcre *code, const pcre_extra *extra,
               const char *subject, int length, int startoffset,
               int options, int *ovector, int ovecsize);
-
 int pcre16_exec(const pcre16 *code, const pcre16_extra *extra,
                 PCRE_SPTR16 subject, int length, int startoffset,
                 int options, int *ovector, int ovecsize);
-
 int pcre32_exec(const pcre32 *code, const pcre32_extra *extra,
                 PCRE_SPTR32 subject, int length, int startoffset,
                 int options, int *ovector, int ovecsize);</code></pre>

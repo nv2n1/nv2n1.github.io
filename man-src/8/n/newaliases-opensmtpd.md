@@ -15,23 +15,23 @@ description: "newaliases – rebuild the database for the mail aliases file"
 <p> The options are as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-f</code> <i>file</i></p>
-<dd>Use <i>file</i> as the configuration file, instead of the default <i>/etc/opensmtpd/smtpd.conf</i>.</dl>
+</dd><dl>
+<dt><code>-f</code> <i>file</i></dt>
+<dd>Use <i>file</i> as the configuration file, instead of the default <i>/etc/opensmtpd/smtpd.conf</i>.</dd></dl>
 </dl>
 <p> Note: this utility is provided for sendmail compatibility. The preferred way of rebuilding the database is with <code><a href="/docs/linux/man/8-makemap/">makemap</a></code>(8):</p>
 <dl>
 <dd>
 <pre># makemap -t aliases /etc/opensmtpd/aliases
-</dl></pre>
+</dd></dl></pre>
 <h2>Files</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>/etc/opensmtpd/aliases</code></p>
-<dd>List of local user mail aliases.</p>
-<dt><code>/etc/opensmtpd/virtual</code></p>
-<dd>List of virtual host aliases.</dl>
+</dd><dl>
+<dt><code>/etc/opensmtpd/aliases</code></dt>
+<dd>List of local user mail aliases.</dd>
+<dt><code>/etc/opensmtpd/virtual</code></dt>
+<dd>List of virtual host aliases.</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p>The <code>newaliases</code> utility exits 0 on success, and &gt;0 if an error occurs. newaliases</p>

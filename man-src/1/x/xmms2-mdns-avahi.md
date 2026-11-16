@@ -16,8 +16,8 @@ description: "xmms2-mdns-avahi – announces XMMS2 via mDNS"
 <p> <i>xmms2-mdns-avahi</i> is the Avahi mDNS announcing client for <code>XMMS2.</code> <i>xmms2-mdns-avahi</i> is designed to announce the presence of an accessible <code>XMMS2</code> TCP socket if one is available. <i>xmms2-mdns-avahi</i> offers a _xmms2._tcp service if, and only if, the <i>XMMS_PATH_FULL</i> enviornmental variable contains a TCP socket. This allows clients that support mDNS discovery to easily locate and connect to this <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1) </i> instance.</p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><i>XMMS_PATH_FULL</i></p>
-<dd> A complete list of URL paths seperated by &#8216;;&#8217; pointed to the <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1).</i> See <code>IPC SOCKET</code> in <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1)</i> for details of possible values for this variable </p>
+<dt><i>XMMS_PATH_FULL</i></dt>
+<dd> A complete list of URL paths seperated by &#8216;;&#8217; pointed to the <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1).</i> See <code>IPC SOCKET</code> in <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1)</i> for details of possible values for this variable </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xmms2/">xmms2</a>(1), <a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1), <a rel="nofollow" href="http://xmms2.xmms.org">http://xmms2.xmms.org</a></p>

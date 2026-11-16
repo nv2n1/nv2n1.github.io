@@ -43,43 +43,32 @@ There is no separate tag for LegacyContiguousIterator.
 
 Common technique for algorithm selection based on iterator category tags is to use a dispatcher function (the alternative is std::enable_if) 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;list&gt;
-
 #include &lt;iterator&gt;
 template &lt;class BDIter&gt;
-
 void alg(BDIter, BDIter, std::bidirectional_iterator_tag)
-
 {
     std::cout &lt;&lt; &quot;alg() called for bidirectional iterator\n&quot;;
 }
 template &lt;class RAIter&gt;
-
 void alg(RAIter, RAIter, std::random_access_iterator_tag)
-
 {
     std::cout &lt;&lt; &quot;alg() called for random-access iterator\n&quot;;
 }
 template &lt;class Iter&gt;
-
 void alg(Iter first, Iter last)
-
 {
     alg(first, last,
         typename std::iterator_traits&lt;Iter&gt;::iterator_category());
 }
 int main()
-
 {
     std::vector&lt;int&gt; v;
     alg(v.begin(), v.end());
     std::list&lt;int&gt; l;
     alg(l.begin(), l.end());
     //    std::istreambuf_iterator&lt;char&gt; i1(std::cin), i2;
-
     //    alg(i1, i2); // compile error: no matching function for call
 }
 </code></pre>

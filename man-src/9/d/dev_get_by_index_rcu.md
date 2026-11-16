@@ -14,10 +14,10 @@ description: "dev_get_by_index_rcu – find a device by its ifindex"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>the applicable net namespace</dl>
+</dd><dd>the applicable net namespace</dd></dl>
 <p> <i>ifindex</i></p>
 <dl>
-<dd>index of device</dl>
+<dd>index of device</dd></dl>
 <h2>Description</h2>
 <p>Search for an interface by index. Returns <code>NULL</code> if the device is not found or a pointer to the device. The device has not had its reference counter increased so the caller must be careful about locking. The caller must hold RCU lock.</p>
 <h2>Copyright</h2>

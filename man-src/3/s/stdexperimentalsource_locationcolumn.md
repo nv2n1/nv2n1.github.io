@@ -29,16 +29,9 @@ An implementation-defined value representing some offset from the start of the l
 <h2>See also</h2>
 
 <pre><code>return the line number represented by this object
-
 line          (public member function)
 return the file name represented by this object
-
 file_name     (public member function)
 return the name of the function represented by this object, if any
-
 function_name (public member function)
-
-
-
-
 </code></pre>

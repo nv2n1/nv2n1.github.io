@@ -19,18 +19,18 @@ description: "ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare"
 <p> int ldns_rdf_compare(const ldns_rdf *rd1, const ldns_rdf *rd2); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rdf_size</i>()</p>
-<dd>returns the size of the rdf. .br <code>*rd</code>: the rdf to read from .br Returns uint16_t with the size</dl>
+<dt> <i>ldns_rdf_size</i>()</dt>
+<dd>returns the size of the rdf. .br <code>*rd</code>: the rdf to read from .br Returns uint16_t with the size</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_get_type</i>()</p>
-<dd>returns the type of the rdf. We need to insert _get_ here to prevent conflict the the rdf_type TYPE. .br <code>*rd</code>: the rdf to read from .br Returns ldns_rdf_type with the type</dl>
+<dt> <i>ldns_rdf_get_type</i>()</dt>
+<dd>returns the type of the rdf. We need to insert _get_ here to prevent conflict the the rdf_type TYPE. .br <code>*rd</code>: the rdf to read from .br Returns ldns_rdf_type with the type</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_data</i>()</p>
-<dd>returns the data of the rdf. .br <code>*rd</code>: the rdf to read from </p>
+<dt> <i>ldns_rdf_data</i>()</dt>
+<dd>returns the data of the rdf. .br <code>*rd</code>: the rdf to read from </dd>
 <p> .br Returns uint8_t* pointer to the rdf&#8217;s data</dl>
 <dl>
-<dt> <i>ldns_rdf_compare</i>()</p>
-<dd>compares two rdf&#8217;s on their wire formats. (To order dnames according to rfc4034, use ldns_dname_compare) .br <code>rd1</code>: the first one .br <code>rd2</code>: the second one .br Returns 0 if equal .br Returns -1 if rd1 comes before rd2 .br Returns +1 if rd2 comes before rd1</dl>
+<dt> <i>ldns_rdf_compare</i>()</dt>
+<dd>compares two rdf&#8217;s on their wire formats. (To order dnames according to rfc4034, use ldns_dname_compare) .br <code>rd1</code>: the first one .br <code>rd2</code>: the second one .br Returns 0 if equal .br Returns -1 if rd1 comes before rd2 .br Returns +1 if rd2 comes before rd1</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

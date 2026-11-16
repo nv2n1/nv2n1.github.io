@@ -17,53 +17,53 @@ The <i><a HREF="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> man page de
 <h2>Agent Behaviour</h2>
 
 <dl><dt>quit
-<dd></dl>
+</dt><dd></dd></dl>
 
 <h2>Access Control</h2>
 
 <h3>VACM Configuration</h3>
 
 <dl><dt>vacmView / vacmGroup / vacmAccess
-<dd>These directives are used to retain dynamically configured access control settings.</dl>
+</dt><dd>These directives are used to retain dynamically configured access control settings.</dd></dl>
 
 <h2>System Information</h2>
 
 <h3>System Group</h3>
 
 <dl><dt>setSerialNo
-<dd>This directive is used to implement the advisory lock object snmpSetSerialNo.
-<dt>psyslocation / psyscontact / psysname
-<dd>These directives are used to retain dynamically configured system settings. They will be overridden by the corresponding <i>sysLocation</i>, <i>sysContact</i> and <i>sysName</i> directives.</dl>
+</dt><dd>This directive is used to implement the advisory lock object snmpSetSerialNo.
+</dd><dt>psyslocation / psyscontact / psysname
+</dt><dd>These directives are used to retain dynamically configured system settings. They will be overridden by the corresponding <i>sysLocation</i>, <i>sysContact</i> and <i>sysName</i> directives.</dd></dl>
 
 <h2>Active Monitoring</h2>
 
 <h3>Notification Handling</h3>
 
 <dl><dt>pauthtrapenable
-<dd>This directive is used to retain the dynamically configured setting of whether the agent should generate authenticationFailure traps. It will be overridden by the corresponding <i>authtrapenable</i> directive.
-<dt>snmpNotify*Table
-<dd><dt>targetAddr / targetParams
-<dd>These directives are used to retain dynamically configured notification destination settings.</dl>
+</dt><dd>This directive is used to retain the dynamically configured setting of whether the agent should generate authenticationFailure traps. It will be overridden by the corresponding <i>authtrapenable</i> directive.
+</dd><dt>snmpNotify*Table
+</dt><dd></dd><dt>targetAddr / targetParams
+</dt><dd>These directives are used to retain dynamically configured notification destination settings.</dd></dl>
 
 <h3>DisMan Event MIB</h3>
 
 <dl><dt>_mteE*Table, _mteOTable, _mteT*Table
-<dd>These directives are used to retain dynamically configured event, object and monitor trigger settings.
-<dt>mteObjectsTable / mteTriggerTable
-<dd>These directives are for compatibility with the previous <i>disman/event-mib</i> implementation.</dl>
+</dt><dd>These directives are used to retain dynamically configured event, object and monitor trigger settings.
+</dd><dt>mteObjectsTable / mteTriggerTable
+</dt><dd>These directives are for compatibility with the previous <i>disman/event-mib</i> implementation.</dd></dl>
 
 <h3>DisMan Schedule MIB</h3>
 
 <dl><dt>_schedTable
-<dd>This directive is used to retain dynamically configured scheduled events.</dl>
+</dt><dd>This directive is used to retain dynamically configured scheduled events.</dd></dl>
 
 <h2>Extending Agent Functionality</h2>
 
 <h3>Arbitrary Extension Commands</h3>
 
 <dl><dt>extend-sh
-<dd><dt>exec2 / sh2 / execFix2
-<dd>These directives were defined by analogy with equivalent directives in the previous <i>ucd-snmp/extensible</i> implementation. They are deprecated, and should not be used.</dl>
+</dt><dd></dd><dt>exec2 / sh2 / execFix2
+</dt><dd>These directives were defined by analogy with equivalent directives in the previous <i>ucd-snmp/extensible</i> implementation. They are deprecated, and should not be used.</dd></dl>
 
 <h2>Files</h2>
 

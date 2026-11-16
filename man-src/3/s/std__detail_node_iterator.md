@@ -12,25 +12,10 @@ description: "std::__detail::_Node_iterator< _Value, __constant_iterators, __cac
 <p> Inherits <code>std::__detail::_Node_iterator_base&lt; _Value, __cache &gt;</code>.</p>
 <h3>Public Types</h3>
 <pre><code>typedef std::ptrdiff_t difference_type
-
-
-
 typedef std::forward_iterator_tag iterator_category
-
-
-
 using pointer = typename std::conditional&lt; __constant_iterators, const _Value *, _Value * &gt;::type
-
-
-
 using reference = typename std::conditional&lt; __constant_iterators, const _Value &amp;, _Value &amp; &gt;::type
-
-
-
 typedef _Value value_type
-
-
-
 Public Member Functions</code></pre>
 <p> <code>_Node_iterator</code> (__node_type *__p) </p>
 <p> void <code>_M_incr</code> () </p>

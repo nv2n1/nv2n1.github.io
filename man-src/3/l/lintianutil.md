@@ -19,53 +19,53 @@ description: "Lintian::Util – Lintian utility functions"
 <p> Most subs are imported only on request.</p>
 <h2>Variables</h2>
 <dl COMPACT>
-<dt>$PKGNAME_REGEX</p>
-<dd>Regular expression that matches valid package names. The expression is not anchored and does not enforce any &#8220;boundary&#8221; characters.</p>
-<dt>$PKGREPACK_REGEX</p>
-<dd>Regular expression that matches &#8220;repacked&#8221; package names. The expression is not anchored and does not enforce any &#8220;boundary&#8221; characters. It should only be applied to the upstream portion (see #931846).</p>
-<dt>$PKGVERSION_REGEX</p>
-<dd>Regular expression that matches valid package versions. The expression is not anchored and does not enforce any &#8220;boundary&#8221; characters.</dl>
+<dt>$PKGNAME_REGEX</dt>
+<dd>Regular expression that matches valid package names. The expression is not anchored and does not enforce any &#8220;boundary&#8221; characters.</dd>
+<dt>$PKGREPACK_REGEX</dt>
+<dd>Regular expression that matches &#8220;repacked&#8221; package names. The expression is not anchored and does not enforce any &#8220;boundary&#8221; characters. It should only be applied to the upstream portion (see #931846).</dd>
+<dt>$PKGVERSION_REGEX</dt>
+<dd>Regular expression that matches valid package versions. The expression is not anchored and does not enforce any &#8220;boundary&#8221; characters.</dd></dl>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>get_deb_info(<font SIZE="-1">DEBFILE</font>)</p>
-<dd>Extracts the control file from <font SIZE="-1">DEBFILE</font> and returns it as a hashref. </p>
+<dt>get_deb_info(<font SIZE="-1">DEBFILE</font>)</dt>
+<dd>Extracts the control file from <font SIZE="-1">DEBFILE</font> and returns it as a hashref. </dd>
 <p> Basically, this is a fancy convenience for setting up an ar + tar pipe and passing said pipe to &#8220;parse_dpkg_control(HANDLE[, FLAGS[, <font SIZE="-1">LINES</font>]])&#8221;. </p>
 <p> <font SIZE="-1">DEBFILE</font> must be an ar file containing a &#8220;control.tar.gz&#8221; member, which in turn should contain a &#8220;control&#8221; file. If the &#8220;control&#8221; file is empty this will return an empty list. </p>
 <p> Note: the control file is only expected to have a single paragraph and thus only the first is returned (in the unlikely case that there are more than one). </p>
 <p> This function may fail with any of the messages that &#8220;parse_dpkg_control&#8221; do. It can also emit: </p>
 <pre> &quot;cannot fork to unpack %s: %s
 &quot;</pre>
-<dt>get_dsc_info (<font SIZE="-1">DSCFILE</font>)</p>
-<dd>Convenience function for reading dsc files. It will read the <font SIZE="-1">DSCFILE</font> using &#8220;read_dpkg_control(FILE[, FLAGS[, <font SIZE="-1">LINES</font>]])&#8221; and then return the first paragraph. If the file has no paragraphs, <tt>&quot;undef&quot;</tt> is returned instead. </p>
+<dt>get_dsc_info (<font SIZE="-1">DSCFILE</font>)</dt>
+<dd>Convenience function for reading dsc files. It will read the <font SIZE="-1">DSCFILE</font> using &#8220;read_dpkg_control(FILE[, FLAGS[, <font SIZE="-1">LINES</font>]])&#8221; and then return the first paragraph. If the file has no paragraphs, <tt>&quot;undef&quot;</tt> is returned instead. </dd>
 <p> Note: the control file is only expected to have a single paragraph and thus only the first is returned (in the unlikely case that there are more than one). </p>
 <p> This function may fail with any of the messages that &#8220;read_dpkg_control(FILE[, FLAGS[, <font SIZE="-1">LINES</font>]])&#8221; do.</p>
-<dt>drain_pipe(<font SIZE="-1">FD</font>)</p>
-<dd>Reads and discards any remaining contents from <font SIZE="-1">FD,</font> which is assumed to be a pipe. This is mostly done to avoid having the &#8220;write&#8221;-end die with a <font SIZE="-1">SIGPIPE</font> due to a &#8220;broken pipe&#8221; (which can happen if you just close the pipe). </p>
+<dt>drain_pipe(<font SIZE="-1">FD</font>)</dt>
+<dd>Reads and discards any remaining contents from <font SIZE="-1">FD,</font> which is assumed to be a pipe. This is mostly done to avoid having the &#8220;write&#8221;-end die with a <font SIZE="-1">SIGPIPE</font> due to a &#8220;broken pipe&#8221; (which can happen if you just close the pipe). </dd>
 <p> May cause an exception if there are issues reading from the pipe. </p>
 <p> Caveat: This will block until the pipe is closed from the &#8220;write&#8221;-end, so only use it with pipes where the &#8220;write&#8221;-end will eventually close their end by themselves (or something else will make them close it).</p>
-<dt>get_file_digest(<font SIZE="-1">ALGO, FILE</font>)</p>
-<dd>Creates an <font SIZE="-1">ALGO</font> digest object that is seeded with the contents of <font SIZE="-1">FILE.</font> If you just want the hex digest, please use &#8220;get_file_checksum(<font SIZE="-1">ALGO, FILE</font>)&#8221; instead. </p>
+<dt>get_file_digest(<font SIZE="-1">ALGO, FILE</font>)</dt>
+<dd>Creates an <font SIZE="-1">ALGO</font> digest object that is seeded with the contents of <font SIZE="-1">FILE.</font> If you just want the hex digest, please use &#8220;get_file_checksum(<font SIZE="-1">ALGO, FILE</font>)&#8221; instead. </dd>
 <p> <font SIZE="-1">ALGO</font> can be &#8216;md5&#8217; or shaX, where X is any number supported by Digest::SHA (e.g. &#8216;sha256&#8217;). </p>
 <p> This sub is a convenience wrapper around Digest::{<font SIZE="-1">MD5,SHA</font>}.</p>
-<dt>get_file_checksum(<font SIZE="-1">ALGO, FILE</font>)</p>
-<dd>Returns a hexadecimal string of the message digest checksum generated by the algorithm <font SIZE="-1">ALGO</font> on <font SIZE="-1">FILE.</font> </p>
+<dt>get_file_checksum(<font SIZE="-1">ALGO, FILE</font>)</dt>
+<dd>Returns a hexadecimal string of the message digest checksum generated by the algorithm <font SIZE="-1">ALGO</font> on <font SIZE="-1">FILE.</font> </dd>
 <p> <font SIZE="-1">ALGO</font> can be &#8216;md5&#8217; or shaX, where X is any number supported by Digest::SHA (e.g. &#8216;sha256&#8217;). </p>
 <p> This sub is a convenience wrapper around Digest::{<font SIZE="-1">MD5,SHA</font>}.</p>
-<dt>is_string_utf8_encoded(<font SIZE="-1">STRING</font>)</p>
-<dd>Returns a truth value if <font SIZE="-1">STRING</font> can be decoded as valid <font SIZE="-1">UTF-8.</font></p>
-<dt>file_is_encoded_in_non_utf8 (&#8230;)</p>
-<dd>Undocumented</p>
-<dt><code>do_fork()</code></p>
-<dd>Overrides fork to reset signal handlers etc. in the child.</p>
-<dt>clean_env ([<font SIZE="-1">CLOC</font>])</p>
-<dd>Destructively cleans <tt>%ENV</tt> &#8211; removes all variables <tt>%ENV</tt> except a selected few whitelisted variables. </p>
+<dt>is_string_utf8_encoded(<font SIZE="-1">STRING</font>)</dt>
+<dd>Returns a truth value if <font SIZE="-1">STRING</font> can be decoded as valid <font SIZE="-1">UTF-8.</font></dd>
+<dt>file_is_encoded_in_non_utf8 (&#8230;)</dt>
+<dd>Undocumented</dd>
+<dt><code>do_fork()</code></dt>
+<dd>Overrides fork to reset signal handlers etc. in the child.</dd>
+<dt>clean_env ([<font SIZE="-1">CLOC</font>])</dt>
+<dd>Destructively cleans <tt>%ENV</tt> &#8211; removes all variables <tt>%ENV</tt> except a selected few whitelisted variables. </dd>
 <p> The list of whitelisted <tt>%ENV</tt> variables are: </p>
 <pre> PATH
  LC_ALL (*)
  TMPDIR</pre>
 <p>(*) <font SIZE="-1">LC_ALL</font> is a special case as clean_env will change its value to either &#8220;C.UTF-8&#8221; or &#8220;C&#8221; (if <font SIZE="-1">CLOC</font> is given and a truth value).</p>
-<dt>perm2oct(<font SIZE="-1">PERM</font>)</p>
-<dd>Translates <font SIZE="-1">PERM</font> to an octal permission. <font SIZE="-1">PERM</font> should be a string describing the permissions as done by <i>tar t</i> or <i>ls -l</i>. That is, it should be a string like &#8220;-rw-r&#8212;r&#8211;&#8221;. </p>
+<dt>perm2oct(<font SIZE="-1">PERM</font>)</dt>
+<dd>Translates <font SIZE="-1">PERM</font> to an octal permission. <font SIZE="-1">PERM</font> should be a string describing the permissions as done by <i>tar t</i> or <i>ls -l</i>. That is, it should be a string like &#8220;-rw-r&#8212;r&#8211;&#8221;. </dd>
 <p> If the string does not appear to be a valid permission, it will cause a trappable error. </p>
 <p> Examples: </p>
 <pre> # Good
@@ -74,46 +74,46 @@ description: "Lintian::Util – Lintian utility functions"
  # Bad
  perm2oct('broken') # too short to be recognised
  perm2oct('-resurunet') # contains unknown permissions</pre>
-<dt>run_cmd([<font SIZE="-1">OPTS,</font> ]COMMAND[, <font SIZE="-1">ARGS&#8230;</font>])</p>
-<dd>Executes the given <tt>&quot;COMMAND&quot;</tt> with the (optional) arguments <tt>&quot;ARGS&quot;</tt> and returns the status code as one would see it from a shell script. Shell features cannot be used. </p>
+<dt>run_cmd([<font SIZE="-1">OPTS,</font> ]COMMAND[, <font SIZE="-1">ARGS&#8230;</font>])</dt>
+<dd>Executes the given <tt>&quot;COMMAND&quot;</tt> with the (optional) arguments <tt>&quot;ARGS&quot;</tt> and returns the status code as one would see it from a shell script. Shell features cannot be used. </dd>
 <p> <font SIZE="-1">OPTS,</font> if given, is a hash reference with zero or more of the following key-value pairs:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>chdir</p>
-<dd>The child process with chdir to the given directory before executing the command.</p>
-<dt>in</p>
-<dd>The <font SIZE="-1">STDIN</font> of the child process will be reopened and read from the filename denoted by the value of this key. By default, <font SIZE="-1">STDIN</font> will reopened to read from /dev/null.</p>
-<dt>out</p>
-<dd>The <font SIZE="-1">STDOUT</font> of the child process will be reopened and write to filename denoted by the value of this key. By default, <font SIZE="-1">STDOUT</font> is discarded.</p>
-<dt>update-env-vars</p>
-<dd>Each key/value pair defined in the hashref associated with <code>update-env-vars</code> will be updated in the child processes&#8217;s environment. If a value is <tt>&quot;undef&quot;</tt>, then the corresponding environment variable will be removed (if set). Otherwise, the environment value will be set to that value.</dl>
+</dd><dl COMPACT>
+<dt>chdir</dt>
+<dd>The child process with chdir to the given directory before executing the command.</dd>
+<dt>in</dt>
+<dd>The <font SIZE="-1">STDIN</font> of the child process will be reopened and read from the filename denoted by the value of this key. By default, <font SIZE="-1">STDIN</font> will reopened to read from /dev/null.</dd>
+<dt>out</dt>
+<dd>The <font SIZE="-1">STDOUT</font> of the child process will be reopened and write to filename denoted by the value of this key. By default, <font SIZE="-1">STDOUT</font> is discarded.</dd>
+<dt>update-env-vars</dt>
+<dd>Each key/value pair defined in the hashref associated with <code>update-env-vars</code> will be updated in the child processes&#8217;s environment. If a value is <tt>&quot;undef&quot;</tt>, then the corresponding environment variable will be removed (if set). Otherwise, the environment value will be set to that value.</dd></dl>
 </dl>
 <dl COMPACT>
-<dd></dl>
-<dt>&quot;safe_qx(@cmd)&quot;</p>
-<dd>Emulates the <tt>&quot;qx()&quot;</tt> operator by returning the captured output just like Capture::Tiny; </p>
+<dd></dd></dl>
+<dt>&quot;safe_qx(@cmd)&quot;</dt>
+<dd>Emulates the <tt>&quot;qx()&quot;</tt> operator by returning the captured output just like Capture::Tiny; </dd>
 <p> Examples: </p>
 <pre> # Capture the output of a simple command
  my $output = safe_qx('grep', 'some-pattern', 'path/to/file');</pre>
-<dt>copy_dir (<font SIZE="-1">ARGS</font>)</p>
-<dd>Convenient way of calling <i>cp -a </i><font SIZE="-1"><i>ARGS</i></font><i></i>.</p>
-<dt>human_bytes(<font SIZE="-1">SIZE</font>)</p>
+<dt>copy_dir (<font SIZE="-1">ARGS</font>)</dt>
+<dd>Convenient way of calling <i>cp -a </i><font SIZE="-1"><i>ARGS</i></font><i></i>.</dd>
+<dt>human_bytes(<font SIZE="-1">SIZE</font>)</dt>
 <dd>
-<dt>gunzip_file (<font SIZE="-1">IN, OUT</font>)</p>
-<dd>Decompresses contents of the file <font SIZE="-1">IN</font> and stores the contents in the file <font SIZE="-1">OUT.</font> <font SIZE="-1">IN</font> is <i>not</i> removed by this call. On error, this function will cause a trappable error.</p>
-<dt>open_gz (<font SIZE="-1">FILE</font>)</p>
-<dd>Opens a handle that reads from the GZip compressed <font SIZE="-1">FILE.</font> </p>
+</dd><dt>gunzip_file (<font SIZE="-1">IN, OUT</font>)</dt>
+<dd>Decompresses contents of the file <font SIZE="-1">IN</font> and stores the contents in the file <font SIZE="-1">OUT.</font> <font SIZE="-1">IN</font> is <i>not</i> removed by this call. On error, this function will cause a trappable error.</dd>
+<dt>open_gz (<font SIZE="-1">FILE</font>)</dt>
+<dd>Opens a handle that reads from the GZip compressed <font SIZE="-1">FILE.</font> </dd>
 <p> On failure, this sub emits a trappable error. </p>
 <p> Note: The handle may be a pipe from an external processes.</p>
-<dt>gzip (<font SIZE="-1">DATA, PATH</font>)</p>
-<dd>Compresses <font SIZE="-1">DATA</font> using gzip and stores result in file located at <font SIZE="-1">PATH.</font></p>
-<dt>locate_helper_tool(<font SIZE="-1">TOOLNAME</font>)</p>
-<dd>Given the name of a helper tool, returns the path to it. The tool must be available in the &#8220;helpers&#8221; subdir of one of the &#8220;lintian root&#8221; directories used by Lintian. </p>
+<dt>gzip (<font SIZE="-1">DATA, PATH</font>)</dt>
+<dd>Compresses <font SIZE="-1">DATA</font> using gzip and stores result in file located at <font SIZE="-1">PATH.</font></dd>
+<dt>locate_helper_tool(<font SIZE="-1">TOOLNAME</font>)</dt>
+<dd>Given the name of a helper tool, returns the path to it. The tool must be available in the &#8220;helpers&#8221; subdir of one of the &#8220;lintian root&#8221; directories used by Lintian. </dd>
 <p> The tool name should follow the same rules as check names. Particularly, third-party checks should namespace their tools in the same way they namespace their checks. E.g. &#8220;python/some-helper&#8221;. </p>
 <p> If the tool cannot be found, this sub will cause a trappable error.</p>
-<dt>strip ([<font SIZE="-1">LINE</font>])</p>
-<dd>Strips whitespace from the beginning and the end of <font SIZE="-1">LINE</font> and returns it. If <font SIZE="-1">LINE</font> is omitted, <tt>$_</tt> will be used instead. Example </p>
+<dt>strip ([<font SIZE="-1">LINE</font>])</dt>
+<dd>Strips whitespace from the beginning and the end of <font SIZE="-1">LINE</font> and returns it. If <font SIZE="-1">LINE</font> is omitted, <tt>$_</tt> will be used instead. Example </dd>
 <pre> @lines = map { strip } &lt;$fd&gt;;</pre>
 <p>In void context, the input argument will be modified so it can be used as a replacement for chomp in some cases: </p>
 <pre> while ( my $line = &lt;$fd&gt; ) {
@@ -127,19 +127,19 @@ description: "Lintian::Util – Lintian utility functions"
  # $orig had leading or/and trailing whitespace
  }
  }</pre>
-<dt>lstrip ([<font SIZE="-1">LINE</font>])</p>
-<dd>Like strip but only strip leading whitespace.</p>
-<dt>rstrip ([<font SIZE="-1">LINE</font>])</p>
-<dd>Like strip but only strip trailing whitespace.</p>
-<dt>check_path (<font SIZE="-1">CMD</font>)</p>
-<dd>Returns 1 if <font SIZE="-1">CMD</font> can be found in <font SIZE="-1">PATH</font> (i.e. <tt>$ENV</tt>{<font SIZE="-1">PATH</font>}) and is executable. Otherwise, the function return 0.</p>
-<dt>drop_relative_prefix(<font SIZE="-1">STRING</font>)</p>
-<dd>Remove an initial ./ from <font SIZE="-1">STRING,</font> if present</p>
-<dt>signal_number2name(<font SIZE="-1">NUM</font>)</p>
-<dd>Given a number, returns the name of the signal (without leading &#8220;<font SIZE="-1">SIG&#8221;</font>). Example: </p>
+<dt>lstrip ([<font SIZE="-1">LINE</font>])</dt>
+<dd>Like strip but only strip leading whitespace.</dd>
+<dt>rstrip ([<font SIZE="-1">LINE</font>])</dt>
+<dd>Like strip but only strip trailing whitespace.</dd>
+<dt>check_path (<font SIZE="-1">CMD</font>)</dt>
+<dd>Returns 1 if <font SIZE="-1">CMD</font> can be found in <font SIZE="-1">PATH</font> (i.e. <tt>$ENV</tt>{<font SIZE="-1">PATH</font>}) and is executable. Otherwise, the function return 0.</dd>
+<dt>drop_relative_prefix(<font SIZE="-1">STRING</font>)</dt>
+<dd>Remove an initial ./ from <font SIZE="-1">STRING,</font> if present</dd>
+<dt>signal_number2name(<font SIZE="-1">NUM</font>)</dt>
+<dd>Given a number, returns the name of the signal (without leading &#8220;<font SIZE="-1">SIG&#8221;</font>). Example: </dd>
 <pre> signal_number2name(2) eq 'INT'</pre>
-<dt>normalize_pkg_path(<font SIZE="-1">PATH</font>)</p>
-<dd>Normalize <font SIZE="-1">PATH</font> by removing superfluous path segments. <font SIZE="-1">PATH</font> is assumed to be relative the package root. Note that the result will never start nor end with a slash, even if <font SIZE="-1">PATH</font> does. </p>
+<dt>normalize_pkg_path(<font SIZE="-1">PATH</font>)</dt>
+<dd>Normalize <font SIZE="-1">PATH</font> by removing superfluous path segments. <font SIZE="-1">PATH</font> is assumed to be relative the package root. Note that the result will never start nor end with a slash, even if <font SIZE="-1">PATH</font> does. </dd>
 <p> As the name suggests, this is a path &#8220;normalization&#8221; rather than a true path resolution (for that use Cwd::realpath). Particularly, it assumes none of the path segments are symlinks. </p>
 <p> normalize_pkg_path will return <tt>&quot;q{}&quot;</tt> (i.e. the empty string) if <font SIZE="-1">PATH</font> is normalized to the root dir and <tt>&quot;undef&quot;</tt> if the path cannot be normalized without escaping the package root. </p>
 <p> Examples:<br />
@@ -148,8 +148,8 @@ description: "Lintian::Util – Lintian utility functions"
 &nbsp;<wbr>&nbsp;normalize_pkg_path(&#8216;usr/..&#8217;)&nbsp;eq q{}; </p>
 <pre> The following will return C&lt;undef&gt;:
  normalize_pkg_path('usr/bin/../../../../etc/passwd')</pre>
-<dt>normalize_pkg_path(<font SIZE="-1">CURDIR, LINK_TARGET</font>)</p>
-<dd>Normalize the path obtained by following a link with <font SIZE="-1">LINK_TARGET</font> as its target from <font SIZE="-1">CURDIR</font> as the current directory. <font SIZE="-1">CURDIR</font> is assumed to be relative to the package root. Note that the result will never start nor end with a slash, even if <font SIZE="-1">CURDIR</font> or <font SIZE="-1">DEST</font> does. </p>
+<dt>normalize_pkg_path(<font SIZE="-1">CURDIR, LINK_TARGET</font>)</dt>
+<dd>Normalize the path obtained by following a link with <font SIZE="-1">LINK_TARGET</font> as its target from <font SIZE="-1">CURDIR</font> as the current directory. <font SIZE="-1">CURDIR</font> is assumed to be relative to the package root. Note that the result will never start nor end with a slash, even if <font SIZE="-1">CURDIR</font> or <font SIZE="-1">DEST</font> does. </dd>
 <p> normalize_pkg_path will return <tt>&quot;q{}&quot;</tt> (i.e. the empty string) if the target is the root dir and <tt>&quot;undef&quot;</tt> if the path cannot be normalized without escaping the package root. </p>
 <p> <font SIZE="-1"><code>CAVEAT</code></font>: This function is <i>not always sufficient</i> to test if it is safe to open a given symlink. Use is_ancestor_of for that. If you must use this function, remember to check that the target is not a symlink (or if it is, that it can be resolved safely). </p>
 <p> Examples: </p>
@@ -162,12 +162,12 @@ description: "Lintian::Util – Lintian utility functions"
  The following will return C&lt;undef&gt;:
  normalize_pkg_path('usr/bin', '../../../../etc/passwd')
  normalize_pkg_path('usr/bin', '/../etc/passwd')</pre>
-<dt>is_ancestor_of(<font SIZE="-1">PARENTDIR, PATH</font>)</p>
-<dd>Returns true if and only if <font SIZE="-1">PATH</font> is <font SIZE="-1">PARENTDIR</font> or a path stored somewhere within <font SIZE="-1">PARENTDIR</font> (or its subdirs). </p>
+<dt>is_ancestor_of(<font SIZE="-1">PARENTDIR, PATH</font>)</dt>
+<dd>Returns true if and only if <font SIZE="-1">PATH</font> is <font SIZE="-1">PARENTDIR</font> or a path stored somewhere within <font SIZE="-1">PARENTDIR</font> (or its subdirs). </dd>
 <p> This function will resolve the paths; any failure to resolve the path will cause a trappable error.</p>
-<dt>read_md5sums</p>
+<dt>read_md5sums</dt>
 <dd>
-<dt>unescape_md5sum_filename</p>
-<dd></dl>
+</dd><dt>unescape_md5sum_filename</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1)</p>

@@ -18,10 +18,10 @@ description: "CREATE OPERATOR FAMILY – define a new operator family"
 <p> Refer to in the documentation for further information.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the operator family to be created. The name can be schema-qualified.</p>
-<dt><i>index_method</i></p>
-<dd>The name of the index method this operator family is for.</dl>
+<dt><i>name</i></dt>
+<dd>The name of the operator family to be created. The name can be schema-qualified.</dd>
+<dt><i>index_method</i></dt>
+<dd>The name of the index method this operator family is for.</dd></dl>
 <h2>Compatibility</h2>
 <p><code>CREATE OPERATOR FAMILY</code> is a PostgreSQL extension. There is no <code>CREATE OPERATOR FAMILY</code> statement in the SQL standard.</p>
 <h2>See Also</h2>

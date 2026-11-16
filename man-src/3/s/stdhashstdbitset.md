@@ -17,12 +17,9 @@ The template specialization of std::hash for std::bitset&lt;N&gt; allows users t
 
 The following code shows one possible output of a hash function used on several bitsets: 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::bitset&lt;4&gt; b1(1);
     std::bitset&lt;4&gt; b2(2);

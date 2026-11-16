@@ -28,31 +28,30 @@ Primitive type Type Description / Example-- -- -- -- -- -- -- -- -- -- -- -- -- 
     ip - address - prefix ip - shortcut - address Shortcut IP Address ip - address,
     ip - address - mask,
     ip - address - prefix ip - protocol IP Protocol ip - protocol ip - source - address - prefix - len Source IP address ip - address - prefix - len prefix length ip - destination - address - prefix - len Destination IP address ip - address - prefix - len prefix length
-
                                                                                                                                                                                                                                                                 ip -
         tos IP Type Of Service ip - tos ip - marked - tos IP Type Of Service ip - tos ip - tcp - flags IP / TCP Flags ip - tcp - flags ip - source - port Source IP Port ip - port eg TCP / UDP ip - destination - port Destination IP Port ip - port eg TCP / UDP input - interface Source ifIndex ifindex eg Input Interface output - interface Destination ifIndex ifindex eg Output Interface start - time Start Time of flow time,
     time - date end - time End Time of Flow time, time - date flows Number of flows counter octets Number of octets counter packets Number of packets counter duration Duration of flow in ms counter engine - id Engine ID engine engine - type Engine Type engine source - tag Source Tag tag, tag - mask destination - tag Destination Tag tag, tag - mask pps Packets Per Second double bps Bits Per Second double random - sample Random Sample rate
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-f</code><i> filter_fname</i></p>
-<dd> Filter list filename. Defaults to <i>/etc/flow-tools/cfg/filter</i>.</p>
-<dt><code>-F</code><i> filter_definition</i></p>
-<dd> Select the active definition. Defaults to default.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-k</code></p>
-<dd> Keep time from input.</p>
-<dt><code>-v</code><i> variable binding</i></p>
-<dd> Set a variable FOO=bar.</p>
-<dt><code>-z</code><i> z_level</i></p>
-<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dl>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-f</code><i> filter_fname</i></dt>
+<dd> Filter list filename. Defaults to <i>/etc/flow-tools/cfg/filter</i>.</dd>
+<dt><code>-F</code><i> filter_definition</i></dt>
+<dd> Select the active definition. Defaults to default.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-k</code></dt>
+<dd> Keep time from input.</dd>
+<dt><code>-v</code><i> variable binding</i></dt>
+<dd> Set a variable FOO=bar.</dd>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd></dl>
 <h2>TIME/DATE PARSING</h2>
 <p> time-date parsing is implemented with <i>getdate.y</i>, a commonly used function to process free-form time date specifications. Example usage borrowed from <code>cvs</code>: 1 month ago 2 hours ago 400000 seconds ago last year last Monday yesterday a fortnight ago 3/31/92 10:00:07 PST January 23, 1987 10:05pm 22:00 GMT</p>
 <h2>EXAMPLES</h2>

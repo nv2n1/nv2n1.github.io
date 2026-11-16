@@ -50,25 +50,25 @@ description: "perlreguts – Description of the Perl regular expression engine."
 };</p>
 <p> Other larger <tt>&quot;regnode&quot;</tt>-like structures are defined in <i>regcomp.h</i>. They are almost like subclasses in that they have the same fields as <tt>&quot;regnode&quot;</tt>, with possibly additional fields following in the structure, and in some cases the specific meaning (and name) of some of base fields are overridden. The following is a more complete description.</p>
 <dl>
-<dt>&quot;regnode_1&quot;</p>
+<dt>&quot;regnode_1&quot;</dt>
 <dd>
-<dt>&quot;regnode_2&quot;</p>
-<dd> <tt>&quot;regnode_1&quot;</tt> structures have the same header, followed by a single four-byte argument; <tt>&quot;regnode_2&quot;</tt> structures contain two two-byte arguments instead: </p>
+</dd><dt>&quot;regnode_2&quot;</dt>
+<dd> <tt>&quot;regnode_1&quot;</tt> structures have the same header, followed by a single four-byte argument; <tt>&quot;regnode_2&quot;</tt> structures contain two two-byte arguments instead: </dd>
 <pre>
     regnode_1                U32 arg1;
     regnode_2                U16 arg1;  U16 arg2;
 </pre>
-<dt>&quot;regnode_string&quot;</p>
-<dd> <tt>&quot;regnode_string&quot;</tt> structures, used for literal strings, follow the header with a one-byte length and then the string data. Strings are padded on the end with zero bytes so that the total length of the node is a multiple of four bytes: </p>
+<dt>&quot;regnode_string&quot;</dt>
+<dd> <tt>&quot;regnode_string&quot;</tt> structures, used for literal strings, follow the header with a one-byte length and then the string data. Strings are padded on the end with zero bytes so that the total length of the node is a multiple of four bytes: </dd>
 <p>regnode_string char string[1];<br />
 U8 str_len; /* overrides flags */</p>
-<dt>&quot;regnode_charclass&quot;</p>
-<dd> Bracketed character classes are represented by <tt>&quot;regnode_charclass&quot;</tt> structures, which have a four-byte argument and then a 32-byte (256-bit) bitmap indicating which characters in the Latin1 range are included in the class. </p>
+<dt>&quot;regnode_charclass&quot;</dt>
+<dd> Bracketed character classes are represented by <tt>&quot;regnode_charclass&quot;</tt> structures, which have a four-byte argument and then a 32-byte (256-bit) bitmap indicating which characters in the Latin1 range are included in the class. </dd>
 <p>regnode_charclass U32 arg1;<br />
 char bitmap[ANYOF_BITMAP_SIZE];</p>
 <p> Various flags whose names begin with <tt>&quot;ANYOF_&quot;</tt> are used for special situations. Above Latin1 matches and things not known until run-time are stored in &#8220;Perl&#8217;s pprivate structure&#8221;.</p>
-<dt>&quot;regnode_charclass_posixl&quot;</p>
-<dd> There is also a larger form of a char class structure used to represent <font SIZE="-1">POSIX</font> char classes under <tt>&quot;/l&quot;</tt> matching, called <tt>&quot;regnode_charclass_posixl&quot;</tt> which has an additional 32-bit bitmap indicating which <font SIZE="-1">POSIX</font> char classes have been included. </p>
+<dt>&quot;regnode_charclass_posixl&quot;</dt>
+<dd> There is also a larger form of a char class structure used to represent <font SIZE="-1">POSIX</font> char classes under <tt>&quot;/l&quot;</tt> matching, called <tt>&quot;regnode_charclass_posixl&quot;</tt> which has an additional 32-bit bitmap indicating which <font SIZE="-1">POSIX</font> char classes have been included. </dd>
 <p>regnode_charclass_posixl U32 arg1;<br />
 char bitmap[ANYOF_BITMAP_SIZE];<br />
 U32 classflags;
@@ -79,45 +79,39 @@ U32 classflags;
 <p> <i>What regop is next?</i> </p>
 <p> There are three distinct concepts of &#8220;next&#8221; in the regex engine, and it is important to keep them clear.</p>
 <dl>
-<dt>&bull;</p>
-<dd> There is the &#8220;next regnode&#8221; from a given regnode, a value which is rarely useful except that sometimes it matches up in terms of value with one of the others, and that sometimes the code assumes this to always be so.</p>
-<dt>&bull;</p>
-<dd> There is the &#8220;next regop&#8221; from a given regop/regnode. This is the regop physically located after the current one, as determined by the size of the current regop. This is often useful, such as when dumping the structure we use this order to traverse. Sometimes the code assumes that the &#8220;next regnode&#8221; is the same as the &#8220;next regop&#8221;, or in other words assumes that the sizeof a given regop type is always going to be one regnode large.</p>
-<dt>&bull;</p>
-<dd> There is the &#8220;regnext&#8221; from a given regop. This is the regop which is reached by jumping forward by the value of <tt>&quot;NEXT_OFF()&quot;</tt>, or in a few cases for longer jumps by the <tt>&quot;arg1&quot;</tt> field of the <tt>&quot;regnode_1&quot;</tt> structure. The subroutine <tt>&quot;regnext()&quot;</tt> handles this transparently. This is the logical successor of the node, which in some cases, like that of the <tt>&quot;BRANCH&quot;</tt> regop, has special meaning.</dl>
+<dt>&bull;</dt>
+<dd> There is the &#8220;next regnode&#8221; from a given regnode, a value which is rarely useful except that sometimes it matches up in terms of value with one of the others, and that sometimes the code assumes this to always be so.</dd>
+<dt>&bull;</dt>
+<dd> There is the &#8220;next regop&#8221; from a given regop/regnode. This is the regop physically located after the current one, as determined by the size of the current regop. This is often useful, such as when dumping the structure we use this order to traverse. Sometimes the code assumes that the &#8220;next regnode&#8221; is the same as the &#8220;next regop&#8221;, or in other words assumes that the sizeof a given regop type is always going to be one regnode large.</dd>
+<dt>&bull;</dt>
+<dd> There is the &#8220;regnext&#8221; from a given regop. This is the regop which is reached by jumping forward by the value of <tt>&quot;NEXT_OFF()&quot;</tt>, or in a few cases for longer jumps by the <tt>&quot;arg1&quot;</tt> field of the <tt>&quot;regnode_1&quot;</tt> structure. The subroutine <tt>&quot;regnext()&quot;</tt> handles this transparently. This is the logical successor of the node, which in some cases, like that of the <tt>&quot;BRANCH&quot;</tt> regop, has special meaning.</dd></dl>
 <h2>Process Overview</h2>
 <p> Broadly speaking, performing a match of a string against a pattern involves the following steps:</p>
 <dl>
-<dt>A. Compilation</p>
+<dt>A. Compilation</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>1. Parsing for size</dt>
 <dd>
-<dl>
-<dt>1. Parsing for size</p>
+</dd><dt>2. Parsing for construction</dt>
 <dd>
-<dt>2. Parsing for construction</p>
-<dd>
-<dt>3. Peep-hole optimisation and analysis</p>
-<dd></dl>
+</dd><dt>3. Peep-hole optimisation and analysis</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>B. Execution</p>
+</dl>
+<dt>B. Execution</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>4. Start position and no-match optimisations</dt>
 <dd>
-<dl>
-<dt>4. Start position and no-match optimisations</p>
-<dd>
-<dt>5. Program execution</p>
-<dd></dl>
+</dd><dt>5. Program execution</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> Where these steps occur in the actual execution of a perl program is determined by whether the pattern involves interpolating any string variables. If interpolation occurs, then compilation happens at run time. If it does not, then compilation is performed at compile time. (The <tt>&quot;/o&quot;</tt> modifier changes this, as does <tt>&quot;qr//&quot;</tt> to a certain extent.) The engine doesn&#8217;t really care that much.</p>
 <h3>Compilation</h3>
@@ -173,3 +167,4 @@ U32 classflags;
 <p> <i>Parsing complications</i> </p>
 <p> The implication of the above description is that a pattern containing nested parentheses will result in a call graph which cycles through <tt>&quot;reg()&quot;</tt>, <tt>&quot;regbranch()&quot;</tt>, <tt>&quot;regpiece()&quot;</tt>, <tt>&quot;regatom()&quot;</tt>, <tt>&quot;reg()&quot;</tt>, <tt>&quot;regbranch()&quot;</tt> <i>etc</i> multiple times, until the deepest level of nesting is reached. All the above routines return a pointer to a <tt>&quot;regnode&quot;</tt>, which is usually the last regnode added to the program. However, one complication is that <code>reg()</code> returns <font SIZE="-1">NULL</font> for parsing <tt>&quot;(?:)&quot;</tt> syntax for embedded modifiers, setting the flag <tt>&quot;TRYAGAIN&quot;</tt>. The <tt>&quot;TRYAGAIN&quot;</tt> propagates upwards until it is captured, in some cases by <tt>&quot;regatom()&quot;</tt>, but otherwise unconditionally by <tt>&quot;regbranch()&quot;</tt>. Hence it will never be returned by <tt>&quot;regbranch()&quot;</tt> to <tt>&quot;reg()&quot;</tt>. This flag permits patterns such as <tt>&quot;(?i)+&quot;</tt> to be detected as errors (<i>Quantifier follows nothing in regex; marked by &lt;&#8211; </i><font SIZE="-1"><i>HERE</i></font><i> in m/(?i)+ &lt;&#8211; </i><font SIZE="-1"><i>HERE /</i></font><i></i>). </p>
 <p> Another complication is that the representation used for the program differs if it needs to store Unicode, but it&#8217;s not always possible to know for sure whether it does until midway through parsing. The Unicode representation for the program is larger, and cannot be matched as efficiently. (See &#8220;Unicode and Localisation Support&#8221; below for more details as to why.) If the pattern contains literal Unicode, it&#8217;s obvious that the program needs to store Unicode. Otherwise, the parser optimistically assumes that the more efficient representation can be used, and starts sizing on this basis. However, if it then encounters something in the pattern which must be stored as Unicode, such as an <tt>&quot;
+</p>

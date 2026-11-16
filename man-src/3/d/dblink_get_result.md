@@ -19,11 +19,11 @@ dblink_get_result(text connname [, bool fail_on_error]) returns setof record
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> Name of the connection to use.</dl>
+</dt><dd> Name of the connection to use.</dd></dl>
 <p> <i>fail_on_error</i></p>
 <dl>
 <dt>
-<dd> If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function returns no rows.</dl>
+</dt><dd> If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function returns no rows.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> For an async query (that is, a SQL statement returning rows), the function returns the row(s) produced by the query. To use this function, you will need to specify the expected set of columns, as previously discussed for <code>dblink</code>. </p>
 <p> For an async command (that is, a SQL statement not returning rows), the function returns a single row with a single text column containing the command&#8217;s status string. It is still necessary to specify that the result will have a single text column in the calling FROM clause.</p>
@@ -33,7 +33,7 @@ dblink_get_result(text connname [, bool fail_on_error]) returns setof record
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 contrib_regression = #SELECT dblink_connect('dtest1', 'dbname=contrib_regression');
 dblink_connect-- -- -- -- -- -- -- --OK(1 row)
@@ -80,5 +80,5 @@ f1 | f2 | f3-- --+-- --+-- -- -- -- -- -- -- -7 | h |
 10 | k | {a10, b10, c10}(4 rows)contrib_regression = #SELECT * FROM dblink_get_result('dtest1') AS t1(f1 int, f2 text, f3 text[]);
 f1 | f2 | f3-- --+-- --+-- --(0 rows)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

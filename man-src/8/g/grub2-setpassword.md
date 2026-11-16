@@ -14,12 +14,12 @@ description: "grub-setpassword — Generate the user.cfg file containing the has
 <p><code>grub-setpassword</code> outputs the user.cfg file which contains the hashed GRUB bootloader password. This utility only supports configurations where there is a single root user. The file has the format: GRUB2_PASSWORD=&lt;<i>hashed password</i>&gt;. </p>
 <h2>Options</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd>Display program usage and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd>Display the current version.</p>
-<dt>-o, &#8211;output=&lt;<i>DIRECTORY</i>&gt;</p>
-<dd>Choose the file path to which user.cfg will be written. </p>
+<dt>-h, &#8211;help</dt>
+<dd>Display program usage and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd>Display the current version.</dd>
+<dt>-o, &#8211;output=&lt;<i>DIRECTORY</i>&gt;</dt>
+<dd>Choose the file path to which user.cfg will be written. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>info grub</code> <code>info grub2-mkpasswd-pbkdf2</code> </p>

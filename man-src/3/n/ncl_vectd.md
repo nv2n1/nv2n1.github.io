@@ -21,9 +21,9 @@ CALL VECTD (X,Y)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(an input expression of type REAL) defines the X user coordinate of the next point in a sequence of points defining a curve.
-<dt>Y
-<dd>(an input expression of type REAL) defines the Y user coordinate of the next point in a sequence of points defining a curve.</dl>
+</dt><dd>(an input expression of type REAL) defines the X user coordinate of the next point in a sequence of points defining a curve.
+</dd><dt>Y
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate of the next point in a sequence of points defining a curve.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

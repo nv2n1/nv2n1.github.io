@@ -16,86 +16,86 @@ description: "Galeon – gecko-based GNOME web browser"
 <h2>OPTIONS</h2>
 <p> Galeon accepts the following options: <code>Help options</code></p>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display brief usage message. <code>GNOME options</code></p>
-<dt><code>&#8211;disable-sound</code></p>
-<dd> Disable sound server usage</p>
-<dt><code>&#8211;enable-sound</code></p>
-<dd> Enable sound server usage</p>
-<dt><code>&#8211;espeaker=HOSTNAME:PORT</code></p>
-<dd> Host:port on which the sound server to use is running</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version number and exit <code>GTK options</code></p>
-<dt><code>&#8211;gdk-debug=FLAGS</code></p>
-<dd> Gdk debugging flags to set</p>
-<dt><code>&#8211;gdk-no-debug=FLAGS</code></p>
-<dd> Gdk debugging flags to unset</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use</p>
-<dt><code>&#8211;sync</code></p>
-<dd> Make X calls synchronous</p>
-<dt><code>&#8211;no-xshm</code></p>
-<dd> Don&#8217;t use X shared memory extension</p>
-<dt><code>&#8211;name=NAME</code></p>
-<dd> Program name as used by the window manager</p>
-<dt><code>&#8211;class=CLASS</code></p>
-<dd> Program class as used by the window manager</p>
-<dt><code>&#8211;gxid_host=HOST</code></p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message. <code>GNOME options</code></dd>
+<dt><code>&#8211;disable-sound</code></dt>
+<dd> Disable sound server usage</dd>
+<dt><code>&#8211;enable-sound</code></dt>
+<dd> Enable sound server usage</dd>
+<dt><code>&#8211;espeaker=HOSTNAME:PORT</code></dt>
+<dd> Host:port on which the sound server to use is running</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version number and exit <code>GTK options</code></dd>
+<dt><code>&#8211;gdk-debug=FLAGS</code></dt>
+<dd> Gdk debugging flags to set</dd>
+<dt><code>&#8211;gdk-no-debug=FLAGS</code></dt>
+<dd> Gdk debugging flags to unset</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Make X calls synchronous</dd>
+<dt><code>&#8211;no-xshm</code></dt>
+<dd> Don&#8217;t use X shared memory extension</dd>
+<dt><code>&#8211;name=NAME</code></dt>
+<dd> Program name as used by the window manager</dd>
+<dt><code>&#8211;class=CLASS</code></dt>
+<dd> Program class as used by the window manager</dd>
+<dt><code>&#8211;gxid_host=HOST</code></dt>
 <dd>
-<dt><code>&#8211;gxid_port=PORT</code></p>
+</dd><dt><code>&#8211;gxid_port=PORT</code></dt>
 <dd>
-<dt><code>&#8211;xim-preedit=STYLE</code></p>
+</dd><dt><code>&#8211;xim-preedit=STYLE</code></dt>
 <dd>
-<dt><code>&#8211;xim-status=STYLE</code></p>
+</dd><dt><code>&#8211;xim-status=STYLE</code></dt>
 <dd>
-<dt><code>&#8211;gtk-debug=FLAGS</code></p>
-<dd> Gtk+ debugging flags to set</p>
-<dt><code>&#8211;gtk-no-debug=FLAGS</code></p>
-<dd> Gtk+ debugging flags to unset</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd> Make all warnings fatal</p>
-<dt><code>&#8211;gtk-module=MODULE</code></p>
-<dd> Load an additional Gtk module <code>GNOME GUI options</code></p>
-<dt><code>&#8211;disable-crash-dialog</code></p>
-<dd> <code>Session management options</code></p>
-<dt><code>&#8211;sm-client-id=ID</code></p>
-<dd> Specify session management ID</p>
-<dt><code>&#8211;sm-config-prefix=PREFIX</code></p>
-<dd> Specify prefix of saved configuration</p>
-<dt><code>&#8211;sm-disable</code></p>
-<dd> Disable connection to session manager <code>OAF options</code></p>
-<dt><code>&#8211;oaf-od-ior=IOR</code></p>
-<dd> Object directory to use when registering servers</p>
-<dt><code>&#8211;oaf-ior-fd=FD</code></p>
-<dd> File descriptor to print IOR on</p>
-<dt><code>&#8211;oaf-activate-iid=IID</code></p>
-<dd> IID to activate</p>
-<dt><code>&#8211;oaf-private</code></p>
-<dd> Prevent registering of server with OAF <code>Galeon options</code></p>
-<dt><code>-n, &#8211;new-tab</code></p>
-<dd> Open a new tab in an existing Galeon window</p>
-<dt><code>-w, &#8211;new-window</code></p>
-<dd> Open a new window in an existing Galeon process</p>
-<dt><code>&#8211;noraise</code></p>
-<dd> Do not raise the window when opening a page in an existing Galeon process</p>
-<dt><code>-f, &#8211;fullscreen</code></p>
-<dd> Run galeon in full screen mode</p>
-<dt><code>-x, &#8211;existing</code></p>
-<dd> Attempt to load URL in existing Galeon window</p>
-<dt><code>-p, &#8211;panel</code></p>
-<dd> Open as a panel applet</p>
-<dt><code>-s, &#8211;server</code></p>
-<dd> Don&#8217;t open any windows; instead act as a server for quick startup of new Galeon instances</p>
-<dt><code>-t, &#8211;add-bookmark=URL</code></p>
-<dd> Add a temp bookmark (don&#8217;t open any window)</p>
-<dt><code>-g, &#8211;geometry=GEOMETRY</code></p>
-<dd> Create the initial window with the given geometry. See <code>X(1)</code> for the GEOMETRY format</p>
-<dt><code>-c, &#8211;close</code></p>
-<dd> Close all Galeon windows</p>
-<dt><code>-q, &#8211;quit</code></p>
-<dd> Same as &#8211;close, but exits server mode too</dl>
+</dd><dt><code>&#8211;gtk-debug=FLAGS</code></dt>
+<dd> Gtk+ debugging flags to set</dd>
+<dt><code>&#8211;gtk-no-debug=FLAGS</code></dt>
+<dd> Gtk+ debugging flags to unset</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd> Make all warnings fatal</dd>
+<dt><code>&#8211;gtk-module=MODULE</code></dt>
+<dd> Load an additional Gtk module <code>GNOME GUI options</code></dd>
+<dt><code>&#8211;disable-crash-dialog</code></dt>
+<dd> <code>Session management options</code></dd>
+<dt><code>&#8211;sm-client-id=ID</code></dt>
+<dd> Specify session management ID</dd>
+<dt><code>&#8211;sm-config-prefix=PREFIX</code></dt>
+<dd> Specify prefix of saved configuration</dd>
+<dt><code>&#8211;sm-disable</code></dt>
+<dd> Disable connection to session manager <code>OAF options</code></dd>
+<dt><code>&#8211;oaf-od-ior=IOR</code></dt>
+<dd> Object directory to use when registering servers</dd>
+<dt><code>&#8211;oaf-ior-fd=FD</code></dt>
+<dd> File descriptor to print IOR on</dd>
+<dt><code>&#8211;oaf-activate-iid=IID</code></dt>
+<dd> IID to activate</dd>
+<dt><code>&#8211;oaf-private</code></dt>
+<dd> Prevent registering of server with OAF <code>Galeon options</code></dd>
+<dt><code>-n, &#8211;new-tab</code></dt>
+<dd> Open a new tab in an existing Galeon window</dd>
+<dt><code>-w, &#8211;new-window</code></dt>
+<dd> Open a new window in an existing Galeon process</dd>
+<dt><code>&#8211;noraise</code></dt>
+<dd> Do not raise the window when opening a page in an existing Galeon process</dd>
+<dt><code>-f, &#8211;fullscreen</code></dt>
+<dd> Run galeon in full screen mode</dd>
+<dt><code>-x, &#8211;existing</code></dt>
+<dd> Attempt to load URL in existing Galeon window</dd>
+<dt><code>-p, &#8211;panel</code></dt>
+<dd> Open as a panel applet</dd>
+<dt><code>-s, &#8211;server</code></dt>
+<dd> Don&#8217;t open any windows; instead act as a server for quick startup of new Galeon instances</dd>
+<dt><code>-t, &#8211;add-bookmark=URL</code></dt>
+<dd> Add a temp bookmark (don&#8217;t open any window)</dd>
+<dt><code>-g, &#8211;geometry=GEOMETRY</code></dt>
+<dd> Create the initial window with the given geometry. See <code>X(1)</code> for the GEOMETRY format</dd>
+<dt><code>-c, &#8211;close</code></dt>
+<dd> Close all Galeon windows</dd>
+<dt><code>-q, &#8211;quit</code></dt>
+<dd> Same as &#8211;close, but exits server mode too</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Marco Pesenti Gritti, Remco de Jong, Ricardo Fern�ndez Pascual, Nate Case, Bob Phan, Matt Aubury, Joshua Horvath, Yanko Kaneti, Philip Langdale and Matthew Mueller.</p>
 <h2>REPORTING BUGS</h2>

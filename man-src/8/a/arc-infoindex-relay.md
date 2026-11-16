@@ -14,8 +14,8 @@ description: "arc-infoindex-relay – ARC Information Index Relay Helper"
 <p><code>arc-infoindex-relay</code> <i>server-fifo</i> </p>
 <h2>Arguments</h2>
 <dl>
-<dt><code>server-fifo</code></p>
-<dd>The FIFO on which the arc-infoindex-server accepts queries</dl>
+<dt><code>server-fifo</code></dt>
+<dd>The FIFO on which the arc-infoindex-server accepts queries</dd></dl>
 <h2>Extended Description</h2>
 <p><code>arc-infoindex-relay</code> acts as a bridge between the slapd server and the arc-infoindex-server in the NorduGrid ARC Information system. For each index served by the arc-infoindex-server a shell backend database should be configured in the slapd configuration. </p>
 <p> Here is a sample configuration: </p>

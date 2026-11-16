@@ -17,11 +17,11 @@ bson_utf8_escape_for_json(const char *utf8,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>utf8</code></p>
-<dd> A UTF-8 encoded string.</dl>
+<dt><code>utf8</code></dt>
+<dd> A UTF-8 encoded string.</dd></dl>
 <dl>
-<dt><code>utf8_len</code></p>
-<dd> The length of <code>utf8</code> in bytes or -1 if it is NULL terminated.</dl>
+<dt><code>utf8_len</code></dt>
+<dd> The length of <code>utf8</code> in bytes or -1 if it is NULL terminated.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Escapes the string <code>utf8</code> to be placed inside of a JSON string. </p>
 <h2>RETURNS</h2>

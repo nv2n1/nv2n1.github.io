@@ -10,7 +10,6 @@ description: "need_uconvert – Tells if a string requires encoding conversion. 
 <p>need_uconvert &#8211; Tells if a string requires encoding conversion. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int need_uconvert(const char *s, int type, int newtype);</code></pre>
 <h2>Description</h2>
 <p>Given a pointer to a string (`s&#8217;), a description of the type of the string (`type&#8217;), and the type that you would like this string to be converted into (`newtype&#8217;), this function tells you whether any conversion is required. No conversion will be needed if `type&#8217; and `newtype&#8217; are the same, or if one type is ASCII, the other is UTF-8, and the string contains only character values less than 128. As a convenience shortcut, you can pass the value U_CURRENT as either of the type parameters, to represent whatever text encoding format is currently selected. Example: </p>

@@ -22,10 +22,10 @@ description: "cgbmv.f –"
  y := alpha*A**H*x + beta*y,
  where alpha and beta are scalars, x and y are vectors and A is an
  m by n band matrix, with kl sub-diagonals and ku super-diagonals.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  On entry, TRANS specifies the operation to be performed as
  follows:
@@ -104,13 +104,13 @@ description: "cgbmv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -121,7 +121,8 @@ description: "cgbmv.f –"
  Jeremy Du Croz, Nag Central Office.
  Sven Hammarling, Nag Central Office.
  Richard Hanson, Sandia National Labs.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 188 of file cgbmv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -24,11 +24,8 @@ Manages the contents of the underlying string object.<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;sstream&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     int n;
     std::istringstream in; // could also use in(&quot;1 2&quot;)

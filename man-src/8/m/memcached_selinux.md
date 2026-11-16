@@ -55,9 +55,9 @@ description: "memcached_selinux – Security Enhanced Linux Policy for the memca
 <p> Policy governs the access confined processes have to these ports. SELinux memcached policy is very flexible allowing users to setup their memcached processes in as secure a method as possible. </p>
 <p> The following port types are defined for memcached: </p>
 <dl>
-<dt><code>memcache_port_t</code></p>
+<dt><code>memcache_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 11211 udp 11211</dl>
+</dd><dd>Default Defined Ports: tcp 11211 udp 11211</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type memcached_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -105,8 +105,8 @@ description: "memcached_selinux – Security Enhanced Linux Policy for the memca
 <p> <code>memcached_var_run_t</code> </p>
 <p> &#8211; Set files with the memcached_var_run_t type, if you want to store the memcached files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/memcached(/.*)?, /var/run/ipa_memcached(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/memcached(/.*)?, /var/run/ipa_memcached(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -20,26 +20,26 @@ description: "mksh sh – MirBSD Korn shell"
 <p> Most builtins can be called directly, for example if a link points from its name to the shell; not all make sense, have been tested or work at all though. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-c </code><i>string</i></p>
-<dd> will execute the command(s) contained in <i>string</i></p>
-<dt><code>-i</code></p>
-<dd> Interactive shell. A shell is &#8220;interactive&#8221; if this option is used or if both standard input and standard error are attached to a <a href="/docs/linux/man/4-tty/">tty</a>(4). An interactive shell has job control enabled, ignores the <code>SIGINT</code> <code>SIGQUIT</code> and <code>SIGTERM</code> signals, and prints prompts before reading input (see the <code>PS1</code> and <code>PS2</code> parameters). It also processes the <code>ENV</code> parameter or the mkshrc file (see below). For non-interactive shells, the <code>trackall</code> option is on by default (see the <code>set</code> command below).</p>
-<dt><code>-l</code></p>
-<dd> Login shell. If the basename the shell is called with (i.e. argv[0]) starts with `-&#8216; or if this option is used, the shell is assumed to be a login shell; see Sx Startup files below.</p>
-<dt><code>-p</code></p>
-<dd> Privileged shell. A shell is &#8220;privileged&#8221; if this option is used or if the real user ID or group ID does not match the effective user ID or group ID (see <a href="/docs/linux/man/2-getuid/">getuid</a>(2) and <a href="/docs/linux/man/2-getgid/">getgid</a>(2)). Clearing the privileged option causes the shell to set its effective user ID (group ID) to its real user ID (group ID). For further implications, see Sx Startup files .</p>
-<dt><code>-r</code></p>
-<dd> Restricted shell. A shell is &#8220;restricted&#8221; if this option is used. The following restrictions come into effect after the shell processes any profile and <code>ENV</code> files: </p>
+<dt><code>-c </code><i>string</i></dt>
+<dd> will execute the command(s) contained in <i>string</i></dd>
+<dt><code>-i</code></dt>
+<dd> Interactive shell. A shell is &#8220;interactive&#8221; if this option is used or if both standard input and standard error are attached to a <a href="/docs/linux/man/4-tty/">tty</a>(4). An interactive shell has job control enabled, ignores the <code>SIGINT</code> <code>SIGQUIT</code> and <code>SIGTERM</code> signals, and prints prompts before reading input (see the <code>PS1</code> and <code>PS2</code> parameters). It also processes the <code>ENV</code> parameter or the mkshrc file (see below). For non-interactive shells, the <code>trackall</code> option is on by default (see the <code>set</code> command below).</dd>
+<dt><code>-l</code></dt>
+<dd> Login shell. If the basename the shell is called with (i.e. argv[0]) starts with `-&#8216; or if this option is used, the shell is assumed to be a login shell; see Sx Startup files below.</dd>
+<dt><code>-p</code></dt>
+<dd> Privileged shell. A shell is &#8220;privileged&#8221; if this option is used or if the real user ID or group ID does not match the effective user ID or group ID (see <a href="/docs/linux/man/2-getuid/">getuid</a>(2) and <a href="/docs/linux/man/2-getgid/">getgid</a>(2)). Clearing the privileged option causes the shell to set its effective user ID (group ID) to its real user ID (group ID). For further implications, see Sx Startup files .</dd>
+<dt><code>-r</code></dt>
+<dd> Restricted shell. A shell is &#8220;restricted&#8221; if this option is used. The following restrictions come into effect after the shell processes any profile and <code>ENV</code> files: </dd>
 <ul>
 <li> The <code>cd</code> Po and Ic chdir Pc command is disabled.
 <li> The <code>SHELL</code> <code>ENV</code> and <code>PATH</code> parameters cannot be changed.
 <li> Command names can&#8217;t be specified with absolute or relative paths.
 <li> The &#8211;<code>p</code> option of the built-in command <code>command</code> can&#8217;t be used.
 <li> Redirections that create files can&#8217;t be used (i.e. `&gt;&#8217; `&gt;|&#8217; `&gt;&gt;&#8217; `&lt;&gt;&#8217; </ul>
-<dt><code>-s</code></p>
-<dd> The shell reads commands from standard input; all non-option arguments are positional parameters.</p>
-<dt><code>-T </code><i>tty</i></p>
-<dd> Spawn on the <a href="/docs/linux/man/4-tty/">tty</a>(4) device given. Superuser only. If <i>tty</i> is a dash, detach from controlling terminal (daemonise) instead.</dl>
+<dt><code>-s</code></dt>
+<dd> The shell reads commands from standard input; all non-option arguments are positional parameters.</dd>
+<dt><code>-T </code><i>tty</i></dt>
+<dd> Spawn on the <a href="/docs/linux/man/4-tty/">tty</a>(4) device given. Superuser only. If <i>tty</i> is a dash, detach from controlling terminal (daemonise) instead.</dd></dl>
 <p> In addition to the above, the options described in the <code>set</code> built-in command can also be used on the command line: both [-<code>+abCefhkmnuvXx </code>and ] [-<code>+o </code><i>option</i> ] can be used for single letter or long options, respectively. </p>
 <p> If neither the &#8211;<code>c</code> nor the &#8211;<code>s</code> option is specified, the first non-option argument specifies the name of a file the shell reads commands from. If there are no non-option arguments, the shell reads commands from the standard input. The name of the shell (i.e. the contents of $0) is determined as follows: if the &#8211;<code>c</code> option is used and there is a non-option argument, it is used as the name; if commands are being read from a file, the file is used as the name; otherwise, the basename the shell was called with (i.e. argv[0]) is used. </p>
 <p> The exit status of the shell is 127 if the command file specified on the command line could not be opened, or non-zero if a fatal syntax error occurred during the execution of a script. In the absence of fatal errors, the exit status is that of the last command executed, or zero, if no command is executed.</p>
@@ -88,54 +88,54 @@ $<br />
 <p> This is not valid: </p>
 <blockquote><p><tt>$ { echo foo; echo bar</tt></p></blockquote>
 <dl>
-<dt><code>(</code><i>list</i> )</p>
-<dd> Execute <i>list</i> in a subshell. There is no implicit way to pass environment changes from a subshell back to its parent.</p>
-<dt><code>{ </code><i>list ; </i><code>}</code></p>
-<dd> Compound construct; <i>list</i> is executed, but not in a subshell. Note that `{&#8216; and `}&#8217; are reserved words, not meta-characters.</p>
-<dt><code> case </code><i>word </i><code>in</code> [[(] <i>pattern</i> [| <i>pat</i> ] <code>&#8230; )</code> <i>list</i> [;; | ;&amp; | ;|&nbsp;<wbr>] &#8230; esac]</p>
+<dt><code>(</code><i>list</i> )</dt>
+<dd> Execute <i>list</i> in a subshell. There is no implicit way to pass environment changes from a subshell back to its parent.</dd>
+<dt><code>{ </code><i>list ; </i><code>}</code></dt>
+<dd> Compound construct; <i>list</i> is executed, but not in a subshell. Note that `{&#8216; and `}&#8217; are reserved words, not meta-characters.</dd>
+<dt><code> case </code><i>word </i><code>in</code> [[(] <i>pattern</i> [| <i>pat</i> ] <code>&#8230; )</code> <i>list</i> [;; | ;&amp; | ;|&nbsp;<wbr>] &#8230; esac]</dt>
 <dd>
-<dd>The <code>case</code> statement attempts to match <i>word</i> against a specified <i>pattern</i> the <i>list</i> associated with the first successfully matched pattern is executed. Patterns used in <code>case</code> statements are the same as those used for file name patterns except that the restrictions regarding `.&#8217; and `/&#8217; are dropped. Note that any unquoted space before and after a pattern is stripped; any space within a pattern must be quoted. Both the word and the patterns are subject to parameter, command, and arithmetic substitution, as well as tilde substitution. </p>
+</dd><dd>The <code>case</code> statement attempts to match <i>word</i> against a specified <i>pattern</i> the <i>list</i> associated with the first successfully matched pattern is executed. Patterns used in <code>case</code> statements are the same as those used for file name patterns except that the restrictions regarding `.&#8217; and `/&#8217; are dropped. Note that any unquoted space before and after a pattern is stripped; any space within a pattern must be quoted. Both the word and the patterns are subject to parameter, command, and arithmetic substitution, as well as tilde substitution. </dd>
 <p> For historical reasons, open and close braces may be used instead of <code>in</code> and <code>esac</code> e.g. <code>case $foo { *) echo bar;; }</code> </p>
 <p> The list terminators are:</p>
 <dl>
-<dt><code>`;;&#8217; </code></p>
-<dd> Terminate after the list.</p>
-<dt><code>`;&amp;&#8217; </code></p>
-<dd> Fall through into the next list.</p>
-<dt><code>`;|&#8217; </code></p>
-<dd> Evaluate the remaining pattern-list tuples.</dl>
+<dt><code>`;;&#8217; </code></dt>
+<dd> Terminate after the list.</dd>
+<dt><code>`;&amp;&#8217; </code></dt>
+<dd> Fall through into the next list.</dd>
+<dt><code>`;|&#8217; </code></dt>
+<dd> Evaluate the remaining pattern-list tuples.</dd></dl>
 <p> The exit status of a <code>case</code> statement is that of the executed <i>list</i> if no <i>list</i> is executed, the exit status is zero.</p>
-<dt><code> for </code><i>name</i> [in <i>word </i><code>&#8230; </code>] <code>do </code><i>list ; </i><code>done</code></p>
+<dt><code> for </code><i>name</i> [in <i>word </i><code>&#8230; </code>] <code>do </code><i>list ; </i><code>done</code></dt>
 <dd>
-<dd>For each <i>word</i> in the specified word list, the parameter <i>name</i> is set to the word and <i>list</i> is executed. If <code>in</code> is not used to specify a word list, the positional parameters ($1, $2, etc.) are used instead. For historical reasons, open and close braces may be used instead of <code>do</code> and <code>done</code> e.g. <code>for i; { echo $i; }</code> The exit status of a <code>for</code> statement is the last exit status of <i>list</i> if <i>list</i> is never executed, the exit status is zero.</p>
-<dt><code> if </code><i>list</i> <code>then </code><i>list</i> [elif <i>list</i> <code>then </code><i>list ; </i>] <code>&#8230;</code> [else <i>list ; </i>] <code>fi</code></p>
+</dd><dd>For each <i>word</i> in the specified word list, the parameter <i>name</i> is set to the word and <i>list</i> is executed. If <code>in</code> is not used to specify a word list, the positional parameters ($1, $2, etc.) are used instead. For historical reasons, open and close braces may be used instead of <code>do</code> and <code>done</code> e.g. <code>for i; { echo $i; }</code> The exit status of a <code>for</code> statement is the last exit status of <i>list</i> if <i>list</i> is never executed, the exit status is zero.</dd>
+<dt><code> if </code><i>list</i> <code>then </code><i>list</i> [elif <i>list</i> <code>then </code><i>list ; </i>] <code>&#8230;</code> [else <i>list ; </i>] <code>fi</code></dt>
 <dd>
-<dd>If the exit status of the first <i>list</i> is zero, the second <i>list</i> is executed; otherwise, the <i>list</i> following the <code>elif</code> if any, is executed with similar consequences. If all the lists following the <code>if</code> and <code>elif s</code> fail (i.e. exit with non-zero status), the <i>list</i> following the <code>else</code> is executed. The exit status of an <code>if</code> statement is that of non-conditional <i>list</i> that is executed; if no non-conditional <i>list</i> is executed, the exit status is zero.</p>
-<dt><code> select </code><i>name</i> [in <i>word </i><code>&#8230; </code>] <code>do </code><i>list ; </i><code>done</code></p>
+</dd><dd>If the exit status of the first <i>list</i> is zero, the second <i>list</i> is executed; otherwise, the <i>list</i> following the <code>elif</code> if any, is executed with similar consequences. If all the lists following the <code>if</code> and <code>elif s</code> fail (i.e. exit with non-zero status), the <i>list</i> following the <code>else</code> is executed. The exit status of an <code>if</code> statement is that of non-conditional <i>list</i> that is executed; if no non-conditional <i>list</i> is executed, the exit status is zero.</dd>
+<dt><code> select </code><i>name</i> [in <i>word </i><code>&#8230; </code>] <code>do </code><i>list ; </i><code>done</code></dt>
 <dd>
-<dd>The <code>select</code> statement provides an automatic method of presenting the user with a menu and selecting from it. An enumerated list of the specified <i>word </i><code>(s)</code> is printed on standard error, followed by a prompt Po <code>PS3: normally</code> `#?&nbsp;<wbr>&#8216; Pc . A number corresponding to one of the enumerated words is then read from standard input, <i>name</i> is set to the selected word (or unset if the selection is not valid), <code>REPLY</code> is set to what was read (leading/trailing space is stripped), and <i>list</i> is executed. If a blank line (i.e. zero or more <code>IFS</code> octets) is entered, the menu is reprinted without executing <i>list</i> </p>
+</dd><dd>The <code>select</code> statement provides an automatic method of presenting the user with a menu and selecting from it. An enumerated list of the specified <i>word </i><code>(s)</code> is printed on standard error, followed by a prompt Po <code>PS3: normally</code> `#?&nbsp;<wbr>&#8216; Pc . A number corresponding to one of the enumerated words is then read from standard input, <i>name</i> is set to the selected word (or unset if the selection is not valid), <code>REPLY</code> is set to what was read (leading/trailing space is stripped), and <i>list</i> is executed. If a blank line (i.e. zero or more <code>IFS</code> octets) is entered, the menu is reprinted without executing <i>list</i> </dd>
 <p> When <i>list</i> completes, the enumerated list is printed if <code>REPLY</code> is <code>NULL</code> the prompt is printed, and so on. This process continues until an end-of-file is read, an interrupt is received, or a <code>break</code> statement is executed inside the loop. If &#8220;in word &#8230;&#8221; is omitted, the positional parameters are used (i.e. $1, $2, etc.). For historical reasons, open and close braces may be used instead of <code>do</code> and <code>done</code> e.g. <code>select i; { echo $i; }</code> The exit status of a <code>select</code> statement is zero if a <code>break</code> statement is used to exit the loop, non-zero otherwise.</p>
-<dt><code> until </code><i>list</i> <code>do </code><i>list</i> <code>done</code></p>
+<dt><code> until </code><i>list</i> <code>do </code><i>list</i> <code>done</code></dt>
 <dd>
-<dd>This works like <code>while</code> except that the body is executed only while the exit status of the first <i>list</i> is non-zero.</p>
-<dt><code> while </code><i>list</i> <code>do </code><i>list</i> <code>done</code></p>
+</dd><dd>This works like <code>while</code> except that the body is executed only while the exit status of the first <i>list</i> is non-zero.</dd>
+<dt><code> while </code><i>list</i> <code>do </code><i>list</i> <code>done</code></dt>
 <dd>
-<dd>A <code>while</code> is a pre-checked loop. Its body is executed as often as the exit status of the first <i>list</i> is zero. The exit status of a <code>while</code> statement is the last exit status of the <i>list</i> in the body of the loop; if the body is not executed, the exit status is zero.</p>
-<dt><code> function </code><i>name</i> <code>{ </code><i>list ; </i><code>}</code></p>
+</dd><dd>A <code>while</code> is a pre-checked loop. Its body is executed as often as the exit status of the first <i>list</i> is zero. The exit status of a <code>while</code> statement is the last exit status of the <i>list</i> in the body of the loop; if the body is not executed, the exit status is zero.</dd>
+<dt><code> function </code><i>name</i> <code>{ </code><i>list ; </i><code>}</code></dt>
 <dd>
-<dd>Defines the function <i>name</i> (see Sx Functions below). Note that redirections specified after a function definition are performed whenever the function is executed, not when the function definition is executed.</p>
-<dt><i>name </i><code>() </code><i>command</i></p>
-<dd> Mostly the same as <code>function</code> (see Sx Functions below). Whitespace (space or tab) after <i>name</i> will be ignored most of the time.</p>
-<dt><code> function </code><i>name </i><code>()</code> <code>{ </code><i>list ; </i><code>}</code></p>
+</dd><dd>Defines the function <i>name</i> (see Sx Functions below). Note that redirections specified after a function definition are performed whenever the function is executed, not when the function definition is executed.</dd>
+<dt><i>name </i><code>() </code><i>command</i></dt>
+<dd> Mostly the same as <code>function</code> (see Sx Functions below). Whitespace (space or tab) after <i>name</i> will be ignored most of the time.</dd>
+<dt><code> function </code><i>name </i><code>()</code> <code>{ </code><i>list ; </i><code>}</code></dt>
 <dd>
-<dd>The same as <i>name </i><code>()</code> (<code>bash ism</code> ) The <code>function</code> keyword is ignored.</p>
-<dt><code> time </code>[-<code>p</code> ] [<i>pipeline</i> ]</p>
+</dd><dd>The same as <i>name </i><code>()</code> (<code>bash ism</code> ) The <code>function</code> keyword is ignored.</dd>
+<dt><code> time </code>[-<code>p</code> ] [<i>pipeline</i> ]</dt>
 <dd>
-<dd>The Sx Command execution section describes the <code>time</code> reserved word.</p>
-<dt><code>(( </code><i>expression </i><code>))</code></p>
-<dd> The arithmetic expression <i>expression</i> is evaluated; equivalent to &#8220;let expression&#8221; (see Sx Arithmetic expressions and the <code>let</code> command, below).</p>
-<dt><code>Bq </code>Bq <i>&nbsp;<wbr>expression&nbsp;<wbr></i></p>
-<dd> Similar to the <code>test</code> and <code>[ &#8230; ]</code> commands (described later), with the following exceptions: </p>
+</dd><dd>The Sx Command execution section describes the <code>time</code> reserved word.</dd>
+<dt><code>(( </code><i>expression </i><code>))</code></dt>
+<dd> The arithmetic expression <i>expression</i> is evaluated; equivalent to &#8220;let expression&#8221; (see Sx Arithmetic expressions and the <code>let</code> command, below).</dd>
+<dt><code>Bq </code>Bq <i>&nbsp;<wbr>expression&nbsp;<wbr></i></dt>
+<dd> Similar to the <code>test</code> and <code>[ &#8230; ]</code> commands (described later), with the following exceptions: </dd>
 <ul>
 <li> Field splitting and file name generation are not performed on arguments.
 <li> The &#8211;<code>a</code> (AND) and &#8211;<code>o</code> (OR) operators are replaced with `&amp;&amp;&#8217; and `||&#8217; respectively.
@@ -158,4 +158,6 @@ echo $ ?
 <p> If a single-quoted string is preceded by an unquoted `$&#8217; , C style backslash expansion (see below) is applied (even single quote characters inside can be escaped and do not terminate the string then); the expanded result is treated as any other single-quoted string. If a double-quoted string is preceded by an unquoted `$&#8217; , the latter is ignored.</p>
 <h3>Backslash expansion</h3>
 <p> In places where backslashes are expanded, certain C and AT&amp;T System <code>ksh</code> or GNU <code>bash</code> style escapes are translated. These include `&#8217; , `&#8217; , `&#8217; , `
-&#8217; , `&#8217; , `	&#8217; , `
+&#8217; , `
+&#8217; , `	&#8217; , `
+</p></p>

@@ -17,18 +17,18 @@ description: "Graphical Disk Map"
 <p> <code>GdMap</code> is a tool to display disk space using tree maps. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Prints the command line options. </p>
-<dt><code>-f </code><i>dir</i></p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Prints the command line options. </dd>
+<dt><code>-f </code><i>dir</i></dt>
 <dd>
-<dt><code>&#8211;folder=</code><i>dir</i></p>
-<dd> Inspect directory after startup. </p>
+</dd><dt><code>&#8211;folder=</code><i>dir</i></dt>
+<dd> Inspect directory after startup. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/projects/gdmap,">http://sourceforge.net/projects/gdmap,</a> if you find any. </p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Markus Lausser (sgop [at] users.sourceforge.net)</p>
+<dt>Markus Lausser (sgop [at] users.sourceforge.net)</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

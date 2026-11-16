@@ -17,18 +17,18 @@ description: "ldns-walk – Retrieve the contents of a DNSSEC signed zone"
 <p> Of course the nameserver that is used must be DNSSEC-aware. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-4</code></p>
-<dd> Use only IPv4. </p>
-<dt><code>-6</code></p>
-<dd> Use only IPv6. </p>
-<dt><code>-f</code></p>
-<dd> Do a &#8216;full&#8217; zone walk; by default, ldns-walk will only show the names, and types present at those names. If this option is given, all resource records will be printed. </p>
-<dt><code>-s</code> <i>name</i></p>
-<dd> Start the walk with this owner name. Useful when continuing the walk for a large zone. </p>
-<dt><code>-v</code> <i>verbosity</i></p>
-<dd> Verbosity level [1-5]. </p>
-<dt><code>@</code> <i>nameserver</i></p>
-<dd> Send the queries to this nameserver. </p>
+<dt><code>-4</code></dt>
+<dd> Use only IPv4. </dd>
+<dt><code>-6</code></dt>
+<dd> Use only IPv6. </dd>
+<dt><code>-f</code></dt>
+<dd> Do a &#8216;full&#8217; zone walk; by default, ldns-walk will only show the names, and types present at those names. If this option is given, all resource records will be printed. </dd>
+<dt><code>-s</code> <i>name</i></dt>
+<dd> Start the walk with this owner name. Useful when continuing the walk for a large zone. </dd>
+<dt><code>-v</code> <i>verbosity</i></dt>
+<dd> Verbosity level [1-5]. </dd>
+<dt><code>@</code> <i>nameserver</i></dt>
+<dd> Send the queries to this nameserver. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> The full zone walk function is not complete yet, it does not correctly print delegation records </p>

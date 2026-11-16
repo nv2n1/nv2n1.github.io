@@ -15,32 +15,32 @@ description: "bsmtp – Bacula’s SMTP client (mail submission program)"
 <p> <code>bsmtp</code> is a simple mail user agent designed to permit more flexibility than the standard mail programs typically found on Unix systems, and to ease portability. It can even run on Windows machines. It is used by the Director daemon to send notifications and requests to the operator. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-4</code></p>
-<dd> Forces bsmtp to use IPv4 addresses only.</p>
-<dt><code>-6</code></p>
-<dd> Forces bsmtp to use IPv6 addresses only.</p>
-<dt><code>-8</code></p>
-<dd> Encode the mail in UTF-8.</p>
-<dt><code>-a</code></p>
-<dd> Use any ip protocol for address resolution.</p>
-<dt><code>-c</code></p>
-<dd> Set the <code>Cc:</code> header.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd> Set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd> Print timestamp in debug output.</p>
-<dt><code>-f</code></p>
-<dd> Set the <code>From:</code> header. If not specified, <code>bsmtp</code> will try to use your username.</p>
-<dt><code>-h&nbsp;<wbr></code><i>mailhost:port</i></p>
-<dd> Use mailhost:port as the SMTP server. (default port: 25)</p>
-<dt><code>-s</code></p>
-<dd> Set the <code>Subject:</code> header.</p>
-<dt><code>-r</code></p>
-<dd> Set the <code>Reply-To:</code>: header.</p>
-<dt><code>-l</code></p>
-<dd> Set the maximum number of lines to be sent. (default: unlimited)</p>
-<dt><code>-?</code></p>
-<dd> Show version and usage of program. </p>
+<dt><code>-4</code></dt>
+<dd> Forces bsmtp to use IPv4 addresses only.</dd>
+<dt><code>-6</code></dt>
+<dd> Forces bsmtp to use IPv6 addresses only.</dd>
+<dt><code>-8</code></dt>
+<dd> Encode the mail in UTF-8.</dd>
+<dt><code>-a</code></dt>
+<dd> Use any ip protocol for address resolution.</dd>
+<dt><code>-c</code></dt>
+<dd> Set the <code>Cc:</code> header.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd> Set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd> Print timestamp in debug output.</dd>
+<dt><code>-f</code></dt>
+<dd> Set the <code>From:</code> header. If not specified, <code>bsmtp</code> will try to use your username.</dd>
+<dt><code>-h&nbsp;<wbr></code><i>mailhost:port</i></dt>
+<dd> Use mailhost:port as the SMTP server. (default port: 25)</dd>
+<dt><code>-s</code></dt>
+<dd> Set the <code>Subject:</code> header.</dd>
+<dt><code>-r</code></dt>
+<dd> Set the <code>Reply-To:</code>: header.</dd>
+<dt><code>-l</code></dt>
+<dd> Set the maximum number of lines to be sent. (default: unlimited)</dd>
+<dt><code>-?</code></dt>
+<dd> Show version and usage of program. </dd>
 </dl>
 <h2>USAGE</h2>
 <p> <i>recipients</i> is a space separated list of email addresses. </p>

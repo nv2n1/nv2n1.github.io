@@ -24,47 +24,47 @@ description: "CREATE INDEX – define a new index"
 <p> All functions and operators used in an index definition must be &#8220;immutable&#8221;, that is, their results must depend only on their arguments and never on any outside influence (such as the contents of another table or the current time). This restriction ensures that the behavior of the index is well-defined. To use a user-defined function in an index expression or WHERE clause, remember to mark the function immutable when you create it.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>UNIQUE</code></p>
-<dd>Causes the system to check for duplicate values in the table when the index is created (if data already exist) and each time data is added. Attempts to insert or update data which would result in duplicate entries will generate an error.</p>
-<dt><code>CONCURRENTLY</code></p>
-<dd>When this option is used, PostgreSQL will build the index without taking any locks that prevent concurrent inserts, updates, or deletes on the table; whereas a standard index build locks out writes (but not reads) on the table until it&#8217;s done. There are several caveats to be aware of when using this option &#8212; see Building Indexes Concurrently [<code><a href="/docs/linux/man/7-create_index/">create_index</a></code>(7)].</p>
-<dt><i>name</i></p>
-<dd>The name of the index to be created. No schema name can be included here; the index is always created in the same schema as its parent table.</p>
-<dt><i>table</i></p>
-<dd>The name (possibly schema-qualified) of the table to be indexed.</p>
-<dt><i>method</i></p>
-<dd>The name of the index method to be used. Choices are btree, hash, gist, and gin. The default method is btree.</p>
-<dt><i>column</i></p>
-<dd>The name of a column of the table.</p>
-<dt><i>expression</i></p>
-<dd>An expression based on one or more columns of the table. The expression usually must be written with surrounding parentheses, as shown in the syntax. However, the parentheses can be omitted if the expression has the form of a function call.</p>
-<dt><i>opclass</i></p>
-<dd>The name of an operator class. See below for details.</p>
-<dt><code>ASC</code></p>
-<dd>Specifies ascending sort order (which is the default).</p>
-<dt><code>DESC</code></p>
-<dd>Specifies descending sort order.</p>
-<dt><code>NULLS FIRST</code></p>
-<dd>Specifies that nulls sort before non-nulls. This is the default when DESC is specified.</p>
-<dt><code>NULLS LAST</code></p>
-<dd>Specifies that nulls sort after non-nulls. This is the default when DESC is not specified.</p>
-<dt><i>storage_parameter</i></p>
-<dd>The name of an index-method-specific storage parameter. See Index Storage Parameters [<code><a href="/docs/linux/man/7-create_index/">create_index</a></code>(7)] for details.</p>
-<dt><i>tablespace</i></p>
-<dd>The tablespace in which to create the index. If not specified, default_tablespace is consulted, or temp_tablespaces for indexes on temporary tables.</p>
-<dt><i>predicate</i></p>
-<dd>The constraint expression for a partial index.</dl>
+<dt><code>UNIQUE</code></dt>
+<dd>Causes the system to check for duplicate values in the table when the index is created (if data already exist) and each time data is added. Attempts to insert or update data which would result in duplicate entries will generate an error.</dd>
+<dt><code>CONCURRENTLY</code></dt>
+<dd>When this option is used, PostgreSQL will build the index without taking any locks that prevent concurrent inserts, updates, or deletes on the table; whereas a standard index build locks out writes (but not reads) on the table until it&#8217;s done. There are several caveats to be aware of when using this option &#8212; see Building Indexes Concurrently [<code><a href="/docs/linux/man/7-create_index/">create_index</a></code>(7)].</dd>
+<dt><i>name</i></dt>
+<dd>The name of the index to be created. No schema name can be included here; the index is always created in the same schema as its parent table.</dd>
+<dt><i>table</i></dt>
+<dd>The name (possibly schema-qualified) of the table to be indexed.</dd>
+<dt><i>method</i></dt>
+<dd>The name of the index method to be used. Choices are btree, hash, gist, and gin. The default method is btree.</dd>
+<dt><i>column</i></dt>
+<dd>The name of a column of the table.</dd>
+<dt><i>expression</i></dt>
+<dd>An expression based on one or more columns of the table. The expression usually must be written with surrounding parentheses, as shown in the syntax. However, the parentheses can be omitted if the expression has the form of a function call.</dd>
+<dt><i>opclass</i></dt>
+<dd>The name of an operator class. See below for details.</dd>
+<dt><code>ASC</code></dt>
+<dd>Specifies ascending sort order (which is the default).</dd>
+<dt><code>DESC</code></dt>
+<dd>Specifies descending sort order.</dd>
+<dt><code>NULLS FIRST</code></dt>
+<dd>Specifies that nulls sort before non-nulls. This is the default when DESC is specified.</dd>
+<dt><code>NULLS LAST</code></dt>
+<dd>Specifies that nulls sort after non-nulls. This is the default when DESC is not specified.</dd>
+<dt><i>storage_parameter</i></dt>
+<dd>The name of an index-method-specific storage parameter. See Index Storage Parameters [<code><a href="/docs/linux/man/7-create_index/">create_index</a></code>(7)] for details.</dd>
+<dt><i>tablespace</i></dt>
+<dd>The tablespace in which to create the index. If not specified, default_tablespace is consulted, or temp_tablespaces for indexes on temporary tables.</dd>
+<dt><i>predicate</i></dt>
+<dd>The constraint expression for a partial index.</dd></dl>
 <h3>Index Storage Parameters</h3>
 <p>The optional WITH clause specifies <i>storage parameters</i> for the index. Each index method has its own set of allowed storage parameters. The B-tree, hash and GiST index methods all accept a single parameter:</p>
 <dl>
-<dt><code>FILLFACTOR</code></p>
-<dd>The fillfactor for an index is a percentage that determines how full the index method will try to pack index pages. For B-trees, leaf pages are filled to this percentage during initial index build, and also when extending the index at the right (adding new largest key values). If pages subsequently become completely full, they will be split, leading to gradual degradation in the index&#8217;s efficiency. B-trees use a default fillfactor of 90, but any integer value from 10 to 100 can be selected. If the table is static then fillfactor 100 is best to minimize the index&#8217;s physical size, but for heavily updated tables a smaller fillfactor is better to minimize the need for page splits. The other index methods use fillfactor in different but roughly analogous ways; the default fillfactor varies between methods.</dl>
+<dt><code>FILLFACTOR</code></dt>
+<dd>The fillfactor for an index is a percentage that determines how full the index method will try to pack index pages. For B-trees, leaf pages are filled to this percentage during initial index build, and also when extending the index at the right (adding new largest key values). If pages subsequently become completely full, they will be split, leading to gradual degradation in the index&#8217;s efficiency. B-trees use a default fillfactor of 90, but any integer value from 10 to 100 can be selected. If the table is static then fillfactor 100 is best to minimize the index&#8217;s physical size, but for heavily updated tables a smaller fillfactor is better to minimize the need for page splits. The other index methods use fillfactor in different but roughly analogous ways; the default fillfactor varies between methods.</dd></dl>
 <p> GIN indexes accept a different parameter: </p>
 <dl>
-<dt><code>FASTUPDATE</code></p>
-<dd>This setting controls usage of the fast update technique described in in the documentation. It is a Boolean parameter: ON enables fast update, OFF disables it. (Alternative spellings of ON and OFF are allowed as described in in the documentation.) The default is ON. </p>
+<dt><code>FASTUPDATE</code></dt>
+<dd>This setting controls usage of the fast update technique described in in the documentation. It is a Boolean parameter: ON enables fast update, OFF disables it. (Alternative spellings of ON and OFF are allowed as described in in the documentation.) The default is ON. </dd>
 <dl>
-<dd><code>Note:</code> Turning FASTUPDATE off via <code>ALTER INDEX</code> prevents future insertions from going into the list of pending index entries, but does not in itself flush previous entries. You might want to <code>VACUUM</code> the table afterward to ensure the pending list is emptied.</dl>
+<dd><code>Note:</code> Turning FASTUPDATE off via <code>ALTER INDEX</code> prevents future insertions from going into the list of pending index entries, but does not in itself flush previous entries. You might want to <code>VACUUM</code> the table afterward to ensure the pending list is emptied.</dd></dl>
 </dl>
 <h3>Building Indexes Concurrently</h3>
 <p>Creating an index can interfere with regular operation of a database. Normally PostgreSQL locks the table to be indexed against writes and performs the entire index build with a single scan of the table. Other transactions can still read the table, but if they try to insert, update, or delete rows in the table they will block until the index build is finished. This could have a severe effect if the system is a live production database. Very large tables can take many hours to be indexed, and even for smaller tables, an index build can lock out writers for periods that are unacceptably long for a production system. </p>

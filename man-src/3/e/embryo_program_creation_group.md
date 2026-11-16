@@ -25,33 +25,33 @@ description: "Program Creation and Destruction Functions – Functions that set 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> Pointer to the bytecode of the program.<br />
- <i>size</i> Number of bytes of bytecode.</dl>
+ <i>size</i> Number of bytes of bytecode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new Embryo program.</dl>
+<dd>A new Embryo program.</dd></dl>
 <h3>EAPI void embryo_program_free (Embryo_Program * ep)</h3>
 <p>Frees the given Embryo program. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.</dl>
+<dd><i>ep</i> The given program.</dd></dl>
 <h3>EAPI Embryo_Program* embryo_program_load (char * file)</h3>
 <p>Creates a new Embryo program based on the bytecode data stored in the given file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> Filename of the given file.</dl>
+<dd><i>file</i> Filename of the given file.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new Embryo program.</dl>
+<dd>A new Embryo program.</dd></dl>
 <p> References embryo_program_new(), and embryo_swap_32().</p>
 <h3>EAPI Embryo_Program* embryo_program_new (void * data, int size)</h3>
 <p>Creates a new Embryo program, with bytecode data that can be freed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> Pointer to the bytecode of the program.<br />
- <i>size</i> Number of bytes of bytecode.</dl>
+ <i>size</i> Number of bytes of bytecode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new Embryo program.</dl>
+<dd>A new Embryo program.</dd></dl>
 <p> Referenced by embryo_program_load().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

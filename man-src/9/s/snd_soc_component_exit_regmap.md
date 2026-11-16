@@ -14,7 +14,7 @@ description: "snd_soc_component_exit_regmap – De-initialize regmap instance fo
 <p><i>component</i></p>
 <dl>
 <dd>
-<dd>The component for which to de-initialize the regmap instance</dl>
+</dd><dd>The component for which to de-initialize the regmap instance</dd></dl>
 <h2>Description</h2>
 <p>Calls <code>regmap_exit</code> on the regmap instance associated to the component and removes the regmap instance from the component. </p>
 <p> This function should only be used if <code>snd_soc_component_init_regmap</code> was used to initialize the regmap instance.</p>

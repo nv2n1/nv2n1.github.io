@@ -11,25 +11,17 @@ std::data - std::data
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class C&gt;
     (1)(since C++ 17)
-
         constexpr auto data(C &amp;c) -&gt; decltype(c.data());
-
 template &lt;class C&gt;
 (2)(since C++ 17)
-
     constexpr auto data(const C &amp;c) -&gt; decltype(c.data());
-
 template &lt;class T, std::size_t N&gt;
 (3)(since C++ 17)
-
     constexpr T *data(T (&amp;array)[N]) noexcept;
-
 template &lt;class E&gt;
 (4)(since C++ 17)
-
     constexpr const E *data(std::initializer_list&lt;E&gt; il) noexcept;</code></pre> 
 Returns a pointer to the block of memory containing the elements of the container. 
 1,2) returns c.data() 
@@ -93,12 +85,9 @@ Fourth version
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt; //std::data is guaranteed to be available after inclusion
-
 #include &lt;cstring&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::string s{&quot;Hello world!\n&quot;};
     char a[20]; // storage for a C-style string

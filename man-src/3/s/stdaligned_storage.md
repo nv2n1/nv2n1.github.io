@@ -11,10 +11,8 @@ std::aligned_storage - std::aligned_storage
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;std::size_t Len, std::size_t Align = /*default-alignment*/&gt;
     (since C++ 11)
-
         struct aligned_storage;</code></pre> 
 Provides the nested type type, which is a trivial standard-layout type suitable for use as uninitialized storage for any object whose size is at most Len and whose alignment_requirement is a divisor of Align. 
 The default value of Align is the most stringent (the largest) alignment requirement for any object whose size is at most Len. If the default value is not used, Align must be the value of alignof(T) for some type T, or the behavior is undefined. 
@@ -54,19 +52,14 @@ Except for default argument, aligned_storage is expressible in terms of alignas:
 
 A primitive static vector class, demonstrating creation, access, and destruction of objects in aligned storage 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;string&gt;
 template &lt;class T, std::size_t N&gt;
-
 class static_vector
-
 {
     // properly aligned uninitialized storage for N T's
     typename std::aligned_storage&lt;sizeof(T), alignof(T)&gt;::type data[N];
     std::size_t m_size = 0;
-
   public:
     // Create an object in aligned storage
     template &lt;typename... Args&gt;
@@ -95,7 +88,6 @@ class static_vector
     }
 };
 int main()
-
 {
     static_vector&lt;std::string, 10&gt; v1;
     v1.emplace_back(5, '*');

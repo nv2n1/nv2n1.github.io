@@ -11,7 +11,6 @@ description: "sc::PW92LCFunctional –"
 <p> Implements the PW92 local (LSDA) correlation term.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::LSDACFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -22,9 +21,6 @@ description: "sc::PW92LCFunctional –"
  void <code>point_lc</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;, double &amp;, double &amp;, double &amp;)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>double F (double x, double A, double alpha_1, double beta_1, double beta_2, double beta_3, double beta_4, double p)
-
-
-
 double dFdr_s (double x, double A, double alpha_1, double beta_1, double beta_2, double beta_3, double beta_4, double p)</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements the PW92 local (LSDA) correlation term. </p>

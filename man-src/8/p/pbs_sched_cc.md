@@ -15,20 +15,20 @@ description: "pbs_sched_cc – pbs C scheduler"
 <p> pbs_sched must be executed with root permission.</p>
 <h2>Options</h2>
 <dl>
-<dt>-a alarm</p>
-<dd>This specifies the time in seconds to wait for a schedule run to finish. If a script takes too long to finish, an alarm signal is sent, and the scheduler is restarted. If a core file does not exist in the current directory, <code>abort()</code> is called and a core file is generated. The default for <i>alarm</i> is 180 seconds.</p>
-<dt>-d home</p>
-<dd>This specifies the PBS home directory, PBS_HOME. The current working directory of the scheduler is PBS_HOME/sched_priv. If this option is not given, PBS_HOME defaults to $PBS_SERVER_HOME as defined during the PBS build procedure.</p>
-<dt>-L logfile</p>
-<dd>Specifies an absolute path name of the file to use as the log file. If not specified, the scheduler will open a file named for the current date in the PBS_HOME/sched_logs directory (see the -d option).</p>
-<dt>-p file</p>
-<dd>This specifies the &quot;print&quot; file. Any output from the C code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be <i>PBS_HOME/sched_priv/sched_out .</i> See the <i> </i><font SIZE="-1"><i> option.</p>
-<dt>-S port</p>
-<dd>This specifies the port to use. If this option is not given, the default port for the PBS scheduler is used.</p>
-<dt>-R port</p>
-<dd>This specifies the resource monitor port to use. If this option is not given, the default port for the PBS mom is used. NOTE: this option only makes the mom port available to the scheduler writer. It doesn&#8217;t force them to use it.</p>
-<dt>-c file</p>
-<dd>Specify a configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/sched_priv, see the -d option. If the -c option is not supplied, pbs_sched will not attempt to open a configuration file.</dl>
+<dt>-a alarm</dt>
+<dd>This specifies the time in seconds to wait for a schedule run to finish. If a script takes too long to finish, an alarm signal is sent, and the scheduler is restarted. If a core file does not exist in the current directory, <code>abort()</code> is called and a core file is generated. The default for <i>alarm</i> is 180 seconds.</dd>
+<dt>-d home</dt>
+<dd>This specifies the PBS home directory, PBS_HOME. The current working directory of the scheduler is PBS_HOME/sched_priv. If this option is not given, PBS_HOME defaults to $PBS_SERVER_HOME as defined during the PBS build procedure.</dd>
+<dt>-L logfile</dt>
+<dd>Specifies an absolute path name of the file to use as the log file. If not specified, the scheduler will open a file named for the current date in the PBS_HOME/sched_logs directory (see the -d option).</dd>
+<dt>-p file</dt>
+<dd>This specifies the &quot;print&quot; file. Any output from the C code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be <i>PBS_HOME/sched_priv/sched_out .</i> See the <i> </i><font SIZE="-1"><i> option.</dd>
+<dt>-S port</dt>
+<dd>This specifies the port to use. If this option is not given, the default port for the PBS scheduler is used.</dd>
+<dt>-R port</dt>
+<dd>This specifies the resource monitor port to use. If this option is not given, the default port for the PBS mom is used. NOTE: this option only makes the mom port available to the scheduler writer. It doesn&#8217;t force them to use it.</dd>
+<dt>-c file</dt>
+<dd>Specify a configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/sched_priv, see the -d option. If the -c option is not supplied, pbs_sched will not attempt to open a configuration file.</dd></dl>
 <p> The options that specify file names may be absolute or relative. If they are relative, their root directory will be PBS_HOME/sched_priv. </p>
 <p> </i></font></p>
 <h2>Usage</h2>
@@ -39,26 +39,26 @@ description: "pbs_sched_cc – pbs C scheduler"
 <h2>Configuration File</h2>
 <p>A configuration file may be specified with the -c option. This file may be used to specify the hosts (servers) which are allowed to connect to pbs_sched. The hosts are specified in the configuration file in a manor identical to that used in pbs_mom.</p>
 <dl>
-<dt>clienthost</p>
-<dd>One or more servers, one per line, may be specified:</p>
-<dd><code> +.IP restricted Allows connections from non-priviledged ports on the named hosts. Typically only used with Mac OSX:</p>
+<dt>clienthost</dt>
+<dd>One or more servers, one per line, may be specified:</dd>
+<dd><code> +.IP restricted Allows connections from non-priviledged ports on the named hosts. Typically only used with Mac OSX:</dd>
 <dd>
-<dd>Two host names are always allowed to connection to pbs_sched, &quot;localhost&quot; and the name returned to pbs_sched by the system call gethostname(). These names need not be specified in the configuration file.</dl>
+</dd><dd>Two host names are always allowed to connection to pbs_sched, &quot;localhost&quot; and the name returned to pbs_sched by the system call gethostname(). These names need not be specified in the configuration file.</dd></dl>
 <p> The configuration file must be &quot;secure&quot;. It must be owned by a user id and group id less than 10 and not be world writable. </p>
 <p> </code></p>
 <h2>Files</h2>
 <dl>
-<dt>$PBS_SERVER_HOME/sched_priv</p>
-<dd>the default directory for configuration files, typically (/usr/spool/pbs)/sched_priv.</dl>
+<dt>$PBS_SERVER_HOME/sched_priv</dt>
+<dd>the default directory for configuration files, typically (/usr/spool/pbs)/sched_priv.</dd></dl>
 <h2>Signal Handling</h2>
 <p>A C based scheduler will handle the following signals:</p>
 <dl>
-<dt>SIGHUP</p>
-<dd>The server will close and reopen its log file and reread the config file if one exists.</p>
-<dt>SIGALRM</p>
-<dd>If the site supplied scheduling module exceeds the time limit, the Alarm will cause the scheduler to attempt to core dump and restart itself.</p>
-<dt>SIGINT and SIGTERM</p>
-<dd>Will result in an orderly shutdown of the scheduler.</dl>
+<dt>SIGHUP</dt>
+<dd>The server will close and reopen its log file and reread the config file if one exists.</dd>
+<dt>SIGALRM</dt>
+<dd>If the site supplied scheduling module exceeds the time limit, the Alarm will cause the scheduler to attempt to core dump and restart itself.</dd>
+<dt>SIGINT and SIGTERM</dt>
+<dd>Will result in an orderly shutdown of the scheduler.</dd></dl>
 <p> All other signals have the default action installed.</p>
 <h2>Exit Status</h2>
 <p>Upon normal termination, an exit status of zero is returned.</p>

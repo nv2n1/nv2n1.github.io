@@ -14,10 +14,10 @@ description: "lou_allround – Test every capability of the liblouis library"
 <h2>DESCRIPTION</h2>
 <p> This program tests every capability of the liblouis library. It is completely interactive.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> display version information and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> display version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by John J. Boyer.</p>
 <h2>REPORTING BUGS</h2>
@@ -29,6 +29,6 @@ description: "lou_allround – Test every capability of the liblouis library"
 <p> The full documentation for <code>lou_allround</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>lou_allround</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info liblouis</code></dl>
+</dt><dd> <code>info liblouis</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

@@ -10,7 +10,6 @@ description: "uvsprintf – Writes formatted data into a buffer, using variable 
 <p>uvsprintf &#8211; Writes formatted data into a buffer, using variable arguments. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uvsprintf(char *buf, const char *format, va_list args);</code></pre>
 <h2>Description</h2>
 <p>This is like usprintf(), but you pass the variable argument list directly, instead of the arguments themselves. You can use this function to implement printf like functions, also called variadic functions. You should try to avoid this function because it is very easy to overflow the destination buffer. Use uvszprintf instead.</p>

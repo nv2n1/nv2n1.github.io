@@ -17,26 +17,26 @@ description: "shtool subst – GNU shtool"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display some processing information.</p>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Enable the output of the essential shell commands which are executed.</p>
-<dt><code>-n</code>, <code>&#8211;nop</code></p>
-<dd> No operation mode. Actual execution of the essential shell commands which would be executed is suppressed.</p>
-<dt><code>-w</code>, <code>&#8211;warning</code></p>
-<dd> Show warning on substitution operation resulting in no content change on <i>every</i> file. The default is to show a warning on substitution operations resulted in no content change on <i>all</i> files.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Suppress warning on substitution operation resulting in no content change.</p>
-<dt><code>-s</code>, <code>&#8211;stealth</code></p>
-<dd> Stealth operation. Preserve timestamp on <i>file</i>.</p>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> Enter interactive mode where the user has to approve each operation.</p>
-<dt><code>-b</code>, <code>&#8211;backup</code> <i>ext</i></p>
-<dd> Preserve backup of original file using file name extension <i>ext</i>. Default is to overwrite the original file.</p>
-<dt><code>-e</code>, <code>&#8211;exec</code> <i>cmd</i></p>
-<dd> Specify <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) command directly.</p>
-<dt><code>-f</code>, <code>&#8211;file</code> <i>cmd-file</i></p>
-<dd> Read <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) command from <i>file</i>.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd>
+<dt><code>-n</code>, <code>&#8211;nop</code></dt>
+<dd> No operation mode. Actual execution of the essential shell commands which would be executed is suppressed.</dd>
+<dt><code>-w</code>, <code>&#8211;warning</code></dt>
+<dd> Show warning on substitution operation resulting in no content change on <i>every</i> file. The default is to show a warning on substitution operations resulted in no content change on <i>all</i> files.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Suppress warning on substitution operation resulting in no content change.</dd>
+<dt><code>-s</code>, <code>&#8211;stealth</code></dt>
+<dd> Stealth operation. Preserve timestamp on <i>file</i>.</dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Enter interactive mode where the user has to approve each operation.</dd>
+<dt><code>-b</code>, <code>&#8211;backup</code> <i>ext</i></dt>
+<dd> Preserve backup of original file using file name extension <i>ext</i>. Default is to overwrite the original file.</dd>
+<dt><code>-e</code>, <code>&#8211;exec</code> <i>cmd</i></dt>
+<dd> Specify <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) command directly.</dd>
+<dt><code>-f</code>, <code>&#8211;file</code> <i>cmd-file</i></dt>
+<dd> Read <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) command from <i>file</i>.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre><code>
 #shell script

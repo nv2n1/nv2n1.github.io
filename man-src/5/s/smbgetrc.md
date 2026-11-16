@@ -17,28 +17,28 @@ description: "smbgetrc – configuration file for smbget"
 <p>The following keys can be set: </p>
 <p> resume on|off</p>
 <dl>
-<dd>Whether aborted downloads should be automatically resumed.</dl>
+<dd>Whether aborted downloads should be automatically resumed.</dd></dl>
 <p> recursive on|off</p>
 <dl>
-<dd>Whether directories should be downloaded recursively</dl>
+<dd>Whether directories should be downloaded recursively</dd></dl>
 <p> user <i>name[%password]</i></p>
 <dl>
-<dd>Username (and password) to use when logging in to the remote server. Use an empty string for anonymous access.</dl>
+<dd>Username (and password) to use when logging in to the remote server. Use an empty string for anonymous access.</dd></dl>
 <p> workgroup <i>wg</i></p>
 <dl>
-<dd>Workgroup to use when logging in</dl>
+<dd>Workgroup to use when logging in</dd></dl>
 <p> nonprompt on|off</p>
 <dl>
-<dd>Turns off asking for username and password. Useful for scripts.</dl>
+<dd>Turns off asking for username and password. Useful for scripts.</dd></dl>
 <p> debuglevel <i>int</i></p>
 <dl>
-<dd>(Samba) debuglevel to run at. Useful for tracking down protocol level problems.</dl>
+<dd>(Samba) debuglevel to run at. Useful for tracking down protocol level problems.</dd></dl>
 <p> dots on|off</p>
 <dl>
-<dd>Whether a single dot should be printed for each block that has been downloaded, instead of the default progress indicator.</dl>
+<dd>Whether a single dot should be printed for each block that has been downloaded, instead of the default progress indicator.</dd></dl>
 <p> blocksize <i>int</i></p>
 <dl>
-<dd>Number of bytes to put in a block.</dl>
+<dd>Number of bytes to put in a block.</dd></dl>
 <h2>Version</h2>
 <p>This man page is part of version 4.11.6-Ubuntu of the Samba suite.</p>
 <h2>See Also</h2>

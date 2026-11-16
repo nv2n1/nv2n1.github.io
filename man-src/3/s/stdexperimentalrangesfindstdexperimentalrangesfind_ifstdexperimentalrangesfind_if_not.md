@@ -11,50 +11,31 @@ std::experimental::ranges::find,std::experimental::ranges::find_if,std::experime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / algorithm&gt;
-
     template &lt;InputIterator I, Sentinel&lt;I&gt; S, class T, class Proj = ranges::identity&gt;
-
 requires IndirectRelation &lt; ranges::equal_to&lt;&gt;, projected&lt;I, Proj&gt;,
 const T * &gt; (1)(ranges TS)
-
                 I find(I first, S last, const T &amp;value, Proj proj = Proj{});
-
 template &lt;InputRange R, class T, class Proj = ranges::identity&gt;
-
 requires IndirectRelation &lt; ranges::equal_to&lt;&gt;, (2)
 (ranges TS)
-
     projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;,
     const T * &gt;
-
         ranges::safe_iterator_t&lt;R&gt; find(R &amp;&amp;r, const T &amp;value, Proj proj = Proj{});
-
 template &lt;InputIterator I, Sentinel&lt;I&gt; S, class Proj = ranges::identity,
-
           IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred&gt;
 (3)(ranges TS)
-
     I find_if(I first, S last, Pred pred, Proj proj = Proj{});
-
 template &lt;InputRange R, class Proj = ranges::identity,
-
           IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred&gt;
 (4)(ranges TS)
-
     ranges::safe_iterator_t&lt;R&gt; find_if(R &amp;&amp;r, Pred pred, Proj proj = Proj{});
-
 template &lt;InputIterator I, Sentinel&lt;I&gt; S, class Proj = ranges::identity,
-
           IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred&gt;
 (5)(ranges TS)
-
     I find_if_not(I first, S last, Pred pred, Proj proj = Proj{});
-
 template &lt;InputRange R, class Proj = ranges::identity,
-
           IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred&gt;
 (6)(ranges TS)
-
     ranges::safe_iterator_t&lt;R&gt; find_if_not(R &amp;&amp;r, Pred pred, Proj proj = Proj{});</code></pre> 
 Returns the first element in the range [first, last) that satisfies specific criteria: 
 1) find searches for an element whose projected value is equal to value (i.e., value == ranges::invoke(proj, *i)). 

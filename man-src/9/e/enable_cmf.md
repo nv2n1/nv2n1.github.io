@@ -14,7 +14,7 @@ description: "enable_cmf – switch on the channel measurement for a specific de
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>The ccw device to be enabled</dl>
+</dd><dd>The ccw device to be enabled</dd></dl>
 <h2>Description</h2>
 <p>Returns <code>0</code> for success or a negative error value.</p>
 <h2>Note</h2>
@@ -24,5 +24,5 @@ description: "enable_cmf – switch on the channel measurement for a specific de
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,28 +15,28 @@ description: "kateenc – create Kate streams from text input"
 <p> <code>kateenc</code> creates Kate streams from input files (SubRip SRT subtitles, LRC lyrics, and libkate&#8217;s custom description language). When saved to an Ogg stream (the default behavior), a Kate stream may then be merged with other Ogg streams (eg, a Theora video) using the oggz tools. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show command line help.</p>
-<dt><code>-V</code></p>
-<dd> Show version information.</p>
-<dt><code>-M</code></p>
-<dd> Allow simple HTML-like markup in SRT files. If this parameter is used, strings such as &quot;&lt;i&gt;&quot; will be interpreted to mean italics, rather than appear as such. Note that various players interpret a slightly different set of HTML tags, and some do not.</p>
-<dt><code>-o</code> outfile</p>
-<dd> Write the output Kate stream to the given file name (writes to stdout if not specified).</p>
-<dt><code>-l</code> language</p>
-<dd> Sets the language for the stream (default is the language specified in the input, or none).</p>
-<dt><code>-c</code> category</p>
-<dd> Sets the category for the stream (default is the category specified in the input, or none).</p>
-<dt><code>-s</code> serial</p>
-<dd> Sets the serial number for the output Kate stream (does not apply to raw streams).</p>
-<dt><code>-C</code> tag=value</p>
-<dd> Adds a comment to encode into the output Kate stream. The comment must be of the form tag=value, and comply with the Vorbis comment rules (eg, tag is composed of a particular subset of ASCII characters, and value is valid UTF-8). Note that you might have to escape or quote the comment for it to be seen as a single command line parameter.</p>
-<dt><code>-t</code> filetype</p>
-<dd> Specifies the type of the input (srt, lrc, kate)</p>
-<dt><code>-R</code> threshold</p>
-<dd> Use repeat packets, with the given threshold (in seconds). Data packets will be repeated at intervals of roughly threshold seconds, while active.</p>
-<dt><code>-K</code> threshold</p>
-<dd> Use keepalive packets, with the given threshold (in seconds). Keepalive packets will be emitted when no other packet has been emitted for roughly threshold seconds. </p>
+<dt><code>-h</code></dt>
+<dd> Show command line help.</dd>
+<dt><code>-V</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-M</code></dt>
+<dd> Allow simple HTML-like markup in SRT files. If this parameter is used, strings such as &quot;&lt;i&gt;&quot; will be interpreted to mean italics, rather than appear as such. Note that various players interpret a slightly different set of HTML tags, and some do not.</dd>
+<dt><code>-o</code> outfile</dt>
+<dd> Write the output Kate stream to the given file name (writes to stdout if not specified).</dd>
+<dt><code>-l</code> language</dt>
+<dd> Sets the language for the stream (default is the language specified in the input, or none).</dd>
+<dt><code>-c</code> category</dt>
+<dd> Sets the category for the stream (default is the category specified in the input, or none).</dd>
+<dt><code>-s</code> serial</dt>
+<dd> Sets the serial number for the output Kate stream (does not apply to raw streams).</dd>
+<dt><code>-C</code> tag=value</dt>
+<dd> Adds a comment to encode into the output Kate stream. The comment must be of the form tag=value, and comply with the Vorbis comment rules (eg, tag is composed of a particular subset of ASCII characters, and value is valid UTF-8). Note that you might have to escape or quote the comment for it to be seen as a single command line parameter.</dd>
+<dt><code>-t</code> filetype</dt>
+<dd> Specifies the type of the input (srt, lrc, kate)</dd>
+<dt><code>-R</code> threshold</dt>
+<dd> Use repeat packets, with the given threshold (in seconds). Data packets will be repeated at intervals of roughly threshold seconds, while active.</dd>
+<dt><code>-K</code> threshold</dt>
+<dd> Use keepalive packets, with the given threshold (in seconds). Keepalive packets will be emitted when no other packet has been emitted for roughly threshold seconds. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Create a Kate stream for Welsh subtitles from a SubRip file: </p>

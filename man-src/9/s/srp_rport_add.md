@@ -14,17 +14,17 @@ description: "srp_rport_add – add a SRP remote port to the device hierarchy"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>scsi host the remote port is connected to.</dl>
+</dd><dd>scsi host the remote port is connected to.</dd></dl>
 <p> <i>ids</i></p>
 <dl>
-<dd>The port id for the remote port.</dl>
+<dd>The port id for the remote port.</dd></dl>
 <h2>Description</h2>
 <p>Publishes a port to the rest of the system.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

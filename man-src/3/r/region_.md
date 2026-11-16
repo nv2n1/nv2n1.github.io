@@ -40,7 +40,7 @@ description: "QuantLib::InflationIndex – Base class for inflation-rate indexes
 <p>Returns the name of the index. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <p> Implements <code>Index</code>.</p>
 <h3><code>Calendar</code> fixingCalendar () const [virtual]</h3>
 <p>Inflation indices do not have fixing calendars. An inflation index value is valid for every day (including weekends) of a calendar period. I.e. it uses the <code>NullCalendar</code> as its fixing calendar. </p>

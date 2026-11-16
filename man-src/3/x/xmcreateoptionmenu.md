@@ -26,20 +26,20 @@ description: "XmCreateOptionMenu — A RowColumn widget convenience creation fun
 <p> The OptionMenu also operates with the keyboard interface mechanism. If the application has established a mnemonic with the OptionMenu, pressing <code>&lt;Alt&gt;</code> with the mnemonic causes the Pulldown menu pane to be posted with traversal enabled. The standard traversal keys can then be used to move within the menu pane. Pressing <code>&lt;Return&gt;</code> or typing a mnemonic or accelerator for one of the menu items selects that item. </p>
 <p> An application may use the <code>XmNmenuHistory</code> resource to indicate which item in the Pulldown menu pane should be treated as the current choice and have its label displayed in the selection area. By default, the first selectable item in the Pulldown menu pane is used.</p>
 <dl COMPACT>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dl>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dd></dl>
 <p> The user can specify resources in a resource file for the automatically created widgets and gadgets of an OptionMenu. These widgets (or gadgets) and the associated OptionMenu areas are</p>
 <dl COMPACT>
-<dt>Option Menu Label Gadget</p>
-<dd><code>OptionLabel</code></p>
-<dt>Option Menu Cascade Button</p>
-<dd><code>OptionButton</code></dl>
+<dt>Option Menu Label Gadget</dt>
+<dd><code>OptionLabel</code></dd>
+<dt>Option Menu Cascade Button</dt>
+<dd><code>OptionButton</code></dd></dl>
 <p> For a complete definition of RowColumn and its associated resources, see <code><a href="/docs/linux/man/3-xmrowcolumn/">XmRowColumn</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the RowColumn widget ID.</p>

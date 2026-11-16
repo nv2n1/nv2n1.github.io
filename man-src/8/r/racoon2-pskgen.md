@@ -16,32 +16,32 @@ description: "pskgen – Pre-shared key generater and converter for IKE"
 <p><code>pskgen</code> creates a pre-share key file for the iked of the Racoon2 system. There are three modes. The first is that it will create a randomized key. The second is that it will create the key from the input file. Note that the Racoon2 only uses the first line of the input file that is plain text format except the case when the &#8211;<code>h</code> option is not specified. <code>pskgen</code> ignores the second line of the file specified and more than that. The third is that it will convert the key file to the format of the &#8211;<code>h</code> option.</p>
 <h3>Randomized key mode</h3>
 <dl>
-<dt><code>-r</code></p>
-<dd>output random bytes.</p>
-<dt><code>-s</code></p>
-<dd>specify the byte length of the key. the default is $default_keysize bytes.</p>
-<dt><code>-o</code></p>
-<dd>specify the output file.</p>
-<dt><code>-d</code></p>
-<dd>debug mode. no harm to any file.</dl>
+<dt><code>-r</code></dt>
+<dd>output random bytes.</dd>
+<dt><code>-s</code></dt>
+<dd>specify the byte length of the key. the default is $default_keysize bytes.</dd>
+<dt><code>-o</code></dt>
+<dd>specify the output file.</dd>
+<dt><code>-d</code></dt>
+<dd>debug mode. no harm to any file.</dd></dl>
 <h3>File specific mode</h3>
 <dl>
-<dt><code>-i</code></p>
-<dd>specify the input file. `-&#8216; means the standard input.</p>
-<dt><code>-h</code></p>
-<dd>assumed that the input file is writted by the following syntax: 0x leading one or two of hexadecimal number separated space characters. For example: </p>
+<dt><code>-i</code></dt>
+<dd>specify the input file. `-&#8216; means the standard input.</dd>
+<dt><code>-h</code></dt>
+<dd>assumed that the input file is writted by the following syntax: 0x leading one or two of hexadecimal number separated space characters. For example: </dd>
 <blockquote><p><tt>0x72 0x61 0x63 0x6f 0x6f 0x6e</tt></p></blockquote>
-<dt><code>-o</code></p>
-<dd>specify the output file.</p>
-<dt><code>-d</code></p>
-<dd>debug mode. no harm to any file.</dl>
+<dt><code>-o</code></dt>
+<dd>specify the output file.</dd>
+<dt><code>-d</code></dt>
+<dd>debug mode. no harm to any file.</dd></dl>
 <h3>Export Mode</h3>
 <dl>
-<dt><code>-e</code></p>
-<dd>export the key file. the format is like the option &#8211;<code>h</code> defined.</p>
-<dt><code>-o</code></p>
-<dd>specify the output file.</p>
-<dt><code>-d</code></p>
-<dd>debug mode. no harm to any file.</dl>
+<dt><code>-e</code></dt>
+<dd>export the key file. the format is like the option &#8211;<code>h</code> defined.</dd>
+<dt><code>-o</code></dt>
+<dd>specify the output file.</dd>
+<dt><code>-d</code></dt>
+<dd>debug mode. no harm to any file.</dd></dl>
 <h2>See Also</h2>
 <p>racoon2(7), racoon2.conf5, iked(8) </p>

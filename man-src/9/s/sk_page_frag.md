@@ -15,7 +15,7 @@ sk_page_frag - return an appropriate page_frag
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>socket</dl>
+<dl><dd></dd><dd>socket</dd></dl>
 
 <h2>Description</h2>
 

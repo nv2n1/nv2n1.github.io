@@ -15,7 +15,7 @@ ipc_rcu_alloc - allocate ipc and rcu space
 <h2>Arguments</h2>
 
 <i>size</i>
-<dl><dd><dd>size desired</dl>
+<dl><dd></dd><dd>size desired</dd></dl>
 
 <h2>Description</h2>
 

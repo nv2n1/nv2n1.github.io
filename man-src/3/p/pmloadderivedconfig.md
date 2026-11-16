@@ -17,12 +17,12 @@ description: "pmLoadDerivedConfig – load derived metric definitions from files
 <p> The <i>path</i> parameter defines a colon separated list of files and/or directories (the syntax is the same as for the <code>$PATH</code> variable for <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1)), from which derived metric specifications are to be sourced. The <i>path</i> components are expanded into a list of files as follows: if a component is a file, then that file is added to the list, else if a component is a directory then recursive descent is used to enumerate all files below that directory and these are added to the list. Each file in the resulting list is parsed in order, and according to the derived metrics syntax described below. </p>
 <p> Each line of the file(s) identified by <i>path</i> is either a comment line (with a &#8220;#&#8221; in the first position of the line) or the declaration of a derived performance metric, specified as:</p>
 <dl>
-<dt>*</p>
-<dd>the name of the derived metric, using the same &#8220;dot notation&#8221; syntax that is used for PCP performance metrics, see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5).</p>
-<dt>*</p>
-<dd>an equals sign (&#8220;=&#8221;)</p>
-<dt>*</p>
-<dd>a valid expression for a derived metric, as described in <code><a href="/docs/linux/man/3-pmregisterderived/">pmRegisterDerived</a></code>(3).</dl>
+<dt>*</dt>
+<dd>the name of the derived metric, using the same &#8220;dot notation&#8221; syntax that is used for PCP performance metrics, see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5).</dd>
+<dt>*</dt>
+<dd>an equals sign (&#8220;=&#8221;)</dd>
+<dt>*</dt>
+<dd>a valid expression for a derived metric, as described in <code><a href="/docs/linux/man/3-pmregisterderived/">pmRegisterDerived</a></code>(3).</dd></dl>
 <p> White space is ignored in the lines. </p>
 <p> For each line containing a derived metric definition, <code><a href="/docs/linux/man/3-pmregisterderived/">pmRegisterDerived</a></code>(3) is called to register the new derived metric. </p>
 <p> Because <code>pmLoadDerivedConfig</code> may process many files, each of which may contain many derived metric specifications, it is not possible to provide very specific error status on return. Hence the result from <code>pmLoadDerivedConfig</code> will be the number of derived metrics successfully loaded from files on the given <i>path</i>. Catastrophic errors such as not being able to open one of the files on the given <i>path</i> will cause an immediate return with a negative return value that can be passed to <code><a href="/docs/linux/man/3-pmerrstr/">pmErrStr</a></code>(3) to obtain the associated error message. </p>

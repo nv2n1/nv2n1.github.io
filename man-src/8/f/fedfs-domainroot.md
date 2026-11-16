@@ -30,47 +30,47 @@ description: "fedfs-domainroot – set up FedFS domain root infrastructure"
 <h3>Subcommands</h3>
 <p>Valid <code><a href="/docs/linux/man/8-fedfs-domainroot/">fedfs-domainroot</a></code>(8) subcommands are:</p>
 <dl>
-<dt><code>clean</code></p>
-<dd>Remove the <i>/.domainroot</i> directory and other infrastructure (as long as it is empty). The user is asked to confirm before action is taken.</p>
-<dd>By default, this process stops when a step encounters an error. Adding the <code>&#8211;force</code> option forces the process to try each step even if an error occurs, and bypasses the confirmation request.</p>
-<dt><code>status</code></p>
-<dd>Display the status of the domain root infrastructure on the local system. This includes whether NFSD is running, and what domain root directories are currently configured and exported. This subcommand takes no arguments.</p>
-<dt><code>add</code></p>
-<dd>Create a new FedFS domain root directory under <i>/.domainroot</i> and export it. This subcommand takes a FedFS domain name as an argument.</p>
-<dt><code>remove</code></p>
-<dd>Remove an existing FedFS domain root directory from <i>/.domainroot</i>. This subcommand takes a FedFS domain name as an argument. The user is asked to confirm before action is taken.</p>
-<dd>By default, this process stops when a step encounters an error. Adding the <code>&#8211;force</code> option forces the process to try each step even if an error occurs, and bypasses the confirmation request.</dl>
+<dt><code>clean</code></dt>
+<dd>Remove the <i>/.domainroot</i> directory and other infrastructure (as long as it is empty). The user is asked to confirm before action is taken.</dd>
+<dd>By default, this process stops when a step encounters an error. Adding the <code>&#8211;force</code> option forces the process to try each step even if an error occurs, and bypasses the confirmation request.</dd>
+<dt><code>status</code></dt>
+<dd>Display the status of the domain root infrastructure on the local system. This includes whether NFSD is running, and what domain root directories are currently configured and exported. This subcommand takes no arguments.</dd>
+<dt><code>add</code></dt>
+<dd>Create a new FedFS domain root directory under <i>/.domainroot</i> and export it. This subcommand takes a FedFS domain name as an argument.</dd>
+<dt><code>remove</code></dt>
+<dd>Remove an existing FedFS domain root directory from <i>/.domainroot</i>. This subcommand takes a FedFS domain name as an argument. The user is asked to confirm before action is taken.</dd>
+<dd>By default, this process stops when a step encounters an error. Adding the <code>&#8211;force</code> option forces the process to try each step even if an error occurs, and bypasses the confirmation request.</dd></dl>
 <h3>Command line options</h3>
 <p>The following options are specified before the subcommand on the command line.</p>
 <dl>
-<dt><code>-h, &#8211;help</p>
-<dd>Display usage and copyright information, then exit.</p>
-<dt>&#8211;version</p>
-<dd>Display fedfs-utils version information, then exit.</p>
-<dt>&#8211;silent</p>
-<dd>Process quietly.</p>
-<dt>&#8211;statedir=</code><i>state-directory</i></p>
-<dd>Find FedFS domain root directories on the local system in the <i>domainroots</i> subdirectory of the specified directory. By default, the state directory is <i>/var/lib/fedfs</i>.</dl>
+<dt><code>-h, &#8211;help</dt>
+<dd>Display usage and copyright information, then exit.</dd>
+<dt>&#8211;version</dt>
+<dd>Display fedfs-utils version information, then exit.</dd>
+<dt>&#8211;silent</dt>
+<dd>Process quietly.</dd>
+<dt>&#8211;statedir=</code><i>state-directory</i></dt>
+<dd>Find FedFS domain root directories on the local system in the <i>domainroots</i> subdirectory of the specified directory. By default, the state directory is <i>/var/lib/fedfs</i>.</dd></dl>
 <h2>Exit Codes</h2>
 <p>The <code><a href="/docs/linux/man/8-fedfs-domainroot/">fedfs-domainroot</a></code>(8) command returns one of two values upon exit.</p>
 <dl>
-<dt><code>0</code></p>
-<dd>The requested subcommand succeeded.</p>
-<dt><code>1</code></p>
-<dd>The requested subcommand failed.</dl>
+<dt><code>0</code></dt>
+<dd>The requested subcommand succeeded.</dd>
+<dt><code>1</code></dt>
+<dd>The requested subcommand failed.</dd></dl>
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain. After you have chosen a reliable NFS fileserver to serve your FedFS domain root directory, log in on that fileserver as root and ensure that NFSD is running. </p>
 <p> To create a new FedFS domain root for the <i>example.net</i> domain, use:</p>
 <dl>
 <dd># fedfs-domainroot &#8211;silent add example.net<br />
  Added domain root for FedFS domain &quot;example.net&quot;<br />
- # </p>
+ # </dd>
 </dl>
 <p> To populate the new domain root, change your current directory to <i>/.domainroot/example.net</i>, then add junctions with the <code><a href="/docs/linux/man/8-nfsref/">nfsref</a></code>(8) command on the fileserver. </p>
 <p> You can list the domain roots that are currently exported by your fileserver with:</p>
 <dl>
 <dd># fedfs-domainroot &#8211;silent status<br />
- FedFS domain roots: </p>
+ FedFS domain roots: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>example.net is exported with options<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*(ro,subtree_check,mp,insecure,sec=sys:none)<br />
  # </p>
@@ -79,12 +79,12 @@ description: "fedfs-domainroot – set up FedFS domain root infrastructure"
 <dl>
 <dd># fedfs-domainroot remove example.net<br />
  Removed domain root for FedFS domain &quot;example.net&quot;<br />
- #</dl>
+ #</dd></dl>
 <h2>Domain Root Discovery</h2>
 <p>To enable discovery of new domain roots by FedFS-enabled file-access clients, a DNS SRV record must be added to an appropriate authoritative DNS server. </p>
 <p> If you created your domain root on the fileserver named <i>foo.example.net</i>, a record for the above domain root should be added to the DNS server authoritative for the <i>example.net</i> domain. Such a record might look like</p>
 <dl>
-<dd>&nbsp;<wbr>_nfs-domainroot._tcp<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>IN SRV<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0 0 2049<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>foo.example.net.</p>
+<dd>&nbsp;<wbr>_nfs-domainroot._tcp<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>IN SRV<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0 0 2049<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>foo.example.net.</dd>
 </dl>
 <p> Adding DNS SRV records is outside the scope of the <code><a href="/docs/linux/man/8-fedfs-domainroot/">fedfs-domainroot</a></code>(8) command. Consult with your network administrator for details on how to add appropriate DNS SRV records for your FedFS domain root.</p>
 <h2>Security</h2>
@@ -94,10 +94,10 @@ description: "fedfs-domainroot – set up FedFS domain root infrastructure"
 <p> It is recommended to keep the <code>subtree_check</code> export option. Refer to <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5) for details.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/lib/fedfs/domainroots</i></p>
-<dd>directory containing domain root directories</p>
-<dt><i>/.domainroot</i></p>
-<dd>directory containing domain root exports</dl>
+<dt><i>/var/lib/fedfs/domainroots</i></dt>
+<dd>directory containing domain root directories</dd>
+<dt><i>/.domainroot</i></dt>
+<dd>directory containing domain root exports</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/8-nfsref/">nfsref</a></code>(8), <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8), <code><a href="/docs/linux/man/8-exportfs/">exportfs</a></code>(8), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5) </p>
 <p> RFC 6641 for the specification of FedFS DNS SRV records</p>

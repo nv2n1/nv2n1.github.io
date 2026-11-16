@@ -14,14 +14,14 @@ description: "sleeping_thread_to_gdb_regs – Convert ptrace regs to GDB regs"
 <p><i>gdb_regs</i></p>
 <dl>
 <dd>
-<dd>A pointer to hold the registers in the order GDB wants.</dl>
+</dd><dd>A pointer to hold the registers in the order GDB wants.</dd></dl>
 <p> <i>p</i></p>
 <dl>
-<dd>The struct task_struct of the desired process.</dl>
+<dd>The struct task_struct of the desired process.</dd></dl>
 <h2>Description</h2>
 <p>Convert the register values of the sleeping process in <i>p</i> to the format that GDB expects. This function is called when kgdb does not have access to the struct pt_regs and therefore it should fill the gdb registers <i>gdb_regs</i> with what has been saved in struct thread_struct thread field during switch_to.</p>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

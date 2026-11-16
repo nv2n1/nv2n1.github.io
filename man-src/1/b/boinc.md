@@ -18,90 +18,90 @@ description: "boinc – The BOINC client program."
 <p> These command-line options for <code>boinc</code> can be used to control how BOINC is started. Once the client has started, you should use a separate program, (<code><a href="/docs/linux/man/1-boincmgr/">boincmgr</a></code>(1) or <code><a href="/docs/linux/man/1-boinccmd/">boinccmd</a></code>(1)) which communicates with it by means of Remote Procedure Calls (RPCs).</p>
 <h3>GENERAL OPTIONS</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version info.</p>
-<dt><code>&#8211;run_cpu_benchmarks</code></p>
-<dd> Run the CPU benchmarks.</p>
-<dt><code>&#8211;check_all_logins</code></p>
-<dd> For idle detection, check remote logins too.</p>
-<dt><code>&#8211;daemon</code></p>
-<dd> Run as daemon. Will redirect stderr and stdout to syslog.</p>
-<dt><code>&#8211;dir </code><i>path</i></p>
-<dd> Use given dir as the client working directory.</p>
-<dt><code>&#8211;no_gpus</code></p>
-<dd> Don&#8217;t check for GPUs.</p>
-<dt><code>&#8211;no_info_fetch</code></p>
-<dd> Don&#8217;t fetch project list or client version info from boinc.berkeley.edu.</p>
-<dt><code>&#8211;skip_cpu_benchmarks</code></p>
-<dd> Don&#8217;t run CPU benchmarks.</p>
-<dt><code>&#8211;start_delay </code><i>X</i></p>
-<dd> Delay starting apps for X secs.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version info.</dd>
+<dt><code>&#8211;run_cpu_benchmarks</code></dt>
+<dd> Run the CPU benchmarks.</dd>
+<dt><code>&#8211;check_all_logins</code></dt>
+<dd> For idle detection, check remote logins too.</dd>
+<dt><code>&#8211;daemon</code></dt>
+<dd> Run as daemon. Will redirect stderr and stdout to syslog.</dd>
+<dt><code>&#8211;dir </code><i>path</i></dt>
+<dd> Use given dir as the client working directory.</dd>
+<dt><code>&#8211;no_gpus</code></dt>
+<dd> Don&#8217;t check for GPUs.</dd>
+<dt><code>&#8211;no_info_fetch</code></dt>
+<dd> Don&#8217;t fetch project list or client version info from boinc.berkeley.edu.</dd>
+<dt><code>&#8211;skip_cpu_benchmarks</code></dt>
+<dd> Don&#8217;t run CPU benchmarks.</dd>
+<dt><code>&#8211;start_delay </code><i>X</i></dt>
+<dd> Delay starting apps for X secs.</dd></dl>
 <h3>PROJECT OPTIONS</h3>
 <dl>
-<dt><code>&#8211;attach_project </code><i>URL</i><i>key</i></p>
-<dd> Attach to a project using URL and authenticator.</p>
-<dt><code>&#8211;show_projects</code></p>
-<dd> Show attached projects.</p>
-<dt><code>&#8211;detach_project </code><i>URL</i></p>
-<dd> Detach from project specified by URL.</p>
-<dt><code>&#8211;reset_project </code><i>URL</i></p>
-<dd> Reset (clear) the projectspecified by URL.</p>
-<dt><code>&#8211;update_prefs </code><i>URL</i></p>
-<dd> Contact the project specified by URL to update preferences</dl>
+<dt><code>&#8211;attach_project </code><i>URL</i><i>key</i></dt>
+<dd> Attach to a project using URL and authenticator.</dd>
+<dt><code>&#8211;show_projects</code></dt>
+<dd> Show attached projects.</dd>
+<dt><code>&#8211;detach_project </code><i>URL</i></dt>
+<dd> Detach from project specified by URL.</dd>
+<dt><code>&#8211;reset_project </code><i>URL</i></dt>
+<dd> Reset (clear) the projectspecified by URL.</dd>
+<dt><code>&#8211;update_prefs </code><i>URL</i></dt>
+<dd> Contact the project specified by URL to update preferences</dd></dl>
 <h3>COMMUNICATION OPTIONS</h3>
 <dl>
-<dt><code>&#8211;allow_remote_gui_rpc</code></p>
-<dd> Allow RPC connections from remote hosts.</p>
-<dt><code>&#8211;gui_rpc_port </code><i>port</i></p>
-<dd> Port for RPCs.</p>
-<dt><code>&#8211;no_gui_rpc</code></p>
-<dd> Omits creation of a socket as required for the remote control of the client. Consequently the client cannot be controlled by external tools like GUIs (<code>boincmgr</code> etc.) or the console command tool (<code>boinccmd</code>).</dl>
+<dt><code>&#8211;allow_remote_gui_rpc</code></dt>
+<dd> Allow RPC connections from remote hosts.</dd>
+<dt><code>&#8211;gui_rpc_port </code><i>port</i></dt>
+<dd> Port for RPCs.</dd>
+<dt><code>&#8211;no_gui_rpc</code></dt>
+<dd> Omits creation of a socket as required for the remote control of the client. Consequently the client cannot be controlled by external tools like GUIs (<code>boincmgr</code> etc.) or the console command tool (<code>boinccmd</code>).</dd></dl>
 <h3>DEBUGGING OPTIONS</h3>
 <dl>
-<dt><code>&#8211;abort_jobs_on_exit</code></p>
-<dd> When client exits, abort and report tasks.</p>
-<dt><code>&#8211;allow_multiple_clients</code></p>
-<dd> Allow more than one client instance per host.</p>
-<dt><code>&#8211;exit_after_app_start </code><i>N</i></p>
-<dd> Exit N seconds after an app starts. Useful to look at the files in the slot directory.</p>
-<dt><code>&#8211;exit_after_finish</code></p>
-<dd> Exit right after finishing a task. Useful to look at the files in the slot directory.</p>
-<dt><code>&#8211;exit_before_start</code></p>
-<dd> Exit right before starting a task. Useful to look at the files in the slot directory.</p>
-<dt><code>&#8211;exit_before_upload</code></p>
-<dd> Exit right before starting an upload.</p>
-<dt><code>&#8211;exit_when_idle</code></p>
-<dd> Exit when there are no more tasks to work on.</p>
-<dt><code>&#8211;fetch_minimal_work</code></p>
-<dd> Fetch only 1 task per device.</p>
-<dt><code>&#8211;file_xfer_giveup_period </code><i>N</i></p>
-<dd> Give up on file transfers after N sec.</p>
-<dt><code>&#8211;master_fetch_interval </code><i>N</i></p>
-<dd> Limiting the period of project master file dowload retries.</p>
-<dt><code>&#8211;master_fetch_period </code><i>N</i></p>
-<dd> Reload a project&#8217;s master file after N RPC failures.</p>
-<dt><code>&#8211;master_fetch_retry_cap </code><i>N</i></p>
-<dd> Exponential backoff limit for downloading project master files.</p>
-<dt><code>&#8211;no_priority_change</code></p>
-<dd> Run applications at same priority as client.</p>
-<dt><code>&#8211;pers_giveup </code><i>N</i></p>
-<dd> Giveup time for persistent file transfer errors.</p>
-<dt><code>&#8211;pers_retry_delay_max </code><i>N</i></p>
-<dd> Maximum time (sec) for file transfer exponential backoff.</p>
-<dt><code>&#8211;pers_retry_delay_min </code><i>N</i></p>
-<dd> Minimum time (sec) for file transfer exponential backoff.</p>
-<dt><code>&#8211;redirectio</code></p>
-<dd> Redirect stdout and stderr to log files (<i>stdoutdae.txt</i> and <i>stderrdae.txt</i>).</p>
-<dt><code>&#8211;retry_cap </code><i>N</i></p>
-<dd> Limit the maximum exponential backoff time.</p>
-<dt><code>&#8211;sched_retry_delay_max </code><i>N</i></p>
-<dd> Maximum time (sec) for project RPC exponential backoff.</p>
-<dt><code>&#8211;sched_retry_delay_min </code><i>N</i></p>
-<dd> Minimum time (sec) for project RPC exponential backoff.</p>
-<dt><code>&#8211;unsigned_apps_ok</code></p>
-<dd> Allow unsigned apps (for testing).</dl>
+<dt><code>&#8211;abort_jobs_on_exit</code></dt>
+<dd> When client exits, abort and report tasks.</dd>
+<dt><code>&#8211;allow_multiple_clients</code></dt>
+<dd> Allow more than one client instance per host.</dd>
+<dt><code>&#8211;exit_after_app_start </code><i>N</i></dt>
+<dd> Exit N seconds after an app starts. Useful to look at the files in the slot directory.</dd>
+<dt><code>&#8211;exit_after_finish</code></dt>
+<dd> Exit right after finishing a task. Useful to look at the files in the slot directory.</dd>
+<dt><code>&#8211;exit_before_start</code></dt>
+<dd> Exit right before starting a task. Useful to look at the files in the slot directory.</dd>
+<dt><code>&#8211;exit_before_upload</code></dt>
+<dd> Exit right before starting an upload.</dd>
+<dt><code>&#8211;exit_when_idle</code></dt>
+<dd> Exit when there are no more tasks to work on.</dd>
+<dt><code>&#8211;fetch_minimal_work</code></dt>
+<dd> Fetch only 1 task per device.</dd>
+<dt><code>&#8211;file_xfer_giveup_period </code><i>N</i></dt>
+<dd> Give up on file transfers after N sec.</dd>
+<dt><code>&#8211;master_fetch_interval </code><i>N</i></dt>
+<dd> Limiting the period of project master file dowload retries.</dd>
+<dt><code>&#8211;master_fetch_period </code><i>N</i></dt>
+<dd> Reload a project&#8217;s master file after N RPC failures.</dd>
+<dt><code>&#8211;master_fetch_retry_cap </code><i>N</i></dt>
+<dd> Exponential backoff limit for downloading project master files.</dd>
+<dt><code>&#8211;no_priority_change</code></dt>
+<dd> Run applications at same priority as client.</dd>
+<dt><code>&#8211;pers_giveup </code><i>N</i></dt>
+<dd> Giveup time for persistent file transfer errors.</dd>
+<dt><code>&#8211;pers_retry_delay_max </code><i>N</i></dt>
+<dd> Maximum time (sec) for file transfer exponential backoff.</dd>
+<dt><code>&#8211;pers_retry_delay_min </code><i>N</i></dt>
+<dd> Minimum time (sec) for file transfer exponential backoff.</dd>
+<dt><code>&#8211;redirectio</code></dt>
+<dd> Redirect stdout and stderr to log files (<i>stdoutdae.txt</i> and <i>stderrdae.txt</i>).</dd>
+<dt><code>&#8211;retry_cap </code><i>N</i></dt>
+<dd> Limit the maximum exponential backoff time.</dd>
+<dt><code>&#8211;sched_retry_delay_max </code><i>N</i></dt>
+<dd> Maximum time (sec) for project RPC exponential backoff.</dd>
+<dt><code>&#8211;sched_retry_delay_min </code><i>N</i></dt>
+<dd> Minimum time (sec) for project RPC exponential backoff.</dd>
+<dt><code>&#8211;unsigned_apps_ok</code></dt>
+<dd> Allow unsigned apps (for testing).</dd></dl>
 <h2>ACCESS CONTROL FOR GUI RPC</h2>
 <p> By default the client accepts GUI RPC connections only from programs on the same host, which means that any user on this host can control the client.</p>
 <h2>SEE ALSO</h2>

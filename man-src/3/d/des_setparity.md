@@ -24,14 +24,14 @@ int DES_FAILED(int status);
 <p> Here is how to use these routines. The first argument, <i>key</i>, is the 8-byte encryption key with parity. To set the key&#8217;s parity, which for DES is in the low bit of each byte, use <code>des_setparity</code>(). The second argument, <i>data</i>, contains the data to be encrypted or decrypted. The third argument, <i>datalen</i>, is the length in bytes of <i>data</i>, which must be a multiple of 8. The fourth argument, <i>mode</i>, is formed by ORing together some things. For the encryption direction OR in either <code>DES_ENCRYPT</code> or <code>DES_DECRYPT</code>. For software versus hardware encryption, OR in either <code>DES_HW</code> or <code>DES_SW</code>. If <code>DES_HW</code> is specified, and there is no hardware, then the encryption is performed in software and the routine returns <code>DESERR_NOHWDEVICE</code>. For <code>cbc_crypt</code>(), the argument <i>ivec</i> is the 8-byte initialization vector for the chaining. It is updated to the next initialization vector upon return.</p>
 <h2>RETURN VALUE</h2>
 <dl>
-<dt><code>DESERR_NONE</code></p>
-<dd> No error.</p>
-<dt><code>DESERR_NOHWDEVICE</code></p>
-<dd> Encryption succeeded, but done in software instead of the requested hardware.</p>
-<dt><code>DESERR_HWERROR</code></p>
-<dd> An error occurred in the hardware or driver.</p>
-<dt><code>DESERR_BADPARAM</code></p>
-<dd> Bad argument to routine.</dl>
+<dt><code>DESERR_NONE</code></dt>
+<dd> No error.</dd>
+<dt><code>DESERR_NOHWDEVICE</code></dt>
+<dd> Encryption succeeded, but done in software instead of the requested hardware.</dd>
+<dt><code>DESERR_HWERROR</code></dt>
+<dd> An error occurred in the hardware or driver.</dd>
+<dt><code>DESERR_BADPARAM</code></dt>
+<dd> Bad argument to routine.</dd></dl>
 <p> Given a result status <i>stat</i>, the macro <code>DES_FAILED(</code><i>stat</i><code>)</code> is false only for the first two statuses.</p>
 <h2>VERSIONS</h2>
 <p> These functions were added to glibc in version 2.1. </p>

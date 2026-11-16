@@ -29,10 +29,8 @@ Both this function and the constructor of std::shared_ptr may be used to acquire
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 void observe(std::weak_ptr&lt;int&gt; weak)
-
 {
     if (auto observe = weak.lock()) {
         std::cout &lt;&lt; &quot;\tobserve() able to lock weak_ptr&lt;&gt;, value=&quot; &lt;&lt; *observe &lt;&lt; &quot;\n&quot;;
@@ -41,7 +39,6 @@ void observe(std::weak_ptr&lt;int&gt; weak)
     }
 }
 int main()
-
 {
     std::weak_ptr&lt;int&gt; weak;
     std::cout &lt;&lt; &quot;weak_ptr&lt;&gt; not yet initialized\n&quot;;

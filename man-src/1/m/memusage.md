@@ -17,15 +17,13 @@ description: "memusage – profile memory usage of a program"
 <h3>Memory usage summary</h3>
 <p> The &quot;Memory usage summary&quot; line output by <code>memusage</code> contains three fields:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>heap total</code></p>
-<dd> Sum of <i>size</i> arguments of all <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) calls, products of arguments (<i>nmemb</i>*<i>size</i>) of all <code><a href="/docs/linux/man/3-calloc/">calloc</a></code>(3) calls, and sum of <i>length</i> arguments of all <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) calls. In the case of <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3) and <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), if the new size of an allocation is larger than the previous size, the sum of all such differences (new size minus old size) is added.</p>
-<dt><code>heap peak</code></p>
-<dd> Maximum of all <i>size</i> arguments of <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), all products of <i>nmemb</i>*<i>size</i> of <code><a href="/docs/linux/man/3-calloc/">calloc</a></code>(3), all <i>size</i> arguments of <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3), <i>length</i> arguments of <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), and <i>new_size</i> arguments of <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</p>
-<dt><code>stack peak</code></p>
-<dd> Before the first call to any monitored function, the stack pointer address (base stack pointer) is saved. After each function call, the actual stack pointer address is read and the difference from the base stack pointer computed. The maximum of these differences is then the stack peak.</dl>
+<dt><code>heap total</code></dt>
+<dd> Sum of <i>size</i> arguments of all <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) calls, products of arguments (<i>nmemb</i>*<i>size</i>) of all <code><a href="/docs/linux/man/3-calloc/">calloc</a></code>(3) calls, and sum of <i>length</i> arguments of all <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) calls. In the case of <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3) and <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), if the new size of an allocation is larger than the previous size, the sum of all such differences (new size minus old size) is added.</dd>
+<dt><code>heap peak</code></dt>
+<dd> Maximum of all <i>size</i> arguments of <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), all products of <i>nmemb</i>*<i>size</i> of <code><a href="/docs/linux/man/3-calloc/">calloc</a></code>(3), all <i>size</i> arguments of <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3), <i>length</i> arguments of <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), and <i>new_size</i> arguments of <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2).</dd>
+<dt><code>stack peak</code></dt>
+<dd> Before the first call to any monitored function, the stack pointer address (base stack pointer) is saved. After each function call, the actual stack pointer address is read and the difference from the base stack pointer computed. The maximum of these differences is then the stack peak.</dd></dl>
 </dl>
 <p> Immediately following this summary line, a table shows the number calls, total memory allocated or deallocated, and number of failed calls for each intercepted function. For <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3) and <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), the additional field &quot;nomove&quot; shows reallocations that changed the address of a block, and the additional &quot;dec&quot; field shows reallocations that decreased the size of the block. For <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3), the additional field &quot;free&quot; shows reallocations that caused a block to be freed (i.e., the reallocated size was 0). </p>
 <p> The &quot;realloc/total memory&quot; of the table output by <code>memusage</code> does not reflect cases where <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3) is used to reallocate a block of memory to have a smaller size than previously. This can cause sum of all &quot;total memory&quot; cells (excluding &quot;free&quot;) to be larger than the &quot;free/total memory&quot; cell.</p>
@@ -33,38 +31,38 @@ description: "memusage – profile memory usage of a program"
 <p> The &quot;Histogram for block sizes&quot; provides a breakdown of memory allocations into various bucket sizes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n&nbsp;</code><i>name</i>,&nbsp;<code>&#8211;progname=</code><i>name</i></p>
-<dd> Name of the program file to profile.</p>
-<dt><code>-p&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;png=</code><i>file</i></p>
-<dd> Generate PNG graphic and store it in <i>file</i>.</p>
-<dt><code>-d&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;data=</code><i>file</i></p>
-<dd> Generate binary data file and store it in <i>file</i>.</p>
-<dt><code>-u</code>,&nbsp;<code>&#8211;unbuffered</code></p>
-<dd> Do not buffer output.</p>
-<dt><code>-b&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;buffer=</code><i>size</i></p>
-<dd> Collect <i>size</i> entries before writing them out.</p>
-<dt><code>&#8211;no-timer</code></p>
-<dd> Disable timer-based (<code>SIGPROF</code>) sampling of stack pointer value.</p>
-<dt><code>-m</code>,&nbsp;<code>&#8211;mmap</code></p>
-<dd> Also trace <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), and <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2).</p>
-<dt><code>-?</code>,&nbsp;<code>&#8211;help</code></p>
-<dd> Print help and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Print a short usage message and exit.</p>
-<dt><code>-V</code>,&nbsp;<code>&#8211;version</code></p>
-<dd> Print version information and exit.</p>
-<dt>The following options apply only when generating graphical output:</p>
+<dt><code>-n&nbsp;</code><i>name</i>,&nbsp;<code>&#8211;progname=</code><i>name</i></dt>
+<dd> Name of the program file to profile.</dd>
+<dt><code>-p&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;png=</code><i>file</i></dt>
+<dd> Generate PNG graphic and store it in <i>file</i>.</dd>
+<dt><code>-d&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;data=</code><i>file</i></dt>
+<dd> Generate binary data file and store it in <i>file</i>.</dd>
+<dt><code>-u</code>,&nbsp;<code>&#8211;unbuffered</code></dt>
+<dd> Do not buffer output.</dd>
+<dt><code>-b&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;buffer=</code><i>size</i></dt>
+<dd> Collect <i>size</i> entries before writing them out.</dd>
+<dt><code>&#8211;no-timer</code></dt>
+<dd> Disable timer-based (<code>SIGPROF</code>) sampling of stack pointer value.</dd>
+<dt><code>-m</code>,&nbsp;<code>&#8211;mmap</code></dt>
+<dd> Also trace <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), and <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2).</dd>
+<dt><code>-?</code>,&nbsp;<code>&#8211;help</code></dt>
+<dd> Print help and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Print a short usage message and exit.</dd>
+<dt><code>-V</code>,&nbsp;<code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd>
+<dt>The following options apply only when generating graphical output:</dt>
 <dd>
-<dt><code>-t</code>,&nbsp;<code>&#8211;time-based</code></p>
-<dd> Use time (rather than number of function calls) as the scale for the X axis.</p>
-<dt><code>-T</code>,&nbsp;<code>&#8211;total</code></p>
-<dd> Also draw a graph of total memory use.</p>
-<dt><code>&#8211;title=</code><i>name</i></p>
-<dd> Use <i>name</i> as the title of the graph.</p>
-<dt><code>-x&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;x-size=</code><i>size</i></p>
-<dd> Make the graph <i>size</i> pixels wide.</p>
-<dt><code>-y&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;y-size=</code><i>size</i></p>
-<dd> Make the graph <i>size</i> pixels high.</dl>
+</dd><dt><code>-t</code>,&nbsp;<code>&#8211;time-based</code></dt>
+<dd> Use time (rather than number of function calls) as the scale for the X axis.</dd>
+<dt><code>-T</code>,&nbsp;<code>&#8211;total</code></dt>
+<dd> Also draw a graph of total memory use.</dd>
+<dt><code>&#8211;title=</code><i>name</i></dt>
+<dd> Use <i>name</i> as the title of the graph.</dd>
+<dt><code>-x&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;x-size=</code><i>size</i></dt>
+<dd> Make the graph <i>size</i> pixels wide.</dd>
+<dt><code>-y&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;y-size=</code><i>size</i></dt>
+<dd> Make the graph <i>size</i> pixels high.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Exit status is equal to the exit status of profiled program.</p>
 <h2>BUGS</h2>

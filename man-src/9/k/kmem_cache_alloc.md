@@ -14,10 +14,10 @@ description: "kmem_cache_alloc – Allocate an object"
 <p><i>cachep</i></p>
 <dl>
 <dd>
-<dd>The cache to allocate from.</dl>
+</dd><dd>The cache to allocate from.</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>See <code>kmalloc</code>.</dl>
+<dd>See <code>kmalloc</code>.</dd></dl>
 <h2>Description</h2>
 <p>Allocate an object from this cache. The flags are only relevant if the cache has no available objects.</p>
 <h2>Copyright</h2>

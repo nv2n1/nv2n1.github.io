@@ -20,24 +20,24 @@ description: "struct_usb_ep_caps – endpoint capabilities description"
 <h2>Members</h2>
 <p>type_control</p>
 <dl>
-<dd>Endpoint supports control type (reserved for ep0).</dl>
+<dd>Endpoint supports control type (reserved for ep0).</dd></dl>
 <p> type_iso</p>
 <dl>
-<dd>Endpoint supports isochronous transfers.</dl>
+<dd>Endpoint supports isochronous transfers.</dd></dl>
 <p> type_bulk</p>
 <dl>
-<dd>Endpoint supports bulk transfers.</dl>
+<dd>Endpoint supports bulk transfers.</dd></dl>
 <p> type_int</p>
 <dl>
-<dd>Endpoint supports interrupt transfers.</dl>
+<dd>Endpoint supports interrupt transfers.</dd></dl>
 <p> dir_in</p>
 <dl>
-<dd>Endpoint supports IN direction.</dl>
+<dd>Endpoint supports IN direction.</dd></dl>
 <p> dir_out</p>
 <dl>
-<dd>Endpoint supports OUT direction.</dl>
+<dd>Endpoint supports OUT direction.</dd></dl>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

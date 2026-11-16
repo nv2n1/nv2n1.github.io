@@ -16,16 +16,16 @@ description: "hal-disable-polling – disable polling on drives with removable m
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;udi</i></p>
-<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</p>
-<dt><i>&#8211;device</i></p>
-<dd> The device file of the drive.</p>
-<dt><i>&#8211;enable-polling</i></p>
-<dd> Enable polling instead of disabling it.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Print out usage.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print the version. </p>
+<dt><i>&#8211;udi</i></dt>
+<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</dd>
+<dt><i>&#8211;device</i></dt>
+<dd> The device file of the drive.</dd>
+<dt><i>&#8211;enable-polling</i></dt>
+<dd> Enable polling instead of disabling it.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Print out usage.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print the version. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> This program requires super user privileges. </p>

@@ -10,7 +10,6 @@ description: "pbs_terminate – terminate a pbs batch server"
 <p>pbs_terminate &#8211; terminate a pbs batch server</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre><code>int pbs_terminate(int connect, int manner, char&nbsp;<wbr>*extend)
 </code></pre>
@@ -20,11 +19,11 @@ description: "pbs_terminate – terminate a pbs batch server"
 <p> The parameter, <i> specifies the manner in which the server is shut down. The available manners are defined in pbs_ifl.h as:</p>
 <dl>
 <dd>
-<dl>
-<dt>#define SHUT_IMMEDIATE 0</p>
-<dd>Shutdown is to be immediate, runnings jobs are checkpointed, requeued, or deleted as required.</p>
-<dt>#define SHUT_DELAY 1</p>
-<dd>Jobs which can be checkpointed are checkpointed, terminated, and requeued. Jobs which cannot be checkpointed but are rerunnable are terminated and requeued. Shutdown is delayed until the remaining running jobs complete. No new jobs will be started by the server.</dl>
+</dd><dl>
+<dt>#define SHUT_IMMEDIATE 0</dt>
+<dd>Shutdown is to be immediate, runnings jobs are checkpointed, requeued, or deleted as required.</dd>
+<dt>#define SHUT_DELAY 1</dt>
+<dd>Jobs which can be checkpointed are checkpointed, terminated, and requeued. Jobs which cannot be checkpointed but are rerunnable are terminated and requeued. Shutdown is delayed until the remaining running jobs complete. No new jobs will be started by the server.</dd></dl>
 </dl>
 <p> The server will not respond to the batch request until the server has completed its termination procedure. </p>
 <p> The parameter, is reserved for implementation defined extensions. </p>

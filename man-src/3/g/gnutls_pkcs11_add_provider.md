@@ -14,10 +14,10 @@ description: "gnutls_pkcs11_add_provider – API function"
 <p> <code>int gnutls_pkcs11_add_provider(const char * </code><i>name</i><code>, const char * </code><i>params</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * name</p>
-<dd> The filename of the module</p>
-<dt>const char * params</p>
-<dd> should be NULL</dl>
+<dt>const char * name</dt>
+<dd> The filename of the module</dd>
+<dt>const char * params</dt>
+<dd> should be NULL</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will load and add a PKCS 11 module to the module list used in gnutls. After this function is called the module will be used for PKCS 11 operations. </p>
 <p> When loading a module to be used for certificate verification, use the string &#8216;trusted&#8217; as <i>params</i> . </p>
@@ -35,6 +35,6 @@ description: "gnutls_pkcs11_add_provider – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

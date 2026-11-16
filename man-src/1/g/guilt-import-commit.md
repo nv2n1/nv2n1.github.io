@@ -17,15 +17,15 @@ description: "guilt-import-commit – Import one or more commits as patches"
 <p> &lt;hash&gt;</p>
 <dl>
 <dt>
-<dd> Only the specified revision.</dl>
+</dt><dd> Only the specified revision.</dd></dl>
 <p> &lt;since&gt;..[&lt;until&gt;]</p>
 <dl>
 <dt>
-<dd> Revisions starting from <i>&lt;since&gt;</i> until <i>&lt;until&gt;</i>. The <i>&lt;since&gt;</i> revision it self is NOT included, while <i>&lt;until&gt;</i> is. If <i>&lt;until&gt;</i> is not specified, it is assumed to be HEAD.</dl>
+</dt><dd> Revisions starting from <i>&lt;since&gt;</i> until <i>&lt;until&gt;</i>. The <i>&lt;since&gt;</i> revision it self is NOT included, while <i>&lt;until&gt;</i> is. If <i>&lt;until&gt;</i> is not specified, it is assumed to be HEAD.</dd></dl>
 <p> ..&lt;until&gt;</p>
 <dl>
 <dt>
-<dd> All revisions until the <i>&lt;until&gt;</i> revision (inclusive).</dl>
+</dt><dd> All revisions until the <i>&lt;until&gt;</i> revision (inclusive).</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -34,10 +34,10 @@ description: "guilt-import-commit – Import one or more commits as patches"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

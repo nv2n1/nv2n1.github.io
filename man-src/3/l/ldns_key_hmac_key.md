@@ -19,17 +19,17 @@ description: "ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_h
 <p> unsigned char* ldns_key_hmac_key(const ldns_key *k); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_rsa_key</i>()</p>
-<dd>returns the (openssl) RSA struct contained in the key .br <code>k</code>: the key to look in .br Returns the RSA * structure in the key</dl>
+<dt> <i>ldns_key_rsa_key</i>()</dt>
+<dd>returns the (openssl) RSA struct contained in the key .br <code>k</code>: the key to look in .br Returns the RSA * structure in the key</dd></dl>
 <dl>
-<dt> <i>ldns_key_dsa_key</i>()</p>
-<dd>returns the (openssl) DSA struct contained in the key</dl>
+<dt> <i>ldns_key_dsa_key</i>()</dt>
+<dd>returns the (openssl) DSA struct contained in the key</dd></dl>
 <dl>
-<dt> <i>ldns_key_algorithm</i>()</p>
-<dd>return the signing alg of the key .br <code>k</code>: the key .br Returns the algorithm</dl>
+<dt> <i>ldns_key_algorithm</i>()</dt>
+<dd>return the signing alg of the key .br <code>k</code>: the key .br Returns the algorithm</dd></dl>
 <dl>
-<dt> <i>ldns_key_hmac_key</i>()</p>
-<dd>return the hmac key data .br <code>k</code>: the key .br Returns the hmac key data</dl>
+<dt> <i>ldns_key_hmac_key</i>()</dt>
+<dd>return the hmac key data .br <code>k</code>: the key .br Returns the hmac key data</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

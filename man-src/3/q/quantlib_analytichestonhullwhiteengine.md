@@ -27,7 +27,7 @@ d{array} ].PP References: </p>
 <p> A. Sepp, Pricing European-Style Options under Jump Diffusion Processes with Stochastic Volatility: Applications of Fourier Transform (&lt;<a rel="nofollow" href="http://math.ut.ee/~spartak/papers/stochjumpvols.pdf">http://math.ut.ee/~spartak/papers/stochjumpvols.pdf</a>&gt;) </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in web/literature, testing against QuantLib&#8217;s analytic Heston and Black-Scholes-Merton Hull-White engine</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature, testing against QuantLib&#8217;s analytic Heston and Black-Scholes-Merton Hull-White engine</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

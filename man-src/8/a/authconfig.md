@@ -37,41 +37,41 @@ description: "authconfig, authconfig-tui – an interface for configuring system
 <h2>Files</h2>
 <dl>
 <dt>
-<dt> <i>/etc/sysconfig/authconfig</i></p>
+</dt><dt> <i>/etc/sysconfig/authconfig</i></dt>
 <dd>
-<dd>Used to track whether or not particular authentication mechanisms are enabled. Currently includes variables named USESHADOW, USEMD5, USEKERBEROS, USELDAPAUTH, USESMBAUTH, USEWINBIND, USEWINBINDAUTH, USEHESIOD, USENIS, USELDAP, and others.</p>
-<dt> <i>/etc/passwd</i></p>
+</dd><dd>Used to track whether or not particular authentication mechanisms are enabled. Currently includes variables named USESHADOW, USEMD5, USEKERBEROS, USELDAPAUTH, USESMBAUTH, USEWINBIND, USEWINBINDAUTH, USEHESIOD, USENIS, USELDAP, and others.</dd>
+<dt> <i>/etc/passwd</i></dt>
 <dd>
-<dt> <i>/etc/shadow</i></p>
-<dd>Used for shadow password support.</p>
-<dt> <i>/etc/yp.conf</i></p>
-<dd>Configuration file for NIS support.</p>
-<dt> <i>/etc/sysconfig/network</i></p>
-<dd>Another configuration file for NIS support.</p>
-<dt> <i>/etc/ldap.conf</i></p>
+</dd><dt> <i>/etc/shadow</i></dt>
+<dd>Used for shadow password support.</dd>
+<dt> <i>/etc/yp.conf</i></dt>
+<dd>Configuration file for NIS support.</dd>
+<dt> <i>/etc/sysconfig/network</i></dt>
+<dd>Another configuration file for NIS support.</dd>
+<dt> <i>/etc/ldap.conf</i></dt>
 <dd>
-<dt> <i>/etc/nss_ldap.conf</i></p>
+</dd><dt> <i>/etc/nss_ldap.conf</i></dt>
 <dd>
-<dt> <i>/etc/pam_ldap.conf</i></p>
+</dd><dt> <i>/etc/pam_ldap.conf</i></dt>
 <dd>
-<dt> <i>/etc/nslcd.conf</i></p>
+</dd><dt> <i>/etc/nslcd.conf</i></dt>
 <dd>
-<dt> <i>/etc/openldap/ldap.conf</i></p>
-<dd>Used to configure nss_ldap, pam_ldap, nslcd, and the OpenLDAP library. Only the files already existing on the system are modified.</p>
-<dt> <i>/etc/krb5.conf</i></p>
-<dd>Used to configure Kerberos 5.</p>
-<dt> <i>/etc/hesiod.conf</i></p>
-<dd>Used to configure Hesiod.</p>
-<dt> <i>/etc/samba/smb.conf</i></p>
-<dd>Used to configure winbind authentication.</p>
-<dt> <i>/etc/nsswitch.conf</i></p>
-<dd>Used to configure user information services.</p>
-<dt> <i>/etc/login.defs</i></p>
-<dd>Used to configure parameters of user accounts (minimum UID of a regular user, password hashing algorithm).</p>
-<dt> <i>/etc/pam.d/system-auth</i></p>
-<dd>Common PAM configuration for system services which include it using the <code>include</code> directive. It is created as symlink and not relinked if it points to another file.</p>
-<dt> <i>/etc/pam.d/system-auth-ac</i></p>
-<dd>Contains the actual PAM configuration for system services and is the default target of the <code>/etc/pam.d/system-auth</code> symlink. If a local configuration of PAM is created (and symlinked from <code>system-auth</code> file) this file can be <code>include</code>d there. </p>
+</dd><dt> <i>/etc/openldap/ldap.conf</i></dt>
+<dd>Used to configure nss_ldap, pam_ldap, nslcd, and the OpenLDAP library. Only the files already existing on the system are modified.</dd>
+<dt> <i>/etc/krb5.conf</i></dt>
+<dd>Used to configure Kerberos 5.</dd>
+<dt> <i>/etc/hesiod.conf</i></dt>
+<dd>Used to configure Hesiod.</dd>
+<dt> <i>/etc/samba/smb.conf</i></dt>
+<dd>Used to configure winbind authentication.</dd>
+<dt> <i>/etc/nsswitch.conf</i></dt>
+<dd>Used to configure user information services.</dd>
+<dt> <i>/etc/login.defs</i></dt>
+<dd>Used to configure parameters of user accounts (minimum UID of a regular user, password hashing algorithm).</dd>
+<dt> <i>/etc/pam.d/system-auth</i></dt>
+<dd>Common PAM configuration for system services which include it using the <code>include</code> directive. It is created as symlink and not relinked if it points to another file.</dd>
+<dt> <i>/etc/pam.d/system-auth-ac</i></dt>
+<dd>Contains the actual PAM configuration for system services and is the default target of the <code>/etc/pam.d/system-auth</code> symlink. If a local configuration of PAM is created (and symlinked from <code>system-auth</code> file) this file can be <code>include</code>d there. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-authconfig-gtk/">authconfig-gtk</a>(8), <a href="/docs/linux/man/5-system-auth-ac/">system-auth-ac</a>(5), <a href="/docs/linux/man/5-passwd/">passwd</a>(5), <a href="/docs/linux/man/5-shadow/">shadow</a>(5), pwconv(1), <a href="/docs/linux/man/1-domainname/">domainname</a>(1), <a href="/docs/linux/man/8-ypbind/">ypbind</a>(8), <a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a>(5), <a href="/docs/linux/man/5-smb-conf/">smb.conf</a>(5), <a href="/docs/linux/man/8-sssd/">sssd</a>(8) </p>

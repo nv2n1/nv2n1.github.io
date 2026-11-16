@@ -26,10 +26,10 @@ description: "trace-cmd-check-events – parse the event formats on local system
 <p> Copyright (C) 2011 Google, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> vnagarnaik [at] google.com</p>
+<dt> 1.</dt>
+<dd> vnagarnaik [at] google.com</dd>
 <dl>
 <dt>
-<dd> mailto:vnagarnaik [at] google.com</dl>
+</dt><dd> mailto:vnagarnaik [at] google.com</dd></dl>
 </dl>
 <h2>Index</h2>

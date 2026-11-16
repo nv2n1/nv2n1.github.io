@@ -11,10 +11,8 @@ std::experimental::filesystem::permissions - std::experimental::filesystem::perm
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     void permissions(const path &amp;p, perms prms);
 (filesystem TS)
-
     void permissions(const path &amp;p, perms prms, error_code &amp;ec);</code></pre> 
 Changes access permissions of the file to which p resolves, as if by POSIX fchmodat. Symlinks are followed if prms::resolve_symlinks is set. 
 The effects depend on prms as follows: 
@@ -48,16 +46,11 @@ Some permission bits may be ignored on some systems, and changing some bits may 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;fstream&gt;
-
 #include &lt;bitset&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 void demo_perms(fs::perms p)
-
 {
     std::cout &lt;&lt; ((p &amp; fs::perms::owner_read) != fs::perms::none ? &quot;r&quot; : &quot;-&quot;)
               &lt;&lt; ((p &amp; fs::perms::owner_write) != fs::perms::none ? &quot;w&quot; : &quot;-&quot;)
@@ -71,7 +64,6 @@ void demo_perms(fs::perms p)
               &lt;&lt; '\n';
 }
 int main()
-
 {
     std::ofstream(&quot;test.txt&quot;); // create file
     std::cout &lt;&lt; &quot;Created file with permissions: &quot;;

@@ -13,8 +13,8 @@ description: "pskc_init – API function"
 int pskc_init(pskc_t **container);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t ** container</p>
-<dd>pointer to a <code>pskc_t</code> handle to initialize.</dl>
+<dt>pskc_t ** container</dt>
+<dd>pointer to a <code>pskc_t</code> handle to initialize.</dd></dl>
 <h2>Description</h2>
 <p>This function initializes the PSKC <i>container</i> handle. The memory allocate can be released by calling <code>pskc_done()</code>.</p>
 <h2>Returns</h2>

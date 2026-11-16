@@ -14,14 +14,14 @@ description: "gnutls_pubkey_import_privkey – API function"
 <p> <code>int gnutls_pubkey_import_privkey(gnutls_pubkey_t </code><i>key</i><code>, gnutls_privkey_t </code><i>pkey</i><code>, unsigned int </code><i>usage</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t key</p>
-<dd> The public key</p>
-<dt>gnutls_privkey_t pkey</p>
-<dd> The private key</p>
-<dt>unsigned int usage</p>
-<dd> GNUTLS_KEY_* key usage flags.</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>gnutls_pubkey_t key</dt>
+<dd> The public key</dd>
+<dt>gnutls_privkey_t pkey</dt>
+<dd> The private key</dd>
+<dt>unsigned int usage</dt>
+<dd> GNUTLS_KEY_* key usage flags.</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Imports the public key from a private. This function will import the given public key to the abstract <code>gnutls_pubkey_t</code> structure.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_pubkey_import_privkey – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

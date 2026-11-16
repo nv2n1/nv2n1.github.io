@@ -14,27 +14,27 @@ description: "grub-mount – export GRUB filesystem with FUSE"
 <h2>DESCRIPTION</h2>
 <p> Debug tool for filesystem driver.</p>
 <dl>
-<dt><code>-C</code>, <code>&#8211;crypto</code></p>
-<dd> Mount crypto devices.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>,STRING/</i></p>
-<dd> Set debug environment variable.</p>
-<dt><code>-K</code>, <code>&#8211;zfs-key</code>=<i>,FILE/</i>|prompt</p>
-<dd> Load zfs crypto key.</p>
-<dt><code>-r</code>, <code>&#8211;root</code>=<i>,DEVICE_NAME/</i></p>
-<dd> Set root device.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> print verbose messages.</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print program version</dl>
+<dt><code>-C</code>, <code>&#8211;crypto</code></dt>
+<dd> Mount crypto devices.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>,STRING/</i></dt>
+<dd> Set debug environment variable.</dd>
+<dt><code>-K</code>, <code>&#8211;zfs-key</code>=<i>,FILE/</i>|prompt</dt>
+<dd> Load zfs crypto key.</dd>
+<dt><code>-r</code>, <code>&#8211;root</code>=<i>,DEVICE_NAME/</i></dt>
+<dd> Set root device.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> print verbose messages.</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print program version</dd></dl>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>grub-mount</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-mount</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info grub-mount</code></dl>
+</dt><dd> <code>info grub-mount</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

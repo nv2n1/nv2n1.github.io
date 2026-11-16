@@ -19,7 +19,7 @@ description: "chpgvx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHPGVX computes selected eigenvalues and, optionally, eigenvectors
  of a complex generalized Hermitian-definite eigenproblem, of the form
@@ -29,11 +29,11 @@ description: "chpgvx.f –"
  specifying either a range of values or a range of indices for the
  desired eigenvalues.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ITYPE</i> </p>
+</dt><dd> <i>ITYPE</i> </dd>
 <pre>
           ITYPE is INTEGER
           Specifies the problem type to be solved:
@@ -187,18 +187,18 @@ INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i - th argument
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dl>
+</dt><dd> Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dd></dl>
 <p> Definition at line 267 of file chpgvx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -16,22 +16,22 @@ description: "hal-lock – lock an interface"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;interface</i></p>
-<dd> The name of the interface to lock.</p>
-<dt><i>&#8211;run</i></p>
-<dd> Program to run if the lock was acquired.</p>
-<dt><i>&#8211;udi</i></p>
-<dd> The UDI (<i>Unique Device Identifier</i>) of the device object. If this is ommitted, the global lock will be tried.</p>
-<dt><i>&#8211;exclusive</i></p>
-<dd> Whether the lock can be held by others.</p>
-<dt><i>&#8211;exit-with-lock</i></p>
-<dd> Kill the program if the acquired lock is lost. This only makes sense if you pass a specific <i>UDI</i> due to the semantics of HAL locks.</p>
-<dt><i>&#8211;exit-with-dev</i></p>
-<dd> Kill the program if the device is removed. This only makes sense if you pass a specific <i>UDI</i> due to the semantics of HAL locks.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Print out usage.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print the version. </p>
+<dt><i>&#8211;interface</i></dt>
+<dd> The name of the interface to lock.</dd>
+<dt><i>&#8211;run</i></dt>
+<dd> Program to run if the lock was acquired.</dd>
+<dt><i>&#8211;udi</i></dt>
+<dd> The UDI (<i>Unique Device Identifier</i>) of the device object. If this is ommitted, the global lock will be tried.</dd>
+<dt><i>&#8211;exclusive</i></dt>
+<dd> Whether the lock can be held by others.</dd>
+<dt><i>&#8211;exit-with-lock</i></dt>
+<dd> Kill the program if the acquired lock is lost. This only makes sense if you pass a specific <i>UDI</i> due to the semantics of HAL locks.</dd>
+<dt><i>&#8211;exit-with-dev</i></dt>
+<dd> Kill the program if the device is removed. This only makes sense if you pass a specific <i>UDI</i> due to the semantics of HAL locks.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Print out usage.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print the version. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> This program will attempt to grab a lock on a given interface. Unless, a specific <i>UDI </i> is given, the global lock will be tried. If the lock was succesfully acquired the program specified by the option &#8211;run will be run and upon termination this program will exit with exit code 0. If the lock wasn&#8217;t acquired or an error occured while taking the lock, this program will exit with a non-zero exit code and the given program will not be run. </p>

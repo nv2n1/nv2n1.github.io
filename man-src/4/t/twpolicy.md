@@ -114,24 +114,24 @@ S SHA hash value</pre>
 <p>is equivalent to the attribute example above. </p>
 <p> The following four rule attributes are supported by <i>Tripwire</i>:</p>
 <dl>
-<dt><tt>rulename</tt></p>
+<dt><tt>rulename</tt></dt>
 <dd>The <tt>rulename</tt> attribute is used to associate a rule or set of rules with a specific name. In a report file, this name will be associated with violations to the specified rule. This feature is useful if you want to track certain objects within a large <i>Tripwire</i> database. For instance, if you associate the rule name &quot;watchme&quot; with important files, you can sort through the <i>Tripwire</i> report using &quot;watchme&quot; as a sorting key.<br />
- Example: <font SIZE="-1"> </font></p>
+ Example: <font SIZE="-1"> </font></dd>
 <pre>/etc -&gt; +ug (rulename=watchme);</pre>
-<dt><tt>emailto</tt></p>
+<dt><tt>emailto</tt></dt>
 <dd>The <tt>emailto</tt> attribute associates one or more email addresses with a rule or group of rules. When an integrity check is run with the <code>&#8211;email-report</code> option and a rule is violated, a report of that violation will be sent to the specified email address(es), using the report format specified by the <tt>EMAILREPORTLEVEL</tt> variable in the configuration file.<br />
- Example: <font SIZE="-1"> </font></p>
+ Example: <font SIZE="-1"> </font></dd>
 <pre>/etc -&gt; +ug (emailto=admin [at] domain.com);</pre>
-<dd>To specify multiple email addresses, include them as a quoted, semicolon-delimited list. <font SIZE="-1"> </font></p>
+<dd>To specify multiple email addresses, include them as a quoted, semicolon-delimited list. <font SIZE="-1"> </font></dd>
 <pre>/etc -&gt; +ug (emailto=&quot;admin [at] foo.com;admin2 [at] foo.com&quot;);</pre>
-<dt><tt>severity</tt></p>
+<dt><tt>severity</tt></dt>
 <dd>The <tt>severity</tt> attribute associates a numeric severity level with a rule. When <i>Tripwire</i> is run in Integrity Checking mode, it is possible to specify that only rules exceeding a certain severity level are used. The default severity level is 0, and values can range from 0 to 1,000,000.<br />
- Example: <font SIZE="-1"> </font></p>
+ Example: <font SIZE="-1"> </font></dd>
 <pre>/etc -&gt; +ug (severity=50);</pre>
-<dt><tt>recurse</tt></p>
-<dd>The <tt>recurse</tt> attribute specifies how a rule will scan directories. Valid values for <tt>recurse</tt> are <i>true</i>, <i>false</i>, or a number from -1 to 1,000,000. If <tt>recurse</tt> is set to <i>true</i> (or -1), tripwire will recursively scan the entire contents of the directory (both files and subdirectories). When <tt>recurse</tt> is set to <i>false</i> (or 0), and the rule refers to a directory, <i>Tripwire</i> will scan the inode of the directory but none of the files or subdirectories contained therein. For positive <tt>recurse</tt> value <i>n</i>, the rule will monitor all objects up to <i>n</i> levels below the start point. Stop points within the recursed directory still apply, and will prevent the specified file or directory from being scanned.</p>
+<dt><tt>recurse</tt></dt>
+<dd>The <tt>recurse</tt> attribute specifies how a rule will scan directories. Valid values for <tt>recurse</tt> are <i>true</i>, <i>false</i>, or a number from -1 to 1,000,000. If <tt>recurse</tt> is set to <i>true</i> (or -1), tripwire will recursively scan the entire contents of the directory (both files and subdirectories). When <tt>recurse</tt> is set to <i>false</i> (or 0), and the rule refers to a directory, <i>Tripwire</i> will scan the inode of the directory but none of the files or subdirectories contained therein. For positive <tt>recurse</tt> value <i>n</i>, the rule will monitor all objects up to <i>n</i> levels below the start point. Stop points within the recursed directory still apply, and will prevent the specified file or directory from being scanned.</dd>
 <dd>When a rule refers to a file, specifying the <tt>recurse</tt> attribute has no effect&#8211;files will be scanned no matter what value is given for <tt>recurse</tt>. The default value for <tt>recurse</tt> is <i>true</i>.<br />
- Example: <font SIZE="-1"> </font></p>
+ Example: <font SIZE="-1"> </font></dd>
 <pre>/etc -&gt; +ug (recurse=2);</pre>
 </dl>
 <h3>Directives</h3>
@@ -177,24 +177,24 @@ $(dir1) -&gt; +tbamc; # Left hand substitution.
 $(DIR1) -&gt; $(param1); # Double substitution.</pre>
 <p>A number of variables are predefined by <i>Tripwire</i> and may not be changed. These variables represent different ways that files can change, and can be used on the right side of rules to design a policy file quickly.</p>
 <dl>
-<dt>ReadOnly</p>
+<dt>ReadOnly</dt>
 <dd>ReadOnly is good for files that are widely available but are intended to be read-only.<br />
- Value: <font SIZE="-1"> +pinugtsdbmCM-rlacSH </font></p>
-<dt>Dynamic</p>
+ Value: <font SIZE="-1"> +pinugtsdbmCM-rlacSH </font></dd>
+<dt>Dynamic</dt>
 <dd>Dynamic is good for monitoring user directories and files that tend to be dynamic in behavior.<br />
- Value: <font SIZE="-1"> +pinugtd-srlbamcCMSH </font></p>
-<dt>Growing</p>
+ Value: <font SIZE="-1"> +pinugtd-srlbamcCMSH </font></dd>
+<dt>Growing</dt>
 <dd>The Growing variable is intended for files that should only get larger.<br />
- Value: <font SIZE="-1"> +pinugtdl-srbamcCMSH </font></p>
-<dt>Device</p>
+ Value: <font SIZE="-1"> +pinugtdl-srbamcCMSH </font></dd>
+<dt>Device</dt>
 <dd>Device is good for devices or other files that <i>Tripwire</i> should not attempt to open.<br />
- Value: <font SIZE="-1"> +pugsdr-intlbamcCMSH </font></p>
-<dt>IgnoreAll</p>
+ Value: <font SIZE="-1"> +pugsdr-intlbamcCMSH </font></dd>
+<dt>IgnoreAll</dt>
 <dd>IgnoreAll tracks a file&#8217;s presence or absence, but doesn&#8217;t check any other properties.<br />
- Value: <font SIZE="-1"> -pinugtsdrlbamcCMSH </font></p>
-<dt>IgnoreNone</p>
+ Value: <font SIZE="-1"> -pinugtsdrlbamcCMSH </font></dd>
+<dt>IgnoreNone</dt>
 <dd>IgnoreNone turns on all properties and provides a convenient starting point for defining your own property masks. (For example,&nbsp;<wbr><tt>mymask&nbsp;<wbr>=&nbsp;<wbr>$(IgnoreNone)&nbsp;<wbr>-ar;</tt>)<br />
- Value: <font SIZE="-1"> +pinugtsdrbamcCMSH-l </font></dl>
+ Value: <font SIZE="-1"> +pinugtsdrbamcCMSH-l </font></dd></dl>
 <h2>Version Information</h2>
 <p>This man page describes <i>Tripwire 2.4</i>.</p>
 <h2>Authors</h2>

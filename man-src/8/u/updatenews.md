@@ -15,20 +15,20 @@ description: "updatenews – post articles from outgoing spool directory and pre
 <h2>Options</h2>
 <p>These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Show version of program.</p>
-<dt><code>-a, &#8211;active</code></p>
-<dd>Force the prefetch the active data base. Updatenews first invalidate the ActiveDB to force the update.</p>
-<dt><code>-g, &#8211;group</code></p>
-<dd>Prefetch whole newsgroups.</p>
-<dt><code>-o, &#8211;over</code></p>
-<dd>Only prefetch the overview database.</p>
-<dt><code>-l, &#8211;lock-group</code></p>
-<dd>Always lock the newsgroup while prefetching it. This improves the performance of update- news slightly, but nobody else can read this newsgroup while prefetching.</p>
-<dt><code>-w, &#8211;workers #</code></p>
-<dd>Use # workers for prefetching. Each worker is assigned its own newsgroup to prefetch. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Show version of program.</dd>
+<dt><code>-a, &#8211;active</code></dt>
+<dd>Force the prefetch the active data base. Updatenews first invalidate the ActiveDB to force the update.</dd>
+<dt><code>-g, &#8211;group</code></dt>
+<dd>Prefetch whole newsgroups.</dd>
+<dt><code>-o, &#8211;over</code></dt>
+<dd>Only prefetch the overview database.</dd>
+<dt><code>-l, &#8211;lock-group</code></dt>
+<dd>Always lock the newsgroup while prefetching it. This improves the performance of update- news slightly, but nobody else can read this newsgroup while prefetching.</dd>
+<dt><code>-w, &#8211;workers #</code></dt>
+<dd>Use # workers for prefetching. Each worker is assigned its own newsgroup to prefetch. </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/newscache.conf<br />

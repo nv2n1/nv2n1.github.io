@@ -17,8 +17,10 @@ bson_string_truncate (bson_string_t *string,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>string</code></p>
-<dd> A <code>bson_string_t</code> \&amp;.</dl>
+<dt><code>string</code></dt>
+<dd> A <code>bson_string_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>len</code></p>
+<dt><code>len</code></dt>
 <dd> The new length of the string, excluding the trailing <code>
+</dd></dl>
+</code>

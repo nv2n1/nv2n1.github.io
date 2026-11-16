@@ -16,81 +16,81 @@ description: "cpphs – liberalised cpp-a-like preprocessor for Haskell"
 <p> Why re-implement cpp? Rightly or wrongly, the C pre-processor is widely used in Haskell source code. It enables conditional compilation for different compilers, different versions of the same compiler, and different OS platforms. It is also occasionally used for its macro language, which can enable certain forms of platform-specific detail-filling, such as the tedious boilerplate generation of instance definitions and FFI declarations. However, there are two problems with cpp, aside from the obvious aesthetic ones:</p>
 <dl>
 <dt>
-<dd> For some Haskell systems, notably Hugs on Windows, a true cpp is not available by default.</p>
+</dt><dd> For some Haskell systems, notably Hugs on Windows, a true cpp is not available by default.</dd>
 <dt>
-<dd> Even for the other Haskell systems, the common cpp provided by the gcc 3.x series is changing subtly in ways that are incompatible with Haskell&#8217;s syntax. There have always been problems with, for instance, string gaps, and prime characters in identifiers. These problems are only going to get worse.</dl>
+</dt><dd> Even for the other Haskell systems, the common cpp provided by the gcc 3.x series is changing subtly in ways that are incompatible with Haskell&#8217;s syntax. There have always been problems with, for instance, string gaps, and prime characters in identifiers. These problems are only going to get worse.</dd></dl>
 <p> So, it seemed right to attempt to provide an alternative to cpp, both more compatible with Haskell, and itself written in Haskell so that it can be distributed with compilers. </p>
 <p> <i>cpphs</i> is pretty-much feature-complete, and compatible with the <code>-traditional</code> style of cpp. It has two modes:</p>
 <dl>
 <dt>
-<dd> conditional compilation only (<code>&#8211;nomacro</code>),</p>
+</dt><dd> conditional compilation only (<code>&#8211;nomacro</code>),</dd>
 <dt>
-<dd> and full macro-expansion (default).</dl>
+</dt><dd> and full macro-expansion (default).</dd></dl>
 <p> In <code>&#8211;nomacro</code> mode, <i>cpphs</i> performs only conditional compilation actions, i.e. <code>#include</code>&#8216;s, <code>#if</code>&#8216;s, and <code>#ifdef</code>&#8216;s are processed according to text-replacement definitions (both command-line and internal), but no parameterised macro expansion is performed. In full compatibility mode (the default), textual replacements and macro expansions are also processed in the remaining body of non-cpp text. </p>
 <p> Working Features:</p>
 <dl>
-<dt><code>#ifdef</code></p>
-<dd> simple conditional compilation</p>
-<dt><code>#if</code></p>
-<dd> the full boolean language of defined(), &amp;&amp;, ||, ==, etc.</p>
-<dt><code>#elif</code></p>
-<dd> chained conditionals</p>
-<dt><code>#define</code></p>
-<dd> in-line definitions (text replacements and macros)</p>
-<dt><code>#undef</code></p>
-<dd> in-line revocation of definitions</p>
-<dt><code>#include</code></p>
-<dd> file inclusion</p>
-<dt><code>#line</code></p>
-<dd> line number directives</p>
-<dt><code>\n</code></p>
-<dd> line continuations within all # directives</p>
-<dt><code>/**/</code></p>
-<dd> token catenation within a macro definition</p>
-<dt><code>##</code></p>
-<dd> ANSI-style token catenation</p>
-<dt><code>#</code></p>
-<dd> ANSI-style token stringisation</p>
-<dt><code>__FILE__</code></p>
-<dd> special text replacement for DIY error messages</p>
-<dt><code>__LINE__</code></p>
-<dd> special text replacement for DIY error messages</p>
-<dt><code>__DATE__</code></p>
-<dd> special text replacement</p>
-<dt><code>__TIME__</code></p>
-<dd> special text replacement</dl>
+<dt><code>#ifdef</code></dt>
+<dd> simple conditional compilation</dd>
+<dt><code>#if</code></dt>
+<dd> the full boolean language of defined(), &amp;&amp;, ||, ==, etc.</dd>
+<dt><code>#elif</code></dt>
+<dd> chained conditionals</dd>
+<dt><code>#define</code></dt>
+<dd> in-line definitions (text replacements and macros)</dd>
+<dt><code>#undef</code></dt>
+<dd> in-line revocation of definitions</dd>
+<dt><code>#include</code></dt>
+<dd> file inclusion</dd>
+<dt><code>#line</code></dt>
+<dd> line number directives</dd>
+<dt><code>\n</code></dt>
+<dd> line continuations within all # directives</dd>
+<dt><code>/**/</code></dt>
+<dd> token catenation within a macro definition</dd>
+<dt><code>##</code></dt>
+<dd> ANSI-style token catenation</dd>
+<dt><code>#</code></dt>
+<dd> ANSI-style token stringisation</dd>
+<dt><code>__FILE__</code></dt>
+<dd> special text replacement for DIY error messages</dd>
+<dt><code>__LINE__</code></dt>
+<dd> special text replacement for DIY error messages</dd>
+<dt><code>__DATE__</code></dt>
+<dd> special text replacement</dd>
+<dt><code>__TIME__</code></dt>
+<dd> special text replacement</dd></dl>
 <p> Macro expansion is recursive. Redefinition of a macro name does not generate a warning. Macros can be defined on the command-line with <code>-D</code> just like textual replacements. Macro names are permitted to be Haskell identifiers e.g. with the prime ` and backtick &acute; characters, which is slightly looser than in C, but they still may not include operator symbols. </p>
 <p> Numbering of lines in the output is preserved so that any later processor can give meaningful error messages. When a file is <code>#include</code>&#8216;d, <i>cpphs</i> inserts <code>#line</code> directives for the same reason. Numbering should be correct even in the presence of line continuations. If you don&#8217;t want <code>#line</code> directives in the final output, use the <code>&#8211;noline</code> option. </p>
 <p> Any syntax errors in cpp directives gives a message to stderr and halts the program. Failure to find a #include&#8217;d file produces a warning to stderr, but processing continues. </p>
 <p> You can give any number of filenames on the command-line. The results are catenated on standard output.</p>
 <dl>
-<dt><code>-D</code><i>sym</i></p>
-<dd> define a textual replacement (default value is 1)</p>
-<dt><code>-Dsym=</code><i>val</i></p>
-<dd> define a textual replacement with a specific value</p>
-<dt><code>-I</code><i>path</i></p>
-<dd> add a directory to the search path for #include&#8217;s</p>
-<dt><code>-O</code><i>file</i></p>
-<dd> specify a file for output (default is stdout)</p>
-<dt><code>&#8211;nomacro</code></p>
+<dt><code>-D</code><i>sym</i></dt>
+<dd> define a textual replacement (default value is 1)</dd>
+<dt><code>-Dsym=</code><i>val</i></dt>
+<dd> define a textual replacement with a specific value</dd>
+<dt><code>-I</code><i>path</i></dt>
+<dd> add a directory to the search path for #include&#8217;s</dd>
+<dt><code>-O</code><i>file</i></dt>
+<dd> specify a file for output (default is stdout)</dd>
+<dt><code>&#8211;nomacro</code></dt>
 <dd> only process #ifdef&#8217;s and #include&#8217;s,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>do not expand macros</p>
-<dt><code>&#8211;noline</code></p>
-<dd> remove #line droppings from the output</p>
-<dt><code>&#8211;strip</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>do not expand macros</dd>
+<dt><code>&#8211;noline</code></dt>
+<dd> remove #line droppings from the output</dd>
+<dt><code>&#8211;strip</code></dt>
 <dd> convert C-style comments to whitespace, even outside<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>cpp directives</p>
-<dt><code>&#8211;hashes</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>cpp directives</dd>
+<dt><code>&#8211;hashes</code></dt>
 <dd> recognise the ANSI # stringise operator, and ## for<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>token catenation, within macros</p>
-<dt><code>&#8211;text</code></p>
-<dd> treat the input as plain text, not Haskell code</p>
-<dt><code>&#8211;layout</code></p>
-<dd> preserve newlines within macro expansions</p>
-<dt><code>&#8211;unlit</code></p>
-<dd> remove literate-style comments</p>
-<dt><code>&#8211;version</code></p>
-<dd> report version number of cpphs and stop</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>token catenation, within macros</dd>
+<dt><code>&#8211;text</code></dt>
+<dd> treat the input as plain text, not Haskell code</dd>
+<dt><code>&#8211;layout</code></dt>
+<dd> preserve newlines within macro expansions</dd>
+<dt><code>&#8211;unlit</code></dt>
+<dd> remove literate-style comments</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> report version number of cpphs and stop</dd></dl>
 <p> There are NO textual replacements defined by default. (Normal cpp usually has definitions for machine, OS, etc. These could easily be added to the cpphs source code if you wish.) The search path is searched in order of the <code>-I</code> options, except that the directory of the calling file, then the current directory, are always searched first. Again, there is no default search path (and again, this could easily be changed). </p>
 <h2>DIFFERENCES FROM CPP</h2>
 <p> In general, cpphs is based on the <code>-traditional</code> behaviour, not ANSI C, and has the following main differences from the standard cpp. </p>

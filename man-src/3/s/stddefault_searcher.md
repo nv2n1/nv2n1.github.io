@@ -11,9 +11,7 @@ std::default_searcher - std::default_searcher
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class ForwardIt, class BinaryPredicate = std::equal_to&lt;&gt; &gt;  (since C++17)
-
 class default_searcher;</code></pre> 
 A class suitable for use with Searcher overload of std::search that delegates the search operation to the pre-C++17 standard library's std::search. 
 default_searcher is CopyConstructible and CopyAssignable. 
@@ -72,14 +70,10 @@ A pair of iterators to the first and one past last positions in [first, last) wh
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
                      &quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;

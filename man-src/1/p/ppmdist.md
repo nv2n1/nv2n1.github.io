@@ -19,9 +19,9 @@ description: "ppmdist – simplistic grayscale assignment for machine generated,
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-frequency</code></p>
+</dt><dt><code>-frequency</code></dt>
 <dd>
-<dd> Sort input colors by the number of times a color appears in the input, before mapping to evenly distributed graylevels of output. <code>-intensity</code> Sort input colors by their grayscale intensity, before mapping to evenly distributed graylevels of output. This is the default.</dl>
+</dd><dd> Sort input colors by the number of times a color appears in the input, before mapping to evenly distributed graylevels of output. <code>-intensity</code> Sort input colors by their grayscale intensity, before mapping to evenly distributed graylevels of output. This is the default.</dd></dl>
 <h2>BUGS</h2>
 <p> Helpful only for images with a very small number of colors. Perhaps should have been an option to <a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a>(1).</p>
 <h2>SEE ALSO</h2>

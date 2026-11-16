@@ -13,24 +13,24 @@ description: "gset_win (Set window) – establishes a window, or rectangular sub
 <p> void gset_win(Gint tran_num, const Glimit *win_limits);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>tran_num</p>
-<dd>(Input) A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided:</p>
+<dt>tran_num</dt>
+<dd>(Input) A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>0</p>
-<dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default normalization transformation for GKS. It is also fixed within GKS; that is, it is illegal to call gset_win with tran_num = 0.</p>
-<dt>1</p>
-<dd>A normalization transformation in which the window is defined by win_limits.x_min to win_limits.x_max and win_limits.y_min to win_limits.y_max.</dl>
+</dd><dl COMPACT>
+<dt>0</dt>
+<dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default normalization transformation for GKS. It is also fixed within GKS; that is, it is illegal to call gset_win with tran_num = 0.</dd>
+<dt>1</dt>
+<dd>A normalization transformation in which the window is defined by win_limits.x_min to win_limits.x_max and win_limits.y_min to win_limits.y_max.</dd></dl>
 </dl>
-<dt>win_limits.x_min</p>
-<dd>(Gfloat, Input) &#8211; The left horizontal coordinate of the window. x_min &lt; x_max</p>
-<dt>win_limits.x_max</p>
-<dd>(Gfloat, Input) &#8211; The right horizontal coordinate of the window.</p>
-<dt>win_limits.y_min</p>
-<dd>(Gfloat, Input) &#8211; The bottom vertical coordinate of the window. y_min &lt; y_max</p>
-<dt>win_limits.y_max</p>
-<dd>(Gfloat, Input) &#8211; The top vertical coordinate of the window.</dl>
+<dt>win_limits.x_min</dt>
+<dd>(Gfloat, Input) &#8211; The left horizontal coordinate of the window. x_min &lt; x_max</dd>
+<dt>win_limits.x_max</dt>
+<dd>(Gfloat, Input) &#8211; The right horizontal coordinate of the window.</dd>
+<dt>win_limits.y_min</dt>
+<dd>(Gfloat, Input) &#8211; The bottom vertical coordinate of the window. y_min &lt; y_max</dd>
+<dt>win_limits.y_max</dt>
+<dd>(Gfloat, Input) &#8211; The top vertical coordinate of the window.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

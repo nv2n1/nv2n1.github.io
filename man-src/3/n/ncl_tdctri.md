@@ -24,15 +24,15 @@ This routine, given a list of NTRI triangles in the array RTRI, an axis identifi
 
  The arguments of TDCTRI are as follows:
 <dl><dt>RTRI
-<dd>(an input/output array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI. The number of triangles in the list may increase as a result of calling TDCTRI.
-<dt>MTRI
-<dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
-<dt>NTRI
-<dd>(an input/output variable of type INTEGER) - specifies the number of triangles currently in the list. It is the user's responsibility to zero this initially; its value is increased by each call to a triangle-generating routine like TDSTRI or TDITRI and may be increased by a call to TDCTRI.
-<dt>IAXS
-<dd>(an input variable of type INTEGER) - specifies the axis to which the cut plane is perpendicular (1 =&gt; U axis, 2 =&gt; V axis, 3 =&gt; W axis).
-<dt>RCUT
-<dd>(an input variable of type REAL) - specifies that value of U, V, or W at which the cut plane intersects the axis.</dl>
+</dt><dd>(an input/output array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI. The number of triangles in the list may increase as a result of calling TDCTRI.
+</dd><dt>MTRI
+</dt><dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
+</dd><dt>NTRI
+</dt><dd>(an input/output variable of type INTEGER) - specifies the number of triangles currently in the list. It is the user's responsibility to zero this initially; its value is increased by each call to a triangle-generating routine like TDSTRI or TDITRI and may be increased by a call to TDCTRI.
+</dd><dt>IAXS
+</dt><dd>(an input variable of type INTEGER) - specifies the axis to which the cut plane is perpendicular (1 =&gt; U axis, 2 =&gt; V axis, 3 =&gt; W axis).
+</dd><dt>RCUT
+</dt><dd>(an input variable of type REAL) - specifies that value of U, V, or W at which the cut plane intersects the axis.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

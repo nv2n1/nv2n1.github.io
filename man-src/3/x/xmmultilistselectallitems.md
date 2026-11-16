@@ -15,8 +15,8 @@ description: "XmMultiListSelectAllItems — an MultiList function that selects a
 <h2>Description</h2>
 <p>Selects all rows of the passed MultiList widget and returns nothing.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the MultiList widget from whose list items is deselected.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the MultiList widget from whose list items is deselected.</dd></dl>
 <p> For a complete definition of MultiList and its associated resources, see <code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>

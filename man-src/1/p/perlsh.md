@@ -33,31 +33,28 @@ url: "/docs/linux/man/1-perlsh/"
  You can customize the behavior of <tt>&quot;perlsh&quot;</tt> by setting following variables in <i>~/.perlshrc</i>;
 <dl>
 <dt>$PerlSh::PS1
-<dd> The primary prompt string. The following backslash-escaped special characters can be used. 
-
+</dt><dd> The primary prompt string. The following backslash-escaped special characters can be used. 
  <pre>
         \h: host name
         \u: user name
         \w: package name
         \!: history number
 </pre> 
-
  The default value is `<tt>&quot;\w[\!]$ &quot;</tt>'.
-<dt>$PerlSh::PS2
-<dd> The secondary prompt string. The default value is `<tt>&quot;&gt; &quot;</tt>'.
-<dt>$PerlSh::HISTFILE
-<dd> The name of the file to which the command history is saved. The default value is <tt>&quot;~/.perlsh_history&quot;</tt>.
-<dt>$PerlSh::HISTSIZE
-<dd> If not <tt>&quot;undef&quot;</tt>, this is the maximum number of commands to remember in the history. The default value is 256.
-<dt>$PerlSh::STRICT
-<dd> If true, restrict unsafe constructs. See <tt>&quot;use strict&quot;</tt> in perl man page. The default value is 0;</dl>
+</dd><dt>$PerlSh::PS2
+</dt><dd> The secondary prompt string. The default value is `<tt>&quot;&gt; &quot;</tt>'.
+</dd><dt>$PerlSh::HISTFILE
+</dt><dd> The name of the file to which the command history is saved. The default value is <tt>&quot;~/.perlsh_history&quot;</tt>.
+</dd><dt>$PerlSh::HISTSIZE
+</dt><dd> If not <tt>&quot;undef&quot;</tt>, this is the maximum number of commands to remember in the history. The default value is 256.
+</dd><dt>$PerlSh::STRICT
+</dt><dd> If true, restrict unsafe constructs. See <tt>&quot;use strict&quot;</tt> in perl man page. The default value is 0;</dd></dl>
 
 <h2>FILES</h2>
 
 <dl>
 <dt><i>~/.perlshrc</i>
-<dd> This file is eval-ed at initialization. If a subroutine <tt>&quot;afterinit&quot;</tt> is defined in this file, it will be eval-ed after initialization. Here is a sample. 
-
+</dt><dd> This file is eval-ed at initialization. If a subroutine <tt>&quot;afterinit&quot;</tt> is defined in this file, it will be eval-ed after initialization. Here is a sample. 
  <pre><code>
 #- * - mode : perl - * -
 #decimal to hexa
@@ -82,10 +79,10 @@ sub afterinit
     *a = \$PerlSh::attribs;
 }
 </code></pre>
-<dt><i>~/.perlsh_history</i>
-<dd>
-<dt><i>~/.inputrc</i>
-<dd> A initialization file for the <font SIZE="-1">GNU</font> Readline Library. Refer its manual for details.</dl>
+</dd><dt><i>~/.perlsh_history</i>
+</dt><dd>
+</dd><dt><i>~/.inputrc</i>
+</dt><dd> A initialization file for the <font SIZE="-1">GNU</font> Readline Library. Refer its manual for details.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

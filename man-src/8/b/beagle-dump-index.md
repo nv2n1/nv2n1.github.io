@@ -14,24 +14,24 @@ description: "beagle-dump-index"
 <p><code>beagle-dump-index</code> is a low-level tool for examining data indexed by the Beagle search system. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;uris</code></p>
-<dd>Dump all Uris (default)</p>
-<dt><code>&#8211;properties</code></p>
-<dd>Dump all properties</p>
-<dt><code>&#8211;term-frequencies</code></p>
-<dd>Dump term frequencies</p>
-<dt><code>&#8211;fields</code></p>
-<dd>Dump all fields</p>
-<dt><code>&#8211;show-counts</code></p>
-<dd>Show index count totals (default)</p>
-<dt><code>&#8211;hide-counts</code></p>
-<dd>Hide index count totals</p>
-<dt><code>&#8211;index=&lt;index name&gt;</code></p>
-<dd>Limit results to an index by name. May be used multiple times.</p>
-<dt><code>&#8211;indexdir=&lt;directory&gt;</code></p>
-<dd>Limit results to an index specified by absolute path. May be used multiple times. Example path /home/user/.beagle/Indexes/FileSystemIndex</p>
-<dt><code>file or URI to match</code></p>
-<dd>Get information in index about one or more files or URIs. Note this doesn&#8217;t make sense with and will cause an error.</dl>
+<dt><code>&#8211;uris</code></dt>
+<dd>Dump all Uris (default)</dd>
+<dt><code>&#8211;properties</code></dt>
+<dd>Dump all properties</dd>
+<dt><code>&#8211;term-frequencies</code></dt>
+<dd>Dump term frequencies</dd>
+<dt><code>&#8211;fields</code></dt>
+<dd>Dump all fields</dd>
+<dt><code>&#8211;show-counts</code></dt>
+<dd>Show index count totals (default)</dd>
+<dt><code>&#8211;hide-counts</code></dt>
+<dd>Hide index count totals</dd>
+<dt><code>&#8211;index=&lt;index name&gt;</code></dt>
+<dd>Limit results to an index by name. May be used multiple times.</dd>
+<dt><code>&#8211;indexdir=&lt;directory&gt;</code></dt>
+<dd>Limit results to an index specified by absolute path. May be used multiple times. Example path /home/user/.beagle/Indexes/FileSystemIndex</dd>
+<dt><code>file or URI to match</code></dt>
+<dd>Get information in index about one or more files or URIs. Note this doesn&#8217;t make sense with and will cause an error.</dd></dl>
 <h2>Author</h2>
 <p>Novell, Inc.</p>
 <h2>Reporting Bugs</h2>

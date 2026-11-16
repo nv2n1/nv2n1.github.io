@@ -31,12 +31,12 @@ int _sysctl(struct __sysctl_args *args);
 <p> Upon successful completion, <code>_sysctl</code>() returns 0. Otherwise, a value of -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code>, <code>EPERM</code></p>
-<dd> No search permission for one of the encountered &quot;directories&quot;, or no read permission where <i>oldval</i> was nonzero, or no write permission where <i>newval</i> was nonzero.</p>
-<dt><code>EFAULT</code></p>
-<dd> The invocation asked for the previous value by setting <i>oldval</i> non-NULL, but allowed zero room in <i>oldlenp</i>.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>name</i> was not found.</dl>
+<dt><code>EACCES</code>, <code>EPERM</code></dt>
+<dd> No search permission for one of the encountered &quot;directories&quot;, or no read permission where <i>oldval</i> was nonzero, or no write permission where <i>newval</i> was nonzero.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The invocation asked for the previous value by setting <i>oldval</i> non-NULL, but allowed zero room in <i>oldlenp</i>.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>name</i> was not found.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call first appeared in Linux 1.3.57. It was removed in Linux 5.5; glibc support was removed in version 2.32.</p>
 <h2>CONFORMING TO</h2>

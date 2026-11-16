@@ -16,8 +16,8 @@ description: "dh_installgsettings – install GSettings overrides and set depend
 <p> The dependency on the backend will be generated in <code>${misc:Depends}</code>.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.gsettings-override</p>
-<dd> Installed into usr/share/glib-2.0/schemas/10_<i>package</i>.gschema.override in the package build directory, with &quot;<i>package</i>&quot; replaced by the package name. </p>
+<dt>debian/<i>package</i>.gsettings-override</dt>
+<dd> Installed into usr/share/glib-2.0/schemas/10_<i>package</i>.gschema.override in the package build directory, with &quot;<i>package</i>&quot; replaced by the package name. </dd>
 <p> The format of the file is the following: </p>
 <pre>
   [org.gnome.mypackage]
@@ -28,8 +28,8 @@ description: "dh_installgsettings – install GSettings overrides and set depend
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;priority</code> <i>priority</i></p>
-<dd> Use <i>priority</i> (which should be a 2-digit number) as the override priority instead of 10. Higher values than ten can be used by derived distributions (20), blend distributions (50), or site-specific packages (90).</dl>
+<dt><code>&#8211;priority</code> <i>priority</i></dt>
+<dd> Use <i>priority</i> (which should be a 2-digit number) as the override priority instead of 10. Higher values than ten can be used by derived distributions (20), blend distributions (50), or site-specific packages (90).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

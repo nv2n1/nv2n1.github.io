@@ -19,7 +19,7 @@ description: "cunmbr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 If VECT = 'Q', CUNMBR overwrites the general complex M - by - N matrix C with SIDE = 'L' SIDE = 'R' TRANS = 'N' : Q *C C *Q TRANS = 'C' : Q **H *C C *Q **H If VECT = 'P', CUNMBR overwrites the general complex M - by - N matrix C with SIDE = 'L' SIDE = 'R' TRANS = 'N' : P *C C *P TRANS = 'C' : P **H *C C *P **H Here Q and P **H are the unitary matrices determined by CGEBRD when reducing a complex matrix A to bidiagonal form : A = Q * B * P * *H.Q and P * *H are defined as products of elementary reflectors H(i) and G(i) respectively.Let nq = m if SIDE = 'L' and nq = n if SIDE = 'R'.Thus nq is the order of the unitary matrix Q or P **H that is applied.If VECT = 'Q', A is assumed to have been an NQ - by - K matrix : if nq &gt;= k, Q = H(1) H(2)...H(k);
 if nq
@@ -27,11 +27,11 @@ if nq
 if k
 &gt;= nq, P = G(1) G(2)...G(nq - 1).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>VECT</i> </p>
+</dt><dd> <i>VECT</i> </dd>
 <pre>
           VECT is CHARACTER*1
           = 'Q': apply Q or Q**H;
@@ -131,14 +131,14 @@ the routine
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 197 of file cunmbr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

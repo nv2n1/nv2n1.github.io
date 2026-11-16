@@ -15,59 +15,59 @@ description: "autoconf – Generate configuration scripts"
 <p> Generate a configuration script from a TEMPLATE-FILE if given, or &#8216;configure.ac&#8217; if present, or else &#8216;configure.in&#8217;. Output is sent to the standard output if TEMPLATE-FILE is given, else into &#8216;configure&#8217;.</p>
 <h3>Operation modes:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number, then exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbosely report processing</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> don&#8217;t remove temporary files</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> consider all files obsolete</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></p>
-<dd> save output in FILE (stdout is the default)</p>
-<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></p>
-<dd> report the warnings falling in CATEGORY</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbosely report processing</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> don&#8217;t remove temporary files</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> consider all files obsolete</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></dt>
+<dd> save output in FILE (stdout is the default)</dd>
+<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></dt>
+<dd> report the warnings falling in CATEGORY</dd></dl>
 <h3>Warning categories include:</h3>
 <dl>
-<dt>cross</p>
-<dd> cross compilation issues</p>
-<dt>gnu</p>
-<dd> GNU coding standards (default in gnu and gnits modes)</p>
-<dt>obsolete</p>
-<dd> obsolete features or constructions (default)</p>
-<dt>override</p>
-<dd> user redefinitions of Automake rules or variables</p>
-<dt>portability</p>
-<dd> portability issues (default in gnu and gnits modes)</p>
-<dt>portability-recursive</p>
-<dd> nested Make variables (default with <code>-Wportability</code>)</p>
-<dt>extra-portability</p>
-<dd> extra portability issues related to obscure tools</p>
-<dt>syntax</p>
-<dd> dubious syntactic constructs (default)</p>
-<dt>unsupported</p>
-<dd> unsupported or incomplete features (default)</p>
-<dt>all</p>
-<dd> all the warnings</p>
-<dt>no-CATEGORY</p>
-<dd> turn off warnings in CATEGORY</p>
-<dt>none</p>
-<dd> turn off all the warnings</dl>
+<dt>cross</dt>
+<dd> cross compilation issues</dd>
+<dt>gnu</dt>
+<dd> GNU coding standards (default in gnu and gnits modes)</dd>
+<dt>obsolete</dt>
+<dd> obsolete features or constructions (default)</dd>
+<dt>override</dt>
+<dd> user redefinitions of Automake rules or variables</dd>
+<dt>portability</dt>
+<dd> portability issues (default in gnu and gnits modes)</dd>
+<dt>portability-recursive</dt>
+<dd> nested Make variables (default with <code>-Wportability</code>)</dd>
+<dt>extra-portability</dt>
+<dd> extra portability issues related to obscure tools</dd>
+<dt>syntax</dt>
+<dd> dubious syntactic constructs (default)</dd>
+<dt>unsupported</dt>
+<dd> unsupported or incomplete features (default)</dd>
+<dt>all</dt>
+<dd> all the warnings</dd>
+<dt>no-CATEGORY</dt>
+<dd> turn off warnings in CATEGORY</dd>
+<dt>none</dt>
+<dd> turn off all the warnings</dd></dl>
 <p> The environment variables &#8216;M4&#8217; and &#8216;WARNINGS&#8217; are honored.</p>
 <h3>Library directories:</h3>
 <dl>
-<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></p>
-<dd> prepend directory DIR to search path</p>
-<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></p>
-<dd> append directory DIR to search path</dl>
+<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></dt>
+<dd> prepend directory DIR to search path</dd>
+<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></dt>
+<dd> append directory DIR to search path</dd></dl>
 <h3>Tracing:</h3>
 <dl>
-<dt><code>-t</code>, <code>&#8211;trace</code>=<i>,MACRO[/</i>:FORMAT]</p>
-<dd> report the list of calls to MACRO</p>
-<dt><code>-i</code>, <code>&#8211;initialization</code></p>
-<dd> also trace Autoconf&#8217;s initialization process</dl>
+<dt><code>-t</code>, <code>&#8211;trace</code>=<i>,MACRO[/</i>:FORMAT]</dt>
+<dd> report the list of calls to MACRO</dd>
+<dt><code>-i</code>, <code>&#8211;initialization</code></dt>
+<dd> also trace Autoconf&#8217;s initialization process</dd></dl>
 <p> In tracing mode, no configuration script is created. FORMAT defaults to &#8216;$f:$l:$n:$%&#8217;; see &#8216;autom4te <code>&#8211;help</code>&#8216; for information about FORMAT.</p>
 <h2>AUTHOR</h2>
 <p> Written by David J. MacKenzie and Akim Demaille.</p>
@@ -83,6 +83,6 @@ description: "autoconf – Generate configuration scripts"
 <p> The full documentation for <code>autoconf</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>autoconf</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info autoconf</code></dl>
+</dt><dd> <code>info autoconf</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

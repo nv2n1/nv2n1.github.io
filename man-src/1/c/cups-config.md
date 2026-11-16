@@ -24,42 +24,42 @@ description: "cups-config – get cups api, compiler, directory, and link inform
 <p> <code>cups-config</code> is the CUPS program configuration utility. It should be used by application developers to determine the necessary command-line options for the compiler and linker, as well as determining installation directories for filters, configuration files, and drivers.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;api-version</p>
+<dt>&#8211;api-version</dt>
 <dd>
- Displays the current API version (major.minor).</p>
-<dt>&#8211;build</p>
+ Displays the current API version (major.minor).</dd>
+<dt>&#8211;build</dt>
 <dd>
- Displays a system-specific build number.</p>
-<dt>&#8211;cflags</p>
+ Displays a system-specific build number.</dd>
+<dt>&#8211;cflags</dt>
 <dd>
- Displays the necessary compiler options.</p>
-<dt>&#8211;datadir</p>
+ Displays the necessary compiler options.</dd>
+<dt>&#8211;datadir</dt>
 <dd>
- Displays the default CUPS data directory.</p>
-<dt>&#8211;help</p>
+ Displays the default CUPS data directory.</dd>
+<dt>&#8211;help</dt>
 <dd>
- Displays the program usage message.</p>
-<dt>&#8211;image</p>
+ Displays the program usage message.</dd>
+<dt>&#8211;image</dt>
 <dd>
- When used with <i>&#8211;libs</i>, adds the CUPS imaging library to the list of displayed libraries.</p>
-<dt>&#8211;ldflags</p>
+ When used with <i>&#8211;libs</i>, adds the CUPS imaging library to the list of displayed libraries.</dd>
+<dt>&#8211;ldflags</dt>
 <dd>
- Displays the necessary linker options.</p>
-<dt>&#8211;libs</p>
+ Displays the necessary linker options.</dd>
+<dt>&#8211;libs</dt>
 <dd>
- Displays the necessary librarys to link to.</p>
-<dt>&#8211;serverbin</p>
+ Displays the necessary librarys to link to.</dd>
+<dt>&#8211;serverbin</dt>
 <dd>
- Displays the default CUPS binary directory, where filters and backends are stored.</p>
-<dt>&#8211;serverroot</p>
+ Displays the default CUPS binary directory, where filters and backends are stored.</dd>
+<dt>&#8211;serverroot</dt>
 <dd>
- Displays the default CUPS configuration file directory.</p>
-<dt>&#8211;static</p>
+ Displays the default CUPS configuration file directory.</dd>
+<dt>&#8211;static</dt>
 <dd>
- When used with <i>&#8211;libs</i>, shows the static libraries instead of the default (shared) libraries.</p>
-<dt>&#8211;version</p>
+ When used with <i>&#8211;libs</i>, shows the static libraries instead of the default (shared) libraries.</dd>
+<dt>&#8211;version</dt>
 <dd>
- Displays the full version number of the CUPS installation (major.minor.patch).</dl>
+ Displays the full version number of the CUPS installation (major.minor.patch).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>COPYRIGHT</h2>

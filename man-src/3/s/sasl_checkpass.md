@@ -10,7 +10,6 @@ description: "sasl_checkpass – Check a plaintext password"
 <p>sasl_checkpass &#8211; Check a plaintext password</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_checkpass(sasl_conn_t *conn,
                    const char *user,
                    unsigned userlen,

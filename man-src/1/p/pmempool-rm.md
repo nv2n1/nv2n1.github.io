@@ -17,29 +17,29 @@ description: "pmempool-rm – Remove (unlink) poolset files"
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Print help message.</dl>
+</dt><dd> Print help message.</dd></dl>
 <p> <code>-v, &#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Be verbose and print all removing files.</dl>
+</dt><dd> Be verbose and print all removing files.</dd></dl>
 <p> <code>-s, &#8211;only-pools</code></p>
 <dl>
 <dt>
-<dd> Remove only pool files and do not remove poolset files.</dl>
+</dt><dd> Remove only pool files and do not remove poolset files.</dd></dl>
 <p> <code>-f, &#8211;force</code></p>
 <dl>
 <dt>
-<dd> Remove all specified files, ignore not existing files, never prompt.</dl>
+</dt><dd> Remove all specified files, ignore not existing files, never prompt.</dd></dl>
 <p> <code>-i, &#8211;interactive</code></p>
 <dl>
 <dt>
-<dd> Prompt before removing every single file.</dl>
+</dt><dd> Prompt before removing every single file.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>pmempool rm pool.obj pool.blk</p>
-<dd> # Remove specified pool files</p>
-<dt>pmempool rm -s pool.set</p>
-<dd> # Remove all pool files from the pool.set, do not remove pool.set itself.</dl>
+<dt>pmempool rm pool.obj pool.blk</dt>
+<dd> # Remove specified pool files</dd>
+<dt>pmempool rm -s pool.set</dt>
+<dd> # Remove all pool files from the pool.set, do not remove pool.set itself.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1) <a href="/docs/linux/man/1-pmempool-create/">pmempool-create</a>(1)</code></p>
 <h2>PMEMPOOL</h2>

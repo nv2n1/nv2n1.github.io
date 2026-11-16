@@ -17,77 +17,77 @@ description: "warnquota.conf – configuration for warnquota"
 <p> An option value can but does not have to be quoted. The value can span across multiple lines provided each previous line ends with a backslash. </p>
 <p> Some option values can contain formatting sequences which will be expanded to their respective values. Following sequences are recognizes: </p>
 <dl>
-<dt><code>%d</code></p>
-<dd>domain name</p>
-<dt><code>%h</code></p>
-<dd>host name</p>
-<dt><code>%i</code>, <code>%s</code></p>
-<dd>user or group name</p>
-<dt><code>%%</code></p>
-<dd>literal % character</p>
-<dt><code>|</code></p>
-<dd>new-line character</dl>
+<dt><code>%d</code></dt>
+<dd>domain name</dd>
+<dt><code>%h</code></dt>
+<dd>host name</dd>
+<dt><code>%i</code>, <code>%s</code></dt>
+<dd>user or group name</dd>
+<dt><code>%%</code></dt>
+<dd>literal % character</dd>
+<dt><code>|</code></dt>
+<dd>new-line character</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>CC_BEFORE</code></p>
-<dd>Send to copy-carbon address only when an user has less than specified grace time left. Value is a number followed by a time unit. Known units are <i>seconds</i>, <i>minutes</i>, <i>hours</i>, and <i>days</i>. Example: <i>5 days</i></p>
-<dt><code>CC_TO</code></p>
-<dd>An e-mail address to put into copy-carbon (CC:) recipient header. Default value is <i>root</i>.</p>
-<dt><code>CHARSET</code></p>
-<dd>Defines character set for sent e-mails. Default value will be current locale character set used when executing warnquota command, if locale is not either <i>C</i> or <i>POSIX</i>. Otherwise none character set will be specified in the e-mails.</p>
-<dt><code>FROM</code></p>
-<dd>Defines From: e-email address. Default value is <i>support [at] localhost</i>.</p>
-<dt><code>GROUP_MESSAGE</code></p>
-<dd>A text sent as an e-mail body if a group exceeds its limits. This option recognizes formatting sequences.</p>
-<dt><code>GROUP_SIGNATURE</code></p>
-<dd>A signature text appended to notification for a group. Default value is a general explanation utilizing <code>SUPPORT</code> and <code>PHONE</code> values. This option recognizes formatting sequences.</p>
-<dt><code>LDAP_BASEDN</code></p>
-<dd>Base distinguished name for LDAP queries.</p>
-<dt><code>LDAP_BINDDN</code></p>
-<dd>Bind distinguished name for LDAP queries.</p>
-<dt><code>LDAP_BINDPW</code></p>
-<dd>Bind password for LDAP queries.</p>
-<dt><code>LDAP_DEFAULT_MAIL_DOMAIN</code></p>
-<dd>Default e-mail address domain of searched user if given LDAP attribute does not specify any.</p>
-<dt><code>LDAP_HOST</code></p>
-<dd>LDAP server name to connect to if <code>LDAP_URI</code> is not defined.</p>
-<dt><code>LDAP_MAIL</code></p>
-<dd>A boolean controlling if LDAP has to be used to look up an user&#8217;s e-mail address. Possible values are <i>true</i> and <i>false</i>. Default value is <i>false</i>.</p>
-<dt><code>LDAP_MAIL_ATTRIBUTE</code></p>
-<dd>The LDAP attribute which holds user&#8217;s e-mail address.</p>
-<dt><code>LDAP_PORT</code></p>
-<dd>LDAP server port number to connect to if <code>LDAP_URI</code> is not defined.</p>
-<dt><code>LDAP_SEARCH_ATTRIBUTE</code></p>
-<dd>The LDAP attribute which holds user&#8217;s ID to look up.</p>
-<dt><code>LDAP_URI</code></p>
-<dd>The URL of LDAP server to use to search user&#8217;s e-mail addresses. This option takes preference over <code>LDAP_HOST</code> and <code>LDAP_PORT</code>. Example: <i><a href="ldaps://example.com:389/">ldaps://example.com:389/</a></i></p>
-<dt><code>MESSAGE</code></p>
-<dd>A beginning of text sent as an e-mail body if a user exceeds his limits. This option recognizes formatting sequences.</p>
-<dt><code>MAIL_CMD</code></p>
-<dd>The command to execute to send an e-mail. The e-mail text including all headers is passed to the standard input of the command. Default value is <i>/usr/lib/sendmail -t</i>.</p>
-<dt><code>MAILDEV</code></p>
-<dd>The device with disk quotas to exclude from sending notifications if there are exceeded limits. This option should identify the device where mail boxes are stored to prevent from bouncing the warnquota notification by local MDA due to no space for storing new e-mails. Special value <i>any</i> denotes all devices.</p>
-<dt><code>PHONE</code></p>
-<dd>The telephone contact to the user support. Default value is <i>(xxx) xxx-xxxx or (yyy) yyy-yyyy</i>.</p>
-<dt><code>SIGNATURE</code></p>
-<dd>The end of e-mail body if a user exceeds its limits. Default value is a general explanation utilizing <code>SUPPORT</code> and <code>PHONE</code> values. This option recognizes formatting sequences.</p>
-<dt><code>SUBJECT</code></p>
-<dd>The text to put into Subject: header. Default value is <i>Disk Quota usage on system</i>.</p>
-<dt><code>SUPPORT</code></p>
-<dd>The contact to the user support. Default value is <i>support [at] localhost</i>.</dl>
+<dt><code>CC_BEFORE</code></dt>
+<dd>Send to copy-carbon address only when an user has less than specified grace time left. Value is a number followed by a time unit. Known units are <i>seconds</i>, <i>minutes</i>, <i>hours</i>, and <i>days</i>. Example: <i>5 days</i></dd>
+<dt><code>CC_TO</code></dt>
+<dd>An e-mail address to put into copy-carbon (CC:) recipient header. Default value is <i>root</i>.</dd>
+<dt><code>CHARSET</code></dt>
+<dd>Defines character set for sent e-mails. Default value will be current locale character set used when executing warnquota command, if locale is not either <i>C</i> or <i>POSIX</i>. Otherwise none character set will be specified in the e-mails.</dd>
+<dt><code>FROM</code></dt>
+<dd>Defines From: e-email address. Default value is <i>support [at] localhost</i>.</dd>
+<dt><code>GROUP_MESSAGE</code></dt>
+<dd>A text sent as an e-mail body if a group exceeds its limits. This option recognizes formatting sequences.</dd>
+<dt><code>GROUP_SIGNATURE</code></dt>
+<dd>A signature text appended to notification for a group. Default value is a general explanation utilizing <code>SUPPORT</code> and <code>PHONE</code> values. This option recognizes formatting sequences.</dd>
+<dt><code>LDAP_BASEDN</code></dt>
+<dd>Base distinguished name for LDAP queries.</dd>
+<dt><code>LDAP_BINDDN</code></dt>
+<dd>Bind distinguished name for LDAP queries.</dd>
+<dt><code>LDAP_BINDPW</code></dt>
+<dd>Bind password for LDAP queries.</dd>
+<dt><code>LDAP_DEFAULT_MAIL_DOMAIN</code></dt>
+<dd>Default e-mail address domain of searched user if given LDAP attribute does not specify any.</dd>
+<dt><code>LDAP_HOST</code></dt>
+<dd>LDAP server name to connect to if <code>LDAP_URI</code> is not defined.</dd>
+<dt><code>LDAP_MAIL</code></dt>
+<dd>A boolean controlling if LDAP has to be used to look up an user&#8217;s e-mail address. Possible values are <i>true</i> and <i>false</i>. Default value is <i>false</i>.</dd>
+<dt><code>LDAP_MAIL_ATTRIBUTE</code></dt>
+<dd>The LDAP attribute which holds user&#8217;s e-mail address.</dd>
+<dt><code>LDAP_PORT</code></dt>
+<dd>LDAP server port number to connect to if <code>LDAP_URI</code> is not defined.</dd>
+<dt><code>LDAP_SEARCH_ATTRIBUTE</code></dt>
+<dd>The LDAP attribute which holds user&#8217;s ID to look up.</dd>
+<dt><code>LDAP_URI</code></dt>
+<dd>The URL of LDAP server to use to search user&#8217;s e-mail addresses. This option takes preference over <code>LDAP_HOST</code> and <code>LDAP_PORT</code>. Example: <i><a href="ldaps://example.com:389/">ldaps://example.com:389/</a></i></dd>
+<dt><code>MESSAGE</code></dt>
+<dd>A beginning of text sent as an e-mail body if a user exceeds his limits. This option recognizes formatting sequences.</dd>
+<dt><code>MAIL_CMD</code></dt>
+<dd>The command to execute to send an e-mail. The e-mail text including all headers is passed to the standard input of the command. Default value is <i>/usr/lib/sendmail -t</i>.</dd>
+<dt><code>MAILDEV</code></dt>
+<dd>The device with disk quotas to exclude from sending notifications if there are exceeded limits. This option should identify the device where mail boxes are stored to prevent from bouncing the warnquota notification by local MDA due to no space for storing new e-mails. Special value <i>any</i> denotes all devices.</dd>
+<dt><code>PHONE</code></dt>
+<dd>The telephone contact to the user support. Default value is <i>(xxx) xxx-xxxx or (yyy) yyy-yyyy</i>.</dd>
+<dt><code>SIGNATURE</code></dt>
+<dd>The end of e-mail body if a user exceeds its limits. Default value is a general explanation utilizing <code>SUPPORT</code> and <code>PHONE</code> values. This option recognizes formatting sequences.</dd>
+<dt><code>SUBJECT</code></dt>
+<dd>The text to put into Subject: header. Default value is <i>Disk Quota usage on system</i>.</dd>
+<dt><code>SUPPORT</code></dt>
+<dd>The contact to the user support. Default value is <i>support [at] localhost</i>.</dd></dl>
 <h2>Example</h2>
 <p># comment</p>
 <dl>
-<dd>FROM = root [at] example.com</p>
+<dd>FROM = root [at] example.com</dd>
 <dl>
-<dd>SUPPORT = support [at] example.com</p>
+<dd>SUPPORT = support [at] example.com</dd>
 <dl>
-<dd>PHONE = 1234</dl>
+<dd>PHONE = 1234</dd></dl>
 </dl>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/warnquota.conf</code></p>
-<dd>configuration for <code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8)</dl>
+<dt><code>/etc/warnquota.conf</code></dt>
+<dd>configuration for <code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8)</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8). </p>

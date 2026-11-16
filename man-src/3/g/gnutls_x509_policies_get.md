@@ -14,12 +14,12 @@ description: "gnutls_x509_policies_get – API function"
 <p> <code>int gnutls_x509_policies_get(gnutls_x509_policies_t </code><i>policies</i><code>, unsigned int </code><i>seq</i><code>, struct gnutls_x509_policy_st * </code><i>policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_policies_t policies</p>
-<dd> The policies structure</p>
-<dt>unsigned int seq</p>
-<dd> The index of the name to get</p>
-<dt>struct gnutls_x509_policy_st * policy</p>
-<dd> Will hold the policy</dl>
+<dt>gnutls_x509_policies_t policies</dt>
+<dd> The policies structure</dd>
+<dt>unsigned int seq</dt>
+<dd> The index of the name to get</dd>
+<dt>struct gnutls_x509_policy_st * policy</dt>
+<dd> Will hold the policy</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return a specific policy as stored in the <i>policies</i> structure. The returned values should be treated as constant and valid for the lifetime of <i>policies</i> .</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_policies_get – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

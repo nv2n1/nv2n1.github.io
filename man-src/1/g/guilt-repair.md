@@ -16,22 +16,22 @@ description: "guilt-repair – Repair the repository state"
 <p> &#8211;full</p>
 <dl>
 <dt>
-<dd> Tries to repair everything possible. Additionally, it resets the repository state by reseting the HEAD to whatcqs believed to be the proper commit, and reseting the applied stack. The end result should be a repository with no patches applied. </p>
+</dt><dd> Tries to repair everything possible. Additionally, it resets the repository state by reseting the HEAD to whatcqs believed to be the proper commit, and reseting the applied stack. The end result should be a repository with no patches applied. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 WARNING: Running this command may result in commits and working
 directory changes being lost. You may want to create a new reference
 (e.g., branch, or reflog) to the original HEAD before using
 guilt-repair.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> &#8211;status</p>
 <dl>
 <dt>
-<dd> Upgrade the status file from old format to new.</dl>
+</dt><dd> Upgrade the status file from old format to new.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -40,10 +40,10 @@ guilt-repair.
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

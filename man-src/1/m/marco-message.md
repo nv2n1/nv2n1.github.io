@@ -15,16 +15,16 @@ description: "marco-message – A command to send messages to Marco."
 <p> The <code>marco-message</code> command is used to perform some simple window manager tasks while Marco is running. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>restart</code></p>
-<dd> Restart a currently running instance of <code>marco</code>.</p>
-<dt><code>reload-theme</code></p>
-<dd> Reload the current window border theme specified in the dconf database. (/org/mate/marco/general/theme)</p>
-<dt><code>enable-keybindings</code></p>
-<dd> Enable all keybindings specified in the dconf database. (/org/mate/marco/)</p>
-<dt><code>disable-keybindings</code></p>
-<dd> Disable all keybindings specified in the dconf database. (/org/mate/marco/)</p>
-<dt><code>toggle-verbose</code></p>
-<dd> Enable or Disable debugging messages for <code>marco</code>. </p>
+<dt><code>restart</code></dt>
+<dd> Restart a currently running instance of <code>marco</code>.</dd>
+<dt><code>reload-theme</code></dt>
+<dd> Reload the current window border theme specified in the dconf database. (/org/mate/marco/general/theme)</dd>
+<dt><code>enable-keybindings</code></dt>
+<dd> Enable all keybindings specified in the dconf database. (/org/mate/marco/)</dd>
+<dt><code>disable-keybindings</code></dt>
+<dd> Disable all keybindings specified in the dconf database. (/org/mate/marco/)</dd>
+<dt><code>toggle-verbose</code></dt>
+<dd> Enable or Disable debugging messages for <code>marco</code>. </dd>
 </dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>

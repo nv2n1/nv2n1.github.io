@@ -18,22 +18,22 @@ description: "postw32 – Free Pascal Windows 32-bit executable post processor."
 <h2>OPTIONS</h2>
 <p> takes the following options at this time:</p>
 <dl>
-<dt><code>-i file</code></p>
-<dd> specifies the input file to process. This option is a short notation for the <code>&#8211;input</code> option.</p>
-<dt><code>-h </code></p>
-<dd> Displays a short help message. This option is a short notation for the <code>&#8211;help</code> option.</p>
-<dt><code>-m subsystem</code></p>
-<dd> Set the subsystem (the application type) to either or Note that a gui application which writes to the command-line will cause an error. This option is a short notation for the <code>&#8211;subsystem</code> option.</p>
-<dt><code>-s size</code></p>
-<dd> Set the stack size to <i>size</i> bytes. This option is a short notation for the <code>&#8211;stack </code> option.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose about the operations that are performed. This option is a short notation for the <code>&#8211;verbose</code> option.</p>
-<dt><code>-V M.N</code></p>
-<dd> Set the version of the file to <i>M.N</i> , where <i>M</i> and <i>N</i> are 16 bit unsigned values. This option is a short notation for the <code>&#8211;version</code> option. </p>
+<dt><code>-i file</code></dt>
+<dd> specifies the input file to process. This option is a short notation for the <code>&#8211;input</code> option.</dd>
+<dt><code>-h </code></dt>
+<dd> Displays a short help message. This option is a short notation for the <code>&#8211;help</code> option.</dd>
+<dt><code>-m subsystem</code></dt>
+<dd> Set the subsystem (the application type) to either or Note that a gui application which writes to the command-line will cause an error. This option is a short notation for the <code>&#8211;subsystem</code> option.</dd>
+<dt><code>-s size</code></dt>
+<dd> Set the stack size to <i>size</i> bytes. This option is a short notation for the <code>&#8211;stack </code> option.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose about the operations that are performed. This option is a short notation for the <code>&#8211;verbose</code> option.</dd>
+<dt><code>-V M.N</code></dt>
+<dd> Set the version of the file to <i>M.N</i> , where <i>M</i> and <i>N</i> are 16 bit unsigned values. This option is a short notation for the <code>&#8211;version</code> option. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-fpc/">fpc</a></code>(1) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-fpc/">fpc</a></code>(1) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

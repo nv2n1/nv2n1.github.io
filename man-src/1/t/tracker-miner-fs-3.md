@@ -18,52 +18,52 @@ description: "tracker-miner-fs-3 – Used to crawl the file system to mine data.
 <p> <code>-?, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show summary of options.</dl>
+</dt><dd> Show summary of options.</dd></dl>
 <p> <code>-V, &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Returns the version of this binary.</dl>
+</dt><dd> Returns the version of this binary.</dd></dl>
 <p> <code>-s, &#8211;initial-sleep=SECONDS</code></p>
 <dl>
 <dt>
-<dd> Sets the initial sleep time before crawling the file system is started. If the <code>&#8211;no-daemon</code> option is used, this option is ignored.</dl>
+</dt><dd> Sets the initial sleep time before crawling the file system is started. If the <code>&#8211;no-daemon</code> option is used, this option is ignored.</dd></dl>
 <p> <code>-n, &#8211;no-daemon</code></p>
 <dl>
 <dt>
-<dd> Tells the miner to exit once all indexing has finished and the database is up to date. This is not the default mode of operation for the miner, usually it stays around acting like a daemon to monitor file updates which may occur over time. This option renders the <code>&#8211;initial-sleep</code> option moot.</dl>
+</dt><dd> Tells the miner to exit once all indexing has finished and the database is up to date. This is not the default mode of operation for the miner, usually it stays around acting like a daemon to monitor file updates which may occur over time. This option renders the <code>&#8211;initial-sleep</code> option moot.</dd></dl>
 <p> <code>-e, &#8211;eligible=FILE</code></p>
 <dl>
 <dt>
-<dd> Checks if <code>FILE</code> is eligible for being mined based on the current configuration rules. In addition to this, it will check if <code>FILE</code> would be monitored for changes. This works with non-existing <code>FILE</code> arguments as well as existing <code>FILE</code> arguments.</dl>
+</dt><dd> Checks if <code>FILE</code> is eligible for being mined based on the current configuration rules. In addition to this, it will check if <code>FILE</code> would be monitored for changes. This works with non-existing <code>FILE</code> arguments as well as existing <code>FILE</code> arguments.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>G_MESSAGES_DEBUG</code></p>
 <dl>
 <dt>
-<dd> Controls verbose log output from GLib-based code. Use G_MESSAGES_DEBUG=Tracker to see only Tracker-related logs, or G_MESSAGES_DEBUG=all to see everything.</dl>
+</dt><dd> Controls verbose log output from GLib-based code. Use G_MESSAGES_DEBUG=Tracker to see only Tracker-related logs, or G_MESSAGES_DEBUG=all to see everything.</dd></dl>
 <p> <code>TRACKER_DEBUG</code></p>
 <dl>
 <dt>
-<dd> Enables more specialized debug output. Pass a comma-separated list of one or more keywords: </p>
+</dt><dd> Enables more specialized debug output. Pass a comma-separated list of one or more keywords: </dd>
 <p> config</p>
 <dl>
 <dt>
-<dd> miner configuration</dl>
+</dt><dd> miner configuration</dd></dl>
 <p> miner-fs-events</p>
 <dl>
 <dt>
-<dd> internal processing of tracker-miner-fs</dl>
+</dt><dd> internal processing of tracker-miner-fs</dd></dl>
 <p> monitors</p>
 <dl>
 <dt>
-<dd> change events from filesystem monitors</dl>
+</dt><dd> change events from filesystem monitors</dd></dl>
 <p> statistics</p>
 <dl>
 <dt>
-<dd> show statistics about how many files were processed</dl>
+</dt><dd> show statistics about how many files were processed</dd></dl>
 <p> status</p>
 <dl>
 <dt>
-<dd> log the status messages that are published over D-Bus</dl>
+</dt><dd> log the status messages that are published over D-Bus</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>

@@ -25,24 +25,24 @@ description: "QwtDialSimpleNeedle –"
 <p>A needle for dial widgets. </p>
 <p> The following colors are used: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>QPalette::Mid </p>
+<dt>&bull;</dt>
+<dd>QPalette::Mid </dd>
 <p>&nbsp;<wbr>Pointer</p>
-<dt>&bull;</p>
-<dd>QPalette::Base </p>
+<dt>&bull;</dt>
+<dd>QPalette::Base </dd>
 <p>&nbsp;<wbr>Knob</dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtDial</code>, <code>QwtCompass</code></dl>
+<dd><code>QwtDial</code>, <code>QwtCompass</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtDialSimpleNeedle::Style</code></h3>
 <p>Style of the needle. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Arrow </i></p>
-<dd>Arrow.</p>
-<dt><i>Ray </i></p>
-<dd>A straight line from the center.</dl>
+<dt><i>Arrow </i></dt>
+<dd>Arrow.</dd>
+<dt><i>Ray </i></dt>
+<dd>A straight line from the center.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtDialSimpleNeedle::QwtDialSimpleNeedle (<code>Style</code>style, boolhasKnob = true, const QColor &amp;mid = Qt::gray, const QColor &amp;base = Qt::darkGray)</h3>
 <p>Constructor </p>
@@ -51,7 +51,7 @@ description: "QwtDialSimpleNeedle –"
 <dd><i>style</i> Style<br />
  <i>hasKnob</i> With/Without knob<br />
  <i>mid</i> Middle color<br />
- <i>base</i> Base color</dl>
+ <i>base</i> Base color</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtDialSimpleNeedle::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle </p>
@@ -59,22 +59,22 @@ description: "QwtDialSimpleNeedle –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>length</i> Length of the needle<br />
- <i>colorGroup</i> Color group, used for painting</dl>
+ <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> Implements <code>QwtDialNeedle</code>.</p>
 <h3>void QwtDialSimpleNeedle::setWidth (doublewidth)</h3>
 <p>Set the width of the needle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width</dl>
+<dd><i>width</i> Width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>width()</code></dl>
+<dd><code>width()</code></dd></dl>
 <h3>double QwtDialSimpleNeedle::width () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the width of the needle</dl>
+<dd>the width of the needle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWidth()</code></dl>
+<dd><code>setWidth()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

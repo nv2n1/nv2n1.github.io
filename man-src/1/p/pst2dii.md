@@ -11,45 +11,43 @@ description: "pst2dii – extract email messages from a MS Outlook .pst file in 
 <p> pst2dii &#8211; extract email messages from a MS Outlook .pst file in DII load format </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>pst2dii</code> [<code>-B&nbsp;<wbr></code><i>bates-prefix</i>] [<code>-O&nbsp;<wbr></code><i>dii-output-file</i>] [<code>-V</code>] [<code>-b&nbsp;<wbr></code><i>bates-number</i>] [<code>-c&nbsp;<wbr></code><i>bates-color</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] -f&nbsp;<wbr><i>ttf-font-file</i> [<code>-h</code>] [<code>-o&nbsp;<wbr></code><i>output-directory</i>] pstfilename</dl>
+<dt> <code>pst2dii</code> [<code>-B&nbsp;<wbr></code><i>bates-prefix</i>] [<code>-O&nbsp;<wbr></code><i>dii-output-file</i>] [<code>-V</code>] [<code>-b&nbsp;<wbr></code><i>bates-number</i>] [<code>-c&nbsp;<wbr></code><i>bates-color</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] -f&nbsp;<wbr><i>ttf-font-file</i> [<code>-h</code>] [<code>-o&nbsp;<wbr></code><i>output-directory</i>] pstfilename</dt></dl>
 <h2>OPTIONS</h2>
 <p> -B <i>bates-prefix</i></p>
 <dl>
-<dt>
-<dd>
-<dd>Sets the bates prefix string. The bates sequence number is appended to this string, and printed on each page.</dl>
+<dd>Sets the bates prefix string. The bates sequence number is appended to this string, and printed on each page.</dd></dl>
 <p> -O <i>dii-output-file</i></p>
 <dl>
 <dt>
-<dd> Name of the output DII load file.</dl>
+</dt><dd> Name of the output DII load file.</dd></dl>
 <p> -V</p>
 <dl>
 <dt>
-<dd> Show program version. Subsequent options are then ignored.</dl>
+</dt><dd> Show program version. Subsequent options are then ignored.</dd></dl>
 <p> -b <i>bates-number</i></p>
 <dl>
 <dt>
-<dd> Starting bates sequence number. The default is zero.</dl>
+</dt><dd> Starting bates sequence number. The default is zero.</dd></dl>
 <p> -c <i>bates-color</i></p>
 <dl>
 <dt>
-<dd> Font color for the bates stamp on each page, specified as 6 hex digits as rrggbb values. The default is ff0000 for bright red.</dl>
+</dt><dd> Font color for the bates stamp on each page, specified as 6 hex digits as rrggbb values. The default is ff0000 for bright red.</dd></dl>
 <p> -d <i>debug-file</i></p>
 <dl>
 <dt>
-<dd> Specify name of debug log file. The log file is now an ascii file, instead of the binary file used in previous versions.</dl>
+</dt><dd> Specify name of debug log file. The log file is now an ascii file, instead of the binary file used in previous versions.</dd></dl>
 <p> -f <i>ttf-font-file</i></p>
 <dl>
 <dt>
-<dd> Specify name of a true type font file. This should be a fixed pitch font.</dl>
+</dt><dd> Specify name of a true type font file. This should be a fixed pitch font.</dd></dl>
 <p> -h</p>
 <dl>
 <dt>
-<dd> Show summary of options. Subsequent options are then ignored.</dl>
+</dt><dd> Show summary of options. Subsequent options are then ignored.</dd></dl>
 <p> -o <i>output-directory</i></p>
 <dl>
 <dt>
-<dd> Specifies the output directory. The directory must already exist.</dl>
+</dt><dd> Specifies the output directory. The directory must already exist.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>pst2dii</code> reads the email messages from a MS Outlook .pst file and produces a DII load file that may be used to import message summaries into a Summation DII system. The DII output file contains references to the image and attachment files in the output directory.</p>
 <h2>COPYRIGHT</h2>

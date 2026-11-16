@@ -18,16 +18,16 @@ description: "simple-scan – Scanning utility"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. For a complete description, see the Info files.</p>
 <dl>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Print debugging messages.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show release version.</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show help options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options.</p>
-<dt><code>-d, &#8211;help-gtk</code></p>
-<dd> Show GTK+ options.</dl>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Print debugging messages.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show release version.</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show help options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options.</dd>
+<dt><code>-d, &#8211;help-gtk</code></dt>
+<dd> Show GTK+ options.</dd></dl>
 <h2>AUTHOR</h2>
 <p> simple-scan was written by Robert Ancell &lt;robert.ancell [at] canonical.com&gt;. </p>
 <p> This manual page was written by Alessio Treglia &lt;quadrispro [at] ubuntu.com&gt;, for the Debian project (and may be used by others). </p>

@@ -13,10 +13,10 @@ description: "gpolymarker (Polymarker) – the polymarker output primitive draws
 <p> void gpolymarker(const Gpoint_list *point_list);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>point_list.num_points</p>
-<dd>(Gint, Input) &#8211; The number of markers to be drawn. Must be greater than zero.</p>
-<dt>point_list.points</p>
-<dd>(Gpoint *, Input) &#8211; The X and Y coordinates of the point_list.num_points markers to be drawn, in world coordinates.</dl>
+<dt>point_list.num_points</dt>
+<dd>(Gint, Input) &#8211; The number of markers to be drawn. Must be greater than zero.</dd>
+<dt>point_list.points</dt>
+<dd>(Gpoint *, Input) &#8211; The X and Y coordinates of the point_list.num_points markers to be drawn, in world coordinates.</dd></dl>
 <h2>Usage</h2>
 <p>By default, the polymarker type is an asterisk. To select other polymarker types and attributes, see the man page for gset_marker_type(3NCARG). </p>
 <p> Note that the coordinate pairs must be in world coordinates and not user coordinates. Among other things, this means that the log scaling and mirror-imaging features available via the c_set call and the SPPS functions for drawing dots and markers are not applicable here.</p>

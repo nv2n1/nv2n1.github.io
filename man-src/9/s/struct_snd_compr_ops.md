@@ -29,55 +29,55 @@ struct_snd_compr_ops -
 <h2>Members</h2>
 
 open
-<dl><dd>Open the compressed stream This callback is mandatory and shall keep dsp ready to receive the stream parameter</dl>
+<dl><dd>Open the compressed stream This callback is mandatory and shall keep dsp ready to receive the stream parameter</dd></dl>
  
 
  free
-<dl><dd>Close the compressed stream, mandatory</dl>
+<dl><dd>Close the compressed stream, mandatory</dd></dl>
  
 
  set_params
-<dl><dd>Sets the compressed stream parameters, mandatory This can be called in during stream creation only to set codec params and the stream properties</dl>
+<dl><dd>Sets the compressed stream parameters, mandatory This can be called in during stream creation only to set codec params and the stream properties</dd></dl>
  
 
  get_params
-<dl><dd>retrieve the codec parameters, mandatory</dl>
+<dl><dd>retrieve the codec parameters, mandatory</dd></dl>
  
 
  set_metadata
-<dl><dd>Set the metadata values for a stream</dl>
+<dl><dd>Set the metadata values for a stream</dd></dl>
  
 
  get_metadata
-<dl><dd>retrieves the requested metadata values from stream</dl>
+<dl><dd>retrieves the requested metadata values from stream</dd></dl>
  
 
  trigger
-<dl><dd>Trigger operations like start, pause, resume, drain, stop. This callback is mandatory</dl>
+<dl><dd>Trigger operations like start, pause, resume, drain, stop. This callback is mandatory</dd></dl>
  
 
  pointer
-<dl><dd>Retrieve current h/w pointer information. Mandatory</dl>
+<dl><dd>Retrieve current h/w pointer information. Mandatory</dd></dl>
  
 
  copy
-<dl><dd>Copy the compressed data to/from userspace, Optional Can't be implemented if DSP supports mmap</dl>
+<dl><dd>Copy the compressed data to/from userspace, Optional Can't be implemented if DSP supports mmap</dd></dl>
  
 
  mmap
-<dl><dd>DSP mmap method to mmap DSP memory</dl>
+<dl><dd>DSP mmap method to mmap DSP memory</dd></dl>
  
 
  ack
-<dl><dd>Ack for DSP when data is written to audio buffer, Optional Not valid if copy is implemented</dl>
+<dl><dd>Ack for DSP when data is written to audio buffer, Optional Not valid if copy is implemented</dd></dl>
  
 
  get_caps
-<dl><dd>Retrieve DSP capabilities, mandatory</dl>
+<dl><dd>Retrieve DSP capabilities, mandatory</dd></dl>
  
 
  get_codec_caps
-<dl><dd>Retrieve capabilities for a specific codec, mandatory</dl>
+<dl><dd>Retrieve capabilities for a specific codec, mandatory</dd></dl>
 
 <h2>Copyright</h2>
 

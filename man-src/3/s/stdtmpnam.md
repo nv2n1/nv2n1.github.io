@@ -11,7 +11,6 @@ std::tmpnam - std::tmpnam
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     char *tmpnam(char *filename);</code></pre> 
 Creates a unique filename that does not name a currently existing file, and stores it in the character string pointed to by filename. The function is capable of generating up to TMP_MAX of unique filenames, but some or all of them may already be in use, and thus not suitable return values. 
 std::tmpnam modifies static state and is not required to be thread-safe. 
@@ -32,12 +31,9 @@ POSIX systems additionally define the similarly named function tempnam(), which 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::string name1 = std::tmpnam(nullptr);
     std::cout &lt;&lt; &quot;temporary file name: &quot; &lt;&lt; name1 &lt;&lt; '\n';

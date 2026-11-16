@@ -10,29 +10,11 @@ description: "QuantLib::ConvergenceStatistics – statistics class with converge
 <p>QuantLib::ConvergenceStatistics &#8211; statistics class with convergence table </p>
 <h2>Synopsis</h2>
 <pre><code>ConvergenceStatistics (const T &amp;stats, const U &amp;rule=U())
-
-
-
 ConvergenceStatistics (const U &amp;rule=U())
-
-
-
 void add (const value_type &amp;value, Real weight=1.0)
-
-
-
 template&lt;class DataIterator &gt; void addSequence (DataIterator begin, DataIterator end)
-
-
-
 template&lt;class DataIterator , class WeightIterator &gt; void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)
-
-
-
 void reset ()
-
-
-
 const std::vector&lt; std::pair&lt; Size, value_type &gt; &gt; &amp; convergenceTable () const</code></pre>
 <p> Inherits T.</p>
 <h3>Public Types</h3>
@@ -40,29 +22,11 @@ const std::vector&lt; std::pair&lt; Size, value_type &gt; &gt; &amp; convergence
 <p> typedef std::vector&lt; std::pair&lt; Size, value_type &gt; &gt; <code>table_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>ConvergenceStatistics (const T &amp;stats, const U &amp;rule=U())
-
-
-
 ConvergenceStatistics (const U &amp;rule=U())
-
-
-
 void add (const value_type &amp;value, Real weight=1.0)
-
-
-
 template&lt;class DataIterator &gt; void addSequence (DataIterator begin, DataIterator end)
-
-
-
 template&lt;class DataIterator , class WeightIterator &gt; void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)
-
-
-
 void reset ()
-
-
-
 const std::vector&lt; std::pair&lt; Size, value_type &gt; &gt; &amp; convergenceTable () const</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;class T, class U = DoublingConvergenceSteps&gt; class QuantLib::ConvergenceStatistics&lt; T, U &gt;</h3>
@@ -74,6 +38,6 @@ const std::vector&lt; std::pair&lt; Size, value_type &gt; &gt; &amp; convergence
 <p>&nbsp;<wbr>as well as a copy constructor. </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>results are tested against known good values.</dl>
+<dd>results are tested against known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

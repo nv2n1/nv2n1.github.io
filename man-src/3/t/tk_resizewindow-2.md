@@ -25,20 +25,20 @@ description: "Tk_ConfigureWindow, Tk_MoveWindow, Tk_ResizeWindow, Tk_MoveResizeW
 <code>Tk_UndefineCursor</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window.</p>
-<dd>unsigned int <i>valueMask</i> (in) OR-ed mask of values like <code>CWX</code> or <code>CWBorderPixel</code>, indicating which fields of <i>*valuePtr</i> or <i>*attsPtr</i> to use.</p>
-<dd>XWindowChanges <i>*valuePtr</i> (in) Points to a structure containing new values for the configuration parameters selected by <i>valueMask</i>. Fields not selected by <i>valueMask</i> are ignored.</p>
-<dd>int <i>x</i> (in) New x-coordinate for <i>tkwin</i>&#8216;s top left pixel (including border, if any) within tkwin&#8217;s parent.</p>
-<dd>int <i>y</i> (in) New y-coordinate for <i>tkwin</i>&#8216;s top left pixel (including border, if any) within tkwin&#8217;s parent.</p>
-<dd>int <i>width</i> (in) New width for <i>tkwin</i> (interior, not including border).</p>
-<dd>int <i>height</i> (in) New height for <i>tkwin</i> (interior, not including border).</p>
-<dd>int <i>borderWidth</i> (in) New width for <i>tkwin</i>&#8216;s border.</p>
-<dd>XSetWindowAttributes <i>*attsPtr</i> (in) Points to a structure containing new values for the attributes given by the <i>valueMask</i> argument. Attributes not selected by <i>valueMask</i> are ignored.</p>
-<dd>unsigned long <i>pixel</i> (in) New background or border color for window.</p>
-<dd>Pixmap <i>pixmap</i> (in) New pixmap to use for background or border of <i>tkwin</i>. WARNING: cannot necessarily be deleted immediately, as for Xlib calls. See note below.</p>
-<dd>Colormap <i>colormap</i> (in) New colormap to use for <i>tkwin</i>.</p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>unsigned int <i>valueMask</i> (in) OR-ed mask of values like <code>CWX</code> or <code>CWBorderPixel</code>, indicating which fields of <i>*valuePtr</i> or <i>*attsPtr</i> to use.</dd>
+<dd>XWindowChanges <i>*valuePtr</i> (in) Points to a structure containing new values for the configuration parameters selected by <i>valueMask</i>. Fields not selected by <i>valueMask</i> are ignored.</dd>
+<dd>int <i>x</i> (in) New x-coordinate for <i>tkwin</i>&#8216;s top left pixel (including border, if any) within tkwin&#8217;s parent.</dd>
+<dd>int <i>y</i> (in) New y-coordinate for <i>tkwin</i>&#8216;s top left pixel (including border, if any) within tkwin&#8217;s parent.</dd>
+<dd>int <i>width</i> (in) New width for <i>tkwin</i> (interior, not including border).</dd>
+<dd>int <i>height</i> (in) New height for <i>tkwin</i> (interior, not including border).</dd>
+<dd>int <i>borderWidth</i> (in) New width for <i>tkwin</i>&#8216;s border.</dd>
+<dd>XSetWindowAttributes <i>*attsPtr</i> (in) Points to a structure containing new values for the attributes given by the <i>valueMask</i> argument. Attributes not selected by <i>valueMask</i> are ignored.</dd>
+<dd>unsigned long <i>pixel</i> (in) New background or border color for window.</dd>
+<dd>Pixmap <i>pixmap</i> (in) New pixmap to use for background or border of <i>tkwin</i>. WARNING: cannot necessarily be deleted immediately, as for Xlib calls. See note below.</dd>
+<dd>Colormap <i>colormap</i> (in) New colormap to use for <i>tkwin</i>.</dd>
 <dd>Tk_Cursor <i>cursor</i> (in) New cursor to use for <i>tkwin</i>. If <code>None</code> is specified, then <i>tkwin</i> will not have its own cursor; it will use the cursor of its parent.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p>These procedures are analogous to the X library procedures with similar names, such as <code>XConfigureWindow</code>. Each one of the above procedures calls the corresponding X procedure and also saves the configuration information in Tk&#8217;s local structure for the window. This allows the information to be retrieved quickly by the application (using macros such as <code>Tk_X</code> and <code>Tk_Height</code>) without having to contact the X server. In addition, if no X window has actually been created for <i>tkwin</i> yet, these procedures do not issue X operations or cause event handlers to be invoked; they save the information in Tk&#8217;s local structure for the window; when the window is created later, the saved information will be used to configure the window. </p>
 <p> See the X library documentation for details on what these procedures do and how they use their arguments. </p>

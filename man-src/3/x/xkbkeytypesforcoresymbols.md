@@ -11,22 +11,22 @@ description: "XkbKeyTypesForCoreSymbols – Determine the Xkb key types appropri
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>int XkbKeyTypesForCoreSymbols</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>map_width</i><code>,</code> <code>KeySym *</code><i>core_syms</i><code>,</code> <code>unsigned int </code><i>protected</i><code>,</code> <code>int *</code><i>types_inout</i><code>,</code> <code>KeySym *</code><i>xkb_syms_rtrn</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description in which to place symbols</p>
-<dt><i>&#8211; map_width</i></p>
-<dd>width of core protocol keymap in xkb_syms_rtrn</p>
-<dt><i>&#8211; core_syms</i></p>
-<dd>core protocol format array of KeySyms</p>
-<dt><i>&#8211; protected</i></p>
-<dd>explicit key types</p>
-<dt><i>&#8211; types_inout</i></p>
-<dd>backfilled with the canonical types bound to groups one and two for the key</p>
-<dt><i>&#8211; xkb_syms_rtrn</i></p>
-<dd>backfilled with symbols bound to the key in the Xkb mapping</dl>
+</dd><dd>keyboard description in which to place symbols</dd>
+<dt><i>&#8211; map_width</i></dt>
+<dd>width of core protocol keymap in xkb_syms_rtrn</dd>
+<dt><i>&#8211; core_syms</i></dt>
+<dd>core protocol format array of KeySyms</dd>
+<dt><i>&#8211; protected</i></dt>
+<dd>explicit key types</dd>
+<dt><i>&#8211; types_inout</i></dt>
+<dd>backfilled with the canonical types bound to groups one and two for the key</dd>
+<dt><i>&#8211; xkb_syms_rtrn</i></dt>
+<dd>backfilled with symbols bound to the key in the Xkb mapping</dd></dl>
 <h2>Description</h2>
 <p><i>XkbKeyTypesForCoreSymbols </i> expands the symbols in <i>core_syms </i> and types in <i>types_inout,</i> then chooses canonical key types (canonical key types are defined The Canonical Key Types) for groups 1 and 2 using the rules specified by the Xkb protocol and places them in xkb_syms_rtrn, which will be non-NULL. </p>
 <p> <code>The Canonical Key Types</code> </p>
@@ -55,14 +55,14 @@ description: "XkbKeyTypesForCoreSymbols – Determine the Xkb key types appropri
 <p> ALPHABETIC </p>
 <p> The ALPHABETIC key type describes groups consisting of two symbols: the lowercase form of a symbol followed by the uppercase form of the same symbol. The default ALPHABETIC type implements locale-sensitive &quot;Shift cancels CapsLock&quot; behavior using both the Shift and Lock modifiers as follows: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>If Shift and Lock are both set, the default ALPHABETIC type yields level one.</p>
-<dt>&bull;</p>
-<dd>If Shift alone is set, it yields level two.</p>
-<dt>&bull;</p>
-<dd>If Lock alone is set, it yields level one, but preserves the Lock modifier so Xlib notices and applies the appropriate capitalization rules. The Xlib functions are locale-sensitive and apply different capitalization rules for different locales.</p>
-<dt>&bull;</p>
-<dd>If neither Shift nor Lock is set, it yields level one. </p>
+<dt>&bull;</dt>
+<dd>If Shift and Lock are both set, the default ALPHABETIC type yields level one.</dd>
+<dt>&bull;</dt>
+<dd>If Shift alone is set, it yields level two.</dd>
+<dt>&bull;</dt>
+<dd>If Lock alone is set, it yields level one, but preserves the Lock modifier so Xlib notices and applies the appropriate capitalization rules. The Xlib functions are locale-sensitive and apply different capitalization rules for different locales.</dd>
+<dt>&bull;</dt>
+<dd>If neither Shift nor Lock is set, it yields level one. </dd>
 <p> A symbolic representation of this key type could look like the following: </p>
 <pre> type &quot;ALPHABETIC&quot; {
  modifiers = Shift+Lock;
@@ -74,14 +74,14 @@ description: "XkbKeyTypesForCoreSymbols – Determine the Xkb key types appropri
 <p>The description of the ALPHABETIC key type is stored in the types[XkbAlphabeticIndex] entry of the client key map. </p>
 <p> KEYPAD </p>
 <p> The KEYPAD key type describes groups that consist of two symbols, at least one of which is a numeric keypad symbol. The numeric keypad symbol is assumed to reside at level two. The default KEYPAD key type implements &quot;Shift cancels NumLock&quot; behavior using the Shift modifier and the real modifier bound to the virtual modifier named &quot;NumLock,&quot; known as the NumLock modifier, as follows: </p>
-<dt>&bull;</p>
-<dd>If Shift and NumLock are both set, the default KEYPAD type yields level one.</p>
-<dt>&bull;</p>
-<dd>If Shift alone is set, it yields level two.</p>
-<dt>&bull;</p>
-<dd>If NumLock alone is set, it yields level two.</p>
-<dt>&bull;</p>
-<dd>If neither Shift nor NumLock is set, it yields level one. </p>
+<dt>&bull;</dt>
+<dd>If Shift and NumLock are both set, the default KEYPAD type yields level one.</dd>
+<dt>&bull;</dt>
+<dd>If Shift alone is set, it yields level two.</dd>
+<dt>&bull;</dt>
+<dd>If NumLock alone is set, it yields level two.</dd>
+<dt>&bull;</dt>
+<dd>If neither Shift nor NumLock is set, it yields level one. </dd>
 <p> A symbolic representation of this key type could look like the following: </p>
 <pre> type &quot;KEYPAD&quot; {
  modifiers = Shift+NumLock;

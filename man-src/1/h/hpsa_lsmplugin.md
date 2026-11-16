@@ -19,14 +19,12 @@ description: "hpsa_lsmplugin — LibstorageMgmt HP SmartArray plugin"
     <code><a href="hpsa://?hpssacli=">hpsa://?hpssacli=</a>&lt;path_of_hpssacli&gt;</code>
 </pre>
 <dl>
-<dt><code>URI parameters</code></p>
-<dd> These URI parameters are supported by this plugin: </p>
+<dt><code>URI parameters</code></dt>
+<dd> These URI parameters are supported by this plugin: </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>hpssacli</code></p>
-<dd> The &#8216;hpssacli&#8217; URI parameter is used to specified the path of hpssacli tool. By default, this plugin will try these paths used by hpssacli rpm: <code>/usr/sbin/hpssacli</code> and <code>/opt/hp/hpssacli/bld/hpssacli</code>. </p>
+<dt><code>hpssacli</code></dt>
+<dd> The &#8216;hpssacli&#8217; URI parameter is used to specified the path of hpssacli tool. By default, this plugin will try these paths used by hpssacli rpm: <code>/usr/sbin/hpssacli</code> and <code>/opt/hp/hpssacli/bld/hpssacli</code>. </dd>
 </dl>
 </dl>
 </dl>

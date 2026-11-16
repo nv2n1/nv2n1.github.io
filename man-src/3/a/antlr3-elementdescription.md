@@ -55,7 +55,7 @@ description: "ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct –"
 <p> Once you start <code>next()</code>ing, do not try to add more elements. It will break the cursor tracking I believe. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>pANTLR3_REWRITE_RULE_NODE_STREAM</code> </p>
+<dd><code>pANTLR3_REWRITE_RULE_NODE_STREAM</code> </dd>
 <p> <code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> </p>
 <p> <code>pANTLR3_REWRITE_RULE_SUBTREE_STREAM</code></dl>
 <p> TODO: add mechanism to detect/puke on modification after reading from stream</p>
@@ -121,3 +121,4 @@ description: "ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct –"
 <p> Referenced by _next(), antlr3RewriteRuleElementStreamNewAE(), antlr3RewriteRuleNODEStreamNewAE(), antlr3RewriteRuleNODEStreamNewAEE(), and antlr3RewriteRuleNODEStreamNewAEV(). </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for ANTLR3C from the source code.</p>
+</p>

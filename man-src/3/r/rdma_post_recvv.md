@@ -12,25 +12,21 @@ rdma_post_recvv - post a work request to receive incoming messages.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 int rdma_post_recvv
-
     (struct rdma_cm_id *id,
-
      void *context,
-
      struct ibv_sge *sgl,
-
      int nsge);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference to a communication identifier where the message buffer(s) will be posted.
-<dt>context
-<dd>User-defined context associated with the request.
-<dt>sgl
-<dd>A scatter-gather list of memory buffers posted as a single request.
-<dt>nsge
-<dd>The number of scatter-gather entries in the sgl array.</dl>
+</dt><dd>A reference to a communication identifier where the message buffer(s) will be posted.
+</dd><dt>context
+</dt><dd>User-defined context associated with the request.
+</dd><dt>sgl
+</dt><dd>A scatter-gather list of memory buffers posted as a single request.
+</dd><dt>nsge
+</dt><dd>The number of scatter-gather entries in the sgl array.</dd></dl>
 
 <h2>Description</h2>
 

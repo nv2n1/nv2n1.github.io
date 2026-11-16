@@ -19,12 +19,12 @@ description: "aa_gotoxy – move the hardware cursor (if any) to specified posit
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int x</code></p>
-<dd> X coordinate of new position.</p>
-<dt><code>int y</code></p>
-<dd> Y coordinate of the position.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int x</code></dt>
+<dd> X coordinate of new position.</dd>
+<dt><code>int y</code></dt>
+<dd> Y coordinate of the position.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Move the hardware cursor (if any) to specified position. To see the effect you need to call aa_flush too.</p>
 <h2>SEE ALSO</h2>

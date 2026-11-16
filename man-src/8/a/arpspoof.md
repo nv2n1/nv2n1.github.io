@@ -15,16 +15,16 @@ description: "arpspoof – intercept packets on a switched LAN"
 <p> Kernel IP forwarding (or a userland program which accomplishes the same, e.g. fragrouter(8)) must be turned on ahead of time.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i </code><i>interface</i></p>
-<dd>Specify the interface to use.</p>
-<dt><code>-c </code><i>own|host|both</i></p>
-<dd>Specify which hardware address t use when restoring the arp configuration; while cleaning up, packets can be send with the own address as well as with the address of the host. Sending packets with a fake hw address can disrupt connectivity with certain switch/ap/bridge configurations, however it works more reliably than using the own address, which is the default way arpspoof cleans up afterwards.</p>
-<dt><code>-t </code><i>target</i></p>
-<dd>Specify a particular host to ARP poison (if not specified, all hosts on the LAN). Repeat to specify multiple hosts.</p>
-<dt><code>-r</code></p>
-<dd>Poison both hosts (host and target) to capture traffic in both directions. (only valid in conjuntion with -t)</p>
-<dt><i>host</i></p>
-<dd>Specify the host you wish to intercept packets for (usually the local gateway).</dl>
+<dt><code>-i </code><i>interface</i></dt>
+<dd>Specify the interface to use.</dd>
+<dt><code>-c </code><i>own|host|both</i></dt>
+<dd>Specify which hardware address t use when restoring the arp configuration; while cleaning up, packets can be send with the own address as well as with the address of the host. Sending packets with a fake hw address can disrupt connectivity with certain switch/ap/bridge configurations, however it works more reliably than using the own address, which is the default way arpspoof cleans up afterwards.</dd>
+<dt><code>-t </code><i>target</i></dt>
+<dd>Specify a particular host to ARP poison (if not specified, all hosts on the LAN). Repeat to specify multiple hosts.</dd>
+<dt><code>-r</code></dt>
+<dd>Poison both hosts (host and target) to capture traffic in both directions. (only valid in conjuntion with -t)</dd>
+<dt><i>host</i></dt>
+<dd>Specify the host you wish to intercept packets for (usually the local gateway).</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-dsniff/">dsniff</a>(8), fragrouter(8)</p>
 <h2>Author</h2>

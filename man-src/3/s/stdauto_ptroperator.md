@@ -12,11 +12,8 @@ std::auto_ptr&lt;T&gt;::operator= - std::auto_ptr&lt;T&gt;::operator=
 
 <pre><code>auto_ptr&amp; operator=( auto_ptr&amp; r ) throw();    (1) (deprecated in C++11)
 (removed in C++17)
-
 template&lt; class Y &gt;                            (2) (deprecated in C++11)
-
 auto_ptr&amp; operator=( auto_ptr&lt;Y&gt;&amp; r ) throw();     (removed in C++17)
-
 auto_ptr&amp; operator=( auto_ptr_ref m ) throw(); (3) (deprecated in C++11)
 (removed in C++17)</code></pre> 
 Replaces the managed object with the one managed by r. 

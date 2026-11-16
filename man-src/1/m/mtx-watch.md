@@ -15,22 +15,22 @@ description: "mtx-watch – ConTeXt Request Watchdog"
 <p> <code>ConTeXt Request Watchdog</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;logpath</code></p>
-<dd> optional path for log files</p>
-<dt><code>&#8211;watch</code></p>
-<dd> watch given path [&#8211;delay]</p>
-<dt><code>&#8211;pipe</code></p>
-<dd> use pipe instead of execute</p>
-<dt><code>&#8211;delay</code></p>
-<dd> delay between sweeps</p>
-<dt><code>&#8211;automachine</code></p>
-<dd> replace /machine/ in path /servername/</p>
-<dt><code>&#8211;collect</code></p>
-<dd> condense log files</p>
-<dt><code>&#8211;cleanup=delay</code></p>
-<dd> remove files in given path [&#8211;force]</p>
-<dt><code>&#8211;showlog</code></p>
-<dd> show log data</dl>
+<dt><code>&#8211;logpath</code></dt>
+<dd> optional path for log files</dd>
+<dt><code>&#8211;watch</code></dt>
+<dd> watch given path [&#8211;delay]</dd>
+<dt><code>&#8211;pipe</code></dt>
+<dd> use pipe instead of execute</dd>
+<dt><code>&#8211;delay</code></dt>
+<dd> delay between sweeps</dd>
+<dt><code>&#8211;automachine</code></dt>
+<dd> replace /machine/ in path /servername/</dd>
+<dt><code>&#8211;collect</code></dt>
+<dd> condense log files</dd>
+<dt><code>&#8211;cleanup=delay</code></dt>
+<dd> remove files in given path [&#8211;force]</dd>
+<dt><code>&#8211;showlog</code></dt>
+<dd> show log data</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

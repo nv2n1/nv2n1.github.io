@@ -16,15 +16,15 @@ description: "bgltags – generate tag file for Emacs"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-a, &#8211;append</code></p>
+</dt><dt><code>-a, &#8211;append</code></dt>
 <dd>
-<dd> Append to existing tag file. </p>
-<dt><code>-o tagfile, &#8211;output=tagfile</code></p>
-<dd> Explicit name of file for tag table; overrides default `TAGS&#8217;. </p>
-<dt><code>-v</code></p>
-<dd> Print the current version of the program. </p>
-<dt><code>-module</code></p>
-<dd> Generate an entry in the table for each modules. Normally modules identifier are not indexed in the tags table. </p>
+</dd><dd> Append to existing tag file. </dd>
+<dt><code>-o tagfile, &#8211;output=tagfile</code></dt>
+<dd> Explicit name of file for tag table; overrides default `TAGS&#8217;. </dd>
+<dt><code>-v</code></dt>
+<dd> Print the current version of the program. </dd>
+<dt><code>-module</code></dt>
+<dd> Generate an entry in the table for each modules. Normally modules identifier are not indexed in the tags table. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-bglafile/">bglafile</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-etags/">etags</a>(1), <a href="/docs/linux/man/1-emacs/">emacs</a>(1), <a href="/docs/linux/man/1-bglmco/">bglmco</a>(1), <a href="/docs/linux/man/1-xemacs/">xemacs</a>(1) </p>

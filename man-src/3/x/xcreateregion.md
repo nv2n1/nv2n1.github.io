@@ -10,17 +10,17 @@ description: "XCreateRegion, XSetRegion, XDestroyRegion – create or destroy re
 <p>XCreateRegion, XSetRegion, XDestroyRegion &#8211; create or destroy regions </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Region XCreateRegion(void);</p>
-<dd>int XSetRegion(Display *<i>display</i>, GC <i>gc</i>, Region <i>r</i>);</p>
-<dd>int XDestroyRegion(Region <i>r</i>);</dl>
+<dd>Region XCreateRegion(void);</dd>
+<dd>int XSetRegion(Display *<i>display</i>, GC <i>gc</i>, Region <i>r</i>);</dd>
+<dd>int XDestroyRegion(Region <i>r</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>r</i></p>
-<dd>Specifies the region.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>r</i></dt>
+<dd>Specifies the region.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XCreateRegion</code> function creates a new empty region. </p>
 <p> The <code>XSetRegion</code> function sets the clip-mask in the GC to the specified region. The region is specified relative to the drawable&#8217;s origin. The resulting GC clip origin is implementation-dependent. Once it is set in the GC, the region can be destroyed. </p>

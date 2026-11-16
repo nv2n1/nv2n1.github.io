@@ -11,11 +11,8 @@ description: "ql/experimental/credit/riskyassetswap.hpp – Risky asset-swap ins
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/instrument.hpp&gt;
-
 #include &lt;ql/termstructures/defaulttermstructure.hpp&gt;
-
 #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;
-
 #include &lt;ql/time/schedule.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>RiskyAssetSwap</code><br />

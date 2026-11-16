@@ -14,11 +14,11 @@ description: "rio_mport_is_active – Tests if master port link is active"
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>Master port to test</dl>
+</dd><dd>Master port to test</dd></dl>
 <h2>Description</h2>
 <p>Reads the port error status CSR for the master port to determine if the port has an active link. Returns <code>RIO_PORT_N_ERR_STS_PORT_OK</code> if the master port is active or <code>0</code> if it is inactive.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

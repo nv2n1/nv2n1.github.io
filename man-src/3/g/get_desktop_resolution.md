@@ -17,7 +17,6 @@ description: "get_desktop_resolution – Finds out the desktop resolution. Alleg
 <p> Under some OSes, switching to a full screen graphics mode may automatically change the desktop resolution. You have, therefore, to call this function before setting any graphics mode in order to retrieve the real desktop resolution. Example: </p>
 <pre><code>
 int width, height;
-
 allegro_init();
 ... if (get_desktop_resolution(&amp;width, &amp;height) == 0)
 {

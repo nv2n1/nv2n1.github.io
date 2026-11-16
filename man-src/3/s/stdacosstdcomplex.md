@@ -11,10 +11,8 @@ std::acos(std::complex) - std::acos(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         complex&lt;T&gt; acos(const complex&lt;T&gt; &amp;z);</code></pre> 
 Computes complex arc cosine of a complex value z. Branch cuts exist outside the interval [−1 ; +1] along the real axis. 
 
@@ -61,12 +59,9 @@ For any z, acos(z) = π - acos(-z)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::fixed;
     std::complex&lt;double&gt; z1(-2, 0);

@@ -14,18 +14,18 @@ description: "rio_route_clr_table – Clear a switch routing table"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <p> <i>table</i></p>
 <dl>
-<dd>Routing table ID</dl>
+<dd>Routing table ID</dd></dl>
 <p> <i>lock</i></p>
 <dl>
-<dd>apply a hardware lock on switch device flag (1=lock, 0=no_lock)</dl>
+<dd>apply a hardware lock on switch device flag (1=lock, 0=no_lock)</dd></dl>
 <h2>Description</h2>
 <p>If available calls the switch specific <code>clr_table</code> method to clear a switch routing table. Otherwise uses standard RT write method as defined by RapidIO specification. A specific routing table can be selected using the <i>table</i> argument if a switch has per port routing tables or the standard (or global) table may be used by passing <code>RIO_GLOBAL_TABLE</code> in <i>table</i>. </p>
 <p> Returns <code>0</code> on success or <code>-EINVAL</code> on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

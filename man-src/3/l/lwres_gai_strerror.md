@@ -14,54 +14,54 @@ description: "lwres_gai_strerror – print suitable error string"
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
 <dl>
-<dt> <code>char * gai_strerror(int&nbsp;<wbr></code><i>ecode</i><code>);</code></dl>
+<dt> <code>char * gai_strerror(int&nbsp;<wbr></code><i>ecode</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>lwres_gai_strerror()</code></p>
-<dd>returns an error message corresponding to an error code returned by <code>getaddrinfo()</code>. The following error codes and their meaning are defined in <i>include/lwres/netdb.h</i>. </p>
+<dd>returns an error message corresponding to an error code returned by <code>getaddrinfo()</code>. The following error codes and their meaning are defined in <i>include/lwres/netdb.h</i>. </dd>
 <p> <code>EAI_ADDRFAMILY</code></p>
 <dl>
 <dt>
-<dd> address family for hostname not supported</dl>
+</dt><dd> address family for hostname not supported</dd></dl>
 <p> <code>EAI_AGAIN</code></p>
 <dl>
 <dt>
-<dd> temporary failure in name resolution</dl>
+</dt><dd> temporary failure in name resolution</dd></dl>
 <p> <code>EAI_BADFLAGS</code></p>
 <dl>
 <dt>
-<dd> invalid value for <code>ai_flags</code></dl>
+</dt><dd> invalid value for <code>ai_flags</code></dd></dl>
 <p> <code>EAI_FAIL</code></p>
 <dl>
 <dt>
-<dd> non-recoverable failure in name resolution</dl>
+</dt><dd> non-recoverable failure in name resolution</dd></dl>
 <p> <code>EAI_FAMILY</code></p>
 <dl>
 <dt>
-<dd> <code>ai_family</code> not supported</dl>
+</dt><dd> <code>ai_family</code> not supported</dd></dl>
 <p> <code>EAI_MEMORY</code></p>
 <dl>
 <dt>
-<dd> memory allocation failure</dl>
+</dt><dd> memory allocation failure</dd></dl>
 <p> <code>EAI_NODATA</code></p>
 <dl>
 <dt>
-<dd> no address associated with hostname</dl>
+</dt><dd> no address associated with hostname</dd></dl>
 <p> <code>EAI_NONAME</code></p>
 <dl>
 <dt>
-<dd> hostname or servname not provided, or not known</dl>
+</dt><dd> hostname or servname not provided, or not known</dd></dl>
 <p> <code>EAI_SERVICE</code></p>
 <dl>
 <dt>
-<dd> servname not supported for <code>ai_socktype</code></dl>
+</dt><dd> servname not supported for <code>ai_socktype</code></dd></dl>
 <p> <code>EAI_SOCKTYPE</code></p>
 <dl>
 <dt>
-<dd> <code>ai_socktype</code> not supported</dl>
+</dt><dd> <code>ai_socktype</code> not supported</dd></dl>
 <p> <code>EAI_SYSTEM</code></p>
 <dl>
 <dt>
-<dd> system error returned in errno</dl>
+</dt><dd> system error returned in errno</dd></dl>
 <p> The message invalid error code is returned if <i>ecode</i> is out of range. </p>
 <p> <code>ai_flags</code>, <code>ai_family</code> and <code>ai_socktype</code> are elements of the <code>struct addrinfo</code> used by <code>lwres_getaddrinfo()</code>.</p>
 <h2>SEE ALSO</h2>

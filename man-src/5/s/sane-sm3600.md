@@ -17,7 +17,7 @@ description: "sane-sm3600 – SANE backend for Microtek scanners with M011 USB c
 Microtek ScanMaker 3600 all modes ok
 Microtek ScanMaker 3700 reported to work
 Microtek ScanMaker 3750 reported to work</pre>
-</dl>
+</dd></dl>
 <p> If you own a Microtek scanner with the M011 chip other than the ones listed above, it may or may not work with SANE! </p>
 <h2>Frontend Options</h2>
 <p>This backend dynamically enables the options for the frontend, that are supported by the scanner dependent on the scanning-mode and other options. Unsupported options are disabled. </p>
@@ -28,15 +28,15 @@ Microtek ScanMaker 3750 reported to work</pre>
 <p>This backend does not support a configuration file right now.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-sm3600.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-sm3600.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-sm3600.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-sm3600.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_SM3600</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. To see error messages on stderr set <code>SANE_DEBUG_SM3600</code> to 1. </p>
+<dt><code>SANE_DEBUG_SM3600</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. To see error messages on stderr set <code>SANE_DEBUG_SM3600</code> to 1. </dd>
 <p> E.g. just say:<br />
  export SANE_DEBUG_SM3600=5 </p>
 </dl>

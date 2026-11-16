@@ -15,7 +15,7 @@ description: "fitshdr – List headers from a FITS file"
 <p> List headers from a FITS file specified on the command line, or else on stdin, printing them as 80-character keyrecords without trailing blanks.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-q</code> N</p>
-<dd> Quit after reading the Nth header, where N is an integer (optional space between <code>-q</code> and N). </p>
+<dt><code>-q</code> N</dt>
+<dd> Quit after reading the Nth header, where N is an integer (optional space between <code>-q</code> and N). </dd>
 </dl>
 <h2>Index</h2>

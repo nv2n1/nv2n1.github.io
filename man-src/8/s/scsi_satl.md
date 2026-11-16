@@ -15,14 +15,14 @@ description: "scsi_satl – check SCSI to ATA Translation (SAT) device support"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-L</code>, <code>&#8211;log</code></p>
-<dd>the output to stderr (from each SCSI command executed) is appended to a file called &#8216;scsi_satl.err&#8217; in the current working directory.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>the amount of output is reduced and typically only the pass/fail count is output.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level or verbosity.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-L</code>, <code>&#8211;log</code></dt>
+<dd>the output to stderr (from each SCSI command executed) is appended to a file called &#8216;scsi_satl.err&#8217; in the current working directory.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>the amount of output is reduced and typically only the pass/fail count is output.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level or verbosity.</dd></dl>
 <h2>Exit Status</h2>
 <p>The exit status of this script is the number of &quot;bad&quot; errors found. So an exit status of 0 means all mandatory SCSI commands worked as expected.</p>
 <h2>Authors</h2>

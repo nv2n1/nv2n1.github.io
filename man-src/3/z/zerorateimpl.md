@@ -10,21 +10,9 @@ description: "QuantLib::InterpolatedZeroInflationCurve – Inflation term struct
 <p>QuantLib::InterpolatedZeroInflationCurve &#8211; Inflation term structure based on the interpolation of zero rates. </p>
 <h2>Synopsis</h2>
 <pre><code>const std::vector&lt; Date &gt; &amp; dates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; times () const
-
-
-
 const std::vector&lt; Rate &gt; &amp; rates () const
-
-
-
 std::vector&lt; std::pair&lt; Date, Rate &gt; &gt; nodes () const
-
-
-
 Protected Member Functions
 InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseZeroRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator())</code></pre>
 <p> Inherits <code>QuantLib::ZeroInflationTermStructure</code>, and boost::noncopyable.</p>
@@ -42,21 +30,9 @@ InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &a
 <p>Protected Member Functions<br />
 InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseZeroRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator()) <code>Inspectors</code> </p>
 <pre><code>const std::vector&lt; Date &gt; &amp; dates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; times () const
-
-
-
 const std::vector&lt; Rate &gt; &amp; rates () const
-
-
-
 std::vector&lt; std::pair&lt; Date, Rate &gt; &gt; nodes () const
-
-
-
 Protected Member Functions
 InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseZeroRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator())</code></pre>
 <p> <code>ZeroInflationTermStructure Interface</code> </p>

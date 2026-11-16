@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::is_signed – std::numeric_limits<T>::is_s
 <h2>Synopsis</h2>
 <pre><code>static const bool is_signed;
 (until C++ 11)
-
     static constexpr bool is_signed;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::is_signed is true for all signed arithmetic types T and false for the unsigned types. This constant is meaningful for all specializations. </p>

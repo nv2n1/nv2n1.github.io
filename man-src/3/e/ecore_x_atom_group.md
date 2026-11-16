@@ -22,10 +22,10 @@ description: "XCB Atom Functions – Functions that operate on atoms."
 <p>Retrieves the atom value associated to a name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> Unused.</dl>
+<dd><i>name</i> Unused.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Associated atom value.</dl>
+<dd>Associated atom value.</dd></dl>
 <p> Retrieves the atom value associated to a name. The reply is the returned value of the function ecore_xcb_intern_atom_reply(). If reply is NULL, the NULL atom is returned. Otherwise, the atom associated to the name is returned. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_atom_get_prefetch()</code>, which sends the InternAtom request, then <code>ecore_x_atom_get_fetch()</code>, which gets the reply. </p>
 <p> References ecore_x_atom_get().</p>
@@ -33,6 +33,6 @@ description: "XCB Atom Functions – Functions that operate on atoms."
 <p>Sends the InternAtom request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> Name of the requested atom.</dl>
+<dd><i>name</i> Name of the requested atom.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

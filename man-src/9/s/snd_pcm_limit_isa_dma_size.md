@@ -15,11 +15,11 @@ snd_pcm_limit_isa_dma_size - Get the max size fitting with ISA DMA transfer
 <h2>Arguments</h2>
 
 <i>dma</i>
-<dl><dd><dd>DMA number</dl>
+<dl><dd></dd><dd>DMA number</dd></dl>
  
 
  <i>max</i>
-<dl><dd>pointer to store the max size</dl>
+<dl><dd>pointer to store the max size</dd></dl>
 
 <h2>Copyright</h2>
 

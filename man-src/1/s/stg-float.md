@@ -20,11 +20,11 @@ stg float[--]&lt;patches&gt;
 <p> -s FILE, &#8211;series FILE</p>
 <dl>
 <dt>
-<dd> Rearrange according to the series FILE.</dl>
+</dt><dd> Rearrange according to the series FILE.</dd></dl>
 <p> -k, &#8211;keep</p>
 <dl>
 <dt>
-<dd> Keep the local changes.</dl>
+</dt><dd> Keep the local changes.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

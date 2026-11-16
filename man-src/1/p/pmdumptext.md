@@ -32,60 +32,60 @@ filesys.used[/dev/root] 19654.37
 <p> The command line options <code>-A</code>, <code>-O</code>, <code>-S</code> and <code>-T</code> control the alignment, offset, start and end time when visualizing metrics from archives. These options are common to most Performance Co-Pilot tools and are fully described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
 <p> The other available options are: </p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Specify a set of <i>archive</i> from which metrics can be obtained for a particular host. <i>archive</i> is the name of a directory containing archives, or the basename of an archive, previously created by <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). Multiple sets of archives (separated by commas or in different <code>-a</code> options) from different hosts may be given, but only one set of archives per host is permitted. Any metrics that are not associated with a specific host or archive will use the first archive as their source.</p>
-<dt><code>-C</code></p>
-<dd> Exit before dumping any values, but after parsing the metrics. Metrics, instances, normals and units are listed if <code>-m</code>, <code>-l</code>, <code>-N</code> and/or <code>-u</code> are specified.</p>
-<dt><code>-c</code></p>
-<dd> If no <i>metrics</i> are listed on the command line, a <i>config</i> file can be used to specify the <i>metrics</i> to be dumped. Unlike the command line <i>metrics</i>, each metric may be followed by a normalization value. Empty lines and lines that begin with &#8220;#&#8221; are ignored.</p>
-<dt><code>-d</code></p>
-<dd> Specify the <i>delimiter</i> that separates each column of output. The <i>delimiter</i> may only be a single character.</p>
-<dt><code>-f</code></p>
-<dd> Use the <i>format</i> string for formatting the timestamp with each set of values. The syntax of this string is the same as that described in <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3). An empty <i>format</i> string (eg. &#8221;) will remove the timestamps from the output.</p>
-<dt><code>-F</code></p>
-<dd> Output the values in a fixed width format of 6 characters. Positive numbers are represented as <i>dd</i>.<i>dd</i><code>u</code> and negative numbers as <code>[</code>&#8211;<code>]</code><i>d</i>.<i>dd</i><code>u</code>. The postfix multiplier may have the values <code>K</code>(10^3), <code>M</code>(10^6), <code>G</code>(10^9) and <code>T</code>(10^12). For example, 4567 would be displayed as 4.57K, even if the units of the metric are bytes.</p>
-<dt><code>-G</code></p>
-<dd> Output the values using the shortest of a scientific format or a decimal notation.</p>
-<dt><code>-h</code></p>
-<dd> Fetch performance metrics from <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on <i>host</i>, rather than the default localhost.</p>
-<dt><code>-H</code></p>
-<dd> Show all headers before dumping any metric values. This is equivalent to <code>-lmNu</code>.</p>
-<dt><code>-i</code></p>
-<dd> Output the data in fixed width columns using fixed width values (see <code>-F</code>) so that it is human-readable. This option may not be used with <code>-P</code> as fixed point values are not fixed width. This option will also affect the output of <code>-m</code> and <code>-u</code> options as the metric, instance and unit names will be truncated.</p>
-<dt><code>-l</code></p>
-<dd> Show the source of the metrics. In interactive mode, the host of the metrics is shown. In non-interactive mode, this option shows the source of the metrics with the metric name even if <code>-m</code> is not specified.</p>
-<dt><code>-m</code></p>
-<dd> Output the metric names before the metric values. The source and units of the metrics may also be dumped with the <code>-l</code> and <code>-u</code> options respectively. If in interactive mode, the metrics names may be truncated, and the instance names, where relevant, are also truncated on the follow line.</p>
-<dt><code>-M</code></p>
-<dd> Output the column number and complete metric names before dumping any values. If the <code>-l</code> flag is also specified, the source of the metrics is also shown.</p>
-<dt><code>-n</code></p>
-<dd> Load an alternative local PMNS from the file <i>pmnsfile.</i></p>
-<dt><code>-o</code></p>
-<dd> When a timestamp is being reported (ie. unless an empty format string is given with the <code>-f </code> option), the timestamp is prefixed with the offset in seconds from the start of the set of archives or the beginning of the execution of <code>pmdumptext</code>.</p>
-<dt><code>-N</code></p>
-<dd> Output the normalization factors before the metric values.</p>
-<dt><code>-P</code></p>
-<dd> Set the <i>precision</i> of the values. This option may not be used with <code>-F</code> as the precision is constant. The default precision is 3.</p>
-<dt><code>-r</code></p>
-<dd> Output the raw metric values, do not convert counters to rates. This option also causes <code>pmdumptext</code> to ignore the normalization values for each metric.</p>
-<dt><code>-R</code></p>
-<dd> Repeat the header every <i>lines</i> of output. This option is useful in interactive mode when using a graphical window to avoid the header scrolling beyond the window&#8217;s buffer, and to realign the header if the window is resized.</p>
-<dt><code>-s</code></p>
-<dd> <code>pmdumptext</code> will terminate after this many samples.</p>
-<dt><code>-t</code></p>
-<dd> The <i>interval</i> argument follows the syntax described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), and in the simplest form may be an unsigned integer (the implied units in this case are seconds). The default interval is 1.0 seconds.</p>
-<dt><code>-u</code></p>
-<dd> Output the units of the metrics before the first values, but after the metric names if <code>-m</code> is also specified.</p>
-<dt><code>-U</code></p>
-<dd> Change the output when values are unavailable to <i>string</i>. The default string is &#8220;?&#8221;.</p>
-<dt><code>-w</code></p>
-<dd> Set the column width of the output. Strings will be truncated to this width, and maybe postfixed by &#8220;&#8230;&#8221; if the <i>width</i> is greater than 5.</p>
-<dt><code>-X</code></p>
-<dd> Output the column number and complete metric names, one-per-line, both before dumping the first set of values and again each time the header is repeated.</p>
-<dt><code>-z</code></p>
-<dd> Use the local timezone of the host that is the source of the performance metrics, as identified by either the <code>-h</code> or the first <code>-a</code> options. The default is to use the timezone of the local host.</p>
-<dt><code>-Z</code></p>
-<dd> Use <i>timezone</i> when displaying the date and time. <i>Timezone</i> is in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dl>
+<dt><code>-a</code></dt>
+<dd> Specify a set of <i>archive</i> from which metrics can be obtained for a particular host. <i>archive</i> is the name of a directory containing archives, or the basename of an archive, previously created by <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). Multiple sets of archives (separated by commas or in different <code>-a</code> options) from different hosts may be given, but only one set of archives per host is permitted. Any metrics that are not associated with a specific host or archive will use the first archive as their source.</dd>
+<dt><code>-C</code></dt>
+<dd> Exit before dumping any values, but after parsing the metrics. Metrics, instances, normals and units are listed if <code>-m</code>, <code>-l</code>, <code>-N</code> and/or <code>-u</code> are specified.</dd>
+<dt><code>-c</code></dt>
+<dd> If no <i>metrics</i> are listed on the command line, a <i>config</i> file can be used to specify the <i>metrics</i> to be dumped. Unlike the command line <i>metrics</i>, each metric may be followed by a normalization value. Empty lines and lines that begin with &#8220;#&#8221; are ignored.</dd>
+<dt><code>-d</code></dt>
+<dd> Specify the <i>delimiter</i> that separates each column of output. The <i>delimiter</i> may only be a single character.</dd>
+<dt><code>-f</code></dt>
+<dd> Use the <i>format</i> string for formatting the timestamp with each set of values. The syntax of this string is the same as that described in <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3). An empty <i>format</i> string (eg. &#8221;) will remove the timestamps from the output.</dd>
+<dt><code>-F</code></dt>
+<dd> Output the values in a fixed width format of 6 characters. Positive numbers are represented as <i>dd</i>.<i>dd</i><code>u</code> and negative numbers as <code>[</code>&#8211;<code>]</code><i>d</i>.<i>dd</i><code>u</code>. The postfix multiplier may have the values <code>K</code>(10^3), <code>M</code>(10^6), <code>G</code>(10^9) and <code>T</code>(10^12). For example, 4567 would be displayed as 4.57K, even if the units of the metric are bytes.</dd>
+<dt><code>-G</code></dt>
+<dd> Output the values using the shortest of a scientific format or a decimal notation.</dd>
+<dt><code>-h</code></dt>
+<dd> Fetch performance metrics from <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on <i>host</i>, rather than the default localhost.</dd>
+<dt><code>-H</code></dt>
+<dd> Show all headers before dumping any metric values. This is equivalent to <code>-lmNu</code>.</dd>
+<dt><code>-i</code></dt>
+<dd> Output the data in fixed width columns using fixed width values (see <code>-F</code>) so that it is human-readable. This option may not be used with <code>-P</code> as fixed point values are not fixed width. This option will also affect the output of <code>-m</code> and <code>-u</code> options as the metric, instance and unit names will be truncated.</dd>
+<dt><code>-l</code></dt>
+<dd> Show the source of the metrics. In interactive mode, the host of the metrics is shown. In non-interactive mode, this option shows the source of the metrics with the metric name even if <code>-m</code> is not specified.</dd>
+<dt><code>-m</code></dt>
+<dd> Output the metric names before the metric values. The source and units of the metrics may also be dumped with the <code>-l</code> and <code>-u</code> options respectively. If in interactive mode, the metrics names may be truncated, and the instance names, where relevant, are also truncated on the follow line.</dd>
+<dt><code>-M</code></dt>
+<dd> Output the column number and complete metric names before dumping any values. If the <code>-l</code> flag is also specified, the source of the metrics is also shown.</dd>
+<dt><code>-n</code></dt>
+<dd> Load an alternative local PMNS from the file <i>pmnsfile.</i></dd>
+<dt><code>-o</code></dt>
+<dd> When a timestamp is being reported (ie. unless an empty format string is given with the <code>-f </code> option), the timestamp is prefixed with the offset in seconds from the start of the set of archives or the beginning of the execution of <code>pmdumptext</code>.</dd>
+<dt><code>-N</code></dt>
+<dd> Output the normalization factors before the metric values.</dd>
+<dt><code>-P</code></dt>
+<dd> Set the <i>precision</i> of the values. This option may not be used with <code>-F</code> as the precision is constant. The default precision is 3.</dd>
+<dt><code>-r</code></dt>
+<dd> Output the raw metric values, do not convert counters to rates. This option also causes <code>pmdumptext</code> to ignore the normalization values for each metric.</dd>
+<dt><code>-R</code></dt>
+<dd> Repeat the header every <i>lines</i> of output. This option is useful in interactive mode when using a graphical window to avoid the header scrolling beyond the window&#8217;s buffer, and to realign the header if the window is resized.</dd>
+<dt><code>-s</code></dt>
+<dd> <code>pmdumptext</code> will terminate after this many samples.</dd>
+<dt><code>-t</code></dt>
+<dd> The <i>interval</i> argument follows the syntax described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), and in the simplest form may be an unsigned integer (the implied units in this case are seconds). The default interval is 1.0 seconds.</dd>
+<dt><code>-u</code></dt>
+<dd> Output the units of the metrics before the first values, but after the metric names if <code>-m</code> is also specified.</dd>
+<dt><code>-U</code></dt>
+<dd> Change the output when values are unavailable to <i>string</i>. The default string is &#8220;?&#8221;.</dd>
+<dt><code>-w</code></dt>
+<dd> Set the column width of the output. Strings will be truncated to this width, and maybe postfixed by &#8220;&#8230;&#8221; if the <i>width</i> is greater than 5.</dd>
+<dt><code>-X</code></dt>
+<dd> Output the column number and complete metric names, one-per-line, both before dumping the first set of values and again each time the header is repeated.</dd>
+<dt><code>-z</code></dt>
+<dd> Use the local timezone of the host that is the source of the performance metrics, as identified by either the <code>-h</code> or the first <code>-a</code> options. The default is to use the timezone of the local host.</dd>
+<dt><code>-Z</code></dt>
+<dd> Use <i>timezone</i> when displaying the date and time. <i>Timezone</i> is in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dd></dl>
 <h2>MULTIPLE SOURCES</h2>
 <p> <code>pmdumptext</code> supports the dumping of metrics from multiple hosts or set of archives. The metrics listed on the command line or in the <i>config</i> file may have no specific source or come from different sources. </p>
 <p> However, restrictions apply when archives are specified on the command line (<code>-a</code>) and/or in the configuration file. Firstly, there may be only one set of archives for any one host. Secondly, the hosts of any metrics with host sources must correspond to the host of a set of archives, either on the command line or previously as the source of another metric. </p>
@@ -93,10 +93,10 @@ filesys.used[/dev/root] 19654.37
 <h2>UNIT CONVERSION</h2>
 <p> All metrics that have the semantics of counters are automatically converted to rates over the sample time interval. In interactive mode, <code>pmdumptext</code> will also change the units of some metrics so that they are easier to comprehend:</p>
 <dl>
-<dt>o</p>
-<dd> All metrics with space units (bytes to terabytes) are scaled to bytes. Note that 1024 bytes with be represented as 1.02K, not 1.00K.</p>
-<dt>o</p>
-<dd> Metrics that are counters with time units (nanoseconds to hours) represent time utilization over the sample interval. The unit strings of such metrics is changed to &#8220;Time Utilization&#8221; or abbreviated to &#8220;util&#8221; and the values are normalized to the range zero to one.</dl>
+<dt>o</dt>
+<dd> All metrics with space units (bytes to terabytes) are scaled to bytes. Note that 1024 bytes with be represented as 1.02K, not 1.00K.</dd>
+<dt>o</dt>
+<dd> Metrics that are counters with time units (nanoseconds to hours) represent time utilization over the sample interval. The unit strings of such metrics is changed to &#8220;Time Utilization&#8221; or abbreviated to &#8220;util&#8221; and the values are normalized to the range zero to one.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> o To examine the load on two hosts foo and bar, simultaneously: </p>
 <pre><code>
@@ -120,8 +120,8 @@ $ pminfo -a archive | pmdumptext -t 30s -m -a archive &gt; outfile
 </pre>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/*</code></p>
-<dd> default PMNS specification files</dl>
+<dt><code>$PCP_VAR_DIR/pmns/*</code></dt>
+<dd> default PMNS specification files</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

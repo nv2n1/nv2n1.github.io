@@ -22,10 +22,10 @@ description: "pmLookupInDomArchive – translate an instance name into an instan
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmgetindomarchive/">pmGetInDomArchive</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupindom/">pmLookupInDom</a></code>(3), <code><a href="/docs/linux/man/3-pmnameindomarchive/">pmNameInDomArchive</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOTARCHIVE</code></p>
-<dd>the current PMAPI context is not associated with a set of archive logs</p>
-<dt><code>PM_ERR_INDOM_LOG</code></p>
-<dd><i>indom</i> is not a defined instance domain identifier for the set of archive logs</p>
-<dt><code>PM_ERR_INST_LOG</code></p>
-<dd>the external instance <i>name</i> is not known for the instance domain <i>indom</i> in the set of archive logs </p>
+<dt><code>PM_ERR_NOTARCHIVE</code></dt>
+<dd>the current PMAPI context is not associated with a set of archive logs</dd>
+<dt><code>PM_ERR_INDOM_LOG</code></dt>
+<dd><i>indom</i> is not a defined instance domain identifier for the set of archive logs</dd>
+<dt><code>PM_ERR_INST_LOG</code></dt>
+<dd>the external instance <i>name</i> is not known for the instance domain <i>indom</i> in the set of archive logs </dd>
 </dl>

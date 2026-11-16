@@ -12,28 +12,26 @@ description: "npm-bin – Display npm bin folder"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm bin [-g|--global]
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Print the folder where npm will install executables.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help prefix</p>
-<dt>&bull;</p>
-<dd> npm help root</p>
-<dt>&bull;</p>
-<dd> npm help folders</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc </p>
+<dt>&bull;</dt>
+<dd> npm help prefix</dd>
+<dt>&bull;</dt>
+<dd> npm help root</dd>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc </dd>
 </dl>
 </dl>
 <h2>Index</h2>

@@ -14,16 +14,16 @@ description: "scsi_add_lun – allocate and fully initialze a scsi_device"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>holds information to be stored in the new scsi_device</dl>
+</dd><dd>holds information to be stored in the new scsi_device</dd></dl>
 <p> <i>inq_result</i></p>
 <dl>
-<dd>holds the result of a previous INQUIRY to the LUN</dl>
+<dd>holds the result of a previous INQUIRY to the LUN</dd></dl>
 <p> <i>bflags</i></p>
 <dl>
-<dd>black/white list flag</dl>
+<dd>black/white list flag</dd></dl>
 <p> <i>async</i></p>
 <dl>
-<dd>1 if this device is being scanned asynchronously</dl>
+<dd>1 if this device is being scanned asynchronously</dd></dl>
 <h2>Description</h2>
 <p>Initialize the scsi_device <i>sdev</i>. Optionally set fields based on values in *<i>bflags</i>.</p>
 <h2>Return</h2>
@@ -31,8 +31,8 @@ description: "scsi_add_lun – allocate and fully initialze a scsi_device"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

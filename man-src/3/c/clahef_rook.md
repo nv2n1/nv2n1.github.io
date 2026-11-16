@@ -18,7 +18,7 @@ description: "clahef_rook.f –"
 <p>&nbsp;<wbr><code>Purpose:&nbsp;<wbr></code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CLAHEF_ROOK computes a partial factorization of a complex Hermitian
         matrix A using the bounded Bunch -
@@ -30,11 +30,11 @@ CLAHEF_ROOK computes a partial factorization of a complex Hermitian
                                                                                                            the argument KB,
                                                     and is either NB or NB - 1, or N if N &lt;= NB.Note that U **H denotes the conjugate transpose of U.CLAHEF_ROOK is an auxiliary routine called by CHETRF_ROOK.It uses blocked code(calling Level 3 BLAS) to update the submatrix A11(if UPLO = 'U') or A22(if UPLO = 'L').
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the upper or lower triangular part of the
@@ -119,18 +119,18 @@ CLAHEF_ROOK computes a partial factorization of a complex Hermitian
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   November 2013, Igor Kozachenko,
                   Computer Science Division,
@@ -139,8 +139,9 @@ CLAHEF_ROOK computes a partial factorization of a complex Hermitian
                   School of Mathematics,
                   University of Manchester
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 184 of file clahef_rook.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

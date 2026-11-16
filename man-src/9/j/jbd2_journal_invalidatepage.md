@@ -14,23 +14,23 @@ description: "jbd2_journal_invalidatepage –"
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>journal to use for flush&#8230;</dl>
+</dd><dd>journal to use for flush&#8230;</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>page to flush</dl>
+<dd>page to flush</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>start of the range to invalidate</dl>
+<dd>start of the range to invalidate</dd></dl>
 <p> <i>length</i></p>
 <dl>
-<dd>length of the range to invalidate</dl>
+<dd>length of the range to invalidate</dd></dl>
 <h2>Description</h2>
 <p>Reap page buffers containing data after in the specified range in page. Can return -EBUSY if buffers are part of the committing transaction and the page is straddling i_size. Caller then has to wait for current commit and try again.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

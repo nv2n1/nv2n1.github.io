@@ -22,125 +22,125 @@ description: "vmod_directors – Backend traffic directors"
 <p> As you can see there is nothing keeping you from manipulating the directors elsewhere in VCL. So, you could have VCL code that would add more backends to a director when a certain URL is called. Note that directors can use other directors as backends.</p>
 <h2>Contents</h2>
 <dl>
-<dt>&bull;</p>
-<dd>Object fallback</p>
-<dt>&bull;</p>
-<dd>VOID fallback.add_backend(BACKEND)</p>
-<dt>&bull;</p>
-<dd>BACKEND fallback.backend()</p>
-<dt>&bull;</p>
-<dd>Object hash</p>
-<dt>&bull;</p>
-<dd>VOID hash.add_backend(BACKEND, REAL)</p>
-<dt>&bull;</p>
-<dd>BACKEND hash.backend(STRING_LIST)</p>
-<dt>&bull;</p>
-<dd>Object random</p>
-<dt>&bull;</p>
-<dd>VOID random.add_backend(BACKEND, REAL)</p>
-<dt>&bull;</p>
-<dd>BACKEND random.backend()</p>
-<dt>&bull;</p>
-<dd>Object round_robin</p>
-<dt>&bull;</p>
-<dd>VOID round_robin.add_backend(BACKEND)</p>
-<dt>&bull;</p>
-<dd>BACKEND round_robin.backend()</dl>
+<dt>&bull;</dt>
+<dd>Object fallback</dd>
+<dt>&bull;</dt>
+<dd>VOID fallback.add_backend(BACKEND)</dd>
+<dt>&bull;</dt>
+<dd>BACKEND fallback.backend()</dd>
+<dt>&bull;</dt>
+<dd>Object hash</dd>
+<dt>&bull;</dt>
+<dd>VOID hash.add_backend(BACKEND, REAL)</dd>
+<dt>&bull;</dt>
+<dd>BACKEND hash.backend(STRING_LIST)</dd>
+<dt>&bull;</dt>
+<dd>Object random</dd>
+<dt>&bull;</dt>
+<dd>VOID random.add_backend(BACKEND, REAL)</dd>
+<dt>&bull;</dt>
+<dd>BACKEND random.backend()</dd>
+<dt>&bull;</dt>
+<dd>Object round_robin</dd>
+<dt>&bull;</dt>
+<dd>VOID round_robin.add_backend(BACKEND)</dd>
+<dt>&bull;</dt>
+<dd>BACKEND round_robin.backend()</dd></dl>
 <h2>Object Round_Robin</h2>
 <dl>
-<dt><code>Description</code></p>
-<dd>Create a round robin director. </p>
+<dt><code>Description</code></dt>
+<dd>Create a round robin director. </dd>
 <p> This director will pick backends in a round robin fashion.</p>
-<dt><code>Example</code></p>
-<dd>new vdir = directors.round_robin();</dl>
+<dt><code>Example</code></dt>
+<dd>new vdir = directors.round_robin();</dd></dl>
 <h3>VOID round_robin.add_backend(BACKEND)</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>VOID round_robin.add_backend(BACKEND)</p>
-<dt><code>Description</code></p>
-<dd>Add a backend to the round-robin director.</p>
-<dt><code>Example</code></p>
-<dd>vdir.add_backend(backend1); vdir.add_backend(backend2);</dl>
+<dt><code>Prototype</code></dt>
+<dd>VOID round_robin.add_backend(BACKEND)</dd>
+<dt><code>Description</code></dt>
+<dd>Add a backend to the round-robin director.</dd>
+<dt><code>Example</code></dt>
+<dd>vdir.add_backend(backend1); vdir.add_backend(backend2);</dd></dl>
 <h3>BACKEND round_robin.backend()</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>BACKEND round_robin.backend()</p>
-<dt><code>Description</code></p>
-<dd>Pick a backend from the director.</p>
-<dt><code>Example</code></p>
-<dd>set req.backend_hint = vdir.backend();</dl>
+<dt><code>Prototype</code></dt>
+<dd>BACKEND round_robin.backend()</dd>
+<dt><code>Description</code></dt>
+<dd>Pick a backend from the director.</dd>
+<dt><code>Example</code></dt>
+<dd>set req.backend_hint = vdir.backend();</dd></dl>
 <h2>Object Fallback</h2>
 <dl>
-<dt><code>Description</code></p>
-<dd>Create a fallback director. </p>
+<dt><code>Description</code></dt>
+<dd>Create a fallback director. </dd>
 <p> A fallback director will try each of the added backends in turn, and return the first one that is healthy.</p>
-<dt><code>Example</code></p>
-<dd>new vdir = directors.fallback();</dl>
+<dt><code>Example</code></dt>
+<dd>new vdir = directors.fallback();</dd></dl>
 <h3>VOID fallback.add_backend(BACKEND)</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>VOID fallback.add_backend(BACKEND)</p>
-<dt><code>Description</code></p>
-<dd>Add a backend to the director. </p>
+<dt><code>Prototype</code></dt>
+<dd>VOID fallback.add_backend(BACKEND)</dd>
+<dt><code>Description</code></dt>
+<dd>Add a backend to the director. </dd>
 <p> Note that the order in which this is done matters for the fallback director.</p>
-<dt><code>Example</code></p>
-<dd>vdir.add_backend(backend1); vdir.add_backend(backend2);</dl>
+<dt><code>Example</code></dt>
+<dd>vdir.add_backend(backend1); vdir.add_backend(backend2);</dd></dl>
 <h3>BACKEND fallback.backend()</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>BACKEND fallback.backend()</p>
-<dt><code>Description</code></p>
-<dd>Pick a backend from the director.</p>
-<dt><code>Example</code></p>
-<dd>set req.backend_hint = vdir.backend();</dl>
+<dt><code>Prototype</code></dt>
+<dd>BACKEND fallback.backend()</dd>
+<dt><code>Description</code></dt>
+<dd>Pick a backend from the director.</dd>
+<dt><code>Example</code></dt>
+<dd>set req.backend_hint = vdir.backend();</dd></dl>
 <h2>Object Random</h2>
 <dl>
-<dt><code>Description</code></p>
-<dd>Create a random backend director. </p>
+<dt><code>Description</code></dt>
+<dd>Create a random backend director. </dd>
 <p> The random director distributes load over the backends using a weighted random probability distribution.</p>
-<dt><code>Example</code></p>
-<dd>new vdir = directors.random();</dl>
+<dt><code>Example</code></dt>
+<dd>new vdir = directors.random();</dd></dl>
 <h3>VOID random.add_backend(BACKEND, REAL)</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>VOID random.add_backend(BACKEND, REAL)</p>
-<dt><code>Description</code></p>
-<dd>Add a backend to the director with a given weight. </p>
+<dt><code>Prototype</code></dt>
+<dd>VOID random.add_backend(BACKEND, REAL)</dd>
+<dt><code>Description</code></dt>
+<dd>Add a backend to the director with a given weight. </dd>
 <p> Each backend backend will receive approximately 100 * (weight / (sum(all_added_weights))) per cent of the traffic sent to this director.</p>
-<dt><code>Example</code></p>
-<dd>vdir.add_backend(backend1, 10); vdir.add_backend(backend2, 5); # 2/3 to backend1, 1/3 to backend2.</dl>
+<dt><code>Example</code></dt>
+<dd>vdir.add_backend(backend1, 10); vdir.add_backend(backend2, 5); # 2/3 to backend1, 1/3 to backend2.</dd></dl>
 <h3>BACKEND random.backend()</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>BACKEND random.backend()</p>
-<dt><code>Description</code></p>
-<dd>Pick a backend from the director.</p>
-<dt><code>Example</code></p>
-<dd>set req.backend_hint = vdir.backend();</dl>
+<dt><code>Prototype</code></dt>
+<dd>BACKEND random.backend()</dd>
+<dt><code>Description</code></dt>
+<dd>Pick a backend from the director.</dd>
+<dt><code>Example</code></dt>
+<dd>set req.backend_hint = vdir.backend();</dd></dl>
 <h2>Object Hash</h2>
 <dl>
-<dt><code>Description</code></p>
-<dd>Create a hashing backend director. </p>
+<dt><code>Description</code></dt>
+<dd>Create a hashing backend director. </dd>
 <p> The director chooses the backend server by computing a hash/digest of the string given to .backend(). </p>
 <p> Commonly used with <code>client.identity</code> or a session cookie to get sticky sessions.</p>
-<dt><code>Example</code></p>
-<dd>new vdir = directors.hash();</dl>
+<dt><code>Example</code></dt>
+<dd>new vdir = directors.hash();</dd></dl>
 <h3>VOID hash.add_backend(BACKEND, REAL)</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>VOID hash.add_backend(BACKEND, REAL)</p>
-<dt><code>Description</code></p>
-<dd>Add a backend to the director with a certain weight. </p>
+<dt><code>Prototype</code></dt>
+<dd>VOID hash.add_backend(BACKEND, REAL)</dd>
+<dt><code>Description</code></dt>
+<dd>Add a backend to the director with a certain weight. </dd>
 <p> Weight is used as in the random director. Recommended value is 1.0 unless you have special needs.</p>
-<dt><code>Example</code></p>
-<dd>vdir.add_backend(backend1, 1.0); vdir.add_backend(backend2, 1.0);</dl>
+<dt><code>Example</code></dt>
+<dd>vdir.add_backend(backend1, 1.0); vdir.add_backend(backend2, 1.0);</dd></dl>
 <h3>BACKEND hash.backend(STRING_LIST)</h3>
 <dl>
-<dt><code>Prototype</code></p>
-<dd>BACKEND hash.backend(STRING_LIST)</p>
-<dt><code>Description</code></p>
-<dd>Pick a backend from the backend director. </p>
+<dt><code>Prototype</code></dt>
+<dd>BACKEND hash.backend(STRING_LIST)</dd>
+<dt><code>Description</code></dt>
+<dd>Pick a backend from the backend director. </dd>
 <p> Use the string or list of strings provided to pick the backend.</p>
-<dt><code>Example</code></p>
-<dd>set req.backend_hint = vdir.backend(req.http.cookie); # pick a backend based on the cookie header from the client </p>
+<dt><code>Example</code></dt>
+<dd>set req.backend_hint = vdir.backend(req.http.cookie); # pick a backend based on the cookie header from the client </dd>
 </dl>

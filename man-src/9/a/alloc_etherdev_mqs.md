@@ -15,15 +15,15 @@ alloc_etherdev_mqs - Allocates and sets up an Ethernet device
 <h2>Arguments</h2>
 
 <i>sizeof_priv</i>
-<dl><dd><dd>Size of additional driver-private structure to be allocated for this Ethernet device</dl>
+<dl><dd></dd><dd>Size of additional driver-private structure to be allocated for this Ethernet device</dd></dl>
  
 
  <i>txqs</i>
-<dl><dd>The number of TX queues this device has.</dl>
+<dl><dd>The number of TX queues this device has.</dd></dl>
  
 
  <i>rxqs</i>
-<dl><dd>The number of RX queues this device has.</dl>
+<dl><dd>The number of RX queues this device has.</dd></dl>
 
 <h2>Description</h2>
 

@@ -18,12 +18,12 @@ description: "CREATE FOREIGN DATA WRAPPER – define a new foreign-data wrapper"
 <p> Only superusers can create foreign-data wrappers.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the foreign-data wrapper to be created.</p>
-<dt><code>VALIDATOR </code><i>valfunction</i></p>
-<dd><i>valfunction</i> is the name of a previously registered function that will be called to check the generic options given to the foreign-data wrapper, as well as to foreign servers and user mappings using the foreign-data wrapper. If no validator function or NO VALIDATOR is specified, then options will not be checked at creation time. (Foreign-data wrappers will possibly ignore or reject invalid option specifications at run time, depending on the implementation.) The validator function must take two arguments: one of type <code>text[]</code>, which will contain the array of options as stored in the system catalogs, and one of type <code>oid</code>, which will be the OID of the system catalog containing the options. The return type is ignored; the function should indicate invalid options using the <code>ereport()</code> function.</p>
-<dt><code>OPTIONS ( </code><i>option</i><code> &#8216;</code><i>value</i><code>&#8216; [, &#8230; ] )</code></p>
-<dd>This clause specifies options for the new foreign-data wrapper. The allowed option names and values are specific to each foreign data wrapper and are validated using the foreign-data wrapper library. Option names must be unique.</dl>
+<dt><i>name</i></dt>
+<dd>The name of the foreign-data wrapper to be created.</dd>
+<dt><code>VALIDATOR </code><i>valfunction</i></dt>
+<dd><i>valfunction</i> is the name of a previously registered function that will be called to check the generic options given to the foreign-data wrapper, as well as to foreign servers and user mappings using the foreign-data wrapper. If no validator function or NO VALIDATOR is specified, then options will not be checked at creation time. (Foreign-data wrappers will possibly ignore or reject invalid option specifications at run time, depending on the implementation.) The validator function must take two arguments: one of type <code>text[]</code>, which will contain the array of options as stored in the system catalogs, and one of type <code>oid</code>, which will be the OID of the system catalog containing the options. The return type is ignored; the function should indicate invalid options using the <code>ereport()</code> function.</dd>
+<dt><code>OPTIONS ( </code><i>option</i><code> &#8216;</code><i>value</i><code>&#8216; [, &#8230; ] )</code></dt>
+<dd>This clause specifies options for the new foreign-data wrapper. The allowed option names and values are specific to each foreign data wrapper and are validated using the foreign-data wrapper library. Option names must be unique.</dd></dl>
 <h2>Notes</h2>
 <p>At the moment, the foreign-data wrapper functionality is very rudimentary. The purpose of foreign-data wrappers, foreign servers, and user mappings is to store this information in a standard way so that it can be queried by interested applications. One such application is <code>dblink</code>; see in the documentation. The functionality to actually query external data through a foreign-data wrapper library does not exist yet. </p>
 <p> There is currently one foreign-data wrapper validator function provided: <i>postgresql_fdw_validator</i>, which accepts options corresponding to <code>libpq</code> connection parameters.</p>

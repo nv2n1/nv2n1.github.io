@@ -15,19 +15,19 @@ description: "opasorthosts"
 <p>opasorthosts #8217lt; <i>hostlist</i>&gt; <i>output_file</i></p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
 <dt>
-&nbsp;<wbr><i>hostlist</i>&nbsp;<wbr></p>
-<dd>List of host names. </p>
+&nbsp;<wbr><i>hostlist</i>&nbsp;<wbr></dt>
+<dd>List of host names. </dd>
 <dt>
-&nbsp;<wbr><i>output_file</i>&nbsp;<wbr></p>
-<dd>Sorted list output. </p>
+&nbsp;<wbr><i>output_file</i>&nbsp;<wbr></dt>
+<dd>Sorted list output. </dd>
 </dl>
 <h2>Examples</h2>
 <p>opasorthosts #8217lt; host.xml &gt; Sorted_host</p>
 <dl>
-<dt><code>Standard Input</code></p>
+<dt><code>Standard Input</code></dt>
 <dd>opasorthosts<br />
  osd04<br />
  osd1<br />
@@ -35,12 +35,13 @@ description: "opasorthosts"
  compute3<br />
  mgmt1<br />
  mgmt2<br />
- login</p>
-<dt><code>Standard Output</code></p>
+ login</dd>
+<dt><code>Standard Output</code></dt>
 <dd>compute3<br />
  compute20<br />
  login<br />
  mgmt1<br />
  mgmt2<br />
  osd1<br />
- osd04 </p>
+ osd04 </dd>
+</dl>

@@ -21,9 +21,9 @@ usndh.edu: stratum 1, offset 0.0019298, synch distance 0.011993, refid 'WWVB'</p
 <h2>Options</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>-n</code></p>
-<dd>Turns off the printing of host names; instead, host IP addresses are given. This may be useful if a nameserver is down.</dl>
+</dd><dl>
+<dt><code>-n</code></dt>
+<dd>Turns off the printing of host names; instead, host IP addresses are given. This may be useful if a nameserver is down.</dd></dl>
 </dl>
 <h2>Bugs</h2>
 <p>This program makes no attempt to improve accuracy by doing multiple samples. </p>

@@ -21,9 +21,9 @@ CALL SFSETR (CNP, RVP)
 <h2>Description</h2>
 
 <dl><dt>CNP
-<dd>(an input expression of type CHARACTER) is one of the character strings 'AN', 'CH', 'DO', 'SP', or 'TY' (or a longer string beginning with one of these strings), meaning &quot;ANgle&quot;, &quot;CHaracter&quot;, &quot;DOts&quot;, &quot;SPacing&quot;, and &quot;TYpe&quot;, respectively.
-<dt>RVP
-<dd>(an input expression of type REAL) is the desired new value of the parameter specified by CNP. This value will be used until the next call resetting it. If the internal parameter is inherently of type INTEGER, the value &quot;INT(RVP)&quot; will be given to it.</dl>
+</dt><dd>(an input expression of type CHARACTER) is one of the character strings 'AN', 'CH', 'DO', 'SP', or 'TY' (or a longer string beginning with one of these strings), meaning &quot;ANgle&quot;, &quot;CHaracter&quot;, &quot;DOts&quot;, &quot;SPacing&quot;, and &quot;TYpe&quot;, respectively.
+</dd><dt>RVP
+</dt><dd>(an input expression of type REAL) is the desired new value of the parameter specified by CNP. This value will be used until the next call resetting it. If the internal parameter is inherently of type INTEGER, the value &quot;INT(RVP)&quot; will be given to it.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -17,23 +17,23 @@ mongoc_collection_find_and_modify_with_opts (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in mongoc 1.3.0</dl>
+<dd>New in mongoc 1.3.0</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd>A <code>bson_t</code> containing the query to locate target document(s).</dl>
+<dt><code>query</code></dt>
+<dd>A <code>bson_t</code> containing the query to locate target document(s).</dd></dl>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd><code>find and modify options</code></dl>
+<dt><code>opts</code></dt>
+<dd><code>find and modify options</code></dd></dl>
 <dl COMPACT>
-<dt><code>reply</code></p>
-<dd>An optional location for a <code>bson_t</code> that will be initialized with the result or <code>NULL</code> \&amp;.</dl>
+<dt><code>reply</code></dt>
+<dd>An optional location for a <code>bson_t</code> that will be initialized with the result or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Update and return an object. </p>
 <h2>Errors</h2>

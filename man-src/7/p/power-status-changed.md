@@ -18,6 +18,6 @@ description: "power-status-changed – event signalling change of power status"
 <dl>
 <dd>
 <pre>start on power-status-changed</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code>powstatd</code>(8) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) </p>

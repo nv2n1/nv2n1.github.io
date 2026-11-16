@@ -27,21 +27,20 @@ url: "/docs/linux/man/1-po4a-normalize/"
 
 <dl>
 <dt>-o, --option
-<dd> Extra option(s) to pass to the format plugin. Specify each option in the 'name=value' format. See the documentation of each plugin for more information about the valid options and their meanings.
-<dt>-b, --blank
-<dd> Create an blank translated document. The generated translated document will be generated assuming all messages are translated by a space or new line. 
-
+</dt><dd> Extra option(s) to pass to the format plugin. Specify each option in the 'name=value' format. See the documentation of each plugin for more information about the valid options and their meanings.
+</dd><dt>-b, --blank
+</dt><dd> Create an blank translated document. The generated translated document will be generated assuming all messages are translated by a space or new line. 
  This is useful to check what parts of the document cannot be translated.
-<dt>-h, --help
-<dd> Show a short help message.
-<dt>--help-format
-<dd> List the documentation format understood by po4a.
-<dt>-f, --format
-<dd> Format of the documentation you want to handle. Use the --help-format option to see the list of available formats.
-<dt>-M, --master-charset
-<dd> Charset of the file containing the document to translate.
-<dt>-V, --version
-<dd> Display the version of the script and exit.</dl>
+</dd><dt>-h, --help
+</dt><dd> Show a short help message.
+</dd><dt>--help-format
+</dt><dd> List the documentation format understood by po4a.
+</dd><dt>-f, --format
+</dt><dd> Format of the documentation you want to handle. Use the --help-format option to see the list of available formats.
+</dd><dt>-M, --master-charset
+</dt><dd> Charset of the file containing the document to translate.
+</dd><dt>-V, --version
+</dt><dd> Display the version of the script and exit.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

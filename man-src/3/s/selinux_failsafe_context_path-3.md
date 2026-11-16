@@ -10,7 +10,6 @@ description: "selinux_path, selinux_policy_root, selinux_binary_policy_path, sel
 <p>selinux_path, selinux_policy_root, selinux_binary_policy_path, selinux_current_policy_path, selinux_failsafe_context_path, selinux_removable_context_path, selinux_default_context_path, selinux_user_contexts_path, selinux_file_context_path, selinux_media_context_path, selinux_contexts_path &#8211; These functions return the paths to the active SELinux policy configuration directories and files</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/selinux.h&gt;
-
 const char *selinux_path(void);
 const char *selinux_policy_root(void);
 const char *selinux_binary_policy_path(void);

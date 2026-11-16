@@ -12,25 +12,27 @@ description: "/var/yp/nicknames – nickname translation table for NIS maps"
 <p><code>nicknames</code> contains a list of aliases and the corresponding NIS maps. There is one entry per line. The default <code>nicknames</code> table looks like:</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dt><code>passwd</p>
-<dd>passwd.byname</p>
-<dt>group</p>
-<dd>group.byname</p>
-<dt>networks</p>
-<dd>networks.byaddr</p>
-<dt>hosts</p>
-<dd>hosts.byname</p>
-<dt>protocols</p>
-<dd>protocols.bynumber</p>
-<dt>services</p>
-<dd>services.byname</p>
-<dt>aliases</p>
-<dd>mail.aliases</p>
-<dt>ethers</p>
-<dd>ethers.byname</dl>
+</dd><dt><code>passwd</dt>
+<dd>passwd.byname</dd>
+<dt>group</dt>
+<dd>group.byname</dd>
+<dt>networks</dt>
+<dd>networks.byaddr</dd>
+<dt>hosts</dt>
+<dd>hosts.byname</dd>
+<dt>protocols</dt>
+<dd>protocols.bynumber</dd>
+<dt>services</dt>
+<dd>services.byname</dd>
+<dt>aliases</dt>
+<dd>mail.aliases</dd>
+<dt>ethers</dt>
+<dd>ethers.byname</dd></dl>
+</code>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-ypcat/">ypcat</a></code>(1), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
 <h2>Author</h2>
 <p>The <code>yp-tools</code> package was written by Thorsten Kukuk &lt;kukuk [at] linux-nis.org&gt;.</p>
+</dl>

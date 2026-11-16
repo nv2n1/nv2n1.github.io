@@ -78,8 +78,8 @@ description: "openshift_initrc_selinux – Security Enhanced Linux Policy for th
 <p> <code>openshift_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the openshift_initrc_exec_t type, if you want to transition an executable to the openshift_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/s?bin/mcollectived, /usr/s?bin/(oo|rhc)-restorer, /usr/s?bin/oo-admin-ctl-gears, /usr/s?bin/(oo|rhc)-restorer-wrapper.sh, /etc/rc.d/init.d/libra, /etc/rc.d/init.d/mcollective </p>
+<dt>Paths:</dt>
+<dd>/usr/s?bin/mcollectived, /usr/s?bin/(oo|rhc)-restorer, /usr/s?bin/oo-admin-ctl-gears, /usr/s?bin/(oo|rhc)-restorer-wrapper.sh, /etc/rc.d/init.d/libra, /etc/rc.d/init.d/mcollective </dd>
 </dl>
 <p> <code>openshift_initrc_tmp_t</code> </p>
 <p> &#8211; Set files with the openshift_initrc_tmp_t type, if you want to store openshift initrc temporary files in the /tmp directories. </p>

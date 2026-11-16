@@ -15,11 +15,11 @@ snd_soc_component_init_regmap - Initialize regmap instance for the component
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>The component for which to initialize the regmap instance</dl>
+<dl><dd></dd><dd>The component for which to initialize the regmap instance</dd></dl>
  
 
  <i>regmap</i>
-<dl><dd>The regmap instance that should be used by the component</dl>
+<dl><dd>The regmap instance that should be used by the component</dd></dl>
 
 <h2>Description</h2>
 

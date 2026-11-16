@@ -14,11 +14,11 @@ mongoc_gridfs_find (mongoc_gridfs_t *gridfs,
  const bson_t *query);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>gridfs</code></p>
-<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dl>
+<dt><code>gridfs</code></dt>
+<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>query</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Finds all gridfs files matching <code>query</code> \&amp;. You can iterate the matched gridfs files with the resulting file list. </p>
 <h2>Returns</h2>

@@ -12,18 +12,18 @@ description: "lvmvdo — EXPERIMENTAL LVM Virtual Data Optimizer support"
 <p>VDO (which includes kvdo and vdo) is software that provides inline block-level deduplication, compression, and thin provisioning capabilities for primary storage. Deduplication is a technique for reducing the consumption of storage resources by eliminating multiple copies of duplicate blocks. Compression takes the individual unique blocks and shrinks them with coding algorithms; these reduced blocks are then efficiently packed together into physical blocks. Thin provisioning manages the mapping from LBAs presented by VDO to where the data has actually been stored, and also eliminates any blocks of all zeroes. With deduplication, instead of writing the same data more than once each duplicate block is detected and recorded as a reference to the original block. VDO maintains a mapping from logical block addresses (used by the storage layer above VDO) to physical block addresses (used by the storage layer under VDO). After deduplication, multiple logical block addresses may be mapped to the same physical block address; these are called shared blocks and are reference-counted by the software. With VDO&#8217;s compression, multiple blocks (or shared blocks) are compressed with the fast LZ4 algorithm, and binned together where possible so that multiple compressed blocks fit within a 4 KB block on the underlying storage. Mapping from LBA is to a physical block address and index within it for the desired compressed data. All compressed blocks are individually reference counted for correctness. Block sharing and block compression are invisible to applications using the storage, which read and write blocks as they would if VDO were not present. When a shared block is overwritten, a new physical block is allocated for storing the new block data to ensure that other logical block addresses that are mapped to the shared physical block are not modified. For usage of VDO with <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) standard VDO userspace tools <code>vdoformat</code>(8) and currently non-standard kernel VDO module &quot;<i>kvdo</i>&quot; needs to be installed on the system. The &quot;<i>kvdo</i>&quot; module implements fine-grained storage virtualization, thin provisioning, block sharing, and compression; the &quot;<i>uds</i>&quot; module provides memory-efficient duplicate identification. The userspace tools include <code>vdostats</code>(8) for extracting statistics from those volumes. </p>
 <h2>VDO Terms</h2>
 <dl>
-<dt>VDODataLV</p>
+<dt>VDODataLV</dt>
 <dd>VDO data LV<br />
  large hidden LV with suffix _vdata created in a VG.<br />
- used by VDO target to store all data and metadata blocks. </p>
-<dt>VDOPoolLV</p>
+ used by VDO target to store all data and metadata blocks. </dd>
+<dt>VDOPoolLV</dt>
 <dd>VDO pool LV<br />
  maintains virtual for LV(s) stored in attached VDO data LV and it has same size.<br />
- contains VDOLV(s) (currently supports only a single VDOLV). </p>
-<dt>VDOLV</p>
+ contains VDOLV(s) (currently supports only a single VDOLV). </dd>
+<dt>VDOLV</dt>
 <dd>VDO LV<br />
  created from VDOPoolLV<br />
- appears blank after creation </p>
+ appears blank after creation </dd>
 </dl>
 <h2>VDO Usage</h2>
 <p>The primary methods for using VDO with lvm2:</p>

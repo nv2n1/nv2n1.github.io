@@ -22,18 +22,18 @@ description: "XmGetScaledPixmap — read a pixmap file and scale it according to
 <p> If scaling is 0, and a valid PrintShell is present <code>XmGetScaledPixmap</code> applies a ratio equals to (printer resolution / default pixmap resolution) before creating the Pixmap on the widget&#8217;s Screen. Otherwise, the <code>scaling_ratio</code> is used in scaling both dimensions of the image being converted as a Pixmap. </p>
 <p> <code>XmGetScaledPixmap</code> completes the <code>XmGetPixmapByDepth</code> existing API by making use of the <code>XmNdefaultPixmapResolution</code> of the rooting <code>XmPrintShell</code>. Refer to the <code>XmGetPixmapByDepth</code> documentation for details.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Widget used to determine the default pixmap resolution (of the print shell ancestor).</p>
-<dt><i>image_name</i></p>
-<dd>See XmGetPixmapByDepth for description.</p>
-<dt><i>foreground</i></p>
-<dd>See XmGetPixmapByDepth for description.</p>
-<dt><i>background</i></p>
-<dd>See XmGetPixmapByDepth for description.</p>
-<dt><i>depth</i></p>
-<dd>See XmGetPixmapByDepth for description.</p>
-<dt><i>scaling_ratio</i></p>
-<dd>Indicate the scaling ratio to be applied, or 0.</dl>
+<dt><i>widget</i></dt>
+<dd>Widget used to determine the default pixmap resolution (of the print shell ancestor).</dd>
+<dt><i>image_name</i></dt>
+<dd>See XmGetPixmapByDepth for description.</dd>
+<dt><i>foreground</i></dt>
+<dd>See XmGetPixmapByDepth for description.</dd>
+<dt><i>background</i></dt>
+<dd>See XmGetPixmapByDepth for description.</dd>
+<dt><i>depth</i></dt>
+<dd>See XmGetPixmapByDepth for description.</dd>
+<dt><i>scaling_ratio</i></dt>
+<dd>Indicate the scaling ratio to be applied, or 0.</dd></dl>
 <h2>Return Value</h2>
 <p>Returns Pixmap or NULL if failed.</p>
 <h2>Errors/Warnings</h2>

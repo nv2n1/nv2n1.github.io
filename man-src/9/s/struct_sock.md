@@ -113,191 +113,191 @@ description: "struct_sock – network layer representation of sockets"
 <h2>Members</h2>
 <p>__sk_common</p>
 <dl>
-<dd>shared layout with inet_timewait_sock</dl>
+<dd>shared layout with inet_timewait_sock</dd></dl>
 <p> sk_lock</p>
 <dl>
-<dd>synchronizer</dl>
+<dd>synchronizer</dd></dl>
 <p> sk_receive_queue</p>
 <dl>
-<dd>incoming packets</dl>
+<dd>incoming packets</dd></dl>
 <p> {unnamed_struct}</p>
 <dl>
-<dd>anonymous</dl>
+<dd>anonymous</dd></dl>
 <p> sk_policy[2]</p>
 <dl>
-<dd>flow policy</dl>
+<dd>flow policy</dd></dl>
 <p> sk_rx_dst</p>
 <dl>
-<dd>receive input route used by early demux</dl>
+<dd>receive input route used by early demux</dd></dl>
 <p> sk_dst_cache</p>
 <dl>
-<dd>destination cache</dl>
+<dd>destination cache</dd></dl>
 <p> sk_wmem_alloc</p>
 <dl>
-<dd>transmit queue bytes committed</dl>
+<dd>transmit queue bytes committed</dd></dl>
 <p> sk_omem_alloc</p>
 <dl>
-<dd>&quot;o&#8221; is &#8220;option&#8221; or &#8220;other&quot;</dl>
+<dd>&quot;o&#8221; is &#8220;option&#8221; or &#8220;other&quot;</dd></dl>
 <p> sk_sndbuf</p>
 <dl>
-<dd>size of send buffer in bytes</dl>
+<dd>size of send buffer in bytes</dd></dl>
 <p> sk_write_queue</p>
 <dl>
-<dd>Packet sending queue</dl>
+<dd>Packet sending queue</dd></dl>
 <p> sk_padding</p>
 <dl>
-<dd>unused element for alignment</dl>
+<dd>unused element for alignment</dd></dl>
 <p> sk_no_check_tx</p>
 <dl>
-<dd><code>SO_NO_CHECK</code> setting, set checksum in TX packets</dl>
+<dd><code>SO_NO_CHECK</code> setting, set checksum in TX packets</dd></dl>
 <p> sk_no_check_rx</p>
 <dl>
-<dd>allow zero checksum in RX packets</dl>
+<dd>allow zero checksum in RX packets</dd></dl>
 <p> sk_userlocks</p>
 <dl>
-<dd><code>SO_SNDBUF</code> and <code>SO_RCVBUF</code> settings</dl>
+<dd><code>SO_SNDBUF</code> and <code>SO_RCVBUF</code> settings</dd></dl>
 <p> sk_protocol</p>
 <dl>
-<dd>which protocol this socket belongs in this network family</dl>
+<dd>which protocol this socket belongs in this network family</dd></dl>
 <p> sk_type</p>
 <dl>
-<dd>socket type (<code>SOCK_STREAM</code>, etc)</dl>
+<dd>socket type (<code>SOCK_STREAM</code>, etc)</dd></dl>
 <p> sk_wmem_queued</p>
 <dl>
-<dd>persistent queue size</dl>
+<dd>persistent queue size</dd></dl>
 <p> sk_allocation</p>
 <dl>
-<dd>allocation mode</dl>
+<dd>allocation mode</dd></dl>
 <p> sk_pacing_rate</p>
 <dl>
-<dd>Pacing rate (if supported by transport/packet scheduler)</dl>
+<dd>Pacing rate (if supported by transport/packet scheduler)</dd></dl>
 <p> sk_max_pacing_rate</p>
 <dl>
-<dd>Maximum pacing rate (<code>SO_MAX_PACING_RATE</code>)</dl>
+<dd>Maximum pacing rate (<code>SO_MAX_PACING_RATE</code>)</dd></dl>
 <p> sk_route_caps</p>
 <dl>
-<dd>route capabilities (e.g. <code>NETIF_F_TSO</code>)</dl>
+<dd>route capabilities (e.g. <code>NETIF_F_TSO</code>)</dd></dl>
 <p> sk_route_nocaps</p>
 <dl>
-<dd>forbidden route capabilities (e.g NETIF_F_GSO_MASK)</dl>
+<dd>forbidden route capabilities (e.g NETIF_F_GSO_MASK)</dd></dl>
 <p> sk_gso_type</p>
 <dl>
-<dd>GSO type (e.g. <code>SKB_GSO_TCPV4</code>)</dl>
+<dd>GSO type (e.g. <code>SKB_GSO_TCPV4</code>)</dd></dl>
 <p> sk_gso_max_size</p>
 <dl>
-<dd>Maximum GSO segment size to build</dl>
+<dd>Maximum GSO segment size to build</dd></dl>
 <p> sk_gso_max_segs</p>
 <dl>
-<dd>Maximum number of GSO segments</dl>
+<dd>Maximum number of GSO segments</dd></dl>
 <p> sk_rcvlowat</p>
 <dl>
-<dd><code>SO_RCVLOWAT</code> setting</dl>
+<dd><code>SO_RCVLOWAT</code> setting</dd></dl>
 <p> sk_lingertime</p>
 <dl>
-<dd><code>SO_LINGER</code> l_linger setting</dl>
+<dd><code>SO_LINGER</code> l_linger setting</dd></dl>
 <p> sk_error_queue</p>
 <dl>
-<dd>rarely used</dl>
+<dd>rarely used</dd></dl>
 <p> sk_prot_creator</p>
 <dl>
-<dd>sk_prot of original sock creator (see ipv6_setsockopt, IPV6_ADDRFORM for instance)</dl>
+<dd>sk_prot of original sock creator (see ipv6_setsockopt, IPV6_ADDRFORM for instance)</dd></dl>
 <p> sk_callback_lock</p>
 <dl>
-<dd>used with the callbacks in the end of this struct</dl>
+<dd>used with the callbacks in the end of this struct</dd></dl>
 <p> sk_err</p>
 <dl>
-<dd>last error</dl>
+<dd>last error</dd></dl>
 <p> sk_err_soft</p>
 <dl>
-<dd>errors that don&#8217;t cause failure but are the cause of a persistent failure not just &#8216;timed out&#8217;</dl>
+<dd>errors that don&#8217;t cause failure but are the cause of a persistent failure not just &#8216;timed out&#8217;</dd></dl>
 <p> sk_ack_backlog</p>
 <dl>
-<dd>current listen backlog</dl>
+<dd>current listen backlog</dd></dl>
 <p> sk_max_ack_backlog</p>
 <dl>
-<dd>listen backlog set in <code>listen</code></dl>
+<dd>listen backlog set in <code>listen</code></dd></dl>
 <p> sk_priority</p>
 <dl>
-<dd><code>SO_PRIORITY</code> setting</dl>
+<dd><code>SO_PRIORITY</code> setting</dd></dl>
 <p> sk_mark</p>
 <dl>
-<dd>generic packet mark</dl>
+<dd>generic packet mark</dd></dl>
 <p> sk_peer_pid</p>
 <dl>
-<dd>struct pid for this socket&#8217;s peer</dl>
+<dd>struct pid for this socket&#8217;s peer</dd></dl>
 <p> sk_peer_cred</p>
 <dl>
-<dd><code>SO_PEERCRED</code> setting</dl>
+<dd><code>SO_PEERCRED</code> setting</dd></dl>
 <p> sk_rcvtimeo</p>
 <dl>
-<dd><code>SO_RCVTIMEO</code> setting</dl>
+<dd><code>SO_RCVTIMEO</code> setting</dd></dl>
 <p> sk_sndtimeo</p>
 <dl>
-<dd><code>SO_SNDTIMEO</code> setting</dl>
+<dd><code>SO_SNDTIMEO</code> setting</dd></dl>
 <p> sk_timer</p>
 <dl>
-<dd>sock cleanup timer</dl>
+<dd>sock cleanup timer</dd></dl>
 <p> sk_stamp</p>
 <dl>
-<dd>time stamp of last packet received</dl>
+<dd>time stamp of last packet received</dd></dl>
 <p> sk_tsflags</p>
 <dl>
-<dd>SO_TIMESTAMPING socket options</dl>
+<dd>SO_TIMESTAMPING socket options</dd></dl>
 <p> sk_shutdown</p>
 <dl>
-<dd>mask of <code>SEND_SHUTDOWN</code> and/or <code>RCV_SHUTDOWN</code></dl>
+<dd>mask of <code>SEND_SHUTDOWN</code> and/or <code>RCV_SHUTDOWN</code></dd></dl>
 <p> sk_tskey</p>
 <dl>
-<dd>counter to disambiguate concurrent tstamp requests</dl>
+<dd>counter to disambiguate concurrent tstamp requests</dd></dl>
 <p> sk_socket</p>
 <dl>
-<dd>Identd and reporting IO signals</dl>
+<dd>Identd and reporting IO signals</dd></dl>
 <p> sk_user_data</p>
 <dl>
-<dd>RPC layer private data</dl>
+<dd>RPC layer private data</dd></dl>
 <p> sk_frag</p>
 <dl>
-<dd>cached page frag</dl>
+<dd>cached page frag</dd></dl>
 <p> sk_send_head</p>
 <dl>
-<dd>front of stuff to transmit</dl>
+<dd>front of stuff to transmit</dd></dl>
 <p> sk_peek_off</p>
 <dl>
-<dd>current peek_offset value</dl>
+<dd>current peek_offset value</dd></dl>
 <p> sk_write_pending</p>
 <dl>
-<dd>a write to stream socket waits to start</dl>
+<dd>a write to stream socket waits to start</dd></dl>
 <p> sk_security</p>
 <dl>
-<dd>used by security modules</dl>
+<dd>used by security modules</dd></dl>
 <p> sk_cgrp_data</p>
 <dl>
-<dd>cgroup data for this cgroup</dl>
+<dd>cgroup data for this cgroup</dd></dl>
 <p> sk_memcg</p>
 <dl>
-<dd>this socket&#8217;s memory cgroup association</dl>
+<dd>this socket&#8217;s memory cgroup association</dd></dl>
 <p> sk_state_change</p>
 <dl>
-<dd>callback to indicate change in the state of the sock</dl>
+<dd>callback to indicate change in the state of the sock</dd></dl>
 <p> sk_data_ready</p>
 <dl>
-<dd>callback to indicate there is data to be processed</dl>
+<dd>callback to indicate there is data to be processed</dd></dl>
 <p> sk_write_space</p>
 <dl>
-<dd>callback to indicate there is bf sending space available</dl>
+<dd>callback to indicate there is bf sending space available</dd></dl>
 <p> sk_error_report</p>
 <dl>
-<dd>callback to indicate errors (e.g. <code>MSG_ERRQUEUE</code>)</dl>
+<dd>callback to indicate errors (e.g. <code>MSG_ERRQUEUE</code>)</dd></dl>
 <p> sk_backlog_rcv</p>
 <dl>
-<dd>callback to process the backlog</dl>
+<dd>callback to process the backlog</dd></dl>
 <p> sk_destruct</p>
 <dl>
-<dd>called at sock freeing time, i.e. when all refcnt == 0</dl>
+<dd>called at sock freeing time, i.e. when all refcnt == 0</dd></dl>
 <p> sk_reuseport_cb</p>
 <dl>
-<dd>reuseport group container</dl>
+<dd>reuseport group container</dd></dl>
 <p> sk_rcu</p>
 <dl>
-<dd>used during RCU grace period</dl>
+<dd>used during RCU grace period</dd></dl>
 <h2>Copyright</h2>

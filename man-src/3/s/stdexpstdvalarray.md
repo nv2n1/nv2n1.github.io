@@ -11,9 +11,7 @@ std::exp(std::valarray) - std::exp(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;valarray&gt;
-
     template &lt;class T&gt;
-
     valarray&lt;T&gt; exp(const valarray&lt;T&gt; &amp;va);</code></pre> 
 For each element in va computes e raised to the power equal to the value of the element. 
 
@@ -56,12 +54,9 @@ The function can be implemented with the return type different from std::valarra
 This example demonstrates the Euler's identity eiπ 
 = -1 and the related exponents. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;complex&gt;
-
 #include &lt;valarray&gt;
 int main()
-
 {
     const double pi = std::acos(-1);
     std::valarray&lt;std::complex&lt;double&gt;&gt; v = {

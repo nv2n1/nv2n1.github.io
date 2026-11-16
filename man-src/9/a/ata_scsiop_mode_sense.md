@@ -14,15 +14,15 @@ description: "ata_scsiop_mode_sense – Simulate MODE SENSE 6, 10 commands"
 <p><i>args</i></p>
 <dl>
 <dd>
-<dd>device IDENTIFY data / SCSI command of interest.</dl>
+</dd><dd>device IDENTIFY data / SCSI command of interest.</dd></dl>
 <p> <i>rbuf</i></p>
 <dl>
-<dd>Response buffer, to which simulated SCSI cmd output is sent.</dl>
+<dd>Response buffer, to which simulated SCSI cmd output is sent.</dd></dl>
 <h2>Description</h2>
 <p>Simulate MODE SENSE commands. Assume this is invoked for direct access devices (e.g. disks) only. There should be no block descriptor for other device types. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

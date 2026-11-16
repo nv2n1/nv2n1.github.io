@@ -15,12 +15,12 @@ description: "flow-header – Display meta information in flow file."
 <p> The <code>flow-header</code> utility will display the flow meta information flow-tools uses internally.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code><i> comment_char</i></p>
-<dd> Field header. Defaults to #</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Turn on debugging.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</dl>
+<dt><code>-c</code><i> comment_char</i></dt>
+<dd> Field header. Defaults to #</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Turn on debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Display the header information in <i>flowfile</i> <code>flow-header &lt; </code><i>flowfile</i> </p>
 <pre>

@@ -15,30 +15,30 @@ description: "airtun-ng – a virtual tunnel interface creator for aircrack-ng"
 <p> <code>airtun-ng</code> creates a virtual tunnel interface (atX) for sending arbitrary IP packets by using raw ieee802.11 packet injection.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-H, &#8211;help</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-x &lt;pps&gt;</i></p>
-<dd> Sets maximum number of packets per second.</p>
-<dt><i>-a &lt;BSSID&gt;</i></p>
-<dd> Specifies the BSSID for the iee802.11 header.</p>
-<dt><i>-h &lt;SMAC&gt;</i></p>
-<dd> Specifies the source MAC for the iee802.11 header.</p>
-<dt><i>-i &lt;iface&gt;</i></p>
-<dd> Sets the capture interface.</p>
-<dt><i>-r &lt;file&gt;</i></p>
-<dd> Specifies a file to read 802.11 frames.</p>
-<dt><i>-y &lt;PRGA-file&gt;</i></p>
-<dd> Is the name of the file, which provides the keystream for WEP encoding. (No receiving, just transmitting of IP packets.)</p>
-<dt><i>-w &lt;WEP-key&gt;</i></p>
-<dd> This is the WEP key to en-/decrypt all traffic going through the tunnel.</p>
-<dt><i>-t &lt;tods&gt;</i></p>
-<dd> Defines the ToDS and FromDS bit in the ieee802.11 header. For tods=1, the ToDS bit is set to 1 and FromDS to 0, while tods=0 sets them the other way around.</p>
-<dt><i>-m &lt;netmask&gt;, &#8211;netmask &lt;netmask&gt;</i></p>
-<dd> Filters networks based on bssid ^ netmask combination. Needs -d, used in replay mode.</p>
-<dt><i>-d &lt;BSSID&gt;, &#8211;bssid &lt;BSSID&gt;</i></p>
-<dd> Filters networks based on the &lt;BSSID&gt;. Used in replay mode.</p>
-<dt><i>-f, &#8211;repeat</i></p>
-<dd> Enables replay mode. All read frames, filtered by bssid and netmask (if specified), will be replayed.</dl>
+<dt><i>-H, &#8211;help</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-x &lt;pps&gt;</i></dt>
+<dd> Sets maximum number of packets per second.</dd>
+<dt><i>-a &lt;BSSID&gt;</i></dt>
+<dd> Specifies the BSSID for the iee802.11 header.</dd>
+<dt><i>-h &lt;SMAC&gt;</i></dt>
+<dd> Specifies the source MAC for the iee802.11 header.</dd>
+<dt><i>-i &lt;iface&gt;</i></dt>
+<dd> Sets the capture interface.</dd>
+<dt><i>-r &lt;file&gt;</i></dt>
+<dd> Specifies a file to read 802.11 frames.</dd>
+<dt><i>-y &lt;PRGA-file&gt;</i></dt>
+<dd> Is the name of the file, which provides the keystream for WEP encoding. (No receiving, just transmitting of IP packets.)</dd>
+<dt><i>-w &lt;WEP-key&gt;</i></dt>
+<dd> This is the WEP key to en-/decrypt all traffic going through the tunnel.</dd>
+<dt><i>-t &lt;tods&gt;</i></dt>
+<dd> Defines the ToDS and FromDS bit in the ieee802.11 header. For tods=1, the ToDS bit is set to 1 and FromDS to 0, while tods=0 sets them the other way around.</dd>
+<dt><i>-m &lt;netmask&gt;, &#8211;netmask &lt;netmask&gt;</i></dt>
+<dd> Filters networks based on bssid ^ netmask combination. Needs -d, used in replay mode.</dd>
+<dt><i>-d &lt;BSSID&gt;, &#8211;bssid &lt;BSSID&gt;</i></dt>
+<dd> Filters networks based on the &lt;BSSID&gt;. Used in replay mode.</dd>
+<dt><i>-f, &#8211;repeat</i></dt>
+<dd> Enables replay mode. All read frames, filtered by bssid and netmask (if specified), will be replayed.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>airtun-ng</code> -a 00:14:22:56:F3:4E -t 0 -y keystream.xor wlan0 </p>
 <h2>SEE ALSO</h2>

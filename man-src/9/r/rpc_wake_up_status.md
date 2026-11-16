@@ -15,11 +15,11 @@ rpc_wake_up_status - wake up all rpc_tasks and set their status value.
 <h2>Arguments</h2>
 
 <i>queue</i>
-<dl><dd><dd>rpc_wait_queue on which the tasks are sleeping</dl>
+<dl><dd></dd><dd>rpc_wait_queue on which the tasks are sleeping</dd></dl>
  
 
  <i>status</i>
-<dl><dd>status value to set</dl>
+<dl><dd>status value to set</dd></dl>
 
 <h2>Description</h2>
 

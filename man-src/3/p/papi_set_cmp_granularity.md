@@ -32,7 +32,7 @@ description: "PAPI_set_cmp_granularity –"
 <dd><i>PAPI_OK</i><br />
  <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
  <i>PAPI_ENOCMP</i> The argument cidx is not a valid component.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <p> <code>PAPI_set_cmp_granularity</code> sets the default counting granularity for all new event sets, and requires an explicit component argument. Event sets that are already in existence are not affected. </p>
 <p> To change the granularity of an existing event set, please see <code>PAPI_set_opt</code>. The reader should note that the granularity of an event set affects only the mode in which the counter continues to run. </p>
 <p> <code>Example:</code></p>
@@ -52,9 +52,9 @@ if (ret != PAPI_OK) handle_error(ret);
 ret = PAPI_create_eventset(&amp;EventSet);
 if (ret != PAPI_OK) handle_error(ret);
  * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_granularity</code> <code>PAPI_set_domain</code> <code>PAPI_set_opt</code> <code>PAPI_get_opt</code></dl>
+<dd><code>PAPI_set_granularity</code> <code>PAPI_set_domain</code> <code>PAPI_set_opt</code> <code>PAPI_get_opt</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

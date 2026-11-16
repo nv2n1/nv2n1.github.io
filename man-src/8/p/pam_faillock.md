@@ -10,43 +10,43 @@ description: "pam_faillock – Module counting authentication failures during a 
 <p>pam_faillock &#8211; Module counting authentication failures during a specified interval</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>auth &#8230; pam_faillock.so</code> {preauth|authfail|authsucc} [conf=<i>/path/to/config-file</i>] [dir=<i>/path/to/tally-directory</i>] [even_deny_root] [deny=<i>n</i>] [fail_interval=<i>n</i>] [unlock_time=<i>n</i>] [root_unlock_time=<i>n</i>] [admin_group=<i>name</i>] [audit] [silent] [no_log_info]</p>
-<dt> <code>account &#8230; pam_faillock.so</code> [dir=<i>/path/to/tally-directory</i>] [no_log_info]</dl>
+<dt> <code>auth &#8230; pam_faillock.so</code> {preauth|authfail|authsucc} [conf=<i>/path/to/config-file</i>] [dir=<i>/path/to/tally-directory</i>] [even_deny_root] [deny=<i>n</i>] [fail_interval=<i>n</i>] [unlock_time=<i>n</i>] [root_unlock_time=<i>n</i>] [admin_group=<i>name</i>] [audit] [silent] [no_log_info]</dt>
+<dt> <code>account &#8230; pam_faillock.so</code> [dir=<i>/path/to/tally-directory</i>] [no_log_info]</dt></dl>
 <h2>Description</h2>
-<dd>This module maintains a list of failed authentication attempts per user during a specified interval and locks the account in case there were more than <i>deny</i> consecutive failed authentications. </p>
+<dd>This module maintains a list of failed authentication attempts per user during a specified interval and locks the account in case there were more than <i>deny</i> consecutive failed authentications. </dd>
 <p> Normally, failed attempts to authenticate <i>root</i> will <code>not</code> cause the root account to become blocked, to prevent denial-of-service: if your users aren&#8217;t given shell accounts and root may only login via <code>su</code> or at the machine console (not telnet/rsh, etc), this is safe.</p>
 <h2>Options</h2>
 <p><code>{preauth|authfail|authsucc}</code></p>
 <dl>
-<dd>This argument must be set accordingly to the position of this module instance in the PAM stack. </p>
+<dd>This argument must be set accordingly to the position of this module instance in the PAM stack. </dd>
 <p> The <i>preauth</i> argument must be used when the module is called before the modules which ask for the user credentials such as the password. The module just examines whether the user should be blocked from accessing the service in case there were anomalous number of failed consecutive authentication attempts recently. This call is optional if <i>authsucc</i> is used. </p>
 <p> The <i>authfail</i> argument must be used when the module is called after the modules which determine the authentication outcome, failed. Unless the user is already blocked due to previous authentication failures, the module will record the failure into the appropriate user tally file. </p>
 <p> The <i>authsucc</i> argument must be used when the module is called after the modules which determine the authentication outcome, succeeded. Unless the user is already blocked due to previous authentication failures, the module will then clear the record of the failures in the respective user tally file. Otherwise it will return authentication error. If this call is not done, the pam_faillock will not distinguish between consecutive and non-consecutive failed authentication attempts. The <i>preauth</i> call must be used in such case. Due to complications in the way the PAM stack can be configured it is also possible to call <i>pam_faillock</i> as an account module. In such configuration the module must be also called in the <i>preauth</i> stage.</dl>
 <p> <code>conf=/path/to/config-file</code></p>
 <dl>
-<dd>Use another configuration file instead of the default /etc/security/faillock.conf.</dl>
+<dd>Use another configuration file instead of the default /etc/security/faillock.conf.</dd></dl>
 <p> The options for configuring the module behavior are described in the <code><a href="/docs/linux/man/5-faillock-conf/">faillock.conf</a></code>(5) manual page. The options specified on the module command line override the values from the configuration file.</p>
 <h2>Module Types Provided</h2>
 <p>The <code>auth</code> and <code>account</code> module types are provided.</p>
 <h2>Return Values</h2>
 <p>PAM_AUTH_ERR</p>
 <dl>
-<dd>An invalid option was given, the module was not able to retrieve the user name, no valid counter file was found, or too many failed logins.</dl>
+<dd>An invalid option was given, the module was not able to retrieve the user name, no valid counter file was found, or too many failed logins.</dd></dl>
 <p> PAM_BUF_ERR</p>
 <dl>
-<dd>Memory buffer error.</dl>
+<dd>Memory buffer error.</dd></dl>
 <p> PAM_CONV_ERR</p>
 <dl>
-<dd>The conversation method supplied by the application failed to obtain the username.</dl>
+<dd>The conversation method supplied by the application failed to obtain the username.</dd></dl>
 <p> PAM_INCOMPLETE</p>
 <dl>
-<dd>The conversation method supplied by the application returned PAM_CONV_AGAIN.</dl>
+<dd>The conversation method supplied by the application returned PAM_CONV_AGAIN.</dd></dl>
 <p> PAM_SUCCESS</p>
 <dl>
-<dd>Everything was successful.</dl>
+<dd>Everything was successful.</dd></dl>
 <p> PAM_IGNORE</p>
 <dl>
-<dd>User not present in passwd database.</dl>
+<dd>User not present in passwd database.</dd></dl>
 <h2>Notes</h2>
 <p>Configuring options on the module command line is not recommend. The /etc/security/faillock.conf should be used instead. </p>
 <p> The setup of <i>pam_faillock</i> in the PAM stack is different from the <i>pam_tally2</i> module setup. </p>
@@ -61,7 +61,7 @@ description: "pam_faillock – Module counting authentication failures during a 
 <pre>deny=4
 unlock_time=1200
 silent</pre>
-</dl>
+</dd></dl>
 <p> /etc/pam.d/config file example: </p>
 <dl>
 <dd>
@@ -80,7 +80,7 @@ session required pam_selinux.so close
 session required pam_loginuid.so
 session required pam_unix.so
 session required pam_selinux.so open</pre>
-</dl>
+</dd></dl>
 <p> In the second example the module is called both in the <i>auth</i> and <i>account</i> phases and the module informs the authenticating user when the account is locked if <code>silent</code> option is not specified in the faillock.conf. </p>
 <dl>
 <dd>
@@ -102,14 +102,14 @@ session required pam_selinux.so close
 session required pam_loginuid.so
 session required pam_unix.so
 session required pam_selinux.so open</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <p>/var/run/faillock/*</p>
 <dl>
-<dd>the files logging the authentication failures for users</dl>
+<dd>the files logging the authentication failures for users</dd></dl>
 <p> /etc/security/faillock.conf</p>
 <dl>
-<dd>the config file for pam_faillock options</dl>
+<dd>the config file for pam_faillock options</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-faillock/">faillock</a></code>(8), <code><a href="/docs/linux/man/5-faillock-conf/">faillock.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8)</p>
 <h2>Author</h2>

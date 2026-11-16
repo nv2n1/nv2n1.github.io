@@ -19,20 +19,20 @@ description: "rasview – Raster file previewer for the X Window System."
 <h2>OPTIONS</h2>
 <p> <code>rasview</code> accepts all of the standard X Toolkit command line options (see X11(7)). <code>rasview</code> also accepts the following options:</p>
 <dl>
-<dt><code>-ifmt</code><i> format</i></p>
-<dd> Specify the input file format. <i>format</i> is one of the aforementioned file name extensions (without the &quot;.&quot;, e.g. <code>xwd).</code> When this option is specified file name extensions are not necessary and are ignored if present. All input files must have the same format.</p>
-<dt><code>-movie</code></p>
-<dd> Normally when processing multi-image raster files, <code>rasview </code> waits for a mouse click before proceeding to the next frame. When this option is used <code>rasview</code> immediately advances the frame after <code>rasview</code> has completed drawing it.</p>
-<dt><code>-pal</code><i> palette_file</i></p>
-<dd> Use the color palette contained in the file <i>palette_file</i>. for displaying images. This palette will override the color palette stored with the image.</p>
+<dt><code>-ifmt</code><i> format</i></dt>
+<dd> Specify the input file format. <i>format</i> is one of the aforementioned file name extensions (without the &quot;.&quot;, e.g. <code>xwd).</code> When this option is specified file name extensions are not necessary and are ignored if present. All input files must have the same format.</dd>
+<dt><code>-movie</code></dt>
+<dd> Normally when processing multi-image raster files, <code>rasview </code> waits for a mouse click before proceeding to the next frame. When this option is used <code>rasview</code> immediately advances the frame after <code>rasview</code> has completed drawing it.</dd>
+<dt><code>-pal</code><i> palette_file</i></dt>
+<dd> Use the color palette contained in the file <i>palette_file</i>. for displaying images. This palette will override the color palette stored with the image.</dd>
 <dt>
-<dd> See <code>ras_palette(5NCARG)</code> for a description of palette file forats.</p>
-<dt><code>-quiet</code></p>
-<dd> Operate in quiet mode.</p>
-<dt><code>-Version</code></p>
-<dd> Print the version number and then exit.</p>
-<dt><code>&#8211;</code></p>
-<dd> Read rasterfile from standard input (-ifmt option required).</dl>
+</dt><dd> See <code>ras_palette(5NCARG)</code> for a description of palette file forats.</dd>
+<dt><code>-quiet</code></dt>
+<dd> Operate in quiet mode.</dd>
+<dt><code>-Version</code></dt>
+<dd> Print the version number and then exit.</dd>
+<dt><code>&#8211;</code></dt>
+<dd> Read rasterfile from standard input (-ifmt option required).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>ctrans</code>(1NCARG), <code>rascat</code>(1NCARG), <code>ras_formats</code>(5NCARG), <code>ras_palette</code>(5NCARG), <code><a href="/docs/linux/man/1-xwd/">xwd</a></code>(1), <code><a href="/docs/linux/man/1-xwud/">xwud</a></code>(1) <code>X11</code>(7) </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>

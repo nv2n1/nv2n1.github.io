@@ -23,9 +23,7 @@ This is an I/O manipulator, it may be called with an expression such as out &lt;
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;showpos: &quot; &lt;&lt; std::showpos &lt;&lt; 42 &lt;&lt; ' ' &lt;&lt; 3.14 &lt;&lt; ' ' &lt;&lt; 0 &lt;&lt; '
 '

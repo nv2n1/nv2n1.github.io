@@ -16,14 +16,15 @@ description: "npm-run-script — Run arbitrary package scripts"
 <p> The &#8216;args&#8217; parameter is an array of strings. Behavior depends on the number of elements. If there is only one element, npm assumes that the element represents a command to be run on the local repository. If there is more than one element, then the first is assumed to be the package and the second is assumed to be the command to run. All other elements are ignored.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help scripts</p>
-<dt>&bull;</p>
-<dd>npm apihelp test</p>
-<dt>&bull;</p>
-<dd>npm apihelp start</p>
-<dt>&bull;</p>
-<dd>npm apihelp restart</p>
-<dt>&bull;</p>
-<dd>npm apihelp stop</p>
+<dt>&bull;</dt>
+<dd>npm help scripts</dd>
+<dt>&bull;</dt>
+<dd>npm apihelp test</dd>
+<dt>&bull;</dt>
+<dd>npm apihelp start</dd>
+<dt>&bull;</dt>
+<dd>npm apihelp restart</dd>
+<dt>&bull;</dt>
+<dd>npm apihelp stop</dd>
 <dd>
+</dd></dl>

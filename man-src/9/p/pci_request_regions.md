@@ -14,10 +14,10 @@ description: "pci_request_regions – Reserved PCI I/O and memory resources"
 <p><i>pdev</i></p>
 <dl>
 <dd>
-<dd>PCI device whose resources are to be reserved</dl>
+</dd><dd>PCI device whose resources are to be reserved</dd></dl>
 <p> <i>res_name</i></p>
 <dl>
-<dd>Name to be associated with resource.</dl>
+<dd>Name to be associated with resource.</dd></dl>
 <h2>Description</h2>
 <p>Mark all PCI regions associated with PCI device <i>pdev</i> as being reserved by owner <i>res_name</i>. Do not access any address inside the PCI regions unless this call returns successfully. </p>
 <p> Returns 0 on success, or <code>EBUSY</code> on error. A warning message is also printed on failure.</p>

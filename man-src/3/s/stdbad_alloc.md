@@ -10,7 +10,6 @@ description: "std::bad_alloc – std::bad_alloc"
 <p>std::bad_alloc &#8211; std::bad_alloc</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;new&gt;
-
 class bad_alloc;</code></pre>
 <p>std::bad_alloc is the type of the object thrown as exceptions by the allocation_functions to report failure to allocate storage.<br />
 &nbsp;std-bad alloc-inheritance.svg<br />
@@ -64,10 +63,8 @@ noexcept </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;new&gt;
 int main()
-
 {
     try {
         while (true) {

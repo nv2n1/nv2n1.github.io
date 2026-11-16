@@ -15,11 +15,11 @@ pci_set_pcie_reset_state - set reset state for device dev
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCIe device reset</dl>
+<dl><dd></dd><dd>the PCIe device reset</dd></dl>
  
 
  <i>state</i>
-<dl><dd>Reset state to enter into</dl>
+<dl><dd>Reset state to enter into</dd></dl>
 
 <h2>Description</h2>
 

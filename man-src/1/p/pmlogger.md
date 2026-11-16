@@ -60,44 +60,44 @@ Some examples of different formats:
 <p> If <i>configfile</i> does not exist, then a search is made in the directory <i>$PCP_VAR_DIR/config/pmlogger</i> for a file of the same name, and if found that file is used, e.g. if <i>config.mumble</i> does not exist in the current directory and the file <i>$PCP_VAR_DIR/config/pmlogger/config.mumble</i> does exist, then <code>-c config.mumble</code> and <code>-c $PCP_VAR_DIR/config/pmlogger/config.mumble</code> are equivalent. </p>
 <p> The syntax for the configuration file is as follows.</p>
 <dl>
-<dt>1.</p>
-<dd> Words are separated by white space (space, tab or newline).</p>
-<dt>2.</p>
-<dd> The symbol &#8220;#&#8221; (hash) introduces a comment, and all text up to the next newline is ignored.</p>
-<dt>3.</p>
-<dd> Keywords (shown in <code>bold</code> below) must appear literally (i.e. in lower case).</p>
-<dt>4.</p>
-<dd> Each specification begins with the optional keyword <code>log</code>, followed by one of the states <code>mandatory on</code>, <code>mandatory off</code>, <code>mandatory maybe</code>, <code>advisory on</code> or <code>advisory off</code>.</p>
-<dt>5.</p>
-<dd> For the <code>on</code> states, a logging interval must follow using the syntax &#8220;<code>once</code>&#8221;, or &#8220;<code>default</code>&#8221;, or &#8220;<code>every</code> <i>N timeunits</i>&#8221;, or simply &#8220;<i>N timeunits</i>&#8221; &#8211; <i>N</i> is an unsigned integer, and <i>timeunits</i> is one of the keywords <code>msec</code>, <code>millisecond</code>, <code>sec</code>, <code>second</code>, <code>min</code>, <code>minute</code>, <code>hour</code> or the plural form of one of the above. </p>
+<dt>1.</dt>
+<dd> Words are separated by white space (space, tab or newline).</dd>
+<dt>2.</dt>
+<dd> The symbol &#8220;#&#8221; (hash) introduces a comment, and all text up to the next newline is ignored.</dd>
+<dt>3.</dt>
+<dd> Keywords (shown in <code>bold</code> below) must appear literally (i.e. in lower case).</dd>
+<dt>4.</dt>
+<dd> Each specification begins with the optional keyword <code>log</code>, followed by one of the states <code>mandatory on</code>, <code>mandatory off</code>, <code>mandatory maybe</code>, <code>advisory on</code> or <code>advisory off</code>.</dd>
+<dt>5.</dt>
+<dd> For the <code>on</code> states, a logging interval must follow using the syntax &#8220;<code>once</code>&#8221;, or &#8220;<code>default</code>&#8221;, or &#8220;<code>every</code> <i>N timeunits</i>&#8221;, or simply &#8220;<i>N timeunits</i>&#8221; &#8211; <i>N</i> is an unsigned integer, and <i>timeunits</i> is one of the keywords <code>msec</code>, <code>millisecond</code>, <code>sec</code>, <code>second</code>, <code>min</code>, <code>minute</code>, <code>hour</code> or the plural form of one of the above. </dd>
 <p> Internal limitations require the interval to be smaller than (approximately) 74 hours. An interval value of zero is a synonym for <code>once</code>. An interval of <code>default</code> means to use the default logging interval of 60 seconds; this default value may be changed to <i>interval</i> with the <code>-t</code> command line option.</p>
 <dt>
-<dd> The <i>interval</i> argument follows the syntax described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), and in the simplest form may be an unsigned integer (the implied units in this case are seconds).</p>
-<dt>6.</p>
-<dd> Following the state and possible interval specifications comes a &#8220;{&#8221;, followed by a list of one or more metric specifications and a closing &#8220;}&#8221;. The list is white space (or comma) separated. If there is only one metric specification in the list, the braces are optional.</p>
-<dt>7.</p>
-<dd> A metric specification consists of a metric name optionally followed by a set of instance names. The metric name follows the standard PCP naming conventions, see <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5), and if the metric name is a non-leaf node in the PMNS (see <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)), then <code>pmlogger</code> will recursively descend the PMNS and apply the logging specification to all descendent metric names that are leaf nodes in the PMNS. The set of instance names is a &#8220;[&#8221;, followed by a list of one or more space (or comma) separated names, numbers or strings, and a closing &#8220;]&#8221;. Elements in the list that are numbers are assumed to be internal instance identifiers, other elements are assumed to be external instance identifiers &#8211; see <code><a href="/docs/linux/man/3-pmgetindom/">pmGetInDom</a></code>(3) for more information.</p>
+</dt><dd> The <i>interval</i> argument follows the syntax described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), and in the simplest form may be an unsigned integer (the implied units in this case are seconds).</dd>
+<dt>6.</dt>
+<dd> Following the state and possible interval specifications comes a &#8220;{&#8221;, followed by a list of one or more metric specifications and a closing &#8220;}&#8221;. The list is white space (or comma) separated. If there is only one metric specification in the list, the braces are optional.</dd>
+<dt>7.</dt>
+<dd> A metric specification consists of a metric name optionally followed by a set of instance names. The metric name follows the standard PCP naming conventions, see <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5), and if the metric name is a non-leaf node in the PMNS (see <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)), then <code>pmlogger</code> will recursively descend the PMNS and apply the logging specification to all descendent metric names that are leaf nodes in the PMNS. The set of instance names is a &#8220;[&#8221;, followed by a list of one or more space (or comma) separated names, numbers or strings, and a closing &#8220;]&#8221;. Elements in the list that are numbers are assumed to be internal instance identifiers, other elements are assumed to be external instance identifiers &#8211; see <code><a href="/docs/linux/man/3-pmgetindom/">pmGetInDom</a></code>(3) for more information.</dd>
 <dl>
 <dt>
-<dd>
-<p> If no instances are given, then the logging specification is applied to all instances of the associated metric.</dl>
-<dt>8.</p>
-<dd> There may be an arbitrary number of logging specifications.</p>
-<dt>9.</p>
-<dd> Following all of the logging specifications, there may be an optional access control section, introduced by the literal token <code>[access]</code>. Thereafter come access control rules that allow or disallow operations from particular hosts or groups of hosts.</p>
+</dt><dd>
+<p> If no instances are given, then the logging specification is applied to all instances of the associated metric.</dd></dl>
+<dt>8.</dt>
+<dd> There may be an arbitrary number of logging specifications.</dd>
+<dt>9.</dt>
+<dd> Following all of the logging specifications, there may be an optional access control section, introduced by the literal token <code>[access]</code>. Thereafter come access control rules that allow or disallow operations from particular hosts or groups of hosts.</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> The operations may be used to interrogate or control a running <code>pmlogger</code> using <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1) and fall into the following classes:</p>
-<dl>
-<dt><code>enquire</code></p>
-<dd> interrogate the status of <code>pmlogger</code> and the metrics it is logging</p>
-<dt><code>advisory</code></p>
-<dd> Change advisory logging.</p>
-<dt><code>mandatory</code></p>
-<dd> Change mandatory logging.</p>
-<dt><code>all</code></p>
-<dd> All of the above.</dl>
+</dd><dl>
+<dt><code>enquire</code></dt>
+<dd> interrogate the status of <code>pmlogger</code> and the metrics it is logging</dd>
+<dt><code>advisory</code></dt>
+<dd> Change advisory logging.</dd>
+<dt><code>mandatory</code></dt>
+<dd> Change mandatory logging.</dd>
+<dt><code>all</code></dt>
+<dd> All of the above.</dd></dl>
 <p> Access control rules are of the form &#8220;<code>allow</code> <i>hostlist</i> <code>:</code> <i>operationlist</i> <code>;</code>&#8221; and &#8220;<code>disallow</code> <i>hostlist</i> <code>:</code> <i>operationlist</i> <code>;</code>&#8221;. </p>
 <p> The <i>hostlist</i> follows the syntax and semantics for the access control mechanisms used by PMCD and are fully documented in <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1). An <i>operationslist</i> is a comma separated list of the operations <code>advisory</code>, <code>mandatory</code>, <code>enquire</code> and <code>all</code>. </p>
 <p> A missing <code>[access]</code> section allows all access and is equivalent to <code>allow * : all;</code>.</dl>
@@ -122,25 +122,25 @@ allow localhost : mandatory, advisory;
 </code></pre>
 <h2>FILES</h2>
 <dl>
-<dt><i>archive</i><code>.meta</p>
-<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</p>
-<dt></code><i>archive</i><code>.0</p>
-<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;)</p>
-<dt><i>archive</i><code>.index</p>
-<dd> temporal index to support rapid random access to the other files in the archive log</p>
-<dt>$PCP_TMP_DIR/pmlogger</code></p>
-<dd> <code>pmlogger</code> maintains the files in this directory as the map between the process id of the <code>pmlogger</code> instance and the IPC port that may be used to control each <code>pmlogger</code> instance (as used by <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1))</p>
-<dt><code>$PCP_VAR_DIR/config/pmlogger/config.default</code></p>
-<dd> default configuration file for the primary logger instance launched from <code>$PCP_RC_DIR/pmlogger</code></p>
-<dt><code>$PCP_VAR_DIR/config/pmlogger/config.</code>*</p>
-<dd> assorted configuration files suitable for creating logs that may be subsequently replayed with the PCP visualization and monitoring tools</p>
-<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></p>
-<dd> Default directory for PCP archive files for performance metric values collected from the host <i>hostname</i>.</p>
-<dt><code>$PCP_SYSCONFIG_DIR/pmlogger</code></p>
-<dd> additional environment variables that will be set when the primary <code>pmlogger</code> instance executes. Only settings of the form &quot;PMLOGGER_VARIABLE=value&quot; will be honoured.</p>
-<dt><i>./pmlogger.log</i></p>
+<dt><i>archive</i><code>.meta</dt>
+<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</dd>
+<dt></code><i>archive</i><code>.0</dt>
+<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;)</dd>
+<dt><i>archive</i><code>.index</dt>
+<dd> temporal index to support rapid random access to the other files in the archive log</dd>
+<dt>$PCP_TMP_DIR/pmlogger</code></dt>
+<dd> <code>pmlogger</code> maintains the files in this directory as the map between the process id of the <code>pmlogger</code> instance and the IPC port that may be used to control each <code>pmlogger</code> instance (as used by <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1))</dd>
+<dt><code>$PCP_VAR_DIR/config/pmlogger/config.default</code></dt>
+<dd> default configuration file for the primary logger instance launched from <code>$PCP_RC_DIR/pmlogger</code></dd>
+<dt><code>$PCP_VAR_DIR/config/pmlogger/config.</code>*</dt>
+<dd> assorted configuration files suitable for creating logs that may be subsequently replayed with the PCP visualization and monitoring tools</dd>
+<dt><code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i></dt>
+<dd> Default directory for PCP archive files for performance metric values collected from the host <i>hostname</i>.</dd>
+<dt><code>$PCP_SYSCONFIG_DIR/pmlogger</code></dt>
+<dd> additional environment variables that will be set when the primary <code>pmlogger</code> instance executes. Only settings of the form &quot;PMLOGGER_VARIABLE=value&quot; will be honoured.</dd>
+<dt><i>./pmlogger.log</i></dt>
 <dd> (or <code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i><code>/pmlogger.log</code> when started automatically by either <code>$PCP_RC_DIR/pmlogger</code> or one of the <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) monitoring scripts such as <code><a href="/docs/linux/man/1-pmlogger_check/">pmlogger_check</a></code>(1))<br />
- all messages and diagnostics are directed here</dl>
+ all messages and diagnostics are directed here</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Normally <code>pmlogger</code> creates a socket to receive control messages from <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1) on the first available TCP/IP port numbered 4330 or higher. The environment variable <code>PMLOGGER_PORT</code> may be used to specify an alternative starting port number. </p>
 <p> If set to the value 1, the <code>PMLOGGER_LOCAL</code> environment variable will cause <code>pmlogger</code> to run in a localhost-only mode of operation, where it binds only to the loopback interface. </p>

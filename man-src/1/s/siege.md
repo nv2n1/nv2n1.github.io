@@ -26,14 +26,14 @@ siege[options] siege[options]&lt;URL&gt;
 &nbsp;<wbr>&#8211;concurrent=25</p>
 <h3>Option Values</h3>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Displays the <tt>siege</tt> release version and copyright information.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Prints a help message describing <tt>siege</tt>&#8216;s command-line options.</p>
-<dt><code>-C</code>, <code>&#8211;config</code></p>
-<dd> Prints a detailed summary of all the currently configured options, most of which are sent in <tt>$HOME</tt>/.siege/siege.conf</p>
-<dt><code>-v</code>, <code>&#8211;vebose</code></p>
-<dd> This directive puts <tt>siege</tt> into verbose mode which is actually a default setting. This command-line option is useful when the config file is set to &#8216;verbose = false&#8217; since it will allow you to override that. </p>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Displays the <tt>siege</tt> release version and copyright information.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Prints a help message describing <tt>siege</tt>&#8216;s command-line options.</dd>
+<dt><code>-C</code>, <code>&#8211;config</code></dt>
+<dd> Prints a detailed summary of all the currently configured options, most of which are sent in <tt>$HOME</tt>/.siege/siege.conf</dd>
+<dt><code>-v</code>, <code>&#8211;vebose</code></dt>
+<dd> This directive puts <tt>siege</tt> into verbose mode which is actually a default setting. This command-line option is useful when the config file is set to &#8216;verbose = false&#8217; since it will allow you to override that. </dd>
 <p> By default <tt>siege</tt>&#8216;s verbose output is displayed in a color-coded style.<br />
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>2xx is coded blue<br />
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>3xx is coded cyan<br />
@@ -41,14 +41,14 @@ siege[options] siege[options]&lt;URL&gt;
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>5xx is coded red<br />
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>cached is coded black </p>
 <p> <font SIZE="-1">NOTE:</font> You can turn off color in siege.conf like this: &#8216;color = off&#8217;</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> This directive silences <tt>siege</tt>. It is mostly used for scripting and is often used in conjunction with -g/&#8211;get. You can detect the success or failure of the run with its exit code. </p>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> This directive silences <tt>siege</tt>. It is mostly used for scripting and is often used in conjunction with -g/&#8211;get. You can detect the success or failure of the run with its exit code. </dd>
 <p>  siege &#8211;quiet -g www.joedog.org<br />
   if [ $? -eq 0 ] ;<br />
   then<br />
       echo &#8220;Success&#8221; else echo &#8220;Failure&#8221; fi</p>
-<dt><code>-g </code><font SIZE="-1"><code>URL</code></font>, <code>&#8211;get=URL</code></p>
-<dd> This option allows you to request a <font SIZE="-1">URL</font> and watch the header transaction. There is a corresponding config file directive that allows you to set the request method for these requests: gmethod = HEAD|GET </p>
+<dt><code>-g </code><font SIZE="-1"><code>URL</code></font>, <code>&#8211;get=URL</code></dt>
+<dd> This option allows you to request a <font SIZE="-1">URL</font> and watch the header transaction. There is a corresponding config file directive that allows you to set the request method for these requests: gmethod = HEAD|GET </dd>
 <pre>
   $ siege -g &quot;<a rel="nofollow" href="https://www.joedog.org/">https://www.joedog.org/</a>&quot;
   HEAD / HTTP/1.0
@@ -68,38 +68,38 @@ siege[options] siege[options]&lt;URL&gt;
   CF-RAY: 27219407eeff084a-IAD
 </pre>
 <p> <font SIZE="-1">NOTE:</font> It&#8217;s best practice to quote the <font SIZE="-1">URL</font> when it&#8217;s passed to <tt>siege</tt> from the the command-line.</p>
-<dt><code>-c </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;concurrent=NUM</code></p>
-<dd> This option allows you to set the concurrent number of users. The total number of users is technically limited to your computer&#8217;s resources. </p>
+<dt><code>-c </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;concurrent=NUM</code></dt>
+<dd> This option allows you to set the concurrent number of users. The total number of users is technically limited to your computer&#8217;s resources. </dd>
 <p> You should not configure more users than your web server is configured to handle. For example, the default apache configuration is capped at 255 threads. If you run siege with -c 1024, then 769 siege users are left waiting for an apache handler. </p>
 <p> For this reason, the default siege configuration is capped at 255 users. You can increase that number inside siege.conf but if you make a mess, then please don&#8217;t complain to us.</p>
-<dt><code>-r </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;reps=NUM|once</code></p>
-<dd> This option tells each siege user how times it should run. The value should generally be a number greater than zero but it may be the keyword &#8216;once&#8217;. </p>
+<dt><code>-r </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;reps=NUM|once</code></dt>
+<dd> This option tells each siege user how times it should run. The value should generally be a number greater than zero but it may be the keyword &#8216;once&#8217;. </dd>
 <p> If &#8211;reps=3 then each siege user will run three times before it exits. However, if &#8211;reps=once, then each user will run through the urls.txt file exactly one time. </p>
 <p> For more information about the urls.txt file, see option -f &lt;file&gt;, &#8211;file=&lt;file&gt;</p>
-<dt><code>-t NUMm</code>, <code>&#8211;time=NUMm</code></p>
-<dd> This option is similar to &#8211;reps but instead of specifying the number of times each user should run, it specifies the amount of time each should run. </p>
+<dt><code>-t NUMm</code>, <code>&#8211;time=NUMm</code></dt>
+<dd> This option is similar to &#8211;reps but instead of specifying the number of times each user should run, it specifies the amount of time each should run. </dd>
 <p> The value format is &#8220;NUMm&#8221;, where &#8220;<font SIZE="-1">NUM</font>&#8221; is an amount of time and the &#8220;m&#8221; modifier is either S, M, or H for seconds, minutes and hours. To run <tt>siege</tt> for an hour, you could select any one of the following combinations: -t3600S, -t60M, -t1H. The modifier is not case sensitive, but it does require no space between the number and itself.</p>
-<dt><code>-d </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;delay=NUM</code></p>
-<dd> This option instructs <tt>siege</tt> how long to delay between each page request. The value <font SIZE="-1">NUM</font> represents the number of seconds between each one. This number can be a decimal value. In fact the default is half a second (&#8211;delay=0.5). </p>
+<dt><code>-d </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;delay=NUM</code></dt>
+<dd> This option instructs <tt>siege</tt> how long to delay between each page request. The value <font SIZE="-1">NUM</font> represents the number of seconds between each one. This number can be a decimal value. In fact the default is half a second (&#8211;delay=0.5). </dd>
 <p> The time between delay requests is <font SIZE="-1">NOT</font> applied toward the transaction time. If two 0.1 second transactions have a 2 second delay between them, their average transaction time is run is 0.1 seconds. It is applied toward the total elapsed time. In this scenario, the elapsed time would be 2.2 seconds. </p>
 <p> <font SIZE="-1">NOTE:</font> when the parser is enabled (see: -p/&#8211;parser), there is no delay between the page and its elements, i.e., style sheets, javascripts, etc. The delay is only between page requests.</p>
-<dt><code>-b</code>, <code>&#8211;benchmark</code></p>
-<dd> This directive tells siege to go into benchmark mode. This means there is no delay between iterations.</p>
-<dt><code>-i</code>, <code>&#8211;internet</code></p>
-<dd> This option sets siege into what we call internet mode. It makes requests from the urls.txt file (see: -f &lt;file&gt; / &#8211;file=&lt;file&gt;) in random order.</p>
-<dt><code>-f </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;file=FILE</code></p>
-<dd> This option tells siege to work with a list of urls inside a text file. The URLs are listed one per line. Unlike URLs that are passed as a command-line argument, the URLs in this file should not be quoted. </p>
+<dt><code>-b</code>, <code>&#8211;benchmark</code></dt>
+<dd> This directive tells siege to go into benchmark mode. This means there is no delay between iterations.</dd>
+<dt><code>-i</code>, <code>&#8211;internet</code></dt>
+<dd> This option sets siege into what we call internet mode. It makes requests from the urls.txt file (see: -f &lt;file&gt; / &#8211;file=&lt;file&gt;) in random order.</dd>
+<dt><code>-f </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;file=FILE</code></dt>
+<dd> This option tells siege to work with a list of urls inside a text file. The URLs are listed one per line. Unlike URLs that are passed as a command-line argument, the URLs in this file should not be quoted. </dd>
 <p> <tt>siege</tt>&#8216;s urls.txt parser supports comments and variables.</p>
-<dt><code>-R </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;rc=FILE</code></p>
-<dd> This directive allows you to set an alternative resource file. By default, the siegerc file is <tt>$HOME</tt>/.siege/siege.conf With this directive, you can override the default and use an alternative file.</p>
-<dt><code>-L </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;log=FILE</code></p>
-<dd> The default log file is <tt>$prefix</tt>/var/log/siege.log. This directive allows you to specify and alternative file for logging.</p>
-<dt><code>-m &quot;string&quot;</code>, <code>&#8211;mark=&quot;string&quot;</code></p>
-<dd> This option allows you to log a message to the log file before your stats are written there. It is generally used to identify the proceding run. You could, for example, mark the file with your command-line parameters so it&#8217;s understood what configuration generated the following data.</p>
-<dt><code>-H &quot;header: value&quot;</code>, <code>&#8211;header=&quot;Header: value&quot;</code></p>
-<dd> This options allows you to set a custom header in the request. Generally speaking, this request will override an existing header. The Cookie header is a special case. If you set -H &#8220;Cookie: value&#8221; then siege will send that cookie in addition to the other ones.</p>
-<dt><code>-A &quot;string&quot;</code>, <code>&#8211;agent=&quot;string&quot;</code></p>
-<dd> This option allows you to override the default user-agent with a custom one. </p>
+<dt><code>-R </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;rc=FILE</code></dt>
+<dd> This directive allows you to set an alternative resource file. By default, the siegerc file is <tt>$HOME</tt>/.siege/siege.conf With this directive, you can override the default and use an alternative file.</dd>
+<dt><code>-L </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;log=FILE</code></dt>
+<dd> The default log file is <tt>$prefix</tt>/var/log/siege.log. This directive allows you to specify and alternative file for logging.</dd>
+<dt><code>-m &quot;string&quot;</code>, <code>&#8211;mark=&quot;string&quot;</code></dt>
+<dd> This option allows you to log a message to the log file before your stats are written there. It is generally used to identify the proceding run. You could, for example, mark the file with your command-line parameters so it&#8217;s understood what configuration generated the following data.</dd>
+<dt><code>-H &quot;header: value&quot;</code>, <code>&#8211;header=&quot;Header: value&quot;</code></dt>
+<dd> This options allows you to set a custom header in the request. Generally speaking, this request will override an existing header. The Cookie header is a special case. If you set -H &#8220;Cookie: value&#8221; then siege will send that cookie in addition to the other ones.</dd>
+<dt><code>-A &quot;string&quot;</code>, <code>&#8211;agent=&quot;string&quot;</code></dt>
+<dd> This option allows you to override the default user-agent with a custom one. </dd>
 <pre>
   siege --agent=&quot;JoeDog Jr. in da hizzle&quot;
 </pre>
@@ -108,8 +108,8 @@ siege[options] siege[options]&lt;URL&gt;
   User-agent: JoeDog Jr. in da hizzle
 </pre>
 <p> Alternatively, you could set the User-agent with the -H/&#8211;header option above.</p>
-<dt><code>-T &quot;text&quot;</code>, <code>&#8211;content-type=&quot;text&quot;</code></p>
-<dd> This is another set header shortcut. You use this option to override the default Content-type request header.</dl>
+<dt><code>-T &quot;text&quot;</code>, <code>&#8211;content-type=&quot;text&quot;</code></dt>
+<dd> This is another set header shortcut. You use this option to override the default Content-type request header.</dd></dl>
 <h2>URL FORMAT</h2>
 <p> <tt>siege</tt> supports <font SIZE="-1">RFC</font> 1738 <font SIZE="-1">URL</font> formats but it takes pains to implement commonly used shortcuts for your convenience. In addition to <font SIZE="-1">RFC</font> 1738 formats, siege introduces its own <font SIZE="-1">URL</font> format to indicate protocol method. </p>
 <p> An <font SIZE="-1">RFC</font> 1738 <font SIZE="-1">URL</font> looks like this:<br />

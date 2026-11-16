@@ -23,36 +23,36 @@ endif()</pre>
 <p>New in version 3.22. </p>
 <p> When this policy is set to <code>NEW</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>&lt;LANG&gt;_EXTENSIONS</code> is initialized to <code>CMAKE_&lt;LANG&gt;_EXTENSIONS</code> if set, otherwise falling back to <code>CMAKE_&lt;LANG&gt;_EXTENSIONS_DEFAULT</code>.</p>
-<dt>&bull;</p>
-<dd>Extensions are correctly enabled/disabled if <code>&lt;LANG&gt;_STANDARD</code> is unset or satisfied by the default.</p>
-<dt>&bull;</p>
-<dd>Standard mode-affecting flags aren&#8217;t added unless necessary to achieve the specified mode. </p>
+<dt>&bull;</dt>
+<dd><code>&lt;LANG&gt;_EXTENSIONS</code> is initialized to <code>CMAKE_&lt;LANG&gt;_EXTENSIONS</code> if set, otherwise falling back to <code>CMAKE_&lt;LANG&gt;_EXTENSIONS_DEFAULT</code>.</dd>
+<dt>&bull;</dt>
+<dd>Extensions are correctly enabled/disabled if <code>&lt;LANG&gt;_STANDARD</code> is unset or satisfied by the default.</dd>
+<dt>&bull;</dt>
+<dd>Standard mode-affecting flags aren&#8217;t added unless necessary to achieve the specified mode. </dd>
 <p> The <code>OLD</code> behavior:</p>
-<dt>&bull;</p>
-<dd>Initializes <code>&lt;LANG&gt;_EXTENSIONS</code> to <code>CMAKE_&lt;LANG&gt;_EXTENSIONS</code> if set, otherwise falling back to <code>ON</code>.</p>
-<dt>&bull;</p>
-<dd>Always adds a flag if <code>&lt;LANG&gt;_STANDARD</code> is set and <code>&lt;LANG&gt;_STANDARD_REQUIRED</code> is <code>OFF</code>.</p>
-<dt>&bull;</p>
-<dd>If <code>&lt;LANG&gt;_STANDARD</code> is unset:</p>
-<dt>&bull;</p>
-<dd>Doesn&#8217;t disable extensions even if <code>&lt;LANG&gt;_EXTENSIONS</code> is <code>OFF</code>.</p>
-<dt>&bull;</p>
-<dd>Fails to enable extensions if <code>&lt;LANG&gt;_EXTENSIONS</code> is <code>ON</code> except for the <code>IAR</code> compiler. </p>
+<dt>&bull;</dt>
+<dd>Initializes <code>&lt;LANG&gt;_EXTENSIONS</code> to <code>CMAKE_&lt;LANG&gt;_EXTENSIONS</code> if set, otherwise falling back to <code>ON</code>.</dd>
+<dt>&bull;</dt>
+<dd>Always adds a flag if <code>&lt;LANG&gt;_STANDARD</code> is set and <code>&lt;LANG&gt;_STANDARD_REQUIRED</code> is <code>OFF</code>.</dd>
+<dt>&bull;</dt>
+<dd>If <code>&lt;LANG&gt;_STANDARD</code> is unset:</dd>
+<dt>&bull;</dt>
+<dd>Doesn&#8217;t disable extensions even if <code>&lt;LANG&gt;_EXTENSIONS</code> is <code>OFF</code>.</dd>
+<dt>&bull;</dt>
+<dd>Fails to enable extensions if <code>&lt;LANG&gt;_EXTENSIONS</code> is <code>ON</code> except for the <code>IAR</code> compiler. </dd>
 <p> Code may need to be updated for the <code>NEW</code> behavior in the following cases:</p>
-<dt>&bull;</p>
-<dd>If a standard mode flag previously overridden by CMake&#8217;s and not used during compiler detection now takes effect due to CMake no longer adding one as the default detected is appropriate. </p>
+<dt>&bull;</dt>
+<dd>If a standard mode flag previously overridden by CMake&#8217;s and not used during compiler detection now takes effect due to CMake no longer adding one as the default detected is appropriate. </dd>
 <p> Such code should be converted to either:</p>
-<dt>&bull;</p>
-<dd>Use <code>&lt;LANG&gt;_STANDARD</code> and <code>&lt;LANG&gt;_EXTENSIONS</code> instead of manually adding flags.</p>
-<dt>&bull;</p>
-<dd>Or ensure the manually-specified flags are used during compiler detection.</p>
-<dt>&bull;</p>
-<dd>If extensions were disabled without <code>&lt;LANG&gt;_STANDARD</code> being set CMake previously wouldn&#8217;t actually disable extensions. </p>
+<dt>&bull;</dt>
+<dd>Use <code>&lt;LANG&gt;_STANDARD</code> and <code>&lt;LANG&gt;_EXTENSIONS</code> instead of manually adding flags.</dd>
+<dt>&bull;</dt>
+<dd>Or ensure the manually-specified flags are used during compiler detection.</dd>
+<dt>&bull;</dt>
+<dd>If extensions were disabled without <code>&lt;LANG&gt;_STANDARD</code> being set CMake previously wouldn&#8217;t actually disable extensions. </dd>
 <p> Such code should be updated to not disable extensions if they are required.</p>
-<dt>&bull;</p>
-<dd>If extensions were enabled/disabled when <code>&lt;LANG&gt;_STANDARD</code> was satisfied by the compiler&#8217;s default CMake previously wouldn&#8217;t actually enable/disable extensions. </p>
+<dt>&bull;</dt>
+<dd>If extensions were enabled/disabled when <code>&lt;LANG&gt;_STANDARD</code> was satisfied by the compiler&#8217;s default CMake previously wouldn&#8217;t actually enable/disable extensions. </dd>
 <p> Such code should be updated to set the correct extensions mode. </p>
 <p> If compiler flags affecting the standard mode are used during compiler detection (for example in <code>a toolchain file</code> using <code>CMAKE_&lt;LANG&gt;_FLAGS_INIT</code>) then they will affect the detected default <code>standard</code> and <code>extensions</code>. </p>
 <p> Unlike many policies, CMake version 3.22.1 does <i>not</i> warn when the policy is not set and simply uses the <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. See documentation of the <code>CMAKE_POLICY_WARNING_CMP0128</code> variable to control the warning. </p>
@@ -74,10 +74,10 @@ endif()</pre>
 <p>New in version 3.21. </p>
 <p> When this policy is set to <code>NEW</code>, the <code>set(CACHE)</code> command does not remove any normal variable of the same name from the current scope. The <code>OLD</code> behavior removes any normal variable of the same name from the current scope in the following situations:</p>
 <dl>
-<dt>&bull;</p>
-<dd>No cache variable of that name existed previously.</p>
-<dt>&bull;</p>
-<dd>A cache variable of that name existed previously, but it had no type. This can occur when the variable was set on the command line using a form like <code>cmake -DMYVAR=blah</code> instead of <code>cmake -DMYVAR:STRING=blah</code>. </p>
+<dt>&bull;</dt>
+<dd>No cache variable of that name existed previously.</dd>
+<dt>&bull;</dt>
+<dd>A cache variable of that name existed previously, but it had no type. This can occur when the variable was set on the command line using a form like <code>cmake -DMYVAR=blah</code> instead of <code>cmake -DMYVAR:STRING=blah</code>. </dd>
 <p> Note that the <code>NEW</code> behavior has an important difference to the similar <code>NEW</code> behavior of policy <code>CMP0077</code>. The <code>set(CACHE)</code> command always sets the cache variable if it did not exist previously, regardless of the <code>CMP0126</code> policy setting. The <code>option()</code> command will <i>not</i> set the cache variable if a non-cache variable of the same name already exists and <code>CMP0077</code> is set to <code>NEW</code>. </p>
 <p> Policy <code>CMP0126</code> was introduced in CMake version 3.21. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly within a project. Use the <code>CMAKE_POLICY_DEFAULT_CMP0126</code> variable to set the policy for a third-party project in a subdirectory without modifying it. Unlike many policies, CMake version 3.22.1 does <i>not</i> warn when the policy is not set and simply uses <code>OLD</code> behavior. See documentation of the <code>CMAKE_POLICY_WARNING_CMP0126</code> variable to control the warning. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
@@ -87,10 +87,10 @@ endif()</pre>
 <p> Related to the above, if a cache variable of the specified name already exists and it <i>does</i> have a type, the various <code>find_&#8230;()</code> commands would return that value unchanged. In particular, if it contained a relative path, it would not be converted to an absolute path in this situation. </p>
 <p> When policy <code>CMP0125</code> is set to <code>OLD</code> or is unset, the behavior is as described above. When it is set to <code>NEW</code>, the behavior is as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd>If a non-cache variable of the specified name exists when the <code>find_&#8230;()</code> command is called, its value will be used regardless of whether a cache variable of the same name already exists or not. A cache variable will not be created in this case if no such cache variable existed before. If a cache variable of the specified name did already exist, the cache will be updated to match the non-cache variable.</p>
-<dt>&bull;</p>
-<dd>The various <code>find&#8230;()</code> commands will always provide an absolute path in the result variable, except where a relative path provided by a cache or non-cache variable cannot be resolved to an existing path. </p>
+<dt>&bull;</dt>
+<dd>If a non-cache variable of the specified name exists when the <code>find_&#8230;()</code> command is called, its value will be used regardless of whether a cache variable of the same name already exists or not. A cache variable will not be created in this case if no such cache variable existed before. If a cache variable of the specified name did already exist, the cache will be updated to match the non-cache variable.</dd>
+<dt>&bull;</dt>
+<dd>The various <code>find&#8230;()</code> commands will always provide an absolute path in the result variable, except where a relative path provided by a cache or non-cache variable cannot be resolved to an existing path. </dd>
 <p> This policy was introduced in CMake version 3.21. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. Unlike many policies, CMake version 3.22.1 does <i>not</i> warn when the policy is not set and simply uses <code>OLD</code> behavior. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
 <h3>Cmp0124</h3>
@@ -126,19 +126,19 @@ endif()</pre>
 <p> The <code>WriteCompilerDetectionHeader</code> module is removed. </p>
 <p> CMake versions 3.1 through 3.19 provide this module to generate a C++ compatibility layer by re-using information from CMake&#8217;s table of preprocessor checks for <code><a href="/docs/linux/man/7-cmake-compile-features/">cmake-compile-features</a>(7)</code>. However:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Those granular features have been superseded by meta-features for Requiring Language Standards such as <code>cxx_std_11</code>. Therefore no new granular feature checks will be added and projects will need to use other means to conditionally use new C++ features.</p>
-<dt>&bull;</p>
-<dd>The module exposes some of CMake&#8217;s implementation details directly to C++ translation units.</p>
-<dt>&bull;</p>
-<dd>The module&#8217;s approach effectively provides a header file with CMake, thus tying the version of the header to the version of CMake. Many projects found that the <code>WriteCompilerDetectionHeader</code> was best used by manually generating its header locally with a recent version of CMake and then bundling it with the project source so that it could be used with older CMake versions. </p>
+<dt>&bull;</dt>
+<dd>Those granular features have been superseded by meta-features for Requiring Language Standards such as <code>cxx_std_11</code>. Therefore no new granular feature checks will be added and projects will need to use other means to conditionally use new C++ features.</dd>
+<dt>&bull;</dt>
+<dd>The module exposes some of CMake&#8217;s implementation details directly to C++ translation units.</dd>
+<dt>&bull;</dt>
+<dd>The module&#8217;s approach effectively provides a header file with CMake, thus tying the version of the header to the version of CMake. Many projects found that the <code>WriteCompilerDetectionHeader</code> was best used by manually generating its header locally with a recent version of CMake and then bundling it with the project source so that it could be used with older CMake versions. </dd>
 <p> For reasons including the above, CMake 3.20 and above prefer to not provide the <code>WriteCompilerDetectionHeader</code> module. This policy provides compatibility for projects that have not been ported away from it. Projects using the module should be updated to stop using it. Alternatives include:</p>
-<dt>&bull;</p>
-<dd>Bundle a copy of the generated header in the project&#8217;s source.</p>
-<dt>&bull;</p>
-<dd>Use a third-party alternative, such as the CC0-licensed <i>Hedley</i>.</p>
-<dt>&bull;</p>
-<dd>Drop support for compilers too old to provide the features natively. </p>
+<dt>&bull;</dt>
+<dd>Bundle a copy of the generated header in the project&#8217;s source.</dd>
+<dt>&bull;</dt>
+<dd>Use a third-party alternative, such as the CC0-licensed <i>Hedley</i>.</dd>
+<dt>&bull;</dt>
+<dd>Drop support for compilers too old to provide the features natively. </dd>
 <p> The <code>OLD</code> behavior of this policy is for inclusion of the deprecated <code>WriteCompilerDetectionHeader</code> module to work. The <code>NEW</code> behavior is for inclusion of the module to fail as if it does not exist. </p>
 <p> This policy was introduced in CMake version 3.20. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
@@ -192,23 +192,23 @@ endif()</pre>
 <p> The <code>ExternalProject_Add()</code> <code>STEP_TARGETS</code> option, and the <code>ExternalProject_Add_StepTargets()</code> function, can be used to create build targets for individual steps of an external project. </p>
 <p> In CMake 3.18 and below, step targets have some limitations:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Step targets always depend on targets named by the <code>ExternalProject_Add()</code> <code>DEPENDS</code> option even though not all steps need them. In order to allow step targets to be created without those dependencies, the <code>ExternalProject_Add()</code> <code>INDEPENDENT_STEP_TARGETS</code> option or the <code>ExternalProject_Add_StepTargets()</code> <code>NO_DEPENDS</code> option may be used. However, adding such &quot;independent&quot; step targets makes sense only for specific steps such as <code>download</code>, <code>update</code>, and <code>patch</code> because they do not need any of the external project&#8217;s build dependencies. Furthermore, it does not make sense to create independent step targets for steps that depend on non-independent steps. Such rules are not enforced, and projects that do not follow them can generate build systems with confusing and generator-specific behavior.</p>
-<dt>&bull;</p>
-<dd>Step targets hold copies of the custom commands implementing their steps that are separate from the copies in the primary target created by <code>ExternalProject_Add()</code>, and the primary target does not depend on the step targets. In parallel builds that drive the primary target and step targets concurrently, multiple copies of the steps&#8217; commands may run concurrently and race each other. </p>
+<dt>&bull;</dt>
+<dd>Step targets always depend on targets named by the <code>ExternalProject_Add()</code> <code>DEPENDS</code> option even though not all steps need them. In order to allow step targets to be created without those dependencies, the <code>ExternalProject_Add()</code> <code>INDEPENDENT_STEP_TARGETS</code> option or the <code>ExternalProject_Add_StepTargets()</code> <code>NO_DEPENDS</code> option may be used. However, adding such &quot;independent&quot; step targets makes sense only for specific steps such as <code>download</code>, <code>update</code>, and <code>patch</code> because they do not need any of the external project&#8217;s build dependencies. Furthermore, it does not make sense to create independent step targets for steps that depend on non-independent steps. Such rules are not enforced, and projects that do not follow them can generate build systems with confusing and generator-specific behavior.</dd>
+<dt>&bull;</dt>
+<dd>Step targets hold copies of the custom commands implementing their steps that are separate from the copies in the primary target created by <code>ExternalProject_Add()</code>, and the primary target does not depend on the step targets. In parallel builds that drive the primary target and step targets concurrently, multiple copies of the steps&#8217; commands may run concurrently and race each other. </dd>
 <p> Also, prior to policy <code>CMP0113</code>, the step targets generated by Makefile Generators also contain all the custom commands on which their step depends. This can lead to repeated execution of those steps even in serial builds. </p>
 <p> In CMake 3.19 and above, the <code>ExternalProject</code> module prefers a revised design to address these problems:</p>
-<dt>&bull;</p>
-<dd>Each step is classified as &quot;independent&quot; if it does not depend on other targets named by the <code>ExternalProject_Add()</code> <code>DEPENDS</code>. The predefined steps are automatically classified by default:</p>
-<dt>&bull;</p>
-<dd>The <code>download</code>, <code>update</code>, and <code>patch</code> steps are independent.</p>
-<dt>&bull;</p>
-<dd>The <code>configure</code>, <code>build</code>, <code>test</code>, and <code>install</code> steps are not. </p>
+<dt>&bull;</dt>
+<dd>Each step is classified as &quot;independent&quot; if it does not depend on other targets named by the <code>ExternalProject_Add()</code> <code>DEPENDS</code>. The predefined steps are automatically classified by default:</dd>
+<dt>&bull;</dt>
+<dd>The <code>download</code>, <code>update</code>, and <code>patch</code> steps are independent.</dd>
+<dt>&bull;</dt>
+<dd>The <code>configure</code>, <code>build</code>, <code>test</code>, and <code>install</code> steps are not. </dd>
 <p> For custom steps, the <code>ExternalProject_Add_Step()</code> command provides an <code>INDEPENDENT</code> option to mark them as independent. It is an error to mark a step as independent if it depends on other steps that are not. Note that this use of the term &quot;independent&quot; refers only to independence from external targets and is orthogonal to a step&#8217;s dependencies on other steps.</p>
-<dt>&bull;</p>
-<dd>Step targets created by the <code>ExternalProject_Add()</code> <code>STEP_TARGETS</code> option or the <code>ExternalProject_Add_Step()</code> function are now independent if and only if their steps are marked as independent. The <code>ExternalProject_Add()</code> <code>INDEPENDENT_STEP_TARGETS</code> option and <code>ExternalProject_Add_StepTargets()</code> <code>NO_DEPENDS</code> option are no longer allowed.</p>
-<dt>&bull;</p>
-<dd>Step targets, when created, are fully responsible for holding the custom commands implementing their steps. The primary target created by <code>ExternalProject_Add()</code> depends on the step targets, and the step targets depend on each other. The target-level dependencies match the file-level dependencies used by the custom commands for each step. </p>
+<dt>&bull;</dt>
+<dd>Step targets created by the <code>ExternalProject_Add()</code> <code>STEP_TARGETS</code> option or the <code>ExternalProject_Add_Step()</code> function are now independent if and only if their steps are marked as independent. The <code>ExternalProject_Add()</code> <code>INDEPENDENT_STEP_TARGETS</code> option and <code>ExternalProject_Add_StepTargets()</code> <code>NO_DEPENDS</code> option are no longer allowed.</dd>
+<dt>&bull;</dt>
+<dd>Step targets, when created, are fully responsible for holding the custom commands implementing their steps. The primary target created by <code>ExternalProject_Add()</code> depends on the step targets, and the step targets depend on each other. The target-level dependencies match the file-level dependencies used by the custom commands for each step. </dd>
 <p> When the <code>ExternalProject_Add()</code> <code>UPDATE_DISCONNECTED</code> or <code>TEST_EXCLUDE_FROM_MAIN</code> option is used, or the <code>ExternalProject_Add_Step()</code> <code>EXCLUDE_FROM_MAIN</code> option is used for a custom step, some step targets may be created automatically. These are needed to hold the steps commonly depended upon by the primary target and the disconnected step targets. </p>
 <p> Policy <code>CMP0114</code> provides compatibility for projects that have not been updated to expect the new behavior. The <code>OLD</code> behavior for this policy is to use the above-documented behavior from 3.18 and below. The <code>NEW</code> behavior for this policy is to use the above-documented behavior preferred by 3.19 and above. </p>
 <p> This policy was introduced in CMake version 3.19. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly.</dl>
@@ -234,28 +234,28 @@ add_dependencies(second first)</pre>
 <p> Target file component generator expressions do not add target dependencies. </p>
 <p> The following target-based generator expressions that query for directory or file name components no longer add a dependency on the evaluated target.</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>TARGET_FILE_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_FILE_DIR</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_LINKER_FILE_BASE_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_LINKER_FILE_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_LINKER_FILE_DIR</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_SONAME_FILE_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_SONAME_FILE_DIR</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_PDB_FILE_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_PDB_FILE_DIR</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_BUNDLE_DIR</code></p>
-<dt>&bull;</p>
-<dd><code>TARGET_BUNDLE_CONTENT_DIR</code> </p>
+<dt>&bull;</dt>
+<dd><code>TARGET_FILE_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_FILE_DIR</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_LINKER_FILE_BASE_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_LINKER_FILE_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_LINKER_FILE_DIR</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_SONAME_FILE_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_SONAME_FILE_DIR</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_PDB_FILE_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_PDB_FILE_DIR</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_BUNDLE_DIR</code></dd>
+<dt>&bull;</dt>
+<dd><code>TARGET_BUNDLE_CONTENT_DIR</code> </dd>
 <p> In CMake 3.18 and lower a dependency on the evaluated target of the above generator expressions would always be added. CMake 3.19 and above prefer to not add this dependency. This policy provides compatibility for projects that have not been updated to expect the new behavior. </p>
 <p> The <code>OLD</code> behavior for this policy is to add a dependency on the evaluated target for the above generator expressions. The <code>NEW</code> behavior of this policy is to not add a dependency on the evaluated target for the above generator expressions. </p>
 <p> This policy was introduced in CMake version 3.19. Unlike many policies, CMake version 3.22.1 does <i>not</i> warn by default when this policy is not set and simply uses <code>OLD</code> behavior. See documentation of the <code>CMAKE_POLICY_WARNING_CMP0112</code> variable to control the warning. </p>
@@ -335,8 +335,8 @@ add_dependencies(second first)</pre>
 <p> Multiple calls to <code>export()</code> command with same <code>FILE</code> without <code>APPEND</code> is no longer allowed. </p>
 <p> In CMake 3.17 and below, multiple calls to <code>export()</code> command with the same <code>FILE</code> without <code>APPEND</code> are accepted silently but only the last occurrence is taken into account during the generation.</p>
 <dl>
-<dt><code>The OLD</code> behavior for this policy is to ignore the multiple occurrences of</p>
-<dd><code>export()</code> command except the last one. </p>
+<dt><code>The OLD</code> behavior for this policy is to ignore the multiple occurrences of</dt>
+<dd><code>export()</code> command except the last one. </dd>
 <p> The <code>NEW</code> behavior of this policy is to raise an error on second call to <code>export()</code> command with same <code>FILE</code> without <code>APPEND</code>. </p>
 <p> This policy was introduced in CMake version 3.18. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
@@ -501,12 +501,12 @@ set_property(SOURCE /path/to/file3.hh PROPERTY SKIP_AUTOGEN ON)</pre>
 <p> CMake 3.13 and lower did not add these link flags when <code>POSITION_INDEPENDENT_CODE</code> is set. </p>
 <p> The <code>OLD</code> behavior for this policy is to not manage <code>PIE</code> link flags. The <code>NEW</code> behavior is to add link flags if <code>POSITION_INDEPENDENT_CODE</code> is set:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Set to <code>TRUE</code>: flags to produce a position independent executable are passed to the linker step. For example <code>-pie</code> for <code>GCC</code>.</p>
-<dt>&bull;</p>
-<dd>Set to <code>FALSE</code>: flags not to produce a position independent executable are passed to the linker step. For example <code>-no-pie</code> for <code>GCC</code>.</p>
-<dt>&bull;</p>
-<dd>Not set: no flags are passed to the linker step. </p>
+<dt>&bull;</dt>
+<dd>Set to <code>TRUE</code>: flags to produce a position independent executable are passed to the linker step. For example <code>-pie</code> for <code>GCC</code>.</dd>
+<dt>&bull;</dt>
+<dd>Set to <code>FALSE</code>: flags not to produce a position independent executable are passed to the linker step. For example <code>-no-pie</code> for <code>GCC</code>.</dd>
+<dt>&bull;</dt>
+<dd>Not set: no flags are passed to the linker step. </dd>
 <p> Since a given linker may not support <code>PIE</code> flags in all environments in which it is used, it is the project&#8217;s responsibility to use the <code>CheckPIESupported</code> module to check for support to ensure that the <code>POSITION_INDEPENDENT_CODE</code> target property for executables will be honored at link time. </p>
 <p> This policy was introduced in CMake version 3.14. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. Unlike most policies, CMake version 3.22.1 does not warn when this policy is not set and simply uses <code>OLD</code> behavior. </p>
 <p> <code>NOTE:</code> Android platform has a special handling of <code>PIE</code> so it is not required to use the <code>CheckPIESupported</code> module to ensure flags are passed to the linker. </p>
@@ -564,10 +564,10 @@ set_property(TARGET foo PROPERTY POSITION_INDEPENDENT_CODE TRUE)</pre>
 <p> Starting with CMake 3.13, <code>UseSWIG</code> generates now standard target names. This policy provides compatibility with projects that expect the legacy behavior. </p>
 <p> The <code>OLD</code> behavior for this policy relies on <code>UseSWIG_TARGET_NAME_PREFERENCE</code> variable that can be used to specify an explicit preference. The value may be one of:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>LEGACY</code>: legacy strategy is applied. Variable <code>SWIG_MODULE_&lt;name&gt;_REAL_NAME</code> must be used to get real target name. This is the default if not specified.</p>
-<dt>&bull;</p>
-<dd><code>STANDARD</code>: target name matches specified name. </p>
+<dt>&bull;</dt>
+<dd><code>LEGACY</code>: legacy strategy is applied. Variable <code>SWIG_MODULE_&lt;name&gt;_REAL_NAME</code> must be used to get real target name. This is the default if not specified.</dd>
+<dt>&bull;</dt>
+<dd><code>STANDARD</code>: target name matches specified name. </dd>
 <p> This policy was introduced in CMake version 3.13. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
 <h3>Cmp0077</h3>
@@ -576,17 +576,17 @@ set_property(TARGET foo PROPERTY POSITION_INDEPENDENT_CODE TRUE)</pre>
 <p> The <code>option()</code> command is typically used to create a cache entry to allow users to set the option. However, there are cases in which a normal (non-cached) variable of the same name as the option may be defined by the project prior to calling the <code>option()</code> command. For example, a project that embeds another project as a subdirectory may want to hard-code options of the subproject to build the way it needs. </p>
 <p> For historical reasons in CMake 3.12 and below the <code>option()</code> command <i>removes</i> a normal (non-cached) variable of the same name when:</p>
 <dl>
-<dt>&bull;</p>
-<dd>a cache entry of the specified name does not exist at all, or</p>
-<dt>&bull;</p>
-<dd>a cache entry of the specified name exists but has not been given a type (e.g. via <code>-D&lt;name&gt;=ON</code> on the command line). </p>
+<dt>&bull;</dt>
+<dd>a cache entry of the specified name does not exist at all, or</dd>
+<dt>&bull;</dt>
+<dd>a cache entry of the specified name exists but has not been given a type (e.g. via <code>-D&lt;name&gt;=ON</code> on the command line). </dd>
 <p> In both of these cases (typically on the first run in a new build tree), the <code>option()</code> command gives the cache entry type <code>BOOL</code> and removes any normal (non-cached) variable of the same name. In the remaining case that the cache entry of the specified name already exists and has a type (typically on later runs in a build tree), the <code>option()</code> command changes nothing and any normal variable of the same name remains set. </p>
 <p> In CMake 3.13 and above the <code>option()</code> command prefers to do nothing when a normal variable of the given name already exists. It does not create or update a cache entry or remove the normal variable. The new behavior is consistent between the first and later runs in a build tree. This policy provides compatibility with projects that have not been updated to expect the new behavior. </p>
 <p> When the <code>option()</code> command sees a normal variable of the given name:</p>
-<dt>&bull;</p>
-<dd>The <code>OLD</code> behavior for this policy is to proceed even when a normal variable of the same name exists. If the cache entry does not already exist and have a type then it is created and/or given a type and the normal variable is removed.</p>
-<dt>&bull;</p>
-<dd>The <code>NEW</code> behavior for this policy is to do nothing when a normal variable of the same name exists. The normal variable is not removed. The cache entry is not created or updated and is ignored if it exists. </p>
+<dt>&bull;</dt>
+<dd>The <code>OLD</code> behavior for this policy is to proceed even when a normal variable of the same name exists. If the cache entry does not already exist and have a type then it is created and/or given a type and the normal variable is removed.</dd>
+<dt>&bull;</dt>
+<dd>The <code>NEW</code> behavior for this policy is to do nothing when a normal variable of the same name exists. The normal variable is not removed. The cache entry is not created or updated and is ignored if it exists. </dd>
 <p> See <code>CMP0126</code> for a similar policy for the <code>set(CACHE)</code> command, but note that there are some differences in <code>NEW</code> behavior between the two policies. </p>
 <p> This policy was introduced in CMake version 3.13. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly within a project. Use the <code>CMAKE_POLICY_DEFAULT_CMP0077</code> variable to set the policy for a third-party project in a subdirectory without modifying it. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
@@ -595,10 +595,10 @@ set_property(TARGET foo PROPERTY POSITION_INDEPENDENT_CODE TRUE)</pre>
 <p> The <code>target_sources()</code> command converts relative paths to absolute. </p>
 <p> In CMake 3.13 and above, the <code>target_sources()</code> command now converts relative source file paths to absolute paths in the following cases:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Source files are added to the target&#8217;s <code>INTERFACE_SOURCES</code> property.</p>
-<dt>&bull;</p>
-<dd>The target&#8217;s <code>SOURCE_DIR</code> property differs from <code>CMAKE_CURRENT_SOURCE_DIR</code>. </p>
+<dt>&bull;</dt>
+<dd>Source files are added to the target&#8217;s <code>INTERFACE_SOURCES</code> property.</dd>
+<dt>&bull;</dt>
+<dd>The target&#8217;s <code>SOURCE_DIR</code> property differs from <code>CMAKE_CURRENT_SOURCE_DIR</code>. </dd>
 <p> A path that begins with a generator expression is always left unmodified. </p>
 <p> This policy provides compatibility with projects that have not been updated to expect this behavior. The <code>OLD</code> behavior for this policy is to leave all relative source file paths unmodified. The <code>NEW</code> behavior of this policy is to convert relative paths to absolute according to above rules. </p>
 <p> This policy was introduced in CMake version 3.13. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. </p>
@@ -609,12 +609,12 @@ set_property(TARGET foo PROPERTY POSITION_INDEPENDENT_CODE TRUE)</pre>
 <p> Include file check macros honor <code>CMAKE_REQUIRED_LIBRARIES</code>. </p>
 <p> In CMake 3.12 and above, the</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>check_include_file</code> macro in the <code>CheckIncludeFile</code> module, the</p>
-<dt>&bull;</p>
-<dd><code>check_include_file_cxx</code> macro in the <code>CheckIncludeFileCXX</code> module, and the</p>
-<dt>&bull;</p>
-<dd><code>check_include_files</code> macro in the <code>CheckIncludeFiles</code> module </p>
+<dt>&bull;</dt>
+<dd><code>check_include_file</code> macro in the <code>CheckIncludeFile</code> module, the</dd>
+<dt>&bull;</dt>
+<dd><code>check_include_file_cxx</code> macro in the <code>CheckIncludeFileCXX</code> module, and the</dd>
+<dt>&bull;</dt>
+<dd><code>check_include_files</code> macro in the <code>CheckIncludeFiles</code> module </dd>
 <p> now prefer to link the check executable to the libraries listed in the <code>CMAKE_REQUIRED_LIBRARIES</code> variable. This policy provides compatibility with projects that have not been updated to expect this behavior. </p>
 <p> The <code>OLD</code> behavior for this policy is to ignore <code>CMAKE_REQUIRED_LIBRARIES</code> in the include file check macros. The <code>NEW</code> behavior of this policy is to honor <code>CMAKE_REQUIRED_LIBRARIES</code> in the include file check macros. </p>
 <p> This policy was introduced in CMake version 3.12. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. </p>
@@ -708,14 +708,14 @@ set_property(TARGET ... PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)</pre>
 <p> <code>RPATH</code> settings on macOS do not affect <code>install_name</code>. </p>
 <p> CMake 3.9 and newer remove any effect the following settings may have on the <code>install_name</code> of a target on macOS:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>BUILD_WITH_INSTALL_RPATH</code> target property</p>
-<dt>&bull;</p>
-<dd><code>SKIP_BUILD_RPATH</code> target property</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SKIP_RPATH</code> variable</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SKIP_INSTALL_RPATH</code> variable </p>
+<dt>&bull;</dt>
+<dd><code>BUILD_WITH_INSTALL_RPATH</code> target property</dd>
+<dt>&bull;</dt>
+<dd><code>SKIP_BUILD_RPATH</code> target property</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SKIP_RPATH</code> variable</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SKIP_INSTALL_RPATH</code> variable </dd>
 <p> Previously, setting <code>BUILD_WITH_INSTALL_RPATH</code> had the effect of setting both the <code>install_name</code> of a target to <code>INSTALL_NAME_DIR</code> and the <code>RPATH</code> to <code>INSTALL_RPATH</code>. In CMake 3.9, it only affects setting of <code>RPATH</code>. However, if one wants <code>INSTALL_NAME_DIR</code> to apply to the target in the build tree, one may set <code>BUILD_WITH_INSTALL_NAME_DIR</code>. </p>
 <p> If <code>SKIP_BUILD_RPATH</code>, <code>CMAKE_SKIP_RPATH</code> or <code>CMAKE_SKIP_INSTALL_RPATH</code> were used to strip the directory portion of the <code>install_name</code> of a target, one may set <code>INSTALL_NAME_DIR=&quot;&quot;</code> instead. </p>
 <p> The <code>OLD</code> behavior of this policy is to use the <code>RPATH</code> settings for <code>install_name</code> on macOS. The <code>NEW</code> behavior of this policy is to ignore the <code>RPATH</code> settings for <code>install_name</code> on macOS. </p>
@@ -727,24 +727,24 @@ set_property(TARGET ... PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)</pre>
 <p> Honor language standard in <code>try_compile()</code> source-file signature. </p>
 <p> The <code>try_compile()</code> source file signature is intended to allow callers to check whether they will be able to compile a given source file with the current toolchain. In order to match compiler behavior, any language standard mode should match. However, CMake 3.7 and below did not do this. CMake 3.8 and above prefer to honor the language standard settings for <code>C</code>, <code>CXX</code> (C++), and <code>CUDA</code> using the values of the variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_C_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_C_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_C_EXTENSIONS</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_CXX_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_CXX_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_CXX_EXTENSIONS</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_CUDA_STANDARD</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_CUDA_STANDARD_REQUIRED</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_CUDA_EXTENSIONS</code> </p>
+<dt>&bull;</dt>
+<dd><code>CMAKE_C_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_C_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_C_EXTENSIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_CXX_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_CXX_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_CXX_EXTENSIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_CUDA_STANDARD</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_CUDA_STANDARD_REQUIRED</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_CUDA_EXTENSIONS</code> </dd>
 <p> This policy provides compatibility for projects that do not expect the language standard settings to be used automatically. </p>
 <p> The <code>OLD</code> behavior of this policy is to ignore language standard setting variables when generating the <code>try_compile</code> test project. The <code>NEW</code> behavior of this policy is to honor language standard setting variables. </p>
 <p> This policy was introduced in CMake version 3.8. Unlike most policies, CMake version 3.22.1 does <i>not</i> warn by default when this policy is not set and simply uses <code>OLD</code> behavior. See documentation of the <code>CMAKE_POLICY_WARNING_CMP0067</code> variable to control the warning. </p>
@@ -904,16 +904,16 @@ endif()</pre>
 <p> Simplify variable reference and escape sequence evaluation. </p>
 <p> CMake 3.1 introduced a much faster implementation of evaluation of the Variable References and Escape Sequences documented in the <code><a href="/docs/linux/man/7-cmake-language/">cmake-language</a>(7)</code> manual. While the behavior is identical to the legacy implementation in most cases, some corner cases were cleaned up to simplify the behavior. Specifically:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Expansion of <code>@VAR@</code> reference syntax defined by the <code>configure_file()</code> and <code>string(CONFIGURE)</code> commands is no longer performed in other contexts.</p>
-<dt>&bull;</p>
-<dd>Literal <code>${VAR}</code> reference syntax may contain only alphanumeric characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>) and the characters <code>_</code>, <code>.</code>, <code>/</code>, <code>&#8211;</code>, and <code>+</code>. Note that <code>$</code> is technically allowed in the <code>NEW</code> behavior, but is invalid for <code>OLD</code> behavior. This is due to an oversight during the implementation of <i>CMP0053</i> and its use as a literal variable reference is discouraged for this reason. Variables with other characters in their name may still be referenced indirectly, e.g. </p>
+<dt>&bull;</dt>
+<dd>Expansion of <code>@VAR@</code> reference syntax defined by the <code>configure_file()</code> and <code>string(CONFIGURE)</code> commands is no longer performed in other contexts.</dd>
+<dt>&bull;</dt>
+<dd>Literal <code>${VAR}</code> reference syntax may contain only alphanumeric characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>) and the characters <code>_</code>, <code>.</code>, <code>/</code>, <code>&#8211;</code>, and <code>+</code>. Note that <code>$</code> is technically allowed in the <code>NEW</code> behavior, but is invalid for <code>OLD</code> behavior. This is due to an oversight during the implementation of <i>CMP0053</i> and its use as a literal variable reference is discouraged for this reason. Variables with other characters in their name may still be referenced indirectly, e.g. </dd>
 <pre>set(varname &quot;otherwise &amp; disallowed $ characters&quot;)
 message(&quot;${${varname}}&quot;)</pre>
-<dt>&bull;</p>
-<dd>The setting of policy <code>CMP0010</code> is not considered, so improper variable reference syntax is always an error.</p>
-<dt>&bull;</p>
-<dd>More characters are allowed to be escaped in variable names. Previously, only <code>()#&quot; \@^</code> were valid characters to escape. Now any non-alphanumeric, non-semicolon, non-NUL character may be escaped following the <code>escape_identity</code> production in the Escape Sequences section of the <code><a href="/docs/linux/man/7-cmake-language/">cmake-language</a>(7)</code> manual. </p>
+<dt>&bull;</dt>
+<dd>The setting of policy <code>CMP0010</code> is not considered, so improper variable reference syntax is always an error.</dd>
+<dt>&bull;</dt>
+<dd>More characters are allowed to be escaped in variable names. Previously, only <code>()#&quot; \@^</code> were valid characters to escape. Now any non-alphanumeric, non-semicolon, non-NUL character may be escaped following the <code>escape_identity</code> production in the Escape Sequences section of the <code><a href="/docs/linux/man/7-cmake-language/">cmake-language</a>(7)</code> manual. </dd>
 <p> The <code>OLD</code> behavior for this policy is to honor the legacy behavior for variable references and escape sequences. The <code>NEW</code> behavior is to use the simpler variable expansion and escape sequence evaluation rules. </p>
 <p> This policy was introduced in CMake version 3.1. CMake version 3.22.1 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
@@ -1306,3 +1306,4 @@ target_link_libraries(myexe /path/to/libA.so /path/to/libB.so)</pre>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</p>
 <h2>Copyright</h2>
 <p>2000-2022 Kitware, Inc. and Contributors</p>
+</p>

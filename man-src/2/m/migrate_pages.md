@@ -26,14 +26,14 @@ long migrate_pages(int pid, unsigned long maxnode,
 <p> On success <code>migrate_pages</code>() returns the number of pages that could not be moved (i.e., a return of zero means that all pages were successfully moved). On error, it returns -1, and sets <i>errno</i> to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Part or all of the memory range specified by <i>old_nodes</i>/<i>new_nodes</i> and <i>maxnode</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The value specified by <i>maxnode</i> exceeds a kernel-imposed limit. Or, <i>old_nodes</i> or <i>new_nodes</i> specifies one or more node IDs that are greater than the maximum supported node ID. Or, none of the node IDs specified by <i>new_nodes</i> are on-line and allowed by the process&#8217;s current cpuset context, or none of the specified nodes contain memory.</p>
-<dt><code>EPERM</code></p>
-<dd> Insufficient privilege (<code>CAP_SYS_NICE</code>) to move pages of the process specified by <i>pid</i>, or insufficient privilege (<code>CAP_SYS_NICE</code>) to access the specified target nodes.</p>
-<dt><code>ESRCH</code></p>
-<dd> No process matching <i>pid</i> could be found.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Part or all of the memory range specified by <i>old_nodes</i>/<i>new_nodes</i> and <i>maxnode</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value specified by <i>maxnode</i> exceeds a kernel-imposed limit. Or, <i>old_nodes</i> or <i>new_nodes</i> specifies one or more node IDs that are greater than the maximum supported node ID. Or, none of the node IDs specified by <i>new_nodes</i> are on-line and allowed by the process&#8217;s current cpuset context, or none of the specified nodes contain memory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> Insufficient privilege (<code>CAP_SYS_NICE</code>) to move pages of the process specified by <i>pid</i>, or insufficient privilege (<code>CAP_SYS_NICE</code>) to access the specified target nodes.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No process matching <i>pid</i> could be found.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>migrate_pages</code>() system call first appeared on Linux in version 2.6.16.</p>
 <h2>CONFORMING TO</h2>

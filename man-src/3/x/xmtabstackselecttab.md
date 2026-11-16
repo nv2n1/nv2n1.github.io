@@ -17,9 +17,9 @@ description: "XmTabStackSelectTab — A TabStack function that sets the currentl
 <h2>Description</h2>
 <p><code>XmTabStackSelectTab</code> sets the currently displayed child of the TabStack.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TabStack widget ID</p>
-<dt><i>notify</i></p>
-<dd>Specifies weather to call XmNtabSelectedCallback as usual in response to the change of state</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TabStack widget ID</dd>
+<dt><i>notify</i></dt>
+<dd>Specifies weather to call XmNtabSelectedCallback as usual in response to the change of state</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtabstack/">XmTabStack</a></code>(3).</p>

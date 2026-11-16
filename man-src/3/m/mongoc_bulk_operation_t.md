@@ -17,6 +17,6 @@ typedef struct _mongoc_bulk_operation_t mongoc_bulk_operation_t;
 <p> <code>NOTE</code></p>
 <dl COMPACT>
 <dt>
-<dd> It is only valid to call <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> once. The <code>mongoc_bulk_operation_t</code> must be destroyed afterwards.</dl>
+</dt><dd> It is only valid to call <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> once. The <code>mongoc_bulk_operation_t</code> must be destroyed afterwards.</dd></dl>
 <h2>Colophon</h2>
 <p> This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

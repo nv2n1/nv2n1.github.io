@@ -16,40 +16,40 @@ description: "NCO – netCDF Operators"
 <p> The available <i>operators </i> are: </p>
 <dl>
 <dt>
-<dd> <code>ncap2</code>, netCDF Arithmetic Processor</dl>
+</dt><dd> <code>ncap2</code>, netCDF Arithmetic Processor</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncatted</code>, netCDF Attribute Editor</dl>
+</dt><dd> <code>ncatted</code>, netCDF Attribute Editor</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncbo</code>, netCDF Binary Operator (includes <code>ncadd</code>, <code>ncsubtract</code>, <code>ncmultiply</code>, <code>ncdivide</code>)</dl>
+</dt><dd> <code>ncbo</code>, netCDF Binary Operator (includes <code>ncadd</code>, <code>ncsubtract</code>, <code>ncmultiply</code>, <code>ncdivide</code>)</dd></dl>
 <dl>
 <dt>
-<dd> <code>nces</code>, netCDF Ensemble Averager</dl>
+</dt><dd> <code>nces</code>, netCDF Ensemble Averager</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncecat</code>, netCDF Ensemble Concatenator</dl>
+</dt><dd> <code>ncecat</code>, netCDF Ensemble Concatenator</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncflint</code>, netCDF File Interpolator</dl>
+</dt><dd> <code>ncflint</code>, netCDF File Interpolator</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncks</code>, netCDF Kitchen Sink</dl>
+</dt><dd> <code>ncks</code>, netCDF Kitchen Sink</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncpdq</code>, netCDF Permute Dimensions Quickly, Pack Data Quietly</dl>
+</dt><dd> <code>ncpdq</code>, netCDF Permute Dimensions Quickly, Pack Data Quietly</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncra</code>, netCDF Record Averager</dl>
+</dt><dd> <code>ncra</code>, netCDF Record Averager</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncrcat</code>, netCDF Record Concatenator</dl>
+</dt><dd> <code>ncrcat</code>, netCDF Record Concatenator</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncrename</code>, netCDF Renamer</dl>
+</dt><dd> <code>ncrename</code>, netCDF Renamer</dd></dl>
 <dl>
 <dt>
-<dd> <code>ncwa</code>, netCDF Weighted Averager.</dl>
+</dt><dd> <code>ncwa</code>, netCDF Weighted Averager.</dd></dl>
 <p> (Note that the &quot;averagers&quot; are misnamed because they perform many non-linear operations as well, e.g., total, minimum, maximum, RMS). </p>
 <p> The operators are as general as netCDF itself: there are no restrictions on the contents of the netCDF file(s) used as input. <code>NCO</code>&#8216;s internal routines are completely dynamic and impose no limit on the number or sizes of dimensions, variables, and files. <code>NCO </code> is designed to be used both interactively and with large batch jobs. The default operator behavior is often sufficient for everyday needs, and there are numerous command line (i.e., run-time) options, for special cases. <code>NCO</code> works well on all modern operating systems. </p>
 <h2>AUTHOR</h2>
@@ -64,7 +64,7 @@ description: "NCO – netCDF Operators"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <p> <code><a href="/docs/linux/man/1-ncap2/">ncap2</a></code>(1), <code><a href="/docs/linux/man/1-ncatted/">ncatted</a></code>(1), <code><a href="/docs/linux/man/1-ncbo/">ncbo</a></code>(1), <code><a href="/docs/linux/man/1-ncdiff/">ncdiff</a></code>(1), <code><a href="/docs/linux/man/1-nces/">nces</a></code>(1), <code><a href="/docs/linux/man/1-ncecat/">ncecat</a></code>(1), <code><a href="/docs/linux/man/1-ncflint/">ncflint</a></code>(1), <code><a href="/docs/linux/man/1-ncks/">ncks</a></code>(1), <code><a href="/docs/linux/man/1-nco/">nco</a></code>(1), <code><a href="/docs/linux/man/1-ncpdq/">ncpdq</a></code>(1), <code><a href="/docs/linux/man/1-ncra/">ncra</a></code>(1), <code><a href="/docs/linux/man/1-ncrcat/">ncrcat</a></code>(1), <code><a href="/docs/linux/man/1-ncrename/">ncrename</a></code>(1), <code><a href="/docs/linux/man/1-ncwa/">ncwa</a></code>(1) </p>
 <h2>HOMEPAGE</h2>

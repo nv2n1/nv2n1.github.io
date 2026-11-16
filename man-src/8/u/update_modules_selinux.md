@@ -56,8 +56,8 @@ description: "update_modules_selinux – Security Enhanced Linux Policy for the 
 <p> <code>update_modules_exec_t</code> </p>
 <p> &#8211; Set files with the update_modules_exec_t type, if you want to transition an executable to the update_modules_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/modules-update, /sbin/update-modules, /usr/sbin/modules-update, /usr/sbin/update-modules, /sbin/generate-modprobe.conf, /usr/sbin/generate-modprobe.conf </p>
+<dt>Paths:</dt>
+<dd>/sbin/modules-update, /sbin/update-modules, /usr/sbin/modules-update, /usr/sbin/update-modules, /sbin/generate-modprobe.conf, /usr/sbin/generate-modprobe.conf </dd>
 </dl>
 <p> <code>update_modules_tmp_t</code> </p>
 <p> &#8211; Set files with the update_modules_tmp_t type, if you want to store update modules temporary files in the /tmp directories. </p>

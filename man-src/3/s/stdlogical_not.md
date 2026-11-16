@@ -11,10 +11,8 @@ std::logical_not&lt;void&gt; - std::logical_not&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class logical_not&lt;void&gt;;</code></pre> 
 std::logical_not&lt;&gt; is a specialization of std::logical_not with parameter and return type deduced. 
 

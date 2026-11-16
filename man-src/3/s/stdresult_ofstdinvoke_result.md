@@ -10,18 +10,12 @@ description: "std::result_of,std::invoke_result – std::result_of,std::invoke_r
 <p>std::result_of,std::invoke_result &#8211; std::result_of,std::invoke_result</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;type_traits&gt;
-
 template&lt; class &gt;
-
 class result_of; // not defined            (since C++11)
 (1) (deprecated in C++17)
-
 template&lt; class F, class... ArgTypes &gt;     (removed in C++20)
-
 class result_of&lt;F(ArgTypes...)&gt;;
-
 template&lt; class F, class... ArgTypes&gt;  (2) (since C++17)
-
 class invoke_result;</code></pre>
 <p>Deduces the return type of an INVOKE expression at compile time.<br />
 F must be a callable type, reference to function, or reference to callable type. Invoking F with ArgTypes&#8230; must be a well-formed expression. <i>(since C++11)</i><br />
@@ -116,7 +110,6 @@ my_invoke(F&amp;&amp; f, Args&amp;&amp;&#8230; args) {<br />
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;type_traits&gt;
-
 #include &lt;iostream&gt;
 struct S {
     double operator()(char, int &amp;);
@@ -126,25 +119,20 @@ struct S {
     }
 };
 template &lt;class T&gt;
-
 typename std::result_of&lt;T(int)&gt;::type f(T &amp;t)
-
 {
     std::cout &lt;&lt; &quot;overload of f for callable T
 &quot;;
     return t(0);
 }
 template &lt;class T, class U&gt;
-
 int f(U u)
-
 {
     std::cout &lt;&lt; &quot;overload of f for non-callable T
 &quot;;
     return u;
 }
 int main()
-
 {
     // the result of invoking S with char and int&amp; arguments is double
     std::result_of&lt;S(char, int &amp;)&gt;::type d = 3.14; // d has type double

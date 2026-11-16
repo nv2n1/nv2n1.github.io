@@ -10,13 +10,13 @@ description: "pci_pme_capable – check the capability of PCI device to generate
 <p>pci_pme_capable &#8211; check the capability of PCI device to generate PME#</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool pci_pme_capable(struct pci_dev&nbsp;<wbr>*&nbsp;<wbr></code><i>dev</i><code>, pci_power_t&nbsp;<wbr></code><i>state</i><code>);</code></dl>
+<dt> <code>bool pci_pme_capable(struct pci_dev&nbsp;<wbr>*&nbsp;<wbr></code><i>dev</i><code>, pci_power_t&nbsp;<wbr></code><i>state</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device to handle.</dl>
+</dd><dd>PCI device to handle.</dd></dl>
 <p> <i>state</i></p>
 <dl>
-<dd>PCI state from which device will issue PME#.</dl>
+<dd>PCI state from which device will issue PME#.</dd></dl>
 <h2>Copyright</h2>

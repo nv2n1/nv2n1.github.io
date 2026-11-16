@@ -20,6 +20,6 @@ description: "faillog – login failure logging file"
 <h2>Files</h2>
 <p>/var/log/faillog</p>
 <dl>
-<dd>Failure logging file.</dl>
+<dd>Failure logging file.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-faillog/">faillog</a></code>(8) </p>

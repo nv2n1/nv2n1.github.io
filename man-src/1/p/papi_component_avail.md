@@ -36,9 +36,9 @@ url: "/docs/linux/man/1-papi_component_avail/"
 
 <dl>
 <dt>&bull;
-<dd> -h help message
-<dt>&bull;
-<dd> -d provide detailed information about each component.</dl>
+</dt><dd> -h help message
+</dd><dt>&bull;
+</dt><dd> -d provide detailed information about each component.</dd></dl>
  
 
 <h2>Bugs</h2>

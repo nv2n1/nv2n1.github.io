@@ -15,78 +15,78 @@ description: "Telescope mount position control"
 <p> The options are as follows: </p>
 <p> options:</p>
 <dl>
-<dt><code>get:</code></p>
-<dd> (specify nothing, one or more option)</p>
-<dt><code>-ra</code></p>
+<dt><code>get:</code></dt>
+<dd> (specify nothing, one or more option)</dd>
+<dt><code>-ra</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>print Right Ascension in degrees</p>
-<dt><code>-dec</code></p>
+&nbsp;<wbr>&nbsp;<wbr>print Right Ascension in degrees</dd>
+<dt><code>-dec</code></dt>
 <dd>
-&nbsp;<wbr>print Declination in degrees</p>
-<dt><code>-a</code></p>
+&nbsp;<wbr>print Declination in degrees</dd>
+<dt><code>-a</code></dt>
 <dd>
-print Azimuth&nbsp;<wbr>(180 deg&nbsp;<wbr>=&nbsp;<wbr>sud)</p>
-<dt><code>-z</code></p>
+print Azimuth&nbsp;<wbr>(180 deg&nbsp;<wbr>=&nbsp;<wbr>sud)</dd>
+<dt><code>-z</code></dt>
 <dd>
-print Altitude</p>
-<dt><code>-ha</code></p>
+print Altitude</dd>
+<dt><code>-ha</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>print Hour Angle</p>
-<dt><code>-jd</code></p>
+&nbsp;<wbr>&nbsp;<wbr>print Hour Angle</dd>
+<dt><code>-jd</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>print Julian date</p>
-<dt><code>-synchro</code></p>
+&nbsp;<wbr>&nbsp;<wbr>print Julian date</dd>
+<dt><code>-synchro</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>sychronisation,(1=values are probably correct)</p>
-<dt><code>-status</code></p>
+&nbsp;<wbr>&nbsp;<wbr>sychronisation,(1=values are probably correct)</dd>
+<dt><code>-status</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>print status of moving telescope</p>
-<dt><code>-velstat</code></p>
+&nbsp;<wbr>&nbsp;<wbr>print status of moving telescope</dd>
+<dt><code>-velstat</code></dt>
 <dd>
-&nbsp;<wbr>RA and Dec velocities in format current/max</p>
-<dt><code>set:</code></p>
-<dd> (every option needs additional argument(s))</p>
-<dt><code>-coo</code></p>
-<dd> RA Dec set the Equatorial coordinates in degrees</p>
-<dt><code>-coa</code></p>
-<dd> HA Dec set the Equatorial coordinates (I. kind) in degrees</p>
-<dt><code>-cal</code></p>
-<dd> RA Dec calibrate Equatorial the coordinates in degrees</p>
-<dt><code>+ra</code></p>
-<dd> [ddd.d..] add value (may be negative) to R.A. in degrees</p>
-<dt><code>+dec</code></p>
-<dd> [ddd.d..] add value (may be negative) to Dec in degrees</p>
-<dt><code>+ra</code></p>
-<dd> [+|-] for continue slew without endpoint</p>
-<dt><code>+dec</code></p>
-<dd> [+|-] for continue slew without endpoint</p>
-<dt><code>+ra</code></p>
-<dd> ! stop slew in Right Ascension</p>
-<dt><code>+dec</code></p>
-<dd> ! stop slew in Declination</p>
-<dt><code>-vra</code></p>
+&nbsp;<wbr>RA and Dec velocities in format current/max</dd>
+<dt><code>set:</code></dt>
+<dd> (every option needs additional argument(s))</dd>
+<dt><code>-coo</code></dt>
+<dd> RA Dec set the Equatorial coordinates in degrees</dd>
+<dt><code>-coa</code></dt>
+<dd> HA Dec set the Equatorial coordinates (I. kind) in degrees</dd>
+<dt><code>-cal</code></dt>
+<dd> RA Dec calibrate Equatorial the coordinates in degrees</dd>
+<dt><code>+ra</code></dt>
+<dd> [ddd.d..] add value (may be negative) to R.A. in degrees</dd>
+<dt><code>+dec</code></dt>
+<dd> [ddd.d..] add value (may be negative) to Dec in degrees</dd>
+<dt><code>+ra</code></dt>
+<dd> [+|-] for continue slew without endpoint</dd>
+<dt><code>+dec</code></dt>
+<dd> [+|-] for continue slew without endpoint</dd>
+<dt><code>+ra</code></dt>
+<dd> ! stop slew in Right Ascension</dd>
+<dt><code>+dec</code></dt>
+<dd> ! stop slew in Declination</dd>
+<dt><code>-vra</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>set velocity of Right Ascension in degrees per second</p>
-<dt><code>-vdec</code></p>
+&nbsp;<wbr>&nbsp;<wbr>set velocity of Right Ascension in degrees per second</dd>
+<dt><code>-vdec</code></dt>
 <dd>
-&nbsp;<wbr>set velocity of Declination in degress per seconds</p>
-<dt><code>-vclock</code></p>
-<dd> set velocity of the hour clock</p>
-<dt><code>-c</code></p>
-<dd> on start the hour clock</p>
-<dt><code>-c</code></p>
-<dd> off stop the hour clock</dl>
+&nbsp;<wbr>set velocity of Declination in degress per seconds</dd>
+<dt><code>-vclock</code></dt>
+<dd> set velocity of the hour clock</dd>
+<dt><code>-c</code></dt>
+<dd> on start the hour clock</dd>
+<dt><code>-c</code></dt>
+<dd> off stop the hour clock</dd></dl>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> options:</p>
 <dl>
-<dt><code>-host</code></p>
-<dd> address[:port] hostname of server, default to local</p>
-<dt><code>-q</code></p>
-<dd> don&#8217;t print telescope status during setting of telescope</p>
-<dt><code>-pn</code></p>
+<dt><code>-host</code></dt>
+<dd> address[:port] hostname of server, default to local</dd>
+<dt><code>-q</code></dt>
+<dd> don&#8217;t print telescope status during setting of telescope</dd>
+<dt><code>-pn</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>show progress indicator&nbsp;<wbr>(on new line)</p>
-<dt><code>-h</code></p>
-<dd> print this info</dl>
+&nbsp;<wbr>&nbsp;<wbr>show progress indicator&nbsp;<wbr>(on new line)</dd>
+<dt><code>-h</code></dt>
+<dd> print this info</dd></dl>
 <p> Setting of environment variable TELESCOPE_HOST is equivalent to -host option.</p>
 <h2>REPORTING BUGS</h2>
 <p> <a rel="nofollow" href="http://integral.sci.muni.cz">http://integral.sci.muni.cz</a></p>

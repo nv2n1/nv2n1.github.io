@@ -34,11 +34,11 @@ description: "QuantLib::Handle – Shared handle to an observable."
 <p> All copies of an instance of this class refer to the same observable by means of a relinkable smart pointer. When such pointer is relinked to another observable, the change will be propagated to all the copies. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>Class T must inherit from <code>Observable</code></dl>
+<dd>Class T must inherit from <code>Observable</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>Handle</code> (const boost::shared_ptr&lt; T &gt; &amp; h = boost::shared_ptr&lt;T&gt;(), bool registerAsObserver = true) [explicit]</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>registerAsObserver is left as a backdoor in case the programmer cannot guarantee that the object pointed to will remain alive for the whole lifetime of the handle&#8212;namely, it should be set to false when the passed shared pointer does not own the pointee (this should only happen in a controlled environment, so that the programmer is aware of it). Failure to do so can very likely result in a program crash. If the programmer does want the handle to register as observer of such a shared pointer, it is his responsibility to ensure that the handle gets destroyed before the pointed object does.</dl>
+<dd>registerAsObserver is left as a backdoor in case the programmer cannot guarantee that the object pointed to will remain alive for the whole lifetime of the handle&#8212;namely, it should be set to false when the passed shared pointer does not own the pointee (this should only happen in a controlled environment, so that the programmer is aware of it). Failure to do so can very likely result in a program crash. If the programmer does want the handle to register as observer of such a shared pointer, it is his responsibility to ensure that the handle gets destroyed before the pointed object does.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -21,42 +21,42 @@ description: "tomboy – A simple note-taking application for Gnome"
 <h2>OPTIONS</h2>
 <p> The program follows the usual GNU command line syntax, with options starting with two dashes (`&#8211;&#8216;). A summary of options are included below.</p>
 <dl>
-<dt><code>&#8211;new-note</code></p>
-<dd> Create and display a new note.</p>
-<dt><code>&#8211;new-note TITLE</code></p>
-<dd> Create and display a new note with the title given.</p>
-<dt><code>&#8211;open-note TITLE/URL</code></p>
-<dd> Display the existing note matching TITLE or URL.</p>
-<dt><code>&#8211;note-path [PATH]</code></p>
-<dd> Load/store note data in this directory.</p>
-<dt><code>&#8211;start-here</code></p>
-<dd> Display the &quot;Start Here&quot; note.</p>
-<dt><code>&#8211;panel-applet</code></p>
-<dd> Launches Tomboy as a panel applet. This feature is not meant for users, but must be utilized only by gnome-panel.</p>
-<dt><code>&#8211;search TEXT</code></p>
-<dd> Searches notes for the specified TEXT and opens the Search All Notes window with the search text</p>
-<dt><code>&#8211;highlight-search TEXT</code></p>
-<dd> Search and highlight TEXT in the opened note.</p>
-<dt><code>&#8211;help<tt>&nbsp;<wbr>&nbsp;<wbr></tt></code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Turn on debugging output. </p>
+<dt><code>&#8211;new-note</code></dt>
+<dd> Create and display a new note.</dd>
+<dt><code>&#8211;new-note TITLE</code></dt>
+<dd> Create and display a new note with the title given.</dd>
+<dt><code>&#8211;open-note TITLE/URL</code></dt>
+<dd> Display the existing note matching TITLE or URL.</dd>
+<dt><code>&#8211;note-path [PATH]</code></dt>
+<dd> Load/store note data in this directory.</dd>
+<dt><code>&#8211;start-here</code></dt>
+<dd> Display the &quot;Start Here&quot; note.</dd>
+<dt><code>&#8211;panel-applet</code></dt>
+<dd> Launches Tomboy as a panel applet. This feature is not meant for users, but must be utilized only by gnome-panel.</dd>
+<dt><code>&#8211;search TEXT</code></dt>
+<dd> Searches notes for the specified TEXT and opens the Search All Notes window with the search text</dd>
+<dt><code>&#8211;highlight-search TEXT</code></dt>
+<dd> Search and highlight TEXT in the opened note.</dd>
+<dt><code>&#8211;help<tt>&nbsp;<wbr>&nbsp;<wbr></tt></code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Turn on debugging output. </dd>
 </dl>
 <h2>GCONF SETTINGS</h2>
 <p> Tomboy has several preference settings stored in GConf. Changes to Settings are applied instantly to any running Tomboy instance. A summary of the GConf settings and their purpose are described below.</p>
 <dl>
-<dt><code>/apps/tomboy/global_keybindings/open_start_here</code></p>
-<dd> Global X keybinding for displaying the &quot;Start Here&quot; note. The default keybinding is &lt;Alt&gt;F11.</p>
-<dt><code>/apps/tomboy/global_keybindings/show_note_menu</code></p>
-<dd> Global X keybinding for displaying the Tomboy applet&#8217;s note menu. The default keybinding is &lt;Alt&gt;F12.</p>
-<dt><code>/apps/tomboy/global_keybindings/create_new_note</code></p>
-<dd> Global X keybinding for creating and displaying a new note.</p>
-<dt><code>/apps/tomboy/global_keybindings/open_recent_changes</code></p>
-<dd> Global X keybinding for opening the recent changes dialog.</p>
-<dt><code>/apps/tomboy/global_keybindings/open_search</code></p>
-<dd> Global X keybinding for opening the note search dialog. </p>
+<dt><code>/apps/tomboy/global_keybindings/open_start_here</code></dt>
+<dd> Global X keybinding for displaying the &quot;Start Here&quot; note. The default keybinding is &lt;Alt&gt;F11.</dd>
+<dt><code>/apps/tomboy/global_keybindings/show_note_menu</code></dt>
+<dd> Global X keybinding for displaying the Tomboy applet&#8217;s note menu. The default keybinding is &lt;Alt&gt;F12.</dd>
+<dt><code>/apps/tomboy/global_keybindings/create_new_note</code></dt>
+<dd> Global X keybinding for creating and displaying a new note.</dd>
+<dt><code>/apps/tomboy/global_keybindings/open_recent_changes</code></dt>
+<dd> Global X keybinding for opening the recent changes dialog.</dd>
+<dt><code>/apps/tomboy/global_keybindings/open_search</code></dt>
+<dd> Global X keybinding for opening the note search dialog. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a rel="nofollow" href="http://www.beatniksoftware.com/tomboy/">http://www.beatniksoftware.com/tomboy/</a></i> </p>

@@ -11,56 +11,53 @@ description: "ping_pong – measures the ping-pong byte range lock latency"
 <p> ping_pong &#8211; measures the ping-pong byte range lock latency </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ping_pong</code> {-r | -w | -rw} [-m] [-c] {<i>FILENAME</i>} {<i>NUM-LOCKS</i>}</dl>
+<dt> <code>ping_pong</code> {-r | -w | -rw} [-m] [-c] {<i>FILENAME</i>} {<i>NUM-LOCKS</i>}</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>ping_pong measures the byte range lock latency. It is especially useful on a cluster of nodes sharing a common lock manager as it will give some indication of the lock manager&#8217;s performance under stress. </p>
+<dd>ping_pong measures the byte range lock latency. It is especially useful on a cluster of nodes sharing a common lock manager as it will give some indication of the lock manager&#8217;s performance under stress. </dd>
 <p> FILENAME is a file on shared storage to use for byte range locking tests. </p>
 <p> NUM-LOCKS is the number of byte range locks, so needs to be (strictly) greater than the number of nodes in the cluster.</p>
 <h2>OPTIONS</h2>
 <p> -r</p>
 <dl>
 <dt>
-<dd> test read performance</dl>
+</dt><dd> test read performance</dd></dl>
 <p> -w</p>
 <dl>
 <dt>
-<dd> test write performance</dl>
+</dt><dd> test write performance</dd></dl>
 <p> -m</p>
 <dl>
 <dt>
-<dd> use mmap</dl>
+</dt><dd> use mmap</dd></dl>
 <p> -c</p>
 <dl>
 <dt>
-<dd> validate the locks</dl>
+</dt><dd> validate the locks</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Testing lock coherence </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ping_pong test.dat N
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Testing lock coherence with lock validation </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ping_pong -c test.dat N
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Testing IO coherence </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ping_pong -rw test.dat N
-    
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7), m[blue]<code><a rel="nofollow" href="https://wiki.samba.org/index.php/Ping_pong">https://wiki.samba.org/index.php/Ping_pong</a></code>m[]</p>
 <h2>AUTHOR</h2>

@@ -15,11 +15,11 @@ clk_set_phase - adjust the phase shift of a clock signal
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock signal source</dl>
+<dl><dd></dd><dd>clock signal source</dd></dl>
  
 
  <i>degrees</i>
-<dl><dd>number of degrees the signal is shifted</dl>
+<dl><dd>number of degrees the signal is shifted</dd></dl>
 
 <h2>Description</h2>
 

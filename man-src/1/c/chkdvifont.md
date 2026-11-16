@@ -21,7 +21,7 @@ description: "chkdvifont – CHecK DVI/tfm/font file and tell informations of FO
 <p> By default, the mode is guessed from the file extension.</p>
 <h2>EXAMPLE</h2>
 <dl>
-<dt>(1) If you want to know what font is used in sample.dvi,</p>
+<dt>(1) If you want to know what font is used in sample.dvi,</dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;chkdvifont sample.dvi<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dvi file name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;sample.dvi<br />
@@ -45,13 +45,13 @@ description: "chkdvifont – CHecK DVI/tfm/font file and tell informations of FO
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;design size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;<wbr>&nbsp;<wbr>&nbsp;655360 scaled points&nbsp;=&nbsp;10 points<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;space size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;<wbr>&nbsp;<wbr>&nbsp;655360 scaled points&nbsp;=&nbsp;10 points<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;font name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;cmr10 </p>
-<dt>(2) If you want to know the brief summary of jis.tfm,</p>
+</dd><dt>(2) If you want to know the brief summary of jis.tfm,</dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;chkdvifont jis.tfm<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;jis&quot;&nbsp;is a jfm file :&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;-&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;5<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;checksum&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;00000000<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;design size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;10485760 2^{-20}&nbsp;points&nbsp;=&nbsp;10 points </p>
-<dt>(3) If you want to know what font is referred to by jis.vf,</p>
+</dd><dt>(3) If you want to know what font is referred to by jis.vf,</dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;chkdvifont jis.vf<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;jis.vf&quot;&nbsp;is in VF format<br />
@@ -61,7 +61,7 @@ description: "chkdvifont – CHecK DVI/tfm/font file and tell informations of FO
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;font dsize&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;10485760 2^{-20}&nbsp;points&nbsp;=&nbsp;10 points<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;font at&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;<wbr>&nbsp;0.962216<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;font name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;rml </p>
-</dl>
+</dd></dl>
 <p> Listing the fonts used in a DVI file (as shown in the first example) is almost equivalent to <code>dvifontlist</code> in TeX-Guy package &lt;<a rel="nofollow" href="http://www-masu.ist.osaka-u.ac.jp/%7Ekakugawa/TeX-Guy/">http://www-masu.ist.osaka-u.ac.jp/%7Ekakugawa/TeX-Guy/</a>&gt; and a script <code>dviinfox</code> &lt;<a rel="nofollow" href="https://ctan.org/pkg/dviinfox">https://ctan.org/pkg/dviinfox</a>&gt;. I don&#8217;t know any alternatives for obtaining information about TFM, OFM, VF and other font formats.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pltotf/">pltotf</a>(1), <a href="/docs/linux/man/1-tftopl/">tftopl</a>(1), <a href="/docs/linux/man/1-vptovf/">vptovf</a>(1), <a href="/docs/linux/man/1-vftovp/">vftovp</a>(1)</p>

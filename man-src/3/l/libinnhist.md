@@ -76,30 +76,30 @@ bool HISctl(struct history *history, int request, void *val);
 <p> If the callback function attempts to access the underlying database during the callback, the behaviour is unspecified. </p>
 <p> <code>HISstats</code> returns statistics on the history cache mechanism; given a handle <i>history</i>, the return value is a <i>struct histstats</i> detailing:</p>
 <dl>
-<dt>&quot;hitpos&quot;</p>
-<dd> The number of times an item was found directly in the cache and known to exist in the underlying history manager.</p>
-<dt>&quot;hitneg&quot;</p>
-<dd> The number of times an item was found directly in the cache and known not to exist in the underlying history manager.</p>
-<dt>&quot;misses&quot;</p>
-<dd> The number of times an item was not found directly in the cache, but on retrieval from the underlying history manager was found to exist.</p>
-<dt>&quot;dne&quot;</p>
-<dd> The number of times an item was not found directly in the cache, but on retrieval from the underlying history manager was found not to exist.</dl>
+<dt>&quot;hitpos&quot;</dt>
+<dd> The number of times an item was found directly in the cache and known to exist in the underlying history manager.</dd>
+<dt>&quot;hitneg&quot;</dt>
+<dd> The number of times an item was found directly in the cache and known not to exist in the underlying history manager.</dd>
+<dt>&quot;misses&quot;</dt>
+<dd> The number of times an item was not found directly in the cache, but on retrieval from the underlying history manager was found to exist.</dd>
+<dt>&quot;dne&quot;</dt>
+<dd> The number of times an item was not found directly in the cache, but on retrieval from the underlying history manager was found not to exist.</dd></dl>
 <p> Note that the history cache is only checked by <code>HIScheck</code> and only affected by <code>HIScheck</code>, <code>HISwrite</code>, <code>HISremember</code> and <code>HISreplace</code>. Following a call to <code>HISstats</code> the history statistics associated with <i>history</i> are cleared. </p>
 <p> <code>HISerror</code> returns a string describing the most recent error associated with <i>history</i>; the format and content of these strings is history manager dependent. Note that on setting an error, the history <font SIZE="-1">API</font> will call the <code>warn</code> function from <i><a href="/docs/linux/man/3-libinn/">libinn</a></i>(3). </p>
 <p> <code>HISctl</code> provides a control interface to the underlying history manager. The <i>request</i> argument determines the type of the request and the meaning of the <i>val</i> argument. The values for <i>request</i> are:</p>
 <dl>
-<dt>&quot;HISCTLG_PATH&quot; (const char **)</p>
-<dd> Get the base file path which the history handle represents. <i>val</i> should be a pointer to a location of type <code>const char *</code>. The result must not later be passed to <i><a href="/docs/linux/man/3-free/">free</a></i>(3).</p>
-<dt>&quot;HISCTLS_PATH&quot; (const char *)</p>
-<dd> Set the base file path which this history handle should use; typically this is used after an anonymous handle has been created using <code>HISopen(</code><font SIZE="-1"><code>NULL</code></font><code>, &#8230;)</code>. <i>val</i> should be a value of type <code>const char *</code> and will be copied before being stored internally.</p>
-<dt>&quot;HISCTLS_SYNCCOUNT&quot; (size_t *)</p>
-<dd> Set an upper bound on how many history operations may be pending in core before being synced to permanent storage; <code>0</code> indicates unlimited. <i>val</i> should be a pointer to a value of type <code>size_t</code> and will not be modified by the call.</p>
-<dt>&quot;HISCTLS_NPAIRS&quot; (size_t *)</p>
-<dd> Set a hint to the to the underlying history manager as to how many entries there are expected to be in the history database; <code>0</code> indicates that an automatic or default sizing should be made. <i>val</i> should be a pointer to a value of type <code>size_t</code> and will not be modified by the call.</p>
-<dt>&quot;HISCTLS_IGNOREOLD&quot; (bool *)</p>
-<dd> Instruct the underlying history manager to ignore existing database when creating new ones; typically this option may be set to <code>true</code> if the administrator believes that the existing history database is corrupt and that ignoring it may help. <i>val</i> should be a pointer to a value of type <code>bool</code> and will not be modified by the call.</p>
-<dt>&quot;HISCTLS_STATINTERVAL&quot; (time_t *)</p>
-<dd> For the history v6 and tagged hash managers, set the interval, in seconds, between <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2)s of the history files checking for replaced files (as happens during expire); this option is typically used by <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) like applications. <i>val</i> should be a pointer to a value of type <code>time_t</code> and will not be modified by the call.</dl>
+<dt>&quot;HISCTLG_PATH&quot; (const char **)</dt>
+<dd> Get the base file path which the history handle represents. <i>val</i> should be a pointer to a location of type <code>const char *</code>. The result must not later be passed to <i><a href="/docs/linux/man/3-free/">free</a></i>(3).</dd>
+<dt>&quot;HISCTLS_PATH&quot; (const char *)</dt>
+<dd> Set the base file path which this history handle should use; typically this is used after an anonymous handle has been created using <code>HISopen(</code><font SIZE="-1"><code>NULL</code></font><code>, &#8230;)</code>. <i>val</i> should be a value of type <code>const char *</code> and will be copied before being stored internally.</dd>
+<dt>&quot;HISCTLS_SYNCCOUNT&quot; (size_t *)</dt>
+<dd> Set an upper bound on how many history operations may be pending in core before being synced to permanent storage; <code>0</code> indicates unlimited. <i>val</i> should be a pointer to a value of type <code>size_t</code> and will not be modified by the call.</dd>
+<dt>&quot;HISCTLS_NPAIRS&quot; (size_t *)</dt>
+<dd> Set a hint to the to the underlying history manager as to how many entries there are expected to be in the history database; <code>0</code> indicates that an automatic or default sizing should be made. <i>val</i> should be a pointer to a value of type <code>size_t</code> and will not be modified by the call.</dd>
+<dt>&quot;HISCTLS_IGNOREOLD&quot; (bool *)</dt>
+<dd> Instruct the underlying history manager to ignore existing database when creating new ones; typically this option may be set to <code>true</code> if the administrator believes that the existing history database is corrupt and that ignoring it may help. <i>val</i> should be a pointer to a value of type <code>bool</code> and will not be modified by the call.</dd>
+<dt>&quot;HISCTLS_STATINTERVAL&quot; (time_t *)</dt>
+<dd> For the history v6 and tagged hash managers, set the interval, in seconds, between <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2)s of the history files checking for replaced files (as happens during expire); this option is typically used by <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) like applications. <i>val</i> should be a pointer to a value of type <code>time_t</code> and will not be modified by the call.</dd></dl>
 <h2>HISTORY</h2>
 <p> Written by Alex Kiernan &lt;alexk [at] demon.net&gt; for InterNetNews 2.4.0. </p>
 <p> <tt>$Id:</tt> libinnhist.pod 9074 2010-05-31 19:01:32Z iulius $ </p>

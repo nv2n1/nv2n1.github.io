@@ -16,40 +16,40 @@ description: "rotconverter – Manipulate total reconstruction and stage rotatio
 <p> <code>rotconverter</code> reads one or more plate motion models (stage or total reconstruction rotations) stored in the given files. If more than one plate motion model is given we will add or subtract them in the order they were listed. The minus sign means we should first transpose the rotation and then add it to the previous rotation. If a file cannot be opened we will attempt to decode the file name as a single rotation whose parameters are separated by slashes.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>rotX</i></p>
-<dd> Name of a file with a plate motion model. Separate several files with desired operator (+ or -). The very first file may also have a leading minus operator to imply a transpose. We also recognize filenames of the form A-B, where both A and B are uppercase plate abbreviations as used by GPlates, to indicate we should look up the rotation between the two plates in the GPlates rotation file (e.g., PAC-MBL). If any of the specified rotation models cannot be opened as a file, we will try to decode the file name as <i>lon/lat/tstart</i>[<i>/tstop</i>]/<i>angle</i> for a single rotation given on the command line. The <i>tstop</i> argument is required for stage poles only. For a single total reconstruction rotation without any time information, give <i>lon/lat/angle</i> only.</dl>
+<dt><i>rotX</i></dt>
+<dd> Name of a file with a plate motion model. Separate several files with desired operator (+ or -). The very first file may also have a leading minus operator to imply a transpose. We also recognize filenames of the form A-B, where both A and B are uppercase plate abbreviations as used by GPlates, to indicate we should look up the rotation between the two plates in the GPlates rotation file (e.g., PAC-MBL). If any of the specified rotation models cannot be opened as a file, we will try to decode the file name as <i>lon/lat/tstart</i>[<i>/tstop</i>]/<i>angle</i> for a single rotation given on the command line. The <i>tstop</i> argument is required for stage poles only. For a single total reconstruction rotation without any time information, give <i>lon/lat/angle</i> only.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code></p>
-<dd> Indicate that times are actually just opening angles [times in Myr].</p>
-<dt><code>-D</code></p>
-<dd> Report longitudes use the -180/+180 range [Default is 0/360].</p>
-<dt><code>-E</code>[<i>fact</i>]</p>
-<dd> Scale opening angles by <i>fact</i> on output [0.5]. Typically used to get half-rates needed for flowlines. Requires stage pole output (see <code>-F</code>).</p>
-<dt><code>-F</code><i>out</i></p>
-<dd> Specify the output format for rotations. The <i>out</i> flag must be either <code>t</code> or <code>s</code> for total reconstruction or stage rotations, respectively. [Default is <code>-Ft</code> (output contains total reconstruction rotations)].</p>
-<dt><code>-G</code></p>
-<dd> Output final rotations in the Plates4 format used by GPlates [Default is spotter format].</p>
-<dt><code>-N</code></p>
-<dd> Place all output poles in the northern hemisphere [Default reports positive rotation angles].</p>
-<dt><code>-S</code></p>
-<dd> Place all output poles in the southern hemisphere [Default reports positive rotation angles].</p>
-<dt><code>-T</code></p>
-<dd> Transpose the final result, i.e., change the sign of the rotation angles.</p>
-<dt><code>-W</code></p>
-<dd> Ensure all output rotations have negative opening angles [Default reports positive rotation angles].</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c]. Report statistics of extracted rotations.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-A</code></dt>
+<dd> Indicate that times are actually just opening angles [times in Myr].</dd>
+<dt><code>-D</code></dt>
+<dd> Report longitudes use the -180/+180 range [Default is 0/360].</dd>
+<dt><code>-E</code>[<i>fact</i>]</dt>
+<dd> Scale opening angles by <i>fact</i> on output [0.5]. Typically used to get half-rates needed for flowlines. Requires stage pole output (see <code>-F</code>).</dd>
+<dt><code>-F</code><i>out</i></dt>
+<dd> Specify the output format for rotations. The <i>out</i> flag must be either <code>t</code> or <code>s</code> for total reconstruction or stage rotations, respectively. [Default is <code>-Ft</code> (output contains total reconstruction rotations)].</dd>
+<dt><code>-G</code></dt>
+<dd> Output final rotations in the Plates4 format used by GPlates [Default is spotter format].</dd>
+<dt><code>-N</code></dt>
+<dd> Place all output poles in the northern hemisphere [Default reports positive rotation angles].</dd>
+<dt><code>-S</code></dt>
+<dd> Place all output poles in the southern hemisphere [Default reports positive rotation angles].</dd>
+<dt><code>-T</code></dt>
+<dd> Transpose the final result, i.e., change the sign of the rotation angles.</dd>
+<dt><code>-W</code></dt>
+<dd> Ensure all output rotations have negative opening angles [Default reports positive rotation angles].</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c]. Report statistics of extracted rotations.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> Note that only one of , , and can be used at the same time.</p>
 <h2>EXAMPLES</h2>

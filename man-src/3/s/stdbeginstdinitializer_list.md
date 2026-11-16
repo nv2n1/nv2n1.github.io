@@ -12,13 +12,10 @@ std::begin(std::initializer_list) - std::begin(std::initializer_list)
 
 <pre><code>template &lt;class E&gt;
 (since C++ 11)
-
     const E *begin(initializer_list&lt;E&gt; il) noexcept;
 (until C++ 14)
-
     template &lt;class E&gt;
     (since C++ 14)
-
         constexpr const E *begin(initializer_list&lt;E&gt; il) noexcept;</code></pre> 
 The overload of std::begin for initializer_list returns a pointer to the first element of il. 
 
@@ -33,10 +30,8 @@ il.begin()
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;initializer_list&gt;
 int main()
-
 {
     std::initializer_list&lt;int&gt; il = {3, 1, 4, 1};
     for (auto it = std::begin(il); it != std::end(il); ++it) {

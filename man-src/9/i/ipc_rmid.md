@@ -15,11 +15,11 @@ ipc_rmid - remove an ipc identifier
 <h2>Arguments</h2>
 
 <i>ids</i>
-<dl><dd><dd>ipc identifier set</dl>
+<dl><dd></dd><dd>ipc identifier set</dd></dl>
  
 
  <i>ipcp</i>
-<dl><dd>ipc perm structure containing the identifier to remove</dl>
+<dl><dd>ipc perm structure containing the identifier to remove</dd></dl>
 
 <h2>Description</h2>
 

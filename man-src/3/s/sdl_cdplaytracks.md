@@ -16,7 +16,7 @@ description: "SDL_CDPlayTracks – Play the given CD track(s)"
 <p> <code>start_frame</code> is the frame offset, from the beginning of the <code>start_track</code>, at which to start. <code>nframes</code> is the frame offset, from the beginning of the last track (<code>start_track</code>+<code>ntracks</code>), at which to end playing. </p>
 <p> <code>SDL_CDPlayTracks</code> should only be called after calling <i></i><code>SDL_CDStatus</code> to get track information about the CD. </p>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> Data tracks are ignored.</dl>
 <p> </code></p>
 <h2>Return Value</h2>
@@ -35,3 +35,4 @@ if(CD_INDRIVE(SDL_CDStatus(cdrom)))
 <p>&nbsp;<wbr></p>
 <h2>See Also</h2>
 <p><i></i><code>SDL_CDPlay</code>, <i></i><code>SDL_CDStatus</code>, <i></i><code>SDL_CD</code></p>
+</p>

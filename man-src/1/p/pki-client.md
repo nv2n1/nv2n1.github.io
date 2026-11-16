@@ -20,35 +20,35 @@ pki[CLI options] client
 <p> <code>pki</code> [CLI options] <code>client</code></p>
 <dl>
 <dt>
-<dd> This command is to list available client commands.</dl>
+</dt><dd> This command is to list available client commands.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>client-init</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to create a new security database for the client.</dl>
+</dt><dd> This command is to create a new security database for the client.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>client-cert-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list certificates in the client security database.</dl>
+</dt><dd> This command is to list certificates in the client security database.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>client-cert-request</code> [subject DN] [command options]</p>
 <dl>
 <dt>
-<dd> This command is to generate and submit a certificate request.</dl>
+</dt><dd> This command is to generate and submit a certificate request.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>client-cert-import</code> [nickname] [command options]</p>
 <dl>
 <dt>
-<dd> This command is to import a certificate into the client security database.</dl>
+</dt><dd> This command is to import a certificate into the client security database.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>client-cert-mod</code> &lt;nickname&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify a certificate in the client security database.</dl>
+</dt><dd> This command is to modify a certificate in the client security database.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>client-cert-show</code> &lt;nickname&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view a certificate in the client security database.</dl>
+</dt><dd> This command is to view a certificate in the client security database.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>client-cert-del</code> &lt;nickname&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a certificate from the client security database.</dl>
+</dt><dd> This command is to delete a certificate from the client security database.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

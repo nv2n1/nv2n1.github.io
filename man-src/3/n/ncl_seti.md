@@ -27,9 +27,9 @@ CALL SETI (IX,IY)
 <h2>Description</h2>
 
 <dl><dt>IX
-<dd>(an input expression of type INTEGER) is the X axis exponent for plotter coordinates defining a range of 1 to 2**IX - 1. IX has a default value of 10.
-<dt>IY
-<dd>(an input expression of type INTEGER) is the Y axis exponent for plotter coordinates defining a range of 1 to 2**IY - 1. IY has a default value of 10.</dl>
+</dt><dd>(an input expression of type INTEGER) is the X axis exponent for plotter coordinates defining a range of 1 to 2**IX - 1. IX has a default value of 10.
+</dd><dt>IY
+</dt><dd>(an input expression of type INTEGER) is the Y axis exponent for plotter coordinates defining a range of 1 to 2**IY - 1. IY has a default value of 10.</dd></dl>
 
 <h2>Access</h2>
 

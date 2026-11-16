@@ -21,10 +21,10 @@ description: "dger.f –"
  A := alpha*x*y**T + A,
  where alpha is a scalar, x is an m element vector, y is an n element
  vector and A is an m by n matrix.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  On entry, M specifies the number of rows of the matrix A.
  M must be at least zero.</pre>
@@ -66,13 +66,13 @@ description: "dger.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -82,7 +82,8 @@ description: "dger.f –"
  Jeremy Du Croz, Nag Central Office.
  Sven Hammarling, Nag Central Office.
  Richard Hanson, Sandia National Labs.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 131 of file dger.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

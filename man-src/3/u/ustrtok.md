@@ -10,7 +10,6 @@ description: "ustrtok – Retrieves tokens from a string. Allegro game programmi
 <p>ustrtok &#8211; Retrieves tokens from a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrtok(char *s, const char *set);</code></pre>
 <h2>Description</h2>
 <p>This function retrieves tokens from `s&#8217; which are delimited by characters from `set&#8217;. To initiate the search, pass the string to be searched as `s&#8217;. For the remaining tokens, pass NULL instead. Warning: Since ustrtok alters the string it is parsing, you should always copy the string to a temporary buffer before parsing it. Also, this function is not re-entrant (ie. you cannot parse two strings at the same time). Example: </p>

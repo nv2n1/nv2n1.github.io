@@ -13,9 +13,9 @@ description: "wps2html – convert Works document into HTML"
 <p> <code>wps2html</code> [<i>OPTION</i>] <i>&lt;Works Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>:</p>
-<dd> Shows this help message</p>
-<dt><code>-v</code>:</p>
-<dd> Output wps2html version </p>
+<dt><code>-h</code>:</dt>
+<dd> Shows this help message</dd>
+<dt><code>-v</code>:</dt>
+<dd> Output wps2html version </dd>
 </dl>
 <h2>Index</h2>

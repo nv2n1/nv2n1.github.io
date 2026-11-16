@@ -14,10 +14,10 @@ description: "gnutls_psk_set_server_credentials_file – API function"
 <p> <code>int gnutls_psk_set_server_credentials_file(gnutls_psk_server_credentials_t </code><i>res</i><code>, const char * </code><i>password_file</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_psk_server_credentials_t res</p>
-<dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</p>
-<dt>const char * password_file</p>
-<dd> is the PSK password file (passwd.psk)</dl>
+<dt>gnutls_psk_server_credentials_t res</dt>
+<dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</dd>
+<dt>const char * password_file</dt>
+<dd> is the PSK password file (passwd.psk)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets the password file, in a <code>gnutls_psk_server_credentials_t</code> structure. This password file holds usernames and keys and will be used for PSK authentication.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_psk_set_server_credentials_file – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

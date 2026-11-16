@@ -14,12 +14,12 @@ description: "scsi_host_put – dec a Scsi_Host ref count"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>Pointer to Scsi_Host to dec.</dl>
+</dd><dd>Pointer to Scsi_Host to dec.</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

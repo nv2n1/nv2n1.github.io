@@ -14,7 +14,7 @@ description: "skb_tx_timestamp – Driver hook for transmit timestamping"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>A socket buffer.</dl>
+</dd><dd>A socket buffer.</dd></dl>
 <h2>Description</h2>
 <p>Ethernet MAC Drivers should call this function in their <code>hard_xmit</code> function immediately before giving the sk_buff to the MAC hardware. </p>
 <p> Specifically, one should make absolutely sure that this function is called before TX completion of this packet can trigger. Otherwise the packet could potentially already be freed.</p>

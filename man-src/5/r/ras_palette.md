@@ -22,21 +22,21 @@ palette_file.txt</pre>
 <h2><code>EXAMPLES</code></h2>
 <p>All of the examples below deal with textual color palettes.</p>
 <dl>
-<dt>Setting Entries</p>
+<dt>Setting Entries</dt>
 <dd>
-<dd>Set color index 0 to black. </p>
+</dd><dd>Set color index 0 to black. </dd>
 <pre>0 0 0 0</pre>
-<dd>Set color index 255 to white </p>
+<dd>Set color index 255 to white </dd>
 <pre>255 255 255 255</pre>
-<dt>Grayscale Ramp</p>
+<dt>Grayscale Ramp</dt>
 <dd>
-<dd>Let&#8217;s suppose you have a file named &quot;my.txt&quot; and it has just two lines in it: the black entry and the white entry from above. This will produce a grayscale color palette, where the table starts at black and ramps up to white; since only entries 0 and 255 are specified, the remaining indicies are interpolated. </p>
+</dd><dd>Let&#8217;s suppose you have a file named &quot;my.txt&quot; and it has just two lines in it: the black entry and the white entry from above. This will produce a grayscale color palette, where the table starts at black and ramps up to white; since only entries 0 and 255 are specified, the remaining indicies are interpolated. </dd>
 <pre>0 0 0 0
 255 255 255 255</pre>
-<dd>(<i>Note</i>: An empty palette file (e.g. &quot;empty.txt&quot;) is legal and, since the 0 index defaults to black and the 255 index to white, produces a grayscale ramp just as in the above example.)</p>
-<dt>Temperature Color Scale</p>
+<dd>(<i>Note</i>: An empty palette file (e.g. &quot;empty.txt&quot;) is legal and, since the 0 index defaults to black and the 255 index to white, produces a grayscale ramp just as in the above example.)</dd>
+<dt>Temperature Color Scale</dt>
 <dd>
-<dd>Let&#8217;s suppose you want entry 0 to be black, and the remaining indices to start at 1 with a fully-saturated blue and shift linearly to 255 with a fully-saturated red. Only three entries are required in your file, &quot;temp.txt&quot;. </p>
+</dd><dd>Let&#8217;s suppose you want entry 0 to be black, and the remaining indices to start at 1 with a fully-saturated blue and shift linearly to 255 with a fully-saturated red. Only three entries are required in your file, &quot;temp.txt&quot;. </dd>
 <pre>0 0 0 0
 1 0 0 255
 255 255 0 0</pre>

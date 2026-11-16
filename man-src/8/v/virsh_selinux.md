@@ -93,8 +93,8 @@ description: "virsh_selinux – Security Enhanced Linux Policy for the virsh pro
 <p> <code>virsh_exec_t</code> </p>
 <p> &#8211; Set files with the virsh_exec_t type, if you want to transition an executable to the virsh_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/xl, /usr/sbin/xm, /usr/bin/virsh </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/xl, /usr/sbin/xm, /usr/bin/virsh </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

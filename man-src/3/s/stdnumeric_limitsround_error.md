@@ -10,7 +10,6 @@ description: "std::numeric_limits<T>::round_error – std::numeric_limits<T>::ro
 <p>std::numeric_limits&lt;T&gt;::round_error &#8211; std::numeric_limits&lt;T&gt;::round_error</p>
 <h2>Synopsis</h2>
 <pre><code>static T round_error() throw();             (until C++11)
-
 static constexpr T round_error() noexcept;  (since C++11)</code></pre>
 <p>Returns the largest possible rounding error in ULPs (units in the last place) as defined by ISO 10967, which can vary from 0.5 (rounding to the nearest digit) to 1.0 (rounding to zero or to infinity). It is only meaningful if std::numeric_limits&lt;T&gt;::is_integer == false. </p>
 <h2>Return value</h2>

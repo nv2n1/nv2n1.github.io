@@ -14,7 +14,7 @@ description: "deactivate_super – drop an active reference to superblock"
 <p><i>s</i></p>
 <dl>
 <dd>
-<dd>superblock to deactivate</dl>
+</dd><dd>superblock to deactivate</dd></dl>
 <h2>Description</h2>
 <p>Variant of <code>deactivate_locked_super</code>, except that superblock is *not* locked by caller. If we are going to drop the final active reference, lock will be acquired prior to that.</p>
 <h2>Copyright</h2>

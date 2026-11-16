@@ -11,9 +11,7 @@ std::strchr - std::strchr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     const char *strchr(const char *str, int ch);
-
 char *strchr(char *str, int ch);</code></pre> 
 Finds the first occurrence of the character static_cast&lt;char&gt;(ch) in the byte string pointed to by str. 
 The terminating null character is considered to be a part of the string and can be found if searching for '\0'. 
@@ -30,10 +28,8 @@ Pointer to the found character in str, or a null pointer if no such character is
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     const char *str = &quot;Try not. Do, or do not. There is no try.&quot;;
     char target = 'T';

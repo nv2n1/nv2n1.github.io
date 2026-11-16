@@ -11,11 +11,8 @@ description: "ql/termstructures/credit/piecewisedefaultcurve.hpp – piecewise-i
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/iterativebootstrap.hpp&gt;
-
 #include &lt;ql/termstructures/credit/probabilitytraits.hpp&gt;
-
 #include &lt;ql/patterns/lazyobject.hpp&gt;
-
 #include &lt;ql/quote.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</code><br />

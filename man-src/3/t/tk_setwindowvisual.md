@@ -14,10 +14,10 @@ int
 <code>Tk_SetWindowVisual</code>(<i>tkwin, visual, depth, colormap</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window.</p>
-<dd>Visual <i>*visual</i> (in) New visual type to use for <i>tkwin</i>.</p>
-<dd>int <i>depth</i> (in) Number of bits per pixel desired for <i>tkwin</i>.</p>
-<dd>Colormap <i>colormap</i> (in) New colormap for <i>tkwin</i>, which must be compatible with <i>visual</i> and <i>depth</i>. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>Visual <i>*visual</i> (in) New visual type to use for <i>tkwin</i>.</dd>
+<dd>int <i>depth</i> (in) Number of bits per pixel desired for <i>tkwin</i>.</dd>
+<dd>Colormap <i>colormap</i> (in) New colormap for <i>tkwin</i>, which must be compatible with <i>visual</i> and <i>depth</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>When Tk creates a new window it assigns it the default visual characteristics (visual, depth, and colormap) for its screen. <code>Tk_SetWindowVisual</code> may be called to change them. <code>Tk_SetWindowVisual</code> must be called before the window has actually been created in X (e.g. before <code>Tk_MapWindow</code> or <code>Tk_MakeWindowExist</code> has been invoked for the window). The safest thing is to call <code>Tk_SetWindowVisual</code> immediately after calling <code>Tk_CreateWindow</code>. If <i>tkwin</i> has already been created before <code>Tk_SetWindowVisual</code> is called then it returns 0 and does not make any changes; otherwise it returns 1 to signify that the operation completed successfully. </p>

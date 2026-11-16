@@ -16,12 +16,12 @@ description: "tailf – follow the growth of a log file"
 <p> <code>tailf</code> is extremely useful for monitoring log files on a laptop when logging is infrequent and the user desires that the hard disk spin down to conserve battery life. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-n</code>, <code>&#8211;lines</code>=<i>N</i>, <code>-N</code></p>
-<dd> output the last <i>N</i> lines, instead of the last 10.</p>
-<dt><code>-V</code>, <code>&#8211;version</p>
-<dd> Output version information and exit.</p>
-<dt>-h</code>, <code>&#8211;help</p>
-<dd> Display help and exit. </p>
+<dt><code>-n</code>, <code>&#8211;lines</code>=<i>N</i>, <code>-N</code></dt>
+<dd> output the last <i>N</i> lines, instead of the last 10.</dd>
+<dt><code>-V</code>, <code>&#8211;version</dt>
+<dd> Output version information and exit.</dd>
+<dt>-h</code>, <code>&#8211;help</dt>
+<dd> Display help and exit. </dd>
 </dl>
 <p> </code></p>
 <h2>AUTHOR</h2>

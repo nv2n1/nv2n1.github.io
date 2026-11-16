@@ -13,12 +13,12 @@ description: "ipc_namespaces – overview of Linux IPC namespaces"
 <p> Each IPC namespace has its own set of System V IPC identifiers and its own POSIX message queue filesystem. Objects created in an IPC namespace are visible to all other processes that are members of that namespace, but are not visible to processes in other IPC namespaces. </p>
 <p> The following <i>/proc</i> interfaces are distinct in each IPC namespace:</p>
 <dl>
-<dt>*</p>
-<dd>The POSIX message queue interfaces in <i>/proc/sys/fs/mqueue</i>.</p>
-<dt>*</p>
-<dd>The System V IPC interfaces in <i>/proc/sys/kernel</i>, namely: <i>msgmax</i>, <i>msgmnb</i>, <i>msgmni</i>, <i>sem</i>, <i>shmall</i>, <i>shmmax</i>, <i>shmmni</i>, and <i>shm_rmid_forced</i>.</p>
-<dt>*</p>
-<dd>The System V IPC interfaces in <i>/proc/sysvipc</i>.</dl>
+<dt>*</dt>
+<dd>The POSIX message queue interfaces in <i>/proc/sys/fs/mqueue</i>.</dd>
+<dt>*</dt>
+<dd>The System V IPC interfaces in <i>/proc/sys/kernel</i>, namely: <i>msgmax</i>, <i>msgmnb</i>, <i>msgmni</i>, <i>sem</i>, <i>shmall</i>, <i>shmmax</i>, <i>shmmni</i>, and <i>shm_rmid_forced</i>.</dd>
+<dt>*</dt>
+<dd>The System V IPC interfaces in <i>/proc/sysvipc</i>.</dd></dl>
 <p> When an IPC namespace is destroyed (i.e., when the last process that is a member of the namespace terminates), all IPC objects in the namespace are automatically destroyed. </p>
 <p> Use of IPC namespaces requires a kernel that is configured with the <code>CONFIG_IPC_NS</code> option.</p>
 <h2>See Also</h2>

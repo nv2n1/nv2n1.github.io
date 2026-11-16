@@ -31,57 +31,57 @@ description: "struct_iio_buffer – general buffer structure"
 <h2>Members</h2>
 <p>length</p>
 <dl>
-<dd>[DEVICE] number of datums in buffer</dl>
+<dd>[DEVICE] number of datums in buffer</dd></dl>
 <p> bytes_per_datum</p>
 <dl>
-<dd>[DEVICE] size of individual datum including timestamp</dl>
+<dd>[DEVICE] size of individual datum including timestamp</dd></dl>
 <p> scan_el_attrs</p>
 <dl>
-<dd>[DRIVER] control of scan elements if that scan mode control method is used</dl>
+<dd>[DRIVER] control of scan elements if that scan mode control method is used</dd></dl>
 <p> scan_mask</p>
 <dl>
-<dd>[INTERN] bitmask used in masking scan mode elements</dl>
+<dd>[INTERN] bitmask used in masking scan mode elements</dd></dl>
 <p> scan_timestamp</p>
 <dl>
-<dd>[INTERN] does the scan mode include a timestamp</dl>
+<dd>[INTERN] does the scan mode include a timestamp</dd></dl>
 <p> access</p>
 <dl>
-<dd>[DRIVER] buffer access functions associated with the implementation.</dl>
+<dd>[DRIVER] buffer access functions associated with the implementation.</dd></dl>
 <p> scan_el_dev_attr_list</p>
 <dl>
-<dd>[INTERN] list of scan element related attributes.</dl>
+<dd>[INTERN] list of scan element related attributes.</dd></dl>
 <p> buffer_group</p>
 <dl>
-<dd>[INTERN] attributes of the buffer group</dl>
+<dd>[INTERN] attributes of the buffer group</dd></dl>
 <p> scan_el_group</p>
 <dl>
-<dd>[DRIVER] attribute group for those attributes not created from the iio_chan_info array.</dl>
+<dd>[DRIVER] attribute group for those attributes not created from the iio_chan_info array.</dd></dl>
 <p> pollq</p>
 <dl>
-<dd>[INTERN] wait queue to allow for polling on the buffer.</dl>
+<dd>[INTERN] wait queue to allow for polling on the buffer.</dd></dl>
 <p> stufftoread</p>
 <dl>
-<dd>[INTERN] flag to indicate new data.</dl>
+<dd>[INTERN] flag to indicate new data.</dd></dl>
 <p> attrs</p>
 <dl>
-<dd>[INTERN] standard attributes of the buffer</dl>
+<dd>[INTERN] standard attributes of the buffer</dd></dl>
 <p> demux_list</p>
 <dl>
-<dd>[INTERN] list of operations required to demux the scan.</dl>
+<dd>[INTERN] list of operations required to demux the scan.</dd></dl>
 <p> demux_bounce</p>
 <dl>
-<dd>[INTERN] buffer for doing gather from incoming scan.</dl>
+<dd>[INTERN] buffer for doing gather from incoming scan.</dd></dl>
 <p> buffer_list</p>
 <dl>
-<dd>[INTERN] entry in the devices list of current buffers.</dl>
+<dd>[INTERN] entry in the devices list of current buffers.</dd></dl>
 <p> ref</p>
 <dl>
-<dd>[INTERN] reference count of the buffer.</dl>
+<dd>[INTERN] reference count of the buffer.</dd></dl>
 <p> watermark</p>
 <dl>
-<dd>[INTERN] number of datums to wait for poll/read.</dl>
+<dd>[INTERN] number of datums to wait for poll/read.</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

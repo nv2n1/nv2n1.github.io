@@ -15,11 +15,11 @@ insert_resource_expand_to_fit - Insert a resource into the resource tree
 <h2>Arguments</h2>
 
 <i>root</i>
-<dl><dd><dd>root resource descriptor</dl>
+<dl><dd></dd><dd>root resource descriptor</dd></dl>
  
 
  <i>new</i>
-<dl><dd>new resource to insert</dl>
+<dl><dd>new resource to insert</dd></dl>
 
 <h2>Description</h2>
 

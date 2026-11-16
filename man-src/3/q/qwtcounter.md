@@ -82,251 +82,251 @@ connect(counter, SIGNAL(valueChanged(double)), myClass, SLOT(newValue(double)));
 <p>Button index. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Button1 </i></p>
-<dd>Button intended for minor steps.</p>
-<dt><i>Button2 </i></p>
-<dd>Button intended for medium steps.</p>
-<dt><i>Button3 </i></p>
-<dd>Button intended for large steps.</p>
-<dt><i>ButtonCnt </i></p>
-<dd>Number of buttons.</dl>
+<dt><i>Button1 </i></dt>
+<dd>Button intended for minor steps.</dd>
+<dt><i>Button2 </i></dt>
+<dd>Button intended for medium steps.</dd>
+<dt><i>Button3 </i></dt>
+<dd>Button intended for large steps.</dd>
+<dt><i>ButtonCnt </i></dt>
+<dd>Number of buttons.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtCounter::QwtCounter (QWidget *parent = NULL) [explicit]</h3>
 <p>The counter is initialized with a range is set to [0.0, 1.0] with 0.01 as single step size. The value is invalid. </p>
 <p> The default number of buttons is set to 2. The default increments are: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Button 1: 1 step</p>
-<dt>&bull;</p>
-<dd>Button 2: 10 steps</p>
-<dt>&bull;</p>
-<dd>Button 3: 100 steps</dl>
+<dt>&bull;</dt>
+<dd>Button 1: 1 step</dd>
+<dt>&bull;</dt>
+<dd>Button 2: 10 steps</dd>
+<dt>&bull;</dt>
+<dd>Button 3: 100 steps</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i></dl>
+<dd><i>parent</i></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtCounter::buttonReleased (doublevalue) [signal]</h3>
 <p>This signal is emitted when a button has been released </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> The new value</dl>
+<dd><i>value</i> The new value</dd></dl>
 <h3>bool QwtCounter::event (QEvent *event) [protected], [virtual]</h3>
 <p>Handle QEvent::PolishRequest events </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Event</dl>
+<dd><i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>see QWidget::event()</dl>
+<dd>see QWidget::event()</dd></dl>
 <h3>int QwtCounter::incSteps (<code>QwtCounter::Button</code>button) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of steps by which a specified button increments the value or 0 if the button is invalid.</dl>
+<dd>The number of steps by which a specified button increments the value or 0 if the button is invalid.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>button</i> Button index</dl>
+<dd><i>button</i> Button index</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setIncSteps()</code></dl>
+<dd><code>setIncSteps()</code></dd></dl>
 <h3>bool QwtCounter::isReadOnly () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the line line edit is read only. (default is no)</dl>
+<dd>True, when the line line edit is read only. (default is no)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setReadOnly()</code></dl>
+<dd><code>setReadOnly()</code></dd></dl>
 <h3>bool QwtCounter::isValid () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, if the value is valid</dl>
+<dd>True, if the value is valid</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setValid()</code>, <code>setValue()</code></dl>
+<dd><code>setValid()</code>, <code>setValue()</code></dd></dl>
 <h3>void QwtCounter::keyPressEvent (QKeyEvent *event) [protected], [virtual]</h3>
 <p>Handle key events </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Ctrl + Qt::Key_Home </p>
+<dt>&bull;</dt>
+<dd>Ctrl + Qt::Key_Home </dd>
 <p>&nbsp;<wbr>Step to&nbsp;<wbr><code>minimum()</code></p>
-<dt>&bull;</p>
-<dd>Ctrl + Qt::Key_End </p>
+<dt>&bull;</dt>
+<dd>Ctrl + Qt::Key_End </dd>
 <p>&nbsp;<wbr>Step to&nbsp;<wbr><code>maximum()</code></p>
-<dt>&bull;</p>
-<dd>Qt::Key_Up </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_Up </dd>
 <p>&nbsp;<wbr>Increment by incSteps(QwtCounter::Button1)</p>
-<dt>&bull;</p>
-<dd>Qt::Key_Down </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_Down </dd>
 <p>&nbsp;<wbr>Decrement by incSteps(QwtCounter::Button1)</p>
-<dt>&bull;</p>
-<dd>Qt::Key_PageUp </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_PageUp </dd>
 <p>&nbsp;<wbr>Increment by incSteps(QwtCounter::Button2)</p>
-<dt>&bull;</p>
-<dd>Qt::Key_PageDown </p>
+<dt>&bull;</dt>
+<dd>Qt::Key_PageDown </dd>
 <p>&nbsp;<wbr>Decrement by incSteps(QwtCounter::Button2)</p>
-<dt>&bull;</p>
-<dd>Shift + Qt::Key_PageUp </p>
+<dt>&bull;</dt>
+<dd>Shift + Qt::Key_PageUp </dd>
 <p>&nbsp;<wbr>Increment by incSteps(QwtCounter::Button3)</p>
-<dt>&bull;</p>
-<dd>Shift + Qt::Key_PageDown </p>
+<dt>&bull;</dt>
+<dd>Shift + Qt::Key_PageDown </dd>
 <p>&nbsp;<wbr>Decrement by incSteps(QwtCounter::Button3)</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Key event</dl>
+<dd><i>event</i> Key event</dd></dl>
 <h3>double QwtCounter::maximum () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The maximum of the range</dl>
+<dd>The maximum of the range</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRange()</code>, <code>setMaximum()</code>, <code>minimum()</code></dl>
+<dd><code>setRange()</code>, <code>setMaximum()</code>, <code>minimum()</code></dd></dl>
 <h3>double QwtCounter::minimum () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The minimum of the range</dl>
+<dd>The minimum of the range</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRange()</code>, <code>setMinimum()</code>, <code>maximum()</code></dl>
+<dd><code>setRange()</code>, <code>setMinimum()</code>, <code>maximum()</code></dd></dl>
 <h3>int QwtCounter::numButtons () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of buttons on each side of the widget.</dl>
+<dd>The number of buttons on each side of the widget.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setNumButtons()</code></dl>
+<dd><code>setNumButtons()</code></dd></dl>
 <h3>void QwtCounter::setIncSteps (<code>QwtCounter::Button</code>button, intnumSteps)</h3>
 <p>Specify the number of steps by which the value is incremented or decremented when a specified button is pushed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>button</i> Button index<br />
- <i>numSteps</i> Number of steps</dl>
+ <i>numSteps</i> Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>incSteps()</code></dl>
+<dd><code>incSteps()</code></dd></dl>
 <h3>void QwtCounter::setMaximum (doublevalue)</h3>
 <p>Set the maximum value of the range </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Maximum value</dl>
+<dd><i>value</i> Maximum value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRange()</code>, <code>setMinimum()</code>, <code>maximum()</code></dl>
+<dd><code>setRange()</code>, <code>setMinimum()</code>, <code>maximum()</code></dd></dl>
 <h3>void QwtCounter::setMinimum (doublevalue)</h3>
 <p>Set the minimum value of the range </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Minimum value</dl>
+<dd><i>value</i> Minimum value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRange()</code>, <code>setMaximum()</code>, <code>minimum()</code></dl>
+<dd><code>setRange()</code>, <code>setMaximum()</code>, <code>minimum()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The maximum is adjusted if necessary to ensure that the range remains valid.</dl>
+<dd>The maximum is adjusted if necessary to ensure that the range remains valid.</dd></dl>
 <h3>void QwtCounter::setNumButtons (intnumButtons)</h3>
 <p>Specify the number of buttons on each side of the label </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>numButtons</i> Number of buttons</dl>
+<dd><i>numButtons</i> Number of buttons</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>numButtons()</code></dl>
+<dd><code>numButtons()</code></dd></dl>
 <h3>void QwtCounter::setRange (doublemin, doublemax)</h3>
 <p>Set the minimum and maximum values. The maximum is adjusted if necessary to ensure that the range remains valid. The value might be modified to be inside of the range. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>min</i> Minimum value<br />
- <i>max</i> Maximum value</dl>
+ <i>max</i> Maximum value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minimum()</code>, <code>maximum()</code></dl>
+<dd><code>minimum()</code>, <code>maximum()</code></dd></dl>
 <h3>void QwtCounter::setReadOnly (boolon)</h3>
 <p>Allow/disallow the user to manually edit the value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> True disable editing</dl>
+<dd><i>on</i> True disable editing</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isReadOnly()</code></dl>
+<dd><code>isReadOnly()</code></dd></dl>
 <h3>void QwtCounter::setSingleStep (doublestepSize)</h3>
 <p>Set the step size of the counter. A value &lt;= 0.0 disables stepping </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>stepSize</i> Single step size</dl>
+<dd><i>stepSize</i> Single step size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>singleStep()</code></dl>
+<dd><code>singleStep()</code></dd></dl>
 <h3>void QwtCounter::setStepButton1 (intnSteps)</h3>
 <p>Set the number of increment steps for button 1 </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>nSteps</i> Number of steps</dl>
+<dd><i>nSteps</i> Number of steps</dd></dl>
 <h3>void QwtCounter::setStepButton2 (intnSteps)</h3>
 <p>Set the number of increment steps for button 2 </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>nSteps</i> Number of steps</dl>
+<dd><i>nSteps</i> Number of steps</dd></dl>
 <h3>void QwtCounter::setStepButton3 (intnSteps)</h3>
 <p>Set the number of increment steps for button 3 </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>nSteps</i> Number of steps</dl>
+<dd><i>nSteps</i> Number of steps</dd></dl>
 <h3>void QwtCounter::setValid (boolon)</h3>
 <p>Set the counter to be in valid/invalid state </p>
 <p> When the counter is set to invalid, no numbers are displayed and the buttons are disabled. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> If true the counter will be set as valid</dl>
+<dd><i>on</i> If true the counter will be set as valid</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setValue()</code>, <code>isValid()</code></dl>
+<dd><code>setValue()</code>, <code>isValid()</code></dd></dl>
 <h3>void QwtCounter::setValue (doublevalue) [slot]</h3>
 <p>Set a new value without adjusting to the step raster. The state of the counter is set to be valid. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> New value</dl>
+<dd><i>value</i> New value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isValid()</code>, <code>value()</code>, <code>valueChanged()</code></dl>
+<dd><code>isValid()</code>, <code>value()</code>, <code>valueChanged()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The value is clipped when it lies outside the range.</dl>
+<dd>The value is clipped when it lies outside the range.</dd></dl>
 <h3>void QwtCounter::setWrapping (boolon)</h3>
 <p>En/Disable wrapping. If wrapping is true stepping up from <code>maximum()</code> value will take you to the <code>minimum()</code> value and vice versa. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> En/Disable wrapping</dl>
+<dd><i>on</i> En/Disable wrapping</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>wrapping()</code></dl>
+<dd><code>wrapping()</code></dd></dl>
 <h3>double QwtCounter::singleStep () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Single step size</dl>
+<dd>Single step size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSingleStep()</code></dl>
+<dd><code>setSingleStep()</code></dd></dl>
 <h3>double QwtCounter::value () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Current value of the counter</dl>
+<dd>Current value of the counter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setValue()</code>, <code>valueChanged()</code></dl>
+<dd><code>setValue()</code>, <code>valueChanged()</code></dd></dl>
 <h3>void QwtCounter::valueChanged (doublevalue) [signal]</h3>
 <p>This signal is emitted when the counter&#8217;s value has changed </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> The new value</dl>
+<dd><i>value</i> The new value</dd></dl>
 <h3>void QwtCounter::wheelEvent (QWheelEvent *event) [protected], [virtual]</h3>
 <p>Handle wheel events </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Wheel event</dl>
+<dd><i>event</i> Wheel event</dd></dl>
 <h3>bool QwtCounter::wrapping () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when wrapping is set</dl>
+<dd>True, when wrapping is set</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWrapping()</code></dl>
+<dd><code>setWrapping()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

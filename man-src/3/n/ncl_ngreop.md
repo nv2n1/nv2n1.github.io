@@ -28,55 +28,55 @@ CALL NGREOP(WKID, CONID, ITYPE, FNAME, IOPT, IAT, RAT,
 <h2>Description</h2>
 
 <dl><dt>WKID
-<dd>(an input variable of type INTEGER) specifying the workstation identifier that the reopened metafile will subsequently be known by. This does not have to be the same as the worksttion identifier used to create the original metafile.
-<dt>CONID
-<dd>(an input variable of type INTEGER) specifying the connection identifier.
-<dt>ITYPE
-<dd>(an input variable of type INTEGER) specifying the workstation type. Currently the only valid value is &quot;1&quot;. This subroutine may be augmented to accommodate PostScript files in the future.
-<dt>FNAME
-<dd>(an input variable of type CHARACTER) specifying the filename of the metafile being opened for appending.
-<dt>IOPT
-<dd>(an input variable of type INTEGER) specifying the desired action:
-<dt> = 0
-<dd>reestablish the color table only (using the color table in argument CTAB described below). The attributes of the reopened workstation will be set to default values and may well be out of sync with the current GKS attributes.
-<dt> = 1
-<dd>reestablish the color table and GKS state (the GKS state as supplied in arguments IAT and RAT described below). The state values will not be flushed to the metafile.
-<dt> = 2
-<dd>reestablish the color table and GKS state and flush the GKS state values to the metafile.
-<dt> = 3
-<dd>reestablish the color table and flush the current GKS state values to the metafile (not the values in IAT and RAT). values to the metafile.
-<dd>If IOPT equals 1 or 2, then IAT and RAT must be supplied, otherwise not.
-<dt>IAT
-<dd>(an input array of type INTEGER dimensioned for 14) that contains GKS integer state variables as follows:
-<dd>IAT( 1) = Clip indicator
-<dd>IAT( 2) = Line type
-<dd>IAT( 3) = Polyline color index
-<dd>IAT( 4) = Marker type
-<dd>IAT( 5) = Polymarker color index
-<dd>IAT( 6) = Text font
-<dd>IAT( 7) = Text precision
-<dd>IAT( 8) = Text color index
-<dd>IAT( 9) = Text path
-<dd>IAT(10) = Text horizontal alignment
-<dd>IAT(11) = Text vertical alignment
-<dd>IAT(12) = Fill area interior style
-<dd>IAT(13) = Fill are style index
-<dd>IAT(14) = Fill area color index
-<dt>RAT
-<dd>(an input array of type REAL dimensioned for 7) that contains REAL GKS attribute settings as follows:
-<dd>RAT( 1) = Linewidth scale factor
-<dd>RAT( 2) = Marker scale factor
-<dd>RAT( 3) = Character expansion factor
-<dd>RAT( 4) = Character spacing
-<dd>RAT( 5) = Character height in world coordinates
-<dd>RAT( 6) = Character up vector, X component in world coordinates
-<dd>RAT( 7) = Character up vector, Y component in world coordinates
-<dt>NCOLRS
-<dd>(an input variable of type INTEGER) that specifies the number of colors in the color table supplied in argument CTAB, described below. NCOLRS can be 0 .
-<dt>NSTART
-<dd>(an input variable of type INTEGER) that specifies the color index associated with the first color in the color table CTAB (all other color indices are filled in in sequence). For example, if NCOLRS = 3 and NSTART = 4, then the color values defined in CTAB would be used to define color indices 4, 5, and 6.
-<dt>CTAB
-<dd>(in the FORTRAN version of this routine, a two-dimensional input array of type REAL dimensioned CTAB(3,NCOLRS); in the C version of this routine, a one-dimensional input array of type Gcolr_rep dimensioned ctab[ncolrs]) that specifies a color table used to initialize the reopened metafile. This color table does not necessarily have to agree with the color table in effect when the original metafile was created.</dl>
+</dt><dd>(an input variable of type INTEGER) specifying the workstation identifier that the reopened metafile will subsequently be known by. This does not have to be the same as the worksttion identifier used to create the original metafile.
+</dd><dt>CONID
+</dt><dd>(an input variable of type INTEGER) specifying the connection identifier.
+</dd><dt>ITYPE
+</dt><dd>(an input variable of type INTEGER) specifying the workstation type. Currently the only valid value is &quot;1&quot;. This subroutine may be augmented to accommodate PostScript files in the future.
+</dd><dt>FNAME
+</dt><dd>(an input variable of type CHARACTER) specifying the filename of the metafile being opened for appending.
+</dd><dt>IOPT
+</dt><dd>(an input variable of type INTEGER) specifying the desired action:
+</dd><dt> = 0
+</dt><dd>reestablish the color table only (using the color table in argument CTAB described below). The attributes of the reopened workstation will be set to default values and may well be out of sync with the current GKS attributes.
+</dd><dt> = 1
+</dt><dd>reestablish the color table and GKS state (the GKS state as supplied in arguments IAT and RAT described below). The state values will not be flushed to the metafile.
+</dd><dt> = 2
+</dt><dd>reestablish the color table and GKS state and flush the GKS state values to the metafile.
+</dd><dt> = 3
+</dt><dd>reestablish the color table and flush the current GKS state values to the metafile (not the values in IAT and RAT). values to the metafile.
+</dd><dd>If IOPT equals 1 or 2, then IAT and RAT must be supplied, otherwise not.
+</dd><dt>IAT
+</dt><dd>(an input array of type INTEGER dimensioned for 14) that contains GKS integer state variables as follows:
+</dd><dd>IAT( 1) = Clip indicator
+</dd><dd>IAT( 2) = Line type
+</dd><dd>IAT( 3) = Polyline color index
+</dd><dd>IAT( 4) = Marker type
+</dd><dd>IAT( 5) = Polymarker color index
+</dd><dd>IAT( 6) = Text font
+</dd><dd>IAT( 7) = Text precision
+</dd><dd>IAT( 8) = Text color index
+</dd><dd>IAT( 9) = Text path
+</dd><dd>IAT(10) = Text horizontal alignment
+</dd><dd>IAT(11) = Text vertical alignment
+</dd><dd>IAT(12) = Fill area interior style
+</dd><dd>IAT(13) = Fill are style index
+</dd><dd>IAT(14) = Fill area color index
+</dd><dt>RAT
+</dt><dd>(an input array of type REAL dimensioned for 7) that contains REAL GKS attribute settings as follows:
+</dd><dd>RAT( 1) = Linewidth scale factor
+</dd><dd>RAT( 2) = Marker scale factor
+</dd><dd>RAT( 3) = Character expansion factor
+</dd><dd>RAT( 4) = Character spacing
+</dd><dd>RAT( 5) = Character height in world coordinates
+</dd><dd>RAT( 6) = Character up vector, X component in world coordinates
+</dd><dd>RAT( 7) = Character up vector, Y component in world coordinates
+</dd><dt>NCOLRS
+</dt><dd>(an input variable of type INTEGER) that specifies the number of colors in the color table supplied in argument CTAB, described below. NCOLRS can be 0 .
+</dd><dt>NSTART
+</dt><dd>(an input variable of type INTEGER) that specifies the color index associated with the first color in the color table CTAB (all other color indices are filled in in sequence). For example, if NCOLRS = 3 and NSTART = 4, then the color values defined in CTAB would be used to define color indices 4, 5, and 6.
+</dd><dt>CTAB
+</dt><dd>(in the FORTRAN version of this routine, a two-dimensional input array of type REAL dimensioned CTAB(3,NCOLRS); in the C version of this routine, a one-dimensional input array of type Gcolr_rep dimensioned ctab[ncolrs]) that specifies a color table used to initialize the reopened metafile. This color table does not necessarily have to agree with the color table in effect when the original metafile was created.</dd></dl>
 
 <h2>Usage</h2>
 

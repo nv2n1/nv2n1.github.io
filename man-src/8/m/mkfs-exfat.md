@@ -15,16 +15,16 @@ description: "mkexfatfs – create an exFAT file system"
 <h2>Options</h2>
 <p>Command line options available:</p>
 <dl>
-<dt><code>-i</code><i> volume-id</i></p>
-<dd>A 32-bit hexadecimal number. By default a value based on current time is set.</p>
-<dt><code>-n</code><i> volume-name</i></p>
-<dd>Volume name (label), up to 15 characters. By default no label is set.</p>
-<dt><code>-p</code><i> partition-first-sector</i></p>
-<dd>First sector of the partition starting from the beginning of the whole disk. exFAT super block has a field for this value but in fact it&#8217;s optional and does not affect anything. Default is 0.</p>
-<dt><code>-s</code><i> sectors-per-cluster</i></p>
-<dd>Number of physical sectors per cluster (cluster is an allocation unit in exFAT). Must be a power of 2, i.e. 1, 2, 4, 8, etc. Cluster size can not exceed 32 MB. Default cluster sizes are: 4 KB if volume size is less than 256 MB, 32 KB if volume size is from 256 MB to 32 GB, 128 KB if volume size is 32 GB or larger.</p>
-<dt><code>-V</code></p>
-<dd>Print version and copyright. </p>
+<dt><code>-i</code><i> volume-id</i></dt>
+<dd>A 32-bit hexadecimal number. By default a value based on current time is set.</dd>
+<dt><code>-n</code><i> volume-name</i></dt>
+<dd>Volume name (label), up to 15 characters. By default no label is set.</dd>
+<dt><code>-p</code><i> partition-first-sector</i></dt>
+<dd>First sector of the partition starting from the beginning of the whole disk. exFAT super block has a field for this value but in fact it&#8217;s optional and does not affect anything. Default is 0.</dd>
+<dt><code>-s</code><i> sectors-per-cluster</i></dt>
+<dd>Number of physical sectors per cluster (cluster is an allocation unit in exFAT). Must be a power of 2, i.e. 1, 2, 4, 8, etc. Cluster size can not exceed 32 MB. Default cluster sizes are: 4 KB if volume size is less than 256 MB, 32 KB if volume size is from 256 MB to 32 GB, 128 KB if volume size is 32 GB or larger.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version and copyright. </dd>
 </dl>
 <h2>Exit Codes</h2>
 <p>Zero is returned on successful creation. Any other code means an error.</p>

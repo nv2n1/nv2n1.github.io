@@ -23,7 +23,7 @@ url: "/docs/linux/man/1-qshead/"
 
 <dl>
 <dt>-p &lt;pattern&gt;
-<dd> Search pattern (literal string).</dl>
+</dt><dd> Search pattern (literal string).</dd></dl>
 
 <h2>SEE ALSO</h2>
 

@@ -16,19 +16,19 @@ description: "doveadm-penalty – Show current penalties"
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-a&nbsp;<wbr></code><i>anvil_socket_path</i></p>
-<dd> This option is used to specify an alternative socket. The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </p>
+<dt><code>-a&nbsp;<wbr></code><i>anvil_socket_path</i></dt>
+<dd> This option is used to specify an alternative socket. The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> By default <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will use the socket <i>/var/run/dovecot/anvil</i>. The socket may be located in another directory, when the default <i>base_dir</i> setting was overridden in <i>/etc/dovecot/dovecot.conf</i>.</dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>ip</i>[/<i>mask</i>]</p>
-<dd> To reduce/filter the output supply an IP address or a network range in CIDR notation (ip/mask).</dl>
+<dt><i>ip</i>[/<i>mask</i>]</dt>
+<dd> To reduce/filter the output supply an IP address or a network range in CIDR notation (ip/mask).</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Show current penalties </p>
 <pre>

@@ -11,18 +11,12 @@ std::iterator_traits - std::iterator_traits
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class Iter&gt;
-
     struct iterator_traits;
-
 template &lt;class T&gt;
-
 struct iterator_traits&lt;T *&gt;;
-
 template &lt;class T&gt;
 (until C++ 20)
-
     struct iterator_traits&lt;const T *&gt;;</code></pre> 
 std::iterator_traits is the type trait class that provides uniform interface to the properties of LegacyIterator types. This makes it possible to implement algorithms only in terms of iterators. 
 The class defines the following types: 
@@ -128,16 +122,11 @@ iterator_category std::random_access_iterator_tag
 
 The following example shows a general-purpose reverse() implementation for bidirectional iterators 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;list&gt;
 template &lt;class BidirIt&gt;
-
 void my_reverse(BidirIt first, BidirIt last)
-
 {
     typename std::iterator_traits&lt;BidirIt&gt;::difference_type n = std::distance(first, last);
     --n;
@@ -149,7 +138,6 @@ void my_reverse(BidirIt first, BidirIt last)
     }
 }
 int main()
-
 {
     std::vector&lt;int&gt; v{1, 2, 3, 4, 5};
     my_reverse(v.begin(), v.end());
@@ -170,7 +158,6 @@ int main()
     }
     std::cout &lt;&lt; '\n';
     //    std::istreambuf_iterator&lt;char&gt; i1(std::cin), i2;
-
     //    my_reverse(i1, i2); // compilation error
 }
 </code></pre>

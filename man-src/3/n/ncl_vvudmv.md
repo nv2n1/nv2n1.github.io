@@ -15,17 +15,17 @@ CALL VVUDMV (XCS,YCS,NCS,IAI,IAG,NAI)
 <h2>Description</h2>
 
 <dl><dt>XCS
-<dd>(REAL array, assumed size NCS, input): Array of X coordinates of the points defining the polyline with the given set of area identifiers.
-<dt>YCS
-<dd>(REAL array, assumed size NCS, input): Array of Y coordinates of the points defining the polyline with the given set of area identifiers.
-<dt>NCS
-<dd>(INTEGER, input): Number of points; assumed size of the X and Y coordinate arrays, XCS and YCS.
-<dt>IAI
-<dd>(INTEGER array, assumed size NAI, input): Array of area identifier values. Each value represents the area identifier with respect to the area group in the area group array with the same array index.
-<dt>IAG
-<dd>(INTEGER array, assumed size NAI, input): Array of area-identifier groups.
-<dt>NAI
-<dd>(INTEGER, input): Number of area identifier groups. The current version of Vectors supports up to 64 area groups.</dl>
+</dt><dd>(REAL array, assumed size NCS, input): Array of X coordinates of the points defining the polyline with the given set of area identifiers.
+</dd><dt>YCS
+</dt><dd>(REAL array, assumed size NCS, input): Array of Y coordinates of the points defining the polyline with the given set of area identifiers.
+</dd><dt>NCS
+</dt><dd>(INTEGER, input): Number of points; assumed size of the X and Y coordinate arrays, XCS and YCS.
+</dd><dt>IAI
+</dt><dd>(INTEGER array, assumed size NAI, input): Array of area identifier values. Each value represents the area identifier with respect to the area group in the area group array with the same array index.
+</dd><dt>IAG
+</dt><dd>(INTEGER array, assumed size NAI, input): Array of area-identifier groups.
+</dd><dt>NAI
+</dt><dd>(INTEGER, input): Number of area identifier groups. The current version of Vectors supports up to 64 area groups.</dd></dl>
 
 <h2>Usage</h2>
 

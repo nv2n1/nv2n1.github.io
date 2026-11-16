@@ -18,11 +18,11 @@ struct_snd_compr_avail - avail descriptor
 <h2>Members</h2>
 
 avail
-<dl><dd>Number of bytes available in ring buffer for writing/reading</dl>
+<dl><dd>Number of bytes available in ring buffer for writing/reading</dd></dl>
  
 
  tstamp
-<dl><dd>timestamp information</dl>
+<dl><dd>timestamp information</dd></dl>
 
 <h2>Copyright</h2>
 

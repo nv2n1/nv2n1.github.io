@@ -14,16 +14,16 @@ description: "Error Types –"
 <p>The UDP driver is very close to the system code, so most errors reported by it are converted from the system errno. A few of the exceptions are GLOBUS_XIO_ERROR_COMMAND, GLOBUS_XIO_ERROR_CONTACT_STRING, GLOBUS_XIO_ERROR_CANCELED, <code>GLOBUS_XIO_UDP_ERROR_NO_ADDRS</code>, and <code>GLOBUS_XIO_UDP_ERROR_SHORT_WRITE</code> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>globus_xio_driver_error_match() </p>
+<dd>globus_xio_driver_error_match() </dd>
 <p> globus_error_errno_match()</dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>globus_xio_udp_error_type_t</code></h3>
 <p>UDP driver specific error types </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_XIO_UDP_ERROR_NO_ADDRS </i></p>
-<dd>Indicates that no IPv4/6 compatible sockets could be resolved for the specified hostname</p>
-<dt><i>GLOBUS_XIO_UDP_ERROR_SHORT_WRITE </i></p>
-<dd>Indicates that a write of the full buffer failed. Possibly need to increase the send buffer size.</dl>
+<dt><i>GLOBUS_XIO_UDP_ERROR_NO_ADDRS </i></dt>
+<dd>Indicates that no IPv4/6 compatible sockets could be resolved for the specified hostname</dd>
+<dt><i>GLOBUS_XIO_UDP_ERROR_SHORT_WRITE </i></dt>
+<dd>Indicates that a write of the full buffer failed. Possibly need to increase the send buffer size.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_xio from the source code.</p>

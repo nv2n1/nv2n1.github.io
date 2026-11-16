@@ -10,23 +10,23 @@ description: "ImageByteOrder, BitmapBitOrder, BitmapPad, BitmapUnit, DisplayHeig
 <p>ImageByteOrder, BitmapBitOrder, BitmapPad, BitmapUnit, DisplayHeight, DisplayHeightMM, DisplayWidth, DisplayWidthMM, XListPixmapFormats, XPixmapFormatValues &#8211; image format functions and macros </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XPixmapFormatValues *XListPixmapFormats(Display *<i>display</i>, int *<i>count_return</i>);</p>
-<dd>int ImageByteOrder(Display *<i>display</i>);</p>
-<dd>int BitmapBitOrder(Display *<i>display</i>);</p>
-<dd>int BitmapPad(Display *<i>display</i>);</p>
-<dd>int BitmapUnit(Display *<i>display</i>);</p>
-<dd>int DisplayHeight(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int DisplayHeightMM(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int DisplayWidth(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int DisplayWidthMM(Display *<i>display</i>, int <i>screen_number</i>);</dl>
+<dd>XPixmapFormatValues *XListPixmapFormats(Display *<i>display</i>, int *<i>count_return</i>);</dd>
+<dd>int ImageByteOrder(Display *<i>display</i>);</dd>
+<dd>int BitmapBitOrder(Display *<i>display</i>);</dd>
+<dd>int BitmapPad(Display *<i>display</i>);</dd>
+<dd>int BitmapUnit(Display *<i>display</i>);</dd>
+<dd>int DisplayHeight(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayHeightMM(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayWidth(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayWidthMM(Display *<i>display</i>, int <i>screen_number</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of pixmap formats that are supported by the display.</p>
-<dt><i>screen_number</i></p>
-<dd>Specifies the appropriate screen number on the host server.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of pixmap formats that are supported by the display.</dd>
+<dt><i>screen_number</i></dt>
+<dd>Specifies the appropriate screen number on the host server.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XListPixmapFormats</code> function returns an array of <code>XPixmapFormatValues</code> structures that describe the types of Z format images supported by the specified display. If insufficient memory is available, <code>XListPixmapFormats</code> returns NULL. To free the allocated storage for the <code>XPixmapFormatValues</code> structures, use <code>XFree</code>. </p>
 <p> The <code>ImageByteOrder</code> macro specifies the required byte order for images for each scanline unit in XY format (bitmap) or for each pixel value in Z format. </p>

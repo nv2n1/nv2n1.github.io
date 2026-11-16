@@ -14,14 +14,14 @@ mongoc_find_and_modify_opts_set_update (mongoc_find_and_modify_opts_t *opts,
  const bson_t *update);</pre>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in mongoc 1.3.0</dl>
+<dd>New in mongoc 1.3.0</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dl>
+<dt><code>opts</code></dt>
+<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>update</code></p>
-<dd>The <code>update</code> document is the same format as the <code>update</code> document passed to <code>mongoc_collection_update</code> \&amp;.</dl>
+<dt><code>update</code></dt>
+<dd>The <code>update</code> document is the same format as the <code>update</code> document passed to <code>mongoc_collection_update</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Adds update argument to the builder. </p>
 <h2>Returns</h2>

@@ -14,19 +14,19 @@ description: "rio_dma_prep_slave_sg – RapidIO specific wrapper for device_prep
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device control structure</dl>
+</dd><dd>RIO device control structure</dd></dl>
 <p> <i>dchan</i></p>
 <dl>
-<dd>DMA channel to configure</dl>
+<dd>DMA channel to configure</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>RIO specific data descriptor</dl>
+<dd>RIO specific data descriptor</dd></dl>
 <p> <i>direction</i></p>
 <dl>
-<dd>DMA data transfer direction (TO or FROM the device)</dl>
+<dd>DMA data transfer direction (TO or FROM the device)</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>dmaengine defined flags</dl>
+<dd>dmaengine defined flags</dd></dl>
 <h2>Description</h2>
 <p>Initializes RapidIO capable DMA channel for the specified data transfer. Uses DMA channel private extension to pass information related to remote target RIO device.</p>
 <h2>Return</h2>
@@ -34,5 +34,5 @@ description: "rio_dma_prep_slave_sg – RapidIO specific wrapper for device_prep
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -10,10 +10,10 @@ description: "ipsec_rsasigkey – generate RSA signature key"
 <p>ipsec_rsasigkey &#8211; generate RSA signature key</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> <i>rsasigkey</i> [&#8211;verbose] [&#8211;seeddev&nbsp;<wbr><i>device</i>] [&#8211;seed&nbsp;<wbr><i>numbits</i>] [&#8211;nssdir&nbsp;<wbr><i>nssdir</i>] [&#8211;password&nbsp;<wbr><i>nsspassword</i>] [&#8211;hostname&nbsp;<wbr><i>hostname</i>] [nbits]</dl>
+<dt> <code>ipsec</code> <i>rsasigkey</i> [&#8211;verbose] [&#8211;seeddev&nbsp;<wbr><i>device</i>] [&#8211;seed&nbsp;<wbr><i>numbits</i>] [&#8211;nssdir&nbsp;<wbr><i>nssdir</i>] [&#8211;password&nbsp;<wbr><i>nsspassword</i>] [&#8211;hostname&nbsp;<wbr><i>hostname</i>] [nbits]</dt></dl>
 <h2>Description</h2>
 <p><i>rsasigkey</i></p>
-<dd>generates an RSA public/private key pair, suitable for digital signatures, of (exactly) <i>nbits</i> bits (that is, two primes each of exactly <i>nbits</i>/2 bits, and related numbers) and emits it on standard output as ASCII (mostly hex) data. <i>nbits</i> must be a multiple of 16. </p>
+<dd>generates an RSA public/private key pair, suitable for digital signatures, of (exactly) <i>nbits</i> bits (that is, two primes each of exactly <i>nbits</i>/2 bits, and related numbers) and emits it on standard output as ASCII (mostly hex) data. <i>nbits</i> must be a multiple of 16. </dd>
 <p> The public exponent is forced to the value <code>3</code>, which has important speed advantages for signature checking. Beware that the resulting keys have known weaknesses as encryption keys <code>and should not be used for that purpose</code>. </p>
 <p> The <code>&#8211;verbose</code> option makes <i>rsasigkey</i> give a running commentary on standard error. By default, it works in silence until it is ready to generate output. </p>
 <p> The <code>&#8211;seeddev</code> option specifies a source for random bits used to seed the crypto library&#8217;s RNG. The default is /dev/random (see <code><a href="/docs/linux/man/4-random/">random</a></code>(4)). FreeS/WAN and Openswan without NSS support used this option to specify the random source used to directly create keys. Libreswan only uses it to seed the NSS crypto libraries RNG. Under Linux with hardware random support, special devices might show up as /dev/*rng* devices. However, these should never be accessed directly using this option, as hardware failures could lead to extremely non-random values (streams of zeroes have been observed in the wild) </p>
@@ -31,7 +31,7 @@ description: "ipsec_rsasigkey – generate RSA signature key"
  #pubkey=0sBAEAA...sKbTzwE=
  Modulus: 0xb84ae7d...b0a6d3cf01
  PublicExponent: 0x010001</pre>
-</dl>
+</dd></dl>
 <p> The first (comment) line, indicating the nature and date of the key, and giving a host name, is used by <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8) when generating some forms of key output. </p>
 <p> The commented-out <code>pubkey=</code> line contains the public key, the public exponent and the modulus combined in approximately RFC 2537 format (the one deviation is that the combined value is given with a <i>0s</i> prefix, rather than in unadorned base-64), suitable for use in the ipsec.conf file. </p>
 <p> The <code>Modulus</code>, <code>PublicExponent</code> and <code>PrivateExponent</code> lines give the basic signing and verification data. </p>
@@ -41,7 +41,7 @@ description: "ipsec_rsasigkey – generate RSA signature key"
 <h2>Examples</h2>
 <p><code>ipsec rsasigkey &#8211;verbose 4096 &gt;mykey.txt</code></p>
 <dl>
-<dd>generates a 4096-bit signature key and puts it in the file mykey.txt, with running commentary on standard error. The file contents can be inserted verbatim into a suitable entry in the ipsec.secrets file (see <code>ipsec_secrets</code>(5)), and the public key can then be extracted and edited into the ipsec.conf (see <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8)).</dl>
+<dd>generates a 4096-bit signature key and puts it in the file mykey.txt, with running commentary on standard error. The file contents can be inserted verbatim into a suitable entry in the ipsec.secrets file (see <code>ipsec_secrets</code>(5)), and the public key can then be extracted and edited into the ipsec.conf (see <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8)).</dd></dl>
 <h2>Files</h2>
 <p>/dev/random, /dev/urandom</p>
 <h2>See Also</h2>
@@ -56,4 +56,4 @@ description: "ipsec_rsasigkey – generate RSA signature key"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

@@ -15,24 +15,24 @@ description: "easside-ng – an auto-magic tool which allows you to communicate 
 <p> <code>easside-ng</code> is an auto-magic tool which allows you to communicate via an WEP-encrypted access point (AP) without knowing the WEP key. It first identifies a network, then proceeds to associate with it, obtain PRGA (pseudo random generation algorithm) xor data, determine the network IP scheme and then setup a TAP interface so that you can communicate with the AP without requiring the WEP key. All this is done without your intervention.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-v &lt;victim mac&gt;</i></p>
-<dd> Victim BSSID (Optional).</p>
-<dt><i>-m &lt;src mac&gt;</i></p>
-<dd> Source MAC address to be used (Optional).</p>
-<dt><i>-i &lt;ip&gt;</i></p>
-<dd> Source IP address to be used on the wireless LAN. Defaults to the decoded network plus &#8216;.123&#8217; (Optional).</p>
-<dt><i>-r &lt;router ip&gt;</i></p>
-<dd> IP address of the AP router. This could be the WAN IP of the AP or an actual router IP depending on the topology. Defaults to the decoded network plus &#8216;.1&#8217; (Optional).</p>
-<dt><i>-s &lt;buddy ip&gt;</i></p>
-<dd> IP address of Buddy-ng server (Mandatory)</p>
-<dt><i>-f &lt;iface&gt;</i></p>
-<dd> Wireless interface to use (Mandatory)</p>
-<dt><i>-c &lt;channel&gt;</i></p>
-<dd> Lock interface to this channel (Optional).</p>
-<dt><i>-n</i></p>
-<dd> Determine Internet IP only.</dl>
+<dt><i>-h</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-v &lt;victim mac&gt;</i></dt>
+<dd> Victim BSSID (Optional).</dd>
+<dt><i>-m &lt;src mac&gt;</i></dt>
+<dd> Source MAC address to be used (Optional).</dd>
+<dt><i>-i &lt;ip&gt;</i></dt>
+<dd> Source IP address to be used on the wireless LAN. Defaults to the decoded network plus &#8216;.123&#8217; (Optional).</dd>
+<dt><i>-r &lt;router ip&gt;</i></dt>
+<dd> IP address of the AP router. This could be the WAN IP of the AP or an actual router IP depending on the topology. Defaults to the decoded network plus &#8216;.1&#8217; (Optional).</dd>
+<dt><i>-s &lt;buddy ip&gt;</i></dt>
+<dd> IP address of Buddy-ng server (Mandatory)</dd>
+<dt><i>-f &lt;iface&gt;</i></dt>
+<dd> Wireless interface to use (Mandatory)</dd>
+<dt><i>-c &lt;channel&gt;</i></dt>
+<dd> Lock interface to this channel (Optional).</dd>
+<dt><i>-n</i></dt>
+<dd> Determine Internet IP only.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

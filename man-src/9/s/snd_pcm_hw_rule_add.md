@@ -15,31 +15,31 @@ snd_pcm_hw_rule_add - add the hw-constraint rule
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>the pcm runtime instance</dl>
+<dl><dd></dd><dd>the pcm runtime instance</dd></dl>
  
 
  <i>cond</i>
-<dl><dd>condition bits</dl>
+<dl><dd>condition bits</dd></dl>
  
 
  <i>var</i>
-<dl><dd>the variable to evaluate</dl>
+<dl><dd>the variable to evaluate</dd></dl>
  
 
  <i>func</i>
-<dl><dd>the evaluation function</dl>
+<dl><dd>the evaluation function</dd></dl>
  
 
  <i>private</i>
-<dl><dd>the private data pointer passed to function</dl>
+<dl><dd>the private data pointer passed to function</dd></dl>
  
 
  <i>dep</i>
-<dl><dd>the dependent variables</dl>
+<dl><dd>the dependent variables</dd></dl>
  
 
  <i>...</i>
-<dl><dd>variable arguments</dl>
+<dl><dd>variable arguments</dd></dl>
 
 <h2>Return</h2>
 

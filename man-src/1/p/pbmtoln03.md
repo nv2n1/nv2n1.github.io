@@ -16,16 +16,16 @@ description: "pbmtoln03 – convert PBM image to DEC LN03+ Sixel output"
 <p> <code>pbmtoln03</code> reads a PBM image as input and produces a DEC LN03+ Sixel output file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l nn</code></p>
-<dd> Use &#8216;nn&#8217; as value for left margin (default 0). </p>
-<dt><code>-r nn</code></p>
-<dd> Use &#8216;nn&#8217; as value for right margin (default 2400). </p>
-<dt><code>-t nn</code></p>
-<dd> Use &#8216;nn&#8217; as value for top margin (default 0). </p>
-<dt><code>-b nn</code></p>
-<dd> Use &#8216;nn&#8217; as value for bottom margin (default 3400). </p>
-<dt><code>-f nn</code></p>
-<dd> Use &#8216;nn&#8217; as value for form length (default 3400). </p>
+<dt><code>-l nn</code></dt>
+<dd> Use &#8216;nn&#8217; as value for left margin (default 0). </dd>
+<dt><code>-r nn</code></dt>
+<dd> Use &#8216;nn&#8217; as value for right margin (default 2400). </dd>
+<dt><code>-t nn</code></dt>
+<dd> Use &#8216;nn&#8217; as value for top margin (default 0). </dd>
+<dt><code>-b nn</code></dt>
+<dd> Use &#8216;nn&#8217; as value for bottom margin (default 3400). </dd>
+<dt><code>-f nn</code></dt>
+<dd> Use &#8216;nn&#8217; as value for form length (default 3400). </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>pbm</code>(1) </p>

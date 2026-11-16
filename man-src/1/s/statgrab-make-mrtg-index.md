@@ -16,10 +16,10 @@ description: "statgrab-make-mrtg-index – generates MRTG configuration"
 <h2>OPTIONS</h2>
 <p> The following options are supported.</p>
 <dl>
-<dt><code>&#8211;title</code> <i>TITLE</i></p>
-<dd> Use TITLE as the title of the generated page</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help and exit</dl>
+<dt><code>&#8211;title</code> <i>TITLE</i></dt>
+<dd> Use TITLE as the title of the generated page</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help and exit</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-statgrab/">statgrab</a></code>(1) <code><a href="/docs/linux/man/1-statgrab-make-mrtg-config/">statgrab-make-mrtg-config</a></code>(1)</p>
 <h2>AUTHORS</h2>

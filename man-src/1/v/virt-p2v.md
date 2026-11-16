@@ -172,41 +172,41 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 </pre>
 <p> You have to set some or all of the following command line arguments:</p>
 <dl>
-<dt><code>p2v.server=SERVER</code></p>
-<dd> The name or <font SIZE="-1">IP</font> address of the conversion server. </p>
+<dt><code>p2v.server=SERVER</code></dt>
+<dd> The name or <font SIZE="-1">IP</font> address of the conversion server. </dd>
 <p> This is always required if you are using the kernel configuration method. If virt-p2v does not find this on the kernel command line then it switches to the <font SIZE="-1">GUI </font>(interactive) configuration method.</p>
-<dt><code>p2v.port=NN</code></p>
-<dd> The <font SIZE="-1">SSH</font> port number on the conversion server (default: <tt>22</tt>).</p>
-<dt><code>p2v.username=USERNAME</code></p>
-<dd> The <font SIZE="-1">SSH</font> username that we log in as on the conversion server (default: <tt>&quot;root&quot;</tt>).</p>
-<dt><code>p2v.password=PASSWORD</code></p>
-<dd> The <font SIZE="-1">SSH</font> password that we use to log in to the conversion server. </p>
+<dt><code>p2v.port=NN</code></dt>
+<dd> The <font SIZE="-1">SSH</font> port number on the conversion server (default: <tt>22</tt>).</dd>
+<dt><code>p2v.username=USERNAME</code></dt>
+<dd> The <font SIZE="-1">SSH</font> username that we log in as on the conversion server (default: <tt>&quot;root&quot;</tt>).</dd>
+<dt><code>p2v.password=PASSWORD</code></dt>
+<dd> The <font SIZE="-1">SSH</font> password that we use to log in to the conversion server. </dd>
 <p> The default is to try with no password. If this fails then virt-p2v will ask the user to type the password (probably several times during conversion). </p>
 <p> This setting is ignored if <tt>&quot;p2v.identity&quot;</tt> is present.</p>
-<dt><code>p2v.identity=URL</code></p>
-<dd> Provide a <font SIZE="-1">URL</font> pointing to an <font SIZE="-1">SSH</font> identity (private key) file. The <font SIZE="-1">URL</font> is interpreted by <i><a href="/docs/linux/man/1-curl/">curl</a></i>(1) so any <font SIZE="-1">URL</font> that curl supports can be used here, including <tt>&quot;https://&quot;</tt> and <tt>&quot;file://&quot;</tt>. For more information on using <font SIZE="-1">SSH</font> identities, see &#8220;<font SIZE="-1">SSH IDENTITIES&#8221;</font> below. </p>
+<dt><code>p2v.identity=URL</code></dt>
+<dd> Provide a <font SIZE="-1">URL</font> pointing to an <font SIZE="-1">SSH</font> identity (private key) file. The <font SIZE="-1">URL</font> is interpreted by <i><a href="/docs/linux/man/1-curl/">curl</a></i>(1) so any <font SIZE="-1">URL</font> that curl supports can be used here, including <tt>&quot;https://&quot;</tt> and <tt>&quot;file://&quot;</tt>. For more information on using <font SIZE="-1">SSH</font> identities, see &#8220;<font SIZE="-1">SSH IDENTITIES&#8221;</font> below. </dd>
 <p> If <tt>&quot;p2v.identity&quot;</tt> is present, it overrides <tt>&quot;p2v.password&quot;</tt>. There is no fallback.</p>
-<dt><code>p2v.sudo</code></p>
-<dd> Use <tt>&quot;p2v.sudo&quot;</tt> to tell virt-p2v to use <i><a href="/docs/linux/man/8-sudo/">sudo</a></i>(8) to gain root privileges on the conversion server after logging in as a non-root user (default: do not use sudo).</p>
-<dt><code>p2v.name=GUESTNAME</code></p>
-<dd> The name of the guest that is created. The default is to try to derive a name from the physical machine&#8217;s hostname (if possible) else use a randomly generated name.</p>
-<dt><code>p2v.vcpus=NN</code></p>
-<dd> The number of virtual CPUs to give to the guest. The default is to use the same as the number of physical CPUs.</p>
-<dt><code>p2v.memory=NN(M|G)</code></p>
-<dd> The size of the guest memory. You must specify the unit as either megabytes or gigabytes by using (eg) <tt>&quot;p2v.memory=1024M&quot;</tt> or <tt>&quot;p2v.memory=1G&quot;</tt>. </p>
+<dt><code>p2v.sudo</code></dt>
+<dd> Use <tt>&quot;p2v.sudo&quot;</tt> to tell virt-p2v to use <i><a href="/docs/linux/man/8-sudo/">sudo</a></i>(8) to gain root privileges on the conversion server after logging in as a non-root user (default: do not use sudo).</dd>
+<dt><code>p2v.name=GUESTNAME</code></dt>
+<dd> The name of the guest that is created. The default is to try to derive a name from the physical machine&#8217;s hostname (if possible) else use a randomly generated name.</dd>
+<dt><code>p2v.vcpus=NN</code></dt>
+<dd> The number of virtual CPUs to give to the guest. The default is to use the same as the number of physical CPUs.</dd>
+<dt><code>p2v.memory=NN(M|G)</code></dt>
+<dd> The size of the guest memory. You must specify the unit as either megabytes or gigabytes by using (eg) <tt>&quot;p2v.memory=1024M&quot;</tt> or <tt>&quot;p2v.memory=1G&quot;</tt>. </dd>
 <p> The default is to use the same amount of <font SIZE="-1">RAM</font> as on the physical machine.</p>
-<dt><code>p2v.disks=sdX,sdY,..</code></p>
-<dd> A list of physical hard disks to convert, for example: </p>
+<dt><code>p2v.disks=sdX,sdY,..</code></dt>
+<dd> A list of physical hard disks to convert, for example: </dd>
 <pre>
  p2v.disks=sda,sdc
 </pre>
 <p> The default is to convert all local hard disks that are found.</p>
-<dt><code>p2v.removable=srX,srY,..</code></p>
-<dd> A list of removable media to convert. The default is to create virtual removable devices for every physical removable device found. Note that the content of removable media is never copied over.</p>
-<dt><code>p2v.interfaces=em1,..</code></p>
-<dd> A list of network interfaces to convert. The default is to create virtual network interfaces for every physical network interface found.</p>
-<dt><code>p2v.network=interface:target,&#8230;</code></p>
-<dd> Controls how network interfaces are connected to virtual networks on the target hypervisor. The default is to connect all network interfaces to the target <tt>&quot;default&quot;</tt> network. </p>
+<dt><code>p2v.removable=srX,srY,..</code></dt>
+<dd> A list of removable media to convert. The default is to create virtual removable devices for every physical removable device found. Note that the content of removable media is never copied over.</dd>
+<dt><code>p2v.interfaces=em1,..</code></dt>
+<dd> A list of network interfaces to convert. The default is to create virtual network interfaces for every physical network interface found.</dd>
+<dt><code>p2v.network=interface:target,&#8230;</code></dt>
+<dd> Controls how network interfaces are connected to virtual networks on the target hypervisor. The default is to connect all network interfaces to the target <tt>&quot;default&quot;</tt> network. </dd>
 <p> You give a comma-separated list of <tt>&quot;interface:target&quot;</tt> pairs, plus optionally a default target. For example: </p>
 <pre>
  p2v.network=em1:rhevm
@@ -216,37 +216,37 @@ description: "virt-p2v – Convert a physical machine to use KVM"
  p2v.network=em1:rhevm,em2:management,other
 </pre>
 <p> maps interface <tt>&quot;em1&quot;</tt> to <tt>&quot;rhevm&quot;</tt>, and <tt>&quot;em2&quot;</tt> to <tt>&quot;management&quot;</tt>, and any other interface that is found to <tt>&quot;other&quot;</tt>.</p>
-<dt><code>p2v.o=[libvirt|local|&#8230;]</code></p>
-<dd> Set the output mode. This is the same as the virt-v2v <i>-o</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). </p>
+<dt><code>p2v.o=[libvirt|local|&#8230;]</code></dt>
+<dd> Set the output mode. This is the same as the virt-v2v <i>-o</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). </dd>
 <p> If not specified, the default is <tt>&quot;local&quot;</tt>, and the converted guest is written to <i>/var/tmp</i>.</p>
-<dt><code>p2v.oa=sparse|preallocated</code></p>
-<dd> Set the output allocation mode. This is the same as the virt-v2v <i>-oa</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1).</p>
-<dt><code>p2v.oc=&#8230;</code></p>
-<dd> Set the output connection libvirt <font SIZE="-1">URI. </font> This is the same as the virt-v2v <i>-oc</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1) and <a rel="nofollow" href="http://libvirt.org/uri.html">http://libvirt.org/uri.html</a></p>
-<dt><code>p2v.of=raw|qcow2|&#8230;</code></p>
-<dd> Set the output format. This is the same as the virt-v2v <i>-of</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1).</p>
-<dt><code>p2v.os=&#8230;</code></p>
-<dd> Set the output storage. This is the same as the virt-v2v <i>-os</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). </p>
+<dt><code>p2v.oa=sparse|preallocated</code></dt>
+<dd> Set the output allocation mode. This is the same as the virt-v2v <i>-oa</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1).</dd>
+<dt><code>p2v.oc=&#8230;</code></dt>
+<dd> Set the output connection libvirt <font SIZE="-1">URI. </font> This is the same as the virt-v2v <i>-oc</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1) and <a rel="nofollow" href="http://libvirt.org/uri.html">http://libvirt.org/uri.html</a></dd>
+<dt><code>p2v.of=raw|qcow2|&#8230;</code></dt>
+<dd> Set the output format. This is the same as the virt-v2v <i>-of</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1).</dd>
+<dt><code>p2v.os=&#8230;</code></dt>
+<dd> Set the output storage. This is the same as the virt-v2v <i>-os</i> option. See &#8220;<font SIZE="-1">OPTIONS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). </dd>
 <p> If not specified, the default is <i>/var/tmp</i> (on the conversion server).</p>
-<dt><code>p2v.pre=COMMAND</code></p>
+<dt><code>p2v.pre=COMMAND</code></dt>
 <dd>
-<dt><code>p2v.pre=&quot;</code><font SIZE="-1"><code>COMMAND ARG &#8230;&quot;</code></font></p>
-<dd> Select a pre-conversion command to run. Any command or script can be specified here. If the command contains spaces, you must quote the whole command with double quotes. The default is not to run any command.</p>
-<dt><code>p2v.post=poweroff</code></p>
+</dd><dt><code>p2v.pre=&quot;</code><font SIZE="-1"><code>COMMAND ARG &#8230;&quot;</code></font></dt>
+<dd> Select a pre-conversion command to run. Any command or script can be specified here. If the command contains spaces, you must quote the whole command with double quotes. The default is not to run any command.</dd>
+<dt><code>p2v.post=poweroff</code></dt>
 <dd>
-<dt><code>p2v.post=reboot</code></p>
+</dd><dt><code>p2v.post=reboot</code></dt>
 <dd>
-<dt><code>p2v.post=COMMAND</code></p>
+</dd><dt><code>p2v.post=COMMAND</code></dt>
 <dd>
-<dt><code>p2v.post=&quot;</code><font SIZE="-1"><code>COMMAND ARG &#8230;&quot;</code></font></p>
-<dd> Select a post-conversion command to run if conversion is successful. This can be any command or script. If the command contains spaces, you must quote the whole command with double quotes. </p>
+</dd><dt><code>p2v.post=&quot;</code><font SIZE="-1"><code>COMMAND ARG &#8230;&quot;</code></font></dt>
+<dd> Select a post-conversion command to run if conversion is successful. This can be any command or script. If the command contains spaces, you must quote the whole command with double quotes. </dd>
 <p> <i>If</i> virt-p2v is running as root, <i>and</i> the command line was set from <i>/proc/cmdline</i> (not <i>&#8211;cmdline</i>), then the default is to run the <i><a href="/docs/linux/man/8-poweroff/">poweroff</a></i>(8) command. Otherwise the default is not to run any command.</p>
-<dt><code>p2v.fail=COMMAND</code></p>
+<dt><code>p2v.fail=COMMAND</code></dt>
 <dd>
-<dt><code>p2v.fail=&quot;</code><font SIZE="-1"><code>COMMAND ARG &#8230;&quot;</code></font></p>
-<dd> Select a post-conversion command to run if conversion fails. Any command or script can be specified here. If the command contains spaces, you must quote the whole command with double quotes. The default is not to run any command.</p>
-<dt><code>ip=dhcp</code></p>
-<dd> Use <font SIZE="-1">DHCP</font> for configuring the network interface (this is the default).</dl>
+</dd><dt><code>p2v.fail=&quot;</code><font SIZE="-1"><code>COMMAND ARG &#8230;&quot;</code></font></dt>
+<dd> Select a post-conversion command to run if conversion fails. Any command or script can be specified here. If the command contains spaces, you must quote the whole command with double quotes. The default is not to run any command.</dd>
+<dt><code>ip=dhcp</code></dt>
+<dd> Use <font SIZE="-1">DHCP</font> for configuring the network interface (this is the default).</dd></dl>
 <h2>SSH IDENTITIES</h2>
 <p> As a somewhat more secure alternative to password authentication, you can use an <font SIZE="-1">SSH</font> identity (private key) for authentication. </p>
 <p> First create a key pair. It must have an empty passphrase: </p>
@@ -257,11 +257,11 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 <p> The public key should be appended to the <tt>&quot;authorized_keys&quot;</tt> file on the virt-v2v conversion server (usually to <tt>&quot;/root/.ssh/authorized_keys&quot;</tt>). </p>
 <p> For distributing the private key, there are four scenarios from least secure to most secure:</p>
 <dl>
-<dt>1.</p>
-<dd> Not using <font SIZE="-1">SSH</font> identities at all, ie. password authentication. </p>
+<dt>1.</dt>
+<dd> Not using <font SIZE="-1">SSH</font> identities at all, ie. password authentication. </dd>
 <p> Anyone who can sniff the <font SIZE="-1">PXE</font> boot parameters from the network or observe the password some other way can log in to the virt-v2v conversion server.</p>
-<dt>2.</p>
-<dd> <font SIZE="-1">SSH</font> identity embedded in the virt-p2v <font SIZE="-1">ISO</font> or disk image. In the <font SIZE="-1">GUI,</font> use: </p>
+<dt>2.</dt>
+<dd> <font SIZE="-1">SSH</font> identity embedded in the virt-p2v <font SIZE="-1">ISO</font> or disk image. In the <font SIZE="-1">GUI,</font> use: </dd>
 <p> │          Password: [    &lt;leave this field blank&gt;       ] │<br />
  │                                                          │<br />
  │  SSH Identity URL: [file:///var/tmp/id_rsa_____________] │</p>
@@ -270,8 +270,8 @@ description: "virt-p2v – Convert a physical machine to use KVM"
  p2v.identity=file:///var/tmp/id_rsa
 </pre>
 <p> The <font SIZE="-1">SSH</font> private key can still be sniffed from the network if using standard <font SIZE="-1">PXE.</font></p>
-<dt>3.</p>
-<dd> <font SIZE="-1">SSH</font> identity downloaded from a website. In the <font SIZE="-1">GUI,</font> use: </p>
+<dt>3.</dt>
+<dd> <font SIZE="-1">SSH</font> identity downloaded from a website. In the <font SIZE="-1">GUI,</font> use: </dd>
 <pre><code>
  │          Password: [    &lt;leave this field blank&gt;       ] │
  │                                                          │
@@ -286,31 +286,31 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 <pre>
  chmod 0644 id_rsa
 </pre>
-<dt>4.</p>
-<dd> <font SIZE="-1">SSH</font> identity embedded in the virt-p2v <font SIZE="-1">ISO</font> or disk image (like 2.), <i>and</i> use of secure <font SIZE="-1">PXE, PXE</font> over separate physical network, or sneakernet to distribute virt-p2v to the physical machine.</dl>
+<dt>4.</dt>
+<dd> <font SIZE="-1">SSH</font> identity embedded in the virt-p2v <font SIZE="-1">ISO</font> or disk image (like 2.), <i>and</i> use of secure <font SIZE="-1">PXE, PXE</font> over separate physical network, or sneakernet to distribute virt-p2v to the physical machine.</dd></dl>
 <p> Both <i><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></i>(1) and <i><a href="/docs/linux/man/1-virt-p2v-make-kickstart/">virt-p2v-make-kickstart</a></i>(1) have the same option <i>&#8211;inject-ssh-identity</i> for injecting the private key into the virt-p2v disk image / <font SIZE="-1">ISO. </font> See also the following manual sections: </p>
 <p> &#8220;<font SIZE="-1">ADDING AN SSH IDENTITY&#8221;</font> in <i><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></i>(1) </p>
 <p> &#8220;<font SIZE="-1">ADDING AN SSH IDENTITY&#8221;</font> in <i><a href="/docs/linux/man/1-virt-p2v-make-kickstart/">virt-p2v-make-kickstart</a></i>(1)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>&#8211;cmdline=CMDLINE</code></p>
-<dd> This is used for debugging. Instead of parsing the kernel command line from <i>/proc/cmdline</i>, parse the string parameter <tt>&quot;CMDLINE&quot;</tt>.</p>
-<dt><code>&#8211;colors</code></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>&#8211;cmdline=CMDLINE</code></dt>
+<dd> This is used for debugging. Instead of parsing the kernel command line from <i>/proc/cmdline</i>, parse the string parameter <tt>&quot;CMDLINE&quot;</tt>.</dd>
+<dt><code>&#8211;colors</code></dt>
 <dd>
-<dt><code>&#8211;colours</code></p>
-<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</p>
-<dt><code>&#8211;iso</code></p>
-<dd> This flag is passed to virt-p2v when it is launched inside the virt-p2v <font SIZE="-1">ISO</font> environment, ie. when it is running on a real physical machine (and thus not when testing). It enables various dangerous features such as the Reboot button.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;colours</code></dt>
+<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</dd>
+<dt><code>&#8211;iso</code></dt>
+<dd> This flag is passed to virt-p2v when it is launched inside the virt-p2v <font SIZE="-1">ISO</font> environment, ie. when it is running on a real physical machine (and thus not when testing). It enables various dangerous features such as the Reboot button.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> In libguestfs ≥ 1.33.41, debugging is always enabled on the conversion server, and this option does nothing.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> In libguestfs ≥ 1.33.41, debugging is always enabled on the conversion server, and this option does nothing.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd></dl>
 <h2>HOW VIRT-P2V WORKS</h2>
 <p> <code>Note this section is not normative.</code> We may change how virt-p2v works at any time in the future. </p>
 <p> As described above, virt-p2v runs on a physical machine, interrogates the user or the kernel command line for configuration, and then establishes one or more ssh connections to the virt-v2v conversion server. The ssh connections are interactive shell sessions to the remote host, but the commands sent are generated entirely by virt-p2v itself, not by the user. For data transfer, virt-p2v will use the reverse port forward feature of ssh (ie. <tt>&quot;ssh -R&quot;</tt>). </p>
@@ -329,27 +329,27 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 <p> where <tt>&quot;YYYYMMDD&quot;</tt> is the current date, and the X&#8217;s are random characters. </p>
 <p> Into this directory are written various files which include:</p>
 <dl>
-<dt><i>dmesg</i></p>
-<dd> <i>(before conversion)</i> </p>
+<dt><i>dmesg</i></dt>
+<dd> <i>(before conversion)</i> </dd>
 <p> The dmesg output from the physical machine. Useful for detecting problems such as missing device drivers or firmware on the virt-p2v <font SIZE="-1">ISO.</font></p>
-<dt><i>name</i></p>
-<dd> <i>(before conversion)</i> </p>
+<dt><i>name</i></dt>
+<dd> <i>(before conversion)</i> </dd>
 <p> The name (usually the hostname) of the physical machine.</p>
-<dt><i>physical.xml</i></p>
-<dd> <i>(before conversion)</i> </p>
+<dt><i>physical.xml</i></dt>
+<dd> <i>(before conversion)</i> </dd>
 <p> Libvirt <font SIZE="-1">XML</font> describing the physical machine. It is used to pass data about the physical source host to <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1) via the <i>-i libvirtxml</i> option. </p>
 <p> Note this is not &#8220;real&#8221; libvirt <font SIZE="-1">XML </font>(and must <code>never</code> be loaded into libvirt, which would reject it anyhow). Also it is not the same as the libvirt <font SIZE="-1">XML</font> which virt-v2v generates in certain output modes.</p>
-<dt><i>status</i></p>
-<dd> <i>(after conversion)</i> </p>
+<dt><i>status</i></dt>
+<dd> <i>(after conversion)</i> </dd>
 <p> The final status of the conversion. <tt>0</tt> if the conversion was successful. Non-zero if the conversion failed.</p>
-<dt><i>time</i></p>
-<dd> <i>(before conversion)</i> </p>
+<dt><i>time</i></dt>
+<dd> <i>(before conversion)</i> </dd>
 <p> The start date/time of conversion.</p>
-<dt><i>virt-v2v-conversion-log.txt</i></p>
-<dd> <i>(during/after conversion)</i> </p>
+<dt><i>virt-v2v-conversion-log.txt</i></dt>
+<dd> <i>(during/after conversion)</i> </dd>
 <p> The conversion log. This is just the output of the virt-v2v command on the conversion server. If conversion fails, you should examine this log file, and you may be asked to supply the <code>complete</code>, <code>unedited</code> log file in any bug reports or support tickets.</p>
-<dt><i>virt-v2v-wrapper.sh</i></p>
-<dd> <i>(during/after conversion)</i> </p>
+<dt><i>virt-v2v-wrapper.sh</i></dt>
+<dd> <i>(during/after conversion)</i> </dd>
 <p> This is the wrapper script which is used when running virt-v2v. For interest only, do not attempt to run this script yourself.</dl>
 <p> Before conversion actually begins, virt-p2v then makes one or more further ssh connections to the server for data transfer. The transfer protocol used currently is <font SIZE="-1">NBD </font>(Network Block Device), which is proxied over ssh. The server is <i>qemu-nbd</i>(1). There is one ssh connection per physical hard disk on the source machine (the common case — a single hard disk — is shown below): </p>
 <pre>
@@ -389,31 +389,31 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAJ">KERNEL COMMAND LINE CONFIGURATION</a></p>
+<dt><a href="#lbAJ">KERNEL COMMAND LINE CONFIGURATION</a></dt>
 <dd>
-<dt><a href="#lbAK">SSH IDENTITIES</a></p>
+</dd><dt><a href="#lbAK">SSH IDENTITIES</a></dt>
 <dd>
-<dt><a href="#lbAL">OPTIONS</a></p>
+</dd><dt><a href="#lbAL">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAM">HOW VIRT-P2V WORKS</a></p>
+</dd><dt><a href="#lbAM">HOW VIRT-P2V WORKS</a></dt>
 <dd>
-<dt><a href="#lbAN">SEE ALSO</a></p>
+</dd><dt><a href="#lbAN">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAO">AUTHORS</a></p>
+</dd><dt><a href="#lbAO">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAP">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAP">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAQ">LICENSE</a></p>
+</dd><dt><a href="#lbAQ">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAR">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAR">BUGS</a></dt>
+<dd></dd></dl>

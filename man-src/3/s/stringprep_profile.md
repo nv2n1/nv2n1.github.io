@@ -13,14 +13,14 @@ description: "stringprep_profile – API function"
 int stringprep_profile(const char *in, char **out, const char *profile, Stringprep_profile_flags flags);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * in</p>
-<dd>input array with UTF-8 string to prepare.</p>
-<dt>char ** out</p>
-<dd>output variable with pointer to newly allocate string.</p>
-<dt>const char * profile</p>
-<dd>name of stringprep profile to use.</p>
-<dt>Stringprep_profile_flags flags</p>
-<dd>a <code>Stringprep_profile_flags</code> value, or 0.</dl>
+<dt>const char * in</dt>
+<dd>input array with UTF-8 string to prepare.</dd>
+<dt>char ** out</dt>
+<dd>output variable with pointer to newly allocate string.</dd>
+<dt>const char * profile</dt>
+<dd>name of stringprep profile to use.</dd>
+<dt>Stringprep_profile_flags flags</dt>
+<dd>a <code>Stringprep_profile_flags</code> value, or 0.</dd></dl>
 <h2>Description</h2>
 <p>Prepare the input zero terminated UTF-8 string according to the stringprep profile, and return the result in a newly allocated variable. </p>
 <p> Note that you must convert strings entered in the systems locale into UTF-8 before using this function, see <code>stringprep_locale_to_utf8()</code>. </p>
@@ -37,5 +37,5 @@ int stringprep_profile(const char *in, char **out, const char *profile, Stringpr
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

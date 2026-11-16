@@ -14,7 +14,7 @@ description: "freeze_super – lock the filesystem and force it into a consisten
 <p><i>sb</i></p>
 <dl>
 <dd>
-<dd>the super to lock</dl>
+</dd><dd>the super to lock</dd></dl>
 <h2>Description</h2>
 <p>Syncs the super to make sure the filesystem is consistent and calls the fs&#8217;s freeze_fs. Subsequent calls to this without first thawing the fs will return -EBUSY. </p>
 <p> During this function, sb-&gt;s_writers.frozen goes through these values: </p>

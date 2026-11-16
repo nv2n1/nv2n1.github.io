@@ -18,37 +18,37 @@ description: "hspell – Hebrew spellchecker"
 <p> The output will also be in ISO-8859-8 encoding, in so-called &quot;logical order&quot;, so it is normally useful to pipe it to <a href="/docs/linux/man/1-bidiv/">bidiv</a>(1) before viewing, as in: </p>
 <dl>
 <dt>
-<dd> <code>hspell -c filename | bidiv | less</code></dl>
+</dt><dd> <code>hspell -c filename | bidiv | less</code></dd></dl>
 <p> If no input file is given, <code>hspell</code> reads from its standard input.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> If the <code>-v</code> option is given, <code>hspell</code> prints emacs-oriented version information and exits.</p>
-<dt><code>-vv</code></p>
-<dd> Repetition of the <code>-v</code> option causes <code>hspell</code> to also show some information on which optional features were enabled at compile time.</p>
-<dt><code>-V</code></p>
-<dd> With the <code>-V</code> option, <code>hspell</code> prints true and human-oriented version information and exits.</p>
-<dt><code>-c</code></p>
-<dd> If the <code>-c</code> option is given, <code>hspell</code> will suggest corrections for misspelled words, whenever it can find such corrections. The correction mechanism in this release is especially good at finding corrections for incorrect niqqud-less spellings, with missing or extra &#8216;immot-qri&#8217;a.</p>
-<dt><code>-n</code></p>
-<dd> The <code>-n</code> option will give some longer &quot;notes&quot; about certain spelling errors, explaining why these are indeed errors (or in what cases using this word is in fact correct). It is recommend to combine the two options, <code>-cn</code> for maximal correction help from <code>hspell</code>.</p>
-<dt><code>-l</code></p>
-<dd> The <code>-l</code> (linguistic information) option will explain for each <i>correct</i> word why it was recognized (show the basic noun, verb, etc., that this inflection relates to, and its tense, gender, associated Kinnuy, or other relevant information) </p>
+<dt><code>-v</code></dt>
+<dd> If the <code>-v</code> option is given, <code>hspell</code> prints emacs-oriented version information and exits.</dd>
+<dt><code>-vv</code></dt>
+<dd> Repetition of the <code>-v</code> option causes <code>hspell</code> to also show some information on which optional features were enabled at compile time.</dd>
+<dt><code>-V</code></dt>
+<dd> With the <code>-V</code> option, <code>hspell</code> prints true and human-oriented version information and exits.</dd>
+<dt><code>-c</code></dt>
+<dd> If the <code>-c</code> option is given, <code>hspell</code> will suggest corrections for misspelled words, whenever it can find such corrections. The correction mechanism in this release is especially good at finding corrections for incorrect niqqud-less spellings, with missing or extra &#8216;immot-qri&#8217;a.</dd>
+<dt><code>-n</code></dt>
+<dd> The <code>-n</code> option will give some longer &quot;notes&quot; about certain spelling errors, explaining why these are indeed errors (or in what cases using this word is in fact correct). It is recommend to combine the two options, <code>-cn</code> for maximal correction help from <code>hspell</code>.</dd>
+<dt><code>-l</code></dt>
+<dd> The <code>-l</code> (linguistic information) option will explain for each <i>correct</i> word why it was recognized (show the basic noun, verb, etc., that this inflection relates to, and its tense, gender, associated Kinnuy, or other relevant information) </dd>
 <p> If Hspell was built without morphological analysis support, this option will only show the correct splits of the given word into prefix + word, as the full information incurs a 4-fold increase in the installation size. </p>
 <p> Giving the <code>-c</code> option in addition to <code>-l</code> results in special behavior. In that case <code>hspell</code> suggests &quot;corrections&quot; to every word (regardless if they are in the dictionary or not), and shows the linguistic information on all those words. This can be useful for a reader application, which may also want to be able to understand misspellings and their possible meanings. </p>
-<dt><code>-s</code></p>
-<dd> Normally, the words deemed spelling mistakes are shown in alphabetical order. The <code>-s</code> option orders them by <i>severity</i>, i.e., the errors that most frequently appear in the document are shown first. This option is most useful for people helping to build <code>hspell</code>&#8216;s word list, and are looking for common correct words that <code>hspell</code> does not know yet.</p>
-<dt><code>-a</code></p>
-<dd> With the <code>-a</code> option, <code>hspell</code> tries to emulate (as little as possible of) <code>ispell&#8217;s</code> pipe interface. This allows <code>Lyx, Emacs, Geresh</code> and <code>KDE</code> to use <code>hspell</code> as an external spell-checker.</p>
-<dt><code>-i</code></p>
-<dd> This option only has any effect when used together with the <code>-a</code> option. Normally, <code>hspell -a</code> only checks the spelling of Hebrew words. If the given file also contains non-Hebrew words (such as English words), these are simply ignored. Adding the <code>-i</code> option tells <code>hspell</code> to pass the non-Hebrew words to <code>ispell</code>(1), and return its answer as an answer from <code>hspell</code>. This allows conveniently spell-checking mixed Hebrew-English documents. </p>
+<dt><code>-s</code></dt>
+<dd> Normally, the words deemed spelling mistakes are shown in alphabetical order. The <code>-s</code> option orders them by <i>severity</i>, i.e., the errors that most frequently appear in the document are shown first. This option is most useful for people helping to build <code>hspell</code>&#8216;s word list, and are looking for common correct words that <code>hspell</code> does not know yet.</dd>
+<dt><code>-a</code></dt>
+<dd> With the <code>-a</code> option, <code>hspell</code> tries to emulate (as little as possible of) <code>ispell&#8217;s</code> pipe interface. This allows <code>Lyx, Emacs, Geresh</code> and <code>KDE</code> to use <code>hspell</code> as an external spell-checker.</dd>
+<dt><code>-i</code></dt>
+<dd> This option only has any effect when used together with the <code>-a</code> option. Normally, <code>hspell -a</code> only checks the spelling of Hebrew words. If the given file also contains non-Hebrew words (such as English words), these are simply ignored. Adding the <code>-i</code> option tells <code>hspell</code> to pass the non-Hebrew words to <code>ispell</code>(1), and return its answer as an answer from <code>hspell</code>. This allows conveniently spell-checking mixed Hebrew-English documents. </dd>
 <p> Running <code>hspell</code> with the program name <code>hspell-i</code> also enables the <code>-i</code> option. This is a useful trick when an application expects just the name of a spell-checking program, and adds only the &quot;-a&quot; option (without giving the user an option to also add &quot;-i&quot;). The <code>multispell</code> script supplied with <code>hspell</code> serves a similar purpose, with more control over encodings and which spell-checker to run for non-Hebrew words.</p>
-<dt><code>-H</code></p>
-<dd> By default, Hspell does not allow the He Ha-sh&#8217;ela prefix. This is because this prefix is not normally used in modern Hebrew, and generates many false-negatives (errors, like He followed by a possessed noun, are thought to be correct). The <code>-H</code> option nevertheless tells Hspell to allow this prefix.</p>
-<dt><code>-D base</code></p>
-<dd> Load the word lists from the given base pathname, rather than from the compiled-in default path. This is mostly used for testing Hspell, when the dictionaries have been compiled in the current directory and hspell is run as &quot;hspell -Dhebrew.wgz&quot;.</p>
-<dt><code>-d, -B, -m, -T, -C, -S, -P, -p, -w, and -W</code></p>
-<dd> These options are passed to <code>hspell</code> by <code>lyx</code> or other applications, thinking they are talking to ispell. These options are cordially ignored.</dl>
+<dt><code>-H</code></dt>
+<dd> By default, Hspell does not allow the He Ha-sh&#8217;ela prefix. This is because this prefix is not normally used in modern Hebrew, and generates many false-negatives (errors, like He followed by a possessed noun, are thought to be correct). The <code>-H</code> option nevertheless tells Hspell to allow this prefix.</dd>
+<dt><code>-D base</code></dt>
+<dd> Load the word lists from the given base pathname, rather than from the compiled-in default path. This is mostly used for testing Hspell, when the dictionaries have been compiled in the current directory and hspell is run as &quot;hspell -Dhebrew.wgz&quot;.</dd>
+<dt><code>-d, -B, -m, -T, -C, -S, -P, -p, -w, and -W</code></dt>
+<dd> These options are passed to <code>hspell</code> by <code>lyx</code> or other applications, thinking they are talking to ispell. These options are cordially ignored.</dd></dl>
 <h2>SPELLING STANDARD</h2>
 <p> Hspell was designed to be 100% and strictly compliant with the official niqqud-less spelling rules (&quot;Ha-ktiv Khasar Ha-niqqud&quot;, colloquially known as &quot;Ktiv Male&quot;) published by the Academy of the Hebrew Language. </p>
 <p> This is both an advantage and a disadvantage, depending on your viewpoint. It&#8217;s an advantage because it encourages a <code>correct</code> and consistent spelling style throughout your writing. It is a disadvantage, because a few of the Academia&#8217;s official spelling decisions are relatively unknown to the general public. </p>
@@ -63,11 +63,11 @@ description: "hspell – Hebrew spellchecker"
 <p> These lists, before and after inflection, may be useful for much more than spellchecking. Morphological analysis (which <code>hspell</code> provides with the <code>-l</code> option) is one example. For more ideas, see Hspell project&#8217;s Web site, at <code><a rel="nofollow" href="http://ivrix.org.il/projects/spell-checker">http://ivrix.org.il/projects/spell-checker</a></code>.</p>
 <h2>FILES</h2>
 <dl>
-<dt>~/.hspell_words, ./hspell_words</p>
-<dd> These files, if they exist, should contain a list of Hebrew words that <code>hspell</code> will also accept as correct words. </p>
+<dt>~/.hspell_words, ./hspell_words</dt>
+<dd> These files, if they exist, should contain a list of Hebrew words that <code>hspell</code> will also accept as correct words. </dd>
 <p> Note that only these words <i>exactly</i> will be added &#8211; they are not inflected, and prefixes are not automatically allowed. </p>
-<dt>/usr/local/share/hspell/*</p>
-<dd> The standard Hebrew word lists used by <code>hspell</code>. </p>
+<dt>/usr/local/share/hspell/*</dt>
+<dd> The standard Hebrew word lists used by <code>hspell</code>. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> Currently always 0.</p>

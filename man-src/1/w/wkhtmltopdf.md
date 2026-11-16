@@ -26,149 +26,149 @@ description: "wkhtmltopdf – html to pdf converter"
 <p> Converts one or more HTML pages into a PDF document, <code>not</code> using wkhtmltopdf patched qt. </p>
 <h2>Global Options</h2>
 <dl>
-<dt><code> &#8211;collate</code></p>
-<dd> Collate when printing multiple copies</p>
-<dt><code> &#8211;no-collate</code></p>
-<dd> Do not collate when printing multiple copies</p>
-<dt><code> &#8211;cookie-jar</code> <i>&lt;path&gt;</i></p>
-<dd> Read and write cookies from and to the supplied cookie jar file</p>
-<dt><code> &#8211;copies</code> <i>&lt;number&gt;</i></p>
-<dd> Number of copies to print into the pdf file</p>
-<dt><code>-d, &#8211;dpi</code> <i>&lt;dpi&gt;</i></p>
-<dd> Change the dpi explicitly (this has no effect on X11 based systems)</p>
-<dt><code>-H, &#8211;extended-help</code></p>
-<dd> Display more extensive help, detailing less common command switches</p>
-<dt><code>-g, &#8211;grayscale</code></p>
-<dd> PDF will be generated in grayscale</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display help</p>
-<dt><code> &#8211;htmldoc</code></p>
-<dd> Output program html help</p>
-<dt><code> &#8211;license</code></p>
-<dd> Output license information and exit</p>
-<dt><code> &#8211;log-level</code> <i>&lt;level&gt;</i></p>
-<dd> Set log level to: none, error, warn or info</p>
-<dt><code>-l, &#8211;lowquality</code></p>
-<dd> Generates lower quality pdf/ps. Useful to shrink the result document space</p>
-<dt><code> &#8211;manpage</code></p>
-<dd> Output program man page</p>
-<dt><code>-B, &#8211;margin-bottom</code> <i>&lt;unitreal&gt;</i></p>
-<dd> Set the page bottom margin</p>
-<dt><code>-L, &#8211;margin-left</code> <i>&lt;unitreal&gt;</i></p>
-<dd> Set the page left margin</p>
-<dt><code>-R, &#8211;margin-right</code> <i>&lt;unitreal&gt;</i></p>
-<dd> Set the page right margin</p>
-<dt><code>-T, &#8211;margin-top</code> <i>&lt;unitreal&gt;</i></p>
-<dd> Set the page top margin</p>
-<dt><code>-O, &#8211;orientation</code> <i>&lt;orientation&gt;</i></p>
-<dd> Set orientation to Landscape or Portrait</p>
-<dt><code> &#8211;page-height</code> <i>&lt;unitreal&gt;</i></p>
-<dd> Page height</p>
-<dt><code>-s, &#8211;page-size</code> <i>&lt;Size&gt;</i></p>
-<dd> Set paper size to: A4, Letter, etc.</p>
-<dt><code> &#8211;page-width</code> <i>&lt;unitreal&gt;</i></p>
-<dd> Page width</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Be less verbose, maintained for backwards compatibility; Same as using &#8211;log-level none</p>
-<dt><code> &#8211;read-args-from-stdin</code></p>
-<dd> Read command line arguments from stdin</p>
-<dt><code> &#8211;readme</code></p>
-<dd> Output program readme</p>
-<dt><code> &#8211;title</code> <i>&lt;text&gt;</i></p>
-<dd> The title of the generated pdf file (The title of the first document is used if not specified)</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Output version information and exit </p>
+<dt><code> &#8211;collate</code></dt>
+<dd> Collate when printing multiple copies</dd>
+<dt><code> &#8211;no-collate</code></dt>
+<dd> Do not collate when printing multiple copies</dd>
+<dt><code> &#8211;cookie-jar</code> <i>&lt;path&gt;</i></dt>
+<dd> Read and write cookies from and to the supplied cookie jar file</dd>
+<dt><code> &#8211;copies</code> <i>&lt;number&gt;</i></dt>
+<dd> Number of copies to print into the pdf file</dd>
+<dt><code>-d, &#8211;dpi</code> <i>&lt;dpi&gt;</i></dt>
+<dd> Change the dpi explicitly (this has no effect on X11 based systems)</dd>
+<dt><code>-H, &#8211;extended-help</code></dt>
+<dd> Display more extensive help, detailing less common command switches</dd>
+<dt><code>-g, &#8211;grayscale</code></dt>
+<dd> PDF will be generated in grayscale</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display help</dd>
+<dt><code> &#8211;htmldoc</code></dt>
+<dd> Output program html help</dd>
+<dt><code> &#8211;license</code></dt>
+<dd> Output license information and exit</dd>
+<dt><code> &#8211;log-level</code> <i>&lt;level&gt;</i></dt>
+<dd> Set log level to: none, error, warn or info</dd>
+<dt><code>-l, &#8211;lowquality</code></dt>
+<dd> Generates lower quality pdf/ps. Useful to shrink the result document space</dd>
+<dt><code> &#8211;manpage</code></dt>
+<dd> Output program man page</dd>
+<dt><code>-B, &#8211;margin-bottom</code> <i>&lt;unitreal&gt;</i></dt>
+<dd> Set the page bottom margin</dd>
+<dt><code>-L, &#8211;margin-left</code> <i>&lt;unitreal&gt;</i></dt>
+<dd> Set the page left margin</dd>
+<dt><code>-R, &#8211;margin-right</code> <i>&lt;unitreal&gt;</i></dt>
+<dd> Set the page right margin</dd>
+<dt><code>-T, &#8211;margin-top</code> <i>&lt;unitreal&gt;</i></dt>
+<dd> Set the page top margin</dd>
+<dt><code>-O, &#8211;orientation</code> <i>&lt;orientation&gt;</i></dt>
+<dd> Set orientation to Landscape or Portrait</dd>
+<dt><code> &#8211;page-height</code> <i>&lt;unitreal&gt;</i></dt>
+<dd> Page height</dd>
+<dt><code>-s, &#8211;page-size</code> <i>&lt;Size&gt;</i></dt>
+<dd> Set paper size to: A4, Letter, etc.</dd>
+<dt><code> &#8211;page-width</code> <i>&lt;unitreal&gt;</i></dt>
+<dd> Page width</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Be less verbose, maintained for backwards compatibility; Same as using &#8211;log-level none</dd>
+<dt><code> &#8211;read-args-from-stdin</code></dt>
+<dd> Read command line arguments from stdin</dd>
+<dt><code> &#8211;readme</code></dt>
+<dd> Output program readme</dd>
+<dt><code> &#8211;title</code> <i>&lt;text&gt;</i></dt>
+<dd> The title of the generated pdf file (The title of the first document is used if not specified)</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Output version information and exit </dd>
 </dl>
 <h2>Page Options</h2>
 <dl>
-<dt><code> &#8211;allow</code> <i>&lt;path&gt;</i></p>
-<dd> Allow the file or files from the specified folder to be loaded (repeatable)</p>
-<dt><code> &#8211;background</code></p>
-<dd> Do print background</p>
-<dt><code> &#8211;no-background</code></p>
-<dd> Do not print background</p>
-<dt><code> &#8211;bypass-proxy-for</code> <i>&lt;value&gt;</i></p>
-<dd> Bypass proxy for host (repeatable)</p>
-<dt><code> &#8211;cache-dir</code> <i>&lt;path&gt;</i></p>
-<dd> Web cache directory</p>
-<dt><code> &#8211;checkbox-checked-svg</code> <i>&lt;path&gt;</i></p>
-<dd> Use this SVG file when rendering checked checkboxes</p>
-<dt><code> &#8211;checkbox-svg</code> <i>&lt;path&gt;</i></p>
-<dd> Use this SVG file when rendering unchecked checkboxes</p>
-<dt><code> &#8211;cookie</code> <i>&lt;name&gt;</i> <i>&lt;value&gt;</i></p>
-<dd> Set an additional cookie (repeatable), value should be url encoded.</p>
-<dt><code> &#8211;custom-header</code> <i>&lt;name&gt;</i> <i>&lt;value&gt;</i></p>
-<dd> Set an additional HTTP header (repeatable)</p>
-<dt><code> &#8211;custom-header-propagation</code></p>
-<dd> Add HTTP headers specified by &#8211;custom-header for each resource request.</p>
-<dt><code> &#8211;no-custom-header-propagation</code></p>
-<dd> Do not add HTTP headers specified by &#8211;custom-header for each resource request.</p>
-<dt><code> &#8211;debug-javascript</code></p>
-<dd> Show javascript debugging output</p>
-<dt><code> &#8211;no-debug-javascript</code></p>
-<dd> Do not show javascript debugging output</p>
-<dt><code> &#8211;encoding</code> <i>&lt;encoding&gt;</i></p>
-<dd> Set the default text encoding, for input</p>
-<dt><code> &#8211;images</code></p>
-<dd> Do load or print images</p>
-<dt><code> &#8211;no-images</code></p>
-<dd> Do not load or print images</p>
-<dt><code>-n, &#8211;disable-javascript</code></p>
-<dd> Do not allow web pages to run javascript</p>
-<dt><code> &#8211;enable-javascript</code></p>
-<dd> Do allow web pages to run javascript</p>
-<dt><code> &#8211;javascript-delay</code> <i>&lt;msec&gt;</i></p>
-<dd> Wait some milliseconds for javascript finish</p>
-<dt><code> &#8211;load-error-handling</code> <i>&lt;handler&gt;</i></p>
-<dd> Specify how to handle pages that fail to load: abort, ignore or skip</p>
-<dt><code> &#8211;load-media-error-handling</code> <i>&lt;handler&gt;</i></p>
-<dd> Specify how to handle media files that fail to load: abort, ignore or skip</p>
-<dt><code> &#8211;disable-local-file-access</code></p>
-<dd> Do not allowed conversion of a local file to read in other local files, unless explicitly allowed with &#8211;allow</p>
-<dt><code> &#8211;enable-local-file-access</code></p>
-<dd> Allowed conversion of a local file to read in other local files.</p>
-<dt><code> &#8211;minimum-font-size</code> <i>&lt;int&gt;</i></p>
-<dd> Minimum font size</p>
-<dt><code> &#8211;page-offset</code> <i>&lt;offset&gt;</i></p>
-<dd> Set the starting page number</p>
-<dt><code> &#8211;password</code> <i>&lt;password&gt;</i></p>
-<dd> HTTP Authentication password</p>
-<dt><code> &#8211;disable-plugins</code></p>
-<dd> Disable installed plugins</p>
-<dt><code> &#8211;enable-plugins</code></p>
-<dd> Enable installed plugins (plugins will likely not work)</p>
-<dt><code> &#8211;post</code> <i>&lt;name&gt;</i> <i>&lt;value&gt;</i></p>
-<dd> Add an additional post field (repeatable)</p>
-<dt><code> &#8211;post-file</code> <i>&lt;name&gt;</i> <i>&lt;path&gt;</i></p>
-<dd> Post an additional file (repeatable)</p>
-<dt><code>-p, &#8211;proxy</code> <i>&lt;proxy&gt;</i></p>
-<dd> Use a proxy</p>
-<dt><code> &#8211;proxy-hostname-lookup</code></p>
-<dd> Use the proxy for resolving hostnames</p>
-<dt><code> &#8211;radiobutton-checked-svg</code> <i>&lt;path&gt;</i></p>
-<dd> Use this SVG file when rendering checked radiobuttons</p>
-<dt><code> &#8211;radiobutton-svg</code> <i>&lt;path&gt;</i></p>
-<dd> Use this SVG file when rendering unchecked radiobuttons</p>
-<dt><code> &#8211;run-script</code> <i>&lt;js&gt;</i></p>
-<dd> Run this additional javascript after the page is done loading (repeatable)</p>
-<dt><code> &#8211;ssl-crt-path</code> <i>&lt;path&gt;</i></p>
-<dd> Path to the ssl client cert public key in OpenSSL PEM format, optionally followed by intermediate ca and trusted certs</p>
-<dt><code> &#8211;ssl-key-password</code> <i>&lt;password&gt;</i></p>
-<dd> Password to ssl client cert private key</p>
-<dt><code> &#8211;ssl-key-path</code> <i>&lt;path&gt;</i></p>
-<dd> Path to ssl client cert private key in OpenSSL PEM format</p>
-<dt><code> &#8211;stop-slow-scripts</code></p>
-<dd> Stop slow running javascripts</p>
-<dt><code> &#8211;no-stop-slow-scripts</code></p>
-<dd> Do not Stop slow running javascripts</p>
-<dt><code> &#8211;user-style-sheet</code> <i>&lt;path&gt;</i></p>
-<dd> Specify a user style sheet, to load with every page</p>
-<dt><code> &#8211;username</code> <i>&lt;username&gt;</i></p>
-<dd> HTTP Authentication username</p>
-<dt><code> &#8211;window-status</code> <i>&lt;windowStatus&gt;</i></p>
-<dd> Wait until window.status is equal to this string before rendering page</p>
-<dt><code> &#8211;zoom</code> <i>&lt;float&gt;</i></p>
-<dd> Use this zoom factor </p>
+<dt><code> &#8211;allow</code> <i>&lt;path&gt;</i></dt>
+<dd> Allow the file or files from the specified folder to be loaded (repeatable)</dd>
+<dt><code> &#8211;background</code></dt>
+<dd> Do print background</dd>
+<dt><code> &#8211;no-background</code></dt>
+<dd> Do not print background</dd>
+<dt><code> &#8211;bypass-proxy-for</code> <i>&lt;value&gt;</i></dt>
+<dd> Bypass proxy for host (repeatable)</dd>
+<dt><code> &#8211;cache-dir</code> <i>&lt;path&gt;</i></dt>
+<dd> Web cache directory</dd>
+<dt><code> &#8211;checkbox-checked-svg</code> <i>&lt;path&gt;</i></dt>
+<dd> Use this SVG file when rendering checked checkboxes</dd>
+<dt><code> &#8211;checkbox-svg</code> <i>&lt;path&gt;</i></dt>
+<dd> Use this SVG file when rendering unchecked checkboxes</dd>
+<dt><code> &#8211;cookie</code> <i>&lt;name&gt;</i> <i>&lt;value&gt;</i></dt>
+<dd> Set an additional cookie (repeatable), value should be url encoded.</dd>
+<dt><code> &#8211;custom-header</code> <i>&lt;name&gt;</i> <i>&lt;value&gt;</i></dt>
+<dd> Set an additional HTTP header (repeatable)</dd>
+<dt><code> &#8211;custom-header-propagation</code></dt>
+<dd> Add HTTP headers specified by &#8211;custom-header for each resource request.</dd>
+<dt><code> &#8211;no-custom-header-propagation</code></dt>
+<dd> Do not add HTTP headers specified by &#8211;custom-header for each resource request.</dd>
+<dt><code> &#8211;debug-javascript</code></dt>
+<dd> Show javascript debugging output</dd>
+<dt><code> &#8211;no-debug-javascript</code></dt>
+<dd> Do not show javascript debugging output</dd>
+<dt><code> &#8211;encoding</code> <i>&lt;encoding&gt;</i></dt>
+<dd> Set the default text encoding, for input</dd>
+<dt><code> &#8211;images</code></dt>
+<dd> Do load or print images</dd>
+<dt><code> &#8211;no-images</code></dt>
+<dd> Do not load or print images</dd>
+<dt><code>-n, &#8211;disable-javascript</code></dt>
+<dd> Do not allow web pages to run javascript</dd>
+<dt><code> &#8211;enable-javascript</code></dt>
+<dd> Do allow web pages to run javascript</dd>
+<dt><code> &#8211;javascript-delay</code> <i>&lt;msec&gt;</i></dt>
+<dd> Wait some milliseconds for javascript finish</dd>
+<dt><code> &#8211;load-error-handling</code> <i>&lt;handler&gt;</i></dt>
+<dd> Specify how to handle pages that fail to load: abort, ignore or skip</dd>
+<dt><code> &#8211;load-media-error-handling</code> <i>&lt;handler&gt;</i></dt>
+<dd> Specify how to handle media files that fail to load: abort, ignore or skip</dd>
+<dt><code> &#8211;disable-local-file-access</code></dt>
+<dd> Do not allowed conversion of a local file to read in other local files, unless explicitly allowed with &#8211;allow</dd>
+<dt><code> &#8211;enable-local-file-access</code></dt>
+<dd> Allowed conversion of a local file to read in other local files.</dd>
+<dt><code> &#8211;minimum-font-size</code> <i>&lt;int&gt;</i></dt>
+<dd> Minimum font size</dd>
+<dt><code> &#8211;page-offset</code> <i>&lt;offset&gt;</i></dt>
+<dd> Set the starting page number</dd>
+<dt><code> &#8211;password</code> <i>&lt;password&gt;</i></dt>
+<dd> HTTP Authentication password</dd>
+<dt><code> &#8211;disable-plugins</code></dt>
+<dd> Disable installed plugins</dd>
+<dt><code> &#8211;enable-plugins</code></dt>
+<dd> Enable installed plugins (plugins will likely not work)</dd>
+<dt><code> &#8211;post</code> <i>&lt;name&gt;</i> <i>&lt;value&gt;</i></dt>
+<dd> Add an additional post field (repeatable)</dd>
+<dt><code> &#8211;post-file</code> <i>&lt;name&gt;</i> <i>&lt;path&gt;</i></dt>
+<dd> Post an additional file (repeatable)</dd>
+<dt><code>-p, &#8211;proxy</code> <i>&lt;proxy&gt;</i></dt>
+<dd> Use a proxy</dd>
+<dt><code> &#8211;proxy-hostname-lookup</code></dt>
+<dd> Use the proxy for resolving hostnames</dd>
+<dt><code> &#8211;radiobutton-checked-svg</code> <i>&lt;path&gt;</i></dt>
+<dd> Use this SVG file when rendering checked radiobuttons</dd>
+<dt><code> &#8211;radiobutton-svg</code> <i>&lt;path&gt;</i></dt>
+<dd> Use this SVG file when rendering unchecked radiobuttons</dd>
+<dt><code> &#8211;run-script</code> <i>&lt;js&gt;</i></dt>
+<dd> Run this additional javascript after the page is done loading (repeatable)</dd>
+<dt><code> &#8211;ssl-crt-path</code> <i>&lt;path&gt;</i></dt>
+<dd> Path to the ssl client cert public key in OpenSSL PEM format, optionally followed by intermediate ca and trusted certs</dd>
+<dt><code> &#8211;ssl-key-password</code> <i>&lt;password&gt;</i></dt>
+<dd> Password to ssl client cert private key</dd>
+<dt><code> &#8211;ssl-key-path</code> <i>&lt;path&gt;</i></dt>
+<dd> Path to ssl client cert private key in OpenSSL PEM format</dd>
+<dt><code> &#8211;stop-slow-scripts</code></dt>
+<dd> Stop slow running javascripts</dd>
+<dt><code> &#8211;no-stop-slow-scripts</code></dt>
+<dd> Do not Stop slow running javascripts</dd>
+<dt><code> &#8211;user-style-sheet</code> <i>&lt;path&gt;</i></dt>
+<dd> Specify a user style sheet, to load with every page</dd>
+<dt><code> &#8211;username</code> <i>&lt;username&gt;</i></dt>
+<dd> HTTP Authentication username</dd>
+<dt><code> &#8211;window-status</code> <i>&lt;windowStatus&gt;</i></dt>
+<dd> Wait until window.status is equal to this string before rendering page</dd>
+<dt><code> &#8211;zoom</code> <i>&lt;float&gt;</i></dt>
+<dd> Use this zoom factor </dd>
 </dl>
 <h2>Specifying A Proxy</h2>
 <p> By default proxy information will be read from the environment variables: proxy, all_proxy and http_proxy, proxy options can also by specified with the -p switch </p>

@@ -18,14 +18,12 @@ description: "list_config_entries – Lists the names of all entries in a config
 int i, n;
 char const **sections = NULL;
 char const **entries = NULL;
-
 /* List all entries not in any section. */
 n = list_config_entries(NULL, &amp;entries);
    for (i = 0; i 
       printf(" %s=\"%s\"
 ", entries[i], get_config_string(
              NULL, entries[i], "-"));
-   
    /* List all sections (and entries in them). */
    n = list_config_sections(&amp;sections);
    /* loop through all section names */

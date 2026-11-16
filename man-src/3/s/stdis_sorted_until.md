@@ -11,35 +11,20 @@ std::is_sorted_until - std::is_sorted_until
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt &gt;                                                                     (since C++11)
-
 ForwardIt is_sorted_until( ForwardIt first, ForwardIt last );                                   (until C++20)
-
 template&lt; class ForwardIt &gt;                                                                     (since C++20)
-
 constexpr ForwardIt is_sorted_until( ForwardIt first, ForwardIt last );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;                                          (2) (since C++17)
-
 ForwardIt is_sorted_until( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last );
-
 template&lt; class ForwardIt, class Compare &gt;                                                                     (since C++11)
-
 ForwardIt is_sorted_until( ForwardIt first, ForwardIt last,                             (1)                    (until C++20)
-
 Compare comp );
-
 template&lt; class ForwardIt, class Compare &gt;
-
 constexpr ForwardIt is_sorted_until( ForwardIt first, ForwardIt last,                       (3)                (since C++20)
-
 Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class Compare &gt;
-
 ForwardIt is_sorted_until( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last,           (4)            (since C++17)
-
 Compare comp );</code></pre> 
 Examines the range [first, last) and finds the largest range beginning at first in which the elements are sorted in ascending order. 
 1) Elements are compared using operator&lt;. 
@@ -112,14 +97,10 @@ std::is_sorted and std::is_sorted_until both return true for empty ranges and ra
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 g(rd());

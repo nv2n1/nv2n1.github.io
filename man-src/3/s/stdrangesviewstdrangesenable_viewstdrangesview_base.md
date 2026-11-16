@@ -11,17 +11,12 @@ std::ranges::View,std::ranges::enable_view,std::ranges::view_base - std::ranges:
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ranges&gt;
-
     template &lt;class T&gt;
     (1)
-
         concept View = Range&lt;T&gt; &amp;&amp; Semiregular&lt;T&gt; &amp;&amp; enable_view&lt;T&gt;;
-
 template &lt;class T&gt;
 (2)
-
     inline constexpr bool enable_view = /*see description*/;
-
 struct view_base {
 };
 (3)</code></pre> 

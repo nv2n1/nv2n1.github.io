@@ -46,11 +46,12 @@ description: "perl5125delta – what is new for perl v5.12.5"
 <h2>Installation and Configuration Improvements</h2>
 <h3>Platform Specific Changes</h3>
 <dl>
-<dt>Mac <font SIZE="-1">OS X</font></p>
-<dd> There have been configuration and test fixes to make Perl build cleanly on Lion and Mountain Lion.</p>
-<dt>NetBSD</p>
-<dd> The NetBSD hints file was corrected to be compatible with NetBSD 6.*</dl>
+<dt>Mac <font SIZE="-1">OS X</font></dt>
+<dd> There have been configuration and test fixes to make Perl build cleanly on Lion and Mountain Lion.</dd>
+<dt>NetBSD</dt>
+<dd> The NetBSD hints file was corrected to be compatible with NetBSD 6.*</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> <tt>&quot;chop&quot;</tt> now correctly handles characters above &#8220;
+</dd></dl>

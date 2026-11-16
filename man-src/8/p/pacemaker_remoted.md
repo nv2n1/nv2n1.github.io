@@ -14,14 +14,14 @@ description: "Pacemaker – Part of the Pacemaker cluster resource manager"
 <p>pacemaker_remoted &#8211; Pacemaker Remote daemon for extending pacemaker functionality to remote nodes.</p>
 <h2>Options</h2>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd>This text</p>
-<dt>-$, <code>&#8211;version</code></p>
-<dd>Version information</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd>Increase debug output</p>
-<dt><code>-l</code>, <code>&#8211;logfile</code>=<i>value</i></p>
-<dd>Send logs to the additional named logfile</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>This text</dd>
+<dt>-$, <code>&#8211;version</code></dt>
+<dd>Version information</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase debug output</dd>
+<dt><code>-l</code>, <code>&#8211;logfile</code>=<i>value</i></dt>
+<dd>Send logs to the additional named logfile</dd></dl>
 <h2>Author</h2>
 <p>Written by Andrew Beekhof</p>
 <h2>Reporting Bugs</h2>

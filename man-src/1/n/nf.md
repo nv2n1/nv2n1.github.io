@@ -16,7 +16,7 @@ description: "fmt-ptrn – A simple template system"
 <p> For example, given the following template: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 //   FILE: %%(FILE)
 // AUTHOR: %%(FULLNAME)
@@ -24,11 +24,11 @@ description: "fmt-ptrn – A simple template system"
 // Copyright (C) 1999 %%(FULLNAME) %%(EMAIL)
 // All rights reserved.
 </pre>
-</dl>
+</dd></dl>
 <p> nf will create: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 //   FILE: foo.cpp
 // AUTHOR: W. Michael Petullo
@@ -36,7 +36,7 @@ description: "fmt-ptrn – A simple template system"
 // Copyright (C) 1999 W. Michael Petullo new [at] flyn.org
 // All rights reserved.
 </pre>
-</dl>
+</dd></dl>
 <p> on my computer. </p>
 <p> The program understands plaintext or gziped template files. </p>
 <p> The fmt-ptrn system also provides a shared library which allows a programmer access to nf&#8217;s functionality. The system was developed to be light and fast. Its only external dependencies are the C library, glib2 and zlib. </p>
@@ -46,20 +46,20 @@ description: "fmt-ptrn – A simple template system"
 <p> Certain types of files generally don&#8217;t have extensions. In this case, nf looks for a template directory with the same name as the file being created. This is useful when using templates to create files with names such as Makefile and README. </p>
 <p> When filling a format pattern, nf knows the value for the following format patterns: </p>
 <dl>
-<dt>DATE</p>
-<dd> Today&#8217;s date.</p>
-<dt>FILE</p>
-<dd> The name of the file being created.</p>
-<dt>FULLNAME</p>
-<dd> The user&#8217;s full name (from GECOS field).</p>
-<dt>FIRSTNAME</p>
-<dd> The user&#8217;s first name (from GECOS field).</p>
-<dt>MIDDLENAME</p>
-<dd> The user&#8217;s middle name (from GECOS field).</p>
-<dt>LASTNAME</p>
-<dd> The user&#8217;s last name (from GECOS field).</p>
-<dt>EMPTY_STR</p>
-<dd> The empty string.</dl>
+<dt>DATE</dt>
+<dd> Today&#8217;s date.</dd>
+<dt>FILE</dt>
+<dd> The name of the file being created.</dd>
+<dt>FULLNAME</dt>
+<dd> The user&#8217;s full name (from GECOS field).</dd>
+<dt>FIRSTNAME</dt>
+<dd> The user&#8217;s first name (from GECOS field).</dd>
+<dt>MIDDLENAME</dt>
+<dd> The user&#8217;s middle name (from GECOS field).</dd>
+<dt>LASTNAME</dt>
+<dd> The user&#8217;s last name (from GECOS field).</dd>
+<dt>EMPTY_STR</dt>
+<dd> The empty string.</dd></dl>
 <p> In addition, any environment variable can be used as a format pattern. An alternate string to be used in the case of an environment variable being undefined can be specified as follows: </p>
 <p> %(UNDEFINED:foo) </p>
 <p> This will be replaced with &#8220;foo&#8221; in the created file if UNDEFINED is not a part of one&#8217;s environment. </p>
@@ -75,38 +75,38 @@ description: "fmt-ptrn – A simple template system"
 <p> will insert the contents of the file named foo. </p>
 <p> The following modifiers are currently available: </p>
 <dl>
-<dt>upper</p>
-<dd> Convert to upper case.</p>
-<dt>lower</p>
-<dd> Convert to lower case.</p>
-<dt>basename</p>
-<dd> Convert to the basename of a filename.</p>
-<dt>before=&quot;str&quot;</p>
-<dd> Append the string str before.</p>
-<dt>after=&quot;str&quot;</p>
-<dd> Append the string str after.</p>
-<dt>fn</p>
-<dd> Tag a &quot; ()&quot; on the end.</p>
-<dt>c_delim</p>
-<dd> Print enveloped in a C style deliminator, ie: /* == foo == */.</p>
-<dt>cpp_delim</p>
-<dd> Print enveloped in a C++ style deliminator, ie: // == foo.</p>
-<dt>sh_delim</p>
-<dd> Print enveloped in a shell script style deliminator, ie: # == foo.</p>
-<dt>tex_delim</p>
-<dd> Print eveloped in a LaTeX style deliminator, ie: % == foo.</p>
-<dt>newlines</p>
-<dd> Replaces occurrences of &quot; &quot; in the string with new lines</p>
-<dt>no_newlines</p>
-<dd> Replaces occurrences of &quot; in the string with &#8216; &#8216;</p>
-<dt>remove_underscore</p>
-<dd> Replaces occurrences of &#8216;_&#8217; in the string with &#8216;-&#8216;</p>
-<dt>file</p>
-<dd> Treats the key as the path to a file, which is included</p>
-<dt>template</p>
-<dd> Treats the key as the path to a template, which is filled and included</p>
-<dt>#</p>
-<dd> A comment, this will not appear in destination file %(# Comment.)</dl>
+<dt>upper</dt>
+<dd> Convert to upper case.</dd>
+<dt>lower</dt>
+<dd> Convert to lower case.</dd>
+<dt>basename</dt>
+<dd> Convert to the basename of a filename.</dd>
+<dt>before=&quot;str&quot;</dt>
+<dd> Append the string str before.</dd>
+<dt>after=&quot;str&quot;</dt>
+<dd> Append the string str after.</dd>
+<dt>fn</dt>
+<dd> Tag a &quot; ()&quot; on the end.</dd>
+<dt>c_delim</dt>
+<dd> Print enveloped in a C style deliminator, ie: /* == foo == */.</dd>
+<dt>cpp_delim</dt>
+<dd> Print enveloped in a C++ style deliminator, ie: // == foo.</dd>
+<dt>sh_delim</dt>
+<dd> Print enveloped in a shell script style deliminator, ie: # == foo.</dd>
+<dt>tex_delim</dt>
+<dd> Print eveloped in a LaTeX style deliminator, ie: % == foo.</dd>
+<dt>newlines</dt>
+<dd> Replaces occurrences of &quot; &quot; in the string with new lines</dd>
+<dt>no_newlines</dt>
+<dd> Replaces occurrences of &quot; in the string with &#8216; &#8216;</dd>
+<dt>remove_underscore</dt>
+<dd> Replaces occurrences of &#8216;_&#8217; in the string with &#8216;-&#8216;</dd>
+<dt>file</dt>
+<dd> Treats the key as the path to a file, which is included</dd>
+<dt>template</dt>
+<dd> Treats the key as the path to a template, which is filled and included</dd>
+<dt>#</dt>
+<dd> A comment, this will not appear in destination file %(# Comment.)</dd></dl>
 <p> Several modifiers can act within one format string as illustrated: </p>
 <p> %(basename upper FOO) </p>
 <p> Modifiers use a stack to be applied. The first modifier to be applied is the one farthest to the right. The last to be applied it the one farthest to the left. </p>

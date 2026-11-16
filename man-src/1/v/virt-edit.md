@@ -42,49 +42,49 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></p>
+<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>-b</code> extension</p>
+</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-b</code> extension</dt>
 <dd>
-<dt><code>&#8211;backup</code> extension</p>
-<dd> Create a backup of the original file <i>in the guest disk image</i>. The backup has the original filename with <tt>&quot;extension&quot;</tt> added. </p>
+</dd><dt><code>&#8211;backup</code> extension</dt>
+<dd> Create a backup of the original file <i>in the guest disk image</i>. The backup has the original filename with <tt>&quot;extension&quot;</tt> added. </dd>
 <p> Usually the first character of <tt>&quot;extension&quot;</tt> would be a dot <tt>&quot;.&quot;</tt> so you would write: </p>
 <pre>
  virt-edit -b .orig [etc]
 </pre>
 <p> By default, no backup file is made.</p>
-<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></p>
+<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly, then libvirt is not used at all.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;echo-keys</code></p>
-<dd> When prompting for keys and passphrases, virt-edit normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</p>
-<dt><code>-e</code> <font SIZE="-1">EXPR</font></p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;echo-keys</code></dt>
+<dd> When prompting for keys and passphrases, virt-edit normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</dd>
+<dt><code>-e</code> <font SIZE="-1">EXPR</font></dt>
 <dd>
-<dt><code>&#8211;edit</code> <font SIZE="-1">EXPR</font></p>
+</dd><dt><code>&#8211;edit</code> <font SIZE="-1">EXPR</font></dt>
 <dd>
-<dt><code>&#8211;expr</code> <font SIZE="-1">EXPR</font></p>
-<dd> Instead of launching the external editor, non-interactively apply the Perl expression <tt>&quot;EXPR&quot;</tt> to each line in the file. See &#8220;NON-INTERACTIVE <font SIZE="-1">EDITING&#8221;</font> below. </p>
+</dd><dt><code>&#8211;expr</code> <font SIZE="-1">EXPR</font></dt>
+<dd> Instead of launching the external editor, non-interactively apply the Perl expression <tt>&quot;EXPR&quot;</tt> to each line in the file. See &#8220;NON-INTERACTIVE <font SIZE="-1">EDITING&#8221;</font> below. </dd>
 <p> Be careful to properly quote the expression to prevent it from being altered by the shell. </p>
 <p> Note that this option is only available when Perl 5 is installed.</p>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </dd>
 <p> For example: </p>
 <pre>
  virt-edit --format=raw -a disk.img file
@@ -95,12 +95,12 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>&#8211;keys-from-stdin</code></p>
-<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</p>
-<dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></p>
+<dt><code>&#8211;keys-from-stdin</code></dt>
+<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
+<dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></dt>
 <dd>
-<dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></p>
-<dd> Mount the named partition or logical volume on the given mountpoint. </p>
+</dd><dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></dt>
+<dd> Mount the named partition or logical volume on the given mountpoint. </dd>
 <p> If the mountpoint is omitted, it defaults to <i>/</i>. </p>
 <p> Specifying any mountpoint disables the inspection of the guest and the mount of its root and all of its mountpoints, so make sure to mount all the mountpoints needed to work with the filenames given as arguments. </p>
 <p> If you don&#8217;t know what filesystems a disk image contains, you can either run guestfish without this option, then list the partitions, filesystems and LVs available (see &#8220;list-partitions&#8221;, &#8220;list-filesystems&#8221; and &#8220;lvs&#8221; commands), or you can use the <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1) program. </p>
@@ -110,16 +110,16 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 </pre>
 <p> Using this flag is equivalent to using the <tt>&quot;mount-options&quot;</tt> command. </p>
 <p> The fourth part of the parameter is the filesystem driver to use, such as <tt>&quot;ext3&quot;</tt> or <tt>&quot;ntfs&quot;</tt>. This is rarely needed, but can be useful if multiple drivers are valid for a filesystem (eg: <tt>&quot;ext2&quot;</tt> and <tt>&quot;ext3&quot;</tt>), or if libguestfs misidentifies a filesystem.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
 <h2>OLD-STYLE COMMAND LINE ARGUMENTS</h2>
 <p> Previous versions of virt-edit allowed you to write either: </p>
 <pre>
@@ -168,18 +168,18 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <p> <tt>&quot;virt-edit&quot;</tt> has a limited ability to understand Windows drive letters and paths (eg. <i>E:ooar.txt</i>). </p>
 <p> If and only if the guest is running Windows then:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Drive letter prefixes like <tt>&quot;C:&quot;</tt> are resolved against the Windows Registry to the correct filesystem.</p>
-<dt>&bull;</p>
-<dd> Any backslash (<tt>&quot;\&quot;</tt>) characters in the path are replaced with forward slashes so that libguestfs can process it.</p>
-<dt>&bull;</p>
-<dd> The path is resolved case insensitively to locate the file that should be edited.</dl>
+<dt>&bull;</dt>
+<dd> Drive letter prefixes like <tt>&quot;C:&quot;</tt> are resolved against the Windows Registry to the correct filesystem.</dd>
+<dt>&bull;</dt>
+<dd> Any backslash (<tt>&quot;\&quot;</tt>) characters in the path are replaced with forward slashes so that libguestfs can process it.</dd>
+<dt>&bull;</dt>
+<dd> The path is resolved case insensitively to locate the file that should be edited.</dd></dl>
 <p> There are some known shortcomings:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Some <font SIZE="-1">NTFS</font> symbolic links may not be followed correctly.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">NTFS</font> junction points that cross filesystems are not followed.</dl>
+<dt>&bull;</dt>
+<dd> Some <font SIZE="-1">NTFS</font> symbolic links may not be followed correctly.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">NTFS</font> junction points that cross filesystems are not followed.</dd></dl>
 <h2>USING GUESTFISH</h2>
 <p> <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) is a more powerful, lower level tool which you can use when <tt>&quot;virt-edit&quot;</tt> doesn&#8217;t work. </p>
 <p> Using <tt>&quot;virt-edit&quot;</tt> is approximately equivalent to doing: </p>
@@ -200,8 +200,8 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 </pre>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>&quot;EDITOR&quot;</p>
-<dd> If set, this string is used as the editor. It may contain arguments, eg. <tt>&quot;emacs -nw&quot;</tt> </p>
+<dt>&quot;EDITOR&quot;</dt>
+<dd> If set, this string is used as the editor. It may contain arguments, eg. <tt>&quot;emacs -nw&quot;</tt> </dd>
 <p> If not set, <tt>&quot;vi&quot;</tt> is used.</dl>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
@@ -220,13 +220,13 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

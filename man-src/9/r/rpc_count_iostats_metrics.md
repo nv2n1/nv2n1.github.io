@@ -15,11 +15,11 @@ rpc_count_iostats_metrics - tally up per-task stats
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>completed rpc_task</dl>
+<dl><dd></dd><dd>completed rpc_task</dd></dl>
  
 
  <i>op_metrics</i>
-<dl><dd>stat structure for OP that will accumulate stats from <i>task</i></dl>
+<dl><dd>stat structure for OP that will accumulate stats from <i>task</i></dd></dl>
 
 <h2>Copyright</h2>
 

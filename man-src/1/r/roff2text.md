@@ -18,16 +18,16 @@ description: "roff2text – transform roff code into text mode"
 <p> <code>roff2text</code> transforms <i>roff</i> code into <i>text</i> mode. Print the result to standard output. </p>
 <p> There are more of these programs for generating other formats of <i>roff</i> input.</p>
 <dl>
-<dt><code><a href="/docs/linux/man/1-roff2dvi/">roff2dvi</a></code>(1)</p>
-<dd> is for <i>dvi</i> mode.</p>
-<dt><code><a href="/docs/linux/man/1-roff2html/">roff2html</a></code>(1)</p>
-<dd> generates <i>HTML</i> output.</p>
-<dt><code><a href="/docs/linux/man/1-roff2pdf/">roff2pdf</a></code>(1)</p>
-<dd> outputs <i>pdf</i> mode.</p>
-<dt><code><a href="/docs/linux/man/1-roff2ps/">roff2ps</a></code>(1)</p>
-<dd> prints <i>PostScript</i> format to standard output.</p>
-<dt><code><a href="/docs/linux/man/1-roff2x/">roff2x</a></code>(1)</p>
-<dd> prints the output in the <code>groff</code> device <code>X</code> that is suitable for programs like <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1) or <code><a href="/docs/linux/man/1-xditview/">xditview</a></code>(1).</dl>
+<dt><code><a href="/docs/linux/man/1-roff2dvi/">roff2dvi</a></code>(1)</dt>
+<dd> is for <i>dvi</i> mode.</dd>
+<dt><code><a href="/docs/linux/man/1-roff2html/">roff2html</a></code>(1)</dt>
+<dd> generates <i>HTML</i> output.</dd>
+<dt><code><a href="/docs/linux/man/1-roff2pdf/">roff2pdf</a></code>(1)</dt>
+<dd> outputs <i>pdf</i> mode.</dd>
+<dt><code><a href="/docs/linux/man/1-roff2ps/">roff2ps</a></code>(1)</dt>
+<dd> prints <i>PostScript</i> format to standard output.</dd>
+<dt><code><a href="/docs/linux/man/1-roff2x/">roff2x</a></code>(1)</dt>
+<dd> prints the output in the <code>groff</code> device <code>X</code> that is suitable for programs like <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1) or <code><a href="/docs/linux/man/1-xditview/">xditview</a></code>(1).</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>roff2text</code> was written by Bernd Warken</p>
 <h2>SEE ALSO</h2>

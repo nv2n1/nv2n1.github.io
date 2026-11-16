@@ -11,7 +11,6 @@ std::iswdigit - std::iswdigit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     int iswdigit(wint_t ch);</code></pre> 
 Checks if the given wide character corresponds (if narrowed) to one of the ten decimal digit characters 0123456789. 
 If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 
@@ -32,13 +31,9 @@ std::iswdigit and std::iswxdigit are the only standard wide character classifica
 
 Some locales offer additional character classes that detect non-ASCII digits 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;clocale&gt;
-
 void test(wchar_t a3, wchar_t u3, wchar_t j3)
-
 {
     std::wcout &lt;&lt; std::boolalpha
                &lt;&lt; &quot;          '&quot; &lt;&lt; a3 &lt;&lt; &quot;'   '&quot; &lt;&lt; u3 &lt;&lt; &quot;'  '&quot; &lt;&lt; j3 &lt;&lt; &quot;'\n&quot;
@@ -51,9 +46,7 @@ void test(wchar_t a3, wchar_t u3, wchar_t j3)
                &lt;&lt; (bool)std::iswctype(u3, std::wctype(&quot;jdigit&quot;)) &lt;&lt; ' '
                &lt;&lt; (bool)std::iswctype(j3, std::wctype(&quot;jdigit&quot;)) &lt;&lt; '\n';
 }
-
 int main()
-
 {
     wchar_t a3 = L'3';  // the ASCII digit 3
     wchar_t u3 = L'三'; // the CJK numeral 3

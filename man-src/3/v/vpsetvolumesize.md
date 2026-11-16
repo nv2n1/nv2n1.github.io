@@ -13,20 +13,20 @@ description: "vpSetVolumeSize – define the dimensions of a volume"
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpSetVolumeSize(</code><i>vpc, xlen, ylen, zlen</i><code>)</code></p>
+<dt> <code>vpSetVolumeSize(</code><i>vpc, xlen, ylen, zlen</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>xlen, ylen, zlen;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>xlen, ylen, zlen;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>xlen</i></p>
-<dd>Size of first dimension of the volume in voxels.</p>
-<dt><i>ylen</i></p>
-<dd>Size of the second dimension of the volume in voxels.</p>
-<dt><i>zlen</i></p>
-<dd>Size of the third dimension of the volume in voxels.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>xlen</i></dt>
+<dd>Size of first dimension of the volume in voxels.</dd>
+<dt><i>ylen</i></dt>
+<dd>Size of the second dimension of the volume in voxels.</dd>
+<dt><i>zlen</i></dt>
+<dd>Size of the third dimension of the volume in voxels.</dd></dl>
 <h2>Description</h2>
 <p><code>vpSetVolumeSize</code> is used to define the dimensions of a volume. It must be called before volume data is loaded into a rendering context. Any existing precomputed volume data structures in the context are destroyed.</p>
 <h2>State Variables</h2>

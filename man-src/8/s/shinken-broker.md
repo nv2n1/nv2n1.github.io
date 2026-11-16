@@ -17,30 +17,30 @@ description: "shinken-broker – Shinken broker daemon"
 <p> Multiple modules can be enabled simultaneously</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd>Show version number and exit</p>
+<dt><code>&#8211;version</code></dt>
+<dd>Show version number and exit</dd>
 <dl>
-<dd></dl>
-<dt><code>-c </code>CONFIGFILE, &#8211;config CONFIGFILE</p>
-<dd>Config file</p>
+<dd></dd></dl>
+<dt><code>-c </code>CONFIGFILE, &#8211;config CONFIGFILE</dt>
+<dd>Config file</dd>
 <dl>
-<dd></dl>
-<dt><code>-d, &#8211;daemon</code></p>
-<dd>Run in daemon mode</p>
+<dd></dd></dl>
+<dt><code>-d, &#8211;daemon</code></dt>
+<dd>Run in daemon mode</dd>
 <dl>
-<dd></dl>
-<dt><code>-r, &#8211;replace</code></p>
-<dd>Replace previously running broker</p>
+<dd></dd></dl>
+<dt><code>-r, &#8211;replace</code></dt>
+<dd>Replace previously running broker</dd>
 <dl>
-<dd></dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print detailed help screen</p>
+<dd></dd></dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print detailed help screen</dd>
 <dl>
-<dd></dl>
-<dt><code>&#8211;debugfile </code>DEBUGFILE</p>
-<dd>Enable debug logging to DEBUGFILE</p>
+<dd></dd></dl>
+<dt><code>&#8211;debugfile </code>DEBUGFILE</dt>
+<dd>Enable debug logging to DEBUGFILE</dd>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>Authors</h2>
 <p>David Hannequin. Arthur Gautier. Michael Leinartas.</p>

@@ -13,8 +13,8 @@ description: "oath_done – API function"
 int oath_done(void);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>Description</h2>
 <p>This function deinitializes the OATH library, which were initialized using <code>oath_init()</code>. After calling this function, no other OATH library function may be called except for to re-initialize the library using <code>oath_init()</code>.</p>
 <h2>Returns</h2>

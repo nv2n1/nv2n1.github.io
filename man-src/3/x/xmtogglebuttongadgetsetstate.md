@@ -17,12 +17,12 @@ description: "XmToggleButtonGadgetSetState — A ToggleButtonGadget function tha
 <h2>Description</h2>
 <p><code>XmToggleButtonGadgetSetState</code> sets or changes the ToggleButtonGadget&#8217;s current state.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ToggleButtonGadget widget ID.</p>
-<dt><i>state</i></p>
-<dd>Specifies a Boolean value that indicates whether the ToggleButtonGadget state is selected or unselected. If the value is True, the button state is selected; if it is False, the button state is unselected.</p>
-<dt><i>notify</i></p>
-<dd>Indicates whether <code>XmNvalueChangedCallback</code> is called; it can be either True or False. The <code>XmNvalueChangedCallback</code> is only called when this function changes the state of the ToggleButtonGadget. When this argument is True and the ToggleButtonGadget is a child of a RowColumn widget whose <code>XmNradioBehavior</code> is True, setting the ToggleButtonGadget causes other ToggleButton and ToggleButtonGadget children of the RowColumn to be unselected.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ToggleButtonGadget widget ID.</dd>
+<dt><i>state</i></dt>
+<dd>Specifies a Boolean value that indicates whether the ToggleButtonGadget state is selected or unselected. If the value is True, the button state is selected; if it is False, the button state is unselected.</dd>
+<dt><i>notify</i></dt>
+<dd>Indicates whether <code>XmNvalueChangedCallback</code> is called; it can be either True or False. The <code>XmNvalueChangedCallback</code> is only called when this function changes the state of the ToggleButtonGadget. When this argument is True and the ToggleButtonGadget is a child of a RowColumn widget whose <code>XmNradioBehavior</code> is True, setting the ToggleButtonGadget causes other ToggleButton and ToggleButtonGadget children of the RowColumn to be unselected.</dd></dl>
 <p> For a complete definition of ToggleButtonGadget and its associated resources, see <code><a href="/docs/linux/man/3-xmtogglebuttongadget/">XmToggleButtonGadget</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtogglebuttongadget/">XmToggleButtonGadget</a></code>(3).</p>

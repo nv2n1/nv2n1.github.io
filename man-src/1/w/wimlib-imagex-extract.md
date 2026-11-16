@@ -26,7 +26,7 @@ description: "wimlib-imagex-extract – Extract files or directories from a WIM 
 <p> Each <i>LISTFILE</i> must be a text file (UTF-8 or UTF-16LE encoded; plain ASCII is also fine) that contains a list of paths to extract, one per line. Wildcard characters are allowed by default. The following demonstrates an example listfile: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 ;
 This is a comment(begins with semicolon)
@@ -41,44 +41,43 @@ This is a comment(begins with semicolon)
 ; Leading and trailing whitespace is ignored
     \Windows
 otepad*
-
 </code></pre>
 <h2>SPLIT WIMS</h2>
 <p> You may use <code>wimlib-imagex extract</code> to extract files or directory trees from a split WIM. This uses the <code>&#8211;refs</code>=&quot;<i>GLOB</i>&quot; option in the same way as in other commands such as <code>wimlib-imagex apply</code>. See <code>wimlib-imagex apply</code> (1) for more details.</p>
 <h2>OPTIONS</h2>
-<dl>
-<dt><code>&#8211;check</code></p>
-<dd> When reading <i>WIMFILE</i>, verify its integrity if an integrity table is present.</p>
-<dt><code>&#8211;ref</code>=&quot;<i>GLOB</i>&quot;</p>
-<dd> File glob of additional WIMs or split WIM parts to reference resources from. See <code>SPLIT_WIMS</code>. Note: <i>GLOB</i> is listed in quotes because it is interpreted by <code>wimlib-imagex</code> and may need to be quoted to protect against shell expansion.</p>
-<dt><code>&#8211;dest-dir</code>=<i>DIR</i></p>
-<dd> Extract the files and directories to the directory <i>DIR</i> instead of to the current working directory.</p>
-<dt><code>&#8211;to-stdout</code></p>
-<dd> Extract the files to standard output instead of to the filesystem. This can only be provided if all the specified paths are to regular files (not directories or reparse points). If present, alternate data streams are not extracted.</p>
-<dt><code>&#8211;unix-data</code></p>
-<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</p>
-<dt><code>&#8211;no-acls</code></p>
-<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</p>
-<dt><code>&#8211;strict-acls</code></p>
-<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</p>
-<dt><code>&#8211;no-attributes</code></p>
-<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</p>
-<dt><code>&#8211;include-invalid-names</code></p>
-<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</p>
-<dt><code>&#8211;no-globs</code></p>
-<dd> Do not recognize wildcard characters in paths. Each path will be searched for literally. In addition, if case insensitivity is enabled, do not allow a single path to match multiple files with the same case-insensitive name but different case-sensitive names.</p>
+</dd><dl>
+<dt><code>&#8211;check</code></dt>
+<dd> When reading <i>WIMFILE</i>, verify its integrity if an integrity table is present.</dd>
+<dt><code>&#8211;ref</code>=&quot;<i>GLOB</i>&quot;</dt>
+<dd> File glob of additional WIMs or split WIM parts to reference resources from. See <code>SPLIT_WIMS</code>. Note: <i>GLOB</i> is listed in quotes because it is interpreted by <code>wimlib-imagex</code> and may need to be quoted to protect against shell expansion.</dd>
+<dt><code>&#8211;dest-dir</code>=<i>DIR</i></dt>
+<dd> Extract the files and directories to the directory <i>DIR</i> instead of to the current working directory.</dd>
+<dt><code>&#8211;to-stdout</code></dt>
+<dd> Extract the files to standard output instead of to the filesystem. This can only be provided if all the specified paths are to regular files (not directories or reparse points). If present, alternate data streams are not extracted.</dd>
+<dt><code>&#8211;unix-data</code></dt>
+<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dd>
+<dt><code>&#8211;no-acls</code></dt>
+<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dd>
+<dt><code>&#8211;strict-acls</code></dt>
+<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dd>
+<dt><code>&#8211;no-attributes</code></dt>
+<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dd>
+<dt><code>&#8211;include-invalid-names</code></dt>
+<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dd>
+<dt><code>&#8211;no-globs</code></dt>
+<dd> Do not recognize wildcard characters in paths. Each path will be searched for literally. In addition, if case insensitivity is enabled, do not allow a single path to match multiple files with the same case-insensitive name but different case-sensitive names.</dd>
 <dt>
-<dd> <code>&#8211;no-wildcards</code> is also accepted as an alias for this option.</p>
-<dt><code>&#8211;nullglob</code></p>
-<dd> If a glob does not match any files, ignore it and print a warning instead of failing with an error. In other words, this option allows a glob to successfully match zero files.</p>
+</dt><dd> <code>&#8211;no-wildcards</code> is also accepted as an alias for this option.</dd>
+<dt><code>&#8211;nullglob</code></dt>
+<dd> If a glob does not match any files, ignore it and print a warning instead of failing with an error. In other words, this option allows a glob to successfully match zero files.</dd>
 <dt>
-<dd> This option also affects paths that do not contain wildcard characters, since such paths are still considered globs unless <code>&#8211;no-globs</code> is enabled. If case-insensitivity is enabled, such a glob could match multiple files with the same case-insensitive name but different case-sensitive names, whereas a non-glob path (with <code>&#8211;no-globs</code>) can match at most one file.</p>
-<dt><code>&#8211;preserve-dir-structure</code></p>
-<dd> When extracting paths, preserve the archive directory structure instead of extracting the file or directory tree named by each path directly to the destination directory. Note: <code>&#8211;preserve-dir-structure</code> is already the default behavior for paths in listfiles, but not paths directly specified on the command line.</p>
-<dt><code>&#8211;wimboot</code></p>
-<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</p>
-<dt><code>&#8211;compact</code>=<i>FORMAT</i></p>
-<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dl>
+</dt><dd> This option also affects paths that do not contain wildcard characters, since such paths are still considered globs unless <code>&#8211;no-globs</code> is enabled. If case-insensitivity is enabled, such a glob could match multiple files with the same case-insensitive name but different case-sensitive names, whereas a non-glob path (with <code>&#8211;no-globs</code>) can match at most one file.</dd>
+<dt><code>&#8211;preserve-dir-structure</code></dt>
+<dd> When extracting paths, preserve the archive directory structure instead of extracting the file or directory tree named by each path directly to the destination directory. Note: <code>&#8211;preserve-dir-structure</code> is already the default behavior for paths in listfiles, but not paths directly specified on the command line.</dd>
+<dt><code>&#8211;wimboot</code></dt>
+<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dd>
+<dt><code>&#8211;compact</code>=<i>FORMAT</i></dt>
+<dd> See the documentation for this option in <code>wimlib-imagex-apply</code> (1).</dd></dl>
 <h2>NOTES</h2>
 <p> See the documentation <code>wimlib-imagex apply</code> (1) for documentation about what data and metadata are extracted on UNIX-like systems versus on Windows. </p>
 <p> On UNIX-like systems that support userspace filesystems with FUSE (e.g. Linux), one can alternatively mount the WIM image with <code>wimlib-imagex mount</code> (1) and then extract the desired files or directories using any standard command-line or graphical program. </p>
@@ -89,64 +88,63 @@ otepad*
 <p> Extract a file from the first image in &quot;boot.wim&quot; to the current directory:</p>
 <dl>
 <dt>
-<dd>
-<p> wimlib-imagex extract boot.wim 1 /Windows/System32/notepad.exe</dl>
+</dt><dd>
+<p> wimlib-imagex extract boot.wim 1 /Windows/System32/notepad.exe</dd></dl>
 <p> Extract a file from the first image in &quot;boot.wim&quot; to standard output:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> wimlib-imagex extract boot.wim 1 /Windows/System32/notepad.exe \ </p>
-<dl>
+</dd><dl>
 <dt>
-<dd> &#8211;to-stdout</dl>
+</dt><dd> &#8211;to-stdout</dd></dl>
 </dl>
 <p> Extract a file from the first image in &quot;boot.wim&quot; to the specified directory:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> wimlib-imagex extract boot.wim 1 /Windows/System32/notepad.exe \ </p>
-<dl>
+</dd><dl>
 <dt>
-<dd> &#8211;dest-dir=somedir</dl>
+</dt><dd> &#8211;dest-dir=somedir</dd></dl>
 </dl>
 <p> Extract the &quot;sources&quot; directory from the first image in &quot;boot.wim&quot; to the current directory:</p>
 <dl>
 <dt>
-<dd>
-<p> wimlib-imagex extract boot.wim 1 /sources</dl>
+</dt><dd>
+<p> wimlib-imagex extract boot.wim 1 /sources</dd></dl>
 <p> Extract multiple files and directories in one command:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> wimlib-imagex extract boot.wim 1 /Windows/Fonts \ </p>
-<dl>
+</dd><dl>
 <dt>
-<dd> /sources /Windows/System32/cmd.exe</dl>
+</dt><dd> /sources /Windows/System32/cmd.exe</dd></dl>
 </dl>
 <p> Extract many files to the current directory using a wildcard pattern:</p>
 <dl>
 <dt>
-<dd>
-<p> wimlib-imagex extract install.wim 1 &quot;/Windows/Fonts/*.ttf&quot;</dl>
+</dt><dd>
+<p> wimlib-imagex extract install.wim 1 &quot;/Windows/Fonts/*.ttf&quot;</dd></dl>
 <p> Extract files using a list file:</p>
 <dl>
 <dt>
-<dd>
-<p> wimlib-imagex extract install.wim 1 @files.txt</dl>
+</dt><dd>
+<p> wimlib-imagex extract install.wim 1 @files.txt</dd></dl>
 <p>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>where files.txt could be something like: </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Windows\System32\*.*
 Windows\System32\??-??\*.*
 Windows\System32n-US\*.*
-</dl>
+</dd></dl>
 </dl>
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-apply/">wimlib-imagex-apply</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-dir/">wimlib-imagex-dir</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-mount/">wimlib-imagex-mount</a></code>(1) </p>
 <h2>Index</h2>
+</dl>

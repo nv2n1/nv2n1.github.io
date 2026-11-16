@@ -17,11 +17,11 @@ description: "ldns_pkt_tsig_verify, ldns_pkt_tsig_sign"
 <p> ldns_status ldns_pkt_tsig_sign(ldns_pkt *pkt, const char *key_name, const char *key_data, uint16_t fudge, const char *algorithm_name, ldns_rdf *query_mac); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_pkt_tsig_verify</i>()</p>
-<dd>verifies the tsig rr for the given packet and key. The wire must be given too because tsig does not sign normalized packets. .br <code>pkt</code>: the packet to verify .br <code>wire</code>: needed to verify the mac .br <code>wire_size</code>: size of wire .br <code>key_name</code>: the name of the shared key .br <code>key_data</code>: the key in base 64 format .br <code>mac</code>: original mac .br Returns true if tsig is correct, false if not, or if tsig is not set</dl>
+<dt> <i>ldns_pkt_tsig_verify</i>()</dt>
+<dd>verifies the tsig rr for the given packet and key. The wire must be given too because tsig does not sign normalized packets. .br <code>pkt</code>: the packet to verify .br <code>wire</code>: needed to verify the mac .br <code>wire_size</code>: size of wire .br <code>key_name</code>: the name of the shared key .br <code>key_data</code>: the key in base 64 format .br <code>mac</code>: original mac .br Returns true if tsig is correct, false if not, or if tsig is not set</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_tsig_sign</i>()</p>
-<dd>creates a tsig rr for the given packet and key. .br <code>pkt</code>: the packet to sign .br <code>key_name</code>: the name of the shared key .br <code>key_data</code>: the key in base 64 format .br <code>fudge</code>: seconds of error permitted in time signed .br <code>algorithm_name</code>: the name of the algorithm used .br <code>query_mac</code>: is added to the digest if not NULL (so NULL is for signing queries, not NULL is for signing answers) .br Returns status (OK if success)</dl>
+<dt> <i>ldns_pkt_tsig_sign</i>()</dt>
+<dd>creates a tsig rr for the given packet and key. .br <code>pkt</code>: the packet to sign .br <code>key_name</code>: the name of the shared key .br <code>key_data</code>: the key in base 64 format .br <code>fudge</code>: seconds of error permitted in time signed .br <code>algorithm_name</code>: the name of the algorithm used .br <code>query_mac</code>: is added to the digest if not NULL (so NULL is for signing queries, not NULL is for signing answers) .br Returns status (OK if success)</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

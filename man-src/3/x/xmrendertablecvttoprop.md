@@ -17,12 +17,12 @@ description: "XmRenderTableCvtToProp — A render table function that converts a
 <h2>Description</h2>
 <p><code>XmRenderTableCvtToProp</code> converts a render table to a string of characters representing the render table. This routine is typically used by the source of a data transfer operation to produce a representation for transferring a render table to a destination.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the widget that is the source of the render table</p>
-<dt><i>table</i></p>
-<dd>Specifies a render table to be converted</p>
-<dt><i>prop_return</i></p>
-<dd>Specifies a pointer to a string that is created and returned by this function. The function allocates space to hold the returned string. The application is responsible for managing this allocated space. The application can recover this allocated space by calling <code>XtFree</code>.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget that is the source of the render table</dd>
+<dt><i>table</i></dt>
+<dd>Specifies a render table to be converted</dd>
+<dt><i>prop_return</i></dt>
+<dd>Specifies a pointer to a string that is created and returned by this function. The function allocates space to hold the returned string. The application is responsible for managing this allocated space. The application can recover this allocated space by calling <code>XtFree</code>.</dd></dl>
 <h2>Return</h2>
 <p>Returns the number of bytes in the string representation.</p>
 <h2>Related</h2>

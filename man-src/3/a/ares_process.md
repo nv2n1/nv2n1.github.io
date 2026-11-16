@@ -23,7 +23,7 @@ void ares_process(ares_channel channel, fd_set *read_fds,
 <p> The following code fragment waits for all pending queries on a channel to complete: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 int nfds, count;
 fd_set readers, writers;
@@ -39,7 +39,7 @@ while (1) {
     ares_process(channel, &amp;readers, &amp;writers);
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_fds/">ares_fds</a></code>(3), <code><a href="/docs/linux/man/3-ares_timeout/">ares_timeout</a></code>(3)</p>
 <h2>AUTHOR</h2>

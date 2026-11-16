@@ -15,11 +15,11 @@ inode_init_always - perform inode structure intialisation
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>superblock inode belongs to</dl>
+<dl><dd></dd><dd>superblock inode belongs to</dd></dl>
  
 
  <i>inode</i>
-<dl><dd>inode to initialise</dl>
+<dl><dd>inode to initialise</dd></dl>
 
 <h2>Description</h2>
 

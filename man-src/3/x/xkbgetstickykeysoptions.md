@@ -11,16 +11,16 @@ description: "XkbGetStickyKeysOptions – Queries the current StickyKeys attribu
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbGetStickyKeysOptions</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>options_rtrn</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; options_rtrn</i></p>
-<dd>backfilled with StickyKeys option mask</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; options_rtrn</i></dt>
+<dd>backfilled with StickyKeys option mask</dd></dl>
 <h2>Description</h2>
 <p>The StickyKeys control has two options that can be accessed via the <i>ax_options </i> of an XkbControlsRec structure. The first option, TwoKeys, specifies whether StickyKeys should automatically turn off when two keys are pressed at the same time. This feature is useful for shared computers so people who do not want them do not need to turn StickyKeys off if a previous user left StickyKeys on. The second option, LatchToLock, specifies whether or not StickyKeys locks a modifier when pressed twice in a row. </p>
 <p> <i>XkbGetStickyKeysOptions </i> requests the attributes of the StickyKeys control from the server, waits for a reply, and backfills <i>options_rtrn </i> with a mask indicating whether the individual StickyKeys options are on or off. Valid bits in <i>options_rtrn </i> are: </p>
@@ -29,15 +29,14 @@ description: "XkbGetStickyKeysOptions – Queries the current StickyKeys attribu
 <p><i>XkbGetStickyKeysOptions </i> returns True if successful; if a compatible version of the Xkb extension is not available in the server <i>XkbGetStickyKeysOptions </i> returns False.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbGetStickyKeysOptions </i> function returns True if the request for the attributes of the StickyKeys control from the server was successful.</p>
-<dt>False</p>
-<dd>The <i>XkbGetStickyKeysOptions </i> function returns False if a compatible version of the Xkb extension is not available in the server.</dl>
+<dt>True</dt>
+<dd>The <i>XkbGetStickyKeysOptions </i> function returns True if the request for the attributes of the StickyKeys control from the server was successful.</dd>
+<dt>False</dt>
+<dd>The <i>XkbGetStickyKeysOptions </i> function returns False if a compatible version of the Xkb extension is not available in the server.</dd></dl>
 <h2>Structures</h2>
 <pre>The XkbControlsRec structure is defined as follows:
  #define XkbMaxLegalKeyCode 255
  #define XkbPerKeyBitArraySize ((XkbMaxLegalKeyCode+1)/8)
- 
  typedef struct {
  unsigned char mk_dflt_btn; /* default button for keyboard driven mouse */
  unsigned char num_groups; /* number of keyboard groups */

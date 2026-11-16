@@ -36,10 +36,10 @@ description: "sggsvp.f –"
  This decomposition is the preprocessing step for computing the
  Generalized Singular Value Decomposition (GSVD), see subroutine
  SGGSVD.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBU</i> </p>
+<dd><i>JOBU</i> </dd>
 <pre> JOBU is CHARACTER*1
  = 'U': Orthogonal matrix U is computed;
  = 'N': U is not computed.</pre>
@@ -131,16 +131,16 @@ description: "sggsvp.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
-<dd>The subroutine uses LAPACK subroutine SGEQPF for the QR factorization with column pivoting to detect the effective numerical rank of the a matrix. It may be replaced by a better rank determination strategy.</dl>
+<dd>The subroutine uses LAPACK subroutine SGEQPF for the QR factorization with column pivoting to detect the effective numerical rank of the a matrix. It may be replaced by a better rank determination strategy.</dd></dl>
 <p> Definition at line 253 of file sggsvp.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

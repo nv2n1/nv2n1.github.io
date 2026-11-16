@@ -13,13 +13,13 @@ description: "pack200 – JAR Packing tool"
 <p> Options may be in any order. The last option on the command line or in a properties file supersedes all previously specified options. </p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>options</p>
-<dd>Command-line options.</p>
-<dt>output-file</p>
-<dd>Name of the output file.</p>
-<dt>JAR-file</p>
-<dd>Name of the input file.</dl>
+</dd><dl COMPACT>
+<dt>options</dt>
+<dd>Command-line options.</dd>
+<dt>output-file</dt>
+<dd>Name of the output file.</dd>
+<dt>JAR-file</dt>
+<dd>Name of the input file.</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The <i>pack200</i> tool is a Java application that transforms a JAR file into a compressed <i>pack200</i> file using the Java <i>gzip</i> compressor. The <i>pack200</i> files are highly compressed files that can be directly deployed, saving bandwidth and reducing download time. </p>
@@ -30,96 +30,96 @@ description: "pack200 – JAR Packing tool"
 <h2>Options</h2>
 <p><tt>-r --repack</tt> </p>
 <dl COMPACT>
-<dd>Produces a JAR file by packing the file <i>myarchive.jar</i> and unpacking it. The resulting file can be used as an input to the <i><a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i> tool. </p>
+<dd>Produces a JAR file by packing the file <i>myarchive.jar</i> and unpacking it. The resulting file can be used as an input to the <i><a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i> tool. </dd>
 <dl COMPACT>
-<dd><i>% pack200 &#8211;repack myarchive-packer.jar myarchive.jar</i> </p>
+<dd><i>% pack200 &#8211;repack myarchive-packer.jar myarchive.jar</i> </dd>
 <p> <i>% pack200 &#8211;repack myarchive.jar</i> </p>
 </dl>
 </dl>
 <p> <tt>-g --no-gzip</tt> </p>
 <dl COMPACT>
-<dd>Produces a <i>pack200</i> file. With this option a suitable compressor must be used, and the target system must use a corresponding decompresser. </p>
+<dd>Produces a <i>pack200</i> file. With this option a suitable compressor must be used, and the target system must use a corresponding decompresser. </dd>
 <dl COMPACT>
-<dd><i>% pack200 &#8211;no-gzip myarchive.pack myarchive.jar</i> </p>
+<dd><i>% pack200 &#8211;no-gzip myarchive.pack myarchive.jar</i> </dd>
 </dl>
 </dl>
 <p> <tt>-G --strip-debug</tt> </p>
 <dl COMPACT>
-<dd>Strips attributes used for debugging from the output. These include <i>SourceFile</i>, <i>LineNumberTable</i>, <i>LocalVariableTable</i> and <i>LocalVariableTypeTable</i>. Removing these attributes reduces the size of both downloads and installations but reduces the usefulness of debuggers. </p>
+<dd>Strips attributes used for debugging from the output. These include <i>SourceFile</i>, <i>LineNumberTable</i>, <i>LocalVariableTable</i> and <i>LocalVariableTypeTable</i>. Removing these attributes reduces the size of both downloads and installations but reduces the usefulness of debuggers. </dd>
 </dl>
 <p> <tt>-O --no-keep-file-order</tt> </p>
 <dl COMPACT>
-<dd>The packer will reorder and transmit all elements. Additionally, the packer may remove JAR directory names. This will reduce the download size; however, certain JAR file optimizations, such as indexing, may not work correctly. </p>
+<dd>The packer will reorder and transmit all elements. Additionally, the packer may remove JAR directory names. This will reduce the download size; however, certain JAR file optimizations, such as indexing, may not work correctly. </dd>
 </dl>
 <p> <tt>-Svalue --segment-limit=</tt><i>value</i> </p>
 <dl COMPACT>
 <dd>The value is the estimated target size N (in bytes) of each archive segment. If a single input file requires<br />
- more than N bytes, it will be given its own archive segment. As a special case, a value of <i>-1</i> will produce a single large segment with all input files, while a value of <i>0</i> will produce one segment for each class. Larger archive segments result in less fragmentation and better compression, but processing them requires more memory. </p>
+ more than N bytes, it will be given its own archive segment. As a special case, a value of <i>-1</i> will produce a single large segment with all input files, while a value of <i>0</i> will produce one segment for each class. Larger archive segments result in less fragmentation and better compression, but processing them requires more memory. </dd>
 <p> The size of each segment is estimated by counting the size of each input file to be transmitted in the segment, along with the size of its name and other transmitted properties. </p>
 <p> The default is <i>1000000</i> (a million bytes). This allows input JAR files of moderate size to be transmitted in one segment. It also puts a limit on memory requirements for packers and unpackers. </p>
 <p> A 10MB JAR packed without this limit will typically pack about 10% smaller, but the packer may require a larger Java heap (about ten times the segment limit). </p>
 </dl>
 <p> <tt>-Evalue --effort=</tt><i>value</i> </p>
 <dl COMPACT>
-<dd>If the value is set to a single decimal digit, the packer will use the indicated amount of effort in compressing the archive. Level <i>1</i> may produce somewhat larger size and faster compression speed, while level <i>9</i> will take much longer but may produce better compression. The special value <i>0</i> instructs the packer to copy through the original JAR file directly with no compression. The JSR 200 standard requires any unpacker to understand this special case as a pass-through of the entire archive. </p>
+<dd>If the value is set to a single decimal digit, the packer will use the indicated amount of effort in compressing the archive. Level <i>1</i> may produce somewhat larger size and faster compression speed, while level <i>9</i> will take much longer but may produce better compression. The special value <i>0</i> instructs the packer to copy through the original JAR file directly with no compression. The JSR 200 standard requires any unpacker to understand this special case as a pass-through of the entire archive. </dd>
 <p> The default is <i>5</i>, investing a modest amount of time to produce reasonable compression. </p>
 </dl>
 <p> <tt>-Hvalue --deflate-hint=</tt><i>value</i> </p>
 <dl COMPACT>
-<dd>Overrides the default, which preserves the input information, but may cause the transmitted archive to be larger. The possible values are: </p>
+<dd>Overrides the default, which preserves the input information, but may cause the transmitted archive to be larger. The possible values are: </dd>
 <dl COMPACT>
-<dt>true</p>
+<dt>true</dt>
 <dd>
-<dt>false</p>
-<dd>In either case, the packer will set the deflation hint accordingly in the output archive, and will not transmit the individual deflation hints of archive elements.</dl>
+</dd><dt>false</dt>
+<dd>In either case, the packer will set the deflation hint accordingly in the output archive, and will not transmit the individual deflation hints of archive elements.</dd></dl>
 <dl COMPACT>
-<dt>keep</p>
-<dd>Preserve deflation hints observed in the input JAR. (This is the default.)</dl>
+<dt>keep</dt>
+<dd>Preserve deflation hints observed in the input JAR. (This is the default.)</dd></dl>
 </dl>
 <p> <tt>-mvalue --modification-time=</tt><i>value</i> </p>
 <dl COMPACT>
-<dd>The possible values are: </p>
+<dd>The possible values are: </dd>
 <dl COMPACT>
-<dt>latest</p>
-<dd>The packer will attempt to determine the latest modification time, among all the available entries in the original archive, or the latest modification time of all the available entries in that segment. This single value will be transmitted as part of the segment and applied to all the entries in each segment. This can marginally decrease the transmitted size of the archive at the expense of setting all installed files to a single date.</p>
-<dt>keep</p>
-<dd>Preserves modification times observed in the input JAR. (This is the default.)</dl>
+<dt>latest</dt>
+<dd>The packer will attempt to determine the latest modification time, among all the available entries in the original archive, or the latest modification time of all the available entries in that segment. This single value will be transmitted as part of the segment and applied to all the entries in each segment. This can marginally decrease the transmitted size of the archive at the expense of setting all installed files to a single date.</dd>
+<dt>keep</dt>
+<dd>Preserves modification times observed in the input JAR. (This is the default.)</dd></dl>
 </dl>
 <p> <tt>-Pfile --pass-file=</tt><i>file</i> </p>
 <dl COMPACT>
-<dd>Indicates that a file should be passed through bytewise with no compression. By repeating the option, multiple files may be specified. There is no pathname transformation, except that the system file separator is replaced by the JAR file separator &quot;<i>/</i>&quot;. The resulting file names must match exactly as strings with their occurrences in the JAR file. If file is a directory name, all files under that directory will be passed. </p>
+<dd>Indicates that a file should be passed through bytewise with no compression. By repeating the option, multiple files may be specified. There is no pathname transformation, except that the system file separator is replaced by the JAR file separator &quot;<i>/</i>&quot;. The resulting file names must match exactly as strings with their occurrences in the JAR file. If file is a directory name, all files under that directory will be passed. </dd>
 </dl>
 <p> <tt>-Uaction --unknown-attribute=</tt><i>action</i> </p>
 <dl COMPACT>
-<dd>Overrides the default behavior; i.e., the classfile containing the unknown attribute will be passed through with the specified action. The possible values for actions are: </p>
+<dd>Overrides the default behavior; i.e., the classfile containing the unknown attribute will be passed through with the specified action. The possible values for actions are: </dd>
 <dl COMPACT>
-<dt>error</p>
-<dd>The <i>pack200</i> operation as a whole will fail with a suitable explanation.</p>
-<dt>strip</p>
-<dd>The attribute will be dropped. Note: Removing the required VM attributes may cause Class Loader failures.</p>
-<dt>pass</p>
-<dd>Upon encountering this attribute, the entire class will be transmitted as though it is a resource.</dl>
+<dt>error</dt>
+<dd>The <i>pack200</i> operation as a whole will fail with a suitable explanation.</dd>
+<dt>strip</dt>
+<dd>The attribute will be dropped. Note: Removing the required VM attributes may cause Class Loader failures.</dd>
+<dt>pass</dt>
+<dd>Upon encountering this attribute, the entire class will be transmitted as though it is a resource.</dd></dl>
 </dl>
 <p> <tt>-Cattribute-name=</tt><i>layout</i> <code>&#8211;class-attribute=</code><i>attribute-name=action</i> </p>
 <p>&nbsp;<wbr><tt>-Fattribute-name=</tt><i>layout</i>&nbsp;<wbr><code>&#8211;field-attribute=</code><i>attribute-name=action</i> </p>
 <p>&nbsp;<wbr><tt>-Mattribute-name=</tt><i>layout</i>&nbsp;<wbr><code>&#8211;method-attribute=</code><i>attribute-name=action</i> </p>
 <p>&nbsp;<wbr><tt>-Dattribute-name=</tt><i>layout</i>&nbsp;<wbr><code>&#8211;code-attribute=</code><i>attribute-name=action</i> </p>
 <dl COMPACT>
-<dd>With the above four options, the attribute layout can be specified for a class entity, such as Class attribute, Field attribute, Method attribute, and Code attribute. The attribute-name is the name of the attribute for which the layout or action is being defined. The possible values for action are: </p>
+<dd>With the above four options, the attribute layout can be specified for a class entity, such as Class attribute, Field attribute, Method attribute, and Code attribute. The attribute-name is the name of the attribute for which the layout or action is being defined. The possible values for action are: </dd>
 <dl COMPACT>
-<dt>some-layout-string</p>
-<dd>The layout language is defined in the JSR 200 specification.</dl>
+<dt>some-layout-string</dt>
+<dd>The layout language is defined in the JSR 200 specification.</dd></dl>
 <p> Example: <i>&#8211;class-attribute=SourceFile=RUH</i></p>
 <dl COMPACT>
-<dt>error</p>
-<dd>Upon encountering this attribute, the pack200 operation will fail with a suitable explanation.</p>
-<dt>strip</p>
-<dd>Upon encountering this attribute, the attribute will be removed from the output. Note: removing VM-required attributes may cause Class Loader failures.</dl>
+<dt>error</dt>
+<dd>Upon encountering this attribute, the pack200 operation will fail with a suitable explanation.</dd>
+<dt>strip</dt>
+<dd>Upon encountering this attribute, the attribute will be removed from the output. Note: removing VM-required attributes may cause Class Loader failures.</dd></dl>
 <p> Example: <i>&#8211;class-attribute=CompilationID=pass</i> will cause the class file containing this attribute to be passed through without further action by the packer. </p>
 </dl>
 <p> <tt>-f</tt><i> </i><i>pack.properties</i> <code>&#8211;config-file=</code><i>pack.properties</i> </p>
 <dl COMPACT>
-<dd>A configuration file, containing Java properties to initialize the packer, may be specified on the command line. </p>
+<dd>A configuration file, containing Java properties to initialize the packer, may be specified on the command line. </dd>
 <dl COMPACT>
 <dd><i>% pack200 -f pack.properties myarchive.pack.gz myarchive.jar</i><br />
  <i>% more pack.properties</i><br />
@@ -131,49 +131,49 @@ description: "pack200 – JAR Packing tool"
  <i># be reported as an error rather than passed uncompressed.</i><br />
  <i>unknown.attribute=error</i><br />
  <i># Change the segment limit to be unlimited.</i><br />
- <i>segment.limit=-1</i> </p>
+ <i>segment.limit=-1</i> </dd>
 </dl>
 </dl>
 <dl COMPACT>
-<dd><tt>-v --verbose</tt> </p>
+<dd><tt>-v --verbose</tt> </dd>
 <dl COMPACT>
-<dd>Outputs minimal messages. Multiple specification of this option will output more verbose messages. </p>
+<dd>Outputs minimal messages. Multiple specification of this option will output more verbose messages. </dd>
 </dl>
 <p> <tt>-q --quiet</tt> </p>
 <dl COMPACT>
-<dd>Specifies quiet operation with no messages. </p>
+<dd>Specifies quiet operation with no messages. </dd>
 </dl>
 <p> <tt>-lfilename --log-file=</tt><i>filename</i> </p>
 <dl COMPACT>
-<dd>Specifies a log file to output messages. </p>
+<dd>Specifies a log file to output messages. </dd>
 </dl>
 <p> <tt>-Joption</tt> </p>
 <dl COMPACT>
-<dd>Passes option to the Java launcher called by <i>pack200</i>. For example, <i>-J-Xms48m</i> sets the startup memory to 48 megabytes. Although it does not begin with <i>-X</i>, it is not a standard option of <i>pack200</i>. It is a common convention for <i>-J</i> to pass options to the underlying VM executing applications written in Java. </p>
+<dd>Passes option to the Java launcher called by <i>pack200</i>. For example, <i>-J-Xms48m</i> sets the startup memory to 48 megabytes. Although it does not begin with <i>-X</i>, it is not a standard option of <i>pack200</i>. It is a common convention for <i>-J</i> to pass options to the underlying VM executing applications written in Java. </dd>
 </dl>
 </dl>
 <h2>Exit Status</h2>
 <p>The following exit values are returned: </p>
 <dl COMPACT>
-<dd><i>&nbsp;<wbr>0</i> for successful completion; </p>
+<dd><i>&nbsp;<wbr>0</i> for successful completion; </dd>
 <p> <i>&gt;0</i> if an error occurs. </p>
 </dl>
 <h2>See Also</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>unpack200 &#8211; JAR Unpacking Tool</p>
-<dt>*</p>
-<dd><i><a href="/docs/linux/man/1-unpack200/">unpack200</a>(1)</i>, <i><a href="/docs/linux/man/1-jar/">jar</a>(1)</i>, <i><a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i>, <i>attributes(5)</i> man pages</p>
-<dt>*</p>
-<dd>Java SE Documentation</p>
-<dt>*</p>
-<dd><i>Java Deployment Guide &#8211; Pack200</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/deployment/deployment-guide/pack200.html">http://java.sun.com/javase/6/docs/technotes/guides/deployment/deployment-guide/pack200.html</a></p>
-<dt>*</p>
-<dd><i>jar</i> &#8211; Java Archive Tool</p>
-<dt>*</p>
-<dd><i>jarsigner</i> &#8211; JAR Signer tool @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html">http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html</a></dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>unpack200 &#8211; JAR Unpacking Tool</dd>
+<dt>*</dt>
+<dd><i><a href="/docs/linux/man/1-unpack200/">unpack200</a>(1)</i>, <i><a href="/docs/linux/man/1-jar/">jar</a>(1)</i>, <i><a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i>, <i>attributes(5)</i> man pages</dd>
+<dt>*</dt>
+<dd>Java SE Documentation</dd>
+<dt>*</dt>
+<dd><i>Java Deployment Guide &#8211; Pack200</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/deployment/deployment-guide/pack200.html">http://java.sun.com/javase/6/docs/technotes/guides/deployment/deployment-guide/pack200.html</a></dd>
+<dt>*</dt>
+<dd><i>jar</i> &#8211; Java Archive Tool</dd>
+<dt>*</dt>
+<dd><i>jarsigner</i> &#8211; JAR Signer tool @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html">http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html</a></dd></dl>
 </dl>
 <h2>Notes</h2>
 <p>This command should not be confused with <i>pack(1)</i>. They are distinctly separate products. </p>

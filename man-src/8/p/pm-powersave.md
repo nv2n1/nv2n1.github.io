@@ -10,31 +10,31 @@ description: "pm-powersave – Put your computer into low power mode"
 <p>pm-powersave &#8211; Put your computer into low power mode</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pm-powersave</code> [{<code>true</code>&nbsp;<wbr>|&nbsp;<wbr><code>false</code>}] [<code>&#8211;help</code>]</dl>
+<dt> <code>pm-powersave</code> [{<code>true</code>&nbsp;<wbr>|&nbsp;<wbr><code>false</code>}] [<code>&#8211;help</code>]</dt></dl>
 <h2>Description</h2>
-<dd>This manual page documents briefly the <code>pm-powersave</code> command. </p>
+<dd>This manual page documents briefly the <code>pm-powersave</code> command. </dd>
 <p> <code>pm-powersave</code> can be used to set your system into low power mode.</p>
 <h2>Options</h2>
 <p><code>true</code></p>
 <dl>
-<dd>Put the computer into low power mode to reduce energy consumption and extend your laptop&#8217;s battery life.</dl>
+<dd>Put the computer into low power mode to reduce energy consumption and extend your laptop&#8217;s battery life.</dd></dl>
 <p> <code>false</code></p>
 <dl>
-<dd>Turn off low power mode.</dl>
+<dd>Turn off low power mode.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>Show the help.</dl>
+<dd>Show the help.</dd></dl>
 <h2>Files</h2>
 <p>/etc/pm/power.d/, /usr/lib/pm-utils/power.d/</p>
 <dl>
-<dd>When you run <code>pm-powersave</code> it combines the scripts in these two directories and executes them in sorted order. If both directories contain a script with the same name, the one in /etc/pm/power.d/ has a higher precedence and only this one will be executed. </p>
+<dd>When you run <code>pm-powersave</code> it combines the scripts in these two directories and executes them in sorted order. If both directories contain a script with the same name, the one in /etc/pm/power.d/ has a higher precedence and only this one will be executed. </dd>
 <p> Therefore to disable a script from /usr/lib/pm-utils/power.d/ simply create an empty file in /etc/pm/power.d/ with the same name and without the executable bit set.</dl>
 <h2>See Also</h2>
 <p><code>pm-suspend</code>(8), <code>pm-hibernate</code>(8)</p>
 <h2>Author</h2>
 <p><code>Michael Biebl</code> &lt;biebl [at] debian.org&gt;</p>
 <dl>
-<dd>Manpage author.</dl>
+<dd>Manpage author.</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2007 Michael Biebl </p>
 <p> This manual page was originally written for the Debian(TM) system, and has been adopted by the pm-utils project. </p>

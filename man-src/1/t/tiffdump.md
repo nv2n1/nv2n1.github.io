@@ -24,11 +24,11 @@ url: "/docs/linux/man/1-tiffdump/"
 
 <dl>
 <dt><b>-h</b>
-<dd> Force numeric data to be printed in hexadecimal rather than the default decimal.
-<dt><b>-m</b><i> items</i>
-<dd> Change the number of indirect data items that are printed. By default, this will be 24.
-<dt><b>-o</b><i> offset</i>
-<dd> Dump the contents of the <font SIZE="-1">IFD</font> at the a particular file offset. The file offset may be specified using the usual C-style syntax; i.e. a leading ``0x'' for hexadecimal and a leading ``0'' for octal.</dl>
+</dt><dd> Force numeric data to be printed in hexadecimal rather than the default decimal.
+</dd><dt><b>-m</b><i> items</i>
+</dt><dd> Change the number of indirect data items that are printed. By default, this will be 24.
+</dd><dt><b>-o</b><i> offset</i>
+</dt><dd> Dump the contents of the <font SIZE="-1">IFD</font> at the a particular file offset. The file offset may be specified using the usual C-style syntax; i.e. a leading ``0x'' for hexadecimal and a leading ``0'' for octal.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

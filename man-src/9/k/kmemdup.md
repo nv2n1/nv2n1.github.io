@@ -15,15 +15,15 @@ kmemdup - duplicate region of memory
 <h2>Arguments</h2>
 
 <i>src</i>
-<dl><dd><dd>memory region to duplicate</dl>
+<dl><dd></dd><dd>memory region to duplicate</dd></dl>
  
 
  <i>len</i>
-<dl><dd>memory region length</dl>
+<dl><dd>memory region length</dd></dl>
  
 
  <i>gfp</i>
-<dl><dd>GFP mask to use</dl>
+<dl><dd>GFP mask to use</dd></dl>
 
 <h2>Copyright</h2>
 

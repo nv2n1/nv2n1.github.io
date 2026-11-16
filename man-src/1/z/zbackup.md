@@ -21,73 +21,73 @@ url: "/docs/linux/man/1-zbackup/"
  The program has the following features:
 <dl>
 <dt>&bull;
-<dd> Parallel LZMA or LZO compression of the stored data</dl>
+</dt><dd> Parallel LZMA or LZO compression of the stored data</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Built-in AES encryption of the stored data</dl>
+</dt><dd> Built-in AES encryption of the stored data</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Possibility to delete old backup data</dl>
+</dt><dd> Possibility to delete old backup data</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Use of a 64-bit rolling hash, keeping the amount of soft collisions to zero</dl>
+</dt><dd> Use of a 64-bit rolling hash, keeping the amount of soft collisions to zero</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Repository consists of immutable files. No existing files are ever modified</dl>
+</dt><dd> Repository consists of immutable files. No existing files are ever modified</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Written in C++ only with only modest library dependencies</dl>
+</dt><dd> Written in C++ only with only modest library dependencies</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Safe to use in production (see below (#safety))</dl>
+</dt><dd> Safe to use in production (see below (#safety))</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Possibility to exchange data between repos without recompression</dl>
+</dt><dd> Possibility to exchange data between repos without recompression</dd></dl>
 
 <h2>Build dependencies</h2>
 
 <dl>
 <dt>&bull;
-<dd> cmake &gt;= 2.8.2 (though it should not be too hard to compile the sources by hand if needed)</dl>
+</dt><dd> cmake &gt;= 2.8.2 (though it should not be too hard to compile the sources by hand if needed)</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> libssl-dev for all encryption, hashing and random numbers</dl>
+</dt><dd> libssl-dev for all encryption, hashing and random numbers</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> libprotobuf-dev and protobuf-compiler for data serialization</dl>
+</dt><dd> libprotobuf-dev and protobuf-compiler for data serialization</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> liblzma-dev for compression</dl>
+</dt><dd> liblzma-dev for compression</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> liblzo2-dev for compression (optional)</dl>
+</dt><dd> liblzo2-dev for compression (optional)</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> zlib1g-dev for adler32 calculation</dl>
+</dt><dd> zlib1g-dev for adler32 calculation</dd></dl>
 
 <h2>Quickstart</h2>
 
@@ -96,13 +96,13 @@ url: "/docs/linux/man/1-zbackup/"
  To build and install:
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 cd zbackup
 cmake .
 make
 sudo make install
 #&nbsp;<wbr>or just run as ./zbackup
-</pre></dl>
+</pre></dd></dl>
  
 
  Zbackup is also part of the Debian (<a rel="nofollow" HREF="https://packages.debian.org/search?keywords=zbackup">https://packages.debian.org/search?keywords=zbackup</a>), Ubuntu (<a rel="nofollow" HREF="http://packages.ubuntu.com/search?keywords=zbackup)">http://packages.ubuntu.com/search?keywords=zbackup)</a> and Arch Linux (<a rel="nofollow" HREF="https://aur.archlinux.org/packages/zbackup/)">https://aur.archlinux.org/packages/zbackup/)</a> distributions of GNU/Linux. 
@@ -110,7 +110,7 @@ sudo make install
  To use:
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 zbackup init-- non - encrypted &amp;nbsp;
 / my / backup / repo tar c &amp;nbsp;
 / my / precious / data | zbackup backup &amp;nbsp;
@@ -120,7 +120,7 @@ zbackup init-- non - encrypted &amp;nbsp;
 '+%Y-%m-%d'`&amp;nbsp;
 &gt; &amp;nbsp;
 / my / precious / backup - restored.tar
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  If you have a lot of RAM to spare, you can use it to speed-up the restore process -- to use 512 MB more, pass --cache-size 512mb when restoring. 
@@ -128,7 +128,7 @@ zbackup init-- non - encrypted &amp;nbsp;
  If encryption is wanted, create a file with your password:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 #&amp; nbsp; more secure to use an editor
 echo mypassword &amp;nbsp;
 &gt; &amp;nbsp;
@@ -136,21 +136,21 @@ echo mypassword &amp;nbsp;
             chmod 600 &amp;
     nbsp;
 ~ /.my_backup_password
-</dl>
+</dd></dl>
  
 
  Then init the repo the following way:
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 zbackup init --password-file&nbsp;<wbr>~/.my_backup_password&nbsp;<wbr>/my/backup/repo
-</pre></dl>
+</pre></dd></dl>
  
 
  And always pass the same argument afterwards:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 tar c &amp;nbsp;
 / my / precious / data | zbackup-- password - file &amp;nbsp;
 ~ /.my_backup_password backup &amp;nbsp;
@@ -161,7 +161,7 @@ tar c &amp;nbsp;
 '+%Y-%m-%d'`&amp;nbsp;
 &gt; &amp;nbsp;
 / my / precious / backup - restored.tar
-</dl>
+</dd></dl>
  
 
  If you have a 32-bit system and a lot of cores, consider lowering the number of compression threads by passing --threads 4 or --threads 2 if the program runs out of address space when backing up (see why below (#caveats), item 2). There should be no problem on a 64-bit system.
@@ -170,53 +170,53 @@ tar c &amp;nbsp;
 
 <dl>
 <dt>&bull;
-<dd> While you can pipe any data into the program, the data should be uncompressed and unencrypted -- otherwise no deduplication could be performed on it. zbackup would compress and encrypt the data itself, so there's no need to do that yourself. So just run tar c and pipe it into zbackup directly. If backing up disk images employing encryption, pipe the unencrypted version (the one you normally mount). If you create .zip or .rar files, use no compression (-0 or -m0) and no encryption.</dl>
+</dt><dd> While you can pipe any data into the program, the data should be uncompressed and unencrypted -- otherwise no deduplication could be performed on it. zbackup would compress and encrypt the data itself, so there's no need to do that yourself. So just run tar c and pipe it into zbackup directly. If backing up disk images employing encryption, pipe the unencrypted version (the one you normally mount). If you create .zip or .rar files, use no compression (-0 or -m0) and no encryption.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Parallel LZMA compression uses a lot of RAM (several hundreds of megabytes, depending on the number of threads used), and ten times more virtual address space. The latter is only relevant on 32-bit architectures where it's limited to 2 or 3 GB. If you hit the ceiling, lower the number of threads with --threads.</dl>
+</dt><dd> Parallel LZMA compression uses a lot of RAM (several hundreds of megabytes, depending on the number of threads used), and ten times more virtual address space. The latter is only relevant on 32-bit architectures where it's limited to 2 or 3 GB. If you hit the ceiling, lower the number of threads with --threads.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Since the data is deduplicated, there's naturally no redundancy in it. A loss of a single file can lead to a loss of virtually all data. Make sure you store it on a redundant storage (RAID1, a cloud provider etc).</dl>
+</dt><dd> Since the data is deduplicated, there's naturally no redundancy in it. A loss of a single file can lead to a loss of virtually all data. Make sure you store it on a redundant storage (RAID1, a cloud provider etc).</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> The encryption key, if used, is stored in the info file in the root of the repo. It is encrypted with your password. Technically thus you can change your password without re-encrypting any data, and as long as no one possesses the old info file and knows your old password, you would be safe (even though the actual option to change password is not implemented yet -- someone who needs this is welcome to create a pull request -- the possibility is all there). Also note that it is crucial you don't lose your info file, as otherwise the whole backup would be lost.</dl>
+</dt><dd> The encryption key, if used, is stored in the info file in the root of the repo. It is encrypted with your password. Technically thus you can change your password without re-encrypting any data, and as long as no one possesses the old info file and knows your old password, you would be safe (even though the actual option to change password is not implemented yet -- someone who needs this is welcome to create a pull request -- the possibility is all there). Also note that it is crucial you don't lose your info file, as otherwise the whole backup would be lost.</dd></dl>
 
 <h2>Limitations</h2>
 
 <dl>
 <dt>&bull;
-<dd> Right now the only modes supported are reading from standard input and writing to standard output. FUSE mounts and NBD servers may be added later if someone contributes the code.</dl>
+</dt><dd> Right now the only modes supported are reading from standard input and writing to standard output. FUSE mounts and NBD servers may be added later if someone contributes the code.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> The program keeps all known blocks in an in-RAM hash table, which may create scalability problems for very large repos (see below (#scalability)).</dl>
+</dt><dd> The program keeps all known blocks in an in-RAM hash table, which may create scalability problems for very large repos (see below (#scalability)).</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> The only encryption mode currently implemented is AES-128 in CBC mode with PKCS#7 padding. If you believe that this is not secure enough, patches are welcome. Before you jump to conclusions however, read this article (<a rel="nofollow" HREF="http://www.schneier.com/blog/archives/2009/07/another_new_aes.html">http://www.schneier.com/blog/archives/2009/07/another_new_aes.html</a>).</dl>
+</dt><dd> The only encryption mode currently implemented is AES-128 in CBC mode with PKCS#7 padding. If you believe that this is not secure enough, patches are welcome. Before you jump to conclusions however, read this article (<a rel="nofollow" HREF="http://www.schneier.com/blog/archives/2009/07/another_new_aes.html">http://www.schneier.com/blog/archives/2009/07/another_new_aes.html</a>).</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> The only compression mode supported is LZMA, which suits backups very nicely.</dl>
+</dt><dd> The only compression mode supported is LZMA, which suits backups very nicely.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> It's only possible to fully restore the backup in order to get to a required file, without any option to quickly pick it out. tar would not allow to do it anyway, but e.g. for zip files it could have been possible. This is possible to implement though, e.g. by exposing the data over a FUSE filesystem.</dl>
+</dt><dd> It's only possible to fully restore the backup in order to get to a required file, without any option to quickly pick it out. tar would not allow to do it anyway, but e.g. for zip files it could have been possible. This is possible to implement though, e.g. by exposing the data over a FUSE filesystem.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> There's no option to specify block and bundle sizes other than the default ones (currently 64k and 2MB respectively), though it's trivial to add command-line switches for those.</dl>
+</dt><dd> There's no option to specify block and bundle sizes other than the default ones (currently 64k and 2MB respectively), though it's trivial to add command-line switches for those.</dd></dl>
  
 
  Most of those limitations can be lifted by implementing the respective features.
@@ -236,7 +236,7 @@ tar c &amp;nbsp;
  The repository has the following directory structure:
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 / repo
         &amp;nbsp;
 &amp;nbsp;
@@ -295,23 +295,23 @@ index /
 &amp;nbsp;
 info
 </code></pre>
-<dt>&bull;
-<dd> The backups directory contain your backups. Those are very small files which are needed for restoration. They are encrypted if encryption is enabled. The names can be arbitrary. It is possible to arrange files in subdirectories, too. Free renaming is also allowed.</dl>
+</dd><dt>&bull;
+</dt><dd> The backups directory contain your backups. Those are very small files which are needed for restoration. They are encrypted if encryption is enabled. The names can be arbitrary. It is possible to arrange files in subdirectories, too. Free renaming is also allowed.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> The bundles directory contains the bulk of data. Each bundle internally contains multiple small chunks, compressed together and encrypted. Together all those chunks account for all deduplicated data stored.</dl>
+</dt><dd> The bundles directory contains the bulk of data. Each bundle internally contains multiple small chunks, compressed together and encrypted. Together all those chunks account for all deduplicated data stored.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> The index directory contains the full index of all chunks in the repository, together with their bundle names. A separate index file is created for each backup session. Technically those files are redundant, all information is contained in the bundles themselves. However, having a separate index is nice for two reasons: 1) it's faster to read as it incurs less seeks, and 2) it allows making backups while storing bundles elsewhere. Bundles are only needed when restoring -- otherwise it's sufficient to only have index. One could then move all newly created bundles into another machine after each backup.</dl>
+</dt><dd> The index directory contains the full index of all chunks in the repository, together with their bundle names. A separate index file is created for each backup session. Technically those files are redundant, all information is contained in the bundles themselves. However, having a separate index is nice for two reasons: 1) it's faster to read as it incurs less seeks, and 2) it allows making backups while storing bundles elsewhere. Bundles are only needed when restoring -- otherwise it's sufficient to only have index. One could then move all newly created bundles into another machine after each backup.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> info is a very important file which contains all global repository metadata, such as chunk and bundle sizes, and an encryption key encrypted with the user password. It is paramount not to lose it, so backing it up separately somewhere might be a good idea. On the other hand, if you absolutely don't trust your remote storage provider, you might consider not storing it with the rest of the data. It would then be impossible to decrypt it at all, even if your password gets known later.</dl>
+</dt><dd> info is a very important file which contains all global repository metadata, such as chunk and bundle sizes, and an encryption key encrypted with the user password. It is paramount not to lose it, so backing it up separately somewhere might be a good idea. On the other hand, if you absolutely don't trust your remote storage provider, you might consider not storing it with the rest of the data. It would then be impossible to decrypt it at all, even if your password gets known later.</dd></dl>
  
 
  The program does not have any facilities for sending your backup over the network. You can rsync the repo to another computer or use any kind of cloud storage capable of storing files. Since zbackup never modifies any existing files, the latter is especially easy -- just tell the upload tool you use not to upload any files which already exist on the remote side (e.g. with gsutil it's gsutil cp -R -n&nbsp;<wbr>/my/backup gs:/mybackup/). 
@@ -329,12 +329,12 @@ info
  There are then two problems with the total number of chunks in the repository:
 <dl>
 <dt>&bull;
-<dd> Hashes of all existing chunks are needed to be kept in RAM while the backup is ongoing. Since the sliding window performs checking with a single-byte granularity, lookups would otherwise be too slow. The amount of data needed to be stored is technically only 24 bytes for each chunk, where the size of the chunk is up to 64k. In an example real-life 18GB repo, only 18MB are taken by in its hash index. Multiply this roughly by two to have an estimate of RAM needed to store this index as an in-RAM hash table. However, as this size is proportional to the total size of the repo, for 2TB repo you could already require 2GB of RAM. Most repos are much smaller though, and as long as the deduplication works properly, in many cases you can store terabytes of highly-redundant backup files in a 20GB repo easily.</dl>
+</dt><dd> Hashes of all existing chunks are needed to be kept in RAM while the backup is ongoing. Since the sliding window performs checking with a single-byte granularity, lookups would otherwise be too slow. The amount of data needed to be stored is technically only 24 bytes for each chunk, where the size of the chunk is up to 64k. In an example real-life 18GB repo, only 18MB are taken by in its hash index. Multiply this roughly by two to have an estimate of RAM needed to store this index as an in-RAM hash table. However, as this size is proportional to the total size of the repo, for 2TB repo you could already require 2GB of RAM. Most repos are much smaller though, and as long as the deduplication works properly, in many cases you can store terabytes of highly-redundant backup files in a 20GB repo easily.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> We use a 64-bit rolling hash, which allows to have an O(1) lookup cost at each byte we process. Due to birthday paradox (<a rel="nofollow" HREF="https://en.wikipedia.org/wiki/Birthday_paradox">https://en.wikipedia.org/wiki/Birthday_paradox</a>), we would start having collisions when we approach 2^32 hashes. If each chunk we have is 32k on average, we would get there when our repo grows to 128TB. We would still be able to continue, but as the number of collisions would grow, we would have to resort to calculating the full hash of a block at each byte more and more often, which would result in a considerable slowdown.</dl>
+</dt><dd> We use a 64-bit rolling hash, which allows to have an O(1) lookup cost at each byte we process. Due to birthday paradox (<a rel="nofollow" HREF="https://en.wikipedia.org/wiki/Birthday_paradox">https://en.wikipedia.org/wiki/Birthday_paradox</a>), we would start having collisions when we approach 2^32 hashes. If each chunk we have is 32k on average, we would get there when our repo grows to 128TB. We would still be able to continue, but as the number of collisions would grow, we would have to resort to calculating the full hash of a block at each byte more and more often, which would result in a considerable slowdown.</dd></dl>
  
 
  All in all, as long as the amount of RAM permits, one can go up to several terabytes in deduplicated data, and start having some slowdown after having hundreds of terabytes, RAM-permitting.
@@ -343,22 +343,22 @@ info
 
 <dl>
 <dt>&bull;
-<dd> We use a 64-bit modified Rabin-Karp rolling hash (see rolling_hash.hh for details), while most other programs use a 32-bit one. As noted previously, one problem with the hash size is its birthday bound, which with the 32-bit hash is met after having only 2^16 hashes. The choice of a 64-bit hash allows us to scale much better while having virtually the same calculation cost on a typical 64-bit machine.</dl>
+</dt><dd> We use a 64-bit modified Rabin-Karp rolling hash (see rolling_hash.hh for details), while most other programs use a 32-bit one. As noted previously, one problem with the hash size is its birthday bound, which with the 32-bit hash is met after having only 2^16 hashes. The choice of a 64-bit hash allows us to scale much better while having virtually the same calculation cost on a typical 64-bit machine.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> rsync uses MD5 as its strong hash. While MD5 is known to be fast, it is also known to be broken, allowing a malicious user to craft colliding inputs. zbackup uses SHA1 instead. The cost of SHA1 calculations on modern machines is actually less than that of MD5 (run openssl speed md5 sha1 on yours), so it's a win-win situation. We only keep the first 128 bits of the SHA1 output, and therefore together with the rolling hash we have a 192-bit hash for each chunk. It's a multiple of 8 bytes which is a nice properly on 64-bit machines, and it is long enough not to worry about possible collisions.</dl>
+</dt><dd> rsync uses MD5 as its strong hash. While MD5 is known to be fast, it is also known to be broken, allowing a malicious user to craft colliding inputs. zbackup uses SHA1 instead. The cost of SHA1 calculations on modern machines is actually less than that of MD5 (run openssl speed md5 sha1 on yours), so it's a win-win situation. We only keep the first 128 bits of the SHA1 output, and therefore together with the rolling hash we have a 192-bit hash for each chunk. It's a multiple of 8 bytes which is a nice properly on 64-bit machines, and it is long enough not to worry about possible collisions.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> AES-128 in CBC mode with PKCS#7 padding is used for encryption. This seems to be a reasonbly safe classic solution. Each encrypted file has a random IV as its first 16 bytes.</dl>
+</dt><dd> AES-128 in CBC mode with PKCS#7 padding is used for encryption. This seems to be a reasonbly safe classic solution. Each encrypted file has a random IV as its first 16 bytes.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> We use Google's protocol buffers (<a rel="nofollow" HREF="https://developers.google.com/protocol-buffers/)">https://developers.google.com/protocol-buffers/)</a> to represent data structures in binary form. They are very efficient and relatively simple to use.</dl>
+</dt><dd> We use Google's protocol buffers (<a rel="nofollow" HREF="https://developers.google.com/protocol-buffers/)">https://developers.google.com/protocol-buffers/)</a> to represent data structures in binary form. They are very efficient and relatively simple to use.</dd></dl>
 
 <h2>Compression</h2>
 
@@ -373,21 +373,21 @@ info
  want your backup process to be cpu-bound, you should consider using LZO. However, there are some caveats:
 <dl>
 <dt>1.
-<dd> LZO is so fast that other parts of zbackup consume significant portions of the CPU. In fact, it is only</dl>
+</dt><dd> LZO is so fast that other parts of zbackup consume significant portions of the CPU. In fact, it is only</dd></dl>
  
 
  using one core on my machine because compression is the only thing that can run in parallel. 
 
 <dl>
 <dt>2.
-<dd> I've hacked the LZO support in a day. You shouldn't trust it. Please make sure that restore works before</dl>
+</dt><dd> I've hacked the LZO support in a day. You shouldn't trust it. Please make sure that restore works before</dd></dl>
  
 
  you assume that your data is safe. That may still be faster than a backup with LZMA ;-) 
 
 <dl>
 <dt>3.
-<dd> LZMA is still the default, so make sure that you use the --compression lzo argument when you init the</dl>
+</dt><dd> LZMA is still the default, so make sure that you use the --compression lzo argument when you init the</dd></dl>
  
 
  repo or whenever you do a backup. 
@@ -407,68 +407,68 @@ info
  There's a lot to be improved in the program. It was released with the minimum amount of functionality to be useful. It is also stable. This should hopefully stimulate people to join the development and add all those other fancy features. Here's a list of ideas:
 <dl>
 <dt>&bull;
-<dd> Additional options, such as configurable chunk and bundle sizes etc.</dl>
+</dt><dd> Additional options, such as configurable chunk and bundle sizes etc.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> A command to change password.</dl>
+</dt><dd> A command to change password.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Improved garbage collection. The program should support ability to specify maximum index file size / maximum index file count (for better compatibility with cloud storages as well) or something like retention policy.</dl>
+</dt><dd> Improved garbage collection. The program should support ability to specify maximum index file size / maximum index file count (for better compatibility with cloud storages as well) or something like retention policy.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> A command to fsck the repo by doing something close to what garbage collection does, but also checking all hashes and so on.</dl>
+</dt><dd> A command to fsck the repo by doing something close to what garbage collection does, but also checking all hashes and so on.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Parallel decompression. Right now decompression is single-threaded, but it is possible to look ahead in the stream and perform prefetching.</dl>
+</dt><dd> Parallel decompression. Right now decompression is single-threaded, but it is possible to look ahead in the stream and perform prefetching.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Support for mounting the repo over FUSE. Random access to data would then be possible.</dl>
+</dt><dd> Support for mounting the repo over FUSE. Random access to data would then be possible.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Support for exposing a backed up file over a userspace NBD server. It would then be possible to mount raw disk images without extracting them.</dl>
+</dt><dd> Support for exposing a backed up file over a userspace NBD server. It would then be possible to mount raw disk images without extracting them.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Support for other encryption types (preferably for everything openssl supports with its evp).</dl>
+</dt><dd> Support for other encryption types (preferably for everything openssl supports with its evp).</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Support for other compression methods.</dl>
+</dt><dd> Support for other compression methods.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> You name it!</dl>
+</dt><dd> You name it!</dd></dl>
 
 <h2>Communication</h2>
 
 <dl>
 <dt>&bull;
-<dd> The program's website is at &lt;<a rel="nofollow" HREF="http://zbackup.org/">http://zbackup.org/</a>&gt;.</dl>
+</dt><dd> The program's website is at &lt;<a rel="nofollow" HREF="http://zbackup.org/">http://zbackup.org/</a>&gt;.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Development happens at &lt;<a rel="nofollow" HREF="https://github.com/zbackup/zbackup">https://github.com/zbackup/zbackup</a>&gt;.</dl>
+</dt><dd> Development happens at &lt;<a rel="nofollow" HREF="https://github.com/zbackup/zbackup">https://github.com/zbackup/zbackup</a>&gt;.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Discussion forum is at &lt;<a rel="nofollow" HREF="https://groups.google.com/forum/#!forum/zbackup">https://groups.google.com/forum/#!forum/zbackup</a>&gt;. Please ask for help there!</dl>
+</dt><dd> Discussion forum is at &lt;<a rel="nofollow" HREF="https://groups.google.com/forum/#!forum/zbackup">https://groups.google.com/forum/#!forum/zbackup</a>&gt;. Please ask for help there!</dd></dl>
  
 
  The author is reachable over email at &lt;ikm [at] zbackup.org&gt;. Please be constructive and don't ask for help using the program, though. In most cases it's best to stick to the forum, unless you have something to discuss with the author in private.
@@ -480,32 +480,32 @@ info
  zbackup is certainly not the first project to embrace the idea of using a rolling hash for deduplication. Here's a list of other projects the author found on the web:
 <dl>
 <dt>&bull;
-<dd> bup (<a rel="nofollow" HREF="https://github.com/bup/bup">https://github.com/bup/bup</a>), based on storing data in git packs. No possibility of removing old data. This program was the initial inspiration for zbackup.</dl>
+</dt><dd> bup (<a rel="nofollow" HREF="https://github.com/bup/bup">https://github.com/bup/bup</a>), based on storing data in git packs. No possibility of removing old data. This program was the initial inspiration for zbackup.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> ddar (<a rel="nofollow" HREF="http://www.synctus.com/ddar/">http://www.synctus.com/ddar/</a>), seems to be a little bit outdated. Contains a nice list of alternatives with comparisons.</dl>
+</dt><dd> ddar (<a rel="nofollow" HREF="http://www.synctus.com/ddar/">http://www.synctus.com/ddar/</a>), seems to be a little bit outdated. Contains a nice list of alternatives with comparisons.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> rdiff-backup (<a rel="nofollow" HREF="http://www.nongnu.org/rdiff-backup/">http://www.nongnu.org/rdiff-backup/</a>), based on the original rsync algorithm. Does not do global deduplication, only working over the files with the same file name.</dl>
+</dt><dd> rdiff-backup (<a rel="nofollow" HREF="http://www.nongnu.org/rdiff-backup/">http://www.nongnu.org/rdiff-backup/</a>), based on the original rsync algorithm. Does not do global deduplication, only working over the files with the same file name.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> duplicity (<a rel="nofollow" HREF="http://duplicity.nongnu.org/">http://duplicity.nongnu.org/</a>), which looks similar to rdiff-backup with regards to mode of operation.</dl>
+</dt><dd> duplicity (<a rel="nofollow" HREF="http://duplicity.nongnu.org/">http://duplicity.nongnu.org/</a>), which looks similar to rdiff-backup with regards to mode of operation.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Some filesystems (most notably ZFS (<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/ZFS)">http://en.wikipedia.org/wiki/ZFS)</a> and Btrfs (<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/Btrfs))">http://en.wikipedia.org/wiki/Btrfs))</a> provide deduplication features. They do so only at block level though, without a sliding window, so they can not accomodate to arbitrary byte insertion/deletion in the middle of data.</dl>
+</dt><dd> Some filesystems (most notably ZFS (<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/ZFS)">http://en.wikipedia.org/wiki/ZFS)</a> and Btrfs (<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/Btrfs))">http://en.wikipedia.org/wiki/Btrfs))</a> provide deduplication features. They do so only at block level though, without a sliding window, so they can not accomodate to arbitrary byte insertion/deletion in the middle of data.</dd></dl>
  
 
 <dl>
 <dt>&bull;
-<dd> Attic (<a rel="nofollow" HREF="https://attic-backup.org/">https://attic-backup.org/</a>), which looks very similar to zbackup.</dl>
+</dt><dd> Attic (<a rel="nofollow" HREF="https://attic-backup.org/">https://attic-backup.org/</a>), which looks very similar to zbackup.</dd></dl>
 
 <h2>Credits</h2>
 

@@ -33,59 +33,59 @@ description: "ldns_rr_rrsig_typecovered, ldns_rr_rrsig_set_typecovered, ldns_rr_
 <p> bool ldns_rr_rrsig_set_sig(ldns_rr *r, ldns_rdf *f); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_rrsig_typecovered</i>()</p>
-<dd>returns the type covered of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the type covered or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_typecovered</i>()</dt>
+<dd>returns the type covered of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the type covered or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_typecovered</i>()</p>
-<dd>sets the typecovered of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the typecovered to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_typecovered</i>()</dt>
+<dd>sets the typecovered of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the typecovered to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_algorithm</i>()</p>
-<dd>returns the algorithm of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the algorithm or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_algorithm</i>()</dt>
+<dd>returns the algorithm of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the algorithm or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_algorithm</i>()</p>
-<dd>sets the algorithm of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the algorithm to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_algorithm</i>()</dt>
+<dd>sets the algorithm of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the algorithm to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_labels</i>()</p>
-<dd>returns the number of labels of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the number of labels or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_labels</i>()</dt>
+<dd>returns the number of labels of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the number of labels or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_labels</i>()</p>
-<dd>sets the number of labels of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the number of labels to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_labels</i>()</dt>
+<dd>sets the number of labels of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the number of labels to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_origttl</i>()</p>
-<dd>returns the original TTL of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the original TTL or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_origttl</i>()</dt>
+<dd>returns the original TTL of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the original TTL or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_origttl</i>()</p>
-<dd>sets the original TTL of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the original TTL to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_origttl</i>()</dt>
+<dd>sets the original TTL of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the original TTL to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_expiration</i>()</p>
-<dd>returns the expiration time of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the expiration time or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_expiration</i>()</dt>
+<dd>returns the expiration time of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the expiration time or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_expiration</i>()</p>
-<dd>sets the expireation date of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the expireation date to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_expiration</i>()</dt>
+<dd>sets the expireation date of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the expireation date to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_inception</i>()</p>
-<dd>returns the inception time of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the inception time or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_inception</i>()</dt>
+<dd>returns the inception time of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the inception time or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_inception</i>()</p>
-<dd>sets the inception date of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the inception date to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_inception</i>()</dt>
+<dd>sets the inception date of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the inception date to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_keytag</i>()</p>
-<dd>returns the keytag of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the keytag or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_keytag</i>()</dt>
+<dd>returns the keytag of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the keytag or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_keytag</i>()</p>
-<dd>sets the keytag of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the keytag to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_keytag</i>()</dt>
+<dd>sets the keytag of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the keytag to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_signame</i>()</p>
-<dd>returns the signers name of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the signers name or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_signame</i>()</dt>
+<dd>returns the signers name of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the signers name or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_signame</i>()</p>
-<dd>sets the signers name of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the signers name to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_signame</i>()</dt>
+<dd>sets the signers name of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the signers name to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_sig</i>()</p>
-<dd>returns the signature data of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the signature data or NULL on failure</dl>
+<dt> <i>ldns_rr_rrsig_sig</i>()</dt>
+<dd>returns the signature data of a LDNS_RR_TYPE_RRSIG RR .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the signature data or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rrsig_set_sig</i>()</p>
-<dd>sets the signature data of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the signature data to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_rrsig_set_sig</i>()</dt>
+<dd>sets the signature data of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the rr to use .br <code>f</code>: the signature data to set .br Returns true on success, false otherwise</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

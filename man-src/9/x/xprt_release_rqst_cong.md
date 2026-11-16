@@ -15,7 +15,7 @@ xprt_release_rqst_cong - housekeeping when request is complete
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>RPC request that recently completed</dl>
+<dl><dd></dd><dd>RPC request that recently completed</dd></dl>
 
 <h2>Description</h2>
 

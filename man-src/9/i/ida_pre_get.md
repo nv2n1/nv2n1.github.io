@@ -14,10 +14,10 @@ description: "ida_pre_get – reserve resources for ida allocation"
 <p><i>ida</i></p>
 <dl>
 <dd>
-<dd>ida handle</dl>
+</dd><dd>ida handle</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>memory allocation flag</dl>
+<dd>memory allocation flag</dd></dl>
 <h2>Description</h2>
 <p>This function should be called prior to locking and calling the following function. It preallocates enough memory to satisfy the worst possible allocation. </p>
 <p> If the system is REALLY out of memory this function returns <code>0</code>, otherwise <code>1</code>.</p>

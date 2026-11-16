@@ -11,7 +11,6 @@ description: "ql/math/statistics/riskstatistics.hpp – empirical-distribution r
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/math/functional.hpp&gt;
-
 #include &lt;ql/math/statistics/gaussianstatistics.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>GenericRiskStatistics&lt; S &gt;</code><br />

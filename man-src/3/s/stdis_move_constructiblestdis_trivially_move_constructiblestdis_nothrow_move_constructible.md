@@ -10,20 +10,14 @@ description: "std::is_move_constructible,std::is_trivially_move_constructible,st
 <p>std::is_move_constructible,std::is_trivially_move_constructible,std::is_nothrow_move_constructible &#8211; std::is_move_constructible,std::is_trivially_move_constructible,std::is_nothrow_move_constructible</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct is_move_constructible;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct is_trivially_move_constructible;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct is_nothrow_move_constructible;</code></pre>
 <p>1) If T is not a referenceable type (i.e., possibly cv-qualified void or a function type with a cv-qualifier-seq or a ref-qualifier), provides a member constant value equal to false. Otherwise, provides a member constant value equal to std::is_constructible&lt;T, T&amp;&amp;&gt;::value.<br />
 2) Same as <code>(1)</code>, but uses std::is_trivially_constructible&lt;T, T&amp;&amp;&gt;.<br />
@@ -68,17 +62,14 @@ In many implementations, is_nothrow_move_constructible also checks if the destru
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct Ex1 {
     std::string str; // member has a non-trivial but non-throwing move ctor
 };
-
 struct Ex2 {
     int n;
     Ex2(Ex2 &amp;&amp;) = default; // trivial and non-throwing
 };
-
 struct NoMove {
     // prevents implicit declaration of default move constructor
     // however, the class is still move-constructible because its

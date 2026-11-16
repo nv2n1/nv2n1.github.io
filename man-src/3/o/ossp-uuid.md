@@ -76,15 +76,15 @@ hex_digit                   = &quot;0&quot;|&quot;1&quot;|&quot;2&quot;|&quot;3&
  </tt>&quot;.<br />
  <code><font SIZE="-1">UUID</font> Variants and Versions</code> A <font SIZE="-1">UUID</font> has a variant and version. The variant defines the layout of the <font SIZE="-1">UUID</font>. The version defines the content of the <font SIZE="-1">UUID</font>. The <font SIZE="-1">UUID</font> variant supported in <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> is the <font SIZE="-1">DCE</font> 1.1 variant only. The <font SIZE="-1">DCE</font> 1.1 <font SIZE="-1">UUID</font> variant versions supported in <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> are:</p>
 <dl>
-<dt><code>Version 1</code> (time and node based)</p>
-<dd>These are the classical UUIDs, created out of a 60-bit system time, a 14-bit local clock sequence and 48-bit system <font SIZE="-1">MAC</font> address. The <font SIZE="-1">MAC</font> address can be either the real one of a physical network interface card (<font SIZE="-1">NIC</font>) or a random multi-cast <font SIZE="-1">MAC</font> address. Version 1 UUIDs are usually used as one-time global unique identifiers.</p>
-<dt><code>Version 3</code> (name based, <font SIZE="-1">MD5</font>)</p>
-<dd>These are UUIDs which are based on the 128-bit <font SIZE="-1">MD5</font> message digest of the concatenation of a 128-bit namespace <font SIZE="-1">UUID</font> and a name string of arbitrary length. Version 3 UUIDs are usually used for non-unique but repeatable message digest identifiers.</p>
-<dt><code>Version 4</code> (random data based)</p>
-<dd>These are UUIDs which are based on just 128-bit of random data. Version 4 UUIDs are usually used as one-time local unique identifiers.</p>
-<dt><code>Version 5</code> (name based, <font SIZE="-1">SHA-1</font>)</p>
+<dt><code>Version 1</code> (time and node based)</dt>
+<dd>These are the classical UUIDs, created out of a 60-bit system time, a 14-bit local clock sequence and 48-bit system <font SIZE="-1">MAC</font> address. The <font SIZE="-1">MAC</font> address can be either the real one of a physical network interface card (<font SIZE="-1">NIC</font>) or a random multi-cast <font SIZE="-1">MAC</font> address. Version 1 UUIDs are usually used as one-time global unique identifiers.</dd>
+<dt><code>Version 3</code> (name based, <font SIZE="-1">MD5</font>)</dt>
+<dd>These are UUIDs which are based on the 128-bit <font SIZE="-1">MD5</font> message digest of the concatenation of a 128-bit namespace <font SIZE="-1">UUID</font> and a name string of arbitrary length. Version 3 UUIDs are usually used for non-unique but repeatable message digest identifiers.</dd>
+<dt><code>Version 4</code> (random data based)</dt>
+<dd>These are UUIDs which are based on just 128-bit of random data. Version 4 UUIDs are usually used as one-time local unique identifiers.</dd>
+<dt><code>Version 5</code> (name based, <font SIZE="-1">SHA-1</font>)</dt>
 <dd>These are UUIDs which are based on the 160-bit <font SIZE="-1">SHA-1</font> message digest of the concatenation of a 128-bit namespace <font SIZE="-1">UUID</font> and a name string of arbitrary length. Version 5 UUIDs are usually used for non-unique but repeatable message digest identifiers.
-</dl>
+</dd></dl>
 <p> <code><font SIZE="-1">UUID</font> Uniqueness</code> Version 1 UUIDs are guaranteed to be unique through combinations of hardware addresses, time stamps and random seeds. There is a reference in the <font SIZE="-1">UUID</font> to the hardware (<font SIZE="-1">MAC</font>) address of the first network interface card (<font SIZE="-1">NIC</font>) on the host which generated the <font SIZE="-1">UUID</font> &#8212; this reference is intended to ensure the <font SIZE="-1">UUID</font> will be unique in space as the <font SIZE="-1">MAC</font> address of every network card is assigned by a single global authority (<font SIZE="-1">IEEE</font>) and is guaranteed to be unique. The next component in a <font SIZE="-1">UUID</font> is a timestamp which, as clock always (should) move forward, will be unique in time. Just in case some part of the above goes wrong (the hardware address cannot be determined or the clock moved steps backward), there is a random clock sequence component placed into the <font SIZE="-1">UUID</font> as a &#8220;catch-all&#8221; for uniqueness. Version 3 and version 5 UUIDs are guaranteed to be inherently globally unique if the combination of namespace and name used to generate them is unique. Version 4 UUIDs are not guaranteed to be globally unique, because they are generated out of locally gathered pseudo-random numbers only. Nevertheless there is still a high likelihood of uniqueness over space and time and that they are computationally difficult to guess.<br />
  <code>Nil <font SIZE="-1">UUID</font></code> There is a special <i>Nil</i> <font SIZE="-1">UUID</font> consisting of all octets set to zero in the binary representation. It can be used as a special <font SIZE="-1">UUID</font> value which does not conflict with real UUIDs.</p>
 <h2>Application Programming Interface</h2>
@@ -92,43 +92,43 @@ hex_digit                   = &quot;0&quot;|&quot;1&quot;|&quot;2&quot;|&quot;3&
 <p> <code><font SIZE="-1">CONSTANTS</font></code> </p>
 <p> The following constants are provided:</p>
 <dl>
-<dt><font SIZE="-1"><code>UUID_VERSION</code></font></p>
-<dd>The hexadecimal encoded <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> version. This allows compile-time checking of the <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> version. For run-time checking use <code>uuid_version</code>() instead. </p>
+<dt><font SIZE="-1"><code>UUID_VERSION</code></font></dt>
+<dd>The hexadecimal encoded <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> version. This allows compile-time checking of the <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> version. For run-time checking use <code>uuid_version</code>() instead. </dd>
 <p> The hexadecimal encoding for a version &quot;$<i>v</i>.$<i>r</i>$<i>t</i>$<i>l</i>&quot; is calculated with the <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>version</code> command and is (in Perl-style for concise description) &quot;sprintf(&#8216;0x%x%02x%d%02x&#8217;, $<i>v</i>, $<i>r</i>, {qw(s 9 . 2 b 1 a 0)}-&gt;{$<i>t</i>}, ($<i>t</i> eq &#8216;s&#8217; ? 99 : $<i>l</i>))&#8220;, i.e., the version 0.9.6 is encoded as &#8221;0x009206&quot;.</p>
-<dt><font SIZE="-1"><code>UUID_LEN_BIN</code></font>, <font SIZE="-1"><code>UUID_LEN_STR</code></font>, <font SIZE="-1"><code>UUID_LEN_SIV</code></font></p>
+<dt><font SIZE="-1"><code>UUID_LEN_BIN</code></font>, <font SIZE="-1"><code>UUID_LEN_STR</code></font>, <font SIZE="-1"><code>UUID_LEN_SIV</code></font></dt>
 <dd>The number of octets of the <font SIZE="-1">UUID</font> binary and string representations. Notice that the lengths of the string representation (<font SIZE="-1"><code>UUID_LEN_STR</code></font>) and the lengths of the single integer value representation (<font SIZE="-1"><code>UUID_LEN_SIV</code></font>) does <i>not</i> include the necessary <tt> NUL<br />
- </tt> termination character.</p>
-<dt><font SIZE="-1"><code>UUID_MAKE_V1</code></font>, <font SIZE="-1"><code>UUID_MAKE_V3</code></font>, <font SIZE="-1"><code>UUID_MAKE_V4</code></font>, <font SIZE="-1"><code>UUID_MAKE_V5</code></font>, <font SIZE="-1"><code>UUID_MAKE_MC</code></font></p>
-<dd>The <i>mode</i> bits for use with <code>uuid_make</code>(). The <font SIZE="-1"><code>UUID_MAKE_V</code></font><i>N</i> specify which <font SIZE="-1">UUID</font> version to generate. The <font SIZE="-1"><code>UUID_MAKE_MC</code></font> forces the use of a random multi-cast <font SIZE="-1">MAC</font> address instead of the real physical <font SIZE="-1">MAC</font> address in version 1 UUIDs.</p>
-<dt><font SIZE="-1"><code>UUID_RC_OK</code></font>, <font SIZE="-1"><code>UUID_RC_ARG</code></font>, <font SIZE="-1"><code>UUID_RC_MEM</code></font>, <font SIZE="-1"><code>UUID_RC_SYS</code></font>, <font SIZE="-1"><code>UUID_RC_INT</code></font>, <font SIZE="-1"><code>UUID_RC_IMP</code></font></p>
+ </tt> termination character.</dd>
+<dt><font SIZE="-1"><code>UUID_MAKE_V1</code></font>, <font SIZE="-1"><code>UUID_MAKE_V3</code></font>, <font SIZE="-1"><code>UUID_MAKE_V4</code></font>, <font SIZE="-1"><code>UUID_MAKE_V5</code></font>, <font SIZE="-1"><code>UUID_MAKE_MC</code></font></dt>
+<dd>The <i>mode</i> bits for use with <code>uuid_make</code>(). The <font SIZE="-1"><code>UUID_MAKE_V</code></font><i>N</i> specify which <font SIZE="-1">UUID</font> version to generate. The <font SIZE="-1"><code>UUID_MAKE_MC</code></font> forces the use of a random multi-cast <font SIZE="-1">MAC</font> address instead of the real physical <font SIZE="-1">MAC</font> address in version 1 UUIDs.</dd>
+<dt><font SIZE="-1"><code>UUID_RC_OK</code></font>, <font SIZE="-1"><code>UUID_RC_ARG</code></font>, <font SIZE="-1"><code>UUID_RC_MEM</code></font>, <font SIZE="-1"><code>UUID_RC_SYS</code></font>, <font SIZE="-1"><code>UUID_RC_INT</code></font>, <font SIZE="-1"><code>UUID_RC_IMP</code></font></dt>
 <dd>The possible numerical return-codes of <font SIZE="-1">API</font> functions. The <tt> UUID_RC_OK<br />
- </tt> indicates success, the others indicate errors. Use <code>uuid_error</code>() to translate them into string versions.</p>
-<dt><font SIZE="-1"><code>UUID_FMT_BIN</code></font>, <font SIZE="-1"><code>UUID_FMT_STR</code></font>, <font SIZE="-1"><code>UUID_FMT_SIV</code></font>, <font SIZE="-1"><code>UUID_FMT_TXT</code></font></p>
+ </tt> indicates success, the others indicate errors. Use <code>uuid_error</code>() to translate them into string versions.</dd>
+<dt><font SIZE="-1"><code>UUID_FMT_BIN</code></font>, <font SIZE="-1"><code>UUID_FMT_STR</code></font>, <font SIZE="-1"><code>UUID_FMT_SIV</code></font>, <font SIZE="-1"><code>UUID_FMT_TXT</code></font></dt>
 <dd>The <i>fmt</i> formats for use with <code>uuid_import</code>() and <code>uuid_export</code>(). The <font SIZE="-1"><code>UUID_FMT_BIN</code></font> indicates the <font SIZE="-1">UUID</font> binary representation (of length <font SIZE="-1"><code>UUID_LEN_BIN</code></font>), the <font SIZE="-1"><code>UUID_FMT_STR</code></font> indicates the <font SIZE="-1">UUID</font> string representation (of length <font SIZE="-1"><code>UUID_LEN_STR</code></font>), the <font SIZE="-1"><code>UUID_FMT_SIV</code></font> indicates the <font SIZE="-1">UUID</font> single integer value representation (of maximum length <font SIZE="-1"><code>UUID_LEN_SIV</code></font>) and the <font SIZE="-1"><code>UUID_FMT_TXT</code></font> indicates the textual description (of arbitrary length) of a <font SIZE="-1">UUID</font>.
-</dl>
+</dd></dl>
 <p> <code><font SIZE="-1">FUNCTIONS</font></code> </p>
 <p> The following functions are provided:</p>
 <dl>
-<dt>uuid_rc_t <code>uuid_create</code>(uuid_t **<i>uuid</i>);</p>
+<dt>uuid_rc_t <code>uuid_create</code>(uuid_t **<i>uuid</i>);</dt>
 <dd>Create a new <font SIZE="-1">UUID</font> object and store a pointer to it in <tt> *<br />
- </tt><i>uuid</i>. A <font SIZE="-1">UUID</font> object consists of an internal representation of a <font SIZE="-1">UUID</font>, the internal <font SIZE="-1">PRNG</font> and <font SIZE="-1">MD5</font> generator contexts, and cached <font SIZE="-1">MAC</font> address and timestamp information. The initial <font SIZE="-1">UUID</font> is the <i>Nil</i> <font SIZE="-1">UUID</font>.</p>
-<dt>uuid_rc_t <code>uuid_destroy</code>(uuid_t *<i>uuid</i>);</p>
-<dd>Destroy <font SIZE="-1">UUID</font> object <i>uuid</i>.</p>
-<dt>uuid_rc_t <code>uuid_clone</code>(const uuid_t *<i>uuid</i>, uuid_t **<i>uuid_clone</i>);</p>
-<dd>Clone <font SIZE="-1">UUID</font> object <i>uuid</i> and store new <font SIZE="-1">UUID</font> object in <i>uuid_clone</i>.</p>
-<dt>uuid_rc_t <code>uuid_isnil</code>(const uuid_t *<i>uuid</i>, int *<i>result</i>);</p>
+ </tt><i>uuid</i>. A <font SIZE="-1">UUID</font> object consists of an internal representation of a <font SIZE="-1">UUID</font>, the internal <font SIZE="-1">PRNG</font> and <font SIZE="-1">MD5</font> generator contexts, and cached <font SIZE="-1">MAC</font> address and timestamp information. The initial <font SIZE="-1">UUID</font> is the <i>Nil</i> <font SIZE="-1">UUID</font>.</dd>
+<dt>uuid_rc_t <code>uuid_destroy</code>(uuid_t *<i>uuid</i>);</dt>
+<dd>Destroy <font SIZE="-1">UUID</font> object <i>uuid</i>.</dd>
+<dt>uuid_rc_t <code>uuid_clone</code>(const uuid_t *<i>uuid</i>, uuid_t **<i>uuid_clone</i>);</dt>
+<dd>Clone <font SIZE="-1">UUID</font> object <i>uuid</i> and store new <font SIZE="-1">UUID</font> object in <i>uuid_clone</i>.</dd>
+<dt>uuid_rc_t <code>uuid_isnil</code>(const uuid_t *<i>uuid</i>, int *<i>result</i>);</dt>
 <dd>Checks whether the <font SIZE="-1">UUID</font> in <i>uuid</i> is the <i>Nil</i> <font SIZE="-1">UUID</font>. If this is the case, it returns <i>true</i> in <tt> *<br />
  </tt><i>result</i>. Else it returns <i>false</i> in <tt> *<br />
- </tt><i>result</i>.</p>
-<dt>uuid_rc_t <code>uuid_compare</code>(const uuid_t *<i>uuid</i>, const uuid_t *<i>uuid2</i>, int *<i>result</i>);</p>
+ </tt><i>result</i>.</dd>
+<dt>uuid_rc_t <code>uuid_compare</code>(const uuid_t *<i>uuid</i>, const uuid_t *<i>uuid2</i>, int *<i>result</i>);</dt>
 <dd>Compares the order of the two UUIDs in <i>uuid1</i> and <i>uuid2</i> and returns the result in <tt> *<br />
  </tt><i>result</i>: <tt> -1<br />
- </tt> if <i>uuid1</i> is smaller than <i>uuid2</i>, <tt>0</tt> if <i>uuid1</i> is equal to <i>uuid2</i> and <tt>+1</tt> if <i>uuid1</i> is greater than <i>uuid2</i>.</p>
-<dt>uuid_rc_t <code>uuid_import</code>(uuid_t *<i>uuid</i>, uuid_fmt_t <i>fmt</i>, const void *<i>data_ptr</i>, size_t <i>data_len</i>);</p>
-<dd>Imports a <font SIZE="-1">UUID</font> <i>uuid</i> from an external representation of format <i>fmt</i>. The data is read from the buffer at <i>data_ptr</i> which contains at least <i>data_len</i> bytes. </p>
+ </tt> if <i>uuid1</i> is smaller than <i>uuid2</i>, <tt>0</tt> if <i>uuid1</i> is equal to <i>uuid2</i> and <tt>+1</tt> if <i>uuid1</i> is greater than <i>uuid2</i>.</dd>
+<dt>uuid_rc_t <code>uuid_import</code>(uuid_t *<i>uuid</i>, uuid_fmt_t <i>fmt</i>, const void *<i>data_ptr</i>, size_t <i>data_len</i>);</dt>
+<dd>Imports a <font SIZE="-1">UUID</font> <i>uuid</i> from an external representation of format <i>fmt</i>. The data is read from the buffer at <i>data_ptr</i> which contains at least <i>data_len</i> bytes. </dd>
 <p> The format of the external representation is specified by <i>fmt</i> and the minimum expected length in <i>data_len</i> depends on it. Valid values for <i>fmt</i> are <font SIZE="-1"><code>UUID_FMT_BIN</code></font>, <font SIZE="-1"><code>UUID_FMT_STR</code></font> and <font SIZE="-1"><code>UUID_FMT_SIV</code></font>.</p>
-<dt>uuid_rc_t <code>uuid_export</code>(const uuid_t *<i>uuid</i>, uuid_fmt_t <i>fmt</i>, void *<i>data_ptr</i>, size_t *<i>data_len</i>);</p>
-<dd>Exports a <font SIZE="-1">UUID</font> <i>uuid</i> into an external representation of format <i>fmt</i>. Valid values for <i>fmt</i> are <font SIZE="-1"><code>UUID_FMT_BIN</code></font>, <font SIZE="-1"><code>UUID_FMT_STR</code></font>, <font SIZE="-1"><code>UUID_FMT_SIV</code></font> and <font SIZE="-1"><code>UUID_FMT_TXT</code></font>. </p>
+<dt>uuid_rc_t <code>uuid_export</code>(const uuid_t *<i>uuid</i>, uuid_fmt_t <i>fmt</i>, void *<i>data_ptr</i>, size_t *<i>data_len</i>);</dt>
+<dd>Exports a <font SIZE="-1">UUID</font> <i>uuid</i> into an external representation of format <i>fmt</i>. Valid values for <i>fmt</i> are <font SIZE="-1"><code>UUID_FMT_BIN</code></font>, <font SIZE="-1"><code>UUID_FMT_STR</code></font>, <font SIZE="-1"><code>UUID_FMT_SIV</code></font> and <font SIZE="-1"><code>UUID_FMT_TXT</code></font>. </dd>
 <p> The data is written to the buffer whose location is obtained by dereferencing <i>data_ptr</i> after a &#8220;cast&#8221; to the appropriate pointer-to-pointer type. Hence the generic pointer argument <i>data_ptr</i> is expected to be a pointer to a &#8220;pointer of a particular type&#8221;, i.e., it has to be of type &quot;<tt> unsigned char **<br />
  </tt>&quot; for <font SIZE="-1"><code>UUID_FMT_BIN</code></font> and &quot;<tt> char **<br />
  </tt>&quot; for <font SIZE="-1"><code>UUID_FMT_STR</code></font>, <font SIZE="-1"><code>UUID_FMT_SIV</code></font> and <font SIZE="-1"><code>UUID_FMT_TXT</code></font>. </p>
@@ -139,29 +139,29 @@ hex_digit                   = &quot;0&quot;|&quot;1&quot;|&quot;2&quot;|&quot;3&
  </tt>, the number of available bytes in the buffer has to be provided in <tt> *<br />
  </tt><i>data_len</i> and the number of actually written bytes are returned in <tt> *<br />
  </tt><i>data_len</i> again. The minimum required buffer length depends on the external representation as specified by <i>fmt</i> and is at least <font SIZE="-1"><code>UUID_LEN_BIN</code></font> for <font SIZE="-1"><code>UUID_FMT_BIN</code></font>, <font SIZE="-1"><code>UUID_LEN_STR</code></font> for <font SIZE="-1"><code>UUID_FMT_STR</code></font> and <font SIZE="-1"><code>UUID_LEN_SIV</code></font> for <font SIZE="-1"><code>UUID_FMT_SIV</code></font>. For <font SIZE="-1"><code>UUID_FMT_TXT</code></font> a buffer of unspecified length is required and hence it is recommended to allow <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> to allocate the buffer as necessary.</p>
-<dt>uuid_rc_t <code>uuid_load</code>(uuid_t *<i>uuid</i>, const char *<i>name</i>);</p>
-<dd>Loads a pre-defined <font SIZE="-1">UUID</font> value into the <font SIZE="-1">UUID</font> object <i>uuid</i>. The following <i>name</i> arguments are currently known:</p>
+<dt>uuid_rc_t <code>uuid_load</code>(uuid_t *<i>uuid</i>, const char *<i>name</i>);</dt>
+<dd>Loads a pre-defined <font SIZE="-1">UUID</font> value into the <font SIZE="-1">UUID</font> object <i>uuid</i>. The following <i>name</i> arguments are currently known:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>name</i> <i></i><font SIZE="-1"><i>UUID</i></font><i></i></p>
+</dd><dl>
+<dt><i>name</i> <i></i><font SIZE="-1"><i>UUID</i></font><i></i></dt>
 <dd>
-<dt>nil 00000000-0000-0000-0000-000000000000</p>
+</dd><dt>nil 00000000-0000-0000-0000-000000000000</dt>
 <dd>
-<dt>ns:DNS 6ba7b810-9dad-11d1-80b4-00c04fd430c8</p>
+</dd><dt>ns:DNS 6ba7b810-9dad-11d1-80b4-00c04fd430c8</dt>
 <dd>
-<dt>ns:URL 6ba7b811-9dad-11d1-80b4-00c04fd430c8</p>
+</dd><dt>ns:URL 6ba7b811-9dad-11d1-80b4-00c04fd430c8</dt>
 <dd>
-<dt>ns:OID 6ba7b812-9dad-11d1-80b4-00c04fd430c8</p>
+</dd><dt>ns:OID 6ba7b812-9dad-11d1-80b4-00c04fd430c8</dt>
 <dd>
-<dt>ns:X500 6ba7b814-9dad-11d1-80b4-00c04fd430c8</p>
-<dd></dl>
+</dd><dt>ns:X500 6ba7b814-9dad-11d1-80b4-00c04fd430c8</dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dd>The &quot;<tt> ns:<br />
- </tt><i></i><font SIZE="-1"><i>XXX</i></font><i></i>&quot; are names of pre-defined name-space UUIDs for use in the generation of <font SIZE="-1">DCE</font> 1.1 version 3 and version 5 UUIDs.</dl>
-<dt>uuid_rc_t <code>uuid_make</code>(uuid_t *<i>uuid</i>, unsigned int <i>mode</i>, &#8230;);</p>
-<dd>Generates a new <font SIZE="-1">UUID</font> in <i>uuid</i> according to <i>mode</i> and optional arguments (dependent on <i>mode</i>). </p>
+ </tt><i></i><font SIZE="-1"><i>XXX</i></font><i></i>&quot; are names of pre-defined name-space UUIDs for use in the generation of <font SIZE="-1">DCE</font> 1.1 version 3 and version 5 UUIDs.</dd></dl>
+<dt>uuid_rc_t <code>uuid_make</code>(uuid_t *<i>uuid</i>, unsigned int <i>mode</i>, &#8230;);</dt>
+<dd>Generates a new <font SIZE="-1">UUID</font> in <i>uuid</i> according to <i>mode</i> and optional arguments (dependent on <i>mode</i>). </dd>
 <p> If <i>mode</i> contains the <tt> UUID_MAKE_V1<br />
  </tt> bit, a <font SIZE="-1">DCE</font> 1.1 variant <font SIZE="-1">UUID</font> of version 1 is generated. Then optionally the bit <tt> UUID_MAKE_MC<br />
  </tt> forces the use of random multi-cast <font SIZE="-1">MAC</font> address instead of the real physical <font SIZE="-1">MAC</font> address (the default). The <font SIZE="-1">UUID</font> is generated out of the 60-bit current system time, a 12-bit clock sequence and the 48-bit <font SIZE="-1">MAC</font> address. </p>
@@ -172,11 +172,11 @@ hex_digit                   = &quot;0&quot;|&quot;1&quot;|&quot;2&quot;|&quot;3&
  </tt>). The <font SIZE="-1">UUID</font> is generated out of the 128-bit <font SIZE="-1">MD5</font> or 160-bit <font SIZE="-1">SHA-1</font> from the concatenated octet stream of namespace <font SIZE="-1">UUID</font> and name string. </p>
 <p> If <i>mode</i> contains the <tt> UUID_MAKE_V4<br />
  </tt> bit, a <font SIZE="-1">DCE</font> 1.1 variant <font SIZE="-1">UUID</font> of version 4 is generated. The <font SIZE="-1">UUID</font> is generated out of 128-bit random data.</p>
-<dt>char *<code>uuid_error</code>(uuid_rc_t <i>rc</i>);</p>
-<dd>Returns a constant string representation corresponding to the return-code <i>rc</i> for use in displaying <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> errors.</p>
-<dt>unsigned long <code>uuid_version</code>(void);</p>
+<dt>char *<code>uuid_error</code>(uuid_rc_t <i>rc</i>);</dt>
+<dd>Returns a constant string representation corresponding to the return-code <i>rc</i> for use in displaying <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> errors.</dd>
+<dt>unsigned long <code>uuid_version</code>(void);</dt>
 <dd>Returns the hexadecimal encoded <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> version as compiled into the library object files. This allows run-time checking of the <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> version. For compile-time checking use <tt> UUID_VERSION<br />
- </tt> instead.</dl>
+ </tt> instead.</dd></dl>
 <h2>Example</h2>
 <p>The following shows an example usage of the <font SIZE="-1">API</font>. Error handling is omitted for code simplification and has to be re-added for production code. </p>
 <pre><code>/* generate a DCE 1.1 v1 UUID from system environment */
@@ -184,7 +184,6 @@ char *uuid_v1(void)
 {
     uuid_t *uuid;
     char *str;
-
     uuid_create(&amp;uuid);
     uuid_make(uuid, UUID_MAKE_V1);
     str = NULL;
@@ -192,14 +191,12 @@ char *uuid_v1(void)
     uuid_destroy(uuid);
     return str;
 }
-
 /* generate a DCE 1.1 v3 UUID from an URL */
 char *uuid_v3(const char *url)
 {
     uuid_t *uuid;
     uuid_t *uuid_ns;
     char *str;
-
     uuid_create(&amp;uuid);
     uuid_create(&amp;uuid_ns);
     uuid_load(uuid_ns, &quot;ns:URL&quot;);
@@ -213,18 +210,18 @@ char *uuid_v3(const char *url)
 <h2>See Also</h2>
 <p>The following are references to <font SIZE="-1"><code>UUID</code></font> documentation and specifications:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>A Universally Unique IDentifier (</code><font SIZE="-1"><code>UUID</code></font><code>) </code><font SIZE="-1"><code>URN</code></font><code> Namespace</code>, P. Leach, M. Mealling, R. Salz, <font SIZE="-1">IETF</font> <font SIZE="-1">RFC-4122</font>, July 2005, 32 pages, <a rel="nofollow" href="http://www.ietf.org/rfc/rfc4122.txt">http://www.ietf.org/rfc/rfc4122.txt</a></p>
-<dt>&bull;</p>
-<dd>Information Technology &#8212; Open Systems Interconnection (<font SIZE="-1">OSI</font>), <code>Procedures for the operation of </code><font SIZE="-1"><code>OSI</code></font><code> Registration Authorities: Generation and Registration of Universally Unique Identifiers (UUIDs) and their Use as </code><font SIZE="-1"><code>ASN</code></font><code>.1 Object Identifier Components</code>, <font SIZE="-1">ISO/IEC</font> 9834-8:2004 / ITU-T Rec. X.667, 2004, December 2004, 25 pages, <a rel="nofollow" href="http://www.itu.int/ITU-T/studygroups/com17/oid/X.667-E.pdf">http://www.itu.int/ITU-T/studygroups/com17/oid/X.667-E.pdf</a></p>
-<dt>&bull;</p>
-<dd><font SIZE="-1"><code>DCE</code></font><code> 1.1: Remote Procedure Call</code>, appendix <code>Universally Unique Identifier</code>, Open Group Technical Standard Document Number C706, August 1997, 737 pages, (supersedes C309 <font SIZE="-1">DCE:</font> Remote Procedure Call 8/1994, which was basis for <font SIZE="-1">ISO/IEC</font> 11578:1996 specification), <a rel="nofollow" href="http://www.opengroup.org/publications/catalog/c706.htm">http://www.opengroup.org/publications/catalog/c706.htm</a></p>
-<dt>&bull;</p>
-<dd>Information technology &#8212; Open Systems Interconnection (<font SIZE="-1">OSI</font>), <code>Remote Procedure Call (</code><font SIZE="-1"><code>RPC</code></font><code>)</code>, <font SIZE="-1">ISO/IEC</font> 11578:1996, August 2001, 570 pages, (<font SIZE="-1">CHF</font> 340,00), <a rel="nofollow" href="http://www.iso.ch/cate/d2229.html">http://www.iso.ch/cate/d2229.html</a></p>
-<dt>&bull;</p>
-<dd><font SIZE="-1"><code>HTTP</code></font><code> Extensions for Distributed Authoring (WebDAV)</code>, section <code>6.4.1 Node Field Generation Without the </code><font SIZE="-1"><code>IEEE</code></font><code> 802 Address</code>, <font SIZE="-1">IETF</font> <font SIZE="-1">RFC-2518</font>, February 1999, 94 pages, <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2518.txt">http://www.ietf.org/rfc/rfc2518.txt</a></p>
-<dt>&bull;</p>
-<dd><font SIZE="-1"><code>DCE</code></font><code> 1.1 compliant </code><font SIZE="-1"><code>UUID</code></font><code> functions</code>, FreeBSD manual pages <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3) and <i>uuidgen</i>(2), <a rel="nofollow" href="http://www.freebsd.org/cgi/man.cgi?query=uuid">http://www.freebsd.org/cgi/man.cgi?query=uuid</a>&amp;manpath=FreeBSD+6.0-RELEASE</dl>
+<dt>&bull;</dt>
+<dd><code>A Universally Unique IDentifier (</code><font SIZE="-1"><code>UUID</code></font><code>) </code><font SIZE="-1"><code>URN</code></font><code> Namespace</code>, P. Leach, M. Mealling, R. Salz, <font SIZE="-1">IETF</font> <font SIZE="-1">RFC-4122</font>, July 2005, 32 pages, <a rel="nofollow" href="http://www.ietf.org/rfc/rfc4122.txt">http://www.ietf.org/rfc/rfc4122.txt</a></dd>
+<dt>&bull;</dt>
+<dd>Information Technology &#8212; Open Systems Interconnection (<font SIZE="-1">OSI</font>), <code>Procedures for the operation of </code><font SIZE="-1"><code>OSI</code></font><code> Registration Authorities: Generation and Registration of Universally Unique Identifiers (UUIDs) and their Use as </code><font SIZE="-1"><code>ASN</code></font><code>.1 Object Identifier Components</code>, <font SIZE="-1">ISO/IEC</font> 9834-8:2004 / ITU-T Rec. X.667, 2004, December 2004, 25 pages, <a rel="nofollow" href="http://www.itu.int/ITU-T/studygroups/com17/oid/X.667-E.pdf">http://www.itu.int/ITU-T/studygroups/com17/oid/X.667-E.pdf</a></dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1"><code>DCE</code></font><code> 1.1: Remote Procedure Call</code>, appendix <code>Universally Unique Identifier</code>, Open Group Technical Standard Document Number C706, August 1997, 737 pages, (supersedes C309 <font SIZE="-1">DCE:</font> Remote Procedure Call 8/1994, which was basis for <font SIZE="-1">ISO/IEC</font> 11578:1996 specification), <a rel="nofollow" href="http://www.opengroup.org/publications/catalog/c706.htm">http://www.opengroup.org/publications/catalog/c706.htm</a></dd>
+<dt>&bull;</dt>
+<dd>Information technology &#8212; Open Systems Interconnection (<font SIZE="-1">OSI</font>), <code>Remote Procedure Call (</code><font SIZE="-1"><code>RPC</code></font><code>)</code>, <font SIZE="-1">ISO/IEC</font> 11578:1996, August 2001, 570 pages, (<font SIZE="-1">CHF</font> 340,00), <a rel="nofollow" href="http://www.iso.ch/cate/d2229.html">http://www.iso.ch/cate/d2229.html</a></dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1"><code>HTTP</code></font><code> Extensions for Distributed Authoring (WebDAV)</code>, section <code>6.4.1 Node Field Generation Without the </code><font SIZE="-1"><code>IEEE</code></font><code> 802 Address</code>, <font SIZE="-1">IETF</font> <font SIZE="-1">RFC-2518</font>, February 1999, 94 pages, <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2518.txt">http://www.ietf.org/rfc/rfc2518.txt</a></dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1"><code>DCE</code></font><code> 1.1 compliant </code><font SIZE="-1"><code>UUID</code></font><code> functions</code>, FreeBSD manual pages <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3) and <i>uuidgen</i>(2), <a rel="nofollow" href="http://www.freebsd.org/cgi/man.cgi?query=uuid">http://www.freebsd.org/cgi/man.cgi?query=uuid</a>&amp;manpath=FreeBSD+6.0-RELEASE</dd></dl>
 <h2>History</h2>
 <p><font SIZE="-1"><code>OSSP</code></font><code> uuid</code> was implemented in January 2004 by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt;. It was prompted by the use of UUIDs in the <font SIZE="-1"><code>OSSP</code></font><code> as</code> and <code>OpenPKG</code> projects. It is a clean room implementation intended to be strictly standards compliant and maximum portable.</p>
 <h2>See Also</h2>

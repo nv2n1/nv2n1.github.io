@@ -16,20 +16,21 @@ description: "taskrc – Configuration details for the"
 <h2>Description</h2>
 <p><code>Taskwarrior</code> obtains its configuration data from a file called <i>.taskrc</i> . This file is normally located in the user&#8217;s home directory:</p>
 <dl>
-<dd>$HOME/.taskrc</dl>
+<dd>$HOME/.taskrc</dd></dl>
 <p> The default location can be overridden using the <i>rc:</i> attribute when running task:</p>
 <dl>
-<dd>$ task rc:&lt;directory-path&gt;/.taskrc &#8230;</dl>
+<dd>$ task rc:&lt;directory-path&gt;/.taskrc &#8230;</dd></dl>
 <p> or using the TASKRC environment variable:</p>
 <dl>
-<dd>$ TASKRC=/tmp/.taskrc task &#8230;</dl>
+<dd>$ TASKRC=/tmp/.taskrc task &#8230;</dd></dl>
 <p> Individual options can be overridden by using the <i>rc.&lt;name&gt;:</i> attribute when running task:</p>
 <dl>
-<dd>$ task rc.&lt;name&gt;:&lt;value&gt; &#8230;</dl>
+<dd>$ task rc.&lt;name&gt;:&lt;value&gt; &#8230;</dd></dl>
 <p> or</p>
 <dl>
-<dd>$ task rc.&lt;name&gt;=&lt;value&gt; &#8230;</dl>
+<dd>$ task rc.&lt;name&gt;=&lt;value&gt; &#8230;</dd></dl>
 <p> If <code>Taskwarrior</code> is run without an existing configuration file it will ask if it should create a default, sample <i>.taskrc</i> file in the user&#8217;s home directory. The .taskrc file follows a very simply syntax defining name/value pairs:</p>
 <dl>
-<dd>&lt;name&gt; = &lt;value&gt;</dl>
+<dd>&lt;name&gt; = &lt;value&gt;</dd></dl>
 <p> There may be whitespace around &lt;name&gt;, &#8216;=&#8217; and &lt;value&gt;, and it is ignored. Whitespace within the &lt;value&gt; is left intact. Whitespace is not permitted in comma-separated lists. The entry must be on a single line, no continuations. Values support UTF8 as well as JSON encoding, such as 
+</p>

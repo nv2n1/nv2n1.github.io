@@ -10,7 +10,6 @@ description: "pbs_rerunjob – rerun a pbs batch job"
 <p>pbs_rerunjob &#8211; rerun a pbs batch job</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>int pbs_rerunjob(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*extend)</pre>
 <h2>Description</h2>

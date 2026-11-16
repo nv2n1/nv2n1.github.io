@@ -33,10 +33,10 @@ description: "cggev.f –"
  generalized eigenvalues lambda(j) of (A,B) satisfies
  u(j)**H * A = lambda(j) * u(j)**H * B
  where u(j)**H is the conjugate-transpose of u(j).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBVL</i> </p>
+<dd><i>JOBVL</i> </dd>
 <pre> JOBVL is CHARACTER*1
  = 'N': do not compute the left generalized eigenvectors;
  = 'V': compute the left generalized eigenvectors.</pre>
@@ -123,13 +123,13 @@ description: "cggev.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 217 of file cggev.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

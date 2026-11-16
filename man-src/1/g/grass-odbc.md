@@ -19,19 +19,17 @@ description: "Communication between GRASS and ODBC database for attribute manage
 <h2>EXAMPLE</h2>
 <p> In this example we copy the dbf file of a SHAPE map into ODBC, then connect GRASS to the ODBC DBMS. Usually the table will be already present in the DBMS.</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> Configure ODBC driver for selected database (manually or with &#8216;ODBCConfig&#8217;). ODBC drivers are defined in /etc/odbcinst.ini. Here is example: </p>
+</dt><dd> Configure ODBC driver for selected database (manually or with &#8216;ODBCConfig&#8217;). ODBC drivers are defined in /etc/odbcinst.ini. Here is example: </dd>
 <p>&nbsp;<wbr>[PostgreSQL] </p>
 <p>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>ODBC for PostgreSQL </p>
 <p>&nbsp;<wbr>Driver&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>/usr/lib/libodbcpsql.so </p>
 <p>&nbsp;<wbr>Setup&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>/usr/lib/libodbcpsqlS.so<br />
  FileUsage = 1</p>
 <dt>
-<dd>
-&nbsp;<wbr>Create DSN&nbsp;<wbr>(data source name). The DSN is used as database name in db.* modules. Then DSN must be defined in $HOME/.odbc.ini (for this user only) or in /etc/odbc.ini for (for all users) [watch out for the database name which appears twice and also for the PostgreSQL protocol version]. Omit blanks at the beginning of lines: </p>
+</dt><dd>
+&nbsp;<wbr>Create DSN&nbsp;<wbr>(data source name). The DSN is used as database name in db.* modules. Then DSN must be defined in $HOME/.odbc.ini (for this user only) or in /etc/odbc.ini for (for all users) [watch out for the database name which appears twice and also for the PostgreSQL protocol version]. Omit blanks at the beginning of lines: </dd>
 <p>&nbsp;<wbr>[grass6test] </p>
 <p>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>PostgreSQL </p>
 <p>&nbsp;<wbr>Driver&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>PostgreSQL </p>
@@ -53,23 +51,23 @@ description: "Communication between GRASS and ODBC database for attribute manage
 <p> psql -V </p>
 <dl>
 <dt>
-<dd> Now create a new database if not yet existing:<br />
- db.createdb driver=odbc database=grass6test </p>
+</dt><dd> Now create a new database if not yet existing:<br />
+ db.createdb driver=odbc database=grass6test </dd>
 <dt>
-<dd> Now store the table &#8216;mytable.dbf&#8217; (here: in current directory) into PostgreSQL through ODBC:<br />
+</dt><dd> Now store the table &#8216;mytable.dbf&#8217; (here: in current directory) into PostgreSQL through ODBC:<br />
  db.connect driver=odbc database=grass6test<br />
- db.copy from_driver=dbf from_database=./ from_table=mytable rs </p>
+ db.copy from_driver=dbf from_database=./ from_table=mytable rs </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>to_driver=odbc to_database=grass6test to_table=mytable </p>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>Next link map to attribute table&nbsp;<wbr>(now the ODBC table is used, not the dbf file):<br />
- v.db.connect map=mytable.shp table=mytable key=ID rs </p>
+ v.db.connect map=mytable.shp table=mytable key=ID rs </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>database=grass6test driver=odbc<br />
  v.db.connect -p </p>
 <dt>
-<dd> Finally a test: Here we should see the table columns (if the ODBC connection works):<br />
+</dt><dd> Finally a test: Here we should see the table columns (if the ODBC connection works):<br />
  db.tables -p<br />
- db.columns table=mytable </p>
+ db.columns table=mytable </dd>
 <p> Now the table name &#8216;mytable&#8217; should appear.</dl>
 <p> Doesn&#8217;t work? Check with &#8216;isql &#8216; if the ODBC-PostgreSQL connection is really established.</dl>
 <p> Note that you can also connect mySQL, Oracle etc. through ODBC to GRASS. You can also check the vector map itself concerning a current link to a table:<br />
@@ -80,3 +78,4 @@ description: "Communication between GRASS and ODBC database for attribute manage
 <p> <i>Last changed: $Date: 2007-07-18 16:10:27 +0200 (Wed, 18 Jul 2007) $</i><br />
  Help Index </p>
 <h2>Index</h2>
+</p></p>

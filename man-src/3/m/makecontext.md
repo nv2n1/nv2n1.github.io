@@ -22,8 +22,8 @@ description: "makecontext, swapcontext – manipulate user context"
 <p> When successful, <code>swapcontext</code>() does not return. (But we may return later, in case <i>oucp</i> is activated, in which case it looks like <code>swapcontext</code>() returns 0.) On error, <code>swapcontext</code>() returns -1 and sets <i>errno</i> appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient stack space left.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient stack space left.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>makecontext</code>() and <code>swapcontext</code>() are provided in glibc since version 2.1.</p>
 <h2>ATTRIBUTES</h2>

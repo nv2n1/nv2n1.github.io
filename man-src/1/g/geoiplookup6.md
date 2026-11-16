@@ -39,11 +39,11 @@ url: "/docs/linux/man/1-geoiplookup6/"
 
 <dl>
 <dt>-f
-<dd> Specify a custom path to a single GeoIP datafile.
-<dt>-d
-<dd> Specify a custom directory containing GeoIP datafile(s). By default geouplookup6 looks in /usr/share/GeoIP
-<dt>-v
-<dd> Lists the date and build number for the GeoIP datafile(s).</dl>
+</dt><dd> Specify a custom path to a single GeoIP datafile.
+</dd><dt>-d
+</dt><dd> Specify a custom directory containing GeoIP datafile(s). By default geouplookup6 looks in /usr/share/GeoIP
+</dd><dt>-v
+</dt><dd> Lists the date and build number for the GeoIP datafile(s).</dd></dl>
 
 <h2>AUTHOR</h2>
 

@@ -85,16 +85,16 @@ description: "nova_vncproxy_selinux – Security Enhanced Linux Policy for the n
 <p> <code>nova_vncproxy_exec_t</code> </p>
 <p> &#8211; Set files with the nova_vncproxy_exec_t type, if you want to transition an executable to the nova_vncproxy_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/nova-vncproxy, /usr/bin/nova-xvpvncproxy </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/nova-vncproxy, /usr/bin/nova-xvpvncproxy </dd>
 </dl>
 <p> <code>nova_vncproxy_tmp_t</code> </p>
 <p> &#8211; Set files with the nova_vncproxy_tmp_t type, if you want to store nova vncproxy temporary files in the /tmp directories. </p>
 <p> <code>nova_vncproxy_unit_file_t</code> </p>
 <p> &#8211; Set files with the nova_vncproxy_unit_file_t type, if you want to treat the files as nova vncproxy unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/openstack-nova-vncproxy.*, /usr/lib/systemd/system/openstack-nova-xvpvncproxy.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/openstack-nova-vncproxy.*, /usr/lib/systemd/system/openstack-nova-xvpvncproxy.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

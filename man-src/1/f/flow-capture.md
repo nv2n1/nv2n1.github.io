@@ -19,42 +19,42 @@ description: "flow-capture – Manage storage of flow file archives by expiring 
 <p> A SIGQUIT or SIGTERM signal will cause <code>flow-capture</code> to close the current file and exit.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-c</code><i> flow_clients</i></p>
-<dd> Enable <i>flow_clients</i> TCP clients. When libwrap is available the client must be in a permit list for the service flow-capture-client.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-e</code><i> expire_count</i></p>
-<dd> Retain the maximum number of files so that the total file count is less than <i>expire_count</i>. Defaults to 0 (do not expire).</p>
-<dt><code>-E</code><i> expire_size</i></p>
-<dd> Retain the maximum number of files so that the total storage is less than <i>expire_size</i>. The letters b,K,M,G can be used as multipliers, ie 16 Megabytes is 16M. Default to 0 (do not expire).</p>
-<dt><code>-f</code><i> filter_fname</i></p>
-<dd> Filter list filename. Defaults to <i>/etc/flow-tools/cfg/filter</i>.</p>
-<dt><code>-F</code><i> filter_definition</i></p>
-<dd> Select the active definition. Defaults to default.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-n</code><i> rotations</i></p>
-<dd> Configure the number of times flow-capture will create a new file per day. The default is 95, or every 15 minutes.</p>
-<dt><code>-N</code><i> nesting_level</i></p>
-<dd> Configure the nesting level for storing flow files. The default is 0. -3 YYYY/YYYY-MM/YYYY-MM-DD/flow-file -2 YYYY-MM/YYYY-MM-DD/flow-file -1 YYYY-MM-DD/flow-file 0 flow-file 1 YYYY/flow-file 2 YYYY/YYYY-MM/flow-file 3 YYYY/YYYY-MM/YYYY-MM-DD/flow-file</p>
-<dt><code>-p</code><i> pidfile</i></p>
-<dd> Configure the process ID file. Use &#8211; to disable pid file creation.</p>
-<dt><code>-R</code><i> rotate_program</i></p>
-<dd> Execute <i>rotate_program</i> with the first argument as the flow file name after rotating it.</p>
-<dt><code>-S</code><i> stat_interval</i></p>
-<dd> When configured <code>flow-capture</code> will log a timestamped message every <i>stat_interval</i> minutes indicating counters such as the number of flows received, packets processed, and lost flows.</p>
-<dt><code>-t</code><i> tag_fname</i></p>
-<dd> Load tags from <i>tag_name</i></p>
-<dt><code>-T</code><i> active_def</i><code>|</code><i>active_def,active_def&#8230;</i></p>
-<dd> Use <i>active_def</i> as the active tag definition(s).</p>
-<dt><code>-u</code></p>
-<dd> Preserve inherited umask. By default the umask will be set to 0022.</p>
-<dt><code>-V</code><i> pdu_version</i></p>
-<dd> Use <i>pdu_version</i> format output. </p>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-c</code><i> flow_clients</i></dt>
+<dd> Enable <i>flow_clients</i> TCP clients. When libwrap is available the client must be in a permit list for the service flow-capture-client.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-e</code><i> expire_count</i></dt>
+<dd> Retain the maximum number of files so that the total file count is less than <i>expire_count</i>. Defaults to 0 (do not expire).</dd>
+<dt><code>-E</code><i> expire_size</i></dt>
+<dd> Retain the maximum number of files so that the total storage is less than <i>expire_size</i>. The letters b,K,M,G can be used as multipliers, ie 16 Megabytes is 16M. Default to 0 (do not expire).</dd>
+<dt><code>-f</code><i> filter_fname</i></dt>
+<dd> Filter list filename. Defaults to <i>/etc/flow-tools/cfg/filter</i>.</dd>
+<dt><code>-F</code><i> filter_definition</i></dt>
+<dd> Select the active definition. Defaults to default.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-n</code><i> rotations</i></dt>
+<dd> Configure the number of times flow-capture will create a new file per day. The default is 95, or every 15 minutes.</dd>
+<dt><code>-N</code><i> nesting_level</i></dt>
+<dd> Configure the nesting level for storing flow files. The default is 0. -3 YYYY/YYYY-MM/YYYY-MM-DD/flow-file -2 YYYY-MM/YYYY-MM-DD/flow-file -1 YYYY-MM-DD/flow-file 0 flow-file 1 YYYY/flow-file 2 YYYY/YYYY-MM/flow-file 3 YYYY/YYYY-MM/YYYY-MM-DD/flow-file</dd>
+<dt><code>-p</code><i> pidfile</i></dt>
+<dd> Configure the process ID file. Use &#8211; to disable pid file creation.</dd>
+<dt><code>-R</code><i> rotate_program</i></dt>
+<dd> Execute <i>rotate_program</i> with the first argument as the flow file name after rotating it.</dd>
+<dt><code>-S</code><i> stat_interval</i></dt>
+<dd> When configured <code>flow-capture</code> will log a timestamped message every <i>stat_interval</i> minutes indicating counters such as the number of flows received, packets processed, and lost flows.</dd>
+<dt><code>-t</code><i> tag_fname</i></dt>
+<dd> Load tags from <i>tag_name</i></dd>
+<dt><code>-T</code><i> active_def</i><code>|</code><i>active_def,active_def&#8230;</i></dt>
+<dd> Use <i>active_def</i> as the active tag definition(s).</dd>
+<dt><code>-u</code></dt>
+<dd> Preserve inherited umask. By default the umask will be set to 0022.</dd>
+<dt><code>-V</code><i> pdu_version</i></dt>
+<dd> Use <i>pdu_version</i> format output. </dd>
 <pre>
     1    NetFlow version 1 (No sequence numbers, AS, or mask)
     5    NetFlow version 5
@@ -76,14 +76,14 @@ description: "flow-capture – Manage storage of flow file archives by expiring 
     8.14 NetFlow ToS Prefix Port Aggregation
     1005 Flow-Tools tagged version 5
 </pre>
-<dt><code>-w</code><i> workdir</i></p>
-<dd> Work in <i>workdir</i>.</p>
-<dt><code>-x</code><i> xlate_fname</i></p>
-<dd> Translation config file name. Defaults to <i>/etc/flow-tools/cfg/xlate.c fg</i></p>
-<dt><code>-X</code><i> xlate_definition</i></p>
-<dd> Translation definition. Defaults to default.</p>
-<dt><code>-z</code><i> z_level</i></p>
-<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dl>
+<dt><code>-w</code><i> workdir</i></dt>
+<dd> Work in <i>workdir</i>.</dd>
+<dt><code>-x</code><i> xlate_fname</i></dt>
+<dd> Translation config file name. Defaults to <i>/etc/flow-tools/cfg/xlate.c fg</i></dd>
+<dt><code>-X</code><i> xlate_definition</i></dt>
+<dd> Translation definition. Defaults to default.</dd>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Receive flows from the exporter at 10.0.0.1 port 9800. Maintain 5 Gigabytes of flow files in /flows/krc4. Mask the source and destination IP addresses contained in the flow exports with 255.255.248.0. </p>
 <p> <code>flow-capture -w /flows/krc4 -m 255.255.248.0 -E5G 0/10.0.0.1/9800</code> </p>

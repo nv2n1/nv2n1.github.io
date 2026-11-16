@@ -21,10 +21,10 @@ description: "pbmclean – flip isolated pixels in portable bitmap"
 <p> You can use <code>pbmclean </code> to clean up &quot;snow&quot; on bitmap images. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-black</code></p>
+<dt><code>-black</code></dt>
 <dd>
-<dt><code>-white</code></p>
-<dd> Flip pixels of the specified color. By default, if you specify neither <code>-black</code> nor <code>-white</code>, <code>pbmclean</code> flips both black and white pixels which do not have sufficient identical neighbors. If you specify <code>-black</code>, <code>pbmclean</code> leaves the white pixels alone and just erases isolated black pixels. Vice versa for <code>-white</code>. You may specify both <code>-black</code> and <code>-white</code> to get the same as the default behavior. </p>
+</dd><dt><code>-white</code></dt>
+<dd> Flip pixels of the specified color. By default, if you specify neither <code>-black</code> nor <code>-white</code>, <code>pbmclean</code> flips both black and white pixels which do not have sufficient identical neighbors. If you specify <code>-black</code>, <code>pbmclean</code> leaves the white pixels alone and just erases isolated black pixels. Vice versa for <code>-white</code>. You may specify both <code>-black</code> and <code>-white</code> to get the same as the default behavior. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>

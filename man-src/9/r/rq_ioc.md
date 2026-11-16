@@ -14,7 +14,7 @@ description: "rq_ioc – determine io_context for request allocation"
 <p><i>bio</i></p>
 <dl>
 <dd>
-<dd>request being allocated is for this bio (can be <code>NULL</code>)</dl>
+</dd><dd>request being allocated is for this bio (can be <code>NULL</code>)</dd></dl>
 <h2>Description</h2>
 <p>Determine io_context to use for request allocation for <i>bio</i>. May return <code>NULL</code> if <code>current-</code>&gt;io_context doesn&#8217;t exist.</p>
 <h2>Copyright</h2>

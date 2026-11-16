@@ -14,13 +14,13 @@ description: "gnet_stats_copy_app – copy application specific statistics into 
 <p><i>d</i></p>
 <dl>
 <dd>
-<dd>dumping handle</dl>
+</dd><dd>dumping handle</dd></dl>
 <p> <i>st</i></p>
 <dl>
-<dd>application specific statistics data</dl>
+<dd>application specific statistics data</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>length of data</dl>
+<dd>length of data</dd></dl>
 <h2>Description</h2>
 <p>Appends the application specific statistics to the top level TLV created by <code>gnet_stats_start_copy</code> and remembers the data for XSTATS if the dumping handle is in backward compatibility mode. </p>
 <p> Returns 0 on success or -1 with the statistic lock released if the room in the socket buffer was not sufficient.</p>

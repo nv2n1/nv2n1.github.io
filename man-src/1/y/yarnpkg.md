@@ -20,68 +20,66 @@ description: "yarnpkg – Fast, reliable and secure npm alternative"
 <p> Starting a new project </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 yarn init
 </pre>
-</dl>
+</dd></dl>
 <p> Adding a dependency </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 yarn add[package] yarn add[package] @[ version ] yarn add[package] @[ tag ]
 </code></pre>
-</dl>
+</dd></dl>
 <p> Updating a dependency </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 yarn upgrade[package] yarn upgrade[package] @[ version ] yarn upgrade[package] @[ tag ]
 </code></pre>
-</dl>
+</dd></dl>
 <p> Removing a dependency </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 yarn remove [package]
 </pre>
-</dl>
+</dd></dl>
 <p> Installing all the dependencies of project </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 yarn
 </pre>
-</dl>
+</dd></dl>
 <p> or </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 yarn install
 </pre>
-</dl>
+</dd></dl>
 <h2>COMMANDS</h2>
 <p> Yarn provides a rich set of command-line commands to help you with various aspects of your Yarn package, including installation, administration, publishing, etc. </p>
 <p> Some of the more popular commands are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <code>yarn add</code>: adds a package to use in your current package.</p>
-<dt>&bull;</p>
-<dd> <code>yarn init</code>: initializes the development of a package.</p>
-<dt>&bull;</p>
-<dd> <code>yarn install</code>: installs all the dependencies defined in a package.json file.</p>
-<dt>&bull;</p>
-<dd> <code>yarn publish</code>: publishes a package to a package manager.</p>
-<dt>&bull;</p>
-<dd> <code>yarn remove</code>: removes an unused package from your current package. </p>
+<dt>&bull;</dt>
+<dd> <code>yarn add</code>: adds a package to use in your current package.</dd>
+<dt>&bull;</dt>
+<dd> <code>yarn init</code>: initializes the development of a package.</dd>
+<dt>&bull;</dt>
+<dd> <code>yarn install</code>: installs all the dependencies defined in a package.json file.</dd>
+<dt>&bull;</dt>
+<dd> <code>yarn publish</code>: publishes a package to a package manager.</dd>
+<dt>&bull;</dt>
+<dd> <code>yarn remove</code>: removes an unused package from your current package. </dd>
 </dl>
 </dl>
 <h3>Default Command</h3>
@@ -91,21 +89,21 @@ yarn install
 <p> When using file Yarn will write/read a mutex file .yarn-single-instance in the current working directory by default. You can also specify an alternate or global filename. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 --mutex file
 --mutex file:/tmp/.yarn-mutex
 </pre>
-</dl>
+</dd></dl>
 <p> When using network Yarn will create a server at port 31997 by default. You can also specify an alternate port. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 --mutex network
 --mutex network:30330
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> The Yarn Contributors</p>
 <h2>COPYRIGHT</h2>

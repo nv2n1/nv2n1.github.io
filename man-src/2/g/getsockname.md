@@ -21,16 +21,16 @@ int getsockname(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> The argument <i>sockfd</i> is not a valid file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> The <i>addr</i> argument points to memory not in a valid part of the process address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>addrlen</i> is invalid (e.g., is negative).</p>
-<dt><code>ENOBUFS</code></p>
-<dd> Insufficient resources were available in the system to perform the operation.</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dl>
+<dt><code>EBADF</code></dt>
+<dd> The argument <i>sockfd</i> is not a valid file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The <i>addr</i> argument points to memory not in a valid part of the process address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>addrlen</i> is invalid (e.g., is negative).</dd>
+<dt><code>ENOBUFS</code></dt>
+<dd> Insufficient resources were available in the system to perform the operation.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD (<code>getsockname</code>() first appeared in 4.2BSD).</p>
 <h2>NOTES</h2>

@@ -11,21 +11,13 @@ std::prev - std::prev
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class BidirIt &gt;
-
 BidirIt prev(                                                     (since C++11)
-
 BidirIt it,                                                       (until C++17)
-
 typename std::iterator_traits&lt;BidirIt&gt;::difference_type n = 1 );
-
 template&lt; class BidirIt &gt;
-
 constexpr BidirIt prev(                                           (since C++17)
-
 BidirIt it,
-
 typename std::iterator_traits&lt;BidirIt&gt;::difference_type n = 1 );</code></pre> 
 Return the nth predecessor of iterator it. 
 
@@ -64,12 +56,9 @@ Although the expression --c.end() often compiles, it is not guaranteed to do so:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4};
     auto it = v.end();

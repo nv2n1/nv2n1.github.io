@@ -15,15 +15,15 @@ snd_pcm_lib_ioctl - a generic PCM ioctl callback
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the pcm substream instance</dl>
+<dl><dd></dd><dd>the pcm substream instance</dd></dl>
  
 
  <i>cmd</i>
-<dl><dd>ioctl command</dl>
+<dl><dd>ioctl command</dd></dl>
  
 
  <i>arg</i>
-<dl><dd>ioctl argument</dl>
+<dl><dd>ioctl argument</dd></dl>
 
 <h2>Description</h2>
 

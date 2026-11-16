@@ -20,85 +20,85 @@ description: "gmusicbrowser – Jukebox for large collections of audio files"
 <h2>OPTIONS</h2>
 <p> <code></p>
 <dl>
-<dt>-c</code></p>
-<dd> don&#8217;t check for updated/deleted songs on startup</p>
-<dt><code>-s</code></p>
-<dd> don&#8217;t scan folders for songs on startup</p>
-<dt><code>-demo</code></p>
-<dd> don&#8217;t check if current song has been updated/deleted</p>
-<dt><code>-ro</code></p>
-<dd> prevent modifying/renaming/deleting song files</p>
-<dt><code>-rotags</code></p>
-<dd> prevent modifying tags of music files</p>
-<dt><code>-play</code></p>
-<dd> start playing on startup</p>
-<dt><code>-gst</code></p>
-<dd> use gstreamer</p>
-<dt><code>-nogst</code></p>
-<dd> do not use gstreamer</p>
-<dt><code>-nodbus</code></p>
-<dd> do not use DBus</p>
-<dt><code>-server</code></p>
-<dd> send playing song to connected icecast client</p>
-<dt><code>-port N</code></p>
-<dd> listen for connection on port N in icecast server mode</p>
-<dt><code>-C FILE</code></p>
-<dd> use FILE as configuration file (instead of ~/.gmusicbroser/tags)</p>
-<dt><code>-F FIFO</code></p>
-<dd> use FIFO as named pipe to receive commans (instead of ~/.gmusicbroser/gmusicbrowser.fifo)</p>
-<dt><code>-nofifo</code></p>
-<dd> do not use/create named pipe $FIFOFile</p>
-<dt><code>-debug</code></p>
-<dd> print lots of useless informations</p>
-<dt><code>-layout NAME</code></p>
-<dd> use layout NAME for player window</p>
-<dt><code>-load FILE</code></p>
-<dd> Load FILE as a plugin</p>
-<dt><code>-use-gnome-session</code></p>
-<dd> Use gnome libraries to save tags/settings on session logout (needs the Gnome2 perl module).</p>
-<dt><code>-cmd CMD&#8230;</code></p>
-<dd> launch gmusicbrowser if not already running, and execute command CMD.</p>
-<dt><code>-remotecmd CMD&#8230;</code></p>
-<dd> execute command CMD in a running gmusicbrowser</p>
-<dt><code>-launch_or_cmd CMD&#8230;</code></p>
-<dd> launch gmusicbrowser if not already running OR execute command CMD in a running gmusicbrowser</p>
-<dt><code>-listcmd</code></p>
-<dd> list the available fifo commands and exit</p>
-<dt><code>-tagedit FOLDER_OR_FILE &#8230;</code></p>
-<dd> Load songs in FOLDER_OR_FILE and display a dialog to edit their tags. </p>
+<dt>-c</code></dt>
+<dd> don&#8217;t check for updated/deleted songs on startup</dd>
+<dt><code>-s</code></dt>
+<dd> don&#8217;t scan folders for songs on startup</dd>
+<dt><code>-demo</code></dt>
+<dd> don&#8217;t check if current song has been updated/deleted</dd>
+<dt><code>-ro</code></dt>
+<dd> prevent modifying/renaming/deleting song files</dd>
+<dt><code>-rotags</code></dt>
+<dd> prevent modifying tags of music files</dd>
+<dt><code>-play</code></dt>
+<dd> start playing on startup</dd>
+<dt><code>-gst</code></dt>
+<dd> use gstreamer</dd>
+<dt><code>-nogst</code></dt>
+<dd> do not use gstreamer</dd>
+<dt><code>-nodbus</code></dt>
+<dd> do not use DBus</dd>
+<dt><code>-server</code></dt>
+<dd> send playing song to connected icecast client</dd>
+<dt><code>-port N</code></dt>
+<dd> listen for connection on port N in icecast server mode</dd>
+<dt><code>-C FILE</code></dt>
+<dd> use FILE as configuration file (instead of ~/.gmusicbroser/tags)</dd>
+<dt><code>-F FIFO</code></dt>
+<dd> use FIFO as named pipe to receive commans (instead of ~/.gmusicbroser/gmusicbrowser.fifo)</dd>
+<dt><code>-nofifo</code></dt>
+<dd> do not use/create named pipe $FIFOFile</dd>
+<dt><code>-debug</code></dt>
+<dd> print lots of useless informations</dd>
+<dt><code>-layout NAME</code></dt>
+<dd> use layout NAME for player window</dd>
+<dt><code>-load FILE</code></dt>
+<dd> Load FILE as a plugin</dd>
+<dt><code>-use-gnome-session</code></dt>
+<dd> Use gnome libraries to save tags/settings on session logout (needs the Gnome2 perl module).</dd>
+<dt><code>-cmd CMD&#8230;</code></dt>
+<dd> launch gmusicbrowser if not already running, and execute command CMD.</dd>
+<dt><code>-remotecmd CMD&#8230;</code></dt>
+<dd> execute command CMD in a running gmusicbrowser</dd>
+<dt><code>-launch_or_cmd CMD&#8230;</code></dt>
+<dd> launch gmusicbrowser if not already running OR execute command CMD in a running gmusicbrowser</dd>
+<dt><code>-listcmd</code></dt>
+<dd> list the available fifo commands and exit</dd>
+<dt><code>-tagedit FOLDER_OR_FILE &#8230;</code></dt>
+<dd> Load songs in FOLDER_OR_FILE and display a dialog to edit their tags. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.gmusicbrowser/tags</i></p>
-<dd> contains songs tags and program options</p>
-<dt><i>/usr/share/gmusicbrowser/plugins/</i>, <i>~/.gmusicbrowser/plugins/</i></p>
-<dd> files with extention .pm in these folders are loaded as plugins on startup</p>
-<dt><i>/usr/share/gmusicbrowser/layouts</i>, <i>~/.gmusicbrowser/layouts</i></p>
-<dd> contains layouts definitions</p>
-<dt><i>~/.gmusicbrowser/gmusicbrowser.fifo</i></p>
-<dd> can be used to send commands to a running gmusicbrowser, eg : echo CMD &gt;~/.gmusicbrowser/gmusicbrowser.fifo where CMD is (run &quot;gmusicbrowser -listcmd&quot; for an up-to-date list of commands) :</p>
-<dt><code>NextSong</code></p>
-<dd> Skip current song</p>
-<dt><code>PrevSong</code></p>
-<dd> choose previously played song</p>
-<dt><code>PlayPause</code></p>
-<dd> toggle Play/Pause mode</p>
-<dt><code>Stop</code></p>
-<dd> stop playing</p>
-<dt><code>Rewind</code> SEC</p>
-<dd> rewind SEC seconds</p>
-<dt><code>Forward</code> SEC</p>
-<dd> forward SEC seconds</p>
-<dt><code>Browser</code></p>
-<dd> open browser window</p>
-<dt><code>ShowHide</code></p>
-<dd> hide/show gmusicbrowser windows</p>
-<dt><code>Quit</code></p>
-<dd> quit gmusicbrowser</p>
-<dt><code>Save</code></p>
-<dd> immediately save settings/song tags in ~/.gmusicbrowser/tags</p>
-<dt><code>ChangeDisplay</code> DISPLAY</p>
-<dd> migrate the program to display DISPLAY (example : &quot;:1&quot;) </p>
+<dt><i>~/.gmusicbrowser/tags</i></dt>
+<dd> contains songs tags and program options</dd>
+<dt><i>/usr/share/gmusicbrowser/plugins/</i>, <i>~/.gmusicbrowser/plugins/</i></dt>
+<dd> files with extention .pm in these folders are loaded as plugins on startup</dd>
+<dt><i>/usr/share/gmusicbrowser/layouts</i>, <i>~/.gmusicbrowser/layouts</i></dt>
+<dd> contains layouts definitions</dd>
+<dt><i>~/.gmusicbrowser/gmusicbrowser.fifo</i></dt>
+<dd> can be used to send commands to a running gmusicbrowser, eg : echo CMD &gt;~/.gmusicbrowser/gmusicbrowser.fifo where CMD is (run &quot;gmusicbrowser -listcmd&quot; for an up-to-date list of commands) :</dd>
+<dt><code>NextSong</code></dt>
+<dd> Skip current song</dd>
+<dt><code>PrevSong</code></dt>
+<dd> choose previously played song</dd>
+<dt><code>PlayPause</code></dt>
+<dd> toggle Play/Pause mode</dd>
+<dt><code>Stop</code></dt>
+<dd> stop playing</dd>
+<dt><code>Rewind</code> SEC</dt>
+<dd> rewind SEC seconds</dd>
+<dt><code>Forward</code> SEC</dt>
+<dd> forward SEC seconds</dd>
+<dt><code>Browser</code></dt>
+<dd> open browser window</dd>
+<dt><code>ShowHide</code></dt>
+<dd> hide/show gmusicbrowser windows</dd>
+<dt><code>Quit</code></dt>
+<dd> quit gmusicbrowser</dd>
+<dt><code>Save</code></dt>
+<dd> immediately save settings/song tags in ~/.gmusicbrowser/tags</dd>
+<dt><code>ChangeDisplay</code> DISPLAY</dt>
+<dd> migrate the program to display DISPLAY (example : &quot;:1&quot;) </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://squentin.free.fr/gmusicbrowser/gmusicbrowser.html,">http://squentin.free.fr/gmusicbrowser/gmusicbrowser.html,</a> </p>

@@ -30,6 +30,6 @@ description: "QuantLib::BrownianBridge – Builds Wiener process paths using Gau
 <p>generic times </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>the starting time of the path is assumed to be 0 and must not be included</dl>
+<dd>the starting time of the path is assumed to be 0 and must not be included</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

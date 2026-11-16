@@ -20,7 +20,6 @@ description: "std::chi_squared_distribution< _RealType >::param_type –"
 _RealType n() const
 {
     return _M_n
-
         Friends bool
         operator==(const param_type &amp;__p1, const param_type &amp;__p2)</code></pre>
 <h2>Detailed Description</h2>

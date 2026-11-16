@@ -59,9 +59,9 @@ description: "nmbd_selinux – Security Enhanced Linux Policy for the nmbd proce
 <p> Policy governs the access confined processes have to these ports. SELinux nmbd policy is very flexible allowing users to setup their nmbd processes in as secure a method as possible. </p>
 <p> The following port types are defined for nmbd: </p>
 <dl>
-<dt><code>nmbd_port_t</code></p>
+<dt><code>nmbd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 137,138</dl>
+</dd><dd>Default Defined Ports: udp 137,138</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type nmbd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_var_lib_t</code> </p>
@@ -106,8 +106,8 @@ description: "nmbd_selinux – Security Enhanced Linux Policy for the nmbd proce
 <p> <code>nmbd_var_run_t</code> </p>
 <p> &#8211; Set files with the nmbd_var_run_t type, if you want to store the nmbd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/nmbd(/.*)?, /var/run/samba/nmbd(/.*)?, /var/run/samba/nmbd.pid, /var/run/samba/messages.tdb, /var/run/samba/namelist.debug, /var/run/samba/unexpected.tdb </p>
+<dt>Paths:</dt>
+<dd>/var/run/nmbd(/.*)?, /var/run/samba/nmbd(/.*)?, /var/run/samba/nmbd.pid, /var/run/samba/messages.tdb, /var/run/samba/namelist.debug, /var/run/samba/unexpected.tdb </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

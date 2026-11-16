@@ -19,39 +19,39 @@ description: "pkcsicsf – configuration utility for the ICSF token"
 <p> The system admin can either allow the ldap calls to utilize exisiting ldap configs, such as ldap.conf or .ldaprc for bind and authentication information or set the bind and authentication information within opencryptoki by using this utility and its options. The information will then be placed in the <i>token_name.conf</i> file to be used in the ldap calls. When using simple authentication, the user will be prompted for the racf password when listing or adding a token. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code> <i>token name</i></p>
-<dd> add the specified ICSF token to opencryptoki.</p>
-<dt><code>-b</code> <i>BINDND</i></p>
-<dd> the distinguish name to bind when using simple authentication</p>
-<dt><code>-c</code> <i>client-cert-file</p>
-<dd> the client certificate file when using SASL authentication</p>
-<dt></i><code>-C</code> <i>CA-cert-file</i></p>
-<dd> the CA certificate file when using SASL authentication</p>
-<dt><code>-h</code></p>
-<dd> show usage information</p>
-<dt><code>-k</code> <i>privatekey</i></p>
-<dd> the client private key file when using SASL authentication</p>
-<dt><code>-m</code> <i>mechanism</i></p>
-<dd> the authentication mechanism to use when binding to the LDAP server (this should be either <code>simple</code> or <code>sasl</code>)</p>
-<dt><code>-l</code></p>
-<dd> list available ICSF tokens</p>
-<dt><code>-h</code></p>
-<dd> show usage information </p>
+<dt><code>-a</code> <i>token name</i></dt>
+<dd> add the specified ICSF token to opencryptoki.</dd>
+<dt><code>-b</code> <i>BINDND</i></dt>
+<dd> the distinguish name to bind when using simple authentication</dd>
+<dt><code>-c</code> <i>client-cert-file</dt>
+<dd> the client certificate file when using SASL authentication</dd>
+<dt></i><code>-C</code> <i>CA-cert-file</i></dt>
+<dd> the CA certificate file when using SASL authentication</dd>
+<dt><code>-h</code></dt>
+<dd> show usage information</dd>
+<dt><code>-k</code> <i>privatekey</i></dt>
+<dd> the client private key file when using SASL authentication</dd>
+<dt><code>-m</code> <i>mechanism</i></dt>
+<dd> the authentication mechanism to use when binding to the LDAP server (this should be either <code>simple</code> or <code>sasl</code>)</dd>
+<dt><code>-l</code></dt>
+<dd> list available ICSF tokens</dd>
+<dt><code>-h</code></dt>
+<dd> show usage information </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/opencryptoki/opencryptoki.conf</p>
-<dd> the opencryptoki config file containing token configuration information</p>
-<dt>/etc/opencryptoki/<i>token_name.conf</i></p>
-<dd> contains ICSF configuration information for the ICSF token </p>
+<dt>/etc/opencryptoki/opencryptoki.conf</dt>
+<dd> the opencryptoki config file containing token configuration information</dd>
+<dt>/etc/opencryptoki/<i>token_name.conf</i></dt>
+<dd> contains ICSF configuration information for the ICSF token </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7),</p>
+<dt><code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7),</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/8-pkcsslotd/">pkcsslotd</a></code>(8).</p>
+</dd><dt><code><a href="/docs/linux/man/8-pkcsslotd/">pkcsslotd</a></code>(8).</dt>
 <dd>
-<dt><code>pkcsconf</code>(8).</p>
+</dd><dt><code>pkcsconf</code>(8).</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

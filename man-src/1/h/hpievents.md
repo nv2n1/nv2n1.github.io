@@ -20,27 +20,27 @@ hpievents[-D&lt;value&gt;][-N host[:port]][-C&lt;cfgfile&gt;][-t BLOCK | SAHPI_T
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-t</code> <i>n|BLOCK</i>, <code>&#8211;timeout</code>=<i>n|BLOCK</i></p>
-<dd> Wait <i>n</i> seconds for event or infinite wait (<i></i><font SIZE="-1"><i>BLOCK</i></font><i></i>)</p>
-<dt><code>-d</code>, <code>&#8211;discover</code></p>
-<dd> Call <i>saHpiDiscover()</i> after <i>saHpiSubscribe()</i></p>
-<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></p>
-<dd> Select domain id <i>nn</i></p>
-<dt><code>-X</code>, <code>&#8211;debug</code></p>
-<dd> Display debug messages</p>
-<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></p>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</p>
-<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></p>
-<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dl>
+<dt><code>-t</code> <i>n|BLOCK</i>, <code>&#8211;timeout</code>=<i>n|BLOCK</i></dt>
+<dd> Wait <i>n</i> seconds for event or infinite wait (<i></i><font SIZE="-1"><i>BLOCK</i></font><i></i>)</dd>
+<dt><code>-d</code>, <code>&#8211;discover</code></dt>
+<dd> Call <i>saHpiDiscover()</i> after <i>saHpiSubscribe()</i></dd>
+<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
+<dd> Select domain id <i>nn</i></dd>
+<dt><code>-X</code>, <code>&#8211;debug</code></dt>
+<dd> Display debug messages</dd>
+<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
+<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
+<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>HPI APIs uniquely used in this application</h2>
 <dl>
 <dt>
-<dd> SaErrorT <font SIZE="-1">SAHPI_API</font> saHpiSubscribe (<br />
-&nbsp;<wbr><font SIZE="-1">SAHPI_IN</font>&nbsp;<wbr>SaHpiSessionIdT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SessionId ); </p>
+</dt><dd> SaErrorT <font SIZE="-1">SAHPI_API</font> saHpiSubscribe (<br />
+&nbsp;<wbr><font SIZE="-1">SAHPI_IN</font>&nbsp;<wbr>SaHpiSessionIdT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SessionId ); </dd>
 <p> SaErrorT <font SIZE="-1">SAHPI_API</font> saHpiUnsubscribe (<br />
 &nbsp;<wbr><font SIZE="-1">SAHPI_IN</font>&nbsp;<wbr>SaHpiSessionIdT&nbsp;<wbr>&nbsp;<wbr>SessionId ); </p>
 <p> SaErrorT <font SIZE="-1">SAHPI_API</font> saHpiEventGet (<br />
@@ -67,3 +67,4 @@ Peter D Phan(pdphan[at] users.sourceforge.net)
         Anton Pak(avpak[at] users.sourceforge.net)
 </code></pre>
 <h2>Index</h2>
+</p>

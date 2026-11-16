@@ -15,37 +15,37 @@ description: "postkick – kick a Postfix service"
 <p> The <code><a href="/docs/linux/man/1-postkick/">postkick</a></code>(1) command sends <i>request</i> to the specified <i>service</i> over a local transport channel. This command makes Postfix private IPC accessible for use in, for example, shell scripts. </p>
 <p> Options:</p>
 <dl>
-<dt><code>-c</code> <i>config_dir</i></p>
-<dd> Read the <code>main.cf</code> configuration file in the named directory instead of the default configuration directory.</p>
-<dt><code>-v</code></p>
-<dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dl>
+<dt><code>-c</code> <i>config_dir</i></dt>
+<dd> Read the <code>main.cf</code> configuration file in the named directory instead of the default configuration directory.</dd>
+<dt><code>-v</code></dt>
+<dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dd></dl>
 <p> Arguments:</p>
 <dl>
-<dt><i>class</i></p>
-<dd> Name of a class of local transport channel endpoints, either <code>public</code> (accessible by any local user) or <code>private</code> (administrative access only).</p>
-<dt><i>service</i></p>
-<dd> The name of a local transport endpoint within the named class.</p>
-<dt><i>request</i></p>
-<dd> A string. The list of valid requests is service-specific.</dl>
+<dt><i>class</i></dt>
+<dd> Name of a class of local transport channel endpoints, either <code>public</code> (accessible by any local user) or <code>private</code> (administrative access only).</dd>
+<dt><i>service</i></dt>
+<dd> The name of a local transport endpoint within the named class.</dd>
+<dt><i>request</i></dt>
+<dd> A string. The list of valid requests is service-specific.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Problems and transactions are logged to the standard error stream.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>MAIL_CONFIG</code></p>
-<dd> Directory with Postfix configuration files.</p>
-<dt><code>MAIL_VERBOSE</code></p>
-<dd> Enable verbose logging for debugging purposes.</dl>
+<dt><code>MAIL_CONFIG</code></dt>
+<dd> Directory with Postfix configuration files.</dd>
+<dt><code>MAIL_VERBOSE</code></dt>
+<dd> Enable verbose logging for debugging purposes.</dd></dl>
 <h2>CONFIGURATION PARAMETERS</h2>
 <p> The following <code>main.cf</code> parameters are especially relevant to this program. The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>application_event_drain_time (100s)</code></p>
-<dd> How long the <code><a href="/docs/linux/man/1-postkick/">postkick</a></code>(1) command waits for a request to enter the Postfix daemon process input buffer before giving up.</p>
-<dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides.</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The location of the Postfix top-level queue directory.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>application_event_drain_time (100s)</code></dt>
+<dd> How long the <code><a href="/docs/linux/man/1-postkick/">postkick</a></code>(1) command waits for a request to enter the Postfix daemon process input buffer before giving up.</dd>
+<dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The location of the Postfix top-level queue directory.</dd></dl>
 <h2>FILES</h2>
 <pre>
 /var/spool/postfix/private, private class endpoints

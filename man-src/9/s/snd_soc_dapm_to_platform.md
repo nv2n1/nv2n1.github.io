@@ -15,7 +15,7 @@ snd_soc_dapm_to_platform - Casts a DAPM context to the platform it is embedded i
 <h2>Arguments</h2>
 
 <i>dapm</i>
-<dl><dd><dd>The DAPM context to cast to the platform.</dl>
+<dl><dd></dd><dd>The DAPM context to cast to the platform.</dd></dl>
 
 <h2>Description</h2>
 

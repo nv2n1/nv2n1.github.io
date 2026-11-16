@@ -25,10 +25,10 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list handle to search for data<br />
- <i>data</i> The data pointer to find in the list list</dl>
+ <i>data</i> The data pointer to find in the list list</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The found member data pointer</dl>
+<dd>The found member data pointer</dd></dl>
 <p> A call to this function will search the list list from beginning to end for the first member whose data pointer is data. If it is found, data will be returned, otherwise NULL will be returned. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;
@@ -45,10 +45,10 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list handle to search for data<br />
- <i>data</i> The data pointer to find in the list list</dl>
+ <i>data</i> The data pointer to find in the list list</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The found members list node</dl>
+<dd>The found members list node</dd></dl>
 <p> A call to this function will search the list list from beginning to end for the first member whose data pointer is data. If it is found, the list node containing the specified member will be returned, otherwise NULL will be returned. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;
@@ -66,10 +66,10 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list to get member number n from<br />
- <i>n</i> The number of the element (0 being the first)</dl>
+ <i>n</i> The number of the element (0 being the first)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer stored in the specified element</dl>
+<dd>The data pointer stored in the specified element</dd></dl>
 <p> This function returns the data pointer of element number n, in the list list. The first element in the array is element number 0. If the element number n does not exist, NULL will be returned. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;
@@ -85,10 +85,10 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list to get member number n from<br />
- <i>n</i> The number of the element (0 being the first)</dl>
+ <i>n</i> The number of the element (0 being the first)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The list node stored in the numbered element</dl>
+<dd>The list node stored in the numbered element</dd></dl>
 <p> This function returns the list node of element number n, in the list list. The first element in the array is element number 0. If the element number n does not exist, NULL will be returned. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;

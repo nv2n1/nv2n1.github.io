@@ -21,36 +21,36 @@ description: "pqstat – List jobs in NetWare print queue"
 <p> <code>queue name</code></p>
 <dl>
 <dt>
-<dd> <code>queue name</code> is used to specify queue. You can not use wildcards in the name.</dl>
+</dt><dd> <code>queue name</code> is used to specify queue. You can not use wildcards in the name.</dd></dl>
 <p> <code>job count</code></p>
 <dl>
 <dt>
-<dd> <code>job count</code> is used to specify how much entries will be shown. Default is to show all entries.</dl>
+</dt><dd> <code>job count</code> is used to specify how much entries will be shown. Default is to show all entries.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> <code>server</code> is the name of the server you want to use.</dl>
+</dt><dd> <code>server</code> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user name</i></p>
 <dl>
 <dt>
-<dd> If the user name your NetWare administrator gave to you differs from your unix user-id, you should use <code>-U</code> to tell the server about your NetWare user name.</dl>
+</dt><dd> If the user name your NetWare administrator gave to you differs from your unix user-id, you should use <code>-U</code> to tell the server about your NetWare user name.</dd></dl>
 <p> <code>-P</code> <i>password</i></p>
 <dl>
 <dt>
-<dd> You may want to give the password required by the server on the command line. You should be careful about using passwords in scripts.</dl>
+</dt><dd> You may want to give the password required by the server on the command line. You should be careful about using passwords in scripts.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> <code>-n</code> should be given to mount shares which do not require a password to log in. </p>
+</dt><dd> <code>-n</code> should be given to mount shares which do not require a password to log in. </dd>
 <p> If neither <code>-n</code> nor <code>-P</code> are given, pqstat prompts for a password.</dl>
 <p> <code>-C</code></p>
 <dl>
 <dt>
-<dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dl>
+</dt><dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dd></dl>
 <p> <code>-B</code></p>
 <dl>
 <dt>
-<dd> By default, pqstat lists the Netware name of the print job owner. <code>-B</code> causes it to list the banner name instead.</dl>
+</dt><dd> By default, pqstat lists the Netware name of the print job owner. <code>-B</code> causes it to list the banner name instead.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-nwclient/">nwclient</a>(5), <a href="/docs/linux/man/1-nprint/">nprint</a>(1), <a href="/docs/linux/man/1-slist/">slist</a>(1), <a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8), <a href="/docs/linux/man/1-pqlist/">pqlist</a>(1), <a href="/docs/linux/man/1-pqrm/">pqrm</a>(1)</code> </p>
 <h2>CREDITS</h2>

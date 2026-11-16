@@ -22,6 +22,6 @@ description: "mysqueak – desktop frontend to Squeak"
 <p> <i>~/MySqueak</i></p>
 <dl>
 <dt>
-<dd> the user&#8217;s copies of a squeak.image, squeak.changes, and squeak.sources are kept here. </p>
+</dt><dd> the user&#8217;s copies of a squeak.image, squeak.changes, and squeak.sources are kept here. </dd>
 </dl>
 <h2>Index</h2>

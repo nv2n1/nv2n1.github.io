@@ -11,10 +11,8 @@ std::plus&lt;void&gt; - std::plus&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class plus&lt;void&gt;;</code></pre> 
 std::plus&lt;&gt; is a specialization of std::plus with parameter and return type deduced. 
 
@@ -58,10 +56,8 @@ The member type is_transparent indicates to the caller that this function object
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::string a = &quot;Hello &quot;;
     const char *b = &quot;world&quot;;

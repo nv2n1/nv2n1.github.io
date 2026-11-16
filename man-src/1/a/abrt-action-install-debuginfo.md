@@ -30,43 +30,43 @@ url: "/docs/linux/man/1-abrt-action-install-debuginfo/"
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -y
 <dl>
 <dt>
-<dd> Noninteractive, assume <i>Yes</i> to all questions</dl>
+</dt><dd> Noninteractive, assume <i>Yes</i> to all questions</dd></dl>
  
 
  --ids
 <dl>
 <dt>
-<dd> Path to file with list of build ids. Default: build_ids</dl>
+</dt><dd> Path to file with list of build ids. Default: build_ids</dd></dl>
  
 
  --tmpdir
 <dl>
 <dt>
-<dd> Path to tmp directory. Default: /tmp/abrt-tmp-debuginfo-RANDOM_SUFFIX</dl>
+</dt><dd> Path to tmp directory. Default: /tmp/abrt-tmp-debuginfo-RANDOM_SUFFIX</dd></dl>
  
 
  --cache
 <dl>
 <dt>
-<dd> Path to cache directory. Default: /var/cache/abrt-di</dl>
+</dt><dd> Path to cache directory. Default: /var/cache/abrt-di</dd></dl>
  
 
  --size_mb
 <dl>
 <dt>
-<dd> Default: 4096</dl>
+</dt><dd> Default: 4096</dd></dl>
  
 
  -e,--exact
 <dl>
 <dt>
-<dd> Download only specified files</dl>
+</dt><dd> Download only specified files</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -74,7 +74,7 @@ url: "/docs/linux/man/1-abrt-action-install-debuginfo/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

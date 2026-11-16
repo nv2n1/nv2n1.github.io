@@ -15,7 +15,7 @@ netdev_rx_handler_unregister - unregister receive handler
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to unregister a handler from</dl>
+<dl><dd></dd><dd>device to unregister a handler from</dd></dl>
 
 <h2>Description</h2>
 

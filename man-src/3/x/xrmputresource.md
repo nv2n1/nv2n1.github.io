@@ -10,28 +10,28 @@ description: "XrmPutResource, XrmQPutResource, XrmPutStringResource, XrmQPutStri
 <p>XrmPutResource, XrmQPutResource, XrmPutStringResource, XrmQPutStringResource, XrmPutLineResource &#8211; store database resources </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dt> #include &lt;X11/Xresource.h&gt;</p>
-<dd>void XrmPutResource(XrmDatabase *<i>database</i>, char *<i>specifier</i>, char *<i>type</i>, XrmValue *<i>value</i>);</p>
-<dd>void XrmQPutResource(XrmDatabase *<i>database</i>, XrmBindingList <i>bindings</i>, XrmQuarkList <i>quarks</i>, XrmRepresentation <i>type</i>, XrmValue *<i>value</i>);</p>
-<dd>void XrmPutStringResource(XrmDatabase *<i>database</i>, char *<i>specifier</i>, char *<i>value</i>);</p>
-<dd>void XrmQPutStringResource(XrmDatabase *<i>database</i>, XrmBindingList <i>bindings</i>, XrmQuarkList <i>quarks</i>, char *<i>value</i>);</p>
-<dd>void XrmPutLineResource(XrmDatabase *<i>database</i>, char *<i>line</i>);</dl>
+<dt> #include &lt;X11/Xresource.h&gt;</dt>
+<dd>void XrmPutResource(XrmDatabase *<i>database</i>, char *<i>specifier</i>, char *<i>type</i>, XrmValue *<i>value</i>);</dd>
+<dd>void XrmQPutResource(XrmDatabase *<i>database</i>, XrmBindingList <i>bindings</i>, XrmQuarkList <i>quarks</i>, XrmRepresentation <i>type</i>, XrmValue *<i>value</i>);</dd>
+<dd>void XrmPutStringResource(XrmDatabase *<i>database</i>, char *<i>specifier</i>, char *<i>value</i>);</dd>
+<dd>void XrmQPutStringResource(XrmDatabase *<i>database</i>, XrmBindingList <i>bindings</i>, XrmQuarkList <i>quarks</i>, char *<i>value</i>);</dd>
+<dd>void XrmPutLineResource(XrmDatabase *<i>database</i>, char *<i>line</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>bindings</i></p>
-<dd>Specifies a list of bindings.</p>
-<dt><i>database</i></p>
-<dd>Specifies the resource database.</p>
-<dt><i>line</i></p>
-<dd>Specifies the resource name and value pair as a single string.</p>
-<dt><i>quarks</i></p>
-<dd>Specifies the complete or partial name or the class list of the resource.</p>
-<dt><i>specifier</i></p>
-<dd>Specifies a complete or partial specification of the resource.</p>
-<dt><i>type</i></p>
-<dd>Specifies the type of the resource.</p>
-<dt><i>value</i></p>
-<dd>Specifies the value of the resource, which is specified as a string.</dl>
+<dt><i>bindings</i></dt>
+<dd>Specifies a list of bindings.</dd>
+<dt><i>database</i></dt>
+<dd>Specifies the resource database.</dd>
+<dt><i>line</i></dt>
+<dd>Specifies the resource name and value pair as a single string.</dd>
+<dt><i>quarks</i></dt>
+<dd>Specifies the complete or partial name or the class list of the resource.</dd>
+<dt><i>specifier</i></dt>
+<dd>Specifies a complete or partial specification of the resource.</dd>
+<dt><i>type</i></dt>
+<dd>Specifies the type of the resource.</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the value of the resource, which is specified as a string.</dd></dl>
 <h2>Description</h2>
 <p>If database contains NULL, <code>XrmPutResource</code> creates a new database and returns a pointer to it. <code>XrmPutResource</code> is a convenience function that calls <code>XrmStringToBindingQuarkList</code> followed by: </p>
 <p> XrmQPutResource(database, bindings, quarks, XrmStringToQuark(type), value) </p>

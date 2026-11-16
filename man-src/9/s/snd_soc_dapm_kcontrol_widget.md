@@ -15,7 +15,7 @@ snd_soc_dapm_kcontrol_widget - Returns the widget associated to a kcontrol
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>The kcontrol</dl>
+<dl><dd></dd><dd>The kcontrol</dd></dl>
 
 <h2>Copyright</h2>
 

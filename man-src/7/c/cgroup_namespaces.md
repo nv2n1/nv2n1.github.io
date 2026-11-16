@@ -34,21 +34,21 @@ description: "cgroup_namespaces – overview of Linux cgroup namespaces"
 <p>Use of cgroup namespaces requires a kernel that is configured with the <code>CONFIG_CGROUPS</code> option. </p>
 <p> The virtualization provided by cgroup namespaces serves a number of purposes:</p>
 <dl>
-<dt>*</p>
-<dd>It prevents information leaks whereby cgroup directory paths outside of a container would otherwise be visible to processes in the container. Such leakages could, for example, reveal information about the container framework to containerized applications.</p>
-<dt>*</p>
-<dd>It eases tasks such as container migration. The virtualization provided by cgroup namespaces allows containers to be isolated from knowledge of the pathnames of ancestor cgroups. Without such isolation, the full cgroup pathnames (displayed in <i>/proc/self/cgroups</i>) would need to be replicated on the target system when migrating a container; those pathnames would also need to be unique, so that they don&#8217;t conflict with other pathnames on the target system.</p>
-<dt>*</p>
-<dd>It allows better confinement of containerized processes, because it is possible to mount the container&#8217;s cgroup filesystems such that the container processes can&#8217;t gain access to ancestor cgroup directories. Consider, for example, the following scenario:</p>
+<dt>*</dt>
+<dd>It prevents information leaks whereby cgroup directory paths outside of a container would otherwise be visible to processes in the container. Such leakages could, for example, reveal information about the container framework to containerized applications.</dd>
+<dt>*</dt>
+<dd>It eases tasks such as container migration. The virtualization provided by cgroup namespaces allows containers to be isolated from knowledge of the pathnames of ancestor cgroups. Without such isolation, the full cgroup pathnames (displayed in <i>/proc/self/cgroups</i>) would need to be replicated on the target system when migrating a container; those pathnames would also need to be unique, so that they don&#8217;t conflict with other pathnames on the target system.</dd>
+<dt>*</dt>
+<dd>It allows better confinement of containerized processes, because it is possible to mount the container&#8217;s cgroup filesystems such that the container processes can&#8217;t gain access to ancestor cgroup directories. Consider, for example, the following scenario:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>We have a cgroup directory, <i>/cg/1</i>, that is owned by user ID 9000.</p>
-<dt>&bull;</p>
-<dd>We have a process, <i>X</i>, also owned by user ID 9000, that is namespaced under the cgroup <i>/cg/1/2</i> (i.e., <i>X</i> was placed in a new cgroup namespace via <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) or <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2) with the <code>CLONE_NEWCGROUP</code> flag).</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>We have a cgroup directory, <i>/cg/1</i>, that is owned by user ID 9000.</dd>
+<dt>&bull;</dt>
+<dd>We have a process, <i>X</i>, also owned by user ID 9000, that is namespaced under the cgroup <i>/cg/1/2</i> (i.e., <i>X</i> was placed in a new cgroup namespace via <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) or <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2) with the <code>CLONE_NEWCGROUP</code> flag).</dd></dl>
 </dl>
-<dd>In the absence of cgroup namespacing, because the cgroup directory <i>/cg/1</i> is owned (and writable) by UID 9000 and process <i>X</i> is also owned by user ID 9000, process <i>X</i> would be able to modify the contents of cgroups files (i.e., change cgroup settings) not only in <i>/cg/1/2</i> but also in the ancestor cgroup directory <i>/cg/1</i>. Namespacing process <i>X</i> under the cgroup directory <i>/cg/1/2</i>, in combination with suitable mount operations for the cgroup filesystem (as shown above), prevents it modifying files in <i>/cg/1</i>, since it cannot even see the contents of that directory (or of further removed cgroup ancestor directories). Combined with correct enforcement of hierarchical limits, this prevents process <i>X</i> from escaping the limits imposed by ancestor cgroups.</dl>
+<dd>In the absence of cgroup namespacing, because the cgroup directory <i>/cg/1</i> is owned (and writable) by UID 9000 and process <i>X</i> is also owned by user ID 9000, process <i>X</i> would be able to modify the contents of cgroups files (i.e., change cgroup settings) not only in <i>/cg/1/2</i> but also in the ancestor cgroup directory <i>/cg/1</i>. Namespacing process <i>X</i> under the cgroup directory <i>/cg/1/2</i>, in combination with suitable mount operations for the cgroup filesystem (as shown above), prevents it modifying files in <i>/cg/1</i>, since it cannot even see the contents of that directory (or of further removed cgroup ancestor directories). Combined with correct enforcement of hierarchical limits, this prevents process <i>X</i> from escaping the limits imposed by ancestor cgroups.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-unshare/">unshare</a></code>(1), <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2), <code><a href="/docs/linux/man/2-setns/">setns</a></code>(2), <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/7-cgroups/">cgroups</a></code>(7), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7), <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7), <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7)</p>
 <h2>Colophon</h2>

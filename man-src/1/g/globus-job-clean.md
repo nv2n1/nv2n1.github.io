@@ -19,37 +19,37 @@ description: "globus-job-clean – Cancel and clean up a GRAM batch job"
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display a help message to standard error and exit.</dl>
+</dt><dd> Display a help message to standard error and exit.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the <code>globus-job-clean</code> program to standard output.</dl>
+</dt><dd> Display the software version of the <code>globus-job-clean</code> program to standard output.</dd></dl>
 <p> <code>-versions</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the <code>globus-job-clean</code> program including DiRT information to standard output.</dl>
+</dt><dd> Display the software version of the <code>globus-job-clean</code> program including DiRT information to standard output.</dd></dl>
 <p> <code>-resource </code><i>RESOURCE</i><code>, -resource </code><i>RESOURCE</i></p>
 <dl>
 <dt>
-<dd> Submit the clean-up job to the resource named by <i>RESOURCE</i> instead of the default GRAM service on the same host as the job contact.</dl>
+</dt><dd> Submit the clean-up job to the resource named by <i>RESOURCE</i> instead of the default GRAM service on the same host as the job contact.</dd></dl>
 <p> <code>-force, -f</code></p>
 <dl>
 <dt>
-<dd> Do not prompt to confirm job cancel and clean-up.</dl>
+</dt><dd> Do not prompt to confirm job cancel and clean-up.</dd></dl>
 <p> <code>-quiet, -q</code></p>
 <dl>
 <dt>
-<dd> Do not print diagnostics for successful clean-up. Implies <i>-f</i>.</dl>
+</dt><dd> Do not print diagnostics for successful clean-up. Implies <i>-f</i>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following variables affect the execution of <code>globus-job-clean</code>. </p>
 <p> <code>X509_USER_PROXY</code></p>
 <dl>
 <dt>
-<dd> Path to proxy credential.</dl>
+</dt><dd> Path to proxy credential.</dd></dl>
 <p> <code>X509_CERT_DIR</code></p>
 <dl>
 <dt>
-<dd> Path to trusted certificate directory.</dl>
+</dt><dd> Path to trusted certificate directory.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
 <h2>Index</h2>

@@ -14,20 +14,20 @@ description: "nand_correct_data – [NAND Interface] Detect and correct bit erro
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD block structure</dl>
+</dd><dd>MTD block structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>raw data read from the chip</dl>
+<dd>raw data read from the chip</dd></dl>
 <p> <i>read_ecc</i></p>
 <dl>
-<dd>ECC from the chip</dl>
+<dd>ECC from the chip</dd></dl>
 <p> <i>calc_ecc</i></p>
 <dl>
-<dd>the ECC calculated from raw data</dl>
+<dd>the ECC calculated from raw data</dd></dl>
 <h2>Description</h2>
 <p>Detect and correct a 1 bit error for 256/512 byte block</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

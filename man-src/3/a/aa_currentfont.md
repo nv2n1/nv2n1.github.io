@@ -14,8 +14,8 @@ description: "aa_currentfont – returns specification of the fonts used by AA-l
 <p> const struct aa_font *aa_currentfont(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *a</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *a</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns specification of the fonts used by AA-lib rendering routines.</p>
 <h2>SEE ALSO</h2>

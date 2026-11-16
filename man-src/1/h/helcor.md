@@ -21,36 +21,36 @@ description: "helcor – Heliocentric correction of CCD output data file(s)"
 <p> The alternate way, how to process a large set of files, is the batch mode. In this mode, the list of input files is read from a given file or from the standard input. The directory file, for example named <i>dirfile</i>, must have the text format and the names of the input files are written on the separate lines. If the files are placed not in the current working directory, you have to specify the proper path in full or shortened form. </p>
 <p> The <i>mask</i> parameters allows to set the naming of output files. The mask consists of letters, numbers and other characters allowed in the file name by the operating system. The special meaning has the question mark or the sequence of it. They will be replaced by the ordinal number of the output file, the number is always indented by leading zeros to the same number of decimal places as the number of the question marks. For example, when the mask <i>hcor????.fts</i> is given, the output files named <i>hcor0001.fts, hcor0002.fts, hcor0003.fts</i> will be generated. </p>
 <dl>
-<dt><code>@</code><i>dirfile</i></p>
-<dd> The program will read the list of source files from specified file.</p>
-<dt><code>@</code></p>
-<dd> The program will read the list of source files from stdin.</p>
-<dt><code>mask=</code><i>mask</i>, <code>-o</code><i>mark</i></p>
-<dd> Mask of the output file(s). Default is <i>hcor????.dat</i>.</p>
-<dt><code>-c</code><i>x</i></p>
-<dd> Initial counter value. Default is 1.</p>
-<dt><code>ra=</code><i>hhmmss</i></p>
-<dd> Object&#8217;s right ascension.</p>
-<dt><code>dec=</code><i>+dddmmss</i></p>
-<dd> Object&#8217;s declination.</p>
-<dt><code>-r</code></p>
-<dd> Reverse mode (heliocentric to geocentric jd).</p>
-<dt><code>&#8211;help</code></p>
-<dd> Prints short help.</p>
-<dt><code>&#8211;license</code></p>
-<dd> Prints the license.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the program name and its version.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Quiet mode &#8212; inhibits the screen printouts.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Debug mode &#8212; extends the screen printouts. </p>
+<dt><code>@</code><i>dirfile</i></dt>
+<dd> The program will read the list of source files from specified file.</dd>
+<dt><code>@</code></dt>
+<dd> The program will read the list of source files from stdin.</dd>
+<dt><code>mask=</code><i>mask</i>, <code>-o</code><i>mark</i></dt>
+<dd> Mask of the output file(s). Default is <i>hcor????.dat</i>.</dd>
+<dt><code>-c</code><i>x</i></dt>
+<dd> Initial counter value. Default is 1.</dd>
+<dt><code>ra=</code><i>hhmmss</i></dt>
+<dd> Object&#8217;s right ascension.</dd>
+<dt><code>dec=</code><i>+dddmmss</i></dt>
+<dd> Object&#8217;s declination.</dd>
+<dt><code>-r</code></dt>
+<dd> Reverse mode (heliocentric to geocentric jd).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints short help.</dd>
+<dt><code>&#8211;license</code></dt>
+<dd> Prints the license.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the program name and its version.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Quiet mode &#8212; inhibits the screen printouts.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Debug mode &#8212; extends the screen printouts. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> The program converts geocentric julian dates in data.dat file to heliocentric dates and the resulting table stores in helioc.dat file. Object&#8217;s coordinates are R.A. = 22h 00m, DEC. = +58d 10m.</p>
 <dl>
 <dt>
-<dd> <code>helcor mask=helioc.dat ra=2200 dec=5810 data.dat</code> </p>
+</dt><dd> <code>helcor mask=helioc.dat ra=2200 dec=5810 data.dat</code> </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> helcor returns a zero exist status if it succeeds to convert all specified file. Otherwise, it will stop immediately when the error occurs and returns nonzero code. </p>

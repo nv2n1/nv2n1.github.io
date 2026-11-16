@@ -10,98 +10,32 @@ description: "QuantLib::HaganPricer – CMS-coupon pricer."
 <p>QuantLib::HaganPricer &#8211; CMS-coupon pricer. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Real swapletPrice () const =0
-
-
-
 virtual Rate swapletRate () const
-
-
-
 virtual Real capletPrice (Rate effectiveCap) const
-
-
-
 virtual Rate capletRate (Rate effectiveCap) const
-
-
-
 virtual Real floorletPrice (Rate effectiveFloor) const
-
-
-
 virtual Rate floorletRate (Rate effectiveFloor) const
-
-
-
 Real meanReversion () const
-
-
-
 void setMeanReversion (const Handle&lt; Quote &gt; &amp;meanReversion)
-
-
-
 Protected Member Functions
 HaganPricer (const Handle&lt; SwaptionVolatilityStructure &gt; &amp;swaptionVol, GFunctionFactory::YieldCurveModel modelOfYieldCurve, const Handle&lt; Quote &gt; &amp;meanReversion)
-
-
-
 void initialize (const FloatingRateCoupon &amp;coupon)
-
-
-
 virtual Real optionletPrice (Option::Type optionType, Real strike) const =0
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::CmsCouponPricer</code>. Inherited by <code>AnalyticHaganPricer</code>, and <code>NumericHaganPricer</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>virtual Real swapletPrice () const =0
-
-
-
 virtual Rate swapletRate () const
-
-
-
 virtual Real capletPrice (Rate effectiveCap) const
-
-
-
 virtual Rate capletRate (Rate effectiveCap) const
-
-
-
 virtual Real floorletPrice (Rate effectiveFloor) const
-
-
-
 virtual Rate floorletRate (Rate effectiveFloor) const
-
-
-
 Real meanReversion () const
-
-
-
 void setMeanReversion (const Handle&lt; Quote &gt; &amp;meanReversion)
-
-
-
 Protected Member Functions
 HaganPricer (const Handle&lt; SwaptionVolatilityStructure &gt; &amp;swaptionVol, GFunctionFactory::YieldCurveModel modelOfYieldCurve, const Handle&lt; Quote &gt; &amp;meanReversion)
-
-
-
 void initialize (const FloatingRateCoupon &amp;coupon)
-
-
-
 virtual Real optionletPrice (Option::Type optionType, Real strike) const =0
-
-
-
 Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; <code>YieldTermStructure</code> &gt; <code>rateCurve_</code> </p>
 <p> GFunctionFactory::YieldCurveModel <code>modelOfYieldCurve_</code> </p>

@@ -16,10 +16,10 @@ description: "dvitomp – convert a TeX DVI file to a MetaPost MPXFILE"
 <p> <code>dvitomp</code> translates the given <i>dvifile</i> to a MetaPost MPXFILE. The default <i>mpxfile</i> is the basename of <i>dvifile</i> extended with <code>.mpx</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> write usage summary and exit.</p>
-<dt><code>-version</code></p>
-<dd> output version information and exit.</dl>
+<dt><code>-help</code></dt>
+<dd> write usage summary and exit.</dd>
+<dt><code>-version</code></dt>
+<dd> output version information and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> Email bug reports to metapost [at] tug.org. </p>
 <h2>Index</h2>

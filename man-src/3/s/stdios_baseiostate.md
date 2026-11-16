@@ -11,13 +11,9 @@ std::ios_base::iostate - std::ios_base::iostate
 <h2>Synopsis</h2>
 
 <pre><code>typedef /*implementation defined*/ iostate;
-
 static constexpr iostate goodbit = 0;
-
 static constexpr iostate badbit = /*implementation defined*/
-
 static constexpr iostate failbit = /*implementation defined*/
-
 static constexpr iostate eofbit = /*implementation defined*/</code></pre> 
 Specifies stream state flags. It is a BitmaskType, the following constants are defined: 
 Constant Explanation 

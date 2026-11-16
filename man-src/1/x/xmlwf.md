@@ -17,48 +17,48 @@ description: "xmlwf – Determines if an XML document is well-formed"
 <h2>WELL-FORMED DOCUMENTS</h2>
 <p> A well-formed document must adhere to the following rules:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The file begins with an XML declaration. For instance, &lt;?xml version=&quot;1.0&quot; standalone=&quot;yes&quot;?&gt;. <code>NOTE:</code> <code>xmlwf</code> does not currently check for a valid XML declaration.</p>
-<dt>&bull;</p>
-<dd> Every start tag is either empty (&lt;tag/&gt;) or has a corresponding end tag.</p>
-<dt>&bull;</p>
-<dd> There is exactly one root element. This element must contain all other elements in the document. Only comments, white space, and processing instructions may come after the close of the root element.</p>
-<dt>&bull;</p>
-<dd> All elements nest properly.</p>
-<dt>&bull;</p>
-<dd> All attribute values are enclosed in quotes (either single or double).</dl>
+<dt>&bull;</dt>
+<dd> The file begins with an XML declaration. For instance, &lt;?xml version=&quot;1.0&quot; standalone=&quot;yes&quot;?&gt;. <code>NOTE:</code> <code>xmlwf</code> does not currently check for a valid XML declaration.</dd>
+<dt>&bull;</dt>
+<dd> Every start tag is either empty (&lt;tag/&gt;) or has a corresponding end tag.</dd>
+<dt>&bull;</dt>
+<dd> There is exactly one root element. This element must contain all other elements in the document. Only comments, white space, and processing instructions may come after the close of the root element.</dd>
+<dt>&bull;</dt>
+<dd> All elements nest properly.</dd>
+<dt>&bull;</dt>
+<dd> All attribute values are enclosed in quotes (either single or double).</dd></dl>
 <p> If the document has a DTD, and it strictly complies with that DTD, then the document is also considered <code>valid</code>. <code>xmlwf</code> is a non-validating parser &#8212; it does not check the DTD. However, it does support external entities (see the <code>-x</code> option).</p>
 <h2>OPTIONS</h2>
 <p> When an option includes an argument, you may specify the argument either separately (&quot;<code>-d</code> output&quot;) or concatenated with the option (&quot;<code>-d</code>output&quot;). <code>xmlwf</code> supports both.</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> If the input file is well-formed and <code>xmlwf</code> doesn&#8217;t encounter any errors, the input file is simply copied to the output directory unchanged. This implies no namespaces (turns off <code>-n</code>) and requires <code>-d</code> to specify an output file.</p>
-<dt><code>-d output-dir</code></p>
-<dd> Specifies a directory to contain transformed representations of the input files. By default, <code>-d</code> outputs a canonical representation (described below). You can select different output formats using <code>-c</code> and <code>-m</code>. </p>
+<dt><code>-c</code></dt>
+<dd> If the input file is well-formed and <code>xmlwf</code> doesn&#8217;t encounter any errors, the input file is simply copied to the output directory unchanged. This implies no namespaces (turns off <code>-n</code>) and requires <code>-d</code> to specify an output file.</dd>
+<dt><code>-d output-dir</code></dt>
+<dd> Specifies a directory to contain transformed representations of the input files. By default, <code>-d</code> outputs a canonical representation (described below). You can select different output formats using <code>-c</code> and <code>-m</code>. </dd>
 <p> The output filenames will be exactly the same as the input filenames or &quot;STDIN&quot; if the input is coming from standard input. Therefore, you must be careful that the output file does not go into the same directory as the input file. Otherwise, <code>xmlwf</code> will delete the input file before it generates the output file (just like running cat &lt; file &gt; file in most shells). </p>
 <p> Two structurally equivalent XML documents have a byte-for-byte identical canonical XML representation. Note that ignorable white space is considered significant and is treated equivalently to data. More on canonical XML can be found at <a rel="nofollow" href="http://www.jclark.com/xml/canonxml.html">http://www.jclark.com/xml/canonxml.html</a> .</p>
-<dt><code>-e encoding</code></p>
-<dd> Specifies the character encoding for the document, overriding any document encoding declaration. <code>xmlwf</code> supports four built-in encodings: US-ASCII, UTF-8, UTF-16, and ISO-8859-1. Also see the <code>-w</code> option.</p>
-<dt><code>-m</code></p>
-<dd> Outputs some strange sort of XML file that completely describes the input file, including character positions. Requires <code>-d</code> to specify an output file.</p>
-<dt><code>-n</code></p>
-<dd> Turns on namespace processing. (describe namespaces) <code>-c</code> disables namespaces.</p>
-<dt><code>-p</code></p>
-<dd> Tells xmlwf to process external DTDs and parameter entities. </p>
+<dt><code>-e encoding</code></dt>
+<dd> Specifies the character encoding for the document, overriding any document encoding declaration. <code>xmlwf</code> supports four built-in encodings: US-ASCII, UTF-8, UTF-16, and ISO-8859-1. Also see the <code>-w</code> option.</dd>
+<dt><code>-m</code></dt>
+<dd> Outputs some strange sort of XML file that completely describes the input file, including character positions. Requires <code>-d</code> to specify an output file.</dd>
+<dt><code>-n</code></dt>
+<dd> Turns on namespace processing. (describe namespaces) <code>-c</code> disables namespaces.</dd>
+<dt><code>-p</code></dt>
+<dd> Tells xmlwf to process external DTDs and parameter entities. </dd>
 <p> Normally <code>xmlwf</code> never parses parameter entities. <code>-p</code> tells it to always parse them. <code>-p</code> implies <code>-x</code>.</p>
-<dt><code>-r</code></p>
-<dd> Normally <code>xmlwf</code> memory-maps the XML file before parsing; this can result in faster parsing on many platforms. <code>-r</code> turns off memory-mapping and uses normal file IO calls instead. Of course, memory-mapping is automatically turned off when reading from standard input. </p>
+<dt><code>-r</code></dt>
+<dd> Normally <code>xmlwf</code> memory-maps the XML file before parsing; this can result in faster parsing on many platforms. <code>-r</code> turns off memory-mapping and uses normal file IO calls instead. Of course, memory-mapping is automatically turned off when reading from standard input. </dd>
 <p> Use of memory-mapping can cause some platforms to report substantially higher memory usage for <code>xmlwf</code>, but this appears to be a matter of the operating system reporting memory in a strange way; there is not a leak in <code>xmlwf</code>.</p>
-<dt><code>-s</code></p>
-<dd> Prints an error if the document is not standalone. A document is standalone if it has no external subset and no references to parameter entities.</p>
-<dt><code>-t</code></p>
-<dd> Turns on timings. This tells Expat to parse the entire file, but not perform any processing. This gives a fairly accurate idea of the raw speed of Expat itself without client overhead. <code>-t</code> turns off most of the output options (<code>-d</code>, <code>-m</code>, <code>-c</code>, &#8230;).</p>
-<dt><code>-v</code></p>
-<dd> Prints the version of the Expat library being used, including some information on the compile-time configuration of the library, and then exits.</p>
-<dt><code>-w</code></p>
-<dd> Enables support for Windows code pages. Normally, <code>xmlwf</code> will throw an error if it runs across an encoding that it is not equipped to handle itself. With <code>-w</code>, xmlwf will try to use a Windows code page. See also <code>-e</code>.</p>
-<dt><code>-x</code></p>
-<dd> Turns on parsing external entities. </p>
+<dt><code>-s</code></dt>
+<dd> Prints an error if the document is not standalone. A document is standalone if it has no external subset and no references to parameter entities.</dd>
+<dt><code>-t</code></dt>
+<dd> Turns on timings. This tells Expat to parse the entire file, but not perform any processing. This gives a fairly accurate idea of the raw speed of Expat itself without client overhead. <code>-t</code> turns off most of the output options (<code>-d</code>, <code>-m</code>, <code>-c</code>, &#8230;).</dd>
+<dt><code>-v</code></dt>
+<dd> Prints the version of the Expat library being used, including some information on the compile-time configuration of the library, and then exits.</dd>
+<dt><code>-w</code></dt>
+<dd> Enables support for Windows code pages. Normally, <code>xmlwf</code> will throw an error if it runs across an encoding that it is not equipped to handle itself. With <code>-w</code>, xmlwf will try to use a Windows code page. See also <code>-e</code>.</dd>
+<dt><code>-x</code></dt>
+<dd> Turns on parsing external entities. </dd>
 <p> Non-validating parsers are not required to resolve external entities, or even expand entities at all. Expat always expands internal entities (?), but external entity parsing must be enabled explicitly. </p>
 <p> External entities are simply entities that obtain their data from outside the XML file currently being parsed. </p>
 <p> This is an example of an internal entity: </p>
@@ -70,8 +70,8 @@ description: "xmlwf – Determines if an XML document is well-formed"
 &lt;!ENTITY header SYSTEM &quot;header-&amp;vers;.xml&quot;&gt;  (parsed)
 &lt;!ENTITY logo SYSTEM &quot;logo.png&quot; PNG&gt;         (unparsed)
 </pre>
-<dt><code>&#8212;</code></p>
-<dd> (Two hyphens.) Terminates the list of options. This is only needed if a filename starts with a hyphen. For example: </p>
+<dt><code>&#8212;</code></dt>
+<dd> (Two hyphens.) Terminates the list of options. This is only needed if a filename starts with a hyphen. For example: </dd>
 <pre>
 xmlwf -- -myfile.xml
 </pre>
@@ -101,3 +101,4 @@ The W3 XML specification:   <a rel="nofollow" href="http://www.w3.org/TR/REC-xml
 <h2>AUTHOR</h2>
 <p> This manual page was written by Scott Bronson &lt;bronson [at] rinspin.com&gt; for the Debian GNU/Linux system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1. </p>
 <h2>Index</h2>
+</p>

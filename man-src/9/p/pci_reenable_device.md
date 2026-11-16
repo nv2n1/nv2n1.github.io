@@ -15,7 +15,7 @@ pci_reenable_device - Resume abandoned device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to be resumed</dl>
+<dl><dd></dd><dd>PCI device to be resumed</dd></dl>
 
 <h2>Description</h2>
 

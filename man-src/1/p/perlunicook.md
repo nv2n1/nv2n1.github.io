@@ -79,3 +79,4 @@ my $motto = &#8221;  &#8220;;<br />
  chr(0x1D45B)
  # beyond Unicode! (up to MAXINT)
  ord(&quot;
+</pre>

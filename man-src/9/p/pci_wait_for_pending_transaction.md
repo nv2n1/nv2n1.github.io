@@ -15,7 +15,7 @@ pci_wait_for_pending_transaction - waits for pending transaction
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI device to operate on</dl>
+<dl><dd></dd><dd>the PCI device to operate on</dd></dl>
 
 <h2>Description</h2>
 

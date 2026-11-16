@@ -19,116 +19,116 @@ description: "MuseekControl – Command-Line control Python Script for Museekd"
 <h2>OPTIONS</h2>
 <p> Museekcontrol accepts the following options:</p>
 <dl>
-<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</p>
-<dd> Use a different config file. v SEARCHING:</p>
-<dt><code>&#8211;gs, &#8211;gsearch &lt;</code><i>query</i>&gt;</p>
-<dd> Globally search for query &amp; show results</p>
-<dt><code>&#8211;rs, &#8211;rsearch &lt;</code><i>query</i>&gt;</p>
-<dd> Room search for query &amp; show results</p>
-<dt><code>&#8211;bs, &#8211;bsearch &lt;</code><i>query</i>&gt;</p>
-<dd> Buddy search for query &amp; show results</p>
-<dt>CHAT ROOMS:</p>
+<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</dt>
+<dd> Use a different config file. v SEARCHING:</dd>
+<dt><code>&#8211;gs, &#8211;gsearch &lt;</code><i>query</i>&gt;</dt>
+<dd> Globally search for query &amp; show results</dd>
+<dt><code>&#8211;rs, &#8211;rsearch &lt;</code><i>query</i>&gt;</dt>
+<dd> Room search for query &amp; show results</dd>
+<dt><code>&#8211;bs, &#8211;bsearch &lt;</code><i>query</i>&gt;</dt>
+<dd> Buddy search for query &amp; show results</dd>
+<dt>CHAT ROOMS:</dt>
 <dd>
-<dt><code>-r, &#8211;rooms</code></p>
-<dd> Show list of rooms</p>
-<dt><code>&#8211;roomlist</code></p>
-<dd> Refresh list of rooms</p>
-<dt><code>&#8211;joined</code></p>
-<dd> Show list of Joined rooms</p>
-<dt><code>&#8211;roominfo &lt;</code><i>room</i>&gt;</p>
-<dd> Show users in a Joined room</p>
-<dt><code>&#8211;roomsinfo</code></p>
-<dd> Show users for all Joined rooms</p>
-<dt><code>&#8211;sroom &lt;</code><i>room</i>&gt;</p>
-<dd> Show chat log for room</p>
-<dt><code>&#8211;srooms</code></p>
-<dd> Show chat log for all rooms</p>
-<dt><code>-j, &#8211;join &lt;</code><i>room</i>&gt;</p>
-<dd> Join a room</p>
-<dt><code>-l, &#8211;leave &lt;</code><i>room</i>&gt;</p>
-<dd> Leave a room</p>
-<dt><code>&#8211;chat &lt;</code><i>room</i>&gt;</p>
-<dd> Use with &#8211;message</p>
-<dt><code>-m, &#8211;message &lt;</code><i>message</i>&gt;</p>
-<dd> Say message in room (Use with &#8211;chat)</p>
-<dt>TICKERS:</p>
+</dd><dt><code>-r, &#8211;rooms</code></dt>
+<dd> Show list of rooms</dd>
+<dt><code>&#8211;roomlist</code></dt>
+<dd> Refresh list of rooms</dd>
+<dt><code>&#8211;joined</code></dt>
+<dd> Show list of Joined rooms</dd>
+<dt><code>&#8211;roominfo &lt;</code><i>room</i>&gt;</dt>
+<dd> Show users in a Joined room</dd>
+<dt><code>&#8211;roomsinfo</code></dt>
+<dd> Show users for all Joined rooms</dd>
+<dt><code>&#8211;sroom &lt;</code><i>room</i>&gt;</dt>
+<dd> Show chat log for room</dd>
+<dt><code>&#8211;srooms</code></dt>
+<dd> Show chat log for all rooms</dd>
+<dt><code>-j, &#8211;join &lt;</code><i>room</i>&gt;</dt>
+<dd> Join a room</dd>
+<dt><code>-l, &#8211;leave &lt;</code><i>room</i>&gt;</dt>
+<dd> Leave a room</dd>
+<dt><code>&#8211;chat &lt;</code><i>room</i>&gt;</dt>
+<dd> Use with &#8211;message</dd>
+<dt><code>-m, &#8211;message &lt;</code><i>message</i>&gt;</dt>
+<dd> Say message in room (Use with &#8211;chat)</dd>
+<dt>TICKERS:</dt>
 <dd>
-<dt><code>&#8211;tickers &lt;</code><i>room</i>&gt;</p>
-<dd> Show tickers in room</p>
-<dt><code>&#8211;alltickers</code></p>
-<dd> Show tickers in all rooms</p>
-<dt><code>&#8211;setticker &lt;</code><i>room</i>&gt;</p>
-<dd> Pick a room to set the ticker in. (Use with &#8211;message)</p>
-<dt><code>&#8211;settempticker &lt;</code><i>room</i>&gt;</p>
-<dd> Pick a room for a temporary ticker (Use with &#8211;message)</p>
-<dt><code>&#8211;setdefaultticker</code></p>
-<dd> Set the default ticker for all room (Use with &#8211;message)</p>
-<dt><code>-m, &#8211;message &lt;</code><i>message</i>&gt;</p>
-<dd> Set the ticker to this.</p>
-<dt>PRIVATE CHAT:</p>
+</dd><dt><code>&#8211;tickers &lt;</code><i>room</i>&gt;</dt>
+<dd> Show tickers in room</dd>
+<dt><code>&#8211;alltickers</code></dt>
+<dd> Show tickers in all rooms</dd>
+<dt><code>&#8211;setticker &lt;</code><i>room</i>&gt;</dt>
+<dd> Pick a room to set the ticker in. (Use with &#8211;message)</dd>
+<dt><code>&#8211;settempticker &lt;</code><i>room</i>&gt;</dt>
+<dd> Pick a room for a temporary ticker (Use with &#8211;message)</dd>
+<dt><code>&#8211;setdefaultticker</code></dt>
+<dd> Set the default ticker for all room (Use with &#8211;message)</dd>
+<dt><code>-m, &#8211;message &lt;</code><i>message</i>&gt;</dt>
+<dd> Set the ticker to this.</dd>
+<dt>PRIVATE CHAT:</dt>
 <dd>
-<dt><code>&#8211;sprivate &lt;</code><i>user</i>&gt;</p>
-<dd> Show Private Chat log for a user</p>
-<dt><code>&#8211;sprivates</code></p>
-<dd> Show Private Chat logs for all users</p>
-<dt><code>&#8211;pm, &#8211;private &lt;</code><i>user</i>&gt;</p>
-<dd> Say message in PM (Use with &#8211;message)</p>
-<dt><code>-m, &#8211;message &lt;</code><i>message</i>&gt;</p>
-<dd> Say message in PM (Use with &#8211;pm)</p>
-<dt>USERS:</p>
+</dd><dt><code>&#8211;sprivate &lt;</code><i>user</i>&gt;</dt>
+<dd> Show Private Chat log for a user</dd>
+<dt><code>&#8211;sprivates</code></dt>
+<dd> Show Private Chat logs for all users</dd>
+<dt><code>&#8211;pm, &#8211;private &lt;</code><i>user</i>&gt;</dt>
+<dd> Say message in PM (Use with &#8211;message)</dd>
+<dt><code>-m, &#8211;message &lt;</code><i>message</i>&gt;</dt>
+<dd> Say message in PM (Use with &#8211;pm)</dd>
+<dt>USERS:</dt>
 <dd>
-<dt><code>&#8211;buddy &#8211;unbuddy &lt;</code><i>user</i>&gt;</p>
-<dd> Add/Remove user from Buddies list</p>
-<dt><code>&#8211;ignore &#8211;unignore &lt;</code><i>user</i>&gt;</p>
-<dd> Add/Remove user from Ignore list</p>
-<dt><code>&#8211;ban &#8211;unban &lt;</code><i>user</i>&gt;</p>
-<dd> Add/Remove user from Banned list</p>
-<dt><code>&#8211;trust &#8211;distrust &lt;</code><i>user</i>&gt;</p>
-<dd> Add/Remove user from Trusted list</p>
-<dt><code>&#8211;comment &lt;</code><i>string</i>&gt;</p>
-<dd> Comment for the user in list</p>
-<dt>USERINFO:</p>
+</dd><dt><code>&#8211;buddy &#8211;unbuddy &lt;</code><i>user</i>&gt;</dt>
+<dd> Add/Remove user from Buddies list</dd>
+<dt><code>&#8211;ignore &#8211;unignore &lt;</code><i>user</i>&gt;</dt>
+<dd> Add/Remove user from Ignore list</dd>
+<dt><code>&#8211;ban &#8211;unban &lt;</code><i>user</i>&gt;</dt>
+<dd> Add/Remove user from Banned list</dd>
+<dt><code>&#8211;trust &#8211;distrust &lt;</code><i>user</i>&gt;</dt>
+<dd> Add/Remove user from Trusted list</dd>
+<dt><code>&#8211;comment &lt;</code><i>string</i>&gt;</dt>
+<dd> Comment for the user in list</dd>
+<dt>USERINFO:</dt>
 <dd>
-<dt><code>&#8211;info &lt;</code><i>user</i>&gt;</p>
-<dd> Show a user&#8217;s info (Saves image to &lt;user&gt;.img if available)</p>
-<dt><code>&#8211;minfo</code></p>
-<dd> Monitor all User Info</p>
-<dt><code>&#8211;ip &lt;</code><i>user</i>&gt;</p>
+</dd><dt><code>&#8211;info &lt;</code><i>user</i>&gt;</dt>
+<dd> Show a user&#8217;s info (Saves image to &lt;user&gt;.img if available)</dd>
+<dt><code>&#8211;minfo</code></dt>
+<dd> Monitor all User Info</dd>
+<dt><code>&#8211;ip &lt;</code><i>user</i>&gt;</dt>
 <dd> Get a user&#8217;s IP and Port<br />
-&nbsp;<wbr>&nbsp;<wbr>BROWSING:</p>
-<dt><code>-b. &#8211;browse &lt;</code><i>user</i>&gt;</p>
-<dd> Get a user&#8217;s shares and show them</p>
-<dt><code>&#8211;mb, &#8211;mbrowse</code></p>
-<dd> Monitor browsing </p>
+&nbsp;<wbr>&nbsp;<wbr>BROWSING:</dd>
+<dt><code>-b. &#8211;browse &lt;</code><i>user</i>&gt;</dt>
+<dd> Get a user&#8217;s shares and show them</dd>
+<dt><code>&#8211;mb, &#8211;mbrowse</code></dt>
+<dd> Monitor browsing </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>TRANSFERS:</p>
-<dt><code>-t, &#8211;transfers</code></p>
-<dd> Display all current uploads and downloads and exit.</p>
-<dt><code>&#8211;mt, &#8211;mtransfers</code></p>
-<dd> Monitor transfers</p>
-<dt><code>&#8211;download </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Add file or dir to the download queue</p>
-<dt><code>&#8211;upload </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Attempt to upload file to user</p>
-<dt><code>&#8211;abortup </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Abort Upload</p>
-<dt><code>&#8211;abortdown </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Abort Download</p>
-<dt><code>&#8211;removeup </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Remove Upload from queue</p>
-<dt><code>&#8211;removedown </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Remove Download from queue</p>
-<dt><code>&#8211;retryup </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Retry Upload (for remote uploads)</p>
-<dt><code>&#8211;retrydown </code><i><a href="slsk://user/path">slsk://user/path</a></i></p>
-<dd> Retry Download </p>
-<dt><code>-i, &#8211;interface &lt;</code><i>host:port | /socket.path</i>&gt;</p>
-<dd> Choose a different interface (saved to config file)</p>
-<dt><code>-p, &#8211;password &lt;</code><i>interface-password</i>&gt;</p>
-<dd> Choose a different password (saved to config file)</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display Version and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help and exit. </p>
+<dt><code>-t, &#8211;transfers</code></dt>
+<dd> Display all current uploads and downloads and exit.</dd>
+<dt><code>&#8211;mt, &#8211;mtransfers</code></dt>
+<dd> Monitor transfers</dd>
+<dt><code>&#8211;download </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Add file or dir to the download queue</dd>
+<dt><code>&#8211;upload </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Attempt to upload file to user</dd>
+<dt><code>&#8211;abortup </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Abort Upload</dd>
+<dt><code>&#8211;abortdown </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Abort Download</dd>
+<dt><code>&#8211;removeup </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Remove Upload from queue</dd>
+<dt><code>&#8211;removedown </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Remove Download from queue</dd>
+<dt><code>&#8211;retryup </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Retry Upload (for remote uploads)</dd>
+<dt><code>&#8211;retrydown </code><i><a href="slsk://user/path">slsk://user/path</a></i></dt>
+<dd> Retry Download </dd>
+<dt><code>-i, &#8211;interface &lt;</code><i>host:port | /socket.path</i>&gt;</dt>
+<dd> Choose a different interface (saved to config file)</dd>
+<dt><code>-p, &#8211;password &lt;</code><i>interface-password</i>&gt;</dt>
+<dd> Choose a different password (saved to config file)</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display Version and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help and exit. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To run this program the standard way type: </p>
@@ -144,8 +144,8 @@ description: "MuseekControl – Command-Line control Python Script for Museekd"
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.museekd/museekcontrol.config</i></p>
-<dd> The default location for the <code>museekcontrol</code> config file.</dl>
+&nbsp;<wbr><i>~/.museekd/museekcontrol.config</i></dt>
+<dd> The default location for the <code>museekcontrol</code> config file.</dd></dl>
 <h2>AUTHORS</h2>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt; </p>
 <p> Hyriand &lt;hyriand [at] thegraveyard.org&gt;</p>

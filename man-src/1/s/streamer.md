@@ -17,10 +17,10 @@ description: "streamer – record audio and/or video"
 <p> You can safely stop the recording at any time with Ctrl+C. streamer will catch the signal and stop recording correctly (i.e. write movie file headers) before exiting.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>streamer -o foobar.jpeg</code></p>
-<dd> write a single jpeg file.</p>
-<dt><code>streamer -o quicktime.mov -f yuv2 -F stereo -r 12 -t 0:10</code></p>
-<dd> record a short quicktime movie.</dl>
+<dt><code>streamer -o foobar.jpeg</code></dt>
+<dd> write a single jpeg file.</dd>
+<dt><code>streamer -o quicktime.mov -f yuv2 -F stereo -r 12 -t 0:10</code></dt>
+<dd> record a short quicktime movie.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-v4lctl/">v4lctl</a>(1)</p>
 <h2>AUTHOR</h2>

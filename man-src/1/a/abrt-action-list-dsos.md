@@ -27,9 +27,9 @@ url: "/docs/linux/man/1-abrt-action-list-dsos/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 %p %n %v %i
-</pre></dl>
+</pre></dd></dl>
  
 
  where 
@@ -37,25 +37,25 @@ url: "/docs/linux/man/1-abrt-action-list-dsos/"
  <i>%p</i>
 <dl>
 <dt>
-<dd> path to library or binary file, which is mapped in memory region</dl>
+</dt><dd> path to library or binary file, which is mapped in memory region</dd></dl>
  
 
  <i>%n</i>
 <dl>
 <dt>
-<dd> name, version, release, architecture of package, where <i>%p</i> belongs</dl>
+</dt><dd> name, version, release, architecture of package, where <i>%p</i> belongs</dd></dl>
  
 
  <i>%v</i>
 <dl>
 <dt>
-<dd> vendor of package</dl>
+</dt><dd> vendor of package</dd></dl>
  
 
  <i>%i</i>
 <dl>
 <dt>
-<dd> installation time</dl>
+</dt><dd> installation time</dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -64,13 +64,13 @@ url: "/docs/linux/man/1-abrt-action-list-dsos/"
  -o OUTFILE
 <dl>
 <dt>
-<dd> Output file, if not specified, it is printed to <i>stdout</i></dl>
+</dt><dd> Output file, if not specified, it is printed to <i>stdout</i></dd></dl>
  
 
  -m PROC_PID_MAP_FILE
 <dl>
 <dt>
-<dd> File containing the mapped memory regions</dl>
+</dt><dd> File containing the mapped memory regions</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -78,7 +78,7 @@ url: "/docs/linux/man/1-abrt-action-list-dsos/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

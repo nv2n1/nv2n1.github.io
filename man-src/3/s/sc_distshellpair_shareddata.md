@@ -11,9 +11,7 @@ description: "sc::DistShellPair::SharedData –"
 <p> This is used to store data that must be shared between all cooperating shell pairs.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;distshpair.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>SharedData</code> ()<br />
  <i>Construct and initialize. </i><br />

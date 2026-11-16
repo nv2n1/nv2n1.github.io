@@ -24,11 +24,9 @@ description: "autoexpect – generate an Expect script from watching a session"
 </pre>
 <p> It is important to understand that autoexpect does not guarantee a working script because it necessarily has to guess about certain things &#8211; and occasionally it guesses wrong. However, it is usually very easy to identify and fix these problems. The typical problems are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Timing. A surprisingly large number of programs (rn, ksh, zsh, telnet, etc.) and devices (e.g., modems) ignore keystrokes that arrive &quot;too quickly&quot; after prompts. If you find your new script hanging up at one spot, try adding a short sleep just before the previous send. </p>
+<dt>&bull;</dt>
+<dd> Timing. A surprisingly large number of programs (rn, ksh, zsh, telnet, etc.) and devices (e.g., modems) ignore keystrokes that arrive &quot;too quickly&quot; after prompts. If you find your new script hanging up at one spot, try adding a short sleep just before the previous send. </dd>
 <p> You can force this behavior throughout by overriding the variable &quot;force_conservative&quot; near the beginning of the generated script. This &quot;conservative&quot; mode makes autoexpect automatically pause briefly (one tenth of a second) before sending each character. This pacifies every program I know of. </p>
 <p> This conservative mode is useful if you just want to quickly reassure yourself that the problem is a timing one (or if you really don&#8217;t care about how fast the script runs). This same mode can be forced before script generation by using the -c flag. </p>
 <p> Fortunately, these timing spots are rare. For example, telnet ignores characters only after entering its escape sequence. Modems only ignore characters immediately after connecting to them for the first time. A few programs exhibit this behavior all the time but typically have a switch to disable it. For example, rn&#8217;s -T flag disables this behavior. </p>
@@ -44,8 +42,8 @@ description: "autoexpect – generate an Expect script from watching a session"
 <pre>
         autoexpect -c -C ^L
 </pre>
-<dt>&bull;</p>
-<dd> Echoing. Many program echo characters. For example, if you type &quot;more&quot; to a shell, what autoexpect actually sees is: </p>
+<dt>&bull;</dt>
+<dd> Echoing. Many program echo characters. For example, if you type &quot;more&quot; to a shell, what autoexpect actually sees is: </dd>
 <pre>
         you typed 'm',
         computer typed 'm',
@@ -56,8 +54,8 @@ description: "autoexpect – generate an Expect script from watching a session"
         ...
 </pre>
 <p> Without specific knowledge of the program, it is impossible to know if you are waiting to see each character echoed before typing the next. If autoexpect sees characters being echoed, it assumes that it can send them all as a group rather than interleaving them the way they originally appeared. This makes the script more pleasant to read. However, it could conceivably be incorrect if you really had to wait to see each character echoed. </p>
-<dt>&bull;</p>
-<dd> Change. Autoexpect records every character from the interaction in the script. This is desirable because it gives you the ability to make judgements about what is important and what can be replaced with a pattern match. </p>
+<dt>&bull;</dt>
+<dd> Change. Autoexpect records every character from the interaction in the script. This is desirable because it gives you the ability to make judgements about what is important and what can be replaced with a pattern match. </dd>
 <p> On the other hand, if you use commands whose output differs from run to run, the generated scripts are not going to be correct. For example, the &quot;date&quot; command always produces different output. So using the date command while running autoexpect is a sure way to produce a script that will require editing in order for it to work. </p>
 <p> The -p flag puts autoexpect into &quot;prompt mode&quot;. In this mode, autoexpect will only look for the the last line of program output &#8211; which is usually the prompt. This handles the date problem (see above) and most others. </p>
 <p> The following example starts autoexpect in prompt mode. </p>

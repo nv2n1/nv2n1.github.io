@@ -15,11 +15,11 @@ xdr_buf_trim - lop at most "len" bytes off the end of "buf"
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>buf to be trimmed</dl>
+<dl><dd></dd><dd>buf to be trimmed</dd></dl>
  
 
  <i>len</i>
-<dl><dd>number of bytes to reduce "buf" by</dl>
+<dl><dd>number of bytes to reduce "buf" by</dd></dl>
 
 <h2>Description</h2>
 

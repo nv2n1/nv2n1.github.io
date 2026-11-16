@@ -28,7 +28,7 @@ description: "hwlocality_cudart – Interoperability with the CUDA Runtime API"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The corresponding PCI device object can be obtained by looking at the OS device parent object. </p>
+</dt><dd> The corresponding PCI device object can be obtained by looking at the OS device parent object. </dd>
 <p> This function is identical to <code>hwloc_cuda_get_device_osdev_by_index()</code>.</dl>
 <h3>static int hwloc_cudart_get_device_pci_ids (<code>hwloc_topology_t</code> topology, int idx, int * domain, int * bus, int * dev) [inline], [static]</h3>
 <p> Return the domain, bus and device IDs of the CUDA device whose index is idx. Device index idx must match the local machine.</p>
@@ -38,5 +38,5 @@ description: "hwlocality_cudart – Interoperability with the CUDA Runtime API"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

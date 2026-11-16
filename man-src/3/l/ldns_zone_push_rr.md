@@ -17,11 +17,11 @@ description: "ldns_zone_push_rr, ldns_zone_push_rr_list"
 <p> bool ldns_zone_push_rr_list(ldns_zone *z, ldns_rr_list *list); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_zone_push_rr</i>()</p>
-<dd>push an single rr to a zone structure. This function use pointer copying, so the rr_list structure inside z is modified! .br <code>z</code>: the zone to add to .br <code>rr</code>: the rr to add .br Returns a true on succes otherwise falsed</dl>
+<dt> <i>ldns_zone_push_rr</i>()</dt>
+<dd>push an single rr to a zone structure. This function use pointer copying, so the rr_list structure inside z is modified! .br <code>z</code>: the zone to add to .br <code>rr</code>: the rr to add .br Returns a true on succes otherwise falsed</dd></dl>
 <dl>
-<dt> <i>ldns_zone_push_rr_list</i>()</p>
-<dd>push an rrlist to a zone structure. This function use pointer copying, so the rr_list structure inside z is modified! .br <code>z</code>: the zone to add to .br <code>list</code>: the list to add .br Returns a true on succes otherwise falsed</dl>
+<dt> <i>ldns_zone_push_rr_list</i>()</dt>
+<dd>push an rrlist to a zone structure. This function use pointer copying, so the rr_list structure inside z is modified! .br <code>z</code>: the zone to add to .br <code>list</code>: the list to add .br Returns a true on succes otherwise falsed</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

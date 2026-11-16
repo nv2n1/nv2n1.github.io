@@ -27,19 +27,15 @@ The standard output objects std::cerr and std::wcerr have their unitbuf bit set 
 <p>Without std::unitbuf or another explicit flush, the output is the same, but does not appear in real time.<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 template &lt;typename Diff&gt;
-
 void log_progress(Diff d)
-
 {
     std::cout &lt;&lt; &quot;..(&quot;
               &lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(d).count()
               &lt;&lt; &quot; ms)..&quot;;
 }
 int main()
-
 {
     volatile int sink = 0;
     std::cout &lt;&lt; std::unitbuf; // enable automatic flushing

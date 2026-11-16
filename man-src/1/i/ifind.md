@@ -16,38 +16,38 @@ description: "ifind – Find the meta-data structure that has allocated a given 
 <h2>ARGUMENTS</h2>
 <p> There are several required and optional arguments. The image file names must be specified each time:</p>
 <dl>
-<dt>image [images]</p>
-<dd> The disk or partition image to read, whose format is given with &#8216;-i&#8217;. Multiple image file names can be given if the image is split into multiple segments. If only one image file is given, and its name is the first in a sequence (e.g., as indicated by ending in &#8216;.001&#8217;), subsequent image segments will be included automatically. </p>
+<dt>image [images]</dt>
+<dd> The disk or partition image to read, whose format is given with &#8216;-i&#8217;. Multiple image file names can be given if the image is split into multiple segments. If only one image file is given, and its name is the first in a sequence (e.g., as indicated by ending in &#8216;.001&#8217;), subsequent image segments will be included automatically. </dd>
 </dl>
 <p> You must also specify what you are looking for and include one of the following:</p>
 <dl>
-<dt>-d data_unit</p>
-<dd> Finds the meta data structure that has allocated a given data unit (block, cluster, etc.) </p>
-<dt>-n file</p>
-<dd> Finds the meta data structure that is pointed to by the given file name. </p>
-<dt>-p par_inode</p>
-<dd> Finds the unallocated MFT entries in an NTFS image that have the given inode as the parent. Can be used with &#8216;-l and -z&#8217;. </p>
+<dt>-d data_unit</dt>
+<dd> Finds the meta data structure that has allocated a given data unit (block, cluster, etc.) </dd>
+<dt>-n file</dt>
+<dd> Finds the meta data structure that is pointed to by the given file name. </dd>
+<dt>-p par_inode</dt>
+<dd> Finds the unallocated MFT entries in an NTFS image that have the given inode as the parent. Can be used with &#8216;-l and -z&#8217;. </dd>
 </dl>
 <p> There are also several optional arguments:</p>
 <dl>
-<dt>-a</p>
-<dd> Find all meta-data structures (only works when looking with a data_unit).</p>
-<dt>-f fstype</p>
-<dd> Specify the file system type. Use &#8216;-f list&#8217; to list the supported file system types. If not given, autodetection methods are used.</p>
-<dt>-l</p>
-<dd> List the details of each file found with &#8216;-p&#8217;, like &#8216;fls -l&#8217;.</p>
-<dt>-i imgtype</p>
-<dd> Identify the type of image file, such as raw. Use &#8216;-i list&#8217; to list the supported types. If not given, autodetection methods are used.</p>
-<dt>-o imgoffset</p>
-<dd> The sector offset where the file system starts in the image.</p>
-<dt>-b dev_sector_size</p>
-<dd> The size, in bytes, of the underlying device sectors. If not given, the value in the image format is used (if it exists) or 512-bytes is assumed.</p>
-<dt>-v</p>
-<dd> Verbose output to stderr.</p>
-<dt>-V</p>
-<dd> Display version.</p>
-<dt>-z ZONE</p>
-<dd> If &#8216;-p -l&#8217; were given, this will set the timezone for the correct times. </p>
+<dt>-a</dt>
+<dd> Find all meta-data structures (only works when looking with a data_unit).</dd>
+<dt>-f fstype</dt>
+<dd> Specify the file system type. Use &#8216;-f list&#8217; to list the supported file system types. If not given, autodetection methods are used.</dd>
+<dt>-l</dt>
+<dd> List the details of each file found with &#8216;-p&#8217;, like &#8216;fls -l&#8217;.</dd>
+<dt>-i imgtype</dt>
+<dd> Identify the type of image file, such as raw. Use &#8216;-i list&#8217; to list the supported types. If not given, autodetection methods are used.</dd>
+<dt>-o imgoffset</dt>
+<dd> The sector offset where the file system starts in the image.</dd>
+<dt>-b dev_sector_size</dt>
+<dd> The size, in bytes, of the underlying device sectors. If not given, the value in the image format is used (if it exists) or 512-bytes is assumed.</dd>
+<dt>-v</dt>
+<dd> Verbose output to stderr.</dd>
+<dt>-V</dt>
+<dd> Display version.</dd>
+<dt>-z ZONE</dt>
+<dd> If &#8216;-p -l&#8217; were given, this will set the timezone for the correct times. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> # ifind -f fat -d 456 fat-img.dd </p>

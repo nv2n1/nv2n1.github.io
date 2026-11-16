@@ -17,10 +17,10 @@ description: "XmFontListAppendEntry — A font list function that appends an ent
 <p><code>XmFontListAppendEntry</code> creates a new font list that contains the contents of <i>oldlist</i>. This function copies the contents of the font list entry being added into this new font list. If <i>oldlist</i> is NULL, <code>XmFontListAppendEntry</code> creates a new font list containing only the single entry specified. </p>
 <p> This function deallocates the original font list after extracting the required information. The caller must free the font list entry by using <code>XmFontListEntryFree</code>.</p>
 <dl COMPACT>
-<dt><i>oldlist</i></p>
-<dd>Specifies the font list to be added to</p>
-<dt><i>entry</i></p>
-<dd>Specifies the font list entry to be added</dl>
+<dt><i>oldlist</i></dt>
+<dd>Specifies the font list to be added to</dd>
+<dt><i>entry</i></dt>
+<dd>Specifies the font list entry to be added</dd></dl>
 <h2>Return</h2>
 <p>If <i>entry</i> is NULL, returns <i>oldlist</i>; otherwise, returns a new font list.</p>
 <h2>Related</h2>

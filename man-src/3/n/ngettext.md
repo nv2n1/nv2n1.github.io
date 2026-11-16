@@ -10,7 +10,6 @@ description: "ngettext, dngettext, dcngettext – translate message and choose p
 <p>ngettext, dngettext, dcngettext &#8211; translate message and choose plural form</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;libintl.h&gt;
-
 char *ngettext(const char *msgid, const char *msgid_plural,
                unsigned long int n);
 char *dngettext(const char *domainname,

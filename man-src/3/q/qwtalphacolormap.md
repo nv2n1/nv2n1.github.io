@@ -28,32 +28,32 @@ description: "QwtAlphaColorMap –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Color of the map</dl>
+<dd><i>color</i> Color of the map</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QColor QwtAlphaColorMap::color () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the color</dl>
+<dd>the color</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setColor()</code></dl>
+<dd><code>setColor()</code></dd></dl>
 <h3>QRgb QwtAlphaColorMap::rgb (const <code>QwtInterval</code> &amp;interval, doublevalue) const [virtual]</h3>
 <p>Map a value of a given interval into a alpha value. alpha := (value &#8211; interval.minValue()) / interval.width(); </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>interval</i> Range for all values<br />
- <i>value</i> Value to map into a RGB value</dl>
+ <i>value</i> Value to map into a RGB value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>RGB value, with an alpha value</dl>
+<dd>RGB value, with an alpha value</dd></dl>
 <p> Implements <code>QwtColorMap</code>.</p>
 <h3>void QwtAlphaColorMap::setColor (const QColor &amp;color)</h3>
 <p>Set the color </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Color</dl>
+<dd><i>color</i> Color</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>color()</code></dl>
+<dd><code>color()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

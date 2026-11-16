@@ -10,7 +10,6 @@ description: "ustrcmp – Compares two strings. Allegro game programming library
 <p>ustrcmp &#8211; Compares two strings. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int ustrcmp(const char *s1, const char *s2);</code></pre>
 <h2>Description</h2>
 <p>This function compares `s1&#8242; and `s2&#8242;.</p>

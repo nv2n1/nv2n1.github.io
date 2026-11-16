@@ -12,7 +12,6 @@ std::experimental::shared_future&lt;T&gt;::operator= - std::experimental::shared
 
 <pre><code>std::experimental::shared_future&lt;T&gt; &amp;operator=(const std::experimental::shared_future&lt;T&gt; &amp;other);
 (1)
-
     std::experimental::shared_future&lt;T&gt; &amp;
     operator=(std::experimental::shared_future&lt;T&gt; &amp;&amp;other) noexcept;
 (2)</code></pre> 

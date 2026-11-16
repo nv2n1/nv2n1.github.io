@@ -24,14 +24,14 @@ description: "deb-src-symbols – Debian’s extended shared library template fi
 <p>The first symbol in the example is named <i>tagged quoted symbol</i> and has two tags: <i>tag1</i> with value <i>i am marked</i> and <i>tag name with space</i> that has no value. The second symbol named <i>tagged_unquoted_symbol</i> is only tagged with the tag named <i>optional</i>. The last symbol is an example of the normal untagged symbol. Since symbol tags are an extension of the <code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5) format, they can only be part of the symbols files used in source packages (those files should then be seen as templates used to build the symbols files that are embedded in binary packages). When <code>dpkg-gensymbols</code> is called without the <code>-t</code> option, it will output symbols files compatible to the <code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5) format: it fully processes symbols according to the requirements of their standard tags and strips all tags from the output. On the contrary, in template mode (<code>-t</code>) all symbols and their tags (both standard and unknown ones) are kept in the output and are written in their original form as they were loaded.</p>
 <h3>Standard symbol tags</h3>
 <dl>
-<dt><code>optional</code></p>
-<dd>A symbol marked as optional can disappear from the library at any time and that will never cause <code>dpkg-gensymbols</code> to fail. However, disappeared optional symbols will continuously appear as <font SIZE="-1">MISSING</font> in the diff in each new package revision. This behaviour serves as a reminder for the maintainer that such a symbol needs to be removed from the symbol file or readded to the library. When the optional symbol, which was previously declared as <font SIZE="-1">MISSING,</font> suddenly reappears in the next revision, it will be upgraded back to the &#8220;existing&#8221; status with its minimum version unchanged. This tag is useful for symbols which are private where their disappearance do not cause <font SIZE="-1">ABI</font> breakage. For example, most of C<font SIZE="-2">++</font> template instantiations fall into this category. Like any other tag, this one may also have an arbitrary value: it could be used to indicate why the symbol is considered optional.</p>
-<dt><code>arch=</code><i>architecture-list</i></p>
+<dt><code>optional</code></dt>
+<dd>A symbol marked as optional can disappear from the library at any time and that will never cause <code>dpkg-gensymbols</code> to fail. However, disappeared optional symbols will continuously appear as <font SIZE="-1">MISSING</font> in the diff in each new package revision. This behaviour serves as a reminder for the maintainer that such a symbol needs to be removed from the symbol file or readded to the library. When the optional symbol, which was previously declared as <font SIZE="-1">MISSING,</font> suddenly reappears in the next revision, it will be upgraded back to the &#8220;existing&#8221; status with its minimum version unchanged. This tag is useful for symbols which are private where their disappearance do not cause <font SIZE="-1">ABI</font> breakage. For example, most of C<font SIZE="-2">++</font> template instantiations fall into this category. Like any other tag, this one may also have an arbitrary value: it could be used to indicate why the symbol is considered optional.</dd>
+<dt><code>arch=</code><i>architecture-list</i></dt>
 <dd>
-<dt><code>arch-bits=</code><i>architecture-bits</i></p>
+</dd><dt><code>arch-bits=</code><i>architecture-bits</i></dt>
 <dd>
-<dt><code>arch-endian=</code><i>architecture-endianness</i></p>
-<dd>These tags allow one to restrict the set of architectures where the symbol is supposed to exist. The <code>arch-bits</code> and <code>arch-endian</code> tags are supported since dpkg 1.18.0. When the symbols list is updated with the symbols discovered in the library, all arch-specific symbols which do not concern the current host architecture are treated as if they did not exist. If an arch-specific symbol matching the current host architecture does not exist in the library, normal procedures for missing symbols apply and it may cause <code>dpkg-gensymbols</code> to fail. On the other hand, if the arch-specific symbol is found when it was not supposed to exist (because the current host architecture is not listed in the tag or does not match the endianness and bits), it is made arch neutral (i.e. the arch, arch-bits and arch-endian tags are dropped and the symbol will appear in the diff due to this change), but it is not considered as new. When operating in the default non-template mode, among arch-specific symbols only those that match the current host architecture are written to the symbols file. On the contrary, all arch-specific symbols (including those from foreign arches) are always written to the symbol file when operating in template mode. The format of <i>architecture-list</i> is the same as the one used in the <code>Build-Depends</code> field of <i>debian/control</i> (except the enclosing square brackets []). For example, the first symbol from the list below will be considered only on alpha, any-amd64 and ia64 architectures, the second only on linux architectures, while the third one anywhere except on armel. </p>
+</dd><dt><code>arch-endian=</code><i>architecture-endianness</i></dt>
+<dd>These tags allow one to restrict the set of architectures where the symbol is supposed to exist. The <code>arch-bits</code> and <code>arch-endian</code> tags are supported since dpkg 1.18.0. When the symbols list is updated with the symbols discovered in the library, all arch-specific symbols which do not concern the current host architecture are treated as if they did not exist. If an arch-specific symbol matching the current host architecture does not exist in the library, normal procedures for missing symbols apply and it may cause <code>dpkg-gensymbols</code> to fail. On the other hand, if the arch-specific symbol is found when it was not supposed to exist (because the current host architecture is not listed in the tag or does not match the endianness and bits), it is made arch neutral (i.e. the arch, arch-bits and arch-endian tags are dropped and the symbol will appear in the diff due to this change), but it is not considered as new. When operating in the default non-template mode, among arch-specific symbols only those that match the current host architecture are written to the symbols file. On the contrary, all arch-specific symbols (including those from foreign arches) are always written to the symbol file when operating in template mode. The format of <i>architecture-list</i> is the same as the one used in the <code>Build-Depends</code> field of <i>debian/control</i> (except the enclosing square brackets []). For example, the first symbol from the list below will be considered only on alpha, any-amd64 and ia64 architectures, the second only on linux architectures, while the third one anywhere except on armel. </dd>
 <pre> (arch=alpha any-amd64 ia64)64bit_specific_symbol [at] Base 1.0
  (arch=linux-any)linux_specific_symbol [at] Base 1.0
  (arch=!armel)symbol_armel_does_not_have [at] Base 1.0</pre>
@@ -43,21 +43,21 @@ description: "deb-src-symbols – Debian’s extended shared library template fi
  (arch-endian=big)big_endian_specific_symbol [at] Base 1.0</pre>
 <p>Multiple restrictions can be chained. </p>
 <pre> (arch-bits=32|arch-endian=little)32bit_le_symbol [at] Base 1.0</pre>
-<dt><code>allow-internal</code></p>
-<dd>dpkg-gensymbols has a list of internal symbols that should not appear in symbols files as they are usually only side-effects of implementation details of the toolchain (since dpkg 1.20.1). If for some reason, you really want one of those symbols to be included in the symbols file, you should tag the symbol with <code>allow-internal</code>. It can be necessary for some low level toolchain libraries like &#8220;libgcc&#8221;.</p>
-<dt><code>ignore-blacklist</code></p>
-<dd>A deprecated alias for <code>allow-internal</code> (since dpkg 1.20.1, supported since dpkg 1.15.3).</p>
-<dt><code>c++</code></p>
-<dd>Denotes <i>c++</i> symbol pattern. See <code>Using symbol patterns</code> subsection below.</p>
-<dt><code>symver</code></p>
-<dd>Denotes <i>symver</i> (symbol version) symbol pattern. See <code>Using symbol patterns</code> subsection below.</p>
-<dt><code>regex</code></p>
-<dd>Denotes <i>regex</i> symbol pattern. See <code>Using symbol patterns</code> subsection below.</dl>
+<dt><code>allow-internal</code></dt>
+<dd>dpkg-gensymbols has a list of internal symbols that should not appear in symbols files as they are usually only side-effects of implementation details of the toolchain (since dpkg 1.20.1). If for some reason, you really want one of those symbols to be included in the symbols file, you should tag the symbol with <code>allow-internal</code>. It can be necessary for some low level toolchain libraries like &#8220;libgcc&#8221;.</dd>
+<dt><code>ignore-blacklist</code></dt>
+<dd>A deprecated alias for <code>allow-internal</code> (since dpkg 1.20.1, supported since dpkg 1.15.3).</dd>
+<dt><code>c++</code></dt>
+<dd>Denotes <i>c++</i> symbol pattern. See <code>Using symbol patterns</code> subsection below.</dd>
+<dt><code>symver</code></dt>
+<dd>Denotes <i>symver</i> (symbol version) symbol pattern. See <code>Using symbol patterns</code> subsection below.</dd>
+<dt><code>regex</code></dt>
+<dd>Denotes <i>regex</i> symbol pattern. See <code>Using symbol patterns</code> subsection below.</dd></dl>
 <h3>Using symbol patterns</h3>
 <p>Unlike a standard symbol specification, a pattern may cover multiple real symbols from the library. <code>dpkg-gensymbols</code> will attempt to match each pattern against each real symbol that does <i>not</i> have a specific symbol counterpart defined in the symbol file. Whenever the first matching pattern is found, all its tags and properties will be used as a basis specification of the symbol. If none of the patterns matches, the symbol will be considered as new. A pattern is considered lost if it does not match any symbol in the library. By default this will trigger a <code>dpkg-gensymbols</code> failure under <code>-c1</code> or higher level. However, if the failure is undesired, the pattern may be marked with the <i>optional</i> tag. Then if the pattern does not match anything, it will only appear in the diff as <font SIZE="-1">MISSING.</font> Moreover, like any symbol, the pattern may be limited to the specific architectures with the <i>arch</i> tag. Please refer to <code>Standard symbol tags</code> subsection above for more information. Patterns are an extension of the <code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5) format hence they are only valid in symbol file templates. Pattern specification syntax is not any different from the one of a specific symbol. However, symbol name part of the specification serves as an expression to be matched against <i>name [at] version</i> of the real symbol. In order to distinguish among different pattern types, a pattern will typically be tagged with a special tag. At the moment, <code>dpkg-gensymbols</code> supports three basic pattern types:</p>
 <dl>
-<dt><code>c++</code></p>
-<dd>This pattern is denoted by the <i>c++</i> tag. It matches only C<font SIZE="-2">++</font> symbols by their demangled symbol name (as emitted by <code>c++filt</code>(1) utility). This pattern is very handy for matching symbols which mangled names might vary across different architectures while their demangled names remain the same. One group of such symbols is <i>non-virtual thunks</i> which have architecture specific offsets embedded in their mangled names. A common instance of this case is a virtual destructor which under diamond inheritance needs a non-virtual thunk symbol. For example, even if _ZThn8_N3NSB6ClassDD1Ev [at] Base on 32bit architectures will probably be _ZThn16_N3NSB6ClassDD1Ev [at] Base on 64bit ones, it can be matched with a single <i>c++</i> pattern: </p>
+<dt><code>c++</code></dt>
+<dd>This pattern is denoted by the <i>c++</i> tag. It matches only C<font SIZE="-2">++</font> symbols by their demangled symbol name (as emitted by <code>c++filt</code>(1) utility). This pattern is very handy for matching symbols which mangled names might vary across different architectures while their demangled names remain the same. One group of such symbols is <i>non-virtual thunks</i> which have architecture specific offsets embedded in their mangled names. A common instance of this case is a virtual destructor which under diamond inheritance needs a non-virtual thunk symbol. For example, even if _ZThn8_N3NSB6ClassDD1Ev [at] Base on 32bit architectures will probably be _ZThn16_N3NSB6ClassDD1Ev [at] Base on 64bit ones, it can be matched with a single <i>c++</i> pattern: </dd>
 <pre> libdummy.so.1 libdummy1 #MINVER#
  [...]
  (c++)&quot;non-virtual thunk to NSB::ClassD::~ClassD()@Base&quot; 1.0
@@ -65,16 +65,16 @@ description: "deb-src-symbols – Debian’s extended shared library template fi
 <p>The demangled name above can be obtained by executing the following command: </p>
 <pre> $ echo '_ZThn8_N3NSB6ClassDD1Ev [at] Base' | c++filt</pre>
 <p>Please note that while mangled name is unique in the library by definition, this is not necessarily true for demangled names. A couple of distinct real symbols may have the same demangled name. For example, that&#8217;s the case with non-virtual thunk symbols in complex inheritance configurations or with most constructors and destructors (since g++ typically generates two real symbols for them). However, as these collisions happen on the <font SIZE="-1">ABI</font> level, they should not degrade quality of the symbol file.</p>
-<dt><code>symver</code></p>
-<dd>This pattern is denoted by the <i>symver</i> tag. Well maintained libraries have versioned symbols where each version corresponds to the upstream version where the symbol got added. If that&#8217;s the case, you can use a <i>symver</i> pattern to match any symbol associated to the specific version. For example: </p>
+<dt><code>symver</code></dt>
+<dd>This pattern is denoted by the <i>symver</i> tag. Well maintained libraries have versioned symbols where each version corresponds to the upstream version where the symbol got added. If that&#8217;s the case, you can use a <i>symver</i> pattern to match any symbol associated to the specific version. For example: </dd>
 <pre> libc.so.6 libc6 #MINVER#
  (symver)GLIBC_2.0 2.0
  [...]
  (symver)GLIBC_2.7 2.7
  access [at] GLIBC_2.0 2.2</pre>
 <p>All symbols associated with versions <font SIZE="-1">GLIBC_2.0</font> and <font SIZE="-1">GLIBC_2.7</font> will lead to minimal version of 2.0 and 2.7 respectively with the exception of the symbol access [at] GLIBC_2.0. The latter will lead to a minimal dependency on libc6 version 2.2 despite being in the scope of the &#8220;(symver)GLIBC_2.0&#8221; pattern because specific symbols take precedence over patterns. Please note that while old style wildcard patterns (denoted by &#8220;*@version&#8221; in the symbol name field) are still supported, they have been deprecated by new style syntax &#8220;(symver|optional)version&#8221;. For example, &#8220;*@GLIBC_2.0 2.0&#8221; should be written as &#8220;(symver|optional)GLIBC_2.0 2.0&#8221; if the same behaviour is needed.</p>
-<dt><code>regex</code></p>
-<dd>Regular expression patterns are denoted by the <i>regex</i> tag. They match by the perl regular expression specified in the symbol name field. A regular expression is matched as it is, therefore do not forget to start it with the <i>^</i> character or it may match any part of the real symbol <i>name [at] version</i> string. For example: </p>
+<dt><code>regex</code></dt>
+<dd>Regular expression patterns are denoted by the <i>regex</i> tag. They match by the perl regular expression specified in the symbol name field. A regular expression is matched as it is, therefore do not forget to start it with the <i>^</i> character or it may match any part of the real symbol <i>name [at] version</i> string. For example: </dd>
 <pre> libdummy.so.1 libdummy1 #MINVER#
  (regex)&quot;^mystack_.*@Base$&quot; 1.0
  (regex|optional)&quot;private&quot; 1.0</pre>
@@ -86,12 +86,9 @@ description: "deb-src-symbols – Debian’s extended shared library template fi
 <h3>Using includes</h3>
 <p>When the set of exported symbols differ between architectures, it may become inefficient to use a single symbol file. In those cases, an include directive may prove to be useful in a couple of ways:</p>
 <dl>
-<dt>&bull;</p>
-<dd>You can factorize the common part in some external file and include that file in your <i>package</i>.symbols.<i>arch</i> file by using an include directive like this: </p>
+<dt>&bull;</dt>
+<dd>You can factorize the common part in some external file and include that file in your <i>package</i>.symbols.<i>arch</i> file by using an include directive like this: </dd>
 <pre><code>#include &quot;I&lt;packages&gt;.symbols.common&quot;
-
-
-
 &bull;
 The include directive may also be tagged like any symbol:
 (tag|...|tagN)#include &quot;file-to-include&quot;</code></pre>
@@ -103,3 +100,4 @@ common_symbol2 [at] Base 1.0 The symbols files are read line by line, and includ
 arch_specific_symbol [at] Base 1.0</code></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-shlibdeps/">dpkg-shlibdeps</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-gensymbols/">dpkg-gensymbols</a></code>(1). </p>
+</dl>

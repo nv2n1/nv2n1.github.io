@@ -22,25 +22,21 @@ description: "strevc.f –"
  a real upper quasi-triangular matrix T.
  Matrices of this type are produced by the Schur factorization of
  a real general matrix: A = Q*T*Q**T, as computed by SHSEQR.
- 
  The right eigenvector x and the left eigenvector y of T corresponding
  to an eigenvalue w are defined by:
- 
  T*x = w*x, (y**T)*T = w*(y**T)
- 
  where y**T denotes the transpose of y.
  The eigenvalues are not input to this routine, but are read directly
  from the diagonal blocks of T.
- 
  This routine returns the matrices X and/or Y of right and left
  eigenvectors of T, or the products Q*X and/or Q*Y, where Q is an
  input matrix. If Q is the orthogonal factor that reduces a matrix
  A to Schur form T, then Q*X and Q*Y are the matrices of right and
  left eigenvectors of A.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'R': compute right eigenvectors only;
  = 'L': compute left eigenvectors only;
@@ -132,13 +128,13 @@ description: "strevc.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -148,7 +144,8 @@ description: "strevc.f –"
  Each eigenvector is normalized so that the element of largest
  magnitude has magnitude 1; here the magnitude of a complex number
  (x,y) is taken to be |x| + |y|.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 222 of file strevc.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

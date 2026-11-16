@@ -28,81 +28,74 @@ FvwmCpp - the Fvwm Cpp pre-processor
 
  <pre>ModuleSynchronous FvwmCpp -lock filename</pre><h2>Options</h2>Some options can be specified following the modulename:
 <dl><dt>-cppopt <i>option</i>
-<dd>Lets you pass an option to the cpp program. Not really needed as any unknown options will be passed on automatically. 
-
-<dt>-cppprog <i>name</i>
-<dd>Instead of invoking &quot;/usr/lib/cpp&quot;, fvwm will invoke <i>name</i>. 
-
-<dt>-outfile <i>filename</i>
-<dd>Instead of creating a random unique name for the temporary file for the preprocessed rc file, this option will let you specify the name of the temporary file it will create. Please note that FvwmCpp will attempt to remove this file before writing to it, so don't point it at anything important even if it has read-only protection. 
-
-<dt>-debug
-<dd>Causes the temporary file create by Cpp to be retained. This file is usually called &quot;/tmp/fvwmrcXXXXXX&quot; 
-
-<dt>-lock
-<dd>If you want to use this option you need to start FvwmCpp with ModuleSynchronous. This option causes fvwm to wait that the pre-process finish and that FvwmCpp asks fvwm to Read the pre-processed file before continuing. This may be useful at startup if you use a session manager as Gnome. Also, this is useful if you want to process and run a Form in a fvwm function. 
-
-<dt>-noread
-<dd>Causes the pre-processed file to be not read by fvwm. Useful to pre-process a FvwmScript script with FvwmCpp. 
-
-</dl><h2>Configuration Options</h2>FvwmCpp defines some values for use in the pre-processor file: 
+</dt><dd>Lets you pass an option to the cpp program. Not really needed as any unknown options will be passed on automatically. 
+</dd><dt>-cppprog <i>name</i>
+</dt><dd>Instead of invoking &quot;/usr/lib/cpp&quot;, fvwm will invoke <i>name</i>. 
+</dd><dt>-outfile <i>filename</i>
+</dt><dd>Instead of creating a random unique name for the temporary file for the preprocessed rc file, this option will let you specify the name of the temporary file it will create. Please note that FvwmCpp will attempt to remove this file before writing to it, so don't point it at anything important even if it has read-only protection. 
+</dd><dt>-debug
+</dt><dd>Causes the temporary file create by Cpp to be retained. This file is usually called &quot;/tmp/fvwmrcXXXXXX&quot; 
+</dd><dt>-lock
+</dt><dd>If you want to use this option you need to start FvwmCpp with ModuleSynchronous. This option causes fvwm to wait that the pre-process finish and that FvwmCpp asks fvwm to Read the pre-processed file before continuing. This may be useful at startup if you use a session manager as Gnome. Also, this is useful if you want to process and run a Form in a fvwm function. 
+</dd><dt>-noread
+</dt><dd>Causes the pre-processed file to be not read by fvwm. Useful to pre-process a FvwmScript script with FvwmCpp. 
+</dd></dl><h2>Configuration Options</h2>FvwmCpp defines some values for use in the pre-processor file: 
 
 <dl><dt>TWM_TYPE
-<dd>Always set to &quot;fvwm&quot;.
-<dt>SERVERHOST
-<dd>The name of the machine running the X Server.
-<dt>CLIENTHOST
-<dd>The name of the machine running fvwm.
-<dt>HOSTNAME
-<dd>The host name of the machine running fvwm. Generally the same as CLIENTHOST.
-<dt>OSTYPE
-<dd>The operating system for CLIENTHOST.
-<dt>USER
-<dd>The name of the person running fvwm.
-<dt>HOME
-<dd>The home directory of the person running fvwm.
-<dt>VERSION
-<dd>The X11 version.
-<dt>REVISION
-<dd>The X11 revision number.
-<dt>VENDOR
-<dd>The X server vendor.
-<dt>RELEASE
-<dd>The X server release number.
-<dt>SCREEN
-<dd>The screen number.
-<dt>WIDTH
-<dd>The screen width in pixels.
-<dt>HEIGHT
-<dd>The screen height in pixels.
-<dt>X_RESOLUTION
-<dd>Some distance/pixel measurement for the horizontal direction, I think.
-<dt>Y_RESOLUTION
-<dd>Some distance/pixel measurement for the vertical direction, I think.
-<dt>PLANES
-<dd>Number of color planes for the X server display
-<dt>BITS_PER_RGB
-<dd>Number of bits in each rgb triplet.
-<dt>CLASS
-<dd>The X11 default visual class, e.g. PseudoColor.
-<dt>COLOR
-<dd>Yes or No, Yes if the default visual class is neither StaticGrey or GreyScale.
-<dt>FVWM_CLASS
-<dd>The visual class that fvwm is using, e.g. TrueColor.
-<dt>FVWM_COLOR
-<dd>Yes or No, Yes if the FVWM_CLASS is neither StaticGrey or GreyScale.
-<dt>FVWM_VERSION
-<dd>The fvwm version number, ie 2.0
-<dt>OPTIONS
-<dd>Some combination of SHAPE, XPM, NO_SAVEUNDERS, and Cpp, as defined in configure.h at compile time.
-<dt>FVWM_MODULEDIR
-<dd>The directory where fvwm looks for .fvwm2rc and modules by default, as determined at compile time.
-<dt>FVWM_USERDIR
-<dd>The value of $FVWM_USERDIR.
-<dt>SESSION_MANAGER
-<dd>The value of $SESSION_MANAGER. Undefined if this variable is not set. 
-
-</dl><h2>Example Prolog</h2><pre>#define TWM_TYPE fvwm
+</dt><dd>Always set to &quot;fvwm&quot;.
+</dd><dt>SERVERHOST
+</dt><dd>The name of the machine running the X Server.
+</dd><dt>CLIENTHOST
+</dt><dd>The name of the machine running fvwm.
+</dd><dt>HOSTNAME
+</dt><dd>The host name of the machine running fvwm. Generally the same as CLIENTHOST.
+</dd><dt>OSTYPE
+</dt><dd>The operating system for CLIENTHOST.
+</dd><dt>USER
+</dt><dd>The name of the person running fvwm.
+</dd><dt>HOME
+</dt><dd>The home directory of the person running fvwm.
+</dd><dt>VERSION
+</dt><dd>The X11 version.
+</dd><dt>REVISION
+</dt><dd>The X11 revision number.
+</dd><dt>VENDOR
+</dt><dd>The X server vendor.
+</dd><dt>RELEASE
+</dt><dd>The X server release number.
+</dd><dt>SCREEN
+</dt><dd>The screen number.
+</dd><dt>WIDTH
+</dt><dd>The screen width in pixels.
+</dd><dt>HEIGHT
+</dt><dd>The screen height in pixels.
+</dd><dt>X_RESOLUTION
+</dt><dd>Some distance/pixel measurement for the horizontal direction, I think.
+</dd><dt>Y_RESOLUTION
+</dt><dd>Some distance/pixel measurement for the vertical direction, I think.
+</dd><dt>PLANES
+</dt><dd>Number of color planes for the X server display
+</dd><dt>BITS_PER_RGB
+</dt><dd>Number of bits in each rgb triplet.
+</dd><dt>CLASS
+</dt><dd>The X11 default visual class, e.g. PseudoColor.
+</dd><dt>COLOR
+</dt><dd>Yes or No, Yes if the default visual class is neither StaticGrey or GreyScale.
+</dd><dt>FVWM_CLASS
+</dt><dd>The visual class that fvwm is using, e.g. TrueColor.
+</dd><dt>FVWM_COLOR
+</dt><dd>Yes or No, Yes if the FVWM_CLASS is neither StaticGrey or GreyScale.
+</dd><dt>FVWM_VERSION
+</dt><dd>The fvwm version number, ie 2.0
+</dd><dt>OPTIONS
+</dt><dd>Some combination of SHAPE, XPM, NO_SAVEUNDERS, and Cpp, as defined in configure.h at compile time.
+</dd><dt>FVWM_MODULEDIR
+</dt><dd>The directory where fvwm looks for .fvwm2rc and modules by default, as determined at compile time.
+</dd><dt>FVWM_USERDIR
+</dt><dd>The value of $FVWM_USERDIR.
+</dd><dt>SESSION_MANAGER
+</dt><dd>The value of $SESSION_MANAGER. Undefined if this variable is not set. 
+</dd></dl><h2>Example Prolog</h2><pre>#define TWM_TYPE fvwm
 #define SERVERHOST spx20
 #define CLIENTHOST grumpy
 #define HOSTNAME grumpy

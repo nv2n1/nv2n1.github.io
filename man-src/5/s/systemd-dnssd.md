@@ -20,7 +20,7 @@ description: "systemd.dnssd – DNS-SD configuration"
 <p>The network service file contains a [Service] section, which specifies a discoverable network service announced in a local network with Multicast DNS broadcasts. </p>
 <p> <i>Name=</i></p>
 <dl>
-<dd>An instance name of the network service as defined in the section 4.1.1 of m[blue]<code>RFC 6763</code>m[]<font SIZE="-2">[1]</font>, e.g. &quot;webserver&quot;. </p>
+<dd>An instance name of the network service as defined in the section 4.1.1 of m[blue]<code>RFC 6763</code>m[]<font SIZE="-2">[1]</font>, e.g. &quot;webserver&quot;. </dd>
 <p> The option supports simple specifier expansion. The following expansions are understood: </p>
 <p> <code>Table 1. Specifiers available</code> </p>
 <table BORDER>
@@ -106,23 +106,23 @@ description: "systemd.dnssd – DNS-SD configuration"
 </dl>
 <p> <i>Type=</i></p>
 <dl>
-<dd>A type of the network service as defined in the section 4.1.2 of m[blue]<code>RFC 6763</code>m[]<font SIZE="-2">[1]</font>, e.g. &quot;_http._tcp&quot;.</dl>
+<dd>A type of the network service as defined in the section 4.1.2 of m[blue]<code>RFC 6763</code>m[]<font SIZE="-2">[1]</font>, e.g. &quot;_http._tcp&quot;.</dd></dl>
 <p> <i>Port=</i></p>
 <dl>
-<dd>An IP port number of the network service.</dl>
+<dd>An IP port number of the network service.</dd></dl>
 <p> <i>Priority=</i></p>
 <dl>
-<dd>A priority number set in <code>SRV</code> resource records corresponding to the network service.</dl>
+<dd>A priority number set in <code>SRV</code> resource records corresponding to the network service.</dd></dl>
 <p> <i>Weight=</i></p>
 <dl>
-<dd>A weight number set in <code>SRV</code> resource records corresponding to the network service.</dl>
+<dd>A weight number set in <code>SRV</code> resource records corresponding to the network service.</dd></dl>
 <p> <i>TxtText=</i></p>
 <dl>
-<dd>A whitespace-separated list of arbitrary key/value pairs conveying additional information about the named service in the corresponding TXT resource record, e.g. &quot;path=/portal/index.html&quot;. Keys and values can contain C-style escape sequences which get translated upon reading configuration files. </p>
+<dd>A whitespace-separated list of arbitrary key/value pairs conveying additional information about the named service in the corresponding TXT resource record, e.g. &quot;path=/portal/index.html&quot;. Keys and values can contain C-style escape sequences which get translated upon reading configuration files. </dd>
 <p> This option together with <i>TxtData=</i> may be specified more than once, in which case multiple TXT resource records will be created for the service. If the empty string is assigned to this option, the list is reset and all prior assignments will have no effect.</dl>
 <p> <i>TxtData=</i></p>
 <dl>
-<dd>A whitespace-separated list of arbitrary key/value pairs conveying additional information about the named service in the corresponding TXT resource record where values are base64-encoded string representing any binary data, e.g. &quot;data=YW55IGJpbmFyeSBkYXRhCg==&quot;. Keys can contain C-style escape sequences which get translated upon reading configuration files. </p>
+<dd>A whitespace-separated list of arbitrary key/value pairs conveying additional information about the named service in the corresponding TXT resource record where values are base64-encoded string representing any binary data, e.g. &quot;data=YW55IGJpbmFyeSBkYXRhCg==&quot;. Keys can contain C-style escape sequences which get translated upon reading configuration files. </dd>
 <p> This option together with <i>TxtText=</i> may be specified more than once, in which case multiple TXT resource records will be created for the service. If the empty string is assigned to this option, the list is reset and all prior assignments will have no effect.</dl>
 <h2>Examples</h2>
 <p><code>Example 1. HTTP service</code> </p>
@@ -134,7 +134,7 @@ Name=%H
 Type=_http._tcp
 Port=80
 TxtText=path=/stats/index.html t=temperature_sensor</pre>
-</dl>
+</dd></dl>
 <p> This makes the http server running on the host discoverable in the local network given MulticastDNS is enabled on the network interface. </p>
 <p> Now the utility &quot;resolvectl&quot; should be able to resolve the service to the host&#8217;s name: </p>
 <dl>
@@ -148,7 +148,7 @@ meteo._http._tcp.local: meteo.local:80 [priority=0, weight=0]
  (meteo/_http._tcp/local)
 -- Information acquired via protocol mDNS/IPv6 in 4.0ms.
 -- Data is authenticated: yes</pre>
-</dl>
+</dd></dl>
 <p> &quot;Avahi&quot; running on a different host in the same local network should see the service as well: </p>
 <dl>
 <dd>
@@ -165,12 +165,13 @@ meteo._http._tcp.local: meteo.local:80 [priority=0, weight=0]
  address = [169.254.208.106]
  port = [80]
  txt = [&quot;path=/stats/index.html&quot; &quot;t=temperature_sensor&quot;]</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8), <code><a href="/docs/linux/man/1-resolvectl/">resolvectl</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>RFC 6763</p>
+<dt> 1.</dt>
+<dd>RFC 6763</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc6763">https://tools.ietf.org/html/rfc6763</a></dl>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc6763">https://tools.ietf.org/html/rfc6763</a></dd></dl>
+</dl>

@@ -18,14 +18,14 @@ description: "jack_load – JACK toolkit client for loading in-process clients"
 <p> The so-name is the name of file that client code is stored in (typically, <i>clientname.so</i>)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code>, <code>&#8211;init</code> init-string</p>
+<dt><code>-i</code>, <code>&#8211;init</code> init-string</dt>
 <dd>
- initialization string passed to the in-process client. Note that this can also be specified as the last argument on the command line.</p>
-<dt><code>-s</code>, <code>&#8211;server</code> servername</p>
+ initialization string passed to the in-process client. Note that this can also be specified as the last argument on the command line.</dd>
+<dt><code>-s</code>, <code>&#8211;server</code> servername</dt>
 <dd>
- Name of JACK server to connect to</p>
-<dt><code>-w</code>, <code>&#8211;wait</code></p>
-<dd> Wait for a signal (eg. from Ctrl-c) and then unload the client.</dl>
+ Name of JACK server to connect to</dd>
+<dt><code>-w</code>, <code>&#8211;wait</code></dt>
+<dd> Wait for a signal (eg. from Ctrl-c) and then unload the client.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Jeremy Hall </p>
 <h2>Index</h2>

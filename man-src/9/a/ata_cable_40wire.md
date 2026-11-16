@@ -14,11 +14,11 @@ description: "ata_cable_40wire – return 40 wire cable type"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>port</dl>
+</dd><dd>port</dd></dl>
 <h2>Description</h2>
 <p>Helper method for drivers which want to hardwire 40 wire cable detection.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

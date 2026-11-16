@@ -11,7 +11,6 @@ std::gmtime - std::gmtime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ctime&gt;
-
     std::tm *gmtime(const std::time_t *time);</code></pre> 
 Converts given time since epoch as std::time_t value into calendar time, expressed in Coordinated Universal Time (UTC). 
 
@@ -31,12 +30,9 @@ POSIX requires that this function sets errno to EOVERFLOW if it fails because th
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     std::time_t t = std::time(nullptr);
     std::cout &lt;&lt; &quot;UTC:   &quot; &lt;&lt; std::put_time(std::gmtime(&amp;t), &quot;%c %Z&quot;) &lt;&lt; '\n';

@@ -22,48 +22,48 @@ int spu_run(int fd, unsigned int *npc, unsigned int *event);
 <p> The <i>event</i> argument provides a buffer for an extended status code. If the SPU context was created with the <code>SPU_CREATE_EVENTS_ENABLED</code> flag, then this buffer is populated by the Linux kernel before <code>spu_run</code>() returns. </p>
 <p> The status code may be one (or more) of the following constants:</p>
 <dl>
-<dt><code>SPE_EVENT_DMA_ALIGNMENT</code></p>
-<dd> A DMA alignment error occurred.</p>
-<dt><code>SPE_EVENT_INVALID_DMA</code></p>
-<dd> An invalid MFC DMA command was attempted.</p>
-<dt><code>SPE_EVENT_SPE_DATA_STORAGE</code></p>
-<dd> A DMA storage error occurred.</p>
-<dt><code>SPE_EVENT_SPE_ERROR</code></p>
-<dd> An illegal instruction was executed.</dl>
+<dt><code>SPE_EVENT_DMA_ALIGNMENT</code></dt>
+<dd> A DMA alignment error occurred.</dd>
+<dt><code>SPE_EVENT_INVALID_DMA</code></dt>
+<dd> An invalid MFC DMA command was attempted.</dd>
+<dt><code>SPE_EVENT_SPE_DATA_STORAGE</code></dt>
+<dd> A DMA storage error occurred.</dd>
+<dt><code>SPE_EVENT_SPE_ERROR</code></dt>
+<dd> An illegal instruction was executed.</dd></dl>
 <p> NULL is a valid value for the <i>event</i> argument. In this case, the events will not be reported to the calling process.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>spu_run</code>() returns the value of the <i>spu_status</i> register. On error, it returns -1 and sets <i>errno</i> to one of the error codes listed below. </p>
 <p> The <i>spu_status</i> register value is a bit mask of status codes and optionally a 14-bit code returned from the <code>stop-and-signal</code> instruction on the SPU. The bit masks for the status codes are:</p>
 <dl>
-<dt><code>0x02</code></p>
-<dd> SPU was stopped by a <code>stop-and-signal</code> instruction.</p>
-<dt><code>0x04</code></p>
-<dd> SPU was stopped by a <code>halt</code> instruction.</p>
-<dt><code>0x08</code></p>
-<dd> SPU is waiting for a channel.</p>
-<dt><code>0x10</code></p>
-<dd> SPU is in single-step mode.</p>
-<dt><code>0x20</code></p>
-<dd> SPU has tried to execute an invalid instruction.</p>
-<dt><code>0x40</code></p>
-<dd> SPU has tried to access an invalid channel.</p>
-<dt><code>0x3fff0000</code></p>
-<dd> The bits masked with this value contain the code returned from a <code>stop-and-signal</code> instruction. These bits are valid only if the 0x02 bit is set.</dl>
+<dt><code>0x02</code></dt>
+<dd> SPU was stopped by a <code>stop-and-signal</code> instruction.</dd>
+<dt><code>0x04</code></dt>
+<dd> SPU was stopped by a <code>halt</code> instruction.</dd>
+<dt><code>0x08</code></dt>
+<dd> SPU is waiting for a channel.</dd>
+<dt><code>0x10</code></dt>
+<dd> SPU is in single-step mode.</dd>
+<dt><code>0x20</code></dt>
+<dd> SPU has tried to execute an invalid instruction.</dd>
+<dt><code>0x40</code></dt>
+<dd> SPU has tried to access an invalid channel.</dd>
+<dt><code>0x3fff0000</code></dt>
+<dd> The bits masked with this value contain the code returned from a <code>stop-and-signal</code> instruction. These bits are valid only if the 0x02 bit is set.</dd></dl>
 <p> If <code>spu_run</code>() has not returned an error, one or more bits among the lower eight ones are always set.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>npc</i> is not a valid pointer, or <i>event</i> is non-NULL and an invalid pointer.</p>
-<dt><code>EINTR</code></p>
-<dd> A signal occurred while <code>spu_run</code>() was in progress; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7). The <i>npc</i> value has been updated to the new program counter value if necessary.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> is not a valid file descriptor returned from <code><a href="/docs/linux/man/2-spu_create/">spu_create</a></code>(2).</p>
-<dt><code>ENOMEM</code></p>
-<dd> There was not enough memory available to handle a page fault resulting from a Memory Flow Controller (MFC) direct memory access.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The functionality is not provided by the current system, because either the hardware does not provide SPUs or the spufs module is not loaded.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>npc</i> is not a valid pointer, or <i>event</i> is non-NULL and an invalid pointer.</dd>
+<dt><code>EINTR</code></dt>
+<dd> A signal occurred while <code>spu_run</code>() was in progress; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7). The <i>npc</i> value has been updated to the new program counter value if necessary.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor returned from <code><a href="/docs/linux/man/2-spu_create/">spu_create</a></code>(2).</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> There was not enough memory available to handle a page fault resulting from a Memory Flow Controller (MFC) direct memory access.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The functionality is not provided by the current system, because either the hardware does not provide SPUs or the spufs module is not loaded.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>spu_run</code>() system call was added to Linux in kernel 2.6.16.</p>
 <h2>CONFORMING TO</h2>

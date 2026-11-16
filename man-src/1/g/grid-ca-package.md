@@ -22,54 +22,54 @@ description: "grid-ca-package – Prepare a CA certificate, configuration, and p
 <p> <code>-help, -h, -usage</code></p>
 <dl>
 <dt>
-<dd> Display the command-line options to <code>grid-ca-sign</code> and exit.</dl>
+</dt><dd> Display the command-line options to <code>grid-ca-sign</code> and exit.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
 <dt>
-<dd> Display the version number of the <code>grid-ca-sign</code> command. The second form includes more details.</dl>
+</dt><dd> Display the version number of the <code>grid-ca-sign</code> command. The second form includes more details.</dd></dl>
 <p> <code>-ca </code><i>CA</i></p>
 <dl>
 <dt>
-<dd> Use the CA whose name matches the hash string <i>CA</i>. When invoked with this option, <code>grid-ca-sign</code> runs non-interactively.</dl>
+</dt><dd> Use the CA whose name matches the hash string <i>CA</i>. When invoked with this option, <code>grid-ca-sign</code> runs non-interactively.</dd></dl>
 <p> <code>-g</code></p>
 <dl>
 <dt>
-<dd> Create a GPT binary package in addition to the RPM script tarball. This package may be installed on other systems using the <code>gpt-install</code> program.</dl>
+</dt><dd> Create a GPT binary package in addition to the RPM script tarball. This package may be installed on other systems using the <code>gpt-install</code> program.</dd></dl>
 <p> <code>-b</code></p>
 <dl>
 <dt>
-<dd> Create a GPT binary package with GPT metadata located in the path expected by GPT 3.2 (used in Globus 2.0.0-5.0.x) instead of overrides the <i>-g</i> command-line option.</dl>
+</dt><dd> Create a GPT binary package with GPT metadata located in the path expected by GPT 3.2 (used in Globus 2.0.0-5.0.x) instead of overrides the <i>-g</i> command-line option.</dd></dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> Create a binary RPM package for the CA. This option currently only works on RPM-based distributions.</dl>
+</dt><dd> Create a binary RPM package for the CA. This option currently only works on RPM-based distributions.</dd></dl>
 <p> <code>-d</code></p>
 <dl>
 <dt>
-<dd> Create a binary Debian package for the CA. This option currently only works on Debian-based distributions.</dl>
+</dt><dd> Create a binary Debian package for the CA. This option currently only works on Debian-based distributions.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Package a Simple CA with hash 0146c503. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % grid-ca-sign -ca 0146c503
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Creating RPM source tarball... done
 globus_simple_ca_0146c503.tar.gz
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables affect the execution of <code>grid-ca-sign</code>: </p>
 <p> GLOBUS_LOCATION</p>
 <dl>
 <dt>
-<dd> Non-standard installation path of the Globus Toolkit.</dl>
+</dt><dd> Non-standard installation path of the Globus Toolkit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grid-cert-request/">grid-cert-request</a>(1), <a href="/docs/linux/man/1-grid-ca-sign/">grid-ca-sign</a>(1), grid-default-ca(1), <a href="/docs/linux/man/1-grid-ca-create/">grid-ca-create</a>(1)</p>
 <h2>AUTHOR</h2>

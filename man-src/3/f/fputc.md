@@ -21,3 +21,4 @@ int puts(const char *s);
 <h2>DESCRIPTION</h2>
 <p> <code>fputc</code>() writes the character <i>c</i>, cast to an <i>unsigned char</i>, to <i>stream</i>. </p>
 <p> <code>fputs</code>() writes the string <i>s</i> to <i>stream</i>, without its terminating null byte (&#8216;
+</p>

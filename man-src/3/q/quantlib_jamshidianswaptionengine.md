@@ -20,13 +20,13 @@ description: "QuantLib::JamshidianSwaptionEngine – Jamshidian swaption engine.
 <p>Jamshidian swaption engine. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The engine assumes that the exercise date equals the start date of the passed swap.</dl>
+<dd>The engine assumes that the exercise date equals the start date of the passed swap.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>.</p>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>JamshidianSwaptionEngine</code> (const boost::shared_ptr&lt; <code>OneFactorAffineModel</code> &gt; &amp; model, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; termStructure = <code>Handle</code>&lt;<code>YieldTermStructure</code>&gt;())</h3>
 <p><code>Note:</code></p>
 <dl COMPACT>
-<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dl>
+<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

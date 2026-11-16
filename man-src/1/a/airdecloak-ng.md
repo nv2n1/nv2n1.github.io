@@ -17,38 +17,38 @@ description: "airuncloak-ng – Removes wep cloaked framed from a pcap file."
 <p> Important requirement: The pcap file needs to have all packets (including beacons and all other &quot;useless&quot; packets) for the analysis (and if possible, prism/radiotap headers).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-i &lt;file&gt;</i></p>
-<dd> Path to the capture file.</p>
-<dt><i>&#8211;ssid &lt;ESSID&gt;</i></p>
-<dd> Essid of the network (not yet implemented) to filter.</p>
-<dt><i>&#8211;bssid &lt;BSSID&gt;</i></p>
-<dd> BSSID of the network to filter.</p>
-<dt><i>&#8211;null-packets</i></p>
-<dd> Assume that null packets can be cloaked.</p>
-<dt><i>&#8211;disable-base-filter</i></p>
-<dd> Do not apply base filter.</p>
-<dt><i>&#8211;drop-frag</i></p>
-<dd> Drop fragmented packets.</p>
-<dt><i>&#8211;filters &lt;filters&gt;</i></p>
-<dd> Apply different filters (separated by a comma). See below.</dl>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-i &lt;file&gt;</i></dt>
+<dd> Path to the capture file.</dd>
+<dt><i>&#8211;ssid &lt;ESSID&gt;</i></dt>
+<dd> Essid of the network (not yet implemented) to filter.</dd>
+<dt><i>&#8211;bssid &lt;BSSID&gt;</i></dt>
+<dd> BSSID of the network to filter.</dd>
+<dt><i>&#8211;null-packets</i></dt>
+<dd> Assume that null packets can be cloaked.</dd>
+<dt><i>&#8211;disable-base-filter</i></dt>
+<dd> Do not apply base filter.</dd>
+<dt><i>&#8211;drop-frag</i></dt>
+<dd> Drop fragmented packets.</dd>
+<dt><i>&#8211;filters &lt;filters&gt;</i></dt>
+<dd> Apply different filters (separated by a comma). See below.</dd></dl>
 <h2>FILTERS</h2>
 <dl>
-<dt><i>signal</i></p>
-<dd> Try to filter based on signal (prism or radiotap headers in the pcap file).</p>
-<dt><i>duplicate_sn</i></p>
-<dd> Remove all duplicate sequence numbers for both the AP and the client (that are close to each other).</p>
-<dt><i>duplicate_sn_ap</i></p>
-<dd> Remove duplicate sequence number for the AP only (that are close to each other).</p>
-<dt><i>duplicate_sn_client</i></p>
-<dd> Remove duplicate sequence number for the client only (that are close to each other).</p>
-<dt><i>consecutive_sn</i></p>
-<dd> Filter based on the fact that IV should be consecutive (only for AP).</p>
-<dt><i>duplicate_iv</i></p>
-<dd> Filter out all duplicate IV.</p>
-<dt><i>signal_dup_consec_sn</i></p>
-<dd> Use signal (if available), duplicate and consecutive sequence number (filtering is much more precise than using all these filters one by one).</dl>
+<dt><i>signal</i></dt>
+<dd> Try to filter based on signal (prism or radiotap headers in the pcap file).</dd>
+<dt><i>duplicate_sn</i></dt>
+<dd> Remove all duplicate sequence numbers for both the AP and the client (that are close to each other).</dd>
+<dt><i>duplicate_sn_ap</i></dt>
+<dd> Remove duplicate sequence number for the AP only (that are close to each other).</dd>
+<dt><i>duplicate_sn_client</i></dt>
+<dd> Remove duplicate sequence number for the client only (that are close to each other).</dd>
+<dt><i>consecutive_sn</i></dt>
+<dd> Filter based on the fact that IV should be consecutive (only for AP).</dd>
+<dt><i>duplicate_iv</i></dt>
+<dd> Filter out all duplicate IV.</dd>
+<dt><i>signal_dup_consec_sn</i></dt>
+<dd> Use signal (if available), duplicate and consecutive sequence number (filtering is much more precise than using all these filters one by one).</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

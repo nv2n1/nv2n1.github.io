@@ -15,16 +15,16 @@ description: "gserialver – version command"
 <p> Print the serialVersionUID of the specified classes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-classpath</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></p>
-<dd> Class path to use to find classes.</dl>
+<dt><code>-classpath</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dd> Class path to use to find classes.</dd></dl>
 <p> Standard options:</p>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print help text, then exit.</p>
-<dt><code>-version</code></p>
-<dd> Print version number, then exit.</p>
-<dt><code>-J</code><i></i><font SIZE="-1"><i>OPTION</i></font><i></i></p>
-<dd> Pass argument to the Java runtime.</dl>
+<dt><code>-help</code></dt>
+<dd> Print help text, then exit.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version number, then exit.</dd>
+<dt><code>-J</code><i></i><font SIZE="-1"><i>OPTION</i></font><i></i></dt>
+<dd> Pass argument to the Java runtime.</dd></dl>
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-javac/">javac</a></i>(1), &#8230;</p>

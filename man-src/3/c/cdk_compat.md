@@ -14,7 +14,6 @@ description: "cdk_compat – Cdk4 compatibility functions"
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk/cdk_compat.h&gt; </p>
 <pre><code>
-
 int getDirectoryContents(
     char *directory,
     char **list,
@@ -36,21 +35,21 @@ int splitString(
 <p> Finally, a few macro definitions are added to iron out naming inconsistencies across the Cdk4 header files.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>
-<dt><code>getDirectoryContents </code></p>
-<dd> This opens the current directory and reads the contents. Use <code>CDKgetDirectoryContents()</code> in new code.</p>
-<dt><code>readFile</code></p>
-<dd> This reads a file and sticks it into the <code>char&nbsp;<wbr>**</code> provided. Use <code>CDKreadFile()</code> for new code.</p>
-<dt><code>splitString</code></p>
-<dd> This splits a string into one or more parts given the split character. Use <code>CDKsplitString()</code> for new code.</dl>
+<dt><code>getDirectoryContents </code></dt>
+<dd> This opens the current directory and reads the contents. Use <code>CDKgetDirectoryContents()</code> in new code.</dd>
+<dt><code>readFile</code></dt>
+<dd> This reads a file and sticks it into the <code>char&nbsp;<wbr>**</code> provided. Use <code>CDKreadFile()</code> for new code.</dd>
+<dt><code>splitString</code></dt>
+<dd> This splits a string into one or more parts given the split character. Use <code>CDKsplitString()</code> for new code.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Start the porting process by changing the <code>#include</code>&#8216;s to use</p>
 <dl>
 <dt>
-<dd> #include &lt;cdk/cdk_compat.h&gt;</dl>
+</dt><dd> #include &lt;cdk/cdk_compat.h&gt;</dd></dl>
 <p> rather than</p>
 <dl>
 <dt>
-<dd> #include &lt;cdk.h&gt;</dl>
+</dt><dd> #include &lt;cdk.h&gt;</dd></dl>
 <p> Some adjustments of course are needed to make your compiler see the compatibility header file. A separate name was chosen so that it in turn can (by adjusting the include path) include either the old Cdk4 <code>cdk.h</code> or the new. If the old is included, you should link your program against the old library. Likewise, including the new requires that you link against the new library. </p>
 <p> That is the first step: making your program compile using the compatibility header file using the old headers and library. </p>
 <p> The next step is to get it to compile against the new headers and library. Most of the changes will require modifying bare references to certain pointers to wrap them with the <code>ObjOf()</code> and <code>ScreenOf()</code> macros. New Cdk uses these to provide functions which are easily shared among the different widget types. Your compiler should be able to tell you where the changes should be made. See the example programs which are included with Cdk as a guide. </p>

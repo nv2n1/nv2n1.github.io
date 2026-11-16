@@ -14,13 +14,13 @@ description: "datagram_poll – generic datagram poll"
 <p><i>file</i></p>
 <dl>
 <dd>
-<dd>file struct</dl>
+</dd><dd>file struct</dd></dl>
 <p> <i>sock</i></p>
 <dl>
-<dd>socket</dl>
+<dd>socket</dd></dl>
 <p> <i>wait</i></p>
 <dl>
-<dd>poll table</dl>
+<dd>poll table</dd></dl>
 <h2>Description</h2>
 <p>Datagram poll: Again totally generic. This also handles sequenced packet sockets providing the socket receive queue is only ever holding data ready to receive.</p>
 <h2>Note</h2>

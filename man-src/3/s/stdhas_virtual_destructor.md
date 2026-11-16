@@ -10,10 +10,8 @@ description: "std::has_virtual_destructor – std::has_virtual_destructor"
 <p>std::has_virtual_destructor &#8211; std::has_virtual_destructor</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct has_virtual_destructor;</code></pre>
 <p>If T is a type with a virtual destructor, provides the member constant value equal true. For any other type, value is false.<br />
 If T is a non-union class type, T shall be a complete type; otherwise, the behavior is undefined.<br />
@@ -39,14 +37,10 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;string&gt;
-
 #include &lt;stdexcept&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; &quot;std::string has a virtual destructor? &quot;

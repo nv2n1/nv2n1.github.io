@@ -30,7 +30,7 @@ description: "pam_env.conf, environment – the environment variables config fil
  PATH DEFAULT=${HOME}/bin:/usr/local/bin:/bin\
  :/usr/bin:/usr/local/bin/X11:/usr/bin/X11
  XDG_DATA_HOME @{HOME}/share/</pre>
-</dl>
+</dd></dl>
 <p> Silly examples of escaped variables, just to show how they work.</p>
 <dl>
 <dd>
@@ -38,7 +38,7 @@ description: "pam_env.conf, environment – the environment variables config fil
  DOLLARDOLLAR DEFAULT= OVERRIDE=\$${DOLLAR}
  DOLLARPLUS DEFAULT=\${REMOTEHOST}${REMOTEHOST}
  ATSIGN DEFAULT=&quot;&quot; OVERRIDE=\@</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-pam_env/">pam_env</a></code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7), <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7)</p>
 <h2>Author</h2>

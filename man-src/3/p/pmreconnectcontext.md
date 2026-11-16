@@ -25,18 +25,18 @@ description: "pmReconnectContext – reconnect to a PMAPI context"
 <p> When attempting to connect to a remote <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on a machine that is booting, <code>pmReconnectContext</code> could potentially block for a long time until the remote machine finishes its initialization. <code>pmReconnectContext</code> will abort and return an error if the connection has not been established after some specified interval has elapsed. The default interval is 5 seconds. This may be modified by setting <code>PMCD_CONNECT_TIMEOUT</code> in the environment to a real number of seconds for the desired timeout. This is most useful in cases where the remote host is at the end of a slow network, requiring longer latencies to establish the connection correctly.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>PMCD_CONNECT_TIMEOUT</code></p>
-<dd>Timeout period (in seconds) for <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) connection attempts.</p>
-<dt><code>PMCD_RECONNECT_TIMEOUT</code></p>
-<dd>Redefines the back-off intervals &#8211; refer to <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3).</dl>
+<dt><code>PMCD_CONNECT_TIMEOUT</code></dt>
+<dd>Timeout period (in seconds) for <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) connection attempts.</dd>
+<dt><code>PMCD_RECONNECT_TIMEOUT</code></dt>
+<dd>Redefines the back-off intervals &#8211; refer to <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/3-pmregisterderived/">pmRegisterDerived</a></code>(3), <code>pmRegisterDerivedMetric</code>(3) and <code><a href="/docs/linux/man/3-pmusecontext/">pmUseContext</a></code>(3).</p>
 <h2>Diagnostics</h2>
 <p><code>PM_ERR_NOCONTEXT</code></p>
 <dl>
-<dd><i>handle</i> does not identify a valid PMAPI context</dl>
+<dd><i>handle</i> does not identify a valid PMAPI context</dd></dl>
 <p> <code>-ETIMEDOUT</code></p>
 <dl>
-<dd>The re-try time has not elapsed, or the reconnection is attempted and fails.</dl>
+<dd>The re-try time has not elapsed, or the reconnection is attempted and fails.</dd></dl>
 <h2>Caveat</h2>
 <p>Applications that use <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3) should exercise caution because the static fields in <i>struct hostent</i> may not be preserved across some <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) calls. In particular, <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3) and <code><a href="/docs/linux/man/3-pmreconnectcontext/">pmReconnectContext</a></code>(3) both may call <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3) internally.</p>

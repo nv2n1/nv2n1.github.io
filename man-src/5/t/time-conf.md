@@ -29,12 +29,12 @@ description: "time.conf – configuration file for the pam_time module"
 <dl>
 <dd>
 <pre>login ; tty* &amp; !ttyp* ; !root ; !Al0000-2400</pre>
-</dl>
+</dd></dl>
 <p> Games (configured to use PAM) are only to be accessed out of working hours. This rule does not apply to the user <i>waster</i>:</p>
 <dl>
 <dd>
 <pre>games ; * ; !waster ; Wd0000-2400 | Wk1800-0800</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-pam_time/">pam_time</a></code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
 <h2>Author</h2>

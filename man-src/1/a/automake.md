@@ -15,105 +15,105 @@ description: "automake – manual page for automake 1.16.5"
 <p> Generate Makefile.in for configure from Makefile.am.</p>
 <h3>Operation modes:</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> print version number, then exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbosely list files processed</p>
-<dt><code>&#8211;no-force</code></p>
-<dd> only update Makefile.in&#8217;s that are out of date</p>
-<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></p>
-<dd> report the warnings falling in CATEGORY</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbosely list files processed</dd>
+<dt><code>&#8211;no-force</code></dt>
+<dd> only update Makefile.in&#8217;s that are out of date</dd>
+<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></dt>
+<dd> report the warnings falling in CATEGORY</dd></dl>
 <h3>Dependency tracking:</h3>
 <dl>
-<dt><code>-i</code>, <code>&#8211;ignore-deps</code></p>
-<dd> disable dependency tracking code</p>
-<dt><code>&#8211;include-deps</code></p>
-<dd> enable dependency tracking code</dl>
+<dt><code>-i</code>, <code>&#8211;ignore-deps</code></dt>
+<dd> disable dependency tracking code</dd>
+<dt><code>&#8211;include-deps</code></dt>
+<dd> enable dependency tracking code</dd></dl>
 <h3>Flavors:</h3>
 <dl>
-<dt><code>&#8211;foreign</code></p>
-<dd> set strictness to foreign</p>
-<dt><code>&#8211;gnits</code></p>
-<dd> set strictness to gnits</p>
-<dt><code>&#8211;gnu</code></p>
-<dd> set strictness to gnu</dl>
+<dt><code>&#8211;foreign</code></dt>
+<dd> set strictness to foreign</dd>
+<dt><code>&#8211;gnits</code></dt>
+<dd> set strictness to gnits</dd>
+<dt><code>&#8211;gnu</code></dt>
+<dd> set strictness to gnu</dd></dl>
 <h3>Library files:</h3>
 <dl>
-<dt><code>-a</code>, <code>&#8211;add-missing</code></p>
-<dd> add missing standard files to package</p>
-<dt><code>&#8211;libdir</code>=<i>,DIR/</i></p>
-<dd> set directory storing library files</p>
-<dt><code>&#8211;print-libdir</code></p>
-<dd> print directory storing library files</p>
-<dt><code>-c</code>, <code>&#8211;copy</code></p>
-<dd> with <code>-a</code>, copy missing files (default is symlink)</p>
-<dt><code>-f</code>, <code>&#8211;force-missing</code></p>
-<dd> force update of standard files</dl>
+<dt><code>-a</code>, <code>&#8211;add-missing</code></dt>
+<dd> add missing standard files to package</dd>
+<dt><code>&#8211;libdir</code>=<i>,DIR/</i></dt>
+<dd> set directory storing library files</dd>
+<dt><code>&#8211;print-libdir</code></dt>
+<dd> print directory storing library files</dd>
+<dt><code>-c</code>, <code>&#8211;copy</code></dt>
+<dd> with <code>-a</code>, copy missing files (default is symlink)</dd>
+<dt><code>-f</code>, <code>&#8211;force-missing</code></dt>
+<dd> force update of standard files</dd></dl>
 <h3>Warning categories include:</h3>
 <dl>
-<dt>cross</p>
-<dd> cross compilation issues</p>
-<dt>gnu</p>
-<dd> GNU coding standards (default in gnu and gnits modes)</p>
-<dt>obsolete</p>
-<dd> obsolete features or constructions (default)</p>
-<dt>override</p>
-<dd> user redefinitions of Automake rules or variables</p>
-<dt>portability</p>
-<dd> portability issues (default in gnu and gnits modes)</p>
-<dt>portability-recursive</p>
-<dd> nested Make variables (default with <code>-Wportability</code>)</p>
-<dt>extra-portability</p>
-<dd> extra portability issues related to obscure tools</p>
-<dt>syntax</p>
-<dd> dubious syntactic constructs (default)</p>
-<dt>unsupported</p>
-<dd> unsupported or incomplete features (default)</p>
-<dt>all</p>
-<dd> all the warnings</p>
-<dt>no-CATEGORY</p>
-<dd> turn off warnings in CATEGORY</p>
-<dt>none</p>
-<dd> turn off all the warnings</p>
-<dt>error</p>
-<dd> treat warnings as errors</dl>
+<dt>cross</dt>
+<dd> cross compilation issues</dd>
+<dt>gnu</dt>
+<dd> GNU coding standards (default in gnu and gnits modes)</dd>
+<dt>obsolete</dt>
+<dd> obsolete features or constructions (default)</dd>
+<dt>override</dt>
+<dd> user redefinitions of Automake rules or variables</dd>
+<dt>portability</dt>
+<dd> portability issues (default in gnu and gnits modes)</dd>
+<dt>portability-recursive</dt>
+<dd> nested Make variables (default with <code>-Wportability</code>)</dd>
+<dt>extra-portability</dt>
+<dd> extra portability issues related to obscure tools</dd>
+<dt>syntax</dt>
+<dd> dubious syntactic constructs (default)</dd>
+<dt>unsupported</dt>
+<dd> unsupported or incomplete features (default)</dd>
+<dt>all</dt>
+<dd> all the warnings</dd>
+<dt>no-CATEGORY</dt>
+<dd> turn off warnings in CATEGORY</dd>
+<dt>none</dt>
+<dd> turn off all the warnings</dd>
+<dt>error</dt>
+<dd> treat warnings as errors</dd></dl>
 <h3>Files automatically distributed if found (always):</h3>
 <dl>
-<dt>ABOUT-GNU</p>
-<dd> TODO install-sh mdate-sh</p>
-<dt>ABOUT-NLS</p>
-<dd> ar-lib libversion.in missing</p>
-<dt>BACKLOG</p>
-<dd> compile ltcf-c.sh mkinstalldirs</p>
-<dt>COPYING</p>
-<dd> config.guess ltcf-cxx.sh py-compile</p>
-<dt>COPYING.DOC</p>
-<dd> config.rpath ltcf-gcj.sh texinfo.tex</p>
-<dt>COPYING.LESSER</p>
-<dd> config.sub ltconfig ylwrap</p>
-<dt>COPYING.LIB</p>
-<dd> depcomp ltmain.sh</dl>
+<dt>ABOUT-GNU</dt>
+<dd> TODO install-sh mdate-sh</dd>
+<dt>ABOUT-NLS</dt>
+<dd> ar-lib libversion.in missing</dd>
+<dt>BACKLOG</dt>
+<dd> compile ltcf-c.sh mkinstalldirs</dd>
+<dt>COPYING</dt>
+<dd> config.guess ltcf-cxx.sh py-compile</dd>
+<dt>COPYING.DOC</dt>
+<dd> config.rpath ltcf-gcj.sh texinfo.tex</dd>
+<dt>COPYING.LESSER</dt>
+<dd> config.sub ltconfig ylwrap</dd>
+<dt>COPYING.LIB</dt>
+<dd> depcomp ltmain.sh</dd></dl>
 <h3>Files automatically distributed if found (as .md if needed):</h3>
 <dl>
-<dt>AUTHORS[.md]</p>
-<dd> INSTALL[.md] README[.md] THANKS[.md]</p>
-<dt>ChangeLog[.md]</p>
-<dd> NEWS[.md]</dl>
+<dt>AUTHORS[.md]</dt>
+<dd> INSTALL[.md] README[.md] THANKS[.md]</dd>
+<dt>ChangeLog[.md]</dt>
+<dd> NEWS[.md]</dd></dl>
 <h3>Files automatically distributed if found (under certain conditions):</h3>
 <dl>
-<dt>README-alpha[.md]</p>
-<dd> config.h.bot configure configure.in</p>
-<dt>acconfig.h</p>
-<dd> config.h.top configure.ac stamp-vti</p>
+<dt>README-alpha[.md]</dt>
+<dd> config.h.bot configure configure.in</dd>
+<dt>acconfig.h</dt>
+<dd> config.h.top configure.ac stamp-vti</dd>
 <dt>
-<dd> aclocal.m4</dl>
+</dt><dd> aclocal.m4</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Tom Tromey &lt;tromey [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> and Alexandre Duret-Lutz &lt;adl [at] gnu.org&gt;.</dl>
+</dt><dd> and Alexandre Duret-Lutz &lt;adl [at] gnu.org&gt;.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-automake [at] gnu.org&gt;.<br />
  GNU Automake home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/automake/">https://www.gnu.org/software/automake/</a>&gt;.<br />
@@ -125,6 +125,6 @@ description: "automake – manual page for automake 1.16.5"
 <p> The full documentation for <code>automake</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>automake</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info automake</code></dl>
+</dt><dd> <code>info automake</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

@@ -18,8 +18,8 @@ description: "IsCursorKey, IsFunctionKey, IsKeypadKey, IsMiscFunctionKey, IsModi
 <p> int IsPrivateKeypadKey(KeySym <i>keysym</i>);</p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>keysym</i></p>
-<dd>Specifies the KeySym that is to be tested.</dl>
+<dt><i>keysym</i></dt>
+<dd>Specifies the KeySym that is to be tested.</dd></dl>
 <h2>Description</h2>
 <p>The <code>IsCursorKey</code> macro returns <code>True</code> if the specified KeySym is a cursor key. </p>
 <p> The <code>IsFunctionKey</code> macro returns <code>True</code> if the KeySym is a function key. </p>

@@ -11,10 +11,8 @@ std::binomial_distribution - std::binomial_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;random&gt;
-
     template &lt;class IntType = int&gt;
     (since C++ 11)
-
         class binomial_distribution;</code></pre> 
 Produces random non-negative integer values i, distributed according to discrete probability function: \(P(i|t,p) = \binom{t}{i} \cdot p^i \cdot (1-p)^{t-i}\)P(i|t,p) =⎛
 ⎜
@@ -73,16 +71,11 @@ operator&gt;&gt;
 
 Plot of binomial distribution with probability of success of each trial exactly 0.5, illustrating the relationship with the pascal triangle (the probabilities that none, 1, 2, 3, or all four of the 4 trials will be successful in this case are 1:4:6:4:1) 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

@@ -14,29 +14,11 @@ description: "std::discrete_distribution< _IntType >::param_type –"
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>template&lt;typename _InputIterator &gt; param_type (_InputIterator __wbegin, _InputIterator __wend)
-
-
-
 param_type (initializer_list&lt; double &gt; __wil)
-
-
-
 template&lt;typename _Func &gt; param_type (size_t __nw, double __xmin, double __xmax, _Func __fw)
-
-
-
 param_type (const param_type &amp;)=default
-
-
-
 param_type &amp; operator= (const param_type &amp;)=default
-
-
-
 std::vector&lt; double &gt; probabilities () const
-
-
-
 Friends</code></pre>
 <p> class <code>discrete_distribution&lt; _IntType &gt;</code> </p>
 <p> bool <code>operator==</code> (const <code>param_type</code> &amp;__p1, const <code>param_type</code> &amp;__p2)</p>

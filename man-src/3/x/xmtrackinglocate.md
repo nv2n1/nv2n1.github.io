@@ -18,12 +18,12 @@ description: "XmTrackingLocate — A Toolkit function that provides a modal inte
 <p><code>XmTrackingLocate</code> provides a modal interface for selection of a component. It is intended to support context help. This function is implemented as <code>XmTrackingEvent</code>. </p>
 <p> <code>NOTE:</code> This function is obsolete and exists for compatibility with previous releases. It has been replaced by <code>XmTrackingEvent</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the widget ID of a widget to use as the basis of the modal interaction. That is, the widget within which the interaction must occur, usually a top-level shell.</p>
-<dt><i>cursor</i></p>
-<dd>Specifies the cursor to be used for the pointer during the interaction. This is a standard X cursor name.</p>
-<dt><i>confine_to</i></p>
-<dd>Specifies whether or not the cursor should be confined to <i>widget</i></dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget ID of a widget to use as the basis of the modal interaction. That is, the widget within which the interaction must occur, usually a top-level shell.</dd>
+<dt><i>cursor</i></dt>
+<dd>Specifies the cursor to be used for the pointer during the interaction. This is a standard X cursor name.</dd>
+<dt><i>confine_to</i></dt>
+<dd>Specifies whether or not the cursor should be confined to <i>widget</i></dd></dl>
 <h2>Return</h2>
 <p>Returns the widget or gadget that contains the pointer when <code>BSelect</code> is released or a key is released. If no widget or gadget contains the pointer, the function returns NULL.</p>
 <h2>Related</h2>

@@ -28,11 +28,11 @@ rlPerfTime_RunsInTime command[time][runs]
 </code></pre>
 <dl>
 <dt>command
-<dd> Command to run.
-<dt>time
-<dd> Time in seconds (optional, default=30).
-<dt>runs
-<dd> Number of averaged runs (optional, default=3).</dl>
+</dt><dd> Command to run.
+</dd><dt>time
+</dt><dd> Time in seconds (optional, default=30).
+</dd><dt>runs
+</dt><dd> Number of averaged runs (optional, default=3).</dd></dl>
  
 
  <i>rlPerfTime_AvgFromRuns</i> 
@@ -44,19 +44,18 @@ rlPerfTime_AvgFromRuns command[count][warmup]
 </code></pre>
 <dl>
 <dt>command
-<dd> Command to run.
-<dt>count
-<dd> Times to run (optional, default=3).
-<dt>warmup
-<dd> Warm-up run, run if this option is not ``warmup'' (optional, default=``warmup'')</dl>
+</dt><dd> Command to run.
+</dd><dt>count
+</dt><dd> Times to run (optional, default=3).
+</dd><dt>warmup
+</dt><dd> Warm-up run, run if this option is not ``warmup'' (optional, default=``warmup'')</dd></dl>
 
 <h2>AUTHORS</h2>
 
 <dl>
 <dt>&bull;
-<dd> Petr Muller &lt;pmuller [at] redhat.com&gt; 
-
-</dl>
+</dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt; 
+</dd></dl>
 
 <h2>Index</h2>
 

@@ -11,18 +11,14 @@ description: "std::filesystem::path::operator= – std::filesystem::path::operat
 <h2>Synopsis</h2>
 <pre><code>path &amp;operator=(const path &amp;p);
 (1)(since C++ 17)
-
     path &amp;
     operator=(path &amp;&amp;p) noexcept;
 (2)(since C++ 17)
-
     path &amp;
     operator=(string_type &amp;&amp;source);
 (3)(since C++ 17)
-
     template &lt;class Source&gt;
     (4)(since C++ 17)
-
         path &amp;
         operator=(const Source &amp;source);</code></pre>
 <p>1) Replaces the contents of *this with a pathname whose both native and generic format representations equal those of p.<br />
@@ -39,11 +35,8 @@ source &#8211; char8_t,<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     fs::path p = &quot;C:/users/abcdef/AppData/Local&quot;;
     p = p / &quot;Temp&quot;; // move assignment

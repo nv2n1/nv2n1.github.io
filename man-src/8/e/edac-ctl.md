@@ -14,22 +14,22 @@ description: "edac-ctl – EDAC admin utility"
 <p>The <code>edac-ctl</code> program is a <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1) script which performs some useful administration tasks for EDAC (Error Detection and Correction) drivers. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Display a brief usage message.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Quiet operation.</p>
-<dt><code>&#8211;mainboard</code></p>
-<dd>Print mainboard vendor and model for this hardware, if available. This option requires that the <code><a href="/docs/linux/man/8-dmidecode/">dmidecode</a></code>(8) utility be installed, and must be run as root.</p>
-<dt><code>&#8211;status</code></p>
-<dd>Print the status of EDAC drivers (loaded or unloaded).</p>
-<dt><code>&#8211;register-labels</code></p>
-<dd>Register motherboard DIMM labels into EDAC driver sysfs files. This option uses the detected mainboard manufacturer and model number in combination with a &quot;labels database&quot; found in any of the files under /etc/edac/labels.d/* or in the labels.db file at /etc/edac/labels.db. An entry for the current hardware must exist in the labels database for this option to do anything.</p>
-<dt><code>&#8211;print-labels</code></p>
-<dd>Display the configured labels for the current hardware, as well as the current labels registered with EDAC.</p>
-<dt><code>&#8211;delay=N</code></p>
-<dd>Delay N seconds before writing DIMM labels.</p>
-<dt><code>&#8211;labeldb=DB</code></p>
-<dd>Specify an alternate location for the labels database. </p>
+<dt><code>&#8211;help</code></dt>
+<dd>Display a brief usage message.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Quiet operation.</dd>
+<dt><code>&#8211;mainboard</code></dt>
+<dd>Print mainboard vendor and model for this hardware, if available. This option requires that the <code><a href="/docs/linux/man/8-dmidecode/">dmidecode</a></code>(8) utility be installed, and must be run as root.</dd>
+<dt><code>&#8211;status</code></dt>
+<dd>Print the status of EDAC drivers (loaded or unloaded).</dd>
+<dt><code>&#8211;register-labels</code></dt>
+<dd>Register motherboard DIMM labels into EDAC driver sysfs files. This option uses the detected mainboard manufacturer and model number in combination with a &quot;labels database&quot; found in any of the files under /etc/edac/labels.d/* or in the labels.db file at /etc/edac/labels.db. An entry for the current hardware must exist in the labels database for this option to do anything.</dd>
+<dt><code>&#8211;print-labels</code></dt>
+<dd>Display the configured labels for the current hardware, as well as the current labels registered with EDAC.</dd>
+<dt><code>&#8211;delay=N</code></dt>
+<dd>Delay N seconds before writing DIMM labels.</dd>
+<dt><code>&#8211;labeldb=DB</code></dt>
+<dd>Specify an alternate location for the labels database. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-edac/">edac</a></code>(3), <code><a href="/docs/linux/man/1-edac-util/">edac-util</a></code>(1) </p>

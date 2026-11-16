@@ -20,50 +20,50 @@ description: "innd – InterNetNews daemon"
 <h2>Options</h2>
 <p>For the options below that override <i>inn.conf</i> settings, see <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5) for the default values if neither the <i>inn.conf</i> setting nor the command-line option is given.</p>
 <dl>
-<dt><code>-4</code> <i>address</i></p>
-<dd>Normally, <code>innd</code> binds to all local <font SIZE="-1">IP</font> addresses (unless <i>bindaddress</i> is set in <i>inn.conf</i>). If this option is given, it specifies the <font SIZE="-1">IP</font> address that <font SIZE="-1">INN</font> should bind as. This is only relevant for servers with multiple local <font SIZE="-1">IP</font> addresses. The <font SIZE="-1">IP</font> address must be in dotted-quad (<tt>&quot;nnn.nnn.nnn.nnn&quot;</tt>) format. </p>
+<dt><code>-4</code> <i>address</i></dt>
+<dd>Normally, <code>innd</code> binds to all local <font SIZE="-1">IP</font> addresses (unless <i>bindaddress</i> is set in <i>inn.conf</i>). If this option is given, it specifies the <font SIZE="-1">IP</font> address that <font SIZE="-1">INN</font> should bind as. This is only relevant for servers with multiple local <font SIZE="-1">IP</font> addresses. The <font SIZE="-1">IP</font> address must be in dotted-quad (<tt>&quot;nnn.nnn.nnn.nnn&quot;</tt>) format. </dd>
 <p> If this option is specified, it&#8217;s the same as setting <i>bindaddress</i> in <i>inn.conf</i> and may cause changes in whether <font SIZE="-1">INN</font> binds to an IPv6 address as well. See <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5) for more details and also the <code>-6</code> flag for <code>innd</code>.</p>
-<dt><code>-6</code> <i>address</i></p>
-<dd>Only applies when <font SIZE="-1">INN</font> has been built with IPv6 support. Normally <code>innd</code> binds to all local <font SIZE="-1">IP</font> addresses (unless <i>bindaddress6</i> is set in <i>inn.conf</i>). If this option is given, it specifies the IPv6 address that <font SIZE="-1">INN</font> should bind to. The IPv6 address must be in colon-separated <font SIZE="-1">RFC</font>&nbsp;<wbr>4291 format (<tt>&quot;n:n:n:n:n:n:n:n&quot;</tt>). </p>
+<dt><code>-6</code> <i>address</i></dt>
+<dd>Only applies when <font SIZE="-1">INN</font> has been built with IPv6 support. Normally <code>innd</code> binds to all local <font SIZE="-1">IP</font> addresses (unless <i>bindaddress6</i> is set in <i>inn.conf</i>). If this option is given, it specifies the IPv6 address that <font SIZE="-1">INN</font> should bind to. The IPv6 address must be in colon-separated <font SIZE="-1">RFC</font>&nbsp;<wbr>4291 format (<tt>&quot;n:n:n:n:n:n:n:n&quot;</tt>). </dd>
 <p> If this option is specified, it&#8217;s the same as setting <i>bindaddress6</i> in <i>inn.conf</i> and may cause changes in whether <font SIZE="-1">INN</font> binds to an IPv4 address as well. See <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5) for more details and also the <code>-4</code> flag for <code>innd</code>.</p>
-<dt><code>-a</code></p>
-<dd>By default, if a host connects to <code>innd</code> but is not listed in <i>incoming.conf</i>, the connection is handed off to <code>nnrpd</code> (or rejected if <i>noreader</i> is set in <i>inn.conf</i>). If <code>-a</code> is given, <i>incoming.conf</i> is ignored and any host can connect and transfer articles. This flag should never be used with an accessible server connected to Usenet; it would open the server up for all sorts of abuse.</p>
-<dt><code>-c</code> <i>days</i></p>
-<dd><code>innd</code> normally rejects any article that is older (in days) than the value of <i>artcutoff</i> in <i>inn.conf</i>. This option, if given, overrides the value of that setting. If <i>days</i> is 0, this check is suppressed and <code>innd</code> will accept articles regardless of how old they are.</p>
-<dt><code>-C</code></p>
-<dd>This flag tells <code>innd</code> to accept and propagate but not actually process cancel or supersedes messages. This is intended for sites concerned about abuse of cancels, or that wish to use another cancel mechanism with stronger authentication.</p>
-<dt><code>-d</code>, <code>-f</code></p>
-<dd><code>innd</code> normally puts itself into the background, points its standard output and error to log files, and disassociates itself from the terminal. Using <code>-d</code> prevents all of this, resulting in log messages being written to standard output; this is generally useful only for debugging. Using <code>-f</code> prevents the backgrounding and disassociation but still redirects output; it may be useful if you want to monitor <code>innd</code> with a program that would be confused by forks.</p>
-<dt><code>-H</code> <i>count</i>, <code>-T</code> <i>count</i>, <code>-X</code> <i>seconds</i></p>
-<dd>These flags control the number of connections per <i>seconds</i> seconds that are allowed. This code is meant to protect your server from newsreader clients that make too many connections per minute (and therefore these flags are probably only useful when <code>innd</code> is spawning <code>nnrpd</code>). You probably should not use these options unless you&#8217;re having problems. The table used for this check is fixed at 128 entries and is used as a ring; the size was chosen to make calculating the index easy and to be fairly sure that it won&#8217;t run out of space. In practice, it is unlikely that even half the table will be used at any given moment. </p>
+<dt><code>-a</code></dt>
+<dd>By default, if a host connects to <code>innd</code> but is not listed in <i>incoming.conf</i>, the connection is handed off to <code>nnrpd</code> (or rejected if <i>noreader</i> is set in <i>inn.conf</i>). If <code>-a</code> is given, <i>incoming.conf</i> is ignored and any host can connect and transfer articles. This flag should never be used with an accessible server connected to Usenet; it would open the server up for all sorts of abuse.</dd>
+<dt><code>-c</code> <i>days</i></dt>
+<dd><code>innd</code> normally rejects any article that is older (in days) than the value of <i>artcutoff</i> in <i>inn.conf</i>. This option, if given, overrides the value of that setting. If <i>days</i> is 0, this check is suppressed and <code>innd</code> will accept articles regardless of how old they are.</dd>
+<dt><code>-C</code></dt>
+<dd>This flag tells <code>innd</code> to accept and propagate but not actually process cancel or supersedes messages. This is intended for sites concerned about abuse of cancels, or that wish to use another cancel mechanism with stronger authentication.</dd>
+<dt><code>-d</code>, <code>-f</code></dt>
+<dd><code>innd</code> normally puts itself into the background, points its standard output and error to log files, and disassociates itself from the terminal. Using <code>-d</code> prevents all of this, resulting in log messages being written to standard output; this is generally useful only for debugging. Using <code>-f</code> prevents the backgrounding and disassociation but still redirects output; it may be useful if you want to monitor <code>innd</code> with a program that would be confused by forks.</dd>
+<dt><code>-H</code> <i>count</i>, <code>-T</code> <i>count</i>, <code>-X</code> <i>seconds</i></dt>
+<dd>These flags control the number of connections per <i>seconds</i> seconds that are allowed. This code is meant to protect your server from newsreader clients that make too many connections per minute (and therefore these flags are probably only useful when <code>innd</code> is spawning <code>nnrpd</code>). You probably should not use these options unless you&#8217;re having problems. The table used for this check is fixed at 128 entries and is used as a ring; the size was chosen to make calculating the index easy and to be fairly sure that it won&#8217;t run out of space. In practice, it is unlikely that even half the table will be used at any given moment. </dd>
 <p> The <code>-H</code> flag limits the number of times a host is allowed to connect to the server per the time interval given by <code>-X</code>. The default is <tt>2</tt>. </p>
 <p> The <code>-T</code> flag limits the total number of incoming connections per the time interval given by <code>-X</code>. The maximum value is <tt>128</tt>, and the default is <tt>60</tt>. </p>
 <p> Note that the time interval given by <code>-X</code> is set to <tt>0</tt> by default, that is to say no control is done on the number of connections.</p>
-<dt><code>-i</code> <i>count</i></p>
-<dd><code>innd</code> normally allows a maximum number of concurrent <font SIZE="-1">NNTP</font> connections given by the value of <i>maxconnections</i> in <i>inn.conf</i>. This option, if given, overrides the value of that setting. If <i>count</i> is <tt>0</tt>, this check is suppressed.</p>
-<dt><code>-l</code> <i>size</i></p>
-<dd><code>innd</code> normally rejects any article larger than the value of <i>maxartsize</i> in <i>inn.conf</i>. This option, if given, overrides the value of that setting and specifies a maximum article size of <i>size</i>. If <i>size</i> is <tt>0</tt>, this check is suppressed.</p>
-<dt><code>-m</code> <i>mode</i></p>
-<dd>Normally, <code>innd</code> starts in the <tt>&quot;running&quot;</tt> mode. If this option is given, it specifies what mode <code>innd</code> should start in. <i>mode</i> should begin with one of <tt>&quot;g&quot;</tt>, <tt>&quot;p&quot;</tt>, or <tt>&quot;t&quot;</tt>, and the starting mode will be set to <tt>&quot;running&quot;</tt>, <tt>&quot;paused&quot;</tt>, or <tt>&quot;throttled&quot;</tt>, respectively, based on that initial letter. (<tt>&quot;g&quot;</tt> is short for <tt>&quot;go&quot;</tt>.)</p>
-<dt><code>-N</code></p>
-<dd>If this option is given, any filters (Perl or Python) are disabled before <code>innd</code> starts (normally, filters default to being enabled). The filters can be enabled after <code>innd</code> has started with <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8).</p>
-<dt><code>-n</code> <i>flag</i></p>
-<dd>Whether <code>innd</code> allows (and hands off to <code>nnrpd</code>) reader connections while paused or throttled is normally determined by the value of <i>readerswhenstopped</i> in <i>inn.conf</i>. This option, if given, overrides that value. If <i>flag</i> is <tt>&quot;n&quot;</tt>, <code>innd</code> will not allow readers if it is paused or throttled. If <i>flag</i> is <tt>&quot;y&quot;</tt>, readers will be allowed regardless of <code>innd</code>&#8216;s operating mode.</p>
-<dt><code>-o</code> <i>count</i></p>
-<dd>This flag limits the number of file descriptors that are available for outgoing file feeds. The default is the number of available file descriptors minus some reserved for internal use (which could potentially starve <code>innd</code> of descriptors to use for accepting new connections). If <code>innd</code> has more file feeds than <i>count</i>, some of them will be buffered and only written out periodically. </p>
+<dt><code>-i</code> <i>count</i></dt>
+<dd><code>innd</code> normally allows a maximum number of concurrent <font SIZE="-1">NNTP</font> connections given by the value of <i>maxconnections</i> in <i>inn.conf</i>. This option, if given, overrides the value of that setting. If <i>count</i> is <tt>0</tt>, this check is suppressed.</dd>
+<dt><code>-l</code> <i>size</i></dt>
+<dd><code>innd</code> normally rejects any article larger than the value of <i>maxartsize</i> in <i>inn.conf</i>. This option, if given, overrides the value of that setting and specifies a maximum article size of <i>size</i>. If <i>size</i> is <tt>0</tt>, this check is suppressed.</dd>
+<dt><code>-m</code> <i>mode</i></dt>
+<dd>Normally, <code>innd</code> starts in the <tt>&quot;running&quot;</tt> mode. If this option is given, it specifies what mode <code>innd</code> should start in. <i>mode</i> should begin with one of <tt>&quot;g&quot;</tt>, <tt>&quot;p&quot;</tt>, or <tt>&quot;t&quot;</tt>, and the starting mode will be set to <tt>&quot;running&quot;</tt>, <tt>&quot;paused&quot;</tt>, or <tt>&quot;throttled&quot;</tt>, respectively, based on that initial letter. (<tt>&quot;g&quot;</tt> is short for <tt>&quot;go&quot;</tt>.)</dd>
+<dt><code>-N</code></dt>
+<dd>If this option is given, any filters (Perl or Python) are disabled before <code>innd</code> starts (normally, filters default to being enabled). The filters can be enabled after <code>innd</code> has started with <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8).</dd>
+<dt><code>-n</code> <i>flag</i></dt>
+<dd>Whether <code>innd</code> allows (and hands off to <code>nnrpd</code>) reader connections while paused or throttled is normally determined by the value of <i>readerswhenstopped</i> in <i>inn.conf</i>. This option, if given, overrides that value. If <i>flag</i> is <tt>&quot;n&quot;</tt>, <code>innd</code> will not allow readers if it is paused or throttled. If <i>flag</i> is <tt>&quot;y&quot;</tt>, readers will be allowed regardless of <code>innd</code>&#8216;s operating mode.</dd>
+<dt><code>-o</code> <i>count</i></dt>
+<dd>This flag limits the number of file descriptors that are available for outgoing file feeds. The default is the number of available file descriptors minus some reserved for internal use (which could potentially starve <code>innd</code> of descriptors to use for accepting new connections). If <code>innd</code> has more file feeds than <i>count</i>, some of them will be buffered and only written out periodically. </dd>
 <p> Normally you never need to use this option, since the number of outgoing feeds is fixed, being the number of file feeds configured in <i>newsfeeds</i>, and is generally small (particularly given that <i><a href="/docs/linux/man/8-innfeed/">innfeed</a></i>(8) is now used for most outgoing feeds at large sites).</p>
-<dt><code>-P</code> <i>port</i></p>
-<dd>The port <code>innd</code> should listen on is normally given by the value of <i>port</i> in <i>inn.conf</i>. This option, if given, overrides that value and specifies the port that <code>innd</code> should bind to.</p>
-<dt><code>-r</code></p>
-<dd>Instructs <code>innd</code> to renumber the <i>active</i> file after starting, just as if a <tt>&quot;ctlinnd renumber&quot;</tt> command were sent.</p>
-<dt><code>-s</code></p>
-<dd>Just check the syntax of the <i>newsfeeds</i> file and exit. <code>innd</code> will exit with a non-zero status if any errors are found; the actual errors will be reported via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3).</p>
-<dt><code>-S</code></p>
-<dd>Report errors found in <i>incoming.conf</i> via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3) and exit normally. (Yes, this is less useful than it should be.)</p>
-<dt><code>-t</code> <i>seconds</i></p>
-<dd>Normally, <code>innd</code> will flush any changes to history and the <i>active</i> file after 300 seconds of inactivity. This option changes that timeout to <i>seconds</i>.</p>
-<dt><code>-u</code></p>
-<dd>The news log (the trace information for every article accepted by <code>innd</code>) is normally buffered. This option changes the log to be unbuffered.</dl>
+<dt><code>-P</code> <i>port</i></dt>
+<dd>The port <code>innd</code> should listen on is normally given by the value of <i>port</i> in <i>inn.conf</i>. This option, if given, overrides that value and specifies the port that <code>innd</code> should bind to.</dd>
+<dt><code>-r</code></dt>
+<dd>Instructs <code>innd</code> to renumber the <i>active</i> file after starting, just as if a <tt>&quot;ctlinnd renumber&quot;</tt> command were sent.</dd>
+<dt><code>-s</code></dt>
+<dd>Just check the syntax of the <i>newsfeeds</i> file and exit. <code>innd</code> will exit with a non-zero status if any errors are found; the actual errors will be reported via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3).</dd>
+<dt><code>-S</code></dt>
+<dd>Report errors found in <i>incoming.conf</i> via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3) and exit normally. (Yes, this is less useful than it should be.)</dd>
+<dt><code>-t</code> <i>seconds</i></dt>
+<dd>Normally, <code>innd</code> will flush any changes to history and the <i>active</i> file after 300 seconds of inactivity. This option changes that timeout to <i>seconds</i>.</dd>
+<dt><code>-u</code></dt>
+<dd>The news log (the trace information for every article accepted by <code>innd</code>) is normally buffered. This option changes the log to be unbuffered.</dd></dl>
 <h2>Control Messages</h2>
 <p>Arriving articles that have a Control: header are called &#8220;control messages&#8221;. Except for cancel messages, these messages are handled by <i><a href="/docs/linux/man/8-controlchan/">controlchan</a></i>(8) via a feed set up in <i>newsfeeds</i>. </p>
 <p> (Cancel messages update the history database, so they must be handled internally; the cost of syncing, locking, then unlocking would be too high given the number of cancel messages that are received. Note that if an article is cancelled before it is received by the news server, it will be rejected when it arrives since the history database has been updated; it is useful for rejecting spam before it arrives.) </p>
@@ -82,14 +82,14 @@ description: "innd – InterNetNews daemon"
 <h2>Protocol Differences</h2>
 <p><code>innd</code> implements the <font SIZE="-1">NNTP</font> commands defined in <font SIZE="-1">RFC</font>&nbsp;<wbr>3977 (<font SIZE="-1">NNTP</font>), <font SIZE="-1">RFC</font>&nbsp;<wbr>4643 (<font SIZE="-1">NNTP</font> authentication), <font SIZE="-1">RFC</font>&nbsp;<wbr>4644 (streaming <font SIZE="-1">NNTP</font> feeds) and <font SIZE="-1">RFC</font>&nbsp;<wbr>6048 (<font SIZE="-1">NNTP</font> <font SIZE="-1">LIST</font> additions) with the following differences:</p>
 <dl>
-<dt>1.</p>
-<dd>A batch transfer command, <font SIZE="-1">XBATCH</font> <i>byte-count</i>, is provided. This command will read <i>byte-count</i> bytes and store them for later processing by <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1) (which must be run separately, probably from cron). See <i><a href="/docs/linux/man/8-innxbatch/">innxbatch</a></i>(8) and <code>sendxbatches</code> for more details on this extension.</p>
-<dt>2.</p>
-<dd>As <font SIZE="-1">INN</font> is a mode-switching news server, <code>innd</code> implements a limited subset of the protocol useful for transferring news. The remaining commands are mostly only useful for readers and are implemented by <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8). Use of the <font SIZE="-1">MODE</font> <font SIZE="-1">READER</font> command will cause <code>innd</code> to pass the connection to <code>nnrpd</code>.</p>
-<dt>3.</p>
-<dd><code>innd</code> allows a wider syntax for wildmats.</p>
-<dt>4.</p>
-<dd>Three commands (<font SIZE="-1">IHAVE</font>, <font SIZE="-1">CHECK</font> and <font SIZE="-1">TAKETHIS</font>) will continue, for interoperability reasons, to return a reject code (respectively <tt>435</tt>, <tt>438</tt> and <tt>439</tt>) when the command contains a syntax error (which normally leads to <tt>501</tt>).</dl>
+<dt>1.</dt>
+<dd>A batch transfer command, <font SIZE="-1">XBATCH</font> <i>byte-count</i>, is provided. This command will read <i>byte-count</i> bytes and store them for later processing by <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1) (which must be run separately, probably from cron). See <i><a href="/docs/linux/man/8-innxbatch/">innxbatch</a></i>(8) and <code>sendxbatches</code> for more details on this extension.</dd>
+<dt>2.</dt>
+<dd>As <font SIZE="-1">INN</font> is a mode-switching news server, <code>innd</code> implements a limited subset of the protocol useful for transferring news. The remaining commands are mostly only useful for readers and are implemented by <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8). Use of the <font SIZE="-1">MODE</font> <font SIZE="-1">READER</font> command will cause <code>innd</code> to pass the connection to <code>nnrpd</code>.</dd>
+<dt>3.</dt>
+<dd><code>innd</code> allows a wider syntax for wildmats.</dd>
+<dt>4.</dt>
+<dd>Three commands (<font SIZE="-1">IHAVE</font>, <font SIZE="-1">CHECK</font> and <font SIZE="-1">TAKETHIS</font>) will continue, for interoperability reasons, to return a reject code (respectively <tt>435</tt>, <tt>438</tt> and <tt>439</tt>) when the command contains a syntax error (which normally leads to <tt>501</tt>).</dd></dl>
 <h2>Header Modifications</h2>
 <p><code>innd</code> modifies as few article headers as possible, although it could be better in this area. </p>
 <p> Empty headers and headers that consist of nothing but whitespace are dropped. </p>

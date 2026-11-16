@@ -54,8 +54,8 @@ description: "munin_script_selinux – Security Enhanced Linux Policy for the mu
 <p> <code>munin_script_exec_t</code> </p>
 <p> &#8211; Set files with the munin_script_exec_t type, if you want to transition an executable to the munin_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/www/cgi-bin/munin.*, /var/www/html/cgi/munin.*, /var/www/html/munin/cgi(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/www/cgi-bin/munin.*, /var/www/html/cgi/munin.*, /var/www/html/munin/cgi(/.*)? </dd>
 </dl>
 <p> <code>munin_script_tmp_t</code> </p>
 <p> &#8211; Set files with the munin_script_tmp_t type, if you want to store munin script temporary files in the /tmp directories. </p>

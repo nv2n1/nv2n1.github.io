@@ -13,11 +13,11 @@ description: "tpm_loadkey"
 <h2>Description</h2>
 <p>The program loads the key in BLOB-FILE into persistent storage and registers it using the UUID in UUID-FILE.</p>
 <dl>
-<dt>-r HOST</p>
-<dd>Perform operation on remote HOST.</p>
-<dt>-h</p>
-<dd>Display command usage info.</p>
-<dt>-v</p>
-<dd>Display command version info.</dl>
+<dt>-r HOST</dt>
+<dd>Perform operation on remote HOST.</dd>
+<dt>-h</dt>
+<dd>Display command usage info.</dd>
+<dt>-v</dt>
+<dd>Display command version info.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tpm_quote_tools/">tpm_quote_tools</a></code>(8), <code><a href="/docs/linux/man/8-tpm_mkuuid/">tpm_mkuuid</a></code>(8), <code><a href="/docs/linux/man/8-tpm_mkaik/">tpm_mkaik</a></code>(8), <code><a href="/docs/linux/man/8-tpm_unloadkey/">tpm_unloadkey</a></code>(8) </p>

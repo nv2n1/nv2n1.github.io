@@ -15,14 +15,14 @@ description: "podgrep – grep in pod sections only"
 <p> This program searches each paragraph in a pod document and prints each paragraph that matches the supplied pattern. This pod may be mixed with program code, such as in a module. </p>
 <p> Options are:</p>
 <dl>
-<dt>-i</p>
-<dd> means case insensitive match</p>
-<dt>-p</p>
-<dd> means page output though the user&#8217;s pager. The pager will be primed with an argument to search for the string. This highlights the result.</p>
-<dt>-f</p>
-<dd> means format output though the <i>pod2text</i> program.</p>
-<dt>-h</p>
-<dd> means check for matches in pod <tt>&quot;=head&quot;</tt> and <tt>&quot;=item&quot;</tt> headers alone, and to keep printing podagraphs until the next header is found.</dl>
+<dt>-i</dt>
+<dd> means case insensitive match</dd>
+<dt>-p</dt>
+<dd> means page output though the user&#8217;s pager. The pager will be primed with an argument to search for the string. This highlights the result.</dd>
+<dt>-f</dt>
+<dd> means format output though the <i>pod2text</i> program.</dd>
+<dt>-h</dt>
+<dd> means check for matches in pod <tt>&quot;=head&quot;</tt> and <tt>&quot;=item&quot;</tt> headers alone, and to keep printing podagraphs until the next header is found.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
     $ podgrep mail `pmpath CGI`

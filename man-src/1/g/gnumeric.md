@@ -22,74 +22,74 @@ description: "gnumeric – a GNOME spreadsheet application."
 <h3>Help options</h3>
 <p> <code>-?, &#8211;help</code> Show help message.</p>
 <dl>
-<dt><code>&#8211;usage</code></p>
-<dd> Displays a brief usage message. </p>
+<dt><code>&#8211;usage</code></dt>
+<dd> Displays a brief usage message. </dd>
 </dl>
 <h3>Gnumeric options</h3>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Displays the version number of the installed instance of <code>gnumeric</code>.</p>
-<dt><code>&#8211;no-splash</code></p>
-<dd> Start <code>gnumeric</code> without showing the splash screen. The splash screen is normally shown if loading files takes too long.</p>
-<dt><code>-L, &#8211;lib-dir=</code><i>STRING</i></p>
-<dd> Set the root library directory to STRING which should be a pathname.</p>
-<dt><code>-D, &#8211;data-dir=</code><i>STRING</i></p>
-<dd> Adjust the root data directory to STRING which should be a pathname. </p>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Displays the version number of the installed instance of <code>gnumeric</code>.</dd>
+<dt><code>&#8211;no-splash</code></dt>
+<dd> Start <code>gnumeric</code> without showing the splash screen. The splash screen is normally shown if loading files takes too long.</dd>
+<dt><code>-L, &#8211;lib-dir=</code><i>STRING</i></dt>
+<dd> Set the root library directory to STRING which should be a pathname.</dd>
+<dt><code>-D, &#8211;data-dir=</code><i>STRING</i></dt>
+<dd> Adjust the root data directory to STRING which should be a pathname. </dd>
 </dl>
 <h3>Options for window placement</h3>
 <dl>
-<dt><code>-g, &#8211;geometry=WIDTHxHEIGHT+XOFF+YOFF</p>
-<dd> Set the size and position of the first window. All units are in pixels. The X offset is from the left hand side of the screen, the Y offset is from the top of the screen. For example, -g=800&#215;600+20+30 will open a gnumeric window 800 pixels wide by 600 pixels high, with the left edge of gnumeric 20 pixels from the left of the screen and the top edge of gnumeric 30 pixels from the top of the screen.</p>
-<dt>&#8211;display=</code><i>DISPLAY</i></p>
-<dd> X display to use, where DISPLAY has the form machinename:Xdisplay.Screen. Note that the machine displaying gnumeric must have granted the machine running gnumeric the right to display (see xhost). </p>
-<dt><code>&#8211;screen=</code><i>SCREEN</i></p>
-<dd> X screen to use, a more compact form of the functionality described above. </p>
+<dt><code>-g, &#8211;geometry=WIDTHxHEIGHT+XOFF+YOFF</dt>
+<dd> Set the size and position of the first window. All units are in pixels. The X offset is from the left hand side of the screen, the Y offset is from the top of the screen. For example, -g=800&#215;600+20+30 will open a gnumeric window 800 pixels wide by 600 pixels high, with the left edge of gnumeric 20 pixels from the left of the screen and the top edge of gnumeric 30 pixels from the top of the screen.</dd>
+<dt>&#8211;display=</code><i>DISPLAY</i></dt>
+<dd> X display to use, where DISPLAY has the form machinename:Xdisplay.Screen. Note that the machine displaying gnumeric must have granted the machine running gnumeric the right to display (see xhost). </dd>
+<dt><code>&#8211;screen=</code><i>SCREEN</i></dt>
+<dd> X screen to use, a more compact form of the functionality described above. </dd>
 </dl>
 <h2>ADVANCED OPTIONS</h2>
 <h3>GNOME options</h3>
 <dl>
-<dt><code>&#8211;disable-sound</code></p>
-<dd> Disable sound server usage.</p>
-<dt><code>&#8211;enable-sound</code></p>
-<dd> Enable sound server usage.</p>
-<dt><code>&#8211;espeaker=</code><i>HOSTNAME:PORT</i></p>
-<dd> Host:port on which the sound server to use is running.</p>
-<dt><code>&#8211;disable-crash-dialog</code></p>
-<dd> Disable the bug submission dialog which appears if Gnumeric crashes. </p>
+<dt><code>&#8211;disable-sound</code></dt>
+<dd> Disable sound server usage.</dd>
+<dt><code>&#8211;enable-sound</code></dt>
+<dd> Enable sound server usage.</dd>
+<dt><code>&#8211;espeaker=</code><i>HOSTNAME:PORT</i></dt>
+<dd> Host:port on which the sound server to use is running.</dd>
+<dt><code>&#8211;disable-crash-dialog</code></dt>
+<dd> Disable the bug submission dialog which appears if Gnumeric crashes. </dd>
 </dl>
 <h3>GTK options</h3>
 <dl>
-<dt><code>&#8211;gdk-debug=</code><i>FLAGS</i></p>
-<dd> Gdk debugging flags to set.</p>
-<dt><code>&#8211;gdk-no-debug=</code><i>FLAGS</i></p>
-<dd> Gdk debugging flags to unset.</p>
-<dt><code>&#8211;sync</code></p>
-<dd> Make X calls synchronous.</p>
-<dt><code>&#8211;name=</code><i>NAME</i></p>
-<dd> Program name as used by the window manager.</p>
-<dt><code>&#8211;class=</code><i>CLASS</i></p>
-<dd> Program class as used by the window manager.</p>
-<dt><code>&#8211;gxid_host=</code><i>HOST</i></p>
-<dd> The host on which to contact the gxid daemon. This overrides the GXID_HOST environment variable. This option is only available if GTK+ has been configured with &#8211;gdk-target=x11.</p>
-<dt><code>&#8211;gxid_port=</code><i>PORT</i></p>
-<dd> The port for the connection to gxid. This overrides the GXID_PORT environment variable. This option is only available if GTK+ has been configured with &#8211;gdk-target=x11.</p>
-<dt><code>&#8211;gtk-debug=</code><i>FLAGS</i></p>
-<dd> Gtk+ debugging flags to set.</p>
-<dt><code>&#8211;gtk-no-debug=</code><i>FLAGS</i></p>
-<dd> Gtk+ debugging flags to unset.</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd> Make all warnings fatal.</p>
-<dt><code>&#8211;gtk-module=</code><i>MODULE</i></p>
-<dd> Load an additional Gtk module. </p>
+<dt><code>&#8211;gdk-debug=</code><i>FLAGS</i></dt>
+<dd> Gdk debugging flags to set.</dd>
+<dt><code>&#8211;gdk-no-debug=</code><i>FLAGS</i></dt>
+<dd> Gdk debugging flags to unset.</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Make X calls synchronous.</dd>
+<dt><code>&#8211;name=</code><i>NAME</i></dt>
+<dd> Program name as used by the window manager.</dd>
+<dt><code>&#8211;class=</code><i>CLASS</i></dt>
+<dd> Program class as used by the window manager.</dd>
+<dt><code>&#8211;gxid_host=</code><i>HOST</i></dt>
+<dd> The host on which to contact the gxid daemon. This overrides the GXID_HOST environment variable. This option is only available if GTK+ has been configured with &#8211;gdk-target=x11.</dd>
+<dt><code>&#8211;gxid_port=</code><i>PORT</i></dt>
+<dd> The port for the connection to gxid. This overrides the GXID_PORT environment variable. This option is only available if GTK+ has been configured with &#8211;gdk-target=x11.</dd>
+<dt><code>&#8211;gtk-debug=</code><i>FLAGS</i></dt>
+<dd> Gtk+ debugging flags to set.</dd>
+<dt><code>&#8211;gtk-no-debug=</code><i>FLAGS</i></dt>
+<dd> Gtk+ debugging flags to unset.</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd> Make all warnings fatal.</dd>
+<dt><code>&#8211;gtk-module=</code><i>MODULE</i></dt>
+<dd> Load an additional Gtk module. </dd>
 </dl>
 <h3>Session management options</h3>
 <dl>
-<dt><code>&#8211;sm-client-id=</code><i>ID</i></p>
-<dd> Specify session management ID.</p>
-<dt><code>&#8211;sm-config-prefix=</code><i>PREFIX</i></p>
-<dd> Specify prefix of saved configuration.</p>
-<dt><code>&#8211;sm-disable</code></p>
-<dd> Disable connection to session manager. </p>
+<dt><code>&#8211;sm-client-id=</code><i>ID</i></dt>
+<dd> Specify session management ID.</dd>
+<dt><code>&#8211;sm-config-prefix=</code><i>PREFIX</i></dt>
+<dd> Specify prefix of saved configuration.</dd>
+<dt><code>&#8211;sm-disable</code></dt>
+<dd> Disable connection to session manager. </dd>
 </dl>
 <h2>VERSION</h2>
 <p> This manual page describes <code>gnumeric</code> version 1.8. </p>

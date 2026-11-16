@@ -17,5 +17,5 @@ description: "mlx4dv – Direct verbs for mlx4 devices This is low level access 
 <p><code>ibv_post_send</code>(3), <code>verbs</code>(7) </p>
 <h2>Authors</h2>
 <dl>
-<dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</p>
-<dd></dl>
+<dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</dt>
+<dd></dd></dl>

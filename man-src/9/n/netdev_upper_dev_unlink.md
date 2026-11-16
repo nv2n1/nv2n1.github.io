@@ -15,11 +15,11 @@ netdev_upper_dev_unlink - Removes a link to upper device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>upper_dev</i>
-<dl><dd>new upper device</dl>
+<dl><dd>new upper device</dd></dl>
 
 <h2>Description</h2>
 

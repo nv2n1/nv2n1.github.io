@@ -10,27 +10,19 @@ description: "std::is_convertible,std::is_nothrow_convertible – std::is_conver
 <p>std::is_convertible,std::is_nothrow_convertible &#8211; std::is_convertible,std::is_nothrow_convertible</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class From, class To&gt;
     (1)(since C++ 11)
-
         struct is_convertible;
-
 template &lt;class From, class To&gt;
 (2)(since C++ 20)
-
     struct is_nothrow_convertible;
 1) If the imaginary function definition To test()
 {
     return std::declval&lt;From&gt;();
 } is well-formed, (that is, either std::declval&lt;From&gt;() can be converted to To using implicit_conversions, or both From and To are possibly cv-qualified void), provides the member constant value equal to true. Otherwise value is false. For the purposes of this check, the use of std::declval in the return statement is not considered an odr-use.
-
 Access_checks are performed as if from a context unrelated to either type. Only the validity of the immediate context of the expression in the return statement (including conversions to the return type) is considered.
-
 2) Same as (1), but the conversion is also noexcept.
-
 From and To shall each be a complete type, (possibly cv-qualified) void, or an array of unknown bound. Otherwise, the behavior is undefined.
-
 If an instantiation of a template above depends, directly or indirectly, on an incomplete type, and that instantiation could yield a different result if that type were hypothetically completed, the behavior is undefined.</code></pre>
 <p>Helper variable template template&lt; class From, class To &gt;                                                           (since C++17)</p>
 <p>inline constexpr bool is_convertible_v = is_convertible&lt;From, To&gt;::value;</p>
@@ -56,7 +48,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class E
 {
@@ -67,7 +58,6 @@ class E
     }
 };
 int main()
-
 {
     class A
     {
@@ -87,7 +77,6 @@ int main()
         }
         C c;
     };
-
     bool b2a = std::is_convertible&lt;B *, A *&gt;::value;
     bool a2b = std::is_convertible&lt;A *, B *&gt;::value;
     bool b2c = std::is_convertible&lt;B *, C *&gt;::value;

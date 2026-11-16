@@ -14,7 +14,7 @@ description: "napi_complete – NAPI processing complete"
 <p><i>n</i></p>
 <dl>
 <dd>
-<dd>NAPI context</dl>
+</dd><dd>NAPI context</dd></dl>
 <h2>Description</h2>
 <p>Mark NAPI processing as complete. Consider using <code>napi_complete_done</code> instead.</p>
 <h2>Copyright</h2>

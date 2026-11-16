@@ -21,21 +21,22 @@ description: "/etc/isdn/rate.conf – rate and provider configuration"
 <h3>Provider Skipping</h3>
 <p>At least for some countries there are universal rate-files distributed with isdnlog or provided elsewhere. In this case it is desirable to keep the rate-file unmodified so that updates require no further changes beyond installing the new rate-file. If a rate-file aims to cover the telephone market in an entire nation there will be always providers in it which are not available or not suitable for a specific installation. Such providers can be disabled by not booking them but they remain present and may be displayed as overall cheapest provider or the like. Provider skipping completely ignores selected, so called skipped providers, from the rate-file. To be more precise, the effect of skipped provider could also be achieved by deleting its lines starting from its P: tag to the last line before the P: tag of the next provider from the rate-file. Providers to skip can also be configured in the parameter file of isdnlog using the syntax described below in a line starting with <code>skipProv=</code> instead of <code>Q:</code>. <code>Q:</code>[<code>!</code>|<code>~</code>]<i>list</i></p>
 <dl>
-<dt><i>list</i></p>
-<dd>:= <i>range</i>[<code>;</code><i>list</i>]</p>
-<dt><i>range</i></p>
-<dd>:= (<code>*</code>|<i>prov</i>|<i>prov</i><code>&#8211;</code>|<code>&#8211;</code><i>prov</i>|<i>prov</i><code>&#8211;</code>prov)[<code>!</code>|<code>~</code>]</p>
-<dt><i>prov</i></p>
+<dt><i>list</i></dt>
+<dd>:= <i>range</i>[<code>;</code><i>list</i>]</dd>
+<dt><i>range</i></dt>
+<dd>:= (<code>*</code>|<i>prov</i>|<i>prov</i><code>&#8211;</code>|<code>&#8211;</code><i>prov</i>|<i>prov</i><code>&#8211;</code>prov)[<code>!</code>|<code>~</code>]</dd>
+<dt><i>prov</i></dt>
 <dd>:= <i>pnum</i>[<code>,</code><i>var</i>]  Skipping applies to all providers that are matched by a given <i>range.</i> If <i>var</i> is missing, all providers with <i>pnum</i> are skipped. <code>*</code> matches all providers. Booked providers are not skipped unless <code>!</code> is given at end of the <i>range</i> or in front of the entire list where it applies to whole line. The <code>~</code> can be given alternatively to <code>!.</code> Providers that match such a <i>range</i> are not skipped under any circumstances. Space can occur anywhere in the line after <code>Q:.</code> Example:<br />
- Q:*; 13,1~; 33-33,1~; 200-299!; 321-323! This skips all not booked providers except 13_1, 33_0, and 33_1. Additionally all providers with a <i>pnum</i> between 200 and 299 or 321 and 323 are skipped. </p>
+ Q:*; 13,1~; 33-33,1~; 200-299!; 321-323! This skips all not booked providers except 13_1, 33_0, and 33_1. Additionally all providers with a <i>pnum</i> between 200 and 299 or 321 and 323 are skipped. </dd>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/isdn/rate.conf</code></p>
-<dd>This file. <font SIZE="-1"><code>RATECONF</code></font> may be used to specify an alternative rate and provider configuration file. </p>
-<dt><code>/usr/share/isdn/rate-</code><i>CC</i><code>.dat</code></p>
-<dd>The rate-file for your country. Replace <i>CC</i> with your two letter country code, e.g. <i>de</i> for Germany. <font SIZE="-1"><code>RATEFILE</code></font> defines the rate-file to use. </p>
+<dt><code>/etc/isdn/rate.conf</code></dt>
+<dd>This file. <font SIZE="-1"><code>RATECONF</code></font> may be used to specify an alternative rate and provider configuration file. </dd>
+<dt><code>/usr/share/isdn/rate-</code><i>CC</i><code>.dat</code></dt>
+<dd>The rate-file for your country. Replace <i>CC</i> with your two letter country code, e.g. <i>de</i> for Germany. <font SIZE="-1"><code>RATEFILE</code></font> defines the rate-file to use. </dd>
 </dl>
 <h2>Author</h2>
 <p>Tobias Becker &lt;tobiasb [at] isdn4linux.de&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-isdnlog/">isdnlog</a></code>(8) <code><a href="/docs/linux/man/5-rate-files/">rate-files</a></code>(5) <code><a href="/docs/linux/man/5-isdn-conf/">isdn.conf</a></code>(5) </p>
+</dl>

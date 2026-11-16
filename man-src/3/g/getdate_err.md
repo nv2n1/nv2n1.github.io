@@ -19,19 +19,19 @@ description: "getdate, getdate_r – convert a date-plus-time string to broken-d
 <p> <code>getdate</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 <p> <code>getdate_r</code>():</p>
 <dl>
 <dt>
-<dd> _GNU_SOURCE</dl>
+</dt><dd> _GNU_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The function <code>getdate</code>() converts a string representation of a date and time, contained in the buffer pointed to by <i>string</i>, into a broken-down time. The broken-down time is stored in a <i>tm</i> structure, and a pointer to this structure is returned as the function result. This <i>tm</i> structure is allocated in static storage, and consequently it will be overwritten by further calls to <code>getdate</code>(). </p>
 <p> In contrast to <code><a href="/docs/linux/man/3-strptime/">strptime</a></code>(3), (which has a <i>format</i> argument), <code>getdate</code>() uses the formats found in the file whose full pathname is given in the environment variable <code>DATEMSK</code>. The first line in the file that matches the given input string is used for the conversion. </p>
 <p> The matching is done case insensitively. Superfluous whitespace, either in the pattern or in the string to be converted, is ignored. </p>
 <p> The conversion specifications that a pattern can contain are those given for <code><a href="/docs/linux/man/3-strptime/">strptime</a></code>(3). One more conversion specification is specified in POSIX.1-2001:</p>
 <dl>
-<dt><code>%Z</code></p>
-<dd> Timezone name. This is not implemented in glibc.</dl>
+<dt><code>%Z</code></dt>
+<dd> Timezone name. This is not implemented in glibc.</dd></dl>
 <p> When <code>%Z</code> is given, the structure containing the broken-down time is initialized with values corresponding to the current time in the given timezone. Otherwise, the structure is initialized to the broken-down time corresponding to the current local time (as by a call to <code><a href="/docs/linux/man/3-localtime/">localtime</a></code>(3)). </p>
 <p> When only the day of the week is given, the day is taken to be the first such day on or after today. </p>
 <p> When only the month is given (and no year), the month is taken to be the first such month equal to or after the current month. If no day is given, it is the first day of the month. </p>
@@ -44,28 +44,28 @@ description: "getdate, getdate_r – convert a date-plus-time string to broken-d
 <h2>ERRORS</h2>
 <p> The following errors are returned via <i>getdate_err</i> (for <code>getdate</code>()) or as the function result (for <code>getdate_r</code>()):</p>
 <dl>
-<dt><code>1</code></p>
-<dd> The <code>DATEMSK</code> environment variable is not defined, or its value is an empty string.</p>
-<dt><code>2</code></p>
-<dd> The template file specified by <code>DATEMSK</code> cannot be opened for reading.</p>
-<dt><code>3</code></p>
-<dd> Failed to get file status information.</p>
-<dt><code>4</code></p>
-<dd> The template file is not a regular file.</p>
-<dt><code>5</code></p>
-<dd> An error was encountered while reading the template file.</p>
-<dt><code>6</code></p>
-<dd> Memory allocation failed (not enough memory available).</p>
-<dt><code>7</code></p>
-<dd> There is no line in the file that matches the input.</p>
-<dt><code>8</code></p>
-<dd> Invalid input specification.</dl>
+<dt><code>1</code></dt>
+<dd> The <code>DATEMSK</code> environment variable is not defined, or its value is an empty string.</dd>
+<dt><code>2</code></dt>
+<dd> The template file specified by <code>DATEMSK</code> cannot be opened for reading.</dd>
+<dt><code>3</code></dt>
+<dd> Failed to get file status information.</dd>
+<dt><code>4</code></dt>
+<dd> The template file is not a regular file.</dd>
+<dt><code>5</code></dt>
+<dd> An error was encountered while reading the template file.</dd>
+<dt><code>6</code></dt>
+<dd> Memory allocation failed (not enough memory available).</dd>
+<dt><code>7</code></dt>
+<dd> There is no line in the file that matches the input.</dd>
+<dt><code>8</code></dt>
+<dd> Invalid input specification.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DATEMSK</code></p>
-<dd> File containing format patterns.</p>
-<dt><code>TZ</code>, <code>LC_TIME</code></p>
-<dd> Variables used by <code><a href="/docs/linux/man/3-strptime/">strptime</a></code>(3).</dl>
+<dt><code>DATEMSK</code></dt>
+<dd> File containing format patterns.</dd>
+<dt><code>TZ</code>, <code>LC_TIME</code></dt>
+<dd> Variables used by <code><a href="/docs/linux/man/3-strptime/">strptime</a></code>(3).</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

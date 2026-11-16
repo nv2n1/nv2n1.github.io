@@ -10,9 +10,9 @@ description: "tdbrestore – tool for creating a TDB file out of a tdbdump outpu
 <p>tdbrestore &#8211; tool for creating a TDB file out of a tdbdump output</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>tdbrestore</code> {tdbfilename}</dl>
+<dt> <code>tdbrestore</code> {tdbfilename}</dt></dl>
 <h2>Description</h2>
-<dd>This tool is part of the <code>samba</code>(1) suite. </p>
+<dd>This tool is part of the <code>samba</code>(1) suite. </dd>
 <p> <code>tdbrestore</code> is a very simple utility that &#8216;restores&#8217; the contents of dump file into TDB (Trivial DataBase) file. The dump file is obtained from the tdbdump command. </p>
 <p> This tool wait on the standard input for the content of the dump and will write the tdb in the tdbfilename parameter. </p>
 <p> This tool can be used for unpacking the content of tdb as backup mean.</p>

@@ -18,31 +18,31 @@ description: "dbcolmovingstats – compute moving statistics over a window of a 
 <p> Dbcolmovingstats runs in O(1) memory, but must buffer a full window of data. Quantiles currently will repeatedly sort the window and so may perform poorly with wide windows.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code> or <code>&#8211;include-non-numeric</code></p>
-<dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</p>
-<dt><code>-w</code> or <code>&#8211;window</code> <font SIZE="-1">WINDOW</font></p>
-<dd> <font SIZE="-1">WINDOW</font> of how many items to accumulate (defaults to 10). (For compatibility with fsdb-1.x, <code>-n</code> is also supported.)</p>
-<dt><code>-m</code> or <code>&#8211;median</code></p>
-<dd> Show median of the window in addition to mean.</p>
-<dt><code>-e E</code> or <code>&#8211;empty E</code></p>
-<dd> Give value E as the value for empty (null) records. This null value is then output before a full window is accumulated.</p>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></p>
-<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output mean and standard deviation. Defaults to <tt>&quot;%.5g&quot;</tt>.</dl>
+<dt><code>-a</code> or <code>&#8211;include-non-numeric</code></dt>
+<dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</dd>
+<dt><code>-w</code> or <code>&#8211;window</code> <font SIZE="-1">WINDOW</font></dt>
+<dd> <font SIZE="-1">WINDOW</font> of how many items to accumulate (defaults to 10). (For compatibility with fsdb-1.x, <code>-n</code> is also supported.)</dd>
+<dt><code>-m</code> or <code>&#8211;median</code></dt>
+<dd> Show median of the window in addition to mean.</dd>
+<dt><code>-e E</code> or <code>&#8211;empty E</code></dt>
+<dd> Give value E as the value for empty (null) records. This null value is then output before a full window is accumulated.</dd>
+<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output mean and standard deviation. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd></dl>
 <p> Eventually we expect to support other options of dbcolstats. </p>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

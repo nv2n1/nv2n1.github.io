@@ -93,8 +93,8 @@ description: "pcp_pmwebd_selinux – Security Enhanced Linux Policy for the pcp_
 <p> <code>pcp_pmwebd_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmwebd_exec_t type, if you want to transition an executable to the pcp_pmwebd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pmwebd, /usr/libexec/pcp/bin/pmwebd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pmwebd, /usr/libexec/pcp/bin/pmwebd </dd>
 </dl>
 <p> <code>pcp_pmwebd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmwebd_initrc_exec_t type, if you want to transition an executable to the pcp_pmwebd_initrc_t domain. </p>

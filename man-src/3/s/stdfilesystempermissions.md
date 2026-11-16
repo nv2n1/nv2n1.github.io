@@ -11,25 +11,15 @@ std::filesystem::permissions - std::filesystem::permissions
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     void permissions(const std::filesystem::path &amp;p,
-
                      std::filesystem::perms prms,
-
                      std::filesystem::perm_options opts = perm_options::replace);
-
 void permissions(const std::filesystem::path &amp;p,
-
                  std::filesystem::perms prms, (since C++ 17)
-
                                                   std::error_code &amp;ec) noexcept;
-
 void permissions(const std::filesystem::path &amp;p,
-
                  std::filesystem::perms prms,
-
                  std::filesystem::perm_options opts,
-
                  std::error_code &amp;ec);</code></pre> 
 Changes access permissions of the file to which p resolves, as if by POSIX fchmodat. Symlinks are followed unless perm_options::nofollow is set in opts 
 The second signature behaves as if called with opts set to perm_options::replace 
@@ -63,16 +53,11 @@ Some permission bits may be ignored on some systems, and changing some bits may 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;fstream&gt;
-
 #include &lt;bitset&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 void demo_perms(fs::perms p)
-
 {
     std::cout &lt;&lt; ((p &amp; fs::perms::owner_read) != fs::perms::none ? &quot;r&quot; : &quot;-&quot;)
               &lt;&lt; ((p &amp; fs::perms::owner_write) != fs::perms::none ? &quot;w&quot; : &quot;-&quot;)
@@ -85,9 +70,7 @@ void demo_perms(fs::perms p)
               &lt;&lt; ((p &amp; fs::perms::others_exec) != fs::perms::none ? &quot;x&quot; : &quot;-&quot;)
               &lt;&lt; '\n';
 }
-
 int main()
-
 {
     std::ofstream(&quot;test.txt&quot;); // create file
     std::cout &lt;&lt; &quot;Created file with permissions: &quot;;

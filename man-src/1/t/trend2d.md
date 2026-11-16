@@ -17,46 +17,46 @@ description: "trend2d – Fit a [weighted] [robust] polynomial model for z = f(x
 <p> The user must specify <code>-N</code><i>n_model</i>, the number of model parameters to use; thus, <code>-N</code><i>4</i> fits a bilinear trend, <code>-N</code><i>6</i> a quadratic surface, and so on. Optionally, append <code>r</code> to perform a robust fit. In this case, the program will iteratively reweight the data based on a robust scale estimate, in order to converge to a solution insensitive to outliers. This may be handy when separating a &quot;regional&quot; field from a &quot;residual&quot; which should have non-zero mean, such as a local mountain on a regional surface.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><code>-F</code><code>xyzmrw</code></p>
-<dd> Specify up to six letters from the set {<code>x y z m r w</code>} in any order to create columns of ASCII [or binary] output. <code>x</code> = x, <code>y</code> = y, <code>z</code> = z, <code>m</code> = model f(x,y), <code>r</code> = residual z &#8211; <code>m</code>, <code>w</code> = weight used in fitting.</p>
-<dt><code>-N</code><i>n_model</i>[<code>r</code>]</p>
-<dd> Specify the number of terms in the model, <i>n_model</i>, and append <code>r</code> to do a robust fit. E.g., a robust bilinear model is <code>-N</code><i>4</i><code>r</code>.</dl>
+<dt><code>-F</code><code>xyzmrw</code></dt>
+<dd> Specify up to six letters from the set {<code>x y z m r w</code>} in any order to create columns of ASCII [or binary] output. <code>x</code> = x, <code>y</code> = y, <code>z</code> = z, <code>m</code> = model f(x,y), <code>r</code> = residual z &#8211; <code>m</code>, <code>w</code> = weight used in fitting.</dd>
+<dt><code>-N</code><i>n_model</i>[<code>r</code>]</dt>
+<dd> Specify the number of terms in the model, <i>n_model</i>, and append <code>r</code> to do a robust fit. E.g., a robust bilinear model is <code>-N</code><i>4</i><code>r</code>.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII [or binary, see <code>-bi</code>] files containing x,y,z [w] values in the first 3 [4] columns. If no files are specified, <code>trend2d</code> will read from standard input.</p>
-<dt><code>-C</code><i>condition_number</i></p>
-<dd> Set the maximum allowed condition number for the matrix solution. <code>trend2d</code> fits a damped least squares model, retaining only that part of the eigenvalue spectrum such that the ratio of the largest eigenvalue to the smallest eigenvalue is <i>condition_#</i>. [Default: <i>condition_#</i> = 1.0e06. ].</p>
-<dt><code>-I</code>[<i>confidence_level</i>]</p>
-<dd> Iteratively increase the number of model parameters, starting at one, until <i>n_model</i> is reached or the reduction in variance of the model is not significant at the <i>confidence_level</i> level. You may set <code>-I</code> only, without an attached number; in this case the fit will be iterative with a default confidence level of 0.51. Or choose your own level between 0 and 1. See remarks section.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-W</code></p>
-<dd> Weights are supplied in input column 4. Do a weighted least squares fit [or start with these weights when doing the iterative robust fit]. [Default reads only the first 3 columns.]</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 3 (or 4 if <code>-W</code> is set) input columns].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is 1-6 columns as set by <code>-F</code>].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII [or binary, see <code>-bi</code>] files containing x,y,z [w] values in the first 3 [4] columns. If no files are specified, <code>trend2d</code> will read from standard input.</dd>
+<dt><code>-C</code><i>condition_number</i></dt>
+<dd> Set the maximum allowed condition number for the matrix solution. <code>trend2d</code> fits a damped least squares model, retaining only that part of the eigenvalue spectrum such that the ratio of the largest eigenvalue to the smallest eigenvalue is <i>condition_#</i>. [Default: <i>condition_#</i> = 1.0e06. ].</dd>
+<dt><code>-I</code>[<i>confidence_level</i>]</dt>
+<dd> Iteratively increase the number of model parameters, starting at one, until <i>n_model</i> is reached or the reduction in variance of the model is not significant at the <i>confidence_level</i> level. You may set <code>-I</code> only, without an attached number; in this case the fit will be iterative with a default confidence level of 0.51. Or choose your own level between 0 and 1. See remarks section.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-W</code></dt>
+<dd> Weights are supplied in input column 4. Do a weighted least squares fit [or start with these weights when doing the iterative robust fit]. [Default reads only the first 3 columns.]</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 3 (or 4 if <code>-W</code> is set) input columns].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is 1-6 columns as set by <code>-F</code>].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>REMARKS</h2>
 <p> The domain of x and y will be shifted and scaled to [-1, 1] and the basis functions are built from Chebyshev polynomials. These have a numerical advantage in the form of the matrix which must be inverted and allow more accurate solutions. In many applications of <code>trend2d</code> the user has data located approximately along a line in the x,y plane which makes an angle with the x axis (such as data collected along a road or ship track). In this case the accuracy could be improved by a rotation of the x,y axes. <code>trend2d</code> does not search for such a rotation; instead, it may find that the matrix problem has deficient rank. However, the solution is computed using the generalized inverse and should still work out OK. The user should check the results graphically if <code>trend2d</code> shows deficient rank. NOTE: The model parameters listed with <code>-V</code> are Chebyshev coefficients; they are not numerically equivalent to the m#s in the equation described above. The description above is to allow the user to match <code>-N</code> with the order of the polynomial surface. For evaluating Chebyshev polynomials, see <code>grdmath</code>. </p>
 <p> The <code>-N</code><i>n_model</i><code>r</code> (robust) and <code>-I</code> (iterative) options evaluate the significance of the improvement in model misfit Chi-Squared by an F test. The default confidence limit is set at 0.51; it can be changed with the <code>-I</code> option. The user may be surprised to find that in most cases the reduction in variance achieved by increasing the number of terms in a model is not significant at a very high degree of confidence. For example, with 120 degrees of freedom, Chi-Squared must decrease by 26% or more to be significant at the 95% confidence level. If you want to keep iterating as long as Chi-Squared is decreasing, set <i>confidence_level</i> to zero. </p>

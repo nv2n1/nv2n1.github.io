@@ -18,16 +18,16 @@ description: "rpmdev-rmdevelrpms – manual page for rpmdev-rmdevelrpms version 
 <p> The system wide configuration file is <i>/etc/rpmdevtools/rmdevelrpms.conf</i>, and per user settings (which override system ones) can be specified in ~/.config/rpmdevtools/rmdevelrpms.conf or ~/.rmdevelrpmsrc (deprecated). These files are written in Python.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>show this help message and exit</p>
-<dt><code>-l</code>, <code>&#8211;list-only</code></p>
-<dd>Output condensed list of packages, do not remove.</p>
-<dt><code>&#8211;qf</code>=<i>QF</i>, <code>&#8211;queryformat</code>=<i>QF</i></p>
-<dd>Query format to use for output.</p>
-<dt><code>-y</code>, <code>&#8211;yes</code></p>
-<dd>Root only: remove without prompting; ignored with <code>-l</code>.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Print program version and exit.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>show this help message and exit</dd>
+<dt><code>-l</code>, <code>&#8211;list-only</code></dt>
+<dd>Output condensed list of packages, do not remove.</dd>
+<dt><code>&#8211;qf</code>=<i>QF</i>, <code>&#8211;queryformat</code>=<i>QF</i></dt>
+<dd>Query format to use for output.</dd>
+<dt><code>-y</code>, <code>&#8211;yes</code></dt>
+<dd>Root only: remove without prompting; ignored with <code>-l</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Print program version and exit.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a>&gt;.</p>
 <h2>Copyright</h2>

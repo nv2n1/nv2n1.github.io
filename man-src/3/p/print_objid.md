@@ -33,22 +33,14 @@ int add_module_replacement(const char *old_module,</p>
 <h3>Output</h3>
 <pre><code>void print_mib(FILE *fp);
 void print_objid(const oid *objid, size_t objidlen);
-
 void fprint_objid(FILE *fp,
-
                   const oid *objid, size_t objidlen);
-
 int snprint_objid(char *buf, size_t len,
-
                   const oid *objid, size_t objidlen);
 void print_description(const oid *objid, size_t objidlen, int width);
-
 void fprint_description(FILE *fp,
-
                         const oid *objid, size_t objidlen, int width);
-
 int snprint_description(char *buf, size_t len,
-
                         const oid *objid, size_t objidlen, int width);
 </code></pre>
 <h2>Description</h2>
@@ -99,7 +91,7 @@ int snprint_description(char *buf, size_t len,
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> It can also be used to handle errors in the module identifiers used in MIB IMPORTS clauses (such as referring to <i>RFC1213</i> instead of <i>RFC1213-MIB</i>).</p>
 <h3>Searching the MIB Tree</h3>
 <p><code>read_objid</code> takes a string containing a textual version of an object identifier (in either numeric or descriptor form), and transforms this into the corresponding list of sub-identifiers. This is returned in the <i>output</i> parameter, with the number of sub-identifiers returned via <i>out_len</i>. When called, <i>out_len</i> must hold the maximum length of the <i>output</i> array. If multiple object identifiers are being processed, then this length should be reset before each call. This function returns a value of 1 if it succeeds in parsing the string and 0 otherwise. </p>
@@ -116,19 +108,19 @@ int snprint_description(char *buf, size_t len,
 <h2>Environment Variables</h2>
 <p>The main use of environmental variables with respect to these API calls is to configure which MIB modules should be loaded, and where they are located.</p>
 <dl>
-<dt>MIBDIRS</p>
+<dt>MIBDIRS</dt>
 <dd>A colon separated list of directories to search for MIB modules.<br />
  Default: /usr/share/snmp/mibs<br />
- Used by <code>init_mib</code>, <code>netsnmp_read_module</code>, <code>read_all_mibs</code> and (implicitly) by <code>read_mib</code>.</p>
-<dt>MIBS</p>
+ Used by <code>init_mib</code>, <code>netsnmp_read_module</code>, <code>read_all_mibs</code> and (implicitly) by <code>read_mib</code>.</dd>
+<dt>MIBS</dt>
 <dd>A colon separated list of MIB modules to load.<br />
- The default list of modules will depend on how the Net-SNMP software was originally compiled, but is typically: IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:SNMPv2-MIB:RFC1213-MIB: UCD-SNMP-MIB:HOST-RESOURCES-MIB</p>
-<dd>If the value of the <code>MIBS</code> environmental variable starts with a &#8216;+&#8217; character, then these MIB modules will be added to the default list. Otherwise these modules (plus any that they IMPORT from) will be loaded <i>instead</i> of the default list.</p>
-<dd>If the <code>MIBS</code> environmental variable has the value <code>ALL</code> then <code>read_all_mibs</code> will be called to load the full collection of all available MIB modules.</p>
-<dd>Used by <code>init_mib</code> only.</p>
-<dt>MIBFILES</p>
+ The default list of modules will depend on how the Net-SNMP software was originally compiled, but is typically: IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:SNMPv2-MIB:RFC1213-MIB: UCD-SNMP-MIB:HOST-RESOURCES-MIB</dd>
+<dd>If the value of the <code>MIBS</code> environmental variable starts with a &#8216;+&#8217; character, then these MIB modules will be added to the default list. Otherwise these modules (plus any that they IMPORT from) will be loaded <i>instead</i> of the default list.</dd>
+<dd>If the <code>MIBS</code> environmental variable has the value <code>ALL</code> then <code>read_all_mibs</code> will be called to load the full collection of all available MIB modules.</dd>
+<dd>Used by <code>init_mib</code> only.</dd>
+<dt>MIBFILES</dt>
 <dd>A colon separated list of files to load.<br />
  Default: (none)<br />
- Used by <code>init_mib</code> only.</dl>
+ Used by <code>init_mib</code> only.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3), <code>output_api</code>(3) </p>

@@ -14,10 +14,10 @@ description: "gnutls_error_to_alert – API function"
 <p> <code>int gnutls_error_to_alert(int </code><i>err</i><code>, int * </code><i>level</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>int err</p>
-<dd> is a negative integer</p>
-<dt>int * level</p>
-<dd> the alert level will be stored there</dl>
+<dt>int err</dt>
+<dd> is a negative integer</dd>
+<dt>int * level</dt>
+<dd> the alert level will be stored there</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get an alert depending on the error code returned by a gnutls function. All alerts sent by this function should be considered fatal. The only exception is when <i>err</i> is <code>GNUTLS_E_REHANDSHAKE</code>, where a warning alert should be sent to the peer indicating that no renegotiation will be performed. </p>
 <p> If there is no mapping to a valid alert the alert to indicate internal error is returned.</p>
@@ -32,6 +32,6 @@ description: "gnutls_error_to_alert – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

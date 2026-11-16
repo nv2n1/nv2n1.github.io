@@ -10,18 +10,18 @@ description: "blk_end_request – Helper function for drivers to complete the re
 <p>blk_end_request &#8211; Helper function for drivers to complete the request.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool blk_end_request(struct request&nbsp;<wbr>*&nbsp;<wbr></code><i>rq</i><code>, int&nbsp;<wbr></code><i>error</i><code>, unsigned int&nbsp;<wbr></code><i>nr_bytes</i><code>);</code></dl>
+<dt> <code>bool blk_end_request(struct request&nbsp;<wbr>*&nbsp;<wbr></code><i>rq</i><code>, int&nbsp;<wbr></code><i>error</i><code>, unsigned int&nbsp;<wbr></code><i>nr_bytes</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>rq</i></p>
 <dl>
 <dd>
-<dd>the request being processed</dl>
+</dd><dd>the request being processed</dd></dl>
 <p> <i>error</i></p>
 <dl>
-<dd><code>0</code> for success, &lt; <code>0</code> for error</dl>
+<dd><code>0</code> for success, &lt; <code>0</code> for error</dd></dl>
 <p> <i>nr_bytes</i></p>
 <dl>
-<dd>number of bytes to complete</dl>
+<dd>number of bytes to complete</dd></dl>
 <h2>Description</h2>
 <p>Ends I/O on a number of bytes attached to <i>rq</i>. If <i>rq</i> has leftover, sets it up for the next range of segments.</p>
 <h2>Return</h2>

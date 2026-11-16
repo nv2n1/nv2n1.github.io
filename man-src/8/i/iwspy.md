@@ -21,20 +21,20 @@ description: "iwspy – Get wireless statistics from specific nodes"
 <h2>Parameters</h2>
 <p>You may set any number of addresses up to 8.</p>
 <dl>
-<dt><code>DNSNAME</code> | <code>IPADDR</code></p>
-<dd>Set an IP address, or in some cases a DNS name (using the name resolver). As the hardware works with hardware addresses, <code>iwspy</code> will translate this IP address through <i>ARP</i>. In some case, this address might not be in the ARP cache and <code>iwspy</code> will fail. In those case, <i><a href="/docs/linux/man/8-ping/">ping</a></i>(8) this name/address and retry.</p>
-<dt><code>HWADDR</code></p>
-<dd>Set a hardware (MAC) address (this address is not translated &amp; checked like the IP one). The address must contain a colon (<code>:</code>) to be recognised as a hardware address.</p>
-<dt><code>+</code></p>
-<dd>Add the new set of addresses at the end of the current list instead of replacing it. The address list is unique for each device, so each user should use this option to avoid conflicts.</p>
-<dt><code>off</code></p>
-<dd>Remove the current list of addresses and disable the spy functionality</p>
-<dt><code>setthr</code></p>
+<dt><code>DNSNAME</code> | <code>IPADDR</code></dt>
+<dd>Set an IP address, or in some cases a DNS name (using the name resolver). As the hardware works with hardware addresses, <code>iwspy</code> will translate this IP address through <i>ARP</i>. In some case, this address might not be in the ARP cache and <code>iwspy</code> will fail. In those case, <i><a href="/docs/linux/man/8-ping/">ping</a></i>(8) this name/address and retry.</dd>
+<dt><code>HWADDR</code></dt>
+<dd>Set a hardware (MAC) address (this address is not translated &amp; checked like the IP one). The address must contain a colon (<code>:</code>) to be recognised as a hardware address.</dd>
+<dt><code>+</code></dt>
+<dd>Add the new set of addresses at the end of the current list instead of replacing it. The address list is unique for each device, so each user should use this option to avoid conflicts.</dd>
+<dt><code>off</code></dt>
+<dd>Remove the current list of addresses and disable the spy functionality</dd>
+<dt><code>setthr</code></dt>
 <dd>Set the <i>low</i> and <i>high</i> signal strength threshold for the iwspy event (for drivers that support it).<br />
  Every time the signal strength for any of the address monitored with iwspy goes lower than the low threshold or goes higher than the high threshold, a Wireless Event will be generated.<br />
- This can be used to monitor link outages without having to run iwspy periodically.</p>
-<dt><code>getthr</code></p>
-<dd>Retrieve the current <i>low</i> and <i>high</i> signal strength threshold for the iwspy event.</dl>
+ This can be used to monitor link outages without having to run iwspy periodically.</dd>
+<dt><code>getthr</code></dt>
+<dd>Retrieve the current <i>low</i> and <i>high</i> signal strength threshold for the iwspy event.</dd></dl>
 <h2>Files</h2>
 <p><i>/proc/net/wireless</i></p>
 <h2>See Also</h2>

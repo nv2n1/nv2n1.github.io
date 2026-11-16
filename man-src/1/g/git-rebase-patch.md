@@ -15,22 +15,21 @@ description: "git-rebase-patch – Rebases a patch"
 <p> Given you have a patch that doesn&#8217;t apply to the current HEAD, but you know it applied to some commit in the past, <code>git-rebase-patch</code> will help you find that commit and do a rebase.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&lt;patch-file&gt;</p>
-<dd> The patch to be applied.</dl>
+<dt>&lt;patch-file&gt;</dt>
+<dd> The patch to be applied.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Executing</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git rebase-patch test.patch
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> could give you something like that:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Trying to find a commit the patch applies to...
 Patch applied to dbcf408dd26 as 7dc8b23ae1a
@@ -40,8 +39,7 @@ Using index info to reconstruct a base tree...
 Falling back to patching base and 3-way merge...
 Auto-merging README.txt
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Then your last commit has the changes of the patch and is named <i>test.patch</i>.</p>
 <h2>AUTHOR</h2>
 <p> Written by Niklas Fiekas &lt;<i>niklas.fiekas [at] tu-clausthal.de</i>&gt;</p>

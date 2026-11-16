@@ -11,7 +11,6 @@ std::money_base - std::money_base
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;locale&gt;
-
 class money_base;</code></pre> 
 The class std::money_base provides constants which are inherited and used by the std::moneypunct, std::money_get and std::money_put facets. 
 

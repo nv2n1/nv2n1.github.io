@@ -11,14 +11,14 @@ description: "refile – file message in other folders"
 <p> refile &#8211; file message in other folders </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>refile</code> [<i>msgs</i>] [<code>-draft</code>] [<code>-link</code> | <code>-nolink</code>] [<code>-preserve</code> | <code>-nopreserve</code>] [<code>-retainsequences</code> | <code>-noretainsequences</code>] [<code>-unlink</code> | <code>-nounlink</code>] [<code>-src</code> <i>+folder</i>] [<code>-file</code> <i>file</i>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] <i>+folder1</i> &#8230; [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>refile</code> [<i>msgs</i>] [<code>-draft</code>] [<code>-link</code> | <code>-nolink</code>] [<code>-preserve</code> | <code>-nopreserve</code>] [<code>-retainsequences</code> | <code>-noretainsequences</code>] [<code>-unlink</code> | <code>-nounlink</code>] [<code>-src</code> <i>+folder</i>] [<code>-file</code> <i>file</i>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] <i>+folder1</i> &#8230; [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Refile</code></p>
-<dd>moves (see <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1)) or links (see <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)) messages from a source folder into one or more destination folders. </p>
+<dd>moves (see <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1)) or links (see <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)) messages from a source folder into one or more destination folders. </dd>
 <p> If you think of a message as a sheet of paper, this operation is not unlike filing the sheet of paper (or copies) in file cabinet folders. When a message is filed, it is linked into the destination folder(s) if possible, and is copied otherwise. As long as the destination folders are all on the same file system, multiple filing causes little storage overhead. This facility provides a good way to cross-file or multiply-index messages. For example, if a message is received from Jones about the ARPA Map Project, the command </p>
 <dl>
 <dt>
-<dd> refile cur&nbsp;<wbr>+jones&nbsp;<wbr>+Map</dl>
+</dt><dd> refile cur&nbsp;<wbr>+jones&nbsp;<wbr>+Map</dd></dl>
 <p> would allow the message to be found in either of the two folders `jones&#8217; or `Map&#8217;. </p>
 <p> You may specify the source folder using <code>-src</code> <i>+folder</i>. If this is not given, the current folder is used by default. If no message is specified, then `cur&#8217; is used by default. </p>
 <p> The option <code>-file</code> <i>file</i> directs <code>refile</code> to use the specified file as the source message to be filed, rather than a message from a folder. Note that the file should be a validly formatted message, just like any other <code>nmh</code> message. It should <code>NOT</code> be in mail drop format (to convert a file in mail drop format to a folder of <code>nmh</code> messages, see <i><a href="/docs/linux/man/1-inc/">inc</a></i>(1)). </p>
@@ -31,8 +31,8 @@ description: "refile – file message in other folders"
 <p> If you prefer a more sophisticated method of `removing&#8217; the messages from the source folder, you can define the <code>rmmproc</code> profile component. For example, you can add a profile component such as </p>
 <dl>
 <dt>
-<dd> rmmproc:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/home/coleman/bin/rmm_msgs
-</dl>
+</dt><dd> rmmproc:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/home/coleman/bin/rmm_msgs
+</dd></dl>
 <p> then <code>refile</code> will instead call the named program or script to handle the message files. </p>
 <p> The user may specify <code>-rmmproc</code> <i>program</i> on the command line to override this profile specification. The <code>-normmproc</code> option forces the message files to be deleted by renaming or unlinking them as described above. </p>
 <p> The <code>-draft</code> switch tells <code>refile</code> to file the &lt;mh-dir&gt;/draft.</p>

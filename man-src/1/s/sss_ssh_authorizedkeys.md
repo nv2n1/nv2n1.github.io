@@ -11,29 +11,29 @@ description: "sss_ssh_authorizedkeys – get OpenSSH authorized keys"
 <p> sss_ssh_authorizedkeys &#8211; get OpenSSH authorized keys </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>sss_ssh_authorizedkeys</code> [<i>options</i>] <i>USER</i></dl>
+<dt> <code>sss_ssh_authorizedkeys</code> [<i>options</i>] <i>USER</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>sss_ssh_authorizedkeys</code></p>
-<dd>acquires SSH public keys for user <i>USER</i> and outputs them in OpenSSH authorized_keys format (see the &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221; section of <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) for more information). </p>
+<dd>acquires SSH public keys for user <i>USER</i> and outputs them in OpenSSH authorized_keys format (see the &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221; section of <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) for more information). </dd>
 <p> <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) can be configured to use <code>sss_ssh_authorizedkeys</code> for public key user authentication if it is compiled with support for &#8220;AuthorizedKeysCommand&#8221; option. Please refer to the <code><a href="/docs/linux/man/5-sshd_config/">sshd_config</a></code>(5) man page for more details about this option. </p>
 <p> If &#8220;AuthorizedKeysCommand&#8221; is supported, <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) can be configured to use it by putting the following directives in <code><a href="/docs/linux/man/5-sshd_config/">sshd_config</a></code>(5): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   AuthorizedKeysCommand /usr/bin/sss_ssh_authorizedkeys
   AuthorizedKeysCommandUser nobody
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-d</code>,<code>&#8211;domain</code> <i>DOMAIN</i></p>
 <dl>
 <dt>
-<dd> Search for user public keys in SSSD domain <i>DOMAIN</i>.</dl>
+</dt><dd> Search for user public keys in SSSD domain <i>DOMAIN</i>.</dd></dl>
 <p> <code>-?</code>,<code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help message and exit.</dl>
+</dt><dd> Display help message and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> In case of success, an exit value of 0 is returned. Otherwise, 1 is returned.</p>
 <h2>SEE ALSO</h2>

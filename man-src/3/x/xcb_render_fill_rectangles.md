@@ -10,25 +10,23 @@ description: "xcb_render_fill_rectangles –"
 <p>xcb_render_fill_rectangles &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/render.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_render_fill_rectangles(xcb_connection_t *conn, uint8_t op, xcb_render_picture_t dst, xcb_render_color_t color, uint32_t rects_len, const xcb_rectangle_t *rects);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>op</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>dst</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>color</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>rects_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>rects</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>op</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>dst</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>color</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>rects_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>rects</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

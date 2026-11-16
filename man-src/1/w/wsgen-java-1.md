@@ -16,30 +16,24 @@ description: "wsgen – Java(TM) API for XML Web Services (JAX-WS) 2.0"
 <p> The <i>wsgen</i> tool generates JAX-WS portable artifacts used in JAX-WS web services. The tool reads a web service endpoint class and generates all the required artifacts for web service deployment, and invocation. JAXWS 2.1.1 RI also provides a wsgen ant task, see <i>Wsgen ant task</i> @ <a rel="nofollow" href="https://jax-ws.dev.java.net/nonav/2.1.1/docs/wsgenant.html">https://jax-ws.dev.java.net/nonav/2.1.1/docs/wsgenant.html</a> for details. </p>
 <h2>Launching wsgen</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>o</p>
-<dd> <code>Solaris/Linux</code></p>
+<dt>o</dt>
+<dd> <code>Solaris/Linux</code></dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> <i>export JAXWS_HOME=/pathto/jaxws-ri</i></p>
-<dt>*</p>
-<dd> <i>$JAXWS_HOME/bin/wsgen.sh -help</i></dl>
+<dt>*</dt>
+<dd> <i>export JAXWS_HOME=/pathto/jaxws-ri</i></dd>
+<dt>*</dt>
+<dd> <i>$JAXWS_HOME/bin/wsgen.sh -help</i></dd></dl>
 </dl>
-<dt>o</p>
-<dd> <code>Windows</code></p>
+<dt>o</dt>
+<dd> <code>Windows</code></dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> <i>set JAXWS_HOME=c:\pathto\jaxws-ri</i></p>
-<dt>*</p>
-<dd> <i>%JAXWS_HOME%in\wsgen.bat -help</i></dl>
+<dt>*</dt>
+<dd> <i>set JAXWS_HOME=c:\pathto\jaxws-ri</i></dd>
+<dt>*</dt>
+<dd> <i>%JAXWS_HOME%in\wsgen.bat -help</i></dd></dl>
 </dl>
 </dl>
 </dl>

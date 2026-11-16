@@ -73,12 +73,12 @@ description: "ftpd_selinux – Security Enhanced Linux Policy for the ftpd proce
 <p> Policy governs the access confined processes have to these ports. SELinux ftpd policy is very flexible allowing users to setup their ftpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for ftpd: </p>
 <dl>
-<dt><code>ftp_data_port_t</code></p>
+<dt><code>ftp_data_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 20 </p>
-<dt><code>ftp_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 20 </dd>
+<dt><code>ftp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 21,989,990 udp 989,990</dl>
+</dd><dd>Default Defined Ports: tcp 21,989,990 udp 989,990</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ftpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cifs_t</code> </p>
@@ -145,14 +145,14 @@ description: "ftpd_selinux – Security Enhanced Linux Policy for the ftpd proce
 <p> <code>ftpd_exec_t</code> </p>
 <p> &#8211; Set files with the ftpd_exec_t type, if you want to transition an executable to the ftpd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ftpwho, /usr/sbin/vsftpd, /usr/sbin/in.ftpd, /usr/sbin/proftpd, /usr/sbin/muddleftpd, /usr/kerberos/sbin/ftpd, /etc/cron.monthly/proftpd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ftpwho, /usr/sbin/vsftpd, /usr/sbin/in.ftpd, /usr/sbin/proftpd, /usr/sbin/muddleftpd, /usr/kerberos/sbin/ftpd, /etc/cron.monthly/proftpd </dd>
 </dl>
 <p> <code>ftpd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the ftpd_initrc_exec_t type, if you want to transition an executable to the ftpd_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/vsftpd, /etc/rc.d/init.d/proftpd </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/vsftpd, /etc/rc.d/init.d/proftpd </dd>
 </dl>
 <p> <code>ftpd_keytab_t</code> </p>
 <p> &#8211; Set files with the ftpd_keytab_t type, if you want to treat the files as kerberos keytab files. </p>
@@ -174,13 +174,13 @@ description: "ftpd_selinux – Security Enhanced Linux Policy for the ftpd proce
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow ftpd servers to read the /var/ftpd directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow ftpd servers to read the /var/ftpd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/ftpd(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/ftpd</code></p>
 <dl>
-<dt>Allow ftpd servers to read and write /var/ftpd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the ftpd_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow ftpd servers to read and write /var/ftpd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the ftpd_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/ftpd/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/ftpd/incoming</code><br />
  <code>setsebool -P ftpd_anon_write 1</code> </p>

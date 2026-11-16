@@ -16,34 +16,34 @@ abicompat[options][&lt;application&gt;&lt;shared - library - first - version&gt;
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <code>&#8211;help</code> </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;help</code> </dd>
 <p> Display a short help about the command and exit.</p>
-<dt>&bull;</p>
-<dd> <i>&#8211;version | -v</i> </p>
+<dt>&bull;</dt>
+<dd> <i>&#8211;version | -v</i> </dd>
 <p> Display the version of the program and exit.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;list-undefined-symbols | -u</code> </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;list-undefined-symbols | -u</code> </dd>
 <p> Display the list of undefined symbols of the application and exit.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;show-base-names | -b</code> </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;show-base-names | -b</code> </dd>
 <p> In the resulting report emitted by the tool, this option makes the application and libraries be referred to by their base names only; not by a full absolute name. This can be useful for use in scripts that wants to compare names of the application and libraries independently of what their directory names are.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;app-debug-info-dir | &#8211;appd</code> &lt;path-to-app-debug-info-directory&gt; </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;app-debug-info-dir | &#8211;appd</code> &lt;path-to-app-debug-info-directory&gt; </dd>
 <p> Set the path to the directory under which the debug information of the application is supposed to be laid out. This is useful for application binaries for which the debug info is in a separate set of files.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;lib-debug-info-dir1 | &#8211;libd1</code> &lt;path-to-lib1-debug-info&gt; </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;lib-debug-info-dir1 | &#8211;libd1</code> &lt;path-to-lib1-debug-info&gt; </dd>
 <p> Set the path to the directory under which the debug information of the first version of the shared library is supposed to be laid out. This is useful for shared library binaries for which the debug info is in a separate set of files.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;lib-debug-info-dir2 | &#8211;libd2</code> &lt;path-to-lib1-debug-info&gt; </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;lib-debug-info-dir2 | &#8211;libd2</code> &lt;path-to-lib1-debug-info&gt; </dd>
 <p> Set the path to the directory under which the debug information of the second version of the shared library is supposed to be laid out. This is useful for shared library binaries for which the debug info is in a separate set of files.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </dd>
 <p> Use a <i>suppression specification</i> file located at <i>path-to-suppressions</i>. Note that this option can appear multiple times on the command line; all the suppression specification files are then taken into account.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;weak-mode</code> </p>
+<dt>&bull;</dt>
+<dd> <code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</dd>
+<dt>&bull;</dt>
+<dd> <code>&#8211;weak-mode</code> </dd>
 <p> This triggers the weak mode of <code>abicompat</code>. In this mode, only one version of the library is required. That is, abicompat is invoked like this: </p>
 <pre>
 abicompat --weak-mode &lt;the-application&gt; &lt;the-library&gt;
@@ -65,8 +65,8 @@ abicompat &lt;the-application&gt; &lt;the-library&gt;
 <p> The remaining bits are not used for the moment.</p>
 <h2>USAGE EXAMPLES</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Detecting a possible ABI incompatibility in a new shared library version: </p>
+<dt>&bull;</dt>
+<dd> Detecting a possible ABI incompatibility in a new shared library version: </dd>
 <p>$ cat &#8211; n test0.h 1 struct foo 2<br />
 {<br />
     3 int m0;<br />
@@ -146,22 +146,22 @@ $<br />
   22     }<br />
   23  */<br />
     $</p>
-<dt>&bull;</p>
-<dd> Compile the first and second versions of the libraries: <code>libtest-0.so</code> and <code>libtest-1.so</code>: </p>
+<dt>&bull;</dt>
+<dd> Compile the first and second versions of the libraries: <code>libtest-0.so</code> and <code>libtest-1.so</code>: </dd>
 <pre>
 $ g++ -g -Wall -shared -o libtest-0.so test0.cc
 $ g++ -g -Wall -shared -o libtest-1.so test1.cc
 </pre>
-<dt>&bull;</p>
-<dd> Compile the application and link it against the first version of the library, creating the <code>test-app</code> binary: </p>
+<dt>&bull;</dt>
+<dd> Compile the application and link it against the first version of the library, creating the <code>test-app</code> binary: </dd>
 <pre>
 $ g++ -g -Wall -o test-app -L. -ltest-0.so test-app.cc
 </pre>
-<dt>&bull;</p>
-<dd> Now, use <code>abicompat</code> to see if libtest-1.so is ABI compatible with app, with respect to the ABI of libtest-0.so: </p>
+<dt>&bull;</dt>
+<dd> Now, use <code>abicompat</code> to see if libtest-1.so is ABI compatible with app, with respect to the ABI of libtest-0.so: </dd>
 <p>$ abicompat test &#8211; app libtest &#8211; 0.so libtest &#8211; 1.so ELF file &#8216;test-app&#8217; might not be ABI compatible with &#8216;libtest-1.so&#8217; due to differences with &#8216;libtest-0.so&#8217; below : Functions changes summary : 0 Removed, 2 Changed, 0 Added functions Variables changes summary : 0 Removed, 0 Changed, 0 Added variable 2 functions with some indirect sub &#8211; type change : [C] &#8216;function foo* first_func()&#8217; has some indirect sub &#8211; type changes : return type changed : in pointed to type &#8216;struct foo&#8217; : size changed from 32 to 64 bits 1 data member insertion : &#8216;char foo::m1&#8217;, at offset 32(in bits)[C] &#8216;function void second_func(foo&amp;)&#8217; has some indirect sub &#8211; type changes : parameter 0 of type &#8216;foo&amp;&#8217; has sub &#8211; type changes : referenced type &#8216;struct foo&#8217; changed, as reported earlier $</p>
-<dt>&bull;</p>
-<dd> Now use the weak mode of abicompat, that is, providing just the application and the new version of the library: </p>
+<dt>&bull;</dt>
+<dd> Now use the weak mode of abicompat, that is, providing just the application and the new version of the library: </dd>
 <pre><code>
 $ abicompat-- weak - mode test - app libtest - 1.so functions defined in library 'libtest-1.so' have sub - types that are different from what application 'test-app' expects : function foo *first_func()
     : return type changed : in pointed to type 'struct foo' : size changed from 32 to 64 bits 1 data member insertion : 'char foo::m1',

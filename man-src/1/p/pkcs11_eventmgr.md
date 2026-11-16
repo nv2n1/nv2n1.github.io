@@ -16,18 +16,18 @@ description: "pkcs11_eventmgr – SmartCard PKCS#11 Event Manager"
  Three events are supported: card insert, card removal and timeout on removed card. Actions to take are specified in the configuration file</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>[no]debug</code></p>
-<dd> Enable debugging output. Default is no debug</p>
-<dt><code>[no]daemon</code></p>
-<dd> Runs in background. If debug is unset, dettach also from tty. Default: no daemon</p>
-<dt><code>polling_time=&lt;secs&gt;</code></p>
-<dd> Set polling timeout in secs. Defaults to 1 sec</p>
-<dt><code>expire_time=&lt;secs&gt;</code></p>
-<dd> Set timeout on card removed. Defaults to 0 (never)</p>
-<dt><code>config_file=&lt;configuration file&gt;</code></p>
-<dd> Sets de configuration file. Defaults to /etc/pam_pkcs11/card_eventmgr.conf</p>
-<dt><code>pkcs11_module=&lt;pkcs11.so library&gt;</code></p>
-<dd> Sets the pkcs#11 library module to use. Defaults to /usr/lib/pkcs11/opensc-pkcs11.so</dl>
+<dt><code>[no]debug</code></dt>
+<dd> Enable debugging output. Default is no debug</dd>
+<dt><code>[no]daemon</code></dt>
+<dd> Runs in background. If debug is unset, dettach also from tty. Default: no daemon</dd>
+<dt><code>polling_time=&lt;secs&gt;</code></dt>
+<dd> Set polling timeout in secs. Defaults to 1 sec</dd>
+<dt><code>expire_time=&lt;secs&gt;</code></dt>
+<dd> Set timeout on card removed. Defaults to 0 (never)</dd>
+<dt><code>config_file=&lt;configuration file&gt;</code></dt>
+<dd> Sets de configuration file. Defaults to /etc/pam_pkcs11/card_eventmgr.conf</dd>
+<dt><code>pkcs11_module=&lt;pkcs11.so library&gt;</code></dt>
+<dd> Sets the pkcs#11 library module to use. Defaults to /usr/lib/pkcs11/opensc-pkcs11.so</dd></dl>
 <h2>FILES</h2>
 <p> <i>/etc/pam_pkcs11/card_eventmgr.conf</i> </p>
 <p> <i>/usr/lib/pkcs11/opensc-pkcs11.so</i></p>

@@ -10,9 +10,9 @@ CSSETI - Sets the value of an internal parameter of type INTEGER.
 
 <h2>Synopsis</h2>CALL CSSETI (PNAM,IVAL)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be set.
-<dt>IVAL
-<dd>An INTEGER value that is the value to be assigned to the internal parameter specified by PNAM.</dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the cssgrid_params man page.
+</dt><dd>A character string that specifies the name of the parameter to be set.
+</dd><dt>IVAL
+</dt><dd>An INTEGER value that is the value to be assigned to the internal parameter specified by PNAM.</dd></dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the cssgrid_params man page.
 <h2>Access</h2>To use CSSETI, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>css_overview, cssgrid, cssgrid_params, cssgeti. 
 

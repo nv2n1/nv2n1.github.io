@@ -27,12 +27,9 @@ Another way to test if a floating-point value is NaN is to compare it with itsel
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfloat&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; &quot;isnan(NaN) = &quot; &lt;&lt; std::isnan(NAN) &lt;&lt; '

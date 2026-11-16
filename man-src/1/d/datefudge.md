@@ -17,13 +17,13 @@ description: "datefudge – pretend the system time is different"
 <p> The <i>at_date</i> argument can be given in any format accepted by the <code><a href="/docs/linux/man/1-date/">date</a></code>(1) program, for example &quot;2007-04-01 12:21&quot; or &quot;yesterday&quot;, or &quot;next Friday&quot;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;static</code>, <code>-s</code></p>
+<dt><code>&#8211;static</code>, <code>-s</code></dt>
 <dd> Mark the date as a `static&#8217; one. The above mentioned system calls will always return the date given in the <i>at_date</i> argument, regardless of time passing. See EXAMPLES<br />
-&nbsp;<wbr>below.</p>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> Print short usage information and exit.</p>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd> Print version information and exit.</dl>
+&nbsp;<wbr>below.</dd>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Print short usage information and exit.</dd>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Basic examples:</h3>
 <pre>

@@ -21,47 +21,47 @@ description: "mkfs.cramfs – make compressed ROM file system"
 <h2>Options</h2>
 <p><code>-v</code></p>
 <dl>
-<dd>Enable verbose messaging.</dl>
+<dd>Enable verbose messaging.</dd></dl>
 <p> <code>-E</code></p>
 <dl>
-<dd>Treat all warnings as errors, which are reflected as command exit status.</dl>
+<dd>Treat all warnings as errors, which are reflected as command exit status.</dd></dl>
 <p> <code>-b</code> <i>blocksize</i></p>
 <dl>
-<dd>Use defined block size, which has to be divisible by page size.</dl>
+<dd>Use defined block size, which has to be divisible by page size.</dd></dl>
 <p> <code>-e</code> <i>edition</i></p>
 <dl>
-<dd>Use defined file system edition number in superblock.</dl>
+<dd>Use defined file system edition number in superblock.</dd></dl>
 <p> <code>-N</code> <i>big, little, host</i></p>
 <dl>
-<dd>Use defined endianness. Value defaults to <i>host</i>.</dl>
+<dd>Use defined endianness. Value defaults to <i>host</i>.</dd></dl>
 <p> <code>-i</code> <i>file</i></p>
 <dl>
-<dd>Insert a <i>file</i> to cramfs file system.</dl>
+<dd>Insert a <i>file</i> to cramfs file system.</dd></dl>
 <p> <code>-n</code> <i>name</i></p>
 <dl>
-<dd>Set name of the cramfs file system.</dl>
+<dd>Set name of the cramfs file system.</dd></dl>
 <p> <code>-p</code></p>
 <dl>
-<dd>Pad by 512 bytes for boot code.</dl>
+<dd>Pad by 512 bytes for boot code.</dd></dl>
 <p> <code>-s</code></p>
 <dl>
-<dd>This option is ignored. Originally the <code>-s</code> turned on directory entry sorting.</dl>
+<dd>This option is ignored. Originally the <code>-s</code> turned on directory entry sorting.</dd></dl>
 <p> <code>-z</code></p>
 <dl>
-<dd>Make explicit holes.</dl>
+<dd>Make explicit holes.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>0</code></p>
 <dl>
-<dd>success</dl>
+<dd>success</dd></dl>
 <p> <code>8</code></p>
 <dl>
-<dd>operation error, such as unable to allocate memory</dl>
+<dd>operation error, such as unable to allocate memory</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fsck-cramfs/">fsck.cramfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8)</p>
 <h2>Reporting Bugs</h2>

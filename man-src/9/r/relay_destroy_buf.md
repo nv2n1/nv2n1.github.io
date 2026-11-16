@@ -15,7 +15,7 @@ relay_destroy_buf - destroy an rchan_buf struct and associated buffer
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>the buffer struct</dl>
+<dl><dd></dd><dd>the buffer struct</dd></dl>
 
 <h2>Copyright</h2>
 

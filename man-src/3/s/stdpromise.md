@@ -55,32 +55,24 @@ set_exception_at_thread_exit <i>(public member function)</i></p>
 <p>This example shows how promise&lt;int&gt; can be used as signals between threads.<br />
  // Run this code </p>
 <pre><code>#include &lt;vector&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;future&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 void accumulate(std::vector&lt;int&gt;::iterator first,
                 std::vector&lt;int&gt;::iterator last,
                 std::promise&lt;int&gt; accumulate_promise)
-
 {
     int sum = std::accumulate(first, last, 0);
     accumulate_promise.set_value(sum); // Notify future
 }
 void do_work(std::promise&lt;void&gt; barrier)
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     barrier.set_value();
 }
 int main()
-
 {
     // Demonstrate using promise&lt;int&gt; to transmit a result between threads.
     std::vector&lt;int&gt; numbers = {1, 2, 3, 4, 5, 6};

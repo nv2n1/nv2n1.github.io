@@ -115,51 +115,51 @@ guestfish[--options][commands] guestfish
                                                              guestfish&#8211; remote lvs</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Displays general help on options.</p>
-<dt><code>-h</code></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Displays general help on options.</dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;cmd-help</code></p>
-<dd> Lists all available guestfish commands.</p>
-<dt><code>-h cmd</code></p>
+</dd><dt><code>&#8211;cmd-help</code></dt>
+<dd> Lists all available guestfish commands.</dd>
+<dt><code>-h cmd</code></dt>
 <dd>
-<dt><code>&#8211;cmd-help cmd</code></p>
-<dd> Displays detailed help on a single command <tt>&quot;cmd&quot;</tt>.</p>
-<dt><code>-a image</code></p>
+</dd><dt><code>&#8211;cmd-help cmd</code></dt>
+<dd> Displays detailed help on a single command <tt>&quot;cmd&quot;</tt>.</dd>
+<dt><code>-a image</code></dt>
 <dd>
-<dt><code>&#8211;add image</code></p>
-<dd> Add a block device or virtual machine image to the shell. </p>
+</dd><dt><code>&#8211;add image</code></dt>
+<dd> Add a block device or virtual machine image to the shell. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option. </p>
 <p> Using this flag is mostly equivalent to using the <tt>&quot;add&quot;</tt> command, with <tt>&quot;readonly:true&quot;</tt> if the <i>&#8211;ro</i> flag was given, and with <tt>&quot;format:...&quot;</tt> if the <i>&#8211;format=&#8230;</i> flag was given.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></p>
+<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font>.</p>
-<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></p>
+</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font>.</dd>
+<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> When used in conjunction with the <i>-d</i> option, this specifies the libvirt <font SIZE="-1">URI</font> to use. The default is to use the default libvirt connection.</p>
-<dt><code>&#8211;csh</code></p>
-<dd> If using the <i>&#8211;listen</i> option and a csh-like shell, use this option. See section &#8220;<font SIZE="-1">REMOTE CONTROL AND CSH&#8221;</font> below.</p>
-<dt><code>-d libvirt-domain</code></p>
+</dd><dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> When used in conjunction with the <i>-d</i> option, this specifies the libvirt <font SIZE="-1">URI</font> to use. The default is to use the default libvirt connection.</dd>
+<dt><code>&#8211;csh</code></dt>
+<dd> If using the <i>&#8211;listen</i> option and a csh-like shell, use this option. See section &#8220;<font SIZE="-1">REMOTE CONTROL AND CSH&#8221;</font> below.</dd>
+<dt><code>-d libvirt-domain</code></dt>
 <dd>
-<dt><code>&#8211;domain libvirt-domain</code></p>
-<dd> Add disks from the named libvirt domain. If the <i>&#8211;ro</i> option is also used, then any libvirt domain can be used. However in write mode, only libvirt domains which are shut down can be named here. </p>
+</dd><dt><code>&#8211;domain libvirt-domain</code></dt>
+<dd> Add disks from the named libvirt domain. If the <i>&#8211;ro</i> option is also used, then any libvirt domain can be used. However in write mode, only libvirt domains which are shut down can be named here. </dd>
 <p> Domain UUIDs can be used instead of names. </p>
 <p> Using this flag is mostly equivalent to using the <tt>&quot;add-domain&quot;</tt> command, with <tt>&quot;readonly:true&quot;</tt> if the <i>&#8211;ro</i> flag was given, and with <tt>&quot;format:...&quot;</tt> if the <i>&#8211;format=&#8230;</i> flag was given.</p>
-<dt><code>&#8211;echo-keys</code></p>
-<dd> When prompting for keys and passphrases, guestfish normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</p>
-<dt><code>-f file</code></p>
+<dt><code>&#8211;echo-keys</code></dt>
+<dd> When prompting for keys and passphrases, guestfish normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</dd>
+<dt><code>-f file</code></dt>
 <dd>
-<dt><code>&#8211;file file</code></p>
-<dd> Read commands from <tt>&quot;file&quot;</tt>. To write pure guestfish scripts, use: </p>
+</dd><dt><code>&#8211;file file</code></dt>
+<dd> Read commands from <tt>&quot;file&quot;</tt>. To write pure guestfish scripts, use: </dd>
 <pre>
  #!/usr/bin/guestfish -f
 </pre>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </dd>
 <p> For example: </p>
 <pre>
  guestfish --format=raw -a disk.img
@@ -170,10 +170,10 @@ guestfish[--options][commands] guestfish
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>). See also &#8220;add&#8221;.</p>
-<dt><code>-i</code></p>
+<dt><code>-i</code></dt>
 <dd>
-<dt><code>&#8211;inspector</code></p>
-<dd> Using <i><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></i>(1) code, inspect the disks looking for an operating system and mount filesystems as they would be mounted on the real virtual machine. </p>
+</dd><dt><code>&#8211;inspector</code></dt>
+<dd> Using <i><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></i>(1) code, inspect the disks looking for an operating system and mount filesystems as they would be mounted on the real virtual machine. </dd>
 <p> Typical usage is either: </p>
 <pre>
  guestfish -d myguest -i
@@ -189,16 +189,16 @@ guestfish[--options][commands] guestfish
 <p> Note that the command line syntax changed slightly over older versions of guestfish. You can still use the old syntax: </p>
 <p>guestfish[&#8211;ro] &#8211; i disk.img guestfish[&#8211;ro] &#8211; i libvirt &#8211; domain</p>
 <p> Using this flag is mostly equivalent to using the <tt>&quot;inspect-os&quot;</tt> command and then using other commands to mount the filesystems that were found.</p>
-<dt><code>&#8211;keys-from-stdin</code></p>
-<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</p>
-<dt><code>&#8211;listen</code></p>
-<dd> Fork into the background and listen for remote commands. See section &#8220;<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8221;</font> below.</p>
-<dt><code>&#8211;live</code></p>
-<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i>guestfs</i>(3)).</p>
-<dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></p>
+<dt><code>&#8211;keys-from-stdin</code></dt>
+<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
+<dt><code>&#8211;listen</code></dt>
+<dd> Fork into the background and listen for remote commands. See section &#8220;<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8221;</font> below.</dd>
+<dt><code>&#8211;live</code></dt>
+<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i>guestfs</i>(3)).</dd>
+<dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></dt>
 <dd>
-<dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></p>
-<dd> Mount the named partition or logical volume on the given mountpoint. </p>
+</dd><dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></dt>
+<dd> Mount the named partition or logical volume on the given mountpoint. </dd>
 <p> If the mountpoint is omitted, it defaults to <i>/</i>. </p>
 <p> You have to mount something on <i>/</i> before most commands will work. </p>
 <p> If any <i>-m</i> or <i>&#8211;mount</i> options are given, the guest is automatically launched. </p>
@@ -209,58 +209,58 @@ guestfish[--options][commands] guestfish
 </pre>
 <p> Using this flag is equivalent to using the <tt>&quot;mount-options&quot;</tt> command. </p>
 <p> The fourth part of the parameter is the filesystem driver to use, such as <tt>&quot;ext3&quot;</tt> or <tt>&quot;ntfs&quot;</tt>. This is rarely needed, but can be useful if multiple drivers are valid for a filesystem (eg: <tt>&quot;ext2&quot;</tt> and <tt>&quot;ext3&quot;</tt>), or if libguestfs misidentifies a filesystem.</p>
-<dt><code>&#8211;network</code></p>
-<dd> Enable <font SIZE="-1">QEMU</font> user networking in the guest.</p>
-<dt><code>-N [filename=]type</code></p>
+<dt><code>&#8211;network</code></dt>
+<dd> Enable <font SIZE="-1">QEMU</font> user networking in the guest.</dd>
+<dt><code>-N [filename=]type</code></dt>
 <dd>
-<dt><code>&#8211;new [filename=]type</code></p>
+</dd><dt><code>&#8211;new [filename=]type</code></dt>
 <dd>
-<dt><code>-N help</code></p>
-<dd> Prepare a fresh disk image formatted as &#8220;type&#8221;. This is an alternative to the <i>-a</i> option: whereas <i>-a</i> adds an existing disk, <i>-N</i> creates a preformatted disk with a filesystem and adds it. See &#8220;<font SIZE="-1">PREPARED DISK IMAGES&#8221;</font> below.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>-N help</code></dt>
+<dd> Prepare a fresh disk image formatted as &#8220;type&#8221;. This is an alternative to the <i>-a</i> option: whereas <i>-a</i> adds an existing disk, <i>-N</i> creates a preformatted disk with a filesystem and adds it. See &#8220;<font SIZE="-1">PREPARED DISK IMAGES&#8221;</font> below.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;no-sync</code></p>
-<dd> Disable autosync. This is enabled by default. See the discussion of autosync in the <i>guestfs</i>(3) manpage.</p>
-<dt><code>&#8211;no-dest-paths</code></p>
-<dd> Don&#8217;t tab-complete paths on the guest filesystem. It is useful to be able to hit the tab key to complete paths on the guest filesystem, but this causes extra &#8220;hidden&#8221; guestfs calls to be made, so this option is here to allow this feature to be disabled.</p>
-<dt><code>&#8211;pipe-error</code></p>
-<dd> If writes fail to pipe commands (see &#8220;<font SIZE="-1">PIPES&#8221;</font> below), then the command returns an error. </p>
+</dd><dt><code>&#8211;no-sync</code></dt>
+<dd> Disable autosync. This is enabled by default. See the discussion of autosync in the <i>guestfs</i>(3) manpage.</dd>
+<dt><code>&#8211;no-dest-paths</code></dt>
+<dd> Don&#8217;t tab-complete paths on the guest filesystem. It is useful to be able to hit the tab key to complete paths on the guest filesystem, but this causes extra &#8220;hidden&#8221; guestfs calls to be made, so this option is here to allow this feature to be disabled.</dd>
+<dt><code>&#8211;pipe-error</code></dt>
+<dd> If writes fail to pipe commands (see &#8220;<font SIZE="-1">PIPES&#8221;</font> below), then the command returns an error. </dd>
 <p> The default (also for historical reasons) is to ignore such errors so that: </p>
 <pre>
  &gt;&lt;fs&gt; command_with_lots_of_output | head
 </pre>
 <p> doesn&#8217;t give an error.</p>
-<dt><code>&#8211;progress-bars</code></p>
-<dd> Enable progress bars, even when guestfish is used non-interactively. </p>
+<dt><code>&#8211;progress-bars</code></dt>
+<dd> Enable progress bars, even when guestfish is used non-interactively. </dd>
 <p> Progress bars are enabled by default when guestfish is used as an interactive shell.</p>
-<dt><code>&#8211;no-progress-bars</code></p>
-<dd> Disable progress bars.</p>
-<dt><code>&#8211;remote[=pid]</code></p>
-<dd> Send remote commands to <tt>$GUESTFISH_PID</tt> or <tt>&quot;pid&quot;</tt>. See section &#8220;<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8221;</font> below.</p>
-<dt><code>-r</code></p>
+<dt><code>&#8211;no-progress-bars</code></dt>
+<dd> Disable progress bars.</dd>
+<dt><code>&#8211;remote[=pid]</code></dt>
+<dd> Send remote commands to <tt>$GUESTFISH_PID</tt> or <tt>&quot;pid&quot;</tt>. See section &#8220;<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8221;</font> below.</dd>
+<dt><code>-r</code></dt>
 <dd>
-<dt><code>&#8211;ro</code></p>
-<dd> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-only. </p>
+</dd><dt><code>&#8211;ro</code></dt>
+<dd> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-only. </dd>
 <p> The option must always be used if the disk image or virtual machine might be running, and is generally recommended in cases where you don&#8217;t need write access to the disk. </p>
 <p> Note that prepared disk images created with <i>-N</i> are not affected by this option. Also commands like <tt>&quot;add&quot;</tt> are not affected &#8211; you have to specify the <tt>&quot;readonly:true&quot;</tt> option explicitly if you need it. </p>
 <p> See also &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> below.</p>
-<dt><code>&#8211;selinux</code></p>
-<dd> This option is provided for backwards compatibility and does nothing.</p>
-<dt><code>-v</code></p>
+<dt><code>&#8211;selinux</code></dt>
+<dd> This option is provided for backwards compatibility and does nothing.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable very verbose messages. This is particularly useful if you find a bug.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable very verbose messages. This is particularly useful if you find a bug.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display the guestfish / libguestfs version number and exit.</p>
-<dt><code>-w</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the guestfish / libguestfs version number and exit.</dd>
+<dt><code>-w</code></dt>
 <dd>
-<dt><code>&#8211;rw</code></p>
-<dd> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-write. </p>
+</dd><dt><code>&#8211;rw</code></dt>
+<dd> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-write. </dd>
 <p> See &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> below.</p>
-<dt><code>-x</code></p>
-<dd> Echo each command before executing it.</dl>
+<dt><code>-x</code></dt>
+<dd> Echo each command before executing it.</dd></dl>
 <h2>COMMANDS ON COMMAND LINE</h2>
 <p> Any additional (non-option) arguments are treated as commands to execute. </p>
 <p> Commands to execute should be separated by a colon (<tt>&quot;:&quot;</tt>), where the colon is a separate parameter. Thus: </p>
@@ -270,14 +270,14 @@ guestfish[--options][commands] guestfish
 <h2>USING launch (OR run)</h2>
 <p> As with <i>guestfs</i>(3), you must first configure your guest by adding disks, then launch it, then mount any disks you need, and finally issue actions/commands. So the general order of the day is:</p>
 <dl>
-<dt>&bull;</p>
-<dd> add or -a/&#8211;add</p>
-<dt>&bull;</p>
-<dd> launch (aka run)</p>
-<dt>&bull;</p>
-<dd> mount or -m/&#8211;mount</p>
-<dt>&bull;</p>
-<dd> any other commands</dl>
+<dt>&bull;</dt>
+<dd> add or -a/&#8211;add</dd>
+<dt>&bull;</dt>
+<dd> launch (aka run)</dd>
+<dt>&bull;</dt>
+<dd> mount or -m/&#8211;mount</dd>
+<dt>&bull;</dt>
+<dd> any other commands</dd></dl>
 <p> <tt>&quot;run&quot;</tt> is a synonym for <tt>&quot;launch&quot;</tt>. You must <tt>&quot;launch&quot;</tt> (or <tt>&quot;run&quot;</tt>) your guest before mounting or performing any other commands. </p>
 <p> The only exception is that if any of the <i>-i</i>, <i>-m</i>, <i>&#8211;mount</i>, <i>-N</i> or <i>&#8211;new</i> options were given then <tt>&quot;run&quot;</tt> is done automatically, simply because guestfish can&#8217;t perform the action you asked for without doing this.</p>
 <h2>OPENING DISKS FOR READ AND WRITE</h2>
@@ -303,24 +303,25 @@ guestfish[--options][commands] guestfish
 <h3><font SIZE="-1">ESCAPE SEQUENCES IN DOUBLE QUOTED ARGUMENTS</font></h3>
 <p> In double-quoted arguments (only) use backslash to insert special characters:</p>
 <dl>
-<dt>&quot;&quot;</p>
-<dd> Alert (bell) character.</p>
-<dt>&quot;&quot;</p>
-<dd> Backspace character.</p>
-<dt>&quot;&quot;</p>
-<dd> Form feed character.</p>
+<dt>&quot;&quot;</dt>
+<dd> Alert (bell) character.</dd>
+<dt>&quot;&quot;</dt>
+<dd> Backspace character.</dd>
+<dt>&quot;&quot;</dt>
+<dd> Form feed character.</dd>
 <dt>&quot;
-&quot;</p>
-<dd> Newline character.</p>
+&quot;</dt>
+<dd> Newline character.</dd>
 <dt>&quot;
-&quot;</p>
-<dd> Carriage return character.</p>
-<dt>&quot;	&quot;</p>
-<dd> Horizontal tab character.</p>
-<dt>&quot;&quot;</p>
-<dd> Vertical tab character.</p>
-<dt>&quot;\&quot;&quot;</p>
-<dd> A literal double quote character.</p>
-<dt>&quot;\ooo&quot;</p>
-<dd> A character with octal value <i>ooo</i>. There must be precisely 3 octal digits (unlike C).</p>
+&quot;</dt>
+<dd> Carriage return character.</dd>
+<dt>&quot;	&quot;</dt>
+<dd> Horizontal tab character.</dd>
+<dt>&quot;&quot;</dt>
+<dd> Vertical tab character.</dd>
+<dt>&quot;\&quot;&quot;</dt>
+<dd> A literal double quote character.</dd>
+<dt>&quot;\ooo&quot;</dt>
+<dd> A character with octal value <i>ooo</i>. There must be precisely 3 octal digits (unlike C).</dd>
 <dt>&quot;
+</dt></dl>

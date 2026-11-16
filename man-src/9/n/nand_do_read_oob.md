@@ -14,17 +14,17 @@ description: "nand_do_read_oob – [INTERN] NAND read out-of-band"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>offset to read from</dl>
+<dd>offset to read from</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>oob operations description structure</dl>
+<dd>oob operations description structure</dd></dl>
 <h2>Description</h2>
 <p>NAND read out-of-band data from the spare area.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

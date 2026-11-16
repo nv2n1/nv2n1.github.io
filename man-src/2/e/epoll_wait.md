@@ -23,12 +23,12 @@ int epoll_pwait(int epfd, struct epoll_event *events,
 <p> The <i>timeout</i> argument specifies the number of milliseconds that <code>epoll_wait</code>() will block. Time is measured against the <code>CLOCK_MONOTONIC</code> clock. </p>
 <p> A call to <code>epoll_wait</code>() will block until either:</p>
 <dl>
-<dt>&bull;</p>
-<dd> a file descriptor delivers an event;</p>
-<dt>&bull;</p>
-<dd> the call is interrupted by a signal handler; or</p>
-<dt>&bull;</p>
-<dd> the timeout expires.</dl>
+<dt>&bull;</dt>
+<dd> a file descriptor delivers an event;</dd>
+<dt>&bull;</dt>
+<dd> the call is interrupted by a signal handler; or</dd>
+<dt>&bull;</dt>
+<dd> the timeout expires.</dd></dl>
 <p> Note that the <i>timeout</i> interval will be rounded up to the system clock granularity, and kernel scheduling delays mean that the blocking interval may overrun by a small amount. Specifying a <i>timeout</i> of -1 causes <code>epoll_wait</code>() to block indefinitely, while specifying a <i>timeout</i> equal to zero cause <code>epoll_wait</code>() to return immediately, even if no events are available. </p>
 <p> The <i>struct epoll_event</i> is defined as: </p>
 <p> typedef union epoll_data {<br />
@@ -53,14 +53,14 @@ int epoll_pwait(int epfd, struct epoll_event *events,
 <p> When successful, <code>epoll_wait</code>() returns the number of file descriptors ready for the requested I/O, or zero if no file descriptor became ready during the requested <i>timeout</i> milliseconds. When an error occurs, <code>epoll_wait</code>() returns -1 and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>epfd</i> is not a valid file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> The memory area pointed to by <i>events</i> is not accessible with write permissions.</p>
-<dt><code>EINTR</code></p>
-<dd> The call was interrupted by a signal handler before either (1) any of the requested events occurred or (2) the <i>timeout</i> expired; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>epfd</i> is not an <code>epoll</code> file descriptor, or <i>maxevents</i> is less than or equal to zero.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>epfd</i> is not a valid file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The memory area pointed to by <i>events</i> is not accessible with write permissions.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The call was interrupted by a signal handler before either (1) any of the requested events occurred or (2) the <i>timeout</i> expired; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>epfd</i> is not an <code>epoll</code> file descriptor, or <i>maxevents</i> is less than or equal to zero.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>epoll_wait</code>() was added to the kernel in version 2.6. Library support is provided in glibc starting with version 2.3.2. </p>
 <p> <code>epoll_pwait</code>() was added to Linux in kernel 2.6.19. Library support is provided in glibc starting with version 2.6.</p>

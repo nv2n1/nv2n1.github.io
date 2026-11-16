@@ -11,10 +11,8 @@ std::allocator_traits&lt;Alloc&gt;::construct - std::allocator_traits&lt;Alloc&g
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T, class... Args&gt;
     (since C++ 11)
-
         static void construct(Alloc &amp;a, T *p, Args &amp;&amp;...args);</code></pre> 
 If possible, constructs an object of type T in allocated uninitialized storage pointed to by p, by calling 
 a.construct(p, std::forward&lt;Args&gt;(args)...) 

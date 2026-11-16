@@ -30,73 +30,73 @@ description: "losetup – set up and control loop devices"
 <p>The <i>size</i> and <i>offset</i> arguments may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;) or the suffixes KB (=1000), MB (=1000*1000), and so on for GB, TB, PB, EB, ZB and YB. </p>
 <p> <code>-a</code>, <code>&#8211;all</code></p>
 <dl>
-<dd>Show the status of all loop devices. Note that not all information is accessible for non-root users. See also <code>&#8211;list</code>. The old output format (as printed without <code>&#8211;list)</code> is deprecated.</dl>
+<dd>Show the status of all loop devices. Note that not all information is accessible for non-root users. See also <code>&#8211;list</code>. The old output format (as printed without <code>&#8211;list)</code> is deprecated.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;detach</code> <i>loopdev</i>&#8230;</p>
 <dl>
-<dd>Detach the file or device associated with the specified loop device(s). Note that since Linux v3.7 kernel uses &quot;lazy device destruction&quot;. The detach operation does not return <code>EBUSY</code> error anymore if device is actively used by system, but it is marked by autoclear flag and destroyed later.</dl>
+<dd>Detach the file or device associated with the specified loop device(s). Note that since Linux v3.7 kernel uses &quot;lazy device destruction&quot;. The detach operation does not return <code>EBUSY</code> error anymore if device is actively used by system, but it is marked by autoclear flag and destroyed later.</dd></dl>
 <p> <code>-D</code>, <code>&#8211;detach-all</code></p>
 <dl>
-<dd>Detach all associated loop devices.</dl>
+<dd>Detach all associated loop devices.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;find</code> [<i>file</i>]</p>
 <dl>
-<dd>Find the first unused loop device. If a <i>file</i> argument is present, use the found device as loop device. Otherwise, just print its name.</dl>
+<dd>Find the first unused loop device. If a <i>file</i> argument is present, use the found device as loop device. Otherwise, just print its name.</dd></dl>
 <p> <code>&#8211;show</code></p>
 <dl>
-<dd>Display the name of the assigned loop device if the <code>-f</code> option and a <i>file</i> argument are present.</dl>
+<dd>Display the name of the assigned loop device if the <code>-f</code> option and a <i>file</i> argument are present.</dd></dl>
 <p> <code>-L</code>, <code>&#8211;nooverlap</code></p>
 <dl>
-<dd>Check for conflicts between loop devices to avoid situation when the same backing file is shared between more loop devices. If the file is already used by another device then re-use the device rather than a new one. The option makes sense only with <code>&#8211;find</code>.</dl>
+<dd>Check for conflicts between loop devices to avoid situation when the same backing file is shared between more loop devices. If the file is already used by another device then re-use the device rather than a new one. The option makes sense only with <code>&#8211;find</code>.</dd></dl>
 <p> <code>-j</code>, <code>&#8211;associated</code> <i>file</i> [<code>-o</code> <i>offset</i>]</p>
 <dl>
-<dd>Show the status of all loop devices associated with the given <i>file</i>.</dl>
+<dd>Show the status of all loop devices associated with the given <i>file</i>.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;offset</code> <i>offset</i></p>
 <dl>
-<dd>The data start is moved <i>offset</i> bytes into the specified file or device. The <i>offset</i> may be followed by the multiplicative suffixes; see above.</dl>
+<dd>The data start is moved <i>offset</i> bytes into the specified file or device. The <i>offset</i> may be followed by the multiplicative suffixes; see above.</dd></dl>
 <p> <code>&#8211;sizelimit</code> <i>size</i></p>
 <dl>
-<dd>The data end is set to no more than <i>size</i> bytes after the data start. The <i>size</i> may be followed by the multiplicative suffixes; see above.</dl>
+<dd>The data end is set to no more than <i>size</i> bytes after the data start. The <i>size</i> may be followed by the multiplicative suffixes; see above.</dd></dl>
 <p> <code>-b</code>, <code>&#8211;sector-size</code> <i>size</i></p>
 <dl>
-<dd>Set the logical sector size of the loop device in bytes (since Linux 4.14). The option may be used when create a new loop device as well as stand-alone command to modify sector size of the already existing loop device.</dl>
+<dd>Set the logical sector size of the loop device in bytes (since Linux 4.14). The option may be used when create a new loop device as well as stand-alone command to modify sector size of the already existing loop device.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;set-capacity</code> <i>loopdev</i></p>
 <dl>
-<dd>Force the loop driver to reread the size of the file associated with the specified loop device.</dl>
+<dd>Force the loop driver to reread the size of the file associated with the specified loop device.</dd></dl>
 <p> <code>-P</code>, <code>&#8211;partscan</code></p>
 <dl>
-<dd>Force the kernel to scan the partition table on a newly created loop device. Note that the partition table parsing depends on sector sizes. The default is sector size is 512 bytes, otherwise you need to use the option <code>&#8211;sector-size</code> together with <code>&#8211;partscan</code>.</dl>
+<dd>Force the kernel to scan the partition table on a newly created loop device. Note that the partition table parsing depends on sector sizes. The default is sector size is 512 bytes, otherwise you need to use the option <code>&#8211;sector-size</code> together with <code>&#8211;partscan</code>.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;read-only</code></p>
 <dl>
-<dd>Set up a read-only loop device.</dl>
+<dd>Set up a read-only loop device.</dd></dl>
 <p> <code>&#8211;direct-io</code>[<code>=on</code>|<code>off</code>]</p>
 <dl>
-<dd>Enable or disable direct I/O for the backing file. The optional argument can be either <code>on</code> or <code>off</code>. If the argument is omitted, it defaults to <code>off</code>.</dl>
+<dd>Enable or disable direct I/O for the backing file. The optional argument can be either <code>on</code> or <code>off</code>. If the argument is omitted, it defaults to <code>off</code>.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Verbose mode.</dl>
+<dd>Verbose mode.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;list</code></p>
 <dl>
-<dd>If a loop device or the <code>-a</code> option is specified, print the default columns for either the specified loop device or all loop devices; the default is to print info about all devices. See also <code>&#8211;output</code>, <code>&#8211;noheadings</code>, <code>&#8211;raw</code>, and <code>&#8211;json</code>.</dl>
+<dd>If a loop device or the <code>-a</code> option is specified, print the default columns for either the specified loop device or all loop devices; the default is to print info about all devices. See also <code>&#8211;output</code>, <code>&#8211;noheadings</code>, <code>&#8211;raw</code>, and <code>&#8211;json</code>.</dd></dl>
 <p> <code>-O</code>, <code>&#8211;output</code> <i>column</i>[,<i>column</i>]&#8230;</p>
 <dl>
-<dd>Specify the columns that are to be printed for the <code>&#8211;list</code> output. Use <code>&#8211;help</code> to get a list of all supported columns.</dl>
+<dd>Specify the columns that are to be printed for the <code>&#8211;list</code> output. Use <code>&#8211;help</code> to get a list of all supported columns.</dd></dl>
 <p> <code>&#8211;output-all</code></p>
 <dl>
-<dd>Output all available columns.</dl>
+<dd>Output all available columns.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
-<dd>Don&#8217;t print headings for <code>&#8211;list</code> output format.</dl>
+<dd>Don&#8217;t print headings for <code>&#8211;list</code> output format.</dd></dl>
 <p> <code>&#8211;raw</code></p>
 <dl>
-<dd>Use the raw <code>&#8211;list</code> output format.</dl>
+<dd>Use the raw <code>&#8211;list</code> output format.</dd></dl>
 <p> <code>-J</code>, <code>&#8211;json</code></p>
 <dl>
-<dd>Use JSON format for <code>&#8211;list</code> output.</dl>
+<dd>Use JSON format for <code>&#8211;list</code> output.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Encryption</h2>
 <p><code>Cryptoloop is no longer supported in favor of dm-crypt.</code> For more details see <code><a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a></code>(8).</p>
 <h2>Exit Status</h2>
@@ -106,14 +106,14 @@ description: "losetup – set up and control loop devices"
 <h2>Environment</h2>
 <p>LOOPDEV_DEBUG=all</p>
 <dl>
-<dd>enables debug output.</dl>
+<dd>enables debug output.</dd></dl>
 <h2>Files</h2>
 <p><i>/dev/loop[0..N]</i></p>
 <dl>
-<dd>loop block devices</dl>
+<dd>loop block devices</dd></dl>
 <p> <i>/dev/loop-control</i></p>
 <dl>
-<dd>loop control device</dl>
+<dd>loop control device</dd></dl>
 <h2>Example</h2>
 <p>The following commands can be used as an example of using the loop device. </p>
 <dl>
@@ -126,7 +126,7 @@ description: "losetup – set up and control loop devices"
 ...
 # umount /dev/loop0
 # losetup --detach /dev/loop0</pre>
-</dl>
+</dd></dl>
 <h2>Authors</h2>
 <p>based on the original version from</p>
 <h2>Reporting Bugs</h2>

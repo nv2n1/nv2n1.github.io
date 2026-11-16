@@ -11,24 +11,24 @@ description: "ldbadd – Command-line utility for adding records to an LDB"
 <p> ldbadd &#8211; Command-line utility for adding records to an LDB </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ldbadd</code> [-h] [-H LDB-URL] [ldif-file1] [ldif-file2] [&#8230;]</dl>
+<dt> <code>ldbadd</code> [-h] [-H LDB-URL] [ldif-file1] [ldif-file2] [&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>ldbadd adds records to an <a href="/docs/linux/man/3-ldb/">ldb</a>(3) database. It reads the <a href="/docs/linux/man/5-ldif/">ldif</a>(5) files specified on the command line and adds the records from these files to the LDB database, which is specified by the -H option or the LDB_URL environment variable. </p>
+<dd>ldbadd adds records to an <a href="/docs/linux/man/3-ldb/">ldb</a>(3) database. It reads the <a href="/docs/linux/man/5-ldif/">ldif</a>(5) files specified on the command line and adds the records from these files to the LDB database, which is specified by the -H option or the LDB_URL environment variable. </dd>
 <p> If &#8211; is specified as a ldb file, the ldif input is read from standard input.</p>
 <h2>OPTIONS</h2>
 <p> -h</p>
 <dl>
 <dt>
-<dd> Show list of available options.</dl>
+</dt><dd> Show list of available options.</dd></dl>
 <p> -H &lt;ldb-url&gt;</p>
 <dl>
 <dt>
-<dd> LDB URL to connect to. See <a href="/docs/linux/man/3-ldb/">ldb</a>(3) for details.</dl>
+</dt><dd> LDB URL to connect to. See <a href="/docs/linux/man/3-ldb/">ldb</a>(3) for details.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> LDB_URL</p>
 <dl>
 <dt>
-<dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dl>
+</dt><dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dd></dl>
 <h2>VERSION</h2>
 <p> This man page is correct for version 1.1 of LDB.</p>
 <h2>SEE ALSO</h2>
@@ -39,10 +39,10 @@ description: "ldbadd – Command-line utility for adding records to an LDB"
 <p> This manpage was written by Jelmer Vernooij.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Andrew Tridgell</p>
+<dt> 1.</dt>
+<dd> Andrew Tridgell</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://samba.org/~tridge/">http://samba.org/~tridge/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://samba.org/~tridge/">http://samba.org/~tridge/</a></dd></dl>
 </dl>
 <h2>Index</h2>

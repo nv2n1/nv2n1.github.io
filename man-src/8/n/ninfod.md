@@ -14,16 +14,16 @@ description: "ninfod – Respond to IPv6 Node Information Queries"
 <p>Responds to IPv6 Node Information Queries (RFC4620) from clients. Queries can be sent by various implementations of <code>ping6</code> command.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>Debug mode. Do not go background.</p>
-<dt><code>-h</code></p>
-<dd>Show help.</p>
-<dt><code>-v</code></p>
-<dd>Verbose mode.</p>
-<dt><code>-u </code><i>user</i></p>
-<dd>Run as another user. <i>user</i> can either be username or user ID.</p>
-<dt><code>-p </code><i>pidfile</i></p>
-<dd>File for process-id storage. <i>user</i> is required to be able to create the file.</dl>
+<dt><code>-a</code></dt>
+<dd>Debug mode. Do not go background.</dd>
+<dt><code>-h</code></dt>
+<dd>Show help.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose mode.</dd>
+<dt><code>-u </code><i>user</i></dt>
+<dd>Run as another user. <i>user</i> can either be username or user ID.</dd>
+<dt><code>-p </code><i>pidfile</i></dt>
+<dd>File for process-id storage. <i>user</i> is required to be able to create the file.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ping/">ping</a></code>(8).</p>
 <h2>Author</h2>

@@ -10,146 +10,62 @@ description: "ip-l2tp – L2TPv3 static unmanaged tunnel configuration"
 <p>ip-l2tp &#8211; L2TPv3 static unmanaged tunnel configuration</p>
 <h2>Synopsis</h2>
 <pre><code>ip
-
 [ OPTIONS ]
-
 l2tp
-
 { COMMAND |
-
     help }
 ip l2tp add tunnel
-
-
 remote ADDR local ADDR
-
-
 tunnel_id
-
 ID
-
 peer_tunnel_id
-
 ID
-
-
 [ encap { ip | udp } ]
-
-
 [ udp_sport
-
 PORT
-
 ] [ udp_dport
-
 PORT
-
 ]
-
-
 [ udp_csum { on | off } ]
-
-
 [ udp6_csum_tx { on | off } ]
-
-
 [ udp6_csum_rx { on | off } ]
-
-
-
 ip l2tp add session
-
 [ name
-
 NAME
-
 ]
-
-
 tunnel_id
-
 ID
-
 session_id
-
 ID
-
 peer_session_id
-
 ID
-
-
 [ cookie
-
 HEXSTR
-
 ] [ peer_cookie
-
 HEXSTR
-
 ]
-
-
 [ l2spec_type { none | default } ]
-
-
 [ seq { none | send | recv | both } ]
-
-
-
 ip l2tp del tunnel
-
 tunnel_id
-
 ID
-
-
-
 ip l2tp del session
-
 tunnel_id
-
 ID
-
 session_id
-
 ID
-
-
-
 ip l2tp show tunnel [ tunnel_id
-
 ID ]
-
-
-
 ip l2tp show session [ tunnel_id
-
 ID.B ] [
-
 session_id
-
 ID ]
-
-
-
 NAME :=
-
 STRING
-
-
 ADDR := { IP_ADDRESS |
-
     any }
-
-
 PORT := { NUMBER }
-
-
 ID := { NUMBER }
-
-
-
 HEXSTR := { 8 or 16 hex digits (4 / 8 bytes) }</code></pre>
 <h2>Description</h2>
 <p>The <code>ip l2tp</code> commands are used to establish static, or so-called <i>unmanaged</i> L2TPv3 ethernet tunnels. For unmanaged tunnels, there is no L2TP control protocol so no userspace daemon is required &#8211; tunnels are manually created by issuing commands at a local system and at a remote peer. </p>
@@ -162,70 +78,70 @@ HEXSTR := { 8 or 16 hex digits (4 / 8 bytes) }</code></pre>
 <p> Note that unmanaged tunnels carry only ethernet frames. If you need to carry PPP traffic (L2TPv2) or your peer doesn&#8217;t support unmanaged L2TPv3 tunnels, you will need an L2TP server which implements the L2TP control protocol. The L2TP control protocol allows dynamic L2TP tunnels and sessions to be established and provides for detecting and acting upon network failures.</p>
 <h3>ip l2tp add tunnel &#8211; add a new tunnel</h3>
 <dl>
-<dt><code>tunnel_id</code><i> ID</i></p>
-<dd>set the tunnel id, which is a 32-bit integer value. Uniquely identifies the tunnel. The value used must match the peer_tunnel_id value being used at the peer.</p>
-<dt><code>peer_tunnel_id</code><i> ID</i></p>
-<dd>set the peer tunnel id, which is a 32-bit integer value assigned to the tunnel by the peer. The value used must match the tunnel_id value being used at the peer.</p>
-<dt><code>remote</code><i> ADDR</i></p>
-<dd>set the IP address of the remote peer. May be specified as an IPv4 address or an IPv6 address.</p>
-<dt><code>local</code><i> ADDR</i></p>
-<dd>set the IP address of the local interface to be used for the tunnel. This address must be the address of a local interface. May be specified as an IPv4 address or an IPv6 address.</p>
-<dt><code>encap</code><i> ENCAP</i></p>
+<dt><code>tunnel_id</code><i> ID</i></dt>
+<dd>set the tunnel id, which is a 32-bit integer value. Uniquely identifies the tunnel. The value used must match the peer_tunnel_id value being used at the peer.</dd>
+<dt><code>peer_tunnel_id</code><i> ID</i></dt>
+<dd>set the peer tunnel id, which is a 32-bit integer value assigned to the tunnel by the peer. The value used must match the tunnel_id value being used at the peer.</dd>
+<dt><code>remote</code><i> ADDR</i></dt>
+<dd>set the IP address of the remote peer. May be specified as an IPv4 address or an IPv6 address.</dd>
+<dt><code>local</code><i> ADDR</i></dt>
+<dd>set the IP address of the local interface to be used for the tunnel. This address must be the address of a local interface. May be specified as an IPv4 address or an IPv6 address.</dd>
+<dt><code>encap</code><i> ENCAP</i></dt>
 <dd>set the encapsulation type of the tunnel.<br />
- Valid values for encapsulation are: <code>udp</code>, <code>ip</code>.</p>
-<dt><code>udp_sport</code><i> PORT</i></p>
-<dd>set the UDP source port to be used for the tunnel. Must be present when udp encapsulation is selected. Ignored when ip encapsulation is selected.</p>
-<dt><code>udp_dport</code><i> PORT</i></p>
-<dd>set the UDP destination port to be used for the tunnel. Must be present when udp encapsulation is selected. Ignored when ip encapsulation is selected.</p>
-<dt><code>udp_csum</code><i> STATE</i></p>
+ Valid values for encapsulation are: <code>udp</code>, <code>ip</code>.</dd>
+<dt><code>udp_sport</code><i> PORT</i></dt>
+<dd>set the UDP source port to be used for the tunnel. Must be present when udp encapsulation is selected. Ignored when ip encapsulation is selected.</dd>
+<dt><code>udp_dport</code><i> PORT</i></dt>
+<dd>set the UDP destination port to be used for the tunnel. Must be present when udp encapsulation is selected. Ignored when ip encapsulation is selected.</dd>
+<dt><code>udp_csum</code><i> STATE</i></dt>
 <dd>(IPv4 only) control if IPv4 UDP checksums should be calculated and checked for the encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>off</code>.<br />
- Valid values are: <code>on</code>, <code>off</code>.</p>
-<dt><code>udp6_csum_tx</code><i> STATE</i></p>
+ Valid values are: <code>on</code>, <code>off</code>.</dd>
+<dt><code>udp6_csum_tx</code><i> STATE</i></dt>
 <dd>(IPv6 only) control if IPv6 UDP checksums should be calculated for encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>on</code>.<br />
- Valid values are: <code>on</code>, <code>off</code>.</p>
-<dt><code>udp6_csum_rx</code><i> STATE</i></p>
+ Valid values are: <code>on</code>, <code>off</code>.</dd>
+<dt><code>udp6_csum_rx</code><i> STATE</i></dt>
 <dd>(IPv6 only) control if IPv6 UDP checksums should be checked for the encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>on</code>.<br />
- Valid values are: <code>on</code>, <code>off</code>.</dl>
+ Valid values are: <code>on</code>, <code>off</code>.</dd></dl>
 <h3>ip l2tp del tunnel &#8211; destroy a tunnel</h3>
 <dl>
-<dt><code>tunnel_id</code><i> ID</i></p>
-<dd>set the tunnel id of the tunnel to be deleted. All sessions within the tunnel must be deleted first.</dl>
+<dt><code>tunnel_id</code><i> ID</i></dt>
+<dd>set the tunnel id of the tunnel to be deleted. All sessions within the tunnel must be deleted first.</dd></dl>
 <h3>ip l2tp show tunnel &#8211; show information about tunnels</h3>
 <dl>
-<dt><code>tunnel_id</code><i> ID</i></p>
-<dd>set the tunnel id of the tunnel to be shown. If not specified, information about all tunnels is printed.</dl>
+<dt><code>tunnel_id</code><i> ID</i></dt>
+<dd>set the tunnel id of the tunnel to be shown. If not specified, information about all tunnels is printed.</dd></dl>
 <h3>ip l2tp add session &#8211; add a new session to a tunnel</h3>
 <dl>
-<dt><code>name</code><i> NAME </i></p>
-<dd>sets the session network interface name. Default is l2tpethN.</p>
-<dt><code>tunnel_id</code><i> ID</i></p>
-<dd>set the tunnel id, which is a 32-bit integer value. Uniquely identifies the tunnel into which the session will be created. The tunnel must already exist.</p>
-<dt><code>session_id</code><i> ID</i></p>
-<dd>set the session id, which is a 32-bit integer value. Uniquely identifies the session being created. The value used must match the peer_session_id value being used at the peer.</p>
-<dt><code>peer_session_id</code><i> ID</i></p>
-<dd>set the peer session id, which is a 32-bit integer value assigned to the session by the peer. The value used must match the session_id value being used at the peer.</p>
-<dt><code>cookie</code><i> HEXSTR</i></p>
-<dd>sets an optional cookie value to be assigned to the session. This is a 4 or 8 byte value, specified as 8 or 16 hex digits, e.g. 014d3636deadbeef. The value must match the peer_cookie value set at the peer. The cookie value is carried in L2TP data packets and is checked for expected value at the peer. Default is to use no cookie.</p>
-<dt><code>peer_cookie</code><i> HEXSTR</i></p>
-<dd>sets an optional peer cookie value to be assigned to the session. This is a 4 or 8 byte value, specified as 8 or 16 hex digits, e.g. 014d3636deadbeef. The value must match the cookie value set at the peer. It tells the local system what cookie value to expect to find in received L2TP packets. Default is to use no cookie.</p>
-<dt><code>l2spec_type</code><i> L2SPECTYPE</i></p>
+<dt><code>name</code><i> NAME </i></dt>
+<dd>sets the session network interface name. Default is l2tpethN.</dd>
+<dt><code>tunnel_id</code><i> ID</i></dt>
+<dd>set the tunnel id, which is a 32-bit integer value. Uniquely identifies the tunnel into which the session will be created. The tunnel must already exist.</dd>
+<dt><code>session_id</code><i> ID</i></dt>
+<dd>set the session id, which is a 32-bit integer value. Uniquely identifies the session being created. The value used must match the peer_session_id value being used at the peer.</dd>
+<dt><code>peer_session_id</code><i> ID</i></dt>
+<dd>set the peer session id, which is a 32-bit integer value assigned to the session by the peer. The value used must match the session_id value being used at the peer.</dd>
+<dt><code>cookie</code><i> HEXSTR</i></dt>
+<dd>sets an optional cookie value to be assigned to the session. This is a 4 or 8 byte value, specified as 8 or 16 hex digits, e.g. 014d3636deadbeef. The value must match the peer_cookie value set at the peer. The cookie value is carried in L2TP data packets and is checked for expected value at the peer. Default is to use no cookie.</dd>
+<dt><code>peer_cookie</code><i> HEXSTR</i></dt>
+<dd>sets an optional peer cookie value to be assigned to the session. This is a 4 or 8 byte value, specified as 8 or 16 hex digits, e.g. 014d3636deadbeef. The value must match the cookie value set at the peer. It tells the local system what cookie value to expect to find in received L2TP packets. Default is to use no cookie.</dd>
+<dt><code>l2spec_type</code><i> L2SPECTYPE</i></dt>
 <dd>set the layer2specific header type of the session.<br />
- Valid values are: <code>none</code>, <code>default</code>.</p>
-<dt><code>seq</code><i> SEQ</i></p>
+ Valid values are: <code>none</code>, <code>default</code>.</dd>
+<dt><code>seq</code><i> SEQ</i></dt>
 <dd>controls sequence numbering to prevent or detect out of order packets. <code>send</code> puts a sequence number in the default layer2specific header of each outgoing packet. <code>recv</code> reorder packets if they are received out of order. Default is <code>none</code>.<br />
- Valid values are: <code>none</code>, <code>send</code>, <code>recv</code>, <code>both</code>.</dl>
+ Valid values are: <code>none</code>, <code>send</code>, <code>recv</code>, <code>both</code>.</dd></dl>
 <h3>ip l2tp del session &#8211; destroy a session</h3>
 <dl>
-<dt><code>tunnel_id</code><i> ID</i></p>
-<dd>set the tunnel id in which the session to be deleted is located.</p>
-<dt><code>session_id</code><i> ID</i></p>
-<dd>set the session id of the session to be deleted.</dl>
+<dt><code>tunnel_id</code><i> ID</i></dt>
+<dd>set the tunnel id in which the session to be deleted is located.</dd>
+<dt><code>session_id</code><i> ID</i></dt>
+<dd>set the session id of the session to be deleted.</dd></dl>
 <h3>ip l2tp show session &#8211; show information about sessions</h3>
 <dl>
-<dt><code>tunnel_id</code><i> ID</i></p>
-<dd>set the tunnel id of the session(s) to be shown. If not specified, information about sessions in all tunnels is printed.</p>
-<dt><code>session_id</code><i> ID</i></p>
-<dd>set the session id of the session to be shown. If not specified, information about all sessions is printed.</dl>
+<dt><code>tunnel_id</code><i> ID</i></dt>
+<dd>set the tunnel id of the session(s) to be shown. If not specified, information about sessions in all tunnels is printed.</dd>
+<dt><code>session_id</code><i> ID</i></dt>
+<dd>set the session id of the session to be shown. If not specified, information about all sessions is printed.</dd></dl>
 <h2>Examples</h2>
 <h3>Setup L2TP tunnels and sessions</h3>
 <pre>site-A:# ip l2tp add tunnel tunnel_id 3000 peer_tunnel_id 4000 \

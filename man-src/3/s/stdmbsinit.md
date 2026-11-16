@@ -11,7 +11,6 @@ std::mbsinit - std::mbsinit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int mbsinit(const std::mbstate_t *ps);</code></pre> 
 If ps is not a null pointer, the mbsinit function determines whether the pointed-to std::mbstate_t object describes the initial conversion state. 
 
@@ -30,14 +29,10 @@ ps - pointer to the std::mbstate_t object to examine
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     // allow mbrlen() to work with UTF-8 multibyte encoding
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);

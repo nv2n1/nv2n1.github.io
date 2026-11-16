@@ -19,23 +19,23 @@ description: "kdocker - dock any application in the system tray SYNOPSIS kdocker
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
+<dt><code>-a</code></dt>
 <dd>
 <pre>
  Show author information
 </pre>
-<dt><code>-b</code></p>
+</dd><dt><code>-b</code></dt>
 <dd>
 <pre>
  Suppress the warning dialog when docking non-normal windows (blind mode)
 </pre>
-<dt><code>-d</code> <i>secs</i></p>
+</dd><dt><code>-d</code> <i>secs</i></dt>
 <dd>
 <pre>
  Maximum time in seconds to allow for a command to start and open a window
  [default: 5 seconds]
 </pre>
-<dt><code>-e</code> <i>type</i></p>
+</dd><dt><code>-e</code> <i>type</i></dt>
 <dd>
 <pre>
  Name matching syntax. Choices are:
@@ -45,96 +45,96 @@ description: "kdocker - dock any application in the system tray SYNOPSIS kdocker
   w = wildcard
   x = W3C XML Schema 1.1
 </pre>
-<dt><code>-f</code></p>
+</dd><dt><code>-f</code></dt>
 <dd>
 <pre>
  Dock window that has focus (active window)
 </pre>
-<dt><code>-h</code></p>
+</dd><dt><code>-h</code></dt>
 <dd>
 <pre>
  Display this help, then exit
 </pre>
-<dt><code>-i</code> <i>file</i></p>
+</dd><dt><code>-i</code> <i>file</i></dt>
 <dd>
 <pre>
  Custom icon path
 </pre>
-<dt><code>-j</code></p>
+</dd><dt><code>-j</code></dt>
 <dd>
 <pre>
  Case sensitive name (title) matching
 </pre>
-<dt><code>-k</code></p>
+</dd><dt><code>-k</code></dt>
 <dd>
 <pre>
  Regex minimal matching
 </pre>
-<dt><code>-l</code></p>
+</dd><dt><code>-l</code></dt>
 <dd>
 <pre>
  Iconify when focus lost
 </pre>
-<dt><code>-m</code></p>
+</dd><dt><code>-m</code></dt>
 <dd>
 <pre>
  Keep application window showing (don't hide on dock)
 </pre>
-<dt><code>-n</code> <i>name</i></p>
+</dd><dt><code>-n</code> <i>name</i></dt>
 <dd>
 <pre>
  Match window based on its title
 </pre>
-<dt><code>-o</code></p>
+</dd><dt><code>-o</code></dt>
 <dd>
 <pre>
  Iconify when obscured by other windows
 </pre>
-<dt><code>-p</code> <i>secs</i></p>
+</dd><dt><code>-p</code> <i>secs</i></dt>
 <dd>
 <pre>
  By default, when the title of the application changes,
  a popup is displayed from the system tray for 4 seconds
  Works well with xmms
 </pre>
-<dt><code>-q</code></p>
+</dd><dt><code>-q</code></dt>
 <dd>
 <pre>
  Disable ballooning title changes (quiet)
 </pre>
-<dt><code>-r</code></p>
+</dd><dt><code>-r</code></dt>
 <dd>
 <pre>
  Remove this application from the pager
 </pre>
-<dt><code>-s</code></p>
+</dd><dt><code>-s</code></dt>
 <dd>
 <pre>
  Make the window sticky (appears on all desktops)
 </pre>
-<dt><code>-t</code></p>
+</dd><dt><code>-t</code></dt>
 <dd>
 <pre>
  Remove this application from the taskbar
 </pre>
-<dt><code>-v, &#8211;version</code></p>
+</dd><dt><code>-v, &#8211;version</code></dt>
 <dd>
 <pre>
  Show the KDocker version string, then exit
 </pre>
-<dt><code>-w</code> <i>wid</i></p>
+</dd><dt><code>-w</code> <i>wid</i></dt>
 <dd>
 <pre>
  Window id of the application to dock
  Assumes hex number of the form 0x###...
 </pre>
-<dt><code>-x</code> <i>pid</i></p>
+</dd><dt><code>-x</code> <i>pid</i></dt>
 <dd>
 <pre>
  Process id of the application to dock
  Assumes decimal number of the form ###...
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <pre>
  KDocker was written by Girish Ramakrishnan

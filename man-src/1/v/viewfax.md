@@ -18,96 +18,95 @@ description: "viewfax – display fax files in an X11 window"
 <p> If the mouse has a scroll-wheel it can be used to move an oversized image vertically. With the shift key depressed, the wheel scrolls through the pages. The shift sense is inverted if <code>viewfax</code> is started with <code>-W</code> on the command-line. </p>
 <p> Further interaction is controlled by single-key commands:</p>
 <dl>
-<dt><code>h or Help</code></p>
-<dd> displays a page of help information. Type &#8216;q&#8217; to return to the original document.</p>
-<dt><code>p or Prior or PgUP or &#8211; or BackSpace</code></p>
-<dd> displays the previous page from the command-line list.</p>
-<dt><code>n or Next or PgDn or + or space</code></p>
-<dd> displays the next page from the command-line list.</p>
-<dt><code>Shift HOME</code></p>
-<dd> displays the first page from the command-line list.</p>
-<dt><code>Shift END</code></p>
-<dd> displays the last page from the command-line list.</p>
-<dt><code>z</code></p>
-<dd> zoom in (same as right mouse button).</p>
-<dt><code>Shift Z</code></p>
-<dd> zoom out (same as left mouse button).</p>
-<dt><code>u</code></p>
-<dd> turns the image upside down, which is useful if the fax was originally fed the wrong way into the machine.</p>
-<dt><code>Shift U</code></p>
-<dd> turns this and all following pages upside down.</p>
-<dt><code>l</code></p>
-<dd> turns the image through 90 degrees, to view landscape text.</p>
-<dt><code>Shift L</code></p>
-<dd> turns this and all following pages sideways.</p>
-<dt><code>m</code></p>
-<dd> produce a left/right mirror image of the page.</p>
-<dt><code>Shift M</code></p>
-<dd> mirror this and all following pages.</p>
-<dt><code>cursor arrows</code></p>
-<dd> reposition the displayed image if it exceeds the window size.</p>
-<dt><code>HOME</code></p>
-<dd> repositions so that the top left corner is visible.</p>
-<dt><code>END</code></p>
-<dd> makes the bottom right corner visible.</p>
-<dt><code>Print</code></p>
-<dd> if the environment variable VIEWFAX_PRINT is defined, the current page is printed. All pages are printed with Shift Print.</p>
-<dt><code>e</code></p>
-<dd> if the environment variable VIEWFAX_EDIT is defined, the current page is passed to the editor. All input files can be edited with Shift e.</p>
-<dt><code>q</code></p>
-<dd> terminates the program.</p>
-<dt><code>Shift Q</code></p>
-<dd> terminates the program with non-zero exit status. Can be used to abort a shell script, e.g. when the user is previewing an outbound fax and decides not to send it.</dl>
+<dt><code>h or Help</code></dt>
+<dd> displays a page of help information. Type &#8216;q&#8217; to return to the original document.</dd>
+<dt><code>p or Prior or PgUP or &#8211; or BackSpace</code></dt>
+<dd> displays the previous page from the command-line list.</dd>
+<dt><code>n or Next or PgDn or + or space</code></dt>
+<dd> displays the next page from the command-line list.</dd>
+<dt><code>Shift HOME</code></dt>
+<dd> displays the first page from the command-line list.</dd>
+<dt><code>Shift END</code></dt>
+<dd> displays the last page from the command-line list.</dd>
+<dt><code>z</code></dt>
+<dd> zoom in (same as right mouse button).</dd>
+<dt><code>Shift Z</code></dt>
+<dd> zoom out (same as left mouse button).</dd>
+<dt><code>u</code></dt>
+<dd> turns the image upside down, which is useful if the fax was originally fed the wrong way into the machine.</dd>
+<dt><code>Shift U</code></dt>
+<dd> turns this and all following pages upside down.</dd>
+<dt><code>l</code></dt>
+<dd> turns the image through 90 degrees, to view landscape text.</dd>
+<dt><code>Shift L</code></dt>
+<dd> turns this and all following pages sideways.</dd>
+<dt><code>m</code></dt>
+<dd> produce a left/right mirror image of the page.</dd>
+<dt><code>Shift M</code></dt>
+<dd> mirror this and all following pages.</dd>
+<dt><code>cursor arrows</code></dt>
+<dd> reposition the displayed image if it exceeds the window size.</dd>
+<dt><code>HOME</code></dt>
+<dd> repositions so that the top left corner is visible.</dd>
+<dt><code>END</code></dt>
+<dd> makes the bottom right corner visible.</dd>
+<dt><code>Print</code></dt>
+<dd> if the environment variable VIEWFAX_PRINT is defined, the current page is printed. All pages are printed with Shift Print.</dd>
+<dt><code>e</code></dt>
+<dd> if the environment variable VIEWFAX_EDIT is defined, the current page is passed to the editor. All input files can be edited with Shift e.</dd>
+<dt><code>q</code></dt>
+<dd> terminates the program.</dd>
+<dt><code>Shift Q</code></dt>
+<dd> terminates the program with non-zero exit status. Can be used to abort a shell script, e.g. when the user is previewing an outbound fax and decides not to send it.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>viewfax</code> is designed to &quot;do the right thing&quot; when given just a filename. Special cases can be handled with the following options. (Note that tiff-files contain a header which overrides the <code>-f, -n, -h, -w, -l, -m, </code>and <code>-u </code>flags.)</p>
 <dl>
-<dt><code>-f</code></p>
-<dd> indicates that raw input files are fine resolution (7.7 lines/mm) faxes. This is the default unless the filename begins with &quot;fn&quot;. Tiff and &quot;PC-Research&quot; (DigiFAX) files are self-specifying.</p>
-<dt><code>-n</code></p>
-<dd> indicates that raw input files are normal resolution (3.85 lines/mm) faxes. Each fax line is duplicated in the displayed image to give approximately equal vertical and horizontal scales.</p>
-<dt><code>-h</code><i>height</i></p>
-<dd> specifies the number of fax lines. If this option is missing, <code>viewfax</code> counts the number of lines in the input file.</p>
-<dt><code>-w</code><i>width</i></p>
-<dd> specifies the number of pixels in each scan-line. The default value is 1728.</p>
-<dt><code>-l</code></p>
-<dd> display in landscape mode.</p>
-<dt><code>-u</code></p>
-<dd> turn the image upside down.</p>
-<dt><code>-i</code></p>
-<dd> invert pixels (black/white).</p>
-<dt><code>-b</code></p>
-<dd> preferred warning style: &#8216;a&#8217; for audible bell (console beep), &#8216;v&#8217; for visible bell (flash the window), &#8216;n&#8217; for neither. &#8216;v&#8217; is the default.</p>
-<dt><code>-d or -display</code></p>
-<dd> use specified X server</p>
-<dt><code>-g or -geometry</code></p>
-<dd> the preferred size and position of the window, specified as <i>width</i>x<i>height</i>+<i>x</i>+<i>y</i>. If a position is given (x and y values), <code>viewfax</code> asks the window manager to place the window there. The initial size of the window is constrained to be at most <i>width</i>x<i>height</i>. </p>
+<dt><code>-f</code></dt>
+<dd> indicates that raw input files are fine resolution (7.7 lines/mm) faxes. This is the default unless the filename begins with &quot;fn&quot;. Tiff and &quot;PC-Research&quot; (DigiFAX) files are self-specifying.</dd>
+<dt><code>-n</code></dt>
+<dd> indicates that raw input files are normal resolution (3.85 lines/mm) faxes. Each fax line is duplicated in the displayed image to give approximately equal vertical and horizontal scales.</dd>
+<dt><code>-h</code><i>height</i></dt>
+<dd> specifies the number of fax lines. If this option is missing, <code>viewfax</code> counts the number of lines in the input file.</dd>
+<dt><code>-w</code><i>width</i></dt>
+<dd> specifies the number of pixels in each scan-line. The default value is 1728.</dd>
+<dt><code>-l</code></dt>
+<dd> display in landscape mode.</dd>
+<dt><code>-u</code></dt>
+<dd> turn the image upside down.</dd>
+<dt><code>-i</code></dt>
+<dd> invert pixels (black/white).</dd>
+<dt><code>-b</code></dt>
+<dd> preferred warning style: &#8216;a&#8217; for audible bell (console beep), &#8216;v&#8217; for visible bell (flash the window), &#8216;n&#8217; for neither. &#8216;v&#8217; is the default.</dd>
+<dt><code>-d or -display</code></dt>
+<dd> use specified X server</dd>
+<dt><code>-g or -geometry</code></dt>
+<dd> the preferred size and position of the window, specified as <i>width</i>x<i>height</i>+<i>x</i>+<i>y</i>. If a position is given (x and y values), <code>viewfax</code> asks the window manager to place the window there. The initial size of the window is constrained to be at most <i>width</i>x<i>height</i>. </dd>
 <p> If the window is subsequently resized due to the user zooming in or out, the geometry is taken as a constraint on the screen area which may be used by <code>viewfax.</code> </p>
 <p> If you do not supply a geometry value, everything works fine with ICCCM-compliant window managers like <code>olwm, mwm, twm, </code>and <code>tvtwm</code>. When fully zoomed out the <code>viewfax</code> window will occupy the entire screen. </p>
 <p> Users of <code>fvwm</code> will notice that the title bar and left border are moved off screen when <code>viewfax</code> repositions the window to (0,0). A workaround is to use -geometry +5+23 when using <code>fvwm.</code> The proper fix would be for someone to update the routine HandleConfigureRequest() in fvwm/events.c to correspond to the code in twm/events.c.</p>
-<dt><code>-m</code><i>memory limit</i></p>
-<dd> each page is kept in memory after being fetched and expanded, which saves time if the user returns to it in the same session. To prevent viewfax from using all the available swap space, a limit is placed on the total size of cached images. This defaults to 4 MBytes, enough for about 6 typical pages. If the memory limit is exceeded, old images are discarded and must be reloaded from disk if the user returns to them. The operation of this mechanism is transparent apart from the occasional delays due to reloading. The value specified on the command line can be suffixed <code>k</code> or <code>m</code> for kilo- or megabytes.</p>
-<dt><code>-r</code></p>
-<dd> the bit order of the bytes in the input file is reversed. The fax specification deals only with serial data transmission. Modem manufacturers have to decide whether the first bit received should be placed in the most significant or the least significant position in a byte. The consensus is to pack most significant first, but the -r flag is available to deal with the opposite order.</p>
-<dt><code>-v</code></p>
-<dd> produce some informative messages (verbose mode).</p>
-<dt><code>-z</code><i>zoom</i></p>
-<dd> specifies an initial zoom factor. A full-scale fax will usually not fit on the screen. If the <code>-z</code> option is not specified, <code>viewfax</code> scales the image by a power of 2 such that it is fully visible at a reduced size. The user can then use the mouse buttons (see above) to view expanded portions of the image.</p>
-<dt><code>-2</code></p>
-<dd> Assume that raw input files use group 3 two dimensional coding.</p>
-<dt><code>-4</code></p>
-<dd> Assume that raw input files use group 4 coding. The number of fax lines (-h option) is required in this case.</dl>
+<dt><code>-m</code><i>memory limit</i></dt>
+<dd> each page is kept in memory after being fetched and expanded, which saves time if the user returns to it in the same session. To prevent viewfax from using all the available swap space, a limit is placed on the total size of cached images. This defaults to 4 MBytes, enough for about 6 typical pages. If the memory limit is exceeded, old images are discarded and must be reloaded from disk if the user returns to them. The operation of this mechanism is transparent apart from the occasional delays due to reloading. The value specified on the command line can be suffixed <code>k</code> or <code>m</code> for kilo- or megabytes.</dd>
+<dt><code>-r</code></dt>
+<dd> the bit order of the bytes in the input file is reversed. The fax specification deals only with serial data transmission. Modem manufacturers have to decide whether the first bit received should be placed in the most significant or the least significant position in a byte. The consensus is to pack most significant first, but the -r flag is available to deal with the opposite order.</dd>
+<dt><code>-v</code></dt>
+<dd> produce some informative messages (verbose mode).</dd>
+<dt><code>-z</code><i>zoom</i></dt>
+<dd> specifies an initial zoom factor. A full-scale fax will usually not fit on the screen. If the <code>-z</code> option is not specified, <code>viewfax</code> scales the image by a power of 2 such that it is fully visible at a reduced size. The user can then use the mouse buttons (see above) to view expanded portions of the image.</dd>
+<dt><code>-2</code></dt>
+<dd> Assume that raw input files use group 3 two dimensional coding.</dd>
+<dt><code>-4</code></dt>
+<dd> Assume that raw input files use group 4 coding. The number of fax lines (-h option) is required in this case.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>VIEWFAX_PRINT</code></p>
-<dd> Defines a command that will print one or more fax pages. </p>
-<dt><code>VIEWFAX_EDIT</code></p>
-<dd> Defines a command that will calls an editor on one or more fax pages. </p>
+<dt><code>VIEWFAX_PRINT</code></dt>
+<dd> Defines a command that will print one or more fax pages. </dd>
+<dt><code>VIEWFAX_EDIT</code></dt>
+<dd> Defines a command that will calls an editor on one or more fax pages. </dd>
 </dl>
 <p> These two variables are optional. If a variable is undefined, the corresponding keyboard command is ignored. If the variable is defined, it should contain the name of a command or executable script that performs the desired function. The command should process a single page if called with a -p&nbsp;<wbr><i>page-number</i> argument. Alternatively, if can be called with just a list of filenames, meaning that all pages should be processed. </p>
 <p> Here is an oversimplified example of a print command. Note that it assumes that the format is tiff and will fail when handed a raw fax file. </p>
 <pre><code>
   VIEWFAX_PRINT=printfax
- 
   /usr/local/bin/printfax:
 #!/ bin / sh
   case "$1" in

@@ -11,18 +11,18 @@ description: "XkbGetKeyExplicitComponents – Obtain the explicit components (th
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbGetKeyExplicitComponents</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to server</p>
-<dt><i>&#8211; first</i></p>
-<dd>keycode of first key to fetch</p>
-<dt><i>&#8211; num</i></p>
-<dd>number of keys for which to get explicit info</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>Xkb description in which to put results</dl>
+</dd><dd>connection to server</dd>
+<dt><i>&#8211; first</i></dt>
+<dd>keycode of first key to fetch</dd>
+<dt><i>&#8211; num</i></dt>
+<dd>number of keys for which to get explicit info</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>Xkb description in which to put results</dd></dl>
 <h2>Description</h2>
 <p>Whenever a client remaps the keyboard using core protocol requests, Xkb examines the map to determine likely default values for the components that cannot be specified using the core protocol (see Core Keyboard Mapping to Xkb Keyboard Mapping Transformation for more information on how Xkb chooses the default values). </p>
 <p> DO THE FOUR PAGES OF &quot;CORE KEYBOARD MAPPING TO XKB KEYBOARD MAPPING TRANSFORMATION&quot; NEED TO BE ADDED HERE? </p>
@@ -103,10 +103,10 @@ description: "XkbGetKeyExplicitComponents – Obtain the explicit components (th
 <p> If the server does not have a compatible version of Xkb, or the Xkb extension has not been properly initialized, <i>XkbGetKeyExplicitComponents </i> returns BadMatch. If <i>num </i> is less than 1 or greater than XkbMaxKeyCount, <i>XkbGetKeyExplicitComponents </i> returns BadValue. If any allocation errors occur, <i>XkbGetKeyExplicitComponents </i> returns BadAlloc.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range </p>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range </dd>
 </dl>

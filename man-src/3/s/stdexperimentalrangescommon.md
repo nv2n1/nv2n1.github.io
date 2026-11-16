@@ -11,31 +11,18 @@ std::experimental::ranges::Common - std::experimental::ranges::Common
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class T, class U&gt;
-
     concept bool Common =
-
         Same&lt;ranges::common_type_t&lt;T, U&gt;, ranges::common_type_t&lt;U, T&gt;&gt; &amp;&amp;
-
         ConvertibleTo&lt;T, ranges::common_type_t&lt;T, U&gt;&gt; &amp;&amp;
-
         ConvertibleTo&lt;U, ranges::common_type_t&lt;T, U&gt;&gt; &amp;&amp;
-
         CommonReference&lt;
-
             std::add_lvalue_reference_t&lt;const T&gt;, (ranges TS)
-
                                                       std::add_lvalue_reference_t&lt;const U&gt;&gt; &amp;&amp;
-
         CommonReference&lt;
-
             std::add_lvalue_reference_t&lt;ranges::common_type_t&lt;T, U&gt;&gt;,
-
             ranges::common_reference_t&lt;
-
                 std::add_lvalue_reference_t&lt;const T&gt;,
-
                 std::add_lvalue_reference_t&lt;const U&gt;&gt;&gt;;</code></pre> 
 The concept Common&lt;T, U&gt; specifies that two types T and U share a common type (as computed by ranges::common_type_t) to which both can be converted. 
 Common&lt;T, U&gt; is satisfied only if, given expressions t and u such that decltype((t)) is T and decltype((u)) is U, 

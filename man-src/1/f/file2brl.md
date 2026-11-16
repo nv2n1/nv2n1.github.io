@@ -15,30 +15,30 @@ description: "file2brl – Translate an xml or a text file into an embosser-read
 <p> Translate an xml, html or a text file into an embosser-ready braille file. This includes translation into grade two, if desired, mathematical codes, etc. It also includes formatting according to a built-in style sheet which can be modified by the user. </p>
 <p> If inputFile is not specified or &#8216;-&#8216; input is taken from stdin. If outputFile is not specified the output is sent to stdout.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> display version information and exit</p>
-<dt><code>-f</code>, <code>&#8211;config-file</code></p>
-<dd> name a configuration file that specifies how to do the translation</p>
-<dt><code>-b</code>, <code>&#8211;backward</code></p>
-<dd> backward translation</p>
-<dt><code>-r</code>, <code>&#8211;reformat</code></p>
-<dd> reformat a braille file</p>
-<dt><code>-T</code>, <code>&#8211;text</code></p>
-<dd> Treat as text even if xml</p>
-<dt><code>-t</code>, <code>&#8211;html</code></p>
-<dd> html document, not xhtml</p>
-<dt><code>-p</code>, <code>&#8211;poorly-formatted</code></p>
-<dd> translate a poorly formatted file</p>
-<dt><code>-P</code>, <code>&#8211;paragraph-line</code></p>
-<dd> treat each block of text ending in a newline as a paragraph. If there are two newline characters a blank line will be inserted before the next paragraph</p>
-<dt><code>-C</code>, <code>&#8211;config-setting</code></p>
-<dd> specify particular configuration settings They override any settings that are specified in a config file</p>
-<dt><code>-w</code> <code>&#8211;writeable-path</code></p>
-<dd> path for temp files and log file</p>
-<dt><code>-l</code>, <code>&#8211;log-file</code></p>
-<dd> write errors to file2brl.log instead of stderr</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> display version information and exit</dd>
+<dt><code>-f</code>, <code>&#8211;config-file</code></dt>
+<dd> name a configuration file that specifies how to do the translation</dd>
+<dt><code>-b</code>, <code>&#8211;backward</code></dt>
+<dd> backward translation</dd>
+<dt><code>-r</code>, <code>&#8211;reformat</code></dt>
+<dd> reformat a braille file</dd>
+<dt><code>-T</code>, <code>&#8211;text</code></dt>
+<dd> Treat as text even if xml</dd>
+<dt><code>-t</code>, <code>&#8211;html</code></dt>
+<dd> html document, not xhtml</dd>
+<dt><code>-p</code>, <code>&#8211;poorly-formatted</code></dt>
+<dd> translate a poorly formatted file</dd>
+<dt><code>-P</code>, <code>&#8211;paragraph-line</code></dt>
+<dd> treat each block of text ending in a newline as a paragraph. If there are two newline characters a blank line will be inserted before the next paragraph</dd>
+<dt><code>-C</code>, <code>&#8211;config-setting</code></dt>
+<dd> specify particular configuration settings They override any settings that are specified in a config file</dd>
+<dt><code>-w</code> <code>&#8211;writeable-path</code></dt>
+<dd> path for temp files and log file</dd>
+<dt><code>-l</code>, <code>&#8211;log-file</code></dt>
+<dd> write errors to file2brl.log instead of stderr</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by John J. Boyer.</p>
 <h2>REPORTING BUGS</h2>
@@ -50,6 +50,6 @@ description: "file2brl – Translate an xml or a text file into an embosser-read
 <p> The full documentation for <code>file2brl</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>file2brl</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info liblouisutdml</code></dl>
+</dt><dd> <code>info liblouisutdml</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

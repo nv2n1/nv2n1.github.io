@@ -18,18 +18,18 @@ description: "beagle-build-index"
 <h2>Options</h2>
 <p><code>beagle-build-index</code> takes the following options</p>
 <dl>
-<dt><code>&#8211;recursive</code></p>
-<dd>If specified, do recursive crawling on the paths specified<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<dt><code>&#8211;debug</code></p>
-<dd>If specified, echo verbose debugging information</p>
-<dt><code>&#8211;cache-text</code></p>
-<dd>If specified, build text-cache of documents used for snippets</p>
-<dt><code>&#8211;allow-pattern [pattern]</code></p>
-<dd>Only allow files that match the pattern to be indexed.</p>
-<dt><code>&#8211;deny-pattern [pattern]</code></p>
-<dd>Keep any files that match the pattern from being indexed.</p>
-<dt><code>&#8211;remap </code>[<i>path1</i>:<i>path2</i>]</p>
-<dd>If specified, remap the target path by prefix. <i>path1</i> will be replaced with <i>path2</i>. This option is intended to be used when generating pre-built indexes, where the final path will be differ from the current one.</dl>
+<dt><code>&#8211;recursive</code></dt>
+<dd>If specified, do recursive crawling on the paths specified<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>If specified, echo verbose debugging information</dd>
+<dt><code>&#8211;cache-text</code></dt>
+<dd>If specified, build text-cache of documents used for snippets</dd>
+<dt><code>&#8211;allow-pattern [pattern]</code></dt>
+<dd>Only allow files that match the pattern to be indexed.</dd>
+<dt><code>&#8211;deny-pattern [pattern]</code></dt>
+<dd>Keep any files that match the pattern from being indexed.</dd>
+<dt><code>&#8211;remap </code>[<i>path1</i>:<i>path2</i>]</dt>
+<dd>If specified, remap the target path by prefix. <i>path1</i> will be replaced with <i>path2</i>. This option is intended to be used when generating pre-built indexes, where the final path will be differ from the current one.</dd></dl>
 <h2>Author</h2>
 <p>Novell, Inc.</p>
 <h2>Reporting Bugs</h2>

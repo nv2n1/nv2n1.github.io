@@ -10,7 +10,7 @@ description: "vfs_time_audit – samba vfs module to log slow VFS operations"
 <p>vfs_time_audit &#8211; samba vfs module to log slow VFS operations</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = time_audit</dl>
+<dd>vfs objects = time_audit</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The time_audit VFS module logs system calls that take longer than the number of milliseconds defined by the variable time_audit:timeout. It will log the calls and the time spent in it. </p>
@@ -19,7 +19,7 @@ description: "vfs_time_audit – samba vfs module to log slow VFS operations"
 <h2>Options</h2>
 <p>time_audit:timeout = number of milliseconds</p>
 <dl>
-<dd>VFS calls that take longer than the defined number of milliseconds that should be logged. The default is 10000 (10s).</dl>
+<dd>VFS calls that take longer than the defined number of milliseconds that should be logged. The default is 10000 (10s).</dd></dl>
 <h2>Examples</h2>
 <p>This would log VFS calls that take longer than 3 seconds: </p>
 <dl>
@@ -28,7 +28,7 @@ description: "vfs_time_audit – samba vfs module to log slow VFS operations"
  m[blue]<code>path = /test/sample_share</code>m[]
  m[blue]<code>vfs objects = time_audit</code>m[]
  m[blue]<code>time_audit:timeout = 3000</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 4.0.0 of the Samba suite.</p>
 <h2>Author</h2>

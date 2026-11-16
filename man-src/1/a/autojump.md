@@ -27,63 +27,58 @@ url: "/docs/linux/man/1-autojump/"
  j is a convenience wrapper function around autojump. Any option that can be used with autojump can be used with j and vice versa.
 <dl>
 <dt>&bull;
-<dd> Jump To A Directory That Contains foo:
+</dt><dd> Jump To A Directory That Contains foo:
+</dd><dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> <pre>
+</dt><dd> <pre>
 j foo
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> Jump To A Child Directory:
-<dl>
+</dt><dd> Jump To A Child Directory:
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  Sometimes it's convenient to jump to a child directory (sub-directory of current directory) rather than typing out the full name.
-<dl>
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 jc bar
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> Open File Manager To Directories (instead of jumping):
-<dl>
+</dt><dd> Open File Manager To Directories (instead of jumping):
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  Instead of jumping to a directory, you can open a file explorer window (Mac Finder, Windows Explorer, GNOME Nautilus, etc.) to the directory instead.
-<dl>
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 jo music
-</pre></dl>
+</pre></dd></dl>
  
 
  Opening a file manager to a child directory is also supported:
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 jco images
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> Using Multiple Arguments:
-<dl>
+</dt><dd> Using Multiple Arguments:
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  Let's assume the following database:
-<dl>
+</dd><dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 30 &amp; nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -91,7 +86,7 @@ jco images
 &amp;nbsp;
 &amp;nbsp;
 / home / user / work / inbox
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  j in would jump into /home/user/mail/inbox as the higher weighted entry. However you can pass multiple arguments to autojump to prefer a different entry. In the above example, j w in would then change directory to /home/user/work/inbox.</dl>
@@ -101,33 +96,31 @@ jco images
  For more options refer to help:
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 autojump --help
-</pre></dl>
+</pre></dd></dl>
 
 <h3>KNOWN ISSUES</h3>
 
 <dl>
 <dt>&bull;
-<dd> autojump does not support directories that begin with -.
-<dt>&bull;
-<dd> For bash users, autojump keeps track of directories by modifying $PROMPT_COMMAND. Do not overwrite $PROMPT_COMMAND:
+</dt><dd> autojump does not support directories that begin with -.
+</dd><dt>&bull;
+</dt><dd> For bash users, autojump keeps track of directories by modifying $PROMPT_COMMAND. Do not overwrite $PROMPT_COMMAND:
+</dd><dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> <pre>
+</dt><dd> <pre>
 export PROMPT_COMMAND=&quot;history -a&quot;
-</pre></dl>
+</pre></dd></dl>
  
 
  Instead append to the end of the existing $PROMPT_COMMAND:
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 export PROMPT_COMMAND = "${PROMPT_COMMAND:+$PROMPT_COMMAND&amp;nbsp;;}&amp;nbsp;history -a"
-</code></pre></dl>
+</code></pre></dd></dl>
 </dl>
 </dl>
 
@@ -138,9 +131,9 @@ export PROMPT_COMMAND = "${PROMPT_COMMAND:+$PROMPT_COMMAND&amp;nbsp;;}&amp;nbsp;
  For any questions or issues please visit:
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 <a rel="nofollow" HREF="https://github.com/joelthelion/autojump/issues">https://github.com/joelthelion/autojump/issues</a>
-</pre></dl>
+</pre></dd></dl>
 
 <h3>AUTHORS</h3>
 
@@ -157,5 +150,4 @@ export PROMPT_COMMAND = "${PROMPT_COMMAND:+$PROMPT_COMMAND&amp;nbsp;;}&amp;nbsp;
 <h2>Index</h2>
 
 <dl>
-
 </dl>

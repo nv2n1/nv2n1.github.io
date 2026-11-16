@@ -31,10 +31,10 @@ void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr
 <p> Beginning in version 1.2.0, once a pool or client has any SSL options set, all connections use SSL, even if &quot;ssl=true&quot; is omitted from the MongoDB URI. Before, SSL options were ignored unless &quot;ssl=true&quot; was included in the URI. </p>
 <h2>See Also</h2>
 <dl COMPACT>
-<dt>\[bu]</p>
+<dt>\[bu]</dt>
 <dd>
-<dt>\[bu]</p>
-<dd><code></dl>
+</dd><dt>\[bu]</dt>
+<dd><code></dd></dl>
 <p> </code></p>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

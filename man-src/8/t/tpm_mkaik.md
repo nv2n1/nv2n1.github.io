@@ -13,14 +13,14 @@ description: "tpm_mkaik"
 <h2>Description</h2>
 <p>The program generates a TPM Attestation Identity Key and stores it in the file BLOB-FILE. The public key is stored in the file PUBKEY-FILE. The public key is DER encoded.</p>
 <dl>
-<dt>-z</p>
-<dd>Use the well known secret used as the owner secret.</p>
-<dt>-u</p>
-<dd>Use TSS UNICODE encoding for passwords.</p>
-<dt>-h</p>
-<dd>Display command usage info.</p>
-<dt>-v</p>
-<dd>Display command version info.</dl>
+<dt>-z</dt>
+<dd>Use the well known secret used as the owner secret.</dd>
+<dt>-u</dt>
+<dd>Use TSS UNICODE encoding for passwords.</dd>
+<dt>-h</dt>
+<dd>Display command usage info.</dd>
+<dt>-v</dt>
+<dd>Display command version info.</dd></dl>
 <h2>Bugs</h2>
 <p>Sometimes, when <code>tpm_mkaik</code> is invoked without the -z option, no password prompt appears. As a work around, use <code>tpm_changeownerauth</code> to set the secret to the well known one, generate the key, and then use <code>tpm_changeownerauth</code> to set the secret to its original value.</p>
 <h2>See Also</h2>

@@ -16,12 +16,12 @@ description: "go-fmt – gofmt (reformat) package sources"
 <p> For more about gofmt, see &#8216;go doc cmd/gofmt&#8217;.<br />
  For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).</p>
 <dl>
-<dt><code>-n</code></p>
-<dd> The -n flag prints commands that would be executed.</p>
-<dt><code>-x</code></p>
-<dd> The -x flag prints commands as they are executed.</p>
-<dt><code>-mod</code></p>
-<dd> The -mod flag&#8217;s value sets which module download mode to use: readonly or vendor. See &#8216;go help modules&#8217; for more.</dl>
+<dt><code>-n</code></dt>
+<dd> The -n flag prints commands that would be executed.</dd>
+<dt><code>-x</code></dt>
+<dd> The -x flag prints commands as they are executed.</dd>
+<dt><code>-mod</code></dt>
+<dd> The -mod flag&#8217;s value sets which module download mode to use: readonly or vendor. See &#8216;go help modules&#8217; for more.</dd></dl>
 <p> To run gofmt with specific options, run gofmt itself.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-go-fix/">go-fix</a></code>(1), <code><a href="/docs/linux/man/1-go-vet/">go-vet</a></code>(1).</p>

@@ -62,46 +62,46 @@ The rdma_cm supports the full range of verbs available through the libibverbs li
 
 This section provides a general overview of the basic operation for the active, or client, side of communication. This flow assume asynchronous operation with low level call details shown. For synchronous operation, calls to rdma_create_event_channel, rdma_get_cm_event, rdma_ack_cm_event, and rdma_destroy_event_channel would be eliminated. Abstracted calls, such as rdma_create_ep encapsulate serveral of these calls under a single API. Users may also refer to the example applications for code samples. A general connection flow would be:
 <dl><dt>rdma_getaddrinfo
-<dd>retrieve address information of the destination
-<dt>rdma_create_event_channel
-<dd>create channel to receive events
-<dt>rdma_create_id
-<dd>allocate an rdma_cm_id, this is conceptually similar to a socket
-<dt>rdma_resolve_addr
-<dd>obtain a local RDMA device to reach the remote address
-<dt>rdma_get_cm_event
-<dd>wait for RDMA_CM_EVENT_ADDR_RESOLVED event
-<dt>rdma_ack_cm_event
-<dd>ack event
-<dt>rdma_create_qp
-<dd>allocate a QP for the communication
-<dt>rdma_resolve_route
-<dd>determine the route to the remote address
-<dt>rdma_get_cm_event
-<dd>wait for RDMA_CM_EVENT_ROUTE_RESOLVED event
-<dt>rdma_ack_cm_event
-<dd>ack event
-<dt>rdma_connect
-<dd>connect to the remote server
-<dt>rdma_get_cm_event
-<dd>wait for RDMA_CM_EVENT_ESTABLISHED event
-<dt>rdma_ack_cm_event
-<dd>ack event</dl>
+</dt><dd>retrieve address information of the destination
+</dd><dt>rdma_create_event_channel
+</dt><dd>create channel to receive events
+</dd><dt>rdma_create_id
+</dt><dd>allocate an rdma_cm_id, this is conceptually similar to a socket
+</dd><dt>rdma_resolve_addr
+</dt><dd>obtain a local RDMA device to reach the remote address
+</dd><dt>rdma_get_cm_event
+</dt><dd>wait for RDMA_CM_EVENT_ADDR_RESOLVED event
+</dd><dt>rdma_ack_cm_event
+</dt><dd>ack event
+</dd><dt>rdma_create_qp
+</dt><dd>allocate a QP for the communication
+</dd><dt>rdma_resolve_route
+</dt><dd>determine the route to the remote address
+</dd><dt>rdma_get_cm_event
+</dt><dd>wait for RDMA_CM_EVENT_ROUTE_RESOLVED event
+</dd><dt>rdma_ack_cm_event
+</dt><dd>ack event
+</dd><dt>rdma_connect
+</dt><dd>connect to the remote server
+</dd><dt>rdma_get_cm_event
+</dt><dd>wait for RDMA_CM_EVENT_ESTABLISHED event
+</dd><dt>rdma_ack_cm_event
+</dt><dd>ack event</dd></dl>
  
 
  Perform data transfers over connection
 <dl><dt>rdma_disconnect
-<dd>tear-down connection
-<dt>rdma_get_cm_event
-<dd>wait for RDMA_CM_EVENT_DISCONNECTED event
-<dt>rdma_ack_cm_event
-<dd>ack event
-<dt>rdma_destroy_qp
-<dd>destroy the QP
-<dt>rdma_destroy_id
-<dd>release the rdma_cm_id
-<dt>rdma_destroy_event_channel
-<dd>release the event channel</dl>
+</dt><dd>tear-down connection
+</dd><dt>rdma_get_cm_event
+</dt><dd>wait for RDMA_CM_EVENT_DISCONNECTED event
+</dd><dt>rdma_ack_cm_event
+</dt><dd>ack event
+</dd><dt>rdma_destroy_qp
+</dt><dd>destroy the QP
+</dd><dt>rdma_destroy_id
+</dt><dd>release the rdma_cm_id
+</dd><dt>rdma_destroy_event_channel
+</dt><dd>release the event channel</dd></dl>
  
 
  An almost identical process is used to setup unreliable datagram (UD) communication between nodes. No actual connection is formed between QPs however, so disconnection is not needed. 
@@ -112,49 +112,49 @@ This section provides a general overview of the basic operation for the active, 
 
 This section provides a general overview of the basic operation for the passive, or server, side of communication. A general connection flow would be:
 <dl><dt>rdma_create_event_channel
-<dd>create channel to receive events
-<dt>rdma_create_id
-<dd>allocate an rdma_cm_id, this is conceptually similar to a socket
-<dt>rdma_bind_addr
-<dd>set the local port number to listen on
-<dt>rdma_listen
-<dd>begin listening for connection requests
-<dt>rdma_get_cm_event
-<dd>wait for RDMA_CM_EVENT_CONNECT_REQUEST event with a new rdma_cm_id
-<dt>rdma_create_qp
-<dd>allocate a QP for the communication on the new rdma_cm_id
-<dt>rdma_accept
-<dd>accept the connection request
-<dt>rdma_ack_cm_event
-<dd>ack event
-<dt>rdma_get_cm_event
-<dd>wait for RDMA_CM_EVENT_ESTABLISHED event
-<dt>rdma_ack_cm_event
-<dd>ack event</dl>
+</dt><dd>create channel to receive events
+</dd><dt>rdma_create_id
+</dt><dd>allocate an rdma_cm_id, this is conceptually similar to a socket
+</dd><dt>rdma_bind_addr
+</dt><dd>set the local port number to listen on
+</dd><dt>rdma_listen
+</dt><dd>begin listening for connection requests
+</dd><dt>rdma_get_cm_event
+</dt><dd>wait for RDMA_CM_EVENT_CONNECT_REQUEST event with a new rdma_cm_id
+</dd><dt>rdma_create_qp
+</dt><dd>allocate a QP for the communication on the new rdma_cm_id
+</dd><dt>rdma_accept
+</dt><dd>accept the connection request
+</dd><dt>rdma_ack_cm_event
+</dt><dd>ack event
+</dd><dt>rdma_get_cm_event
+</dt><dd>wait for RDMA_CM_EVENT_ESTABLISHED event
+</dd><dt>rdma_ack_cm_event
+</dt><dd>ack event</dd></dl>
  
 
  Perform data transfers over connection
 <dl><dt>rdma_get_cm_event
-<dd>wait for RDMA_CM_EVENT_DISCONNECTED event
-<dt>rdma_ack_cm_event
-<dd>ack event
-<dt>rdma_disconnect
-<dd>tear-down connection
-<dt>rdma_destroy_qp
-<dd>destroy the QP
-<dt>rdma_destroy_id
-<dd>release the connected rdma_cm_id
-<dt>rdma_destroy_id
-<dd>release the listening rdma_cm_id
-<dt>rdma_destroy_event_channel
-<dd>release the event channel</dl>
+</dt><dd>wait for RDMA_CM_EVENT_DISCONNECTED event
+</dd><dt>rdma_ack_cm_event
+</dt><dd>ack event
+</dd><dt>rdma_disconnect
+</dt><dd>tear-down connection
+</dd><dt>rdma_destroy_qp
+</dt><dd>destroy the QP
+</dd><dt>rdma_destroy_id
+</dt><dd>release the connected rdma_cm_id
+</dd><dt>rdma_destroy_id
+</dt><dd>release the listening rdma_cm_id
+</dd><dt>rdma_destroy_event_channel
+</dt><dd>release the event channel</dd></dl>
 
 <h2>Return Codes</h2>
 
 <dl><dt>= 0
-<dd>success
-<dt>= -1
-<dd>error - see errno for more details</dl>
+</dt><dd>success
+</dd><dt>= -1
+</dt><dd>error - see errno for more details</dd></dl>
  
 
  Most librdmacm functions return 0 to indicate success, and a -1 return value to indicate failure. If a function operates asynchronously, a return value of 0 means that the operation was successfully started. The operation could still complete in error; users should check the status of the related event. If the return value is -1, then errno will contain additional information regarding the reason for the failure. 

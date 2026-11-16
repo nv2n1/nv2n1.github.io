@@ -17,13 +17,13 @@ Security Enhanced Linux secures the NFS server via flexible mandatory access con
 SELinux policy is customizable based on the least level of access required. SELinux can be configured to not allow NFS to share files. If you want to share NFS partitions, and only allow read-only access to those NFS partitions, turn the nfs_export_all_ro boolean on: 
 
 <dl><dt>setsebool -P nfs_export_all_ro 1
-<dd><dt>If you want to share files read/write you must set the nfs_export_all_rw boolean.
-<dd><dt>setsebool -P nfs_export_all_rw 1
-<dd><dt>These booleans are not required when files to be shared are labeled with the public_content_t or public_content_rw_t types. NFS can share files labeled with the public_content_t or public_content_rw_t types even if the nfs_export_all_ro and nfs_export_all_rw booleans are off.
-<dd><dt>If you want to use a remote NFS server for the home directories on this machine, you must set the use_nfs_home_dirs boolean:
-<dd><dt>setsebool -P use_nfs_home_dirs 1
-<dd><dt>system-config-selinux is a GUI tool available to customize SELinux policy settings.
-<dd></dl>
+</dt><dd></dd><dt>If you want to share files read/write you must set the nfs_export_all_rw boolean.
+</dt><dd></dd><dt>setsebool -P nfs_export_all_rw 1
+</dt><dd></dd><dt>These booleans are not required when files to be shared are labeled with the public_content_t or public_content_rw_t types. NFS can share files labeled with the public_content_t or public_content_rw_t types even if the nfs_export_all_ro and nfs_export_all_rw booleans are off.
+</dt><dd></dd><dt>If you want to use a remote NFS server for the home directories on this machine, you must set the use_nfs_home_dirs boolean:
+</dt><dd></dd><dt>setsebool -P use_nfs_home_dirs 1
+</dt><dd></dd><dt>system-config-selinux is a GUI tool available to customize SELinux policy settings.
+</dt><dd></dd></dl>
 
 <h2>AUTHOR<tt>&nbsp;<wbr>&nbsp;<wbr></tt></h2>
 

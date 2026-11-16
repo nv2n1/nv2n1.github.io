@@ -17,11 +17,11 @@ description: "telepathy-haze – Telepathy connection manager using libpurple"
 <p>There are no command-line options.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>HAZE_DEBUG</code>=<i>type</i></p>
-<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</p>
-<dt><code>HAZE_PERSIST</code>=1</p>
-<dd>If set, Haze will not automatically close itself after five seconds without any connections.</p>
-<dt><code>HAZE_LOGFILE</code>=<i>filename</i></p>
-<dd>If set, all debugging output will be written to <i>filename</i> rather than to the terminal.</dl>
+<dt><code>HAZE_DEBUG</code>=<i>type</i></dt>
+<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</dd>
+<dt><code>HAZE_PERSIST</code>=1</dt>
+<dd>If set, Haze will not automatically close itself after five seconds without any connections.</dd>
+<dt><code>HAZE_LOGFILE</code>=<i>filename</i></dt>
+<dd>If set, all debugging output will be written to <i>filename</i> rather than to the terminal.</dd></dl>
 <h2>See Also</h2>
 <p><i><a rel="nofollow" href="http://telepathy.freedesktop.org/">http://telepathy.freedesktop.org/</a></i>, <code><a href="/docs/linux/man/1-empathy/">empathy</a></code>(1), <code><a href="/docs/linux/man/1-pidgin/">pidgin</a></code>(1) </p>

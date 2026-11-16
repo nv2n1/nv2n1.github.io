@@ -27,12 +27,9 @@ The previously-installed terminate handler, or a null pointer value if none was 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;exception&gt;
 int main()
-
 {
     std::set_terminate([]() { std::cout &lt;&lt; &quot;Unhandled exception\n&quot;; std::abort(); });
     throw 1;

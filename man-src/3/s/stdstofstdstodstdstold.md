@@ -11,20 +11,14 @@ std::stof,std::stod,std::stold - std::stof,std::stod,std::stold
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;string&gt;
-
     float stof(const std::string &amp;str, std::size_t *pos = 0);
 (1)(since C++ 11)
-
     float stof(const std::wstring &amp;str, std::size_t *pos = 0);
-
 double stod(const std::string &amp;str, std::size_t *pos = 0);
 (2)(since C++ 11)
-
     double stod(const std::wstring &amp;str, std::size_t *pos = 0);
-
 long double stold(const std::string &amp;str, std::size_t *pos = 0);
 (3)(since C++ 11)
-
     long double stold(const std::wstring &amp;str, std::size_t *pos = 0);</code></pre> 
 Interprets a floating point value in a string str. 
 1) calls std::strtod(str.c_str(), &amp;ptr) or std::wcstod(str.c_str(), &amp;ptr) <i>(until C++17)</i> 

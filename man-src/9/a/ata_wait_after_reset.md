@@ -14,13 +14,13 @@ description: "ata_wait_after_reset – wait for link to become ready after reset
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>link to be waited on</dl>
+</dd><dd>link to be waited on</dd></dl>
 <p> <i>deadline</i></p>
 <dl>
-<dd>deadline jiffies for the operation</dl>
+<dd>deadline jiffies for the operation</dd></dl>
 <p> <i>check_ready</i></p>
 <dl>
-<dd>callback to check link readiness</dl>
+<dd>callback to check link readiness</dd></dl>
 <h2>Description</h2>
 <p>Wait for <i>link</i> to become ready after reset. </p>
 <p> LOCKING: EH context.</p>
@@ -29,5 +29,5 @@ description: "ata_wait_after_reset – wait for link to become ready after reset
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

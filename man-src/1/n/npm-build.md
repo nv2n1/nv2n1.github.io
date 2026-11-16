@@ -12,17 +12,15 @@ description: "npm-build – Build a package"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm build [&lt;package-folder&gt;]
 </pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <code>&lt;package-folder&gt;</code>: A folder containing a <code>package.json</code> file in its root. </p>
+<dt>&bull;</dt>
+<dd> <code>&lt;package-folder&gt;</code>: A folder containing a <code>package.json</code> file in its root. </dd>
 </dl>
 </dl>
 <h3>Description</h3>
@@ -30,24 +28,22 @@ npm build [&lt;package-folder&gt;]
 <p> It should generally be called during installation, but if you need to run it directly, run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     npm run-script build
 </pre>
-</dl>
+</dd></dl>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help link</p>
-<dt>&bull;</p>
-<dd> npm help scripts</p>
-<dt>&bull;</p>
-<dd> npm help package.json </p>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help link</dd>
+<dt>&bull;</dt>
+<dd> npm help scripts</dd>
+<dt>&bull;</dt>
+<dd> npm help package.json </dd>
 </dl>
 </dl>
 <h2>Index</h2>

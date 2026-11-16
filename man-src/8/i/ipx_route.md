@@ -15,10 +15,10 @@ description: "ipx_route – add or delete IPX route"
 <p><code>ipx_route</code> adds or deletes an IPX route. The kernel IPX stores only one route per target network at a time.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>add</i></p>
-<dd>This option is used to set up the route to a target network.</p>
-<dt><i>del</i></p>
-<dd>This option is used to delete the route to a target network.</dl>
+<dt><i>add</i></dt>
+<dd>This option is used to set up the route to a target network.</dd>
+<dt><i>del</i></dt>
+<dd>This option is used to delete the route to a target network.</dd></dl>
 <h2>Files</h2>
 <p><i>/proc/net/ipx_interface /proc/net/ipx_route</i></p>
 <h2>Author</h2>

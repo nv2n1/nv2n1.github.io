@@ -14,10 +14,10 @@ Tcl_Obj *
 <code>Tcl_SubstObj</code>(<i>interp, objPtr, flags</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to execute Tcl scripts and lookup variables. If an error occurs, the interpreter&#8217;s result is modified to hold an error message.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) A Tcl object containing the string to perform substitutions on.</p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to execute Tcl scripts and lookup variables. If an error occurs, the interpreter&#8217;s result is modified to hold an error message.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) A Tcl object containing the string to perform substitutions on.</dd>
 <dd>int <i>flags</i> (in) ORed combination of flag bits that specify which substitutions to perform. The flags <code>TCL_SUBST_COMMANDS</code>, <code>TCL_SUBST_VARIABLES</code> and <code>TCL_SUBST_BACKSLASHES</code> are currently supported, and <code>TCL_SUBST_ALL</code> is provided as a convenience for the common case where all substitutions are desired.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p>The <code>Tcl_SubstObj</code> function is used to perform substitutions on strings in the fashion of the <code>subst</code> command. It gets the value of the string contained in <i>objPtr</i> and scans it, copying characters and performing the chosen substitutions as it goes to an output object which is returned as the result of the function. In the event of an error occurring during the execution of a command or variable substitution, the function returns NULL and an error message is left in <i>interp</i>&#8216;s result. </p>
 <p> Three kinds of substitutions are supported. When the <code>TCL_SUBST_BACKSLASHES</code> bit is set in <i>flags</i>, sequences that look like backslash substitutions for Tcl commands are replaced by their corresponding character. </p>

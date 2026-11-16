@@ -34,10 +34,10 @@ description: "zunbdb.f –"
  represented implicitly by Householder vectors.
  B11, B12, B21, and B22 are Q-by-Q bidiagonal matrices represented
  implicitly by angles THETA, PHI.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER
  = 'T': X, U1, U2, V1T, and V2T are stored in row-major
  order;
@@ -155,13 +155,13 @@ description: "zunbdb.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2013</dl>
+<dd>November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -174,10 +174,10 @@ description: "zunbdb.f –"
  P1, P2, Q1, and Q2 are represented as products of elementary
  reflectors. See ZUNCSD for details on generating P1, P2, Q1, and Q2
  using ZUNGQR and ZUNGLQ.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> Definition at line 286 of file zunbdb.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

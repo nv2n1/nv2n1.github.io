@@ -13,9 +13,9 @@ DPSETC - Gives a new character value to a specified internal parameter.
 
  void c_dpsetc (char *pnam, char *cval)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. The name must appear as the first three characters of the string. Other characters may be used to document the use of the parameter being set; for example, instead of just 'CRB', one can use 'CRB - CHARACTER REPRESENTING BREAK'.
-<dt>CVAL
-<dd>(an input constant or variable of type CHARACTER) is the value to be assigned to the internal parameter specified by PNAM.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. The name must appear as the first three characters of the string. Other characters may be used to document the use of the parameter being set; for example, instead of just 'CRB', one can use 'CRB - CHARACTER REPRESENTING BREAK'.
+</dd><dt>CVAL
+</dt><dd>(an input constant or variable of type CHARACTER) is the value to be assigned to the internal parameter specified by PNAM.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to set the current value of Dashpack parameters. For a complete list of parameters available in this utility, see the dashpack_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: tdshpk.
 <h2>Access</h2>To use DPSETC or c_dpsetc, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

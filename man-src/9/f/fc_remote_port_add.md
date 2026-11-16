@@ -14,13 +14,13 @@ description: "fc_remote_port_add – notify fc transport of the existence of a r
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>scsi host the remote port is connected to.</dl>
+</dd><dd>scsi host the remote port is connected to.</dd></dl>
 <p> <i>channel</i></p>
 <dl>
-<dd>Channel on shost port connected to.</dl>
+<dd>Channel on shost port connected to.</dd></dl>
 <p> <i>ids</i></p>
 <dl>
-<dd>The world wide names, fc address, and FC4 port roles for the remote port.</dl>
+<dd>The world wide names, fc address, and FC4 port roles for the remote port.</dd></dl>
 <h2>Description</h2>
 <p>The LLDD calls this routine to notify the transport of the existence of a remote port. The LLDD provides the unique identifiers (wwpn,wwn) of the port, it&#8217;s FC address (port_id), and the FC4 roles that are active for the port. </p>
 <p> For ports that are FCP targets (aka scsi targets), the FC transport maintains consistent target id bindings on behalf of the LLDD. A consistent target id binding is an assignment of a target id to a remote port identifier, which persists while the scsi host is attached. The remote port can disappear, then later reappear, and it&#8217;s target id assignment remains the same. This allows for shifts in FC addressing (if binding by wwpn or wwnn) with no apparent changes to the scsi subsystem which is based on scsi host number and target id values. Bindings are only valid during the attachment of the scsi host. If the host detaches, then later re-attaches, target id bindings may change. </p>
@@ -32,8 +32,8 @@ description: "fc_remote_port_add – notify fc transport of the existence of a r
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

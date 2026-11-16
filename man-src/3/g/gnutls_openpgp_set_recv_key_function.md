@@ -14,10 +14,10 @@ description: "gnutls_openpgp_set_recv_key_function – API function"
 <p> <code>void gnutls_openpgp_set_recv_key_function(gnutls_session_t </code><i>session</i><code>, gnutls_openpgp_recv_key_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> a TLS session</p>
-<dt>gnutls_openpgp_recv_key_func func</p>
-<dd> the callback</dl>
+<dt>gnutls_session_t session</dt>
+<dd> a TLS session</dd>
+<dt>gnutls_openpgp_recv_key_func func</dt>
+<dd> the callback</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This funtion will set a key retrieval function for OpenPGP keys. This callback is only useful in server side, and will be used if the peer sent a key fingerprint instead of a full key. </p>
 <p> The retrieved key must be allocated using <code>gnutls_malloc()</code>.</p>
@@ -30,6 +30,6 @@ description: "gnutls_openpgp_set_recv_key_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

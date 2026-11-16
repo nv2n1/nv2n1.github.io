@@ -15,7 +15,7 @@ list_del_init - deletes entry from list and reinitialize it.
 <h2>Arguments</h2>
 
 <i>entry</i>
-<dl><dd><dd>the element to delete from the list.</dl>
+<dl><dd></dd><dd>the element to delete from the list.</dd></dl>
 
 <h2>Copyright</h2>
 

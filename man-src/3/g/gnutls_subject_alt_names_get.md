@@ -14,16 +14,16 @@ description: "gnutls_subject_alt_names_get – API function"
 <p> <code>int gnutls_subject_alt_names_get(gnutls_subject_alt_names_t </code><i>sans</i><code>, unsigned int </code><i>seq</i><code>, unsigned int * </code><i>san_type</i><code>, gnutls_datum_t * </code><i>san</i><code>, gnutls_datum_t * </code><i>othername_oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_subject_alt_names_t sans</p>
-<dd> The alternative names structure</p>
-<dt>unsigned int seq</p>
-<dd> The index of the name to get</p>
-<dt>unsigned int * san_type</p>
-<dd> Will hold the type of the name (of <code>gnutls_subject_alt_names_t</code>)</p>
-<dt>gnutls_datum_t * san</p>
-<dd> The alternative name data (should be treated as constant)</p>
-<dt>gnutls_datum_t * othername_oid</p>
-<dd> The object identifier if <i>san_type</i> is <code>GNUTLS_SAN_OTHERNAME</code> (should be treated as constant)</dl>
+<dt>gnutls_subject_alt_names_t sans</dt>
+<dd> The alternative names structure</dd>
+<dt>unsigned int seq</dt>
+<dd> The index of the name to get</dd>
+<dt>unsigned int * san_type</dt>
+<dd> Will hold the type of the name (of <code>gnutls_subject_alt_names_t</code>)</dd>
+<dt>gnutls_datum_t * san</dt>
+<dd> The alternative name data (should be treated as constant)</dd>
+<dt>gnutls_datum_t * othername_oid</dt>
+<dd> The object identifier if <i>san_type</i> is <code>GNUTLS_SAN_OTHERNAME</code> (should be treated as constant)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return a specific alternative name as stored in the <i>sans</i> structure. The returned values should be treated as constant and valid for the lifetime of <i>sans</i> .</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_subject_alt_names_get – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

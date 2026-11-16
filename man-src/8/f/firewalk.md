@@ -16,33 +16,33 @@ description: "firewalk – Active Reconnaissance Network Security Tool with Extr
 <h2>Command-Line Options</h2>
 <p>If an option takes an argument, it procedes the option letter, with the default in parenthesis.</p>
 <dl>
-<dt><code>-d 1-65535 (34434)</code></p>
-<dd>Specify the initial destination port to use during the network discovery (aka TTL ramping) phase.</p>
-<dt><code>-h</code></p>
-<dd>Program help.</p>
-<dt><code>-i interface_name</code></p>
-<dd>Specify interface to use. Only neccessary on multi-homed machines.</p>
-<dt><code>-n</code></p>
-<dd>Do not resolve IP addresses into hostnames. This saves a DNS lookup and speeds the scans (mainly during network discovery).</p>
-<dt><code>-P 1-2000 (0)</code></p>
-<dd>Set a network writing pause which may be neccessary to keep the program from flooding the network.</p>
-<dt><code>-p TCP, UDP (UDP)</code></p>
-<dd>Type of scan to perform.</p>
-<dt><code>-r</code></p>
-<dd>Strict RFC 793 compliance. This only comes into play when doing a TCP scan when your packets have an expire vector of one and your metric host is one hop from your gateway. Since the packets will reach their destination, they will not expire, so we look for terminal responses. For a TCP port in the listen state, we will get back a SYN|ACK with the ACK as our SEQ + 1. However, for a closed port, the response is stack dependent. If the host is RFC compliant we will receive an RST|ACK with the ACK as our SEQ + 1. However, if the host is not compliant (ie: microsoft) then the best we can do is inverse tuple matching (which is the default).</p>
-<dt><code>-S 1-65535,&#8230; (1-130,139,1025)</code></p>
-<dd>Specify the ports for the scan. Ports may be specified in ranges, delimited by dashes, and multiple ranges may be specified, delimited by commas. Ommiting the terminating port number is shorthand for 65535.</p>
-<dt><code>-s 1-65535 (53)</code></p>
-<dd>Specify the source port for the scan (both phases).</p>
-<dt><code>-T 1-2000 (2)</code></p>
-<dd>Network packet reading timeout. This is the time firewalk will spend waiting for a response before timing out.</p>
-<dt><code>-t 1-25 (1)</code></p>
-<dd>Set the initial IP time to live (TTL) value. If a target gateway is known to be (at least) n hops from the source host, the TTL can be preloaded to facilitate a faster scan.</p>
-<dt><code>-v</code></p>
-<dd>Dump program version and exit.</p>
-<dt><code>-x expire vector (1)</code></p>
-<dd>The expire vector is the number of hops that the scanning probes will expire, past the gateway host. The binding hopcount is the hopcount of the gateway + the expire vector.</p>
-<dd></dl>
+<dt><code>-d 1-65535 (34434)</code></dt>
+<dd>Specify the initial destination port to use during the network discovery (aka TTL ramping) phase.</dd>
+<dt><code>-h</code></dt>
+<dd>Program help.</dd>
+<dt><code>-i interface_name</code></dt>
+<dd>Specify interface to use. Only neccessary on multi-homed machines.</dd>
+<dt><code>-n</code></dt>
+<dd>Do not resolve IP addresses into hostnames. This saves a DNS lookup and speeds the scans (mainly during network discovery).</dd>
+<dt><code>-P 1-2000 (0)</code></dt>
+<dd>Set a network writing pause which may be neccessary to keep the program from flooding the network.</dd>
+<dt><code>-p TCP, UDP (UDP)</code></dt>
+<dd>Type of scan to perform.</dd>
+<dt><code>-r</code></dt>
+<dd>Strict RFC 793 compliance. This only comes into play when doing a TCP scan when your packets have an expire vector of one and your metric host is one hop from your gateway. Since the packets will reach their destination, they will not expire, so we look for terminal responses. For a TCP port in the listen state, we will get back a SYN|ACK with the ACK as our SEQ + 1. However, for a closed port, the response is stack dependent. If the host is RFC compliant we will receive an RST|ACK with the ACK as our SEQ + 1. However, if the host is not compliant (ie: microsoft) then the best we can do is inverse tuple matching (which is the default).</dd>
+<dt><code>-S 1-65535,&#8230; (1-130,139,1025)</code></dt>
+<dd>Specify the ports for the scan. Ports may be specified in ranges, delimited by dashes, and multiple ranges may be specified, delimited by commas. Ommiting the terminating port number is shorthand for 65535.</dd>
+<dt><code>-s 1-65535 (53)</code></dt>
+<dd>Specify the source port for the scan (both phases).</dd>
+<dt><code>-T 1-2000 (2)</code></dt>
+<dd>Network packet reading timeout. This is the time firewalk will spend waiting for a response before timing out.</dd>
+<dt><code>-t 1-25 (1)</code></dt>
+<dd>Set the initial IP time to live (TTL) value. If a target gateway is known to be (at least) n hops from the source host, the TTL can be preloaded to facilitate a faster scan.</dd>
+<dt><code>-v</code></dt>
+<dd>Dump program version and exit.</dd>
+<dt><code>-x expire vector (1)</code></dt>
+<dd>The expire vector is the number of hops that the scanning probes will expire, past the gateway host. The binding hopcount is the hopcount of the gateway + the expire vector.</dd>
+<dd></dd></dl>
 <h2>Command-Line Examples</h2>
 <h2>Caveats</h2>
 <h2>See Also</h2>

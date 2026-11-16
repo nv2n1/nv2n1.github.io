@@ -15,15 +15,15 @@ vsscanf - Unformat a buffer into a list of arguments
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>input buffer</dl>
+<dl><dd></dd><dd>input buffer</dd></dl>
  
 
  <i>fmt</i>
-<dl><dd>format of buffer</dl>
+<dl><dd>format of buffer</dd></dl>
  
 
  <i>args</i>
-<dl><dd>arguments</dl>
+<dl><dd>arguments</dd></dl>
 
 <h2>Copyright</h2>
 

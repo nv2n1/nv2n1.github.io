@@ -18,7 +18,6 @@ description: "flow-xlate – Apply translations to selected fields of a flow."
 <p> Translation definitions begin with the xlate-definition keyword followed by a symbolic name. Each definition is composed of terms which are evaluated in the order of the configuration file. A term may invoke a filter to conditionally invoke an action. </p>
 <pre><code>
 Action type / sub - commands Description / Example-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --ip - source - address - to - network Zero host bits based on mask.ip - destination - address - to - network Zero host bits based on mask.(no sub - commands) ip - source - address - to - class - network Zero source host bits to match class.ip - destination - address - to - class - network Zero dst host bits to match class.
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                       (no sub - commands) ip
     - source - address - anonymize Anonymize source address.ip - destination - address - anonymize Anonymize destination address.ip - address - anonymize Anonymize src / dst address.algorithm Algorithm.cryptopan - aes128 is currently supported.algorithm cryptopan - aes128 key Key.Key is 128 bits in hex.key 0123456789ABCDEFG key - file File to load key from.Key is 128 bits in hex.key - file / mfstmp / secret - key key - file - refresh How often to check the key file.Interval is in minutes,
     the
@@ -31,22 +30,22 @@ Action type / sub - commands Description / Example-- -- -- -- -- -- -- -- -- -- 
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-k</code></p>
-<dd> Keep time from input.</p>
-<dt><code>-n</code></p>
-<dd> Don&#8217;t load configuration file. Useful only with -V</p>
-<dt><code>-v</code><i> variable binding</i></p>
-<dd> Set a variable FOO=bar.</p>
-<dt><code>-V</code><i> pdu_version</i></p>
-<dd> Use <i>pdu_version</i> format output. </p>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-k</code></dt>
+<dd> Keep time from input.</dd>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t load configuration file. Useful only with -V</dd>
+<dt><code>-v</code><i> variable binding</i></dt>
+<dd> Set a variable FOO=bar.</dd>
+<dt><code>-V</code><i> pdu_version</i></dt>
+<dd> Use <i>pdu_version</i> format output. </dd>
 <pre>
     1    NetFlow version 1 (No sequence numbers, AS, or mask)
     5    NetFlow version 5
@@ -68,12 +67,12 @@ Action type / sub - commands Description / Example-- -- -- -- -- -- -- -- -- -- 
     8.14 NetFlow ToS Prefix Port Aggregation
     1005 Flow-Tools tagged version 5
 </pre>
-<dt><code>-x</code><i> xlate_fname</i></p>
-<dd> Translation config file name. Defaults to <i>/etc/flow-tools/cfg/xlate.cfg</i></p>
-<dt><code>-X</code><i> xlate_definition</i></p>
-<dd> Translation definition. Defaults to default.</p>
-<dt><code>-z</code><i> z_level</i></p>
-<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dl>
+<dt><code>-x</code><i> xlate_fname</i></dt>
+<dd> Translation config file name. Defaults to <i>/etc/flow-tools/cfg/xlate.cfg</i></dd>
+<dt><code>-X</code><i> xlate_definition</i></dt>
+<dd> Translation definition. Defaults to default.</dd>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Convert the version 7 flows in <i>flows.v7</i> to version 5, storing the result in <i>flows.v5</i>. </p>
 <p> <code>flow-xlate -V5 &lt; flows.v7 &gt; flows.v5</code> </p>
@@ -84,7 +83,6 @@ include-filter filter.cfg
 xlate-action MULTICAST-PRIVACY
   type ip-address-privacy-mask
   mask 0xFFFFFFFF 0xFFFFFFFF  
-  
 xlate-action UNICAST-PRIVACY
   type ip-address-privacy-mask
   mask 0xFFFFFF00 0xFFFFF800

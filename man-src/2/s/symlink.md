@@ -21,17 +21,15 @@ int symlinkat(const char *target, int newdirfd, const char *linkpath);
 <p> <code>symlink</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>symlinkat</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _ATFILE_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _ATFILE_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>symlink</code>() creates a symbolic link named <i>linkpath</i> which contains the string <i>target</i>. </p>
@@ -49,40 +47,40 @@ int symlinkat(const char *target, int newdirfd, const char *linkpath);
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Write access to the directory containing <i>linkpath</i> is denied, or one of the directories in the path prefix of <i>linkpath</i> did not allow search permission. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EDQUOT</code></p>
-<dd> The user&#8217;s quota of resources on the filesystem has been exhausted. The resources could be inodes or disk blocks, depending on the filesystem implementation.</p>
-<dt><code>EEXIST</code></p>
-<dd> <i>linkpath</i> already exists.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>target</i> or <i>linkpath</i> points outside your accessible address space.</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>linkpath</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>target</i> or <i>linkpath</i> was too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A directory component in <i>linkpath</i> does not exist or is a dangling symbolic link, or <i>target</i> or <i>linkpath</i> is an empty string.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The device containing the file has no room for the new directory entry.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component used as a directory in <i>linkpath</i> is not, in fact, a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> The filesystem containing <i>linkpath</i> does not support the creation of symbolic links.</p>
-<dt><code>EROFS</code></p>
-<dd> <i>linkpath</i> is on a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Write access to the directory containing <i>linkpath</i> is denied, or one of the directories in the path prefix of <i>linkpath</i> did not allow search permission. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The user&#8217;s quota of resources on the filesystem has been exhausted. The resources could be inodes or disk blocks, depending on the filesystem implementation.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <i>linkpath</i> already exists.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>target</i> or <i>linkpath</i> points outside your accessible address space.</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>linkpath</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>target</i> or <i>linkpath</i> was too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A directory component in <i>linkpath</i> does not exist or is a dangling symbolic link, or <i>target</i> or <i>linkpath</i> is an empty string.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The device containing the file has no room for the new directory entry.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component used as a directory in <i>linkpath</i> is not, in fact, a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The filesystem containing <i>linkpath</i> does not support the creation of symbolic links.</dd>
+<dt><code>EROFS</code></dt>
+<dd> <i>linkpath</i> is on a read-only filesystem.</dd></dl>
 <p> The following additional errors can occur for <code>symlinkat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>newdirfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOENT</code></p>
-<dd> <i>linkpath</i> is a relative pathname and <i>newdirfd</i> refers to a directory that has been deleted.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>linkpath</i> is relative and <i>newdirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>newdirfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> <i>linkpath</i> is a relative pathname and <i>newdirfd</i> refers to a directory that has been deleted.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>linkpath</i> is relative and <i>newdirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>symlinkat</code>() was added to Linux in kernel 2.6.16; library support was added to glibc in version 2.4.</p>
 <h2>CONFORMING TO</h2>

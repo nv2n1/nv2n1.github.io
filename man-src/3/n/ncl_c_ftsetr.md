@@ -10,9 +10,9 @@ c_ftsetr - set float valued parameters
 <h2>Function Prototype</h2>void c_ftsetr(char *, float);
 <h2>Synopsis</h2>void c_ftsetr (pnam, fval);
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>The name of the control parameter to be assigned a float value.
-<dt>fval
-<dd>The value to be assigned to the control parameter whose name is pointed to by pnam.</dl><h2>Usage</h2>c_ftsetr is used to set values for any of the control parameters that take float values. The values set by c_ftsetr remain in effect until changed by subsequent calls to c_ftsetr.
+</dt><dd>The name of the control parameter to be assigned a float value.
+</dd><dt>fval
+</dt><dd>The value to be assigned to the control parameter whose name is pointed to by pnam.</dd></dl><h2>Usage</h2>c_ftsetr is used to set values for any of the control parameters that take float values. The values set by c_ftsetr remain in effect until changed by subsequent calls to c_ftsetr.
 <h2>Access</h2>To use c_ftsetr, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>fitgrid_params, c_ftgetr 
 

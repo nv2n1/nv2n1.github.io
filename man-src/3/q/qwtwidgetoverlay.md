@@ -43,14 +43,14 @@ description: "QwtWidgetOverlay –"
 <p> F.e. in combination with the plot canvas an overlay avoid replots as the content of the canvas can be restored from its backing store. </p>
 <p> <code>QwtWidgetOverlay</code> is an abstract base class. Deriving classes are supposed to reimplement the following methods: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>drawOverlay()</code></p>
-<dt>&bull;</p>
-<dd><code>maskHint()</code></dl>
+<dt>&bull;</dt>
+<dd><code>drawOverlay()</code></dd>
+<dt>&bull;</dt>
+<dd><code>maskHint()</code></dd></dl>
 <p> Internally <code>QwtPlotPicker</code> uses overlays for displaying the rubber band and the tracker text. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCanvas::BackingStore</code></dl>
+<dd><code>QwtPlotCanvas::BackingStore</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtWidgetOverlay::MaskMode</code></h3>
 <p>Mask mode. When using masks the widget below gets paint events for the masked regions of the overlay only. Otherwise Qt triggers full repaints. On less powerful hardware ( f.e embedded systems ) &#8211; or when using the raster paint engine on a remote desktop &#8211; bit blitting is a noticeable operation, that needs to be avoided. </p>
@@ -58,107 +58,107 @@ description: "QwtWidgetOverlay –"
 <p> The default setting is MaskHint. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMaskMode()</code>, <code>maskMode()</code></dl>
+<dd><code>setMaskMode()</code>, <code>maskMode()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoMask </i></p>
-<dd>Don&#8217;t use a mask.</p>
-<dt><i>MaskHint </i></p>
-<dd>Use <code>maskHint()</code> as mask. For many situations a fast approximation is good enough and it is not necessary to build a more detailed mask ( f.e the bounding rectangle of a text ).</p>
-<dt><i>AlphaMask </i></p>
-<dd>Calculate a mask by checking the alpha values. Sometimes it is not possible to give a fast approximation and the mask needs to be calculated by drawing the overlay and testing the result.</dl>
+<dt><i>NoMask </i></dt>
+<dd>Don&#8217;t use a mask.</dd>
+<dt><i>MaskHint </i></dt>
+<dd>Use <code>maskHint()</code> as mask. For many situations a fast approximation is good enough and it is not necessary to build a more detailed mask ( f.e the bounding rectangle of a text ).</dd>
+<dt><i>AlphaMask </i></dt>
+<dd>Calculate a mask by checking the alpha values. Sometimes it is not possible to give a fast approximation and the mask needs to be calculated by drawing the overlay and testing the result.</dd></dl>
 <p> When a valid <code>maskHint()</code> is available only pixels inside this approximation are checked.</p>
 <h3>enum <code>QwtWidgetOverlay::RenderMode</code></h3>
 <p>Render mode. For calculating the alpha mask the overlay has already been painted to a temporary QImage. Instead of rendering the overlay twice this buffer can be copied for drawing the overlay. </p>
 <p> On graphic systems using the raster paint engine ( QWS, Windows ) it means usually copying some memory only. On X11 it results in an expensive operation building a pixmap and for simple overlays it might not be recommended. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The render mode has no effect, when <code>maskMode()</code> != AlphaMask.</dl>
+<dd>The render mode has no effect, when <code>maskMode()</code> != AlphaMask.</dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>AutoRenderMode </i></p>
-<dd>Copy the buffer, when using the raster paint engine.</p>
-<dt><i>CopyAlphaMask </i></p>
-<dd>Always copy the buffer.</p>
-<dt><i>DrawOverlay </i></p>
-<dd>Never copy the buffer.</dl>
+<dt><i>AutoRenderMode </i></dt>
+<dd>Copy the buffer, when using the raster paint engine.</dd>
+<dt><i>CopyAlphaMask </i></dt>
+<dd>Always copy the buffer.</dd>
+<dt><i>DrawOverlay </i></dt>
+<dd>Never copy the buffer.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtWidgetOverlay::QwtWidgetOverlay (QWidget *widget)</h3>
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>widget</i> Parent widget, where the overlay is aligned to</dl>
+<dd><i>widget</i> Parent widget, where the overlay is aligned to</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual void QwtWidgetOverlay::drawOverlay (QPainter *painter) const [protected], [pure virtual]</h3>
 <p>Draw the widget overlay </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <h3>bool QwtWidgetOverlay::eventFilter (QObject *object, QEvent *event) [virtual]</h3>
 <p>Event filter. Resize the overlay according to the size of the parent widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>object</i> Object to be filtered<br />
- <i>event</i> Event</dl>
+ <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>See QObject::eventFilter()</dl>
+<dd>See QObject::eventFilter()</dd></dl>
 <h3>QRegion QwtWidgetOverlay::maskHint () const [protected], [virtual]</h3>
 <p>Calculate an approximation for the mask.</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>MaskHint The hint is used as mask.</p>
-<dt>&bull;</p>
-<dd>AlphaMask The hint is used to speed up the algorithm for calculating a mask from non transparent pixels</p>
-<dt>&bull;</p>
-<dd>NoMask The hint is unused.</dl>
+<dt>&bull;</dt>
+<dd>MaskHint The hint is used as mask.</dd>
+<dt>&bull;</dt>
+<dd>AlphaMask The hint is used to speed up the algorithm for calculating a mask from non transparent pixels</dd>
+<dt>&bull;</dt>
+<dd>NoMask The hint is unused.</dd></dl>
 <p> The default implementation returns an invalid region indicating no hint. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Hint for the mask</dl>
+<dd>Hint for the mask</dd></dl>
 <h3><code>QwtWidgetOverlay::MaskMode</code> QwtWidgetOverlay::maskMode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mode how to find the mask for the overlay</dl>
+<dd>Mode how to find the mask for the overlay</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMaskMode()</code></dl>
+<dd><code>setMaskMode()</code></dd></dl>
 <h3>void QwtWidgetOverlay::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Paint event </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawOverlay()</code></dl>
+<dd><code>drawOverlay()</code></dd></dl>
 <h3><code>QwtWidgetOverlay::RenderMode</code> QwtWidgetOverlay::renderMode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Render mode</dl>
+<dd>Render mode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>RenderMode</code>, <code>setRenderMode()</code></dl>
+<dd><code>RenderMode</code>, <code>setRenderMode()</code></dd></dl>
 <h3>void QwtWidgetOverlay::resizeEvent (QResizeEvent *event) [protected], [virtual]</h3>
 <p>Resize event </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Resize event</dl>
+<dd><i>event</i> Resize event</dd></dl>
 <h3>void QwtWidgetOverlay::setMaskMode (<code>MaskMode</code>mode)</h3>
 <p>Specify how to find the mask for the overlay. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> New mode</dl>
+<dd><i>mode</i> New mode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maskMode()</code></dl>
+<dd><code>maskMode()</code></dd></dl>
 <h3>void QwtWidgetOverlay::setRenderMode (<code>RenderMode</code>mode)</h3>
 <p>Set the render mode </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Render mode</dl>
+<dd><i>mode</i> Render mode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>RenderMode</code>, <code>renderMode()</code></dl>
+<dd><code>RenderMode</code>, <code>renderMode()</code></dd></dl>
 <h3>void QwtWidgetOverlay::updateOverlay ()</h3>
 <p>Recalculate the mask and repaint the overlay </p>
 <h2>Author</h2>

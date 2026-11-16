@@ -17,12 +17,12 @@ description: "gpm – a cut and paste utility and mouse server for virtual conso
 <p> Special commands are toggled by triple-clicking the left and right button &#8212; an unlikely event during normal mouse usage. The easiest way to triple-click is pressing one of the buttons and triple-click the other one. When special processing is toggled, a message appears on the console (and the speaker beeps twice, if you have a speaker); if the user releases all the buttons and presses one of them again within three seconds, then the special command corresponding to the button is executed. </p>
 <p> The default special commands are:</p>
 <dl>
-<dt>left button</p>
-<dd>Reboot the system by signalling the init process</p>
-<dt>middle button (if any)</p>
-<dd>Execute /sbin/shutdown -h now</p>
-<dt>right button</p>
-<dd>Execute /sbin/shutdown -r now </p>
+<dt>left button</dt>
+<dd>Reboot the system by signalling the init process</dd>
+<dt>middle button (if any)</dt>
+<dd>Execute /sbin/shutdown -h now</dd>
+<dt>right button</dt>
+<dd>Execute /sbin/shutdown -r now </dd>
 </dl>
 <p> The -S command line switch enables special command processing and allows to change the three special commands. To accept the default commands use -S &quot;&quot; (i.e., specify an empty argument). To specify your own commands, use a colon-separated list to specify commands associated to the left, middle and right button. If any of the commands is empty, it is interpreted as `send a signal to the init process&#8217;. This particular operation is supported, in addition to executing external commands, because sometimes bad bugs put the system to the impossibility to fork; in these rare case the programmer should be able to shutdown the system anyways, and killing init from a running process is the only way to do it. </p>
 <p> As an example, -S &quot;:telinit 1:/sbin/halt&quot;, associates killing init to the left button, going single user to the middle one, and halting the system to the right button. </p>
@@ -30,58 +30,58 @@ description: "gpm – a cut and paste utility and mouse server for virtual conso
 <h2>Command Line Options</h2>
 <p>Available command line options are the following:</p>
 <dl>
-<dt>-a <code>accel</code></p>
-<dd>Set the acceleration value used when a single motion event is longer than <code>delta</code> (see -d).</p>
-<dt>-A[<code>limit</code>]</p>
-<dd>Start up with selection pasting disabled. This is intended as a security measure; a plausible attack on a system seems to be to stuff a nasty shell command into the selection buffer (rm -rf /) including the terminating line break, then all the victim has to do is click the middle mouse button .. As of version 1.17.2, this has developed into a more general aging mechanism; the gpm daemon can disable (age) selection pasting automatically after a period of inactivity. To enable this mode just give the optional <code>limit</code> parameter (no space in between !) which is interpreted as the time in seconds for which a selection is considered valid and pastable. As of version 1.15.7, a trivial program called disable-paste is provided. The following makes a good addition to /etc/profile if you allow multiple users to work on your console. </p>
+<dt>-a <code>accel</code></dt>
+<dd>Set the acceleration value used when a single motion event is longer than <code>delta</code> (see -d).</dd>
+<dt>-A[<code>limit</code>]</dt>
+<dd>Start up with selection pasting disabled. This is intended as a security measure; a plausible attack on a system seems to be to stuff a nasty shell command into the selection buffer (rm -rf /) including the terminating line break, then all the victim has to do is click the middle mouse button .. As of version 1.17.2, this has developed into a more general aging mechanism; the gpm daemon can disable (age) selection pasting automatically after a period of inactivity. To enable this mode just give the optional <code>limit</code> parameter (no space in between !) which is interpreted as the time in seconds for which a selection is considered valid and pastable. As of version 1.15.7, a trivial program called disable-paste is provided. The following makes a good addition to /etc/profile if you allow multiple users to work on your console. </dd>
 </dl>
 <p> case $( /usr/bin/tty ) in<br />
  /dev/tty[0-9]*) /usr/bin/disable-paste ;;<br />
  esac</p>
 <dl>
-<dt>-b <code>baud</code></p>
-<dd>Set the baud rate.</p>
-<dt>-B <code>sequence</code></p>
-<dd>Set the button sequence. 123 is the normal sequence, 321 can be used by left-handed people, and 132 can be useful with two-button mice (especially within Emacs). All the button permutations are allowable.</p>
-<dt>-d <code>delta</code></p>
-<dd>Set the delta value. When a single motion event is longer than <code>delta</code>, <code>accel</code> is used as a multiplying factor. (Must be 2 or above)</p>
-<dt>-D</p>
-<dd>Do not automatically enter background operation when started, and log messages to the standard error stream, not the syslog mechanism. This is useful for debugging; in previous releases it was done with a compile-time option.</p>
-<dt>-g <code>number</code></p>
-<dd>With glidepoint devices, emulate the specified button with tapping. <code>number</code> must be 1, 2, or 3, and refers to the button number before the -B button remapping is performed. This option applies to the mman and ps2 decoding. No button is emulated by default because the ps2 tapping is incompatible with some normal ps2 mice</p>
-<dt>-h</p>
-<dd>Print a summary of command line options.</p>
-<dt>-i <code>interval</code></p>
-<dd>Set <code>interval</code> to be used as an upper time limit for multiple clicks. If the interval between button-up and button-down events is less than <code>limit</code>, the press is considered a double or triple click. Time is in milliseconds.</p>
-<dt>-k</p>
-<dd>Kill a running gpm. This can be used by busmouse users to kill gpm before running X (unless they use -R or the single-open limitation is removed from the kernel).</p>
-<dt>-l <code>charset</code></p>
-<dd>Choose the inword() look up table. The <code>charset</code> argument is a list of characters. &#8211; is used to specify a range and \ is used to escape the next character or to provide octal codes. Only visible character can appear in <code>charset</code> because control characters can&#8217;t appear in text-mode video memory, whence selection is cut.</p>
-<dt>-m <code>filename</code></p>
-<dd>Choose the mouse file to open. Must be before -t and -o.</p>
-<dt>-M</p>
-<dd>Enable multiple mode. The daemon will read two different mouse devices. Any subsequent option will refer to the second device, while any preceding option will be used for the first device. This option automatically forces the repeater (-R) option on.</p>
-<dt>-o <code>list-of-extra-options</code></p>
-<dd>The option works similary to the &#8220;-o&#8221; option of mount; it is used to specify a list of &#8220;extra options&#8221; that are specific to each mouse type. The list is comma-separated. The options dtr, rts or both are used by the serial initialization to toggle the modem lines like, compatibly with earlier gpm versions; note however that using -o dtr associated with non-plain-serial mouse types may now generate an error. And by the way, use -o after -m and after -t. </p>
-<dt>-p</p>
-<dd>Forces the pointer to be visible while selecting. This is the behaviour of selection-1.7, but it is sometimes confusing. The default is not to show the pointer, which can be confusing as well.</p>
-<dt>-r <code>number</code></p>
-<dd>Set the responsiveness. A higher responsiveness is used for a faster cursor motion.</p>
-<dt>-R[<code>name</code>]</p>
-<dd>Causes gpm to act as a repeater: any mouse data received while in graphic mode will be produced on the fifo /dev/gpmdata in protocol <code>name</code>, given as an optional argument (no space in between !). In principle, you can use the same names as for the -t option, although repeating into some protocols may not be implemented for a while. In addition, you can specify raw as the <code>name</code>, to repeat the mouse data byte by byte, without any protocol translation. If <code>name</code> is omitted, it defaults to msc. Using gpm in repeater mode, you can configure the X server to use its fifo as a mouse device. This option is useful for bus-mouse owners to override the single-open limitation. It is also an easy way to manage those stupid dual-mode mice which force you to keep the middle button down while changing video mode. The option is forced on by the -M option.</p>
-<dt>-s <code>number</code></p>
-<dd>Set the sample rate for the mouse device.</p>
-<dt>-S <code>commands</code></p>
-<dd>Enable special-command processing, and optionally specify custom commands as a colon-separated list. See above for a detailed description of special commands.</p>
-<dt>-t <code>name</code></p>
-<dd>Set the mouse type. Use -t help to get a list of allowable types. Since version 1.18.1, the list also shows which protocols are available as repeaters (see -R above), by marking them with an asterisk (&#8220;*&#8221;). </p>
+<dt>-b <code>baud</code></dt>
+<dd>Set the baud rate.</dd>
+<dt>-B <code>sequence</code></dt>
+<dd>Set the button sequence. 123 is the normal sequence, 321 can be used by left-handed people, and 132 can be useful with two-button mice (especially within Emacs). All the button permutations are allowable.</dd>
+<dt>-d <code>delta</code></dt>
+<dd>Set the delta value. When a single motion event is longer than <code>delta</code>, <code>accel</code> is used as a multiplying factor. (Must be 2 or above)</dd>
+<dt>-D</dt>
+<dd>Do not automatically enter background operation when started, and log messages to the standard error stream, not the syslog mechanism. This is useful for debugging; in previous releases it was done with a compile-time option.</dd>
+<dt>-g <code>number</code></dt>
+<dd>With glidepoint devices, emulate the specified button with tapping. <code>number</code> must be 1, 2, or 3, and refers to the button number before the -B button remapping is performed. This option applies to the mman and ps2 decoding. No button is emulated by default because the ps2 tapping is incompatible with some normal ps2 mice</dd>
+<dt>-h</dt>
+<dd>Print a summary of command line options.</dd>
+<dt>-i <code>interval</code></dt>
+<dd>Set <code>interval</code> to be used as an upper time limit for multiple clicks. If the interval between button-up and button-down events is less than <code>limit</code>, the press is considered a double or triple click. Time is in milliseconds.</dd>
+<dt>-k</dt>
+<dd>Kill a running gpm. This can be used by busmouse users to kill gpm before running X (unless they use -R or the single-open limitation is removed from the kernel).</dd>
+<dt>-l <code>charset</code></dt>
+<dd>Choose the inword() look up table. The <code>charset</code> argument is a list of characters. &#8211; is used to specify a range and \ is used to escape the next character or to provide octal codes. Only visible character can appear in <code>charset</code> because control characters can&#8217;t appear in text-mode video memory, whence selection is cut.</dd>
+<dt>-m <code>filename</code></dt>
+<dd>Choose the mouse file to open. Must be before -t and -o.</dd>
+<dt>-M</dt>
+<dd>Enable multiple mode. The daemon will read two different mouse devices. Any subsequent option will refer to the second device, while any preceding option will be used for the first device. This option automatically forces the repeater (-R) option on.</dd>
+<dt>-o <code>list-of-extra-options</code></dt>
+<dd>The option works similary to the &#8220;-o&#8221; option of mount; it is used to specify a list of &#8220;extra options&#8221; that are specific to each mouse type. The list is comma-separated. The options dtr, rts or both are used by the serial initialization to toggle the modem lines like, compatibly with earlier gpm versions; note however that using -o dtr associated with non-plain-serial mouse types may now generate an error. And by the way, use -o after -m and after -t. </dd>
+<dt>-p</dt>
+<dd>Forces the pointer to be visible while selecting. This is the behaviour of selection-1.7, but it is sometimes confusing. The default is not to show the pointer, which can be confusing as well.</dd>
+<dt>-r <code>number</code></dt>
+<dd>Set the responsiveness. A higher responsiveness is used for a faster cursor motion.</dd>
+<dt>-R[<code>name</code>]</dt>
+<dd>Causes gpm to act as a repeater: any mouse data received while in graphic mode will be produced on the fifo /dev/gpmdata in protocol <code>name</code>, given as an optional argument (no space in between !). In principle, you can use the same names as for the -t option, although repeating into some protocols may not be implemented for a while. In addition, you can specify raw as the <code>name</code>, to repeat the mouse data byte by byte, without any protocol translation. If <code>name</code> is omitted, it defaults to msc. Using gpm in repeater mode, you can configure the X server to use its fifo as a mouse device. This option is useful for bus-mouse owners to override the single-open limitation. It is also an easy way to manage those stupid dual-mode mice which force you to keep the middle button down while changing video mode. The option is forced on by the -M option.</dd>
+<dt>-s <code>number</code></dt>
+<dd>Set the sample rate for the mouse device.</dd>
+<dt>-S <code>commands</code></dt>
+<dd>Enable special-command processing, and optionally specify custom commands as a colon-separated list. See above for a detailed description of special commands.</dd>
+<dt>-t <code>name</code></dt>
+<dd>Set the mouse type. Use -t help to get a list of allowable types. Since version 1.18.1, the list also shows which protocols are available as repeaters (see -R above), by marking them with an asterisk (&#8220;*&#8221;). </dd>
 <p> Use -t after you selected the mouse device with -m.</p>
-<dt>-v</p>
-<dd>Print version information and exit.</p>
-<dt>-2</p>
-<dd>Force two buttons. This means that the middle button, if any, will be taken as it was the right one.</p>
-<dt>-3</p>
-<dd>Force three buttons. By default the mouse is considered to be a 2-buttons one, until the middle button is pressed. If three buttons are there, the right one is used to extend the selection, and the middle one is used to paste it. Beware: if you use the -3 option with a 2-buttons mouse, you won&#8217;t be able to paste the selection. </p>
+<dt>-v</dt>
+<dd>Print version information and exit.</dd>
+<dt>-2</dt>
+<dd>Force two buttons. This means that the middle button, if any, will be taken as it was the right one.</dd>
+<dt>-3</dt>
+<dd>Force three buttons. By default the mouse is considered to be a 2-buttons one, until the middle button is pressed. If three buttons are there, the right one is used to extend the selection, and the middle one is used to paste it. Beware: if you use the -3 option with a 2-buttons mouse, you won&#8217;t be able to paste the selection. </dd>
 </dl>
 <h2>Operation</h2>
 <p>To select text press the left mouse button and drag the mouse. To paste text in the same or another console, press the middle button. The right button is used to extend the selection, like in `xterm&#8217;. </p>

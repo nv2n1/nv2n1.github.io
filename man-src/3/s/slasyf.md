@@ -19,7 +19,7 @@ description: "slasyf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SLASYF computes a partial factorization of a real symmetric matrix A using the Bunch - Kaufman diagonal pivoting method.The partial
                                                                                            factorization has the form : A = (I U12)(A11 0)(I 0) if UPLO = 'U',
@@ -30,11 +30,11 @@ SLASYF computes a partial factorization of a real symmetric matrix A using the B
                                                                                                                         and is either NB or NB - 1, or N if N &lt;= NB.SLASYF is an auxiliary routine called by SSYTRF.It uses blocked code(calling Level 3 BLAS) to update the submatrix A11(if UPLO = 'U') or
                                                                                                                                                         A22(if UPLO = 'L').
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the upper or lower triangular part of the
@@ -117,25 +117,26 @@ SLASYF computes a partial factorization of a real symmetric matrix A using the B
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   November 2013,  Igor Kozachenko,
                   Computer Science Division,
                   University of California, Berkeley
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 177 of file slasyf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

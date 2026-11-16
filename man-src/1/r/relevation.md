@@ -19,42 +19,42 @@ description: "relevation — command-line searcher for Revelation files"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-f </code><i>file.revelation</i>, <code>&#8211;file=</code><i>file.revelation</i></p>
-<dd> File name of the <code>revelation</code> file (the file containing the list of stored credentials).</p>
-<dt><code>-p </code><i>password</i>, <code>&#8211;password=</code><i>password</i></p>
-<dd> Decryption password.</p>
-<dt><code>-a</code>, <code>&#8211;ask</code>, <code>-0</code>, <code>&#8211;stdin</code></p>
-<dd> Ask interactively for password.</p>
+<dt><code>-f </code><i>file.revelation</i>, <code>&#8211;file=</code><i>file.revelation</i></dt>
+<dd> File name of the <code>revelation</code> file (the file containing the list of stored credentials).</dd>
+<dt><code>-p </code><i>password</i>, <code>&#8211;password=</code><i>password</i></dt>
+<dd> Decryption password.</dd>
+<dt><code>-a</code>, <code>&#8211;ask</code>, <code>-0</code>, <code>&#8211;stdin</code></dt>
+<dd> Ask interactively for password.</dd>
 <dt>
-<dd> When <code>-a</code> or <code>&#8211;ask</code> is used a prompt will be printed.</p>
+</dt><dd> When <code>-a</code> or <code>&#8211;ask</code> is used a prompt will be printed.</dd>
 <dt>
-<dd> Use either one of this variants or <code>&#8211;password</code>.</p>
-<dt><code>-t </code><i>type</i>, <code>&#8211;type=</code><i>type</i></p>
-<dd> Print only entries of a certain type.</p>
+</dt><dd> Use either one of this variants or <code>&#8211;password</code>.</dd>
+<dt><code>-t </code><i>type</i>, <code>&#8211;type=</code><i>type</i></dt>
+<dd> Print only entries of a certain type.</dd>
 <dt>
-<dd> Known types: creditcard, cryptokey, database, door, email, folder, ftp, generic, phone, shell, website.</p>
+</dt><dd> Known types: creditcard, cryptokey, database, door, email, folder, ftp, generic, phone, shell, website.</dd>
 <dt>
-<dd> If preceded by a slash it will be negated, i.e. `-website&#8217; will select entries that are not of type website.</p>
+</dt><dd> If preceded by a slash it will be negated, i.e. `-website&#8217; will select entries that are not of type website.</dd>
 <dt>
-<dd> When searching for a string, folders are skipped (equivalent to `&#8211;type=-folder&#8217;).</p>
-<dt><code>-i</code>, <code>&#8211;case-insensitive</code></p>
-<dd> When searching for text, disregard case.</p>
+</dt><dd> When searching for a string, folders are skipped (equivalent to `&#8211;type=-folder&#8217;).</dd>
+<dt><code>-i</code>, <code>&#8211;case-insensitive</code></dt>
+<dd> When searching for text, disregard case.</dd>
 <dt>
-<dd> This is the default behaviour.</p>
+</dt><dd> This is the default behaviour.</dd>
 <dt>
-<dd> If the search string contains special/non-English characters this is likely to fail.</p>
-<dt><code>-c</code>, <code>&#8211;case-sensitive</code></p>
-<dd> When searching for text, obey case.</p>
-<dt><code>-A</code>, <code>&#8211;and</code></p>
-<dd> When multiple search terms are used, use an AND operator to combine them. All search terms will be combined in a single search, only entries that match every search term will be selected.</p>
-<dt><code>-O</code>, <code>&#8211;or</code></p>
-<dd> When multiple search terms are used, use an OR operator to combine them. A different search will be issued for each search term. This is the default and the original mode of operation.</p>
-<dt><code>-s </code><i>search string</i>, <code>&#8211;search=</code><i>search string</i>, <i>search string</i></p>
-<dd> Search the file for a pice of text. All fields will be searched. There&#8217;s no need to use the <code>-s</code> or <code>&#8211;search</code> option names, any unnamed argument will be considered a search term.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information for relevation.</dl>
+</dt><dd> If the search string contains special/non-English characters this is likely to fail.</dd>
+<dt><code>-c</code>, <code>&#8211;case-sensitive</code></dt>
+<dd> When searching for text, obey case.</dd>
+<dt><code>-A</code>, <code>&#8211;and</code></dt>
+<dd> When multiple search terms are used, use an AND operator to combine them. All search terms will be combined in a single search, only entries that match every search term will be selected.</dd>
+<dt><code>-O</code>, <code>&#8211;or</code></dt>
+<dd> When multiple search terms are used, use an OR operator to combine them. A different search will be issued for each search term. This is the default and the original mode of operation.</dd>
+<dt><code>-s </code><i>search string</i>, <code>&#8211;search=</code><i>search string</i>, <i>search string</i></dt>
+<dd> Search the file for a pice of text. All fields will be searched. There&#8217;s no need to use the <code>-s</code> or <code>&#8211;search</code> option names, any unnamed argument will be considered a search term.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information for relevation.</dd></dl>
 <h2>CONFIGURATION FILE</h2>
 <p> A configuration file `.relevation.conf&#8217; located at the user&#8217;s home directory can be used to avoid having to provide the filename and/or password on each run. </p>
 <p> Example `~/.relevation.conf&#8217;: </p>

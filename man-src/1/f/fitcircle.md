@@ -18,44 +18,44 @@ description: "fitcircle – find mean position and pole of best-fit great [or sm
 <p> The <code>-L2</code> solution is so called because it approximates the minimization of the sum of squares of cosines of angular distances. It creates a 3 by 3 matrix of sums of squares of components of the data vectors. The eigenvectors of this matrix give the mean and pole locations. This method may be more subject to roundoff errors when there are thousands of data. The pole is given by the eigenvector corresponding to the smallest eigenvalue; it is the least-well represented factor in the data and is not easily estimated by either method.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><code>-L</code><i>norm</i></p>
-<dd> Specify the desired <i>norm</i> as 1 or 2, or use <code>-L</code> or <code>-L3</code> to see both solutions.</dl>
+<dt><code>-L</code><i>norm</i></dt>
+<dd> Specify the desired <i>norm</i> as 1 or 2, or use <code>-L</code> or <code>-L3</code> to see both solutions.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII [or binary, see <code>-bi</code>] files containing lon,lat [or lat,lon; see <code>-:</code>[<code>i</code>|<code>o</code>]] values in the first 2 columns. If no file is specified, <code>fitcircle</code> will read from standard input.</p>
-<dt><code>-F</code><code>f</code>|<code>m</code>|<code>n</code>|<code>s</code>|<code>c</code></p>
-<dd> Normally, <code>fitcircle</code> will write its results in the form of a text report, with the values intermingled with report sentences. Use <code>-F</code> to only return data coordinates, and append <i>flags</i> to specify which coordinates you would like. You can choose from <code>f</code> (Flat Earth mean location), <code>m</code> (mean location), <code>n</code> (north pole of great circle), <code>s</code> (south pole of great circle), and <code>c ** (pole of small circle and its colatitude, which requires **-S</code>).</p>
-<dt><code>-S</code>[<i>lat</i>]</p>
-<dd> Attempt to fit a small circle instead of a great circle. The pole will be constrained to lie on the great circle connecting the pole of the best-fit great circle and the mean location of the data. Optionally append the desired fixed latitude of the small circle [Default will determine the latitude].</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></p>
-<dd> Select output columns (0 is first column).</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII [or binary, see <code>-bi</code>] files containing lon,lat [or lat,lon; see <code>-:</code>[<code>i</code>|<code>o</code>]] values in the first 2 columns. If no file is specified, <code>fitcircle</code> will read from standard input.</dd>
+<dt><code>-F</code><code>f</code>|<code>m</code>|<code>n</code>|<code>s</code>|<code>c</code></dt>
+<dd> Normally, <code>fitcircle</code> will write its results in the form of a text report, with the values intermingled with report sentences. Use <code>-F</code> to only return data coordinates, and append <i>flags</i> to specify which coordinates you would like. You can choose from <code>f</code> (Flat Earth mean location), <code>m</code> (mean location), <code>n</code> (north pole of great circle), <code>s</code> (south pole of great circle), and <code>c ** (pole of small circle and its colatitude, which requires **-S</code>).</dd>
+<dt><code>-S</code>[<i>lat</i>]</dt>
+<dd> Attempt to fit a small circle instead of a great circle. The pole will be constrained to lie on the great circle connecting the pole of the best-fit great circle and the mean location of the data. Optionally append the desired fixed latitude of the small circle [Default will determine the latitude].</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></dt>
+<dd> Select output columns (0 is first column).</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your <code>gmt.conf</code> file. Longitude and latitude are formatted according to <i>FORMAT_GEO_OUT</i>, whereas other values are formatted according to <i>FORMAT_FLOAT_OUT</i>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <i>FORMAT_FLOAT_OUT</i> setting.</p>
 <h2>EXAMPLES</h2>

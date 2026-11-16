@@ -16,8 +16,8 @@ bson_utf8_get_char(const char *utf8);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>utf8</code></p>
-<dd> A UTF-8 encoded string.</dl>
+<dt><code>utf8</code></dt>
+<dd> A UTF-8 encoded string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Converts the current character in a UTF-8 sequence to a bson_unichar_t, the 32-bit representation of the multi-byte character. </p>
 <h2>RETURNS</h2>

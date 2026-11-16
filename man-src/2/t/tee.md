@@ -19,25 +19,25 @@ ssize_t tee(int fd_in, int fd_out, size_t len, unsigned int flags);
 <p> <code>tee</code>() duplicates up to <i>len</i> bytes of data from the pipe referred to by the file descriptor <i>fd_in</i> to the pipe referred to by the file descriptor <i>fd_out</i>. It does not consume the data that is duplicated from <i>fd_in</i>; therefore, that data can be copied by a subsequent <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2). </p>
 <p> <i>flags</i> is a bit mask that is composed by ORing together zero or more of the following values:</p>
 <dl>
-<dt><code>SPLICE_F_MOVE</code></p>
-<dd> Currently has no effect for <code>tee</code>(); see <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2).</p>
-<dt><code>SPLICE_F_NONBLOCK</code></p>
-<dd> Do not block on I/O; see <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) for further details.</p>
-<dt><code>SPLICE_F_MORE</code></p>
-<dd> Currently has no effect for <code>tee</code>(), but may be implemented in the future; see <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2).</p>
-<dt><code>SPLICE_F_GIFT</code></p>
-<dd> Unused for <code>tee</code>(); see <code><a href="/docs/linux/man/2-vmsplice/">vmsplice</a></code>(2).</dl>
+<dt><code>SPLICE_F_MOVE</code></dt>
+<dd> Currently has no effect for <code>tee</code>(); see <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2).</dd>
+<dt><code>SPLICE_F_NONBLOCK</code></dt>
+<dd> Do not block on I/O; see <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) for further details.</dd>
+<dt><code>SPLICE_F_MORE</code></dt>
+<dd> Currently has no effect for <code>tee</code>(), but may be implemented in the future; see <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2).</dd>
+<dt><code>SPLICE_F_GIFT</code></dt>
+<dd> Unused for <code>tee</code>(); see <code><a href="/docs/linux/man/2-vmsplice/">vmsplice</a></code>(2).</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Upon successful completion, <code>tee</code>() returns the number of bytes that were duplicated between the input and output. A return value of 0 means that there was no data to transfer, and it would not make sense to block, because there are no writers connected to the write end of the pipe referred to by <i>fd_in</i>. </p>
 <p> On error, <code>tee</code>() returns -1 and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> <code>SPLICE_F_NONBLOCK</code> was specified in <i>flags</i> or one of the file descriptors had been marked as nonblocking (<code>O_NONBLOCK</code>)<code>,</code> and the operation would block.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd_in</i> or <i>fd_out</i> does not refer to a pipe; or <i>fd_in</i> and <i>fd_out</i> refer to the same pipe.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> <code>SPLICE_F_NONBLOCK</code> was specified in <i>flags</i> or one of the file descriptors had been marked as nonblocking (<code>O_NONBLOCK</code>)<code>,</code> and the operation would block.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd_in</i> or <i>fd_out</i> does not refer to a pipe; or <i>fd_in</i> and <i>fd_out</i> refer to the same pipe.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>tee</code>() system call first appeared in Linux 2.6.17; library support was added to glibc in version 2.5.</p>
 <h2>CONFORMING TO</h2>

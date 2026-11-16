@@ -17,7 +17,6 @@ description: "fixmul – Multiplies two fixed point values together. Allegro gam
 <p> If an overflow occurs, `errno&#8217; will be set and the maximum possible value will be returned, but `errno&#8217; is not cleared if the operation is successful. This means that if you are going to test for overflow you should set `errno=0&#8242; before calling fixmul(). Example: </p>
 <pre><code>
 fixed result;
-
 /* This will put 30000 into `result'. */
 result = fixmul(itofix(10), itofix(3000));
 /* But this overflows, and sets `errno'. */

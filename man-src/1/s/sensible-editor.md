@@ -14,16 +14,16 @@ description: "sensible-editor – sensible editing"
 <h2>DESCRIPTION</h2>
 <p> <code>sensible-editor</code> makes sensible decisions on which editor to call. Programs in Debian can use this script as their default editor. <code>sensible-editor</code> try to do in the following order:</p>
 <dl>
-<dt>step]</p>
-<dd> if <code>VISUAL</code> environment variable exists, execute <code>VISUAL [OPTIONS]</code></p>
-<dt>step]</p>
-<dd> if <code>EDITOR</code> environment variable exists, execute <code>EDITOR [OPTIONS]</code></p>
-<dt>step]</p>
-<dd> source the contents of file <i>~/.selected_editor</i> and, if <code>SELECTED_EDITOR</code> environment variable exists execute <code>SELECTED_EDITOR [OPTIONS]</code></p>
-<dt>step]</p>
-<dd> run <code>editor [OPTIONS]</code> command</p>
-<dt>step]</p>
-<dd> finally run <code>nano-tiny [OPTIONS]</code> command</dl>
+<dt>step]</dt>
+<dd> if <code>VISUAL</code> environment variable exists, execute <code>VISUAL [OPTIONS]</code></dd>
+<dt>step]</dt>
+<dd> if <code>EDITOR</code> environment variable exists, execute <code>EDITOR [OPTIONS]</code></dd>
+<dt>step]</dt>
+<dd> source the contents of file <i>~/.selected_editor</i> and, if <code>SELECTED_EDITOR</code> environment variable exists execute <code>SELECTED_EDITOR [OPTIONS]</code></dd>
+<dt>step]</dt>
+<dd> run <code>editor [OPTIONS]</code> command</dd>
+<dt>step]</dt>
+<dd> finally run <code>nano-tiny [OPTIONS]</code> command</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) for documentation of the EDITOR, VISUAL variables<br />
  <code><a href="/docs/linux/man/1-select-editor/">select-editor</a></code>(1) for changing a user&#8217;s default editor.<br />

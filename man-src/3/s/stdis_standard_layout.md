@@ -10,10 +10,8 @@ description: "std::is_standard_layout – std::is_standard_layout"
 <p>std::is_standard_layout &#8211; std::is_standard_layout</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_standard_layout;</code></pre>
 <p>If T is a standard layout type (that is, a scalar type, a standard-layout class, or an array of such type/class, possibly cv-qualified), provides the member constant value equal true. For any other type, value is false.<br />
 A standard-layout_class is a class that satisfies StandardLayoutType.<br />
@@ -45,14 +43,12 @@ The macro offsetof can only be used with standard-layout classes. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct A {
     int m;
 };
 struct B {
     int m1;
-
   private:
     int m2;
 };
@@ -60,7 +56,6 @@ struct C {
     virtual void foo();
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_standard_layout&lt;A&gt;::value &lt;&lt; '

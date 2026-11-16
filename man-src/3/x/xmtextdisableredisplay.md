@@ -15,7 +15,7 @@ description: "XmTextDisableRedisplay — A Text function that temporarily preven
 <h2>Description</h2>
 <p><code>XmTextDisableRedisplay</code> prevents redisplay of the specified Text widget even though its visual attributes have been modified. The visual appearance of the widget remains unchanged until <code>XmTextEnableRedisplay</code> is called, although the insertion cursor is not displayed. This allows an application to make multiple changes to the widget without causing intermediate visual updates.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtextenableredisplay/">XmTextEnableRedisplay</a></code>(3).</p>

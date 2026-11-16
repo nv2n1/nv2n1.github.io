@@ -15,37 +15,37 @@ description: "hashdeep – Compute, compare, or audit multiple message digests"
 <h2>DESCRIPTION</h2>
 <p> Computes multiple hashes, or message digests, for any number of files while optionally recursively digging through the directory structure. By default the program computes MD5 and SHA-256 hashes, equivalent to -c md5,sha256. Can also take a list of known hashes and display the filenames of input files whose hashes either do or do not match any of the known hashes. Can also use a list of known hashes to audit a set of FILES. Errors are reported to standard error. If no FILES are specified, reads from standard input. </p>
 <dl>
-<dt><code>-c &lt;alg1&gt;[,&lt;alg2&gt;&#8230;]</code></p>
-<dd> Computation mode. Compute hashes of FILES using the algorithms specified. Legal values are md5, sha1, sha256, tiger, and whirlpool. </p>
-<dt><code>-k </code></p>
-<dd> Load a file of known hashes. This flag is required when using any of the matching or audit modes (i.e. -m, -x, -M, -X, or -a) This flag may be used more than once to add multiple sets of known hashes. </p>
+<dt><code>-c &lt;alg1&gt;[,&lt;alg2&gt;&#8230;]</code></dt>
+<dd> Computation mode. Compute hashes of FILES using the algorithms specified. Legal values are md5, sha1, sha256, tiger, and whirlpool. </dd>
+<dt><code>-k </code></dt>
+<dd> Load a file of known hashes. This flag is required when using any of the matching or audit modes (i.e. -m, -x, -M, -X, or -a) This flag may be used more than once to add multiple sets of known hashes. </dd>
 <p> Loading sets with different hash algorithms can sometimes generate spurrious hash collisions. For example, let&#8217;s say we have two hash sets, A and B, which have some overlapping files. For example, the file /usr/bin/bad is in both sets. In A we&#8217;ve recorded the MD5 and SHA-256. In B we&#8217;ve recorded the MD5, SHA-1, and SHA-256. Because these two records are different, they will both be loaded. When the program computes all three hashes and compares them to the set of knowns, we will get an exact match from the record in B and a collision from the record in A. </p>
-<dt><code>-a </code></p>
+<dt><code>-a </code></dt>
 <dd> Audit mode. Each input file is compared against the set of knowns. An audit is said to pass if each input file is matched against exactly one file in set of knowns. Any collisions, new files, or missing files will make the audit fail. Using this flag alone produces a message, either &quot;Audit passed&quot; or &quot;Audit Failed&quot;. Use the verbose modes, -v, for more details. Using -v prints the number of files in each category. Using -v a second time prints any discrepancies. Using -v a third time prints the results for every file examined and every known file.<br />
- Due to limitations in the program, any filenames with Unicode characters will appear to have moved during an audit. See the section &quot;UNICODE SUPPORT&quot; below. </p>
-<dt><code>-m </code></p>
+ Due to limitations in the program, any filenames with Unicode characters will appear to have moved during an audit. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
+<dt><code>-m </code></dt>
 <dd> Positive matching, requires at least one use of the -k flag. The input files are examined one at a time, and only those files that match the list of known hashes are output. The only acceptable format for known hashes is the output of previous hashdeep runs.<br />
  If standard input is used with the -m flag, displays &quot;stdin&quot; if the input matches one of the hashes in the list of known hashes. If the hash does not match, the program displays no output.<br />
- This flag may not be used in conjunction with the -x, -X, or -a flags. See the section &quot;UNICODE SUPPORT&quot; below. </p>
-<dt><code>-x </code></p>
+ This flag may not be used in conjunction with the -x, -X, or -a flags. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
+<dt><code>-x </code></dt>
 <dd> Negative matching. Same as the -m flag above, but does negative matching. That is, only those files NOT in the list of known hashes are displayed.<br />
- This flag may not be used in conjunction with the -m, -M, or -a flags. See the section &quot;UNICODE SUPPORT&quot; below. </p>
-<dt><code>-f</code> &lt;file&gt;</p>
+ This flag may not be used in conjunction with the -m, -M, or -a flags. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
+<dt><code>-f</code> &lt;file&gt;</dt>
 <dd> Takes a list of files to be hashed from the specified file. Each line is assumed to be a filename. This flag can only be used once per invocation. If it&#8217;s used a second time, the second instance will clobber the first.<br />
- Note that you can still use other flags, such as the -m or -x modes, and submit additional FILES on the command line. </p>
-<dt><code>-w </code></p>
-<dd> When used with positive matching modes (-m,-M) displays the filename of the known hash that matched the input file. See the section &quot;UNICODE SUPPORT&quot; below. </p>
-<dt><code>-M</code> and <code>-X</code></p>
-<dd> Same as -m and -x above, but displays the hash for each file that does (or does not) match the list of known hashes. </p>
-<dt><code>-r</code></p>
-<dd> Enables recursive mode. All subdirectories are traversed. Please note that recursive mode cannot be used to examine all files of a given file extension. For example, calling hashdeep -r *.txt will examine all files in <i>directories</i> that end in .txt. </p>
-<dt><code>-e</code></p>
-<dd> Displays a progress indicator and estimate of time remaining for each file being processed. Time estimates for files larger than 4GB are not available on Windows. This mode may not be used with th -p mode. </p>
-<dt><code>-E</code></p>
-<dd> When in audit mode, performs case insensitive matching of filenames. For example, ooar will match to \Foo\BAR. This can be important on Windows systems, where filenames are case insensitive. </p>
-<dt><code>-i &lt;size&gt; </code></p>
-<dd> Size threshold mode. Only hash files smaller than the given the threshold. Sizes may be specified using IEC multipliers b,k,m,g,t,p, and e. </p>
-<dt><code>-o</code> &lt;bcpflsd&gt;</p>
+ Note that you can still use other flags, such as the -m or -x modes, and submit additional FILES on the command line. </dd>
+<dt><code>-w </code></dt>
+<dd> When used with positive matching modes (-m,-M) displays the filename of the known hash that matched the input file. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
+<dt><code>-M</code> and <code>-X</code></dt>
+<dd> Same as -m and -x above, but displays the hash for each file that does (or does not) match the list of known hashes. </dd>
+<dt><code>-r</code></dt>
+<dd> Enables recursive mode. All subdirectories are traversed. Please note that recursive mode cannot be used to examine all files of a given file extension. For example, calling hashdeep -r *.txt will examine all files in <i>directories</i> that end in .txt. </dd>
+<dt><code>-e</code></dt>
+<dd> Displays a progress indicator and estimate of time remaining for each file being processed. Time estimates for files larger than 4GB are not available on Windows. This mode may not be used with th -p mode. </dd>
+<dt><code>-E</code></dt>
+<dd> When in audit mode, performs case insensitive matching of filenames. For example, ooar will match to \Foo\BAR. This can be important on Windows systems, where filenames are case insensitive. </dd>
+<dt><code>-i &lt;size&gt; </code></dt>
+<dd> Size threshold mode. Only hash files smaller than the given the threshold. Sizes may be specified using IEC multipliers b,k,m,g,t,p, and e. </dd>
+<dt><code>-o</code> &lt;bcpflsd&gt;</dt>
 <dd> Enables expert mode. Allows the user specify which (and only which) types of files are processed. Directory processing is still controlled with the -r flag. The expert mode options allowed are:<br />
  f &#8211; Regular files<br />
  b &#8211; Block Devices<br />
@@ -54,29 +54,29 @@ description: "hashdeep – Compute, compare, or audit multiple message digests"
  l &#8211; Symbolic Links<br />
  s &#8211; Sockets<br />
  d &#8211; Solaris Doors<br />
- e &#8211; Windows PE executables </p>
-<dt><code>-s</code></p>
-<dd> Enables silent mode. All error messages are supressed. </p>
-<dt><code>-p</code></p>
-<dd> Piecewise mode. Breaks files into chunks before hashing. Chunks may be specified using IEC multipliers b,k,m,g,t,p, and e. (Never let it be said that the author didn’t plan ahead.) </p>
-<dt><code>-b</code></p>
-<dd> Enables bare mode. Strips any leading directory information from displayed filenames. This flag may not be used in conjunction with the -l flag. </p>
-<dt><code>-l</code></p>
-<dd> Enables relative file paths. Instead of printing the absolute path for each file, displays the relative file path as indicated on the command line. This flag may not be used in conjunction with the -b flag. </p>
-<dt><code>-v</code></p>
-<dd> Enables verbose mode. Use again to make the program more verbose. This mostly changes the behvaior of the audit mode, -a. </p>
-<dt><code>-jnn</code></p>
-<dd> Controls multi-threading. By default the program will create one producer thread to scan the file system and one hashing thread per CPU core. Multi-threading causes output filenames to be in non-deterministic order, as files that take longer to hash will be delayed while they are hashed. If a deterministic order is required, specify <code>-j0</code> to disable multi-threading </p>
-<dt><code>-d</code></p>
-<dd> Output in Digital Forensics XML (DFXML) format. </p>
-<dt><code>-u</code></p>
-<dd> Quote Unicode output. For example, the snowman is shown as <code>U+C426</code>. </p>
-<dt><code>-F&lt;bum&gt;</code></p>
-<dd> Specifies the input mode that is used to read files. The default is <code>-Fb</code> (buffered I/O) which reads files with fopen(). Specifying <code>-Fu</code> will use unbuffered I/O and read the file with open(). Specifying <code>-Fm</code> will use memory-mapped I/O which will be faster on some platforms, but which (currently) will not work with files that produce I/O errors. </p>
-<dt><code>-h</code></p>
-<dd> Show a help screen and exit. </p>
-<dt><code>-V</code></p>
-<dd> Show the version number and exit. </p>
+ e &#8211; Windows PE executables </dd>
+<dt><code>-s</code></dt>
+<dd> Enables silent mode. All error messages are supressed. </dd>
+<dt><code>-p</code></dt>
+<dd> Piecewise mode. Breaks files into chunks before hashing. Chunks may be specified using IEC multipliers b,k,m,g,t,p, and e. (Never let it be said that the author didn’t plan ahead.) </dd>
+<dt><code>-b</code></dt>
+<dd> Enables bare mode. Strips any leading directory information from displayed filenames. This flag may not be used in conjunction with the -l flag. </dd>
+<dt><code>-l</code></dt>
+<dd> Enables relative file paths. Instead of printing the absolute path for each file, displays the relative file path as indicated on the command line. This flag may not be used in conjunction with the -b flag. </dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbose mode. Use again to make the program more verbose. This mostly changes the behvaior of the audit mode, -a. </dd>
+<dt><code>-jnn</code></dt>
+<dd> Controls multi-threading. By default the program will create one producer thread to scan the file system and one hashing thread per CPU core. Multi-threading causes output filenames to be in non-deterministic order, as files that take longer to hash will be delayed while they are hashed. If a deterministic order is required, specify <code>-j0</code> to disable multi-threading </dd>
+<dt><code>-d</code></dt>
+<dd> Output in Digital Forensics XML (DFXML) format. </dd>
+<dt><code>-u</code></dt>
+<dd> Quote Unicode output. For example, the snowman is shown as <code>U+C426</code>. </dd>
+<dt><code>-F&lt;bum&gt;</code></dt>
+<dd> Specifies the input mode that is used to read files. The default is <code>-Fb</code> (buffered I/O) which reads files with fopen(). Specifying <code>-Fu</code> will use unbuffered I/O and read the file with open(). Specifying <code>-Fm</code> will use memory-mapped I/O which will be faster on some platforms, but which (currently) will not work with files that produce I/O errors. </dd>
+<dt><code>-h</code></dt>
+<dd> Show a help screen and exit. </dd>
+<dt><code>-V</code></dt>
+<dd> Show the version number and exit. </dd>
 </dl>
 <h2>UNICODE SUPPORT</h2>
 <p> As of version 3.0 the program supports Unicode characters in filenames on Microsoft Windows systems for filenames specified on the command line with globbing (e.g. *), for files specified with the <code>-f</code> of files to hash, and for files read from directories using the <code>-r</code> option. </p>
@@ -87,16 +87,16 @@ description: "hashdeep – Compute, compare, or audit multiple message digests"
 <h2>RETURN VALUE</h2>
 <p> Returns a bit-wise value based on the success of the operation and the status of any matching operations. </p>
 <dl>
-<dt>0</p>
-<dd> Success. Note that the program considers itself successful even when it encounters read errors, permission denied errors, or finds directories when not in recursive mode.</p>
-<dt>1</p>
-<dd> Unused hashes. Under any of the matching modes, returns this value if one or more of the known hashes was not matched by any of the input files.</p>
-<dt>2</p>
-<dd> Unmatched inputs. Under any of the matching modes, returns this value if one or more of the input values did not match any of the known hashes.</p>
-<dt>64</p>
-<dd> User error, such as trying to do both positive and negative matching at the same time.</p>
-<dt>128</p>
-<dd> Internal error, such as memory corruption or uncaught cycle. All internal errors should be reported to the developer! See the section &quot;Reporting Bugs&quot; below. </p>
+<dt>0</dt>
+<dd> Success. Note that the program considers itself successful even when it encounters read errors, permission denied errors, or finds directories when not in recursive mode.</dd>
+<dt>1</dt>
+<dd> Unused hashes. Under any of the matching modes, returns this value if one or more of the known hashes was not matched by any of the input files.</dd>
+<dt>2</dt>
+<dd> Unmatched inputs. Under any of the matching modes, returns this value if one or more of the input values did not match any of the known hashes.</dd>
+<dt>64</dt>
+<dd> User error, such as trying to do both positive and negative matching at the same time.</dd>
+<dt>128</dt>
+<dd> Internal error, such as memory corruption or uncaught cycle. All internal errors should be reported to the developer! See the section &quot;Reporting Bugs&quot; below. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> hashdeep was written by Jesse Kornblum, research [at] jessekornblum.com, and Simson Garfinkel. </p>

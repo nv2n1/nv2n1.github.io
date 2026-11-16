@@ -14,7 +14,7 @@ description: "usb_get_intf – increments the reference count of the usb interfa
 <p><i>intf</i></p>
 <dl>
 <dd>
-<dd>the interface being referenced</dl>
+</dd><dd>the interface being referenced</dd></dl>
 <h2>Description</h2>
 <p>Each live reference to a interface must be refcounted. </p>
 <p> Drivers for USB interfaces should normally record such references in their <code>probe</code> methods, when they bind to an interface, and release them by calling <code>usb_put_intf</code>, in their <code>disconnect</code> methods.</p>

@@ -12,17 +12,11 @@ description: "qbutil.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;pthread.h&gt;
-
 #include &lt;stdint.h&gt;
-
 #include &lt;unistd.h&gt;
-
 #include &lt;qb/qbdefs.h&gt;</code></pre>
 <h3>Macros</h3>
 <pre><code>#define QB_UTIL_SW_OVERWRITE   0x01
-
-
-
 Typedefs</code></pre>
 <p> typedef struct qb_thread_lock_s <code>qb_thread_lock_t</code> </p>
 <p> typedef void(* <code>qb_util_log_fn_t</code> )(const char *file_name, int32_t file_line, int32_t severity, const char *msg) </p>
@@ -78,36 +72,36 @@ Typedefs</code></pre>
 <p>These are some convience functions used throughout libqb. </p>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Angus Salkeld asalkeld [at] redhat.com</dl>
+<dd>Angus Salkeld asalkeld [at] redhat.com</dd></dl>
 <p> <code>Locking</code></p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>qb_thread_lock_create()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_thread_lock()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_thread_trylock()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_thread_unlock()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_thread_lock_destroy()</code></dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>qb_thread_lock_create()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_thread_lock()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_thread_trylock()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_thread_unlock()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_thread_lock_destroy()</code></dd></dl>
 </dl>
 <p> <code>Time functions</code></p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>qb_timespec_add_ms()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_util_nano_current_get()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_util_nano_monotonic_hz()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_util_nano_from_epoch_get()</code></p>
-<dt>&bull;</p>
-<dd><code>qb_util_timespec_from_epoch_get()</code></dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>qb_timespec_add_ms()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_util_nano_current_get()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_util_nano_monotonic_hz()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_util_nano_from_epoch_get()</code></dd>
+<dt>&bull;</dt>
+<dd><code>qb_util_timespec_from_epoch_get()</code></dd></dl>
 </dl>
 <p> <code>Basic Stopwatch</code></p>
 <dl>
@@ -128,10 +122,10 @@ Typedefs</code></pre>
 *
 * qb_util_stopwatch_free(sw);
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>Stopwatch with splits</code></p>
 <dl>
-<dd>Setup a stopwatch with space for 3 splits.</dl>
+<dd>Setup a stopwatch with space for 3 splits.</dd></dl>
 <pre>* uint64_t split;
 * qb_util_stopwatch_t *sw = qb_util_stopwatch_create();
 *
@@ -171,10 +165,10 @@ Typedefs</code></pre>
 <p>QB_THREAD_LOCK_SHORT is a short term lock (spinlock if available on your system) QB_THREAD_LOCK_LONG is a mutex. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>QB_THREAD_LOCK_SHORT </i></p>
+<dt><i>QB_THREAD_LOCK_SHORT </i></dt>
 <dd>
-<dt><i>QB_THREAD_LOCK_LONG </i></p>
-<dd></dl>
+</dd><dt><i>QB_THREAD_LOCK_LONG </i></dt>
+<dd></dd></dl>
 <h2>Function Documentation</h2>
 <h3>char* qb_strerror_r (interrnum, char *buf, size_tbuflen)</h3>
 <p>strerror_r replacement.</p>
@@ -184,10 +178,10 @@ Typedefs</code></pre>
 <p>Create a new lock of the given type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>type</i> QB_THREAD_LOCK_SHORT == spinlock (where available, else mutex) QB_THREAD_LOCK_LONG == mutex</dl>
+<dd><i>type</i> QB_THREAD_LOCK_SHORT == spinlock (where available, else mutex) QB_THREAD_LOCK_LONG == mutex</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>pointer to qb_thread_lock_type_t or NULL on error.</dl>
+<dd>pointer to qb_thread_lock_type_t or NULL on error.</dd></dl>
 <h3>int32_t qb_thread_lock_destroy (<code>qb_thread_lock_t</code> *tl)</h3>
 <p>Calls either pthread_mutex_destro() or pthread_spin_destroy().</p>
 <h3>int32_t qb_thread_trylock (<code>qb_thread_lock_t</code> *tl)</h3>
@@ -199,7 +193,7 @@ Typedefs</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ts</i> the ts to add to<br />
- <i>ms</i> the amount of milliseconds to increment ts</dl>
+ <i>ms</i> the amount of milliseconds to increment ts</dd></dl>
 <h3>uint64_t qb_util_nano_current_get (void)</h3>
 <p>Get the current number of nano secounds produced by the systems incrementing clock (CLOCK_MONOTOMIC if available).</p>
 <h3>uint64_t qb_util_nano_from_epoch_get (void)</h3>
@@ -218,32 +212,32 @@ Typedefs</code></pre>
 <p>Create a new time split (or lap time) </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>sw</i> the stopwatch</dl>
+<dd><i>sw</i> the stopwatch</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>the</i> relative split time in micro seconds<br />
- <i>0</i> if no more splits available</dl>
+ <i>0</i> if no more splits available</dd></dl>
 <h3>int32_t qb_util_stopwatch_split_ctl (<code>qb_util_stopwatch_t</code> *sw, uint32_tmax_splits, uint32_toptions)</h3>
 <p><code>Parameters:</code></p>
 <dl>
 <dd><i>sw</i> the stopwatch<br />
  <i>max_splits</i> maximum number of time splits<br />
- <i>options</i> (0 or QB_UTIL_SW_OVERWRITE )</dl>
+ <i>options</i> (0 or QB_UTIL_SW_OVERWRITE )</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>0</i> on success<br />
- <i>-errno</i> on failure</dl>
+ <i>-errno</i> on failure</dd></dl>
 <h3>uint32_t qb_util_stopwatch_split_last (<code>qb_util_stopwatch_t</code> *sw)</h3>
 <p>Get the last split index to be used by <code>qb_util_stopwatch_time_split_get()</code> </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>this is zero based</dl>
+<dd>this is zero based</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>sw</i> the stopwatch</dl>
+<dd><i>sw</i> the stopwatch</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the last entry index</dl>
+<dd>the last entry index</dd></dl>
 <h3>void qb_util_stopwatch_start (<code>qb_util_stopwatch_t</code> *sw)</h3>
 <p>Start the stopwatch. This also acts as a reset. Essentially it sets the starting time and clears the splits.</p>
 <h3>void qb_util_stopwatch_stop (<code>qb_util_stopwatch_t</code> *sw)</h3>
@@ -254,20 +248,20 @@ Typedefs</code></pre>
 <dl>
 <dd><i>sw</i> the stopwatch<br />
  <i>receint</i> split<br />
- <i>older</i> split</dl>
+ <i>older</i> split</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>the</i> split time in micro seconds<br />
- <i>0</i> if not a valid split</dl>
+ <i>0</i> if not a valid split</dd></dl>
 <h3>uint64_t qb_util_stopwatch_us_elapsed_get (<code>qb_util_stopwatch_t</code> *sw)</h3>
 <p>Get the elapsed time in micro seconds. (it must have been started and stopped).</p>
 <h3>void qb_util_timespec_from_epoch_get (struct timespec *ts)</h3>
 <p>Get the time in timespec since epoch. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ts</i> (out) the timespec</dl>
+<dd><i>ts</i> (out) the timespec</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>status (0 == ok, -errno on error)</dl>
+<dd>status (0 == ok, -errno on error)</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for libqb from the source code.</p>

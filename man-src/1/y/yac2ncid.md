@@ -21,8 +21,8 @@ description: "yac2ncid – YAC server to NCID server gateway"
 <p> There is also a client output module called <i>ncid-yac</i>. It sends the NCID CID information to YAC clients.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Verbose mode.</dl>
+<dt><code>-v</code></dt>
+<dd> Verbose mode.</dd></dl>
 <h2>REQUIRED PROGRAMS</h2>
 <p> netcat: /usr/bin/nc</p>
 <h2>FILES</h2>

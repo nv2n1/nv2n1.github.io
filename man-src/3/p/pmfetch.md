@@ -46,28 +46,28 @@ typedef struct {
 <p> If one value (i.e. associated with a particular instance) for a requested metric is `unavailable&#8217; (at the requested time), then there is no associated <i>pmValue</i> structure in the <i>result</i>. If there are no available values for a metric, then <i>numval</i> will be zero and the associated <i>pmValue[]</i> instance will be empty ( <i>valfmt</i> is undefined in these circumstances, however <i>pmid</i> will be correctly set to the PMID of the metric with no values). </p>
 <p> As an extension of this protocol, if the Performance Metrics Collection System (PMCS) is able to provide a reason why no values are available for a particular metric, this is encoded as a standard error code in the corresponding <i>numval</i>. Since the error codes are all negative, values for a requested metric are `unavailable&#8217; if <i>numval</i> is less than, or equal to, zero. A performance metric&#8217;s value may be `unavailable&#8217; for a number of reasons; the following list is illustrative but not exhaustive: of the software for the associated Performance Metric Domain</p>
 <dl>
-<dt>+</p>
-<dd>Collection is not currently activated in the software for the associated Performance Metric Domain</p>
-<dt>+</p>
-<dd>The associated PMID is not known</p>
-<dt>+</p>
-<dd>The current system configuration does not include the associated hardware component and/or the associated software module, e.g. a disk is not installed, or off-line, or Oracle is not installed</p>
-<dt>+</p>
-<dd>The metric is one for which an instance profile is required, and none was provided (there are a small number of metrics in this category, typically ones with very large, and/or very dynamic instance domains, and/or expensive metric instantiation methods).</p>
-<dt>+</p>
-<dd>If the current context involves fetching metrics from an archive log, values may be unavailable in the region around a <i>&lt;mark&gt;</i> record (see <code><a href="/docs/linux/man/1-pmlogextract/">pmlogextract</a></code>(1)) that indicate a temporal discontinuity in the time-series of metric values.</dl>
+<dt>+</dt>
+<dd>Collection is not currently activated in the software for the associated Performance Metric Domain</dd>
+<dt>+</dt>
+<dd>The associated PMID is not known</dd>
+<dt>+</dt>
+<dd>The current system configuration does not include the associated hardware component and/or the associated software module, e.g. a disk is not installed, or off-line, or Oracle is not installed</dd>
+<dt>+</dt>
+<dd>The metric is one for which an instance profile is required, and none was provided (there are a small number of metrics in this category, typically ones with very large, and/or very dynamic instance domains, and/or expensive metric instantiation methods).</dd>
+<dt>+</dt>
+<dd>If the current context involves fetching metrics from an archive log, values may be unavailable in the region around a <i>&lt;mark&gt;</i> record (see <code><a href="/docs/linux/man/1-pmlogextract/">pmlogextract</a></code>(1)) that indicate a temporal discontinuity in the time-series of metric values.</dd></dl>
 <p> In general, we may not be able to differentiate between the various cases, and if differentiation is not possible, <i>numval</i> will simply be zero. </p>
 <p> The argument definition and the result specifications have been constructed to ensure that for each PMID in the requested <i>pmidlist</i> there is exactly one <i>pmValueSet</i> in the <i>result</i>, and further the PMIDs appear in exactly the same sequence in both <i>pmidlist</i> and <i>result</i>. This makes the number and order of entries in <i>result</i> completely deterministic, and greatly simplifies the application programming logic after the call to <code>pmFetch</code>. </p>
 <p> The <i>result</i> structure returned by <code>pmFetch</code> is dynamically allocated using a combination of <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) calls and specialized allocation strategies, and should be released when no longer required by calling <code><a href="/docs/linux/man/3-pmfreeresult/">pmFreeResult</a></code>(3) &#8211; under no circumstances should <code><a href="/docs/linux/man/3-free/">free</a></code>(3) be called directly to release this space. </p>
 <p> As common error conditions are encoded in the <i>result</i> data structure, we&#8217;d expect only cataclysmic events to cause an error value to be returned. One example would be if the metrics source context was a remote host, and that host or the PMCS on that host became unreachable. Otherwise the value returned by the <code>pmFetch</code> function will be non-negative. </p>
 <p> If the current context involves fetching metrics from a Performance Metrics Collector Daemon (PMCD), then the return value may be used to encode out-of-band changes in the state of the PMCD and the associated Performance Metrics Daemon Agents (PMDAs), as a bit-wise &#8220;or&#8221; of the following values: </p>
 <dl>
-<dt><code>PMCD_RESTART_AGENT</code></p>
-<dd>An attempt has been made to restart at least one failed PMDA.</p>
-<dt><code>PMCD_ADD_AGENT</code></p>
-<dd>At least one PMDA has been started.</p>
-<dt><code>PMCD_DROP_AGENT</code></p>
-<dd>PMCD has noticed the termination of at least one PMDA.</dl>
+<dt><code>PMCD_RESTART_AGENT</code></dt>
+<dd>An attempt has been made to restart at least one failed PMDA.</dd>
+<dt><code>PMCD_ADD_AGENT</code></dt>
+<dd>At least one PMDA has been started.</dd>
+<dt><code>PMCD_DROP_AGENT</code></dt>
+<dd>PMCD has noticed the termination of at least one PMDA.</dd></dl>
 <p> The default is to return zero to indicate no change in state, however the <i>pmResult</i> returned by <code>pmFetch</code> has the same interpretation independent of the return value being zero or greater than zero.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/3-pmaddprofile/">pmAddProfile</a></code>(3), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmdelprofile/">pmDelProfile</a></code>(3), <code><a href="/docs/linux/man/3-pmdupcontext/">pmDupContext</a></code>(3), <code><a href="/docs/linux/man/3-pmextractvalue/">pmExtractValue</a></code>(3), <code><a href="/docs/linux/man/3-pmfetcharchive/">pmFetchArchive</a></code>(3), <code><a href="/docs/linux/man/3-pmfreeresult/">pmFreeResult</a></code>(3), <code><a href="/docs/linux/man/3-pmgetindom/">pmGetInDom</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupname/">pmLookupName</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3), <code><a href="/docs/linux/man/3-pmusecontext/">pmUseContext</a></code>(3) and <code><a href="/docs/linux/man/3-pmwhichcontext/">pmWhichContext</a></code>(3). </p>
@@ -75,8 +75,8 @@ typedef struct {
 <h2>Diagnostics</h2>
 <p>As mentioned above, <code>pmFetch</code> returns error codes <i>insitu</i> in the argument <i>result</i>. If no result is returned, e.g. due to IPC failure using the current PMAPI context, or end of file on an archive log, then <code>pmFetch</code> will return a negative error code which may be examined using <code><a href="/docs/linux/man/3-pmerrstr/">pmErrStr</a></code>(3).</p>
 <dl>
-<dt><code>PM_ERR_EOL</code></p>
-<dd>When fetching records from an archive log, <code>pmFetch</code> returns this error code to indicate the end of the log has been passed (or the start of the log has been passed, if the direction of traversal is backwards in time). If the &#8220;mode&#8221; for the current PMAPI context (see <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3)) is <code>PM_MODE_INTERP</code> then the time origin is advanced, even when this error code is returned. In this way applications that position the time outside the range defined by the records in the archive, and then commence to <code>pmFetch</code> will eventually see valid results once the time origin moves inside the temporal span of the archive.</dl>
+<dt><code>PM_ERR_EOL</code></dt>
+<dd>When fetching records from an archive log, <code>pmFetch</code> returns this error code to indicate the end of the log has been passed (or the start of the log has been passed, if the direction of traversal is backwards in time). If the &#8220;mode&#8221; for the current PMAPI context (see <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3)) is <code>PM_MODE_INTERP</code> then the time origin is advanced, even when this error code is returned. In this way applications that position the time outside the range defined by the records in the archive, and then commence to <code>pmFetch</code> will eventually see valid results once the time origin moves inside the temporal span of the archive.</dd></dl>
 <h2>Environment</h2>
 <p>Many of the performance metrics exported from PCP agents have the semantics of <i>counter</i> meaning they are expected to be monotonically increasing. Under some circumstances, one value of these metrics may be smaller than the previously fetched value. This can happen when a counter of finite precision overflows, or when the PCP agent has been reset or restarted, or when the PCP agent is exporting values from some underlying instrumentation that is subject to some asynchronous discontinuity. </p>
 <p> The environment variable <code>PCP_COUNTER_WRAP</code> may be set to indicate that all such cases of a decreasing &#8220;counter&#8221; should be treated as a counter overflow, and hence the values are assumed to have wrapped once in the interval between consecutive samples. This &#8220;wrapping&#8221; behavior was the default in earlier PCP versions, but by default has been disabled in PCP version 1.3 and later.</p>

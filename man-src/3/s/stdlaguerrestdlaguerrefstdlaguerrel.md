@@ -10,16 +10,11 @@ description: "std::laguerre,std::laguerref,std::laguerrel – std::laguerre,std:
 <p>std::laguerre,std::laguerref,std::laguerrel &#8211; std::laguerre,std::laguerref,std::laguerrel</p>
 <h2>Synopsis</h2>
 <pre><code>double laguerre(unsigned int n, double x);
-
 float laguerre(unsigned int n, float x);
-
 long double laguerre(unsigned int n, long double x);
 (1)(since C++ 17)
-
     float laguerref(unsigned int n, float x);
-
 long double laguerrel(unsigned int n, long double x);
-
 double laguerre(unsigned int n, IntegralType x);
 (2)(since C++ 17)</code></pre>
 <p>1) Computes the non-associated Laguerre_polynomials of the degree n and argument x<br />
@@ -64,23 +59,17 @@ e-x), is returned. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#define __STDCPP_WANT_MATH_SPEC_FUNCS__ 1
-
 #include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 double L1(double x)
 {
     return -x + 1;
 }
-
 double L2(double x)
 {
     return 0.5 * (x * x - 4 * x + 2);
 }
-
 int main()
-
 {
     // spot-checks
     std::cout &lt;&lt; std::laguerre(1, 0.5) &lt;&lt; '=' &lt;&lt; L1(0.5) &lt;&lt; '

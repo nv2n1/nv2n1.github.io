@@ -17,16 +17,16 @@ description: "SPI_getbinval – return the binary value of the specified column"
 <h2>Arguments</h2>
 <p>HeapTuple <i>row</i></p>
 <dl COMPACT>
-<dd>input row to be examined</dl>
+<dd>input row to be examined</dd></dl>
 <p> TupleDesc <i>rowdesc</i></p>
 <dl COMPACT>
-<dd>input row description</dl>
+<dd>input row description</dd></dl>
 <p> int <i>colnumber</i></p>
 <dl COMPACT>
-<dd>column number (count starts at 1)</dl>
+<dd>column number (count starts at 1)</dd></dl>
 <p> bool * <i>isnull</i></p>
 <dl COMPACT>
-<dd>flag for a null value in the column</dl>
+<dd>flag for a null value in the column</dd></dl>
 <h2>Return Value</h2>
 <p>The binary value of the column is returned. The variable pointed to by <i>isnull</i> is set to true if the column is null, else to false. </p>
 <p> <i>SPI_result</i> is set to SPI_ERROR_NOATTRIBUTE on error.</p>

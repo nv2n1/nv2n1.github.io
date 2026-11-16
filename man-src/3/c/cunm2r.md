@@ -19,7 +19,7 @@ description: "cunm2r.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CUNM2R overwrites the general complex m - by - n matrix C with Q *C if SIDE = 'L' and TRANS = 'N', or
                                                                                                        Q **H *C if SIDE = 'L' and TRANS = 'C',
@@ -32,11 +32,11 @@ CUNM2R overwrites the general complex m - by - n matrix C with Q *C if SIDE = 'L
                                                                                Q = H(1) H(2)...H(k)
                                                                                        as returned by CGEQRF.Q is of order m if SIDE = 'L' and of order n if SIDE = 'R'.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
           = 'L': apply Q or Q**H from the Left
@@ -114,14 +114,14 @@ if SIDE
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 159 of file cunm2r.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

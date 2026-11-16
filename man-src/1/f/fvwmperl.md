@@ -60,16 +60,16 @@ description: "FvwmPerl – the fvwm perl manipulator and preprocessor"
 <h2>Actions</h2>
 <p>There are several actions that FvwmPerl may perform:</p>
 <dl>
-<dt><code>eval</code> perl-code</p>
-<dd>Evaluate a line of perl code. </p>
+<dt><code>eval</code> perl-code</dt>
+<dd>Evaluate a line of perl code. </dd>
 <p> A special function <code>cmd(</code>&#8220;command&#8221;<code>)</code> may be used in perl code to send commands back to fvwm. </p>
 <p> If perl code contains an error, it is printed to the standard error stream with the <i>[FvwmPerl][eval]:</i> header prepended.</p>
-<dt><code>load</code> file-name</p>
-<dd>Load a file of perl code. If the file is not fully qualified, it is searched in the user directory <tt>$FVWM_USERDIR</tt> (usually ~/.fvwm) and the system wide data directory <tt>$FVWM_DATADIR</tt>. </p>
+<dt><code>load</code> file-name</dt>
+<dd>Load a file of perl code. If the file is not fully qualified, it is searched in the user directory <tt>$FVWM_USERDIR</tt> (usually ~/.fvwm) and the system wide data directory <tt>$FVWM_DATADIR</tt>. </dd>
 <p> A special function <code>cmd(</code>&#8220;command&#8221;<code>)</code> may be used in perl code to send commands back to fvwm. </p>
 <p> If perl code contains an error, it is printed to the standard error stream with the <i>[FvwmPerl][load]:</i> header prepended.</p>
-<dt><code>preprocess</code> [-q|&#8211;quote char] [-c|&#8211;cmd] [<i>line</i> | <i>file</i>]</p>
-<dd>Preprocess fvwm config <i>file</i> or (if &#8211;cmd is given) <i>line</i>. This file contains lines that are not touched (usually fvwm commands) and specially preformatted perl code that is processed and replaced. Text enclosed in <code>%{</code> &#8230; <code>}%</code> delimiters, that may start anywhere on the line and end anywhere on the same or another line, is perl code. </p>
+<dt><code>preprocess</code> [-q|&#8211;quote char] [-c|&#8211;cmd] [<i>line</i> | <i>file</i>]</dt>
+<dd>Preprocess fvwm config <i>file</i> or (if &#8211;cmd is given) <i>line</i>. This file contains lines that are not touched (usually fvwm commands) and specially preformatted perl code that is processed and replaced. Text enclosed in <code>%{</code> &#8230; <code>}%</code> delimiters, that may start anywhere on the line and end anywhere on the same or another line, is perl code. </dd>
 <p> The <i>quote</i> parameter changes perl code delimiters.&nbsp;<wbr> If a single char is given, like &#8216;@&#8217;, the delimiters are <code>@{</code> &#8230; <code>}@</code>. If the given quote is 2 chars, like <code>&lt;&gt;</code>, the quotes are <code>&lt;{</code> &#8230; <code>}&gt;</code> </p>
 <p> The perl code is substituted for the result of its evaluation. I.e. %{$a = &#8220;c&#8221;; ++$a}% is replaced with &#8220;d&#8221;. </p>
 <p> The evaluation is unlike <code>eval</code> and <code>load</code> is done under the package PreprocessNamespace and without <i>use strict</i>, so you are free to use any variable names without fear of conflicts. Just don&#8217;t use uninitialized variables to mean undef or empty list (they may be in fact initialized by the previous preprocess action), and do a clean-up if needed. The variables and function in the <i>main</i> package are still available, like ::<i>cmd()</i> or ::<i>skip()</i>, but it is just not a good idea to access them while preprocessing. </p>
@@ -80,18 +80,18 @@ description: "FvwmPerl – the fvwm perl manipulator and preprocessor"
 <p> The following line based directives are recognized when preprocessing. They are processed after the perl code (if any) is substituted.</p>
 <dl>
 <dd>
-<dl>
-<dt>%<code>Repeat</code> <i>count</i></p>
-<dd>Causes the following lines to be repeated <i>count</i> times.</p>
-<dt>%<code>ModuleConfig</code> <i>module-name</i> [ destroy ]</p>
-<dd>Causes the following lines to be interpreted as the given module configuration. If &#8220;destroy&#8221; is specified the previous module configuration is destroyed first.</p>
-<dt>%<code>Prefix</code> <i>prefix</i></p>
-<dd>Prefixes the following lines with the quoted <i>prefix</i>.</p>
-<dt>%<code>End</code> any-optional-comment</p>
-<dd>Ends any of the directives described above, may be nested.</dl>
+</dd><dl>
+<dt>%<code>Repeat</code> <i>count</i></dt>
+<dd>Causes the following lines to be repeated <i>count</i> times.</dd>
+<dt>%<code>ModuleConfig</code> <i>module-name</i> [ destroy ]</dt>
+<dd>Causes the following lines to be interpreted as the given module configuration. If &#8220;destroy&#8221; is specified the previous module configuration is destroyed first.</dd>
+<dt>%<code>Prefix</code> <i>prefix</i></dt>
+<dd>Prefixes the following lines with the quoted <i>prefix</i>.</dd>
+<dt>%<code>End</code> any-optional-comment</dt>
+<dd>Ends any of the directives described above, may be nested.</dd></dl>
 </dl>
 <dl>
-<dd>Examples: </p>
+<dd>Examples: </dd>
 <pre> %Prefix &quot;AddToFunc SwitchToWindow I&quot;
  Iconify off
  WindowShade off
@@ -114,8 +114,8 @@ description: "FvwmPerl – the fvwm perl manipulator and preprocessor"
  %End
  %End Prefix</pre>
 <p>Additional preprocess parameters &#8211;nosend and &#8211;noremove may be given too. See their description at the top.</dl>
-<dt><code>export</code> [<i>func-names</i>]</p>
-<dd>Send to <i>fvwm</i> the definition of shortcut functions that help to activate different actions of the module (i.e. <code>eval</code>, <code>load</code> and <code>preprocess</code>). </p>
+<dt><code>export</code> [<i>func-names</i>]</dt>
+<dd>Send to <i>fvwm</i> the definition of shortcut functions that help to activate different actions of the module (i.e. <code>eval</code>, <code>load</code> and <code>preprocess</code>). </dd>
 <p> Function names (<i>func-names</i>) may be separated by commas or/and whitespace. By default, two functions &#8220;Eval&#8221; and &#8220;.&#8221; are assumed. </p>
 <p> The actual action defined in a function is guessed from the function name if possible, where function name &#8220;.&#8221; is reserved for <code>preprocess</code> action. </p>
 <p> For example, any of these two fvwm commands </p>
@@ -131,31 +131,31 @@ description: "FvwmPerl – the fvwm perl manipulator and preprocessor"
 <h2>Functions</h2>
 <p>There are several functions that perl code may call:</p>
 <dl>
-<dt><code>cmd(</code><i>$fvwm_command</i><code>)</code></p>
-<dd>In case of <code>eval</code> or <code>load</code> &#8211; send back to fvwm a string <i></i>$fvwm_command<i></i>. In case of <code>preprocess</code> &#8211; append a string <i></i>$fvwm_command<i></i> to the output of the embedded perl code.</p>
-<dt><code>do_eval(</code><i>$perl_code</i><code>)</code></p>
-<dd>This function is equivalent to the <code>eval</code> functionality on the string <i></i>$perl_code<i></i>, described above.</p>
-<dt><code>load(</code><i>$filename</i><code>)</code></p>
-<dd>This function is equivalent to the <code>load</code> functionality on the file <tt>$filename</tt>, described above.</p>
-<dt><code>preprocess(</code><i>@params, [&quot;-c </i>$command<i>&quot;] [$filename]</i><code>)</code></p>
-<dd>This function is equivalent to the <code>preprocess</code> functionality with the given parameters and the file <tt>$filename</tt> described above.</p>
-<dt><code>export(</code><i>$func_names, [$do_unexport]</i><code>)</code></p>
-<dd>This function is equivalent to the <code>export</code> functionality with the given <tt>$func_names</tt>, described above. May also <code>unexport</code> the function names if the second parameter is true. </p>
+<dt><code>cmd(</code><i>$fvwm_command</i><code>)</code></dt>
+<dd>In case of <code>eval</code> or <code>load</code> &#8211; send back to fvwm a string <i></i>$fvwm_command<i></i>. In case of <code>preprocess</code> &#8211; append a string <i></i>$fvwm_command<i></i> to the output of the embedded perl code.</dd>
+<dt><code>do_eval(</code><i>$perl_code</i><code>)</code></dt>
+<dd>This function is equivalent to the <code>eval</code> functionality on the string <i></i>$perl_code<i></i>, described above.</dd>
+<dt><code>load(</code><i>$filename</i><code>)</code></dt>
+<dd>This function is equivalent to the <code>load</code> functionality on the file <tt>$filename</tt>, described above.</dd>
+<dt><code>preprocess(</code><i>@params, [&quot;-c </i>$command<i>&quot;] [$filename]</i><code>)</code></dt>
+<dd>This function is equivalent to the <code>preprocess</code> functionality with the given parameters and the file <tt>$filename</tt> described above.</dd>
+<dt><code>export(</code><i>$func_names, [$do_unexport]</i><code>)</code></dt>
+<dd>This function is equivalent to the <code>export</code> functionality with the given <tt>$func_names</tt>, described above. May also <code>unexport</code> the function names if the second parameter is true. </dd>
 <p> Function names should be separated by commas or/and whitespace. If <i></i>$func_names<i></i> is empty then functions &#8220;Eval&#8221; and &#8220;.&#8221; are assumed.</p>
-<dt>stop()</p>
-<dd>Terminates the module.</p>
-<dt>skip()</p>
-<dd>Skips the rest of the event callback code, i.e. the module returns to listen to new module events.</p>
-<dt>unlock()</p>
-<dd>Unsynchronizes the event callback from fvwm. This may be useful to prevent deadlocks, i.e. usually fvwm kills the non-responding module if the event callback is not finished in <i>ModuleTimeout</i> seconds. This prevents it. </p>
+<dt>stop()</dt>
+<dd>Terminates the module.</dd>
+<dt>skip()</dt>
+<dd>Skips the rest of the event callback code, i.e. the module returns to listen to new module events.</dd>
+<dt>unlock()</dt>
+<dd>Unsynchronizes the event callback from fvwm. This may be useful to prevent deadlocks, i.e. usually fvwm kills the non-responding module if the event callback is not finished in <i>ModuleTimeout</i> seconds. This prevents it. </dd>
 <p> This example causes FvwmPerl to suspend its execution for one minute: </p>
 <pre> SendModule FvwmPerl eval unlock(); sleep(60);</pre>
 <p>However, verify that there is no way a new message is sent by fvwm while the module is busy, and fvwm stays locked on this new message for too long. See also the <code>detach</code> solution if you need long lasting operations.</p>
-<dt>detach()</p>
-<dd>Forks and detaches the rest of the event callback code from the main process. This may be useful to prevent killing the module if its event callback should take a long time to complete and it may be done in the detached child. The detached child may still send commands to fvwm (don&#8217;t rely on this), but not receive the events of course, it exits immediately after the callback execution is finished. </p>
+<dt>detach()</dt>
+<dd>Forks and detaches the rest of the event callback code from the main process. This may be useful to prevent killing the module if its event callback should take a long time to complete and it may be done in the detached child. The detached child may still send commands to fvwm (don&#8217;t rely on this), but not receive the events of course, it exits immediately after the callback execution is finished. </dd>
 <p> If you use <i>detach()</i>, better only send commands to fvwm in one process (the main one or the detached one), doing otherwise may often cause conflicts.</p>
-<dt><code>show_message(</code>$msg, <tt>$title</tt>[, <tt>$use_stderr_too</tt>=1]<code>)</p>
-<dd>Shows a dialog window with the given message, using whichever X tool is found in the system. </p>
+<dt><code>show_message(</code>$msg, <tt>$title</tt>[, <tt>$use_stderr_too</tt>=1]<code>)</dt>
+<dd>Shows a dialog window with the given message, using whichever X tool is found in the system. </dd>
 <p> See FVWM::Module::Toolkit</code>::<code>show_message</code> for more information.</dl>
 <h2>Variables</h2>
 <p>There are several global variables in the <i>main</i> namespace that may be used in the perl code: </p>
@@ -228,3 +228,4 @@ description: "FvwmPerl – the fvwm perl manipulator and preprocessor"
 <p> Basically, in your perl code you may use any function or class method from the perl library installed with fvwm, see the man pages of perl packages <code>General::FileSystem</code>, <code>General::Parse</code> and <code>FVWM::Module</code>.</p>
 <h2>Author</h2>
 <p>Mikhael Goikhman &lt;migo [at] homemail.com&gt;.</p>
+</p>

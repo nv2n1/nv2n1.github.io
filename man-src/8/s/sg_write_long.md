@@ -17,26 +17,26 @@ description: "sg_write_long – send SCSI WRITE LONG command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-S</code>, <code>&#8211;16</code></p>
-<dd>send a SCSI WRITE LONG (16) command to <i>DEVICE</i>. The default action (in the absence of this option) is to send a SCSI WRITE LONG (10) command.</p>
-<dt><code>-c</code>, <code>&#8211;cor_dis</code></p>
-<dd>sets the correction disabled (i.e &#8216;COR_DIS&#8217;) bit. This inhibits various other mechanisms such as automatic block reallocation, error recovery and various informational exception conditions being triggered. This bit is relatively new in SBC-3 .</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-i</code>, <code>&#8211;in</code>=<i>IF</i></p>
-<dd>read data (binary) from file named <i>IF</i> and use it for the SCSI WRITE LONG command. If <i>IF</i> is &quot;-&quot; then stdin is read. If this option is not given then 0xff bytes are used as fill.</p>
-<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></p>
-<dd>where <i>LBA</i> is the logical block address of the sector to overwrite. Defaults to lba 0 which is a dangerous block to overwrite on a disk that is in use. Assumed to be in decimal unless prefixed with &#8216;0x&#8217; or has a trailing &#8216;h&#8217;. If <i>LBA</i> is larger than can fit in 32 bits then the <i>&#8211;16</i> option should be used.</p>
-<dt><code>-p</code>, <code>&#8211;pblock</code></p>
-<dd>sets the physical block (i.e &#8216;PBLOCK&#8217;) bit. This instructs <i>DEVICE</i> to use the given data (unless <i>&#8211;wr_uncor</i> is also given) to write to the physical block specified by <i>LBA</i>. The default action is to write to the logical block corresponding to the given lba. This bit is relatively new in SBC-3 .</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the degree of verbosity (debug messages).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>output version string then exit.</p>
-<dt><code>-w</code>, <code>&#8211;wr_uncor</code></p>
-<dd>sets the &quot;write uncorrected&quot; (i.e &#8216;WR_UNCOR&#8217;) bit. This instructs the <i>DEVICE</i> to flag the given lba (or the physical block that contains it if <i>&#8211;pblock</i> is also given) as having an unrecoverable error associated with it. Note: no data is transferred to <i>DEVICE</i>, other than the command (i.e. the cdb). In the absence of this option, the default action is to use the provided data or 0xff bytes (<i>&#8211;xfer_len=BTL</i> in length) and write it to <i>DEVICE</i>. This bit is relatively new in SBC-3 .</p>
-<dt><code>-x</code>, <code>&#8211;xfer_len</code>=<i>BTL</i></p>
-<dd>where <i>BTL</i> is the byte transfer length (default to 520). If the given value (or the default) does not match the &quot;long&quot; block size of the device, nothing is written to <i>DEVICE</i> and the appropriate xfer_len value may be deduced from the error response which is printed (to stderr).</dl>
+<dt><code>-S</code>, <code>&#8211;16</code></dt>
+<dd>send a SCSI WRITE LONG (16) command to <i>DEVICE</i>. The default action (in the absence of this option) is to send a SCSI WRITE LONG (10) command.</dd>
+<dt><code>-c</code>, <code>&#8211;cor_dis</code></dt>
+<dd>sets the correction disabled (i.e &#8216;COR_DIS&#8217;) bit. This inhibits various other mechanisms such as automatic block reallocation, error recovery and various informational exception conditions being triggered. This bit is relatively new in SBC-3 .</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-i</code>, <code>&#8211;in</code>=<i>IF</i></dt>
+<dd>read data (binary) from file named <i>IF</i> and use it for the SCSI WRITE LONG command. If <i>IF</i> is &quot;-&quot; then stdin is read. If this option is not given then 0xff bytes are used as fill.</dd>
+<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></dt>
+<dd>where <i>LBA</i> is the logical block address of the sector to overwrite. Defaults to lba 0 which is a dangerous block to overwrite on a disk that is in use. Assumed to be in decimal unless prefixed with &#8216;0x&#8217; or has a trailing &#8216;h&#8217;. If <i>LBA</i> is larger than can fit in 32 bits then the <i>&#8211;16</i> option should be used.</dd>
+<dt><code>-p</code>, <code>&#8211;pblock</code></dt>
+<dd>sets the physical block (i.e &#8216;PBLOCK&#8217;) bit. This instructs <i>DEVICE</i> to use the given data (unless <i>&#8211;wr_uncor</i> is also given) to write to the physical block specified by <i>LBA</i>. The default action is to write to the logical block corresponding to the given lba. This bit is relatively new in SBC-3 .</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the degree of verbosity (debug messages).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>output version string then exit.</dd>
+<dt><code>-w</code>, <code>&#8211;wr_uncor</code></dt>
+<dd>sets the &quot;write uncorrected&quot; (i.e &#8216;WR_UNCOR&#8217;) bit. This instructs the <i>DEVICE</i> to flag the given lba (or the physical block that contains it if <i>&#8211;pblock</i> is also given) as having an unrecoverable error associated with it. Note: no data is transferred to <i>DEVICE</i>, other than the command (i.e. the cdb). In the absence of this option, the default action is to use the provided data or 0xff bytes (<i>&#8211;xfer_len=BTL</i> in length) and write it to <i>DEVICE</i>. This bit is relatively new in SBC-3 .</dd>
+<dt><code>-x</code>, <code>&#8211;xfer_len</code>=<i>BTL</i></dt>
+<dd>where <i>BTL</i> is the byte transfer length (default to 520). If the given value (or the default) does not match the &quot;long&quot; block size of the device, nothing is written to <i>DEVICE</i> and the appropriate xfer_len value may be deduced from the error response which is printed (to stderr).</dd></dl>
 <h2>Notes</h2>
 <p>Various numeric arguments (e.g. <i>LBA</i>) may include multiplicative suffixes or be given in hexadecimal. See the &quot;NUMERIC ARGUMENTS&quot; section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. </p>
 <p> The 10 byte SCSI WRITE LONG command limits the logical block address to a 32 bit quantity. For larger LBAs use the <i>&#8211;16</i> option for the SCSI WRITE LONG (16) command.</p>

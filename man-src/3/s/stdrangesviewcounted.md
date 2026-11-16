@@ -11,9 +11,7 @@ std::ranges::view::counted - std::ranges::view::counted
 <h2>Synopsis</h2>
 
 <pre><code>namespace view {
-
     inline constexpr /*unspecified*/ counted = /*unspecified*/;  (since C++20)
-
 }</code></pre> 
 A counted view presents a View of the elements of the counted range [i, n) for some iterator i and non-negative integer n. 
 A counted range [i, n) is the n elements starting with the element pointed to by i and up to but not including the element, if any, pointed to by the result of n applications of ++i. 
@@ -29,10 +27,8 @@ Formally, if E and F are expressions, and T is the type std::decay_t&lt;decltype
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;ranges&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     for (int i : std::view::counted(a, 3))

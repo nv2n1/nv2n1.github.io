@@ -15,19 +15,19 @@ description: "sbkeysync – UEFI secure boot key synchronization tool"
 <p> Update EFI key databases from the filesystem</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;efivars-path</code> &lt;dir&gt;</p>
-<dd> Path to efivars mountpoint (or regular directory for testing)</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print verbose progress information</p>
-<dt><code>&#8211;dry-run</code></p>
-<dd> Don&#8217;t update firmware key databases</p>
-<dt><code>&#8211;pk</code></p>
-<dd> Set PK</p>
-<dt><code>&#8211;keystore</code> &lt;dir&gt;</p>
-<dd> Read keys from &lt;dir&gt;/{db,dbx,KEK}/* (can be specified multiple times, first dir takes precedence)</p>
-<dt><code>&#8211;no-default-keystores</code></p>
-<dd> Don&#8217;t read keys from the default</p>
+<dt><code>&#8211;efivars-path</code> &lt;dir&gt;</dt>
+<dd> Path to efivars mountpoint (or regular directory for testing)</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print verbose progress information</dd>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> Don&#8217;t update firmware key databases</dd>
+<dt><code>&#8211;pk</code></dt>
+<dd> Set PK</dd>
+<dt><code>&#8211;keystore</code> &lt;dir&gt;</dt>
+<dd> Read keys from &lt;dir&gt;/{db,dbx,KEK}/* (can be specified multiple times, first dir takes precedence)</dd>
+<dt><code>&#8211;no-default-keystores</code></dt>
+<dd> Don&#8217;t read keys from the default</dd>
 <dt>
-<dd> keystore dirs </p>
+</dt><dd> keystore dirs </dd>
 </dl>
 <h2>Index</h2>

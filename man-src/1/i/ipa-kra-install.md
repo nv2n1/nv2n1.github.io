@@ -20,16 +20,16 @@ description: "ipa-kra-install – Install a KRA on a server"
 <h2>OPTIONS</h2>
 <p> <code>-p</code> <i>DM_PASSWORD</i>, <code>&#8211;password</code>=<i>DM_PASSWORD</i> Directory Manager (existing master) password</p>
 <dl>
-<dt><code>-U</code>, <code>&#8211;unattended</code></p>
-<dd> An unattended installation that will never prompt for user input</p>
-<dt><code>&#8211;uninstall</code></p>
-<dd> Uninstall the KRA from the local IPA server.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Enable debug output when more verbose output is needed</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Output only errors</p>
-<dt><code>-v</code>, <code>&#8211;log-file</code>=ILE</p>
-<dd> Log to the given file</dl>
+<dt><code>-U</code>, <code>&#8211;unattended</code></dt>
+<dd> An unattended installation that will never prompt for user input</dd>
+<dt><code>&#8211;uninstall</code></dt>
+<dd> Uninstall the KRA from the local IPA server.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Enable debug output when more verbose output is needed</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Output only errors</dd>
+<dt><code>-v</code>, <code>&#8211;log-file</code>=ILE</dt>
+<dd> Log to the given file</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>

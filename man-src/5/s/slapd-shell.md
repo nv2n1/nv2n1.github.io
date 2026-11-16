@@ -19,13 +19,13 @@ description: "slapd-shell – Shell backend to slapd"
 <p>These <code>slapd.conf</code> options apply to the SHELL backend database. That is, they must follow a &quot;database shell&quot; line and come before any subsequent &quot;backend&quot; or &quot;database&quot; lines. Other database options are described in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) manual page. </p>
 <p> These options specify the pathname and arguments of the program to execute in response to the given LDAP operation. Each option is followed by the input lines that the program receives:</p>
 <dl>
-<dt><code>add &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+<dt><code>add &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>ADD
 msgid: &lt;message id&gt;
 &lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
 &lt;entry in LDIF format&gt;</pre>
-<dt><code>bind &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+</dd><dt><code>bind &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>BIND
 msgid: &lt;message id&gt;
@@ -34,20 +34,20 @@ dn: &lt;DN&gt;
 method: &lt;method number&gt;
 credlen: &lt;length of &lt;credentials&gt;&gt;
 cred: &lt;credentials&gt;</pre>
-<dt><code>compare &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+</dd><dt><code>compare &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>COMPARE
 msgid: &lt;message id&gt;
 &lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
 dn: &lt;DN&gt;
 &lt;attribute&gt;: &lt;value&gt;</pre>
-<dt><code>delete &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+</dd><dt><code>delete &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>DELETE
 msgid: &lt;message id&gt;
 &lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
 dn: &lt;DN&gt;</pre>
-<dt><code>modify &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+</dd><dt><code>modify &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>MODIFY
 msgid: &lt;message id&gt;
@@ -58,7 +58,7 @@ dn: &lt;DN&gt;
  &lt;repeat { &lt;attribute&gt;: &lt;value&gt; }&gt;
  -
 }&gt;</pre>
-<dt><code>modrdn &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+</dd><dt><code>modrdn &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>MODRDN
 msgid: &lt;message id&gt;
@@ -67,7 +67,7 @@ dn: &lt;DN&gt;
 newrdn: &lt;new RDN&gt;
 deleteoldrdn: &lt;0 or 1&gt;
 &lt;if new superior is specified: &quot;newSuperior: &lt;DN&gt;&quot;&gt;</pre>
-<dt><code>search &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+</dd><dt><code>search &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>SEARCH
 msgid: &lt;message id&gt;
@@ -80,13 +80,13 @@ timelimit: &lt;time limit&gt;
 filter: &lt;filter&gt;
 attrsonly: &lt;0 or 1&gt;
 attrs: &lt;&quot;all&quot; or space-separated attribute list&gt;</pre>
-<dt><code>unbind &lt;pathname&gt; &lt;argument&gt;&#8230;</code></p>
+</dd><dt><code>unbind &lt;pathname&gt; &lt;argument&gt;&#8230;</code></dt>
 <dd>
 <pre>UNBIND
 msgid: &lt;message id&gt;
 &lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
 dn: &lt;bound DN&gt;</pre>
-</dl>
+</dd></dl>
 <p> Note that you need only supply configuration lines for those commands you want the backend to handle. Operations for which a command is not supplied will be refused with an &quot;unwilling to perform&quot; error. </p>
 <p> The <code>search</code> command should output the entries in LDIF format, each entry followed by a blank line, and after these the RESULT below. </p>
 <p> All commands except <code>unbind</code> should then output:</p>
@@ -96,7 +96,7 @@ dn: &lt;bound DN&gt;</pre>
 code: &lt;integer&gt;
 matched: &lt;matched DN&gt;
 info: &lt;text&gt;</pre>
-</dl>
+</dd></dl>
 <p> where only the RESULT line is mandatory. Lines starting with `#&#8217; or `DEBUG:&#8217; are ignored.</p>
 <h2>Access Control</h2>
 <p>The <code>shell</code> backend does not honor all ACL semantics as described in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5). In general, access to objects is checked by using a dummy object that contains only the DN, so access rules that rely on the contents of the object are not honored. In detail: </p>
@@ -113,7 +113,7 @@ info: &lt;text&gt;</pre>
 <p>The shell backend does not support threaded environments. When using the shell backend, <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) should be built <i>&#8211;without-threads</i>.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1). </p>

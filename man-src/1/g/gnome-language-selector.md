@@ -15,12 +15,12 @@ description: "gnome-language-selector – graphical language selection utility"
 <p> <code>gnome-language-selector</code> is a graphical utility that allows a user to set a default language for the system interface and to add additional language packs, spelling tools and additional fonts.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>-n, &#8211;no-verify-installed-lang-support</code></p>
-<dd> do not verify installed language support</p>
-<dt><code>-d DATADIR, &#8211;datadir=DATADIR</code></p>
-<dd> use an alternative data directory instead of the default <code>/usr/share/language-selector</code></dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>-n, &#8211;no-verify-installed-lang-support</code></dt>
+<dd> do not verify installed language support</dd>
+<dt><code>-d DATADIR, &#8211;datadir=DATADIR</code></dt>
+<dd> use an alternative data directory instead of the default <code>/usr/share/language-selector</code></dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage has been written by Alex Lourie (djay.il (at) gmail.com) </p>
 <h2>Index</h2>

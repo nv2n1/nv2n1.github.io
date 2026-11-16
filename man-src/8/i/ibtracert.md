@@ -15,12 +15,12 @@ description: "IBTRACERT –"
 <p>ibtracert uses SMPs to trace the path from a source GID/LID to a destination GID/LID. Each hop along the path is displayed until the destination is reached or a hop does not respond. By using the -m option, multicast path tracing can be performed between source and destination nodes.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>-n, &#8211;no_info</code></p>
-<dd>simple format; don&#8217;t show additional information</p>
-<dt><code>-m</code></p>
-<dd>show the multicast trace of the specified mlid</p>
-<dt><code>-f, &#8211;force</code></p>
-<dd>force route to destination port</dl>
+<dt><code>-n, &#8211;no_info</code></dt>
+<dd>simple format; don&#8217;t show additional information</dd>
+<dt><code>-m</code></dt>
+<dd>show the multicast trace of the specified mlid</dd>
+<dt><code>-f, &#8211;force</code></dt>
+<dd>force route to destination port</dd></dl>
 <h3>Addressing Flags</h3>
 <p><code>-G, &#8211;Guid</code> The address specified is a Port GUID </p>
 <p> <code>-L, &#8211;Lid</code> The address specified is a LID </p>
@@ -31,10 +31,10 @@ description: "IBTRACERT –"
 <h3>Local port Selection</h3>
 <p>Multiple port/Multiple CA support: when no IB device or port is specified (see the &quot;local umad parameters&quot; below), the libibumad library selects the port to use by the following criteria:</p>
 <dl>
-<dt>1.</p>
-<dd>the first port that is ACTIVE.</p>
-<dt>2.</p>
-<dd>if not found, the first port that is UP (physical link up). </p>
+<dt>1.</dt>
+<dd>the first port that is ACTIVE.</dd>
+<dt>2.</dt>
+<dd>if not found, the first port that is UP (physical link up). </dd>
 <p> If a port and/or CA name is specified, the libibumad library attempts to fulfill the user request, and will fail if it is not possible. </p>
 <p> For example: </p>
 <pre>ibaddr # use the first port (criteria #1 above)
@@ -44,20 +44,20 @@ ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
 </dl>
 <h3>Debugging flags</h3>
 <dl>
-<dt><code>-d</code></p>
-<dd>raise the IB debugging level. May be used several times (-ddd or -d -d -d).</p>
-<dt><code>-e</code></p>
-<dd>show send and receive errors (timeouts and others) </p>
+<dt><code>-d</code></dt>
+<dd>raise the IB debugging level. May be used several times (-ddd or -d -d -d).</dd>
+<dt><code>-e</code></dt>
+<dd>show send and receive errors (timeouts and others) </dd>
 <p> <code>-h, &#8211;help</code> show the usage message</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>increase the application verbosity level. May be used several times (-vv or -v -v -v) </p>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>increase the application verbosity level. May be used several times (-vv or -v -v -v) </dd>
 <p> <code>-V, &#8211;version</code> show the version info.</dl>
 <h3>Configuration flags</h3>
 <p><code>-t, &#8211;timeout &lt;timeout_ms&gt;</code> override the default timeout for the solicited mads. </p>
 <p> <code>&#8211;node-name-map &lt;node-name-map&gt;</code> Specify a node name map. This file maps GUIDs to more user friendly names. See FILES section.</p>
 <dl>
-<dt><code>-y, &#8211;m_key &lt;key&gt;</code></p>
-<dd>use the specified M_key for requests. If non-numeric value (like &#8216;x&#8217;) is specified then a value will be prompted for. </p>
+<dt><code>-y, &#8211;m_key &lt;key&gt;</code></dt>
+<dd>use the specified M_key for requests. If non-numeric value (like &#8216;x&#8217;) is specified then a value will be prompted for. </dd>
 <p> <code>&#8211;config, -z &lt;config_file&gt;</code> Specify alternate config file. Default: /etc/infiniband-diags/ibdiag.conf</dl>
 <h3>Files</h3>
 <h3>Config File</h3>
@@ -91,17 +91,17 @@ ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
 <h3>Examples</h3>
 <p>Unicast examples</p>
 <dl>
-<dt><code>::</code></p>
-<dd>ibtracert 4 16 # show path between lids 4 and 16 ibtracert -n 4 16 # same, but using simple output format ibtracert -G 0x8f1040396522d 0x002c9000100d051 # use guid addresses </p>
+<dt><code>::</code></dt>
+<dd>ibtracert 4 16 # show path between lids 4 and 16 ibtracert -n 4 16 # same, but using simple output format ibtracert -G 0x8f1040396522d 0x002c9000100d051 # use guid addresses </dd>
 <p> Multicast example</p>
-<dt><code>::</code></p>
-<dd>ibtracert -m 0xc000 4 16 # show multicast path of mlid 0xc000 between lids 4 and 16</dl>
+<dt><code>::</code></dt>
+<dd>ibtracert -m 0xc000 4 16 # show multicast path of mlid 0xc000 between lids 4 and 16</dd></dl>
 <h3>See Also</h3>
 <p>ibroute (8)</p>
 <h3>Author</h3>
 <dl>
-<dt><code>Hal Rosenstock</code></p>
-<dd>&lt;<i>hal.rosenstock [at] gmail.com</i>&gt;</p>
-<dt><code>Ira Weiny</code></p>
-<dd>&lt; <i>ira.weiny [at] intel.com</i> &gt; </p>
+<dt><code>Hal Rosenstock</code></dt>
+<dd>&lt;<i>hal.rosenstock [at] gmail.com</i>&gt;</dd>
+<dt><code>Ira Weiny</code></dt>
+<dd>&lt; <i>ira.weiny [at] intel.com</i> &gt; </dd>
 </dl>

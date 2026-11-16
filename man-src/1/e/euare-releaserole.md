@@ -23,17 +23,17 @@ description: "euare-releaserole – Release IAM role credentials"
 <p> $ source eucarc</p>
 <h3>optional arguments:</h3>
 <dl>
-<dt><code>-c</code></p>
-<dd> generate C-shell commands on stdout (default if SHELL looks like a csh-style shell</p>
-<dt><code>-s</code></p>
-<dd> generate Bourne shell commands on stdout (default if SHELL does not look like a csh-style shell</p>
-<dt><code>&#8211;debug</code></p>
-<dd> show debugging output</p>
-<dt><code>&#8211;debugger</code></p>
-<dd> launch interactive debugger on error</p>
-<dt><code>&#8211;version</code></p>
-<dd> show the program&#8217;s version and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message and exit </p>
+<dt><code>-c</code></dt>
+<dd> generate C-shell commands on stdout (default if SHELL looks like a csh-style shell</dd>
+<dt><code>-s</code></dt>
+<dd> generate Bourne shell commands on stdout (default if SHELL does not look like a csh-style shell</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> show debugging output</dd>
+<dt><code>&#8211;debugger</code></dt>
+<dd> launch interactive debugger on error</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show the program&#8217;s version and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit </dd>
 </dl>
 <h2>Index</h2>

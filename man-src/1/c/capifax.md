@@ -24,14 +24,13 @@ url: "/docs/linux/man/1-capifax/"
 
 <dl>
 <dt>-v
-<dd> Be verbose.
-<dt>-c<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>callerNumber
-<dd> the phone number used as the sender.
-
-<dt>-i station_ID
-<dd> the sender’s station ID. Typically the company name or similar.
-<dt>-h header
-<dd> title of sent document.</dl>
+</dt><dd> Be verbose.
+</dd><dt>-c<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>callerNumber
+</dt><dd> the phone number used as the sender.
+</dd><dt>-i station_ID
+</dt><dd> the sender’s station ID. Typically the company name or similar.
+</dd><dt>-h header
+</dt><dd> title of sent document.</dd></dl>
 
 <h2>AUTHOR</h2>
 

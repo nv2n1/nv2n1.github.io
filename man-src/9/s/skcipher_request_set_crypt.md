@@ -14,27 +14,27 @@ description: "skcipher_request_set_crypt – set data buffers"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>request handle</dl>
+</dd><dd>request handle</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>source scatter / gather list</dl>
+<dd>source scatter / gather list</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>destination scatter / gather list</dl>
+<dd>destination scatter / gather list</dd></dl>
 <p> <i>cryptlen</i></p>
 <dl>
-<dd>number of bytes to process from <i>src</i></dl>
+<dd>number of bytes to process from <i>src</i></dd></dl>
 <p> <i>iv</i></p>
 <dl>
-<dd>IV for the cipher operation which must comply with the IV size defined by crypto_skcipher_ivsize</dl>
+<dd>IV for the cipher operation which must comply with the IV size defined by crypto_skcipher_ivsize</dd></dl>
 <h2>Description</h2>
 <p>This function allows setting of the source data and destination data scatter / gather lists. </p>
 <p> For encryption, the source is treated as the plaintext and the destination is the ciphertext. For a decryption operation, the use is reversed &#8211; the source is the ciphertext and the destination is the plaintext.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

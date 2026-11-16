@@ -10,17 +10,11 @@ description: "devlink-region – devlink address region access"
 <p>devlink-region &#8211; devlink address region access</p>
 <h2>Synopsis</h2>
 <pre><code>devlink
-
 [ OPTIONS ]
-
 region
-
 { COMMAND |
-
     help }
-
 OPTIONS := {
-
     -V[ersion] |
     -n[no-nice-names] }</code></pre>
 <p> <code>devlink region show</code> [ <i>DEV/REGION</i> ]<br />
@@ -40,16 +34,16 @@ OPTIONS := {
 <h2>Examples</h2>
 <p>devlink region show</p>
 <dl>
-<dd>List available address regions and snapshot.</dl>
+<dd>List available address regions and snapshot.</dd></dl>
 <p> devlink region del pci/0000:00:05.0/cr-space snapshot 1</p>
 <dl>
-<dd>Delete snapshot id 1 from cr-space address region from device pci/0000:00:05.0.</dl>
+<dd>Delete snapshot id 1 from cr-space address region from device pci/0000:00:05.0.</dd></dl>
 <p> devlink region dump pci/0000:00:05.0/cr-space snapshot 1</p>
 <dl>
-<dd>Dump the snapshot taken from cr-space address region with ID 1</dl>
+<dd>Dump the snapshot taken from cr-space address region with ID 1</dd></dl>
 <p> devlink region read pci/0000:00:05.0/cr-space snapshot 1 address 0x10 legth 16</p>
 <dl>
-<dd>Read from address 0x10, 16 Bytes of snapshot ID 1 taken from cr-space address region</dl>
+<dd>Read from address 0x10, 16 Bytes of snapshot ID 1 taken from cr-space address region</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-dev/">devlink-dev</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code><a href="/docs/linux/man/8-devlink-monitor/">devlink-monitor</a></code>(8), </p>
 <h2>Author</h2>

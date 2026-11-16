@@ -16,10 +16,10 @@ description: "XmStringCreate — A compound string function that creates a compo
 <h2>Description</h2>
 <p><code>XmStringCreate</code> creates a compound string with two components: text and a font list element tag. The function will allocate space to hold the returned compound string. When the application no longer needs the returned compound string, the application should call <code>XmStringFree</code>.</p>
 <dl COMPACT>
-<dt><i>text</i></p>
-<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</p>
-<dt><i>tag</i></p>
-<dd>Specifies the tag component to be associated with the given text. The value <code>XmFONTLIST_DEFAULT_TAG</code> identifies a locale text segment.</dl>
+<dt><i>text</i></dt>
+<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</dd>
+<dt><i>tag</i></dt>
+<dd>Specifies the tag component to be associated with the given text. The value <code>XmFONTLIST_DEFAULT_TAG</code> identifies a locale text segment.</dd></dl>
 <h2>Return</h2>
 <p>Returns a new compound string.</p>
 <h2>Related</h2>

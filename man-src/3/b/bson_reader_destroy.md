@@ -15,8 +15,8 @@ void bson_reader_destroy(bson_reader_t *reader);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>reader</code></p>
-<dd> A <code>bson_reader_t</code> \&amp;.</dl>
+<dt><code>reader</code></dt>
+<dd> A <code>bson_reader_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Destroys and releases all resources associated with <code>reader</code> \&amp;. </p>
 <h2>COLOPHON</h2>

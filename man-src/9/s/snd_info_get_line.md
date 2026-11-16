@@ -15,15 +15,15 @@ snd_info_get_line - read one line from the procfs buffer
 <h2>Arguments</h2>
 
 <i>buffer</i>
-<dl><dd><dd>the procfs buffer</dl>
+<dl><dd></dd><dd>the procfs buffer</dd></dl>
  
 
  <i>line</i>
-<dl><dd>the buffer to store</dl>
+<dl><dd>the buffer to store</dd></dl>
  
 
  <i>len</i>
-<dl><dd>the max. buffer size</dl>
+<dl><dd>the max. buffer size</dd></dl>
 
 <h2>Description</h2>
 

@@ -48,23 +48,23 @@ url: "/docs/linux/man/1-perlfaq1/"
  Beyond that, you have to consider several things and decide which is best for you.
 <dl>
 <dt>&bull;
-<dd> If things aren't broken, upgrading perl may break them (or at least issue new warnings).
-<dt>&bull;
-<dd> The latest versions of perl have more bug fixes.
-<dt>&bull;
-<dd> The latest versions of perl may contain performance improvements and features not present in older versions. There have been many changes in perl since perl5 was first introduced.
-<dt>&bull;
-<dd> The Perl community is geared toward supporting the most recent releases, so you'll have an easier time finding help for those.
-<dt>&bull;
-<dd> Older versions of perl may have security vulnerabilities, some of which are serious (see perlsec and search CVEs &lt;<a rel="nofollow" HREF="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Perl">https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Perl</a>&gt; for more information).
-<dt>&bull;
-<dd> The latest versions are probably the least deployed and widely tested, so you may want to wait a few months after their release and see what problems others have if you are risk averse.
-<dt>&bull;
-<dd> The immediate, in addition to the current stable release, the previous stable release is maintained. See ``<font SIZE="-1">MAINTENANCE AND SUPPORT''</font> in perlpolicy for more information.
-<dt>&bull;
-<dd> There are really two tracks of perl development: a maintenance version and an experimental version. The maintenance versions are stable, and have an even number as the minor release (i.e. perl5.24.x, where 24 is the minor release). The experimental versions may include features that don't make it into the stable versions, and have an odd number as the minor release (i.e. perl5.25.x, where 25 is the minor release).
-<dt>&bull;
-<dd> You can consult releases &lt;<a rel="nofollow" HREF="http://dev.perl.org/perl5">http://dev.perl.org/perl5</a>&gt; to determine the current stable release of Perl.</dl>
+</dt><dd> If things aren't broken, upgrading perl may break them (or at least issue new warnings).
+</dd><dt>&bull;
+</dt><dd> The latest versions of perl have more bug fixes.
+</dd><dt>&bull;
+</dt><dd> The latest versions of perl may contain performance improvements and features not present in older versions. There have been many changes in perl since perl5 was first introduced.
+</dd><dt>&bull;
+</dt><dd> The Perl community is geared toward supporting the most recent releases, so you'll have an easier time finding help for those.
+</dd><dt>&bull;
+</dt><dd> Older versions of perl may have security vulnerabilities, some of which are serious (see perlsec and search CVEs &lt;<a rel="nofollow" HREF="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Perl">https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Perl</a>&gt; for more information).
+</dd><dt>&bull;
+</dt><dd> The latest versions are probably the least deployed and widely tested, so you may want to wait a few months after their release and see what problems others have if you are risk averse.
+</dd><dt>&bull;
+</dt><dd> The immediate, in addition to the current stable release, the previous stable release is maintained. See ``<font SIZE="-1">MAINTENANCE AND SUPPORT''</font> in perlpolicy for more information.
+</dd><dt>&bull;
+</dt><dd> There are really two tracks of perl development: a maintenance version and an experimental version. The maintenance versions are stable, and have an even number as the minor release (i.e. perl5.24.x, where 24 is the minor release). The experimental versions may include features that don't make it into the stable versions, and have an odd number as the minor release (i.e. perl5.25.x, where 25 is the minor release).
+</dd><dt>&bull;
+</dt><dd> You can consult releases &lt;<a rel="nofollow" HREF="http://dev.perl.org/perl5">http://dev.perl.org/perl5</a>&gt; to determine the current stable release of Perl.</dd></dl>
 
 <h3>What are Perl 4, Perl 5, or Perl 6?</h3>
 
@@ -173,9 +173,9 @@ url: "/docs/linux/man/1-perlfaq1/"
  You might find these links useful:
 <dl>
 <dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://www.perl.org/about.html">http://www.perl.org/about.html</a>&gt;
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://perltraining.com.au/whyperl.html">http://perltraining.com.au/whyperl.html</a>&gt;</dl>
+</dt><dd> &lt;<a rel="nofollow" HREF="http://www.perl.org/about.html">http://www.perl.org/about.html</a>&gt;
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://perltraining.com.au/whyperl.html">http://perltraining.com.au/whyperl.html</a>&gt;</dd></dl>
 
 <h2>AUTHOR AND COPYRIGHT</h2>
 
@@ -190,4 +190,4 @@ url: "/docs/linux/man/1-perlfaq1/"
 
 
 <dt><a HREF="#lbAS">AUTHOR AND COPYRIGHT</a>
-<dd></dl>
+</dt><dd></dd></dl>

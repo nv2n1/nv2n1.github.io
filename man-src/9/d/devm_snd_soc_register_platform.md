@@ -15,11 +15,11 @@ devm_snd_soc_register_platform - resource managed platform registration
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Device used to manage platform</dl>
+<dl><dd></dd><dd>Device used to manage platform</dd></dl>
  
 
  <i>platform_drv</i>
-<dl><dd>platform to register</dl>
+<dl><dd>platform to register</dd></dl>
 
 <h2>Description</h2>
 

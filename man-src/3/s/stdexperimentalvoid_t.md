@@ -11,10 +11,8 @@ std::experimental::void_t - std::experimental::void_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / type_traits&gt;
-
     template &lt;class...&gt;
     (library fundamentals TS v2)
-
         using void_t = void;</code></pre> 
 A utility metafunction that maps a sequence of any types to the type void. 
 

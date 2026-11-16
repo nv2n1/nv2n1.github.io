@@ -18,36 +18,36 @@ description: "alsatplg – ALSA Topology Compiler"
 <h2>OPTIONS</h2>
 <p> Available options:</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> this help</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> show the utility version and versions of used libraries</p>
-<dt><code>-c</code>, <code>&#8211;compile</code> <i>FILE</i></p>
-<dd> source configuration file for the compilation</p>
-<dt><code>-d</code>, <code>&#8211;decode</code> <i>FILE</i></p>
-<dd> source binary topology file for the decode</p>
-<dt><code>-n</code>, <code>&#8211;normalize</code> <i>FILE</i></p>
-<dd> parse and save the configuration file in the normalized format</p>
-<dt><code>-u</code>, <code>&#8211;dump</code> <i>FILE</i></p>
-<dd> parse and save the configuration file in the specified format</p>
-<dt><code>-o</code>, <code>&#8211;output</code> <i>FILE</i></p>
-<dd> output file</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code> <i>LEVEL</i></p>
-<dd> set verbose level</p>
-<dt><code>-s</code>, <code>&#8211;sort</code></p>
-<dd> sort the configuration identifiers (set for normalization)</p>
-<dt><code>-x</code>, <code>&#8211;nocheck</code></p>
-<dd> save the configuration without additional integrity check</p>
-<dt><code>-z</code>, <code>&#8211;dapm-nosort</code></p>
-<dd> do not sort DAPM graph items (like in version 1.2.1-)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> this help</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> show the utility version and versions of used libraries</dd>
+<dt><code>-c</code>, <code>&#8211;compile</code> <i>FILE</i></dt>
+<dd> source configuration file for the compilation</dd>
+<dt><code>-d</code>, <code>&#8211;decode</code> <i>FILE</i></dt>
+<dd> source binary topology file for the decode</dd>
+<dt><code>-n</code>, <code>&#8211;normalize</code> <i>FILE</i></dt>
+<dd> parse and save the configuration file in the normalized format</dd>
+<dt><code>-u</code>, <code>&#8211;dump</code> <i>FILE</i></dt>
+<dd> parse and save the configuration file in the specified format</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> <i>FILE</i></dt>
+<dd> output file</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code> <i>LEVEL</i></dt>
+<dd> set verbose level</dd>
+<dt><code>-s</code>, <code>&#8211;sort</code></dt>
+<dd> sort the configuration identifiers (set for normalization)</dd>
+<dt><code>-x</code>, <code>&#8211;nocheck</code></dt>
+<dd> save the configuration without additional integrity check</dd>
+<dt><code>-z</code>, <code>&#8211;dapm-nosort</code></dt>
+<dd> do not sort DAPM graph items (like in version 1.2.1-)</dd></dl>
 <h2>FILES</h2>
 <p> The master topology files for each supported sound card are in <code>/usr/share/alsa/topology</code>. </p>
 <p> For example, the master use case file for the <i>broadwell</i> card is in <code>/usr/share/alsa/topology/broadwell/broadwell.conf</code>, this file describes the audio hardware for the driver. </p>
 <p> For more details on the syntax of UCM files, see the alsa-lib source code: <i><a rel="nofollow" href="http://git.alsa-project.org/?p=alsa-lib.git;a=blob;f=src/topology/parser.c">http://git.alsa-project.org/?p=alsa-lib.git;a=blob;f=src/topology/parser.c</a></i></p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Topology Interface: <i><a rel="nofollow" href="http://www.alsa-project.org/alsa-doc/alsa-lib/group__topology.html">http://www.alsa-project.org/alsa-doc/alsa-lib/group__topology.html</a></i></dl>
+<dt>&bull;</dt>
+<dd> Topology Interface: <i><a rel="nofollow" href="http://www.alsa-project.org/alsa-doc/alsa-lib/group__topology.html">http://www.alsa-project.org/alsa-doc/alsa-lib/group__topology.html</a></i></dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>AUTHOR</h2>

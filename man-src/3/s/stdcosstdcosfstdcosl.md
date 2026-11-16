@@ -36,18 +36,12 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 const double pi = std::acos(-1);
-
 int main()
-
 {
     // typical usage
     std::cout &lt;&lt; &quot;cos(pi/3) = &quot; &lt;&lt; std::cos(pi / 3) &lt;&lt; '

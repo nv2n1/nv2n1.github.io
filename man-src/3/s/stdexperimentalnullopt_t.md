@@ -20,7 +20,6 @@ It must have a constexpr constructor that takes some implementation-defined lite
 
 <pre><code>nullopt_t is not DefaultConstructible to support both op = {};
 and op = nullopt; as the syntax for disengaging an optional object.
-
 A possible implementation of this class is
 struct nullopt_t {
     constexpr nullopt_t(int)

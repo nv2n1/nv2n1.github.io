@@ -55,9 +55,9 @@ description: "radiusd_selinux – Security Enhanced Linux Policy for the radiusd
 <p> Policy governs the access confined processes have to these ports. SELinux radiusd policy is very flexible allowing users to setup their radiusd processes in as secure a method as possible. </p>
 <p> The following port types are defined for radiusd: </p>
 <dl>
-<dt><code>radius_port_t</code></p>
+<dt><code>radius_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1645,1812,18120-18121 udp 1645,1812,18120-18121</dl>
+</dd><dd>Default Defined Ports: tcp 1645,1812,18120-18121 udp 1645,1812,18120-18121</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type radiusd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -142,16 +142,16 @@ description: "radiusd_selinux – Security Enhanced Linux Policy for the radiusd
 <p> <code>radiusd_exec_t</code> </p>
 <p> &#8211; Set files with the radiusd_exec_t type, if you want to transition an executable to the radiusd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cron.(daily|monthly)/radiusd, /etc/cron.((daily)|(weekly)|(monthly))/freeradius, /usr/sbin/radiusd, /usr/sbin/freeradius </p>
+<dt>Paths:</dt>
+<dd>/etc/cron.(daily|monthly)/radiusd, /etc/cron.((daily)|(weekly)|(monthly))/freeradius, /usr/sbin/radiusd, /usr/sbin/freeradius </dd>
 </dl>
 <p> <code>radiusd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the radiusd_initrc_exec_t type, if you want to transition an executable to the radiusd_initrc_t domain. </p>
 <p> <code>radiusd_log_t</code> </p>
 <p> &#8211; Set files with the radiusd_log_t type, if you want to treat the data as radiusd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/radius(/.*)?, /var/log/radutmp.*, /var/log/radwtmp.*, /var/log/radacct(/.*)?, /var/log/radius.log.*, /var/log/freeradius(/.*)?, /var/log/radiusd-freeradius(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/radius(/.*)?, /var/log/radutmp.*, /var/log/radwtmp.*, /var/log/radacct(/.*)?, /var/log/radius.log.*, /var/log/freeradius(/.*)?, /var/log/radiusd-freeradius(/.*)? </dd>
 </dl>
 <p> <code>radiusd_unit_file_t</code> </p>
 <p> &#8211; Set files with the radiusd_unit_file_t type, if you want to treat the files as radiusd unit content. </p>
@@ -160,8 +160,8 @@ description: "radiusd_selinux – Security Enhanced Linux Policy for the radiusd
 <p> <code>radiusd_var_run_t</code> </p>
 <p> &#8211; Set files with the radiusd_var_run_t type, if you want to store the radiusd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/radiusd(/.*)?, /var/run/radiusd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/radiusd(/.*)?, /var/run/radiusd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

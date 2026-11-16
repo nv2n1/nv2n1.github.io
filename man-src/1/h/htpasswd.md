@@ -33,37 +33,37 @@ description: "htpasswd – Manage user files for basic authentication"
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-b</code></p>
-<dd> Use batch mode; <i>i.e.</i>, get the password from the command line rather than prompting for it. This option should be used with extreme care, since <code>the password is clearly visible</code> on the command line. For script use see the <code>-i</code> option. Available in 2.4.4 and later.</p>
-<dt><code>-i</code></p>
-<dd> Read the password from stdin without verification (for script usage).</p>
-<dt><code>-c</code></p>
-<dd> Create the <i>passwdfile</i>. If <i>passwdfile</i> already exists, it is rewritten and truncated. This option cannot be combined with the <code>-n</code> option.</p>
-<dt><code>-n</code></p>
-<dd> Display the results on standard output rather than updating a file. This is useful for generating password records acceptable to Apache for inclusion in non-text data stores. This option changes the syntax of the command line, since the <i>passwdfile</i> argument (usually the first one) is omitted. It cannot be combined with the <code>-c</code> option.</p>
-<dt><code>-m</code></p>
-<dd> Use MD5 encryption for passwords. This is the default (since version 2.2.18).</p>
-<dt><code>-B</code></p>
-<dd> Use bcrypt encryption for passwords. This is currently considered to be very secure.</p>
-<dt><code>-C</code></p>
-<dd> This flag is only allowed in combination with <code>-B</code> (bcrypt encryption). It sets the computing time used for the bcrypt algorithm (higher is more secure but slower, default: 5, valid: 4 to 17).</p>
-<dt><code>-d</code></p>
-<dd> Use <code>crypt()</code> encryption for passwords. This is not supported by the httpd server on Windows and Netware. This algorithm limits the password length to 8 characters. This algorithm is <code>insecure</code> by today&#8217;s standards. It used to be the default algorithm until version 2.2.17.</p>
-<dt><code>-s</code></p>
-<dd> Use SHA encryption for passwords. Facilitates migration from/to Netscape servers using the LDAP Directory Interchange Format (ldif). This algorithm is <code>insecure</code> by today&#8217;s standards.</p>
-<dt><code>-p</code></p>
-<dd> Use plaintext passwords. Though <code>htpasswd</code> will support creation on all platforms, the httpd daemon will only accept plain text passwords on Windows and Netware.</p>
-<dt><code>-D</code></p>
-<dd> Delete user. If the username exists in the specified htpasswd file, it will be deleted.</p>
-<dt><code>-v</code></p>
-<dd> Verify password. Verify that the given password matches the password of the user stored in the specified htpasswd file. Available in 2.4.5 and later.</p>
-<dt><i>passwdfile</i></p>
-<dd> Name of the file to contain the user name and password. If <code>-c</code> is given, this file is created if it does not already exist, or rewritten and truncated if it does exist.</p>
-<dt><i>username</i></p>
-<dd> The username to create or update in <i>passwdfile</i>. If <i>username</i> does not exist in this file, an entry is added. If it does exist, the password is changed.</p>
-<dt><i>password</i></p>
+<dt><code>-b</code></dt>
+<dd> Use batch mode; <i>i.e.</i>, get the password from the command line rather than prompting for it. This option should be used with extreme care, since <code>the password is clearly visible</code> on the command line. For script use see the <code>-i</code> option. Available in 2.4.4 and later.</dd>
+<dt><code>-i</code></dt>
+<dd> Read the password from stdin without verification (for script usage).</dd>
+<dt><code>-c</code></dt>
+<dd> Create the <i>passwdfile</i>. If <i>passwdfile</i> already exists, it is rewritten and truncated. This option cannot be combined with the <code>-n</code> option.</dd>
+<dt><code>-n</code></dt>
+<dd> Display the results on standard output rather than updating a file. This is useful for generating password records acceptable to Apache for inclusion in non-text data stores. This option changes the syntax of the command line, since the <i>passwdfile</i> argument (usually the first one) is omitted. It cannot be combined with the <code>-c</code> option.</dd>
+<dt><code>-m</code></dt>
+<dd> Use MD5 encryption for passwords. This is the default (since version 2.2.18).</dd>
+<dt><code>-B</code></dt>
+<dd> Use bcrypt encryption for passwords. This is currently considered to be very secure.</dd>
+<dt><code>-C</code></dt>
+<dd> This flag is only allowed in combination with <code>-B</code> (bcrypt encryption). It sets the computing time used for the bcrypt algorithm (higher is more secure but slower, default: 5, valid: 4 to 17).</dd>
+<dt><code>-d</code></dt>
+<dd> Use <code>crypt()</code> encryption for passwords. This is not supported by the httpd server on Windows and Netware. This algorithm limits the password length to 8 characters. This algorithm is <code>insecure</code> by today&#8217;s standards. It used to be the default algorithm until version 2.2.17.</dd>
+<dt><code>-s</code></dt>
+<dd> Use SHA encryption for passwords. Facilitates migration from/to Netscape servers using the LDAP Directory Interchange Format (ldif). This algorithm is <code>insecure</code> by today&#8217;s standards.</dd>
+<dt><code>-p</code></dt>
+<dd> Use plaintext passwords. Though <code>htpasswd</code> will support creation on all platforms, the httpd daemon will only accept plain text passwords on Windows and Netware.</dd>
+<dt><code>-D</code></dt>
+<dd> Delete user. If the username exists in the specified htpasswd file, it will be deleted.</dd>
+<dt><code>-v</code></dt>
+<dd> Verify password. Verify that the given password matches the password of the user stored in the specified htpasswd file. Available in 2.4.5 and later.</dd>
+<dt><i>passwdfile</i></dt>
+<dd> Name of the file to contain the user name and password. If <code>-c</code> is given, this file is created if it does not already exist, or rewritten and truncated if it does exist.</dd>
+<dt><i>username</i></dt>
+<dd> The username to create or update in <i>passwdfile</i>. If <i>username</i> does not exist in this file, an entry is added. If it does exist, the password is changed.</dd>
+<dt><i>password</i></dt>
 <dd> The plaintext password to be encrypted and stored in the file. Only used with the <code>-b</code> flag.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>EXIT STATUS</h2>
 <p>&nbsp; </p>
 <p> <code>htpasswd</code> returns a zero status (&quot;true&quot;) if the username and password have been successfully added or updated in the <i>passwdfile</i>. <code>htpasswd</code> returns <code>1</code> if it encounters some problem accessing files, <code>2</code> if there was a syntax problem with the command line, <code>3</code> if the password was entered interactively and the verification entry didn&#8217;t match, <code>4</code> if its operation was interrupted, <code>5</code> if a value is too long (username, filename, password, or final computed record), <code>6</code> if the username contains illegal characters (see the Restrictions section), and <code>7</code> if the file is not a valid password file.<br />
@@ -72,21 +72,18 @@ description: "htpasswd – Manage user files for basic authentication"
 <p>&nbsp; </p>
 <pre>
       htpasswd /usr/local/etc/apache/.htpasswd-users jsmith
-    
 </pre>
 <p>&nbsp; </p>
 <p> Adds or modifies the password for user <code>jsmith</code>. The user is prompted for the password. The password will be encrypted using the modified Apache MD5 algorithm. If the file does not exist, <code>htpasswd</code> will do nothing except return an error.<br />
 &nbsp; </p>
 <pre>
       htpasswd -c /home/doe/public_html/.htpasswd jane
-    
 </pre>
 <p>&nbsp; </p>
 <p> Creates a new file and stores a record in it for user <code>jane</code>. The user is prompted for the password. If the file exists and cannot be read, or cannot be written, it is not altered and <code>htpasswd</code> will display a message and return an error status.<br />
 &nbsp; </p>
 <pre>
       htpasswd -db /usr/web/.htpasswd-all jones Pwd4Steve
-    
 </pre>
 <p>&nbsp; </p>
 <p> Encrypts the password from the command line (<code>Pwd4Steve</code>) using the <code>crypt()</code> algorithm, and stores it in the specified file.<br />

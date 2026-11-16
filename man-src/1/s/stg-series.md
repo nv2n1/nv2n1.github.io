@@ -21,55 +21,55 @@ stg series[options][--][&lt;patch - range&gt;]
 <p> -b BRANCH, &#8211;branch BRANCH</p>
 <dl>
 <dt>
-<dd> Use BRANCH instead of the default branch.</dl>
+</dt><dd> Use BRANCH instead of the default branch.</dd></dl>
 <p> -a, &#8211;all</p>
 <dl>
 <dt>
-<dd> Show all patches, including the hidden ones.</dl>
+</dt><dd> Show all patches, including the hidden ones.</dd></dl>
 <p> -A, &#8211;applied</p>
 <dl>
 <dt>
-<dd> Show the applied patches only.</dl>
+</dt><dd> Show the applied patches only.</dd></dl>
 <p> -U, &#8211;unapplied</p>
 <dl>
 <dt>
-<dd> Show the unapplied patches only.</dl>
+</dt><dd> Show the unapplied patches only.</dd></dl>
 <p> -H, &#8211;hidden</p>
 <dl>
 <dt>
-<dd> Show the hidden patches only.</dl>
+</dt><dd> Show the hidden patches only.</dd></dl>
 <p> -m BRANCH, &#8211;missing BRANCH</p>
 <dl>
 <dt>
-<dd> Show patches in BRANCH missing in current.</dl>
+</dt><dd> Show patches in BRANCH missing in current.</dd></dl>
 <p> -c, &#8211;count</p>
 <dl>
 <dt>
-<dd> Print the number of patches in the series.</dl>
+</dt><dd> Print the number of patches in the series.</dd></dl>
 <p> -d, &#8211;description</p>
 <dl>
 <dt>
-<dd> Show a short description for each patch.</dl>
+</dt><dd> Show a short description for each patch.</dd></dl>
 <p> &#8211;author</p>
 <dl>
 <dt>
-<dd> Show the author name for each patch.</dl>
+</dt><dd> Show the author name for each patch.</dd></dl>
 <p> -e, &#8211;empty</p>
 <dl>
 <dt>
-<dd> Before the +, &gt;, -, and ! prefixes, print a column that contains either 0 (for empty patches) or a space (for non-empty patches).</dl>
+</dt><dd> Before the +, &gt;, -, and ! prefixes, print a column that contains either 0 (for empty patches) or a space (for non-empty patches).</dd></dl>
 <p> &#8211;showbranch</p>
 <dl>
 <dt>
-<dd> Append the branch name to the listed patches.</dl>
+</dt><dd> Append the branch name to the listed patches.</dd></dl>
 <p> &#8211;noprefix</p>
 <dl>
 <dt>
-<dd> Do not show the patch status prefix.</dl>
+</dt><dd> Do not show the patch status prefix.</dd></dl>
 <p> -s, &#8211;short</p>
 <dl>
 <dt>
-<dd> List just the patches around the topmost patch.</dl>
+</dt><dd> List just the patches around the topmost patch.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

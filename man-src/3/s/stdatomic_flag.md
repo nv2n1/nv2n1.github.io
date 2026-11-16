@@ -29,15 +29,11 @@ test_and_set <i>(public member function)</i>
 
 A spinlock mutex can be implemented in userspace using an atomic_flag 
  // Run this code <pre><code>#include &lt;thread&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;atomic&gt;
 std::atomic_flag lock = ATOMIC_FLAG_INIT;
 void f(int n)
-
 {
     for (int cnt = 0; cnt &lt; 100; ++cnt) {
         while (lock.test_and_set(std::memory_order_acquire)) // acquire lock
@@ -47,7 +43,6 @@ void f(int n)
     }
 }
 int main()
-
 {
     std::vector&lt;std::thread&gt; v;
     for (int n = 0; n &lt; 10; ++n) {

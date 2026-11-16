@@ -15,34 +15,34 @@ description: "convert-ly – manual page for convert-ly 2.12.2"
 <p> Update LilyPond input to newer version. By default, update from the version taken from the ersion command, to the current LilyPond version.Examples:</p>
 <dl>
 <dt>
-<dd> <tt>$ convert-ly -e old.ly</tt><br />
- <tt>$ convert-ly --from=2.3.28 --to=2.5.21 foobar.ly &gt; foobar-new.ly</tt></dl>
+</dt><dd> <tt>$ convert-ly -e old.ly</tt><br />
+ <tt>$ convert-ly --from=2.3.28 --to=2.5.21 foobar.ly &gt; foobar-new.ly</tt></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help and exit</p>
-<dt><code>-f</code>, <code>&#8211;from</code>=<i>VERSION</i></p>
-<dd> start from VERSION [default: ersion found in file]</p>
-<dt><code>-e</code>, <code>&#8211;edit</code></p>
-<dd> edit in place</p>
-<dt><code>-n</code>, <code>&#8211;no-version</code></p>
-<dd> do not add ersion command if missing</p>
-<dt><code>-c</code>, <code>&#8211;current-version</code></p>
-<dd> force updating ersion number to 2.12.2</p>
-<dt><code>-s</code>, <code>&#8211;show-rules</code></p>
-<dd> show rules [default: <code>-f</code> 0, <code>-t</code> 2.12.2]</p>
-<dt><code>-t</code>, <code>&#8211;to</code>=<i>VERSION</i></p>
-<dd> convert to VERSION [default: 2.12.2]</p>
-<dt><code>-w</code>, <code>&#8211;warranty</code></p>
-<dd> show warranty and copyright</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help and exit</dd>
+<dt><code>-f</code>, <code>&#8211;from</code>=<i>VERSION</i></dt>
+<dd> start from VERSION [default: ersion found in file]</dd>
+<dt><code>-e</code>, <code>&#8211;edit</code></dt>
+<dd> edit in place</dd>
+<dt><code>-n</code>, <code>&#8211;no-version</code></dt>
+<dd> do not add ersion command if missing</dd>
+<dt><code>-c</code>, <code>&#8211;current-version</code></dt>
+<dd> force updating ersion number to 2.12.2</dd>
+<dt><code>-s</code>, <code>&#8211;show-rules</code></dt>
+<dd> show rules [default: <code>-f</code> 0, <code>-t</code> 2.12.2]</dd>
+<dt><code>-t</code>, <code>&#8211;to</code>=<i>VERSION</i></dt>
+<dd> convert to VERSION [default: 2.12.2]</dd>
+<dt><code>-w</code>, <code>&#8211;warranty</code></dt>
+<dd> show warranty and copyright</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs via <a rel="nofollow" href="http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs">http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs</a></p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>convert-ly</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>convert-ly</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info convert-ly</code></dl>
+</dt><dd> <code>info convert-ly</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

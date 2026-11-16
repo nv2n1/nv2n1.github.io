@@ -28,69 +28,62 @@ FvwmRearrange - rearrange fvwm windows
 
  Command-line arguments passed to FvwmRearrange are described here.
 <dl><dt>-a
-<dd>Causes <i>all</i> window types to be affected, even ones with the WindowListSkip style.
-<dt>-animate
-<dd>Attempt to do an animated move, this is ignored if <i>-resize</i> or <i>-maximize</i> are used.
-<dt>-cascade
-<dd>Cascade windows. This argument must be the first on the command line. This is the default.
-<dt>-desk
-<dd>Causes all windows on the desk to be cascaded/tiled instead of the current screen only.
-<dt>-flatx
-<dd>Inhibits border width increment. Only used when cascading.
-<dt>-flaty
-<dd>Inhibits border height increment. Only used when cascading.
-<dt>-h
-<dd>Tiles horizontally (default is to tile vertically). Used for tiling only.
-<dt>-incx <i>arg</i>
-<dd>Specifies a horizontal increment which is successively added to cascaded windows. <i>arg</i> is a percentage of screen width, or pixel value if a <i>p</i> is suffixed. Default is zero. Used only for cascading.
-<dt>-incy <i>arg</i>
-<dd>Specifies a vertical increment which is successively added to cascaded windows. <i>arg</i> is a percentage of screen height, or pixel value if a <i>p</i> is suffixed. Default is zero. Used only for cascading. 
-
-<dt>-m
-<dd>Causes maximized windows to also be affected (implied by -a).
-<dt>-maximize
-<dd>When moving/resizing a window, put it also into maximized state.
-<dt>-mn <i>arg</i>
-<dd>Tiles up to <i>arg</i> windows in tile direction. If more windows exist, a new direction row or column is created (in effect, a matrix is created). Used only when tiling windows.
-<dt>-noanimate
-<dd>Do not attempt to do an animated move.
-<dt>-nomaximize
-<dd>Do not put windows into maximized state.
-<dt>-noraise
-<dd>Inhibits window raising, leaving the depth ordering intact.
-<dt>-noresize
-<dd>Inhibits window resizing, leaving window sizes intact. This is the default when cascading windows.
-<dt>-nostretch
-<dd>If tiling: inhibits window growth to fit tile. Windows are shrunk to fit the tile but not expanded. 
-
+</dt><dd>Causes <i>all</i> window types to be affected, even ones with the WindowListSkip style.
+</dd><dt>-animate
+</dt><dd>Attempt to do an animated move, this is ignored if <i>-resize</i> or <i>-maximize</i> are used.
+</dd><dt>-cascade
+</dt><dd>Cascade windows. This argument must be the first on the command line. This is the default.
+</dd><dt>-desk
+</dt><dd>Causes all windows on the desk to be cascaded/tiled instead of the current screen only.
+</dd><dt>-flatx
+</dt><dd>Inhibits border width increment. Only used when cascading.
+</dd><dt>-flaty
+</dt><dd>Inhibits border height increment. Only used when cascading.
+</dd><dt>-h
+</dt><dd>Tiles horizontally (default is to tile vertically). Used for tiling only.
+</dd><dt>-incx <i>arg</i>
+</dt><dd>Specifies a horizontal increment which is successively added to cascaded windows. <i>arg</i> is a percentage of screen width, or pixel value if a <i>p</i> is suffixed. Default is zero. Used only for cascading.
+</dd><dt>-incy <i>arg</i>
+</dt><dd>Specifies a vertical increment which is successively added to cascaded windows. <i>arg</i> is a percentage of screen height, or pixel value if a <i>p</i> is suffixed. Default is zero. Used only for cascading. 
+</dd><dt>-m
+</dt><dd>Causes maximized windows to also be affected (implied by -a).
+</dd><dt>-maximize
+</dt><dd>When moving/resizing a window, put it also into maximized state.
+</dd><dt>-mn <i>arg</i>
+</dt><dd>Tiles up to <i>arg</i> windows in tile direction. If more windows exist, a new direction row or column is created (in effect, a matrix is created). Used only when tiling windows.
+</dd><dt>-noanimate
+</dt><dd>Do not attempt to do an animated move.
+</dd><dt>-nomaximize
+</dt><dd>Do not put windows into maximized state.
+</dd><dt>-noraise
+</dt><dd>Inhibits window raising, leaving the depth ordering intact.
+</dd><dt>-noresize
+</dt><dd>Inhibits window resizing, leaving window sizes intact. This is the default when cascading windows.
+</dd><dt>-nostretch
+</dt><dd>If tiling: inhibits window growth to fit tile. Windows are shrunk to fit the tile but not expanded. 
  If cascading: inhibits window expansion when using the -resize option. Windows will only shrink to fit the maximal width and height (if given).
-<dt>-r
-<dd>Reverses the window sequence.
-<dt>-resize
-<dd>Forces all windows to resize to the constrained width and height (if given). This is the default when tiling windows.
-<dt>-s
-<dd>Causes sticky windows to also be affected (implied by -a).
-<dt>-sp
-<dd>Causes windows sticky across pages to also be affected (implied by -a).
-<dt>-sd
-<dd>Causes windows sticky across desks to also be affected (implied by -a).
-<dt>-t
-<dd>Causes transient windows to also be affected (implied by -a).
-<dt>-tile
-<dd>Tile windows. This argument must be the first on the command line.
-<dt>-u
-<dd>Causes untitled windows to also be affected (implied by -a).
-<dt>-ewmhiwa
-<dd>When rearranging windows, make the calculation ignore the working area, such as EwmhBaseStruts; by default, FvwmRearrange will honour the working area. 
-
+</dd><dt>-r
+</dt><dd>Reverses the window sequence.
+</dd><dt>-resize
+</dt><dd>Forces all windows to resize to the constrained width and height (if given). This is the default when tiling windows.
+</dd><dt>-s
+</dt><dd>Causes sticky windows to also be affected (implied by -a).
+</dd><dt>-sp
+</dt><dd>Causes windows sticky across pages to also be affected (implied by -a).
+</dd><dt>-sd
+</dt><dd>Causes windows sticky across desks to also be affected (implied by -a).
+</dd><dt>-t
+</dt><dd>Causes transient windows to also be affected (implied by -a).
+</dd><dt>-tile
+</dt><dd>Tile windows. This argument must be the first on the command line.
+</dd><dt>-u
+</dt><dd>Causes untitled windows to also be affected (implied by -a).
+</dd><dt>-ewmhiwa
+</dt><dd>When rearranging windows, make the calculation ignore the working area, such as EwmhBaseStruts; by default, FvwmRearrange will honour the working area. 
  Up to four numbers can be placed on the command line that are not switches. The first pair specify an x and y offset to start the first window (default is 0, 0). The meaning of the second pair depends on operation mode: 
-
  When tiling windows it specifies an absolute coordinate reference denoting the lower right bounding box for tiling. 
-
  When cascading it specifies a maximal width and height for the layered windows. If an affected window exceeds either this width or height, it is resized to the maximal width or height. 
-
  If any number is suffixed with the letter p, then it is taken to be a pixel value, otherwise it is interpreted as a screen percentage. Specifying zero for any parameter is equivalent to not specifying it. 
-
-</dl><h2>Bugs</h2>It is probably not a good idea to delete windows while windows are being rearranged. 
+</dd></dl><h2>Bugs</h2>It is probably not a good idea to delete windows while windows are being rearranged. 
 
 <h2>Authors</h2>Andrew Veliath (original FvwmTile and FvwmCascade modules) Dominik Vogt (merged FvwmTile and FvwmCascade to FvwmRearrange)

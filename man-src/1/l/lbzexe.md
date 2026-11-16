@@ -22,8 +22,8 @@ description: "lbzexe – compress executable files in place"
 <p> This utility is most useful on systems with very small disks.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> Decompress the given executables instead of compressing them.</dl>
+<dt><code>-d</code></dt>
+<dd> Decompress the given executables instead of compressing them.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-lbzip2/">lbzip2</a>(1), <a href="/docs/linux/man/1-lbzmore/">lbzmore</a>(1), <a href="/docs/linux/man/1-lbzcmp/">lbzcmp</a>(1), <a href="/docs/linux/man/1-lbzforce/">lbzforce</a>(1)</p>
 <h2>CAVEATS</h2>

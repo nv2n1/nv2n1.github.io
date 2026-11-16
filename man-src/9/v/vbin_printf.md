@@ -14,16 +14,16 @@ description: "vbin_printf – Parse a format string and place args’ binary val
 <p><i>bin_buf</i></p>
 <dl>
 <dd>
-<dd>The buffer to place args&#8217; binary value</dl>
+</dd><dd>The buffer to place args&#8217; binary value</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>The size of the buffer(by words(32bits), not characters)</dl>
+<dd>The size of the buffer(by words(32bits), not characters)</dd></dl>
 <p> <i>fmt</i></p>
 <dl>
-<dd>The format string to use</dl>
+<dd>The format string to use</dd></dl>
 <p> <i>args</i></p>
 <dl>
-<dd>Arguments for the format string</dl>
+<dd>Arguments for the format string</dd></dl>
 <h2>Description</h2>
 <p>The format follows C99 vsnprintf, except <code>n</code> is ignored, and its argument is skipped. </p>
 <p> The return value is the number of words(32bits) which would be generated for the given input.</p>

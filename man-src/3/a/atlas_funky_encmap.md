@@ -24,6 +24,6 @@ description: "Atlas::Funky::EncMap – Encoder in Map state."
 <p>Encoder in Map state. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Atlas Funky Encoder</code></dl>
+<dd><code>Atlas Funky Encoder</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

@@ -10,16 +10,10 @@ description: "QuantLib::ExtendedBinomialTree – Binomial tree base class."
 <p>QuantLib::ExtendedBinomialTree &#8211; Binomial tree base class. </p>
 <h2>Synopsis</h2>
 <pre><code>enum Branches { branches =  2 }
-
-
-
 Public Member Functions</code></pre>
 <p> Inherits <code>Tree&lt; T &gt;</code>.</p>
 <h3>Public Types</h3>
 <pre><code>enum Branches { branches =  2 }
-
-
-
 Public Member Functions</code></pre>
 <p> <code>ExtendedBinomialTree</code> (const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp;process, <code>Time</code> end, Size steps) </p>
 <p> Size <code>size</code> (Size i) const </p>

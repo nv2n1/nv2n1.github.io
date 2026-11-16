@@ -15,11 +15,11 @@ snd_dmaengine_pcm_request_channel - Request channel for the dmaengine PCM
 <h2>Arguments</h2>
 
 <i>filter_fn</i>
-<dl><dd><dd>Filter function used to request the DMA channel</dl>
+<dl><dd></dd><dd>Filter function used to request the DMA channel</dd></dl>
  
 
  <i>filter_data</i>
-<dl><dd>Data passed to the DMA filter function</dl>
+<dl><dd>Data passed to the DMA filter function</dd></dl>
 
 <h2>Description</h2>
 

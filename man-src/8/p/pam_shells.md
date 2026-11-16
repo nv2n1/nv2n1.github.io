@@ -10,9 +10,9 @@ description: "pam_shells – PAM module to check for valid login shell"
 <p>pam_shells &#8211; PAM module to check for valid login shell</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pam_shells.so</code></dl>
+<dt> <code>pam_shells.so</code></dt></dl>
 <h2>Description</h2>
-<dd>pam_shells is a PAM module that only allows access to the system if the user&#8217;s shell is listed in /etc/shells. </p>
+<dd>pam_shells is a PAM module that only allows access to the system if the user&#8217;s shell is listed in /etc/shells. </dd>
 <p> It also checks if /etc/shells is a plain file and not world writable.</p>
 <h2>Options</h2>
 <p>This module does not recognise any options.</p>
@@ -21,18 +21,18 @@ description: "pam_shells – PAM module to check for valid login shell"
 <h2>Return Values</h2>
 <p>PAM_AUTH_ERR</p>
 <dl>
-<dd>Access to the system was denied.</dl>
+<dd>Access to the system was denied.</dd></dl>
 <p> PAM_SUCCESS</p>
 <dl>
-<dd>The user&#8217;s login shell was listed as valid shell in /etc/shells.</dl>
+<dd>The user&#8217;s login shell was listed as valid shell in /etc/shells.</dd></dl>
 <p> PAM_SERVICE_ERR</p>
 <dl>
-<dd>The module was not able to get the name of the user.</dl>
+<dd>The module was not able to get the name of the user.</dd></dl>
 <h2>Examples</h2>
 <dl>
 <dd>
 <pre>auth required pam_shells.so</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-shells/">shells</a></code>(5), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
 <h2>Author</h2>

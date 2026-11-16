@@ -25,16 +25,16 @@ description: "ontap_lsmplugin — LibstorageMgmt ONTAP Plugin"
     <code>ontap+ssl://&lt;username&gt;@&lt;ontap_filer&gt;</code>
 </pre>
 <dl>
-<dt><code>username</code></p>
+<dt><code>username</code></dt>
 <dd>
 <p> The <code>username</code> is the user account with administration privilege. </p>
-<dt><code>ontap_filer_ip</code></p>
+</dd><dt><code>ontap_filer_ip</code></dt>
 <dd>
 <p> The <code>ontap_filer_ip</code> is the NetApp ONTAP filer IP address or DNS name. </p>
-<dt><code>URI parameters</code></p>
+</dd><dt><code>URI parameters</code></dt>
 <dd>
 <p> No additional URI parameters are supported by this plugin. </p>
-</dl>
+</dd></dl>
 <h2>Supported Hardware</h2>
 <p> NetApp ONTAP 8.x is supported. Detailed support status can be queried via: </p>
 <p>&nbsp;<wbr>*&nbsp;<wbr><code>lsm.Client.capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>(Python API)<br />

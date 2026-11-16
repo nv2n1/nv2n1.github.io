@@ -54,14 +54,14 @@ description: "log4cpp::NDC –"
 <p> <i></i><code>Note that NDCs are managed on a per thread basis</code>. <code>NDC</code> operations such as push, pop, clear, getDepth and setMaxDepth affect the <code>NDC</code> of the <i>current</i> thread only. NDCs of other threads remain unaffected. </p>
 <p> To build an <code>NDC</code> one uses the push operation. Simply put, </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Contexts can be nested.</dl>
+<dt>&bull;</dt>
+<dd>Contexts can be nested.</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>When entering a context, call <code>NDC.push</code>. As a side effect, if there is no nested diagnostic context for the current thread, this method will create it.</dl>
+<dt>&bull;</dt>
+<dd>When entering a context, call <code>NDC.push</code>. As a side effect, if there is no nested diagnostic context for the current thread, this method will create it.</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>When leaving a context, call <code>NDC.pop</code>.</dl>
+<dt>&bull;</dt>
+<dd>When leaving a context, call <code>NDC.pop</code>.</dd></dl>
 <p> There is no penalty for forgetting to match each push operation with a corresponding pop, except the obvious mismatch between the real application context and the context set in the <code>NDC</code>. </p>
 <p> Custom Layouts may include the nested diagnostic context for the current thread in log messages, without any user intervention. Hence, even if a server is serving multiple clients simultaneously, the logs emanating from the same code (belonging to the same category) can still be distinguished because each client request will have a different <code>NDC</code> tag. </p>
 <p> <i>Unfortunately, unlike Java, C++ does not have platform independent multithreading support. Therefore, currently </i><code>log4cpp</code> is not multithread aware, it implicitly assumes only one thread exists, the main process thread.</p>
@@ -87,38 +87,38 @@ description: "log4cpp::NDC –"
 <p> The child thread uses the inherit method to inherit the parent&#8217;s diagnostic context. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Stack A clone of the current thread&#8217;s diagnostic context.</dl>
+<dd>Stack A clone of the current thread&#8217;s diagnostic context.</dd></dl>
 <h3>const std::string &amp; log4cpp::NDC::get () [static]</h3>
 <p>Get the current diagnostic context string. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the context string.</dl>
+<dd>the context string.</dd></dl>
 <h3>size_t log4cpp::NDC::getDepth () [static]</h3>
 <p>Get the current nesting depth of this diagnostic context. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the nesting depth</dl>
+<dd>the nesting depth</dd></dl>
 <h3><code>NDC</code> &amp; log4cpp::NDC::getNDC () [static]</h3>
 <p>Return the <code>NDC</code> for the current thread. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the <code>NDC</code> for the current thread</dl>
+<dd>the <code>NDC</code> for the current thread</dd></dl>
 <h3>void log4cpp::NDC::inherit (<code>NDC::ContextStack</code> *stack) [static]</h3>
 <h3>std::string log4cpp::NDC::pop () [static]</h3>
 <p>Clients should call this method before leaving a diagnostic context. The returned value is the value that was pushed last. If no context is available, then the empty string &#8221; is returned. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>String The innermost diagnostic context.</dl>
+<dd>String The innermost diagnostic context.</dd></dl>
 <h3>void log4cpp::NDC::push (const std::string &amp;message) [static]</h3>
 <p>Push new diagnostic context information for the current thread. The contents of the message parameter is determined solely by the client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>message</i> The new diagnostic context information.</dl>
+<dd><i>message</i> The new diagnostic context information.</dd></dl>
 <h3>void log4cpp::NDC::setMaxDepth (intmaxDepth) [static]</h3>
 <p>Set the maximum nesting depth for the current <code>NDC</code>. Curently NDCs do not enforce a maximum depth and consequentially this method has no effect. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>maxDepth</i> the maximum nesting depth</dl>
+<dd><i>maxDepth</i> the maximum nesting depth</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3><code>ContextStack</code> log4cpp::NDC::_stack</h3>
 <h2>Author</h2>

@@ -17,12 +17,12 @@ description: "ldns_key_buf2dsa, ldns_key_buf2rsa"
 <p> RSA* ldns_key_buf2rsa(ldns_buffer *key); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_buf2dsa</i>()</p>
-<dd>converts a buffer holding key material to a DSA key in openssl. </p>
+<dt> <i>ldns_key_buf2dsa</i>()</dt>
+<dd>converts a buffer holding key material to a DSA key in openssl. </dd>
 <p> .br <code>key</code>: the key to convert .br Returns a DSA * structure with the key material</dl>
 <dl>
-<dt> <i>ldns_key_buf2rsa</i>()</p>
-<dd>converts a buffer holding key material to a RSA key in openssl. </p>
+<dt> <i>ldns_key_buf2rsa</i>()</dt>
+<dd>converts a buffer holding key material to a RSA key in openssl. </dd>
 <p> .br <code>key</code>: the key to convert .br Returns a RSA * structure with the key material</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -36,3 +36,4 @@ description: "ldns_key_buf2dsa, ldns_key_buf2rsa"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

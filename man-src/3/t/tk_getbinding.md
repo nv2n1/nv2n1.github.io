@@ -24,16 +24,16 @@ const char *
 <code>Tk_BindEvent(</code><i>bindingTable, eventPtr, tkwin, numObjects, objectPtr</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use when invoking bindings in binding table. Also used for returning results and errors from binding procedures.</p>
-<dd>Tk_BindingTable <i>bindingTable</i> (in) Token for binding table; must have been returned by some previous call to <code>Tk_CreateBindingTable</code>.</p>
-<dd>ClientData <i>object</i> (in) Identifies object with which binding is associated.</p>
-<dd>const char <i>*eventString</i> (in) String describing event sequence.</p>
-<dd>char <i>*script</i> (in) Tcl script to invoke when binding triggers.</p>
-<dd>int <i>append</i> (in) Non-zero means append <i>script</i> to existing script for binding, if any; zero means replace existing script with new one.</p>
-<dd>XEvent <i>*eventPtr</i> (in) X event to match against bindings in <i>bindingTable</i>.</p>
-<dd>Tk_Window <i>tkwin</i> (in) Identifier for any window on the display where the event occurred. Used to find display-related information such as key maps.</p>
-<dd>int <i>numObjects</i> (in) Number of object identifiers pointed to by <i>objectPtr</i>.</p>
-<dd>ClientData <i>*objectPtr</i> (in) Points to an array of object identifiers: bindings will be considered for each of these objects in order from first to last. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use when invoking bindings in binding table. Also used for returning results and errors from binding procedures.</dd>
+<dd>Tk_BindingTable <i>bindingTable</i> (in) Token for binding table; must have been returned by some previous call to <code>Tk_CreateBindingTable</code>.</dd>
+<dd>ClientData <i>object</i> (in) Identifies object with which binding is associated.</dd>
+<dd>const char <i>*eventString</i> (in) String describing event sequence.</dd>
+<dd>char <i>*script</i> (in) Tcl script to invoke when binding triggers.</dd>
+<dd>int <i>append</i> (in) Non-zero means append <i>script</i> to existing script for binding, if any; zero means replace existing script with new one.</dd>
+<dd>XEvent <i>*eventPtr</i> (in) X event to match against bindings in <i>bindingTable</i>.</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Identifier for any window on the display where the event occurred. Used to find display-related information such as key maps.</dd>
+<dd>int <i>numObjects</i> (in) Number of object identifiers pointed to by <i>objectPtr</i>.</dd>
+<dd>ClientData <i>*objectPtr</i> (in) Points to an array of object identifiers: bindings will be considered for each of these objects in order from first to last. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures provide a general-purpose mechanism for creating and invoking bindings. Bindings are organized in terms of <i>binding tables</i>. A binding table consists of a collection of bindings plus a history of recent events. Within a binding table, bindings are associated with <i>objects</i>. The meaning of an object is defined by clients of the binding package. For example, Tk keeps uses one binding table to hold all of the bindings created by the <code>bind</code> command. For this table, objects are pointers to strings such as window names, class names, or other binding tags such as <code>all</code>. Tk also keeps a separate binding table for each canvas widget, which manages bindings created by the canvas&#8217;s <code>bind</code> widget command; within this table, an object is either a pointer to the internal structure for a canvas item or a Tk_Uid identifying a tag. </p>

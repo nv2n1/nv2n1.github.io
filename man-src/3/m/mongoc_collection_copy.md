@@ -13,8 +13,8 @@ description: "mongoc_collection_copy() – Performs a deep copy of the collectio
 mongoc_collection_copy (mongoc_collection_t *collection);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Performs a deep copy of the <code>collection</code> struct and its configuration. Useful if you intend to call <code>mongoc_collection_set_write_concern</code> , <code>mongoc_collection_set_read_prefs</code> , or <code>mongoc_collection_set_read_concern</code> , and want to preserve an unaltered copy of the struct. </p>
 <p> This function does <code>not</code> copy the contents of the collection on the MongoDB server; use the for that purpose. </p>

@@ -33,50 +33,50 @@ icecast2-- - 13 *[{icecast2}]
 <p> Certain kernel or mount parameters, such as the <i>hidepid</i> option for procfs, will hide information for some processes. In these situations <code>pstree</code> will attempt to build the tree without this information, showing process names as question marks. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Show command line arguments. If the command line of a process is swapped out, that process is shown in parentheses. <code>-a</code> implicitly disables compaction for processes but not threads.</p>
-<dt><code>-A</code></p>
-<dd> Use ASCII characters to draw the tree.</p>
-<dt><code>-c</code></p>
-<dd> Disable compaction of identical subtrees. By default, subtrees are compacted whenever possible.</p>
-<dt><code>-C</code></p>
-<dd> Color the process name by given attribute. Currently <code>pstree</code> only accepts the value <code>age</code> which colors by process age. Processes newer than 60 seconds are green, newer than an hour yellow and the remaining red.</p>
-<dt><code>-g</code></p>
-<dd> Show PGIDs. Process Group IDs are shown as decimal numbers in parentheses after each process name. <code>-g</code> implicitly disables compaction. If both PIDs and PGIDs are displayed then PIDs are shown first.</p>
-<dt><code>-G</code></p>
-<dd> Use VT100 line drawing characters.</p>
-<dt><code>-h</code></p>
-<dd> Highlight the current process and its ancestors. This is a no-op if the terminal doesn&#8217;t support highlighting or if neither the current process nor any of its ancestors are in the subtree being shown.</p>
-<dt><code>-H</code></p>
-<dd> Like <code>-h</code>, but highlight the specified process instead. Unlike with <code>-h</code>, <code>pstree</code> fails when using <code>-H</code> if highlighting is not available.</p>
-<dt><code>-l</code></p>
-<dd> Display long lines. By default, lines are truncated to either the COLUMNS environment variable or the display width. If neither of these methods work, the default of 132 columns is used.</p>
-<dt><code>-n</code></p>
-<dd> Sort processes with the same parent by PID instead of by name. (Numeric sort.)</p>
-<dt><code>-N</code></p>
-<dd> Show individual trees for each namespace of the type specified. The available types are: <i>ipc</i>, <i>mnt</i>, <i>net</i>, <i>pid</i>, <i>time</i>, <i>user</i>, <i>uts</i>. Regular users don&#8217;t have access to other users&#8217; processes information, so the output will be limited.</p>
-<dt><code>-p</code></p>
-<dd> Show PIDs. PIDs are shown as decimal numbers in parentheses after each process name. <code>-p</code> implicitly disables compaction.</p>
-<dt><code>-s</code></p>
-<dd> Show parent processes of the specified process.</p>
-<dt><code>-S</code></p>
-<dd> Show namespaces transitions. Like <code>-N</code>, the output is limited when running as a regular user.</p>
-<dt><code>-t</code></p>
-<dd> Show full names for threads when available.</p>
-<dt><code>-T</code></p>
-<dd> Hide threads and only show processes.</p>
-<dt><code>-u</code></p>
-<dd> Show uid transitions. Whenever the uid of a process differs from the uid of its parent, the new uid is shown in parentheses after the process name.</p>
-<dt><code>-U</code></p>
-<dd> Use UTF-8 (Unicode) line drawing characters. Under Linux 1.1-54 and above, UTF-8 mode is entered on the console with <code>echo -e &#8216;%8&#8217;</code> and left with <code>echo -e &#8216;%@&#8217;</code>.</p>
-<dt><code>-V</code></p>
-<dd> Display version information.</p>
-<dt><code>-Z</code></p>
-<dd> Show the current security attributes of the process. For SELinux systems this will be the security context.</dl>
+<dt><code>-a</code></dt>
+<dd> Show command line arguments. If the command line of a process is swapped out, that process is shown in parentheses. <code>-a</code> implicitly disables compaction for processes but not threads.</dd>
+<dt><code>-A</code></dt>
+<dd> Use ASCII characters to draw the tree.</dd>
+<dt><code>-c</code></dt>
+<dd> Disable compaction of identical subtrees. By default, subtrees are compacted whenever possible.</dd>
+<dt><code>-C</code></dt>
+<dd> Color the process name by given attribute. Currently <code>pstree</code> only accepts the value <code>age</code> which colors by process age. Processes newer than 60 seconds are green, newer than an hour yellow and the remaining red.</dd>
+<dt><code>-g</code></dt>
+<dd> Show PGIDs. Process Group IDs are shown as decimal numbers in parentheses after each process name. <code>-g</code> implicitly disables compaction. If both PIDs and PGIDs are displayed then PIDs are shown first.</dd>
+<dt><code>-G</code></dt>
+<dd> Use VT100 line drawing characters.</dd>
+<dt><code>-h</code></dt>
+<dd> Highlight the current process and its ancestors. This is a no-op if the terminal doesn&#8217;t support highlighting or if neither the current process nor any of its ancestors are in the subtree being shown.</dd>
+<dt><code>-H</code></dt>
+<dd> Like <code>-h</code>, but highlight the specified process instead. Unlike with <code>-h</code>, <code>pstree</code> fails when using <code>-H</code> if highlighting is not available.</dd>
+<dt><code>-l</code></dt>
+<dd> Display long lines. By default, lines are truncated to either the COLUMNS environment variable or the display width. If neither of these methods work, the default of 132 columns is used.</dd>
+<dt><code>-n</code></dt>
+<dd> Sort processes with the same parent by PID instead of by name. (Numeric sort.)</dd>
+<dt><code>-N</code></dt>
+<dd> Show individual trees for each namespace of the type specified. The available types are: <i>ipc</i>, <i>mnt</i>, <i>net</i>, <i>pid</i>, <i>time</i>, <i>user</i>, <i>uts</i>. Regular users don&#8217;t have access to other users&#8217; processes information, so the output will be limited.</dd>
+<dt><code>-p</code></dt>
+<dd> Show PIDs. PIDs are shown as decimal numbers in parentheses after each process name. <code>-p</code> implicitly disables compaction.</dd>
+<dt><code>-s</code></dt>
+<dd> Show parent processes of the specified process.</dd>
+<dt><code>-S</code></dt>
+<dd> Show namespaces transitions. Like <code>-N</code>, the output is limited when running as a regular user.</dd>
+<dt><code>-t</code></dt>
+<dd> Show full names for threads when available.</dd>
+<dt><code>-T</code></dt>
+<dd> Hide threads and only show processes.</dd>
+<dt><code>-u</code></dt>
+<dd> Show uid transitions. Whenever the uid of a process differs from the uid of its parent, the new uid is shown in parentheses after the process name.</dd>
+<dt><code>-U</code></dt>
+<dd> Use UTF-8 (Unicode) line drawing characters. Under Linux 1.1-54 and above, UTF-8 mode is entered on the console with <code>echo -e &#8216;%8&#8217;</code> and left with <code>echo -e &#8216;%@&#8217;</code>.</dd>
+<dt><code>-V</code></dt>
+<dd> Display version information.</dd>
+<dt><code>-Z</code></dt>
+<dd> Show the current security attributes of the process. For SELinux systems this will be the security context.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/proc</p>
-<dd> location of the proc file system</dl>
+<dt>/proc</dt>
+<dd> location of the proc file system</dd></dl>
 <h2>BUGS</h2>
 <p> Some character sets may be incompatible with the VT100 characters.</p>
 <h2>SEE ALSO</h2>

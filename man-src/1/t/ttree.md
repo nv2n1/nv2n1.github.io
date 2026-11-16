@@ -236,13 +236,9 @@ ttree[options][files]
 
  <pre>
    # This is a comment. It is ignored.
-  
    index.html: header footer menubar 
-  
    header: titlebar hotlinks
-  
    menubar: menuitem
-  
    # spanning multiple lines with the backslash
    another.html: header footer menubar \
    sidebar searchform
@@ -293,10 +289,10 @@ ttree[options][files]
 
 
 <dt><a HREF="#lbAJ">AUTHORS</a>
-<dd>
-<dt><a HREF="#lbAK">VERSION</a>
-<dd>
-<dt><a HREF="#lbAL">COPYRIGHT</a>
-<dd>
-<dt><a HREF="#lbAM">SEE ALSO</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">VERSION</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">COPYRIGHT</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAM">SEE ALSO</a>
+</dt><dd></dd></dl>

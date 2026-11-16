@@ -16,36 +16,36 @@ description: "guake — A drop-down terminal for GNOME environment."
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code> Show summary of options.</p>
 <dl>
-<dt><code>-t, &#8211;toggle-visibility</code></p>
-<dd> Toggle the visibility of guake</p>
-<dt><code>&#8211;show</code></p>
-<dd> Display the main window</p>
-<dt><code>&#8211;hide</code></p>
-<dd> Hide the main window</p>
-<dt><code>-p, &#8211;preferences</code></p>
-<dd> Shows the preferences window of guake</p>
-<dt><code>-a, &#8211;about</code></p>
-<dd> Shows the about window of guake</p>
-<dt><code>-n, &#8211;new-tab</code></p>
-<dd> Create a new tab in Guake</p>
-<dt><code>-s, &#8211;select-tab</code></p>
-<dd> Select a tab given its 0-based index</p>
-<dt><code>-g, &#8211;selected-tab</code></p>
-<dd> Return the index of the current tab</p>
-<dt><code>-e, &#8211;execute-command</code></p>
-<dd> Execute a command in the selected tab</p>
-<dt><code>-i, &#8211;tab-index</code></p>
-<dd> Specify which tab to rename. Default is 0.</p>
-<dt><code>&#8211;bgcolor</code></p>
-<dd> Set the hexadecimal (#rrggbb) background color of the selected tab.</p>
-<dt><code>&#8211;fgcolor</code></p>
-<dd> Set the hexadecimal (#rrggbb) foreground color of the selected tab</p>
-<dt><code>&#8211;rename-tab</code></p>
-<dd> Rename the specified tab. Reset to default if TITLE is a single dash &quot;-&quot;.</p>
-<dt><code>-r, &#8211;rename-current-tab</code></p>
-<dd> Rename the current tab. Reset to default if TITLE is a single dash &quot;-&quot;.</p>
-<dt><code>-q, &#8211;quit</code></p>
-<dd> Closes the current running guake</dl>
+<dt><code>-t, &#8211;toggle-visibility</code></dt>
+<dd> Toggle the visibility of guake</dd>
+<dt><code>&#8211;show</code></dt>
+<dd> Display the main window</dd>
+<dt><code>&#8211;hide</code></dt>
+<dd> Hide the main window</dd>
+<dt><code>-p, &#8211;preferences</code></dt>
+<dd> Shows the preferences window of guake</dd>
+<dt><code>-a, &#8211;about</code></dt>
+<dd> Shows the about window of guake</dd>
+<dt><code>-n, &#8211;new-tab</code></dt>
+<dd> Create a new tab in Guake</dd>
+<dt><code>-s, &#8211;select-tab</code></dt>
+<dd> Select a tab given its 0-based index</dd>
+<dt><code>-g, &#8211;selected-tab</code></dt>
+<dd> Return the index of the current tab</dd>
+<dt><code>-e, &#8211;execute-command</code></dt>
+<dd> Execute a command in the selected tab</dd>
+<dt><code>-i, &#8211;tab-index</code></dt>
+<dd> Specify which tab to rename. Default is 0.</dd>
+<dt><code>&#8211;bgcolor</code></dt>
+<dd> Set the hexadecimal (#rrggbb) background color of the selected tab.</dd>
+<dt><code>&#8211;fgcolor</code></dt>
+<dd> Set the hexadecimal (#rrggbb) foreground color of the selected tab</dd>
+<dt><code>&#8211;rename-tab</code></dt>
+<dd> Rename the specified tab. Reset to default if TITLE is a single dash &quot;-&quot;.</dd>
+<dt><code>-r, &#8211;rename-current-tab</code></dt>
+<dd> Rename the current tab. Reset to default if TITLE is a single dash &quot;-&quot;.</dd>
+<dt><code>-q, &#8211;quit</code></dt>
+<dd> Closes the current running guake</dd></dl>
 <h2>AUTHOR</h2>
 <p> guake was originally written by &lt;gabriel [at] guake-terminal.org&gt; </p>
 <p> This manual page was written by Gabriel Falcao Goncalves de Moura &lt;gabriel [at] guake-terminal.org&gt;, for the Debian project (but may be used by others). </p>

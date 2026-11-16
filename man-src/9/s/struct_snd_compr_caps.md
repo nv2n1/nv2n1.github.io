@@ -24,35 +24,35 @@ struct_snd_compr_caps - caps descriptor
 <h2>Members</h2>
 
 num_codecs
-<dl><dd>number of codecs supported</dl>
+<dl><dd>number of codecs supported</dd></dl>
  
 
  direction
-<dl><dd>direction supported. Of type snd_compr_direction</dl>
+<dl><dd>direction supported. Of type snd_compr_direction</dd></dl>
  
 
  min_fragment_size
-<dl><dd>minimum fragment supported by DSP</dl>
+<dl><dd>minimum fragment supported by DSP</dd></dl>
  
 
  max_fragment_size
-<dl><dd>maximum fragment supported by DSP</dl>
+<dl><dd>maximum fragment supported by DSP</dd></dl>
  
 
  min_fragments
-<dl><dd>min fragments supported by DSP</dl>
+<dl><dd>min fragments supported by DSP</dd></dl>
  
 
  max_fragments
-<dl><dd>max fragments supported by DSP</dl>
+<dl><dd>max fragments supported by DSP</dd></dl>
  
 
  codecs[MAX_NUM_CODECS]
-<dl><dd>pointer to array of codecs</dl>
+<dl><dd>pointer to array of codecs</dd></dl>
  
 
  reserved[11]
-<dl><dd>reserved field</dl>
+<dl><dd>reserved field</dd></dl>
 
 <h2>Copyright</h2>
 

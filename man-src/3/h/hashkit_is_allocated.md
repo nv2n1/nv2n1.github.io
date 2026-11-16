@@ -12,17 +12,17 @@ description: "hashkit_is_allocated – libhashkit Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libhashkit/hashkit.h&gt;</p>
 <dl>
-<dt><code>hashkit_st</code></p>
+<dt><code>hashkit_st</code></dt>
 <dd>
-<dt><i>hashkit_st</i> *hashkit_create(<i>hashkit_st</i><i>&nbsp;<wbr>*hash</i>)</p>
+</dd><dt><i>hashkit_st</i> *hashkit_create(<i>hashkit_st</i><i>&nbsp;<wbr>*hash</i>)</dt>
 <dd>
-<dt><i>hashkit_st</i> *hashkit_clone(<i>hashkit_st</i><i>&nbsp;<wbr>*destination</i>, const <i>hashkit_st</i><i>&nbsp;<wbr>*ptr</i>)</p>
+</dd><dt><i>hashkit_st</i> *hashkit_clone(<i>hashkit_st</i><i>&nbsp;<wbr>*destination</i>, const <i>hashkit_st</i><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<dt><code>void hashkit_free(</code><i>hashkit_st</i><i>&nbsp;<wbr>*hash</i>)</p>
+</dd><dt><code>void hashkit_free(</code><i>hashkit_st</i><i>&nbsp;<wbr>*hash</i>)</dt>
 <dd>
-<dt><code>bool hashkit_is_allocated(const </code><i>hashkit_st</i><i>&nbsp;<wbr>*hash</i>)</p>
+</dd><dt><code>bool hashkit_is_allocated(const </code><i>hashkit_st</i><i>&nbsp;<wbr>*hash</i>)</dt>
 <dd>
-<p> Compile and link with -lhashkit</dl>
+<p> Compile and link with -lhashkit</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <i>hashkit_create()</i> function initializes a hashkit object for use. If you pass a NULL argument for hash, then the memory for the object is allocated. If you specify a pre-allocated piece of memory, that is initialized for use. </p>
 <p> The <i>hashkit_clone()</i> function initializes a hashkit object much like <i>hashkit_create()</i>, but instead of using default settings it will use the settings of the ptr hashkit object. </p>
@@ -40,3 +40,4 @@ description: "hashkit_is_allocated – libhashkit Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

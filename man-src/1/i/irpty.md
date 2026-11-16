@@ -16,18 +16,18 @@ description: "irpty – pseudo tty driver"
 &nbsp;<wbr>.lircrc file format description for details.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> display usage summary</p>
-<dt><code>-V</code> <code>&#8211;version</code></p>
-<dd> display version</p>
-<dt><code>-e</code> <code>&#8211;no-echo</code></p>
-<dd> disable echo</p>
-<dt><code>-i</code> <code>&#8211;ignore-eof</code></p>
-<dd> ignore EOF</p>
-<dt><code>-n</code> <code>&#8211;non-interactive</code></p>
-<dd> force non-interactive mode</p>
-<dt><code>-v</code> <code>&#8211;verbose</code></p>
-<dd> verbose mode</dl>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> display usage summary</dd>
+<dt><code>-V</code> <code>&#8211;version</code></dt>
+<dd> display version</dd>
+<dt><code>-e</code> <code>&#8211;no-echo</code></dt>
+<dd> disable echo</dd>
+<dt><code>-i</code> <code>&#8211;ignore-eof</code></dt>
+<dd> ignore EOF</dd>
+<dt><code>-n</code> <code>&#8211;non-interactive</code></dt>
+<dd> force non-interactive mode</dd>
+<dt><code>-v</code> <code>&#8211;verbose</code></dt>
+<dd> verbose mode</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
 <h2>Index</h2>

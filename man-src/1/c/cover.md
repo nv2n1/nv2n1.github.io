@@ -68,20 +68,19 @@ cover - help - info - version - summary - report report_format - outputdir dir -
  Tool accepts -report option:
 <dl>
 <dt>html|html_minimal (default)
-<dd> <font SIZE="-1">HTML</font> reporting. Percentage thresholds are color-coded and configurable via -report_c0 &lt;integer&gt;, -report_c1 &lt;integer&gt; and -report_c2 &lt;integer&gt;.: 
-
+</dt><dd> <font SIZE="-1">HTML</font> reporting. Percentage thresholds are color-coded and configurable via -report_c0 &lt;integer&gt;, -report_c1 &lt;integer&gt; and -report_c2 &lt;integer&gt;.: 
  <pre>
     0%      75%      90%      100%
     |   ..   |   ..   |   ..   |
        &lt;c0      &lt;c1      &lt;c2   c3
        red     yellow   orange green
 </pre>
-<dt>html_basic
-<dd> <font SIZE="-1">HTML</font> reporting with syntax highlighting if <font SIZE="-1">PPI::HTML</font> or Perl::Tidy module is detected. Like html|html_minimal reporting, percentage thresholds are color-coded and configurable.
-<dt>text
-<dd> Plain text reporting.
-<dt>compilation
-<dd> Like text but hacked to give a minimal output in a format similar to that output by Perl itself so that it's easier to step through the untested locations with Emacs compilation mode.</dl>
+</dd><dt>html_basic
+</dt><dd> <font SIZE="-1">HTML</font> reporting with syntax highlighting if <font SIZE="-1">PPI::HTML</font> or Perl::Tidy module is detected. Like html|html_minimal reporting, percentage thresholds are color-coded and configurable.
+</dd><dt>text
+</dt><dd> Plain text reporting.
+</dd><dt>compilation
+</dt><dd> Like text but hacked to give a minimal output in a format similar to that output by Perl itself so that it's easier to step through the untested locations with Emacs compilation mode.</dd></dl>
 
 <h2>DETAILS</h2>
 

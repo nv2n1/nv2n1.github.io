@@ -10,7 +10,6 @@ description: "std::pmr::polymorphic_allocator<T>::allocate_bytes – std::pmr::p
 <p>std::pmr::polymorphic_allocator&lt;T&gt;::allocate_bytes &#8211; std::pmr::polymorphic_allocator&lt;T&gt;::allocate_bytes</p>
 <h2>Synopsis</h2>
 <pre><code>void *allocate_bytes(std::size_t nbytes, (since C++ 20)
-
                                              std::size_t alignment = alignof(std::max_align_t));
 Allocates nbytes bytes of storage at specified alignment alignment using the underlying memory resource.Equivalent to return resource()-&gt;allocate(nbytes, alignment);
 </code></pre>

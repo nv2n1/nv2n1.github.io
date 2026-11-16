@@ -12,7 +12,7 @@ description: "setcifsacl – Userspace helper to alter an ACL in a security desc
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>setcifsacl [-v|-a|-D|-M|-S] &quot;{one or more ACEs}&quot; {file system object}</dl>
+</dt><dd>setcifsacl [-v|-a|-D|-M|-S] &quot;{one or more ACEs}&quot; {file system object}</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This tool is part of the cifs-utils suite. </p>
 <p> setcifsacl is a userspace helper program for the Linux CIFS client file system. It is intended to alter an ACL of a security descriptor for a file system object. Whether a security descriptor to be set is applied or not is determined by the CIFS/SMB server. </p>
@@ -21,27 +21,27 @@ description: "setcifsacl – Userspace helper to alter an ACL in a security desc
 <p> -h</p>
 <dl>
 <dt>
-<dd> Print usage message and exit.</dl>
+</dt><dd> Print usage message and exit.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Print version number and exit.</dl>
+</dt><dd> Print version number and exit.</dd></dl>
 <p> -a</p>
 <dl>
 <dt>
-<dd> Add one or more ACEs to an ACL of a security descriptor. An ACE is added even if the same ACE exists in the ACL.</dl>
+</dt><dd> Add one or more ACEs to an ACL of a security descriptor. An ACE is added even if the same ACE exists in the ACL.</dd></dl>
 <p> -D</p>
 <dl>
 <dt>
-<dd> Delete one or more ACEs from an ACL of a security descriptor. Entire ACE has to match in an existing ACL for the listed ACEs to be deleted.</dl>
+</dt><dd> Delete one or more ACEs from an ACL of a security descriptor. Entire ACE has to match in an existing ACL for the listed ACEs to be deleted.</dd></dl>
 <p> -M</p>
 <dl>
 <dt>
-<dd> Modify one or more ACEs from an ACL of a security descriptor. SID and type are used to match for existing ACEs to be modified with the list of ACEs specified.</dl>
+</dt><dd> Modify one or more ACEs from an ACL of a security descriptor. SID and type are used to match for existing ACEs to be modified with the list of ACEs specified.</dd></dl>
 <p> -S</p>
 <dl>
 <dt>
-<dd> Set an ACL of security descriptor with the list of ACEs Existing ACL is replaced entirely with the specified ACEs.</dl>
+</dt><dd> Set an ACL of security descriptor with the list of ACEs Existing ACL is replaced entirely with the specified ACEs.</dd></dl>
 <p> Every ACE entry starts with &quot;ACL:&quot; One or more ACEs are specified within double quotes. Multiple ACEs are separated by a comma. </p>
 <p> Following fields of an ACE can be modified with possible values: </p>
 <p> SID: Either a name or a raw SID value. </p>
@@ -51,3 +51,4 @@ description: "setcifsacl – Userspace helper to alter an ACL in a security desc
 <h2>EXAMPLES</h2>
 <p> Add an ACE<br />
  setcifsacl -a &quot;ACL:CIFSTESTDOM
+</p>

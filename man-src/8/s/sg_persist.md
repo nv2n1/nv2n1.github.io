@@ -23,68 +23,68 @@ description: "sg_persist – use SCSI PERSISTENT RESERVE command to access regis
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well. The following options are sorted in alphabetical order, based on their long option name.</p>
 <dl>
-<dt><code>-l</code>, <code>&#8211;alloc-length</code>=<i>LEN</i></p>
-<dd>specify the allocation length of the PRIN command. <i>LEN</i> is a hex value. By default this value is set to the size of the data-in buffer (8192). This parameter is of use for verification that response to PRIN commands with various allocation lengths is per section 4.3.5.6 of SPC-4 revision 18. Valid <i>LEN</i> values are 0-8192.</p>
-<dt><code>-C</code>, <code>&#8211;clear</code></p>
-<dd>Clear is a sub-command of the PROUT command. It releases the persistent reservation (if any) and clears all registrations from the device. It is required to supply a reservation key that is registered for this I_T_L nexus (identified by <i>&#8211;param-rk=RK</i>).</p>
-<dt><code>-d</code>, <code>&#8211;device</code>=<i>DEVICE</i></p>
-<dd><i>DEVICE</i> to send SCSI commands to. The <i>DEVICE</i> can either be provided via this option or via a freestanding argument. For example, these two: &#8216;sg_persist &#8211;device=/dev/sg2&#8217; and &#8216;sg_persist /dev/sg2&#8217; are equivalent.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output a usage message.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>the response to a valid PRIN sub-command will be output in hexadecimal. By default (i.e. without this option) if the PRIN sub-command is recognised then the response will be decoded as per SPC-4.</p>
-<dt><code>-i</code>, <code>&#8211;in</code></p>
-<dd>specify that a SCSI PERSISTENT RESERVE IN command is required. This is the default.</p>
-<dt><code>-n</code>, <code>&#8211;no-inquiry</code></p>
-<dd>the default action is to do a standard SCSI INQUIRY command and output make, product and revision strings plus the peripheral device type prior to executing a PRIN or PROUT command. With this option the INQUIRY command is skipped.</p>
-<dt><code>-o</code>, <code>&#8211;out</code></p>
-<dd>specify that a SCSI PERSISTENT RESERVE OUT command is required.</p>
-<dt><code>-Y</code>, <code>&#8211;param-alltgpt</code></p>
-<dd>set the &#8216;all target ports&#8217; (ALL_TG_PT) flag in the parameter block of the PROUT command. Only relevant for &#8216;register&#8217; and &#8216;register and ignore existing key&#8217; sub-commands.</p>
-<dt><code>-Z</code>, <code>&#8211;param-aptpl</code></p>
-<dd>set the &#8216;activate persist through power loss&#8217; (APTPL) flag in the parameter block of the PROUT command. Relevant for &#8216;register&#8217;, &#8216;register and ignore existing key&#8217; and &#8216;register and move&#8217; sub-commands.</p>
-<dt><code>-K</code>, <code>&#8211;param-rk</code>=<i>RK</i></p>
-<dd>specify the reservation key found in the parameter block of the PROUT command. <i>RK</i> is assumed to be hex (up to 8 bytes long). Default value is 0. This option is needed by most PROUT sub-commands.</p>
-<dt><code>-S</code>, <code>&#8211;param-sark</code>=<i>SARK</i></p>
-<dd>specify the service action reservation key found in the parameter block of the PROUT command. <i>SARK</i> is assumed to be hex (up to 8 bytes long). Default value is 0. This option is needed by some PROUT sub-commands.</p>
-<dt><code>-P</code>, <code>&#8211;preempt</code></p>
-<dd>Preempt is a sub-command of the PROUT command. Preempts the existing persistent reservation (identified by <i>&#8211;param-sark=SARK</i>) with the registration key that is registered for this I_T_L nexus (identified by <i>&#8211;param-rk=RK</i>). If a new reservation is establised as a result of the preemption then the supplied <i>&#8211;prout-type=TYPE</i> is used as the type for this new reservation.</p>
-<dt><code>-A</code>, <code>&#8211;preempt-abort</code></p>
-<dd>Preempt and Abort is a sub-command of the PROUT command. Preempts the existing persistent reservation (identified by <i>&#8211;param-sark=SARK</i>) with the registration key that is registered for this I_T_L nexus (identified by <i>&#8211;param-rk=RK</i>). If a new reservation is establised as a result of the preemption then the supplied <i>&#8211;prout-type=TYPE</i> is used as the type for this new reservation. ACA and other pending tasks are aborted.</p>
-<dt><code>-T</code>, <code>&#8211;prout-type</code>=<i>TYPE</i></p>
-<dd>specify the PROUT command&#8217;s &#8216;type&#8217; argument. Required by the &#8216;register-move&#8217;, &#8216;reserve&#8217;, &#8216;release&#8217; and &#8216;preempt (and abort)&#8217; sub-commands. Valid <i>TYPE</i> values: 1-&gt; write exclusive, 3-&gt; exclusive access, 5-&gt; write exclusive &#8211; registrants only, 6-&gt; exclusive access &#8211; registrants only, 7-&gt; write exclusive &#8211; all registrants, 8-&gt; exclusive access &#8211; all registrants. Default value is 0 (which is an invalid type). Each &quot;persistent reservation type&quot; is explained in more detail in a subsection of that name in the read reservation section of the PRIN command (section 6.13.3.4 of SPC-4 revision 9).</p>
-<dt><code>-s</code>, <code>&#8211;read-full-status</code></p>
-<dd>Read Full Status is a sub-command of the PRIN command. For each registration with the given SCSI device, it lists the reservation key and associated information. TransportIDs, if supplied in the response, are decoded.</p>
-<dt><code>-k</code>, <code>&#8211;read-keys</code></p>
-<dd>Read Keys is a sub-command of the PRIN command. Lists all the reservation keys registered (i.e. registrations) with the given SCSI device. This is the default sub-command for the SCSI PRIN command.</p>
-<dt><code>-r</code>, <code>&#8211;read-reservation</code></p>
-<dd>Read Reservation is a sub-command of the PRIN command. List information about the current holder of the reservation on the <i>DEVICE</i>. If there is no current reservation this will be noted. Information about the current holder of the reservation includes its reservation key, scope and type.</p>
-<dt><code>-s</code>, <code>&#8211;read-status</code></p>
-<dd>same as <i>&#8211;read-full-status</i>.</p>
-<dt><code>-G</code>, <code>&#8211;register</code></p>
-<dd>Register is a sub-command of the PROUT command. It has 3 different actions depending on associated parameters. a) add a new registration with &#8216;&#8211;param-rk=0&#8217; and &#8216;&#8211;param-sark=&lt;new_rk&gt;&#8217;; b) Change an existing registration with &#8216;&#8211;param-rk=&lt;old_rk&gt;&#8217; and &#8216;&#8211;param-sark=&lt;new_rk&gt;&#8217;; or c) Delete an existing registration with &#8216;&#8211;param-rk=&lt;old_rk&gt;&#8217; and &#8216;&#8211;param-sark=0&#8217;.</p>
-<dt><code>-I</code>, <code>&#8211;register-ignore</code></p>
-<dd>Register and Ignore Existing Key is a sub-command of the PROUT command. Similar to <i>&#8211;register</i> except that when changing a reservation key the old key is not specified. The &#8216;&#8211;param-sark=&lt;new_rk&gt;&#8217; option should also be given.</p>
-<dt><code>-M</code>, <code>&#8211;register-move</code></p>
-<dd>register (another initiator) and move (the reservation held by the current initiator to that other initiator) is a sub-command of the PROUT command. It requires the transportID of the other initiator. [The standard uses the term I_T nexus but the point to stress is that there are two initiators (the one sending this command and another one) but only one logical unit.] The <i>&#8211;prout-type=TYPE</i> and <i>&#8211;param-rk=RK</i> options need to match that of the existing reservation while <i>&#8211;param-sark=SARK</i> option specifies the reservation key of the new (i.e. destination) registration.</p>
-<dt><code>-Q</code>, <code>&#8211;relative-target-port</code>=<i>RTPI</i></p>
-<dd>relative target port identifier that reservation is to be moved to by PROUT &#8216;register and move&#8217; sub-command. <i>RTPI</i> is assumed to be hex in the range 0 to ffff inclusive. Defaults to 0 .</p>
-<dt><code>-L</code>, <code>&#8211;release</code></p>
-<dd>Release is a sub-command of the PROUT command. It releases the current persistent reservation. The <i>&#8211;prout-type=TYPE</i> and <i>&#8211;param-rk=RK</i> options, matching the reservation, must also be specified.</p>
-<dt><code>-c</code>, <code>&#8211;report-capabilities</code></p>
-<dd>Report Capabilities is a sub-command of the PRIN command. It lists information about the aspects of persistent reservations that the <i>DEVICE</i> supports.</p>
-<dt><code>-R</code>, <code>&#8211;reserve</code></p>
-<dd>Reserve is a sub-command of the PROUT command. It creates a new persistent reservation (if permitted). The <i>&#8211;prout-type=TYPE</i> and <i>&#8211;param-rk=RK</i> options must also be specified.</p>
-<dt><code>-X</code>, <code>&#8211;transport-id</code>=<i>TIDS</i></p>
-<dd>The <i>TIDS</i> argument can take one of several forms. It can be a comma (or single space) separated list of ASCII hex bytes representing a single TransportID as defined in SPC-4. They are usually 24 bytes long apart from in iSCSI. The <i>TIDS</i> argument may be a transport specific form (e.g. &quot;sas,5000c50005b32001&quot;). The <i>TIDS</i> argument may be &quot;-&quot; in which case one or more TransportIDs can be read from stdin. The <i>TIDS</i> argument may be of the form &quot;file=&lt;name&gt;&quot; in which case one or more TransportIDs can be read from a file called &lt;name&gt;. See the &quot;TRANSPORT IDs&quot; section below for more information.</p>
-<dt><code>-U</code>, <code>&#8211;unreg</code></p>
-<dd>optional when the PROUT register and move sub-command is invoked. If given it will unregister the current initiator (I_T nexus) after the other initiator has been registered and the reservation moved to it. When not given the initiator (I_T nexus) that sent the PROUT command remains registered.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>print out cdb of issued commands prior to execution. If used twice prints out the parameter block associated with the PROUT command prior to its execution as well. If used thrice decodes given transportID(s) as well. To see the response to a PRIN command in low level form use the <i>&#8211;hex</i> option.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print out version string. Ignore all other parameters.</p>
-<dt><code>-?</code></p>
-<dd>output usage message. Ignore all other parameters.</dl>
+<dt><code>-l</code>, <code>&#8211;alloc-length</code>=<i>LEN</i></dt>
+<dd>specify the allocation length of the PRIN command. <i>LEN</i> is a hex value. By default this value is set to the size of the data-in buffer (8192). This parameter is of use for verification that response to PRIN commands with various allocation lengths is per section 4.3.5.6 of SPC-4 revision 18. Valid <i>LEN</i> values are 0-8192.</dd>
+<dt><code>-C</code>, <code>&#8211;clear</code></dt>
+<dd>Clear is a sub-command of the PROUT command. It releases the persistent reservation (if any) and clears all registrations from the device. It is required to supply a reservation key that is registered for this I_T_L nexus (identified by <i>&#8211;param-rk=RK</i>).</dd>
+<dt><code>-d</code>, <code>&#8211;device</code>=<i>DEVICE</i></dt>
+<dd><i>DEVICE</i> to send SCSI commands to. The <i>DEVICE</i> can either be provided via this option or via a freestanding argument. For example, these two: &#8216;sg_persist &#8211;device=/dev/sg2&#8217; and &#8216;sg_persist /dev/sg2&#8217; are equivalent.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output a usage message.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>the response to a valid PRIN sub-command will be output in hexadecimal. By default (i.e. without this option) if the PRIN sub-command is recognised then the response will be decoded as per SPC-4.</dd>
+<dt><code>-i</code>, <code>&#8211;in</code></dt>
+<dd>specify that a SCSI PERSISTENT RESERVE IN command is required. This is the default.</dd>
+<dt><code>-n</code>, <code>&#8211;no-inquiry</code></dt>
+<dd>the default action is to do a standard SCSI INQUIRY command and output make, product and revision strings plus the peripheral device type prior to executing a PRIN or PROUT command. With this option the INQUIRY command is skipped.</dd>
+<dt><code>-o</code>, <code>&#8211;out</code></dt>
+<dd>specify that a SCSI PERSISTENT RESERVE OUT command is required.</dd>
+<dt><code>-Y</code>, <code>&#8211;param-alltgpt</code></dt>
+<dd>set the &#8216;all target ports&#8217; (ALL_TG_PT) flag in the parameter block of the PROUT command. Only relevant for &#8216;register&#8217; and &#8216;register and ignore existing key&#8217; sub-commands.</dd>
+<dt><code>-Z</code>, <code>&#8211;param-aptpl</code></dt>
+<dd>set the &#8216;activate persist through power loss&#8217; (APTPL) flag in the parameter block of the PROUT command. Relevant for &#8216;register&#8217;, &#8216;register and ignore existing key&#8217; and &#8216;register and move&#8217; sub-commands.</dd>
+<dt><code>-K</code>, <code>&#8211;param-rk</code>=<i>RK</i></dt>
+<dd>specify the reservation key found in the parameter block of the PROUT command. <i>RK</i> is assumed to be hex (up to 8 bytes long). Default value is 0. This option is needed by most PROUT sub-commands.</dd>
+<dt><code>-S</code>, <code>&#8211;param-sark</code>=<i>SARK</i></dt>
+<dd>specify the service action reservation key found in the parameter block of the PROUT command. <i>SARK</i> is assumed to be hex (up to 8 bytes long). Default value is 0. This option is needed by some PROUT sub-commands.</dd>
+<dt><code>-P</code>, <code>&#8211;preempt</code></dt>
+<dd>Preempt is a sub-command of the PROUT command. Preempts the existing persistent reservation (identified by <i>&#8211;param-sark=SARK</i>) with the registration key that is registered for this I_T_L nexus (identified by <i>&#8211;param-rk=RK</i>). If a new reservation is establised as a result of the preemption then the supplied <i>&#8211;prout-type=TYPE</i> is used as the type for this new reservation.</dd>
+<dt><code>-A</code>, <code>&#8211;preempt-abort</code></dt>
+<dd>Preempt and Abort is a sub-command of the PROUT command. Preempts the existing persistent reservation (identified by <i>&#8211;param-sark=SARK</i>) with the registration key that is registered for this I_T_L nexus (identified by <i>&#8211;param-rk=RK</i>). If a new reservation is establised as a result of the preemption then the supplied <i>&#8211;prout-type=TYPE</i> is used as the type for this new reservation. ACA and other pending tasks are aborted.</dd>
+<dt><code>-T</code>, <code>&#8211;prout-type</code>=<i>TYPE</i></dt>
+<dd>specify the PROUT command&#8217;s &#8216;type&#8217; argument. Required by the &#8216;register-move&#8217;, &#8216;reserve&#8217;, &#8216;release&#8217; and &#8216;preempt (and abort)&#8217; sub-commands. Valid <i>TYPE</i> values: 1-&gt; write exclusive, 3-&gt; exclusive access, 5-&gt; write exclusive &#8211; registrants only, 6-&gt; exclusive access &#8211; registrants only, 7-&gt; write exclusive &#8211; all registrants, 8-&gt; exclusive access &#8211; all registrants. Default value is 0 (which is an invalid type). Each &quot;persistent reservation type&quot; is explained in more detail in a subsection of that name in the read reservation section of the PRIN command (section 6.13.3.4 of SPC-4 revision 9).</dd>
+<dt><code>-s</code>, <code>&#8211;read-full-status</code></dt>
+<dd>Read Full Status is a sub-command of the PRIN command. For each registration with the given SCSI device, it lists the reservation key and associated information. TransportIDs, if supplied in the response, are decoded.</dd>
+<dt><code>-k</code>, <code>&#8211;read-keys</code></dt>
+<dd>Read Keys is a sub-command of the PRIN command. Lists all the reservation keys registered (i.e. registrations) with the given SCSI device. This is the default sub-command for the SCSI PRIN command.</dd>
+<dt><code>-r</code>, <code>&#8211;read-reservation</code></dt>
+<dd>Read Reservation is a sub-command of the PRIN command. List information about the current holder of the reservation on the <i>DEVICE</i>. If there is no current reservation this will be noted. Information about the current holder of the reservation includes its reservation key, scope and type.</dd>
+<dt><code>-s</code>, <code>&#8211;read-status</code></dt>
+<dd>same as <i>&#8211;read-full-status</i>.</dd>
+<dt><code>-G</code>, <code>&#8211;register</code></dt>
+<dd>Register is a sub-command of the PROUT command. It has 3 different actions depending on associated parameters. a) add a new registration with &#8216;&#8211;param-rk=0&#8217; and &#8216;&#8211;param-sark=&lt;new_rk&gt;&#8217;; b) Change an existing registration with &#8216;&#8211;param-rk=&lt;old_rk&gt;&#8217; and &#8216;&#8211;param-sark=&lt;new_rk&gt;&#8217;; or c) Delete an existing registration with &#8216;&#8211;param-rk=&lt;old_rk&gt;&#8217; and &#8216;&#8211;param-sark=0&#8217;.</dd>
+<dt><code>-I</code>, <code>&#8211;register-ignore</code></dt>
+<dd>Register and Ignore Existing Key is a sub-command of the PROUT command. Similar to <i>&#8211;register</i> except that when changing a reservation key the old key is not specified. The &#8216;&#8211;param-sark=&lt;new_rk&gt;&#8217; option should also be given.</dd>
+<dt><code>-M</code>, <code>&#8211;register-move</code></dt>
+<dd>register (another initiator) and move (the reservation held by the current initiator to that other initiator) is a sub-command of the PROUT command. It requires the transportID of the other initiator. [The standard uses the term I_T nexus but the point to stress is that there are two initiators (the one sending this command and another one) but only one logical unit.] The <i>&#8211;prout-type=TYPE</i> and <i>&#8211;param-rk=RK</i> options need to match that of the existing reservation while <i>&#8211;param-sark=SARK</i> option specifies the reservation key of the new (i.e. destination) registration.</dd>
+<dt><code>-Q</code>, <code>&#8211;relative-target-port</code>=<i>RTPI</i></dt>
+<dd>relative target port identifier that reservation is to be moved to by PROUT &#8216;register and move&#8217; sub-command. <i>RTPI</i> is assumed to be hex in the range 0 to ffff inclusive. Defaults to 0 .</dd>
+<dt><code>-L</code>, <code>&#8211;release</code></dt>
+<dd>Release is a sub-command of the PROUT command. It releases the current persistent reservation. The <i>&#8211;prout-type=TYPE</i> and <i>&#8211;param-rk=RK</i> options, matching the reservation, must also be specified.</dd>
+<dt><code>-c</code>, <code>&#8211;report-capabilities</code></dt>
+<dd>Report Capabilities is a sub-command of the PRIN command. It lists information about the aspects of persistent reservations that the <i>DEVICE</i> supports.</dd>
+<dt><code>-R</code>, <code>&#8211;reserve</code></dt>
+<dd>Reserve is a sub-command of the PROUT command. It creates a new persistent reservation (if permitted). The <i>&#8211;prout-type=TYPE</i> and <i>&#8211;param-rk=RK</i> options must also be specified.</dd>
+<dt><code>-X</code>, <code>&#8211;transport-id</code>=<i>TIDS</i></dt>
+<dd>The <i>TIDS</i> argument can take one of several forms. It can be a comma (or single space) separated list of ASCII hex bytes representing a single TransportID as defined in SPC-4. They are usually 24 bytes long apart from in iSCSI. The <i>TIDS</i> argument may be a transport specific form (e.g. &quot;sas,5000c50005b32001&quot;). The <i>TIDS</i> argument may be &quot;-&quot; in which case one or more TransportIDs can be read from stdin. The <i>TIDS</i> argument may be of the form &quot;file=&lt;name&gt;&quot; in which case one or more TransportIDs can be read from a file called &lt;name&gt;. See the &quot;TRANSPORT IDs&quot; section below for more information.</dd>
+<dt><code>-U</code>, <code>&#8211;unreg</code></dt>
+<dd>optional when the PROUT register and move sub-command is invoked. If given it will unregister the current initiator (I_T nexus) after the other initiator has been registered and the reservation moved to it. When not given the initiator (I_T nexus) that sent the PROUT command remains registered.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>print out cdb of issued commands prior to execution. If used twice prints out the parameter block associated with the PROUT command prior to its execution as well. If used thrice decodes given transportID(s) as well. To see the response to a PRIN command in low level form use the <i>&#8211;hex</i> option.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print out version string. Ignore all other parameters.</dd>
+<dt><code>-?</code></dt>
+<dd>output usage message. Ignore all other parameters.</dd></dl>
 <h2>TRANSPORT IDs</h2>
 <p>TransportIDs are used in persistent reservations to identify initiators. The format of a TransportID differs depending on the type of transport being used. Their format is described in SPC-4 (in draft revision 20 see section 7.5.4). </p>
 <p> A TransportID is required for the PROUT &#8216;register and move&#8217; sub-command and the PROUT &#8216;register&#8217; sub-command can have zero, one or more TransportIDs. </p>

@@ -14,7 +14,7 @@ description: "iscsi_find_flashnode_conn – finds flashnode connection entry"
 <p><i>fnode_sess</i></p>
 <dl>
 <dd>
-<dd>pointer to parent flashnode session entry</dl>
+</dd><dd>pointer to parent flashnode session entry</dd></dl>
 <h2>Description</h2>
 <p>Finds the flashnode connection object comparing the data passed using logic defined in passed function pointer</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "iscsi_find_flashnode_conn – finds flashnode connection entry"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

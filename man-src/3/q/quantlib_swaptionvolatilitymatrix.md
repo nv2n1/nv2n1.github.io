@@ -47,12 +47,12 @@ description: "QuantLib::SwaptionVolatilityMatrix – At-the-money swaption-volat
 <p> This class provides the at-the-money volatility for a given swaption by interpolating a volatility matrix whose elements are the market volatilities of a set of swaption with given option date and swapLength. </p>
 <p> The volatility matrix M must be defined so that:</p>
 <dl COMPACT>
-<dt>*</p>
-<dd>the number of rows equals the number of option dates;</p>
-<dt>*</p>
-<dd>the number of columns equals the number of swap tenors;</p>
-<dt>*</p>
-<dd>M[i][j] contains the volatility corresponding to the i-th option and j-th tenor.</dl>
+<dt>*</dt>
+<dd>the number of rows equals the number of option dates;</dd>
+<dt>*</dt>
+<dd>the number of columns equals the number of swap tenors;</dd>
+<dt>*</dt>
+<dd>M[i][j] contains the volatility corresponding to the i-th option and j-th tenor.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void performCalculations () const [virtual]</h3>
 <p>This method must implement any calculations which must be (re)done in order to calculate the desired results. </p>

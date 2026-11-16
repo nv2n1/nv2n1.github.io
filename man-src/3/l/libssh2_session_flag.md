@@ -22,9 +22,9 @@ url: "/docs/linux/man/3-libssh2_session_flag/"
 
 <dl>
 <dt>LIBSSH2_FLAG_SIGPIPE
-<dd> If set, libssh2 will not attempt to block SIGPIPEs but will let them trigger from the underlying socket layer.
-<dt>LIBSSH2_FLAG_COMPRESS
-<dd> If set - before the connection negotiation is performed - libssh2 will try to negotiate compression enabling for this connection. By default libssh2 will not attempt to use compression.</dl>
+</dt><dd> If set, libssh2 will not attempt to block SIGPIPEs but will let them trigger from the underlying socket layer.
+</dd><dt>LIBSSH2_FLAG_COMPRESS
+</dt><dd> If set - before the connection negotiation is performed - libssh2 will try to negotiate compression enabling for this connection. By default libssh2 will not attempt to use compression.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

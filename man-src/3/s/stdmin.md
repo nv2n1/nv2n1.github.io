@@ -11,49 +11,33 @@ std::min - std::min
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class T&gt;
     (until C++ 14)
-
         const T &amp;min(const T &amp;a, const T &amp;b);
-
 template &lt;class T&gt;
 (since C++ 14)
-
     constexpr const T &amp;min(const T &amp;a, const T &amp;b);
-
 template &lt;class T, class Compare&gt;
 (until C++ 14)
-
     const T &amp;min(const T &amp;a, const T &amp;b, Compare comp);
-
 template &lt;class T, class Compare&gt;
 (since C++ 14)
-
     constexpr const T &amp;min(const T &amp;a, const T &amp;b, Compare comp);
 (1)
-
     template &lt;class T&gt;
     (since C++ 11)
-
         T min(std::initializer_list&lt;T&gt; ilist);
 (2)(until C++ 14)
-
     template &lt;class T&gt;
     (since C++ 14)
-
         constexpr T min(std::initializer_list&lt;T&gt; ilist);
 (3)
-
     template &lt;class T, class Compare&gt;
     (since C++ 11)
-
         T min(std::initializer_list&lt;T&gt; ilist, Compare comp);
 (4)(until C++ 14)
-
     template &lt;class T, class Compare&gt;
     (since C++ 14)
-
         constexpr T min(std::initializer_list&lt;T&gt; ilist, Compare comp);</code></pre> 
 Returns the smaller of the given values. 
 1-2) Returns the smaller of a and b. 
@@ -145,12 +129,9 @@ Capturing the result of std::min by reference if one of the parameters is rvalue
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;smaller of 1 and 9999: &quot; &lt;&lt; std::min(1, 9999) &lt;&lt; '\n'
               &lt;&lt; &quot;smaller of 'a', and 'b': &quot; &lt;&lt; std::min('a', 'b') &lt;&lt; '\n'

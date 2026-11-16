@@ -15,37 +15,37 @@ description: "gfal-rename – Renames files or directories"
 <p> <code>gfal-rename</code> Renames SOURCE to DESTINATION. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show help about the command.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> output version information and exit.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> verbose mode. Repeat up to 3 times for the most verbose mode.</p>
-<dt><code>-D, &#8211;definition</code></p>
-<dd> define properties for gfal2.</p>
-<dt><code>-C, &#8211;client-info</code></p>
-<dd> provide custom client-side information</p>
-<dt><code>-t, &#8211;timeout</code></p>
-<dd> global timeout for the execution of the command. Command is interrupted if time expires before it finishes.</p>
-<dt><code>-E, &#8211;cert</code></p>
-<dd> user certificate</p>
-<dt><code>&#8211;key</code></p>
-<dd> user private key</p>
-<dt><code>-4</code></p>
-<dd> Forces gfal2-util to use IPv4 addresses only (if the plugin supports this)</p>
-<dt><code>-6</code></p>
-<dd> Forces gfal2-util to use IPv6 addresses only (if the plugin supports this) </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show help about the command.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> output version information and exit.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> verbose mode. Repeat up to 3 times for the most verbose mode.</dd>
+<dt><code>-D, &#8211;definition</code></dt>
+<dd> define properties for gfal2.</dd>
+<dt><code>-C, &#8211;client-info</code></dt>
+<dd> provide custom client-side information</dd>
+<dt><code>-t, &#8211;timeout</code></dt>
+<dd> global timeout for the execution of the command. Command is interrupted if time expires before it finishes.</dd>
+<dt><code>-E, &#8211;cert</code></dt>
+<dd> user certificate</dd>
+<dt><code>&#8211;key</code></dt>
+<dd> user private key</dd>
+<dt><code>-4</code></dt>
+<dd> Forces gfal2-util to use IPv4 addresses only (if the plugin supports this)</dd>
+<dt><code>-6</code></dt>
+<dd> Forces gfal2-util to use IPv6 addresses only (if the plugin supports this) </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>gfal-rename</code></p>
-<dd> file:///tmp/original file:///tmp/newname </p>
+<dt><code>gfal-rename</code></dt>
+<dd> file:///tmp/original file:///tmp/newname </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>/etc/gfal2.d/*</i></p>
 <dl>
 <dt>
-<dd> All configuration files in this directory affect the behavior of the underlying gfal2. </p>
+</dt><dd> All configuration files in this directory affect the behavior of the underlying gfal2. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Duarte Meneses &lt;duarte.meneses [at] cern.ch&gt;<br />

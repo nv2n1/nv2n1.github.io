@@ -71,18 +71,18 @@ cc file.c - o file - lsox
 <p> The <i>private </i> area is just a preallocated data array for the <i>format</i> to use however it wishes. It should have a defined data structure and cast the array to that structure. See voc.c for the use of a private data area. Voc.c has to track the number of samples it writes and when finishing, seek back to the beginning of the file and write it out. The private area is not very large. The &#8220;echo&#8221; effect has to malloc() a much larger area for its delay line buffers. </p>
 <p> A <i>format</i> has 6 routines:</p>
 <dl>
-<dt>startread</p>
-<dd> Set up the format parameters, or read in a data header, or do what needs to be done.</p>
-<dt>read</p>
-<dd> Given a buffer and a length: read up to that many samples, transform them into signed long integers, and copy them into the buffer. Return the number of samples actually read.</p>
-<dt>stopread</p>
-<dd> Do what needs to be done.</p>
-<dt>startwrite</p>
-<dd> Set up the format parameters, or write out a data header, or do what needs to be done.</p>
-<dt>write</p>
-<dd> Given a buffer and a length: copy that many samples out of the buffer, convert them from signed longs to the appropriate data, and write them to the file. If it can&#8217;t write out all the samples, fail.</p>
-<dt>stopwrite</p>
-<dd> Fix up any file header, or do what needs to be done.</dl>
+<dt>startread</dt>
+<dd> Set up the format parameters, or read in a data header, or do what needs to be done.</dd>
+<dt>read</dt>
+<dd> Given a buffer and a length: read up to that many samples, transform them into signed long integers, and copy them into the buffer. Return the number of samples actually read.</dd>
+<dt>stopread</dt>
+<dd> Do what needs to be done.</dd>
+<dt>startwrite</dt>
+<dd> Set up the format parameters, or write out a data header, or do what needs to be done.</dd>
+<dt>write</dt>
+<dd> Given a buffer and a length: copy that many samples out of the buffer, convert them from signed longs to the appropriate data, and write them to the file. If it can&#8217;t write out all the samples, fail.</dd>
+<dt>stopwrite</dt>
+<dd> Fix up any file header, or do what needs to be done.</dd></dl>
 <h2>EFFECTS</h2>
 <p> Each effect runs with one input and one output stream. An effect&#8217;s implementation comprises six functions that may be called to the follow flow diagram: </p>
 <pre>
@@ -103,18 +103,18 @@ LOOP (invocations with different parameters)
 </pre>
 <p> Notes: For some effects, some of the functions may not be needed and can be NULL. An effect that is marked `MCHAN&#8217; does not use the LOOP (channels) lines and must therefore perform multiple channel processing inside the affected functions. Multiple effect instances may be processed (according to the above flow diagram) in parallel.</p>
 <dl>
-<dt>getopts</p>
-<dd> is called with a character string argument list for the effect.</p>
-<dt>start</p>
-<dd> is called with the signal parameters for the input and output streams.</p>
-<dt>flow</p>
-<dd> is called with input and output data buffers, and (by reference) the input and output data buffer sizes. It processes the input buffer into the output buffer, and sets the size variables to the numbers of samples actually processed. It is under no obligation to read from the input buffer or write to the output buffer during the same call. If the call returns SOX_EOF then this should be used as an indication that this effect will no longer read any data and can be used to switch to drain mode sooner.</p>
-<dt>drain</p>
-<dd> is called after there are no more input data samples. If the effect wishes to generate more data samples it copies the generated data into a given buffer and returns the number of samples generated. If it fills the buffer, it will be called again, etc. The echo effect uses this to fade away.</p>
-<dt>stop</p>
-<dd> is called when there are no more input samples and no more output samples to process. It is typically used to release or close resources (e.g. allocated memory or temporary files) that were set-up in <i>start</i>. See echo.c for an example.</p>
-<dt>kill</p>
-<dd> is called to allow resources allocated by <i>getopts</i> to be released. See pad.c for an example.</dl>
+<dt>getopts</dt>
+<dd> is called with a character string argument list for the effect.</dd>
+<dt>start</dt>
+<dd> is called with the signal parameters for the input and output streams.</dd>
+<dt>flow</dt>
+<dd> is called with input and output data buffers, and (by reference) the input and output data buffer sizes. It processes the input buffer into the output buffer, and sets the size variables to the numbers of samples actually processed. It is under no obligation to read from the input buffer or write to the output buffer during the same call. If the call returns SOX_EOF then this should be used as an indication that this effect will no longer read any data and can be used to switch to drain mode sooner.</dd>
+<dt>drain</dt>
+<dd> is called after there are no more input data samples. If the effect wishes to generate more data samples it copies the generated data into a given buffer and returns the number of samples generated. If it fills the buffer, it will be called again, etc. The echo effect uses this to fade away.</dd>
+<dt>stop</dt>
+<dd> is called when there are no more input samples and no more output samples to process. It is typically used to release or close resources (e.g. allocated memory or temporary files) that were set-up in <i>start</i>. See echo.c for an example.</dd>
+<dt>kill</dt>
+<dd> is called to allow resources allocated by <i>getopts</i> to be released. See pad.c for an example.</dd></dl>
 <h2>LINKING</h2>
 <p> The method of linking against libsox depends on how SoX was built on your system. For a static build, just link against the libraries as normal. For a dynamic build, you should use libtool to link with the correct linker flags. See the libtool manual for details; basically, you use it as: </p>
 <pre>

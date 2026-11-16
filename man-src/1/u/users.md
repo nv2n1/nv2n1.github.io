@@ -14,10 +14,10 @@ description: "users – print the user names of users currently logged in to the
 <h2>DESCRIPTION</h2>
 <p> Output who is currently logged in according to FILE. If FILE is not specified, use <i>,/var/run/utmp/</i>. <i>,/var/log/wtmp/</i> as FILE is common.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Joseph Arceneaux and David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

@@ -80,16 +80,16 @@ description: "cloud_init_selinux – Security Enhanced Linux Policy for the clou
 <p> <code>cloud_init_exec_t</code> </p>
 <p> &#8211; Set files with the cloud_init_exec_t type, if you want to transition an executable to the cloud_init_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/cloud-init, /usr/libexec/min-cloud-agent, /usr/libexec/min-metadata-service </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/cloud-init, /usr/libexec/min-cloud-agent, /usr/libexec/min-metadata-service </dd>
 </dl>
 <p> <code>cloud_init_tmp_t</code> </p>
 <p> &#8211; Set files with the cloud_init_tmp_t type, if you want to store cloud init temporary files in the /tmp directories. </p>
 <p> <code>cloud_init_unit_file_t</code> </p>
 <p> &#8211; Set files with the cloud_init_unit_file_t type, if you want to treat the files as cloud init unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/cloud-init.*, /usr/lib/systemd/system/cloud-config.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/cloud-init.*, /usr/lib/systemd/system/cloud-config.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

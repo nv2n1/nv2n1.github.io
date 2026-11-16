@@ -15,7 +15,7 @@ rpc_wake_up - wake up all rpc_tasks
 <h2>Arguments</h2>
 
 <i>queue</i>
-<dl><dd><dd>rpc_wait_queue on which the tasks are sleeping</dl>
+<dl><dd></dd><dd>rpc_wait_queue on which the tasks are sleeping</dd></dl>
 
 <h2>Description</h2>
 

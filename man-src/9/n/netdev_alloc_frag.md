@@ -15,7 +15,7 @@ netdev_alloc_frag - allocate a page fragment
 <h2>Arguments</h2>
 
 <i>fragsz</i>
-<dl><dd><dd>fragment size</dl>
+<dl><dd></dd><dd>fragment size</dd></dl>
 
 <h2>Description</h2>
 

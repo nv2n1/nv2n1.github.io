@@ -11,10 +11,10 @@ description: "reportview – ask KWeatherService to display a weather report"
 <p> reportview &#8211; ask KWeatherService to display a weather report </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>reportview;</code> [<code>KDE Generic Options</code>] [<code>Qt Generic Options</code>]</dl>
+<dt> <code>reportview;</code> [<code>KDE Generic Options</code>] [<code>Qt Generic Options</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>reportview</code></p>
-<dd>is not intended to be used directly. </p>
+<dd>is not intended to be used directly. </dd>
 <p> <code>reportview</code> is a small program that asks KWeatherService to display a weather report. Information shown includes the temperature, wind speed and air pressure. </p>
 <p> KWeatherService is a DCOP service used by both reportview and the kweather panel applet to provide weather data. There is no need to start KWeatherService separately; reportview will start the service itself if needed.</p>
 <h2>SEE ALSO</h2>
@@ -27,5 +27,5 @@ description: "reportview – ask KWeatherService to display a weather report"
 <p> <code>Ben Burton</code> &lt;bab [at] debian.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

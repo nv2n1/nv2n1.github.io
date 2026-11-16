@@ -28,26 +28,26 @@ description: "frepple – open source production planning and scheduling"
 &nbsp;<wbr>application. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-validate -v</code></p>
-<dd> Validate the xml input for correctness.</p>
-<dt><code>-check -c</code></p>
-<dd> Only validate the input, without executing the content.</p>
-<dt><code>-? -h -help</code></p>
-<dd> Show instructions. </p>
+<dt><code>-validate -v</code></dt>
+<dd> Validate the xml input for correctness.</dd>
+<dt><code>-check -c</code></dt>
+<dd> Only validate the input, without executing the content.</dd>
+<dt><code>-? -h -help</code></dt>
+<dd> Show instructions. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>FREPPLE_HOME</p>
-<dd> Optionally points to a directory where the initialization files will be searched. </p>
+<dt>FREPPLE_HOME</dt>
+<dd> Optionally points to a directory where the initialization files will be searched. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>./init.xml $FREPPLE_HOME/init.xml /usr/share/frepple/init.xml</p>
-<dd> XML data automatically loaded upon startup. The first file with the name init.xml in the above sequence is processed. </p>
-<dt>./frepple.xsd $FREPPLE_HOME/frepple.xsd /usr/share/frepple/frepple.xsd</p>
-<dd> XML Schema definition for validation of the XML input data. The first file with the name frepple.xsd in the above sequence is processed. </p>
-<dt>./init.py $FREPPLE_HOME/init.py /usr/share/frepple/init.py</p>
-<dd> Python commands executed automatically upon startup. The first file with the name init.py in the above sequence is processed. </p>
+<dt>./init.xml $FREPPLE_HOME/init.xml /usr/share/frepple/init.xml</dt>
+<dd> XML data automatically loaded upon startup. The first file with the name init.xml in the above sequence is processed. </dd>
+<dt>./frepple.xsd $FREPPLE_HOME/frepple.xsd /usr/share/frepple/frepple.xsd</dt>
+<dd> XML Schema definition for validation of the XML input data. The first file with the name frepple.xsd in the above sequence is processed. </dd>
+<dt>./init.py $FREPPLE_HOME/init.py /usr/share/frepple/init.py</dt>
+<dd> Python commands executed automatically upon startup. The first file with the name init.py in the above sequence is processed. </dd>
 </dl>
 <h2>RETURNS</h2>
 <p> 0 when successful, non-zero in case of errors </p>

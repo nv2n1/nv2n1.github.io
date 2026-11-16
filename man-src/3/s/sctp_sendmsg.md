@@ -12,7 +12,6 @@ description: "sctp_sendmsg – Send a message from a SCTP socket."
 <pre><code>#include &lt;netinet/sctp.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
-
 int sctp_sendmsg(int sd, const void *msg, size_t len,
                  struct sockaddr *to, socklen_t tolen,
                  uint32_t ppid, uint32_t flags,
@@ -21,14 +20,14 @@ int sctp_sendmsg(int sd, const void *msg, size_t len,
 <h2>Description</h2>
 <p><code>sctp_sendmsg</code> is a wrapper library function that can be used to send a message from a socket while using the advanced features of SCTP. <i>sd</i> is the socket descriptor from which the message pointed to by <i>msg</i> of length <i>len</i> is sent. <i>to</i> is the destination address of the message and <i>tolen</i> is the length of the destination address. <i>stream_no</i> identifies the stream number that the application wishes to send this message to. <i>flags</i> parameter is composed of a bitwise OR of the following values.</p>
 <dl>
-<dt><code>SCTP_UNORDERED</code></p>
-<dd>This flags requests the un-ordered delivery of the message.</p>
-<dt><code>SCTP_ADDR_OVER</code></p>
-<dd>This flag, in the one-to-many style, requests the SCTP stack to override the primary destination address with address specified in <i>to.</i></p>
-<dt><code>SCTP_ABORT</code></p>
-<dd>Setting this flag causes the specified association to abort by sending an ABORT message to the peer(one-to-many style only). The ABORT chunk will contain an error cause &#8216;User Initiated Abort&#8217; with cause code 12. The cause specific information of this error cause is provided in <i>msg.</i></p>
-<dt><code>SCTP_EOF</code></p>
-<dd>Setting this flag invokes the SCTP graceful shutdown procedure on the specific association(one-to-many style only).</dl>
+<dt><code>SCTP_UNORDERED</code></dt>
+<dd>This flags requests the un-ordered delivery of the message.</dd>
+<dt><code>SCTP_ADDR_OVER</code></dt>
+<dd>This flag, in the one-to-many style, requests the SCTP stack to override the primary destination address with address specified in <i>to.</i></dd>
+<dt><code>SCTP_ABORT</code></dt>
+<dd>Setting this flag causes the specified association to abort by sending an ABORT message to the peer(one-to-many style only). The ABORT chunk will contain an error cause &#8216;User Initiated Abort&#8217; with cause code 12. The cause specific information of this error cause is provided in <i>msg.</i></dd>
+<dt><code>SCTP_EOF</code></dt>
+<dd>Setting this flag invokes the SCTP graceful shutdown procedure on the specific association(one-to-many style only).</dd></dl>
 <p> <i>timetolive</i> specifies the time duration in milliseconds. The sending side will expire the message if the message has not been sent to the peer within this time period. A value of 0 indicates that no timeout should occur on this message. <i>ppid</i> is an opaque unsigned value that is passed to the remote end along with the message. <i>context</i> is a 32 bit opaque value that is passed back to the upper layer along with the undelivered message if an error occurs on the send of the message.</p>
 <h2>Return Value</h2>
 <p>On success, <code>sctp_sendmsg</code> returns the number of bytes sent or -1 if an error occurred.</p>

@@ -15,14 +15,14 @@ description: "XmFontList — Data type for a font list"
 <p> The value of <code>XmFONTLIST_DEFAULT_TAG</code> is <code>XmFONTLIST_DEFAULT_TAG_STRING</code>. </p>
 <p> When a compound string is displayed, the font list element tag of the compound string segment is matched with a font list entry tag in the font list and the matching font list entry is used to display the compound string. A font list entry is chosen as follows:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>The first font list entry whose tag matches the tag of the compound string segment is used.</p>
-<dt> &bull;</p>
-<dd>If no match has been found and if the tag of the compound string segment is <code>XmFONTLIST_DEFAULT_TAG</code>, the first font list entry whose tag matches the tag that would result from creating an entry with <code>XmSTRING_DEFAULT_CHARSET</code> is used. For example, if creating an entry with <code>XmSTRING_DEFAULT_CHARSET</code> would result in the tag <code>ISO8859-1</code>, the compound string segment tag <code>XmFONTLIST_DEFAULT_TAG</code> matches the font list entry tag <code>ISO8859-1</code>.</p>
-<dt> &bull;</p>
-<dd>If no match has been found and if the tag of the compound string segment matches the tag that would result from creating a segment with <code>XmSTRING_DEFAULT_CHARSET</code>, the first font list entry whose tag is <code>XmFONTLIST_DEFAULT_TAG</code> is used.</p>
-<dt> &bull;</p>
-<dd>If no match has been found, the first entry in the font list is used.</dl>
+<dt> &bull;</dt>
+<dd>The first font list entry whose tag matches the tag of the compound string segment is used.</dd>
+<dt> &bull;</dt>
+<dd>If no match has been found and if the tag of the compound string segment is <code>XmFONTLIST_DEFAULT_TAG</code>, the first font list entry whose tag matches the tag that would result from creating an entry with <code>XmSTRING_DEFAULT_CHARSET</code> is used. For example, if creating an entry with <code>XmSTRING_DEFAULT_CHARSET</code> would result in the tag <code>ISO8859-1</code>, the compound string segment tag <code>XmFONTLIST_DEFAULT_TAG</code> matches the font list entry tag <code>ISO8859-1</code>.</dd>
+<dt> &bull;</dt>
+<dd>If no match has been found and if the tag of the compound string segment matches the tag that would result from creating a segment with <code>XmSTRING_DEFAULT_CHARSET</code>, the first font list entry whose tag is <code>XmFONTLIST_DEFAULT_TAG</code> is used.</dd>
+<dt> &bull;</dt>
+<dd>If no match has been found, the first entry in the font list is used.</dd></dl>
 <p> The font list interface consists of the routines listed in <code>Related Information</code>. </p>
 <p> Font lists are specified in resource files with the following syntax: </p>
 <pre><i>resource_spec</i><code>:</code> <i>font_entry</i> [, <i>font_entry</i> ]+</pre>

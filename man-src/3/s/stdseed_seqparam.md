@@ -12,7 +12,6 @@ std::seed_seq::param - std::seed_seq::param
 
 <pre><code>template &lt;class OutputIt&gt;
 (since C++ 11)
-
     void param(OutputIt dest) const;</code></pre> 
 Outputs the initial seed sequence that's stored in the std::seed_seq object. 
 
@@ -36,13 +35,9 @@ Throws only if an operation on dest throws.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 int main()
-
 {
     std::seed_seq s1 = {-1, 0, 1};
     s1.param(std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;));

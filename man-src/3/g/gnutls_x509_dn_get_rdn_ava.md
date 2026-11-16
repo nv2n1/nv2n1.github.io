@@ -14,14 +14,14 @@ description: "gnutls_x509_dn_get_rdn_ava – API function"
 <p> <code>int gnutls_x509_dn_get_rdn_ava(gnutls_x509_dn_t </code><i>dn</i><code>, int </code><i>irdn</i><code>, int </code><i>iava</i><code>, gnutls_x509_ava_st * </code><i>ava</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_dn_t dn</p>
-<dd> a pointer to DN</p>
-<dt>int irdn</p>
-<dd> index of RDN</p>
-<dt>int iava</p>
-<dd> index of AVA.</p>
-<dt>gnutls_x509_ava_st * ava</p>
-<dd> Pointer to structure which will hold output information.</dl>
+<dt>gnutls_x509_dn_t dn</dt>
+<dd> a pointer to DN</dd>
+<dt>int irdn</dt>
+<dd> index of RDN</dd>
+<dt>int iava</dt>
+<dd> index of AVA.</dd>
+<dt>gnutls_x509_ava_st * ava</dt>
+<dd> Pointer to structure which will hold output information.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get pointers to data within the DN. The format of the <i>ava</i> structure is shown below. </p>
 <p> struct gnutls_x509_ava_st { gnutls_datum_t oid; gnutls_datum_t value; unsigned long value_tag; }; </p>
@@ -39,6 +39,6 @@ description: "gnutls_x509_dn_get_rdn_ava – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -34,11 +34,11 @@ FI_MSG, FI_TAGGED, FI_RMA
 
 Verbs provider requires applications to support the following modes:
 <dl><dt>&bull;
-<dd>FI_LOCAL_MR for all applications.
-<dt>&bull;
-<dd>FI_RX_CQ_DATA for applications that want to use RMA. Applications must take responsibility of posting receives for any incoming CQ data.
-<dt>&bull;
-<dd>FI_CONTEXT for applications making uses of the experimental FI_EP_RDM capability.</dl>
+</dt><dd>FI_LOCAL_MR for all applications.
+</dd><dt>&bull;
+</dt><dd>FI_RX_CQ_DATA for applications that want to use RMA. Applications must take responsibility of posting receives for any incoming CQ data.
+</dd><dt>&bull;
+</dt><dd>FI_CONTEXT for applications making uses of the experimental FI_EP_RDM capability.</dd></dl>
 
 <h3>Addressing Formats</h3>
 
@@ -56,26 +56,26 @@ Verbs provider supports FI_INJECT, FI_COMPLETION, FI_REMOTE_CQ_DATA, FI_TRANSMIT
 
 Verbs provider support the following message ordering:
 <dl><dt>&bull;
-<dd>Read after Read
-<dt>&bull;
-<dd>Read after Write
-<dt>&bull;
-<dd>Read after Send
-<dt>&bull;
-<dd>Write after Write
-<dt>&bull;
-<dd>Write after Send
-<dt>&bull;
-<dd>Send after Write
-<dt>&bull;
-<dd>Send after Send</dl>
+</dt><dd>Read after Read
+</dd><dt>&bull;
+</dt><dd>Read after Write
+</dd><dt>&bull;
+</dt><dd>Read after Send
+</dd><dt>&bull;
+</dt><dd>Write after Write
+</dd><dt>&bull;
+</dt><dd>Write after Send
+</dd><dt>&bull;
+</dt><dd>Send after Write
+</dd><dt>&bull;
+</dt><dd>Send after Send</dd></dl>
  
 
  and the following completion ordering:
 <dl><dt>&bull;
-<dd>TX contexts: FI_ORDER_STRICT
-<dt>&bull;
-<dd>RX contexts: FI_ORDER_DATA</dl>
+</dt><dd>TX contexts: FI_ORDER_STRICT
+</dd><dt>&bull;
+</dt><dd>RX contexts: FI_ORDER_DATA</dd></dl>
 
 <h3>Fork</h3>
 
@@ -114,27 +114,27 @@ Scalable endpoints, FABRIC_DIRECT
 <h3>Unsupported features specific to MSG endpoints</h3>
 
 <dl><dt>&bull;
-<dd>Counters, FI_SOURCE, FI_TAGGED, FI_PEEK, FI_CLAIM, fi_cancel, fi_ep_alias, shared TX context, cq_readfrom operations.
-<dt>&bull;
-<dd>Completion flags are not reported if a request posted to an endpoint completes in error.</dl>
+</dt><dd>Counters, FI_SOURCE, FI_TAGGED, FI_PEEK, FI_CLAIM, fi_cancel, fi_ep_alias, shared TX context, cq_readfrom operations.
+</dd><dt>&bull;
+</dt><dd>Completion flags are not reported if a request posted to an endpoint completes in error.</dd></dl>
 
 <h3>Unsupported features specific to RDM endpoints</h3>
 
 The RDM support for verbs have the following limitations:
 <dl><dt>&bull;
-<dd>Supports iovs of only size 1.
-<dt>&bull;
-<dd>Wait objects are not supported.
-<dt>&bull;
-<dd>Not thread safe.</dl>
+</dt><dd>Supports iovs of only size 1.
+</dd><dt>&bull;
+</dt><dd>Wait objects are not supported.
+</dd><dt>&bull;
+</dt><dd>Not thread safe.</dd></dl>
 
 <h3>Fork</h3>
 
 The support for fork in the provider has the following limitations:
 <dl><dt>&bull;
-<dd>Fabric resources like endpoint, CQ, EQ, etc. should not be used in the forked process.
-<dt>&bull;
-<dd>The memory registered using fi_mr_reg has to be page aligned since ibv_reg_mr marks the entire page that a memory region belongs to as not to be re-mapped when the process is forked (MADV_DONTFORK).</dl>
+</dt><dd>Fabric resources like endpoint, CQ, EQ, etc. should not be used in the forked process.
+</dd><dt>&bull;
+</dt><dd>The memory registered using fi_mr_reg has to be page aligned since ibv_reg_mr marks the entire page that a memory region belongs to as not to be re-mapped when the process is forked (MADV_DONTFORK).</dd></dl>
 
 <h2>Runtime Parameters</h2>
 

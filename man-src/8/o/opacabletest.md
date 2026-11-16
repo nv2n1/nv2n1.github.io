@@ -13,61 +13,61 @@ description: "opacabletest"
 <p>opacabletest [-C|-A] [-c <i>file</i>] [-f <i>hostfile</i>] [-h <i>&#8216;hosts&#8217;</i>] [-n <i>numprocs</i>] [-t#8217#160; <i>portsfile</i>] [-p <i>ports</i>] [start|start_fi|start_isl|stop|stop_fi| stop_isl] &#8230;</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
-<dt>-C</p>
-<dd>Clears error counters. </p>
-<dt>-A</p>
-<dd>Forces clear of hardware error counters. Implies -C. </p>
-<dt>-c <i>file</i></p>
-<dd>Error thresholds configuration file. Default is /etc/sysconfig/opa/opamon.si.conf file. Only used if -C or -A specified. </p>
-<dt>-f <i>hostfile</i></p>
-<dd>File with hosts to include in HFI -to-SW test. Default is /etc/sysconfig/opa/hosts file. </p>
-<dt>-h <i>hosts</i></p>
-<dd>List of hosts to include in HFI -SW test. </p>
-<dt>-n <i>numprocs</i></p>
-<dd>Number of processes per host for HFI -SW test. </p>
-<dt>-t <i>portsfile</i></p>
-<dd>File with list of local HFI ports used to access fabrics when clearing counters. Default is /etc/sysconfig/opa/ports file. </p>
-<dt>-p <i>ports</i></p>
-<dd>List of local HFI ports used to access fabrics for counter clear. Default is first active port. The first HFI in the system is 1. The first port on an HFI is 1. </p>
-<dd>Uses the format hfi:port, for example:</p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-C</dt>
+<dd>Clears error counters. </dd>
+<dt>-A</dt>
+<dd>Forces clear of hardware error counters. Implies -C. </dd>
+<dt>-c <i>file</i></dt>
+<dd>Error thresholds configuration file. Default is /etc/sysconfig/opa/opamon.si.conf file. Only used if -C or -A specified. </dd>
+<dt>-f <i>hostfile</i></dt>
+<dd>File with hosts to include in HFI -to-SW test. Default is /etc/sysconfig/opa/hosts file. </dd>
+<dt>-h <i>hosts</i></dt>
+<dd>List of hosts to include in HFI -SW test. </dd>
+<dt>-n <i>numprocs</i></dt>
+<dd>Number of processes per host for HFI -SW test. </dd>
+<dt>-t <i>portsfile</i></dt>
+<dd>File with list of local HFI ports used to access fabrics when clearing counters. Default is /etc/sysconfig/opa/ports file. </dd>
+<dt>-p <i>ports</i></dt>
+<dd>List of local HFI ports used to access fabrics for counter clear. Default is first active port. The first HFI in the system is 1. The first port on an HFI is 1. </dd>
+<dd>Uses the format hfi:port, for example:</dd>
 <dl>
 <dd>
-<dl>
-<dd>0:0 First active port in system. </p>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>0:y Port <i>y</i> within system. </p>
+</dd><dl>
+<dd>0:0 First active port in system. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>x:0 First active port on HFI <i>x</i>. </p>
+</dd><dl>
+<dd>0:y Port <i>y</i> within system. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>x:0 First active port on HFI <i>x</i>. </dd>
+</dl>
+</dl>
 <dl>
-<dd>x:y HFI <i>x</i>, port <i>y</i>. </p>
+<dd>
+</dd><dl>
+<dd>x:y HFI <i>x</i>, port <i>y</i>. </dd>
 </dl>
 </dl>
-<dt>start</p>
-<dd>Starts the HFI -SW and ISL tests. </p>
-<dt>start_fi</p>
-<dd>Starts the HFI -SW test. </p>
-<dt>start_isl</p>
-<dd>Starts the ISL test. </p>
-<dt>stop</p>
-<dd>Stops the HFI -SW and ISL tests. </p>
-<dt>stop_fi</p>
-<dd>Stops the HFI -SW test. </p>
-<dt>stop_isl</p>
-<dd>Stops the ISL test. </p>
+<dt>start</dt>
+<dd>Starts the HFI -SW and ISL tests. </dd>
+<dt>start_fi</dt>
+<dd>Starts the HFI -SW test. </dd>
+<dt>start_isl</dt>
+<dd>Starts the ISL test. </dd>
+<dt>stop</dt>
+<dd>Stops the HFI -SW and ISL tests. </dd>
+<dt>stop_fi</dt>
+<dd>Stops the HFI -SW test. </dd>
+<dt>stop_isl</dt>
+<dd>Stops the ISL test. </dd>
 </dl>
 <p> The HFI -SW cable test requires that the <code>FF_MPI_APPS_DIR</code> is set, and it contains a pre-built copy of the mpi_apps for an appropriate message passing interface (MPI). </p>
 <p> The ISL cable test started by this tool assumes that the master Host Subnet Manager (HSM) is running on this host. If using the Embedded Subnet Manager (ESM), or if a different host is the master HSM, the ISL cable test must be controlled by the switch CLI, or by Intel(R) Omni-Path Fabric Suite FastFabric on the master HSM respectively.</p>
@@ -80,14 +80,14 @@ description: "opacabletest"
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>HOSTS</code></p>
-<dd>List of hosts, used if -h option not supplied. </p>
-<dt><code>HOSTS_FILE</code></p>
-<dd>File containing list of hosts, used in absence of -f and -h. </p>
-<dt><code>PORTS</code></p>
-<dd>List of ports, used in absence of -t and -p. </p>
-<dt><code>PORTS_FILE</code></p>
-<dd>File containing list of ports, used in absence of -t and -p. </p>
-<dt><code>FF_MAX_PARALLEL</code></p>
-<dd>Maximum concurrent operations. </p>
+<dt><code>HOSTS</code></dt>
+<dd>List of hosts, used if -h option not supplied. </dd>
+<dt><code>HOSTS_FILE</code></dt>
+<dd>File containing list of hosts, used in absence of -f and -h. </dd>
+<dt><code>PORTS</code></dt>
+<dd>List of ports, used in absence of -t and -p. </dd>
+<dt><code>PORTS_FILE</code></dt>
+<dd>File containing list of ports, used in absence of -t and -p. </dd>
+<dt><code>FF_MAX_PARALLEL</code></dt>
+<dd>Maximum concurrent operations. </dd>
 </dl>

@@ -18,7 +18,7 @@ description: "basic_ncsa_auth – NCSA httpd-style password file authentication 
 <p>The only parameter is the password file. It must have permissions to be read by the user that Squid is running as.</p>
 <h2>Configuration</h2>
 <dl>
-<dd><code>basic_ncsa_auth /etc/squid/squid.pass</code></dl>
+<dd><code>basic_ncsa_auth /etc/squid/squid.pass</code></dd></dl>
 <p> <code>basic_ncsa_auth</code> must have access to the password file to be executed.</p>
 <h2>Known Issues</h2>
 <p>DES functionality (used by htpasswd by default) silently truncates passwords to 8 characters. Allowing login with password values shorter than the one desired. This authenticator will reject login with long passwords when using DES.</p>

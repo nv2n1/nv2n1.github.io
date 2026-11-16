@@ -14,13 +14,13 @@ description: "bitmap_release_region – release allocated bitmap region"
 <p><i>bitmap</i></p>
 <dl>
 <dd>
-<dd>array of unsigned longs corresponding to the bitmap</dl>
+</dd><dd>array of unsigned longs corresponding to the bitmap</dd></dl>
 <p> <i>pos</i></p>
 <dl>
-<dd>beginning of bit region to release</dl>
+<dd>beginning of bit region to release</dd></dl>
 <p> <i>order</i></p>
 <dl>
-<dd>region size (log base 2 of number of bits) to release</dl>
+<dd>region size (log base 2 of number of bits) to release</dd></dl>
 <h2>Description</h2>
 <p>This is the complement to <code>__bitmap_find_free_region</code> and releases the found region (by clearing it in the bitmap). </p>
 <p> No return value.</p>

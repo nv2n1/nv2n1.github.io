@@ -10,7 +10,6 @@ description: "strtoimax, strtoumax – convert string to integer"
 <p>strtoimax, strtoumax &#8211; convert string to integer</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;inttypes.h&gt;
-
 intmax_t strtoimax(const char *nptr, char **endptr, int base);
 uintmax_t strtoumax(const char *nptr, char **endptr, int base);</code></pre>
 <h2>Description</h2>

@@ -29,10 +29,10 @@ description: "arm_get_error_message – get error message"
 <p> If the return code is negative, an error occurred. If the return code is not negative, an error may or may not have occurred &#8211; the determination of what is an error and whether an error code is returned is at the discretion of the ARM implementation. The application can test the return code if it wants to provide its own error logging. </p>
 <p> The following errors are recognized by this implementation, but may not be portable to other implementations: </p>
 <dl>
-<dt><code>ARM_FAILURE_NULL_ARGUMENT</code></p>
-<dd> The <i>msg</i> must not be null.</p>
-<dt><code>ARM_FAILURE_UNSUPPORTED_CHARSET</code></p>
-<dd> The <i>charset</i> requested isn&#8217;t supported.</dl>
+<dt><code>ARM_FAILURE_NULL_ARGUMENT</code></dt>
+<dd> The <i>msg</i> must not be null.</dd>
+<dt><code>ARM_FAILURE_UNSUPPORTED_CHARSET</code></dt>
+<dd> The <i>charset</i> requested isn&#8217;t supported.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> ARM Issue 4.0 C Language Bindings, Version 2</p>
 <h2>EXAMPLE</h2>

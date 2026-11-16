@@ -15,15 +15,15 @@ xdr_skb_read_bits - copy some data bits from skb to internal buffer
 <h2>Arguments</h2>
 
 <i>desc</i>
-<dl><dd><dd>sk_buff copy helper</dl>
+<dl><dd></dd><dd>sk_buff copy helper</dd></dl>
  
 
  <i>to</i>
-<dl><dd>copy destination</dl>
+<dl><dd>copy destination</dd></dl>
  
 
  <i>len</i>
-<dl><dd>number of bytes to copy</dl>
+<dl><dd>number of bytes to copy</dd></dl>
 
 <h2>Description</h2>
 

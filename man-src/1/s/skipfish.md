@@ -16,7 +16,7 @@ description: "skipfish – web application security scanner"
 <h2>OPTIONS SUMMARY</h2>
 <dl>
 <dt>
-<dd> <font SIZE="-1"> </font></p>
+</dt><dd> <font SIZE="-1"> </font></dd>
 <pre>
 Authentication and access options:
   -A user:pass   - use specified HTTP authentication credentials
@@ -73,126 +73,126 @@ Other settings:
 <h2>AUTHENTICATION AND ACCESS</h2>
 <p> Some sites require authentication, and skipfish supports this in different ways. First there is basic HTTP authentication, for which you can use the -A flag. Second, and more common, are sites that require authentication on a web application level. For these sites, the best approach is to capture authenticated session cookies and provide them to skipfish using the -C flag (multiple if needed). Last, you&#8217;ll need to put some effort in protecting the session from being destroyed by excluding logout links with -X and/or by rejecting new cookies with -N. </p>
 <dl>
-<dt>-F/&#8211;host &lt;ip:hostname&gt;</p>
-<dd> Using this flag, you can set the &#8216;<i>Host:</i>&#8216; header value to define a custom mapping between a host and an IP (bypassing the resolver). This feature is particularly useful for not-yet-launched or legacy services that don&#8217;t have the necessary DNS entries. </p>
-<dt>-H/&#8211;header &lt;header:value&gt;</p>
-<dd> When it comes to customizing your HTTP requests, you can also use the -H option to insert any additional, non-standard headers. This flag also allows the default headers to be overwritten. </p>
-<dt>-C/&#8211;cookie &lt;cookie:value&gt;</p>
-<dd> This flag can be used to add a cookie to the skipfish HTTP requests; This is particularly useful to perform authenticated scans by providing session cookies. When doing so, keep in mind that cetain URLs (e.g. /logout) may destroy your session; you can combat this in two ways: by using the -N option, which causes the scanner to reject attempts to set or delete cookies; or by using the -X option to exclude logout URLs. </p>
-<dt>-b/&#8211;user-agent &lt;i|f|p&gt;</p>
-<dd> This flag allows the user-agent to be specified where &#8216;<i>i</i>&#8216; stands for Internet Explorer, &#8216;<i>f</i>&#8216; for Firefox and &#8216;<i>p</i>&#8216; for iPhone. Using this flag is recommended in case the target site shows different behavior based on the user-agent (e.g some sites use different templates for mobiles and desktop clients). </p>
-<dt>-N/&#8211;reject-cookies</p>
-<dd> This flag causes skipfish to ignore cookies that are being set by the site. This helps to enforce stateless tests and also prevent that cookies set with &#8216;-C&#8217; are not overwritten. </p>
-<dt>-A/&#8211;auth &lt;username:password&gt;</p>
-<dd> For sites requiring basic HTTP authentication, you can use this flag to specify your credentials. </p>
-<dt>&#8211;auth-form &lt;URL&gt;</p>
-<dd> The login form to use with form authentication. By default skipfish will use the form&#8217;s action URL to submit the credentials. If this is missing than the login data is send to the form URL. In case that is wrong, you can set the form handler URL with &#8211;auth-form-target &lt;URL&gt; . </p>
-<dt>&#8211;auth-user &lt;username&gt;</p>
-<dd> The username to be used during form authentication. Skipfish will try to detect the correct form field to use but if it fails to do so (and gives an error), then you can specify the form field name with &#8211;auth-user-field. </p>
-<dt>&#8211;auth-pass &lt;password&gt;</p>
-<dd> The password to be used during form authentication. Similar to auth-user, the form field name can (optionally) be set with &#8211;auth-pass-field. </p>
-<dt>&#8211;auth-verify-url &lt;URL&gt;</p>
-<dd> This URL allows skipfish to verify whether authentication was successful. This requires a URL where anonymous and authenticated requests are answered with a different response. </p>
+<dt>-F/&#8211;host &lt;ip:hostname&gt;</dt>
+<dd> Using this flag, you can set the &#8216;<i>Host:</i>&#8216; header value to define a custom mapping between a host and an IP (bypassing the resolver). This feature is particularly useful for not-yet-launched or legacy services that don&#8217;t have the necessary DNS entries. </dd>
+<dt>-H/&#8211;header &lt;header:value&gt;</dt>
+<dd> When it comes to customizing your HTTP requests, you can also use the -H option to insert any additional, non-standard headers. This flag also allows the default headers to be overwritten. </dd>
+<dt>-C/&#8211;cookie &lt;cookie:value&gt;</dt>
+<dd> This flag can be used to add a cookie to the skipfish HTTP requests; This is particularly useful to perform authenticated scans by providing session cookies. When doing so, keep in mind that cetain URLs (e.g. /logout) may destroy your session; you can combat this in two ways: by using the -N option, which causes the scanner to reject attempts to set or delete cookies; or by using the -X option to exclude logout URLs. </dd>
+<dt>-b/&#8211;user-agent &lt;i|f|p&gt;</dt>
+<dd> This flag allows the user-agent to be specified where &#8216;<i>i</i>&#8216; stands for Internet Explorer, &#8216;<i>f</i>&#8216; for Firefox and &#8216;<i>p</i>&#8216; for iPhone. Using this flag is recommended in case the target site shows different behavior based on the user-agent (e.g some sites use different templates for mobiles and desktop clients). </dd>
+<dt>-N/&#8211;reject-cookies</dt>
+<dd> This flag causes skipfish to ignore cookies that are being set by the site. This helps to enforce stateless tests and also prevent that cookies set with &#8216;-C&#8217; are not overwritten. </dd>
+<dt>-A/&#8211;auth &lt;username:password&gt;</dt>
+<dd> For sites requiring basic HTTP authentication, you can use this flag to specify your credentials. </dd>
+<dt>&#8211;auth-form &lt;URL&gt;</dt>
+<dd> The login form to use with form authentication. By default skipfish will use the form&#8217;s action URL to submit the credentials. If this is missing than the login data is send to the form URL. In case that is wrong, you can set the form handler URL with &#8211;auth-form-target &lt;URL&gt; . </dd>
+<dt>&#8211;auth-user &lt;username&gt;</dt>
+<dd> The username to be used during form authentication. Skipfish will try to detect the correct form field to use but if it fails to do so (and gives an error), then you can specify the form field name with &#8211;auth-user-field. </dd>
+<dt>&#8211;auth-pass &lt;password&gt;</dt>
+<dd> The password to be used during form authentication. Similar to auth-user, the form field name can (optionally) be set with &#8211;auth-pass-field. </dd>
+<dt>&#8211;auth-verify-url &lt;URL&gt;</dt>
+<dd> This URL allows skipfish to verify whether authentication was successful. This requires a URL where anonymous and authenticated requests are answered with a different response. </dd>
 </dl>
 <h2>CRAWLING SCOPE</h2>
 <p> Some sites may be too big to scan in a reasonable timeframe. If the site features well-defined tarpits &#8211; for example, 100,000 nearly identical user profiles as a part of a social network &#8211; these specific locations can be excluded with -X or -S. In other cases, you may need to resort to other settings: -d limits crawl depth to a specified number of subdirectories; -c limits the number of children per directory; -x limits the total number of descendants per crawl tree branch; and -r limits the total number of requests to send in a scan. </p>
 <dl>
-<dt>-d/&#8211;max-crawl-depth &lt;depth&gt;</p>
-<dd> Limit the depth of subdirectories being crawled (see above).</p>
-<dt>-c/&#8211;max-crawl-child &lt;childs&gt;</p>
-<dd> Limit the amount of subdirectories per directory we crawl into (see above).</p>
-<dt>-x/&#8211;max-crawl-descendants &lt;descendants&gt;</p>
-<dd> Limit the total number of descendants per crawl tree branch (see above).</p>
-<dt>-r/&#8211;max-request-total &lt;request&gt;</p>
-<dd> The maximum number of requests can be limited with this flag.</p>
-<dt>-p/&#8211;crawl-probability &lt;0-100&gt;</p>
-<dd> By specifying a percentage between 1 and 100%, it is possible to tell the crawler to follow fewer than 100% of all links, and try fewer than 100% of all dictionary entries. This &#8211; naturally &#8211; limits the completeness of a scan, but unlike most other settings, it does so in a balanced, non-deterministic manner. It is extremely useful when you are setting up time-bound, but periodic assessments of your infrastructure.</p>
-<dt>-q/&#8211;seed &lt;seed&gt;</p>
-<dd> This flag sets the initial random seed for the crawler to a specified value. This can be used to exactly reproduce a previous scan to compare results. Randomness is relied upon most heavily in the -p mode, but also influences a couple of other scan management decisions. </p>
-<dt>-I/&#8211;include-string &lt;domain/path&gt;</p>
-<dd> With this flag, you can tell skipfish to only crawl and test URLs that match a certain string. This can help to narrow down the scope of a scan by only whitelisting certain sections of a web site (e.g. -I /shop). </p>
-<dt>-X/&#8211;exclude-string &lt;domain/path&gt;</p>
-<dd> The -X option can be used to exclude files / directories from the scan. This is useful to avoid session termination (i.e. by excluding /logout) or just for speeding up your scans by excluding static content directories like /icons/, /doc/, /manuals/, and other standard, mundane locations along these lines. </p>
-<dt>-K/&#8211;skip-parameter &lt;parameter name&gt;</p>
-<dd> This flag allows you to specify parameter names not to fuzz. (useful for applications that put session IDs in the URL, to minimize noise). </p>
-<dt>-D/&#8211;include-domain &lt;domain&gt;</p>
-<dd> Allows you to specify additional hosts or domains to be in-scope for the test. By default, all hosts appearing in the command-line URLs are added to the list &#8211; but you can use -D to broaden these rules. The result of this will be that the crawler will follow links and tests links that point to these additional hosts. </p>
-<dt>-B/&#8211;trust-domain &lt;domain&gt;</p>
-<dd> In some cases, you do not want to actually crawl a third-party domain, but you trust the owner of that domain enough not to worry about cross-domain content inclusion from that location. To suppress warnings, you can use the -B option </p>
-<dt>-Z/&#8211;skip-error-pages</p>
-<dd> Do not crawl into pages / directories that give an error 5XX. </p>
-<dt>-O/&#8211;no-form-submits</p>
-<dd> Using this flag will cause forms to be ignored during the scan. </p>
-<dt>-P/&#8211;no-html-parsing</p>
-<dd> This flag will disable link extracting and effectively disables crawling. Using -P is useful when you want to test one specific URL or when you want to feed skipfish a list of URLs that were collected with an external crawler. </p>
+<dt>-d/&#8211;max-crawl-depth &lt;depth&gt;</dt>
+<dd> Limit the depth of subdirectories being crawled (see above).</dd>
+<dt>-c/&#8211;max-crawl-child &lt;childs&gt;</dt>
+<dd> Limit the amount of subdirectories per directory we crawl into (see above).</dd>
+<dt>-x/&#8211;max-crawl-descendants &lt;descendants&gt;</dt>
+<dd> Limit the total number of descendants per crawl tree branch (see above).</dd>
+<dt>-r/&#8211;max-request-total &lt;request&gt;</dt>
+<dd> The maximum number of requests can be limited with this flag.</dd>
+<dt>-p/&#8211;crawl-probability &lt;0-100&gt;</dt>
+<dd> By specifying a percentage between 1 and 100%, it is possible to tell the crawler to follow fewer than 100% of all links, and try fewer than 100% of all dictionary entries. This &#8211; naturally &#8211; limits the completeness of a scan, but unlike most other settings, it does so in a balanced, non-deterministic manner. It is extremely useful when you are setting up time-bound, but periodic assessments of your infrastructure.</dd>
+<dt>-q/&#8211;seed &lt;seed&gt;</dt>
+<dd> This flag sets the initial random seed for the crawler to a specified value. This can be used to exactly reproduce a previous scan to compare results. Randomness is relied upon most heavily in the -p mode, but also influences a couple of other scan management decisions. </dd>
+<dt>-I/&#8211;include-string &lt;domain/path&gt;</dt>
+<dd> With this flag, you can tell skipfish to only crawl and test URLs that match a certain string. This can help to narrow down the scope of a scan by only whitelisting certain sections of a web site (e.g. -I /shop). </dd>
+<dt>-X/&#8211;exclude-string &lt;domain/path&gt;</dt>
+<dd> The -X option can be used to exclude files / directories from the scan. This is useful to avoid session termination (i.e. by excluding /logout) or just for speeding up your scans by excluding static content directories like /icons/, /doc/, /manuals/, and other standard, mundane locations along these lines. </dd>
+<dt>-K/&#8211;skip-parameter &lt;parameter name&gt;</dt>
+<dd> This flag allows you to specify parameter names not to fuzz. (useful for applications that put session IDs in the URL, to minimize noise). </dd>
+<dt>-D/&#8211;include-domain &lt;domain&gt;</dt>
+<dd> Allows you to specify additional hosts or domains to be in-scope for the test. By default, all hosts appearing in the command-line URLs are added to the list &#8211; but you can use -D to broaden these rules. The result of this will be that the crawler will follow links and tests links that point to these additional hosts. </dd>
+<dt>-B/&#8211;trust-domain &lt;domain&gt;</dt>
+<dd> In some cases, you do not want to actually crawl a third-party domain, but you trust the owner of that domain enough not to worry about cross-domain content inclusion from that location. To suppress warnings, you can use the -B option </dd>
+<dt>-Z/&#8211;skip-error-pages</dt>
+<dd> Do not crawl into pages / directories that give an error 5XX. </dd>
+<dt>-O/&#8211;no-form-submits</dt>
+<dd> Using this flag will cause forms to be ignored during the scan. </dd>
+<dt>-P/&#8211;no-html-parsing</dt>
+<dd> This flag will disable link extracting and effectively disables crawling. Using -P is useful when you want to test one specific URL or when you want to feed skipfish a list of URLs that were collected with an external crawler. </dd>
 </dl>
 <h2>TESTING SCOPE</h2>
 <dl>
-<dt>&#8211;checks</p>
-<dd> EXPERIMENTAL: Displays the crawler injection tests. The output shows the index number (useful for &#8211;checks-toggle), the check name and whether the check is enabled. </p>
-<dt>&#8211;checks-toggle &lt;check1,check2,..&gt;</p>
-<dd> EXPERIMENTAL: Every injection test can be enabled/disabled with using this flag. As value, you need to provide the check numbers which can be obtained with the &#8211;checks flag. Multiple checks can be toggled via a comma separated value (i.e. &#8211;checks-toggle 1,2 ) </p>
-<dt>&#8211;no-injection-tests</p>
-<dd> EXPERIMENTAL: Disables all injection tests for this scan and limits the scan to crawling and, optionally, bruteforcing. As with all scans, the output directory will contain a pivots.txt file. This file can be used to feed future scans. </p>
+<dt>&#8211;checks</dt>
+<dd> EXPERIMENTAL: Displays the crawler injection tests. The output shows the index number (useful for &#8211;checks-toggle), the check name and whether the check is enabled. </dd>
+<dt>&#8211;checks-toggle &lt;check1,check2,..&gt;</dt>
+<dd> EXPERIMENTAL: Every injection test can be enabled/disabled with using this flag. As value, you need to provide the check numbers which can be obtained with the &#8211;checks flag. Multiple checks can be toggled via a comma separated value (i.e. &#8211;checks-toggle 1,2 ) </dd>
+<dt>&#8211;no-injection-tests</dt>
+<dd> EXPERIMENTAL: Disables all injection tests for this scan and limits the scan to crawling and, optionally, bruteforcing. As with all scans, the output directory will contain a pivots.txt file. This file can be used to feed future scans. </dd>
 </dl>
 <h2>REPORTING OPTIONS</h2>
 <dl>
-<dt>-o/&#8211;output &lt;dir&gt;</p>
-<dd> The report wil be written to this location. The directory is one of the two mandatory options and must not exist upon starting the scan. </p>
-<dt>-M/&#8211;log-mixed-content</p>
-<dd> Enable the logging of mixed content. This is highly recommended when scanning SSL-only sites to detect insecure content inclusion via non-SSL protected links. </p>
-<dt>-E/&#8211;log-cache-mismatches</p>
-<dd> This will cause additonal content caching error to be reported. </p>
-<dt>-U/&#8211;log-external-urls</p>
-<dd> Log all external URLs and email addresses that were seen during the scan. </p>
-<dt>-Q/&#8211;log-unique-nodes</p>
-<dd> Enable this to completely suppress duplicate nodes in reports. </p>
-<dt>-u/&#8211;quiet</p>
-<dd> This will cause skipfish to suppress all console output during the scan. </p>
-<dt>-v/&#8211;verbose</p>
-<dd> EXPERIMENTAL: Use this flag to enable runtime reporting of, for example, problems that are detected. Can be used multiple times to increase verbosity and should be used in combination with -u unless you run skipfish with stderr redirected to a file. </p>
+<dt>-o/&#8211;output &lt;dir&gt;</dt>
+<dd> The report wil be written to this location. The directory is one of the two mandatory options and must not exist upon starting the scan. </dd>
+<dt>-M/&#8211;log-mixed-content</dt>
+<dd> Enable the logging of mixed content. This is highly recommended when scanning SSL-only sites to detect insecure content inclusion via non-SSL protected links. </dd>
+<dt>-E/&#8211;log-cache-mismatches</dt>
+<dd> This will cause additonal content caching error to be reported. </dd>
+<dt>-U/&#8211;log-external-urls</dt>
+<dd> Log all external URLs and email addresses that were seen during the scan. </dd>
+<dt>-Q/&#8211;log-unique-nodes</dt>
+<dd> Enable this to completely suppress duplicate nodes in reports. </dd>
+<dt>-u/&#8211;quiet</dt>
+<dd> This will cause skipfish to suppress all console output during the scan. </dd>
+<dt>-v/&#8211;verbose</dt>
+<dd> EXPERIMENTAL: Use this flag to enable runtime reporting of, for example, problems that are detected. Can be used multiple times to increase verbosity and should be used in combination with -u unless you run skipfish with stderr redirected to a file. </dd>
 </dl>
 <h2>DICTIONARY MANAGEMENT</h2>
 <p> Make sure you&#8217;ve read the instructions provided in doc/dictionaries.txt to select the right dictionary file and configure it correctly. This step has a profound impact on the quality of scan results later on. </p>
 <dl>
-<dt>-S/&#8211;wordlist &lt;file&gt;</p>
-<dd> Load the specified (read-only) wordlist for use during the scan. This flag is optional but use of a dictionary is highly recommended when performing a blackbox scan as it will highlight hidden files and directories. </p>
-<dt>-W/&#8211;rw-wordlist &lt;file&gt;</p>
-<dd> Specify an initially empty file for any newly learned site-specific keywords (which will come handy in future assessments). You can use -W- or -W /dev/null if you don&#8217;t want to store auto-learned keywords anywhere. Typically you will want to use one of the packaged dictonaries (i.e. complete.wl) and possibly add a custom dictionary. </p>
-<dt>-L/&#8211;no-keyword-learning</p>
-<dd> During the scan, skipfish will try to learn and use new keywords. This flag disables that behavior and should be used when any form of brute-forcing is not desired. </p>
-<dt>-Y/&#8211;no-extension-brute</p>
-<dd> This flag will disable extension guessing during directory bruteforcing. </p>
-<dt>-R &lt;age&gt;</p>
-<dd> Use of this flag allows old words to be purged from wordlists. It is intended to help keeping dictionaries clean when used in recurring scans. </p>
-<dt>-T/&#8211;form-value &lt;name=value&gt;</p>
-<dd> Skipfish also features a form auto-completion mechanism in order to maximize scan coverage. The values should be non-malicious, as they are not meant to implement security checks &#8211; but rather, to get past input validation logic. You can define additional rules, or override existing ones, with the -T option (-T form_field_name=field_value, e.g. -T login=test123 -T password=test321 &#8211; although note that -C and -A are a much better method of logging in). </p>
-<dt>-G &lt;max guesses&gt;</p>
-<dd> During the scan, a temporary buffer of newly detected keywords is maintained. The size of this buffer can be changed with this flag and doing so influences bruteforcing. </p>
+<dt>-S/&#8211;wordlist &lt;file&gt;</dt>
+<dd> Load the specified (read-only) wordlist for use during the scan. This flag is optional but use of a dictionary is highly recommended when performing a blackbox scan as it will highlight hidden files and directories. </dd>
+<dt>-W/&#8211;rw-wordlist &lt;file&gt;</dt>
+<dd> Specify an initially empty file for any newly learned site-specific keywords (which will come handy in future assessments). You can use -W- or -W /dev/null if you don&#8217;t want to store auto-learned keywords anywhere. Typically you will want to use one of the packaged dictonaries (i.e. complete.wl) and possibly add a custom dictionary. </dd>
+<dt>-L/&#8211;no-keyword-learning</dt>
+<dd> During the scan, skipfish will try to learn and use new keywords. This flag disables that behavior and should be used when any form of brute-forcing is not desired. </dd>
+<dt>-Y/&#8211;no-extension-brute</dt>
+<dd> This flag will disable extension guessing during directory bruteforcing. </dd>
+<dt>-R &lt;age&gt;</dt>
+<dd> Use of this flag allows old words to be purged from wordlists. It is intended to help keeping dictionaries clean when used in recurring scans. </dd>
+<dt>-T/&#8211;form-value &lt;name=value&gt;</dt>
+<dd> Skipfish also features a form auto-completion mechanism in order to maximize scan coverage. The values should be non-malicious, as they are not meant to implement security checks &#8211; but rather, to get past input validation logic. You can define additional rules, or override existing ones, with the -T option (-T form_field_name=field_value, e.g. -T login=test123 -T password=test321 &#8211; although note that -C and -A are a much better method of logging in). </dd>
+<dt>-G &lt;max guesses&gt;</dt>
+<dd> During the scan, a temporary buffer of newly detected keywords is maintained. The size of this buffer can be changed with this flag and doing so influences bruteforcing. </dd>
 </dl>
 <h2>PERFORMANCE OPTIONS</h2>
 <p> The default performance setting should be fine for most servers but when the report indicates there were connection problems, you might want to tweak some of the values here. For unstable servers, the scan coverage is likely to improve when using low values for rate and connection flags. </p>
 <dl>
-<dt>-l/&#8211;max-request-rate &lt;rate&gt;</p>
-<dd> This flag can be used to limit the amount of requests per second. This is very useful when the target server can&#8217;t keep up with the high amount of requests that are generated by skipfish. Keeping the amount requests per second low can also help preventing some rate-based DoS protection mechanisms from kicking in and ruining the scan. </p>
-<dt>-g/&#8211;max-connections &lt;number&gt;</p>
-<dd> The max simultaneous TCP connections (global) can be set with this flag. </p>
-<dt>-m/&#8211;max-host-connections &lt;number&gt;</p>
-<dd> The max simultaneous TCP connections, per target IP, can be set with this flag. </p>
-<dt>-f/&#8211;max-failed-requests &lt;number&gt;</p>
-<dd> Controls the maximum number of consecutive HTTP errors you are willing to see before aborting the scan. For large scans, you probably want to set a higher value here. </p>
-<dt>-t/&#8211;request-timeout &lt;timeout&gt;</p>
-<dd> Set the total request timeout, to account for really slow or really fast sites. </p>
-<dt>-w/&#8211;network-timeout &lt;timeout&gt;</p>
-<dd> Set the network I/O timeout. </p>
-<dt>-i/&#8211;idle-timeout &lt;timeout&gt;</p>
-<dd> Specify the timeout for idle HTTP connections. </p>
-<dt>-s/&#8211;response-size &lt;size&gt;</p>
-<dd> Sets the maximum length of a response to fetch and parse (longer responses will be truncated). </p>
-<dt>-e/&#8211;discard-binary</p>
-<dd> This prevents binary documents from being kept in memory for reporting purposes, and frees up a lot of RAM. </p>
-<dt>&#8211;flush-to-disk</p>
-<dd> This causes request / response data to be flushed to disk instead of being kept in memory. As a result, the memory usage for large scans will be significant lower. </p>
+<dt>-l/&#8211;max-request-rate &lt;rate&gt;</dt>
+<dd> This flag can be used to limit the amount of requests per second. This is very useful when the target server can&#8217;t keep up with the high amount of requests that are generated by skipfish. Keeping the amount requests per second low can also help preventing some rate-based DoS protection mechanisms from kicking in and ruining the scan. </dd>
+<dt>-g/&#8211;max-connections &lt;number&gt;</dt>
+<dd> The max simultaneous TCP connections (global) can be set with this flag. </dd>
+<dt>-m/&#8211;max-host-connections &lt;number&gt;</dt>
+<dd> The max simultaneous TCP connections, per target IP, can be set with this flag. </dd>
+<dt>-f/&#8211;max-failed-requests &lt;number&gt;</dt>
+<dd> Controls the maximum number of consecutive HTTP errors you are willing to see before aborting the scan. For large scans, you probably want to set a higher value here. </dd>
+<dt>-t/&#8211;request-timeout &lt;timeout&gt;</dt>
+<dd> Set the total request timeout, to account for really slow or really fast sites. </dd>
+<dt>-w/&#8211;network-timeout &lt;timeout&gt;</dt>
+<dd> Set the network I/O timeout. </dd>
+<dt>-i/&#8211;idle-timeout &lt;timeout&gt;</dt>
+<dd> Specify the timeout for idle HTTP connections. </dd>
+<dt>-s/&#8211;response-size &lt;size&gt;</dt>
+<dd> Sets the maximum length of a response to fetch and parse (longer responses will be truncated). </dd>
+<dt>-e/&#8211;discard-binary</dt>
+<dd> This prevents binary documents from being kept in memory for reporting purposes, and frees up a lot of RAM. </dd>
+<dt>&#8211;flush-to-disk</dt>
+<dd> This causes request / response data to be flushed to disk instead of being kept in memory. As a result, the memory usage for large scans will be significant lower. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> <code>Scan type: config</code><br />

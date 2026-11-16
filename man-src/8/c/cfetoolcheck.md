@@ -15,24 +15,24 @@ description: "cfetool check – Check a new value against the averages currently
 <p> The <code>-d</code>, <code>-w</code> and <code>-y</code> options specify the databases to check the new value against. If all three options are omitted, only the weekly database will be accessed.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;value</code>|<code>-v</code> <i>value</i></p>
-<dd>Specifies the new value to check against the database averages.</p>
-<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></p>
-<dd>The directory in which the database specified by <i>name</i> can be found.</p>
-<dt><code>&#8211;time</code>|<code>-t</code></p>
-<dd>The time the value was collected, in seconds since epoch (January 1st, 1970). If this argument is omitted, the current time will be used.</p>
-<dt><code>&#8211;daily</code>|<code>-d</code></p>
-<dd>Check the new value against the daily averages database.</p>
-<dt><code>&#8211;weekly</code>|<code>-w</code></p>
-<dd>Check the new value against the weekly averages database.</p>
-<dt><code>&#8211;yearly</code>|<code>-y</code></p>
-<dd>Check the new value against the yearly averages database.</p>
-<dt><code>&#8211;histograms</code>|<code>-H</code></p>
-<dd>Check which histogram bucket the new value would fall into. The histogram is divided into 64 buckets, which represent distances from the mean value. Bucket 64 represents two standard deviations above the expected value, and bucket 0 represents two standard deviations below the expected value.</p>
-<dt><code>&#8211;verbose</code>|<code>-v</code></p>
-<dd>Print details of the command&#8217;s execution to the standard output stream.</p>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd>Print a short help message and then exit.</dl>
+<dt><code>&#8211;value</code>|<code>-v</code> <i>value</i></dt>
+<dd>Specifies the new value to check against the database averages.</dd>
+<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></dt>
+<dd>The directory in which the database specified by <i>name</i> can be found.</dd>
+<dt><code>&#8211;time</code>|<code>-t</code></dt>
+<dd>The time the value was collected, in seconds since epoch (January 1st, 1970). If this argument is omitted, the current time will be used.</dd>
+<dt><code>&#8211;daily</code>|<code>-d</code></dt>
+<dd>Check the new value against the daily averages database.</dd>
+<dt><code>&#8211;weekly</code>|<code>-w</code></dt>
+<dd>Check the new value against the weekly averages database.</dd>
+<dt><code>&#8211;yearly</code>|<code>-y</code></dt>
+<dd>Check the new value against the yearly averages database.</dd>
+<dt><code>&#8211;histograms</code>|<code>-H</code></dt>
+<dd>Check which histogram bucket the new value would fall into. The histogram is divided into 64 buckets, which represent distances from the mean value. Bucket 64 represents two standard deviations above the expected value, and bucket 0 represents two standard deviations below the expected value.</dd>
+<dt><code>&#8211;verbose</code>|<code>-v</code></dt>
+<dd>Print details of the command&#8217;s execution to the standard output stream.</dd>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Print a short help message and then exit.</dd></dl>
 <h2>Output</h2>
 <p>Before exiting, <tt>&quot;cfetool check&quot;</tt> will print one line to the standard output stream, in the following format: </p>
 <p> yrly=<i>ynum</i>,bkt=<i>ybkt</i>;wkly=<i>wnum</i>,bkt=<i>wbkt</i>;dly=<i>dnum</i>,bkt=<i>dbkt</i> </p>
@@ -74,10 +74,10 @@ description: "cfetool check – Check a new value against the averages currently
 <h2>Authors</h2>
 <p>The code and documentation were contributed by Stanford Linear Accelerator Center, a department of Stanford University. This documentation was written by</p>
 <dl>
-<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</p>
+<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</dt>
 <dd>
-<dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</p>
-<dd></dl>
+</dd><dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</dt>
+<dd></dd></dl>
 <h2>Copyright And Disclaimer</h2>
 <pre> Copyright 2004 Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt; and
  Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt;

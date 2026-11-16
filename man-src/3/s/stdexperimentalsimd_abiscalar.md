@@ -11,10 +11,8 @@ std::experimental::simd_abi::scalar - std::experimental::simd_abi::scalar
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / simd&gt;
-
     namespace simd_abi
 {
-
     struct scalar {
     };
 }</code></pre> 

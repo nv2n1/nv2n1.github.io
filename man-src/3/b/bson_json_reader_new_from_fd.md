@@ -17,11 +17,11 @@ bson_json_reader_new_from_fd (int  fd,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>fd</code></p>
-<dd> An open file-descriptor.</dl>
+<dt><code>fd</code></dt>
+<dd> An open file-descriptor.</dd></dl>
 <dl>
-<dt><code>close_on_destroy</code></p>
-<dd> Whether <code><a href="/docs/linux/man/3-close/">close</a>(3)</code> should be called on <code>fd</code> when the reader is destroyed.</dl>
+<dt><code>close_on_destroy</code></dt>
+<dd> Whether <code><a href="/docs/linux/man/3-close/">close</a>(3)</code> should be called on <code>fd</code> when the reader is destroyed.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a new JSON to BSON converter that will be reading from the file-descriptor <code>fd</code> \&amp;. </p>
 <h2>RETURNS</h2>

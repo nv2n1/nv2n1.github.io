@@ -28,39 +28,39 @@ git archimport[-h][-v][-o][-a][-f][-T][-D depth][-t tempdir]&lt;archive / branch
 <p> -h</p>
 <dl>
 <dt>
-<dd> Display usage.</dl>
+</dt><dd> Display usage.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Verbose output.</dl>
+</dt><dd> Verbose output.</dd></dl>
 <p> -T</p>
 <dl>
 <dt>
-<dd> Many tags. Will create a tag for every commit, reflecting the commit name in the Arch repository.</dl>
+</dt><dd> Many tags. Will create a tag for every commit, reflecting the commit name in the Arch repository.</dd></dl>
 <p> -f</p>
 <dl>
 <dt>
-<dd> Use the fast patchset import strategy. This can be significantly faster for large trees, but cannot handle directory renames or permissions changes. The default strategy is slow and safe.</dl>
+</dt><dd> Use the fast patchset import strategy. This can be significantly faster for large trees, but cannot handle directory renames or permissions changes. The default strategy is slow and safe.</dd></dl>
 <p> -o</p>
 <dl>
 <dt>
-<dd> Use this for compatibility with old-style branch names used by earlier versions of <i>git archimport</i>. Old-style branch names were category&#8212;branch, whereas new-style branch names are archive,category&#8212;branch&#8212;version. In both cases, names given on the command-line will override the automatically-generated ones.</dl>
+</dt><dd> Use this for compatibility with old-style branch names used by earlier versions of <i>git archimport</i>. Old-style branch names were category&#8212;branch, whereas new-style branch names are archive,category&#8212;branch&#8212;version. In both cases, names given on the command-line will override the automatically-generated ones.</dd></dl>
 <p> -D &lt;depth&gt;</p>
 <dl>
 <dt>
-<dd> Follow merge ancestry and attempt to import trees that have been merged from. Specify a depth greater than 1 if patch logs have been pruned.</dl>
+</dt><dd> Follow merge ancestry and attempt to import trees that have been merged from. Specify a depth greater than 1 if patch logs have been pruned.</dd></dl>
 <p> -a</p>
 <dl>
 <dt>
-<dd> Attempt to auto-register archives at m[blue]<code><a rel="nofollow" href="http://mirrors.sourcecontrol.net">http://mirrors.sourcecontrol.net</a></code>m[] This is particularly useful with the -D option.</dl>
+</dt><dd> Attempt to auto-register archives at m[blue]<code><a rel="nofollow" href="http://mirrors.sourcecontrol.net">http://mirrors.sourcecontrol.net</a></code>m[] This is particularly useful with the -D option.</dd></dl>
 <p> -t &lt;tmpdir&gt;</p>
 <dl>
 <dt>
-<dd> Override the default tempdir.</dl>
+</dt><dd> Override the default tempdir.</dd></dl>
 <p> &lt;archive/branch&gt;</p>
 <dl>
 <dt>
-<dd> Archive/branch identifier in a format that tla log understands.</dl>
+</dt><dd> Archive/branch identifier in a format that tla log understands.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Martin Langhoff &lt;m[blue]<code>martin [at] catalyst.net.nz</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
 <h2>DOCUMENTATION</h2>
@@ -69,15 +69,15 @@ git archimport[-h][-v][-o][-a][-f][-T][-D depth][-t tempdir]&lt;archive / branch
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> martin [at] catalyst.net.nz</p>
+<dt> 1.</dt>
+<dd> martin [at] catalyst.net.nz</dd>
 <dl>
 <dt>
-<dd> mailto:martin [at] catalyst.net.nz</dl>
-<dt> 2.</p>
-<dd> git [at] vger.kernel.org</p>
+</dt><dd> mailto:martin [at] catalyst.net.nz</dd></dl>
+<dt> 2.</dt>
+<dd> git [at] vger.kernel.org</dd>
 <dl>
 <dt>
-<dd> mailto:git [at] vger.kernel.org</dl>
+</dt><dd> mailto:git [at] vger.kernel.org</dd></dl>
 </dl>
 <h2>Index</h2>

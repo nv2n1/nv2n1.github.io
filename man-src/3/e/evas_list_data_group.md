@@ -34,10 +34,10 @@ description: "Linked List Creation Functions – Functions that add data to an E
 <p><code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given list. If NULL is given, then a new list is created.<br />
- <i>data</i> The data to append.</dl>
+ <i>data</i> The data to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list pointer that should be used in place of the one given to this function if successful. Otherwise, the old pointer is returned.</dl>
+<dd>A new list pointer that should be used in place of the one given to this function if successful. Otherwise, the old pointer is returned.</dd></dl>
 <p> References _Evas_List::accounting, _Evas_List::data, _Evas_List::next, and _Evas_List::prev. </p>
 <p> Referenced by evas_damage_rectangle_add(), evas_event_feed_mouse_move(), evas_font_path_append(), evas_list_append_relative(), evas_object_clip_set(), evas_object_image_data_update_add(), evas_object_polygon_point_add(), evas_object_smart_members_get(), evas_object_textblock_style_set(), evas_obscured_rectangle_add(), and evas_render_method_list().</p>
 <h3>EAPI <code>Evas_List</code>* evas_list_append_relative (<code>Evas_List</code> * list, const void * data, const void * relative)</h3>
@@ -63,10 +63,10 @@ description: "Linked List Creation Functions – Functions that add data to an E
 <dl COMPACT>
 <dd><i>list</i> The given linked list.<br />
  <i>data</i> The given data.<br />
- <i>relative</i> The data to insert after.</dl>
+ <i>relative</i> The data to insert after.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list pointer that should be used in place of the one given to this function if successful. Otherwise, the old pointer is returned.</dl>
+<dd>A new list pointer that should be used in place of the one given to this function if successful. Otherwise, the old pointer is returned.</dd></dl>
 <p> References _Evas_List::data, evas_list_append(), and _Evas_List::next.</p>
 <h3>EAPI <code>Evas_List</code>* evas_list_prepend (<code>Evas_List</code> * list, const void * data)</h3>
 <p>Prepends the given data to the given linked list. </p>
@@ -83,10 +83,10 @@ description: "Linked List Creation Functions – Functions that add data to an E
 <p><code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given list.<br />
- <i>data</i> The given data.</dl>
+ <i>data</i> The given data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list pointer that should be used in place of the one given to this function, if successful. Otherwise, the old pointer is returned.</dl>
+<dd>A new list pointer that should be used in place of the one given to this function, if successful. Otherwise, the old pointer is returned.</dd></dl>
 <p> References _Evas_List::accounting, _Evas_List::data, _Evas_List::next, and _Evas_List::prev. </p>
 <p> Referenced by evas_font_path_prepend(), evas_list_prepend_relative(), evas_object_data_set(), evas_object_smart_callback_add(), evas_objects_at_xy_get(), and evas_objects_in_rectangle_get().</p>
 <h3>EAPI <code>Evas_List</code>* evas_list_prepend_relative (<code>Evas_List</code> * list, const void * data, const void * relative)</h3>
@@ -95,10 +95,10 @@ description: "Linked List Creation Functions – Functions that add data to an E
 <dl COMPACT>
 <dd><i>list</i> The list handle to prepend data too<br />
  <i>data</i> The data pointer to prepend to list list before relative<br />
- <i>relative</i> The data pointer before which to insert data</dl>
+ <i>relative</i> The data pointer before which to insert data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list handle to replace the old one</dl>
+<dd>A new list handle to replace the old one</dd></dl>
 <p> Inserts the given data into the given linked list before the member specified. </p>
 <p> If relative is not in the list, data is prepended to the start of the list. If there are multiple instances of relative in the list, data is inserted before the first instance. </p>
 <p> The following code example demonstrates how to ensure that the given data has been successfully inserted. </p>
@@ -121,10 +121,10 @@ description: "Linked List Creation Functions – Functions that add data to an E
 <dl COMPACT>
 <dd><i>list</i> The given linked list.<br />
  <i>data</i> The given data.<br />
- <i>relative</i> The data to insert before.</dl>
+ <i>relative</i> The data to insert before.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list pointer that should be used in place of the one given to this function if successful. Otherwise the old pointer is returned.</dl>
+<dd>A new list pointer that should be used in place of the one given to this function if successful. Otherwise the old pointer is returned.</dd></dl>
 <p> References _Evas_List::data, evas_list_prepend(), and _Evas_List::next.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

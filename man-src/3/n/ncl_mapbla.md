@@ -13,16 +13,16 @@ MAPBLA - Adds to the area map in the array IAMA the set of boundary lines, of pr
 
  void c_mapbla (int *iama)
 <h2>Description</h2><dl COMPACT><dt>IAMA
-<dd>(an input/output array of type INTEGER) is the area map array to which boundary lines are to be added.</dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
+</dt><dd>(an input/output array of type INTEGER) is the area map array to which boundary lines are to be added.</dd></dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
 <h2>Usage</h2>One or two groups of boundary lines are added to the area map by a call to MAPBLA. The first group has the group identifier 'G1', which has a default value of 1. The group 'G1' consists of a perimeter (either rectangular or elliptical, depending on the value of the EZMAP parameter 'EL') and the set of projected boundary lines implied by your selection of an EZMAP dataset (some combination of continental, U.S. state, and international political outlines). For certain projections a limb line may also be included. (The limb is the boundary between a projectable region and an unprojectable one.) 
 
  If the EZMAP parameter 'VS' has a value greater than zero, a second group, with the group identifier 'G2', is added to the area map. (The default value of 'VS' is 1; the default value of 'G2' is 2.) The purpose of the group 'G2' is to split up areas and thus reduce the number of points required to define a typical area. This may be necessary because some hardware devices fail if the number of points defining an area is too large. The group 'G2' consists of a copy of the perimeter and the limb line (if any), plus a set of vertical lines that split the area inside the perimeter into 'VS' vertical strips. 
 
  The perimeter and the limb in the groups 'G1' and 'G2' have the following left and right area identifiers:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Identifies the area inside the perimeter or limb.
-<dt>-1
-<dd>Identifies the area outside the perimeter or limb.</dl></dl>
+<dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Identifies the area inside the perimeter or limb.
+</dd><dt>-1
+</dt><dd>Identifies the area outside the perimeter or limb.</dd></dl></dl>
  
 
  The vertical lines in the group 'G2' have left and right area identifiers of 0. 

@@ -36,17 +36,17 @@ description: "ntp_auth – Authentication Options"
 <p> A specific combination of authentication and identity schemes is called a cryptotype, which applies to clients and servers separately. A group can be configured using more than one cryptotype combination, although not all combinations are interoperable. Note however that some cryptotype combinations may successfully intemperate with each other, but may not represent good security practice. The server and client cryptotypes are defined by the the following codes. </p>
 <dl>
 <dd>
-<dl>
-<dt>NONE</p>
-<dd>A client or server is type NONE if authentication is not available or not configured. Packets exchanged between client and server have no MAC.</p>
-<dt>AUTH</p>
-<dd>A client or server is type AUTH if the <code>key</code> option is specified with the <code>server</code> configuration command and the client and server keys are compatible. Packets exchanged between clients and servers have a MAC.</p>
-<dt>PC</p>
-<dd>A client or server is type PC if the <code>autokey</code> option is specified with the <code>server</code> configuration command and compatible host key and private certificate files are present. Packets exchanged between clients and servers have a MAC.</p>
-<dt>TC</p>
-<dd>A client or server is type TC if the <code>autokey</code> option is specified with the <code>server</code> configuration command and compatible host key and public certificate files are present. Packets exchanged between clients and servers have a MAC.</p>
-<dt>IDENT</p>
-<dd>A client or server is type IDENT if the <code>autokey</code> option is specified with the <code>server</code> configuration command and compatible host key, public certificate and identity scheme files are present. Packets exchanged between clients and servers have a MAC.</dl>
+</dd><dl>
+<dt>NONE</dt>
+<dd>A client or server is type NONE if authentication is not available or not configured. Packets exchanged between client and server have no MAC.</dd>
+<dt>AUTH</dt>
+<dd>A client or server is type AUTH if the <code>key</code> option is specified with the <code>server</code> configuration command and the client and server keys are compatible. Packets exchanged between clients and servers have a MAC.</dd>
+<dt>PC</dt>
+<dd>A client or server is type PC if the <code>autokey</code> option is specified with the <code>server</code> configuration command and compatible host key and private certificate files are present. Packets exchanged between clients and servers have a MAC.</dd>
+<dt>TC</dt>
+<dd>A client or server is type TC if the <code>autokey</code> option is specified with the <code>server</code> configuration command and compatible host key and public certificate files are present. Packets exchanged between clients and servers have a MAC.</dd>
+<dt>IDENT</dt>
+<dd>A client or server is type IDENT if the <code>autokey</code> option is specified with the <code>server</code> configuration command and compatible host key, public certificate and identity scheme files are present. Packets exchanged between clients and servers have a MAC.</dd></dl>
 </dl>
 <p> The compatible cryptotypes for clients and servers are listed in the following table. </p>
 <table BORDER WIDTH=100%>
@@ -122,74 +122,74 @@ description: "ntp_auth – Authentication Options"
 <h2>Authentication Commands</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>automax [</code><i>logsec</i><code>]</code></p>
-<dd>Specifies the interval between regenerations of the session key list used with the Autokey protocol, as a power of 2 in seconds. Note that the size of the key list for each association depends on this interval and the current poll interval. The default interval is 12 (about 1.1 h). For poll intervals above the specified interval, a session key list with a single entry will be regenerated for every message sent.</p>
-<dt><code>controlkey </code><i>keyid</i></p>
-<dd>Specifies the key ID to use with the <code>ntpq</code> utility, which uses the standard protocol defined in RFC-1305. The <i>keyid</i> argument is the key ID for a trusted key, where the value can be in the range 1 to 65534, inclusive.</p>
-<dt><code>crypto [randfile </code><i>file</i><code>] [host </code><i>name</i><code>] [ident </code><i>name</i><code>] [pw </code><i>password</i><code>]</code></p>
-<dd>This command requires the OpenSSL library. It activates public key cryptography and loads the required host key and public certificate. If one or more files are left unspecified, the default names are used as described below. Unless the complete path and name of the file are specified, the location of a file is relative to the keys directory specified in the <code>keysdir</code> configuration command or default <code>/etc/ntp/crypto</code>46 Following are the options. </p>
+</dd><dl>
+<dt><code>automax [</code><i>logsec</i><code>]</code></dt>
+<dd>Specifies the interval between regenerations of the session key list used with the Autokey protocol, as a power of 2 in seconds. Note that the size of the key list for each association depends on this interval and the current poll interval. The default interval is 12 (about 1.1 h). For poll intervals above the specified interval, a session key list with a single entry will be regenerated for every message sent.</dd>
+<dt><code>controlkey </code><i>keyid</i></dt>
+<dd>Specifies the key ID to use with the <code>ntpq</code> utility, which uses the standard protocol defined in RFC-1305. The <i>keyid</i> argument is the key ID for a trusted key, where the value can be in the range 1 to 65534, inclusive.</dd>
+<dt><code>crypto [randfile </code><i>file</i><code>] [host </code><i>name</i><code>] [ident </code><i>name</i><code>] [pw </code><i>password</i><code>]</code></dt>
+<dd>This command requires the OpenSSL library. It activates public key cryptography and loads the required host key and public certificate. If one or more files are left unspecified, the default names are used as described below. Unless the complete path and name of the file are specified, the location of a file is relative to the keys directory specified in the <code>keysdir</code> configuration command or default <code>/etc/ntp/crypto</code>46 Following are the options. </dd>
 <dl>
 <dd>
-<dl>
-<dt><code>digest</code> <code>MD2</code> | <code>MD4</code> | <code>MD5</code> | <code>MDC2</code> | <code>RIPEMD160</code> | <code>SHA</code> | <code>SHA1</code></p>
-<dd>Specify the message digest algorithm, with default MD5. If the OpenSSL library is installed, <i>name</i> can be be any message digest algorithm supported by the library not exceeding 160 bits in length. However, all Autokey participants in an Autokey subnet must use the same algorithm. Note that the Autokey message digest algorithm is separate and distinct form the symmetric key message digest algorithms. Note: If compliance with FIPS 140-2 is required, the algorithm must be ether <code>SHA</code> or <code>SHA1</code>46</p>
-<dt><code>host </code><i>name</i></p>
-<dd>Specifies the string used when constructing the names for the host, sign and certificate files generated by the <code>ntp-keygen</code> program with the <code>-s </code><i>name</i> option.</p>
-<dt><code>ident </code><i>name</i></p>
-<dd>Specifies the string used in constructing the identity files generated by the <code>ntp-keygen</code> program with the <code>-i </code><i>name</i> option.</p>
-<dt><code>pw </code><i>password</i></p>
-<dd>Specifies the password to decrypt files previously encrypted by the <code>ntp-keygen</code> program with the <code>-p</code> option.</p>
-<dt><code>randfile </code><i>file</i></p>
-<dd>Specifies the location of the random seed file used by the OpenSSL library. The defaults are described on the <code>ntp-keygen</code> page.</dl>
+</dd><dl>
+<dt><code>digest</code> <code>MD2</code> | <code>MD4</code> | <code>MD5</code> | <code>MDC2</code> | <code>RIPEMD160</code> | <code>SHA</code> | <code>SHA1</code></dt>
+<dd>Specify the message digest algorithm, with default MD5. If the OpenSSL library is installed, <i>name</i> can be be any message digest algorithm supported by the library not exceeding 160 bits in length. However, all Autokey participants in an Autokey subnet must use the same algorithm. Note that the Autokey message digest algorithm is separate and distinct form the symmetric key message digest algorithms. Note: If compliance with FIPS 140-2 is required, the algorithm must be ether <code>SHA</code> or <code>SHA1</code>46</dd>
+<dt><code>host </code><i>name</i></dt>
+<dd>Specifies the string used when constructing the names for the host, sign and certificate files generated by the <code>ntp-keygen</code> program with the <code>-s </code><i>name</i> option.</dd>
+<dt><code>ident </code><i>name</i></dt>
+<dd>Specifies the string used in constructing the identity files generated by the <code>ntp-keygen</code> program with the <code>-i </code><i>name</i> option.</dd>
+<dt><code>pw </code><i>password</i></dt>
+<dd>Specifies the password to decrypt files previously encrypted by the <code>ntp-keygen</code> program with the <code>-p</code> option.</dd>
+<dt><code>randfile </code><i>file</i></dt>
+<dd>Specifies the location of the random seed file used by the OpenSSL library. The defaults are described on the <code>ntp-keygen</code> page.</dd></dl>
 </dl>
-<dt><code>keys </code><i>keyfile</i></p>
-<dd>Specifies the complete path to the MD5 key file containing the keys and key IDs used by <code>ntpd</code>, <code>ntpq</code> and <code>ntpdc</code> when operating with symmetric key cryptography. This is the same operation as the <code>-k </code>command line option. Note that the directory path for Autokey media is specified by the <code>keysdir</code> command.</p>
-<dt><code>keysdir </code><i>path</i>K</p>
-<dd>This command specifies the default directory path for Autokey cryptographic keys, parameters and certificates. The default is <code>/etc/ntp/crypto</code>46 Note that the path for the symmetric keys file is specified by the <code>keys</code> command.</p>
-<dt><code>requestkey </code><i>keyid</i></p>
-<dd>Specifies the key ID to use with the <code>ntpdc</code> utility program, which uses a proprietary protocol specific to this implementation of <code>ntpd</code>46 The <i>keyid</i> argument is a key ID for a trusted key, in the range 1 to 65534, inclusive.</p>
-<dt><code>revoke [</code><i>logsec</i><code>]</code></p>
-<dd>Specifies the interval between re-randomization of certain cryptographic values used by the Autokey scheme, as a power of 2 in seconds. These values need to be updated frequently in order to deflect brute-force attacks on the algorithms; however, updating some values is a relatively expensive operation. The default interval is 17 (about 36 h). For poll intervals above the specified interval, the values will be updated for every message sent.</p>
-<dt><code>trustedkey [</code><i>keyid</i><code> | (</code><i>lowid</i><code> &#8230; </code><i>highid</i><code>)] [&#8230;]</code></p>
-<dd>Specifies the key ID(s) which are trusted for the purposes of authenticating peers with symmetric key cryptography. Key IDs used to authenticate <code>ntpq</code> and <code>ntpdc</code> operations must be listed here and additionally be enabled with controlkey and/or requestkey46 The authentication procedure for time transfer require that both the local and remote NTP servers employ the same key ID and secret for this purpose, although different keys IDs may be used with different servers. Ranges of trusted key IDs may be specified: &quot;<code>trustedkey (1 &#8230; 19) 1000 (100 &#8230; 199)</code>&quot; enables the lowest 120 key IDs which start with the digit 1. The spaces surrounding the ellipsis are required when specifying a range.</dl>
+<dt><code>keys </code><i>keyfile</i></dt>
+<dd>Specifies the complete path to the MD5 key file containing the keys and key IDs used by <code>ntpd</code>, <code>ntpq</code> and <code>ntpdc</code> when operating with symmetric key cryptography. This is the same operation as the <code>-k </code>command line option. Note that the directory path for Autokey media is specified by the <code>keysdir</code> command.</dd>
+<dt><code>keysdir </code><i>path</i>K</dt>
+<dd>This command specifies the default directory path for Autokey cryptographic keys, parameters and certificates. The default is <code>/etc/ntp/crypto</code>46 Note that the path for the symmetric keys file is specified by the <code>keys</code> command.</dd>
+<dt><code>requestkey </code><i>keyid</i></dt>
+<dd>Specifies the key ID to use with the <code>ntpdc</code> utility program, which uses a proprietary protocol specific to this implementation of <code>ntpd</code>46 The <i>keyid</i> argument is a key ID for a trusted key, in the range 1 to 65534, inclusive.</dd>
+<dt><code>revoke [</code><i>logsec</i><code>]</code></dt>
+<dd>Specifies the interval between re-randomization of certain cryptographic values used by the Autokey scheme, as a power of 2 in seconds. These values need to be updated frequently in order to deflect brute-force attacks on the algorithms; however, updating some values is a relatively expensive operation. The default interval is 17 (about 36 h). For poll intervals above the specified interval, the values will be updated for every message sent.</dd>
+<dt><code>trustedkey [</code><i>keyid</i><code> | (</code><i>lowid</i><code> &#8230; </code><i>highid</i><code>)] [&#8230;]</code></dt>
+<dd>Specifies the key ID(s) which are trusted for the purposes of authenticating peers with symmetric key cryptography. Key IDs used to authenticate <code>ntpq</code> and <code>ntpdc</code> operations must be listed here and additionally be enabled with controlkey and/or requestkey46 The authentication procedure for time transfer require that both the local and remote NTP servers employ the same key ID and secret for this purpose, although different keys IDs may be used with different servers. Ranges of trusted key IDs may be specified: &quot;<code>trustedkey (1 &#8230; 19) 1000 (100 &#8230; 199)</code>&quot; enables the lowest 120 key IDs which start with the digit 1. The spaces surrounding the ellipsis are required when specifying a range.</dd></dl>
 </dl>
 <h2>Error Codes</h2>
 <p>Errors can occur due to mismatched configurations, unexpected protocol restarts, expired certificates and unfriendly people. In most cases the protocol state machine recovers automatically by retransmission, timeout and restart, where necessary. Some errors are due to mismatched keys, digest schemes or identity schemes and must be corrected by installing the correct media and/or correcting the configuration file. One of the most common errors is expired certificates, which must be regenerated and signed at least once per year using the <code>ntp-keygen</code> &#8211; generate public and private keys program. </p>
 <p> The following error codes are reported via the NTP control and monitoring protocol trap mechanism and to the <code>cryptostats</code> monitoring file if configured. </p>
 <dl>
 <dd>
-<dl>
-<dt>101 bad field format or length</p>
-<dd>The packet has invalid version, length or format.</p>
-<dt>102 bad timestamp</p>
-<dd>The packet timestamp is the same or older than the most recent received. This could be due to a replay or a server clock time step.</p>
-<dt>103 bad filestamp</p>
-<dd>The packet filestamp is the same or older than the most recent received. This could be due to a replay or a key file generation error.</p>
-<dt>104 bad or missing public key</p>
-<dd>The public key is missing, has incorrect format or is an unsupported type.</p>
-<dt>105 unsupported digest type</p>
-<dd>The server requires an unsupported digest/signature scheme.</p>
-<dt>106 unsupported identity type</p>
-<dd>The client or server has requested an identity scheme the other does not support.</p>
-<dt>107 bad signature length</p>
-<dd>The signature length does not match the current public key.</p>
-<dt>108 signature not verified</p>
-<dd>The message fails the signature check. It could be bogus or signed by a different private key.</p>
-<dt>109 certificate not verified</p>
-<dd>The certificate is invalid or signed with the wrong key.</p>
-<dt>110 host certificate expired</p>
-<dd>The old server certificate has expired.</p>
-<dt>111 bad or missing cookie</p>
-<dd>The cookie is missing, corrupted or bogus.</p>
-<dt>112 bad or missing leapseconds table</p>
-<dd>The leapseconds table is missing, corrupted or bogus.</p>
-<dt>113 bad or missing certificate</p>
-<dd>The certificate is missing, corrupted or bogus.</p>
-<dt>114 bad or missing group key</p>
-<dd>The identity key is missing, corrupt or bogus.</p>
-<dt>115 protocol error</p>
-<dd>The protocol state machine has wedged due to unexpected restart.</dl>
+</dd><dl>
+<dt>101 bad field format or length</dt>
+<dd>The packet has invalid version, length or format.</dd>
+<dt>102 bad timestamp</dt>
+<dd>The packet timestamp is the same or older than the most recent received. This could be due to a replay or a server clock time step.</dd>
+<dt>103 bad filestamp</dt>
+<dd>The packet filestamp is the same or older than the most recent received. This could be due to a replay or a key file generation error.</dd>
+<dt>104 bad or missing public key</dt>
+<dd>The public key is missing, has incorrect format or is an unsupported type.</dd>
+<dt>105 unsupported digest type</dt>
+<dd>The server requires an unsupported digest/signature scheme.</dd>
+<dt>106 unsupported identity type</dt>
+<dd>The client or server has requested an identity scheme the other does not support.</dd>
+<dt>107 bad signature length</dt>
+<dd>The signature length does not match the current public key.</dd>
+<dt>108 signature not verified</dt>
+<dd>The message fails the signature check. It could be bogus or signed by a different private key.</dd>
+<dt>109 certificate not verified</dt>
+<dd>The certificate is invalid or signed with the wrong key.</dd>
+<dt>110 host certificate expired</dt>
+<dd>The old server certificate has expired.</dd>
+<dt>111 bad or missing cookie</dt>
+<dd>The cookie is missing, corrupted or bogus.</dd>
+<dt>112 bad or missing leapseconds table</dt>
+<dd>The leapseconds table is missing, corrupted or bogus.</dd>
+<dt>113 bad or missing certificate</dt>
+<dd>The certificate is missing, corrupted or bogus.</dd>
+<dt>114 bad or missing group key</dt>
+<dd>The identity key is missing, corrupt or bogus.</dd>
+<dt>115 protocol error</dt>
+<dd>The protocol state machine has wedged due to unexpected restart.</dd></dl>
 </dl>
 <h2>Files</h2>
 <p>See the <code>ntp-keygen</code> page. Note that provisions to load leap second values from the NIST files have been removed. These provisions are now available whether or not the OpenSSL library is available. However, the functions that can download these values from servers remains available.</p>

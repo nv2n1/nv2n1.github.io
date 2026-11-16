@@ -14,10 +14,10 @@ description: "pci_find_bus – locate PCI bus from a given domain and bus number
 <p><i>domain</i></p>
 <dl>
 <dd>
-<dd>number of PCI domain to search</dl>
+</dd><dd>number of PCI domain to search</dd></dl>
 <p> <i>busnr</i></p>
 <dl>
-<dd>number of desired PCI bus</dl>
+<dd>number of desired PCI bus</dd></dl>
 <h2>Description</h2>
 <p>Given a PCI bus number and domain number, the desired PCI bus is located in the global list of PCI buses. If the bus is found, a pointer to its data structure is returned. If no bus is found, <code>NULL</code> is returned.</p>
 <h2>Copyright</h2>

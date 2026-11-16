@@ -22,18 +22,18 @@ caddr_t create_module(const char *name, size_t size);
 <p> On success, returns the kernel address at which the module will reside. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EEXIST</code></p>
-<dd> A module by that name already exists.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>name</i> is outside the program&#8217;s accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The requested size is too small even for the module header information.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The kernel could not allocate a contiguous block of memory large enough for the module.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>create_module</code>() is not supported in this version of the kernel (e.g., the kernel is version 2.6 or later).</p>
-<dt><code>EPERM</code></p>
-<dd> The caller was not privileged (did not have the <code>CAP_SYS_MODULE</code> capability).</dl>
+<dt><code>EEXIST</code></dt>
+<dd> A module by that name already exists.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>name</i> is outside the program&#8217;s accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The requested size is too small even for the module header information.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The kernel could not allocate a contiguous block of memory large enough for the module.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>create_module</code>() is not supported in this version of the kernel (e.g., the kernel is version 2.6 or later).</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller was not privileged (did not have the <code>CAP_SYS_MODULE</code> capability).</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is present on Linux only up until kernel 2.4; it was removed in Linux 2.6.</p>
 <h2>CONFORMING TO</h2>

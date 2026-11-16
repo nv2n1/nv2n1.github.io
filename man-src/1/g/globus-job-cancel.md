@@ -19,33 +19,33 @@ description: "globus-job-cancel – Cancel a GRAM batch job"
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display a help message to standard error and exit.</dl>
+</dt><dd> Display a help message to standard error and exit.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the globus-job-cancel program to standard output.</dl>
+</dt><dd> Display the software version of the globus-job-cancel program to standard output.</dd></dl>
 <p> <code>-versions</code></p>
 <dl>
 <dt>
-<dd> Display the software version of the globus-job-cancel program including DiRT information to standard output.</dl>
+</dt><dd> Display the software version of the globus-job-cancel program including DiRT information to standard output.</dd></dl>
 <p> <code>-force, -f</code></p>
 <dl>
 <dt>
-<dd> Do not prompt to confirm job cancel and clean-up.</dl>
+</dt><dd> Do not prompt to confirm job cancel and clean-up.</dd></dl>
 <p> <code>-quiet, -q</code></p>
 <dl>
 <dt>
-<dd> Do not print diagnostics for successful cancel. Implies <i>-f</i>.</dl>
+</dt><dd> Do not print diagnostics for successful cancel. Implies <i>-f</i>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> If the following variables affect the execution of globus-job-cancel. </p>
 <p> <code>X509_USER_PROXY</code></p>
 <dl>
 <dt>
-<dd> Path to proxy credential.</dl>
+</dt><dd> Path to proxy credential.</dd></dl>
 <p> <code>X509_CERT_DIR</code></p>
 <dl>
 <dt>
-<dd> Path to trusted certificate directory.</dl>
+</dt><dd> Path to trusted certificate directory.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
 <h2>Index</h2>

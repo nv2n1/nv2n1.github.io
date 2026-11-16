@@ -10,7 +10,6 @@ description: "rotate_sprite – Rotates a sprite. Allegro game programming libra
 <p>rotate_sprite &#8211; Rotates a sprite. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void rotate_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y, fixed angle);</code></pre>
 <h2>Description</h2>
 <p>Draws the sprite image onto the bitmap. It is placed with its top left corner at the specified position, then rotated by the specified angle around its centre. The angle is a fixed point 16.16 number in the same format used by the fixed point trig routines, with 256 equal to a full circle, 64 a right angle, etc. All rotation functions can draw between any two bitmaps, even screen bitmaps or bitmaps of different color depth. Positive increments of the angle will make the sprite rotate clockwise on the screen, as demonstrated by the Allegro example. </p>

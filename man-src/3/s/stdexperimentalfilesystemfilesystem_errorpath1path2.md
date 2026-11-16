@@ -12,7 +12,6 @@ std::experimental::filesystem::filesystem_error::path1,path2 - std::experimental
 
 <pre><code>const path &amp;path1() const;
 (filesystem TS)
-
     const path &amp;path2() const;
 (filesystem TS)</code></pre> 
 Returns the paths that were stored in the exception object. 

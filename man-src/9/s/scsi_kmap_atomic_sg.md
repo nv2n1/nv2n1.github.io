@@ -14,23 +14,23 @@ description: "scsi_kmap_atomic_sg – find and atomically map an sg-elemnt"
 <p><i>sgl</i></p>
 <dl>
 <dd>
-<dd>scatter-gather list</dl>
+</dd><dd>scatter-gather list</dd></dl>
 <p> <i>sg_count</i></p>
 <dl>
-<dd>number of segments in sg</dl>
+<dd>number of segments in sg</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>offset in bytes into sg, on return offset into the mapped area</dl>
+<dd>offset in bytes into sg, on return offset into the mapped area</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>bytes to map, on return number of bytes mapped</dl>
+<dd>bytes to map, on return number of bytes mapped</dd></dl>
 <h2>Description</h2>
 <p>Returns virtual address of the start of the mapped page</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

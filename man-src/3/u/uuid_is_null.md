@@ -10,7 +10,6 @@ description: "uuid_is_null – compare the value of the UUID to the NULL value"
 <p>uuid_is_null &#8211; compare the value of the UUID to the NULL value</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;uuid.h&gt;
-
 int uuid_is_null(uuid_t uu);</code></pre>
 <h2>Description</h2>
 <p>The <code>uuid_is_null</code> function compares the value of the supplied UUID variable <i>uu</i> to the NULL value. If the value is equal to the NULL UUID, 1 is returned, otherwise 0 is returned.</p>

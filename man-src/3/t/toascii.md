@@ -10,7 +10,6 @@ description: "toascii – convert character to ASCII"
 <p>toascii &#8211; convert character to ASCII</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ctype.h&gt;
-
 int toascii(int c);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>toascii</code>(): _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />

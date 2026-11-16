@@ -15,19 +15,19 @@ bdev_write_page - Start writing a page to a block device
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>The device to write the page to</dl>
+<dl><dd></dd><dd>The device to write the page to</dd></dl>
  
 
  <i>sector</i>
-<dl><dd>The offset on the device to write the page to (need not be aligned)</dl>
+<dl><dd>The offset on the device to write the page to (need not be aligned)</dd></dl>
  
 
  <i>page</i>
-<dl><dd>The page to write</dl>
+<dl><dd>The page to write</dd></dl>
  
 
  <i>wbc</i>
-<dl><dd>The writeback_control for the write</dl>
+<dl><dd>The writeback_control for the write</dd></dl>
 
 <h2>Description</h2>
 

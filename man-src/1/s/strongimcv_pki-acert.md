@@ -14,36 +14,36 @@ description: "pki –acert – Issue an attribute certificate"
 <p>This sub-command of <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1) is used to issue an attribute certificate using an issuer certificate with its private key and the holder certificate.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print usage information with a summary of the available options.</p>
-<dt><code>-v, &#8211;debug </code><i>level</i></p>
-<dd>Set debug level, default: 1.</p>
-<dt><code>-+, &#8211;options </code><i>file</i></p>
-<dd>Read command line options from <i>file</i>.</p>
-<dt><code>-i, &#8211;in </code><i>file</i></p>
-<dd>Holder certificate to issue an attribute certificate for. If not given the certificate is read from <i>STDIN</i>.</p>
-<dt><code>-m, &#8211;group </code><i>membership</i></p>
-<dd>Group membership the attribute certificate shall certify. The specified group is included as a string. To include multiple groups, the option can be repeated.</p>
-<dt><code>-k, &#8211;issuerkey </code><i>file</i></p>
-<dd>Issuer private key file. Either this or <code>&#8211;issuerkeyid</code> is required.</p>
-<dt><code>-x, &#8211;issuerkeyid </code><i>hex</i></p>
-<dd>Key ID of a issuer private key on a smartcard. Either this or <code>&#8211;issuerkey</code> is required.</p>
-<dt><code>-c, &#8211;issuercert </code><i>file</i></p>
-<dd>Issuer certificate file. Required.</p>
-<dt><code>-l, &#8211;lifetime </code><i>hours</i></p>
-<dd>Hours the attribute certificate is valid, default: 24. Ignored if both an absolute start and end time are given.</p>
-<dt><code>-F, &#8211;not-before </code><i>datetime</i></p>
-<dd>Absolute time when the validity of the AC begins. The datetime format is defined by the <code>&#8211;dateform</code> option.</p>
-<dt><code>-T, &#8211;not-after </code><i>datetime</i></p>
-<dd>Absolute time when the validity of the AC ends. The datetime format is defined by the <code>&#8211;dateform</code> option.</p>
-<dt><code>-D, &#8211;dateform </code><i>form</i></p>
-<dd><a href="/docs/linux/man/3-strptime/">strptime</a>(3) format for the <code>&#8211;not-before</code> and <code>&#8211;not-after</code> options, default: <code>%d.%m.%y %T</code></p>
-<dt><code>-s, &#8211;serial </code><i>hex</i></p>
-<dd>Serial number in hex. It is randomly allocated by default.</p>
-<dt><code>-g, &#8211;digest </code><i>digest</i></p>
-<dd>Digest to use for signature creation. One of <i>md5</i>, <i>sha1</i>, <i>sha224</i>, <i>sha256</i>, <i>sha384</i>, or <i>sha512</i>. Defaults to <i>sha1</i>.</p>
-<dt><code>-f, &#8211;outform </code><i>encoding</i></p>
-<dd>Encoding of the created certificate file. Either <i>der</i> (ASN.1 DER) or <i>pem</i> (Base64 PEM), defaults to <i>der</i>.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print usage information with a summary of the available options.</dd>
+<dt><code>-v, &#8211;debug </code><i>level</i></dt>
+<dd>Set debug level, default: 1.</dd>
+<dt><code>-+, &#8211;options </code><i>file</i></dt>
+<dd>Read command line options from <i>file</i>.</dd>
+<dt><code>-i, &#8211;in </code><i>file</i></dt>
+<dd>Holder certificate to issue an attribute certificate for. If not given the certificate is read from <i>STDIN</i>.</dd>
+<dt><code>-m, &#8211;group </code><i>membership</i></dt>
+<dd>Group membership the attribute certificate shall certify. The specified group is included as a string. To include multiple groups, the option can be repeated.</dd>
+<dt><code>-k, &#8211;issuerkey </code><i>file</i></dt>
+<dd>Issuer private key file. Either this or <code>&#8211;issuerkeyid</code> is required.</dd>
+<dt><code>-x, &#8211;issuerkeyid </code><i>hex</i></dt>
+<dd>Key ID of a issuer private key on a smartcard. Either this or <code>&#8211;issuerkey</code> is required.</dd>
+<dt><code>-c, &#8211;issuercert </code><i>file</i></dt>
+<dd>Issuer certificate file. Required.</dd>
+<dt><code>-l, &#8211;lifetime </code><i>hours</i></dt>
+<dd>Hours the attribute certificate is valid, default: 24. Ignored if both an absolute start and end time are given.</dd>
+<dt><code>-F, &#8211;not-before </code><i>datetime</i></dt>
+<dd>Absolute time when the validity of the AC begins. The datetime format is defined by the <code>&#8211;dateform</code> option.</dd>
+<dt><code>-T, &#8211;not-after </code><i>datetime</i></dt>
+<dd>Absolute time when the validity of the AC ends. The datetime format is defined by the <code>&#8211;dateform</code> option.</dd>
+<dt><code>-D, &#8211;dateform </code><i>form</i></dt>
+<dd><a href="/docs/linux/man/3-strptime/">strptime</a>(3) format for the <code>&#8211;not-before</code> and <code>&#8211;not-after</code> options, default: <code>%d.%m.%y %T</code></dd>
+<dt><code>-s, &#8211;serial </code><i>hex</i></dt>
+<dd>Serial number in hex. It is randomly allocated by default.</dd>
+<dt><code>-g, &#8211;digest </code><i>digest</i></dt>
+<dd>Digest to use for signature creation. One of <i>md5</i>, <i>sha1</i>, <i>sha224</i>, <i>sha256</i>, <i>sha384</i>, or <i>sha512</i>. Defaults to <i>sha1</i>.</dd>
+<dt><code>-f, &#8211;outform </code><i>encoding</i></dt>
+<dd>Encoding of the created certificate file. Either <i>der</i> (ASN.1 DER) or <i>pem</i> (Base64 PEM), defaults to <i>der</i>.</dd></dl>
 <h2>Examples</h2>
 <p>To save repetitive typing, command line options can be stored in files. Lets assume <i>acert.opt</i> contains the following contents: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&#8211;issuercert aacert.der &#8211;issuerkey aakey.der &#8211;digest sha256 &#8211;lifetime 4 </p>

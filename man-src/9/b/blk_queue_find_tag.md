@@ -15,11 +15,11 @@ blk_queue_find_tag - find a request by its tag and queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>The request queue for the device</dl>
+<dl><dd></dd><dd>The request queue for the device</dd></dl>
  
 
  <i>tag</i>
-<dl><dd>The tag of the request</dl>
+<dl><dd>The tag of the request</dd></dl>
 
 <h2>Notes</h2>
 

@@ -14,10 +14,10 @@ description: "gnutls_openpgp_crt_set_preferred_key_id – API function"
 <p> <code>int gnutls_openpgp_crt_set_preferred_key_id(gnutls_openpgp_crt_t </code><i>key</i><code>, const gnutls_openpgp_keyid_t </code><i>keyid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_crt_t key</p>
-<dd> the structure that contains the OpenPGP public key.</p>
-<dt>const gnutls_openpgp_keyid_t keyid</p>
-<dd> the selected keyid</dl>
+<dt>gnutls_openpgp_crt_t key</dt>
+<dd> the structure that contains the OpenPGP public key.</dd>
+<dt>const gnutls_openpgp_keyid_t keyid</dt>
+<dd> the selected keyid</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This allows setting a preferred key id for the given certificate. This key will be used by functions that involve key handling. </p>
 <p> If the provided <i>keyid</i> is <code>NULL</code> then the master key is set as preferred.</p>
@@ -32,6 +32,6 @@ description: "gnutls_openpgp_crt_set_preferred_key_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

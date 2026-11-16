@@ -11,7 +11,6 @@ description: "strverscmp – compare two version strings"
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;string.h&gt;
-
 int strverscmp(const char *s1, const char *s2);</code></pre>
 <h2>Description</h2>
 <p>Often one has files <i>jan1</i>, <i>jan2</i>, &#8230;, <i>jan9</i>, <i>jan10</i>, &#8230; and it feels wrong when <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1) orders them <i>jan1</i>, <i>jan10</i>, &#8230;, <i>jan2</i>, &#8230;, <i>jan9</i>. In order to rectify this, GNU introduced the <i>-v</i> option to <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), which is implemented using <code><a href="/docs/linux/man/3-versionsort/">versionsort</a></code>(3), which again uses <code>strverscmp</code>(). </p>
@@ -41,13 +40,7 @@ int strverscmp(const char *s1, const char *s2);</code></pre>
 <p>The program below can be used to demonstrate the behavior of <code>strverscmp</code>(). It uses <code>strverscmp</code>() to compare the two strings given as its command-line arguments. An example of its use is the following: </p>
 <pre><code>$ ./a.out jan1 jan10
 jan1 &lt; jan10
-
-
-
 Program source
-
-
-
 #define _GNU_SOURCE
 #include &lt;string.h&gt;
 #include &lt;stdio.h&gt;

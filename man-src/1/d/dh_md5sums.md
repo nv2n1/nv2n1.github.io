@@ -17,10 +17,10 @@ description: "dh_md5sums – generate DEBIAN/md5sums file"
 <p> The md5sums file is installed with proper permissions and ownerships.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-x</code>, <code>&#8211;include-conffiles</code></p>
-<dd> Include conffiles in the md5sums list. Note that this information is redundant since it is included elsewhere in Debian packages.</p>
-<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></p>
-<dd> Exclude files that contain <i>item</i> anywhere in their filename from being listed in the md5sums file.</dl>
+<dt><code>-x</code>, <code>&#8211;include-conffiles</code></dt>
+<dd> Include conffiles in the md5sums list. Note that this information is redundant since it is included elsewhere in Debian packages.</dd>
+<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude files that contain <i>item</i> anywhere in their filename from being listed in the md5sums file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

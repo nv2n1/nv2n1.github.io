@@ -27,8 +27,8 @@ description: "ao_string_tokenize – tokenize an input string"
 </code></pre>
 <p> Double quote strings are formed according to the rules of string constants in ANSI-C programs.</p>
 <dl>
-<dt><i>string</i></p>
-<dd> string to be tokenized </p>
+<dt><i>string</i></dt>
+<dd> string to be tokenized </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> pointer to a structure that lists each token </p>

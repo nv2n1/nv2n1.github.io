@@ -11,10 +11,8 @@ description: "std::pmr::polymorphic_allocator<T>::allocate_object – std::pmr::
 <h2>Synopsis</h2>
 <pre><code>template &lt;class U&gt;
 (since C++ 20)
-
     U *allocate_object(std::size_t n = 1);
 Allocates storage for n objects of type U using the underlying memory resource.
-
 If SIZE_MAX / sizeof(U) &lt; n, throws std::length_error, otherwise equivalent to return static_cast&lt;U*&gt;(allocate_bytes(n * sizeof(U), alignof(U)) );
 </code></pre>
 <h2>Parameters</h2>

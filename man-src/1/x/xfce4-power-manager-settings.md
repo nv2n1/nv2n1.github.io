@@ -16,12 +16,12 @@ description: "xfce4-power-manager-settings – Settings dialog for the Xfce 4 Po
 <p> You can run <code>xfce4-power-manager-settings</code> from the command line without specifying any extra arguments. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd> Have the power manager print debug messages to the console; useful if you have to send in a bug report.</p>
-<dt><code>&#8211;socket-id=SOCKET ID</code></p>
-<dd> Settings manager socket, used when <code>xfce4-power-manager-settings</code> is embedded in the settings manager.</p>
-<dt><code>&#8211;device-id=UpDevice object path</code></p>
-<dd> Display a specific device by a specific UPower UpDevice object path. </p>
+<dt><code>&#8211;debug</code></dt>
+<dd> Have the power manager print debug messages to the console; useful if you have to send in a bug report.</dd>
+<dt><code>&#8211;socket-id=SOCKET ID</code></dt>
+<dd> Settings manager socket, used when <code>xfce4-power-manager-settings</code> is embedded in the settings manager.</dd>
+<dt><code>&#8211;device-id=UpDevice object path</code></dt>
+<dd> Display a specific device by a specific UPower UpDevice object path. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please report any bugs to <i><a rel="nofollow" href="http://bugzilla.xfce.org/">http://bugzilla.xfce.org/</a></i>. Development discussion should be conducted on the <i>xfce4-dev [at] xfce.org</i> mailing list. Usage related questions should be directed to the <i>xfce [at] xfce.org</i> mailing list. See: <i><a rel="nofollow" href="https://mail.xfce.org/mailman/listinfo/">https://mail.xfce.org/mailman/listinfo/</a></i> </p>

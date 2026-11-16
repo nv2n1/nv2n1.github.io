@@ -23,7 +23,7 @@ description: "globus_gass_transfer_proto_descriptor_t –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_proto_register_protocol()</code>, <code>globus_gass_transfer_proto_unregister_protocol()</code></dl>
+</dt><dd> <code>globus_gass_transfer_proto_register_protocol()</code>, <code>globus_gass_transfer_proto_unregister_protocol()</code></dd></dl>
 <h2>Field Documentation</h2>
 <h3><code>globus_gass_transfer_proto_create_listener_t</code> globus_gass_transfer_proto_descriptor_t::new_listener</h3>
 <p> New listener. </p>
@@ -32,14 +32,14 @@ description: "globus_gass_transfer_proto_descriptor_t –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_proto_new_request_t</code></dl>
+</dt><dd> <code>globus_gass_transfer_proto_new_request_t</code></dd></dl>
 <h3><code>globus_gass_transfer_proto_new_attr_t</code> globus_gass_transfer_proto_descriptor_t::new_listenerattr</h3>
 <p> New listener attributes. </p>
 <p> The function pointed to by this pointer is used by GASS to forward requests to create a listener attribute for this protocol&#8217;s <i>url_scheme</i> to the protocol module. The function returns a listener attribute which inherits from one of the GASS Transfer request attributes. </p>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_proto_new_attr_t</code></dl>
+</dt><dd> <code>globus_gass_transfer_proto_new_attr_t</code></dd></dl>
 <h3><code>globus_gass_transfer_proto_new_request_t</code> globus_gass_transfer_proto_descriptor_t::new_request</h3>
 <p> New request. </p>
 <p> The function pointed to by this pointer is used by GASS to initiate a new file transfer request by a protocol module. The request handle has been initialized with the parameters passed to one of the functions in the <code>Client-Initiated Operations</code> section of the GASS Transfer API. </p>
@@ -47,14 +47,14 @@ description: "globus_gass_transfer_proto_descriptor_t –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_proto_new_request_t</code></dl>
+</dt><dd> <code>globus_gass_transfer_proto_new_request_t</code></dd></dl>
 <h3><code>globus_gass_transfer_proto_new_attr_t</code> globus_gass_transfer_proto_descriptor_t::new_requestattr</h3>
 <p> New request attributes. </p>
 <p> The function pointed to by this pointer is used by GASS to forward requests to create a request attribute for this protocol&#8217;s <i>url_scheme</i> to the protocol module. The function returns a request attribute which inherits from one of the GASS Transfer request attributes. </p>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_proto_new_attr_t</code></dl>
+</dt><dd> <code>globus_gass_transfer_proto_new_attr_t</code></dd></dl>
 <h3>char* globus_gass_transfer_proto_descriptor_t::url_scheme</h3>
 <p> URL Scheme. </p>
 <p> The URL scheme which this protocol module supports. The scheme is the first part of a URL, which names the protocol which is used to access the resource named by the URL, for example &#8216;http&#8217; or &#8216;ftp&#8217;. </p>
@@ -62,5 +62,5 @@ description: "globus_gass_transfer_proto_descriptor_t –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

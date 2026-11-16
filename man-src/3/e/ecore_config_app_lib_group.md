@@ -21,16 +21,16 @@ description: "Ecore Config App Library Functions – Functions that are used to 
 <p> Either this function or <code>ecore_config_system_init</code> must be run before any other function in the Enlightened Property Library, even if you have run <code>ecore_init</code> . The name given is used to determine the default configuration to load. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> Application name</dl>
+<dd><i>name</i> Application name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the library is successfully set up. ECORE_CONFIG_ERR_FAIL otherwise.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the library is successfully set up. ECORE_CONFIG_ERR_FAIL otherwise.</dd></dl>
 <p> References ecore_config_get(), ecore_config_string_default(), and ecore_config_theme_default_path_get().</p>
 <h3>EAPI int ecore_config_shutdown (void)</h3>
 <p>Frees memory and shuts down the library for an application. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_IGNORED .</dl>
+<dd>ECORE_CONFIG_ERR_IGNORED .</dd></dl>
 <p> References ecore_config_system_shutdown().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -26,6 +26,6 @@ description: "PAPI_get_component_index –"
 <p>&nbsp;<wbr><code>PAPI_get_component_index()</code>&nbsp;<wbr>returns the component index of the named component. This is useful for finding out if a specified component exists.&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_event_component</code></dl>
+<dd><code>PAPI_get_event_component</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

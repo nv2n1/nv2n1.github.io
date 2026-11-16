@@ -17,11 +17,11 @@ bson_string_free (bson_string_t *string,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>string</code></p>
-<dd> A <code>bson_string_t</code> \&amp;.</dl>
+<dt><code>string</code></dt>
+<dd> A <code>bson_string_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>free_segment</code></p>
-<dd> A bool indicating if <code>str-&gt;str</code> should be returned.</dl>
+<dt><code>free_segment</code></dt>
+<dd> A bool indicating if <code>str-&gt;str</code> should be returned.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Frees the bson_string_t structure and optionally the string itself. </p>
 <h2>RETURNS</h2>

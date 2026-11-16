@@ -14,14 +14,14 @@ description: "DROP TEXT SEARCH DICTIONARY – remove a text search dictionary"
 <p><code>DROP TEXT SEARCH DICTIONARY</code> drops an existing text search dictionary. To execute this command you must be the owner of the dictionary.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the text search dictionary does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing text search dictionary.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the text search dictionary.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the text search dictionary if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the text search dictionary does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing text search dictionary.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the text search dictionary.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the text search dictionary if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Remove the text search dictionary english: </p>
 <pre>DROP TEXT SEARCH DICTIONARY english;</pre>

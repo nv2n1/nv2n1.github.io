@@ -19,7 +19,7 @@ description: "QuantLib::Factorial – Factorial numbers calculator"
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> the correctness of the returned value is tested by checking it against numerical calculations.</dl>
+</dt><dd> the correctness of the returned value is tested by checking it against numerical calculations.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

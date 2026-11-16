@@ -26,9 +26,8 @@ description: "sorbdb5.f –"
  criterion, then some other vector from the orthogonal complement
  is returned. This vector is chosen in an arbitrary but deterministic
  way..fi
- 
 <code>Parameters:</code>
-<dl><dt><dd><i>M1</i> 
+<dl><dt></dt><dd><i>M1</i> 
  M1 is INTEGER
  The dimension of X1 and the number of rows in Q1. 0 &lt;= M1.</pre>
 <p><i>M2</i> </p>
@@ -73,16 +72,16 @@ description: "sorbdb5.f –"
 <pre> INFO is INTEGER
  = 0: successful exit.
  &lt; 0: if INFO = -i, the i-th argument had an illegal value.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>July 2012</dl>
+<dd>July 2012</dd></dl>
 <p> Definition at line 156 of file sorbdb5.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

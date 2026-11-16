@@ -20,60 +20,60 @@ description: "mkfs.jffs2 – Create a JFFS2 file system image from directory"
 <h2>OPTIONS</h2>
 <p> Options that take SIZE arguments can be specified as either decimal (e.g., 65536), octal (0200000), or hexidecimal (0x1000).</p>
 <dl>
-<dt><code>-p, &#8211;pad[=SIZE]</code></p>
-<dd> Pad output to SIZE bytes with 0xFF. If SIZE is not specified, the output is padded to the end of the final erase block.</p>
-<dt><code>-r, -d, &#8211;root=DIR</code></p>
-<dd> Build file system from directory DIR. The default is the current directory.</p>
-<dt><code>-s, &#8211;pagesize=SIZE</code></p>
-<dd> Use page size SIZE. The default is 4 KiB. This size is the maximum size of a data node.</p>
-<dt><code>-e, &#8211;eraseblock=SIZE</code></p>
-<dd> Use erase block size SIZE. The default is 64 KiB. If you use a erase block size different than the erase block size of the target MTD device, JFFS2 may not perform optimally. If the SIZE specified is below 4096, the units are assumed to be KiB.</p>
-<dt><code>-c, &#8211;cleanmarker=SIZE</code></p>
-<dd> Write &#8216;CLEANMARKER&#8217; nodes with the size specified. It is not normally appropriate to specify a size other than the default 12 bytes.</p>
-<dt><code>-n, &#8211;no-cleanmarkers</code></p>
-<dd> Do not write &#8216;CLEANMARKER&#8217; nodes to the beginning of each erase block. This option can be useful for creating JFFS2 images for use on NAND flash, and for creating images which are to be used on a variety of hardware with differing eraseblock sizes.</p>
-<dt><code>-o, &#8211;output=FILE</code></p>
-<dd> Write JFFS2 image to file FILE. Default is the standard output.</p>
-<dt><code>-l, &#8211;little-endian</code></p>
-<dd> Create a little-endian JFFS2 image. Default is to make an image with the same endianness as the host.</p>
-<dt><code>-b, &#8211;big-endian</code></p>
-<dd> Create a big-endian JFFS2 image. Default is to make an image with the same endianness as the host.</p>
-<dt><code>-D, &#8211;devtable=FILE</code></p>
-<dd> Use the named FILE as a device table file, for including devices and changing permissions in the created image when the user does not have appropriate permissions to create them on the file system used as source.</p>
-<dt><code>-f, &#8211;faketime</code></p>
-<dd> Change all file timestamps to &#8216;0&#8217; for regression testing.</p>
-<dt><code>-q, &#8211;squash</code></p>
-<dd> Squash permissions and owners, making all files be owned by root and removing write permission for &#8216;group&#8217; and &#8216;other&#8217;.</p>
-<dt><code>-U, &#8211;squash-uids</code></p>
-<dd> Squash owners making all files be owned by root.</p>
-<dt><code>-P, &#8211;squash-perms</code></p>
-<dd> Squash permissions, removing write permission for &#8216;group&#8217; and &#8216;other&#8217;.</p>
-<dt><code>&#8211;with-xattr</code></p>
-<dd> Enables xattr, stuff all xattr entries into jffs2 image file.</p>
-<dt><code>&#8211;with-selinux</code></p>
-<dd> Enables xattr, stuff only SELinux Labels into jffs2 image file.</p>
-<dt><code>&#8211;with-posix-acl</code></p>
-<dd> Enable xattr, stuff only POSIX ACL entries into jffs2 image file.</p>
-<dt><code>-m, &#8211;compression-mode=MODE</code></p>
-<dd> Set the default compression mode. The default mode is <code>priority </code> which tries the compressors in a predefinied order and chooses the first successful one. The alternatives are: <code>none</code> (mkfs will not compress) and <code>size</code> (mkfs will try all compressor and chooses the one which have the smallest result).</p>
-<dt><code>-x, &#8211;disable-compressor=NAME</code></p>
-<dd> Disable a compressor. Use <code>-L</code> to see the list of the avaiable compressors and their default states.</p>
-<dt><code>-X, &#8211;enable-compressor=NAME</code></p>
-<dd> Enable a compressor. Use <code>-L</code> to see the list of the avaiable compressors and their default states.</p>
-<dt><code>-y, &#8211;compressor-priority=PRIORITY:NAME</code></p>
-<dd> Set the priority of a compressor. Use <code>-L</code> to see the list of the avaiable compressors and their default priority. Priorities are used by priority compression mode.</p>
-<dt><code>-L, &#8211;list-compressors</code></p>
-<dd> Show the list of the avaiable compressors and their states.</p>
-<dt><code>-t, &#8211;test-compression</code></p>
-<dd> Call decompress after every compress &#8211; and compare the result with the original data -, and some other check.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display help text.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Verbose operation.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information.</p>
-<dt><code>-i, &#8211;incremental=FILE</code></p>
-<dd> Generate an appendage image for FILE. If FILE is written to flash and flash is appended with the output, then it seems as if it was one thing. </p>
+<dt><code>-p, &#8211;pad[=SIZE]</code></dt>
+<dd> Pad output to SIZE bytes with 0xFF. If SIZE is not specified, the output is padded to the end of the final erase block.</dd>
+<dt><code>-r, -d, &#8211;root=DIR</code></dt>
+<dd> Build file system from directory DIR. The default is the current directory.</dd>
+<dt><code>-s, &#8211;pagesize=SIZE</code></dt>
+<dd> Use page size SIZE. The default is 4 KiB. This size is the maximum size of a data node.</dd>
+<dt><code>-e, &#8211;eraseblock=SIZE</code></dt>
+<dd> Use erase block size SIZE. The default is 64 KiB. If you use a erase block size different than the erase block size of the target MTD device, JFFS2 may not perform optimally. If the SIZE specified is below 4096, the units are assumed to be KiB.</dd>
+<dt><code>-c, &#8211;cleanmarker=SIZE</code></dt>
+<dd> Write &#8216;CLEANMARKER&#8217; nodes with the size specified. It is not normally appropriate to specify a size other than the default 12 bytes.</dd>
+<dt><code>-n, &#8211;no-cleanmarkers</code></dt>
+<dd> Do not write &#8216;CLEANMARKER&#8217; nodes to the beginning of each erase block. This option can be useful for creating JFFS2 images for use on NAND flash, and for creating images which are to be used on a variety of hardware with differing eraseblock sizes.</dd>
+<dt><code>-o, &#8211;output=FILE</code></dt>
+<dd> Write JFFS2 image to file FILE. Default is the standard output.</dd>
+<dt><code>-l, &#8211;little-endian</code></dt>
+<dd> Create a little-endian JFFS2 image. Default is to make an image with the same endianness as the host.</dd>
+<dt><code>-b, &#8211;big-endian</code></dt>
+<dd> Create a big-endian JFFS2 image. Default is to make an image with the same endianness as the host.</dd>
+<dt><code>-D, &#8211;devtable=FILE</code></dt>
+<dd> Use the named FILE as a device table file, for including devices and changing permissions in the created image when the user does not have appropriate permissions to create them on the file system used as source.</dd>
+<dt><code>-f, &#8211;faketime</code></dt>
+<dd> Change all file timestamps to &#8216;0&#8217; for regression testing.</dd>
+<dt><code>-q, &#8211;squash</code></dt>
+<dd> Squash permissions and owners, making all files be owned by root and removing write permission for &#8216;group&#8217; and &#8216;other&#8217;.</dd>
+<dt><code>-U, &#8211;squash-uids</code></dt>
+<dd> Squash owners making all files be owned by root.</dd>
+<dt><code>-P, &#8211;squash-perms</code></dt>
+<dd> Squash permissions, removing write permission for &#8216;group&#8217; and &#8216;other&#8217;.</dd>
+<dt><code>&#8211;with-xattr</code></dt>
+<dd> Enables xattr, stuff all xattr entries into jffs2 image file.</dd>
+<dt><code>&#8211;with-selinux</code></dt>
+<dd> Enables xattr, stuff only SELinux Labels into jffs2 image file.</dd>
+<dt><code>&#8211;with-posix-acl</code></dt>
+<dd> Enable xattr, stuff only POSIX ACL entries into jffs2 image file.</dd>
+<dt><code>-m, &#8211;compression-mode=MODE</code></dt>
+<dd> Set the default compression mode. The default mode is <code>priority </code> which tries the compressors in a predefinied order and chooses the first successful one. The alternatives are: <code>none</code> (mkfs will not compress) and <code>size</code> (mkfs will try all compressor and chooses the one which have the smallest result).</dd>
+<dt><code>-x, &#8211;disable-compressor=NAME</code></dt>
+<dd> Disable a compressor. Use <code>-L</code> to see the list of the avaiable compressors and their default states.</dd>
+<dt><code>-X, &#8211;enable-compressor=NAME</code></dt>
+<dd> Enable a compressor. Use <code>-L</code> to see the list of the avaiable compressors and their default states.</dd>
+<dt><code>-y, &#8211;compressor-priority=PRIORITY:NAME</code></dt>
+<dd> Set the priority of a compressor. Use <code>-L</code> to see the list of the avaiable compressors and their default priority. Priorities are used by priority compression mode.</dd>
+<dt><code>-L, &#8211;list-compressors</code></dt>
+<dd> Show the list of the avaiable compressors and their states.</dd>
+<dt><code>-t, &#8211;test-compression</code></dt>
+<dd> Call decompress after every compress &#8211; and compare the result with the original data -, and some other check.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display help text.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Verbose operation.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information.</dd>
+<dt><code>-i, &#8211;incremental=FILE</code></dt>
+<dd> Generate an appendage image for FILE. If FILE is written to flash and flash is appended with the output, then it seems as if it was one thing. </dd>
 </dl>
 <h2>LIMITATIONS</h2>
 <p> The format and grammar of the device table file does not allow it to create symbolic links when the symbolic links are not already present in the root working directory. </p>

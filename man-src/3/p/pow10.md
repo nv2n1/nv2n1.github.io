@@ -11,7 +11,6 @@ description: "pow10, pow10f, pow10l – base-10 power functions"
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE         /* See feature_test_macros(7) */
 #include &lt;math.h&gt;
-
 double pow10(double x);
 float pow10f(float x);
 long double pow10l(long double x);</code></pre>

@@ -15,11 +15,11 @@ snd_soc_dai_set_tristate - configure DAI system or master clock.
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>tristate</i>
-<dl><dd>tristate enable</dl>
+<dl><dd>tristate enable</dd></dl>
 
 <h2>Description</h2>
 

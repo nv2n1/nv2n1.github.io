@@ -20,7 +20,7 @@ description: "fluxbox-remote – command line access to key commands for"
 <p> session.screen0.allowRemoteActions: &lt;boolean&gt;</p>
 <dl>
 <dt>
-<dd> This resource in ~/.fluxbox/init must be set to &#8216;true&#8217; in order for <i><a href="/docs/linux/man/1-fluxbox-remote/">fluxbox-remote</a>(1)</i> to function. Please read the <code>CAVEATS</code> first.</dl>
+</dt><dd> This resource in ~/.fluxbox/init must be set to &#8216;true&#8217; in order for <i><a href="/docs/linux/man/1-fluxbox-remote/">fluxbox-remote</a>(1)</i> to function. Please read the <code>CAVEATS</code> first.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> In order to communicate with <i><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</i>, the DISPLAY environment variable must be set properly. Usually, the value should be &#8216;:0.0&#8217;.</p>
 <h2>AUTHORS</h2>
@@ -31,5 +31,5 @@ description: "fluxbox-remote – command line access to key commands for"
 <p> <code>Mark Tiefenbruck</code> &lt;mark [at] fluxbox.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

@@ -15,7 +15,7 @@ blk_set_default_limits - reset limits to default values
 <h2>Arguments</h2>
 
 <i>lim</i>
-<dl><dd><dd>the queue_limits structure to reset</dl>
+<dl><dd></dd><dd>the queue_limits structure to reset</dd></dl>
 
 <h2>Description</h2>
 

@@ -21,8 +21,8 @@ description: "acl_size – get the size of the external representation of an ACL
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_size function returns a value of <code>(ssize_t)-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

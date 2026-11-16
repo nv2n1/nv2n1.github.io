@@ -11,7 +11,6 @@ std::wcslen - std::wcslen
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     std::size_t wcslen(const wchar_t *str);</code></pre> 
 Returns the length of a wide string, that is the number of non-null wide characters that precede the terminating null wide character. 
 The behavior is undefined if there is no null character in the wide character array pointed to by str. 
@@ -27,12 +26,9 @@ The length of the null-terminated wide string str.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     const wchar_t *str = L&quot;爆ぜろリアル！弾けろシナプス！パニッシュメントディス、ワールド！&quot;;
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);

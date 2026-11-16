@@ -13,18 +13,18 @@ description: "flasm – A swf bytecode assembler/disassembler"
 <p> <code>flasm</code> [<code>-daubzx</code>] <i>filename</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> Disassemble the given <font SIZE="-1">SWF</font> file to the console</p>
-<dt><code>-a</code></p>
-<dd> Assemble the given flasm project</p>
-<dt><code>-u</code></p>
-<dd> Update <font SIZE="-1">SWF</font>, replace flasm macros</p>
-<dt><code>-b</code></p>
-<dd> generate __bytecode__ instruction or byte sequence</p>
-<dt><code>-z</code></p>
-<dd> ompress <font SIZE="-1">SWF</font> with Zlib</p>
-<dt><code>-x</code></p>
-<dd> Decompress <font SIZE="-1">SWF</font></dl>
+<dt><code>-d</code></dt>
+<dd> Disassemble the given <font SIZE="-1">SWF</font> file to the console</dd>
+<dt><code>-a</code></dt>
+<dd> Assemble the given flasm project</dd>
+<dt><code>-u</code></dt>
+<dd> Update <font SIZE="-1">SWF</font>, replace flasm macros</dd>
+<dt><code>-b</code></dt>
+<dd> generate __bytecode__ instruction or byte sequence</dd>
+<dt><code>-z</code></dt>
+<dd> ompress <font SIZE="-1">SWF</font> with Zlib</dd>
+<dt><code>-x</code></dt>
+<dd> Decompress <font SIZE="-1">SWF</font></dd></dl>
 <h2>EXAMPLES</h2>
 <p> <i>flasm</i> <code>-d</code> foo.swf </p>
 <p> Disassemble foo.swf to the console. To see action offsets in disassembly set showoffset and hexoffset options in <code>flasm.ini</code>. </p>

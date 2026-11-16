@@ -14,18 +14,18 @@ description: "beagle-extract-content"
 <p>Low-level Beagle tool to examine data extracted from a file. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd>Print debug info to the console</p>
-<dt><code>&#8211;tokenize</code></p>
-<dd>Tokenize the text before printing</p>
-<dt><code>&#8211;show-children</code></p>
-<dd>Show filtering information for items created by filters</p>
-<dt><code>&#8211;mimetype=&lt;mime_type&gt;</code></p>
-<dd>Use filter for mime_type</p>
-<dt><code>&#8211;outfile=&lt;filename&gt;</code></p>
-<dd>Output file name</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display a summary of command-line options</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd>Print debug info to the console</dd>
+<dt><code>&#8211;tokenize</code></dt>
+<dd>Tokenize the text before printing</dd>
+<dt><code>&#8211;show-children</code></dt>
+<dd>Show filtering information for items created by filters</dd>
+<dt><code>&#8211;mimetype=&lt;mime_type&gt;</code></dt>
+<dd>Use filter for mime_type</dd>
+<dt><code>&#8211;outfile=&lt;filename&gt;</code></dt>
+<dd>Output file name</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display a summary of command-line options</dd></dl>
 <h2>Author</h2>
 <p>Novell, Inc.</p>
 <h2>Reporting Bugs</h2>

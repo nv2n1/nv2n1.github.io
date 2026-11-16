@@ -19,7 +19,7 @@ description: "slarrk.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLARRK computes one eigenvalue of a symmetric tridiagonal
  matrix T to suitable accuracy. This is an auxiliary code to be
@@ -31,11 +31,11 @@ description: "slarrk.f –"
  Matrix&quot;, Report CS41, Computer Science Dept., Stanford
  University, July 21, 1966.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The order of the tridiagonal matrix T.  N &gt;= 0.
@@ -98,23 +98,23 @@ description: "slarrk.f –"
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   FUDGE   REAL            , default = 2
           A &quot;fudge factor&quot; to widen the Gershgorin intervals.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 145 of file slarrk.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

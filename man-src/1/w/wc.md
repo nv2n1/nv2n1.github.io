@@ -17,22 +17,22 @@ description: "wc – print newline, word, and byte counts for each file"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> The options below may be used to select which counts are printed, always in the following order: newline, word, character, byte, maximum line length.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;bytes</code></p>
-<dd> print the byte counts</p>
-<dt><code>-m</code>, <code>&#8211;chars</code></p>
-<dd> print the character counts</p>
-<dt><code>-l</code>, <code>&#8211;lines</code></p>
-<dd> print the newline counts</p>
-<dt><code>&#8211;files0-from</code>=<i>,F/</i></p>
-<dd> read input from the files specified by NUL-terminated names in file F; If F is &#8211; then read names from standard input</p>
-<dt><code>-L</code>, <code>&#8211;max-line-length</code></p>
-<dd> print the maximum display width</p>
-<dt><code>-w</code>, <code>&#8211;words</code></p>
-<dd> print the word counts</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;bytes</code></dt>
+<dd> print the byte counts</dd>
+<dt><code>-m</code>, <code>&#8211;chars</code></dt>
+<dd> print the character counts</dd>
+<dt><code>-l</code>, <code>&#8211;lines</code></dt>
+<dd> print the newline counts</dd>
+<dt><code>&#8211;files0-from</code>=<i>,F/</i></dt>
+<dd> read input from the files specified by NUL-terminated names in file F; If F is &#8211; then read names from standard input</dd>
+<dt><code>-L</code>, <code>&#8211;max-line-length</code></dt>
+<dd> print the maximum display width</dd>
+<dt><code>-w</code>, <code>&#8211;words</code></dt>
+<dd> print the word counts</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Paul Rubin and David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

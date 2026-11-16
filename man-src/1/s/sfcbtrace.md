@@ -13,10 +13,10 @@ description: "sfcbtrace – toggle the tracemask for SFCB trace output"
 <p> <code>sfcbtrace</code> &lt;trace_mask&gt; &lt;shm_key&gt;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>trace_mask &#8211; an unsigned long or hex value for component(s) to trace (default=0)</p>
+<dt>trace_mask &#8211; an unsigned long or hex value for component(s) to trace (default=0)</dt>
 <dd>
-<dt>shm_key &#8211; the shared memory ID being used by SFCB (default=deb001)</p>
-<dd></dl>
+</dd><dt>shm_key &#8211; the shared memory ID being used by SFCB (default=deb001)</dt>
+<dd></dd></dl>
 <p> Traceable Components: Int Hex<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>providerMgr:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x00001<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>providerDrv:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x00002<br />

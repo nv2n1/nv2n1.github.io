@@ -20,16 +20,16 @@ description: "mongoc_update_flags_t – Flags for deletion operations"
 <p>These flags correspond to the MongoDB wire protocol. They may be bitwise or&#8217;d together. The allow for modifying the way an update is performed in the MongoDB server. </p>
 <h2>Flag Values</h2>
 <dl COMPACT>
-<dt><code>MONGOC_UPDATE_NONE</code></p>
-<dd>No update flags set.</dl>
+<dt><code>MONGOC_UPDATE_NONE</code></dt>
+<dd>No update flags set.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_UPDATE_UPSERT</code></p>
-<dd>If an upsert should be performed.</dl>
+<dt><code>MONGOC_UPDATE_UPSERT</code></dt>
+<dd>If an upsert should be performed.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_UPDATE_MULTI_UPDATE</code></p>
-<dd>If more than a single matching document should be updated. By default only the first document is updated.</dl>
+<dt><code>MONGOC_UPDATE_MULTI_UPDATE</code></dt>
+<dd>If more than a single matching document should be updated. By default only the first document is updated.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_UPDATE_NO_VALIDATE</code></p>
-<dd>Do not perform client side BSON validations when performing an update. This is useful if you already know your BSON documents are valid.</dl>
+<dt><code>MONGOC_UPDATE_NO_VALIDATE</code></dt>
+<dd>Do not perform client side BSON validations when performing an update. This is useful if you already know your BSON documents are valid.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

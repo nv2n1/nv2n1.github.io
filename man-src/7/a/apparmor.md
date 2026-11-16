@@ -16,10 +16,10 @@ description: "AppArmor – kernel enhancement to confine programs to a limited s
  # /etc/init.d/apparmor restart</pre>
 <p>AppArmor can operate in two modes: <i>enforcement</i>, and <i>complain or learning</i>:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>enforcement</i> &#8211; Profiles loaded in enforcement mode will result in enforcement of the policy defined in the profile as well as reporting policy violation attempts to syslogd.</p>
-<dt>&bull;</p>
-<dd><i>complain</i> &#8211; Profiles loaded in <tt>&quot;complain&quot;</tt> mode will not enforce policy. Instead, it will report policy violation attempts. This mode is convenient for developing profiles. To manage complain mode for individual profiles the utilities <code>aa-complain</code>(8) and <code>aa-enforce</code>(8) can be used. These utilities take a program name as an argument.</dl>
+<dt>&bull;</dt>
+<dd><i>enforcement</i> &#8211; Profiles loaded in enforcement mode will result in enforcement of the policy defined in the profile as well as reporting policy violation attempts to syslogd.</dd>
+<dt>&bull;</dt>
+<dd><i>complain</i> &#8211; Profiles loaded in <tt>&quot;complain&quot;</tt> mode will not enforce policy. Instead, it will report policy violation attempts. This mode is convenient for developing profiles. To manage complain mode for individual profiles the utilities <code>aa-complain</code>(8) and <code>aa-enforce</code>(8) can be used. These utilities take a program name as an argument.</dd></dl>
 <p> Profiles are traditionally stored in files in <i>/etc/apparmor.d/</i> under filenames with the convention of replacing the <code>/</code> in pathnames with <code>.</code> (except for the root <code>/</code>) so profiles are easier to manage (e.g. the <i>/usr/sbin/nscd</i> profile would be named <i>usr.sbin.nscd</i>). </p>
 <p> Profiles are applied to a process at <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) time (as seen through the <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) system call): once a profile is loaded for a program, that program will be confined on the next <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3). If a process is already running under a profile, when one replaces that profile in the kernel, the updated profile is applied immediately to that process. On the other hand, a process that is already running unconfined cannot be confined. </p>
 <p> AppArmor supports the Linux kernel&#8217;s securityfs filesystem, and makes available the list of the profiles currently loaded; to mount the filesystem: </p>
@@ -38,11 +38,9 @@ description: "AppArmor – kernel enhancement to confine programs to a limited s
 <pre><code>audit(1386511672.612:238): apparmor=&quot;DENIED&quot; operation=&quot;exec&quot;
 parent=7589 profile=&quot;/tmp/sh&quot; name=&quot;/bin/uname&quot; pid=7605
 comm=&quot;sh&quot; requested_mask=&quot;x&quot; denied_mask=&quot;x&quot; fsuid=0 ouid=0
-
 audit(1386511672.613:239): apparmor=&quot;DENIED&quot; operation=&quot;open&quot;
 parent=7589 profile=&quot;/tmp/sh&quot; name=&quot;/bin/uname&quot; pid=7605
 comm=&quot;sh&quot; requested_mask=&quot;r&quot; denied_mask=&quot;r&quot; fsuid=0 ouid=0
-
 audit(1386511772.804:246): apparmor=&quot;DENIED&quot; operation=&quot;capable&quot;
 parent=7246 profile=&quot;/tmp/sh&quot; pid=7589 comm=&quot;sh&quot; pid=7589
 comm=&quot;sh&quot; capability=2  capname=&quot;dac_override&quot;</code></pre>
@@ -77,15 +75,15 @@ comm=&quot;sh&quot; capability=2  capname=&quot;dac_override&quot;</code></pre>
 <p> Else, if auditd is running, see <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8) and <code><a href="/docs/linux/man/5-auditd-conf/">auditd.conf</a></code>(5).</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/init.d/apparmor</i></p>
+<dt><i>/etc/init.d/apparmor</i></dt>
 <dd>
-<dt><i>/etc/apparmor.d/</i></p>
+</dd><dt><i>/etc/apparmor.d/</i></dt>
 <dd>
-<dt><i>/var/lib/apparmor/</i></p>
+</dd><dt><i>/var/lib/apparmor/</i></dt>
 <dd>
-<dt><i>/var/log/audit/audit.log</i></p>
+</dd><dt><i>/var/log/audit/audit.log</i></dt>
 <dd>
-<dt><i>/var/log/messages</i></p>
-<dd></dl>
+</dd><dt><i>/var/log/messages</i></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apparmor_parser/">apparmor_parser</a></code>(8), <code>aa_change_hat</code>(2), <code><a href="/docs/linux/man/5-apparmor-d/">apparmor.d</a></code>(5), <code>aa-autodep</code>(1), <code>clean</code>(1), <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8), <code>aa-unconfined</code>(8), <code>aa-enforce</code>(1), <code>aa-complain</code>(1), and &lt;<a rel="nofollow" href="https://wiki.apparmor.net">https://wiki.apparmor.net</a>&gt;. </p>

@@ -13,10 +13,10 @@ description: "pskc_add_keypackage – API function"
 int pskc_add_keypackage(pskc_t *container, pskc_key_t **key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>pskc_key_t ** key</p>
-<dd>pointer to <code>pskc_key_t</code> key package handle.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>pskc_key_t ** key</dt>
+<dd>pointer to <code>pskc_key_t</code> key package handle.</dd></dl>
 <h2>Description</h2>
 <p>Add a new a PSKC keypackage to the <i>container</i> and give back a <code>pskc_key_t</code> handle.</p>
 <h2>Returns</h2>

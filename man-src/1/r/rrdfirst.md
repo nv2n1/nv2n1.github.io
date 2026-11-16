@@ -14,10 +14,10 @@ description: "rrdfirst – Return the date of the first data sample in an RRA wi
 <h2>DESCRIPTION</h2>
 <p> The <code>first</code> function returns the <font SIZE="-1">UNIX</font> timestamp of the first data sample entered into the specified <font SIZE="-1">RRA</font> of the <font SIZE="-1">RRD</font> file.</p>
 <dl>
-<dt><i>filename</i></p>
-<dd> The name of the <font SIZE="-1"><code>RRD</code></font> that contains the data.</p>
-<dt><i>&#8211;rraindex number</i></p>
-<dd> The index number of the <font SIZE="-1"><code>RRA</code></font> that is to be examined. If not specified, the index defaults to zero. <font SIZE="-1"><code>RRA</code></font> index numbers can be determined through <code>rrdtool info</code>.</dl>
+<dt><i>filename</i></dt>
+<dd> The name of the <font SIZE="-1"><code>RRD</code></font> that contains the data.</dd>
+<dt><i>&#8211;rraindex number</i></dt>
+<dd> The index number of the <font SIZE="-1"><code>RRA</code></font> that is to be examined. If not specified, the index defaults to zero. <font SIZE="-1"><code>RRA</code></font> index numbers can be determined through <code>rrdtool info</code>.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Burton Strauss &lt;Burton [at] ntopSupport.com&gt; </p>
 <h2>Index</h2>

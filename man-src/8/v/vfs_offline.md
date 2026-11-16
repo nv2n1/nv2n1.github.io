@@ -10,7 +10,7 @@ description: "vfs_offline – Mark all files as offline"
 <p>vfs_offline &#8211; Mark all files as offline</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = offline</dl>
+<dd>vfs objects = offline</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_offline module marks all files in the share as having the offline DOS attribute. </p>
@@ -21,7 +21,7 @@ description: "vfs_offline – Mark all files as offline"
 <dd>
 <pre> <i>[remote]</i>
  m[blue]<code>vfs objects = offline</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 4.4 of the Samba suite.</p>
 <h2>Author</h2>

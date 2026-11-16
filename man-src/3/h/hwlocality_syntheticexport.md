@@ -19,10 +19,11 @@ description: "hwlocality_syntheticexport – Exporting Topologies to Synthetic"
 <p> Flags for exporting synthetic topologies. Flags to be given as a OR&#8217;ed set to <code>hwloc_topology_export_synthetic()</code>. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>HWLOC_TOPOLOGY_EXPORT_SYNTHETIC_FLAG_NO_EXTENDED_TYPES </i></p>
-<dd> Export extended types such as L2dcache as basic types such as Cache. This is required if loading the synthetic description with hwloc &lt; 1.9.</p>
-<dt><i>HWLOC_TOPOLOGY_EXPORT_SYNTHETIC_FLAG_NO_ATTRS </i></p>
-<dd> Do not export level attributes. Ignore level attributes such as memory/cache sizes or PU indexes. This is required if loading the synthetic description with hwloc &lt; 1.10.</dl>
+<dt><i>HWLOC_TOPOLOGY_EXPORT_SYNTHETIC_FLAG_NO_EXTENDED_TYPES </i></dt>
+<dd> Export extended types such as L2dcache as basic types such as Cache. This is required if loading the synthetic description with hwloc &lt; 1.9.</dd>
+<dt><i>HWLOC_TOPOLOGY_EXPORT_SYNTHETIC_FLAG_NO_ATTRS </i></dt>
+<dd> Do not export level attributes. Ignore level attributes such as memory/cache sizes or PU indexes. This is required if loading the synthetic description with hwloc &lt; 1.10.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>int hwloc_topology_export_synthetic (<code>hwloc_topology_t</code> topology, char * buffer, size_t buflen, unsigned long flags)</h3>
 <p> Export the topology as a synthetic string. At most buflen characters will be written in buffer, including the terminating 
+</p>

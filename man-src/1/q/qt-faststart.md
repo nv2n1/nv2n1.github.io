@@ -16,10 +16,10 @@ description: "qt-faststart – utility for Quicktime files"
 <h2>OPTIONS</h2>
 <p> Options processed by the executable:</p>
 <dl>
-<dt><code>&lt;infile.mov&gt;</code></p>
-<dd> The source Quicktime file.</p>
-<dt><code>&lt;outfile.mov&gt;</code></p>
-<dd> The destination Quicktime file.</dl>
+<dt><code>&lt;infile.mov&gt;</code></dt>
+<dd> The source Quicktime file.</dd>
+<dt><code>&lt;outfile.mov&gt;</code></dt>
+<dd> The destination Quicktime file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Andres Mejia &lt;mcitadel [at] gmail.com&gt; for the Debian GNU/Linux system, but may be used by others. </p>
 <h2>Index</h2>

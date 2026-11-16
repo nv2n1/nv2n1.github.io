@@ -68,25 +68,16 @@ native_handle <i>(public member function)</i>
 
 condition_variable is used in combination with a std::mutex to facilitate inter-thread communication. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;mutex&gt;
-
 #include &lt;condition_variable&gt;
 std::mutex m;
-
 std::condition_variable cv;
-
 std::string data;
-
 bool ready = false;
-
 bool processed = false;
 void worker_thread()
-
 {
     // Wait until main() sends data
     std::unique_lock&lt;std::mutex&gt; lk(m);
@@ -103,7 +94,6 @@ void worker_thread()
     cv.notify_one();
 }
 int main()
-
 {
     std::thread worker(worker_thread);
     data = &quot;Example data&quot;;

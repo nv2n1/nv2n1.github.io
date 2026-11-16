@@ -13,12 +13,12 @@ description: "dnf.plugin.debuginfo-install – DNF debuginfo-install Plugin"
 <p><code>dnf debuginfo-install &lt;pkg-spec&gt;&#8230;</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt><code>&lt;pkg-spec&gt;</code></p>
-<dd>The package to install the associated debuginfo package for.</dl>
+<dt><code>&lt;pkg-spec&gt;</code></dt>
+<dd>The package to install the associated debuginfo package for.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt><code>dnf debuginfo-install foobar</code></p>
-<dd>Install the debuginfo packages for the foobar package.</dl>
+<dt><code>dnf debuginfo-install foobar</code></dt>
+<dd>Install the debuginfo packages for the foobar package.</dd></dl>
 <h2>Author</h2>
 <p>See AUTHORS in your Core DNF Plugins distribution</p>
 <h2>Copyright</h2>

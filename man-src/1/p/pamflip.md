@@ -22,52 +22,52 @@ description: "pamflip – flip or rotate a PAM or PNM image"
 <p> You must supply exactly one of the following options: </p>
 <p> <code>pamflip</code>&#8216;s predecessor (before Netpbm 10.7 &#8211; August 2002) <code>pnmflip</code> did not have the <code>-xform</code> option and instead allowed you to specify any number of the other options, including zero. It applied all the indicated transformations, in the order given, just like with <code>pamflip</code>&#8216;s <code>-xform</code> option. (Reason for the change: this kind of interpretation of options is inconsistent with the rest of Netpbm and most of the Unix world, and thus hard to understand and to implement). </p>
 <dl>
-<dt><code>-leftright</code></p>
+<dt><code>-leftright</code></dt>
 <dd>
-<dt><code>-lr</code></p>
-<dd> Flip left for right. </p>
-<dt><code>-topbottom</code></p>
+</dd><dt><code>-lr</code></dt>
+<dd> Flip left for right. </dd>
+<dt><code>-topbottom</code></dt>
 <dd>
-<dt><code>-tb</code></p>
-<dd> Flip top for bottom. </p>
-<dt><code>-transpose</code></p>
+</dd><dt><code>-tb</code></dt>
+<dd> Flip top for bottom. </dd>
+<dt><code>-transpose</code></dt>
 <dd>
-<dt><code>-xy</code></p>
-<dd> Transpose horizontal for vertical. I.e. make the pixel at (x,y) be at (y,x). </p>
-<dt><code>-rotate90</code></p>
+</dd><dt><code>-xy</code></dt>
+<dd> Transpose horizontal for vertical. I.e. make the pixel at (x,y) be at (y,x). </dd>
+<dt><code>-rotate90</code></dt>
 <dd>
-<dt><code>-r90</code></p>
+</dd><dt><code>-r90</code></dt>
 <dd>
-<dt><code>-ccw</code></p>
-<dd> Rotate counterclockwise 90 degrees. </p>
-<dt><code>-rotate180</code></p>
+</dd><dt><code>-ccw</code></dt>
+<dd> Rotate counterclockwise 90 degrees. </dd>
+<dt><code>-rotate180</code></dt>
 <dd>
-<dt><code>-r180</code></p>
-<dd> Rotate 180 degrees. </p>
-<dt><code>-rotate270</code></p>
+</dd><dt><code>-r180</code></dt>
+<dd> Rotate 180 degrees. </dd>
+<dt><code>-rotate270</code></dt>
 <dd>
-<dt><code>-r270</code></p>
+</dd><dt><code>-r270</code></dt>
 <dd>
-<dt><code>-cw</code></p>
-<dd> Rotate counterclockwise 270 degrees (clockwise 90 degrees) </p>
-<dt><code>-null</code></p>
-<dd> No change. (The purpose of this option is the convenience of programs that invoke <code>pamflip</code> after computing the kind of transformation desired, including none at all). </p>
+</dd><dt><code>-cw</code></dt>
+<dd> Rotate counterclockwise 270 degrees (clockwise 90 degrees) </dd>
+<dt><code>-null</code></dt>
+<dd> No change. (The purpose of this option is the convenience of programs that invoke <code>pamflip</code> after computing the kind of transformation desired, including none at all). </dd>
 <p> This option was new in Netpbm 10.13 (December 2002).<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-xform=</code><i>xform1</i><code>,</code><i>xform2</i>&#8230;</p>
-<dd> Apply all the transforms listed, in order. The valid values for the transforms are as follows and have the same meanings as the identically named options above. </p>
-<dt>&bull;</p>
-<dd> leftright</p>
-<dt>&bull;</p>
-<dd> topbottom</p>
-<dt>&bull;</p>
-<dd> transpose </p>
+<dt><code>-xform=</code><i>xform1</i><code>,</code><i>xform2</i>&#8230;</dt>
+<dd> Apply all the transforms listed, in order. The valid values for the transforms are as follows and have the same meanings as the identically named options above. </dd>
+<dt>&bull;</dt>
+<dd> leftright</dd>
+<dt>&bull;</dt>
+<dd> topbottom</dd>
+<dt>&bull;</dt>
+<dd> transpose </dd>
 <p> This option was new in Netpbm 10.13 (December 2002). </p>
 </dl>
 <p> The following options help <code>pamflip</code> use memory efficiently. Some flipping operations on very large images can cause <code>pamflip</code> to have a very large working set, which means if you don&#8217;t have enough real memory, the program can page thrash, which means it takes a ridiculous amount time to run. If your entire image fits in real memory, you don&#8217;t have a problem. If you&#8217;re just flipping top for bottom or left for right, you don&#8217;t have a problem. Otherwise, pay attention. If you&#8217;re interested in the details of the thrashing problem and how <code>pamflip</code> approaches it, you&#8217;re invited to read a complete explanation in comments in the source code. </p>
 <dl>
-<dt><code>-memsize=</code><i>mebibytes</i></p>
-<dd> <i>mebibytes</i> is the size in mebibytes (aka megabytes) of memory available for <code>pamflip</code>. It is the lesser of the amount of real or virtual memory available. </p>
+<dt><code>-memsize=</code><i>mebibytes</i></dt>
+<dd> <i>mebibytes</i> is the size in mebibytes (aka megabytes) of memory available for <code>pamflip</code>. It is the lesser of the amount of real or virtual memory available. </dd>
 <p> <code>pamflip</code> does nothing special to allocate real memory or control it&#8217;s allocation &#8212; it gets whatever it gets just by referencing virtual memory normally. The real memory figure in question is the maximum amount that <code>pamflip</code> can be expected to end up with by doing that. This is just about impossible for you to know, of course, but you can estimate. The total real memory in your system should be a major factor in your estimate. </p>
 <p> If <code>pamflip</code> cannot fit the entire image in the amount of memory you specify, it does the transformation in chunks, using temporary files for intermediate results. </p>
 <p> Strict horizontal transformations (either left for right or null), <code>pamflip</code> never keeps more than one row in memory, so the memory size is irrelevant and <code>pamflip</code> doesn&#8217;t use temporary files. </p>
@@ -79,14 +79,14 @@ description: "pamflip – flip or rotate a PAM or PNM image"
 <p> This option did not exist before Netpbm 10.7 (August 2002). </p>
 <p> Before Netpbm 10.42 (March 2008), this option applied only to real memory. <code>pamflip</code> would always keep the entire image in virtual memory and if it could not get enough virtual memory, it failed. <code>pamflip</code> accessed the pixels in an order designed to keep real memory use within the specified amount.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-pagesize=</code><i>bytes</i></p>
-<dd> <i>bytes</i> is the size in bytes of a paging unit &#8212; the amount of memory that gets paged in or out as an indivisible unit &#8212; in your system. The default is 4KiB. </p>
+<dt><code>-pagesize=</code><i>bytes</i></dt>
+<dd> <i>bytes</i> is the size in bytes of a paging unit &#8212; the amount of memory that gets paged in or out as an indivisible unit &#8212; in your system. The default is 4KiB. </dd>
 <p> This option has no effect. </p>
 <p> Before Netpbm 10.42 (March 2008), <code>pamflip</code> used it to control its use of real memory. </p>
 <p> This option did not exist before Netpbm 10.7 (August 2002). </p>
 <p> Miscellaneous options: </p>
-<dt><code>-verbose</code></p>
-<dd> This option causes <code>pamflip</code> to issue messages to Standard Error about its progress. </p>
+<dt><code>-verbose</code></dt>
+<dd> This option causes <code>pamflip</code> to issue messages to Standard Error about its progress. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , <code>jpegtran</code> manual </p>

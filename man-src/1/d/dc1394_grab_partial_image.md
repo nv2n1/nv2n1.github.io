@@ -15,8 +15,8 @@ description: "grab_partial_image – grab a partial image using libdc1394"
 <p> Grab partial image from camera. Camera must be format 7 (scalable image size) compatible. The image will be stored as a Portable Grayscale map in Part.pgm.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>none</p>
-<dd></dl>
+<dt>none</dt>
+<dd></dd></dl>
 <h2>BUGS</h2>
 <p> The filename should be a commandline argument</p>
 <h2>AUTHOR</h2>

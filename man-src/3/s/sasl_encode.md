@@ -10,13 +10,11 @@ description: "sasl_encode – Encode data for transport to authenticated host"
 <p>sasl_encode &#8211; Encode data for transport to authenticated host </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_encode(sasl_conn_t *conn,
                 const char *input,
                 unsigned inputlen,
                 const char **output,
                 unsigned *outputlen);
-
 int sasl_encodev(sasl_conn_t *conn,
                  const struct iovec *invec,
                  unsigned numiov,

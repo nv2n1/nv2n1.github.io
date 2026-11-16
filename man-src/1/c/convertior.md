@@ -15,9 +15,9 @@ description: "convertior – Utility for creating a new IOR from existing. chang
 <p> convertior accepts a stringified IOR and a new hostname, then outputs a new IOR for the combination. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>None</p>
+<dt>None</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-genior/">genior</a>(1) <a href="/docs/linux/man/1-catior/">catior</a>(1) </p>
 <h2>Index</h2>

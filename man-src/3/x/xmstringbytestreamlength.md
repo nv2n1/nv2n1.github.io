@@ -16,7 +16,7 @@ unsigned int XmStringByteStreamLength (<i>string</i>)
 <h2>Description</h2>
 <p><code>XmStringByteStreamLength</code> receives a byte stream format string and returns the size, in bytes, of that stream, including the header. Because of this header information, even a NULL <i>string</i> will cause <code>XmStringByteStreamLength</code> to return a non-zero value.</p>
 <dl COMPACT>
-<dt><i>string</i></p>
-<dd>Specifies the byte stream format string.</dl>
+<dt><i>string</i></dt>
+<dd>Specifies the byte stream format string.</dd></dl>
 <h2>Return Values</h2>
 <p>Returns the size of <i>string</i>, including the header.</p>

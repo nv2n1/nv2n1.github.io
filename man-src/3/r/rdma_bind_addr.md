@@ -12,17 +12,15 @@ rdma_bind_addr - Bind an RDMA identifier to a source address.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_bind_addr
-
     (struct rdma_cm_id *id,
-
      struct sockaddr *addr);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>addr
-<dd>Local address information. Wildcard values are permitted.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>addr
+</dt><dd>Local address information. Wildcard values are permitted.</dd></dl>
 
 <h2>Description</h2>
 

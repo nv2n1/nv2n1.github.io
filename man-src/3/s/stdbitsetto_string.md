@@ -11,27 +11,17 @@ std::bitset&lt;N&gt;::to_string - std::bitset&lt;N&gt;::to_string
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;
-
     class CharT,
-
     class Traits, (until C++ 11)
-
                       class Alloc
-
     &gt;
 std::basic_string&lt;CharT, Traits, Allocator&gt; to_string() const;
-
 template &lt;
-
     class CharT = char,
-
     class Traits = std::char_traits&lt;CharT&gt;, (since C++ 11)
-
                                                 class Allocator = std::allocator&lt;CharT&gt;
-
     &gt;
 std::basic_string&lt;CharT, Traits, Allocator&gt;
-
 to_string(CharT zero = CharT('0'), CharT one = CharT('1')) const;</code></pre> 
 Converts the contents of the bitset to a string. Uses zero to represent bits with value of false and one to represent bits with value of true. 
 The resulting string contains N characters with the first character corresponds to the last (N-1th) bit and the last character corresponding to the first bit. 
@@ -52,11 +42,8 @@ May throw std::bad_alloc from the the std::string constructor.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
-
 int main()
-
 {
     std::bitset&lt;8&gt; b(42);
     std::cout &lt;&lt; b.to_string() &lt;&lt; '\n'

@@ -16,9 +16,9 @@ description: "cyr_df – report Cyrus spool partition disk space usage"
 <p><i>Cyr_df</i> examines the Cyrus spool partitions and reports on their disk space usage. <i>Cyr_df</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-m</code></p>
-<dd>Report on metadata partitions rather than message file partitions.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-m</code></dt>
+<dd>Report on metadata partitions rather than message file partitions.</dd></dl>
 <h2>Files</h2>
 <p><code>/etc/imapd.conf</code></p>

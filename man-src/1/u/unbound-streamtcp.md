@@ -16,22 +16,22 @@ description: "unbound-streamtcp – unbound DNS lookup utility"
 <p> If the server to query is not given using the <code>-f</code> option then localhost (127.0.0.1) is used. More queries can be given on one commandline, they are resolved in sequence. </p>
 <p> The available options are:</p>
 <dl>
-<dt><i>name</i></p>
-<dd> This name is resolved (looked up in the DNS).</p>
-<dt><i>type</i></p>
-<dd> Specify the type of data to lookup.</p>
-<dt><i>class</i></p>
-<dd> Specify the class to lookup for.</p>
-<dt><code>-u</code></p>
-<dd> Use UDP instead of TCP. No retries are attempted.</p>
-<dt><code>-n</code></p>
-<dd> Do not wait for the answer.</p>
-<dt><code>-s</code></p>
-<dd> Use SSL.</p>
-<dt><code>-h</code></p>
-<dd> Print program usage.</p>
-<dt><code>-f </code><i>ipaddr[@port]</i></p>
-<dd> Specify the server to send the queries to. If not specified localhost (127.0.0.1) is used.</dl>
+<dt><i>name</i></dt>
+<dd> This name is resolved (looked up in the DNS).</dd>
+<dt><i>type</i></dt>
+<dd> Specify the type of data to lookup.</dd>
+<dt><i>class</i></dt>
+<dd> Specify the class to lookup for.</dd>
+<dt><code>-u</code></dt>
+<dd> Use UDP instead of TCP. No retries are attempted.</dd>
+<dt><code>-n</code></dt>
+<dd> Do not wait for the answer.</dd>
+<dt><code>-s</code></dt>
+<dd> Use SSL.</dd>
+<dt><code>-h</code></dt>
+<dd> Print program usage.</dd>
+<dt><code>-f </code><i>ipaddr[@port]</i></dt>
+<dd> Specify the server to send the queries to. If not specified localhost (127.0.0.1) is used.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Some examples of use. </p>
 <p> $ unbound-streamtcp <a rel="nofollow" href="http://www.example.com">www.example.com</a> A IN </p>

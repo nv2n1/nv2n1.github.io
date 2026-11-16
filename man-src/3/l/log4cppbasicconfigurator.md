@@ -18,7 +18,7 @@ description: "log4cpp::BasicConfigurator –"
 <p>This class implements a trivial default configuration for <code>log4cpp</code>: it adds a <code>FileAppender</code> that logs to stdout and uses a <code>BasicLayout</code> to the root <code>Category</code>. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.2</dl>
+<dd>0.3.2</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void log4cpp::BasicConfigurator::configure () [static]</h3>
 <p>Performs a minimal configuration of <code>log4cpp</code>. </p>

@@ -10,15 +10,15 @@ description: "phy_interrupt – PHY interrupt handler"
 <p>phy_interrupt &#8211; PHY interrupt handler</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>irqreturn_t phy_interrupt(int&nbsp;<wbr></code><i>irq</i><code>, void&nbsp;<wbr>*&nbsp;<wbr></code><i>phy_dat</i><code>);</code></dl>
+<dt> <code>irqreturn_t phy_interrupt(int&nbsp;<wbr></code><i>irq</i><code>, void&nbsp;<wbr>*&nbsp;<wbr></code><i>phy_dat</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>interrupt line</dl>
+</dd><dd>interrupt line</dd></dl>
 <p> <i>phy_dat</i></p>
 <dl>
-<dd>phy_device pointer</dl>
+<dd>phy_device pointer</dd></dl>
 <h2>Description</h2>
 <p>When a PHY interrupt occurs, the handler disables interrupts, and schedules a work task to clear the interrupt.</p>
 <h2>Copyright</h2>

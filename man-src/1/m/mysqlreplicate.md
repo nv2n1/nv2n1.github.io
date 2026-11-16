@@ -11,74 +11,74 @@ description: "mysqlreplicate – Set Up and Start Replication Between Two Server
 <p> mysqlreplicate &#8211; Set Up and Start Replication Between Two Servers </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysqlreplicate [</code><i>options</i><code>]</code></dl>
+<dt> <code>mysqlreplicate [</code><i>options</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This utility permits an administrator to start replication from one server (the master) to another (the slave). The user provides login information for the slave and connection information for connecting to the master. It is also possible to specify a database to be used to test replication. </p>
+<dd>This utility permits an administrator to start replication from one server (the master) to another (the slave). The user provides login information for the slave and connection information for connecting to the master. It is also possible to specify a database to be used to test replication. </dd>
 <p> The utility reports conditions where the storage engines on the master and the slave differ. It also reports a warning if the InnoDB storage engine differs on the master and slave. For InnoDB to be the same, both servers must be running the same &#8220;type&#8221; of InnoDB (built-in or the InnoDB Plugin), and InnoDB on both servers must have the same major and minor version numbers and enabled state. </p>
 <p> By default, the utility issues warnings for mismatches between the sets of storage engines, the default storage engine, and the InnoDB storage engine. To produce errors instead, use the <code>&#8211;pedantic</code> option, which requires storage engines to be the same on the master and slave. </p>
 <p> The <code>-vv</code> option displays any discrepancies between the storage engines and InnoDB values, with or without the <code>&#8211;pedantic</code> option. </p>
 <p> Replication can be started using one of the following strategies. </p>
 <dl>
 <dt>
-<dd> &bull; Start from the current position (default) </p>
+</dt><dd> &bull; Start from the current position (default) </dd>
 <p> Start replication from the current master binary log file and position. The utility uses the <code>SHOW MASTER STATUS</code> statement to retrieve this information.</dl>
 <dl>
 <dt>
-<dd> &bull; Start from the beginning </p>
+</dt><dd> &bull; Start from the beginning </dd>
 <p> Start replication from the first event recorded in the master binary log. To do this, use the <code>&#8211;start-from-beginning</code> option.</dl>
 <dl>
 <dt>
-<dd> &bull; Start from a binary log file </p>
+</dt><dd> &bull; Start from a binary log file </dd>
 <p> Start replication from the first event in a specific master binary log file. To do this, use the <code>&#8211;master-log-file</code> option.</dl>
 <dl>
 <dt>
-<dd> &bull; Start from a specific event </p>
+</dt><dd> &bull; Start from a specific event </dd>
 <p> Start replication from specific event coordinates (specific binary log file and position). To do this, use the <code>&#8211;master-log-file</code> and <code>&#8211;master-log-pos</code> options.</dl>
 <p>OPTIONS </p>
 <p> <code>mysqlreplicate</code> accepts the following command-line options: </p>
 <dl>
 <dt>
-<dd> &bull; &#8211;help </p>
+</dt><dd> &bull; &#8211;help </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;master=&lt;master&gt; </p>
+</dt><dd> &bull; &#8211;master=&lt;master&gt; </dd>
 <p> Connection information for the master server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;] or &lt;<i>login-path</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;master-log-file=&lt;master_log_file&gt; </p>
+</dt><dd> &bull; &#8211;master-log-file=&lt;master_log_file&gt; </dd>
 <p> Begin replication from the beginning of this master log file.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;master-log-pos=&lt;master_log_pos&gt; </p>
+</dt><dd> &bull; &#8211;master-log-pos=&lt;master_log_pos&gt; </dd>
 <p> Begin replication from this position in the master log file. This option is not valid unless <code>&#8211;master-log-file</code> is given.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;pedantic, -p </p>
+</dt><dd> &bull; &#8211;pedantic, -p </dd>
 <p> Fail if both servers do not have the same set of storage engines, the same default storage engine, and the same InnoDB storage engine.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;rpl-user=&lt;replication_user&gt; </p>
+</dt><dd> &bull; &#8211;rpl-user=&lt;replication_user&gt; </dd>
 <p> The user and password for the replication user, in the format: &lt;<i>user</i>&gt;[:&lt;<i>password</i>&gt;] or &lt;<i>login-path</i>&gt;. The default is rpl:rpl.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;slave=&lt;slave&gt; </p>
+</dt><dd> &bull; &#8211;slave=&lt;slave&gt; </dd>
 <p> Connection information for the slave server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;] or &lt;<i>login-path</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;start-from-beginning, -b </p>
+</dt><dd> &bull; &#8211;start-from-beginning, -b </dd>
 <p> Start replication at the beginning of events logged in the master binary log. This option is not valid unless both <code>&#8211;master-log-file</code> and <code>&#8211;master-log-pos</code> are given.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;test-db=&lt;test_database&gt; </p>
+</dt><dd> &bull; &#8211;test-db=&lt;test_database&gt; </dd>
 <p> The database name to use for testing the replication setup. If this option is not given, no testing is done, only error checking.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;verbose, -v </p>
+</dt><dd> &bull; &#8211;verbose, -v </dd>
 <p> Specify how much information to display. Use this option multiple times to increase the amount of information. For example, <code>-v</code> = verbose, <code>-vv</code> = more verbose, <code>-vvv</code> = debug.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;version </p>
+</dt><dd> &bull; &#8211;version </dd>
 <p> Display version information and exit.</dl>
 <p>NOTES </p>
 <p> The login user for the master server must have the appropriate permissions to grant access to all databases and the ability to create a user account. For example, the user account used to connect to the master must have the <code>WITH GRANT OPTION</code> privilege. </p>
@@ -90,7 +90,7 @@ EXAMPLES </p>
 <p> To set up replication between two MySQL instances running on different ports of the same host using the default settings, use this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqlreplicate-- master = root[at] localhost : 3306 --slave = root[at] localhost : 3307 --rpl - user = rpl : rpl
 #master on localhost : ... connected.
@@ -99,11 +99,11 @@ $ mysqlreplicate-- master = root[at] localhost : 3306 --slave = root[at] localho
 #Setting up replication...
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <p> The following command uses <code>&#8211;pedantic</code> to ensure that replication between the master and slave is successful if and only if both servers have the same storage engines available, the same default storage engine, and the same InnoDB storage engine: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl &#8211; vv&#8211; pedantic<br />
 #master on localhost : &#8230; connected.<br />
 #slave on localhost : &#8230; connected.<br />
@@ -121,44 +121,44 @@ $ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[a
 #error : 0:<br />
 #Unlocking tables on master&#8230;<br />
 #&#8230; done.
-</dl>
+</dd></dl>
 <p> The following command starts replication from the current position of the master (which is the default): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl<br />
 #master on localhost : &#8230; connected.<br />
 #slave on localhost : &#8230; connected.<br />
 #Checking for binary logging on master&#8230;<br />
 #Setting up replication&#8230;<br />
 #&#8230; done.
-</dl>
+</dd></dl>
 <p> The following command starts replication from the beginning of recorded events on the master: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl&#8211; start &#8211; from &#8211; beginning<br />
 #master on localhost : &#8230; connected.<br />
 #slave on localhost : &#8230; connected.<br />
 #Checking for binary logging on master&#8230;<br />
 #Setting up replication&#8230;<br />
 #&#8230; done.
-</dl>
+</dd></dl>
 <p> The following command starts replication from the beginning of a specific master binary log file: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl&#8211; master &#8211; log &#8211; file = my_log .000003<br />
 #master on localhost : &#8230; connected.<br />
 #slave on localhost : &#8230; connected.<br />
 #Checking for binary logging on master&#8230;<br />
 #Setting up replication&#8230;<br />
 #&#8230; done.
-</dl>
+</dd></dl>
 <p> The following command starts replication from specific master binary log coordinates (specific log file and position): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqlreplicate-- master = root[at] localhost : 3306 --slave = root[at] localhost : 3307 --rpl - user = rpl : rpl-- master - log - file = my_log .000001 --master - log - pos = 96
 #master on localhost : ... connected.
@@ -167,7 +167,7 @@ $ mysqlreplicate-- master = root[at] localhost : 3306 --slave = root[at] localho
 #Setting up replication...
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <p>RECOMMENDATIONS </p>
 <p> You should set read_only=1 in the my.cnf file for the slave to ensure that no accidental data changes, such as <code>INSERT</code>, <code>DELETE</code>, <code>UPDATE</code>, and so forth, are permitted on the slave other than those produced by events read from the master. </p>
 <p> Use the <code>&#8211;pedantic</code> and <code>-vv</code> options for setting up replication on production servers to avoid possible problems with differing storage engines.</p>

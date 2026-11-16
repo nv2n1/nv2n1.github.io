@@ -21,13 +21,13 @@ CALL PPPPAP (XCIP,YCIP,NCIP,NBTS)
 <h2>Description</h2>
 
 <dl><dt>XCIP
-<dd>(an input/output array of type REAL) is the X coordinate array for a polygon to be used as input to one of the routines PPDITR, PPINTR, or PPUNTR. PPPPAP will alter the contents of this array.
-<dt>YCIP
-<dd>(an input/output array of type REAL) is the Y coordinate arrays for a polygon to be used as input to one of the routines PPDITR, PPINTR, or PPUNTR. PPPPAP will alter the contents of this array.
-<dt>NCIP
-<dd>(an input/output variable of type INTEGER) is the number of points defining the input polygon. PPPPAP may reduce the value of NCIP.
-<dt>NBTS
-<dd>(an input expression of type INTEGER) is the number of significant bits to be left unzeroed in the fractional part of each coordinate. Generally, one would probably not want to use a value less than 10 or 12. On a 32-bit machine on which reals have 24-bit fractions, 18 may be a good choice; on a 64-bit machine with 48-bit fractions, larger values may be desirable.</dl>
+</dt><dd>(an input/output array of type REAL) is the X coordinate array for a polygon to be used as input to one of the routines PPDITR, PPINTR, or PPUNTR. PPPPAP will alter the contents of this array.
+</dd><dt>YCIP
+</dt><dd>(an input/output array of type REAL) is the Y coordinate arrays for a polygon to be used as input to one of the routines PPDITR, PPINTR, or PPUNTR. PPPPAP will alter the contents of this array.
+</dd><dt>NCIP
+</dt><dd>(an input/output variable of type INTEGER) is the number of points defining the input polygon. PPPPAP may reduce the value of NCIP.
+</dd><dt>NBTS
+</dt><dd>(an input expression of type INTEGER) is the number of significant bits to be left unzeroed in the fractional part of each coordinate. Generally, one would probably not want to use a value less than 10 or 12. On a 32-bit machine on which reals have 24-bit fractions, 18 may be a good choice; on a 64-bit machine with 48-bit fractions, larger values may be desirable.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

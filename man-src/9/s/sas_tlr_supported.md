@@ -14,14 +14,14 @@ description: "sas_tlr_supported – checking TLR bit in vpd 0x90"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi device struct</dl>
+</dd><dd>scsi device struct</dd></dl>
 <h2>Description</h2>
 <p>Check Transport Layer Retries are supported or not. If vpd page 0x90 is present, TRL is supported.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

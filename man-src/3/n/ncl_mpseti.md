@@ -12,9 +12,9 @@ MAPSTI - Sets the values of certain EZMAP parameters of type INTEGER. <pre><code
 
  void c_mapsti (char *pnam, int ival)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input expression, of type CHARACTER*2) specifies the name of an internal parameter whose value is to be set. Only the first two characters of this string are examined.
-<dt>IVAL
-<dd>(an input expression of type INTEGER) contains the value to be given to the parameter specified by PNAM.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression, of type CHARACTER*2) specifies the name of an internal parameter whose value is to be set. Only the first two characters of this string are examined.
+</dd><dt>IVAL
+</dt><dd>(an input expression of type INTEGER) contains the value to be given to the parameter specified by PNAM.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to set the current value of EZMAP parameters. For a complete list of parameters available in this utility, see the ezmap_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: cmpclr, cmpdd, cmpdrw, cmpel, cmpfil, cmpgrd, cmpgrp, cmpita, cmplab, cmplbl, cmplot, cmpmsk, cmpou, cmptit, cpex01, cpex03, cpex08, cpex09, mpex02, mpex04, mpex05, mpex06, mpex07, mpex10, mpexfi, eezmpa, tezmap, tezmpa.
 <h2>Access</h2>To use MAPSTI, MPSETI, or c_mapsti, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

@@ -12,19 +12,14 @@ std::experimental::propagate_const&lt;T&gt;::operator= - std::experimental::prop
 
 <pre><code>constexpr propagate_const &amp;operator=(propagate_const &amp;&amp;p) = default;
 (1)(library fundamentals TS v2)
-
     template &lt;class U&gt;
     (2)(library fundamentals TS v2)
-
         constexpr propagate_const &amp;
         operator=(propagate_const&lt;U&gt; &amp;&amp;pu);
-
 template &lt;class U&gt;
 (3)(library fundamentals TS v2)
-
     constexpr propagate_const &amp;
     operator=(U &amp;&amp;u);
-
 propagate_const &amp;operator=(const propagate_const &amp;) = delete;
 (4)(library fundamentals TS v2)</code></pre> 
 Let t_ designate the private data member that is the wrapped pointer-like object. 

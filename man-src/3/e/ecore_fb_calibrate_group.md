@@ -24,7 +24,7 @@ description: "Framebuffer Calibration Functions – Functions that calibrate the
  <i>xtrans</i> Pointer to an integer in which to store the X translation.<br />
  <i>yscale</i> Pointer to an integer in which to store the Y scaling.<br />
  <i>ytrans</i> Pointer to an integer in which to store the Y translation.<br />
- <i>xyswap</i> Pointer to an integer in which to store the Swap X &amp; Y flag.</dl>
+ <i>xyswap</i> Pointer to an integer in which to store the Swap X &amp; Y flag.</dd></dl>
 <h3>EAPI void ecore_fb_touch_screen_calibrate_set (int xscale, int xtrans, int yscale, int ytrans, int xyswap)</h3>
 <p>Calibrates the touschreen using the given parameters. </p>
 <p> <code>Parameters:</code></p>
@@ -33,6 +33,6 @@ description: "Framebuffer Calibration Functions – Functions that calibrate the
  <i>xtrans</i> X translation.<br />
  <i>yscale</i> Y scaling.<br />
  <i>ytrans</i> Y translation.<br />
- <i>xyswap</i> Swap X &amp; Y flag.</dl>
+ <i>xyswap</i> Swap X &amp; Y flag.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

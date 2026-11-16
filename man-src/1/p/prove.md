@@ -157,74 +157,63 @@ prove[options][files or directories]
  The <tt>&quot;--state&quot;</tt> switch requires an argument which must be a comma separated list of one or more of the following options.
 <dl>
 <dt>&quot;last&quot;
-<dd> Run the same tests as the last time the state was saved. This makes it possible, for example, to recreate the ordering of a shuffled test. 
-
+</dt><dd> Run the same tests as the last time the state was saved. This makes it possible, for example, to recreate the ordering of a shuffled test. 
  <pre>
     # Run all tests in random order
     $ prove -b --state=save --shuffle
     # Run them again in the same order
     $ prove -b --state=last
 </pre>
-<dt>&quot;failed&quot;
-<dd> Run only the tests that failed on the last run. 
-
+</dd><dt>&quot;failed&quot;
+</dt><dd> Run only the tests that failed on the last run. 
  <pre>
     # Run all tests
     $ prove -b --state=save
     # Run failures
     $ prove -b --state=failed
 </pre> 
-
  If you also specify the <tt>&quot;save&quot;</tt> option newly passing tests will be excluded from subsequent runs. 
-
  <pre>
     # Repeat until no more failures
     $ prove -b --state=failed,save
 </pre>
-<dt>&quot;passed&quot;
-<dd> Run only the passed tests from last time. Useful to make sure that no new problems have been introduced.
-<dt>&quot;all&quot;
-<dd> Run all tests in normal order. Multple options may be specified, so to run all tests with the failures from last time first: 
-
+</dd><dt>&quot;passed&quot;
+</dt><dd> Run only the passed tests from last time. Useful to make sure that no new problems have been introduced.
+</dd><dt>&quot;all&quot;
+</dt><dd> Run all tests in normal order. Multple options may be specified, so to run all tests with the failures from last time first: 
  <pre>
     $ prove -b --state=failed,all,save
 </pre>
-<dt>&quot;hot&quot;
-<dd> Run the tests that most recently failed first. The last failure time of each test is stored. The <tt>&quot;hot&quot;</tt> option causes tests to be run in most-recent- failure order. 
-
+</dd><dt>&quot;hot&quot;
+</dt><dd> Run the tests that most recently failed first. The last failure time of each test is stored. The <tt>&quot;hot&quot;</tt> option causes tests to be run in most-recent- failure order. 
  <pre>
     $ prove -b --state=hot,save
 </pre> 
-
  Tests that have never failed will not be selected. To run all tests with the most recently failed first use 
-
  <pre>
     $ prove -b --state=hot,all,save
 </pre> 
-
  This combination of options may also be specified thus 
-
  <pre>
     $ prove -b --state=adrian
 </pre>
-<dt>&quot;todo&quot;
-<dd> Run any tests with todos.
-<dt>&quot;slow&quot;
-<dd> Run the tests in slowest to fastest order. This is useful in conjunction with the <tt>&quot;-j&quot;</tt> parallel testing switch to ensure that your slowest tests start running first. 
-
+</dd><dt>&quot;todo&quot;
+</dt><dd> Run any tests with todos.
+</dd><dt>&quot;slow&quot;
+</dt><dd> Run the tests in slowest to fastest order. This is useful in conjunction with the <tt>&quot;-j&quot;</tt> parallel testing switch to ensure that your slowest tests start running first. 
  <pre>
     $ prove -b --state=slow -j9
 </pre>
-<dt>&quot;fast&quot;
-<dd> Run test tests in fastest to slowest order.
-<dt>&quot;new&quot;
-<dd> Run the tests in newest to oldest order based on the modification times of the test scripts.
-<dt>&quot;old&quot;
-<dd> Run the tests in oldest to newest order.
-<dt>&quot;fresh&quot;
-<dd> Run those test scripts that have been modified since the last test run.
-<dt>&quot;save&quot;
-<dd> Save the state on exit. The state is stored in a file called <i>.prove</i> (<i>_prove</i> on Windows and <font SIZE="-1">VMS</font>) in the current directory.</dl>
+</dd><dt>&quot;fast&quot;
+</dt><dd> Run test tests in fastest to slowest order.
+</dd><dt>&quot;new&quot;
+</dt><dd> Run the tests in newest to oldest order based on the modification times of the test scripts.
+</dd><dt>&quot;old&quot;
+</dt><dd> Run the tests in oldest to newest order.
+</dd><dt>&quot;fresh&quot;
+</dt><dd> Run those test scripts that have been modified since the last test run.
+</dd><dt>&quot;save&quot;
+</dt><dd> Save the state on exit. The state is stored in a file called <i>.prove</i> (<i>_prove</i> on Windows and <font SIZE="-1">VMS</font>) in the current directory.</dd></dl>
  
 
  The <tt>&quot;--state&quot;</tt> switch may be used more than once. 
@@ -251,15 +240,15 @@ prove[options][files or directories]
  <i>--rules resolution</i>
 <dl>
 <dt>&bull;
-<dd> By default, all tests are eligible to be run in parallel. Specifying any of your own rules removes this one.
-<dt>&bull;
-<dd> ``First match wins''. The first rule that matches a test will be the one that applies.
-<dt>&bull;
-<dd> Any test which does not match a rule will be run in sequence at the end of the run.
-<dt>&bull;
-<dd> The existence of a rule does not imply selecting a test. You must still specify the tests to run.
-<dt>&bull;
-<dd> Specifying a rule to allow tests to run in parallel does not make them run in parallel. You still need specify the number of parallel <tt>&quot;jobs&quot;</tt> in your Harness object.</dl>
+</dt><dd> By default, all tests are eligible to be run in parallel. Specifying any of your own rules removes this one.
+</dd><dt>&bull;
+</dt><dd> ``First match wins''. The first rule that matches a test will be the one that applies.
+</dd><dt>&bull;
+</dt><dd> Any test which does not match a rule will be run in sequence at the end of the run.
+</dd><dt>&bull;
+</dt><dd> The existence of a rule does not imply selecting a test. You must still specify the tests to run.
+</dd><dt>&bull;
+</dt><dd> Specifying a rule to allow tests to run in parallel does not make them run in parallel. You still need specify the number of parallel <tt>&quot;jobs&quot;</tt> in your Harness object.</dd></dl>
  
 
  <i>--rules Glob-style pattern matching</i> 

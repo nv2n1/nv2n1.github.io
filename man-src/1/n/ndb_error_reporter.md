@@ -11,18 +11,18 @@ description: "ndb_error_reporter – NDB error-reporting utility"
 <p> ndb_error_reporter &#8211; NDB error-reporting utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndb_error_reporter </code><i>options</i></dl>
+<dt> <code>ndb_error_reporter </code><i>options</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ndb_error_reporter</code></p>
-<dd>creates an archive from data node and management node log files that can be used to help diagnose bugs or other problems with a cluster. <i>It is highly recommended that you make use of this utility when filing reports of bugs in MySQL Cluster</i>. </p>
+<dd>creates an archive from data node and management node log files that can be used to help diagnose bugs or other problems with a cluster. <i>It is highly recommended that you make use of this utility when filing reports of bugs in MySQL Cluster</i>. </dd>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 ndb_error_reporter path / to / config - file[username][--fs]
 </code></pre>
-</dl>
+</dd></dl>
 <p> This utility is intended for use on a management node host, and requires the path to the management host configuration file (config.ini). Optionally, you can supply the name of a user that is able to access the cluster&#8217;s data nodes via SSH, in order to copy the data node log files. ndb_error_reporter then includes all of these files in archive that is created in the same directory in which it is run. The archive is named ndb_error_report_<i>YYYYMMDDHHMMSS</i>.tar.bz2, where <i>YYYYMMDDHHMMSS</i> is a datetime string. </p>
 <p> If the <code>&#8211;fs</code> is used, then the data node file systems are also copied to the management host and included in the archive that is produced by this script. As data node file systems can be extremely large even after being compressed, we ask that you please do <i>not</i> send archives created using this option to Sun Microsystems, Inc. unless you are specifically requested to do so. </p>
 <table BORDER>

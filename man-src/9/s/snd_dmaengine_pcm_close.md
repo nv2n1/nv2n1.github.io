@@ -15,7 +15,7 @@ snd_dmaengine_pcm_close - Close a dmaengine based PCM substream
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
 
 <h2>Copyright</h2>
 

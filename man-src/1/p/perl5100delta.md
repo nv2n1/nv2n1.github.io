@@ -65,8 +65,8 @@ given($foo)
 <p> This feature was contributed by Robin Houston.</p>
 <h3>Regular expressions</h3>
 <dl>
-<dt>Recursive Patterns</p>
-<dd> It is now possible to write recursive patterns without using the <tt>&quot;(??{})&quot;</tt> construct. This new way is more efficient, and in many cases easier to read. </p>
+<dt>Recursive Patterns</dt>
+<dd> It is now possible to write recursive patterns without using the <tt>&quot;(??{})&quot;</tt> construct. This new way is more efficient, and in many cases easier to read. </dd>
 <p> Each capturing parenthesis can now be treated as an independent pattern that can be entered by using the <tt>&quot;(?PARNO)&quot;</tt> syntax (<tt>&quot;PARNO&quot;</tt> standing for &#8220;parenthesis number&#8221;). For example, the following pattern will match nested balanced angle brackets: </p>
 <pre>
     /
@@ -86,8 +86,8 @@ given($foo)
     /x
 </pre>
 <p> <font SIZE="-1">PCRE</font> users should note that Perl&#8217;s recursive regex feature allows backtracking into a recursed pattern, whereas in <font SIZE="-1">PCRE</font> the recursion is atomic or &#8220;possessive&#8221; in nature. As in the example above, you can add (?&gt;) to control this selectively. (Yves Orton)</p>
-<dt>Named Capture Buffers</p>
-<dd> It is now possible to name capturing parenthesis in a pattern and refer to the captured contents by name. The naming syntax is <tt>&quot;(?&lt;NAME&gt;....)&quot;</tt>. It&#8217;s possible to backreference to a named buffer with the <tt>&quot;\k&lt;NAME&gt;&quot;</tt> syntax. In code, the new magical hashes <tt>&quot;%+&quot;</tt> and <tt>&quot;%-&quot;</tt> can be used to access the contents of the capture buffers. </p>
+<dt>Named Capture Buffers</dt>
+<dd> It is now possible to name capturing parenthesis in a pattern and refer to the captured contents by name. The naming syntax is <tt>&quot;(?&lt;NAME&gt;....)&quot;</tt>. It&#8217;s possible to backreference to a named buffer with the <tt>&quot;\k&lt;NAME&gt;&quot;</tt> syntax. In code, the new magical hashes <tt>&quot;%+&quot;</tt> and <tt>&quot;%-&quot;</tt> can be used to access the contents of the capture buffers. </dd>
 <p> Thus, to replace all doubled chars with a single copy, one could write </p>
 <pre>
     s/(?&lt;letter&gt;.)\k&lt;letter&gt;/$+{letter}/g
@@ -106,14 +106,14 @@ given($foo)
    /(A)(?&lt;B&gt;B)(C)(?&lt;D&gt;D)/
 </pre>
 <p> <tt>$1</tt> will be &#8216;A&#8217;, <tt>$2</tt> will be &#8216;B&#8217;, <tt>$3</tt> will be &#8216;C&#8217; and <tt>$4</tt> will be &#8216;D&#8217; and not <tt>$1</tt> is &#8216;A&#8217;, <tt>$2</tt> is &#8216;C&#8217; and <tt>$3</tt> is &#8216;B&#8217; and <tt>$4</tt> is &#8216;D&#8217; that a .NET programmer would expect. This is considered a feature. :-) (Yves Orton)</p>
-<dt>Possessive Quantifiers</p>
-<dd> Perl now supports the &#8220;possessive quantifier&#8221; syntax of the &#8220;atomic match&#8221; pattern. Basically a possessive quantifier matches as much as it can and never gives any back. Thus it can be used to control backtracking. The syntax is similar to non-greedy matching, except instead of using a &#8216;?&#8217; as the modifier the &#8216;+&#8217; is used. Thus <tt>&quot;?+&quot;</tt>, <tt>&quot;*+&quot;</tt>, <tt>&quot;++&quot;</tt>, <tt>&quot;{min,max}+&quot;</tt> are now legal quantifiers. (Yves Orton)</p>
-<dt>Backtracking control verbs</p>
-<dd> The regex engine now supports a number of special-purpose backtrack control verbs: (*THEN), (*PRUNE), (*MARK), (*SKIP), (*COMMIT), (*FAIL) and (*ACCEPT). See perlre for their descriptions. (Yves Orton)</p>
-<dt>Relative backreferences</p>
-<dd> A new syntax <tt>&quot;\g{N}&quot;</tt> or <tt>&quot;\gN&quot;</tt> where &#8220;N&#8221; is a decimal integer allows a safer form of back-reference notation as well as allowing relative backreferences. This should make it easier to generate and embed patterns that contain backreferences. See &#8220;Capture buffers&#8221; in perlre. (Yves Orton)</p>
-<dt>&quot;\K&quot; escape</p>
-<dd> The functionality of Jeff Pinyan&#8217;s module Regexp::Keep has been added to the core. In regular expressions you can now use the special escape <tt>&quot;\K&quot;</tt> as a way to do something like floating length positive lookbehind. It is also useful in substitutions like: </p>
+<dt>Possessive Quantifiers</dt>
+<dd> Perl now supports the &#8220;possessive quantifier&#8221; syntax of the &#8220;atomic match&#8221; pattern. Basically a possessive quantifier matches as much as it can and never gives any back. Thus it can be used to control backtracking. The syntax is similar to non-greedy matching, except instead of using a &#8216;?&#8217; as the modifier the &#8216;+&#8217; is used. Thus <tt>&quot;?+&quot;</tt>, <tt>&quot;*+&quot;</tt>, <tt>&quot;++&quot;</tt>, <tt>&quot;{min,max}+&quot;</tt> are now legal quantifiers. (Yves Orton)</dd>
+<dt>Backtracking control verbs</dt>
+<dd> The regex engine now supports a number of special-purpose backtrack control verbs: (*THEN), (*PRUNE), (*MARK), (*SKIP), (*COMMIT), (*FAIL) and (*ACCEPT). See perlre for their descriptions. (Yves Orton)</dd>
+<dt>Relative backreferences</dt>
+<dd> A new syntax <tt>&quot;\g{N}&quot;</tt> or <tt>&quot;\gN&quot;</tt> where &#8220;N&#8221; is a decimal integer allows a safer form of back-reference notation as well as allowing relative backreferences. This should make it easier to generate and embed patterns that contain backreferences. See &#8220;Capture buffers&#8221; in perlre. (Yves Orton)</dd>
+<dt>&quot;\K&quot; escape</dt>
+<dd> The functionality of Jeff Pinyan&#8217;s module Regexp::Keep has been added to the core. In regular expressions you can now use the special escape <tt>&quot;\K&quot;</tt> as a way to do something like floating length positive lookbehind. It is also useful in substitutions like: </dd>
 <pre>
   s/(foo)bar/$1/g
 </pre>
@@ -122,12 +122,12 @@ given($foo)
   s/foo\Kbar//g
 </pre>
 <p> which is much more efficient. (Yves Orton)</p>
-<dt>Vertical and horizontal whitespace, and linebreak</p>
-<dd> Regular expressions now recognize the <tt>&quot;&quot;</tt> and <tt>&quot;\h&quot;</tt> escapes that match vertical and horizontal whitespace, respectively. <tt>&quot;\V&quot;</tt> and <tt>&quot;\H&quot;</tt> logically match their complements. </p>
+<dt>Vertical and horizontal whitespace, and linebreak</dt>
+<dd> Regular expressions now recognize the <tt>&quot;&quot;</tt> and <tt>&quot;\h&quot;</tt> escapes that match vertical and horizontal whitespace, respectively. <tt>&quot;\V&quot;</tt> and <tt>&quot;\H&quot;</tt> logically match their complements. </dd>
 <p> <tt>&quot;\R&quot;</tt> matches a generic linebreak, that is, vertical whitespace, plus the multi-character sequence <tt>&quot;
 &quot;</tt>.</p>
-<dt>Optional pre-match and post-match captures with the /p flag</p>
-<dd> There is a new flag <tt>&quot;/p&quot;</tt> for regular expressions. Using this makes the engine preserve a copy of the part of the matched string before the matching substring to the new special variable <tt>&quot;${^PREMATCH}&quot;</tt>, the part after the matching substring to <tt>&quot;${^POSTMATCH}&quot;</tt>, and the matched substring itself to <tt>&quot;${^MATCH}&quot;</tt>. </p>
+<dt>Optional pre-match and post-match captures with the /p flag</dt>
+<dd> There is a new flag <tt>&quot;/p&quot;</tt> for regular expressions. Using this makes the engine preserve a copy of the part of the matched string before the matching substring to the new special variable <tt>&quot;${^PREMATCH}&quot;</tt>, the part after the matching substring to <tt>&quot;${^POSTMATCH}&quot;</tt>, and the matched substring itself to <tt>&quot;${^MATCH}&quot;</tt>. </dd>
 <p> Perl is still able to store these substrings to the special variables <tt>&quot;$`&quot;</tt>, <tt>&quot;$'&quot;</tt>, <tt>$&amp;</tt>, but using these variables anywhere in the program adds a penalty to all regular expression matches, whereas if you use the <tt>&quot;/p&quot;</tt> flag and the new special variables instead, you pay only for the regular expressions where the flag is used. </p>
 <p> For more detail on the new variables, see perlvar; for the use of the regular expression flag, see perlop and perlre.</dl>
 <h3>say()</h3>
@@ -188,15 +188,16 @@ given($foo)
 <p> It&#8217;s possible to enhance the mechanism of subroutine hooks in <tt>@INC</tt> by adding a source filter on top of the filehandle opened and returned by the hook. This feature was planned a long time ago, but wasn&#8217;t quite working until now. See &#8220;require&#8221; in perlfunc for details. (Nicholas Clark)</p>
 <h3>New internal variables</h3>
 <dl>
-<dt>&quot;${^RE_DEBUG_FLAGS}&quot;</p>
-<dd> This variable controls what debug flags are in effect for the regular expression engine when running under <tt>&quot;use re &quot;debug&quot;&quot;</tt>. See re for details.</p>
-<dt>&quot;${^CHILD_ERROR_NATIVE}&quot;</p>
-<dd> This variable gives the native status returned by the last pipe close, backtick command, successful call to <code>wait()</code> or <code>waitpid()</code>, or from the <code>system()</code> operator. See perlvar for details. (Contributed by Gisle Aas.)</p>
-<dt>&quot;${^RE_TRIE_MAXBUF}&quot;</p>
-<dd> See &#8220;Trie optimisation of literal string alternations&#8221;.</p>
-<dt>&quot;${^WIN32_SLOPPY_STAT}&quot;</p>
-<dd> See &#8220;Sloppy stat on Windows&#8221;.</dl>
+<dt>&quot;${^RE_DEBUG_FLAGS}&quot;</dt>
+<dd> This variable controls what debug flags are in effect for the regular expression engine when running under <tt>&quot;use re &quot;debug&quot;&quot;</tt>. See re for details.</dd>
+<dt>&quot;${^CHILD_ERROR_NATIVE}&quot;</dt>
+<dd> This variable gives the native status returned by the last pipe close, backtick command, successful call to <code>wait()</code> or <code>waitpid()</code>, or from the <code>system()</code> operator. See perlvar for details. (Contributed by Gisle Aas.)</dd>
+<dt>&quot;${^RE_TRIE_MAXBUF}&quot;</dt>
+<dd> See &#8220;Trie optimisation of literal string alternations&#8221;.</dd>
+<dt>&quot;${^WIN32_SLOPPY_STAT}&quot;</dt>
+<dd> See &#8220;Sloppy stat on Windows&#8221;.</dd></dl>
 <h3>Miscellaneous</h3>
 <p> <tt>&quot;unpack()&quot;</tt> now defaults to unpacking the <tt>$_</tt> variable. </p>
 <p> <tt>&quot;mkdir()&quot;</tt> without arguments now defaults to <tt>$_</tt>. </p>
 <p> The internal dump output has been improved, so that non-printable characters such as newline and backspace are output in <tt>&quot;
+</p>

@@ -19,24 +19,24 @@ description: "struct_irq_affinity_notify – context for notification of IRQ aff
 <h2>Members</h2>
 <p>irq</p>
 <dl>
-<dd>Interrupt to which notification applies</dl>
+<dd>Interrupt to which notification applies</dd></dl>
 <p> kref</p>
 <dl>
-<dd>Reference count, for internal use</dl>
+<dd>Reference count, for internal use</dd></dl>
 <p> work</p>
 <dl>
-<dd>Work item, for internal use</dl>
+<dd>Work item, for internal use</dd></dl>
 <p> notify</p>
 <dl>
-<dd>Function to be called on change. This will be called in process context.</dl>
+<dd>Function to be called on change. This will be called in process context.</dd></dl>
 <p> release</p>
 <dl>
-<dd>Function to be called on release. This will be called in process context. Once registered, the structure must only be freed when this function is called or later.</dl>
+<dd>Function to be called on release. This will be called in process context. Once registered, the structure must only be freed when this function is called or later.</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

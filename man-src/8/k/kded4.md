@@ -10,10 +10,10 @@ description: "kded4 – KDE daemon – triggers Sycoca database updates when nee
 <p>kded4 &#8211; KDE daemon &#8211; triggers Sycoca database updates when needed.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kded4</code> [&#8211;help] [Generic options] [Qt-options] [KDE-options] [&#8211;check]</dl>
+<dt> <code>kded4</code> [&#8211;help] [Generic options] [Qt-options] [KDE-options] [&#8211;check]</dt></dl>
 <h2>Description</h2>
 <p><code>kded4</code></p>
-<dd>is responsible for creating the sycoca file, i.e. the binary cache of servicetypes, mimetypes, and services for a particular user. </p>
+<dd>is responsible for creating the sycoca file, i.e. the binary cache of servicetypes, mimetypes, and services for a particular user. </dd>
 <p> It monitors the directories containing .desktop files. When a file is added/removed, it waits 5 seconds (in case of a series of updates), and then launches <code>kbuildsycoca4</code> to update the sycoca. </p>
 <p> It checks newly installed update files, i.e. the *.upd files used to update configuration files of users when the configuration file formats changes. <code>kconf_update</code> is launched to do the updates. </p>
 <p> When the hostname changes, it will make the necessary changes to the KDE environment and X-server to allow continued proper operation, launching <code>kdontchangethehostname</code> to do the changes. </p>
@@ -21,130 +21,130 @@ description: "kded4 – KDE daemon – triggers Sycoca database updates when nee
 <p> It is also responsible for launching the on-demand kded4 modules and init enabled kded4 modules like: </p>
 <p> <code>Konqueror Browser Preloader</code></p>
 <dl>
-<dd>Reduces Konqueror startup time.</dl>
+<dd>Reduces Konqueror startup time.</dd></dl>
 <p> <code>Directory Watcher</code></p>
 <dl>
-<dd>Monitors directories for changes.</dl>
+<dd>Monitors directories for changes.</dd></dl>
 <p> <code>Hardware Detection</code></p>
 <dl>
-<dd>Provides a user interface for hardware events.</dl>
+<dd>Provides a user interface for hardware events.</dd></dl>
 <p> <code>SSL Certificate Policy</code></p>
 <dl>
-<dd>Provides the user configured SSL certificate policy to applications.</dl>
+<dd>Provides the user configured SSL certificate policy to applications.</dd></dl>
 <p> <code>Network Proxy Configuration</code></p>
 <dl>
-<dd>Automatic proxy configuration.</dl>
+<dd>Automatic proxy configuration.</dd></dl>
 <p> <code>Password Caching</code></p>
 <dl>
-<dd>Temporary password caching, for example: so that a webpage with HTTP authentication doesn&#8217;t ask for your password for every link and every image in the page. These passwords are forgotten when exiting KDE (unlike <code>KWallet</code>)</dl>
+<dd>Temporary password caching, for example: so that a webpage with HTTP authentication doesn&#8217;t ask for your password for every link and every image in the page. These passwords are forgotten when exiting KDE (unlike <code>KWallet</code>)</dd></dl>
 <p> <code>Sound Policy</code></p>
 <dl>
-<dd>Provides the sound system policy to applications.</dl>
+<dd>Provides the sound system policy to applications.</dd></dl>
 <p> <code>Favicons</code></p>
 <dl>
-<dd>Stores website icons.</dl>
+<dd>Stores website icons.</dd></dl>
 <p> <code>Display Management</code></p>
 <dl>
-<dd>Manages displays and video outputs.</dl>
+<dd>Manages displays and video outputs.</dd></dl>
 <p> <code>Cookie jar</code></p>
 <dl>
-<dd>Stores network cookies.</dl>
+<dd>Stores network cookies.</dd></dl>
 <p> <code>Network Watcher</code></p>
 <dl>
-<dd>Keeps track of the network and updates directory listings of the network:/ KIO slave.</dl>
+<dd>Keeps track of the network and updates directory listings of the network:/ KIO slave.</dd></dl>
 <p> <code>Subversion Module</code></p>
 <dl>
-<dd>Provides various subversion actions to filemanager and other software.</dl>
+<dd>Provides various subversion actions to filemanager and other software.</dd></dl>
 <p> <code>Network Status</code></p>
 <dl>
-<dd>Tracks status of network interfaces and provides notifications for applications using the network.</dl>
+<dd>Tracks status of network interfaces and provides notifications for applications using the network.</dd></dl>
 <p> <code>Write Daemon</code></p>
 <dl>
-<dd>Watches the messages from local users sent with <i><a href="/docs/linux/man/1-write/">write</a></i>(1) or <i><a href="/docs/linux/man/1-wall/">wall</a></i>(1).</dl>
+<dd>Watches the messages from local users sent with <i><a href="/docs/linux/man/1-write/">write</a></i>(1) or <i><a href="/docs/linux/man/1-wall/">wall</a></i>(1).</dd></dl>
 <p> <code>Notification area watcher</code></p>
 <dl>
-<dd>Keeps track of applications that want to use the D-Bus based notification area.</dl>
+<dd>Keeps track of applications that want to use the D-Bus based notification area.</dd></dl>
 <p> <code>KMixD</code></p>
 <dl>
-<dd>KMixD Mixer Service</dl>
+<dd>KMixD Mixer Service</dd></dl>
 <p> <code>Systemtray daemon</code></p>
 <dl>
-<dd>Keeps track of applications that want to use the D-Bus based system tray.</dl>
+<dd>Keeps track of applications that want to use the D-Bus based system tray.</dd></dl>
 <p> <code>Keyboard Daemon</code></p>
 <dl>
-<dd>Keeps track of keyboard changes (new keyboard, changed layout)</dl>
+<dd>Keeps track of keyboard changes (new keyboard, changed layout)</dd></dl>
 <p> <code>Remote URL Change Notifier</code></p>
 <dl>
-<dd>Provides change notifications for network folders</dl>
+<dd>Provides change notifications for network folders</dd></dl>
 <p> <code>Activity Manager</code></p>
 <dl>
-<dd>The Nepomuk activities manager backend</dl>
+<dd>The Nepomuk activities manager backend</dd></dl>
 <p> <code>Display Management change monitor</code></p>
 <dl>
-<dd>Notifies how the display has been rotated (where available)</dl>
+<dd>Notifies how the display has been rotated (where available)</dd></dl>
 <p> <code>Free Space Notifier</code></p>
 <dl>
-<dd>Warns when running out of space in your home folder.</dl>
+<dd>Warns when running out of space in your home folder.</dd></dl>
 <p> <code>Removable Device Automounter</code></p>
 <dl>
-<dd>Automatically mounts devices as needed.</dl>
+<dd>Automatically mounts devices as needed.</dd></dl>
 <p> <code>Nepomuk Search Module</code></p>
 <dl>
-<dd>Helper module for KIO to ensure automatic updates of Nepomuk search listings.</dl>
+<dd>Helper module for KIO to ensure automatic updates of Nepomuk search listings.</dd></dl>
 <p> <code>Power Management</code></p>
 <dl>
-<dd>Battery, Display and CPU power management and notifications.</dl>
+<dd>Battery, Display and CPU power management and notifications.</dd></dl>
 <p> <code>K Remote Control Daemon</code></p>
 <dl>
-<dd>Manages the Remote Control commands received</dl>
+<dd>Manages the Remote Control commands received</dd></dl>
 <p> <code>Status Notifier Manager</code></p>
 <dl>
-<dd>Manages services that provide status notifier user interfaces.</dl>
+<dd>Manages services that provide status notifier user interfaces.</dd></dl>
 <p> <code>DNS-SD Service Discovery Monitor</code></p>
 <dl>
-<dd>Monitors the network for DNS-SD services.</dl>
+<dd>Monitors the network for DNS-SD services.</dd></dl>
 <p> <code>Drive Ejector</code></p>
 <dl>
-<dd>Automatically unmounts and releases drives when their eject button is pushed.</dl>
+<dd>Automatically unmounts and releases drives when their eject button is pushed.</dd></dl>
 <p> <code>Time zone</code></p>
 <dl>
-<dd>Provides access to the system&#8217;s time zones for applications.</dl>
+<dd>Provides access to the system&#8217;s time zones for applications.</dd></dl>
 <p> <code>Input Actions</code></p>
 <dl>
-<dd>Input Actions service performing configured actions on key presses.</dl>
+<dd>Input Actions service performing configured actions on key presses.</dd></dl>
 <p> The init modules can be enabled/disabled using <code>systemsettings</code>, in System Administration &gt; Startup and Shutdown &gt; Service Manager.</p>
 <h2>Generic Options</h2>
 <p><code>&#8211;author</code></p>
 <dl>
-<dd>Show author information.</dl>
+<dd>Show author information.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>Show help about options.</dl>
+<dd>Show help about options.</dd></dl>
 <p> <code>&#8211;help-all</code></p>
 <dl>
-<dd>Show all options.</dl>
+<dd>Show all options.</dd></dl>
 <p> <code>&#8211;help-kde</code></p>
 <dl>
-<dd>Show KDE specific options.</dl>
+<dd>Show KDE specific options.</dd></dl>
 <p> <code>&#8211;help-qt</code></p>
 <dl>
-<dd>Show Qt specific options.</dl>
+<dd>Show Qt specific options.</dd></dl>
 <p> <code>&#8211;license</code></p>
 <dl>
-<dd>Show license information.</dl>
+<dd>Show license information.</dd></dl>
 <p> <code>-v</code> <code>&#8211;version</code></p>
 <dl>
-<dd>Show version information</dl>
+<dd>Show version information</dd></dl>
 <h2>Application Options</h2>
 <p><code>&#8211;check</code></p>
 <dl>
-<dd>Check Sycoca database only once.</dl>
+<dd>Check Sycoca database only once.</dd></dl>
 <h2>Usage</h2>
 <p>If <code>kded4</code> is called without parameters and is already running, it shows the message: </p>
 <dl>
 <dd>
 <pre>KDE Daemon (kded) already running.</pre>
-</dl>
+</dd></dl>
 <p> If <code>kded4</code> is called with <code>kded4 &#8211;check</code>, then it updates the KDE sycoca using <code>kbuildsycoca4</code>.</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/7-kdeoptions/">kdeoptions</a></i>(7), <i><a href="/docs/linux/man/7-qtoptions/">qtoptions</a></i>(7), <i><a href="/docs/linux/man/8-kbuildsycoca4/">kbuildsycoca4</a></i>(8)</p>
@@ -153,13 +153,14 @@ description: "kded4 – KDE daemon – triggers Sycoca database updates when nee
 <h2>Authors</h2>
 <p><code>David Faure</code> &lt;faure [at] kde.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Waldo Bastian</code> &lt;bastian [at] kde.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>bugs.kde.org</p>
+<dt> 1.</dt>
+<dd>bugs.kde.org</dd>
 <dl>
-<dd><a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dl>
+<dd><a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dd></dl>
+</dl>

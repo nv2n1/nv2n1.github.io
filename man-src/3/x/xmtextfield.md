@@ -22,89 +22,89 @@ description: "XmTextField — The TextField class"
 <p> When the <code>XmNconvertCallback</code> procedures are called, the <code>location_data</code> member of the <code>XmConvertCallbackStruct</code> member is NULL if the selected text is being transferred. If the entire text, not the selected text, is being transferred, the value of this member is the widget ID of the TextField widget. </p>
 <p> As a source of data, TextField supports the following targets and associated conversions of data to these targets:</p>
 <dl COMPACT>
-<dt><code>UTF8_STRING</code></p>
-<dd>The widget transfers the selected text as type <code>UTF8_STRING</code>.</p>
-<dt><i>locale</i></p>
-<dd>If the <i>locale</i> target matches the widget&#8217;s locale, the widget transfers the selected text in the encoding of the locale.</p>
-<dt><code>COMPOUND_TEXT</code></p>
-<dd>The widget transfers the selected text as type <code>COMPOUND_TEXT</code>.</p>
-<dt><code>STRING</code></p>
-<dd>The widget transfers the selected text as type <code>STRING</code>.</p>
-<dt><code>TEXT</code></p>
-<dd>If the selected text is fully convertible to the encoding of the locale, the widget transfers the selected text in the encoding of the locale. Otherwise, the widget transfers the selected text as type <code>COMPOUND_TEXT</code>.</p>
-<dt><code>DELETE</code></p>
-<dd>The widget deletes the selected text.</p>
-<dt><code>_MOTIF_CLIPBOARD_TARGETS</code></p>
-<dd>The widget transfers, as type <code>ATOM</code>, a list of the targets to which the widget can convert data to be placed on the clipboard immediately. These include the following targets:</p>
+<dt><code>UTF8_STRING</code></dt>
+<dd>The widget transfers the selected text as type <code>UTF8_STRING</code>.</dd>
+<dt><i>locale</i></dt>
+<dd>If the <i>locale</i> target matches the widget&#8217;s locale, the widget transfers the selected text in the encoding of the locale.</dd>
+<dt><code>COMPOUND_TEXT</code></dt>
+<dd>The widget transfers the selected text as type <code>COMPOUND_TEXT</code>.</dd>
+<dt><code>STRING</code></dt>
+<dd>The widget transfers the selected text as type <code>STRING</code>.</dd>
+<dt><code>TEXT</code></dt>
+<dd>If the selected text is fully convertible to the encoding of the locale, the widget transfers the selected text in the encoding of the locale. Otherwise, the widget transfers the selected text as type <code>COMPOUND_TEXT</code>.</dd>
+<dt><code>DELETE</code></dt>
+<dd>The widget deletes the selected text.</dd>
+<dt><code>_MOTIF_CLIPBOARD_TARGETS</code></dt>
+<dd>The widget transfers, as type <code>ATOM</code>, a list of the targets to which the widget can convert data to be placed on the clipboard immediately. These include the following targets:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>UTF8_STRING</code></p>
-<dt> &bull;</p>
-<dd><code>COMPOUND_TEXT</code></p>
-<dt> &bull;</p>
-<dd>The encoding of the locale, if the selected text is fully convertible to the encoding of the locale</p>
-<dt> &bull;</p>
-<dd><code>STRING</code>, if the selected text is fully convertible to <code>STRING</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>UTF8_STRING</code></dd>
+<dt> &bull;</dt>
+<dd><code>COMPOUND_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd>The encoding of the locale, if the selected text is fully convertible to the encoding of the locale</dd>
+<dt> &bull;</dt>
+<dd><code>STRING</code>, if the selected text is fully convertible to <code>STRING</code></dd></dl>
 </dl>
-<dt><code>_MOTIF_EXPORT_TARGETS</code></p>
-<dd>The widget transfers, as type <code>ATOM</code>, a list of the targets to be used as the value of the DragContext&#8217;s <code>XmNexportTargets</code> in a drag-and-drop transfer. These include <code>COMPOUND_TEXT</code>, the encoding of the locale, <code>STRING</code>, <code>TEXT</code>, <code>UTF8_STRING</code>, <code>BACKGROUND</code>, and <code>FOREGROUND</code>.</p>
-<dt><code>_MOTIF_LOSE_SELECTION</code></p>
-<dd>The widget takes the following actions:</p>
+<dt><code>_MOTIF_EXPORT_TARGETS</code></dt>
+<dd>The widget transfers, as type <code>ATOM</code>, a list of the targets to be used as the value of the DragContext&#8217;s <code>XmNexportTargets</code> in a drag-and-drop transfer. These include <code>COMPOUND_TEXT</code>, the encoding of the locale, <code>STRING</code>, <code>TEXT</code>, <code>UTF8_STRING</code>, <code>BACKGROUND</code>, and <code>FOREGROUND</code>.</dd>
+<dt><code>_MOTIF_LOSE_SELECTION</code></dt>
+<dd>The widget takes the following actions:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>When losing the <code>PRIMARY</code> selection, it unhighlights the selected text and calls the <code>XmNlosePrimaryCallback</code> procedures.</p>
-<dt> &bull;</p>
-<dd>When losing the <code>SECONDARY</code> selection, it removes the secondary selection highlight.</p>
-<dt> &bull;</p>
-<dd>When losing the <code>_MOTIF_DESTINATION</code> selection, if the widget does not have focus it changes the cursor to indicate that the widget is no longer the destination.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>When losing the <code>PRIMARY</code> selection, it unhighlights the selected text and calls the <code>XmNlosePrimaryCallback</code> procedures.</dd>
+<dt> &bull;</dt>
+<dd>When losing the <code>SECONDARY</code> selection, it removes the secondary selection highlight.</dd>
+<dt> &bull;</dt>
+<dd>When losing the <code>_MOTIF_DESTINATION</code> selection, if the widget does not have focus it changes the cursor to indicate that the widget is no longer the destination.</dd></dl>
 </dl>
 </dl>
 <p> As a source of data, TextField also supports the following standard Motif targets:</p>
 <dl COMPACT>
-<dt><code>BACKGROUND</code></p>
-<dd>The widget transfers <code>XmNbackground</code> as type <code>PIXEL</code>.</p>
-<dt><code>CLASS</code></p>
-<dd>The widget finds the first shell in the widget hierarchy that has a <code>WM_CLASS</code> property and transfers the contents as text in the current locale.</p>
-<dt><code>CLIENT_WINDOW</code></p>
-<dd>The widget finds the first shell in the widget hierarchy and transfers its window as type <code>WINDOW</code>.</p>
-<dt><code>COLORMAP</code></p>
-<dd>The widget transfers <code>XmNcolormap</code> as type <code>COLORMAP</code>.</p>
-<dt><code>FOREGROUND</code></p>
-<dd>The widget transfers <code>XmNforeground</code> as type <code>PIXEL</code>.</p>
-<dt><code>NAME</code></p>
-<dd>The widget finds the first shell in the widget hierarchy that has a <code>WM_NAME</code> property and transfers the contents as text in the current locale.</p>
-<dt><code>TARGETS</code></p>
-<dd>The widget transfers, as type <code>ATOM</code>, a list of the targets it supports. These include the standard targets in this list. These also include <code>COMPOUND_TEXT</code>, the encoding of the locale, <code>STRING</code>, <code>TEXT</code> and <code>UTF8_STRING</code>.</p>
-<dt><code>TIMESTAMP</code></p>
-<dd>The widget transfers the timestamp used to acquire the selection as type <code>INTEGER</code>.</p>
-<dt><code>_MOTIF_RENDER_TABLE</code></p>
-<dd>The widget transfers <code>XmNrenderTable</code> if it exists, or else the default text render table, as type <code>STRING</code>.</p>
-<dt><code>_MOTIF_ENCODING_REGISTRY</code></p>
-<dd>The widget transfers its encoding registry as type <code>STRING</code>. The value is a list of NULL separated items in the form of tag encoding pairs. This target symbolizes the transfer target for the Motif Segment Encoding Registry. Widgets and applications can use this Registry to register text encoding formats for specified render table tags. Applications access this Registry by calling <code>XmRegisterSegmentEncoding</code> and <code>XmMapSegmentEncoding</code>.</dl>
+<dt><code>BACKGROUND</code></dt>
+<dd>The widget transfers <code>XmNbackground</code> as type <code>PIXEL</code>.</dd>
+<dt><code>CLASS</code></dt>
+<dd>The widget finds the first shell in the widget hierarchy that has a <code>WM_CLASS</code> property and transfers the contents as text in the current locale.</dd>
+<dt><code>CLIENT_WINDOW</code></dt>
+<dd>The widget finds the first shell in the widget hierarchy and transfers its window as type <code>WINDOW</code>.</dd>
+<dt><code>COLORMAP</code></dt>
+<dd>The widget transfers <code>XmNcolormap</code> as type <code>COLORMAP</code>.</dd>
+<dt><code>FOREGROUND</code></dt>
+<dd>The widget transfers <code>XmNforeground</code> as type <code>PIXEL</code>.</dd>
+<dt><code>NAME</code></dt>
+<dd>The widget finds the first shell in the widget hierarchy that has a <code>WM_NAME</code> property and transfers the contents as text in the current locale.</dd>
+<dt><code>TARGETS</code></dt>
+<dd>The widget transfers, as type <code>ATOM</code>, a list of the targets it supports. These include the standard targets in this list. These also include <code>COMPOUND_TEXT</code>, the encoding of the locale, <code>STRING</code>, <code>TEXT</code> and <code>UTF8_STRING</code>.</dd>
+<dt><code>TIMESTAMP</code></dt>
+<dd>The widget transfers the timestamp used to acquire the selection as type <code>INTEGER</code>.</dd>
+<dt><code>_MOTIF_RENDER_TABLE</code></dt>
+<dd>The widget transfers <code>XmNrenderTable</code> if it exists, or else the default text render table, as type <code>STRING</code>.</dd>
+<dt><code>_MOTIF_ENCODING_REGISTRY</code></dt>
+<dd>The widget transfers its encoding registry as type <code>STRING</code>. The value is a list of NULL separated items in the form of tag encoding pairs. This target symbolizes the transfer target for the Motif Segment Encoding Registry. Widgets and applications can use this Registry to register text encoding formats for specified render table tags. Applications access this Registry by calling <code>XmRegisterSegmentEncoding</code> and <code>XmMapSegmentEncoding</code>.</dd></dl>
 <p> As a destination for data, TextField chooses a target and requests conversion of the selection to that target. If the encoding of the locale is present in the list of available targets, TextField chooses a requested target from the available targets in the following order of preference:</p>
 <dl COMPACT>
-<dt> 1.</p>
-<dd><code>TEXT</code></p>
-<dt> 1.</p>
-<dd><code>UTF8_STRING</code></p>
-<dt> 2.</p>
-<dd><code>COMPOUND_TEXT</code></p>
-<dt> 3.</p>
-<dd>The encoding of the locale</p>
-<dt> 4.</p>
-<dd><code>STRING</code></dl>
+<dt> 1.</dt>
+<dd><code>TEXT</code></dd>
+<dt> 1.</dt>
+<dd><code>UTF8_STRING</code></dd>
+<dt> 2.</dt>
+<dd><code>COMPOUND_TEXT</code></dd>
+<dt> 3.</dt>
+<dd>The encoding of the locale</dd>
+<dt> 4.</dt>
+<dd><code>STRING</code></dd></dl>
 <p> If the encoding of the locale is not present in the list of available targets, TextField chooses a requested target from the available targets in the following order of preference:</p>
 <dl COMPACT>
-<dt> 1.</p>
-<dd><code>UTF8_STRING</code></p>
-<dt> 1.</p>
-<dd><code>COMPOUND_TEXT</code></p>
-<dt> 2.</p>
-<dd><code>STRING</code></dl>
+<dt> 1.</dt>
+<dd><code>UTF8_STRING</code></dd>
+<dt> 1.</dt>
+<dd><code>COMPOUND_TEXT</code></dd>
+<dt> 2.</dt>
+<dd><code>STRING</code></dd></dl>
 <h3>Classes</h3>
 <p>TextField widget inherits behavior, resources, and traits from <code>Core</code> and <i>Primitive</i>. </p>
 <p> The class pointer is <code>xmTextFieldWidgetClass</code>. </p>
@@ -848,79 +848,79 @@ description: "XmTextField — The TextField class"
 </table>
 <p> 1 This resource cannot be specified in a resource file.</p>
 <dl COMPACT>
-<dt><code>XmNactivateCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user invokes an event that calls the activate() action. The type of the structure whose address is passed to this callback is <code>XmAnyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_ACTIVATE</code>.</p>
-<dt><code>XmNblinkRate</code></p>
-<dd>Specifies the blink rate of the text cursor in milliseconds. The time indicated in the blink rate relates to the length of time the cursor is visible and the time the cursor is invisible (that is, the time it will take to blink the insertion cursor on and off will be two times the blink rate). The cursor will not blink when the blink rate is set to 0 (zero). The value must not be negative.</p>
-<dt><code>XmNcolumns</code></p>
-<dd>Specifies the initial width of the text window as an integer number of characters. The width equals the number of characters specified by this resource multiplied by the width as derived from the specified font. If the em-space value is available, it is used. If not, the width of the numeral &quot;0&quot; is used. If this is not available, the maximum width is used. For proportionate fonts, the actual number of characters that fit on a given line may be greater than the value specified.</p>
-<dt><code>XmNcursorPosition</code></p>
-<dd>Indicates the position in the text where the current insert cursor is to be located. Position is determined by the number of characters from the beginning of the text.</p>
-<dt><code>XmNcursorPositionVisible</code></p>
-<dd>If the text widget has an <code>XmPrintShell</code> as one of its ancestors (that is, the widget was created on a print server connection) then the default value is <code>False</code>; otherwise, it is <code>True</code>.</p>
-<dt><code>XmNdestinationCallback</code></p>
-<dd>Specifies a list of callbacks called when the widget is the destination of a transfer operation. The type of the structure whose address is passed to these callbacks is <code>XmDestinationCallbackStruct</code>. The reason is <code>XmCR_OK</code>.</p>
-<dt><code>XmNeditable</code></p>
-<dd>When set to True, indicates that the user can edit the text string. A false value will prohibit the user from editing the text.</p>
-<dd>When <code>XmNeditable</code> is used on a widget it sets the dropsite to <code>XmDROP_SITE_ACTIVE</code>.</p>
-<dt><code>XmNfocusCallback</code></p>
-<dd>Specifies the list of callbacks called when TextField accepts input focus. The type of the structure whose address is passed to this callback is <code>XmAnyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_FOCUS</code>.</p>
-<dt><code>XmNfontList</code></p>
-<dd>Specifies the font list to be used for TextField. The font list is an obsolete structure, and is retained only for compatibility with earlier releases of Motif. Use the render table (<code>XmNrenderTable</code>) instead of font lists wherever possible. If both are specified, the render table will take precedence. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the font list is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent.</p>
-<dd>TextField searches the font list for the first occurrence of a font set that has an <code>XmFONTLIST_DEFAULT_TAG</code>. If a default element is not found, the first font set in the font list is used. If the list contains no font sets, the first font in the font list will be used. Refer to <code><a href="/docs/linux/man/3-xmfontlist/">XmFontList</a></code>(3) for more information on a font list structure.</p>
-<dt><code>XmNgainPrimaryCallback</code></p>
-<dd>Specifies the list of callbacks that are called when the user invokes an event that causes the text widget to gain ownership of the primary selection. The callback reason for this callback is <code>XmCR_GAIN_PRIMARY</code>.</p>
-<dt><code>XmNlosePrimaryCallback</code></p>
-<dd>Specifies the list of callbacks that are called when the user invokes an event that cause the text widget to lose ownership of the primary selection. The callback reason for this callback is <code>XmCR_LOSE_PRIMARY</code>.</p>
-<dt><code>XmNlosingFocusCallback</code></p>
-<dd>Specifies the list of callbacks that are called before TextField widget loses input focus. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_LOSING_FOCUS</code>.</p>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the distance between the top edge of the widget window and the text, and the bottom edge of the widget window and the text.</p>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the distance between the left edge of the widget window and the text, and the right edge of the widget window and the text.</p>
-<dt><code>XmNmaxLength</code></p>
-<dd>Specifies the maximum length of the text string that can be entered into text from the keyboard. This value must be nonnegative. Strings that are entered using the <code>XmNvalue</code> resource or the <code>XmTextFieldSetString</code> function ignore this resource.</p>
-<dt><code>XmNmodifyVerifyCallback</code></p>
-<dd>Specifies the list of callbacks that is called before text is deleted from or inserted into TextField. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_MODIFYING_TEXT_VALUE</code>. When multiple TextField widgets share the same source, only the widget that initiates the source change will generate the <code>XmNmodifyVerifyCallback</code>.</p>
-<dd>If both <code>XmNmodifyVerifyCallback</code> and <code>XmNmodifyVerifyCallbackWcs</code> are registered callback lists, the procedure(s) in the <code>XmNmodifyVerifyCallback</code> list is always executed first; and the resulting data, which may have been modified, is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callback routines.</p>
-<dt><code>XmNmodifyVerifyCallbackWcs</code></p>
-<dd>Specifies the list of callbacks called before text is deleted from or inserted into Text. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStructWcs</code>. The reason sent by the callback is <code>XmCR_MODIFYING_TEXT_VALUE</code>. When multiple TextField widgets share the same source, only the widget that initiates the source change will generate the <code>XmNmodifyVerifyCallbackWcs</code>.</p>
-<dd>If both <code>XmNmodifyVerifyCallback</code> and <code>XmNmodifyVerifyCallbackWcs</code> are registered callback lists, the procedure(s) in the <code>XmNmodifyVerifyCallback</code> list is always executed first; and the resulting data, which may have been modified, is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callback routines.</p>
-<dt><code>XmNmotionVerifyCallback</code></p>
-<dd>Specifies the list of callbacks that is called before the insert cursor is moved to a new position. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_MOVING_INSERT_CURSOR</code>. It is possible for more than one <code>XmNmotionVerifyCallback</code>s to be generated from a single action.</p>
-<dt><code>XmNpendingDelete</code></p>
-<dd>Indicates that pending delete mode is on when the Boolean is True. Pending deletion is defined as deletion of the selected text when an insertion is made.</p>
-<dt><code>XmNrenderTable</code></p>
-<dd>Specifies the render table to be used in deriving a font set or font for displaying text. If both a render table and a font list are specified, the render table will take precedence. If the value of <code>XmNrenderTable</code> is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the font list is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent.</p>
-<dd>TextField searches the render table for the first occurrence of a rendition that has the tag <code>_MOTIF_DEFAULT_LOCALE</code>. If a default element is not found, the first rendition in the table is used. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the render table structure.</p>
-<dt><code>XmNresizeWidth</code></p>
-<dd>Indicates that the TextField widget will attempt to resize its width to accommodate all the text contained in the widget when Boolean is True.</p>
-<dt><code>XmNselectionArray</code></p>
-<dd>Defines the actions for multiple mouse clicks. Each mouse click performed within some time of the previous mouse click will increment the index into this array and perform the defined action for that index. (This &quot;multi-click&quot; time is specified by the operating environment, and varies among different systems. In general, it is usually set to some fraction of a second.) The possible actions are</p>
+<dt><code>XmNactivateCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user invokes an event that calls the activate() action. The type of the structure whose address is passed to this callback is <code>XmAnyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_ACTIVATE</code>.</dd>
+<dt><code>XmNblinkRate</code></dt>
+<dd>Specifies the blink rate of the text cursor in milliseconds. The time indicated in the blink rate relates to the length of time the cursor is visible and the time the cursor is invisible (that is, the time it will take to blink the insertion cursor on and off will be two times the blink rate). The cursor will not blink when the blink rate is set to 0 (zero). The value must not be negative.</dd>
+<dt><code>XmNcolumns</code></dt>
+<dd>Specifies the initial width of the text window as an integer number of characters. The width equals the number of characters specified by this resource multiplied by the width as derived from the specified font. If the em-space value is available, it is used. If not, the width of the numeral &quot;0&quot; is used. If this is not available, the maximum width is used. For proportionate fonts, the actual number of characters that fit on a given line may be greater than the value specified.</dd>
+<dt><code>XmNcursorPosition</code></dt>
+<dd>Indicates the position in the text where the current insert cursor is to be located. Position is determined by the number of characters from the beginning of the text.</dd>
+<dt><code>XmNcursorPositionVisible</code></dt>
+<dd>If the text widget has an <code>XmPrintShell</code> as one of its ancestors (that is, the widget was created on a print server connection) then the default value is <code>False</code>; otherwise, it is <code>True</code>.</dd>
+<dt><code>XmNdestinationCallback</code></dt>
+<dd>Specifies a list of callbacks called when the widget is the destination of a transfer operation. The type of the structure whose address is passed to these callbacks is <code>XmDestinationCallbackStruct</code>. The reason is <code>XmCR_OK</code>.</dd>
+<dt><code>XmNeditable</code></dt>
+<dd>When set to True, indicates that the user can edit the text string. A false value will prohibit the user from editing the text.</dd>
+<dd>When <code>XmNeditable</code> is used on a widget it sets the dropsite to <code>XmDROP_SITE_ACTIVE</code>.</dd>
+<dt><code>XmNfocusCallback</code></dt>
+<dd>Specifies the list of callbacks called when TextField accepts input focus. The type of the structure whose address is passed to this callback is <code>XmAnyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_FOCUS</code>.</dd>
+<dt><code>XmNfontList</code></dt>
+<dd>Specifies the font list to be used for TextField. The font list is an obsolete structure, and is retained only for compatibility with earlier releases of Motif. Use the render table (<code>XmNrenderTable</code>) instead of font lists wherever possible. If both are specified, the render table will take precedence. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the font list is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent.</dd>
+<dd>TextField searches the font list for the first occurrence of a font set that has an <code>XmFONTLIST_DEFAULT_TAG</code>. If a default element is not found, the first font set in the font list is used. If the list contains no font sets, the first font in the font list will be used. Refer to <code><a href="/docs/linux/man/3-xmfontlist/">XmFontList</a></code>(3) for more information on a font list structure.</dd>
+<dt><code>XmNgainPrimaryCallback</code></dt>
+<dd>Specifies the list of callbacks that are called when the user invokes an event that causes the text widget to gain ownership of the primary selection. The callback reason for this callback is <code>XmCR_GAIN_PRIMARY</code>.</dd>
+<dt><code>XmNlosePrimaryCallback</code></dt>
+<dd>Specifies the list of callbacks that are called when the user invokes an event that cause the text widget to lose ownership of the primary selection. The callback reason for this callback is <code>XmCR_LOSE_PRIMARY</code>.</dd>
+<dt><code>XmNlosingFocusCallback</code></dt>
+<dd>Specifies the list of callbacks that are called before TextField widget loses input focus. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_LOSING_FOCUS</code>.</dd>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the distance between the top edge of the widget window and the text, and the bottom edge of the widget window and the text.</dd>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the distance between the left edge of the widget window and the text, and the right edge of the widget window and the text.</dd>
+<dt><code>XmNmaxLength</code></dt>
+<dd>Specifies the maximum length of the text string that can be entered into text from the keyboard. This value must be nonnegative. Strings that are entered using the <code>XmNvalue</code> resource or the <code>XmTextFieldSetString</code> function ignore this resource.</dd>
+<dt><code>XmNmodifyVerifyCallback</code></dt>
+<dd>Specifies the list of callbacks that is called before text is deleted from or inserted into TextField. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_MODIFYING_TEXT_VALUE</code>. When multiple TextField widgets share the same source, only the widget that initiates the source change will generate the <code>XmNmodifyVerifyCallback</code>.</dd>
+<dd>If both <code>XmNmodifyVerifyCallback</code> and <code>XmNmodifyVerifyCallbackWcs</code> are registered callback lists, the procedure(s) in the <code>XmNmodifyVerifyCallback</code> list is always executed first; and the resulting data, which may have been modified, is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callback routines.</dd>
+<dt><code>XmNmodifyVerifyCallbackWcs</code></dt>
+<dd>Specifies the list of callbacks called before text is deleted from or inserted into Text. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStructWcs</code>. The reason sent by the callback is <code>XmCR_MODIFYING_TEXT_VALUE</code>. When multiple TextField widgets share the same source, only the widget that initiates the source change will generate the <code>XmNmodifyVerifyCallbackWcs</code>.</dd>
+<dd>If both <code>XmNmodifyVerifyCallback</code> and <code>XmNmodifyVerifyCallbackWcs</code> are registered callback lists, the procedure(s) in the <code>XmNmodifyVerifyCallback</code> list is always executed first; and the resulting data, which may have been modified, is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callback routines.</dd>
+<dt><code>XmNmotionVerifyCallback</code></dt>
+<dd>Specifies the list of callbacks that is called before the insert cursor is moved to a new position. The type of the structure whose address is passed to this callback is <code>XmTextVerifyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_MOVING_INSERT_CURSOR</code>. It is possible for more than one <code>XmNmotionVerifyCallback</code>s to be generated from a single action.</dd>
+<dt><code>XmNpendingDelete</code></dt>
+<dd>Indicates that pending delete mode is on when the Boolean is True. Pending deletion is defined as deletion of the selected text when an insertion is made.</dd>
+<dt><code>XmNrenderTable</code></dt>
+<dd>Specifies the render table to be used in deriving a font set or font for displaying text. If both a render table and a font list are specified, the render table will take precedence. If the value of <code>XmNrenderTable</code> is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the font list is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent.</dd>
+<dd>TextField searches the render table for the first occurrence of a rendition that has the tag <code>_MOTIF_DEFAULT_LOCALE</code>. If a default element is not found, the first rendition in the table is used. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the render table structure.</dd>
+<dt><code>XmNresizeWidth</code></dt>
+<dd>Indicates that the TextField widget will attempt to resize its width to accommodate all the text contained in the widget when Boolean is True.</dd>
+<dt><code>XmNselectionArray</code></dt>
+<dd>Defines the actions for multiple mouse clicks. Each mouse click performed within some time of the previous mouse click will increment the index into this array and perform the defined action for that index. (This &quot;multi-click&quot; time is specified by the operating environment, and varies among different systems. In general, it is usually set to some fraction of a second.) The possible actions are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSELECT_POSITION</code></p>
-<dd>Resets the insert cursor position</p>
-<dt><code>XmSELECT_WORD</code></p>
-<dd>Selects a word</p>
-<dt><code>XmSELECT_LINE</code></p>
-<dd>Selects a line of text</dl>
+</dd><dl COMPACT>
+<dt><code>XmSELECT_POSITION</code></dt>
+<dd>Resets the insert cursor position</dd>
+<dt><code>XmSELECT_WORD</code></dt>
+<dd>Selects a word</dd>
+<dt><code>XmSELECT_LINE</code></dt>
+<dd>Selects a line of text</dd></dl>
 </dl>
-<dt><code>XmNselectionArrayCount</code></p>
-<dd>Specifies the number of actions that are defined in the <code>XmNselectionArray</code> resource. The value must not be negative.</p>
-<dt><code>XmNselectThreshold</code></p>
-<dd>Specifies the number of pixels of motion that is required to select the next character when selection is performed using the click-drag mode of selection. The value must not be negative. This resource also specifies whether a drag should be started and the number of pixels to start a drag when <code>Btn2Down</code> and <code>Btn1Down</code> are integrated.</p>
-<dt><code>XmNvalue</code></p>
-<dd>Specifies the string value of the TextField widget as a <code>char*</code> data value. Moves the cursor to position 0 unless a value of <code>XmNcursorPosition</code> was explicitly supplied in the argument list. If <code>XmNvalue</code> and <code>XmNvalueWcs</code> are both defined, the value of <code>XmNvalueWcs</code> supersedes that of <code>XmNvalue</code>. <code>XtGetValues</code> returns a copy of the value of the internal buffer and <code>XtSetValues</code> copies the string values into the internal buffer.</p>
-<dt><code>XmNvalueChangedCallback</code></p>
-<dd>Specifies the list of callbacks that is called after text is deleted from or inserted into TextField. The type of the structure whose address is passed to this callback is <code>XmAnyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_VALUE_CHANGED</code>. The <code>XmNvalueChangedCallback</code> should occur only in pairs with a <code>XmNmodifyVerifyCallback</code>, assuming that the <i>doit</i> flag in the callback structure of the <code>XmNmodifyVerifyCallback</code> is not set to False.</p>
-<dt><code>XmNvalueWcs</code></p>
-<dd>Specifies the string value of the TextField widget as a <code>wchar_t*</code> data value. Moves the cursor to position 0 unless a value of <code>XmNcursorPosition</code> was explicitly supplied in the argument list.</p>
-<dd>This resource cannot be specified in a resource file.</p>
-<dd>If <code>XmNvalue</code> and <code>XmNvalueWcs</code> are both defined, the value of <code>XmNvalueWcs</code> supersedes that of <code>XmNvalue</code>. <code>XtGetValues</code> returns a copy of the value of the internal buffer encoded as a wide character string. <code>XtSetValues</code> copies the value of the wide character string into the internal buffer.</p>
-<dt><code>XmNverifyBell</code></p>
-<dd>Specifies whether a bell will sound when an action is reversed during a verification callback. The default depends on the value of the ancestor VendorShell&#8217;s <code>XmNaudibleWarning</code> resource.</dl>
+<dt><code>XmNselectionArrayCount</code></dt>
+<dd>Specifies the number of actions that are defined in the <code>XmNselectionArray</code> resource. The value must not be negative.</dd>
+<dt><code>XmNselectThreshold</code></dt>
+<dd>Specifies the number of pixels of motion that is required to select the next character when selection is performed using the click-drag mode of selection. The value must not be negative. This resource also specifies whether a drag should be started and the number of pixels to start a drag when <code>Btn2Down</code> and <code>Btn1Down</code> are integrated.</dd>
+<dt><code>XmNvalue</code></dt>
+<dd>Specifies the string value of the TextField widget as a <code>char*</code> data value. Moves the cursor to position 0 unless a value of <code>XmNcursorPosition</code> was explicitly supplied in the argument list. If <code>XmNvalue</code> and <code>XmNvalueWcs</code> are both defined, the value of <code>XmNvalueWcs</code> supersedes that of <code>XmNvalue</code>. <code>XtGetValues</code> returns a copy of the value of the internal buffer and <code>XtSetValues</code> copies the string values into the internal buffer.</dd>
+<dt><code>XmNvalueChangedCallback</code></dt>
+<dd>Specifies the list of callbacks that is called after text is deleted from or inserted into TextField. The type of the structure whose address is passed to this callback is <code>XmAnyCallbackStruct</code>. The reason sent by the callback is <code>XmCR_VALUE_CHANGED</code>. The <code>XmNvalueChangedCallback</code> should occur only in pairs with a <code>XmNmodifyVerifyCallback</code>, assuming that the <i>doit</i> flag in the callback structure of the <code>XmNmodifyVerifyCallback</code> is not set to False.</dd>
+<dt><code>XmNvalueWcs</code></dt>
+<dd>Specifies the string value of the TextField widget as a <code>wchar_t*</code> data value. Moves the cursor to position 0 unless a value of <code>XmNcursorPosition</code> was explicitly supplied in the argument list.</dd>
+<dd>This resource cannot be specified in a resource file.</dd>
+<dd>If <code>XmNvalue</code> and <code>XmNvalueWcs</code> are both defined, the value of <code>XmNvalueWcs</code> supersedes that of <code>XmNvalue</code>. <code>XtGetValues</code> returns a copy of the value of the internal buffer encoded as a wide character string. <code>XtSetValues</code> copies the value of the wide character string into the internal buffer.</dd>
+<dt><code>XmNverifyBell</code></dt>
+<dd>Specifies whether a bell will sound when an action is reversed during a verification callback. The default depends on the value of the ancestor VendorShell&#8217;s <code>XmNaudibleWarning</code> resource.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>TextField widget inherits behavior and resources from the superclasses in the following tables. For a complete description of these resources, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1926,10 +1926,10 @@ description: "XmTextField — The TextField class"
  XEvent <i>* event</i>;
 } XmAnyCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd></dl>
 <p> The TextField widget defines a new callback structure for use with verification callbacks. Note that not all of the fields are relevant for every callback reason. The application must first look at the <i>reason</i> field and use only the structure members that are valid for the particular reason. The values <i>startPos</i>, <i>endPos</i>, and <i>text</i> in the callback structure <code>XmTextVerifyCallbackStruct</code> may be modified upon receiving the callback, and these changes will be reflected as the change made to the source of the TextField widget. (For example, all keystrokes can be converted to spaces or NULL characters when a password is entered into a TextField widget.) The application programmer should not overwrite the <i>text</i> field, but should attach data to that pointer. </p>
 <p> A pointer to the following structure is passed to the callbacks for <code>XmNlosingFocusCallback</code>, <code>XmNmodifyVerifyCallback</code>, and <code>XmNmotionVerifyCallback</code>. </p>
 <pre>typedef struct
@@ -1942,22 +1942,22 @@ description: "XmTextField — The TextField class"
  XmTextBlock <i>text</i>;
 } XmTextVerifyCallbackStruct, *XmTextVerifyPtr;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> the triggered the callback. It can be NULL. For example, changes made to the Text widget programmatically do not have an event that can be passed to the associated callback.</p>
-<dt><i>doit</i></p>
-<dd>Indicates whether the action that invoked the callback will be performed. Setting <i>doit</i> to False negates the action. Note that not all actions may be negated. For example, <code>XmCR_LOSING_FOCUS</code> callbacks may be beyond the control of the widget if they are produced by mouse clicks.</p>
-<dt><i>currInsert</i></p>
-<dd>Indicates the current position of the insert cursor.</p>
-<dt><i>newInsert</i></p>
-<dd>Indicates the position at which the user attempts to position the insert cursor.</p>
-<dt><i>startPos</i></p>
-<dd>Indicates the starting position of the text to modify. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</p>
-<dt><i>endPos</i></p>
-<dd>Indicates the ending position of the text to modify. If no text is replaced or deleted, then the value is the same as <i>startPos</i>. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</p>
-<dt><i>text</i></p>
-<dd>Points to the following structure of type <code>XmTextBlockRec</code>. This structure holds the textual information to be inserted.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> the triggered the callback. It can be NULL. For example, changes made to the Text widget programmatically do not have an event that can be passed to the associated callback.</dd>
+<dt><i>doit</i></dt>
+<dd>Indicates whether the action that invoked the callback will be performed. Setting <i>doit</i> to False negates the action. Note that not all actions may be negated. For example, <code>XmCR_LOSING_FOCUS</code> callbacks may be beyond the control of the widget if they are produced by mouse clicks.</dd>
+<dt><i>currInsert</i></dt>
+<dd>Indicates the current position of the insert cursor.</dd>
+<dt><i>newInsert</i></dt>
+<dd>Indicates the position at which the user attempts to position the insert cursor.</dd>
+<dt><i>startPos</i></dt>
+<dd>Indicates the starting position of the text to modify. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</dd>
+<dt><i>endPos</i></dt>
+<dd>Indicates the ending position of the text to modify. If no text is replaced or deleted, then the value is the same as <i>startPos</i>. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</dd>
+<dt><i>text</i></dt>
+<dd>Points to the following structure of type <code>XmTextBlockRec</code>. This structure holds the textual information to be inserted.</dd></dl>
 <pre>typedef struct
 {
  char *<i>ptr</i>;
@@ -1966,13 +1966,13 @@ description: "XmTextField — The TextField class"
 } XmTextBlockRec, *XmTextBlock;</pre>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><i>ptr</i></p>
-<dd>The text to be inserted. <i>ptr</i> points to a temporary storage space that is reused after the callback is finished. Therefore, if an application needs to save the text to be inserted, it should copy the text into its own data space.</p>
-<dt><i>length</i></p>
-<dd>Specifies the length of the text to be inserted.</p>
-<dt><i>format</i></p>
-<dd>Specifies the format of the text, either <code>XmFMT_8_BIT</code> or <code>XmFMT_16_BIT</code>.</dl>
+</dd><dl COMPACT>
+<dt><i>ptr</i></dt>
+<dd>The text to be inserted. <i>ptr</i> points to a temporary storage space that is reused after the callback is finished. Therefore, if an application needs to save the text to be inserted, it should copy the text into its own data space.</dd>
+<dt><i>length</i></dt>
+<dd>Specifies the length of the text to be inserted.</dd>
+<dt><i>format</i></dt>
+<dd>Specifies the format of the text, either <code>XmFMT_8_BIT</code> or <code>XmFMT_16_BIT</code>.</dd></dl>
 </dl>
 <p> A pointer to the following structure is passed to callbacks for <code>XmNmodifyVerifyCallbackWcs</code>. </p>
 <pre>typedef struct
@@ -1985,22 +1985,22 @@ description: "XmTextField — The TextField class"
  XmWcsTextBlock <i>text</i>;
 } XmTextVerifyCallbackStructWcs, *XmTextVerifyPtrWcs;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL. For example, changes made to the Text widget programmatically do not have an event that can be passed to the associated callback.</p>
-<dt><i>doit</i></p>
-<dd>Indicates whether the action that invoked the callback is performed. Setting <i>doit</i> to False negates the action. Note that not all actions may be negated. For example, <code>XmCR_LOSING_FOCUS</code> callbacks may be beyond the control of the widget if they are produced by mouse clicks.</p>
-<dt><i>currInsert</i></p>
-<dd>Indicates the current position of the insert cursor.</p>
-<dt><i>newInsert</i></p>
-<dd>Indicates the position at which the user attempts to position the insert cursor.</p>
-<dt><i>startPos</i></p>
-<dd>Indicates the starting position of the text to modify. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</p>
-<dt><i>endPos</i></p>
-<dd>Indicates the ending position of the text to modify. If no text is replaced or deleted, the value is the same as <i>startPos</i>. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</p>
-<dt><i>text</i></p>
-<dd>Points to the following structure of type <code>XmTextBlockRecWcs</code>. This structure holds the textual information to be inserted.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL. For example, changes made to the Text widget programmatically do not have an event that can be passed to the associated callback.</dd>
+<dt><i>doit</i></dt>
+<dd>Indicates whether the action that invoked the callback is performed. Setting <i>doit</i> to False negates the action. Note that not all actions may be negated. For example, <code>XmCR_LOSING_FOCUS</code> callbacks may be beyond the control of the widget if they are produced by mouse clicks.</dd>
+<dt><i>currInsert</i></dt>
+<dd>Indicates the current position of the insert cursor.</dd>
+<dt><i>newInsert</i></dt>
+<dd>Indicates the position at which the user attempts to position the insert cursor.</dd>
+<dt><i>startPos</i></dt>
+<dd>Indicates the starting position of the text to modify. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</dd>
+<dt><i>endPos</i></dt>
+<dd>Indicates the ending position of the text to modify. If no text is replaced or deleted, the value is the same as <i>startPos</i>. If the callback is not a modify verification callback, this value is the same as <i>currInsert</i>.</dd>
+<dt><i>text</i></dt>
+<dd>Points to the following structure of type <code>XmTextBlockRecWcs</code>. This structure holds the textual information to be inserted.</dd></dl>
 <pre>typedef struct
 {
  wchar_t *<i>wcsptr</i>;
@@ -2008,11 +2008,11 @@ description: "XmTextField — The TextField class"
 } XmTextBlockRecWcs, *XmTextBlockWcs;</pre>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><i>wcsptr</i></p>
-<dd>Points to the wide character text to be inserted</p>
-<dt><i>length</i></p>
-<dd>Specifies the number of characters to be inserted</dl>
+</dd><dl COMPACT>
+<dt><i>wcsptr</i></dt>
+<dd>Points to the wide character text to be inserted</dd>
+<dt><i>length</i></dt>
+<dd>Specifies the number of characters to be inserted</dd></dl>
 </dl>
 <p> The following table describes the reasons for which the individual verification callback structure fields are valid. Note that the <i>event</i> field will never be valid for <code>XmCR_MOVING_INSERT_CURSOR</code>. </p>
 <table BORDER>
@@ -2087,368 +2087,368 @@ description: "XmTextField — The TextField class"
  Time <i>time</i>;
 } XmDestinationCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</p>
-<dt><i>selection</i></p>
-<dd>Indicates the selection for which data transfer is being requested. Possible values are <code>CLIPBOARD</code>, <code>PRIMARY</code>, <code>SECONDARY</code>, and <code>_MOTIF_DROP</code>.</p>
-<dt><i>operation</i></p>
-<dd>Indicates the type of transfer operation requested.</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</dd>
+<dt><i>selection</i></dt>
+<dd>Indicates the selection for which data transfer is being requested. Possible values are <code>CLIPBOARD</code>, <code>PRIMARY</code>, <code>SECONDARY</code>, and <code>_MOTIF_DROP</code>.</dd>
+<dt><i>operation</i></dt>
+<dd>Indicates the type of transfer operation requested.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>When the selection is <code>PRIMARY</code> or <code>SECONDARY</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, and <code>XmLINK</code>.</p>
-<dt> &bull;</p>
-<dd>When the selection is <code>CLIPBOARD</code>, possible values are <code>XmCOPY</code> and <code>XmLINK</code>.</p>
-<dt> &bull;</p>
-<dd>When the selection is <code>_MOTIF_DROP</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, <code>XmLINK</code>, and <code>XmOTHER</code>. A value of <code>XmOTHER</code> means that the callback procedure must get further information from the <code>XmDropProcCallbackStruct</code> in the <i>destination_data</i> member.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>When the selection is <code>PRIMARY</code> or <code>SECONDARY</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, and <code>XmLINK</code>.</dd>
+<dt> &bull;</dt>
+<dd>When the selection is <code>CLIPBOARD</code>, possible values are <code>XmCOPY</code> and <code>XmLINK</code>.</dd>
+<dt> &bull;</dt>
+<dd>When the selection is <code>_MOTIF_DROP</code>, possible values are <code>XmMOVE</code>, <code>XmCOPY</code>, <code>XmLINK</code>, and <code>XmOTHER</code>. A value of <code>XmOTHER</code> means that the callback procedure must get further information from the <code>XmDropProcCallbackStruct</code> in the <i>destination_data</i> member.</dd></dl>
 </dl>
-<dt><i>flags</i></p>
-<dd>Indicates whether or not the destination widget is also the source of the data to be transferred. Following are the possible values:</p>
+<dt><i>flags</i></dt>
+<dd>Indicates whether or not the destination widget is also the source of the data to be transferred. Following are the possible values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmCONVERTING_NONE</code></p>
-<dd>The destination widget is not the source of the data to be transferred.</p>
-<dt><code>XmCONVERTING_SAME</code></p>
-<dd>The destination widget is the source of the data to be transferred.</dl>
+</dd><dl COMPACT>
+<dt><code>XmCONVERTING_NONE</code></dt>
+<dd>The destination widget is not the source of the data to be transferred.</dd>
+<dt><code>XmCONVERTING_SAME</code></dt>
+<dd>The destination widget is the source of the data to be transferred.</dd></dl>
 </dl>
-<dt><code>transfer_id</code></p>
-<dd>Serves as a unique ID to identify the transfer transaction.</p>
-<dt><i>destination_data</i></p>
-<dd>Contains information about the destination. When the selection is <code>_MOTIF_DROP</code>, the callback procedures are called by the drop site&#8217;s <code>XmNdropProc</code>, and <i>destination_data</i> is a pointer to the <code>XmDropProcCallbackStruct</code> passed to the <code>XmNdropProc</code> procedure. When the selection is <code>SECONDARY</code>, <i>destination_data</i> is an Atom representing a target recommmended by the selection owner for use in converting the selection. Otherwise, <i>destination_data</i> is NULL.</p>
-<dt><code>location_data</code></p>
-<dd>Contains information about the location where data is to be transferred. The value is always NULL when the selection is <code>CLIPBOARD</code>. If the value is NULL, the data is to be inserted at the widget&#8217;s cursor position. Otherwise, the value is a pointer to an <code>XPoint</code> structure containing the x and y coordinates at the location where the data is to be transferred. Once <code>XmTransferDone</code> procedures start to be called, <code>location_data</code> will no longer be stable.</p>
-<dt><i>time</i></p>
-<dd>Indicates the time when the transfer operation began.</dl>
+<dt><code>transfer_id</code></dt>
+<dd>Serves as a unique ID to identify the transfer transaction.</dd>
+<dt><i>destination_data</i></dt>
+<dd>Contains information about the destination. When the selection is <code>_MOTIF_DROP</code>, the callback procedures are called by the drop site&#8217;s <code>XmNdropProc</code>, and <i>destination_data</i> is a pointer to the <code>XmDropProcCallbackStruct</code> passed to the <code>XmNdropProc</code> procedure. When the selection is <code>SECONDARY</code>, <i>destination_data</i> is an Atom representing a target recommmended by the selection owner for use in converting the selection. Otherwise, <i>destination_data</i> is NULL.</dd>
+<dt><code>location_data</code></dt>
+<dd>Contains information about the location where data is to be transferred. The value is always NULL when the selection is <code>CLIPBOARD</code>. If the value is NULL, the data is to be inserted at the widget&#8217;s cursor position. Otherwise, the value is a pointer to an <code>XPoint</code> structure containing the x and y coordinates at the location where the data is to be transferred. Once <code>XmTransferDone</code> procedures start to be called, <code>location_data</code> will no longer be stable.</dd>
+<dt><i>time</i></dt>
+<dd>Indicates the time when the transfer operation began.</dd></dl>
 <h3>Translations</h3>
 <p>The <code>XmTextField</code> translations are described in the following list. The actions represent the effective behavior of the associated events, and they may differ in a right-to-left language environment. </p>
 <p> The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>&asymp;c s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</p>
-<dd>extend-start()</p>
-<dt><code>c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</p>
-<dd>move-destination()</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</p>
-<dd>grab-focus()</p>
-<dt><code>&asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Motion&gt;</code>:</p>
-<dd>extend-adjust()</p>
-<dt><code>&asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</p>
-<dd>extend-end()</p>
-<dt><code>&lt;Btn2Down&gt;</code>:</p>
-<dd>process-bdrag()</p>
-<dt><code>m &asymp;a</code> <code>&lt;Btn2Motion&gt;</code>:</p>
-<dd>secondary-adjust()</p>
-<dt><code>&asymp;m a</code> <code>&lt;Btn2Motion&gt;</code>:</p>
-<dd>secondary-adjust()</p>
-<dt><code>s c &lt;Btn2Up&gt;</code>:</p>
-<dd>link-to()</p>
-<dt><code>&asymp;s</code> <code>&lt;Btn2Up&gt;</code>:</p>
-<dd>copy-to()</p>
-<dt><code>&asymp;c</code> <code>&lt;Btn2Up&gt;</code>:</p>
-<dd>move-to()</p>
-<dt><code>:m</code> <code>&lt;Key&gt;</code><code>&lt;osfPrimaryPaste&gt;</code>:</p>
-<dd>cut-primary()</p>
-<dt><code>:a</code> <code>&lt;Key&gt;</code><code>&lt;osfPrimaryPaste&gt;</code>:</p>
-<dd>cut-primary()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPrimaryPaste&gt;</code>:</p>
-<dd>copy-primary()</p>
-<dt><code>:m</code> <code>&lt;Key&gt;</code><code>&lt;osfCut&gt;</code>:</p>
-<dd>cut-primary()</p>
-<dt><code>:a</code> <code>&lt;Key&gt;</code><code>&lt;osfCut&gt;</code>:</p>
-<dd>cut-primary()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCut&gt;</code>:</p>
-<dd>cut-clipboard()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPaste&gt;</code>:</p>
-<dd>paste-clipboard()</p>
-<dt><code>:m</code> <code>&lt;Key&gt;</code><code>&lt;osfCopy&gt;</code>:</p>
-<dd>copy-primary()</p>
-<dt><code>:a</code> <code>&lt;Key&gt;</code><code>&lt;osfCopy&gt;</code>:</p>
-<dd>copy-primary()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCopy&gt;</code>:</p>
-<dd>copy-clipboard()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</p>
-<dd>beginning-of-line(<code>extend</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</p>
-<dd>beginning-of-line()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</p>
-<dd>end-of-line(<code>extend</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</p>
-<dd>end-of-line()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</p>
-<dd>page-left(<code>extend</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</p>
-<dd>page-left()</p>
-<dt><code>:s c</code><code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</p>
-<dd>page-left(<code>extend</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</p>
-<dd>page-left()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</p>
-<dd>page-right(<code>extend</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</p>
-<dd>page-right()</p>
-<dt><code>s c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</p>
-<dd>page-right(<code>extend</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</p>
-<dd>page-right()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfClear&gt;</code>:</p>
-<dd>clear-selection()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBackSpace&gt;</code>:</p>
-<dd>delete-previous-character()</p>
-<dt><code>:s m</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</p>
-<dd>cut-primary()</p>
-<dt><code>:s a</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</p>
-<dd>cut-primary()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</p>
-<dd>cut-clipboard()</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</p>
-<dd>delete-to-end-of-line()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</p>
-<dd>delete-next-character()</p>
-<dt><code>:c m</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</p>
-<dd>copy-primary()</p>
-<dt><code>:c a</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</p>
-<dd>copy-primary()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</p>
-<dd>paste-clipboard()</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</p>
-<dd>copy-clipboard()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</p>
-<dd>toggle-overstrike()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>key-select()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>set-anchor()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelectAll&gt;</code>:</p>
-<dd>select-all()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDeselectAll&gt;</code>:</p>
-<dd>deselect-all()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>activate()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfAddMode&gt;</code>:</p>
-<dd>toggle-add-mode()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Help()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>process-cancel()</p>
-<dt><code>:s c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>backward-word(<code>extend</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>backward-word()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>key-select(<code>left</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>backward-character()</p>
-<dt><code>:s c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>forward-word(<code>extend</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>forward-word()</p>
-<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>key-select(<code>right</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>forward-character()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>traverse-prev()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>traverse-next()</p>
-<dt><code>c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>slash</code>:</p>
-<dd>select-all()</p>
-<dt><code>c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>backslash</code>:</p>
-<dd>deselect-all()</p>
-<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>prev-tab-group()</p>
-<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>next-tab-group()</p>
-<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>activate()</p>
-<dt><code>c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>set-anchor()</p>
-<dt><code>c s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>key-select()</p>
-<dt><code>s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</p>
-<dd>self-insert()</p>
-<dt><code>&lt;Key&gt;</code>:</p>
-<dd>self-insert()</dl>
+<dt><code>&asymp;c s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>extend-start()</dd>
+<dt><code>c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>move-destination()</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>grab-focus()</dd>
+<dt><code>&asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Motion&gt;</code>:</dt>
+<dd>extend-adjust()</dd>
+<dt><code>&asymp;c &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>extend-end()</dd>
+<dt><code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>process-bdrag()</dd>
+<dt><code>m &asymp;a</code> <code>&lt;Btn2Motion&gt;</code>:</dt>
+<dd>secondary-adjust()</dd>
+<dt><code>&asymp;m a</code> <code>&lt;Btn2Motion&gt;</code>:</dt>
+<dd>secondary-adjust()</dd>
+<dt><code>s c &lt;Btn2Up&gt;</code>:</dt>
+<dd>link-to()</dd>
+<dt><code>&asymp;s</code> <code>&lt;Btn2Up&gt;</code>:</dt>
+<dd>copy-to()</dd>
+<dt><code>&asymp;c</code> <code>&lt;Btn2Up&gt;</code>:</dt>
+<dd>move-to()</dd>
+<dt><code>:m</code> <code>&lt;Key&gt;</code><code>&lt;osfPrimaryPaste&gt;</code>:</dt>
+<dd>cut-primary()</dd>
+<dt><code>:a</code> <code>&lt;Key&gt;</code><code>&lt;osfPrimaryPaste&gt;</code>:</dt>
+<dd>cut-primary()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPrimaryPaste&gt;</code>:</dt>
+<dd>copy-primary()</dd>
+<dt><code>:m</code> <code>&lt;Key&gt;</code><code>&lt;osfCut&gt;</code>:</dt>
+<dd>cut-primary()</dd>
+<dt><code>:a</code> <code>&lt;Key&gt;</code><code>&lt;osfCut&gt;</code>:</dt>
+<dd>cut-primary()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCut&gt;</code>:</dt>
+<dd>cut-clipboard()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPaste&gt;</code>:</dt>
+<dd>paste-clipboard()</dd>
+<dt><code>:m</code> <code>&lt;Key&gt;</code><code>&lt;osfCopy&gt;</code>:</dt>
+<dd>copy-primary()</dd>
+<dt><code>:a</code> <code>&lt;Key&gt;</code><code>&lt;osfCopy&gt;</code>:</dt>
+<dd>copy-primary()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCopy&gt;</code>:</dt>
+<dd>copy-clipboard()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</dt>
+<dd>beginning-of-line(<code>extend</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</dt>
+<dd>beginning-of-line()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</dt>
+<dd>end-of-line(<code>extend</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</dt>
+<dd>end-of-line()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</dt>
+<dd>page-left(<code>extend</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</dt>
+<dd>page-left()</dd>
+<dt><code>:s c</code><code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</dt>
+<dd>page-left(<code>extend</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</dt>
+<dd>page-left()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</dt>
+<dd>page-right(<code>extend</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</dt>
+<dd>page-right()</dd>
+<dt><code>s c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</dt>
+<dd>page-right(<code>extend</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</dt>
+<dd>page-right()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfClear&gt;</code>:</dt>
+<dd>clear-selection()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBackSpace&gt;</code>:</dt>
+<dd>delete-previous-character()</dd>
+<dt><code>:s m</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</dt>
+<dd>cut-primary()</dd>
+<dt><code>:s a</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</dt>
+<dd>cut-primary()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</dt>
+<dd>cut-clipboard()</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</dt>
+<dd>delete-to-end-of-line()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDelete&gt;</code>:</dt>
+<dd>delete-next-character()</dd>
+<dt><code>:c m</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</dt>
+<dd>copy-primary()</dd>
+<dt><code>:c a</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</dt>
+<dd>copy-primary()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</dt>
+<dd>paste-clipboard()</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</dt>
+<dd>copy-clipboard()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfInsert&gt;</code>:</dt>
+<dd>toggle-overstrike()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>key-select()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>set-anchor()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelectAll&gt;</code>:</dt>
+<dd>select-all()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDeselectAll&gt;</code>:</dt>
+<dd>deselect-all()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>activate()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfAddMode&gt;</code>:</dt>
+<dd>toggle-add-mode()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Help()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>process-cancel()</dd>
+<dt><code>:s c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>backward-word(<code>extend</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>backward-word()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>key-select(<code>left</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>backward-character()</dd>
+<dt><code>:s c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>forward-word(<code>extend</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>forward-word()</dd>
+<dt><code>:s</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>key-select(<code>right</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>forward-character()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>traverse-prev()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>traverse-next()</dd>
+<dt><code>c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>slash</code>:</dt>
+<dd>select-all()</dd>
+<dt><code>c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>backslash</code>:</dt>
+<dd>deselect-all()</dd>
+<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>prev-tab-group()</dd>
+<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>next-tab-group()</dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>activate()</dd>
+<dt><code>c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>set-anchor()</dd>
+<dt><code>c s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>key-select()</dd>
+<dt><code>s &asymp;c &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd>self-insert()</dd>
+<dt><code>&lt;Key&gt;</code>:</dt>
+<dd>self-insert()</dd></dl>
 <p> The TextField button event translations are modified when Display&#8217;s <code>XmNenableBtn1Transfer</code> resource does not have a value of <code>XmOFF</code> (in other words, it is either <code>XmBUTTON2_TRANSFER</code> or <code>XmBUTTON2_ADJUST</code>). This option allows the actions for selection and transfer to be integrated on <code>&lt;Btn1&gt;</code>. The actions for <code>&lt;Btn1&gt;</code> that are defined above still apply when the <code>&lt;Btn1&gt;</code> event occurs over text that is not selected. The following actions apply when the <code>&lt;Btn1&gt;</code> event occurs over text that is selected:</p>
 <dl COMPACT>
-<dt><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>process-bdrag().</p>
-<dt><code>&lt;Shift&gt;</code><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>process-bdrag().</p>
-<dt><code>&lt;Btn1Down&gt;</code><code>&lt;Shift&gt;</code><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>grab-focus(), <code>extend-end</code>.</p>
-<dt><code>&lt;Shift&gt;</code><code>&lt;Btn1Down&gt;</code><code>&lt;Shift&gt;</code><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>extend-start(), extend-end().</p>
-<dt><code>&lt;Ctrl&gt;</code><code>&lt;Btn1Down&gt;</code><code>&lt;Shift&gt;</code><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>move-destination().</p>
-<dt><code>&lt;Ctrl&gt;</code><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>process-bdrag().</dl>
+<dt><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>process-bdrag().</dd>
+<dt><code>&lt;Shift&gt;</code><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>process-bdrag().</dd>
+<dt><code>&lt;Btn1Down&gt;</code><code>&lt;Shift&gt;</code><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>grab-focus(), <code>extend-end</code>.</dd>
+<dt><code>&lt;Shift&gt;</code><code>&lt;Btn1Down&gt;</code><code>&lt;Shift&gt;</code><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>extend-start(), extend-end().</dd>
+<dt><code>&lt;Ctrl&gt;</code><code>&lt;Btn1Down&gt;</code><code>&lt;Shift&gt;</code><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>move-destination().</dd>
+<dt><code>&lt;Ctrl&gt;</code><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>process-bdrag().</dd></dl>
 <p> When Display&#8217;s <code>XmNenableBtn1Transfer</code> resource has a value of <code>XmBUTTON2_ADJUST</code>, the following actions apply:</p>
 <dl COMPACT>
-<dt><code>&lt;Btn2Down&gt;</code>:</p>
-<dd>extend-start().</p>
-<dt><code>&lt;Btn2Motion&gt;</code>:</p>
-<dd>extend-adjust().</p>
-<dt><code>&lt;Btn2Up&gt;</code>:</p>
-<dd>extend-end().</dl>
+<dt><code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>extend-start().</dd>
+<dt><code>&lt;Btn2Motion&gt;</code>:</dt>
+<dd>extend-adjust().</dd>
+<dt><code>&lt;Btn2Up&gt;</code>:</dt>
+<dd>extend-end().</dd></dl>
 <h3>Action Routines</h3>
 <p>The <code>XmTextField</code> action routines are</p>
 <dl COMPACT>
-<dt>activate():</p>
-<dd>Calls the callbacks for <code>XmNactivateCallback</code>. If the parent is a manager, passes the event to the parent.</p>
-<dt>backward-character(<code>extend</code>):</p>
-<dd>Moves the insertion cursor one character to the left. This action may have different behavior in a right-to-left language environment.</p>
-<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</p>
-<dd>The backward-character() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the backward-character() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>backward-word(<code>extend</code>):</p>
-<dd>If this action is called with no argument, moves the insertion cursor to the first non-whitespace character after the first whitespace character to the left or after the beginning of the line. If the insertion cursor is already at the beginning of a word, moves the insertion cursor to the beginning of the previous word. This action may have different behavior in a locale other than the C locale.</p>
-<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</p>
-<dd>The backward-word() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the backward-word() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>beginning-of-line(<code>extend</code>):</p>
-<dd>If this action is called with no argument, moves the insertion cursor to the beginning of the line.</p>
-<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</p>
-<dd>The beginning-of-line() action produces calls to the <code>XmNmotionVerifyCallback</code> with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the beginning-of-line() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>clear-selection():</p>
-<dd>Clears the current selection by replacing each character except <code>&lt;Return&gt;</code> with a <code>&lt;space&gt;</code> character.</p>
-<dd>The clear-selection() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code> and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</p>
-<dt>copy-clipboard():</p>
-<dd>If this widget owns the primary selection, this action copies the selection to the clipboard. This action calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>CLIPBOARD</code> selection.</p>
-<dt>copy-primary():</p>
-<dd>Copies the primary selection to just before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmCOPY</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection.</p>
-<dd>In addition, the copy-primary() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The copy-primary() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>copy-to():</p>
-<dd>If a secondary selection exists, this action copies the secondary selection to the insertion position of the destination component. If the primary selection is in the destination widget, it will be deselected. Otherwise, there is no effect on the primary selection.</p>
-<dd>This action calls the destination&#8217;s <code>XmNdestinationCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>XmCOPY</code> operation. The destination&#8217;s <code>XmNdestinationCallback</code> procedures or the destination component itself invokes the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>SECONDARY</code> selection.</p>
-<dd>If no secondary selection exists, this action copies the primary selection to the pointer position. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmCOPY</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection.</p>
-<dd>In addition, the copy-to() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If there is no secondary selection, the copy-to() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>cut-clipboard():</p>
-<dd>If this widget owns the primary selection, this action cuts the selection to the clipboard. This action calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>CLIPBOARD</code> selection. If the transfer is successful, this action then calls the <code>XmNconvertCallback</code> procedures for the <code>CLIPBOARD</code> selection and the <code>DELETE</code> target.</p>
-<dd>In addition, the cut-clipboard() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</p>
-<dt>cut-primary():</p>
-<dd>Cuts the primary selection and pastes it just before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmMOVE</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection. If the transfer is successful, this action then calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>DELETE</code> target.</p>
-<dd>In addition, the cut-primary() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>, the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</p>
-<dt>delete-next-character():</p>
-<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the character following the insertion cursor. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the character following the insertion cursor. This may impact the selection.</p>
-<dd>The delete-next-character() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</p>
-<dt>delete-next-word():</p>
-<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next space, tab or end-of-line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next space, tab or end-of-line character. This may impact the selection. This action may have different behavior in a locale other than the C locale.</p>
-<dd>The delete-next-word() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</p>
-<dt>delete-previous-character():</p>
-<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the character of text immediately preceding the insertion cursor. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the character of text immediately preceding the insertion cursor. This may impact the selection.</p>
-<dd>The delete-previous-character() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>delete-previous-word():</p>
-<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the next space, tab or beginning-of-line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the next space, tab or beginning-of-line character. This may impact the selection. This action may have different behavior in a locale other than the C locale.</p>
-<dd>The delete-previous-word() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>delete-selection():</p>
-<dd>Deletes the current selection.</p>
-<dd>The delete-selection() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>delete-to-end-of-line():</p>
-<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next end of line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next end of line character. This may impact the selection.</p>
-<dd>The delete-to-end-of-line() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</p>
-<dt>delete-to-start-of-line():</p>
-<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the previous beginning-of-line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the previous beginning-of-line character. This may impact the selection.</p>
-<dd>The delete-to-start-of-line() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>deselect-all():</p>
-<dd>Deselects the current selection.</p>
-<dd>The deselect-all() action produces no callbacks.</p>
-<dt>end-of-line(<code>extend</code>):</p>
-<dd>If this action is called with no argument, moves the insertion cursor to the end of the line. If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</p>
-<dd>The end-of-line() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the end-of-line() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>extend-adjust():</p>
-<dd>Selects text from the anchor to the pointer position and deselects text outside that range.</p>
-<dd>The extend-adjust() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The extend-adjust() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>extend-end():</p>
-<dd>Moves the insertion cursor to the position of the pointer. The extend-end() action is used to commit the selection. After this action has been done, process-cancel() will no longer cancel the selection.</p>
-<dd>The extend-end() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The extend-end() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>extend-start():</p>
-<dd>Adjusts the anchor using the balance-beam method. Selects text from the anchor to the pointer position and deselects text outside that range.</p>
-<dd>The extend-start() action can produce no callbacks, however, it may produce calls to the <code>XmNgainPrimaryCallback</code> and <code>XmNmotionVerifyCallback</code> procedures. See callback description for more information.</p>
-<dt>forward-character(<code>extend</code>):</p>
-<dd>Moves the insertion cursor one character to the right. This action may have different behavior in a right-to-left language environment.</p>
-<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</p>
-<dd>The forward-character() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the forward-character() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>forward-word(<code>extend</code>):</p>
-<dd>If this action is called with no argument, moves the insertion cursor to the first whitespace character or end-of-line following the next non-whitespace character. If the insertion cursor is already at the end of a word, moves the insertion cursor to the end of the next word. This action may have different behavior in a locale other than the C locale.</p>
-<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</p>
-<dd>The forward-word() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the forward-word() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>grab-focus():</p>
-<dd>This key binding performs the action defined in the <code>XmNselectionArray</code>, depending on the number of multiple mouse clicks. The default selection array ordering is one click to move the insertion cursor to the pointer position, two clicks to select a word, and three clicks to select a line of text. A single click also deselects any selected text and sets the anchor at the pointer position. This action may have different behavior in a locale other than the C locale.</p>
-<dd>The grab-focus() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>Help():</p>
-<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt>key-select(<code>right|left</code>):</p>
-<dd>If called with an argument of <i>right</i>, moves the insertion cursor one character to the right and extends the current selection. If called with an argument of <i>left</i>, moves the insertion cursor one character to the left and extends the current selection. If called with no argument, extends the current selection.</p>
-<dd>Note that after a <code>key-select</code> action, the selection will still begin at the original anchor, and will extend to the position indicated in the action call. If this new position is on the opposite side of the selection anchor from the previous selection boundary, the original selection will be deselected.</p>
-<dd>The key-select() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The key-select() action may also produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</p>
-<dt>link-primary():</p>
-<dd>Places a link to the primary selection just before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmLINK</code> operation. The TextField widget itself performs no transfers; the <code>XmNdestinationCallback</code> procedures are responsible for inserting the link to the primary selection and for taking any related actions.</p>
-<dt>link-to():</p>
-<dd>If a secondary selection exists, this action places a link to the secondary selection at the insertion position of the destination component. This action calls the destination&#8217;s <code>XmNdestinationCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>XmLINK</code> operation.</p>
-<dd>If no secondary selection exists, this action places a link to the primary selection at the pointer position. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmLINK</code> operation.</p>
-<dd>The TextField widget itself performs no transfers; the <code>XmNdestinationCallback</code> procedures are responsible for inserting the link to the primary or secondary selection and for taking any related actions.</p>
-<dt>move-destination():</p>
-<dd>Moves the insertion cursor to the pointer position without changing any existing current selection. If there is a current selection, sets the widget as the destination widget. This also moves the widget focus to match the insertion cursor.</p>
-<dd>The move-destination() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>move-to():</p>
-<dd>If a secondary selection exists, this action moves the secondary selection to the insertion position of the destination component. If the secondary selection is in the destination widget, and the secondary selection and the primary selection overlap, the result is undefined. This action calls the destination&#8217;s <code>XmNdestinationCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>XmCOPY</code> operation. The destination&#8217;s <code>XmNdestinationCallback</code> procedures or the destination component itself invokes the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>SECONDARY</code> selection. If the transfer is successful, this action then calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>DELETE</code> target.</p>
-<dd>If no secondary selection exists, this action moves the primary selection to the pointer position. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmMOVE</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection. If the transfer is successful, this action then calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>DELETE</code> target.</p>
-<dd>In addition, the move-to() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. This action may also produce calls to the <code>XmNgainPrimaryCallback</code> procedures.</p>
-<dt>next-tab-group():</p>
-<dd>Traverses to the next tab group.</p>
-<dd>The next-tab-group() action produces no callbacks, unless it results in the widget losing focus, in which case, the <code>XmNlosingFocusCallback</code> procedures are called with reason value <code>XmCR_LOSING_FOCUS</code>.</p>
-<dt>page-left():</p>
-<dd>Scrolls the viewing window left one page of text.</p>
-<dd>The page-left() action produces no callbacks.</p>
-<dt>page-right():</p>
-<dd>Scrolls the viewing window right one page of text.</p>
-<dd>The page-right() action produces no callbacks.</p>
-<dt>paste-clipboard():</p>
-<dd>Pastes the contents of the clipboard before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>CLIPBOARD</code> selection and the <code>XmCOPY</code> operation.</p>
-<dd>The paste-clipboard() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>prev-tab-group():</p>
-<dd>Traverses to the previous tab group.</p>
-<dd>The prev-tab-group() action produces no callbacks, unless it results in the widget losing focus, in which case, the <code>XmNlosingFocusCallback</code> procedures are called with reason value <code>XmCR_LOSING_FOCUS</code>.</p>
-<dt>process-bdrag()</p>
-<dd>If the pointer is within the selection, this action starts a drag operation for the selection. This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>_MOTIF_DROP</code> selection.</p>
-<dd>If no selection exists or the pointer is outside the selection, this action prepares to start a secondary selection at the pointer position.</p>
-<dt>process-cancel():</p>
-<dd>Cancels the current extend-adjust(), secondary-adjust() or process-bdrag() operation and leaves the selection state as it was before the operation; otherwise, and if the parent is a manager, it passes the event to the parent.</p>
-<dt>secondary-adjust():</p>
-<dd>Extends the secondary selection to the pointer position.</p>
-<dd>The secondary-adjust() action produces no callbacks.</p>
-<dt>secondary-start():</p>
-<dd>Marks the beginning of a secondary selection.</p>
-<dd>The secondary-start() action produces no callbacks.</p>
-<dt>select-all():</p>
-<dd>Selects all text.</p>
-<dd>The select-all() action can produce no callbacks, however, it may produce calls to the <code>XmNgainPrimaryCallback</code> and <code>XmNmotionVerifyCallback</code> procedures. See callback description for more information.</p>
-<dt>self-insert():</p>
-<dd>If <code>XmNpendingDelete</code> is True and the cursor is not disjoint from the current selection, deletes the entire selection. Inserts the character associated with the key pressed before the insertion cursor.</p>
-<dd>The self-insert() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</p>
-<dt>set-anchor():</p>
-<dd>Resets the anchor point for extended selections. Resets the destination of secondary selection actions.</p>
-<dd>The set-anchor() action produces no callbacks.</p>
-<dt>toggle-add-mode():</p>
-<dd>Toggles the state of Add Mode.</p>
-<dd>The toggle-add-mode() action produces no callbacks.</p>
-<dt>toggle-overstrike():</p>
-<dd>Toggles the state of the text insertion mode. By default, characters typed into the TextField widget are inserted before the position of the insertion cursor. In overstrike mode, characters entered into the TextField widget replace the characters that directly follow the insertion cursor. In overstrike mode, when the end of a line is reached, characters are appended to the end of the line.</p>
-<dd>The following traversal actions generate no callbacks unless they result in the loss of focus by the widget in question, as when <code>XmNnavigationType</code> is <code>XmNONE</code>. In this case, they produce calls to the <code>XmNlosingFocusCallback</code> procedures, with reason value <code>XmCR_FOCUS_MOVED</code>.</p>
-<dt>traverse-home():</p>
-<dd>Traverses to the first widget in the tab group.</p>
-<dt>traverse-next():</p>
-<dd>Traverses to the next widget in the tab group.</p>
-<dt>traverse-prev():</p>
-<dd>Traverses to the previous widget in the tab group.</dl>
+<dt>activate():</dt>
+<dd>Calls the callbacks for <code>XmNactivateCallback</code>. If the parent is a manager, passes the event to the parent.</dd>
+<dt>backward-character(<code>extend</code>):</dt>
+<dd>Moves the insertion cursor one character to the left. This action may have different behavior in a right-to-left language environment.</dd>
+<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</dd>
+<dd>The backward-character() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the backward-character() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>backward-word(<code>extend</code>):</dt>
+<dd>If this action is called with no argument, moves the insertion cursor to the first non-whitespace character after the first whitespace character to the left or after the beginning of the line. If the insertion cursor is already at the beginning of a word, moves the insertion cursor to the beginning of the previous word. This action may have different behavior in a locale other than the C locale.</dd>
+<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</dd>
+<dd>The backward-word() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the backward-word() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>beginning-of-line(<code>extend</code>):</dt>
+<dd>If this action is called with no argument, moves the insertion cursor to the beginning of the line.</dd>
+<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</dd>
+<dd>The beginning-of-line() action produces calls to the <code>XmNmotionVerifyCallback</code> with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the beginning-of-line() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>clear-selection():</dt>
+<dd>Clears the current selection by replacing each character except <code>&lt;Return&gt;</code> with a <code>&lt;space&gt;</code> character.</dd>
+<dd>The clear-selection() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code> and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</dd>
+<dt>copy-clipboard():</dt>
+<dd>If this widget owns the primary selection, this action copies the selection to the clipboard. This action calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>CLIPBOARD</code> selection.</dd>
+<dt>copy-primary():</dt>
+<dd>Copies the primary selection to just before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmCOPY</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection.</dd>
+<dd>In addition, the copy-primary() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The copy-primary() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>copy-to():</dt>
+<dd>If a secondary selection exists, this action copies the secondary selection to the insertion position of the destination component. If the primary selection is in the destination widget, it will be deselected. Otherwise, there is no effect on the primary selection.</dd>
+<dd>This action calls the destination&#8217;s <code>XmNdestinationCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>XmCOPY</code> operation. The destination&#8217;s <code>XmNdestinationCallback</code> procedures or the destination component itself invokes the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>SECONDARY</code> selection.</dd>
+<dd>If no secondary selection exists, this action copies the primary selection to the pointer position. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmCOPY</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection.</dd>
+<dd>In addition, the copy-to() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If there is no secondary selection, the copy-to() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>cut-clipboard():</dt>
+<dd>If this widget owns the primary selection, this action cuts the selection to the clipboard. This action calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>CLIPBOARD</code> selection. If the transfer is successful, this action then calls the <code>XmNconvertCallback</code> procedures for the <code>CLIPBOARD</code> selection and the <code>DELETE</code> target.</dd>
+<dd>In addition, the cut-clipboard() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</dd>
+<dt>cut-primary():</dt>
+<dd>Cuts the primary selection and pastes it just before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmMOVE</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection. If the transfer is successful, this action then calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>DELETE</code> target.</dd>
+<dd>In addition, the cut-primary() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>, the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</dd>
+<dt>delete-next-character():</dt>
+<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the character following the insertion cursor. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the character following the insertion cursor. This may impact the selection.</dd>
+<dd>The delete-next-character() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</dd>
+<dt>delete-next-word():</dt>
+<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next space, tab or end-of-line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next space, tab or end-of-line character. This may impact the selection. This action may have different behavior in a locale other than the C locale.</dd>
+<dd>The delete-next-word() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</dd>
+<dt>delete-previous-character():</dt>
+<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the character of text immediately preceding the insertion cursor. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the character of text immediately preceding the insertion cursor. This may impact the selection.</dd>
+<dd>The delete-previous-character() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>delete-previous-word():</dt>
+<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the next space, tab or beginning-of-line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the next space, tab or beginning-of-line character. This may impact the selection. This action may have different behavior in a locale other than the C locale.</dd>
+<dd>The delete-previous-word() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>delete-selection():</dt>
+<dd>Deletes the current selection.</dd>
+<dd>The delete-selection() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>delete-to-end-of-line():</dt>
+<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next end of line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters following the insertion cursor to the next end of line character. This may impact the selection.</dd>
+<dd>The delete-to-end-of-line() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, and the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>.</dd>
+<dt>delete-to-start-of-line():</dt>
+<dd>In normal mode, if there is a nonnull selection, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the previous beginning-of-line character. In add mode, if there is a nonnull selection, the cursor is not disjoint from the selection and <code>XmNpendingDelete</code> is set to True, deletes the selection; otherwise, deletes the characters preceding the insertion cursor to the previous beginning-of-line character. This may impact the selection.</dd>
+<dd>The delete-to-start-of-line() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>deselect-all():</dt>
+<dd>Deselects the current selection.</dd>
+<dd>The deselect-all() action produces no callbacks.</dd>
+<dt>end-of-line(<code>extend</code>):</dt>
+<dd>If this action is called with no argument, moves the insertion cursor to the end of the line. If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</dd>
+<dd>The end-of-line() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the end-of-line() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>extend-adjust():</dt>
+<dd>Selects text from the anchor to the pointer position and deselects text outside that range.</dd>
+<dd>The extend-adjust() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The extend-adjust() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>extend-end():</dt>
+<dd>Moves the insertion cursor to the position of the pointer. The extend-end() action is used to commit the selection. After this action has been done, process-cancel() will no longer cancel the selection.</dd>
+<dd>The extend-end() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The extend-end() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>extend-start():</dt>
+<dd>Adjusts the anchor using the balance-beam method. Selects text from the anchor to the pointer position and deselects text outside that range.</dd>
+<dd>The extend-start() action can produce no callbacks, however, it may produce calls to the <code>XmNgainPrimaryCallback</code> and <code>XmNmotionVerifyCallback</code> procedures. See callback description for more information.</dd>
+<dt>forward-character(<code>extend</code>):</dt>
+<dd>Moves the insertion cursor one character to the right. This action may have different behavior in a right-to-left language environment.</dd>
+<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</dd>
+<dd>The forward-character() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the forward-character() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>forward-word(<code>extend</code>):</dt>
+<dd>If this action is called with no argument, moves the insertion cursor to the first whitespace character or end-of-line following the next non-whitespace character. If the insertion cursor is already at the end of a word, moves the insertion cursor to the end of the next word. This action may have different behavior in a locale other than the C locale.</dd>
+<dd>If called with an argument of <i>extend</i>, moves the insertion cursor as in the case of no argument and extends the current selection.</dd>
+<dd>The forward-word() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. If called with the <i>extend</i> argument, the forward-word() action may produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>grab-focus():</dt>
+<dd>This key binding performs the action defined in the <code>XmNselectionArray</code>, depending on the number of multiple mouse clicks. The default selection array ordering is one click to move the insertion cursor to the pointer position, two clicks to select a word, and three clicks to select a line of text. A single click also deselects any selected text and sets the anchor at the pointer position. This action may have different behavior in a locale other than the C locale.</dd>
+<dd>The grab-focus() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>Help():</dt>
+<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt>key-select(<code>right|left</code>):</dt>
+<dd>If called with an argument of <i>right</i>, moves the insertion cursor one character to the right and extends the current selection. If called with an argument of <i>left</i>, moves the insertion cursor one character to the left and extends the current selection. If called with no argument, extends the current selection.</dd>
+<dd>Note that after a <code>key-select</code> action, the selection will still begin at the original anchor, and will extend to the position indicated in the action call. If this new position is on the opposite side of the selection anchor from the previous selection boundary, the original selection will be deselected.</dd>
+<dd>The key-select() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. The key-select() action may also produce calls to the <code>XmNgainPrimaryCallback</code> procedures. See callback description for more information.</dd>
+<dt>link-primary():</dt>
+<dd>Places a link to the primary selection just before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmLINK</code> operation. The TextField widget itself performs no transfers; the <code>XmNdestinationCallback</code> procedures are responsible for inserting the link to the primary selection and for taking any related actions.</dd>
+<dt>link-to():</dt>
+<dd>If a secondary selection exists, this action places a link to the secondary selection at the insertion position of the destination component. This action calls the destination&#8217;s <code>XmNdestinationCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>XmLINK</code> operation.</dd>
+<dd>If no secondary selection exists, this action places a link to the primary selection at the pointer position. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmLINK</code> operation.</dd>
+<dd>The TextField widget itself performs no transfers; the <code>XmNdestinationCallback</code> procedures are responsible for inserting the link to the primary or secondary selection and for taking any related actions.</dd>
+<dt>move-destination():</dt>
+<dd>Moves the insertion cursor to the pointer position without changing any existing current selection. If there is a current selection, sets the widget as the destination widget. This also moves the widget focus to match the insertion cursor.</dd>
+<dd>The move-destination() action produces calls to the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>move-to():</dt>
+<dd>If a secondary selection exists, this action moves the secondary selection to the insertion position of the destination component. If the secondary selection is in the destination widget, and the secondary selection and the primary selection overlap, the result is undefined. This action calls the destination&#8217;s <code>XmNdestinationCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>XmCOPY</code> operation. The destination&#8217;s <code>XmNdestinationCallback</code> procedures or the destination component itself invokes the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>SECONDARY</code> selection. If the transfer is successful, this action then calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures for the <code>SECONDARY</code> selection and the <code>DELETE</code> target.</dd>
+<dd>If no secondary selection exists, this action moves the primary selection to the pointer position. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>XmMOVE</code> operation. It calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>PRIMARY</code> selection. If the transfer is successful, this action then calls the selection owner&#8217;s <code>XmNconvertCallback</code> procedures for the <code>PRIMARY</code> selection and the <code>DELETE</code> target.</dd>
+<dd>In addition, the move-to() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>. This action may also produce calls to the <code>XmNgainPrimaryCallback</code> procedures.</dd>
+<dt>next-tab-group():</dt>
+<dd>Traverses to the next tab group.</dd>
+<dd>The next-tab-group() action produces no callbacks, unless it results in the widget losing focus, in which case, the <code>XmNlosingFocusCallback</code> procedures are called with reason value <code>XmCR_LOSING_FOCUS</code>.</dd>
+<dt>page-left():</dt>
+<dd>Scrolls the viewing window left one page of text.</dd>
+<dd>The page-left() action produces no callbacks.</dd>
+<dt>page-right():</dt>
+<dd>Scrolls the viewing window right one page of text.</dd>
+<dd>The page-right() action produces no callbacks.</dd>
+<dt>paste-clipboard():</dt>
+<dd>Pastes the contents of the clipboard before the insertion cursor. This action calls the <code>XmNdestinationCallback</code> procedures for the <code>CLIPBOARD</code> selection and the <code>XmCOPY</code> operation.</dd>
+<dd>The paste-clipboard() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>prev-tab-group():</dt>
+<dd>Traverses to the previous tab group.</dd>
+<dd>The prev-tab-group() action produces no callbacks, unless it results in the widget losing focus, in which case, the <code>XmNlosingFocusCallback</code> procedures are called with reason value <code>XmCR_LOSING_FOCUS</code>.</dd>
+<dt>process-bdrag()</dt>
+<dd>If the pointer is within the selection, this action starts a drag operation for the selection. This action sets the <code>XmNconvertProc</code> of the DragContext to a function that calls the <code>XmNconvertCallback</code> procedures, possibly multiple times, for the <code>_MOTIF_DROP</code> selection.</dd>
+<dd>If no selection exists or the pointer is outside the selection, this action prepares to start a secondary selection at the pointer position.</dd>
+<dt>process-cancel():</dt>
+<dd>Cancels the current extend-adjust(), secondary-adjust() or process-bdrag() operation and leaves the selection state as it was before the operation; otherwise, and if the parent is a manager, it passes the event to the parent.</dd>
+<dt>secondary-adjust():</dt>
+<dd>Extends the secondary selection to the pointer position.</dd>
+<dd>The secondary-adjust() action produces no callbacks.</dd>
+<dt>secondary-start():</dt>
+<dd>Marks the beginning of a secondary selection.</dd>
+<dd>The secondary-start() action produces no callbacks.</dd>
+<dt>select-all():</dt>
+<dd>Selects all text.</dd>
+<dd>The select-all() action can produce no callbacks, however, it may produce calls to the <code>XmNgainPrimaryCallback</code> and <code>XmNmotionVerifyCallback</code> procedures. See callback description for more information.</dd>
+<dt>self-insert():</dt>
+<dd>If <code>XmNpendingDelete</code> is True and the cursor is not disjoint from the current selection, deletes the entire selection. Inserts the character associated with the key pressed before the insertion cursor.</dd>
+<dd>The self-insert() action produces calls to the <code>XmNmodifyVerifyCallback</code> procedures with reason value <code>XmCR_MODIFYING_TEXT_VALUE</code>, the <code>XmNvalueChangedCallback</code> procedures with reason value <code>XmCR_VALUE_CHANGED</code>, and the <code>XmNmotionVerifyCallback</code> procedures with reason value <code>XmCR_MOVING_INSERT_CURSOR</code>.</dd>
+<dt>set-anchor():</dt>
+<dd>Resets the anchor point for extended selections. Resets the destination of secondary selection actions.</dd>
+<dd>The set-anchor() action produces no callbacks.</dd>
+<dt>toggle-add-mode():</dt>
+<dd>Toggles the state of Add Mode.</dd>
+<dd>The toggle-add-mode() action produces no callbacks.</dd>
+<dt>toggle-overstrike():</dt>
+<dd>Toggles the state of the text insertion mode. By default, characters typed into the TextField widget are inserted before the position of the insertion cursor. In overstrike mode, characters entered into the TextField widget replace the characters that directly follow the insertion cursor. In overstrike mode, when the end of a line is reached, characters are appended to the end of the line.</dd>
+<dd>The following traversal actions generate no callbacks unless they result in the loss of focus by the widget in question, as when <code>XmNnavigationType</code> is <code>XmNONE</code>. In this case, they produce calls to the <code>XmNlosingFocusCallback</code> procedures, with reason value <code>XmCR_FOCUS_MOVED</code>.</dd>
+<dt>traverse-home():</dt>
+<dd>Traverses to the first widget in the tab group.</dd>
+<dt>traverse-next():</dt>
+<dd>Traverses to the next widget in the tab group.</dd>
+<dt>traverse-prev():</dt>
+<dd>Traverses to the previous widget in the tab group.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>This widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;FocusIn&gt;</code>:</p>
-<dd>Draws the insertion cursor as solid and starts blinking the cursor.</p>
-<dt><code>&lt;FocusOut&gt;</code>:</p>
-<dd>Displays the insertion cursor as a stippled I-beam unless it is the destination widget.</dl>
+<dt><code>&lt;FocusIn&gt;</code>:</dt>
+<dd>Draws the insertion cursor as solid and starts blinking the cursor.</dd>
+<dt><code>&lt;FocusOut&gt;</code>:</dt>
+<dd>Displays the insertion cursor as a stippled I-beam unless it is the destination widget.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

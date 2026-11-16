@@ -164,34 +164,34 @@ description: "pppd_selinux – Security Enhanced Linux Policy for the pppd proce
 <p> <code>pppd_etc_rw_t</code> </p>
 <p> &#8211; Set files with the pppd_etc_rw_t type, if you want to treat the files as pppd etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ppp(/.*)?, /etc/ppp/peers(/.*)?, /etc/ppp/resolv.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/ppp(/.*)?, /etc/ppp/peers(/.*)?, /etc/ppp/resolv.conf </dd>
 </dl>
 <p> <code>pppd_etc_t</code> </p>
 <p> &#8211; Set files with the pppd_etc_t type, if you want to store pppd files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.ppprc, /etc/ppp </p>
+<dt>Paths:</dt>
+<dd>/root/.ppprc, /etc/ppp </dd>
 </dl>
 <p> <code>pppd_exec_t</code> </p>
 <p> &#8211; Set files with the pppd_exec_t type, if you want to transition an executable to the pppd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/pppd, /sbin/ppp-watch, /usr/sbin/ipppd, /sbin/pppoe-server, /usr/sbin/ppp-watch, /usr/sbin/pppoe-server </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/pppd, /sbin/ppp-watch, /usr/sbin/ipppd, /sbin/pppoe-server, /usr/sbin/ppp-watch, /usr/sbin/pppoe-server </dd>
 </dl>
 <p> <code>pppd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the pppd_initrc_exec_t type, if you want to transition an executable to the pppd_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ppp/(auth|ip(v6|x)?)-(up|down), /etc/rc.d/init.d/ppp </p>
+<dt>Paths:</dt>
+<dd>/etc/ppp/(auth|ip(v6|x)?)-(up|down), /etc/rc.d/init.d/ppp </dd>
 </dl>
 <p> <code>pppd_lock_t</code> </p>
 <p> &#8211; Set files with the pppd_lock_t type, if you want to treat the files as pppd lock data, stored under the /var/lock directory </p>
 <p> <code>pppd_log_t</code> </p>
 <p> &#8211; Set files with the pppd_log_t type, if you want to treat the data as pppd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/ppp(/.*)?, /var/log/ppp-connect-errors.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/ppp(/.*)?, /var/log/ppp-connect-errors.* </dd>
 </dl>
 <p> <code>pppd_secret_t</code> </p>
 <p> &#8211; Set files with the pppd_secret_t type, if you want to treat the files as pppd se secret data. </p>
@@ -202,8 +202,8 @@ description: "pppd_selinux – Security Enhanced Linux Policy for the pppd proce
 <p> <code>pppd_var_run_t</code> </p>
 <p> &#8211; Set files with the pppd_var_run_t type, if you want to store the pppd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/(i)?ppp.*pid[^/]*, /var/run/ppp(/.*)?, /var/run/pppd[0-9]*.tdb </p>
+<dt>Paths:</dt>
+<dd>/var/run/(i)?ppp.*pid[^/]*, /var/run/ppp(/.*)?, /var/run/pppd[0-9]*.tdb </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

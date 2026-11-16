@@ -12,17 +12,17 @@ GQOPS (Inquire operating state value) - returns the operating state of GKS.
 
  void ginq_op_st(Gop_st *op_st);
 <h2>Description</h2><dl COMPACT><dt>OPSTA
-<dd>(Integer, Output) - Returns the GKS operating state:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>GKS is closed
-<dt>1
-<dd>GKS is open
-<dt>2
-<dd>Additionally, a workstation is open
-<dt>3
-<dd>Additionally, a workstation is active
-<dt>4
-<dd>Additionally, a segment is open</dl></dl>
+</dt><dd>(Integer, Output) - Returns the GKS operating state:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>GKS is closed
+</dd><dt>1
+</dt><dd>GKS is open
+</dd><dt>2
+</dt><dd>Additionally, a workstation is open
+</dd><dt>3
+</dt><dd>Additionally, a workstation is active
+</dd><dt>4
+</dt><dd>Additionally, a segment is open</dd></dl></dl>
 </dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gopks, gopwk, gacwk, gdawk, gclwk, gclks, opngks, clsgks, ginq_op_st 
 

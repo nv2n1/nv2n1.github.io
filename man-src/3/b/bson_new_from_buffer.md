@@ -19,17 +19,17 @@ bson_new_from_buffer (uint8_t         **buf,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>buf</code></p>
-<dd> A uint8_t.</dl>
+<dt><code>buf</code></dt>
+<dd> A uint8_t.</dd></dl>
 <dl>
-<dt><code>buf_len</code></p>
-<dd> A size_t.</dl>
+<dt><code>buf_len</code></dt>
+<dd> A size_t.</dd></dl>
 <dl>
-<dt><code>realloc_func</code></p>
-<dd> A bson_realloc_func.</dl>
+<dt><code>realloc_func</code></dt>
+<dd> A bson_realloc_func.</dd></dl>
 <dl>
-<dt><code>realloc_func_ctx</code></p>
-<dd> A (null).</dl>
+<dt><code>realloc_func_ctx</code></dt>
+<dd> A (null).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> TODO: </p>
 <h2>RETURNS</h2>

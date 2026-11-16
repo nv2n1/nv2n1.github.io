@@ -27,18 +27,18 @@ description: "hwlocality_creation – Topology Creation and Destruction"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>topology</i> is the topology to be checked</dl>
+</dt><dd> <i>topology</i> is the topology to be checked</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This routine is only useful to developers. </p>
+</dt><dd> This routine is only useful to developers. </dd>
 <p> The input topology should have been previously loaded with <code>hwloc_topology_load()</code>.</dl>
 <h3>void hwloc_topology_destroy (<code>hwloc_topology_t</code> topology)</h3>
 <p> Terminate and free a topology context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>topology</i> is the topology to be freed</dl>
+</dt><dd> <i>topology</i> is the topology to be freed</dd></dl>
 <h3>int hwloc_topology_dup (<code>hwloc_topology_t</code> * newtopology, <code>hwloc_topology_t</code> oldtopology)</h3>
 <p> Duplicate a topology. The entire topology structure as well as its objects are duplicated into a new one. </p>
 <p> This is useful for keeping a backup while modifying a topology.</p>
@@ -47,34 +47,34 @@ description: "hwlocality_creation – Topology Creation and Destruction"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>topologyp</i> is assigned a pointer to the new allocated context.</dl>
+</dt><dd> <i>topologyp</i> is assigned a pointer to the new allocated context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success, -1 on error.</dl>
+</dt><dd> 0 on success, -1 on error.</dd></dl>
 <h3>int hwloc_topology_load (<code>hwloc_topology_t</code> topology)</h3>
 <p> Build the actual topology. Build the actual topology once initialized with <code>hwloc_topology_init()</code> and tuned with <code>Topology Detection Configuration and Query</code> routines. No other routine may be called earlier using this topology context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>topology</i> is the topology to be loaded with objects.</dl>
+</dt><dd> <i>topology</i> is the topology to be loaded with objects.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success, -1 on error.</dl>
+</dt><dd> 0 on success, -1 on error.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> On failure, the topology is reinitialized. It should be either destroyed with <code>hwloc_topology_destroy()</code> or configured and loaded again. </p>
+</dt><dd> On failure, the topology is reinitialized. It should be either destroyed with <code>hwloc_topology_destroy()</code> or configured and loaded again. </dd>
 <p> This function may be called only once per topology.</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>Topology Detection Configuration and Query</code></dl>
+</dt><dd> <code>Topology Detection Configuration and Query</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></p>
+<dt><a href="#lbAH">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAN">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAN">Author</a></dt>
+<dd></dd></dl>

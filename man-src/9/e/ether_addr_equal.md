@@ -10,15 +10,15 @@ description: "ether_addr_equal – Compare two Ethernet addresses"
 <p>ether_addr_equal &#8211; Compare two Ethernet addresses</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool ether_addr_equal(const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr1</i><code>, const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr2</i><code>);</code></dl>
+<dt> <code>bool ether_addr_equal(const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr1</i><code>, const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr2</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>addr1</i></p>
 <dl>
 <dd>
-<dd>Pointer to a six-byte array containing the Ethernet address</dl>
+</dd><dd>Pointer to a six-byte array containing the Ethernet address</dd></dl>
 <p> <i>addr2</i></p>
 <dl>
-<dd>Pointer other six-byte array containing the Ethernet address</dl>
+<dd>Pointer other six-byte array containing the Ethernet address</dd></dl>
 <h2>Description</h2>
 <p>Compare two Ethernet addresses, returns true if equal </p>
 <p> Please note: addr1 &amp; addr2 must both be aligned to u16.</p>

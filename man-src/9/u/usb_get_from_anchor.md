@@ -14,7 +14,7 @@ description: "usb_get_from_anchor – get an anchor’s oldest urb"
 <p><i>anchor</i></p>
 <dl>
 <dd>
-<dd>the anchor whose urb you want</dl>
+</dd><dd>the anchor whose urb you want</dd></dl>
 <h2>Description</h2>
 <p>This will take the oldest urb from an anchor, unanchor and return it</p>
 <h2>Return</h2>

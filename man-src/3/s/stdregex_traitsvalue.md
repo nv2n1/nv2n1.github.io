@@ -26,16 +26,11 @@ The numeric value if ch indeed represents a digit in the currently imbued locale
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;regex&gt;
-
 #include &lt;map&gt;
 // This custom regex traits allows japanese numerals
-
 struct jnum_traits : std::regex_traits&lt;wchar_t&gt;
-
 {
     static std::map&lt;wchar_t, int&gt; data;
     int value(wchar_t ch, int radix) const
@@ -44,11 +39,8 @@ struct jnum_traits : std::regex_traits&lt;wchar_t&gt;
         return data.count(up) ? data[up] : regex_traits::value(ch, radix);
     }
 };
-
 std::map&lt;wchar_t, int&gt; jnum_traits::data = &#123;&#123;L'〇', 0}, {L'一', 1}, {L'二', 2}, {L'三', 3}, {L'四', 4}, {L'五', 5}, {L'六', 6}, {L'七', 7}, {L'八', 8}, {L'九', 9}, {L'Ａ', 10}, {L'Ｂ', 11}, {L'Ｃ', 12}, {L'Ｄ', 13}, {L'Ｅ', 14}, {L'Ｆ', 15}};
-
 int main()
-
 {
     std::locale::global(std::locale(&quot;ja_JP.utf8&quot;));
     std::wcout.sync_with_stdio(false);

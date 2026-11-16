@@ -14,14 +14,14 @@ description: "scsi_is_sas_phy – check if a struct device represents a SAS PHY"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to check</dl>
+</dd><dd>device to check</dd></dl>
 <h2>Return</h2>
 <p><code>1</code> if the device represents a SAS PHY, <code>0</code> else</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

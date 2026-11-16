@@ -10,12 +10,12 @@ description: "ata_phys_link_online – test whether the given link is online"
 <p>ata_phys_link_online &#8211; test whether the given link is online</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool ata_phys_link_online(struct ata_link&nbsp;<wbr>*&nbsp;<wbr></code><i>link</i><code>);</code></dl>
+<dt> <code>bool ata_phys_link_online(struct ata_link&nbsp;<wbr>*&nbsp;<wbr></code><i>link</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to test</dl>
+</dd><dd>ATA link to test</dd></dl>
 <h2>Description</h2>
 <p>Test whether <i>link</i> is online. Note that this function returns 0 if online status of <i>link</i> cannot be obtained, so ata_link_online(link) != !ata_link_offline(link). </p>
 <p> LOCKING: None.</p>
@@ -24,5 +24,5 @@ description: "ata_phys_link_online – test whether the given link is online"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

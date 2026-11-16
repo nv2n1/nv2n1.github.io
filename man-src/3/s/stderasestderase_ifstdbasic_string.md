@@ -11,18 +11,13 @@ std::erase,std::erase_if(std::basic_string) - std::erase,std::erase_if(std::basi
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;string&gt;
-
     template &lt;class CharT, class Traits, class Alloc, class U&gt;
     (1)(since C++ 20)
-
         void erase(std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;c, const U &amp;value);
-
 template &lt;class CharT, class Traits, class Alloc, class Pred&gt;
 (2)(since C++ 20)
-
     void erase_if(std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;c, Pred pred);
 1) Erases all elements that compare equal to value from the container. Equivalent to c.erase(std::remove(c.begin(), c.end(), value), c.end());
-
 2) Erases all elements that satisfy the predicate pred from the container. Equivalent to c.erase(std::remove_if(c.begin(), c.end(), pred), c.end());
 </code></pre>
 

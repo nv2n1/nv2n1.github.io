@@ -19,7 +19,7 @@ description: "dsbgst.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DSBGST reduces a real symmetric-definite banded generalized
  eigenproblem  A*x = lambda*B*x  to standard form  C*y = lambda*y,
@@ -29,11 +29,11 @@ description: "dsbgst.f –"
  X = S**(-1)*Q and Q is an orthogonal matrix chosen to preserve the
  bandwidth of A.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>VECT</i> </p>
+</dt><dd> <i>VECT</i> </dd>
 <pre>
           VECT is CHARACTER*1
           = 'N':  do not form the transformation matrix X;
@@ -117,14 +117,14 @@ LDX &gt;= 1 otherwise.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 159 of file dsbgst.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

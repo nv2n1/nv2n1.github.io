@@ -13,10 +13,10 @@ description: "pskc_get_key_data_secret – API function"
 const char *pskc_get_key_data_secret(pskc_key_t *key, size_t *len);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>size_t * len</p>
-<dd>pointer to output variable with length of returned data.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>size_t * len</dt>
+<dd>pointer to output variable with length of returned data.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Data Secret value. If <i>len</i> is not set, the caller can only use the returned value for comparison against NULL to check whether the field is present or not.</p>
 <h2>Returns</h2>

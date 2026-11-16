@@ -14,12 +14,12 @@ description: "gpt-undefines – Generate a list of preprocessor macros that are 
 <p><code>gpt-undefines</code> Generates a list of preprocessor macros that are not defined internally in the source code. Macros that are defined in the header files listed during <code>gpt-undefines</code>&#8216;s invocation will also be excluded.</p>
 <h2>Options</h2>
 <dl>
-<dt>-srcdir=PATH</p>
-<dd>Use <font SIZE="-1">PATH</font> as the directory containing the source code. Source code in the entire directory tree will be scanned. Default <font SIZE="-1">PATH</font> is the directory <code>gpt-undefines</code> was invoked in.</p>
-<dt>-config</p>
-<dd>Prints the list out in a format that can be pasted into an installable header file.</p>
-<dt>-disable-undefs</p>
-<dd>Do not count commented out undefines as a define. This technique is used by autoconf to indicate a negative test result. Example: </p>
+<dt>-srcdir=PATH</dt>
+<dd>Use <font SIZE="-1">PATH</font> as the directory containing the source code. Source code in the entire directory tree will be scanned. Default <font SIZE="-1">PATH</font> is the directory <code>gpt-undefines</code> was invoked in.</dd>
+<dt>-config</dt>
+<dd>Prints the list out in a format that can be pasted into an installable header file.</dd>
+<dt>-disable-undefs</dt>
+<dd>Do not count commented out undefines as a define. This technique is used by autoconf to indicate a negative test result. Example: </dd>
 <pre> /* #undef HAVE_TCP_FASTACK */</pre>
 </dl>
 <h2>Managing Autoconf defines.</h2>

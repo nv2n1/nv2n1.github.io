@@ -22,48 +22,48 @@ description: "mkimage – Generate image for U-Boot"
 <h2>OPTIONS</h2>
 <p> <code>List image information:</code> </p>
 <dl>
-<dt><code>-l [</code><i>uimage file name</i><code>]</code></p>
-<dd> mkimage lists the information contained in the header of an existing U-Boot image. </p>
+<dt><code>-l [</code><i>uimage file name</i><code>]</code></dt>
+<dd> mkimage lists the information contained in the header of an existing U-Boot image. </dd>
 </dl>
 <p> <code>Create old legacy image:</code> </p>
 <dl>
-<dt><code>-A [</code><i>architecture</i><code>]</code></p>
-<dd> Set architecture. Pass -h as the architecture to see the list of supported architectures. </p>
-<dt><code>-O [</code><i>os</i><code>]</code></p>
-<dd> Set operating system. bootm command of u-boot changes boot method by os type. Pass -h as the OS to see the list of supported OS. </p>
-<dt><code>-T [</code><i>image type</i><code>]</code></p>
-<dd> Set image type. Pass -h as the image to see the list of supported image type. </p>
-<dt><code>-C [</code><i>compression type</i><code>]</code></p>
-<dd> Set compression type. Pass -h as the compression to see the list of supported compression type. </p>
-<dt><code>-a [</code><i>load addess</i><code>]</code></p>
-<dd> Set load address with a hex number. </p>
-<dt><code>-e [</code><i>entry point</i><code>]</code></p>
-<dd> Set entry point with a hex number. </p>
-<dt><code>-l</code></p>
-<dd> List the contents of an image. </p>
-<dt><code>-n [</code><i>image name</i><code>]</code></p>
-<dd> Set image name to &#8216;image name&#8217;. </p>
-<dt><code>-d [</code><i>image data file</i><code>]</code></p>
-<dd> Use image data from &#8216;image data file&#8217;. </p>
-<dt><code>-x</code></p>
-<dd> Set XIP (execute in place) flag. </p>
+<dt><code>-A [</code><i>architecture</i><code>]</code></dt>
+<dd> Set architecture. Pass -h as the architecture to see the list of supported architectures. </dd>
+<dt><code>-O [</code><i>os</i><code>]</code></dt>
+<dd> Set operating system. bootm command of u-boot changes boot method by os type. Pass -h as the OS to see the list of supported OS. </dd>
+<dt><code>-T [</code><i>image type</i><code>]</code></dt>
+<dd> Set image type. Pass -h as the image to see the list of supported image type. </dd>
+<dt><code>-C [</code><i>compression type</i><code>]</code></dt>
+<dd> Set compression type. Pass -h as the compression to see the list of supported compression type. </dd>
+<dt><code>-a [</code><i>load addess</i><code>]</code></dt>
+<dd> Set load address with a hex number. </dd>
+<dt><code>-e [</code><i>entry point</i><code>]</code></dt>
+<dd> Set entry point with a hex number. </dd>
+<dt><code>-l</code></dt>
+<dd> List the contents of an image. </dd>
+<dt><code>-n [</code><i>image name</i><code>]</code></dt>
+<dd> Set image name to &#8216;image name&#8217;. </dd>
+<dt><code>-d [</code><i>image data file</i><code>]</code></dt>
+<dd> Use image data from &#8216;image data file&#8217;. </dd>
+<dt><code>-x</code></dt>
+<dd> Set XIP (execute in place) flag. </dd>
 </dl>
 <p> <code>Create FIT image:</code> </p>
 <dl>
-<dt><code>-c [</code><i>comment</i><code>]</code></p>
-<dd> Specifies a comment to be added when signing. This is typically a useful message which describes how the image was signed or some other useful information. </p>
-<dt><code>-D [</code><i>dtc options</i><code>]</code></p>
-<dd> Provide special options to the device tree compiler that is used to create the image. </p>
-<dt><code>-f [</code><i>image tree source file</i><code>]</code></p>
-<dd> Image tree source file that describes the structure and contents of the FIT image. </p>
-<dt><code>-F</code></p>
-<dd> Indicates that an existing FIT image should be modified. No dtc compilation is performed and the -f flag should not be given. This can be used to sign images with additional keys after initial image creation. </p>
-<dt><code>-k [</code><i>key_directory</i><code>]</code></p>
-<dd> Specifies the directory containing keys to use for signing. This directory should contain a private key file &lt;name&gt;.key for use with signing and a certificate &lt;name&gt;.crt (containing the public key) for use with verification. </p>
-<dt><code>-K [</code><i>key_destination</i><code>]</code></p>
-<dd> Specifies a compiled device tree binary file (typically .dtb) to write public key information into. When a private key is used to sign an image, the corresponding public key is written into this file for for run-time verification. Typically the file here is the device tree binary used by CONFIG_OF_CONTROL in U-Boot. </p>
-<dt><code>-r</code></p>
-<dd> Specifies that keys used to sign the FIT are required. This means that they must be verified for the image to boot. Without this option, the verification will be optional (useful for testing but not for release). </p>
+<dt><code>-c [</code><i>comment</i><code>]</code></dt>
+<dd> Specifies a comment to be added when signing. This is typically a useful message which describes how the image was signed or some other useful information. </dd>
+<dt><code>-D [</code><i>dtc options</i><code>]</code></dt>
+<dd> Provide special options to the device tree compiler that is used to create the image. </dd>
+<dt><code>-f [</code><i>image tree source file</i><code>]</code></dt>
+<dd> Image tree source file that describes the structure and contents of the FIT image. </dd>
+<dt><code>-F</code></dt>
+<dd> Indicates that an existing FIT image should be modified. No dtc compilation is performed and the -f flag should not be given. This can be used to sign images with additional keys after initial image creation. </dd>
+<dt><code>-k [</code><i>key_directory</i><code>]</code></dt>
+<dd> Specifies the directory containing keys to use for signing. This directory should contain a private key file &lt;name&gt;.key for use with signing and a certificate &lt;name&gt;.crt (containing the public key) for use with verification. </dd>
+<dt><code>-K [</code><i>key_destination</i><code>]</code></dt>
+<dd> Specifies a compiled device tree binary file (typically .dtb) to write public key information into. When a private key is used to sign an image, the corresponding public key is written into this file for for run-time verification. Typically the file here is the device tree binary used by CONFIG_OF_CONTROL in U-Boot. </dd>
+<dt><code>-r</code></dt>
+<dd> Specifies that keys used to sign the FIT are required. This means that they must be verified for the image to boot. Without this option, the verification will be optional (useful for testing but not for release). </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> List image information: </p>

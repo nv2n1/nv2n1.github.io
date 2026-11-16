@@ -57,14 +57,14 @@ description: "aide_selinux – Security Enhanced Linux Policy for the aide proce
 <p> <code>aide_exec_t</code> </p>
 <p> &#8211; Set files with the aide_exec_t type, if you want to transition an executable to the aide_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/aide, /usr/sbin/aide </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/aide, /usr/sbin/aide </dd>
 </dl>
 <p> <code>aide_log_t</code> </p>
 <p> &#8211; Set files with the aide_log_t type, if you want to treat the data as aide log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/aide(/.*)?, /var/log/aide.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/aide(/.*)?, /var/log/aide.log.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

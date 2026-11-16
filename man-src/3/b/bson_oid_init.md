@@ -17,14 +17,15 @@ bson_oid_init (bson_oid_t     *oid,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>context</code></p>
-<dd> An <code>optional</code> </p>
+<dt><code>context</code></dt>
+<dd> An <code>optional</code> </dd>
 <p> <code>bson_context_t</code> or NULL.</dl>
 <h2>DESCRIPTION</h2>
 <p> Generates a new <code>bson_oid_t</code> using either <code>context</code> or the default <code>bson_context_t</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
 <h2>Index</h2>
+</p>

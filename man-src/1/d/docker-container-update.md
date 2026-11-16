@@ -27,47 +27,47 @@ description: "docker-container-update – Update configuration of one or more co
 <p> To limit a container&#8217;s cpu-shares to 512, first identify the container name or ID. You can use <code>docker ps</code> to find these values. You can also use the ID returned from the <code>docker run</code> command. Then, do the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container update --cpu-shares 512 abebf7571666
 </pre>
-</dl>
+</dd></dl>
 <h3>Update a container with cpu-shares and memory</h3>
 <p> To update multiple resource configurations for multiple containers: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container update --cpu-shares 512 -m 300M abebf7571666 hopeful_morse
 </pre>
-</dl>
+</dd></dl>
 <h3>Update a container&#8217;s kernel memory constraints</h3>
 <p> You can update a container&#8217;s kernel memory limit using the <code>&#8211;kernel-memory</code> option. On kernel version older than 4.6, this option can be updated on a running container only if the container was started with <code>&#8211;kernel-memory</code>. If the container was started <i>without</i> <code>&#8211;kernel-memory</code> you need to stop the container before updating kernel memory. </p>
 <p> NOTE: The <code>&#8211;kernel-memory</code> option has been deprecated since Docker 20.10. </p>
 <p> For example, if you started a container with this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -dit --name test --kernel-memory 50M ubuntu bash
 </pre>
-</dl>
+</dd></dl>
 <p> You can update kernel memory while the container is running: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container update --kernel-memory 80M test
 </pre>
-</dl>
+</dd></dl>
 <p> If you started a container <i>without</i> kernel memory initialized: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -dit --name test2 --memory 300M ubuntu bash
 </pre>
-</dl>
+</dd></dl>
 <p> Update kernel memory of running container test2 will fail. You need to stop the container before updating the <code>&#8211;kernel-memory</code> setting. The next time you start it, the container uses the new value. </p>
 <p> Kernel version newer than (include) 4.6 does not have this limitation, you can use &#8211;kernel-memory the same way as other options. </p>
 <h3>Update a container&#8217;s restart policy</h3>
@@ -75,11 +75,11 @@ $ docker run -dit --name test2 --memory 300M ubuntu bash
 <p> To update restart policy for one or more containers: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container update --restart=on-failure:3 abebf7571666 hopeful_morse
 </pre>
-</dl>
+</dd></dl>
 <p> Note that if the container is started with &quot;&#8211;rm&quot; flag, you cannot update the restart policy for it. The AutoRemove and RestartPolicy are mutually exclusive for the container. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;blkio-weight</code>=0 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0)</p>

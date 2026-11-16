@@ -26,93 +26,93 @@ description: "perldebug – Perl debugging"
 <h3>Calling the Debugger</h3>
 <p> There are several ways to call the debugger:</p>
 <dl>
-<dt>perl -d program_name</p>
-<dd> On the given program identified by <tt>&quot;program_name&quot;</tt>.</p>
-<dt>perl -d -e 0</p>
-<dd> Interactively supply an arbitrary <tt>&quot;expression&quot;</tt> using <tt>&quot;-e&quot;</tt>.</p>
-<dt>perl -d:ptkdb program_name</p>
-<dd> Debug a given program via the <tt>&quot;Devel::ptkdb&quot;</tt> <font SIZE="-1">GUI.</font></p>
-<dt>perl -dt threaded_program_name</p>
-<dd> Debug a given program using threads (experimental).</dl>
+<dt>perl -d program_name</dt>
+<dd> On the given program identified by <tt>&quot;program_name&quot;</tt>.</dd>
+<dt>perl -d -e 0</dt>
+<dd> Interactively supply an arbitrary <tt>&quot;expression&quot;</tt> using <tt>&quot;-e&quot;</tt>.</dd>
+<dt>perl -d:ptkdb program_name</dt>
+<dd> Debug a given program via the <tt>&quot;Devel::ptkdb&quot;</tt> <font SIZE="-1">GUI.</font></dd>
+<dt>perl -dt threaded_program_name</dt>
+<dd> Debug a given program using threads (experimental).</dd></dl>
 <h3>Debugger Commands</h3>
 <p> The interactive debugger understands the following commands:</p>
 <dl>
-<dt>h</p>
-<dd> Prints out a summary help message</p>
-<dt>h [command]</p>
-<dd> Prints out a help message for the given debugger command.</p>
-<dt>h h</p>
-<dd> The special argument of <tt>&quot;h h&quot;</tt> produces the entire help page, which is quite long. </p>
+<dt>h</dt>
+<dd> Prints out a summary help message</dd>
+<dt>h [command]</dt>
+<dd> Prints out a help message for the given debugger command.</dd>
+<dt>h h</dt>
+<dd> The special argument of <tt>&quot;h h&quot;</tt> produces the entire help page, which is quite long. </dd>
 <p> If the output of the <tt>&quot;h h&quot;</tt> command (or any command, for that matter) scrolls past your screen, precede the command with a leading pipe symbol so that it&#8217;s run through your pager, as in </p>
 <pre>
     DB&gt; |h h
 </pre>
 <p> You may change the pager which is used via <tt>&quot;o pager=...&quot;</tt> command.</p>
-<dt>p expr</p>
-<dd> Same as <tt>&quot;print {$DB::OUT} expr&quot;</tt> in the current package. In particular, because this is just Perl&#8217;s own <tt>&quot;print&quot;</tt> function, this means that nested data structures and objects are not dumped, unlike with the <tt>&quot;x&quot;</tt> command. </p>
+<dt>p expr</dt>
+<dd> Same as <tt>&quot;print {$DB::OUT} expr&quot;</tt> in the current package. In particular, because this is just Perl&#8217;s own <tt>&quot;print&quot;</tt> function, this means that nested data structures and objects are not dumped, unlike with the <tt>&quot;x&quot;</tt> command. </dd>
 <p> The <tt>&quot;DB::OUT&quot;</tt> filehandle is opened to <i>/dev/tty</i>, regardless of where <font SIZE="-1">STDOUT</font> may be redirected to.</p>
-<dt>x [maxdepth] expr</p>
-<dd> Evaluates its expression in list context and dumps out the result in a pretty-printed fashion. Nested data structures are printed out recursively, unlike the real <tt>&quot;print&quot;</tt> function in Perl. When dumping hashes, you&#8217;ll probably prefer &#8216;x \%h&#8217; rather than &#8216;x <tt>%h</tt>&#8216;. See Dumpvalue if you&#8217;d like to do this yourself. </p>
+<dt>x [maxdepth] expr</dt>
+<dd> Evaluates its expression in list context and dumps out the result in a pretty-printed fashion. Nested data structures are printed out recursively, unlike the real <tt>&quot;print&quot;</tt> function in Perl. When dumping hashes, you&#8217;ll probably prefer &#8216;x \%h&#8217; rather than &#8216;x <tt>%h</tt>&#8216;. See Dumpvalue if you&#8217;d like to do this yourself. </dd>
 <p> The output format is governed by multiple options described under &#8220;Configurable Options&#8221;. </p>
 <p> If the <tt>&quot;maxdepth&quot;</tt> is included, it must be a numeral <i>N</i>; the value is dumped only <i>N</i> levels deep, as if the <tt>&quot;dumpDepth&quot;</tt> option had been temporarily set to <i>N</i>.</p>
-<dt>V [pkg [vars]]</p>
-<dd> Display all (or some) variables in package (defaulting to <tt>&quot;main&quot;</tt>) using a data pretty-printer (hashes show their keys and values so you see what&#8217;s what, control characters are made printable, etc.). Make sure you don&#8217;t put the type specifier (like <tt>&quot;$&quot;</tt>) there, just the symbol names, like this: </p>
+<dt>V [pkg [vars]]</dt>
+<dd> Display all (or some) variables in package (defaulting to <tt>&quot;main&quot;</tt>) using a data pretty-printer (hashes show their keys and values so you see what&#8217;s what, control characters are made printable, etc.). Make sure you don&#8217;t put the type specifier (like <tt>&quot;$&quot;</tt>) there, just the symbol names, like this: </dd>
 <pre>
     V DB filename line
 </pre>
 <p> Use <tt>&quot;~pattern&quot;</tt> and <tt>&quot;!pattern&quot;</tt> for positive and negative regexes. </p>
 <p> This is similar to calling the <tt>&quot;x&quot;</tt> command on each applicable var.</p>
-<dt>X [vars]</p>
-<dd> Same as <tt>&quot;V currentpackage [vars]&quot;</tt>.</p>
-<dt>y [level [vars]]</p>
-<dd> Display all (or some) lexical variables (mnemonic: <tt>&quot;mY&quot;</tt> variables) in the current scope or <i>level</i> scopes higher. You can limit the variables that you see with <i>vars</i> which works exactly as it does for the <tt>&quot;V&quot;</tt> and <tt>&quot;X&quot;</tt> commands. Requires the <tt>&quot;PadWalker&quot;</tt> module version 0.08 or higher; will warn if this isn&#8217;t installed. Output is pretty-printed in the same style as for <tt>&quot;V&quot;</tt> and the format is controlled by the same options.</p>
-<dt>T</p>
-<dd> Produce a stack backtrace. See below for details on its output.</p>
-<dt>s [expr]</p>
-<dd> Single step. Executes until the beginning of another statement, descending into subroutine calls. If an expression is supplied that includes function calls, it too will be single-stepped.</p>
-<dt>n [expr]</p>
-<dd> Next. Executes over subroutine calls, until the beginning of the next statement. If an expression is supplied that includes function calls, those functions will be executed with stops before each statement.</p>
-<dt>r</p>
-<dd> Continue until the return from the current subroutine. Dump the return value if the <tt>&quot;PrintRet&quot;</tt> option is set (default).</p>
-<dt>&lt;<font SIZE="-1">CR</font>&gt;</p>
-<dd> Repeat last <tt>&quot;n&quot;</tt> or <tt>&quot;s&quot;</tt> command.</p>
-<dt>c [line|sub]</p>
-<dd> Continue, optionally inserting a one-time-only breakpoint at the specified line or subroutine.</p>
-<dt>l</p>
-<dd> List next window of lines.</p>
-<dt>l min+incr</p>
-<dd> List <tt>&quot;incr+1&quot;</tt> lines starting at <tt>&quot;min&quot;</tt>.</p>
-<dt>l min-max</p>
-<dd> List lines <tt>&quot;min&quot;</tt> through <tt>&quot;max&quot;</tt>. <tt>&quot;l -&quot;</tt> is synonymous to <tt>&quot;-&quot;</tt>.</p>
-<dt>l line</p>
-<dd> List a single line.</p>
-<dt>l subname</p>
-<dd> List first window of lines from subroutine. <i>subname</i> may be a variable that contains a code reference.</p>
-<dt>&#8211;</p>
-<dd> List previous window of lines.</p>
-<dt>v [line]</p>
-<dd> View a few lines of code around the current line.</p>
-<dt>.</p>
-<dd> Return the internal debugger pointer to the line last executed, and print out that line.</p>
-<dt>f filename</p>
-<dd> Switch to viewing a different file or <tt>&quot;eval&quot;</tt> statement. If <i>filename</i> is not a full pathname found in the values of <tt>%INC</tt>, it is considered a regex. </p>
+<dt>X [vars]</dt>
+<dd> Same as <tt>&quot;V currentpackage [vars]&quot;</tt>.</dd>
+<dt>y [level [vars]]</dt>
+<dd> Display all (or some) lexical variables (mnemonic: <tt>&quot;mY&quot;</tt> variables) in the current scope or <i>level</i> scopes higher. You can limit the variables that you see with <i>vars</i> which works exactly as it does for the <tt>&quot;V&quot;</tt> and <tt>&quot;X&quot;</tt> commands. Requires the <tt>&quot;PadWalker&quot;</tt> module version 0.08 or higher; will warn if this isn&#8217;t installed. Output is pretty-printed in the same style as for <tt>&quot;V&quot;</tt> and the format is controlled by the same options.</dd>
+<dt>T</dt>
+<dd> Produce a stack backtrace. See below for details on its output.</dd>
+<dt>s [expr]</dt>
+<dd> Single step. Executes until the beginning of another statement, descending into subroutine calls. If an expression is supplied that includes function calls, it too will be single-stepped.</dd>
+<dt>n [expr]</dt>
+<dd> Next. Executes over subroutine calls, until the beginning of the next statement. If an expression is supplied that includes function calls, those functions will be executed with stops before each statement.</dd>
+<dt>r</dt>
+<dd> Continue until the return from the current subroutine. Dump the return value if the <tt>&quot;PrintRet&quot;</tt> option is set (default).</dd>
+<dt>&lt;<font SIZE="-1">CR</font>&gt;</dt>
+<dd> Repeat last <tt>&quot;n&quot;</tt> or <tt>&quot;s&quot;</tt> command.</dd>
+<dt>c [line|sub]</dt>
+<dd> Continue, optionally inserting a one-time-only breakpoint at the specified line or subroutine.</dd>
+<dt>l</dt>
+<dd> List next window of lines.</dd>
+<dt>l min+incr</dt>
+<dd> List <tt>&quot;incr+1&quot;</tt> lines starting at <tt>&quot;min&quot;</tt>.</dd>
+<dt>l min-max</dt>
+<dd> List lines <tt>&quot;min&quot;</tt> through <tt>&quot;max&quot;</tt>. <tt>&quot;l -&quot;</tt> is synonymous to <tt>&quot;-&quot;</tt>.</dd>
+<dt>l line</dt>
+<dd> List a single line.</dd>
+<dt>l subname</dt>
+<dd> List first window of lines from subroutine. <i>subname</i> may be a variable that contains a code reference.</dd>
+<dt>&#8211;</dt>
+<dd> List previous window of lines.</dd>
+<dt>v [line]</dt>
+<dd> View a few lines of code around the current line.</dd>
+<dt>.</dt>
+<dd> Return the internal debugger pointer to the line last executed, and print out that line.</dd>
+<dt>f filename</dt>
+<dd> Switch to viewing a different file or <tt>&quot;eval&quot;</tt> statement. If <i>filename</i> is not a full pathname found in the values of <tt>%INC</tt>, it is considered a regex. </dd>
 <p> <tt>&quot;eval&quot;</tt>ed strings (when accessible) are considered to be filenames: <tt>&quot;f (eval 7)&quot;</tt> and <tt>&quot;f eval 7&quot;</tt> access the body of the 7th <tt>&quot;eval&quot;</tt>ed string (in the order of execution). The bodies of the currently executed <tt>&quot;eval&quot;</tt> and of <tt>&quot;eval&quot;</tt>ed strings that define subroutines are saved and thus accessible.</p>
-<dt>/pattern/</p>
-<dd> Search forwards for pattern (a Perl regex); final / is optional. The search is case-insensitive by default.</p>
-<dt>?pattern?</p>
-<dd> Search backwards for pattern; final ? is optional. The search is case-insensitive by default.</p>
-<dt>L [abw]</p>
-<dd> List (default all) actions, breakpoints and watch expressions</p>
-<dt>S [[!]regex]</p>
-<dd> List subroutine names [not] matching the regex.</p>
-<dt>t [n]</p>
-<dd> Toggle trace mode (see also the <tt>&quot;AutoTrace&quot;</tt> option). Optional argument is the maximum number of levels to trace below the current one; anything deeper than that will be silent.</p>
-<dt>t [n] expr</p>
-<dd> Trace through execution of <tt>&quot;expr&quot;</tt>. Optional first argument is the maximum number of levels to trace below the current one; anything deeper than that will be silent. See &#8220;Frame Listing Output Examples&#8221; in perldebguts for examples.</p>
-<dt>b</p>
-<dd> Sets breakpoint on current line</p>
-<dt>b [line] [condition]</p>
-<dd> Set a breakpoint before the given line. If a condition is specified, it&#8217;s evaluated each time the statement is reached: a breakpoint is taken only if the condition is true. Breakpoints may only be set on lines that begin an executable statement. Conditions don&#8217;t use <tt>&quot;if&quot;</tt>: </p>
+<dt>/pattern/</dt>
+<dd> Search forwards for pattern (a Perl regex); final / is optional. The search is case-insensitive by default.</dd>
+<dt>?pattern?</dt>
+<dd> Search backwards for pattern; final ? is optional. The search is case-insensitive by default.</dd>
+<dt>L [abw]</dt>
+<dd> List (default all) actions, breakpoints and watch expressions</dd>
+<dt>S [[!]regex]</dt>
+<dd> List subroutine names [not] matching the regex.</dd>
+<dt>t [n]</dt>
+<dd> Toggle trace mode (see also the <tt>&quot;AutoTrace&quot;</tt> option). Optional argument is the maximum number of levels to trace below the current one; anything deeper than that will be silent.</dd>
+<dt>t [n] expr</dt>
+<dd> Trace through execution of <tt>&quot;expr&quot;</tt>. Optional first argument is the maximum number of levels to trace below the current one; anything deeper than that will be silent. See &#8220;Frame Listing Output Examples&#8221; in perldebguts for examples.</dd>
+<dt>b</dt>
+<dd> Sets breakpoint on current line</dd>
+<dt>b [line] [condition]</dt>
+<dd> Set a breakpoint before the given line. If a condition is specified, it&#8217;s evaluated each time the statement is reached: a breakpoint is taken only if the condition is true. Breakpoints may only be set on lines that begin an executable statement. Conditions don&#8217;t use <tt>&quot;if&quot;</tt>: </dd>
 <pre>
     b 237 $x &gt; 30
     b 237 ++$count237 &lt; 11
@@ -122,36 +122,36 @@ description: "perldebug – Perl debugging"
 <pre>
     b . $n &gt; 100
 </pre>
-<dt>b [file]:[line] [condition]</p>
-<dd> Set a breakpoint before the given line in a (possibly different) file. If a condition is specified, it&#8217;s evaluated each time the statement is reached: a breakpoint is taken only if the condition is true. Breakpoints may only be set on lines that begin an executable statement. Conditions don&#8217;t use <tt>&quot;if&quot;</tt>: </p>
+<dt>b [file]:[line] [condition]</dt>
+<dd> Set a breakpoint before the given line in a (possibly different) file. If a condition is specified, it&#8217;s evaluated each time the statement is reached: a breakpoint is taken only if the condition is true. Breakpoints may only be set on lines that begin an executable statement. Conditions don&#8217;t use <tt>&quot;if&quot;</tt>: </dd>
 <pre>
     b lib/MyModule.pm:237 $x &gt; 30
     b /usr/lib/perl5/site_perl/CGI.pm:100 ++$count100 &lt; 11
 </pre>
-<dt>b subname [condition]</p>
-<dd> Set a breakpoint before the first line of the named subroutine. <i>subname</i> may be a variable containing a code reference (in this case <i>condition</i> is not supported).</p>
-<dt>b postpone subname [condition]</p>
-<dd> Set a breakpoint at first line of subroutine after it is compiled.</p>
-<dt>b load filename</p>
-<dd> Set a breakpoint before the first executed line of the <i>filename</i>, which should be a full pathname found amongst the <tt>%INC</tt> values.</p>
-<dt>b compile subname</p>
-<dd> Sets a breakpoint before the first statement executed after the specified subroutine is compiled.</p>
-<dt>B line</p>
-<dd> Delete a breakpoint from the specified <i>line</i>.</p>
-<dt>B *</p>
-<dd> Delete all installed breakpoints.</p>
-<dt>disable [file]:[line]</p>
-<dd> Disable the breakpoint so it won&#8217;t stop the execution of the program. Breakpoints are enabled by default and can be re-enabled using the <tt>&quot;enable&quot;</tt> command.</p>
-<dt>disable [line]</p>
-<dd> Disable the breakpoint so it won&#8217;t stop the execution of the program. Breakpoints are enabled by default and can be re-enabled using the <tt>&quot;enable&quot;</tt> command. </p>
+<dt>b subname [condition]</dt>
+<dd> Set a breakpoint before the first line of the named subroutine. <i>subname</i> may be a variable containing a code reference (in this case <i>condition</i> is not supported).</dd>
+<dt>b postpone subname [condition]</dt>
+<dd> Set a breakpoint at first line of subroutine after it is compiled.</dd>
+<dt>b load filename</dt>
+<dd> Set a breakpoint before the first executed line of the <i>filename</i>, which should be a full pathname found amongst the <tt>%INC</tt> values.</dd>
+<dt>b compile subname</dt>
+<dd> Sets a breakpoint before the first statement executed after the specified subroutine is compiled.</dd>
+<dt>B line</dt>
+<dd> Delete a breakpoint from the specified <i>line</i>.</dd>
+<dt>B *</dt>
+<dd> Delete all installed breakpoints.</dd>
+<dt>disable [file]:[line]</dt>
+<dd> Disable the breakpoint so it won&#8217;t stop the execution of the program. Breakpoints are enabled by default and can be re-enabled using the <tt>&quot;enable&quot;</tt> command.</dd>
+<dt>disable [line]</dt>
+<dd> Disable the breakpoint so it won&#8217;t stop the execution of the program. Breakpoints are enabled by default and can be re-enabled using the <tt>&quot;enable&quot;</tt> command. </dd>
 <p> This is done for a breakpoint in the current file.</p>
-<dt>enable [file]:[line]</p>
-<dd> Enable the breakpoint so it will stop the execution of the program.</p>
-<dt>enable [line]</p>
-<dd> Enable the breakpoint so it will stop the execution of the program. </p>
+<dt>enable [file]:[line]</dt>
+<dd> Enable the breakpoint so it will stop the execution of the program.</dd>
+<dt>enable [line]</dt>
+<dd> Enable the breakpoint so it will stop the execution of the program. </dd>
 <p> This is done for a breakpoint in the current file.</p>
-<dt>a [line] command</p>
-<dd> Set an action to be done before the line is executed. If <i>line</i> is omitted, set an action on the line about to be executed. The sequence of steps taken by the debugger is </p>
+<dt>a [line] command</dt>
+<dd> Set an action to be done before the line is executed. If <i>line</i> is omitted, set an action on the line about to be executed. The sequence of steps taken by the debugger is </dd>
 <pre>
   1. check for a breakpoint at this line
   2. print the line if necessary (tracing)
@@ -164,86 +164,86 @@ description: "perldebug – Perl debugging"
     a 53 print &quot;DB FOUND $foo
 &quot;
 </pre>
-<dt>A line</p>
-<dd> Delete an action from the specified line.</p>
-<dt>A *</p>
-<dd> Delete all installed actions.</p>
-<dt>w expr</p>
-<dd> Add a global watch-expression. Whenever a watched global changes the debugger will stop and display the old and new values.</p>
-<dt>W expr</p>
-<dd> Delete watch-expression</p>
-<dt>W *</p>
-<dd> Delete all watch-expressions.</p>
-<dt>o</p>
-<dd> Display all options.</p>
-<dt>o booloption &#8230;</p>
-<dd> Set each listed Boolean option to the value <tt>1</tt>.</p>
-<dt>o anyoption? &#8230;</p>
-<dd> Print out the value of one or more options.</p>
-<dt>o option=value &#8230;</p>
-<dd> Set the value of one or more options. If the value has internal whitespace, it should be quoted. For example, you could set <tt>&quot;o pager=&quot;less -MQeicsNfr&quot;&quot;</tt> to call <code>less</code> with those specific options. You may use either single or double quotes, but if you do, you must escape any embedded instances of same sort of quote you began with, as well as any escaping any escapes that immediately precede that quote but which are not meant to escape the quote itself. In other words, you follow single-quoting rules irrespective of the quote; eg: <tt>&quot;o option='this isn\'t bad'&quot;</tt> or <tt>&quot;o option=&quot;She said, \&quot;Isn't it?\&quot;&quot;&quot;</tt>. </p>
+<dt>A line</dt>
+<dd> Delete an action from the specified line.</dd>
+<dt>A *</dt>
+<dd> Delete all installed actions.</dd>
+<dt>w expr</dt>
+<dd> Add a global watch-expression. Whenever a watched global changes the debugger will stop and display the old and new values.</dd>
+<dt>W expr</dt>
+<dd> Delete watch-expression</dd>
+<dt>W *</dt>
+<dd> Delete all watch-expressions.</dd>
+<dt>o</dt>
+<dd> Display all options.</dd>
+<dt>o booloption &#8230;</dt>
+<dd> Set each listed Boolean option to the value <tt>1</tt>.</dd>
+<dt>o anyoption? &#8230;</dt>
+<dd> Print out the value of one or more options.</dd>
+<dt>o option=value &#8230;</dt>
+<dd> Set the value of one or more options. If the value has internal whitespace, it should be quoted. For example, you could set <tt>&quot;o pager=&quot;less -MQeicsNfr&quot;&quot;</tt> to call <code>less</code> with those specific options. You may use either single or double quotes, but if you do, you must escape any embedded instances of same sort of quote you began with, as well as any escaping any escapes that immediately precede that quote but which are not meant to escape the quote itself. In other words, you follow single-quoting rules irrespective of the quote; eg: <tt>&quot;o option='this isn\'t bad'&quot;</tt> or <tt>&quot;o option=&quot;She said, \&quot;Isn't it?\&quot;&quot;&quot;</tt>. </dd>
 <p> For historical reasons, the <tt>&quot;=value&quot;</tt> is optional, but defaults to 1 only where it is safe to do so&#8212;that is, mostly for Boolean options. It is always better to assign a specific value using <tt>&quot;=&quot;</tt>. The <tt>&quot;option&quot;</tt> can be abbreviated, but for clarity probably should not be. Several options can be set together. See &#8220;Configurable Options&#8221; for a list of these.</p>
-<dt>&lt; ?</p>
-<dd> List out all pre-prompt Perl command actions.</p>
-<dt>&lt; [ command ]</p>
-<dd> Set an action (Perl command) to happen before every debugger prompt. A multi-line command may be entered by backslashing the newlines.</p>
-<dt>&lt; *</p>
-<dd> Delete all pre-prompt Perl command actions.</p>
-<dt>&lt;&lt; command</p>
-<dd> Add an action (Perl command) to happen before every debugger prompt. A multi-line command may be entered by backwhacking the newlines.</p>
-<dt>&gt; ?</p>
-<dd> List out post-prompt Perl command actions.</p>
-<dt>&gt; command</p>
-<dd> Set an action (Perl command) to happen after the prompt when you&#8217;ve just given a command to return to executing the script. A multi-line command may be entered by backslashing the newlines (we bet you couldn&#8217;t have guessed this by now).</p>
-<dt>&gt; *</p>
-<dd> Delete all post-prompt Perl command actions.</p>
-<dt>&gt;&gt; command</p>
-<dd> Adds an action (Perl command) to happen after the prompt when you&#8217;ve just given a command to return to executing the script. A multi-line command may be entered by backslashing the newlines.</p>
-<dt>{ ?</p>
-<dd> List out pre-prompt debugger commands.</p>
-<dt>{ [ command ]</p>
-<dd> Set an action (debugger command) to happen before every debugger prompt. A multi-line command may be entered in the customary fashion. </p>
+<dt>&lt; ?</dt>
+<dd> List out all pre-prompt Perl command actions.</dd>
+<dt>&lt; [ command ]</dt>
+<dd> Set an action (Perl command) to happen before every debugger prompt. A multi-line command may be entered by backslashing the newlines.</dd>
+<dt>&lt; *</dt>
+<dd> Delete all pre-prompt Perl command actions.</dd>
+<dt>&lt;&lt; command</dt>
+<dd> Add an action (Perl command) to happen before every debugger prompt. A multi-line command may be entered by backwhacking the newlines.</dd>
+<dt>&gt; ?</dt>
+<dd> List out post-prompt Perl command actions.</dd>
+<dt>&gt; command</dt>
+<dd> Set an action (Perl command) to happen after the prompt when you&#8217;ve just given a command to return to executing the script. A multi-line command may be entered by backslashing the newlines (we bet you couldn&#8217;t have guessed this by now).</dd>
+<dt>&gt; *</dt>
+<dd> Delete all post-prompt Perl command actions.</dd>
+<dt>&gt;&gt; command</dt>
+<dd> Adds an action (Perl command) to happen after the prompt when you&#8217;ve just given a command to return to executing the script. A multi-line command may be entered by backslashing the newlines.</dd>
+<dt>{ ?</dt>
+<dd> List out pre-prompt debugger commands.</dd>
+<dt>{ [ command ]</dt>
+<dd> Set an action (debugger command) to happen before every debugger prompt. A multi-line command may be entered in the customary fashion. </dd>
 <p> Because this command is in some senses new, a warning is issued if you appear to have accidentally entered a block instead. If that&#8217;s what you mean to do, write it as with <tt>&quot;;{ ... }&quot;</tt> or even <tt>&quot;do { ... }&quot;</tt>.</p>
-<dt>{ *</p>
-<dd> Delete all pre-prompt debugger commands.</p>
-<dt>&#123;&#123; command</p>
-<dd> Add an action (debugger command) to happen before every debugger prompt. A multi-line command may be entered, if you can guess how: see above.</p>
-<dt>! number</p>
-<dd> Redo a previous command (defaults to the previous command).</p>
-<dt>! -number</p>
-<dd> Redo number&#8217;th previous command.</p>
-<dt>! pattern</p>
-<dd> Redo last command that started with pattern. See <tt>&quot;o recallCommand&quot;</tt>, too.</p>
-<dt>!! cmd</p>
-<dd> Run cmd in a subprocess (reads from <font SIZE="-1">DB::IN,</font> writes to <font SIZE="-1">DB::OUT</font>) See <tt>&quot;o shellBang&quot;</tt>, also. Note that the user&#8217;s current shell (well, their <tt>$ENV{SHELL}</tt> variable) will be used, which can interfere with proper interpretation of exit status or signal and coredump information.</p>
-<dt>source file</p>
-<dd> Read and execute debugger commands from <i>file</i>. <i>file</i> may itself contain <tt>&quot;source&quot;</tt> commands.</p>
-<dt>H -number</p>
-<dd> Display last n commands. Only commands longer than one character are listed. If <i>number</i> is omitted, list them all.</p>
-<dt>q or ^D</p>
-<dd> Quit. (&#8220;quit&#8221; doesn&#8217;t work for this, unless you&#8217;ve made an alias) This is the only supported way to exit the debugger, though typing <tt>&quot;exit&quot;</tt> twice might work. </p>
+<dt>{ *</dt>
+<dd> Delete all pre-prompt debugger commands.</dd>
+<dt>&#123;&#123; command</dt>
+<dd> Add an action (debugger command) to happen before every debugger prompt. A multi-line command may be entered, if you can guess how: see above.</dd>
+<dt>! number</dt>
+<dd> Redo a previous command (defaults to the previous command).</dd>
+<dt>! -number</dt>
+<dd> Redo number&#8217;th previous command.</dd>
+<dt>! pattern</dt>
+<dd> Redo last command that started with pattern. See <tt>&quot;o recallCommand&quot;</tt>, too.</dd>
+<dt>!! cmd</dt>
+<dd> Run cmd in a subprocess (reads from <font SIZE="-1">DB::IN,</font> writes to <font SIZE="-1">DB::OUT</font>) See <tt>&quot;o shellBang&quot;</tt>, also. Note that the user&#8217;s current shell (well, their <tt>$ENV{SHELL}</tt> variable) will be used, which can interfere with proper interpretation of exit status or signal and coredump information.</dd>
+<dt>source file</dt>
+<dd> Read and execute debugger commands from <i>file</i>. <i>file</i> may itself contain <tt>&quot;source&quot;</tt> commands.</dd>
+<dt>H -number</dt>
+<dd> Display last n commands. Only commands longer than one character are listed. If <i>number</i> is omitted, list them all.</dd>
+<dt>q or ^D</dt>
+<dd> Quit. (&#8220;quit&#8221; doesn&#8217;t work for this, unless you&#8217;ve made an alias) This is the only supported way to exit the debugger, though typing <tt>&quot;exit&quot;</tt> twice might work. </dd>
 <p> Set the <tt>&quot;inhibit_exit&quot;</tt> option to 0 if you want to be able to step off the end the script. You may also need to set <tt>$finished</tt> to 0 if you want to step through global destruction.</p>
-<dt>R</p>
-<dd> Restart the debugger by <tt>&quot;exec()&quot;</tt>ing a new session. We try to maintain your history across this, but internal settings and command-line options may be lost. </p>
+<dt>R</dt>
+<dd> Restart the debugger by <tt>&quot;exec()&quot;</tt>ing a new session. We try to maintain your history across this, but internal settings and command-line options may be lost. </dd>
 <p> The following setting are currently preserved: history, breakpoints, actions, debugger options, and the Perl command-line options <code>-w</code>, <code>-I</code>, and <code>-e</code>.</p>
-<dt>|dbcmd</p>
-<dd> Run the debugger command, piping <font SIZE="-1">DB::OUT</font> into your current pager.</p>
-<dt>||dbcmd</p>
-<dd> Same as <tt>&quot;|dbcmd&quot;</tt> but <font SIZE="-1">DB::OUT</font> is temporarily <tt>&quot;select&quot;</tt>ed as well.</p>
-<dt>= [alias value]</p>
-<dd> Define a command alias, like </p>
+<dt>|dbcmd</dt>
+<dd> Run the debugger command, piping <font SIZE="-1">DB::OUT</font> into your current pager.</dd>
+<dt>||dbcmd</dt>
+<dd> Same as <tt>&quot;|dbcmd&quot;</tt> but <font SIZE="-1">DB::OUT</font> is temporarily <tt>&quot;select&quot;</tt>ed as well.</dd>
+<dt>= [alias value]</dt>
+<dd> Define a command alias, like </dd>
 <pre>
     = quit q
 </pre>
 <p> or list current aliases.</p>
-<dt>command</p>
-<dd> Execute command as a Perl statement. A trailing semicolon will be supplied. If the Perl statement would otherwise be confused for a Perl debugger, use a leading semicolon, too.</p>
-<dt>m expr</p>
-<dd> List which methods may be called on the result of the evaluated expression. The expression may evaluated to a reference to a blessed object, or to a package name.</p>
-<dt>M</p>
-<dd> Display all loaded modules and their versions.</p>
-<dt>man [manpage]</p>
-<dd> Despite its name, this calls your system&#8217;s default documentation viewer on the given page, or on the viewer itself if <i>manpage</i> is omitted. If that viewer is <code>man</code>, the current <tt>&quot;Config&quot;</tt> information is used to invoke <code>man</code> using the proper <font SIZE="-1">MANPATH</font> or <code>-M</code> <i>manpath</i> option. Failed lookups of the form <tt>&quot;XXX&quot;</tt> that match known manpages of the form <i>perlXXX</i> will be retried. This lets you type <tt>&quot;man debug&quot;</tt> or <tt>&quot;man op&quot;</tt> from the debugger. </p>
+<dt>command</dt>
+<dd> Execute command as a Perl statement. A trailing semicolon will be supplied. If the Perl statement would otherwise be confused for a Perl debugger, use a leading semicolon, too.</dd>
+<dt>m expr</dt>
+<dd> List which methods may be called on the result of the evaluated expression. The expression may evaluated to a reference to a blessed object, or to a package name.</dd>
+<dt>M</dt>
+<dd> Display all loaded modules and their versions.</dd>
+<dt>man [manpage]</dt>
+<dd> Despite its name, this calls your system&#8217;s default documentation viewer on the given page, or on the viewer itself if <i>manpage</i> is omitted. If that viewer is <code>man</code>, the current <tt>&quot;Config&quot;</tt> information is used to invoke <code>man</code> using the proper <font SIZE="-1">MANPATH</font> or <code>-M</code> <i>manpath</i> option. Failed lookups of the form <tt>&quot;XXX&quot;</tt> that match known manpages of the form <i>perlXXX</i> will be retried. This lets you type <tt>&quot;man debug&quot;</tt> or <tt>&quot;man op&quot;</tt> from the debugger. </dd>
 <p> On systems traditionally bereft of a usable <code>man</code> command, the debugger invokes <code>perldoc</code>. Occasionally this determination is incorrect due to recalcitrant vendors or rather more felicitously, to enterprising users. If you fall into either category, just manually set the <tt>$DB::doccmd</tt> variable to whatever viewer to view the Perl documentation on your system. This may be set in an rc file, or through direct assignment. We&#8217;re still waiting for a working example of something along the lines of: </p>
 <pre>
     $DB::doccmd = 'netscape -remote <a rel="nofollow" href="http://something.here/';">http://something.here/';</a>
@@ -252,57 +252,57 @@ description: "perldebug – Perl debugging"
 <h3>Configurable Options</h3>
 <p> The debugger has numerous options settable using the <tt>&quot;o&quot;</tt> command, either interactively or from the environment or an rc file. (./.perldb or ~/.perldb under Unix.)</p>
 <dl>
-<dt>&quot;recallCommand&quot;, &quot;ShellBang&quot;</p>
-<dd> The characters used to recall a command or spawn a shell. By default, both are set to <tt>&quot;!&quot;</tt>, which is unfortunate.</p>
-<dt>&quot;pager&quot;</p>
-<dd> Program to use for output of pager-piped commands (those beginning with a <tt>&quot;|&quot;</tt> character.) By default, <tt>$ENV{PAGER}</tt> will be used. Because the debugger uses your current terminal characteristics for bold and underlining, if the chosen pager does not pass escape sequences through unchanged, the output of some debugger commands will not be readable when sent through the pager.</p>
-<dt>&quot;tkRunning&quot;</p>
-<dd> Run Tk while prompting (with ReadLine).</p>
-<dt>&quot;signalLevel&quot;, &quot;warnLevel&quot;, &quot;dieLevel&quot;</p>
-<dd> Level of verbosity. By default, the debugger leaves your exceptions and warnings alone, because altering them can break correctly running programs. It will attempt to print a message when uncaught <font SIZE="-1">INT, BUS,</font> or <font SIZE="-1">SEGV</font> signals arrive. (But see the mention of signals in &#8220;<font SIZE="-1">BUGS&#8221;</font> below.) </p>
+<dt>&quot;recallCommand&quot;, &quot;ShellBang&quot;</dt>
+<dd> The characters used to recall a command or spawn a shell. By default, both are set to <tt>&quot;!&quot;</tt>, which is unfortunate.</dd>
+<dt>&quot;pager&quot;</dt>
+<dd> Program to use for output of pager-piped commands (those beginning with a <tt>&quot;|&quot;</tt> character.) By default, <tt>$ENV{PAGER}</tt> will be used. Because the debugger uses your current terminal characteristics for bold and underlining, if the chosen pager does not pass escape sequences through unchanged, the output of some debugger commands will not be readable when sent through the pager.</dd>
+<dt>&quot;tkRunning&quot;</dt>
+<dd> Run Tk while prompting (with ReadLine).</dd>
+<dt>&quot;signalLevel&quot;, &quot;warnLevel&quot;, &quot;dieLevel&quot;</dt>
+<dd> Level of verbosity. By default, the debugger leaves your exceptions and warnings alone, because altering them can break correctly running programs. It will attempt to print a message when uncaught <font SIZE="-1">INT, BUS,</font> or <font SIZE="-1">SEGV</font> signals arrive. (But see the mention of signals in &#8220;<font SIZE="-1">BUGS&#8221;</font> below.) </dd>
 <p> To disable this default safe mode, set these values to something higher than 0. At a level of 1, you get backtraces upon receiving any kind of warning (this is often annoying) or exception (this is often valuable). Unfortunately, the debugger cannot discern fatal exceptions from non-fatal ones. If <tt>&quot;dieLevel&quot;</tt> is even 1, then your non-fatal exceptions are also traced and unceremoniously altered if they came from <tt>&quot;eval'ed&quot;</tt> strings or from any kind of <tt>&quot;eval&quot;</tt> within modules you&#8217;re attempting to load. If <tt>&quot;dieLevel&quot;</tt> is 2, the debugger doesn&#8217;t care where they came from: It usurps your exception handler and prints out a trace, then modifies all exceptions with its own embellishments. This may perhaps be useful for some tracing purposes, but tends to hopelessly destroy any program that takes its exception handling seriously.</p>
-<dt>&quot;AutoTrace&quot;</p>
-<dd> Trace mode (similar to <tt>&quot;t&quot;</tt> command, but can be put into <tt>&quot;PERLDB_OPTS&quot;</tt>).</p>
-<dt>&quot;LineInfo&quot;</p>
-<dd> File or pipe to print line number info to. If it is a pipe (say, <tt>&quot;|visual_perl_db&quot;</tt>), then a short message is used. This is the mechanism used to interact with a slave editor or visual debugger, such as the special <tt>&quot;vi&quot;</tt> or <tt>&quot;emacs&quot;</tt> hooks, or the <tt>&quot;ddd&quot;</tt> graphical debugger.</p>
-<dt>&quot;inhibit_exit&quot;</p>
-<dd> If 0, allows <i>stepping off</i> the end of the script.</p>
-<dt>&quot;PrintRet&quot;</p>
-<dd> Print return value after <tt>&quot;r&quot;</tt> command if set (default).</p>
-<dt>&quot;ornaments&quot;</p>
-<dd> Affects screen appearance of the command line (see Term::ReadLine). There is currently no way to disable these, which can render some output illegible on some displays, or with some pagers. This is considered a bug.</p>
-<dt>&quot;frame&quot;</p>
-<dd> Affects the printing of messages upon entry and exit from subroutines. If <tt>&quot;frame &amp; 2&quot;</tt> is false, messages are printed on entry only. (Printing on exit might be useful if interspersed with other messages.) </p>
+<dt>&quot;AutoTrace&quot;</dt>
+<dd> Trace mode (similar to <tt>&quot;t&quot;</tt> command, but can be put into <tt>&quot;PERLDB_OPTS&quot;</tt>).</dd>
+<dt>&quot;LineInfo&quot;</dt>
+<dd> File or pipe to print line number info to. If it is a pipe (say, <tt>&quot;|visual_perl_db&quot;</tt>), then a short message is used. This is the mechanism used to interact with a slave editor or visual debugger, such as the special <tt>&quot;vi&quot;</tt> or <tt>&quot;emacs&quot;</tt> hooks, or the <tt>&quot;ddd&quot;</tt> graphical debugger.</dd>
+<dt>&quot;inhibit_exit&quot;</dt>
+<dd> If 0, allows <i>stepping off</i> the end of the script.</dd>
+<dt>&quot;PrintRet&quot;</dt>
+<dd> Print return value after <tt>&quot;r&quot;</tt> command if set (default).</dd>
+<dt>&quot;ornaments&quot;</dt>
+<dd> Affects screen appearance of the command line (see Term::ReadLine). There is currently no way to disable these, which can render some output illegible on some displays, or with some pagers. This is considered a bug.</dd>
+<dt>&quot;frame&quot;</dt>
+<dd> Affects the printing of messages upon entry and exit from subroutines. If <tt>&quot;frame &amp; 2&quot;</tt> is false, messages are printed on entry only. (Printing on exit might be useful if interspersed with other messages.) </dd>
 <p> If <tt>&quot;frame &amp; 4&quot;</tt>, arguments to functions are printed, plus context and caller info. If <tt>&quot;frame &amp; 8&quot;</tt>, overloaded <tt>&quot;stringify&quot;</tt> and <tt>&quot;tie&quot;</tt>d <tt>&quot;FETCH&quot;</tt> is enabled on the printed arguments. If <tt>&quot;frame &amp; 16&quot;</tt>, the return value from the subroutine is printed. </p>
 <p> The length at which the argument list is truncated is governed by the next option:</p>
-<dt>&quot;maxTraceLen&quot;</p>
-<dd> Length to truncate the argument list when the <tt>&quot;frame&quot;</tt> option&#8217;s bit 4 is set.</p>
-<dt>&quot;windowSize&quot;</p>
-<dd> Change the size of code list window (default is 10 lines).</dl>
+<dt>&quot;maxTraceLen&quot;</dt>
+<dd> Length to truncate the argument list when the <tt>&quot;frame&quot;</tt> option&#8217;s bit 4 is set.</dd>
+<dt>&quot;windowSize&quot;</dt>
+<dd> Change the size of code list window (default is 10 lines).</dd></dl>
 <p> The following options affect what happens with <tt>&quot;V&quot;</tt>, <tt>&quot;X&quot;</tt>, and <tt>&quot;x&quot;</tt> commands:</p>
 <dl>
-<dt>&quot;arrayDepth&quot;, &quot;hashDepth&quot;</p>
-<dd> Print only first N elements (&#8221; for all).</p>
-<dt>&quot;dumpDepth&quot;</p>
-<dd> Limit recursion depth to N levels when dumping structures. Negative values are interpreted as infinity. Default: infinity.</p>
-<dt>&quot;compactDump&quot;, &quot;veryCompact&quot;</p>
-<dd> Change the style of array and hash output. If <tt>&quot;compactDump&quot;</tt>, short array may be printed on one line.</p>
-<dt>&quot;globPrint&quot;</p>
-<dd> Whether to print contents of globs.</p>
-<dt>&quot;DumpDBFiles&quot;</p>
-<dd> Dump arrays holding debugged files.</p>
-<dt>&quot;DumpPackages&quot;</p>
-<dd> Dump symbol tables of packages.</p>
-<dt>&quot;DumpReused&quot;</p>
-<dd> Dump contents of &#8220;reused&#8221; addresses.</p>
-<dt>&quot;quote&quot;, &quot;HighBit&quot;, &quot;undefPrint&quot;</p>
-<dd> Change the style of string dump. The default value for <tt>&quot;quote&quot;</tt> is <tt>&quot;auto&quot;</tt>; one can enable double-quotish or single-quotish format by setting it to <tt>&quot;&quot;&quot;</tt> or <tt>&quot;'&quot;</tt>, respectively. By default, characters with their high bit set are printed verbatim.</p>
-<dt>&quot;UsageOnly&quot;</p>
-<dd> Rudimentary per-package memory usage dump. Calculates total size of strings found in variables in the package. This does not include lexicals in a module&#8217;s file scope, or lost in closures.</p>
-<dt>&quot;HistFile&quot;</p>
-<dd> The path of the file from which the history (assuming a usable Term::ReadLine backend) will be read on the debugger&#8217;s startup, and to which it will be saved on shutdown (for persistence across sessions). Similar in concept to Bash&#8217;s <tt>&quot;.bash_history&quot;</tt> file.</p>
-<dt>&quot;HistSize&quot;</p>
-<dd> The count of the saved lines in the history (assuming <tt>&quot;HistFile&quot;</tt> above).</dl>
+<dt>&quot;arrayDepth&quot;, &quot;hashDepth&quot;</dt>
+<dd> Print only first N elements (&#8221; for all).</dd>
+<dt>&quot;dumpDepth&quot;</dt>
+<dd> Limit recursion depth to N levels when dumping structures. Negative values are interpreted as infinity. Default: infinity.</dd>
+<dt>&quot;compactDump&quot;, &quot;veryCompact&quot;</dt>
+<dd> Change the style of array and hash output. If <tt>&quot;compactDump&quot;</tt>, short array may be printed on one line.</dd>
+<dt>&quot;globPrint&quot;</dt>
+<dd> Whether to print contents of globs.</dd>
+<dt>&quot;DumpDBFiles&quot;</dt>
+<dd> Dump arrays holding debugged files.</dd>
+<dt>&quot;DumpPackages&quot;</dt>
+<dd> Dump symbol tables of packages.</dd>
+<dt>&quot;DumpReused&quot;</dt>
+<dd> Dump contents of &#8220;reused&#8221; addresses.</dd>
+<dt>&quot;quote&quot;, &quot;HighBit&quot;, &quot;undefPrint&quot;</dt>
+<dd> Change the style of string dump. The default value for <tt>&quot;quote&quot;</tt> is <tt>&quot;auto&quot;</tt>; one can enable double-quotish or single-quotish format by setting it to <tt>&quot;&quot;&quot;</tt> or <tt>&quot;'&quot;</tt>, respectively. By default, characters with their high bit set are printed verbatim.</dd>
+<dt>&quot;UsageOnly&quot;</dt>
+<dd> Rudimentary per-package memory usage dump. Calculates total size of strings found in variables in the package. This does not include lexicals in a module&#8217;s file scope, or lost in closures.</dd>
+<dt>&quot;HistFile&quot;</dt>
+<dd> The path of the file from which the history (assuming a usable Term::ReadLine backend) will be read on the debugger&#8217;s startup, and to which it will be saved on shutdown (for persistence across sessions). Similar in concept to Bash&#8217;s <tt>&quot;.bash_history&quot;</tt> file.</dd>
+<dt>&quot;HistSize&quot;</dt>
+<dd> The count of the saved lines in the history (assuming <tt>&quot;HistFile&quot;</tt> above).</dd></dl>
 <p> After the rc file is read, the debugger reads the <tt>$ENV{PERLDB_OPTS}</tt> environment variable and parses this as the remainder of a &#8220;O &#8230;&#8221; line as one might enter at the debugger prompt. You may place the initialization options <tt>&quot;TTY&quot;</tt>, <tt>&quot;noTTY&quot;</tt>, <tt>&quot;ReadLine&quot;</tt>, and <tt>&quot;NonStop&quot;</tt> there. </p>
 <p> If your rc file contains: </p>
 <pre>
@@ -310,15 +310,15 @@ description: "perldebug – Perl debugging"
 </pre>
 <p> then your script will run without human intervention, putting trace information into the file <i>db.out</i>. (If you interrupt it, you&#8217;d better reset <tt>&quot;LineInfo&quot;</tt> to <i>/dev/tty</i> if you expect to see anything.)</p>
 <dl>
-<dt>&quot;TTY&quot;</p>
-<dd> The <font SIZE="-1">TTY</font> to use for debugging I/O.</p>
-<dt>&quot;noTTY&quot;</p>
-<dd> If set, the debugger goes into <tt>&quot;NonStop&quot;</tt> mode and will not connect to a <font SIZE="-1">TTY.</font> If interrupted (or if control goes to the debugger via explicit setting of <tt>$DB::signal</tt> or <tt>$DB::single</tt> from the Perl script), it connects to a <font SIZE="-1">TTY</font> specified in the <tt>&quot;TTY&quot;</tt> option at startup, or to a tty found at runtime using the <tt>&quot;Term::Rendezvous&quot;</tt> module of your choice. </p>
+<dt>&quot;TTY&quot;</dt>
+<dd> The <font SIZE="-1">TTY</font> to use for debugging I/O.</dd>
+<dt>&quot;noTTY&quot;</dt>
+<dd> If set, the debugger goes into <tt>&quot;NonStop&quot;</tt> mode and will not connect to a <font SIZE="-1">TTY.</font> If interrupted (or if control goes to the debugger via explicit setting of <tt>$DB::signal</tt> or <tt>$DB::single</tt> from the Perl script), it connects to a <font SIZE="-1">TTY</font> specified in the <tt>&quot;TTY&quot;</tt> option at startup, or to a tty found at runtime using the <tt>&quot;Term::Rendezvous&quot;</tt> module of your choice. </dd>
 <p> This module should implement a method named <tt>&quot;new&quot;</tt> that returns an object with two methods: <tt>&quot;IN&quot;</tt> and <tt>&quot;OUT&quot;</tt>. These should return filehandles to use for debugging input and output correspondingly. The <tt>&quot;new&quot;</tt> method should inspect an argument containing the value of <tt>$ENV{PERLDB_NOTTY}</tt> at startup, or <tt>&quot;$ENV{HOME}/.perldbtty$$&quot;</tt> otherwise. This file is not inspected for proper ownership, so security hazards are theoretically possible.</p>
-<dt>&quot;ReadLine&quot;</p>
-<dd> If false, readline support in the debugger is disabled in order to debug applications that themselves use ReadLine.</p>
-<dt>&quot;NonStop&quot;</p>
-<dd> If set, the debugger goes into non-interactive mode until interrupted, or programmatically by setting <tt>$DB::signal</tt> or <tt>$DB::single</tt>.</dl>
+<dt>&quot;ReadLine&quot;</dt>
+<dd> If false, readline support in the debugger is disabled in order to debug applications that themselves use ReadLine.</dd>
+<dt>&quot;NonStop&quot;</dt>
+<dd> If set, the debugger goes into non-interactive mode until interrupted, or programmatically by setting <tt>$DB::signal</tt> or <tt>$DB::single</tt>.</dd></dl>
 <p> Here&#8217;s an example of using the <tt>$ENV{PERLDB_OPTS}</tt> variable: </p>
 <pre>
     $ PERLDB_OPTS=&quot;NonStop frame=2&quot; perl -d myprogram
@@ -341,8 +341,8 @@ description: "perldebug – Perl debugging"
 <p> See &#8220;Debugger Internals&#8221; in perldebguts for details.</p>
 <h3>Debugger Input/Output</h3>
 <dl>
-<dt>Prompt</p>
-<dd> The debugger prompt is something like </p>
+<dt>Prompt</dt>
+<dd> The debugger prompt is something like </dd>
 <pre>
     DB&lt;8&gt;
 </pre>
@@ -351,8 +351,8 @@ description: "perldebug – Perl debugging"
     DB&lt;&lt;17&gt;&gt;
 </pre>
 <p> where that number is the command number, and which you&#8217;d use to access with the built-in <code>csh</code>-like history mechanism. For example, <tt>&quot;!17&quot;</tt> would repeat command number 17. The depth of the angle brackets indicates the nesting depth of the debugger. You could get more than one set of brackets, for example, if you&#8217;d already at a breakpoint and then printed the result of a function call that itself has a breakpoint, or you step into an expression via <tt>&quot;s/n/t expression&quot;</tt> command.</p>
-<dt>Multiline commands</p>
-<dd> If you want to enter a multi-line command, such as a subroutine definition with several statements or a format, escape the newline that would normally end the debugger command with a backslash. Here&#8217;s an example: </p>
+<dt>Multiline commands</dt>
+<dd> If you want to enter a multi-line command, such as a subroutine definition with several statements or a format, escape the newline that would normally end the debugger command with a backslash. Here&#8217;s an example: </dd>
 <pre><code>
 DB&lt;1&gt; for (1..4)
 {
@@ -367,8 +367,8 @@ ok
             ok
 </code></pre>
 <p> Note that this business of escaping a newline is specific to interactive commands typed into the debugger.</p>
-<dt>Stack backtrace</p>
-<dd> Here&#8217;s an example of what a stack backtrace via <tt>&quot;T&quot;</tt> command might look like: </p>
+<dt>Stack backtrace</dt>
+<dd> Here&#8217;s an example of what a stack backtrace via <tt>&quot;T&quot;</tt> command might look like: </dd>
 <pre>
  $ = main::infested called from file 'Ambulation.pm' line 10
  @ = Ambulation::legs(1, 2, 3, 4) called from file 'camel_flea'
@@ -378,8 +378,8 @@ ok
 </pre>
 <p> The left-hand character up there indicates the context in which the function was called, with <tt>&quot;$&quot;</tt> and <tt>&quot;@&quot;</tt> meaning scalar or list contexts respectively, and <tt>&quot;.&quot;</tt> meaning void context (which is actually a sort of scalar context). The display above says that you were in the function <tt>&quot;main::infested&quot;</tt> when you ran the stack dump, and that it was called in scalar context from line 10 of the file <i>Ambulation.pm</i>, but without any arguments at all, meaning it was called as <tt>&amp;infested</tt>. The next stack frame shows that the function <tt>&quot;Ambulation::legs&quot;</tt> was called in list context from the <i>camel_flea</i> file with four arguments. The last stack frame shows that <tt>&quot;main::pests&quot;</tt> was called in scalar context, also from <i>camel_flea</i>, but from line 4. </p>
 <p> If you execute the <tt>&quot;T&quot;</tt> command from inside an active <tt>&quot;use&quot;</tt> statement, the backtrace will contain both a <tt>&quot;require&quot;</tt> frame and an <tt>&quot;eval&quot;</tt> frame.</p>
-<dt>Line Listing Format</p>
-<dd> This shows the sorts of output the <tt>&quot;l&quot;</tt> command can produce: </p>
+<dt>Line Listing Format</dt>
+<dd> This shows the sorts of output the <tt>&quot;l&quot;</tt> command can produce: </dd>
 <p>DB &lt;&lt; 13 &gt;&gt; l 101 : @i<br />
 {<br />
     @i<br />
@@ -398,8 +398,8 @@ ok
     110 : % isa = ($pack, 1);</p>
 <p> Breakable lines are marked with <tt>&quot;:&quot;</tt>. Lines with breakpoints are marked by <tt>&quot;b&quot;</tt> and those with actions by <tt>&quot;a&quot;</tt>. The line that&#8217;s about to be executed is marked by <tt>&quot;==&gt;&quot;</tt>. </p>
 <p> Please be aware that code in debugger listings may not look the same as your original source code. Line directives and external source filters can alter the code before Perl sees it, causing code to move from its original positions or take on entirely different forms.</p>
-<dt>Frame listing</p>
-<dd> When the <tt>&quot;frame&quot;</tt> option is set, the debugger would print entered (and optionally exited) subroutines in different styles. See perldebguts for incredibly long examples of these.</dl>
+<dt>Frame listing</dt>
+<dd> When the <tt>&quot;frame&quot;</tt> option is set, the debugger would print entered (and optionally exited) subroutines in different styles. See perldebguts for incredibly long examples of these.</dd></dl>
 <h3>Debugging Compile-Time Statements</h3>
 <p> If you have compile-time executable statements (such as code within <font SIZE="-1">BEGIN, UNITCHECK</font> and <font SIZE="-1">CHECK</font> blocks or <tt>&quot;use&quot;</tt> statements), these will <i>not</i> be stopped by debugger, although <tt>&quot;require&quot;</tt>s and <font SIZE="-1">INIT</font> blocks will, and compile-time statements can be traced with the <tt>&quot;AutoTrace&quot;</tt> option set in <tt>&quot;PERLDB_OPTS&quot;</tt>). From your own Perl code, however, you can transfer control back to the debugger using the following statement, which is harmless if the debugger is not running: </p>
 <pre>

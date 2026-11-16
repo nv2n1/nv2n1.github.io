@@ -30,13 +30,13 @@ description: "buffindexed.conf – Configuration for the buffindexed overview me
 <h2>Creating Buffers</h2>
 <p>There are two methods to create a new buffindexed buffer:</p>
 <dl>
-<dt>1.</p>
-<dd>Create a large file on top of a regular file system. The easiest way to do this is probably with <i><a href="/docs/linux/man/1-dd/">dd</a></i>(1), using a command like: </p>
+<dt>1.</dt>
+<dd>Create a large file on top of a regular file system. The easiest way to do this is probably with <i><a href="/docs/linux/man/1-dd/">dd</a></i>(1), using a command like: </dd>
 <pre> dd if=/dev/zero of=/path/to/cycbuff bs=1024 count=&lt;size&gt;</pre>
 <p>where &lt;size&gt; is the size from the relevant line in <i>buffindexed.conf</i>. </p>
 <p> This is the simplest method, but has the disadvantage that very large files on regular file systems can be fairly slow to access, particularly at the end of the file, and <font SIZE="-1">INN</font> incurs unnecessary file system overhead when accessing the buffer.</p>
-<dt>2.</p>
-<dd>Use block devices directly. If your operating system allows you to call <i>mmap()</i> on block devices (Solaris and recent versions of Linux do, FreeBSD at last report does not), this method can avoid all of the native file system overhead. Note, however, that Solaris has problems with byte range locking on block devices, and therefore this method should not be used on Solaris. </p>
+<dt>2.</dt>
+<dd>Use block devices directly. If your operating system allows you to call <i>mmap()</i> on block devices (Solaris and recent versions of Linux do, FreeBSD at last report does not), this method can avoid all of the native file system overhead. Note, however, that Solaris has problems with byte range locking on block devices, and therefore this method should not be used on Solaris. </dd>
 <p> Partition the disk. If you&#8217;re using Solaris, set up your partitions to avoid the first cylinder of the disk (or otherwise the buffindexed header will overwrite the disk partition table and render the buffers inaccessible). Then, create device files for each block device you&#8217;re going to use. </p>
 <p> It&#8217;s not recommended to use the block device files in <i>/dev</i>, since the news system doesn&#8217;t have permission to write to them and changing the permissions of the system device files may affect something else. Instead, use <i><a href="/docs/linux/man/1-mknod/">mknod</a></i>(1) to create a new set of block devices (in somewhere like <i>pathspool</i>/overview that&#8217;s only writable by the news user). To do this, run <tt>&quot;ls -Ll&quot;</tt> on the devices in <i>/dev</i> that correspond to the block devices that you want to use. The major and minor device numbers are in the fifth and sixth columns (right before the date), respectively. Then run mknod like: </p>
 <pre> mknod &lt;filename&gt; b &lt;major&gt; &lt;minor&gt;</pre>
@@ -56,3 +56,4 @@ description: "buffindexed.conf – Configuration for the buffindexed overview me
 <p> $Id: buffindexed.conf.pod 8195 2008-11-29 11:07:02Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-expireover/">expireover</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-inndf/">inndf</a></i>(8), <i><a href="/docs/linux/man/8-makehistory/">makehistory</a></i>(8). </p>
+</p>

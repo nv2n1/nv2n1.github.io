@@ -19,19 +19,19 @@ description: "nwauth – Verify username/password"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> <code>-h</code> is used to print a short help text.</dl>
+</dt><dd> <code>-h</code> is used to print a short help text.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> <code>server</code> is the name of the server you want to use.</dl>
+</dt><dd> <code>server</code> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user name</i></p>
 <dl>
 <dt>
-<dd> If the user name your NetWare administrator gave to you differs from your unix user-id, you should use <code>-U</code> to tell the server about your NetWare user name.</dl>
+</dt><dd> If the user name your NetWare administrator gave to you differs from your unix user-id, you should use <code>-U</code> to tell the server about your NetWare user name.</dd></dl>
 <p> <code>-D</code></p>
 <dl>
 <dt>
-<dd> <code>nwauth</code> says that your password is correct if you have existing connection to <i>server</i> with name <i>user name</i>. This is handy for some shell scripts, but it is unacceptable for authorization modules, such as PAM, PHP or Apache. It was pointed to me that this behavior was not well known, and there exist at least one PAM module which does not know that (this module is not part of ncpfs; you should use PAM module which comes with ncpfs instead anyway).</dl>
+</dt><dd> <code>nwauth</code> says that your password is correct if you have existing connection to <i>server</i> with name <i>user name</i>. This is handy for some shell scripts, but it is unacceptable for authorization modules, such as PAM, PHP or Apache. It was pointed to me that this behavior was not well known, and there exist at least one PAM module which does not know that (this module is not part of ncpfs; you should use PAM module which comes with ncpfs instead anyway).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-nwclient/">nwclient</a>(5)</code> </p>
 <h2>CREDITS</h2>

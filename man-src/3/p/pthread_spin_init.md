@@ -10,20 +10,19 @@ description: "pthread_spin_init, pthread_spin_destroy – initialize or destroy 
 <p>pthread_spin_init, pthread_spin_destroy &#8211; initialize or destroy a spin lock</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_spin_init(pthread_spinlock_t *lock, int pshared);
 int pthread_spin_destroy(pthread_spinlock_t *lock);</code></pre>
 <p> Compile and link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_spin_init</code>(), <code>pthread_spin_destroy</code>(): </p>
 <dl>
-<dd>_POSIX_C_SOURCE &gt;= 200112L</dl>
+<dd>_POSIX_C_SOURCE &gt;= 200112L</dd></dl>
 <h2>Description</h2>
 <p><i>General note</i>: Most programs should use mutexes instead of spin locks. Spin locks are primarily useful in conjunction with real-time scheduling policies. See NOTES. </p>
 <p> The <code>pthread_spin_init</code>() function allocates any resources required for the use of the spin lock referred to by <i>lock</i> and initializes the lock to be in the unlocked state. The <i>pshared</i> argument must have one of the following values:</p>
 <dl>
-<dt><code>PTHREAD_PROCESS_PRIVATE</code></p>
-<dd>The spin lock is to be operated on only by threads in the same process as the thread that calls <code>pthread_spin_init</code>(). (Attempting to share the spin lock between processes results in undefined behavior.)</p>
-<dt><code>PTHREAD_PROCESS_SHARED</code></p>
-<dd>The spin lock may be operated on by any thread in any process that has access to the memory containing the lock (i.e., the lock may be in a shared memory object that is shared among multiple processes).</dl>
+<dt><code>PTHREAD_PROCESS_PRIVATE</code></dt>
+<dd>The spin lock is to be operated on only by threads in the same process as the thread that calls <code>pthread_spin_init</code>(). (Attempting to share the spin lock between processes results in undefined behavior.)</dd>
+<dt><code>PTHREAD_PROCESS_SHARED</code></dt>
+<dd>The spin lock may be operated on by any thread in any process that has access to the memory containing the lock (i.e., the lock may be in a shared memory object that is shared among multiple processes).</dd></dl>
 <p> Calling <code>pthread_spin_init</code>() on a spin lock that has already been initialized results in undefined behavior. </p>
 <p> The <code>pthread_spin_destroy</code>() function destroys a previously initialized spin lock, freeing any resources that were allocated for that lock. Destroying a spin lock that has not been previously been initialized or destroying a spin lock while another thread holds the lock results in undefined behavior. </p>
 <p> Once a spin lock has been destroyed, performing any operation on the lock other than once more initializing it with <code>pthread_spin_init</code>() results in undefined behavior. </p>
@@ -33,10 +32,10 @@ int pthread_spin_destroy(pthread_spinlock_t *lock);</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_spin_init</code>() may fail with the following errors:</p>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd>The system has insufficient resources to initialize a new spin lock.</p>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory to initialize the spin lock.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd>The system has insufficient resources to initialize a new spin lock.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory to initialize the spin lock.</dd></dl>
 <h2>Versions</h2>
 <p>These functions first appeared in glibc in version 2.2.</p>
 <h2>Conforming To</h2>

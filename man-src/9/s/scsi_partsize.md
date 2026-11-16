@@ -14,19 +14,19 @@ description: "scsi_partsize – Parse cylinders/heads/sectors from PC partition 
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>partition table, see <code>scsi_bios_ptable</code></dl>
+</dd><dd>partition table, see <code>scsi_bios_ptable</code></dd></dl>
 <p> <i>capacity</i></p>
 <dl>
-<dd>size of the disk in sectors</dl>
+<dd>size of the disk in sectors</dd></dl>
 <p> <i>cyls</i></p>
 <dl>
-<dd>put cylinders here</dl>
+<dd>put cylinders here</dd></dl>
 <p> <i>hds</i></p>
 <dl>
-<dd>put heads here</dl>
+<dd>put heads here</dd></dl>
 <p> <i>secs</i></p>
 <dl>
-<dd>put sectors here</dl>
+<dd>put sectors here</dd></dl>
 <h2>Description</h2>
 <p>determine the BIOS mapping/geometry used to create the partition table, storing the results in *cyls, *hds, and *secs</p>
 <h2>Return</h2>
@@ -34,8 +34,8 @@ description: "scsi_partsize – Parse cylinders/heads/sectors from PC partition 
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

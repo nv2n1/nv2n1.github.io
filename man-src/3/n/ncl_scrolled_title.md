@@ -12,30 +12,30 @@ Scrolled_title - Creates movie titles. The titles can be scrolled, faded in, and
 
 The package Scrolled_title has eight user entry points, as follows: FTITLE, STITLE, SLGETI, SLGETR, SLOGAP, SLSETI, SLSETR, and SLRSET.
 <dl><dt>FTITLE
-<dd>stands for &quot;fixed titles&quot; and is used when the following conditions are met:
-<dl><dd><dl><dt>&bull;
-<dd>Each group of text lines is to fit on one frame (no scrolling).
-<dt>&bull;
-<dd>All test lines in a group are to be written in the same color.
-<dt>&bull;
-<dd>Vertical spacing of text lines is to be done automatically.
-<dt>&bull;
-<dd>Text lines are to be centered horizontally.
-<dt>&bull;
-<dd>There are to be no more than 80 characters per text line (including Plotchar &quot;function codes&quot;).
-<dt>&bull;
-<dd>In production mode, blank frames are to be generated before and after each group of title frames.
-<dt>&bull;
-<dd>No more than 120 text lines are to be displayed on a single frame.</dl></dl><dt>STITLE
-<dd>stands for &quot;scrolled titles&quot; and is used when the above conditions are not met.
-<dt>SLOGAP
-<dd>is used to generate blank-frame gaps in a manner consistent with FTITLE.
-<dt>SLSETI and SLSETR
-<dd>are used to set the values of &quot;internal parameters&quot; whose values affect the behavior of FTITLE and/or STITLE.
-<dt>SLGETI and SLGETR
-<dd>are used to retrieve the current values of internal parameters.
-<dt>SLRSET
-<dd>is ued to reset the values of all internal parameters of STITLE to the original defaults.</dl>
+</dt><dd>stands for &quot;fixed titles&quot; and is used when the following conditions are met:
+</dd><dl><dd></dd><dl><dt>&bull;
+</dt><dd>Each group of text lines is to fit on one frame (no scrolling).
+</dd><dt>&bull;
+</dt><dd>All test lines in a group are to be written in the same color.
+</dd><dt>&bull;
+</dt><dd>Vertical spacing of text lines is to be done automatically.
+</dd><dt>&bull;
+</dt><dd>Text lines are to be centered horizontally.
+</dd><dt>&bull;
+</dt><dd>There are to be no more than 80 characters per text line (including Plotchar &quot;function codes&quot;).
+</dd><dt>&bull;
+</dt><dd>In production mode, blank frames are to be generated before and after each group of title frames.
+</dd><dt>&bull;
+</dt><dd>No more than 120 text lines are to be displayed on a single frame.</dd></dl></dl><dt>STITLE
+</dt><dd>stands for &quot;scrolled titles&quot; and is used when the above conditions are not met.
+</dd><dt>SLOGAP
+</dt><dd>is used to generate blank-frame gaps in a manner consistent with FTITLE.
+</dd><dt>SLSETI and SLSETR
+</dt><dd>are used to set the values of &quot;internal parameters&quot; whose values affect the behavior of FTITLE and/or STITLE.
+</dd><dt>SLGETI and SLGETR
+</dt><dd>are used to retrieve the current values of internal parameters.
+</dd><dt>SLRSET
+</dt><dd>is ued to reset the values of all internal parameters of STITLE to the original defaults.</dd></dl>
 
 <h2>C-Binding Synopsis</h2>
 

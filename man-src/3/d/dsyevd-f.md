@@ -29,10 +29,10 @@ description: "dsyevd.f –"
  without guard digits, but we know of none.
  Because of large use of BLAS of level 3, DSYEVD needs N**2 more
  workspace than DSYEVX.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBZ</i> </p>
+<dd><i>JOBZ</i> </dd>
 <pre> JOBZ is CHARACTER*1
  = 'N': Compute eigenvalues only;
  = 'V': Compute eigenvalues and eigenvectors.</pre>
@@ -105,19 +105,20 @@ description: "dsyevd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA </p>
+<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Modified by Francoise Tisseur, University of Tennessee&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Modified description of INFO. Sven, 16 Feb 05.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 185 of file dsyevd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

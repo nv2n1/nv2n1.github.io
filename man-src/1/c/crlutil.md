@@ -11,9 +11,9 @@ description: "crlutil – List, generate, modify, or delete CRLs within the NSS 
 <p> crlutil &#8211; List, generate, modify, or delete CRLs within the NSS security database file(s) and list, create, modify or delete certificates entries in a particular CRL. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>crlutil</code> [<i>options</i>] [[<i>arguments</i>]]</dl>
+<dt> <code>crlutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></p>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
 <h2>DESCRIPTION</h2>
 <p> The Certificate Revocation List (CRL) Management Tool, <code>crlutil</code>, is a command-line utility that can list, generate, modify, or delete CRLs within the NSS security database file(s) and list, create, modify or delete certificates entries in a particular CRL. </p>
 <p> The key and certificate management process generally begins with creating keys in the key database, then generating and managing certificates in the certificate database(see certutil tool) and continues with certificates expiration or revocation. </p>
@@ -27,90 +27,90 @@ description: "crlutil – List, generate, modify, or delete CRLs within the NSS 
 <p> -D</p>
 <dl>
 <dt>
-<dd> Delete Certificate Revocation List from cert database.</dl>
+</dt><dd> Delete Certificate Revocation List from cert database.</dd></dl>
 <p> -E</p>
 <dl>
 <dt>
-<dd> Erase all CRLs of specified type from the cert database</dl>
+</dt><dd> Erase all CRLs of specified type from the cert database</dd></dl>
 <p> -G</p>
 <dl>
 <dt>
-<dd> Create new Certificate Revocation List (CRL).</dl>
+</dt><dd> Create new Certificate Revocation List (CRL).</dd></dl>
 <p> -I</p>
 <dl>
 <dt>
-<dd> Import a CRL to the cert database</dl>
+</dt><dd> Import a CRL to the cert database</dd></dl>
 <p> -L</p>
 <dl>
 <dt>
-<dd> List existing CRL located in cert database file.</dl>
+</dt><dd> List existing CRL located in cert database file.</dd></dl>
 <p> -M</p>
 <dl>
 <dt>
-<dd> Modify existing CRL which can be located in cert db or in arbitrary file. If located in file it should be encoded in ASN.1 encode format.</dl>
+</dt><dd> Modify existing CRL which can be located in cert db or in arbitrary file. If located in file it should be encoded in ASN.1 encode format.</dd></dl>
 <p> -S</p>
 <dl>
 <dt>
-<dd> Show contents of a CRL file which isn&#8217;t stored in the database.</dl>
+</dt><dd> Show contents of a CRL file which isn&#8217;t stored in the database.</dd></dl>
 <p> <code>Arguments</code> </p>
 <p> Option arguments modify an action. </p>
 <p> -a</p>
 <dl>
 <dt>
-<dd> Use ASCII format or allow the use of ASCII format for input and output. This formatting follows RFC #1113.</dl>
+</dt><dd> Use ASCII format or allow the use of ASCII format for input and output. This formatting follows RFC #1113.</dd></dl>
 <p> -B</p>
 <dl>
 <dt>
-<dd> Bypass CA signature checks.</dl>
+</dt><dd> Bypass CA signature checks.</dd></dl>
 <p> -c crl-gen-file</p>
 <dl>
 <dt>
-<dd> Specify script file that will be used to control crl generation/modification. See crl-cript-file format below. If options -M|-G is used and -c crl-script-file is not specified, crlutil will read script data from standard input.</dl>
+</dt><dd> Specify script file that will be used to control crl generation/modification. See crl-cript-file format below. If options -M|-G is used and -c crl-script-file is not specified, crlutil will read script data from standard input.</dd></dl>
 <p> -d directory</p>
 <dl>
 <dt>
-<dd> Specify the database directory containing the certificate and key database files. On Unix the Certificate Database Tool defaults to $HOME/.netscape (that is, ~/.netscape). On Windows NT the default is the current directory. </p>
+</dt><dd> Specify the database directory containing the certificate and key database files. On Unix the Certificate Database Tool defaults to $HOME/.netscape (that is, ~/.netscape). On Windows NT the default is the current directory. </dd>
 <p> The NSS database files must reside in the same directory.</dl>
 <p> -f password-file</p>
 <dl>
 <dt>
-<dd> Specify a file that will automatically supply the password to include in a certificate or to access a certificate database. This is a plain-text file containing one password. Be sure to prevent unauthorized access to this file.</dl>
+</dt><dd> Specify a file that will automatically supply the password to include in a certificate or to access a certificate database. This is a plain-text file containing one password. Be sure to prevent unauthorized access to this file.</dd></dl>
 <p> -i crl-file</p>
 <dl>
 <dt>
-<dd> Specify the file which contains the CRL to import or show.</dl>
+</dt><dd> Specify the file which contains the CRL to import or show.</dd></dl>
 <p> -l algorithm-name</p>
 <dl>
 <dt>
-<dd> Specify a specific signature algorithm. List of possible algorithms: MD2 | MD4 | MD5 | SHA1 | SHA256 | SHA384 | SHA512</dl>
+</dt><dd> Specify a specific signature algorithm. List of possible algorithms: MD2 | MD4 | MD5 | SHA1 | SHA256 | SHA384 | SHA512</dd></dl>
 <p> -n nickname</p>
 <dl>
 <dt>
-<dd> Specify the nickname of a certificate or key to list, create, add to a database, modify, or validate. Bracket the nickname string with quotation marks if it contains spaces.</dl>
+</dt><dd> Specify the nickname of a certificate or key to list, create, add to a database, modify, or validate. Bracket the nickname string with quotation marks if it contains spaces.</dd></dl>
 <p> -o output-file</p>
 <dl>
 <dt>
-<dd> Specify the output file name for new CRL. Bracket the output-file string with quotation marks if it contains spaces. If this argument is not used the output destination defaults to standard output.</dl>
+</dt><dd> Specify the output file name for new CRL. Bracket the output-file string with quotation marks if it contains spaces. If this argument is not used the output destination defaults to standard output.</dd></dl>
 <p> -P dbprefix</p>
 <dl>
 <dt>
-<dd> Specify the prefix used on the NSS security database files (for example, my_cert8.db and my_key3.db). This option is provided as a special case. Changing the names of the certificate and key databases is not recommended.</dl>
+</dt><dd> Specify the prefix used on the NSS security database files (for example, my_cert8.db and my_key3.db). This option is provided as a special case. Changing the names of the certificate and key databases is not recommended.</dd></dl>
 <p> -t crl-type</p>
 <dl>
 <dt>
-<dd> Specify type of CRL. possible types are: 0 &#8211; SEC_KRL_TYPE, 1 &#8211; SEC_CRL_TYPE. This option is obsolete</dl>
+</dt><dd> Specify type of CRL. possible types are: 0 &#8211; SEC_KRL_TYPE, 1 &#8211; SEC_CRL_TYPE. This option is obsolete</dd></dl>
 <p> -u url</p>
 <dl>
 <dt>
-<dd> Specify the url.</dl>
+</dt><dd> Specify the url.</dd></dl>
 <p> -w pwd-string</p>
 <dl>
 <dt>
-<dd> Provide db password in command line.</dl>
+</dt><dd> Provide db password in command line.</dd></dl>
 <p> -Z algorithm</p>
 <dl>
 <dt>
-<dd> Specify the hash algorithm to use for signing the CRL.</dl>
+</dt><dd> Specify the hash algorithm to use for signing the CRL.</dd></dl>
 <h2>CRL GENERATION SCRIPT SYNTAX</h2>
 <p> CRL generation script file has the following syntax: </p>
 <p> * Line with comments should have # as a first symbol of a line </p>
@@ -167,49 +167,49 @@ description: "crlutil – List, generate, modify, or delete CRLs within the NSS 
 <p> * Creating or modifying a CRL: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 crlutil - G | -M - c crl - gen - file - n nickname[-i crl][-u url][-d keydir][-P dbprefix][-l alg][-a][-B]
 </code></pre>
-</dl>
+</dd></dl>
 <p> * Listing all CRls or a named CRL: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 crlutil &#8211; L[-n crl &#8211; name][-d krydir]
-</dl>
+</dd></dl>
 <p> * Deleting CRL from db: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 crlutil &#8211; D &#8211; n nickname[-d keydir][-P dbprefix]
-</dl>
+</dd></dl>
 <p> * Erasing CRLs from db: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 crlutil &#8211; E[-d keydir][-P dbprefix]
-</dl>
+</dd></dl>
 <p> * Deleting CRL from db: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 crlutil &#8211; D &#8211; n nickname[-d keydir][-P dbprefix]
-</dl>
+</dd></dl>
 <p> * Erasing CRLs from db: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 crlutil &#8211; E[-d keydir][-P dbprefix]
-</dl>
+</dd></dl>
 <p> * Import CRL from file: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 crlutil - I - i crl[-t crlType][-u url][-d keydir][-P dbprefix][-B]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-certutil/">certutil</a>(1)</p>
 <h2>ADDITIONAL RESOURCES</h2>
@@ -223,10 +223,10 @@ crlutil - I - i crl[-t crlType][-u url][-d keydir][-P dbprefix][-B]
 <p> Licensed under the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a rel="nofollow" href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a></p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Mozilla NSS bug 836477</p>
+<dt> 1.</dt>
+<dd> Mozilla NSS bug 836477</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a></dl>
+</dt><dd> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a></dd></dl>
 </dl>
 <h2>Index</h2>

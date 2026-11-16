@@ -14,10 +14,10 @@ description: "runc-list – lists containers"
 <p>The <code>list</code> commands lists containers. Note that a global <code>&#8211;root</code> option can be specified to change the default root. For the description of <code>&#8211;root</code>, see <code><a href="/docs/linux/man/8-runc/">runc</a></code>(8). </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;format</code>|<code>-f</code> <code>table</code>|<code>json</code></p>
-<dd>Specify the format. Default is <code>table</code>. The <code>json</code> format provides more details. </p>
-<dt><code>&#8211;quiet</code>|<code>-q</code></p>
-<dd>Only display container IDs. </p>
+<dt><code>&#8211;format</code>|<code>-f</code> <code>table</code>|<code>json</code></dt>
+<dd>Specify the format. Default is <code>table</code>. The <code>json</code> format provides more details. </dd>
+<dt><code>&#8211;quiet</code>|<code>-q</code></dt>
+<dd>Only display container IDs. </dd>
 </dl>
 <h2>Examples</h2>
 <p>To list containers created with the default root:  </p>

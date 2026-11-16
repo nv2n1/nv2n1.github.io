@@ -30,8 +30,8 @@ description: "arm_stop_application – stop application"
 <p> If the return code is negative, an error occurred. If the return code is not negative, an error may or may not have occurred &#8211; the determination of what is an error and whether an error code is returned is at the discretion of the ARM implementation. The application can test the return code if it wants to provide its own error logging. </p>
 <p> The following errors are recognized by this implementation, but may not be portable to other implementations: </p>
 <dl>
-<dt><code>ARM_FAILURE_INTERNAL_ERROR</code></p>
-<dd> An internal error has occurred that prevented the operation from completing. Check your system log for more details.</dl>
+<dt><code>ARM_FAILURE_INTERNAL_ERROR</code></dt>
+<dd> An internal error has occurred that prevented the operation from completing. Check your system log for more details.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> ARM Issue 4.0 C Language Bindings, Version 2</p>
 <h2>EXAMPLE</h2>

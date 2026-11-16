@@ -14,17 +14,17 @@ description: "sk_alloc – All socket objects are allocated here"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>the applicable net namespace</dl>
+</dd><dd>the applicable net namespace</dd></dl>
 <p> <i>family</i></p>
 <dl>
-<dd>protocol family</dl>
+<dd>protocol family</dd></dl>
 <p> <i>priority</i></p>
 <dl>
-<dd>for allocation (<code>GFP_KERNEL</code>, <code>GFP_ATOMIC</code>, etc)</dl>
+<dd>for allocation (<code>GFP_KERNEL</code>, <code>GFP_ATOMIC</code>, etc)</dd></dl>
 <p> <i>prot</i></p>
 <dl>
-<dd>struct proto associated with this new sock instance</dl>
+<dd>struct proto associated with this new sock instance</dd></dl>
 <p> <i>kern</i></p>
 <dl>
-<dd>is this to be a kernel socket?</dl>
+<dd>is this to be a kernel socket?</dd></dl>
 <h2>Copyright</h2>

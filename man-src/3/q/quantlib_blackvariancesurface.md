@@ -38,6 +38,6 @@ description: "QuantLib::BlackVarianceSurface – Black volatility surface modell
 <p> The calculation is performed interpolating on the variance surface. <code>Bilinear</code> interpolation is used as default; this can be changed by the setInterpolation() method. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>check time extrapolation</dl>
+<dd>check time extrapolation</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

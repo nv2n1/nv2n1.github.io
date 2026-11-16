@@ -11,17 +11,12 @@ std::insert_iterator - std::insert_iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class Container&gt;
-
     class insert_iterator : public std::iterator&lt;std::output_iterator_tag, (until C++ 17)
-
                                                                                void,
                                                  void, void, void&gt;
-
                             template &lt;class Container&gt;
                             (since C++ 17)
-
                                 class insert_iterator;</code></pre> 
 std::insert_iterator is a LegacyOutputIterator that inserts elements into a container for which it was constructed, at the position pointed to by the supplied iterator. The container's insert() member function is called whenever the iterator (whether dereferenced or not) is assigned to. Incrementing the std::insert_iterator is a no-op. 
 
@@ -69,16 +64,11 @@ These member types are required to be obtained by inheriting from std::iterator&
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;list&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{1, 2, 3, 4, 5};
     std::list&lt;int&gt; l{-1, -2, -3};

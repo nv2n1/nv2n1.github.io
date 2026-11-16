@@ -17,27 +17,27 @@ description: "rzxtool – Modify Sinclair ZX Spectrum input recording files"
 <p> -d<i>block number</i></p>
 <dl>
 <dt>
-<dd> The block number specified will be deleted from the file. Block numbers start at zero and ignore any &quot;creator information&quot; blocks in the file. The modified file will be written to <i>outfile</i>.</dl>
+</dt><dd> The block number specified will be deleted from the file. Block numbers start at zero and ignore any &quot;creator information&quot; blocks in the file. The modified file will be written to <i>outfile</i>.</dd></dl>
 <p> -e<i>block number</i>,<i>filename</i></p>
 <dl>
 <dt>
-<dd> The snapshot in the specified block number will be written to the specified filename. All snapshot formats supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3) are available.</dl>
+</dt><dd> The snapshot in the specified block number will be written to the specified filename. All snapshot formats supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3) are available.</dd></dl>
 <p> -i<i>block number</i>,<i>filename</i></p>
 <dl>
 <dt>
-<dd> The snapshot specified in <i>filename</i> will be added to the file at the position specified by <i>block number</i>.</dl>
+</dt><dd> The snapshot specified in <i>filename</i> will be added to the file at the position specified by <i>block number</i>.</dd></dl>
 <p> -u</p>
 <dl>
 <dt>
-<dd> When outputting an RZX file, this option causes the input recording data to be output uncompressed; if this option is not given, the data will be compressed using <i><a href="/docs/linux/man/3-zlib/">zlib</a></i>(3).</dl>
+</dt><dd> When outputting an RZX file, this option causes the input recording data to be output uncompressed; if this option is not given, the data will be compressed using <i><a href="/docs/linux/man/3-zlib/">zlib</a></i>(3).</dd></dl>
 <p> <i>rzxfile</i></p>
 <dl>
 <dt>
-<dd> specifies an input recording file whose contents are to be modified.</dl>
+</dt><dd> specifies an input recording file whose contents are to be modified.</dd></dl>
 <p> <i>outfile</i></p>
 <dl>
 <dt>
-<dd> specifies where the modified input file should be written.</dl>
+</dt><dd> specifies where the modified input file should be written.</dd></dl>
 <h2>BUGS</h2>
 <p> None known</p>
 <h2>SEE ALSO</h2>

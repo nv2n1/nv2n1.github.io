@@ -16,20 +16,20 @@ description: "imlib-config – Display Imlib and GDK-Imlib Library Configuration
 <p> Note that <code>imlib-config</code> is not the same as the <code>imlib_config</code> program.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> Imlib/GDK-Imlib version information</p>
-<dt>&#8211;prefix</p>
-<dd> displays prefix of directory where Imlib and GDK-Imlib were installed.</p>
-<dt>&#8211;exec-prefix</p>
-<dd> displays exec-prefix of directory where Imlib and GDK-Imlib were installed.</p>
-<dt>&#8211;cflags</p>
-<dd> C pre-processor and compiler flags for use with Imlib.</p>
-<dt>&#8211;cflags-gdk</p>
-<dd> C pre-processor and compiler flags for use with GDK-Imlib</p>
-<dt>&#8211;libs</p>
-<dd> Imlib library linking information</p>
-<dt>&#8211;libs-gdk</p>
-<dd> GDK-Imlib library linking information</dl>
+<dt>&#8211;version</dt>
+<dd> Imlib/GDK-Imlib version information</dd>
+<dt>&#8211;prefix</dt>
+<dd> displays prefix of directory where Imlib and GDK-Imlib were installed.</dd>
+<dt>&#8211;exec-prefix</dt>
+<dd> displays exec-prefix of directory where Imlib and GDK-Imlib were installed.</dd>
+<dt>&#8211;cflags</dt>
+<dd> C pre-processor and compiler flags for use with Imlib.</dd>
+<dt>&#8211;cflags-gdk</dt>
+<dd> C pre-processor and compiler flags for use with GDK-Imlib</dd>
+<dt>&#8211;libs</dt>
+<dd> Imlib library linking information</dd>
+<dt>&#8211;libs-gdk</dt>
+<dd> GDK-Imlib library linking information</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-imlib_config/">imlib_config</a></code>(1)</p>
 <h2>AUTHOR</h2>

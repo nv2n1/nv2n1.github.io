@@ -10,15 +10,11 @@ description: "std::experimental::filesystem::copy – std::experimental::filesys
 <p>std::experimental::filesystem::copy &#8211; std::experimental::filesystem::copy</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     void copy(const path &amp;from, const path &amp;to);
 (1)(filesystem TS)
-
     void copy(const path &amp;from, const path &amp;to, error_code &amp;ec);
-
 void copy(const path &amp;from, const path &amp;to, copy_options options);
 (2)(filesystem TS)
-
     void copy(const path &amp;from, const path &amp;to, copy_options options, error_code &amp;ec);</code></pre>
 <p>Copies files and directories, with a variety of options<br />
 1) The default, equivalent to <code>(2)</code> with copy_options::none used as options<br />
@@ -74,14 +70,10 @@ While with copy_options::recursive, the subdirectories are also copied, with the
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/dir/subdir&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;).put('a');

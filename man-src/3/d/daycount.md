@@ -50,7 +50,7 @@ description: "QuantLib::DayCounter – day counter class"
 <p>Returns the name of the day counter. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This method is used for output and comparison between day counters. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between day counters. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>bool operator== (const <code>DayCounter</code> &amp;, const <code>DayCounter</code> &amp;) [related]</h3>
 <p>Returns true iff the two day counters belong to the same derived class.</p>

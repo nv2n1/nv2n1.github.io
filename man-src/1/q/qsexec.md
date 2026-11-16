@@ -23,17 +23,17 @@ url: "/docs/linux/man/1-qsexec/"
 
 <dl>
 <dt>-e &lt;pattern&gt;
-<dd> Specifes the search pattern causing an event which shall trigger the command.
-<dt>-t &lt;number&gt;:&lt;sec&gt;
-<dd> Defines the number of pattern match within the the defined number of seconds in order to trigger the command execution. By default, every pattern match causes a command execution.
-<dt>-c &lt;pattern&gt; [&lt;command string&gt;]
-<dd> Pattern which clears the event counter. Executes optionally a command if an event command has been executed before.
-<dt>-p
-<dd> Writes data also to stdout (for piped logging).
-<dt>-u &lt;name&gt;
-<dd> Become another user, e.g. www-data.
-<dt>&lt;command string&gt;
-<dd> Defines the event command string where $0-$9 are substituted by the submatches of the regular expression.</dl>
+</dt><dd> Specifes the search pattern causing an event which shall trigger the command.
+</dd><dt>-t &lt;number&gt;:&lt;sec&gt;
+</dt><dd> Defines the number of pattern match within the the defined number of seconds in order to trigger the command execution. By default, every pattern match causes a command execution.
+</dd><dt>-c &lt;pattern&gt; [&lt;command string&gt;]
+</dt><dd> Pattern which clears the event counter. Executes optionally a command if an event command has been executed before.
+</dd><dt>-p
+</dt><dd> Writes data also to stdout (for piped logging).
+</dd><dt>-u &lt;name&gt;
+</dt><dd> Become another user, e.g. www-data.
+</dd><dt>&lt;command string&gt;
+</dt><dd> Defines the event command string where $0-$9 are substituted by the submatches of the regular expression.</dd></dl>
 
 <h2>EXAMPLE</h2>
 

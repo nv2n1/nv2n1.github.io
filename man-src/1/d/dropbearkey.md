@@ -15,14 +15,14 @@ description: "dropbearkey – create private keys for the use with dropbear(8) o
 <p> <code>dropbearkey</code> generates a <i>RSA</i>, <i>DSS</i>, or <i>ECDSA</i> format SSH private key, and saves it to a file for the use with the Dropbear client or server. Note that some SSH implementations use the term &quot;DSA&quot; rather than &quot;DSS&quot;, they mean the same thing.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t </code><i>type</i></p>
-<dd> Type of key to generate. Must be one of <i>rsa</i> <i>ecdsa</i> or <i>dss</i>.</p>
-<dt><code>-f </code><i>file</i></p>
-<dd> Write the secret key to the file <i>file</i>. For client authentication ~/.ssh/id_dropbear is loaded by default</p>
-<dt><code>-s </code><i>bits</i></p>
-<dd> Set the key size to <i>bits</i> bits, should be multiple of 8 (optional).</p>
-<dt><code>-y</code></p>
-<dd> Just print the publickey and fingerprint for the private key in <i>file</i>.</dl>
+<dt><code>-t </code><i>type</i></dt>
+<dd> Type of key to generate. Must be one of <i>rsa</i> <i>ecdsa</i> or <i>dss</i>.</dd>
+<dt><code>-f </code><i>file</i></dt>
+<dd> Write the secret key to the file <i>file</i>. For client authentication ~/.ssh/id_dropbear is loaded by default</dd>
+<dt><code>-s </code><i>bits</i></dt>
+<dd> Set the key size to <i>bits</i> bits, should be multiple of 8 (optional).</dd>
+<dt><code>-y</code></dt>
+<dd> Just print the publickey and fingerprint for the private key in <i>file</i>.</dd></dl>
 <h2>NOTES</h2>
 <p> The program <a href="/docs/linux/man/1-dropbearconvert/">dropbearconvert</a>(1) can be used to convert between Dropbear and OpenSSH key formats. </p>
 <p> Dropbear does not support encrypted keys.</p>

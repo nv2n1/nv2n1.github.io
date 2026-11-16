@@ -15,14 +15,14 @@ description: "regsvr32 – Wine DLL Registration Server"
 <p> <code>regsvr32</code> is the Wine dll registration server, designed to be compatible with its Microsoft Windows counterpart. By default, it will register the given dll.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>/u</p>
-<dd> Unregister the specified dll.</p>
-<dt>/s</p>
-<dd> Run regsvr32 silently (will not show any GUI dialogs).</p>
-<dt>/i</p>
-<dd> Call DllInstall passing it an optional </code><i>cmdline</i>. When used with <code>/u</code> calls DllUninstall.</p>
-<dt><code>/n</p>
-<dd> Do not call DllRegisterServer; this option must be used with /i</code>.</dl>
+<dt><code>/u</dt>
+<dd> Unregister the specified dll.</dd>
+<dt>/s</dt>
+<dd> Run regsvr32 silently (will not show any GUI dialogs).</dd>
+<dt>/i</dt>
+<dd> Call DllInstall passing it an optional </code><i>cmdline</i>. When used with <code>/u</code> calls DllUninstall.</dd>
+<dt><code>/n</dt>
+<dd> Do not call DllRegisterServer; this option must be used with /i</code>.</dd></dl>
 <h2>BUGS</h2>
 <p> Bugs can be reported on the <code>Wine bug tracker</code></p>
 <h2>AVAILABILITY</h2>

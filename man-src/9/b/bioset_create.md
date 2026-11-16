@@ -15,11 +15,11 @@ bioset_create - Create a bio_set
 <h2>Arguments</h2>
 
 <i>pool_size</i>
-<dl><dd><dd>Number of bio and bio_vecs to cache in the mempool</dl>
+<dl><dd></dd><dd>Number of bio and bio_vecs to cache in the mempool</dd></dl>
  
 
  <i>front_pad</i>
-<dl><dd>Number of bytes to allocate in front of the returned bio</dl>
+<dl><dd>Number of bytes to allocate in front of the returned bio</dd></dl>
 
 <h2>Description</h2>
 

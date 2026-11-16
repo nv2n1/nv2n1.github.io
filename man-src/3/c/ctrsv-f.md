@@ -23,10 +23,10 @@ description: "ctrsv.f –"
  non-unit, upper or lower triangular matrix.
  No test for singularity or near-singularity is included in this
  routine. Such tests must be performed before calling this routine.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  On entry, UPLO specifies whether the matrix is an upper or
  lower triangular matrix as follows:
@@ -80,13 +80,13 @@ description: "ctrsv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -96,7 +96,8 @@ description: "ctrsv.f –"
  Jeremy Du Croz, Nag Central Office.
  Sven Hammarling, Nag Central Office.
  Richard Hanson, Sandia National Labs.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 150 of file ctrsv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

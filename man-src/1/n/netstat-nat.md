@@ -16,34 +16,34 @@ description: "netstat-nat – Show the natted connections on a linux iptable fir
 <p> The program reads its information from &#8216;/proc/net/ip_conntrack&#8217; or &#8216;/proc/net/nf_conntrack&#8217;, which is the temporary conntrack-storage of netfilter.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> displays help</p>
-<dt><code>-n</code></p>
-<dd> don&#8217;t resolve IPs/portnumbers to host/portnames</p>
-<dt><code>-p &lt;protocol&gt;</code></p>
-<dd> display NAT connections with protocol selection (see /etc/protocols)</p>
-<dt><code>-s &lt;source host&gt;</code></p>
-<dd> display connections by source IP/hostname</p>
-<dt><code>-d &lt;destination host&gt;</code></p>
-<dd> display connections by destination IP/hostname</p>
-<dt><code>-S</code></p>
-<dd> display SNAT connections</p>
-<dt><code>-D</code></p>
-<dd> display DNAT connections</p>
-<dt><code>-L</code></p>
-<dd> display only connections to NAT box self (doesn&#8217;t show SNAT &amp; DNAT)</p>
-<dt><code>-R</code></p>
-<dd> display only connections routed through the NAT box (doesn&#8217;t show SNAT &amp; DNAT)</p>
-<dt><code>-x</code></p>
-<dd> extended view of hostnames</p>
-<dt><code>-r &lt;src|dst|src-port|dst-port|state&gt;</code></p>
-<dd> sort connections</p>
-<dt><code>-o</code></p>
-<dd> no output header</p>
-<dt><code>-N</code></p>
-<dd> display NAT box connection information (only valid with SNAT &amp; DNAT)</p>
-<dt><code>-v</code></p>
-<dd> prints version</dl>
+<dt><code>-h</code></dt>
+<dd> displays help</dd>
+<dt><code>-n</code></dt>
+<dd> don&#8217;t resolve IPs/portnumbers to host/portnames</dd>
+<dt><code>-p &lt;protocol&gt;</code></dt>
+<dd> display NAT connections with protocol selection (see /etc/protocols)</dd>
+<dt><code>-s &lt;source host&gt;</code></dt>
+<dd> display connections by source IP/hostname</dd>
+<dt><code>-d &lt;destination host&gt;</code></dt>
+<dd> display connections by destination IP/hostname</dd>
+<dt><code>-S</code></dt>
+<dd> display SNAT connections</dd>
+<dt><code>-D</code></dt>
+<dd> display DNAT connections</dd>
+<dt><code>-L</code></dt>
+<dd> display only connections to NAT box self (doesn&#8217;t show SNAT &amp; DNAT)</dd>
+<dt><code>-R</code></dt>
+<dd> display only connections routed through the NAT box (doesn&#8217;t show SNAT &amp; DNAT)</dd>
+<dt><code>-x</code></dt>
+<dd> extended view of hostnames</dd>
+<dt><code>-r &lt;src|dst|src-port|dst-port|state&gt;</code></dt>
+<dd> sort connections</dd>
+<dt><code>-o</code></dt>
+<dd> no output header</dd>
+<dt><code>-N</code></dt>
+<dd> display NAT box connection information (only valid with SNAT &amp; DNAT)</dd>
+<dt><code>-v</code></dt>
+<dd> prints version</dd></dl>
 <h2>FILES</h2>
 <p> /proc/net/ip_conntrack or /proc/net/nf_conntrack</p>
 <h2>SEE ALSO</h2>

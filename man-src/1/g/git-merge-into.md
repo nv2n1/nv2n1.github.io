@@ -24,21 +24,19 @@ description: "git-merge-into – Merge one branch into another"
 <p> Assume the following history exists and the current branch is src:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 A-- - B-- - C src(current) / D-- - E-- - F-- - G dest
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> After running <code>git merge-into dest</code>, it will look like this:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 A-- - B-- - C src(current) / D-- - E-- - F-- - G-- - H dest
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> The <code>H</code> commit will record the merge result, just like what <code>git merge</code> does. And <code>src</code> is still the current branch. </p>
 <p> The default implementation of <code>merge-into</code> use <code>git checkout</code> and <code>git merge</code>, which may cause temporary change in the working tree. If you make sure your branch can be merged fast-forward, add <code>&#8211;ff-only</code> to avoid files change.</p>
 <h2>AUTHOR</h2>

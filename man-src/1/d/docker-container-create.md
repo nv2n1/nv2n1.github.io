@@ -28,9 +28,9 @@ description: "docker-container-create – Create a new container"
 <p> To change propagation properties of a mount point use mount command. For example, if one wants to bind mount source directory /foo one can do mount &#8211;bind /foo /foo and mount &#8211;make-private &#8211;make-shared /foo. This will convert /foo into a shared mount point. Alternatively one can directly change propagation properties of source mount. Say / is source mount for /foo, then use mount &#8211;make-shared / to convert / into a shared mount. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>Note</code>: When using systemd to manage the Docker daemon&#8217;s start and stop, in the systemd unit file there is an option to control mount propagation for the Docker daemon itself, called MountFlags. The value of this setting may cause Docker to not see mount propagation changes made on the mount point. For example, if this value is slave, you may not be able to use the shared or rshared propagation on a volume. </p>
-</dl>
+</dd></dl>
 <p> To disable automatic copying of data from the container path to the volume, use the nocopy flag. The nocopy flag can be set on named volumes, and does not apply to bind mounts.. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;add-host</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Add a custom host-to-IP mapping (host:ip)</p>
@@ -134,7 +134,7 @@ description: "docker-container-create – Create a new container"
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 ### Specify isolation technology for container (--isolation)
 This option is useful in situations where you are running Docker containers on
@@ -156,18 +156,18 @@ our container needs access to a character device with major `42` and
 any number of minor number (added as new devices appear), the
 following rule would be added:
 </code></pre>
-</dl>
+</dd></dl>
 <p> docker create &#8211;device-cgroup-rule=&#8217;c 42:* rmw&#8217; -name my-container my-image </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Then, a user could ask `udev` to execute a script that would `docker exec my-container mknod newDevX c 42 &lt;minor&gt;`
 the required device when it is added.
 NOTE: initially present devices still need to be explicitly added to
 the create/run command
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
 <h2>Index</h2>

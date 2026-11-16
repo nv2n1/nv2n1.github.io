@@ -33,7 +33,7 @@ long keyctl_reject(key_serial_t key, unsigned timeout,
 <p> The authorising key is allocated by request_key() when it needs to invoke userspace to generate a key for the requesting process. This is then attached to one of the keyrings of the userspace process to which the task of instantiating the key is given:</p>
 <dl>
 <dt>
-<dd> requester -&gt; request_key() -&gt; instantiator</dl>
+</dt><dd> requester -&gt; request_key() -&gt; instantiator</dd></dl>
 <p> Calling this function modifies the way <code>request_key</code>() works when called thereafter by the calling (instantiator) thread; once the authority is assumed, the keyrings of the initial process are added to the search path, using the initial process&#8217;s UID, GID, groups and security context. </p>
 <p> If a thread has multiple instantiations to deal with, it may call this function to change the authorisation key currently in effect. Supplying a <code>zero</code> <i>key</i> de-assumes the currently assumed authority. </p>
 <p> <code>NOTE!</code> This is a per-thread setting and not a per-process setting so that a multithreaded process can be used to instantiate several keys at once. </p>
@@ -49,20 +49,20 @@ long keyctl_reject(key_serial_t key, unsigned timeout,
 <p> On success <code>keyctl_instantiate</code>() returns <code>0</code>. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The key or keyring specified is invalid.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The keyring specified has expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The key or keyring specified had been revoked, or the authorisation has been revoked.</p>
-<dt><code>EINVAL</code></p>
-<dd> The payload data was invalid.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to store the new payload or to expand the destination keyring.</p>
-<dt><code>EDQUOT</code></p>
-<dd> The key quota for the key&#8217;s user would be exceeded by increasing the size of the key to accommodate the new payload or the key quota for the keyring&#8217;s user would be exceeded by expanding the destination keyring.</p>
-<dt><code>EACCES</code></p>
-<dd> The key exists, but is not <code>writable</code> by the requester.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The key or keyring specified is invalid.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The keyring specified has expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The key or keyring specified had been revoked, or the authorisation has been revoked.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The payload data was invalid.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to store the new payload or to expand the destination keyring.</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The key quota for the key&#8217;s user would be exceeded by increasing the size of the key to accommodate the new payload or the key quota for the keyring&#8217;s user would be exceeded by expanding the destination keyring.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The key exists, but is not <code>writable</code> by the requester.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

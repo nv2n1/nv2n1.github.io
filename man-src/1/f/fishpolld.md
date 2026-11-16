@@ -18,14 +18,14 @@ description: "fishpolld – daemon that allows remote script’s execution when 
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code> Shows this help message.</p>
 <dl>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Do not daemonize and log to stdout.</p>
-<dt><code>&#8211;pid-file=PID_FILE</code></p>
-<dd> Location to write PID of daemon.</p>
-<dt><code>&#8211;handler-dir=HANDLER_DIR</code></p>
-<dd> Directory to look for handlers in.</p>
-<dt><code>&#8211;listen=HOST[:PORT] </code></p>
-<dd> Address to listen on. </p>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Do not daemonize and log to stdout.</dd>
+<dt><code>&#8211;pid-file=PID_FILE</code></dt>
+<dd> Location to write PID of daemon.</dd>
+<dt><code>&#8211;handler-dir=HANDLER_DIR</code></dt>
+<dd> Directory to look for handlers in.</dd>
+<dt><code>&#8211;listen=HOST[:PORT] </code></dt>
+<dd> Address to listen on. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> This manual page was written by Andrea Veri &lt;and [at] debian.org&gt; for the Debian GNU/Linux distribution. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>

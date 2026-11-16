@@ -55,9 +55,9 @@ description: "zabbix_agent_selinux – Security Enhanced Linux Policy for the za
 <p> Policy governs the access confined processes have to these ports. SELinux zabbix_agent policy is very flexible allowing users to setup their zabbix_agent processes in as secure a method as possible. </p>
 <p> The following port types are defined for zabbix_agent: </p>
 <dl>
-<dt><code>zabbix_agent_port_t</code></p>
+<dt><code>zabbix_agent_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 10050</dl>
+</dd><dd>Default Defined Ports: tcp 10050</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type zabbix_agent_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -98,8 +98,8 @@ description: "zabbix_agent_selinux – Security Enhanced Linux Policy for the za
 <p> <code>zabbix_agent_exec_t</code> </p>
 <p> &#8211; Set files with the zabbix_agent_exec_t type, if you want to transition an executable to the zabbix_agent_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/zabbix_agentd, /usr/sbin/zabbix_agentd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/zabbix_agentd, /usr/sbin/zabbix_agentd </dd>
 </dl>
 <p> <code>zabbix_agent_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the zabbix_agent_initrc_exec_t type, if you want to transition an executable to the zabbix_agent_initrc_t domain. </p>

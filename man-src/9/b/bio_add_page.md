@@ -15,19 +15,19 @@ bio_add_page - attempt to add page to bio
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>destination bio</dl>
+<dl><dd></dd><dd>destination bio</dd></dl>
  
 
  <i>page</i>
-<dl><dd>page to add</dl>
+<dl><dd>page to add</dd></dl>
  
 
  <i>len</i>
-<dl><dd>vec entry length</dl>
+<dl><dd>vec entry length</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>vec entry offset</dl>
+<dl><dd>vec entry offset</dd></dl>
 
 <h2>Description</h2>
 

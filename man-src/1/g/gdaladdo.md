@@ -18,18 +18,18 @@ gdaladdo[-r{nearest, average, gauss, cubic, average_mp, average_magphase, mode}]
 <h2>DESCRIPTION</h2>
 <p> The gdaladdo utility can be used to build or rebuild overview images for most supported file formats with one of several downsampling algorithms. </p>
 <dl>
-<dt><code>-r</code> <i>{nearest (default),average,gauss,cubic,average_mp,average_magphase,mode}</i>:</p>
-<dd> Select a resampling algorithm.</p>
-<dt><code>-b</code> <i>band</i>:</p>
-<dd> (available from GDAL 1.10) Select an input band <i>band</i> for overview generation. Band numbering starts from 1. Multiple <code>-b</code> switches may be used to select a set of input bands to generate overviews.</p>
-<dt><code>-ro</code>:</p>
-<dd> (available from GDAL 1.6.0) open the dataset in read-only mode, in order to generate external overview (for GeoTIFF especially).</p>
-<dt><code>-clean</code>:</p>
-<dd> (available from GDAL 1.7.0) remove all overviews.</p>
-<dt><i>filename</i>:</p>
-<dd> The file to build overviews for (or whose overviews must be removed).</p>
-<dt><i>levels</i>:</p>
-<dd> A list of integral overview levels to build. Ignored with -clean option.</dl>
+<dt><code>-r</code> <i>{nearest (default),average,gauss,cubic,average_mp,average_magphase,mode}</i>:</dt>
+<dd> Select a resampling algorithm.</dd>
+<dt><code>-b</code> <i>band</i>:</dt>
+<dd> (available from GDAL 1.10) Select an input band <i>band</i> for overview generation. Band numbering starts from 1. Multiple <code>-b</code> switches may be used to select a set of input bands to generate overviews.</dd>
+<dt><code>-ro</code>:</dt>
+<dd> (available from GDAL 1.6.0) open the dataset in read-only mode, in order to generate external overview (for GeoTIFF especially).</dd>
+<dt><code>-clean</code>:</dt>
+<dd> (available from GDAL 1.7.0) remove all overviews.</dd>
+<dt><i>filename</i>:</dt>
+<dd> The file to build overviews for (or whose overviews must be removed).</dd>
+<dt><i>levels</i>:</dt>
+<dd> A list of integral overview levels to build. Ignored with -clean option.</dd></dl>
 <p> <i>Mode</i> (available from GDAL 1.6.0) selects the value which appears most often of all the sampled points. <i>average_mp</i> is unsuitable for use. <i>Average_magphase</i> averages complex data in mag/phase space. <i>Nearest</i> and <i>average</i> are applicable to normal image data. <i>Nearest</i> applies a nearest neighbour (simple sampling) resampler, while <i>average</i> computes the average of all non-NODATA contributing pixels. <i>Cubic</i> resampling (available from GDAL 1.7.0) applies a 4&#215;4 approximate cubic convolution kernel. <i>Gauss</i> resampling (available from GDAL 1.6.0) applies a Gaussian kernel before computing the overview, which can lead to better results than simple averaging in e.g case of sharp edges with high contrast or noisy patterns. The advised level values should be 2, 4, 8, &#8230; so that a 3&#215;3 resampling Gaussian kernel is selected. </p>
 <p> gdaladdo will honour properly NODATA_VALUES tuples (special dataset metadata) so that only a given RGB triplet (in case of a RGB image) will be considered as the nodata value and not each value of the triplet independently per band. </p>
 <p> Selecting a level value like <i>2</i> causes an overview level that is 1/2 the resolution (in each dimension) of the base layer to be computed. If the file has existing overview levels at a level selected, those levels will be recomputed and rewritten in place. </p>
@@ -46,14 +46,14 @@ gdaladdo[-r{nearest, average, gauss, cubic, average_mp, average_magphase, mode}]
 </pre>
 <p> Starting with GDAL 1.7.0, external overviews can be created in the BigTIFF format by using the BIGTIFF_OVERVIEW configuration option : &#8211;config BIGTIFF_OVERVIEW {IF_NEEDED|IF_SAFER|YES|NO}. The default value is IF_NEEDED. The behaviour of this option is exactly the same as the BIGTIFF creation option documented in the GeoTIFF driver documentation. </p>
 <dl>
-<dt>&bull;</p>
-<dd> YES forces BigTIFF.</p>
-<dt>&bull;</p>
-<dd> NO forces classic TIFF.</p>
-<dt>&bull;</p>
-<dd> IF_NEEDED will only create a BigTIFF if it is clearly needed (uncompressed, and overviews larger than 4GB).</p>
-<dt>&bull;</p>
-<dd> IF_SAFER will create BigTIFF if the resulting file <i>might</i> exceed 4GB.</dl>
+<dt>&bull;</dt>
+<dd> YES forces BigTIFF.</dd>
+<dt>&bull;</dt>
+<dd> NO forces classic TIFF.</dd>
+<dt>&bull;</dt>
+<dd> IF_NEEDED will only create a BigTIFF if it is clearly needed (uncompressed, and overviews larger than 4GB).</dd>
+<dt>&bull;</dt>
+<dd> IF_SAFER will create BigTIFF if the resulting file <i>might</i> exceed 4GB.</dd></dl>
 <p> See the documentation of the GeoTIFF driver for further explanations on all those options.</p>
 <h2>EXAMPLE</h2>
 <p> Create overviews, embedded in the supplied TIFF file: </p>

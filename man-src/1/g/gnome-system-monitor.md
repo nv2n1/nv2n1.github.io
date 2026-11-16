@@ -17,8 +17,8 @@ description: "gnome-system-monitor — view and control processes"
 <h2>OPTIONS</h2>
 <p> This program accepts all the standard GNOME and GTK+ options, which follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). In addition to those standard GNOME options, the gnome-system-monitor accepts the following options:</p>
 <dl>
-<dt><code>-s,</code> <code>&#8211;simple</code></p>
-<dd> Show a simple dialog to end processes and log out.</dl>
+<dt><code>-s,</code> <code>&#8211;simple</code></dt>
+<dd> Show a simple dialog to end processes and log out.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The gnome-system-monitor was written by Kevin Vandersloot . </p>
 <p> This manual page was written by Colin Walters walters [at] debian.org for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. </p>

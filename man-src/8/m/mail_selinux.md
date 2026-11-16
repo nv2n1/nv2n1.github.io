@@ -36,22 +36,22 @@ description: "mail_selinux – Security Enhanced Linux Policy for the mail proce
 <p> <code>mail_home_t </code> </p>
 <p> &#8211; Set files with the mail_home_t type, if you want to store mail files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.forward, /root/.mailrc, /root/dead.letter </p>
+<dt>Paths:</dt>
+<dd>/root/.forward, /root/.mailrc, /root/dead.letter </dd>
 </dl>
 <p> <code>mail_munin_plugin_exec_t </code> </p>
 <p> &#8211; Set files with the mail_munin_plugin_exec_t type, if you want to transition an executable to the mail_munin_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/munin/plugins/postfix_mail.*, /usr/share/munin/plugins/mailscanner, /usr/share/munin/plugins/courier_mta_.*, /usr/share/munin/plugins/mailman, /usr/share/munin/plugins/exim_mail.*, /usr/share/munin/plugins/qmail.*, /usr/share/munin/plugins/sendmail_.* </p>
+<dt>Paths:</dt>
+<dd>/usr/share/munin/plugins/postfix_mail.*, /usr/share/munin/plugins/mailscanner, /usr/share/munin/plugins/courier_mta_.*, /usr/share/munin/plugins/mailman, /usr/share/munin/plugins/exim_mail.*, /usr/share/munin/plugins/qmail.*, /usr/share/munin/plugins/sendmail_.* </dd>
 </dl>
 <p> <code>mail_munin_plugin_tmp_t </code> </p>
 <p> &#8211; Set files with the mail_munin_plugin_tmp_t type, if you want to store mail munin plugin temporary files in the /tmp directories. </p>
 <p> <code>mail_spool_t </code> </p>
 <p> &#8211; Set files with the mail_spool_t type, if you want to store the mail files under the /var/spool directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/mail(/.*)?, /var/spool/imap(/.*)?, /var/spool/mail(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/mail(/.*)?, /var/spool/imap(/.*)?, /var/spool/mail(/.*)? </dd>
 </dl>
 <p> <code>mailman_archive_t </code> </p>
 <p> &#8211; Set files with the mailman_archive_t type, if you want to treat the files as mailman archive data. </p>
@@ -62,8 +62,8 @@ description: "mail_selinux – Security Enhanced Linux Policy for the mail proce
 <p> <code>mailman_data_t </code> </p>
 <p> &#8211; Set files with the mailman_data_t type, if you want to treat the files as mailman content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/mailman.*, /var/spool/mailman.*, /var/lib/mailman.* </p>
+<dt>Paths:</dt>
+<dd>/etc/mailman.*, /var/spool/mailman.*, /var/lib/mailman.* </dd>
 </dl>
 <p> <code>mailman_lock_t </code> </p>
 <p> &#8211; Set files with the mailman_lock_t type, if you want to treat the files as mailman lock data, stored under the /var/lock directory </p>
@@ -72,16 +72,16 @@ description: "mail_selinux – Security Enhanced Linux Policy for the mail proce
 <p> <code>mailman_mail_exec_t </code> </p>
 <p> &#8211; Set files with the mailman_mail_exec_t type, if you want to transition an executable to the mailman_mail_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/mailman.*/mail/mailman, /usr/lib/mailman.*/bin/mm-handler.*, /usr/share/doc/mailman.*/mm-handler.*, /usr/lib/mailman.*/bin/mailmanctl, /usr/lib/mailman.*/scripts/mailman </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/mailman.*/mail/mailman, /usr/lib/mailman.*/bin/mm-handler.*, /usr/share/doc/mailman.*/mm-handler.*, /usr/lib/mailman.*/bin/mailmanctl, /usr/lib/mailman.*/scripts/mailman </dd>
 </dl>
 <p> <code>mailman_mail_tmp_t </code> </p>
 <p> &#8211; Set files with the mailman_mail_tmp_t type, if you want to store mailman mail temporary files in the /tmp directories. </p>
 <p> <code>mailman_queue_exec_t </code> </p>
 <p> &#8211; Set files with the mailman_queue_exec_t type, if you want to transition an executable to the mailman_queue_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/mailman.*/cron/.*, /usr/lib/mailman.*/bin/qrunner </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/mailman.*/cron/.*, /usr/lib/mailman.*/bin/qrunner </dd>
 </dl>
 <p> <code>mailman_queue_tmp_t </code> </p>
 <p> &#8211; Set files with the mailman_queue_tmp_t type, if you want to store mailman queue temporary files in the /tmp directories. </p>
@@ -95,9 +95,9 @@ description: "mail_selinux – Security Enhanced Linux Policy for the mail proce
 <p> Policy governs the access confined processes have to these ports. SELinux mail policy is very flexible allowing users to setup their mail processes in as secure a method as possible. </p>
 <p> The following port types are defined for mail: </p>
 <dl>
-<dt><code>mail_port_t </code></p>
+<dt><code>mail_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2000,3905</dl>
+</dd><dd>Default Defined Ports: tcp 2000,3905</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux mail policy is very flexible allowing users to setup their mail processes in as secure a method as possible. </p>

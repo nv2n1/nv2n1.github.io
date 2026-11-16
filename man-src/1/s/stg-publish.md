@@ -25,47 +25,47 @@ stg publish[options][--][branch]
 <p> -b BRANCH, &#8211;branch BRANCH</p>
 <dl>
 <dt>
-<dd> Use BRANCH instead of the default branch.</dl>
+</dt><dd> Use BRANCH instead of the default branch.</dd></dl>
 <p> -l, &#8211;last</p>
 <dl>
 <dt>
-<dd> Show the last published patch.</dl>
+</dt><dd> Show the last published patch.</dd></dl>
 <p> -u, &#8211;unpublished</p>
 <dl>
 <dt>
-<dd> Show applied patches that have not been published.</dl>
+</dt><dd> Show applied patches that have not been published.</dd></dl>
 <p> &#8211;author &quot;NAME &lt;EMAIL&gt;&quot;</p>
 <dl>
 <dt>
-<dd> Set the author details.</dl>
+</dt><dd> Set the author details.</dd></dl>
 <p> &#8211;authname NAME</p>
 <dl>
 <dt>
-<dd> Set the author name.</dl>
+</dt><dd> Set the author name.</dd></dl>
 <p> &#8211;authemail EMAIL</p>
 <dl>
 <dt>
-<dd> Set the author email.</dl>
+</dt><dd> Set the author email.</dd></dl>
 <p> &#8211;authdate DATE</p>
 <dl>
 <dt>
-<dd> Set the author date.</dl>
+</dt><dd> Set the author date.</dd></dl>
 <p> -m MESSAGE, &#8211;message MESSAGE</p>
 <dl>
 <dt>
-<dd> Use MESSAGE instead of invoking the editor.</dl>
+</dt><dd> Use MESSAGE instead of invoking the editor.</dd></dl>
 <p> -f FILE, &#8211;file FILE</p>
 <dl>
 <dt>
-<dd> Use the contents of FILE instead of invoking the editor. (If FILE is &quot;-&quot;, write to stdout.)</dl>
+</dt><dd> Use the contents of FILE instead of invoking the editor. (If FILE is &quot;-&quot;, write to stdout.)</dd></dl>
 <p> &#8211;sign</p>
 <dl>
 <dt>
-<dd> Add a &quot;Signed-off-by:&quot; to the end of the patch.</dl>
+</dt><dd> Add a &quot;Signed-off-by:&quot; to the end of the patch.</dd></dl>
 <p> &#8211;ack</p>
 <dl>
 <dt>
-<dd> Add an &quot;Acked-by:&quot; line to the end of the patch.</dl>
+</dt><dd> Add an &quot;Acked-by:&quot; line to the end of the patch.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

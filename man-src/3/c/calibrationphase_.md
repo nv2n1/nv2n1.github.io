@@ -31,6 +31,6 @@ description: "QuantLib::LongstaffSchwartzPathPricer – Longstaff-Schwarz path p
 <p> Francis Longstaff, Eduardo Schwartz, 2001. Valuing American Options by Simulation: A Simple Least-Squares Approach, The Review of Financial Studies, Volume 14, No. 1, 113-147 </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in web/literature</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

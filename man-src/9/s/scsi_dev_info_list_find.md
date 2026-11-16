@@ -14,13 +14,13 @@ description: "scsi_dev_info_list_find – find a matching dev_info list entry."
 <p><i>vendor</i></p>
 <dl>
 <dd>
-<dd>vendor string</dl>
+</dd><dd>vendor string</dd></dl>
 <p> <i>model</i></p>
 <dl>
-<dd>model (product) string</dl>
+<dd>model (product) string</dd></dl>
 <p> <i>key</i></p>
 <dl>
-<dd>specify list to use</dl>
+<dd>specify list to use</dd></dl>
 <h2>Description</h2>
 <p>Finds the first dev_info entry matching <i>vendor</i>, <i>model</i> in list specified by <i>key</i>.</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "scsi_dev_info_list_find – find a matching dev_info list entry."
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

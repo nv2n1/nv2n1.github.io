@@ -16,61 +16,61 @@ description: "autoreconf – Update generated configuration files"
 <p> By default, it only remakes those files that are older than their sources. If you install new versions of the GNU Build System, you can make &#8216;autoreconf&#8217; remake all of the files by giving it the &#8216;&#8211;force&#8217; option.</p>
 <h3>Operation modes:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number, then exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbosely report processing</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> don&#8217;t remove temporary files</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> consider all generated and standard files obsolete</p>
-<dt><code>-i</code>, <code>&#8211;install</code></p>
-<dd> copy missing standard auxiliary files</p>
-<dt><code>&#8211;no-recursive</code></p>
-<dd> don&#8217;t rebuild sub-packages</p>
-<dt><code>-s</code>, <code>&#8211;symlink</code></p>
-<dd> with <code>-i</code>, install symbolic links instead of copies</p>
-<dt><code>-m</code>, <code>&#8211;make</code></p>
-<dd> when applicable, re-run ./configure &amp;&amp; make</p>
-<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></p>
-<dd> report the warnings falling in CATEGORY [syntax]</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbosely report processing</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> don&#8217;t remove temporary files</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> consider all generated and standard files obsolete</dd>
+<dt><code>-i</code>, <code>&#8211;install</code></dt>
+<dd> copy missing standard auxiliary files</dd>
+<dt><code>&#8211;no-recursive</code></dt>
+<dd> don&#8217;t rebuild sub-packages</dd>
+<dt><code>-s</code>, <code>&#8211;symlink</code></dt>
+<dd> with <code>-i</code>, install symbolic links instead of copies</dd>
+<dt><code>-m</code>, <code>&#8211;make</code></dt>
+<dd> when applicable, re-run ./configure &amp;&amp; make</dd>
+<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></dt>
+<dd> report the warnings falling in CATEGORY [syntax]</dd></dl>
 <h3>Warning categories include:</h3>
 <dl>
-<dt>cross</p>
-<dd> cross compilation issues</p>
-<dt>gnu</p>
-<dd> GNU coding standards (default in gnu and gnits modes)</p>
-<dt>obsolete</p>
-<dd> obsolete features or constructions (default)</p>
-<dt>override</p>
-<dd> user redefinitions of Automake rules or variables</p>
-<dt>portability</p>
-<dd> portability issues (default in gnu and gnits modes)</p>
-<dt>portability-recursive</p>
-<dd> nested Make variables (default with <code>-Wportability</code>)</p>
-<dt>extra-portability</p>
-<dd> extra portability issues related to obscure tools</p>
-<dt>syntax</p>
-<dd> dubious syntactic constructs (default)</p>
-<dt>unsupported</p>
-<dd> unsupported or incomplete features (default)</p>
-<dt>all</p>
-<dd> all the warnings</p>
-<dt>no-CATEGORY</p>
-<dd> turn off warnings in CATEGORY</p>
-<dt>none</p>
-<dd> turn off all the warnings</p>
-<dt>error</p>
-<dd> treat warnings as errors</dl>
+<dt>cross</dt>
+<dd> cross compilation issues</dd>
+<dt>gnu</dt>
+<dd> GNU coding standards (default in gnu and gnits modes)</dd>
+<dt>obsolete</dt>
+<dd> obsolete features or constructions (default)</dd>
+<dt>override</dt>
+<dd> user redefinitions of Automake rules or variables</dd>
+<dt>portability</dt>
+<dd> portability issues (default in gnu and gnits modes)</dd>
+<dt>portability-recursive</dt>
+<dd> nested Make variables (default with <code>-Wportability</code>)</dd>
+<dt>extra-portability</dt>
+<dd> extra portability issues related to obscure tools</dd>
+<dt>syntax</dt>
+<dd> dubious syntactic constructs (default)</dd>
+<dt>unsupported</dt>
+<dd> unsupported or incomplete features (default)</dd>
+<dt>all</dt>
+<dd> all the warnings</dd>
+<dt>no-CATEGORY</dt>
+<dd> turn off warnings in CATEGORY</dd>
+<dt>none</dt>
+<dd> turn off all the warnings</dd>
+<dt>error</dt>
+<dd> treat warnings as errors</dd></dl>
 <p> The environment variable &#8216;WARNINGS&#8217; is honored. Some subtools might support other warning types, using &#8216;all&#8217; is encouraged.</p>
 <h3>Library directories:</h3>
 <dl>
-<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></p>
-<dd> prepend directory DIR to search path</p>
-<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></p>
-<dd> append directory DIR to search path</dl>
+<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></dt>
+<dd> prepend directory DIR to search path</dd>
+<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></dt>
+<dd> append directory DIR to search path</dd></dl>
 <p> The environment variables AUTOCONF, ACLOCAL, AUTOHEADER, AUTOM4TE, AUTOMAKE, AUTOPOINT, GTKDOCIZE, INTLTOOLIZE, LIBTOOLIZE, M4, and MAKE are honored.</p>
 <h2>AUTHOR</h2>
 <p> Written by David J. MacKenzie and Akim Demaille.</p>
@@ -86,6 +86,6 @@ description: "autoreconf – Update generated configuration files"
 <p> The full documentation for <code>autoreconf</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>autoreconf</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info autoreconf</code></dl>
+</dt><dd> <code>info autoreconf</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

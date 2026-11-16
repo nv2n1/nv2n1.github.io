@@ -22,19 +22,19 @@ git symbolic - ref[-m&lt;reason&gt;]&lt;name&gt;&lt;ref&gt; git symbolic - ref[-
 <p> -d, &#8211;delete</p>
 <dl>
 <dt>
-<dd> Delete the symbolic ref &lt;name&gt;.</dl>
+</dt><dd> Delete the symbolic ref &lt;name&gt;.</dd></dl>
 <p> -q, &#8211;quiet</p>
 <dl>
 <dt>
-<dd> Do not issue an error message if the &lt;name&gt; is not a symbolic ref but a detached HEAD; instead exit with non-zero status silently.</dl>
+</dt><dd> Do not issue an error message if the &lt;name&gt; is not a symbolic ref but a detached HEAD; instead exit with non-zero status silently.</dd></dl>
 <p> &#8211;short</p>
 <dl>
 <dt>
-<dd> When showing the value of &lt;name&gt; as a symbolic ref, try to shorten the value, e.g. from <code>refs/heads/master</code> to <code>master</code>.</dl>
+</dt><dd> When showing the value of &lt;name&gt; as a symbolic ref, try to shorten the value, e.g. from <code>refs/heads/master</code> to <code>master</code>.</dd></dl>
 <p> -m</p>
 <dl>
 <dt>
-<dd> Update the reflog for &lt;name&gt; with &lt;reason&gt;. This is valid only when creating or updating a symbolic ref.</dl>
+</dt><dd> Update the reflog for &lt;name&gt; with &lt;reason&gt;. This is valid only when creating or updating a symbolic ref.</dd></dl>
 <h2>NOTES</h2>
 <p> In the past, <code>.git/HEAD</code> was a symbolic link pointing at <code>refs/heads/master</code>. When we wanted to switch to another branch, we did <code>ln -sf refs/heads/newbranch .git/HEAD</code>, and when we wanted to find out which branch we are on, we did <code>readlink .git/HEAD</code>. But symbolic links are not entirely portable, so they are now deprecated and symbolic refs (as described above) are used by default. </p>
 <p> <i>git symbolic-ref</i> will exit with status 0 if the contents of the symbolic ref were printed correctly, with status 1 if the requested name is not a symbolic ref, or 128 if another error occurs.</p>

@@ -26,3 +26,4 @@ src &#8211; pointer to the first element of a null-terminated wide string to con
 len &#8211; number of byte available in the array pointed to by dst </p>
 <h2>Return value</h2>
 <p>On success, returns the number of bytes (including any shift sequences, but excluding the terminating &#8216;
+</p>

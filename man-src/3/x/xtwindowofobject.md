@@ -11,19 +11,19 @@ description: "XtDisplay, XtDisplayOfObject, XtScreen, XtScreenOfObject, XtWindow
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>Display *XtDisplay(Widget <i>w</i>);</p>
-<dd>Display *XtDisplayOfObject(Widget <i>object</i>);</p>
-<dd>Screen *XtScreen(Widget <i>w</i>);</p>
-<dd>Screen *XtScreenOfObject(Widget <i>object</i>);</p>
-<dd>Window XtWindow(Widget <i>w</i>);</p>
-<dd>Window XtWindowOfObject(Widget <i>object</i>);</dl>
+<dd>Display *XtDisplay(Widget <i>w</i>);</dd>
+<dd>Display *XtDisplayOfObject(Widget <i>object</i>);</dd>
+<dd>Screen *XtScreen(Widget <i>w</i>);</dd>
+<dd>Screen *XtScreenOfObject(Widget <i>object</i>);</dd>
+<dd>Window XtWindow(Widget <i>w</i>);</dd>
+<dd>Window XtWindowOfObject(Widget <i>object</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <dl COMPACT>
-<dt><i>object</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>object</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <h2>Description</h2>
 <p><code>XtDisplay</code> returns the display pointer for the specified widget. </p>
 <p> <code>XtDisplayOfObject</code> returns the display pointer for the specified object. </p>

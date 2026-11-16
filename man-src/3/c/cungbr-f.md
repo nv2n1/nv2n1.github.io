@@ -34,10 +34,10 @@ description: "cungbr.f –"
  rows of P**H, where n &gt;= m &gt;= k;
  if k &gt;= n, P**H = G(n-1) . . . G(2) G(1) and CUNGBR returns P**H as
  an N-by-N matrix.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>VECT</i> </p>
+<dd><i>VECT</i> </dd>
 <pre> VECT is CHARACTER*1
  Specifies whether the matrix Q or the matrix P**H is
  required, as defined in the transformation applied by CGEBRD:
@@ -94,13 +94,13 @@ description: "cungbr.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 158 of file cungbr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

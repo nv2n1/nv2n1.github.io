@@ -15,35 +15,35 @@ description: "zonec – NSD zone compiler version 3.2.4."
 <p> It is normally invoked via <a href="/docs/linux/man/8-nsdc/">nsdc</a>(8) rebuild command. <code>Zonec</code> will then parse every zone in <a href="/docs/linux/man/5-nsd-conf/">nsd.conf</a>(5) file and add it to the name space database, <i>/var/db/nsd/nsd.db</i> by default, that is used by <a href="/docs/linux/man/8-nsd/">nsd</a>(8) to answer incoming queries.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code><i> configfile</i></p>
-<dd>Read specified configfile instead of the default <i>/etc/nsd/nsd.conf</i>.</p>
-<dt><code>-C </code></p>
-<dd>No config file is read (use with -f, -o and -z).</p>
-<dt><code>-d</code><i> directory</i></p>
-<dd>Change the working directory to <i>directory</i> before doing any work. Overrides zonesdir: option in config file.</p>
-<dt><code>-f</code><i> database</i></p>
-<dd>Create the specified <i>database</i> instead of the file specified as database: in the config file.</p>
-<dt><code>-o</code><i> origin</i></p>
-<dd>Use this as the first origin. Zone information is read from zonefile specified with -z. When reading zones from config file this option is ignored.</p>
-<dt><code>-z</code><i> zonefile</i></p>
-<dd>Reads all zone information from <i>zonefile</i>. If <i>zonefile</i> equals `-`, then all zone information is read from stdin, making constructs like:</dl>
+<dt><code>-c</code><i> configfile</i></dt>
+<dd>Read specified configfile instead of the default <i>/etc/nsd/nsd.conf</i>.</dd>
+<dt><code>-C </code></dt>
+<dd>No config file is read (use with -f, -o and -z).</dd>
+<dt><code>-d</code><i> directory</i></dt>
+<dd>Change the working directory to <i>directory</i> before doing any work. Overrides zonesdir: option in config file.</dd>
+<dt><code>-f</code><i> database</i></dt>
+<dd>Create the specified <i>database</i> instead of the file specified as database: in the config file.</dd>
+<dt><code>-o</code><i> origin</i></dt>
+<dd>Use this as the first origin. Zone information is read from zonefile specified with -z. When reading zones from config file this option is ignored.</dd>
+<dt><code>-z</code><i> zonefile</i></dt>
+<dd>Reads all zone information from <i>zonefile</i>. If <i>zonefile</i> equals `-`, then all zone information is read from stdin, making constructs like:</dd></dl>
 <dl>
-<dd><code># cat zones* </code> | <code>./zonec -C -f nsd.db -o example.net -z &#8211;</code></dl>
+<dd><code># cat zones* </code> | <code>./zonec -C -f nsd.db -o example.net -z &#8211;</code></dd></dl>
 <dl>
-<dd>possible. When reading zones from config file this option is ignored.</dl>
+<dd>possible. When reading zones from config file this option is ignored.</dd></dl>
 <dl>
-<dt><code>-v</code></p>
-<dd>Increase the verbosity of zonec. This flag can be specified multiple times to increase the level of verbosity. The first level of verbosity will print per zone summary information. The second level of will print progress information for each 10,000 RRs processed.</p>
-<dt><code>-F</code></p>
-<dd>Set debug facilities. (If compiled with &#8211;enable-checking.)</p>
-<dt><code>-L</code></p>
-<dd>Set debug level. (If compiled with &#8211;enable-checking.)</dl>
+<dt><code>-v</code></dt>
+<dd>Increase the verbosity of zonec. This flag can be specified multiple times to increase the level of verbosity. The first level of verbosity will print per zone summary information. The second level of will print progress information for each 10,000 RRs processed.</dd>
+<dt><code>-F</code></dt>
+<dd>Set debug facilities. (If compiled with &#8211;enable-checking.)</dd>
+<dt><code>-L</code></dt>
+<dd>Set debug level. (If compiled with &#8211;enable-checking.)</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>/var/db/nsd/nsd.db</p>
-<dd>default <code>NSD</code> database</p>
-<dt>/etc/nsd/nsd.conf</p>
-<dd>default <code>NSD</code> configuration file</dl>
+<dt>/var/db/nsd/nsd.db</dt>
+<dd>default <code>NSD</code> database</dd>
+<dt>/etc/nsd/nsd.conf</dt>
+<dd>default <code>NSD</code> configuration file</dd></dl>
 <h2>Diagnostics</h2>
 <p><code>Zonec</code> will log all the problems via the standard error output and progress via stdout if the <code>v</code> option is specified.</p>
 <h2>See Also</h2>

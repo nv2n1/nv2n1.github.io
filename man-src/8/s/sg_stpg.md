@@ -15,30 +15,30 @@ description: "sg_stpg – send SCSI SET TARGET PORT GROUPS command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well. The options are arranged in alphabetical order based on the long option name.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;active</code></p>
-<dd>set active/non-optimized state.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output response to the REPORT TARGET PORT GROUPS command in hex then exit.</p>
-<dt><code>-O</code>, <code>-l</code>, <code>&#8211;offline</code></p>
-<dd>set offline state. This is the appropriate state to set a target port to prior to removing the device. Note that a relative target port identifier should be given with this state (rather than a target port group identifier that all other states take).</p>
-<dt><code>-o</code>, <code>&#8211;optimized</code></p>
-<dd>set active/optimized state. If no other state options or <i>&#8211;tp=</i> option are given then active/optimized is the default state.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>output response to the REPORT TARGET PORT GROUPS command in binary to stdout then exit.</p>
-<dt><code>-s</code>, <code>&#8211;standby</code></p>
-<dd>set standby state. Port group shall accept those commands listed for &quot;unavailable&quot; state plus LOG SELECT/SENSE, MODE SELECT/SENSE, RECEIVE DIAGNOSTIC RESULTS, SEND DIAGNOSTIC, PERSISTENT RESERVE IN/OUT commands.</p>
-<dt><code>-S</code>, <code>&#8211;state</code>=<i>S,S&#8230;</i></p>
-<dd>specifies a comma separated list (one element of more) of states. Either a number or an abbreviation can be given. A number is assumed to be a decimal number unless it is prefixed by &quot;0x&quot; or has a trailing &quot;h&quot; in which case a hexadecimal value is assumed. Only the values 0, 1, 2, 3 or 14 are accepted. The accepted abbreviations are &quot;an&quot;, &quot;ao&quot;, &quot;o&quot;, &quot;s&quot; or &quot;u&quot;; which represent active/non-optimized(1), active/optimized(0), offline(14), standby(2) or unavailable(3) respectively.</p>
-<dt><code>-t</code>, <code>&#8211;tp</code>=<i>P,P&#8230;</i></p>
-<dd>specifies a comma separated list (one element of more). Each elements is either a target port group identifier (when the corresponding state is other than &quot;offline&quot;) or a relative target port identifier (when the corresponding state is &quot;offline&quot;). Each element is assumed to be a decimal number unless it is prefixed by &quot;0x&quot; or has a trailing &quot;h&quot; in which case a hexadecimal value is assumed.</p>
-<dt><code>-u</code>, <code>&#8211;unavailable</code></p>
-<dd>set unavailable state. Port group shall only accept INQUIRY, REPORT LUNS, REPORT/SET TARGET PORT GROUPS, REQUEST SENSE and READ/WRITE BUFFER commands.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-a</code>, <code>&#8211;active</code></dt>
+<dd>set active/non-optimized state.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output response to the REPORT TARGET PORT GROUPS command in hex then exit.</dd>
+<dt><code>-O</code>, <code>-l</code>, <code>&#8211;offline</code></dt>
+<dd>set offline state. This is the appropriate state to set a target port to prior to removing the device. Note that a relative target port identifier should be given with this state (rather than a target port group identifier that all other states take).</dd>
+<dt><code>-o</code>, <code>&#8211;optimized</code></dt>
+<dd>set active/optimized state. If no other state options or <i>&#8211;tp=</i> option are given then active/optimized is the default state.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>output response to the REPORT TARGET PORT GROUPS command in binary to stdout then exit.</dd>
+<dt><code>-s</code>, <code>&#8211;standby</code></dt>
+<dd>set standby state. Port group shall accept those commands listed for &quot;unavailable&quot; state plus LOG SELECT/SENSE, MODE SELECT/SENSE, RECEIVE DIAGNOSTIC RESULTS, SEND DIAGNOSTIC, PERSISTENT RESERVE IN/OUT commands.</dd>
+<dt><code>-S</code>, <code>&#8211;state</code>=<i>S,S&#8230;</i></dt>
+<dd>specifies a comma separated list (one element of more) of states. Either a number or an abbreviation can be given. A number is assumed to be a decimal number unless it is prefixed by &quot;0x&quot; or has a trailing &quot;h&quot; in which case a hexadecimal value is assumed. Only the values 0, 1, 2, 3 or 14 are accepted. The accepted abbreviations are &quot;an&quot;, &quot;ao&quot;, &quot;o&quot;, &quot;s&quot; or &quot;u&quot;; which represent active/non-optimized(1), active/optimized(0), offline(14), standby(2) or unavailable(3) respectively.</dd>
+<dt><code>-t</code>, <code>&#8211;tp</code>=<i>P,P&#8230;</i></dt>
+<dd>specifies a comma separated list (one element of more). Each elements is either a target port group identifier (when the corresponding state is other than &quot;offline&quot;) or a relative target port identifier (when the corresponding state is &quot;offline&quot;). Each element is assumed to be a decimal number unless it is prefixed by &quot;0x&quot; or has a trailing &quot;h&quot; in which case a hexadecimal value is assumed.</dd>
+<dt><code>-u</code>, <code>&#8211;unavailable</code></dt>
+<dd>set unavailable state. Port group shall only accept INQUIRY, REPORT LUNS, REPORT/SET TARGET PORT GROUPS, REQUEST SENSE and READ/WRITE BUFFER commands.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>The SET TARGET PORT GROUPS command should be supported whenever the TPGS value in a standard INQUIRY response is 2 or 3. [View with sg_inq utility.] </p>
 <p> Notice that the offline state is termed as a &quot;secondary target port asymmetric access state&quot; and takes a relative target port identifier (i.e. acts on a single target port). All the other states are termed as &quot;primary target port asymmetric access states&quot; and each takes a target port group identifier (i.e. acts on one or more target ports). </p>

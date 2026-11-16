@@ -16,30 +16,30 @@ description: "SoXI – Sound eXchange Information, display sound file metadata"
 <p> By default, as much information as is available is shown. An option may be given to select just a single piece of information (perhaps for use in a script or batch-file).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> Set verbosity. See <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) for details.</p>
-<dt><code>-T</code></p>
-<dd> Used with multiple files; changes the behaviour of <code>-s</code>, <code>-d</code> and <code>-D</code> to display the total across all given files. Note that when used with <code>-s</code> with files with different sampling rates, this is of questionable value.</p>
-<dt><code>-t</code></p>
-<dd> Show detected file-type.</p>
-<dt><code>-r</code></p>
-<dd> Show sample-rate.</p>
-<dt><code>-c</code></p>
-<dd> Show number of channels.</p>
-<dt><code>-s</code></p>
-<dd> Show number of samples (0 if unavailable).</p>
-<dt><code>-d</code></p>
-<dd> Show duration in hours, minutes and seconds (0 if unavailable). Equivalent to number of samples divided by the sample-rate.</p>
-<dt><code>-D</code></p>
-<dd> Show duration in seconds (0 if unavailable).</p>
-<dt><code>-b</code></p>
-<dd> Show number of bits per sample.</p>
-<dt><code>-B</code></p>
-<dd> Show the bitrate averaged over the whole file (0 if unavailable).</p>
-<dt><code>-e</code></p>
-<dd> Show the name of the audio encoding.</p>
-<dt><code>-a</code></p>
-<dd> Show file comments (annotations) if available.</dl>
+<dt><code>-V</code></dt>
+<dd> Set verbosity. See <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) for details.</dd>
+<dt><code>-T</code></dt>
+<dd> Used with multiple files; changes the behaviour of <code>-s</code>, <code>-d</code> and <code>-D</code> to display the total across all given files. Note that when used with <code>-s</code> with files with different sampling rates, this is of questionable value.</dd>
+<dt><code>-t</code></dt>
+<dd> Show detected file-type.</dd>
+<dt><code>-r</code></dt>
+<dd> Show sample-rate.</dd>
+<dt><code>-c</code></dt>
+<dd> Show number of channels.</dd>
+<dt><code>-s</code></dt>
+<dd> Show number of samples (0 if unavailable).</dd>
+<dt><code>-d</code></dt>
+<dd> Show duration in hours, minutes and seconds (0 if unavailable). Equivalent to number of samples divided by the sample-rate.</dd>
+<dt><code>-D</code></dt>
+<dd> Show duration in seconds (0 if unavailable).</dd>
+<dt><code>-b</code></dt>
+<dd> Show number of bits per sample.</dd>
+<dt><code>-B</code></dt>
+<dd> Show the bitrate averaged over the whole file (0 if unavailable).</dd>
+<dt><code>-e</code></dt>
+<dd> Show the name of the audio encoding.</dd>
+<dt><code>-a</code></dt>
+<dd> Show file comments (annotations) if available.</dd></dl>
 <h2>BUGS</h2>
 <p> Please report any bugs found in this version of SoX to the mailing list (sox-users [at] lists.sourceforge.net).</p>
 <h2>SEE ALSO</h2>

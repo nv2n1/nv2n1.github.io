@@ -17,7 +17,7 @@ description: "XdbeGetBackBufferAttributes – returns attributes of a DBE buffer
 <p>This function returns the attributes associated with the specified buffer. </p>
 <p> The <i>XdbeBackBufferAttributes</i> structure has the following fields: </p>
 <dl COMPACT>
-<dd>Window window window that buffer belongs to</dl>
+<dd>Window window window that buffer belongs to</dd></dl>
 <p> If buffer is not a valid <i>XdbeBackBuffer,</i> window returns None. </p>
 <p> The returned <i>XdbeBackBufferAttributes</i> structure can be freed with the Xlib function <code>Xfree().</code></p>
 <h2>See Also</h2>

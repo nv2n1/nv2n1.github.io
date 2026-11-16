@@ -38,15 +38,15 @@ url: "/docs/linux/man/1-papi_multiplex_cost/"
 
 <dl>
 <dt>&bull;
-<dd> -m &lt; Min number of events to test &gt;
-<dt>&bull;
-<dd> -x &lt; Max number of events to test &gt;
-<dt>&bull;
-<dd> -k, Do not time kernel multiplexing
-<dt>&bull;
-<dd> -s, Do not ime software multiplexed EventSets
-<dt>&bull;
-<dd> -t THREASHOLD, Test with THRESHOLD iterations of counting loop.</dl>
+</dt><dd> -m &lt; Min number of events to test &gt;
+</dd><dt>&bull;
+</dt><dd> -x &lt; Max number of events to test &gt;
+</dd><dt>&bull;
+</dt><dd> -k, Do not time kernel multiplexing
+</dd><dt>&bull;
+</dt><dd> -s, Do not ime software multiplexed EventSets
+</dd><dt>&bull;
+</dt><dd> -t THREASHOLD, Test with THRESHOLD iterations of counting loop.</dd></dl>
  
 
 <h2>Bugs</h2>

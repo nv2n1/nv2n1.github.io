@@ -11,8 +11,8 @@ description: "msgchk – check for messages"
 <p> msgchk &#8211; check for messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>msgchk</code> [<code>-date</code> | <code>-nodate</code>] [<code>-notify</code></p>
-<dd>all/mail/nomail ] [<code>-nonotify</code> all/mail/nomail ] [<code>-host</code> <i>hostname</i>] [<code>-user</code> <i>username</i>] [<code>-sasl</code>] [<code>-saslmech</code> <i>mechanism</i>] [<code>-snoop</code>] [<i>users</i> &#8230; ] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>msgchk</code> [<code>-date</code> | <code>-nodate</code>] [<code>-notify</code></dt>
+<dd>all/mail/nomail ] [<code>-nonotify</code> all/mail/nomail ] [<code>-host</code> <i>hostname</i>] [<code>-user</code> <i>username</i>] [<code>-sasl</code>] [<code>-saslmech</code> <i>mechanism</i>] [<code>-snoop</code>] [<i>users</i> &#8230; ] [<code>-version</code>] [<code>-help</code>]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>msgchk</code> program checks all known mail drops for mail waiting for you. For those drops which have mail for you, <code>msgchk</code> will indicate if it believes that you have seen the mail in question before. </p>
 <p> The <code>-notify</code> <i>type</i> switch indicates under what circumstances <code>msgchk</code> should produce a message. The default is <code>-notify</code> <i>all</i> which says that <code>msgchk</code> should always report the status of the users maildrop. Other values for `type&#8217; include `mail&#8217; which says that <code>msgchk</code> should report the status of waiting mail; and, `nomail&#8217; which says that <code>msgchk</code> should report the status of empty maildrops. The <code>-nonotify</code> <i>type</i> switch has the inverted sense, so <code>-nonotify</code> <i>all</i> directs <code>msgchk</code> to never report the status of maildrops. This is useful if the user wishes to check <code>msgchk</code>&#8216;s exit status. A non-zero exit status indicates that mail was <code>not</code> waiting for at least one of the indicated users. </p>

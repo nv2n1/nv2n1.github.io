@@ -16,16 +16,16 @@ description: "lxc-ps – list the processes belonging to a specific container."
 <p> The additionnal specified ps options must not remove the default ps header and the pid information, to be able to have the <code>lxc-ps</code> to find the container associated to processes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&#8211;name NAME</i></p>
-<dd> specify the container <i>NAME</i> to limit the output to the processes belonging to this container name.</p>
-<dt><i>&#8211;lxc</i></p>
-<dd> limit the output to the processes belonging to all lxc containers.</p>
-<dt><code>[ps options]</code></p>
-<dd> The option passed to <code>lxc-ps</code> are the same as the <code>ps</code> command.</dl>
+<dt><i>&#8211;name NAME</i></dt>
+<dd> specify the container <i>NAME</i> to limit the output to the processes belonging to this container name.</dd>
+<dt><i>&#8211;lxc</i></dt>
+<dd> limit the output to the processes belonging to all lxc containers.</dd>
+<dt><code>[ps options]</code></dt>
+<dd> The option passed to <code>lxc-ps</code> are the same as the <code>ps</code> command.</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
-<dt><code>lxc-ps &#8211;name foo &#8211;forest</code></p>
-<dd> list all the processes belonging to container &#8216;foo&#8217; and show dependencies.</dl>
+<dt><code>lxc-ps &#8211;name foo &#8211;forest</code></dt>
+<dd> list all the processes belonging to container &#8216;foo&#8217; and show dependencies.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1),</p>
 <h2>SEE ALSO</h2>

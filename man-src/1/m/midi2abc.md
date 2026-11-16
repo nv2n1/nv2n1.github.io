@@ -19,64 +19,64 @@ description: "midi2abc – program to convert MIDI format files to abc notation"
 <p> If the tune has an anacrusis, you can use either the -ga or -xa option to estimate the its length. Alternatively, you can specify its value using the -a option. The anacrusis is specified in half unit lengths, where the unit length is defined by the L: field. For example if L: 1/8, then a quarter note would be indicated by the value 4, (4 1/16 units).</p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><code>-a </code><i>acbeats</i></p>
-<dd> where acbeats specifies the anacrusis in half unit lengths.</p>
-<dt><code>-xa</code></p>
-<dd> extract the anacrusis from file by finding the first strong note</p>
-<dt><code>-ga</code></p>
-<dd> guess the anacrusis by minimizing the number of ties across bars</p>
-<dt><code>-m </code><i>time signature</i></p>
-<dd> time signature</p>
-<dt><code>-b </code><i>bars</i></p>
-<dd> number of bars wanted in output</p>
-<dt><code>-Q </code><i>tempo</i></p>
-<dd> tempo in quarter-notes per minute</p>
-<dt><code>-u </code>pulses</p>
-<dd> Allows you to specify directly the number of midi pulses per abc time unit.</p>
-<dt><code>-ppu </code>parts per abc unit length</p>
-<dd> Normally, the smallest note unit that midi2abc can extract is half the L: unit length.This is called the quantum unit. Thus for L: 1/8, midi2abc can extract 1/16 notes but not 1/32 notes. You can change this by specifying -ppu 4 for example. The number of parts should be a power of 2.</p>
-<dt><code>-aul </code>denominator of abc unit length</p>
-<dd> Normally midi2abc chooses a unit length of 1/8 or 1/16 depending upon the time signature. For time signatures smaller than 3/4 the L: 1/16 is used and for larger time signatures L: 1/8 is used. You can specify the unit length to be used using this parameter. Thus -aul 32 will cause midi2abc to use a unit length of 1/32 nd note.</p>
-<dt><code>-gu</code></p>
-<dd> Tells midi2abc to estimate the number of midi pulses per abc time unit from the note duration or spacing in the MIDI file.</p>
-<dt><code>-gk</code></p>
-<dd> Tells midi2abc to guess the key signature by minimizing the number of accidentals even if the key signature is already specified in the MIDI file. By default the key signature is the one specified in the MIDI file. If it is not specified, then the program guesses the key signature by minimizing accidentals.</p>
-<dt><code>-k </code><i>key</i></p>
-<dd> key signature: -6 to 6 sharps.</p>
-<dt><code>-c </code><i>channel</i></p>
-<dd> select only this midi channel.</p>
-<dt><code>-f </code><i>infile</i></p>
-<dd> input file in midi format</p>
-<dt><code>-o </code><i>output file</i></p>
-<dd> specifies the output abc file name.</p>
-<dt><code>-s</code></p>
-<dd> do not discard very short notes.</p>
-<dt><code>-sr </code><i>quantum units</i></p>
-<dd> do not notate a short rest smaller than the specified size after a note. If the size (in quantum units) is zero, nothing is done. For larger values, the rest is absorbed into the preceding note. In other words, the preceding note is lengthened to include that rest.</p>
-<dt><code>-sum</code></p>
-<dd> print a short summary of the input midi file.</p>
-<dt><code>-nt</code></p>
-<dd> do not look for triplets or broken rhythm</p>
-<dt><code>-obpl</code></p>
-<dd> Print only one bar per line instead of 4. For complex music this improves the readability and avoids some problems with some abc to postscript converters. This option is deprecated.</p>
-<dt><code>-nogr</code></p>
-<dd> (No note grouping.) Inserts a space between all notes. It makes a less pretty postscript file but it is easier to edit.</p>
-<dt><code>-bpl </code>nbars</p>
-<dd> Print nbars of music on every line followed by a backslash.</p>
-<dt><code>-bps </code>nbars</p>
-<dd> When nbars have been printed (including those lines joined by a backslash continuation) go to a new line (with no backslash).</p>
-<dt><code>-splitbars</code></p>
-<dd> This parameter changes the way midi2abc prints chords composed of notes of unequal length (polyphonic chords). Normally, midi2abc joins the longer notes to the notes in the following chord using ties. A more readable output, can be obtained if the measure is split into separate parts using the &#8216;&amp;&#8217; feature in abc notation. The algorithm for dividing the notes in a polyphonic chord to separate voices (label_splits in midi2abc.c) needs some improvement. I welcome any assistance.</p>
-<dt><code>-splitvoices</code></p>
-<dd> This parameter like above handles polyphonic chords by splitting an entire voice into multi voices.</p>
-<dt><code>-midigram</code></p>
-<dd> When this option appears, all other options are ignored and no abc file is produced. Instead a list of all notes in the MIDI file are printed in a fixed format. Each line represents a pair of MIDI note on/off event. The line contains the on/off time of the note, its track number, channel number, midi pitch and midi velocity. The last record indicates the duration of the MIDI file in MIDI pulse units. The output is designed to go into a graphical user interface which will produce a graphical representation (piano roll).</p>
-<dt><code>-mftext</code></p>
-<dd> When this option appears, all other options are ignored and no abc file is produced. Instead a list of all the MIDI commands are printed. The output is designed to go into a graphical user interface provided by runabc.tcl.</p>
-<dt><code>-title </code>string</p>
-<dd> Replaces the default title field following T: with the given string.</p>
-<dt><code>-origin </code>string</p>
-<dd> Adds an O: field with the given string.</dl>
+<dt><code>-a </code><i>acbeats</i></dt>
+<dd> where acbeats specifies the anacrusis in half unit lengths.</dd>
+<dt><code>-xa</code></dt>
+<dd> extract the anacrusis from file by finding the first strong note</dd>
+<dt><code>-ga</code></dt>
+<dd> guess the anacrusis by minimizing the number of ties across bars</dd>
+<dt><code>-m </code><i>time signature</i></dt>
+<dd> time signature</dd>
+<dt><code>-b </code><i>bars</i></dt>
+<dd> number of bars wanted in output</dd>
+<dt><code>-Q </code><i>tempo</i></dt>
+<dd> tempo in quarter-notes per minute</dd>
+<dt><code>-u </code>pulses</dt>
+<dd> Allows you to specify directly the number of midi pulses per abc time unit.</dd>
+<dt><code>-ppu </code>parts per abc unit length</dt>
+<dd> Normally, the smallest note unit that midi2abc can extract is half the L: unit length.This is called the quantum unit. Thus for L: 1/8, midi2abc can extract 1/16 notes but not 1/32 notes. You can change this by specifying -ppu 4 for example. The number of parts should be a power of 2.</dd>
+<dt><code>-aul </code>denominator of abc unit length</dt>
+<dd> Normally midi2abc chooses a unit length of 1/8 or 1/16 depending upon the time signature. For time signatures smaller than 3/4 the L: 1/16 is used and for larger time signatures L: 1/8 is used. You can specify the unit length to be used using this parameter. Thus -aul 32 will cause midi2abc to use a unit length of 1/32 nd note.</dd>
+<dt><code>-gu</code></dt>
+<dd> Tells midi2abc to estimate the number of midi pulses per abc time unit from the note duration or spacing in the MIDI file.</dd>
+<dt><code>-gk</code></dt>
+<dd> Tells midi2abc to guess the key signature by minimizing the number of accidentals even if the key signature is already specified in the MIDI file. By default the key signature is the one specified in the MIDI file. If it is not specified, then the program guesses the key signature by minimizing accidentals.</dd>
+<dt><code>-k </code><i>key</i></dt>
+<dd> key signature: -6 to 6 sharps.</dd>
+<dt><code>-c </code><i>channel</i></dt>
+<dd> select only this midi channel.</dd>
+<dt><code>-f </code><i>infile</i></dt>
+<dd> input file in midi format</dd>
+<dt><code>-o </code><i>output file</i></dt>
+<dd> specifies the output abc file name.</dd>
+<dt><code>-s</code></dt>
+<dd> do not discard very short notes.</dd>
+<dt><code>-sr </code><i>quantum units</i></dt>
+<dd> do not notate a short rest smaller than the specified size after a note. If the size (in quantum units) is zero, nothing is done. For larger values, the rest is absorbed into the preceding note. In other words, the preceding note is lengthened to include that rest.</dd>
+<dt><code>-sum</code></dt>
+<dd> print a short summary of the input midi file.</dd>
+<dt><code>-nt</code></dt>
+<dd> do not look for triplets or broken rhythm</dd>
+<dt><code>-obpl</code></dt>
+<dd> Print only one bar per line instead of 4. For complex music this improves the readability and avoids some problems with some abc to postscript converters. This option is deprecated.</dd>
+<dt><code>-nogr</code></dt>
+<dd> (No note grouping.) Inserts a space between all notes. It makes a less pretty postscript file but it is easier to edit.</dd>
+<dt><code>-bpl </code>nbars</dt>
+<dd> Print nbars of music on every line followed by a backslash.</dd>
+<dt><code>-bps </code>nbars</dt>
+<dd> When nbars have been printed (including those lines joined by a backslash continuation) go to a new line (with no backslash).</dd>
+<dt><code>-splitbars</code></dt>
+<dd> This parameter changes the way midi2abc prints chords composed of notes of unequal length (polyphonic chords). Normally, midi2abc joins the longer notes to the notes in the following chord using ties. A more readable output, can be obtained if the measure is split into separate parts using the &#8216;&amp;&#8217; feature in abc notation. The algorithm for dividing the notes in a polyphonic chord to separate voices (label_splits in midi2abc.c) needs some improvement. I welcome any assistance.</dd>
+<dt><code>-splitvoices</code></dt>
+<dd> This parameter like above handles polyphonic chords by splitting an entire voice into multi voices.</dd>
+<dt><code>-midigram</code></dt>
+<dd> When this option appears, all other options are ignored and no abc file is produced. Instead a list of all notes in the MIDI file are printed in a fixed format. Each line represents a pair of MIDI note on/off event. The line contains the on/off time of the note, its track number, channel number, midi pitch and midi velocity. The last record indicates the duration of the MIDI file in MIDI pulse units. The output is designed to go into a graphical user interface which will produce a graphical representation (piano roll).</dd>
+<dt><code>-mftext</code></dt>
+<dd> When this option appears, all other options are ignored and no abc file is produced. Instead a list of all the MIDI commands are printed. The output is designed to go into a graphical user interface provided by runabc.tcl.</dd>
+<dt><code>-title </code>string</dt>
+<dd> Replaces the default title field following T: with the given string.</dd>
+<dt><code>-origin </code>string</dt>
+<dd> Adds an O: field with the given string.</dd></dl>
 <h3>FEATURES</h3>
 <p> * The key is chosen so as to minimize the number of accidentals. Alternatively, the user can specify the key numerically (a positive number is the number of sharps, a negative number is minus the number of flats). </p>
 <p> * Note length can be set by specifiying the total number of bars or the tempo of the piece. Alternatively the note length can be read from the file. However, by default it is deduced in a heuristic manner from the inter-note distances. This means that you do not have to use the MIDI clock as a metronome when playing in a tune from a keyboard. </p>

@@ -15,20 +15,20 @@ description: "nurbs++-config – script to get information about the installed v
 <h2>Options</h2>
 <p><i>nurbs++-config</i> accepts the following options:</p>
 <dl COMPACT>
-<dt><code>&#8211;version</code></p>
-<dd>Print the currently installed version of <i>nurbs++</i> on the standard output.</p>
-<dt><code>&#8211;libs</code></p>
-<dd>Print the linker flags that are necessary to link a <i>nurbs++</i> program.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd>Print the compiler flags that are necessary to compile a <i>nurbs++</i> program.</p>
-<dt><code>&#8211;prefix</code></p>
-<dd>Print the prefix with which <i>nurbs++</i> was compiled.</p>
-<dt><code>&#8211;prefix=PREFIX</code></p>
-<dd>If specified, use PREFIX instead of the installation prefix that <i>nurbs++</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option is also used for the exec prefix if &#8211;exec-prefix was not specified. This option must be specified before any &#8211;libs or &#8211;cflags options.</p>
-<dt><code>&#8211;exec-prefix</code></p>
-<dd>Print the exec-prefix with which <i>nurbs++</i> was compiled.</p>
-<dt><code>&#8211;exec-prefix=PREFIX</code></p>
-<dd>If specified, use PREFIX instead of the installation exec prefix that <i>nurbs++</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd>Print the currently installed version of <i>nurbs++</i> on the standard output.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd>Print the linker flags that are necessary to link a <i>nurbs++</i> program.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd>Print the compiler flags that are necessary to compile a <i>nurbs++</i> program.</dd>
+<dt><code>&#8211;prefix</code></dt>
+<dd>Print the prefix with which <i>nurbs++</i> was compiled.</dd>
+<dt><code>&#8211;prefix=PREFIX</code></dt>
+<dd>If specified, use PREFIX instead of the installation prefix that <i>nurbs++</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option is also used for the exec prefix if &#8211;exec-prefix was not specified. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd>
+<dt><code>&#8211;exec-prefix</code></dt>
+<dd>Print the exec-prefix with which <i>nurbs++</i> was compiled.</dd>
+<dt><code>&#8211;exec-prefix=PREFIX</code></dt>
+<dd>If specified, use PREFIX instead of the installation exec prefix that <i>nurbs++</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd></dl>
 <h2>Copyright</h2>
 <p>NURBS++ Copyright &#169; 1996-2002 by Philppe Lavoie &lt;philosophil [at] users.sourceforge.net&gt; </p>
 <p> This software is under the LGPL. You can find a copy of the LGPL somewhere on the net, most likely at <a rel="nofollow" href="http://www.gnu.org.">http://www.gnu.org.</a></p>

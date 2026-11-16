@@ -45,43 +45,41 @@ typedef struct {
 <p> <i>host</i> is an ascii string showing what host information that this libcurl was built for. As discovered by a configure script or set by the build environment. </p>
 <p> <i>features</i> can have none, one or more bits set, and the currently defined bits are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>CURL_VERSION_IPV6</p>
-<dd> supports IPv6</p>
-<dt>CURL_VERSION_KERBEROS4</p>
-<dd> supports kerberos4 (when using FTP)</p>
-<dt>CURL_VERSION_SSL</p>
-<dd> supports SSL (HTTPS/FTPS) (Added in 7.10)</p>
-<dt>CURL_VERSION_LIBZ</p>
-<dd> supports HTTP deflate using libz (Added in 7.10)</p>
-<dt>CURL_VERSION_NTLM</p>
-<dd> supports HTTP NTLM (added in 7.10.6)</p>
-<dt>CURL_VERSION_GSSNEGOTIATE</p>
-<dd> supports HTTP GSS-Negotiate (added in 7.10.6)</p>
-<dt>CURL_VERSION_DEBUG</p>
-<dd> libcurl was built with debug capabilities (added in 7.10.6)</p>
-<dt>CURL_VERSION_CURLDEBUG</p>
-<dd> libcurl was built with memory tracking debug capabilities. This is mainly of interest for libcurl hackers. (added in 7.19.6)</p>
-<dt>CURL_VERSION_ASYNCHDNS</p>
-<dd> libcurl was built with support for asynchronous name lookups, which allows more exact timeouts (even on Windows) and less blocking when using the multi interface. (added in 7.10.7)</p>
-<dt>CURL_VERSION_SPNEGO</p>
-<dd> libcurl was built with support for SPNEGO authentication (Simple and Protected GSS-API Negotiation Mechanism, defined in RFC 2478.) (added in 7.10.8)</p>
-<dt>CURL_VERSION_LARGEFILE</p>
-<dd> libcurl was built with support for large files. (Added in 7.11.1)</p>
-<dt>CURL_VERSION_IDN</p>
-<dd> libcurl was built with support for IDNA, domain names with international letters. (Added in 7.12.0)</p>
-<dt>CURL_VERSION_SSPI</p>
-<dd> libcurl was built with support for SSPI. This is only available on Windows and makes libcurl use Windows-provided functions for NTLM authentication. It also allows libcurl to use the current user and the current user&#8217;s password without the app having to pass them on. (Added in 7.13.2)</p>
-<dt>CURL_VERSION_CONV</p>
-<dd> libcurl was built with support for character conversions, as provided by the CURLOPT_CONV_* callbacks. (Added in 7.15.4)</p>
-<dt>CURL_VERSION_TLSAUTH_SRP</p>
-<dd> libcurl was built with support for TLS-SRP. (Added in 7.21.4)</p>
-<dt>CURL_VERSION_NTLM_WB</p>
-<dd> libcurl was built with support for NTLM delegation to a winbind helper. (Added in 7.22.0)</p>
-<dt>CURL_VERSION_UNIX_SOCKETS</p>
-<dd> libcurl was built with support for UNIX domain sockets.</dl>
+<dt>CURL_VERSION_IPV6</dt>
+<dd> supports IPv6</dd>
+<dt>CURL_VERSION_KERBEROS4</dt>
+<dd> supports kerberos4 (when using FTP)</dd>
+<dt>CURL_VERSION_SSL</dt>
+<dd> supports SSL (HTTPS/FTPS) (Added in 7.10)</dd>
+<dt>CURL_VERSION_LIBZ</dt>
+<dd> supports HTTP deflate using libz (Added in 7.10)</dd>
+<dt>CURL_VERSION_NTLM</dt>
+<dd> supports HTTP NTLM (added in 7.10.6)</dd>
+<dt>CURL_VERSION_GSSNEGOTIATE</dt>
+<dd> supports HTTP GSS-Negotiate (added in 7.10.6)</dd>
+<dt>CURL_VERSION_DEBUG</dt>
+<dd> libcurl was built with debug capabilities (added in 7.10.6)</dd>
+<dt>CURL_VERSION_CURLDEBUG</dt>
+<dd> libcurl was built with memory tracking debug capabilities. This is mainly of interest for libcurl hackers. (added in 7.19.6)</dd>
+<dt>CURL_VERSION_ASYNCHDNS</dt>
+<dd> libcurl was built with support for asynchronous name lookups, which allows more exact timeouts (even on Windows) and less blocking when using the multi interface. (added in 7.10.7)</dd>
+<dt>CURL_VERSION_SPNEGO</dt>
+<dd> libcurl was built with support for SPNEGO authentication (Simple and Protected GSS-API Negotiation Mechanism, defined in RFC 2478.) (added in 7.10.8)</dd>
+<dt>CURL_VERSION_LARGEFILE</dt>
+<dd> libcurl was built with support for large files. (Added in 7.11.1)</dd>
+<dt>CURL_VERSION_IDN</dt>
+<dd> libcurl was built with support for IDNA, domain names with international letters. (Added in 7.12.0)</dd>
+<dt>CURL_VERSION_SSPI</dt>
+<dd> libcurl was built with support for SSPI. This is only available on Windows and makes libcurl use Windows-provided functions for NTLM authentication. It also allows libcurl to use the current user and the current user&#8217;s password without the app having to pass them on. (Added in 7.13.2)</dd>
+<dt>CURL_VERSION_CONV</dt>
+<dd> libcurl was built with support for character conversions, as provided by the CURLOPT_CONV_* callbacks. (Added in 7.15.4)</dd>
+<dt>CURL_VERSION_TLSAUTH_SRP</dt>
+<dd> libcurl was built with support for TLS-SRP. (Added in 7.21.4)</dd>
+<dt>CURL_VERSION_NTLM_WB</dt>
+<dd> libcurl was built with support for NTLM delegation to a winbind helper. (Added in 7.22.0)</dd>
+<dt>CURL_VERSION_UNIX_SOCKETS</dt>
+<dd> libcurl was built with support for UNIX domain sockets.</dd></dl>
 </dl>
 <p> <i>ssl_version</i> is an ASCII string for the OpenSSL version used. If libcurl has no SSL support, this is NULL. </p>
 <p> <i>ssl_version_num</i> is the numerical OpenSSL version value as defined by the OpenSSL project. If libcurl has no SSL support, this is 0. </p>

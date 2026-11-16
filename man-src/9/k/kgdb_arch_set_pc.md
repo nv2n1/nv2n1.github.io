@@ -14,14 +14,14 @@ description: "kgdb_arch_set_pc – Generic call back to the program counter"
 <p><i>regs</i></p>
 <dl>
 <dd>
-<dd>Current struct pt_regs.</dl>
+</dd><dd>Current struct pt_regs.</dd></dl>
 <p> <i>pc</i></p>
 <dl>
-<dd>The new value for the program counter</dl>
+<dd>The new value for the program counter</dd></dl>
 <h2>Description</h2>
 <p>This function handles updating the program counter and requires an architecture specific implementation.</p>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

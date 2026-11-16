@@ -18,11 +18,11 @@ struct_snd_enc_flac -
 <h2>Members</h2>
 
 num
-<dl><dd>serial number, valid only for OGG formats needs to be set by application</dl>
+<dl><dd>serial number, valid only for OGG formats needs to be set by application</dd></dl>
  
 
  gain
-<dl><dd>Add replay gain tags</dl>
+<dl><dd>Add replay gain tags</dd></dl>
 
 <h2>Description</h2>
 

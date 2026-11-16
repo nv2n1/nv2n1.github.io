@@ -10,7 +10,6 @@ description: "std::chrono::duration_values<Rep>::min – std::chrono::duration_v
 <p>std::chrono::duration_values&lt;Rep&gt;::min &#8211; std::chrono::duration_values&lt;Rep&gt;::min</p>
 <h2>Synopsis</h2>
 <pre><code>static constexpr Rep min();           (until C++20)
-
 static constexpr Rep min() noexcept;  (since C++20)</code></pre>
 <p>Returns the lowest possible representation. </p>
 <h2>Parameters</h2>

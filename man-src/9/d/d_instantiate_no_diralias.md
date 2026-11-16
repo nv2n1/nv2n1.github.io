@@ -14,10 +14,10 @@ description: "d_instantiate_no_diralias – instantiate a non-aliased dentry"
 <p><i>entry</i></p>
 <dl>
 <dd>
-<dd>dentry to complete</dl>
+</dd><dd>dentry to complete</dd></dl>
 <p> <i>inode</i></p>
 <dl>
-<dd>inode to attach to this dentry</dl>
+<dd>inode to attach to this dentry</dd></dl>
 <h2>Description</h2>
 <p>Fill in inode information in the entry. If a directory alias is found, then return an error (and drop inode). Together with <code>d_materialise_unique</code> this guarantees that a directory inode may never have more than one alias.</p>
 <h2>Copyright</h2>

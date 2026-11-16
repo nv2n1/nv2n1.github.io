@@ -19,7 +19,7 @@ description: "slascl.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLASCL multiplies the M by N real matrix A by the real scalar
  CTO/CFROM.  This is done without over/underflow as long as the final
@@ -27,11 +27,11 @@ description: "slascl.f –"
  A may be full, upper triangular, lower triangular, upper Hessenberg,
  or banded.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TYPE</i> </p>
+</dt><dd> <i>TYPE</i> </dd>
 <pre>
           TYPE is CHARACTER*1
           TYPE indices the storage type of the input matrix.
@@ -103,14 +103,14 @@ description: "slascl.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 140 of file slascl.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

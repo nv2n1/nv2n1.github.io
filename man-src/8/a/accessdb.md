@@ -15,14 +15,14 @@ description: "accessdb – dumps the content of a man-db database in a human rea
 <p> Supplying an argument to accessdb will override this default.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Print debugging information.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Print a help message and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Print a short usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display version information.</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Print debugging information.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Print a help message and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Print a short usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display version information.</dd></dl>
 <h2>Author</h2>
 <pre>Wilf. (G.Wilford [at] ee.surrey.ac.uk).
 Fabrizio Polacco (fpolacco [at] debian.org).

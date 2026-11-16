@@ -14,18 +14,18 @@ description: "gnutls_certificate_set_x509_key_mem2 – API function"
 <p> <code>int gnutls_certificate_set_x509_key_mem2(gnutls_certificate_credentials_t </code><i>res</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, const gnutls_datum_t * </code><i>key</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>, const char * </code><i>pass</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t res</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>const gnutls_datum_t * cert</p>
-<dd> contains a certificate list (path) for the specified private key</p>
-<dt>const gnutls_datum_t * key</p>
-<dd> is the private key, or <code>NULL</code></p>
-<dt>gnutls_x509_crt_fmt_t type</p>
-<dd> is PEM or DER</p>
-<dt>const char * pass</p>
-<dd> is the key&#8217;s password</p>
-<dt>unsigned int flags</p>
-<dd> an ORed sequence of gnutls_pkcs_encrypt_flags_t</dl>
+<dt>gnutls_certificate_credentials_t res</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>const gnutls_datum_t * cert</dt>
+<dd> contains a certificate list (path) for the specified private key</dd>
+<dt>const gnutls_datum_t * key</dt>
+<dd> is the private key, or <code>NULL</code></dd>
+<dt>gnutls_x509_crt_fmt_t type</dt>
+<dd> is PEM or DER</dd>
+<dt>const char * pass</dt>
+<dd> is the key&#8217;s password</dd>
+<dt>unsigned int flags</dt>
+<dd> an ORed sequence of gnutls_pkcs_encrypt_flags_t</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once, in case multiple keys/certificates exist for the server. </p>
 <p> Note that the keyUsage (2.5.29.15) PKIX extension in X.509 certificates is supported. This means that certificates intended for signing cannot be used for ciphersuites that require encryption. </p>
@@ -42,6 +42,6 @@ description: "gnutls_certificate_set_x509_key_mem2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

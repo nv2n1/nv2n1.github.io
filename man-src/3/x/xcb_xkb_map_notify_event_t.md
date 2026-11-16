@@ -40,54 +40,54 @@ description: "xcb_xkb_map_notify_event_t –"
 } <code>xcb_xkb_map_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_XKB_MAP_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>xkbType</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>time</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>deviceID</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>ptrBtnActions</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>changed</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>minKeyCode</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>maxKeyCode</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>firstType</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>nTypes</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>firstKeySym</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>nKeySyms</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyAct</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>nKeyActs</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyBehavior</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>nKeyBehavior</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyExplicit</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>nKeyExplicit</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>firstModMapKey</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>nModMapKeys</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>firstVModMapKey</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>nVModMapKeys</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>virtualMods</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_XKB_MAP_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>xkbType</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>time</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>deviceID</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>ptrBtnActions</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>changed</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>minKeyCode</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>maxKeyCode</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>firstType</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>nTypes</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeySym</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>nKeySyms</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyAct</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyActs</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyBehavior</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyBehavior</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyExplicit</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyExplicit</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>firstModMapKey</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>nModMapKeys</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>firstVModMapKey</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>nVModMapKeys</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>virtualMods</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

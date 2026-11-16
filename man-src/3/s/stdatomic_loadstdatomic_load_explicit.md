@@ -11,27 +11,17 @@ std::atomic_load,std::atomic_load_explicit - std::atomic_load,std::atomic_load_e
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;atomic&gt;
-
     template &lt;class T&gt;
-
     T atomic_load(const std::atomic&lt;T&gt; *obj) noexcept;
-
 template &lt;class T&gt;
-
 T atomic_load(const volatile std::atomic&lt;T&gt; *obj) noexcept;
-
 template &lt;class T&gt;
 (1)(since C++ 11)
-
     T atomic_load_explicit(const std::atomic&lt;T&gt; *obj,
-
                            std::memory_order order) noexcept;
 (2)(since C++ 11)
-
     template &lt;class T&gt;
-
     T atomic_load_explicit(const volatile std::atomic&lt;T&gt; *obj,
-
                            std::memory_order order) noexcept;</code></pre> 
 1) Atomically obtains the value pointed to by obj as if by obj-&gt;load() 
 2) Atomically obtains the value pointed to by obj as if by obj-&gt;load(order) 

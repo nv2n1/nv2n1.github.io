@@ -69,42 +69,42 @@ set(Foo_LIBRARIES ${PREFIX}/lib/foo-1.2/libfoo.a)</pre>
 <p>are each pairs of package configuration files and corresponding package version files. </p>
 <p> When the <code>find_package()</code> command loads a version file it first sets the following variables:</p>
 <dl>
-<dt><code>PACKAGE_FIND_NAME</code></p>
-<dd>The &lt;package&gt; name</p>
-<dt><code>PACKAGE_FIND_VERSION</code></p>
-<dd>Full requested version string</p>
-<dt><code>PACKAGE_FIND_VERSION_MAJOR</code></p>
-<dd>Major version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_MINOR</code></p>
-<dd>Minor version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_PATCH</code></p>
-<dd>Patch version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_TWEAK</code></p>
-<dd>Tweak version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_COUNT</code></p>
-<dd>Number of version components, 0 to 4 </p>
+<dt><code>PACKAGE_FIND_NAME</code></dt>
+<dd>The &lt;package&gt; name</dd>
+<dt><code>PACKAGE_FIND_VERSION</code></dt>
+<dd>Full requested version string</dd>
+<dt><code>PACKAGE_FIND_VERSION_MAJOR</code></dt>
+<dd>Major version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_MINOR</code></dt>
+<dd>Minor version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_PATCH</code></dt>
+<dd>Patch version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_TWEAK</code></dt>
+<dd>Tweak version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_COUNT</code></dt>
+<dd>Number of version components, 0 to 4 </dd>
 <p> The version file must use these variables to check whether it is compatible or an exact match for the requested version and set the following variables with results:</p>
-<dt><code>PACKAGE_VERSION</code></p>
-<dd>Full provided version string</p>
-<dt><code>PACKAGE_VERSION_EXACT</code></p>
-<dd>True if version is exact match</p>
-<dt><code>PACKAGE_VERSION_COMPATIBLE</code></p>
-<dd>True if version is compatible</p>
-<dt><code>PACKAGE_VERSION_UNSUITABLE</code></p>
-<dd>True if unsuitable as any version </p>
+<dt><code>PACKAGE_VERSION</code></dt>
+<dd>Full provided version string</dd>
+<dt><code>PACKAGE_VERSION_EXACT</code></dt>
+<dd>True if version is exact match</dd>
+<dt><code>PACKAGE_VERSION_COMPATIBLE</code></dt>
+<dd>True if version is compatible</dd>
+<dt><code>PACKAGE_VERSION_UNSUITABLE</code></dt>
+<dd>True if unsuitable as any version </dd>
 <p> Version files are loaded in a nested scope so they are free to set any variables they wish as part of their computation. The find_package command wipes out the scope when the version file has completed and it has checked the output variables. When the version file claims to be an acceptable match for the requested version the find_package command sets the following variables for use by the project:</p>
-<dt><code>&lt;package&gt;_VERSION</code></p>
-<dd>Full provided version string</p>
-<dt><code>&lt;package&gt;_VERSION_MAJOR</code></p>
-<dd>Major version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_MINOR</code></p>
-<dd>Minor version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_PATCH</code></p>
-<dd>Patch version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_TWEAK</code></p>
-<dd>Tweak version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_COUNT</code></p>
-<dd>Number of version components, 0 to 4 </p>
+<dt><code>&lt;package&gt;_VERSION</code></dt>
+<dd>Full provided version string</dd>
+<dt><code>&lt;package&gt;_VERSION_MAJOR</code></dt>
+<dd>Major version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_MINOR</code></dt>
+<dd>Minor version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_PATCH</code></dt>
+<dd>Patch version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_TWEAK</code></dt>
+<dd>Tweak version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_COUNT</code></dt>
+<dd>Number of version components, 0 to 4 </dd>
 <p> The variables report the version of the package that was actually found. The <code>&lt;package&gt;</code> part of their name matches the argument given to the <code>find_package()</code> command.</dl>
 <h2>Creating Packages</h2>
 <p>Usually, the upstream depends on CMake itself and can use some CMake facilities for creating the package files. Consider an upstream which provides a single shared library: </p>
@@ -234,17 +234,17 @@ target_include_directories(ClimbingStats INTERFACE
 <p>With this approach the package references its external dependencies only through the names of <i>IMPORTED targets</i>. When a consumer uses the installed package, the consumer will run the appropriate <code>find_package()</code> commands (via the <code>find_dependency</code> macro described above) to find the dependencies and populate the imported targets with appropriate paths on their own machine. </p>
 <p> Unfortunately many <code>modules</code> shipped with CMake do not yet provide <i>IMPORTED targets</i> because their development pre-dated this approach. This may improve incrementally over time. Workarounds to create relocatable packages using such modules include:</p>
 <dl>
-<dt>&bull;</p>
-<dd>When building the package, specify each <code>Foo_LIBRARY</code> cache entry as just a library name, e.g. <code>-DFoo_LIBRARY=foo</code>. This tells the corresponding find module to populate the <code>Foo_LIBRARIES</code> with just <code>foo</code> to ask the linker to search for the library instead of hard-coding a path.</p>
-<dt>&bull;</p>
-<dd>Or, after installing the package content but before creating the package installation binary for redistribution, manually replace the absolute paths with placeholders for substitution by the installation tool when the package is installed.</dl>
+<dt>&bull;</dt>
+<dd>When building the package, specify each <code>Foo_LIBRARY</code> cache entry as just a library name, e.g. <code>-DFoo_LIBRARY=foo</code>. This tells the corresponding find module to populate the <code>Foo_LIBRARIES</code> with just <code>foo</code> to ask the linker to search for the library instead of hard-coding a path.</dd>
+<dt>&bull;</dt>
+<dd>Or, after installing the package content but before creating the package installation binary for redistribution, manually replace the absolute paths with placeholders for substitution by the installation tool when the package is installed.</dd></dl>
 <h2>Package Registry</h2>
 <p>CMake provides two central locations to register packages that have been built or installed anywhere on a system:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>User Package Registry</i></p>
-<dt>&bull;</p>
-<dd><i>System Package Registry</i> </p>
+<dt>&bull;</dt>
+<dd><i>User Package Registry</i></dd>
+<dt>&bull;</dt>
+<dd><i>System Package Registry</i> </dd>
 <p> The registries are especially useful to help projects find packages in non-standard install locations or directly in their own build trees. A project may populate either the user or system registry (using its own means, see below) to refer to its location. In either case the package should store at the registered location a <i>Package Configuration File</i> (<code>&lt;package&gt;Config.cmake</code>) and optionally a <i>Package Version File</i> (<code>&lt;package&gt;ConfigVersion.cmake</code>). </p>
 <p> The <code>find_package()</code> command searches the two package registries as two of the search steps specified in its documentation. If it has sufficient permissions it also removes stale package registry entries that refer to directories that do not exist or do not contain a matching package configuration file.</dl>
 <h3>User Package Registry</h3>
@@ -265,12 +265,12 @@ target_include_directories(ClimbingStats INTERFACE
 <h3>Disabling the Package Registry</h3>
 <p>In some cases using the Package Registries is not desirable. CMake allows one to disable them using the following variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_EXPORT_NO_PACKAGE_REGISTRY</code> disables the <code>export(PACKAGE)</code> command.</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY</code> disables the User Package Registry in all the <code>find_package()</code> calls.</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY</code> disables the System Package Registry in all the <code>find_package()</code> calls.</dl>
+<dt>&bull;</dt>
+<dd><code>CMAKE_EXPORT_NO_PACKAGE_REGISTRY</code> disables the <code>export(PACKAGE)</code> command.</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY</code> disables the User Package Registry in all the <code>find_package()</code> calls.</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY</code> disables the System Package Registry in all the <code>find_package()</code> calls.</dd></dl>
 <h3>Package Registry Example</h3>
 <p>A simple convention for naming package registry entries is to use content hashes. They are deterministic and unlikely to collide (<code>export(PACKAGE)</code> uses this approach). The name of an entry referencing a specific directory is simply the content hash of the directory path itself. </p>
 <p> If a project arranges for package registry entries to exist, such as: </p>

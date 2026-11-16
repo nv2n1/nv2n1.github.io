@@ -57,9 +57,9 @@ description: "cvs_selinux – Security Enhanced Linux Policy for the cvs process
 <p> Policy governs the access confined processes have to these ports. SELinux cvs policy is very flexible allowing users to setup their cvs processes in as secure a method as possible. </p>
 <p> The following port types are defined for cvs: </p>
 <dl>
-<dt><code>cvs_port_t</code></p>
+<dt><code>cvs_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2401 udp 2401</dl>
+</dd><dd>Default Defined Ports: tcp 2401 udp 2401</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type cvs_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -113,16 +113,16 @@ description: "cvs_selinux – Security Enhanced Linux Policy for the cvs process
 <p> <code>cvs_data_t</code> </p>
 <p> &#8211; Set files with the cvs_data_t type, if you want to treat the files as cvs content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/cvs(/.*)?, /var/cvs(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/opt/cvs(/.*)?, /var/cvs(/.*)? </dd>
 </dl>
 <p> <code>cvs_exec_t</code> </p>
 <p> &#8211; Set files with the cvs_exec_t type, if you want to transition an executable to the cvs_t domain. </p>
 <p> <code>cvs_home_t</code> </p>
 <p> &#8211; Set files with the cvs_home_t type, if you want to store cvs files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.cvsignore, /home/[^/]+/.cvsignore </p>
+<dt>Paths:</dt>
+<dd>/root/.cvsignore, /home/[^/]+/.cvsignore </dd>
 </dl>
 <p> <code>cvs_htaccess_t</code> </p>
 <p> &#8211; Set files with the cvs_htaccess_t type, if you want to treat the file as a cvs access file. </p>
@@ -137,8 +137,8 @@ description: "cvs_selinux – Security Enhanced Linux Policy for the cvs process
 <p> <code>cvs_script_exec_t</code> </p>
 <p> &#8211; Set files with the cvs_script_exec_t type, if you want to transition an executable to the cvs_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/www/cgi-bin/cvsweb.cgi, /usr/share/cvsweb/cvsweb.cgi </p>
+<dt>Paths:</dt>
+<dd>/var/www/cgi-bin/cvsweb.cgi, /usr/share/cvsweb/cvsweb.cgi </dd>
 </dl>
 <p> <code>cvs_tmp_t</code> </p>
 <p> &#8211; Set files with the cvs_tmp_t type, if you want to store cvs temporary files in the /tmp directories. </p>

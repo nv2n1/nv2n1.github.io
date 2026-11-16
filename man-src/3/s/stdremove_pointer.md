@@ -11,10 +11,8 @@ std::remove_pointer - std::remove_pointer
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct remove_pointer;</code></pre> 
 Provides the member typedef type which is the type pointed to by T, or, if T is not a pointer, then type is the same as T. 
 
@@ -39,22 +37,17 @@ using remove_pointer_t = typename remove_pointer&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 template &lt;class T1, class T2&gt;
-
 void print_is_same()
-
 {
     std::cout &lt;&lt; std::is_same&lt;T1, T2&gt;() &lt;&lt; '\n';
 }
 void print_separator()
-
 {
     std::cout &lt;&lt; &quot;-----\n&quot;;
 }
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     print_is_same&lt;int, int&gt;();    // true

@@ -15,14 +15,14 @@ description: "isaset – set ISA registers"
 <p>isaset is a small helper program to set registers visible through the ISA bus. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Enable flat address space mode.</p>
-<dt><code>-y</code></p>
-<dd>Disable interactive mode. By default, isaset will wait for a confirmation from the user before messing with the ISA bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</p>
-<dt><code>-W</code></p>
-<dd>Perform a 16-bit write.</p>
-<dt><code>-L</code></p>
-<dd>Perform a 32-bit write. </p>
+<dt><code>-f</code></dt>
+<dd>Enable flat address space mode.</dd>
+<dt><code>-y</code></dt>
+<dd>Disable interactive mode. By default, isaset will wait for a confirmation from the user before messing with the ISA bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</dd>
+<dt><code>-W</code></dt>
+<dd>Perform a 16-bit write.</dd>
+<dt><code>-L</code></dt>
+<dd>Perform a 32-bit write. </dd>
 </dl>
 <h2>OPTIONS (I2C-like access mode)</h2>
 <p>Four options must be provided to isaset. <i>addrreg</i> contains the ISA address of the address register for the chip to probe; <i>datareg</i> contains the address of the data register. Both addresses are integers between 0x0000 and 0x3FFF. Usually, if the chip&#8217;s base address is 0x0nn0, the address register is at 0x0nn5 and the data register is at 0x0nn6. The most common base address for hardware monitoring chips is 0x0290. For Super-I/O chips, address register is typically at 0x2E with data register at 0x2F. The <i>address</i> and <i>value</i> parameters are two integers between 0x00 and 0xFF. isaset will write value <i>value</i> to address <i>address</i>. An optional <i>mask</i> can be provided as a fifth parameter, preserving unmasked bits at the written location.</p>

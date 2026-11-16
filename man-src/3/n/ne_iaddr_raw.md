@@ -10,30 +10,21 @@ description: "ne_iaddr_make, ne_iaddr_cmp, ne_iaddr_print, ne_iaddr_typeof, ne_i
 <p>ne_iaddr_make, ne_iaddr_cmp, ne_iaddr_print, ne_iaddr_typeof, ne_iaddr_parse, ne_iaddr_raw, ne_iaddr_reverse, ne_iaddr_free &#8211; functions to manipulate network addresses</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ne_socket.h&gt;
-
 typedef enum {
     ne_iaddr_ipv4 = 0,
     ne_iaddr_ipv6
 } ne_iaddr_type;
-
 ne_inet_addr *ne_iaddr_make(ne_iaddr_type type, const unsigned char *raw);
-
 int ne_iaddr_cmp(const ne_inet_addr *ia1, const ne_inet_addr *ia2);
-
 char *ne_iaddr_print(const ne_inet_addr *ia, char *buffer, size_t bufsiz);
-
 ne_iaddr_type ne_iaddr_typeof(const ne_inet_addr *ia);
-
 ne_inet_addr *ne_iaddr_parse(const char *address, ne_iaddr_type type);
-
 unsigned char *ne_iaddr_raw(const ne_inet_addr *ia, unsigned char *buffer);
-
 int ne_iaddr_reverse(const ne_inet_addr *ia, char *buffer, size_t buflen);
-
 void ne_iaddr_free(const ne_inet_addr *ia);</code></pre>
 <h2>Description</h2>
 <p><code>ne_iaddr_make</code></p>
-<dd>creates an <code>ne_inet_addr</code> object from a raw binary network address; for instance the four bytes 0x7f 0x00 0x00 0x01 represent the IPv4 address 127.0.0.1. The object returned is suitable for passing to <code>ne_sock_connect</code>. A binary IPv4 address contains four bytes; a binary IPv6 address contains sixteen bytes; addresses passed must be in network byte order. </p>
+<dd>creates an <code>ne_inet_addr</code> object from a raw binary network address; for instance the four bytes 0x7f 0x00 0x00 0x01 represent the IPv4 address 127.0.0.1. The object returned is suitable for passing to <code>ne_sock_connect</code>. A binary IPv4 address contains four bytes; a binary IPv6 address contains sixteen bytes; addresses passed must be in network byte order. </dd>
 <p> <code>ne_iaddr_cmp</code> compares two network address objects; returning zero only if they are identical. The objects need not have the same address type; if the addresses are not of the same type, the return value is guaranteed to be non-zero. </p>
 <p> <code>ne_iaddr_print</code> prints a human-readable string representation of a network address into a buffer, for instance the string &quot;127.0.0.1&quot;. </p>
 <p> <code>ne_iaddr_typeof</code> returns the type of the given network address object. </p>
@@ -50,3 +41,4 @@ void ne_iaddr_free(const ne_inet_addr *ia);</code></pre>
 <h2>Examples</h2>
 <p>The following example connects a socket to port 80 at the address 127.0.0.1. </p>
 <pre><code>unsigned char addr[] = &quot;
+</code></pre>

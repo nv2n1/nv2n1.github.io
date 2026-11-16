@@ -15,31 +15,31 @@ description: "kbxutil – List, export, import Keybox data"
 <p> List, export, import Keybox data </p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>&#8211;stats</code></p>
-<dd> show key statistics</p>
-<dt><code>&#8211;import-openpgp</code></p>
-<dd> import OpenPGP keyblocks</p>
-<dt><code>&#8211;find-dups</code></p>
-<dd> find duplicates</p>
-<dt><code>&#8211;cut</code></p>
-<dd> export records </p>
+<dt><code>&#8211;stats</code></dt>
+<dd> show key statistics</dd>
+<dt><code>&#8211;import-openpgp</code></dt>
+<dd> import OpenPGP keyblocks</dd>
+<dt><code>&#8211;find-dups</code></dt>
+<dd> find duplicates</dd>
+<dt><code>&#8211;cut</code></dt>
+<dd> export records </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;from</code><i> N</i></p>
-<dd> first record to export</p>
-<dt><code>&#8211;to</code><i> N</i></p>
-<dd> last record to export</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbose</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> be somewhat more quiet</p>
-<dt><code>-n</code>, <code>&#8211;dry-run</code></p>
-<dd> do not make any changes</p>
-<dt><code>&#8211;debug</code></p>
-<dd> set debugging flags</p>
-<dt><code>&#8211;debug-all</code></p>
-<dd> enable full debugging </p>
+<dt><code>&#8211;from</code><i> N</i></dt>
+<dd> first record to export</dd>
+<dt><code>&#8211;to</code><i> N</i></dt>
+<dd> last record to export</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbose</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> be somewhat more quiet</dd>
+<dt><code>-n</code>, <code>&#8211;dry-run</code></dt>
+<dd> do not make any changes</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> set debugging flags</dd>
+<dt><code>&#8211;debug-all</code></dt>
+<dd> enable full debugging </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please report bugs to &lt;<a rel="nofollow" href="https://dev.gnupg.org">https://dev.gnupg.org</a>&gt;. </p>

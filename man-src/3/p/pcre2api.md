@@ -217,7 +217,8 @@ pcre2.h&gt;</code></pre>
 <p> Each of the first three conventions is used by at least one operating system as its standard newline sequence. When PCRE2 is built, a default can be specified. If it is not, the default is set to LF, which is the Unix standard. However, the newline convention can be changed by an application when calling <code>pcre2_compile()</code>, or it can be specified by special text at the start of the pattern itself; this overrides any other settings. See the <code>pcre2pattern</code> page for details of the special character sequences. </p>
 <p> In the PCRE2 documentation the word &quot;newline&quot; is used to mean &quot;the character or pair of characters that indicate a line break&quot;. The choice of newline convention affects the handling of the dot, circumflex, and dollar metacharacters, the handling of #-comments in /x mode, and, when CRLF is a recognized line ending sequence, the match position advancement for a non-anchored pattern. There is more detail about this in the section on <code>pcre2_match()</code> options below. </p>
 <p> The choice of newline convention does not affect the interpretation of the 
- or  escape sequences, nor does it affect what \R matches; this has its own separate convention.</p>
+ or 
+ escape sequences, nor does it affect what \R matches; this has its own separate convention.</p>
 <h2>Multithreading</h2>
 <p>In a multithreaded application it is important to keep thread-specific data separate from data that can be shared between threads. The PCRE2 library code itself is thread-safe: it contains no static or global variables. The API is designed to be fairly simple for non-threaded applications while at the same time ensuring that multithreaded applications can use it. </p>
 <p> There are several different blocks of data that are used to pass information between the application and the PCRE2 libraries.</p>
@@ -434,3 +435,4 @@ pcre2.h&gt;</code></pre>
 <p>&nbsp;<wbr>&nbsp;PCRE2_ALT_BSUX </p>
 <p> This option request alternative handling of three escape sequences, which makes PCRE2&#8217;s behaviour more like ECMAscript (aka JavaScript). When it is set: </p>
 <p> (1) 
+</p>

@@ -18,10 +18,10 @@ description: "shtool arx – GNU shtool"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Shows the actually involved shell commands.</p>
-<dt><code>-C</code>, <code>&#8211;command</code> <i>cmd</i></p>
-<dd> Set the used <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1) command to <i>cmd</i> instead of just &#8220;ar&#8221; (searched in <tt>$PATH</tt>).</dl>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Shows the actually involved shell commands.</dd>
+<dt><code>-C</code>, <code>&#8211;command</code> <i>cmd</i></dt>
+<dd> Set the used <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1) command to <i>cmd</i> instead of just &#8220;ar&#8221; (searched in <tt>$PATH</tt>).</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   Makefile

@@ -15,8 +15,8 @@ description: "dh_scour – run scour optimizer on shipped SVG files"
 <p> dh_scour is a debhelper program that will run the scour <font SIZE="-1">SVG</font> image scrubber on all shipped <font SIZE="-1">SVG</font> files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8212;</code> <i>params</i></p>
-<dd> Pass &#8220;params&#8221; to <i>scour</i>(1). By default, no extra arguments are passed.</dl>
+<dt><code>&#8212;</code> <i>params</i></dt>
+<dd> Pass &#8220;params&#8221; to <i>scour</i>(1). By default, no extra arguments are passed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> debhelper</p>
 <h2>AUTHOR</h2>

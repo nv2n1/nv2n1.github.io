@@ -65,9 +65,9 @@ description: "tftpd_selinux – Security Enhanced Linux Policy for the tftpd pro
 <p> Policy governs the access confined processes have to these ports. SELinux tftpd policy is very flexible allowing users to setup their tftpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for tftpd: </p>
 <dl>
-<dt><code>tftp_port_t</code></p>
+<dt><code>tftp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 69</dl>
+</dd><dd>Default Defined Ports: udp 69</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type tftpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cifs_t</code> </p>
@@ -124,8 +124,8 @@ description: "tftpd_selinux – Security Enhanced Linux Policy for the tftpd pro
 <p> <code>tftpd_exec_t</code> </p>
 <p> &#8211; Set files with the tftpd_exec_t type, if you want to transition an executable to the tftpd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/atftpd, /usr/sbin/in.tftpd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/atftpd, /usr/sbin/in.tftpd </dd>
 </dl>
 <p> <code>tftpd_var_run_t</code> </p>
 <p> &#8211; Set files with the tftpd_var_run_t type, if you want to store the tftpd files under the /run or /var/run directory. </p>
@@ -134,20 +134,20 @@ description: "tftpd_selinux – Security Enhanced Linux Policy for the tftpd pro
 <p> <code>tftpdir_t</code> </p>
 <p> &#8211; Set files with the tftpdir_t type, if you want to treat the files as tftpdir data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/tftpboot/.*, /tftpboot </p>
+<dt>Paths:</dt>
+<dd>/tftpboot/.*, /tftpboot </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow tftpd servers to read the /var/tftpd directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow tftpd servers to read the /var/tftpd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/tftpd(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/tftpd</code></p>
 <dl>
-<dt>Allow tftpd servers to read and write /var/tftpd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the tftpd_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow tftpd servers to read and write /var/tftpd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the tftpd_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/tftpd/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/tftpd/incoming</code><br />
  <code>setsebool -P tftpd_anon_write 1</code> </p>

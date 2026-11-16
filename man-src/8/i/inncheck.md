@@ -30,20 +30,20 @@ description: "inncheck – Check INN configuration and database files"
  storage.conf</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd>If any <i>file</i> value or <i>file</i><code>=</code><i>path</i> pairs (see below) are given, then normally only the files they refer to are checked. Use the <code>-a</code> (or <code>&#8211;all</code>) flag to specify that <i>all</i> files should be checked regardless. In this case the form <i>file</i><code>=</code><i>path</i> will be the more useful.</p>
-<dt><code>-f</code>, <code>&#8211;fix</code></p>
-<dd>Use the <code>-f</code> flag (or <code>&#8211;fix</code>) to have <code>inncheck</code> print the appropriate <code>chown</code>/<code>chgrp</code>/<code>chmod</code> command necessary to fix a problem that it reports. Any other output lines will be prefixed with a hash sign (<tt>&quot;#&quot;</tt>) to make the output be valid input for a shell. Note that the <code>&#8211;perm</code> flag must be used as well when using this flag.</p>
-<dt><code>&#8211;noperm</code></p>
-<dd>To avoid doing any checking of file permissions or ownership, use the <code>&#8211;noperm</code> option.</p>
-<dt><code>&#8211;pedantic</code></p>
-<dd>Use the <code>&#8211;pedantic</code> option to get reports on things that are not necessarily wrong, but may indicate a bad configuration, such as <i>inn.conf</i> missing a key.</p>
-<dt><code>&#8211;perm</code></p>
-<dd><code>inncheck</code> checks all files for permission problems. If the <code>&#8211;perm</code> flag is used, then <i>only</i> the files specified by the <i>file</i> or <i>file</i><code>=</code><i>path</i> command line arguments will be checked for problems other than permission problems.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Use the <code>-q</code> option (or <code>&#8211;quiet</code>) to get less output.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Use the <code>-v</code> option (or <code>&#8211;verbose</code>) to get more verbose output.</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd>If any <i>file</i> value or <i>file</i><code>=</code><i>path</i> pairs (see below) are given, then normally only the files they refer to are checked. Use the <code>-a</code> (or <code>&#8211;all</code>) flag to specify that <i>all</i> files should be checked regardless. In this case the form <i>file</i><code>=</code><i>path</i> will be the more useful.</dd>
+<dt><code>-f</code>, <code>&#8211;fix</code></dt>
+<dd>Use the <code>-f</code> flag (or <code>&#8211;fix</code>) to have <code>inncheck</code> print the appropriate <code>chown</code>/<code>chgrp</code>/<code>chmod</code> command necessary to fix a problem that it reports. Any other output lines will be prefixed with a hash sign (<tt>&quot;#&quot;</tt>) to make the output be valid input for a shell. Note that the <code>&#8211;perm</code> flag must be used as well when using this flag.</dd>
+<dt><code>&#8211;noperm</code></dt>
+<dd>To avoid doing any checking of file permissions or ownership, use the <code>&#8211;noperm</code> option.</dd>
+<dt><code>&#8211;pedantic</code></dt>
+<dd>Use the <code>&#8211;pedantic</code> option to get reports on things that are not necessarily wrong, but may indicate a bad configuration, such as <i>inn.conf</i> missing a key.</dd>
+<dt><code>&#8211;perm</code></dt>
+<dd><code>inncheck</code> checks all files for permission problems. If the <code>&#8211;perm</code> flag is used, then <i>only</i> the files specified by the <i>file</i> or <i>file</i><code>=</code><i>path</i> command line arguments will be checked for problems other than permission problems.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Use the <code>-q</code> option (or <code>&#8211;quiet</code>) to get less output.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Use the <code>-v</code> option (or <code>&#8211;verbose</code>) to get more verbose output.</dd></dl>
 <h2>Examples</h2>
 <p>To have <code>inncheck</code> check all files for syntax and permission problems simply run: </p>
 <pre> inncheck</pre>

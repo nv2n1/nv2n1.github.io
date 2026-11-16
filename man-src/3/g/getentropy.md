@@ -16,7 +16,7 @@ description: "getentropy – fill a buffer with random bytes"
 <p> <code>getentropy</code>(): </p>
 <dl>
 <dt>
-<dd> _DEFAULT_SOURCE</dl>
+</dt><dd> _DEFAULT_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>getentropy</code>() function writes <i>length</i> bytes of high-quality random data to the buffer starting at the location pointed to by <i>buffer</i>. The maximum permitted value for the <i>length</i> argument is 256. </p>
 <p> A successful call to <code>getentropy</code>() always provides the requested number of bytes of entropy.</p>
@@ -24,14 +24,14 @@ description: "getentropy – fill a buffer with random bytes"
 <p> On success, this function returns zero. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Part or all of the buffer specified by <i>buffer</i> and <i>length</i> is not in valid addressable memory.</p>
-<dt><code>EIO</code></p>
-<dd> <i>length</i> is greater than 256.</p>
-<dt><code>EIO</code></p>
-<dd> An unspecified error occurred while trying to overwrite <i>buffer</i> with random data.</p>
-<dt><code>ENOSYS</code></p>
-<dd> This kernel version does not implement the <code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2) system call required to implement this function.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Part or all of the buffer specified by <i>buffer</i> and <i>length</i> is not in valid addressable memory.</dd>
+<dt><code>EIO</code></dt>
+<dd> <i>length</i> is greater than 256.</dd>
+<dt><code>EIO</code></dt>
+<dd> An unspecified error occurred while trying to overwrite <i>buffer</i> with random data.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> This kernel version does not implement the <code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2) system call required to implement this function.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>getentropy</code>() function first appeared in glibc 2.25.</p>
 <h2>CONFORMING TO</h2>

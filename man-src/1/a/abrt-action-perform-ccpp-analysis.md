@@ -31,10 +31,10 @@ url: "/docs/linux/man/1-abrt-action-perform-ccpp-analysis/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=analyze_CCpp analyzer=CCpp
     abrt-action-perform-ccpp-analysis
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -43,13 +43,13 @@ EVENT=analyze_CCpp analyzer=CCpp
  -d, --problem-dir PROBLEM_DIR
 <dl>
 <dt>
-<dd> Problem directory [Default: current directory]</dl>
+</dt><dd> Problem directory [Default: current directory]</dd></dl>
  
 
  -h, --help
 <dl>
 <dt>
-<dd> Show help message</dl>
+</dt><dd> Show help message</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -57,7 +57,7 @@ EVENT=analyze_CCpp analyzer=CCpp
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

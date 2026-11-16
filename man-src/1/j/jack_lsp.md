@@ -15,32 +15,32 @@ description: "jack_lsp – JACK toolkit client to list informtion on ports"
 <p> <code>jack_lsp</code> lists all known ports associated with a JACK server. It can also optionally list various kinds of information about each port.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code>, <code>&#8211;server</code> <i>servername</i></p>
+<dt><code>-s</code>, <code>&#8211;server</code> <i>servername</i></dt>
 <dd>
- Connect to the jack server named <i>servername</i></p>
-<dt><code>-A</code>, <code>&#8211;aliases</code></p>
+ Connect to the jack server named <i>servername</i></dd>
+<dt><code>-A</code>, <code>&#8211;aliases</code></dt>
 <dd>
- List aliases for each port</p>
-<dt><code>-c</code>, <code>&#8211;connections</code></p>
+ List aliases for each port</dd>
+<dt><code>-c</code>, <code>&#8211;connections</code></dt>
 <dd>
- List connections to/from each port</p>
-<dt><code>-l</code>, <code>&#8211;latency</code></p>
+ List connections to/from each port</dd>
+<dt><code>-l</code>, <code>&#8211;latency</code></dt>
 <dd>
- Display per-port latency in frames at each port</p>
-<dt><code>-L</code>, <i>&#8211;latency</i></p>
+ Display per-port latency in frames at each port</dd>
+<dt><code>-L</code>, <i>&#8211;latency</i></dt>
 <dd>
- Display total latency in frames at each port</p>
-<dt><code>-p</code>, <code>&#8211;properties</code></p>
+ Display total latency in frames at each port</dd>
+<dt><code>-p</code>, <code>&#8211;properties</code></dt>
 <dd>
- Display port properties. Output may include input|output, can-monitor, physical, terminal</p>
-<dt><code>-t</code>, <code>&#8211;type</code></p>
+ Display port properties. Output may include input|output, can-monitor, physical, terminal</dd>
+<dt><code>-t</code>, <code>&#8211;type</code></dt>
 <dd>
- Display port type</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+ Display port type</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Display help/usage message</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
+ Display help/usage message</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd>
- Output version information and exit </p>
+ Output version information and exit </dd>
 </dl>
 <h2>Index</h2>

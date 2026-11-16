@@ -10,14 +10,14 @@ description: "XUnmapWindow, XUnmapSubwindows – unmap windows"
 <p>XUnmapWindow, XUnmapSubwindows &#8211; unmap windows </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XUnmapWindow(Display *<i>display</i>, Window <i>w</i>);</p>
-<dd>int XUnmapSubwindows(Display *<i>display</i>, Window <i>w</i>);</dl>
+<dd>int XUnmapWindow(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XUnmapSubwindows(Display *<i>display</i>, Window <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XUnmapWindow</code> function unmaps the specified window and causes the X server to generate an <code>UnmapNotify</code> event. If the specified window is already unmapped, <code>XUnmapWindow</code> has no effect. Normal exposure processing on formerly obscured windows is performed. Any child window will no longer be visible until another map call is made on the parent. In other words, the subwindows are still mapped but are not visible until the parent is mapped. Unmapping a window will generate <code>Expose</code> events on windows that were formerly obscured by it. </p>
 <p> <code>XUnmapWindow</code> can generate a <code>BadWindow</code> error. </p>
@@ -25,8 +25,8 @@ description: "XUnmapWindow, XUnmapSubwindows – unmap windows"
 <p> <code>XUnmapSubwindows</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xconfigurewindow/">XConfigureWindow</a>(3), <a href="/docs/linux/man/3-xcreatewindow/">XCreateWindow</a>(3), <a href="/docs/linux/man/3-xdestroywindow/">XDestroyWindow</a>(3), <a href="/docs/linux/man/3-xmapwindow/">XMapWindow</a>(3) <a href="/docs/linux/man/3-xraisewindow/">XRaiseWindow</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

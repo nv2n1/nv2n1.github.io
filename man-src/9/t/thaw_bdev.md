@@ -14,10 +14,10 @@ description: "thaw_bdev – – unlock filesystem"
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>blockdevice to unlock</dl>
+</dd><dd>blockdevice to unlock</dd></dl>
 <p> <i>sb</i></p>
 <dl>
-<dd>associated superblock</dl>
+<dd>associated superblock</dd></dl>
 <h2>Description</h2>
 <p>Unlocks the filesystem and marks it writeable again after <code>freeze_bdev</code>.</p>
 <h2>Copyright</h2>

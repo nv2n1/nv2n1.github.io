@@ -11,7 +11,6 @@ std::ferror - std::ferror
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int ferror(std::FILE *stream);</code></pre> 
 Checks the given stream for errors. 
 
@@ -26,14 +25,10 @@ Nonzero value if the file stream has errors occurred, 0 otherwise
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;cwchar&gt;
 int main(void)
-
 {
     const char *fname = std::tmpnam(nullptr);
     std::FILE *f = std::fopen(fname, &quot;wb&quot;);

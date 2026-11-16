@@ -35,18 +35,18 @@ description: "Tspi_Hash_VerifySignature – verify the hash value with a given s
 <h2>Return Codes</h2>
 <p><code>Tspi_Hash_VerifySignature</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hKey</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
-<dd>One or more parameters is bad. </p>
-<dt><font SIZE="-1">TSS_E_HASH_INVALID_LENGTH</font></p>
-<dd>Hash length is inconsistent with hash algorithm. </p>
-<dt><font SIZE="-1">TSS_E_HASH_NO_DATA</font></p>
-<dd>Hash object has no internal hash value. </p>
-<dt><font SIZE="-1">TSS_E_INVALID_SIGSCHEME</font></p>
-<dd>Invalid signature scheme. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hKey</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dd>One or more parameters is bad. </dd>
+<dt><font SIZE="-1">TSS_E_HASH_INVALID_LENGTH</font></dt>
+<dd>Hash length is inconsistent with hash algorithm. </dd>
+<dt><font SIZE="-1">TSS_E_HASH_NO_DATA</font></dt>
+<dd>Hash object has no internal hash value. </dd>
+<dt><font SIZE="-1">TSS_E_INVALID_SIGSCHEME</font></dt>
+<dd>Invalid signature scheme. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Hash_VerifySignature</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>

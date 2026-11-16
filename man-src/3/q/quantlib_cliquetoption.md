@@ -25,11 +25,11 @@ description: "QuantLib::CliquetOption – cliquet (Ratchet) option"
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>add local/global caps/floors</p>
-<dt>*</p>
-<dd>add accrued coupon and last fixing</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>add local/global caps/floors</dd>
+<dt>*</dt>
+<dd>add accrued coupon and last fixing</dd></dl>
 </dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>

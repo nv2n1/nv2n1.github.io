@@ -16,31 +16,31 @@ description: "extlinux – install the SYSLINUX bootloader on an ext2/ext3/ext4/
 <p> The installer is designed to be run on a mounted directory. For example, if you have an ext2, ext3, ext4, or btrfs usb key mounted on /mnt, you can run the following command:</p>
 <dl>
 <dt>
-<dd> <code>extlinux &#8211;install /mnt</code></dl>
+</dt><dd> <code>extlinux &#8211;install /mnt</code></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-H</code>, <code>&#8211;heads</code>=#</p>
-<dd> Force the number of heads.</p>
-<dt><code>-i</code>, <code>&#8211;install</code></p>
-<dd> Install over the current bootsector.</p>
-<dt><code>-O</code>, <code>&#8211;clear-once</code></p>
-<dd> Clear the boot-once command.</p>
-<dt><code>-o</code>, <code>&#8211;once</code>=<i>command</i></p>
-<dd> Execute a command once upon boot.</p>
-<dt><code>-M</code>, <code>&#8211;menu-save</code>=<i>label</i></p>
-<dd> Set the label to select as default on the next boot</p>
-<dt><code>-r</code>, <code>&#8211;raid</code></p>
-<dd> Fall back to the next device on boot failure.</p>
-<dt><code>&#8211;reset-adv</code></p>
-<dd> Reset auxiliary data.</p>
-<dt><code>-S</code>, <code>&#8211;sectors</code>=<i>#</i></p>
-<dd> Force the number of sectors per track.</p>
-<dt><code>-U</code>, <code>&#8211;update</code></p>
-<dd> Updates a previous <code>EXTLINUX</code> installation.</p>
-<dt><code>-z</code>, <code>&#8211;zip</code></p>
-<dd> Force zipdrive geometry (-H 64 -S 32).</p>
-<dt><code>&#8211;device</code>=<i>devicename</i></p>
-<dd> Override the automatic detection of device names. This option is intended for special environments only and should not be used by normal users. Misuse of this option can cause disk corruption and lost data.</dl>
+<dt><code>-H</code>, <code>&#8211;heads</code>=#</dt>
+<dd> Force the number of heads.</dd>
+<dt><code>-i</code>, <code>&#8211;install</code></dt>
+<dd> Install over the current bootsector.</dd>
+<dt><code>-O</code>, <code>&#8211;clear-once</code></dt>
+<dd> Clear the boot-once command.</dd>
+<dt><code>-o</code>, <code>&#8211;once</code>=<i>command</i></dt>
+<dd> Execute a command once upon boot.</dd>
+<dt><code>-M</code>, <code>&#8211;menu-save</code>=<i>label</i></dt>
+<dd> Set the label to select as default on the next boot</dd>
+<dt><code>-r</code>, <code>&#8211;raid</code></dt>
+<dd> Fall back to the next device on boot failure.</dd>
+<dt><code>&#8211;reset-adv</code></dt>
+<dd> Reset auxiliary data.</dd>
+<dt><code>-S</code>, <code>&#8211;sectors</code>=<i>#</i></dt>
+<dd> Force the number of sectors per track.</dd>
+<dt><code>-U</code>, <code>&#8211;update</code></dt>
+<dd> Updates a previous <code>EXTLINUX</code> installation.</dd>
+<dt><code>-z</code>, <code>&#8211;zip</code></dt>
+<dd> Force zipdrive geometry (-H 64 -S 32).</dd>
+<dt><code>&#8211;device</code>=<i>devicename</i></dt>
+<dd> Override the automatic detection of device names. This option is intended for special environments only and should not be used by normal users. Misuse of this option can cause disk corruption and lost data.</dd></dl>
 <h2>FILES</h2>
 <p> The extlinux configuration file needs to be named syslinux.cfg or extlinux.conf and needs to be stored in the extlinux installation directory. For more information about the contents of extlinux.conf, see <a href="/docs/linux/man/1-syslinux/">syslinux</a>(1) manpage, section files.</p>
 <h2>LIMITATIONS</h2>

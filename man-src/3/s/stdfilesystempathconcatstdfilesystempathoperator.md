@@ -12,46 +12,32 @@ std::filesystem::path::concat,std::filesystem::path::operator+= - std::filesyste
 
 <pre><code>path &amp;operator+=(const path &amp;p);
 (1)(since C++ 17)
-
     path &amp;
     operator+=(const string_type &amp;str);
 (2)(since C++ 17)
-
     path &amp;
     operator+=(std::basic_string_view&lt;value_type&gt; str);
-
 path &amp;operator+=(const value_type *ptr);
 (3)(since C++ 17)
-
     path &amp;
     operator+=(value_type x);
 (4)(since C++ 17)
-
     template &lt;class Source&gt;
     (5)(since C++ 17)
-
         path &amp;
         operator+=(const Source &amp;source);
-
 template &lt;class CharT&gt;
 (6)(since C++ 17)
-
     path &amp;
     operator+=(CharT x);
-
 template &lt;class Source&gt;
 (7)(since C++ 17)
-
     path &amp;concat(const Source &amp;source);
-
 template &lt;class InputIt&gt;
 (8)(since C++ 17)
-
     path &amp;concat(InputIterator first, InputIterator last);
 Concatenates the current path and the argument
-
 1-7) Appends path(other).native() to the pathname stored in *this in the native format. This directly manipulates the value of native() and may not be portable between operating systems.
-
 8) Same as return *this += path(first, last)
 </code></pre>
 
@@ -111,15 +97,8 @@ int main()
 <h2>See also</h2>
 
 <pre><code>appends elements to the path with a directory separator
-
 append     (public member function)
-
 operator/=
 concatenates two paths with a directory separator
-
 operator/  (function)
-
-
-
-
 </code></pre>

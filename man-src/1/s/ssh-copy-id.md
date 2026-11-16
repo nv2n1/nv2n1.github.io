@@ -16,19 +16,19 @@ description: "ssh-copy-id – use locally available keys to authorise logins on 
 <p> <code>ssh-copy-id</code> is a script that uses <a href="/docs/linux/man/1-ssh/">ssh</a>(1) to log into a remote machine (presumably using a login password, so password authentication should be enabled, unless you&#8217;ve done some clever use of multiple identities). It assembles a list of one or more fingerprints (as described below) and tries to log in with each key, to see if any of them are already installed (of course, if you are not using ssh-agent1 this may result in you being repeatedly prompted for pass-phrases). It then assembles a list of those that failed to log in, and using ssh, enables logins with those keys on the remote server. By default it adds the keys by appending them to the remote user&#8217;s ~/.ssh/authorized_keys (creating the file, and directory, if necessary). It is also capable of detecting if the remote system is a NetScreen, and using its `set&#8217; ssh pka-dsa key &#8230; command instead. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-i </code><i>identity_file</i></p>
-<dd> Use only the key(s) contained in <i>identity_file</i> (rather than looking for identities via ssh-add1 or in the <code>default_ID_file )</code> If the filename does not end in .pub this is added. If the filename is omitted, the <code>default_ID_file</code> is used. </p>
+<dt><code>-i </code><i>identity_file</i></dt>
+<dd> Use only the key(s) contained in <i>identity_file</i> (rather than looking for identities via ssh-add1 or in the <code>default_ID_file )</code> If the filename does not end in .pub this is added. If the filename is omitted, the <code>default_ID_file</code> is used. </dd>
 <p> Note that this can be used to ensure that the keys copied have the comment one prefers and/or extra options applied, by ensuring that the key file has these set as preferred before the copy is attempted.</p>
-<dt><code>-f</code></p>
-<dd> Forced mode: doesn&#8217;t check if the keys are present on the remote server. This means that it does not need the private key. Of course, this can result in more than one copy of the key being installed on the remote system.</p>
-<dt><code>-n</code></p>
-<dd> do a dry-run. Instead of installing keys on the remote system simply prints the key(s) that would have been installed.</p>
-<dt><code>-s</code></p>
-<dd> SFTP mode: usually the public keys are installed by executing commands on the remote side. With this option the user&#8217;s ~/.ssh/authorized_keys file will be downloaded, modified locally and uploaded with sftp. This option is useful if the server has restrictions on commands which can be used on the remote side.</p>
-<dt><code>-h , &#8211; </code></p>
-<dd> Print Usage summary</p>
-<dt><code>-p </code><i>port , &#8211;</i><code>o </code><i>ssh_option</i></p>
-<dd> These two options are simply passed through untouched, along with their argument, to allow one to set the port or other <a href="/docs/linux/man/1-ssh/">ssh</a>(1) options, respectively. </p>
+<dt><code>-f</code></dt>
+<dd> Forced mode: doesn&#8217;t check if the keys are present on the remote server. This means that it does not need the private key. Of course, this can result in more than one copy of the key being installed on the remote system.</dd>
+<dt><code>-n</code></dt>
+<dd> do a dry-run. Instead of installing keys on the remote system simply prints the key(s) that would have been installed.</dd>
+<dt><code>-s</code></dt>
+<dd> SFTP mode: usually the public keys are installed by executing commands on the remote side. With this option the user&#8217;s ~/.ssh/authorized_keys file will be downloaded, modified locally and uploaded with sftp. This option is useful if the server has restrictions on commands which can be used on the remote side.</dd>
+<dt><code>-h , &#8211; </code></dt>
+<dd> Print Usage summary</dd>
+<dt><code>-p </code><i>port , &#8211;</i><code>o </code><i>ssh_option</i></dt>
+<dd> These two options are simply passed through untouched, along with their argument, to allow one to set the port or other <a href="/docs/linux/man/1-ssh/">ssh</a>(1) options, respectively. </dd>
 <p> Rather than specifying these as command line options, it is often better to use (per-host) settings in <a href="/docs/linux/man/1-ssh/">ssh</a>(1)Ns&#8217;s configuration file: ssh_config5.</dl>
 <p> Default behaviour without &#8211;<code>i</code> is to check if `ssh-add&#8217; -L provides any output, and if so those keys are used. Note that this results in the comment on the key being the filename that was given to ssh-add1 when the key was loaded into your ssh-agent1 rather than the comment contained in that file, which is a bit of a shame. Otherwise, if ssh-add1 provides no keys contents of the <code>default_ID_file</code> will be used. </p>
 <p> The <code>default_ID_file</code> is the most recent file that matches: ~/.ssh/id*.pub (excluding those that match ~/.ssh/*-cert.pub so if you create a key that is not the one you want <code>ssh-copy-id</code> to use, just use <a href="/docs/linux/man/1-touch/">touch</a>(1) on your preferred key&#8217;s .pub file to reinstate it as the most recent. </p>
@@ -40,3 +40,4 @@ description: "ssh-copy-id – use locally available keys to authorise logins on 
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-agent1, <a href="/docs/linux/man/8-sshd/">sshd</a>(8) </p>
 <h2>Index</h2>
+</p>

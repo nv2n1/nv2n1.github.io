@@ -19,20 +19,20 @@ The usbguard-daemon is the main component of the USBGuard software framework. It
 <h2>Options</h2>
 
 <dl><dt>-d
-<dd>Enable debugging messages in the log.
-<dl><dd></dl><dt>-s
-<dd>Log to syslog.
-<dl><dd></dl><dt>-k
-<dd>Log to console.
-<dl><dd></dl><dt>-l &lt;path&gt;
-<dd>Log to a file at path.
-<dl><dd></dl><dt>-p &lt;path&gt;
-<dd>Write PID to a file at path.
-<dl><dd></dl><dt>-c &lt;path&gt;
-<dd>Load configuration from a file at path (default: /etc/usbguard/usbguard-daemon.conf).
-<dl><dd></dl><dt>-h
-<dd>Show the help/usage screen.
-<dl><dd></dl></dl>
+</dt><dd>Enable debugging messages in the log.
+</dd><dl><dd></dd></dl><dt>-s
+</dt><dd>Log to syslog.
+</dd><dl><dd></dd></dl><dt>-k
+</dt><dd>Log to console.
+</dd><dl><dd></dd></dl><dt>-l &lt;path&gt;
+</dt><dd>Log to a file at path.
+</dd><dl><dd></dd></dl><dt>-p &lt;path&gt;
+</dt><dd>Write PID to a file at path.
+</dd><dl><dd></dd></dl><dt>-c &lt;path&gt;
+</dt><dd>Load configuration from a file at path (default: /etc/usbguard/usbguard-daemon.conf).
+</dd><dl><dd></dd></dl><dt>-h
+</dt><dd>Show the help/usage screen.
+</dd><dl><dd></dd></dl></dl>
 
 <h2>Security Considerations</h2>
 

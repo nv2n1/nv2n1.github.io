@@ -10,7 +10,6 @@ description: "std::rand – std::rand"
 <p>std::rand &#8211; std::rand</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     int rand();</code></pre>
 <p>Returns a pseudo-random integral value between 0 and RAND_MAX (0 and RAND_MAX included).<br />
 std::srand() seeds the pseudo-random number generator used by rand(). If rand() is used before any calls to srand(), rand() behaves as if it was seeded with srand<code>(1)</code>.<br />
@@ -28,12 +27,9 @@ It is recommended to use C++11&#8217;s random_number_generation facilities to re
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cstdlib&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     std::srand(std::time(nullptr)); // use current time as seed for random generator
     int random_variable = std::rand();

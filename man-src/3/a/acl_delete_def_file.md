@@ -22,14 +22,14 @@ description: "acl_delete_def_file – delete a default ACL by filename"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_delete_def_file function returns the value <code>-1</code> and and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The file referred to by <i>path_p</i> is not a directory.</p>
-<dt><code>Bq </code>Er ENOTSUP</p>
-<dd> The file system on which the file identified by <i>path_p</i> is located does not support ACLs, or ACLs are disabled.</p>
-<dt><code>Bq </code>Er EPERM</p>
-<dd> The process does not have appropriate privilege to perform the operation to delete the default ACL.</p>
-<dt><code>Bq </code>Er EROFS</p>
-<dd> This function requires modification of a file system which is currently read-only.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The file referred to by <i>path_p</i> is not a directory.</dd>
+<dt><code>Bq </code>Er ENOTSUP</dt>
+<dd> The file system on which the file identified by <i>path_p</i> is located does not support ACLs, or ACLs are disabled.</dd>
+<dt><code>Bq </code>Er EPERM</dt>
+<dd> The process does not have appropriate privilege to perform the operation to delete the default ACL.</dd>
+<dt><code>Bq </code>Er EROFS</dt>
+<dd> This function requires modification of a file system which is currently read-only.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

@@ -99,8 +99,8 @@ description: "automount_selinux – Security Enhanced Linux Policy for the autom
 <p> <code>automount_exec_t</code> </p>
 <p> &#8211; Set files with the automount_exec_t type, if you want to transition an executable to the automount_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/automount, /etc/apm/event.d/autofs </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/automount, /etc/apm/event.d/autofs </dd>
 </dl>
 <p> <code>automount_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the automount_initrc_exec_t type, if you want to transition an executable to the automount_initrc_t domain. </p>

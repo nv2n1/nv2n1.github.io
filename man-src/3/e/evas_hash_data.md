@@ -56,10 +56,10 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <dl COMPACT>
 <dd><i>hash</i> The given hash table. Can be NULL, in which case a new hash table is allocated and returned.<br />
  <i>key</i> A unique string. Can be NULL.<br />
- <i>data</i> Data to associate with the string given by key.</dl>
+ <i>data</i> Data to associate with the string given by key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Either the given hash table, or if the given value for hash is NULL, then a new one. NULL will be returned if memory could not be allocated for a new table.</dl>
+<dd>Either the given hash table, or if the given value for hash is NULL, then a new one. NULL will be returned if memory could not be allocated for a new table.</dd></dl>
 <p> Referenced by evas_object_name_set().</p>
 <h3>EAPI <code>Evas_Hash</code>* evas_hash_del (<code>Evas_Hash</code> * hash, const char * key, const void * data)</h3>
 <p>Removes the entry identified by key or data from the given hash table. </p>
@@ -68,10 +68,10 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
  <i>key</i> The key string. Can be NULL.<br />
- <i>data</i> The data pointer to remove if key is NULL. Otherwise, not required and can be NULL.</dl>
+ <i>data</i> The data pointer to remove if key is NULL. Otherwise, not required and can be NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The modified hash table. If there are no entries left, the hash table will be freed and NULL will be returned.</dl>
+<dd>The modified hash table. If there are no entries left, the hash table will be freed and NULL will be returned.</dd></dl>
 <p> Referenced by evas_object_name_set().</p>
 <h3>EAPI <code>Evas_Hash</code>* evas_hash_direct_add (<code>Evas_Hash</code> * hash, const char * key, const void * data)</h3>
 <p>Adds an entry to the given hash table and does not duplicate the string key. </p>
@@ -82,19 +82,19 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <dl COMPACT>
 <dd><i>hash</i> The given hash table. Can be NULL, in which case a new hash table is allocated and returned.<br />
  <i>key</i> A unique string. Can be NULL.<br />
- <i>data</i> Data to associate with the string given by key.</dl>
+ <i>data</i> Data to associate with the string given by key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Either the given hash table, or if the given value for hash is NULL, then a new one. NULL will be returned if memory could not be allocated for a new table.</dl>
+<dd>Either the given hash table, or if the given value for hash is NULL, then a new one. NULL will be returned if memory could not be allocated for a new table.</dd></dl>
 <h3>EAPI void* evas_hash_find (const <code>Evas_Hash</code> * hash, const char * key)</h3>
 <p>Retrieves a specific entry in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
- <i>key</i> The key string of the entry to find.</dl>
+ <i>key</i> The key string of the entry to find.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer for the stored entry, or NULL if not found.</dl>
+<dd>The data pointer for the stored entry, or NULL if not found.</dd></dl>
 <p> Referenced by evas_object_name_find().</p>
 <h3>EAPI void* evas_hash_modify (<code>Evas_Hash</code> * hash, const char * key, const void * data)</h3>
 <p>Modifies the entry pointer at the specified key and returns the old entry. </p>
@@ -102,9 +102,9 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
  <i>key</i> The key string of the entry to modify.<br />
- <i>data</i> The data to replace the old entry, if it exists.</dl>
+ <i>data</i> The data to replace the old entry, if it exists.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer for the old stored entry, or NULL if not found. If an existing entry is not found, nothing is added to the hash.</dl>
+<dd>The data pointer for the old stored entry, or NULL if not found. If an existing entry is not found, nothing is added to the hash.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

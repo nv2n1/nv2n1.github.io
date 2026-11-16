@@ -33,28 +33,28 @@ regular-alias                   fixed
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-e</code></p>
-<dd> Specify a directory containing encoding files. The <code>-e</code> option may be specified multiple times, and all the specified directories will be read. The order of the entries is significant, as encodings found in earlier directories override those in later ones; encoding files in the same directory are discriminated by preferring compressed versions.</p>
-<dt><code>-n</code></p>
-<dd> do not scan for fonts, do not write font directory files. This option is useful when generating encoding directories only.</p>
-<dt><code>-p</code></p>
-<dd> Specify a prefix that is prepended to the encoding file path names when they are written to the &quot;encodings.dir&quot; file. The prefix is prepended as-is. If a `/&#8217; is required between the prefix and the path names, it must be supplied explicitly as part of the prefix.</p>
-<dt><code>-r</code></p>
-<dd> Keep non-absolute encoding directories in their relative form when writing the &quot;encodings.dir&quot; file. The default is to convert relative encoding directories to absolute directories by prepending the current directory. The positioning of this options is significant, as this option only applies to subsequent <code>-e</code> options.</p>
-<dt><code>-x </code><i>suffix</i></p>
-<dd> Ignore fonts files of type <i>suffix</i>.</p>
-<dt><code>&#8212;</code></p>
-<dd> End options.</dl>
+<dt><code>-e</code></dt>
+<dd> Specify a directory containing encoding files. The <code>-e</code> option may be specified multiple times, and all the specified directories will be read. The order of the entries is significant, as encodings found in earlier directories override those in later ones; encoding files in the same directory are discriminated by preferring compressed versions.</dd>
+<dt><code>-n</code></dt>
+<dd> do not scan for fonts, do not write font directory files. This option is useful when generating encoding directories only.</dd>
+<dt><code>-p</code></dt>
+<dd> Specify a prefix that is prepended to the encoding file path names when they are written to the &quot;encodings.dir&quot; file. The prefix is prepended as-is. If a `/&#8217; is required between the prefix and the path names, it must be supplied explicitly as part of the prefix.</dd>
+<dt><code>-r</code></dt>
+<dd> Keep non-absolute encoding directories in their relative form when writing the &quot;encodings.dir&quot; file. The default is to convert relative encoding directories to absolute directories by prepending the current directory. The positioning of this options is significant, as this option only applies to subsequent <code>-e</code> options.</dd>
+<dt><code>-x </code><i>suffix</i></dt>
+<dd> Ignore fonts files of type <i>suffix</i>.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> End options.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>fonts.dir</code></p>
-<dd> List of fonts in the directory and the files they are stored in. Created by <i>mkfontdir</i>. Read by the X server and font server each time the font path is set (see <a href="/docs/linux/man/1-xset/">xset</a>(1)).</p>
-<dt><code>fonts.scale</code></p>
-<dd> List of scalable fonts in the directory. Contents are copied to fonts.dir by <i>mkfontdir</i>. Can be created with <i><a href="/docs/linux/man/1-mkfontscale/">mkfontscale</a></i>(1).</p>
-<dt><code>fonts.alias</code></p>
-<dd> List of font name aliases. Read by the X server and font server each time the font path is set (see <a href="/docs/linux/man/1-xset/">xset</a>(1)).</p>
-<dt><code>encodings.dir</code></p>
-<dd> List of known encodings and the files they are stored in. Created by <i>mkfontdir</i>. Read by the X server and font server each time a font with an unknown charset is opened.</dl>
+<dt><code>fonts.dir</code></dt>
+<dd> List of fonts in the directory and the files they are stored in. Created by <i>mkfontdir</i>. Read by the X server and font server each time the font path is set (see <a href="/docs/linux/man/1-xset/">xset</a>(1)).</dd>
+<dt><code>fonts.scale</code></dt>
+<dd> List of scalable fonts in the directory. Contents are copied to fonts.dir by <i>mkfontdir</i>. Can be created with <i><a href="/docs/linux/man/1-mkfontscale/">mkfontscale</a></i>(1).</dd>
+<dt><code>fonts.alias</code></dt>
+<dd> List of font name aliases. Read by the X server and font server each time the font path is set (see <a href="/docs/linux/man/1-xset/">xset</a>(1)).</dd>
+<dt><code>encodings.dir</code></dt>
+<dd> List of known encodings and the files they are stored in. Created by <i>mkfontdir</i>. Read by the X server and font server each time a font with an unknown charset is opened.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/1-mkfontscale/">mkfontscale</a>(1), xfs(1), <a href="/docs/linux/man/1-xset/">xset</a>(1) </p>
 <h2>Index</h2>

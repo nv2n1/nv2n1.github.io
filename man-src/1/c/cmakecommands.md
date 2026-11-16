@@ -11,8 +11,8 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> cmakecommands &#8211; Reference of available CMake commands. </p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>add_compile_options</code></p>
-<dd> Adds options to the compilation of source files. </p>
+<dt><code>add_compile_options</code></dt>
+<dd> Adds options to the compilation of source files. </dd>
 <pre>
   add_compile_options(&lt;option&gt; ...)
 </pre>
@@ -67,8 +67,8 @@ description: "cmakecommands – Reference of available CMake commands."
 <pre>
   $&lt;TARGET_PROPERTY:prop&gt;   = The value of the property prop on the target on which the generator expression is evaluated.
 </pre>
-<dt><code>add_custom_command</code></p>
-<dd> Add a custom build rule to the generated build system. </p>
+<dt><code>add_custom_command</code></dt>
+<dd> Add a custom build rule to the generated build system. </dd>
 <p> There are two main signatures for add_custom_command The first signature is for adding a custom command to produce an output. </p>
 <p>add_custom_command(OUTPUT output1[output2&#8230;] COMMAND command1[ARGS][args1&#8230;]<br />
                                                               [COMMAND command2[ARGS][args2&#8230;]&#8230;]<br />
@@ -151,8 +151,8 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <p> References to target names in generator expressions imply target-level dependencies, but NOT file-level dependencies. List target names with the DEPENDS option to add file dependencies. </p>
 <p> The DEPENDS option specifies files on which the command depends. If any dependency is an OUTPUT of another custom command in the same directory (CMakeLists.txt file) CMake automatically brings the other custom command into the target in which this command is built. If DEPENDS is not specified the command will run whenever the OUTPUT is missing; if the command does not actually create the OUTPUT then the rule will always run. If DEPENDS specifies any target (created by an ADD_* command) a target-level dependency is created to make sure the target is built before any target using this custom command. Additionally, if the target is an executable or library a file-level dependency is created to cause the custom command to re-run whenever the target is recompiled. </p>
-<dt><code>add_custom_target</code></p>
-<dd> Add a target with no output so it will always be built. </p>
+<dt><code>add_custom_target</code></dt>
+<dd> Add a target with no output so it will always be built. </dd>
 <p>add_custom_target(Name[ALL][command1[args1&#8230;]]<br />
                       [COMMAND command2[args2&#8230;]&#8230;]<br />
                       [DEPENDS depend depend depend&#8230;]<br />
@@ -162,21 +162,21 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> Adds a target with the given name that executes the given commands. The target has no output file and is ALWAYS CONSIDERED OUT OF DATE even if the commands try to create a file with the name of the target. Use ADD_CUSTOM_COMMAND to generate a file with dependencies. By default nothing depends on the custom target. Use ADD_DEPENDENCIES to add dependencies to or from other targets. If the ALL option is specified it indicates that this target should be added to the default build target so that it will be run every time (the command cannot be called ALL). The command and arguments are optional and if not specified an empty target will be created. If WORKING_DIRECTORY is set, then the command will be run in that directory. If it is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. If COMMENT is set, the value will be displayed as a message before the commands are executed at build time. Dependencies listed with the DEPENDS argument may reference files and outputs of custom commands created with add_custom_command() in the same directory (CMakeLists.txt file). </p>
 <p> If VERBATIM is given then all arguments to the commands will be escaped properly for the build tool so that the invoked command receives each argument unchanged. Note that one level of escapes is still used by the CMake language processor before add_custom_target even sees the arguments. Use of VERBATIM is recommended as it enables correct behavior. When VERBATIM is not given the behavior is platform specific because there is no protection of tool-specific special characters. </p>
 <p> The SOURCES option specifies additional source files to be included in the custom target. Specified source files will be added to IDE project files for convenience in editing even if they have not build rules. </p>
-<dt><code>add_definitions</code></p>
-<dd> Adds -D define flags to the compilation of source files. </p>
+<dt><code>add_definitions</code></dt>
+<dd> Adds -D define flags to the compilation of source files. </dd>
 <pre>
   add_definitions(-DFOO -DBAR ...)
 </pre>
 <p> Adds flags to the compiler command line for sources in the current directory and below. This command can be used to add any flags, but it was originally intended to add preprocessor definitions. Flags beginning in -D or /D that look like preprocessor definitions are automatically added to the COMPILE_DEFINITIONS property for the current directory. Definitions with non-trivial values may be left in the set of flags instead of being converted for reasons of backwards compatibility. See documentation of the directory, target, and source file COMPILE_DEFINITIONS properties for details on adding preprocessor definitions to specific scopes and configurations. </p>
-<dt><code>add_dependencies</code></p>
-<dd> Add a dependency between top-level targets. </p>
+<dt><code>add_dependencies</code></dt>
+<dd> Add a dependency between top-level targets. </dd>
 <pre>
   add_dependencies(target-name depend-target1
                    depend-target2 ...)
 </pre>
 <p> Make a top-level target depend on other top-level targets. A top-level target is one created by ADD_EXECUTABLE, ADD_LIBRARY, or ADD_CUSTOM_TARGET. Adding dependencies with this command can be used to make sure one target is built before another target. Dependencies added to an IMPORTED target are followed transitively in its place since the target itself does not build. See the DEPENDS option of ADD_CUSTOM_TARGET and ADD_CUSTOM_COMMAND for adding file-level dependencies in custom rules. See the OBJECT_DEPENDS option in SET_SOURCE_FILES_PROPERTIES to add file-level dependencies to object files. </p>
-<dt><code>add_executable</code></p>
-<dd> Add an executable to the project using the specified source files. </p>
+<dt><code>add_executable</code></dt>
+<dd> Add an executable to the project using the specified source files. </dd>
 <p>add_executable(&lt;name&gt;[WIN32][MACOSX_BUNDLE]<br />
                      [EXCLUDE_FROM_ALL] source1 source2&#8230; sourceN)</p>
 <p> Adds an executable target called &lt;name&gt; to be built from the source files listed in the command invocation. The &lt;name&gt; corresponds to the logical target name and must be globally unique within a project. The actual file name of the executable built is constructed based on conventions of the native platform (such as &lt;name&gt;.exe or just &lt;name&gt;). </p>
@@ -194,8 +194,8 @@ description: "cmakecommands – Reference of available CMake commands."
   add_executable(&lt;name&gt; ALIAS &lt;target&gt;)
 </pre>
 <p> creates an alias, such that &lt;name&gt; can be used to refer to &lt;target&gt; in subsequent commands. The &lt;name&gt; does not appear in the generated buildsystem as a make target. The &lt;target&gt; may not be an IMPORTED target or an ALIAS. Alias targets can be used as linkable targets, targets to read properties from, executables for custom commands and custom targets. They can also be tested for existance with the regular if(TARGET) subcommand. The &lt;name&gt; may not be used to modify properties of &lt;target&gt;, that is, it may not be used as the operand of set_property, set_target_properties, target_link_libraries etc. An ALIAS target may not be installed of exported. </p>
-<dt><code>add_library</code></p>
-<dd> Add a library to the project using the specified source files. </p>
+<dt><code>add_library</code></dt>
+<dd> Add a library to the project using the specified source files. </dd>
 <p>add_library(&lt;name&gt;[STATIC | SHARED | MODULE]<br />
                   [EXCLUDE_FROM_ALL] source1 source2&#8230; sourceN)</p>
 <p> Adds a library target called &lt;name&gt; to be built from the source files listed in the command invocation. The &lt;name&gt; corresponds to the logical target name and must be globally unique within a project. The actual file name of the library built is constructed based on conventions of the native platform (such as lib&lt;name&gt;.a or &lt;name&gt;.lib). </p>
@@ -223,14 +223,14 @@ description: "cmakecommands – Reference of available CMake commands."
   add_library(&lt;name&gt; ALIAS &lt;target&gt;)
 </pre>
 <p> creates an alias, such that &lt;name&gt; can be used to refer to &lt;target&gt; in subsequent commands. The &lt;name&gt; does not appear in the generated buildsystem as a make target. The &lt;target&gt; may not be an IMPORTED target or an ALIAS. Alias targets can be used as linkable targets, targets to read properties from. They can also be tested for existance with the regular if(TARGET) subcommand. The &lt;name&gt; may not be used to modify properties of &lt;target&gt;, that is, it may not be used as the operand of set_property, set_target_properties, target_link_libraries etc. An ALIAS target may not be installed of exported. </p>
-<dt><code>add_subdirectory</code></p>
-<dd> Add a subdirectory to the build. </p>
+<dt><code>add_subdirectory</code></dt>
+<dd> Add a subdirectory to the build. </dd>
 <p>add_subdirectory(source_dir[binary_dir]<br />
                            [EXCLUDE_FROM_ALL])</p>
 <p> Add a subdirectory to the build. The source_dir specifies the directory in which the source CMakeLists.txt and code files are located. If it is a relative path it will be evaluated with respect to the current directory (the typical usage), but it may also be an absolute path. The binary_dir specifies the directory in which to place the output files. If it is a relative path it will be evaluated with respect to the current output directory, but it may also be an absolute path. If binary_dir is not specified, the value of source_dir, before expanding any relative path, will be used (the typical usage). The CMakeLists.txt file in the specified source directory will be processed immediately by CMake before processing in the current input file continues beyond this command. </p>
 <p> If the EXCLUDE_FROM_ALL argument is provided then targets in the subdirectory will not be included in the ALL target of the parent directory by default, and will be excluded from IDE project files. Users must explicitly build targets in the subdirectory. This is meant for use when the subdirectory contains a separate part of the project that is useful but not necessary, such as a set of examples. Typically the subdirectory should contain its own project() command invocation so that a full build system will be generated in the subdirectory (such as a VS IDE solution file). Note that inter-target dependencies supercede this exclusion. If a target built by the parent project depends on a target in the subdirectory, the dependee target will be included in the parent project build system to satisfy the dependency. </p>
-<dt><code>add_test</code></p>
-<dd> Add a test to the project with the specified arguments. </p>
+<dt><code>add_test</code></dt>
+<dd> Add a test to the project with the specified arguments. </dd>
 <pre>
   add_test(testname Exename arg1 arg2 ... )
 </pre>
@@ -290,21 +290,21 @@ description: "cmakecommands – Reference of available CMake commands."
                               --exe $&lt;TARGET_FILE:myexe&gt;)
 </pre>
 <p> This creates a test &quot;mytest&quot; whose command runs a testDriver tool passing the configuration name and the full path to the executable file produced by target &quot;myexe&quot;. </p>
-<dt><code>aux_source_directory</code></p>
-<dd> Find all source files in a directory. </p>
+<dt><code>aux_source_directory</code></dt>
+<dd> Find all source files in a directory. </dd>
 <pre>
   aux_source_directory(&lt;dir&gt; &lt;variable&gt;)
 </pre>
 <p> Collects the names of all the source files in the specified directory and stores the list in the &lt;variable&gt; provided. This command is intended to be used by projects that use explicit template instantiation. Template instantiation files can be stored in a &quot;Templates&quot; subdirectory and collected automatically using this command to avoid manually listing all instantiations. </p>
 <p> It is tempting to use this command to avoid writing the list of source files for a library or executable target. While this seems to work, there is no way for CMake to generate a build system that knows when a new source file has been added. Normally the generated build system knows when it needs to rerun CMake because the CMakeLists.txt file is modified to add a new source. When the source is just added to the directory without modifying this file, one would have to manually rerun CMake to generate a build system incorporating the new file. </p>
-<dt><code>break</code></p>
-<dd> Break from an enclosing foreach or while loop. </p>
+<dt><code>break</code></dt>
+<dd> Break from an enclosing foreach or while loop. </dd>
 <pre>
   break()
 </pre>
 <p> Breaks from an enclosing foreach loop or while loop </p>
-<dt><code>build_command</code></p>
-<dd> Get the command line to build this project. </p>
+<dt><code>build_command</code></dt>
+<dd> Get the command line to build this project. </dd>
 <p>build_command(&lt;variable&gt;[CONFIGURATION&lt;config&gt;]<br />
                         [PROJECT_NAME&lt;projname&gt;]<br />
                         [TARGET&lt;target&gt;])</p>
@@ -317,8 +317,8 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <p> This second signature is deprecated, but still available for backwards compatibility. Use the first signature instead. </p>
 <p> Sets the given &lt;cachevariable&gt; to a string containing the command to build this project from the root of the build tree using the build tool given by &lt;makecommand&gt;. &lt;makecommand&gt; should be the full path to msdev, devenv, nmake, make or one of the end user build tools. </p>
-<dt><code>cmake_host_system_information</code></p>
-<dd> Query host system specific information. </p>
+<dt><code>cmake_host_system_information</code></dt>
+<dd> Query host system specific information. </dd>
 <pre>
   cmake_host_system_information(RESULT &lt;variable&gt; QUERY &lt;key&gt; ...)
 </pre>
@@ -334,8 +334,8 @@ description: "cmakecommands – Reference of available CMake commands."
   TOTAL_PHYSICAL_MEMORY     = Total physical memory in megabytes.
   AVAILABLE_PHYSICAL_MEMORY = Available physical memory in megabytes.
 </pre>
-<dt><code>cmake_minimum_required</code></p>
-<dd> Set the minimum required version of cmake for a project. </p>
+<dt><code>cmake_minimum_required</code></dt>
+<dd> Set the minimum required version of cmake for a project. </dd>
 <p>cmake_minimum_required(VERSION major[.minor[.patch[.tweak]]]<br />
                                     [FATAL_ERROR])</p>
 <p> If the current version of CMake is lower than that required it will stop processing the project and report an error. When a version higher than 2.4 is specified the command implicitly invokes </p>
@@ -346,8 +346,8 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <p> which enables compatibility features for CMake 2.4 and lower. </p>
 <p> The FATAL_ERROR option is accepted but ignored by CMake 2.6 and higher. It should be specified so CMake versions 2.4 and lower fail with an error instead of just a warning. </p>
-<dt><code>cmake_policy</code></p>
-<dd> Manage CMake Policy settings. </p>
+<dt><code>cmake_policy</code></dt>
+<dd> Manage CMake Policy settings. </dd>
 <p> As CMake evolves it is sometimes necessary to change existing behavior in order to fix bugs or improve implementations of existing features. The CMake Policy mechanism is designed to help keep existing projects building as new versions of CMake introduce changes in behavior. Each new policy (behavioral change) is given an identifier of the form &quot;CMP&lt;NNNN&gt;&quot; where &quot;&lt;NNNN&gt;&quot; is an integer index. Documentation associated with each policy describes the OLD and NEW behavior and the reason the policy was introduced. Projects may set each policy to select the desired behavior. When CMake needs to know which behavior to use it checks for a setting specified by the project. If no setting is available the OLD behavior is assumed and a warning is produced requesting that the policy be set. </p>
 <p> The cmake_policy command is used to set policies to OLD or NEW behavior. While setting policies individually is supported, we encourage projects to set policies based on CMake versions. </p>
 <p>cmake_policy(VERSION major.minor[.patch[.tweak]])</p>
@@ -368,8 +368,8 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <p> Each PUSH must have a matching POP to erase any changes. This is useful to make temporary changes to policy settings. </p>
 <p> Functions and macros record policy settings when they are created and use the pre-record policies when they are invoked. If the function or macro implementation sets policies, the changes automatically propagate up through callers until they reach the closest nested policy stack entry. </p>
-<dt><code>configure_file</code></p>
-<dd> Copy a file to another location and modify its contents. </p>
+<dt><code>configure_file</code></dt>
+<dd> Copy a file to another location and modify its contents. </dd>
 <p>configure_file(&lt;input&gt;&lt;output&gt;[COPYONLY][ESCAPE_QUOTES][@ONLY]<br />
                               [NEWLINE_STYLE[UNIX | DOS | WIN32 | LF | CRLF]])</p>
 <p> Copies a file &lt;input&gt; to file &lt;output&gt; and substitutes variable values referenced in the file content. If &lt;input&gt; is a relative path it is evaluated with respect to the current source directory. The &lt;input&gt; must be a file, not a directory. If &lt;output&gt; is a relative path it is evaluated with respect to the current binary directory. If &lt;output&gt; names an existing directory the input file is placed in that directory with its original name. </p>
@@ -383,8 +383,8 @@ description: "cmakecommands – Reference of available CMake commands."
 .
 </pre>
 <p> COPYONLY must not be used with NEWLINE_STYLE. </p>
-<dt><code>create_test_sourcelist</code></p>
-<dd> Create a test driver and source list for building test programs. </p>
+<dt><code>create_test_sourcelist</code></dt>
+<dd> Create a test driver and source list for building test programs. </dd>
 <pre>
   create_test_sourcelist(sourceListName driverName
                          test1 test2 test3
@@ -392,8 +392,8 @@ description: "cmakecommands – Reference of available CMake commands."
                          FUNCTION function)
 </pre>
 <p> A test driver is a program that links together many small tests into a single executable. This is useful when building static executables with large libraries to shrink the total required size. The list of source files needed to build the test driver will be in sourceListName. DriverName is the name of the test driver program. The rest of the arguments consist of a list of test source files, can be semicolon separated. Each test source file should have a function in it that is the same name as the file with no extension (foo.cxx should have int foo(int, char*[]);) DriverName will be able to call each of the tests by name on the command line. If EXTRA_INCLUDE is specified, then the next argument is included into the generated file. If FUNCTION is specified, then the next argument is taken as a function name that is passed a pointer to ac and av. This can be used to add extra command line processing to each test. The cmake variable CMAKE_TESTDRIVER_BEFORE_TESTMAIN can be set to have code that will be placed directly before calling the test main function. CMAKE_TESTDRIVER_AFTER_TESTMAIN can be set to have code that will be placed directly after the call to the test main function. </p>
-<dt><code>define_property</code></p>
-<dd> Define and document custom properties. </p>
+<dt><code>define_property</code></dt>
+<dd> Define and document custom properties. </dd>
 <p>define_property(&lt;GLOBAL | DIRECTORY | TARGET | SOURCE |<br />
                  TEST | VARIABLE | CACHED_VARIABLE&gt;<br />
                     PROPERTY&lt;name&gt;[INHERITED] BRIEF_DOCS&lt;brief &#8211; doc&gt;[docs&#8230;] FULL_DOCS&lt;full &#8211; doc&gt;[docs&#8230;])</p>
@@ -411,64 +411,64 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> The required PROPERTY option is immediately followed by the name of the property being defined. </p>
 <p> If the INHERITED option then the get_property command will chain up to the next higher scope when the requested property is not set in the scope given to the command. DIRECTORY scope chains to GLOBAL. TARGET, SOURCE, and TEST chain to DIRECTORY. </p>
 <p> The BRIEF_DOCS and FULL_DOCS options are followed by strings to be associated with the property as its brief and full documentation. Corresponding options to the get_property command will retrieve the documentation. </p>
-<dt><code>else</code></p>
-<dd> Starts the else portion of an if block. </p>
+<dt><code>else</code></dt>
+<dd> Starts the else portion of an if block. </dd>
 <pre>
   else(expression)
 </pre>
 <p> See the if command. </p>
-<dt><code>elseif</code></p>
-<dd> Starts the elseif portion of an if block. </p>
+<dt><code>elseif</code></dt>
+<dd> Starts the elseif portion of an if block. </dd>
 <pre>
   elseif(expression)
 </pre>
 <p> See the if command. </p>
-<dt><code>enable_language</code></p>
-<dd> Enable a language (CXX/C/Fortran/etc) </p>
+<dt><code>enable_language</code></dt>
+<dd> Enable a language (CXX/C/Fortran/etc) </dd>
 <pre>
   enable_language(&lt;lang&gt; [OPTIONAL] )
 </pre>
 <p> This command enables support for the named language in CMake. This is the same as the project command but does not create any of the extra variables that are created by the project command. Example languages are CXX, C, Fortran. </p>
 <p> This command must be called in file scope, not in a function call. Furthermore, it must be called in the highest directory common to all targets using the named language directly for compiling sources or indirectly through link dependencies. It is simplest to enable all needed languages in the top-level directory of a project. </p>
 <p> The OPTIONAL keyword is a placeholder for future implementation and does not currently work. </p>
-<dt><code>enable_testing</code></p>
-<dd> Enable testing for current directory and below. </p>
+<dt><code>enable_testing</code></dt>
+<dd> Enable testing for current directory and below. </dd>
 <pre>
   enable_testing()
 </pre>
 <p> Enables testing for this directory and below. See also the add_test command. Note that ctest expects to find a test file in the build directory root. Therefore, this command should be in the source directory root. </p>
-<dt><code>endforeach</code></p>
-<dd> Ends a list of commands in a FOREACH block. </p>
+<dt><code>endforeach</code></dt>
+<dd> Ends a list of commands in a FOREACH block. </dd>
 <pre>
   endforeach(expression)
 </pre>
 <p> See the FOREACH command. </p>
-<dt><code>endfunction</code></p>
-<dd> Ends a list of commands in a function block. </p>
+<dt><code>endfunction</code></dt>
+<dd> Ends a list of commands in a function block. </dd>
 <pre>
   endfunction(expression)
 </pre>
 <p> See the function command. </p>
-<dt><code>endif</code></p>
-<dd> Ends a list of commands in an if block. </p>
+<dt><code>endif</code></dt>
+<dd> Ends a list of commands in an if block. </dd>
 <pre>
   endif(expression)
 </pre>
 <p> See the if command. </p>
-<dt><code>endmacro</code></p>
-<dd> Ends a list of commands in a macro block. </p>
+<dt><code>endmacro</code></dt>
+<dd> Ends a list of commands in a macro block. </dd>
 <pre>
   endmacro(expression)
 </pre>
 <p> See the macro command. </p>
-<dt><code>endwhile</code></p>
-<dd> Ends a list of commands in a while block. </p>
+<dt><code>endwhile</code></dt>
+<dd> Ends a list of commands in a while block. </dd>
 <pre>
   endwhile(expression)
 </pre>
 <p> See the while command. </p>
-<dt><code>execute_process</code></p>
-<dd> Execute one or more child processes. </p>
+<dt><code>execute_process</code></dt>
+<dd> Execute one or more child processes. </dd>
 <p>  execute_process(COMMAND &lt;cmd1&gt; [args1&#8230;]]<br />
                   [COMMAND &lt;cmd2&gt; [args2&#8230;] [&#8230;]]<br />
                   [WORKING_DIRECTORY &lt;directory&gt;]<br />
@@ -485,8 +485,8 @@ description: "cmakecommands – Reference of available CMake commands."
                   [ERROR_STRIP_TRAILING_WHITESPACE])</p>
 <p> Runs the given sequence of one or more commands with the standard output of each process piped to the standard input of the next. A single standard error pipe is used for all processes. If WORKING_DIRECTORY is given the named directory will be set as the current working directory of the child processes. If TIMEOUT is given the child processes will be terminated if they do not finish in the specified number of seconds (fractions are allowed). If RESULT_VARIABLE is given the variable will be set to contain the result of running the processes. This will be an integer return code from the last child or a string describing an error condition. If OUTPUT_VARIABLE or ERROR_VARIABLE are given the variable named will be set with the contents of the standard output and standard error pipes respectively. If the same variable is named for both pipes their output will be merged in the order produced. If INPUT_FILE, OUTPUT_FILE, or ERROR_FILE is given the file named will be attached to the standard input of the first process, standard output of the last process, or standard error of all processes respectively. If OUTPUT_QUIET or ERROR_QUIET is given then the standard output or standard error results will be quietly ignored. If more than one OUTPUT_* or ERROR_* option is given for the same pipe the precedence is not specified. If no OUTPUT_* or ERROR_* options are given the output will be shared with the corresponding pipes of the CMake process itself. </p>
 <p> The execute_process command is a newer more powerful version of exec_program, but the old command has been kept for compatibility. </p>
-<dt><code>export</code></p>
-<dd> Export targets from the build tree for use by outside projects. </p>
+<dt><code>export</code></dt>
+<dd> Export targets from the build tree for use by outside projects. </dd>
 <p>export(TARGETS[target1[target2[&#8230;]]][NAMESPACE&lt;namespace&gt;]<br />
               [APPEND] FILE&lt;filename&gt;[EXPORT_LINK_INTERFACE_LIBRARIES])</p>
 <p> Create a file &lt;filename&gt; that may be included by outside projects to import targets from the current project&#8217;s build tree. This is useful during cross-compiling to build utility executables that can run on the host platform in one project and then import them into another project being compiled for the target platform. If the NAMESPACE option is given the &lt;namespace&gt; string will be prepended to all target names written to the file. If the APPEND option is given the generated code will be appended to the file instead of overwriting it. The EXPORT_LINK_INTERFACE_LIBRARIES keyword, if present, causes the contents of the properties matching (IMPORTED_)?LINK_INTERFACE_LIBRARIES(_&lt;CONFIG&gt;)? to be exported, when policy CMP0022 is NEW. If a library target is included in the export but a target to which it links is not included the behavior is unspecified. </p>
@@ -496,8 +496,8 @@ description: "cmakecommands – Reference of available CMake commands."
   export(PACKAGE &lt;name&gt;)
 </pre>
 <p> Store the current build directory in the CMake user package registry for package &lt;name&gt;. The find_package command may consider the directory while searching for package &lt;name&gt;. This helps dependent projects find and use a package from the current project&#8217;s build tree without help from the user. Note that the entry in the package registry that this command creates works only in conjunction with a package configuration file (&lt;name&gt;Config.cmake) that works with the build tree. </p>
-<dt><code>file</code></p>
-<dd> File manipulation command. </p>
+<dt><code>file</code></dt>
+<dd> File manipulation command. </dd>
 <p>file(WRITE filename &#8220;message to write&#8221; &#8230;)<br />
     file(APPEND filename &#8220;message to write&#8221; &#8230;)<br />
         file(READ filename variable[LIMIT numBytes][OFFSET offset][HEX])<br />
@@ -570,8 +570,8 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> The COPY signature copies files, directories, and symlinks to a destination folder. Relative input paths are evaluated with respect to the current source directory, and a relative destination is evaluated with respect to the current build directory. Copying preserves input file timestamps, and optimizes out a file if it exists at the destination with the same timestamp. Copying preserves input permissions unless explicit permissions or NO_SOURCE_PERMISSIONS are given (default is USE_SOURCE_PERMISSIONS). See the install(DIRECTORY) command for documentation of permissions, PATTERN, REGEX, and EXCLUDE options. </p>
 <p> The INSTALL signature differs slightly from COPY: it prints status messages, and NO_SOURCE_PERMISSIONS is default. Installation scripts generated by the install() command use this signature (with some undocumented options for internal use). </p>
 <p> GENERATE will write an &lt;output_file&gt; with content from an &lt;input_file&gt;, or from &lt;input_content&gt;. The output is generated conditionally based on the content of the &lt;condition&gt;. The file is written at CMake generate-time and the input may contain generator expressions. The &lt;condition&gt;, &lt;output_file&gt; and &lt;input_file&gt; may also contain generator expressions. The &lt;condition&gt; must evaluate to either &#8216;0&#8217; or &#8216;1&#8217;. The &lt;output_file&gt; must evaluate to a unique name among all configurations and among all invocations of file(GENERATE). </p>
-<dt><code>find_file</code></p>
-<dd> Find the full path to a file. </p>
+<dt><code>find_file</code></dt>
+<dd> Find the full path to a file. </dd>
 <pre>
    find_file(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
@@ -647,8 +647,8 @@ description: "cmakecommands – Reference of available CMake commands."
    find_file(&lt;VAR&gt; NAMES name)
 </pre>
 <p> Once one of the calls succeeds the result variable will be set and stored in the cache so that no call will search again. </p>
-<dt><code>find_library</code></p>
-<dd> Find a library. </p>
+<dt><code>find_library</code></dt>
+<dd> Find a library. </dd>
 <pre>
    find_library(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
@@ -727,8 +727,8 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> When more than one value is given to the NAMES option this command by default will consider one name at a time and search every directory for it. The NAMES_PER_DIR option tells this command to consider one directory at a time and search for all names in it. </p>
 <p> If the library found is a framework, then VAR will be set to the full path to the framework &lt;fullPath&gt;/A.framework. When a full path to a framework is used as a library, CMake will use a -framework A, and a -F&lt;fullPath&gt; to link the framework to the target. </p>
 <p> If the global property FIND_LIBRARY_USE_LIB64_PATHS is set all search paths will be tested as normal, with &quot;64/&quot; appended, and with all matches of &quot;lib/&quot; replaced with &quot;lib64/&quot;. This property is automatically set for the platforms that are known to need it if at least one of the languages supported by the PROJECT command is enabled. </p>
-<dt><code>find_package</code></p>
-<dd> Load settings for an external project. </p>
+<dt><code>find_package</code></dt>
+<dd> Load settings for an external project. </dd>
 <p>find_package(&lt;package&gt;[version][EXACT][QUIET][MODULE]<br />
                       [REQUIRED] [[COMPONENTS] [components&#8230;]][OPTIONAL_COMPONENTS components&#8230;]<br />
                       [NO_POLICY_SCOPE])</p>
@@ -887,8 +887,8 @@ description: "cmakecommands – Reference of available CMake commands."
                                 false if component &lt;c&gt; is optional</p>
 <p> In Module mode the loaded find module is responsible to honor the request detailed by these variables; see the find module for details. In Config mode find_package handles REQUIRED, QUIET, and version options automatically but leaves it to the package configuration file to handle components in a way that makes sense for the package. The package configuration file may set &lt;package&gt;_FOUND to false to tell find_package that component requirements are not satisfied. </p>
 <p> See the cmake_policy() command documentation for discussion of the NO_POLICY_SCOPE option. </p>
-<dt><code>find_path</code></p>
-<dd> Find the directory containing a file. </p>
+<dt><code>find_path</code></dt>
+<dd> Find the directory containing a file. </dd>
 <pre>
    find_path(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
@@ -965,8 +965,8 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <p> Once one of the calls succeeds the result variable will be set and stored in the cache so that no call will search again. </p>
 <p> When searching for frameworks, if the file is specified as A/b.h, then the framework search will look for A.framework/Headers/b.h. If that is found the path will be set to the path to the framework. CMake will convert this to the correct -F option to include the file. </p>
-<dt><code>find_program</code></p>
-<dd> Find an executable program. </p>
+<dt><code>find_program</code></dt>
+<dd> Find an executable program. </dd>
 <pre>
    find_program(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
@@ -1005,7 +1005,6 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> 4. Search the standard system environment variables. This can be skipped if NO_SYSTEM_ENVIRONMENT_PATH is an argument. </p>
 <pre>
    PATH
-   
 </pre>
 <p> 5. Search cmake variables defined in the Platform files for the current system. This can be skipped if NO_CMAKE_SYSTEM_PATH is passed. </p>
 <pre>
@@ -1039,15 +1038,15 @@ description: "cmakecommands – Reference of available CMake commands."
    find_program(&lt;VAR&gt; NAMES name)
 </pre>
 <p> Once one of the calls succeeds the result variable will be set and stored in the cache so that no call will search again. </p>
-<dt><code>fltk_wrap_ui</code></p>
-<dd> Create FLTK user interfaces Wrappers. </p>
+<dt><code>fltk_wrap_ui</code></dt>
+<dd> Create FLTK user interfaces Wrappers. </dd>
 <pre>
   fltk_wrap_ui(resultingLibraryName source1
                source2 ... sourceN )
 </pre>
 <p> Produce .h and .cxx files for all the .fl and .fld files listed. The resulting .h and .cxx files will be added to a variable named resultingLibraryName_FLTK_UI_SRCS which should be added to your library. </p>
-<dt><code>foreach</code></p>
-<dd> Evaluate a group of commands for each value in a list. </p>
+<dt><code>foreach</code></dt>
+<dd> Evaluate a group of commands for each value in a list. </dd>
 <pre>
   foreach(loop_var arg1 arg2 ...)
     COMMAND1(ARGS ...)
@@ -1067,23 +1066,23 @@ description: "cmakecommands – Reference of available CMake commands."
 <p>foreach (loop_var IN[LISTS[list1[&#8230;]]]<br />
                     [ITEMS[item1[&#8230;]]])</p>
 <p> Iterates over a precise list of items. The LISTS option names list-valued variables to be traversed, including empty elements (an empty string is a zero-length list). The ITEMS option ends argument parsing and includes all arguments following it in the iteration. </p>
-<dt><code>function</code></p>
-<dd> Start recording a function for later invocation as a command. </p>
+<dt><code>function</code></dt>
+<dd> Start recording a function for later invocation as a command. </dd>
 <p>function(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br />
     COMMAND1(ARGS&#8230;)<br />
         COMMAND2(ARGS&#8230;)&#8230; endfunction(&lt;name&gt;)</p>
 <p> Define a function named &lt;name&gt; that takes arguments named arg1 arg2 arg3 (&#8230;). Commands listed after function, but before the matching endfunction, are not invoked until the function is invoked. When it is invoked, the commands recorded in the function are first modified by replacing formal parameters (${arg1}) with the arguments passed, and then invoked as normal commands. In addition to referencing the formal parameters you can reference the variable ARGC which will be set to the number of arguments passed into the function as well as ARGV0 ARGV1 ARGV2 &#8230; which will have the actual values of the arguments passed in. This facilitates creating functions with optional arguments. Additionally ARGV holds the list of all arguments given to the function and ARGN holds the list of arguments past the last expected argument. </p>
 <p> A function opens a new scope: see set(var PARENT_SCOPE) for details. </p>
 <p> See the cmake_policy() command documentation for the behavior of policies inside functions. </p>
-<dt><code>get_cmake_property</code></p>
-<dd> Get a property of the CMake instance. </p>
+<dt><code>get_cmake_property</code></dt>
+<dd> Get a property of the CMake instance. </dd>
 <pre>
   get_cmake_property(VAR property)
 </pre>
 <p> Get a property from the CMake instance. The value of the property is stored in the variable VAR. If the property is not found, VAR will be set to &quot;NOTFOUND&quot;. Some supported properties include: VARIABLES, CACHE_VARIABLES, COMMANDS, MACROS, and COMPONENTS. </p>
 <p> See also the more general get_property() command. </p>
-<dt><code>get_directory_property</code></p>
-<dd> Get a property of DIRECTORY scope. </p>
+<dt><code>get_directory_property</code></dt>
+<dd> Get a property of DIRECTORY scope. </dd>
 <pre>
   get_directory_property(&lt;variable&gt; [DIRECTORY &lt;dir&gt;] &lt;prop-name&gt;)
 </pre>
@@ -1094,8 +1093,8 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <p> Get a variable definition from a directory. This form is useful to get a variable definition from another directory. </p>
 <p> See also the more general get_property() command. </p>
-<dt><code>get_filename_component</code></p>
-<dd> Get a specific component of a full filename. </p>
+<dt><code>get_filename_component</code></dt>
+<dd> Get a specific component of a full filename. </dd>
 <pre>
   get_filename_component(&lt;VAR&gt; &lt;FileName&gt; &lt;COMP&gt; [CACHE])
 </pre>
@@ -1114,8 +1113,8 @@ description: "cmakecommands – Reference of available CMake commands."
                            PROGRAM[PROGRAM_ARGS&lt;ARG_VAR&gt;]<br />
                                   [CACHE])</p>
 <p> The program in FileName will be found in the system search path or left as a full path. If PROGRAM_ARGS is present with PROGRAM, then any command-line arguments present in the FileName string are split from the program name and stored in &lt;ARG_VAR&gt;. This is used to separate a program name from its arguments in a command line string. </p>
-<dt><code>get_property</code></p>
-<dd> Get a property. </p>
+<dt><code>get_property</code></dt>
+<dd> Get a property. </dd>
 <p>get_property(&lt;variable&gt;<br />
              &lt;GLOBAL |<br />
               DIRECTORY[dir] |<br />
@@ -1134,29 +1133,29 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> CACHE scope must name one cache entry. </p>
 <p> VARIABLE scope is unique and does not accept a name. </p>
 <p> The required PROPERTY option is immediately followed by the name of the property to get. If the property is not set an empty value is returned. If the SET option is given the variable is set to a boolean value indicating whether the property has been set. If the DEFINED option is given the variable is set to a boolean value indicating whether the property has been defined such as with define_property. If BRIEF_DOCS or FULL_DOCS is given then the variable is set to a string containing documentation for the requested property. If documentation is requested for a property that has not been defined NOTFOUND is returned. </p>
-<dt><code>get_source_file_property</code></p>
-<dd> Get a property for a source file. </p>
+<dt><code>get_source_file_property</code></dt>
+<dd> Get a property for a source file. </dd>
 <pre>
   get_source_file_property(VAR file property)
 </pre>
 <p> Get a property from a source file. The value of the property is stored in the variable VAR. If the property is not found, VAR will be set to &quot;NOTFOUND&quot;. Use set_source_files_properties to set property values. Source file properties usually control how the file is built. One property that is always there is LOCATION </p>
 <p> See also the more general get_property() command. </p>
-<dt><code>get_target_property</code></p>
-<dd> Get a property from a target. </p>
+<dt><code>get_target_property</code></dt>
+<dd> Get a property from a target. </dd>
 <pre>
   get_target_property(VAR target property)
 </pre>
 <p> Get a property from a target. The value of the property is stored in the variable VAR. If the property is not found, VAR will be set to &quot;NOTFOUND&quot;. Use set_target_properties to set property values. Properties are usually used to control how a target is built, but some query the target instead. This command can get properties for any target so far created. The targets do not need to be in the current CMakeLists.txt file. </p>
 <p> See also the more general get_property() command. </p>
-<dt><code>get_test_property</code></p>
-<dd> Get a property of the test. </p>
+<dt><code>get_test_property</code></dt>
+<dd> Get a property of the test. </dd>
 <pre>
   get_test_property(test property VAR)
 </pre>
 <p> Get a property from the Test. The value of the property is stored in the variable VAR. If the property is not found, VAR will be set to &quot;NOTFOUND&quot;. For a list of standard properties you can type cmake &#8211;help-property-list </p>
 <p> See also the more general get_property() command. </p>
-<dt><code>if</code></p>
-<dd> Conditionally execute a group of commands. </p>
+<dt><code>if</code></dt>
+<dd> Conditionally execute a group of commands. </dd>
 <p>if (expression)<br />
 #then section.<br />
     COMMAND1(ARGS&#8230;)<br />
@@ -1275,30 +1274,30 @@ COMMAND2(ARGS&#8230;)<br />
 <p> 5) Both left and right hand argumemnts to VERSION_LESS VERSION_EQUAL VERSION_GREATER are independently tested to see if they are defined variables, if so their defined values are used otherwise the original value is used. </p>
 <p> 6) The right hand argument to NOT is tested to see if it is a boolean constant, if so the value is used, otherwise it is assumed to be a variable and it is dereferenced. </p>
 <p> 7) The left and right hand arguments to AND OR are independently tested to see if they are boolean constants, if so they are used as such, otherwise they are assumed to be variables and are dereferenced. </p>
-<dt><code>include</code></p>
-<dd> Load and run CMake code from a file or module. </p>
+<dt><code>include</code></dt>
+<dd> Load and run CMake code from a file or module. </dd>
 <p>include(&lt;file | module&gt;[OPTIONAL][RESULT_VARIABLE&lt;VAR&gt;]<br />
                        [NO_POLICY_SCOPE])</p>
 <p> Load and run CMake code from the file given. Variable reads and writes access the scope of the caller (dynamic scoping). If OPTIONAL is present, then no error is raised if the file does not exist. If RESULT_VARIABLE is given the variable will be set to the full filename which has been included or NOTFOUND if it failed. </p>
 <p> If a module is specified instead of a file, the file with name &lt;modulename&gt;.cmake is searched first in CMAKE_MODULE_PATH, then in the CMake module directory. There is one exception to this: if the file which calls include() is located itself in the CMake module directory, then first the CMake module directory is searched and CMAKE_MODULE_PATH afterwards. See also policy CMP0017. </p>
 <p> See the cmake_policy() command documentation for discussion of the NO_POLICY_SCOPE option. </p>
-<dt><code>include_directories</code></p>
-<dd> Add include directories to the build. </p>
+<dt><code>include_directories</code></dt>
+<dd> Add include directories to the build. </dd>
 <p>include_directories([AFTER | BEFORE][SYSTEM] dir1 dir2&#8230;)</p>
 <p> Add the given directories to those the compiler uses to search for include files. Relative paths are interpreted as relative to the current source directory. </p>
 <p> The include directories are added to the directory property INCLUDE_DIRECTORIES for the current CMakeLists file. They are also added to the target property INCLUDE_DIRECTORIES for each target in the current CMakeLists file. The target property values are the ones used by the generators. </p>
 <p> By default the directories are appended onto the current list of directories. This default behavior can be changed by setting CMAKE_INCLUDE_DIRECTORIES_BEFORE to ON. By using AFTER or BEFORE explicitly, you can select between appending and prepending, independent of the default. </p>
 <p> If the SYSTEM option is given, the compiler will be told the directories are meant as system include directories on some platforms (signalling this setting might achieve effects such as the compiler skipping warnings, or these fixed-install system files not being considered in dependency calculations &#8211; see compiler docs). </p>
-<dt><code>include_external_msproject</code></p>
-<dd> Include an external Microsoft project file in a workspace. </p>
+<dt><code>include_external_msproject</code></dt>
+<dd> Include an external Microsoft project file in a workspace. </dd>
 <p>include_external_msproject(projectname location<br />
                                [TYPE projectTypeGUID]<br />
                                [GUID projectGUID]<br />
                                [PLATFORM platformName] dep1 dep2&#8230;)</p>
 <p> Includes an external Microsoft project in the generated workspace file. Currently does nothing on UNIX. This will create a target named [projectname]. This can be used in the add_dependencies command to make things depend on the external project. </p>
 <p> TYPE, GUID and PLATFORM are optional parameters that allow one to specify the type of project, id (GUID) of the project and the name of the target platform. This is useful for projects requiring values other than the default (e.g. WIX projects). These options are not supported by the Visual Studio 6 generator. </p>
-<dt><code>include_regular_expression</code></p>
-<dd> Set the regular expression used for dependency checking. </p>
+<dt><code>include_regular_expression</code></dt>
+<dd> Set the regular expression used for dependency checking. </dd>
 <pre>
   include_regular_expression(regex_match [regex_complain])
 </pre>
@@ -1307,8 +1306,8 @@ COMMAND2(ARGS&#8230;)<br />
   regex_match    = &quot;^.*$&quot; (match everything)
   regex_complain = &quot;^$&quot; (match empty string only)
 </pre>
-<dt><code>install</code></p>
-<dd> Specify rules to run at install time. </p>
+<dt><code>install</code></dt>
+<dd> Specify rules to run at install time. </dd>
 <p> This command generates installation rules for a project. Rules specified by calls to this command within a source directory are executed in order during installation. The order across directories is not defined. </p>
 <p> There are multiple signatures for this command. Some of them define installation properties for files and targets. Properties common to multiple signatures are covered here but they are valid only for signatures that specify them. </p>
 <p> DESTINATION arguments specify the directory on disk to which a file will be installed. If a full path (with a leading slash or drive letter) is given it is used directly. If a relative path is given it is interpreted relative to the value of CMAKE_INSTALL_PREFIX. The prefix can be relocated at install time using DESTDIR mechanism explained in the CMAKE_INSTALL_PREFIX variable documentation. </p>
@@ -1403,15 +1402,15 @@ COMMAND2(ARGS&#8230;)<br />
 </pre>
 <p> will install the executable myexe to &lt;prefix&gt;/bin and code to import it in the file &quot;&lt;prefix&gt;/lib/myproj/myproj.cmake&quot;. An outside project may load this file with the include command and reference the myexe executable from the installation tree using the imported target name mp_myexe as if the target were built in its own tree. </p>
 <p> NOTE: This command supercedes the INSTALL_TARGETS command and the target properties PRE_INSTALL_SCRIPT and POST_INSTALL_SCRIPT. It also replaces the FILES forms of the INSTALL_FILES and INSTALL_PROGRAMS commands. The processing order of these install rules relative to those generated by INSTALL_TARGETS, INSTALL_FILES, and INSTALL_PROGRAMS commands is not defined. </p>
-<dt><code>link_directories</code></p>
-<dd> Specify directories in which the linker will look for libraries. </p>
+<dt><code>link_directories</code></dt>
+<dd> Specify directories in which the linker will look for libraries. </dd>
 <pre>
   link_directories(directory1 directory2 ...)
 </pre>
 <p> Specify the paths in which the linker should search for libraries. The command will apply only to targets created after it is called. Relative paths given to this command are interpreted as relative to the current source directory, see CMP0015. </p>
 <p> Note that this command is rarely necessary. Library locations returned by find_package() and find_library() are absolute paths. Pass these absolute library file paths directly to the target_link_libraries() command. CMake will ensure the linker finds them. </p>
-<dt><code>list</code></p>
-<dd> List operations. </p>
+<dt><code>list</code></dt>
+<dd> List operations. </dd>
 <p>list(LENGTH&lt;list&gt;&lt;output variable&gt;)<br />
     list(GET&lt;list&gt;&lt;element index&gt;[&lt;element index&gt;&#8230;]&lt;output variable&gt;)<br />
         list(APPEND&lt;list&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br />
@@ -1434,8 +1433,8 @@ COMMAND2(ARGS&#8230;)<br />
 <p> The list subcommands APPEND, INSERT, REMOVE_AT, REMOVE_ITEM, REMOVE_DUPLICATES, REVERSE and SORT may create new values for the list within the current CMake variable scope. Similar to the SET command, the LIST command creates new variable values in the current scope, even if the list itself is actually defined in a parent scope. To propagate the results of these operations upwards, use SET with PARENT_SCOPE, SET with CACHE INTERNAL, or some other means of value propagation. </p>
 <p> NOTES: A list in cmake is a ; separated group of strings. To create a list the set command can be used. For example, set(var a b c d e) creates a list with a;b;c;d;e, and set(var &quot;a b c d e&quot;) creates a string or a list with one item in it. </p>
 <p> When specifying index values, if &lt;element index&gt; is 0 or greater, it is indexed from the beginning of the list, with 0 representing the first list element. If &lt;element index&gt; is -1 or lesser, it is indexed from the end of the list, with -1 representing the last list element. Be careful when counting with negative indices: they do not start from 0. -0 is equivalent to 0, the first list element. </p>
-<dt><code>load_cache</code></p>
-<dd> Load in the values from another project&#8217;s CMake cache. </p>
+<dt><code>load_cache</code></dt>
+<dd> Load in the values from another project&#8217;s CMake cache. </dd>
 <pre>
   load_cache(pathToCacheFile READ_WITH_PREFIX
              prefix entry1...)
@@ -1444,8 +1443,8 @@ COMMAND2(ARGS&#8230;)<br />
 <p>load_cache(pathToCacheFile[EXCLUDE entry1&#8230;]<br />
                           [INCLUDE_INTERNALS entry1&#8230;])</p>
 <p> Load in the values from another cache and store them in the local project&#8217;s cache as internal entries. This is useful for a project that depends on another project built in a different tree. EXCLUDE option can be used to provide a list of entries to be excluded. INCLUDE_INTERNALS can be used to provide a list of internal entries to be included. Normally, no internal entries are brought in. Use of this form of the command is strongly discouraged, but it is provided for backward compatibility. </p>
-<dt><code>load_command</code></p>
-<dd> Load a command into a running CMake. </p>
+<dt><code>load_command</code></dt>
+<dd> Load a command into a running CMake. </dd>
 <pre>
   load_command(COMMAND_NAME &lt;loc1&gt; [loc2 ...])
 </pre>
@@ -1454,28 +1453,28 @@ COMMAND2(ARGS&#8230;)<br />
   CMAKE_LOADED_COMMAND_&lt;COMMAND_NAME&gt;
 </pre>
 <p> will be set to the full path of the module that was loaded. Otherwise the variable will not be set. </p>
-<dt><code>macro</code></p>
-<dd> Start recording a macro for later invocation as a command. </p>
+<dt><code>macro</code></dt>
+<dd> Start recording a macro for later invocation as a command. </dd>
 <p>macro(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br />
     COMMAND1(ARGS&#8230;)<br />
         COMMAND2(ARGS&#8230;)&#8230; endmacro(&lt;name&gt;)</p>
 <p> Define a macro named &lt;name&gt; that takes arguments named arg1 arg2 arg3 (&#8230;). Commands listed after macro, but before the matching endmacro, are not invoked until the macro is invoked. When it is invoked, the commands recorded in the macro are first modified by replacing formal parameters (${arg1}) with the arguments passed, and then invoked as normal commands. In addition to referencing the formal parameters you can reference the values ${ARGC} which will be set to the number of arguments passed into the function as well as ${ARGV0} ${ARGV1} ${ARGV2} &#8230; which will have the actual values of the arguments passed in. This facilitates creating macros with optional arguments. Additionally ${ARGV} holds the list of all arguments given to the macro and ${ARGN} holds the list of arguments past the last expected argument. Note that the parameters to a macro and values such as ARGN are not variables in the usual CMake sense. They are string replacements much like the C preprocessor would do with a macro. If you want true CMake variables and/or better CMake scope control you should look at the function command. </p>
 <p> See the cmake_policy() command documentation for the behavior of policies inside macros. </p>
-<dt><code>mark_as_advanced</code></p>
-<dd> Mark cmake cached variables as advanced. </p>
+<dt><code>mark_as_advanced</code></dt>
+<dd> Mark cmake cached variables as advanced. </dd>
 <pre>
   mark_as_advanced([CLEAR|FORCE] VAR VAR2 VAR...)
 </pre>
 <p> Mark the named cached variables as advanced. An advanced variable will not be displayed in any of the cmake GUIs unless the show advanced option is on. If CLEAR is the first argument advanced variables are changed back to unadvanced. If FORCE is the first argument, then the variable is made advanced. If neither FORCE nor CLEAR is specified, new values will be marked as advanced, but if the variable already has an advanced/non-advanced state, it will not be changed. </p>
 <p> It does nothing in script mode. </p>
-<dt><code>math</code></p>
-<dd> Mathematical expressions. </p>
+<dt><code>math</code></dt>
+<dd> Mathematical expressions. </dd>
 <pre>
   math(EXPR &lt;output variable&gt; &lt;math expression&gt;)
 </pre>
 <p> EXPR evaluates mathematical expression and returns result in the output variable. Example mathematical expression is &#8216;5 * ( 10 + 13 )&#8217;. Supported operators are + &#8211; * / % | &amp; ^ ~ &lt;&lt; &gt;&gt; * / %. They have the same meaning as they do in C code. </p>
-<dt><code>message</code></p>
-<dd> Display a message to the user. </p>
+<dt><code>message</code></dt>
+<dd> Display a message to the user. </dd>
 <pre>
   message([STATUS|WARNING|AUTHOR_WARNING|FATAL_ERROR|SEND_ERROR]
           &quot;message to display&quot; ...)
@@ -1492,50 +1491,50 @@ COMMAND2(ARGS&#8230;)<br />
 </pre>
 <p> The CMake command-line tool displays STATUS messages on stdout and all other message types on stderr. The CMake GUI displays all messages in its log area. The interactive dialogs (ccmake and CMakeSetup) show STATUS messages one at a time on a status line and other messages in interactive pop-up boxes. </p>
 <p> CMake Warning and Error message text displays using a simple markup language. Non-indented text is formatted in line-wrapped paragraphs delimited by newlines. Indented text is considered pre-formatted. </p>
-<dt><code>option</code></p>
-<dd> Provides an option that the user can optionally select. </p>
+<dt><code>option</code></dt>
+<dd> Provides an option that the user can optionally select. </dd>
 <pre>
   option(&lt;option_variable&gt; &quot;help string describing option&quot;
          [initial value])
 </pre>
 <p> Provide an option for the user to select as ON or OFF. If no initial value is provided, OFF is used. </p>
 <p> If you have options that depend on the values of other options, see the module help for CMakeDependentOption. </p>
-<dt><code>project</code></p>
-<dd> Set a name for the entire project. </p>
+<dt><code>project</code></dt>
+<dd> Set a name for the entire project. </dd>
 <pre>
   project(&lt;projectname&gt; [languageName1 languageName2 ... ] )
 </pre>
 <p> Sets the name of the project. Additionally this sets the variables &lt;projectName&gt;_BINARY_DIR and &lt;projectName&gt;_SOURCE_DIR to the respective values. </p>
 <p> Optionally you can specify which languages your project supports. Example languages are CXX (i.e. C++), C, Fortran, etc. By default C and CXX are enabled. E.g. if you do not have a C++ compiler, you can disable the check for it by explicitly listing the languages you want to support, e.g. C. By using the special language &quot;NONE&quot; all checks for any language can be disabled. If a variable exists called CMAKE_PROJECT_&lt;projectName&gt;_INCLUDE, the file pointed to by that variable will be included as the last step of the project command. </p>
 <p> The top-level CMakeLists.txt file for a project must contain a literal, direct call to the project() command; loading one through the include() command is not sufficient. If no such call exists CMake will implicitly add one to the top that enables the default languages (C and CXX). </p>
-<dt><code>qt_wrap_cpp</code></p>
-<dd> Create Qt Wrappers. </p>
+<dt><code>qt_wrap_cpp</code></dt>
+<dd> Create Qt Wrappers. </dd>
 <pre>
   qt_wrap_cpp(resultingLibraryName DestName
               SourceLists ...)
 </pre>
 <p> Produce moc files for all the .h files listed in the SourceLists. The moc files will be added to the library using the DestName source list. </p>
-<dt><code>qt_wrap_ui</code></p>
-<dd> Create Qt user interfaces Wrappers. </p>
+<dt><code>qt_wrap_ui</code></dt>
+<dd> Create Qt user interfaces Wrappers. </dd>
 <pre>
   qt_wrap_ui(resultingLibraryName HeadersDestName
              SourcesDestName SourceLists ...)
 </pre>
 <p> Produce .h and .cxx files for all the .ui files listed in the SourceLists. The .h files will be added to the library using the HeadersDestNamesource list. The .cxx files will be added to the library using the SourcesDestNamesource list. </p>
-<dt><code>remove_definitions</code></p>
-<dd> Removes -D define flags added by add_definitions. </p>
+<dt><code>remove_definitions</code></dt>
+<dd> Removes -D define flags added by add_definitions. </dd>
 <pre>
   remove_definitions(-DFOO -DBAR ...)
 </pre>
 <p> Removes flags (added by add_definitions) from the compiler command line for sources in the current directory and below. </p>
-<dt><code>return</code></p>
-<dd> Return from a file, directory or function. </p>
+<dt><code>return</code></dt>
+<dd> Return from a file, directory or function. </dd>
 <pre>
   return()
 </pre>
 <p> Returns from a file, directory or function. When this command is encountered in an included file (via include() or find_package()), it causes processing of the current file to stop and control is returned to the including file. If it is encountered in a file which is not included by another file, e.g. a CMakeLists.txt, control is returned to the parent directory if there is one. If return is called in a function, control is returned to the caller of the function. Note that a macro is not a function and does not handle return like a function does. </p>
-<dt><code>separate_arguments</code></p>
-<dd> Parse space-separated arguments into a semicolon-separated list. </p>
+<dt><code>separate_arguments</code></dt>
+<dd> Parse space-separated arguments into a semicolon-separated list. </dd>
 <pre>
   separate_arguments(&lt;var&gt; &lt;UNIX|WINDOWS&gt;_COMMAND &quot;&lt;args&gt;&quot;)
 </pre>
@@ -1547,8 +1546,8 @@ COMMAND2(ARGS&#8230;)<br />
   separate_arguments(VARIABLE)
 </pre>
 <p> Convert the value of VARIABLE to a semi-colon separated list. All spaces are replaced with &#8216;;&#8217;. This helps with generating command lines. </p>
-<dt><code>set</code></p>
-<dd> Set a CMake, cache or environment variable to a given value. </p>
+<dt><code>set</code></dt>
+<dd> Set a CMake, cache or environment variable to a given value. </dd>
 <p>set(&lt;variable&gt;&lt;value&gt; [[CACHE&lt;type&gt;&lt;docstring&gt; [FORCE]] | PARENT_SCOPE])</p>
 <p> Within CMake sets &lt;variable&gt; to the value &lt;value&gt;. &lt;value&gt; is expanded before &lt;variable&gt; is set to it. Normally, set will set a regular CMake variable. If CACHE is present, then the &lt;variable&gt; is put in the cache instead, unless it is already in the cache. See section &#8216;Variable types in CMake&#8217; below for details of regular and cache variables and their interactions. If CACHE is used, &lt;type&gt; and &lt;docstring&gt; are required. &lt;type&gt; is used by the CMake GUI to choose a widget with which the user sets a value. The value for &lt;type&gt; may be one of </p>
 <pre>
@@ -1580,14 +1579,14 @@ COMMAND2(ARGS&#8230;)<br />
 <p> Finally, whenever a cache variable is added or modified by a command, CMake also *removes* the normal variable of the same name from the current scope so that an immediately following evaluation of it will expose the newly cached value. </p>
 <p> Normally projects should avoid using normal and cache variables of the same name, as this interaction can be hard to follow. However, in some situations it can be useful. One example (used by some projects): </p>
 <p> A project has a subproject in its source tree. The child project has its own CMakeLists.txt, which is included from the parent CMakeLists.txt using add_subdirectory(). Now, if the parent and the child project provide the same option (for example a compiler option), the parent gets the first chance to add a user-editable option to the cache. Normally, the child would then use the same value that the parent uses. However, it may be necessary to hard-code the value for the child project&#8217;s option while still allowing the user to edit the value used by the parent project. The parent project can achieve this simply by setting a normal variable with the same name as the option in a scope sufficient to hide the option&#8217;s cache variable from the child completely. The parent has already set the cache variable, so the child&#8217;s set(&#8230;CACHE&#8230;) will do nothing, and evaluating the option variable will use the value from the normal variable, which hides the cache variable. </p>
-<dt><code>set_directory_properties</code></p>
-<dd> Set a property of the directory. </p>
+<dt><code>set_directory_properties</code></dt>
+<dd> Set a property of the directory. </dd>
 <pre>
   set_directory_properties(PROPERTIES prop1 value1 prop2 value2)
 </pre>
 <p> Set a property for the current directory and subdirectories. If the property is not found, CMake will report an error. The properties include: INCLUDE_DIRECTORIES, LINK_DIRECTORIES, INCLUDE_REGULAR_EXPRESSION, and ADDITIONAL_MAKE_CLEAN_FILES. ADDITIONAL_MAKE_CLEAN_FILES is a list of files that will be cleaned as a part of &quot;make clean&quot; stage. </p>
-<dt><code>set_property</code></p>
-<dd> Set a named property in a given scope. </p>
+<dt><code>set_property</code></dt>
+<dd> Set a named property in a given scope. </dd>
 <p>set_property(&lt;GLOBAL |<br />
               DIRECTORY[dir] |<br />
               TARGET[target1[target2&#8230;]] |<br />
@@ -1602,13 +1601,13 @@ COMMAND2(ARGS&#8230;)<br />
 <p> TEST scope may name zero or more existing tests. </p>
 <p> CACHE scope must name zero or more cache existing entries. </p>
 <p> The required PROPERTY option is immediately followed by the name of the property to set. Remaining arguments are used to compose the property value in the form of a semicolon-separated list. If the APPEND option is given the list is appended to any existing property value.If the APPEND_STRING option is given the string is append to any existing property value as string, i.e. it results in a longer string and not a list of strings. </p>
-<dt><code>set_source_files_properties</code></p>
-<dd> Source files can have properties that affect how they are built. </p>
+<dt><code>set_source_files_properties</code></dt>
+<dd> Source files can have properties that affect how they are built. </dd>
 <p>set_source_files_properties([file1[file2[&#8230;]]] PROPERTIES prop1 value1<br />
                                 [prop2 value2[&#8230;]])</p>
 <p> Set properties associated with source files using a key/value paired list. See properties documentation for those known to CMake. Unrecognized properties are ignored. Source file properties are visible only to targets added in the same directory (CMakeLists.txt). </p>
-<dt><code>set_target_properties</code></p>
-<dd> Targets can have properties that affect how they are built. </p>
+<dt><code>set_target_properties</code></dt>
+<dd> Targets can have properties that affect how they are built. </dd>
 <pre>
   set_target_properties(target1 target2 ...
                         PROPERTIES prop1 value1
@@ -1625,8 +1624,8 @@ COMMAND2(ARGS&#8230;)<br />
 <p> VS_GLOBAL_&lt;variable&gt; can be set to add a Visual Studio project-specific global variable. Qt integration works better if VS_GLOBAL_QtVersion is set to the Qt version FindQt4.cmake found. For example, &quot;4.7.3&quot; </p>
 <p> The PRE_INSTALL_SCRIPT and POST_INSTALL_SCRIPT properties are the old way to specify CMake scripts to run before and after installing a target. They are used only when the old INSTALL_TARGETS command is used to install the target. Use the INSTALL command instead. </p>
 <p> The EXCLUDE_FROM_DEFAULT_BUILD property is used by the visual studio generators. If it is set to 1 the target will not be part of the default build when you select &quot;Build Solution&quot;. This can also be set on a per-configuration basis using EXCLUDE_FROM_DEFAULT_BUILD_&lt;CONFIG&gt;. </p>
-<dt><code>set_tests_properties</code></p>
-<dd> Set a property of the tests. </p>
+<dt><code>set_tests_properties</code></dt>
+<dd> Set a property of the tests. </dd>
 <pre>
   set_tests_properties(test1 [test2...] PROPERTIES prop1 value1 prop2 value2)
 </pre>
@@ -1640,13 +1639,13 @@ COMMAND2(ARGS&#8230;)<br />
 <p>Example : PASS_REGULAR_EXPRESSION &#8220;[^a-z]Error;ERROR;Failed&#8221;</p>
 <p> Both PASS_REGULAR_EXPRESSION and FAIL_REGULAR_EXPRESSION expect a list of regular expressions. </p>
 <p> TIMEOUT: Setting this will limit the test runtime to the number of seconds specified. </p>
-<dt><code>site_name</code></p>
-<dd> Set the given variable to the name of the computer. </p>
+<dt><code>site_name</code></dt>
+<dd> Set the given variable to the name of the computer. </dd>
 <pre>
   site_name(variable)
 </pre>
-<dt><code>source_group</code></p>
-<dd> Define a grouping for sources in the makefile. </p>
+<dt><code>source_group</code></dt>
+<dd> Define a grouping for sources in the makefile. </dd>
 <p>source_group(name[REGULAR_EXPRESSION regex][FILES src1 src2&#8230;])</p>
 <p> Defines a group into which sources will be placed in project files. This is mainly used to setup file tabs in Visual Studio. Any file whose name is listed or matches the regular expression will be placed in this group. If a file matches multiple groups, the LAST group that explicitly lists the file will be favored, if any. If no group explicitly lists the file, the LAST group whose regular expression matches the file will be favored. </p>
 <p> The name of the group may contain backslashes to specify subgroups: </p>
@@ -1657,8 +1656,8 @@ COMMAND2(ARGS&#8230;)<br />
 <pre>
   source_group(name regex)
 </pre>
-<dt><code>string</code></p>
-<dd> String operations. </p>
+<dt><code>string</code></dt>
+<dd> String operations. </dd>
 <p>string(REGEX MATCH&lt;regular_expression&gt;<br />
        &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br />
     string(REGEX MATCHALL&lt;regular_expression&gt;<br />
@@ -1752,8 +1751,8 @@ inside the brackets<br />
    %Y-%m-%dT%H:%M:%SZ   for UTC.
 </pre>
 <p> MAKE_C_IDENTIFIER will write a string which can be used as an identifier in C. </p>
-<dt><code>target_compile_definitions</code></p>
-<dd> Add compile definitions to a target. </p>
+<dt><code>target_compile_definitions</code></dt>
+<dd> Add compile definitions to a target. </dd>
 <p>target_compile_definitions(&lt;target&gt;&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br />
                                                                  [&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items2&#8230;]&#8230;])</p>
 <p> Specify compile definitions to use when compiling a given target. The named &lt;target&gt; must have been created by a command such as add_executable or add_library and must not be an IMPORTED target. The INTERFACE, PUBLIC and PRIVATE keywords are required to specify the scope of the following arguments. PRIVATE and PUBLIC items will populate the COMPILE_DEFINITIONS property of &lt;target&gt;. PUBLIC and INTERFACE items will populate the INTERFACE_COMPILE_DEFINITIONS property of &lt;target&gt;. The following arguments specify compile definitions. Repeated calls for the same &lt;target&gt; append items in the order called. </p>
@@ -1806,8 +1805,8 @@ inside the brackets<br />
 <pre>
   $&lt;TARGET_PROPERTY:prop&gt;   = The value of the property prop on the target on which the generator expression is evaluated.
 </pre>
-<dt><code>target_compile_options</code></p>
-<dd> Add compile options to a target. </p>
+<dt><code>target_compile_options</code></dt>
+<dd> Add compile options to a target. </dd>
 <p>target_compile_options(&lt;target&gt;[BEFORE]&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br />
                                                                      [&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items2&#8230;]&#8230;])</p>
 <p> Specify compile options to use when compiling a given target. The named &lt;target&gt; must have been created by a command such as add_executable or add_library and must not be an IMPORTED target. If BEFORE is specified, the content will be prepended to the property instead of being appended. </p>
@@ -1861,8 +1860,8 @@ inside the brackets<br />
 <pre>
   $&lt;TARGET_PROPERTY:prop&gt;   = The value of the property prop on the target on which the generator expression is evaluated.
 </pre>
-<dt><code>target_include_directories</code></p>
-<dd> Add include directories to a target. </p>
+<dt><code>target_include_directories</code></dt>
+<dd> Add include directories to a target. </dd>
 <p>target_include_directories(&lt;target&gt;[SYSTEM][BEFORE]&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br />
                                                                                  [&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items2&#8230;]&#8230;])</p>
 <p> Specify include directories or targets to use when compiling a given target. The named &lt;target&gt; must have been created by a command such as add_executable or add_library and must not be an IMPORTED target. </p>
@@ -1917,8 +1916,8 @@ inside the brackets<br />
 <pre>
   $&lt;TARGET_PROPERTY:prop&gt;   = The value of the property prop on the target on which the generator expression is evaluated.
 </pre>
-<dt><code>target_link_libraries</code></p>
-<dd> Link a target to given libraries. </p>
+<dt><code>target_link_libraries</code></dt>
+<dd> Link a target to given libraries. </dd>
 <p>target_link_libraries(&lt;target&gt;[item1[item2[&#8230;]]]<br />
                       [[debug | optimized | general]&lt;item&gt;]&#8230;)</p>
 <p> Specify libraries or flags to use when linking a given target. The named &lt;target&gt; must have been created in the current directory by a command such as add_executable or add_library. The remaining arguments specify library names or flags. Repeated calls for the same &lt;target&gt; append items in the order called. </p>
@@ -2005,8 +2004,8 @@ inside the brackets<br />
 <pre>
   $&lt;TARGET_PROPERTY:prop&gt;   = The value of the property prop on the target on which the generator expression is evaluated.
 </pre>
-<dt><code>try_compile</code></p>
-<dd> Try building some code. </p>
+<dt><code>try_compile</code></dt>
+<dd> Try building some code. </dd>
 <p>try_compile(RESULT_VAR&lt;bindir&gt;&lt;srcdir&gt;<br />
             &lt;projectName&gt;[targetName][CMAKE_FLAGS flags&#8230;]<br />
                          [OUTPUT_VARIABLE&lt;var&gt;])</p>
@@ -2027,8 +2026,8 @@ inside the brackets<br />
             add_executable(cmTryCompileExec sources)<br />
                 target_link_libraries(cmTryCompileExec ${LINK_LIBRARIES})</p>
 <p> In both versions of the command, if OUTPUT_VARIABLE is specified, then the output from the build process is stored in the given variable. The success or failure of the try_compile, i.e. TRUE or FALSE respectively, is returned in RESULT_VAR. CMAKE_FLAGS can be used to pass -DVAR:TYPE=VALUE flags to the cmake that is run during the build. Set variable CMAKE_TRY_COMPILE_CONFIGURATION to choose a build configuration. </p>
-<dt><code>try_run</code></p>
-<dd> Try compiling and then running some code. </p>
+<dt><code>try_run</code></dt>
+<dd> Try compiling and then running some code. </dd>
 <pre><code>
 try_run(RUN_RESULT_VAR COMPILE_RESULT_VAR
             bindir srcfile[CMAKE_FLAGS&lt;Flags&gt;]
@@ -2044,8 +2043,8 @@ try_run(RUN_RESULT_VAR COMPILE_RESULT_VAR
 <p> When cross compiling, the executable compiled in the first step usually cannot be run on the build host. try_run() checks the CMAKE_CROSSCOMPILING variable to detect whether CMake is in crosscompiling mode. If that&#8217;s the case, it will still try to compile the executable, but it will not try to run the executable. Instead it will create cache variables which must be filled by the user or by presetting them in some CMake script file to the values the executable would have produced if it had been run on its actual target platform. These variables are RUN_RESULT_VAR (explanation see above) and if RUN_OUTPUT_VARIABLE (or OUTPUT_VARIABLE) was used, an additional cache variable RUN_RESULT_VAR__COMPILE_RESULT_VAR__TRYRUN_OUTPUT.This is intended to hold stdout and stderr from the executable. </p>
 <p> In order to make cross compiling your project easier, use try_run only if really required. If you use try_run, use RUN_OUTPUT_VARIABLE (or OUTPUT_VARIABLE) only if really required. Using them will require that when crosscompiling, the cache variables will have to be set manually to the output of the executable. You can also &quot;guard&quot; the calls to try_run with if(CMAKE_CROSSCOMPILING) and provide an easy-to-preset alternative for this case. </p>
 <p> Set variable CMAKE_TRY_COMPILE_CONFIGURATION to choose a build configuration. </p>
-<dt><code>unset</code></p>
-<dd> Unset a variable, cache variable, or environment variable. </p>
+<dt><code>unset</code></dt>
+<dd> Unset a variable, cache variable, or environment variable. </dd>
 <pre>
   unset(&lt;variable&gt; [CACHE])
 </pre>
@@ -2055,14 +2054,14 @@ try_run(RUN_RESULT_VAR COMPILE_RESULT_VAR
   unset(ENV{LD_LIBRARY_PATH})
 </pre>
 <p> in which case the variable will be removed from the current environment. </p>
-<dt><code>variable_watch</code></p>
-<dd> Watch the CMake variable for change. </p>
+<dt><code>variable_watch</code></dt>
+<dd> Watch the CMake variable for change. </dd>
 <pre>
   variable_watch(&lt;variable name&gt; [&lt;command to execute&gt;])
 </pre>
 <p> If the specified variable changes, the message will be printed about the variable being changed. If the command is specified, the command will be executed. The command will receive the following arguments: COMMAND(&lt;variable&gt; &lt;access&gt; &lt;value&gt; &lt;current list file&gt; &lt;stack&gt;) </p>
-<dt><code>while</code></p>
-<dd> Evaluate a group of commands while a condition is true </p>
+<dt><code>while</code></dt>
+<dd> Evaluate a group of commands while a condition is true </dd>
 <pre>
   while(condition)
     COMMAND1(ARGS ...)
@@ -2082,17 +2081,17 @@ try_run(RUN_RESULT_VAR COMPILE_RESULT_VAR
 <h2>SEE ALSO</h2>
 <p> The following resources are available to get help using CMake: </p>
 <dl>
-<dt><code>Home Page</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> </p>
+<dt><code>Home Page</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> </dd>
 <p> The primary starting point for learning about CMake. </p>
-<dt><code>Frequently Asked Questions</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake_FAQ">http://www.cmake.org/Wiki/CMake_FAQ</a> </p>
+<dt><code>Frequently Asked Questions</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake_FAQ">http://www.cmake.org/Wiki/CMake_FAQ</a> </dd>
 <p> A Wiki is provided containing answers to frequently asked questions. </p>
-<dt><code>Online Documentation</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/Documentation.html">http://www.cmake.org/HTML/Documentation.html</a> </p>
+<dt><code>Online Documentation</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/Documentation.html">http://www.cmake.org/HTML/Documentation.html</a> </dd>
 <p> Links to available documentation may be found on this web page. </p>
-<dt><code>Mailing List</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/MailingLists.html">http://www.cmake.org/HTML/MailingLists.html</a> </p>
+<dt><code>Mailing List</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/MailingLists.html">http://www.cmake.org/HTML/MailingLists.html</a> </dd>
 <p> For help and discussion about using cmake, a mailing list is provided at cmake [at] cmake.org. The list is member-post-only but one may sign up on the CMake web page. Please first read the full documentation at <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> before posting questions to the list. </p>
 </dl>
 <h2>Index</h2>

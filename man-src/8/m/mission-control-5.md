@@ -17,11 +17,11 @@ description: "mission-control-5 – Telepathy account manager/chanel dispatcher"
 <p>There are no command-line options.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>MC_DEBUG=all</code> or <code>MC_DEBUG=</code><i>category</i>[<code>,</code><i>category</i>&#8230;]</p>
-<dd>May be set to &quot;all&quot; for full debug output from Mission Control and telepathy-glib, or various undocumented category names (which may change from release to release) to filter the output. See Mission Control and telepathy-glib source code for the available categories.</p>
-<dt><code>MC_DEBUG=</code><i>level</i></p>
-<dd>Set a numeric debug level for Mission Control itself (but not telepathy-glib). Level 0 logs nothing, level 1 logs most messages, and level 2 logs all messages.</p>
-<dt><code>MC_TP_DEBUG</code>=<i>type</i></p>
-<dd>May be set to &quot;all&quot; for full debug output from telepathy-glib, or various undocumented options (which may change from telepathy-glib release to release) to filter the output. See telepathy-glib source code for the available options.</dl>
+<dt><code>MC_DEBUG=all</code> or <code>MC_DEBUG=</code><i>category</i>[<code>,</code><i>category</i>&#8230;]</dt>
+<dd>May be set to &quot;all&quot; for full debug output from Mission Control and telepathy-glib, or various undocumented category names (which may change from release to release) to filter the output. See Mission Control and telepathy-glib source code for the available categories.</dd>
+<dt><code>MC_DEBUG=</code><i>level</i></dt>
+<dd>Set a numeric debug level for Mission Control itself (but not telepathy-glib). Level 0 logs nothing, level 1 logs most messages, and level 2 logs all messages.</dd>
+<dt><code>MC_TP_DEBUG</code>=<i>type</i></dt>
+<dd>May be set to &quot;all&quot; for full debug output from telepathy-glib, or various undocumented options (which may change from telepathy-glib release to release) to filter the output. See telepathy-glib source code for the available options.</dd></dl>
 <h2>See Also</h2>
 <p><i><a rel="nofollow" href="http://telepathy.freedesktop.org/">http://telepathy.freedesktop.org/</a></i> </p>

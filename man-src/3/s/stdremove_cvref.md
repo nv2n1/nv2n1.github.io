@@ -11,10 +11,8 @@ std::remove_cvref - std::remove_cvref
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 20)
-
         struct remove_cvref;</code></pre> 
 If the type T is a reference type, provides the member typedef type which is the type referred to by T with its topmost cv-qualifiers removed. Otherwise type is T with its topmost cv-qualifiers removed. 
 
@@ -38,10 +36,8 @@ using remove_cvref_t = typename remove_cvref&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; std::is_same_v&lt;std::remove_cvref_t&lt;int&gt;, int&gt; &lt;&lt; '\n'

@@ -17,40 +17,40 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <p> A summary of the options supported by <code>acroread</code> is included below. </p>
 <h3>acroread options</h3>
 <dl>
-<dt><code>&#8211;display=</code><i>DISPLAY</i></p>
-<dd> X display to use</p>
-<dt><code>&#8211;screen=</code><i>SCREEN</i></p>
-<dd> X screen to use. Use this options to override the screen part of the DISPLAY environment variable.</p>
-<dt><code>&#8211;sync</code></p>
-<dd> Make X calls synchronous</p>
-<dt><code>-h, -help</code></p>
-<dd> Prints the common command-line options.</p>
-<dt><code>-geometry</code> <i>width</i>x<i>height</i></p>
-<dd> Set height of startup window to <i>value</i>.</p>
-<dt><code>-v, -version</code></p>
-<dd> Print <code>acroread</code> version.</p>
-<dt><code>-iconic</code></p>
-<dd> Launches in an iconic state on the desktop.</p>
-<dt><code>-setenv</code> <i>var</i>=<i>value</i></p>
-<dd> Tells the main application to perform the equivalent of C-shell setenv <i>var</i> <i>value</i>.</p>
-<dt><code>-tempFile</code></p>
-<dd> Indicates files listed on the command line are temporary files and should not be put in the recent file list. The document title will be the title in the pdf document, instead of the filename.</p>
-<dt><code>-tempFileTitle</code> <i>title</i></p>
-<dd> Same as -tempFile, except the title is specified.</p>
-<dt><code>-openInNewInstance</code></p>
-<dd> It launches a new instance of acroread process. The application starts normally without checking if it is already running.</p>
-<dt><code>-openInNewWindow</code></p>
-<dd> Same as OpenInNewInstance. But it is recommended to use OpenInNewInstance. openInNewWindow will be deprecated.</p>
-<dt><code>-installCertificate &lt;server-ip&gt; &lt;server-port&gt;</code></p>
-<dd> Fetches and installs client-side certificates for authentication to access the server while creating secured connections.</p>
-<dt><code>-installCertificate [-PEM|-DER] &lt;PathName&gt;</code></p>
-<dd> Installs the certificate in the specified format from the given path to the Adobe Reader Certificate repository. </p>
-<dt><code>/a</code></p>
+<dt><code>&#8211;display=</code><i>DISPLAY</i></dt>
+<dd> X display to use</dd>
+<dt><code>&#8211;screen=</code><i>SCREEN</i></dt>
+<dd> X screen to use. Use this options to override the screen part of the DISPLAY environment variable.</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Make X calls synchronous</dd>
+<dt><code>-h, -help</code></dt>
+<dd> Prints the common command-line options.</dd>
+<dt><code>-geometry</code> <i>width</i>x<i>height</i></dt>
+<dd> Set height of startup window to <i>value</i>.</dd>
+<dt><code>-v, -version</code></dt>
+<dd> Print <code>acroread</code> version.</dd>
+<dt><code>-iconic</code></dt>
+<dd> Launches in an iconic state on the desktop.</dd>
+<dt><code>-setenv</code> <i>var</i>=<i>value</i></dt>
+<dd> Tells the main application to perform the equivalent of C-shell setenv <i>var</i> <i>value</i>.</dd>
+<dt><code>-tempFile</code></dt>
+<dd> Indicates files listed on the command line are temporary files and should not be put in the recent file list. The document title will be the title in the pdf document, instead of the filename.</dd>
+<dt><code>-tempFileTitle</code> <i>title</i></dt>
+<dd> Same as -tempFile, except the title is specified.</dd>
+<dt><code>-openInNewInstance</code></dt>
+<dd> It launches a new instance of acroread process. The application starts normally without checking if it is already running.</dd>
+<dt><code>-openInNewWindow</code></dt>
+<dd> Same as OpenInNewInstance. But it is recommended to use OpenInNewInstance. openInNewWindow will be deprecated.</dd>
+<dt><code>-installCertificate &lt;server-ip&gt; &lt;server-port&gt;</code></dt>
+<dd> Fetches and installs client-side certificates for authentication to access the server while creating secured connections.</dd>
+<dt><code>-installCertificate [-PEM|-DER] &lt;PathName&gt;</code></dt>
+<dd> Installs the certificate in the specified format from the given path to the Adobe Reader Certificate repository. </dd>
+<dt><code>/a</code></dt>
 <dd> Switch used to pass the file open parameters. To use more than one file open parameter, use &amp; as the separator and the options should be within quotes. See the example below:<br />
- acroread /a &quot;page=NUM &amp; zoom=NUM&quot; PDF_FILE.pdf</p>
+ acroread /a &quot;page=NUM &amp; zoom=NUM&quot; PDF_FILE.pdf</dd>
 <dl>
 <dt>
-<dd> <code>nameddest=name</code> &#8211; Specifies a named destination in the PDF.<br />
+</dt><dd> <code>nameddest=name</code> &#8211; Specifies a named destination in the PDF.<br />
  <code>page=pagenum</code> &#8211; Specifies a numbered page in the document, using an integer value.<br />
  <code>zoom=scale</code> &#8211; Sets the zoom and scroll factors, using float or integer values.<br />
  <code>zoom=scale,left,top</code> &#8211; Scroll values left and top are in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation.<br />
@@ -74,13 +74,13 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
  <code>search=wordList</code> &#8211; Opens the Search UI and performs a search for the specified word list in the document. Found words are highlighted in the document. The words must be enclosed in quotes and separated by spaces; for example: #search=”word1 word2”<br />
  <code>toolbar=1|0</code> &#8211; Turns the toolbar on or off.<br />
  <code>highlight=lt,rt,top,btm</code> &#8211; Highlights a specified rectangle on the displayed page. (Use the page command before this command.) The rectangle values are integers in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation.<br />
- <code>help=indexcontentssearch</code> &#8211; Used only when opening a file from the command line or an Apple Event. Opens the document in the Help window, with the specified navigation panel selected.</dl>
-<dt><code>-toPostScript</code> <i>options</i> <i>pdf-file</i> &#8230; <i>ps-dir</i></p>
+ <code>help=indexcontentssearch</code> &#8211; Used only when opening a file from the command line or an Apple Event. Opens the document in the Help window, with the specified navigation panel selected.</dd></dl>
+<dt><code>-toPostScript</code> <i>options</i> <i>pdf-file</i> &#8230; <i>ps-dir</i></dt>
 <dd>
-<dt><code>-toPostScript</code> <i>options</i> <i>-pairs</i> <i>pdf-file1</i> <i>ps-file1</i> &#8230;</p>
+</dd><dt><code>-toPostScript</code> <i>options</i> <i>-pairs</i> <i>pdf-file1</i> <i>ps-file1</i> &#8230;</dt>
 <dd>
-<dt><code>-toPostScript </code><i>options</i></p>
-<dd> Converts the given pdf_files to PostScript. </p>
+</dd><dt><code>-toPostScript </code><i>options</i></dt>
+<dd> Converts the given pdf_files to PostScript. </dd>
 <p> In the first form, if the last file specified is a directory, then all preceding files will be converted to PostScript and the generated PostScript files will be placed into ps-dir. If a directory is not specified, then the PostScript files will be placed in the same directory as the original file. </p>
 <p> In the second form, the file list contains pairs, each consisting of a PDF filename and a corresponding PostScript filename. </p>
 <p> The third form specifies a filter, reading a PDF file from standard input and writing the PostScript file to standardoutput. </p>
@@ -88,11 +88,11 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <p> The following are valid options for the conversion of PDF to PostScript:</p>
 <dl>
 <dt>
-<dd> <code>-printerName</code> &lt;name&gt; &#8211; this is to print device-dependent PS.<br />
+</dt><dd> <code>-printerName</code> &lt;name&gt; &#8211; this is to print device-dependent PS.<br />
  <code>-rotateAndCenter</code>&#8211; auto-rotate and center the pages.<br />
  <code>-choosePaperByPDFPageSize</code>&#8211; use the pdf page size to determine the output tray.<br />
  <code>-nUp</code>&#8211; &lt;hpage&gt; &lt;vpage&gt; &lt;pageorder&gt; border rotate &#8211; print multiple pages on the same sheet of paper.<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>hpage,vpage: can take numbers upto 99.</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>hpage,vpage: can take numbers upto 99.</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pageorder: how the pages are ordered on paper. Possible page orders are:</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 (Horizontal)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 (HorizontalReversed)</p>
@@ -145,12 +145,10 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>wxh &#8211; custom size paper where w is the integer width in points and h is the integer height in points</p>
 <p> <code>-transQuality</code> <i>level</i> &#8211; set the transparency flattening level Value from 1-5, where 1 means rasterize everything, 5 means rasterize as little as possible, default is 3.</dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>Mutually exclusive options</code></p>
+<dt><code>Mutually exclusive options</code></dt>
 <dd> The following are the mutually exclusive print options, their usage together can lead to undesired results:<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1. expand, shrink, nUp and booklet</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1. expand, shrink, nUp and booklet</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2. annotsOff, commentsOff, markupsOn and stampsOff</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>3. landscape and choosePaperByPDFPageSize</p>
 </dl>

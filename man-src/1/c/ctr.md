@@ -14,7 +14,7 @@ description: "ctr"
 <p> ctr </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [--address | -a] = [value]
     [--connect - timeout] = [value]
@@ -22,15 +22,15 @@ description: "ctr"
         [--namespace | -n] = [value]
             [--timeout] = [value]
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 ctr[GLOBAL OPTIONS] command[COMMAND OPTIONS][ARGUMENTS...]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>GLOBAL OPTIONS</h2>
 <p> <code>&#8211;address, -a</code>=&quot;&quot;: address for containerd&#8217;s GRPC server (default: /run/containerd/containerd.sock) </p>
 <p> <code>&#8211;connect-timeout</code>=&quot;&quot;: timeout for connecting to containerd (default: 0s) </p>

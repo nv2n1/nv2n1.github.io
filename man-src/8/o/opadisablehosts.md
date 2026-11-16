@@ -13,17 +13,17 @@ description: "opadisablehosts"
 <p>opadisablehosts [-h <i>hfi</i>] [-p <i>port</i>] <i>reason</i> host &#8230;</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
-<dt>-h/&#8211;hfi <i>hfi</i></p>
-<dd>HFI to send through. The default is the first HFI. </p>
-<dt>-p/&#8211;port <i>port</i></p>
-<dd>Port to send through. The default is the first active port. </p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-h/&#8211;hfi <i>hfi</i></dt>
+<dd>HFI to send through. The default is the first HFI. </dd>
+<dt>-p/&#8211;port <i>port</i></dt>
+<dd>Port to send through. The default is the first active port. </dd>
 <dt>
-&nbsp;<wbr><i>reason</i>&nbsp;<wbr></p>
-<dd>Text describing the reason hosts are being disabled. <i>reason</i> is saved in the reason field of the output file. </p>
-<dd>Information about the links disabled is written to a CSV file. By default, this file is named /opa/disabled:hfi:port.csv where the hfi:port part of the file name is replaced by the HFI number and the port number being operated on (such as 0:0 or 1:2). This CSV file can be used as input to opaenableports.</p>
-<dd>The list is of the form: NodeGUID;PortNum;NodeType;NodeDesc;NodeGUID; PortNum;NodeType;NodeDesc;Reason For each listed link, the switch port closer to this is the one that has been disabled.</dl>
+&nbsp;<wbr><i>reason</i>&nbsp;<wbr></dt>
+<dd>Text describing the reason hosts are being disabled. <i>reason</i> is saved in the reason field of the output file. </dd>
+<dd>Information about the links disabled is written to a CSV file. By default, this file is named /opa/disabled:hfi:port.csv where the hfi:port part of the file name is replaced by the HFI number and the port number being operated on (such as 0:0 or 1:2). This CSV file can be used as input to opaenableports.</dd>
+<dd>The list is of the form: NodeGUID;PortNum;NodeType;NodeDesc;NodeGUID; PortNum;NodeType;NodeDesc;Reason For each listed link, the switch port closer to this is the one that has been disabled.</dd></dl>
 <h2>Examples</h2>
 <p>opadisablehosts &#8216;bad DRAM&#8217; compute001 compute045<br />
  opadisablehosts -h 1 -p 2 &#8216;crashed&#8217; compute001 compute045 </p>

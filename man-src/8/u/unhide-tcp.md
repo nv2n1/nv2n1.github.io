@@ -15,34 +15,34 @@ description: "unhide-tcp — forensic tool to find hidden TCP/UDP ports"
  Note1 : On FreeBSD ans OpenBSD, netstat is allways used as iproute2 doesn&#8217;t exist on these OS. In addition, on FreeBSD, sockstat is used instead of fuser. Note2 : If iproute2 is not available on the system, option -n or -s SHOULD be given on the command line. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd>Display help</p>
-<dt><code>&#8211;brief</code></p>
-<dd>Don&#8217;t display warning messages, that&#8217;s the default behavior.</p>
-<dt><code>-f &#8211;fuser</code></p>
-<dd>Display fuser output (if available) for the hidden port On FreeBSD, instead of fuser command, displays the output of the sockstat command for the hidden port.</p>
-<dt><code>-l &#8211;lsof</code></p>
-<dd>Display lsof output (if available) for the hidden port</p>
-<dt><code>-n &#8211;netstat</code></p>
-<dd>Use /bin/netstat instead of /sbin/ss. On system with many opened ports, this can slow down the test dramatically.</p>
-<dt><code>-s &#8211;server</code></p>
-<dd>Use a very quick strategy of scanning. On system with a lot of opened ports, it is hundreds times faster than ss method and ten thousands times faster than netstat method.</p>
-<dt><code>-o &#8211;log</code></p>
-<dd>Write a log file (unhide-tcp-AAAA-MM-DD.log) in the current directory.</p>
-<dt><code>-V &#8211;version</code></p>
-<dd>Show version and exit</p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd>Be verbose, display warning message (default : don&#8217;t display). This option may be repeated more than once.</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd>Display help</dd>
+<dt><code>&#8211;brief</code></dt>
+<dd>Don&#8217;t display warning messages, that&#8217;s the default behavior.</dd>
+<dt><code>-f &#8211;fuser</code></dt>
+<dd>Display fuser output (if available) for the hidden port On FreeBSD, instead of fuser command, displays the output of the sockstat command for the hidden port.</dd>
+<dt><code>-l &#8211;lsof</code></dt>
+<dd>Display lsof output (if available) for the hidden port</dd>
+<dt><code>-n &#8211;netstat</code></dt>
+<dd>Use /bin/netstat instead of /sbin/ss. On system with many opened ports, this can slow down the test dramatically.</dd>
+<dt><code>-s &#8211;server</code></dt>
+<dd>Use a very quick strategy of scanning. On system with a lot of opened ports, it is hundreds times faster than ss method and ten thousands times faster than netstat method.</dd>
+<dt><code>-o &#8211;log</code></dt>
+<dd>Write a log file (unhide-tcp-AAAA-MM-DD.log) in the current directory.</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd>Show version and exit</dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd>Be verbose, display warning message (default : don&#8217;t display). This option may be repeated more than once.</dd></dl>
 <h3>Exit status:</h3>
 <dl>
-<dt>0</p>
-<dd>if no hidden port is found,</p>
-<dt>4</p>
-<dd>if one or more hidden TCP port(s) is(are) found,</p>
-<dt>8</p>
-<dd>if one or more hidden UDP port(s) is(are) found,</p>
-<dt>12</p>
-<dd>if one or more hidden TCP and UDP ports are found.</dl>
+<dt>0</dt>
+<dd>if no hidden port is found,</dd>
+<dt>4</dt>
+<dd>if one or more hidden TCP port(s) is(are) found,</dd>
+<dt>8</dt>
+<dd>if one or more hidden UDP port(s) is(are) found,</dd>
+<dt>12</dt>
+<dd>if one or more hidden TCP and UDP ports are found.</dd></dl>
 <h2>See Also</h2>
 <p>unhide (8).</p>
 <h2>Author</h2>

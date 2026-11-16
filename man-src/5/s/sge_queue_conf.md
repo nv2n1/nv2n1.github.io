@@ -69,14 +69,14 @@ pe_list pe_name</pre>
 <h3><code>shell_start_mode</code></h3>
 <p>This parameter defines the mechanisms which are used to actually invoke the job scripts on the execution hosts. The following values are recognized:</p>
 <dl>
-<dt><i>unix_behavior</i></p>
-<dd>If a user starts a job shell script under UNIX interactively by invoking it just with the script name the operating system&#8217;s executable loader uses the information provided in a comment such as `#!/bin/csh&#8217; in the first line of the script to detect which command interpreter to start to interpret the script. This mechanism is used by Grid Engine when starting jobs if <i>unix_behavior</i> is defined as <code>shell_start_mode</code>.</p>
-<dt><i>posix_compliant</i></p>
-<dd>POSIX does not consider first script line comments such a `#!/bin/csh&#8217; as being significant. The POSIX standard for batch queuing systems (P1003.2d) therefore requires a compliant queuing system to ignore such lines but to use user specified or configured default command interpreters instead. Thus, if <code>shell_start_mode</code> is set to <i>posix_compliant</i> Grid Engine will either use the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).</p>
-<dt><i>script_from_stdin</i></p>
+<dt><i>unix_behavior</i></dt>
+<dd>If a user starts a job shell script under UNIX interactively by invoking it just with the script name the operating system&#8217;s executable loader uses the information provided in a comment such as `#!/bin/csh&#8217; in the first line of the script to detect which command interpreter to start to interpret the script. This mechanism is used by Grid Engine when starting jobs if <i>unix_behavior</i> is defined as <code>shell_start_mode</code>.</dd>
+<dt><i>posix_compliant</i></dt>
+<dd>POSIX does not consider first script line comments such a `#!/bin/csh&#8217; as being significant. The POSIX standard for batch queuing systems (P1003.2d) therefore requires a compliant queuing system to ignore such lines but to use user specified or configured default command interpreters instead. Thus, if <code>shell_start_mode</code> is set to <i>posix_compliant</i> Grid Engine will either use the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).</dd>
+<dt><i>script_from_stdin</i></dt>
 <dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br />
  If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force Grid Engine to open the job script as well as the epilogue and prologue scripts for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).<br />
- Thus setting <code>shell_start_mode</code> to <i>script_from_stdin</i> also implies <i>posix_compliant</i> behavior. <code>Note</code>, however, that feeding scripts into the STDIN stream of a command interpreter may cause trouble if commands like are invoked inside a job script as they also process the STDIN stream of the command interpreter. These problems can usually be resolved by redirecting the STDIN channel of those commands to come from /dev/null (e.g. rsh host date &lt; /dev/null). <code>Note also</code>, that any command-line options associated with the job are passed to the executing shell. The shell will only forward them to the job if they are not recognized as valid shell options.</dl>
+ Thus setting <code>shell_start_mode</code> to <i>script_from_stdin</i> also implies <i>posix_compliant</i> behavior. <code>Note</code>, however, that feeding scripts into the STDIN stream of a command interpreter may cause trouble if commands like are invoked inside a job script as they also process the STDIN stream of the command interpreter. These problems can usually be resolved by redirecting the STDIN channel of those commands to come from /dev/null (e.g. rsh host date &lt; /dev/null). <code>Note also</code>, that any command-line options associated with the job are passed to the executing shell. The shell will only forward them to the job if they are not recognized as valid shell options.</dd></dl>
 <p> The default for <code>shell_start_mode</code> is <i>posix_compliant</i>. Note, though, that the <code>shell_start_mode</code> can only be used for batch jobs submitted by and can&#8217;t be used for interactive jobs submitted by</p>
 <h3><code>prolog</code></h3>
 <p>The executable path of a shell script that is started before execution of Grid Engine jobs with the same environment setting as that for the Grid Engine jobs to be started afterwards. An optional prefix &quot;user@&quot; specifies the user under which this procedure is to be started. The procedures standard output and the error output stream are written to the same file used also for the standard output and error output of each job. This procedure is intended as a means for the Grid Engine administrator to automate the execution of general site specific tasks like the preparation of temporary file systems with the need for the same context information as the job. This queue configuration entry overwrites cluster global or execution host specific <code>prolog</code> definitions (see </p>
@@ -86,7 +86,7 @@ pe_list pe_name</pre>
 <dd>0: Success<br />
  99: Reschedule job<br />
  100: Put job in error state<br />
- Anything else: Put queue in error state</dl>
+ Anything else: Put queue in error state</dd></dl>
 <h3><code>epilog</code></h3>
 <p>The executable path of a shell script that is started after execution of Grid Engine jobs with the same environment setting as that for the Grid Engine jobs that has just completed. An optional prefix &quot;user@&quot; specifies the user under which this procedure is to be started. The procedures standard output and the error output stream are written to the same file used also for the standard output and error output of each job. This procedure is intended as a means for the Grid Engine administrator to automate the execution of general site specific tasks like the cleaning up of temporary file systems with the need for the same context information as the job. This queue configuration entry overwrites cluster global or execution host specific <code>epilog</code> definitions (see </p>
 <p> The default for <code>epilog</code> is the special value NONE, which prevents from execution of a epilogue script. The special variables for constituting a command line are the same like in <code>prolog</code> definitions of the cluster configuration (see </p>
@@ -95,16 +95,16 @@ pe_list pe_name</pre>
 <dd>0: Success<br />
  99: Reschedule job<br />
  100: Put job in error state<br />
- Anything else: Put queue in error state</dl>
+ Anything else: Put queue in error state</dd></dl>
 <h3><code>starter_method</code></h3>
 <p>The specified executable path will be used as a job starter facility responsible for starting batch jobs. The executable path will be executed instead of the configured shell to start the job. The job arguments will be passed as arguments to the job starter. The following environment variables are used to pass information to the job starter concerning the shell environment which was configured or requested to start the job. </p>
 <dl>
-<dt><i>SGE_STARTER_SHELL_PATH</i></p>
-<dd>The name of the requested shell to start the job</p>
-<dt><i>SGE_STARTER_SHELL_START_MODE</i></p>
-<dd>The configured <code>shell_start_mode</code></p>
-<dt><i>SGE_STARTER_USE_LOGIN_SHELL</i></p>
-<dd>Set to &quot;true&quot; if the shell is supposed to be used as a login shell (see <code>login_shells</code> in</dl>
+<dt><i>SGE_STARTER_SHELL_PATH</i></dt>
+<dd>The name of the requested shell to start the job</dd>
+<dt><i>SGE_STARTER_SHELL_START_MODE</i></dt>
+<dd>The configured <code>shell_start_mode</code></dd>
+<dt><i>SGE_STARTER_USE_LOGIN_SHELL</i></dt>
+<dd>Set to &quot;true&quot; if the shell is supposed to be used as a login shell (see <code>login_shells</code> in</dd></dl>
 <p> The starter_method will not be invoked for qsh, qlogin or qrsh acting as rlogin.</p>
 <h3><code>suspend_method</code></h3>
 <h3><code>resume_method</code></h3>
@@ -113,18 +113,18 @@ pe_list pe_name</pre>
 <p> If no executable path is given, Grid Engine takes the specified parameter entries as the signal to be delivered instead of the default signal. A signal must be either a positive number or a signal name with <code>&quot;SIG&quot;</code> as prefix and the signal name as printed by <i>kill -l</i> (e.g. SIGTERM). </p>
 <p> If an executable path is given (it must be an <i>absolute path</i> starting with a &quot;/&quot;) then this command together with its arguments is started by Grid Engine to perform the appropriate action. The following special variables are expanded at runtime and can be used (besides any other strings which have to be interpreted by the procedures) to constitute a command line: </p>
 <dl>
-<dt><i>$host</i></p>
-<dd>The name of the host on which the procedure is started.</p>
-<dt><i>$job_owner</i></p>
-<dd>The user name of the job owner.</p>
-<dt><i>$job_id</i></p>
-<dd>Grid Engine&#8217;s unique job identification number.</p>
-<dt><i>$job_name</i></p>
-<dd>The name of the job.</p>
-<dt><i>$queue</i></p>
-<dd>The name of the queue.</p>
-<dt><i>$job_pid</i></p>
-<dd>The pid of the job. </p>
+<dt><i>$host</i></dt>
+<dd>The name of the host on which the procedure is started.</dd>
+<dt><i>$job_owner</i></dt>
+<dd>The user name of the job owner.</dd>
+<dt><i>$job_id</i></dt>
+<dd>Grid Engine&#8217;s unique job identification number.</dd>
+<dt><i>$job_name</i></dt>
+<dd>The name of the job.</dd>
+<dt><i>$queue</i></dt>
+<dd>The name of the queue.</dd>
+<dt><i>$job_pid</i></dt>
+<dd>The pid of the job. </dd>
 </dl>
 <h3><code>notify</code></h3>
 <p>The time waited between delivery of SIGUSR1/SIGUSR2 notification signals and suspend/kill signals if job was submitted with the <i>-notify</i> option.</p>
@@ -155,12 +155,12 @@ pe_list pe_name</pre>
 <h3><code>initial_state</code></h3>
 <p>defines an initial state for the queue either when adding the queue to the system for the first time or on start-up of the on the host on which the queue resides. Possible values are:</p>
 <dl>
-<dt>default</p>
-<dd>The queue is enabled when adding the queue or is reset to the previous status when comes up (this corresponds to the behavior in earlier Grid Engine releases not supporting initial_state).</p>
-<dt>enabled</p>
-<dd>The queue is enabled in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -e</i>&#8216; command (see</p>
-<dt>disabled</p>
-<dd>The queue is disable in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -d</i>&#8216; command (see</dl>
+<dt>default</dt>
+<dd>The queue is enabled when adding the queue or is reset to the previous status when comes up (this corresponds to the behavior in earlier Grid Engine releases not supporting initial_state).</dd>
+<dt>enabled</dt>
+<dd>The queue is enabled in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -e</i>&#8216; command (see</dd>
+<dt>disabled</dt>
+<dd>The queue is disable in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -d</i>&#8216; command (see</dd></dl>
 <h2>Resource Limits</h2>
 <p>The first two resource limit parameters, <code>s_rt</code> and <code>h_rt</code>, are implemented by Grid Engine. They define the &quot;real time&quot; or also called &quot;elapsed&quot; or &quot;wall clock&quot; time having passed since the start of the job. If <code>h_rt</code> is exceeded by a job running in the queue, it is aborted via the SIGKILL signal (see If <code>s_rt</code> is exceeded, the job is first &quot;warned&quot; via the SIGUSR1 signal (which can be caught by the job) and finally aborted after the notification time defined in the queue configuration parameter <code>notify</code> (see above) has passed. In cases when <code>s_rt</code> is used in combination with job notification it might be necessary to configure a signal other than SIGUSR1 using the NOTIFY_KILL and NOTIFY_SUSP execd_params (see so that the jobs&#8217; signal-catching mechanism can &quot;differ&quot; the cases and react accordingly. </p>
 <p> The resource limit parameters <code>s_cpu</code> and <code>h_cpu</code> are implemented by Grid Engine as a job limit. They impose a limit on the amount of combined CPU time consumed by all the processes in the job. If <code>h_cpu</code> is exceeded by a job running in the queue, it is aborted via a SIGKILL signal (see If <code>s_cpu</code> is exceeded, the job is sent a SIGXCPU signal which can be caught by the job. If you wish to allow a job to be &quot;warned&quot; so it can exit gracefully before it is killed then you should set the <code>s_cpu</code> limit to a lower value than <code>h_cpu</code>. For parallel processes, the limit is applied per slot which means that the limit is multiplied by the number of slots being used by the job before being applied. </p>
@@ -169,22 +169,22 @@ pe_list pe_name</pre>
 <p> <code>Note also:</code> s_vmem and h_vmem (virtual memory) are only available on systems supporting RLIMIT_VMEM (see on your operating system). </p>
 <p> The UNICOS operating system supplied by SGI/Cray does not support the system call, using their own resource limit-setting system call instead. For UNICOS systems only, the following meanings apply:</p>
 <dl>
-<dt>s_cpu</p>
-<dd>The per-process CPU time limit in seconds.</p>
-<dt>s_core</p>
-<dd>The per-process maximum core file size in bytes.</p>
-<dt>s_data</p>
-<dd>The per-process maximum memory limit in bytes.</p>
-<dt>s_vmem</p>
-<dd>The same as s_data (if both are set the minimum is used).</p>
-<dt>h_cpu</p>
-<dd>The per-job CPU time limit in seconds.</p>
-<dt>h_data</p>
-<dd>The per-job maximum memory limit in bytes.</p>
-<dt>h_vmem</p>
-<dd>The same as h_data (if both are set the minimum is used).</p>
-<dt>h_fsize</p>
-<dd>The total number of disk blocks that this job can create.</dl>
+<dt>s_cpu</dt>
+<dd>The per-process CPU time limit in seconds.</dd>
+<dt>s_core</dt>
+<dd>The per-process maximum core file size in bytes.</dd>
+<dt>s_data</dt>
+<dd>The per-process maximum memory limit in bytes.</dd>
+<dt>s_vmem</dt>
+<dd>The same as s_data (if both are set the minimum is used).</dd>
+<dt>h_cpu</dt>
+<dd>The per-job CPU time limit in seconds.</dd>
+<dt>h_data</dt>
+<dd>The per-job maximum memory limit in bytes.</dd>
+<dt>h_vmem</dt>
+<dd>The same as h_data (if both are set the minimum is used).</dd>
+<dt>h_fsize</dt>
+<dd>The total number of disk blocks that this job can create.</dd></dl>
 <h2>See Also</h2>
 <h2>Copyright</h2>
 <p>See for a full statement of rights and permissions.</p>

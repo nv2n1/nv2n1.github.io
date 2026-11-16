@@ -15,11 +15,11 @@ blk_requeue_request - put a request back on queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>request queue where request should be inserted</dl>
+<dl><dd></dd><dd>request queue where request should be inserted</dd></dl>
  
 
  <i>rq</i>
-<dl><dd>request to be inserted</dl>
+<dl><dd>request to be inserted</dd></dl>
 
 <h2>Description</h2>
 

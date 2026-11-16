@@ -21,16 +21,16 @@ description: "dh_pycentral – use the python-central framework to handle Python
 <p> The ${python:Versions} variable should be used to provide the required XB-Python-Version field listing the python versions supported by the package.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>module dirs</i></p>
-<dd> If your package installs python modules in non-standard directories, you can make dh_pycentral check those directories by passing their names on the command line. By default, it will check /usr/lib/$PACKAGE, /usr/share/$PACKAGE, /usr/lib/games/$PACKAGE, /usr/share/games/$PACKAGE, /usr/lib/python?.?/site-packages and /usr/lib/python?.?/dist-packages. </p>
+<dt><i>module dirs</i></dt>
+<dd> If your package installs python modules in non-standard directories, you can make dh_pycentral check those directories by passing their names on the command line. By default, it will check /usr/lib/$PACKAGE, /usr/share/$PACKAGE, /usr/lib/games/$PACKAGE, /usr/share/games/$PACKAGE, /usr/lib/python?.?/site-packages and /usr/lib/python?.?/dist-packages. </dd>
 <p> Note: only /usr/lib/python?.?/site-packages and the extra names on the command line are searched for binary (.so) modules.</p>
-<dt><code>-V</code> <i>version</i></p>
-<dd> If the .py files your package ships are meant to be used by a specific pythonX.Y version, you can use this option to specify the desired version, such as 2.3. Do not use if you ship modules in /usr/lib/site-python. </p>
+<dt><code>-V</code> <i>version</i></dt>
+<dd> If the .py files your package ships are meant to be used by a specific pythonX.Y version, you can use this option to specify the desired version, such as 2.3. Do not use if you ship modules in /usr/lib/site-python. </dd>
 <p> With the new policy, this option is mostly deprecated. Use the XS-Python-Field to indicate that you&#8217;re using a specific python version.</p>
-<dt><code>-n</code>, <code>&#8211;noscripts</code></p>
-<dd> Do not modify postinst/postrm scripts.</p>
-<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></p>
-<dd> Exclude files that contain &#8220;item&#8221; anywhere in their filename from being taken into account to generate the python dependency. You may use this option multiple times to build up a list of things to exclude.</dl>
+<dt><code>-n</code>, <code>&#8211;noscripts</code></dt>
+<dd> Do not modify postinst/postrm scripts.</dd>
+<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude files that contain &#8220;item&#8221; anywhere in their filename from being taken into account to generate the python dependency. You may use this option multiple times to build up a list of things to exclude.</dd></dl>
 <h2>CONFORMS TO</h2>
 <p> Python policy, version 0.4.1 (2006-06-20)</p>
 <h2>SEE ALSO</h2>

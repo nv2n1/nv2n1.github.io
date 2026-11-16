@@ -16,21 +16,21 @@ description: "Arora – Lightweight web browser based on Qt and WebKit"
 <h2>OPTIONS</h2>
 <h3>Common Qt Options</h3>
 <dl>
-<dt><code>-style style, -style=style</code></p>
-<dd> Specify the Qt widget style to use (examples: plastique, cleanlooks).</p>
-<dt><code>-stylesheet stylesheet, -stylesheet=stylesheet</code></p>
-<dd> Specify the user stylesheet to use when rendering widgets.</p>
-<dt><code>-session session, -session=session</code></p>
-<dd> Restore the application from an earlier <code>session</code>.</p>
-<dt><code>-widgetcount</code></p>
-<dd> Print a debug message at the end about the number of widgets left undestroyed and the maximum number of widgets that existed at the same time.</p>
-<dt><code>-reverse</code></p>
-<dd> Sets the application&#8217;s layout direction to right-to-left. </p>
+<dt><code>-style style, -style=style</code></dt>
+<dd> Specify the Qt widget style to use (examples: plastique, cleanlooks).</dd>
+<dt><code>-stylesheet stylesheet, -stylesheet=stylesheet</code></dt>
+<dd> Specify the user stylesheet to use when rendering widgets.</dd>
+<dt><code>-session session, -session=session</code></dt>
+<dd> Restore the application from an earlier <code>session</code>.</dd>
+<dt><code>-widgetcount</code></dt>
+<dd> Print a debug message at the end about the number of widgets left undestroyed and the maximum number of widgets that existed at the same time.</dd>
+<dt><code>-reverse</code></dt>
+<dd> Sets the application&#8217;s layout direction to right-to-left. </dd>
 </dl>
 <h3>Options Specific to Arora</h3>
 <dl>
-<dt><code>url</code></p>
-<dd> The URL address to open in the browser. </p>
+<dt><code>url</code></dt>
+<dd> The URL address to open in the browser. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please report bugs to <i><a rel="nofollow" href="http://code.google.com/p/arora/issues/list">http://code.google.com/p/arora/issues/list</a></i>. </p>

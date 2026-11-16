@@ -14,7 +14,7 @@ description: "usb_interface_claimed – returns true iff an interface is claimed
 <p><i>iface</i></p>
 <dl>
 <dd>
-<dd>the interface being checked</dl>
+</dd><dd>the interface being checked</dd></dl>
 <h2>Return</h2>
 <p><code>true</code> (nonzero) iff the interface is claimed, else <code>false</code> (zero).</p>
 <h2>Note</h2>

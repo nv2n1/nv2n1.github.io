@@ -18,8 +18,8 @@ description: "aoe-interfaces – restrict aoe driver to specified network interf
 <p> It&#8217;s good to run the <i>aoe-discover</i> command after setting the AoE interfaces list.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>The <code>-c</code> flag will clear the interface access list, permitting any interface to be used.</dl>
+<dt><code>-c</code></dt>
+<dd>The <code>-c</code> flag will clear the interface access list, permitting any interface to be used.</dd></dl>
 <h2>Example</h2>
 <p>In this example, the root user on a host named <i>nai</i> loads the aoe module with only eth0 allowable for AoE traffic. After remembering that shelf 7 is on eth3, this sysadmin uses <i>aoe-interfaces</i> to add eth3 to the list of allowable network interfaces and then calls <i>aoe-discover</i> to ask the aoe driver to look for new AoE devices.</p>
 <dl>
@@ -43,7 +43,7 @@ nai:~# aoe-stat
  e10.9 eth0 up
 nai:~# aoe-interfaces
 eth0 eth3</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-aoe-discover/">aoe-discover</a></i>(8), <i><a href="/docs/linux/man/8-aoe-stat/">aoe-stat</a></i>(8), <i>aoetools</i>(8).</p>
 <h2>Author</h2>

@@ -14,10 +14,10 @@ description: "snd_ctl_remove – remove the control from the card and release it
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>kcontrol</i></p>
 <dl>
-<dd>the control instance to remove</dl>
+<dd>the control instance to remove</dd></dl>
 <h2>Description</h2>
 <p>Removes the control from the card and then releases the instance. You don&#8217;t need to call <code>snd_ctl_free_one</code>. You must be in the write lock &#8211; down_write(card-&gt;controls_rwsem).</p>
 <h2>Return</h2>

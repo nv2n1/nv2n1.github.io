@@ -32,67 +32,67 @@ struct_pipe_inode_info - a linux kernel pipe
 <h2>Members</h2>
 
 mutex
-<dl><dd>mutex protecting the whole thing</dl>
+<dl><dd>mutex protecting the whole thing</dd></dl>
  
 
  wait
-<dl><dd>reader/writer wait point in case of empty/full pipe</dl>
+<dl><dd>reader/writer wait point in case of empty/full pipe</dd></dl>
  
 
  nrbufs
-<dl><dd>the number of non-empty pipe buffers in this pipe</dl>
+<dl><dd>the number of non-empty pipe buffers in this pipe</dd></dl>
  
 
  curbuf
-<dl><dd>the current pipe buffer entry</dl>
+<dl><dd>the current pipe buffer entry</dd></dl>
  
 
  buffers
-<dl><dd>total number of buffers (should be a power of 2)</dl>
+<dl><dd>total number of buffers (should be a power of 2)</dd></dl>
  
 
  readers
-<dl><dd>number of current readers of this pipe</dl>
+<dl><dd>number of current readers of this pipe</dd></dl>
  
 
  writers
-<dl><dd>number of current writers of this pipe</dl>
+<dl><dd>number of current writers of this pipe</dd></dl>
  
 
  files
-<dl><dd>number of struct file referring this pipe (protected by -&gt;i_lock)</dl>
+<dl><dd>number of struct file referring this pipe (protected by -&gt;i_lock)</dd></dl>
  
 
  waiting_writers
-<dl><dd>number of writers blocked waiting for room</dl>
+<dl><dd>number of writers blocked waiting for room</dd></dl>
  
 
  r_counter
-<dl><dd>reader counter</dl>
+<dl><dd>reader counter</dd></dl>
  
 
  w_counter
-<dl><dd>writer counter</dl>
+<dl><dd>writer counter</dd></dl>
  
 
  tmp_page
-<dl><dd>cached released page</dl>
+<dl><dd>cached released page</dd></dl>
  
 
  fasync_readers
-<dl><dd>reader side fasync</dl>
+<dl><dd>reader side fasync</dd></dl>
  
 
  fasync_writers
-<dl><dd>writer side fasync</dl>
+<dl><dd>writer side fasync</dd></dl>
  
 
  bufs
-<dl><dd>the circular array of pipe buffers</dl>
+<dl><dd>the circular array of pipe buffers</dd></dl>
  
 
  user
-<dl><dd>the user who created this pipe</dl>
+<dl><dd>the user who created this pipe</dd></dl>
 
 <h2>Copyright</h2>
 

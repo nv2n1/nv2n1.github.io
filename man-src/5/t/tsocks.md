@@ -18,40 +18,40 @@ description: "tsocks.conf – configuration file for"
 <h2>Configuration Syntax</h2>
 <p>The basic structure of all lines in the configuration file is: </p>
 <dl>
-<dd>&lt;directive&gt; = &lt;parameters&gt;</dl>
+<dd>&lt;directive&gt; = &lt;parameters&gt;</dd></dl>
 <p> The exception to this is &#8216;path&#8217; blocks which look like: </p>
 <dl>
-<dd>path {</p>
+<dd>path {</dd>
 <dl>
-<dd>&lt;directive&gt; = &lt;parameters&gt;</dl>
+<dd>&lt;directive&gt; = &lt;parameters&gt;</dd></dl>
 <p> }</dl>
 <p> Empty lines are ignored and all input on a line after a &#8216;#&#8217; character is ignored.</p>
 <h3>Directives</h3>
 <p>The following directives are used in the tsocks configuration file: </p>
 <dl>
-<dt><i>server</i></p>
-<dd>The IP address of the SOCKS server (e.g &quot;server = 10.1.4.253&quot;). Only one server may be specified per path block, or one outside a path block (to define the default server). Unless &#8211;disable-hostnames was specified to configure at compile time the server can be specified as a hostname (e.g &quot;server = socks.nec.com&quot;) </p>
-<dt><i>server_port</i></p>
-<dd>The port on which the SOCKS server receives requests. Only one server_port may be specified per path block, or one outside a path (for the default server). This directive is not required if the server is on the standard port (1080). </p>
-<dt><i>server_type</i></p>
-<dd>SOCKS version used by the server. Versions 4 and 5 are supported (but both for only the connect operation). The default is 4. Only one server_type may be specified per path block, or one outside a path (for the default server). </p>
+<dt><i>server</i></dt>
+<dd>The IP address of the SOCKS server (e.g &quot;server = 10.1.4.253&quot;). Only one server may be specified per path block, or one outside a path block (to define the default server). Unless &#8211;disable-hostnames was specified to configure at compile time the server can be specified as a hostname (e.g &quot;server = socks.nec.com&quot;) </dd>
+<dt><i>server_port</i></dt>
+<dd>The port on which the SOCKS server receives requests. Only one server_port may be specified per path block, or one outside a path (for the default server). This directive is not required if the server is on the standard port (1080). </dd>
+<dt><i>server_type</i></dt>
+<dd>SOCKS version used by the server. Versions 4 and 5 are supported (but both for only the connect operation). The default is 4. Only one server_type may be specified per path block, or one outside a path (for the default server). </dd>
 <p> You can use the inspectsocks utility to determine the type of server, see the &#8216;UTILITIES&#8217; section later in this manual page. </p>
-<dt><i>default_user</i></p>
-<dd>This specifies the default username to be used for username and password authentication in SOCKS version 5. In order to determine the username to use (if the socks server requires username and password authentication) tsocks first looks for the environment variable TSOCKS_USERNAME, then looks for this configuration option, then tries to get the local username. This option is not valid for SOCKS version 4 servers. Only one default_user may be specified per path block, or one outside a path (for the default server) </p>
-<dt><i>default_pass</i></p>
-<dd>This specified the default password to be used for username and password authentication in SOCKS version 5. In order to determine the password to use (if the socks server requires username and password authentication) tsocks first looks for the environment variable TSOCKS_PASSWORD, then looks for this configuration option. This option is not valid for SOCKS version 4 servers. Onle one default_pass may be specified per path block, or one outside a path (for the default server) </p>
-<dt><i>local</i></p>
-<dd>An IP/Subnet pair specifying a network which may be accessed directly without proxying through a SOCKS server (e.g &quot;local = 10.0.0.0/255.0.0.0&quot;). Obviously all SOCKS server IP addresses must be in networks specified as local, otherwise tsocks would need a SOCKS server to reach SOCKS servers. </p>
-<dt><i>reaches</i></p>
-<dd>This directive is only valid inside a path block. Its parameter is formed as IP[:startport[-endport]]/Subnet and it specifies a network (and a range of ports on that network) that can be accessed by the SOCKS server specified in this path block. For example, in a path block &quot;reaches = 150.0.0.0:80-1024/255.0.0.0&quot; indicates to tsocks that the SOCKS server specified in the current path block should be used to access any IPs in the range 150.0.0.0 to 150.255.255.255 when the connection request is for ports 80-1024. </p>
+<dt><i>default_user</i></dt>
+<dd>This specifies the default username to be used for username and password authentication in SOCKS version 5. In order to determine the username to use (if the socks server requires username and password authentication) tsocks first looks for the environment variable TSOCKS_USERNAME, then looks for this configuration option, then tries to get the local username. This option is not valid for SOCKS version 4 servers. Only one default_user may be specified per path block, or one outside a path (for the default server) </dd>
+<dt><i>default_pass</i></dt>
+<dd>This specified the default password to be used for username and password authentication in SOCKS version 5. In order to determine the password to use (if the socks server requires username and password authentication) tsocks first looks for the environment variable TSOCKS_PASSWORD, then looks for this configuration option. This option is not valid for SOCKS version 4 servers. Onle one default_pass may be specified per path block, or one outside a path (for the default server) </dd>
+<dt><i>local</i></dt>
+<dd>An IP/Subnet pair specifying a network which may be accessed directly without proxying through a SOCKS server (e.g &quot;local = 10.0.0.0/255.0.0.0&quot;). Obviously all SOCKS server IP addresses must be in networks specified as local, otherwise tsocks would need a SOCKS server to reach SOCKS servers. </dd>
+<dt><i>reaches</i></dt>
+<dd>This directive is only valid inside a path block. Its parameter is formed as IP[:startport[-endport]]/Subnet and it specifies a network (and a range of ports on that network) that can be accessed by the SOCKS server specified in this path block. For example, in a path block &quot;reaches = 150.0.0.0:80-1024/255.0.0.0&quot; indicates to tsocks that the SOCKS server specified in the current path block should be used to access any IPs in the range 150.0.0.0 to 150.255.255.255 when the connection request is for ports 80-1024. </dd>
 </dl>
 <h2>Utilities</h2>
 <p>tsocks comes with two utilities that can be useful in creating and verifying the tsocks configuration file. </p>
 <dl>
-<dt>inspectsocks</p>
-<dd>inspectsocks can be used to determine the SOCKS version that a server supports. Inspectsocks takes as its arguments the ip address/hostname of the SOCKS server and optionally the port number for socks (e.g &#8216;inspectsocks socks.nec.com 1080&#8217;). It then inspects that server to attempt to determine the version that server supports. </p>
-<dt>validateconf</p>
-<dd>validateconf can be used to verify the configuration file. It checks the format of the file and also the contents for errors. Having read the file it dumps the configuration to the screen in a formatted, readable manner. This can be extremely useful in debugging problems. </p>
+<dt>inspectsocks</dt>
+<dd>inspectsocks can be used to determine the SOCKS version that a server supports. Inspectsocks takes as its arguments the ip address/hostname of the SOCKS server and optionally the port number for socks (e.g &#8216;inspectsocks socks.nec.com 1080&#8217;). It then inspects that server to attempt to determine the version that server supports. </dd>
+<dt>validateconf</dt>
+<dd>validateconf can be used to verify the configuration file. It checks the format of the file and also the contents for errors. Having read the file it dumps the configuration to the screen in a formatted, readable manner. This can be extremely useful in debugging problems. </dd>
 <p> validateconf can read a configuration file from a location other than the location specified at compile time with the -f &lt;filename&gt; command line option. </p>
 <p> Normally validateconf simply dumps the configuration read to the screen (in a nicely readable format), however it also has a useful &#8216;test&#8217; mode. When passed a hostname/ip on the command line like -t &lt;hostname/ip&gt;, validateconf determines which of the SOCKS servers specified in the configuration file would be used by tsocks to access the specified host. </p>
 </dl>

@@ -12,7 +12,6 @@ std::chrono::weekday_indexed::weekday_indexed - std::chrono::weekday_indexed::we
 
 <pre><code>weekday_indexed() = default;
 (since C++ 20)
-
     constexpr weekday_indexed(const std::chrono::weekday &amp;wd, unsigned index) noexcept;
 (since C++ 20)</code></pre> 
 Constructs a weekday_indexed. 
@@ -26,9 +25,7 @@ A more convenient way to construct a weekday_indexed is with weekday's operator[
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;chrono&gt;
-
 #include &lt;iostream&gt;
-
 using namespace std::chrono;
 int main()
 {

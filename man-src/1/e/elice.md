@@ -18,12 +18,12 @@ description: "elice – compiler for programs written in PureBasic"
 <h2>OPTIONS</h2>
 <p> Most options will be passed through to <code>g++</code>, so you can use -g -O2 and such as usual.</p>
 <dl>
-<dt><code>-o</code> <i>outfile</i></p>
-<dd> Use <i>outfile</i> as the name of the resulting executable. Without <code>-o</code>, the default is to use the name of the first source file without its extension (for example <code>prog.pb</code> becomes <code>prog</code>).</p>
-<dt><code>-save-temps</code></p>
-<dd> Save intermediate stages of compilation (C++ with suffix .cc, preprocessed C++ with suffix .ii, assembler code with suffix .s, object code with suffix .o) in the current directory.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. Print detailed information about the programs invoked during compilation.</dl>
+<dt><code>-o</code> <i>outfile</i></dt>
+<dd> Use <i>outfile</i> as the name of the resulting executable. Without <code>-o</code>, the default is to use the name of the first source file without its extension (for example <code>prog.pb</code> becomes <code>prog</code>).</dd>
+<dt><code>-save-temps</code></dt>
+<dd> Save intermediate stages of compilation (C++ with suffix .cc, preprocessed C++ with suffix .ii, assembler code with suffix .s, object code with suffix .o) in the current directory.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. Print detailed information about the programs invoked during compilation.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 if there were no errors. <code>elice</code> returns 1 if there was a parse error or an error in the command line. If the invocation of <code>g++</code> fails, it returns the exit code from <code>g++</code>.</p>
 <h2>EXAMPLES</h2>

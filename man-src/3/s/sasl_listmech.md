@@ -10,7 +10,6 @@ description: "sasl_listmech – Retrieve a list of the supported SASL mechanisms
 <p>sasl_listmech &#8211; Retrieve a list of the supported SASL mechanisms</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_listmech(sasl_conn_t *conn,
                   const char *user,
                   const char *prefix,

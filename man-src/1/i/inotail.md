@@ -16,18 +16,18 @@ description: "inotail – A fast and lightweight version of tail using inotify"
 <p> Currently inotail is not fully compatible to neither POSIX or GNU tail but might be in the future.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c </code><i>N</i>, <code>&#8211;bytes</code>=<i>N</i></p>
-<dd> output the last N bytes. If the first character of N is a &#8216;+&#8217;, begin printing with the Nth character from the start of each file.</p>
-<dt><code>-f, &#8211;follow</code></p>
-<dd> keep the file(s) open and print appended data as the file grows</p>
-<dt><code>-n </code><i>N</i>, <code>&#8211;lines</code>=<i>N</i></p>
-<dd> output the last N lines (default: 10) If the first character of N is a &#8216;+&#8217;, begin printing with the Nth line from the start of each file.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> print headers with file names</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show help and exit</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> show inotail version and exit</dl>
+<dt><code>-c </code><i>N</i>, <code>&#8211;bytes</code>=<i>N</i></dt>
+<dd> output the last N bytes. If the first character of N is a &#8216;+&#8217;, begin printing with the Nth character from the start of each file.</dd>
+<dt><code>-f, &#8211;follow</code></dt>
+<dd> keep the file(s) open and print appended data as the file grows</dd>
+<dt><code>-n </code><i>N</i>, <code>&#8211;lines</code>=<i>N</i></dt>
+<dd> output the last N lines (default: 10) If the first character of N is a &#8216;+&#8217;, begin printing with the Nth line from the start of each file.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> print headers with file names</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show help and exit</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> show inotail version and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Tobias Klauser &lt;tklauser [at] distanz.ch&gt;</p>
 <h2>SEE ALSO</h2>

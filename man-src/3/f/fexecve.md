@@ -17,13 +17,11 @@ int fexecve(int fd, char *const argv[], char *const envp[]);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>fexecve</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _GNU_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _GNU_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>fexecve</code>() performs the same task as <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), with the difference that the file to be executed is specified via a file descriptor, <i>fd</i>, rather than via a pathname. The file descriptor <i>fd</i> must be opened read-only (<code>O_RDONLY</code>) or with the <code>O_PATH</code> flag and the caller must have permission to execute the file that it refers to.</p>
@@ -32,12 +30,12 @@ int fexecve(int fd, char *const argv[], char *const envp[]);
 <h2>ERRORS</h2>
 <p> Errors are as for <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), with the following additions:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> is not a valid file descriptor, or <i>argv</i> is NULL, or <i>envp</i> is NULL.</p>
-<dt><code>ENOENT</code></p>
-<dd> The close-on-exec flag is set on <i>fd</i>, and <i>fd</i> refers to a script. See BUGS.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The kernel does not provide the <code><a href="/docs/linux/man/2-execveat/">execveat</a></code>(2) system call, and the <i>/proc</i> filesystem could not be accessed.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor, or <i>argv</i> is NULL, or <i>envp</i> is NULL.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The close-on-exec flag is set on <i>fd</i>, and <i>fd</i> refers to a script. See BUGS.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The kernel does not provide the <code><a href="/docs/linux/man/2-execveat/">execveat</a></code>(2) system call, and the <i>/proc</i> filesystem could not be accessed.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>fexecve</code>() is implemented since glibc 2.3.2.</p>
 <h2>ATTRIBUTES</h2>

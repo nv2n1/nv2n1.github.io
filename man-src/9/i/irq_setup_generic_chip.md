@@ -14,26 +14,26 @@ description: "irq_setup_generic_chip – Setup a range of interrupts with a gene
 <p><i>gc</i></p>
 <dl>
 <dd>
-<dd>Generic irq chip holding all data</dl>
+</dd><dd>Generic irq chip holding all data</dd></dl>
 <p> <i>msk</i></p>
 <dl>
-<dd>Bitmask holding the irqs to initialize relative to gc-&gt;irq_base</dl>
+<dd>Bitmask holding the irqs to initialize relative to gc-&gt;irq_base</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>Flags for initialization</dl>
+<dd>Flags for initialization</dd></dl>
 <p> <i>clr</i></p>
 <dl>
-<dd>IRQ_* bits to clear</dl>
+<dd>IRQ_* bits to clear</dd></dl>
 <p> <i>set</i></p>
 <dl>
-<dd>IRQ_* bits to set</dl>
+<dd>IRQ_* bits to set</dd></dl>
 <h2>Description</h2>
 <p>Set up max. 32 interrupts starting from gc-&gt;irq_base. Note, this initializes all interrupts to the primary irq_chip_type and its associated handler.</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

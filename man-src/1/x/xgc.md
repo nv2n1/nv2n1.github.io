@@ -35,10 +35,10 @@ description: "xgc – X graphics demo"
 <p> This program accepts the usual defaults for toolkit applications.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to get the default host and display number.</p>
-<dt><code>XENVIRONMENT</code></p>
-<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display number.</dd>
+<dt><code>XENVIRONMENT</code></dt>
+<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7)</p>
 <h2>BUGS</h2>

@@ -13,19 +13,19 @@ description: "npm-unpublish – Remove a package from the registry"
 <h3>Unpublishing a single version of a package</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm unpublish [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;version&gt;
 </pre>
-</dl>
+</dd></dl>
 <h3>Unpublishing an entire package</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm unpublish [&lt;@scope&gt;/]&lt;pkg&gt; --force
 </pre>
-</dl>
+</dd></dl>
 <h3>Warning</h3>
 <p> Consider using the <code>deprecate</code> command instead, if your intent is to encourage users to upgrade, or if you no longer want to maintain a package.</p>
 <h3>Description</h3>
@@ -35,19 +35,17 @@ npm unpublish [&lt;@scope&gt;/]&lt;pkg&gt; --force
 <p> To learn more about how unpublish is treated on the npm registry, see our &lt;a href=&quot;<a rel="nofollow" href="https://www.npmjs.com/policies/unpublish">https://www.npmjs.com/policies/unpublish</a>&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt; unpublish policies&lt;/a&gt;.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help deprecate</p>
-<dt>&bull;</p>
-<dd> npm help publish</p>
-<dt>&bull;</p>
-<dd> npm help registry</p>
-<dt>&bull;</p>
-<dd> npm help adduser</p>
-<dt>&bull;</p>
-<dd> npm help owner </p>
+<dt>&bull;</dt>
+<dd> npm help deprecate</dd>
+<dt>&bull;</dt>
+<dd> npm help publish</dd>
+<dt>&bull;</dt>
+<dd> npm help registry</dd>
+<dt>&bull;</dt>
+<dd> npm help adduser</dd>
+<dt>&bull;</dt>
+<dd> npm help owner </dd>
 </dl>
 </dl>
 <h2>Index</h2>

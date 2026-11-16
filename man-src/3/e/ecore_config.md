@@ -193,118 +193,118 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p>Valid configuration property types. </p>
 <p> <code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_NIL </i></p>
-<dd>Property with no value.</dl>
+<dt><i>ECORE_CONFIG_NIL </i></dt>
+<dd>Property with no value.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_INT </i></p>
-<dd>Integer property type.</dl>
+<dt><i>ECORE_CONFIG_INT </i></dt>
+<dd>Integer property type.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_FLT </i></p>
-<dd>Float property type.</dl>
+<dt><i>ECORE_CONFIG_FLT </i></dt>
+<dd>Float property type.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_STR </i></p>
-<dd>String property type.</dl>
+<dt><i>ECORE_CONFIG_STR </i></dt>
+<dd>String property type.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_RGB </i></p>
-<dd>Colour property type.</dl>
+<dt><i>ECORE_CONFIG_RGB </i></dt>
+<dd>Colour property type.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_THM </i></p>
-<dd>Theme property type.</dl>
+<dt><i>ECORE_CONFIG_THM </i></dt>
+<dd>Theme property type.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_BLN </i></p>
-<dd>Boolean property type.</dl>
+<dt><i>ECORE_CONFIG_BLN </i></dt>
+<dd>Boolean property type.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_CONFIG_SCT </i></p>
-<dd>Structure property type.</dl>
+<dt><i>ECORE_CONFIG_SCT </i></dt>
+<dd>Structure property type.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>EAPI void ecore_config_app_describe (char * description)</h3>
 <p>Sets the description string used by <code>ecore_config_args_display</code> . </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>description</i> Description of application.</dl>
+<dd><i>description</i> Description of application.</dd></dl>
 <p> References ecore_config_app_describe(). </p>
 <p> Referenced by ecore_config_app_describe().</p>
 <h3>EAPI int ecore_config_args_parse (void)</h3>
 <p>Parse the arguments set by <code>ecore_app_args_set</code> and set properties accordingly. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_PARSE_CONTINUE if successful. ECORE_CONFIG_PARSE_EXIT is returned if an unrecognised option is found. ECORE_CONFIG_PARSE_HELP is returned if help was displayed.</dl>
+<dd>ECORE_CONFIG_PARSE_CONTINUE if successful. ECORE_CONFIG_PARSE_EXIT is returned if an unrecognised option is found. ECORE_CONFIG_PARSE_HELP is returned if help was displayed.</dd></dl>
 <p> References ecore_app_args_get(), ecore_config_args_display(), ecore_config_args_parse(), and ECORE_CONFIG_NIL. </p>
 <p> Referenced by ecore_config_args_parse().</p>
 <h3>EAPI Ecore_Config_Bundle* ecore_config_bundle_1st_get (Ecore_Config_Server * srv)</h3>
 <p>Locates the first configuration bundle on the given server. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>srv</i> The configuration server.</dl>
+<dd><i>srv</i> The configuration server.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pointer to the first configuration bundle.</dl>
+<dd>Pointer to the first configuration bundle.</dd></dl>
 <h3>EAPI Ecore_Config_Bundle* ecore_config_bundle_by_label_get (Ecore_Config_Server * srv, const char * label)</h3>
 <p>Gets the Ecore_Config_Bundle with the given identifier from the given server. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>srv</i> The configuration server.<br />
- <i>label</i> The bundle&#8217;s identifier string.</dl>
+ <i>label</i> The bundle&#8217;s identifier string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The bundle with the given identifier string, or NULL if it could not be found.</dl>
+<dd>The bundle with the given identifier string, or NULL if it could not be found.</dd></dl>
 <h3>EAPI Ecore_Config_Bundle* ecore_config_bundle_by_serial_get (Ecore_Config_Server * srv, long serial)</h3>
 <p>Locates a configuration bundle on a configuration server based on its serial number. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>srv</i> The configuration server.<br />
- <i>serial</i> Serial number.</dl>
+ <i>serial</i> Serial number.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The configuration bundle with the given serial number.</dl>
+<dd>The configuration bundle with the given serial number.</dd></dl>
 <h3>EAPI char* ecore_config_bundle_label_get (Ecore_Config_Bundle * ns)</h3>
 <p>Retrieves the bundle&#8217;s identifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ns</i> The configuration bundle.</dl>
+<dd><i>ns</i> The configuration bundle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The bundle&#8217;s identifer string.</dl>
+<dd>The bundle&#8217;s identifer string.</dd></dl>
 <h3>EAPI Ecore_Config_Bundle* ecore_config_bundle_new (Ecore_Config_Server * srv, const char * identifier)</h3>
 <p>Creates a new Ecore_Config_Bundle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>srv</i> Config server.<br />
- <i>identifier</i> Identifier string for the new bundle.</dl>
+ <i>identifier</i> Identifier string for the new bundle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to a new Ecore_Config_Bundle. NULL is returned if the structure couldn&#8217;t be allocated.</dl>
+<dd>A pointer to a new Ecore_Config_Bundle. NULL is returned if the structure couldn&#8217;t be allocated.</dd></dl>
 <h3>EAPI Ecore_Config_Bundle* ecore_config_bundle_next_get (Ecore_Config_Bundle * ns)</h3>
 <p>Locates the configuration bundle after the given one. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ns</i> The configuration bundle.</dl>
+<dd><i>ns</i> The configuration bundle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The next configuration bundle.</dl>
+<dd>The next configuration bundle.</dd></dl>
 <h3>EAPI long ecore_config_bundle_serial_get (Ecore_Config_Bundle * ns)</h3>
 <p>Retrieves the bundle&#8217;s serial number. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ns</i> The configuration bundle.</dl>
+<dd><i>ns</i> The configuration bundle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The bundle&#8217;s identifier string, or -1 if ns is NULL.</dl>
+<dd>The bundle&#8217;s identifier string, or -1 if ns is NULL.</dd></dl>
 <h3>EAPI int ecore_config_evas_font_path_apply (Evas * evas)</h3>
 <p>Calls evas_font_path_append on evas for each of the font names stored in the property &#8216;/e/font/path&#8217;. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>evas</i> Evas object to append the font names to.</dl>
+<dd><i>evas</i> Evas object to append the font names to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success. ECORE_CONFIG_ERR_NODATA is returned if the property has not been set.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success. ECORE_CONFIG_ERR_NODATA is returned if the property has not been set.</dd></dl>
 <p> References ecore_config_evas_font_path_apply(), and ecore_config_string_get(). </p>
 <p> Referenced by ecore_config_evas_font_path_apply().</p>
 <h3>EAPI char* ecore_config_theme_default_path_get (void)</h3>
 <p>Retrieves the default theme search path. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The default theme search path.</dl>
+<dd>The default theme search path.</dd></dl>
 <p> References ecore_config_theme_default_path_get(). </p>
 <p> Referenced by ecore_config_init(), ecore_config_theme_default_path_get(), and ecore_config_theme_search_path_get().</p>
 <h3>EAPI int ecore_config_theme_search_path_append (const char * path)</h3>
@@ -312,10 +312,10 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p> If the search path is successfully, the new search path will be saved into the property &#8216;/e/themes/search_path&#8217;. Therefore, this function should be called <code>after</code> <code>ecore_config_load</code> to allow a user to override the default search path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> The given</dl>
+<dd><i>path</i> The given</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success. ECORE_CONFIG_ERR_FAIL will be returned if path already exists in the search path. ECORE_CONFIG_ERR_FAIL is returned if path is NULL.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success. ECORE_CONFIG_ERR_FAIL will be returned if path already exists in the search path. ECORE_CONFIG_ERR_FAIL is returned if path is NULL.</dd></dl>
 <p> References ecore_config_get(), ecore_config_string_set(), ecore_config_theme_search_path_append(), and ecore_config_theme_search_path_get(). </p>
 <p> Referenced by ecore_config_theme_search_path_append().</p>
 <h3>EAPI char* ecore_config_theme_search_path_get (void)</h3>
@@ -323,7 +323,7 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p> The search path is stored in the property &#8216;/e/themes/search_path&#8217;. If the property has not been set, the default path used is &#8216;/usr/local/share/&lt;app_name&gt;/themes|~/.e/apps/&lt;app_name&gt;/themes&#8217;. See <code>ecore_config_theme_default_path_get</code> for more information about the default path. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The search path. NULL is returned if there is no memory left.</dl>
+<dd>The search path. NULL is returned if there is no memory left.</dd></dl>
 <p> References ecore_config_string_default(), ecore_config_string_get(), ecore_config_theme_default_path_get(), and ecore_config_theme_search_path_get(). </p>
 <p> Referenced by ecore_config_theme_search_path_append(), ecore_config_theme_search_path_get(), and ecore_config_theme_with_path_from_name_get().</p>
 <h3>EAPI char* ecore_config_theme_with_path_from_name_get (char * name)</h3>
@@ -331,10 +331,10 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p> The search path for theme files is given by <code>ecore_config_theme_search_path_get</code> . </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> The name of the theme.</dl>
+<dd><i>name</i> The name of the theme.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A full path to the theme on success. NULL will be returned if name is NULL or no theme matching the given name could be found.</dl>
+<dd>A full path to the theme on success. NULL will be returned if name is NULL or no theme matching the given name could be found.</dd></dl>
 <p> References ecore_config_theme_search_path_get(), and ecore_config_theme_with_path_from_name_get(). </p>
 <p> Referenced by ecore_config_theme_with_path_from_name_get(), and ecore_config_theme_with_path_get().</p>
 <h3>EAPI char* ecore_config_theme_with_path_get (const char * key)</h3>
@@ -342,10 +342,10 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p> The search path for themes is given by <code>ecore_config_theme_search_path_get</code> . </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The given property.</dl>
+<dd><i>key</i> The given property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A full path to the theme on success, or NULL on failure. This function will fail if no key is specified or not theme matching that given by the property key could be found.</dl>
+<dd>A full path to the theme on success, or NULL on failure. This function will fail if no key is specified or not theme matching that given by the property key could be found.</dd></dl>
 <p> References ecore_config_theme_get(), ecore_config_theme_with_path_from_name_get(), and ecore_config_theme_with_path_get(). </p>
 <p> Referenced by ecore_config_theme_with_path_get().</p>
 <h3>EAPI int ecore_config_type_guess (const char * key, const char * val)</h3>
@@ -354,10 +354,10 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> The value in string form.</dl>
+ <i>val</i> The value in string form.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The type of the property determined by the function. Note that if val is NULL, ECORE_CONFIG_NIL will be returned.</dl>
+<dd>The type of the property determined by the function. Note that if val is NULL, ECORE_CONFIG_NIL will be returned.</dd></dl>
 <p> References ECORE_CONFIG_FLT, ecore_config_get(), ECORE_CONFIG_INT, ECORE_CONFIG_NIL, ECORE_CONFIG_RGB, and ECORE_CONFIG_STR.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -10,10 +10,10 @@ description: "debugfs_initialized – Tells whether debugfs has been registered"
 <p>debugfs_initialized &#8211; Tells whether debugfs has been registered</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool debugfs_initialized(</code><i>void</i><code>);</code></dl>
+<dt> <code>bool debugfs_initialized(</code><i>void</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>void</i></p>
 <dl>
 <dd>
-<dd>no arguments</dl>
+</dd><dd>no arguments</dd></dl>
 <h2>Copyright</h2>

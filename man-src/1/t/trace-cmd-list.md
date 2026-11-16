@@ -17,74 +17,74 @@ description: "trace-cmd-list – list available plugins, events or options for F
 <p> <code>-e</code> [<i>regex</i>]</p>
 <dl>
 <dt>
-<dd> This option will list the available events that are enabled on the local system. </p>
+</dt><dd> This option will list the available events that are enabled on the local system. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 It takes an optional argument that uses '<a href="//www.systutorials.com/docs/linux/man/3-regcomp/">regcomp</a>(3)' expressions to seach.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 trace-cmd list -e '^sys.*'
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-F</code></p>
 <dl>
 <dt>
-<dd> Used with <code>-e</code><i>regex</i> to show those events formats.</dl>
+</dt><dd> Used with <code>-e</code><i>regex</i> to show those events formats.</dd></dl>
 <p> <code>-l</code></p>
 <dl>
 <dt>
-<dd> Used with <code>-e</code><i>regex</i> to show those events filters.</dl>
+</dt><dd> Used with <code>-e</code><i>regex</i> to show those events filters.</dd></dl>
 <p> <code>-R</code></p>
 <dl>
 <dt>
-<dd> Used with <code>-e</code><i>regex</i> to show those events triggers.</dl>
+</dt><dd> Used with <code>-e</code><i>regex</i> to show those events triggers.</dd></dl>
 <p> <code>-t</code></p>
 <dl>
 <dt>
-<dd> This option will list the available tracers that are enabled on the local system.</dl>
+</dt><dd> This option will list the available tracers that are enabled on the local system.</dd></dl>
 <p> <code>-p</code></p>
 <dl>
 <dt>
-<dd> Same as <code>-t</code> and only for legacy purposes.</dl>
+</dt><dd> Same as <code>-t</code> and only for legacy purposes.</dd></dl>
 <p> <code>-o</code></p>
 <dl>
 <dt>
-<dd> This option will list the available Ftrace options that are configured on the local system.</dl>
+</dt><dd> This option will list the available Ftrace options that are configured on the local system.</dd></dl>
 <p> <code>-f</code> [<i>regex</i>]</p>
 <dl>
 <dt>
-<dd> This option will list the available filter functions. These are the list of functions on the system that you can trace, or filter on. It takes an optional argument that uses <i><a href="/docs/linux/man/3-regcomp/">regcomp</a>(3)</i> expressions to seach. </p>
+</dt><dd> This option will list the available filter functions. These are the list of functions on the system that you can trace, or filter on. It takes an optional argument that uses <i><a href="/docs/linux/man/3-regcomp/">regcomp</a>(3)</i> expressions to seach. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 trace-cmd list -f '^sched.*'
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-P</code></p>
 <dl>
 <dt>
-<dd> List the plugin files that get loaded on trace-cmd report.</dl>
+</dt><dd> List the plugin files that get loaded on trace-cmd report.</dd></dl>
 <p> <code>-O</code></p>
 <dl>
 <dt>
-<dd> List plugin options that can be used by trace-cmd report <code>-O</code> option.</dl>
+</dt><dd> List plugin options that can be used by trace-cmd report <code>-O</code> option.</dd></dl>
 <p> <code>-B</code></p>
 <dl>
 <dt>
-<dd> List defined buffer instances (sub buffers).</dl>
+</dt><dd> List defined buffer instances (sub buffers).</dd></dl>
 <p> <code>-C</code></p>
 <dl>
 <dt>
-<dd> List defined clocks that can be used with trace-cmd record -C. The one in brackets ([]) is the active clock.</dl>
+</dt><dd> List defined clocks that can be used with trace-cmd record -C. The one in brackets ([]) is the active clock.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-split/">trace-cmd-split</a>(1), <a href="/docs/linux/man/1-trace-cmd-listen/">trace-cmd-listen</a>(1)</p>
 <h2>AUTHOR</h2>
@@ -95,10 +95,10 @@ trace-cmd list -f '^sched.*'
 <p> Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

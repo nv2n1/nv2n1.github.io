@@ -17,16 +17,14 @@ description: "cblrpm – a RPM packaging tool for Haskell Cabal packages"
 <p> If a .spec already exists, cblrpm outputs to .spec.cblrpm instead.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show the help text.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show the help text.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-b, &#8211;binary</code></p>
-<dd> Force the base package name to be the Hackage package name.</p>
+</dl>
+<dt><code>-b, &#8211;binary</code></dt>
+<dd> Force the base package name to be the Hackage package name.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> -f FLAGS, &#8211;flags=FLAGS : Override one or more Cabal build configuration flags. </p>
 <p> &#8211;release=RELEASE : Override the release number in the .spec file. </p>
@@ -37,35 +35,35 @@ description: "cblrpm – a RPM packaging tool for Haskell Cabal packages"
 <p> Do CMD for the package in current directory:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 cblrpm CMD
 </pre>
-</dl>
+</dd></dl>
 <p> Do CMD for package (directory or package name):</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 cblrpm CMD&nbsp;<wbr>[package]
 </pre>
-</dl>
+</dd></dl>
 <p> Do CMD for package-version (directory or package name):</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 cblrpm CMD&nbsp;<wbr>[package-version]
 </pre>
-</dl>
+</dd></dl>
 <p> Do CMD on a .cabal file:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 cblrpm CMD path/to/some.cabal
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> Cabal-rpm was originally written by Bryan O&#8217;Sullivan in 2007-2008 and resurrected by Jens Petersen in 2012 to replace cabal2spec.</p>
 <h2>SEE ALSO</h2>

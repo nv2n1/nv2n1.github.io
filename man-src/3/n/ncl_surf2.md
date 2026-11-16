@@ -17,25 +17,25 @@ FUNCTION SURF2 (XX, YY, M, N, X, Y, Z, IZ, ZP, SIGMA)
 <h2>Description</h2>
 
 <dl><dt>XX
-<dd>(real, input) Contains the X coordinate of a point to be mapped onto the interpolated surface.
-<dt>YY
-<dd>(real, input) Contains the Y coordinate of a point to be mapped onto the interpolated surface.
-<dt>M
-<dd>(integer, input) The number of grid lines in the X direction. (M &gt; 1)
-<dt>N
-<dd>(integer, input) The number of grid lines in the Y direction. (N &gt; 1)
-<dt>X
-<dd>(real, input) An array containing M X coordinates for grid lines in the X direction. These values must be strictly increasing.
-<dt>Y
-<dd>(real, input) An array containing N Y coordinates for grid lines in the Y direction. These values must be strictly increasing.
-<dt>Z
-<dd>(real, input) An array containing M x N functional values at the grid points; Z(I,J) contains the functional value at (X(I),Y(J)) for I=1,M and J=1,N.
-<dt>IZ
-<dd>(integer, input) The row dimension of the matrix Z (IZ is greater than or equal to M).
-<dt>ZP
-<dd>(real, input) An array of size M x N x 3.
-<dt>SIGMA
-<dd>(real, input) Tension factor. Values near zero result in a cubic spline; large values (e.g. 50) result in nearly a polygonal line. A typical value is 1.</dl>
+</dt><dd>(real, input) Contains the X coordinate of a point to be mapped onto the interpolated surface.
+</dd><dt>YY
+</dt><dd>(real, input) Contains the Y coordinate of a point to be mapped onto the interpolated surface.
+</dd><dt>M
+</dt><dd>(integer, input) The number of grid lines in the X direction. (M &gt; 1)
+</dd><dt>N
+</dt><dd>(integer, input) The number of grid lines in the Y direction. (N &gt; 1)
+</dd><dt>X
+</dt><dd>(real, input) An array containing M X coordinates for grid lines in the X direction. These values must be strictly increasing.
+</dd><dt>Y
+</dt><dd>(real, input) An array containing N Y coordinates for grid lines in the Y direction. These values must be strictly increasing.
+</dd><dt>Z
+</dt><dd>(real, input) An array containing M x N functional values at the grid points; Z(I,J) contains the functional value at (X(I),Y(J)) for I=1,M and J=1,N.
+</dd><dt>IZ
+</dt><dd>(integer, input) The row dimension of the matrix Z (IZ is greater than or equal to M).
+</dd><dt>ZP
+</dt><dd>(real, input) An array of size M x N x 3.
+</dd><dt>SIGMA
+</dt><dd>(real, input) Tension factor. Values near zero result in a cubic spline; large values (e.g. 50) result in nearly a polygonal line. A typical value is 1.</dd></dl>
 
 <h2>Return Value</h2>
 

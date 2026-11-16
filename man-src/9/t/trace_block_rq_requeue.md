@@ -14,17 +14,17 @@ description: "trace_block_rq_requeue – place block IO request back on a queue"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>queue holding operation</dl>
+</dd><dd>queue holding operation</dd></dl>
 <p> <i>rq</i></p>
 <dl>
-<dd>block IO operation request</dl>
+<dd>block IO operation request</dd></dl>
 <h2>Description</h2>
 <p>The block operation request <i>rq</i> is being placed back into queue <i>q</i>. For some reason the request was not completed and needs to be put back in the queue.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

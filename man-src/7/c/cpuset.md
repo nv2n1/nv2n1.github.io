@@ -26,38 +26,38 @@ description: "cpuset – confine processes to processor and memory node subsets"
 <p> The pseudo-files in each cpuset directory are small text files that may be read and written using traditional shell utilities such as <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), and <code><a href="/docs/linux/man/1-echo/">echo</a></code>(1), or from a program by using file I/O library functions or system calls, such as <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), and <code><a href="/docs/linux/man/2-close/">close</a></code>(2). </p>
 <p> The pseudo-files in a cpuset directory represent internal kernel state and do not have any persistent image on disk. Each of these per-cpuset files is listed and described below.</p>
 <dl>
-<dt><i>tasks</i></p>
-<dd>List of the process IDs (PIDs) of the processes in that cpuset. The list is formatted as a series of ASCII decimal numbers, each followed by a newline. A process may be added to a cpuset (automatically removing it from the cpuset that previously contained it) by writing its PID to that cpuset&#8217;s <i>tasks</i> file (with or without a trailing newline).</p>
-<dd><code>Warning:</code> only one PID may be written to the <i>tasks</i> file at a time. If a string is written that contains more than one PID, only the first one will be used.</p>
-<dt><i>notify_on_release</i></p>
-<dd>Flag (0 or 1). If set (1), that cpuset will receive special handling after it is released, that is, after all processes cease using it (i.e., terminate or are moved to a different cpuset) and all child cpuset directories have been removed. See the <code>Notify On Release</code> section, below.</p>
-<dt><i>cpuset.cpus</i></p>
-<dd>List of the physical numbers of the CPUs on which processes in that cpuset are allowed to execute. See <code>List Format</code> below for a description of the format of <i>cpus</i>.</p>
-<dd>The CPUs allowed to a cpuset may be changed by writing a new list to its <i>cpus</i> file.</p>
-<dt><i>cpuset.cpu_exclusive</i></p>
-<dd>Flag (0 or 1). If set (1), the cpuset has exclusive use of its CPUs (no sibling or cousin cpuset may overlap CPUs). By default, this is off (0). Newly created cpusets also initially default this to off (0).</p>
-<dd>Two cpusets are <i>sibling</i> cpusets if they share the same parent cpuset in the <i>/dev/cpuset</i> hierarchy. Two cpusets are <i>cousin</i> cpusets if neither is the ancestor of the other. Regardless of the <i>cpu_exclusive</i> setting, if one cpuset is the ancestor of another, and if both of these cpusets have nonempty <i>cpus</i>, then their <i>cpus</i> must overlap, because the <i>cpus</i> of any cpuset are always a subset of the <i>cpus</i> of its parent cpuset.</p>
-<dt><i>cpuset.mems</i></p>
-<dd>List of memory nodes on which processes in this cpuset are allowed to allocate memory. See <code>List Format</code> below for a description of the format of <i>mems</i>.</p>
-<dt><i>cpuset.mem_exclusive</i></p>
-<dd>Flag (0 or 1). If set (1), the cpuset has exclusive use of its memory nodes (no sibling or cousin may overlap). Also if set (1), the cpuset is a <code>Hardwall</code> cpuset (see below). By default, this is off (0). Newly created cpusets also initially default this to off (0).</p>
-<dd>Regardless of the <i>mem_exclusive</i> setting, if one cpuset is the ancestor of another, then their memory nodes must overlap, because the memory nodes of any cpuset are always a subset of the memory nodes of that cpuset&#8217;s parent cpuset.</p>
-<dt><i>cpuset.mem_hardwall</i> (since Linux 2.6.26)</p>
-<dd>Flag (0 or 1). If set (1), the cpuset is a <code>Hardwall</code> cpuset (see below). Unlike <code>mem_exclusive</code>, there is no constraint on whether cpusets marked <code>mem_hardwall</code> may have overlapping memory nodes with sibling or cousin cpusets. By default, this is off (0). Newly created cpusets also initially default this to off (0).</p>
-<dt><i>cpuset.memory_migrate</i> (since Linux 2.6.16)</p>
-<dd>Flag (0 or 1). If set (1), then memory migration is enabled. By default, this is off (0). See the <code>Memory Migration</code> section, below.</p>
-<dt><i>cpuset.memory_pressure</i> (since Linux 2.6.16)</p>
-<dd>A measure of how much memory pressure the processes in this cpuset are causing. See the <code>Memory Pressure</code> section, below. Unless <i>memory_pressure_enabled</i> is enabled, always has value zero (0). This file is read-only. See the <code>WARNINGS</code> section, below.</p>
-<dt><i>cpuset.memory_pressure_enabled</i> (since Linux 2.6.16)</p>
-<dd>Flag (0 or 1). This file is present only in the root cpuset, normally <i>/dev/cpuset</i>. If set (1), the <i>memory_pressure</i> calculations are enabled for all cpusets in the system. By default, this is off (0). See the <code>Memory Pressure</code> section, below.</p>
-<dt><i>cpuset.memory_spread_page</i> (since Linux 2.6.17)</p>
-<dd>Flag (0 or 1). If set (1), pages in the kernel page cache (filesystem buffers) are uniformly spread across the cpuset. By default, this is off (0) in the top cpuset, and inherited from the parent cpuset in newly created cpusets. See the <code>Memory Spread</code> section, below.</p>
-<dt><i>cpuset.memory_spread_slab</i> (since Linux 2.6.17)</p>
-<dd>Flag (0 or 1). If set (1), the kernel slab caches for file I/O (directory and inode structures) are uniformly spread across the cpuset. By default, is off (0) in the top cpuset, and inherited from the parent cpuset in newly created cpusets. See the <code>Memory Spread</code> section, below.</p>
-<dt><i>cpuset.sched_load_balance</i> (since Linux 2.6.24)</p>
-<dd>Flag (0 or 1). If set (1, the default) the kernel will automatically load balance processes in that cpuset over the allowed CPUs in that cpuset. If cleared (0) the kernel will avoid load balancing processes in this cpuset, <i>unless</i> some other cpuset with overlapping CPUs has its <i>sched_load_balance</i> flag set. See <code>Scheduler Load Balancing</code>, below, for further details.</p>
-<dt><i>cpuset.sched_relax_domain_level</i> (since Linux 2.6.26)</p>
-<dd>Integer, between -1 and a small positive value. The <i>sched_relax_domain_level</i> controls the width of the range of CPUs over which the kernel scheduler performs immediate rebalancing of runnable tasks across CPUs. If <i>sched_load_balance</i> is disabled, then the setting of <i>sched_relax_domain_level</i> does not matter, as no such load balancing is done. If <i>sched_load_balance</i> is enabled, then the higher the value of the <i>sched_relax_domain_level</i>, the wider the range of CPUs over which immediate load balancing is attempted. See <code>Scheduler Relax Domain Level</code>, below, for further details.</dl>
+<dt><i>tasks</i></dt>
+<dd>List of the process IDs (PIDs) of the processes in that cpuset. The list is formatted as a series of ASCII decimal numbers, each followed by a newline. A process may be added to a cpuset (automatically removing it from the cpuset that previously contained it) by writing its PID to that cpuset&#8217;s <i>tasks</i> file (with or without a trailing newline).</dd>
+<dd><code>Warning:</code> only one PID may be written to the <i>tasks</i> file at a time. If a string is written that contains more than one PID, only the first one will be used.</dd>
+<dt><i>notify_on_release</i></dt>
+<dd>Flag (0 or 1). If set (1), that cpuset will receive special handling after it is released, that is, after all processes cease using it (i.e., terminate or are moved to a different cpuset) and all child cpuset directories have been removed. See the <code>Notify On Release</code> section, below.</dd>
+<dt><i>cpuset.cpus</i></dt>
+<dd>List of the physical numbers of the CPUs on which processes in that cpuset are allowed to execute. See <code>List Format</code> below for a description of the format of <i>cpus</i>.</dd>
+<dd>The CPUs allowed to a cpuset may be changed by writing a new list to its <i>cpus</i> file.</dd>
+<dt><i>cpuset.cpu_exclusive</i></dt>
+<dd>Flag (0 or 1). If set (1), the cpuset has exclusive use of its CPUs (no sibling or cousin cpuset may overlap CPUs). By default, this is off (0). Newly created cpusets also initially default this to off (0).</dd>
+<dd>Two cpusets are <i>sibling</i> cpusets if they share the same parent cpuset in the <i>/dev/cpuset</i> hierarchy. Two cpusets are <i>cousin</i> cpusets if neither is the ancestor of the other. Regardless of the <i>cpu_exclusive</i> setting, if one cpuset is the ancestor of another, and if both of these cpusets have nonempty <i>cpus</i>, then their <i>cpus</i> must overlap, because the <i>cpus</i> of any cpuset are always a subset of the <i>cpus</i> of its parent cpuset.</dd>
+<dt><i>cpuset.mems</i></dt>
+<dd>List of memory nodes on which processes in this cpuset are allowed to allocate memory. See <code>List Format</code> below for a description of the format of <i>mems</i>.</dd>
+<dt><i>cpuset.mem_exclusive</i></dt>
+<dd>Flag (0 or 1). If set (1), the cpuset has exclusive use of its memory nodes (no sibling or cousin may overlap). Also if set (1), the cpuset is a <code>Hardwall</code> cpuset (see below). By default, this is off (0). Newly created cpusets also initially default this to off (0).</dd>
+<dd>Regardless of the <i>mem_exclusive</i> setting, if one cpuset is the ancestor of another, then their memory nodes must overlap, because the memory nodes of any cpuset are always a subset of the memory nodes of that cpuset&#8217;s parent cpuset.</dd>
+<dt><i>cpuset.mem_hardwall</i> (since Linux 2.6.26)</dt>
+<dd>Flag (0 or 1). If set (1), the cpuset is a <code>Hardwall</code> cpuset (see below). Unlike <code>mem_exclusive</code>, there is no constraint on whether cpusets marked <code>mem_hardwall</code> may have overlapping memory nodes with sibling or cousin cpusets. By default, this is off (0). Newly created cpusets also initially default this to off (0).</dd>
+<dt><i>cpuset.memory_migrate</i> (since Linux 2.6.16)</dt>
+<dd>Flag (0 or 1). If set (1), then memory migration is enabled. By default, this is off (0). See the <code>Memory Migration</code> section, below.</dd>
+<dt><i>cpuset.memory_pressure</i> (since Linux 2.6.16)</dt>
+<dd>A measure of how much memory pressure the processes in this cpuset are causing. See the <code>Memory Pressure</code> section, below. Unless <i>memory_pressure_enabled</i> is enabled, always has value zero (0). This file is read-only. See the <code>WARNINGS</code> section, below.</dd>
+<dt><i>cpuset.memory_pressure_enabled</i> (since Linux 2.6.16)</dt>
+<dd>Flag (0 or 1). This file is present only in the root cpuset, normally <i>/dev/cpuset</i>. If set (1), the <i>memory_pressure</i> calculations are enabled for all cpusets in the system. By default, this is off (0). See the <code>Memory Pressure</code> section, below.</dd>
+<dt><i>cpuset.memory_spread_page</i> (since Linux 2.6.17)</dt>
+<dd>Flag (0 or 1). If set (1), pages in the kernel page cache (filesystem buffers) are uniformly spread across the cpuset. By default, this is off (0) in the top cpuset, and inherited from the parent cpuset in newly created cpusets. See the <code>Memory Spread</code> section, below.</dd>
+<dt><i>cpuset.memory_spread_slab</i> (since Linux 2.6.17)</dt>
+<dd>Flag (0 or 1). If set (1), the kernel slab caches for file I/O (directory and inode structures) are uniformly spread across the cpuset. By default, is off (0) in the top cpuset, and inherited from the parent cpuset in newly created cpusets. See the <code>Memory Spread</code> section, below.</dd>
+<dt><i>cpuset.sched_load_balance</i> (since Linux 2.6.24)</dt>
+<dd>Flag (0 or 1). If set (1, the default) the kernel will automatically load balance processes in that cpuset over the allowed CPUs in that cpuset. If cleared (0) the kernel will avoid load balancing processes in this cpuset, <i>unless</i> some other cpuset with overlapping CPUs has its <i>sched_load_balance</i> flag set. See <code>Scheduler Load Balancing</code>, below, for further details.</dd>
+<dt><i>cpuset.sched_relax_domain_level</i> (since Linux 2.6.26)</dt>
+<dd>Integer, between -1 and a small positive value. The <i>sched_relax_domain_level</i> controls the width of the range of CPUs over which the kernel scheduler performs immediate rebalancing of runnable tasks across CPUs. If <i>sched_load_balance</i> is disabled, then the setting of <i>sched_relax_domain_level</i> does not matter, as no such load balancing is done. If <i>sched_load_balance</i> is enabled, then the higher the value of the <i>sched_relax_domain_level</i>, the wider the range of CPUs over which immediate load balancing is attempted. See <code>Scheduler Relax Domain Level</code>, below, for further details.</dd></dl>
 <p> In addition to the above pseudo-files in each directory below <i>/dev/cpuset</i>, each process has a pseudo-file, <i>/proc/&lt;pid&gt;/cpuset</i>, that displays the path of the process&#8217;s cpuset directory relative to the root of the cpuset filesystem. </p>
 <p> Also the <i>/proc/&lt;pid&gt;/status</i> file for each process has four added lines, displaying the process&#8217;s <i>Cpus_allowed</i> (on which CPUs it may be scheduled) and <i>Mems_allowed</i> (on which memory nodes it may obtain memory), in the two formats <code>Mask Format</code> and <code>List Format</code> (see below) as shown in the following example: </p>
 <p> Cpus_allowed: ffffffff,ffffffff,ffffffff,ffffffff Cpus_allowed_list: 0-127 Mems_allowed: ffffffff,ffffffff Mems_allowed_list: 0-63 </p>
@@ -87,12 +87,12 @@ description: "cpuset – confine processes to processor and memory node subsets"
 &quot;. See the <code>WARNINGS</code> section, below. </p>
 <p> A per-cpuset, running average is employed for the following reasons:</p>
 <dl>
-<dt>*</p>
-<dd>Because this meter is per-cpuset rather than per-process or per virtual memory region, the system load imposed by a batch scheduler monitoring this metric is sharply reduced on large systems, because a scan of the tasklist can be avoided on each set of queries.</p>
-<dt>*</p>
-<dd>Because this meter is a running average rather than an accumulating counter, a batch scheduler can detect memory pressure with a single read, instead of having to read and accumulate results for a period of time.</p>
-<dt>*</p>
-<dd>Because this meter is per-cpuset rather than per-process, the batch scheduler can obtain the key information&#8212;memory pressure in a cpuset&#8212;with a single read, rather than having to query and accumulate results over all the (dynamically changing) set of processes in the cpuset.</dl>
+<dt>*</dt>
+<dd>Because this meter is per-cpuset rather than per-process or per virtual memory region, the system load imposed by a batch scheduler monitoring this metric is sharply reduced on large systems, because a scan of the tasklist can be avoided on each set of queries.</dd>
+<dt>*</dt>
+<dd>Because this meter is a running average rather than an accumulating counter, a batch scheduler can detect memory pressure with a single read, instead of having to read and accumulate results for a period of time.</dd>
+<dt>*</dt>
+<dd>Because this meter is per-cpuset rather than per-process, the batch scheduler can obtain the key information&#8212;memory pressure in a cpuset&#8212;with a single read, rather than having to query and accumulate results over all the (dynamically changing) set of processes in the cpuset.</dd></dl>
 <p> The <i>memory_pressure</i> of a cpuset is calculated using a per-cpuset simple digital filter that is kept within the kernel. For each cpuset, this filter tracks the recent rate at which processes attached to that cpuset enter the kernel direct reclaim code. </p>
 <p> The kernel direct reclaim code is entered whenever a process has to satisfy a memory page request by first finding some other page to repurpose, due to lack of any readily available already free pages. Dirty filesystem pages are repurposed by first writing them to disk. Unmodified filesystem buffer pages are repurposed by simply dropping them, though if that page is needed again, it will have to be reread from disk. </p>
 <p> The <i>cpuset.memory_pressure</i> file provides an integer number representing the recent (half-life of 10 seconds) rate of entries to the direct reclaim code caused by any process in the cpuset, in units of reclaims attempted per second, times 1000.</p>
@@ -108,10 +108,10 @@ description: "cpuset – confine processes to processor and memory node subsets"
 <p> Cpuset-specified memory spreading behaves similarly to what is known (in other contexts) as round-robin or interleave memory placement. </p>
 <p> Cpuset-specified memory spreading can provide substantial performance improvements for jobs that:</p>
 <dl>
-<dt>a)</p>
-<dd>need to place thread-local data on memory nodes close to the CPUs which are running the threads that most frequently access that data; but also</p>
-<dt>b)</p>
-<dd>need to access large filesystem data sets that must to be spread across the several nodes in the job&#8217;s cpuset in order to fit.</dl>
+<dt>a)</dt>
+<dd>need to place thread-local data on memory nodes close to the CPUs which are running the threads that most frequently access that data; but also</dd>
+<dt>b)</dt>
+<dd>need to access large filesystem data sets that must to be spread across the several nodes in the job&#8217;s cpuset in order to fit.</dd></dl>
 <p> Without this policy, the memory allocation across the nodes in the job&#8217;s cpuset can become very uneven, especially for jobs that might have just a single thread initializing or reading in the data set.</p>
 <h3>Memory migration</h3>
 <p>Normally, under the default setting (disabled) of <i>cpuset.memory_migrate</i>, once a page is allocated (given a physical page of main memory), then that page stays on whatever node it was allocated, so long as it remains allocated, even if the cpuset&#8217;s memory-placement policy <i>mems</i> subsequently changes. </p>
@@ -125,10 +125,10 @@ description: "cpuset – confine processes to processor and memory node subsets"
 <p> By default, load balancing is done across all CPUs, except those marked isolated using the kernel boot time &quot;isolcpus=&quot; argument. (See <code>Scheduler Relax Domain Level</code>, below, to change this default.) </p>
 <p> This default load balancing across all CPUs is not well suited to the following two situations:</p>
 <dl>
-<dt>*</p>
-<dd>On large systems, load balancing across many CPUs is expensive. If the system is managed using cpusets to place independent jobs on separate sets of CPUs, full load balancing is unnecessary.</p>
-<dt>*</p>
-<dd>Systems supporting real-time on some CPUs need to minimize system overhead on those CPUs, including avoiding process load balancing if that is not needed.</dl>
+<dt>*</dt>
+<dd>On large systems, load balancing across many CPUs is expensive. If the system is managed using cpusets to place independent jobs on separate sets of CPUs, full load balancing is unnecessary.</dd>
+<dt>*</dt>
+<dd>Systems supporting real-time on some CPUs need to minimize system overhead on those CPUs, including avoiding process load balancing if that is not needed.</dd></dl>
 <p> When the per-cpuset flag <i>sched_load_balance</i> is enabled (the default setting), it requests load balancing across all the CPUs in that cpuset&#8217;s allowed CPUs, ensuring that load balancing can move a process (not otherwise pinned, as by <code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2)) from any CPU in that cpuset to any other. </p>
 <p> When the per-cpuset flag <i>sched_load_balance</i> is disabled, then the scheduler will avoid load balancing across the CPUs in that cpuset, <i>except</i> in so far as is necessary because some overlapping cpuset has <i>sched_load_balance</i> enabled. </p>
 <p> So, for example, if the top cpuset has the flag <i>sched_load_balance</i> enabled, then the scheduler will load balance across all CPUs, and the setting of the <i>sched_load_balance</i> flag in other cpusets has no effect, as we&#8217;re already fully load balancing. </p>
@@ -141,16 +141,16 @@ description: "cpuset – confine processes to processor and memory node subsets"
 <p> The exact meaning of the small integer values of <i>sched_relax_domain_level</i> will depend on internal implementation details of the kernel scheduler code and on the non-uniform architecture of the hardware. Both of these will evolve over time and vary by system architecture and kernel version. </p>
 <p> As of this writing, when this capability was introduced in Linux 2.6.26, on certain popular architectures, the positive values of <i>sched_relax_domain_level</i> have the following meanings. </p>
 <dl>
-<dt><code>(1)</code></p>
-<dd>Perform immediate load balancing across Hyper-Thread siblings on the same core.</p>
-<dt><code>(2)</code></p>
-<dd>Perform immediate load balancing across other cores in the same package.</p>
-<dt><code>(3)</code></p>
-<dd>Perform immediate load balancing across other CPUs on the same node or blade.</p>
-<dt><code>(4)</code></p>
-<dd>Perform immediate load balancing across over several (implementation detail) nodes [On NUMA systems].</p>
-<dt><code>(5)</code></p>
-<dd>Perform immediate load balancing across over all CPUs in system [On NUMA systems].</dl>
+<dt><code>(1)</code></dt>
+<dd>Perform immediate load balancing across Hyper-Thread siblings on the same core.</dd>
+<dt><code>(2)</code></dt>
+<dd>Perform immediate load balancing across other cores in the same package.</dd>
+<dt><code>(3)</code></dt>
+<dd>Perform immediate load balancing across other CPUs on the same node or blade.</dd>
+<dt><code>(4)</code></dt>
+<dd>Perform immediate load balancing across over several (implementation detail) nodes [On NUMA systems].</dd>
+<dt><code>(5)</code></dt>
+<dd>Perform immediate load balancing across over all CPUs in system [On NUMA systems].</dd></dl>
 <p> The <i>sched_relax_domain_level</i> value of zero (0) always means don&#8217;t perform immediate load balancing, hence that load balancing is done only periodically, not immediately when a CPU becomes available or another task becomes runnable. </p>
 <p> The <i>sched_relax_domain_level</i> value of minus one (-1) always means use the system default value. The system default value can vary by architecture and kernel version. This system default value can be changed by kernel boot-time &quot;relax_domain_level=&quot; argument. </p>
 <p> In the case of multiple overlapping cpusets which have conflicting <i>sched_relax_domain_level</i> values, then the highest such value applies to all CPUs in any of the overlapping cpusets. In such cases, the value <code>minus one (-1)</code> is the lowest value, overridden by any other value, and the value <code>zero (0)</code> is the next lowest value.</p>
@@ -172,16 +172,16 @@ description: "cpuset – confine processes to processor and memory node subsets"
 <h2>Rules</h2>
 <p>The following rules apply to each cpuset:</p>
 <dl>
-<dt>*</p>
-<dd>Its CPUs and memory nodes must be a (possibly equal) subset of its parent&#8217;s.</p>
-<dt>*</p>
-<dd>It can be marked <i>cpu_exclusive</i> only if its parent is.</p>
-<dt>*</p>
-<dd>It can be marked <i>mem_exclusive</i> only if its parent is.</p>
-<dt>*</p>
-<dd>If it is <i>cpu_exclusive</i>, its CPUs may not overlap any sibling.</p>
-<dt>*</p>
-<dd>If it is <i>memory_exclusive</i>, its memory nodes may not overlap any sibling.</dl>
+<dt>*</dt>
+<dd>Its CPUs and memory nodes must be a (possibly equal) subset of its parent&#8217;s.</dd>
+<dt>*</dt>
+<dd>It can be marked <i>cpu_exclusive</i> only if its parent is.</dd>
+<dt>*</dt>
+<dd>It can be marked <i>mem_exclusive</i> only if its parent is.</dd>
+<dt>*</dt>
+<dd>If it is <i>cpu_exclusive</i>, its CPUs may not overlap any sibling.</dd>
+<dt>*</dt>
+<dd>If it is <i>memory_exclusive</i>, its memory nodes may not overlap any sibling.</dd></dl>
 <h2>Permissions</h2>
 <p>The permissions of a cpuset are determined by the permissions of the directories and pseudo-files in the cpuset filesystem, normally mounted at <i>/dev/cpuset</i>. </p>
 <p> For instance, a process can put itself in some other cpuset (than its current one) if it can write the <i>tasks</i> file for that cpuset. This requires execute permission on the encompassing directories and write permission on the <i>tasks</i> file. </p>
@@ -209,74 +209,74 @@ description: "cpuset – confine processes to processor and memory node subsets"
 <p>The Linux kernel implementation of cpusets sets <i>errno</i> to specify the reason for a failed system call affecting cpusets. </p>
 <p> The possible <i>errno</i> settings and their meaning when set on a failed cpuset call are as listed below.</p>
 <dl>
-<dt><code>E2BIG</code></p>
-<dd>Attempted a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) on a special cpuset file with a length larger than some kernel-determined upper limit on the length of such writes.</p>
-<dt><code>EACCES</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) the process ID (PID) of a process to a cpuset <i>tasks</i> file when one lacks permission to move that process.</p>
-<dt><code>EACCES</code></p>
-<dd>Attempted to add, using <code><a href="/docs/linux/man/2-write/">write</a></code>(2), a CPU or memory node to a cpuset, when that CPU or memory node was not already in its parent.</p>
-<dt><code>EACCES</code></p>
-<dd>Attempted to set, using <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <i>cpuset.cpu_exclusive</i> or <i>cpuset.mem_exclusive</i> on a cpuset whose parent lacks the same setting.</p>
-<dt><code>EACCES</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a <i>cpuset.memory_pressure</i> file.</p>
-<dt><code>EACCES</code></p>
-<dd>Attempted to create a file in a cpuset directory.</p>
-<dt><code>EBUSY</code></p>
-<dd>Attempted to remove, using <code><a href="/docs/linux/man/2-rmdir/">rmdir</a></code>(2), a cpuset with attached processes.</p>
-<dt><code>EBUSY</code></p>
-<dd>Attempted to remove, using <code><a href="/docs/linux/man/2-rmdir/">rmdir</a></code>(2), a cpuset with child cpusets.</p>
-<dt><code>EBUSY</code></p>
-<dd>Attempted to remove a CPU or memory node from a cpuset that is also in a child of that cpuset.</p>
-<dt><code>EEXIST</code></p>
-<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset that already exists.</p>
-<dt><code>EEXIST</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-rename/">rename</a></code>(2) a cpuset to a name that already exists.</p>
-<dt><code>EFAULT</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a cpuset file using a buffer that is outside the writing processes accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd>Attempted to change a cpuset, using <code><a href="/docs/linux/man/2-write/">write</a></code>(2), in a way that would violate a <i>cpu_exclusive</i> or <i>mem_exclusive</i> attribute of that cpuset or any of its siblings.</p>
-<dt><code>EINVAL</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) an empty <i>cpuset.cpus</i> or <i>cpuset.mems</i> list to a cpuset which has attached processes or child cpusets.</p>
-<dt><code>EINVAL</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a <i>cpuset.cpus</i> or <i>cpuset.mems</i> list which included a range with the second number smaller than the first number.</p>
-<dt><code>EINVAL</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a <i>cpuset.cpus</i> or <i>cpuset.mems</i> list which included an invalid character in the string.</p>
-<dt><code>EINVAL</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a list to a <i>cpuset.cpus</i> file that did not include any online CPUs.</p>
-<dt><code>EINVAL</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a list to a <i>cpuset.mems</i> file that did not include any online memory nodes.</p>
-<dt><code>EINVAL</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a list to a <i>cpuset.mems</i> file that included a node that held no memory.</p>
-<dt><code>EIO</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a string to a cpuset <i>tasks</i> file that does not begin with an ASCII decimal integer.</p>
-<dt><code>EIO</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-rename/">rename</a></code>(2) a cpuset into a different directory.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) a <i>/proc/&lt;pid&gt;/cpuset</i> file for a cpuset path that is longer than the kernel page size.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset whose base directory name is longer than 255 characters.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset whose full pathname, including the mount point (typically &quot;/dev/cpuset/&quot;) prefix, is longer than 4095 characters.</p>
-<dt><code>ENODEV</code></p>
-<dd>The cpuset was removed by another process at the same time as a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) was attempted on one of the pseudo-files in the cpuset directory.</p>
-<dt><code>ENOENT</code></p>
-<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset in a parent cpuset that doesn&#8217;t exist.</p>
-<dt><code>ENOENT</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-access/">access</a></code>(2) or <code><a href="/docs/linux/man/2-open/">open</a></code>(2) a nonexistent file in a cpuset directory.</p>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory is available within the kernel; can occur on a variety of system calls affecting cpusets, but only if the system is extremely short of memory.</p>
-<dt><code>ENOSPC</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) the process ID (PID) of a process to a cpuset <i>tasks</i> file when the cpuset had an empty <i>cpuset.cpus</i> or empty <i>cpuset.mems</i> setting.</p>
-<dt><code>ENOSPC</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) an empty <i>cpuset.cpus</i> or <i>cpuset.mems</i> setting to a cpuset that has tasks attached.</p>
-<dt><code>ENOTDIR</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-rename/">rename</a></code>(2) a nonexistent cpuset.</p>
-<dt><code>EPERM</code></p>
-<dd>Attempted to remove a file from a cpuset directory.</p>
-<dt><code>ERANGE</code></p>
-<dd>Specified a <i>cpuset.cpus</i> or <i>cpuset.mems</i> list to the kernel which included a number too large for the kernel to set in its bit masks.</p>
-<dt><code>ESRCH</code></p>
-<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) the process ID (PID) of a nonexistent process to a cpuset <i>tasks</i> file.</dl>
+<dt><code>E2BIG</code></dt>
+<dd>Attempted a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) on a special cpuset file with a length larger than some kernel-determined upper limit on the length of such writes.</dd>
+<dt><code>EACCES</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) the process ID (PID) of a process to a cpuset <i>tasks</i> file when one lacks permission to move that process.</dd>
+<dt><code>EACCES</code></dt>
+<dd>Attempted to add, using <code><a href="/docs/linux/man/2-write/">write</a></code>(2), a CPU or memory node to a cpuset, when that CPU or memory node was not already in its parent.</dd>
+<dt><code>EACCES</code></dt>
+<dd>Attempted to set, using <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <i>cpuset.cpu_exclusive</i> or <i>cpuset.mem_exclusive</i> on a cpuset whose parent lacks the same setting.</dd>
+<dt><code>EACCES</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a <i>cpuset.memory_pressure</i> file.</dd>
+<dt><code>EACCES</code></dt>
+<dd>Attempted to create a file in a cpuset directory.</dd>
+<dt><code>EBUSY</code></dt>
+<dd>Attempted to remove, using <code><a href="/docs/linux/man/2-rmdir/">rmdir</a></code>(2), a cpuset with attached processes.</dd>
+<dt><code>EBUSY</code></dt>
+<dd>Attempted to remove, using <code><a href="/docs/linux/man/2-rmdir/">rmdir</a></code>(2), a cpuset with child cpusets.</dd>
+<dt><code>EBUSY</code></dt>
+<dd>Attempted to remove a CPU or memory node from a cpuset that is also in a child of that cpuset.</dd>
+<dt><code>EEXIST</code></dt>
+<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset that already exists.</dd>
+<dt><code>EEXIST</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-rename/">rename</a></code>(2) a cpuset to a name that already exists.</dd>
+<dt><code>EFAULT</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a cpuset file using a buffer that is outside the writing processes accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Attempted to change a cpuset, using <code><a href="/docs/linux/man/2-write/">write</a></code>(2), in a way that would violate a <i>cpu_exclusive</i> or <i>mem_exclusive</i> attribute of that cpuset or any of its siblings.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) an empty <i>cpuset.cpus</i> or <i>cpuset.mems</i> list to a cpuset which has attached processes or child cpusets.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a <i>cpuset.cpus</i> or <i>cpuset.mems</i> list which included a range with the second number smaller than the first number.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a <i>cpuset.cpus</i> or <i>cpuset.mems</i> list which included an invalid character in the string.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a list to a <i>cpuset.cpus</i> file that did not include any online CPUs.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a list to a <i>cpuset.mems</i> file that did not include any online memory nodes.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a list to a <i>cpuset.mems</i> file that included a node that held no memory.</dd>
+<dt><code>EIO</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) a string to a cpuset <i>tasks</i> file that does not begin with an ASCII decimal integer.</dd>
+<dt><code>EIO</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-rename/">rename</a></code>(2) a cpuset into a different directory.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) a <i>/proc/&lt;pid&gt;/cpuset</i> file for a cpuset path that is longer than the kernel page size.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset whose base directory name is longer than 255 characters.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset whose full pathname, including the mount point (typically &quot;/dev/cpuset/&quot;) prefix, is longer than 4095 characters.</dd>
+<dt><code>ENODEV</code></dt>
+<dd>The cpuset was removed by another process at the same time as a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) was attempted on one of the pseudo-files in the cpuset directory.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>Attempted to create, using <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), a cpuset in a parent cpuset that doesn&#8217;t exist.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-access/">access</a></code>(2) or <code><a href="/docs/linux/man/2-open/">open</a></code>(2) a nonexistent file in a cpuset directory.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory is available within the kernel; can occur on a variety of system calls affecting cpusets, but only if the system is extremely short of memory.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) the process ID (PID) of a process to a cpuset <i>tasks</i> file when the cpuset had an empty <i>cpuset.cpus</i> or empty <i>cpuset.mems</i> setting.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) an empty <i>cpuset.cpus</i> or <i>cpuset.mems</i> setting to a cpuset that has tasks attached.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-rename/">rename</a></code>(2) a nonexistent cpuset.</dd>
+<dt><code>EPERM</code></dt>
+<dd>Attempted to remove a file from a cpuset directory.</dd>
+<dt><code>ERANGE</code></dt>
+<dd>Specified a <i>cpuset.cpus</i> or <i>cpuset.mems</i> list to the kernel which included a number too large for the kernel to set in its bit masks.</dd>
+<dt><code>ESRCH</code></dt>
+<dd>Attempted to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) the process ID (PID) of a nonexistent process to a cpuset <i>tasks</i> file.</dd></dl>
 <h2>Versions</h2>
 <p>Cpusets appeared in version 2.6.12 of the Linux kernel.</p>
 <h2>Notes</h2>
@@ -288,31 +288,31 @@ description: "cpuset – confine processes to processor and memory node subsets"
 <h3>Creating and attaching to a cpuset.</h3>
 <p>To create a new cpuset and attach the current command shell to it, the steps are: </p>
 <dl>
-<dt>1)</p>
-<dd>mkdir /dev/cpuset (if not already done)</p>
-<dt>2)</p>
-<dd>mount -t cpuset none /dev/cpuset (if not already done)</p>
-<dt>3)</p>
-<dd>Create the new cpuset using <code><a href="/docs/linux/man/1-mkdir/">mkdir</a></code>(1).</p>
-<dt>4)</p>
-<dd>Assign CPUs and memory nodes to the new cpuset.</p>
-<dt>5)</p>
-<dd>Attach the shell to the new cpuset.</dl>
+<dt>1)</dt>
+<dd>mkdir /dev/cpuset (if not already done)</dd>
+<dt>2)</dt>
+<dd>mount -t cpuset none /dev/cpuset (if not already done)</dd>
+<dt>3)</dt>
+<dd>Create the new cpuset using <code><a href="/docs/linux/man/1-mkdir/">mkdir</a></code>(1).</dd>
+<dt>4)</dt>
+<dd>Assign CPUs and memory nodes to the new cpuset.</dd>
+<dt>5)</dt>
+<dd>Attach the shell to the new cpuset.</dd></dl>
 <p> For example, the following sequence of commands will set up a cpuset named &quot;Charlie&quot;, containing just CPUs 2 and 3, and memory node 1, and then attach the current shell to that cpuset. </p>
 <p> $<code> mkdir /dev/cpuset</code> $<code> mount -t cpuset cpuset /dev/cpuset</code> $<code> cd /dev/cpuset</code> $<code> mkdir Charlie</code> $<code> cd Charlie</code> $<code> /bin/echo 2-3 &gt; cpuset.cpus</code> $<code> /bin/echo 1 &gt; cpuset.mems</code> $<code> /bin/echo $$ &gt; tasks</code> # The current shell is now running in cpuset Charlie # The next line should display &#8216;/Charlie&#8217; $<code> cat /proc/self/cpuset</code></p>
 <h3>Migrating a job to different memory nodes.</h3>
 <p>To migrate a job (the set of processes attached to a cpuset) to different CPUs and memory nodes in the system, including moving the memory pages currently allocated to that job, perform the following steps. </p>
 <dl>
-<dt>1)</p>
-<dd>Let&#8217;s say we want to move the job in cpuset <i>alpha</i> (CPUs 4-7 and memory nodes 2-3) to a new cpuset <i>beta</i> (CPUs 16-19 and memory nodes 8-9).</p>
-<dt>2)</p>
-<dd>First create the new cpuset <i>beta</i>.</p>
-<dt>3)</p>
-<dd>Then allow CPUs 16-19 and memory nodes 8-9 in <i>beta</i>.</p>
-<dt>4)</p>
-<dd>Then enable <i>memory_migration</i> in <i>beta</i>.</p>
-<dt>5)</p>
-<dd>Then move each process from <i>alpha</i> to <i>beta</i>.</dl>
+<dt>1)</dt>
+<dd>Let&#8217;s say we want to move the job in cpuset <i>alpha</i> (CPUs 4-7 and memory nodes 2-3) to a new cpuset <i>beta</i> (CPUs 16-19 and memory nodes 8-9).</dd>
+<dt>2)</dt>
+<dd>First create the new cpuset <i>beta</i>.</dd>
+<dt>3)</dt>
+<dd>Then allow CPUs 16-19 and memory nodes 8-9 in <i>beta</i>.</dd>
+<dt>4)</dt>
+<dd>Then enable <i>memory_migration</i> in <i>beta</i>.</dd>
+<dt>5)</dt>
+<dd>Then move each process from <i>alpha</i> to <i>beta</i>.</dd></dl>
 <p> The following sequence of commands accomplishes this. </p>
 <p> $<code> cd /dev/cpuset</code> $<code> mkdir beta</code> $<code> cd beta</code> $<code> /bin/echo 16-19 &gt; cpuset.cpus</code> $<code> /bin/echo 8-9 &gt; cpuset.mems</code> $<code> /bin/echo 1 &gt; cpuset.memory_migrate</code> $<code> while read i; do /bin/echo $i; done &lt; ../alpha/tasks &gt; tasks</code> </p>
 <p> The above should move any processes in <i>alpha</i> to <i>beta</i>, and any memory held by these processes on memory nodes 2-3 to memory nodes 8-9, respectively. </p>

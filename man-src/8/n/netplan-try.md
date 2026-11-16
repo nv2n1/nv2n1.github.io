@@ -16,14 +16,14 @@ description: "netplan-try – try a configuration, optionally rolling it back"
 <p> This may be especially useful on remote systems, to prevent an administrator being permanently locked out of systems in the case of a network configuration error.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, -help</code></p>
-<dd>Print basic help.</p>
-<dt><code>-debug</code></p>
-<dd>Print debugging output during the process.</p>
-<dt><code>-config-file </code>CONFIG_FILE</p>
-<dd>In addition to the usual configuration, apply CONFIG_FILE. It must be a YAML file in the <a href="/docs/linux/man/5-netplan/">netplan</a>(5) format.</p>
-<dt><code>-timeout </code>TIMEOUT</p>
-<dd>Wait for TIMEOUT seconds before reverting. Defaults to 120 seconds. Note that some network configurations (such as STP) may take over a minute to settle.</dl>
+<dt><code>-h, -help</code></dt>
+<dd>Print basic help.</dd>
+<dt><code>-debug</code></dt>
+<dd>Print debugging output during the process.</dd>
+<dt><code>-config-file </code>CONFIG_FILE</dt>
+<dd>In addition to the usual configuration, apply CONFIG_FILE. It must be a YAML file in the <a href="/docs/linux/man/5-netplan/">netplan</a>(5) format.</dd>
+<dt><code>-timeout </code>TIMEOUT</dt>
+<dd>Wait for TIMEOUT seconds before reverting. Defaults to 120 seconds. Note that some network configurations (such as STP) may take over a minute to settle.</dd></dl>
 <h2>Known Issues</h2>
 <p>netplan try uses similar procedures to netplan apply, so some of the same caveats apply around virtual devices. </p>
 <p> There are also some known bugs: if netplan try times out or is cancelled, make sure to verify if the network configuration has in fact been reverted. </p>

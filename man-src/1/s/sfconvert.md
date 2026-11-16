@@ -18,7 +18,7 @@ description: "sfconvert – convert audio files"
 <p> format <i>f</i></p>
 <dl>
 <dt>
-<dd> Output file format. <i>f</i> must be one of the following: </p>
+</dt><dd> Output file format. <i>f</i> must be one of the following: </dd>
 <table>
 <tr VALIGN=top>
 <td> aiff </td>
@@ -75,7 +75,7 @@ description: "sfconvert – convert audio files"
 <p> compression <i>c</i></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td> ulaw </td>
@@ -108,32 +108,32 @@ description: "sfconvert – convert audio files"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> byteorder <i>e</i></p>
 <dl>
 <dt>
-<dd> Output byte order. <i>e</i> may be either big or little.</dl>
+</dt><dd> Output byte order. <i>e</i> may be either big or little.</dd></dl>
 <p> channels <i>n</i></p>
 <dl>
 <dt>
-<dd> Number of output channels. <i>n</i> is 1 for mono, and 2 for stereo.</dl>
+</dt><dd> Number of output channels. <i>n</i> is 1 for mono, and 2 for stereo.</dd></dl>
 <p> integer <i>n</i> <i>s</i></p>
 <dl>
 <dt>
-<dd> Convert to integer audio data. <i>n</i> indicates the output sample width in bits. <i>s</i> specifies the sample format and may be either 2scomp for 2&#8217;s complement signed data or unsigned for unsigned data.</dl>
+</dt><dd> Convert to integer audio data. <i>n</i> indicates the output sample width in bits. <i>s</i> specifies the sample format and may be either 2scomp for 2&#8217;s complement signed data or unsigned for unsigned data.</dd></dl>
 <p> float <i>m</i></p>
 <dl>
 <dt>
-<dd> Convert to floating-point audio data with a maximum amplitude of <i>m</i> (usually 1.0). The integer and float options are mutually exclusive.</dl>
+</dt><dd> Convert to floating-point audio data with a maximum amplitude of <i>m</i> (usually 1.0). The integer and float options are mutually exclusive.</dd></dl>
 <p> The following options take no additional arguments: </p>
 <p> &#8211;help, -h</p>
 <dl>
 <dt>
-<dd> Print help message.</dl>
+</dt><dd> Print help message.</dd></dl>
 <p> &#8211;version, -v</p>
 <dl>
 <dt>
-<dd> Print version information.</dl>
+</dt><dd> Print version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sfinfo/">sfinfo</a></code>(1)</p>
 <h2>AUTHOR</h2>

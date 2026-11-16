@@ -62,11 +62,11 @@ description: "skopeo — Various operations with container images images and con
 <p> Mark <i>image-name</i> for deletion. To release the allocated disk space, you need to execute the docker registry garabage collector. E.g., </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker exec -it registry bin/registry garbage-collect /etc/docker/registry/config.yml
 </pre>
-</dl>
+</dd></dl>
 <p> <code>&#8211;creds</code> <i>username[:password]</i> for accessing the registry </p>
 <p> <code>&#8211;cert-dir</code> <i>path</i> Use certificates at <i>path</i> (*.crt, *.cert, *.key) to connect to the registry </p>
 <p> <code>&#8211;tls-verify</code> <i>bool-value</i> Require HTTPS and verify certificates when talking to docker registries (defaults to true) </p>
@@ -111,7 +111,7 @@ $ docker exec -it registry bin/registry garbage-collect /etc/docker/registry/con
 <p> To copy the layers of the docker.io busybox image to a local directory: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ mkdir -p /var/lib/images/busybox
 $ skopeo copy <a href="docker://busybox:latest">docker://busybox:latest</a> dir:/var/lib/images/busybox
@@ -120,30 +120,30 @@ $ ls /var/lib/images/busybox/*
   /tmp/busybox/manifest.json
   /tmp/busybox/8ddc19f16526912237dd8af81971d5e4dd0587907234be2b83e249518d5b673f.tar
 </pre>
-</dl>
+</dd></dl>
 <p> To copy and sign an image: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ skopeo copy --sign-by dev [at] example.com atomic:example/busybox:streaming atomic:example/busybox:gold
 </pre>
-</dl>
+</dd></dl>
 <h2>skopeo delete</h2>
 <p> Mark image example/pause for deletion from the registry.example.com registry: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ skopeo delete --force <a href="docker://registry.example.com/example/pause:latest">docker://registry.example.com/example/pause:latest</a>
 </pre>
-</dl>
+</dd></dl>
 <p> See above for additional details on using the command <code>delete</code>. </p>
 <h2>skopeo inspect</h2>
 <p> To review information for the image fedora from the docker.io registry: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ skopeo inspect docker: // docker.io/fedora
 {
@@ -167,12 +167,12 @@ $ skopeo inspect docker: // docker.io/fedora
                                                                                                       "Layers" : ["sha256:7c91a140e7a1025c3bc3aace4c80c0d9933ac4ee24b8630a6b0b5d8b9ce6b9d4"]
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>skopeo layers</h2>
 <p> Another method to retrieve the layers for the busybox image from the docker.io registry: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ skopeo layers <a href="docker://busybox">docker://busybox</a>
 $ ls layers-500650331/
@@ -180,35 +180,35 @@ $ ls layers-500650331/
   manifest.json
   a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4.tar
 </pre>
-</dl>
+</dd></dl>
 <h2>skopeo manifest-digest</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ skopeo manifest-digest manifest.json
 sha256:a59906e33509d14c036c8678d687bd4eec81ed7c4b8ce907b888c607f6a1e0e6
 </pre>
-</dl>
+</dd></dl>
 <h2>skopeo standalone-sign</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ skopeo standalone-sign busybox-manifest.json registry.example.com/example/busybox 1D8230F6CDB6A06716E414C1DB72F2188BB46CC8 --output busybox.signature
 $
 </pre>
-</dl>
+</dd></dl>
 <p> See skopeo copy above for the preferred method of signing images. </p>
 <h2>skopeo standalone-verify</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ skopeo standalone-verify busybox-manifest.json registry.example.com/example/busybox 1D8230F6CDB6A06716E414C1DB72F2188BB46CC8  busybox.signature
 Signature verified, digest sha256:20bf21ed457b390829cdbeec8795a7bea1626991fda603e0d01b4e7f60427e55
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> Antonio Murdaca &lt;runcom [at] redhat.com&gt;, Miloslav Trmac &lt;mitr [at] redhat.com&gt;, Jhon Honce &lt;jhonce [at] redhat.com&gt; </p>
 <h2>Index</h2>

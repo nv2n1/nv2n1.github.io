@@ -11,12 +11,9 @@ std::common_comparison_category - std::common_comparison_category
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;compare&gt;
-
     template &lt;class... Ts&gt;
-
     struct common_comparison_category {
     (since C++ 20)
-
         using type = /*see below*/;
 };</code></pre> 
 The class template std::common_comparison_category provides an alias (as the member typedef type) for the strongest comparison category to which all of the template arguments Ts... can be converted. 

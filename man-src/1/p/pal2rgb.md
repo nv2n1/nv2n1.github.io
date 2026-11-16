@@ -16,16 +16,16 @@ description: "pal2rgb – convert a palette color TIFF image to a full color ima
 <h2>OPTIONS</h2>
 <p> Options that affect the interpretation of input data are:</p>
 <dl>
-<dt><code>-C</code></p>
-<dd> This option overrides the default behavior of <i>pal2rgb</i> in determining whether or not colormap entries contain 16-bit or 8-bit values. By default the colormap is inspected and if no colormap entry greater than 255 is found, the colormap is assumed to have only 8-bit values; otherwise 16-bit values (as required by the <font SIZE="-1">TIFF</font> specification) are assumed. The <code>-C</code> option can be used to explicitly specify the number of bits for colormap entries: <code>-C 8</code> for 8-bit values, <code>-C 16</code> for 16-bit values.</dl>
+<dt><code>-C</code></dt>
+<dd> This option overrides the default behavior of <i>pal2rgb</i> in determining whether or not colormap entries contain 16-bit or 8-bit values. By default the colormap is inspected and if no colormap entry greater than 255 is found, the colormap is assumed to have only 8-bit values; otherwise 16-bit values (as required by the <font SIZE="-1">TIFF</font> specification) are assumed. The <code>-C</code> option can be used to explicitly specify the number of bits for colormap entries: <code>-C 8</code> for 8-bit values, <code>-C 16</code> for 16-bit values.</dd></dl>
 <p> Options that affect the output file format are:</p>
 <dl>
-<dt><code>-p</code></p>
-<dd> Explicitly select the planar configuration used in organizing data samples in the output image: <code>-p contig</code> for samples packed contiguously, and <code>-p separate</code> for samples stored separately. By default samples are packed.</p>
-<dt><code>-c</code></p>
-<dd> Use the specific compression algorithm to encoded image data in the output file: <code>-c packbits</code> for Macintosh Packbits, <code>-c lzw</code> for Lempel-Ziv &amp; Welch, <code>-c zip</code> for Deflate, <code>-c none</code> for no compression. If no compression-related option is specified, the input file&#8217;s compression algorithm is used.</p>
-<dt><code>-r</code></p>
-<dd> Explicitly specify the number of rows in each strip of the output file. If the <code>-r</code> option is not specified, a number is selected such that each output strip has approximately 8 kilobytes of data in it.</dl>
+<dt><code>-p</code></dt>
+<dd> Explicitly select the planar configuration used in organizing data samples in the output image: <code>-p contig</code> for samples packed contiguously, and <code>-p separate</code> for samples stored separately. By default samples are packed.</dd>
+<dt><code>-c</code></dt>
+<dd> Use the specific compression algorithm to encoded image data in the output file: <code>-c packbits</code> for Macintosh Packbits, <code>-c lzw</code> for Lempel-Ziv &amp; Welch, <code>-c zip</code> for Deflate, <code>-c none</code> for no compression. If no compression-related option is specified, the input file&#8217;s compression algorithm is used.</dd>
+<dt><code>-r</code></dt>
+<dd> Explicitly specify the number of rows in each strip of the output file. If the <code>-r</code> option is not specified, a number is selected such that each output strip has approximately 8 kilobytes of data in it.</dd></dl>
 <h2>BUGS</h2>
 <p> Only 8-bit images are handled.</p>
 <h2>SEE ALSO</h2>

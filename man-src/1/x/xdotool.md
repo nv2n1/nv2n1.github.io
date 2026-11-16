@@ -17,23 +17,21 @@ description: "xdotool – command-line X11 automation tool"
 <p> There is some support for Extended Window Manager Hints (aka <font SIZE="-1">EWMH</font> or NetWM). See the &#8220;<font SIZE="-1">EXTENDED WINDOW MANAGER HINTS&#8221;</font> section for more information.</p>
 <h2>KEYBOARD COMMANDS</h2>
 <dl>
-<dt><code>key</code> <i>[options]</i> <i>keystroke</i> [<i>keystroke</i> &#8230;]</p>
-<dd> Options:</p>
+<dt><code>key</code> <i>[options]</i> <i>keystroke</i> [<i>keystroke</i> &#8230;]</dt>
+<dd> Options:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;window window</code></p>
-<dd> Send keystrokes to a specific window id. You can use &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> references like &#8220;%1&#8221; and &#8220;%@&#8221; here. If there is a window stack, then &#8220;%1&#8221; is the default, otherwise the current window is used. </p>
+<dt><code>&#8211;window window</code></dt>
+<dd> Send keystrokes to a specific window id. You can use &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> references like &#8220;%1&#8221; and &#8220;%@&#8221; here. If there is a window stack, then &#8220;%1&#8221; is the default, otherwise the current window is used. </dd>
 <p> See also: &#8220;<font SIZE="-1">SENDEVENT NOTES&#8221;</font> and &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font></p>
-<dt><code>&#8211;clearmodifiers</code></p>
-<dd> Clear modifiers before sending keystrokes. See <font SIZE="-1">CLEARMODIFIERS</font> below.</p>
-<dt><code>&#8211;delay milliseconds</code></p>
-<dd> Delay between keystrokes. Default is 12ms.</dl>
+<dt><code>&#8211;clearmodifiers</code></dt>
+<dd> Clear modifiers before sending keystrokes. See <font SIZE="-1">CLEARMODIFIERS</font> below.</dd>
+<dt><code>&#8211;delay milliseconds</code></dt>
+<dd> Delay between keystrokes. Default is 12ms.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Type a given keystroke. Examples being &#8220;alt+r&#8221;, &#8220;Control_L+J&#8221;, &#8220;ctrl+alt+n&#8221;, &#8220;BackSpace&#8221;. </p>
 <p> Generally, any valid X Keysym string will work. Multiple keys are separated by &#8216;+&#8217;. Aliases exist for &#8220;alt&#8221;, &#8220;ctrl&#8221;, &#8220;shift&#8221;, &#8220;super&#8221;, and &#8220;meta&#8221; which all map to Foo_L, such as Alt_L and Control_L, etc. </p>
 <p> In cases where your keyboard doesn&#8217;t actually have the key you want to type, xdotool will automatically find an unused keycode and use that to type the key. </p>
@@ -45,112 +43,99 @@ description: "xdotool – command-line X11 automation tool"
 <p> Example: Send ctrl+l and then BackSpace as separate keystrokes:<br />
 &nbsp;xdotool key ctrl+l BackSpace </p>
 <p> Example: Send ctrl+c to all windows matching title &#8216;gdb&#8217; (See &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font>)<br />
-&nbsp;xdotool search &#8211;name gdb key ctrl+c</dl>
-<dt><code>keydown</code> <i>[options]</i> <i>keystroke</i></p>
-<dd> Same as above, except only keydown (press) events are sent.</p>
-<dt><code>keyup</code> <i>keystroke</i></p>
-<dd> Same as above, except only keyup (release) events are sent.</p>
-<dt><code>type</code> <i>[options]</i> <i>something to type</i></p>
-<dd> Options:</p>
+&nbsp;xdotool search &#8211;name gdb key ctrl+c</dd></dl>
+<dt><code>keydown</code> <i>[options]</i> <i>keystroke</i></dt>
+<dd> Same as above, except only keydown (press) events are sent.</dd>
+<dt><code>keyup</code> <i>keystroke</i></dt>
+<dd> Same as above, except only keyup (release) events are sent.</dd>
+<dt><code>type</code> <i>[options]</i> <i>something to type</i></dt>
+<dd> Options:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;window windowid</code></p>
-<dd> Send keystrokes to a specific window id. See &#8220;<font SIZE="-1">SENDEVENT NOTES&#8221;</font> below. The default, if no window is given, depends on the window stack. If the window stack is empty the current window is typed at using <font SIZE="-1">XTEST.</font> Otherwise, the default is &#8220;%1&#8221; (see &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font>).</p>
-<dt><code>&#8211;delay milliseconds</code></p>
-<dd> Delay between keystrokes. Default is 12ms.</p>
-<dt><code>&#8211;clearmodifiers</code></p>
-<dd> Clear modifiers before sending keystrokes. See <font SIZE="-1">CLEARMODIFIERS</font> below.</dl>
+<dt><code>&#8211;window windowid</code></dt>
+<dd> Send keystrokes to a specific window id. See &#8220;<font SIZE="-1">SENDEVENT NOTES&#8221;</font> below. The default, if no window is given, depends on the window stack. If the window stack is empty the current window is typed at using <font SIZE="-1">XTEST.</font> Otherwise, the default is &#8220;%1&#8221; (see &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font>).</dd>
+<dt><code>&#8211;delay milliseconds</code></dt>
+<dd> Delay between keystrokes. Default is 12ms.</dd>
+<dt><code>&#8211;clearmodifiers</code></dt>
+<dd> Clear modifiers before sending keystrokes. See <font SIZE="-1">CLEARMODIFIERS</font> below.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Types as if you had typed it. Supports newlines and tabs (<font SIZE="-1">ASCII</font> newline and tab). Each keystroke is separated by a delay given by the <code>&#8211;delay</code> option. </p>
 <p> With respect to &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font>, this command consumes the remainder of the arguments and types them. That is, no commands can chain after &#8216;type&#8217;. </p>
 <p> Example: to type &#8216;Hello world!&#8217; you would do:<br />
-&nbsp;xdotool type&nbsp;&#8216;Hello world!&#8217;</dl>
+&nbsp;xdotool type&nbsp;&#8216;Hello world!&#8217;</dd></dl>
 </dl>
 <h2>MOUSE COMMANDS</h2>
 <dl>
-<dt><code>mousemove</code> <i>[options]</i> <i>x y </i><font SIZE="-1"><i>OR</i></font><i> &#8216;restore&#8217;</i></p>
-<dd> Move the mouse to the specific X and Y coordinates on the screen. </p>
+<dt><code>mousemove</code> <i>[options]</i> <i>x y </i><font SIZE="-1"><i>OR</i></font><i> &#8216;restore&#8217;</i></dt>
+<dd> Move the mouse to the specific X and Y coordinates on the screen. </dd>
 <p> You can move the mouse to the previous location if you specify &#8216;restore&#8217; instead of an X and Y coordinate. Restoring only works if you have moved previously in this same command invocation. Further, it does not work with the &#8211;window option. </p>
 <p> For example, to click the top-left corner of the screen and move the mouse to the original position before you moved it, use this:<br />
 &nbsp;xdotool mousemove 0 0 click 1 mousemove restore</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;window </code><font SIZE="-1"><code>WINDOW</code></font></p>
-<dd> Specify a window to move relative to. Coordinates 0,0 are at the top left of the window you choose. </p>
+<dt><code>&#8211;window </code><font SIZE="-1"><code>WINDOW</code></font></dt>
+<dd> Specify a window to move relative to. Coordinates 0,0 are at the top left of the window you choose. </dd>
 <p> &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> references are valid here, such as <tt>%1</tt> and %@. Though, using %@ probably doesn&#8217;t make sense.</p>
-<dt><code>&#8211;screen </code><font SIZE="-1"><code>SCREEN</code></font></p>
-<dd> Move the mouse to the specified screen to move to. This is only useful if you have multiple screens and <font SIZE="-1">ARE NOT</font> using Xinerama. </p>
+<dt><code>&#8211;screen </code><font SIZE="-1"><code>SCREEN</code></font></dt>
+<dd> Move the mouse to the specified screen to move to. This is only useful if you have multiple screens and <font SIZE="-1">ARE NOT</font> using Xinerama. </dd>
 <p> The default is the current screen. If you specify &#8211;window, the &#8211;screen flag is ignored.</p>
-<dt><code>&#8211;polar</code></p>
-<dd> Use polar coordinates. This makes &#8216;x&#8217; an angle (in degrees, 0-360, etc) and &#8216;y&#8217; the distance. </p>
+<dt><code>&#8211;polar</code></dt>
+<dd> Use polar coordinates. This makes &#8216;x&#8217; an angle (in degrees, 0-360, etc) and &#8216;y&#8217; the distance. </dd>
 <p> Rotation starts at &#8216;up&#8217; (0 degrees) and rotates clockwise: 90 = right, 180 = down, 270 = left. </p>
 <p> The origin defaults to the center of the current screen. If you specify a &#8211;window, then the origin is the center of that window.</p>
-<dt><code>&#8211;clearmodifiers</code></p>
-<dd> See <font SIZE="-1">CLEARMODIFIERS</font></p>
-<dt><code>&#8211;sync</code></p>
-<dd> After sending the mouse move request, wait until the mouse is actually moved. If no movement is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on. </p>
+<dt><code>&#8211;clearmodifiers</code></dt>
+<dd> See <font SIZE="-1">CLEARMODIFIERS</font></dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> After sending the mouse move request, wait until the mouse is actually moved. If no movement is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on. </dd>
 <p> Note: We wait until the mouse moves at all, not necessarily that it actually reaches your intended destination. Some applications lock the mouse cursor to certain regions of the screen, so waiting for any movement is better in the general case than waiting for a specific target.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mousemove_relative</code> [options] <i>x</i> <i>y</i></p>
-<dd> Move the mouse x,y pixels relative to the current position of the mouse cursor.</p>
+</dl>
+<dt><code>mousemove_relative</code> [options] <i>x</i> <i>y</i></dt>
+<dd> Move the mouse x,y pixels relative to the current position of the mouse cursor.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;polar</code></p>
-<dd> Use polar coordinates. This makes &#8216;x&#8217; an angle (in degrees, 0-360, etc) and &#8216;y&#8217; the distance. </p>
+<dt><code>&#8211;polar</code></dt>
+<dd> Use polar coordinates. This makes &#8216;x&#8217; an angle (in degrees, 0-360, etc) and &#8216;y&#8217; the distance. </dd>
 <p> Rotation starts at &#8216;up&#8217; (0 degrees) and rotates clockwise: 90 = right, 180 = down, 270 = left.</p>
-<dt><code>&#8211;sync</code></p>
-<dd> After sending the mouse move request, wait until the mouse is actually moved. If no movement is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on. </p>
+<dt><code>&#8211;sync</code></dt>
+<dd> After sending the mouse move request, wait until the mouse is actually moved. If no movement is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on. </dd>
 <p> Note that we wait until the mouse moves at all, not necessarily that it actually reaches your intended destination. Some applications lock the mouse cursor to certain regions of the screen, so waiting for any movement is better in the general case than waiting for a specific target.</p>
-<dt><code>&#8211;clearmodifiers</code></p>
-<dd> See <font SIZE="-1">CLEARMODIFIERS</font></dl>
+<dt><code>&#8211;clearmodifiers</code></dt>
+<dd> See <font SIZE="-1">CLEARMODIFIERS</font></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>click</code> <i>[options]</i> <i>button</i></p>
-<dd> Send a click, that is, a mousedown followed by mouseup for the given button with a short delay between the two (currently 12ms). </p>
+</dl>
+<dt><code>click</code> <i>[options]</i> <i>button</i></dt>
+<dd> Send a click, that is, a mousedown followed by mouseup for the given button with a short delay between the two (currently 12ms). </dd>
 <p> Buttons generally map this way: Left mouse is 1, middle is 2, right is 3, wheel up is 4, wheel down is 5.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;clearmodifiers</code></p>
-<dd> Clear modifiers before clicking. See <font SIZE="-1">CLEARMODIFIERS</font> below.</p>
-<dt><code>&#8211;repeat</code> <font SIZE="-1">REPEAT</font></p>
-<dd> Specify how many times to click. Default is 1. For a double-click, use &#8216;&#8211;repeat 2&#8217;</p>
-<dt><code>&#8211;delay</code> <font SIZE="-1">MILLISECONDS</font></p>
-<dd> Specify how long, in milliseconds, to delay between clicks. This option is not used if the <i>&#8211;repeat</i> flag is set to 1 (default).</p>
-<dt><code>&#8211;window</code> <font SIZE="-1">WINDOW</font></p>
-<dd> Specify a window to send a click to. See &#8220;<font SIZE="-1">SENDEVENT NOTES&#8221;</font> below for caveats. Uses the current mouse position when generating the event. </p>
+<dt><code>&#8211;clearmodifiers</code></dt>
+<dd> Clear modifiers before clicking. See <font SIZE="-1">CLEARMODIFIERS</font> below.</dd>
+<dt><code>&#8211;repeat</code> <font SIZE="-1">REPEAT</font></dt>
+<dd> Specify how many times to click. Default is 1. For a double-click, use &#8216;&#8211;repeat 2&#8217;</dd>
+<dt><code>&#8211;delay</code> <font SIZE="-1">MILLISECONDS</font></dt>
+<dd> Specify how long, in milliseconds, to delay between clicks. This option is not used if the <i>&#8211;repeat</i> flag is set to 1 (default).</dd>
+<dt><code>&#8211;window</code> <font SIZE="-1">WINDOW</font></dt>
+<dd> Specify a window to send a click to. See &#8220;<font SIZE="-1">SENDEVENT NOTES&#8221;</font> below for caveats. Uses the current mouse position when generating the event. </dd>
 <p> The default, if no window is given, depends on the window stack. If the window stack is empty the current window is typed at using <font SIZE="-1">XTEST.</font> Otherwise, the default is &#8220;%1&#8221; (see &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font>).</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mousedown</code> <i>[options]</i> <i>button</i></p>
-<dd> Same as <code>click</code>, except only a mouse down is sent.</p>
-<dt><code>mouseup</code> <i>[options]</i> <i>button</i></p>
-<dd> Same as <code>click</code>, except only a mouse up is sent.</p>
-<dt><code>getmouselocation</code> <i>[&#8211;shell]</i></p>
-<dd> Outputs the x, y, screen, and window id of the mouse cursor. Screen numbers will be nonzero if you have multiple monitors and are not using Xinerama.</p>
+</dl>
+<dt><code>mousedown</code> <i>[options]</i> <i>button</i></dt>
+<dd> Same as <code>click</code>, except only a mouse down is sent.</dd>
+<dt><code>mouseup</code> <i>[options]</i> <i>button</i></dt>
+<dd> Same as <code>click</code>, except only a mouse up is sent.</dd>
+<dt><code>getmouselocation</code> <i>[&#8211;shell]</i></dt>
+<dd> Outputs the x, y, screen, and window id of the mouse cursor. Screen numbers will be nonzero if you have multiple monitors and are not using Xinerama.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;shell</code></p>
-<dd> This makes getmouselocation output shell data you can eval. Example: </p>
+<dt><code>&#8211;shell</code></dt>
+<dd> This makes getmouselocation output shell data you can eval. Example: </dd>
 <pre>
  % xdotool getmouselocation --shell
  X=880
@@ -164,23 +149,20 @@ description: "xdotool – command-line X11 automation tool"
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>behave_screen_edge</code> <i>[options]</i> <i>where</i> <i>command &#8230;</i></p>
-<dd> Bind an action to events when the mouse hits the screen edge or corner. </p>
+</dl>
+<dt><code>behave_screen_edge</code> <i>[options]</i> <i>where</i> <i>command &#8230;</i></dt>
+<dd> Bind an action to events when the mouse hits the screen edge or corner. </dd>
 <p> Options are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>&#8211;delay </i><font SIZE="-1"><i>MILLISECONDS</i></font><i></i></p>
-<dd> Delay in milliseconds before running the command. This allows you to require a given edge or corner to be held for a short period before your command will run. If you leave the edge or corner before the delay expires then the time will reset.</p>
-<dt><i>&#8211;quiesce </i><font SIZE="-1"><i>MILLISECONDS</i></font><i></i></p>
-<dd> Delay in milliseconds before the next command will run. This helps prevent accidentally running your command extra times; especially useful if you have a very short &#8211;delay (like the default of 0).</dl>
+<dt><i>&#8211;delay </i><font SIZE="-1"><i>MILLISECONDS</i></font><i></i></dt>
+<dd> Delay in milliseconds before running the command. This allows you to require a given edge or corner to be held for a short period before your command will run. If you leave the edge or corner before the delay expires then the time will reset.</dd>
+<dt><i>&#8211;quiesce </i><font SIZE="-1"><i>MILLISECONDS</i></font><i></i></dt>
+<dd> Delay in milliseconds before the next command will run. This helps prevent accidentally running your command extra times; especially useful if you have a very short &#8211;delay (like the default of 0).</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Event timeline </p>
 <pre>
  * Mouse hits an edge or corner.
@@ -190,27 +172,27 @@ description: "xdotool – command-line X11 automation tool"
    trigger cannot occur
 </pre>
 <p> Valid &#8216;where&#8217; values are:</p>
-<dl>
-<dt>left</p>
+</dd><dl>
+<dt>left</dt>
 <dd>
-<dt>top-left</p>
+</dd><dt>top-left</dt>
 <dd>
-<dt>top</p>
+</dd><dt>top</dt>
 <dd>
-<dt>top-right</p>
+</dd><dt>top-right</dt>
 <dd>
-<dt>right</p>
+</dd><dt>right</dt>
 <dd>
-<dt>bottom-left</p>
+</dd><dt>bottom-left</dt>
 <dd>
-<dt>bottom</p>
+</dd><dt>bottom</dt>
 <dd>
-<dt>bottom-right</p>
-<dd></dl>
+</dd><dt>bottom-right</dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Examples:<br />
 &nbsp;#&nbsp;Activate google-chrome when you move the mouse to the bottom-left corner:<br />
 &nbsp;xdotool behave_screen_edge bottom-left&nbsp;\<br />
@@ -225,54 +207,52 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
             windowactivate-- sync key-- delay 250 ctrl +
     t ctrl + k ctrl + v Return
 </code></pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>WINDOW COMMANDS</h2>
 <dl>
-<dt><code>search</code> <i>[options]</i> <i>pattern</i></p>
-<dd> Search for windows with titles, names, or classes with a regular expression pattern. The output is line-delimited list of X window identifiers. If you are using &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font>, the search command will only write window ids to stdout if it is the last (or only) command in the chain; otherwise, it is silent. </p>
+<dt><code>search</code> <i>[options]</i> <i>pattern</i></dt>
+<dd> Search for windows with titles, names, or classes with a regular expression pattern. The output is line-delimited list of X window identifiers. If you are using &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font>, the search command will only write window ids to stdout if it is the last (or only) command in the chain; otherwise, it is silent. </dd>
 <p> The result is saved to the window stack for future chained commands. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for details. </p>
 <p> The default options are <tt>&quot;--name --class --classname&quot;</tt> (unless you specify one one or more of &#8211;name &#8211;class or &#8211;classname). </p>
 <p> The options available are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;class</code></p>
-<dd> Match against the window class.</p>
-<dt><code>&#8211;classname</code></p>
-<dd> Match against the window classname.</p>
-<dt><code>&#8211;maxdepth</code> N</p>
-<dd> Set recursion/child search depth. Default is -1, meaning infinite. 0 means no depth, only root windows will be searched. If you only want toplevel windows, set maxdepth of 1 (or 2, depending on how your window manager does decorations).</p>
-<dt><code>&#8211;name</code></p>
-<dd> Match against the window name. This is the same string that is displayed in the window titlebar.</p>
-<dt><code>&#8211;onlyvisible</code></p>
-<dd> Show only visible windows in the results. This means ones with map state IsViewable.</p>
-<dt><code>&#8211;pid </code><font SIZE="-1"><code>PID</code></font></p>
-<dd> Match windows that belong to a specific process id. This may not work for some X applications that do not set this metadata on its windows.</p>
-<dt><code>&#8211;screen N</code></p>
-<dd> Select windows only on a specific screen. Default is to search all screens. Only meaningful if you have multiple displays and are not using Xinerama.</p>
-<dt><code>&#8211;desktop N</code></p>
-<dd> Only match windows on a certain desktop. &#8216;N&#8217; is a number. The default is to search all desktops.</p>
-<dt><code>&#8211;limit N</code></p>
-<dd> Stop searching after finding N matching windows. Specifying a limit will help speed up your search if you only want a few results. </p>
+<dt><code>&#8211;class</code></dt>
+<dd> Match against the window class.</dd>
+<dt><code>&#8211;classname</code></dt>
+<dd> Match against the window classname.</dd>
+<dt><code>&#8211;maxdepth</code> N</dt>
+<dd> Set recursion/child search depth. Default is -1, meaning infinite. 0 means no depth, only root windows will be searched. If you only want toplevel windows, set maxdepth of 1 (or 2, depending on how your window manager does decorations).</dd>
+<dt><code>&#8211;name</code></dt>
+<dd> Match against the window name. This is the same string that is displayed in the window titlebar.</dd>
+<dt><code>&#8211;onlyvisible</code></dt>
+<dd> Show only visible windows in the results. This means ones with map state IsViewable.</dd>
+<dt><code>&#8211;pid </code><font SIZE="-1"><code>PID</code></font></dt>
+<dd> Match windows that belong to a specific process id. This may not work for some X applications that do not set this metadata on its windows.</dd>
+<dt><code>&#8211;screen N</code></dt>
+<dd> Select windows only on a specific screen. Default is to search all screens. Only meaningful if you have multiple displays and are not using Xinerama.</dd>
+<dt><code>&#8211;desktop N</code></dt>
+<dd> Only match windows on a certain desktop. &#8216;N&#8217; is a number. The default is to search all desktops.</dd>
+<dt><code>&#8211;limit N</code></dt>
+<dd> Stop searching after finding N matching windows. Specifying a limit will help speed up your search if you only want a few results. </dd>
 <p> The default is no search limit (which is equivalent to &#8216;&#8211;limit 0&#8217;)</p>
-<dt><code>&#8211;title</code></p>
-<dd> <font SIZE="-1">DEPRECATED.</font> See &#8211;name.</p>
-<dt><code>&#8211;all</code></p>
-<dd> Require that all conditions be met. For example: </p>
+<dt><code>&#8211;title</code></dt>
+<dd> <font SIZE="-1">DEPRECATED.</font> See &#8211;name.</dd>
+<dt><code>&#8211;all</code></dt>
+<dd> Require that all conditions be met. For example: </dd>
 <pre>
  xdotool search --all --pid 1424 --name &quot;Hello World&quot;
 </pre>
 <p> This will match only windows that have &#8220;Hello World&#8221; as a name and are owned by pid 1424.</p>
-<dt><code>&#8211;any</code></p>
-<dd> Match windows that match any condition (logically, &#8216;or&#8217;). This is on by default. For example: </p>
+<dt><code>&#8211;any</code></dt>
+<dd> Match windows that match any condition (logically, &#8216;or&#8217;). This is on by default. For example: </dd>
 <pre>
  xdotool search --any --pid 1424 --name &quot;Hello World&quot;
 </pre>
 <p> This will match any windows owned by pid 1424 or windows with name &#8220;Hello World&#8221;</p>
-<dt><code>&#8211;sync </code></p>
-<dd> Block until there are results. This is useful when you are launching an application and want to wait until the application window is visible. For example: </p>
+<dt><code>&#8211;sync </code></dt>
+<dd> Block until there are results. This is useful when you are launching an application and want to wait until the application window is visible. For example: </dd>
 <pre>
  google-chrome &amp;
  xdotool search --sync --onlyvisible --class &quot;google-chrome&quot;
@@ -280,35 +260,32 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>selectwindow</code></p>
-<dd> Get the window id (for a client) by clicking on it. Useful for having scripts query you humans for what window to act on. For example, killing a window by clicking on it: </p>
+</dl>
+<dt><code>selectwindow</code></dt>
+<dd> Get the window id (for a client) by clicking on it. Useful for having scripts query you humans for what window to act on. For example, killing a window by clicking on it: </dd>
 <pre>
  xdotool selectwindow windowkill
 </pre>
-<dt><code>behave</code> <i>window</i> <i>action</i> <i>command &#8230;</i></p>
-<dd> Bind an action to an event on a window. This lets you run additional xdotool commands whenever a matched event occurs. </p>
+<dt><code>behave</code> <i>window</i> <i>action</i> <i>command &#8230;</i></dt>
+<dd> Bind an action to an event on a window. This lets you run additional xdotool commands whenever a matched event occurs. </dd>
 <p> The command run as a result of the behavior is run with <tt>%1</tt> being the window that was acted upon. Examples follow after the event list. </p>
 <p> The following are valid events:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>mouse-enter</code></p>
-<dd> Fires when the mouse enters a window. This is similar to &#8216;mouse over&#8217; events in javascript, if that helps.</p>
-<dt><code>mouse-leave</code></p>
-<dd> Fires when the mouse leaves a window. This is the opposite of &#8216;mouse-enter&#8217;</p>
-<dt><code>mouse-click</code></p>
-<dd> Fires when the mouse is clicked. Specifically, when the mouse button is released.</p>
-<dt><code>focus</code></p>
-<dd> Fires when the window gets input focus.</p>
-<dt><code>blur</code></p>
-<dd> Fires when the window loses focus.</dl>
+<dt><code>mouse-enter</code></dt>
+<dd> Fires when the mouse enters a window. This is similar to &#8216;mouse over&#8217; events in javascript, if that helps.</dd>
+<dt><code>mouse-leave</code></dt>
+<dd> Fires when the mouse leaves a window. This is the opposite of &#8216;mouse-enter&#8217;</dd>
+<dt><code>mouse-click</code></dt>
+<dd> Fires when the mouse is clicked. Specifically, when the mouse button is released.</dd>
+<dt><code>focus</code></dt>
+<dd> Fires when the window gets input focus.</dd>
+<dt><code>blur</code></dt>
+<dd> Fires when the window loses focus.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Examples: </p>
 <pre>
  # Print the cursor location whenever the mouse enters a currently-visible
@@ -319,33 +296,30 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
  # Emulate focus-follows-mouse
  xdotool search . behave %@ mouse-enter windowfocus
 </pre>
-</dl>
-<dt><code>getwindowpid</code> <i>[window]</i></p>
-<dd> Output the <font SIZE="-1">PID</font> owning a given window. This requires effort from the application owning a window and may not work for all windows. This uses _NET_WM_PID property of the window. See &#8220;<font SIZE="-1">EXTENDED WINDOW MANAGER HINTS&#8221;</font> below for more information. </p>
+</dd></dl>
+<dt><code>getwindowpid</code> <i>[window]</i></dt>
+<dd> Output the <font SIZE="-1">PID</font> owning a given window. This requires effort from the application owning a window and may not work for all windows. This uses _NET_WM_PID property of the window. See &#8220;<font SIZE="-1">EXTENDED WINDOW MANAGER HINTS&#8221;</font> below for more information. </dd>
 <p> If no window is given, the default is &#8216;%1&#8217;. If no windows are on the stack, then this is an error. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> for more details. </p>
 <p> Example: Find the <font SIZE="-1">PID</font> for all xterms:<br />
 &nbsp;xdotool search &#8211;class xterm getwindowpid&nbsp;%@</p>
-<dt><code>getwindowname</code> <i>[window]</i></p>
-<dd> Output the name of a given window, also known as the title. This is the text displayed in the window&#8217;s titlebar by your window manager. </p>
+<dt><code>getwindowname</code> <i>[window]</i></dt>
+<dd> Output the name of a given window, also known as the title. This is the text displayed in the window&#8217;s titlebar by your window manager. </dd>
 <p> If no window is given, the default is &#8216;%1&#8217;. If no windows are on the stack, then this is an error. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> for more details.</p>
-<dt><code>getwindowgeometry</code> [options] <i>[window]</i></p>
-<dd> Output the geometry (location and position) of a window. The values include: x, y, width, height, and screen number.</p>
+<dt><code>getwindowgeometry</code> [options] <i>[window]</i></dt>
+<dd> Output the geometry (location and position) of a window. The values include: x, y, width, height, and screen number.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;shell</code></p>
-<dd> Output values suitable for &#8216;eval&#8217; in a shell.</dl>
+<dt><code>&#8211;shell</code></dt>
+<dd> Output values suitable for &#8216;eval&#8217; in a shell.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>getwindowfocus</code> [-f]</p>
-<dd> Prints the window id of the currently focused window. Saves the result to the window stack. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> for more details. </p>
+</dl>
+<dt><code>getwindowfocus</code> [-f]</dt>
+<dd> Prints the window id of the currently focused window. Saves the result to the window stack. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> for more details. </dd>
 <p> If the current window has no <font SIZE="-1">WM_CLASS</font> property, we assume it is not a normal top-level window and traverse up the parents until we find a window with a <font SIZE="-1">WM_CLASS</font> set and return that window id. </p>
 <p> If you really want the window currently having focus and don&#8217;t care if it has a <font SIZE="-1">WM_CLASS</font> setting, then use &#8216;getwindowfocus -f&#8217;</p>
-<dt><code>windowsize</code> [options] [window] width height</p>
-<dd> Set the window size of the given window. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </p>
+<dt><code>windowsize</code> [options] [window] width height</dt>
+<dd> Set the window size of the given window. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </dd>
 <p> Percentages are valid for width and height. They are relative to the geometry of the screen the window is on. For example, to make a window the full width of the screen, but half height: </p>
 <pre>
  xdotool windowsize I&lt;window&gt; 100% 50%
@@ -353,22 +327,20 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
 <p> Percentages are valid with &#8211;usehints and still mean pixel-width relative to the screen size. </p>
 <p> The options available are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;usehints</code></p>
-<dd> Use window sizing hints (when available) to set width and height. This is useful on terminals for setting the size based on row/column of text rather than pixels.</p>
-<dt><code>&#8211;sync</code></p>
-<dd> After sending the window size request, wait until the window is actually resized. If no change is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on. </p>
+<dt><code>&#8211;usehints</code></dt>
+<dd> Use window sizing hints (when available) to set width and height. This is useful on terminals for setting the size based on row/column of text rather than pixels.</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> After sending the window size request, wait until the window is actually resized. If no change is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on. </dd>
 <p> Note: Because many window managers may ignore or alter the original resize request, we will wait until the size changes from its original size, not necessary to the requested size.</dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Example: To set a terminal to be 80&#215;24 characters, you would use:<br />
-&nbsp;xdotool windowsize &#8211;usehints&nbsp;<i>some_windowid</i>&nbsp;80 24</dl>
-<dt><code>windowmove</code> <i>[options]</i> <i>[window]</i> <i>x</i> <i>y</i></p>
-<dd> Move the window to the given position. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </p>
+&nbsp;xdotool windowsize &#8211;usehints&nbsp;<i>some_windowid</i>&nbsp;80 24</dd></dl>
+<dt><code>windowmove</code> <i>[options]</i> <i>[window]</i> <i>x</i> <i>y</i></dt>
+<dd> Move the window to the given position. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </dd>
 <p> If the given x coordinate is literally &#8216;x&#8217;, then the window&#8217;s current x position will be unchanged. The same applies for &#8216;y&#8217;. </p>
 <p> Examples: </p>
 <pre>
@@ -382,163 +354,137 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
  xdotool windowmove I&lt;window&gt; 100% 50%
 </pre>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;sync</code></p>
-<dd> After sending the window move request, wait until the window is actually moved. If no movement is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on.</p>
-<dt><code>&#8211;relative</code></p>
-<dd> Make movement relative to the current window position.</dl>
+<dt><code>&#8211;sync</code></dt>
+<dd> After sending the window move request, wait until the window is actually moved. If no movement is necessary, we will not wait. This is useful for scripts that depend on actions being completed before moving on.</dd>
+<dt><code>&#8211;relative</code></dt>
+<dd> Make movement relative to the current window position.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>windowfocus</code> <i>[options]</i> <i>[window]</i></p>
-<dd> Focus a window. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </p>
+</dl>
+<dt><code>windowfocus</code> <i>[options]</i> <i>[window]</i></dt>
+<dd> Focus a window. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </dd>
 <p> Uses XSetInputFocus which may be ignored by some window managers or programs.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;sync</code></p>
-<dd> After sending the window focus request, wait until the window is actually focused. This is useful for scripts that depend on actions being completed before moving on.</dl>
+<dt><code>&#8211;sync</code></dt>
+<dd> After sending the window focus request, wait until the window is actually focused. This is useful for scripts that depend on actions being completed before moving on.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>windowmap</code> <i>[options]</i> <i>[window]</i></p>
-<dd> Map a window. In X11 terminology, mapping a window means making it visible on the screen. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
+</dl>
+<dt><code>windowmap</code> <i>[options]</i> <i>[window]</i></dt>
+<dd> Map a window. In X11 terminology, mapping a window means making it visible on the screen. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;sync</code></p>
-<dd> After requesting the window map, wait until the window is actually mapped (visible). This is useful for scripts that depend on actions being completed before moving on.</dl>
+<dt><code>&#8211;sync</code></dt>
+<dd> After requesting the window map, wait until the window is actually mapped (visible). This is useful for scripts that depend on actions being completed before moving on.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>windowminimize</code> <i>[options]</i> <i>[window]</i></p>
-<dd> Minimize a window. In X11 terminology, this is called &#8216;iconify.&#8217; If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
+</dl>
+<dt><code>windowminimize</code> <i>[options]</i> <i>[window]</i></dt>
+<dd> Minimize a window. In X11 terminology, this is called &#8216;iconify.&#8217; If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;sync</code></p>
-<dd> After requesting the window minimize, wait until the window is actually minimized. This is useful for scripts that depend on actions being completed before moving on.</dl>
+<dt><code>&#8211;sync</code></dt>
+<dd> After requesting the window minimize, wait until the window is actually minimized. This is useful for scripts that depend on actions being completed before moving on.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>windowraise</code> <i>[window_id=%1]</i></p>
-<dd> Raise the window to the top of the stack. This may not work on all window managers. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
-<dt><code>windowreparent</code> <i>[source_window]</i> <i>destination_window</i></p>
-<dd> Reparent a window. This moves the <i>source_window</i> to be a child window of <i>destination_window</i>. If no source is given, <tt>%1</tt> is the default. &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> window references (like <tt>%1</tt>) are valid for both <i>source_window</i> and <i>destination_window</i> See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
-<dt><code>windowclose</code> <i>[window]</i></p>
-<dd> Close a window. This action will destroy the window, but will not try to kill the client controlling it. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
-<dt><code>windowkill</code> <i>[window]</i></p>
-<dd> Kill a window. This action will destroy the window and kill the client controlling it. If no window is given, <tt>%1</tt> is the default. See <font SIZE="-1">WINDOW STACK</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
-<dt><code>windowunmap</code> <i>[options]</i> <i>[window_id=%1]</i></p>
-<dd> Unmap a window, making it no longer appear on your screen. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
+</dl>
+<dt><code>windowraise</code> <i>[window_id=%1]</i></dt>
+<dd> Raise the window to the top of the stack. This may not work on all window managers. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
+<dt><code>windowreparent</code> <i>[source_window]</i> <i>destination_window</i></dt>
+<dd> Reparent a window. This moves the <i>source_window</i> to be a child window of <i>destination_window</i>. If no source is given, <tt>%1</tt> is the default. &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> window references (like <tt>%1</tt>) are valid for both <i>source_window</i> and <i>destination_window</i> See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
+<dt><code>windowclose</code> <i>[window]</i></dt>
+<dd> Close a window. This action will destroy the window, but will not try to kill the client controlling it. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
+<dt><code>windowkill</code> <i>[window]</i></dt>
+<dd> Kill a window. This action will destroy the window and kill the client controlling it. If no window is given, <tt>%1</tt> is the default. See <font SIZE="-1">WINDOW STACK</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
+<dt><code>windowunmap</code> <i>[options]</i> <i>[window_id=%1]</i></dt>
+<dd> Unmap a window, making it no longer appear on your screen. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;sync</code></p>
-<dd> After requesting the window unmap, wait until the window is actually unmapped (hidden). This is useful for scripts that depend on actions being completed before moving on.</dl>
+<dt><code>&#8211;sync</code></dt>
+<dd> After requesting the window unmap, wait until the window is actually unmapped (hidden). This is useful for scripts that depend on actions being completed before moving on.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>set_window</code> <i>[options]</i> <i>[windowid=%1]</i></p>
-<dd> Set properties about a window. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </p>
+</dl>
+<dt><code>set_window</code> <i>[options]</i> <i>[windowid=%1]</i></dt>
+<dd> Set properties about a window. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details. </dd>
 <p> Options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;name newname</code></p>
-<dd> Set window <font SIZE="-1">WM_NAME</font> (the window title, usually)</p>
-<dt><code>&#8211;icon-name newiconname</code></p>
-<dd> Set window <font SIZE="-1">WM_ICON_NAME</font> (the window title when minimized, usually)</p>
-<dt><code>&#8211;role newrole</code></p>
-<dd> Set window <font SIZE="-1">WM_WINDOW_ROLE</font></p>
-<dt><code>&#8211;classname newclassname</code></p>
-<dd> Set window class name (not to be confused with window class)</p>
-<dt><code>&#8211;class newclass</code></p>
-<dd> Set window class (not to be confused with window class name)</p>
-<dt><code>&#8211;urgency value</code></p>
-<dd> Set window urgency hint. If the value is 1, the window will be marked urgent, and the window manager will somehow highlight it for the user&#8217;s attention. If the value is 0, the window will be marked non-urgent.</p>
-<dt><code>&#8211;overrideredirect value</code></p>
-<dd> Set window&#8217;s override_redirect value. This value is a hint to the window manager for whether or not it should be managed. If the redirect value is 0, then the window manager will draw borders and treat this window normally. If the value is 1, the window manager will ignore this window. </p>
+<dt><code>&#8211;name newname</code></dt>
+<dd> Set window <font SIZE="-1">WM_NAME</font> (the window title, usually)</dd>
+<dt><code>&#8211;icon-name newiconname</code></dt>
+<dd> Set window <font SIZE="-1">WM_ICON_NAME</font> (the window title when minimized, usually)</dd>
+<dt><code>&#8211;role newrole</code></dt>
+<dd> Set window <font SIZE="-1">WM_WINDOW_ROLE</font></dd>
+<dt><code>&#8211;classname newclassname</code></dt>
+<dd> Set window class name (not to be confused with window class)</dd>
+<dt><code>&#8211;class newclass</code></dt>
+<dd> Set window class (not to be confused with window class name)</dd>
+<dt><code>&#8211;urgency value</code></dt>
+<dd> Set window urgency hint. If the value is 1, the window will be marked urgent, and the window manager will somehow highlight it for the user&#8217;s attention. If the value is 0, the window will be marked non-urgent.</dd>
+<dt><code>&#8211;overrideredirect value</code></dt>
+<dd> Set window&#8217;s override_redirect value. This value is a hint to the window manager for whether or not it should be managed. If the redirect value is 0, then the window manager will draw borders and treat this window normally. If the value is 1, the window manager will ignore this window. </dd>
 <p> If you change this value, your window manager may not notice the change until the window is mapped again, so you may want to issue &#8216;windowunmap&#8217; and &#8216;windowmap&#8217; to make the window manager take note.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>DESKTOP AND WINDOW COMMANDS</h2>
 <p> These commands follow the <font SIZE="-1">EWMH</font> standard. See the section &#8220;<font SIZE="-1">EXTENDED WINDOW MANAGER HINTS&#8221;</font> for more information.</p>
 <dl>
-<dt><code>windowactivate</code> <i>[options]</i> <i>[window]</i></p>
-<dd> Activate the window. This command is different from windowfocus: if the window is on another desktop, we will switch to that desktop. It also uses a different method for bringing the window up. I recommend trying this command before using windowfocus, as it will work on more window managers. </p>
+<dt><code>windowactivate</code> <i>[options]</i> <i>[window]</i></dt>
+<dd> Activate the window. This command is different from windowfocus: if the window is on another desktop, we will switch to that desktop. It also uses a different method for bringing the window up. I recommend trying this command before using windowfocus, as it will work on more window managers. </dd>
 <p> If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;sync</code></p>
-<dd> After sending the window activation, wait until the window is actually activated. This is useful for scripts that depend on actions being completed before moving on.</dl>
+<dt><code>&#8211;sync</code></dt>
+<dd> After sending the window activation, wait until the window is actually activated. This is useful for scripts that depend on actions being completed before moving on.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>getactivewindow</code></p>
-<dd> Output the current active window. This command is often more reliable than getwindowfocus. The result is saved to the window stack. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> for more details.</p>
-<dt><code>set_num_desktops</code> <i>number</i></p>
-<dd> Changes the number of desktops or workspaces.</p>
-<dt><code>get_num_desktops</code></p>
-<dd> Output the current number of desktops.</p>
-<dt><code>get_desktop_viewport</code> <i>[&#8211;shell]</i></p>
-<dd> Report the current viewport&#8217;s position. If &#8211;shell is given, the output is friendly to shell eval. </p>
+</dl>
+<dt><code>getactivewindow</code></dt>
+<dd> Output the current active window. This command is often more reliable than getwindowfocus. The result is saved to the window stack. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> for more details.</dd>
+<dt><code>set_num_desktops</code> <i>number</i></dt>
+<dd> Changes the number of desktops or workspaces.</dd>
+<dt><code>get_num_desktops</code></dt>
+<dd> Output the current number of desktops.</dd>
+<dt><code>get_desktop_viewport</code> <i>[&#8211;shell]</i></dt>
+<dd> Report the current viewport&#8217;s position. If &#8211;shell is given, the output is friendly to shell eval. </dd>
 <p> Viewports are sometimes used instead of &#8216;virtual desktops&#8217; on some window managers. A viewport is simply a view on a very large desktop area.</p>
-<dt><code>set_desktop_viewport</code> <i>x</i> <i>y</i></p>
-<dd> Move the viewport to the given position. Not all requests will be obeyed &#8211; some windowmangers only obey requests that align to workspace boundaries, such as the screen size. </p>
+<dt><code>set_desktop_viewport</code> <i>x</i> <i>y</i></dt>
+<dd> Move the viewport to the given position. Not all requests will be obeyed &#8211; some windowmangers only obey requests that align to workspace boundaries, such as the screen size. </dd>
 <p> For example, if your screen is 1280&#215;800, you can move to the 2nd workspace by doing:<br />
 &nbsp;xdotool set_desktop_viewport 1280 0</p>
-<dt><code>set_desktop</code> <i>[options]</i> <i>desktop_number</i></p>
-<dd> Change the current view to the specified desktop.</p>
+<dt><code>set_desktop</code> <i>[options]</i> <i>desktop_number</i></dt>
+<dd> Change the current view to the specified desktop.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;relative</code></p>
-<dd> Use relative movements instead of absolute. This lets you move relative to the current desktop.</dl>
+<dt><code>&#8211;relative</code></dt>
+<dd> Use relative movements instead of absolute. This lets you move relative to the current desktop.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>get_desktop</code></p>
-<dd> Output the current desktop in view.</p>
-<dt><code>set_desktop_for_window</code> <i>[window]</i> <i>desktop_number</i></p>
-<dd> Move a window to a different desktop. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</p>
-<dt><code>get_desktop_for_window</code> <i>[window]</i></p>
-<dd> Output the desktop currently containing the given window. Move a window to a different desktop. If no window is given, <tt>%1</tt> is the default. See <font SIZE="-1">WINDOW STACK</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dl>
+</dl>
+<dt><code>get_desktop</code></dt>
+<dd> Output the current desktop in view.</dd>
+<dt><code>set_desktop_for_window</code> <i>[window]</i> <i>desktop_number</i></dt>
+<dd> Move a window to a different desktop. If no window is given, <tt>%1</tt> is the default. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd>
+<dt><code>get_desktop_for_window</code> <i>[window]</i></dt>
+<dd> Output the desktop currently containing the given window. Move a window to a different desktop. If no window is given, <tt>%1</tt> is the default. See <font SIZE="-1">WINDOW STACK</font> and &#8220;<font SIZE="-1">COMMAND CHAINING&#8221;</font> for more details.</dd></dl>
 <h2>MISCELLANEOUS COMMANDS</h2>
 <dl>
-<dt><code>exec</code> <i>[options]</i> <i>command</i> <i>[&#8230;]</i></p>
-<dd> Execute a program. This is often useful when combined with behave_screen_edge to do things like locking your screen. </p>
+<dt><code>exec</code> <i>[options]</i> <i>command</i> <i>[&#8230;]</i></dt>
+<dd> Execute a program. This is often useful when combined with behave_screen_edge to do things like locking your screen. </dd>
 <p> Options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;sync</code></p>
-<dd> Block until the child process exits. The child process exit status is then passed to the parent process (xdotool) which copies it.</dl>
+<dt><code>&#8211;sync</code></dt>
+<dd> Block until the child process exits. The child process exit status is then passed to the parent process (xdotool) which copies it.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Examples:<br />
 &nbsp;#&nbsp;Lock the screen when the mouse sits in the top-right corner<br />
 &nbsp;xdotool behave_screen_edge &#8211;delay 1000 top-right&nbsp;\<br />
@@ -551,27 +497,27 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
  # This succeeds, though, since we do not use --sync on the exec command.
  xdotool exec /bin/false mousemove 0 0
 </pre>
-</dl>
-<dt><code>sleep</code> <i>seconds</i></p>
-<dd> Sleep for a specified period. Fractions of seconds (like 1.3, or 0.4) are valid, here.</dl>
+</dd></dl>
+<dt><code>sleep</code> <i>seconds</i></dt>
+<dd> Sleep for a specified period. Fractions of seconds (like 1.3, or 0.4) are valid, here.</dd></dl>
 <h2>SCRIPTS</h2>
 <p> xdotool can read a list of commands via stdin or a file if you want. A script will fail when any command fails. </p>
 <p> Truthfully, &#8216;script&#8217; mode isn&#8217;t fully fleshed out and may fall below your expectations. If you have suggestions, please email the list or file a bug (See <font SIZE="-1">CONTACT</font>). </p>
 <p> Scripts can use positional arguments (Represented by <tt>$1</tt>, <tt>$2</tt>, &#8230;) and environment variables (like <tt>$HOME</tt> or <tt>$WINDOWID</tt>). Quoting arguments should work as expected. </p>
 <p> Scripts are processed for parameter and environment variable expansion and then run as if you had invoked xdotool with the entire script on one line (using <font SIZE="-1">COMMAND CHAINING</font>).</p>
 <dl>
-<dt>&bull;</p>
-<dd> Read commands from a file: </p>
+<dt>&bull;</dt>
+<dd> Read commands from a file: </dd>
 <pre>
  xdotool filename
 </pre>
-<dt>&bull;</p>
-<dd> Read commands from stdin: </p>
+<dt>&bull;</dt>
+<dd> Read commands from stdin: </dd>
 <pre>
  xdotool -
 </pre>
-<dt>&bull;</p>
-<dd> Read commands from a redirected file </p>
+<dt>&bull;</dt>
+<dd> Read commands from a redirected file </dd>
 <pre>
  xdotool - &lt; myfile
 </pre>
@@ -600,22 +546,22 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
 <p> The result would be &#8216;a&#8217; or &#8216;A&#8217; depending on whether or not you were holding the shift key on your keyboard. Often it is undesirable to have any modifiers active, so you can tell xdotool to clear any active modifiers. </p>
 <p> The order of operations if you hold shift while running &#8216;xdotool key &#8211;clearmodifiers a&#8217; is this:</p>
 <dl>
-<dt>1. Query for all active modifiers (finds shift, in this case)</p>
+<dt>1. Query for all active modifiers (finds shift, in this case)</dt>
 <dd>
-<dt>2. Try to clear shift by sending &#8216;key up&#8217; for the shift key</p>
+</dd><dt>2. Try to clear shift by sending &#8216;key up&#8217; for the shift key</dt>
 <dd>
-<dt>3. Runs normal &#8216;xdotool key a&#8217;</p>
+</dd><dt>3. Runs normal &#8216;xdotool key a&#8217;</dt>
 <dd>
-<dt>4. Restore shift key by sending &#8216;key down&#8217; for shift</p>
-<dd></dl>
+</dd><dt>4. Restore shift key by sending &#8216;key down&#8217; for shift</dt>
+<dd></dd></dl>
 <p> The <i>&#8211;clearmodifiers</i> flag can currently clear of the following:</p>
 <dl>
-<dt>&bull;</p>
-<dd> any key in your active keymap that has a modifier associated with it. (See <i><a href="/docs/linux/man/1-xmodmap/">xmodmap</a></i>(1)&#8217;s &#8216;xmodmap -pm&#8217; output)</p>
-<dt>&bull;</p>
-<dd> mouse buttons (1, 2, 3, 4, and 5)</p>
-<dt>&bull;</p>
-<dd> caps lock</dl>
+<dt>&bull;</dt>
+<dd> any key in your active keymap that has a modifier associated with it. (See <i><a href="/docs/linux/man/1-xmodmap/">xmodmap</a></i>(1)&#8217;s &#8216;xmodmap -pm&#8217; output)</dd>
+<dt>&bull;</dt>
+<dd> mouse buttons (1, 2, 3, 4, and 5)</dd>
+<dt>&bull;</dt>
+<dd> caps lock</dd></dl>
 <h2>SENDEVENT NOTES</h2>
 <p> If you are trying to send key input to a specific window, and it does not appear to be working, then it&#8217;s likely your application is ignoring the events xdotool is generating. This is fairly common. </p>
 <p> Sending keystrokes to a specific window uses a different <font SIZE="-1">API</font> than simply typing to the active window. If you specify &#8216;xdotool type &#8211;window 12345 hello&#8217; xdotool will generate key events and send them directly to window 12345. However, X11 servers will set a special flag on all events generated in this way (see XEvent.xany.send_event in X11&#8217;s manual). Many programs observe this flag and reject these events. </p>
@@ -661,22 +607,22 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
 <h2>EXTENDED WINDOW MANAGER HINTS</h2>
 <p> The following pieces of the <font SIZE="-1">EWMH</font> standard are supported:</p>
 <dl>
-<dt>_NET_SUPPORTED</p>
-<dd> Asks the window manager what is supported</p>
-<dt>_NET_CURRENT_DESKTOP</p>
-<dd> Query and set the current desktop. Support for this enables these commands: <tt>&quot;set_desktop&quot;</tt>, <tt>&quot;get_desktop&quot;</tt>.</p>
-<dt>_NET_WM_DESKTOP</p>
-<dd> Query and set what desktop a window is living in. Support for this enables these commands: <tt>&quot;set_desktop_for_window&quot;</tt>, <tt>&quot;get_desktop_for_window&quot;</tt>.</p>
-<dt>_NET_ACTIVE_WINDOW</p>
-<dd> Allows you to query and set the active window by asking the window manager to bring it forward. Support for this enables these commands: <tt>&quot;windowactivate&quot;</tt>, <tt>&quot;getactivewindow&quot;</tt>.</p>
-<dt>_NET_WM_PID</p>
-<dd> This feature is application dependent, not window-manager dependent. Query the <font SIZE="-1">PID</font> owning a given window. Support for this enables these commands: <tt>&quot;getwindowpid&quot;</tt>.</dl>
+<dt>_NET_SUPPORTED</dt>
+<dd> Asks the window manager what is supported</dd>
+<dt>_NET_CURRENT_DESKTOP</dt>
+<dd> Query and set the current desktop. Support for this enables these commands: <tt>&quot;set_desktop&quot;</tt>, <tt>&quot;get_desktop&quot;</tt>.</dd>
+<dt>_NET_WM_DESKTOP</dt>
+<dd> Query and set what desktop a window is living in. Support for this enables these commands: <tt>&quot;set_desktop_for_window&quot;</tt>, <tt>&quot;get_desktop_for_window&quot;</tt>.</dd>
+<dt>_NET_ACTIVE_WINDOW</dt>
+<dd> Allows you to query and set the active window by asking the window manager to bring it forward. Support for this enables these commands: <tt>&quot;windowactivate&quot;</tt>, <tt>&quot;getactivewindow&quot;</tt>.</dd>
+<dt>_NET_WM_PID</dt>
+<dd> This feature is application dependent, not window-manager dependent. Query the <font SIZE="-1">PID</font> owning a given window. Support for this enables these commands: <tt>&quot;getwindowpid&quot;</tt>.</dd></dl>
 <h2>SUPPORTED FEATURES</h2>
 <p> xdotool (and libxdo) will try to function under all circumstances. However, there may be some cases where functionality is not provided by your X server or by your window manager. In these cases, xdotool will try to detect and tell you if an action requires a feature not currently supported by your system. </p>
 <p> For window-manager specific features, see &#8220;<font SIZE="-1">EXTENDED WINDOW MANAGER HINTS&#8221;</font>.</p>
 <dl>
-<dt><font SIZE="-1">XTEST</font></p>
-<dd> If your X server does not support <font SIZE="-1">XTEST,</font> then some typing and mouse movement features may not work. Specifically, typing and mouse actions that act on the &#8220;current window&#8221; (window 0 in libxdo) are unlikely to work. </p>
+<dt><font SIZE="-1">XTEST</font></dt>
+<dd> If your X server does not support <font SIZE="-1">XTEST,</font> then some typing and mouse movement features may not work. Specifically, typing and mouse actions that act on the &#8220;current window&#8221; (window 0 in libxdo) are unlikely to work. </dd>
 <p> In most cases, <font SIZE="-1">XTEST</font> is a feature you can enable on your X server if it is not enabled by default. </p>
 <p> You can see the list of supported X extensions by typing &#8216;xdpyinfo&#8217; and looking the text &#8216;number of extensions: &#8230;&#8217;</dl>
 <h2>BUGS</h2>
@@ -695,3 +641,4 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
 <p> This manual page was written originally by Daniel Kahn Gillmor &lt;dkg [at] fifthhorseman.net&gt; for the Debian project (but may be used by others). It is maintained by Jordan Sissel. </p>
 <p> Patches, ideas, and other contributions by many, nice folks. See the <font SIZE="-1">CHANGELIST</font> file for who provided what. </p>
 <h2>Index</h2>
+</p>

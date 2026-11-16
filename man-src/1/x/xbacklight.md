@@ -14,20 +14,20 @@ description: "xbacklight – adjust backlight brightness using RandR extension"
 <h2>DESCRIPTION</h2>
 <p> <i>Xbacklight</i> is used to adjust the backlight brightness where supported. It finds all outputs on the X server supporting backlight brightness control and changes them all in the same way.</p>
 <dl>
-<dt>-get</p>
-<dd> Print out the current backlight brightness of each output with such a control. The brightness is represented as a percentage of the maximum brightness supported.</p>
-<dt>-set <i>percent</i></p>
-<dd> Sets each backlight brightness to the specified level.</p>
-<dt>-inc <i>percent</i></p>
-<dd> Increases brightness by the specified amount.</p>
-<dt>-dec <i>percent</i></p>
-<dd> Decreases brightness by the specified amount.</p>
-<dt>-help</p>
-<dd> Print out a summary of the usage and exit.</p>
-<dt>-time <i>milliseconds</i></p>
-<dd> Length of time to spend fading the backlight between old and new value. Default is 200.</p>
-<dt>-steps <i>number</i></p>
-<dd> Number of steps to take while fading. Default is 20.</dl>
+<dt>-get</dt>
+<dd> Print out the current backlight brightness of each output with such a control. The brightness is represented as a percentage of the maximum brightness supported.</dd>
+<dt>-set <i>percent</i></dt>
+<dd> Sets each backlight brightness to the specified level.</dd>
+<dt>-inc <i>percent</i></dt>
+<dd> Increases brightness by the specified amount.</dd>
+<dt>-dec <i>percent</i></dt>
+<dd> Decreases brightness by the specified amount.</dd>
+<dt>-help</dt>
+<dd> Print out a summary of the usage and exit.</dd>
+<dt>-time <i>milliseconds</i></dt>
+<dd> Length of time to spend fading the backlight between old and new value. Default is 200.</dd>
+<dt>-steps <i>number</i></dt>
+<dd> Number of steps to take while fading. Default is 20.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-xrandr/">Xrandr</a>(3)</p>
 <h2>AUTHORS</h2>

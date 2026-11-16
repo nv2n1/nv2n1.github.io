@@ -12,21 +12,18 @@ rdma_reg_read - register data buffer(s) for remote RDMA read access.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 struct ibv_mr *rdma_reg_read
-
     (struct rdma_cm_id *id,
-
      void *addr,
-
      size_t length);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference to a communication identifier where the message buffer(s) will be used.
-<dt>addr
-<dd>The address of the memory buffer(s) to register.
-<dt>length
-<dd>The total length of the memory to register.</dl>
+</dt><dd>A reference to a communication identifier where the message buffer(s) will be used.
+</dd><dt>addr
+</dt><dd>The address of the memory buffer(s) to register.
+</dd><dt>length
+</dt><dd>The total length of the memory to register.</dd></dl>
 
 <h2>Description</h2>
 

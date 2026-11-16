@@ -19,115 +19,115 @@ description: "sing – Send ICMP Nasty Garbage packets to network hosts"
 <p> A long number of examples is given at the <code>EXAMPLES</code> section of this page that shows a real use of this program.</p>
 <h2>Most Common Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Help screen.</p>
-<dt><code>-V</code>, <code>&#8211;Version</code></p>
-<dd>Program version.</p>
-<dt><code>-v</code></p>
-<dd>Verbose mode.</p>
-<dt><code>-B</code></p>
-<dd>Send a <code>B</code>ad ICMP Checksum on Information types.</p>
-<dt><code>-c</code> <i>count</i></p>
-<dd>Stop after sending (and receiving) <i>count</i> packets. Information types only.</p>
-<dt><code>-F</code> <i>bytes</i></p>
-<dd>Fragment the entire ICMP packet with <i>bytes</i> size by fragment. Not used on Solaris systems.</p>
-<dt><code>-G</code></p>
-<dd>Set the IP header Don&#8217;t Fragment flag. Not used on Solaris systems.</p>
-<dt><code>-i</code> <i>interface</i></p>
-<dd>Interface (name or IP address) where listen on for replies.</p>
-<dt><code>-l</code> <i>preload</i></p>
-<dd>If <i>preload</i> is specified, <code>sing</code> sends that many packets as fast as possible before falling into its normal mode of behavior. Only the super-user may use this option. Information types only.</p>
-<dt><code>-L</code> <i>logfile</i></p>
-<dd>Save the current session to the file <i>logfile</i>. If <i>logfile</i> exists the data will be appended at end.</p>
-<dt><code>-M</code> <i>os</i></p>
-<dd>Do mimic of the <i>os</i> specified when sending an <i>Echo Request</i> or <i>Echo Reply</i>. <i>os</i> can be <i>win</i>, <i>unix</i>, <i>linux</i>, <i>cisco</i>, <i>solaris</i> or <i>shiva</i>.</p>
-<dt><code>-MAC</code> <i>hw_address</i></p>
-<dd>Do MAC spoofing using the MAC <i>hw_address</i> (maybe to surpass filtered switches). Be aware of using on an interface with a datalink type different of Ethernet. The MAC address must be on hexadecimal form and must be delimited by &#8216;<code>:</code>&#8216; (Example: 00:FF:AC:33:1:B). This option made use of the libnet library to acces the network link layer. Only the super-user can use this option.</p>
-<dt><code>-n</code></p>
-<dd>Don&#8217;t use name resolution.</p>
-<dt><code>-O</code></p>
-<dd>Do fingerprinting to discover the target OS.</p>
-<dt><code>-p</code> <i>pattern</i></p>
-<dd>You may specify a <i>pattern</i> of bytes to fill out the packet you send. This is useful for diagnosing data-dependent problems in a network. For example, `-p INPACK&#8221; will cause the sent packet to be filled with the word INPACK.</p>
-<dt><code>-q</code></p>
-<dd>Quiet output. Nothing is displayed except the summary lines at startup time and when finished.</p>
-<dt><code>-Q</code></p>
-<dd>Totally quiet output. Absolutly nothing is displayed. Useful to use within shell scripts.</p>
-<dt><code>-R</code></p>
-<dd>Use Record Route IP Header Option on the ICMP packet.</p>
-<dt><code>-s</code> <i>bytes</i>|<i>max</i></p>
-<dd>Number of garbage bytes that will be sent on any ICMP packet. With <i>max</i> the maximum possible will be sent.</p>
-<dt><code>-S</code> <i>address</i></p>
-<dd>IP address to be used as the source of the ICMP packet. This force the use of the libpcap routines that puts your network interface into promiscuous mode to be able to read the replies. Only the super-user may use this option.</p>
-<dt><code>-t</code> <i>ttl</i></p>
-<dd>Set the IP Time To Live field to <i>ttl</i> value.</p>
-<dt><code>-T</code> <i>wait</i></p>
-<dd>Wait <i>wait</i> seconds <i>between sending each packet</i>. The default is to wait for one second between each packet.</p>
-<dt><code>-TOS</code> <i>tos</i></p>
-<dd>Set the IP Type Of Service field to <i>tos</i> value.</p>
-<dt><code>-U</code></p>
-<dd>Set the IP header Unused bit flag. Be aware on *BSD systems because the kernel set to 0 the IP header flags when using the Reserved Bit so <i>SING</i> must revert to promiscuous mode to be able to read the response with libpcap. Not used on Solaris systems.</p>
-<dt><code>-x</code>, <code>&#8211;xcode</code> <i>code</i>|<i>num</i>|<i>max</i></p>
-<dd>ICMP code to send. Code <i>code</i> valid for Destination Unreachable (<code>-du</code>), Redirect (<code>-red</code>) and Time Exceeded (<code>-tx</code>) types. Numerical code can be specified for the ICMP types that doesn&#8217;t have (Echo Request, Information Request, Address Mask Request, Router Solicitation, Router Advertisement, Source Quench, Parameter Problem and Timestamp). Using <i>max</i> an ICMP code greater than the admited ones will be sent. See the <code>ICMP CODES</code> section for a long list of <i>code</i> types.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Help screen.</dd>
+<dt><code>-V</code>, <code>&#8211;Version</code></dt>
+<dd>Program version.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose mode.</dd>
+<dt><code>-B</code></dt>
+<dd>Send a <code>B</code>ad ICMP Checksum on Information types.</dd>
+<dt><code>-c</code> <i>count</i></dt>
+<dd>Stop after sending (and receiving) <i>count</i> packets. Information types only.</dd>
+<dt><code>-F</code> <i>bytes</i></dt>
+<dd>Fragment the entire ICMP packet with <i>bytes</i> size by fragment. Not used on Solaris systems.</dd>
+<dt><code>-G</code></dt>
+<dd>Set the IP header Don&#8217;t Fragment flag. Not used on Solaris systems.</dd>
+<dt><code>-i</code> <i>interface</i></dt>
+<dd>Interface (name or IP address) where listen on for replies.</dd>
+<dt><code>-l</code> <i>preload</i></dt>
+<dd>If <i>preload</i> is specified, <code>sing</code> sends that many packets as fast as possible before falling into its normal mode of behavior. Only the super-user may use this option. Information types only.</dd>
+<dt><code>-L</code> <i>logfile</i></dt>
+<dd>Save the current session to the file <i>logfile</i>. If <i>logfile</i> exists the data will be appended at end.</dd>
+<dt><code>-M</code> <i>os</i></dt>
+<dd>Do mimic of the <i>os</i> specified when sending an <i>Echo Request</i> or <i>Echo Reply</i>. <i>os</i> can be <i>win</i>, <i>unix</i>, <i>linux</i>, <i>cisco</i>, <i>solaris</i> or <i>shiva</i>.</dd>
+<dt><code>-MAC</code> <i>hw_address</i></dt>
+<dd>Do MAC spoofing using the MAC <i>hw_address</i> (maybe to surpass filtered switches). Be aware of using on an interface with a datalink type different of Ethernet. The MAC address must be on hexadecimal form and must be delimited by &#8216;<code>:</code>&#8216; (Example: 00:FF:AC:33:1:B). This option made use of the libnet library to acces the network link layer. Only the super-user can use this option.</dd>
+<dt><code>-n</code></dt>
+<dd>Don&#8217;t use name resolution.</dd>
+<dt><code>-O</code></dt>
+<dd>Do fingerprinting to discover the target OS.</dd>
+<dt><code>-p</code> <i>pattern</i></dt>
+<dd>You may specify a <i>pattern</i> of bytes to fill out the packet you send. This is useful for diagnosing data-dependent problems in a network. For example, `-p INPACK&#8221; will cause the sent packet to be filled with the word INPACK.</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet output. Nothing is displayed except the summary lines at startup time and when finished.</dd>
+<dt><code>-Q</code></dt>
+<dd>Totally quiet output. Absolutly nothing is displayed. Useful to use within shell scripts.</dd>
+<dt><code>-R</code></dt>
+<dd>Use Record Route IP Header Option on the ICMP packet.</dd>
+<dt><code>-s</code> <i>bytes</i>|<i>max</i></dt>
+<dd>Number of garbage bytes that will be sent on any ICMP packet. With <i>max</i> the maximum possible will be sent.</dd>
+<dt><code>-S</code> <i>address</i></dt>
+<dd>IP address to be used as the source of the ICMP packet. This force the use of the libpcap routines that puts your network interface into promiscuous mode to be able to read the replies. Only the super-user may use this option.</dd>
+<dt><code>-t</code> <i>ttl</i></dt>
+<dd>Set the IP Time To Live field to <i>ttl</i> value.</dd>
+<dt><code>-T</code> <i>wait</i></dt>
+<dd>Wait <i>wait</i> seconds <i>between sending each packet</i>. The default is to wait for one second between each packet.</dd>
+<dt><code>-TOS</code> <i>tos</i></dt>
+<dd>Set the IP Type Of Service field to <i>tos</i> value.</dd>
+<dt><code>-U</code></dt>
+<dd>Set the IP header Unused bit flag. Be aware on *BSD systems because the kernel set to 0 the IP header flags when using the Reserved Bit so <i>SING</i> must revert to promiscuous mode to be able to read the response with libpcap. Not used on Solaris systems.</dd>
+<dt><code>-x</code>, <code>&#8211;xcode</code> <i>code</i>|<i>num</i>|<i>max</i></dt>
+<dd>ICMP code to send. Code <i>code</i> valid for Destination Unreachable (<code>-du</code>), Redirect (<code>-red</code>) and Time Exceeded (<code>-tx</code>) types. Numerical code can be specified for the ICMP types that doesn&#8217;t have (Echo Request, Information Request, Address Mask Request, Router Solicitation, Router Advertisement, Source Quench, Parameter Problem and Timestamp). Using <i>max</i> an ICMP code greater than the admited ones will be sent. See the <code>ICMP CODES</code> section for a long list of <i>code</i> types.</dd></dl>
 <h2>Icmp Types</h2>
 <p>The <code>type</code> can be any of the following below:</p>
 <dl>
-<dt><code>-echo</code>, <code>&#8211;echo_request</code></p>
-<dd>Echo Request. Request sent to a host to receive an echo reply. This is the type sent by default. This ICMP type is <code>information</code>.</p>
-<dt><code>-tstamp</code>, <code>&#8211;timestamp</code></p>
-<dd>Timestamp. Host request to receive the time of another host. This ICMP type is <code>information</code>.</p>
-<dt><code>-mask</code>, <code>&#8211;mask_req</code></p>
-<dd>Address Mask Request. Used to find out a host network mask. This ICMP type is <code>information</code>.</p>
-<dt><code>-info</code>, <code>&#8211;info_req</code></p>
-<dd>Information Request. Host request to receive an Info Reply from another host. This ICMP type is <code>information</code>.</p>
-<dt><code>-du</code>, <code>&#8211;dest_unreach</code></p>
-<dd>Destination Unreach. IP packet couldn&#8217;t be given. This ICMP type is <code>error</code>.</p>
-<dt><code>-sq</code>, <code>&#8211;src_quench</code></p>
-<dd>Source Quench. IP packet is not given due a net congestion. This ICMP type is <code>error</code>.</p>
-<dt><code>-red</code>, <code>&#8211;redirect</code></p>
-<dd>Redirect. Request to forward IP packets through another router. This ICMP type is <code>error</code>.</p>
-<dt><code>-rta</code>, <code>&#8211;router_advert</code> <code>address</code>[<code>/preference</code>]</p>
-<dd>Router Advertisement. Router trasmits one or more routers with address <code>address</code> and preference <code>preference</code>. If this is ommited, default preference 0 is given. This ICMP type is <code>information</code>.</p>
-<dt><code>-rts</code>, <code>&#8211;router_solicit</code></p>
-<dd>Router Solicitation. Host requeriment for a message of one or more routers. Like the previous, is a part of the messages exchange Router Discovery and this ICMP type is <code>information</code>.</p>
-<dt><code>-tx</code>, <code>&#8211;time_exc</code></p>
-<dd>Time Exceeded. Time Exceeded for an IP packet. This ICMP type is <code>error</code>.</p>
-<dt><code>-param</code>, <code>&#8211;param_problem</code></p>
-<dd>Parameter Problem. Erroneous value on a variable of IP header. This ICMP type is <code>error</code>.</p>
-<dt><code>-reply</code></p>
-<dd>Echo Reply. Response to a Echo Request. This ICMP type is <code>information</code>.</dl>
+<dt><code>-echo</code>, <code>&#8211;echo_request</code></dt>
+<dd>Echo Request. Request sent to a host to receive an echo reply. This is the type sent by default. This ICMP type is <code>information</code>.</dd>
+<dt><code>-tstamp</code>, <code>&#8211;timestamp</code></dt>
+<dd>Timestamp. Host request to receive the time of another host. This ICMP type is <code>information</code>.</dd>
+<dt><code>-mask</code>, <code>&#8211;mask_req</code></dt>
+<dd>Address Mask Request. Used to find out a host network mask. This ICMP type is <code>information</code>.</dd>
+<dt><code>-info</code>, <code>&#8211;info_req</code></dt>
+<dd>Information Request. Host request to receive an Info Reply from another host. This ICMP type is <code>information</code>.</dd>
+<dt><code>-du</code>, <code>&#8211;dest_unreach</code></dt>
+<dd>Destination Unreach. IP packet couldn&#8217;t be given. This ICMP type is <code>error</code>.</dd>
+<dt><code>-sq</code>, <code>&#8211;src_quench</code></dt>
+<dd>Source Quench. IP packet is not given due a net congestion. This ICMP type is <code>error</code>.</dd>
+<dt><code>-red</code>, <code>&#8211;redirect</code></dt>
+<dd>Redirect. Request to forward IP packets through another router. This ICMP type is <code>error</code>.</dd>
+<dt><code>-rta</code>, <code>&#8211;router_advert</code> <code>address</code>[<code>/preference</code>]</dt>
+<dd>Router Advertisement. Router trasmits one or more routers with address <code>address</code> and preference <code>preference</code>. If this is ommited, default preference 0 is given. This ICMP type is <code>information</code>.</dd>
+<dt><code>-rts</code>, <code>&#8211;router_solicit</code></dt>
+<dd>Router Solicitation. Host requeriment for a message of one or more routers. Like the previous, is a part of the messages exchange Router Discovery and this ICMP type is <code>information</code>.</dd>
+<dt><code>-tx</code>, <code>&#8211;time_exc</code></dt>
+<dd>Time Exceeded. Time Exceeded for an IP packet. This ICMP type is <code>error</code>.</dd>
+<dt><code>-param</code>, <code>&#8211;param_problem</code></dt>
+<dd>Parameter Problem. Erroneous value on a variable of IP header. This ICMP type is <code>error</code>.</dd>
+<dt><code>-reply</code></dt>
+<dd>Echo Reply. Response to a Echo Request. This ICMP type is <code>information</code>.</dd></dl>
 <h2>Less Common Options</h2>
 <p>The <code>options</code> can be any of the following:</p>
 <dl>
-<dt><code>-lt</code>, <code>&#8211;lifetime</code> <i>secs</i></p>
-<dd>Lifetime in seconds of the router announcement. Only valid with Router Advertisement (<code>-rta</code>) type. 1800 seconds by default (30&#8242;).</p>
-<dt><code>-gw</code>, <code>&#8211;gateway</code> <i>address</i></p>
-<dd>Route gateway address on an ICMP Redirect (<code>-red</code>). By default will be the spoof address (<code>-S</code>), if it has been specified, or the outgoing IP address if it has not been specified.</p>
-<dt><code>-dest</code>, <code>&#8211;route_dest</code> <i>address</i></p>
-<dd>Route destination address on an ICMP Redirect (<code>-red</code>). This is a required option when sending an ICMP Redirect.</p>
-<dt><code>-orig</code>, <code>&#8211;orig_host</code> <i>address</i></p>
-<dd>Original host within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. By default will be the same as the IP of the host that sends the ICMP packet.</p>
-<dt><code>-psrc</code>, <code>&#8211;port_src</code> <i>port</i></p>
-<dd>Source port (tcp or udp) within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. 0 by default.</p>
-<dt><code>-pdst</code>, <code>&#8211;port_dst</code> <i>port</i></p>
-<dd>Destination port (tcp or udp) within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. 0 by default.</p>
-<dt><code>-prot</code>, <code>&#8211;protocol</code> <i>name</i>|<i>number</i></p>
-<dd>Protocol to be used within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. Must be a name from the <code>/etc/protocols</code> or a protocol number. Only <code>tcp</code>,<code> udp</code> and <code>icmp</code> are fully implemented, with other protocols the remaining of the 64 bits field are fulfilled with 0xFF. TCP by default.</p>
-<dt><code>-id</code> <i>identificator</i></p>
-<dd>ICMP id to be used with ICMP of Information types. Do not be confused with the <code>-ip_id</code> option!.</p>
-<dt><code>-seq</code> <i>sequence</i></p>
-<dd>Echo sequence number to be used with <code>Echo Request</code> or <code>Echo Reply</code> types. Do not be confused with the <code>-ip_seq</code> option!.</p>
-<dt><code>-ip_id</code> <i>identificator</i></p>
-<dd>Echo identificator within the IP header sent in the 64 bits data field of an ICMP <code>error</code> when the IP header protocol of the 64 bits data field (<code>-prot</code>) is icmp. 0 by default.</p>
-<dt><code>-ip_seq</code> <i>sequence</i></p>
-<dd>Echo sequence number within the IP header sent in the 64 bits data field of an ICMP <code>error</code> when the IP header protocol of the 64 bits data field (<code>-prot</code>) is icmp. 0 by default.</p>
-<dt><code>-ptr</code>, <code>&#8211;pointer</code> <i>byte</i></p>
-<dd>Pointer to erroneus byte <code>byte</code> on an ICMP packet showing a parameter problem. Valid only on Parameter Problem type (<code>-param</code>).</dl>
+<dt><code>-lt</code>, <code>&#8211;lifetime</code> <i>secs</i></dt>
+<dd>Lifetime in seconds of the router announcement. Only valid with Router Advertisement (<code>-rta</code>) type. 1800 seconds by default (30&#8242;).</dd>
+<dt><code>-gw</code>, <code>&#8211;gateway</code> <i>address</i></dt>
+<dd>Route gateway address on an ICMP Redirect (<code>-red</code>). By default will be the spoof address (<code>-S</code>), if it has been specified, or the outgoing IP address if it has not been specified.</dd>
+<dt><code>-dest</code>, <code>&#8211;route_dest</code> <i>address</i></dt>
+<dd>Route destination address on an ICMP Redirect (<code>-red</code>). This is a required option when sending an ICMP Redirect.</dd>
+<dt><code>-orig</code>, <code>&#8211;orig_host</code> <i>address</i></dt>
+<dd>Original host within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. By default will be the same as the IP of the host that sends the ICMP packet.</dd>
+<dt><code>-psrc</code>, <code>&#8211;port_src</code> <i>port</i></dt>
+<dd>Source port (tcp or udp) within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. 0 by default.</dd>
+<dt><code>-pdst</code>, <code>&#8211;port_dst</code> <i>port</i></dt>
+<dd>Destination port (tcp or udp) within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. 0 by default.</dd>
+<dt><code>-prot</code>, <code>&#8211;protocol</code> <i>name</i>|<i>number</i></dt>
+<dd>Protocol to be used within the IP header sent in the 64 bits data field of an ICMP <code>error</code>. Must be a name from the <code>/etc/protocols</code> or a protocol number. Only <code>tcp</code>,<code> udp</code> and <code>icmp</code> are fully implemented, with other protocols the remaining of the 64 bits field are fulfilled with 0xFF. TCP by default.</dd>
+<dt><code>-id</code> <i>identificator</i></dt>
+<dd>ICMP id to be used with ICMP of Information types. Do not be confused with the <code>-ip_id</code> option!.</dd>
+<dt><code>-seq</code> <i>sequence</i></dt>
+<dd>Echo sequence number to be used with <code>Echo Request</code> or <code>Echo Reply</code> types. Do not be confused with the <code>-ip_seq</code> option!.</dd>
+<dt><code>-ip_id</code> <i>identificator</i></dt>
+<dd>Echo identificator within the IP header sent in the 64 bits data field of an ICMP <code>error</code> when the IP header protocol of the 64 bits data field (<code>-prot</code>) is icmp. 0 by default.</dd>
+<dt><code>-ip_seq</code> <i>sequence</i></dt>
+<dd>Echo sequence number within the IP header sent in the 64 bits data field of an ICMP <code>error</code> when the IP header protocol of the 64 bits data field (<code>-prot</code>) is icmp. 0 by default.</dd>
+<dt><code>-ptr</code>, <code>&#8211;pointer</code> <i>byte</i></dt>
+<dd>Pointer to erroneus byte <code>byte</code> on an ICMP packet showing a parameter problem. Valid only on Parameter Problem type (<code>-param</code>).</dd></dl>
 <h2>Icmp Codes</h2>
 <p>Valid <code>codes</code> used with Destination Unreach, Redirect and Time Exceeded types are,</p>
 <dl>
-<dt>&#8211; Used with <code>Destination Unreach</code> type (<code>-du</code>):</p>
-<dd></dl>
+<dt>&#8211; Used with <code>Destination Unreach</code> type (<code>-du</code>):</dt>
+<dd></dd></dl>
 <p> <code>net-unreach</code> (Net Unreachable) The destination net is unreachable. </p>
 <p> <code>host-unreach</code> (Host Unreachable) The destination host is unreachable. </p>
 <p> <code>prot-unreach</code> (Protocol Unreachable) desired protocol is unreachable to destination host. </p>
@@ -145,16 +145,16 @@ description: "sing – Send ICMP Nasty Garbage packets to network hosts"
 <p> <code>host-precedence-viol</code> (Host Precedence Violation) IP packet precedence is not allowed. </p>
 <p> <code>precedence-cutoff</code> (Precedence cutoff in effect) a smaller IP packet precedence has tried to be sent over the minimal impossed by network manager. </p>
 <dl>
-<dt>&#8211; To be used with <code>Redirect</code> type (<code>-red</code>):</p>
-<dd></dl>
+<dt>&#8211; To be used with <code>Redirect</code> type (<code>-red</code>):</dt>
+<dd></dd></dl>
 <p> <code>net</code> (Redirect Datagram for the Network) shows that destination is a network. </p>
 <p> <code>host</code> (Redirect Datagram for the Host) shows that destination is a host. </p>
 <p> <code>serv-net</code> (Redirect Datagram for the Type Of Service and Network) destination is a type of service and network. </p>
 <p> <code>serv-host</code> (Redirect Datagram for the Type Of Service and Host) destination is a type of service and host. </p>
 <p> and</p>
 <dl>
-<dt>&#8211; to be used with <code>Time Exceeded</code> type (<code>-tx</code>):</p>
-<dd></dl>
+<dt>&#8211; to be used with <code>Time Exceeded</code> type (<code>-tx</code>):</dt>
+<dd></dd></dl>
 <p> <code>ttl</code> (Time to Live exceeded in Transit) time is over on an IP packet header packet. </p>
 <p> <code>frag</code> (Fragment Reassembly Time Exceeded) could not reassembly all the IP packet fragments.</p>
 <h2>Fingerprinting Techniques</h2>

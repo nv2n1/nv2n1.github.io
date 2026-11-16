@@ -24,73 +24,73 @@ description: "hwlocality_helper_topology_sets – CPU and node sets of entire to
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the CPU set of allowed logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dl>
+</dt><dd> the CPU set of allowed logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The returned cpuset is not newly allocated and should thus not be changed or freed, <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dl>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed, <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h3>static <code>hwloc_const_nodeset_t</code> hwloc_topology_get_allowed_nodeset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
 <p> Get allowed node set. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the node set of allowed memory of the system. If the topology is the result of a combination of several systems, NULL is returned.</dl>
+</dt><dd> the node set of allowed memory of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The returned nodeset is not newly allocated and should thus not be changed or freed, <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dl>
+</dt><dd> The returned nodeset is not newly allocated and should thus not be changed or freed, <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h3>static <code>hwloc_const_cpuset_t</code> hwloc_topology_get_complete_cpuset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
 <p> Get complete CPU set. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the complete CPU set of logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dl>
+</dt><dd> the complete CPU set of logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dl>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h3>static <code>hwloc_const_nodeset_t</code> hwloc_topology_get_complete_nodeset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
 <p> Get complete node set. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the complete node set of memory of the system. If the topology is the result of a combination of several systems, NULL is returned.</dl>
+</dt><dd> the complete node set of memory of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The returned nodeset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dl>
+</dt><dd> The returned nodeset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h3>static <code>hwloc_const_cpuset_t</code> hwloc_topology_get_online_cpuset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
 <p> Get online CPU set. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the CPU set of online logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dl>
+</dt><dd> the CPU set of online logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dl>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h3>static <code>hwloc_const_cpuset_t</code> hwloc_topology_get_topology_cpuset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
 <p> Get topology CPU set. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the CPU set of logical processors of the system for which hwloc provides topology information. This is equivalent to the cpuset of the system object. If the topology is the result of a combination of several systems, NULL is returned.</dl>
+</dt><dd> the CPU set of logical processors of the system for which hwloc provides topology information. This is equivalent to the cpuset of the system object. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dl>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h3>static <code>hwloc_const_nodeset_t</code> hwloc_topology_get_topology_nodeset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
 <p> Get topology node set. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the node set of memory of the system for which hwloc provides topology information. This is equivalent to the nodeset of the system object. If the topology is the result of a combination of several systems, NULL is returned.</dl>
+</dt><dd> the node set of memory of the system for which hwloc provides topology information. This is equivalent to the nodeset of the system object. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The returned nodeset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dl>
+</dt><dd> The returned nodeset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAM">Author</a></dt>
+<dd></dd></dl>

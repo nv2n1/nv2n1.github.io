@@ -20,20 +20,20 @@ mongoc_bulk_operation_update (mongoc_bulk_operation_t *bulk,
 <p> <code>NOTE</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>document</code> MUST only contain fields whose key starts with <code>$</code> \&amp;. See the update document specification for more details.</dl>
+</dt><dd> <code>document</code> MUST only contain fields whose key starts with <code>$</code> \&amp;. See the update document specification for more details.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>selector</code></p>
-<dd> A <code>bson_t</code> containing the selector to query.</dl>
+<dt><code>selector</code></dt>
+<dd> A <code>bson_t</code> containing the selector to query.</dd></dl>
 <dl COMPACT>
-<dt><code>document</code></p>
-<dd> A <code>bson_t</code> containing the update document.</dl>
+<dt><code>document</code></dt>
+<dd> A <code>bson_t</code> containing the update document.</dd></dl>
 <dl COMPACT>
-<dt><code>upsert</code></p>
-<dd> <code>true</code> if an <code>upsert</code> should be performed.</dl>
+<dt><code>upsert</code></dt>
+<dd> <code>true</code> if an <code>upsert</code> should be performed.</dd></dl>
 <h2>Errors</h2>
 <p> Errors are propagated via <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> \&amp;. </p>
 <h2>See Also</h2>

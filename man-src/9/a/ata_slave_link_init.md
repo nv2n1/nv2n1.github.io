@@ -14,7 +14,7 @@ description: "ata_slave_link_init – initialize slave link"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>port to initialize slave link for</dl>
+</dd><dd>port to initialize slave link for</dd></dl>
 <h2>Description</h2>
 <p>Create and initialize slave link for <i>ap</i>. This enables slave link handling on the port. </p>
 <p> In libata, a port contains links and a link contains devices. There is single host link but if a PMP is attached to it, there can be multiple fan-out links. On SATA, there&#8217;s usually a single device connected to a link but PATA and SATA controllers emulating TF based interface can have two &#8211; master and slave. </p>
@@ -28,5 +28,5 @@ description: "ata_slave_link_init – initialize slave link"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

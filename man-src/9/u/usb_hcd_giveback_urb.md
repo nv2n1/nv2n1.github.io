@@ -14,13 +14,13 @@ description: "usb_hcd_giveback_urb – return URB from HCD to device driver"
 <p><i>hcd</i></p>
 <dl>
 <dd>
-<dd>host controller returning the URB</dl>
+</dd><dd>host controller returning the URB</dd></dl>
 <p> <i>urb</i></p>
 <dl>
-<dd>urb being returned to the USB device driver.</dl>
+<dd>urb being returned to the USB device driver.</dd></dl>
 <p> <i>status</i></p>
 <dl>
-<dd>completion status code for the URB.</dl>
+<dd>completion status code for the URB.</dd></dl>
 <h2>Context</h2>
 <p><code>in_interrupt</code></p>
 <h2>Description</h2>

@@ -26,17 +26,17 @@ first_valuator to (first_valuator + num_valuators) are set to
 the specified values. Valuators are numbered beginning with 0.
 Not all input devices support initialization of valuator
 values. If this request is made to a device that does not
-support valuators initialization, a BadMatch error will occur.</pre></dl><dl COMPACT><dd><pre>If the request succeeds, a status of Success is returned. If
+support valuators initialization, a BadMatch error will occur.</pre></dd></dl><dl COMPACT><dd><pre>If the request succeeds, a status of Success is returned. If
 another client has the device grabbed, a status of
-AlreadyGrabbed is returned.</pre></dl><dl COMPACT><dd><pre>XSetDeviceValuators can generate a BadLength, BadDevice,
-BadMatch, or BadValue error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+AlreadyGrabbed is returned.</pre></dd></dl><dl COMPACT><dd><pre>XSetDeviceValuators can generate a BadLength, BadDevice,
+BadMatch, or BadValue error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
- XOpenInputDevice.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ XOpenInputDevice.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XSetDeviceValuators request
  is made specifying a device that has no valuators and
  reports no axes of motion, or if such a request is made
  specifying a device that does not support valuator
- initialization.</pre></dl><dl COMPACT><dd><pre>BadValue
+ initialization.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  An invalid first_valuator or num_valuators values was
- specified.</pre></dl>
+ specified.</pre></dd></dl>

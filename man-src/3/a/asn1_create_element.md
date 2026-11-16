@@ -14,12 +14,12 @@ description: "asn1_create_element – API function"
 <p> <code>int asn1_create_element(asn1_node </code><i>definitions</i><code>, const char * </code><i>source_name</i><code>, asn1_node * </code><i>element</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>asn1_node definitions</p>
-<dd> pointer to the structure returned by &quot;parser_asn1&quot; function</p>
-<dt>const char * source_name</p>
-<dd> the name of the type of the new structure (must be inside p_structure).</p>
-<dt>asn1_node * element</p>
-<dd> pointer to the structure created.</dl>
+<dt>asn1_node definitions</dt>
+<dd> pointer to the structure returned by &quot;parser_asn1&quot; function</dd>
+<dt>const char * source_name</dt>
+<dd> the name of the type of the new structure (must be inside p_structure).</dd>
+<dt>asn1_node * element</dt>
+<dd> pointer to the structure created.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a structure of type <i>source_name</i> . Example using &quot;pkix.asn&quot;: </p>
 <p> rc = asn1_create_element(cert_def, &quot;PKIX1.Certificate&quot;, certptr);</p>
@@ -33,9 +33,9 @@ description: "asn1_create_element – API function"
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
 <h2>Index</h2>

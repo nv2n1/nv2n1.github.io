@@ -10,13 +10,7 @@ description: "QuantLib::ForwardVanillaEngine – Forward engine for vanilla opti
 <p>QuantLib::ForwardVanillaEngine &#8211; Forward engine for vanilla options </p>
 <h2>Synopsis</h2>
 <pre><code>void setup () const
-
-
-
 void getOriginalResults () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>GenericEngine&lt; ForwardOptionArguments&lt; VanillaOption::arguments &gt;, VanillaOption::results &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -24,13 +18,7 @@ Protected Attributes</code></pre>
 <p> void <code>calculate</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void setup () const
-
-
-
 void getOriginalResults () const
-
-
-
 Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; <code>process_</code> </p>
 <p> boost::shared_ptr&lt; Engine &gt; <code>originalEngine_</code> </p>
@@ -42,11 +30,11 @@ Protected Attributes</code></pre>
 <p> <code>Tests</code></p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

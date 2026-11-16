@@ -10,15 +10,15 @@ description: "ata_tf_read_block – Read block address from ATA taskfile"
 <p>ata_tf_read_block &#8211; Read block address from ATA taskfile</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u64 ata_tf_read_block(const struct ata_taskfile&nbsp;<wbr>*&nbsp;<wbr></code><i>tf</i><code>, struct ata_device&nbsp;<wbr>*&nbsp;<wbr></code><i>dev</i><code>);</code></dl>
+<dt> <code>u64 ata_tf_read_block(const struct ata_taskfile&nbsp;<wbr>*&nbsp;<wbr></code><i>tf</i><code>, struct ata_device&nbsp;<wbr>*&nbsp;<wbr></code><i>dev</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>tf</i></p>
 <dl>
 <dd>
-<dd>ATA taskfile of interest</dl>
+</dd><dd>ATA taskfile of interest</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>ATA device <i>tf</i> belongs to</dl>
+<dd>ATA device <i>tf</i> belongs to</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: None. </p>
 <p> Read block address from <i>tf</i>. This function can handle all three address formats &#8211; LBA, LBA48 and CHS. tf-&gt;protocol and flags select the address format to use.</p>
@@ -27,5 +27,5 @@ description: "ata_tf_read_block – Read block address from ATA taskfile"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

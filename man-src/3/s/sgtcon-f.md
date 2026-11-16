@@ -23,10 +23,10 @@ description: "sgtcon.f –"
  SGTTRF.
  An estimate is obtained for norm(inv(A)), and the reciprocal of the
  condition number is computed as RCOND = 1 / (ANORM * norm(inv(A))).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>NORM</i> </p>
+<dd><i>NORM</i> </dd>
 <pre> NORM is CHARACTER*1
  Specifies whether the 1-norm condition number or the
  infinity-norm condition number is required:
@@ -75,13 +75,13 @@ description: "sgtcon.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 146 of file sgtcon.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

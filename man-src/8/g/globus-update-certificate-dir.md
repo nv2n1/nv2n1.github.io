@@ -16,20 +16,20 @@ description: "globus-update-certificate-dir – Update symlinks in the trusted C
 <h2>Options</h2>
 <p><code>-help</code></p>
 <dl>
-<dd>Display a help message to standard output and exit</dl>
+<dd>Display a help message to standard output and exit</dd></dl>
 <p> <code>-d </code><i>DIRECTORY</i></p>
 <dl>
-<dd>Create links in the trusted CA directory <i>DIRECTORY</i> instead of using the default search path.</dl>
+<dd>Create links in the trusted CA directory <i>DIRECTORY</i> instead of using the default search path.</dd></dl>
 <h2>Environment</h2>
 <p>The following variables affect the execution of <code>globus-update-certificate-dir</code>: </p>
 <p> <code>X509_CERT_DIR</code></p>
 <dl>
-<dd>Default trusted certificate directory.</dl>
+<dd>Default trusted certificate directory.</dd></dl>
 <p> <code>HOME</code></p>
 <dl>
-<dd>Path to the current user&#8217;s home directory.</dl>
+<dd>Path to the current user&#8217;s home directory.</dd></dl>
 <p> <code>GLOBUS_LOCATION</code></p>
 <dl>
-<dd>Path to the Globus installation.</dl>
+<dd>Path to the Globus installation.</dd></dl>
 <h2>Author</h2>
 <p>Copyright &#169; 1999-2014 University of Chicago</p>

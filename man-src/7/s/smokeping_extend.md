@@ -41,34 +41,34 @@ description: "smokeping_extend – Notes on extending Smokeping"
 <p>The variables are declared in a syntax that comes from the module used for parsing the configuration file, <tt>&quot;Config::Grammar&quot;</tt>. Each variable should be a hash that uses the &#8220;special variable keys&#8221; documented in Config::Grammar. See <tt>&quot;Smokeping::probes::skel&quot;</tt> and the other probes for examples. </p>
 <p> For reference, here are the keys the hash should have. Much of this is taken straight from the <tt>&quot;Config::Grammar&quot;</tt> manual.</p>
 <dl>
-<dt>Keys you <code>must</code> provide</p>
+<dt>Keys you <code>must</code> provide</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt>_doc</p>
-<dd>Description of the variable.</p>
-<dt>_example</p>
-<dd>An example value. This will be used in the <font SIZE="-1">SYNOPSIS</font> section in the probe manual.</dl>
+</dd><dl>
+<dt>_doc</dt>
+<dd>Description of the variable.</dd>
+<dt>_example</dt>
+<dd>An example value. This will be used in the <font SIZE="-1">SYNOPSIS</font> section in the probe manual.</dd></dl>
 </dl>
 <dl>
-<dd></dl>
-<dt>Optional keys</p>
+<dd></dd></dl>
+<dt>Optional keys</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt>_default</p>
-<dd>A default value that will be assigned to the variable if none is specified or inherited.</p>
-<dt>_re</p>
-<dd>Regular expression upon which the value will be checked.</p>
-<dt>_re_error</p>
-<dd>String containing the returned error in case the regular expression doesn&#8217;t match (if not specified, a generic &#8216;syntax error&#8217; message will be returned).</p>
-<dt>_sub</p>
-<dd>A function pointer. It is called for every value, with the value passed as its first argument. If the function returns a defined value it is assumed that the test was not successful and an error is generated with the returned string as content.</dl>
+</dd><dl>
+<dt>_default</dt>
+<dd>A default value that will be assigned to the variable if none is specified or inherited.</dd>
+<dt>_re</dt>
+<dd>Regular expression upon which the value will be checked.</dd>
+<dt>_re_error</dt>
+<dd>String containing the returned error in case the regular expression doesn&#8217;t match (if not specified, a generic &#8216;syntax error&#8217; message will be returned).</dd>
+<dt>_sub</dt>
+<dd>A function pointer. It is called for every value, with the value passed as its first argument. If the function returns a defined value it is assumed that the test was not successful and an error is generated with the returned string as content.</dd></dl>
 </dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <p> The <tt>&quot;probevars&quot;</tt> and <tt>&quot;targetvars&quot;</tt> methods should return hash references that contain the variable names as keys and the hashes described above as values. In addition the <tt>&quot;Config::Grammar&quot;</tt> special section key <tt>&quot;_mandatory&quot;</tt> is supported and should contain a reference to a list of mandatory variables. The <tt>&quot;_makevars&quot;</tt> method is aware of this special key and merges the mandatory lists in its arguments. Note that no other <tt>&quot;Config::Grammar&quot;</tt> special section keys are supported.</p>
 <h2>Initialization</h2>

@@ -13,30 +13,30 @@ description: "cherryd – cherryd"
 <p> <code>cherryd</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>-c</code> CONFIG, <code>&#8211;config</code>=<i>CONFIG</i></p>
-<dd> specify config file(s)</p>
-<dt><code>-d</code></p>
-<dd> run the server as a daemon</p>
-<dt><code>-e</code> ENVIRONMENT, <code>&#8211;environment</code>=<i>ENVIRONMENT</i></p>
-<dd> apply the given config environment</p>
-<dt><code>-f</code></p>
-<dd> start a fastcgi server instead of the default HTTP server</p>
-<dt><code>-s</code></p>
-<dd> start a scgi server instead of the default HTTP server</p>
-<dt><code>-x</code></p>
-<dd> start a cgi server instead of the default HTTP server</p>
-<dt><code>-i</code> IMPORTS, <code>&#8211;import</code>=<i>IMPORTS</i></p>
-<dd> specify modules to import</p>
-<dt><code>-p</code> PIDFILE, <code>&#8211;pidfile</code>=<i>PIDFILE</i></p>
-<dd> store the process id in the given file</p>
-<dt><code>-P</code> PATH, <code>&#8211;Path</code>=<i>PATH</i></p>
-<dd> add the given paths to sys.path</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>-c</code> CONFIG, <code>&#8211;config</code>=<i>CONFIG</i></dt>
+<dd> specify config file(s)</dd>
+<dt><code>-d</code></dt>
+<dd> run the server as a daemon</dd>
+<dt><code>-e</code> ENVIRONMENT, <code>&#8211;environment</code>=<i>ENVIRONMENT</i></dt>
+<dd> apply the given config environment</dd>
+<dt><code>-f</code></dt>
+<dd> start a fastcgi server instead of the default HTTP server</dd>
+<dt><code>-s</code></dt>
+<dd> start a scgi server instead of the default HTTP server</dd>
+<dt><code>-x</code></dt>
+<dd> start a cgi server instead of the default HTTP server</dd>
+<dt><code>-i</code> IMPORTS, <code>&#8211;import</code>=<i>IMPORTS</i></dt>
+<dd> specify modules to import</dd>
+<dt><code>-p</code> PIDFILE, <code>&#8211;pidfile</code>=<i>PIDFILE</i></dt>
+<dd> store the process id in the given file</dd>
+<dt><code>-P</code> PATH, <code>&#8211;Path</code>=<i>PATH</i></dt>
+<dd> add the given paths to sys.path</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>cherryd</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>cherryd</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info cherryd</code></dl>
+</dt><dd> <code>info cherryd</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

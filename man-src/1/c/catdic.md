@@ -15,14 +15,14 @@ description: "catdic – Download a dictionary"
 <p> catdic downloads a dictionary file to the current directory. The file downloaded is a dictionary file the dictionary name of which is <i>remote-dic</i>. It is in the user dictionary directory of the machine on which <i>cannaserver</i>(1M) is in operation. (Hereafter, this machine is called the remote host.)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</p>
-<dd> Specifies the name of the server machine that contains a dictionary to be downloaded.</p>
-<dt>-i</p>
-<dd> Downloads the system dictionary.</p>
-<dt>-u <i>user-name</i></p>
-<dd> Specifies the user name. Another user&#8217;s dictionary can be referenced by this user name.</p>
-<dt>-l <i>local-file</i></p>
-<dd> <i>local-file</i> is the dictionary file name. If it is omitted, the standard output will be assumed.</dl>
+<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</dt>
+<dd> Specifies the name of the server machine that contains a dictionary to be downloaded.</dd>
+<dt>-i</dt>
+<dd> Downloads the system dictionary.</dd>
+<dt>-u <i>user-name</i></dt>
+<dd> Specifies the user name. Another user&#8217;s dictionary can be referenced by this user name.</dd>
+<dt>-l <i>local-file</i></dt>
+<dd> <i>local-file</i> is the dictionary file name. If it is omitted, the standard output will be assumed.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
   % catdic test

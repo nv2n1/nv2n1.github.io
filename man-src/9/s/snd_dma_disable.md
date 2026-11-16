@@ -15,7 +15,7 @@ snd_dma_disable - stop the ISA DMA transfer
 <h2>Arguments</h2>
 
 <i>dma</i>
-<dl><dd><dd>the dma number</dl>
+<dl><dd></dd><dd>the dma number</dd></dl>
 
 <h2>Description</h2>
 

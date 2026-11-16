@@ -18,12 +18,12 @@ ALTER GROUP <i>groupname</i> RENAME TO <i>newname</i></pre>
 <p> The third variant changes the name of the group. This is exactly equivalent to renaming the role with ALTER ROLE [<code><a href="/docs/linux/man/7-alter_role/">alter_role</a></code>(7)].</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>groupname</i></p>
-<dd>The name of the group (role) to modify.</p>
-<dt><i>username</i></p>
-<dd>Users (roles) that are to be added to or removed from the group. The users must already exist; <code>ALTER GROUP</code> does not create or drop users.</p>
-<dt><i>newname</i></p>
-<dd>The new name of the group.</dl>
+<dt><i>groupname</i></dt>
+<dd>The name of the group (role) to modify.</dd>
+<dt><i>username</i></dt>
+<dd>Users (roles) that are to be added to or removed from the group. The users must already exist; <code>ALTER GROUP</code> does not create or drop users.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the group.</dd></dl>
 <h2>Examples</h2>
 <p>Add users to a group: </p>
 <pre>ALTER GROUP staff ADD USER karl, john;</pre>

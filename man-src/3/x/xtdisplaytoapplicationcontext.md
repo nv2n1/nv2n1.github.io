@@ -11,11 +11,11 @@ description: "XtDisplayToApplicationContext – obtain an application context"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>XtAppContext XtDisplayToApplicationContext(Display* <i>dpy</i>);</dl>
+<dd>XtAppContext XtDisplayToApplicationContext(Display* <i>dpy</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>dpy</i></p>
-<dd>Specifies the display that you want the application context for.</dl>
+<dt><i>dpy</i></dt>
+<dd>Specifies the display that you want the application context for.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtDisplayToApplicationContext</code> function returns the application context for the specified display.</p>
 <h2>See Also</h2>

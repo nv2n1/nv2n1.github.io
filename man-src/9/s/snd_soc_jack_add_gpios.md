@@ -15,15 +15,15 @@ snd_soc_jack_add_gpios - Associate GPIO pins with an ASoC jack
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>ASoC jack</dl>
+<dl><dd></dd><dd>ASoC jack</dd></dl>
  
 
  <i>count</i>
-<dl><dd>number of pins</dl>
+<dl><dd>number of pins</dd></dl>
  
 
  <i>gpios</i>
-<dl><dd>array of gpio pins</dl>
+<dl><dd>array of gpio pins</dd></dl>
 
 <h2>Description</h2>
 

@@ -10,21 +10,15 @@ description: "std::addressof – std::addressof"
 <p>std::addressof &#8211; std::addressof</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         T *addressof(T &amp;arg) noexcept;
 (until C++ 17)
-
     template &lt;class T&gt;
     (1)(since C++ 17)
-
         constexpr T *addressof(T &amp;arg) noexcept;
-
 template &lt;class T&gt;
 (2)(since C++ 17)
-
     const T *addressof(const T &amp;&amp;) = delete;</code></pre>
 <p>1) Obtains the actual address of the object or function arg, even in presence of overloaded operator&amp;<br />
 2) Rvalue overload is deleted to prevent taking the address of const rvalues.<br />
@@ -46,10 +40,8 @@ The expression std::addressof(E) is a constant_subexpression, if E is an lvalue 
 <p>operator&amp; may be overloaded for a pointer wrapper class to obtain a pointer to pointer:<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 template &lt;class T&gt;
-
 struct Ptr {
     T *pad; // add pad to show difference between 'this' and 'data'
     T *data;
@@ -68,21 +60,17 @@ struct Ptr {
     }
 };
 template &lt;class T&gt;
-
 void f(Ptr&lt;T&gt; *p)
-
 {
     std::cout &lt;&lt; &quot;Ptr   overload called with p = &quot; &lt;&lt; p &lt;&lt; '
 ';
 }
 void f(int **p)
-
 {
     std::cout &lt;&lt; &quot;int** overload called with p = &quot; &lt;&lt; p &lt;&lt; '
 ';
 }
 int main()
-
 {
     Ptr&lt;int&gt; p(new int(42));
     f(&amp;p);                // calls int** overload

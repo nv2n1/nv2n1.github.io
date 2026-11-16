@@ -28,19 +28,19 @@ description: "QwtLegendItemManager – Abstract API to bind plot items to the le
 <p>Allocate the widget that represents the item on the legend </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Allocated widget</dl>
+<dd>Allocated widget</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>updateLegend()</code> QwtLegend()</dl>
+<dd><code>updateLegend()</code> QwtLegend()</dd></dl>
 <p> Implemented in <code>QwtPlotItem</code>.</p>
 <h3>virtual void QwtLegendItemManager::updateLegend (<code>QwtLegend</code> * legend) const [pure virtual]</h3>
 <p>Update the widget that represents the item on the legend </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>legend</i> Legend</dl>
+<dd><i>legend</i> Legend</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>legendItem()</code></dl>
+<dd><code>legendItem()</code></dd></dl>
 <p> Implemented in <code>QwtPlotCurve</code>, and <code>QwtPlotItem</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

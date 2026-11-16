@@ -21,7 +21,7 @@ description: "euca-add-group – Eucalyptus tool: Creates a new security group."
 <p> <code>&#8211;config</code> Read credentials and cloud settings from the</p>
 <dl>
 <dt>
-<dd> specified config file (defaults to $HOME/.eucarc or /etc/euca2ools/eucarc).</dl>
+</dt><dd> specified config file (defaults to $HOME/.eucarc or /etc/euca2ools/eucarc).</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code> Display this help message. </p>
 <p> <code>&#8211;version</code> Display the version of this tool. </p>
 <p> <code>&#8211;debug</code> Turn on debugging. </p>

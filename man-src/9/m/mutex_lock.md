@@ -14,7 +14,7 @@ description: "mutex_lock – acquire the mutex"
 <p><i>lock</i></p>
 <dl>
 <dd>
-<dd>the mutex to be acquired</dl>
+</dd><dd>the mutex to be acquired</dd></dl>
 <h2>Description</h2>
 <p>Lock the mutex exclusively for this task. If the mutex is not available right now, it will sleep until it can get it. </p>
 <p> The mutex must later on be released by the same task that acquired it. Recursive locking is not allowed. The task may not exit without first unlocking the mutex. Also, kernel memory where the mutex resides must not be freed with the mutex still locked. The mutex must first be initialized (or statically defined) before it can be locked. <code>memset</code>-ing the mutex to 0 is not allowed. </p>
@@ -23,5 +23,5 @@ description: "mutex_lock – acquire the mutex"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

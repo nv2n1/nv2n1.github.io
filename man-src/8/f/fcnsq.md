@@ -20,43 +20,43 @@ description: "fcnsq – Fibre Channel Name Server Query Tool"
 <h2>Options</h2>
 <p><code>host</code> <code>&#8211;gpn</code> <i>port_id</i></p>
 <dl>
-<dd>Get Port Name by Port ID for <i>host</i>.</dl>
+<dd>Get Port Name by Port ID for <i>host</i>.</dd></dl>
 <p> <code>host</code> <code>&#8211;gnn</code> <i>port_id</i></p>
 <dl>
-<dd>Get Node Name by Port ID for <i>host</i>.</dl>
+<dd>Get Node Name by Port ID for <i>host</i>.</dd></dl>
 <p> <code>host</code> <code>&#8211;gspn</code> <i>port_id</i></p>
 <dl>
-<dd>Get Symbolic Port Name by Port ID for <i>host</i>.</dl>
+<dd>Get Symbolic Port Name by Port ID for <i>host</i>.</dd></dl>
 <p> <code>host</code> <code>&#8211;gsnn</code> <i>wwpn</i></p>
 <dl>
-<dd>Get Symbolic Node Name by World Wide Port Name for <i>host</i>.</dl>
+<dd>Get Symbolic Node Name by World Wide Port Name for <i>host</i>.</dd></dl>
 <p> <code>-q</code>, <code>&#8211;quiet</code></p>
 <dl>
-<dd>Disable verbose output.</dl>
+<dd>Disable verbose output.</dd></dl>
 <p> <code>?</code></p>
 <dl>
-<dd>Display a help message with basic usage instructions.</dl>
+<dd>Display a help message with basic usage instructions.</dd></dl>
 <h2>Examples</h2>
 <p>Query Get Port Name (GPN) from host12 for Port ID 0xbf0027 </p>
 <dl>
 <dd>
 <pre>fcnsq host12 --gpn bf0027</pre>
-</dl>
+</dd></dl>
 <p> Query Get Node Name (GNN) from host12 for Port ID 0xbf0027 </p>
 <dl>
 <dd>
 <pre>fcnsq host12 --gnn bf0027</pre>
-</dl>
+</dd></dl>
 <p> Query Get Symbolic Port Name (GSPN) from host12 for Port ID 0xbf0027 </p>
 <dl>
 <dd>
 <pre>fcnsq host12 --gspn bf0027</pre>
-</dl>
+</dd></dl>
 <p> Query Get Symbolic Node Name (GSNN) from host12 for WWWPN 0x1000001B213C9DDA </p>
 <dl>
 <dd>
 <pre>fcnsq host12 --gsnn 0x1000001B213C9DDA</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fcoeadm/">fcoeadm</a></code>(8)</p>
 <h2>Support</h2>

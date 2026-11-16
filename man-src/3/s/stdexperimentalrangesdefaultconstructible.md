@@ -11,9 +11,7 @@ std::experimental::ranges::DefaultConstructible - std::experimental::ranges::Def
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class T &gt;                                   (ranges TS)
-
 concept bool DefaultConstructible = Constructible&lt;T&gt;;</code></pre> 
 The DefaultConstructible concept provides a shorthand for the common case when the question is whether a type can be constructed with no arguments. 
 

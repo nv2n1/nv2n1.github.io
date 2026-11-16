@@ -14,15 +14,15 @@ XGetExtensionVersion - query the version of the input extension.
  Specifies the extension to be queried. The input
  extension name is definedin the header file XI.h.</pre><h2>Description</h2><dl COMPACT><dd><pre>The XGetExtensionVersion request is deprecated and should not
 be used in XI2 applications. Clients issuing a XGetExtensionVersion
-request will not be able to use XI2 features.</pre></dl><dl COMPACT><dd><pre>The XGetExtensionVersion request queries the version of the input
+request will not be able to use XI2 features.</pre></dd></dl><dl COMPACT><dd><pre>The XGetExtensionVersion request queries the version of the input
 extension, and returns an XExtensionVersion structure. This structure
 contains a major_version and minor_version number which can be compared
 with constants defined in XI.h. Support for additional protocol
 requests added to the input extension after its initial release
 is indicated by a version number corresponding to the added
 requests. Each version contains all the protocol requests
-contained by previous versions.</pre></dl><dl COMPACT><dd><pre>You should use XFree to free the XExtensionVersion structure.</pre></dl><h2>Structures</h2><dl COMPACT><dd><pre>This request returns an XExtensionVersion structure.</pre></dl><dl COMPACT><dd><pre>typedef struct {
+contained by previous versions.</pre></dd></dl><dl COMPACT><dd><pre>You should use XFree to free the XExtensionVersion structure.</pre></dd></dl><h2>Structures</h2><dl COMPACT><dd><pre>This request returns an XExtensionVersion structure.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  int present;
  short major_version;
  short minor_version;
-} XExtensionVersion;</pre></dl>
+} XExtensionVersion;</pre></dd></dl>

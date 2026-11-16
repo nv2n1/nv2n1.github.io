@@ -40,25 +40,25 @@ int
 <code>Tcl_HideCommand</code>(<i>interp, cmdName, hiddenCmdName</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to execute the specified command.</p>
-<dd>const char <i>*slaveName</i> (in) Name of slave interpreter to create or manipulate.</p>
-<dd>int <i>isSafe</i> (in) If non-zero, a &#8220;safe&#8221; slave that is suitable for running untrusted code is created, otherwise a trusted slave is created.</p>
-<dd>Tcl_Interp <i>*slaveInterp</i> (in) Interpreter to use for creating the source command for an alias (see below).</p>
-<dd>const char <i>*slaveCmd</i> (in) Name of source command for alias.</p>
-<dd>Tcl_Interp <i>*targetInterp</i> (in) Interpreter that contains the target command for an alias.</p>
-<dd>const char <i>*targetCmd</i> (in) Name of target command for alias in <i>targetInterp</i>.</p>
-<dd>int <i>argc</i> (in) Count of additional arguments to pass to the alias command.</p>
-<dd>const char *const <i>*argv</i> (in) Vector of strings, the additional arguments to pass to the alias command. This storage is owned by the caller.</p>
-<dd>int <i>objc</i> (in) Count of additional object arguments to pass to the alias object command.</p>
-<dd>Tcl_Obj <i>**objv</i> (in) Vector of Tcl_Obj structures, the additional object arguments to pass to the alias object command. This storage is owned by the caller.</p>
-<dd>Tcl_Interp <i>**targetInterpPtr</i> (in) Pointer to location to store the address of the interpreter where a target command is defined for an alias.</p>
-<dd>const char <i>**targetCmdPtr</i> (out) Pointer to location to store the address of the name of the target command for an alias.</p>
-<dd>int <i>*argcPtr</i> (out) Pointer to location to store count of additional arguments to be passed to the alias. The location is in storage owned by the caller.</p>
-<dd>const char <i>***argvPtr</i> (out) Pointer to location to store a vector of strings, the additional arguments to pass to an alias. The location is in storage owned by the caller, the vector of strings is owned by the called function.</p>
-<dd>int <i>*objcPtr</i> (out) Pointer to location to store count of additional object arguments to be passed to the alias. The location is in storage owned by the caller.</p>
-<dd>Tcl_Obj <i>***objvPtr</i> (out) Pointer to location to store a vector of Tcl_Obj structures, the additional arguments to pass to an object alias command. The location is in storage owned by the caller, the vector of Tcl_Obj structures is owned by the called function.</p>
-<dd>const char <i>*cmdName</i> (in) Name of an exposed command to hide or create.</p>
-<dd>const char <i>*hiddenCmdName</i> (in) Name under which a hidden command is stored and with which it can be exposed or invoked. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to execute the specified command.</dd>
+<dd>const char <i>*slaveName</i> (in) Name of slave interpreter to create or manipulate.</dd>
+<dd>int <i>isSafe</i> (in) If non-zero, a &#8220;safe&#8221; slave that is suitable for running untrusted code is created, otherwise a trusted slave is created.</dd>
+<dd>Tcl_Interp <i>*slaveInterp</i> (in) Interpreter to use for creating the source command for an alias (see below).</dd>
+<dd>const char <i>*slaveCmd</i> (in) Name of source command for alias.</dd>
+<dd>Tcl_Interp <i>*targetInterp</i> (in) Interpreter that contains the target command for an alias.</dd>
+<dd>const char <i>*targetCmd</i> (in) Name of target command for alias in <i>targetInterp</i>.</dd>
+<dd>int <i>argc</i> (in) Count of additional arguments to pass to the alias command.</dd>
+<dd>const char *const <i>*argv</i> (in) Vector of strings, the additional arguments to pass to the alias command. This storage is owned by the caller.</dd>
+<dd>int <i>objc</i> (in) Count of additional object arguments to pass to the alias object command.</dd>
+<dd>Tcl_Obj <i>**objv</i> (in) Vector of Tcl_Obj structures, the additional object arguments to pass to the alias object command. This storage is owned by the caller.</dd>
+<dd>Tcl_Interp <i>**targetInterpPtr</i> (in) Pointer to location to store the address of the interpreter where a target command is defined for an alias.</dd>
+<dd>const char <i>**targetCmdPtr</i> (out) Pointer to location to store the address of the name of the target command for an alias.</dd>
+<dd>int <i>*argcPtr</i> (out) Pointer to location to store count of additional arguments to be passed to the alias. The location is in storage owned by the caller.</dd>
+<dd>const char <i>***argvPtr</i> (out) Pointer to location to store a vector of strings, the additional arguments to pass to an alias. The location is in storage owned by the caller, the vector of strings is owned by the called function.</dd>
+<dd>int <i>*objcPtr</i> (out) Pointer to location to store count of additional object arguments to be passed to the alias. The location is in storage owned by the caller.</dd>
+<dd>Tcl_Obj <i>***objvPtr</i> (out) Pointer to location to store a vector of Tcl_Obj structures, the additional arguments to pass to an object alias command. The location is in storage owned by the caller, the vector of Tcl_Obj structures is owned by the called function.</dd>
+<dd>const char <i>*cmdName</i> (in) Name of an exposed command to hide or create.</dd>
+<dd>const char <i>*hiddenCmdName</i> (in) Name under which a hidden command is stored and with which it can be exposed or invoked. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are intended for access to the multiple interpreter facility from inside C programs. They enable managing multiple interpreters in a hierarchical relationship, and the management of aliases, commands that when invoked in one interpreter execute a command in another interpreter. The return value for those procedures that return an <code>int</code> is either <code>TCL_OK</code> or <code>TCL_ERROR</code>. If <code>TCL_ERROR</code> is returned then the <code>result</code> field of the interpreter contains an error message. </p>

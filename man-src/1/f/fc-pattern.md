@@ -18,20 +18,20 @@ description: "fc-pattern – parse and show pattern"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Perform config substitution on pattern.</p>
-<dt><code>-d</code></p>
-<dd> Perform default substitution on pattern.</p>
-<dt><code>-f</code></p>
-<dd> Format output according to the format specifier <i>format</i>.</p>
-<dt><code>-V</code></p>
-<dd> Show version of the program and exit.</p>
-<dt><code>-h</code></p>
-<dd> Show summary of options.</p>
-<dt><i>pattern</i></p>
-<dd> Parses and displays <i>pattern</i> (uses empty pattern by default).</p>
-<dt><i>element</i></p>
-<dd> If set, the <i>element</i> property is displayed for parsed pattern.</dl>
+<dt><code>-c</code></dt>
+<dd> Perform config substitution on pattern.</dd>
+<dt><code>-d</code></dt>
+<dd> Perform default substitution on pattern.</dd>
+<dt><code>-f</code></dt>
+<dd> Format output according to the format specifier <i>format</i>.</dd>
+<dt><code>-V</code></dt>
+<dd> Show version of the program and exit.</dd>
+<dt><code>-h</code></dt>
+<dd> Show summary of options.</dd>
+<dt><i>pattern</i></dt>
+<dd> Parses and displays <i>pattern</i> (uses empty pattern by default).</dd>
+<dt><i>element</i></dt>
+<dd> If set, the <i>element</i> property is displayed for parsed pattern.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fcnameparse/">FcNameParse</a></code>(3) <code><a href="/docs/linux/man/3-fcconfigsubstitute/">FcConfigSubstitute</a></code>(3) <code><a href="/docs/linux/man/3-fcdefaultsubstitute/">FcDefaultSubstitute</a></code>(3) <code><a href="/docs/linux/man/3-fcpatternprint/">FcPatternPrint</a></code>(3) <code><a href="/docs/linux/man/3-fcpatternformat/">FcPatternFormat</a></code>(3) <code><a href="/docs/linux/man/1-fc-cat/">fc-cat</a></code>(1) <code><a href="/docs/linux/man/1-fc-cache/">fc-cache</a></code>(1) <code><a href="/docs/linux/man/1-fc-list/">fc-list</a></code>(1) <code><a href="/docs/linux/man/1-fc-match/">fc-match</a></code>(1) <code><a href="/docs/linux/man/1-fc-query/">fc-query</a></code>(1) <code><a href="/docs/linux/man/1-fc-scan/">fc-scan</a></code>(1) </p>
 <p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.</p>

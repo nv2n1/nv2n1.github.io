@@ -27,10 +27,10 @@ description: "zheevd.f –"
  digits which subtract like the Cray X-MP, Cray Y-MP, Cray C-90, or
  Cray-2. It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBZ</i> </p>
+<dd><i>JOBZ</i> </dd>
 <pre> JOBZ is CHARACTER*1
  = 'N': Compute eigenvalues only;
  = 'V': Compute eigenvalues and eigenvectors.</pre>
@@ -117,19 +117,19 @@ description: "zheevd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
-<dd>Modified description of INFO. Sven, 16 Feb 05.</dl>
+<dd>Modified description of INFO. Sven, 16 Feb 05.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 205 of file zheevd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

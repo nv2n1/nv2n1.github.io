@@ -20,14 +20,14 @@ description: "git-clone-subset – Clones a subset of a git repository"
  does, but for a file pattern instead of just a single directory.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></p>
-<dd> show usage information.</p>
-<dt><i>repository</i></p>
-<dd> URL or local path to the git repository to be cloned.</p>
-<dt><i>destination-dir</i></p>
-<dd> Directory to create the clone. Same rules for git-clone applies: it will be created if it does not exist and it must be empty otherwise. But, unlike git-clone, this argument is not optional: git-clone uses several rules to determine the &quot;Humane&quot; dir name of a cloned repo, and git-clone-subset will not risk parse its output, let alone predict the chosen name.</p>
-<dt><i>pattern</i></p>
-<dd> Glob pattern to match the desired files/dirs. It will be ultimately evaluated by a call to bash, NOT git or sh, using extended glob &#8216;!(&lt;pattern&gt;)&#8217; rule. Quote it or escape it on command line, so it does not get evaluated prematurely by your current shell. Only a single pattern is allowed: if more are required, use extglob&#8217;s &quot;|&quot; syntax. Globs will be evaluated with bash&#8217;s shopt dotglob set, so beware. Patterns should not contain spaces or special chars like &quot; &#8216; $ ( ) { } `, not even quoted or escaped, since that might interphere with the !() syntax after pattern expansion. </p>
+<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></dt>
+<dd> show usage information.</dd>
+<dt><i>repository</i></dt>
+<dd> URL or local path to the git repository to be cloned.</dd>
+<dt><i>destination-dir</i></dt>
+<dd> Directory to create the clone. Same rules for git-clone applies: it will be created if it does not exist and it must be empty otherwise. But, unlike git-clone, this argument is not optional: git-clone uses several rules to determine the &quot;Humane&quot; dir name of a cloned repo, and git-clone-subset will not risk parse its output, let alone predict the chosen name.</dd>
+<dt><i>pattern</i></dt>
+<dd> Glob pattern to match the desired files/dirs. It will be ultimately evaluated by a call to bash, NOT git or sh, using extended glob &#8216;!(&lt;pattern&gt;)&#8217; rule. Quote it or escape it on command line, so it does not get evaluated prematurely by your current shell. Only a single pattern is allowed: if more are required, use extglob&#8217;s &quot;|&quot; syntax. Globs will be evaluated with bash&#8217;s shopt dotglob set, so beware. Patterns should not contain spaces or special chars like &quot; &#8216; $ ( ) { } `, not even quoted or escaped, since that might interphere with the !() syntax after pattern expansion. </dd>
 <p> Pattern Examples: </p>
 <p> &quot;*.png&quot;<br />
  &quot;*.png|*icon*&quot;<br />
@@ -41,3 +41,4 @@ description: "git-clone-subset – Clones a subset of a git repository"
 <h2>AUTHOR</h2>
 <p> Rodrigo Silva (MestreLion) linux [at] rodrigosilva.com </p>
 <h2>Index</h2>
+</p>

@@ -36,7 +36,7 @@ struct ibv_rwq_ind_table_init_attr {
 <p> <code>ibv_create_wq</code>(3), <code>ibv_modify_wq</code>(3), <code>ibv_create_qp_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

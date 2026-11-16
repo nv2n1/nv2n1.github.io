@@ -14,16 +14,16 @@ description: "gnutls_pubkey_import_tpm_raw – API function"
 <p> <code>int gnutls_pubkey_import_tpm_raw(gnutls_pubkey_t </code><i>pkey</i><code>, const gnutls_datum_t * </code><i>fdata</i><code>, gnutls_tpmkey_fmt_t </code><i>format</i><code>, const char * </code><i>srk_password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t pkey</p>
-<dd> The public key</p>
-<dt>const gnutls_datum_t * fdata</p>
-<dd> The TPM key to be imported</p>
-<dt>gnutls_tpmkey_fmt_t format</p>
-<dd> The format of the private key</p>
-<dt>const char * srk_password</p>
-<dd> The password for the SRK key (optional)</p>
-<dt>unsigned int flags</p>
-<dd> One of the GNUTLS_PUBKEY_* flags</dl>
+<dt>gnutls_pubkey_t pkey</dt>
+<dd> The public key</dd>
+<dt>const gnutls_datum_t * fdata</dt>
+<dd> The TPM key to be imported</dd>
+<dt>gnutls_tpmkey_fmt_t format</dt>
+<dd> The format of the private key</dd>
+<dt>const char * srk_password</dt>
+<dd> The password for the SRK key (optional)</dd>
+<dt>unsigned int flags</dt>
+<dd> One of the GNUTLS_PUBKEY_* flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will import the public key from the provided TPM key structure. </p>
 <p> With respect to passwords the same as in <code>gnutls_pubkey_import_tpm_url()</code> apply.</p>
@@ -40,6 +40,6 @@ description: "gnutls_pubkey_import_tpm_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

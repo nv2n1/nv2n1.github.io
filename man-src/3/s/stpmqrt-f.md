@@ -21,10 +21,10 @@ description: "stpmqrt.f –"
 <pre> STPMQRT applies a real orthogonal matrix Q obtained from a 
  &quot;triangular-pentagonal&quot; real block reflector H to a general
  real matrix C, which consists of two blocks A and B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'L': apply Q or Q^H from the Left;
  = 'R': apply Q or Q^H from the Right.</pre>
@@ -99,13 +99,13 @@ description: "stpmqrt.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -120,14 +120,14 @@ description: "stpmqrt.f –"
  if L=0, there is no trapezoidal block, hence V = V1 is rectangular.
  If SIDE = 'L': C = [A] where A is K-by-N, B is M-by-N and V is M-by-K. 
  [B] 
- 
  If SIDE = 'R': C = [A B] where A is M-by-K, B is M-by-N and V is N-by-K.
  The real orthogonal matrix Q is formed from V and T.
  If TRANS='N' and SIDE='L', C is on exit replaced with Q * C.
  If TRANS='C' and SIDE='L', C is on exit replaced with Q^H * C.
  If TRANS='N' and SIDE='R', C is on exit replaced with C * Q.
  If TRANS='C' and SIDE='R', C is on exit replaced with C * Q^H.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 216 of file stpmqrt.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -15,14 +15,14 @@ description: "supybot-wizard – A wizard for creating Supybot configuration fil
 <p> <code>supybot-wizard</code> is an in-depth wizard that provides a nice user interface for creating configuration files for <i><a href="/docs/linux/man/1-supybot/">supybot</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;allow-root</code></p>
-<dd> Determines whether the wizard will be allowed to run as root. You do not want this. Do not do it. Even if you think you want it, you do not.</p>
-<dt><code>&#8211;no-network</code></p>
-<dd> Determines whether the wizard will be allowed to run without a network connection.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;allow-root</code></dt>
+<dd> Determines whether the wizard will be allowed to run as root. You do not want this. Do not do it. Even if you think you want it, you do not.</dd>
+<dt><code>&#8211;no-network</code></dt>
+<dd> Determines whether the wizard will be allowed to run without a network connection.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-python/">python</a></i>(1), <i><a href="/docs/linux/man/1-supybot/">supybot</a></i>(1), <i><a href="/docs/linux/man/1-supybot-test/">supybot-test</a></i>(1), <i><a href="/docs/linux/man/1-supybot-botchk/">supybot-botchk</a></i>(1), <i><a href="/docs/linux/man/1-supybot-adduser/">supybot-adduser</a></i>(1), <i><a href="/docs/linux/man/1-supybot-plugin-doc/">supybot-plugin-doc</a></i>(1), <i><a href="/docs/linux/man/1-supybot-plugin-create/">supybot-plugin-create</a></i>(1)</p>
 <h2>AUTHOR</h2>

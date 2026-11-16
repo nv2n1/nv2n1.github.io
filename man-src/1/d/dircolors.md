@@ -15,16 +15,16 @@ description: "dircolors – color setup for ls"
 <p> Output commands to set the LS_COLORS environment variable.</p>
 <h3>Determine format of output:</h3>
 <dl>
-<dt><code>-b</code>, <code>&#8211;sh</code>, <code>&#8211;bourne-shell</code></p>
-<dd> output Bourne shell code to set LS_COLORS</p>
-<dt><code>-c</code>, <code>&#8211;csh</code>, <code>&#8211;c-shell</code></p>
-<dd> output C shell code to set LS_COLORS</p>
-<dt><code>-p</code>, <code>&#8211;print-database</code></p>
-<dd> output defaults</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-b</code>, <code>&#8211;sh</code>, <code>&#8211;bourne-shell</code></dt>
+<dd> output Bourne shell code to set LS_COLORS</dd>
+<dt><code>-c</code>, <code>&#8211;csh</code>, <code>&#8211;c-shell</code></dt>
+<dd> output C shell code to set LS_COLORS</dd>
+<dt><code>-p</code>, <code>&#8211;print-database</code></dt>
+<dd> output defaults</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If FILE is specified, read it to determine which colors to use for which file types and extensions. Otherwise, a precompiled database is used. For details on the format of these files, run &#8216;dircolors <code>&#8211;print-database</code>&#8216;.</p>
 <h2>AUTHOR</h2>
 <p> Written by H. Peter Anvin.</p>

@@ -15,11 +15,11 @@ sync_inode_metadata - write an inode to disk
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>the inode to sync</dl>
+<dl><dd></dd><dd>the inode to sync</dd></dl>
  
 
  <i>wait</i>
-<dl><dd>wait for I/O to complete.</dl>
+<dl><dd>wait for I/O to complete.</dd></dl>
 
 <h2>Description</h2>
 

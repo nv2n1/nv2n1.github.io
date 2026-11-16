@@ -16,20 +16,20 @@ description: "alevt-date – display/set time received via Teletext"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-set</code></p>
-<dd> Set system time from time received via Teletext.</p>
-<dt><code>-delta</code><i>&nbsp;<wbr>seconds</i></p>
-<dd> Maximum allowed adjustment made to the system time. The default is 7200 seconds (2 hours) and the maximum that may be given is 12 hours.</p>
-<dt><code>-format</code><i>&nbsp;<wbr>string</i></p>
-<dd> Format string to used to print the time. Look at <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for possible control sequences.</p>
-<dt><code>-vbi</code><i>&nbsp;<wbr>device</i></p>
-<dd> Use the given device name (default: /dev/vbi0).</p>
-<dt><code>-timeout</code><i>&nbsp;<wbr>seconds</i></p>
-<dd> If the time can&#8217;t be detected in <i>seconds</i>, the program is terminated with a SIGALRM.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-set</code></dt>
+<dd> Set system time from time received via Teletext.</dd>
+<dt><code>-delta</code><i>&nbsp;<wbr>seconds</i></dt>
+<dd> Maximum allowed adjustment made to the system time. The default is 7200 seconds (2 hours) and the maximum that may be given is 12 hours.</dd>
+<dt><code>-format</code><i>&nbsp;<wbr>string</i></dt>
+<dd> Format string to used to print the time. Look at <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for possible control sequences.</dd>
+<dt><code>-vbi</code><i>&nbsp;<wbr>device</i></dt>
+<dd> Use the given device name (default: /dev/vbi0).</dd>
+<dt><code>-timeout</code><i>&nbsp;<wbr>seconds</i></dt>
+<dd> If the time can&#8217;t be detected in <i>seconds</i>, the program is terminated with a SIGALRM.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program.</dd></dl>
 <p> Before starting this program, you have to set the TV channel with another program like <code>xawtv</code> of <code>set-tv</code>. </p>
 <p> Note: This program does <code>not</code> set the battery backed up clock of your computer. <i>clock -w</i> will do this. </p>
 <h2>FILES</h2>

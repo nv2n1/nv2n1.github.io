@@ -14,25 +14,25 @@ description: "qmon – X-Windows OSF/Motif graphical user interface for xxQS_NAM
 <h2>DESCRIPTION</h2>
 <p> <i>Qmon</i> allows administrators and users to manipulate the xxQS_NAMExx system from an X-Window environment. <i>Qmon</i> provides various dialogues linked together in multiple ways. For each task the user wishes to accomplish via <i>qmon</i> a corresponding dialogue is provided. There are multiple ways to address the proper dialogue for a certain task: </p>
 <dl>
-<dt>&bull;</p>
-<dd> The <i>qmon</i> main window that comes up first on start-up contains icon buttons for all major administrative and user tasks. A functionality tooltip is displayed when pointing at the different icons.</p>
-<dt>&bull;</p>
-<dd> A <code>Task</code> pulldown menu button appears in the <i>qmon</i> main window menu bar. Clicking on it opens a list of available tasks. Selecting one of them opens the corresponding dialogue.</p>
-<dt>&bull;</p>
-<dd> The <code>Task</code> pulldown menu also contains the key accelerators which can be used to invoke the task dialogues directly from the main window by pressing a certain sequence on the keyboard.</p>
-<dt>&bull;</p>
-<dd> While navigating through a certain dialogue and its dialogue sub-hierarchy, links to other dialogues occur whenever a connection between both dialogues is obvious. Pushing the buttons that identify the links opens up the other dialogues.</dl>
+<dt>&bull;</dt>
+<dd> The <i>qmon</i> main window that comes up first on start-up contains icon buttons for all major administrative and user tasks. A functionality tooltip is displayed when pointing at the different icons.</dd>
+<dt>&bull;</dt>
+<dd> A <code>Task</code> pulldown menu button appears in the <i>qmon</i> main window menu bar. Clicking on it opens a list of available tasks. Selecting one of them opens the corresponding dialogue.</dd>
+<dt>&bull;</dt>
+<dd> The <code>Task</code> pulldown menu also contains the key accelerators which can be used to invoke the task dialogues directly from the main window by pressing a certain sequence on the keyboard.</dd>
+<dt>&bull;</dt>
+<dd> While navigating through a certain dialogue and its dialogue sub-hierarchy, links to other dialogues occur whenever a connection between both dialogues is obvious. Pushing the buttons that identify the links opens up the other dialogues.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The supported options are the standard X Toolkit options as described in section <code>Options</code>. Furthermore, <i>qmon</i> supports:</p>
 <dl>
-<dt><code>-cmap</code></p>
-<dd> Installs a private color map for <i>qmon</i>. This is sometimes useful if other applications have already allocated lots of colors and if <i>qmon</i>, therefore prints corresponding error messages. <code>Note</code>, however, that using a private color map will result in color map switches whenever you enter or leave <i>qmon</i> windows.</p>
-<dt><code>-fontFamily {big|medium|small}</code></p>
-<dd> Notifies <i>qmon</i> to use different size font families for different resolution sizes.</p>
-<dt><code>-help</code></p>
-<dd> Displays usage information.</p>
-<dt><code>-nologo</code></p>
-<dd> Startup without logo.</dl>
+<dt><code>-cmap</code></dt>
+<dd> Installs a private color map for <i>qmon</i>. This is sometimes useful if other applications have already allocated lots of colors and if <i>qmon</i>, therefore prints corresponding error messages. <code>Note</code>, however, that using a private color map will result in color map switches whenever you enter or leave <i>qmon</i> windows.</dd>
+<dt><code>-fontFamily {big|medium|small}</code></dt>
+<dd> Notifies <i>qmon</i> to use different size font families for different resolution sizes.</dd>
+<dt><code>-help</code></dt>
+<dd> Displays usage information.</dd>
+<dt><code>-nologo</code></dt>
+<dd> Startup without logo.</dd></dl>
 <h2>DIALOGUES</h2>
 <h3><code>Job Control</code></h3>
 <p> The <code>Job Control</code> dialogue provides a folder of tabulated lists of the still pending jobs, already running jobs and recently finished jobs. The dialogue allows for detailed information on the jobs as well as for the deletion and suspension of jobs being selected. In addition the job control dialogue offers links to the <code>Submit</code> dialogue in order to submit new jobs or to change attributes of pending jobs (<code>Qalter</code> button). The fields displayed in the tabular display and the jobs displayed can be customized by pressing the <code>Customize</code> button. This customization can be saved to the <i>~/.qmon_preferences</i> file and is used on following startup for the initial configuration of the <code>Job Control</code> dialogue. </p>
@@ -49,11 +49,11 @@ description: "qmon – X-Windows OSF/Motif graphical user interface for xxQS_NAM
 <h3><code>Host Config</code></h3>
 <p> Four types of host related lists can be maintained via the <code>Host Config</code> dialogue: </p>
 <pre>
-<dl><dt><dd>Administration Hosts
+<dl><dt></dt><dd>Administration Hosts
 Submit Hosts
 Host Groups
 Execution Hosts
-</dl>
+</dd></dl>
 </pre>
 <p> The host list to be manipulated is selected via clicking at one of the tabs named correspondingly. The first two host lists only provide for adding or deleting entries, thereby allowing administrative or submit permission for the hosts on the lists, or denying it otherwise respectively. The host group list allows the manipulation of host groups. Host groups can reference either other host groups or hosts. The execution host list entries in addition provide the ability to define scaling factors for the load sensors, consumable complex attributes and access attributes (access, xaccess and projects, xprojects) as described in CPU, memory and I/O usage reported for running jobs can be scaled in addition and the relative performance of a host can be defined with the <code>Resource Capability Factor</code> (see</p>
 <h3><code>Cluster Config</code></h3>
@@ -65,11 +65,11 @@ Execution Hosts
 <h3><code>User Config</code></h3>
 <p> User permissions are controlled via the <code>User Config</code> dialogue. The tab widget in the left section of the dialogue allows for selecting between </p>
 <pre>
-<dl><dt><dd>Configuration of <code>Manager</code> accounts.
+<dl><dt></dt><dd>Configuration of <code>Manager</code> accounts.
 Configuration of <code>Operator</code> accounts.
 Definition of <code>Usersets</code>.
 Definition of <code>User</code> accounts.
-</dl>
+</dd></dl>
 </pre>
 <p> Those user accounts added to the list of manager or operator accounts are given permission to act as managers or operators respectively when accessing xxQS_NAMExx under their own account. </p>
 <p> The userset lists are used together with the <code>user_lists</code> and <code>xuser_lists</code> host, queue, project and cluster configuration parameters (see and to control access of users to hosts, queues, projects and the entire cluster. A userset is just a collection of user names and UNIX group names. Group names are identified by prefixing them with a &quot;@&quot; sign. The already-defined usersets are displayed in a selection list. These lists can be modified, and new lists can be created, using the <code>Userset</code> definition dialogue. </p>
@@ -93,33 +93,33 @@ Definition of <code>User</code> accounts.
 <p> The <code>Object Browser</code> dialogue&#8217;s purpose is manifold: First of all, xxQS_NAMExx and <i>qmon</i> Messages, such as notification of error or success concerning a previously taken action, can be displayed in the dialogue&#8217;s output window. Also the standard output and the standard error output of <i>qmon</i> can be diverted to the <code>Object Browser</code> output window. </p>
 <p> Additionally the <code>Object Browser</code> can be used to display continuous information about xxQS_NAMExx objects as the mouse pointer moves over their representation as icons or table entries in other <i>qmon</i> dialogues. Currently, only the display of the configuration of two xxQS_NAMExx objects in two separate dialogues is supported:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Queue configurations are displayed as soon as the mouse pointer enters a queue icon in the top level <code>Queue Control</code> dialogue (see above). This facility is activated by pushing the <code>Queue</code> button in the <code>Object Browser</code> dialogue.</p>
-<dt>&bull;</p>
-<dd> Detailed job information is printed as soon as the user moves the mouse pointer over a line in the <code>Job Control</code> dialogue (see above) assigned to a running or pending job.</p>
-<dt>&bull;</p>
-<dd> Additionally job scheduling information is displayed in the browser if the <code>Why?</code> button in the <code>Job Control</code> dialogue is pressed. In this case the Browser dialogue is opened implicitly and any scheduling related information is displayed.</dl>
+<dt>&bull;</dt>
+<dd> Queue configurations are displayed as soon as the mouse pointer enters a queue icon in the top level <code>Queue Control</code> dialogue (see above). This facility is activated by pushing the <code>Queue</code> button in the <code>Object Browser</code> dialogue.</dd>
+<dt>&bull;</dt>
+<dd> Detailed job information is printed as soon as the user moves the mouse pointer over a line in the <code>Job Control</code> dialogue (see above) assigned to a running or pending job.</dd>
+<dt>&bull;</dt>
+<dd> Additionally job scheduling information is displayed in the browser if the <code>Why?</code> button in the <code>Job Control</code> dialogue is pressed. In this case the Browser dialogue is opened implicitly and any scheduling related information is displayed.</dd></dl>
 <h3><code>Exit</code></h3>
 <p> The <code>Exit</code> icon button is not linked with a dialogue. Its sole purpose is to close all active <i>qmon</i> dialogues and to exit the application.</p>
 <h2>RESOURCES</h2>
 <p> The available resources, their meaning and the syntax to be followed in order to modify them are described in the default <i>qmon</i> resource file (see the section <code>Files</code> below for the location of the resource file).</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell <i>qmon</i> uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell <i>qmon</i> uses (in the order of precedence): </dd>
 <dl>
 <dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</p>
-<dt><code>SGE_LOAD_AVG</code></p>
-<dd> Specify a load parameter (see to use instead of <code>load_avg</code> when displaying/selecting load values.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd>
+<dt><code>SGE_LOAD_AVG</code></dt>
+<dd> Specify a load parameter (see to use instead of <code>load_avg</code> when displaying/selecting load values.</dd></dl>
 <h2>RESTRICTIONS</h2>
 <p> If the line to be entered in an editing window is longer than the width of the window, then the text just runs off the end of the window.</p>
 <h2>FILES</h2>
@@ -133,15 +133,15 @@ Definition of <code>User</code> accounts.
 <h2>COPYRIGHT</h2>
 <p> See and the information provided in &lt;xxqs_name_sxx_root&gt;/3rd_party/qmon for a statement of further rights and permissions and for credits to be given to public domain and freeware widget developers. </p>
 <h2>Index</h2>
-<dt><a href="#lbAV">RESOURCES</a></p>
+<dt><a href="#lbAV">RESOURCES</a></dt>
 <dd>
-<dt><a href="#lbAW">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbAW">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAX">RESTRICTIONS</a></p>
+</dd><dt><a href="#lbAX">RESTRICTIONS</a></dt>
 <dd>
-<dt><a href="#lbAY">FILES</a></p>
+</dd><dt><a href="#lbAY">FILES</a></dt>
 <dd>
-<dt><a href="#lbAZ">SEE ALSO</a></p>
+</dd><dt><a href="#lbAZ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBA">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBA">COPYRIGHT</a></dt>
+<dd></dd></dl>

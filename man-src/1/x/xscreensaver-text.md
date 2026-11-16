@@ -16,25 +16,25 @@ description: "xscreensaver-text – prints some text to stdout, for use by scree
 <h2>OPTIONS</h2>
 <p> <i>xscreensaver-text</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;columns </code><i>N</i> or &#8211;cols <i>N</i></p>
-<dd> Where to wrap lines; default 72 columns.</p>
-<dt><code>&#8211;verbose </code>or -v</p>
-<dd> Print diagnostics to stderr. Multiple <i>-v</i> switches increase the amount of output.</dl>
+<dt><code>&#8211;columns </code><i>N</i> or &#8211;cols <i>N</i></dt>
+<dd> Where to wrap lines; default 72 columns.</dd>
+<dt><code>&#8211;verbose </code>or -v</dt>
+<dd> Print diagnostics to stderr. Multiple <i>-v</i> switches increase the amount of output.</dd></dl>
 <p> Command line options may be used to override the settings in the ~/.xscreensaver file:</p>
 <dl>
-<dt><code>&#8211;string </code><i>STRING</i></p>
-<dd> Print the given string. It may contain % escape sequences as per <code>strftime</code>(2).</p>
-<dt><code>&#8211;file </code><i>PATH</i></p>
-<dd> Print the contents of the given file. If &#8211;cols is specified, re-wrap the lines; otherwise, print them as-is.</p>
-<dt><code>&#8211;program </code><i>CMD</i></p>
-<dd> Run the given program and print its output. If &#8211;cols is specified, re-wrap the output.</p>
-<dt><code>&#8211;url </code><i>HTTP-URL</i></p>
-<dd> Download and print the contents of the HTTP document. If it contains HTML, RSS, or Atom, it will be converted to plain-text. </p>
+<dt><code>&#8211;string </code><i>STRING</i></dt>
+<dd> Print the given string. It may contain % escape sequences as per <code>strftime</code>(2).</dd>
+<dt><code>&#8211;file </code><i>PATH</i></dt>
+<dd> Print the contents of the given file. If &#8211;cols is specified, re-wrap the lines; otherwise, print them as-is.</dd>
+<dt><code>&#8211;program </code><i>CMD</i></dt>
+<dd> Run the given program and print its output. If &#8211;cols is specified, re-wrap the output.</dd>
+<dt><code>&#8211;url </code><i>HTTP-URL</i></dt>
+<dd> Download and print the contents of the HTTP document. If it contains HTML, RSS, or Atom, it will be converted to plain-text. </dd>
 <p> Note: this re-downloads the document every time it is run! It might be considered abusive for you to point this at a web server that you do not control!</dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>HTTP_PROXY</code> or http_proxy</p>
-<dd> to get the default HTTP proxy host and port.</dl>
+<dt><code>HTTP_PROXY</code> or http_proxy</dt>
+<dd> to get the default HTTP proxy host and port.</dd></dl>
 <h2>BUGS</h2>
 <p> The RSS and Atom output is always ISO-8859-1, regardless of locale. </p>
 <p> URLs should be cached, use &quot;If-Modified-Since&quot;, and obey &quot;Expires&quot;.</p>
@@ -42,13 +42,13 @@ description: "xscreensaver-text – prints some text to stdout, for use by scree
 <p> <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code>fortune</code>(1), <code>phosphor</code>(1), <code>apple2</code>(1), <code>starwars</code>(1), <code>fontglide</code>(1), <code>dadadodo</code>(1), <code>webcollage</code>(1),</p>
 <dl>
 <dt>
-<dd> <i><a rel="nofollow" href="http://www.livejournal.com/stats/latest-rss.bml,">http://www.livejournal.com/stats/latest-rss.bml,</a></i></p>
+</dt><dd> <i><a rel="nofollow" href="http://www.livejournal.com/stats/latest-rss.bml,">http://www.livejournal.com/stats/latest-rss.bml,</a></i></dd>
 <dl>
 <dt>
-<dd> <i><a rel="nofollow" href="https://en.wikipedia.org/w/index.php?title=Special:NewPages">https://en.wikipedia.org/w/index.php?title=Special:NewPages</a>&amp;feed=rss,</i></p>
+</dt><dd> <i><a rel="nofollow" href="https://en.wikipedia.org/w/index.php?title=Special:NewPages">https://en.wikipedia.org/w/index.php?title=Special:NewPages</a>&amp;feed=rss,</i></dd>
 <dl>
 <dt>
-<dd> <code>driftnet</code>(1), <code>EtherPEG</code>, <code>EtherPeek</code></dl>
+</dt><dd> <code>driftnet</code>(1), <code>EtherPEG</code>, <code>EtherPeek</code></dd></dl>
 </dl>
 </dl>
 <h2>COPYRIGHT</h2>

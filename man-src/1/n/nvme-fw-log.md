@@ -36,7 +36,7 @@ url: "/docs/linux/man/1-nvme-fw-log/"
  -b, --raw-binary
 <dl>
 <dt>
-<dd> Print the raw fw log buffer to stdout.</dl>
+</dt><dd> Print the raw fw log buffer to stdout.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -44,25 +44,23 @@ url: "/docs/linux/man/1-nvme-fw-log/"
 
 <dl>
 <dt>
-<dd> &bull; Print the firmware log page in a human readable format: 
-
-<dl>
+</dt><dd> &bull; Print the firmware log page in a human readable format: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme fw-log /dev/nvme0
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; Print the log firmware to a file: 
-
-<dl>
+</dt><dd> &bull; Print the log firmware to a file: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme fw-log /dev/nvme0 --raw-binary &gt; fw_log.raw
-</pre></dl>
+</pre></dd></dl>
  
 
  It is probably a bad idea to not redirect stdout when using this mode.</dl>

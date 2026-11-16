@@ -18,22 +18,22 @@ description: "padsp – PulseAudio OSS Wrapper"
 <p> Equivalent to using <i>padsp</i> is starting an application with $LD_PRELOAD set to <i>libpulsedsp.so</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>-s</code> <i>SERVER</i></p>
-<dd> Set the PulseAudio server to connect to.</p>
-<dt><code>-n</code> <i>NAME</i></p>
-<dd> The client application name that shall be passed to the server when connecting.</p>
-<dt><code>-m</code> <i>NAME</i></p>
-<dd> The stream name that shall be passed to the server when creating a stream.</p>
-<dt><code>-M</code></p>
-<dd> Disable <i>/dev/mixer</i> emulation.</p>
-<dt><code>-S</code></p>
-<dd> Disable <i>/dev/sndstat</i> emulation.</p>
-<dt><code>-D</code></p>
-<dd> Disable <i>/dev/dsp</i> emulation.</p>
-<dt><code>-d</code></p>
-<dd> Enable debug output.</dl>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>-s</code> <i>SERVER</i></dt>
+<dd> Set the PulseAudio server to connect to.</dd>
+<dt><code>-n</code> <i>NAME</i></dt>
+<dd> The client application name that shall be passed to the server when connecting.</dd>
+<dt><code>-m</code> <i>NAME</i></dt>
+<dd> The stream name that shall be passed to the server when creating a stream.</dd>
+<dt><code>-M</code></dt>
+<dd> Disable <i>/dev/mixer</i> emulation.</dd>
+<dt><code>-S</code></dt>
+<dd> Disable <i>/dev/sndstat</i> emulation.</dd>
+<dt><code>-D</code></dt>
+<dd> Disable <i>/dev/dsp</i> emulation.</dd>
+<dt><code>-d</code></dt>
+<dd> Enable debug output.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The PulseAudio Developers &lt;pulseaudio-discuss (at) lists (dot) freedesktop (dot) org&gt;; PulseAudio is available from <code><a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></code></p>
 <h2>SEE ALSO</h2>

@@ -14,8 +14,8 @@ description: "gnutls_session_ticket_key_generate – API function"
 <p> <code>int gnutls_session_ticket_key_generate(gnutls_datum_t * </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_datum_t * key</p>
-<dd> is a pointer to a <code>gnutls_datum_t</code> which will contain a newly created key.</dl>
+<dt>gnutls_datum_t * key</dt>
+<dd> is a pointer to a <code>gnutls_datum_t</code> which will contain a newly created key.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Generate a random key to encrypt security parameters within SessionTicket.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_session_ticket_key_generate – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

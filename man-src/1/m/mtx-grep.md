@@ -15,20 +15,20 @@ description: "mtx-grep – Simple Grepper"
 <p> <code>Simple Grepper</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;pattern</code></p>
-<dd> search for pattern (optional)</p>
-<dt><code>&#8211;count</code></p>
-<dd> count matches only</p>
-<dt><code>&#8211;nocomment</code></p>
-<dd> skip lines that start with %% or #</p>
-<dt><code>&#8211;n</code></p>
-<dd> show at most n matches</p>
-<dt><code>&#8211;first</code></p>
-<dd> only show first match</p>
-<dt><code>&#8211;match</code></p>
-<dd> return the match (if it is one)</p>
-<dt><code>&#8211;xml</code></p>
-<dd> pattern is lpath expression</dl>
+<dt><code>&#8211;pattern</code></dt>
+<dd> search for pattern (optional)</dd>
+<dt><code>&#8211;count</code></dt>
+<dd> count matches only</dd>
+<dt><code>&#8211;nocomment</code></dt>
+<dd> skip lines that start with %% or #</dd>
+<dt><code>&#8211;n</code></dt>
+<dd> show at most n matches</dd>
+<dt><code>&#8211;first</code></dt>
+<dd> only show first match</dd>
+<dt><code>&#8211;match</code></dt>
+<dd> return the match (if it is one)</dd>
+<dt><code>&#8211;xml</code></dt>
+<dd> pattern is lpath expression</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -15,7 +15,7 @@ snd_rawmidi_transmit_empty - check whether the output buffer is empty
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the rawmidi substream</dl>
+<dl><dd></dd><dd>the rawmidi substream</dd></dl>
 
 <h2>Return</h2>
 

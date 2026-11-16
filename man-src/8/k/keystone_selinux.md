@@ -55,9 +55,9 @@ description: "keystone_selinux – Security Enhanced Linux Policy for the keysto
 <p> Policy governs the access confined processes have to these ports. SELinux keystone policy is very flexible allowing users to setup their keystone processes in as secure a method as possible. </p>
 <p> The following port types are defined for keystone: </p>
 <dl>
-<dt><code>keystone_port_t</code></p>
+<dt><code>keystone_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 35357 udp 35357</dl>
+</dd><dd>Default Defined Ports: tcp 35357 udp 35357</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type keystone_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

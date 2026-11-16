@@ -11,13 +11,10 @@ std::filesystem::is_regular_file - std::filesystem::is_regular_file
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     bool is_regular_file(std::filesystem::file_status s) noexcept;
 (1)(since C++ 17)
-
     bool is_regular_file(const std::filesystem::path &amp;p);
 (2)(since C++ 17)
-
     bool is_regular_file(const std::filesystem::path &amp;p, std::error_code &amp;ec) noexcept;</code></pre> 
 Checks if the given file status or path corresponds to a regular file. 
 1) Equivalent to s.type() == file_type::regular. 
@@ -44,25 +41,16 @@ The throwing overload is additionally specified to throw std::filesystem::filesy
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;filesystem&gt;
-
 #include &lt;unistd.h&gt;
-
 #include &lt;sys/socket.h&gt;
-
 #include &lt;sys/un.h&gt;
-
 #include &lt;sys/stat.h&gt;
 namespace fs = std::filesystem;
 void demo_status(const fs::path &amp;p, fs::file_status s)
-
 {
     std::cout &lt;&lt; p;
     // alternative: switch(s.type()) { case fs::file_type::regular: ...}
@@ -83,9 +71,7 @@ void demo_status(const fs::path &amp;p, fs::file_status s)
     if (!fs::exists(s))
         std::cout &lt;&lt; &quot; does not exist\n&quot;;
 }
-
 int main()
-
 {
     // create files of different kinds
     fs::create_directory(&quot;sandbox&quot;);

@@ -11,27 +11,19 @@ std::sort_heap - std::sort_heap
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (until C++ 20)
-
         void sort_heap(RandomIt first, RandomIt last);
-
 template &lt;class RandomIt&gt;
 (since C++ 20)
-
     constexpr void sort_heap(RandomIt first, RandomIt last);
 (1)
-
     template &lt;class RandomIt, class Compare&gt;
     (until C++ 20)
-
         void sort_heap(RandomIt first, RandomIt last, Compare comp);
 (2)
-
     template &lt;class RandomIt, class Compare&gt;
     (since C++ 20)
-
         constexpr void sort_heap(RandomIt first, RandomIt last, Compare comp);</code></pre> 
 Converts the max heap [first, last) into a sorted range in ascending order. The resulting range no longer has the heap property. 
 The first version of the function uses operator&lt; to compare the elements, the second uses the given comparison function comp. 
@@ -93,12 +85,9 @@ LWG_2444 C++98 complexity requirement was wrong by a factor of 2 corrected
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {3, 1, 4, 1, 5, 9};
     std::make_heap(v.begin(), v.end());

@@ -14,24 +14,24 @@ description: "mydnsexport – Output zone data in various foreign file formats"
 <p><code>mydnsexport</code> outputs information about the zone(s) specified on the command line to the standard output, in the format specified. By default, it outputs BIND zone file format. Currently it can also output in <i>tinydns-data</i> format if the <code>-t</code>, <code>&#8211;tinydns-data</code> option is specified. If no zones are specified, all zones will be output.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;bind</code></p>
-<dd>Output the specified zone(s) in BIND zone file format.</p>
-<dt><code>-t</code>, <code>&#8211;tinydns-data</code></p>
-<dd>Output the specified zone(s) in tinydns-data format.</p>
-<dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></p>
-<dd>Use the database called <i>dbname</i>.</p>
-<dt><code>-h</code>, <code>&#8211;host</code>=<i>hostname</i></p>
-<dd>Connect to database server at <i>hostname</i>.</p>
-<dt><code>-p</code>, <code>&#8211;pass</code>=<i>password</i></p>
-<dd>Supply <i>password</i> when connecting to the database server. If the <i>password</i> argument is omitted, it will be prompted on the tty.</p>
-<dt><code>-u</code>, <code>&#8211;user</code>=<i>username</i></p>
-<dd>Use <i>username</i> when connecting to the database server.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Enable verbose output while running.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display program help and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Output version number and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;bind</code></dt>
+<dd>Output the specified zone(s) in BIND zone file format.</dd>
+<dt><code>-t</code>, <code>&#8211;tinydns-data</code></dt>
+<dd>Output the specified zone(s) in tinydns-data format.</dd>
+<dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></dt>
+<dd>Use the database called <i>dbname</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;host</code>=<i>hostname</i></dt>
+<dd>Connect to database server at <i>hostname</i>.</dd>
+<dt><code>-p</code>, <code>&#8211;pass</code>=<i>password</i></dt>
+<dd>Supply <i>password</i> when connecting to the database server. If the <i>password</i> argument is omitted, it will be prompted on the tty.</dd>
+<dt><code>-u</code>, <code>&#8211;user</code>=<i>username</i></dt>
+<dd>Use <i>username</i> when connecting to the database server.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Enable verbose output while running.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display program help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Output version number and exit.</dd></dl>
 <h2>Author</h2>
 <p>Don Moore &lt;bboy [at] bboy.net&gt; Howard Wilkinson &lt;howard [at] cohtech.com&gt;</p>
 <h2>Homepage</h2>

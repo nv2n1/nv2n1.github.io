@@ -38,18 +38,18 @@ description: "log4cpp::LayoutAppender –"
 <p>Return the layout of the appender. This method is the <code>Layout</code> accessor for subclasses of <code>LayoutAppender</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the <code>Layout</code>.</dl>
+<dd>the <code>Layout</code>.</dd></dl>
 <h3>bool log4cpp::LayoutAppender::requiresLayout () const [virtual]</h3>
 <p>Check if the appender requires a layout. All LayoutAppenders do, therefore this method returns true for all subclasses. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true.</dl>
+<dd>true.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::LayoutAppender::setLayout (<code>Layout</code> *layout = NULL) [virtual]</h3>
 <p>Set the <code>Layout</code> for this appender. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>layout</i> The layout to use.</dl>
+<dd><i>layout</i> The layout to use.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

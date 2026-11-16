@@ -23,23 +23,23 @@ dblink_build_sql_update(text relname,
 <p> <i>relname</i></p>
 <dl>
 <dt>
-<dd> Name of a local relation, for example foo or myschema.mytab. Include double quotes if the name is mixed-case or contains special characters, for example &quot;FooBar&quot;; without quotes, the string will be folded to lower case.</dl>
+</dt><dd> Name of a local relation, for example foo or myschema.mytab. Include double quotes if the name is mixed-case or contains special characters, for example &quot;FooBar&quot;; without quotes, the string will be folded to lower case.</dd></dl>
 <p> <i>primary_key_attnums</i></p>
 <dl>
 <dt>
-<dd> Attribute numbers (1-based) of the primary key fields, for example 1 2.</dl>
+</dt><dd> Attribute numbers (1-based) of the primary key fields, for example 1 2.</dd></dl>
 <p> <i>num_primary_key_atts</i></p>
 <dl>
 <dt>
-<dd> The number of primary key fields.</dl>
+</dt><dd> The number of primary key fields.</dd></dl>
 <p> <i>src_pk_att_vals_array</i></p>
 <dl>
 <dt>
-<dd> Values of the primary key fields to be used to look up the local tuple. Each field is represented in text form. An error is thrown if there is no local row with these primary key values.</dl>
+</dt><dd> Values of the primary key fields to be used to look up the local tuple. Each field is represented in text form. An error is thrown if there is no local row with these primary key values.</dd></dl>
 <p> <i>tgt_pk_att_vals_array</i></p>
 <dl>
 <dt>
-<dd> Values of the primary key fields to be placed in the resulting <code>UPDATE</code> command. Each field is represented in text form.</dl>
+</dt><dd> Values of the primary key fields to be placed in the resulting <code>UPDATE</code> command. Each field is represented in text form.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns the requested SQL statement as text.</p>
 <h2>NOTES</h2>
@@ -47,10 +47,10 @@ dblink_build_sql_update(text relname,
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SELECT dblink_build_sql_update('foo', '1 2', 2, '{"1", "a"}', '{"1", "b"}');
 dblink_build_sql_update-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -UPDATE foo SET f1 = '1', f2 = 'b', f3 = '1' WHERE f1 = '1' AND f2 = 'b'(1 row)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

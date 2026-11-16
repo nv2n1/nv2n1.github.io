@@ -15,7 +15,7 @@ skb_dst - returns skb dst_entry
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer</dl>
+<dl><dd></dd><dd>buffer</dd></dl>
 
 <h2>Description</h2>
 

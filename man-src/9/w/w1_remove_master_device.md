@@ -14,9 +14,9 @@ description: "w1_remove_master_device – unregister a master device"
 <p><i>bm</i></p>
 <dl>
 <dd>
-<dd>master bus device to remove</dl>
+</dd><dd>master bus device to remove</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

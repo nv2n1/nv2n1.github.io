@@ -31,29 +31,29 @@ url: "/docs/linux/man/1-po4a-updatepo/"
 
 <dl>
 <dt>-f, --format
-<dd> Format of the documentation you want to handle. Use the --help-format option to see the list of available formats.
-<dt>-m, --master
-<dd> File(s) containing the master document to translate.
-<dt>-M, --master-charset
-<dd> Charset of the files containing the document to translate. Note that all files must have the same charset.
-<dt>-p, --po
-<dd> Po file(s) to update. If these files do not exist, they are created by <tt>&quot;po4a-updatepo&quot;</tt>.
-<dt>-o, --option
-<dd> Extra option(s) to pass to the format plugin and other po4a internal module. Specify each option in the 'name=value' format. See the documentation of each plugin for more information about the valid options and their meanings.
-<dt>--previous
-<dd> This option adds '--previous' to the options passed to msgmerge. It requires gettext 0.16 or later.
-<dt>--msgmerge-opt options
-<dd> Extra options for msgmerge.
-<dt>-h, --help
-<dd> Show a short help message.
-<dt>--help-format
-<dd> List the documentation format handled by po4a.
-<dt>-V, --version
-<dd> Display the version of the script and exit.
-<dt>-v, --verbose
-<dd> Increase the verbosity of the program.
-<dt>-d, --debug
-<dd> Output some debugging information.</dl>
+</dt><dd> Format of the documentation you want to handle. Use the --help-format option to see the list of available formats.
+</dd><dt>-m, --master
+</dt><dd> File(s) containing the master document to translate.
+</dd><dt>-M, --master-charset
+</dt><dd> Charset of the files containing the document to translate. Note that all files must have the same charset.
+</dd><dt>-p, --po
+</dt><dd> Po file(s) to update. If these files do not exist, they are created by <tt>&quot;po4a-updatepo&quot;</tt>.
+</dd><dt>-o, --option
+</dt><dd> Extra option(s) to pass to the format plugin and other po4a internal module. Specify each option in the 'name=value' format. See the documentation of each plugin for more information about the valid options and their meanings.
+</dd><dt>--previous
+</dt><dd> This option adds '--previous' to the options passed to msgmerge. It requires gettext 0.16 or later.
+</dd><dt>--msgmerge-opt options
+</dt><dd> Extra options for msgmerge.
+</dd><dt>-h, --help
+</dt><dd> Show a short help message.
+</dd><dt>--help-format
+</dt><dd> List the documentation format handled by po4a.
+</dd><dt>-V, --version
+</dt><dd> Display the version of the script and exit.
+</dd><dt>-v, --verbose
+</dt><dd> Increase the verbosity of the program.
+</dd><dt>-d, --debug
+</dt><dd> Output some debugging information.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

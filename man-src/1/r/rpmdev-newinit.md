@@ -15,12 +15,12 @@ description: "rpmdev-newinit – manual page for rpmdev-newinit version 1.1"
 <p> rpmdev-newinit generates new init script from a template</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> FILE</p>
-<dd> Output the init script to FILE. &quot;-&quot; means stdout. The default is derived from &lt;appname&gt;, or &quot;newinitscript.init&quot; if appname is not given.</p>
-<dt><code>-h</code></p>
-<dd> Show this usage message and exit.</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-o</code> FILE</dt>
+<dd> Output the init script to FILE. &quot;-&quot; means stdout. The default is derived from &lt;appname&gt;, or &quot;newinitscript.init&quot; if appname is not given.</dd>
+<dt><code>-h</code></dt>
+<dd> Show this usage message and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <p> The template used is <i>/etc/rpmdevtools/template.init</i>.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt;, component rpmdevtools, or at &lt;<a rel="nofollow" href="https://fedorahosted.org/rpmdevtools/">https://fedorahosted.org/rpmdevtools/</a>&gt;.</p>

@@ -14,10 +14,10 @@ description: "gnutls_tdb_set_store_func – API function"
 <p> <code>void gnutls_tdb_set_store_func(gnutls_tdb_t </code><i>tdb</i><code>, gnutls_tdb_store_func </code><i>store</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_tdb_t tdb</p>
-<dd> The trust storage</p>
-<dt>gnutls_tdb_store_func store</p>
-<dd> The storage function</dl>
+<dt>gnutls_tdb_t tdb</dt>
+<dd> The trust storage</dd>
+<dt>gnutls_tdb_store_func store</dt>
+<dd> The storage function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will associate a storage function with the trust storage structure. The function is of the following form. </p>
 <p> int gnutls_tdb_store_func(const char* db_name, const char* host, const char* service, time_t expiration, const gnutls_datum_t* pubkey); </p>
@@ -31,6 +31,6 @@ description: "gnutls_tdb_set_store_func – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

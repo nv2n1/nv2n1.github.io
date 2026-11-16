@@ -17,29 +17,29 @@ description: "nwfstime – Display / Set a NetWare server’s date and time"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> With -h nwfstime prints a little help text.</dl>
+</dt><dd> With -h nwfstime prints a little help text.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> is the name of the server you want to use.</dl>
+</dt><dd> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user</i></p>
 <dl>
 <dt>
-<dd> <code>user</code> is the user name to use for login. To set the server&#8217;s time, you need supervisor privileges.</dl>
+</dt><dd> <code>user</code> is the user name to use for login. To set the server&#8217;s time, you need supervisor privileges.</dd></dl>
 <p> <code>-P</code> <i>password</i></p>
 <dl>
 <dt>
-<dd> <code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwfstime prompts for a password.</dl>
+</dt><dd> <code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwfstime prompts for a password.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> <code>-n</code> should be given if no password is required for the login. As you need supervisor privileges for setting the date and time, this option is probably not used very often.</dl>
+</dt><dd> <code>-n</code> should be given if no password is required for the login. As you need supervisor privileges for setting the date and time, this option is probably not used very often.</dd></dl>
 <p> <code>-C</code></p>
 <dl>
 <dt>
-<dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dl>
+</dt><dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dd></dl>
 <p> <code>-s</code></p>
 <dl>
 <dt>
-<dd> With <code>-s,</code> nwfstime sets the file server&#8217;s date and time according to the local date and time.</dl>
+</dt><dd> With <code>-s,</code> nwfstime sets the file server&#8217;s date and time according to the local date and time.</dd></dl>
 <h2>Index</h2>

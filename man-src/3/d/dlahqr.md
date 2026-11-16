@@ -19,18 +19,18 @@ description: "dlahqr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     DLAHQR is an auxiliary routine called by DHSEQR to update the
     eigenvalues and Schur decomposition already computed by DHSEQR, by
     dealing with the Hessenberg submatrix in rows and columns ILO to
     IHI.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>WANTT</i> </p>
+</dt><dd> <i>WANTT</i> </dd>
 <pre>
           WANTT is LOGICAL
           = .TRUE. : the full Schur form T is required;
@@ -155,18 +155,18 @@ IHI &lt;= N.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
      02-96 Based on modifications by
      David Day, Sandia National Laboratory, USA
@@ -177,8 +177,9 @@ IHI &lt;= N.
      (2) adopts the more conservative Ahues &amp; Tisseur stopping
      criterion (LAWN 122, 1997).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 207 of file dlahqr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

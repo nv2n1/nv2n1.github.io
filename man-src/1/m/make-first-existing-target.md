@@ -25,7 +25,7 @@ url: "/docs/linux/man/1-make-first-existing-target/"
 
 <dl>
 <dt>-c cmd
-<dd> This can be used to specify the make command to run. Default is ``make''.</dl>
+</dt><dd> This can be used to specify the make command to run. Default is ``make''.</dd></dl>
 
 <h2>EXIT STATUS</h2>
 

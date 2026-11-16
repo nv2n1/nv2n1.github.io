@@ -15,12 +15,12 @@ description: "ipa-certupdate – Update local IPA certificate databases with cer
 <p> <code>ipa-certupdate</code> can be used to update local IPA certificate databases with certificates from the server.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Print debugging information.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Output only errors.</p>
-<dt><code>&#8211;log-file</code>=<i>FILE</i></p>
-<dd> Log to the given file.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print debugging information.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Output only errors.</dd>
+<dt><code>&#8211;log-file</code>=<i>FILE</i></dt>
+<dd> Log to the given file.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>

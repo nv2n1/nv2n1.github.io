@@ -17,11 +17,11 @@ bson_reader_new_from_fd (int  fd,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>fd</code></p>
-<dd> A valid file-descriptor.</dl>
+<dt><code>fd</code></dt>
+<dd> A valid file-descriptor.</dd></dl>
 <dl>
-<dt><code>close_on_destroy</code></p>
-<dd> Whether <code><a href="/docs/linux/man/3-close/">close</a>(3)</code> should be called on <code>fd</code> when the reader is destroyed.</dl>
+<dt><code>close_on_destroy</code></dt>
+<dd> Whether <code><a href="/docs/linux/man/3-close/">close</a>(3)</code> should be called on <code>fd</code> when the reader is destroyed.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_reader_new_from_fd/">bson_reader_new_from_fd</a>(3)</code> function shall create a new <code>bson_reader_t</code> that will read from the provided file-descriptor. </p>
 <p> fd <code>MUST</code> be in blocking mode. </p>

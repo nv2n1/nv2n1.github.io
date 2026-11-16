@@ -14,23 +14,23 @@ description: "nand_write_page_syndrome – [REPLACEABLE] hardware ECC syndrome b
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>mtd info structure</dl>
+</dd><dd>mtd info structure</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>nand chip info structure</dl>
+<dd>nand chip info structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>data buffer</dl>
+<dd>data buffer</dd></dl>
 <p> <i>oob_required</i></p>
 <dl>
-<dd>must write chip-&gt;oob_poi to OOB</dl>
+<dd>must write chip-&gt;oob_poi to OOB</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>page number to write</dl>
+<dd>page number to write</dd></dl>
 <h2>Description</h2>
 <p>The hw generator calculates the error syndrome automatically. Therefore we need a special oob layout and handling.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

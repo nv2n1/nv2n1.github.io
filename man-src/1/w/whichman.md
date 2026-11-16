@@ -18,22 +18,22 @@ description: "whichman – show the location of a man page using a fault toleran
 <p> By default, <code>whichman</code> does fault tolerant approximate string matching. With a default tolerance level of: (strlen(searchpattern) &#8211; number of wildcards)/6 + 1</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h</i></p>
-<dd> Prints a little help/usage information.</p>
-<dt><i>-I</i></p>
-<dd> Do case sensitive search (default is case in-sensitive)</p>
-<dt><i>-e</i></p>
-<dd> Use exact matching when searching for a given man-page and the wildcards * and ? are disabled.</p>
-<dt><i>-p</i></p>
-<dd> print the actual tolerance level in front of the man page name.</p>
-<dt><i>-# or -t#</i></p>
-<dd> Set the fault tolerance level to #. The fault tolerance level is a integer # in the range 0-255. It specifies the maximum number of errors permitted in finding the approximate match. A tolerance_level of zero allows exact matches only but does NOT disable the wildcards * and ?.</dl>
+<dt><i>-h</i></dt>
+<dd> Prints a little help/usage information.</dd>
+<dt><i>-I</i></dt>
+<dd> Do case sensitive search (default is case in-sensitive)</dd>
+<dt><i>-e</i></dt>
+<dd> Use exact matching when searching for a given man-page and the wildcards * and ? are disabled.</dd>
+<dt><i>-p</i></dt>
+<dd> print the actual tolerance level in front of the man page name.</dd>
+<dt><i>-# or -t#</i></dt>
+<dd> Set the fault tolerance level to #. The fault tolerance level is a integer # in the range 0-255. It specifies the maximum number of errors permitted in finding the approximate match. A tolerance_level of zero allows exact matches only but does NOT disable the wildcards * and ?.</dd></dl>
 <p> The search key may contain the wildcards * and ? (but see -e option):</p>
 <dl>
-<dt><code>&#8216;*&#8217;</code></p>
-<dd> any arbitrary number of character</p>
-<dt><code>&#8216;?&#8217;</code></p>
-<dd> one character</dl>
+<dt><code>&#8216;*&#8217;</code></dt>
+<dd> any arbitrary number of character</dd>
+<dt><code>&#8216;?&#8217;</code></dt>
+<dd> one character</dd></dl>
 <p> The last argument to whichman is not parsed for options as the program needs at least one man-page-name argument. This means that <i>whichman -x</i> will not complain about a wrong option but search for the man-page named -x.</p>
 <h2>EXAMPLE</h2>
 <p> <i>whichman</i> print </p>

@@ -14,7 +14,7 @@ description: "cdev_del – remove a cdev from the system"
 <p><i>p</i></p>
 <dl>
 <dd>
-<dd>the cdev structure to be removed</dl>
+</dd><dd>the cdev structure to be removed</dd></dl>
 <h2>Description</h2>
 <p><code>cdev_del</code> removes <i>p</i> from the system, possibly freeing the structure itself.</p>
 <h2>Copyright</h2>

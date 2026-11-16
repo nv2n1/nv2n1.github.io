@@ -23,14 +23,14 @@ int ares_set_servers(ares_channel channel, struct ares_addr_node *servers)
 <h2>RETURN VALUES</h2>
 <p> <code><a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a>(3)</code> may return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> The name servers configuration was successfuly initialized.</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> The process&#8217;s available memory was exhausted.</p>
-<dt><code>ARES_ENODATA</code></p>
-<dd> The channel data identified by <i>channel</i> was invalid.</p>
-<dt><code>ARES_ENOTINITIALIZED</code></p>
-<dd> c-ares library initialization not yet performed.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The name servers configuration was successfuly initialized.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> The process&#8217;s available memory was exhausted.</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> The channel data identified by <i>channel</i> was invalid.</dd>
+<dt><code>ARES_ENOTINITIALIZED</code></dt>
+<dd> c-ares library initialization not yet performed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>ares_set_servers_csv</code>(3), <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3), <code><a href="/docs/linux/man/3-ares_dup/">ares_dup</a>(3)</code></p>
 <h2>AVAILABILITY</h2>

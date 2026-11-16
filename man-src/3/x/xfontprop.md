@@ -10,30 +10,30 @@ description: "XLoadFont, XQueryFont, XLoadQueryFont, XFreeFont, XGetFontProperty
 <p>XLoadFont, XQueryFont, XLoadQueryFont, XFreeFont, XGetFontProperty, XUnloadFont, XCharStruct, XFontProp, XChar2b, XFontStruct &#8211; load or unload fonts and font metric structures </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Font XLoadFont(Display *<i>display</i>, char *<i>name</i>);</p>
-<dd>XFontStruct *XQueryFont(Display *<i>display</i>, XID <i>font_ID</i>);</p>
-<dd>XFontStruct *XLoadQueryFont(Display *<i>display</i>, char *<i>name</i>);</p>
-<dd>int XFreeFont(Display *<i>display</i>, XFontStruct *<i>font_struct</i>);</p>
-<dd>Bool XGetFontProperty(XFontStruct *<i>font_struct</i>, Atom <i>atom</i>, unsigned long *<i>value_return</i>);</p>
-<dd>int XUnloadFont(Display *<i>display</i>, Font <i>font</i>);</dl>
+<dd>Font XLoadFont(Display *<i>display</i>, char *<i>name</i>);</dd>
+<dd>XFontStruct *XQueryFont(Display *<i>display</i>, XID <i>font_ID</i>);</dd>
+<dd>XFontStruct *XLoadQueryFont(Display *<i>display</i>, char *<i>name</i>);</dd>
+<dd>int XFreeFont(Display *<i>display</i>, XFontStruct *<i>font_struct</i>);</dd>
+<dd>Bool XGetFontProperty(XFontStruct *<i>font_struct</i>, Atom <i>atom</i>, unsigned long *<i>value_return</i>);</dd>
+<dd>int XUnloadFont(Display *<i>display</i>, Font <i>font</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>atom</i></p>
-<dd>Specifies the atom for the property name you want returned.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>font</i></p>
-<dd>Specifies the font.</p>
-<dt><i>font_ID</i></p>
-<dd>Specifies the font ID or the <code>GContext</code> ID.</p>
-<dt><i>font_struct</i></p>
-<dd>Specifies the storage associated with the font.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the font, which is a null-terminated string.</p>
-<dt><i>value_return</i></p>
-<dd>Returns the value of the font property.</dl>
+<dt><i>atom</i></dt>
+<dd>Specifies the atom for the property name you want returned.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>font</i></dt>
+<dd>Specifies the font.</dd>
+<dt><i>font_ID</i></dt>
+<dd>Specifies the font ID or the <code>GContext</code> ID.</dd>
+<dt><i>font_struct</i></dt>
+<dd>Specifies the storage associated with the font.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the font, which is a null-terminated string.</dd>
+<dt><i>value_return</i></dt>
+<dd>Returns the value of the font property.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XLoadFont</code> function loads the specified font and returns its associated font ID. If the font name is not in the Host Portable Character Encoding, the result is implementation-dependent. Use of uppercase or lowercase does not matter. When the characters &#8220;?&#8221; and &#8220;&#8221; are used in a font name, a pattern match is performed and any matching font is used. In the pattern, the &#8220;?&#8221; character will match any single character, and the &#8220;*&#8221; character will match any number of characters. A structured format for font names is specified in the X Consortium standard <i>X Logical Font Description Conventions</i>. If <code>XLoadFont</code> was unsuccessful at loading the specified font, a <code>BadName</code> error results. Fonts are not associated with a particular screen and can be stored as a component of any GC. When the font is no longer needed, call <code>XUnloadFont</code>. </p>
 <p> <code>XLoadFont</code> can generate <code>BadAlloc</code> and <code>BadName</code> errors. </p>
@@ -85,11 +85,11 @@ description: "XLoadFont, XQueryFont, XLoadQueryFont, XFreeFont, XGetFontProperty
 <p> The bounding box of a character is defined by the <code>XCharStruct</code> of that character. When characters are absent from a font, the default_char is used. When fonts have all characters of the same size, only the information in the <code>XFontStruct</code> min and max bounds are used. </p>
 <p> The members of the <code>XFontStruct</code> have the following semantics:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>The direction member can be either <code>FontLeftToRight</code> or <code>FontRightToLeft</code>. It is just a hint as to whether most <code>XCharStruct</code> elements have a positive or a negative character width metric. The core protocol defines no support for vertical text.</p>
-<dt>&bull;</p>
-<dd>If the min_byte1 and max_byte1 members are both zero, min_char_or_byte2 specifies the linear character index corresponding to the first element of the per_char array, and max_char_or_byte2 specifies the linear character index of the last element.</p>
-<dd>If either min_byte1 or max_byte1 are nonzero, both min_char_or_byte2 and max_char_or_byte2 are less than 256, and the 2-byte character index values corresponding to the per_char array element N (counting from 0) are:</p>
+<dt>&bull;</dt>
+<dd>The direction member can be either <code>FontLeftToRight</code> or <code>FontRightToLeft</code>. It is just a hint as to whether most <code>XCharStruct</code> elements have a positive or a negative character width metric. The core protocol defines no support for vertical text.</dd>
+<dt>&bull;</dt>
+<dd>If the min_byte1 and max_byte1 members are both zero, min_char_or_byte2 specifies the linear character index corresponding to the first element of the per_char array, and max_char_or_byte2 specifies the linear character index of the last element.</dd>
+<dd>If either min_byte1 or max_byte1 are nonzero, both min_char_or_byte2 and max_char_or_byte2 are less than 256, and the 2-byte character index values corresponding to the per_char array element N (counting from 0) are:</dd>
 <dd>
 <pre> byte1 = N/D + min_byte1
  byte2 = N\D + min_char_or_byte2</pre>
@@ -97,25 +97,25 @@ description: "XLoadFont, XQueryFont, XLoadQueryFont, XFreeFont, XGetFontProperty
 <pre> D = max_char_or_byte2 - min_char_or_byte2 + 1
  / = integer division
  \ = integer modulus</pre>
-<dt>&bull;</p>
-<dd>If the per_char pointer is NULL, all glyphs between the first and last character indexes inclusive have the same information, as given by both min_bounds and max_bounds.</p>
-<dt>&bull;</p>
-<dd>If all_chars_exist is <code>True</code>, all characters in the per_char array have nonzero bounding boxes.</p>
-<dt>&bull;</p>
-<dd>The default_char member specifies the character that will be used when an undefined or nonexistent character is printed. The default_char is a 16-bit character (not a 2-byte character). For a font using 2-byte matrix format, the default_char has byte1 in the most-significant byte and byte2 in the least significant byte. If the default_char itself specifies an undefined or nonexistent character, no printing is performed for an undefined or nonexistent character.</p>
-<dt>&bull;</p>
-<dd>The min_bounds and max_bounds members contain the most extreme values of each individual <code>XCharStruct</code> component over all elements of this array (and ignore nonexistent characters). The bounding box of the font (the smallest rectangle enclosing the shape obtained by superimposing all of the characters at the same origin [x,y]) has its upper-left coordinate at: </p>
+</dd><dt>&bull;</dt>
+<dd>If the per_char pointer is NULL, all glyphs between the first and last character indexes inclusive have the same information, as given by both min_bounds and max_bounds.</dd>
+<dt>&bull;</dt>
+<dd>If all_chars_exist is <code>True</code>, all characters in the per_char array have nonzero bounding boxes.</dd>
+<dt>&bull;</dt>
+<dd>The default_char member specifies the character that will be used when an undefined or nonexistent character is printed. The default_char is a 16-bit character (not a 2-byte character). For a font using 2-byte matrix format, the default_char has byte1 in the most-significant byte and byte2 in the least significant byte. If the default_char itself specifies an undefined or nonexistent character, no printing is performed for an undefined or nonexistent character.</dd>
+<dt>&bull;</dt>
+<dd>The min_bounds and max_bounds members contain the most extreme values of each individual <code>XCharStruct</code> component over all elements of this array (and ignore nonexistent characters). The bounding box of the font (the smallest rectangle enclosing the shape obtained by superimposing all of the characters at the same origin [x,y]) has its upper-left coordinate at: </dd>
 <pre> [x + min_bounds.lbearing, y - max_bounds.ascent]</pre>
-<dd>Its width is: </p>
+<dd>Its width is: </dd>
 <pre> max_bounds.rbearing - min_bounds.lbearing</pre>
-<dd>Its height is: </p>
+<dd>Its height is: </dd>
 <pre> max_bounds.ascent + max_bounds.descent</pre>
-<dt>&bull;</p>
-<dd>The ascent member is the logical extent of the font above the baseline that is used for determining line spacing. Specific characters may extend beyond this.</p>
-<dt>&bull;</p>
-<dd>The descent member is the logical extent of the font at or below the baseline that is used for determining line spacing. Specific characters may extend beyond this.</p>
-<dt>&bull;</p>
-<dd>If the baseline is at Y-coordinate y, the logical extent of the font is inclusive between the Y-coordinate values (y &#8211; font.ascent) and (y + font.descent &#8211; 1). Typically, the minimum interline spacing between rows of text is given by ascent + descent.</dl>
+<dt>&bull;</dt>
+<dd>The ascent member is the logical extent of the font above the baseline that is used for determining line spacing. Specific characters may extend beyond this.</dd>
+<dt>&bull;</dt>
+<dd>The descent member is the logical extent of the font at or below the baseline that is used for determining line spacing. Specific characters may extend beyond this.</dd>
+<dt>&bull;</dt>
+<dd>If the baseline is at Y-coordinate y, the logical extent of the font is inclusive between the Y-coordinate values (y &#8211; font.ascent) and (y + font.descent &#8211; 1). Typically, the minimum interline spacing between rows of text is given by ascent + descent.</dd></dl>
 <p> For a character origin at [x,y], the bounding box of a character (that is, the smallest rectangle that encloses the character&#8217;s shape) described in terms of <code>XCharStruct</code> components is a rectangle with its upper-left corner at: </p>
 <pre>[x + lbearing, y - ascent]</pre>
 <p>Its width is: </p>
@@ -127,12 +127,12 @@ description: "XLoadFont, XQueryFont, XLoadQueryFont, XFreeFont, XGetFontProperty
 <p>The lbearing member defines the extent of the left edge of the character ink from the origin. The rbearing member defines the extent of the right edge of the character ink from the origin. The ascent member defines the extent of the top edge of the character ink from the origin. The descent member defines the extent of the bottom edge of the character ink from the origin. The width member defines the logical width of the character.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadFont</code></p>
-<dd>A value for a Font or GContext argument does not name a defined Font.</p>
-<dt><code>BadName</code></p>
-<dd>A font or color of the specified name does not exist.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadFont</code></dt>
+<dd>A value for a Font or GContext argument does not name a defined Font.</dd>
+<dt><code>BadName</code></dt>
+<dd>A font or color of the specified name does not exist.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xlistfonts/">XListFonts</a>(3), <a href="/docs/linux/man/3-xsetfontpath/">XSetFontPath</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

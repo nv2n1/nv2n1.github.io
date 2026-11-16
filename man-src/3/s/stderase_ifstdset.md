@@ -11,10 +11,8 @@ std::erase_if(std::set) - std::erase_if(std::set)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;set&gt;
-
     template &lt;class Key, class Compare, class Alloc, class Pred&gt;
     (1)(since C++ 20)
-
         void erase_if(std::set&lt;Key, Compare, Alloc&gt; &amp;c, Pred pred);</code></pre> 
 Erases all elements that satisfy the predicate pred from the container. Equivalent to <pre><code>for (auto i = c.begin(), last = c.end(); i != last;) {
     if (pred(*i)) {

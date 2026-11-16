@@ -22,41 +22,39 @@ description: "bats – Bash Automated Testing System"
 <p> You can invoke the <code>bats</code> interpreter with multiple test file arguments, or with a path to a directory containing multiple <code>.bats</code> files. Bats will run each test file individually and aggregate the results. If any test case fails, <code>bats</code> exits with a <code>1</code> status code.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;count</code></p>
-<dd> Count the number of test cases without running any tests</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help message</p>
-<dt><code>-p</code>, <code>&#8211;pretty</code></p>
-<dd> Show results in pretty format (default for terminals)</p>
-<dt><code>-t</code>, <code>&#8211;tap</code></p>
-<dd> Show results in TAP format</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display the version number</dl>
+<dt><code>-c</code>, <code>&#8211;count</code></dt>
+<dd> Count the number of test cases without running any tests</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help message</dd>
+<dt><code>-p</code>, <code>&#8211;pretty</code></dt>
+<dd> Show results in pretty format (default for terminals)</dd>
+<dt><code>-t</code>, <code>&#8211;tap</code></dt>
+<dd> Show results in TAP format</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display the version number</dd></dl>
 <h2>OUTPUT</h2>
 <p> When you run Bats from a terminal, you&#8217;ll see output as each test is performed, with a check-mark next to the test&#8217;s name if it passes or an &quot;X&quot; if it fails.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ bats addition.bats
  ✓ addition using bc
  ✓ addition using dc
 2 tests, 0 failures
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> If Bats is not connected to a terminal&#8211;in other words, if you run it from a continuous integration system or redirect its output to a file&#8211;the results are displayed in human-readable, machine-parsable TAP format. You can force TAP output from a terminal by invoking Bats with the <code>&#8211;tap</code> option.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ bats --tap addition.bats
 1..2
 ok 1 addition using bc
 ok 2 addition using dc
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The <code>bats</code> interpreter exits with a value of <code>0</code> if all test cases pass, or <code>1</code> if one or more test cases fail.</p>
 <h2>SEE ALSO</h2>

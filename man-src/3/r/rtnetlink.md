@@ -10,11 +10,8 @@ description: "rtnetlink – macros to manipulate rtnetlink messages"
 <p>rtnetlink &#8211; macros to manipulate rtnetlink messages</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;asm/types.h&gt;
-
 #include &lt;linux/netlink.h&gt;
-
 #include &lt;linux/rtnetlink.h&gt;
-
 #include &lt;sys/socket.h&gt;
 rtnetlink_socket = socket(AF_NETLINK, int socket_type, NETLINK_ROUTE);
 int RTA_OK(struct rtattr *rta, int rtabuflen);

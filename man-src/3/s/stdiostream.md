@@ -10,13 +10,9 @@ description: "std::basic_iostream – std::basic_iostream"
 <p>std::basic_iostream &#8211; std::basic_iostream</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;istream&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_iostream;</code></pre>
 <p>The class template basic_iostream provides support for high level input/output operations on streams. The supported operations include sequential reading or writing and formatting. This functionality is implemented over the interface provided by the basic_streambuf class. It is accessed through basic_ios class.<br />
 &nbsp;std-basic iostream-inheritance.svg<br />

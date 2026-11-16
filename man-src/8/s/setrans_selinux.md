@@ -85,16 +85,16 @@ description: "setrans_selinux – Security Enhanced Linux Policy for the setrans
 <p> <code>setrans_exec_t</code> </p>
 <p> &#8211; Set files with the setrans_exec_t type, if you want to transition an executable to the setrans_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/mcstransd, /usr/sbin/mcstransd </p>
+<dt>Paths:</dt>
+<dd>/sbin/mcstransd, /usr/sbin/mcstransd </dd>
 </dl>
 <p> <code>setrans_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the setrans_initrc_exec_t type, if you want to transition an executable to the setrans_initrc_t domain. </p>
 <p> <code>setrans_var_run_t</code> </p>
 <p> &#8211; Set files with the setrans_var_run_t type, if you want to store the setrans files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/setrans(/.*)?, /var/run/mcstransd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/setrans(/.*)?, /var/run/mcstransd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

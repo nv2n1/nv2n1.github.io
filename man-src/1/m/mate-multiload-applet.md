@@ -20,8 +20,8 @@ description: "mate-multiload-applet – Multiload (cpu, load average, memory, ne
 <p> Swap Applet. To add this applet to a Panel, right-click on the Panel and choose Applets-&gt;Monitors-&gt;SwapLoad</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;activate-goad-server</code></p>
-<dd> (Internal use only) GOAD server ID to activate </p>
+<dt><code>&#8211;activate-goad-server</code></dt>
+<dd> (Internal use only) GOAD server ID to activate </dd>
 <p> GOAD_ID may be: </p>
 <p> <code>multiload_cpuload_applet </code>start the cpu applet. </p>
 <p> <code>multiload_loadavg_applet </code>start the load average applet. </p>
@@ -31,3 +31,4 @@ description: "mate-multiload-applet – Multiload (cpu, load average, memory, ne
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Marillat &lt;marillat [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
 <h2>Index</h2>
+</p>

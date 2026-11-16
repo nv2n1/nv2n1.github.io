@@ -16,54 +16,54 @@ description: "tvheadend – Advanced TV streaming server/relay"
 <h2>OPTIONS</h2>
 <p> All arguments are optional.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Show version information.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show built-in help information (may be more up to date).</p>
-<dt><code>-c</code>, <code>&#8211;config</code></p>
-<dd> Specify an alternate config path; the default is <i>${HOME}/.hts</i></p>
-<dt><code>-f</p>
-<dd> Fork and become a background process (deamon). Default no.</p>
-<dt>-u</code> <i>username</i>, <code>&#8211;user</code> <i>username</i></p>
-<dd> Run as user <i>username</i>. Only applicable if daemonizing. Default is to use the uid of 1 (daemon on most systems).</p>
-<dt><code>-g</code> <i>groupname</i>, <code>&#8211;group </code><i>groupname</i></p>
-<dd> Run as group <i>groupname</i>. Only applicable if daemonizing. Default is to use the &#8216;video&#8217; group. If the &#8216;video&#8217; group does not exist, gid 1 (daemon) will be used.</p>
-<dt><code>-p</code> <i>pidpath</i>, <code>&#8211;pid </code><i>pidpath</i></p>
-<dd> Specify alternative PID path file (default /var/run/tvheadend.pid).</p>
-<dt><code>-C</code>, <code>&#8211;firstrun</code></p>
-<dd> If no useraccount exist then create one with no username and no password. Use with care as it will allow world-wide administrative access to your Tvheadend installation until you edit the access-control from within the Tvheadend UI.</p>
-<dt><code>-a</code>, <code>&#8211;adapters</code></p>
-<dd> Only use specified DVB adapters (comma separated).</p>
-<dt><code>-6</code>, <code>&#8211;ipv6</code></p>
-<dd> Listen on IPv6.</p>
-<dt><code>-b</code> <i>address</i>, <code>&#8211;bindaddr</code> <i>address</i></p>
-<dd> Specify an interface IP address on which incoming HTTP and HTSP connections will be accepted. By default, connections are accepted on all interfaces.</p>
-<dt><code>&#8211;http_port</p>
-<dd> Specify alternative http port (default 9881).</p>
-<dt>&#8211;http_root</p>
-<dd> Specify alternative http webroot.</p>
-<dt>&#8211;htsp_port</p>
-<dd> Specify alternative htsp port (default 9882).</p>
-<dt>&#8211;htsp_port2</p>
-<dd> Specify extra htsp port.</p>
-<dt>-d</code>, <code>&#8211;debug</code></p>
-<dd> Enable all debug.</p>
-<dt><code>-s</code>, <code>&#8211;syslog</code></p>
-<dd> Enable debug to syslog.</p>
-<dt><code>&#8211;uidebug</p>
-<dd> Enable web UI debug.</p>
-<dt>-l</code>, <code>&#8211;log</code></p>
-<dd> Log to file.</p>
-<dt><code>-A</code>, <code>&#8211;abort</code></p>
-<dd> Immediately abort on startup (for debug).</p>
-<dt><code>&#8211;noacl</p>
-<dd> Do not perform any access control checking.</p>
-<dt>-R</code>, <code>&#8211;dvbraw</code></p>
-<dd> Use rawts file to create virtual adapter.</p>
-<dt><code>-r</code>, <code>&#8211;rawts</code></p>
-<dd> Use rawts file to generate virtual services.</p>
-<dt><code>-j</code>, <code>&#8211;join</code></p>
-<dd> Subscribe to a service permanently.</dl>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show built-in help information (may be more up to date).</dd>
+<dt><code>-c</code>, <code>&#8211;config</code></dt>
+<dd> Specify an alternate config path; the default is <i>${HOME}/.hts</i></dd>
+<dt><code>-f</dt>
+<dd> Fork and become a background process (deamon). Default no.</dd>
+<dt>-u</code> <i>username</i>, <code>&#8211;user</code> <i>username</i></dt>
+<dd> Run as user <i>username</i>. Only applicable if daemonizing. Default is to use the uid of 1 (daemon on most systems).</dd>
+<dt><code>-g</code> <i>groupname</i>, <code>&#8211;group </code><i>groupname</i></dt>
+<dd> Run as group <i>groupname</i>. Only applicable if daemonizing. Default is to use the &#8216;video&#8217; group. If the &#8216;video&#8217; group does not exist, gid 1 (daemon) will be used.</dd>
+<dt><code>-p</code> <i>pidpath</i>, <code>&#8211;pid </code><i>pidpath</i></dt>
+<dd> Specify alternative PID path file (default /var/run/tvheadend.pid).</dd>
+<dt><code>-C</code>, <code>&#8211;firstrun</code></dt>
+<dd> If no useraccount exist then create one with no username and no password. Use with care as it will allow world-wide administrative access to your Tvheadend installation until you edit the access-control from within the Tvheadend UI.</dd>
+<dt><code>-a</code>, <code>&#8211;adapters</code></dt>
+<dd> Only use specified DVB adapters (comma separated).</dd>
+<dt><code>-6</code>, <code>&#8211;ipv6</code></dt>
+<dd> Listen on IPv6.</dd>
+<dt><code>-b</code> <i>address</i>, <code>&#8211;bindaddr</code> <i>address</i></dt>
+<dd> Specify an interface IP address on which incoming HTTP and HTSP connections will be accepted. By default, connections are accepted on all interfaces.</dd>
+<dt><code>&#8211;http_port</dt>
+<dd> Specify alternative http port (default 9881).</dd>
+<dt>&#8211;http_root</dt>
+<dd> Specify alternative http webroot.</dd>
+<dt>&#8211;htsp_port</dt>
+<dd> Specify alternative htsp port (default 9882).</dd>
+<dt>&#8211;htsp_port2</dt>
+<dd> Specify extra htsp port.</dd>
+<dt>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Enable all debug.</dd>
+<dt><code>-s</code>, <code>&#8211;syslog</code></dt>
+<dd> Enable debug to syslog.</dd>
+<dt><code>&#8211;uidebug</dt>
+<dd> Enable web UI debug.</dd>
+<dt>-l</code>, <code>&#8211;log</code></dt>
+<dd> Log to file.</dd>
+<dt><code>-A</code>, <code>&#8211;abort</code></dt>
+<dd> Immediately abort on startup (for debug).</dd>
+<dt><code>&#8211;noacl</dt>
+<dd> Do not perform any access control checking.</dd>
+<dt>-R</code>, <code>&#8211;dvbraw</code></dt>
+<dd> Use rawts file to create virtual adapter.</dd>
+<dt><code>-r</code>, <code>&#8211;rawts</code></dt>
+<dd> Use rawts file to generate virtual services.</dd>
+<dt><code>-j</code>, <code>&#8211;join</code></dt>
+<dd> Subscribe to a service permanently.</dd></dl>
 <h2>LOGGING</h2>
 <p> All activity inside tvheadend is logged to syslog using log facility <code>LOG_DAEMON</code>.</p>
 <h2>SETUP</h2>

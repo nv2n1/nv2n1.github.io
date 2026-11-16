@@ -27,28 +27,28 @@ description: "PDL::Bugs – How to diagnose and report PDL problems"
 <p> Try to include any information you think might help someone isolate, reproduce, and fix your problem. </p>
 <p> At a <i>minimum</i>, include the following information:</p>
 <dl>
-<dt>&bull;</p>
-<dd><font SIZE="-1">PDL</font> version number (e.g. <font SIZE="-1">PDL-2.007</font>)</p>
-<dt>&bull;</p>
-<dd>Perl version information. Output from <tt>&quot;perl -v&quot;</tt> or <tt>&quot;perl -V&quot;</tt> (even better!)</p>
-<dt>&bull;</p>
-<dd>Your operating System. You can run the <tt>&quot;uname -a&quot;</tt> command on many unix systems</p>
-<dt>&bull;</p>
-<dd>The full output of <tt>&quot;perldl -V&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">PDL</font> version number (e.g. <font SIZE="-1">PDL-2.007</font>)</dd>
+<dt>&bull;</dt>
+<dd>Perl version information. Output from <tt>&quot;perl -v&quot;</tt> or <tt>&quot;perl -V&quot;</tt> (even better!)</dd>
+<dt>&bull;</dt>
+<dd>Your operating System. You can run the <tt>&quot;uname -a&quot;</tt> command on many unix systems</dd>
+<dt>&bull;</dt>
+<dd>The full output of <tt>&quot;perldl -V&quot;</tt> </dd>
 <p> If you are reporting a bug with an already installed <font SIZE="-1">PDL. </font> If the <font SIZE="-1">PDL</font> has compiled and built but not been installed, you may run <tt>&quot;perl -Mblib perldl -V&quot;</tt> from the top level of the <font SIZE="-1">PDL</font> build directory.</p>
-<dt>&bull;</p>
-<dd>The bug description and how to reproduce it. </p>
+<dt>&bull;</dt>
+<dd>The bug description and how to reproduce it. </dd>
 <p> Short examples using the <font SIZE="-1">PDL</font> shells, <tt>&quot;pdl2&quot;</tt> or <tt>&quot;perldl&quot;</tt>, are excellent! Don&#8217;t forget to include needed input data (as small as possible) so that the code can be run with a cut and paste.</dl>
 <p> Other things that are often helpful:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Details about your operating environment that might be related to the problem</p>
-<dt>&bull;</p>
-<dd>Exact cut and pasted error or warning messages</p>
-<dt>&bull;</p>
-<dd>The shortest, clearest code you can manage to write which reproduces the bug described.</p>
-<dt>&bull;</p>
-<dd>A patch against the latest released version of this distribution which fixes this bug.</dl>
+<dt>&bull;</dt>
+<dd>Details about your operating environment that might be related to the problem</dd>
+<dt>&bull;</dt>
+<dd>Exact cut and pasted error or warning messages</dd>
+<dt>&bull;</dt>
+<dd>The shortest, clearest code you can manage to write which reproduces the bug described.</dd>
+<dt>&bull;</dt>
+<dd>A patch against the latest released version of this distribution which fixes this bug.</dd></dl>
 <p> Alternatively, send an e-mail report with the above information (including the output of <tt>&quot;perldl -V&quot;</tt>) to <tt>&quot;pdl-porters [at] jach.hawaii.edu&quot;</tt>. See </p>
 <pre> <a rel="nofollow" href="http://pdl.perl.org/?page=mailing-lists">http://pdl.perl.org/?page=mailing-lists</a></pre>
 <p>for info on how to subscribe to this list.</p>

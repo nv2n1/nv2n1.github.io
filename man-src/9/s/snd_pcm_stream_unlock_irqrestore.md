@@ -14,10 +14,10 @@ description: "snd_pcm_stream_unlock_irqrestore – Unlock the PCM stream"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>PCM substream</dl>
+</dd><dd>PCM substream</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>irq flags</dl>
+<dd>irq flags</dd></dl>
 <h2>Description</h2>
 <p>This is a counter-part of <code>snd_pcm_stream_lock_irqsave</code>.</p>
 <h2>Copyright</h2>

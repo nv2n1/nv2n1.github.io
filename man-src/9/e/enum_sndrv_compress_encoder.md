@@ -18,11 +18,11 @@ enum_sndrv_compress_encoder -
 <h2>Constants</h2>
 
 SNDRV_COMPRESS_ENCODER_PADDING
-<dl><dd>no of samples appended by the encoder at the end of the track</dl>
+<dl><dd>no of samples appended by the encoder at the end of the track</dd></dl>
  
 
  SNDRV_COMPRESS_ENCODER_DELAY
-<dl><dd>no of samples inserted by the encoder at the beginning of the track</dl>
+<dl><dd>no of samples inserted by the encoder at the beginning of the track</dd></dl>
 
 <h2>Copyright</h2>
 

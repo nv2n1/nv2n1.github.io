@@ -20,12 +20,12 @@ description: "obex_push – Push and Receive Files over the Bluetooth OBEX Push 
 <p> If no options are given, any files sent over bluetooth will be received over channel 10 and stored in /tmp. </p>
 <p> If <i>&lt;bdaddr&gt;</i> and <i>&lt;filename&gt;</i> are given, the file will be send to the device specified with <i>&lt;bdaddr&gt;</i>.</p>
 <dl>
-<dt><i>&lt;channel&gt;</i> &#8211; The bluetooth channel to use. Lookup the OBEX Push channel with sdptool browse &lt;bdaddr&gt;.</p>
+<dt><i>&lt;channel&gt;</i> &#8211; The bluetooth channel to use. Lookup the OBEX Push channel with sdptool browse &lt;bdaddr&gt;.</dt>
 <dd>
-<dt><i>&lt;bdaddr&gt;</i> &#8211; The bluetooth address &lt;bdaddr&gt; of the device to send to.</p>
+</dd><dt><i>&lt;bdaddr&gt;</i> &#8211; The bluetooth address &lt;bdaddr&gt; of the device to send to.</dt>
 <dd>
-<dt><i>&lt;filename&gt;</i> &#8211; The file to send.</p>
-<dd></dl>
+</dd><dt><i>&lt;filename&gt;</i> &#8211; The file to send.</dt>
+<dd></dd></dl>
 <h2>AUTHOR</h2>
 <p> Harald Hoyer <i>&lt;harald [at] redhat.com&gt;</i> </p>
 <h2>Index</h2>

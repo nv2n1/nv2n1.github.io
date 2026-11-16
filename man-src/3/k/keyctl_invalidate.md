@@ -21,14 +21,14 @@ long keyctl_invalidate(key_serial_t key);
 <p> On success <code>keyctl_invalidate</code>() returns <code>0</code>. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The key specified is invalid.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The key specified has expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The key specified had been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The key exists, but is not <code>searchable</code> by the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The key specified is invalid.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The key specified has expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The key specified had been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The key exists, but is not <code>searchable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

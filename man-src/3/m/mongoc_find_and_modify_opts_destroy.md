@@ -13,11 +13,11 @@ description: "mongoc_find_and_modify_opts_destroy() – Frees all resources asso
 mongoc_find_and_modify_opts_destroy (mongoc_find_and_modify_opts_t *find_and_modify_opts);</pre>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in mongoc 1.3.0</dl>
+<dd>New in mongoc 1.3.0</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>find_and_modify_opts</code></p>
-<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dl>
+<dt><code>find_and_modify_opts</code></dt>
+<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Frees all resources associated with the find and modify builder structure. </p>
 <h2>Colophon</h2>

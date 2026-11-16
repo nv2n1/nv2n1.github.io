@@ -18,16 +18,17 @@ description: "systemd-getty-generator – Generator for enabling getty instances
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-agetty/">agetty</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
+<dt> 1.</dt>
 <dd>Container<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Interface</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Interface</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/CONTAINER_INTERFACE">https://systemd.io/CONTAINER_INTERFACE</a></dl>
-<dt> 2.</p>
-<dd>kernel-parameters.txt</p>
+<dd><a rel="nofollow" href="https://systemd.io/CONTAINER_INTERFACE">https://systemd.io/CONTAINER_INTERFACE</a></dd></dl>
+<dt> 2.</dt>
+<dd>kernel-parameters.txt</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.kernel.org/doc/Documentation/admin-guide/kernel-parameters.txt">https://www.kernel.org/doc/Documentation/admin-guide/kernel-parameters.txt</a></dl>
-<dt> 3.</p>
-<dd>systemd for Administrators, Part XVI: Gettys on Serial Consoles (and Elsewhere)</p>
+<dd><a rel="nofollow" href="https://www.kernel.org/doc/Documentation/admin-guide/kernel-parameters.txt">https://www.kernel.org/doc/Documentation/admin-guide/kernel-parameters.txt</a></dd></dl>
+<dt> 3.</dt>
+<dd>systemd for Administrators, Part XVI: Gettys on Serial Consoles (and Elsewhere)</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/serial-console.html">http://0pointer.de/blog/projects/serial-console.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/serial-console.html">http://0pointer.de/blog/projects/serial-console.html</a></dd></dl>
+</dl>

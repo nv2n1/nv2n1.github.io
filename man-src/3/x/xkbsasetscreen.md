@@ -11,14 +11,14 @@ description: "XkbSASetScreen – Sets the screenXXX field of act from s"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbSASetScreen</code> <code>(XkbSwitchScreenAction </code><i>act</i><code>,</code> <code>int </code><i>s</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action in which to set screenXXX</p>
-<dt><i>&#8211; s</i></p>
-<dd>value to set in screenXXX</dl>
+</dd><dd>action in which to set screenXXX</dd>
+<dt><i>&#8211; s</i></dt>
+<dd>value to set in screenXXX</dd></dl>
 <h2>Description</h2>
 <p>Actions associated with the XkbSwitchScreen action structure change the active screen on a multiscreen display. </p>
 <p> The <i>type </i> field of the XkbSwitchScreenAction structure should always be XkbSA_SwitchScreen. </p>

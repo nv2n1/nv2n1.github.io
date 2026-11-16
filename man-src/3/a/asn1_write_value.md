@@ -14,14 +14,14 @@ description: "asn1_write_value – API function"
 <p> <code>int asn1_write_value(asn1_node </code><i>node_root</i><code>, const char * </code><i>name</i><code>, const void * </code><i>ivalue</i><code>, int </code><i>len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>asn1_node node_root</p>
-<dd> pointer to a structure</p>
-<dt>const char * name</p>
-<dd> the name of the element inside the structure that you want to set.</p>
-<dt>const void * ivalue</p>
-<dd> vector used to specify the value to set. If len is &gt;0, VALUE must be a two&#8217;s complement form integer. if len=0 *VALUE must be a null terminated string with an integer value.</p>
-<dt>int len</p>
-<dd> number of bytes of *value to use to set the value: value[0]..value[len-1] or 0 if value is a null terminated string</dl>
+<dt>asn1_node node_root</dt>
+<dd> pointer to a structure</dd>
+<dt>const char * name</dt>
+<dd> the name of the element inside the structure that you want to set.</dd>
+<dt>const void * ivalue</dt>
+<dd> vector used to specify the value to set. If len is &gt;0, VALUE must be a two&#8217;s complement form integer. if len=0 *VALUE must be a null terminated string with an integer value.</dd>
+<dt>int len</dt>
+<dd> number of bytes of *value to use to set the value: value[0]..value[len-1] or 0 if value is a null terminated string</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Set the value of one element inside a structure. </p>
 <p> If an element is OPTIONAL and you want to delete it, you must use the value=NULL and len=0. Using &quot;pkix.asn&quot;: </p>
@@ -69,9 +69,9 @@ description: "asn1_write_value – API function"
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
 <h2>Index</h2>

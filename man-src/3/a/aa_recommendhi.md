@@ -18,10 +18,10 @@ description: "aa_recommendhi – insert the given driver on beggining of the lis
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_linkedlist **l</code></p>
-<dd> List to operate on (aa_displayrecommended, aa_kbdrecommended or aa_mouserecommended).</p>
-<dt><code>const char *name</code></p>
-<dd> Name of the driver (ought to match the &quot;shortname&quot; field of the driver definition structure).</dl>
+<dt><code>aa_linkedlist **l</code></dt>
+<dd> List to operate on (aa_displayrecommended, aa_kbdrecommended or aa_mouserecommended).</dd>
+<dt><code>const char *name</code></dt>
+<dd> Name of the driver (ought to match the &quot;shortname&quot; field of the driver definition structure).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Insert the given driver on beggining of the list of recommended drivers.</p>
 <h2>SEE ALSO</h2>

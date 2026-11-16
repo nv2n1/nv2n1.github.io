@@ -17,20 +17,20 @@ description: "cpclean – Remove wrong control points by statistical methods"
 <p> Step 2 optimises the whole panorama, calculates mean and standard deviation for all control points and removes all control points with error bigger than mean+n*sigma.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> output.pto</p>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &#8216;&lt;filename&gt;_clean.pto&#8217;.</p>
-<dt><code>-n</code> num</p>
-<dd> distance factor for checking (default: 2)</p>
-<dt><code>-p</code></p>
-<dd> do only pairwise optimisation (skip step 2)</p>
-<dt><code>-w</code></p>
-<dd> do optimise whole panorama (skip step 1)</p>
-<dt><code>-s</code></p>
-<dd> skip optimisation step when optimising the whole panorama</p>
-<dt><code>-l</code></p>
-<dd> also include line control points for calculation and filtering in step 2</p>
-<dt><code>-h</code></p>
-<dd> shows help</dl>
+<dt><code>-o</code> output.pto</dt>
+<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &#8216;&lt;filename&gt;_clean.pto&#8217;.</dd>
+<dt><code>-n</code> num</dt>
+<dd> distance factor for checking (default: 2)</dd>
+<dt><code>-p</code></dt>
+<dd> do only pairwise optimisation (skip step 2)</dd>
+<dt><code>-w</code></dt>
+<dd> do optimise whole panorama (skip step 1)</dd>
+<dt><code>-s</code></dt>
+<dd> skip optimisation step when optimising the whole panorama</dd>
+<dt><code>-l</code></dt>
+<dd> also include line control points for calculation and filtering in step 2</dd>
+<dt><code>-h</code></dt>
+<dd> shows help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
 <h2>Index</h2>

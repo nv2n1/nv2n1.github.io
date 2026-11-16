@@ -16,14 +16,14 @@ description: "ttylinkd – TTYlink daemon for AX.25, NET/ROM, ROSE and IP."
 <p> Use splitscreen(1) for outgoing ttylink sessions.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd>Display the version.</p>
-<dt><code>-h</code></p>
-<dd>Display some help and information on it.</p>
-<dt><code>-c callsign</code></p>
-<dd>Disable callsign checking and use the given callsign for a name for this end of the link.</p>
-<dt><code>-f file</code></p>
-<dd>Use &lt;file&gt; for the configuration file, instead of the default /etc/ax25/ttylinkd.conf</dl>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd>
+<dt><code>-h</code></dt>
+<dd>Display some help and information on it.</dd>
+<dt><code>-c callsign</code></dt>
+<dd>Disable callsign checking and use the given callsign for a name for this end of the link.</dd>
+<dt><code>-f file</code></dt>
+<dd>Use &lt;file&gt; for the configuration file, instead of the default /etc/ax25/ttylinkd.conf</dd></dl>
 <h2>Files</h2>
 <p>/etc/ax25/ttylinkd.conf the configuration file for ttylinkd</p>
 <h2>See Also</h2>

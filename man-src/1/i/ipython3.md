@@ -19,7 +19,7 @@ description: "ipython – Tools for Interactive Computing in Python."
 <p> <i>IPYTHONDIR</i></p>
 <dl>
 <dt>
-<dd> This is the location where IPython stores all its configuration files. The default is $HOME/.ipython if IPYTHONDIR is not defined. </p>
+</dt><dd> This is the location where IPython stores all its configuration files. The default is $HOME/.ipython if IPYTHONDIR is not defined. </dd>
 <p> You can see the computed value of IPYTHONDIR with `ipython locate`. </p>
 </dl>
 <h2>FILES</h2>

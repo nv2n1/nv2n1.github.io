@@ -41,7 +41,7 @@ struct ibv_sge {
 <p> <code>ibv_create_qp</code>(3), <code>ibv_post_send</code>(3), <code>ibv_post_srq_recv</code>(3), <code>ibv_poll_cq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

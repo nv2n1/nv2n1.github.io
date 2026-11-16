@@ -15,7 +15,7 @@ snd_pcm_format_little_endian - Check the PCM format is little-endian
 <h2>Arguments</h2>
 
 <i>format</i>
-<dl><dd><dd>the format to check</dl>
+<dl><dd></dd><dd>the format to check</dd></dl>
 
 <h2>Return</h2>
 

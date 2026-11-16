@@ -15,11 +15,11 @@ relay_file_release - release file op for relay files
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>the inode</dl>
+<dl><dd></dd><dd>the inode</dd></dl>
  
 
  <i>filp</i>
-<dl><dd>the file</dl>
+<dl><dd>the file</dd></dl>
 
 <h2>Description</h2>
 

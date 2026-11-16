@@ -16,88 +16,88 @@ description: "weplab – Wireless WEP encryption security analyzer"
 <p> On the other hand, weplab can also be saw as an advanced Wireless WEP encryption cracker that aims to support a big variety of attacks. At the moment the attacks supported are dictionary based, bruteforce and several kind of statistical based.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-a, &#8211;analyze</p>
-<dd> Analyzes specific file and gathers some statistics about the packets that are stored per detected wlan network.</p>
-<dt>-c, &#8211;capture</p>
-<dd> Uses a wlan interface to capture wep encrypted data packets. Those captured packets will be logged into a file in pcap format and can be used later to crack the key.</p>
-<dt>-b, &#8211;bruteforce</p>
-<dd> Launches a bruteforce attack to break the key. That means that weplab will test all possible keys in order to find the right one. </p>
+<dt>-a, &#8211;analyze</dt>
+<dd> Analyzes specific file and gathers some statistics about the packets that are stored per detected wlan network.</dd>
+<dt>-c, &#8211;capture</dt>
+<dd> Uses a wlan interface to capture wep encrypted data packets. Those captured packets will be logged into a file in pcap format and can be used later to crack the key.</dd>
+<dt>-b, &#8211;bruteforce</dt>
+<dd> Launches a bruteforce attack to break the key. That means that weplab will test all possible keys in order to find the right one. </dd>
 <p> Please, that this can take lot of time depending on the key size and your processor speed. Refer to Bruteforce method above in this document for futher information. </p>
 <p> If no BSSID was specified, those packets who belong to the same network as the first one, will be used for the crack.</p>
-<dt>-r, &#8211;heuristics</p>
-<dd> Launches an statistical attack to break the key. This is the fastest method to crack the key if you own enough packets. As an example a 64-bit key can be broken from 100.000 packets, and a 128-bit key from 300.000 packets, within 1-2 hours. With enough packets (lets say 900.000), the cracking time is matter of seconds. </p>
+<dt>-r, &#8211;heuristics</dt>
+<dd> Launches an statistical attack to break the key. This is the fastest method to crack the key if you own enough packets. As an example a 64-bit key can be broken from 100.000 packets, and a 128-bit key from 300.000 packets, within 1-2 hours. With enough packets (lets say 900.000), the cracking time is matter of seconds. </dd>
 <p> Several statistical attacks will be used depending on the selected stability level (3 by default). The processor time and number of packets required, highly depends on the parameters used to launch the attack. </p>
 <p> This method is very advanced. You are fully encouraged to understand it reading its section on this document. Although it use to work fine with default options and having, enough packets, its better to understand how it works so you can tweak the procedure using the apropiate parameters. </p>
 <p> If no BSSID was specified, those packets who belong to the same network as the first one, will be used for the crack.</p>
-<dt>-y, &#8211;dictionary</p>
-<dd> Launches a dictionary based attack to break the key. </p>
+<dt>-y, &#8211;dictionary</dt>
+<dd> Launches a dictionary based attack to break the key. </dd>
 <p> Many WEP keys are derived from pass-phrases, entered by the network administrator. When, this happens and you do not have enough packets to launch a statistical attack, it is better to use a dictionary based cracking than a bruteforce aproach. </p>
 <p> On dictionary attack, John the Ripper is used to generate the words that weplab will use to derive the WEP key. So, John the Ripper must be present and executed so its output is piped into weplabs input. In the EXAMPLES section you will find several examples about that. </p>
 <p> If no BSSID was specified, those packets who belong to the same network as the first one, will be used for the crack.</p>
-<dt>-k, &#8211;key <i>&lt;key_length&gt;</i></p>
-<dd> Specify the key length. It can be either 64 or 128-bit </p>
+<dt>-k, &#8211;key <i>&lt;key_length&gt;</i></dt>
+<dd> Specify the key length. It can be either 64 or 128-bit </dd>
 <p> This option is only usefull within a cracking method, so -y, -r or -b must be used in conjuntion with it. </p>
 <p> Default: 64 bits.</p>
-<dt>&#8211;keyid <i>&lt;key_id&gt;</i></p>
-<dd> Specify the key id for 64-bit keys. </p>
+<dt>&#8211;keyid <i>&lt;key_id&gt;</i></dt>
+<dd> Specify the key id for 64-bit keys. </dd>
 <p> For 64-bit keys the WEP standard specifies four possible keys, each one with a different keyid (0-3). Usually only keyid 0 is used, but if you hit a network with more keyids you will need to use this option to specify one of them, and launch a separate cracking attack for each one. </p>
 <p> Default: 0</p>
-<dt>&#8211;fcs</p>
-<dd> Specify the presence of a 1 byte FCS tail on all logged packets </p>
+<dt>&#8211;fcs</dt>
+<dd> Specify the presence of a 1 byte FCS tail on all logged packets </dd>
 <p> Depending on your driver and how did you set your card into monitor mode , it is possible than logged packets have an aditional tail of 1 byte length. </p>
 <p> Best way to find out if your card/drivers needs this, is trying to break your own network. This way, as you already know the key, if it does not get cracked without FCS, try with it. </p>
 <p> This option is only usefull within a cracking method, so -y, -r or -b must be used in conjuntion with it. </p>
 <p> Default: fcs not present.</p>
-<dt>&#8211;prismheader</p>
-<dd> Specify the presence of an special header called PrismHeader on all logged packets </p>
+<dt>&#8211;prismheader</dt>
+<dd> Specify the presence of an special header called PrismHeader on all logged packets </dd>
 <p> Depending on your driver and how did you set your card into monitor mode , it is possible than logged packets have an aditional header of 144 bytes length. </p>
 <p> If you want to know if you need it or not, just analyze the file with weplab. If prismheader is not necessary it will tell you. If it is neccesary, you will see lot of bogus BSSIDs, and no adversice about not using prismehader </p>
 <p> Anyway, cracking your own WEP key is the best method to know if you need it or not. </p>
 <p> This option is only usefull within a cracking method, so -y, -r or -b must be used in conjuntion with it. From weplab 0.1.2 you will also need to specify it with -a in order weplab to show you the right BSSIDs found. </p>
 <p> Default: prismheader not present.</p>
-<dt>&#8211;bssid <i>&lt;bssid_in_hex&gt;</i></p>
-<dd> Only use those packets that belongs to the selected BSSID. </p>
+<dt>&#8211;bssid <i>&lt;bssid_in_hex&gt;</i></dt>
+<dd> Only use those packets that belongs to the selected BSSID. </dd>
 <p> BSSID must be in the form of AA:BB:CC:DD:EE:FF </p>
 <p> If BSSID is not specified only those packets, that belong to the same BSSID as the first one, will be used </p>
 <p> Use -a with your file if you want to see all detected BSSIDs </p>
 <p> This option is only usefull within a cracking method, so -y, -r or -b must be used in conjuntion with it. </p>
 <p> Default: none</p>
-<dt>&#8211;caplen <i>&lt;amount&gt;</i></p>
-<dd> Specify the amount of bytes that will be logged for each packets. </p>
+<dt>&#8211;caplen <i>&lt;amount&gt;</i></dt>
+<dd> Specify the amount of bytes that will be logged for each packets. </dd>
 <p> In order to launch an attack only a few number of packets (10) must be fully logged. For the statistical attacks, only the first bytes of other packets are needed. </p>
 <p> In order to save diskspace when logging packets for the statistical attack, ony the begining of the packet should be logged </p>
 <p> If you specify 0 here, the whole packet will be logged. </p>
 <p> Please, notice that you will need to capture at least 10 packets behind this amount (fully logged packets), as they will be needed for testing candidate keys within the cracking process. </p>
 <p> Default: 1500</p>
-<dt>-i <i>&lt;interface&gt;</i></p>
-<dd> Specifies the wireless interface that will be used to capture packets. </p>
+<dt>-i <i>&lt;interface&gt;</i></dt>
+<dd> Specifies the wireless interface that will be used to capture packets. </dd>
 <p> weplab does not set the interface into monitor mode, so you must do it yourself before capturing packets. Read the above to learn how to do it.</p>
-<dt>-m, &#8211;multiprocess <i>&lt;number&gt;</i></p>
-<dd> Specifies the number of threads that will be launched to take advantage of multiprocessors systems. If your microprocessor supports hyperthreading please use the double of number of microprocessors. </p>
+<dt>-m, &#8211;multiprocess <i>&lt;number&gt;</i></dt>
+<dd> Specifies the number of threads that will be launched to take advantage of multiprocessors systems. If your microprocessor supports hyperthreading please use the double of number of microprocessors. </dd>
 <p> For example, use -m 4 if you own a dual P4 hyperthreading and -m 2 if you own a dual processor P-II machine. </p>
 <p> At the moment this option does only work on bruteforce attack. </p>
 <p> Default: 1</p>
-<dt>&#8211;ascii</p>
-<dd> When launching a bruteforce attack, it is faster to search only ascii bytes if you are sure that the WEP key was generating from a pass phrase using ascii direct-mapping. </p>
+<dt>&#8211;ascii</dt>
+<dd> When launching a bruteforce attack, it is faster to search only ascii bytes if you are sure that the WEP key was generating from a pass phrase using ascii direct-mapping. </dd>
 <p> This way, each key byte will only be tested in the range of 00-3F. As the key-space is smaller the attack is faster.</p>
-<dt>&#8211;perc <i>&lt;probability&gt;</i></p>
-<dd> Specify the desired minimun probability for the statistical attack. It means that at least enough candidate key bytes will be tested to fit this probability. </p>
+<dt>&#8211;perc <i>&lt;probability&gt;</i></dt>
+<dd> Specify the desired minimun probability for the statistical attack. It means that at least enough candidate key bytes will be tested to fit this probability. </dd>
 <p> In order to fully understand this option you are encouraged to read carefully the &quot;Statistical Attacks&quot; caption, above in this document. </p>
 <p> Please note that the higher the minimun probability the slowest the attack. For most cases 50% is fine. You can increase to 60 or 70% if you get the KEY NOT FOUND with 50, but never increase it to 100% because you will be waiting for ever.</p>
-<dt>&#8211;stability <i>&lt;level&gt;</i></p>
-<dd> Specify the predefined set of statistical attacks based on their stability level. Not all the statistical attacks are stable (works fine) your every key. Some of them are more unstable than others. This options allows you to launch only those attacks that meets the specified stability level. </p>
+<dt>&#8211;stability <i>&lt;level&gt;</i></dt>
+<dd> Specify the predefined set of statistical attacks based on their stability level. Not all the statistical attacks are stable (works fine) your every key. Some of them are more unstable than others. This options allows you to launch only those attacks that meets the specified stability level. </dd>
 <p> Level can be from 1 to 5. The highest the more stable. I do not recomment you to go for level 1 because it is too unstable to give you any results. By default level 3 is used. It is a good idea to change into level 2 if you have little unique IV and cracking with level 3 failed. </p>
 <p> In the Statistical Attack caption, you will find a detailed list of the 17 attacks implemented with the stability level of each one.</p>
-<dt>&#8211;attacks <i>#attack1,#attack2,#attack2</i></p>
-<dd> This is the other way to select the statistical attacks that will be launched, without using &#8211;stability parameter. Only those attacks, whose number is selected here, will be used in the statistical procedure. </p>
+<dt>&#8211;attacks <i>#attack1,#attack2,#attack2</i></dt>
+<dd> This is the other way to select the statistical attacks that will be launched, without using &#8211;stability parameter. Only those attacks, whose number is selected here, will be used in the statistical procedure. </dd>
 <p> The number of the attacks go from 1 to 17. Please, refer to the Statistical Attacks section for further information.</p>
-<dt>&#8211;debugkey <i>&lt;key&gt;</i></p>
-<dd> if you want to test how a set of statistical attacks works with a known WEP key, then this parameter will give you the oportunity to get the final result without going trhow all the possible branches. </p>
+<dt>&#8211;debugkey <i>&lt;key&gt;</i></dt>
+<dd> if you want to test how a set of statistical attacks works with a known WEP key, then this parameter will give you the oportunity to get the final result without going trhow all the possible branches. </dd>
 <p> Using this option you tell weplab about the WEP key used to encrypt the packets. Only the real branch will be followed and you will get the candidate list for each key byte.</p>
-<dt>-V</p>
-<dd> Outputs version information and exists.</p>
-<dt>-h</p>
-<dd> Displays command line parameters help.</dl>
+<dt>-V</dt>
+<dd> Outputs version information and exists.</dd>
+<dt>-h</dt>
+<dd> Displays command line parameters help.</dd></dl>
 <h2>INSTALLATION</h2>
 <p> weplab does not need any special installation. It runs in userlevel and only requires the libpcap libraries (&gt;=0.8) to be present. For most functions weplab can be executed by any user, however for packet capture functionality it must be executed by root. </p>
 <p> if you are installing it from source code distribution, the configure script should be able to detect your proccessor type to optimize the code specifically for your platform. </p>
@@ -109,15 +109,15 @@ description: "weplab – Wireless WEP encryption security analyzer"
 <p> To capture encrypted packets in a wireless network, your wireless card must be put in monitor mode. The way monitor mode is set is highly dependant on which card do you own, and which drivers are you using. </p>
 <p> Explaining how to set monitor mode in your card is beyond the scope of this document, and sometimes involves patching the kernel or &quot;hacking&quot; the drivers. As an example, the following steps should be done in order to set monitor mode on a prism2 based card using wlan-ng drivers.</p>
 <dl>
-<dt>Initialization of the card.</p>
-<dd> prism2 and wlan-ng </p>
+<dt>Initialization of the card.</dt>
+<dd> prism2 and wlan-ng </dd>
 <p> wlanctl-ng wlan0 lnxreq_ifstate ifstate=enable </p>
 <p> wlanctl-ng wlan0 lnxreq_autojoin ssid=any authtype=opensystem </p>
 <p> orinoco : nothing special</p>
-<dt>Enable the interface (wlan0 in the example, just change to eth0 if using orinoco)</p>
-<dd> ifconfig wlan0 up</p>
-<dt>Setting monitor mode on desired channel (6 in the example).</p>
-<dd> prism2 and wlan-ng </p>
+<dt>Enable the interface (wlan0 in the example, just change to eth0 if using orinoco)</dt>
+<dd> ifconfig wlan0 up</dd>
+<dt>Setting monitor mode on desired channel (6 in the example).</dt>
+<dd> prism2 and wlan-ng </dd>
 <p> wlanctl-ng wlan0 lnxreq_wlansniff channel=06 keepwepflags=false prismheader=false enable=true (I dont know why, but sometimes this step must be taken twice :) ) </p>
 <p> orinoco and iwpriv </p>
 <p> iwpriv eth0 monitor 2 6</dl>
@@ -194,3 +194,4 @@ description: "weplab – Wireless WEP encryption security analyzer"
 <p> However other people have made contributions to the project. In the AUTHORS file within the distribution package, you will find them. </p>
 <p> Any new contribution in form of documentation translation, new feature development, bug fixing, and so on, will be welcome </p>
 <h2>Index</h2>
+</p>

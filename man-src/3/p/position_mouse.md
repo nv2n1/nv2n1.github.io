@@ -10,7 +10,6 @@ description: "position_mouse – Moves the mouse to the specified screen positio
 <p>position_mouse &#8211; Moves the mouse to the specified screen position. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void position_mouse(int x, int y);</code></pre>
 <h2>Description</h2>
 <p>Moves the mouse to the specified screen position. It is safe to call even when a mouse pointer is being displayed. </p>

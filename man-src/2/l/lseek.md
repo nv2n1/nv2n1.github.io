@@ -16,10 +16,11 @@ description: "lseek – reposition read/write file offset"
 <h2>DESCRIPTION</h2>
 <p> <code>lseek</code>() repositions the file offset of the open file description associated with the file descriptor <i>fd</i> to the argument <i>offset</i> according to the directive <i>whence</i> as follows:</p>
 <dl>
-<dt><code>SEEK_SET</code></p>
-<dd> The file offset is set to <i>offset</i> bytes.</p>
-<dt><code>SEEK_CUR</code></p>
-<dd> The file offset is set to its current location plus <i>offset</i> bytes.</p>
-<dt><code>SEEK_END</code></p>
-<dd> The file offset is set to the size of the file plus <i>offset</i> bytes.</dl>
+<dt><code>SEEK_SET</code></dt>
+<dd> The file offset is set to <i>offset</i> bytes.</dd>
+<dt><code>SEEK_CUR</code></dt>
+<dd> The file offset is set to its current location plus <i>offset</i> bytes.</dd>
+<dt><code>SEEK_END</code></dt>
+<dd> The file offset is set to the size of the file plus <i>offset</i> bytes.</dd></dl>
 <p> <code>lseek</code>() allows the file offset to be set beyond the end of the file (but this does not change the size of the file). If data is later written at this point, subsequent reads of the data in the gap (a &quot;hole&quot;) return null bytes (&#8216;
+</p>

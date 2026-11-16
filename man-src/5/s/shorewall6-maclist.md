@@ -10,7 +10,7 @@ maclist - shorewall6 MAC Verification file
 
 <h2>Synopsis</h2>
 
-<dl><dt> <b>/etc/shorewall6/maclist</b></dl>
+<dl><dt> <b>/etc/shorewall6/maclist</b></dt></dl>
 
 <h2>Description</h2>
 
@@ -19,19 +19,19 @@ maclist - shorewall6 MAC Verification file
  The columns in the file are as follows. 
 
  <b>DISPOSITION</b> - {<b>ACCEPT</b>|<b>DROP</b>|<b>REJECT</b>}[<b>:</b><i>log-level</i>]
-<dl><dd><b>ACCEPT</b> or <b>DROP</b> (if MACLIST_TABLE=filter in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[3]</font>(5), then REJECT is also allowed). If specified, the <i>log-level</i> causes packets matching the rule to be logged at that level.</dl>
+</dd><dl><dd><b>ACCEPT</b> or <b>DROP</b> (if MACLIST_TABLE=filter in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[3]</font>(5), then REJECT is also allowed). If specified, the <i>log-level</i> causes packets matching the rule to be logged at that level.</dd></dl>
  
 
  <b>INTERFACE</b> - <i>interface</i>
-<dl><dd>Network <i>interface</i> to a host.</dl>
+<dl><dd>Network <i>interface</i> to a host.</dd></dl>
  
 
  <b>MAC</b> - <i>address</i>
-<dl><dd>MAC <i>address</i> of the host -- you do not need to use the shorewall6 format for MAC addresses here. If <b>IP ADDRESSES</b> is supplied then <b>MAC</b> can be supplied as a dash (<b>-</b>)</dl>
+<dl><dd>MAC <i>address</i> of the host -- you do not need to use the shorewall6 format for MAC addresses here. If <b>IP ADDRESSES</b> is supplied then <b>MAC</b> can be supplied as a dash (<b>-</b>)</dd></dl>
  
 
  <b>IP ADDRESSES</b> (Optional) - [<i>address</i>[<b>,</b><i>address</i>]...]
-<dl><dd>If specified, both the MAC and IP address must match. This column can contain a comma-separated list of host and/or subnet addresses. If your kernel and ip6tables have iprange match support then IP address ranges are also allowed. Similarly, if your kernel and ip6tables include ipset support than set names (prefixed by &quot;+&quot;) are also allowed.</dl>
+<dl><dd>If specified, both the MAC and IP address must match. This column can contain a comma-separated list of host and/or subnet addresses. If your kernel and ip6tables have iprange match support then IP address ranges are also allowed. Similarly, if your kernel and ip6tables include ipset support than set names (prefixed by &quot;+&quot;) are also allowed.</dd></dl>
 
 <h2>Files</h2>
 
@@ -48,14 +48,15 @@ m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/MAC_Validation.html">
 <h2>Notes</h2>
 
 <dl><dt> 1.
-<dd>shorewall6-interfaces
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-interfaces.html">http://www.shorewall.net/manpages6/shorewall6-interfaces.html</a></dl><dt> 2.
-<dd>shorewall6-hosts
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-hosts.html">http://www.shorewall.net/manpages6/shorewall6-hosts.html</a></dl><dt> 3.
-<dd>shorewall6.conf
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6.conf.html">http://www.shorewall.net/manpages6/shorewall6.conf.html</a></dl><dt> 4.
-<dd><a rel="nofollow" HREF="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a>
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a></dl><dt> 5.
-<dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a>
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dl>
+</dt><dd>shorewall6-interfaces
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-interfaces.html">http://www.shorewall.net/manpages6/shorewall6-interfaces.html</a></dd></dl><dt> 2.
+</dt><dd>shorewall6-hosts
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-hosts.html">http://www.shorewall.net/manpages6/shorewall6-hosts.html</a></dd></dl><dt> 3.
+</dt><dd>shorewall6.conf
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6.conf.html">http://www.shorewall.net/manpages6/shorewall6.conf.html</a></dd></dl><dt> 4.
+</dt><dd><a rel="nofollow" HREF="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a>
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a></dd></dl><dt> 5.
+</dt><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a>
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dd></dl>
  
+</dl>

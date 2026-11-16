@@ -16,18 +16,18 @@ description: "ext_time_quota_acl – Squid time quota external acl helper."
 <p> This is useful for corporate lunch time allocations, wifi portal pay-per-minute installations or for parental control of children. The administrator can define a time budget (e.g. 1 hour per day) which is enforced through this helper.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b database</code></p>
-<dd><code>Filename</code> of persistent database. This defaults to ext_time_quota.db in Squids state directory.</p>
-<dt><code>-p pauselen</code></p>
-<dd><code>Pauselen</code> is given in seconds and defines the period between two requests to be treated as part of the same session. Pauses shorter than this value will be counted against the quota, longer ones ignored. Default is 300 seconds (5 minutes).</p>
-<dt><code>-l logfile</code></p>
-<dd><code>Filename</code> where all logging and debugging information will be written. If none is given, then stderr will be used and the logging will go to Squids main cache.log.</p>
-<dt><code>-d</code></p>
-<dd>Enables debug logging in the logfile.</p>
-<dt><code>-h</code></p>
-<dd>show a short command line help.</p>
-<dt><code>configfile</code></p>
-<dd>This file contains the definition of the time budgets for the users.</dl>
+<dt><code>-b database</code></dt>
+<dd><code>Filename</code> of persistent database. This defaults to ext_time_quota.db in Squids state directory.</dd>
+<dt><code>-p pauselen</code></dt>
+<dd><code>Pauselen</code> is given in seconds and defines the period between two requests to be treated as part of the same session. Pauses shorter than this value will be counted against the quota, longer ones ignored. Default is 300 seconds (5 minutes).</dd>
+<dt><code>-l logfile</code></dt>
+<dd><code>Filename</code> where all logging and debugging information will be written. If none is given, then stderr will be used and the logging will go to Squids main cache.log.</dd>
+<dt><code>-d</code></dt>
+<dd>Enables debug logging in the logfile.</dd>
+<dt><code>-h</code></dt>
+<dd>show a short command line help.</dd>
+<dt><code>configfile</code></dt>
+<dd>This file contains the definition of the time budgets for the users.</dd></dl>
 <h2>Configuration</h2>
 <p>The time quotas of the users are defined in a text file typically residing in /etc/squid/time_quota. Any line starting with &quot;#&quot; contains a comment and is ignored. Every line must start with a user followed by a time budget and a corresponding time period separated by &quot;/&quot;. Here is an example file: </p>
 <dl>
@@ -35,13 +35,13 @@ description: "ext_time_quota_acl – Squid time quota external acl helper."
  <code>john 8h / 1d</code><br />
  <code>littlejoe 1h / 1d</code><br />
  <code>babymary 30m / 1w</code>
-</dl>
+</dd></dl>
 <p> John has a time budget of 8 hours every day, littlejoe is only allowed 1 hour and the poor babymary only 30 minutes a week. </p>
 <p> You can use &quot;s&quot; for seconds, &quot;m&quot; for minutes, &quot;h&quot; for hours, &quot;d&quot; for days and &quot;w&quot; for weeks. Numerical values can be given as integer values or with a fraction. E.g. &quot;0.5h&quot; means 30 minutes. </p>
 <p> This helper is configured in <code>squid.conf </code> using the <code>external_acl_type </code> directive then access controls which use it to allow or deny. </p>
 <p> Here is an example. </p>
 <dl>
-<dd># Ensure that users have a valid login. We need their username. </p>
+<dd># Ensure that users have a valid login. We need their username. </dd>
 <p> <code>acl users proxy_auth REQUIRED</code><br />
  <code>http_access deny !users</code><br />
  # Define program and quota file<br />
@@ -65,10 +65,10 @@ description: "ext_time_quota_acl – Squid time quota external acl helper."
 <h2>Further Ideas</h2>
 <p>The following ideas could further improve this helper. Maybe someone wants to help? Any support or feedback is welcome!</p>
 <dl>
-<dt>There should be a way for a user to see their configured and remaining</p>
-<dd>time budget. This could be realized by implementing a web page accessing the database of the helper showing the corresponding data. One of the problems to be solved is user authentication.</p>
-<dt>We could always return &quot;OK&quot; and use the module simply as an Internet</p>
-<dd>usage tracker showing who has stayed how long in the WWW.</dl>
+<dt>There should be a way for a user to see their configured and remaining</dt>
+<dd>time budget. This could be realized by implementing a web page accessing the database of the helper showing the corresponding data. One of the problems to be solved is user authentication.</dd>
+<dt>We could always return &quot;OK&quot; and use the module simply as an Internet</dt>
+<dd>usage tracker showing who has stayed how long in the WWW.</dd></dl>
 <h2>Author</h2>
 <p>This program and documentation was written by <i>Dr. Tilmann Bubeck &lt;t.bubeck [at] reinform.de&gt;</i></p>
 <h2>Copyright</h2>

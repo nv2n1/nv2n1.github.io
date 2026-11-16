@@ -14,7 +14,7 @@ description: "get_ccwdev_by_dev_id – obtain device from a ccw device id"
 <p><i>dev_id</i></p>
 <dl>
 <dd>
-<dd>id of the device to be searched</dl>
+</dd><dd>id of the device to be searched</dd></dl>
 <h2>Description</h2>
 <p>This function searches all devices attached to the ccw bus for a device matching <i>dev_id</i>.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "get_ccwdev_by_dev_id – obtain device from a ccw device id"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

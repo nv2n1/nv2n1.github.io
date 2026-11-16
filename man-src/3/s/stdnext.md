@@ -11,21 +11,13 @@ std::next - std::next
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class ForwardIt &gt;
-
 ForwardIt next(                                                     (since C++11)
-
 ForwardIt it,                                                       (until C++17)
-
 typename std::iterator_traits&lt;ForwardIt&gt;::difference_type n = 1 );
-
 template&lt; class InputIt &gt;
-
 constexpr InputIt next(                                             (since C++17)
-
 InputIt it,
-
 typename std::iterator_traits&lt;InputIt&gt;::difference_type n = 1 );</code></pre> 
 Return the nth successor of iterator it. 
 
@@ -67,12 +59,9 @@ Although the expression ++c.begin() often compiles, it is not guaranteed to do s
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4};
     auto it = v.begin();

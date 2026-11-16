@@ -18,62 +18,62 @@ description: "taskset – set or retrieve a process’s CPU affinity"
 <p> <code>0x00000001</code></p>
 <dl>
 <dt>
-<dd> is processor #0,</dl>
+</dt><dd> is processor #0,</dd></dl>
 <p> <code>0x00000003</code></p>
 <dl>
 <dt>
-<dd> is processors #0 and #1,</dl>
+</dt><dd> is processors #0 and #1,</dd></dl>
 <p> <code>0xFFFFFFFF</code></p>
 <dl>
 <dt>
-<dd> is processors #0 through #31,</dl>
+</dt><dd> is processors #0 through #31,</dd></dl>
 <p> <code>32</code></p>
 <dl>
 <dt>
-<dd> is processors #1, #4, and #5,</dl>
+</dt><dd> is processors #1, #4, and #5,</dd></dl>
 <p> <code>&#8211;cpu-list 0-2,6</code></p>
 <dl>
 <dt>
-<dd> is processors #0, #1, #2, and #6.</dl>
+</dt><dd> is processors #0, #1, #2, and #6.</dd></dl>
 <p> <code>&#8211;cpu-list 0-10:2</code></p>
 <dl>
 <dt>
-<dd> is processors #0, #2, #4, #6, #8 and #10. The suffix &quot;:N&quot; specifies stride in the range, for example 0-10:3 is interpreted as 0,3,6,9 list.</dl>
+</dt><dd> is processors #0, #2, #4, #6, #8 and #10. The suffix &quot;:N&quot; specifies stride in the range, for example 0-10:3 is interpreted as 0,3,6,9 list.</dd></dl>
 <p> When <code>taskset</code> returns, it is guaranteed that the given program has been scheduled to a legal CPU.</p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all-tasks</code></p>
 <dl>
 <dt>
-<dd> Set or retrieve the CPU affinity of all the tasks (threads) for a given PID.</dl>
+</dt><dd> Set or retrieve the CPU affinity of all the tasks (threads) for a given PID.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;cpu-list</code></p>
 <dl>
 <dt>
-<dd> Interpret <i>mask</i> as numerical list of processors instead of a bitmask. Numbers are separated by commas and may include ranges. For example: <code>0,5,8-11</code>.</dl>
+</dt><dd> Interpret <i>mask</i> as numerical list of processors instead of a bitmask. Numbers are separated by commas and may include ranges. For example: <code>0,5,8-11</code>.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;pid</code></p>
 <dl>
 <dt>
-<dd> Operate on an existing PID and do not launch a new task.</dl>
+</dt><dd> Operate on an existing PID and do not launch a new task.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>USAGE</h2>
 <p> The default behavior is to run a new command with a given affinity mask:</p>
 <dl>
 <dt>
-<dd> <code>taskset</code> <i>mask</i> <i>command</i> [<i>arguments</i>]</dl>
+</dt><dd> <code>taskset</code> <i>mask</i> <i>command</i> [<i>arguments</i>]</dd></dl>
 <p> You can also retrieve the CPU affinity of an existing task:</p>
 <dl>
 <dt>
-<dd> <code>taskset -p</code> <i>pid</i></dl>
+</dt><dd> <code>taskset -p</code> <i>pid</i></dd></dl>
 <p> Or set it:</p>
 <dl>
 <dt>
-<dd> <code>taskset -p</code> <i>mask pid</i></dl>
+</dt><dd> <code>taskset -p</code> <i>mask pid</i></dd></dl>
 <h2>PERMISSIONS</h2>
 <p> A user can change the CPU affinity of a process belonging to the same user. A user must possess <code>CAP_SYS_NICE</code> to change the CPU affinity of a process belonging to another user. A user can retrieve the affinity mask of any process.</p>
 <h2>AUTHORS</h2>

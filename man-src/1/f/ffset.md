@@ -15,12 +15,12 @@ description: "ffset – set force-feedback device parameters"
 <p> ffset sets the gain and autocenter strength of a force-feedback device.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&lt;<i>device</i>&gt;</p>
-<dd> The device to configure.</p>
-<dt><code>-g</code> &lt;<i>gain</i>&gt;</p>
-<dd> The gain (0-100).</p>
-<dt><code>-a</code> &lt;<i>autocenter strength</i>&gt;</p>
-<dd> The autocenter strength (0-100).</dl>
+<dt>&lt;<i>device</i>&gt;</dt>
+<dd> The device to configure.</dd>
+<dt><code>-g</code> &lt;<i>gain</i>&gt;</dt>
+<dd> The gain (0-100).</dd>
+<dt><code>-a</code> &lt;<i>autocenter strength</i>&gt;</dt>
+<dd> The autocenter strength (0-100).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffcfstress/">ffcfstress</a></code>(1), <code><a href="/docs/linux/man/1-ffmvforce/">ffmvforce</a></code>(1), <code><a href="/docs/linux/man/1-fftest/">fftest</a></code>(1), <code><a href="/docs/linux/man/1-jscal/">jscal</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1).</p>
 <h2>AUTHOR</h2>

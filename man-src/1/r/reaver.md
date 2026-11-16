@@ -17,87 +17,87 @@ description: "Reaver – WPS Cracker"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>-m, &#8211;mac=&lt;mac&gt;</code></p>
+</dt><dd> <code>-m, &#8211;mac=&lt;mac&gt;</code></dd>
 <dl>
 <dt>
-<dd> MAC of the host system (should be resolved automatically)</dl>
+</dt><dd> MAC of the host system (should be resolved automatically)</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-e, &#8211;essid=&lt;ssid&gt;</code></p>
+</dt><dd> <code>-e, &#8211;essid=&lt;ssid&gt;</code></dd>
 <dl>
 <dt>
-<dd> ESSID of the target AP. Unless cloaked, this will be resolved automatically.</dl>
+</dt><dd> ESSID of the target AP. Unless cloaked, this will be resolved automatically.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-c, &#8211;channel=&lt;channel&gt;</code></p>
+</dt><dd> <code>-c, &#8211;channel=&lt;channel&gt;</code></dd>
 <dl>
 <dt>
-<dd> Set the 802.11 channel for the interface (implies -f)</dl>
+</dt><dd> Set the 802.11 channel for the interface (implies -f)</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-o, &#8211;out-file=&lt;file&gt;</code></p>
+</dt><dd> <code>-o, &#8211;out-file=&lt;file&gt;</code></dd>
 <dl>
 <dt>
-<dd> Send output to a log file [default: stdout]</dl>
+</dt><dd> Send output to a log file [default: stdout]</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-f, &#8211;fixed</code></p>
+</dt><dd> <code>-f, &#8211;fixed</code></dd>
 <dl>
 <dt>
-<dd> Disable channel hopping</dl>
+</dt><dd> Disable channel hopping</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-5, &#8211;5ghz</code></p>
+</dt><dd> <code>-5, &#8211;5ghz</code></dd>
 <dl>
 <dt>
-<dd> Use 5GHz 802.11 channels</dl>
+</dt><dd> Use 5GHz 802.11 channels</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-v, &#8211;verbose</code></p>
+</dt><dd> <code>-v, &#8211;verbose</code></dd>
 <dl>
 <dt>
-<dd> Display non-critical warnings (-vv for more)</dl>
+</dt><dd> Display non-critical warnings (-vv for more)</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-q, &#8211;quiet</code></p>
+</dt><dd> <code>-q, &#8211;quiet</code></dd>
 <dl>
 <dt>
-<dd> Only display critical messages</dl>
+</dt><dd> Only display critical messages</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-i, &#8211;interface=&lt;wlan&gt;</code></p>
+</dt><dd> <code>-i, &#8211;interface=&lt;wlan&gt;</code></dd>
 <dl>
 <dt>
-<dd> Name of the monitor-mode interface to use</dl>
+</dt><dd> Name of the monitor-mode interface to use</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-b, &#8211;bssid=&lt;mac&gt;</code></p>
+</dt><dd> <code>-b, &#8211;bssid=&lt;mac&gt;</code></dd>
 <dl>
 <dt>
-<dd> BSSID of the target AP</dl>
+</dt><dd> BSSID of the target AP</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-p, &#8211;pin=&lt;wps pin&gt;</code></p>
+</dt><dd> <code>-p, &#8211;pin=&lt;wps pin&gt;</code></dd>
 <dl>
 <dt>
-<dd> Use the specified WPS pin</dl>
+</dt><dd> Use the specified WPS pin</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> <code>-h, &#8211;help</code></p>
+</dt><dd> <code>-h, &#8211;help</code></dd>
 <dl>
 <dt>
-<dd> Show help</dl>
+</dt><dd> Show help</dd></dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Craig Heffner &lt;cheffner [at] tacnetsol.com&gt;, Tactical Network Solutions. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>

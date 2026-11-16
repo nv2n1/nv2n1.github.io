@@ -35,7 +35,7 @@ description: "QuantLib::FixedRateCoupon – Coupon paying a fixed interest rate"
 <p>returns the amount of the cash flow </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dl>
+<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
 <p> Implements <code>CashFlow</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

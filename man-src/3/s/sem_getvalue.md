@@ -10,7 +10,6 @@ description: "sem_getvalue – get the value of a semaphore"
 <p>sem_getvalue &#8211; get the value of a semaphore</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;semaphore.h&gt;
-
 int sem_getvalue(sem_t *sem, int *sval);</code></pre>
 <p> Link with <i>-pthread</i>.</p>
 <h2>Description</h2>
@@ -20,8 +19,8 @@ int sem_getvalue(sem_t *sem, int *sval);</code></pre>
 <p><code>sem_getvalue</code>() returns 0 on success; on error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>sem</i> is not a valid semaphore. (The glibc implementation currently does not check whether <i>sem</i> is valid.)</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>sem</i> is not a valid semaphore. (The glibc implementation currently does not check whether <i>sem</i> is valid.)</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

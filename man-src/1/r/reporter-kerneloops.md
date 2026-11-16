@@ -34,7 +34,7 @@ url: "/docs/linux/man/1-reporter-kerneloops/"
  <i>SubmitURL</i>
 <dl>
 <dt>
-<dd> The URL of the kerneloops tracker, the default is &quot;<a rel="nofollow" HREF="http://submit.kerneloops.org/submitoops.php">http://submit.kerneloops.org/submitoops.php</a>&quot;.</dl>
+</dt><dd> The URL of the kerneloops tracker, the default is &quot;<a rel="nofollow" HREF="http://submit.kerneloops.org/submitoops.php">http://submit.kerneloops.org/submitoops.php</a>&quot;.</dd></dl>
 
 <h3>Integration with ABRT events</h3>
 
@@ -44,18 +44,18 @@ url: "/docs/linux/man/1-reporter-kerneloops/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=report_Kerneloops analyzer=Kerneloops reporter-kerneloops
-</pre></dl>
+</pre></dd></dl>
  
 
  It can be also used automatically and immediately without user interaction. When this is desired, modify the event configuration file to run the tool on the <i>post-create</i> event: 
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=post-create analyzer=Kerneloops  reporter-kerneloops
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -64,19 +64,19 @@ EVENT=post-create analyzer=Kerneloops  reporter-kerneloops
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -d DIR
 <dl>
 <dt>
-<dd> Path to problem directory.</dl>
+</dt><dd> Path to problem directory.</dd></dl>
  
 
  -c CONFFILE
 <dl>
 <dt>
-<dd> Path to configuration file. When used in ABRT event system, the file contains site-wide configuration. Users can change the values via environment variables.</dl>
+</dt><dd> Path to configuration file. When used in ABRT event system, the file contains site-wide configuration. Users can change the values via environment variables.</dd></dl>
 
 <h2>ENVIRONMENT VARIABLES</h2>
 
@@ -87,7 +87,7 @@ EVENT=post-create analyzer=Kerneloops  reporter-kerneloops
  <i>KerneloopsReporter_SubmitURL</i>
 <dl>
 <dt>
-<dd> The URL of the kerneloops tracker.</dl>
+</dt><dd> The URL of the kerneloops tracker.</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -101,7 +101,7 @@ EVENT=post-create analyzer=Kerneloops  reporter-kerneloops
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

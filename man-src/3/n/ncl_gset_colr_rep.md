@@ -13,16 +13,16 @@ description: "gset_colr_rep (Set color representation) – associates a color va
 <p> void gset_colr_rep(Gint ws_id, Gint colr_ind, const Gcolr_rep *colr_rep);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) &#8211; A workstation identifier. ws_id must be the same as that used in some previous gopen_ws call.</p>
-<dt>colr_ind</p>
-<dd>(Input) &#8211; A color index.</p>
-<dt>colr_rep.rgb.red</p>
-<dd>(Gfloat, Input) &#8211; An intensity value for red between 0. and 1. inclusive.</p>
-<dt>colr_rep.rgb.green</p>
-<dd>(Gfloat, Input) &#8211; An intensity value for green between 0. and 1. inclusive.</p>
-<dt>colr_rep.rgb.blue</p>
-<dd>(Gfloat, Input) &#8211; An intensity value for blue between 0. and 1. inclusive.</dl>
+<dt>ws_id</dt>
+<dd>(Input) &#8211; A workstation identifier. ws_id must be the same as that used in some previous gopen_ws call.</dd>
+<dt>colr_ind</dt>
+<dd>(Input) &#8211; A color index.</dd>
+<dt>colr_rep.rgb.red</dt>
+<dd>(Gfloat, Input) &#8211; An intensity value for red between 0. and 1. inclusive.</dd>
+<dt>colr_rep.rgb.green</dt>
+<dd>(Gfloat, Input) &#8211; An intensity value for green between 0. and 1. inclusive.</dd>
+<dt>colr_rep.rgb.blue</dt>
+<dd>(Gfloat, Input) &#8211; An intensity value for blue between 0. and 1. inclusive.</dd></dl>
 <h2>Usage</h2>
 <p>Color in GKS is &quot;indexed&quot;, i.e. color attributes are assigned to primitives by using a color index. The GKS function gset_colr_rep is used to associate a color value with color indices. </p>
 <p> It is recommended that all color indices used in a given job be defined prior to calling any output primitive. Since the result of a dynamic color change can be ambiguous, it is also recommended that gset_colr_rep not be called to change a color value after the original definitions. </p>

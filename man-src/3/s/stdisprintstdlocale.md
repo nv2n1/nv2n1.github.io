@@ -11,9 +11,7 @@ std::isprint(std::locale) - std::isprint(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
-
     bool isprint(charT ch, const locale &amp;loc);</code></pre> 
 Checks if the given character classified as a printable character (including space) by the given locale's std::ctype facet. 
 
@@ -37,11 +35,8 @@ Returns true if the character is classified as printable, false otherwise.
 
 Demonstrates the use of isprint() with different locales (OS-specific). 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 int main()
-
 {
     const wchar_t c = L'\u2122'; // trademark sign
     std::locale loc1(&quot;C&quot;);

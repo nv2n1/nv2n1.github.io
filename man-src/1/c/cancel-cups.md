@@ -16,21 +16,21 @@ description: "cancel – cancel jobs"
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <i>cancel</i>:</p>
 <dl>
-<dt>-E</p>
+<dt>-E</dt>
 <dd>
- Forces encryption when connecting to the server.</p>
-<dt>-U username</p>
+ Forces encryption when connecting to the server.</dd>
+<dt>-U username</dt>
 <dd>
- Specifies the username to use when connecting to the server.</p>
-<dt>-a</p>
+ Specifies the username to use when connecting to the server.</dd>
+<dt>-a</dt>
 <dd>
- Cancel all jobs on the named destination, or all jobs on all destinations if none is provided.</p>
-<dt>-h hostname[:port]</p>
+ Cancel all jobs on the named destination, or all jobs on all destinations if none is provided.</dd>
+<dt>-h hostname[:port]</dt>
 <dd>
- Chooses an alternate server.</p>
-<dt>-u username</p>
+ Chooses an alternate server.</dd>
+<dt>-u username</dt>
 <dd>
- Cancels jobs owned by <i>username</i>.</dl>
+ Cancels jobs owned by <i>username</i>.</dd></dl>
 <h2>COMPATIBILITY</h2>
 <p> Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, &quot;/&quot;, or &quot;#&quot;. Also, printer and class names are <i>not</i> case-sensitive.</p>
 <h2>NOTES</h2>

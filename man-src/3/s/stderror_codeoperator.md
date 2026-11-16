@@ -11,7 +11,6 @@ std::error_code::operator= - std::error_code::operator=
 <h2>Synopsis</h2>
 
 <pre><code>template&lt; class ErrorCodeEnum &gt;                     (since C++11)
-
 error_code&amp; operator=( ErrorCodeEnum e ) noexcept;</code></pre> 
 Replaces the error code and corresponding category with those representing error code enum e. 
 Equivalent to *this = std::make_error_code(e). The overload participates in overload resolutions only if std::is_error_code_enum&lt;ErrorCodeEnum&gt;::value == true. 

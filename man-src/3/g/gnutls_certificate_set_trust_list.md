@@ -14,12 +14,12 @@ description: "gnutls_certificate_set_trust_list – API function"
 <p> <code>void gnutls_certificate_set_trust_list(gnutls_certificate_credentials_t </code><i>res</i><code>, gnutls_x509_trust_list_t </code><i>tlist</i><code>, unsigned </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t res</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_x509_trust_list_t tlist</p>
-<dd> is a <code>gnutls_x509_trust_list_t</code> structure</p>
-<dt>unsigned flags</p>
-<dd> must be zero</dl>
+<dt>gnutls_certificate_credentials_t res</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_x509_trust_list_t tlist</dt>
+<dd> is a <code>gnutls_x509_trust_list_t</code> structure</dd>
+<dt>unsigned flags</dt>
+<dd> must be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets a trust list in the gnutls_certificate_credentials_t structure. </p>
 <p> Note that the <i>tlist</i> will become part of the credentials structure and must not be deallocated. It will be automatically deallocated when the <i>res</i> structure is deinitialized.</p>
@@ -36,6 +36,6 @@ description: "gnutls_certificate_set_trust_list – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

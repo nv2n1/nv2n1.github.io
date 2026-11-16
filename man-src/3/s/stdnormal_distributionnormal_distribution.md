@@ -11,10 +11,8 @@ description: "std::normal_distribution<RealType>::normal_distribution – std::n
 <h2>Synopsis</h2>
 <pre><code>normal_distribution()
     : normal_distribution(0.0){}(1)(since C++ 11)
-
           explicit normal_distribution(RealType mean, RealType stddev = 1.0);
 (2)(since C++ 11)
-
     explicit normal_distribution(const param_type &amp;params);
 (3)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses mean and stddev as the distribution parameters. <code>(3)</code> uses params as the distribution parameters. </p>

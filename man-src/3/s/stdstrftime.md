@@ -11,7 +11,6 @@ std::strftime - std::strftime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ctime&gt;
-
     std::size_t strftime(char *str, std::size_t count, const char *format, const std::tm *time);</code></pre> 
 Converts the date and time information from a given calendar time time to a null-terminated multibyte character string str according to format string format. Up to count bytes are written. 
 
@@ -152,12 +151,9 @@ The number of bytes written into the character array pointed to by str not inclu
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;ctime&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::locale::global(std::locale(&quot;ja_JP.utf8&quot;));
     std::time_t t = std::time(nullptr);

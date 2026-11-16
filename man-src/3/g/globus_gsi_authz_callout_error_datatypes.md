@@ -16,20 +16,20 @@ description: "Datatypes –"
 <p> Error codes. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_CALLOUT_ERROR </i></p>
-<dd> Authz callout error.</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_DENIED_BY_CALLOUT </i></p>
-<dd> Authorization denied by callout.</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CONFIGURATION_ERROR </i></p>
-<dd> Configuration Error.</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_SYSTEM_ERROR </i></p>
-<dd> System Error.</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CREDENTIAL_ERROR </i></p>
-<dd> Credentials Error.</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_BAD_ARGUMENT_ERROR </i></p>
-<dd> A invalid paramater was detected.</dl>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_CALLOUT_ERROR </i></dt>
+<dd> Authz callout error.</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_DENIED_BY_CALLOUT </i></dt>
+<dd> Authorization denied by callout.</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CONFIGURATION_ERROR </i></dt>
+<dd> Configuration Error.</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_SYSTEM_ERROR </i></dt>
+<dd> System Error.</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CREDENTIAL_ERROR </i></dt>
+<dd> Credentials Error.</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_BAD_ARGUMENT_ERROR </i></dt>
+<dd> A invalid paramater was detected.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus authz callout error from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAF">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAF">Author</a></dt>
+<dd></dd></dl>

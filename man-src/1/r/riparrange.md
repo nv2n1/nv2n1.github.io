@@ -16,20 +16,20 @@ description: "riparrange – FLAC file organiser"
 <p> The default operation is to just print what would be changed if the tool were to be ran with -m, -c or -h specified. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m</code></p>
-<dd> Move/rename files to new location. This only works within a mount.</p>
-<dt><code>-c</code></p>
-<dd> Copy files to new location.</p>
-<dt><code>-h</code></p>
-<dd> Hard link files to new location. This only works within a filesystem.</p>
-<dt><code>-f</code></p>
-<dd> Remove existing destination files before operation.</p>
-<dt><code>-w</code>, <code>&#8211;w32-filenames</code></p>
-<dd> Covert characters that are illegal on Windows filesystems to UTF-8 alternatives. If accessing files over Samba, this prevents name mangling which can lose the file extension. Mapped characters are <code>*</code>, <code>?</code>, <code>&quot;</code> and <code>|</code> which are replaced by <code>ӿ</code>, <code>ʔ</code>, <code>¨</code> and <code>ǀ</code> respectively.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Output information about files which will not be moved because they are already in the correct location. Normally only things that would be changed are reported.</p>
-<dt><code>-o</code>, <code>&#8211;output-file</code> <i>format</i></p>
-<dd> Set the format used to produce output filenames and paths. This should be a string containing the following special tokens: </p>
+<dt><code>-m</code></dt>
+<dd> Move/rename files to new location. This only works within a mount.</dd>
+<dt><code>-c</code></dt>
+<dd> Copy files to new location.</dd>
+<dt><code>-h</code></dt>
+<dd> Hard link files to new location. This only works within a filesystem.</dd>
+<dt><code>-f</code></dt>
+<dd> Remove existing destination files before operation.</dd>
+<dt><code>-w</code>, <code>&#8211;w32-filenames</code></dt>
+<dd> Covert characters that are illegal on Windows filesystems to UTF-8 alternatives. If accessing files over Samba, this prevents name mangling which can lose the file extension. Mapped characters are <code>*</code>, <code>?</code>, <code>&quot;</code> and <code>|</code> which are replaced by <code>ӿ</code>, <code>ʔ</code>, <code>¨</code> and <code>ǀ</code> respectively.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Output information about files which will not be moved because they are already in the correct location. Normally only things that would be changed are reported.</dd>
+<dt><code>-o</code>, <code>&#8211;output-file</code> <i>format</i></dt>
+<dd> Set the format used to produce output filenames and paths. This should be a string containing the following special tokens: </dd>
 <p>&nbsp;<wbr>%N&nbsp;<wbr>=&nbsp;<wbr>Track number&nbsp;<wbr>(TRACKNUMBER)<br />
 &nbsp;<wbr>%A&nbsp;<wbr>=&nbsp;<wbr>Track artist&nbsp;<wbr>(ARTIST)<br />
 &nbsp;<wbr>%a&nbsp;<wbr>=&nbsp;<wbr>Track artist sort name&nbsp;<wbr>(ARTISTSORT)<br />

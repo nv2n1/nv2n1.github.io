@@ -14,16 +14,16 @@ description: "call_usermodehelper – prepare and start a usermode application"
 <p><i>path</i></p>
 <dl>
 <dd>
-<dd>path to usermode executable</dl>
+</dd><dd>path to usermode executable</dd></dl>
 <p> <i>argv</i></p>
 <dl>
-<dd>arg vector for process</dl>
+<dd>arg vector for process</dd></dl>
 <p> <i>envp</i></p>
 <dl>
-<dd>environment for process</dl>
+<dd>environment for process</dd></dl>
 <p> <i>wait</i></p>
 <dl>
-<dd>wait for the application to finish and return status. when UMH_NO_WAIT don&#8217;t wait at all, but you get no useful error back when the program couldn&#8217;t be exec&#8217;ed. This makes it safe to call from interrupt context.</dl>
+<dd>wait for the application to finish and return status. when UMH_NO_WAIT don&#8217;t wait at all, but you get no useful error back when the program couldn&#8217;t be exec&#8217;ed. This makes it safe to call from interrupt context.</dd></dl>
 <h2>Description</h2>
 <p>This function is the equivalent to use <code>call_usermodehelper_setup</code> and <code>call_usermodehelper_exec</code>.</p>
 <h2>Copyright</h2>

@@ -13,8 +13,8 @@ description: "Plank – Stupidly simple."
 <p> plank [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code> <code>&#8211;debug</code></p>
-<dd> Enable debug level logging</dl>
+<dt><code>-d</code> <code>&#8211;debug</code></dt>
+<dd> Enable debug level logging</dd></dl>
 <h2>HOMEPAGE</h2>
 <p> For more information, please visit <a rel="nofollow" href="http://launchpad.net/plank/">http://launchpad.net/plank/</a></p>
 <h2>AUTHORS</h2>

@@ -14,13 +14,13 @@ description: "zmq_ctx_term – destroy a 0MQ context"
 <p>The <i>zmq_ctx_term()</i> function shall destroy the 0MQ context <i>context</i>. </p>
 <p> Context termination is performed in the following steps: </p>
 <dl>
-<dd>1. Any blocking operations currently in progress on sockets open within <i>context</i> shall return immediately with an error code of ETERM. With the exception of <i>zmq_close()</i>, any further operations on sockets open within <i>context</i> shall fail with an error code of ETERM.</dl>
+<dd>1. Any blocking operations currently in progress on sockets open within <i>context</i> shall return immediately with an error code of ETERM. With the exception of <i>zmq_close()</i>, any further operations on sockets open within <i>context</i> shall fail with an error code of ETERM.</dd></dl>
 <dl>
-<dd>2. After interrupting all blocking calls, <i>zmq_ctx_term()</i> shall <i>block</i> until the following conditions are satisfied: </p>
+<dd>2. After interrupting all blocking calls, <i>zmq_ctx_term()</i> shall <i>block</i> until the following conditions are satisfied: </dd>
 <dl>
-<dd>&bull; All sockets open within <i>context</i> have been closed with <i>zmq_close()</i>.</dl>
+<dd>&bull; All sockets open within <i>context</i> have been closed with <i>zmq_close()</i>.</dd></dl>
 <dl>
-<dd>&bull; For each socket within <i>context</i>, all messages sent by the application with <i>zmq_send()</i> have either been physically transferred to a network peer, or the socket&#8217;s linger period set with the <i>ZMQ_LINGER</i> socket option has expired.</dl>
+<dd>&bull; For each socket within <i>context</i>, all messages sent by the application with <i>zmq_send()</i> have either been physically transferred to a network peer, or the socket&#8217;s linger period set with the <i>ZMQ_LINGER</i> socket option has expired.</dd></dl>
 </dl>
 <p> For further details regarding socket linger behavior refer to the <i>ZMQ_LINGER</i> option in <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3). </p>
 <p> This function replaces the deprecated function <code>zmq_term</code>(3).</p>
@@ -31,10 +31,10 @@ description: "zmq_ctx_term – destroy a 0MQ context"
 <h2>Errors</h2>
 <p><code>EFAULT</code></p>
 <dl>
-<dd>The provided <i>context</i> was invalid.</dl>
+<dd>The provided <i>context</i> was invalid.</dd></dl>
 <p> <code>EINTR</code></p>
 <dl>
-<dd>Termination was interrupted by a signal. It can be restarted if needed.</dl>
+<dd>Termination was interrupted by a signal. It can be restarted if needed.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7) <code>zmq_init</code>(3) <code><a href="/docs/linux/man/3-zmq_close/">zmq_close</a></code>(3) <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3)</p>
 <h2>Authors</h2>

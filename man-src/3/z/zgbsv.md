@@ -11,8 +11,6 @@ description: "zgbsv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zgbsv (N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)
-
-
 ZGBSV computes the solution to system of linear equations A * X = B for GB matrices (simple driver)</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgbsv (integerN, integerKL, integerKU, integerNRHS, complex*16, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
@@ -28,10 +26,10 @@ ZGBSV computes the solution to system of linear equations A * X = B for GB matri
  and unit lower triangular matrices with KL subdiagonals, and U is
  upper triangular with KL+KU superdiagonals. The factored form of A
  is then used to solve the system of equations A * X = B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The number of linear equations, i.e., the order of the
  matrix A. N &gt;= 0.</pre>
@@ -81,13 +79,13 @@ ZGBSV computes the solution to system of linear equations A * X = B for GB matri
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -103,7 +101,8 @@ ZGBSV computes the solution to system of linear equations A * X = B for GB matri
  Array elements marked * are not used by the routine; elements marked
  + need not be set on entry, but are required by the routine to store
  elements of U because of fill-in resulting from the row interchanges.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 163 of file zgbsv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

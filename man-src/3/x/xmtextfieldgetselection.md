@@ -15,8 +15,8 @@ description: "XmTextFieldGetSelection — A TextField function that retrieves th
 <h2>Description</h2>
 <p><code>XmTextFieldGetSelection</code> retrieves the value of the primary selection. It returns a NULL pointer if no text is selected in the widget. The application is responsible for freeing the storage associated with the string by calling <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns a character pointer to the string that is associated with the primary selection.</p>

@@ -29,26 +29,26 @@ description: "mallinfo – obtain memory allocation information"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int keepcost;&nbsp;<wbr>&nbsp;/*&nbsp;Top-most, releasable space&nbsp;(bytes)&nbsp;*/ }; </p>
 <p> The fields of the <i>mallinfo</i> structure contain the following information:</p>
 <dl>
-<dt><i>arena</i></p>
-<dd> The total amount of memory allocated by means other than <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) (i.e., memory allocated on the heap). This figure includes both in-use blocks and blocks on the free list.</p>
-<dt><i>ordblks</i></p>
-<dd> The number of ordinary (i.e., non-fastbin) free blocks.</p>
-<dt><i>smblks</i></p>
-<dd> The number of fastbin free blocks (see <code><a href="/docs/linux/man/3-mallopt/">mallopt</a></code>(3)).</p>
-<dt><i>hblks</i></p>
-<dd> The number of blocks currently allocated using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). (See the discussion of <code>M_MMAP_THRESHOLD</code> in <code><a href="/docs/linux/man/3-mallopt/">mallopt</a></code>(3).)</p>
-<dt><i>hblkhd</i></p>
-<dd> The number of bytes in blocks currently allocated using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</p>
-<dt><i>usmblks</i></p>
-<dd> This field is unused, and is always 0. Historically, it was the &quot;highwater mark&quot; for allocated space&#8212;that is, the maximum amount of space that was ever allocated (in bytes); this field was maintained only in nonthreading environments.</p>
-<dt><i>fsmblks</i></p>
-<dd> The total number of bytes in fastbin free blocks.</p>
-<dt><i>uordblks</i></p>
-<dd> The total number of bytes used by in-use allocations.</p>
-<dt><i>fordblks</i></p>
-<dd> The total number of bytes in free blocks.</p>
-<dt><i>keepcost</i></p>
-<dd> The total amount of releasable free space at the top of the heap. This is the maximum number of bytes that could ideally (i.e., ignoring page alignment restrictions, and so on) be released by <code><a href="/docs/linux/man/3-malloc_trim/">malloc_trim</a></code>(3).</dl>
+<dt><i>arena</i></dt>
+<dd> The total amount of memory allocated by means other than <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) (i.e., memory allocated on the heap). This figure includes both in-use blocks and blocks on the free list.</dd>
+<dt><i>ordblks</i></dt>
+<dd> The number of ordinary (i.e., non-fastbin) free blocks.</dd>
+<dt><i>smblks</i></dt>
+<dd> The number of fastbin free blocks (see <code><a href="/docs/linux/man/3-mallopt/">mallopt</a></code>(3)).</dd>
+<dt><i>hblks</i></dt>
+<dd> The number of blocks currently allocated using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). (See the discussion of <code>M_MMAP_THRESHOLD</code> in <code><a href="/docs/linux/man/3-mallopt/">mallopt</a></code>(3).)</dd>
+<dt><i>hblkhd</i></dt>
+<dd> The number of bytes in blocks currently allocated using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</dd>
+<dt><i>usmblks</i></dt>
+<dd> This field is unused, and is always 0. Historically, it was the &quot;highwater mark&quot; for allocated space&#8212;that is, the maximum amount of space that was ever allocated (in bytes); this field was maintained only in nonthreading environments.</dd>
+<dt><i>fsmblks</i></dt>
+<dd> The total number of bytes in fastbin free blocks.</dd>
+<dt><i>uordblks</i></dt>
+<dd> The total number of bytes used by in-use allocations.</dd>
+<dt><i>fordblks</i></dt>
+<dd> The total number of bytes in free blocks.</dd>
+<dt><i>keepcost</i></dt>
+<dd> The total amount of releasable free space at the top of the heap. This is the maximum number of bytes that could ideally (i.e., ignoring page alignment restrictions, and so on) be released by <code><a href="/docs/linux/man/3-malloc_trim/">malloc_trim</a></code>(3).</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

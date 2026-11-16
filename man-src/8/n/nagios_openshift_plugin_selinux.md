@@ -47,8 +47,8 @@ description: "nagios_openshift_plugin_selinux – Security Enhanced Linux Policy
 <p> <code>nagios_openshift_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_openshift_plugin_exec_t type, if you want to transition an executable to the nagios_openshift_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib64/nagios/plugins/check_node_accept_status, /usr/lib64/nagios/plugins/check_number_openshift_apps </p>
+<dt>Paths:</dt>
+<dd>/usr/lib64/nagios/plugins/check_node_accept_status, /usr/lib64/nagios/plugins/check_number_openshift_apps </dd>
 </dl>
 <p> <code>nagios_openshift_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the nagios_openshift_plugin_tmp_t type, if you want to store nagios openshift plugin temporary files in the /tmp directories. </p>

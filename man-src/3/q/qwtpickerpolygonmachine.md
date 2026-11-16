@@ -23,6 +23,6 @@ description: "QwtPickerPolygonMachine –"
 <p> Pressing <code>QwtEventPattern::MouseSelect1</code> or <code>QwtEventPattern::KeySelect1</code> starts the selection and selects the first point, or appends a point. Pressing <code>QwtEventPattern::MouseSelect2</code> or <code>QwtEventPattern::KeySelect2</code> appends the last point and terminates the selection. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dl>
+<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

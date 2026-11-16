@@ -14,10 +14,10 @@ description: "kstrdup_const – conditionally duplicate an existing const string
 <p><i>s</i></p>
 <dl>
 <dd>
-<dd>the string to duplicate</dl>
+</dd><dd>the string to duplicate</dd></dl>
 <p> <i>gfp</i></p>
 <dl>
-<dd>the GFP mask used in the <code>kmalloc</code> call when allocating memory</dl>
+<dd>the GFP mask used in the <code>kmalloc</code> call when allocating memory</dd></dl>
 <h2>Description</h2>
 <p>Function returns source string if it is in .rodata section otherwise it fallbacks to kstrdup. Strings allocated by kstrdup_const should be freed by kfree_const.</p>
 <h2>Copyright</h2>

@@ -16,15 +16,16 @@ description: "tpm_resetdalock – reset the dictionary attack lock for the user 
 <h2>Description</h2>
 <p><code>tpm_resetdalock</code> resets the dictionary attack lock. It prompts for owner authentication and, if password is correct, calls &#8216;tpmSetStatus&#8217; which does necessary action to reset dictionary attack lock.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display command usage info.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Display command version info.</p>
-<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</p>
-<dd>Set logging level.</p>
-<dt><code>-z</code>, <code>&#8211;well-known</code></p>
-<dd>Authenticate using 20 bytes of zeros as owner password (the default TSS Well Known Secret), instead of prompting for an owner password. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display command usage info.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Display command version info.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</dt>
+<dd>Set logging level.</dd>
+<dt><code>-z</code>, <code>&#8211;well-known</code></dt>
+<dd>Authenticate using 20 bytes of zeros as owner password (the default TSS Well Known Secret), instead of prompting for an owner password. </dd>
 <h2>See Also</h2>
 <p><code>tpm_reset</code>(8) </p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt;</p>
+</dl>

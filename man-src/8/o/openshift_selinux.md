@@ -54,9 +54,9 @@ description: "openshift_selinux – Security Enhanced Linux Policy for the opens
 <p> Policy governs the access confined processes have to these ports. SELinux openshift policy is very flexible allowing users to setup their openshift processes in as secure a method as possible. </p>
 <p> The following port types are defined for openshift: </p>
 <dl>
-<dt><code>openshift_port_t</code></p>
+<dt><code>openshift_port_t</code></dt>
 <dd>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type openshift_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>anon_inodefs_t</code> </p>
@@ -105,16 +105,16 @@ description: "openshift_selinux – Security Enhanced Linux Policy for the opens
 <p> <code>openshift_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the openshift_initrc_exec_t type, if you want to transition an executable to the openshift_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/s?bin/mcollectived, /usr/s?bin/(oo|rhc)-restorer, /usr/s?bin/oo-admin-ctl-gears, /usr/s?bin/(oo|rhc)-restorer-wrapper.sh, /etc/rc.d/init.d/libra, /etc/rc.d/init.d/mcollective </p>
+<dt>Paths:</dt>
+<dd>/usr/s?bin/mcollectived, /usr/s?bin/(oo|rhc)-restorer, /usr/s?bin/oo-admin-ctl-gears, /usr/s?bin/(oo|rhc)-restorer-wrapper.sh, /etc/rc.d/init.d/libra, /etc/rc.d/init.d/mcollective </dd>
 </dl>
 <p> <code>openshift_initrc_tmp_t</code> </p>
 <p> &#8211; Set files with the openshift_initrc_tmp_t type, if you want to store openshift initrc temporary files in the /tmp directories. </p>
 <p> <code>openshift_log_t</code> </p>
 <p> &#8211; Set files with the openshift_log_t type, if you want to treat the data as openshift log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/openshift(/.*)?, /var/log/mcollective.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/openshift(/.*)?, /var/log/mcollective.log.* </dd>
 </dl>
 <p> <code>openshift_net_read_exec_t</code> </p>
 <p> &#8211; Set files with the openshift_net_read_exec_t type, if you want to transition an executable to the openshift_net_read_t domain. </p>
@@ -125,30 +125,30 @@ description: "openshift_selinux – Security Enhanced Linux Policy for the opens
 <p> <code>openshift_rw_file_t</code> </p>
 <p> &#8211; Set files with the openshift_rw_file_t type, if you want to treat the files as openshift rw content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/openshift/.*/data(/.*)?, /var/lib/stickshift/.*/data(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/openshift/.*/data(/.*)?, /var/lib/stickshift/.*/data(/.*)? </dd>
 </dl>
 <p> <code>openshift_script_exec_t</code> </p>
 <p> &#8211; Set files with the openshift_script_exec_t type, if you want to transition an executable to the openshift_script_t domain. </p>
 <p> <code>openshift_tmp_t</code> </p>
 <p> &#8211; Set files with the openshift_tmp_t type, if you want to store openshift temporary files in the /tmp directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/openshift/.*/.tmp(/.*)?, /var/lib/openshift/.*/.sandbox(/.*)?, /var/lib/stickshift/.*/.tmp(/.*)?, /var/lib/stickshift/.*/.sandbox(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/openshift/.*/.tmp(/.*)?, /var/lib/openshift/.*/.sandbox(/.*)?, /var/lib/stickshift/.*/.tmp(/.*)?, /var/lib/stickshift/.*/.sandbox(/.*)? </dd>
 </dl>
 <p> <code>openshift_tmpfs_t</code> </p>
 <p> &#8211; Set files with the openshift_tmpfs_t type, if you want to store openshift files on a tmpfs file system. </p>
 <p> <code>openshift_var_lib_t</code> </p>
 <p> &#8211; Set files with the openshift_var_lib_t type, if you want to store the openshift files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/openshift(/.*)?, /var/lib/stickshift(/.*)?, /var/lib/containers/home(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/openshift(/.*)?, /var/lib/stickshift(/.*)?, /var/lib/containers/home(/.*)? </dd>
 </dl>
 <p> <code>openshift_var_run_t</code> </p>
 <p> &#8211; Set files with the openshift_var_run_t type, if you want to store the openshift files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/openshift(/.*)?, /var/run/stickshift(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/openshift(/.*)?, /var/run/stickshift(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

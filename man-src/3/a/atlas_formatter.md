@@ -54,6 +54,6 @@ description: "Atlas::Formatter – Atlas stream formatter."
 <p> This class implements the <code>Bridge</code> interface that accepts an <code>Atlas</code> stream. It copies the input stream to an output bridge, inserting formatting characters according to settings defined at construction time. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Codec</code></dl>
+<dd><code>Codec</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

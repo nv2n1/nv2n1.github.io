@@ -15,12 +15,12 @@ description: "auparse_feed – feed data into parser"
 int auparse_feed(auparse_state_t *au, const char *data, size_t data_len);
 </code></pre>
 <dl>
-<dt><i>au</i></p>
-<dd> The audit parse state</p>
-<dt><i>data</i></p>
-<dd> a buffer of data to feed into the parser, it is <i>data_len</i> bytes long. The data is copied in the parser, upon return the caller may free or reuse the data buffer.</p>
-<dt><i>data_len</i></p>
-<dd> number of bytes in <i>data</i> </p>
+<dt><i>au</i></dt>
+<dd> The audit parse state</dd>
+<dt><i>data</i></dt>
+<dd> a buffer of data to feed into the parser, it is <i>data_len</i> bytes long. The data is copied in the parser, upon return the caller may free or reuse the data buffer.</dd>
+<dt><i>data_len</i></dt>
+<dd> number of bytes in <i>data</i> </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <i>auparse_feed</i> supplies new data for the parser to consume. <i>auparse_init()</i> must have been called with a source type of AUSOURCE_FEED and a NULL pointer. </p>

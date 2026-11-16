@@ -11,16 +11,16 @@ description: "XtCreateApplicationContext, XtDestroyApplicationContext, XtWidgetT
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>XtAppContext XtCreateApplicationContext(void);</p>
-<dd>void XtDestroyApplicationContext(XtAppContext <i>app_context</i>);</p>
-<dd>XtAppContext XtWidgetToApplicationContext(Widget <i>w</i>);</p>
-<dd>void XtToolkitInitialize(void);</dl>
+<dd>XtAppContext XtCreateApplicationContext(void);</dd>
+<dd>void XtDestroyApplicationContext(XtAppContext <i>app_context</i>);</dd>
+<dd>XtAppContext XtWidgetToApplicationContext(Widget <i>w</i>);</dd>
+<dd>void XtToolkitInitialize(void);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>app_context</i></p>
-<dd>Specifies the application context.</p>
-<dt><i>w</i></p>
-<dd>Specifies the widget that you want the application context for.</dl>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget that you want the application context for.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtCreateApplicationContext</code> function returns an application context, which is an opaque type. Every application must have at least one application context. </p>
 <p> The <code>XtDestroyApplicationContext</code> function destroys the specified application context as soon as it is safe to do so. If called from with an event dispatch (for example, a callback procedure), <code>XtDestroyApplicationContext</code> does not destroy the application context until the dispatch is complete. </p>

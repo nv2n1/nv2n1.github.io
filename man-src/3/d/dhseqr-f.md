@@ -18,7 +18,7 @@ description: "dhseqr.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     DHSEQR computes the eigenvalues of a Hessenberg matrix H
     and, optionally, the matrices T and Z from the Schur decomposition
@@ -29,11 +29,11 @@ description: "dhseqr.f –"
     of a matrix A which has been reduced to the Hessenberg form H
     by the orthogonal matrix Q:  A = Q*H*Q**T = (QZ)*T*(QZ)**T.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre>
           JOB is CHARACTER*1
            = 'E':  compute eigenvalues only;
@@ -185,22 +185,22 @@ description: "dhseqr.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
 <dt>
-<dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dl>
+</dt><dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
              Default values supplied by
              ILAENV(ISPEC,'DHSEQR',JOB(:1)//COMPZ(:1),N,ILO,IHI,LWORK).
@@ -243,12 +243,13 @@ description: "dhseqr.f –"
                       for ISPEC=16 is 0.  Otherwise the default for
                       ISPEC=16 is 2.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
 <dt>
-<dd> K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </p>
+</dt><dd> K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </dd>
 <p>&nbsp;<wbr>K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part II: Aggressive Early Deflation, SIAM Journal of Matrix Analysis, volume 23, pages 948&#8211;973, 2002.&nbsp;<wbr></dl>
 <p> Definition at line 316 of file dhseqr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

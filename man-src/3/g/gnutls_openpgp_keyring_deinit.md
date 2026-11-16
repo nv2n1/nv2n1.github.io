@@ -14,8 +14,8 @@ description: "gnutls_openpgp_keyring_deinit – API function"
 <p> <code>void gnutls_openpgp_keyring_deinit(gnutls_openpgp_keyring_t </code><i>keyring</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_keyring_t keyring</p>
-<dd> A pointer to the type to be initialized</dl>
+<dt>gnutls_openpgp_keyring_t keyring</dt>
+<dd> A pointer to the type to be initialized</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will deinitialize a keyring structure.</p>
 <h2>REPORTING BUGS</h2>
@@ -27,6 +27,6 @@ description: "gnutls_openpgp_keyring_deinit – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

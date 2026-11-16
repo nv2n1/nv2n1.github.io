@@ -10,9 +10,7 @@ description: "std::moneypunct_byname – std::moneypunct_byname"
 <p>std::moneypunct_byname &#8211; std::moneypunct_byname</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT, bool Intl = false &gt;
-
 class moneypunct_byname : public std::moneypunct&lt;CharT, Intl&gt;;</code></pre>
 <p>std::moneypunct_byname is a std::moneypunct facet which encapsulates monetary formatting preferences of a locale specified at its construction.<br />
 Two specializations are provided by the standard library<br />
@@ -104,13 +102,9 @@ value the absolute numeric monetary value is required</p>
 <p>This example demonistrates how to apply monetary formatting rules of another language without changing the rest of the locale.<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;locale&gt;
-
 int main()
-
 {
     long double mon = 1234567;
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));

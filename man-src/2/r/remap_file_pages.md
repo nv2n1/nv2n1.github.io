@@ -21,10 +21,10 @@ int remap_file_pages(void *addr, size_t size, int prot,
 <p> The <code>remap_file_pages</code>() system call is used to create a nonlinear mapping, that is, a mapping in which the pages of the file are mapped into a nonsequential order in memory. The advantage of using <code>remap_file_pages</code>() over using repeated calls to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) is that the former approach does not require the kernel to create additional VMA (Virtual Memory Area) data structures. </p>
 <p> To create a nonlinear mapping we perform the following steps:</p>
 <dl>
-<dt>1.</p>
-<dd> Use <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) to create a mapping (which is initially linear). This mapping must be created with the <code>MAP_SHARED</code> flag.</p>
-<dt>2.</p>
-<dd> Use one or more calls to <code>remap_file_pages</code>() to rearrange the correspondence between the pages of the mapping and the pages of the file. It is possible to map the same page of a file into multiple locations within the mapped region.</dl>
+<dt>1.</dt>
+<dd> Use <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) to create a mapping (which is initially linear). This mapping must be created with the <code>MAP_SHARED</code> flag.</dd>
+<dt>2.</dt>
+<dd> Use one or more calls to <code>remap_file_pages</code>() to rearrange the correspondence between the pages of the mapping and the pages of the file. It is possible to map the same page of a file into multiple locations within the mapped region.</dd></dl>
 <p> The <i>pgoff</i> and <i>size</i> arguments specify the region of the file that is to be relocated within the mapping: <i>pgoff</i> is a file offset in units of the system page size; <i>size</i> is the length of the region in bytes. </p>
 <p> The <i>addr</i> argument serves two purposes. First, it identifies the mapping whose pages we want to rearrange. Thus, <i>addr</i> must be an address that falls within a region previously mapped by a call to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). Second, <i>addr</i> specifies the address at which the file pages identified by <i>pgoff</i> and <i>size</i> will be placed. </p>
 <p> The values specified in <i>addr</i> and <i>size</i> should be multiples of the system page size. If they are not, then the kernel rounds <i>both</i> values <i>down</i> to the nearest multiple of the page size. </p>
@@ -34,10 +34,10 @@ int remap_file_pages(void *addr, size_t size, int prot,
 <p> On success, <code>remap_file_pages</code>() returns 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>addr</i> does not refer to a valid mapping created with the <code>MAP_SHARED</code> flag.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>addr</i>, <i>size</i>, <i>prot</i>, or <i>pgoff</i> is invalid.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>addr</i> does not refer to a valid mapping created with the <code>MAP_SHARED</code> flag.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>addr</i>, <i>size</i>, <i>prot</i>, or <i>pgoff</i> is invalid.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>remap_file_pages</code>() system call appeared in Linux 2.5.46; glibc support was added in version 2.3.3.</p>
 <h2>CONFORMING TO</h2>

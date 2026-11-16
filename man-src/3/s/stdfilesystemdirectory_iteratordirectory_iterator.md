@@ -11,26 +11,17 @@ description: "std::filesystem::directory_iterator::directory_iterator – std::f
 <h2>Synopsis</h2>
 <pre><code>directory_iterator() noexcept;
 (1)(since C++ 17)
-
     explicit directory_iterator(const std::filesystem::path &amp;p);
 (2)(since C++ 17)
-
     directory_iterator(const std::filesystem::path &amp;p, (3)(since C++ 17)
-
                                                            std::filesystem::directory_options options);
-
 directory_iterator(const std::filesystem::path &amp;p, std::error_code &amp;ec);
 (4)(since C++ 17)
-
     directory_iterator(const std::filesystem::path &amp;p,
-
                        std::filesystem::directory_options options, (5)(since C++ 17)
-
                                                                        std::error_code &amp;ec);
-
 directory_iterator(const directory_iterator &amp;) = default;
 (6)(since C++ 17)
-
     directory_iterator(directory_iterator &amp;&amp;) = default;
 (7)(since C++ 17)</code></pre>
 <p>Constructs a new directory iterator.<br />

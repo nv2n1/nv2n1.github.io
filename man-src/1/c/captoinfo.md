@@ -15,18 +15,18 @@ description: "captoinfo – convert a termcap description into a terminfo descri
 <p> <code>captoinfo</code> looks in each given text <i>file</i> for <code>termcap</code> descriptions. For each one found, an equivalent <code>terminfo</code> description is written to standard output. Termcap <code>tc</code> capabilities are translated directly to terminfo <code>use</code> capabilities. </p>
 <p> If no <i>file</i> is given, then the environment variable <code>TERMCAP</code> is used for the filename or entry. If <code>TERMCAP</code> is a full pathname to a file, only the terminal whose name is specified in the environment variable <code>TERM</code> is extracted from that file. If the environment variable <code>TERMCAP</code> is not set, then the file <code>/etc/terminfo</code> is read.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> print out tracing information on standard error as the program runs.</p>
-<dt><code>-V</code></p>
-<dd> print out the version of the program in use on standard error and exit.</p>
-<dt><code>-1</code></p>
-<dd> cause the fields to print out one to a line. Otherwise, the fields will be printed several to a line to a maximum width of 60 characters.</p>
-<dt><code>-w</code></p>
-<dd> change the output to <i>width</i> characters.</dl>
+<dt><code>-v</code></dt>
+<dd> print out tracing information on standard error as the program runs.</dd>
+<dt><code>-V</code></dt>
+<dd> print out the version of the program in use on standard error and exit.</dd>
+<dt><code>-1</code></dt>
+<dd> cause the fields to print out one to a line. Otherwise, the fields will be printed several to a line to a maximum width of 60 characters.</dd>
+<dt><code>-w</code></dt>
+<dd> change the output to <i>width</i> characters.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/terminfo</p>
-<dd> Compiled terminal description database.</dl>
+<dt>/etc/terminfo</dt>
+<dd> Compiled terminal description database.</dd></dl>
 <h2>TRANSLATIONS FROM NONSTANDARD CAPABILITIES</h2>
 <p> Some obsolete nonstandard capabilities will automatically be translated into standard (SVr4/XSI Curses) terminfo capabilities by <code>captoinfo</code>. Whenever one of these automatic translations is done, the program will issue an notification to stderr, inviting the user to check that it has not mistakenly translated a completely unknown and random capability and/or syntax error. </p>
 <table>

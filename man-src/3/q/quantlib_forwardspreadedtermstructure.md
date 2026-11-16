@@ -35,15 +35,15 @@ description: "QuantLib::ForwardSpreadedTermStructure – Term structure with add
 <p>Term structure with added spread on the instantaneous forward rate. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This term structure will remain linked to the original structure, i.e., any changes in the latter will be reflected in this structure as well.</dl>
+<dd>This term structure will remain linked to the original structure, i.e., any changes in the latter will be reflected in this structure as well.</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned values is tested by checking them against numerical calculations.</p>
-<dt>*</p>
-<dd>observability against changes in the underlying term structure and in the added spread is checked.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dd>
+<dt>*</dt>
+<dd>observability against changes in the underlying term structure and in the added spread is checked.</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

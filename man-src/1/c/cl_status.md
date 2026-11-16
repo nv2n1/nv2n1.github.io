@@ -15,34 +15,34 @@ description: "cl_status – Check Status of the High-Availability Linux (Linux-H
 <p> <code>cl_status</code> is used to check the status of the High-Availability Linux Subsystem </p>
 <h2>SUB-COMMANDS</h2>
 <dl>
-<dt><code>hbstatus</code></p>
-<dd> Indicate if heartbeat is running on the local system.</p>
-<dt><code>listnodes</code></p>
-<dd> List the nodes in the cluster</p>
-<dt><code>nodetype</code> <i>TYPE</i></p>
-<dd> List the nodes of the given type. Currently the available types are ping and normal.</p>
-<dt><code>listhblinks</code> <i>NODENAME</i></p>
-<dd> List the network interfaces used as heartbeat links. Nodename should be as per the ha.cf file for the cluster.</p>
-<dt><code>hblinkstatus</code> <i>NODENAME LINKNAME</i></p>
-<dd> Show the status of a heartbeat link. Nodename should be as per the ha.cf file for the cluster. Linkname should be as per the output of the listhblinks subcomand.</p>
-<dt><code>clientstatus</code> <i>NODENAME CLIENTID [TIMEOUT]</i></p>
-<dd> Show the status of heartbeat clients. Nodename and Client-ID should be as per the ha.cf file for the cluster. Timeout is in milliseconds, the default is 100ms.</p>
-<dt><code>rscstatus</code></p>
-<dd> Show the status of cluster resources. Status will be one of: local, foreign, all or none.</p>
-<dt><code>hbparameter -p</code> <i>PARAMETERNAME</i></p>
-<dd> Retrieve the value of cluster parameters. The parameters may be one of the following, however some parameters which have not been specified may not retrieved:</p>
+<dt><code>hbstatus</code></dt>
+<dd> Indicate if heartbeat is running on the local system.</dd>
+<dt><code>listnodes</code></dt>
+<dd> List the nodes in the cluster</dd>
+<dt><code>nodetype</code> <i>TYPE</i></dt>
+<dd> List the nodes of the given type. Currently the available types are ping and normal.</dd>
+<dt><code>listhblinks</code> <i>NODENAME</i></dt>
+<dd> List the network interfaces used as heartbeat links. Nodename should be as per the ha.cf file for the cluster.</dd>
+<dt><code>hblinkstatus</code> <i>NODENAME LINKNAME</i></dt>
+<dd> Show the status of a heartbeat link. Nodename should be as per the ha.cf file for the cluster. Linkname should be as per the output of the listhblinks subcomand.</dd>
+<dt><code>clientstatus</code> <i>NODENAME CLIENTID [TIMEOUT]</i></dt>
+<dd> Show the status of heartbeat clients. Nodename and Client-ID should be as per the ha.cf file for the cluster. Timeout is in milliseconds, the default is 100ms.</dd>
+<dt><code>rscstatus</code></dt>
+<dd> Show the status of cluster resources. Status will be one of: local, foreign, all or none.</dd>
+<dt><code>hbparameter -p</code> <i>PARAMETERNAME</i></dt>
+<dd> Retrieve the value of cluster parameters. The parameters may be one of the following, however some parameters which have not been specified may not retrieved:</dd>
 <dl>
 <dt>
-<dd> apiauth, auto_failback, baud, debug, debugfile, deadping, deadtime, hbversion, hopfudge, initdead, keepalive, logfacility, logfile, msgfmt, nice_failback, node, normalpoll, stonith, udpport, warntime, watchdog</dl>
+</dt><dd> apiauth, auto_failback, baud, debug, debugfile, deadping, deadtime, hbversion, hopfudge, initdead, keepalive, logfacility, logfile, msgfmt, nice_failback, node, normalpoll, stonith, udpport, warntime, watchdog</dd></dl>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m</code></p>
-<dd> Make the output more human readable. The default output should be easier for scripts to parse. Available with all commands.</p>
-<dt><code>-p</code></p>
-<dd> List only &#8216;ping&#8217; nodes. Available with hbstatus sub-command.</p>
-<dt><code>-n</code></p>
-<dd> List only &#8216;normal&#8217; nodes. Available with hbstatus sub-command. </p>
+<dt><code>-m</code></dt>
+<dd> Make the output more human readable. The default output should be easier for scripts to parse. Available with all commands.</dd>
+<dt><code>-p</code></dt>
+<dd> List only &#8216;ping&#8217; nodes. Available with hbstatus sub-command.</dd>
+<dt><code>-n</code></dt>
+<dd> List only &#8216;normal&#8217; nodes. Available with hbstatus sub-command. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-heartbeat/">heartbeat</a>(8) </p>

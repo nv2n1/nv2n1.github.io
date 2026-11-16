@@ -10,15 +10,10 @@ description: "vdpa-dev – vdpa management device view"
 <p>vdpa-dev &#8211; vdpa management device view</p>
 <h2>Synopsis</h2>
 <pre><code>vdpa
-
 mgmtdev
-
 { COMMAND|
-
     help }
-
 OPTIONS := {
-
     -V[ersion]
 }</code></pre>
 <p> <code>vdpa mgmtdev show</code> [ <i>MGMTDEV</i> ]<br />
@@ -29,10 +24,10 @@ OPTIONS := {
 <h2>Examples</h2>
 <p>vdpa mgmtdev show</p>
 <dl>
-<dd>Shows all the vdpa management devices on the system.</dl>
+<dd>Shows all the vdpa management devices on the system.</dd></dl>
 <p> vdpa mgmtdev show bar</p>
 <dl>
-<dd>Shows the specified vdpa management device.</dl>
+<dd>Shows the specified vdpa management device.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-vdpa/">vdpa</a></code>(8), <code><a href="/docs/linux/man/8-vdpa-dev/">vdpa-dev</a></code>(8), </p>
 <h2>Author</h2>

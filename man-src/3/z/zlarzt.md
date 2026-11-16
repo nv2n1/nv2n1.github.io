@@ -11,8 +11,6 @@ description: "zlarzt.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zlarzt (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)
-
-
 ZLARZT forms the triangular factor T of a block reflector H = I - vtvH.</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarzt (characterDIRECT, characterSTOREV, integerN, integerK, complex*16, dimension( ldv, * )V, integerLDV, complex*16, dimension( * )TAU, complex*16, dimension( ldt, * )T, integerLDT)</h3>
@@ -32,10 +30,10 @@ ZLARZT forms the triangular factor T of a block reflector H = I - vtvH.</code></
  H(i) is stored in the i-th row of the array V, and
  H = I - V**H * T * V
  Currently, only STOREV = 'R' and DIRECT = 'B' are supported.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>DIRECT</i> </p>
+<dd><i>DIRECT</i> </dd>
 <pre> DIRECT is CHARACTER*1
  Specifies the order in which the elementary reflectors are
  multiplied to form the block reflector:
@@ -78,16 +76,16 @@ ZLARZT forms the triangular factor T of a block reflector H = I - vtvH.</code></
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dl>
+<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -118,7 +116,8 @@ ZLARZT forms the triangular factor T of a block reflector H = I - vtvH.</code></
  V = ( v1 v2 v3 )
  ( v1 v2 v3 )
  ( v1 v2 v3 )</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 186 of file zlarzt.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

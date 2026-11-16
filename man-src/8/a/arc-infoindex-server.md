@@ -14,19 +14,19 @@ description: "arc-infoindex-server – ARC Information Index Server"
 <p><code>arc-infoindex-relay</code> -c <i>conffile</i> -f <i>fifo</i> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code> conffile</p>
-<dd>The configuration file, usually /etc/arc.conf</dl>
+<dt><code>-c</code> conffile</dt>
+<dd>The configuration file, usually /etc/arc.conf</dd></dl>
 <dl>
-<dt><code>-f</code> fifo</p>
-<dd>The FIFO on which the server will accept queries</dl>
+<dt><code>-f</code> fifo</dt>
+<dd>The FIFO on which the server will accept queries</dd></dl>
 <h2>Extended Description</h2>
 <p><code>arc-infoindex-server</code> accepts registrations with information about local information systems and other arc-infoindex-servers. It also responds to status queries returning the list of registered resources and their registration status (valid, invalid or purged). </p>
 <p> Queries are accepted on a FIFO and are normally forwarded from a slapd server through an arc-infoindex-relay process. The first line of a query should contain the name of a FIFO on which the response should be returned. The remaining part of the query should be a Globus MDS query in LDIF format. </p>
 <p> To stop arc-infoindex-server write the special query &quot;STOP&quot; to the server FIFO.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/arc.conf</code></p>
-<dd>Several resource indices can be kept in the same server. Each of them should have an [infosys/index] block in the configuration file. The set of resoures that are allowed to register to each index can be limited using allowreg keys. </p>
+<dt><code>/etc/arc.conf</code></dt>
+<dd>Several resource indices can be kept in the same server. Each of them should have an [infosys/index] block in the configuration file. The set of resoures that are allowed to register to each index can be limited using allowreg keys. </dd>
 <p> Here is an example configuration: </p>
 <pre>[infosys/index/Sweden]
 allowreg=&quot;*.uu.se:2135&quot;

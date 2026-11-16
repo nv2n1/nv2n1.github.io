@@ -16,10 +16,10 @@ description: "XmTextFieldSetAddMode — A TextField function that sets the state
 <h2>Description</h2>
 <p><code>XmTextFieldSetAddMode</code> controls whether or not the TextField widget is in Add mode. When the widget is in Add mode, the insert cursor can be moved without disturbing the primary selection.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</p>
-<dt><i>state</i></p>
-<dd>Specifies whether or not the widget is in Add mode. A value of True turns on Add mode; a value of False turns off Add mode.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd>
+<dt><i>state</i></dt>
+<dd>Specifies whether or not the widget is in Add mode. A value of True turns on Add mode; a value of False turns off Add mode.</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>

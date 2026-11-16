@@ -80,7 +80,7 @@ description: "pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation –"
 <h3>ANTLR3_API void antlr3MTExceptionNew (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)</h3>
 <p>Creates a new Mismatched Token Exception and inserts in the recognizer exception stack. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>recognizer</i> Context pointer for this recognizer</dl>
+<dd><i>recognizer</i> Context pointer for this recognizer</dd></dl>
 <p> References ANTLR3_MISMATCHED_EX_NAME, ANTLR3_MISMATCHED_TOKEN_EXCEPTION, antlr3RecognitionExceptionNew(), ANTLR3_RECOGNIZER_SHARED_STATE_struct::exception, ANTLR3_EXCEPTION_struct::name, ANTLR3_BASE_RECOGNIZER_struct::state, and ANTLR3_EXCEPTION_struct::type. </p>
 <p> Referenced by antlr3BaseRecognizerNew(), antlr3ParserNew(), and mismatch().</p>
 <h3>ANTLR3_API void antlr3RecognitionExceptionNew (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)</h3>
@@ -176,7 +176,7 @@ description: "pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation –"
 <p>Pointer to a function to return whether the rule has parsed input starting at the supplied start index before. If the rule has not parsed input starting from the supplied start index, then it will return ANTLR3_MEMO_RULE_UNKNOWN. If it has parsed from the suppled start point then it will return the point where it last stopped parsing after that start point. </p>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>The rule memos are an ANTLR3_LIST of ANTLR3_LISTS, however if this becomes any kind of performance issue (it probably won&#8217;t, the hash tables are pretty quick) then we could make a special int only version of the table.</dl>
+<dd>The rule memos are an ANTLR3_LIST of ANTLR3_LISTS, however if this becomes any kind of performance issue (it probably won&#8217;t, the hash tables are pretty quick) then we could make a special int only version of the table.</dd></dl>
 <p> References ANTLR3_INT_TRIE_struct::add, ANTLR3_FUNC_PTR, ANTLR3_HASH_TYPE_STR, antlr3IntTrieNew(), ANTLR3_TRIE_ENTRY_struct::data, freeIntTrie(), ANTLR3_INT_TRIE_struct::get, ANTLR3_TRIE_ENTRY_struct::intVal, MEMO_RULE_UNKNOWN, ANTLR3_TRIE_ENTRY_struct::ptr, ANTLR3_RECOGNIZER_SHARED_STATE_struct::ruleMemo, and ANTLR3_BASE_RECOGNIZER_struct::state. </p>
 <p> Referenced by antlr3BaseRecognizerNew().</p>
 <h3>static void * match (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow) [static]</h3>
@@ -186,7 +186,7 @@ description: "pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation –"
 <h3>static void matchAny (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer) [static]</h3>
 <p>Consumes the next token, whatever it is, and resets the recognizer state so that it is not in error. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>recognizer</i> Recognizer context pointer</dl>
+<dd><i>recognizer</i> Recognizer context pointer</dd></dl>
 <p> References ANTLR3_FALSE, ANTLR3_FPRINTF, ANTLR3_TYPE_PARSER, ANTLR3_TYPE_TREE_PARSER, ANTLR3_INT_STREAM_struct::consume, ANTLR3_TREE_PARSER_struct::ctnstream, ANTLR3_RECOGNIZER_SHARED_STATE_struct::errorRecovery, ANTLR3_RECOGNIZER_SHARED_STATE_struct::failed, ANTLR3_TREE_NODE_STREAM_struct::istream, ANTLR3_TOKEN_STREAM_struct::istream, ANTLR3_BASE_RECOGNIZER_struct::state, ANTLR3_BASE_RECOGNIZER_struct::super, ANTLR3_COMMON_TREE_NODE_STREAM_struct::tnstream, ANTLR3_PARSER_struct::tstream, and ANTLR3_BASE_RECOGNIZER_struct::type. </p>
 <p> Referenced by antlr3BaseRecognizerNew().</p>
 <h3>static void memoize (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_MARKER</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart) [static]</h3>
@@ -197,7 +197,7 @@ description: "pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation –"
 <p>Factor out what to do upon token mismatch so tree parsers can behave differently. Override and call mismatchRecover(input, ttype, follow) to get single token insertion and deletion. Use this to turn off single token insertion and deletion. Override mismatchRecover to call this instead. </p>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>mismatch only works for parsers and must be overridden for anything else.</dl>
+<dd>mismatch only works for parsers and must be overridden for anything else.</dd></dl>
 <p> References ANTLR3_FPRINTF, ANTLR3_MISSING_TOKEN_EXCEPTION, ANTLR3_MISSING_TOKEN_EXCEPTION_NAME, ANTLR3_TYPE_PARSER, ANTLR3_UNWANTED_TOKEN_EXCEPTION, ANTLR3_UNWANTED_TOKEN_EXCEPTION_NAME, antlr3MTExceptionNew(), antlr3RecognitionExceptionNew(), ANTLR3_RECOGNIZER_SHARED_STATE_struct::exception, ANTLR3_EXCEPTION_struct::expecting, ANTLR3_TOKEN_STREAM_struct::istream, mismatchIsMissingToken(), mismatchIsUnwantedToken(), ANTLR3_EXCEPTION_struct::name, ANTLR3_BASE_RECOGNIZER_struct::state, ANTLR3_BASE_RECOGNIZER_struct::super, ANTLR3_PARSER_struct::tstream, ANTLR3_EXCEPTION_struct::type, and ANTLR3_BASE_RECOGNIZER_struct::type. </p>
 <p> Referenced by antlr3BaseRecognizerNew().</p>
 <h3>static <code>ANTLR3_BOOLEAN</code> mismatchIsMissingToken (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_BITSET_LIST</code> follow) [static]</h3>

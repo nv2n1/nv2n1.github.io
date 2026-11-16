@@ -14,17 +14,17 @@ description: "aead_request_set_ad – set associated data information"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>request handle</dl>
+</dd><dd>request handle</dd></dl>
 <p> <i>assoclen</i></p>
 <dl>
-<dd>number of bytes in associated data</dl>
+<dd>number of bytes in associated data</dd></dl>
 <h2>Description</h2>
 <p>Setting the AD information. This function sets the length of the associated data.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -13,8 +13,8 @@ description: "mongoc_cursor_more() – This function shall indicate if there is 
 mongoc_cursor_more (mongoc_cursor_t *cursor);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall indicate if there is more data to be read from the cursor. </p>
 <h2>Returns</h2>

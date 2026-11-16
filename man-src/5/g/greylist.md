@@ -15,86 +15,86 @@ description: "greylist.conf – milter-greylist configuration file"
 <p> An access-list entry starts with the <i>racl</i> keyword followed by an optional id quoted string, then the <i>greylist</i>, <i>whitelist</i>, or <i>blacklist</i> keyword, and by any set of the following clauses: <i>addr</i>, <i>domain</i>, <i>from</i>, <i>rcpt</i>, <i>rcptcount</i>, <i>helo</i>, <i>sm_macro</i>, <i>time</i>, <i>auth</i>, <i>tls</i>, <i>spf</i> (if build with SPF support), <i>geoip</i> (if build with GeoIP support), <i>p0f</i> (if build with p0f support), <i>ldapcheck</i> (if build with &#8211;with-openldap), <i>urlcheck</i> (if built with &#8211;with-libcurl), and <i>dnsrbl</i> (if built with &#8211;enable-dnsrbl). A message will match an ACL entry when it complies with all of its clauses. </p>
 <p> Clauses can be negated, by prefixing them by the <i>not</i> keyword.</p>
 <dl>
-<dt><i>addr</i></p>
-<dd>This clause is used to specify a netblock of source IP addresses. The syntax is an IP address followed by a slash and a CIDR netmask. Here is an example:</p>
+<dt><i>addr</i></dt>
+<dd>This clause is used to specify a netblock of source IP addresses. The syntax is an IP address followed by a slash and a CIDR netmask. Here is an example:</dd>
 <dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist addr 127.0.0.0/8<br />
 &nbsp;<wbr>&nbsp;<wbr>racl whitelist addr 192.168.3.0/24<br />
-&nbsp;<wbr>&nbsp;<wbr>racl whitelist addr ::1</p>
-<dd>If the netmask is ommitted, /32 is assumed for an IPv4 address and /128 is assumed for an IPv6 address.</p>
-<dd>You should at least whitelist localhost (127.0.0.1/8), and if you have some user clients connecting to the machine, you should whitelist the addresses they connect from if you don&#8217;t want them to get error messages when sending e-mail.</p>
-<dt><i>domain</i></p>
-<dd>This clause selects source machines based on their DNS name, performing a suffix search. For instance, this will whitelist any machine in the <i>example.net</i> domain:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist domain example.net</p>
-<dd>Suffix search matching means, for example, that gle.com will match google.com. If you want domain names to match on subdomain boundaries (e.g. gle.com will match mail.gle.com and gle.com but not google.com) then enable <i>domainexact</i></dl>
+&nbsp;<wbr>&nbsp;<wbr>racl whitelist addr ::1</dd>
+<dd>If the netmask is ommitted, /32 is assumed for an IPv4 address and /128 is assumed for an IPv6 address.</dd>
+<dd>You should at least whitelist localhost (127.0.0.1/8), and if you have some user clients connecting to the machine, you should whitelist the addresses they connect from if you don&#8217;t want them to get error messages when sending e-mail.</dd>
+<dt><i>domain</i></dt>
+<dd>This clause selects source machines based on their DNS name, performing a suffix search. For instance, this will whitelist any machine in the <i>example.net</i> domain:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist domain example.net</dd>
+<dd>Suffix search matching means, for example, that gle.com will match google.com. If you want domain names to match on subdomain boundaries (e.g. gle.com will match mail.gle.com and gle.com but not google.com) then enable <i>domainexact</i></dd></dl>
 <p> The name resolution is made by Sendmail, which hands it to <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code>. As a result, it is impossible to use DNS aliases here. On the other hand, this will work even if your DNS resolver is not thread-safe.</p>
 <dl>
-<dt><i>from</i></p>
-<dd>This is used to select sender e-mail addresses. You should not use that feature, because sender e-mail addresses can be trivially forged. Example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist from postmaster [at] example.com</p>
-<dt><i>rcpt</i></p>
-<dd>This is used to select recipient addresses. Example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt John.Doe [at] example.net</p>
-<dt><i>rcptcount</i></p>
-<dd>Followed by an operator and a recipient count, this is used to select the amount of recipients. Example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist rcptcount&nbsp;<wbr>&gt;=&nbsp;<wbr>25 msg&nbsp;<wbr>&quot;No more than 25 recipients, please&quot;</p>
-<dt><i>helo</i></p>
-<dd>Followed by a quoted string or a regular expression, this can be used to filter on the HELO string.</p>
-<dt><i>sm_macro </i></p>
-<dd>This is used to select a Sendmail macro value. See the section on that topic for more information.</p>
-<dt><i>time</i></p>
-<dd>This is used to specify a time set. It should be followed by a quoted string of <code><a href="/docs/linux/man/5-crontab/">crontab</a>(5)</code>-like time specification. Here is an example that whitelists mail addressed to a single recipient during office hours (from 8:00 to 16:59 from monday to friday):</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist time&nbsp;<wbr>&quot;*&nbsp;<wbr>8-16&nbsp;<wbr>*&nbsp;<wbr>*&nbsp;<wbr>1-5&quot;&nbsp;<wbr>rcpt info [at] example.net</p>
-<dt><i>geoip</i></p>
-<dd>This is used to specify a country, as reported by GeoIP. The country code must be upper case, and is only available if <code>milter-greylist</code> was built with GeoIP support. The <i>geoipdb </i> statement can be used to specify the location of GeoIP database.</p>
-<dt><i>p0f</i></p>
-<dd>This is used to match against the remote system OS fingerprint genre and detail,obtained from p0f. It is only available if <code>milter-greylist</code> was built with p0f support. <i>p0f</i> clauses can be used with a quoted string for case-insensitive substring match, or against regular expressions. The <i>p0fsock</i> statement can be used to speficy the location of the p0f socket.</p>
-<dt><i>auth</i></p>
-<dd>This is used to select a user that succeeded SMTP AUTH. In order to select any user that succeeds SMTP AUTH, you can use a regular expression matching, like below;</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist auth&nbsp;<wbr>/.*/</p>
-<dd>Using such a clause automatically disable global STARTTLS and SMTP AUTH whitelisting, like if the <i>noauth</i> keyword would have been used.</p>
-<dt><i>tls</i></p>
-<dd>This is used to select the distinguished name (DN) of a user that succeeded STARTTLS. Using such a clause automatically disable global STARTTLS and SMTP AUTH whitelisting, like if the <i>noauth</i> keyword would have been used.</p>
-<dt><i>spf</i></p>
-<dd>This is used to test SPF status. Possible values are <i>pass</i>, <i>softfail</i>, <i>fail</i>, <i>unknown</i>, <i>error</i>, <i>none</i>, and <i>self</i>. The first six values are plain SPF validation status. The <i>self</i> value is a special test that checks the server&#8217;s local IP address against the sender&#8217;s SPF record. If that test validates, odds are good that the sender SPF record is wide open, and this is hint that SPF should not be trusted.</p>
-<dd>Absence of any value after the <i>spf</i> keyword is a synonym for <i>spf pass</i>. This is present for backward compatibility.</p>
-<dd>The <i>spf</i> clause is only available if SPF support was compiled in. Using it will disable global SPF whitelisting, like if the <i>nospf</i> keyword would have been used.</p>
-<dt><i>ldapcheck</i></p>
-<dd>This is used to query an LDAP directory. See the section on that topic for more information.</p>
-<dt><i>urlcheck</i></p>
-<dd>This is used to query an external configuration source through an URL. See the section on that topic for more information.</p>
-<dt><i>dnsrbl</i></p>
-<dd>This is used to select a DNSRBL. See the section on that topic for more information.</dl>
+<dt><i>from</i></dt>
+<dd>This is used to select sender e-mail addresses. You should not use that feature, because sender e-mail addresses can be trivially forged. Example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist from postmaster [at] example.com</dd>
+<dt><i>rcpt</i></dt>
+<dd>This is used to select recipient addresses. Example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt John.Doe [at] example.net</dd>
+<dt><i>rcptcount</i></dt>
+<dd>Followed by an operator and a recipient count, this is used to select the amount of recipients. Example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist rcptcount&nbsp;<wbr>&gt;=&nbsp;<wbr>25 msg&nbsp;<wbr>&quot;No more than 25 recipients, please&quot;</dd>
+<dt><i>helo</i></dt>
+<dd>Followed by a quoted string or a regular expression, this can be used to filter on the HELO string.</dd>
+<dt><i>sm_macro </i></dt>
+<dd>This is used to select a Sendmail macro value. See the section on that topic for more information.</dd>
+<dt><i>time</i></dt>
+<dd>This is used to specify a time set. It should be followed by a quoted string of <code><a href="/docs/linux/man/5-crontab/">crontab</a>(5)</code>-like time specification. Here is an example that whitelists mail addressed to a single recipient during office hours (from 8:00 to 16:59 from monday to friday):</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist time&nbsp;<wbr>&quot;*&nbsp;<wbr>8-16&nbsp;<wbr>*&nbsp;<wbr>*&nbsp;<wbr>1-5&quot;&nbsp;<wbr>rcpt info [at] example.net</dd>
+<dt><i>geoip</i></dt>
+<dd>This is used to specify a country, as reported by GeoIP. The country code must be upper case, and is only available if <code>milter-greylist</code> was built with GeoIP support. The <i>geoipdb </i> statement can be used to specify the location of GeoIP database.</dd>
+<dt><i>p0f</i></dt>
+<dd>This is used to match against the remote system OS fingerprint genre and detail,obtained from p0f. It is only available if <code>milter-greylist</code> was built with p0f support. <i>p0f</i> clauses can be used with a quoted string for case-insensitive substring match, or against regular expressions. The <i>p0fsock</i> statement can be used to speficy the location of the p0f socket.</dd>
+<dt><i>auth</i></dt>
+<dd>This is used to select a user that succeeded SMTP AUTH. In order to select any user that succeeds SMTP AUTH, you can use a regular expression matching, like below;</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist auth&nbsp;<wbr>/.*/</dd>
+<dd>Using such a clause automatically disable global STARTTLS and SMTP AUTH whitelisting, like if the <i>noauth</i> keyword would have been used.</dd>
+<dt><i>tls</i></dt>
+<dd>This is used to select the distinguished name (DN) of a user that succeeded STARTTLS. Using such a clause automatically disable global STARTTLS and SMTP AUTH whitelisting, like if the <i>noauth</i> keyword would have been used.</dd>
+<dt><i>spf</i></dt>
+<dd>This is used to test SPF status. Possible values are <i>pass</i>, <i>softfail</i>, <i>fail</i>, <i>unknown</i>, <i>error</i>, <i>none</i>, and <i>self</i>. The first six values are plain SPF validation status. The <i>self</i> value is a special test that checks the server&#8217;s local IP address against the sender&#8217;s SPF record. If that test validates, odds are good that the sender SPF record is wide open, and this is hint that SPF should not be trusted.</dd>
+<dd>Absence of any value after the <i>spf</i> keyword is a synonym for <i>spf pass</i>. This is present for backward compatibility.</dd>
+<dd>The <i>spf</i> clause is only available if SPF support was compiled in. Using it will disable global SPF whitelisting, like if the <i>nospf</i> keyword would have been used.</dd>
+<dt><i>ldapcheck</i></dt>
+<dd>This is used to query an LDAP directory. See the section on that topic for more information.</dd>
+<dt><i>urlcheck</i></dt>
+<dd>This is used to query an external configuration source through an URL. See the section on that topic for more information.</dd>
+<dt><i>dnsrbl</i></dt>
+<dd>This is used to select a DNSRBL. See the section on that topic for more information.</dd></dl>
 <p> The <i>domain</i>, <i>from</i>, and <i>rcpt</i> clauses may be used with regular expressions. The regular expressions must be enclosed by slashes (/). No escaping is available to provide a slash inside a regular expression, so just do not use it. Regular expressions follow the format described in <code><a href="/docs/linux/man/7-re_format/">re_format</a>(7)</code>. Here is an example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt&nbsp;<wbr>/.*@example\.net/ </p>
 <p> When regular expressions are not used, <i>from</i>, and <i>rcpt</i> perform a case insensitive substring match with leading and trailing brackets, spaces and tabs stripped out. <i>domain</i> performs a case insensitive suffix match. This means, for example, that gle.com will match google.com. If you want domain names to match on subdomain boundaries (e.g. gle.com will match mail.gle.com and gle.com but not google.com) then enable <i>domainexact</i> </p>
 <p> An ACL entry can also hold various optional parameter used on match: <i>delay</i>, <i>autowhite</i>, <i>flushaddr</i>, <i>nolog</i>, <i>code</i>, <i>ecode</i>, <i>report</i>, <i>addheader</i>, and <i>msg</i></p>
 <dl>
-<dt><i>delay</i></p>
-<dd>Specify the greylisting delay used before the message can be accepted. This overrides the <i>greylist</i> global setting, and it only makes sense on an <i>racl greylist</i> entry.</p>
-<dt><i>autowhite</i></p>
-<dd>Specify the autowhitelisting duration for messages matching this ACL. This overrides the <i>autowhite</i> global setting, and it only makes sense on an <i>racl greylist</i> entry. Example:</p>
+<dt><i>delay</i></dt>
+<dd>Specify the greylisting delay used before the message can be accepted. This overrides the <i>greylist</i> global setting, and it only makes sense on an <i>racl greylist</i> entry.</dd>
+<dt><i>autowhite</i></dt>
+<dd>Specify the autowhitelisting duration for messages matching this ACL. This overrides the <i>autowhite</i> global setting, and it only makes sense on an <i>racl greylist</i> entry. Example:</dd>
 <dd>&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt JDoe [at] example.net delay 15m autowhite 3d<br />
-&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt root [at] example.net delay 1h autowhite 3d</p>
-<dt><i>flushaddr</i></p>
-<dd>If a message matches the rule, any entry in the greylist or autowhite databases matching the sender IP is removed. Used with a DNSRBL blacklist ACL, it is useful for freeing the database from entries set up by a machine which is known to be a spamer. Example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist dnsrbl&nbsp;<wbr>&quot;known-spamers&quot;&nbsp;<wbr>flushaddr</p>
-<dt><i>nolog</i></p>
-<dd>Do not generate syslog message if this rule matches. Example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist default nolog</p>
-<dt><i>code</i></p>
+&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt root [at] example.net delay 1h autowhite 3d</dd>
+<dt><i>flushaddr</i></dt>
+<dd>If a message matches the rule, any entry in the greylist or autowhite databases matching the sender IP is removed. Used with a DNSRBL blacklist ACL, it is useful for freeing the database from entries set up by a machine which is known to be a spamer. Example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist dnsrbl&nbsp;<wbr>&quot;known-spamers&quot;&nbsp;<wbr>flushaddr</dd>
+<dt><i>nolog</i></dt>
+<dd>Do not generate syslog message if this rule matches. Example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist default nolog</dd>
+<dt><i>code</i></dt>
 <dd>
-<dt><i>ecode</i></p>
+</dd><dt><i>ecode</i></dt>
 <dd>
-<dt><i>msg</i></p>
-<dd>These 3 values can be used to choose the SMTP code, extended code and reply message for temporary failures and rejects. Example:</p>
+</dd><dt><i>msg</i></dt>
+<dd>These 3 values can be used to choose the SMTP code, extended code and reply message for temporary failures and rejects. Example:</dd>
 <dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist dnsrbl&nbsp;<wbr>&quot;spamstomp&quot;&nbsp;<wbr>msg&nbsp;<wbr>&quot;IP caught by spamstomp&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>racl greylist default code&nbsp;<wbr>&quot;451&quot;&nbsp;<wbr>ecode&nbsp;<wbr>&quot;4.7.1&quot;</p>
-<dd>The <i>msg</i> strings accepts format string substitution as documented in the <code>FORMAT STRINGS </code> section. For instance, <i>%A</i> gets substituted by the ACL line number.</p>
-<dd>None of the last 3 values makes sense for a whitelist entry.</p>
-<dt><i>report</i></p>
-<dd>This value overrides the text displayed in the <i>X-Greylist </i> header, for messages that <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> lets pass through, either because they are whitelisted, or because they passed greylisting (see <code>REPORTING</code>). This string can be substituted as documented in the <code>FORMAT STRINGS</code> section.</p>
-<dt><i>addheader</i></p>
-<dd>This quoted string is a RFC822 header that gets added to the message. Format string substitution is supported. No check is done for header length standard compliance, so make sure the substituted string is shorter than 2048 characters.</dl>
+&nbsp;<wbr>&nbsp;<wbr>racl greylist default code&nbsp;<wbr>&quot;451&quot;&nbsp;<wbr>ecode&nbsp;<wbr>&quot;4.7.1&quot;</dd>
+<dd>The <i>msg</i> strings accepts format string substitution as documented in the <code>FORMAT STRINGS </code> section. For instance, <i>%A</i> gets substituted by the ACL line number.</dd>
+<dd>None of the last 3 values makes sense for a whitelist entry.</dd>
+<dt><i>report</i></dt>
+<dd>This value overrides the text displayed in the <i>X-Greylist </i> header, for messages that <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> lets pass through, either because they are whitelisted, or because they passed greylisting (see <code>REPORTING</code>). This string can be substituted as documented in the <code>FORMAT STRINGS</code> section.</dd>
+<dt><i>addheader</i></dt>
+<dd>This quoted string is a RFC822 header that gets added to the message. Format string substitution is supported. No check is done for header length standard compliance, so make sure the substituted string is shorter than 2048 characters.</dd></dl>
 <p> Entries in the access-list are evaluated sequentially, so order is very important. The first matching entry is used to decide if a message will be whitelisted or greylisted. A special <i>default</i> clause can be used in the last ACL entry as a wildcard. Here are a few complete ACL examples: </p>
 <p> Example 1: </p>
 <pre>racl whitelist from friend [at] toto.com rcpt grandma [at] example.com
@@ -117,22 +117,22 @@ racl whitelist default</pre>
 <h2>Data-Stage Acl</h2>
 <p>ACL using the <i>racl</i> keyword are evaluated at the RCPT stage of the SMTP transaction. It is also possible to have ACL evaluated at the DATA stage of the SMTP transaction, using the <i>dacl </i> keyword, provided the message went through RCPT-stage ACL, and possibly greylisting. Note that you canot use the <i>greylist</i> action at DATA-stage if the RCPT-stage ACL that matched had a <i>greylist</i> action itself. The following clauses can be used to work on message content:</p>
 <dl>
-<dt><i>dkim</i></p>
-<dd>DKIM status (if build with DKIM support). Possible values are <i>pass</i>, <i>fail</i>, <i>unknown</i>, <i>error</i>, and <i>none</i>,</p>
-<dt><i>header</i></p>
-<dd>String or regular expression searched in message headers</p>
-<dt><i>body</i></p>
-<dd>String or regular expression searched in message body</p>
-<dt><i>msgsize</i></p>
-<dd>Operator followed by a message size (k or M suffix allowed for kilobytes or megabytes). Example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>dacl blacklist msgsize&nbsp;<wbr>&gt;=&nbsp;<wbr>4M msg&nbsp;<wbr>&quot;No more than 4 MB please&quot;</p>
-<dt><i>spamd</i></p>
-<dd>SpamAssassin score (if build with SpamAssassin support). If used without comparison operator <i>spamd</i> is true if the score is above threshold. The <i>spamdsock</i> keyword can be used to specify the location of the spamd socket.</p>
-<dd>Example 1: </p>
+<dt><i>dkim</i></dt>
+<dd>DKIM status (if build with DKIM support). Possible values are <i>pass</i>, <i>fail</i>, <i>unknown</i>, <i>error</i>, and <i>none</i>,</dd>
+<dt><i>header</i></dt>
+<dd>String or regular expression searched in message headers</dd>
+<dt><i>body</i></dt>
+<dd>String or regular expression searched in message body</dd>
+<dt><i>msgsize</i></dt>
+<dd>Operator followed by a message size (k or M suffix allowed for kilobytes or megabytes). Example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>dacl blacklist msgsize&nbsp;<wbr>&gt;=&nbsp;<wbr>4M msg&nbsp;<wbr>&quot;No more than 4 MB please&quot;</dd>
+<dt><i>spamd</i></dt>
+<dd>SpamAssassin score (if build with SpamAssassin support). If used without comparison operator <i>spamd</i> is true if the score is above threshold. The <i>spamdsock</i> keyword can be used to specify the location of the spamd socket.</dd>
+<dd>Example 1: </dd>
 <pre> spamdsock unix &quot;/var/spamassassin/spamd.sock&quot;
  racl whitelist default 
  dacl greylist spamd</pre>
-<dd>Example 2: </p>
+<dd>Example 2: </dd>
 <pre> spamdsock inet &quot;127.0.0.1:783&quot;
  racl whitelist default 
  dacl blacklist spamd &gt; 15 msg &quot;Your message is considered spam.&quot;
@@ -144,7 +144,7 @@ racl whitelist default</pre>
 <p>It is often useful to group several users or sender IP addresses in a single ACL. This can be done with lists. Lists must be first defined and given a name before they can be used in ACL entries. Here is an example:</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>list&nbsp;<wbr>&quot;my users&quot;&nbsp;<wbr>rcpt&nbsp;<wbr>{&nbsp;<wbr>user1 [at] example.com user2 [at] example.com&nbsp;<wbr>}<br />
-&nbsp;<wbr>&nbsp;<wbr>list&nbsp;<wbr>&quot;local&quot;&nbsp;<wbr>addr&nbsp;<wbr>{&nbsp;<wbr>192.0.2.0/24 10.0.0.0/8&nbsp;<wbr>} </p>
+&nbsp;<wbr>&nbsp;<wbr>list&nbsp;<wbr>&quot;local&quot;&nbsp;<wbr>addr&nbsp;<wbr>{&nbsp;<wbr>192.0.2.0/24 10.0.0.0/8&nbsp;<wbr>} </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>racl whitelist list&nbsp;<wbr>&quot;local&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>racl greylist list&nbsp;<wbr>&quot;my users&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>racl whitelist default </p>
@@ -178,14 +178,14 @@ racl whitelist default</pre>
 <h2>Reporting</h2>
 <p>By default, <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will add a <i>X-Greylist</i> header to any message it handles. The header shows what happened to the message: delayed or not delayed, and why. The following options can be used in <code>greylist.conf</code> to alter this behavior:</p>
 <dl>
-<dt><i>report none</i></p>
-<dd>Never add a <i>X-Greylist</i> header.</p>
-<dt><i>report delays</i></p>
-<dd>Only add a header if the message was delayed.</p>
-<dt><i>report nodelays</i></p>
-<dd>Add a header if the message was not delayed. The header explains why the message was not delayed.</p>
-<dt><i>report all</i></p>
-<dd>Always add a header. This is the default.</dl>
+<dt><i>report none</i></dt>
+<dd>Never add a <i>X-Greylist</i> header.</dd>
+<dt><i>report delays</i></dt>
+<dd>Only add a header if the message was delayed.</dd>
+<dt><i>report nodelays</i></dt>
+<dd>Add a header if the message was not delayed. The header explains why the message was not delayed.</dd>
+<dt><i>report all</i></dt>
+<dd>Always add a header. This is the default.</dd></dl>
 <h2>Sender Callback Systems</h2>
 <p>Sender callback systems are another anti-spam measure that attempts to send a DSN to the sender address before accepting a message. If that fails, then the sender address is wrong and the message is rejected. Such systems usually stop their callback check at the RCPT stage of the SMTP transaction. </p>
 <p> Greylisting temporarily rejects at the RCPT stage, so sender callback and greylisting love to fight each other. <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> proposes a workaround to that problem with the <i>delayedreject</i> option. For messages coming from &lt;&gt; (that is, for DSN), it will cause the temporary reject to happen at the DATA stage of the SMTP transaction instead of the RCPT stage. That way, <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will cope much better with sender callback systems. </p>
@@ -193,17 +193,17 @@ racl whitelist default</pre>
 <h2>Sendmail Macros</h2>
 <p>Any sendmail macro can be used as a clause in the access list. You need to define a (macro, value) pair using the <i>sm_macro</i> keyword before using it. Here is an example that uses the <i>{client_resolve}</i> macro to apply a larger greylisting delay to hosts that have a bogus reverse DNS:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>sm_macro&nbsp;<wbr>&quot;maybe_forged&quot;&nbsp;<wbr>&quot;{client_resolve}&quot;&nbsp;<wbr>&quot;FORGED&quot; </p>
+<dd>&nbsp;<wbr>&nbsp;<wbr>sm_macro&nbsp;<wbr>&quot;maybe_forged&quot;&nbsp;<wbr>&quot;{client_resolve}&quot;&nbsp;<wbr>&quot;FORGED&quot; </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>racl greylist sm_macro&nbsp;<wbr>&quot;maybe_forged&quot;&nbsp;<wbr>delay 1h<br />
 &nbsp;<wbr>&nbsp;<wbr>racl greylist default delay 15m</dl>
 <p> A regular expression can be used as the macro value. It must be surrounded with slashes and not by quotes. The special value <i>unset</i> can also be used to match an unset macro:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>sm_macro&nbsp;<wbr>&quot;not_foo&quot;&nbsp;<wbr>&quot;{foo}&quot;&nbsp;<wbr>unset</dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>sm_macro&nbsp;<wbr>&quot;not_foo&quot;&nbsp;<wbr>&quot;{foo}&quot;&nbsp;<wbr>unset</dd></dl>
 <p> Note that any Sendmail macro that is not exported using the <i>Milter.macros.envrcpt </i> setting of <i>sendmail.cf</i> will be seen as unset from milter-greylist.</p>
 <h2>Dnsrbl</h2>
 <p>DNS Reverse Black List can be used to toggle an ACL. They must be defined and named before they can be used. Here is an example which uses a bigger greylisting delay for hosts caught in the SORBS dynamic pool DNRSBL (this will include DSL and cable customers pools, which are well known to be massively infected by spamwares):</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;SORBS DUN&quot;&nbsp;<wbr>dnsbl.sorbs.net 127.0.0.10/32 </p>
+<dd>&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;SORBS DUN&quot;&nbsp;<wbr>dnsbl.sorbs.net 127.0.0.10/32 </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>racl greylist dnsrbl&nbsp;<wbr>&quot;SORBS DUN&quot;&nbsp;<wbr>delay 1h<br />
 &nbsp;<wbr>&nbsp;<wbr>racl greylist default delay 15m</dl>
 <p> The definition of a DNSRBL starts by the <i>dnsrbl</i> keyword, followed by the quoted name of the DNSRBL, the DNS domain on which addresses should be looked up, and the answer we should consider as a positive hit. </p>
@@ -211,39 +211,39 @@ racl whitelist default</pre>
 <h2>URL checks</h2>
 <p><code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8) </code> is able to query external sources of information through various URL, if it was built with &#8211;with-libcurl. Here is an example:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;glusr&quot;&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.example.net/mgl-config?rcpt=%r">http://www.example.net/mgl-config?rcpt=%r</a>&quot;&nbsp;<wbr>5 </p>
+<dd>&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;glusr&quot;&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.example.net/mgl-config?rcpt=%r">http://www.example.net/mgl-config?rcpt=%r</a>&quot;&nbsp;<wbr>5 </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>racl greylist urlcheck&nbsp;<wbr>&quot;glusr&quot;&nbsp;<wbr>delay 15m&nbsp;<wbr><br />
 &nbsp;<wbr>&nbsp;<wbr>racl whitelist default</dl>
 <p> The trailing 5 at the end of the <i>urlcheck</i> definition is the maximum number of simultaneous connections we want to launch on this URL. For each message, the URL will be querried, with % format tags being subtituted. For instance, <i>%r</i> is substituted by the recipient. See the <code>FORMAT STRINGS</code> section for the complete list of substitutions. </p>
 <p> <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8) </code> expects an answer containing a list of 
  terminated lines, with <i>key: value </i> pairs. The most basic answer to get a match is:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>milterGreylistStatus: Ok</dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>milterGreylistStatus: Ok</dd></dl>
 <p> <i>TRUE </i> can be used as an alias for <i>Ok</i> here. </p>
 <p> The answer can be more complex, with keys that will overload the ACL settings:</p>
 <dl>
-<dt><i>milterGreylistDelay </i></p>
-<dd>The greylisting delay to use (time unit suffix allowed).</p>
-<dt><i>milterGreylistAutowhite</i></p>
-<dd>The autowhite delay to use (time unit suffix allowed).</p>
-<dt><i>milterGreylistFlushAddr</i></p>
-<dd>The value is ignored. If this key is present, then the IP address for the sender machine will be flushed from greylist and autowhite databases.</p>
-<dt><i>milterGreylistCode</i></p>
-<dd>The SMTP code to return (e.g.: 551).</p>
-<dt><i>milterGreylistECode</i></p>
-<dd>The SMTP extended code to return (e.g.: 5.7.1)</p>
-<dt><i>milterGreylistMsg</i></p>
-<dd>The string to return with SMTP codes.</p>
-<dt><i>milterGreylistReport</i></p>
-<dd>The string to display in the <i>X-Greylist </i> header.</p>
-<dt><i>milterGreylistIgnore</i></p>
-<dd>This line will be ignored, without warnings in the logs.</p>
-<dt><i>milterGreylistAction</i></p>
-<dd>This feature is nifty but use it with caution, as it makes the access list a bit difficult to understand. By specifying the values <i>greylist</i>, <i>whitelist</i>, or <i>blacklist</i>, it is possible to overload the ACL action itself.</dl>
+<dt><i>milterGreylistDelay </i></dt>
+<dd>The greylisting delay to use (time unit suffix allowed).</dd>
+<dt><i>milterGreylistAutowhite</i></dt>
+<dd>The autowhite delay to use (time unit suffix allowed).</dd>
+<dt><i>milterGreylistFlushAddr</i></dt>
+<dd>The value is ignored. If this key is present, then the IP address for the sender machine will be flushed from greylist and autowhite databases.</dd>
+<dt><i>milterGreylistCode</i></dt>
+<dd>The SMTP code to return (e.g.: 551).</dd>
+<dt><i>milterGreylistECode</i></dt>
+<dd>The SMTP extended code to return (e.g.: 5.7.1)</dd>
+<dt><i>milterGreylistMsg</i></dt>
+<dd>The string to return with SMTP codes.</dd>
+<dt><i>milterGreylistReport</i></dt>
+<dd>The string to display in the <i>X-Greylist </i> header.</dd>
+<dt><i>milterGreylistIgnore</i></dt>
+<dd>This line will be ignored, without warnings in the logs.</dd>
+<dt><i>milterGreylistAction</i></dt>
+<dd>This feature is nifty but use it with caution, as it makes the access list a bit difficult to understand. By specifying the values <i>greylist</i>, <i>whitelist</i>, or <i>blacklist</i>, it is possible to overload the ACL action itself.</dd></dl>
 <p> The ACL will match if any of the above key is returned: <i>milterGreylistStatus</i> is not mandatory. </p>
 <p> If you use an URL check in a DATA stage ACL, you can post the message header and body to the URL. This is done by appending the <i>postmsg</i> keyword to the <i>urlcheck </i> statement, like in the example above:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;extfilter&quot;&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.example.net/f.cgi">http://www.example.net/f.cgi</a>&quot;&nbsp;<wbr>5 postmsg </p>
+<dd>&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;extfilter&quot;&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.example.net/f.cgi">http://www.example.net/f.cgi</a>&quot;&nbsp;<wbr>5 postmsg </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>dacl blacklist urlcheck&nbsp;<wbr>&quot;extfilter&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>dacl whitelist default</dl>
 <p> It is also possible to gather the properties returned by the URL and reuse them in the ACL. This behavior is enabled by the <i>getprop</i> keyword at the end of <i>urlcheck </i> definition. If this option is enabled, the gathered properties can be accessed in the current and following ACL by prefixing them by a dollar ($). If the <i>clear</i> keyword is added, then properties will be cleaned up before handling a new recipient. This avoids properties for several recipients to mix. Finally, the <i>fork</i> keyword instructs <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> to fork a separate instance of itself for performing the queries. Use it if you encounter thread-safety problems. <i>fork</i> is not compatible with <i>postmsg</i>. </p>
@@ -252,7 +252,7 @@ racl whitelist default</pre>
 <dd>&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL2&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.2&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL3&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.3&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL4&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.4&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;userconf&quot;&nbsp;<wbr>&quot;<a href="ldap://localhost/dc=example,dc=net?milterGreylistStatus,dnsrbl?one?mail=%r">ldap://localhost/dc=example,dc=net?milterGreylistStatus,dnsrbl?one?mail=%r</a>&quot;&nbsp;<wbr>5 getprop clear </p>
+&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;userconf&quot;&nbsp;<wbr>&quot;<a href="ldap://localhost/dc=example,dc=net?milterGreylistStatus,dnsrbl?one?mail=%r">ldap://localhost/dc=example,dc=net?milterGreylistStatus,dnsrbl?one?mail=%r</a>&quot;&nbsp;<wbr>5 getprop clear </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>racl blacklist urlcheck&nbsp;<wbr>&quot;userconf&quot;&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL2&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL2&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL3&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL3&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL4&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL4&quot;</dl>
@@ -261,166 +261,166 @@ racl whitelist default</pre>
 <p>If milter-greylist was built with &#8211;with-openldap, then you can also use <i>ldapcheck</i> for pulling information from an LDAP directory. This works exactly like <i>urlcheck</i>, except that properties are always collected: the only available option is <i>clear</i>. </p>
 <p> A list of LDAP URL to use can be specified with the <i>ldapconf </i> keyword. The network timeout is optional.</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>ldapconf&nbsp;<wbr>&quot;<a href="ldap://localhost">ldap://localhost</a>&nbsp;<wbr><a href="ldaps://ldap.example.net">ldaps://ldap.example.net</a>&quot;&nbsp;<wbr>timeout 2s</dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>ldapconf&nbsp;<wbr>&quot;<a href="ldap://localhost">ldap://localhost</a>&nbsp;<wbr><a href="ldaps://ldap.example.net">ldaps://ldap.example.net</a>&quot;&nbsp;<wbr>timeout 2s</dd></dl>
 <p> When <i>ldaps://</i> is used, the system&#8217;s <i>ldap.conf</i> file is used to locate x509 certificates. </p>
 <p> When defining LDAP queries with the <i>ldapcheck</i> statement, note that the scheme and host part of the URL are ignored. Servers listed in <i>ldapconf</i> are used instead.</p>
 <h2>Custom Reports</h2>
 <p>The <i>stat</i> keyword can be used to specify a custom report for milter-greylist activity. It should be supplied with an output (either file or external command) and a format string. Here is an example:</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>stat&nbsp;<wbr>&quot;&gt;&gt;/var/log/milter-greylist.log&quot;&nbsp;<wbr>&quot;%T{%T},%i,%f,%r,%A
-&quot;</dl>
+&quot;</dd></dl>
 <p> If the output starts by <i>&gt;&gt;</i> or <i>&gt;</i> then it is a file. Use <i>&gt;&gt; </i> to append to an existing file, and use <i>&gt; </i> to overwrite it. If the output starts by a <i>|</i> then the output is a shell command, like in the example below:</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>stat&nbsp;<wbr>&quot;|logger -p local7.info&quot;&nbsp;<wbr>&quot;%T{%T},%i,%f,%r,%A
-&quot;</dl>
+&quot;</dd></dl>
 <p> The format string gets substituted as URL checks format string: %r gets substituted by the recipient, %f by the sender, and so on. See the <code>FORMAT STRINGS</code> section for a complete list of available substitutions.</p>
 <h2>Command-Line Flag Equivalents</h2>
 <p>Most <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> command-line options have equivalent options that can be set in the configuration file. Note that if a command line option is supplied, it will always override the configuration file. </p>
 <p> If a command-line equivalent keyword is used more than once, the last keyword will override the previous ones.</p>
 <dl>
-<dt><i>verbose</i></p>
-<dd>Enable debug output. This is equivalent to the <code>-v</code> flag.</p>
-<dt><i>quiet</i></p>
-<dd>Do not tell clients how much time remains before their e-mail will be accepted. This is equivalent to the <code>-q</code> flag.</p>
-<dt><i>nodetach</i></p>
-<dd>Do not fork and go into the background. This is equivalent to the <code>-D</code> flag.</p>
-<dt><i>noauth</i></p>
-<dd>Greylist clients regardless if they succeeded SMTP AUTH or STARTTLS. Equivalent to the <code>-A</code> flag.</p>
-<dt><i>noaccessdb</i></p>
-<dd>Normally <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will whitelist a message if <code>sendmail(8)</code> defines a ${greylist} macro set to WHITE. This enables complex whitelisting rules based on the Sendmail access DB. This option inhibits this behavior.</p>
-<dt><i>nospf</i></p>
-<dd>Greylist clients regardless if they are SPF-compliant. Equivalent to the <code>-S</code> flag.</p>
-<dt><i>testmode</i></p>
-<dd>Enable test mode. Equivalent to the <code>-T</code> flag. This option is deprecated.</p>
-<dt><i>greylist</i></p>
-<dd>The argument sets how much time <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will want the client to wait between the first attempt and the time the message is accepted. The time is given in seconds, except if a unit is given: m for minutes, h for hours, and d for days. The <i>greylist </i> keyword is equivalent to the <code>-w </code> option. Here is an example that sets the delay to 45 minutes:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>greylist 45m</p>
-<dt><i>autowhite</i></p>
-<dd>This sets the auto-whitelisting duration, equivalent to the <code>-a</code> command-line option. As for the <i>greylist</i> keyword, units can be supplied. Here is an example for a 3 day long auto-whitelisting:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>autowhite 3d</p>
-<dt><i>pidfile</i></p>
-<dd>This causes <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> to write its PID into the file given as argument, like the <code>-P</code> command line argument does. The path to the file must be absolute and it must be enclosed in quotes. Here is an example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>pidfile&nbsp;<wbr>&quot;/var/run/greylist.pid&quot;</p>
-<dt><i>dumpfile</i></p>
-<dd>This chooses the location of the greylist dump file, like the <code>-d</code> command line option does. The path must be absolute and enclosed in quotes. It can optionally be followed by an octal permission mode. Example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>dumpfile&nbsp;<wbr>&quot;/var/lib/milter-greylist/db/greylist.db&quot;&nbsp;<wbr>640</p>
-<dt><i>subnetmatch</i></p>
-<dd>This is equivalent to the <code>-L </code> command line option. It takes a slash followed by a CIDR mask as argument, and it commands the subnet matching feature. Example, for a class C wide matching:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>subnetmatch&nbsp;<wbr>/24</p>
-<dt><i>subnetmatch6</i></p>
-<dd>This is equivalent to the <code>-M</code> command line option. It takes a slash followed by a prefixlen as argument, and it commands the subnet matching feature. Example, for a subnet wide matching:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>subnetmatch6&nbsp;<wbr>/64</p>
-<dt><i>socket</i></p>
-<dd>Like the <code>-p</code> command line option, this keyword is used to specify the socket used to communicate with <code>sendmail(8)</code>. It must be enclosed in quotes and can optionally be followed by an octal permission mode (valid values are 666, 660 or 600, other values cause an error):</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>socket&nbsp;<wbr>&quot;/var/run/milter-greylist/milter-greylist.sock&quot;&nbsp;<wbr>660</p>
-<dt><i>user</i></p>
-<dd>This keyword should be followed by a quoted user login and optionally a colon followed by a groupname. Like the <code>-u</code> option, this is used to run <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> as a non root user. Here is an example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>user&nbsp;<wbr>&quot;smmsp&quot;</dl>
+<dt><i>verbose</i></dt>
+<dd>Enable debug output. This is equivalent to the <code>-v</code> flag.</dd>
+<dt><i>quiet</i></dt>
+<dd>Do not tell clients how much time remains before their e-mail will be accepted. This is equivalent to the <code>-q</code> flag.</dd>
+<dt><i>nodetach</i></dt>
+<dd>Do not fork and go into the background. This is equivalent to the <code>-D</code> flag.</dd>
+<dt><i>noauth</i></dt>
+<dd>Greylist clients regardless if they succeeded SMTP AUTH or STARTTLS. Equivalent to the <code>-A</code> flag.</dd>
+<dt><i>noaccessdb</i></dt>
+<dd>Normally <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will whitelist a message if <code>sendmail(8)</code> defines a ${greylist} macro set to WHITE. This enables complex whitelisting rules based on the Sendmail access DB. This option inhibits this behavior.</dd>
+<dt><i>nospf</i></dt>
+<dd>Greylist clients regardless if they are SPF-compliant. Equivalent to the <code>-S</code> flag.</dd>
+<dt><i>testmode</i></dt>
+<dd>Enable test mode. Equivalent to the <code>-T</code> flag. This option is deprecated.</dd>
+<dt><i>greylist</i></dt>
+<dd>The argument sets how much time <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will want the client to wait between the first attempt and the time the message is accepted. The time is given in seconds, except if a unit is given: m for minutes, h for hours, and d for days. The <i>greylist </i> keyword is equivalent to the <code>-w </code> option. Here is an example that sets the delay to 45 minutes:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>greylist 45m</dd>
+<dt><i>autowhite</i></dt>
+<dd>This sets the auto-whitelisting duration, equivalent to the <code>-a</code> command-line option. As for the <i>greylist</i> keyword, units can be supplied. Here is an example for a 3 day long auto-whitelisting:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>autowhite 3d</dd>
+<dt><i>pidfile</i></dt>
+<dd>This causes <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> to write its PID into the file given as argument, like the <code>-P</code> command line argument does. The path to the file must be absolute and it must be enclosed in quotes. Here is an example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>pidfile&nbsp;<wbr>&quot;/var/run/greylist.pid&quot;</dd>
+<dt><i>dumpfile</i></dt>
+<dd>This chooses the location of the greylist dump file, like the <code>-d</code> command line option does. The path must be absolute and enclosed in quotes. It can optionally be followed by an octal permission mode. Example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>dumpfile&nbsp;<wbr>&quot;/var/lib/milter-greylist/db/greylist.db&quot;&nbsp;<wbr>640</dd>
+<dt><i>subnetmatch</i></dt>
+<dd>This is equivalent to the <code>-L </code> command line option. It takes a slash followed by a CIDR mask as argument, and it commands the subnet matching feature. Example, for a class C wide matching:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>subnetmatch&nbsp;<wbr>/24</dd>
+<dt><i>subnetmatch6</i></dt>
+<dd>This is equivalent to the <code>-M</code> command line option. It takes a slash followed by a prefixlen as argument, and it commands the subnet matching feature. Example, for a subnet wide matching:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>subnetmatch6&nbsp;<wbr>/64</dd>
+<dt><i>socket</i></dt>
+<dd>Like the <code>-p</code> command line option, this keyword is used to specify the socket used to communicate with <code>sendmail(8)</code>. It must be enclosed in quotes and can optionally be followed by an octal permission mode (valid values are 666, 660 or 600, other values cause an error):</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>socket&nbsp;<wbr>&quot;/var/run/milter-greylist/milter-greylist.sock&quot;&nbsp;<wbr>660</dd>
+<dt><i>user</i></dt>
+<dd>This keyword should be followed by a quoted user login and optionally a colon followed by a groupname. Like the <code>-u</code> option, this is used to run <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> as a non root user. Here is an example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>user&nbsp;<wbr>&quot;smmsp&quot;</dd></dl>
 <h2>Miscellaneous</h2>
 <p>These options have no command line equivalent:</p>
 <dl>
-<dt><i>logfac</i></p>
-<dd>Sets the syslog facility for messages. Can be set to any of the standard facilities: <i>kern</i>, <i>user</i>, <i>mail</i>, <i>daemon</i>, <i>auth</i>, <i>syslog</i>, <i>lpr</i>, <i>news</i>, <i>uucp</i>, <i>cron</i>, <i>authpriv</i>, <i>ftp</i>, <i>local0</i>, <i>local1</i>, <i>local2</i>, <i>local3</i>, <i>local4</i>, <i>local5</i>, <i>local6</i>, <i>local7</i>. Can also be set to <i>none</i> to disable syslog output completely.</p>
-<dt><i>timeout</i></p>
-<dd>is used to control how long greylist tuples are retained in the database. Value is in seconds, except if a suffix is given (m for minutes, h for hours, d for days). Default is 5 days.</p>
-<dt><i>extendedregex</i></p>
-<dd>Use extended regular expressions instead of basic regular expressions.</p>
-<dt><i>maxpeek</i></p>
-<dd>Limit (in bytes) how much of messages are examined for header and body searches.</p>
-<dt><i>lazyaw</i></p>
-<dd>Make auto-whitelist look at just the IP instead of the (sender IP, sender e-mail address, recipient e-mail address) tuple.</p>
-<dt><i>domainexact</i></p>
-<dd>match on subdomain boundaries instead of the default suffix matching. E.g. if <i>domainexact</i> is not enabled (the default) then gle.com will match google.com in addtion to gle.com. If <i>domainexact</i> is enabled then, domain names will match on subdomain boundaries (e.g. gle.com will match mail.gle.com and gle.com but not google.com)</p>
-<dt><i>drac db</i></p>
-<dd>Tell where the DRAC DB file is. This is only available if DRAC support was compiled in. Here is an example:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>drac db&nbsp;<wbr>&quot;/usr/local/etc/drac.db&quot;</p>
-<dt><i>nodrac</i></p>
-<dd>Disable DRAC.</p>
-<dt><i>logexpired</i></p>
-<dd>This option causes greylist entries that expire to be logged via syslog. This allows you to easily collect the IP addresses and sender names and use them for blacklisting, SPAM scoring, etc. Normally, expirations are only logged if the <code>debug</code> option is set, but that generates a lot of extra messages.</dl>
+<dt><i>logfac</i></dt>
+<dd>Sets the syslog facility for messages. Can be set to any of the standard facilities: <i>kern</i>, <i>user</i>, <i>mail</i>, <i>daemon</i>, <i>auth</i>, <i>syslog</i>, <i>lpr</i>, <i>news</i>, <i>uucp</i>, <i>cron</i>, <i>authpriv</i>, <i>ftp</i>, <i>local0</i>, <i>local1</i>, <i>local2</i>, <i>local3</i>, <i>local4</i>, <i>local5</i>, <i>local6</i>, <i>local7</i>. Can also be set to <i>none</i> to disable syslog output completely.</dd>
+<dt><i>timeout</i></dt>
+<dd>is used to control how long greylist tuples are retained in the database. Value is in seconds, except if a suffix is given (m for minutes, h for hours, d for days). Default is 5 days.</dd>
+<dt><i>extendedregex</i></dt>
+<dd>Use extended regular expressions instead of basic regular expressions.</dd>
+<dt><i>maxpeek</i></dt>
+<dd>Limit (in bytes) how much of messages are examined for header and body searches.</dd>
+<dt><i>lazyaw</i></dt>
+<dd>Make auto-whitelist look at just the IP instead of the (sender IP, sender e-mail address, recipient e-mail address) tuple.</dd>
+<dt><i>domainexact</i></dt>
+<dd>match on subdomain boundaries instead of the default suffix matching. E.g. if <i>domainexact</i> is not enabled (the default) then gle.com will match google.com in addtion to gle.com. If <i>domainexact</i> is enabled then, domain names will match on subdomain boundaries (e.g. gle.com will match mail.gle.com and gle.com but not google.com)</dd>
+<dt><i>drac db</i></dt>
+<dd>Tell where the DRAC DB file is. This is only available if DRAC support was compiled in. Here is an example:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>drac db&nbsp;<wbr>&quot;/usr/local/etc/drac.db&quot;</dd>
+<dt><i>nodrac</i></dt>
+<dd>Disable DRAC.</dd>
+<dt><i>logexpired</i></dt>
+<dd>This option causes greylist entries that expire to be logged via syslog. This allows you to easily collect the IP addresses and sender names and use them for blacklisting, SPAM scoring, etc. Normally, expirations are only logged if the <code>debug</code> option is set, but that generates a lot of extra messages.</dd></dl>
 <p> The configuration file is reloaded automatically once it is modified when new e-mail arrives. Most configuration keywords will take effect immediately, except the following, which will only take effect after a restart of <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code>: <i>nodetach</i>, <i>pidfile</i>, <i>socket</i>, and <i>user</i>. </p>
 <p> The <i>dumpfreq</i> option can be changed dynamically, but the change will only take effect after the next dump.</p>
 <h2>Format Strings</h2>
 <p>Various statements in the configuration file accept format strings, where the following % prefixed tokens are substituted. Here is the complete list of available substitutions (Note that some substitutions are not relevant in any context).</p>
 <dl>
-<dt><i>%r </i></p>
-<dd>the message recipient e-mail address</p>
-<dt><i>%f</i></p>
-<dd>the message sender e-mail address</p>
-<dt><i>%i</i></p>
-<dd>the sender machine IP address</p>
-<dt><i>%I</i></p>
-<dd>the sender machine IP address masked by a CIDR. Example: <i>%I{/24}</i></p>
-<dt><i>%d</i></p>
-<dd>the sender machine DNS address</p>
-<dt><i>%h</i></p>
-<dd>the SMTP transaction HELO string</p>
-<dt><i>%mr</i></p>
-<dd>the mailbox part of %r (before the @ sign)</p>
-<dt><i>%sr</i></p>
-<dd>the site part of %r (after the @ sign)</p>
-<dt><i>%mf</i></p>
-<dd>the mailbox part of %f (before the @ sign)</p>
-<dt><i>%sf</i></p>
-<dd>the site part of %f (after the @ sign)</p>
-<dt><i>%md</i></p>
-<dd>the machine part of %d (before the first . sign)</p>
-<dt><i>%sd</i></p>
-<dd>the site part of %d (after the first . sign)</p>
-<dt><i>%Xc</i></p>
-<dd>the SMTP code returned</p>
-<dt><i>%Xe</i></p>
-<dd>the SMTP extended code returned</p>
-<dt><i>%Xm</i></p>
-<dd>the SMTP message returned</p>
-<dt><i>%Xh</i></p>
-<dd>the message displayed in the X-Greylist header</p>
-<dt><i>%D</i></p>
-<dd>Comma-separated list of DNSRBL for which the sender host matched</p>
-<dt><i>%M</i></p>
-<dd>a sendmail macro value. Examples: <i>%Mj</i> or <i>%M{if_addr}</i></p>
-<dt><i>%g</i></p>
-<dd>a regex backreference. For instance, <i>%g{\2}</i> is substituted by the string maching the second parenthesis group in all ACL regex clauses</p>
-<dt><i>%T</i></p>
-<dd>a brace-enclosed <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3) </code> format string that will be substituted by the system time. Example: <i>%T{%Y%m%d:%H%M%S}</i></p>
-<dt><i>%v</i></p>
-<dd>milter-greylist&#8217;s version</p>
-<dt><i>%G</i></p>
-<dd>Offset to GMT (e.g.: -0100)</p>
-<dt><i>%C</i></p>
-<dd>Sender IP country code, as reported by GeoIP. This is only available if <code>milter-greylist</code> was built with GeoIP support</p>
-<dt><i>%Fx</i></p>
-<dd>p0f OS fingerprint genre and detail. This is only available if <code>milter-greylist</code> was built with p0f support.</p>
-<dt><i>%V</i></p>
-<dd>Shortcut to &quot;milter-greylist-%v (%Mj [%M{if_addr}]); %T{%a, %d %b %Y %T} %G (%T{%Z})&quot;</p>
-<dt><i>%S </i></p>
-<dd>the action performed: <i>accept</i>, <i>tempfail</i>, or <i>reject</i>.</p>
-<dt><i>%A</i></p>
-<dd>the line number of the ACL that caused the action.</p>
-<dt><i>%a</i></p>
-<dd>the id string of the ACL that caused the action. If no id was given, the line number is used instead.</p>
-<dt><i>%Et</i></p>
-<dd>total elapsed time in seconds before a greylisted message has been accepted</p>
-<dt><i>%Eh</i></p>
-<dd>hours elapsed</p>
-<dt><i>%Em</i></p>
-<dd>minutes elapsed (modulo one hour)</p>
-<dt><i>%Es</i></p>
-<dd>seconds elapsed (modulo one minute)</p>
-<dt><i>%E</i></p>
-<dd>shortcut to %Eh:%Em:Es</p>
-<dt><i>%Rt</i></p>
-<dd>total remaining time in seconds before a greylisted message will be accepted</p>
-<dt><i>%Rh</i></p>
-<dd>hours remaining</p>
-<dt><i>%Rm</i></p>
-<dd>minutes remaining (modulo one hour)</p>
-<dt><i>%Rs</i></p>
-<dd>seconds remaining (modulo one minute)</p>
-<dt><i>%R</i></p>
-<dd>shortcut to %Rh:%Rm:Rs</p>
-<dt><i>%%</i></p>
-<dd>a single % character</dl>
+<dt><i>%r </i></dt>
+<dd>the message recipient e-mail address</dd>
+<dt><i>%f</i></dt>
+<dd>the message sender e-mail address</dd>
+<dt><i>%i</i></dt>
+<dd>the sender machine IP address</dd>
+<dt><i>%I</i></dt>
+<dd>the sender machine IP address masked by a CIDR. Example: <i>%I{/24}</i></dd>
+<dt><i>%d</i></dt>
+<dd>the sender machine DNS address</dd>
+<dt><i>%h</i></dt>
+<dd>the SMTP transaction HELO string</dd>
+<dt><i>%mr</i></dt>
+<dd>the mailbox part of %r (before the @ sign)</dd>
+<dt><i>%sr</i></dt>
+<dd>the site part of %r (after the @ sign)</dd>
+<dt><i>%mf</i></dt>
+<dd>the mailbox part of %f (before the @ sign)</dd>
+<dt><i>%sf</i></dt>
+<dd>the site part of %f (after the @ sign)</dd>
+<dt><i>%md</i></dt>
+<dd>the machine part of %d (before the first . sign)</dd>
+<dt><i>%sd</i></dt>
+<dd>the site part of %d (after the first . sign)</dd>
+<dt><i>%Xc</i></dt>
+<dd>the SMTP code returned</dd>
+<dt><i>%Xe</i></dt>
+<dd>the SMTP extended code returned</dd>
+<dt><i>%Xm</i></dt>
+<dd>the SMTP message returned</dd>
+<dt><i>%Xh</i></dt>
+<dd>the message displayed in the X-Greylist header</dd>
+<dt><i>%D</i></dt>
+<dd>Comma-separated list of DNSRBL for which the sender host matched</dd>
+<dt><i>%M</i></dt>
+<dd>a sendmail macro value. Examples: <i>%Mj</i> or <i>%M{if_addr}</i></dd>
+<dt><i>%g</i></dt>
+<dd>a regex backreference. For instance, <i>%g{\2}</i> is substituted by the string maching the second parenthesis group in all ACL regex clauses</dd>
+<dt><i>%T</i></dt>
+<dd>a brace-enclosed <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3) </code> format string that will be substituted by the system time. Example: <i>%T{%Y%m%d:%H%M%S}</i></dd>
+<dt><i>%v</i></dt>
+<dd>milter-greylist&#8217;s version</dd>
+<dt><i>%G</i></dt>
+<dd>Offset to GMT (e.g.: -0100)</dd>
+<dt><i>%C</i></dt>
+<dd>Sender IP country code, as reported by GeoIP. This is only available if <code>milter-greylist</code> was built with GeoIP support</dd>
+<dt><i>%Fx</i></dt>
+<dd>p0f OS fingerprint genre and detail. This is only available if <code>milter-greylist</code> was built with p0f support.</dd>
+<dt><i>%V</i></dt>
+<dd>Shortcut to &quot;milter-greylist-%v (%Mj [%M{if_addr}]); %T{%a, %d %b %Y %T} %G (%T{%Z})&quot;</dd>
+<dt><i>%S </i></dt>
+<dd>the action performed: <i>accept</i>, <i>tempfail</i>, or <i>reject</i>.</dd>
+<dt><i>%A</i></dt>
+<dd>the line number of the ACL that caused the action.</dd>
+<dt><i>%a</i></dt>
+<dd>the id string of the ACL that caused the action. If no id was given, the line number is used instead.</dd>
+<dt><i>%Et</i></dt>
+<dd>total elapsed time in seconds before a greylisted message has been accepted</dd>
+<dt><i>%Eh</i></dt>
+<dd>hours elapsed</dd>
+<dt><i>%Em</i></dt>
+<dd>minutes elapsed (modulo one hour)</dd>
+<dt><i>%Es</i></dt>
+<dd>seconds elapsed (modulo one minute)</dd>
+<dt><i>%E</i></dt>
+<dd>shortcut to %Eh:%Em:Es</dd>
+<dt><i>%Rt</i></dt>
+<dd>total remaining time in seconds before a greylisted message will be accepted</dd>
+<dt><i>%Rh</i></dt>
+<dd>hours remaining</dd>
+<dt><i>%Rm</i></dt>
+<dd>minutes remaining (modulo one hour)</dd>
+<dt><i>%Rs</i></dt>
+<dd>seconds remaining (modulo one minute)</dd>
+<dt><i>%R</i></dt>
+<dd>shortcut to %Rh:%Rm:Rs</dd>
+<dt><i>%%</i></dt>
+<dd>a single % character</dd></dl>
 <h2>Authors</h2>
 <p>Emmanuel Dreyfus &lt;manu [at] netbsd.org&gt; </p>
 <p> <code>milter-greylist</code> received many contributions from (in alphabetical order): Aida Shinra, Adam Katz, Alexander Lobodzinski, Alexandre Cherif, Alexey Popov, Andrew McGill, Attila Bruncsak, Benoit Branciard, Bernhard Schneider, Bob Smith, Constantine A. Murenin, Christian Pelissier, Cyril Guibourg, Dan Hollis, Elrond, Enrico Scholz, Eugene Crosser, Fabien Tassin, Fredrik Pettai, Gary Aitken, Georg Horn, Gert Doering, Greg Troxel, Guido Kerkewitz, Hajimu Umemoto, Hideki ONO, Ivan F. Martinez, Jacques Beigbeder, Jean Benoit, Jeff Rife, Jobst Schmalenbach, Joe Pruett, Joel Bertrand, Johann E. Klasek, Johann Klasek, John Thiltges, Klas Heggemann, Laurence Moindrot, Lev Walkin, Manuel Badzong, Martin Paul, Matt Kettler, Mattheu Herrb, Matthias Scheler, Matthieu Herrb, Michael Fromme, Moritz Both, Nerijus Baliunas, Pavel Cahyna, Per Holm, Petr Kristof, Ralf S. Engelschall, Ranko Zivojnovic, Remy Card, Rick Adams, Rogier Maas, Romain Kang, Rudy Eschauzier, Stephane Lentz, Thomas Scheunemann, Tim Mooney, Wolfgang Solfrank, and Yaroslav Boychuk. </p>
@@ -428,7 +428,8 @@ racl whitelist default</pre>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8), sendmail(8), syslogd(8).</p>
 <dl>
-<dt>Evan Harris&#8217;s paper:</p>
-<dd><i><a rel="nofollow" href="http://projects.puremagic.com/greylisting/">http://projects.puremagic.com/greylisting/</a></i></p>
-<dt>milter-greylist&#8217;s web site:</p>
-<dd><i><a rel="nofollow" href="http://hcpnet.free.fr/milter-greylist/">http://hcpnet.free.fr/milter-greylist/</a></i> </p>
+<dt>Evan Harris&#8217;s paper:</dt>
+<dd><i><a rel="nofollow" href="http://projects.puremagic.com/greylisting/">http://projects.puremagic.com/greylisting/</a></i></dd>
+<dt>milter-greylist&#8217;s web site:</dt>
+<dd><i><a rel="nofollow" href="http://hcpnet.free.fr/milter-greylist/">http://hcpnet.free.fr/milter-greylist/</a></i> </dd>
+</dl>

@@ -23,10 +23,10 @@ description: "scalar – Process scalars easily."
 <p>Creates a scalar handler calling netsnmp_create_handler with a handler name defaulted to &#8216;scalar&#8217; and access method, netsnmp_scalar_helper_handler. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Returns a pointer to a netsnmp_mib_handler struct which contains the handler&#8217;s name and the access method</dl>
+<dd>Returns a pointer to a netsnmp_mib_handler struct which contains the handler&#8217;s name and the access method</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
-<dd><code>netsnmp_get_scalar_handler</code> </p>
+<dd><code>netsnmp_get_scalar_handler</code> </dd>
 <p> <code>netsnmp_register_scalar</code></dl>
 <p> Definition at line 46 of file scalar.c. </p>
 <p> References netsnmp_create_handler(), and netsnmp_scalar_helper_handler(). </p>
@@ -36,13 +36,13 @@ description: "scalar – Process scalars easily."
 <p> This function is very similar to netsnmp_register_scalar the only addition is that the &#8216;read_only&#8217; handler is injected into the handler chain prior to injecting the serialize handler and registering reginfo. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register a read only scalar helper handler.</dl>
+<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register a read only scalar helper handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILURE and MIB_DUPLICATE_REGISTRATION.</dl>
+<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILURE and MIB_DUPLICATE_REGISTRATION.</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
-<dd><code>netsnmp_register_scalar</code> </p>
+<dd><code>netsnmp_register_scalar</code> </dd>
 <p> <code>netsnmp_get_scalar_handler</code></dl>
 <p> Definition at line 109 of file scalar.c. </p>
 <p> References netsnmp_get_instance_handler(), netsnmp_get_read_only_handler(), netsnmp_get_scalar_handler(), netsnmp_inject_handler(), netsnmp_register_serialize(), netsnmp_handler_registration_s::rootoid, and netsnmp_handler_registration_s::rootoid_len.</p>
@@ -52,14 +52,15 @@ description: "scalar – Process scalars easily."
 <p> Each handler is injected/pushed to the top of the handler chain list and will be processed last in first out, LIFO. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register a scalar helper handler.</dl>
+<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register a scalar helper handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILURE and MIB_DUPLICATE_REGISTRATION.</dl>
+<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILURE and MIB_DUPLICATE_REGISTRATION.</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
-<dd><code>netsnmp_register_read_only_scalar</code> </p>
+<dd><code>netsnmp_register_read_only_scalar</code> </dd>
 <p> <code>netsnmp_get_scalar_handler</code></dl>
 <p> Definition at line 74 of file scalar.c. </p>
 <p> References netsnmp_get_instance_handler(), netsnmp_get_scalar_handler(), netsnmp_inject_handler(), netsnmp_register_serialize(), netsnmp_handler_registration_s::rootoid, and netsnmp_handler_registration_s::rootoid_len. </p>
 <p> Referenced by netsnmp_register_watched_scalar(), and netsnmp_watched_timestamp_register().</p>
+</p>

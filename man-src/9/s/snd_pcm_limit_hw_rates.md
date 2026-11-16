@@ -15,7 +15,7 @@ snd_pcm_limit_hw_rates - determine rate_min/rate_max fields
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>the runtime instance</dl>
+<dl><dd></dd><dd>the runtime instance</dd></dl>
 
 <h2>Description</h2>
 

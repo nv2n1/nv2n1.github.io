@@ -13,21 +13,21 @@ description: "ginq_fill_int_style (Inquire fill area interior style) – retriev
 <p> void ginq_fill_int_style(Gint *err_ind, Gfill_int_style *fill_int_style);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>fill_int_style</p>
-<dd>(Output) &#8211; Returns the current value for fill style as set by default or by a call to gset_fill_int_style. Possible return values include:</p>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>fill_int_style</dt>
+<dd>(Output) &#8211; Returns the current value for fill style as set by default or by a call to gset_fill_int_style. Possible return values include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GSTYLE_HOLLOW</p>
-<dd>Hollow fill (the default)</p>
-<dt>GSTYLE_SOLID</p>
-<dd>Solid fill</p>
-<dt>GSTYLE_PAT</p>
-<dd>Pattern fill (not implemented in NCAR GKS).</p>
-<dt>GSTYLE_HATCH</p>
-<dd>Hatch fill</dl>
+</dd><dl COMPACT>
+<dt>GSTYLE_HOLLOW</dt>
+<dd>Hollow fill (the default)</dd>
+<dt>GSTYLE_SOLID</dt>
+<dd>Solid fill</dd>
+<dt>GSTYLE_PAT</dt>
+<dd>Pattern fill (not implemented in NCAR GKS).</dd>
+<dt>GSTYLE_HATCH</dt>
+<dd>Hatch fill</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

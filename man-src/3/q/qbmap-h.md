@@ -12,29 +12,13 @@ description: "qbmap.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;stdint.h&gt;
-
 #include &lt;unistd.h&gt;</code></pre>
 <h3>Macros</h3>
 <pre><code>#define QB_MAP_NOTIFY_DELETED   1
-
-
-
 #define QB_MAP_NOTIFY_REPLACED   2
-
-
-
 #define QB_MAP_NOTIFY_INSERTED   4
-
-
-
 #define QB_MAP_NOTIFY_RECURSIVE   8
-
-
-
 #define QB_MAP_NOTIFY_FREE   16
-
-
-
 Typedefs</code></pre>
 <p> typedef struct qb_map <code>qb_map_t</code><br />
  <i>This is an opaque data type representing an instance of a map. </i><br />
@@ -81,10 +65,10 @@ Typedefs</code></pre>
 <p>This provides a map interface to a Patricia trie, hashtable or skiplist. </p>
 <p> <code>Ordering</code></p>
 <dl>
-<dd>The hashtable is NOT ordered, but ptrie and skiplist are.</dl>
+<dd>The hashtable is NOT ordered, but ptrie and skiplist are.</dd></dl>
 <p> <code>Iterating</code></p>
 <dl>
-<dd>Below is a simple example of how to iterate over a map. </p>
+<dd>Below is a simple example of how to iterate over a map. </dd>
 <pre>* const char *p;
 * void *data;
 * qb_map_iter_t *it = qb_map_iter_create(m);
@@ -100,16 +84,16 @@ Typedefs</code></pre>
 * </pre>
 <p><code>Notifications</code></p>
 <dl>
-<dd>These allow you to get callbacks when values are inserted/removed or replaced.</dl>
+<dd>These allow you to get callbacks when values are inserted/removed or replaced.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>hashtable only supports deletion and replacement notificatins. There is also a special global callback for freeing deleted and replaced values (QB_MAP_NOTIFY_FREE).</dl>
+<dd>hashtable only supports deletion and replacement notificatins. There is also a special global callback for freeing deleted and replaced values (QB_MAP_NOTIFY_FREE).</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>qb_map_notify_add()</code> <code>qb_map_notify_del_2()</code></dl>
+<dd><code>qb_map_notify_add()</code> <code>qb_map_notify_del_2()</code></dd></dl>
 <p> <code>Prefix matching</code></p>
 <dl>
-<dd>The ptrie supports prefixes in the iterator:</dl>
+<dd>The ptrie supports prefixes in the iterator:</dd></dl>
 <pre>* it = qb_map_pref_iter_create(m, &quot;aa&quot;);
 * while ((p = qb_map_iter_next(it, &amp;data)) != NULL) {
 * printf(&quot;%s &gt; %s, p, (char*)data);
@@ -144,10 +128,10 @@ Typedefs</code></pre>
 <p>Create an unsorted map based on a hashtable. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>max_size</i> maximum size of the hashtable</dl>
+<dd><i>max_size</i> maximum size of the hashtable</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the map instance</dl>
+<dd>the map instance</dd></dl>
 <h3>size_t qb_map_count_get (<code>qb_map_t</code> *map)</h3>
 <p>Get the number of items in the map.</p>
 <h3>void qb_map_destroy (<code>qb_map_t</code> *map)</h3>
@@ -159,24 +143,24 @@ Typedefs</code></pre>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>NULL</i> (if the key does not exist)<br />
- <i>a</i> pointer to the value</dl>
+ <i>a</i> pointer to the value</dd></dl>
 <h3><code>qb_map_iter_t</code>* qb_map_iter_create (<code>qb_map_t</code> *map)</h3>
 <p>Create an iterator.</p>
 <h3>void qb_map_iter_free (<code>qb_map_iter_t</code> *i)</h3>
 <p>free the iterator </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>i</i> the iterator</dl>
+<dd><i>i</i> the iterator</dd></dl>
 <h3>const char* qb_map_iter_next (<code>qb_map_iter_t</code> *i, void **value)</h3>
 <p>Get the next item. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>i</i> the iterator<br />
- <i>value</i> (out) the next item&#8217;s value</dl>
+ <i>value</i> (out) the next item&#8217;s value</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>the</i> next key<br />
- <i>NULL</i> &#8211; the end of the iteration</dl>
+ <i>NULL</i> &#8211; the end of the iteration</dd></dl>
 <h3>int32_t qb_map_notify_add (<code>qb_map_t</code> *m, const char *key, <code>qb_map_notify_fn</code>fn, int32_tevents, void *user_data)</h3>
 <p>Add a notifier to the map. </p>
 <p> <code>Parameters:</code></p>
@@ -185,51 +169,51 @@ Typedefs</code></pre>
  <i>key</i> the key (or prefix) to attach the notification to.<br />
  <i>fn</i> the callback<br />
  <i>events</i> the type of events to register for.<br />
- <i>user_data</i> a pointer to be passed into the callback</dl>
+ <i>user_data</i> a pointer to be passed into the callback</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>QB_MAP_NOTIFY_INSERTED is only valid on tries. </p>
+<dd>QB_MAP_NOTIFY_INSERTED is only valid on tries. </dd>
 <p> you can use key prefixes with trie maps.</dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>0</i> success<br />
- <i>-errno</i> failure</dl>
+ <i>-errno</i> failure</dd></dl>
 <h3>int32_t qb_map_notify_del (<code>qb_map_t</code> *m, const char *key, <code>qb_map_notify_fn</code>fn, int32_tevents)</h3>
 <p>Delete a notifier from the map. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>the key,fn and events must match those you added.</dl>
+<dd>the key,fn and events must match those you added.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>m</i> the map instance<br />
  <i>key</i> the key (or prefix) to attach the notification to.<br />
  <i>fn</i> the callback<br />
- <i>events</i> the type of events to register for.</dl>
+ <i>events</i> the type of events to register for.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>0</i> success<br />
- <i>-errno</i> failure</dl>
+ <i>-errno</i> failure</dd></dl>
 <h3>int32_t qb_map_notify_del_2 (<code>qb_map_t</code> *m, const char *key, <code>qb_map_notify_fn</code>fn, int32_tevents, void *user_data)</h3>
 <p>Delete a notifier from the map (including the userdata). </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>the key, fn, events and userdata must match those you added.</dl>
+<dd>the key, fn, events and userdata must match those you added.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>m</i> the map instance<br />
  <i>key</i> the key (or prefix) to attach the notification to.<br />
  <i>fn</i> the callback<br />
  <i>events</i> the type of events to register for.<br />
- <i>user_data</i> a pointer to be passed into the callback</dl>
+ <i>user_data</i> a pointer to be passed into the callback</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dd><i>0</i> success<br />
- <i>-errno</i> failure</dl>
+ <i>-errno</i> failure</dd></dl>
 <h3><code>qb_map_iter_t</code>* qb_map_pref_iter_create (<code>qb_map_t</code> *map, const char *prefix)</h3>
 <p>Create a prefix iterator. This will iterate over all items with the given prefix. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>this is only supported by the trie.</dl>
+<dd>this is only supported by the trie.</dd></dl>
 <h3>void qb_map_put (<code>qb_map_t</code> *map, const char *key, const void *value)</h3>
 <p>Inserts a new key and value into a qb_map_t. If the key already exists in the qb_map_t, it gets replaced by the new key.</p>
 <h3>int32_t qb_map_rm (<code>qb_map_t</code> *map, const char *key)</h3>
@@ -238,7 +222,7 @@ Typedefs</code></pre>
 <p>Create a sorted map using a skiplist. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the map instance</dl>
+<dd>the map instance</dd></dl>
 <h3><code>qb_map_t</code>* qb_trie_create (void)</h3>
 <p>Create a sorted map using a Patricia trie or &#8216;Radix tree&#8217;.</p>
 <h3>void qb_trie_dump (<code>qb_map_t</code> *m)</h3>

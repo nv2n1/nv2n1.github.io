@@ -19,17 +19,17 @@ description: "hx509 library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> context to be freed.</dl>
+</dt><dd> <i>context</i> context to be freed.</dd></dl>
 <h3>int hx509_context_init (hx509_context *context)</h3>
 <p> Creates a hx509 context that most functions in the library uses. The context is only allowed to be used by one thread at each moment. Free the context with <code>hx509_context_free()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Returns a pointer to new hx509 context.</dl>
+</dt><dd> <i>context</i> Returns a pointer to new hx509 context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Returns an hx509 error code.</dl>
+</dt><dd> Returns an hx509 error code.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
 <h2>Index</h2>

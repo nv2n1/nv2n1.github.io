@@ -82,9 +82,9 @@ description: "cluster_selinux – Security Enhanced Linux Policy for the cluster
 <p> Policy governs the access confined processes have to these ports. SELinux cluster policy is very flexible allowing users to setup their cluster processes in as secure a method as possible. </p>
 <p> The following port types are defined for cluster: </p>
 <dl>
-<dt><code>cluster_port_t</code></p>
+<dt><code>cluster_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5149,40040,50006-50008 udp 5149,50006-50008</dl>
+</dd><dd>Default Defined Ports: tcp 5149,40040,50006-50008 udp 5149,50006-50008</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type cluster_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>file_type</code> </p>
@@ -103,14 +103,14 @@ description: "cluster_selinux – Security Enhanced Linux Policy for the cluster
 <p> <code>cluster_exec_t</code> </p>
 <p> &#8211; Set files with the cluster_exec_t type, if you want to transition an executable to the cluster_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/aisexec, /usr/sbin/corosync, /usr/sbin/cpglockd, /usr/sbin/ccs_tool, /usr/lib/pcsd/pcsd, /usr/sbin/cman_tool, /usr/sbin/rgmanager, /usr/sbin/ldirectord, /usr/sbin/pacemakerd, /usr/bin/corosync-qnetd, /usr/sbin/corosync-notifyd, /usr/sbin/pacemaker_remoted, /usr/share/corosync/corosync, /usr/lib/heartbeat/heartbeat, /usr/share/corosync/corosync-qdevice </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/aisexec, /usr/sbin/corosync, /usr/sbin/cpglockd, /usr/sbin/ccs_tool, /usr/lib/pcsd/pcsd, /usr/sbin/cman_tool, /usr/sbin/rgmanager, /usr/sbin/ldirectord, /usr/sbin/pacemakerd, /usr/bin/corosync-qnetd, /usr/sbin/corosync-notifyd, /usr/sbin/pacemaker_remoted, /usr/share/corosync/corosync, /usr/lib/heartbeat/heartbeat, /usr/share/corosync/corosync-qdevice </dd>
 </dl>
 <p> <code>cluster_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the cluster_initrc_exec_t type, if you want to transition an executable to the cluster_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/openais, /etc/rc.d/init.d/cpglockd, /etc/rc.d/init.d/corosync, /etc/rc.d/init.d/rgmanager, /etc/rc.d/init.d/heartbeat, /etc/rc.d/init.d/pacemaker </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/openais, /etc/rc.d/init.d/cpglockd, /etc/rc.d/init.d/corosync, /etc/rc.d/init.d/rgmanager, /etc/rc.d/init.d/heartbeat, /etc/rc.d/init.d/pacemaker </dd>
 </dl>
 <p> <code>cluster_tmp_t</code> </p>
 <p> &#8211; Set files with the cluster_tmp_t type, if you want to store cluster temporary files in the /tmp directories. </p>
@@ -119,26 +119,26 @@ description: "cluster_selinux – Security Enhanced Linux Policy for the cluster
 <p> <code>cluster_unit_file_t</code> </p>
 <p> &#8211; Set files with the cluster_unit_file_t type, if you want to treat the files as cluster unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/pcsd.*, /usr/lib/systemd/system/corosync.*, /usr/lib/systemd/system/pacemaker.*, /usr/lib/systemd/system/corosync-qnetd.*, /usr/lib/systemd/system/corosync-qdevice.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/pcsd.*, /usr/lib/systemd/system/corosync.*, /usr/lib/systemd/system/pacemaker.*, /usr/lib/systemd/system/corosync-qnetd.*, /usr/lib/systemd/system/corosync-qdevice.* </dd>
 </dl>
 <p> <code>cluster_var_lib_t</code> </p>
 <p> &#8211; Set files with the cluster_var_lib_t type, if you want to store the cluster files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/pcsd(/.*)?, /var/lib/cluster(/.*)?, /var/lib/openais(/.*)?, /var/lib/pengine(/.*)?, /var/lib/corosync(/.*)?, /usr/lib/heartbeat(/.*)?, /var/lib/heartbeat(/.*)?, /var/lib/pacemaker(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/pcsd(/.*)?, /var/lib/cluster(/.*)?, /var/lib/openais(/.*)?, /var/lib/pengine(/.*)?, /var/lib/corosync(/.*)?, /usr/lib/heartbeat(/.*)?, /var/lib/heartbeat(/.*)?, /var/lib/pacemaker(/.*)? </dd>
 </dl>
 <p> <code>cluster_var_log_t</code> </p>
 <p> &#8211; Set files with the cluster_var_log_t type, if you want to treat the data as cluster var log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/pcsd(/.*)?, /var/log/pacemaker.log.*, /var/log/cluster/aisexec.log.*, /var/log/cluster/cpglockd.log.*, /var/log/cluster/corosync.log.*, /var/log/cluster/rgmanager.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/pcsd(/.*)?, /var/log/pacemaker.log.*, /var/log/cluster/aisexec.log.*, /var/log/cluster/cpglockd.log.*, /var/log/cluster/corosync.log.*, /var/log/cluster/rgmanager.log.* </dd>
 </dl>
 <p> <code>cluster_var_run_t</code> </p>
 <p> &#8211; Set files with the cluster_var_run_t type, if you want to store the cluster files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/crm(/.*)?, /var/run/cman_.*, /var/run/rsctmp(/.*)?, /var/run/aisexec.*, /var/run/heartbeat(/.*)?, /var/run/corosync-qnetd(/.*)?, /var/run/corosync-qdevice(/.*)?, /var/run/cpglockd.pid, /var/run/corosync.pid, /var/run/rgmanager.pid, /var/run/cluster/rgmanager.sk </p>
+<dt>Paths:</dt>
+<dd>/var/run/crm(/.*)?, /var/run/cman_.*, /var/run/rsctmp(/.*)?, /var/run/aisexec.*, /var/run/heartbeat(/.*)?, /var/run/corosync-qnetd(/.*)?, /var/run/corosync-qdevice(/.*)?, /var/run/cpglockd.pid, /var/run/corosync.pid, /var/run/rgmanager.pid, /var/run/cluster/rgmanager.sk </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

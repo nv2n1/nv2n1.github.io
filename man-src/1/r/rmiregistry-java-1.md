@@ -14,8 +14,8 @@ description: "rmiregistry – Starts a remote object registry on the specified p
 <code>rmiregistry</code> [ <i>port</i> ]
 </pre>
 <dl>
-<dt><i>port</i></p>
-<dd> The number of a <code>port</code> on the current host at which to start the remote object registry.</dl>
+<dt><i>port</i></dt>
+<dd> The number of a <code>port</code> on the current host at which to start the remote object registry.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>rmiregistry</code> command creates and starts a remote object registry on the specified port on the current host. If the port is omitted, then the registry is started on port 1099. The <code>rmiregistry</code> command produces no output and is typically run in the background, for example: </p>
 <pre>
@@ -27,16 +27,16 @@ description: "rmiregistry – Starts a remote object registry on the specified p
 <p> The URL-based methods of the <code>java.rmi.Naming</code> class operate on a registry and can be used to look up a remote object on any host and on the local host. Bind a simple name (string) to a remote object, rebind a new name to a remote object (overriding the old binding), unbind a remote object, and list the URL bound in the registry.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-J</p>
+<dt>-J</dt>
 <dd>
- Used with any Java option to pass the option following the <code>-J</code> (no spaces between the <code>-J</code> and the option) to the Java interpreter.</dl>
+ Used with any Java option to pass the option following the <code>-J</code> (no spaces between the <code>-J</code> and the option) to the Java interpreter.</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-java/">java</a>(1)</p>
-<dt>&bull;</p>
-<dd> <code>java.rmi.registry.LocateRegistry</code> class description at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/rmi/registry/LocateRegistry.html">http://docs.oracle.com/javase/8/docs/api/java/rmi/registry/LocateRegistry.html</a></p>
-<dt>&bull;</p>
-<dd> <code>java.rmi.Naming class description</code> at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/rmi/Naming.html">http://docs.oracle.com/javase/8/docs/api/java/rmi/Naming.html</a> </p>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-java/">java</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <code>java.rmi.registry.LocateRegistry</code> class description at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/rmi/registry/LocateRegistry.html">http://docs.oracle.com/javase/8/docs/api/java/rmi/registry/LocateRegistry.html</a></dd>
+<dt>&bull;</dt>
+<dd> <code>java.rmi.Naming class description</code> at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/rmi/Naming.html">http://docs.oracle.com/javase/8/docs/api/java/rmi/Naming.html</a> </dd>
 </dl>
 <h2>Index</h2>

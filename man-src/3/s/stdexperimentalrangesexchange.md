@@ -11,16 +11,11 @@ std::experimental::ranges::exchange - std::experimental::ranges::exchange
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/utility&gt;
-
 template&lt; MoveConstructible T, class U = T &gt;
-
 requires Assignable&lt;T&amp;, U&gt;                                            (ranges TS)
-
 constexpr T exchange(T&amp; obj, U&amp;&amp; new_val) noexcept(/* see below */);</code></pre> 
 Replaces the value of obj with new_value and returns the old value of obj, as if by <pre><code>T old_value = std::move(obj);
-
 obj = std::forward&lt;U&gt;(new_value);
-
 return old_value;
 </code></pre>
 

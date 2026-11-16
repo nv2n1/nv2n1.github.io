@@ -46,45 +46,45 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 </pre>
 <p> The output consists of 4 or more whitespace-separated columns. Only the first 4 columns are significant if you want to parse this from a program. The columns are:</p>
 <dl>
-<dt>col 1</p>
-<dd> The device and partition name (eg. <i>/dev/sda1</i> meaning the first partition on the first block device). </p>
+<dt>col 1</dt>
+<dd> The device and partition name (eg. <i>/dev/sda1</i> meaning the first partition on the first block device). </dd>
 <p> When listing all libvirt domains (no <i>-a</i> or <i>-d</i> option given) this column is prefixed by the libvirt name or <font SIZE="-1">UUID </font>(if <i>&#8211;uuid</i> is given). eg: <tt>&quot;WinXP:/dev/sda1&quot;</tt></p>
-<dt>col 2</p>
-<dd> the start of the partition in bytes</p>
-<dt>col 3</p>
-<dd> the alignment in bytes or Kbytes (eg. <tt>512</tt> or <tt>&quot;4K&quot;</tt>)</p>
-<dt>col 4</p>
-<dd> <tt>&quot;ok&quot;</tt> if the alignment is best for performance, or <tt>&quot;bad&quot;</tt> if the alignment can cause performance problems</p>
-<dt>cols 5+</p>
-<dd> optional free-text explanation.</dl>
+<dt>col 2</dt>
+<dd> the start of the partition in bytes</dd>
+<dt>col 3</dt>
+<dd> the alignment in bytes or Kbytes (eg. <tt>512</tt> or <tt>&quot;4K&quot;</tt>)</dd>
+<dt>col 4</dt>
+<dd> <tt>&quot;ok&quot;</tt> if the alignment is best for performance, or <tt>&quot;bad&quot;</tt> if the alignment can cause performance problems</dd>
+<dt>cols 5+</dt>
+<dd> optional free-text explanation.</dd></dl>
 <p> The exit code from the program changes depending on whether poorly aligned partitions were found. See &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below. </p>
 <p> If you just want the exit code with no output, use the <i>-q</i> option.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from a virtual machine. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></p>
+<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></p>
+</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </dd>
 <p> For example: </p>
 <pre>
  virt-alignment-scan --format=raw -a disk.img
@@ -95,41 +95,41 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>-P</code> nr_threads</p>
-<dd> Since libguestfs 1.22, virt-alignment-scan is multithreaded and examines guests in parallel. By default the number of threads to use is chosen based on the amount of free memory available at the time that virt-alignment-scan is started. You can force virt-alignment-scan to use at most <tt>&quot;nr_threads&quot;</tt> by using the <i>-P</i> option. </p>
+<dt><code>-P</code> nr_threads</dt>
+<dd> Since libguestfs 1.22, virt-alignment-scan is multithreaded and examines guests in parallel. By default the number of threads to use is chosen based on the amount of free memory available at the time that virt-alignment-scan is started. You can force virt-alignment-scan to use at most <tt>&quot;nr_threads&quot;</tt> by using the <i>-P</i> option. </dd>
 <p> Note that <i>-P 0</i> means to autodetect, and <i>-P 1</i> means to use a single thread.</p>
-<dt><code>-q</code></p>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> Don&#8217;t produce any output. Just set the exit code (see &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below).</p>
-<dt><code>&#8211;uuid</code></p>
-<dd> Print UUIDs instead of names. This is useful for following a guest even when the guest is migrated or renamed, or when two guests happen to have the same name. </p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t produce any output. Just set the exit code (see &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below).</dd>
+<dt><code>&#8211;uuid</code></dt>
+<dd> Print UUIDs instead of names. This is useful for following a guest even when the guest is migrated or renamed, or when two guests happen to have the same name. </dd>
 <p> This option only applies when listing all libvirt domains (when no <i>-a</i> or <i>-d</i> options are specified).</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
 <h2>RECOMMENDED ALIGNMENT</h2>
 <p> Operating systems older than Windows 2008 and Linux before ca.2010 place the first sector of the first partition at sector 63, with a 512 byte sector size. This happens because of a historical accident. Drives have to report a cylinder / head / sector (<font SIZE="-1">CHS</font>) geometry to the <font SIZE="-1">BIOS. </font> The geometry is completely meaningless on modern drives, but it happens that the geometry reported always has 63 sectors per track. The operating system therefore places the first partition at the start of the second &#8220;track&#8221;, at sector 63. </p>
 <p> When the guest <font SIZE="-1">OS</font> is virtualized, the host operating system and hypervisor may prefer accesses aligned to one of:</p>
 <dl>
-<dt>&bull;</p>
-<dd> 512 bytes </p>
+<dt>&bull;</dt>
+<dd> 512 bytes </dd>
 <p> if the host <font SIZE="-1">OS</font> uses local storage directly on hard drive partitions, and the hard drive has 512 byte physical sectors.</p>
-<dt>&bull;</p>
-<dd> 4 Kbytes </p>
+<dt>&bull;</dt>
+<dd> 4 Kbytes </dd>
 <p> for local storage on new hard drives with 4Kbyte physical sectors; for file-backed storage on filesystems with 4Kbyte block size; or for some types of network-attached storage.</p>
-<dt>&bull;</p>
-<dd> 64 Kbytes </p>
+<dt>&bull;</dt>
+<dd> 64 Kbytes </dd>
 <p> for high-end network-attached storage. This is the optimal block size for some NetApp hardware.</p>
-<dt>&bull;</p>
-<dd> 1 Mbyte </p>
+<dt>&bull;</dt>
+<dd> 1 Mbyte </dd>
 <p> see &#8220;1 <font SIZE="-1">MB PARTITION ALIGNMENT&#8221;</font> below.</dl>
 <p> Partitions which are not aligned correctly to the underlying storage cause extra I/O. For example: </p>
 <pre>
@@ -197,17 +197,17 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <h2>EXIT STATUS</h2>
 <p> This program returns:</p>
 <dl>
-<dt>&bull;</p>
-<dd> 0 </p>
+<dt>&bull;</dt>
+<dd> 0 </dd>
 <p> successful exit, all partitions are aligned ≥ 64K for best performance</p>
-<dt>&bull;</p>
-<dd> 1 </p>
+<dt>&bull;</dt>
+<dd> 1 </dd>
 <p> an error scanning the disk image or guest</p>
-<dt>&bull;</p>
-<dd> 2 </p>
+<dt>&bull;</dt>
+<dd> 2 </dd>
 <p> successful exit, some partitions have alignment &lt; 64K which can result in poor performance on high end network storage</p>
-<dt>&bull;</p>
-<dd> 3 </p>
+<dt>&bull;</dt>
+<dd> 3 </dd>
 <p> successful exit, some partitions have alignment &lt; 4K which can result in poor performance on most hypervisors</dl>
 <h2>SEE ALSO</h2>
 <p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
@@ -224,25 +224,25 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAK">EXIT STATUS</a></p>
+<dt><a href="#lbAK">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbAL">SEE ALSO</a></p>
+</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAM">AUTHOR</a></p>
+</dd><dt><a href="#lbAM">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAN">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAN">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAO">LICENSE</a></p>
+</dd><dt><a href="#lbAO">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAP">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">BUGS</a></dt>
+<dd></dd></dl>

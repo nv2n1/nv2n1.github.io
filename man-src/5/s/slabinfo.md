@@ -16,58 +16,58 @@ description: "slabinfo – kernel slab allocator statistics"
 <p> The first line of output includes a version number, which allows an application that is reading the file to handle changes in the file format. (See VERSIONS, below.) The next line lists the names of the columns in the remaining lines. </p>
 <p> Each of the remaining lines displays information about a specified cache. Following the cache name, the output shown in each line shows three components for each cache:</p>
 <dl>
-<dt>*</p>
-<dd>statistics</p>
-<dt>*</p>
-<dd>tunables</p>
-<dt>*</p>
-<dd>slabdata</dl>
+<dt>*</dt>
+<dd>statistics</dd>
+<dt>*</dt>
+<dd>tunables</dd>
+<dt>*</dt>
+<dd>slabdata</dd></dl>
 <p> The statistics are as follows:</p>
 <dl>
-<dt><i>active_objs</i></p>
-<dd>The number of objects that are currently active (i.e., in use).</p>
-<dt><i>num_objs</i></p>
-<dd>The total number of allocated objects (i.e., objects that are both in use and not in use).</p>
-<dt><i>objsize</i></p>
-<dd>The size of objects in this slab, in bytes.</p>
-<dt><i>objperslab</i></p>
-<dd>The number of objects stored in each slab.</p>
-<dt><i>pagesperslab</i></p>
-<dd>The number of pages allocated for each slab.</dl>
+<dt><i>active_objs</i></dt>
+<dd>The number of objects that are currently active (i.e., in use).</dd>
+<dt><i>num_objs</i></dt>
+<dd>The total number of allocated objects (i.e., objects that are both in use and not in use).</dd>
+<dt><i>objsize</i></dt>
+<dd>The size of objects in this slab, in bytes.</dd>
+<dt><i>objperslab</i></dt>
+<dd>The number of objects stored in each slab.</dd>
+<dt><i>pagesperslab</i></dt>
+<dd>The number of pages allocated for each slab.</dd></dl>
 <p> The <i>tunables</i> entries in each line show tunable parameters for the corresponding cache. When using the default SLUB allocator, there are no tunables, the <i>/proc/slabinfo</i> file is not writable, and the value 0 is shown in these fields. When using the older SLAB allocator, the tunables for a particular cache can be set by writing lines of the following form to <i>/proc/slabinfo</i>: </p>
 <p> # <code>echo &#8216;name limit batchcount sharedfactor&#8217; &gt; /proc/slabinfo</code> </p>
 <p> Here, <i>name</i> is the cache name, and <i>limit</i>, <i>batchcount</i>, and <i>sharedfactor</i> are integers defining new values for the corresponding tunables. The <i>limit</i> value should be a positive value, <i>batchcount</i> should be a positive value that is less than or equal to <i>limit</i>, and <i>sharedfactor</i> should be nonnegative. If any of the specified values is invalid, the cache settings are left unchanged. </p>
 <p> The <i>tunables</i> entries in each line contain the following fields:</p>
 <dl>
-<dt><i>limit</i></p>
-<dd>The maximum number of objects that will be cached.</p>
-<dt><i>batchcount</i></p>
-<dd>On SMP systems, this specifies the number of objects to transfer at one time when refilling the available object list.</p>
-<dt><i>sharedfactor</i></p>
-<dd>[To be documented]</dl>
+<dt><i>limit</i></dt>
+<dd>The maximum number of objects that will be cached.</dd>
+<dt><i>batchcount</i></dt>
+<dd>On SMP systems, this specifies the number of objects to transfer at one time when refilling the available object list.</dd>
+<dt><i>sharedfactor</i></dt>
+<dd>[To be documented]</dd></dl>
 <p> The <i>slabdata</i> entries in each line contain the following fields:</p>
 <dl>
-<dt><i>active_slabs</i></p>
-<dd>The number of active slabs.</p>
-<dt><i>nums_slabs</i></p>
-<dd>The total number of slabs.</p>
-<dt><i>sharedavail</i></p>
-<dd>[To be documented]</dl>
+<dt><i>active_slabs</i></dt>
+<dd>The number of active slabs.</dd>
+<dt><i>nums_slabs</i></dt>
+<dd>The total number of slabs.</dd>
+<dt><i>sharedavail</i></dt>
+<dd>[To be documented]</dd></dl>
 <p> Note that because of object alignment and slab cache overhead, objects are not normally packed tightly into pages. Pages with even one in-use object are considered in-use and cannot be freed. </p>
 <p> Kernels configured with <code>CONFIG_DEBUG_SLAB</code> will also have additional statistics fields in each line, and the first line of the file will contain the string &quot;(statistics)&quot;. The statistics field include : the high water mark of active objects; the number of times objects have been allocated; the number of times the cache has grown (new pages added to this cache); the number of times the cache has been reaped (unused pages removed from this cache); and the number of times there was an error allocating new pages to this cache.</p>
 <h2>Versions</h2>
 <p>The <i>/proc/slabinfo</i> file first appeared in Linux 2.1.23. The file is versioned, and over time there have been a number of versions with different layouts:</p>
 <dl>
-<dt>1.0</p>
-<dd>Present throughout the Linux 2.2.x kernel series.</p>
-<dt>1.1</p>
-<dd>Present in the Linux 2.4.x kernel series.</p>
-<dt>1.2</p>
-<dd>A format that was briefly present in the Linux 2.5 development series.</p>
-<dt>2.0</p>
-<dd>Present in Linux 2.6.x kernels up to and including Linux 2.6.9.</p>
-<dt>2.1</p>
-<dd>The current format, which first appeared in Linux 2.6.10.</dl>
+<dt>1.0</dt>
+<dd>Present throughout the Linux 2.2.x kernel series.</dd>
+<dt>1.1</dt>
+<dd>Present in the Linux 2.4.x kernel series.</dd>
+<dt>1.2</dt>
+<dd>A format that was briefly present in the Linux 2.5 development series.</dd>
+<dt>2.0</dt>
+<dd>Present in Linux 2.6.x kernels up to and including Linux 2.6.9.</dd>
+<dt>2.1</dt>
+<dd>The current format, which first appeared in Linux 2.6.10.</dd></dl>
 <h2>Notes</h2>
 <p>Only root can read and (if the kernel was configured with <code>CONFIG_SLAB</code>) write the <i>/proc/slabinfo</i> file. </p>
 <p> The total amount of memory allocated to the SLAB/SLUB cache is shown in the <i>Slab</i> field of <i>/proc/meminfo</i>.</p>

@@ -44,8 +44,8 @@ description: "abrt_dump_oops_selinux – Security Enhanced Linux Policy for the 
 <p> <code>abrt_dump_oops_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_dump_oops_exec_t type, if you want to transition an executable to the abrt_dump_oops_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/abrt-dump-.*, /usr/bin/abrt-uefioops-oops, /usr/libexec/abrt-hook-ccpp </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/abrt-dump-.*, /usr/bin/abrt-uefioops-oops, /usr/libexec/abrt-hook-ccpp </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

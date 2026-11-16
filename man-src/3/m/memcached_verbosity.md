@@ -13,9 +13,9 @@ description: "memcached_verbosity – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_return_t memcached_verbosity(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, uint32_t<i>&nbsp;<wbr>verbosity</i>)</p>
+<dt><code>memcached_return_t memcached_verbosity(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, uint32_t<i>&nbsp;<wbr>verbosity</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_verbosity()</i> modifies the &quot;verbosity&quot; of the <a href="/docs/linux/man/1-memcached/">memcached</a>(1) servers referenced in the <code>memcached_st</code> parameter.</p>
 <h2>RETURN</h2>
@@ -31,3 +31,4 @@ description: "memcached_verbosity – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

@@ -13,14 +13,14 @@ description: "group – user group file"
 <p> group_name:password:GID:user_list </p>
 <p> The fields are as follows:</p>
 <dl>
-<dt><i>group_name</i></p>
-<dd>the name of the group.</p>
-<dt><i>password</i></p>
-<dd>the (encrypted) group password. If this field is empty, no password is needed.</p>
-<dt><i>GID</i></p>
-<dd>the numeric group ID.</p>
-<dt><i>user_list</i></p>
-<dd>a list of the usernames that are members of this group, separated by commas.</dl>
+<dt><i>group_name</i></dt>
+<dd>the name of the group.</dd>
+<dt><i>password</i></dt>
+<dd>the (encrypted) group password. If this field is empty, no password is needed.</dd>
+<dt><i>GID</i></dt>
+<dd>the numeric group ID.</dd>
+<dt><i>user_list</i></dt>
+<dd>a list of the usernames that are members of this group, separated by commas.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/group</i></p>
 <h2>Bugs</h2>

@@ -14,8 +14,8 @@ description: "strstr – Find the first substring in a NUL terminated string"
 <p><i>s1</i></p>
 <dl>
 <dd>
-<dd>The string to be searched</dl>
+</dd><dd>The string to be searched</dd></dl>
 <p> <i>s2</i></p>
 <dl>
-<dd>The string to search for</dl>
+<dd>The string to search for</dd></dl>
 <h2>Copyright</h2>

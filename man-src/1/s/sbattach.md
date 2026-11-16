@@ -17,13 +17,13 @@ description: "sbattach – UEFI secure boot detached signature tool"
 <p> Attach or detach a signature file to/from a boot image</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;attach</code> &lt;sigfile&gt;</p>
-<dd> set &lt;sigfile&gt; as the boot image&#8217;s signature table</p>
-<dt><code>&#8211;detach</code> &lt;sigfile&gt;</p>
-<dd> copy the boot image&#8217;s signature table to &lt;sigfile&gt;</p>
-<dt><code>&#8211;remove</code></p>
-<dd> remove the boot image&#8217;s signature table from the original file</p>
-<dt><code>&#8211;signum</code></p>
-<dd> signature to operate on (defaults to first) </p>
+<dt><code>&#8211;attach</code> &lt;sigfile&gt;</dt>
+<dd> set &lt;sigfile&gt; as the boot image&#8217;s signature table</dd>
+<dt><code>&#8211;detach</code> &lt;sigfile&gt;</dt>
+<dd> copy the boot image&#8217;s signature table to &lt;sigfile&gt;</dd>
+<dt><code>&#8211;remove</code></dt>
+<dd> remove the boot image&#8217;s signature table from the original file</dd>
+<dt><code>&#8211;signum</code></dt>
+<dd> signature to operate on (defaults to first) </dd>
 </dl>
 <h2>Index</h2>

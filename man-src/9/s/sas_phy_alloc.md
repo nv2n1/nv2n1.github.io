@@ -14,10 +14,10 @@ description: "sas_phy_alloc – allocates and initialize a SAS PHY structure"
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>Parent device</dl>
+</dd><dd>Parent device</dd></dl>
 <p> <i>number</i></p>
 <dl>
-<dd>Phy index</dl>
+<dd>Phy index</dd></dl>
 <h2>Description</h2>
 <p>Allocates an SAS PHY structure. It will be added in the device tree below the device specified by <i>parent</i>, which has to be either a Scsi_Host or sas_rphy.</p>
 <h2>Return</h2>
@@ -25,8 +25,8 @@ description: "sas_phy_alloc – allocates and initialize a SAS PHY structure"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

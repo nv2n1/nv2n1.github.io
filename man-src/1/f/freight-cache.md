@@ -18,30 +18,30 @@ description: "freight-cache – (re)builds package repositories"
 <p> From version 0.0.8 onwards, distros in an APT repository no longer share the contents of the <code>pool/</code>. After upgrading to this version and running <code>freight-cache</code> for all your distros, it is safe and recommended to <code>rm -rf $VARCACHE/pool/main</code> to reset link counts to the proper value.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep unreferenced versions of packages. This is different than keeping multiple versions of a package in the repository, which is supported without any special options.</p>
-<dt><code>-g</code> <i>email</i>, <code>&#8211;gpg=</code><i>email</i></p>
-<dd> Use an alternate GPG key. May be given multiple times.</p>
-<dt><code>-p</code> <i>passphrase file</i>, <code>&#8211;passphrase-file=</code><i>passphrase file</i></p>
-<dd> Use an alternate file containing the GPG key passphrase. This file should obviously be protected and only readable by the user running Freight.</p>
-<dt><code>-a</code> <i>digest algorithm</i>, <code>&#8211;digest-algo=</code><i>digest algorithm</i></p>
-<dd> Message digest algorithm that GPG should use to sign the repository, e.g SHA512</p>
-<dt><code>-c</code> <i>conf</i>, <code>&#8211;conf=</code><i>conf</i></p>
-<dd> Use an alternate configuration file.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose mode.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show a help message.</dl>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep unreferenced versions of packages. This is different than keeping multiple versions of a package in the repository, which is supported without any special options.</dd>
+<dt><code>-g</code> <i>email</i>, <code>&#8211;gpg=</code><i>email</i></dt>
+<dd> Use an alternate GPG key. May be given multiple times.</dd>
+<dt><code>-p</code> <i>passphrase file</i>, <code>&#8211;passphrase-file=</code><i>passphrase file</i></dt>
+<dd> Use an alternate file containing the GPG key passphrase. This file should obviously be protected and only readable by the user running Freight.</dd>
+<dt><code>-a</code> <i>digest algorithm</i>, <code>&#8211;digest-algo=</code><i>digest algorithm</i></dt>
+<dd> Message digest algorithm that GPG should use to sign the repository, e.g SHA512</dd>
+<dt><code>-c</code> <i>conf</i>, <code>&#8211;conf=</code><i>conf</i></dt>
+<dd> Use an alternate configuration file.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show a help message.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></p>
-<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</p>
-<dt><i>$VARCACHE</i><code>/pubkey.gpg</code></p>
-<dd> The exported public key used for signing each release.</dl>
+<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></dt>
+<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dd>
+<dt><i>$VARCACHE</i><code>/pubkey.gpg</code></dt>
+<dd> The exported public key used for signing each release.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>FREIGHT_CONF</code></p>
-<dd> The pathname of an alternate configuration file. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dl>
+<dt><code>FREIGHT_CONF</code></dt>
+<dd> The pathname of an alternate configuration file. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dd></dl>
 <h2>THEME SONG</h2>
 <p> The New Pornographers &#8211; &quot;All the Old Showstoppers&quot;</p>
 <h2>AUTHOR</h2>

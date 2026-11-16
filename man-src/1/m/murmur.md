@@ -17,16 +17,16 @@ description: "Murmur – PyGTK2 client for museek"
 <h2>OPTIONS</h2>
 <p> Murmur accepts the following options:</p>
 <dl>
-<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</p>
-<dd> Use a different config file.</p>
-<dt><code>-l &lt;</code><i>directory</i>&gt;, &#8211;log &lt;<i>directory</i>&gt;</p>
-<dd> Use a different chat log directory.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display Version and exit.</p>
-<dt><code>-d</code></p>
-<dd> Display debug messages while running.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help and exit. </p>
+<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</dt>
+<dd> Use a different config file.</dd>
+<dt><code>-l &lt;</code><i>directory</i>&gt;, &#8211;log &lt;<i>directory</i>&gt;</dt>
+<dd> Use a different chat log directory.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display Version and exit.</dd>
+<dt><code>-d</code></dt>
+<dd> Display debug messages while running.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help and exit. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To run this program the standard way type: </p>
@@ -38,20 +38,20 @@ description: "Murmur – PyGTK2 client for museek"
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.murmur/config</i></p>
-<dd> The default location for the <code>mucous</code> config file.</p>
+&nbsp;<wbr><i>~/.murmur/config</i></dt>
+<dd> The default location for the <code>mucous</code> config file.</dd>
 <dt>
-&nbsp;<wbr><i>~/.murmur/logs/</i></p>
-<dd> The default directory for chat logs.</p>
+&nbsp;<wbr><i>~/.murmur/logs/</i></dt>
+<dd> The default directory for chat logs.</dd>
 <dt>
-&nbsp;<wbr><i>~/.murmur/logs/room/</i></p>
-<dd> The directory where chat room logs are stored.</p>
+&nbsp;<wbr><i>~/.murmur/logs/room/</i></dt>
+<dd> The directory where chat room logs are stored.</dd>
 <dt>
-&nbsp;<wbr><i>~/.murmur/logs/private/</i></p>
-<dd> The directory where private chat logs are stored.</p>
+&nbsp;<wbr><i>~/.murmur/logs/private/</i></dt>
+<dd> The directory where private chat logs are stored.</dd>
 <dt>
-&nbsp;<wbr><i>~/.murmur/$USER.$EXT</i></p>
-<dd> The file where a user&#8217;s userinfo image is saved.</dl>
+&nbsp;<wbr><i>~/.murmur/$USER.$EXT</i></dt>
+<dd> The file where a user&#8217;s userinfo image is saved.</dd></dl>
 <h2>AUTHORS</h2>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>

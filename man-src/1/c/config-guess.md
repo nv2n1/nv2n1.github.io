@@ -16,12 +16,12 @@ description: "config.guess – guess the build system triplet"
 <p> Output the configuration name of the system `config.guess&#8217; is run on.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print this help, then exit</p>
-<dt><code>-t</code>, <code>&#8211;time-stamp</code></p>
-<dd>print date of last modification, then exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>print version number, then exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print this help, then exit</dd>
+<dt><code>-t</code>, <code>&#8211;time-stamp</code></dt>
+<dd>print date of last modification, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>print version number, then exit</dd></dl>
 <h2>Environment Variables</h2>
 <p>config.guess might need to compile and run C code, hence it needs a compiler for the `build&#8217; machine: use the environment variable `CC_FOR_BUILD&#8217; to specify the compiler for the build machine. If `CC_FOR_BUILD&#8217; is not specified, `CC&#8217; will be used. Be sure to specify `CC_FOR_BUILD&#8217; if `CC&#8217; is a cross-compiler to the `host&#8217; machine. </p>
 <p>&nbsp;<wbr>&nbsp;CC_FOR_BUILD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a native C compiler, defaults to&nbsp;`cc&#8217;<br />

@@ -27,10 +27,10 @@ description: "slarrk.f –"
  See W. Kahan &quot;Accurate Eigenvalues of a Symmetric Tridiagonal
  Matrix&quot;, Report CS41, Computer Science Dept., Stanford
  University, July 21, 1966.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the tridiagonal matrix T. N &gt;= 0.</pre>
 <p><i>IW</i> </p>
@@ -73,16 +73,16 @@ description: "slarrk.f –"
 <dd>
 <pre> FUDGE REAL , default = 2
  A &quot;fudge factor&quot; to widen the Gershgorin intervals.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 145 of file slarrk.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

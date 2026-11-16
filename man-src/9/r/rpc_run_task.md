@@ -15,7 +15,7 @@ rpc_run_task - Allocate a new RPC task, then run rpc_execute against it
 <h2>Arguments</h2>
 
 <i>task_setup_data</i>
-<dl><dd><dd>pointer to task initialisation data</dl>
+<dl><dd></dd><dd>pointer to task initialisation data</dd></dl>
 
 <h2>Copyright</h2>
 

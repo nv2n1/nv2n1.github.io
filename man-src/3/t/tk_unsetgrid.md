@@ -14,11 +14,11 @@ description: "Tk_SetGrid, Tk_UnsetGrid – control the grid for interactive resi
 <code>Tk_UnsetGrid</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window.</p>
-<dd>int <i>reqWidth</i> (in) Width in grid units that corresponds to the pixel dimension <i>tkwin</i> has requested via <code>Tk_GeometryRequest</code>.</p>
-<dd>int <i>reqHeight</i> (in) Height in grid units that corresponds to the pixel dimension <i>tkwin</i> has requested via <code>Tk_GeometryRequest</code>.</p>
-<dd>int <i>widthInc</i> (in) Width of one grid unit, in pixels.</p>
-<dd>int <i>heightInc</i> (in) Height of one grid unit, in pixels. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>int <i>reqWidth</i> (in) Width in grid units that corresponds to the pixel dimension <i>tkwin</i> has requested via <code>Tk_GeometryRequest</code>.</dd>
+<dd>int <i>reqHeight</i> (in) Height in grid units that corresponds to the pixel dimension <i>tkwin</i> has requested via <code>Tk_GeometryRequest</code>.</dd>
+<dd>int <i>widthInc</i> (in) Width of one grid unit, in pixels.</dd>
+<dd>int <i>heightInc</i> (in) Height of one grid unit, in pixels. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_SetGrid</code> turns on gridded geometry management for <i>tkwin</i>&#8216;s toplevel window and specifies the geometry of the grid. <code>Tk_SetGrid</code> is typically invoked by a widget when its <code>setGrid</code> option is true. It restricts interactive resizing of <i>tkwin</i>&#8216;s toplevel window so that the space allocated to the toplevel is equal to its requested size plus or minus even multiples of <i>widthInc</i> and <i>heightInc</i>. Furthermore, the <i>reqWidth</i> and <i>reqHeight</i> values are passed to the window manager so that it can report the window&#8217;s size in grid units during interactive resizes. If <i>tkwin</i>&#8216;s configuration changes (e.g., the size of a grid unit changes) then the widget should invoke <code>Tk_SetGrid</code> again with the new information. </p>

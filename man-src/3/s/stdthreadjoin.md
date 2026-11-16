@@ -41,24 +41,19 @@ std::system_error if an error occurs.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 void foo()
-
 {
     // simulate expensive operation
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 void bar()
-
 {
     // simulate expensive operation
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 int main()
-
 {
     std::cout &lt;&lt; &quot;starting first helper...\n&quot;;
     std::thread helper1(foo);

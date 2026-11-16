@@ -10,7 +10,6 @@ description: "telldir – return current location in directory stream"
 <p>telldir &#8211; return current location in directory stream</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;dirent.h&gt;
-
 long telldir(DIR *dirp);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>telldir</code>():<br />
 &nbsp;_XOPEN_SOURCE<br />
@@ -22,8 +21,8 @@ long telldir(DIR *dirp);</code></pre>
 <p>On success, the <code>telldir</code>() function returns the current location in the directory stream. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd>Invalid directory stream descriptor <i>dirp</i>.</dl>
+<dt><code>EBADF</code></dt>
+<dd>Invalid directory stream descriptor <i>dirp</i>.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

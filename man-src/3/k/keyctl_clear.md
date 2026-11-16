@@ -21,14 +21,14 @@ long keyctl_clear(key_serial_t keyring);
 <p> On success <code>keyctl_clear</code>() returns <code>0</code>. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The keyring specified is invalid.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The keyring specified has expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The keyring specified had been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The keyring exists, but is not <code>writable</code> by the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The keyring specified is invalid.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The keyring specified has expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The keyring specified had been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The keyring exists, but is not <code>writable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

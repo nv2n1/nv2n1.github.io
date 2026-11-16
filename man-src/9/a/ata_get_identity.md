@@ -14,13 +14,13 @@ description: "ata_get_identity – Handler for HDIO_GET_IDENTITY ioctl"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>target port</dl>
+</dd><dd>target port</dd></dl>
 <p> <i>sdev</i></p>
 <dl>
-<dd>SCSI device to get identify data for</dl>
+<dd>SCSI device to get identify data for</dd></dl>
 <p> <i>arg</i></p>
 <dl>
-<dd>User buffer area for identify data</dl>
+<dd>User buffer area for identify data</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: Defined by the SCSI layer. We don&#8217;t really care.</p>
 <h2>Return</h2>
@@ -28,5 +28,5 @@ description: "ata_get_identity – Handler for HDIO_GET_IDENTITY ioctl"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

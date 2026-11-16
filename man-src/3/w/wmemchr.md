@@ -10,7 +10,6 @@ description: "wmemchr – search a wide character in a wide-character array"
 <p>wmemchr &#8211; search a wide character in a wide-character array</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wchar_t *wmemchr(const wchar_t *s, wchar_t c, size_t n);</code></pre>
 <h2>Description</h2>
 <p>The <code>wmemchr</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-memchr/">memchr</a></code>(3) function. It searches the <i>n</i> wide characters starting at <i>s</i> for the first occurrence of the wide character <i>c</i>.</p>

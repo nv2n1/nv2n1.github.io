@@ -12,25 +12,25 @@ description: "mlmmj-send – send mail to a mailinglist or similar"
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-send</code> [<i>-L</i> /path/to/list | <i>-l</i> listctrl] <i>-m</i> /path/to/mail [<i>-a</i>] [<i>-D</i>] [<i>-F</i>] [<i>-h</i>] [<i>-o</i>] [<i>-r</i>] [<i>-R</i>] [<i>-s</i>] [<i>-T</i>] [<i>-V</i>]</p>
 <dl>
-<dt> <code>-a</code>: Don&#8217;t archive the mail</p>
-<dt> <code>-D</code>: Don&#8217;t delete the mail after it&#8217;s sent</p>
-<dt> <code>-F</code>: What to use as MAIL FROM:</p>
-<dt> <code>-h</code>: This help</p>
-<dt> <code>-l</code>: List control variable.</p>
-<dt> <code>-L</code>: Full path to list directory</p>
-<dt> <code>-m</code>: Full path to mail file</p>
-<dt> <code>-o</code>: Address to omit from distribution (normal mail only)</p>
-<dt> <code>-r</code>: Relayhost IP address (defaults to 127.0.0.1)</p>
-<dt> <code>-R</code>: What to use as Reply-To: header</p>
-<dt> <code>-s</code>: Subscribers file name</p>
-<dt> <code>-T</code>: What to use as RCPT TO:</p>
-<dt> <code>-V</code>: Print version</dl>
+<dt> <code>-a</code>: Don&#8217;t archive the mail</dt>
+<dt> <code>-D</code>: Don&#8217;t delete the mail after it&#8217;s sent</dt>
+<dt> <code>-F</code>: What to use as MAIL FROM:</dt>
+<dt> <code>-h</code>: This help</dt>
+<dt> <code>-l</code>: List control variable.</dt>
+<dt> <code>-L</code>: Full path to list directory</dt>
+<dt> <code>-m</code>: Full path to mail file</dt>
+<dt> <code>-o</code>: Address to omit from distribution (normal mail only)</dt>
+<dt> <code>-r</code>: Relayhost IP address (defaults to 127.0.0.1)</dt>
+<dt> <code>-R</code>: What to use as Reply-To: header</dt>
+<dt> <code>-s</code>: Subscribers file name</dt>
+<dt> <code>-T</code>: What to use as RCPT TO:</dt>
+<dt> <code>-V</code>: Print version</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This binary is used to send all kinds of mail to mlmmj managed mailinglists, but can potentially be used standalone for sending mails. </p>
+<dd>This binary is used to send all kinds of mail to mlmmj managed mailinglists, but can potentially be used standalone for sending mails. </dd>
 <p> The only option that is not self explanatory is the <code>-l</code> list control option:</p>
 <dl>
 <dt>
-<dd> &#8216;1&#8217; means &#8216;send a single mail&#8217; </p>
+</dt><dd> &#8216;1&#8217; means &#8216;send a single mail&#8217; </dd>
 <p> This is used together with <code>-F</code> and <code>-T</code> to send one mail to one recipient. </p>
 <p> &#8216;2&#8217; means &#8216;mail to moderators&#8217; </p>
 <p> Used for sending mails to the moderators of a list. </p>
@@ -45,8 +45,8 @@ description: "mlmmj-send – send mail to a mailinglist or similar"
 <p> This manual page was written by the following persons:</p>
 <dl>
 <dt>
-<dd>S&oslash;ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</p>
+</dt><dd>S&oslash;ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</dd>
 <dt>
-<dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </p>
+</dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
 <h2>Index</h2>

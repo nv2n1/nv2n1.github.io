@@ -14,12 +14,12 @@ description: "printenv – print all or part of environment"
 <h2>DESCRIPTION</h2>
 <p> Print the values of the specified environment VARIABLE(s). If no VARIABLE is specified, print name and value pairs for them all.</p>
 <dl>
-<dt><code>-0</code>, <code>&#8211;null</code></p>
-<dd> end each output line with NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-0</code>, <code>&#8211;null</code></dt>
+<dd> end each output line with NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> NOTE: your shell may have its own version of printenv, which usually supersedes the version described here. Please refer to your shell&#8217;s documentation for details about the options it supports.</p>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Richard Mlynarik.</p>

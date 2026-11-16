@@ -11,10 +11,8 @@ std::experimental::conjunction - std::experimental::conjunction
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / type_traits&gt;
-
     template &lt;class... B&gt;
     (library fundamentals TS v2)
-
         struct conjunction;</code></pre> 
 Forms the logical_conjunction of the type traits B..., effectively performing a logical AND on the sequence of traits. 
 The specialization std::experimental::conjunction&lt;B1, ..., BN&gt; has a public and unambiguous base that is 
@@ -53,11 +51,8 @@ A specialization of conjunction does not necessarily inherit from either std::tr
 <h2>Example</h2>
 
 // Run this code <pre><code>// func is enabled if all Ts... have the same type
-
 template &lt;typename T, typename... Ts&gt;
-
 std::enable_if_t&lt;std::experimental::conjunction_v&lt;std::is_same&lt;T, Ts&gt;...&gt;&gt;
-
 func(T, Ts...)
 {
     // TODO something to show

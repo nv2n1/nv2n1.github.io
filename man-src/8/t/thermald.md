@@ -25,39 +25,39 @@ description: "thermald – start Linux thermal daemon"
 <p> There is another companion tool &quot;ThermalMonitor&quot;, which presents a graphical front end. This allows the monitoring of sensors and changing of thermal trips to give the user more control. The source code of &quot;ThermalMonitor&quot; is a part of the thermald github source, in the tools folder.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show help options.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print thermald version and exit.</p>
-<dt><code>&#8211;no-daemon</code></p>
-<dd>Don&#8217;t become a daemon: Default is daemon mode.</p>
-<dt><code>&#8211;loglevel=info</code></p>
-<dd>log severity: info level and up.</p>
-<dt><code>&#8211;loglevel=debug</code></p>
-<dd>log severity: debug level and up: Max logging.</p>
-<dt><code>&#8211;poll-interval</code></p>
-<dd>Poll interval in seconds: Poll for zone temperature changes. To disable polling, set to zero. Polling can only be disabled, if available temperature sensors can notify temperature change asynchronously.</p>
-<dt><code>&#8211;dbus-enable</code></p>
-<dd>Enable Dbus.</p>
-<dt><code>&#8211;exclusive-control</code></p>
-<dd>Act as exclusive thermal controller. This will use user-space governor for thermal sysfs and take over control.</p>
-<dt><code>&#8211;ignore-cpuid-check</code></p>
-<dd>Ignore cpuid check for supported CPU models.</p>
-<dt><code>&#8211;config-file</code></p>
-<dd>Specify thermal-conf.xml path and ignore default thermal-conf.xml.</p>
-<dt><code>&#8211;ignore-default-control</code></p>
-<dd>Ignore default CPU temperature control. Strictly follow thermal-conf.xml or thermal-conf.xml.auto.</p>
-<dt><code>&#8211;workaround-enabled</code></p>
-<dd>Enable special workarounds for RAPL MMIO power limit and TCC offset every 30 seconds. This helps to disable RAPL MMIO when not used and adjust TCC offset in certain Lenovo laptops.</p>
-<dt><code>&#8211;disable-active-power</code></p>
-<dd>Disable active power management. This will not set active power limits using RAPL MMIO. This may result in constrained performance, if the system boots up with lower power limits.</p>
-<dt><code>&#8211;adaptive</code></p>
-<dd>Use DPTF adaptive tables when present. This will ignore thermald config via xml files.</p>
-<dt><code>&#8211;test-mode</code></p>
-<dd>Force use adaptive mode and exit if not supported, instead of restarting in non adaptive mode. This option is primarily for developers.</p>
-<dt><code>&#8211;systemd</code></p>
-<dd>Assume that thermald is started by systemd. This will prevent running as daemon irrespective of &#8211;no-daemon option.</p>
-<dt><code>&#8211;ignore-critical-trip</code></p>
-<dd>If the configuration defined a critical temperature point, which is too low, this option will avoid shutting down the system on reaching this temperature limit.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show help options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print thermald version and exit.</dd>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd>Don&#8217;t become a daemon: Default is daemon mode.</dd>
+<dt><code>&#8211;loglevel=info</code></dt>
+<dd>log severity: info level and up.</dd>
+<dt><code>&#8211;loglevel=debug</code></dt>
+<dd>log severity: debug level and up: Max logging.</dd>
+<dt><code>&#8211;poll-interval</code></dt>
+<dd>Poll interval in seconds: Poll for zone temperature changes. To disable polling, set to zero. Polling can only be disabled, if available temperature sensors can notify temperature change asynchronously.</dd>
+<dt><code>&#8211;dbus-enable</code></dt>
+<dd>Enable Dbus.</dd>
+<dt><code>&#8211;exclusive-control</code></dt>
+<dd>Act as exclusive thermal controller. This will use user-space governor for thermal sysfs and take over control.</dd>
+<dt><code>&#8211;ignore-cpuid-check</code></dt>
+<dd>Ignore cpuid check for supported CPU models.</dd>
+<dt><code>&#8211;config-file</code></dt>
+<dd>Specify thermal-conf.xml path and ignore default thermal-conf.xml.</dd>
+<dt><code>&#8211;ignore-default-control</code></dt>
+<dd>Ignore default CPU temperature control. Strictly follow thermal-conf.xml or thermal-conf.xml.auto.</dd>
+<dt><code>&#8211;workaround-enabled</code></dt>
+<dd>Enable special workarounds for RAPL MMIO power limit and TCC offset every 30 seconds. This helps to disable RAPL MMIO when not used and adjust TCC offset in certain Lenovo laptops.</dd>
+<dt><code>&#8211;disable-active-power</code></dt>
+<dd>Disable active power management. This will not set active power limits using RAPL MMIO. This may result in constrained performance, if the system boots up with lower power limits.</dd>
+<dt><code>&#8211;adaptive</code></dt>
+<dd>Use DPTF adaptive tables when present. This will ignore thermald config via xml files.</dd>
+<dt><code>&#8211;test-mode</code></dt>
+<dd>Force use adaptive mode and exit if not supported, instead of restarting in non adaptive mode. This option is primarily for developers.</dd>
+<dt><code>&#8211;systemd</code></dt>
+<dd>Assume that thermald is started by systemd. This will prevent running as daemon irrespective of &#8211;no-daemon option.</dd>
+<dt><code>&#8211;ignore-critical-trip</code></dt>
+<dd>If the configuration defined a critical temperature point, which is too low, this option will avoid shutting down the system on reaching this temperature limit.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-thermal-conf-xml/">thermal-conf.xml</a>(5) </p>

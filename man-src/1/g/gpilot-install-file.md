@@ -16,10 +16,10 @@ description: "gpilot-install-file – gnome-pilot file conduit scheduler"
 <h2>OPTIONS</h2>
 <p> In addition to a list of files to be installed <code>gpilot-install-file</code> takes the following options:</p>
 <dl>
-<dt><code>&#8211;now</code></p>
-<dd> Schedule the file(s) for installation and wait for the user to synchronise immediately.</p>
-<dt><code>&#8211;later</code></p>
-<dd> Schedule the file(s) for installation and exit. The files will be installed at the next synchronization.</dl>
+<dt><code>&#8211;now</code></dt>
+<dd> Schedule the file(s) for installation and wait for the user to synchronise immediately.</dd>
+<dt><code>&#8211;later</code></dt>
+<dd> Schedule the file(s) for installation and exit. The files will be installed at the next synchronization.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>gpilot-applet</code>(1), <code>gpilotd</code>(1), <code>file-conduit-control-applet</code>(1).</p>
 <h2>AUTHOR</h2>

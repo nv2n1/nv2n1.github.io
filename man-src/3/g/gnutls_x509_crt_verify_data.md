@@ -14,14 +14,14 @@ description: "gnutls_x509_crt_verify_data – API function"
 <p> <code>int gnutls_x509_crt_verify_data(gnutls_x509_crt_t </code><i>crt</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, const gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> Holds the certificate</p>
-<dt>unsigned int flags</p>
-<dd> should be 0 for now</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> holds the data to be signed</p>
-<dt>const gnutls_datum_t * signature</p>
-<dd> contains the signature</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> Holds the certificate</dd>
+<dt>unsigned int flags</dt>
+<dd> should be 0 for now</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> holds the data to be signed</dd>
+<dt>const gnutls_datum_t * signature</dt>
+<dd> contains the signature</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will verify the given signed data, using the parameters from the certificate. </p>
 <p> Deprecated. This function cannot be easily used securely. Use <code>gnutls_pubkey_verify_data2()</code> instead.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_crt_verify_data – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

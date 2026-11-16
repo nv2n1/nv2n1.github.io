@@ -37,32 +37,23 @@ url: "/docs/linux/man/3-sdsdot/"
  <b>SDSDOT</b> <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
- 
-
- 
-&nbsp;<wbr></dl>
+</dt><dd> 
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  

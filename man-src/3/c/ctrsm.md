@@ -18,7 +18,7 @@ description: "ctrsm.f –"
 <p> <code>CTRSM</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CTRSM  solves one of the matrix equations
     op( A )*X = alpha*B,   or   X*op( A ) = alpha*B,
@@ -27,11 +27,11 @@ description: "ctrsm.f –"
     op( A ) = A   or   op( A ) = A**T   or   op( A ) = A**H.
  The matrix X is overwritten on B.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
            On entry, SIDE specifies whether op( A ) appears on the left
@@ -126,18 +126,18 @@ description: "ctrsm.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 3 Blas routine.
   -- Written on 8-February-1989.
@@ -146,8 +146,9 @@ description: "ctrsm.f –"
      Jeremy Du Croz, Numerical Algorithms Group Ltd.
      Sven Hammarling, Numerical Algorithms Group Ltd.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 181 of file ctrsm.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

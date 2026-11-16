@@ -15,11 +15,11 @@ pci_pme_active - enable or disable PCI device's PME# function
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to handle.</dl>
+<dl><dd></dd><dd>PCI device to handle.</dd></dl>
  
 
  <i>enable</i>
-<dl><dd>'true' to enable PME# generation; 'false' to disable it.</dl>
+<dl><dd>'true' to enable PME# generation; 'false' to disable it.</dd></dl>
 
 <h2>Description</h2>
 

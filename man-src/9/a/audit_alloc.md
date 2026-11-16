@@ -15,7 +15,7 @@ audit_alloc - allocate an audit context block for a task
 <h2>Arguments</h2>
 
 <i>tsk</i>
-<dl><dd><dd>task</dl>
+<dl><dd></dd><dd>task</dd></dl>
 
 <h2>Description</h2>
 

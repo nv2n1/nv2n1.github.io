@@ -23,13 +23,13 @@ description: "Gradient Object Type Functions – Functions that set or get a gra
 <dl COMPACT>
 <dd><i>obj</i> The given gradient object.<br />
  <i>name</i> Pointer to a character pointer to store the pointer to the type name in.<br />
- <i>params</i> Pointer to a character pointer to store the pointer to the type params string in.</dl>
+ <i>params</i> Pointer to a character pointer to store the pointer to the type params string in.</dd></dl>
 <h3>EAPI void evas_object_gradient_type_set (<code>Evas_Object</code> * obj, const char * name, const char * params)</h3>
 <p>Sets the geometric type displayed by the given gradient object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given gradient object.<br />
  <i>name</i> Name of the geometric type that the gradient is to be drawn as.<br />
- <i>params</i> List of allowable params that the given gradient type allows. Can be NULL.</dl>
+ <i>params</i> List of allowable params that the given gradient type allows. Can be NULL.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

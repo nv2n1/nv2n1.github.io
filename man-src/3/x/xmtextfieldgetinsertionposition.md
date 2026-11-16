@@ -15,8 +15,8 @@ description: "XmTextFieldGetInsertionPosition — A TextField function that acce
 <h2>Description</h2>
 <p><code>XmTextFieldGetInsertionPosition</code> accesses the insertion cursor position of the TextField widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns an <code>XmTextPosition</code> value that indicates the state of the <code>XmNcursorPosition</code> resource. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</p>

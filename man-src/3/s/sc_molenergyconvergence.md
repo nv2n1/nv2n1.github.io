@@ -24,9 +24,6 @@ description: "sc::MolEnergyConvergence –"
  <i>Return nonzero if the optimization has converged. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void set_defaults ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>MolecularEnergy</code> &gt; <code>mole_</code> </p>
 <p> int <code>cartesian_</code></p>
@@ -34,11 +31,11 @@ Protected Attributes</code></pre>
 <h3>sc::MolEnergyConvergence::MolEnergyConvergence (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. In addition to the keywords read by <code>Convergence</code>, the following keywords are examined: </p>
 <dl>
-<dt>energy</p>
-<dd>The <code>MolecularEnergy</code> object. This is required.</dl>
+<dt>energy</dt>
+<dd>The <code>MolecularEnergy</code> object. This is required.</dd></dl>
 <dl>
-<dt>cartesian</p>
-<dd>If true, cartesian displacements and gradients will be compared to the convergence criteria. The default is true.</dl>
+<dt>cartesian</dt>
+<dd>If true, cartesian displacements and gradients will be compared to the convergence criteria. The default is true.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void sc::MolEnergyConvergence::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

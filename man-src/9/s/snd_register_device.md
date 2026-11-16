@@ -14,22 +14,22 @@ description: "snd_register_device – Register the ALSA device file for the card
 <p><i>type</i></p>
 <dl>
 <dd>
-<dd>the device type, SNDRV_DEVICE_TYPE_XXX</dl>
+</dd><dd>the device type, SNDRV_DEVICE_TYPE_XXX</dd></dl>
 <p> <i>card</i></p>
 <dl>
-<dd>the card instance</dl>
+<dd>the card instance</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>the device index</dl>
+<dd>the device index</dd></dl>
 <p> <i>f_ops</i></p>
 <dl>
-<dd>the file operations</dl>
+<dd>the file operations</dd></dl>
 <p> <i>private_data</i></p>
 <dl>
-<dd>user pointer for f_ops-&gt;<code>open</code></dl>
+<dd>user pointer for f_ops-&gt;<code>open</code></dd></dl>
 <p> <i>device</i></p>
 <dl>
-<dd>the device to register</dl>
+<dd>the device to register</dd></dl>
 <h2>Description</h2>
 <p>Registers an ALSA device file for the given card. The operators have to be set in reg parameter.</p>
 <h2>Return</h2>

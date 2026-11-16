@@ -11,41 +11,41 @@ description: "resolve_stack_dump – resolve numeric stack trace dump to symbols
 <p> resolve_stack_dump &#8211; resolve numeric stack trace dump to symbols </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>resolve_stack_dump [</code><i>options</i><code>] </code><i>symbols_file</i><code> [</code><i>numeric_dump_file</i><code>]</code></dl>
+<dt> <code>resolve_stack_dump [</code><i>options</i><code>] </code><i>symbols_file</i><code> [</code><i>numeric_dump_file</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>resolve_stack_dump</code></p>
-<dd>resolves a numeric stack dump to symbols. </p>
+<dd>resolves a numeric stack dump to symbols. </dd>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> <code>resolve_stack_dump</code> is deprecated and is removed in MySQL 8.0. Stack traces from official MySQL builds are always symbolized, so there is no need to use <code>resolve_stack_dump</code>. </p>
 </dl>
 <p> Invoke <code>resolve_stack_dump</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt; resolve_stack_dump[options] symbols_file[numeric_dump_file]
 </code></pre>
-</dl>
+</dd></dl>
 <p> The symbols file should include the output from the <code>nm &#8211;numeric-sort mysqld</code> command. The numeric dump file should contain a numeric stack track from <code>mysqld</code>. If no numeric dump file is named on the command line, the stack trace is read from the standard input. </p>
 <p> <code>resolve_stack_dump</code> supports the following options. </p>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;help</code>, <code>-h</code> </p>
+</dt><dd> &bull; <code>&#8211;help</code>, <code>-h</code> </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;numeric-dump-file=</code><i>file_name</i>, <code>-n </code><i>file_name</i> </p>
+</dt><dd> &bull; <code>&#8211;numeric-dump-file=</code><i>file_name</i>, <code>-n </code><i>file_name</i> </dd>
 <p> Read the stack trace from the given file.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;symbols-file=</code><i>file_name</i>, <code>-s </code><i>file_name</i> </p>
+</dt><dd> &bull; <code>&#8211;symbols-file=</code><i>file_name</i>, <code>-s </code><i>file_name</i> </dd>
 <p> Use the given symbols file.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;version</code>, <code>-V</code> </p>
+</dt><dd> &bull; <code>&#8211;version</code>, <code>-V</code> </dd>
 <p> Display version information and exit.</dl>
 <p> For more information, see Section 28.5.1.5, &#8220;Using a Stack Trace&#8221;.</p>
 <h2>COPYRIGHT</h2>
@@ -58,3 +58,4 @@ shell &gt; resolve_stack_dump[options] symbols_file[numeric_dump_file]
 <h2>AUTHOR</h2>
 <p> Oracle Corporation (<a rel="nofollow" href="http://dev.mysql.com/">http://dev.mysql.com/</a>). </p>
 <h2>Index</h2>
+</p>

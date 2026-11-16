@@ -28,12 +28,12 @@ char *
 <code>Tcl_DStringGetResult</code>(<i>interp, dsPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_DString <i>*dsPtr</i> (in/out) Pointer to structure that is used to manage a dynamic string.</p>
-<dd>const char <i>*bytes</i> (in) Pointer to characters to append to dynamic string.</p>
-<dd>const char <i>*element</i> (in) Pointer to characters to append as list element to dynamic string.</p>
-<dd>int <i>length</i> (in) Number of bytes from <i>bytes</i> to add to dynamic string. If -1, add all characters up to null terminating character.</p>
-<dd>int <i>newLength</i> (in) New length for dynamic string, not including null terminating character.</p>
-<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter whose result is to be set from or moved to the dynamic string. </p>
+<dd>Tcl_DString <i>*dsPtr</i> (in/out) Pointer to structure that is used to manage a dynamic string.</dd>
+<dd>const char <i>*bytes</i> (in) Pointer to characters to append to dynamic string.</dd>
+<dd>const char <i>*element</i> (in) Pointer to characters to append as list element to dynamic string.</dd>
+<dd>int <i>length</i> (in) Number of bytes from <i>bytes</i> to add to dynamic string. If -1, add all characters up to null terminating character.</dd>
+<dd>int <i>newLength</i> (in) New length for dynamic string, not including null terminating character.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter whose result is to be set from or moved to the dynamic string. </dd>
 </dl>
 <h2>Description</h2>
 <p>Dynamic strings provide a mechanism for building up arbitrarily long strings by gradually appending information. If the dynamic string is short then there will be no memory allocation overhead; as the string gets larger, additional space will be allocated as needed. </p>

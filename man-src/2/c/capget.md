@@ -43,27 +43,25 @@ description: "capget, capset – set/get capabilities of thread(s)"
 <p> The calls fail with the error <code>EINVAL</code>, and set the <i>version</i> field of <i>hdrp</i> to the kernel preferred value of <code>_LINUX_CAPABILITY_VERSION_?</code> when an unsupported <i>version</i> value is specified. In this way, one can probe what the current preferred capability revision is.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Bad memory address. <i>hdrp</i> must not be NULL. <i>datap</i> may be NULL only when the user is trying to determine the preferred capability version format supported by the kernel.</p>
-<dt><code>EINVAL</code></p>
-<dd> One of the arguments was invalid.</p>
-<dt><code>EPERM</code></p>
-<dd> An attempt was made to add a capability to the permitted set, or to set a capability in the effective set that is not in the permitted set.</p>
-<dt><code>EPERM</code></p>
-<dd> An attempt was made to add a capability to the inheritable set, and either:</p>
+<dt><code>EFAULT</code></dt>
+<dd> Bad memory address. <i>hdrp</i> must not be NULL. <i>datap</i> may be NULL only when the user is trying to determine the preferred capability version format supported by the kernel.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> One of the arguments was invalid.</dd>
+<dt><code>EPERM</code></dt>
+<dd> An attempt was made to add a capability to the permitted set, or to set a capability in the effective set that is not in the permitted set.</dd>
+<dt><code>EPERM</code></dt>
+<dd> An attempt was made to add a capability to the inheritable set, and either:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> that capability was not in the caller&#8217;s bounding set; or</p>
-<dt>*</p>
-<dd> the capability was not in the caller&#8217;s permitted set and the caller lacked the <code>CAP_SETPCAP</code> capability in its effective set.</dl>
+<dt>*</dt>
+<dd> that capability was not in the caller&#8217;s bounding set; or</dd>
+<dt>*</dt>
+<dd> the capability was not in the caller&#8217;s permitted set and the caller lacked the <code>CAP_SETPCAP</code> capability in its effective set.</dd></dl>
 </dl>
-<dt><code>EPERM</code></p>
-<dd> The caller attempted to use <code>capset</code>() to modify the capabilities of a thread other than itself, but lacked sufficient privilege. For kernels supporting VFS capabilities, this is never permitted. For kernels lacking VFS support, the <code>CAP_SETPCAP</code> capability is required. (A bug in kernels before 2.6.11 meant that this error could also occur if a thread without this capability tried to change its own capabilities by specifying the <i>pid</i> field as a nonzero value (i.e., the value returned by <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2)) instead of 0.)</p>
-<dt><code>ESRCH</code></p>
-<dd> No such thread.</dl>
+<dt><code>EPERM</code></dt>
+<dd> The caller attempted to use <code>capset</code>() to modify the capabilities of a thread other than itself, but lacked sufficient privilege. For kernels supporting VFS capabilities, this is never permitted. For kernels lacking VFS support, the <code>CAP_SETPCAP</code> capability is required. (A bug in kernels before 2.6.11 meant that this error could also occur if a thread without this capability tried to change its own capabilities by specifying the <i>pid</i> field as a nonzero value (i.e., the value returned by <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2)) instead of 0.)</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No such thread.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> These system calls are Linux-specific.</p>
 <h2>NOTES</h2>

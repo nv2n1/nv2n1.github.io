@@ -11,7 +11,6 @@ std::rename - std::rename
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int rename(const char *old_filename, const char *new_filename);</code></pre> 
 Changes the filename of a file. The file is identified by character string pointed to by old_filename. The new filename is identified by character string pointed to by new_filename. 
 If new_filename exists, the behavior is implementation-defined. 
@@ -32,13 +31,9 @@ POSIX specifies many additional details on the semantics of this function, which
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdio&gt;
-
 int main()
-
 {
     bool ok{std::ofstream(&quot;from.txt&quot;).put('a')}; // create and write to file
     if (!ok) {

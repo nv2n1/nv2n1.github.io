@@ -15,7 +15,7 @@ xprt_unregister_transport - unregister a transport implementation
 <h2>Arguments</h2>
 
 <i>transport</i>
-<dl><dd><dd>transport to unregister</dl>
+<dl><dd></dd><dd>transport to unregister</dd></dl>
 
 <h2>Return</h2>
 

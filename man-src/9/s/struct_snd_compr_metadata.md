@@ -18,11 +18,11 @@ struct_snd_compr_metadata - compressed stream metadata
 <h2>Members</h2>
 
 key
-<dl><dd>key id</dl>
+<dl><dd>key id</dd></dl>
  
 
  value[8]
-<dl><dd>key value</dl>
+<dl><dd>key value</dd></dl>
 
 <h2>Copyright</h2>
 

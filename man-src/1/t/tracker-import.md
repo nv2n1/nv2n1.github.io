@@ -17,15 +17,15 @@ description: "tracker-import – Imports Turtle file data into the database"
 <p> The <i>FILE</i> argument can be either a local path or a URI. It also does not have to be an absolute path. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print version. </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print version. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-sparql/">tracker-sparql</a></code>(1), <code><a href="/docs/linux/man/1-tracker-info/">tracker-info</a></code>(1).</p>
 <dl>
-<dt><code>Turtle.</code></p>
+<dt><code>Turtle.</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -16,12 +16,12 @@ description: "ncftpbatch – Individual batch FTP job processor"
 <h2>OPTIONS</h2>
 <h3>Command line flags:</h3>
 <dl>
-<dt><code>-d</code></p>
-<dd> Begin background processing of FTP jobs in the current user&#8217;s $HOME/.ncftp/spool directory. This returns immediately, because a daemon process is spawned and ran in the background.</p>
-<dt><code>-l</code></p>
-<dd> Lists the contents of the user&#8217;s job queue.</p>
-<dt><code>-D</code></p>
-<dd> This is like <code>-d</code>, except that the process does not become a daemon.</dl>
+<dt><code>-d</code></dt>
+<dd> Begin background processing of FTP jobs in the current user&#8217;s $HOME/.ncftp/spool directory. This returns immediately, because a daemon process is spawned and ran in the background.</dd>
+<dt><code>-l</code></dt>
+<dd> Lists the contents of the user&#8217;s job queue.</dd>
+<dt><code>-D</code></dt>
+<dd> This is like <code>-d</code>, except that the process does not become a daemon.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This program is responsible for processing background FTP requests. It is normally only run by <i>ncftp</i> and not manually by a human being, however you can run it to manually process the FTP job queue. </p>
 <p> The jobs are spool files written to a user&#8217;s $HOME/.ncftp/spool directory and have a special format and file-naming convention (which contains when the job is to be run). <i>ncftp</i> runs this program when it needs to, but if the <i>ncftpbatch</i> daemon dies unexpectedly the jobs that are left in the queue will not be processed until another instance of <i>ncftpbatch</i> is run. </p>

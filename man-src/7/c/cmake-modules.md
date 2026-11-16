@@ -28,7 +28,7 @@ android_add_test_data(
 <p>At build time a test named &quot;example_setup_test&quot; will be created. Run this test on the command line with <code><a href="/docs/linux/man/1-ctest/">ctest</a>(1)</code> to load the data onto the Android device.</p>
 <h3>Module Functions</h3>
 <dl>
-<dt><code>android_add_test_data</code></p>
+<dt><code>android_add_test_data</code></dt>
 <dd>
 <pre>android_add_test_data(&lt;test-name&gt;
  [FILES &lt;files&gt;...] [FILES_DEST &lt;device-dir&gt;]
@@ -39,20 +39,20 @@ android_add_test_data(
  )</pre>
 <p>The <code>android_add_test_data</code> function is used to copy files and libraries needed to run project-specific tests. On the host operating system, this is done at build time. For on-device testing, the files are loaded onto the device by the manufactured test at run time. </p>
 <p> This function accepts the following named parameters:</p>
-<dt><code>FILES &lt;files&gt;&#8230;</code></p>
-<dd>zero or more files needed for testing</p>
-<dt><code>LIBS &lt;libs&gt;&#8230;</code></p>
-<dd>zero or more libraries needed for testing</p>
-<dt><code>FILES_DEST &lt;device-dir&gt;</code></p>
-<dd>absolute path where the data files are expected to be</p>
-<dt><code>LIBS_DEST &lt;device-dir&gt;</code></p>
-<dd>absolute path where the libraries are expected to be</p>
-<dt><code>DEVICE_OBJECT_STORE &lt;device-dir&gt;</code></p>
-<dd>absolute path to the location where the data is stored on-device</p>
-<dt><code>DEVICE_TEST_DIR &lt;device-dir&gt;</code></p>
-<dd>absolute path to the root directory of the on-device test location</p>
-<dt><code>NO_LINK_REGEX &lt;strings&gt;&#8230;</code></p>
-<dd>list of regex strings matching the names of files that should be copied from the object store to the testing directory</dl>
+</dd><dt><code>FILES &lt;files&gt;&#8230;</code></dt>
+<dd>zero or more files needed for testing</dd>
+<dt><code>LIBS &lt;libs&gt;&#8230;</code></dt>
+<dd>zero or more libraries needed for testing</dd>
+<dt><code>FILES_DEST &lt;device-dir&gt;</code></dt>
+<dd>absolute path where the data files are expected to be</dd>
+<dt><code>LIBS_DEST &lt;device-dir&gt;</code></dt>
+<dd>absolute path where the libraries are expected to be</dd>
+<dt><code>DEVICE_OBJECT_STORE &lt;device-dir&gt;</code></dt>
+<dd>absolute path to the location where the data is stored on-device</dd>
+<dt><code>DEVICE_TEST_DIR &lt;device-dir&gt;</code></dt>
+<dd>absolute path to the root directory of the on-device test location</dd>
+<dt><code>NO_LINK_REGEX &lt;strings&gt;&#8230;</code></dt>
+<dd>list of regex strings matching the names of files that should be copied from the object store to the testing directory</dd></dl>
 <h3>BundleUtilities</h3>
 <p>Functions to help assemble a standalone bundle application. </p>
 <p> A collection of CMake utility functions useful for dealing with <code>.app</code> bundles on the Mac and bundle-like directories on any OS. </p>
@@ -127,150 +127,150 @@ verify_bundle_symlinks</pre>
 <h3>CheckCCompilerFlag</h3>
 <p>Check whether the C compiler supports a given flag.</p>
 <dl>
-<dt><code>check_c_compiler_flag</code></p>
+<dt><code>check_c_compiler_flag</code></dt>
 <dd>
 <pre>check_c_compiler_flag(&lt;flag&gt; &lt;var&gt;)</pre>
 <p>Check that the <code>&lt;flag&gt;</code> is accepted by the compiler without a diagnostic. Stores the result in an internal cache entry named <code>&lt;var&gt;</code>. </p>
 <p> This command temporarily sets the <code>CMAKE_REQUIRED_DEFINITIONS</code> variable and calls the <code>check_c_source_compiles</code> macro from the <code>CheckCSourceCompiles</code> module. See documentation of that module for a listing of variables that can otherwise modify the build. </p>
 <p> A positive result from this check indicates only that the compiler did not issue a diagnostic message when given the flag. Whether the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_C_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dl>
+<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_C_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dd></dl>
 <h3>CheckCompilerFlag</h3>
 <p>New in version 3.19. </p>
 <p> Check whether the compiler supports a given flag.</p>
 <dl>
-<dt><code>check_compiler_flag</code></p>
+<dt><code>check_compiler_flag</code></dt>
 <dd>
 <pre>check_compiler_flag(&lt;lang&gt; &lt;flag&gt; &lt;var&gt;)</pre>
 <p>Check that the <code>&lt;flag&gt;</code> is accepted by the compiler without a diagnostic. Stores the result in an internal cache entry named <code>&lt;var&gt;</code>. </p>
 <p> This command temporarily sets the <code>CMAKE_REQUIRED_DEFINITIONS</code> variable and calls the <code>check_source_compiles(&lt;LANG&gt;)</code> function from the <code>CheckSourceCompiles</code> module. See documentation of that module for a listing of variables that can otherwise modify the build. </p>
 <p> A positive result from this check indicates only that the compiler did not issue a diagnostic message when given the flag. Whether the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_&lt;LANG&gt;_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dl>
+<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_&lt;LANG&gt;_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dd></dl>
 <h3>CheckCSourceCompiles</h3>
 <p>Check if given C source compiles and links into an executable.</p>
 <dl>
-<dt><code>check_c_source_compiles</code></p>
+<dt><code>check_c_source_compiles</code></dt>
 <dd>
 <pre>check_c_source_compiles(&lt;code&gt; &lt;resultVar&gt;
  [FAIL_REGEX &lt;regex1&gt; [&lt;regex2&gt;...]])</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a C source file and linked as an executable (so it must contain at least a <code>main()</code> function). The result will be stored in the internal cache variable specified by <code>&lt;resultVar&gt;</code>, with a boolean true value for success and boolean false for failure. If <code>FAIL_REGEX</code> is provided, then failure is determined by checking if anything in the output matches any of the specified regular expressions. </p>
 <p> The underlying check is performed by the <code>try_compile()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_c_source_compiles()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_C_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_C_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1. </p>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1. </dd>
 <p> If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckCSourceRuns</h3>
 <p>Check if given C source compiles and links into an executable and can subsequently be run.</p>
 <dl>
-<dt><code>check_c_source_runs</code></p>
+<dt><code>check_c_source_runs</code></dt>
 <dd>
 <pre>check_c_source_runs(&lt;code&gt; &lt;resultVar&gt;)</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a C source file, linked as an executable and then run. The <code>&lt;code&gt;</code> must contain at least a <code>main()</code> function. If the <code>&lt;code&gt;</code> could be built and run successfully, the internal cache variable specified by <code>&lt;resultVar&gt;</code> will be set to 1, otherwise it will be set to an value that evaluates to boolean false (e.g. an empty string or an error message). </p>
 <p> The underlying check is performed by the <code>try_run()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_c_source_runs()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_C_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_C_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1. </p>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1. </dd>
 <p> If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckCXXCompilerFlag</h3>
 <p>Check whether the CXX compiler supports a given flag.</p>
 <dl>
-<dt><code>check_cxx_compiler_flag</code></p>
+<dt><code>check_cxx_compiler_flag</code></dt>
 <dd>
 <pre>check_cxx_compiler_flag(&lt;flag&gt; &lt;var&gt;)</pre>
 <p>Check that the <code>&lt;flag&gt;</code> is accepted by the compiler without a diagnostic. Stores the result in an internal cache entry named <code>&lt;var&gt;</code>. </p>
 <p> This command temporarily sets the <code>CMAKE_REQUIRED_DEFINITIONS</code> variable and calls the <code>check_cxx_source_compiles</code> macro from the <code>CheckCXXSourceCompiles</code> module. See documentation of that module for a listing of variables that can otherwise modify the build. </p>
 <p> A positive result from this check indicates only that the compiler did not issue a diagnostic message when given the flag. Whether the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_CXX_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dl>
+<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_CXX_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dd></dl>
 <h3>CheckCXXSourceCompiles</h3>
 <p>Check if given C++ source compiles and links into an executable.</p>
 <dl>
-<dt><code>check_cxx_source_compiles</code></p>
+<dt><code>check_cxx_source_compiles</code></dt>
 <dd>
 <pre>check_cxx_source_compiles(&lt;code&gt; &lt;resultVar&gt;
  [FAIL_REGEX &lt;regex1&gt; [&lt;regex2&gt;...]])</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a C++ source file and linked as an executable (so it must contain at least a <code>main()</code> function). The result will be stored in the internal cache variable specified by <code>&lt;resultVar&gt;</code>, with a boolean true value for success and boolean false for failure. If <code>FAIL_REGEX</code> is provided, then failure is determined by checking if anything in the output matches any of the specified regular expressions. </p>
 <p> The underlying check is performed by the <code>try_compile()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_cxx_source_compiles()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_CXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_CXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1. </p>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1. </dd>
 <p> If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckCXXSourceRuns</h3>
 <p>Check if given C++ source compiles and links into an executable and can subsequently be run.</p>
 <dl>
-<dt><code>check_cxx_source_runs</code></p>
+<dt><code>check_cxx_source_runs</code></dt>
 <dd>
 <pre>check_cxx_source_runs(&lt;code&gt; &lt;resultVar&gt;)</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a C++ source file, linked as an executable and then run. The <code>&lt;code&gt;</code> must contain at least a <code>main()</code> function. If the <code>&lt;code&gt;</code> could be built and run successfully, the internal cache variable specified by <code>&lt;resultVar&gt;</code> will be set to 1, otherwise it will be set to an value that evaluates to boolean false (e.g. an empty string or an error message). </p>
 <p> The underlying check is performed by the <code>try_run()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_cxx_source_runs()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_CXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_CXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1. </p>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1. </dd>
 <p> If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckCXXSymbolExists</h3>
 <p>Check if a symbol exists as a function, variable, or macro in <code>C++</code>.</p>
 <dl>
-<dt><code>check_cxx_symbol_exists</code></p>
+<dt><code>check_cxx_symbol_exists</code></dt>
 <dd>
 <pre>check_cxx_symbol_exists(&lt;symbol&gt; &lt;files&gt; &lt;variable&gt;)</pre>
 <p>Check that the <code>&lt;symbol&gt;</code> is available after including given header <code>&lt;files&gt;</code> and store the result in a <code>&lt;variable&gt;</code>. Specify the list of files in one argument as a semicolon-separated list. <code>check_cxx_symbol_exists()</code> can be used to check for symbols as seen by the C++ compiler, as opposed to <code>check_symbol_exists()</code>, which always uses the <code>C</code> compiler. </p>
 <p> If the header files define the symbol as a macro it is considered available and assumed to work. If the header files declare the symbol as a function or variable then the symbol must also be available for linking. If the symbol is a type, enum value, or C++ template it will not be recognized: consider using the <code>CheckTypeSize</code> or <code>CheckSourceCompiles</code> module instead. </p>
 <p> <code>NOTE:</code> This command is unreliable when <code>&lt;symbol&gt;</code> is (potentially) an overloaded function. Since there is no reliable way to predict whether a given function in the system environment may be defined as an overloaded function or may be an overloaded function on other systems or will become so in the future, it is generally advised to use the <code>CheckCXXSourceCompiles</code> module for checking any function symbol (unless somehow you surely know the checked function is not overloaded on other systems or will not be so in the future). </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>a ;-list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>a ;-list of header search paths to pass to the compiler.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: a ;-list of options to add to the link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>a ;-list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>a ;-list of header search paths to pass to the compiler.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: a ;-list of options to add to the link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 <p> For example: </p>
 <pre>include(CheckCXXSymbolExists)
 # Check for macro SEEK_SET
@@ -282,35 +282,35 @@ check_cxx_symbol_exists(std::fopen &quot;cstdio&quot; HAVE_STD_FOPEN)</pre>
 <p>New in version 3.3. </p>
 <p> Check whether the Fortran compiler supports a given flag.</p>
 <dl>
-<dt><code>check_fortran_compiler_flag</code></p>
+<dt><code>check_fortran_compiler_flag</code></dt>
 <dd>
 <pre>check_fortran_compiler_flag(&lt;flag&gt; &lt;var&gt;)</pre>
 <p>Check that the <code>&lt;flag&gt;</code> is accepted by the compiler without a diagnostic. Stores the result in an internal cache entry named <code>&lt;var&gt;</code>. </p>
 <p> This command temporarily sets the <code>CMAKE_REQUIRED_DEFINITIONS</code> variable and calls the <code>check_fortran_source_compiles</code> macro from the <code>CheckFortranSourceCompiles</code> module. See documentation of that module for a listing of variables that can otherwise modify the build. </p>
 <p> A positive result from this check indicates only that the compiler did not issue a diagnostic message when given the flag. Whether the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_Fortran_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dl>
+<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_Fortran_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dd></dl>
 <h3>CheckFortranFunctionExists</h3>
 <p>Check if a Fortran function exists.</p>
 <dl>
-<dt><code>CHECK_FORTRAN_FUNCTION_EXISTS</code></p>
+<dt><code>CHECK_FORTRAN_FUNCTION_EXISTS</code></dt>
 <dd>
 <pre>CHECK_FORTRAN_FUNCTION_EXISTS(&lt;function&gt; &lt;result&gt;)</pre>
 <p>where</p>
-<dt><code>&lt;function&gt;</code></p>
-<dd>the name of the Fortran function</p>
-<dt><code>&lt;result&gt;</code></p>
-<dd>variable to store the result; will be created as an internal cache variable. </p>
+</dd><dt><code>&lt;function&gt;</code></dt>
+<dd>the name of the Fortran function</dd>
+<dt><code>&lt;result&gt;</code></dt>
+<dd>variable to store the result; will be created as an internal cache variable. </dd>
 <p> <code>NOTE:</code> This command does not detect functions in Fortran modules. In general it is recommended to use <code>CheckSourceCompiles</code> instead to determine if a Fortran function or subroutine is available. </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: A ;-list of options to add to the link command (see <code>try_compile()</code> for further details). </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dl>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: A ;-list of options to add to the link command (see <code>try_compile()</code> for further details). </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dd></dl>
 <h3>CheckFortranSourceCompiles</h3>
 <p>New in version 3.1. </p>
 <p> Check if given Fortran source compiles and links into an executable.</p>
 <dl>
-<dt><code>check_fortran_source_compiles</code></p>
+<dt><code>check_fortran_source_compiles</code></dt>
 <dd>
 <pre>check_fortran_source_compiles(&lt;code&gt; &lt;resultVar&gt;
  [FAIL_REGEX &lt;regex&gt;...]
@@ -323,25 +323,25 @@ check_cxx_symbol_exists(std::fopen &quot;cstdio&quot; HAVE_STD_FOPEN)</pre>
 <p> If <code>FAIL_REGEX</code> is provided, then failure is determined by checking if anything in the output matches any of the specified regular expressions. </p>
 <p> By default, the test source file will be given a <code>.F</code> file extension. The <code>SRC_EXT</code> option can be used to override this with <code>.&lt;extension&gt;</code> instead&#8211; <code>.F90</code> is a typical choice. </p>
 <p> The underlying check is performed by the <code>try_compile()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_fortran_source_compiles()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_Fortran_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_Fortran_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckFortranSourceRuns</h3>
 <p>New in version 3.14. </p>
 <p> Check if given Fortran source compiles and links into an executable and can subsequently be run.</p>
 <dl>
-<dt><code>check_fortran_source_runs</code></p>
+<dt><code>check_fortran_source_runs</code></dt>
 <dd>
 <pre>check_fortran_source_runs(&lt;code&gt; &lt;resultVar&gt;
  [SRC_EXT &lt;extension&gt;])</pre>
@@ -351,125 +351,125 @@ check_cxx_symbol_exists(std::fopen &quot;cstdio&quot; HAVE_STD_FOPEN)</pre>
 <p> If the <code>&lt;code&gt;</code> could be built and run successfully, the internal cache variable specified by <code>&lt;resultVar&gt;</code> will be set to 1, otherwise it will be set to an value that evaluates to boolean false (e.g. an empty string or an error message). </p>
 <p> By default, the test source file will be given a <code>.F90</code> file extension. The <code>SRC_EXT</code> option can be used to override this with <code>.&lt;extension&gt;</code> instead. </p>
 <p> The underlying check is performed by the <code>try_run()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_fortran_source_runs()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_Fortran_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_Fortran_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckFunctionExists</h3>
 <p>Check if a C function can be linked</p>
 <dl>
-<dt><code>check_function_exists</code></p>
+<dt><code>check_function_exists</code></dt>
 <dd>
 <pre>check_function_exists(&lt;function&gt; &lt;variable&gt;)</pre>
 <p>Checks that the <code>&lt;function&gt;</code> is provided by libraries on the system and store the result in a <code>&lt;variable&gt;</code>, which will be created as an internal cache variable. </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>a ;-list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>a ;-list of header search paths to pass to the compiler.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: a ;-list of options to add to the link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>a ;-list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>a ;-list of header search paths to pass to the compiler.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: a ;-list of options to add to the link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 <p> <code>NOTE:</code> Prefer using <code>CheckSymbolExists</code> instead of this module, for the following reasons:</p>
-<dt>&bull;</p>
-<dd><code>check_function_exists()</code> can&#8217;t detect functions that are inlined in headers or specified as a macro.</p>
-<dt>&bull;</p>
-<dd><code>check_function_exists()</code> can&#8217;t detect anything in the 32-bit versions of the Win32 API, because of a mismatch in calling conventions.</p>
-<dt>&bull;</p>
-<dd><code>check_function_exists()</code> only verifies linking, it does not verify that the function is declared in system headers.</dl>
+<dt>&bull;</dt>
+<dd><code>check_function_exists()</code> can&#8217;t detect functions that are inlined in headers or specified as a macro.</dd>
+<dt>&bull;</dt>
+<dd><code>check_function_exists()</code> can&#8217;t detect anything in the 32-bit versions of the Win32 API, because of a mismatch in calling conventions.</dd>
+<dt>&bull;</dt>
+<dd><code>check_function_exists()</code> only verifies linking, it does not verify that the function is declared in system headers.</dd></dl>
 <h3>CheckIncludeFileCXX</h3>
 <p>Provides a macro to check if a header file can be included in <code>CXX</code>.</p>
 <dl>
-<dt><code>CHECK_INCLUDE_FILE_CXX</code></p>
+<dt><code>CHECK_INCLUDE_FILE_CXX</code></dt>
 <dd>
 <pre>CHECK_INCLUDE_FILE_CXX(&lt;include&gt; &lt;variable&gt; [&lt;flags&gt;])</pre>
 <p>Check if the given <code>&lt;include&gt;</code> file may be included in a <code>CXX</code> source file and store the result in an internal cache entry named <code>&lt;variable&gt;</code>. The optional third argument may be used to add compilation flags to the check (or use <code>CMAKE_REQUIRED_FLAGS</code> below). </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>a ;-list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>a ;-list of header search paths to pass to the compiler.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: a ;-list of options to add to the link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>a ;-list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>a ;-list of header search paths to pass to the compiler.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: a ;-list of options to add to the link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 <p> See modules <code>CheckIncludeFile</code> and <code>CheckIncludeFiles</code> to check for one or more <code>C</code> headers.</dl>
 <h3>CheckIncludeFile</h3>
 <p>Provides a macro to check if a header file can be included in <code>C</code>.</p>
 <dl>
-<dt><code>CHECK_INCLUDE_FILE</code></p>
+<dt><code>CHECK_INCLUDE_FILE</code></dt>
 <dd>
 <pre>CHECK_INCLUDE_FILE(&lt;include&gt; &lt;variable&gt; [&lt;flags&gt;])</pre>
 <p>Check if the given <code>&lt;include&gt;</code> file may be included in a <code>C</code> source file and store the result in an internal cache entry named <code>&lt;variable&gt;</code>. The optional third argument may be used to add compilation flags to the check (or use <code>CMAKE_REQUIRED_FLAGS</code> below). </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>a ;-list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>a ;-list of header search paths to pass to the compiler.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: a ;-list of options to add to the link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>a ;-list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>a ;-list of header search paths to pass to the compiler.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: a ;-list of options to add to the link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 <p> See the <code>CheckIncludeFiles</code> module to check for multiple headers at once. See the <code>CheckIncludeFileCXX</code> module to check for headers using the <code>CXX</code> language.</dl>
 <h3>CheckIncludeFiles</h3>
 <p>Provides a macro to check if a list of one or more header files can be included together.</p>
 <dl>
-<dt><code>CHECK_INCLUDE_FILES</code></p>
+<dt><code>CHECK_INCLUDE_FILES</code></dt>
 <dd>
 <pre>CHECK_INCLUDE_FILES(&quot;&lt;includes&gt;&quot; &lt;variable&gt; [LANGUAGE &lt;language&gt;])</pre>
 <p>Check if the given <code>&lt;includes&gt;</code> list may be included together in a source file and store the result in an internal cache entry named <code>&lt;variable&gt;</code>. Specify the <code>&lt;includes&gt;</code> argument as a ;-list of header file names. </p>
 <p> If <code>LANGUAGE</code> is set, the specified compiler will be used to perform the check. Acceptable values are <code>C</code> and <code>CXX</code>. If not set, the C compiler will be used if enabled. If the C compiler is not enabled, the C++ compiler will be used if enabled. </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>a ;-list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>a ;-list of header search paths to pass to the compiler.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: a ;-list of options to add to the link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>a ;-list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>a ;-list of header search paths to pass to the compiler.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: a ;-list of options to add to the link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 <p> See modules <code>CheckIncludeFile</code> and <code>CheckIncludeFileCXX</code> to check for a single header file in <code>C</code> or <code>CXX</code> languages.</dl>
 <h3>CheckIPOSupported</h3>
 <p>New in version 3.9. </p>
 <p> Check whether the compiler supports an interprocedural optimization (IPO/LTO). Use this before enabling the <code>INTERPROCEDURAL_OPTIMIZATION</code> target property.</p>
 <dl>
-<dt><code>check_ipo_supported</code></p>
+<dt><code>check_ipo_supported</code></dt>
 <dd>
 <pre>check_ipo_supported([RESULT &lt;result&gt;] [OUTPUT &lt;output&gt;]
  [LANGUAGES &lt;lang&gt;...])</pre>
 <p>Options are:</p>
-<dt><code>RESULT &lt;result&gt;</code></p>
-<dd>Set <code>&lt;result&gt;</code> variable to <code>YES</code> if IPO is supported by the compiler and <code>NO</code> otherwise. If this option is not given then the command will issue a fatal error if IPO is not supported.</p>
-<dt><code>OUTPUT &lt;output&gt;</code></p>
-<dd>Set <code>&lt;output&gt;</code> variable with details about any error.</p>
-<dt><code>LANGUAGES &lt;lang&gt;&#8230;</code></p>
-<dd>Specify languages whose compilers to check. Languages <code>C</code>, <code>CXX</code>, and <code>Fortran</code> are supported. </p>
+</dd><dt><code>RESULT &lt;result&gt;</code></dt>
+<dd>Set <code>&lt;result&gt;</code> variable to <code>YES</code> if IPO is supported by the compiler and <code>NO</code> otherwise. If this option is not given then the command will issue a fatal error if IPO is not supported.</dd>
+<dt><code>OUTPUT &lt;output&gt;</code></dt>
+<dd>Set <code>&lt;output&gt;</code> variable with details about any error.</dd>
+<dt><code>LANGUAGES &lt;lang&gt;&#8230;</code></dt>
+<dd>Specify languages whose compilers to check. Languages <code>C</code>, <code>CXX</code>, and <code>Fortran</code> are supported. </dd>
 <p> It makes no sense to use this module when <code>CMP0069</code> is set to <code>OLD</code> so module will return error in this case. See policy <code>CMP0069</code> for details. </p>
 <p> New in version 3.13: Add support for Visual Studio generators. </p>
 </dl>
@@ -498,7 +498,7 @@ endif()</pre>
 <h3>CheckLibraryExists</h3>
 <p>Check if the function exists.</p>
 <dl>
-<dt><code>CHECK_LIBRARY_EXISTS</code></p>
+<dt><code>CHECK_LIBRARY_EXISTS</code></dt>
 <dd>
 <pre>CHECK_LIBRARY_EXISTS(LIBRARY FUNCTION LOCATION VARIABLE)</pre>
 <pre>LIBRARY - the name of the library you are looking for
@@ -507,162 +507,162 @@ LOCATION - location where the library should be found
 VARIABLE - variable to store the result
  Will be created as an internal cache variable.</pre>
 <p>The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: list of options to pass to link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>list of libraries to link.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: list of options to pass to link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>list of libraries to link.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 </dl>
 <h3>CheckLinkerFlag</h3>
 <p>New in version 3.18. </p>
 <p> Check whether the compiler supports a given link flag.</p>
 <dl>
-<dt><code>check_linker_flag</code></p>
+<dt><code>check_linker_flag</code></dt>
 <dd>
 <pre>check_linker_flag(&lt;lang&gt; &lt;flag&gt; &lt;var&gt;)</pre>
 <p>Check that the link <code>&lt;flag&gt;</code> is accepted by the <code>&lt;lang&gt;</code> compiler without a diagnostic. Stores the result in an internal cache entry named <code>&lt;var&gt;</code>. </p>
 <p> This command temporarily sets the <code>CMAKE_REQUIRED_LINK_OPTIONS</code> variable and calls the <code>check_source_compiles()</code> command from the <code>CheckSourceCompiles</code> module. See that module&#8217;s documentation for a listing of variables that can otherwise modify the build. </p>
 <p> The underlying implementation relies on the <code>LINK_OPTIONS</code> property to check the specified flag. The <code>LINKER:</code> prefix, as described in the <code>target_link_options()</code> command, can be used as well. </p>
 <p> A positive result from this check indicates only that the compiler did not issue a diagnostic message when given the link flag. Whether the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_&lt;LANG&gt;_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dl>
+<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_&lt;LANG&gt;_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dd></dl>
 <h3>CheckOBJCCompilerFlag</h3>
 <p>New in version 3.16. </p>
 <p> Check whether the Objective-C compiler supports a given flag.</p>
 <dl>
-<dt><code>check_objc_compiler_flag</code></p>
+<dt><code>check_objc_compiler_flag</code></dt>
 <dd>
 <pre>check_objc_compiler_flag(&lt;flag&gt; &lt;var&gt;)</pre>
 <p>Check that the <code>&lt;flag&gt;</code> is accepted by the compiler without a diagnostic. Stores the result in an internal cache entry named <code>&lt;var&gt;</code>. </p>
 <p> This command temporarily sets the <code>CMAKE_REQUIRED_DEFINITIONS</code> variable and calls the <code>check_objc_source_compiles</code> macro from the <code>CheckOBJCSourceCompiles</code> module. See documentation of that module for a listing of variables that can otherwise modify the build. </p>
 <p> A positive result from this check indicates only that the compiler did not issue a diagnostic message when given the flag. Whether the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_OBJC_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dl>
+<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_OBJC_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dd></dl>
 <h3>CheckOBJCSourceCompiles</h3>
 <p>New in version 3.16. </p>
 <p> Check if given Objective-C source compiles and links into an executable.</p>
 <dl>
-<dt><code>check_objc_source_compiles</code></p>
+<dt><code>check_objc_source_compiles</code></dt>
 <dd>
 <pre>check_objc_source_compiles(&lt;code&gt; &lt;resultVar&gt;
  [FAIL_REGEX &lt;regex1&gt; [&lt;regex2&gt;...]])</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a Objectie-C source file and linked as an executable (so it must contain at least a <code>main()</code> function). The result will be stored in the internal cache variable specified by <code>&lt;resultVar&gt;</code>, with a boolean true value for success and boolean false for failure. If <code>FAIL_REGEX</code> is provided, then failure is determined by checking if anything in the output matches any of the specified regular expressions. </p>
 <p> The underlying check is performed by the <code>try_compile()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_objc_source_compiles()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJC_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJC_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckOBJCSourceRuns</h3>
 <p>New in version 3.16. </p>
 <p> Check if given Objective-C source compiles and links into an executable and can subsequently be run.</p>
 <dl>
-<dt><code>check_objc_source_runs</code></p>
+<dt><code>check_objc_source_runs</code></dt>
 <dd>
 <pre>check_objc_source_runs(&lt;code&gt; &lt;resultVar&gt;)</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a Objective-C source file, linked as an executable and then run. The <code>&lt;code&gt;</code> must contain at least a <code>main()</code> function. If the <code>&lt;code&gt;</code> could be built and run successfully, the internal cache variable specified by <code>&lt;resultVar&gt;</code> will be set to 1, otherwise it will be set to an value that evaluates to boolean false (e.g. an empty string or an error message). </p>
 <p> The underlying check is performed by the <code>try_run()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_objc_source_runs()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJC_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJC_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckOBJCXXCompilerFlag</h3>
 <p>New in version 3.16. </p>
 <p> Check whether the Objective-C++ compiler supports a given flag.</p>
 <dl>
-<dt><code>check_objcxx_compiler_flag</code></p>
+<dt><code>check_objcxx_compiler_flag</code></dt>
 <dd>
 <pre>check_objcxx_compiler_flag(&lt;flag&gt; &lt;var&gt;)</pre>
 <p>Check that the <code>&lt;flag&gt;</code> is accepted by the compiler without a diagnostic. Stores the result in an internal cache entry named <code>&lt;var&gt;</code>. </p>
 <p> This command temporarily sets the <code>CMAKE_REQUIRED_DEFINITIONS</code> variable and calls the <code>check_objcxx_source_compiles</code> macro from the <code>CheckOBJCXXSourceCompiles</code> module. See documentation of that module for a listing of variables that can otherwise modify the build. </p>
 <p> A positive result from this check indicates only that the compiler did not issue a diagnostic message when given the flag. Whether the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_OBJCXX_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dl>
+<p> <code>NOTE:</code> Since the <code>try_compile()</code> command forwards flags from variables like <code>CMAKE_OBJCXX_FLAGS</code>, unknown flags in such variables may cause a false negative for this check.</dd></dl>
 <h3>CheckOBJCXXSourceCompiles</h3>
 <p>New in version 3.16. </p>
 <p> Check if given Objective-C++ source compiles and links into an executable.</p>
 <dl>
-<dt><code>check_objcxx_source_compiles</code></p>
+<dt><code>check_objcxx_source_compiles</code></dt>
 <dd>
 <pre>check_objcxx_source_compiles(&lt;code&gt; &lt;resultVar&gt;
  [FAIL_REGEX &lt;regex1&gt; [&lt;regex2&gt;...]])</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a Objective-C++ source file and linked as an executable (so it must contain at least a <code>main()</code> function). The result will be stored in the internal cache variable specified by <code>&lt;resultVar&gt;</code>, with a boolean true value for success and boolean false for failure. If <code>FAIL_REGEX</code> is provided, then failure is determined by checking if anything in the output matches any of the specified regular expressions. </p>
 <p> The underlying check is performed by the <code>try_compile()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_objcxx_source_compiles()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJCXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJCXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckOBJCXXSourceRuns</h3>
 <p>New in version 3.16. </p>
 <p> Check if given Objective-C++ source compiles and links into an executable and can subsequently be run.</p>
 <dl>
-<dt><code>check_objcxx_source_runs</code></p>
+<dt><code>check_objcxx_source_runs</code></dt>
 <dd>
 <pre>check_objcxx_source_runs(&lt;code&gt; &lt;resultVar&gt;)</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a Objective-C++ source file, linked as an executable and then run. The <code>&lt;code&gt;</code> must contain at least a <code>main()</code> function. If the <code>&lt;code&gt;</code> could be built and run successfully, the internal cache variable specified by <code>&lt;resultVar&gt;</code> will be set to 1, otherwise it will be set to an value that evaluates to boolean false (e.g. an empty string or an error message). </p>
 <p> The underlying check is performed by the <code>try_run()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_objcxx_source_runs()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJCXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJCXX_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckPIESupported</h3>
 <p>New in version 3.14. </p>
 <p> Check whether the linker supports Position Independent Code (PIE) or No Position Independent Code (NO_PIE) for executables. Use this to ensure that the <code>POSITION_INDEPENDENT_CODE</code> target property for executables will be honored at link time.</p>
 <dl>
-<dt><code>check_pie_supported</code></p>
+<dt><code>check_pie_supported</code></dt>
 <dd>
 <pre>check_pie_supported([OUTPUT_VARIABLE &lt;output&gt;]
  [LANGUAGES &lt;lang&gt;...])</pre>
 <p>Options are:</p>
-<dt><code>OUTPUT_VARIABLE &lt;output&gt;</code></p>
-<dd>Set <code>&lt;output&gt;</code> variable with details about any error.</p>
-<dt><code>LANGUAGES &lt;lang&gt;&#8230;</code></p>
-<dd>Check the linkers used for each of the specified languages. Supported languages are <code>C</code>, <code>CXX</code>, and <code>Fortran</code>. </p>
+</dd><dt><code>OUTPUT_VARIABLE &lt;output&gt;</code></dt>
+<dd>Set <code>&lt;output&gt;</code> variable with details about any error.</dd>
+<dt><code>LANGUAGES &lt;lang&gt;&#8230;</code></dt>
+<dd>Check the linkers used for each of the specified languages. Supported languages are <code>C</code>, <code>CXX</code>, and <code>Fortran</code>. </dd>
 <p> It makes no sense to use this module when <code>CMP0083</code> is set to <code>OLD</code>, so the command will return an error in this case. See policy <code>CMP0083</code> for details.</dl>
 <h3>Variables</h3>
 <p>For each language checked, two boolean cache variables are defined.</p>
 <dl>
-<dt><code>CMAKE_&lt;lang&gt;_LINK_PIE_SUPPORTED</code></p>
-<dd>Set to <code>YES</code> if <code>PIE</code> is supported by the linker and <code>NO</code> otherwise.</p>
-<dt><code>CMAKE_&lt;lang&gt;_LINK_NO_PIE_SUPPORTED</code></p>
-<dd>Set to <code>YES</code> if <code>NO_PIE</code> is supported by the linker and <code>NO</code> otherwise.</dl>
+<dt><code>CMAKE_&lt;lang&gt;_LINK_PIE_SUPPORTED</code></dt>
+<dd>Set to <code>YES</code> if <code>PIE</code> is supported by the linker and <code>NO</code> otherwise.</dd>
+<dt><code>CMAKE_&lt;lang&gt;_LINK_NO_PIE_SUPPORTED</code></dt>
+<dd>Set to <code>YES</code> if <code>NO_PIE</code> is supported by the linker and <code>NO</code> otherwise.</dd></dl>
 <h3>Examples</h3>
 <pre>check_pie_supported()
 set_property(TARGET foo PROPERTY POSITION_INDEPENDENT_CODE TRUE)</pre>
@@ -677,7 +677,7 @@ endif()</pre>
 <h3>CheckPrototypeDefinition</h3>
 <p>Check if the prototype we expect is correct.</p>
 <dl>
-<dt><code>check_prototype_definition</code></p>
+<dt><code>check_prototype_definition</code></dt>
 <dd>
 <pre>check_prototype_definition(FUNCTION PROTOTYPE RETURN HEADER VARIABLE)</pre>
 <pre>FUNCTION - The name of the function (used to check if prototype exists)
@@ -693,24 +693,24 @@ VARIABLE - The variable to store the result.
  &quot;unistd.h;pwd.h&quot;
  SOLARIS_GETPWENT_R)</pre>
 <p>The following variables may be set before calling this function to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>list of include directories.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: list of options to pass to link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>list of libraries to link.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>list of include directories.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: list of options to pass to link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>list of libraries to link.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 </dl>
 <h3>CheckSourceCompiles</h3>
 <p>New in version 3.19. </p>
 <p> Check if given source compiles and links into an executable.</p>
 <dl>
-<dt><code>check_source_compiles</code></p>
+<dt><code>check_source_compiles</code></dt>
 <dd>
 <pre>check_source_compiles(&lt;lang&gt; &lt;code&gt; &lt;resultVar&gt;
  [FAIL_REGEX &lt;regex1&gt; [&lt;regex2&gt;...]]
@@ -718,47 +718,47 @@ VARIABLE - The variable to store the result.
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a source file for the requested language and linked as an executable (so it must contain at least a <code>main()</code> function). The result will be stored in the internal cache variable specified by <code>&lt;resultVar&gt;</code>, with a boolean true value for success and boolean false for failure. If <code>FAIL_REGEX</code> is provided, then failure is determined by checking if anything in the output matches any of the specified regular expressions. </p>
 <p> By default, the test source file will be given a file extension that matches the requested language. The <code>SRC_EXT</code> option can be used to override this with <code>.&lt;extension&gt;</code> instead. </p>
 <p> The underlying check is performed by the <code>try_compile()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_source_compiles()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_&lt;LANG&gt;_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_&lt;LANG&gt;_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_compile()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>A ;-list of options to add to the link command (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_compile()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckSourceRuns</h3>
 <p>New in version 3.19. </p>
 <p> Check if given source compiles and links into an executable and can subsequently be run.</p>
 <dl>
-<dt><code>check_source_runs</code></p>
+<dt><code>check_source_runs</code></dt>
 <dd>
 <pre>check_source_runs(&lt;lang&gt; &lt;code&gt; &lt;resultVar&gt;
  [SRC_EXT &lt;extension&gt;])</pre>
 <p>Check that the source supplied in <code>&lt;code&gt;</code> can be compiled as a source file for the requested language, linked as an executable and then run. The <code>&lt;code&gt;</code> must contain at least a <code>main()</code> function. If the <code>&lt;code&gt;</code> could be built and run successfully, the internal cache variable specified by <code>&lt;resultVar&gt;</code> will be set to 1, otherwise it will be set to an value that evaluates to boolean false (e.g. an empty string or an error message). </p>
 <p> By default, the test source file will be given a file extension that matches the requested language. The <code>SRC_EXT</code> option can be used to override this with <code>.&lt;extension&gt;</code> instead. </p>
 <p> The underlying check is performed by the <code>try_run()</code> command. The compile and link commands can be influenced by setting any of the following variables prior to calling <code>check_objc_source_runs()</code>:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJC_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>Additional flags to pass to the compiler. Note that the contents of <code>CMAKE_OBJC_FLAGS</code> and its associated configuration-specific variable are automatically added to the compiler command before the contents of <code>CMAKE_REQUIRED_FLAGS</code>.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>A ;-list of compiler definitions of the form <code>-DFOO</code> or <code>-DFOO=bar</code>. A definition for the name specified by <code>&lt;resultVar&gt;</code> will also be added automatically.</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>A ;-list of header search paths to pass to the compiler. These will be the only header search paths used by <code>try_run()</code>, i.e. the contents of the <code>INCLUDE_DIRECTORIES</code> directory property will be ignored.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>A ;-list of options to add to the link command (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>A ;-list of libraries to add to the link command. These can be the name of system libraries or they can be Imported Targets (see <code>try_run()</code> for further details).</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>If this variable evaluates to a boolean true value, all status messages associated with the check will be suppressed. </dd>
 <p> The check is only performed once, with the result cached in the variable named by <code>&lt;resultVar&gt;</code>. Every subsequent CMake run will re-use this cached value rather than performing the check again, even if the <code>&lt;code&gt;</code> changes. In order to force the check to be re-evaluated, the variable named by <code>&lt;resultVar&gt;</code> must be manually removed from the cache.</dl>
 <h3>CheckStructHasMember</h3>
 <p>Check if the given struct or class has the specified member variable</p>
 <dl>
-<dt><code>CHECK_STRUCT_HAS_MEMBER</code></p>
+<dt><code>CHECK_STRUCT_HAS_MEMBER</code></dt>
 <dd>
 <pre>CHECK_STRUCT_HAS_MEMBER(&lt;struct&gt; &lt;member&gt; &lt;header&gt; &lt;variable&gt;
  [LANGUAGE &lt;language&gt;])</pre>
@@ -768,18 +768,18 @@ VARIABLE - The variable to store the result.
 &lt;variable&gt; - variable to store the result
 &lt;language&gt; - the compiler to use (C or CXX)</pre>
 <p>The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>list of include directories.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: list of options to pass to link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>list of libraries to link.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>list of include directories.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: list of options to pass to link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>list of libraries to link.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 <p> Example: </p>
 <pre>CHECK_STRUCT_HAS_MEMBER(&quot;struct timeval&quot; tv_sec sys/select.h
  HAVE_TIMEVAL_TV_SEC LANGUAGE C)</pre>
@@ -787,24 +787,24 @@ VARIABLE - The variable to store the result.
 <h3>CheckSymbolExists</h3>
 <p>Provides a macro to check if a symbol exists as a function, variable, or macro in <code>C</code>.</p>
 <dl>
-<dt><code>check_symbol_exists</code></p>
+<dt><code>check_symbol_exists</code></dt>
 <dd>
 <pre>check_symbol_exists(&lt;symbol&gt; &lt;files&gt; &lt;variable&gt;)</pre>
 <p>Check that the <code>&lt;symbol&gt;</code> is available after including given header <code>&lt;files&gt;</code> and store the result in a <code>&lt;variable&gt;</code>. Specify the list of files in one argument as a semicolon-separated list. <code>&lt;variable&gt;</code> will be created as an internal cache variable. </p>
 <p> If the header files define the symbol as a macro it is considered available and assumed to work. If the header files declare the symbol as a function or variable then the symbol must also be available for linking (so intrinsics may not be detected). If the symbol is a type, enum value, or intrinsic it will not be recognized (consider using <code>CheckTypeSize</code> or <code>CheckSourceCompiles</code>). If the check needs to be done in C++, consider using <code>CheckCXXSymbolExists</code> instead. </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>a ;-list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>a ;-list of header search paths to pass to the compiler.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: a ;-list of options to add to the link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>a ;-list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>a ;-list of header search paths to pass to the compiler.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: a ;-list of options to add to the link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>a ;-list of libraries to add to the link command. See policy <code>CMP0075</code>.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 <p> For example: </p>
 <pre>include(CheckSymbolExists)
 # Check for macro SEEK_SET
@@ -815,7 +815,7 @@ check_symbol_exists(fopen &quot;stdio.h&quot; HAVE_FOPEN)</pre>
 <h3>CheckTypeSize</h3>
 <p>Check sizeof a type</p>
 <dl>
-<dt><code>CHECK_TYPE_SIZE</code></p>
+<dt><code>CHECK_TYPE_SIZE</code></dt>
 <dd>
 <pre>CHECK_TYPE_SIZE(TYPE VARIABLE [BUILTIN_TYPES_ONLY]
  [LANGUAGE &lt;language&gt;])</pre>
@@ -831,24 +831,24 @@ check_symbol_exists(fopen &quot;stdio.h&quot; HAVE_FOPEN)</pre>
 <p> Despite the name of the macro you may use it to check the size of more complex expressions, too. To check e.g. for the size of a struct member you can do something like this: </p>
 <pre>check_type_size(&quot;((struct something*)0)-&gt;member&quot; SIZEOF_MEMBER)</pre>
 <p>The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_INCLUDES</code></p>
-<dd>list of include directories.</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: list of options to pass to link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>list of libraries to link.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
-<dt><code>CMAKE_EXTRA_INCLUDE_FILES</code></p>
-<dd>list of extra headers to include.</dl>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_INCLUDES</code></dt>
+<dd>list of include directories.</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: list of options to pass to link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>list of libraries to link.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
+<dt><code>CMAKE_EXTRA_INCLUDE_FILES</code></dt>
+<dd>list of extra headers to include.</dd></dl>
 <h3>CheckVariableExists</h3>
 <p>Check if the variable exists.</p>
 <dl>
-<dt><code>CHECK_VARIABLE_EXISTS</code></p>
+<dt><code>CHECK_VARIABLE_EXISTS</code></dt>
 <dd>
 <pre>CHECK_VARIABLE_EXISTS(VAR VARIABLE)</pre>
 <pre>VAR - the name of the variable
@@ -856,16 +856,16 @@ VARIABLE - variable to store the result
  Will be created as an internal cache variable.</pre>
 <p>This macro is only for <code>C</code> variables. </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run:</p>
-<dt><code>CMAKE_REQUIRED_FLAGS</code></p>
-<dd>string of compile command line flags.</p>
-<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></p>
-<dd>list of macros to define (-DFOO=bar).</p>
-<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></p>
-<dd>New in version 3.14: list of options to pass to link command. </p>
-<dt><code>CMAKE_REQUIRED_LIBRARIES</code></p>
-<dd>list of libraries to link.</p>
-<dt><code>CMAKE_REQUIRED_QUIET</code></p>
-<dd>New in version 3.1: execute quietly without messages. </p>
+</dd><dt><code>CMAKE_REQUIRED_FLAGS</code></dt>
+<dd>string of compile command line flags.</dd>
+<dt><code>CMAKE_REQUIRED_DEFINITIONS</code></dt>
+<dd>list of macros to define (-DFOO=bar).</dd>
+<dt><code>CMAKE_REQUIRED_LINK_OPTIONS</code></dt>
+<dd>New in version 3.14: list of options to pass to link command. </dd>
+<dt><code>CMAKE_REQUIRED_LIBRARIES</code></dt>
+<dd>list of libraries to link.</dd>
+<dt><code>CMAKE_REQUIRED_QUIET</code></dt>
+<dd>New in version 3.1: execute quietly without messages. </dd>
 </dl>
 <h3>CMakeAddFortranSubdirectory</h3>
 <p>Add a fortran-only subdirectory, find a fortran compiler, and build. </p>
@@ -896,7 +896,7 @@ include(TestForANSIForScope)</pre>
 <p>Macro to provide an option dependent on other options. </p>
 <p> This macro presents an option to the user only if a set of other conditions are true.</p>
 <dl>
-<dt><code>cmake_dependent_option</code></p>
+<dt><code>cmake_dependent_option</code></dt>
 <dd>
 <pre>cmake_dependent_option(&lt;option&gt; &quot;&lt;help_text&gt;&quot; &lt;value&gt; &lt;depends&gt; &lt;force&gt;)</pre>
 <p>Makes <code>&lt;option&gt;</code> available to the user if <code>&lt;depends&gt;</code> is true. When <code>&lt;option&gt;</code> is available, the given <code>&lt;help_text&gt;</code> and initial <code>&lt;value&gt;</code> are used. If the <code>&lt;depends&gt;</code> condition is not true, <code>&lt;option&gt;</code> will not be presented and will always have the value given by <code>&lt;force&gt;</code>. Any value set by the user is preserved for when the option is presented again. In case <code>&lt;depends&gt;</code> is a semicolon-separated list, all elements must be true in order to initialize <code>&lt;option&gt;</code> with <code>&lt;value&gt;</code>. </p>
@@ -904,11 +904,11 @@ include(TestForANSIForScope)</pre>
 <pre>cmake_dependent_option(USE_FOO &quot;Use Foo&quot; ON &quot;USE_BAR;NOT USE_ZOT&quot; OFF)</pre>
 <p>If <code>USE_BAR</code> is true and <code>USE_ZOT</code> is false, this provides an option called <code>USE_FOO</code> that defaults to ON. Otherwise, it sets <code>USE_FOO</code> to OFF and hides the option from the user. If the status of <code>USE_BAR</code> or <code>USE_ZOT</code> ever changes, any value for the <code>USE_FOO</code> option is saved so that when the option is re-enabled it retains its old value. </p>
 <p> New in version 3.22: Full Condition Syntax is now supported. See policy <code>CMP0127</code>. </p>
-</dl>
+</dd></dl>
 <h3>CMakeFindDependencyMacro</h3>
 <dl>
-<dt><code>find_dependency</code></p>
-<dd>The <code>find_dependency()</code> macro wraps a <code>find_package()</code> call for a package dependency: </p>
+<dt><code>find_dependency</code></dt>
+<dd>The <code>find_dependency()</code> macro wraps a <code>find_package()</code> call for a package dependency: </dd>
 <pre>find_dependency(&lt;dep&gt; [...])</pre>
 <p>It is designed to be used in a Package Configuration File (<code>&lt;PackageName&gt;Config.cmake</code>). <code>find_dependency</code> forwards the correct parameters for <code>QUIET</code> and <code>REQUIRED</code> which were passed to the original <code>find_package()</code> call. Any additional arguments specified are forwarded to <code>find_package()</code>. </p>
 <p> If the dependency could not be found it sets an informative diagnostic message and calls <code>return()</code> to end processing of the calling package configuration file and return to the <code>find_package()</code> command that loaded it. </p>
@@ -920,34 +920,34 @@ include(TestForANSIForScope)</pre>
 <h3>CMakeFindPackageMode</h3>
 <p>This file is executed by cmake when invoked with &#8211;find-package. It expects that the following variables are set using -D:</p>
 <dl>
-<dt><code>NAME</code></p>
-<dd>name of the package</p>
-<dt><code>COMPILER_ID</code></p>
-<dd>the CMake compiler ID for which the result is, i.e. GNU/Intel/Clang/MSVC, etc.</p>
-<dt><code>LANGUAGE</code></p>
-<dd>language for which the result will be used, i.e. C/CXX/Fortran/ASM</p>
-<dt><code>MODE</code></p>
+<dt><code>NAME</code></dt>
+<dd>name of the package</dd>
+<dt><code>COMPILER_ID</code></dt>
+<dd>the CMake compiler ID for which the result is, i.e. GNU/Intel/Clang/MSVC, etc.</dd>
+<dt><code>LANGUAGE</code></dt>
+<dd>language for which the result will be used, i.e. C/CXX/Fortran/ASM</dd>
+<dt><code>MODE</code></dt>
 <dd>
-<dt><code>EXIST</code></p>
-<dd>only check for existence of the given package</p>
-<dt><code>COMPILE</code></p>
-<dd>print the flags needed for compiling an object file which uses the given package</p>
-<dt><code>LINK</code></p>
-<dd>print the flags needed for linking when using the given package</p>
-<dt><code>QUIET</code></p>
-<dd>if TRUE, don&#8217;t print anything</dl>
+</dd><dt><code>EXIST</code></dt>
+<dd>only check for existence of the given package</dd>
+<dt><code>COMPILE</code></dt>
+<dd>print the flags needed for compiling an object file which uses the given package</dd>
+<dt><code>LINK</code></dt>
+<dd>print the flags needed for linking when using the given package</dd>
+<dt><code>QUIET</code></dt>
+<dd>if TRUE, don&#8217;t print anything</dd></dl>
 <h3>CMakeGraphVizOptions</h3>
 <p>The builtin Graphviz support of CMake.</p>
 <h3>Generating Graphviz files</h3>
 <p>CMake can generate <i>Graphviz</i> files showing the dependencies between the targets in a project, as well as external libraries which are linked against. </p>
 <p> When running CMake with the <code>&#8211;graphviz=foo.dot</code> option, it produces:</p>
 <dl>
-<dt>&bull;</p>
-<dd>a <code>foo.dot</code> file, showing all dependencies in the project</p>
-<dt>&bull;</p>
-<dd>a <code>foo.dot.&lt;target&gt;</code> file for each target, showing on which other targets it depends</p>
-<dt>&bull;</p>
-<dd>a <code>foo.dot.&lt;target&gt;.dependers</code> file for each target, showing which other targets depend on it </p>
+<dt>&bull;</dt>
+<dd>a <code>foo.dot</code> file, showing all dependencies in the project</dd>
+<dt>&bull;</dt>
+<dd>a <code>foo.dot.&lt;target&gt;</code> file for each target, showing on which other targets it depends</dd>
+<dt>&bull;</dt>
+<dd>a <code>foo.dot.&lt;target&gt;.dependers</code> file for each target, showing which other targets depend on it </dd>
 <p> Those .dot files can be converted to images using the <i>dot</i> command from the Graphviz package: </p>
 <pre>dot -Tpng -o foo.png foo.dot</pre>
 <p>New in version 3.10: The different dependency types <code>PUBLIC</code>, <code>INTERFACE</code> and <code>PRIVATE</code> are represented as solid, dashed and dotted edges. </p>
@@ -955,103 +955,103 @@ include(TestForANSIForScope)</pre>
 <h3>Variables specific to the Graphviz support</h3>
 <p>The resulting graphs can be huge. The look and content of the generated graphs can be controlled using the file <code>CMakeGraphVizOptions.cmake</code>. This file is first searched in <code>CMAKE_BINARY_DIR</code>, and then in <code>CMAKE_SOURCE_DIR</code>. If found, the variables set in it are used to adjust options for the generated Graphviz files.</p>
 <dl>
-<dt><code>GRAPHVIZ_GRAPH_NAME</code></p>
-<dd>The graph name.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: value of <code>CMAKE_PROJECT_NAME</code></p>
-<dt><code>GRAPHVIZ_GRAPH_HEADER</code></p>
-<dd>The header written at the top of the Graphviz files.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: &quot;node [ fontsize = &quot;12&quot; ];&quot;</p>
-<dt><code>GRAPHVIZ_NODE_PREFIX</code></p>
-<dd>The prefix for each node in the Graphviz files.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: &quot;node&quot;</p>
-<dt><code>GRAPHVIZ_EXECUTABLES</code></p>
-<dd>Set to FALSE to exclude executables from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_STATIC_LIBS</code></p>
-<dd>Set to FALSE to exclude static libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_SHARED_LIBS</code></p>
-<dd>Set to FALSE to exclude shared libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_MODULE_LIBS</code></p>
-<dd>Set to FALSE to exclude module libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_INTERFACE_LIBS</code></p>
-<dd>Set to FALSE to exclude interface libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_OBJECT_LIBS</code></p>
-<dd>Set to FALSE to exclude object libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_UNKNOWN_LIBS</code></p>
-<dd>Set to FALSE to exclude unknown libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_EXTERNAL_LIBS</code></p>
-<dd>Set to FALSE to exclude external libraries from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_CUSTOM_TARGETS</code></p>
-<dd>Set to TRUE to include custom targets in the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: FALSE</p>
-<dt><code>GRAPHVIZ_IGNORE_TARGETS</code></p>
-<dd>A list of regular expressions for names of targets to exclude from the generated graphs.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: empty</p>
-<dt><code>GRAPHVIZ_GENERATE_PER_TARGET</code></p>
-<dd>Set to FALSE to not generate per-target graphs <code>foo.dot.&lt;target&gt;</code>.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</p>
-<dt><code>GRAPHVIZ_GENERATE_DEPENDERS</code></p>
-<dd>Set to FALSE to not generate depender graphs <code>foo.dot.&lt;target&gt;.dependers</code>.</p>
-<dt>&bull;</p>
-<dd>Mandatory: NO</p>
-<dt>&bull;</p>
-<dd>Default: TRUE</dl>
+<dt><code>GRAPHVIZ_GRAPH_NAME</code></dt>
+<dd>The graph name.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: value of <code>CMAKE_PROJECT_NAME</code></dd>
+<dt><code>GRAPHVIZ_GRAPH_HEADER</code></dt>
+<dd>The header written at the top of the Graphviz files.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: &quot;node [ fontsize = &quot;12&quot; ];&quot;</dd>
+<dt><code>GRAPHVIZ_NODE_PREFIX</code></dt>
+<dd>The prefix for each node in the Graphviz files.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: &quot;node&quot;</dd>
+<dt><code>GRAPHVIZ_EXECUTABLES</code></dt>
+<dd>Set to FALSE to exclude executables from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_STATIC_LIBS</code></dt>
+<dd>Set to FALSE to exclude static libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_SHARED_LIBS</code></dt>
+<dd>Set to FALSE to exclude shared libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_MODULE_LIBS</code></dt>
+<dd>Set to FALSE to exclude module libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_INTERFACE_LIBS</code></dt>
+<dd>Set to FALSE to exclude interface libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_OBJECT_LIBS</code></dt>
+<dd>Set to FALSE to exclude object libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_UNKNOWN_LIBS</code></dt>
+<dd>Set to FALSE to exclude unknown libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_EXTERNAL_LIBS</code></dt>
+<dd>Set to FALSE to exclude external libraries from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_CUSTOM_TARGETS</code></dt>
+<dd>Set to TRUE to include custom targets in the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: FALSE</dd>
+<dt><code>GRAPHVIZ_IGNORE_TARGETS</code></dt>
+<dd>A list of regular expressions for names of targets to exclude from the generated graphs.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: empty</dd>
+<dt><code>GRAPHVIZ_GENERATE_PER_TARGET</code></dt>
+<dd>Set to FALSE to not generate per-target graphs <code>foo.dot.&lt;target&gt;</code>.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd>
+<dt><code>GRAPHVIZ_GENERATE_DEPENDERS</code></dt>
+<dd>Set to FALSE to not generate depender graphs <code>foo.dot.&lt;target&gt;.dependers</code>.</dd>
+<dt>&bull;</dt>
+<dd>Mandatory: NO</dd>
+<dt>&bull;</dt>
+<dd>Default: TRUE</dd></dl>
 <h3>CMakePackageConfigHelpers</h3>
 <p>Helpers functions for creating config files that can be included by other projects to find and use a package. </p>
 <p> Adds the <i>configure_package_config_file()</i> and <i>write_basic_package_version_file()</i> commands.</p>
 <h3>Generating a Package Configuration File</h3>
 <dl>
-<dt><code>configure_package_config_file</code></p>
-<dd>Create a config file for a project: </p>
+<dt><code>configure_package_config_file</code></dt>
+<dd>Create a config file for a project: </dd>
 <pre>configure_package_config_file(&lt;input&gt; &lt;output&gt;
  INSTALL_DESTINATION &lt;path&gt;
  [PATH_VARS &lt;var1&gt; &lt;var2&gt; ... &lt;varN&gt;]
@@ -1068,14 +1068,14 @@ set(FOO_ICONS_DIR &quot;@CMAKE_INSTALL_PREFIX@/share/icons&quot; )
 set(FOO_CONFIG_DIR &quot;${installedPrefix}/@CONFIG_INSTALL_DIR@&quot; )</pre>
 <p>All 4 options shown above are not sufficient, since the first 3 hardcode the absolute directory locations, and the 4th case works only if the logic to determine the <code>installedPrefix</code> is correct, and if <code>CONFIG_INSTALL_DIR</code> contains a relative path, which in general cannot be guaranteed. This has the effect that the resulting <code>FooConfig.cmake</code> file would work poorly under Windows and OSX, where users are used to choose the install location of a binary package at install time, independent from how <code>CMAKE_INSTALL_PREFIX</code> was set at build/cmake time. </p>
 <p> Using <code>configure_package_config_file</code> helps. If used correctly, it makes the resulting <code>FooConfig.cmake</code> file relocatable. Usage:</p>
-<dt>1.</p>
-<dd>write a <code>FooConfig.cmake.in</code> file as you are used to</p>
-<dt>2.</p>
-<dd>insert a line containing only the string <code>@PACKAGE_INIT@</code></p>
-<dt>3.</p>
-<dd>instead of <code>set(FOO_DIR &quot;@SOME_INSTALL_DIR@&quot;)</code>, use <code>set(FOO_DIR &quot;@PACKAGE_SOME_INSTALL_DIR@&quot;)</code> (this must be after the <code>@PACKAGE_INIT@</code> line)</p>
-<dt>4.</p>
-<dd>instead of using the normal <code>configure_file()</code>, use <code>configure_package_config_file()</code> </p>
+<dt>1.</dt>
+<dd>write a <code>FooConfig.cmake.in</code> file as you are used to</dd>
+<dt>2.</dt>
+<dd>insert a line containing only the string <code>@PACKAGE_INIT@</code></dd>
+<dt>3.</dt>
+<dd>instead of <code>set(FOO_DIR &quot;@SOME_INSTALL_DIR@&quot;)</code>, use <code>set(FOO_DIR &quot;@PACKAGE_SOME_INSTALL_DIR@&quot;)</code> (this must be after the <code>@PACKAGE_INIT@</code> line)</dd>
+<dt>4.</dt>
+<dd>instead of using the normal <code>configure_file()</code>, use <code>configure_package_config_file()</code> </dd>
 <p> The <code>&lt;input&gt;</code> and <code>&lt;output&gt;</code> arguments are the input and output file, the same way as in <code>configure_file()</code>. </p>
 <p> The <code>&lt;path&gt;</code> given to <code>INSTALL_DESTINATION</code> must be the destination where the <code>FooConfig.cmake</code> file will be installed to. This path can either be absolute, or relative to the <code>INSTALL_PREFIX</code> path. </p>
 <p> The variables <code>&lt;var1&gt;</code> to <code>&lt;varN&gt;</code> given as <code>PATH_VARS</code> are the variables which contain install destinations. For each of them the macro will create a helper variable <code>PACKAGE_&lt;var&#8230;&gt;</code>. These helper variables must be used in the <code>FooConfig.cmake.in</code> file for setting the installed location. They are calculated by <code>configure_package_config_file</code> so that they are always relative to the installed location of the package. This works both for relative and also for absolute locations. For absolute locations it works only if the absolute location is a subdirectory of <code>INSTALL_PREFIX</code>. </p>
@@ -1086,8 +1086,8 @@ set(FOO_CONFIG_DIR &quot;${installedPrefix}/@CONFIG_INSTALL_DIR@&quot; )</pre>
 <p> For an example see below the documentation for <i>write_basic_package_version_file()</i>.</dl>
 <h3>Generating a Package Version File</h3>
 <dl>
-<dt><code>write_basic_package_version_file</code></p>
-<dd>Create a version file for a project: </p>
+<dt><code>write_basic_package_version_file</code></dt>
+<dd>Create a version file for a project: </dd>
 <pre>write_basic_package_version_file(&lt;filename&gt;
  [VERSION &lt;major.minor.patch&gt;]
  COMPATIBILITY &lt;AnyNewerVersion|SameMajorVersion|SameMinorVersion|ExactVersion&gt;
@@ -1174,20 +1174,20 @@ cmake_pop_check_state()</pre>
 <p>The <i>CPACK_GENERATOR</i> variable has different meanings in different contexts. In a <code>CMakeLists.txt</code> file, <i>CPACK_GENERATOR</i> is a <i>list of generators</i>: and when <code>cpack</code> is run with no other arguments, it will iterate over that list and produce one package for each generator. In a <i>CPACK_PROJECT_CONFIG_FILE</i>, <i>CPACK_GENERATOR</i> is a <i>string naming a single generator</i>. If you need per-cpack-generator logic to control <i>other</i> cpack settings, then you need a <i>CPACK_PROJECT_CONFIG_FILE</i>. If set, the <i>CPACK_PROJECT_CONFIG_FILE</i> is included automatically on a per-generator basis. It only need contain overrides. </p>
 <p> Here&#8217;s how it works:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cpack</code> runs</p>
-<dt>&bull;</p>
-<dd>it includes <code>CPackConfig.cmake</code></p>
-<dt>&bull;</p>
-<dd>it iterates over the generators given by the <code>-G</code> command line option, or if no such option was specified, over the list of generators given by the <i>CPACK_GENERATOR</i> variable set in the <code>CPackConfig.cmake</code> input file.</p>
-<dt>&bull;</p>
-<dd>foreach generator, it then</p>
-<dt>&bull;</p>
-<dd>sets <i>CPACK_GENERATOR</i> to the one currently being iterated</p>
-<dt>&bull;</p>
-<dd>includes the <i>CPACK_PROJECT_CONFIG_FILE</i></p>
-<dt>&bull;</p>
-<dd>produces the package for that generator </p>
+<dt>&bull;</dt>
+<dd><code>cpack</code> runs</dd>
+<dt>&bull;</dt>
+<dd>it includes <code>CPackConfig.cmake</code></dd>
+<dt>&bull;</dt>
+<dd>it iterates over the generators given by the <code>-G</code> command line option, or if no such option was specified, over the list of generators given by the <i>CPACK_GENERATOR</i> variable set in the <code>CPackConfig.cmake</code> input file.</dd>
+<dt>&bull;</dt>
+<dd>foreach generator, it then</dd>
+<dt>&bull;</dt>
+<dd>sets <i>CPACK_GENERATOR</i> to the one currently being iterated</dd>
+<dt>&bull;</dt>
+<dd>includes the <i>CPACK_PROJECT_CONFIG_FILE</i></dd>
+<dt>&bull;</dt>
+<dd>produces the package for that generator </dd>
 <p> This is the key: For each generator listed in <i>CPACK_GENERATOR</i> in <code>CPackConfig.cmake</code>, cpack will <i>reset</i> <i>CPACK_GENERATOR</i> internally to <i>the one currently being used</i> and then include the <i>CPACK_PROJECT_CONFIG_FILE</i>. </p>
 <p> For a list of available generators, see <code><a href="/docs/linux/man/7-cpack-generators/">cpack-generators</a>(7)</code>.</dl>
 <h3>Targets package and package_source</h3>
@@ -1196,61 +1196,61 @@ cmake_pop_check_state()</pre>
 <h3>Variables common to all CPack Generators</h3>
 <p>Before including this CPack module in your <code>CMakeLists.txt</code> file, there are a variety of variables that can be set to customize the resulting installers. The most commonly-used variables are:</p>
 <dl>
-<dt><code>CPACK_PACKAGE_NAME</code></p>
-<dd>The name of the package (or application). If not specified, it defaults to the project name.</p>
-<dt><code>CPACK_PACKAGE_VENDOR</code></p>
-<dd>The name of the package vendor. (e.g., &quot;Kitware&quot;). The default is &quot;Humanity&quot;.</p>
-<dt><code>CPACK_PACKAGE_DIRECTORY</code></p>
-<dd>The directory in which CPack is doing its packaging. If it is not set then this will default (internally) to the build dir. This variable may be defined in a CPack config file or from the <code>cpack</code> command line option <code>-B</code>. If set, the command line option overrides the value found in the config file.</p>
-<dt><code>CPACK_PACKAGE_VERSION_MAJOR</code></p>
-<dd>Package major version. This variable will always be set, but its default value depends on whether or not version details were given to the <code>project()</code> command in the top level CMakeLists.txt file. If version details were given, the default value will be <code>CMAKE_PROJECT_VERSION_MAJOR</code>. If no version details were given, a default version of 0.1.1 will be assumed, leading to <code>CPACK_PACKAGE_VERSION_MAJOR</code> having a default value of 0.</p>
-<dt><code>CPACK_PACKAGE_VERSION_MINOR</code></p>
-<dd>Package minor version. The default value is determined based on whether or not version details were given to the <code>project()</code> command in the top level CMakeLists.txt file. If version details were given, the default value will be <code>CMAKE_PROJECT_VERSION_MINOR</code>, but if no minor version component was specified then <code>CPACK_PACKAGE_VERSION_MINOR</code> will be left unset. If no project version was given at all, a default version of 0.1.1 will be assumed, leading to <code>CPACK_PACKAGE_VERSION_MINOR</code> having a default value of 1.</p>
-<dt><code>CPACK_PACKAGE_VERSION_PATCH</code></p>
-<dd>Package patch version. The default value is determined based on whether or not version details were given to the <code>project()</code> command in the top level CMakeLists.txt file. If version details were given, the default value will be <code>CMAKE_PROJECT_VERSION_PATCH</code>, but if no patch version component was specified then <code>CPACK_PACKAGE_VERSION_PATCH</code> will be left unset. If no project version was given at all, a default version of 0.1.1 will be assumed, leading to <code>CPACK_PACKAGE_VERSION_PATCH</code> having a default value of 1.</p>
-<dt><code>CPACK_PACKAGE_DESCRIPTION</code></p>
-<dd>A description of the project, used in places such as the introduction screen of CPack-generated Windows installers. If not set, the value of this variable is populated from the file named by <i>CPACK_PACKAGE_DESCRIPTION_FILE</i>.</p>
-<dt><code>CPACK_PACKAGE_DESCRIPTION_FILE</code></p>
-<dd>A text file used to describe the project when <i>CPACK_PACKAGE_DESCRIPTION</i> is not explicitly set. The default value for <code>CPACK_PACKAGE_DESCRIPTION_FILE</code> points to a built-in template file <code>Templates/CPack.GenericDescription.txt</code>.</p>
-<dt><code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></p>
-<dd>Short description of the project (only a few words). If the <code>CMAKE_PROJECT_DESCRIPTION</code> variable is set, it is used as the default value, otherwise the default will be a string generated by CMake based on <code>CMAKE_PROJECT_NAME</code>.</p>
-<dt><code>CPACK_PACKAGE_HOMEPAGE_URL</code></p>
-<dd>Project homepage URL. The default value is taken from the <code>CMAKE_PROJECT_HOMEPAGE_URL</code> variable, which is set by the top level <code>project()</code> command, or else the default will be empty if no URL was provided to <code>project()</code>.</p>
-<dt><code>CPACK_PACKAGE_FILE_NAME</code></p>
-<dd>The name of the package file to generate, not including the extension. For example, <code>cmake-2.6.1-Linux-i686</code>. The default value is: </p>
+<dt><code>CPACK_PACKAGE_NAME</code></dt>
+<dd>The name of the package (or application). If not specified, it defaults to the project name.</dd>
+<dt><code>CPACK_PACKAGE_VENDOR</code></dt>
+<dd>The name of the package vendor. (e.g., &quot;Kitware&quot;). The default is &quot;Humanity&quot;.</dd>
+<dt><code>CPACK_PACKAGE_DIRECTORY</code></dt>
+<dd>The directory in which CPack is doing its packaging. If it is not set then this will default (internally) to the build dir. This variable may be defined in a CPack config file or from the <code>cpack</code> command line option <code>-B</code>. If set, the command line option overrides the value found in the config file.</dd>
+<dt><code>CPACK_PACKAGE_VERSION_MAJOR</code></dt>
+<dd>Package major version. This variable will always be set, but its default value depends on whether or not version details were given to the <code>project()</code> command in the top level CMakeLists.txt file. If version details were given, the default value will be <code>CMAKE_PROJECT_VERSION_MAJOR</code>. If no version details were given, a default version of 0.1.1 will be assumed, leading to <code>CPACK_PACKAGE_VERSION_MAJOR</code> having a default value of 0.</dd>
+<dt><code>CPACK_PACKAGE_VERSION_MINOR</code></dt>
+<dd>Package minor version. The default value is determined based on whether or not version details were given to the <code>project()</code> command in the top level CMakeLists.txt file. If version details were given, the default value will be <code>CMAKE_PROJECT_VERSION_MINOR</code>, but if no minor version component was specified then <code>CPACK_PACKAGE_VERSION_MINOR</code> will be left unset. If no project version was given at all, a default version of 0.1.1 will be assumed, leading to <code>CPACK_PACKAGE_VERSION_MINOR</code> having a default value of 1.</dd>
+<dt><code>CPACK_PACKAGE_VERSION_PATCH</code></dt>
+<dd>Package patch version. The default value is determined based on whether or not version details were given to the <code>project()</code> command in the top level CMakeLists.txt file. If version details were given, the default value will be <code>CMAKE_PROJECT_VERSION_PATCH</code>, but if no patch version component was specified then <code>CPACK_PACKAGE_VERSION_PATCH</code> will be left unset. If no project version was given at all, a default version of 0.1.1 will be assumed, leading to <code>CPACK_PACKAGE_VERSION_PATCH</code> having a default value of 1.</dd>
+<dt><code>CPACK_PACKAGE_DESCRIPTION</code></dt>
+<dd>A description of the project, used in places such as the introduction screen of CPack-generated Windows installers. If not set, the value of this variable is populated from the file named by <i>CPACK_PACKAGE_DESCRIPTION_FILE</i>.</dd>
+<dt><code>CPACK_PACKAGE_DESCRIPTION_FILE</code></dt>
+<dd>A text file used to describe the project when <i>CPACK_PACKAGE_DESCRIPTION</i> is not explicitly set. The default value for <code>CPACK_PACKAGE_DESCRIPTION_FILE</code> points to a built-in template file <code>Templates/CPack.GenericDescription.txt</code>.</dd>
+<dt><code>CPACK_PACKAGE_DESCRIPTION_SUMMARY</code></dt>
+<dd>Short description of the project (only a few words). If the <code>CMAKE_PROJECT_DESCRIPTION</code> variable is set, it is used as the default value, otherwise the default will be a string generated by CMake based on <code>CMAKE_PROJECT_NAME</code>.</dd>
+<dt><code>CPACK_PACKAGE_HOMEPAGE_URL</code></dt>
+<dd>Project homepage URL. The default value is taken from the <code>CMAKE_PROJECT_HOMEPAGE_URL</code> variable, which is set by the top level <code>project()</code> command, or else the default will be empty if no URL was provided to <code>project()</code>.</dd>
+<dt><code>CPACK_PACKAGE_FILE_NAME</code></dt>
+<dd>The name of the package file to generate, not including the extension. For example, <code>cmake-2.6.1-Linux-i686</code>. The default value is: </dd>
 <pre>${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CPACK_SYSTEM_NAME}</pre>
-<dt><code>CPACK_PACKAGE_INSTALL_DIRECTORY</code></p>
-<dd>Installation directory on the target system. This may be used by some CPack generators like NSIS to create an installation directory e.g., &quot;CMake 2.5&quot; below the installation prefix. All installed elements will be put inside this directory.</p>
-<dt><code>CPACK_PACKAGE_ICON</code></p>
-<dd>A branding image that will be displayed inside the installer (used by GUI installers).</p>
-<dt><code>CPACK_PACKAGE_CHECKSUM</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>CPACK_PACKAGE_INSTALL_DIRECTORY</code></dt>
+<dd>Installation directory on the target system. This may be used by some CPack generators like NSIS to create an installation directory e.g., &quot;CMake 2.5&quot; below the installation prefix. All installed elements will be put inside this directory.</dd>
+<dt><code>CPACK_PACKAGE_ICON</code></dt>
+<dd>A branding image that will be displayed inside the installer (used by GUI installers).</dd>
+<dt><code>CPACK_PACKAGE_CHECKSUM</code></dt>
+<dd>New in version 3.7. </dd>
 <p> An algorithm that will be used to generate an additional file with the checksum of the package. The output file name will be: </p>
 <pre>${CPACK_PACKAGE_FILE_NAME}.${CPACK_PACKAGE_CHECKSUM}</pre>
 <p>Supported algorithms are those listed by the string(&lt;HASH&gt;) command.</p>
-<dt><code>CPACK_PROJECT_CONFIG_FILE</code></p>
-<dd>CPack-time project CPack configuration file. This file is included at cpack time, once per generator after CPack has set <i>CPACK_GENERATOR</i> to the actual generator being used. It allows per-generator setting of <code>CPACK_*</code> variables at cpack time.</p>
-<dt><code>CPACK_RESOURCE_FILE_LICENSE</code></p>
-<dd>License to be embedded in the installer. It will typically be displayed to the user by the produced installer (often with an explicit &quot;Accept&quot; button, for graphical installers) prior to installation. This license file is NOT added to the installed files but is used by some CPack generators like NSIS. If you want to install a license file (may be the same as this one) along with your project, you must add an appropriate CMake <code>install()</code> command in your <code>CMakeLists.txt</code>.</p>
-<dt><code>CPACK_RESOURCE_FILE_README</code></p>
-<dd>ReadMe file to be embedded in the installer. It typically describes in some detail the purpose of the project during the installation. Not all CPack generators use this file.</p>
-<dt><code>CPACK_RESOURCE_FILE_WELCOME</code></p>
-<dd>Welcome file to be embedded in the installer. It welcomes users to this installer. Typically used in the graphical installers on Windows and Mac OS X.</p>
-<dt><code>CPACK_MONOLITHIC_INSTALL</code></p>
-<dd>Disables the component-based installation mechanism. When set, the component specification is ignored and all installed items are put in a single &quot;MONOLITHIC&quot; package. Some CPack generators do monolithic packaging by default and may be asked to do component packaging by setting <code>CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL</code> to <code>TRUE</code>.</p>
-<dt><code>CPACK_GENERATOR</code></p>
-<dd>List of CPack generators to use. If not specified, CPack will create a set of options following the naming pattern <i>CPACK_BINARY_&lt;GENNAME&gt;</i> (e.g. <code>CPACK_BINARY_NSIS</code>) allowing the user to enable/disable individual generators. If the <code>-G</code> option is given on the <code>cpack</code> command line, it will override this variable and any <code>CPACK_BINARY_&lt;GENNAME&gt;</code> options.</p>
-<dt><code>CPACK_OUTPUT_CONFIG_FILE</code></p>
-<dd>The name of the CPack binary configuration file. This file is the CPack configuration generated by the CPack module for binary installers. Defaults to <code>CPackConfig.cmake</code>.</p>
-<dt><code>CPACK_PACKAGE_EXECUTABLES</code></p>
-<dd>Lists each of the executables and associated text label to be used to create Start Menu shortcuts. For example, setting this to the list <code>ccmake;CMake</code> will create a shortcut named &quot;CMake&quot; that will execute the installed executable <code>ccmake</code>. Not all CPack generators use it (at least NSIS, WIX and OSXX11 do).</p>
-<dt><code>CPACK_STRIP_FILES</code></p>
-<dd>List of files to be stripped. Starting with CMake 2.6.0, <code>CPACK_STRIP_FILES</code> will be a boolean variable which enables stripping of all files (a list of files evaluates to <code>TRUE</code> in CMake, so this change is compatible).</p>
-<dt><code>CPACK_VERBATIM_VARIABLES</code></p>
-<dd>New in version 3.4. </p>
+<dt><code>CPACK_PROJECT_CONFIG_FILE</code></dt>
+<dd>CPack-time project CPack configuration file. This file is included at cpack time, once per generator after CPack has set <i>CPACK_GENERATOR</i> to the actual generator being used. It allows per-generator setting of <code>CPACK_*</code> variables at cpack time.</dd>
+<dt><code>CPACK_RESOURCE_FILE_LICENSE</code></dt>
+<dd>License to be embedded in the installer. It will typically be displayed to the user by the produced installer (often with an explicit &quot;Accept&quot; button, for graphical installers) prior to installation. This license file is NOT added to the installed files but is used by some CPack generators like NSIS. If you want to install a license file (may be the same as this one) along with your project, you must add an appropriate CMake <code>install()</code> command in your <code>CMakeLists.txt</code>.</dd>
+<dt><code>CPACK_RESOURCE_FILE_README</code></dt>
+<dd>ReadMe file to be embedded in the installer. It typically describes in some detail the purpose of the project during the installation. Not all CPack generators use this file.</dd>
+<dt><code>CPACK_RESOURCE_FILE_WELCOME</code></dt>
+<dd>Welcome file to be embedded in the installer. It welcomes users to this installer. Typically used in the graphical installers on Windows and Mac OS X.</dd>
+<dt><code>CPACK_MONOLITHIC_INSTALL</code></dt>
+<dd>Disables the component-based installation mechanism. When set, the component specification is ignored and all installed items are put in a single &quot;MONOLITHIC&quot; package. Some CPack generators do monolithic packaging by default and may be asked to do component packaging by setting <code>CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL</code> to <code>TRUE</code>.</dd>
+<dt><code>CPACK_GENERATOR</code></dt>
+<dd>List of CPack generators to use. If not specified, CPack will create a set of options following the naming pattern <i>CPACK_BINARY_&lt;GENNAME&gt;</i> (e.g. <code>CPACK_BINARY_NSIS</code>) allowing the user to enable/disable individual generators. If the <code>-G</code> option is given on the <code>cpack</code> command line, it will override this variable and any <code>CPACK_BINARY_&lt;GENNAME&gt;</code> options.</dd>
+<dt><code>CPACK_OUTPUT_CONFIG_FILE</code></dt>
+<dd>The name of the CPack binary configuration file. This file is the CPack configuration generated by the CPack module for binary installers. Defaults to <code>CPackConfig.cmake</code>.</dd>
+<dt><code>CPACK_PACKAGE_EXECUTABLES</code></dt>
+<dd>Lists each of the executables and associated text label to be used to create Start Menu shortcuts. For example, setting this to the list <code>ccmake;CMake</code> will create a shortcut named &quot;CMake&quot; that will execute the installed executable <code>ccmake</code>. Not all CPack generators use it (at least NSIS, WIX and OSXX11 do).</dd>
+<dt><code>CPACK_STRIP_FILES</code></dt>
+<dd>List of files to be stripped. Starting with CMake 2.6.0, <code>CPACK_STRIP_FILES</code> will be a boolean variable which enables stripping of all files (a list of files evaluates to <code>TRUE</code> in CMake, so this change is compatible).</dd>
+<dt><code>CPACK_VERBATIM_VARIABLES</code></dt>
+<dd>New in version 3.4. </dd>
 <p> If set to <code>TRUE</code>, values of variables prefixed with <code>CPACK_</code> will be escaped before being written to the configuration files, so that the cpack program receives them exactly as they were specified. If not, characters like quotes and backslashes can cause parsing errors or alter the value received by the cpack program. Defaults to <code>FALSE</code> for backwards compatibility.</p>
-<dt><code>CPACK_THREADS</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>CPACK_THREADS</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Number of threads to use when performing parallelized operations, such as compressing the installer package. </p>
 <p> Some compression methods used by CPack generators such as Debian or Archive may take advantage of multiple CPU cores to speed up compression. <code>CPACK_THREADS</code> can be set to specify how many threads will be used for compression. </p>
 <p> A positive integer can be used to specify an exact desired thread count. </p>
@@ -1263,52 +1263,52 @@ cmake_pop_check_state()</pre>
 <h3>Variables for Source Package Generators</h3>
 <p>The following CPack variables are specific to source packages, and will not affect binary packages:</p>
 <dl>
-<dt><code>CPACK_SOURCE_PACKAGE_FILE_NAME</code></p>
-<dd>The name of the source package. For example <code>cmake-2.6.1</code>.</p>
-<dt><code>CPACK_SOURCE_STRIP_FILES</code></p>
-<dd>List of files in the source tree that will be stripped. Starting with CMake 2.6.0, <code>CPACK_SOURCE_STRIP_FILES</code> will be a boolean variable which enables stripping of all files (a list of files evaluates to <code>TRUE</code> in CMake, so this change is compatible).</p>
-<dt><code>CPACK_SOURCE_GENERATOR</code></p>
-<dd>List of generators used for the source packages. As with <i>CPACK_GENERATOR</i>, if this is not specified then CPack will create a set of options (e.g. <code>CPACK_SOURCE_ZIP</code>) allowing users to select which packages will be generated.</p>
-<dt><code>CPACK_SOURCE_OUTPUT_CONFIG_FILE</code></p>
-<dd>The name of the CPack source configuration file. This file is the CPack configuration generated by the CPack module for source installers. Defaults to <code>CPackSourceConfig.cmake</code>.</p>
-<dt><code>CPACK_SOURCE_IGNORE_FILES</code></p>
-<dd>Pattern of files in the source tree that won&#8217;t be packaged when building a source package. This is a list of regular expression patterns (that must be properly escaped), e.g., <code>/CVS/;/\.svn/;\.swp$;\.#;/#;.*~;cscope.*</code></dl>
+<dt><code>CPACK_SOURCE_PACKAGE_FILE_NAME</code></dt>
+<dd>The name of the source package. For example <code>cmake-2.6.1</code>.</dd>
+<dt><code>CPACK_SOURCE_STRIP_FILES</code></dt>
+<dd>List of files in the source tree that will be stripped. Starting with CMake 2.6.0, <code>CPACK_SOURCE_STRIP_FILES</code> will be a boolean variable which enables stripping of all files (a list of files evaluates to <code>TRUE</code> in CMake, so this change is compatible).</dd>
+<dt><code>CPACK_SOURCE_GENERATOR</code></dt>
+<dd>List of generators used for the source packages. As with <i>CPACK_GENERATOR</i>, if this is not specified then CPack will create a set of options (e.g. <code>CPACK_SOURCE_ZIP</code>) allowing users to select which packages will be generated.</dd>
+<dt><code>CPACK_SOURCE_OUTPUT_CONFIG_FILE</code></dt>
+<dd>The name of the CPack source configuration file. This file is the CPack configuration generated by the CPack module for source installers. Defaults to <code>CPackSourceConfig.cmake</code>.</dd>
+<dt><code>CPACK_SOURCE_IGNORE_FILES</code></dt>
+<dd>Pattern of files in the source tree that won&#8217;t be packaged when building a source package. This is a list of regular expression patterns (that must be properly escaped), e.g., <code>/CVS/;/\.svn/;\.swp$;\.#;/#;.*~;cscope.*</code></dd></dl>
 <h3>Variables for Advanced Use</h3>
 <p>The following variables are for advanced uses of CPack:</p>
 <dl>
-<dt><code>CPACK_CMAKE_GENERATOR</code></p>
-<dd>What CMake generator should be used if the project is a CMake project. Defaults to the value of <code>CMAKE_GENERATOR</code>. Few users will want to change this setting.</p>
-<dt><code>CPACK_INSTALL_CMAKE_PROJECTS</code></p>
-<dd>List of four values that specify what project to install. The four values are: Build directory, Project Name, Project Component, Directory. If omitted, CPack will build an installer that installs everything.</p>
-<dt><code>CPACK_SYSTEM_NAME</code></p>
-<dd>System name, defaults to the value of <code>CMAKE_SYSTEM_NAME</code>, except on Windows where it will be <code>win32</code> or <code>win64</code>.</p>
-<dt><code>CPACK_PACKAGE_VERSION</code></p>
-<dd>Package full version, used internally. By default, this is built from <i>CPACK_PACKAGE_VERSION_MAJOR</i>, <i>CPACK_PACKAGE_VERSION_MINOR</i>, and <i>CPACK_PACKAGE_VERSION_PATCH</i>.</p>
-<dt><code>CPACK_TOPLEVEL_TAG</code></p>
-<dd>Directory for the installed files.</p>
-<dt><code>CPACK_INSTALL_COMMANDS</code></p>
-<dd>Extra commands to install components. The environment variable <code>CMAKE_INSTALL_PREFIX</code> is set to the temporary install directory during execution.</p>
-<dt><code>CPACK_INSTALL_SCRIPTS</code></p>
-<dd>New in version 3.16. </p>
+<dt><code>CPACK_CMAKE_GENERATOR</code></dt>
+<dd>What CMake generator should be used if the project is a CMake project. Defaults to the value of <code>CMAKE_GENERATOR</code>. Few users will want to change this setting.</dd>
+<dt><code>CPACK_INSTALL_CMAKE_PROJECTS</code></dt>
+<dd>List of four values that specify what project to install. The four values are: Build directory, Project Name, Project Component, Directory. If omitted, CPack will build an installer that installs everything.</dd>
+<dt><code>CPACK_SYSTEM_NAME</code></dt>
+<dd>System name, defaults to the value of <code>CMAKE_SYSTEM_NAME</code>, except on Windows where it will be <code>win32</code> or <code>win64</code>.</dd>
+<dt><code>CPACK_PACKAGE_VERSION</code></dt>
+<dd>Package full version, used internally. By default, this is built from <i>CPACK_PACKAGE_VERSION_MAJOR</i>, <i>CPACK_PACKAGE_VERSION_MINOR</i>, and <i>CPACK_PACKAGE_VERSION_PATCH</i>.</dd>
+<dt><code>CPACK_TOPLEVEL_TAG</code></dt>
+<dd>Directory for the installed files.</dd>
+<dt><code>CPACK_INSTALL_COMMANDS</code></dt>
+<dd>Extra commands to install components. The environment variable <code>CMAKE_INSTALL_PREFIX</code> is set to the temporary install directory during execution.</dd>
+<dt><code>CPACK_INSTALL_SCRIPTS</code></dt>
+<dd>New in version 3.16. </dd>
 <p> Extra CMake scripts executed by CPack during its local staging installation. They are executed before installing the files to be packaged. The scripts are not called by a standalone install (e.g.: <code>make install</code>). For every script, the following variables will be set: <code>CMAKE_CURRENT_SOURCE_DIR</code>, <code>CMAKE_CURRENT_BINARY_DIR</code> and <code>CMAKE_INSTALL_PREFIX</code> (which is set to the staging install directory). The singular form <code>CMAKE_INSTALL_SCRIPT</code> is supported as an alternative variable for historical reasons, but its value is ignored if <code>CMAKE_INSTALL_SCRIPTS</code> is set and a warning will be issued. </p>
 <p> See also <i>CPACK_PRE_BUILD_SCRIPTS</i> and <i>CPACK_POST_BUILD_SCRIPTS</i> which can be used to specify scripts to be executed later in the packaging process.</p>
-<dt><code>CPACK_PRE_BUILD_SCRIPTS</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>CPACK_PRE_BUILD_SCRIPTS</code></dt>
+<dd>New in version 3.19. </dd>
 <p> List of CMake scripts to execute after CPack has installed the files to be packaged into a staging directory and before producing the package(s) from those files. See also <i>CPACK_INSTALL_SCRIPTS</i> and <i>CPACK_POST_BUILD_SCRIPTS</i>.</p>
-<dt><code>CPACK_POST_BUILD_SCRIPTS</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>CPACK_POST_BUILD_SCRIPTS</code></dt>
+<dd>New in version 3.19. </dd>
 <p> List of CMake scripts to execute after CPack has produced the resultant packages and before copying them back to the build directory. See also <i>CPACK_INSTALL_SCRIPTS</i>, <i>CPACK_PRE_BUILD_SCRIPTS</i> and <i>CPACK_PACKAGE_FILES</i>.</p>
-<dt><code>CPACK_PACKAGE_FILES</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>CPACK_PACKAGE_FILES</code></dt>
+<dd>New in version 3.19. </dd>
 <p> List of package files created in the staging directory, with each file provided as a full absolute path. This variable is populated by CPack just before invoking the post-build scripts listed in <i>CPACK_POST_BUILD_SCRIPTS</i>. It is the preferred way for the post-build scripts to know the set of package files to operate on. Projects should not try to set this variable themselves.</p>
-<dt><code>CPACK_INSTALLED_DIRECTORIES</code></p>
-<dd>Extra directories to install.</p>
-<dt><code>CPACK_PACKAGE_INSTALL_REGISTRY_KEY</code></p>
-<dd>Registry key used when installing this project. This is only used by installers for Windows. The default value is based on the installation directory.</p>
-<dt><code>CPACK_CREATE_DESKTOP_LINKS</code></p>
-<dd>List of desktop links to create. Each desktop link requires a corresponding start menu shortcut as created by <i>CPACK_PACKAGE_EXECUTABLES</i>.</p>
-<dt><code>CPACK_BINARY_&lt;GENNAME&gt;</code></p>
-<dd>CPack generated options for binary generators. The <code>CPack.cmake</code> module generates (when <i>CPACK_GENERATOR</i> is not set) a set of CMake options (see CMake <code>option()</code> command) which may then be used to select the CPack generator(s) to be used when building the <code>package</code> target or when running <code>cpack</code> without the <code>-G</code> option.</dl>
+<dt><code>CPACK_INSTALLED_DIRECTORIES</code></dt>
+<dd>Extra directories to install.</dd>
+<dt><code>CPACK_PACKAGE_INSTALL_REGISTRY_KEY</code></dt>
+<dd>Registry key used when installing this project. This is only used by installers for Windows. The default value is based on the installation directory.</dd>
+<dt><code>CPACK_CREATE_DESKTOP_LINKS</code></dt>
+<dd>List of desktop links to create. Each desktop link requires a corresponding start menu shortcut as created by <i>CPACK_PACKAGE_EXECUTABLES</i>.</dd>
+<dt><code>CPACK_BINARY_&lt;GENNAME&gt;</code></dt>
+<dd>CPack generated options for binary generators. The <code>CPack.cmake</code> module generates (when <i>CPACK_GENERATOR</i> is not set) a set of CMake options (see CMake <code>option()</code> command) which may then be used to select the CPack generator(s) to be used when building the <code>package</code> target or when running <code>cpack</code> without the <code>-G</code> option.</dd></dl>
 <h3>CPackComponent</h3>
 <p>Configure components for binary installers and source packages.</p>
 <h3>Introduction</h3>
@@ -1319,43 +1319,43 @@ cmake_pop_check_state()</pre>
 <h3>Variables</h3>
 <p>The following variables influence the component-specific packaging:</p>
 <dl>
-<dt><code>CPACK_COMPONENTS_ALL</code></p>
-<dd>The list of component to install. </p>
+<dt><code>CPACK_COMPONENTS_ALL</code></dt>
+<dd>The list of component to install. </dd>
 <p> The default value of this variable is computed by CPack and contains all components defined by the project. The user may set it to only include the specified components. </p>
 <p> Instead of specifying all the desired components, it is possible to obtain a list of all defined components and then remove the unwanted ones from the list. The <code>get_cmake_property()</code> command can be used to obtain the <code>COMPONENTS</code> property, then the <code>list(REMOVE_ITEM)</code> command can be used to remove the unwanted ones. For example, to use all defined components except <code>foo</code> and <code>bar</code>: </p>
 <pre>get_cmake_property(CPACK_COMPONENTS_ALL COMPONENTS)
 list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
-<dt><code>CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL</code></p>
-<dd>Enable/Disable component install for CPack generator &lt;GENNAME&gt;. </p>
+<dt><code>CPACK_&lt;GENNAME&gt;_COMPONENT_INSTALL</code></dt>
+<dd>Enable/Disable component install for CPack generator &lt;GENNAME&gt;. </dd>
 <p> Each CPack Generator (RPM, DEB, ARCHIVE, NSIS, DMG, etc&#8230;) has a legacy default behavior. e.g. RPM builds monolithic whereas NSIS builds component. One can change the default behavior by setting this variable to 0/1 or OFF/ON.</p>
-<dt><code>CPACK_COMPONENTS_GROUPING</code></p>
-<dd>Specify how components are grouped for multi-package component-aware CPack generators. </p>
+<dt><code>CPACK_COMPONENTS_GROUPING</code></dt>
+<dd>Specify how components are grouped for multi-package component-aware CPack generators. </dd>
 <p> Some generators like RPM or ARCHIVE (TGZ, ZIP, &#8230;) may generate several packages files when there are components, depending on the value of this variable:</p>
-<dt>&bull;</p>
-<dd>ONE_PER_GROUP (default): create one package per component group</p>
-<dt>&bull;</p>
-<dd>IGNORE : create one package per component (ignore the groups)</p>
-<dt>&bull;</p>
-<dd>ALL_COMPONENTS_IN_ONE : create a single package with all requested components</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DISPLAY_NAME</code></p>
-<dd>The name to be displayed for a component.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DESCRIPTION</code></p>
-<dd>The description of a component.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_GROUP</code></p>
-<dd>The group of a component.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DEPENDS</code></p>
-<dd>The dependencies (list of components) on which this component depends.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_HIDDEN</code></p>
-<dd>True if this component is hidden from the user.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_REQUIRED</code></p>
-<dd>True if this component is required.</p>
-<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DISABLED</code></p>
-<dd>True if this component is not selected to be installed by default.</dl>
+<dt>&bull;</dt>
+<dd>ONE_PER_GROUP (default): create one package per component group</dd>
+<dt>&bull;</dt>
+<dd>IGNORE : create one package per component (ignore the groups)</dd>
+<dt>&bull;</dt>
+<dd>ALL_COMPONENTS_IN_ONE : create a single package with all requested components</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DISPLAY_NAME</code></dt>
+<dd>The name to be displayed for a component.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DESCRIPTION</code></dt>
+<dd>The description of a component.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_GROUP</code></dt>
+<dd>The group of a component.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DEPENDS</code></dt>
+<dd>The dependencies (list of components) on which this component depends.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_HIDDEN</code></dt>
+<dd>True if this component is hidden from the user.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_REQUIRED</code></dt>
+<dd>True if this component is required.</dd>
+<dt><code>CPACK_COMPONENT_&lt;compName&gt;_DISABLED</code></dt>
+<dd>True if this component is not selected to be installed by default.</dd></dl>
 <h3>Commands</h3>
 <h3>Add component</h3>
 <dl>
-<dt><code>cpack_add_component</code></p>
-<dd>Describe an installation component. </p>
+<dt><code>cpack_add_component</code></dt>
+<dd>Describe an installation component. </dd>
 <pre>cpack_add_component(compname
  [DISPLAY_NAME name]
  [DESCRIPTION description]
@@ -1381,8 +1381,8 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
 <p> PLIST gives a filename that is passed to pkgbuild with the <code>&#8211;component-plist</code> argument when using the productbuild generator.</dl>
 <h3>Add component group</h3>
 <dl>
-<dt><code>cpack_add_component_group</code></p>
-<dd>Describes a group of related CPack installation components. </p>
+<dt><code>cpack_add_component_group</code></dt>
+<dd>Describes a group of related CPack installation components. </dd>
 <pre>cpack_add_component_group(groupname
  [DISPLAY_NAME name]
  [DESCRIPTION description]
@@ -1398,16 +1398,16 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
 <p> BOLD_TITLE indicates that the group title should appear in bold, to call the user&#8217;s attention to the group.</dl>
 <h3>Add installation type</h3>
 <dl>
-<dt><code>cpack_add_install_type</code></p>
-<dd>Add a new installation type containing a set of predefined component selections to the graphical installer. </p>
+<dt><code>cpack_add_install_type</code></dt>
+<dd>Add a new installation type containing a set of predefined component selections to the graphical installer. </dd>
 <pre>cpack_add_install_type(typename
  [DISPLAY_NAME name])</pre>
 <p>The cpack_add_install_type command identifies a set of preselected components that represents a common use case for an application. For example, a &quot;Developer&quot; install type might include an application along with its header and library files, while an &quot;End user&quot; install type might just include the application&#8217;s executable. Each component identifies itself with one or more install types via the INSTALL_TYPES argument to cpack_add_component. </p>
 <p> DISPLAY_NAME is the displayed name of the install type, which will typically show up in a drop-down box within a graphical installer. This value can be any string.</dl>
 <h3>Configure downloads</h3>
 <dl>
-<dt><code>cpack_configure_downloads</code></p>
-<dd>Configure CPack to download selected components on-the-fly as part of the installation process. </p>
+<dt><code>cpack_configure_downloads</code></dt>
+<dd>Configure CPack to download selected components on-the-fly as part of the installation process. </dd>
 <pre>cpack_configure_downloads(site
  [UPLOAD_DIRECTORY dirname]
  [ALL]
@@ -1426,8 +1426,8 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
 <h3>Commands</h3>
 <p>The module defines the following commands:</p>
 <dl>
-<dt><code>cpack_ifw_configure_component</code></p>
-<dd>Sets the arguments specific to the CPack IFW generator. </p>
+<dt><code>cpack_ifw_configure_component</code></dt>
+<dd>Sets the arguments specific to the CPack IFW generator. </dd>
 <pre>cpack_ifw_configure_component(&lt;compname&gt; [COMMON] [ESSENTIAL] [VIRTUAL]
  [FORCED_INSTALLATION] [REQUIRES_ADMIN_RIGHTS]
  [NAME &lt;name&gt;]
@@ -1447,70 +1447,70 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
  [REPLACES &lt;comp_id&gt; ...]
  [CHECKABLE &lt;value&gt;])</pre>
 <p>This command should be called after <code>cpack_add_component()</code> command.</p>
-<dt><code>COMMON</code></p>
-<dd>if set, then the component will be packaged and installed as part of a group to which it belongs.</p>
-<dt><code>ESSENTIAL</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>COMMON</code></dt>
+<dd>if set, then the component will be packaged and installed as part of a group to which it belongs.</dd>
+<dt><code>ESSENTIAL</code></dt>
+<dd>New in version 3.6. </dd>
 <p> if set, then the package manager stays disabled until that component is updated.</p>
-<dt><code>VIRTUAL</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>VIRTUAL</code></dt>
+<dd>New in version 3.8. </dd>
 <p> if set, then the component will be hidden from the installer. It is a equivalent of the <code>HIDDEN</code> option from the <code>cpack_add_component()</code> command.</p>
-<dt><code>FORCED_INSTALLATION</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>FORCED_INSTALLATION</code></dt>
+<dd>New in version 3.8. </dd>
 <p> if set, then the component must always be installed. It is a equivalent of the <code>REQUIRED</code> option from the <code>cpack_add_component()</code> command.</p>
-<dt><code>REQUIRES_ADMIN_RIGHTS</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>REQUIRES_ADMIN_RIGHTS</code></dt>
+<dd>New in version 3.8. </dd>
 <p> set it if the component needs to be installed with elevated permissions.</p>
-<dt><code>NAME</code></p>
-<dd>is used to create domain-like identification for this component. By default used origin component name.</p>
-<dt><code>DISPLAY_NAME</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>NAME</code></dt>
+<dd>is used to create domain-like identification for this component. By default used origin component name.</dd>
+<dt><code>DISPLAY_NAME</code></dt>
+<dd>New in version 3.8. </dd>
 <p> set to rewrite original name configured by <code>cpack_add_component()</code> command.</p>
-<dt><code>DESCRIPTION</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>DESCRIPTION</code></dt>
+<dd>New in version 3.8. </dd>
 <p> set to rewrite original description configured by <code>cpack_add_component()</code> command.</p>
-<dt><code>UPDATE_TEXT</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>UPDATE_TEXT</code></dt>
+<dd>New in version 3.8. </dd>
 <p> will be added to the component description if this is an update to the component.</p>
-<dt><code>VERSION</code></p>
-<dd>is version of component. By default used <code>CPACK_PACKAGE_VERSION</code>.</p>
-<dt><code>RELEASE_DATE</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>VERSION</code></dt>
+<dd>is version of component. By default used <code>CPACK_PACKAGE_VERSION</code>.</dd>
+<dt><code>RELEASE_DATE</code></dt>
+<dd>New in version 3.8. </dd>
 <p> keep empty to auto generate.</p>
-<dt><code>SCRIPT</code></p>
-<dd>is a relative or absolute path to operations script for this component.</p>
-<dt><code>SORTING_PRIORITY</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>SCRIPT</code></dt>
+<dd>is a relative or absolute path to operations script for this component.</dd>
+<dt><code>SORTING_PRIORITY</code></dt>
+<dd>New in version 3.8. </dd>
 <p> is priority of the component in the tree.</p>
-<dt><code>PRIORITY</code></p>
-<dd>Deprecated since version 3.8: Old name for <code>SORTING_PRIORITY</code>. </p>
-<dt><code>DEPENDS</code>, <code>DEPENDENCIES</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>PRIORITY</code></dt>
+<dd>Deprecated since version 3.8: Old name for <code>SORTING_PRIORITY</code>. </dd>
+<dt><code>DEPENDS</code>, <code>DEPENDENCIES</code></dt>
+<dd>New in version 3.8. </dd>
 <p> list of dependency component or component group identifiers in QtIFW style. </p>
 <p> New in version 3.21. </p>
 <p> Component or group names listed as dependencies may contain hyphens. This requires QtIFW 3.1 or later.</p>
-<dt><code>AUTO_DEPEND_ON</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>AUTO_DEPEND_ON</code></dt>
+<dd>New in version 3.8. </dd>
 <p> list of identifiers of component or component group in QtIFW style that this component has an automatic dependency on.</p>
-<dt><code>LICENSES</code></p>
-<dd>pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component. You can specify more then one license.</p>
-<dt><code>DEFAULT</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>LICENSES</code></dt>
+<dd>pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component. You can specify more then one license.</dd>
+<dt><code>DEFAULT</code></dt>
+<dd>New in version 3.8. </dd>
 <p> Possible values are: TRUE, FALSE, and SCRIPT. Set to FALSE to disable the component in the installer or to SCRIPT to resolved during runtime (don&#8217;t forget add the file of the script as a value of the <code>SCRIPT</code> option).</p>
-<dt><code>USER_INTERFACES</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>USER_INTERFACES</code></dt>
+<dd>New in version 3.7. </dd>
 <p> is a list of &lt;file_path&gt; (&#8216;.ui&#8217; files) representing pages to load.</p>
-<dt><code>TRANSLATIONS</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>TRANSLATIONS</code></dt>
+<dd>New in version 3.8. </dd>
 <p> is a list of &lt;file_path&gt; (&#8216;.qm&#8217; files) representing translations to load.</p>
-<dt><code>REPLACES</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>REPLACES</code></dt>
+<dd>New in version 3.10. </dd>
 <p> list of identifiers of component or component group to replace.</p>
-<dt><code>CHECKABLE</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>CHECKABLE</code></dt>
+<dd>New in version 3.10. </dd>
 <p> Possible values are: TRUE, FALSE. Set to FALSE if you want to hide the checkbox for an item. This is useful when only a few subcomponents should be selected instead of all.</p>
-<dt><code>cpack_ifw_configure_component_group</code></p>
-<dd>Sets the arguments specific to the CPack IFW generator. </p>
+<dt><code>cpack_ifw_configure_component_group</code></dt>
+<dd>Sets the arguments specific to the CPack IFW generator. </dd>
 <pre>cpack_ifw_configure_component_group(&lt;groupname&gt; [VIRTUAL]
  [FORCED_INSTALLATION] [REQUIRES_ADMIN_RIGHTS]
  [NAME &lt;name&gt;]
@@ -1530,82 +1530,82 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
  [REPLACES &lt;comp_id&gt; ...]
  [CHECKABLE &lt;value&gt;])</pre>
 <p>This command should be called after <code>cpack_add_component_group()</code> command.</p>
-<dt><code>VIRTUAL</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>VIRTUAL</code></dt>
+<dd>New in version 3.8. </dd>
 <p> if set, then the group will be hidden from the installer. Note that setting this on a root component does not work.</p>
-<dt><code>FORCED_INSTALLATION</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>FORCED_INSTALLATION</code></dt>
+<dd>New in version 3.8. </dd>
 <p> if set, then the group must always be installed.</p>
-<dt><code>REQUIRES_ADMIN_RIGHTS</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>REQUIRES_ADMIN_RIGHTS</code></dt>
+<dd>New in version 3.8. </dd>
 <p> set it if the component group needs to be installed with elevated permissions.</p>
-<dt><code>NAME</code></p>
-<dd>is used to create domain-like identification for this component group. By default used origin component group name.</p>
-<dt><code>DISPLAY_NAME</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>NAME</code></dt>
+<dd>is used to create domain-like identification for this component group. By default used origin component group name.</dd>
+<dt><code>DISPLAY_NAME</code></dt>
+<dd>New in version 3.8. </dd>
 <p> set to rewrite original name configured by <code>cpack_add_component_group()</code> command.</p>
-<dt><code>DESCRIPTION</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>DESCRIPTION</code></dt>
+<dd>New in version 3.8. </dd>
 <p> set to rewrite original description configured by <code>cpack_add_component_group()</code> command.</p>
-<dt><code>UPDATE_TEXT</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>UPDATE_TEXT</code></dt>
+<dd>New in version 3.8. </dd>
 <p> will be added to the component group description if this is an update to the component group.</p>
-<dt><code>VERSION</code></p>
-<dd>is version of component group. By default used <code>CPACK_PACKAGE_VERSION</code>.</p>
-<dt><code>RELEASE_DATE</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>VERSION</code></dt>
+<dd>is version of component group. By default used <code>CPACK_PACKAGE_VERSION</code>.</dd>
+<dt><code>RELEASE_DATE</code></dt>
+<dd>New in version 3.8. </dd>
 <p> keep empty to auto generate.</p>
-<dt><code>SCRIPT</code></p>
-<dd>is a relative or absolute path to operations script for this component group.</p>
-<dt><code>SORTING_PRIORITY</code></p>
-<dd>is priority of the component group in the tree.</p>
-<dt><code>PRIORITY</code></p>
-<dd>Deprecated since version 3.8: Old name for <code>SORTING_PRIORITY</code>. </p>
-<dt><code>DEPENDS</code>, <code>DEPENDENCIES</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>SCRIPT</code></dt>
+<dd>is a relative or absolute path to operations script for this component group.</dd>
+<dt><code>SORTING_PRIORITY</code></dt>
+<dd>is priority of the component group in the tree.</dd>
+<dt><code>PRIORITY</code></dt>
+<dd>Deprecated since version 3.8: Old name for <code>SORTING_PRIORITY</code>. </dd>
+<dt><code>DEPENDS</code>, <code>DEPENDENCIES</code></dt>
+<dd>New in version 3.8. </dd>
 <p> list of dependency component or component group identifiers in QtIFW style. </p>
 <p> New in version 3.21. </p>
 <p> Component or group names listed as dependencies may contain hyphens. This requires QtIFW 3.1 or later.</p>
-<dt><code>AUTO_DEPEND_ON</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>AUTO_DEPEND_ON</code></dt>
+<dd>New in version 3.8. </dd>
 <p> list of identifiers of component or component group in QtIFW style that this component group has an automatic dependency on.</p>
-<dt><code>LICENSES</code></p>
-<dd>pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component group. You can specify more then one license.</p>
-<dt><code>DEFAULT</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>LICENSES</code></dt>
+<dd>pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component group. You can specify more then one license.</dd>
+<dt><code>DEFAULT</code></dt>
+<dd>New in version 3.8. </dd>
 <p> Possible values are: TRUE, FALSE, and SCRIPT. Set to TRUE to preselect the group in the installer (this takes effect only on groups that have no visible child components) or to SCRIPT to resolved during runtime (don&#8217;t forget add the file of the script as a value of the <code>SCRIPT</code> option).</p>
-<dt><code>USER_INTERFACES</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>USER_INTERFACES</code></dt>
+<dd>New in version 3.7. </dd>
 <p> is a list of &lt;file_path&gt; (&#8216;.ui&#8217; files) representing pages to load.</p>
-<dt><code>TRANSLATIONS</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>TRANSLATIONS</code></dt>
+<dd>New in version 3.8. </dd>
 <p> is a list of &lt;file_path&gt; (&#8216;.qm&#8217; files) representing translations to load.</p>
-<dt><code>REPLACES</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>REPLACES</code></dt>
+<dd>New in version 3.10. </dd>
 <p> list of identifiers of component or component group to replace.</p>
-<dt><code>CHECKABLE</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>CHECKABLE</code></dt>
+<dd>New in version 3.10. </dd>
 <p> Possible values are: TRUE, FALSE. Set to FALSE if you want to hide the checkbox for an item. This is useful when only a few subcomponents should be selected instead of all.</p>
-<dt><code>cpack_ifw_add_repository</code></p>
-<dd>Add QtIFW specific remote repository to binary installer. </p>
+<dt><code>cpack_ifw_add_repository</code></dt>
+<dd>Add QtIFW specific remote repository to binary installer. </dd>
 <pre>cpack_ifw_add_repository(&lt;reponame&gt; [DISABLED]
  URL &lt;url&gt;
  [USERNAME &lt;username&gt;]
  [PASSWORD &lt;password&gt;]
  [DISPLAY_NAME &lt;display_name&gt;])</pre>
 <p>This command will also add the &lt;reponame&gt; repository to a variable <code>CPACK_IFW_REPOSITORIES_ALL</code>.</p>
-<dt><code>DISABLED</code></p>
-<dd>if set, then the repository will be disabled by default.</p>
-<dt><code>URL</code></p>
-<dd>is points to a list of available components.</p>
-<dt><code>USERNAME</code></p>
-<dd>is used as user on a protected repository.</p>
-<dt><code>PASSWORD</code></p>
-<dd>is password to use on a protected repository.</p>
-<dt><code>DISPLAY_NAME</code></p>
-<dd>is string to display instead of the URL.</p>
-<dt><code>cpack_ifw_update_repository</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>DISABLED</code></dt>
+<dd>if set, then the repository will be disabled by default.</dd>
+<dt><code>URL</code></dt>
+<dd>is points to a list of available components.</dd>
+<dt><code>USERNAME</code></dt>
+<dd>is used as user on a protected repository.</dd>
+<dt><code>PASSWORD</code></dt>
+<dd>is password to use on a protected repository.</dd>
+<dt><code>DISPLAY_NAME</code></dt>
+<dd>is string to display instead of the URL.</dd>
+<dt><code>cpack_ifw_update_repository</code></dt>
+<dd>New in version 3.6. </dd>
 <p> Update QtIFW specific repository from remote repository. </p>
 <pre>cpack_ifw_update_repository(&lt;reponame&gt;
  [[ADD|REMOVE] URL &lt;url&gt;]|
@@ -1614,20 +1614,20 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
  [PASSWORD &lt;password&gt;]
  [DISPLAY_NAME &lt;display_name&gt;])</pre>
 <p>This command will also add the &lt;reponame&gt; repository to a variable <code>CPACK_IFW_REPOSITORIES_ALL</code>.</p>
-<dt><code>URL</code></p>
-<dd>is points to a list of available components.</p>
-<dt><code>OLD_URL</code></p>
-<dd>is points to a list that will replaced.</p>
-<dt><code>NEW_URL</code></p>
-<dd>is points to a list that will replace to.</p>
-<dt><code>USERNAME</code></p>
-<dd>is used as user on a protected repository.</p>
-<dt><code>PASSWORD</code></p>
-<dd>is password to use on a protected repository.</p>
-<dt><code>DISPLAY_NAME</code></p>
-<dd>is string to display instead of the URL.</p>
-<dt><code>cpack_ifw_add_package_resources</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>URL</code></dt>
+<dd>is points to a list of available components.</dd>
+<dt><code>OLD_URL</code></dt>
+<dd>is points to a list that will replaced.</dd>
+<dt><code>NEW_URL</code></dt>
+<dd>is points to a list that will replace to.</dd>
+<dt><code>USERNAME</code></dt>
+<dd>is used as user on a protected repository.</dd>
+<dt><code>PASSWORD</code></dt>
+<dd>is password to use on a protected repository.</dd>
+<dt><code>DISPLAY_NAME</code></dt>
+<dd>is string to display instead of the URL.</dd>
+<dt><code>cpack_ifw_add_package_resources</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Add additional resources in the installer binary. </p>
 <pre>cpack_ifw_add_package_resources(&lt;file_path&gt; &lt;file_path&gt; ...)</pre>
 <p>This command will also add the specified files to a variable <code>CPACK_IFW_PACKAGE_RESOURCES</code>.</dl>
@@ -1637,8 +1637,8 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
 <h3>Commands</h3>
 <p>The module defines the following commands:</p>
 <dl>
-<dt><code>cpack_ifw_configure_file</code></p>
-<dd>Copy a file to another location and modify its contents. </p>
+<dt><code>cpack_ifw_configure_file</code></dt>
+<dd>Copy a file to another location and modify its contents. </dd>
 <pre>cpack_ifw_configure_file(&lt;input&gt; &lt;output&gt;)</pre>
 <p>Copies an <code>&lt;input&gt;</code> file to an <code>&lt;output&gt;</code> file and substitutes variable values referenced as <code>%{VAR}</code> or <code>%VAR%</code> in the input file content. Each variable reference will be replaced with the current value of the variable, or the empty string if the variable is not defined.</dl>
 <h3>CSharpUtilities</h3>
@@ -1648,91 +1648,91 @@ list(REMOVE_ITEM CPACK_COMPONENTS_ALL &quot;foo&quot; &quot;bar&quot;)</pre>
 <p> The following functions are provided by this module: </p>
 <p> <code>Main functions</code></p>
 <dl>
-<dt>&bull;</p>
-<dd><i>csharp_set_windows_forms_properties()</i></p>
-<dt>&bull;</p>
-<dd><i>csharp_set_designer_cs_properties()</i></p>
-<dt>&bull;</p>
-<dd><i>csharp_set_xaml_cs_properties()</i> </p>
+<dt>&bull;</dt>
+<dd><i>csharp_set_windows_forms_properties()</i></dd>
+<dt>&bull;</dt>
+<dd><i>csharp_set_designer_cs_properties()</i></dd>
+<dt>&bull;</dt>
+<dd><i>csharp_set_xaml_cs_properties()</i> </dd>
 <p> <code>Helper functions</code></p>
-<dt>&bull;</p>
-<dd><i>csharp_get_filename_keys()</i></p>
-<dt>&bull;</p>
-<dd><i>csharp_get_filename_key_base()</i></p>
-<dt>&bull;</p>
-<dd><i>csharp_get_dependentupon_name()</i></dl>
+<dt>&bull;</dt>
+<dd><i>csharp_get_filename_keys()</i></dd>
+<dt>&bull;</dt>
+<dd><i>csharp_get_filename_key_base()</i></dd>
+<dt>&bull;</dt>
+<dd><i>csharp_get_dependentupon_name()</i></dd></dl>
 <h3>Main functions provided by the module</h3>
 <dl>
-<dt><code>csharp_set_windows_forms_properties</code></p>
-<dd>Sets source file properties for use of Windows Forms. Use this, if your CSharp target uses Windows Forms: </p>
+<dt><code>csharp_set_windows_forms_properties</code></dt>
+<dd>Sets source file properties for use of Windows Forms. Use this, if your CSharp target uses Windows Forms: </dd>
 <pre>csharp_set_windows_forms_properties([&lt;file1&gt; [&lt;file2&gt; [...]]])</pre>
-<dt><code>&lt;fileN&gt;</code></p>
-<dd>List of all source files which are relevant for setting the <code>VS_CSHARP_&lt;tagname&gt;</code> properties (including <code>.cs</code>, <code>.resx</code> and <code>.Designer.cs</code> extensions). </p>
+<dt><code>&lt;fileN&gt;</code></dt>
+<dd>List of all source files which are relevant for setting the <code>VS_CSHARP_&lt;tagname&gt;</code> properties (including <code>.cs</code>, <code>.resx</code> and <code>.Designer.cs</code> extensions). </dd>
 <p> In the list of all given files for all files ending with <code>.Designer.cs</code> and <code>.resx</code> is searched. For every <i>designer</i> or <i>resource</i> file a file with the same base name but only <code>.cs</code> as extension is searched. If this is found, the <code>VS_CSHARP_&lt;tagname&gt;</code> properties are set as follows:</p>
-<dt>for the <code>.cs</code> file:</p>
+<dt>for the <code>.cs</code> file:</dt>
 <dd>
-<dt>&bull;</p>
-<dd>VS_CSHARP_SubType &quot;Form&quot;</p>
-<dt>for the <code>.Designer.cs</code> file (if it exists):</p>
+</dd><dt>&bull;</dt>
+<dd>VS_CSHARP_SubType &quot;Form&quot;</dd>
+<dt>for the <code>.Designer.cs</code> file (if it exists):</dt>
 <dd>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DependentUpon &lt;cs-filename&gt;</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DesignTime &quot;&quot; (delete tag if previously defined)</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_AutoGen &quot;&quot;(delete tag if previously defined)</p>
-<dt>for the <code>.resx</code> file (if it exists):</p>
+</dd><dt>&bull;</dt>
+<dd>VS_CSHARP_DependentUpon &lt;cs-filename&gt;</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_DesignTime &quot;&quot; (delete tag if previously defined)</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_AutoGen &quot;&quot;(delete tag if previously defined)</dd>
+<dt>for the <code>.resx</code> file (if it exists):</dt>
 <dd>
-<dt>&bull;</p>
-<dd>VS_RESOURCE_GENERATOR &quot;&quot; (delete tag if previously defined)</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DependentUpon &lt;cs-filename&gt;</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_SubType &quot;Designer&quot;</p>
-<dt><code>csharp_set_designer_cs_properties</code></p>
-<dd>Sets source file properties of <code>.Designer.cs</code> files depending on sibling filenames. Use this, if your CSharp target does <code>not</code> use Windows Forms (for Windows Forms use <i>csharp_set_designer_cs_properties()</i> instead): </p>
+</dd><dt>&bull;</dt>
+<dd>VS_RESOURCE_GENERATOR &quot;&quot; (delete tag if previously defined)</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_DependentUpon &lt;cs-filename&gt;</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_SubType &quot;Designer&quot;</dd>
+<dt><code>csharp_set_designer_cs_properties</code></dt>
+<dd>Sets source file properties of <code>.Designer.cs</code> files depending on sibling filenames. Use this, if your CSharp target does <code>not</code> use Windows Forms (for Windows Forms use <i>csharp_set_designer_cs_properties()</i> instead): </dd>
 <pre>csharp_set_designer_cs_properties([&lt;file1&gt; [&lt;file2&gt; [...]]])</pre>
-<dt><code>&lt;fileN&gt;</code></p>
-<dd>List of all source files which are relevant for setting the <code>VS_CSHARP_&lt;tagname&gt;</code> properties (including <code>.cs</code>, <code>.resx</code>, <code>.settings</code> and <code>.Designer.cs</code> extensions). </p>
+<dt><code>&lt;fileN&gt;</code></dt>
+<dd>List of all source files which are relevant for setting the <code>VS_CSHARP_&lt;tagname&gt;</code> properties (including <code>.cs</code>, <code>.resx</code>, <code>.settings</code> and <code>.Designer.cs</code> extensions). </dd>
 <p> In the list of all given files for all files ending with <code>.Designer.cs</code> is searched. For every <i>designer</i> file all files with the same base name but different extensions are searched. If a match is found, the source file properties of the <i>designer</i> file are set depending on the extension of the matched file:</p>
-<dt>if match is <code>.resx</code> file:</p>
+<dt>if match is <code>.resx</code> file:</dt>
 <dd>
-<dt>&bull;</p>
-<dd>VS_CSHARP_AutoGen &quot;True&quot;</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DesignTime &quot;True&quot;</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DependentUpon &lt;resx-filename&gt;</p>
-<dt>if match is <code>.cs</code> file:</p>
+</dd><dt>&bull;</dt>
+<dd>VS_CSHARP_AutoGen &quot;True&quot;</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_DesignTime &quot;True&quot;</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_DependentUpon &lt;resx-filename&gt;</dd>
+<dt>if match is <code>.cs</code> file:</dt>
 <dd>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DependentUpon &lt;cs-filename&gt;</p>
-<dt>if match is <code>.settings</code> file:</p>
+</dd><dt>&bull;</dt>
+<dd>VS_CSHARP_DependentUpon &lt;cs-filename&gt;</dd>
+<dt>if match is <code>.settings</code> file:</dt>
 <dd>
-<dt>&bull;</p>
-<dd>VS_CSHARP_AutoGen &quot;True&quot;</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DesignTimeSharedInput &quot;True&quot;</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DependentUpon &lt;settings-filename&gt; </p>
+</dd><dt>&bull;</dt>
+<dd>VS_CSHARP_AutoGen &quot;True&quot;</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_DesignTimeSharedInput &quot;True&quot;</dd>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_DependentUpon &lt;settings-filename&gt; </dd>
 <p> <code>NOTE:</code> Because the source file properties of the <code>.Designer.cs</code> file are set according to the found matches and every match sets the <code>VS_CSHARP_DependentUpon</code> property, there should only be one match for each <code>Designer.cs</code> file.</p>
-<dt><code>csharp_set_xaml_cs_properties</code></p>
-<dd>Sets source file properties for use of Windows Presentation Foundation (WPF) and XAML. Use this, if your CSharp target uses WPF/XAML: </p>
+<dt><code>csharp_set_xaml_cs_properties</code></dt>
+<dd>Sets source file properties for use of Windows Presentation Foundation (WPF) and XAML. Use this, if your CSharp target uses WPF/XAML: </dd>
 <pre>csharp_set_xaml_cs_properties([&lt;file1&gt; [&lt;file2&gt; [...]]])</pre>
-<dt><code>&lt;fileN&gt;</code></p>
-<dd>List of all source files which are relevant for setting the <code>VS_CSHARP_&lt;tagname&gt;</code> properties (including <code>.cs</code>, <code>.xaml</code>, and <code>.xaml.cs</code> extensions). </p>
+<dt><code>&lt;fileN&gt;</code></dt>
+<dd>List of all source files which are relevant for setting the <code>VS_CSHARP_&lt;tagname&gt;</code> properties (including <code>.cs</code>, <code>.xaml</code>, and <code>.xaml.cs</code> extensions). </dd>
 <p> In the list of all given files for all files ending with <code>.xaml.cs</code> is searched. For every <i>xaml-cs</i> file, a file with the same base name but extension <code>.xaml</code> is searched. If a match is found, the source file properties of the <code>.xaml.cs</code> file are set:</p>
-<dt>&bull;</p>
-<dd>VS_CSHARP_DependentUpon &lt;xaml-filename&gt;</dl>
+<dt>&bull;</dt>
+<dd>VS_CSHARP_DependentUpon &lt;xaml-filename&gt;</dd></dl>
 <h3>Helper functions which are used by the above ones</h3>
 <dl>
-<dt><code>csharp_get_filename_keys</code></p>
-<dd>Helper function which computes a list of key values to identify source files independently of relative/absolute paths given in cmake and eliminates case sensitivity: </p>
+<dt><code>csharp_get_filename_keys</code></dt>
+<dd>Helper function which computes a list of key values to identify source files independently of relative/absolute paths given in cmake and eliminates case sensitivity: </dd>
 <pre>csharp_get_filename_keys(OUT [&lt;file1&gt; [&lt;file2&gt; [...]]])</pre>
-<dt><code>OUT</code></p>
-<dd>Name of the variable in which the list of keys is stored</p>
-<dt><code>&lt;fileN&gt;</code></p>
-<dd>filename(s) as given to to CSharp target using <code>add_library()</code> or <code>add_executable()</code> </p>
+<dt><code>OUT</code></dt>
+<dd>Name of the variable in which the list of keys is stored</dd>
+<dt><code>&lt;fileN&gt;</code></dt>
+<dd>filename(s) as given to to CSharp target using <code>add_library()</code> or <code>add_executable()</code> </dd>
 <p> In some way the function applies a canonicalization to the source names. This is necessary to find file matches if the files have been added to the target with different directory prefixes: </p>
 <pre>add_library(lib
  myfile.cs
@@ -1743,20 +1743,20 @@ set_source_files_properties(myfile.Designer.cs PROPERTIES
 # - ${CMAKE_CURRENT_SOURCE_DIR}/myfile.Designer.cs
 # - myfile.Designer.cs
 # are not the same source file. The source file property is not set.</pre>
-<dt><code>csharp_get_filename_key_base</code></p>
-<dd>Returns the full filepath and name <code>without</code> extension of a key. KEY is expected to be a key from csharp_get_filename_keys. In BASE the value of KEY without the file extension is returned: </p>
+<dt><code>csharp_get_filename_key_base</code></dt>
+<dd>Returns the full filepath and name <code>without</code> extension of a key. KEY is expected to be a key from csharp_get_filename_keys. In BASE the value of KEY without the file extension is returned: </dd>
 <pre>csharp_get_filename_key_base(BASE KEY)</pre>
-<dt><code>BASE</code></p>
-<dd>Name of the variable with the computed &quot;base&quot; of <code>KEY</code>.</p>
-<dt><code>KEY</code></p>
-<dd>The key of which the base will be computed. Expected to be a upper case full filename.</p>
-<dt><code>csharp_get_dependentupon_name</code></p>
-<dd>Computes a string which can be used as value for the source file property <code>VS_CSHARP_&lt;tagname&gt;</code> with <i>target</i> being <code>DependentUpon</code>: </p>
+<dt><code>BASE</code></dt>
+<dd>Name of the variable with the computed &quot;base&quot; of <code>KEY</code>.</dd>
+<dt><code>KEY</code></dt>
+<dd>The key of which the base will be computed. Expected to be a upper case full filename.</dd>
+<dt><code>csharp_get_dependentupon_name</code></dt>
+<dd>Computes a string which can be used as value for the source file property <code>VS_CSHARP_&lt;tagname&gt;</code> with <i>target</i> being <code>DependentUpon</code>: </dd>
 <pre>csharp_get_dependentupon_name(NAME FILE)</pre>
-<dt><code>NAME</code></p>
-<dd>Name of the variable with the result value</p>
-<dt><code>FILE</code></p>
-<dd>Filename to convert to <code>&lt;DependentUpon&gt;</code> value </p>
+<dt><code>NAME</code></dt>
+<dd>Name of the variable with the result value</dd>
+<dt><code>FILE</code></dt>
+<dd>Filename to convert to <code>&lt;DependentUpon&gt;</code> value </dd>
 <p> Actually this is only the filename without any path given at the moment.</dl>
 <h3>CTest</h3>
 <p>Configure a project for testing with CTest/CDash </p>
@@ -1781,14 +1781,14 @@ set(CTEST_SUBMIT_URL &quot;<a rel="nofollow" href="http://my.cdash.org/submit.ph
 <p> This module provides the <code>ctest_coverage_collect_gcov</code> function. </p>
 <p> This function runs gcov on all .gcda files found in the binary tree and packages the resulting .gcov files into a tar file. This tarball also contains the following:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>data.json</i> defines the source and build directories for use by CDash.</p>
-<dt>&bull;</p>
-<dd><i>Labels.json</i> indicates any <code>LABELS</code> that have been set on the source files.</p>
-<dt>&bull;</p>
-<dd>The <i>uncovered</i> directory holds any uncovered files found by <code>CTEST_EXTRA_COVERAGE_GLOB</code>. </p>
+<dt>&bull;</dt>
+<dd><i>data.json</i> defines the source and build directories for use by CDash.</dd>
+<dt>&bull;</dt>
+<dd><i>Labels.json</i> indicates any <code>LABELS</code> that have been set on the source files.</dd>
+<dt>&bull;</dt>
+<dd>The <i>uncovered</i> directory holds any uncovered files found by <code>CTEST_EXTRA_COVERAGE_GLOB</code>. </dd>
 <p> After generating this tar file, it can be sent to CDash for display with the <code>ctest_submit(CDASH_UPLOAD)</code> command.</p>
-<dt><code>ctest_coverage_collect_gcov</code></p>
+<dt><code>ctest_coverage_collect_gcov</code></dt>
 <dd>
 <pre>ctest_coverage_collect_gcov(TARBALL &lt;tarfile&gt;
  [SOURCE &lt;source_dir&gt;][BUILD &lt;build_dir&gt;]
@@ -1796,28 +1796,28 @@ set(CTEST_SUBMIT_URL &quot;<a rel="nofollow" href="http://my.cdash.org/submit.ph
  [GCOV_OPTIONS &lt;options&gt;...]
  )</pre>
 <p>Run gcov and package a tar file for CDash. The options are:</p>
-<dt><code>TARBALL &lt;tarfile&gt;</code></p>
-<dd>Specify the location of the <code>.tar</code> file to be created for later upload to CDash. Relative paths will be interpreted with respect to the top-level build directory.</p>
-<dt><code>TARBALL_COMPRESSION &lt;option&gt;</code></p>
-<dd>New in version 3.18. </p>
+</dd><dt><code>TARBALL &lt;tarfile&gt;</code></dt>
+<dd>Specify the location of the <code>.tar</code> file to be created for later upload to CDash. Relative paths will be interpreted with respect to the top-level build directory.</dd>
+<dt><code>TARBALL_COMPRESSION &lt;option&gt;</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Specify a compression algorithm for the <code>TARBALL</code> data file. Using this option reduces the size of the data file before it is submitted to CDash. <code>&lt;option&gt;</code> must be one of <code>GZIP</code>, <code>BZIP2</code>, <code>XZ</code>, <code>ZSTD</code>, <code>FROM_EXT</code>, or an expression that CMake evaluates as <code>FALSE</code>. The default value is <code>BZIP2</code>. </p>
 <p> If <code>FROM_EXT</code> is specified, the resulting file will be compressed based on the file extension of the <code>&lt;tarfile&gt;</code> (i.e. <code>.tar.gz</code> will use <code>GZIP</code> compression). File extensions that will produce compressed output include <code>.tar.gz</code>, <code>.tgz</code>, <code>.tar.bzip2</code>, <code>.tbz</code>, <code>.tar.xz</code>, and <code>.txz</code>.</p>
-<dt><code>SOURCE &lt;source_dir&gt;</code></p>
-<dd>Specify the top-level source directory for the build. Default is the value of <code>CTEST_SOURCE_DIRECTORY</code>.</p>
-<dt><code>BUILD &lt;build_dir&gt;</code></p>
-<dd>Specify the top-level build directory for the build. Default is the value of <code>CTEST_BINARY_DIRECTORY</code>.</p>
-<dt><code>GCOV_COMMAND &lt;gcov_command&gt;</code></p>
-<dd>Specify the full path to the <code>gcov</code> command on the machine. Default is the value of <code>CTEST_COVERAGE_COMMAND</code>.</p>
-<dt><code>GCOV_OPTIONS &lt;options&gt;&#8230;</code></p>
-<dd>Specify options to be passed to gcov. The <code>gcov</code> command is run as <code>gcov &lt;options&gt;&#8230; -o &lt;gcov-dir&gt; &lt;file&gt;.gcda</code>. If not specified, the default option is just <code>-b -x</code>.</p>
-<dt><code>GLOB</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>SOURCE &lt;source_dir&gt;</code></dt>
+<dd>Specify the top-level source directory for the build. Default is the value of <code>CTEST_SOURCE_DIRECTORY</code>.</dd>
+<dt><code>BUILD &lt;build_dir&gt;</code></dt>
+<dd>Specify the top-level build directory for the build. Default is the value of <code>CTEST_BINARY_DIRECTORY</code>.</dd>
+<dt><code>GCOV_COMMAND &lt;gcov_command&gt;</code></dt>
+<dd>Specify the full path to the <code>gcov</code> command on the machine. Default is the value of <code>CTEST_COVERAGE_COMMAND</code>.</dd>
+<dt><code>GCOV_OPTIONS &lt;options&gt;&#8230;</code></dt>
+<dd>Specify options to be passed to gcov. The <code>gcov</code> command is run as <code>gcov &lt;options&gt;&#8230; -o &lt;gcov-dir&gt; &lt;file&gt;.gcda</code>. If not specified, the default option is just <code>-b -x</code>.</dd>
+<dt><code>GLOB</code></dt>
+<dd>New in version 3.6. </dd>
 <p> Recursively search for .gcda files in build_dir rather than determining search locations by reading TargetDirectories.txt.</p>
-<dt><code>DELETE</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>DELETE</code></dt>
+<dd>New in version 3.6. </dd>
 <p> Delete coverage files after they&#8217;ve been packaged into the .tar.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress non-error messages that otherwise would have been printed out by this function. </p>
+<dt><code>QUIET</code></dt>
+<dd>Suppress non-error messages that otherwise would have been printed out by this function. </dd>
 <p> New in version 3.3: Added support for the <code>CTEST_CUSTOM_COVERAGE_EXCLUDE</code> variable. </p>
 </dl>
 <h3>CTestScriptMode</h3>
@@ -1888,23 +1888,23 @@ ExternalData_Add_Target(MyData)</pre>
 <p>When test <code>MyTest</code> runs the <code>DATA{MyInput.png}</code> argument will be replaced by the full path to a real instance of the data file <code>MyInput.png</code> on disk. If the source tree contains a content link such as <code>MyInput.png.md5</code> then the <code>MyData</code> target creates a real <code>MyInput.png</code> in the build tree.</p>
 <h3>Module Functions</h3>
 <dl>
-<dt><code>ExternalData_Expand_Arguments</code></p>
-<dd>The <code>ExternalData_Expand_Arguments</code> function evaluates <code>DATA{}</code> references in its arguments and constructs a new list of arguments: </p>
+<dt><code>ExternalData_Expand_Arguments</code></dt>
+<dd>The <code>ExternalData_Expand_Arguments</code> function evaluates <code>DATA{}</code> references in its arguments and constructs a new list of arguments: </dd>
 <pre>ExternalData_Expand_Arguments(
  &lt;target&gt; # Name of data management target
  &lt;outVar&gt; # Output variable
  [args...] # Input arguments, DATA{} allowed
  )</pre>
 <p>It replaces each <code>DATA{}</code> reference in an argument with the full path of a real data file on disk that will exist after the <code>&lt;target&gt;</code> builds.</p>
-<dt><code>ExternalData_Add_Test</code></p>
-<dd>The <code>ExternalData_Add_Test</code> function wraps around the CMake <code>add_test()</code> command but supports <code>DATA{}</code> references in its arguments: </p>
+<dt><code>ExternalData_Add_Test</code></dt>
+<dd>The <code>ExternalData_Add_Test</code> function wraps around the CMake <code>add_test()</code> command but supports <code>DATA{}</code> references in its arguments: </dd>
 <pre>ExternalData_Add_Test(
  &lt;target&gt; # Name of data management target
  ... # Arguments of add_test(), DATA{} allowed
  )</pre>
 <p>It passes its arguments through <code>ExternalData_Expand_Arguments</code> and then invokes the <code>add_test()</code> command using the results.</p>
-<dt><code>ExternalData_Add_Target</code></p>
-<dd>The <code>ExternalData_Add_Target</code> function creates a custom target to manage local instances of data files stored externally: </p>
+<dt><code>ExternalData_Add_Target</code></dt>
+<dd>The <code>ExternalData_Add_Target</code> function creates a custom target to manage local instances of data files stored externally: </dd>
 <pre>ExternalData_Add_Target(
  &lt;target&gt; # Name of data management target
  [SHOW_PROGRESS &lt;ON|OFF&gt;] # Show progress during the download
@@ -1915,39 +1915,39 @@ ExternalData_Add_Target(MyData)</pre>
 <h3>Module Variables</h3>
 <p>The following variables configure behavior. They should be set before calling any of the functions provided by this module.</p>
 <dl>
-<dt><code>ExternalData_BINARY_ROOT</code></p>
-<dd>The <code>ExternalData_BINARY_ROOT</code> variable may be set to the directory to hold the real data files named by expanded <code>DATA{}</code> references. The default is <code>CMAKE_BINARY_DIR</code>. The directory layout will mirror that of content links under <code>ExternalData_SOURCE_ROOT</code>.</p>
-<dt><code>ExternalData_CUSTOM_SCRIPT_&lt;key&gt;</code></p>
-<dd>New in version 3.2. </p>
+<dt><code>ExternalData_BINARY_ROOT</code></dt>
+<dd>The <code>ExternalData_BINARY_ROOT</code> variable may be set to the directory to hold the real data files named by expanded <code>DATA{}</code> references. The default is <code>CMAKE_BINARY_DIR</code>. The directory layout will mirror that of content links under <code>ExternalData_SOURCE_ROOT</code>.</dd>
+<dt><code>ExternalData_CUSTOM_SCRIPT_&lt;key&gt;</code></dt>
+<dd>New in version 3.2. </dd>
 <p> Specify a full path to a <code>.cmake</code> custom fetch script identified by <code>&lt;key&gt;</code> in entries of the <code>ExternalData_URL_TEMPLATES</code> list. See <i>Custom Fetch Scripts</i>.</p>
-<dt><code>ExternalData_LINK_CONTENT</code></p>
-<dd>The <code>ExternalData_LINK_CONTENT</code> variable may be set to the name of a supported hash algorithm to enable automatic conversion of real data files referenced by the <code>DATA{}</code> syntax into content links. For each such <code>&lt;file&gt;</code> a content link named <code>&lt;file&gt;&lt;ext&gt;</code> is created. The original file is renamed to the form <code>.ExternalData_&lt;algo&gt;_&lt;hash&gt;</code> to stage it for future transmission to one of the locations in the list of URL templates (by means outside the scope of this module). The data fetch rule created for the content link will use the staged object if it cannot be found using any URL template.</p>
-<dt><code>ExternalData_NO_SYMLINKS</code></p>
-<dd>New in version 3.3. </p>
+<dt><code>ExternalData_LINK_CONTENT</code></dt>
+<dd>The <code>ExternalData_LINK_CONTENT</code> variable may be set to the name of a supported hash algorithm to enable automatic conversion of real data files referenced by the <code>DATA{}</code> syntax into content links. For each such <code>&lt;file&gt;</code> a content link named <code>&lt;file&gt;&lt;ext&gt;</code> is created. The original file is renamed to the form <code>.ExternalData_&lt;algo&gt;_&lt;hash&gt;</code> to stage it for future transmission to one of the locations in the list of URL templates (by means outside the scope of this module). The data fetch rule created for the content link will use the staged object if it cannot be found using any URL template.</dd>
+<dt><code>ExternalData_NO_SYMLINKS</code></dt>
+<dd>New in version 3.3. </dd>
 <p> The real data files named by expanded <code>DATA{}</code> references may be made available under <code>ExternalData_BINARY_ROOT</code> using symbolic links on some platforms. The <code>ExternalData_NO_SYMLINKS</code> variable may be set to disable use of symbolic links and enable use of copies instead.</p>
-<dt><code>ExternalData_OBJECT_STORES</code></p>
-<dd>The <code>ExternalData_OBJECT_STORES</code> variable may be set to a list of local directories that store objects using the layout <code>&lt;dir&gt;/%(algo)/%(hash)</code>. These directories will be searched first for a needed object. If the object is not available in any store then it will be fetched remotely using the URL templates and added to the first local store listed. If no stores are specified the default is a location inside the build tree.</p>
-<dt><code>ExternalData_SERIES_PARSE</code></p>
+<dt><code>ExternalData_OBJECT_STORES</code></dt>
+<dd>The <code>ExternalData_OBJECT_STORES</code> variable may be set to a list of local directories that store objects using the layout <code>&lt;dir&gt;/%(algo)/%(hash)</code>. These directories will be searched first for a needed object. If the object is not available in any store then it will be fetched remotely using the URL templates and added to the first local store listed. If no stores are specified the default is a location inside the build tree.</dd>
+<dt><code>ExternalData_SERIES_PARSE</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_PARSE_PREFIX</code></p>
+</dd><dt><code>ExternalData_SERIES_PARSE_PREFIX</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_PARSE_NUMBER</code></p>
+</dd><dt><code>ExternalData_SERIES_PARSE_NUMBER</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_PARSE_SUFFIX</code></p>
+</dd><dt><code>ExternalData_SERIES_PARSE_SUFFIX</code></dt>
 <dd>
-<dt><code>ExternalData_SERIES_MATCH</code></p>
-<dd>See <i>Referencing File Series</i>.</p>
-<dt><code>ExternalData_SOURCE_ROOT</code></p>
-<dd>The <code>ExternalData_SOURCE_ROOT</code> variable may be set to the highest source directory containing any path named by a <code>DATA{}</code> reference. The default is <code>CMAKE_SOURCE_DIR</code>. <code>ExternalData_SOURCE_ROOT</code> and <code>CMAKE_SOURCE_DIR</code> must refer to directories within a single source distribution (e.g. they come together in one tarball).</p>
-<dt><code>ExternalData_TIMEOUT_ABSOLUTE</code></p>
-<dd>The <code>ExternalData_TIMEOUT_ABSOLUTE</code> variable sets the download absolute timeout, in seconds, with a default of <code>300</code> seconds. Set to <code>0</code> to disable enforcement.</p>
-<dt><code>ExternalData_TIMEOUT_INACTIVITY</code></p>
-<dd>The <code>ExternalData_TIMEOUT_INACTIVITY</code> variable sets the download inactivity timeout, in seconds, with a default of <code>60</code> seconds. Set to <code>0</code> to disable enforcement.</p>
-<dt><code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code></p>
-<dd>New in version 3.3. </p>
+</dd><dt><code>ExternalData_SERIES_MATCH</code></dt>
+<dd>See <i>Referencing File Series</i>.</dd>
+<dt><code>ExternalData_SOURCE_ROOT</code></dt>
+<dd>The <code>ExternalData_SOURCE_ROOT</code> variable may be set to the highest source directory containing any path named by a <code>DATA{}</code> reference. The default is <code>CMAKE_SOURCE_DIR</code>. <code>ExternalData_SOURCE_ROOT</code> and <code>CMAKE_SOURCE_DIR</code> must refer to directories within a single source distribution (e.g. they come together in one tarball).</dd>
+<dt><code>ExternalData_TIMEOUT_ABSOLUTE</code></dt>
+<dd>The <code>ExternalData_TIMEOUT_ABSOLUTE</code> variable sets the download absolute timeout, in seconds, with a default of <code>300</code> seconds. Set to <code>0</code> to disable enforcement.</dd>
+<dt><code>ExternalData_TIMEOUT_INACTIVITY</code></dt>
+<dd>The <code>ExternalData_TIMEOUT_INACTIVITY</code> variable sets the download inactivity timeout, in seconds, with a default of <code>60</code> seconds. Set to <code>0</code> to disable enforcement.</dd>
+<dt><code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code></dt>
+<dd>New in version 3.3. </dd>
 <p> Specify a custom URL component to be substituted for URL template placeholders of the form <code>%(algo:&lt;key&gt;)</code>, where <code>&lt;key&gt;</code> is a valid C identifier, when fetching an object referenced via hash algorithm <code>&lt;algo&gt;</code>. If not defined, the default URL component is just <code>&lt;algo&gt;</code> for any <code>&lt;key&gt;</code>.</p>
-<dt><code>ExternalData_URL_TEMPLATES</code></p>
-<dd>The <code>ExternalData_URL_TEMPLATES</code> may be set to provide a list of URL templates using the placeholders <code>%(algo)</code> and <code>%(hash)</code> in each template. Data fetch rules try each URL template in order by substituting the hash algorithm name for <code>%(algo)</code> and the hash value for <code>%(hash)</code>. Alternatively one may use <code>%(algo:&lt;key&gt;)</code> with <code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code> variables to gain more flexibility in remote URLs.</dl>
+<dt><code>ExternalData_URL_TEMPLATES</code></dt>
+<dd>The <code>ExternalData_URL_TEMPLATES</code> may be set to provide a list of URL templates using the placeholders <code>%(algo)</code> and <code>%(hash)</code> in each template. Data fetch rules try each URL template in order by substituting the hash algorithm name for <code>%(algo)</code> and the hash value for <code>%(hash)</code>. Alternatively one may use <code>%(algo:&lt;key&gt;)</code> with <code>ExternalData_URL_ALGO_&lt;algo&gt;_&lt;key&gt;</code> variables to gain more flexibility in remote URLs.</dd></dl>
 <h3>Referencing Files</h3>
 <h3>Referencing Single Files</h3>
 <p>The <code>DATA{}</code> syntax is literal and the <code>&lt;name&gt;</code> is a full or relative path within the source tree. The source tree must contain either a real data file at <code>&lt;name&gt;</code> or a &quot;content link&quot; at <code>&lt;name&gt;&lt;ext&gt;</code> containing a hash of the real file using a hash algorithm corresponding to <code>&lt;ext&gt;</code>. For example, the argument <code>DATA{img.png}</code> may be satisfied by either a real <code>img.png</code> file in the current source directory or a <code>img.png.md5</code> file containing its MD5 sum. </p>
@@ -1991,41 +1991,41 @@ SHA3_512 .sha3-512 Keccak SHA-3</pre>
 <p>New in version 3.2. </p>
 <p> When a data file must be fetched from one of the URL templates specified in the <code>ExternalData_URL_TEMPLATES</code> variable, it is normally downloaded using the <code>file(DOWNLOAD)</code> command. One may specify usage of a custom fetch script by using a URL template of the form <code>ExternalDataCustomScript://&lt;key&gt;/&lt;loc&gt;</code>. The <code>&lt;key&gt;</code> must be a C identifier, and the <code>&lt;loc&gt;</code> must contain the <code>%(algo)</code> and <code>%(hash)</code> placeholders. A variable corresponding to the key, <code>ExternalData_CUSTOM_SCRIPT_&lt;key&gt;</code>, must be set to the full path to a <code>.cmake</code> script file. The script will be included to perform the actual fetch, and provided with the following variables:</p>
 <dl>
-<dt><code>ExternalData_CUSTOM_LOCATION</code></p>
-<dd>When a custom fetch script is loaded, this variable is set to the location part of the URL, which will contain the substituted hash algorithm name and content hash value.</p>
-<dt><code>ExternalData_CUSTOM_FILE</code></p>
-<dd>When a custom fetch script is loaded, this variable is set to the full path to a file in which the script must store the fetched content. The name of the file is unspecified and should not be interpreted in any way. </p>
+<dt><code>ExternalData_CUSTOM_LOCATION</code></dt>
+<dd>When a custom fetch script is loaded, this variable is set to the location part of the URL, which will contain the substituted hash algorithm name and content hash value.</dd>
+<dt><code>ExternalData_CUSTOM_FILE</code></dt>
+<dd>When a custom fetch script is loaded, this variable is set to the full path to a file in which the script must store the fetched content. The name of the file is unspecified and should not be interpreted in any way. </dd>
 <p> The custom fetch script is expected to store fetched content in the file or set a variable:</p>
-<dt><code>ExternalData_CUSTOM_ERROR</code></p>
-<dd>When a custom fetch script fails to fetch the requested content, it must set this variable to a short one-line message describing the reason for failure.</dl>
+<dt><code>ExternalData_CUSTOM_ERROR</code></dt>
+<dd>When a custom fetch script fails to fetch the requested content, it must set this variable to a short one-line message describing the reason for failure.</dd></dl>
 <h3>ExternalProject</h3>
 <h3>Commands</h3>
 <h3>External Project Definition</h3>
 <dl>
-<dt><code>ExternalProject_Add</code></p>
-<dd>The <code>ExternalProject_Add()</code> function creates a custom target to drive download, update/patch, configure, build, install and test steps of an external project: </p>
+<dt><code>ExternalProject_Add</code></dt>
+<dd>The <code>ExternalProject_Add()</code> function creates a custom target to drive download, update/patch, configure, build, install and test steps of an external project: </dd>
 <pre>ExternalProject_Add(&lt;name&gt; [&lt;option&gt;...])</pre>
 <p>The individual steps within the process can be driven independently if required (e.g. for CDash submission) and extra custom steps can be defined, along with the ability to control the step dependencies. The directory structure used for the management of the external project can also be customized. The function supports a large number of options which can be used to tailor the external project behavior.</p>
-<dt><code>Directory Options:</code></p>
-<dd>Most of the time, the default directory layout is sufficient. It is largely an implementation detail that the main project usually doesn&#8217;t need to change. In some circumstances, however, control over the directory layout can be useful or necessary. The directory options are potentially more useful from the point of view that the main build can use the <i>ExternalProject_Get_Property()</i> command to retrieve their values, thereby allowing the main project to refer to build artifacts of the external project.</p>
-<dt><code>PREFIX &lt;dir&gt;</code></p>
-<dd>Root directory for the external project. Unless otherwise noted below, all other directories associated with the external project will be created under here.</p>
-<dt><code>TMP_DIR &lt;dir&gt;</code></p>
-<dd>Directory in which to store temporary files.</p>
-<dt><code>STAMP_DIR &lt;dir&gt;</code></p>
-<dd>Directory in which to store the timestamps of each step. Log files from individual steps are also created in here unless overridden by LOG_DIR (see <i>Logging Options</i> below).</p>
-<dt><code>LOG_DIR &lt;dir&gt;</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Directory Options:</code></dt>
+<dd>Most of the time, the default directory layout is sufficient. It is largely an implementation detail that the main project usually doesn&#8217;t need to change. In some circumstances, however, control over the directory layout can be useful or necessary. The directory options are potentially more useful from the point of view that the main build can use the <i>ExternalProject_Get_Property()</i> command to retrieve their values, thereby allowing the main project to refer to build artifacts of the external project.</dd>
+<dt><code>PREFIX &lt;dir&gt;</code></dt>
+<dd>Root directory for the external project. Unless otherwise noted below, all other directories associated with the external project will be created under here.</dd>
+<dt><code>TMP_DIR &lt;dir&gt;</code></dt>
+<dd>Directory in which to store temporary files.</dd>
+<dt><code>STAMP_DIR &lt;dir&gt;</code></dt>
+<dd>Directory in which to store the timestamps of each step. Log files from individual steps are also created in here unless overridden by LOG_DIR (see <i>Logging Options</i> below).</dd>
+<dt><code>LOG_DIR &lt;dir&gt;</code></dt>
+<dd>New in version 3.14. </dd>
 <p> Directory in which to store the logs of each step.</p>
-<dt><code>DOWNLOAD_DIR &lt;dir&gt;</code></p>
-<dd>Directory in which to store downloaded files before unpacking them. This directory is only used by the URL download method, all other download methods use <code>SOURCE_DIR</code> directly instead.</p>
-<dt><code>SOURCE_DIR &lt;dir&gt;</code></p>
-<dd>Source directory into which downloaded contents will be unpacked, or for non-URL download methods, the directory in which the repository should be checked out, cloned, etc. If no download method is specified, this must point to an existing directory where the external project has already been unpacked or cloned/checked out. </p>
+<dt><code>DOWNLOAD_DIR &lt;dir&gt;</code></dt>
+<dd>Directory in which to store downloaded files before unpacking them. This directory is only used by the URL download method, all other download methods use <code>SOURCE_DIR</code> directly instead.</dd>
+<dt><code>SOURCE_DIR &lt;dir&gt;</code></dt>
+<dd>Source directory into which downloaded contents will be unpacked, or for non-URL download methods, the directory in which the repository should be checked out, cloned, etc. If no download method is specified, this must point to an existing directory where the external project has already been unpacked or cloned/checked out. </dd>
 <p> <code>NOTE:</code> If a download method is specified, any existing contents of the source directory may be deleted. Only the URL download method checks whether this directory is either missing or empty before initiating the download, stopping with an error if it is not empty. All other download methods silently discard any previous contents of the source directory.</p>
-<dt><code>BINARY_DIR &lt;dir&gt;</code></p>
-<dd>Specify the build directory location. This option is ignored if <code>BUILD_IN_SOURCE</code> is enabled.</p>
-<dt><code>INSTALL_DIR &lt;dir&gt;</code></p>
-<dd>Installation prefix to be placed in the <code>&lt;INSTALL_DIR&gt;</code> placeholder. This does not actually configure the external project to install to the given prefix. That must be done by passing appropriate arguments to the external project configuration step, e.g. using <code>&lt;INSTALL_DIR&gt;</code>. </p>
+<dt><code>BINARY_DIR &lt;dir&gt;</code></dt>
+<dd>Specify the build directory location. This option is ignored if <code>BUILD_IN_SOURCE</code> is enabled.</dd>
+<dt><code>INSTALL_DIR &lt;dir&gt;</code></dt>
+<dd>Installation prefix to be placed in the <code>&lt;INSTALL_DIR&gt;</code> placeholder. This does not actually configure the external project to install to the given prefix. That must be done by passing appropriate arguments to the external project configuration step, e.g. using <code>&lt;INSTALL_DIR&gt;</code>. </dd>
 <p> If any of the above <code>&#8230;_DIR</code> options are not specified, their defaults are computed as follows. If the <code>PREFIX</code> option is given or the <code>EP_PREFIX</code> directory property is set, then an external project is built and installed under the specified prefix: </p>
 <pre>TMP_DIR = &lt;prefix&gt;/tmp
 STAMP_DIR = &lt;prefix&gt;/src/&lt;name&gt;-stamp
@@ -2043,255 +2043,255 @@ BINARY_DIR = &lt;base&gt;/Build/&lt;name&gt;
 INSTALL_DIR = &lt;base&gt;/Install/&lt;name&gt;
 LOG_DIR = &lt;STAMP_DIR&gt;</pre>
 <p>If no <code>PREFIX</code>, <code>EP_PREFIX</code>, or <code>EP_BASE</code> is specified, then the default is to set <code>PREFIX</code> to <code>&lt;name&gt;-prefix</code>. Relative paths are interpreted with respect to <code>CMAKE_CURRENT_BINARY_DIR</code> at the point where <code>ExternalProject_Add()</code> is called.</p>
-<dt><code>Download Step Options:</code></p>
-<dd>A download method can be omitted if the <code>SOURCE_DIR</code> option is used to point to an existing non-empty directory. Otherwise, one of the download methods below must be specified (multiple download methods should not be given) or a custom <code>DOWNLOAD_COMMAND</code> provided.</p>
-<dt><code>DOWNLOAD_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Overrides the command used for the download step (<code>generator expressions</code> are supported). If this option is specified, all other download options will be ignored. Providing an empty string for <code>&lt;cmd&gt;</code> effectively disables the download step.</p>
-<dt><i>URL Download</i></p>
+<dt><code>Download Step Options:</code></dt>
+<dd>A download method can be omitted if the <code>SOURCE_DIR</code> option is used to point to an existing non-empty directory. Otherwise, one of the download methods below must be specified (multiple download methods should not be given) or a custom <code>DOWNLOAD_COMMAND</code> provided.</dd>
+<dt><code>DOWNLOAD_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Overrides the command used for the download step (<code>generator expressions</code> are supported). If this option is specified, all other download options will be ignored. Providing an empty string for <code>&lt;cmd&gt;</code> effectively disables the download step.</dd>
+<dt><i>URL Download</i></dt>
 <dd>
-<dt><code>URL &lt;url1&gt; [&lt;url2&gt;&#8230;]</code></p>
-<dd>List of paths and/or URL(s) of the external project&#8217;s source. When more than one URL is given, they are tried in turn until one succeeds. A URL may be an ordinary path in the local file system (in which case it must be the only URL provided) or any downloadable URL supported by the <code>file(DOWNLOAD)</code> command. A local filesystem path may refer to either an existing directory or to an archive file, whereas a URL is expected to point to a file which can be treated as an archive. When an archive is used, it will be unpacked automatically unless the <code>DOWNLOAD_NO_EXTRACT</code> option is set to prevent it. The archive type is determined by inspecting the actual content rather than using logic based on the file extension. </p>
+</dd><dt><code>URL &lt;url1&gt; [&lt;url2&gt;&#8230;]</code></dt>
+<dd>List of paths and/or URL(s) of the external project&#8217;s source. When more than one URL is given, they are tried in turn until one succeeds. A URL may be an ordinary path in the local file system (in which case it must be the only URL provided) or any downloadable URL supported by the <code>file(DOWNLOAD)</code> command. A local filesystem path may refer to either an existing directory or to an archive file, whereas a URL is expected to point to a file which can be treated as an archive. When an archive is used, it will be unpacked automatically unless the <code>DOWNLOAD_NO_EXTRACT</code> option is set to prevent it. The archive type is determined by inspecting the actual content rather than using logic based on the file extension. </dd>
 <p> Changed in version 3.7: Multiple URLs are allowed. </p>
-<dt><code>URL_HASH &lt;algo&gt;=&lt;hashValue&gt;</code></p>
-<dd>Hash of the archive file to be downloaded. The argument should be of the form <code>&lt;algo&gt;=&lt;hashValue&gt;</code> where <code>algo</code> can be any of the hashing algorithms supported by the <code>file()</code> command. Specifying this option is strongly recommended for URL downloads, as it ensures the integrity of the downloaded content. It is also used as a check for a previously downloaded file, allowing connection to the remote location to be avoided altogether if the local directory already has a file from an earlier download that matches the specified hash.</p>
-<dt><code>URL_MD5 &lt;md5&gt;</code></p>
-<dd>Equivalent to <code>URL_HASH MD5=&lt;md5&gt;</code>.</p>
-<dt><code>DOWNLOAD_NAME &lt;fname&gt;</code></p>
-<dd>File name to use for the downloaded file. If not given, the end of the URL is used to determine the file name. This option is rarely needed, the default name is generally suitable and is not normally used outside of code internal to the <code>ExternalProject</code> module.</p>
-<dt><code>DOWNLOAD_NO_EXTRACT &lt;bool&gt;</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>URL_HASH &lt;algo&gt;=&lt;hashValue&gt;</code></dt>
+<dd>Hash of the archive file to be downloaded. The argument should be of the form <code>&lt;algo&gt;=&lt;hashValue&gt;</code> where <code>algo</code> can be any of the hashing algorithms supported by the <code>file()</code> command. Specifying this option is strongly recommended for URL downloads, as it ensures the integrity of the downloaded content. It is also used as a check for a previously downloaded file, allowing connection to the remote location to be avoided altogether if the local directory already has a file from an earlier download that matches the specified hash.</dd>
+<dt><code>URL_MD5 &lt;md5&gt;</code></dt>
+<dd>Equivalent to <code>URL_HASH MD5=&lt;md5&gt;</code>.</dd>
+<dt><code>DOWNLOAD_NAME &lt;fname&gt;</code></dt>
+<dd>File name to use for the downloaded file. If not given, the end of the URL is used to determine the file name. This option is rarely needed, the default name is generally suitable and is not normally used outside of code internal to the <code>ExternalProject</code> module.</dd>
+<dt><code>DOWNLOAD_NO_EXTRACT &lt;bool&gt;</code></dt>
+<dd>New in version 3.6. </dd>
 <p> Allows the extraction part of the download step to be disabled by passing a boolean true value for this option. If this option is not given, the downloaded contents will be unpacked automatically if required. If extraction has been disabled, the full path to the downloaded file is available as <code>&lt;DOWNLOADED_FILE&gt;</code> in subsequent steps or as the property <code>DOWNLOADED_FILE</code> with the <i>ExternalProject_Get_Property()</i> command.</p>
-<dt><code>DOWNLOAD_NO_PROGRESS &lt;bool&gt;</code></p>
-<dd>Can be used to disable logging the download progress. If this option is not given, download progress messages will be logged.</p>
-<dt><code>TIMEOUT &lt;seconds&gt;</code></p>
-<dd>Maximum time allowed for file download operations.</p>
-<dt><code>INACTIVITY_TIMEOUT &lt;seconds&gt;</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>DOWNLOAD_NO_PROGRESS &lt;bool&gt;</code></dt>
+<dd>Can be used to disable logging the download progress. If this option is not given, download progress messages will be logged.</dd>
+<dt><code>TIMEOUT &lt;seconds&gt;</code></dt>
+<dd>Maximum time allowed for file download operations.</dd>
+<dt><code>INACTIVITY_TIMEOUT &lt;seconds&gt;</code></dt>
+<dd>New in version 3.19. </dd>
 <p> Terminate the operation after a period of inactivity.</p>
-<dt><code>HTTP_USERNAME &lt;username&gt;</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>HTTP_USERNAME &lt;username&gt;</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Username for the download operation if authentication is required.</p>
-<dt><code>HTTP_PASSWORD &lt;password&gt;</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>HTTP_PASSWORD &lt;password&gt;</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Password for the download operation if authentication is required.</p>
-<dt><code>HTTP_HEADER &lt;header1&gt; [&lt;header2&gt;&#8230;]</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>HTTP_HEADER &lt;header1&gt; [&lt;header2&gt;&#8230;]</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Provides an arbitrary list of HTTP headers for the download operation. This can be useful for accessing content in systems like AWS, etc.</p>
-<dt><code>TLS_VERIFY &lt;bool&gt;</code></p>
-<dd>Specifies whether certificate verification should be performed for https URLs. If this option is not provided, the default behavior is determined by the <code>CMAKE_TLS_VERIFY</code> variable (see <code>file(DOWNLOAD)</code>). If that is also not set, certificate verification will not be performed. In situations where <code>URL_HASH</code> cannot be provided, this option can be an alternative verification measure. </p>
+<dt><code>TLS_VERIFY &lt;bool&gt;</code></dt>
+<dd>Specifies whether certificate verification should be performed for https URLs. If this option is not provided, the default behavior is determined by the <code>CMAKE_TLS_VERIFY</code> variable (see <code>file(DOWNLOAD)</code>). If that is also not set, certificate verification will not be performed. In situations where <code>URL_HASH</code> cannot be provided, this option can be an alternative verification measure. </dd>
 <p> Changed in version 3.6: This option also applies to <code>git clone</code> invocations. </p>
-<dt><code>TLS_CAINFO &lt;file&gt;</code></p>
-<dd>Specify a custom certificate authority file to use if <code>TLS_VERIFY</code> is enabled. If this option is not specified, the value of the <code>CMAKE_TLS_CAINFO</code> variable will be used instead (see <code>file(DOWNLOAD)</code>)</p>
-<dt><code>NETRC &lt;level&gt;</code></p>
-<dd>New in version 3.11. </p>
+<dt><code>TLS_CAINFO &lt;file&gt;</code></dt>
+<dd>Specify a custom certificate authority file to use if <code>TLS_VERIFY</code> is enabled. If this option is not specified, the value of the <code>CMAKE_TLS_CAINFO</code> variable will be used instead (see <code>file(DOWNLOAD)</code>)</dd>
+<dt><code>NETRC &lt;level&gt;</code></dt>
+<dd>New in version 3.11. </dd>
 <p> Specify whether the <code>.netrc</code> file is to be used for operation. If this option is not specified, the value of the <code>CMAKE_NETRC</code> variable will be used instead (see <code>file(DOWNLOAD)</code>) Valid levels are:</p>
-<dt><code>IGNORED</code></p>
-<dd>The <code>.netrc</code> file is ignored. This is the default.</p>
-<dt><code>OPTIONAL</code></p>
-<dd>The <code>.netrc</code> file is optional, and information in the URL is preferred. The file will be scanned to find which ever information is not specified in the URL.</p>
-<dt><code>REQUIRED</code></p>
-<dd>The <code>.netrc</code> file is required, and information in the URL is ignored.</p>
-<dt><code>NETRC_FILE &lt;file&gt;</code></p>
-<dd>New in version 3.11. </p>
+<dt><code>IGNORED</code></dt>
+<dd>The <code>.netrc</code> file is ignored. This is the default.</dd>
+<dt><code>OPTIONAL</code></dt>
+<dd>The <code>.netrc</code> file is optional, and information in the URL is preferred. The file will be scanned to find which ever information is not specified in the URL.</dd>
+<dt><code>REQUIRED</code></dt>
+<dd>The <code>.netrc</code> file is required, and information in the URL is ignored.</dd>
+<dt><code>NETRC_FILE &lt;file&gt;</code></dt>
+<dd>New in version 3.11. </dd>
 <p> Specify an alternative <code>.netrc</code> file to the one in your home directory if the <code>NETRC</code> level is <code>OPTIONAL</code> or <code>REQUIRED</code>. If this option is not specified, the value of the <code>CMAKE_NETRC_FILE</code> variable will be used instead (see <code>file(DOWNLOAD)</code>) </p>
 <p> New in version 3.1: Added support for <i>tbz2</i>, <i>.tar.xz</i>, <i>.txz</i>, and <i>.7z</i> extensions. </p>
-<dt><i>Git</i></p>
-<dd>NOTE: A git version of 1.6.5 or later is required if this download method is used.</p>
-<dt><code>GIT_REPOSITORY &lt;url&gt;</code></p>
-<dd>URL of the git repository. Any URL understood by the <code>git</code> command may be used.</p>
-<dt><code>GIT_TAG &lt;tag&gt;</code></p>
-<dd>Git branch name, tag or commit hash. Note that branch names and tags should generally be specified as remote names (i.e. <code>origin/myBranch</code> rather than simply <code>myBranch</code>). This ensures that if the remote end has its tag moved or branch rebased or history rewritten, the local clone will still be updated correctly. In general, however, specifying a commit hash should be preferred for a number of reasons:</p>
-<dt>&bull;</p>
-<dd>If the local clone already has the commit corresponding to the hash, no <code>git fetch</code> needs to be performed to check for changes each time CMake is re-run. This can result in a significant speed up if many external projects are being used.</p>
-<dt>&bull;</p>
-<dd>Using a specific git hash ensures that the main project&#8217;s own history is fully traceable to a specific point in the external project&#8217;s evolution. If a branch or tag name is used instead, then checking out a specific commit of the main project doesn&#8217;t necessarily pin the whole build to a specific point in the life of the external project. The lack of such deterministic behavior makes the main project lose traceability and repeatability. </p>
+<dt><i>Git</i></dt>
+<dd>NOTE: A git version of 1.6.5 or later is required if this download method is used.</dd>
+<dt><code>GIT_REPOSITORY &lt;url&gt;</code></dt>
+<dd>URL of the git repository. Any URL understood by the <code>git</code> command may be used.</dd>
+<dt><code>GIT_TAG &lt;tag&gt;</code></dt>
+<dd>Git branch name, tag or commit hash. Note that branch names and tags should generally be specified as remote names (i.e. <code>origin/myBranch</code> rather than simply <code>myBranch</code>). This ensures that if the remote end has its tag moved or branch rebased or history rewritten, the local clone will still be updated correctly. In general, however, specifying a commit hash should be preferred for a number of reasons:</dd>
+<dt>&bull;</dt>
+<dd>If the local clone already has the commit corresponding to the hash, no <code>git fetch</code> needs to be performed to check for changes each time CMake is re-run. This can result in a significant speed up if many external projects are being used.</dd>
+<dt>&bull;</dt>
+<dd>Using a specific git hash ensures that the main project&#8217;s own history is fully traceable to a specific point in the external project&#8217;s evolution. If a branch or tag name is used instead, then checking out a specific commit of the main project doesn&#8217;t necessarily pin the whole build to a specific point in the life of the external project. The lack of such deterministic behavior makes the main project lose traceability and repeatability. </dd>
 <p> If <code>GIT_SHALLOW</code> is enabled then <code>GIT_TAG</code> works only with branch names and tags. A commit hash is not allowed.</p>
-<dt><code>GIT_REMOTE_NAME &lt;name&gt;</code></p>
-<dd>The optional name of the remote. If this option is not specified, it defaults to <code>origin</code>.</p>
-<dt><code>GIT_SUBMODULES &lt;module&gt;&#8230;</code></p>
-<dd>Specific git submodules that should also be updated. If this option is not provided, all git submodules will be updated. </p>
+<dt><code>GIT_REMOTE_NAME &lt;name&gt;</code></dt>
+<dd>The optional name of the remote. If this option is not specified, it defaults to <code>origin</code>.</dd>
+<dt><code>GIT_SUBMODULES &lt;module&gt;&#8230;</code></dt>
+<dd>Specific git submodules that should also be updated. If this option is not provided, all git submodules will be updated. </dd>
 <p> Changed in version 3.16: When <code>CMP0097</code> is set to <code>NEW</code>, if this value is set to an empty string then no submodules are initialized or updated. </p>
-<dt><code>GIT_SUBMODULES_RECURSE &lt;bool&gt;</code></p>
-<dd>New in version 3.17. </p>
+<dt><code>GIT_SUBMODULES_RECURSE &lt;bool&gt;</code></dt>
+<dd>New in version 3.17. </dd>
 <p> Specify whether git submodules (if any) should update recursively by passing the <code>&#8211;recursive</code> flag to <code>git submodule update</code>. If not specified, the default is on.</p>
-<dt><code>GIT_SHALLOW &lt;bool&gt;</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>GIT_SHALLOW &lt;bool&gt;</code></dt>
+<dd>New in version 3.6. </dd>
 <p> When this option is enabled, the <code>git clone</code> operation will be given the <code>&#8211;depth 1</code> option. This performs a shallow clone, which avoids downloading the whole history and instead retrieves just the commit denoted by the <code>GIT_TAG</code> option.</p>
-<dt><code>GIT_PROGRESS &lt;bool&gt;</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>GIT_PROGRESS &lt;bool&gt;</code></dt>
+<dd>New in version 3.8. </dd>
 <p> When enabled, this option instructs the <code>git clone</code> operation to report its progress by passing it the <code>&#8211;progress</code> option. Without this option, the clone step for large projects may appear to make the build stall, since nothing will be logged until the clone operation finishes. While this option can be used to provide progress to prevent the appearance of the build having stalled, it may also make the build overly noisy if lots of external projects are used.</p>
-<dt><code>GIT_CONFIG &lt;option1&gt; [&lt;option2&gt;&#8230;]</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>GIT_CONFIG &lt;option1&gt; [&lt;option2&gt;&#8230;]</code></dt>
+<dd>New in version 3.8. </dd>
 <p> Specify a list of config options to pass to <code>git clone</code>. Each option listed will be transformed into its own <code>&#8211;config &lt;option&gt;</code> on the <code>git clone</code> command line, with each option required to be in the form <code>key=value</code>.</p>
-<dt><code>GIT_REMOTE_UPDATE_STRATEGY &lt;strategy&gt;</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>GIT_REMOTE_UPDATE_STRATEGY &lt;strategy&gt;</code></dt>
+<dd>New in version 3.18. </dd>
 <p> When <code>GIT_TAG</code> refers to a remote branch, this option can be used to specify how the update step behaves. The <code>&lt;strategy&gt;</code> must be one of the following:</p>
-<dt><code>CHECKOUT</code></p>
-<dd>Ignore the local branch and always checkout the branch specified by <code>GIT_TAG</code>.</p>
-<dt><code>REBASE</code></p>
-<dd>Try to rebase the current branch to the one specified by <code>GIT_TAG</code>. If there are local uncommitted changes, they will be stashed first and popped again after rebasing. If rebasing or popping stashed changes fail, abort the rebase and halt with an error. When <code>GIT_REMOTE_UPDATE_STRATEGY</code> is not present, this is the default strategy unless the default has been overridden with <code>CMAKE_EP_GIT_REMOTE_UPDATE_STRATEGY</code> (see below).</p>
-<dt><code>REBASE_CHECKOUT</code></p>
-<dd>Same as <code>REBASE</code> except if the rebase fails, an annotated tag will be created at the original <code>HEAD</code> position from before the rebase and then checkout <code>GIT_TAG</code> just like the <code>CHECKOUT</code> strategy. The message stored on the annotated tag will give information about what was attempted and the tag name will include a timestamp so that each failed run will add a new tag. This strategy ensures no changes will be lost, but updates should always succeed if <code>GIT_TAG</code> refers to a valid ref unless there are uncommitted changes that cannot be popped successfully. </p>
+<dt><code>CHECKOUT</code></dt>
+<dd>Ignore the local branch and always checkout the branch specified by <code>GIT_TAG</code>.</dd>
+<dt><code>REBASE</code></dt>
+<dd>Try to rebase the current branch to the one specified by <code>GIT_TAG</code>. If there are local uncommitted changes, they will be stashed first and popped again after rebasing. If rebasing or popping stashed changes fail, abort the rebase and halt with an error. When <code>GIT_REMOTE_UPDATE_STRATEGY</code> is not present, this is the default strategy unless the default has been overridden with <code>CMAKE_EP_GIT_REMOTE_UPDATE_STRATEGY</code> (see below).</dd>
+<dt><code>REBASE_CHECKOUT</code></dt>
+<dd>Same as <code>REBASE</code> except if the rebase fails, an annotated tag will be created at the original <code>HEAD</code> position from before the rebase and then checkout <code>GIT_TAG</code> just like the <code>CHECKOUT</code> strategy. The message stored on the annotated tag will give information about what was attempted and the tag name will include a timestamp so that each failed run will add a new tag. This strategy ensures no changes will be lost, but updates should always succeed if <code>GIT_TAG</code> refers to a valid ref unless there are uncommitted changes that cannot be popped successfully. </dd>
 <p> The variable <code>CMAKE_EP_GIT_REMOTE_UPDATE_STRATEGY</code> can be set to override the default strategy. This variable should not be set by a project, it is intended for the user to set. It is primarily intended for use in continuous integration scripts to ensure that when history is rewritten on a remote branch, the build doesn&#8217;t end up with unintended changes or failed builds resulting from conflicts during rebase operations.</p>
-<dt><i>Subversion</i></p>
+<dt><i>Subversion</i></dt>
 <dd>
-<dt><code>SVN_REPOSITORY &lt;url&gt;</code></p>
-<dd>URL of the Subversion repository.</p>
-<dt><code>SVN_REVISION -r&lt;rev&gt;</code></p>
-<dd>Revision to checkout from the Subversion repository.</p>
-<dt><code>SVN_USERNAME &lt;username&gt;</code></p>
-<dd>Username for the Subversion checkout and update.</p>
-<dt><code>SVN_PASSWORD &lt;password&gt;</code></p>
-<dd>Password for the Subversion checkout and update.</p>
-<dt><code>SVN_TRUST_CERT &lt;bool&gt;</code></p>
-<dd>Specifies whether to trust the Subversion server site certificate. If enabled, the <code>&#8211;trust-server-cert</code> option is passed to the <code>svn</code> checkout and update commands.</p>
-<dt><i>Mercurial</i></p>
+</dd><dt><code>SVN_REPOSITORY &lt;url&gt;</code></dt>
+<dd>URL of the Subversion repository.</dd>
+<dt><code>SVN_REVISION -r&lt;rev&gt;</code></dt>
+<dd>Revision to checkout from the Subversion repository.</dd>
+<dt><code>SVN_USERNAME &lt;username&gt;</code></dt>
+<dd>Username for the Subversion checkout and update.</dd>
+<dt><code>SVN_PASSWORD &lt;password&gt;</code></dt>
+<dd>Password for the Subversion checkout and update.</dd>
+<dt><code>SVN_TRUST_CERT &lt;bool&gt;</code></dt>
+<dd>Specifies whether to trust the Subversion server site certificate. If enabled, the <code>&#8211;trust-server-cert</code> option is passed to the <code>svn</code> checkout and update commands.</dd>
+<dt><i>Mercurial</i></dt>
 <dd>
-<dt><code>HG_REPOSITORY &lt;url&gt;</code></p>
-<dd>URL of the mercurial repository.</p>
-<dt><code>HG_TAG &lt;tag&gt;</code></p>
-<dd>Mercurial branch name, tag or commit id.</p>
-<dt><i>CVS</i></p>
+</dd><dt><code>HG_REPOSITORY &lt;url&gt;</code></dt>
+<dd>URL of the mercurial repository.</dd>
+<dt><code>HG_TAG &lt;tag&gt;</code></dt>
+<dd>Mercurial branch name, tag or commit id.</dd>
+<dt><i>CVS</i></dt>
 <dd>
-<dt><code>CVS_REPOSITORY &lt;cvsroot&gt;</code></p>
-<dd>CVSROOT of the CVS repository.</p>
-<dt><code>CVS_MODULE &lt;mod&gt;</code></p>
-<dd>Module to checkout from the CVS repository.</p>
-<dt><code>CVS_TAG &lt;tag&gt;</code></p>
-<dd>Tag to checkout from the CVS repository.</p>
-<dt><code>Update/Patch Step Options:</code></p>
-<dd>Whenever CMake is re-run, by default the external project&#8217;s sources will be updated if the download method supports updates (e.g. a git repository would be checked if the <code>GIT_TAG</code> does not refer to a specific commit).</p>
-<dt><code>UPDATE_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Overrides the download method&#8217;s update step with a custom command. The command may use <code>generator expressions</code>.</p>
-<dt><code>UPDATE_DISCONNECTED &lt;bool&gt;</code></p>
-<dd>New in version 3.2. </p>
+</dd><dt><code>CVS_REPOSITORY &lt;cvsroot&gt;</code></dt>
+<dd>CVSROOT of the CVS repository.</dd>
+<dt><code>CVS_MODULE &lt;mod&gt;</code></dt>
+<dd>Module to checkout from the CVS repository.</dd>
+<dt><code>CVS_TAG &lt;tag&gt;</code></dt>
+<dd>Tag to checkout from the CVS repository.</dd>
+<dt><code>Update/Patch Step Options:</code></dt>
+<dd>Whenever CMake is re-run, by default the external project&#8217;s sources will be updated if the download method supports updates (e.g. a git repository would be checked if the <code>GIT_TAG</code> does not refer to a specific commit).</dd>
+<dt><code>UPDATE_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Overrides the download method&#8217;s update step with a custom command. The command may use <code>generator expressions</code>.</dd>
+<dt><code>UPDATE_DISCONNECTED &lt;bool&gt;</code></dt>
+<dd>New in version 3.2. </dd>
 <p> When enabled, this option causes the update step to be skipped. It does not, however, prevent the download step. The update step can still be added as a step target (see <i>ExternalProject_Add_StepTargets()</i>) and called manually. This is useful if you want to allow developers to build the project when disconnected from the network (the network may still be needed for the download step though). </p>
 <p> When this option is present, it is generally advisable to make the value a cache variable under the developer&#8217;s control rather than hard-coding it. If this option is not present, the default value is taken from the <code>EP_UPDATE_DISCONNECTED</code> directory property. If that is also not defined, updates are performed as normal. The <code>EP_UPDATE_DISCONNECTED</code> directory property is intended as a convenience for controlling the <code>UPDATE_DISCONNECTED</code> behavior for an entire section of a project&#8217;s directory hierarchy and may be a more convenient method of giving developers control over whether or not to perform updates (assuming the project also provides a cache variable or some other convenient method for setting the directory property). </p>
 <p> This may cause a step target to be created automatically for the <code>download</code> step. See policy <code>CMP0114</code>.</p>
-<dt><code>PATCH_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Specifies a custom command to patch the sources after an update. By default, no patch command is defined. Note that it can be quite difficult to define an appropriate patch command that performs robustly, especially for download methods such as git where changing the <code>GIT_TAG</code> will not discard changes from a previous patch, but the patch command will be called again after updating to the new tag.</p>
-<dt><code>Configure Step Options:</code></p>
-<dd>The configure step is run after the download and update steps. By default, the external project is assumed to be a CMake project, but this can be overridden if required.</p>
-<dt><code>CONFIGURE_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>The default configure command runs CMake with a few options based on the main project. The options added are typically only those needed to use the same generator as the main project, but the <code>CMAKE_GENERATOR</code> option can be given to override this. The project is responsible for adding any toolchain details, flags or other settings it wants to re-use from the main project or otherwise specify (see <code>CMAKE_ARGS</code>, <code>CMAKE_CACHE_ARGS</code> and <code>CMAKE_CACHE_DEFAULT_ARGS</code> below). </p>
+<dt><code>PATCH_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Specifies a custom command to patch the sources after an update. By default, no patch command is defined. Note that it can be quite difficult to define an appropriate patch command that performs robustly, especially for download methods such as git where changing the <code>GIT_TAG</code> will not discard changes from a previous patch, but the patch command will be called again after updating to the new tag.</dd>
+<dt><code>Configure Step Options:</code></dt>
+<dd>The configure step is run after the download and update steps. By default, the external project is assumed to be a CMake project, but this can be overridden if required.</dd>
+<dt><code>CONFIGURE_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>The default configure command runs CMake with a few options based on the main project. The options added are typically only those needed to use the same generator as the main project, but the <code>CMAKE_GENERATOR</code> option can be given to override this. The project is responsible for adding any toolchain details, flags or other settings it wants to re-use from the main project or otherwise specify (see <code>CMAKE_ARGS</code>, <code>CMAKE_CACHE_ARGS</code> and <code>CMAKE_CACHE_DEFAULT_ARGS</code> below). </dd>
 <p> For non-CMake external projects, the <code>CONFIGURE_COMMAND</code> option must be used to override the default configure command (<code>generator expressions</code> are supported). For projects that require no configure step, specify this option with an empty string as the command to execute.</p>
-<dt><code>CMAKE_COMMAND /&#8230;/cmake</code></p>
-<dd>Specify an alternative cmake executable for the configure step (use an absolute path). This is generally not recommended, since it is usually desirable to use the same CMake version throughout the whole build. This option is ignored if a custom configure command has been specified with <code>CONFIGURE_COMMAND</code>.</p>
-<dt><code>CMAKE_GENERATOR &lt;gen&gt;</code></p>
-<dd>Override the CMake generator used for the configure step. Without this option, the same generator as the main build will be used. This option is ignored if a custom configure command has been specified with the <code>CONFIGURE_COMMAND</code> option.</p>
-<dt><code>CMAKE_GENERATOR_PLATFORM &lt;platform&gt;</code></p>
-<dd>New in version 3.1. </p>
+<dt><code>CMAKE_COMMAND /&#8230;/cmake</code></dt>
+<dd>Specify an alternative cmake executable for the configure step (use an absolute path). This is generally not recommended, since it is usually desirable to use the same CMake version throughout the whole build. This option is ignored if a custom configure command has been specified with <code>CONFIGURE_COMMAND</code>.</dd>
+<dt><code>CMAKE_GENERATOR &lt;gen&gt;</code></dt>
+<dd>Override the CMake generator used for the configure step. Without this option, the same generator as the main build will be used. This option is ignored if a custom configure command has been specified with the <code>CONFIGURE_COMMAND</code> option.</dd>
+<dt><code>CMAKE_GENERATOR_PLATFORM &lt;platform&gt;</code></dt>
+<dd>New in version 3.1. </dd>
 <p> Pass a generator-specific platform name to the CMake command (see <code>CMAKE_GENERATOR_PLATFORM</code>). It is an error to provide this option without the <code>CMAKE_GENERATOR</code> option.</p>
-<dt><code>CMAKE_GENERATOR_TOOLSET &lt;toolset&gt;</code></p>
-<dd>Pass a generator-specific toolset name to the CMake command (see <code>CMAKE_GENERATOR_TOOLSET</code>). It is an error to provide this option without the <code>CMAKE_GENERATOR</code> option.</p>
-<dt><code>CMAKE_GENERATOR_INSTANCE &lt;instance&gt;</code></p>
-<dd>New in version 3.11. </p>
+<dt><code>CMAKE_GENERATOR_TOOLSET &lt;toolset&gt;</code></dt>
+<dd>Pass a generator-specific toolset name to the CMake command (see <code>CMAKE_GENERATOR_TOOLSET</code>). It is an error to provide this option without the <code>CMAKE_GENERATOR</code> option.</dd>
+<dt><code>CMAKE_GENERATOR_INSTANCE &lt;instance&gt;</code></dt>
+<dd>New in version 3.11. </dd>
 <p> Pass a generator-specific instance selection to the CMake command (see <code>CMAKE_GENERATOR_INSTANCE</code>). It is an error to provide this option without the <code>CMAKE_GENERATOR</code> option.</p>
-<dt><code>CMAKE_ARGS &lt;arg&gt;&#8230;</code></p>
-<dd>The specified arguments are passed to the <code>cmake</code> command line. They can be any argument the <code>cmake</code> command understands, not just cache values defined by <code>-D&#8230;</code> arguments (see also <code>CMake Options</code>). </p>
+<dt><code>CMAKE_ARGS &lt;arg&gt;&#8230;</code></dt>
+<dd>The specified arguments are passed to the <code>cmake</code> command line. They can be any argument the <code>cmake</code> command understands, not just cache values defined by <code>-D&#8230;</code> arguments (see also <code>CMake Options</code>). </dd>
 <p> New in version 3.3: Arguments may use <code>generator expressions</code>. </p>
-<dt><code>CMAKE_CACHE_ARGS &lt;arg&gt;&#8230;</code></p>
-<dd>This is an alternate way of specifying cache variables where command line length issues may become a problem. The arguments are expected to be in the form <code>-Dvar:STRING=value</code>, which are then transformed into CMake <code>set()</code> commands with the <code>FORCE</code> option used. These <code>set()</code> commands are written to a pre-load script which is then applied using the <code>cmake -C</code> command line option. </p>
+<dt><code>CMAKE_CACHE_ARGS &lt;arg&gt;&#8230;</code></dt>
+<dd>This is an alternate way of specifying cache variables where command line length issues may become a problem. The arguments are expected to be in the form <code>-Dvar:STRING=value</code>, which are then transformed into CMake <code>set()</code> commands with the <code>FORCE</code> option used. These <code>set()</code> commands are written to a pre-load script which is then applied using the <code>cmake -C</code> command line option. </dd>
 <p> New in version 3.3: Arguments may use <code>generator expressions</code>. </p>
-<dt><code>CMAKE_CACHE_DEFAULT_ARGS &lt;arg&gt;&#8230;</code></p>
-<dd>New in version 3.2. </p>
+<dt><code>CMAKE_CACHE_DEFAULT_ARGS &lt;arg&gt;&#8230;</code></dt>
+<dd>New in version 3.2. </dd>
 <p> This is the same as the <code>CMAKE_CACHE_ARGS</code> option except the <code>set()</code> commands do not include the <code>FORCE</code> keyword. This means the values act as initial defaults only and will not override any variables already set from a previous run. Use this option with care, as it can lead to different behavior depending on whether the build starts from a fresh build directory or re-uses previous build contents. </p>
 <p> New in version 3.15: If the CMake generator is the <code>Green Hills MULTI</code> and not overridden then the original project&#8217;s settings for the GHS toolset and target system customization cache variables are propagated into the external project. </p>
-<dt><code>SOURCE_SUBDIR &lt;dir&gt;</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>SOURCE_SUBDIR &lt;dir&gt;</code></dt>
+<dd>New in version 3.7. </dd>
 <p> When no <code>CONFIGURE_COMMAND</code> option is specified, the configure step assumes the external project has a <code>CMakeLists.txt</code> file at the top of its source tree (i.e. in <code>SOURCE_DIR</code>). The <code>SOURCE_SUBDIR</code> option can be used to point to an alternative directory within the source tree to use as the top of the CMake source tree instead. This must be a relative path and it will be interpreted as being relative to <code>SOURCE_DIR</code>. </p>
 <p> New in version 3.14: When <code>BUILD_IN_SOURCE</code> option is enabled, the <code>BUILD_COMMAND</code> is used to point to an alternative directory within the source tree. </p>
-<dt><code>CONFIGURE_HANDLED_BY_BUILD &lt;bool&gt;</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>CONFIGURE_HANDLED_BY_BUILD &lt;bool&gt;</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Enabling this option relaxes the dependencies of the configure step on other external projects to order-only. This means the configure step will be executed after its external project dependencies are built but it will not be marked dirty when one of its external project dependencies is rebuilt. This option can be enabled when the build step is smart enough to figure out if the configure step needs to be rerun. CMake and Meson are examples of build systems whose build step is smart enough to know if the configure step needs to be rerun.</p>
-<dt><code>Build Step Options:</code></p>
-<dd>If the configure step assumed the external project uses CMake as its build system, the build step will also. Otherwise, the build step will assume a Makefile-based build and simply run <code>make</code> with no arguments as the default build step. This can be overridden with custom build commands if required. </p>
+<dt><code>Build Step Options:</code></dt>
+<dd>If the configure step assumed the external project uses CMake as its build system, the build step will also. Otherwise, the build step will assume a Makefile-based build and simply run <code>make</code> with no arguments as the default build step. This can be overridden with custom build commands if required. </dd>
 <p> If both the main project and the external project use make as their build tool, the build step of the external project is invoked as a recursive make using <code>$(MAKE)</code>. This will communicate some build tool settings from the main project to the external project. If either the main project or external project is not using make, no build tool settings will be passed to the external project other than those established by the configure step (i.e. running <code>ninja -v</code> in the main project will not pass <code>-v</code> to the external project&#8217;s build step, even if it also uses <code>ninja</code> as its build tool).</p>
-<dt><code>BUILD_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Overrides the default build command (<code>generator expressions</code> are supported). If this option is not given, the default build command will be chosen to integrate with the main build in the most appropriate way (e.g. using recursive <code>make</code> for Makefile generators or <code>cmake &#8211;build</code> if the project uses a CMake build). This option can be specified with an empty string as the command to make the build step do nothing.</p>
-<dt><code>BUILD_IN_SOURCE &lt;bool&gt;</code></p>
-<dd>When this option is enabled, the build will be done directly within the external project&#8217;s source tree. This should generally be avoided, the use of a separate build directory is usually preferred, but it can be useful when the external project assumes an in-source build. The <code>BINARY_DIR</code> option should not be specified if building in-source.</p>
-<dt><code>BUILD_ALWAYS &lt;bool&gt;</code></p>
-<dd>Enabling this option forces the build step to always be run. This can be the easiest way to robustly ensure that the external project&#8217;s own build dependencies are evaluated rather than relying on the default success timestamp-based method. This option is not normally needed unless developers are expected to modify something the external project&#8217;s build depends on in a way that is not detectable via the step target dependencies (e.g. <code>SOURCE_DIR</code> is used without a download method and developers might modify the sources in <code>SOURCE_DIR</code>).</p>
-<dt><code>BUILD_BYPRODUCTS &lt;file&gt;&#8230;</code></p>
-<dd>New in version 3.2. </p>
+<dt><code>BUILD_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Overrides the default build command (<code>generator expressions</code> are supported). If this option is not given, the default build command will be chosen to integrate with the main build in the most appropriate way (e.g. using recursive <code>make</code> for Makefile generators or <code>cmake &#8211;build</code> if the project uses a CMake build). This option can be specified with an empty string as the command to make the build step do nothing.</dd>
+<dt><code>BUILD_IN_SOURCE &lt;bool&gt;</code></dt>
+<dd>When this option is enabled, the build will be done directly within the external project&#8217;s source tree. This should generally be avoided, the use of a separate build directory is usually preferred, but it can be useful when the external project assumes an in-source build. The <code>BINARY_DIR</code> option should not be specified if building in-source.</dd>
+<dt><code>BUILD_ALWAYS &lt;bool&gt;</code></dt>
+<dd>Enabling this option forces the build step to always be run. This can be the easiest way to robustly ensure that the external project&#8217;s own build dependencies are evaluated rather than relying on the default success timestamp-based method. This option is not normally needed unless developers are expected to modify something the external project&#8217;s build depends on in a way that is not detectable via the step target dependencies (e.g. <code>SOURCE_DIR</code> is used without a download method and developers might modify the sources in <code>SOURCE_DIR</code>).</dd>
+<dt><code>BUILD_BYPRODUCTS &lt;file&gt;&#8230;</code></dt>
+<dd>New in version 3.2. </dd>
 <p> Specifies files that will be generated by the build command but which might or might not have their modification time updated by subsequent builds. These ultimately get passed through as <code>BYPRODUCTS</code> to the build step&#8217;s own underlying call to <code>add_custom_command()</code>.</p>
-<dt><code>Install Step Options:</code></p>
-<dd>If the configure step assumed the external project uses CMake as its build system, the install step will also. Otherwise, the install step will assume a Makefile-based build and simply run <code>make install</code> as the default build step. This can be overridden with custom install commands if required.</p>
-<dt><code>INSTALL_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>The external project&#8217;s own install step is invoked as part of the main project&#8217;s <i>build</i>. It is done after the external project&#8217;s build step and may be before or after the external project&#8217;s test step (see the <code>TEST_BEFORE_INSTALL</code> option below). The external project&#8217;s install rules are not part of the main project&#8217;s install rules, so if anything from the external project should be installed as part of the main build, these need to be specified in the main build as additional <code>install()</code> commands. The default install step builds the <code>install</code> target of the external project, but this can be overridden with a custom command using this option (<code>generator expressions</code> are supported). Passing an empty string as the <code>&lt;cmd&gt;</code> makes the install step do nothing. </p>
+<dt><code>Install Step Options:</code></dt>
+<dd>If the configure step assumed the external project uses CMake as its build system, the install step will also. Otherwise, the install step will assume a Makefile-based build and simply run <code>make install</code> as the default build step. This can be overridden with custom install commands if required.</dd>
+<dt><code>INSTALL_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>The external project&#8217;s own install step is invoked as part of the main project&#8217;s <i>build</i>. It is done after the external project&#8217;s build step and may be before or after the external project&#8217;s test step (see the <code>TEST_BEFORE_INSTALL</code> option below). The external project&#8217;s install rules are not part of the main project&#8217;s install rules, so if anything from the external project should be installed as part of the main build, these need to be specified in the main build as additional <code>install()</code> commands. The default install step builds the <code>install</code> target of the external project, but this can be overridden with a custom command using this option (<code>generator expressions</code> are supported). Passing an empty string as the <code>&lt;cmd&gt;</code> makes the install step do nothing. </dd>
 <p> <code>NOTE:</code> If the <code>CMAKE_INSTALL_MODE</code> environment variable is set when the main project is built, it will only have an effect if the following conditions are met:</p>
-<dt>&bull;</p>
-<dd>The main project&#8217;s configure step assumed the external project uses CMake as its build system.</p>
-<dt>&bull;</p>
-<dd>The external project&#8217;s install command actually runs. Note that due to the way <code>ExternalProject</code> may use timestamps internally, if nothing the install step depends on needs to be re-executed, the install command might also not need to run. </p>
+<dt>&bull;</dt>
+<dd>The main project&#8217;s configure step assumed the external project uses CMake as its build system.</dd>
+<dt>&bull;</dt>
+<dd>The external project&#8217;s install command actually runs. Note that due to the way <code>ExternalProject</code> may use timestamps internally, if nothing the install step depends on needs to be re-executed, the install command might also not need to run. </dd>
 <p> Note also that <code>ExternalProject</code> does not check whether the <code>CMAKE_INSTALL_MODE</code> environment variable changes from one run to another.</p>
-<dt><code>Test Step Options:</code></p>
-<dd>The test step is only defined if at least one of the following <code>TEST_&#8230;</code> options are provided.</p>
-<dt><code>TEST_COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Overrides the default test command (<code>generator expressions</code> are supported). If this option is not given, the default behavior of the test step is to build the external project&#8217;s own <code>test</code> target. This option can be specified with <code>&lt;cmd&gt;</code> as an empty string, which allows the test step to still be defined, but it will do nothing. Do not specify any of the other <code>TEST_&#8230;</code> options if providing an empty string as the test command, but prefer to omit all <code>TEST_&#8230;</code> options altogether if the test step target is not needed.</p>
-<dt><code>TEST_BEFORE_INSTALL &lt;bool&gt;</code></p>
-<dd>When this option is enabled, the test step will be executed before the install step. The default behavior is for the test step to run after the install step.</p>
-<dt><code>TEST_AFTER_INSTALL &lt;bool&gt;</code></p>
-<dd>This option is mainly useful as a way to indicate that the test step is desired but all default behavior is sufficient. Specifying this option with a boolean true value ensures the test step is defined and that it comes after the install step. If both <code>TEST_BEFORE_INSTALL</code> and <code>TEST_AFTER_INSTALL</code> are enabled, the latter is silently ignored.</p>
-<dt><code>TEST_EXCLUDE_FROM_MAIN &lt;bool&gt;</code></p>
-<dd>New in version 3.2. </p>
+<dt><code>Test Step Options:</code></dt>
+<dd>The test step is only defined if at least one of the following <code>TEST_&#8230;</code> options are provided.</dd>
+<dt><code>TEST_COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Overrides the default test command (<code>generator expressions</code> are supported). If this option is not given, the default behavior of the test step is to build the external project&#8217;s own <code>test</code> target. This option can be specified with <code>&lt;cmd&gt;</code> as an empty string, which allows the test step to still be defined, but it will do nothing. Do not specify any of the other <code>TEST_&#8230;</code> options if providing an empty string as the test command, but prefer to omit all <code>TEST_&#8230;</code> options altogether if the test step target is not needed.</dd>
+<dt><code>TEST_BEFORE_INSTALL &lt;bool&gt;</code></dt>
+<dd>When this option is enabled, the test step will be executed before the install step. The default behavior is for the test step to run after the install step.</dd>
+<dt><code>TEST_AFTER_INSTALL &lt;bool&gt;</code></dt>
+<dd>This option is mainly useful as a way to indicate that the test step is desired but all default behavior is sufficient. Specifying this option with a boolean true value ensures the test step is defined and that it comes after the install step. If both <code>TEST_BEFORE_INSTALL</code> and <code>TEST_AFTER_INSTALL</code> are enabled, the latter is silently ignored.</dd>
+<dt><code>TEST_EXCLUDE_FROM_MAIN &lt;bool&gt;</code></dt>
+<dd>New in version 3.2. </dd>
 <p> If enabled, the main build&#8217;s default ALL target will not depend on the test step. This can be a useful way of ensuring the test step is defined but only gets invoked when manually requested. This may cause a step target to be created automatically for either the <code>install</code> or <code>build</code> step. See policy <code>CMP0114</code>.</p>
-<dt><code>Output Logging Options:</code></p>
-<dd>Each of the following <code>LOG_&#8230;</code> options can be used to wrap the relevant step in a script to capture its output to files. The log files will be created in <code>LOG_DIR</code> if supplied or otherwise the <code>STAMP_DIR</code> directory with step-specific file names.</p>
-<dt><code>LOG_DOWNLOAD &lt;bool&gt;</code></p>
-<dd>When enabled, the output of the download step is logged to files.</p>
-<dt><code>LOG_UPDATE &lt;bool&gt;</code></p>
-<dd>When enabled, the output of the update step is logged to files.</p>
-<dt><code>LOG_PATCH &lt;bool&gt;</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Output Logging Options:</code></dt>
+<dd>Each of the following <code>LOG_&#8230;</code> options can be used to wrap the relevant step in a script to capture its output to files. The log files will be created in <code>LOG_DIR</code> if supplied or otherwise the <code>STAMP_DIR</code> directory with step-specific file names.</dd>
+<dt><code>LOG_DOWNLOAD &lt;bool&gt;</code></dt>
+<dd>When enabled, the output of the download step is logged to files.</dd>
+<dt><code>LOG_UPDATE &lt;bool&gt;</code></dt>
+<dd>When enabled, the output of the update step is logged to files.</dd>
+<dt><code>LOG_PATCH &lt;bool&gt;</code></dt>
+<dd>New in version 3.14. </dd>
 <p> When enabled, the output of the patch step is logged to files.</p>
-<dt><code>LOG_CONFIGURE &lt;bool&gt;</code></p>
-<dd>When enabled, the output of the configure step is logged to files.</p>
-<dt><code>LOG_BUILD &lt;bool&gt;</code></p>
-<dd>When enabled, the output of the build step is logged to files.</p>
-<dt><code>LOG_INSTALL &lt;bool&gt;</code></p>
-<dd>When enabled, the output of the install step is logged to files.</p>
-<dt><code>LOG_TEST &lt;bool&gt;</code></p>
-<dd>When enabled, the output of the test step is logged to files.</p>
-<dt><code>LOG_MERGED_STDOUTERR &lt;bool&gt;</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>LOG_CONFIGURE &lt;bool&gt;</code></dt>
+<dd>When enabled, the output of the configure step is logged to files.</dd>
+<dt><code>LOG_BUILD &lt;bool&gt;</code></dt>
+<dd>When enabled, the output of the build step is logged to files.</dd>
+<dt><code>LOG_INSTALL &lt;bool&gt;</code></dt>
+<dd>When enabled, the output of the install step is logged to files.</dd>
+<dt><code>LOG_TEST &lt;bool&gt;</code></dt>
+<dd>When enabled, the output of the test step is logged to files.</dd>
+<dt><code>LOG_MERGED_STDOUTERR &lt;bool&gt;</code></dt>
+<dd>New in version 3.14. </dd>
 <p> When enabled, stdout and stderr will be merged for any step whose output is being logged to files.</p>
-<dt><code>LOG_OUTPUT_ON_FAILURE &lt;bool&gt;</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>LOG_OUTPUT_ON_FAILURE &lt;bool&gt;</code></dt>
+<dd>New in version 3.14. </dd>
 <p> This option only has an effect if at least one of the other <code>LOG_&lt;step&gt;</code> options is enabled. If an error occurs for a step which has logging to file enabled, that step&#8217;s output will be printed to the console if <code>LOG_OUTPUT_ON_FAILURE</code> is set to true. For cases where a large amount of output is recorded, just the end of that output may be printed to the console.</p>
-<dt><code>Terminal Access Options:</code></p>
-<dd>New in version 3.4. </p>
+<dt><code>Terminal Access Options:</code></dt>
+<dd>New in version 3.4. </dd>
 <p> Steps can be given direct access to the terminal in some cases. Giving a step access to the terminal may allow it to receive terminal input if required, such as for authentication details not provided by other options. With the <code>Ninja</code> generator, these options place the steps in the <code>console</code> <code>job pool</code>. Each step can be given access to the terminal individually via the following options:</p>
-<dt><code>USES_TERMINAL_DOWNLOAD &lt;bool&gt;</code></p>
-<dd>Give the download step access to the terminal.</p>
-<dt><code>USES_TERMINAL_UPDATE &lt;bool&gt;</code></p>
-<dd>Give the update step access to the terminal.</p>
-<dt><code>USES_TERMINAL_CONFIGURE &lt;bool&gt;</code></p>
-<dd>Give the configure step access to the terminal.</p>
-<dt><code>USES_TERMINAL_BUILD &lt;bool&gt;</code></p>
-<dd>Give the build step access to the terminal.</p>
-<dt><code>USES_TERMINAL_INSTALL &lt;bool&gt;</code></p>
-<dd>Give the install step access to the terminal.</p>
-<dt><code>USES_TERMINAL_TEST &lt;bool&gt;</code></p>
-<dd>Give the test step access to the terminal.</p>
-<dt><code>Target Options:</code></p>
+<dt><code>USES_TERMINAL_DOWNLOAD &lt;bool&gt;</code></dt>
+<dd>Give the download step access to the terminal.</dd>
+<dt><code>USES_TERMINAL_UPDATE &lt;bool&gt;</code></dt>
+<dd>Give the update step access to the terminal.</dd>
+<dt><code>USES_TERMINAL_CONFIGURE &lt;bool&gt;</code></dt>
+<dd>Give the configure step access to the terminal.</dd>
+<dt><code>USES_TERMINAL_BUILD &lt;bool&gt;</code></dt>
+<dd>Give the build step access to the terminal.</dd>
+<dt><code>USES_TERMINAL_INSTALL &lt;bool&gt;</code></dt>
+<dd>Give the install step access to the terminal.</dd>
+<dt><code>USES_TERMINAL_TEST &lt;bool&gt;</code></dt>
+<dd>Give the test step access to the terminal.</dd>
+<dt><code>Target Options:</code></dt>
 <dd>
-<dt><code>DEPENDS &lt;targets&gt;&#8230;</code></p>
-<dd>Specify other targets on which the external project depends. The other targets will be brought up to date before any of the external project&#8217;s steps are executed. Because the external project uses additional custom targets internally for each step, the <code>DEPENDS</code> option is the most convenient way to ensure all of those steps depend on the other targets. Simply doing <code>add_dependencies(&lt;name&gt; &lt;targets&gt;)</code> will not make any of the steps dependent on <code>&lt;targets&gt;</code>.</p>
-<dt><code>EXCLUDE_FROM_ALL &lt;bool&gt;</code></p>
-<dd>When enabled, this option excludes the external project from the default ALL target of the main build.</p>
-<dt><code>STEP_TARGETS &lt;step-target&gt;&#8230;</code></p>
-<dd>Generate custom targets for the specified steps. This is required if the steps need to be triggered manually or if they need to be used as dependencies of other targets. If this option is not specified, the default value is taken from the <code>EP_STEP_TARGETS</code> directory property. See <i>ExternalProject_Add_StepTargets()</i> below for further discussion of the effects of this option.</p>
-<dt><code>INDEPENDENT_STEP_TARGETS &lt;step-target&gt;&#8230;</code></p>
-<dd>Deprecated since version 3.19: This is allowed only if policy <code>CMP0114</code> is not set to <code>NEW</code>. </p>
+</dd><dt><code>DEPENDS &lt;targets&gt;&#8230;</code></dt>
+<dd>Specify other targets on which the external project depends. The other targets will be brought up to date before any of the external project&#8217;s steps are executed. Because the external project uses additional custom targets internally for each step, the <code>DEPENDS</code> option is the most convenient way to ensure all of those steps depend on the other targets. Simply doing <code>add_dependencies(&lt;name&gt; &lt;targets&gt;)</code> will not make any of the steps dependent on <code>&lt;targets&gt;</code>.</dd>
+<dt><code>EXCLUDE_FROM_ALL &lt;bool&gt;</code></dt>
+<dd>When enabled, this option excludes the external project from the default ALL target of the main build.</dd>
+<dt><code>STEP_TARGETS &lt;step-target&gt;&#8230;</code></dt>
+<dd>Generate custom targets for the specified steps. This is required if the steps need to be triggered manually or if they need to be used as dependencies of other targets. If this option is not specified, the default value is taken from the <code>EP_STEP_TARGETS</code> directory property. See <i>ExternalProject_Add_StepTargets()</i> below for further discussion of the effects of this option.</dd>
+<dt><code>INDEPENDENT_STEP_TARGETS &lt;step-target&gt;&#8230;</code></dt>
+<dd>Deprecated since version 3.19: This is allowed only if policy <code>CMP0114</code> is not set to <code>NEW</code>. </dd>
 <p> Generates custom targets for the specified steps and prevent these targets from having the usual dependencies applied to them. If this option is not specified, the default value is taken from the <code>EP_INDEPENDENT_STEP_TARGETS</code> directory property. This option is mostly useful for allowing individual steps to be driven independently, such as for a CDash setup where each step should be initiated and reported individually rather than as one whole build. See <i>ExternalProject_Add_StepTargets()</i> below for further discussion of the effects of this option.</p>
-<dt><code>Miscellaneous Options:</code></p>
+<dt><code>Miscellaneous Options:</code></dt>
 <dd>
-<dt><code>LIST_SEPARATOR &lt;sep&gt;</code></p>
-<dd>For any of the various <code>&#8230;_COMMAND</code> options, replace <code>;</code> with <code>&lt;sep&gt;</code> in the specified command lines. This can be useful where list variables may be given in commands where they should end up as space-separated arguments (<code>&lt;sep&gt;</code> would be a single space character string in this case).</p>
-<dt><code>COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>Any of the other <code>&#8230;_COMMAND</code> options can have additional commands appended to them by following them with as many <code>COMMAND &#8230;</code> options as needed (<code>generator expressions</code> are supported). For example: </p>
+</dd><dt><code>LIST_SEPARATOR &lt;sep&gt;</code></dt>
+<dd>For any of the various <code>&#8230;_COMMAND</code> options, replace <code>;</code> with <code>&lt;sep&gt;</code> in the specified command lines. This can be useful where list variables may be given in commands where they should end up as space-separated arguments (<code>&lt;sep&gt;</code> would be a single space character string in this case).</dd>
+<dt><code>COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>Any of the other <code>&#8230;_COMMAND</code> options can have additional commands appended to them by following them with as many <code>COMMAND &#8230;</code> options as needed (<code>generator expressions</code> are supported). For example: </dd>
 <pre>ExternalProject_Add(example
  ... # Download options, etc.
  BUILD_COMMAND ${CMAKE_COMMAND} -E echo &quot;Starting $&lt;CONFIG&gt; build&quot;
@@ -2301,8 +2301,8 @@ LOG_DIR = &lt;STAMP_DIR&gt;</pre>
 <p>It should also be noted that each build step is created via a call to <i>ExternalProject_Add_Step()</i>. See that command&#8217;s documentation for the automatic substitutions that are supported for some options.</dl>
 <h3>Obtaining Project Properties</h3>
 <dl>
-<dt><code>ExternalProject_Get_Property</code></p>
-<dd>The <code>ExternalProject_Get_Property()</code> function retrieves external project target properties: </p>
+<dt><code>ExternalProject_Get_Property</code></dt>
+<dd>The <code>ExternalProject_Get_Property()</code> function retrieves external project target properties: </dd>
 <pre>ExternalProject_Get_Property(&lt;name&gt; &lt;prop1&gt; [&lt;prop2&gt;...])</pre>
 <p>The function stores property values in variables of the same name. Property names correspond to the keyword argument names of <code>ExternalProject_Add()</code>. For example, the source directory might be retrieved like so: </p>
 <pre>ExternalProject_Get_property(myExtProj SOURCE_DIR)
@@ -2311,55 +2311,55 @@ message(&quot;Source dir of myExtProj = ${SOURCE_DIR}&quot;)</pre>
 <h3>Explicit Step Management</h3>
 <p>The <code>ExternalProject_Add()</code> function on its own is often sufficient for incorporating an external project into the main build. Certain scenarios require additional work to implement desired behavior, such as adding in a custom step or making steps available as manually triggerable targets. The <code>ExternalProject_Add_Step()</code>, <code>ExternalProject_Add_StepTargets()</code> and <code>ExternalProject_Add_StepDependencies</code> functions provide the lower level control needed to implement such step-level capabilities.</p>
 <dl>
-<dt><code>ExternalProject_Add_Step</code></p>
-<dd>The <code>ExternalProject_Add_Step()</code> function specifies an additional custom step for an external project defined by an earlier call to <i>ExternalProject_Add()</i>: </p>
+<dt><code>ExternalProject_Add_Step</code></dt>
+<dd>The <code>ExternalProject_Add_Step()</code> function specifies an additional custom step for an external project defined by an earlier call to <i>ExternalProject_Add()</i>: </dd>
 <pre>ExternalProject_Add_Step(&lt;name&gt; &lt;step&gt; [&lt;option&gt;...])</pre>
 <p><code>&lt;name&gt;</code> is the same as the name passed to the original call to <i>ExternalProject_Add()</i>. The specified <code>&lt;step&gt;</code> must not be one of the pre-defined steps (<code>mkdir</code>, <code>download</code>, <code>update</code>, <code>patch</code>, <code>configure</code>, <code>build</code>, <code>install</code> or <code>test</code>). The supported options are:</p>
-<dt><code>COMMAND &lt;cmd&gt;&#8230;</code></p>
-<dd>The command line to be executed by this custom step (<code>generator expressions</code> are supported). This option can be repeated multiple times to specify multiple commands to be executed in order.</p>
-<dt><code>COMMENT &lt;text&gt;&#8230;</code></p>
-<dd>Text to be printed when the custom step executes.</p>
-<dt><code>DEPENDEES &lt;step&gt;&#8230;</code></p>
-<dd>Other steps (custom or pre-defined) on which this step depends.</p>
-<dt><code>DEPENDERS &lt;step&gt;&#8230;</code></p>
-<dd>Other steps (custom or pre-defined) that depend on this new custom step.</p>
-<dt><code>DEPENDS &lt;file&gt;&#8230;</code></p>
-<dd>Files on which this custom step depends.</p>
-<dt><code>INDEPENDENT &lt;bool&gt;</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>COMMAND &lt;cmd&gt;&#8230;</code></dt>
+<dd>The command line to be executed by this custom step (<code>generator expressions</code> are supported). This option can be repeated multiple times to specify multiple commands to be executed in order.</dd>
+<dt><code>COMMENT &lt;text&gt;&#8230;</code></dt>
+<dd>Text to be printed when the custom step executes.</dd>
+<dt><code>DEPENDEES &lt;step&gt;&#8230;</code></dt>
+<dd>Other steps (custom or pre-defined) on which this step depends.</dd>
+<dt><code>DEPENDERS &lt;step&gt;&#8230;</code></dt>
+<dd>Other steps (custom or pre-defined) that depend on this new custom step.</dd>
+<dt><code>DEPENDS &lt;file&gt;&#8230;</code></dt>
+<dd>Files on which this custom step depends.</dd>
+<dt><code>INDEPENDENT &lt;bool&gt;</code></dt>
+<dd>New in version 3.19. </dd>
 <p> Specifies whether this step is independent of the external dependencies specified by the <i>ExternalProject_Add()</i>&#8216;s <code>DEPENDS</code> option. The default is <code>FALSE</code>. Steps marked as independent may depend only on other steps marked independent. See policy <code>CMP0114</code>. </p>
 <p> Note that this use of the term &quot;independent&quot; refers only to independence from external targets specified by the <code>DEPENDS</code> option and is orthogonal to a step&#8217;s dependencies on other steps. </p>
 <p> If a step target is created for an independent step by the <i>ExternalProject_Add()</i> <code>STEP_TARGETS</code> option or by the <i>ExternalProject_Add_StepTargets()</i> function, it will not depend on the external targets, but may depend on targets for other steps.</p>
-<dt><code>BYPRODUCTS &lt;file&gt;&#8230;</code></p>
-<dd>New in version 3.2. </p>
+<dt><code>BYPRODUCTS &lt;file&gt;&#8230;</code></dt>
+<dd>New in version 3.2. </dd>
 <p> Files that will be generated by this custom step but which might or might not have their modification time updated by subsequent builds. This list of files will ultimately be passed through as the <code>BYPRODUCTS</code> option to the <code>add_custom_command()</code> used to implement the custom step internally.</p>
-<dt><code>ALWAYS &lt;bool&gt;</code></p>
-<dd>When enabled, this option specifies that the custom step should always be run (i.e. that it is always considered out of date).</p>
-<dt><code>EXCLUDE_FROM_MAIN &lt;bool&gt;</code></p>
-<dd>When enabled, this option specifies that the external project&#8217;s main target does not depend on the custom step. This may cause step targets to be created automatically for the steps on which this step depends. See policy <code>CMP0114</code>.</p>
-<dt><code>WORKING_DIRECTORY &lt;dir&gt;</code></p>
-<dd>Specifies the working directory to set before running the custom step&#8217;s command. If this option is not specified, the directory will be the value of the <code>CMAKE_CURRENT_BINARY_DIR</code> at the point where <code>ExternalProject_Add_Step()</code> was called.</p>
-<dt><code>LOG &lt;bool&gt;</code></p>
-<dd>If set, this causes the output from the custom step to be captured to files in the external project&#8217;s <code>LOG_DIR</code> if supplied or <code>STAMP_DIR</code>.</p>
-<dt><code>USES_TERMINAL &lt;bool&gt;</code></p>
-<dd>If enabled, this gives the custom step direct access to the terminal if possible. </p>
+<dt><code>ALWAYS &lt;bool&gt;</code></dt>
+<dd>When enabled, this option specifies that the custom step should always be run (i.e. that it is always considered out of date).</dd>
+<dt><code>EXCLUDE_FROM_MAIN &lt;bool&gt;</code></dt>
+<dd>When enabled, this option specifies that the external project&#8217;s main target does not depend on the custom step. This may cause step targets to be created automatically for the steps on which this step depends. See policy <code>CMP0114</code>.</dd>
+<dt><code>WORKING_DIRECTORY &lt;dir&gt;</code></dt>
+<dd>Specifies the working directory to set before running the custom step&#8217;s command. If this option is not specified, the directory will be the value of the <code>CMAKE_CURRENT_BINARY_DIR</code> at the point where <code>ExternalProject_Add_Step()</code> was called.</dd>
+<dt><code>LOG &lt;bool&gt;</code></dt>
+<dd>If set, this causes the output from the custom step to be captured to files in the external project&#8217;s <code>LOG_DIR</code> if supplied or <code>STAMP_DIR</code>.</dd>
+<dt><code>USES_TERMINAL &lt;bool&gt;</code></dt>
+<dd>If enabled, this gives the custom step direct access to the terminal if possible. </dd>
 <p> The command line, comment, working directory and byproducts of every standard and custom step are processed to replace the tokens <code>&lt;SOURCE_DIR&gt;</code>, <code>&lt;SOURCE_SUBDIR&gt;</code>, <code>&lt;BINARY_DIR&gt;</code>, <code>&lt;INSTALL_DIR&gt;</code> <code>&lt;TMP_DIR&gt;</code>, <code>&lt;DOWNLOAD_DIR&gt;</code> and <code>&lt;DOWNLOADED_FILE&gt;</code> with their corresponding property values defined in the original call to <i>ExternalProject_Add()</i>. </p>
 <p> New in version 3.3: Token replacement is extended to byproducts. </p>
 <p> New in version 3.11: The <code>&lt;DOWNLOAD_DIR&gt;</code> substitution token. </p>
-<dt><code>ExternalProject_Add_StepTargets</code></p>
-<dd>The <code>ExternalProject_Add_StepTargets()</code> function generates targets for the steps listed. The name of each created target will be of the form <code>&lt;name&gt;-&lt;step&gt;</code>: </p>
+<dt><code>ExternalProject_Add_StepTargets</code></dt>
+<dd>The <code>ExternalProject_Add_StepTargets()</code> function generates targets for the steps listed. The name of each created target will be of the form <code>&lt;name&gt;-&lt;step&gt;</code>: </dd>
 <pre>ExternalProject_Add_StepTargets(&lt;name&gt; &lt;step1&gt; [&lt;step2&gt;...])</pre>
 <p>Creating a target for a step allows it to be used as a dependency of another target or to be triggered manually. Having targets for specific steps also allows them to be driven independently of each other by specifying targets on build command lines. For example, you may be submitting to a sub-project based dashboard where you want to drive the configure portion of the build, then submit to the dashboard, followed by the build portion, followed by tests. If you invoke a custom target that depends on a step halfway through the step dependency chain, then all the previous steps will also run to ensure everything is up to date. </p>
 <p> Internally, <i>ExternalProject_Add()</i> calls <i>ExternalProject_Add_Step()</i> to create each step. If any <code>STEP_TARGETS</code> were specified, then <code>ExternalProject_Add_StepTargets()</code> will also be called after <i>ExternalProject_Add_Step()</i>. Even if a step is not mentioned in the <code>STEP_TARGETS</code> option, <code>ExternalProject_Add_StepTargets()</code> can still be called later to manually define a target for the step. </p>
 <p> The <code>STEP_TARGETS</code> option for <i>ExternalProject_Add()</i> is generally the easiest way to ensure targets are created for specific steps of interest. For custom steps, <code>ExternalProject_Add_StepTargets()</code> must be called explicitly if a target should also be created for that custom step. An alternative to these two options is to populate the <code>EP_STEP_TARGETS</code> directory property. It acts as a default for the step target options and can save having to repeatedly specify the same set of step targets when multiple external projects are being defined. </p>
 <p> New in version 3.19: If <code>CMP0114</code> is set to <code>NEW</code>, step targets are fully responsible for holding the custom commands implementing their steps. The primary target created by <code>ExternalProject_Add</code> depends on the step targets, and the step targets depend on each other. The target-level dependencies match the file-level dependencies used by the custom commands for each step. The targets for steps created with <i>ExternalProject_Add_Step()</i>&#8216;s <code>INDEPENDENT</code> option do not depend on the external targets specified by <i>ExternalProject_Add()</i>&#8216;s <code>DEPENDS</code> option. The predefined steps <code>mkdir</code>, <code>download</code>, <code>update</code>, and <code>patch</code> are independent. </p>
 <p> If <code>CMP0114</code> is not <code>NEW</code>, the following deprecated behavior is available:</p>
-<dt>&bull;</p>
-<dd>A deprecated <code>NO_DEPENDS</code> option may be specified immediately after the <code>&lt;name&gt;</code> and before the first step. If the <code>NO_DEPENDS</code> option is specified, the step target will not depend on the dependencies of the external project (i.e. on any dependencies of the <code>&lt;name&gt;</code> custom target created by <i>ExternalProject_Add()</i>). This is usually safe for the <code>download</code>, <code>update</code> and <code>patch</code> steps, since they do not typically require that the dependencies are updated and built. Using <code>NO_DEPENDS</code> for any of the other pre-defined steps, however, may break parallel builds. Only use <code>NO_DEPENDS</code> where it is certain that the named steps genuinely do not have dependencies. For custom steps, consider whether or not the custom commands require the dependencies to be configured, built and installed.</p>
-<dt>&bull;</p>
-<dd>The <code>INDEPENDENT_STEP_TARGETS</code> option for <i>ExternalProject_Add()</i>, or the <code>EP_INDEPENDENT_STEP_TARGETS</code> directory property, tells the function to call <code>ExternalProject_Add_StepTargets()</code> internally using the <code>NO_DEPENDS</code> option for the specified steps.</p>
-<dt><code>ExternalProject_Add_StepDependencies</code></p>
-<dd>New in version 3.2. </p>
+<dt>&bull;</dt>
+<dd>A deprecated <code>NO_DEPENDS</code> option may be specified immediately after the <code>&lt;name&gt;</code> and before the first step. If the <code>NO_DEPENDS</code> option is specified, the step target will not depend on the dependencies of the external project (i.e. on any dependencies of the <code>&lt;name&gt;</code> custom target created by <i>ExternalProject_Add()</i>). This is usually safe for the <code>download</code>, <code>update</code> and <code>patch</code> steps, since they do not typically require that the dependencies are updated and built. Using <code>NO_DEPENDS</code> for any of the other pre-defined steps, however, may break parallel builds. Only use <code>NO_DEPENDS</code> where it is certain that the named steps genuinely do not have dependencies. For custom steps, consider whether or not the custom commands require the dependencies to be configured, built and installed.</dd>
+<dt>&bull;</dt>
+<dd>The <code>INDEPENDENT_STEP_TARGETS</code> option for <i>ExternalProject_Add()</i>, or the <code>EP_INDEPENDENT_STEP_TARGETS</code> directory property, tells the function to call <code>ExternalProject_Add_StepTargets()</code> internally using the <code>NO_DEPENDS</code> option for the specified steps.</dd>
+<dt><code>ExternalProject_Add_StepDependencies</code></dt>
+<dd>New in version 3.2. </dd>
 <p> The <code>ExternalProject_Add_StepDependencies()</code> function can be used to add dependencies to a step. The dependencies added must be targets CMake already knows about (these can be ordinary executable or library targets, custom targets or even step targets of another external project): </p>
 <pre>ExternalProject_Add_StepDependencies(&lt;name&gt; &lt;step&gt; &lt;target1&gt; [&lt;target2&gt;...])</pre>
 <p>This function takes care to set both target and file level dependencies and will ensure that parallel builds will not break. It should be used instead of <code>add_dependencies()</code> whenever adding a dependency for some of the step targets generated by the <code>ExternalProject</code> module.</dl>
@@ -2425,25 +2425,25 @@ Lua51, The Lua scripting language., &lt;<a rel="nofollow" href="http://www.lua.o
 Foo, Foo provides cool stuff.</pre>
 <h3>Global Properties</h3>
 <dl>
-<dt><code>FeatureSummary_PKG_TYPES</code></p>
-<dd>The global property <i>FeatureSummary_PKG_TYPES</i> defines the type of packages used by <i>FeatureSummary</i>. </p>
+<dt><code>FeatureSummary_PKG_TYPES</code></dt>
+<dd>The global property <i>FeatureSummary_PKG_TYPES</i> defines the type of packages used by <i>FeatureSummary</i>. </dd>
 <p> The order in this list is important, the first package type in the list is the least important, the last is the most important. the of a package can only be changed to higher types. </p>
 <p> The default package types are , <code>RUNTIME</code>, <code>OPTIONAL</code>, <code>RECOMMENDED</code> and <code>REQUIRED</code>, and their importance is <code>RUNTIME &lt; OPTIONAL &lt; RECOMMENDED &lt; REQUIRED</code>.</p>
-<dt><code>FeatureSummary_REQUIRED_PKG_TYPES</code></p>
-<dd>The global property <i>FeatureSummary_REQUIRED_PKG_TYPES</i> defines which package types are required. </p>
+<dt><code>FeatureSummary_REQUIRED_PKG_TYPES</code></dt>
+<dd>The global property <i>FeatureSummary_REQUIRED_PKG_TYPES</i> defines which package types are required. </dd>
 <p> If one or more package in this categories has not been found, CMake will abort when calling <i>feature_summary()</i> with the &#8216;FATAL_ON_MISSING_REQUIRED_PACKAGES&#8217; option enabled. </p>
 <p> The default value for this global property is <code>REQUIRED</code>.</p>
-<dt><code>FeatureSummary_DEFAULT_PKG_TYPE</code></p>
-<dd>The global property <i>FeatureSummary_DEFAULT_PKG_TYPE</i> defines which package type is the default one. When calling <i>feature_summary()</i>, if the user did not set the package type explicitly, the package will be assigned to this category. </p>
+<dt><code>FeatureSummary_DEFAULT_PKG_TYPE</code></dt>
+<dd>The global property <i>FeatureSummary_DEFAULT_PKG_TYPE</i> defines which package type is the default one. When calling <i>feature_summary()</i>, if the user did not set the package type explicitly, the package will be assigned to this category. </dd>
 <p> This value must be one of the types defined in the <i>FeatureSummary_PKG_TYPES</i> global property unless the package type is set for all the packages. </p>
 <p> The default value for this global property is <code>OPTIONAL</code>.</p>
-<dt><code>FeatureSummary_&lt;TYPE&gt;_DESCRIPTION</code></p>
-<dd>New in version 3.9. </p>
+<dt><code>FeatureSummary_&lt;TYPE&gt;_DESCRIPTION</code></dt>
+<dd>New in version 3.9. </dd>
 <p> The global property <i>FeatureSummary_&lt;TYPE&gt;_DESCRIPTION</i> can be defined for each type to replace the type name with the specified string whenever the package type is used in an output string. </p>
 <p> If not set, the string &quot;<code>&lt;TYPE&gt;</code> packages&quot; is used.</dl>
 <h3>Functions</h3>
 <dl>
-<dt><code>feature_summary</code></p>
+<dt><code>feature_summary</code></dt>
 <dd>
 <pre>feature_summary( [FILENAME &lt;file&gt;]
  [APPEND]
@@ -2459,21 +2459,21 @@ Foo, Foo provides cool stuff.</pre>
  )</pre>
 <p>The <code>feature_summary()</code> macro can be used to print information about enabled or disabled packages or features of a project. By default, only the names of the features/packages will be printed and their required version when one was specified. Use <code>set_package_properties()</code> to add more useful information, like e.g. a download URL for the respective package or their purpose in the project. </p>
 <p> The <code>WHAT</code> option is the only mandatory option. Here you specify what information will be printed:</p>
-<dt><code>ALL</code></p>
-<dd>print everything</p>
-<dt><code>ENABLED_FEATURES</code></p>
-<dd>the list of all features which are enabled</p>
-<dt><code>DISABLED_FEATURES</code></p>
-<dd>the list of all features which are disabled</p>
-<dt><code>PACKAGES_FOUND</code></p>
-<dd>the list of all packages which have been found</p>
-<dt><code>PACKAGES_NOT_FOUND</code></p>
-<dd>the list of all packages which have not been found </p>
+</dd><dt><code>ALL</code></dt>
+<dd>print everything</dd>
+<dt><code>ENABLED_FEATURES</code></dt>
+<dd>the list of all features which are enabled</dd>
+<dt><code>DISABLED_FEATURES</code></dt>
+<dd>the list of all features which are disabled</dd>
+<dt><code>PACKAGES_FOUND</code></dt>
+<dd>the list of all packages which have been found</dd>
+<dt><code>PACKAGES_NOT_FOUND</code></dt>
+<dd>the list of all packages which have not been found </dd>
 <p> For each package type <code>&lt;TYPE&gt;</code> defined by the <i>FeatureSummary_PKG_TYPES</i> global property, the following information can also be used:</p>
-<dt><code>&lt;TYPE&gt;_PACKAGES_FOUND</code></p>
-<dd>only those packages which have been found which have the type &lt;TYPE&gt;</p>
-<dt><code>&lt;TYPE&gt;_PACKAGES_NOT_FOUND</code></p>
-<dd>only those packages which have not been found which have the type &lt;TYPE&gt; </p>
+<dt><code>&lt;TYPE&gt;_PACKAGES_FOUND</code></dt>
+<dd>only those packages which have been found which have the type &lt;TYPE&gt;</dd>
+<dt><code>&lt;TYPE&gt;_PACKAGES_NOT_FOUND</code></dt>
+<dd>only those packages which have not been found which have the type &lt;TYPE&gt; </dd>
 <p> Changed in version 3.1: With the exception of the <code>ALL</code> value, these values can be combined in order to customize the output. For example: </p>
 <pre>feature_summary(WHAT ENABLED_FEATURES DISABLED_FEATURES)</pre>
 <p>If a <code>FILENAME</code> is given, the information is printed into this file. If <code>APPEND</code> is used, it is appended to this file, otherwise the file is overwritten if it already existed. If the VAR option is used, the information is &quot;printed&quot; into the specified variable. If <code>FILENAME</code> is not used, the information is printed to the terminal. Using the <code>DESCRIPTION</code> option a description or headline can be set which will be printed above the actual content. If only one type of package was requested, no title is printed, unless it is explicitly set using either <code>DESCRIPTION</code> to use a custom string, or <code>DEFAULT_DESCRIPTION</code> to use a default title for the requested type. If <code>INCLUDE_QUIET_PACKAGES</code> is given, packages which have been searched with <code>find_package(&#8230; QUIET)</code> will also be listed. By default they are skipped. If <code>FATAL_ON_MISSING_REQUIRED_PACKAGES</code> is given, CMake will abort if a package which is marked as one of the package types listed in the <i>FeatureSummary_REQUIRED_PKG_TYPES</i> global property has not been found. The default value for the <i>FeatureSummary_REQUIRED_PKG_TYPES</i> global property is <code>REQUIRED</code>. </p>
@@ -2502,7 +2502,7 @@ feature_summary(WHAT BUILD_PACKAGES_FOUND
 feature_summary(WHAT BUILD_PACKAGES_NOT_FOUND
  Description &quot;Build tools not found:&quot;
  QUIET_ON_EMPTY)</pre>
-<dt><code>set_package_properties</code></p>
+<dt><code>set_package_properties</code></dt>
 <dd>
 <pre>set_package_properties(&lt;name&gt; PROPERTIES
  [ URL &lt;url&gt; ]
@@ -2511,14 +2511,14 @@ feature_summary(WHAT BUILD_PACKAGES_NOT_FOUND
  [ PURPOSE &lt;purpose&gt; ]
  )</pre>
 <p>Use this macro to set up information about the named package, which can then be displayed via FEATURE_SUMMARY(). This can be done either directly in the Find-module or in the project which uses the module after the find_package() call. The features for which information can be set are added automatically by the find_package() command.</p>
-<dt><code>URL &lt;url&gt;</code></p>
-<dd>This should be the homepage of the package, or something similar. Ideally this is set already directly in the Find-module.</p>
-<dt><code>DESCRIPTION &lt;description&gt;</code></p>
-<dd>A short description what that package is, at most one sentence. Ideally this is set already directly in the Find-module.</p>
-<dt><code>TYPE &lt;type&gt;</code></p>
-<dd>What type of dependency has the using project on that package. Default is <code>OPTIONAL</code>. In this case it is a package which can be used by the project when available at buildtime, but it also work without. <code>RECOMMENDED</code> is similar to <code>OPTIONAL</code>, i.e. the project will build if the package is not present, but the functionality of the resulting binaries will be severely limited. If a <code>REQUIRED</code> package is not available at buildtime, the project may not even build. This can be combined with the <code>FATAL_ON_MISSING_REQUIRED_PACKAGES</code> argument for <code>feature_summary()</code>. Last, a <code>RUNTIME</code> package is a package which is actually not used at all during the build, but which is required for actually running the resulting binaries. So if such a package is missing, the project can still be built, but it may not work later on. If <code>set_package_properties()</code> is called multiple times for the same package with different TYPEs, the <code>TYPE</code> is only changed to higher TYPEs (<code>RUNTIME &lt; OPTIONAL &lt; RECOMMENDED &lt; REQUIRED</code>), lower TYPEs are ignored. The <code>TYPE</code> property is project-specific, so it cannot be set by the Find-module, but must be set in the project. Type accepted can be changed by setting the <i>FeatureSummary_PKG_TYPES</i> global property.</p>
-<dt><code>PURPOSE &lt;purpose&gt;</code></p>
-<dd>This describes which features this package enables in the project, i.e. it tells the user what functionality he gets in the resulting binaries. If set_package_properties() is called multiple times for a package, all PURPOSE properties are appended to a list of purposes of the package in the project. As the TYPE property, also the PURPOSE property is project-specific, so it cannot be set by the Find-module, but must be set in the project. </p>
+</dd><dt><code>URL &lt;url&gt;</code></dt>
+<dd>This should be the homepage of the package, or something similar. Ideally this is set already directly in the Find-module.</dd>
+<dt><code>DESCRIPTION &lt;description&gt;</code></dt>
+<dd>A short description what that package is, at most one sentence. Ideally this is set already directly in the Find-module.</dd>
+<dt><code>TYPE &lt;type&gt;</code></dt>
+<dd>What type of dependency has the using project on that package. Default is <code>OPTIONAL</code>. In this case it is a package which can be used by the project when available at buildtime, but it also work without. <code>RECOMMENDED</code> is similar to <code>OPTIONAL</code>, i.e. the project will build if the package is not present, but the functionality of the resulting binaries will be severely limited. If a <code>REQUIRED</code> package is not available at buildtime, the project may not even build. This can be combined with the <code>FATAL_ON_MISSING_REQUIRED_PACKAGES</code> argument for <code>feature_summary()</code>. Last, a <code>RUNTIME</code> package is a package which is actually not used at all during the build, but which is required for actually running the resulting binaries. So if such a package is missing, the project can still be built, but it may not work later on. If <code>set_package_properties()</code> is called multiple times for the same package with different TYPEs, the <code>TYPE</code> is only changed to higher TYPEs (<code>RUNTIME &lt; OPTIONAL &lt; RECOMMENDED &lt; REQUIRED</code>), lower TYPEs are ignored. The <code>TYPE</code> property is project-specific, so it cannot be set by the Find-module, but must be set in the project. Type accepted can be changed by setting the <i>FeatureSummary_PKG_TYPES</i> global property.</dd>
+<dt><code>PURPOSE &lt;purpose&gt;</code></dt>
+<dd>This describes which features this package enables in the project, i.e. it tells the user what functionality he gets in the resulting binaries. If set_package_properties() is called multiple times for a package, all PURPOSE properties are appended to a list of purposes of the package in the project. As the TYPE property, also the PURPOSE property is project-specific, so it cannot be set by the Find-module, but must be set in the project. </dd>
 <p> Example for setting the info for a package: </p>
 <pre>find_package(LibXml2)
 set_package_properties(LibXml2 PROPERTIES
@@ -2536,7 +2536,7 @@ find_package(DBUS)
 set_package_properties(DBUS PROPERTIES
  TYPE RUNTIME
  PURPOSE &quot;Necessary to disable the screensaver during a presentation&quot;)</pre>
-<dt><code>add_feature_info</code></p>
+<dt><code>add_feature_info</code></dt>
 <dd>
 <pre>add_feature_info(&lt;name&gt; &lt;enabled&gt; &lt;description&gt;)</pre>
 <p>Use this macro to add information about a feature with the given <code>&lt;name&gt;</code>. <code>&lt;enabled&gt;</code> contains whether this feature is enabled or not. It can be a variable or a list of conditions. <code>&lt;description&gt;</code> is a text describing the feature. The information can be displayed using <code>feature_summary()</code> for <code>ENABLED_FEATURES</code> and <code>DISABLED_FEATURES</code> respectively. </p>
@@ -2544,30 +2544,30 @@ set_package_properties(DBUS PROPERTIES
 <p> Example for setting the info for a feature: </p>
 <pre>option(WITH_FOO &quot;Help for foo&quot; ON)
 add_feature_info(Foo WITH_FOO &quot;The Foo feature provides very cool stuff.&quot;)</pre>
-</dl>
+</dd></dl>
 <h3>Legacy Macros</h3>
 <p>The following macros are provided for compatibility with previous CMake versions:</p>
 <dl>
-<dt><code>set_package_info</code></p>
+<dt><code>set_package_info</code></dt>
 <dd>
 <pre>set_package_info(&lt;name&gt; &lt;description&gt; [ &lt;url&gt; [&lt;purpose&gt;] ])</pre>
 <p>Use this macro to set up information about the named package, which can then be displayed via <code>feature_summary()</code>. This can be done either directly in the Find-module or in the project which uses the module after the <code>find_package()</code> call. The features for which information can be set are added automatically by the <code>find_package()</code> command.</p>
-<dt><code>set_feature_info</code></p>
+</dd><dt><code>set_feature_info</code></dt>
 <dd>
 <pre>set_feature_info(&lt;name&gt; &lt;description&gt; [&lt;url&gt;])</pre>
 <p>Does the same as: </p>
 <pre>set_package_info(&lt;name&gt; &lt;description&gt; &lt;url&gt;)</pre>
-<dt><code>print_enabled_features</code></p>
+</dd><dt><code>print_enabled_features</code></dt>
 <dd>
 <pre>print_enabled_features()</pre>
 <p>Does the same as </p>
 <pre>feature_summary(WHAT ENABLED_FEATURES DESCRIPTION &quot;Enabled features:&quot;)</pre>
-<dt><code>print_disabled_features</code></p>
+</dd><dt><code>print_disabled_features</code></dt>
 <dd>
 <pre>print_disabled_features()</pre>
 <p>Does the same as </p>
 <pre>feature_summary(WHAT DISABLED_FEATURES DESCRIPTION &quot;Disabled features:&quot;)</pre>
-</dl>
+</dd></dl>
 <h3>FetchContent</h3>
 <p>New in version 3.11.</p>
 <h3>Overview</h3>
@@ -2603,7 +2603,7 @@ endif()</pre>
 <p>The <code>FetchContent</code> module also supports defining and populating content in a single call, with no check for whether the content has been populated elsewhere already. This should not be done in projects, but may be appropriate for populating content in CMake&#8217;s script mode. See <i>FetchContent_Populate()</i> for details.</p>
 <h3>Commands</h3>
 <dl>
-<dt><code>FetchContent_Declare</code></p>
+<dt><code>FetchContent_Declare</code></dt>
 <dd>
 <pre>FetchContent_Declare(&lt;name&gt; &lt;contentOptions&gt;...)</pre>
 <p>The <code>FetchContent_Declare()</code> function records the options that describe how to populate the specified content. If such details have already been recorded earlier in this project (regardless of where in the project hierarchy), this and all later calls for the same content <code>&lt;name&gt;</code> are ignored. This &quot;first to record, wins&quot; approach is what allows hierarchical projects to have parent projects override content details of child projects. </p>
@@ -2628,16 +2628,16 @@ FetchContent_Declare(
 <p>Where contents are being fetched from a remote location and you do not control that server, it is advisable to use a hash for <code>GIT_TAG</code> rather than a branch or tag name. A commit hash is more secure and helps to confirm that the downloaded contents are what you expected. </p>
 <p> Changed in version 3.14: Commands for the download, update or patch steps can access the terminal. This may be needed for things like password prompts or real-time display of command progress. </p>
 <p> New in version 3.22: The <code>CMAKE_TLS_VERIFY</code>, <code>CMAKE_TLS_CAINFO</code>, <code>CMAKE_NETRC</code> and <code>CMAKE_NETRC_FILE</code> variables now provide the defaults for their corresponding content options, just like they do for <code>ExternalProject_Add()</code>. Previously, these variables were ignored by the <code>FetchContent</code> module. </p>
-<dt><code>FetchContent_MakeAvailable</code></p>
-<dd>New in version 3.14. </p>
+</dd><dt><code>FetchContent_MakeAvailable</code></dt>
+<dd>New in version 3.14. </dd>
 <pre>FetchContent_MakeAvailable(&lt;name1&gt; [&lt;name2&gt;...])</pre>
 <p>This command ensures that each of the named dependencies are populated and potentially added to the build by the time it returns. It iterates over the list, and for each dependency, the following logic is applied:</p>
-<dt>&bull;</p>
-<dd>If the dependency has already been populated earlier in this run, set the <code>&lt;lowercaseName&gt;_POPULATED</code>, <code>&lt;lowercaseName&gt;_SOURCE_DIR</code> and <code>&lt;lowercaseName&gt;_BINARY_DIR</code> variables in the same way as a call to <i>FetchContent_GetProperties()</i>, then skip the remaining steps below and move on to the next dependency in the list.</p>
-<dt>&bull;</p>
-<dd>Call <i>FetchContent_Populate()</i> to populate the dependency using the details recorded by an earlier call to <i>FetchContent_Declare()</i>. Halt with a fatal error if no such details have been recorded. <i>FETCHCONTENT_SOURCE_DIR_&lt;uppercaseName&gt;</i> can be used to override the declared details and use content provided at the specified location instead.</p>
-<dt>&bull;</p>
-<dd>If the top directory of the populated content contains a <code>CMakeLists.txt</code> file, call <code>add_subdirectory()</code> to add it to the main build. It is not an error for there to be no <code>CMakeLists.txt</code> file, which allows the command to be used for dependencies that make downloaded content available at a known location, but which do not need or support being added directly to the build. </p>
+<dt>&bull;</dt>
+<dd>If the dependency has already been populated earlier in this run, set the <code>&lt;lowercaseName&gt;_POPULATED</code>, <code>&lt;lowercaseName&gt;_SOURCE_DIR</code> and <code>&lt;lowercaseName&gt;_BINARY_DIR</code> variables in the same way as a call to <i>FetchContent_GetProperties()</i>, then skip the remaining steps below and move on to the next dependency in the list.</dd>
+<dt>&bull;</dt>
+<dd>Call <i>FetchContent_Populate()</i> to populate the dependency using the details recorded by an earlier call to <i>FetchContent_Declare()</i>. Halt with a fatal error if no such details have been recorded. <i>FETCHCONTENT_SOURCE_DIR_&lt;uppercaseName&gt;</i> can be used to override the declared details and use content provided at the specified location instead.</dd>
+<dt>&bull;</dt>
+<dd>If the top directory of the populated content contains a <code>CMakeLists.txt</code> file, call <code>add_subdirectory()</code> to add it to the main build. It is not an error for there to be no <code>CMakeLists.txt</code> file, which allows the command to be used for dependencies that make downloaded content available at a known location, but which do not need or support being added directly to the build. </dd>
 <p> New in version 3.18: The <code>SOURCE_SUBDIR</code> option can be given in the declared details to look somewhere below the top directory instead (i.e. the same way that <code>SOURCE_SUBDIR</code> is used by the <code>ExternalProject_Add()</code> command). The path provided with <code>SOURCE_SUBDIR</code> must be relative and will be treated as relative to the top directory. It can also point to a directory that does not contain a <code>CMakeLists.txt</code> file or even to a directory that doesn&#8217;t exist. This can be used to avoid adding a project that contains a <code>CMakeLists.txt</code> file in its top directory. </p>
 <p> Projects should aim to declare the details of all dependencies they might use before they call <code>FetchContent_MakeAvailable()</code> for any of them. This ensures that if any of the dependencies are also sub-dependencies of one or more of the others, the main project still controls the details that will be used (because it will declare them first before the dependencies get a chance to). In the following code samples, assume that the <code>uses_other</code> dependency also uses <code>FetchContent</code> to add the <code>other</code> dependency internally: </p>
 <pre># WRONG: Should declare all details first
@@ -2649,18 +2649,18 @@ FetchContent_MakeAvailable(other) # Would use details declared by uses_other</pr
 FetchContent_Declare(uses_other ...)
 FetchContent_Declare(other ...)
 FetchContent_MakeAvailable(uses_other other)</pre>
-<dt><code>FetchContent_Populate</code></p>
-<dd><code>NOTE:</code> Where possible, prefer to use <i>FetchContent_MakeAvailable()</i> instead of implementing population manually with this command. </p>
+<dt><code>FetchContent_Populate</code></dt>
+<dd><code>NOTE:</code> Where possible, prefer to use <i>FetchContent_MakeAvailable()</i> instead of implementing population manually with this command. </dd>
 <pre>FetchContent_Populate(&lt;name&gt;)</pre>
 <p>In most cases, the only argument given to <code>FetchContent_Populate()</code> is the <code>&lt;name&gt;</code>. When used this way, the command assumes the content details have been recorded by an earlier call to <i>FetchContent_Declare()</i>. The details are stored in a global property, so they are unaffected by things like variable or directory scope. Therefore, it doesn&#8217;t matter where in the project the details were previously declared, as long as they have been declared before the call to <code>FetchContent_Populate()</code>. Those saved details are then used to construct a call to <code>ExternalProject_Add()</code> in a private sub-build to perform the content population immediately. The implementation of <code>ExternalProject_Add()</code> ensures that if the content has already been populated in a previous CMake run, that content will be reused rather than repopulating them again. For the common case where population involves downloading content, the cost of the download is only paid once. </p>
 <p> An internal global property records when a particular content population request has been processed. If <code>FetchContent_Populate()</code> is called more than once for the same content name within a configure run, the second call will halt with an error. Projects can and should check whether content population has already been processed with the <i>FetchContent_GetProperties()</i> command before calling <code>FetchContent_Populate()</code>. </p>
 <p> <code>FetchContent_Populate()</code> will set three variables in the scope of the caller:</p>
-<dt><code>&lt;lowercaseName&gt;_POPULATED</code></p>
-<dd>This will always be set to <code>TRUE</code> by the call.</p>
-<dt><code>&lt;lowercaseName&gt;_SOURCE_DIR</code></p>
-<dd>The location where the populated content can be found upon return.</p>
-<dt><code>&lt;lowercaseName&gt;_BINARY_DIR</code></p>
-<dd>A directory intended for use as a corresponding build directory. </p>
+<dt><code>&lt;lowercaseName&gt;_POPULATED</code></dt>
+<dd>This will always be set to <code>TRUE</code> by the call.</dd>
+<dt><code>&lt;lowercaseName&gt;_SOURCE_DIR</code></dt>
+<dd>The location where the populated content can be found upon return.</dd>
+<dt><code>&lt;lowercaseName&gt;_BINARY_DIR</code></dt>
+<dd>A directory intended for use as a corresponding build directory. </dd>
 <p> The main use case for the <code>&lt;lowercaseName&gt;_SOURCE_DIR</code> and <code>&lt;lowercaseName&gt;_BINARY_DIR</code> variables is to call <code>add_subdirectory()</code> immediately after population: </p>
 <pre>FetchContent_Populate(FooBar)
 add_subdirectory(${foobar_SOURCE_DIR} ${foobar_BINARY_DIR})</pre>
@@ -2675,37 +2675,37 @@ add_subdirectory(${foobar_SOURCE_DIR} ${foobar_BINARY_DIR})</pre>
  ...
 )</pre>
 <p>This form has a number of key differences to that where only <code>&lt;name&gt;</code> is provided:</p>
-<dt>&bull;</p>
-<dd>All required population details are assumed to have been provided directly in the call to <code>FetchContent_Populate()</code>. Any saved details for <code>&lt;name&gt;</code> are ignored.</p>
-<dt>&bull;</p>
-<dd>No check is made for whether content for <code>&lt;name&gt;</code> has already been populated.</p>
-<dt>&bull;</p>
-<dd>No global property is set to record that the population has occurred.</p>
-<dt>&bull;</p>
-<dd>No global properties record the source or binary directories used for the populated content.</p>
-<dt>&bull;</p>
-<dd>The <code>FETCHCONTENT_FULLY_DISCONNECTED</code> and <code>FETCHCONTENT_UPDATES_DISCONNECTED</code> cache variables are ignored. </p>
+<dt>&bull;</dt>
+<dd>All required population details are assumed to have been provided directly in the call to <code>FetchContent_Populate()</code>. Any saved details for <code>&lt;name&gt;</code> are ignored.</dd>
+<dt>&bull;</dt>
+<dd>No check is made for whether content for <code>&lt;name&gt;</code> has already been populated.</dd>
+<dt>&bull;</dt>
+<dd>No global property is set to record that the population has occurred.</dd>
+<dt>&bull;</dt>
+<dd>No global properties record the source or binary directories used for the populated content.</dd>
+<dt>&bull;</dt>
+<dd>The <code>FETCHCONTENT_FULLY_DISCONNECTED</code> and <code>FETCHCONTENT_UPDATES_DISCONNECTED</code> cache variables are ignored. </dd>
 <p> The <code>&lt;lowercaseName&gt;_SOURCE_DIR</code> and <code>&lt;lowercaseName&gt;_BINARY_DIR</code> variables are still returned to the caller, but since these locations are not stored as global properties when this form is used, they are only available to the calling scope and below rather than the entire project hierarchy. No <code>&lt;lowercaseName&gt;_POPULATED</code> variable is set in the caller&#8217;s scope with this form. </p>
 <p> The supported options for <code>FetchContent_Populate()</code> are the same as those for <i>FetchContent_Declare()</i>. Those few options shown just above are either specific to <code>FetchContent_Populate()</code> or their behavior is slightly modified from how <code>ExternalProject_Add()</code> treats them:</p>
-<dt><code>QUIET</code></p>
-<dd>The <code>QUIET</code> option can be given to hide the output associated with populating the specified content. If the population fails, the output will be shown regardless of whether this option was given or not so that the cause of the failure can be diagnosed. The global <code>FETCHCONTENT_QUIET</code> cache variable has no effect on <code>FetchContent_Populate()</code> calls where the content details are provided directly.</p>
-<dt><code>SUBBUILD_DIR</code></p>
-<dd>The <code>SUBBUILD_DIR</code> argument can be provided to change the location of the sub-build created to perform the population. The default value is <code>${CMAKE_CURRENT_BINARY_DIR}/&lt;lowercaseName&gt;-subbuild</code> and it would be unusual to need to override this default. If a relative path is specified, it will be interpreted as relative to <code>CMAKE_CURRENT_BINARY_DIR</code>. This option should not be confused with the <code>SOURCE_SUBDIR</code> option which only affects the <i>FetchContent_MakeAvailable()</i> command.</p>
-<dt><code>SOURCE_DIR</code>, <code>BINARY_DIR</code></p>
-<dd>The <code>SOURCE_DIR</code> and <code>BINARY_DIR</code> arguments are supported by <code>ExternalProject_Add()</code>, but different default values are used by <code>FetchContent_Populate()</code>. <code>SOURCE_DIR</code> defaults to <code>${CMAKE_CURRENT_BINARY_DIR}/&lt;lowercaseName&gt;-src</code> and <code>BINARY_DIR</code> defaults to <code>${CMAKE_CURRENT_BINARY_DIR}/&lt;lowercaseName&gt;-build</code>. If a relative path is specified, it will be interpreted as relative to <code>CMAKE_CURRENT_BINARY_DIR</code>. </p>
+<dt><code>QUIET</code></dt>
+<dd>The <code>QUIET</code> option can be given to hide the output associated with populating the specified content. If the population fails, the output will be shown regardless of whether this option was given or not so that the cause of the failure can be diagnosed. The global <code>FETCHCONTENT_QUIET</code> cache variable has no effect on <code>FetchContent_Populate()</code> calls where the content details are provided directly.</dd>
+<dt><code>SUBBUILD_DIR</code></dt>
+<dd>The <code>SUBBUILD_DIR</code> argument can be provided to change the location of the sub-build created to perform the population. The default value is <code>${CMAKE_CURRENT_BINARY_DIR}/&lt;lowercaseName&gt;-subbuild</code> and it would be unusual to need to override this default. If a relative path is specified, it will be interpreted as relative to <code>CMAKE_CURRENT_BINARY_DIR</code>. This option should not be confused with the <code>SOURCE_SUBDIR</code> option which only affects the <i>FetchContent_MakeAvailable()</i> command.</dd>
+<dt><code>SOURCE_DIR</code>, <code>BINARY_DIR</code></dt>
+<dd>The <code>SOURCE_DIR</code> and <code>BINARY_DIR</code> arguments are supported by <code>ExternalProject_Add()</code>, but different default values are used by <code>FetchContent_Populate()</code>. <code>SOURCE_DIR</code> defaults to <code>${CMAKE_CURRENT_BINARY_DIR}/&lt;lowercaseName&gt;-src</code> and <code>BINARY_DIR</code> defaults to <code>${CMAKE_CURRENT_BINARY_DIR}/&lt;lowercaseName&gt;-build</code>. If a relative path is specified, it will be interpreted as relative to <code>CMAKE_CURRENT_BINARY_DIR</code>. </dd>
 <p> In addition to the above explicit options, any other unrecognized options are passed through unmodified to <code>ExternalProject_Add()</code> to perform the download, patch and update steps. The following options are explicitly prohibited (they are disabled by the <code>FetchContent_Populate()</code> command):</p>
-<dt>&bull;</p>
-<dd><code>CONFIGURE_COMMAND</code></p>
-<dt>&bull;</p>
-<dd><code>BUILD_COMMAND</code></p>
-<dt>&bull;</p>
-<dd><code>INSTALL_COMMAND</code></p>
-<dt>&bull;</p>
-<dd><code>TEST_COMMAND</code> </p>
+<dt>&bull;</dt>
+<dd><code>CONFIGURE_COMMAND</code></dd>
+<dt>&bull;</dt>
+<dd><code>BUILD_COMMAND</code></dd>
+<dt>&bull;</dt>
+<dd><code>INSTALL_COMMAND</code></dd>
+<dt>&bull;</dt>
+<dd><code>TEST_COMMAND</code> </dd>
 <p> If using <code>FetchContent_Populate()</code> within CMake&#8217;s script mode, be aware that the implementation sets up a sub-build which therefore requires a CMake generator and build tool to be available. If these cannot be found by default, then the <code>CMAKE_GENERATOR</code> and/or <code>CMAKE_MAKE_PROGRAM</code> variables will need to be set appropriately on the command line invoking the script. </p>
 <p> New in version 3.18: Added support for the <code>DOWNLOAD_NO_EXTRACT</code> option. </p>
-<dt><code>FetchContent_GetProperties</code></p>
-<dd>When using saved content details, a call to <i>FetchContent_MakeAvailable()</i> or <i>FetchContent_Populate()</i> records information in global properties which can be queried at any time. This information includes the source and binary directories associated with the content and also whether or not the content population has been processed during the current configure run. </p>
+<dt><code>FetchContent_GetProperties</code></dt>
+<dd>When using saved content details, a call to <i>FetchContent_MakeAvailable()</i> or <i>FetchContent_Populate()</i> records information in global properties which can be queried at any time. This information includes the source and binary directories associated with the content and also whether or not the content population has been processed during the current configure run. </dd>
 <pre>FetchContent_GetProperties(
  &lt;name&gt;
  [SOURCE_DIR &lt;srcDirVar&gt;]
@@ -2728,19 +2728,19 @@ endif()</pre>
 <h3>Variables</h3>
 <p>A number of cache variables can influence the behavior where details from a <i>FetchContent_Declare()</i> call are used to populate content. The variables are all intended for the developer to customize behavior and should not normally be set by the project.</p>
 <dl>
-<dt><code>FETCHCONTENT_BASE_DIR</code></p>
-<dd>In most cases, the saved details do not specify any options relating to the directories to use for the internal sub-build, final source and build areas. It is generally best to leave these decisions up to the <code>FetchContent</code> module to handle on the project&#8217;s behalf. The <code>FETCHCONTENT_BASE_DIR</code> cache variable controls the point under which all content population directories are collected, but in most cases, developers would not need to change this. The default location is <code>${CMAKE_BINARY_DIR}/_deps</code>, but if developers change this value, they should aim to keep the path short and just below the top level of the build tree to avoid running into path length problems on Windows.</p>
-<dt><code>FETCHCONTENT_QUIET</code></p>
-<dd>The logging output during population can be quite verbose, making the configure stage quite noisy. This cache option (<code>ON</code> by default) hides all population output unless an error is encountered. If experiencing problems with hung downloads, temporarily switching this option off may help diagnose which content population is causing the issue.</p>
-<dt><code>FETCHCONTENT_FULLY_DISCONNECTED</code></p>
-<dd>When this option is enabled, no attempt is made to download or update any content. It is assumed that all content has already been populated in a previous run or the source directories have been pointed at existing contents the developer has provided manually (using options described further below). When the developer knows that no changes have been made to any content details, turning this option <code>ON</code> can significantly speed up the configure stage. It is <code>OFF</code> by default.</p>
-<dt><code>FETCHCONTENT_UPDATES_DISCONNECTED</code></p>
-<dd>This is a less severe download/update control compared to <i>FETCHCONTENT_FULLY_DISCONNECTED</i>. Instead of bypassing all download and update logic, <code>FETCHCONTENT_UPDATES_DISCONNECTED</code> only disables the update stage. Therefore, if content has not been downloaded previously, it will still be downloaded when this option is enabled. This can speed up the configure stage, but not as much as <i>FETCHCONTENT_FULLY_DISCONNECTED</i>. It is <code>OFF</code> by default. </p>
+<dt><code>FETCHCONTENT_BASE_DIR</code></dt>
+<dd>In most cases, the saved details do not specify any options relating to the directories to use for the internal sub-build, final source and build areas. It is generally best to leave these decisions up to the <code>FetchContent</code> module to handle on the project&#8217;s behalf. The <code>FETCHCONTENT_BASE_DIR</code> cache variable controls the point under which all content population directories are collected, but in most cases, developers would not need to change this. The default location is <code>${CMAKE_BINARY_DIR}/_deps</code>, but if developers change this value, they should aim to keep the path short and just below the top level of the build tree to avoid running into path length problems on Windows.</dd>
+<dt><code>FETCHCONTENT_QUIET</code></dt>
+<dd>The logging output during population can be quite verbose, making the configure stage quite noisy. This cache option (<code>ON</code> by default) hides all population output unless an error is encountered. If experiencing problems with hung downloads, temporarily switching this option off may help diagnose which content population is causing the issue.</dd>
+<dt><code>FETCHCONTENT_FULLY_DISCONNECTED</code></dt>
+<dd>When this option is enabled, no attempt is made to download or update any content. It is assumed that all content has already been populated in a previous run or the source directories have been pointed at existing contents the developer has provided manually (using options described further below). When the developer knows that no changes have been made to any content details, turning this option <code>ON</code> can significantly speed up the configure stage. It is <code>OFF</code> by default.</dd>
+<dt><code>FETCHCONTENT_UPDATES_DISCONNECTED</code></dt>
+<dd>This is a less severe download/update control compared to <i>FETCHCONTENT_FULLY_DISCONNECTED</i>. Instead of bypassing all download and update logic, <code>FETCHCONTENT_UPDATES_DISCONNECTED</code> only disables the update stage. Therefore, if content has not been downloaded previously, it will still be downloaded when this option is enabled. This can speed up the configure stage, but not as much as <i>FETCHCONTENT_FULLY_DISCONNECTED</i>. It is <code>OFF</code> by default. </dd>
 <p> In addition to the above cache variables, the following cache variables are also defined for each content name:</p>
-<dt><code>FETCHCONTENT_SOURCE_DIR_&lt;uppercaseName&gt;</code></p>
-<dd>If this is set, no download or update steps are performed for the specified content and the <code>&lt;lowercaseName&gt;_SOURCE_DIR</code> variable returned to the caller is pointed at this location. This gives developers a way to have a separate checkout of the content that they can modify freely without interference from the build. The build simply uses that existing source, but it still defines <code>&lt;lowercaseName&gt;_BINARY_DIR</code> to point inside its own build area. Developers are strongly encouraged to use this mechanism rather than editing the sources populated in the default location, as changes to sources in the default location can be lost when content population details are changed by the project.</p>
-<dt><code>FETCHCONTENT_UPDATES_DISCONNECTED_&lt;uppercaseName&gt;</code></p>
-<dd>This is the per-content equivalent of <i>FETCHCONTENT_UPDATES_DISCONNECTED</i>. If the global option or this option is <code>ON</code>, then updates will be disabled for the named content. Disabling updates for individual content can be useful for content whose details rarely change, while still leaving other frequently changing content with updates enabled.</dl>
+<dt><code>FETCHCONTENT_SOURCE_DIR_&lt;uppercaseName&gt;</code></dt>
+<dd>If this is set, no download or update steps are performed for the specified content and the <code>&lt;lowercaseName&gt;_SOURCE_DIR</code> variable returned to the caller is pointed at this location. This gives developers a way to have a separate checkout of the content that they can modify freely without interference from the build. The build simply uses that existing source, but it still defines <code>&lt;lowercaseName&gt;_BINARY_DIR</code> to point inside its own build area. Developers are strongly encouraged to use this mechanism rather than editing the sources populated in the default location, as changes to sources in the default location can be lost when content population details are changed by the project.</dd>
+<dt><code>FETCHCONTENT_UPDATES_DISCONNECTED_&lt;uppercaseName&gt;</code></dt>
+<dd>This is the per-content equivalent of <i>FETCHCONTENT_UPDATES_DISCONNECTED</i>. If the global option or this option is <code>ON</code>, then updates will be disabled for the named content. Disabling updates for individual content can be useful for content whose details rarely change, while still leaving other frequently changing content with updates enabled.</dd></dl>
 <h3>Examples</h3>
 <p>This first fairly straightforward example ensures that some popular testing frameworks are available to the main build: </p>
 <pre>include(FetchContent)
@@ -2822,12 +2822,12 @@ if(NOT projd_POPULATED)
 endif()</pre>
 <p>A few key points should be noted in the above:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>projB</code> and <code>projC</code> define different content details for <code>projD</code>, but <code>projA</code> also defines a set of content details for <code>projD</code>. Because <code>projA</code> will define them first, the details from <code>projB</code> and <code>projC</code> will not be used. The override details defined by <code>projA</code> are not required to match either of those from <code>projB</code> or <code>projC</code>, but it is up to the higher level project to ensure that the details it does define still make sense for the child projects.</p>
-<dt>&bull;</p>
-<dd>In the <code>projA</code> call to <i>FetchContent_MakeAvailable()</i>, <code>projD</code> is listed ahead of <code>projB</code> and <code>projC</code> to ensure that <code>projA</code> is in control of how <code>projD</code> is populated.</p>
-<dt>&bull;</p>
-<dd>While <code>projA</code> defines content details for <code>projE</code>, it does not need to explicitly call <code>FetchContent_MakeAvailable(projE)</code> or <code>FetchContent_Populate(projD)</code> itself. Instead, it leaves that to the child <code>projB</code>. For higher level projects, it is often enough to just define the override content details and leave the actual population to the child projects. This saves repeating the same thing at each level of the project hierarchy unnecessarily. </p>
+<dt>&bull;</dt>
+<dd><code>projB</code> and <code>projC</code> define different content details for <code>projD</code>, but <code>projA</code> also defines a set of content details for <code>projD</code>. Because <code>projA</code> will define them first, the details from <code>projB</code> and <code>projC</code> will not be used. The override details defined by <code>projA</code> are not required to match either of those from <code>projB</code> or <code>projC</code>, but it is up to the higher level project to ensure that the details it does define still make sense for the child projects.</dd>
+<dt>&bull;</dt>
+<dd>In the <code>projA</code> call to <i>FetchContent_MakeAvailable()</i>, <code>projD</code> is listed ahead of <code>projB</code> and <code>projC</code> to ensure that <code>projA</code> is in control of how <code>projD</code> is populated.</dd>
+<dt>&bull;</dt>
+<dd>While <code>projA</code> defines content details for <code>projE</code>, it does not need to explicitly call <code>FetchContent_MakeAvailable(projE)</code> or <code>FetchContent_Populate(projD)</code> itself. Instead, it leaves that to the child <code>projB</code>. For higher level projects, it is often enough to just define the override content details and leave the actual population to the child projects. This saves repeating the same thing at each level of the project hierarchy unnecessarily. </dd>
 <p> Projects don&#8217;t always need to add the populated content to the build. Sometimes the project just wants to make the downloaded content available at a predictable location. The next example ensures that a set of standard company toolchain files (and potentially even the toolchain binaries themselves) is available early enough to be used for that same build. </p>
 <pre>cmake_minimum_required(VERSION 3.14)
 include(FetchContent)
@@ -2854,8 +2854,8 @@ FetchContent_Populate(
 <h3>FindPackageHandleStandardArgs</h3>
 <p>This module provides functions intended to be used in Find Modules implementing <code>find_package(&lt;PackageName&gt;)</code> calls.</p>
 <dl>
-<dt><code>find_package_handle_standard_args</code></p>
-<dd>This command handles the <code>REQUIRED</code>, <code>QUIET</code> and version-related arguments of <code>find_package()</code>. It also sets the <code>&lt;PackageName&gt;_FOUND</code> variable. The package is considered found if all variables listed contain valid results, e.g. valid filepaths. </p>
+<dt><code>find_package_handle_standard_args</code></dt>
+<dd>This command handles the <code>REQUIRED</code>, <code>QUIET</code> and version-related arguments of <code>find_package()</code>. It also sets the <code>&lt;PackageName&gt;_FOUND</code> variable. The package is considered found if all variables listed contain valid results, e.g. valid filepaths. </dd>
 <p> There are two signatures: </p>
 <pre>find_package_handle_standard_args(&lt;PackageName&gt;
  (DEFAULT_MSG|&lt;custom-failure-message&gt;)
@@ -2874,30 +2874,30 @@ find_package_handle_standard_args(&lt;PackageName&gt;
  )</pre>
 <p>The <code>&lt;PackageName&gt;_FOUND</code> variable will be set to <code>TRUE</code> if all the variables <code>&lt;required-var&gt;&#8230;</code> are valid and any optional constraints are satisfied, and <code>FALSE</code> otherwise. A success or failure message may be displayed based on the results and on whether the <code>REQUIRED</code> and/or <code>QUIET</code> option was given to the <code>find_package()</code> call. </p>
 <p> The options are:</p>
-<dt><code>(DEFAULT_MSG|&lt;custom-failure-message&gt;)</code></p>
-<dd>In the simple signature this specifies the failure message. Use <code>DEFAULT_MSG</code> to ask for a default message to be computed (recommended). Not valid in the full signature.</p>
-<dt><code>FOUND_VAR &lt;result-var&gt;</code></p>
-<dd>Deprecated since version 3.3. </p>
+<dt><code>(DEFAULT_MSG|&lt;custom-failure-message&gt;)</code></dt>
+<dd>In the simple signature this specifies the failure message. Use <code>DEFAULT_MSG</code> to ask for a default message to be computed (recommended). Not valid in the full signature.</dd>
+<dt><code>FOUND_VAR &lt;result-var&gt;</code></dt>
+<dd>Deprecated since version 3.3. </dd>
 <p> Specifies either <code>&lt;PackageName&gt;_FOUND</code> or <code>&lt;PACKAGENAME&gt;_FOUND</code> as the result variable. This exists only for compatibility with older versions of CMake and is now ignored. Result variables of both names are always set for compatibility.</p>
-<dt><code>REQUIRED_VARS &lt;required-var&gt;&#8230;</code></p>
-<dd>Specify the variables which are required for this package. These may be named in the generated failure message asking the user to set the missing variable values. Therefore these should typically be cache entries such as <code>FOO_LIBRARY</code> and not output variables like <code>FOO_LIBRARIES</code>. </p>
+<dt><code>REQUIRED_VARS &lt;required-var&gt;&#8230;</code></dt>
+<dd>Specify the variables which are required for this package. These may be named in the generated failure message asking the user to set the missing variable values. Therefore these should typically be cache entries such as <code>FOO_LIBRARY</code> and not output variables like <code>FOO_LIBRARIES</code>. </dd>
 <p> Changed in version 3.18: If <code>HANDLE_COMPONENTS</code> is specified, this option can be omitted. </p>
-<dt><code>VERSION_VAR &lt;version-var&gt;</code></p>
-<dd>Specify the name of a variable that holds the version of the package that has been found. This version will be checked against the (potentially) specified required version given to the <code>find_package()</code> call, including its <code>EXACT</code> option. The default messages include information about the required version and the version which has been actually found, both if the version is ok or not.</p>
-<dt><code>HANDLE_VERSION_RANGE</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>VERSION_VAR &lt;version-var&gt;</code></dt>
+<dd>Specify the name of a variable that holds the version of the package that has been found. This version will be checked against the (potentially) specified required version given to the <code>find_package()</code> call, including its <code>EXACT</code> option. The default messages include information about the required version and the version which has been actually found, both if the version is ok or not.</dd>
+<dt><code>HANDLE_VERSION_RANGE</code></dt>
+<dd>New in version 3.19. </dd>
 <p> Enable handling of a version range, if one is specified. Without this option, a developer warning will be displayed if a version range is specified.</p>
-<dt><code>HANDLE_COMPONENTS</code></p>
-<dd>Enable handling of package components. In this case, the command will report which components have been found and which are missing, and the <code>&lt;PackageName&gt;_FOUND</code> variable will be set to <code>FALSE</code> if any of the required components (i.e. not the ones listed after the <code>OPTIONAL_COMPONENTS</code> option of <code>find_package()</code>) are missing.</p>
-<dt><code>CONFIG_MODE</code></p>
-<dd>Specify that the calling find module is a wrapper around a call to <code>find_package(&lt;PackageName&gt; NO_MODULE)</code>. This implies a <code>VERSION_VAR</code> value of <code>&lt;PackageName&gt;_VERSION</code>. The command will automatically check whether the package configuration file was found.</p>
-<dt><code>REASON_FAILURE_MESSAGE &lt;reason-failure-message&gt;</code></p>
-<dd>New in version 3.16. </p>
+<dt><code>HANDLE_COMPONENTS</code></dt>
+<dd>Enable handling of package components. In this case, the command will report which components have been found and which are missing, and the <code>&lt;PackageName&gt;_FOUND</code> variable will be set to <code>FALSE</code> if any of the required components (i.e. not the ones listed after the <code>OPTIONAL_COMPONENTS</code> option of <code>find_package()</code>) are missing.</dd>
+<dt><code>CONFIG_MODE</code></dt>
+<dd>Specify that the calling find module is a wrapper around a call to <code>find_package(&lt;PackageName&gt; NO_MODULE)</code>. This implies a <code>VERSION_VAR</code> value of <code>&lt;PackageName&gt;_VERSION</code>. The command will automatically check whether the package configuration file was found.</dd>
+<dt><code>REASON_FAILURE_MESSAGE &lt;reason-failure-message&gt;</code></dt>
+<dd>New in version 3.16. </dd>
 <p> Specify a custom message of the reason for the failure which will be appended to the default generated message.</p>
-<dt><code>FAIL_MESSAGE &lt;custom-failure-message&gt;</code></p>
-<dd>Specify a custom failure message instead of using the default generated message. Not recommended.</p>
-<dt><code>NAME_MISMATCHED</code></p>
-<dd>New in version 3.17. </p>
+<dt><code>FAIL_MESSAGE &lt;custom-failure-message&gt;</code></dt>
+<dd>Specify a custom failure message instead of using the default generated message. Not recommended.</dd>
+<dt><code>NAME_MISMATCHED</code></dt>
+<dd>New in version 3.17. </dd>
 <p> Indicate that the <code>&lt;PackageName&gt;</code> does not match <code>${CMAKE_FIND_PACKAGE_NAME}</code>. This is usually a mistake and raises a warning, but it may be intentional for usage of the command for components of a larger package. </p>
 <p> Example for the simple signature: </p>
 <pre>find_package_handle_standard_args(LibXml2 DEFAULT_MSG
@@ -2913,8 +2913,8 @@ find_package_handle_standard_args(&lt;PackageName&gt;
 <pre>find_package(Automoc4 QUIET NO_MODULE HINTS /opt/automoc4)
 find_package_handle_standard_args(Automoc4 CONFIG_MODE)</pre>
 <p>In this case, a <code>FindAutmoc4.cmake</code> module wraps a call to <code>find_package(Automoc4 NO_MODULE)</code> and adds an additional search directory for <code>automoc4</code>. Then the call to <code>find_package_handle_standard_args</code> produces a proper success/failure message.</p>
-<dt><code>find_package_check_version</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>find_package_check_version</code></dt>
+<dd>New in version 3.19. </dd>
 <p> Helper function which can be used to check if a <code>&lt;version&gt;</code> is valid against version-related arguments of <code>find_package()</code>. </p>
 <pre>find_package_check_version(&lt;version&gt; &lt;result-var&gt;
  [HANDLE_VERSION_RANGE]
@@ -2922,10 +2922,10 @@ find_package_handle_standard_args(Automoc4 CONFIG_MODE)</pre>
  )</pre>
 <p>The <code>&lt;result-var&gt;</code> will hold a boolean value giving the result of the check. </p>
 <p> The options are:</p>
-<dt><code>HANDLE_VERSION_RANGE</code></p>
-<dd>Enable handling of a version range, if one is specified. Without this option, a developer warning will be displayed if a version range is specified.</p>
-<dt><code>RESULT_MESSAGE_VARIABLE &lt;message-var&gt;</code></p>
-<dd>Specify a variable to get back a message describing the result of the check. </p>
+<dt><code>HANDLE_VERSION_RANGE</code></dt>
+<dd>Enable handling of a version range, if one is specified. Without this option, a developer warning will be displayed if a version range is specified.</dd>
+<dt><code>RESULT_MESSAGE_VARIABLE &lt;message-var&gt;</code></dt>
+<dd>Specify a variable to get back a message describing the result of the check. </dd>
 <p> Example for the usage: </p>
 <pre>find_package_check_version(1.2.3 result HANDLE_VERSION_RANGE
  RESULT_MESSAGE_VARIABLE reason)
@@ -2951,43 +2951,43 @@ endif()</pre>
 <h3>Module Variables</h3>
 <p>Variables that indicate if the mangling is found:</p>
 <dl>
-<dt><code>FortranCInterface_GLOBAL_FOUND</code></p>
-<dd>Global subroutines and functions.</p>
-<dt><code>FortranCInterface_MODULE_FOUND</code></p>
-<dd>Module subroutines and functions (declared by &quot;MODULE PROCEDURE&quot;). </p>
+<dt><code>FortranCInterface_GLOBAL_FOUND</code></dt>
+<dd>Global subroutines and functions.</dd>
+<dt><code>FortranCInterface_MODULE_FOUND</code></dt>
+<dd>Module subroutines and functions (declared by &quot;MODULE PROCEDURE&quot;). </dd>
 <p> This module also provides the following variables to specify the detected mangling, though a typical use case does not need to reference them and can use the <i>Module Functions</i> below.</p>
-<dt><code>FortranCInterface_GLOBAL_PREFIX</code></p>
-<dd>Prefix for a global symbol without an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL_SUFFIX</code></p>
-<dd>Suffix for a global symbol without an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL_CASE</code></p>
-<dd>The case for a global symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</p>
-<dt><code>FortranCInterface_GLOBAL__PREFIX</code></p>
-<dd>Prefix for a global symbol with an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL__SUFFIX</code></p>
-<dd>Suffix for a global symbol with an underscore.</p>
-<dt><code>FortranCInterface_GLOBAL__CASE</code></p>
-<dd>The case for a global symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</p>
-<dt><code>FortranCInterface_MODULE_PREFIX</code></p>
-<dd>Prefix for a module symbol without an underscore.</p>
-<dt><code>FortranCInterface_MODULE_MIDDLE</code></p>
-<dd>Middle of a module symbol without an underscore that appears between the name of the module and the name of the symbol.</p>
-<dt><code>FortranCInterface_MODULE_SUFFIX</code></p>
-<dd>Suffix for a module symbol without an underscore.</p>
-<dt><code>FortranCInterface_MODULE_CASE</code></p>
-<dd>The case for a module symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</p>
-<dt><code>FortranCInterface_MODULE__PREFIX</code></p>
-<dd>Prefix for a module symbol with an underscore.</p>
-<dt><code>FortranCInterface_MODULE__MIDDLE</code></p>
-<dd>Middle of a module symbol with an underscore that appears between the name of the module and the name of the symbol.</p>
-<dt><code>FortranCInterface_MODULE__SUFFIX</code></p>
-<dd>Suffix for a module symbol with an underscore.</p>
-<dt><code>FortranCInterface_MODULE__CASE</code></p>
-<dd>The case for a module symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dl>
+<dt><code>FortranCInterface_GLOBAL_PREFIX</code></dt>
+<dd>Prefix for a global symbol without an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL_SUFFIX</code></dt>
+<dd>Suffix for a global symbol without an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL_CASE</code></dt>
+<dd>The case for a global symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd>
+<dt><code>FortranCInterface_GLOBAL__PREFIX</code></dt>
+<dd>Prefix for a global symbol with an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL__SUFFIX</code></dt>
+<dd>Suffix for a global symbol with an underscore.</dd>
+<dt><code>FortranCInterface_GLOBAL__CASE</code></dt>
+<dd>The case for a global symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd>
+<dt><code>FortranCInterface_MODULE_PREFIX</code></dt>
+<dd>Prefix for a module symbol without an underscore.</dd>
+<dt><code>FortranCInterface_MODULE_MIDDLE</code></dt>
+<dd>Middle of a module symbol without an underscore that appears between the name of the module and the name of the symbol.</dd>
+<dt><code>FortranCInterface_MODULE_SUFFIX</code></dt>
+<dd>Suffix for a module symbol without an underscore.</dd>
+<dt><code>FortranCInterface_MODULE_CASE</code></dt>
+<dd>The case for a module symbol without an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd>
+<dt><code>FortranCInterface_MODULE__PREFIX</code></dt>
+<dd>Prefix for a module symbol with an underscore.</dd>
+<dt><code>FortranCInterface_MODULE__MIDDLE</code></dt>
+<dd>Middle of a module symbol with an underscore that appears between the name of the module and the name of the symbol.</dd>
+<dt><code>FortranCInterface_MODULE__SUFFIX</code></dt>
+<dd>Suffix for a module symbol with an underscore.</dd>
+<dt><code>FortranCInterface_MODULE__CASE</code></dt>
+<dd>The case for a module symbol with an underscore, either <code>UPPER</code> or <code>LOWER</code>.</dd></dl>
 <h3>Module Functions</h3>
 <dl>
-<dt><code>FortranCInterface_HEADER</code></p>
-<dd>The <code>FortranCInterface_HEADER</code> function is provided to generate a C header file containing macros to mangle symbol names: </p>
+<dt><code>FortranCInterface_HEADER</code></dt>
+<dd>The <code>FortranCInterface_HEADER</code> function is provided to generate a C header file containing macros to mangle symbol names: </dd>
 <pre>FortranCInterface_HEADER(&lt;file&gt;
  [MACRO_NAMESPACE &lt;macro-ns&gt;]
  [SYMBOL_NAMESPACE &lt;ns&gt;]
@@ -2998,27 +2998,27 @@ endif()</pre>
 #define FortranCInterface_MODULE (mod,name, MOD,NAME) ...
 #define FortranCInterface_MODULE_(mod,name, MOD,NAME) ...</pre>
 <p>These macros mangle four categories of Fortran symbols, respectively:</p>
-<dt>&bull;</p>
-<dd>Global symbols without &#8216;_&#8217;: <code>call mysub()</code></p>
-<dt>&bull;</p>
-<dd>Global symbols with &#8216;_&#8217; : <code>call my_sub()</code></p>
-<dt>&bull;</p>
-<dd>Module symbols without &#8216;_&#8217;: <code>use mymod; call mysub()</code></p>
-<dt>&bull;</p>
-<dd>Module symbols with &#8216;_&#8217; : <code>use mymod; call my_sub()</code> </p>
+<dt>&bull;</dt>
+<dd>Global symbols without &#8216;_&#8217;: <code>call mysub()</code></dd>
+<dt>&bull;</dt>
+<dd>Global symbols with &#8216;_&#8217; : <code>call my_sub()</code></dd>
+<dt>&bull;</dt>
+<dd>Module symbols without &#8216;_&#8217;: <code>use mymod; call mysub()</code></dd>
+<dt>&bull;</dt>
+<dd>Module symbols with &#8216;_&#8217; : <code>use mymod; call my_sub()</code> </dd>
 <p> If mangling for a category is not known, its macro is left undefined. All macros require raw names in both lower case and upper case. </p>
 <p> The options are:</p>
-<dt><code>MACRO_NAMESPACE</code></p>
-<dd>Replace the default <code>FortranCInterface_</code> prefix with a given namespace <code>&lt;macro-ns&gt;</code>.</p>
-<dt><code>SYMBOLS</code></p>
-<dd>List symbols to mangle automatically with C preprocessor definitions: </p>
+<dt><code>MACRO_NAMESPACE</code></dt>
+<dd>Replace the default <code>FortranCInterface_</code> prefix with a given namespace <code>&lt;macro-ns&gt;</code>.</dd>
+<dt><code>SYMBOLS</code></dt>
+<dd>List symbols to mangle automatically with C preprocessor definitions: </dd>
 <pre>&lt;function&gt; ==&gt; #define &lt;ns&gt;&lt;function&gt; ...
 &lt;module&gt;:&lt;function&gt; ==&gt; #define &lt;ns&gt;&lt;module&gt;_&lt;function&gt; ...</pre>
 <p>If the mangling for some symbol is not known then no preprocessor definition is created, and a warning is displayed.</p>
-<dt><code>SYMBOL_NAMESPACE</code></p>
-<dd>Prefix all preprocessor definitions generated by the <code>SYMBOLS</code> option with a given namespace <code>&lt;ns&gt;</code>.</p>
-<dt><code>FortranCInterface_VERIFY</code></p>
-<dd>The <code>FortranCInterface_VERIFY</code> function is provided to verify that the Fortran and C/C++ compilers work together: </p>
+<dt><code>SYMBOL_NAMESPACE</code></dt>
+<dd>Prefix all preprocessor definitions generated by the <code>SYMBOLS</code> option with a given namespace <code>&lt;ns&gt;</code>.</dd>
+<dt><code>FortranCInterface_VERIFY</code></dt>
+<dd>The <code>FortranCInterface_VERIFY</code> function is provided to verify that the Fortran and C/C++ compilers work together: </dd>
 <pre>FortranCInterface_VERIFY([CXX] [QUIET])</pre>
 <p>It tests whether a simple test executable using Fortran and C (and C++ when the CXX option is given) compiles and links successfully. The result is stored in the cache entry <code>FortranCInterface_VERIFIED_C</code> (or <code>FortranCInterface_VERIFIED_CXX</code> if <code>CXX</code> is given) as a boolean. If the check fails and <code>QUIET</code> is not given the function terminates with a fatal error message describing the problem. The purpose of this check is to stop a build early for incompatible compiler combinations. The test is built in the <code>Release</code> configuration.</dl>
 <h3>Example Usage</h3>
@@ -3201,38 +3201,38 @@ other</pre>
 <p> <code>CMAKE_INSTALL_FULL_&lt;dir&gt;</code> The absolute path generated from the corresponding <code>CMAKE_INSTALL_&lt;dir&gt;</code> value. If the value is not already an absolute path, an absolute path is constructed typically by prepending the value of the <code>CMAKE_INSTALL_PREFIX</code> variable. However, there are some <i>special cases</i> as documented below. </p>
 <p> where <code>&lt;dir&gt;</code> is one of:</p>
 <dl>
-<dt><code>BINDIR</code></p>
-<dd>user executables (<code>bin</code>)</p>
-<dt><code>SBINDIR</code></p>
-<dd>system admin executables (<code>sbin</code>)</p>
-<dt><code>LIBEXECDIR</code></p>
-<dd>program executables (<code>libexec</code>)</p>
-<dt><code>SYSCONFDIR</code></p>
-<dd>read-only single-machine data (<code>etc</code>)</p>
-<dt><code>SHAREDSTATEDIR</code></p>
-<dd>modifiable architecture-independent data (<code>com</code>)</p>
-<dt><code>LOCALSTATEDIR</code></p>
-<dd>modifiable single-machine data (<code>var</code>)</p>
-<dt><code>RUNSTATEDIR</code></p>
-<dd>New in version 3.9: run-time variable data (<code>LOCALSTATEDIR/run</code>) </p>
-<dt><code>LIBDIR</code></p>
-<dd>object code libraries (<code>lib</code> or <code>lib64</code> or <code>lib/&lt;multiarch-tuple&gt;</code> on Debian)</p>
-<dt><code>INCLUDEDIR</code></p>
-<dd>C header files (<code>include</code>)</p>
-<dt><code>OLDINCLUDEDIR</code></p>
-<dd>C header files for non-gcc (<code>/usr/include</code>)</p>
-<dt><code>DATAROOTDIR</code></p>
-<dd>read-only architecture-independent data root (<code>share</code>)</p>
-<dt><code>DATADIR</code></p>
-<dd>read-only architecture-independent data (<code>DATAROOTDIR</code>)</p>
-<dt><code>INFODIR</code></p>
-<dd>info documentation (<code>DATAROOTDIR/info</code>)</p>
-<dt><code>LOCALEDIR</code></p>
-<dd>locale-dependent data (<code>DATAROOTDIR/locale</code>)</p>
-<dt><code>MANDIR</code></p>
-<dd>man documentation (<code>DATAROOTDIR/man</code>)</p>
-<dt><code>DOCDIR</code></p>
-<dd>documentation root (<code>DATAROOTDIR/doc/PROJECT_NAME</code>) </p>
+<dt><code>BINDIR</code></dt>
+<dd>user executables (<code>bin</code>)</dd>
+<dt><code>SBINDIR</code></dt>
+<dd>system admin executables (<code>sbin</code>)</dd>
+<dt><code>LIBEXECDIR</code></dt>
+<dd>program executables (<code>libexec</code>)</dd>
+<dt><code>SYSCONFDIR</code></dt>
+<dd>read-only single-machine data (<code>etc</code>)</dd>
+<dt><code>SHAREDSTATEDIR</code></dt>
+<dd>modifiable architecture-independent data (<code>com</code>)</dd>
+<dt><code>LOCALSTATEDIR</code></dt>
+<dd>modifiable single-machine data (<code>var</code>)</dd>
+<dt><code>RUNSTATEDIR</code></dt>
+<dd>New in version 3.9: run-time variable data (<code>LOCALSTATEDIR/run</code>) </dd>
+<dt><code>LIBDIR</code></dt>
+<dd>object code libraries (<code>lib</code> or <code>lib64</code> or <code>lib/&lt;multiarch-tuple&gt;</code> on Debian)</dd>
+<dt><code>INCLUDEDIR</code></dt>
+<dd>C header files (<code>include</code>)</dd>
+<dt><code>OLDINCLUDEDIR</code></dt>
+<dd>C header files for non-gcc (<code>/usr/include</code>)</dd>
+<dt><code>DATAROOTDIR</code></dt>
+<dd>read-only architecture-independent data root (<code>share</code>)</dd>
+<dt><code>DATADIR</code></dt>
+<dd>read-only architecture-independent data (<code>DATAROOTDIR</code>)</dd>
+<dt><code>INFODIR</code></dt>
+<dd>info documentation (<code>DATAROOTDIR/info</code>)</dd>
+<dt><code>LOCALEDIR</code></dt>
+<dd>locale-dependent data (<code>DATAROOTDIR/locale</code>)</dd>
+<dt><code>MANDIR</code></dt>
+<dd>man documentation (<code>DATAROOTDIR/man</code>)</dd>
+<dt><code>DOCDIR</code></dt>
+<dd>documentation root (<code>DATAROOTDIR/doc/PROJECT_NAME</code>) </dd>
 <p> If the includer does not define a value the above-shown default will be used and the value will appear in the cache for editing by the user.</dl>
 <h3>Special Cases</h3>
 <p>New in version 3.4. </p>
@@ -3242,13 +3242,13 @@ other</pre>
 <p> <code>/opt/&#8230;</code> For <code>&lt;dir&gt;</code> equal to <code>SYSCONFDIR</code>, <code>LOCALSTATEDIR</code> or <code>RUNSTATEDIR</code>, the <code>CMAKE_INSTALL_FULL_&lt;dir&gt;</code> is computed by <i>appending</i> the prefix to the value of <code>CMAKE_INSTALL_&lt;dir&gt;</code> if it is not user-specified as an absolute path. For example, the <code>SYSCONFDIR</code> value <code>etc</code> becomes <code>/etc/opt/&#8230;</code>. This is defined by the <i>Filesystem Hierarchy Standard</i>.</p>
 <h3>Macros</h3>
 <dl>
-<dt><code>GNUInstallDirs_get_absolute_install_dir</code></p>
+<dt><code>GNUInstallDirs_get_absolute_install_dir</code></dt>
 <dd>
 <pre>GNUInstallDirs_get_absolute_install_dir(absvar var dirname)</pre>
 <p>New in version 3.7. </p>
 <p> Set the given variable <code>absvar</code> to the absolute path contained within the variable <code>var</code>. This is to allow the computation of an absolute path, accounting for all the special cases documented above. While this macro is used to compute the various <code>CMAKE_INSTALL_FULL_&lt;dir&gt;</code> variables, it is exposed publicly to allow users who create additional path variables to also compute absolute paths where necessary, using the same logic. <code>dirname</code> is the directory name to get, e.g. <code>BINDIR</code>. </p>
 <p> Changed in version 3.20: Added the <code>&lt;dirname&gt;</code> parameter. Previous versions of CMake passed this value through the variable <code>${dir}</code>. </p>
-</dl>
+</dd></dl>
 <h3>GoogleTest</h3>
 <p>New in version 3.9. </p>
 <p> This module defines functions to help use the Google Test infrastructure. Two mechanisms for adding tests are provided. <i>gtest_add_tests()</i> has been around for some time, originally via <code>find_package(GTest)</code>. <i>gtest_discover_tests()</i> was introduced in CMake 3.10. </p>
@@ -3257,8 +3257,8 @@ other</pre>
 <p> More details can be found in the documentation of the respective functions. </p>
 <p> Both commands are intended to replace use of <code>add_test()</code> to register tests, and will create a separate CTest test for each Google Test test case. Note that this is in some cases less efficient, as common set-up and tear-down logic cannot be shared by multiple test cases executing in the same instance. However, it provides more fine-grained pass/fail information to CTest, which is usually considered as more beneficial. By default, the CTest test name is the same as the Google Test name (i.e. <code>suite.testcase</code>); see also <code>TEST_PREFIX</code> and <code>TEST_SUFFIX</code>.</p>
 <dl>
-<dt><code>gtest_add_tests</code></p>
-<dd>Automatically add tests with CTest by scanning source code for Google Test macros: </p>
+<dt><code>gtest_add_tests</code></dt>
+<dd>Automatically add tests with CTest by scanning source code for Google Test macros: </dd>
 <pre>gtest_add_tests(TARGET target
  [SOURCES src1...]
  [EXTRA_ARGS arg1...]
@@ -3270,22 +3270,22 @@ other</pre>
 )</pre>
 <p><code>gtest_add_tests</code> attempts to identify tests by scanning source files. Although this is generally effective, it uses only a basic regular expression match, which can be defeated by atypical test declarations, and is unable to fully &quot;split&quot; parameterized tests. Additionally, it requires that CMake be re-run to discover any newly added, removed or renamed tests (by default, this means that CMake is re-run when any test source file is changed, but see <code>SKIP_DEPENDENCY</code>). However, it has the advantage of declaring tests at CMake time, which somewhat simplifies setting additional properties on tests, and always works in a cross-compiling environment. </p>
 <p> The options are:</p>
-<dt><code>TARGET target</code></p>
-<dd>Specifies the Google Test executable, which must be a known CMake executable target. CMake will substitute the location of the built executable when running the test.</p>
-<dt><code>SOURCES src1&#8230;</code></p>
-<dd>When provided, only the listed files will be scanned for test cases. If this option is not given, the <code>SOURCES</code> property of the specified <code>target</code> will be used to obtain the list of sources.</p>
-<dt><code>EXTRA_ARGS arg1&#8230;</code></p>
-<dd>Any extra arguments to pass on the command line to each test case.</p>
-<dt><code>WORKING_DIRECTORY dir</code></p>
-<dd>Specifies the directory in which to run the discovered test cases. If this option is not provided, the current binary directory is used.</p>
-<dt><code>TEST_PREFIX prefix</code></p>
-<dd>Specifies a <code>prefix</code> to be prepended to the name of each discovered test case. This can be useful when the same source files are being used in multiple calls to <code>gtest_add_test()</code> but with different <code>EXTRA_ARGS</code>.</p>
-<dt><code>TEST_SUFFIX suffix</code></p>
-<dd>Similar to <code>TEST_PREFIX</code> except the <code>suffix</code> is appended to the name of every discovered test case. Both <code>TEST_PREFIX</code> and <code>TEST_SUFFIX</code> may be specified.</p>
-<dt><code>SKIP_DEPENDENCY</code></p>
-<dd>Normally, the function creates a dependency which will cause CMake to be re-run if any of the sources being scanned are changed. This is to ensure that the list of discovered tests is updated. If this behavior is not desired (as may be the case while actually writing the test cases), this option can be used to prevent the dependency from being added.</p>
-<dt><code>TEST_LIST outVar</code></p>
-<dd>The variable named by <code>outVar</code> will be populated in the calling scope with the list of discovered test cases. This allows the caller to do things like manipulate test properties of the discovered tests. </p>
+<dt><code>TARGET target</code></dt>
+<dd>Specifies the Google Test executable, which must be a known CMake executable target. CMake will substitute the location of the built executable when running the test.</dd>
+<dt><code>SOURCES src1&#8230;</code></dt>
+<dd>When provided, only the listed files will be scanned for test cases. If this option is not given, the <code>SOURCES</code> property of the specified <code>target</code> will be used to obtain the list of sources.</dd>
+<dt><code>EXTRA_ARGS arg1&#8230;</code></dt>
+<dd>Any extra arguments to pass on the command line to each test case.</dd>
+<dt><code>WORKING_DIRECTORY dir</code></dt>
+<dd>Specifies the directory in which to run the discovered test cases. If this option is not provided, the current binary directory is used.</dd>
+<dt><code>TEST_PREFIX prefix</code></dt>
+<dd>Specifies a <code>prefix</code> to be prepended to the name of each discovered test case. This can be useful when the same source files are being used in multiple calls to <code>gtest_add_test()</code> but with different <code>EXTRA_ARGS</code>.</dd>
+<dt><code>TEST_SUFFIX suffix</code></dt>
+<dd>Similar to <code>TEST_PREFIX</code> except the <code>suffix</code> is appended to the name of every discovered test case. Both <code>TEST_PREFIX</code> and <code>TEST_SUFFIX</code> may be specified.</dd>
+<dt><code>SKIP_DEPENDENCY</code></dt>
+<dd>Normally, the function creates a dependency which will cause CMake to be re-run if any of the sources being scanned are changed. This is to ensure that the list of discovered tests is updated. If this behavior is not desired (as may be the case while actually writing the test cases), this option can be used to prevent the dependency from being added.</dd>
+<dt><code>TEST_LIST outVar</code></dt>
+<dd>The variable named by <code>outVar</code> will be populated in the calling scope with the list of discovered test cases. This allows the caller to do things like manipulate test properties of the discovered tests. </dd>
 <p> Usage example: </p>
 <pre>include(GoogleTest)
 add_executable(FooTest FooUnitTest.cxx)
@@ -3302,18 +3302,18 @@ set_tests_properties(${noArgsTests} PROPERTIES TIMEOUT 10)
 set_tests_properties(${withArgsTests} PROPERTIES TIMEOUT 20)</pre>
 <p>For backward compatibility, the following form is also supported: </p>
 <pre>gtest_add_tests(exe args files...)</pre>
-<dt><code>exe</code></p>
-<dd>The path to the test executable or the name of a CMake target.</p>
-<dt><code>args</code></p>
-<dd>A ;-list of extra arguments to be passed to executable. The entire list must be passed as a single argument. Enclose it in quotes, or pass <code>&quot;&quot;</code> for no arguments.</p>
-<dt><code>files&#8230;</code></p>
-<dd>A list of source files to search for tests and test fixtures. Alternatively, use <code>AUTO</code> to specify that <code>exe</code> is the name of a CMake executable target whose sources should be scanned. </p>
+<dt><code>exe</code></dt>
+<dd>The path to the test executable or the name of a CMake target.</dd>
+<dt><code>args</code></dt>
+<dd>A ;-list of extra arguments to be passed to executable. The entire list must be passed as a single argument. Enclose it in quotes, or pass <code>&quot;&quot;</code> for no arguments.</dd>
+<dt><code>files&#8230;</code></dt>
+<dd>A list of source files to search for tests and test fixtures. Alternatively, use <code>AUTO</code> to specify that <code>exe</code> is the name of a CMake executable target whose sources should be scanned. </dd>
 <pre>include(GoogleTest)
 set(FooTestArgs --foo 1 --bar 2)
 add_executable(FooTest FooUnitTest.cxx)
 gtest_add_tests(FooTest &quot;${FooTestArgs}&quot; AUTO)</pre>
-<dt><code>gtest_discover_tests</code></p>
-<dd>Automatically add tests with CTest by querying the compiled test executable for available tests: </p>
+<dt><code>gtest_discover_tests</code></dt>
+<dd>Automatically add tests with CTest by querying the compiled test executable for available tests: </dd>
 <pre>gtest_discover_tests(target
  [EXTRA_ARGS arg1...]
  [WORKING_DIRECTORY dir]
@@ -3331,63 +3331,63 @@ gtest_add_tests(FooTest &quot;${FooTestArgs}&quot; AUTO)</pre>
 <p> <code>gtest_discover_tests()</code> sets up a post-build command on the test executable that generates the list of tests by parsing the output from running the test with the <code>&#8211;gtest_list_tests</code> argument. Compared to the source parsing approach of <i>gtest_add_tests()</i>, this ensures that the full list of tests, including instantiations of parameterized tests, is obtained. Since test discovery occurs at build time, it is not necessary to re-run CMake when the list of tests changes. However, it requires that <code>CROSSCOMPILING_EMULATOR</code> is properly set in order to function in a cross-compiling environment. </p>
 <p> Additionally, setting properties on tests is somewhat less convenient, since the tests are not available at CMake time. Additional test properties may be assigned to the set of tests as a whole using the <code>PROPERTIES</code> option. If more fine-grained test control is needed, custom content may be provided through an external CTest script using the <code>TEST_INCLUDE_FILES</code> directory property. The set of discovered tests is made accessible to such a script via the <code>&lt;target&gt;_TESTS</code> variable. </p>
 <p> The options are:</p>
-<dt><code>target</code></p>
-<dd>Specifies the Google Test executable, which must be a known CMake executable target. CMake will substitute the location of the built executable when running the test.</p>
-<dt><code>EXTRA_ARGS arg1&#8230;</code></p>
-<dd>Any extra arguments to pass on the command line to each test case.</p>
-<dt><code>WORKING_DIRECTORY dir</code></p>
-<dd>Specifies the directory in which to run the discovered test cases. If this option is not provided, the current binary directory is used.</p>
-<dt><code>TEST_PREFIX prefix</code></p>
-<dd>Specifies a <code>prefix</code> to be prepended to the name of each discovered test case. This can be useful when the same test executable is being used in multiple calls to <code>gtest_discover_tests()</code> but with different <code>EXTRA_ARGS</code>.</p>
-<dt><code>TEST_SUFFIX suffix</code></p>
-<dd>Similar to <code>TEST_PREFIX</code> except the <code>suffix</code> is appended to the name of every discovered test case. Both <code>TEST_PREFIX</code> and <code>TEST_SUFFIX</code> may be specified.</p>
-<dt><code>TEST_FILTER expr</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>target</code></dt>
+<dd>Specifies the Google Test executable, which must be a known CMake executable target. CMake will substitute the location of the built executable when running the test.</dd>
+<dt><code>EXTRA_ARGS arg1&#8230;</code></dt>
+<dd>Any extra arguments to pass on the command line to each test case.</dd>
+<dt><code>WORKING_DIRECTORY dir</code></dt>
+<dd>Specifies the directory in which to run the discovered test cases. If this option is not provided, the current binary directory is used.</dd>
+<dt><code>TEST_PREFIX prefix</code></dt>
+<dd>Specifies a <code>prefix</code> to be prepended to the name of each discovered test case. This can be useful when the same test executable is being used in multiple calls to <code>gtest_discover_tests()</code> but with different <code>EXTRA_ARGS</code>.</dd>
+<dt><code>TEST_SUFFIX suffix</code></dt>
+<dd>Similar to <code>TEST_PREFIX</code> except the <code>suffix</code> is appended to the name of every discovered test case. Both <code>TEST_PREFIX</code> and <code>TEST_SUFFIX</code> may be specified.</dd>
+<dt><code>TEST_FILTER expr</code></dt>
+<dd>New in version 3.22. </dd>
 <p> Filter expression to pass as a <code>&#8211;gtest_filter</code> argument during test discovery. Note that the expression is a wildcard-based format that matches against the original test names as used by gtest. For type or value-parameterized tests, these names may be different to the potentially pretty-printed test names that <code>ctest</code> uses.</p>
-<dt><code>NO_PRETTY_TYPES</code></p>
-<dd>By default, the type index of type-parameterized tests is replaced by the actual type name in the CTest test name. If this behavior is undesirable (e.g. because the type names are unwieldy), this option will suppress this behavior.</p>
-<dt><code>NO_PRETTY_VALUES</code></p>
-<dd>By default, the value index of value-parameterized tests is replaced by the actual value in the CTest test name. If this behavior is undesirable (e.g. because the value strings are unwieldy), this option will suppress this behavior.</p>
-<dt><code>PROPERTIES name1 value1&#8230;</code></p>
-<dd>Specifies additional properties to be set on all tests discovered by this invocation of <code>gtest_discover_tests()</code>.</p>
-<dt><code>TEST_LIST var</code></p>
-<dd>Make the list of tests available in the variable <code>var</code>, rather than the default <code>&lt;target&gt;_TESTS</code>. This can be useful when the same test executable is being used in multiple calls to <code>gtest_discover_tests()</code>. Note that this variable is only available in CTest.</p>
-<dt><code>DISCOVERY_TIMEOUT num</code></p>
-<dd>New in version 3.10.3. </p>
+<dt><code>NO_PRETTY_TYPES</code></dt>
+<dd>By default, the type index of type-parameterized tests is replaced by the actual type name in the CTest test name. If this behavior is undesirable (e.g. because the type names are unwieldy), this option will suppress this behavior.</dd>
+<dt><code>NO_PRETTY_VALUES</code></dt>
+<dd>By default, the value index of value-parameterized tests is replaced by the actual value in the CTest test name. If this behavior is undesirable (e.g. because the value strings are unwieldy), this option will suppress this behavior.</dd>
+<dt><code>PROPERTIES name1 value1&#8230;</code></dt>
+<dd>Specifies additional properties to be set on all tests discovered by this invocation of <code>gtest_discover_tests()</code>.</dd>
+<dt><code>TEST_LIST var</code></dt>
+<dd>Make the list of tests available in the variable <code>var</code>, rather than the default <code>&lt;target&gt;_TESTS</code>. This can be useful when the same test executable is being used in multiple calls to <code>gtest_discover_tests()</code>. Note that this variable is only available in CTest.</dd>
+<dt><code>DISCOVERY_TIMEOUT num</code></dt>
+<dd>New in version 3.10.3. </dd>
 <p> Specifies how long (in seconds) CMake will wait for the test to enumerate available tests. If the test takes longer than this, discovery (and your build) will fail. Most test executables will enumerate their tests very quickly, but under some exceptional circumstances, a test may require a longer timeout. The default is 5. See also the <code>TIMEOUT</code> option of <code>execute_process()</code>. </p>
 <p> <code>NOTE:</code> In CMake versions 3.10.1 and 3.10.2, this option was called <code>TIMEOUT</code>. This clashed with the <code>TIMEOUT</code> test property, which is one of the common properties that would be set with the <code>PROPERTIES</code> keyword, usually leading to legal but unintended behavior. The keyword was changed to <code>DISCOVERY_TIMEOUT</code> in CMake 3.10.3 to address this problem. The ambiguous behavior of the <code>TIMEOUT</code> keyword in 3.10.1 and 3.10.2 has not been preserved.</p>
-<dt><code>XML_OUTPUT_DIR dir</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>XML_OUTPUT_DIR dir</code></dt>
+<dd>New in version 3.18. </dd>
 <p> If specified, the parameter is passed along with <code>&#8211;gtest_output=xml:</code> to test executable. The actual file name is the same as the test target, including prefix and suffix. This should be used instead of <code>EXTRA_ARGS &#8211;gtest_output=xml</code> to avoid race conditions writing the XML result output when using parallel test execution.</p>
-<dt><code>DISCOVERY_MODE</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>DISCOVERY_MODE</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Provides greater control over when <code>gtest_discover_tests()</code> performs test discovery. By default, <code>POST_BUILD</code> sets up a post-build command to perform test discovery at build time. In certain scenarios, like cross-compiling, this <code>POST_BUILD</code> behavior is not desirable. By contrast, <code>PRE_TEST</code> delays test discovery until just prior to test execution. This way test discovery occurs in the target environment where the test has a better chance at finding appropriate runtime dependencies. </p>
 <p> <code>DISCOVERY_MODE</code> defaults to the value of the <code>CMAKE_GTEST_DISCOVER_TESTS_DISCOVERY_MODE</code> variable if it is not passed when calling <code>gtest_discover_tests()</code>. This provides a mechanism for globally selecting a preferred test discovery behavior without having to modify each call site.</dl>
 <h3>InstallRequiredSystemLibraries</h3>
 <p>Include this module to search for compiler-provided system runtime libraries and add install rules for them. Some optional variables may be set prior to including the module to adjust behavior:</p>
 <dl>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code></p>
-<dd>Specify additional runtime libraries that may not be detected. After inclusion any detected libraries will be appended to this.</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP</code></p>
-<dd>Set to TRUE to skip calling the <code>install(PROGRAMS)</code> command to allow the includer to specify its own install rule, using the value of <code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code> to get the list of libraries.</p>
-<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES</code></p>
-<dd>Set to TRUE to install the debug runtime libraries when available with MSVC tools.</p>
-<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES_ONLY</code></p>
-<dd>Set to TRUE to install only the debug runtime libraries with MSVC tools even if the release runtime libraries are also available.</p>
-<dt><code>CMAKE_INSTALL_UCRT_LIBRARIES</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code></dt>
+<dd>Specify additional runtime libraries that may not be detected. After inclusion any detected libraries will be appended to this.</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP</code></dt>
+<dd>Set to TRUE to skip calling the <code>install(PROGRAMS)</code> command to allow the includer to specify its own install rule, using the value of <code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS</code> to get the list of libraries.</dd>
+<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES</code></dt>
+<dd>Set to TRUE to install the debug runtime libraries when available with MSVC tools.</dd>
+<dt><code>CMAKE_INSTALL_DEBUG_LIBRARIES_ONLY</code></dt>
+<dd>Set to TRUE to install only the debug runtime libraries with MSVC tools even if the release runtime libraries are also available.</dd>
+<dt><code>CMAKE_INSTALL_UCRT_LIBRARIES</code></dt>
+<dd>New in version 3.6. </dd>
 <p> Set to TRUE to install the Windows Universal CRT libraries for app-local deployment (e.g. to Windows XP). This is meaningful only with MSVC from Visual Studio 2015 or higher. </p>
 <p> New in version 3.9: One may set a <code>CMAKE_WINDOWS_KITS_10_DIR</code> <i>environment variable</i> to an absolute path to tell CMake to look for Windows 10 SDKs in a custom location. The specified directory is expected to contain <code>Redist/ucrt/DLLs/*</code> directories. </p>
-<dt><code>CMAKE_INSTALL_MFC_LIBRARIES</code></p>
-<dd>Set to TRUE to install the MSVC MFC runtime libraries.</p>
-<dt><code>CMAKE_INSTALL_OPENMP_LIBRARIES</code></p>
-<dd>Set to TRUE to install the MSVC OpenMP runtime libraries</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION</code></p>
-<dd>Specify the <code>install(PROGRAMS)</code> command <code>DESTINATION</code> option. If not specified, the default is <code>bin</code> on Windows and <code>lib</code> elsewhere.</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS</code></p>
-<dd>Set to TRUE to disable warnings about required library files that do not exist. (For example, Visual Studio Express editions may not provide the redistributable files.)</p>
-<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_COMPONENT</code></p>
-<dd>New in version 3.3. </p>
+<dt><code>CMAKE_INSTALL_MFC_LIBRARIES</code></dt>
+<dd>Set to TRUE to install the MSVC MFC runtime libraries.</dd>
+<dt><code>CMAKE_INSTALL_OPENMP_LIBRARIES</code></dt>
+<dd>Set to TRUE to install the MSVC OpenMP runtime libraries</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION</code></dt>
+<dd>Specify the <code>install(PROGRAMS)</code> command <code>DESTINATION</code> option. If not specified, the default is <code>bin</code> on Windows and <code>lib</code> elsewhere.</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS</code></dt>
+<dd>Set to TRUE to disable warnings about required library files that do not exist. (For example, Visual Studio Express editions may not provide the redistributable files.)</dd>
+<dt><code>CMAKE_INSTALL_SYSTEM_RUNTIME_COMPONENT</code></dt>
+<dd>New in version 3.3. </dd>
 <p> Specify the <code>install(PROGRAMS)</code> command <code>COMPONENT</code> option. If not specified, no such option will be used. </p>
 <p> New in version 3.10: Support for installing Intel compiler runtimes. </p>
 </dl>
@@ -3422,10 +3422,10 @@ basename_LIBRARY_RELEASE</pre>
 <p>Deprecated since version 3.20: Supserseded by the <code>CMAKE_&lt;LANG&gt;_BYTE_ORDER</code> variable. </p>
 <p> Check if the target architecture is big endian or little endian.</p>
 <dl>
-<dt><code>test_big_endian</code></p>
+<dt><code>test_big_endian</code></dt>
 <dd>
 <pre>test_big_endian(&lt;var&gt;)</pre>
-<p>Stores in variable <code>&lt;var&gt;</code> either 1 or 0 indicating whether the target architecture is big or little endian.</dl>
+<p>Stores in variable <code>&lt;var&gt;</code> either 1 or 0 indicating whether the target architecture is big or little endian.</dd></dl>
 <h3>TestForANSIForScope</h3>
 <p>Check for ANSI for scope support </p>
 <p> Check if the compiler restricts the scope of variables declared in a for-init-statement to the loop body. </p>
@@ -3466,8 +3466,8 @@ basename_LIBRARY_RELEASE</pre>
  <i>create_javadoc</i> (&lt;VAR&gt; (PACKAGES &lt;pkg1&gt; [&lt;pkg2&gt;...] | FILES &lt;file1&gt; [&lt;file2&gt;...]) ...)</pre>
 <h3>Creating And Installing JARs</h3>
 <dl>
-<dt><code>add_jar</code></p>
-<dd>Creates a jar file containing java objects and, optionally, resources: </p>
+<dt><code>add_jar</code></dt>
+<dd>Creates a jar file containing java objects and, optionally, resources: </dd>
 <pre>add_jar(&lt;target_name&gt;
  [SOURCES] &lt;source1&gt; [&lt;source2&gt;...] [&lt;resource1&gt;...]
  [RESOURCES NAMESPACE &lt;ns1&gt; &lt;resource1&gt;... [NAMESPACE &lt;nsX&gt; &lt;resourceX&gt;...]... ]
@@ -3481,33 +3481,33 @@ basename_LIBRARY_RELEASE</pre>
  [DESTINATION (&lt;dir&gt;|INSTALL &lt;dir&gt; [BUILD &lt;dir&gt;])]]
  )</pre>
 <p>This command creates a <code>&lt;target_name&gt;.jar</code>. It compiles the given <code>&lt;source&gt;</code> files and adds the given <code>&lt;resource&gt;</code> files to the jar file. Source files can be java files or listing files (prefixed by <code>@</code>). If only resource files are given then just a jar file is created.</p>
-<dt><code>SOURCES</code></p>
-<dd>Compiles the specified source files and adds the result in the jar file. </p>
+<dt><code>SOURCES</code></dt>
+<dd>Compiles the specified source files and adds the result in the jar file. </dd>
 <p> New in version 3.4: Support for response files, prefixed by <code>@</code>. </p>
-<dt><code>RESOURCES</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>RESOURCES</code></dt>
+<dd>New in version 3.21. </dd>
 <p> Adds the named <code>&lt;resource&gt;</code> files to the jar by stripping the source file path and placing the file beneath <code>&lt;ns&gt;</code> within the jar. </p>
 <p> For example: </p>
 <pre>RESOURCES NAMESPACE &quot;/com/my/namespace&quot; &quot;a/path/to/resource.txt&quot;</pre>
 <p>results in a resource accessible via <code>/com/my/namespace/resource.txt</code> within the jar. </p>
 <p> Resources may be added without adjusting the namespace by adding them to the list of <code>SOURCES</code> (original behavior), in this case, resource paths must be relative to <code>CMAKE_CURRENT_SOURCE_DIR</code>. Adding resources without using the <code>RESOURCES</code> parameter in out of source builds will almost certainly result in confusion. </p>
 <p> <code>NOTE:</code> Adding resources via the <code>SOURCES</code> parameter relies upon a hard-coded list of file extensions which are tested to determine whether they compile (e.g. File.java). <code>SOURCES</code> files which match the extensions are compiled. Files which do not match are treated as resources. To include uncompiled resources matching those file extensions use the <code>RESOURCES</code> parameter.</p>
-<dt><code>INCLUDE_JARS</code></p>
-<dd>The list of jars are added to the classpath when compiling the java sources and also to the dependencies of the target. <code>INCLUDE_JARS</code> also accepts other target names created by <code>add_jar()</code>. For backwards compatibility, jar files listed as sources are ignored (as they have been since the first version of this module).</p>
-<dt><code>ENTRY_POINT</code></p>
-<dd>Defines an entry point in the jar file.</p>
-<dt><code>VERSION</code></p>
-<dd>Adds a version to the target output name. </p>
+<dt><code>INCLUDE_JARS</code></dt>
+<dd>The list of jars are added to the classpath when compiling the java sources and also to the dependencies of the target. <code>INCLUDE_JARS</code> also accepts other target names created by <code>add_jar()</code>. For backwards compatibility, jar files listed as sources are ignored (as they have been since the first version of this module).</dd>
+<dt><code>ENTRY_POINT</code></dt>
+<dd>Defines an entry point in the jar file.</dd>
+<dt><code>VERSION</code></dt>
+<dd>Adds a version to the target output name. </dd>
 <p> The following example will create a jar file with the name <code>shibboleet-1.2.0.jar</code> and will create a symlink <code>shibboleet.jar</code> pointing to the jar with the version information. </p>
 <pre>add_jar(shibboleet shibbotleet.java VERSION 1.2.0)</pre>
-<dt><code>MANIFEST</code></p>
-<dd>Defines a custom manifest for the jar.</p>
-<dt><code>OUTPUT_NAME</code></p>
-<dd>Specify a different output name for the target.</p>
-<dt><code>OUTPUT_DIR</code></p>
-<dd>Sets the directory where the jar file will be generated. If not specified, <code>CMAKE_CURRENT_BINARY_DIR</code> is used as the output directory.</p>
-<dt><code>GENERATE_NATIVE_HEADERS</code></p>
-<dd>New in version 3.11. </p>
+<dt><code>MANIFEST</code></dt>
+<dd>Defines a custom manifest for the jar.</dd>
+<dt><code>OUTPUT_NAME</code></dt>
+<dd>Specify a different output name for the target.</dd>
+<dt><code>OUTPUT_DIR</code></dt>
+<dd>Sets the directory where the jar file will be generated. If not specified, <code>CMAKE_CURRENT_BINARY_DIR</code> is used as the output directory.</dd>
+<dt><code>GENERATE_NATIVE_HEADERS</code></dt>
+<dd>New in version 3.11. </dd>
 <p> Generates native header files for methods declared as native. These files provide the connective glue that allow your Java and C code to interact. An INTERFACE target will be created for an easy usage of generated files. Sub-option <code>DESTINATION</code> can be used to specify the output directory for generated header files. </p>
 <p> This option requires, at least, version 1.8 of the JDK. </p>
 <p> For an optimum usage of this option, it is recommended to include module JNI before any call to <code>add_jar()</code>. The produced target for native headers can then be used to compile C/C++ sources with the <code>target_link_libraries()</code> command. </p>
@@ -3524,53 +3524,53 @@ install(DIRECTORY &quot;$&lt;TARGET_PROPERTY:foo-native,NATIVE_HEADERS_DIRECTORY
  DESTINATION include)
 install(EXPORT native DESTINATION /to/export NAMESPACE foo)</pre>
 <p>Some variables can be set to customize the behavior of <code>add_jar()</code> as well as the java compiler:</p>
-<dt><code>CMAKE_JAVA_COMPILE_FLAGS</code></p>
-<dd>Specify additional flags to java compiler.</p>
-<dt><code>CMAKE_JAVA_INCLUDE_PATH</code></p>
-<dd>Specify additional paths to the class path.</p>
-<dt><code>CMAKE_JNI_TARGET</code></p>
-<dd>If the target is a JNI library, sets this boolean variable to <code>TRUE</code> to enable creation of a JNI symbolic link (see also <i>install_jni_symlink()</i>).</p>
-<dt><code>CMAKE_JAR_CLASSES_PREFIX</code></p>
-<dd>If multiple jars should be produced from the same java source filetree, to prevent the accumulation of duplicate class files in subsequent jars, set/reset <code>CMAKE_JAR_CLASSES_PREFIX</code> prior to calling the <code>add_jar()</code>: </p>
+<dt><code>CMAKE_JAVA_COMPILE_FLAGS</code></dt>
+<dd>Specify additional flags to java compiler.</dd>
+<dt><code>CMAKE_JAVA_INCLUDE_PATH</code></dt>
+<dd>Specify additional paths to the class path.</dd>
+<dt><code>CMAKE_JNI_TARGET</code></dt>
+<dd>If the target is a JNI library, sets this boolean variable to <code>TRUE</code> to enable creation of a JNI symbolic link (see also <i>install_jni_symlink()</i>).</dd>
+<dt><code>CMAKE_JAR_CLASSES_PREFIX</code></dt>
+<dd>If multiple jars should be produced from the same java source filetree, to prevent the accumulation of duplicate class files in subsequent jars, set/reset <code>CMAKE_JAR_CLASSES_PREFIX</code> prior to calling the <code>add_jar()</code>: </dd>
 <pre>set(CMAKE_JAR_CLASSES_PREFIX com/redhat/foo)
 add_jar(foo foo.java)
 set(CMAKE_JAR_CLASSES_PREFIX com/redhat/bar)
 add_jar(bar bar.java)</pre>
 <p>The <code>add_jar()</code> function sets the following target properties on <code>&lt;target_name&gt;</code>:</p>
-<dt><code>INSTALL_FILES</code></p>
-<dd>The files which should be installed. This is used by <i>install_jar()</i>.</p>
-<dt><code>JNI_SYMLINK</code></p>
-<dd>The JNI symlink which should be installed. This is used by <i>install_jni_symlink()</i>.</p>
-<dt><code>JAR_FILE</code></p>
-<dd>The location of the jar file so that you can include it.</p>
-<dt><code>CLASSDIR</code></p>
-<dd>The directory where the class files can be found. For example to use them with <code>javah</code>.</p>
-<dt><code>NATIVE_HEADERS_DIRECTORY</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>INSTALL_FILES</code></dt>
+<dd>The files which should be installed. This is used by <i>install_jar()</i>.</dd>
+<dt><code>JNI_SYMLINK</code></dt>
+<dd>The JNI symlink which should be installed. This is used by <i>install_jni_symlink()</i>.</dd>
+<dt><code>JAR_FILE</code></dt>
+<dd>The location of the jar file so that you can include it.</dd>
+<dt><code>CLASSDIR</code></dt>
+<dd>The directory where the class files can be found. For example to use them with <code>javah</code>.</dd>
+<dt><code>NATIVE_HEADERS_DIRECTORY</code></dt>
+<dd>New in version 3.20. </dd>
 <p> The directory where native headers are generated. Defined when option <code>GENERATE_NATIVE_HEADERS</code> is specified.</p>
-<dt><code>install_jar</code></p>
-<dd>This command installs the jar file to the given destination: </p>
+<dt><code>install_jar</code></dt>
+<dd>This command installs the jar file to the given destination: </dd>
 <pre>install_jar(&lt;target_name&gt; &lt;destination&gt;)
 install_jar(&lt;target_name&gt; DESTINATION &lt;destination&gt; [COMPONENT &lt;component&gt;])</pre>
 <p>This command installs the <code>&lt;target_name&gt;</code> file to the given <code>&lt;destination&gt;</code>. It should be called in the same scope as <i>add_jar()</i> or it will fail. </p>
 <p> New in version 3.4: The second signature with <code>DESTINATION</code> and <code>COMPONENT</code> options. </p>
-<dt><code>DESTINATION</code></p>
-<dd>Specify the directory on disk to which a file will be installed.</p>
-<dt><code>COMPONENT</code></p>
-<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;. </p>
+<dt><code>DESTINATION</code></dt>
+<dd>Specify the directory on disk to which a file will be installed.</dd>
+<dt><code>COMPONENT</code></dt>
+<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;. </dd>
 <p> The <code>install_jar()</code> command sets the following target properties on <code>&lt;target_name&gt;</code>:</p>
-<dt><code>INSTALL_DESTINATION</code></p>
-<dd>Holds the <code>&lt;destination&gt;</code> as described above, and is used by <i>install_jar_exports()</i>.</p>
-<dt><code>install_jni_symlink</code></p>
-<dd>Installs JNI symlinks for target generated by <i>add_jar()</i>: </p>
+<dt><code>INSTALL_DESTINATION</code></dt>
+<dd>Holds the <code>&lt;destination&gt;</code> as described above, and is used by <i>install_jar_exports()</i>.</dd>
+<dt><code>install_jni_symlink</code></dt>
+<dd>Installs JNI symlinks for target generated by <i>add_jar()</i>: </dd>
 <pre>install_jni_symlink(&lt;target_name&gt; &lt;destination&gt;)
 install_jni_symlink(&lt;target_name&gt; DESTINATION &lt;destination&gt; [COMPONENT &lt;component&gt;])</pre>
 <p>This command installs the <code>&lt;target_name&gt;</code> JNI symlinks to the given <code>&lt;destination&gt;</code>. It should be called in the same scope as <i>add_jar()</i> or it will fail. </p>
 <p> New in version 3.4: The second signature with <code>DESTINATION</code> and <code>COMPONENT</code> options. </p>
-<dt><code>DESTINATION</code></p>
-<dd>Specify the directory on disk to which a file will be installed.</p>
-<dt><code>COMPONENT</code></p>
-<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;. </p>
+<dt><code>DESTINATION</code></dt>
+<dd>Specify the directory on disk to which a file will be installed.</dd>
+<dt><code>COMPONENT</code></dt>
+<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;. </dd>
 <p> Utilize the following commands to create a JNI symbolic link: </p>
 <pre>set(CMAKE_JNI_TARGET TRUE)
 add_jar(shibboleet shibbotleet.java VERSION 1.2.0)
@@ -3579,8 +3579,8 @@ install_jni_symlink(shibboleet ${JAVA_LIB_INSTALL_DIR})</pre>
 </dl>
 <h3>Header Generation</h3>
 <dl>
-<dt><code>create_javah</code></p>
-<dd>New in version 3.4. </p>
+<dt><code>create_javah</code></dt>
+<dd>New in version 3.4. </dd>
 <p> Generates C header files for java classes: </p>
 <pre>create_javah(TARGET &lt;target&gt; | GENERATED_FILES &lt;VAR&gt;
  CLASSES &lt;class&gt;...
@@ -3601,55 +3601,55 @@ install_jni_symlink(shibboleet ${JAVA_LIB_INSTALL_DIR})</pre>
  CLASSPATH hello.jar
 )</pre>
 <p>Both signatures share same options.</p>
-<dt><code>CLASSES</code></p>
-<dd>Specifies Java classes used to generate headers.</p>
-<dt><code>CLASSPATH</code></p>
-<dd>Specifies various paths to look up classes. Here <code>.class</code> files, jar files or targets created by command add_jar can be used.</p>
-<dt><code>DEPENDS</code></p>
-<dd>Targets on which the javah target depends.</p>
-<dt><code>OUTPUT_NAME</code></p>
-<dd>Concatenates the resulting header files for all the classes listed by option <code>CLASSES</code> into <code>&lt;path&gt;</code>. Same behavior as option <code>-o</code> of <code>javah</code> tool.</p>
-<dt><code>OUTPUT_DIR</code></p>
-<dd>Sets the directory where the header files will be generated. Same behavior as option <code>-d</code> of <code>javah</code> tool. If not specified, <code>CMAKE_CURRENT_BINARY_DIR</code> is used as the output directory.</dl>
+<dt><code>CLASSES</code></dt>
+<dd>Specifies Java classes used to generate headers.</dd>
+<dt><code>CLASSPATH</code></dt>
+<dd>Specifies various paths to look up classes. Here <code>.class</code> files, jar files or targets created by command add_jar can be used.</dd>
+<dt><code>DEPENDS</code></dt>
+<dd>Targets on which the javah target depends.</dd>
+<dt><code>OUTPUT_NAME</code></dt>
+<dd>Concatenates the resulting header files for all the classes listed by option <code>CLASSES</code> into <code>&lt;path&gt;</code>. Same behavior as option <code>-o</code> of <code>javah</code> tool.</dd>
+<dt><code>OUTPUT_DIR</code></dt>
+<dd>Sets the directory where the header files will be generated. Same behavior as option <code>-d</code> of <code>javah</code> tool. If not specified, <code>CMAKE_CURRENT_BINARY_DIR</code> is used as the output directory.</dd></dl>
 <h3>Exporting JAR Targets</h3>
 <dl>
-<dt><code>install_jar_exports</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>install_jar_exports</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Installs a target export file: </p>
 <pre>install_jar_exports(TARGETS &lt;jars&gt;...
  [NAMESPACE &lt;namespace&gt;]
  FILE &lt;filename&gt;
  DESTINATION &lt;destination&gt; [COMPONENT &lt;component&gt;])</pre>
 <p>This command installs a target export file <code>&lt;filename&gt;</code> for the named jar targets to the given <code>&lt;destination&gt;</code> directory. Its function is similar to that of <code>install(EXPORT)</code>.</p>
-<dt><code>TARGETS</code></p>
-<dd>List of targets created by <i>add_jar()</i> command.</p>
-<dt><code>NAMESPACE</code></p>
-<dd>New in version 3.9. </p>
+<dt><code>TARGETS</code></dt>
+<dd>List of targets created by <i>add_jar()</i> command.</dd>
+<dt><code>NAMESPACE</code></dt>
+<dd>New in version 3.9. </dd>
 <p> The <code>&lt;namespace&gt;</code> value will be prepend to the target names as they are written to the import file.</p>
-<dt><code>FILE</code></p>
-<dd>Specify name of the export file.</p>
-<dt><code>DESTINATION</code></p>
-<dd>Specify the directory on disk to which a file will be installed.</p>
-<dt><code>COMPONENT</code></p>
-<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;.</p>
-<dt><code>export_jars</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>FILE</code></dt>
+<dd>Specify name of the export file.</dd>
+<dt><code>DESTINATION</code></dt>
+<dd>Specify the directory on disk to which a file will be installed.</dd>
+<dt><code>COMPONENT</code></dt>
+<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;.</dd>
+<dt><code>export_jars</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Writes a target export file: </p>
 <pre>export_jars(TARGETS &lt;jars&gt;...
  [NAMESPACE &lt;namespace&gt;]
  FILE &lt;filename&gt;)</pre>
 <p>This command writes a target export file <code>&lt;filename&gt;</code> for the named <code>&lt;jars&gt;</code> targets. Its function is similar to that of <code>export()</code>.</p>
-<dt><code>TARGETS</code></p>
-<dd>List of targets created by <i>add_jar()</i> command.</p>
-<dt><code>NAMESPACE</code></p>
-<dd>New in version 3.9. </p>
+<dt><code>TARGETS</code></dt>
+<dd>List of targets created by <i>add_jar()</i> command.</dd>
+<dt><code>NAMESPACE</code></dt>
+<dd>New in version 3.9. </dd>
 <p> The <code>&lt;namespace&gt;</code> value will be prepend to the target names as they are written to the import file.</p>
-<dt><code>FILE</code></p>
-<dd>Specify name of the export file.</dl>
+<dt><code>FILE</code></dt>
+<dd>Specify name of the export file.</dd></dl>
 <h3>Finding JARs</h3>
 <dl>
-<dt><code>find_jar</code></p>
-<dd>Finds the specified jar file: </p>
+<dt><code>find_jar</code></dt>
+<dd>Finds the specified jar file: </dd>
 <pre>find_jar(&lt;VAR&gt;
  &lt;name&gt; | NAMES &lt;name1&gt; [&lt;name2&gt;...]
  [PATHS &lt;path1&gt; [&lt;path2&gt;... ENV &lt;var&gt;]]
@@ -3657,18 +3657,18 @@ install_jni_symlink(shibboleet ${JAVA_LIB_INSTALL_DIR})</pre>
  [DOC &quot;cache documentation string&quot;]
  )</pre>
 <p>This command is used to find a full path to the named jar. A cache entry named by <code>&lt;VAR&gt;</code> is created to store the result of this command. If the full path to a jar is found the result is stored in the variable and the search will not repeated unless the variable is cleared. If nothing is found, the result will be <code>&lt;VAR&gt;-NOTFOUND</code>, and the search will be attempted again next time <code>find_jar()</code> is invoked with the same variable.</p>
-<dt><code>NAMES</code></p>
-<dd>Specify one or more possible names for the jar file.</p>
-<dt><code>PATHS</code></p>
-<dd>Specify directories to search in addition to the default locations. The <code>ENV</code> var sub-option reads paths from a system environment variable.</p>
-<dt><code>VERSIONS</code></p>
-<dd>Specify jar versions.</p>
-<dt><code>DOC</code></p>
-<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry.</dl>
+<dt><code>NAMES</code></dt>
+<dd>Specify one or more possible names for the jar file.</dd>
+<dt><code>PATHS</code></dt>
+<dd>Specify directories to search in addition to the default locations. The <code>ENV</code> var sub-option reads paths from a system environment variable.</dd>
+<dt><code>VERSIONS</code></dt>
+<dd>Specify jar versions.</dd>
+<dt><code>DOC</code></dt>
+<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry.</dd></dl>
 <h3>Creating Java Documentation</h3>
 <dl>
-<dt><code>create_javadoc</code></p>
-<dd>Creates java documentation based on files and packages: </p>
+<dt><code>create_javadoc</code></dt>
+<dd>Creates java documentation based on files and packages: </dd>
 <pre>create_javadoc(&lt;VAR&gt;
  (PACKAGES &lt;pkg1&gt; [&lt;pkg2&gt;...] | FILES &lt;file1&gt; [&lt;file2&gt;...])
  [SOURCEPATH &lt;sourcepath&gt;]
@@ -3703,32 +3703,32 @@ install_jni_symlink(shibboleet ${JAVA_LIB_INSTALL_DIR})</pre>
  VERSION TRUE
  )</pre>
 <p>Both signatures share most of the options. For more details please read the javadoc manpage.</p>
-<dt><code>PACKAGES</code></p>
-<dd>Specify java packages.</p>
-<dt><code>FILES</code></p>
-<dd>Specify java source files. If relative paths are specified, they are relative to <code>CMAKE_CURRENT_SOURCE_DIR</code>.</p>
-<dt><code>SOURCEPATH</code></p>
-<dd>Specify the directory where to look for packages. By default, <code>CMAKE_CURRENT_SOURCE_DIR</code> directory is used.</p>
-<dt><code>CLASSPATH</code></p>
-<dd>Specify where to find user class files. Same behavior as option <code>-classpath</code> of <code>javadoc</code> tool.</p>
-<dt><code>INSTALLPATH</code></p>
-<dd>Specify where to install the java documentation. If you specified, the documentation will be installed to <code>${CMAKE_INSTALL_PREFIX}/share/javadoc/&lt;VAR&gt;</code>.</p>
-<dt><code>DOCTITLE</code></p>
-<dd>Specify the title to place near the top of the overview summary file. Same behavior as option <code>-doctitle</code> of <code>javadoc</code> tool.</p>
-<dt><code>WINDOWTITLE</code></p>
-<dd>Specify the title to be placed in the HTML <code>&lt;title&gt;</code> tag. Same behavior as option <code>-windowtitle</code> of <code>javadoc</code> tool.</p>
-<dt><code>AUTHOR</code></p>
-<dd>When value <code>TRUE</code> is specified, includes the <code>@author</code> text in the generated docs. Same behavior as option <code>-author</code> of <code>javadoc</code> tool.</p>
-<dt><code>USE</code></p>
-<dd>When value <code>TRUE</code> is specified, creates class and package usage pages. Includes one Use page for each documented class and package. Same behavior as option <code>-use</code> of <code>javadoc</code> tool.</p>
-<dt><code>VERSION</code></p>
-<dd>When value <code>TRUE</code> is specified, includes the version text in the generated docs. Same behavior as option <code>-version</code> of <code>javadoc</code> tool.</dl>
+<dt><code>PACKAGES</code></dt>
+<dd>Specify java packages.</dd>
+<dt><code>FILES</code></dt>
+<dd>Specify java source files. If relative paths are specified, they are relative to <code>CMAKE_CURRENT_SOURCE_DIR</code>.</dd>
+<dt><code>SOURCEPATH</code></dt>
+<dd>Specify the directory where to look for packages. By default, <code>CMAKE_CURRENT_SOURCE_DIR</code> directory is used.</dd>
+<dt><code>CLASSPATH</code></dt>
+<dd>Specify where to find user class files. Same behavior as option <code>-classpath</code> of <code>javadoc</code> tool.</dd>
+<dt><code>INSTALLPATH</code></dt>
+<dd>Specify where to install the java documentation. If you specified, the documentation will be installed to <code>${CMAKE_INSTALL_PREFIX}/share/javadoc/&lt;VAR&gt;</code>.</dd>
+<dt><code>DOCTITLE</code></dt>
+<dd>Specify the title to place near the top of the overview summary file. Same behavior as option <code>-doctitle</code> of <code>javadoc</code> tool.</dd>
+<dt><code>WINDOWTITLE</code></dt>
+<dd>Specify the title to be placed in the HTML <code>&lt;title&gt;</code> tag. Same behavior as option <code>-windowtitle</code> of <code>javadoc</code> tool.</dd>
+<dt><code>AUTHOR</code></dt>
+<dd>When value <code>TRUE</code> is specified, includes the <code>@author</code> text in the generated docs. Same behavior as option <code>-author</code> of <code>javadoc</code> tool.</dd>
+<dt><code>USE</code></dt>
+<dd>When value <code>TRUE</code> is specified, creates class and package usage pages. Includes one Use page for each documented class and package. Same behavior as option <code>-use</code> of <code>javadoc</code> tool.</dd>
+<dt><code>VERSION</code></dt>
+<dd>When value <code>TRUE</code> is specified, includes the version text in the generated docs. Same behavior as option <code>-version</code> of <code>javadoc</code> tool.</dd></dl>
 <h3>UseSWIG</h3>
 <p>This file provides support for <code>SWIG</code>. It is assumed that <code>FindSWIG</code> module has already been loaded. </p>
 <p> Defines the following command for use with <code>SWIG</code>:</p>
 <dl>
-<dt><code>swig_add_library</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>swig_add_library</code></dt>
+<dd>New in version 3.8. </dd>
 <p> Define swig module with given name and specified language: </p>
 <pre>swig_add_library(&lt;name&gt;
  [TYPE &lt;SHARED|MODULE|STATIC|USE_BUILD_SHARED_LIBS&gt;]
@@ -3744,122 +3744,122 @@ install_jni_symlink(shibboleet ${JAVA_LIB_INSTALL_DIR})</pre>
 <p> Changed in version 3.21: Generated library use standard naming conventions for <code>CSharp</code> language when policy <code>CMP0122</code> is set to <code>NEW</code>. Otherwise, the legacy behavior is applied. </p>
 <p> <code>NOTE:</code> For multi-config generators, this module does not support configuration-specific files generated by <code>SWIG</code>. All build configurations must result in the same generated source file. </p>
 <p> <code>NOTE:</code> For Makefile Generators, if, for some sources, the <code>USE_SWIG_DEPENDENCIES</code> property is <code>FALSE</code>, <code>swig_add_library</code> does not track file dependencies, so depending on the <code>&lt;name&gt;_swig_compilation</code> custom target is required for targets which require the <code>swig</code>-generated files to exist. Other generators may depend on the source files that would be generated by SWIG.</p>
-<dt><code>TYPE</code></p>
-<dd><code>SHARED</code>, <code>MODULE</code> and <code>STATIC</code> have the same semantic as for the <code>add_library()</code> command. If <code>USE_BUILD_SHARED_LIBS</code> is specified, the library type will be <code>STATIC</code> or <code>SHARED</code> based on whether the current value of the <code>BUILD_SHARED_LIBS</code> variable is <code>ON</code>. If no type is specified, <code>MODULE</code> will be used.</p>
-<dt><code>LANGUAGE</code></p>
-<dd>Specify the target language. </p>
+<dt><code>TYPE</code></dt>
+<dd><code>SHARED</code>, <code>MODULE</code> and <code>STATIC</code> have the same semantic as for the <code>add_library()</code> command. If <code>USE_BUILD_SHARED_LIBS</code> is specified, the library type will be <code>STATIC</code> or <code>SHARED</code> based on whether the current value of the <code>BUILD_SHARED_LIBS</code> variable is <code>ON</code>. If no type is specified, <code>MODULE</code> will be used.</dd>
+<dt><code>LANGUAGE</code></dt>
+<dd>Specify the target language. </dd>
 <p> New in version 3.1: Go and Lua language support. </p>
 <p> New in version 3.2: R language support. </p>
 <p> New in version 3.18: Fortran language support. </p>
-<dt><code>NO_PROXY</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>NO_PROXY</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Prevent the generation of the wrapper layer (swig <code>-noproxy</code> option).</p>
-<dt><code>OUTPUT_DIR</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>OUTPUT_DIR</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Specify where to write the language specific files (swig <code>-outdir</code> option). If not given, the <code>CMAKE_SWIG_OUTDIR</code> variable will be used. If neither is specified, the default depends on the value of the <code>UseSWIG_MODULE_VERSION</code> variable as follows:</p>
-<dt>&bull;</p>
-<dd>If <code>UseSWIG_MODULE_VERSION</code> is 1 or is undefined, output is written to the <code>CMAKE_CURRENT_BINARY_DIR</code> directory.</p>
-<dt>&bull;</p>
-<dd>If <code>UseSWIG_MODULE_VERSION</code> is 2, a dedicated directory will be used. The path of this directory can be retrieved from the <code>SWIG_SUPPORT_FILES_DIRECTORY</code> target property.</p>
-<dt><code>OUTFILE_DIR</code></p>
-<dd>New in version 3.12. </p>
+<dt>&bull;</dt>
+<dd>If <code>UseSWIG_MODULE_VERSION</code> is 1 or is undefined, output is written to the <code>CMAKE_CURRENT_BINARY_DIR</code> directory.</dd>
+<dt>&bull;</dt>
+<dd>If <code>UseSWIG_MODULE_VERSION</code> is 2, a dedicated directory will be used. The path of this directory can be retrieved from the <code>SWIG_SUPPORT_FILES_DIRECTORY</code> target property.</dd>
+<dt><code>OUTFILE_DIR</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Specify an output directory name where the generated source file will be placed (swig <code>-o</code> option). If not specified, the <code>SWIG_OUTFILE_DIR</code> variable will be used. If neither is specified, <code>OUTPUT_DIR</code> or <code>CMAKE_SWIG_OUTDIR</code> is used instead.</p>
-<dt><code>SOURCES</code></p>
-<dd>List of sources for the library. Files with extension <code>.i</code> will be identified as sources for the <code>SWIG</code> tool. Other files will be handled in the standard way. </p>
+<dt><code>SOURCES</code></dt>
+<dd>List of sources for the library. Files with extension <code>.i</code> will be identified as sources for the <code>SWIG</code> tool. Other files will be handled in the standard way. </dd>
 <p> New in version 3.14: This behavior can be overridden by specifying the variable <code>SWIG_SOURCE_FILE_EXTENSIONS</code>. </p>
 <p> <code>NOTE:</code> If <code>UseSWIG_MODULE_VERSION</code> is set to 2, it is <code>strongly</code> recommended to use a dedicated directory unique to the target when either the <code>OUTPUT_DIR</code> option or the <code>CMAKE_SWIG_OUTDIR</code> variable are specified. The output directory contents are erased as part of the target build, so to prevent interference between targets or losing other important files, each target should have its own dedicated output directory.</p>
-<dt><code>swig_link_libraries</code></p>
-<dd>Link libraries to swig module: </p>
+<dt><code>swig_link_libraries</code></dt>
+<dd>Link libraries to swig module: </dd>
 <pre>swig_link_libraries(&lt;name&gt; &lt;item&gt;...)</pre>
 <p>This command has same capabilities as <code>target_link_libraries()</code> command. </p>
 <p> <code>NOTE:</code> If variable <code>UseSWIG_TARGET_NAME_PREFERENCE</code> is set to <code>STANDARD</code>, this command is deprecated and <code>target_link_libraries()</code> command must be used instead. </p>
 <p> Source file properties on module files <code>must</code> be set before the invocation of the <code>swig_add_library</code> command to specify special behavior of SWIG and ensure generated files will receive the required settings.</p>
-<dt><code>CPLUSPLUS</code></p>
-<dd>Call SWIG in c++ mode. For example: </p>
+<dt><code>CPLUSPLUS</code></dt>
+<dd>Call SWIG in c++ mode. For example: </dd>
 <pre>set_property(SOURCE mymod.i PROPERTY CPLUSPLUS ON)
 swig_add_library(mymod LANGUAGE python SOURCES mymod.i)</pre>
-<dt><code>SWIG_FLAGS</code></p>
-<dd>Deprecated since version 3.12: Replaced with the fine-grained properties that follow. </p>
+<dt><code>SWIG_FLAGS</code></dt>
+<dd>Deprecated since version 3.12: Replaced with the fine-grained properties that follow. </dd>
 <p> Pass custom flags to the SWIG executable.</p>
-<dt><code>INCLUDE_DIRECTORIES</code>, <code>COMPILE_DEFINITIONS</code> and <code>COMPILE_OPTIONS</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>INCLUDE_DIRECTORIES</code>, <code>COMPILE_DEFINITIONS</code> and <code>COMPILE_OPTIONS</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Add custom flags to SWIG compiler and have same semantic as properties <code>INCLUDE_DIRECTORIES</code>, <code>COMPILE_DEFINITIONS</code> and <code>COMPILE_OPTIONS</code>.</p>
-<dt><code>USE_TARGET_INCLUDE_DIRECTORIES</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>USE_TARGET_INCLUDE_DIRECTORIES</code></dt>
+<dd>New in version 3.13. </dd>
 <p> If set to <code>TRUE</code>, contents of target property <code>INCLUDE_DIRECTORIES</code> will be forwarded to <code>SWIG</code> compiler. If set to <code>FALSE</code> target property <code>INCLUDE_DIRECTORIES</code> will be ignored. If not set, target property <code>SWIG_USE_TARGET_INCLUDE_DIRECTORIES</code> will be considered.</p>
-<dt><code>GENERATED_INCLUDE_DIRECTORIES</code>, <code>GENERATED_COMPILE_DEFINITIONS</code> and <code>GENERATED_COMPILE_OPTIONS</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>GENERATED_INCLUDE_DIRECTORIES</code>, <code>GENERATED_COMPILE_DEFINITIONS</code> and <code>GENERATED_COMPILE_OPTIONS</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Add custom flags to the C/C++ generated source. They will fill, respectively, properties <code>INCLUDE_DIRECTORIES</code>, <code>COMPILE_DEFINITIONS</code> and <code>COMPILE_OPTIONS</code> of generated C/C++ file.</p>
-<dt><code>DEPENDS</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>DEPENDS</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Specify additional dependencies to the source file.</p>
-<dt><code>USE_SWIG_DEPENDENCIES</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>USE_SWIG_DEPENDENCIES</code></dt>
+<dd>New in version 3.20. </dd>
 <p> If set to <code>TRUE</code>, implicit dependencies are generated by the <code>swig</code> tool itself. This property is only meaningful for Makefile, Ninja, <code>Xcode</code>, and Visual Studio (<code>Visual Studio 11 2012</code> and above) generators. Default value is <code>FALSE</code>. </p>
 <p> New in version 3.21: Added the support of <code>Xcode</code> generator. </p>
 <p> New in version 3.22: Added the support of Visual Studio Generators. </p>
-<dt><code>SWIG_MODULE_NAME</code></p>
-<dd>Specify the actual import name of the module in the target language. This is required if it cannot be scanned automatically from source or different from the module file basename. For example: </p>
+<dt><code>SWIG_MODULE_NAME</code></dt>
+<dd>Specify the actual import name of the module in the target language. This is required if it cannot be scanned automatically from source or different from the module file basename. For example: </dd>
 <pre>set_property(SOURCE mymod.i PROPERTY SWIG_MODULE_NAME mymod_realname)</pre>
 <p>Changed in version 3.14: If policy <code>CMP0086</code> is set to <code>NEW</code>, <code>-module &lt;module_name&gt;</code> is passed to <code>SWIG</code> compiler. </p>
-<dt><code>OUTPUT_DIR</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>OUTPUT_DIR</code></dt>
+<dd>New in version 3.19. </dd>
 <p> Specify where to write the language specific files (swig <code>-outdir</code> option) for the considered source file. If not specified, the other ways to define the output directory applies (see <code>OUTPUT_DIR</code> option of <code>swig_add_library()</code> command).</p>
-<dt><code>OUTFILE_DIR</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>OUTFILE_DIR</code></dt>
+<dd>New in version 3.19. </dd>
 <p> Specify an output directory where the generated source file will be placed (swig <code>-o</code> option) for the considered source file. If not specified, <code>OUTPUT_DIR</code> source property will be used. If neither are specified, the other ways to define output file directory applies (see <code>OUTFILE_DIR</code> option of <code>swig_add_library()</code> command). </p>
 <p> Target library properties can be set to apply same configuration to all SWIG input files.</p>
-<dt><code>SWIG_INCLUDE_DIRECTORIES</code>, <code>SWIG_COMPILE_DEFINITIONS</code> and <code>SWIG_COMPILE_OPTIONS</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>SWIG_INCLUDE_DIRECTORIES</code>, <code>SWIG_COMPILE_DEFINITIONS</code> and <code>SWIG_COMPILE_OPTIONS</code></dt>
+<dd>New in version 3.12. </dd>
 <p> These properties will be applied to all SWIG input files and have same semantic as target properties <code>INCLUDE_DIRECTORIES</code>, <code>COMPILE_DEFINITIONS</code> and <code>COMPILE_OPTIONS</code>. </p>
 <pre>set (UseSWIG_TARGET_NAME_PREFERENCE STANDARD)
 swig_add_library(mymod LANGUAGE python SOURCES mymod.i)
 set_property(TARGET mymod PROPERTY SWIG_COMPILE_DEFINITIONS MY_DEF1 MY_DEF2)
 set_property(TARGET mymod PROPERTY SWIG_COMPILE_OPTIONS -bla -blb)</pre>
-<dt><code>SWIG_USE_TARGET_INCLUDE_DIRECTORIES</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>SWIG_USE_TARGET_INCLUDE_DIRECTORIES</code></dt>
+<dd>New in version 3.13. </dd>
 <p> If set to <code>TRUE</code>, contents of target property <code>INCLUDE_DIRECTORIES</code> will be forwarded to <code>SWIG</code> compiler. If set to <code>FALSE</code> or not defined, target property <code>INCLUDE_DIRECTORIES</code> will be ignored. This behavior can be overridden by specifying source property <code>USE_TARGET_INCLUDE_DIRECTORIES</code>.</p>
-<dt><code>SWIG_GENERATED_INCLUDE_DIRECTORIES</code>, <code>SWIG_GENERATED_COMPILE_DEFINITIONS</code> and <code>SWIG_GENERATED_COMPILE_OPTIONS</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>SWIG_GENERATED_INCLUDE_DIRECTORIES</code>, <code>SWIG_GENERATED_COMPILE_DEFINITIONS</code> and <code>SWIG_GENERATED_COMPILE_OPTIONS</code></dt>
+<dd>New in version 3.12. </dd>
 <p> These properties will populate, respectively, properties <code>INCLUDE_DIRECTORIES</code>, <code>COMPILE_DEFINITIONS</code> and <code>COMPILE_FLAGS</code> of all generated C/C++ files.</p>
-<dt><code>SWIG_DEPENDS</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>SWIG_DEPENDS</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Add dependencies to all SWIG input files. </p>
 <p> The following target properties are output properties and can be used to get information about support files generated by <code>SWIG</code> interface compilation.</p>
-<dt><code>SWIG_SUPPORT_FILES</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>SWIG_SUPPORT_FILES</code></dt>
+<dd>New in version 3.12. </dd>
 <p> This output property list of wrapper files generated during SWIG compilation. </p>
 <pre>set (UseSWIG_TARGET_NAME_PREFERENCE STANDARD)
 swig_add_library(mymod LANGUAGE python SOURCES mymod.i)
 get_property(support_files TARGET mymod PROPERTY SWIG_SUPPORT_FILES)</pre>
 <p><code>NOTE:</code> Only most principal support files are listed. In case some advanced features of <code>SWIG</code> are used (for example <code>%template</code>), associated support files may not be listed. Prefer to use the <code>SWIG_SUPPORT_FILES_DIRECTORY</code> property to handle support files.</p>
-<dt><code>SWIG_SUPPORT_FILES_DIRECTORY</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>SWIG_SUPPORT_FILES_DIRECTORY</code></dt>
+<dd>New in version 3.12. </dd>
 <p> This output property specifies the directory where support files will be generated. </p>
 <p> <code>NOTE:</code> When source property <code>OUTPUT_DIR</code> is defined, multiple directories can be specified as part of <code>SWIG_SUPPORT_FILES_DIRECTORY</code>. </p>
 <p> Some variables can be set to customize the behavior of <code>swig_add_library</code> as well as <code>SWIG</code>:</p>
-<dt><code>UseSWIG_MODULE_VERSION</code></p>
-<dd>New in version 3.12. </p>
+<dt><code>UseSWIG_MODULE_VERSION</code></dt>
+<dd>New in version 3.12. </dd>
 <p> Specify different behaviors for <code>UseSWIG</code> module.</p>
-<dt>&bull;</p>
-<dd>Set to 1 or undefined: Legacy behavior is applied.</p>
-<dt>&bull;</p>
-<dd>Set to 2: A new strategy is applied regarding support files: the output directory of support files is erased before <code>SWIG</code> interface compilation.</p>
-<dt><code>CMAKE_SWIG_FLAGS</code></p>
-<dd>Add flags to all swig calls.</p>
-<dt><code>CMAKE_SWIG_OUTDIR</code></p>
-<dd>Specify where to write the language specific files (swig <code>-outdir</code> option).</p>
-<dt><code>SWIG_OUTFILE_DIR</code></p>
-<dd>New in version 3.8. </p>
+<dt>&bull;</dt>
+<dd>Set to 1 or undefined: Legacy behavior is applied.</dd>
+<dt>&bull;</dt>
+<dd>Set to 2: A new strategy is applied regarding support files: the output directory of support files is erased before <code>SWIG</code> interface compilation.</dd>
+<dt><code>CMAKE_SWIG_FLAGS</code></dt>
+<dd>Add flags to all swig calls.</dd>
+<dt><code>CMAKE_SWIG_OUTDIR</code></dt>
+<dd>Specify where to write the language specific files (swig <code>-outdir</code> option).</dd>
+<dt><code>SWIG_OUTFILE_DIR</code></dt>
+<dd>New in version 3.8. </dd>
 <p> Specify an output directory name where the generated source file will be placed. If not specified, <code>CMAKE_SWIG_OUTDIR</code> is used.</p>
-<dt><code>SWIG_MODULE_&lt;name&gt;_EXTRA_DEPS</code></p>
-<dd>Specify extra dependencies for the generated module for <code>&lt;name&gt;</code>.</p>
-<dt><code>SWIG_SOURCE_FILE_EXTENSIONS</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>SWIG_MODULE_&lt;name&gt;_EXTRA_DEPS</code></dt>
+<dd>Specify extra dependencies for the generated module for <code>&lt;name&gt;</code>.</dd>
+<dt><code>SWIG_SOURCE_FILE_EXTENSIONS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> Specify a list of source file extensions to override the default behavior of considering only <code>.i</code> files as sources for the <code>SWIG</code> tool. For example: </p>
 <pre>set(SWIG_SOURCE_FILE_EXTENSIONS &quot;.i&quot; &quot;.swg&quot;)</pre>
-<dt><code>SWIG_USE_SWIG_DEPENDENCIES</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>SWIG_USE_SWIG_DEPENDENCIES</code></dt>
+<dd>New in version 3.20. </dd>
 <p> If set to <code>TRUE</code>, implicit dependencies are generated by the <code>swig</code> tool itself. This variable is only meaningful for Makefile, Ninja, <code>Xcode</code>, and Visual Studio (<code>Visual Studio 11 2012</code> and above) generators. Default value is <code>FALSE</code>. </p>
 <p> Source file property <code>USE_SWIG_DEPENDENCIES</code>, if not defined, will be initialized with the value of this variable. </p>
 <p> New in version 3.21: Added the support of <code>Xcode</code> generator. </p>
@@ -3889,19 +3889,19 @@ target_link_libraries(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})</pre>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>ALSA_FOUND</code></p>
-<dd>True if ALSA_INCLUDE_DIR &amp; ALSA_LIBRARY are found</p>
-<dt><code>ALSA_LIBRARIES</code></p>
-<dd>List of libraries when using ALSA.</p>
-<dt><code>ALSA_INCLUDE_DIRS</code></p>
-<dd>Where to find the ALSA headers.</dl>
+<dt><code>ALSA_FOUND</code></dt>
+<dd>True if ALSA_INCLUDE_DIR &amp; ALSA_LIBRARY are found</dd>
+<dt><code>ALSA_LIBRARIES</code></dt>
+<dd>List of libraries when using ALSA.</dd>
+<dt><code>ALSA_INCLUDE_DIRS</code></dt>
+<dd>Where to find the ALSA headers.</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>ALSA_INCLUDE_DIR</code></p>
-<dd>the ALSA include directory</p>
-<dt><code>ALSA_LIBRARY</code></p>
-<dd>the absolute path of the asound library</dl>
+<dt><code>ALSA_INCLUDE_DIR</code></dt>
+<dd>the ALSA include directory</dd>
+<dt><code>ALSA_LIBRARY</code></dt>
+<dd>the absolute path of the asound library</dd></dl>
 <h3>FindArmadillo</h3>
 <p>Find the Armadillo C++ library. Armadillo is a library for linear algebra &amp; scientific computing. </p>
 <p> New in version 3.18: Support for linking wrapped libraries directly (<code>ARMA_DONT_USE_WRAPPER</code>). </p>
@@ -3938,19 +3938,19 @@ AVIFILE_FOUND, If false, don't try to use AVIFILE</pre>
 <p>Find provider for <i><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</i>. </p>
 <p> Checks if OS supports <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code> via either <code>libc</code> or custom library. This module defines the following variables:</p>
 <dl>
-<dt><code>Backtrace_HEADER</code></p>
-<dd>The header file needed for <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code>. Cached. Could be forcibly set by user.</p>
-<dt><code>Backtrace_INCLUDE_DIRS</code></p>
-<dd>The include directories needed to use <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code> header.</p>
-<dt><code>Backtrace_LIBRARIES</code></p>
-<dd>The libraries (linker flags) needed to use <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code>, if any.</p>
-<dt><code>Backtrace_FOUND</code></p>
-<dd>Is set if and only if <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code> support detected. </p>
+<dt><code>Backtrace_HEADER</code></dt>
+<dd>The header file needed for <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code>. Cached. Could be forcibly set by user.</dd>
+<dt><code>Backtrace_INCLUDE_DIRS</code></dt>
+<dd>The include directories needed to use <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code> header.</dd>
+<dt><code>Backtrace_LIBRARIES</code></dt>
+<dd>The libraries (linker flags) needed to use <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code>, if any.</dd>
+<dt><code>Backtrace_FOUND</code></dt>
+<dd>Is set if and only if <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code> support detected. </dd>
 <p> The following cache variables are also available to set or use:</p>
-<dt><code>Backtrace_LIBRARY</code></p>
-<dd>The external library providing backtrace, if any.</p>
-<dt><code>Backtrace_INCLUDE_DIR</code></p>
-<dd>The directory holding the <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code> header. </p>
+<dt><code>Backtrace_LIBRARY</code></dt>
+<dd>The external library providing backtrace, if any.</dd>
+<dt><code>Backtrace_INCLUDE_DIR</code></dt>
+<dd>The directory holding the <code><a href="/docs/linux/man/3-backtrace/">backtrace</a>(3)</code> header. </dd>
 <p> Typical usage is to generate of header file using <code>configure_file()</code> with the contents like the following: </p>
 <pre>#cmakedefine01 Backtrace_FOUND
 #if Backtrace_FOUND
@@ -3961,12 +3961,12 @@ AVIFILE_FOUND, If false, don't try to use AVIFILE</pre>
 <p>Find <code>bison</code> executable and provide a macro to generate custom build rules. </p>
 <p> The module defines the following variables:</p>
 <dl>
-<dt><code>BISON_EXECUTABLE</code></p>
-<dd>path to the <code>bison</code> program</p>
-<dt><code>BISON_VERSION</code></p>
-<dd>version of <code>bison</code></p>
-<dt><code>BISON_FOUND</code></p>
-<dd>&quot;True&quot; if the program was found </p>
+<dt><code>BISON_EXECUTABLE</code></dt>
+<dd>path to the <code>bison</code> program</dd>
+<dt><code>BISON_VERSION</code></dt>
+<dd>version of <code>bison</code></dd>
+<dt><code>BISON_FOUND</code></dt>
+<dd>&quot;True&quot; if the program was found </dd>
 <p> The minimum required version of <code>bison</code> can be specified using the standard CMake syntax, e.g. <code>find_package(BISON 2.1.3)</code>. </p>
 <p> If <code>bison</code> is found, the module defines the macro: </p>
 <pre>BISON_TARGET(&lt;Name&gt; &lt;YaccInput&gt; &lt;CodeOutput&gt;
@@ -3978,30 +3978,30 @@ AVIFILE_FOUND, If false, don't try to use AVIFILE</pre>
 <p>which will create a custom rule to generate a parser. <code>&lt;YaccInput&gt;</code> is the path to a yacc file. <code>&lt;CodeOutput&gt;</code> is the name of the source file generated by bison. A header file is also be generated, and contains the token list. </p>
 <p> Changed in version 3.14: When <code>CMP0088</code> is set to <code>NEW</code>, <code>bison</code> runs in the <code>CMAKE_CURRENT_BINARY_DIR</code> directory. </p>
 <p> The options are:</p>
-<dt><code>COMPILE_FLAGS &lt;flags&gt;</code></p>
-<dd>Specify flags to be added to the <code>bison</code> command line.</p>
-<dt><code>DEFINES_FILE &lt;file&gt;</code></p>
-<dd>New in version 3.4. </p>
+<dt><code>COMPILE_FLAGS &lt;flags&gt;</code></dt>
+<dd>Specify flags to be added to the <code>bison</code> command line.</dd>
+<dt><code>DEFINES_FILE &lt;file&gt;</code></dt>
+<dd>New in version 3.4. </dd>
 <p> Specify a non-default header <code>&lt;file&gt;</code> to be generated by <code>bison</code>.</p>
-<dt><code>VERBOSE [&lt;file&gt;]</code></p>
-<dd>Tell <code>bison</code> to write a report file of the grammar and parser. </p>
+<dt><code>VERBOSE [&lt;file&gt;]</code></dt>
+<dd>Tell <code>bison</code> to write a report file of the grammar and parser. </dd>
 <p> Deprecated since version 3.7: If <code>&lt;file&gt;</code> is given, it specifies path the report file is copied to. <code>[&lt;file&gt;]</code> is left for backward compatibility of this module. Use <code>VERBOSE REPORT_FILE &lt;file&gt;</code>. </p>
-<dt><code>REPORT_FILE &lt;file&gt;</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>REPORT_FILE &lt;file&gt;</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Specify a non-default report <code>&lt;file&gt;</code>, if generated. </p>
 <p> The macro defines the following variables:</p>
-<dt><code>BISON_&lt;Name&gt;_DEFINED</code></p>
-<dd><code>True</code> is the macro ran successfully</p>
-<dt><code>BISON_&lt;Name&gt;_INPUT</code></p>
-<dd>The input source file, an alias for &lt;YaccInput&gt;</p>
-<dt><code>BISON_&lt;Name&gt;_OUTPUT_SOURCE</code></p>
-<dd>The source file generated by bison</p>
-<dt><code>BISON_&lt;Name&gt;_OUTPUT_HEADER</code></p>
-<dd>The header file generated by bison</p>
-<dt><code>BISON_&lt;Name&gt;_OUTPUTS</code></p>
-<dd>All files generated by bison including the source, the header and the report</p>
-<dt><code>BISON_&lt;Name&gt;_COMPILE_FLAGS</code></p>
-<dd>Options used in the <code>bison</code> command line </p>
+<dt><code>BISON_&lt;Name&gt;_DEFINED</code></dt>
+<dd><code>True</code> is the macro ran successfully</dd>
+<dt><code>BISON_&lt;Name&gt;_INPUT</code></dt>
+<dd>The input source file, an alias for &lt;YaccInput&gt;</dd>
+<dt><code>BISON_&lt;Name&gt;_OUTPUT_SOURCE</code></dt>
+<dd>The source file generated by bison</dd>
+<dt><code>BISON_&lt;Name&gt;_OUTPUT_HEADER</code></dt>
+<dd>The header file generated by bison</dd>
+<dt><code>BISON_&lt;Name&gt;_OUTPUTS</code></dt>
+<dd>All files generated by bison including the source, the header and the report</dd>
+<dt><code>BISON_&lt;Name&gt;_COMPILE_FLAGS</code></dt>
+<dd>Options used in the <code>bison</code> command line </dd>
 <p> Example usage: </p>
 <pre>find_package(BISON)
 BISON_TARGET(MyParser parser.y ${CMAKE_CURRENT_BINARY_DIR}/parser.cpp
@@ -4015,115 +4015,115 @@ add_executable(Foo main.cpp ${BISON_MyParser_OUTPUTS})</pre>
 <h3>Input Variables</h3>
 <p>The following variables may be set to influence this module&#8217;s behavior:</p>
 <dl>
-<dt><code>BLA_STATIC</code></p>
-<dd>if <code>ON</code> use static linkage</p>
-<dt><code>BLA_VENDOR</code></p>
-<dd>Set to one of the <i>BLAS/LAPACK Vendors</i> to search for BLAS only from the specified vendor. If not set, all vendors are considered.</p>
-<dt><code>BLA_F95</code></p>
-<dd>if <code>ON</code> tries to find the BLAS95 interfaces</p>
-<dt><code>BLA_PREFER_PKGCONFIG</code></p>
-<dd>New in version 3.11. </p>
+<dt><code>BLA_STATIC</code></dt>
+<dd>if <code>ON</code> use static linkage</dd>
+<dt><code>BLA_VENDOR</code></dt>
+<dd>Set to one of the <i>BLAS/LAPACK Vendors</i> to search for BLAS only from the specified vendor. If not set, all vendors are considered.</dd>
+<dt><code>BLA_F95</code></dt>
+<dd>if <code>ON</code> tries to find the BLAS95 interfaces</dd>
+<dt><code>BLA_PREFER_PKGCONFIG</code></dt>
+<dd>New in version 3.11. </dd>
 <p> if set <code>pkg-config</code> will be used to search for a BLAS library first and if one is found that is preferred</p>
-<dt><code>BLA_SIZEOF_INTEGER</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>BLA_SIZEOF_INTEGER</code></dt>
+<dd>New in version 3.22. </dd>
 <p> Specify the BLAS/LAPACK library integer size:</p>
-<dt><code>4</code></p>
-<dd>Search for a BLAS/LAPACK with 32-bit integer interfaces.</p>
-<dt><code>8</code></p>
-<dd>Search for a BLAS/LAPACK with 64-bit integer interfaces.</p>
-<dt><code>ANY</code></p>
-<dd>Search for any BLAS/LAPACK. Most likely, a BLAS/LAPACK with 32-bit integer interfaces will be found.</dl>
+<dt><code>4</code></dt>
+<dd>Search for a BLAS/LAPACK with 32-bit integer interfaces.</dd>
+<dt><code>8</code></dt>
+<dd>Search for a BLAS/LAPACK with 64-bit integer interfaces.</dd>
+<dt><code>ANY</code></dt>
+<dd>Search for any BLAS/LAPACK. Most likely, a BLAS/LAPACK with 32-bit integer interfaces will be found.</dd></dl>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>BLAS::BLAS</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>BLAS::BLAS</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The libraries to use for BLAS, if found.</dl>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>BLAS_FOUND</code></p>
-<dd>library implementing the BLAS interface is found</p>
-<dt><code>BLAS_LINKER_FLAGS</code></p>
-<dd>uncached list of required linker flags (excluding <code>-l</code> and <code>-L</code>).</p>
-<dt><code>BLAS_LIBRARIES</code></p>
-<dd>uncached list of libraries (using full path name) to link against to use BLAS (may be empty if compiler implicitly links BLAS)</p>
-<dt><code>BLAS95_LIBRARIES</code></p>
-<dd>uncached list of libraries (using full path name) to link against to use BLAS95 interface</p>
-<dt><code>BLAS95_FOUND</code></p>
-<dd>library implementing the BLAS95 interface is found</dl>
+<dt><code>BLAS_FOUND</code></dt>
+<dd>library implementing the BLAS interface is found</dd>
+<dt><code>BLAS_LINKER_FLAGS</code></dt>
+<dd>uncached list of required linker flags (excluding <code>-l</code> and <code>-L</code>).</dd>
+<dt><code>BLAS_LIBRARIES</code></dt>
+<dd>uncached list of libraries (using full path name) to link against to use BLAS (may be empty if compiler implicitly links BLAS)</dd>
+<dt><code>BLAS95_LIBRARIES</code></dt>
+<dd>uncached list of libraries (using full path name) to link against to use BLAS95 interface</dd>
+<dt><code>BLAS95_FOUND</code></dt>
+<dd>library implementing the BLAS95 interface is found</dd></dl>
 <h3>BLAS/LAPACK Vendors</h3>
 <dl>
-<dt><code>Generic</code></p>
-<dd>Generic reference implementation</p>
-<dt><code>ACML</code>, <code>ACML_MP</code>, <code>ACML_GPU</code></p>
-<dd>AMD Core Math Library</p>
-<dt><code>Apple</code>, <code>NAS</code></p>
-<dd>Apple BLAS (Accelerate), and Apple NAS (vecLib)</p>
-<dt><code>Arm</code>, <code>Arm_mp</code>, <code>Arm_ilp64</code>, <code>Arm_ilp64_mp</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Generic</code></dt>
+<dd>Generic reference implementation</dd>
+<dt><code>ACML</code>, <code>ACML_MP</code>, <code>ACML_GPU</code></dt>
+<dd>AMD Core Math Library</dd>
+<dt><code>Apple</code>, <code>NAS</code></dt>
+<dd>Apple BLAS (Accelerate), and Apple NAS (vecLib)</dd>
+<dt><code>Arm</code>, <code>Arm_mp</code>, <code>Arm_ilp64</code>, <code>Arm_ilp64_mp</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Arm Performance Libraries</p>
-<dt><code>ATLAS</code></p>
-<dd>Automatically Tuned Linear Algebra Software</p>
-<dt><code>CXML</code>, <code>DXML</code></p>
-<dd>Compaq/Digital Extended Math Library</p>
-<dt><code>EML</code>, <code>EML_mt</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>ATLAS</code></dt>
+<dd>Automatically Tuned Linear Algebra Software</dd>
+<dt><code>CXML</code>, <code>DXML</code></dt>
+<dd>Compaq/Digital Extended Math Library</dd>
+<dt><code>EML</code>, <code>EML_mt</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Elbrus Math Library</p>
-<dt><code>FLAME</code></p>
-<dd>New in version 3.11. </p>
+<dt><code>FLAME</code></dt>
+<dd>New in version 3.11. </dd>
 <p> BLIS Framework</p>
-<dt><code>FlexiBLAS</code></p>
-<dd>New in version 3.19. </p>
-<dt><code>Fujitsu_SSL2</code>, <code>Fujitsu_SSL2BLAMP</code>, <code>Fujitsu_SSL2SVE</code>, <code>Fujitsu_SSL2BLAMPSVE</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>FlexiBLAS</code></dt>
+<dd>New in version 3.19. </dd>
+<dt><code>Fujitsu_SSL2</code>, <code>Fujitsu_SSL2BLAMP</code>, <code>Fujitsu_SSL2SVE</code>, <code>Fujitsu_SSL2BLAMPSVE</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Fujitsu SSL2 serial and parallel blas/lapack with SVE instructions</p>
-<dt><code>Goto</code></p>
-<dd>GotoBLAS </p>
+<dt><code>Goto</code></dt>
+<dd>GotoBLAS </dd>
 <p> <code>IBMESSL</code>, <code>IBMESSL_SMP</code> IBM Engineering and Scientific Subroutine Library</p>
-<dt><code>Intel</code></p>
-<dd>Intel MKL 32 bit and 64 bit obsolete versions</p>
-<dt><code>Intel10_32</code></p>
-<dd>Intel MKL v10 32 bit, threaded code</p>
-<dt><code>Intel10_64lp</code></p>
-<dd>Intel MKL v10+ 64 bit, threaded code, lp64 model</p>
-<dt><code>Intel10_64lp_seq</code></p>
-<dd>Intel MKL v10+ 64 bit, sequential code, lp64 model</p>
-<dt><code>Intel10_64ilp</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>Intel</code></dt>
+<dd>Intel MKL 32 bit and 64 bit obsolete versions</dd>
+<dt><code>Intel10_32</code></dt>
+<dd>Intel MKL v10 32 bit, threaded code</dd>
+<dt><code>Intel10_64lp</code></dt>
+<dd>Intel MKL v10+ 64 bit, threaded code, lp64 model</dd>
+<dt><code>Intel10_64lp_seq</code></dt>
+<dd>Intel MKL v10+ 64 bit, sequential code, lp64 model</dd>
+<dt><code>Intel10_64ilp</code></dt>
+<dd>New in version 3.13. </dd>
 <p> Intel MKL v10+ 64 bit, threaded code, ilp64 model</p>
-<dt><code>Intel10_64ilp_seq</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>Intel10_64ilp_seq</code></dt>
+<dd>New in version 3.13. </dd>
 <p> Intel MKL v10+ 64 bit, sequential code, ilp64 model</p>
-<dt><code>Intel10_64_dyn</code></p>
-<dd>New in version 3.17. </p>
+<dt><code>Intel10_64_dyn</code></dt>
+<dd>New in version 3.17. </dd>
 <p> Intel MKL v10+ 64 bit, single dynamic library</p>
-<dt><code>NVHPC</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>NVHPC</code></dt>
+<dd>New in version 3.21. </dd>
 <p> NVIDIA HPC SDK</p>
-<dt><code>OpenBLAS</code></p>
-<dd>New in version 3.6. </p>
-<dt><code>PhiPACK</code></p>
-<dd>Portable High Performance ANSI C (PHiPAC)</p>
-<dt><code>SCSL</code>, <code>SCSL_mp</code></p>
-<dd>Scientific Computing Software Library</p>
-<dt><code>SGIMATH</code></p>
-<dd>SGI Scientific Mathematical Library</p>
-<dt><code>SunPerf</code></p>
-<dd>Sun Performance Library</dl>
+<dt><code>OpenBLAS</code></dt>
+<dd>New in version 3.6. </dd>
+<dt><code>PhiPACK</code></dt>
+<dd>Portable High Performance ANSI C (PHiPAC)</dd>
+<dt><code>SCSL</code>, <code>SCSL_mp</code></dt>
+<dd>Scientific Computing Software Library</dd>
+<dt><code>SGIMATH</code></dt>
+<dd>SGI Scientific Mathematical Library</dd>
+<dt><code>SunPerf</code></dt>
+<dd>Sun Performance Library</dd></dl>
 <h3>Intel MKL</h3>
 <p>To use the Intel MKL implementation of BLAS, a project must enable at least one of the <code>C</code> or <code>CXX</code> languages. Set <code>BLA_VENDOR</code> to an Intel MKL variant either on the command-line as <code>-DBLA_VENDOR=Intel10_64lp</code> or in project code: </p>
 <pre>set(BLA_VENDOR Intel10_64lp)
 find_package(BLAS)</pre>
 <p>In order to build a project using Intel MKL, and end user must first establish an Intel MKL environment:</p>
 <dl>
-<dt><code>Intel oneAPI</code></p>
-<dd>Source the full Intel environment script: </p>
+<dt><code>Intel oneAPI</code></dt>
+<dd>Source the full Intel environment script: </dd>
 <pre>. /opt/intel/oneapi/setvars.sh</pre>
 <p>Or, source the MKL component environment script: </p>
 <pre>. /opt/intel/oneapi/mkl/latest/env/vars.sh</pre>
-<dt><code>Intel Classic</code></p>
-<dd>Source the full Intel environment script: </p>
+<dt><code>Intel Classic</code></dt>
+<dd>Source the full Intel environment script: </dd>
 <pre>. /opt/intel/bin/compilervars.sh intel64</pre>
 <p>Or, source the MKL component environment script: </p>
 <pre>. /opt/intel/mkl/bin/mklvars.sh intel64</pre>
@@ -4150,132 +4150,132 @@ find_package(BLAS)</pre>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>Boost_FOUND</code></p>
-<dd>True if headers and requested libraries were found.</p>
-<dt><code>Boost_INCLUDE_DIRS</code></p>
-<dd>Boost include directories.</p>
-<dt><code>Boost_LIBRARY_DIRS</code></p>
-<dd>Link directories for Boost libraries.</p>
-<dt><code>Boost_LIBRARIES</code></p>
-<dd>Boost component libraries to be linked.</p>
-<dt><code>Boost_&lt;COMPONENT&gt;_FOUND</code></p>
-<dd>True if component <code>&lt;COMPONENT&gt;</code> was found (<code>&lt;COMPONENT&gt;</code> name is upper-case).</p>
-<dt><code>Boost_&lt;COMPONENT&gt;_LIBRARY</code></p>
-<dd>Libraries to link for component <code>&lt;COMPONENT&gt;</code> (may include <code>target_link_libraries()</code> debug/optimized keywords).</p>
-<dt><code>Boost_VERSION_MACRO</code></p>
-<dd><code>BOOST_VERSION</code> value from <code>boost/version.hpp</code>.</p>
-<dt><code>Boost_VERSION_STRING</code></p>
-<dd>Boost version number in <code>X.Y.Z</code> format.</p>
-<dt><code>Boost_VERSION</code></p>
-<dd>Boost version number in <code>X.Y.Z</code> format (same as <code>Boost_VERSION_STRING</code>). </p>
+<dt><code>Boost_FOUND</code></dt>
+<dd>True if headers and requested libraries were found.</dd>
+<dt><code>Boost_INCLUDE_DIRS</code></dt>
+<dd>Boost include directories.</dd>
+<dt><code>Boost_LIBRARY_DIRS</code></dt>
+<dd>Link directories for Boost libraries.</dd>
+<dt><code>Boost_LIBRARIES</code></dt>
+<dd>Boost component libraries to be linked.</dd>
+<dt><code>Boost_&lt;COMPONENT&gt;_FOUND</code></dt>
+<dd>True if component <code>&lt;COMPONENT&gt;</code> was found (<code>&lt;COMPONENT&gt;</code> name is upper-case).</dd>
+<dt><code>Boost_&lt;COMPONENT&gt;_LIBRARY</code></dt>
+<dd>Libraries to link for component <code>&lt;COMPONENT&gt;</code> (may include <code>target_link_libraries()</code> debug/optimized keywords).</dd>
+<dt><code>Boost_VERSION_MACRO</code></dt>
+<dd><code>BOOST_VERSION</code> value from <code>boost/version.hpp</code>.</dd>
+<dt><code>Boost_VERSION_STRING</code></dt>
+<dd>Boost version number in <code>X.Y.Z</code> format.</dd>
+<dt><code>Boost_VERSION</code></dt>
+<dd>Boost version number in <code>X.Y.Z</code> format (same as <code>Boost_VERSION_STRING</code>). </dd>
 <p> Changed in version 3.15: In previous CMake versions, this variable used the raw version string from the Boost header (same as <code>Boost_VERSION_MACRO</code>). See policy <code>CMP0093</code>. </p>
-<dt><code>Boost_LIB_VERSION</code></p>
-<dd>Version string appended to library filenames.</p>
-<dt><code>Boost_VERSION_MAJOR</code>, <code>Boost_MAJOR_VERSION</code></p>
-<dd>Boost major version number (<code>X</code> in <code>X.Y.Z</code>).</p>
-<dt><code>Boost_VERSION_MINOR</code>, <code>Boost_MINOR_VERSION</code></p>
-<dd>Boost minor version number (<code>Y</code> in <code>X.Y.Z</code>).</p>
-<dt><code>Boost_VERSION_PATCH</code>, <code>Boost_SUBMINOR_VERSION</code></p>
-<dd>Boost subminor version number (<code>Z</code> in <code>X.Y.Z</code>).</p>
-<dt><code>Boost_VERSION_COUNT</code></p>
-<dd>Amount of version components (3).</p>
-<dt><code>Boost_LIB_DIAGNOSTIC_DEFINITIONS</code> (Windows-specific)</p>
-<dd>Pass to <code>add_definitions()</code> to have diagnostic information about Boost&#8217;s automatic linking displayed during compilation </p>
+<dt><code>Boost_LIB_VERSION</code></dt>
+<dd>Version string appended to library filenames.</dd>
+<dt><code>Boost_VERSION_MAJOR</code>, <code>Boost_MAJOR_VERSION</code></dt>
+<dd>Boost major version number (<code>X</code> in <code>X.Y.Z</code>).</dd>
+<dt><code>Boost_VERSION_MINOR</code>, <code>Boost_MINOR_VERSION</code></dt>
+<dd>Boost minor version number (<code>Y</code> in <code>X.Y.Z</code>).</dd>
+<dt><code>Boost_VERSION_PATCH</code>, <code>Boost_SUBMINOR_VERSION</code></dt>
+<dd>Boost subminor version number (<code>Z</code> in <code>X.Y.Z</code>).</dd>
+<dt><code>Boost_VERSION_COUNT</code></dt>
+<dd>Amount of version components (3).</dd>
+<dt><code>Boost_LIB_DIAGNOSTIC_DEFINITIONS</code> (Windows-specific)</dt>
+<dd>Pass to <code>add_definitions()</code> to have diagnostic information about Boost&#8217;s automatic linking displayed during compilation </dd>
 <p> New in version 3.15: The <code>Boost_VERSION_&lt;PART&gt;</code> variables. </p>
 </dl>
 <h3>Cache variables</h3>
 <p>Search results are saved persistently in CMake cache entries:</p>
 <dl>
-<dt><code>Boost_INCLUDE_DIR</code></p>
-<dd>Directory containing Boost headers.</p>
-<dt><code>Boost_LIBRARY_DIR_RELEASE</code></p>
-<dd>Directory containing release Boost libraries.</p>
-<dt><code>Boost_LIBRARY_DIR_DEBUG</code></p>
-<dd>Directory containing debug Boost libraries.</p>
-<dt><code>Boost_&lt;COMPONENT&gt;_LIBRARY_DEBUG</code></p>
-<dd>Component <code>&lt;COMPONENT&gt;</code> library debug variant.</p>
-<dt><code>Boost_&lt;COMPONENT&gt;_LIBRARY_RELEASE</code></p>
-<dd>Component <code>&lt;COMPONENT&gt;</code> library release variant. </p>
+<dt><code>Boost_INCLUDE_DIR</code></dt>
+<dd>Directory containing Boost headers.</dd>
+<dt><code>Boost_LIBRARY_DIR_RELEASE</code></dt>
+<dd>Directory containing release Boost libraries.</dd>
+<dt><code>Boost_LIBRARY_DIR_DEBUG</code></dt>
+<dd>Directory containing debug Boost libraries.</dd>
+<dt><code>Boost_&lt;COMPONENT&gt;_LIBRARY_DEBUG</code></dt>
+<dd>Component <code>&lt;COMPONENT&gt;</code> library debug variant.</dd>
+<dt><code>Boost_&lt;COMPONENT&gt;_LIBRARY_RELEASE</code></dt>
+<dd>Component <code>&lt;COMPONENT&gt;</code> library release variant. </dd>
 <p> New in version 3.3: Per-configuration variables <code>Boost_LIBRARY_DIR_RELEASE</code> and <code>Boost_LIBRARY_DIR_DEBUG</code>. </p>
 </dl>
 <h3>Hints</h3>
 <p>This module reads hints about search locations from variables:</p>
 <dl>
-<dt><code>BOOST_ROOT</code>, <code>BOOSTROOT</code></p>
-<dd>Preferred installation prefix.</p>
-<dt><code>BOOST_INCLUDEDIR</code></p>
-<dd>Preferred include directory e.g. <code>&lt;prefix&gt;/include</code>.</p>
-<dt><code>BOOST_LIBRARYDIR</code></p>
-<dd>Preferred library directory e.g. <code>&lt;prefix&gt;/lib</code>.</p>
-<dt><code>Boost_NO_SYSTEM_PATHS</code></p>
-<dd>Set to <code>ON</code> to disable searching in locations not specified by these hint variables. Default is <code>OFF</code>.</p>
-<dt><code>Boost_ADDITIONAL_VERSIONS</code></p>
-<dd>List of Boost versions not known to this module. (Boost install locations may contain the version). </p>
+<dt><code>BOOST_ROOT</code>, <code>BOOSTROOT</code></dt>
+<dd>Preferred installation prefix.</dd>
+<dt><code>BOOST_INCLUDEDIR</code></dt>
+<dd>Preferred include directory e.g. <code>&lt;prefix&gt;/include</code>.</dd>
+<dt><code>BOOST_LIBRARYDIR</code></dt>
+<dd>Preferred library directory e.g. <code>&lt;prefix&gt;/lib</code>.</dd>
+<dt><code>Boost_NO_SYSTEM_PATHS</code></dt>
+<dd>Set to <code>ON</code> to disable searching in locations not specified by these hint variables. Default is <code>OFF</code>.</dd>
+<dt><code>Boost_ADDITIONAL_VERSIONS</code></dt>
+<dd>List of Boost versions not known to this module. (Boost install locations may contain the version). </dd>
 <p> Users may set these hints or results as <code>CACHE</code> entries. Projects should not read these entries directly but instead use the above result variables. Note that some hint names start in upper-case <code>BOOST</code>. One may specify these as environment variables if they are not specified as CMake variables or cache entries. </p>
 <p> This module first searches for the Boost header files using the above hint variables (excluding <code>BOOST_LIBRARYDIR</code>) and saves the result in <code>Boost_INCLUDE_DIR</code>. Then it searches for requested component libraries using the above hints (excluding <code>BOOST_INCLUDEDIR</code> and <code>Boost_ADDITIONAL_VERSIONS</code>), &quot;lib&quot; directories near <code>Boost_INCLUDE_DIR</code>, and the library name configuration settings below. It saves the library directories in <code>Boost_LIBRARY_DIR_DEBUG</code> and <code>Boost_LIBRARY_DIR_RELEASE</code> and individual library locations in <code>Boost_&lt;COMPONENT&gt;_LIBRARY_DEBUG</code> and <code>Boost_&lt;COMPONENT&gt;_LIBRARY_RELEASE</code>. When one changes settings used by previous searches in the same build tree (excluding environment variables) this module discards previous search results affected by the changes and searches again.</dl>
 <h3>Imported Targets</h3>
 <p>New in version 3.5. </p>
 <p> This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>Boost::boost</code></p>
-<dd>Target for header-only dependencies. (Boost include directory).</p>
-<dt><code>Boost::headers</code></p>
-<dd>New in version 3.15: Alias for <code>Boost::boost</code>. </p>
-<dt><code>Boost::&lt;component&gt;</code></p>
-<dd>Target for specific component dependency (shared or static library); <code>&lt;component&gt;</code> name is lower-case.</p>
-<dt><code>Boost::diagnostic_definitions</code></p>
-<dd>Interface target to enable diagnostic information about Boost&#8217;s automatic linking during compilation (adds <code>-DBOOST_LIB_DIAGNOSTIC</code>).</p>
-<dt><code>Boost::disable_autolinking</code></p>
-<dd>Interface target to disable automatic linking with MSVC (adds <code>-DBOOST_ALL_NO_LIB</code>).</p>
-<dt><code>Boost::dynamic_linking</code></p>
-<dd>Interface target to enable dynamic linking with MSVC (adds <code>-DBOOST_ALL_DYN_LINK</code>). </p>
+<dt><code>Boost::boost</code></dt>
+<dd>Target for header-only dependencies. (Boost include directory).</dd>
+<dt><code>Boost::headers</code></dt>
+<dd>New in version 3.15: Alias for <code>Boost::boost</code>. </dd>
+<dt><code>Boost::&lt;component&gt;</code></dt>
+<dd>Target for specific component dependency (shared or static library); <code>&lt;component&gt;</code> name is lower-case.</dd>
+<dt><code>Boost::diagnostic_definitions</code></dt>
+<dd>Interface target to enable diagnostic information about Boost&#8217;s automatic linking during compilation (adds <code>-DBOOST_LIB_DIAGNOSTIC</code>).</dd>
+<dt><code>Boost::disable_autolinking</code></dt>
+<dd>Interface target to disable automatic linking with MSVC (adds <code>-DBOOST_ALL_NO_LIB</code>).</dd>
+<dt><code>Boost::dynamic_linking</code></dt>
+<dd>Interface target to enable dynamic linking with MSVC (adds <code>-DBOOST_ALL_DYN_LINK</code>). </dd>
 <p> Implicit dependencies such as <code>Boost::filesystem</code> requiring <code>Boost::system</code> will be automatically detected and satisfied, even if system is not specified when using <code>find_package()</code> and if <code>Boost::system</code> is not added to <code>target_link_libraries()</code>. If using <code>Boost::thread</code>, then <code>Threads::Threads</code> will also be added automatically. </p>
 <p> It is important to note that the imported targets behave differently than variables created by this module: multiple calls to <code>find_package(Boost)</code> in the same directory or sub-directories with different options (e.g. static or shared) will not override the values of the targets created by the first call.</dl>
 <h3>Other Variables</h3>
 <p>Boost libraries come in many variants encoded in their file name. Users or projects may tell this module which variant to find by setting variables:</p>
 <dl>
-<dt><code>Boost_USE_DEBUG_LIBS</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>Boost_USE_DEBUG_LIBS</code></dt>
+<dd>New in version 3.10. </dd>
 <p> Set to <code>ON</code> or <code>OFF</code> to specify whether to search and use the debug libraries. Default is <code>ON</code>.</p>
-<dt><code>Boost_USE_RELEASE_LIBS</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>Boost_USE_RELEASE_LIBS</code></dt>
+<dd>New in version 3.10. </dd>
 <p> Set to <code>ON</code> or <code>OFF</code> to specify whether to search and use the release libraries. Default is <code>ON</code>.</p>
-<dt><code>Boost_USE_MULTITHREADED</code></p>
-<dd>Set to OFF to use the non-multithreaded libraries (&quot;mt&quot; tag). Default is <code>ON</code>.</p>
-<dt><code>Boost_USE_STATIC_LIBS</code></p>
-<dd>Set to ON to force the use of the static libraries. Default is <code>OFF</code>.</p>
-<dt><code>Boost_USE_STATIC_RUNTIME</code></p>
-<dd>Set to <code>ON</code> or <code>OFF</code> to specify whether to use libraries linked statically to the C++ runtime (&quot;s&quot; tag). Default is platform dependent.</p>
-<dt><code>Boost_USE_DEBUG_RUNTIME</code></p>
-<dd>Set to <code>ON</code> or <code>OFF</code> to specify whether to use libraries linked to the MS debug C++ runtime (&quot;g&quot; tag). Default is <code>ON</code>.</p>
-<dt><code>Boost_USE_DEBUG_PYTHON</code></p>
-<dd>Set to <code>ON</code> to use libraries compiled with a debug Python build (&quot;y&quot; tag). Default is <code>OFF</code>.</p>
-<dt><code>Boost_USE_STLPORT</code></p>
-<dd>Set to <code>ON</code> to use libraries compiled with STLPort (&quot;p&quot; tag). Default is <code>OFF</code>.</p>
-<dt><code>Boost_USE_STLPORT_DEPRECATED_NATIVE_IOSTREAMS</code></p>
-<dd>Set to ON to use libraries compiled with STLPort deprecated &quot;native iostreams&quot; (&quot;n&quot; tag). Default is <code>OFF</code>.</p>
-<dt><code>Boost_COMPILER</code></p>
-<dd>Set to the compiler-specific library suffix (e.g. <code>-gcc43</code>). Default is auto-computed for the C++ compiler in use. </p>
+<dt><code>Boost_USE_MULTITHREADED</code></dt>
+<dd>Set to OFF to use the non-multithreaded libraries (&quot;mt&quot; tag). Default is <code>ON</code>.</dd>
+<dt><code>Boost_USE_STATIC_LIBS</code></dt>
+<dd>Set to ON to force the use of the static libraries. Default is <code>OFF</code>.</dd>
+<dt><code>Boost_USE_STATIC_RUNTIME</code></dt>
+<dd>Set to <code>ON</code> or <code>OFF</code> to specify whether to use libraries linked statically to the C++ runtime (&quot;s&quot; tag). Default is platform dependent.</dd>
+<dt><code>Boost_USE_DEBUG_RUNTIME</code></dt>
+<dd>Set to <code>ON</code> or <code>OFF</code> to specify whether to use libraries linked to the MS debug C++ runtime (&quot;g&quot; tag). Default is <code>ON</code>.</dd>
+<dt><code>Boost_USE_DEBUG_PYTHON</code></dt>
+<dd>Set to <code>ON</code> to use libraries compiled with a debug Python build (&quot;y&quot; tag). Default is <code>OFF</code>.</dd>
+<dt><code>Boost_USE_STLPORT</code></dt>
+<dd>Set to <code>ON</code> to use libraries compiled with STLPort (&quot;p&quot; tag). Default is <code>OFF</code>.</dd>
+<dt><code>Boost_USE_STLPORT_DEPRECATED_NATIVE_IOSTREAMS</code></dt>
+<dd>Set to ON to use libraries compiled with STLPort deprecated &quot;native iostreams&quot; (&quot;n&quot; tag). Default is <code>OFF</code>.</dd>
+<dt><code>Boost_COMPILER</code></dt>
+<dd>Set to the compiler-specific library suffix (e.g. <code>-gcc43</code>). Default is auto-computed for the C++ compiler in use. </dd>
 <p> Changed in version 3.9: A list may be used if multiple compatible suffixes should be tested for, in decreasing order of preference. </p>
-<dt><code>Boost_LIB_PREFIX</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Boost_LIB_PREFIX</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Set to the platform-specific library name prefix (e.g. <code>lib</code>) used by Boost static libs. This is needed only on platforms where CMake does not know the prefix by default.</p>
-<dt><code>Boost_ARCHITECTURE</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>Boost_ARCHITECTURE</code></dt>
+<dd>New in version 3.13. </dd>
 <p> Set to the architecture-specific library suffix (e.g. <code>-x64</code>). Default is auto-computed for the C++ compiler in use.</p>
-<dt><code>Boost_THREADAPI</code></p>
-<dd>Suffix for <code>thread</code> component library name, such as <code>pthread</code> or <code>win32</code>. Names with and without this suffix will both be tried.</p>
-<dt><code>Boost_NAMESPACE</code></p>
-<dd>Alternate namespace used to build boost with e.g. if set to <code>myboost</code>, will search for <code>myboost_thread</code> instead of <code>boost_thread</code>. </p>
+<dt><code>Boost_THREADAPI</code></dt>
+<dd>Suffix for <code>thread</code> component library name, such as <code>pthread</code> or <code>win32</code>. Names with and without this suffix will both be tried.</dd>
+<dt><code>Boost_NAMESPACE</code></dt>
+<dd>Alternate namespace used to build boost with e.g. if set to <code>myboost</code>, will search for <code>myboost_thread</code> instead of <code>boost_thread</code>. </dd>
 <p> Other variables one may set to control this module are:</p>
-<dt><code>Boost_DEBUG</code></p>
-<dd>Set to <code>ON</code> to enable debug output from <code>FindBoost</code>. Please enable this before filing any bug report.</p>
-<dt><code>Boost_REALPATH</code></p>
-<dd>Set to <code>ON</code> to resolve symlinks for discovered libraries to assist with packaging. For example, the &quot;system&quot; component library may be resolved to <code>/usr/lib/libboost_system.so.1.67.0</code> instead of <code>/usr/lib/libboost_system.so</code>. This does not affect linking and should not be enabled unless the user needs this information.</p>
-<dt><code>Boost_LIBRARY_DIR</code></p>
-<dd>Default value for <code>Boost_LIBRARY_DIR_RELEASE</code> and <code>Boost_LIBRARY_DIR_DEBUG</code>.</p>
-<dt><code>Boost_NO_WARN_NEW_VERSIONS</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>Boost_DEBUG</code></dt>
+<dd>Set to <code>ON</code> to enable debug output from <code>FindBoost</code>. Please enable this before filing any bug report.</dd>
+<dt><code>Boost_REALPATH</code></dt>
+<dd>Set to <code>ON</code> to resolve symlinks for discovered libraries to assist with packaging. For example, the &quot;system&quot; component library may be resolved to <code>/usr/lib/libboost_system.so.1.67.0</code> instead of <code>/usr/lib/libboost_system.so</code>. This does not affect linking and should not be enabled unless the user needs this information.</dd>
+<dt><code>Boost_LIBRARY_DIR</code></dt>
+<dd>Default value for <code>Boost_LIBRARY_DIR_RELEASE</code> and <code>Boost_LIBRARY_DIR_DEBUG</code>.</dd>
+<dt><code>Boost_NO_WARN_NEW_VERSIONS</code></dt>
+<dd>New in version 3.20. </dd>
 <p> Set to <code>ON</code> to suppress the warning about unknown dependencies for new Boost versions. </p>
 <p> On Visual Studio and Borland compilers Boost headers request automatic linking to corresponding libraries. This requires matching libraries to be linked explicitly or available in the link library search path. In this case setting <code>Boost_USE_STATIC_LIBS</code> to <code>OFF</code> may not achieve dynamic linking. Boost automatic linking typically requests static libraries with a few exceptions (such as <code>Boost.Python</code>). Use: </p>
 <pre>add_definitions(${Boost_LIB_DIAGNOSTIC_DEFINITIONS})</pre>
@@ -4331,21 +4331,21 @@ BULLET_LIBRARIES - Link to this, by default it includes
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>BZIP2_FOUND</code></p>
-<dd>system has BZip2</p>
-<dt><code>BZIP2_INCLUDE_DIRS</code></p>
-<dd>New in version 3.12: the BZip2 include directories </p>
-<dt><code>BZIP2_LIBRARIES</code></p>
-<dd>Link these to use BZip2</p>
-<dt><code>BZIP2_NEED_PREFIX</code></p>
-<dd>this is set if the functions are prefixed with <code>BZ2_</code></p>
-<dt><code>BZIP2_VERSION_STRING</code></p>
-<dd>the version of BZip2 found</dl>
+<dt><code>BZIP2_FOUND</code></dt>
+<dd>system has BZip2</dd>
+<dt><code>BZIP2_INCLUDE_DIRS</code></dt>
+<dd>New in version 3.12: the BZip2 include directories </dd>
+<dt><code>BZIP2_LIBRARIES</code></dt>
+<dd>Link these to use BZip2</dd>
+<dt><code>BZIP2_NEED_PREFIX</code></dt>
+<dd>this is set if the functions are prefixed with <code>BZ2_</code></dd>
+<dt><code>BZIP2_VERSION_STRING</code></dt>
+<dd>the version of BZip2 found</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>BZIP2_INCLUDE_DIR</code></p>
-<dd>the BZip2 include directory</dl>
+<dt><code>BZIP2_INCLUDE_DIR</code></dt>
+<dd>the BZip2 include directory</dd></dl>
 <h3>FindCABLE</h3>
 <p>Find CABLE </p>
 <p> This module finds if CABLE is installed and determines where the include files and libraries are. This code sets the following variables: </p>
@@ -4367,19 +4367,19 @@ COIN3D_LIBRARIES - Link to this to use Coin3D</pre>
 <h3>Search Behavior</h3>
 <p>The CUDA Toolkit search behavior uses the following order:</p>
 <dl>
-<dt>1.</p>
-<dd>If the <code>CUDA</code> language has been enabled we will use the directory containing the compiler as the first search location for <code>nvcc</code>.</p>
-<dt>2.</p>
-<dd>If the <code>CUDAToolkit_ROOT</code> cmake configuration variable (e.g., <code>-DCUDAToolkit_ROOT=/some/path</code>) <i>or</i> environment variable is defined, it will be searched. If both an environment variable <code>and</code> a configuration variable are specified, the <i>configuration</i> variable takes precedence. </p>
+<dt>1.</dt>
+<dd>If the <code>CUDA</code> language has been enabled we will use the directory containing the compiler as the first search location for <code>nvcc</code>.</dd>
+<dt>2.</dt>
+<dd>If the <code>CUDAToolkit_ROOT</code> cmake configuration variable (e.g., <code>-DCUDAToolkit_ROOT=/some/path</code>) <i>or</i> environment variable is defined, it will be searched. If both an environment variable <code>and</code> a configuration variable are specified, the <i>configuration</i> variable takes precedence. </dd>
 <p> The directory specified here must be such that the executable <code>nvcc</code> or the appropriate <code>version.txt</code> file can be found underneath the specified directory.</p>
-<dt>3.</p>
-<dd>If the CUDA_PATH environment variable is defined, it will be searched for <code>nvcc</code>.</p>
-<dt>4.</p>
-<dd>The user&#8217;s path is searched for <code>nvcc</code> using <code>find_program()</code>. If this is found, no subsequent search attempts are performed. Users are responsible for ensuring that the first <code>nvcc</code> to show up in the path is the desired path in the event that multiple CUDA Toolkits are installed.</p>
-<dt>5.</p>
-<dd>On Unix systems, if the symbolic link <code>/usr/local/cuda</code> exists, this is used. No subsequent search attempts are performed. No default symbolic link location exists for the Windows platform.</p>
-<dt>6.</p>
-<dd>The platform specific default install locations are searched. If exactly one candidate is found, this is used. The default CUDA Toolkit install locations searched are: <center></p>
+<dt>3.</dt>
+<dd>If the CUDA_PATH environment variable is defined, it will be searched for <code>nvcc</code>.</dd>
+<dt>4.</dt>
+<dd>The user&#8217;s path is searched for <code>nvcc</code> using <code>find_program()</code>. If this is found, no subsequent search attempts are performed. Users are responsible for ensuring that the first <code>nvcc</code> to show up in the path is the desired path in the event that multiple CUDA Toolkits are installed.</dd>
+<dt>5.</dt>
+<dd>On Unix systems, if the symbolic link <code>/usr/local/cuda</code> exists, this is used. No subsequent search attempts are performed. No default symbolic link location exists for the Windows platform.</dd>
+<dt>6.</dt>
+<dd>The platform specific default install locations are searched. If exactly one candidate is found, this is used. The default CUDA Toolkit install locations searched are: <center></dd>
 <table>
 <tr VALIGN=top>
 <td COLSPAN=2>
@@ -4433,280 +4433,280 @@ COIN3D_LIBRARIES - Link to this to use Coin3D</pre>
 <p> There are too many factors involved in making an automatic decision in the presence of multiple CUDA Toolkits being installed. In this situation, users are encouraged to either (1) set <code>CUDAToolkit_ROOT</code> or (2) ensure that the correct <code>nvcc</code> executable shows up in <code>$PATH</code> for <code>find_program()</code> to find.</dl>
 <h3>Arguments</h3>
 <dl>
-<dt><code>[&lt;version&gt;]</code></p>
-<dd>The <code>[&lt;version&gt;]</code> argument requests a version with which the package found should be compatible. See find_package version format for more details.</dl>
+<dt><code>[&lt;version&gt;]</code></dt>
+<dd>The <code>[&lt;version&gt;]</code> argument requests a version with which the package found should be compatible. See find_package version format for more details.</dd></dl>
 <h3>Options</h3>
 <dl>
-<dt><code>REQUIRED</code></p>
-<dd>If specified, configuration will error if a suitable CUDA Toolkit is not found.</p>
-<dt><code>QUIET</code></p>
-<dd>If specified, the search for a suitable CUDA Toolkit will not produce any messages.</p>
-<dt><code>EXACT</code></p>
-<dd>If specified, the CUDA Toolkit is considered found only if the exact <code>VERSION</code> specified is recovered.</dl>
+<dt><code>REQUIRED</code></dt>
+<dd>If specified, configuration will error if a suitable CUDA Toolkit is not found.</dd>
+<dt><code>QUIET</code></dt>
+<dd>If specified, the search for a suitable CUDA Toolkit will not produce any messages.</dd>
+<dt><code>EXACT</code></dt>
+<dd>If specified, the CUDA Toolkit is considered found only if the exact <code>VERSION</code> specified is recovered.</dd></dl>
 <h3>Imported targets</h3>
 <p>An imported target named <code>CUDA::toolkit</code> is provided. </p>
 <p> This module defines <code>IMPORTED</code> targets for each of the following libraries that are part of the CUDAToolkit:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>CUDA Runtime Library</i></p>
-<dt>&bull;</p>
-<dd><i>CUDA Driver Library</i></p>
-<dt>&bull;</p>
-<dd><i>cuBLAS</i></p>
-<dt>&bull;</p>
-<dd><i>cuFFT</i></p>
-<dt>&bull;</p>
-<dd><i>cuRAND</i></p>
-<dt>&bull;</p>
-<dd><i>cuSOLVER</i></p>
-<dt>&bull;</p>
-<dd><i>cuSPARSE</i></p>
-<dt>&bull;</p>
-<dd><i>cuPTI</i></p>
-<dt>&bull;</p>
-<dd><i>NPP</i></p>
-<dt>&bull;</p>
-<dd><i>nvBLAS</i></p>
-<dt>&bull;</p>
-<dd><i>nvGRAPH</i></p>
-<dt>&bull;</p>
-<dd><i>nvJPEG</i></p>
-<dt>&bull;</p>
-<dd><i>nvidia-ML</i></p>
-<dt>&bull;</p>
-<dd><i>nvRTC</i></p>
-<dt>&bull;</p>
-<dd><i>nvToolsExt</i></p>
-<dt>&bull;</p>
-<dd><i>OpenCL</i></p>
-<dt>&bull;</p>
-<dd><i>cuLIBOS</i></dl>
+<dt>&bull;</dt>
+<dd><i>CUDA Runtime Library</i></dd>
+<dt>&bull;</dt>
+<dd><i>CUDA Driver Library</i></dd>
+<dt>&bull;</dt>
+<dd><i>cuBLAS</i></dd>
+<dt>&bull;</dt>
+<dd><i>cuFFT</i></dd>
+<dt>&bull;</dt>
+<dd><i>cuRAND</i></dd>
+<dt>&bull;</dt>
+<dd><i>cuSOLVER</i></dd>
+<dt>&bull;</dt>
+<dd><i>cuSPARSE</i></dd>
+<dt>&bull;</dt>
+<dd><i>cuPTI</i></dd>
+<dt>&bull;</dt>
+<dd><i>NPP</i></dd>
+<dt>&bull;</dt>
+<dd><i>nvBLAS</i></dd>
+<dt>&bull;</dt>
+<dd><i>nvGRAPH</i></dd>
+<dt>&bull;</dt>
+<dd><i>nvJPEG</i></dd>
+<dt>&bull;</dt>
+<dd><i>nvidia-ML</i></dd>
+<dt>&bull;</dt>
+<dd><i>nvRTC</i></dd>
+<dt>&bull;</dt>
+<dd><i>nvToolsExt</i></dd>
+<dt>&bull;</dt>
+<dd><i>OpenCL</i></dd>
+<dt>&bull;</dt>
+<dd><i>cuLIBOS</i></dd></dl>
 <h3>CUDA Runtime Library</h3>
 <p>The CUDA Runtime library (cudart) are what most applications will typically need to link against to make any calls such as <i>cudaMalloc</i>, and <i>cudaFree</i>. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::cudart</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cudart_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::cudart</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cudart_static</code></dd></dl>
 <h3>CUDA Driver Library</h3>
 <p>The CUDA Driver library (cuda) are used by applications that use calls such as <i>cuMemAlloc</i>, and <i>cuMemFree</i>. This is generally used by advanced </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::cuda_driver</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cuda_driver</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::cuda_driver</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cuda_driver</code></dd></dl>
 <h3>cuBLAS</h3>
 <p>The <i>cuBLAS</i> library. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::cublas</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cublas_static</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cublasLt</code> starting in CUDA 10.1</p>
-<dt>&bull;</p>
-<dd><code>CUDA::cublasLt_static</code> starting in CUDA 10.1</dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::cublas</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cublas_static</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cublasLt</code> starting in CUDA 10.1</dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cublasLt_static</code> starting in CUDA 10.1</dd></dl>
 <h3>cuFFT</h3>
 <p>The <i>cuFFT</i> library. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::cufft</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cufftw</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cufft_static</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cufftw_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::cufft</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cufftw</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cufft_static</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cufftw_static</code></dd></dl>
 <h3>cuRAND</h3>
 <p>The <i>cuRAND</i> library. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::curand</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::curand_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::curand</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::curand_static</code></dd></dl>
 <h3>cuSOLVER</h3>
 <p>The <i>cuSOLVER</i> library. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::cusolver</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cusolver_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::cusolver</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cusolver_static</code></dd></dl>
 <h3>cuSPARSE</h3>
 <p>The <i>cuSPARSE</i> library. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::cusparse</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cusparse_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::cusparse</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cusparse_static</code></dd></dl>
 <h3>cupti</h3>
 <p>The <i>NVIDIA CUDA Profiling Tools Interface</i>. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::cupti</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::cupti_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::cupti</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::cupti_static</code></dd></dl>
 <h3>Npp</h3>
 <p>The <i>NPP</i> libraries. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>nppc</i>:</p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppc</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppc_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppial</i>: Arithmetic and logical operation functions in <i>nppi_arithmetic_and_logical_operations.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppial</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppial_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppicc</i>: Color conversion and sampling functions in <i>nppi_color_conversion.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppicc</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppicc_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppicom</i>: JPEG compression and decompression functions in <i>nppi_compression_functions.h</i> Removed starting in CUDA 11.0, use <i>nvJPEG</i> instead.</p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppicom</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppicom_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppidei</i>: Data exchange and initialization functions in <i>nppi_data_exchange_and_initialization.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppidei</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppidei_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppif</i>: Filtering and computer vision functions in <i>nppi_filter_functions.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppif</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppif_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppig</i>: Geometry transformation functions found in <i>nppi_geometry_transforms.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppig</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppig_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppim</i>: Morphological operation functions found in <i>nppi_morphological_operations.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppim</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppim_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppist</i>: Statistics and linear transform in <i>nppi_statistics_functions.h</i> and <i>nppi_linear_transforms.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppist</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppist_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppisu</i>: Memory support functions in <i>nppi_support_functions.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppisu</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppisu_static</code></p>
-<dt>&bull;</p>
-<dd><i>nppitc</i>: Threshold and compare operation functions in <i>nppi_threshold_and_compare_operations.h</i></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppitc</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nppitc_static</code></p>
-<dt>&bull;</p>
-<dd><i>npps</i>:</p>
-<dt>&bull;</p>
-<dd><code>CUDA::npps</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::npps_static</code></dl>
+<dt>&bull;</dt>
+<dd><i>nppc</i>:</dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppc</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppc_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppial</i>: Arithmetic and logical operation functions in <i>nppi_arithmetic_and_logical_operations.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppial</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppial_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppicc</i>: Color conversion and sampling functions in <i>nppi_color_conversion.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppicc</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppicc_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppicom</i>: JPEG compression and decompression functions in <i>nppi_compression_functions.h</i> Removed starting in CUDA 11.0, use <i>nvJPEG</i> instead.</dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppicom</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppicom_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppidei</i>: Data exchange and initialization functions in <i>nppi_data_exchange_and_initialization.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppidei</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppidei_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppif</i>: Filtering and computer vision functions in <i>nppi_filter_functions.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppif</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppif_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppig</i>: Geometry transformation functions found in <i>nppi_geometry_transforms.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppig</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppig_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppim</i>: Morphological operation functions found in <i>nppi_morphological_operations.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppim</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppim_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppist</i>: Statistics and linear transform in <i>nppi_statistics_functions.h</i> and <i>nppi_linear_transforms.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppist</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppist_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppisu</i>: Memory support functions in <i>nppi_support_functions.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppisu</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppisu_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>nppitc</i>: Threshold and compare operation functions in <i>nppi_threshold_and_compare_operations.h</i></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppitc</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nppitc_static</code></dd>
+<dt>&bull;</dt>
+<dd><i>npps</i>:</dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::npps</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::npps_static</code></dd></dl>
 <h3>nvBLAS</h3>
 <p>The <i>nvBLAS</i> libraries. This is a shared library only. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::nvblas</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvblas</code></dd></dl>
 <h3>nvGRAPH</h3>
 <p>The <i>nvGRAPH</i> library. Removed starting in CUDA 11.0 </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::nvgraph</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nvgraph_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvgraph</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvgraph_static</code></dd></dl>
 <h3>nvJPEG</h3>
 <p>The <i>nvJPEG</i> library. Introduced in CUDA 10. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::nvjpeg</code></p>
-<dt>&bull;</p>
-<dd><code>CUDA::nvjpeg_static</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvjpeg</code></dd>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvjpeg_static</code></dd></dl>
 <h3>nvRTC</h3>
 <p>The <i>nvRTC</i> (Runtime Compilation) library. This is a shared library only. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::nvrtc</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvrtc</code></dd></dl>
 <h3>nvidia-ML</h3>
 <p>The <i>NVIDIA Management Library</i>. This is a shared library only. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::nvml</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvml</code></dd></dl>
 <h3>nvToolsExt</h3>
 <p>The <i>NVIDIA Tools Extension</i>. This is a shared library only. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::nvToolsExt</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::nvToolsExt</code></dd></dl>
 <h3>OpenCL</h3>
 <p>The <i>NVIDIA OpenCL Library</i>. This is a shared library only. </p>
 <p> Targets Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::OpenCL</code></dl>
+<dt>&bull;</dt>
+<dd><code>CUDA::OpenCL</code></dd></dl>
 <h3>cuLIBOS</h3>
 <p>The cuLIBOS library is a backend thread abstraction layer library which is static only. The <code>CUDA::cublas_static</code>, <code>CUDA::cusparse_static</code>, <code>CUDA::cufft_static</code>, <code>CUDA::curand_static</code>, and (when implemented) NPP libraries all automatically have this dependency linked. </p>
 <p> Target Created:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CUDA::culibos</code> </p>
+<dt>&bull;</dt>
+<dd><code>CUDA::culibos</code> </dd>
 <p> <code>Note</code>: direct usage of this target by consumers should not be necessary.</dl>
 <h3>Result variables</h3>
 <dl>
-<dt><code>CUDAToolkit_FOUND</code></p>
-<dd>A boolean specifying whether or not the CUDA Toolkit was found.</p>
-<dt><code>CUDAToolkit_VERSION</code></p>
-<dd>The exact version of the CUDA Toolkit found (as reported by <code>nvcc &#8211;version</code> or <code>version.txt</code>).</p>
-<dt><code>CUDAToolkit_VERSION_MAJOR</code></p>
-<dd>The major version of the CUDA Toolkit.</p>
-<dt><code>CUDAToolkit_VERSION_MINOR</code></p>
-<dd>The minor version of the CUDA Toolkit.</p>
-<dt><code>CUDAToolkit_VERSION_PATCH</code></p>
-<dd>The patch version of the CUDA Toolkit.</p>
-<dt><code>CUDAToolkit_BIN_DIR</code></p>
-<dd>The path to the CUDA Toolkit library directory that contains the CUDA executable <code>nvcc</code>.</p>
-<dt><code>CUDAToolkit_INCLUDE_DIRS</code></p>
-<dd>The path to the CUDA Toolkit <code>include</code> folder containing the header files required to compile a project linking against CUDA.</p>
-<dt><code>CUDAToolkit_LIBRARY_DIR</code></p>
-<dd>The path to the CUDA Toolkit library directory that contains the CUDA Runtime library <code>cudart</code>.</p>
-<dt><code>CUDAToolkit_LIBRARY_ROOT</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>CUDAToolkit_FOUND</code></dt>
+<dd>A boolean specifying whether or not the CUDA Toolkit was found.</dd>
+<dt><code>CUDAToolkit_VERSION</code></dt>
+<dd>The exact version of the CUDA Toolkit found (as reported by <code>nvcc &#8211;version</code> or <code>version.txt</code>).</dd>
+<dt><code>CUDAToolkit_VERSION_MAJOR</code></dt>
+<dd>The major version of the CUDA Toolkit.</dd>
+<dt><code>CUDAToolkit_VERSION_MINOR</code></dt>
+<dd>The minor version of the CUDA Toolkit.</dd>
+<dt><code>CUDAToolkit_VERSION_PATCH</code></dt>
+<dd>The patch version of the CUDA Toolkit.</dd>
+<dt><code>CUDAToolkit_BIN_DIR</code></dt>
+<dd>The path to the CUDA Toolkit library directory that contains the CUDA executable <code>nvcc</code>.</dd>
+<dt><code>CUDAToolkit_INCLUDE_DIRS</code></dt>
+<dd>The path to the CUDA Toolkit <code>include</code> folder containing the header files required to compile a project linking against CUDA.</dd>
+<dt><code>CUDAToolkit_LIBRARY_DIR</code></dt>
+<dd>The path to the CUDA Toolkit library directory that contains the CUDA Runtime library <code>cudart</code>.</dd>
+<dt><code>CUDAToolkit_LIBRARY_ROOT</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The path to the CUDA Toolkit directory containing the nvvm directory and version.txt.</p>
-<dt><code>CUDAToolkit_TARGET_DIR</code></p>
-<dd>The path to the CUDA Toolkit directory including the target architecture when cross-compiling. When not cross-compiling this will be equivalent to the parent directory of <code>CUDAToolkit_BIN_DIR</code>.</p>
-<dt><code>CUDAToolkit_NVCC_EXECUTABLE</code></p>
-<dd>The path to the NVIDIA CUDA compiler <code>nvcc</code>. Note that this path may <code>not</code> be the same as <code>CMAKE_CUDA_COMPILER</code>. <code>nvcc</code> must be found to determine the CUDA Toolkit version as well as determining other features of the Toolkit. This variable is set for the convenience of modules that depend on this one.</dl>
+<dt><code>CUDAToolkit_TARGET_DIR</code></dt>
+<dd>The path to the CUDA Toolkit directory including the target architecture when cross-compiling. When not cross-compiling this will be equivalent to the parent directory of <code>CUDAToolkit_BIN_DIR</code>.</dd>
+<dt><code>CUDAToolkit_NVCC_EXECUTABLE</code></dt>
+<dd>The path to the NVIDIA CUDA compiler <code>nvcc</code>. Note that this path may <code>not</code> be the same as <code>CMAKE_CUDA_COMPILER</code>. <code>nvcc</code> must be found to determine the CUDA Toolkit version as well as determining other features of the Toolkit. This variable is set for the convenience of modules that depend on this one.</dd></dl>
 <h3>FindCups</h3>
 <p>Find the Common UNIX Printing System (CUPS). </p>
 <p> Set <code>CUPS_REQUIRE_IPP_DELETE_ATTRIBUTE</code> to <code>TRUE</code> if you need a version which features this function (i.e. at least <code>1.1.19</code>)</p>
@@ -4716,19 +4716,19 @@ COIN3D_LIBRARIES - Link to this to use Coin3D</pre>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>CUPS_FOUND</code></p>
-<dd>true if CUPS headers and libraries were found</p>
-<dt><code>CUPS_INCLUDE_DIRS</code></p>
-<dd>the directory containing the Cups headers</p>
-<dt><code>CUPS_LIBRARIES</code></p>
-<dd>the libraries to link against to use CUPS.</p>
-<dt><code>CUPS_VERSION_STRING</code></p>
-<dd>the version of CUPS found (since CMake 2.8.8)</dl>
+<dt><code>CUPS_FOUND</code></dt>
+<dd>true if CUPS headers and libraries were found</dd>
+<dt><code>CUPS_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the Cups headers</dd>
+<dt><code>CUPS_LIBRARIES</code></dt>
+<dd>the libraries to link against to use CUPS.</dd>
+<dt><code>CUPS_VERSION_STRING</code></dt>
+<dd>the version of CUPS found (since CMake 2.8.8)</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>CUPS_INCLUDE_DIR</code></p>
-<dd>the directory containing the Cups headers</dl>
+<dt><code>CUPS_INCLUDE_DIR</code></dt>
+<dd>the directory containing the Cups headers</dd></dl>
 <h3>FindCURL</h3>
 <p>Find the native CURL headers and libraries. </p>
 <p> New in version 3.14: This module accept optional COMPONENTS to check supported features and protocols: </p>
@@ -4742,14 +4742,14 @@ FEATURES: SSL IPv6 UnixSockets libz AsynchDNS IDN GSS-API PSL SPNEGO
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>CURL_FOUND</code></p>
-<dd>&quot;True&quot; if <code>curl</code> found.</p>
-<dt><code>CURL_INCLUDE_DIRS</code></p>
-<dd>where to find <code>curl</code>/<code>curl.h</code>, etc.</p>
-<dt><code>CURL_LIBRARIES</code></p>
-<dd>List of libraries when using <code>curl</code>.</p>
-<dt><code>CURL_VERSION_STRING</code></p>
-<dd>The version of <code>curl</code> found. </p>
+<dt><code>CURL_FOUND</code></dt>
+<dd>&quot;True&quot; if <code>curl</code> found.</dd>
+<dt><code>CURL_INCLUDE_DIRS</code></dt>
+<dd>where to find <code>curl</code>/<code>curl.h</code>, etc.</dd>
+<dt><code>CURL_LIBRARIES</code></dt>
+<dd>List of libraries when using <code>curl</code>.</dd>
+<dt><code>CURL_VERSION_STRING</code></dt>
+<dd>The version of <code>curl</code> found. </dd>
 <p> New in version 3.13: Debug and Release variants are found separately. </p>
 </dl>
 <h3>CURL CMake</h3>
@@ -4761,33 +4761,33 @@ FEATURES: SSL IPv6 UnixSockets libz AsynchDNS IDN GSS-API PSL SPNEGO
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>CURSES_FOUND</code></p>
-<dd>True if Curses is found.</p>
-<dt><code>CURSES_INCLUDE_DIRS</code></p>
-<dd>The include directories needed to use Curses.</p>
-<dt><code>CURSES_LIBRARIES</code></p>
-<dd>The libraries needed to use Curses.</p>
-<dt><code>CURSES_CFLAGS</code></p>
-<dd>New in version 3.16. </p>
+<dt><code>CURSES_FOUND</code></dt>
+<dd>True if Curses is found.</dd>
+<dt><code>CURSES_INCLUDE_DIRS</code></dt>
+<dd>The include directories needed to use Curses.</dd>
+<dt><code>CURSES_LIBRARIES</code></dt>
+<dd>The libraries needed to use Curses.</dd>
+<dt><code>CURSES_CFLAGS</code></dt>
+<dd>New in version 3.16. </dd>
 <p> Parameters which ought be given to C/C++ compilers when using Curses.</p>
-<dt><code>CURSES_HAVE_CURSES_H</code></p>
-<dd>True if curses.h is available.</p>
-<dt><code>CURSES_HAVE_NCURSES_H</code></p>
-<dd>True if ncurses.h is available.</p>
-<dt><code>CURSES_HAVE_NCURSES_NCURSES_H</code></p>
-<dd>True if <code>ncurses/ncurses.h</code> is available.</p>
-<dt><code>CURSES_HAVE_NCURSES_CURSES_H</code></p>
-<dd>True if <code>ncurses/curses.h</code> is available. </p>
+<dt><code>CURSES_HAVE_CURSES_H</code></dt>
+<dd>True if curses.h is available.</dd>
+<dt><code>CURSES_HAVE_NCURSES_H</code></dt>
+<dd>True if ncurses.h is available.</dd>
+<dt><code>CURSES_HAVE_NCURSES_NCURSES_H</code></dt>
+<dd>True if <code>ncurses/ncurses.h</code> is available.</dd>
+<dt><code>CURSES_HAVE_NCURSES_CURSES_H</code></dt>
+<dd>True if <code>ncurses/curses.h</code> is available. </dd>
 <p> Set <code>CURSES_NEED_NCURSES</code> to <code>TRUE</code> before the <code>find_package(Curses)</code> call if NCurses functionality is required. </p>
 <p> New in version 3.10: Set <code>CURSES_NEED_WIDE</code> to <code>TRUE</code> before the <code>find_package(Curses)</code> call if unicode functionality is required. </p>
 </dl>
 <h3>Backward Compatibility</h3>
 <p>The following variable are provided for backward compatibility:</p>
 <dl>
-<dt><code>CURSES_INCLUDE_DIR</code></p>
-<dd>Path to Curses include. Use <code>CURSES_INCLUDE_DIRS</code> instead.</p>
-<dt><code>CURSES_LIBRARY</code></p>
-<dd>Path to Curses library. Use <code>CURSES_LIBRARIES</code> instead.</dl>
+<dt><code>CURSES_INCLUDE_DIR</code></dt>
+<dd>Path to Curses include. Use <code>CURSES_INCLUDE_DIRS</code> instead.</dd>
+<dt><code>CURSES_LIBRARY</code></dt>
+<dd>Path to Curses library. Use <code>CURSES_LIBRARIES</code> instead.</dd></dl>
 <h3>FindCVS</h3>
 <p>Find the Concurrent Versions System (CVS). </p>
 <p> The module defines the following variables: </p>
@@ -4882,10 +4882,10 @@ DCMTK_DIR - (optional) Source directory for DCMTK</pre>
 <h3>Compatibility</h3>
 <p>This module is able to find a version of DCMTK that does or does not export a <i>DCMTKConfig.cmake</i> file. It applies a two step process:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Step 1: Attempt to find DCMTK version providing a <i>DCMTKConfig.cmake</i> file.</p>
-<dt>&bull;</p>
-<dd>Step 2: If step 1 failed, rely on <i>FindDCMTK.cmake</i> to set <i>DCMTK_*</i> variables details below. </p>
+<dt>&bull;</dt>
+<dd>Step 1: Attempt to find DCMTK version providing a <i>DCMTKConfig.cmake</i> file.</dd>
+<dt>&bull;</dt>
+<dd>Step 2: If step 1 failed, rely on <i>FindDCMTK.cmake</i> to set <i>DCMTK_*</i> variables details below. </dd>
 <p> <i>Recent DCMTK</i> provides a <i>DCMTKConfig.cmake</i> <code>package configuration file</code>. To exclusively use the package configuration file (recommended when possible), pass the <i>NO_MODULE</i> option to <code>find_package()</code>. For example, <i>find_package(DCMTK NO_MODULE)</i>. This requires official DCMTK snapshot <i>3.6.1_20140617</i> or newer. </p>
 <p> Until all clients update to the more recent DCMTK, build systems will need to support different versions of DCMTK. </p>
 <p> On any given system, the following combinations of DCMTK versions could be considered: <center></p>
@@ -5017,47 +5017,47 @@ DCMTK_DIR - (optional) Source directory for DCMTK</pre>
 <p>New in version 3.21. </p>
 <p> This module defines the <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>DevIL::IL</code></p>
-<dd>Defined if the system has DevIL.</p>
-<dt><code>DevIL::ILU</code></p>
-<dd>Defined if the system has DevIL Utilities.</p>
-<dt><code>DevIL::ILUT</code></p>
-<dd>Defined if the system has DevIL Utility Toolkit.</dl>
+<dt><code>DevIL::IL</code></dt>
+<dd>Defined if the system has DevIL.</dd>
+<dt><code>DevIL::ILU</code></dt>
+<dd>Defined if the system has DevIL Utilities.</dd>
+<dt><code>DevIL::ILUT</code></dt>
+<dd>Defined if the system has DevIL Utility Toolkit.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module sets:</p>
 <dl>
-<dt><code>IL_LIBRARIES</code></p>
-<dd>The name of the IL library. These include the full path to the core DevIL library. This one has to be linked into the application.</p>
-<dt><code>ILU_LIBRARIES</code></p>
-<dd>The name of the ILU library. Again, the full path. This library is for filters and effects, not actual loading. It doesn&#8217;t have to be linked if the functionality it provides is not used.</p>
-<dt><code>ILUT_LIBRARIES</code></p>
-<dd>The name of the ILUT library. Full path. This part of the library interfaces with OpenGL. It is not strictly needed in applications.</p>
-<dt><code>IL_INCLUDE_DIR</code></p>
-<dd>where to find the il.h, ilu.h and ilut.h files.</p>
-<dt><code>DevIL_FOUND</code></p>
-<dd>This is set to TRUE if all the above variables were set. This will be set to false if ILU or ILUT are not found, even if they are not needed. In most systems, if one library is found all the others are as well. That&#8217;s the way the DevIL developers release it.</p>
-<dt><code>DevIL_ILUT_FOUND</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>IL_LIBRARIES</code></dt>
+<dd>The name of the IL library. These include the full path to the core DevIL library. This one has to be linked into the application.</dd>
+<dt><code>ILU_LIBRARIES</code></dt>
+<dd>The name of the ILU library. Again, the full path. This library is for filters and effects, not actual loading. It doesn&#8217;t have to be linked if the functionality it provides is not used.</dd>
+<dt><code>ILUT_LIBRARIES</code></dt>
+<dd>The name of the ILUT library. Full path. This part of the library interfaces with OpenGL. It is not strictly needed in applications.</dd>
+<dt><code>IL_INCLUDE_DIR</code></dt>
+<dd>where to find the il.h, ilu.h and ilut.h files.</dd>
+<dt><code>DevIL_FOUND</code></dt>
+<dd>This is set to TRUE if all the above variables were set. This will be set to false if ILU or ILUT are not found, even if they are not needed. In most systems, if one library is found all the others are as well. That&#8217;s the way the DevIL developers release it.</dd>
+<dt><code>DevIL_ILUT_FOUND</code></dt>
+<dd>New in version 3.21. </dd>
 <p> This is set to TRUE if the ILUT library is found.</dl>
 <h3>FindDoxygen</h3>
 <p>Doxygen is a documentation generation tool (see <i><a rel="nofollow" href="http://www.doxygen.org">http://www.doxygen.org</a></i>). This module looks for Doxygen and some optional tools it supports:</p>
 <dl>
-<dt><code>dot</code></p>
-<dd><i>Graphviz</i> <code>dot</code> utility used to render various graphs.</p>
-<dt><code>mscgen</code></p>
-<dd><i>Message Chart Generator</i> utility used by Doxygen&#8217;s <code>\msc</code> and <code>\mscfile</code> commands.</p>
-<dt><code>dia</code></p>
-<dd><i>Dia</i> the diagram editor used by Doxygen&#8217;s <code>\diafile</code> command. </p>
+<dt><code>dot</code></dt>
+<dd><i>Graphviz</i> <code>dot</code> utility used to render various graphs.</dd>
+<dt><code>mscgen</code></dt>
+<dd><i>Message Chart Generator</i> utility used by Doxygen&#8217;s <code>\msc</code> and <code>\mscfile</code> commands.</dd>
+<dt><code>dia</code></dt>
+<dd><i>Dia</i> the diagram editor used by Doxygen&#8217;s <code>\diafile</code> command. </dd>
 <p> New in version 3.9: These tools are available as components in the <code>find_package()</code> command. For example: </p>
 <pre># Require dot, treat the other components as optional
 find_package(Doxygen
  REQUIRED dot
  OPTIONAL_COMPONENTS mscgen dia)</pre>
 <p>The following variables are defined by this module:</p>
-<dt><code>DOXYGEN_FOUND</code></p>
-<dd>True if the <code>doxygen</code> executable was found.</p>
-<dt><code>DOXYGEN_VERSION</code></p>
-<dd>The version reported by <code>doxygen &#8211;version</code>. </p>
+<dt><code>DOXYGEN_FOUND</code></dt>
+<dd>True if the <code>doxygen</code> executable was found.</dd>
+<dt><code>DOXYGEN_VERSION</code></dt>
+<dd>The version reported by <code>doxygen &#8211;version</code>. </dd>
 <p> New in version 3.9: The module defines <code>IMPORTED</code> targets for Doxygen and each component found. These can be used as part of custom commands, etc. and should be preferred over old-style (and now deprecated) variables like <code>DOXYGEN_EXECUTABLE</code>. The following import targets are defined if their corresponding executable could be found (the component import targets will only be defined if that component was requested): </p>
 <pre>Doxygen::doxygen
 Doxygen::dot
@@ -5066,8 +5066,8 @@ Doxygen::dia</pre>
 </dl>
 <h3>Functions</h3>
 <dl>
-<dt><code>doxygen_add_docs</code></p>
-<dd>New in version 3.9. </p>
+<dt><code>doxygen_add_docs</code></dt>
+<dd>New in version 3.9. </dd>
 <p> This function is intended as a convenience for adding a target for generating documentation with Doxygen. It aims to provide sensible defaults so that projects can generally just provide the input files and directories and that will be sufficient to give sensible results. The function supports the ability to customize the Doxygen configuration used to build the documentation. </p>
 <pre>doxygen_add_docs(targetName
  [filesOrDirs...]
@@ -5082,26 +5082,26 @@ Doxygen::dia</pre>
 <p> New in version 3.16: If <code>USE_STAMP_FILE</code> is set, the custom command defined by this function will create a stamp file with the name <code>&lt;targetName&gt;.stamp</code> in the current binary directory whenever doxygen is re-run. With this option present, all items in <code>&lt;filesOrDirs&gt;</code> must be files (i.e. no directories, symlinks or wildcards) and each of the files must exist at the time <code>doxygen_add_docs()</code> is called. An error will be raised if any of the items listed is missing or is not a file when <code>USE_STAMP_FILE</code> is given. A dependency will be created on each of the files so that doxygen will only be re-run if one of the files is updated. Without the <code>USE_STAMP_FILE</code> option, doxygen will always be re-run if the <code>&lt;targetName&gt;</code> target is built regardless of whether anything listed in <code>&lt;filesOrDirs&gt;</code> has changed. </p>
 <p> The contents of the generated <code>Doxyfile</code> can be customized by setting CMake variables before calling <code>doxygen_add_docs()</code>. Any variable with a name of the form <code>DOXYGEN_&lt;tag&gt;</code> will have its value substituted for the corresponding <code>&lt;tag&gt;</code> configuration option in the <code>Doxyfile</code>. See the <i>Doxygen documentation</i> for the full list of supported configuration options. </p>
 <p> Some of Doxygen&#8217;s defaults are overridden to provide more appropriate behavior for a CMake project. Each of the following will be explicitly set unless the variable already has a value before <code>doxygen_add_docs()</code> is called (with some exceptions noted):</p>
-<dt><code>DOXYGEN_HAVE_DOT</code></p>
-<dd>Set to <code>YES</code> if the <code>dot</code> component was requested and it was found, <code>NO</code> otherwise. Any existing value of <code>DOXYGEN_HAVE_DOT</code> is ignored.</p>
-<dt><code>DOXYGEN_DOT_MULTI_TARGETS</code></p>
-<dd>Set to <code>YES</code> by this module (note that this requires a <code>dot</code> version newer than 1.8.10). This option is only meaningful if <code>DOXYGEN_HAVE_DOT</code> is also set to <code>YES</code>.</p>
-<dt><code>DOXYGEN_GENERATE_LATEX</code></p>
-<dd>Set to <code>NO</code> by this module.</p>
-<dt><code>DOXYGEN_WARN_FORMAT</code></p>
-<dd>For Visual Studio based generators, this is set to the form recognized by the Visual Studio IDE: <code>$file($line) : $text</code>. For all other generators, Doxygen&#8217;s default value is not overridden.</p>
-<dt><code>DOXYGEN_PROJECT_NAME</code></p>
-<dd>Populated with the name of the current project (i.e. <code>PROJECT_NAME</code>).</p>
-<dt><code>DOXYGEN_PROJECT_NUMBER</code></p>
-<dd>Populated with the version of the current project (i.e. <code>PROJECT_VERSION</code>).</p>
-<dt><code>DOXYGEN_PROJECT_BRIEF</code></p>
-<dd>Populated with the description of the current project (i.e. <code>PROJECT_DESCRIPTION</code>).</p>
-<dt><code>DOXYGEN_INPUT</code></p>
-<dd>Projects should not set this variable. It will be populated with the set of files and directories passed to <code>doxygen_add_docs()</code>, thereby providing consistent behavior with the other built-in commands like <code>add_executable()</code>, <code>add_library()</code> and <code>add_custom_target()</code>. If a variable named <code>DOXYGEN_INPUT</code> is set by the project, it will be ignored and a warning will be issued.</p>
-<dt><code>DOXYGEN_RECURSIVE</code></p>
-<dd>Set to <code>YES</code> by this module.</p>
-<dt><code>DOXYGEN_EXCLUDE_PATTERNS</code></p>
-<dd>If the set of inputs includes directories, this variable will specify patterns used to exclude files from them. The following patterns are added by <code>doxygen_add_docs()</code> to ensure CMake-specific files and directories are not included in the input. If the project sets <code>DOXYGEN_EXCLUDE_PATTERNS</code>, those contents are merged with these additional patterns rather than replacing them: </p>
+<dt><code>DOXYGEN_HAVE_DOT</code></dt>
+<dd>Set to <code>YES</code> if the <code>dot</code> component was requested and it was found, <code>NO</code> otherwise. Any existing value of <code>DOXYGEN_HAVE_DOT</code> is ignored.</dd>
+<dt><code>DOXYGEN_DOT_MULTI_TARGETS</code></dt>
+<dd>Set to <code>YES</code> by this module (note that this requires a <code>dot</code> version newer than 1.8.10). This option is only meaningful if <code>DOXYGEN_HAVE_DOT</code> is also set to <code>YES</code>.</dd>
+<dt><code>DOXYGEN_GENERATE_LATEX</code></dt>
+<dd>Set to <code>NO</code> by this module.</dd>
+<dt><code>DOXYGEN_WARN_FORMAT</code></dt>
+<dd>For Visual Studio based generators, this is set to the form recognized by the Visual Studio IDE: <code>$file($line) : $text</code>. For all other generators, Doxygen&#8217;s default value is not overridden.</dd>
+<dt><code>DOXYGEN_PROJECT_NAME</code></dt>
+<dd>Populated with the name of the current project (i.e. <code>PROJECT_NAME</code>).</dd>
+<dt><code>DOXYGEN_PROJECT_NUMBER</code></dt>
+<dd>Populated with the version of the current project (i.e. <code>PROJECT_VERSION</code>).</dd>
+<dt><code>DOXYGEN_PROJECT_BRIEF</code></dt>
+<dd>Populated with the description of the current project (i.e. <code>PROJECT_DESCRIPTION</code>).</dd>
+<dt><code>DOXYGEN_INPUT</code></dt>
+<dd>Projects should not set this variable. It will be populated with the set of files and directories passed to <code>doxygen_add_docs()</code>, thereby providing consistent behavior with the other built-in commands like <code>add_executable()</code>, <code>add_library()</code> and <code>add_custom_target()</code>. If a variable named <code>DOXYGEN_INPUT</code> is set by the project, it will be ignored and a warning will be issued.</dd>
+<dt><code>DOXYGEN_RECURSIVE</code></dt>
+<dd>Set to <code>YES</code> by this module.</dd>
+<dt><code>DOXYGEN_EXCLUDE_PATTERNS</code></dt>
+<dd>If the set of inputs includes directories, this variable will specify patterns used to exclude files from them. The following patterns are added by <code>doxygen_add_docs()</code> to ensure CMake-specific files and directories are not included in the input. If the project sets <code>DOXYGEN_EXCLUDE_PATTERNS</code>, those contents are merged with these additional patterns rather than replacing them: </dd>
 <pre>*/.git/*
 */.svn/*
 */.hg/*
@@ -5110,8 +5110,8 @@ Doxygen::dia</pre>
 DartConfiguration.tcl
 CMakeLists.txt
 CMakeCache.txt</pre>
-<dt><code>DOXYGEN_OUTPUT_DIRECTORY</code></p>
-<dd>Set to <code>CMAKE_CURRENT_BINARY_DIR</code> by this module. Note that if the project provides its own value for this and it is a relative path, it will be converted to an absolute path relative to the current binary directory. This is necessary because doxygen will normally be run from a directory within the source tree so that relative source paths work as expected. If this directory does not exist, it will be recursively created prior to executing the doxygen commands. </p>
+<dt><code>DOXYGEN_OUTPUT_DIRECTORY</code></dt>
+<dd>Set to <code>CMAKE_CURRENT_BINARY_DIR</code> by this module. Note that if the project provides its own value for this and it is a relative path, it will be converted to an absolute path relative to the current binary directory. This is necessary because doxygen will normally be run from a directory within the source tree so that relative source paths work as expected. If this directory does not exist, it will be recursively created prior to executing the doxygen commands. </dd>
 <p> To change any of these defaults or override any other Doxygen config option, set relevant variables before calling <code>doxygen_add_docs()</code>. For example: </p>
 <pre>set(DOXYGEN_GENERATE_HTML NO)
 set(DOXYGEN_GENERATE_MAN YES)
@@ -5217,19 +5217,19 @@ ALIASES = somealias=&quot;@some_command param&quot; anotherAlias=@foobar</pre>
 <p>Deprecated since version 3.9. </p>
 <p> For compatibility with previous versions of CMake, the following variables are also defined but they are deprecated and should no longer be used:</p>
 <dl>
-<dt><code>DOXYGEN_EXECUTABLE</code></p>
-<dd>The path to the <code>doxygen</code> command. If projects need to refer to the <code>doxygen</code> executable directly, they should use the <code>Doxygen::doxygen</code> import target instead.</p>
-<dt><code>DOXYGEN_DOT_FOUND</code></p>
-<dd>True if the <code>dot</code> executable was found.</p>
-<dt><code>DOXYGEN_DOT_EXECUTABLE</code></p>
-<dd>The path to the <code>dot</code> command. If projects need to refer to the <code>dot</code> executable directly, they should use the <code>Doxygen::dot</code> import target instead.</p>
-<dt><code>DOXYGEN_DOT_PATH</code></p>
-<dd>The path to the directory containing the <code>dot</code> executable as reported in <code>DOXYGEN_DOT_EXECUTABLE</code>. The path may have forward slashes even on Windows and is not suitable for direct substitution into a <code>Doxyfile.in</code> template. If you need this value, get the <code>IMPORTED_LOCATION</code> property of the <code>Doxygen::dot</code> target and use <code>get_filename_component()</code> to extract the directory part of that path. You may also want to consider using <code>file(TO_NATIVE_PATH)</code> to prepare the path for a Doxygen configuration file.</dl>
+<dt><code>DOXYGEN_EXECUTABLE</code></dt>
+<dd>The path to the <code>doxygen</code> command. If projects need to refer to the <code>doxygen</code> executable directly, they should use the <code>Doxygen::doxygen</code> import target instead.</dd>
+<dt><code>DOXYGEN_DOT_FOUND</code></dt>
+<dd>True if the <code>dot</code> executable was found.</dd>
+<dt><code>DOXYGEN_DOT_EXECUTABLE</code></dt>
+<dd>The path to the <code>dot</code> command. If projects need to refer to the <code>dot</code> executable directly, they should use the <code>Doxygen::dot</code> import target instead.</dd>
+<dt><code>DOXYGEN_DOT_PATH</code></dt>
+<dd>The path to the directory containing the <code>dot</code> executable as reported in <code>DOXYGEN_DOT_EXECUTABLE</code>. The path may have forward slashes even on Windows and is not suitable for direct substitution into a <code>Doxyfile.in</code> template. If you need this value, get the <code>IMPORTED_LOCATION</code> property of the <code>Doxygen::dot</code> target and use <code>get_filename_component()</code> to extract the directory part of that path. You may also want to consider using <code>file(TO_NATIVE_PATH)</code> to prepare the path for a Doxygen configuration file.</dd></dl>
 <h3>Deprecated Hint Variables</h3>
 <p>Deprecated since version 3.9. </p>
 <dl>
-<dt><code>DOXYGEN_SKIP_DOT</code></p>
-<dd>This variable has no effect for the component form of <code>find_package</code>. In backward compatibility mode (i.e. without components list) it prevents the finder module from searching for Graphviz&#8217;s <code>dot</code> utility.</dl>
+<dt><code>DOXYGEN_SKIP_DOT</code></dt>
+<dd>This variable has no effect for the component form of <code>find_package</code>. In backward compatibility mode (i.e. without components list) it prevents the finder module from searching for Graphviz&#8217;s <code>dot</code> utility.</dd></dl>
 <h3>FindEnvModules</h3>
 <p>New in version 3.15. </p>
 <p> Locate an environment module implementation and make commands available to CMake scripts to use them. This is compatible with both Lua-based Lmod and TCL-based EnvironmentModules. </p>
@@ -5254,22 +5254,22 @@ set(ENV{CRAYPE_LINK_TYPE} dynamic)
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>EnvModules_FOUND</code></p>
-<dd>True if a compatible environment modules framework was found.</dl>
+<dt><code>EnvModules_FOUND</code></dt>
+<dd>True if a compatible environment modules framework was found.</dd></dl>
 <h3>Cache Variables</h3>
 <p>The following cache variable will be set:</p>
 <dl>
-<dt><code>EnvModules_COMMAND</code></p>
-<dd>The low level module command to use. Currently supported implementations are the Lua based Lmod and TCL based EnvironmentModules.</dl>
+<dt><code>EnvModules_COMMAND</code></dt>
+<dd>The low level module command to use. Currently supported implementations are the Lua based Lmod and TCL based EnvironmentModules.</dd></dl>
 <h3>Environment Variables</h3>
 <dl>
-<dt><code>ENV{MODULESHOME}</code></p>
-<dd>Usually set by the module environment implementation, used as a hint to locate the module command to execute.</dl>
+<dt><code>ENV{MODULESHOME}</code></dt>
+<dd>Usually set by the module environment implementation, used as a hint to locate the module command to execute.</dd></dl>
 <h3>Provided Functions</h3>
 <p>This defines the following CMake functions for interacting with environment modules:</p>
 <dl>
-<dt><code>env_module</code></p>
-<dd>Execute an aribitrary module command: </p>
+<dt><code>env_module</code></dt>
+<dd>Execute an aribitrary module command: </dd>
 <pre>env_module(cmd arg1 ... argN)
 env_module(
  COMMAND cmd arg1 ... argN
@@ -5277,29 +5277,29 @@ env_module(
  [RESULT_VARIABLE &lt;ret-var&gt;]
 )</pre>
 <p>The options are:</p>
-<dt><code>cmd arg1 &#8230; argN</code></p>
-<dd>The module sub-command and arguments to execute as if they were passed directly to the module command in your shell environment.</p>
-<dt><code>OUTPUT_VARIABLE &lt;out-var&gt;</code></p>
-<dd>The standard output from executing the module command.</p>
-<dt><code>RESULT_VARIABLE &lt;ret-var&gt;</code></p>
-<dd>The return code from executing the module command.</p>
-<dt><code>env_module_swap</code></p>
-<dd>Swap one module for another: </p>
+<dt><code>cmd arg1 &#8230; argN</code></dt>
+<dd>The module sub-command and arguments to execute as if they were passed directly to the module command in your shell environment.</dd>
+<dt><code>OUTPUT_VARIABLE &lt;out-var&gt;</code></dt>
+<dd>The standard output from executing the module command.</dd>
+<dt><code>RESULT_VARIABLE &lt;ret-var&gt;</code></dt>
+<dd>The return code from executing the module command.</dd>
+<dt><code>env_module_swap</code></dt>
+<dd>Swap one module for another: </dd>
 <pre>env_module_swap(out_mod in_mod
  [OUTPUT_VARIABLE &lt;out-var&gt;]
  [RESULT_VARIABLE &lt;ret-var&gt;]
 )</pre>
 <p>This is functionally equivalent to the <code>module swap out_mod in_mod</code> shell command. The options are:</p>
-<dt><code>OUTPUT_VARIABLE &lt;out-var&gt;</code></p>
-<dd>The standard output from executing the module command.</p>
-<dt><code>RESULT_VARIABLE &lt;ret-var&gt;</code></p>
-<dd>The return code from executing the module command.</p>
-<dt><code>env_module_list</code></p>
-<dd>Retrieve the list of currently loaded modules: </p>
+<dt><code>OUTPUT_VARIABLE &lt;out-var&gt;</code></dt>
+<dd>The standard output from executing the module command.</dd>
+<dt><code>RESULT_VARIABLE &lt;ret-var&gt;</code></dt>
+<dd>The return code from executing the module command.</dd>
+<dt><code>env_module_list</code></dt>
+<dd>Retrieve the list of currently loaded modules: </dd>
 <pre>env_module_list(&lt;out-var&gt;)</pre>
 <p>This is functionally equivalent to the <code>module list</code> shell command. The result is stored in <code>&lt;out-var&gt;</code> as a properly formatted CMake semicolon-separated list variable.</p>
-<dt><code>env_module_avail</code></p>
-<dd>Retrieve the list of available modules: </p>
+<dt><code>env_module_avail</code></dt>
+<dd>Retrieve the list of available modules: </dd>
 <pre>env_module_avail([&lt;mod-prefix&gt;] &lt;out-var&gt;)</pre>
 <p>This is functionally equivalent to the <code>module avail &lt;mod-prefix&gt;</code> shell command. The result is stored in <code>&lt;out-var&gt;</code> as a properly formatted CMake semicolon-separated list variable.</dl>
 <h3>FindEXPAT</h3>
@@ -5308,17 +5308,17 @@ env_module(
 <p>New in version 3.10. </p>
 <p> This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>EXPAT::EXPAT</code></p>
-<dd>The Expat <code>expat</code> library, if found.</dl>
+<dt><code>EXPAT::EXPAT</code></dt>
+<dd>The Expat <code>expat</code> library, if found.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>EXPAT_INCLUDE_DIRS</code></p>
-<dd>where to find expat.h, etc.</p>
-<dt><code>EXPAT_LIBRARIES</code></p>
-<dd>the libraries to link against to use Expat.</p>
-<dt><code>EXPAT_FOUND</code></p>
-<dd>true if the Expat headers and libraries were found.</dl>
+<dt><code>EXPAT_INCLUDE_DIRS</code></dt>
+<dd>where to find expat.h, etc.</dd>
+<dt><code>EXPAT_LIBRARIES</code></dt>
+<dd>the libraries to link against to use Expat.</dd>
+<dt><code>EXPAT_FOUND</code></dt>
+<dd>true if the Expat headers and libraries were found.</dd></dl>
 <h3>FindFLEX</h3>
 <p>Find Fast Lexical Analyzer (Flex) executable and provides a macro to generate custom build rules </p>
 <p> The module defines the following variables: </p>
@@ -5365,47 +5365,47 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</pre>
 <h3>Input Variables</h3>
 <p>By default this module will search for all of the FLTK components and add them to the <code>FLTK_LIBRARIES</code> variable. You can limit the components which get placed in <code>FLTK_LIBRARIES</code> by defining one or more of the following three options:</p>
 <dl>
-<dt><code>FLTK_SKIP_OPENGL</code></p>
-<dd>Set to true to disable searching for the FLTK GL library</p>
-<dt><code>FLTK_SKIP_FORMS</code></p>
-<dd>Set to true to disable searching for the FLTK Forms library</p>
-<dt><code>FLTK_SKIP_IMAGES</code></p>
-<dd>Set to true to disable searching for the FLTK Images library </p>
+<dt><code>FLTK_SKIP_OPENGL</code></dt>
+<dd>Set to true to disable searching for the FLTK GL library</dd>
+<dt><code>FLTK_SKIP_FORMS</code></dt>
+<dd>Set to true to disable searching for the FLTK Forms library</dd>
+<dt><code>FLTK_SKIP_IMAGES</code></dt>
+<dd>Set to true to disable searching for the FLTK Images library </dd>
 <p> FLTK is composed also by a binary tool. You can set the following option:</p>
-<dt><code>FLTK_SKIP_FLUID</code></p>
-<dd>Set to true to not look for the FLUID binary</dl>
+<dt><code>FLTK_SKIP_FLUID</code></dt>
+<dd>Set to true to not look for the FLUID binary</dd></dl>
 <h3>Result Variables</h3>
 <p>The following variables will be defined:</p>
 <dl>
-<dt><code>FLTK_FOUND</code></p>
-<dd>True if all components not skipped were found</p>
-<dt><code>FLTK_INCLUDE_DIR</code></p>
-<dd>Path to the include directory for FLTK header files</p>
-<dt><code>FLTK_LIBRARIES</code></p>
-<dd>List of the FLTK libraries found</p>
-<dt><code>FLTK_FLUID_EXECUTABLE</code></p>
-<dd>Path to the FLUID binary tool</p>
-<dt><code>FLTK_WRAP_UI</code></p>
-<dd>True if FLUID is found, used to enable the FLTK_WRAP_UI command</dl>
+<dt><code>FLTK_FOUND</code></dt>
+<dd>True if all components not skipped were found</dd>
+<dt><code>FLTK_INCLUDE_DIR</code></dt>
+<dd>Path to the include directory for FLTK header files</dd>
+<dt><code>FLTK_LIBRARIES</code></dt>
+<dd>List of the FLTK libraries found</dd>
+<dt><code>FLTK_FLUID_EXECUTABLE</code></dt>
+<dd>Path to the FLUID binary tool</dd>
+<dt><code>FLTK_WRAP_UI</code></dt>
+<dd>True if FLUID is found, used to enable the FLTK_WRAP_UI command</dd></dl>
 <h3>Cache Variables</h3>
 <p>The following cache variables are also available to set or use:</p>
 <dl>
-<dt><code>FLTK_BASE_LIBRARY_RELEASE</code></p>
-<dd>The FLTK base library (optimized)</p>
-<dt><code>FLTK_BASE_LIBRARY_DEBUG</code></p>
-<dd>The FLTK base library (debug)</p>
-<dt><code>FLTK_GL_LIBRARY_RELEASE</code></p>
-<dd>The FLTK GL library (optimized)</p>
-<dt><code>FLTK_GL_LIBRARY_DEBUG</code></p>
-<dd>The FLTK GL library (debug)</p>
-<dt><code>FLTK_FORMS_LIBRARY_RELEASE</code></p>
-<dd>The FLTK Forms library (optimized)</p>
-<dt><code>FLTK_FORMS_LIBRARY_DEBUG</code></p>
-<dd>The FLTK Forms library (debug)</p>
-<dt><code>FLTK_IMAGES_LIBRARY_RELEASE</code></p>
-<dd>The FLTK Images protobuf library (optimized)</p>
-<dt><code>FLTK_IMAGES_LIBRARY_DEBUG</code></p>
-<dd>The FLTK Images library (debug) </p>
+<dt><code>FLTK_BASE_LIBRARY_RELEASE</code></dt>
+<dd>The FLTK base library (optimized)</dd>
+<dt><code>FLTK_BASE_LIBRARY_DEBUG</code></dt>
+<dd>The FLTK base library (debug)</dd>
+<dt><code>FLTK_GL_LIBRARY_RELEASE</code></dt>
+<dd>The FLTK GL library (optimized)</dd>
+<dt><code>FLTK_GL_LIBRARY_DEBUG</code></dt>
+<dd>The FLTK GL library (debug)</dd>
+<dt><code>FLTK_FORMS_LIBRARY_RELEASE</code></dt>
+<dd>The FLTK Forms library (optimized)</dd>
+<dt><code>FLTK_FORMS_LIBRARY_DEBUG</code></dt>
+<dd>The FLTK Forms library (debug)</dd>
+<dt><code>FLTK_IMAGES_LIBRARY_RELEASE</code></dt>
+<dd>The FLTK Images protobuf library (optimized)</dd>
+<dt><code>FLTK_IMAGES_LIBRARY_DEBUG</code></dt>
+<dd>The FLTK Images library (debug) </dd>
 <p> New in version 3.11: Debug and Release variants are found separately and use per-configuration variables. </p>
 </dl>
 <h3>FindFLTK2</h3>
@@ -5425,44 +5425,44 @@ FLTK2_IMAGES_LIBRARY = the full path to fltk2_images.lib</pre>
 <p> Find Fontconfig headers and library.</p>
 <h3>Imported Targets</h3>
 <dl>
-<dt><code>Fontconfig::Fontconfig</code></p>
-<dd>The Fontconfig library, if found.</dl>
+<dt><code>Fontconfig::Fontconfig</code></dt>
+<dd>The Fontconfig library, if found.</dd></dl>
 <h3>Result Variables</h3>
 <p>This will define the following variables in your project:</p>
 <dl>
-<dt><code>Fontconfig_FOUND</code></p>
-<dd>true if (the requested version of) Fontconfig is available.</p>
-<dt><code>Fontconfig_VERSION</code></p>
-<dd>the version of Fontconfig.</p>
-<dt><code>Fontconfig_LIBRARIES</code></p>
-<dd>the libraries to link against to use Fontconfig.</p>
-<dt><code>Fontconfig_INCLUDE_DIRS</code></p>
-<dd>where to find the Fontconfig headers.</p>
-<dt><code>Fontconfig_COMPILE_OPTIONS</code></p>
-<dd>this should be passed to target_compile_options(), if the target is not used for linking</dl>
+<dt><code>Fontconfig_FOUND</code></dt>
+<dd>true if (the requested version of) Fontconfig is available.</dd>
+<dt><code>Fontconfig_VERSION</code></dt>
+<dd>the version of Fontconfig.</dd>
+<dt><code>Fontconfig_LIBRARIES</code></dt>
+<dd>the libraries to link against to use Fontconfig.</dd>
+<dt><code>Fontconfig_INCLUDE_DIRS</code></dt>
+<dd>where to find the Fontconfig headers.</dd>
+<dt><code>Fontconfig_COMPILE_OPTIONS</code></dt>
+<dd>this should be passed to target_compile_options(), if the target is not used for linking</dd></dl>
 <h3>FindFreetype</h3>
 <p>Find the FreeType font renderer includes and library.</p>
 <h3>Imported Targets</h3>
 <p>New in version 3.10. </p>
 <p> This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>Freetype::Freetype</code></p>
-<dd>The Freetype <code>freetype</code> library, if found</dl>
+<dt><code>Freetype::Freetype</code></dt>
+<dd>The Freetype <code>freetype</code> library, if found</dd></dl>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>FREETYPE_FOUND</code></p>
-<dd>true if the Freetype headers and libraries were found</p>
-<dt><code>FREETYPE_INCLUDE_DIRS</code></p>
-<dd>directories containing the Freetype headers. This is the concatenation of the variables:</p>
-<dt><code>FREETYPE_INCLUDE_DIR_ft2build</code></p>
-<dd>directory holding the main Freetype API configuration header</p>
-<dt><code>FREETYPE_INCLUDE_DIR_freetype2</code></p>
-<dd>directory holding Freetype public headers</p>
-<dt><code>FREETYPE_LIBRARIES</code></p>
-<dd>the library to link against</p>
-<dt><code>FREETYPE_VERSION_STRING</code></p>
-<dd>the version of freetype found </p>
+<dt><code>FREETYPE_FOUND</code></dt>
+<dd>true if the Freetype headers and libraries were found</dd>
+<dt><code>FREETYPE_INCLUDE_DIRS</code></dt>
+<dd>directories containing the Freetype headers. This is the concatenation of the variables:</dd>
+<dt><code>FREETYPE_INCLUDE_DIR_ft2build</code></dt>
+<dd>directory holding the main Freetype API configuration header</dd>
+<dt><code>FREETYPE_INCLUDE_DIR_freetype2</code></dt>
+<dd>directory holding Freetype public headers</dd>
+<dt><code>FREETYPE_LIBRARIES</code></dt>
+<dd>the library to link against</dd>
+<dt><code>FREETYPE_VERSION_STRING</code></dt>
+<dd>the version of freetype found </dd>
 <p> New in version 3.7: Debug and Release variants are found separately. </p>
 </dl>
 <h3>Hints</h3>
@@ -5479,30 +5479,30 @@ FLTK2_IMAGES_LIBRARY = the full path to fltk2_images.lib</pre>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>GDAL_FOUND</code></p>
-<dd>True if GDAL is found.</p>
-<dt><code>GDAL_INCLUDE_DIRS</code></p>
-<dd>Include directories for GDAL headers.</p>
-<dt><code>GDAL_LIBRARIES</code></p>
-<dd>Libraries to link to GDAL.</p>
-<dt><code>GDAL_VERSION</code></p>
-<dd>New in version 3.14: The version of GDAL found. </p>
+<dt><code>GDAL_FOUND</code></dt>
+<dd>True if GDAL is found.</dd>
+<dt><code>GDAL_INCLUDE_DIRS</code></dt>
+<dd>Include directories for GDAL headers.</dd>
+<dt><code>GDAL_LIBRARIES</code></dt>
+<dd>Libraries to link to GDAL.</dd>
+<dt><code>GDAL_VERSION</code></dt>
+<dd>New in version 3.14: The version of GDAL found. </dd>
 </dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>GDAL_LIBRARY</code></p>
-<dd>The libgdal library file.</p>
-<dt><code>GDAL_INCLUDE_DIR</code></p>
-<dd>The directory containing <code>gdal.h</code>.</dl>
+<dt><code>GDAL_LIBRARY</code></dt>
+<dd>The libgdal library file.</dd>
+<dt><code>GDAL_INCLUDE_DIR</code></dt>
+<dd>The directory containing <code>gdal.h</code>.</dd></dl>
 <h3>Hints</h3>
 <p>Set <code>GDAL_DIR</code> or <code>GDAL_ROOT</code> in the environment to specify the GDAL installation prefix. </p>
 <p> The following variables may be set to modify the search strategy:</p>
 <dl>
-<dt><code>FindGDAL_SKIP_GDAL_CONFIG</code></p>
-<dd>If set, <code>gdal-config</code> will not be used. This can be useful if there are GDAL libraries built with autotools (which provide the tool) and CMake (which do not) in the same environment.</p>
-<dt><code>GDAL_ADDITIONAL_LIBRARY_VERSIONS</code></p>
-<dd>Extra versions of library names to search for.</dl>
+<dt><code>FindGDAL_SKIP_GDAL_CONFIG</code></dt>
+<dd>If set, <code>gdal-config</code> will not be used. This can be useful if there are GDAL libraries built with autotools (which provide the tool) and CMake (which do not) in the same environment.</dd>
+<dt><code>GDAL_ADDITIONAL_LIBRARY_VERSIONS</code></dt>
+<dd>Extra versions of library names to search for.</dd></dl>
 <h3>FindGettext</h3>
 <p>Find GNU gettext tools </p>
 <p> This module looks for the GNU gettext tools. This module defines the following values: </p>
@@ -5536,40 +5536,40 @@ It creates a custom target &quot;pofiles&quot;.</pre>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>GIF::GIF</code></p>
-<dd>The <code>giflib</code> library, if found.</dl>
+<dt><code>GIF::GIF</code></dt>
+<dd>The <code>giflib</code> library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>GIF_FOUND</code></p>
-<dd>If false, do not try to use GIF.</p>
-<dt><code>GIF_INCLUDE_DIRS</code></p>
-<dd>where to find gif_lib.h, etc.</p>
-<dt><code>GIF_LIBRARIES</code></p>
-<dd>the libraries needed to use GIF.</p>
-<dt><code>GIF_VERSION</code></p>
-<dd>3, 4 or a full version string (eg 5.1.4) for versions &gt;= 4.1.6.</dl>
+<dt><code>GIF_FOUND</code></dt>
+<dd>If false, do not try to use GIF.</dd>
+<dt><code>GIF_INCLUDE_DIRS</code></dt>
+<dd>where to find gif_lib.h, etc.</dd>
+<dt><code>GIF_LIBRARIES</code></dt>
+<dd>the libraries needed to use GIF.</dd>
+<dt><code>GIF_VERSION</code></dt>
+<dd>3, 4 or a full version string (eg 5.1.4) for versions &gt;= 4.1.6.</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>GIF_INCLUDE_DIR</code></p>
-<dd>where to find the GIF headers.</p>
-<dt><code>GIF_LIBRARY</code></p>
-<dd>where to find the GIF library.</dl>
+<dt><code>GIF_INCLUDE_DIR</code></dt>
+<dd>where to find the GIF headers.</dd>
+<dt><code>GIF_LIBRARY</code></dt>
+<dd>where to find the GIF library.</dd></dl>
 <h3>Hints</h3>
 <p><code>GIF_DIR</code> is an environment variable that would correspond to the <code>./configure &#8211;prefix=$GIF_DIR</code>.</p>
 <h3>FindGit</h3>
 <p>The module defines the following variables:</p>
 <dl>
-<dt><code>GIT_EXECUTABLE</code></p>
-<dd>Path to Git command-line client.</p>
-<dt><code>Git_FOUND</code>, <code>GIT_FOUND</code></p>
-<dd>True if the Git command-line client was found.</p>
-<dt><code>GIT_VERSION_STRING</code></p>
-<dd>The version of Git found. </p>
+<dt><code>GIT_EXECUTABLE</code></dt>
+<dd>Path to Git command-line client.</dd>
+<dt><code>Git_FOUND</code>, <code>GIT_FOUND</code></dt>
+<dd>True if the Git command-line client was found.</dd>
+<dt><code>GIT_VERSION_STRING</code></dt>
+<dd>The version of Git found. </dd>
 <p> New in version 3.14: The module defines the following <code>IMPORTED</code> targets (when <code>CMAKE_ROLE</code> is <code>PROJECT</code>): </p>
-<dt><code>Git::Git</code></p>
-<dd>Executable of the Git command-line client. </p>
+<dt><code>Git::Git</code></dt>
+<dd>Executable of the Git command-line client. </dd>
 <p> Example usage: </p>
 <pre>find_package(Git)
 if(Git_FOUND)
@@ -5581,41 +5581,41 @@ endif()</pre>
 <h3>Input Variables</h3>
 <p>The following variables may be set to influence this module&#8217;s behavior:</p>
 <dl>
-<dt><code>GLEW_USE_STATIC_LIBS</code></p>
-<dd>to find and create <code>IMPORTED</code> target for static linkage.</p>
-<dt><code>GLEW_VERBOSE</code></p>
-<dd>to output a detailed log of this module.</dl>
+<dt><code>GLEW_USE_STATIC_LIBS</code></dt>
+<dd>to find and create <code>IMPORTED</code> target for static linkage.</dd>
+<dt><code>GLEW_VERBOSE</code></dt>
+<dd>to output a detailed log of this module.</dd></dl>
 <h3>Imported Targets</h3>
 <p>New in version 3.1. </p>
 <p> This module defines the following Imported Targets:</p>
 <dl>
-<dt><code>GLEW::glew</code></p>
-<dd>The GLEW shared library.</p>
-<dt><code>GLEW::glew_s</code></p>
-<dd>The GLEW static library, if <code>GLEW_USE_STATIC_LIBS</code> is set to <code>TRUE</code>.</p>
-<dt><code>GLEW::GLEW</code></p>
-<dd>Duplicates either <code>GLEW::glew</code> or <code>GLEW::glew_s</code> based on availability.</dl>
+<dt><code>GLEW::glew</code></dt>
+<dd>The GLEW shared library.</dd>
+<dt><code>GLEW::glew_s</code></dt>
+<dd>The GLEW static library, if <code>GLEW_USE_STATIC_LIBS</code> is set to <code>TRUE</code>.</dd>
+<dt><code>GLEW::GLEW</code></dt>
+<dd>Duplicates either <code>GLEW::glew</code> or <code>GLEW::glew_s</code> based on availability.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>GLEW_INCLUDE_DIRS</code></p>
-<dd>include directories for GLEW</p>
-<dt><code>GLEW_LIBRARIES</code></p>
-<dd>libraries to link against GLEW</p>
-<dt><code>GLEW_SHARED_LIBRARIES</code></p>
-<dd>libraries to link against shared GLEW</p>
-<dt><code>GLEW_STATIC_LIBRARIES</code></p>
-<dd>libraries to link against static GLEW</p>
-<dt><code>GLEW_FOUND</code></p>
-<dd>true if GLEW has been found and can be used</p>
-<dt><code>GLEW_VERSION</code></p>
-<dd>GLEW version</p>
-<dt><code>GLEW_VERSION_MAJOR</code></p>
-<dd>GLEW major version</p>
-<dt><code>GLEW_VERSION_MINOR</code></p>
-<dd>GLEW minor version</p>
-<dt><code>GLEW_VERSION_MICRO</code></p>
-<dd>GLEW micro version </p>
+<dt><code>GLEW_INCLUDE_DIRS</code></dt>
+<dd>include directories for GLEW</dd>
+<dt><code>GLEW_LIBRARIES</code></dt>
+<dd>libraries to link against GLEW</dd>
+<dt><code>GLEW_SHARED_LIBRARIES</code></dt>
+<dd>libraries to link against shared GLEW</dd>
+<dt><code>GLEW_STATIC_LIBRARIES</code></dt>
+<dd>libraries to link against static GLEW</dd>
+<dt><code>GLEW_FOUND</code></dt>
+<dd>true if GLEW has been found and can be used</dd>
+<dt><code>GLEW_VERSION</code></dt>
+<dd>GLEW version</dd>
+<dt><code>GLEW_VERSION_MAJOR</code></dt>
+<dd>GLEW major version</dd>
+<dt><code>GLEW_VERSION_MINOR</code></dt>
+<dd>GLEW minor version</dd>
+<dt><code>GLEW_VERSION_MICRO</code></dt>
+<dd>GLEW micro version </dd>
 <p> New in version 3.7: Debug and Release variants are found separately. </p>
 </dl>
 <h3>FindGLUT</h3>
@@ -5624,8 +5624,8 @@ endif()</pre>
 <p>New in version 3.1. </p>
 <p> This module defines the <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>GLUT::GLUT</code></p>
-<dd>Defined if the system has GLUT.</dl>
+<dt><code>GLUT::GLUT</code></dt>
+<dd>Defined if the system has GLUT.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module sets the following variables: </p>
 <pre>GLUT_INCLUDE_DIR, where to find GL/glut.h, etc.
@@ -5650,16 +5650,16 @@ GNUPLOT_VERSION_STRING - the version of Gnuplot found (since CMake 2.8.8)</pre>
 <p> This module defines <code>IMPORTED</code> target <code>GnuTLS::GnuTLS</code>, if gnutls has been found.</p>
 <h3>Result Variables</h3>
 <dl>
-<dt><code>GNUTLS_FOUND</code></p>
-<dd>System has gnutls</p>
-<dt><code>GNUTLS_INCLUDE_DIR</code></p>
-<dd>The gnutls include directory</p>
-<dt><code>GNUTLS_LIBRARIES</code></p>
-<dd>The libraries needed to use gnutls</p>
-<dt><code>GNUTLS_DEFINITIONS</code></p>
-<dd>Compiler switches required for using gnutls</p>
-<dt><code>GNUTLS_VERSION</code></p>
-<dd>version of gnutls.</dl>
+<dt><code>GNUTLS_FOUND</code></dt>
+<dd>System has gnutls</dd>
+<dt><code>GNUTLS_INCLUDE_DIR</code></dt>
+<dd>The gnutls include directory</dd>
+<dt><code>GNUTLS_LIBRARIES</code></dt>
+<dd>The libraries needed to use gnutls</dd>
+<dt><code>GNUTLS_DEFINITIONS</code></dt>
+<dd>Compiler switches required for using gnutls</dd>
+<dt><code>GNUTLS_VERSION</code></dt>
+<dd>version of gnutls.</dd></dl>
 <h3>FindGSL</h3>
 <p>New in version 3.2. </p>
 <p> Find the native GNU Scientific Library (GSL) includes and libraries. </p>
@@ -5690,41 +5690,41 @@ GSL_LIBRARY_DEBUG - Location of the debug GSL library (if any).</pre>
 <h3>Imported targets</h3>
 <p>New in version 3.20: This module defines the following <code>IMPORTED</code> targets: </p>
 <dl>
-<dt><code>GTest::gtest</code></p>
-<dd>The Google Test <code>gtest</code> library, if found; adds Thread::Thread automatically</p>
-<dt><code>GTest::gtest_main</code></p>
-<dd>The Google Test <code>gtest_main</code> library, if found </p>
+<dt><code>GTest::gtest</code></dt>
+<dd>The Google Test <code>gtest</code> library, if found; adds Thread::Thread automatically</dd>
+<dt><code>GTest::gtest_main</code></dt>
+<dd>The Google Test <code>gtest_main</code> library, if found </dd>
 <p> New in version 3.23. </p>
-<dt><code>GTest::gmock</code></p>
-<dd>The Google Mock <code>gmock</code> library, if found; adds Thread::Thread automatically</p>
-<dt><code>GTest::gmock_main</code></p>
-<dd>The Google Mock <code>gmock_main</code> library, if found </p>
+<dt><code>GTest::gmock</code></dt>
+<dd>The Google Mock <code>gmock</code> library, if found; adds Thread::Thread automatically</dd>
+<dt><code>GTest::gmock_main</code></dt>
+<dd>The Google Mock <code>gmock_main</code> library, if found </dd>
 <p> Deprecated since version 3.20: For backwards compatibility, this module defines additionally the following deprecated <code>IMPORTED</code> targets (available since 3.5): </p>
-<dt><code>GTest::GTest</code></p>
-<dd>The Google Test <code>gtest</code> library, if found; adds Thread::Thread automatically</p>
-<dt><code>GTest::Main</code></p>
-<dd>The Google Test <code>gtest_main</code> library, if found</dl>
+<dt><code>GTest::GTest</code></dt>
+<dd>The Google Test <code>gtest</code> library, if found; adds Thread::Thread automatically</dd>
+<dt><code>GTest::Main</code></dt>
+<dd>The Google Test <code>gtest_main</code> library, if found</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>GTest_FOUND</code></p>
-<dd>Found the Google Testing framework</p>
-<dt><code>GTEST_INCLUDE_DIRS</code></p>
-<dd>the directory containing the Google Test headers </p>
+<dt><code>GTest_FOUND</code></dt>
+<dd>Found the Google Testing framework</dd>
+<dt><code>GTEST_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the Google Test headers </dd>
 <p> The library variables below are set as normal variables. These contain debug/optimized keywords when a debugging library is found.</p>
-<dt><code>GTEST_LIBRARIES</code></p>
-<dd>The Google Test <code>gtest</code> library; note it also requires linking with an appropriate thread library</p>
-<dt><code>GTEST_MAIN_LIBRARIES</code></p>
-<dd>The Google Test <code>gtest_main</code> library</p>
-<dt><code>GTEST_BOTH_LIBRARIES</code></p>
-<dd>Both <code>gtest</code> and <code>gtest_main</code></dl>
+<dt><code>GTEST_LIBRARIES</code></dt>
+<dd>The Google Test <code>gtest</code> library; note it also requires linking with an appropriate thread library</dd>
+<dt><code>GTEST_MAIN_LIBRARIES</code></dt>
+<dd>The Google Test <code>gtest_main</code> library</dd>
+<dt><code>GTEST_BOTH_LIBRARIES</code></dt>
+<dd>Both <code>gtest</code> and <code>gtest_main</code></dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>GTEST_ROOT</code></p>
-<dd>The root directory of the Google Test installation (may also be set as an environment variable)</p>
-<dt><code>GTEST_MSVC_SEARCH</code></p>
-<dd>If compiling with MSVC, this variable can be set to <code>MT</code> or <code>MD</code> (the default) to enable searching a GTest build tree</dl>
+<dt><code>GTEST_ROOT</code></dt>
+<dd>The root directory of the Google Test installation (may also be set as an environment variable)</dd>
+<dt><code>GTEST_MSVC_SEARCH</code></dt>
+<dd>If compiling with MSVC, this variable can be set to <code>MT</code> or <code>MD</code> (the default) to enable searching a GTest build tree</dd></dl>
 <h3>Example usage</h3>
 <pre>enable_testing()
 find_package(GTest REQUIRED)
@@ -5744,14 +5744,14 @@ GTK_GL_FOUND - GTK's GL features were found</pre>
 <p>Find the GTK2 widget libraries and several of its other optional components like <code>gtkmm</code>, <code>glade</code>, and <code>glademm</code>. </p>
 <p> Specify one or more of the following components as you call this find module. See example below.</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>gtk</code></p>
-<dt>&bull;</p>
-<dd><code>gtkmm</code></p>
-<dt>&bull;</p>
-<dd><code>glade</code></p>
-<dt>&bull;</p>
-<dd><code>glademm</code></dl>
+<dt>&bull;</dt>
+<dd><code>gtk</code></dd>
+<dt>&bull;</dt>
+<dd><code>gtkmm</code></dd>
+<dt>&bull;</dt>
+<dd><code>glade</code></dd>
+<dt>&bull;</dt>
+<dd><code>glademm</code></dd></dl>
 <h3>Imported Targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets (subject to component selection): </p>
 <p> <code>GTK2::atk</code>, <code>GTK2::atkmm</code>, <code>GTK2::cairo</code>, <code>GTK2::cairomm</code>, <code>GTK2::gdk_pixbuf</code>, <code>GTK2::gdk</code>, <code>GTK2::gdkmm</code>, <code>GTK2::gio</code>, <code>GTK2::giomm</code>, <code>GTK2::glade</code>, <code>GTK2::glademm</code>, <code>GTK2::glib</code>, <code>GTK2::glibmm</code>, <code>GTK2::gmodule</code>, <code>GTK2::gobject</code>, <code>GTK2::gthread</code>, <code>GTK2::gtk</code>, <code>GTK2::gtkmm</code>, <code>GTK2::harfbuzz</code>, <code>GTK2::pango</code>, <code>GTK2::pangocairo</code>, <code>GTK2::pangoft2</code>, <code>GTK2::pangomm</code>, <code>GTK2::pangoxft</code>, <code>GTK2::sigc</code>. </p>
@@ -5759,33 +5759,33 @@ GTK_GL_FOUND - GTK's GL features were found</pre>
 <h3>Result Variables</h3>
 <p>The following variables will be defined for your use</p>
 <dl>
-<dt><code>GTK2_FOUND</code></p>
-<dd>Were all of your specified components found?</p>
-<dt><code>GTK2_INCLUDE_DIRS</code></p>
-<dd>All include directories</p>
-<dt><code>GTK2_LIBRARIES</code></p>
-<dd>All libraries</p>
-<dt><code>GTK2_TARGETS</code></p>
-<dd>New in version 3.5: All imported targets </p>
-<dt><code>GTK2_DEFINITIONS</code></p>
-<dd>Additional compiler flags</p>
-<dt><code>GTK2_VERSION</code></p>
-<dd>The version of GTK2 found (x.y.z)</p>
-<dt><code>GTK2_MAJOR_VERSION</code></p>
-<dd>The major version of GTK2</p>
-<dt><code>GTK2_MINOR_VERSION</code></p>
-<dd>The minor version of GTK2</p>
-<dt><code>GTK2_PATCH_VERSION</code></p>
-<dd>The patch version of GTK2 </p>
+<dt><code>GTK2_FOUND</code></dt>
+<dd>Were all of your specified components found?</dd>
+<dt><code>GTK2_INCLUDE_DIRS</code></dt>
+<dd>All include directories</dd>
+<dt><code>GTK2_LIBRARIES</code></dt>
+<dd>All libraries</dd>
+<dt><code>GTK2_TARGETS</code></dt>
+<dd>New in version 3.5: All imported targets </dd>
+<dt><code>GTK2_DEFINITIONS</code></dt>
+<dd>Additional compiler flags</dd>
+<dt><code>GTK2_VERSION</code></dt>
+<dd>The version of GTK2 found (x.y.z)</dd>
+<dt><code>GTK2_MAJOR_VERSION</code></dt>
+<dd>The major version of GTK2</dd>
+<dt><code>GTK2_MINOR_VERSION</code></dt>
+<dd>The minor version of GTK2</dd>
+<dt><code>GTK2_PATCH_VERSION</code></dt>
+<dd>The patch version of GTK2 </dd>
 <p> New in version 3.5: When <code>GTK2_USE_IMPORTED_TARGETS</code> is set to <code>TRUE</code>, <code>GTK2_LIBRARIES</code> will list imported targets instead of library paths. </p>
 </dl>
 <h3>Input Variables</h3>
 <p>Optional variables you can define prior to calling this module:</p>
 <dl>
-<dt><code>GTK2_DEBUG</code></p>
-<dd>Enables verbose debugging of the module</p>
-<dt><code>GTK2_ADDITIONAL_SUFFIXES</code></p>
-<dd>Allows defining additional directories to search for include files</dl>
+<dt><code>GTK2_DEBUG</code></dt>
+<dd>Enables verbose debugging of the module</dd>
+<dt><code>GTK2_ADDITIONAL_SUFFIXES</code></dt>
+<dd>Allows defining additional directories to search for include files</dd></dl>
 <h3>Example Usage</h3>
 <p>Call <code>find_package()</code> once. Here are some examples to pick from: </p>
 <p> Require GTK 2.6 or later: </p>
@@ -5811,87 +5811,87 @@ endif()</pre>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>HDF5_FOUND</code></p>
-<dd>HDF5 was found on the system</p>
-<dt><code>HDF5_VERSION</code></p>
-<dd>New in version 3.3: HDF5 library version </p>
-<dt><code>HDF5_INCLUDE_DIRS</code></p>
-<dd>Location of the HDF5 header files</p>
-<dt><code>HDF5_DEFINITIONS</code></p>
-<dd>Required compiler definitions for HDF5</p>
-<dt><code>HDF5_LIBRARIES</code></p>
-<dd>Required libraries for all requested bindings</p>
-<dt><code>HDF5_HL_LIBRARIES</code></p>
-<dd>Required libraries for the HDF5 high level API for all bindings, if the <code>HL</code> component is enabled </p>
+<dt><code>HDF5_FOUND</code></dt>
+<dd>HDF5 was found on the system</dd>
+<dt><code>HDF5_VERSION</code></dt>
+<dd>New in version 3.3: HDF5 library version </dd>
+<dt><code>HDF5_INCLUDE_DIRS</code></dt>
+<dd>Location of the HDF5 header files</dd>
+<dt><code>HDF5_DEFINITIONS</code></dt>
+<dd>Required compiler definitions for HDF5</dd>
+<dt><code>HDF5_LIBRARIES</code></dt>
+<dd>Required libraries for all requested bindings</dd>
+<dt><code>HDF5_HL_LIBRARIES</code></dt>
+<dd>Required libraries for the HDF5 high level API for all bindings, if the <code>HL</code> component is enabled </dd>
 <p> Available components are: <code>C</code> <code>CXX</code> <code>Fortran</code> and <code>HL</code>. For each enabled language binding, a corresponding <code>HDF5_${LANG}_LIBRARIES</code> variable, and potentially <code>HDF5_${LANG}_DEFINITIONS</code>, will be defined. If the <code>HL</code> component is enabled, then an <code>HDF5_${LANG}_HL_LIBRARIES</code> will also be defined. With all components enabled, the following variables will be defined:</p>
-<dt><code>HDF5_C_DEFINITIONS</code></p>
-<dd>Required compiler definitions for HDF5 C bindings</p>
-<dt><code>HDF5_CXX_DEFINITIONS</code></p>
-<dd>Required compiler definitions for HDF5 C++ bindings</p>
-<dt><code>HDF5_Fortran_DEFINITIONS</code></p>
-<dd>Required compiler definitions for HDF5 Fortran bindings</p>
-<dt><code>HDF5_C_INCLUDE_DIRS</code></p>
-<dd>Required include directories for HDF5 C bindings</p>
-<dt><code>HDF5_CXX_INCLUDE_DIRS</code></p>
-<dd>Required include directories for HDF5 C++ bindings</p>
-<dt><code>HDF5_Fortran_INCLUDE_DIRS</code></p>
-<dd>Required include directories for HDF5 Fortran bindings</p>
-<dt><code>HDF5_C_LIBRARIES</code></p>
-<dd>Required libraries for the HDF5 C bindings</p>
-<dt><code>HDF5_CXX_LIBRARIES</code></p>
-<dd>Required libraries for the HDF5 C++ bindings</p>
-<dt><code>HDF5_Fortran_LIBRARIES</code></p>
-<dd>Required libraries for the HDF5 Fortran bindings</p>
-<dt><code>HDF5_C_HL_LIBRARIES</code></p>
-<dd>Required libraries for the high level C bindings</p>
-<dt><code>HDF5_CXX_HL_LIBRARIES</code></p>
-<dd>Required libraries for the high level C++ bindings</p>
-<dt><code>HDF5_Fortran_HL_LIBRARIES</code></p>
-<dd>Required libraries for the high level Fortran bindings.</p>
-<dt><code>HDF5_IS_PARALLEL</code></p>
-<dd>HDF5 library has parallel IO support</p>
-<dt><code>HDF5_C_COMPILER_EXECUTABLE</code></p>
-<dd>path to the HDF5 C wrapper compiler</p>
-<dt><code>HDF5_CXX_COMPILER_EXECUTABLE</code></p>
-<dd>path to the HDF5 C++ wrapper compiler</p>
-<dt><code>HDF5_Fortran_COMPILER_EXECUTABLE</code></p>
-<dd>path to the HDF5 Fortran wrapper compiler</p>
-<dt><code>HDF5_C_COMPILER_EXECUTABLE_NO_INTERROGATE</code></p>
-<dd>path to the primary C compiler which is also the HDF5 wrapper</p>
-<dt><code>HDF5_CXX_COMPILER_EXECUTABLE_NO_INTERROGATE</code></p>
-<dd>path to the primary C++ compiler which is also the HDF5 wrapper</p>
-<dt><code>HDF5_Fortran_COMPILER_EXECUTABLE_NO_INTERROGATE</code></p>
-<dd>path to the primary Fortran compiler which is also the HDF5 wrapper</p>
-<dt><code>HDF5_DIFF_EXECUTABLE</code></p>
-<dd>path to the HDF5 dataset comparison tool </p>
+<dt><code>HDF5_C_DEFINITIONS</code></dt>
+<dd>Required compiler definitions for HDF5 C bindings</dd>
+<dt><code>HDF5_CXX_DEFINITIONS</code></dt>
+<dd>Required compiler definitions for HDF5 C++ bindings</dd>
+<dt><code>HDF5_Fortran_DEFINITIONS</code></dt>
+<dd>Required compiler definitions for HDF5 Fortran bindings</dd>
+<dt><code>HDF5_C_INCLUDE_DIRS</code></dt>
+<dd>Required include directories for HDF5 C bindings</dd>
+<dt><code>HDF5_CXX_INCLUDE_DIRS</code></dt>
+<dd>Required include directories for HDF5 C++ bindings</dd>
+<dt><code>HDF5_Fortran_INCLUDE_DIRS</code></dt>
+<dd>Required include directories for HDF5 Fortran bindings</dd>
+<dt><code>HDF5_C_LIBRARIES</code></dt>
+<dd>Required libraries for the HDF5 C bindings</dd>
+<dt><code>HDF5_CXX_LIBRARIES</code></dt>
+<dd>Required libraries for the HDF5 C++ bindings</dd>
+<dt><code>HDF5_Fortran_LIBRARIES</code></dt>
+<dd>Required libraries for the HDF5 Fortran bindings</dd>
+<dt><code>HDF5_C_HL_LIBRARIES</code></dt>
+<dd>Required libraries for the high level C bindings</dd>
+<dt><code>HDF5_CXX_HL_LIBRARIES</code></dt>
+<dd>Required libraries for the high level C++ bindings</dd>
+<dt><code>HDF5_Fortran_HL_LIBRARIES</code></dt>
+<dd>Required libraries for the high level Fortran bindings.</dd>
+<dt><code>HDF5_IS_PARALLEL</code></dt>
+<dd>HDF5 library has parallel IO support</dd>
+<dt><code>HDF5_C_COMPILER_EXECUTABLE</code></dt>
+<dd>path to the HDF5 C wrapper compiler</dd>
+<dt><code>HDF5_CXX_COMPILER_EXECUTABLE</code></dt>
+<dd>path to the HDF5 C++ wrapper compiler</dd>
+<dt><code>HDF5_Fortran_COMPILER_EXECUTABLE</code></dt>
+<dd>path to the HDF5 Fortran wrapper compiler</dd>
+<dt><code>HDF5_C_COMPILER_EXECUTABLE_NO_INTERROGATE</code></dt>
+<dd>path to the primary C compiler which is also the HDF5 wrapper</dd>
+<dt><code>HDF5_CXX_COMPILER_EXECUTABLE_NO_INTERROGATE</code></dt>
+<dd>path to the primary C++ compiler which is also the HDF5 wrapper</dd>
+<dt><code>HDF5_Fortran_COMPILER_EXECUTABLE_NO_INTERROGATE</code></dt>
+<dd>path to the primary Fortran compiler which is also the HDF5 wrapper</dd>
+<dt><code>HDF5_DIFF_EXECUTABLE</code></dt>
+<dd>path to the HDF5 dataset comparison tool </dd>
 <p> With all components enabled, the following targets will be defined:</p>
-<dt><code>HDF5::HDF5</code></p>
-<dd>All detected <code>HDF5_LIBRARIES</code>.</p>
-<dt><code>hdf5::hdf5</code></p>
-<dd>C library.</p>
-<dt><code>hdf5::hdf5_cpp</code></p>
-<dd>C++ library.</p>
-<dt><code>hdf5::hdf5_fortran</code></p>
-<dd>Fortran library.</p>
-<dt><code>hdf5::hdf5_hl</code></p>
-<dd>High-level C library.</p>
-<dt><code>hdf5::hdf5_hl_cpp</code></p>
-<dd>High-level C++ library.</p>
-<dt><code>hdf5::hdf5_hl_fortran</code></p>
-<dd>High-level Fortran library.</p>
-<dt><code>hdf5::h5diff</code></p>
-<dd><code>h5diff</code> executable.</dl>
+<dt><code>HDF5::HDF5</code></dt>
+<dd>All detected <code>HDF5_LIBRARIES</code>.</dd>
+<dt><code>hdf5::hdf5</code></dt>
+<dd>C library.</dd>
+<dt><code>hdf5::hdf5_cpp</code></dt>
+<dd>C++ library.</dd>
+<dt><code>hdf5::hdf5_fortran</code></dt>
+<dd>Fortran library.</dd>
+<dt><code>hdf5::hdf5_hl</code></dt>
+<dd>High-level C library.</dd>
+<dt><code>hdf5::hdf5_hl_cpp</code></dt>
+<dd>High-level C++ library.</dd>
+<dt><code>hdf5::hdf5_hl_fortran</code></dt>
+<dd>High-level Fortran library.</dd>
+<dt><code>hdf5::h5diff</code></dt>
+<dd><code>h5diff</code> executable.</dd></dl>
 <h3>Hints</h3>
 <p>The following variables can be set to guide the search for HDF5 libraries and includes:</p>
 <dl>
-<dt><code>HDF5_PREFER_PARALLEL</code></p>
-<dd>New in version 3.4. </p>
+<dt><code>HDF5_PREFER_PARALLEL</code></dt>
+<dd>New in version 3.4. </dd>
 <p> set <code>true</code> to prefer parallel HDF5 (by default, serial is preferred)</p>
-<dt><code>HDF5_FIND_DEBUG</code></p>
-<dd>New in version 3.9. </p>
+<dt><code>HDF5_FIND_DEBUG</code></dt>
+<dd>New in version 3.9. </dd>
 <p> Set <code>true</code> to get extra debugging output.</p>
-<dt><code>HDF5_NO_FIND_PACKAGE_CONFIG_FILE</code></p>
-<dd>New in version 3.8. </p>
+<dt><code>HDF5_NO_FIND_PACKAGE_CONFIG_FILE</code></dt>
+<dd>New in version 3.8. </dd>
 <p> Set <code>true</code> to skip trying to find <code>hdf5-config.cmake</code>.</dl>
 <h3>FindHg</h3>
 <p>Extract information from a mercurial working copy. </p>
@@ -6021,31 +6021,31 @@ Ice_&lt;C&gt;_LIBRARY - the library for component &lt;C&gt;</pre>
 <p> This module finds the <code>iconv()</code> POSIX.1 functions on the system. These functions might be provided in the regular C library or externally in the form of an additional library. </p>
 <p> The following variables are provided to indicate iconv support:</p>
 <dl>
-<dt><code>Iconv_FOUND</code></p>
-<dd>Variable indicating if the iconv support was found.</p>
-<dt><code>Iconv_INCLUDE_DIRS</code></p>
-<dd>The directories containing the iconv headers.</p>
-<dt><code>Iconv_LIBRARIES</code></p>
-<dd>The iconv libraries to be linked.</p>
-<dt><code>Iconv_VERSION</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Iconv_FOUND</code></dt>
+<dd>Variable indicating if the iconv support was found.</dd>
+<dt><code>Iconv_INCLUDE_DIRS</code></dt>
+<dd>The directories containing the iconv headers.</dd>
+<dt><code>Iconv_LIBRARIES</code></dt>
+<dd>The iconv libraries to be linked.</dd>
+<dt><code>Iconv_VERSION</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The version of iconv found (x.y)</p>
-<dt><code>Iconv_VERSION_MAJOR</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Iconv_VERSION_MAJOR</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The major version of iconv</p>
-<dt><code>Iconv_VERSION_MINOR</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Iconv_VERSION_MINOR</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The minor version of iconv</p>
-<dt><code>Iconv_IS_BUILT_IN</code></p>
-<dd>A variable indicating whether iconv support is stemming from the C library or not. Even if the C library provides <i>iconv()</i>, the presence of an external <i>libiconv</i> implementation might lead to this being false. </p>
+<dt><code>Iconv_IS_BUILT_IN</code></dt>
+<dd>A variable indicating whether iconv support is stemming from the C library or not. Even if the C library provides <i>iconv()</i>, the presence of an external <i>libiconv</i> implementation might lead to this being false. </dd>
 <p> Additionally, the following <code>IMPORTED</code> target is being provided:</p>
-<dt><code>Iconv::Iconv</code></p>
-<dd>Imported target for using iconv. </p>
+<dt><code>Iconv::Iconv</code></dt>
+<dd>Imported target for using iconv. </dd>
 <p> The following cache variables may also be set:</p>
-<dt><code>Iconv_INCLUDE_DIR</code></p>
-<dd>The directory containing the iconv headers.</p>
-<dt><code>Iconv_LIBRARY</code></p>
-<dd>The iconv library (if not implicitly given in the C library). </p>
+<dt><code>Iconv_INCLUDE_DIR</code></dt>
+<dd>The directory containing the iconv headers.</dd>
+<dt><code>Iconv_LIBRARY</code></dt>
+<dd>The iconv library (if not implicitly given in the C library). </dd>
 <p> <code>NOTE:</code> On POSIX platforms, iconv might be part of the C library and the cache variables <code>Iconv_INCLUDE_DIR</code> and <code>Iconv_LIBRARY</code> might be empty. </p>
 <p> <code>NOTE:</code> Some libiconv implementations don&#8217;t embed the version number in their header files. In this case the variables <code>Iconv_VERSION*</code> will be empty.</dl>
 <h3>FindIcotool</h3>
@@ -6147,32 +6147,32 @@ find_package(ImageMagick COMPONENTS Magick++ convert)</pre>
 <p> Find the Gettext libintl headers and libraries. </p>
 <p> This module reports information about the Gettext libintl installation in several variables.</p>
 <dl>
-<dt><code>Intl_FOUND</code></p>
-<dd>True if libintl is found.</p>
-<dt><code>Intl_INCLUDE_DIRS</code></p>
-<dd>The directory containing the libintl headers.</p>
-<dt><code>Intl_LIBRARIES</code></p>
-<dd>The intl libraries to be linked.</p>
-<dt><code>Intl_VERSION</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Intl_FOUND</code></dt>
+<dd>True if libintl is found.</dd>
+<dt><code>Intl_INCLUDE_DIRS</code></dt>
+<dd>The directory containing the libintl headers.</dd>
+<dt><code>Intl_LIBRARIES</code></dt>
+<dd>The intl libraries to be linked.</dd>
+<dt><code>Intl_VERSION</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The version of intl found (x.y.z)</p>
-<dt><code>Intl_VERSION_MAJOR</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Intl_VERSION_MAJOR</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The major version of intl</p>
-<dt><code>Intl_VERSION_MINOR</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Intl_VERSION_MINOR</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The minor version of intl</p>
-<dt><code>Intl_VERSION_PATCH</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Intl_VERSION_PATCH</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The patch version of intl </p>
 <p> New in version 3.20: This module defines <code>IMPORTED</code> target <code>Intl::Intl</code>. </p>
 <p> The following cache variables may also be set:</p>
-<dt><code>Intl_INCLUDE_DIR</code></p>
-<dd>The directory containing the libintl headers</p>
-<dt><code>Intl_LIBRARY</code></p>
-<dd>The libintl library (if any)</p>
-<dt><code>Intl_IS_BUILT_IN</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>Intl_INCLUDE_DIR</code></dt>
+<dd>The directory containing the libintl headers</dd>
+<dt><code>Intl_LIBRARY</code></dt>
+<dd>The libintl library (if any)</dd>
+<dt><code>Intl_IS_BUILT_IN</code></dt>
+<dd>New in version 3.20. </dd>
 <p> whether <code>intl</code> is a part of the C library. </p>
 <p> <code>NOTE:</code> On some platforms, such as Linux with GNU libc, the gettext functions are present in the C standard library and libintl is not required. <code>Intl_LIBRARIES</code> will be empty in this case. </p>
 <p> <code>NOTE:</code> Some libintl implementations don&#8217;t embed the version number in their header files. In this case the variables <code>Intl_VERSION*</code> will be empty. </p>
@@ -6184,29 +6184,29 @@ find_package(ImageMagick COMPONENTS Magick++ convert)</pre>
 <p>Find the Jasper JPEG2000 library.</p>
 <h3>IMPORTED Targets</h3>
 <dl>
-<dt><code>Jasper::Jasper</code></p>
-<dd>The jasper library, if found.</dl>
+<dt><code>Jasper::Jasper</code></dt>
+<dd>The jasper library, if found.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>JASPER_FOUND</code></p>
-<dd>system has Jasper</p>
-<dt><code>JASPER_INCLUDE_DIRS</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>JASPER_FOUND</code></dt>
+<dd>system has Jasper</dd>
+<dt><code>JASPER_INCLUDE_DIRS</code></dt>
+<dd>New in version 3.22. </dd>
 <p> the Jasper include directory</p>
-<dt><code>JASPER_LIBRARIES</code></p>
-<dd>the libraries needed to use Jasper</p>
-<dt><code>JASPER_VERSION_STRING</code></p>
-<dd>the version of Jasper found</dl>
+<dt><code>JASPER_LIBRARIES</code></dt>
+<dd>the libraries needed to use Jasper</dd>
+<dt><code>JASPER_VERSION_STRING</code></dt>
+<dd>the version of Jasper found</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>JASPER_INCLUDE_DIR</code></p>
-<dd>where to find jasper/jasper.h, etc.</p>
-<dt><code>JASPER_LIBRARY_RELEASE</code></p>
-<dd>where to find the Jasper library (optimized).</p>
-<dt><code>JASPER_LIBARRY_DEBUG</code></p>
-<dd>where to find the Jasper library (debug).</dl>
+<dt><code>JASPER_INCLUDE_DIR</code></dt>
+<dd>where to find jasper/jasper.h, etc.</dd>
+<dt><code>JASPER_LIBRARY_RELEASE</code></dt>
+<dd>where to find the Jasper library (optimized).</dd>
+<dt><code>JASPER_LIBARRY_DEBUG</code></dt>
+<dd>where to find the Jasper library (debug).</dd></dl>
 <h3>FindJava</h3>
 <p>Find Java </p>
 <p> This module finds if Java is installed and determines where the include files and libraries are. The caller may set variable <code>JAVA_HOME</code> to specify a Java installation prefix explicitly. </p>
@@ -6251,87 +6251,87 @@ find_package(Java COMPONENTS Development)</pre>
 <h3>Result Variables</h3>
 <p>This module sets the following result variables:</p>
 <dl>
-<dt><code>JNI_INCLUDE_DIRS</code></p>
-<dd>the include dirs to use</p>
-<dt><code>JNI_LIBRARIES</code></p>
-<dd>the libraries to use (JAWT and JVM)</p>
-<dt><code>JNI_FOUND</code></p>
-<dd>TRUE if JNI headers and libraries were found.</dl>
+<dt><code>JNI_INCLUDE_DIRS</code></dt>
+<dd>the include dirs to use</dd>
+<dt><code>JNI_LIBRARIES</code></dt>
+<dd>the libraries to use (JAWT and JVM)</dd>
+<dt><code>JNI_FOUND</code></dt>
+<dd>TRUE if JNI headers and libraries were found.</dd></dl>
 <h3>Cache Variables</h3>
 <p>The following cache variables are also available to set or use:</p>
 <dl>
-<dt><code>JAVA_AWT_LIBRARY</code></p>
-<dd>the path to the Java AWT Native Interface (JAWT) library</p>
-<dt><code>JAVA_JVM_LIBRARY</code></p>
-<dd>the path to the Java Virtual Machine (JVM) library</p>
-<dt><code>JAVA_INCLUDE_PATH</code></p>
-<dd>the include path to jni.h</p>
-<dt><code>JAVA_INCLUDE_PATH2</code></p>
-<dd>the include path to jni_md.h and jniport.h</p>
-<dt><code>JAVA_AWT_INCLUDE_PATH</code></p>
-<dd>the include path to jawt.h</dl>
+<dt><code>JAVA_AWT_LIBRARY</code></dt>
+<dd>the path to the Java AWT Native Interface (JAWT) library</dd>
+<dt><code>JAVA_JVM_LIBRARY</code></dt>
+<dd>the path to the Java Virtual Machine (JVM) library</dd>
+<dt><code>JAVA_INCLUDE_PATH</code></dt>
+<dd>the include path to jni.h</dd>
+<dt><code>JAVA_INCLUDE_PATH2</code></dt>
+<dd>the include path to jni_md.h and jniport.h</dd>
+<dt><code>JAVA_AWT_INCLUDE_PATH</code></dt>
+<dd>the include path to jawt.h</dd></dl>
 <h3>FindJPEG</h3>
 <p>Find the Joint Photographic Experts Group (JPEG) library (<code>libjpeg</code>)</p>
 <h3>Imported targets</h3>
 <p>New in version 3.12. </p>
 <p> This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>JPEG::JPEG</code></p>
-<dd>The JPEG library, if found.</dl>
+<dt><code>JPEG::JPEG</code></dt>
+<dd>The JPEG library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>JPEG_FOUND</code></p>
-<dd>If false, do not try to use JPEG.</p>
-<dt><code>JPEG_INCLUDE_DIRS</code></p>
-<dd>where to find jpeglib.h, etc.</p>
-<dt><code>JPEG_LIBRARIES</code></p>
-<dd>the libraries needed to use JPEG.</p>
-<dt><code>JPEG_VERSION</code></p>
-<dd>New in version 3.12: the version of the JPEG library found </p>
+<dt><code>JPEG_FOUND</code></dt>
+<dd>If false, do not try to use JPEG.</dd>
+<dt><code>JPEG_INCLUDE_DIRS</code></dt>
+<dd>where to find jpeglib.h, etc.</dd>
+<dt><code>JPEG_LIBRARIES</code></dt>
+<dd>the libraries needed to use JPEG.</dd>
+<dt><code>JPEG_VERSION</code></dt>
+<dd>New in version 3.12: the version of the JPEG library found </dd>
 </dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>JPEG_INCLUDE_DIRS</code></p>
-<dd>where to find jpeglib.h, etc.</p>
-<dt><code>JPEG_LIBRARY_RELEASE</code></p>
-<dd>where to find the JPEG library (optimized).</p>
-<dt><code>JPEG_LIBRARY_DEBUG</code></p>
-<dd>where to find the JPEG library (debug). </p>
+<dt><code>JPEG_INCLUDE_DIRS</code></dt>
+<dd>where to find jpeglib.h, etc.</dd>
+<dt><code>JPEG_LIBRARY_RELEASE</code></dt>
+<dd>where to find the JPEG library (optimized).</dd>
+<dt><code>JPEG_LIBRARY_DEBUG</code></dt>
+<dd>where to find the JPEG library (debug). </dd>
 <p> New in version 3.12: Debug and Release variand are found separately. </p>
 </dl>
 <h3>Obsolete variables</h3>
 <dl>
-<dt><code>JPEG_INCLUDE_DIR</code></p>
-<dd>where to find jpeglib.h, etc. (same as JPEG_INCLUDE_DIRS)</p>
-<dt><code>JPEG_LIBRARY</code></p>
-<dd>where to find the JPEG library.</dl>
+<dt><code>JPEG_INCLUDE_DIR</code></dt>
+<dd>where to find jpeglib.h, etc. (same as JPEG_INCLUDE_DIRS)</dd>
+<dt><code>JPEG_LIBRARY</code></dt>
+<dd>where to find the JPEG library.</dd></dl>
 <h3>FindKDE3</h3>
 <p>Find the KDE3 include and library dirs, KDE preprocessors and define a some macros </p>
 <p> This module defines the following variables:</p>
 <dl>
-<dt><code>KDE3_DEFINITIONS</code></p>
-<dd>compiler definitions required for compiling KDE software</p>
-<dt><code>KDE3_INCLUDE_DIR</code></p>
-<dd>the KDE include directory</p>
-<dt><code>KDE3_INCLUDE_DIRS</code></p>
-<dd>the KDE and the Qt include directory, for use with include_directories()</p>
-<dt><code>KDE3_LIB_DIR</code></p>
-<dd>the directory where the KDE libraries are installed, for use with link_directories()</p>
-<dt><code>QT_AND_KDECORE_LIBS</code></p>
-<dd>this contains both the Qt and the kdecore library</p>
-<dt><code>KDE3_DCOPIDL_EXECUTABLE</code></p>
-<dd>the dcopidl executable</p>
-<dt><code>KDE3_DCOPIDL2CPP_EXECUTABLE</code></p>
-<dd>the dcopidl2cpp executable</p>
-<dt><code>KDE3_KCFGC_EXECUTABLE</code></p>
-<dd>the kconfig_compiler executable</p>
-<dt><code>KDE3_FOUND</code></p>
-<dd>set to TRUE if all of the above has been found </p>
+<dt><code>KDE3_DEFINITIONS</code></dt>
+<dd>compiler definitions required for compiling KDE software</dd>
+<dt><code>KDE3_INCLUDE_DIR</code></dt>
+<dd>the KDE include directory</dd>
+<dt><code>KDE3_INCLUDE_DIRS</code></dt>
+<dd>the KDE and the Qt include directory, for use with include_directories()</dd>
+<dt><code>KDE3_LIB_DIR</code></dt>
+<dd>the directory where the KDE libraries are installed, for use with link_directories()</dd>
+<dt><code>QT_AND_KDECORE_LIBS</code></dt>
+<dd>this contains both the Qt and the kdecore library</dd>
+<dt><code>KDE3_DCOPIDL_EXECUTABLE</code></dt>
+<dd>the dcopidl executable</dd>
+<dt><code>KDE3_DCOPIDL2CPP_EXECUTABLE</code></dt>
+<dd>the dcopidl2cpp executable</dd>
+<dt><code>KDE3_KCFGC_EXECUTABLE</code></dt>
+<dd>the kconfig_compiler executable</dd>
+<dt><code>KDE3_FOUND</code></dt>
+<dd>set to TRUE if all of the above has been found </dd>
 <p> The following user adjustable options are provided:</p>
-<dt><code>KDE3_BUILD_TESTS</code></p>
-<dd>enable this to build KDE testcases </p>
+<dt><code>KDE3_BUILD_TESTS</code></dt>
+<dd>enable this to build KDE testcases </dd>
 <p> It also adds the following macros (from <code>KDE3Macros.cmake</code>) <code>SRCS_VAR</code> is always the variable which contains the list of source files for your application or library. </p>
 <p> KDE3_AUTOMOC(file1 &#8230; fileN) </p>
 <pre>Call this if you want to have automatic moc file handling.
@@ -6380,43 +6380,43 @@ KDEDIRS
 <h3>Input Variables</h3>
 <p>The following variables may be set to influence this module&#8217;s behavior:</p>
 <dl>
-<dt><code>BLA_STATIC</code></p>
-<dd>if <code>ON</code> use static linkage</p>
-<dt><code>BLA_VENDOR</code></p>
-<dd>Set to one of the BLAS/LAPACK Vendors to search for BLAS only from the specified vendor. If not set, all vendors are considered.</p>
-<dt><code>BLA_F95</code></p>
-<dd>if <code>ON</code> tries to find the BLAS95/LAPACK95 interfaces</p>
-<dt><code>BLA_PREFER_PKGCONFIG</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>BLA_STATIC</code></dt>
+<dd>if <code>ON</code> use static linkage</dd>
+<dt><code>BLA_VENDOR</code></dt>
+<dd>Set to one of the BLAS/LAPACK Vendors to search for BLAS only from the specified vendor. If not set, all vendors are considered.</dd>
+<dt><code>BLA_F95</code></dt>
+<dd>if <code>ON</code> tries to find the BLAS95/LAPACK95 interfaces</dd>
+<dt><code>BLA_PREFER_PKGCONFIG</code></dt>
+<dd>New in version 3.20. </dd>
 <p> if set <code>pkg-config</code> will be used to search for a LAPACK library first and if one is found that is preferred</p>
-<dt><code>BLA_SIZEOF_INTEGER</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>BLA_SIZEOF_INTEGER</code></dt>
+<dd>New in version 3.22. </dd>
 <p> Specify the BLAS/LAPACK library integer size:</p>
-<dt><code>4</code></p>
-<dd>Search for a BLAS/LAPACK with 32-bit integer interfaces.</p>
-<dt><code>8</code></p>
-<dd>Search for a BLAS/LAPACK with 64-bit integer interfaces.</p>
-<dt><code>ANY</code></p>
-<dd>Search for any BLAS/LAPACK. Most likely, a BLAS/LAPACK with 32-bit integer interfaces will be found.</dl>
+<dt><code>4</code></dt>
+<dd>Search for a BLAS/LAPACK with 32-bit integer interfaces.</dd>
+<dt><code>8</code></dt>
+<dd>Search for a BLAS/LAPACK with 64-bit integer interfaces.</dd>
+<dt><code>ANY</code></dt>
+<dd>Search for any BLAS/LAPACK. Most likely, a BLAS/LAPACK with 32-bit integer interfaces will be found.</dd></dl>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>LAPACK::LAPACK</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>LAPACK::LAPACK</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The libraries to use for LAPACK, if found.</dl>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>LAPACK_FOUND</code></p>
-<dd>library implementing the LAPACK interface is found</p>
-<dt><code>LAPACK_LINKER_FLAGS</code></p>
-<dd>uncached list of required linker flags (excluding <code>-l</code> and <code>-L</code>).</p>
-<dt><code>LAPACK_LIBRARIES</code></p>
-<dd>uncached list of libraries (using full path name) to link against to use LAPACK</p>
-<dt><code>LAPACK95_LIBRARIES</code></p>
-<dd>uncached list of libraries (using full path name) to link against to use LAPACK95</p>
-<dt><code>LAPACK95_FOUND</code></p>
-<dd>library implementing the LAPACK95 interface is found</dl>
+<dt><code>LAPACK_FOUND</code></dt>
+<dd>library implementing the LAPACK interface is found</dd>
+<dt><code>LAPACK_LINKER_FLAGS</code></dt>
+<dd>uncached list of required linker flags (excluding <code>-l</code> and <code>-L</code>).</dd>
+<dt><code>LAPACK_LIBRARIES</code></dt>
+<dd>uncached list of libraries (using full path name) to link against to use LAPACK</dd>
+<dt><code>LAPACK95_LIBRARIES</code></dt>
+<dd>uncached list of libraries (using full path name) to link against to use LAPACK95</dd>
+<dt><code>LAPACK95_FOUND</code></dt>
+<dd>library implementing the LAPACK95 interface is found</dd></dl>
 <h3>Intel MKL</h3>
 <p>To use the Intel MKL implementation of LAPACK, a project must enable at least one of the <code>C</code> or <code>CXX</code> languages. Set <code>BLA_VENDOR</code> to an Intel MKL variant either on the command-line as <code>-DBLA_VENDOR=Intel10_64lp</code> or in project code: </p>
 <pre>set(BLA_VENDOR Intel10_64lp)
@@ -6476,21 +6476,21 @@ LibArchive_VERSION - libarchive 3-component version number</pre>
 <p> Find libinput headers and library.</p>
 <h3>Imported Targets</h3>
 <dl>
-<dt><code>Libinput::Libinput</code></p>
-<dd>The libinput library, if found.</dl>
+<dt><code>Libinput::Libinput</code></dt>
+<dd>The libinput library, if found.</dd></dl>
 <h3>Result Variables</h3>
 <p>This will define the following variables in your project:</p>
 <dl>
-<dt><code>Libinput_FOUND</code></p>
-<dd>true if (the requested version of) libinput is available.</p>
-<dt><code>Libinput_VERSION</code></p>
-<dd>the version of libinput.</p>
-<dt><code>Libinput_LIBRARIES</code></p>
-<dd>the libraries to link against to use libinput.</p>
-<dt><code>Libinput_INCLUDE_DIRS</code></p>
-<dd>where to find the libinput headers.</p>
-<dt><code>Libinput_COMPILE_OPTIONS</code></p>
-<dd>this should be passed to target_compile_options(), if the target is not used for linking</dl>
+<dt><code>Libinput_FOUND</code></dt>
+<dd>true if (the requested version of) libinput is available.</dd>
+<dt><code>Libinput_VERSION</code></dt>
+<dd>the version of libinput.</dd>
+<dt><code>Libinput_LIBRARIES</code></dt>
+<dd>the libraries to link against to use libinput.</dd>
+<dt><code>Libinput_INCLUDE_DIRS</code></dt>
+<dd>where to find the libinput headers.</dd>
+<dt><code>Libinput_COMPILE_OPTIONS</code></dt>
+<dd>this should be passed to target_compile_options(), if the target is not used for linking</dd></dl>
 <h3>FindLibLZMA</h3>
 <p>Find LZMA compression algorithm headers and library.</p>
 <h3>Imported Targets</h3>
@@ -6499,106 +6499,106 @@ LibArchive_VERSION - libarchive 3-component version number</pre>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>LIBLZMA_FOUND</code></p>
-<dd>True if liblzma headers and library were found.</p>
-<dt><code>LIBLZMA_INCLUDE_DIRS</code></p>
-<dd>Directory where liblzma headers are located.</p>
-<dt><code>LIBLZMA_LIBRARIES</code></p>
-<dd>Lzma libraries to link against.</p>
-<dt><code>LIBLZMA_HAS_AUTO_DECODER</code></p>
-<dd>True if lzma_auto_decoder() is found (required).</p>
-<dt><code>LIBLZMA_HAS_EASY_ENCODER</code></p>
-<dd>True if lzma_easy_encoder() is found (required).</p>
-<dt><code>LIBLZMA_HAS_LZMA_PRESET</code></p>
-<dd>True if lzma_lzma_preset() is found (required).</p>
-<dt><code>LIBLZMA_VERSION_MAJOR</code></p>
-<dd>The major version of lzma</p>
-<dt><code>LIBLZMA_VERSION_MINOR</code></p>
-<dd>The minor version of lzma</p>
-<dt><code>LIBLZMA_VERSION_PATCH</code></p>
-<dd>The patch version of lzma</p>
-<dt><code>LIBLZMA_VERSION_STRING</code></p>
-<dd>version number as a string (ex: &quot;5.0.3&quot;)</dl>
+<dt><code>LIBLZMA_FOUND</code></dt>
+<dd>True if liblzma headers and library were found.</dd>
+<dt><code>LIBLZMA_INCLUDE_DIRS</code></dt>
+<dd>Directory where liblzma headers are located.</dd>
+<dt><code>LIBLZMA_LIBRARIES</code></dt>
+<dd>Lzma libraries to link against.</dd>
+<dt><code>LIBLZMA_HAS_AUTO_DECODER</code></dt>
+<dd>True if lzma_auto_decoder() is found (required).</dd>
+<dt><code>LIBLZMA_HAS_EASY_ENCODER</code></dt>
+<dd>True if lzma_easy_encoder() is found (required).</dd>
+<dt><code>LIBLZMA_HAS_LZMA_PRESET</code></dt>
+<dd>True if lzma_lzma_preset() is found (required).</dd>
+<dt><code>LIBLZMA_VERSION_MAJOR</code></dt>
+<dd>The major version of lzma</dd>
+<dt><code>LIBLZMA_VERSION_MINOR</code></dt>
+<dd>The minor version of lzma</dd>
+<dt><code>LIBLZMA_VERSION_PATCH</code></dt>
+<dd>The patch version of lzma</dd>
+<dt><code>LIBLZMA_VERSION_STRING</code></dt>
+<dd>version number as a string (ex: &quot;5.0.3&quot;)</dd></dl>
 <h3>FindLibXml2</h3>
 <p>Find the XML processing library (libxml2).</p>
 <h3>IMPORTED Targets</h3>
 <p>New in version 3.12. </p>
 <p> The following <code>IMPORTED</code> targets may be defined:</p>
 <dl>
-<dt><code>LibXml2::LibXml2</code></p>
-<dd>libxml2 library.</p>
-<dt><code>LibXml2::xmllint</code></p>
-<dd>New in version 3.17. </p>
+<dt><code>LibXml2::LibXml2</code></dt>
+<dd>libxml2 library.</dd>
+<dt><code>LibXml2::xmllint</code></dt>
+<dd>New in version 3.17. </dd>
 <p> xmllint command-line executable.</dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>LibXml2_FOUND</code></p>
-<dd>true if libxml2 headers and libraries were found</p>
-<dt><code>LIBXML2_INCLUDE_DIR</code></p>
-<dd>the directory containing LibXml2 headers</p>
-<dt><code>LIBXML2_INCLUDE_DIRS</code></p>
-<dd>list of the include directories needed to use LibXml2</p>
-<dt><code>LIBXML2_LIBRARIES</code></p>
-<dd>LibXml2 libraries to be linked</p>
-<dt><code>LIBXML2_DEFINITIONS</code></p>
-<dd>the compiler switches required for using LibXml2</p>
-<dt><code>LIBXML2_XMLLINT_EXECUTABLE</code></p>
-<dd>path to the XML checking tool xmllint coming with LibXml2</p>
-<dt><code>LIBXML2_VERSION_STRING</code></p>
-<dd>the version of LibXml2 found (since CMake 2.8.8)</dl>
+<dt><code>LibXml2_FOUND</code></dt>
+<dd>true if libxml2 headers and libraries were found</dd>
+<dt><code>LIBXML2_INCLUDE_DIR</code></dt>
+<dd>the directory containing LibXml2 headers</dd>
+<dt><code>LIBXML2_INCLUDE_DIRS</code></dt>
+<dd>list of the include directories needed to use LibXml2</dd>
+<dt><code>LIBXML2_LIBRARIES</code></dt>
+<dd>LibXml2 libraries to be linked</dd>
+<dt><code>LIBXML2_DEFINITIONS</code></dt>
+<dd>the compiler switches required for using LibXml2</dd>
+<dt><code>LIBXML2_XMLLINT_EXECUTABLE</code></dt>
+<dd>path to the XML checking tool xmllint coming with LibXml2</dd>
+<dt><code>LIBXML2_VERSION_STRING</code></dt>
+<dd>the version of LibXml2 found (since CMake 2.8.8)</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>LIBXML2_INCLUDE_DIR</code></p>
-<dd>the directory containing LibXml2 headers</p>
-<dt><code>LIBXML2_LIBRARY</code></p>
-<dd>path to the LibXml2 library</dl>
+<dt><code>LIBXML2_INCLUDE_DIR</code></dt>
+<dd>the directory containing LibXml2 headers</dd>
+<dt><code>LIBXML2_LIBRARY</code></dt>
+<dd>path to the LibXml2 library</dd></dl>
 <h3>FindLibXslt</h3>
 <p>Find the XSL Transformations, Extensible Stylesheet Language Transformations (XSLT) library (LibXslt)</p>
 <h3>IMPORTED Targets</h3>
 <p>New in version 3.18. </p>
 <p> The following <code>IMPORTED</code> targets may be defined:</p>
 <dl>
-<dt><code>LibXslt::LibXslt</code></p>
-<dd>If the libxslt library has been found</p>
-<dt><code>LibXslt::LibExslt</code></p>
-<dd>If the libexslt library has been found</p>
-<dt><code>LibXslt::xsltproc</code></p>
-<dd>If the xsltproc command-line executable has been found</dl>
+<dt><code>LibXslt::LibXslt</code></dt>
+<dd>If the libxslt library has been found</dd>
+<dt><code>LibXslt::LibExslt</code></dt>
+<dd>If the libexslt library has been found</dd>
+<dt><code>LibXslt::xsltproc</code></dt>
+<dd>If the xsltproc command-line executable has been found</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project: LIBXSLT_FOUND &#8211; system has LibXslt LIBXSLT_INCLUDE_DIR &#8211; the LibXslt include directory LIBXSLT_LIBRARIES &#8211; Link these to LibXslt LIBXSLT_DEFINITIONS &#8211; Compiler switches required for using LibXslt LIBXSLT_VERSION_STRING &#8211; version of LibXslt found (since CMake 2.8.8) </p>
 <p> Additionally, the following two variables are set (but not required for using xslt):</p>
 <dl>
-<dt><code>LIBXSLT_EXSLT_INCLUDE_DIR</code></p>
-<dd>New in version 3.18: The include directory for exslt. </p>
-<dt><code>LIBXSLT_EXSLT_LIBRARIES</code></p>
-<dd>Link to these if you need to link against the exslt library.</p>
-<dt><code>LIBXSLT_XSLTPROC_EXECUTABLE</code></p>
-<dd>Contains the full path to the xsltproc executable if found.</dl>
+<dt><code>LIBXSLT_EXSLT_INCLUDE_DIR</code></dt>
+<dd>New in version 3.18: The include directory for exslt. </dd>
+<dt><code>LIBXSLT_EXSLT_LIBRARIES</code></dt>
+<dd>Link to these if you need to link against the exslt library.</dd>
+<dt><code>LIBXSLT_XSLTPROC_EXECUTABLE</code></dt>
+<dd>Contains the full path to the xsltproc executable if found.</dd></dl>
 <h3>FindLTTngUST</h3>
 <p>New in version 3.6. </p>
 <p> Find <i>Linux Trace Toolkit Next Generation (LTTng-UST)</i> library.</p>
 <h3>Imported target</h3>
 <p>This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>LTTng::UST</code></p>
-<dd>The LTTng-UST library, if found</dl>
+<dt><code>LTTng::UST</code></dt>
+<dd>The LTTng-UST library, if found</dd></dl>
 <h3>Result variables</h3>
 <p>This module sets the following</p>
 <dl>
-<dt><code>LTTNGUST_FOUND</code></p>
-<dd><code>TRUE</code> if system has LTTng-UST</p>
-<dt><code>LTTNGUST_INCLUDE_DIRS</code></p>
-<dd>The LTTng-UST include directories</p>
-<dt><code>LTTNGUST_LIBRARIES</code></p>
-<dd>The libraries needed to use LTTng-UST</p>
-<dt><code>LTTNGUST_VERSION_STRING</code></p>
-<dd>The LTTng-UST version</p>
-<dt><code>LTTNGUST_HAS_TRACEF</code></p>
-<dd><code>TRUE</code> if the <code>tracef()</code> API is available in the system&#8217;s LTTng-UST</p>
-<dt><code>LTTNGUST_HAS_TRACELOG</code></p>
-<dd><code>TRUE</code> if the <code>tracelog()</code> API is available in the system&#8217;s LTTng-UST</dl>
+<dt><code>LTTNGUST_FOUND</code></dt>
+<dd><code>TRUE</code> if system has LTTng-UST</dd>
+<dt><code>LTTNGUST_INCLUDE_DIRS</code></dt>
+<dd>The LTTng-UST include directories</dd>
+<dt><code>LTTNGUST_LIBRARIES</code></dt>
+<dd>The libraries needed to use LTTng-UST</dd>
+<dt><code>LTTNGUST_VERSION_STRING</code></dt>
+<dd>The LTTng-UST version</dd>
+<dt><code>LTTNGUST_HAS_TRACEF</code></dt>
+<dd><code>TRUE</code> if the <code>tracef()</code> API is available in the system&#8217;s LTTng-UST</dd>
+<dt><code>LTTNGUST_HAS_TRACELOG</code></dt>
+<dd><code>TRUE</code> if the <code>tracelog()</code> API is available in the system&#8217;s LTTng-UST</dd></dl>
 <h3>FindLua</h3>
 <p>Locate Lua library. </p>
 <p> New in version 3.18: Support for Lua 5.4. </p>
@@ -6632,136 +6632,136 @@ LibArchive_VERSION - libarchive 3-component version number</pre>
 <p>Finds Matlab or Matlab Compiler Runtime (MCR) and provides Matlab tools, libraries and compilers to CMake. </p>
 <p> This package primary purpose is to find the libraries associated with Matlab or the MCR in order to be able to build Matlab extensions (mex files). It can also be used:</p>
 <dl>
-<dt>&bull;</p>
-<dd>to run specific commands in Matlab in case Matlab is available</p>
-<dt>&bull;</p>
-<dd>for declaring Matlab unit test</p>
-<dt>&bull;</p>
-<dd>to retrieve various information from Matlab (mex extensions, versions and release queries, &#8230;) </p>
+<dt>&bull;</dt>
+<dd>to run specific commands in Matlab in case Matlab is available</dd>
+<dt>&bull;</dt>
+<dd>for declaring Matlab unit test</dd>
+<dt>&bull;</dt>
+<dd>to retrieve various information from Matlab (mex extensions, versions and release queries, &#8230;) </dd>
 <p> New in version 3.12: Added Matlab Compiler Runtime (MCR) support. </p>
 <p> The module supports the following components:</p>
-<dt>&bull;</p>
-<dd><code>ENG_LIBRARY</code> and <code>MAT_LIBRARY</code>: respectively the <code>ENG</code> and <code>MAT</code> libraries of Matlab</p>
-<dt>&bull;</p>
-<dd><code>MAIN_PROGRAM</code> the Matlab binary program. Note that this component is not available on the MCR version, and will yield an error if the MCR is found instead of the regular Matlab installation.</p>
-<dt>&bull;</p>
-<dd><code>MEX_COMPILER</code> the MEX compiler.</p>
-<dt>&bull;</p>
-<dd><code>MCC_COMPILER</code> the MCC compiler, included with the Matlab Compiler add-on.</p>
-<dt>&bull;</p>
-<dd><code>SIMULINK</code> the Simulink environment. </p>
+<dt>&bull;</dt>
+<dd><code>ENG_LIBRARY</code> and <code>MAT_LIBRARY</code>: respectively the <code>ENG</code> and <code>MAT</code> libraries of Matlab</dd>
+<dt>&bull;</dt>
+<dd><code>MAIN_PROGRAM</code> the Matlab binary program. Note that this component is not available on the MCR version, and will yield an error if the MCR is found instead of the regular Matlab installation.</dd>
+<dt>&bull;</dt>
+<dd><code>MEX_COMPILER</code> the MEX compiler.</dd>
+<dt>&bull;</dt>
+<dd><code>MCC_COMPILER</code> the MCC compiler, included with the Matlab Compiler add-on.</dd>
+<dt>&bull;</dt>
+<dd><code>SIMULINK</code> the Simulink environment. </dd>
 <p> New in version 3.7: Added the <code>MAT_LIBRARY</code> component. </p>
 <p> New in version 3.13: Added the <code>ENGINE_LIBRARY</code>, <code>DATAARRAY_LIBRARY</code> and <code>MCC_COMPILER</code> components. </p>
 <p> Changed in version 3.14: Removed the <code>MX_LIBRARY</code>, <code>ENGINE_LIBRARY</code> and <code>DATAARRAY_LIBRARY</code> components. These libraries are found unconditionally. </p>
 <p> <code>NOTE:</code> The version given to the <code>find_package()</code> directive is the Matlab <code>version</code>, which should not be confused with the Matlab <i>release</i> name (eg. <i>R2014</i>). The <i>matlab_get_version_from_release_name()</i> and <i>matlab_get_release_name_from_version()</i> provide a mapping between the release name and the version. </p>
 <p> The variable <i>Matlab_ROOT_DIR</i> may be specified in order to give the path of the desired Matlab version. Otherwise, the behavior is platform specific:</p>
-<dt>&bull;</p>
-<dd>Windows: The installed versions of Matlab/MCR are retrieved from the Windows registry</p>
-<dt>&bull;</p>
-<dd>OS X: The installed versions of Matlab/MCR are given by the MATLAB default installation paths in <code>/Application</code>. If no such application is found, it falls back to the one that might be accessible from the <code>PATH</code>.</p>
-<dt>&bull;</p>
-<dd>Unix: The desired Matlab should be accessible from the <code>PATH</code>. This does not work for MCR installation and <i>Matlab_ROOT_DIR</i> should be specified on this platform. </p>
+<dt>&bull;</dt>
+<dd>Windows: The installed versions of Matlab/MCR are retrieved from the Windows registry</dd>
+<dt>&bull;</dt>
+<dd>OS X: The installed versions of Matlab/MCR are given by the MATLAB default installation paths in <code>/Application</code>. If no such application is found, it falls back to the one that might be accessible from the <code>PATH</code>.</dd>
+<dt>&bull;</dt>
+<dd>Unix: The desired Matlab should be accessible from the <code>PATH</code>. This does not work for MCR installation and <i>Matlab_ROOT_DIR</i> should be specified on this platform. </dd>
 <p> Additional information is provided when <i>MATLAB_FIND_DEBUG</i> is set. When a Matlab/MCR installation is found automatically and the <code>MATLAB_VERSION</code> is not given, the version is queried from Matlab directly (on Windows this may pop up a Matlab window) or from the MCR installation. </p>
 <p> The mapping of the release names and the version of Matlab is performed by defining pairs (name, version). The variable <i>MATLAB_ADDITIONAL_VERSIONS</i> may be provided before the call to the <code>find_package()</code> in order to handle additional versions. </p>
 <p> A Matlab scripts can be added to the set of tests using the <i>matlab_add_unit_test()</i>. By default, the Matlab unit test framework will be used (&gt;= 2013a) to run this script, but regular <code>.m</code> files returning an exit code can be used as well (0 indicating a success).</dl>
 <h3>Module Input Variables</h3>
 <p>Users or projects may set the following variables to configure the module behavior:</p>
 <dl>
-<dt><i>Matlab_ROOT_DIR</i></p>
-<dd>the root of the Matlab installation.</p>
-<dt><i>MATLAB_FIND_DEBUG</i></p>
-<dd>outputs debug information</p>
-<dt><i>MATLAB_ADDITIONAL_VERSIONS</i></p>
-<dd>additional versions of Matlab for the automatic retrieval of the installed versions.</dl>
+<dt><i>Matlab_ROOT_DIR</i></dt>
+<dd>the root of the Matlab installation.</dd>
+<dt><i>MATLAB_FIND_DEBUG</i></dt>
+<dd>outputs debug information</dd>
+<dt><i>MATLAB_ADDITIONAL_VERSIONS</i></dt>
+<dd>additional versions of Matlab for the automatic retrieval of the installed versions.</dd></dl>
 <h3>Imported targets</h3>
 <p>New in version 3.22. </p>
 <p> This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>Matlab::mex</code></p>
-<dd>The <code>mex</code> library, always available.</p>
-<dt><code>Matlab::mx</code></p>
-<dd>The mx library of Matlab (arrays), always available.</p>
-<dt><code>Matlab::eng</code></p>
-<dd>Matlab engine library. Available only if the <code>ENG_LIBRARY</code> component is requested.</p>
-<dt><code>Matlab::mat</code></p>
-<dd>Matlab matrix library. Available only if the <code>MAT_LIBRARY</code> component is requested.</p>
-<dt><code>Matlab::MatlabEngine</code></p>
-<dd>Matlab C++ engine library, always available for R2018a and newer.</p>
-<dt><code>Matlab::MatlabDataArray</code></p>
-<dd>Matlab C++ data array library, always available for R2018a and newer.</dl>
+<dt><code>Matlab::mex</code></dt>
+<dd>The <code>mex</code> library, always available.</dd>
+<dt><code>Matlab::mx</code></dt>
+<dd>The mx library of Matlab (arrays), always available.</dd>
+<dt><code>Matlab::eng</code></dt>
+<dd>Matlab engine library. Available only if the <code>ENG_LIBRARY</code> component is requested.</dd>
+<dt><code>Matlab::mat</code></dt>
+<dd>Matlab matrix library. Available only if the <code>MAT_LIBRARY</code> component is requested.</dd>
+<dt><code>Matlab::MatlabEngine</code></dt>
+<dd>Matlab C++ engine library, always available for R2018a and newer.</dd>
+<dt><code>Matlab::MatlabDataArray</code></dt>
+<dd>Matlab C++ data array library, always available for R2018a and newer.</dd></dl>
 <h3>Variables defined by the module</h3>
 <h3>Result variables</h3>
 <dl>
-<dt><code>Matlab_FOUND</code></p>
-<dd><code>TRUE</code> if the Matlab installation is found, <code>FALSE</code> otherwise. All variable below are defined if Matlab is found.</p>
-<dt><code>Matlab_ROOT_DIR</code></p>
-<dd>the final root of the Matlab installation determined by the FindMatlab module.</p>
-<dt><code>Matlab_MAIN_PROGRAM</code></p>
-<dd>the Matlab binary program. Available only if the component <code>MAIN_PROGRAM</code> is given in the <code>find_package()</code> directive.</p>
-<dt><code>Matlab_INCLUDE_DIRS</code></p>
-<dd>the path of the Matlab libraries headers</p>
-<dt><code>Matlab_MEX_LIBRARY</code></p>
-<dd>library for mex, always available.</p>
-<dt><code>Matlab_MX_LIBRARY</code></p>
-<dd>mx library of Matlab (arrays), always available.</p>
-<dt><code>Matlab_ENG_LIBRARY</code></p>
-<dd>Matlab engine library. Available only if the component <code>ENG_LIBRARY</code> is requested.</p>
-<dt><code>Matlab_MAT_LIBRARY</code></p>
-<dd>Matlab matrix library. Available only if the component <code>MAT_LIBRARY</code> is requested.</p>
-<dt><code>Matlab_ENGINE_LIBRARY</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>Matlab_FOUND</code></dt>
+<dd><code>TRUE</code> if the Matlab installation is found, <code>FALSE</code> otherwise. All variable below are defined if Matlab is found.</dd>
+<dt><code>Matlab_ROOT_DIR</code></dt>
+<dd>the final root of the Matlab installation determined by the FindMatlab module.</dd>
+<dt><code>Matlab_MAIN_PROGRAM</code></dt>
+<dd>the Matlab binary program. Available only if the component <code>MAIN_PROGRAM</code> is given in the <code>find_package()</code> directive.</dd>
+<dt><code>Matlab_INCLUDE_DIRS</code></dt>
+<dd>the path of the Matlab libraries headers</dd>
+<dt><code>Matlab_MEX_LIBRARY</code></dt>
+<dd>library for mex, always available.</dd>
+<dt><code>Matlab_MX_LIBRARY</code></dt>
+<dd>mx library of Matlab (arrays), always available.</dd>
+<dt><code>Matlab_ENG_LIBRARY</code></dt>
+<dd>Matlab engine library. Available only if the component <code>ENG_LIBRARY</code> is requested.</dd>
+<dt><code>Matlab_MAT_LIBRARY</code></dt>
+<dd>Matlab matrix library. Available only if the component <code>MAT_LIBRARY</code> is requested.</dd>
+<dt><code>Matlab_ENGINE_LIBRARY</code></dt>
+<dd>New in version 3.13. </dd>
 <p> Matlab C++ engine library, always available for R2018a and newer.</p>
-<dt><code>Matlab_DATAARRAY_LIBRARY</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>Matlab_DATAARRAY_LIBRARY</code></dt>
+<dd>New in version 3.13. </dd>
 <p> Matlab C++ data array library, always available for R2018a and newer.</p>
-<dt><code>Matlab_LIBRARIES</code></p>
-<dd>the whole set of libraries of Matlab</p>
-<dt><code>Matlab_MEX_COMPILER</code></p>
-<dd>the mex compiler of Matlab. Currently not used. Available only if the component <code>MEX_COMPILER</code> is requested.</p>
-<dt><code>Matlab_MCC_COMPILER</code></p>
-<dd>New in version 3.13. </p>
+<dt><code>Matlab_LIBRARIES</code></dt>
+<dd>the whole set of libraries of Matlab</dd>
+<dt><code>Matlab_MEX_COMPILER</code></dt>
+<dd>the mex compiler of Matlab. Currently not used. Available only if the component <code>MEX_COMPILER</code> is requested.</dd>
+<dt><code>Matlab_MCC_COMPILER</code></dt>
+<dd>New in version 3.13. </dd>
 <p> the mcc compiler of Matlab. Included with the Matlab Compiler add-on. Available only if the component <code>MCC_COMPILER</code> is requested.</dl>
 <h3>Cached variables</h3>
 <dl>
-<dt><code>Matlab_MEX_EXTENSION</code></p>
-<dd>the extension of the mex files for the current platform (given by Matlab).</p>
-<dt><code>Matlab_ROOT_DIR</code></p>
-<dd>the location of the root of the Matlab installation found. If this value is changed by the user, the result variables are recomputed.</dl>
+<dt><code>Matlab_MEX_EXTENSION</code></dt>
+<dd>the extension of the mex files for the current platform (given by Matlab).</dd>
+<dt><code>Matlab_ROOT_DIR</code></dt>
+<dd>the location of the root of the Matlab installation found. If this value is changed by the user, the result variables are recomputed.</dd></dl>
 <h3>Provided macros</h3>
 <dl>
-<dt><i>matlab_get_version_from_release_name()</i></p>
-<dd>returns the version from the release name</p>
-<dt><i>matlab_get_release_name_from_version()</i></p>
-<dd>returns the release name from the Matlab version</dl>
+<dt><i>matlab_get_version_from_release_name()</i></dt>
+<dd>returns the version from the release name</dd>
+<dt><i>matlab_get_release_name_from_version()</i></dt>
+<dd>returns the release name from the Matlab version</dd></dl>
 <h3>Provided functions</h3>
 <dl>
-<dt><i>matlab_add_mex()</i></p>
-<dd>adds a target compiling a MEX file.</p>
-<dt><i>matlab_add_unit_test()</i></p>
-<dd>adds a Matlab unit test file as a test to the project.</p>
-<dt><i>matlab_extract_all_installed_versions_from_registry()</i></p>
-<dd>parses the registry for all Matlab versions. Available on Windows only. The part of the registry parsed is dependent on the host processor</p>
-<dt><i>matlab_get_all_valid_matlab_roots_from_registry()</i></p>
-<dd>returns all the possible Matlab or MCR paths, according to a previously given list. Only the existing/accessible paths are kept. This is mainly useful for the searching all possible Matlab installation.</p>
-<dt><i>matlab_get_mex_suffix()</i></p>
-<dd>returns the suffix to be used for the mex files (platform/architecture dependent)</p>
-<dt><i>matlab_get_version_from_matlab_run()</i></p>
-<dd>returns the version of Matlab/MCR, given the full directory of the Matlab/MCR installation path.</dl>
+<dt><i>matlab_add_mex()</i></dt>
+<dd>adds a target compiling a MEX file.</dd>
+<dt><i>matlab_add_unit_test()</i></dt>
+<dd>adds a Matlab unit test file as a test to the project.</dd>
+<dt><i>matlab_extract_all_installed_versions_from_registry()</i></dt>
+<dd>parses the registry for all Matlab versions. Available on Windows only. The part of the registry parsed is dependent on the host processor</dd>
+<dt><i>matlab_get_all_valid_matlab_roots_from_registry()</i></dt>
+<dd>returns all the possible Matlab or MCR paths, according to a previously given list. Only the existing/accessible paths are kept. This is mainly useful for the searching all possible Matlab installation.</dd>
+<dt><i>matlab_get_mex_suffix()</i></dt>
+<dd>returns the suffix to be used for the mex files (platform/architecture dependent)</dd>
+<dt><i>matlab_get_version_from_matlab_run()</i></dt>
+<dd>returns the version of Matlab/MCR, given the full directory of the Matlab/MCR installation path.</dd></dl>
 <h3>Known issues</h3>
 <dl>
-<dt><code>Symbol clash in a MEX target</code></p>
-<dd>By default, every symbols inside a MEX file defined with the command <i>matlab_add_mex()</i> have hidden visibility, except for the entry point. This is the default behavior of the MEX compiler, which lowers the risk of symbol collision between the libraries shipped with Matlab, and the libraries to which the MEX file is linking to. This is also the default on Windows platforms. </p>
+<dt><code>Symbol clash in a MEX target</code></dt>
+<dd>By default, every symbols inside a MEX file defined with the command <i>matlab_add_mex()</i> have hidden visibility, except for the entry point. This is the default behavior of the MEX compiler, which lowers the risk of symbol collision between the libraries shipped with Matlab, and the libraries to which the MEX file is linking to. This is also the default on Windows platforms. </dd>
 <p> However, this is not sufficient in certain case, where for instance your MEX file is linking against libraries that are already loaded by Matlab, even if those libraries have different SONAMES. A possible solution is to hide the symbols of the libraries to which the MEX target is linking to. This can be achieved in GNU GCC compilers with the linker option <code>-Wl,&#8211;exclude-libs,ALL</code>.</p>
-<dt><code>Tests using GPU resources</code></p>
-<dd>in case your MEX file is using the GPU and in order to be able to run unit tests on this MEX file, the GPU resources should be properly released by Matlab. A possible solution is to make Matlab aware of the use of the GPU resources in the session, which can be performed by a command such as <code>D = gpuDevice()</code> at the beginning of the test script (or via a fixture).</dl>
+<dt><code>Tests using GPU resources</code></dt>
+<dd>in case your MEX file is using the GPU and in order to be able to run unit tests on this MEX file, the GPU resources should be properly released by Matlab. A possible solution is to make Matlab aware of the use of the GPU resources in the session, which can be performed by a command such as <code>D = gpuDevice()</code> at the beginning of the test script (or via a fixture).</dd></dl>
 <h3>Reference</h3>
 <dl>
-<dt><code>Matlab_ROOT_DIR</code></p>
-<dd>The root folder of the Matlab installation. If set before the call to <code>find_package()</code>, the module will look for the components in that path. If not set, then an automatic search of Matlab will be performed. If set, it should point to a valid version of Matlab.</p>
-<dt><code>MATLAB_FIND_DEBUG</code></p>
-<dd>If set, the lookup of Matlab and the intermediate configuration steps are outputted to the console.</p>
-<dt><code>MATLAB_ADDITIONAL_VERSIONS</code></p>
-<dd>If set, specifies additional versions of Matlab that may be looked for. The variable should be a list of strings, organized by pairs of release name and versions, such as follows: </p>
+<dt><code>Matlab_ROOT_DIR</code></dt>
+<dd>The root folder of the Matlab installation. If set before the call to <code>find_package()</code>, the module will look for the components in that path. If not set, then an automatic search of Matlab will be performed. If set, it should point to a valid version of Matlab.</dd>
+<dt><code>MATLAB_FIND_DEBUG</code></dt>
+<dd>If set, the lookup of Matlab and the intermediate configuration steps are outputted to the console.</dd>
+<dt><code>MATLAB_ADDITIONAL_VERSIONS</code></dt>
+<dd>If set, specifies additional versions of Matlab that may be looked for. The variable should be a list of strings, organized by pairs of release name and versions, such as follows: </dd>
 <pre>set(MATLAB_ADDITIONAL_VERSIONS
  &quot;release_name1=corresponding_version1&quot;
  &quot;release_name2=corresponding_version2&quot;
@@ -6773,42 +6773,42 @@ LibArchive_VERSION - libarchive 3-component version number</pre>
  &quot;R2013a=8.1&quot;
  &quot;R2012b=8.0&quot;)</pre>
 <p>The order of entries in this list matters when several versions of Matlab are installed. The priority is set according to the ordering in this list.</p>
-<dt><code>matlab_get_version_from_release_name</code></p>
-<dd>Returns the version of Matlab (17.58) from a release name (R2017k)</p>
-<dt><code>matlab_get_release_name_from_version</code></p>
-<dd>Returns the release name (R2017k) from the version of Matlab (17.58)</p>
-<dt><code>matlab_extract_all_installed_versions_from_registry</code></p>
-<dd>This function parses the registry and founds the Matlab versions that are installed. The found versions are returned in <i>matlab_versions</i>. Set <i>win64</i> to <i>TRUE</i> if the 64 bit version of Matlab should be looked for The returned list contains all versions under <code>HKLM\SOFTWARE\Mathworks\MATLAB</code> and <code>HKLM\SOFTWARE\Mathworks\MATLAB Runtime</code> or an empty list in case an error occurred (or nothing found). </p>
+<dt><code>matlab_get_version_from_release_name</code></dt>
+<dd>Returns the version of Matlab (17.58) from a release name (R2017k)</dd>
+<dt><code>matlab_get_release_name_from_version</code></dt>
+<dd>Returns the release name (R2017k) from the version of Matlab (17.58)</dd>
+<dt><code>matlab_extract_all_installed_versions_from_registry</code></dt>
+<dd>This function parses the registry and founds the Matlab versions that are installed. The found versions are returned in <i>matlab_versions</i>. Set <i>win64</i> to <i>TRUE</i> if the 64 bit version of Matlab should be looked for The returned list contains all versions under <code>HKLM\SOFTWARE\Mathworks\MATLAB</code> and <code>HKLM\SOFTWARE\Mathworks\MATLAB Runtime</code> or an empty list in case an error occurred (or nothing found). </dd>
 <p> <code>NOTE:</code> Only the versions are provided. No check is made over the existence of the installation referenced in the registry,</p>
-<dt><code>matlab_get_all_valid_matlab_roots_from_registry</code></p>
-<dd>Populates the Matlab root with valid versions of Matlab or Matlab Runtime (MCR). The returned matlab_roots is organized in triplets <code>(type,version_number,matlab_root_path)</code>, where <code>type</code> indicates either <code>MATLAB</code> or <code>MCR</code>. </p>
+<dt><code>matlab_get_all_valid_matlab_roots_from_registry</code></dt>
+<dd>Populates the Matlab root with valid versions of Matlab or Matlab Runtime (MCR). The returned matlab_roots is organized in triplets <code>(type,version_number,matlab_root_path)</code>, where <code>type</code> indicates either <code>MATLAB</code> or <code>MCR</code>. </dd>
 <pre>matlab_get_all_valid_matlab_roots_from_registry(
  matlab_versions
  matlab_roots)</pre>
-<dt><code>matlab_versions</code></p>
-<dd>the versions of each of the Matlab or MCR installations</p>
-<dt><code>matlab_roots</code></p>
-<dd>the location of each of the Matlab or MCR installations</p>
-<dt><code>matlab_get_mex_suffix</code></p>
-<dd>Returns the extension of the mex files (the suffixes). This function should not be called before the appropriate Matlab root has been found. </p>
+<dt><code>matlab_versions</code></dt>
+<dd>the versions of each of the Matlab or MCR installations</dd>
+<dt><code>matlab_roots</code></dt>
+<dd>the location of each of the Matlab or MCR installations</dd>
+<dt><code>matlab_get_mex_suffix</code></dt>
+<dd>Returns the extension of the mex files (the suffixes). This function should not be called before the appropriate Matlab root has been found. </dd>
 <pre>matlab_get_mex_suffix(
  matlab_root
  mex_suffix)</pre>
-<dt><code>matlab_root</code></p>
-<dd>the root of the Matlab/MCR installation</p>
-<dt><code>mex_suffix</code></p>
-<dd>the variable name in which the suffix will be returned.</p>
-<dt><code>matlab_get_version_from_matlab_run</code></p>
-<dd>This function runs Matlab program specified on arguments and extracts its version. If the path provided for the Matlab installation points to an MCR installation, the version is extracted from the installed files. </p>
+<dt><code>matlab_root</code></dt>
+<dd>the root of the Matlab/MCR installation</dd>
+<dt><code>mex_suffix</code></dt>
+<dd>the variable name in which the suffix will be returned.</dd>
+<dt><code>matlab_get_version_from_matlab_run</code></dt>
+<dd>This function runs Matlab program specified on arguments and extracts its version. If the path provided for the Matlab installation points to an MCR installation, the version is extracted from the installed files. </dd>
 <pre>matlab_get_version_from_matlab_run(
  matlab_binary_path
  matlab_list_versions)</pre>
-<dt><code>matlab_binary_path</code></p>
-<dd>the location of the <i>matlab</i> binary executable</p>
-<dt><code>matlab_list_versions</code></p>
-<dd>the version extracted from Matlab</p>
-<dt><code>matlab_add_unit_test</code></p>
-<dd>Adds a Matlab unit test to the test set of cmake/ctest. This command requires the component <code>MAIN_PROGRAM</code> and hence is not available for an MCR installation. </p>
+<dt><code>matlab_binary_path</code></dt>
+<dd>the location of the <i>matlab</i> binary executable</dd>
+<dt><code>matlab_list_versions</code></dt>
+<dd>the version extracted from Matlab</dd>
+<dt><code>matlab_add_unit_test</code></dt>
+<dd>Adds a Matlab unit test to the test set of cmake/ctest. This command requires the component <code>MAIN_PROGRAM</code> and hence is not available for an MCR installation. </dd>
 <p> The unit test uses the Matlab unittest framework (default, available starting Matlab 2013b+) except if the option <code>NO_UNITTEST_FRAMEWORK</code> is given. </p>
 <p> The function expects one Matlab test script file to be given. In the case <code>NO_UNITTEST_FRAMEWORK</code> is given, the unittest script file should contain the script to be run, plus an exit command with the exit value. This exit value will be passed to the ctest framework (0 success, non 0 failure). Additional arguments accepted by <code>add_test()</code> can be passed through <code>TEST_ARGS</code> (eg. <code>CONFIGURATION &lt;config&gt; &#8230;</code>). </p>
 <pre>matlab_add_unit_test(
@@ -6823,28 +6823,28 @@ LibArchive_VERSION - libarchive 3-component version number</pre>
  [NO_UNITTEST_FRAMEWORK]
  )</pre>
 <p>The function arguments are:</p>
-<dt><code>NAME</code></p>
-<dd>name of the unittest in ctest.</p>
-<dt><code>UNITTEST_FILE</code></p>
-<dd>the matlab unittest file. Its path will be automatically added to the Matlab path.</p>
-<dt><code>CUSTOM_TEST_COMMAND</code></p>
-<dd>Matlab script command to run as the test. If this is not set, then the following is run: <code>runtests(&#8216;matlab_file_name&#8217;), exit(max([ans(1,:).Failed]))</code> where <code>matlab_file_name</code> is the <code>UNITTEST_FILE</code> without the extension.</p>
-<dt><code>UNITTEST_PRECOMMAND</code></p>
-<dd>Matlab script command to be ran before the file containing the test (eg. GPU device initialization based on CMake variables).</p>
-<dt><code>TIMEOUT</code></p>
-<dd>the test timeout in seconds. Defaults to 180 seconds as the Matlab unit test may hang.</p>
-<dt><code>ADDITIONAL_PATH</code></p>
-<dd>a list of paths to add to the Matlab path prior to running the unit test.</p>
-<dt><code>MATLAB_ADDITIONAL_STARTUP_OPTIONS</code></p>
-<dd>a list of additional option in order to run Matlab from the command line. <code>-nosplash -nodesktop -nodisplay</code> are always added.</p>
-<dt><code>TEST_ARGS</code></p>
-<dd>Additional options provided to the add_test command. These options are added to the default options (eg. &quot;CONFIGURATIONS Release&quot;)</p>
-<dt><code>NO_UNITTEST_FRAMEWORK</code></p>
-<dd>when set, indicates that the test should not use the unittest framework of Matlab (available for versions &gt;= R2013a).</p>
-<dt><code>WORKING_DIRECTORY</code></p>
-<dd>This will be the working directory for the test. If specified it will also be the output directory used for the log file of the test run. If not specified the temporary directory <code>${CMAKE_BINARY_DIR}/Matlab</code> will be used as the working directory and the log location.</p>
-<dt><code>matlab_add_mex</code></p>
-<dd>Adds a Matlab MEX target. This commands compiles the given sources with the current tool-chain in order to produce a MEX file. The final name of the produced output may be specified, as well as additional link libraries, and a documentation entry for the MEX file. Remaining arguments of the call are passed to the <code>add_library()</code> or <code>add_executable()</code> command. </p>
+<dt><code>NAME</code></dt>
+<dd>name of the unittest in ctest.</dd>
+<dt><code>UNITTEST_FILE</code></dt>
+<dd>the matlab unittest file. Its path will be automatically added to the Matlab path.</dd>
+<dt><code>CUSTOM_TEST_COMMAND</code></dt>
+<dd>Matlab script command to run as the test. If this is not set, then the following is run: <code>runtests(&#8216;matlab_file_name&#8217;), exit(max([ans(1,:).Failed]))</code> where <code>matlab_file_name</code> is the <code>UNITTEST_FILE</code> without the extension.</dd>
+<dt><code>UNITTEST_PRECOMMAND</code></dt>
+<dd>Matlab script command to be ran before the file containing the test (eg. GPU device initialization based on CMake variables).</dd>
+<dt><code>TIMEOUT</code></dt>
+<dd>the test timeout in seconds. Defaults to 180 seconds as the Matlab unit test may hang.</dd>
+<dt><code>ADDITIONAL_PATH</code></dt>
+<dd>a list of paths to add to the Matlab path prior to running the unit test.</dd>
+<dt><code>MATLAB_ADDITIONAL_STARTUP_OPTIONS</code></dt>
+<dd>a list of additional option in order to run Matlab from the command line. <code>-nosplash -nodesktop -nodisplay</code> are always added.</dd>
+<dt><code>TEST_ARGS</code></dt>
+<dd>Additional options provided to the add_test command. These options are added to the default options (eg. &quot;CONFIGURATIONS Release&quot;)</dd>
+<dt><code>NO_UNITTEST_FRAMEWORK</code></dt>
+<dd>when set, indicates that the test should not use the unittest framework of Matlab (available for versions &gt;= R2013a).</dd>
+<dt><code>WORKING_DIRECTORY</code></dt>
+<dd>This will be the working directory for the test. If specified it will also be the output directory used for the log file of the test run. If not specified the temporary directory <code>${CMAKE_BINARY_DIR}/Matlab</code> will be used as the working directory and the log location.</dd>
+<dt><code>matlab_add_mex</code></dt>
+<dd>Adds a Matlab MEX target. This commands compiles the given sources with the current tool-chain in order to produce a MEX file. The final name of the produced output may be specified, as well as additional link libraries, and a documentation entry for the MEX file. Remaining arguments of the call are passed to the <code>add_library()</code> or <code>add_executable()</code> command. </dd>
 <pre>matlab_add_mex(
  NAME &lt;name&gt;
  [EXECUTABLE | MODULE | SHARED]
@@ -6856,27 +6856,27 @@ LibArchive_VERSION - libarchive 3-component version number</pre>
  [EXCLUDE_FROM_ALL]
  [...]
 )</pre>
-<dt><code>NAME</code></p>
-<dd>name of the target.</p>
-<dt><code>SRC</code></p>
-<dd>list of source files.</p>
-<dt><code>LINK_TO</code></p>
-<dd>a list of additional link dependencies. The target links to <code>libmex</code> and <code>libmx</code> by default.</p>
-<dt><code>OUTPUT_NAME</code></p>
-<dd>if given, overrides the default name. The default name is the name of the target without any prefix and with <code>Matlab_MEX_EXTENSION</code> suffix.</p>
-<dt><code>DOCUMENTATION</code></p>
-<dd>if given, the file <code>file.txt</code> will be considered as being the documentation file for the MEX file. This file is copied into the same folder without any processing, with the same name as the final mex file, and with extension <i>.m</i>. In that case, typing <code>help &lt;name&gt;</code> in Matlab prints the documentation contained in this file.</p>
-<dt><code>R2017b</code> or <code>R2018a</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>NAME</code></dt>
+<dd>name of the target.</dd>
+<dt><code>SRC</code></dt>
+<dd>list of source files.</dd>
+<dt><code>LINK_TO</code></dt>
+<dd>a list of additional link dependencies. The target links to <code>libmex</code> and <code>libmx</code> by default.</dd>
+<dt><code>OUTPUT_NAME</code></dt>
+<dd>if given, overrides the default name. The default name is the name of the target without any prefix and with <code>Matlab_MEX_EXTENSION</code> suffix.</dd>
+<dt><code>DOCUMENTATION</code></dt>
+<dd>if given, the file <code>file.txt</code> will be considered as being the documentation file for the MEX file. This file is copied into the same folder without any processing, with the same name as the final mex file, and with extension <i>.m</i>. In that case, typing <code>help &lt;name&gt;</code> in Matlab prints the documentation contained in this file.</dd>
+<dt><code>R2017b</code> or <code>R2018a</code></dt>
+<dd>New in version 3.14. </dd>
 <p> May be given to specify the version of the C API to use: <code>R2017b</code> specifies the traditional (separate complex) C API, and corresponds to the <code>-R2017b</code> flag for the <i>mex</i> command. <code>R2018a</code> specifies the new interleaved complex C API, and corresponds to the <code>-R2018a</code> flag for the <i>mex</i> command. Ignored if MATLAB version prior to R2018a. Defaults to <code>R2017b</code>.</p>
-<dt><code>MODULE</code> or <code>SHARED</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>MODULE</code> or <code>SHARED</code></dt>
+<dd>New in version 3.7. </dd>
 <p> May be given to specify the type of library to be created.</p>
-<dt><code>EXECUTABLE</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>EXECUTABLE</code></dt>
+<dd>New in version 3.7. </dd>
 <p> May be given to create an executable instead of a library. If no type is given explicitly, the type is <code>SHARED</code>.</p>
-<dt><code>EXCLUDE_FROM_ALL</code></p>
-<dd>This option has the same meaning as for <code>EXCLUDE_FROM_ALL</code> and is forwarded to <code>add_library()</code> or <code>add_executable()</code> commands. </p>
+<dt><code>EXCLUDE_FROM_ALL</code></dt>
+<dd>This option has the same meaning as for <code>EXCLUDE_FROM_ALL</code> and is forwarded to <code>add_library()</code> or <code>add_executable()</code> commands. </dd>
 <p> The documentation file is not processed and should be in the following format: </p>
 <pre>% This is the documentation
 function ret = mex_target_output_name(input1)</pre>
@@ -6918,122 +6918,122 @@ MPEG2_vo_LIBRARY, where to find the vo library.</pre>
 <p>The module exposes the components <code>C</code>, <code>CXX</code>, <code>MPICXX</code> and <code>Fortran</code>. Each of these controls the various MPI languages to search for. The difference between <code>CXX</code> and <code>MPICXX</code> is that <code>CXX</code> refers to the MPI C API being usable from C++, whereas <code>MPICXX</code> refers to the MPI-2 C++ API that was removed again in MPI-3. </p>
 <p> Depending on the enabled components the following variables will be set:</p>
 <dl>
-<dt><code>MPI_FOUND</code></p>
-<dd>Variable indicating that MPI settings for all requested languages have been found. If no components are specified, this is true if MPI settings for all enabled languages were detected. Note that the <code>MPICXX</code> component does not affect this variable.</p>
-<dt><code>MPI_VERSION</code></p>
-<dd>Minimal version of MPI detected among the requested languages, or all enabled languages if no components were specified. </p>
+<dt><code>MPI_FOUND</code></dt>
+<dd>Variable indicating that MPI settings for all requested languages have been found. If no components are specified, this is true if MPI settings for all enabled languages were detected. Note that the <code>MPICXX</code> component does not affect this variable.</dd>
+<dt><code>MPI_VERSION</code></dt>
+<dd>Minimal version of MPI detected among the requested languages, or all enabled languages if no components were specified. </dd>
 <p> This module will set the following variables per language in your project, where <code>&lt;lang&gt;</code> is one of C, CXX, or Fortran:</p>
-<dt><code>MPI_&lt;lang&gt;_FOUND</code></p>
-<dd>Variable indicating the MPI settings for <code>&lt;lang&gt;</code> were found and that simple MPI test programs compile with the provided settings.</p>
-<dt><code>MPI_&lt;lang&gt;_COMPILER</code></p>
-<dd>MPI compiler for <code>&lt;lang&gt;</code> if such a program exists.</p>
-<dt><code>MPI_&lt;lang&gt;_COMPILE_OPTIONS</code></p>
-<dd>Compilation options for MPI programs in <code>&lt;lang&gt;</code>, given as a ;-list.</p>
-<dt><code>MPI_&lt;lang&gt;_COMPILE_DEFINITIONS</code></p>
-<dd>Compilation definitions for MPI programs in <code>&lt;lang&gt;</code>, given as a ;-list.</p>
-<dt><code>MPI_&lt;lang&gt;_INCLUDE_DIRS</code></p>
-<dd>Include path(s) for MPI header.</p>
-<dt><code>MPI_&lt;lang&gt;_LINK_FLAGS</code></p>
-<dd>Linker flags for MPI programs.</p>
-<dt><code>MPI_&lt;lang&gt;_LIBRARIES</code></p>
-<dd>All libraries to link MPI programs against. </p>
+<dt><code>MPI_&lt;lang&gt;_FOUND</code></dt>
+<dd>Variable indicating the MPI settings for <code>&lt;lang&gt;</code> were found and that simple MPI test programs compile with the provided settings.</dd>
+<dt><code>MPI_&lt;lang&gt;_COMPILER</code></dt>
+<dd>MPI compiler for <code>&lt;lang&gt;</code> if such a program exists.</dd>
+<dt><code>MPI_&lt;lang&gt;_COMPILE_OPTIONS</code></dt>
+<dd>Compilation options for MPI programs in <code>&lt;lang&gt;</code>, given as a ;-list.</dd>
+<dt><code>MPI_&lt;lang&gt;_COMPILE_DEFINITIONS</code></dt>
+<dd>Compilation definitions for MPI programs in <code>&lt;lang&gt;</code>, given as a ;-list.</dd>
+<dt><code>MPI_&lt;lang&gt;_INCLUDE_DIRS</code></dt>
+<dd>Include path(s) for MPI header.</dd>
+<dt><code>MPI_&lt;lang&gt;_LINK_FLAGS</code></dt>
+<dd>Linker flags for MPI programs.</dd>
+<dt><code>MPI_&lt;lang&gt;_LIBRARIES</code></dt>
+<dd>All libraries to link MPI programs against. </dd>
 <p> New in version 3.9: Additionally, the following <code>IMPORTED</code> targets are defined: </p>
-<dt><code>MPI::MPI_&lt;lang&gt;</code></p>
-<dd>Target for using MPI from <code>&lt;lang&gt;</code>. </p>
+<dt><code>MPI::MPI_&lt;lang&gt;</code></dt>
+<dd>Target for using MPI from <code>&lt;lang&gt;</code>. </dd>
 <p> The following variables indicating which bindings are present will be defined:</p>
-<dt><code>MPI_MPICXX_FOUND</code></p>
-<dd>Variable indicating whether the MPI-2 C++ bindings are present (introduced in MPI-2, removed with MPI-3).</p>
-<dt><code>MPI_Fortran_HAVE_F77_HEADER</code></p>
-<dd>True if the Fortran 77 header <code>mpif.h</code> is available.</p>
-<dt><code>MPI_Fortran_HAVE_F90_MODULE</code></p>
-<dd>True if the Fortran 90 module <code>mpi</code> can be used for accessing MPI (MPI-2 and higher only).</p>
-<dt><code>MPI_Fortran_HAVE_F08_MODULE</code></p>
-<dd>True if the Fortran 2008 <code>mpi_f08</code> is available to MPI programs (MPI-3 and higher only). </p>
+<dt><code>MPI_MPICXX_FOUND</code></dt>
+<dd>Variable indicating whether the MPI-2 C++ bindings are present (introduced in MPI-2, removed with MPI-3).</dd>
+<dt><code>MPI_Fortran_HAVE_F77_HEADER</code></dt>
+<dd>True if the Fortran 77 header <code>mpif.h</code> is available.</dd>
+<dt><code>MPI_Fortran_HAVE_F90_MODULE</code></dt>
+<dd>True if the Fortran 90 module <code>mpi</code> can be used for accessing MPI (MPI-2 and higher only).</dd>
+<dt><code>MPI_Fortran_HAVE_F08_MODULE</code></dt>
+<dd>True if the Fortran 2008 <code>mpi_f08</code> is available to MPI programs (MPI-3 and higher only). </dd>
 <p> If possible, the MPI version will be determined by this module. The facilities to detect the MPI version were introduced with MPI-1.2, and therefore cannot be found for older MPI versions.</p>
-<dt><code>MPI_&lt;lang&gt;_VERSION_MAJOR</code></p>
-<dd>Major version of MPI implemented for <code>&lt;lang&gt;</code> by the MPI distribution.</p>
-<dt><code>MPI_&lt;lang&gt;_VERSION_MINOR</code></p>
-<dd>Minor version of MPI implemented for <code>&lt;lang&gt;</code> by the MPI distribution.</p>
-<dt><code>MPI_&lt;lang&gt;_VERSION</code></p>
-<dd>MPI version implemented for <code>&lt;lang&gt;</code> by the MPI distribution. </p>
+<dt><code>MPI_&lt;lang&gt;_VERSION_MAJOR</code></dt>
+<dd>Major version of MPI implemented for <code>&lt;lang&gt;</code> by the MPI distribution.</dd>
+<dt><code>MPI_&lt;lang&gt;_VERSION_MINOR</code></dt>
+<dd>Minor version of MPI implemented for <code>&lt;lang&gt;</code> by the MPI distribution.</dd>
+<dt><code>MPI_&lt;lang&gt;_VERSION</code></dt>
+<dd>MPI version implemented for <code>&lt;lang&gt;</code> by the MPI distribution. </dd>
 <p> Note that there&#8217;s no variable for the C bindings being accessible through <code>mpi.h</code>, since the MPI standards always have required this binding to work in both C and C++ code. </p>
 <p> For running MPI programs, the module sets the following variables</p>
-<dt><code>MPIEXEC_EXECUTABLE</code></p>
-<dd>Executable for running MPI programs, if such exists.</p>
-<dt><code>MPIEXEC_NUMPROC_FLAG</code></p>
-<dd>Flag to pass to <code>mpiexec</code> before giving it the number of processors to run on.</p>
-<dt><code>MPIEXEC_MAX_NUMPROCS</code></p>
-<dd>Number of MPI processors to utilize. Defaults to the number of processors detected on the host system.</p>
-<dt><code>MPIEXEC_PREFLAGS</code></p>
-<dd>Flags to pass to <code>mpiexec</code> directly before the executable to run.</p>
-<dt><code>MPIEXEC_POSTFLAGS</code></p>
-<dd>Flags to pass to <code>mpiexec</code> after other flags.</dl>
+<dt><code>MPIEXEC_EXECUTABLE</code></dt>
+<dd>Executable for running MPI programs, if such exists.</dd>
+<dt><code>MPIEXEC_NUMPROC_FLAG</code></dt>
+<dd>Flag to pass to <code>mpiexec</code> before giving it the number of processors to run on.</dd>
+<dt><code>MPIEXEC_MAX_NUMPROCS</code></dt>
+<dd>Number of MPI processors to utilize. Defaults to the number of processors detected on the host system.</dd>
+<dt><code>MPIEXEC_PREFLAGS</code></dt>
+<dd>Flags to pass to <code>mpiexec</code> directly before the executable to run.</dd>
+<dt><code>MPIEXEC_POSTFLAGS</code></dt>
+<dd>Flags to pass to <code>mpiexec</code> after other flags.</dd></dl>
 <h3>Variables for locating MPI</h3>
 <p>This module performs a four step search for an MPI implementation:</p>
 <dl>
-<dt>1.</p>
-<dd>Search for <code>MPIEXEC_EXECUTABLE</code> and, if found, use its base directory.</p>
-<dt>2.</p>
-<dd>Check if the compiler has MPI support built-in. This is the case if the user passed a compiler wrapper as <code>CMAKE_&lt;LANG&gt;_COMPILER</code> or if they use Cray system compiler wrappers.</p>
-<dt>3.</p>
-<dd>Attempt to find an MPI compiler wrapper and determine the compiler information from it.</p>
-<dt>4.</p>
-<dd>Try to find an MPI implementation that does not ship such a wrapper by guessing settings. Currently, only Microsoft MPI and MPICH2 on Windows are supported. </p>
+<dt>1.</dt>
+<dd>Search for <code>MPIEXEC_EXECUTABLE</code> and, if found, use its base directory.</dd>
+<dt>2.</dt>
+<dd>Check if the compiler has MPI support built-in. This is the case if the user passed a compiler wrapper as <code>CMAKE_&lt;LANG&gt;_COMPILER</code> or if they use Cray system compiler wrappers.</dd>
+<dt>3.</dt>
+<dd>Attempt to find an MPI compiler wrapper and determine the compiler information from it.</dd>
+<dt>4.</dt>
+<dd>Try to find an MPI implementation that does not ship such a wrapper by guessing settings. Currently, only Microsoft MPI and MPICH2 on Windows are supported. </dd>
 <p> For controlling the <code>MPIEXEC_EXECUTABLE</code> step, the following variables may be set:</p>
-<dt><code>MPIEXEC_EXECUTABLE</code></p>
-<dd>Manually specify the location of <code>mpiexec</code>.</p>
-<dt><code>MPI_HOME</code></p>
-<dd>Specify the base directory of the MPI installation.</p>
-<dt><code>ENV{MPI_HOME}</code></p>
-<dd>Environment variable to specify the base directory of the MPI installation.</p>
-<dt><code>ENV{I_MPI_ROOT}</code></p>
-<dd>Environment variable to specify the base directory of the MPI installation. </p>
+<dt><code>MPIEXEC_EXECUTABLE</code></dt>
+<dd>Manually specify the location of <code>mpiexec</code>.</dd>
+<dt><code>MPI_HOME</code></dt>
+<dd>Specify the base directory of the MPI installation.</dd>
+<dt><code>ENV{MPI_HOME}</code></dt>
+<dd>Environment variable to specify the base directory of the MPI installation.</dd>
+<dt><code>ENV{I_MPI_ROOT}</code></dt>
+<dd>Environment variable to specify the base directory of the MPI installation. </dd>
 <p> For controlling the compiler wrapper step, the following variables may be set:</p>
-<dt><code>MPI_&lt;lang&gt;_COMPILER</code></p>
-<dd>Search for the specified compiler wrapper and use it.</p>
-<dt><code>MPI_&lt;lang&gt;_COMPILER_FLAGS</code></p>
-<dd>Flags to pass to the MPI compiler wrapper during interrogation. Some compiler wrappers support linking debug or tracing libraries if a specific flag is passed and this variable may be used to obtain them.</p>
-<dt><code>MPI_COMPILER_FLAGS</code></p>
-<dd>Used to initialize <code>MPI_&lt;lang&gt;_COMPILER_FLAGS</code> if no language specific flag has been given. Empty by default.</p>
-<dt><code>MPI_EXECUTABLE_SUFFIX</code></p>
-<dd>A suffix which is appended to all names that are being looked for. For instance you may set this to <code>.mpich</code> or <code>.openmpi</code> to prefer the one or the other on Debian and its derivatives. </p>
+<dt><code>MPI_&lt;lang&gt;_COMPILER</code></dt>
+<dd>Search for the specified compiler wrapper and use it.</dd>
+<dt><code>MPI_&lt;lang&gt;_COMPILER_FLAGS</code></dt>
+<dd>Flags to pass to the MPI compiler wrapper during interrogation. Some compiler wrappers support linking debug or tracing libraries if a specific flag is passed and this variable may be used to obtain them.</dd>
+<dt><code>MPI_COMPILER_FLAGS</code></dt>
+<dd>Used to initialize <code>MPI_&lt;lang&gt;_COMPILER_FLAGS</code> if no language specific flag has been given. Empty by default.</dd>
+<dt><code>MPI_EXECUTABLE_SUFFIX</code></dt>
+<dd>A suffix which is appended to all names that are being looked for. For instance you may set this to <code>.mpich</code> or <code>.openmpi</code> to prefer the one or the other on Debian and its derivatives. </dd>
 <p> In order to control the guessing step, the following variable may be set:</p>
-<dt><code>MPI_GUESS_LIBRARY_NAME</code></p>
-<dd>Valid values are <code>MSMPI</code> and <code>MPICH2</code>. If set, only the given library will be searched for. By default, <code>MSMPI</code> will be preferred over <code>MPICH2</code> if both are available. This also sets <code>MPI_SKIP_COMPILER_WRAPPER</code> to <code>true</code>, which may be overridden. </p>
+<dt><code>MPI_GUESS_LIBRARY_NAME</code></dt>
+<dd>Valid values are <code>MSMPI</code> and <code>MPICH2</code>. If set, only the given library will be searched for. By default, <code>MSMPI</code> will be preferred over <code>MPICH2</code> if both are available. This also sets <code>MPI_SKIP_COMPILER_WRAPPER</code> to <code>true</code>, which may be overridden. </dd>
 <p> Each of the search steps may be skipped with the following control variables:</p>
-<dt><code>MPI_ASSUME_NO_BUILTIN_MPI</code></p>
-<dd>If true, the module assumes that the compiler itself does not provide an MPI implementation and skips to step 2.</p>
-<dt><code>MPI_SKIP_COMPILER_WRAPPER</code></p>
-<dd>If true, no compiler wrapper will be searched for.</p>
-<dt><code>MPI_SKIP_GUESSING</code></p>
-<dd>If true, the guessing step will be skipped. </p>
+<dt><code>MPI_ASSUME_NO_BUILTIN_MPI</code></dt>
+<dd>If true, the module assumes that the compiler itself does not provide an MPI implementation and skips to step 2.</dd>
+<dt><code>MPI_SKIP_COMPILER_WRAPPER</code></dt>
+<dd>If true, no compiler wrapper will be searched for.</dd>
+<dt><code>MPI_SKIP_GUESSING</code></dt>
+<dd>If true, the guessing step will be skipped. </dd>
 <p> Additionally, the following control variable is available to change search behavior:</p>
-<dt><code>MPI_CXX_SKIP_MPICXX</code></p>
-<dd>Add some definitions that will disable the MPI-2 C++ bindings. Currently supported are MPICH, Open MPI, Platform MPI and derivatives thereof, for example MVAPICH or Intel MPI. </p>
+<dt><code>MPI_CXX_SKIP_MPICXX</code></dt>
+<dd>Add some definitions that will disable the MPI-2 C++ bindings. Currently supported are MPICH, Open MPI, Platform MPI and derivatives thereof, for example MVAPICH or Intel MPI. </dd>
 <p> If the find procedure fails for a variable <code>MPI_&lt;lang&gt;_WORKS</code>, then the settings detected by or passed to the module did not work and even a simple MPI test program failed to compile. </p>
 <p> If all of these parameters were not sufficient to find the right MPI implementation, a user may disable the entire autodetection process by specifying both a list of libraries in <code>MPI_&lt;lang&gt;_LIBRARIES</code> and a list of include directories in <code>MPI_&lt;lang&gt;_ADDITIONAL_INCLUDE_DIRS</code>. Any other variable may be set in addition to these two. The module will then validate the MPI settings and store the settings in the cache.</dl>
 <h3>Cache variables for MPI</h3>
 <p>The variable <code>MPI_&lt;lang&gt;_INCLUDE_DIRS</code> will be assembled from the following variables. For C and CXX:</p>
 <dl>
-<dt><code>MPI_&lt;lang&gt;_HEADER_DIR</code></p>
-<dd>Location of the <code>mpi.h</code> header on disk. </p>
+<dt><code>MPI_&lt;lang&gt;_HEADER_DIR</code></dt>
+<dd>Location of the <code>mpi.h</code> header on disk. </dd>
 <p> For Fortran:</p>
-<dt><code>MPI_Fortran_F77_HEADER_DIR</code></p>
-<dd>Location of the Fortran 77 header <code>mpif.h</code>, if it exists.</p>
-<dt><code>MPI_Fortran_MODULE_DIR</code></p>
-<dd>Location of the <code>mpi</code> or <code>mpi_f08</code> modules, if available. </p>
+<dt><code>MPI_Fortran_F77_HEADER_DIR</code></dt>
+<dd>Location of the Fortran 77 header <code>mpif.h</code>, if it exists.</dd>
+<dt><code>MPI_Fortran_MODULE_DIR</code></dt>
+<dd>Location of the <code>mpi</code> or <code>mpi_f08</code> modules, if available. </dd>
 <p> For all languages the following variables are additionally considered:</p>
-<dt><code>MPI_&lt;lang&gt;_ADDITIONAL_INCLUDE_DIRS</code></p>
-<dd>A ;-list of paths needed in addition to the normal include directories.</p>
-<dt><code>MPI_&lt;include_name&gt;_INCLUDE_DIR</code></p>
-<dd>Path variables for include folders referred to by <code>&lt;include_name&gt;</code>.</p>
-<dt><code>MPI_&lt;lang&gt;_ADDITIONAL_INCLUDE_VARS</code></p>
-<dd>A ;-list of <code>&lt;include_name&gt;</code> that will be added to the include locations of <code>&lt;lang&gt;</code>. </p>
+<dt><code>MPI_&lt;lang&gt;_ADDITIONAL_INCLUDE_DIRS</code></dt>
+<dd>A ;-list of paths needed in addition to the normal include directories.</dd>
+<dt><code>MPI_&lt;include_name&gt;_INCLUDE_DIR</code></dt>
+<dd>Path variables for include folders referred to by <code>&lt;include_name&gt;</code>.</dd>
+<dt><code>MPI_&lt;lang&gt;_ADDITIONAL_INCLUDE_VARS</code></dt>
+<dd>A ;-list of <code>&lt;include_name&gt;</code> that will be added to the include locations of <code>&lt;lang&gt;</code>. </dd>
 <p> The variable <code>MPI_&lt;lang&gt;_LIBRARIES</code> will be assembled from the following variables:</p>
-<dt><code>MPI_&lt;lib_name&gt;_LIBRARY</code></p>
-<dd>The location of a library called <code>&lt;lib_name&gt;</code> for use with MPI.</p>
-<dt><code>MPI_&lt;lang&gt;_LIB_NAMES</code></p>
-<dd>A ;-list of <code>&lt;lib_name&gt;</code> that will be added to the include locations of <code>&lt;lang&gt;</code>.</dl>
+<dt><code>MPI_&lt;lib_name&gt;_LIBRARY</code></dt>
+<dd>The location of a library called <code>&lt;lib_name&gt;</code> for use with MPI.</dd>
+<dt><code>MPI_&lt;lang&gt;_LIB_NAMES</code></dt>
+<dd>A ;-list of <code>&lt;lib_name&gt;</code> that will be added to the include locations of <code>&lt;lang&gt;</code>.</dd></dl>
 <h3>Usage of mpiexec</h3>
 <p>When using <code>MPIEXEC_EXECUTABLE</code> to execute MPI applications, you should typically use all of the <code>MPIEXEC_EXECUTABLE</code> flags as follows: </p>
 <pre>${MPIEXEC_EXECUTABLE} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS}
@@ -7044,10 +7044,10 @@ MPEG2_vo_LIBRARY, where to find the vo library.</pre>
 <p> <code>Important notice:</code> The following checks cannot be performed without <i>executing</i> an MPI test program. Consider the special considerations for the behavior of <code>try_run()</code> during cross compilation. Moreover, running an MPI program can cause additional issues, like a firewall notification on some systems. You should only enable these detections if you absolutely need the information. </p>
 <p> If the following variables are set to true, the respective search will be performed:</p>
 <dl>
-<dt><code>MPI_DETERMINE_Fortran_CAPABILITIES</code></p>
-<dd>Determine for all available Fortran bindings what the values of <code>MPI_SUBARRAYS_SUPPORTED</code> and <code>MPI_ASYNC_PROTECTS_NONBLOCKING</code> are and make their values available as <code>MPI_Fortran_&lt;binding&gt;_SUBARRAYS</code> and <code>MPI_Fortran_&lt;binding&gt;_ASYNCPROT</code>, where <code>&lt;binding&gt;</code> is one of <code>F77_HEADER</code>, <code>F90_MODULE</code> and <code>F08_MODULE</code>.</p>
-<dt><code>MPI_DETERMINE_LIBRARY_VERSION</code></p>
-<dd>For each language, find the output of <code>MPI_Get_library_version</code> and make it available as <code>MPI_&lt;lang&gt;_LIBRARY_VERSION_STRING</code>. This information is usually tied to the runtime component of an MPI implementation and might differ depending on <code>&lt;lang&gt;</code>. Note that the return value is entirely implementation defined. This information might be used to identify the MPI vendor and for example pick the correct one of multiple third party binaries that matches the MPI vendor.</dl>
+<dt><code>MPI_DETERMINE_Fortran_CAPABILITIES</code></dt>
+<dd>Determine for all available Fortran bindings what the values of <code>MPI_SUBARRAYS_SUPPORTED</code> and <code>MPI_ASYNC_PROTECTS_NONBLOCKING</code> are and make their values available as <code>MPI_Fortran_&lt;binding&gt;_SUBARRAYS</code> and <code>MPI_Fortran_&lt;binding&gt;_ASYNCPROT</code>, where <code>&lt;binding&gt;</code> is one of <code>F77_HEADER</code>, <code>F90_MODULE</code> and <code>F08_MODULE</code>.</dd>
+<dt><code>MPI_DETERMINE_LIBRARY_VERSION</code></dt>
+<dd>For each language, find the output of <code>MPI_Get_library_version</code> and make it available as <code>MPI_&lt;lang&gt;_LIBRARY_VERSION_STRING</code>. This information is usually tied to the runtime component of an MPI implementation and might differ depending on <code>&lt;lang&gt;</code>. Note that the return value is entirely implementation defined. This information might be used to identify the MPI vendor and for example pick the correct one of multiple third party binaries that matches the MPI vendor.</dd></dl>
 <h3>Backward Compatibility</h3>
 <p>Deprecated since version 3.10. </p>
 <p> For backward compatibility with older versions of FindMPI, these variables are set: </p>
@@ -7056,12 +7056,12 @@ MPI_COMPILE_FLAGS MPI_INCLUDE_PATH MPI_LINK_FLAGS
 MPI_LIBRARIES</pre>
 <p>In new projects, please use the <code>MPI_&lt;lang&gt;_XXX</code> equivalents. Additionally, the following variables are deprecated:</p>
 <dl>
-<dt><code>MPI_&lt;lang&gt;_COMPILE_FLAGS</code></p>
-<dd>Use <code>MPI_&lt;lang&gt;_COMPILE_OPTIONS</code> and <code>MPI_&lt;lang&gt;_COMPILE_DEFINITIONS</code> instead.</p>
-<dt><code>MPI_&lt;lang&gt;_INCLUDE_PATH</code></p>
-<dd>For consumption use <code>MPI_&lt;lang&gt;_INCLUDE_DIRS</code> and for specifying folders use <code>MPI_&lt;lang&gt;_ADDITIONAL_INCLUDE_DIRS</code> instead.</p>
-<dt><code>MPIEXEC</code></p>
-<dd>Use <code>MPIEXEC_EXECUTABLE</code> instead.</dl>
+<dt><code>MPI_&lt;lang&gt;_COMPILE_FLAGS</code></dt>
+<dd>Use <code>MPI_&lt;lang&gt;_COMPILE_OPTIONS</code> and <code>MPI_&lt;lang&gt;_COMPILE_DEFINITIONS</code> instead.</dd>
+<dt><code>MPI_&lt;lang&gt;_INCLUDE_PATH</code></dt>
+<dd>For consumption use <code>MPI_&lt;lang&gt;_INCLUDE_DIRS</code> and for specifying folders use <code>MPI_&lt;lang&gt;_ADDITIONAL_INCLUDE_DIRS</code> instead.</dd>
+<dt><code>MPIEXEC</code></dt>
+<dd>Use <code>MPIEXEC_EXECUTABLE</code> instead.</dd></dl>
 <h3>FindMsys</h3>
 <p>New in version 3.21. </p>
 <p> Find MSYS, a POSIX-compatible environment that runs natively on Microsoft Windows</p>
@@ -7071,31 +7071,31 @@ MPI_LIBRARIES</pre>
 <p> On Windows, when building with Visual Studio, this module assumes the ODBC library is provided by the available Windows SDK. </p>
 <p> On Unix, this module allows to search for ODBC library provided by unixODBC or iODBC implementations of ODBC API. This module reads hint about location of the config program:</p>
 <dl>
-<dt><code>ODBC_CONFIG</code></p>
-<dd>Location of odbc_config or iodbc-config program </p>
+<dt><code>ODBC_CONFIG</code></dt>
+<dd>Location of odbc_config or iodbc-config program </dd>
 <p> Otherwise, this module tries to find the config program, first from unixODBC, then from iODBC. If no config program found, this module searches for ODBC header and library in list of known locations.</dl>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>ODBC::ODBC</code></p>
-<dd>Imported target for using the ODBC library, if found.</dl>
+<dt><code>ODBC::ODBC</code></dt>
+<dd>Imported target for using the ODBC library, if found.</dd></dl>
 <h3>Result variables</h3>
 <dl>
-<dt><code>ODBC_FOUND</code></p>
-<dd>Set to true if ODBC library found, otherwise false or undefined.</p>
-<dt><code>ODBC_INCLUDE_DIRS</code></p>
-<dd>Paths to include directories listed in one variable for use by ODBC client. May be empty on Windows, where the include directory corresponding to the expected Windows SDK is already available in the compilation environment.</p>
-<dt><code>ODBC_LIBRARIES</code></p>
-<dd>Paths to libraries to linked against to use ODBC. May just a library name on Windows, where the library directory corresponding to the expected Windows SDK is already available in the compilation environment.</p>
-<dt><code>ODBC_CONFIG</code></p>
-<dd>Path to unixODBC or iODBC config program, if found or specified.</dl>
+<dt><code>ODBC_FOUND</code></dt>
+<dd>Set to true if ODBC library found, otherwise false or undefined.</dd>
+<dt><code>ODBC_INCLUDE_DIRS</code></dt>
+<dd>Paths to include directories listed in one variable for use by ODBC client. May be empty on Windows, where the include directory corresponding to the expected Windows SDK is already available in the compilation environment.</dd>
+<dt><code>ODBC_LIBRARIES</code></dt>
+<dd>Paths to libraries to linked against to use ODBC. May just a library name on Windows, where the library directory corresponding to the expected Windows SDK is already available in the compilation environment.</dd>
+<dt><code>ODBC_CONFIG</code></dt>
+<dd>Path to unixODBC or iODBC config program, if found or specified.</dd></dl>
 <h3>Cache variables</h3>
 <p>For users who wish to edit and control the module behavior, this module reads hints about search locations from the following variables:</p>
 <dl>
-<dt><code>ODBC_INCLUDE_DIR</code></p>
-<dd>Path to ODBC include directory with <code>sql.h</code> header.</p>
-<dt><code>ODBC_LIBRARY</code></p>
-<dd>Path to ODBC library to be linked. </p>
+<dt><code>ODBC_INCLUDE_DIR</code></dt>
+<dd>Path to ODBC include directory with <code>sql.h</code> header.</dd>
+<dt><code>ODBC_LIBRARY</code></dt>
+<dd>Path to ODBC library to be linked. </dd>
 <p> These variables should not be used directly by project code.</dl>
 <h3>Limitations</h3>
 <p>On Windows, this module does not search for iODBC. On Unix, there is no way to prefer unixODBC over iODBC, or vice versa, other than providing the config program location using the <code>ODBC_CONFIG</code>. This module does not allow to search for a specific ODBC driver.</p>
@@ -7107,27 +7107,27 @@ MPI_LIBRARIES</pre>
 <p>New in version 3.16. </p>
 <p> The module provides <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>OpenACC::OpenACC_&lt;lang&gt;</code></p>
-<dd>Target for using OpenACC from <code>&lt;lang&gt;</code>.</dl>
+<dt><code>OpenACC::OpenACC_&lt;lang&gt;</code></dt>
+<dd>Target for using OpenACC from <code>&lt;lang&gt;</code>.</dd></dl>
 <h3>Variables</h3>
 <p>This module will set the following variables per language in your project, where <code>&lt;lang&gt;</code> is one of C, CXX, or Fortran:</p>
 <dl>
-<dt><code>OpenACC_&lt;lang&gt;_FOUND</code></p>
-<dd>Variable indicating if OpenACC support for <code>&lt;lang&gt;</code> was detected.</p>
-<dt><code>OpenACC_&lt;lang&gt;_FLAGS</code></p>
-<dd>OpenACC compiler flags for <code>&lt;lang&gt;</code>, separated by spaces.</p>
-<dt><code>OpenACC_&lt;lang&gt;_OPTIONS</code></p>
-<dd>New in version 3.16. </p>
+<dt><code>OpenACC_&lt;lang&gt;_FOUND</code></dt>
+<dd>Variable indicating if OpenACC support for <code>&lt;lang&gt;</code> was detected.</dd>
+<dt><code>OpenACC_&lt;lang&gt;_FLAGS</code></dt>
+<dd>OpenACC compiler flags for <code>&lt;lang&gt;</code>, separated by spaces.</dd>
+<dt><code>OpenACC_&lt;lang&gt;_OPTIONS</code></dt>
+<dd>New in version 3.16. </dd>
 <p> OpenACC compiler flags for <code>&lt;lang&gt;</code>, as a list. Suitable for usage with target_compile_options or target_link_options. </p>
 <p> The module will also try to provide the OpenACC version variables:</p>
-<dt><code>OpenACC_&lt;lang&gt;_SPEC_DATE</code></p>
-<dd>Date of the OpenACC specification implemented by the <code>&lt;lang&gt;</code> compiler.</p>
-<dt><code>OpenACC_&lt;lang&gt;_VERSION_MAJOR</code></p>
-<dd>Major version of OpenACC implemented by the <code>&lt;lang&gt;</code> compiler.</p>
-<dt><code>OpenACC_&lt;lang&gt;_VERSION_MINOR</code></p>
-<dd>Minor version of OpenACC implemented by the <code>&lt;lang&gt;</code> compiler.</p>
-<dt><code>OpenACC_&lt;lang&gt;_VERSION</code></p>
-<dd>OpenACC version implemented by the <code>&lt;lang&gt;</code> compiler. </p>
+<dt><code>OpenACC_&lt;lang&gt;_SPEC_DATE</code></dt>
+<dd>Date of the OpenACC specification implemented by the <code>&lt;lang&gt;</code> compiler.</dd>
+<dt><code>OpenACC_&lt;lang&gt;_VERSION_MAJOR</code></dt>
+<dd>Major version of OpenACC implemented by the <code>&lt;lang&gt;</code> compiler.</dd>
+<dt><code>OpenACC_&lt;lang&gt;_VERSION_MINOR</code></dt>
+<dd>Minor version of OpenACC implemented by the <code>&lt;lang&gt;</code> compiler.</dd>
+<dt><code>OpenACC_&lt;lang&gt;_VERSION</code></dt>
+<dd>OpenACC version implemented by the <code>&lt;lang&gt;</code> compiler. </dd>
 <p> The specification date is formatted as given in the OpenACC standard: <code>yyyymm</code> where <code>yyyy</code> and <code>mm</code> represents the year and month of the OpenACC specification implemented by the <code>&lt;lang&gt;</code> compiler.</dl>
 <h3>Input Variables</h3>
 <p><code>OpenACC_ACCEL_TARGET=&lt;target&gt;</code> If set, will the correct target accelerator flag set to the &lt;target&gt; will be returned with OpenACC_&lt;lang&gt;_FLAGS.</p>
@@ -7138,29 +7138,29 @@ MPI_LIBRARIES</pre>
 <p>Environment variable <code>$OPENALDIR</code> can be used to set the prefix of OpenAL installation to be found. </p>
 <p> By default on macOS, system framework is search first. In other words, OpenAL is searched in the following order:</p>
 <dl>
-<dt>1.</p>
-<dd>System framework: <code>/System/Library/Frameworks</code>, whose priority can be changed via setting the <code>CMAKE_FIND_FRAMEWORK</code> variable.</p>
-<dt>2.</p>
-<dd>Environment variable <code>$OPENALDIR</code>.</p>
-<dt>3.</p>
-<dd>System paths.</p>
-<dt>4.</p>
-<dd>User-compiled framework: <code>~/Library/Frameworks</code>.</p>
-<dt>5.</p>
-<dd>Manually compiled framework: <code>/Library/Frameworks</code>.</p>
-<dt>6.</p>
-<dd>Add-on package: <code>/opt</code>.</dl>
+<dt>1.</dt>
+<dd>System framework: <code>/System/Library/Frameworks</code>, whose priority can be changed via setting the <code>CMAKE_FIND_FRAMEWORK</code> variable.</dd>
+<dt>2.</dt>
+<dd>Environment variable <code>$OPENALDIR</code>.</dd>
+<dt>3.</dt>
+<dd>System paths.</dd>
+<dt>4.</dt>
+<dd>User-compiled framework: <code>~/Library/Frameworks</code>.</dd>
+<dt>5.</dt>
+<dd>Manually compiled framework: <code>/Library/Frameworks</code>.</dd>
+<dt>6.</dt>
+<dd>Add-on package: <code>/opt</code>.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module defines the following variables:</p>
 <dl>
-<dt><code>OPENAL_FOUND</code></p>
-<dd>If false, do not try to link to OpenAL</p>
-<dt><code>OPENAL_INCLUDE_DIR</code></p>
-<dd>OpenAL include directory</p>
-<dt><code>OPENAL_LIBRARY</code></p>
-<dd>Path to the OpenAL library</p>
-<dt><code>OPENAL_VERSION_STRING</code></p>
-<dd>Human-readable string containing the version of OpenAL</dl>
+<dt><code>OPENAL_FOUND</code></dt>
+<dd>If false, do not try to link to OpenAL</dd>
+<dt><code>OPENAL_INCLUDE_DIR</code></dt>
+<dd>OpenAL include directory</dd>
+<dt><code>OPENAL_LIBRARY</code></dt>
+<dd>Path to the OpenAL library</dd>
+<dt><code>OPENAL_VERSION_STRING</code></dt>
+<dd>Human-readable string containing the version of OpenAL</dd></dl>
 <h3>FindOpenCL</h3>
 <p>New in version 3.1. </p>
 <p> Finds Open Computing Language (OpenCL) </p>
@@ -7190,53 +7190,53 @@ OpenCL_LIBRARY - the path to the OpenCL library</pre>
 <p>New in version 3.8. </p>
 <p> This module defines the <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>OpenGL::GL</code></p>
-<dd>Defined to the platform-specific OpenGL libraries if the system has OpenGL.</p>
-<dt><code>OpenGL::GLU</code></p>
-<dd>Defined if the system has OpenGL Utility Library (GLU). </p>
+<dt><code>OpenGL::GL</code></dt>
+<dd>Defined to the platform-specific OpenGL libraries if the system has OpenGL.</dd>
+<dt><code>OpenGL::GLU</code></dt>
+<dd>Defined if the system has OpenGL Utility Library (GLU). </dd>
 <p> New in version 3.10: Additionally, the following GLVND-specific library targets are defined: </p>
-<dt><code>OpenGL::OpenGL</code></p>
-<dd>Defined to libOpenGL if the system is GLVND-based.</p>
-<dt><code>OpenGL::GLX</code></p>
-<dd>Defined if the system has OpenGL Extension to the X Window System (GLX).</p>
-<dt><code>OpenGL::EGL</code></p>
-<dd>Defined if the system has EGL.</dl>
+<dt><code>OpenGL::OpenGL</code></dt>
+<dd>Defined to libOpenGL if the system is GLVND-based.</dd>
+<dt><code>OpenGL::GLX</code></dt>
+<dd>Defined if the system has OpenGL Extension to the X Window System (GLX).</dd>
+<dt><code>OpenGL::EGL</code></dt>
+<dd>Defined if the system has EGL.</dd></dl>
 <h3>Result Variables</h3>
 <p>This module sets the following variables:</p>
 <dl>
-<dt><code>OPENGL_FOUND</code></p>
-<dd>True, if the system has OpenGL and all components are found.</p>
-<dt><code>OPENGL_XMESA_FOUND</code></p>
-<dd>True, if the system has XMESA.</p>
-<dt><code>OPENGL_GLU_FOUND</code></p>
-<dd>True, if the system has GLU.</p>
-<dt><code>OpenGL_OpenGL_FOUND</code></p>
-<dd>True, if the system has an OpenGL library.</p>
-<dt><code>OpenGL_GLX_FOUND</code></p>
-<dd>True, if the system has GLX.</p>
-<dt><code>OpenGL_EGL_FOUND</code></p>
-<dd>True, if the system has EGL.</p>
-<dt><code>OPENGL_INCLUDE_DIR</code></p>
-<dd>Path to the OpenGL include directory.</p>
-<dt><code>OPENGL_EGL_INCLUDE_DIRS</code></p>
-<dd>Path to the EGL include directory.</p>
-<dt><code>OPENGL_LIBRARIES</code></p>
-<dd>Paths to the OpenGL library, windowing system libraries, and GLU libraries. On Linux, this assumes GLX and is never correct for EGL-based targets. Clients are encouraged to use the <code>OpenGL::*</code> import targets instead. </p>
+<dt><code>OPENGL_FOUND</code></dt>
+<dd>True, if the system has OpenGL and all components are found.</dd>
+<dt><code>OPENGL_XMESA_FOUND</code></dt>
+<dd>True, if the system has XMESA.</dd>
+<dt><code>OPENGL_GLU_FOUND</code></dt>
+<dd>True, if the system has GLU.</dd>
+<dt><code>OpenGL_OpenGL_FOUND</code></dt>
+<dd>True, if the system has an OpenGL library.</dd>
+<dt><code>OpenGL_GLX_FOUND</code></dt>
+<dd>True, if the system has GLX.</dd>
+<dt><code>OpenGL_EGL_FOUND</code></dt>
+<dd>True, if the system has EGL.</dd>
+<dt><code>OPENGL_INCLUDE_DIR</code></dt>
+<dd>Path to the OpenGL include directory.</dd>
+<dt><code>OPENGL_EGL_INCLUDE_DIRS</code></dt>
+<dd>Path to the EGL include directory.</dd>
+<dt><code>OPENGL_LIBRARIES</code></dt>
+<dd>Paths to the OpenGL library, windowing system libraries, and GLU libraries. On Linux, this assumes GLX and is never correct for EGL-based targets. Clients are encouraged to use the <code>OpenGL::*</code> import targets instead. </dd>
 <p> New in version 3.10: Variables for GLVND-specific libraries <code>OpenGL</code>, <code>EGL</code> and <code>GLX</code>. </p>
 </dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>OPENGL_egl_LIBRARY</code></p>
-<dd>Path to the EGL library.</p>
-<dt><code>OPENGL_glu_LIBRARY</code></p>
-<dd>Path to the GLU library.</p>
-<dt><code>OPENGL_glx_LIBRARY</code></p>
-<dd>Path to the GLVND &#8216;GLX&#8217; library.</p>
-<dt><code>OPENGL_opengl_LIBRARY</code></p>
-<dd>Path to the GLVND &#8216;OpenGL&#8217; library</p>
-<dt><code>OPENGL_gl_LIBRARY</code></p>
-<dd>Path to the OpenGL library. New code should prefer the <code>OpenGL::*</code> import targets. </p>
+<dt><code>OPENGL_egl_LIBRARY</code></dt>
+<dd>Path to the EGL library.</dd>
+<dt><code>OPENGL_glu_LIBRARY</code></dt>
+<dd>Path to the GLU library.</dd>
+<dt><code>OPENGL_glx_LIBRARY</code></dt>
+<dd>Path to the GLVND &#8216;GLX&#8217; library.</dd>
+<dt><code>OPENGL_opengl_LIBRARY</code></dt>
+<dd>Path to the GLVND &#8216;OpenGL&#8217; library</dd>
+<dt><code>OPENGL_gl_LIBRARY</code></dt>
+<dd>Path to the OpenGL library. New code should prefer the <code>OpenGL::*</code> import targets. </dd>
 <p> New in version 3.10: Variables for GLVND-specific libraries <code>OpenGL</code>, <code>EGL</code> and <code>GLX</code>. </p>
 </dl>
 <h3>Linux-specific</h3>
@@ -7244,11 +7244,11 @@ OpenCL_LIBRARY - the path to the OpenCL library</pre>
 <p> Projects may use the <code>OpenGL::GL</code> target (or <code>OPENGL_LIBRARIES</code> variable) to use legacy GL interfaces. These will use the legacy GL library located by <code>OPENGL_gl_LIBRARY</code>, if available. If <code>OPENGL_gl_LIBRARY</code> is empty or not found and GLVND is available, the <code>OpenGL::GL</code> target will use GLVND <code>OpenGL::OpenGL</code> and <code>OpenGL::GLX</code> (and the <code>OPENGL_LIBRARIES</code> variable will use the corresponding libraries). Thus, for non-EGL-based Linux targets, the <code>OpenGL::GL</code> target is most portable. </p>
 <p> A <code>OpenGL_GL_PREFERENCE</code> variable may be set to specify the preferred way to provide legacy GL interfaces in case multiple choices are available. The value may be one of:</p>
 <dl>
-<dt><code>GLVND</code></p>
-<dd>If the GLVND OpenGL and GLX libraries are available, prefer them. This forces <code>OPENGL_gl_LIBRARY</code> to be empty. </p>
+<dt><code>GLVND</code></dt>
+<dd>If the GLVND OpenGL and GLX libraries are available, prefer them. This forces <code>OPENGL_gl_LIBRARY</code> to be empty. </dd>
 <p> Changed in version 3.11: This is the default, unless policy <code>CMP0072</code> is set to <code>OLD</code> and no components are requeted (since components correspond to GLVND libraries). </p>
-<dt><code>LEGACY</code></p>
-<dd>Prefer to use the legacy libGL library, if available. </p>
+<dt><code>LEGACY</code></dt>
+<dd>Prefer to use the legacy libGL library, if available. </dd>
 <p> For EGL targets the client must rely on GLVND support on the user&#8217;s system. Linking should use the <code>OpenGL::OpenGL OpenGL::EGL</code> targets. Using GLES* libraries is theoretically possible in place of <code>OpenGL::OpenGL</code>, but this module does not currently support that; contributions welcome. </p>
 <p> <code>OPENGL_egl_LIBRARY</code> and <code>OPENGL_EGL_INCLUDE_DIRS</code> are defined in the case of GLVND. For non-GLVND Linux and other systems these are left undefined.</dl>
 <h3>macOS-Specific</h3>
@@ -7261,42 +7261,42 @@ OpenCL_LIBRARY - the path to the OpenCL library</pre>
 <p>New in version 3.10: The module exposes the components <code>C</code>, <code>CXX</code>, and <code>Fortran</code>. Each of these controls the various languages to search OpenMP support for. </p>
 <p> Depending on the enabled components the following variables will be set:</p>
 <dl>
-<dt><code>OpenMP_FOUND</code></p>
-<dd>Variable indicating that OpenMP flags for all requested languages have been found. If no components are specified, this is true if OpenMP settings for all enabled languages were detected.</p>
-<dt><code>OpenMP_VERSION</code></p>
-<dd>Minimal version of the OpenMP standard detected among the requested languages, or all enabled languages if no components were specified. </p>
+<dt><code>OpenMP_FOUND</code></dt>
+<dd>Variable indicating that OpenMP flags for all requested languages have been found. If no components are specified, this is true if OpenMP settings for all enabled languages were detected.</dd>
+<dt><code>OpenMP_VERSION</code></dt>
+<dd>Minimal version of the OpenMP standard detected among the requested languages, or all enabled languages if no components were specified. </dd>
 <p> This module will set the following variables per language in your project, where <code>&lt;lang&gt;</code> is one of C, CXX, or Fortran:</p>
-<dt><code>OpenMP_&lt;lang&gt;_FOUND</code></p>
-<dd>Variable indicating if OpenMP support for <code>&lt;lang&gt;</code> was detected.</p>
-<dt><code>OpenMP_&lt;lang&gt;_FLAGS</code></p>
-<dd>OpenMP compiler flags for <code>&lt;lang&gt;</code>, separated by spaces.</p>
-<dt><code>OpenMP_&lt;lang&gt;_INCLUDE_DIRS</code></p>
-<dd>Directories that must be added to the header search path for <code>&lt;lang&gt;</code> when using OpenMP. </p>
+<dt><code>OpenMP_&lt;lang&gt;_FOUND</code></dt>
+<dd>Variable indicating if OpenMP support for <code>&lt;lang&gt;</code> was detected.</dd>
+<dt><code>OpenMP_&lt;lang&gt;_FLAGS</code></dt>
+<dd>OpenMP compiler flags for <code>&lt;lang&gt;</code>, separated by spaces.</dd>
+<dt><code>OpenMP_&lt;lang&gt;_INCLUDE_DIRS</code></dt>
+<dd>Directories that must be added to the header search path for <code>&lt;lang&gt;</code> when using OpenMP. </dd>
 <p> For linking with OpenMP code written in <code>&lt;lang&gt;</code>, the following variables are provided:</p>
-<dt><code>OpenMP_&lt;lang&gt;_LIB_NAMES</code></p>
-<dd>;-list of libraries for OpenMP programs for <code>&lt;lang&gt;</code>.</p>
-<dt><code>OpenMP_&lt;libname&gt;_LIBRARY</code></p>
-<dd>Location of the individual libraries needed for OpenMP support in <code>&lt;lang&gt;</code>.</p>
-<dt><code>OpenMP_&lt;lang&gt;_LIBRARIES</code></p>
-<dd>A list of libraries needed to link with OpenMP code written in <code>&lt;lang&gt;</code>. </p>
+<dt><code>OpenMP_&lt;lang&gt;_LIB_NAMES</code></dt>
+<dd>;-list of libraries for OpenMP programs for <code>&lt;lang&gt;</code>.</dd>
+<dt><code>OpenMP_&lt;libname&gt;_LIBRARY</code></dt>
+<dd>Location of the individual libraries needed for OpenMP support in <code>&lt;lang&gt;</code>.</dd>
+<dt><code>OpenMP_&lt;lang&gt;_LIBRARIES</code></dt>
+<dd>A list of libraries needed to link with OpenMP code written in <code>&lt;lang&gt;</code>. </dd>
 <p> Additionally, the module provides <code>IMPORTED</code> targets:</p>
-<dt><code>OpenMP::OpenMP_&lt;lang&gt;</code></p>
-<dd>Target for using OpenMP from <code>&lt;lang&gt;</code>. </p>
+<dt><code>OpenMP::OpenMP_&lt;lang&gt;</code></dt>
+<dd>Target for using OpenMP from <code>&lt;lang&gt;</code>. </dd>
 <p> Specifically for Fortran, the module sets the following variables:</p>
-<dt><code>OpenMP_Fortran_HAVE_OMPLIB_HEADER</code></p>
-<dd>Boolean indicating if OpenMP is accessible through <code>omp_lib.h</code>.</p>
-<dt><code>OpenMP_Fortran_HAVE_OMPLIB_MODULE</code></p>
-<dd>Boolean indicating if OpenMP is accessible through the <code>omp_lib</code> Fortran module. </p>
+<dt><code>OpenMP_Fortran_HAVE_OMPLIB_HEADER</code></dt>
+<dd>Boolean indicating if OpenMP is accessible through <code>omp_lib.h</code>.</dd>
+<dt><code>OpenMP_Fortran_HAVE_OMPLIB_MODULE</code></dt>
+<dd>Boolean indicating if OpenMP is accessible through the <code>omp_lib</code> Fortran module. </dd>
 <p> The module will also try to provide the OpenMP version variables:</p>
-<dt><code>OpenMP_&lt;lang&gt;_SPEC_DATE</code></p>
-<dd>New in version 3.7. </p>
+<dt><code>OpenMP_&lt;lang&gt;_SPEC_DATE</code></dt>
+<dd>New in version 3.7. </dd>
 <p> Date of the OpenMP specification implemented by the <code>&lt;lang&gt;</code> compiler.</p>
-<dt><code>OpenMP_&lt;lang&gt;_VERSION_MAJOR</code></p>
-<dd>Major version of OpenMP implemented by the <code>&lt;lang&gt;</code> compiler.</p>
-<dt><code>OpenMP_&lt;lang&gt;_VERSION_MINOR</code></p>
-<dd>Minor version of OpenMP implemented by the <code>&lt;lang&gt;</code> compiler.</p>
-<dt><code>OpenMP_&lt;lang&gt;_VERSION</code></p>
-<dd>OpenMP version implemented by the <code>&lt;lang&gt;</code> compiler. </p>
+<dt><code>OpenMP_&lt;lang&gt;_VERSION_MAJOR</code></dt>
+<dd>Major version of OpenMP implemented by the <code>&lt;lang&gt;</code> compiler.</dd>
+<dt><code>OpenMP_&lt;lang&gt;_VERSION_MINOR</code></dt>
+<dd>Minor version of OpenMP implemented by the <code>&lt;lang&gt;</code> compiler.</dd>
+<dt><code>OpenMP_&lt;lang&gt;_VERSION</code></dt>
+<dd>OpenMP version implemented by the <code>&lt;lang&gt;</code> compiler. </dd>
 <p> The specification date is formatted as given in the OpenMP standard: <code>yyyymm</code> where <code>yyyy</code> and <code>mm</code> represents the year and month of the OpenMP specification implemented by the <code>&lt;lang&gt;</code> compiler. </p>
 <p> For some compilers, it may be necessary to add a header search path to find the relevant OpenMP headers. This location may be language-specific. Where this is needed, the module may attempt to find the location, but it can be provided directly by setting the <code>OpenMP_&lt;lang&gt;_INCLUDE_DIR</code> cache variable. Note that this variable is an _input_ control to the module. Project code should use the <code>OpenMP_&lt;lang&gt;_INCLUDE_DIRS</code> _output_ variable if it needs to know what include directories are needed.</dl>
 <h3>FindOpenSceneGraph</h3>
@@ -7312,14 +7312,14 @@ OpenCL_LIBRARY - the path to the OpenCL library</pre>
  automatically</pre>
 <p>The following environment variables are also respected for finding the OSG and it&#8217;s various components. <code>CMAKE_PREFIX_PATH</code> can also be used for this (see <code>find_library()</code> CMake documentation).</p>
 <dl>
-<dt><code>&lt;MODULE&gt;_DIR</code></p>
-<dd>(where <code>MODULE</code> is of the form &quot;OSGVOLUME&quot; and there is a <code>FindosgVolume</code>.cmake` file)</p>
-<dt><code>OSG_DIR</code></p>
+<dt><code>&lt;MODULE&gt;_DIR</code></dt>
+<dd>(where <code>MODULE</code> is of the form &quot;OSGVOLUME&quot; and there is a <code>FindosgVolume</code>.cmake` file)</dd>
+<dt><code>OSG_DIR</code></dt>
 <dd>
-<dt><code>OSGDIR</code></p>
+</dd><dt><code>OSGDIR</code></dt>
 <dd>
-<dt><code>OSG_ROOT</code></p>
-<dd>[CMake 2.8.10]: The CMake variable <code>OSG_DIR</code> can now be used as well to influence detection, instead of needing to specify an environment variable. </p>
+</dd><dt><code>OSG_ROOT</code></dt>
+<dd>[CMake 2.8.10]: The CMake variable <code>OSG_DIR</code> can now be used as well to influence detection, instead of needing to specify an environment variable. </dd>
 <p> This module defines the following output variables: </p>
 <pre>OPENSCENEGRAPH_FOUND - Was the OSG and all of the specified components found?</pre>
 <pre>OPENSCENEGRAPH_VERSION - The version of the OSG which was found</pre>
@@ -7344,12 +7344,12 @@ target_link_libraries(foo ${OPENSCENEGRAPH_LIBRARIES})</pre>
 <p>New in version 3.4. </p>
 <p> This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>OpenSSL::SSL</code></p>
-<dd>The OpenSSL <code>ssl</code> library, if found.</p>
-<dt><code>OpenSSL::Crypto</code></p>
-<dd>The OpenSSL <code>crypto</code> library, if found.</p>
-<dt><code>OpenSSL::applink</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>OpenSSL::SSL</code></dt>
+<dd>The OpenSSL <code>ssl</code> library, if found.</dd>
+<dt><code>OpenSSL::Crypto</code></dt>
+<dd>The OpenSSL <code>crypto</code> library, if found.</dd>
+<dt><code>OpenSSL::applink</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The OpenSSL <code>applink</code> components that might be need to be compiled into projects under MSVC. This target is available only if found OpenSSL version is not less than 0.9.8. By linking this target the above OpenSSL targets can be linked even if the project has different MSVC runtime configurations with the above OpenSSL targets. This target has no effect on platforms other than MSVC. </p>
 <p> NOTE: Due to how <code>INTERFACE_SOURCES</code> are consumed by the consuming target, unless you certainly know what you are doing, it is always preferred to link <code>OpenSSL::applink</code> target as <code>PRIVATE</code> and to make sure that this target is linked at most once for the whole dependency graph of any library or executable: </p>
 <pre>target_link_libraries(myTarget PRIVATE OpenSSL::applink)</pre>
@@ -7357,24 +7357,24 @@ target_link_libraries(foo ${OPENSCENEGRAPH_LIBRARIES})</pre>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>OPENSSL_FOUND</code></p>
-<dd>System has the OpenSSL library. If no components are requested it only requires the crypto library.</p>
-<dt><code>OPENSSL_INCLUDE_DIR</code></p>
-<dd>The OpenSSL include directory.</p>
-<dt><code>OPENSSL_CRYPTO_LIBRARY</code></p>
-<dd>The OpenSSL crypto library.</p>
-<dt><code>OPENSSL_CRYPTO_LIBRARIES</code></p>
-<dd>The OpenSSL crypto library and its dependencies.</p>
-<dt><code>OPENSSL_SSL_LIBRARY</code></p>
-<dd>The OpenSSL SSL library.</p>
-<dt><code>OPENSSL_SSL_LIBRARIES</code></p>
-<dd>The OpenSSL SSL library and its dependencies.</p>
-<dt><code>OPENSSL_LIBRARIES</code></p>
-<dd>All OpenSSL libraries and their dependencies.</p>
-<dt><code>OPENSSL_VERSION</code></p>
-<dd>This is set to <code>$major.$minor.$revision$patch</code> (e.g. <code>0.9.8s</code>).</p>
-<dt><code>OPENSSL_APPLINK_SOURCE</code></p>
-<dd>The sources in the target <code>OpenSSL::applink</code> that is mentioned above. This variable shall always be undefined if found openssl version is less than 0.9.8 or if platform is not MSVC.</dl>
+<dt><code>OPENSSL_FOUND</code></dt>
+<dd>System has the OpenSSL library. If no components are requested it only requires the crypto library.</dd>
+<dt><code>OPENSSL_INCLUDE_DIR</code></dt>
+<dd>The OpenSSL include directory.</dd>
+<dt><code>OPENSSL_CRYPTO_LIBRARY</code></dt>
+<dd>The OpenSSL crypto library.</dd>
+<dt><code>OPENSSL_CRYPTO_LIBRARIES</code></dt>
+<dd>The OpenSSL crypto library and its dependencies.</dd>
+<dt><code>OPENSSL_SSL_LIBRARY</code></dt>
+<dd>The OpenSSL SSL library.</dd>
+<dt><code>OPENSSL_SSL_LIBRARIES</code></dt>
+<dd>The OpenSSL SSL library and its dependencies.</dd>
+<dt><code>OPENSSL_LIBRARIES</code></dt>
+<dd>All OpenSSL libraries and their dependencies.</dd>
+<dt><code>OPENSSL_VERSION</code></dt>
+<dd>This is set to <code>$major.$minor.$revision$patch</code> (e.g. <code>0.9.8s</code>).</dd>
+<dt><code>OPENSSL_APPLINK_SOURCE</code></dt>
+<dd>The sources in the target <code>OpenSSL::applink</code> that is mentioned above. This variable shall always be undefined if found openssl version is less than 0.9.8 or if platform is not MSVC.</dd></dl>
 <h3>Hints</h3>
 <p>Set <code>OPENSSL_ROOT_DIR</code> to the root directory of an OpenSSL installation. </p>
 <p> New in version 3.4: Set <code>OPENSSL_USE_STATIC_LIBS</code> to <code>TRUE</code> to look for static libraries. </p>
@@ -7406,16 +7406,16 @@ target_link_libraries(foo ${OPENSCENEGRAPH_LIBRARIES})</pre>
 <p>This is part of the <code>Findosg*</code> suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default <code>FindOpenGL</code> module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the <code>FindOpenSceneGraph</code> instead of the <code>Findosg*.cmake</code> modules. </p>
 <p> Locate osgDB This module defines:</p>
 <dl>
-<dt><code>OSGDB_FOUND</code></p>
-<dd>Was osgDB found?</p>
-<dt><code>OSGDB_INCLUDE_DIR</code></p>
-<dd>Where to find the headers</p>
-<dt><code>OSGDB_LIBRARIES</code></p>
-<dd>The libraries to link against for the osgDB</p>
-<dt><code>OSGDB_LIBRARY</code></p>
-<dd>The osgDB library</p>
-<dt><code>OSGDB_LIBRARY_DEBUG</code></p>
-<dd>The osgDB debug library </p>
+<dt><code>OSGDB_FOUND</code></dt>
+<dd>Was osgDB found?</dd>
+<dt><code>OSGDB_INCLUDE_DIR</code></dt>
+<dd>Where to find the headers</dd>
+<dt><code>OSGDB_LIBRARIES</code></dt>
+<dd>The libraries to link against for the osgDB</dd>
+<dt><code>OSGDB_LIBRARY</code></dt>
+<dd>The osgDB library</dd>
+<dt><code>OSGDB_LIBRARY_DEBUG</code></dt>
+<dd>The osgDB debug library </dd>
 <p> <code>$OSGDIR</code> is an environment variable that would correspond to: </p>
 <pre>./configure --prefix=$OSGDIR used in building osg.</pre>
 </dl>
@@ -7535,13 +7535,13 @@ target_link_libraries(foo ${OPENSCENEGRAPH_LIBRARIES})</pre>
 <p>New in version 3.10. </p>
 <p> The module defines the following variables:</p>
 <dl>
-<dt><code>Patch_EXECUTABLE</code></p>
-<dd>Path to patch command-line executable.</p>
-<dt><code>Patch_FOUND</code></p>
-<dd>True if the patch command-line executable was found. </p>
+<dt><code>Patch_EXECUTABLE</code></dt>
+<dd>Path to patch command-line executable.</dd>
+<dt><code>Patch_FOUND</code></dt>
+<dd>True if the patch command-line executable was found. </dd>
 <p> The following <code>IMPORTED</code> targets are also defined:</p>
-<dt><code>Patch::patch</code></p>
-<dd>The command-line executable. </p>
+<dt><code>Patch::patch</code></dt>
+<dd>The command-line executable. </dd>
 <p> Example usage: </p>
 <pre>find_package(Patch)
 if(Patch_FOUND)
@@ -7592,19 +7592,19 @@ PIKE_EXECUTABLE = full path to the pike binary</pre>
 <p>A <code>pkg-config</code> module for CMake. </p>
 <p> Finds the <code>pkg-config</code> executable and adds the <i>pkg_get_variable()</i>, <i>pkg_check_modules()</i> and <i>pkg_search_module()</i> commands. The following variables will also be set:</p>
 <dl>
-<dt><code>PKG_CONFIG_FOUND</code></p>
-<dd>True if a pkg-config executable was found.</p>
-<dt><code>PKG_CONFIG_VERSION_STRING</code></p>
-<dd>New in version 2.8.8. </p>
+<dt><code>PKG_CONFIG_FOUND</code></dt>
+<dd>True if a pkg-config executable was found.</dd>
+<dt><code>PKG_CONFIG_VERSION_STRING</code></dt>
+<dd>New in version 2.8.8. </dd>
 <p> The version of pkg-config that was found.</p>
-<dt><code>PKG_CONFIG_EXECUTABLE</code></p>
-<dd>The pathname of the pkg-config program.</p>
-<dt><code>PKG_CONFIG_ARGN</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>PKG_CONFIG_EXECUTABLE</code></dt>
+<dd>The pathname of the pkg-config program.</dd>
+<dt><code>PKG_CONFIG_ARGN</code></dt>
+<dd>New in version 3.22. </dd>
 <p> A list of arguments to pass to pkg-config. </p>
 <p> Both <code>PKG_CONFIG_EXECUTABLE</code> and <code>PKG_CONFIG_ARGN</code> are initialized by the module, but may be overridden by the user. See <i>Variables Affecting Behavior</i> for how these variables are initialized.</p>
-<dt><code>pkg_check_modules</code></p>
-<dd>Checks for all the given modules, setting a variety of result variables in the calling scope. </p>
+<dt><code>pkg_check_modules</code></dt>
+<dd>Checks for all the given modules, setting a variety of result variables in the calling scope. </dd>
 <pre>pkg_check_modules(&lt;prefix&gt;
  [REQUIRED] [QUIET]
  [NO_CMAKE_PATH]
@@ -7619,44 +7619,44 @@ PIKE_EXECUTABLE = full path to the pike binary</pre>
 <p> New in version 3.15: Non-library linker options reported by <code>pkg-config</code> are stored in the <code>INTERFACE_LINK_OPTIONS</code> target property. </p>
 <p> Changed in version 3.18: Include directories specified with <code>-isystem</code> are stored in the <code>INTERFACE_INCLUDE_DIRECTORIES</code> target property. Previous versions of CMake left them in the <code>INTERFACE_COMPILE_OPTIONS</code> property. </p>
 <p> Each <code>&lt;moduleSpec&gt;</code> can be either a bare module name or it can be a module name with a version constraint (operators <code>=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code> are supported). The following are examples for a module named <code>foo</code> with various constraints:</p>
-<dt>&bull;</p>
-<dd><code>foo</code> matches any version.</p>
-<dt>&bull;</p>
-<dd><code>foo&lt;2</code> only matches versions before 2.</p>
-<dt>&bull;</p>
-<dd><code>foo&gt;=3.1</code> matches any version from 3.1 or later.</p>
-<dt>&bull;</p>
-<dd><code>foo=1.2.3</code> requires that foo must be exactly version 1.2.3. </p>
+<dt>&bull;</dt>
+<dd><code>foo</code> matches any version.</dd>
+<dt>&bull;</dt>
+<dd><code>foo&lt;2</code> only matches versions before 2.</dd>
+<dt>&bull;</dt>
+<dd><code>foo&gt;=3.1</code> matches any version from 3.1 or later.</dd>
+<dt>&bull;</dt>
+<dd><code>foo=1.2.3</code> requires that foo must be exactly version 1.2.3. </dd>
 <p> The following variables may be set upon return. Two sets of values exist: One for the common case (<code>&lt;XXX&gt; = &lt;prefix&gt;</code>) and another for the information <code>pkg-config</code> provides when called with the <code>&#8211;static</code> option (<code>&lt;XXX&gt; = &lt;prefix&gt;_STATIC</code>).</p>
-<dt><code>&lt;XXX&gt;_FOUND</code></p>
-<dd>set to 1 if module(s) exist</p>
-<dt><code>&lt;XXX&gt;_LIBRARIES</code></p>
-<dd>only the libraries (without the &#8216;-l&#8217;)</p>
-<dt><code>&lt;XXX&gt;_LINK_LIBRARIES</code></p>
-<dd>the libraries and their absolute paths</p>
-<dt><code>&lt;XXX&gt;_LIBRARY_DIRS</code></p>
-<dd>the paths of the libraries (without the &#8216;-L&#8217;)</p>
-<dt><code>&lt;XXX&gt;_LDFLAGS</code></p>
-<dd>all required linker flags</p>
-<dt><code>&lt;XXX&gt;_LDFLAGS_OTHER</code></p>
-<dd>all other linker flags</p>
-<dt><code>&lt;XXX&gt;_INCLUDE_DIRS</code></p>
-<dd>the &#8216;-I&#8217; preprocessor flags (without the &#8216;-I&#8217;)</p>
-<dt><code>&lt;XXX&gt;_CFLAGS</code></p>
-<dd>all required cflags</p>
-<dt><code>&lt;XXX&gt;_CFLAGS_OTHER</code></p>
-<dd>the other compiler flags </p>
+<dt><code>&lt;XXX&gt;_FOUND</code></dt>
+<dd>set to 1 if module(s) exist</dd>
+<dt><code>&lt;XXX&gt;_LIBRARIES</code></dt>
+<dd>only the libraries (without the &#8216;-l&#8217;)</dd>
+<dt><code>&lt;XXX&gt;_LINK_LIBRARIES</code></dt>
+<dd>the libraries and their absolute paths</dd>
+<dt><code>&lt;XXX&gt;_LIBRARY_DIRS</code></dt>
+<dd>the paths of the libraries (without the &#8216;-L&#8217;)</dd>
+<dt><code>&lt;XXX&gt;_LDFLAGS</code></dt>
+<dd>all required linker flags</dd>
+<dt><code>&lt;XXX&gt;_LDFLAGS_OTHER</code></dt>
+<dd>all other linker flags</dd>
+<dt><code>&lt;XXX&gt;_INCLUDE_DIRS</code></dt>
+<dd>the &#8216;-I&#8217; preprocessor flags (without the &#8216;-I&#8217;)</dd>
+<dt><code>&lt;XXX&gt;_CFLAGS</code></dt>
+<dd>all required cflags</dd>
+<dt><code>&lt;XXX&gt;_CFLAGS_OTHER</code></dt>
+<dd>the other compiler flags </dd>
 <p> All but <code>&lt;XXX&gt;_FOUND</code> may be a ;-list if the associated variable returned from <code>pkg-config</code> has multiple values. </p>
 <p> Changed in version 3.18: Include directories specified with <code>-isystem</code> are stored in the <code>&lt;XXX&gt;_INCLUDE_DIRS</code> variable. Previous versions of CMake left them in <code>&lt;XXX&gt;_CFLAGS_OTHER</code>. </p>
 <p> There are some special variables whose prefix depends on the number of <code>&lt;moduleSpec&gt;</code> given. When there is only one <code>&lt;moduleSpec&gt;</code>, <code>&lt;YYY&gt;</code> will simply be <code>&lt;prefix&gt;</code>, but if two or more <code>&lt;moduleSpec&gt;</code> items are given, <code>&lt;YYY&gt;</code> will be <code>&lt;prefix&gt;_&lt;moduleName&gt;</code>.</p>
-<dt><code>&lt;YYY&gt;_VERSION</code></p>
-<dd>version of the module</p>
-<dt><code>&lt;YYY&gt;_PREFIX</code></p>
-<dd>prefix directory of the module</p>
-<dt><code>&lt;YYY&gt;_INCLUDEDIR</code></p>
-<dd>include directory of the module</p>
-<dt><code>&lt;YYY&gt;_LIBDIR</code></p>
-<dd>lib directory of the module </p>
+<dt><code>&lt;YYY&gt;_VERSION</code></dt>
+<dd>version of the module</dd>
+<dt><code>&lt;YYY&gt;_PREFIX</code></dt>
+<dd>prefix directory of the module</dd>
+<dt><code>&lt;YYY&gt;_INCLUDEDIR</code></dt>
+<dd>include directory of the module</dd>
+<dt><code>&lt;YYY&gt;_LIBDIR</code></dt>
+<dd>lib directory of the module </dd>
 <p> Changed in version 3.8: For any given <code>&lt;prefix&gt;</code>, <code>pkg_check_modules()</code> can be called multiple times with different parameters. Previous versions of CMake cached and returned the first successful result. </p>
 <p> Changed in version 3.16: If a full path to the found library can&#8217;t be determined, but it&#8217;s still visible to the linker, pass it through as <code>-l&lt;name&gt;</code>. Previous versions of CMake failed in this case. </p>
 <p> Examples: </p>
@@ -7670,8 +7670,8 @@ PIKE_EXECUTABLE = full path to the pike binary</pre>
 <p>Requires any version of <code>xrender</code>. Example output variables set by a successful call: </p>
 <pre>XRENDER_LIBRARIES=Xrender;X11
 XRENDER_STATIC_LIBRARIES=Xrender;X11;pthread;Xau;Xdmcp</pre>
-<dt><code>pkg_search_module</code></p>
-<dd>The behavior of this command is the same as <i>pkg_check_modules()</i>, except that rather than checking for all the specified modules, it searches for just the first successful match. </p>
+<dt><code>pkg_search_module</code></dt>
+<dd>The behavior of this command is the same as <i>pkg_check_modules()</i>, except that rather than checking for all the specified modules, it searches for just the first successful match. </dd>
 <pre>pkg_search_module(&lt;prefix&gt;
  [REQUIRED] [QUIET]
  [NO_CMAKE_PATH]
@@ -7681,8 +7681,8 @@ XRENDER_STATIC_LIBRARIES=Xrender;X11;pthread;Xau;Xdmcp</pre>
 <p>New in version 3.16: If a module is found, the <code>&lt;prefix&gt;_MODULE_NAME</code> variable will contain the name of the matching module. This variable can be used if you need to run <i>pkg_get_variable()</i>. </p>
 <p> Example: </p>
 <pre>pkg_search_module (BAR libxml-2.0 libxml2 libxml&gt;=2)</pre>
-<dt><code>pkg_get_variable</code></p>
-<dd>New in version 3.4. </p>
+<dt><code>pkg_get_variable</code></dt>
+<dd>New in version 3.4. </dd>
 <p> Retrieves the value of a pkg-config variable <code>varName</code> and stores it in the result variable <code>resultVar</code> in the calling scope. </p>
 <pre>pkg_get_variable(&lt;resultVar&gt; &lt;moduleName&gt; &lt;varName&gt;)</pre>
 <p>If <code>pkg-config</code> returns multiple values for the specified variable, <code>resultVar</code> will contain a ;-list. </p>
@@ -7691,15 +7691,15 @@ XRENDER_STATIC_LIBRARIES=Xrender;X11;pthread;Xau;Xdmcp</pre>
 </dl>
 <h3>Variables Affecting Behavior</h3>
 <dl>
-<dt><code>PKG_CONFIG_EXECUTABLE</code></p>
-<dd>This cache variable can be set to the path of the pkg-config executable. <code>find_program()</code> is called internally by the module with this variable. </p>
+<dt><code>PKG_CONFIG_EXECUTABLE</code></dt>
+<dd>This cache variable can be set to the path of the pkg-config executable. <code>find_program()</code> is called internally by the module with this variable. </dd>
 <p> New in version 3.1: The <code>PKG_CONFIG</code> environment variable can be used as a hint if <code>PKG_CONFIG_EXECUTABLE</code> has not yet been set. </p>
 <p> Changed in version 3.22: If the <code>PKG_CONFIG</code> environment variable is set, only the first argument is taken from it when using it as a hint. </p>
-<dt><code>PKG_CONFIG_ARGN</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>PKG_CONFIG_ARGN</code></dt>
+<dd>New in version 3.22. </dd>
 <p> This cache variable can be set to a list of arguments to additionally pass to pkg-config if needed. If not provided, it will be initialized from the <code>PKG_CONFIG</code> environment variable, if set. The first argument in that environment variable is assumed to be the pkg-config program, while all remaining arguments after that are used to initialize <code>PKG_CONFIG_ARGN</code>. If no such environment variable is defined, <code>PKG_CONFIG_ARGN</code> is initialized to an empty string. The module does not update the variable once it has been set in the cache.</p>
-<dt><code>PKG_CONFIG_USE_CMAKE_PREFIX_PATH</code></p>
-<dd>New in version 3.1. </p>
+<dt><code>PKG_CONFIG_USE_CMAKE_PREFIX_PATH</code></dt>
+<dd>New in version 3.1. </dd>
 <p> Specifies whether <i>pkg_check_modules()</i> and <i>pkg_search_module()</i> should add the paths in the <code>CMAKE_PREFIX_PATH</code>, <code>CMAKE_FRAMEWORK_PATH</code> and <code>CMAKE_APPBUNDLE_PATH</code> cache and environment variables to the <code>pkg-config</code> search path. </p>
 <p> If this variable is not set, this behavior is enabled by default if <code>CMAKE_MINIMUM_REQUIRED_VERSION</code> is 3.1 or later, disabled otherwise.</dl>
 <h3>FindPNG</h3>
@@ -7708,28 +7708,28 @@ XRENDER_STATIC_LIBRARIES=Xrender;X11;pthread;Xau;Xdmcp</pre>
 <p>New in version 3.5. </p>
 <p> This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>PNG::PNG</code></p>
-<dd>The libpng library, if found.</dl>
+<dt><code>PNG::PNG</code></dt>
+<dd>The libpng library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>PNG_INCLUDE_DIRS</code></p>
-<dd>where to find png.h, etc.</p>
-<dt><code>PNG_LIBRARIES</code></p>
-<dd>the libraries to link against to use PNG.</p>
-<dt><code>PNG_DEFINITIONS</code></p>
-<dd>You should add_definitions(${PNG_DEFINITIONS}) before compiling code that includes png library files.</p>
-<dt><code>PNG_FOUND</code></p>
-<dd>If false, do not try to use PNG.</p>
-<dt><code>PNG_VERSION_STRING</code></p>
-<dd>the version of the PNG library found (since CMake 2.8.8)</dl>
+<dt><code>PNG_INCLUDE_DIRS</code></dt>
+<dd>where to find png.h, etc.</dd>
+<dt><code>PNG_LIBRARIES</code></dt>
+<dd>the libraries to link against to use PNG.</dd>
+<dt><code>PNG_DEFINITIONS</code></dt>
+<dd>You should add_definitions(${PNG_DEFINITIONS}) before compiling code that includes png library files.</dd>
+<dt><code>PNG_FOUND</code></dt>
+<dd>If false, do not try to use PNG.</dd>
+<dt><code>PNG_VERSION_STRING</code></dt>
+<dd>the version of the PNG library found (since CMake 2.8.8)</dd></dl>
 <h3>Obsolete variables</h3>
 <p>The following variables may also be set, for backwards compatibility:</p>
 <dl>
-<dt><code>PNG_LIBRARY</code></p>
-<dd>where to find the PNG library.</p>
-<dt><code>PNG_INCLUDE_DIR</code></p>
-<dd>where to find the PNG headers (same as PNG_INCLUDE_DIRS) </p>
+<dt><code>PNG_LIBRARY</code></dt>
+<dd>where to find the PNG library.</dd>
+<dt><code>PNG_INCLUDE_DIR</code></dt>
+<dd>where to find the PNG headers (same as PNG_INCLUDE_DIRS) </dd>
 <p> Since PNG depends on the ZLib compression library, none of the above will be defined unless ZLib can be found.</dl>
 <h3>FindPostgreSQL</h3>
 <p>Find the PostgreSQL installation.</p>
@@ -7739,18 +7739,18 @@ XRENDER_STATIC_LIBRARIES=Xrender;X11;pthread;Xau;Xdmcp</pre>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>PostgreSQL_FOUND</code></p>
-<dd>True if PostgreSQL is found.</p>
-<dt><code>PostgreSQL_LIBRARIES</code></p>
-<dd>the PostgreSQL libraries needed for linking</p>
-<dt><code>PostgreSQL_INCLUDE_DIRS</code></p>
-<dd>the directories of the PostgreSQL headers</p>
-<dt><code>PostgreSQL_LIBRARY_DIRS</code></p>
-<dd>the link directories for PostgreSQL libraries</p>
-<dt><code>PostgreSQL_VERSION_STRING</code></p>
-<dd>the version of PostgreSQL found</p>
-<dt><code>PostgreSQL_TYPE_INCLUDE_DIR</code></p>
-<dd>the directories of the PostgreSQL server headers</dl>
+<dt><code>PostgreSQL_FOUND</code></dt>
+<dd>True if PostgreSQL is found.</dd>
+<dt><code>PostgreSQL_LIBRARIES</code></dt>
+<dd>the PostgreSQL libraries needed for linking</dd>
+<dt><code>PostgreSQL_INCLUDE_DIRS</code></dt>
+<dd>the directories of the PostgreSQL headers</dd>
+<dt><code>PostgreSQL_LIBRARY_DIRS</code></dt>
+<dd>the link directories for PostgreSQL libraries</dd>
+<dt><code>PostgreSQL_VERSION_STRING</code></dt>
+<dd>the version of PostgreSQL found</dd>
+<dt><code>PostgreSQL_TYPE_INCLUDE_DIR</code></dt>
+<dd>the directories of the PostgreSQL server headers</dd></dl>
 <h3>Components</h3>
 <p>This module contains additional <code>Server</code> component, that forcibly checks for the presence of server headers. Note that <code>PostgreSQL_TYPE_INCLUDE_DIR</code> is set regardless of the presence of the <code>Server</code> component in find_package call.</p>
 <h3>FindProducer</h3>
@@ -7765,56 +7765,56 @@ XRENDER_STATIC_LIBRARIES=Xrender;X11;pthread;Xau;Xdmcp</pre>
 <p> Changed in version 3.6: All input and output variables use the <code>Protobuf_</code> prefix. Variables with <code>PROTOBUF_</code> prefix are still supported for compatibility. </p>
 <p> The following variables can be set and are optional:</p>
 <dl>
-<dt><code>Protobuf_SRC_ROOT_FOLDER</code></p>
-<dd>When compiling with MSVC, if this cache variable is set the protobuf-default VS project build locations (vsprojects/Debug and vsprojects/Release or vsprojects/x64/Debug and vsprojects/x64/Release) will be searched for libraries and binaries.</p>
-<dt><code>Protobuf_IMPORT_DIRS</code></p>
-<dd>List of additional directories to be searched for imported .proto files.</p>
-<dt><code>Protobuf_DEBUG</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>Protobuf_SRC_ROOT_FOLDER</code></dt>
+<dd>When compiling with MSVC, if this cache variable is set the protobuf-default VS project build locations (vsprojects/Debug and vsprojects/Release or vsprojects/x64/Debug and vsprojects/x64/Release) will be searched for libraries and binaries.</dd>
+<dt><code>Protobuf_IMPORT_DIRS</code></dt>
+<dd>List of additional directories to be searched for imported .proto files.</dd>
+<dt><code>Protobuf_DEBUG</code></dt>
+<dd>New in version 3.6. </dd>
 <p> Show debug messages.</p>
-<dt><code>Protobuf_USE_STATIC_LIBS</code></p>
-<dd>New in version 3.9. </p>
+<dt><code>Protobuf_USE_STATIC_LIBS</code></dt>
+<dd>New in version 3.9. </dd>
 <p> Set to ON to force the use of the static libraries. Default is OFF. </p>
 <p> Defines the following variables:</p>
-<dt><code>Protobuf_FOUND</code></p>
-<dd>Found the Google Protocol Buffers library (libprotobuf &amp; header files)</p>
-<dt><code>Protobuf_VERSION</code></p>
-<dd>New in version 3.6. </p>
+<dt><code>Protobuf_FOUND</code></dt>
+<dd>Found the Google Protocol Buffers library (libprotobuf &amp; header files)</dd>
+<dt><code>Protobuf_VERSION</code></dt>
+<dd>New in version 3.6. </dd>
 <p> Version of package found.</p>
-<dt><code>Protobuf_INCLUDE_DIRS</code></p>
-<dd>Include directories for Google Protocol Buffers</p>
-<dt><code>Protobuf_LIBRARIES</code></p>
-<dd>The protobuf libraries</p>
-<dt><code>Protobuf_PROTOC_LIBRARIES</code></p>
-<dd>The protoc libraries</p>
-<dt><code>Protobuf_LITE_LIBRARIES</code></p>
-<dd>The protobuf-lite libraries </p>
+<dt><code>Protobuf_INCLUDE_DIRS</code></dt>
+<dd>Include directories for Google Protocol Buffers</dd>
+<dt><code>Protobuf_LIBRARIES</code></dt>
+<dd>The protobuf libraries</dd>
+<dt><code>Protobuf_PROTOC_LIBRARIES</code></dt>
+<dd>The protoc libraries</dd>
+<dt><code>Protobuf_LITE_LIBRARIES</code></dt>
+<dd>The protobuf-lite libraries </dd>
 <p> New in version 3.9: The following <code>IMPORTED</code> targets are also defined: </p>
-<dt><code>protobuf::libprotobuf</code></p>
-<dd>The protobuf library.</p>
-<dt><code>protobuf::libprotobuf-lite</code></p>
-<dd>The protobuf lite library.</p>
-<dt><code>protobuf::libprotoc</code></p>
-<dd>The protoc library.</p>
-<dt><code>protobuf::protoc</code></p>
-<dd>New in version 3.10: The protoc compiler. </p>
+<dt><code>protobuf::libprotobuf</code></dt>
+<dd>The protobuf library.</dd>
+<dt><code>protobuf::libprotobuf-lite</code></dt>
+<dd>The protobuf lite library.</dd>
+<dt><code>protobuf::libprotoc</code></dt>
+<dd>The protoc library.</dd>
+<dt><code>protobuf::protoc</code></dt>
+<dd>New in version 3.10: The protoc compiler. </dd>
 <p> The following cache variables are also available to set or use:</p>
-<dt><code>Protobuf_LIBRARY</code></p>
-<dd>The protobuf library</p>
-<dt><code>Protobuf_PROTOC_LIBRARY</code></p>
-<dd>The protoc library</p>
-<dt><code>Protobuf_INCLUDE_DIR</code></p>
-<dd>The include directory for protocol buffers</p>
-<dt><code>Protobuf_PROTOC_EXECUTABLE</code></p>
-<dd>The protoc compiler</p>
-<dt><code>Protobuf_LIBRARY_DEBUG</code></p>
-<dd>The protobuf library (debug)</p>
-<dt><code>Protobuf_PROTOC_LIBRARY_DEBUG</code></p>
-<dd>The protoc library (debug)</p>
-<dt><code>Protobuf_LITE_LIBRARY</code></p>
-<dd>The protobuf lite library</p>
-<dt><code>Protobuf_LITE_LIBRARY_DEBUG</code></p>
-<dd>The protobuf lite library (debug) </p>
+<dt><code>Protobuf_LIBRARY</code></dt>
+<dd>The protobuf library</dd>
+<dt><code>Protobuf_PROTOC_LIBRARY</code></dt>
+<dd>The protoc library</dd>
+<dt><code>Protobuf_INCLUDE_DIR</code></dt>
+<dd>The include directory for protocol buffers</dd>
+<dt><code>Protobuf_PROTOC_EXECUTABLE</code></dt>
+<dd>The protoc compiler</dd>
+<dt><code>Protobuf_LIBRARY_DEBUG</code></dt>
+<dd>The protobuf library (debug)</dd>
+<dt><code>Protobuf_PROTOC_LIBRARY_DEBUG</code></dt>
+<dd>The protoc library (debug)</dd>
+<dt><code>Protobuf_LITE_LIBRARY</code></dt>
+<dd>The protobuf lite library</dd>
+<dt><code>Protobuf_LITE_LIBRARY_DEBUG</code></dt>
+<dd>The protobuf lite library (debug) </dd>
 <p> Example: </p>
 <pre>find_package(Protobuf REQUIRED)
 include_directories(${Protobuf_INCLUDE_DIRS})
@@ -7826,47 +7826,47 @@ protobuf_generate_python(PROTO_PY foo.proto)
 add_executable(bar bar.cc ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <p><code>NOTE:</code> The <code>protobuf_generate_cpp</code> and <code>protobuf_generate_python</code> functions and <code>add_executable()</code> or <code>add_library()</code> calls only work properly within the same directory.</p>
-<dt><code>protobuf_generate_cpp</code></p>
-<dd>Add custom commands to process <code>.proto</code> files to C++: </p>
+<dt><code>protobuf_generate_cpp</code></dt>
+<dd>Add custom commands to process <code>.proto</code> files to C++: </dd>
 <pre>protobuf_generate_cpp (&lt;SRCS&gt; &lt;HDRS&gt;
  [DESCRIPTORS &lt;DESC&gt;] [EXPORT_MACRO &lt;MACRO&gt;] [&lt;ARGN&gt;...])</pre>
-<dt><code>SRCS</code></p>
-<dd>Variable to define with autogenerated source files</p>
-<dt><code>HDRS</code></p>
-<dd>Variable to define with autogenerated header files</p>
-<dt><code>DESCRIPTORS</code></p>
-<dd>New in version 3.10: Variable to define with autogenerated descriptor files, if requested. </p>
-<dt><code>EXPORT_MACRO</code></p>
-<dd>is a macro which should expand to <code>__declspec(dllexport)</code> or <code>__declspec(dllimport)</code> depending on what is being compiled.</p>
-<dt><code>ARGN</code></p>
-<dd><code>.proto</code> files</p>
-<dt><code>protobuf_generate_python</code></p>
-<dd>New in version 3.4. </p>
+<dt><code>SRCS</code></dt>
+<dd>Variable to define with autogenerated source files</dd>
+<dt><code>HDRS</code></dt>
+<dd>Variable to define with autogenerated header files</dd>
+<dt><code>DESCRIPTORS</code></dt>
+<dd>New in version 3.10: Variable to define with autogenerated descriptor files, if requested. </dd>
+<dt><code>EXPORT_MACRO</code></dt>
+<dd>is a macro which should expand to <code>__declspec(dllexport)</code> or <code>__declspec(dllimport)</code> depending on what is being compiled.</dd>
+<dt><code>ARGN</code></dt>
+<dd><code>.proto</code> files</dd>
+<dt><code>protobuf_generate_python</code></dt>
+<dd>New in version 3.4. </dd>
 <p> Add custom commands to process <code>.proto</code> files to Python: </p>
 <pre>protobuf_generate_python (&lt;PY&gt; [&lt;ARGN&gt;...])</pre>
-<dt><code>PY</code></p>
-<dd>Variable to define with autogenerated Python files</p>
-<dt><code>ARGN</code></p>
-<dd><code>.proto</code> files</dl>
+<dt><code>PY</code></dt>
+<dd>Variable to define with autogenerated Python files</dd>
+<dt><code>ARGN</code></dt>
+<dd><code>.proto</code> files</dd></dl>
 <h3>FindPython</h3>
 <p>New in version 3.12. </p>
 <p> Find Python interpreter, compiler and development environment (include directories and libraries). </p>
 <p> New in version 3.19: When a version is requested, it can be specified as a simple value or as a range. For a detailed description of version range usage and capabilities, refer to the <code>find_package()</code> command. </p>
 <p> The following components are supported:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Interpreter</code>: search for Python interpreter.</p>
-<dt>&bull;</p>
-<dd><code>Compiler</code>: search for Python compiler. Only offered by IronPython.</p>
-<dt>&bull;</p>
-<dd><code>Development</code>: search for development artifacts (include directories and libraries). </p>
+<dt>&bull;</dt>
+<dd><code>Interpreter</code>: search for Python interpreter.</dd>
+<dt>&bull;</dt>
+<dd><code>Compiler</code>: search for Python compiler. Only offered by IronPython.</dd>
+<dt>&bull;</dt>
+<dd><code>Development</code>: search for development artifacts (include directories and libraries). </dd>
 <p> New in version 3.18: This component includes two sub-components which can be specified independently:</p>
-<dt>&bull;</p>
-<dd><code>Development.Module</code>: search for artifacts for Python module developments.</p>
-<dt>&bull;</p>
-<dd><code>Development.Embed</code>: search for artifacts for Python embedding developments. </p>
-<dt>&bull;</p>
-<dd><code>NumPy</code>: search for NumPy include directories. </p>
+<dt>&bull;</dt>
+<dd><code>Development.Module</code>: search for artifacts for Python module developments.</dd>
+<dt>&bull;</dt>
+<dd><code>Development.Embed</code>: search for artifacts for Python embedding developments. </dd>
+<dt>&bull;</dt>
+<dd><code>NumPy</code>: search for NumPy include directories. </dd>
 <p> New in version 3.14: Added the <code>NumPy</code> component. </p>
 <p> If no <code>COMPONENTS</code> are specified, <code>Interpreter</code> is assumed. </p>
 <p> If component <code>Development</code> is specified, it implies sub-components <code>Development.Module</code> and <code>Development.Embed</code>. </p>
@@ -7878,135 +7878,135 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <p>This module defines the following Imported Targets: </p>
 <p> Changed in version 3.14: Imported Targets are only created when <code>CMAKE_ROLE</code> is <code>PROJECT</code>. </p>
 <dl>
-<dt><code>Python::Interpreter</code></p>
-<dd>Python interpreter. Target defined if component <code>Interpreter</code> is found.</p>
-<dt><code>Python::Compiler</code></p>
-<dd>Python compiler. Target defined if component <code>Compiler</code> is found.</p>
-<dt><code>Python::Module</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python::Interpreter</code></dt>
+<dd>Python interpreter. Target defined if component <code>Interpreter</code> is found.</dd>
+<dt><code>Python::Compiler</code></dt>
+<dd>Python compiler. Target defined if component <code>Compiler</code> is found.</dd>
+<dt><code>Python::Module</code></dt>
+<dd>New in version 3.15. </dd>
 <p> Python library for Python module. Target defined if component <code>Development.Module</code> is found.</p>
-<dt><code>Python::Python</code></p>
-<dd>Python library for Python embedding. Target defined if component <code>Development.Embed</code> is found.</p>
-<dt><code>Python::NumPy</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python::Python</code></dt>
+<dd>Python library for Python embedding. Target defined if component <code>Development.Embed</code> is found.</dd>
+<dt><code>Python::NumPy</code></dt>
+<dd>New in version 3.14. </dd>
 <p> NumPy Python library. Target defined if component <code>NumPy</code> is found.</dl>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project (see Standard Variable Names):</p>
 <dl>
-<dt><code>Python_FOUND</code></p>
-<dd>System has the Python requested components.</p>
-<dt><code>Python_Interpreter_FOUND</code></p>
-<dd>System has the Python interpreter.</p>
-<dt><code>Python_EXECUTABLE</code></p>
-<dd>Path to the Python interpreter.</p>
-<dt><code>Python_INTERPRETER_ID</code></p>
+<dt><code>Python_FOUND</code></dt>
+<dd>System has the Python requested components.</dd>
+<dt><code>Python_Interpreter_FOUND</code></dt>
+<dd>System has the Python interpreter.</dd>
+<dt><code>Python_EXECUTABLE</code></dt>
+<dd>Path to the Python interpreter.</dd>
+<dt><code>Python_INTERPRETER_ID</code></dt>
 <dd>
-<dt><code>A short string unique to the interpreter. Possible values include:</code></p>
+</dd><dt><code>A short string unique to the interpreter. Possible values include:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>Python</p>
-<dt>&bull;</p>
-<dd>ActivePython</p>
-<dt>&bull;</p>
-<dd>Anaconda</p>
-<dt>&bull;</p>
-<dd>Canopy</p>
-<dt>&bull;</p>
-<dd>IronPython</p>
-<dt>&bull;</p>
-<dd>PyPy</p>
-<dt><code>Python_STDLIB</code></p>
-<dd>Standard platform independent installation directory. </p>
+</dd><dt>&bull;</dt>
+<dd>Python</dd>
+<dt>&bull;</dt>
+<dd>ActivePython</dd>
+<dt>&bull;</dt>
+<dd>Anaconda</dd>
+<dt>&bull;</dt>
+<dd>Canopy</dd>
+<dt>&bull;</dt>
+<dd>IronPython</dd>
+<dt>&bull;</dt>
+<dd>PyPy</dd>
+<dt><code>Python_STDLIB</code></dt>
+<dd>Standard platform independent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=False,standard_lib=True)</code> or else <code>sysconfig.get_path(&#8216;stdlib&#8217;)</code>.</p>
-<dt><code>Python_STDARCH</code></p>
-<dd>Standard platform dependent installation directory. </p>
+<dt><code>Python_STDARCH</code></dt>
+<dd>Standard platform dependent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=True,standard_lib=True)</code> or else <code>sysconfig.get_path(&#8216;platstdlib&#8217;)</code>.</p>
-<dt><code>Python_SITELIB</code></p>
-<dd>Third-party platform independent installation directory. </p>
+<dt><code>Python_SITELIB</code></dt>
+<dd>Third-party platform independent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=False,standard_lib=False)</code> or else <code>sysconfig.get_path(&#8216;purelib&#8217;)</code>.</p>
-<dt><code>Python_SITEARCH</code></p>
-<dd>Third-party platform dependent installation directory. </p>
+<dt><code>Python_SITEARCH</code></dt>
+<dd>Third-party platform dependent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=True,standard_lib=False)</code> or else <code>sysconfig.get_path(&#8216;platlib&#8217;)</code>.</p>
-<dt><code>Python_SOABI</code></p>
-<dd>New in version 3.17. </p>
+<dt><code>Python_SOABI</code></dt>
+<dd>New in version 3.17. </dd>
 <p> Extension suffix for modules. </p>
 <p> Information returned by <code>distutils.sysconfig.get_config_var(&#8216;SOABI&#8217;)</code> or computed from <code>distutils.sysconfig.get_config_var(&#8216;EXT_SUFFIX&#8217;)</code> or <code>python-config &#8211;extension-suffix</code>. If package <code>distutils.sysconfig</code> is not available, <code>sysconfig.get_config_var(&#8216;SOABI&#8217;)</code> or <code>sysconfig.get_config_var(&#8216;EXT_SUFFIX&#8217;)</code> are used.</p>
-<dt><code>Python_Compiler_FOUND</code></p>
-<dd>System has the Python compiler.</p>
-<dt><code>Python_COMPILER</code></p>
-<dd>Path to the Python compiler. Only offered by IronPython.</p>
-<dt><code>Python_COMPILER_ID</code></p>
+<dt><code>Python_Compiler_FOUND</code></dt>
+<dd>System has the Python compiler.</dd>
+<dt><code>Python_COMPILER</code></dt>
+<dd>Path to the Python compiler. Only offered by IronPython.</dd>
+<dt><code>Python_COMPILER_ID</code></dt>
 <dd>
-<dt><code>A short string unique to the compiler. Possible values include:</code></p>
+</dd><dt><code>A short string unique to the compiler. Possible values include:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>IronPython</p>
-<dt><code>Python_DOTNET_LAUNCHER</code></p>
-<dd>New in version 3.18. </p>
+</dd><dt>&bull;</dt>
+<dd>IronPython</dd>
+<dt><code>Python_DOTNET_LAUNCHER</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The <code>.Net</code> interpreter. Only used by <code>IronPython</code> implementation.</p>
-<dt><code>Python_Development_FOUND</code></p>
-<dd>System has the Python development artifacts.</p>
-<dt><code>Python_Development.Module_FOUND</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python_Development_FOUND</code></dt>
+<dd>System has the Python development artifacts.</dd>
+<dt><code>Python_Development.Module_FOUND</code></dt>
+<dd>New in version 3.18. </dd>
 <p> System has the Python development artifacts for Python module.</p>
-<dt><code>Python_Development.Embed_FOUND</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python_Development.Embed_FOUND</code></dt>
+<dd>New in version 3.18. </dd>
 <p> System has the Python development artifacts for Python embedding. </p>
 <p> <code>Python_INCLUDE_DIRS</code> The Python include directories.</p>
-<dt><code>Python_LINK_OPTIONS</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>Python_LINK_OPTIONS</code></dt>
+<dd>New in version 3.19. </dd>
 <p> The Python link options. Some configurations require specific link options for a correct build and execution.</p>
-<dt><code>Python_LIBRARIES</code></p>
-<dd>The Python libraries.</p>
-<dt><code>Python_LIBRARY_DIRS</code></p>
-<dd>The Python library directories.</p>
-<dt><code>Python_RUNTIME_LIBRARY_DIRS</code></p>
-<dd>The Python runtime library directories.</p>
-<dt><code>Python_VERSION</code></p>
-<dd>Python version.</p>
-<dt><code>Python_VERSION_MAJOR</code></p>
-<dd>Python major version.</p>
-<dt><code>Python_VERSION_MINOR</code></p>
-<dd>Python minor version.</p>
-<dt><code>Python_VERSION_PATCH</code></p>
-<dd>Python patch version.</p>
-<dt><code>Python_PyPy_VERSION</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python_LIBRARIES</code></dt>
+<dd>The Python libraries.</dd>
+<dt><code>Python_LIBRARY_DIRS</code></dt>
+<dd>The Python library directories.</dd>
+<dt><code>Python_RUNTIME_LIBRARY_DIRS</code></dt>
+<dd>The Python runtime library directories.</dd>
+<dt><code>Python_VERSION</code></dt>
+<dd>Python version.</dd>
+<dt><code>Python_VERSION_MAJOR</code></dt>
+<dd>Python major version.</dd>
+<dt><code>Python_VERSION_MINOR</code></dt>
+<dd>Python minor version.</dd>
+<dt><code>Python_VERSION_PATCH</code></dt>
+<dd>Python patch version.</dd>
+<dt><code>Python_PyPy_VERSION</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Python PyPy version.</p>
-<dt><code>Python_NumPy_FOUND</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python_NumPy_FOUND</code></dt>
+<dd>New in version 3.14. </dd>
 <p> System has the NumPy.</p>
-<dt><code>Python_NumPy_INCLUDE_DIRS</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python_NumPy_INCLUDE_DIRS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> The NumPy include directories.</p>
-<dt><code>Python_NumPy_VERSION</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python_NumPy_VERSION</code></dt>
+<dd>New in version 3.14. </dd>
 <p> The NumPy version.</dl>
 <h3>Hints</h3>
 <dl>
-<dt><code>Python_ROOT_DIR</code></p>
-<dd>Define the root directory of a Python installation.</p>
-<dt><code>Python_USE_STATIC_LIBS</code></p>
+<dt><code>Python_ROOT_DIR</code></dt>
+<dd>Define the root directory of a Python installation.</dd>
+<dt><code>Python_USE_STATIC_LIBS</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>If not defined, search for shared libraries and static libraries in that order.</p>
-<dt>&bull;</p>
-<dd>If set to TRUE, search <code>only</code> for static libraries.</p>
-<dt>&bull;</p>
-<dd>If set to FALSE, search <code>only</code> for shared libraries. </p>
+</dd><dt>&bull;</dt>
+<dd>If not defined, search for shared libraries and static libraries in that order.</dd>
+<dt>&bull;</dt>
+<dd>If set to TRUE, search <code>only</code> for static libraries.</dd>
+<dt>&bull;</dt>
+<dd>If set to FALSE, search <code>only</code> for shared libraries. </dd>
 <p> <code>NOTE:</code> This hint will be ignored on <code>Windows</code> because static libraries are not available on this platform.</p>
-<dt><code>Python_FIND_ABI</code></p>
-<dd>New in version 3.16. </p>
+<dt><code>Python_FIND_ABI</code></dt>
+<dd>New in version 3.16. </dd>
 <p> This variable defines which ABIs, as defined in <i>PEP 3149</i>, should be searched. </p>
 <p> <code>NOTE:</code> This hint will be honored only when searched for <code>Python</code> version 3. </p>
 <p> <code>NOTE:</code> If <code>Python_FIND_ABI</code> is not defined, any ABI will be searched. </p>
 <p> The <code>Python_FIND_ABI</code> variable is a 3-tuple specifying, in that order, <code>pydebug</code> (<code>d</code>), <code>pymalloc</code> (<code>m</code>) and <code>unicode</code> (<code>u</code>) flags. Each element can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>ON</code>: Corresponding flag is selected.</p>
-<dt>&bull;</p>
-<dd><code>OFF</code>: Corresponding flag is not selected.</p>
-<dt>&bull;</p>
-<dd><code>ANY</code>: The two possibilities (<code>ON</code> and <code>OFF</code>) will be searched. </p>
+<dt>&bull;</dt>
+<dd><code>ON</code>: Corresponding flag is selected.</dd>
+<dt>&bull;</dt>
+<dd><code>OFF</code>: Corresponding flag is not selected.</dd>
+<dt>&bull;</dt>
+<dd><code>ANY</code>: The two possibilities (<code>ON</code> and <code>OFF</code>) will be searched. </dd>
 <p> From this 3-tuple, various ABIs will be searched starting from the most specialized to the most general. Moreover, <code>debug</code> versions will be searched <code>after</code> <code>non-debug</code> ones. </p>
 <p> For example, if we have: </p>
 <pre>set (Python_FIND_ABI &quot;ON&quot; &quot;ANY&quot; &quot;ANY&quot;)</pre>
@@ -8015,91 +8015,91 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <pre>set (Python_FIND_ABI &quot;ANY&quot; &quot;ANY&quot; &quot;ANY&quot;)</pre>
 <p>The following combinations, in that order, will be used: <code>mu</code>, <code>m</code>, <code>u</code>, <code>&lt;empty&gt;</code>, <code>dmu</code>, <code>dm</code>, <code>du</code> and <code>d</code>. </p>
 <p> <code>NOTE:</code> This hint is useful only on <code>POSIX</code> systems. So, on <code>Windows</code> systems, when <code>Python_FIND_ABI</code> is defined, <code>Python</code> distributions from <i>python.org</i> will be found only if value for each flag is <code>OFF</code> or <code>ANY</code>.</p>
-<dt><code>Python_FIND_STRATEGY</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python_FIND_STRATEGY</code></dt>
+<dd>New in version 3.15. </dd>
 <p> This variable defines how lookup will be done. The <code>Python_FIND_STRATEGY</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>VERSION</code>: Try to find the most recent version in all specified locations. This is the default if policy <code>CMP0094</code> is undefined or set to <code>OLD</code>.</p>
-<dt>&bull;</p>
-<dd><code>LOCATION</code>: Stops lookup as soon as a version satisfying version constraints is founded. This is the default if policy <code>CMP0094</code> is set to <code>NEW</code>.</p>
-<dt><code>Python_FIND_REGISTRY</code></p>
-<dd>New in version 3.13. </p>
+<dt>&bull;</dt>
+<dd><code>VERSION</code>: Try to find the most recent version in all specified locations. This is the default if policy <code>CMP0094</code> is undefined or set to <code>OLD</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>LOCATION</code>: Stops lookup as soon as a version satisfying version constraints is founded. This is the default if policy <code>CMP0094</code> is set to <code>NEW</code>.</dd>
+<dt><code>Python_FIND_REGISTRY</code></dt>
+<dd>New in version 3.13. </dd>
 <p> On Windows the <code>Python_FIND_REGISTRY</code> variable determine the order of preference between registry and environment variables. the <code>Python_FIND_REGISTRY</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: Try to use registry before environment variables. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>LAST</code>: Try to use registry after environment variables.</p>
-<dt>&bull;</p>
-<dd><code>NEVER</code>: Never try to use registry.</p>
-<dt><code>Python_FIND_FRAMEWORK</code></p>
-<dd>New in version 3.15. </p>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: Try to use registry before environment variables. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>LAST</code>: Try to use registry after environment variables.</dd>
+<dt>&bull;</dt>
+<dd><code>NEVER</code>: Never try to use registry.</dd>
+<dt><code>Python_FIND_FRAMEWORK</code></dt>
+<dd>New in version 3.15. </dd>
 <p> On macOS the <code>Python_FIND_FRAMEWORK</code> variable determine the order of preference between Apple-style and unix-style package components. This variable can take same values as <code>CMAKE_FIND_FRAMEWORK</code> variable. </p>
 <p> <code>NOTE:</code> Value <code>ONLY</code> is not supported so <code>FIRST</code> will be used instead. </p>
 <p> If <code>Python_FIND_FRAMEWORK</code> is not defined, <code>CMAKE_FIND_FRAMEWORK</code> variable will be used, if any.</p>
-<dt><code>Python_FIND_VIRTUALENV</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python_FIND_VIRTUALENV</code></dt>
+<dd>New in version 3.15. </dd>
 <p> This variable defines the handling of virtual environments managed by <code>virtualenv</code> or <code>conda</code>. It is meaningful only when a virtual environment is active (i.e. the <code>activate</code> script has been evaluated). In this case, it takes precedence over <code>Python_FIND_REGISTRY</code> and <code>CMAKE_FIND_FRAMEWORK</code> variables. The <code>Python_FIND_VIRTUALENV</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</p>
-<dt>&bull;</p>
-<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter but environment variable <code>PATH</code> is always considered. In this case, variable <code>Python_FIND_REGISTRY</code> (Windows) or <code>CMAKE_FIND_FRAMEWORK</code> (macOS) can be set with value <code>LAST</code> or <code>NEVER</code> to select preferably the interpreter from the virtual environment. </p>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</dd>
+<dt>&bull;</dt>
+<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter but environment variable <code>PATH</code> is always considered. In this case, variable <code>Python_FIND_REGISTRY</code> (Windows) or <code>CMAKE_FIND_FRAMEWORK</code> (macOS) can be set with value <code>LAST</code> or <code>NEVER</code> to select preferably the interpreter from the virtual environment. </dd>
 <p> New in version 3.17: Added support for <code>conda</code> environments. </p>
 <p> <code>NOTE:</code> If the component <code>Development</code> is requested, it is <code>strongly</code> recommended to also include the component <code>Interpreter</code> to get expected result.</p>
-<dt><code>Python_FIND_IMPLEMENTATIONS</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python_FIND_IMPLEMENTATIONS</code></dt>
+<dd>New in version 3.18. </dd>
 <p> This variable defines, in an ordered list, the different implementations which will be searched. The <code>Python_FIND_IMPLEMENTATIONS</code> variable can hold the following values:</p>
-<dt>&bull;</p>
-<dd><code>CPython</code>: this is the standard implementation. Various products, like <code>Anaconda</code> or <code>ActivePython</code>, rely on this implementation.</p>
-<dt>&bull;</p>
-<dd><code>IronPython</code>: This implementation use the <code>CSharp</code> language for <code>.NET Framework</code> on top of the <i>Dynamic Language Runtime</i> (<code>DLR</code>). See <i>IronPython</i>.</p>
-<dt>&bull;</p>
-<dd><code>PyPy</code>: This implementation use <code>RPython</code> language and <code>RPython translation toolchain</code> to produce the python interpreter. See <i>PyPy</i>. </p>
+<dt>&bull;</dt>
+<dd><code>CPython</code>: this is the standard implementation. Various products, like <code>Anaconda</code> or <code>ActivePython</code>, rely on this implementation.</dd>
+<dt>&bull;</dt>
+<dd><code>IronPython</code>: This implementation use the <code>CSharp</code> language for <code>.NET Framework</code> on top of the <i>Dynamic Language Runtime</i> (<code>DLR</code>). See <i>IronPython</i>.</dd>
+<dt>&bull;</dt>
+<dd><code>PyPy</code>: This implementation use <code>RPython</code> language and <code>RPython translation toolchain</code> to produce the python interpreter. See <i>PyPy</i>. </dd>
 <p> The default value is:</p>
-<dt>&bull;</p>
-<dd>Windows platform: <code>CPython</code>, <code>IronPython</code></p>
-<dt>&bull;</p>
-<dd>Other platforms: <code>CPython</code> </p>
+<dt>&bull;</dt>
+<dd>Windows platform: <code>CPython</code>, <code>IronPython</code></dd>
+<dt>&bull;</dt>
+<dd>Other platforms: <code>CPython</code> </dd>
 <p> <code>NOTE:</code> This hint has the lowest priority of all hints, so even if, for example, you specify <code>IronPython</code> first and <code>CPython</code> in second, a python product based on <code>CPython</code> can be selected because, for example with <code>Python_FIND_STRATEGY=LOCATION</code>, each location will be search first for <code>IronPython</code> and second for <code>CPython</code>. </p>
 <p> <code>NOTE:</code> When <code>IronPython</code> is specified, on platforms other than <code>Windows</code>, the <code>.Net</code> interpreter (i.e. <code>mono</code> command) is expected to be available through the <code>PATH</code> variable.</p>
-<dt><code>Python_FIND_UNVERSIONED_NAMES</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>Python_FIND_UNVERSIONED_NAMES</code></dt>
+<dd>New in version 3.20. </dd>
 <p> This variable defines how the generic names will be searched. Currently, it only applies to the generic names of the interpreter, namely, <code>python3</code> or <code>python2</code> and <code>python</code>. The <code>Python_FIND_UNVERSIONED_NAMES</code> variable can be set to one of the following values:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: The generic names are searched before the more specialized ones (such as <code>python2.5</code> for example).</p>
-<dt>&bull;</p>
-<dd><code>LAST</code>: The generic names are searched after the more specialized ones. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>NEVER</code>: The generic name are not searched at all.</dl>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: The generic names are searched before the more specialized ones (such as <code>python2.5</code> for example).</dd>
+<dt>&bull;</dt>
+<dd><code>LAST</code>: The generic names are searched after the more specialized ones. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>NEVER</code>: The generic name are not searched at all.</dd></dl>
 <h3>Artifacts Specification</h3>
 <p>New in version 3.16. </p>
 <p> To solve special cases, it is possible to specify directly the artifacts by setting the following variables:</p>
 <dl>
-<dt><code>Python_EXECUTABLE</code></p>
-<dd>The path to the interpreter.</p>
-<dt><code>Python_COMPILER</code></p>
-<dd>The path to the compiler.</p>
-<dt><code>Python_DOTNET_LAUNCHER</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python_EXECUTABLE</code></dt>
+<dd>The path to the interpreter.</dd>
+<dt><code>Python_COMPILER</code></dt>
+<dd>The path to the compiler.</dd>
+<dt><code>Python_DOTNET_LAUNCHER</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The <code>.Net</code> interpreter. Only used by <code>IronPython</code> implementation.</p>
-<dt><code>Python_LIBRARY</code></p>
-<dd>The path to the library. It will be used to compute the variables <code>Python_LIBRARIES</code>, <code>Python_LIBRARY_DIRS</code> and <code>Python_RUNTIME_LIBRARY_DIRS</code>.</p>
-<dt><code>Python_INCLUDE_DIR</code></p>
-<dd>The path to the directory of the <code>Python</code> headers. It will be used to compute the variable <code>Python_INCLUDE_DIRS</code>.</p>
-<dt><code>Python_NumPy_INCLUDE_DIR</code></p>
-<dd>The path to the directory of the <code>NumPy</code> headers. It will be used to compute the variable <code>Python_NumPy_INCLUDE_DIRS</code>. </p>
+<dt><code>Python_LIBRARY</code></dt>
+<dd>The path to the library. It will be used to compute the variables <code>Python_LIBRARIES</code>, <code>Python_LIBRARY_DIRS</code> and <code>Python_RUNTIME_LIBRARY_DIRS</code>.</dd>
+<dt><code>Python_INCLUDE_DIR</code></dt>
+<dd>The path to the directory of the <code>Python</code> headers. It will be used to compute the variable <code>Python_INCLUDE_DIRS</code>.</dd>
+<dt><code>Python_NumPy_INCLUDE_DIR</code></dt>
+<dd>The path to the directory of the <code>NumPy</code> headers. It will be used to compute the variable <code>Python_NumPy_INCLUDE_DIRS</code>. </dd>
 <p> <code>NOTE:</code> All paths must be absolute. Any artifact specified with a relative path will be ignored. </p>
 <p> <code>NOTE:</code> When an artifact is specified, all <code>HINTS</code> will be ignored and no search will be performed for this artifact. </p>
 <p> If more than one artifact is specified, it is the user&#8217;s responsibility to ensure the consistency of the various artifacts. </p>
 <p> By default, this module supports multiple calls in different directories of a project with different version/component requirements while providing correct and consistent results for each call. To support this behavior, <code>CMake</code> cache is not used in the traditional way which can be problematic for interactive specification. So, to enable also interactive specification, module behavior can be controlled with the following variable:</p>
-<dt><code>Python_ARTIFACTS_INTERACTIVE</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python_ARTIFACTS_INTERACTIVE</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Selects the behavior of the module. This is a boolean variable:</p>
-<dt>&bull;</p>
-<dd>If set to <code>TRUE</code>: Create CMake cache entries for the above artifact specification variables so that users can edit them interactively. This disables support for multiple version/component requirements.</p>
-<dt>&bull;</p>
-<dd>If set to <code>FALSE</code> or undefined: Enable multiple version/component requirements.</dl>
+<dt>&bull;</dt>
+<dd>If set to <code>TRUE</code>: Create CMake cache entries for the above artifact specification variables so that users can edit them interactively. This disables support for multiple version/component requirements.</dd>
+<dt>&bull;</dt>
+<dd>If set to <code>FALSE</code> or undefined: Enable multiple version/component requirements.</dd></dl>
 <h3>Commands</h3>
 <p>This module defines the command <code>Python_add_library</code> (when <code>CMAKE_ROLE</code> is <code>PROJECT</code>), which has the same semantics as <code>add_library()</code> and adds a dependency to target <code>Python::Python</code> or, when library type is <code>MODULE</code>, to target <code>Python::Module</code> and takes care of Python module naming rules: </p>
 <pre>Python_add_library (&lt;name&gt; [STATIC | SHARED | MODULE [WITH_SOABI]]
@@ -8112,19 +8112,19 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <p> New in version 3.19: When a version is requested, it can be specified as a simple value or as a range. For a detailed description of version range usage and capabilities, refer to the <code>find_package()</code> command. </p>
 <p> The following components are supported:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Interpreter</code>: search for Python 2 interpreter</p>
-<dt>&bull;</p>
-<dd><code>Compiler</code>: search for Python 2 compiler. Only offered by IronPython.</p>
-<dt>&bull;</p>
-<dd><code>Development</code>: search for development artifacts (include directories and libraries). </p>
+<dt>&bull;</dt>
+<dd><code>Interpreter</code>: search for Python 2 interpreter</dd>
+<dt>&bull;</dt>
+<dd><code>Compiler</code>: search for Python 2 compiler. Only offered by IronPython.</dd>
+<dt>&bull;</dt>
+<dd><code>Development</code>: search for development artifacts (include directories and libraries). </dd>
 <p> New in version 3.18: This component includes two sub-components which can be specified independently:</p>
-<dt>&bull;</p>
-<dd><code>Development.Module</code>: search for artifacts for Python 2 module developments.</p>
-<dt>&bull;</p>
-<dd><code>Development.Embed</code>: search for artifacts for Python 2 embedding developments. </p>
-<dt>&bull;</p>
-<dd><code>NumPy</code>: search for NumPy include directories. </p>
+<dt>&bull;</dt>
+<dd><code>Development.Module</code>: search for artifacts for Python 2 module developments.</dd>
+<dt>&bull;</dt>
+<dd><code>Development.Embed</code>: search for artifacts for Python 2 embedding developments. </dd>
+<dt>&bull;</dt>
+<dd><code>NumPy</code>: search for NumPy include directories. </dd>
 <p> New in version 3.14: Added the <code>NumPy</code> component. </p>
 <p> If no <code>COMPONENTS</code> are specified, <code>Interpreter</code> is assumed. </p>
 <p> If component <code>Development</code> is specified, it implies sub-components <code>Development.Module</code> and <code>Development.Embed</code>. </p>
@@ -8137,205 +8137,205 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <p>This module defines the following Imported Targets: </p>
 <p> Changed in version 3.14: Imported Targets are only created when <code>CMAKE_ROLE</code> is <code>PROJECT</code>. </p>
 <dl>
-<dt><code>Python2::Interpreter</code></p>
-<dd>Python 2 interpreter. Target defined if component <code>Interpreter</code> is found.</p>
-<dt><code>Python2::Compiler</code></p>
-<dd>Python 2 compiler. Target defined if component <code>Compiler</code> is found.</p>
-<dt><code>Python2::Module</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python2::Interpreter</code></dt>
+<dd>Python 2 interpreter. Target defined if component <code>Interpreter</code> is found.</dd>
+<dt><code>Python2::Compiler</code></dt>
+<dd>Python 2 compiler. Target defined if component <code>Compiler</code> is found.</dd>
+<dt><code>Python2::Module</code></dt>
+<dd>New in version 3.15. </dd>
 <p> Python 2 library for Python module. Target defined if component <code>Development.Module</code> is found.</p>
-<dt><code>Python2::Python</code></p>
-<dd>Python 2 library for Python embedding. Target defined if component <code>Development.Embed</code> is found.</p>
-<dt><code>Python2::NumPy</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python2::Python</code></dt>
+<dd>Python 2 library for Python embedding. Target defined if component <code>Development.Embed</code> is found.</dd>
+<dt><code>Python2::NumPy</code></dt>
+<dd>New in version 3.14. </dd>
 <p> NumPy library for Python 2. Target defined if component <code>NumPy</code> is found.</dl>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project (see Standard Variable Names):</p>
 <dl>
-<dt><code>Python2_FOUND</code></p>
-<dd>System has the Python 2 requested components.</p>
-<dt><code>Python2_Interpreter_FOUND</code></p>
-<dd>System has the Python 2 interpreter.</p>
-<dt><code>Python2_EXECUTABLE</code></p>
-<dd>Path to the Python 2 interpreter.</p>
-<dt><code>Python2_INTERPRETER_ID</code></p>
+<dt><code>Python2_FOUND</code></dt>
+<dd>System has the Python 2 requested components.</dd>
+<dt><code>Python2_Interpreter_FOUND</code></dt>
+<dd>System has the Python 2 interpreter.</dd>
+<dt><code>Python2_EXECUTABLE</code></dt>
+<dd>Path to the Python 2 interpreter.</dd>
+<dt><code>Python2_INTERPRETER_ID</code></dt>
 <dd>
-<dt><code>A short string unique to the interpreter. Possible values include:</code></p>
+</dd><dt><code>A short string unique to the interpreter. Possible values include:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>Python</p>
-<dt>&bull;</p>
-<dd>ActivePython</p>
-<dt>&bull;</p>
-<dd>Anaconda</p>
-<dt>&bull;</p>
-<dd>Canopy</p>
-<dt>&bull;</p>
-<dd>IronPython</p>
-<dt>&bull;</p>
-<dd>PyPy</p>
-<dt><code>Python2_STDLIB</code></p>
-<dd>Standard platform independent installation directory. </p>
+</dd><dt>&bull;</dt>
+<dd>Python</dd>
+<dt>&bull;</dt>
+<dd>ActivePython</dd>
+<dt>&bull;</dt>
+<dd>Anaconda</dd>
+<dt>&bull;</dt>
+<dd>Canopy</dd>
+<dt>&bull;</dt>
+<dd>IronPython</dd>
+<dt>&bull;</dt>
+<dd>PyPy</dd>
+<dt><code>Python2_STDLIB</code></dt>
+<dd>Standard platform independent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=False,standard_lib=True)</code> or else <code>sysconfig.get_path(&#8216;stdlib&#8217;)</code>.</p>
-<dt><code>Python2_STDARCH</code></p>
-<dd>Standard platform dependent installation directory. </p>
+<dt><code>Python2_STDARCH</code></dt>
+<dd>Standard platform dependent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=True,standard_lib=True)</code> or else <code>sysconfig.get_path(&#8216;platstdlib&#8217;)</code>.</p>
-<dt><code>Python2_SITELIB</code></p>
-<dd>Third-party platform independent installation directory. </p>
+<dt><code>Python2_SITELIB</code></dt>
+<dd>Third-party platform independent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=False,standard_lib=False)</code> or else <code>sysconfig.get_path(&#8216;purelib&#8217;)</code>.</p>
-<dt><code>Python2_SITEARCH</code></p>
-<dd>Third-party platform dependent installation directory. </p>
+<dt><code>Python2_SITEARCH</code></dt>
+<dd>Third-party platform dependent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=True,standard_lib=False)</code> or else <code>sysconfig.get_path(&#8216;platlib&#8217;)</code>.</p>
-<dt><code>Python2_Compiler_FOUND</code></p>
-<dd>System has the Python 2 compiler.</p>
-<dt><code>Python2_COMPILER</code></p>
-<dd>Path to the Python 2 compiler. Only offered by IronPython.</p>
-<dt><code>Python2_COMPILER_ID</code></p>
+<dt><code>Python2_Compiler_FOUND</code></dt>
+<dd>System has the Python 2 compiler.</dd>
+<dt><code>Python2_COMPILER</code></dt>
+<dd>Path to the Python 2 compiler. Only offered by IronPython.</dd>
+<dt><code>Python2_COMPILER_ID</code></dt>
 <dd>
-<dt><code>A short string unique to the compiler. Possible values include:</code></p>
+</dd><dt><code>A short string unique to the compiler. Possible values include:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>IronPython</p>
-<dt><code>Python2_DOTNET_LAUNCHER</code></p>
-<dd>New in version 3.18. </p>
+</dd><dt>&bull;</dt>
+<dd>IronPython</dd>
+<dt><code>Python2_DOTNET_LAUNCHER</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The <code>.Net</code> interpreter. Only used by <code>IronPython</code> implementation.</p>
-<dt><code>Python2_Development_FOUND</code></p>
-<dd>System has the Python 2 development artifacts.</p>
-<dt><code>Python2_Development.Module_FOUND</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python2_Development_FOUND</code></dt>
+<dd>System has the Python 2 development artifacts.</dd>
+<dt><code>Python2_Development.Module_FOUND</code></dt>
+<dd>New in version 3.18. </dd>
 <p> System has the Python 2 development artifacts for Python module.</p>
-<dt><code>Python2_Development.Embed_FOUND</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python2_Development.Embed_FOUND</code></dt>
+<dd>New in version 3.18. </dd>
 <p> System has the Python 2 development artifacts for Python embedding.</p>
-<dt><code>Python2_INCLUDE_DIRS</code></p>
-<dd>The Python 2 include directories.</p>
-<dt><code>Python2_LINK_OPTIONS</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>Python2_INCLUDE_DIRS</code></dt>
+<dd>The Python 2 include directories.</dd>
+<dt><code>Python2_LINK_OPTIONS</code></dt>
+<dd>New in version 3.19. </dd>
 <p> The Python 2 link options. Some configurations require specific link options for a correct build and execution.</p>
-<dt><code>Python2_LIBRARIES</code></p>
-<dd>The Python 2 libraries.</p>
-<dt><code>Python2_LIBRARY_DIRS</code></p>
-<dd>The Python 2 library directories.</p>
-<dt><code>Python2_RUNTIME_LIBRARY_DIRS</code></p>
-<dd>The Python 2 runtime library directories.</p>
-<dt><code>Python2_VERSION</code></p>
-<dd>Python 2 version.</p>
-<dt><code>Python2_VERSION_MAJOR</code></p>
-<dd>Python 2 major version.</p>
-<dt><code>Python2_VERSION_MINOR</code></p>
-<dd>Python 2 minor version.</p>
-<dt><code>Python2_VERSION_PATCH</code></p>
-<dd>Python 2 patch version.</p>
-<dt><code>Python2_PyPy_VERSION</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python2_LIBRARIES</code></dt>
+<dd>The Python 2 libraries.</dd>
+<dt><code>Python2_LIBRARY_DIRS</code></dt>
+<dd>The Python 2 library directories.</dd>
+<dt><code>Python2_RUNTIME_LIBRARY_DIRS</code></dt>
+<dd>The Python 2 runtime library directories.</dd>
+<dt><code>Python2_VERSION</code></dt>
+<dd>Python 2 version.</dd>
+<dt><code>Python2_VERSION_MAJOR</code></dt>
+<dd>Python 2 major version.</dd>
+<dt><code>Python2_VERSION_MINOR</code></dt>
+<dd>Python 2 minor version.</dd>
+<dt><code>Python2_VERSION_PATCH</code></dt>
+<dd>Python 2 patch version.</dd>
+<dt><code>Python2_PyPy_VERSION</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Python 2 PyPy version.</p>
-<dt><code>Python2_NumPy_FOUND</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python2_NumPy_FOUND</code></dt>
+<dd>New in version 3.14. </dd>
 <p> System has the NumPy.</p>
-<dt><code>Python2_NumPy_INCLUDE_DIRS</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python2_NumPy_INCLUDE_DIRS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> The NumPy include directories.</p>
-<dt><code>Python2_NumPy_VERSION</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python2_NumPy_VERSION</code></dt>
+<dd>New in version 3.14. </dd>
 <p> The NumPy version.</dl>
 <h3>Hints</h3>
 <dl>
-<dt><code>Python2_ROOT_DIR</code></p>
-<dd>Define the root directory of a Python 2 installation.</p>
-<dt><code>Python2_USE_STATIC_LIBS</code></p>
+<dt><code>Python2_ROOT_DIR</code></dt>
+<dd>Define the root directory of a Python 2 installation.</dd>
+<dt><code>Python2_USE_STATIC_LIBS</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>If not defined, search for shared libraries and static libraries in that order.</p>
-<dt>&bull;</p>
-<dd>If set to TRUE, search <code>only</code> for static libraries.</p>
-<dt>&bull;</p>
-<dd>If set to FALSE, search <code>only</code> for shared libraries. </p>
+</dd><dt>&bull;</dt>
+<dd>If not defined, search for shared libraries and static libraries in that order.</dd>
+<dt>&bull;</dt>
+<dd>If set to TRUE, search <code>only</code> for static libraries.</dd>
+<dt>&bull;</dt>
+<dd>If set to FALSE, search <code>only</code> for shared libraries. </dd>
 <p> <code>NOTE:</code> This hint will be ignored on <code>Windows</code> because static libraries are not available on this platform.</p>
-<dt><code>Python2_FIND_STRATEGY</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python2_FIND_STRATEGY</code></dt>
+<dd>New in version 3.15. </dd>
 <p> This variable defines how lookup will be done. The <code>Python2_FIND_STRATEGY</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>VERSION</code>: Try to find the most recent version in all specified locations. This is the default if policy <code>CMP0094</code> is undefined or set to <code>OLD</code>.</p>
-<dt>&bull;</p>
-<dd><code>LOCATION</code>: Stops lookup as soon as a version satisfying version constraints is founded. This is the default if policy <code>CMP0094</code> is set to <code>NEW</code>.</p>
-<dt><code>Python2_FIND_REGISTRY</code></p>
-<dd>New in version 3.13. </p>
+<dt>&bull;</dt>
+<dd><code>VERSION</code>: Try to find the most recent version in all specified locations. This is the default if policy <code>CMP0094</code> is undefined or set to <code>OLD</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>LOCATION</code>: Stops lookup as soon as a version satisfying version constraints is founded. This is the default if policy <code>CMP0094</code> is set to <code>NEW</code>.</dd>
+<dt><code>Python2_FIND_REGISTRY</code></dt>
+<dd>New in version 3.13. </dd>
 <p> On Windows the <code>Python2_FIND_REGISTRY</code> variable determine the order of preference between registry and environment variables. the <code>Python2_FIND_REGISTRY</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: Try to use registry before environment variables. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>LAST</code>: Try to use registry after environment variables.</p>
-<dt>&bull;</p>
-<dd><code>NEVER</code>: Never try to use registry.</p>
-<dt><code>Python2_FIND_FRAMEWORK</code></p>
-<dd>New in version 3.15. </p>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: Try to use registry before environment variables. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>LAST</code>: Try to use registry after environment variables.</dd>
+<dt>&bull;</dt>
+<dd><code>NEVER</code>: Never try to use registry.</dd>
+<dt><code>Python2_FIND_FRAMEWORK</code></dt>
+<dd>New in version 3.15. </dd>
 <p> On macOS the <code>Python2_FIND_FRAMEWORK</code> variable determine the order of preference between Apple-style and unix-style package components. This variable can take same values as <code>CMAKE_FIND_FRAMEWORK</code> variable. </p>
 <p> <code>NOTE:</code> Value <code>ONLY</code> is not supported so <code>FIRST</code> will be used instead. </p>
 <p> If <code>Python2_FIND_FRAMEWORK</code> is not defined, <code>CMAKE_FIND_FRAMEWORK</code> variable will be used, if any.</p>
-<dt><code>Python2_FIND_VIRTUALENV</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python2_FIND_VIRTUALENV</code></dt>
+<dd>New in version 3.15. </dd>
 <p> This variable defines the handling of virtual environments managed by <code>virtualenv</code> or <code>conda</code>. It is meaningful only when a virtual environment is active (i.e. the <code>activate</code> script has been evaluated). In this case, it takes precedence over <code>Python2_FIND_REGISTRY</code> and <code>CMAKE_FIND_FRAMEWORK</code> variables. The <code>Python2_FIND_VIRTUALENV</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</p>
-<dt>&bull;</p>
-<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter but environment variable <code>PATH</code> is always considered. In this case, variable <code>Python2_FIND_REGISTRY</code> (Windows) or <code>CMAKE_FIND_FRAMEWORK</code> (macOS) can be set with value <code>LAST</code> or <code>NEVER</code> to select preferably the interpreter from the virtual environment. </p>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</dd>
+<dt>&bull;</dt>
+<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter but environment variable <code>PATH</code> is always considered. In this case, variable <code>Python2_FIND_REGISTRY</code> (Windows) or <code>CMAKE_FIND_FRAMEWORK</code> (macOS) can be set with value <code>LAST</code> or <code>NEVER</code> to select preferably the interpreter from the virtual environment. </dd>
 <p> New in version 3.17: Added support for <code>conda</code> environments. </p>
 <p> <code>NOTE:</code> If the component <code>Development</code> is requested, it is <code>strongly</code> recommended to also include the component <code>Interpreter</code> to get expected result.</p>
-<dt><code>Python2_FIND_IMPLEMENTATIONS</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python2_FIND_IMPLEMENTATIONS</code></dt>
+<dd>New in version 3.18. </dd>
 <p> This variable defines, in an ordered list, the different implementations which will be searched. The <code>Python2_FIND_IMPLEMENTATIONS</code> variable can hold the following values:</p>
-<dt>&bull;</p>
-<dd><code>CPython</code>: this is the standard implementation. Various products, like <code>Anaconda</code> or <code>ActivePython</code>, rely on this implementation.</p>
-<dt>&bull;</p>
-<dd><code>IronPython</code>: This implementation use the <code>CSharp</code> language for <code>.NET Framework</code> on top of the <i>Dynamic Language Runtime</i> (<code>DLR</code>). See <i>IronPython</i>.</p>
-<dt>&bull;</p>
-<dd><code>PyPy</code>: This implementation use <code>RPython</code> language and <code>RPython translation toolchain</code> to produce the python interpreter. See <i>PyPy</i>. </p>
+<dt>&bull;</dt>
+<dd><code>CPython</code>: this is the standard implementation. Various products, like <code>Anaconda</code> or <code>ActivePython</code>, rely on this implementation.</dd>
+<dt>&bull;</dt>
+<dd><code>IronPython</code>: This implementation use the <code>CSharp</code> language for <code>.NET Framework</code> on top of the <i>Dynamic Language Runtime</i> (<code>DLR</code>). See <i>IronPython</i>.</dd>
+<dt>&bull;</dt>
+<dd><code>PyPy</code>: This implementation use <code>RPython</code> language and <code>RPython translation toolchain</code> to produce the python interpreter. See <i>PyPy</i>. </dd>
 <p> The default value is:</p>
-<dt>&bull;</p>
-<dd>Windows platform: <code>CPython</code>, <code>IronPython</code></p>
-<dt>&bull;</p>
-<dd>Other platforms: <code>CPython</code> </p>
+<dt>&bull;</dt>
+<dd>Windows platform: <code>CPython</code>, <code>IronPython</code></dd>
+<dt>&bull;</dt>
+<dd>Other platforms: <code>CPython</code> </dd>
 <p> <code>NOTE:</code> This hint has the lowest priority of all hints, so even if, for example, you specify <code>IronPython</code> first and <code>CPython</code> in second, a python product based on <code>CPython</code> can be selected because, for example with <code>Python2_FIND_STRATEGY=LOCATION</code>, each location will be search first for <code>IronPython</code> and second for <code>CPython</code>. </p>
 <p> <code>NOTE:</code> When <code>IronPython</code> is specified, on platforms other than <code>Windows</code>, the <code>.Net</code> interpreter (i.e. <code>mono</code> command) is expected to be available through the <code>PATH</code> variable.</p>
-<dt><code>Python2_FIND_UNVERSIONED_NAMES</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>Python2_FIND_UNVERSIONED_NAMES</code></dt>
+<dd>New in version 3.20. </dd>
 <p> This variable defines how the generic names will be searched. Currently, it only applies to the generic names of the interpreter, namely, <code>python2</code> and <code>python</code>. The <code>Python2_FIND_UNVERSIONED_NAMES</code> variable can be set to one of the following values:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: The generic names are searched before the more specialized ones (such as <code>python2.5</code> for example).</p>
-<dt>&bull;</p>
-<dd><code>LAST</code>: The generic names are searched after the more specialized ones. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>NEVER</code>: The generic name are not searched at all.</dl>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: The generic names are searched before the more specialized ones (such as <code>python2.5</code> for example).</dd>
+<dt>&bull;</dt>
+<dd><code>LAST</code>: The generic names are searched after the more specialized ones. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>NEVER</code>: The generic name are not searched at all.</dd></dl>
 <h3>Artifacts Specification</h3>
 <p>New in version 3.16. </p>
 <p> To solve special cases, it is possible to specify directly the artifacts by setting the following variables:</p>
 <dl>
-<dt><code>Python2_EXECUTABLE</code></p>
-<dd>The path to the interpreter.</p>
-<dt><code>Python2_COMPILER</code></p>
-<dd>The path to the compiler.</p>
-<dt><code>Python2_DOTNET_LAUNCHER</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python2_EXECUTABLE</code></dt>
+<dd>The path to the interpreter.</dd>
+<dt><code>Python2_COMPILER</code></dt>
+<dd>The path to the compiler.</dd>
+<dt><code>Python2_DOTNET_LAUNCHER</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The <code>.Net</code> interpreter. Only used by <code>IronPython</code> implementation.</p>
-<dt><code>Python2_LIBRARY</code></p>
-<dd>The path to the library. It will be used to compute the variables <code>Python2_LIBRARIES</code>, <code>Python2_LIBRARY_DIRS</code> and <code>Python2_RUNTIME_LIBRARY_DIRS</code>.</p>
-<dt><code>Python2_INCLUDE_DIR</code></p>
-<dd>The path to the directory of the <code>Python</code> headers. It will be used to compute the variable <code>Python2_INCLUDE_DIRS</code>.</p>
-<dt><code>Python2_NumPy_INCLUDE_DIR</code></p>
-<dd>The path to the directory of the <code>NumPy</code> headers. It will be used to compute the variable <code>Python2_NumPy_INCLUDE_DIRS</code>. </p>
+<dt><code>Python2_LIBRARY</code></dt>
+<dd>The path to the library. It will be used to compute the variables <code>Python2_LIBRARIES</code>, <code>Python2_LIBRARY_DIRS</code> and <code>Python2_RUNTIME_LIBRARY_DIRS</code>.</dd>
+<dt><code>Python2_INCLUDE_DIR</code></dt>
+<dd>The path to the directory of the <code>Python</code> headers. It will be used to compute the variable <code>Python2_INCLUDE_DIRS</code>.</dd>
+<dt><code>Python2_NumPy_INCLUDE_DIR</code></dt>
+<dd>The path to the directory of the <code>NumPy</code> headers. It will be used to compute the variable <code>Python2_NumPy_INCLUDE_DIRS</code>. </dd>
 <p> <code>NOTE:</code> All paths must be absolute. Any artifact specified with a relative path will be ignored. </p>
 <p> <code>NOTE:</code> When an artifact is specified, all <code>HINTS</code> will be ignored and no search will be performed for this artifact. </p>
 <p> If more than one artifact is specified, it is the user&#8217;s responsibility to ensure the consistency of the various artifacts. </p>
 <p> By default, this module supports multiple calls in different directories of a project with different version/component requirements while providing correct and consistent results for each call. To support this behavior, <code>CMake</code> cache is not used in the traditional way which can be problematic for interactive specification. So, to enable also interactive specification, module behavior can be controlled with the following variable:</p>
-<dt><code>Python2_ARTIFACTS_INTERACTIVE</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python2_ARTIFACTS_INTERACTIVE</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Selects the behavior of the module. This is a boolean variable:</p>
-<dt>&bull;</p>
-<dd>If set to <code>TRUE</code>: Create CMake cache entries for the above artifact specification variables so that users can edit them interactively. This disables support for multiple version/component requirements.</p>
-<dt>&bull;</p>
-<dd>If set to <code>FALSE</code> or undefined: Enable multiple version/component requirements.</dl>
+<dt>&bull;</dt>
+<dd>If set to <code>TRUE</code>: Create CMake cache entries for the above artifact specification variables so that users can edit them interactively. This disables support for multiple version/component requirements.</dd>
+<dt>&bull;</dt>
+<dd>If set to <code>FALSE</code> or undefined: Enable multiple version/component requirements.</dd></dl>
 <h3>Commands</h3>
 <p>This module defines the command <code>Python2_add_library</code> (when <code>CMAKE_ROLE</code> is <code>PROJECT</code>), which has the same semantics as <code>add_library()</code> and adds a dependency to target <code>Python2::Python</code> or, when library type is <code>MODULE</code>, to target <code>Python2::Module</code> and takes care of Python module naming rules: </p>
 <pre>Python2_add_library (&lt;name&gt; [STATIC | SHARED | MODULE]
@@ -8347,19 +8347,19 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <p> New in version 3.19: When a version is requested, it can be specified as a simple value or as a range. For a detailed description of version range usage and capabilities, refer to the <code>find_package()</code> command. </p>
 <p> The following components are supported:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Interpreter</code>: search for Python 3 interpreter</p>
-<dt>&bull;</p>
-<dd><code>Compiler</code>: search for Python 3 compiler. Only offered by IronPython.</p>
-<dt>&bull;</p>
-<dd><code>Development</code>: search for development artifacts (include directories and libraries). </p>
+<dt>&bull;</dt>
+<dd><code>Interpreter</code>: search for Python 3 interpreter</dd>
+<dt>&bull;</dt>
+<dd><code>Compiler</code>: search for Python 3 compiler. Only offered by IronPython.</dd>
+<dt>&bull;</dt>
+<dd><code>Development</code>: search for development artifacts (include directories and libraries). </dd>
 <p> New in version 3.18: This component includes two sub-components which can be specified independently:</p>
-<dt>&bull;</p>
-<dd><code>Development.Module</code>: search for artifacts for Python 3 module developments.</p>
-<dt>&bull;</p>
-<dd><code>Development.Embed</code>: search for artifacts for Python 3 embedding developments. </p>
-<dt>&bull;</p>
-<dd><code>NumPy</code>: search for NumPy include directories. </p>
+<dt>&bull;</dt>
+<dd><code>Development.Module</code>: search for artifacts for Python 3 module developments.</dd>
+<dt>&bull;</dt>
+<dd><code>Development.Embed</code>: search for artifacts for Python 3 embedding developments. </dd>
+<dt>&bull;</dt>
+<dd><code>NumPy</code>: search for NumPy include directories. </dd>
 <p> New in version 3.14: Added the <code>NumPy</code> component. </p>
 <p> If no <code>COMPONENTS</code> are specified, <code>Interpreter</code> is assumed. </p>
 <p> If component <code>Development</code> is specified, it implies sub-components <code>Development.Module</code> and <code>Development.Embed</code>. </p>
@@ -8372,133 +8372,133 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <p>This module defines the following Imported Targets: </p>
 <p> Changed in version 3.14: Imported Targets are only created when <code>CMAKE_ROLE</code> is <code>PROJECT</code>. </p>
 <dl>
-<dt><code>Python3::Interpreter</code></p>
-<dd>Python 3 interpreter. Target defined if component <code>Interpreter</code> is found.</p>
-<dt><code>Python3::Compiler</code></p>
-<dd>Python 3 compiler. Target defined if component <code>Compiler</code> is found.</p>
-<dt><code>Python3::Module</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python3::Interpreter</code></dt>
+<dd>Python 3 interpreter. Target defined if component <code>Interpreter</code> is found.</dd>
+<dt><code>Python3::Compiler</code></dt>
+<dd>Python 3 compiler. Target defined if component <code>Compiler</code> is found.</dd>
+<dt><code>Python3::Module</code></dt>
+<dd>New in version 3.15. </dd>
 <p> Python 3 library for Python module. Target defined if component <code>Development.Module</code> is found.</p>
-<dt><code>Python3::Python</code></p>
-<dd>Python 3 library for Python embedding. Target defined if component <code>Development.Embed</code> is found.</p>
-<dt><code>Python3::NumPy</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python3::Python</code></dt>
+<dd>Python 3 library for Python embedding. Target defined if component <code>Development.Embed</code> is found.</dd>
+<dt><code>Python3::NumPy</code></dt>
+<dd>New in version 3.14. </dd>
 <p> NumPy library for Python 3. Target defined if component <code>NumPy</code> is found.</dl>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project (see Standard Variable Names):</p>
 <dl>
-<dt><code>Python3_FOUND</code></p>
-<dd>System has the Python 3 requested components.</p>
-<dt><code>Python3_Interpreter_FOUND</code></p>
-<dd>System has the Python 3 interpreter.</p>
-<dt><code>Python3_EXECUTABLE</code></p>
-<dd>Path to the Python 3 interpreter.</p>
-<dt><code>Python3_INTERPRETER_ID</code></p>
+<dt><code>Python3_FOUND</code></dt>
+<dd>System has the Python 3 requested components.</dd>
+<dt><code>Python3_Interpreter_FOUND</code></dt>
+<dd>System has the Python 3 interpreter.</dd>
+<dt><code>Python3_EXECUTABLE</code></dt>
+<dd>Path to the Python 3 interpreter.</dd>
+<dt><code>Python3_INTERPRETER_ID</code></dt>
 <dd>
-<dt><code>A short string unique to the interpreter. Possible values include:</code></p>
+</dd><dt><code>A short string unique to the interpreter. Possible values include:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>Python</p>
-<dt>&bull;</p>
-<dd>ActivePython</p>
-<dt>&bull;</p>
-<dd>Anaconda</p>
-<dt>&bull;</p>
-<dd>Canopy</p>
-<dt>&bull;</p>
-<dd>IronPython</p>
-<dt>&bull;</p>
-<dd>PyPy</p>
-<dt><code>Python3_STDLIB</code></p>
-<dd>Standard platform independent installation directory. </p>
+</dd><dt>&bull;</dt>
+<dd>Python</dd>
+<dt>&bull;</dt>
+<dd>ActivePython</dd>
+<dt>&bull;</dt>
+<dd>Anaconda</dd>
+<dt>&bull;</dt>
+<dd>Canopy</dd>
+<dt>&bull;</dt>
+<dd>IronPython</dd>
+<dt>&bull;</dt>
+<dd>PyPy</dd>
+<dt><code>Python3_STDLIB</code></dt>
+<dd>Standard platform independent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=False,standard_lib=True)</code> or else <code>sysconfig.get_path(&#8216;stdlib&#8217;)</code>.</p>
-<dt><code>Python3_STDARCH</code></p>
-<dd>Standard platform dependent installation directory. </p>
+<dt><code>Python3_STDARCH</code></dt>
+<dd>Standard platform dependent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=True,standard_lib=True)</code> or else <code>sysconfig.get_path(&#8216;platstdlib&#8217;)</code>.</p>
-<dt><code>Python3_SITELIB</code></p>
-<dd>Third-party platform independent installation directory. </p>
+<dt><code>Python3_SITELIB</code></dt>
+<dd>Third-party platform independent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=False,standard_lib=False)</code> or else <code>sysconfig.get_path(&#8216;purelib&#8217;)</code>.</p>
-<dt><code>Python3_SITEARCH</code></p>
-<dd>Third-party platform dependent installation directory. </p>
+<dt><code>Python3_SITEARCH</code></dt>
+<dd>Third-party platform dependent installation directory. </dd>
 <p> Information returned by <code>distutils.sysconfig.get_python_lib(plat_specific=True,standard_lib=False)</code> or else <code>sysconfig.get_path(&#8216;platlib&#8217;)</code>.</p>
-<dt><code>Python3_SOABI</code></p>
-<dd>New in version 3.17. </p>
+<dt><code>Python3_SOABI</code></dt>
+<dd>New in version 3.17. </dd>
 <p> Extension suffix for modules. </p>
 <p> Information returned by <code>distutils.sysconfig.get_config_var(&#8216;SOABI&#8217;)</code> or computed from <code>distutils.sysconfig.get_config_var(&#8216;EXT_SUFFIX&#8217;)</code> or <code>python3-config &#8211;extension-suffix</code>. If package <code>distutils.sysconfig</code> is not available, <code>sysconfig.get_config_var(&#8216;SOABI&#8217;)</code> or <code>sysconfig.get_config_var(&#8216;EXT_SUFFIX&#8217;)</code> are used.</p>
-<dt><code>Python3_Compiler_FOUND</code></p>
-<dd>System has the Python 3 compiler.</p>
-<dt><code>Python3_COMPILER</code></p>
-<dd>Path to the Python 3 compiler. Only offered by IronPython.</p>
-<dt><code>Python3_COMPILER_ID</code></p>
+<dt><code>Python3_Compiler_FOUND</code></dt>
+<dd>System has the Python 3 compiler.</dd>
+<dt><code>Python3_COMPILER</code></dt>
+<dd>Path to the Python 3 compiler. Only offered by IronPython.</dd>
+<dt><code>Python3_COMPILER_ID</code></dt>
 <dd>
-<dt><code>A short string unique to the compiler. Possible values include:</code></p>
+</dd><dt><code>A short string unique to the compiler. Possible values include:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>IronPython</p>
-<dt><code>Python3_DOTNET_LAUNCHER</code></p>
-<dd>New in version 3.18. </p>
+</dd><dt>&bull;</dt>
+<dd>IronPython</dd>
+<dt><code>Python3_DOTNET_LAUNCHER</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The <code>.Net</code> interpreter. Only used by <code>IronPython</code> implementation. </p>
 <p> <code>Python3_Development_FOUND</code> System has the Python 3 development artifacts.</p>
-<dt><code>Python3_Development.Module_FOUND</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python3_Development.Module_FOUND</code></dt>
+<dd>New in version 3.18. </dd>
 <p> System has the Python 3 development artifacts for Python module.</p>
-<dt><code>Python3_Development.Embed_FOUND</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python3_Development.Embed_FOUND</code></dt>
+<dd>New in version 3.18. </dd>
 <p> System has the Python 3 development artifacts for Python embedding. </p>
 <p> <code>Python3_INCLUDE_DIRS</code> The Python 3 include directories.</p>
-<dt><code>Python3_LINK_OPTIONS</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>Python3_LINK_OPTIONS</code></dt>
+<dd>New in version 3.19. </dd>
 <p> The Python 3 link options. Some configurations require specific link options for a correct build and execution.</p>
-<dt><code>Python3_LIBRARIES</code></p>
-<dd>The Python 3 libraries.</p>
-<dt><code>Python3_LIBRARY_DIRS</code></p>
-<dd>The Python 3 library directories.</p>
-<dt><code>Python3_RUNTIME_LIBRARY_DIRS</code></p>
-<dd>The Python 3 runtime library directories.</p>
-<dt><code>Python3_VERSION</code></p>
-<dd>Python 3 version.</p>
-<dt><code>Python3_VERSION_MAJOR</code></p>
-<dd>Python 3 major version.</p>
-<dt><code>Python3_VERSION_MINOR</code></p>
-<dd>Python 3 minor version.</p>
-<dt><code>Python3_VERSION_PATCH</code></p>
-<dd>Python 3 patch version.</p>
-<dt><code>Python3_PyPy_VERSION</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python3_LIBRARIES</code></dt>
+<dd>The Python 3 libraries.</dd>
+<dt><code>Python3_LIBRARY_DIRS</code></dt>
+<dd>The Python 3 library directories.</dd>
+<dt><code>Python3_RUNTIME_LIBRARY_DIRS</code></dt>
+<dd>The Python 3 runtime library directories.</dd>
+<dt><code>Python3_VERSION</code></dt>
+<dd>Python 3 version.</dd>
+<dt><code>Python3_VERSION_MAJOR</code></dt>
+<dd>Python 3 major version.</dd>
+<dt><code>Python3_VERSION_MINOR</code></dt>
+<dd>Python 3 minor version.</dd>
+<dt><code>Python3_VERSION_PATCH</code></dt>
+<dd>Python 3 patch version.</dd>
+<dt><code>Python3_PyPy_VERSION</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Python 3 PyPy version.</p>
-<dt><code>Python3_NumPy_FOUND</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python3_NumPy_FOUND</code></dt>
+<dd>New in version 3.14. </dd>
 <p> System has the NumPy.</p>
-<dt><code>Python3_NumPy_INCLUDE_DIRS</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python3_NumPy_INCLUDE_DIRS</code></dt>
+<dd>New in version 3.14. </dd>
 <p> The NumPy include directories.</p>
-<dt><code>Python3_NumPy_VERSION</code></p>
-<dd>New in version 3.14. </p>
+<dt><code>Python3_NumPy_VERSION</code></dt>
+<dd>New in version 3.14. </dd>
 <p> The NumPy version.</dl>
 <h3>Hints</h3>
 <dl>
-<dt><code>Python3_ROOT_DIR</code></p>
-<dd>Define the root directory of a Python 3 installation.</p>
-<dt><code>Python3_USE_STATIC_LIBS</code></p>
+<dt><code>Python3_ROOT_DIR</code></dt>
+<dd>Define the root directory of a Python 3 installation.</dd>
+<dt><code>Python3_USE_STATIC_LIBS</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>If not defined, search for shared libraries and static libraries in that order.</p>
-<dt>&bull;</p>
-<dd>If set to TRUE, search <code>only</code> for static libraries.</p>
-<dt>&bull;</p>
-<dd>If set to FALSE, search <code>only</code> for shared libraries. </p>
+</dd><dt>&bull;</dt>
+<dd>If not defined, search for shared libraries and static libraries in that order.</dd>
+<dt>&bull;</dt>
+<dd>If set to TRUE, search <code>only</code> for static libraries.</dd>
+<dt>&bull;</dt>
+<dd>If set to FALSE, search <code>only</code> for shared libraries. </dd>
 <p> <code>NOTE:</code> This hint will be ignored on <code>Windows</code> because static libraries are not available on this platform.</p>
-<dt><code>Python3_FIND_ABI</code></p>
-<dd>New in version 3.16. </p>
+<dt><code>Python3_FIND_ABI</code></dt>
+<dd>New in version 3.16. </dd>
 <p> This variable defines which ABIs, as defined in <i>PEP 3149</i>, should be searched. </p>
 <p> <code>NOTE:</code> If <code>Python3_FIND_ABI</code> is not defined, any ABI will be searched. </p>
 <p> The <code>Python3_FIND_ABI</code> variable is a 3-tuple specifying, in that order, <code>pydebug</code> (<code>d</code>), <code>pymalloc</code> (<code>m</code>) and <code>unicode</code> (<code>u</code>) flags. Each element can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>ON</code>: Corresponding flag is selected.</p>
-<dt>&bull;</p>
-<dd><code>OFF</code>: Corresponding flag is not selected.</p>
-<dt>&bull;</p>
-<dd><code>ANY</code>: The two possibilities (<code>ON</code> and <code>OFF</code>) will be searched. </p>
+<dt>&bull;</dt>
+<dd><code>ON</code>: Corresponding flag is selected.</dd>
+<dt>&bull;</dt>
+<dd><code>OFF</code>: Corresponding flag is not selected.</dd>
+<dt>&bull;</dt>
+<dd><code>ANY</code>: The two possibilities (<code>ON</code> and <code>OFF</code>) will be searched. </dd>
 <p> From this 3-tuple, various ABIs will be searched starting from the most specialized to the most general. Moreover, <code>debug</code> versions will be searched <code>after</code> <code>non-debug</code> ones. </p>
 <p> For example, if we have: </p>
 <pre>set (Python3_FIND_ABI &quot;ON&quot; &quot;ANY&quot; &quot;ANY&quot;)</pre>
@@ -8507,91 +8507,91 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})</pre>
 <pre>set (Python3_FIND_ABI &quot;ANY&quot; &quot;ANY&quot; &quot;ANY&quot;)</pre>
 <p>The following combinations, in that order, will be used: <code>mu</code>, <code>m</code>, <code>u</code>, <code>&lt;empty&gt;</code>, <code>dmu</code>, <code>dm</code>, <code>du</code> and <code>d</code>. </p>
 <p> <code>NOTE:</code> This hint is useful only on <code>POSIX</code> systems. So, on <code>Windows</code> systems, when <code>Python3_FIND_ABI</code> is defined, <code>Python</code> distributions from <i>python.org</i> will be found only if value for each flag is <code>OFF</code> or <code>ANY</code>.</p>
-<dt><code>Python3_FIND_STRATEGY</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python3_FIND_STRATEGY</code></dt>
+<dd>New in version 3.15. </dd>
 <p> This variable defines how lookup will be done. The <code>Python3_FIND_STRATEGY</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>VERSION</code>: Try to find the most recent version in all specified locations. This is the default if policy <code>CMP0094</code> is undefined or set to <code>OLD</code>.</p>
-<dt>&bull;</p>
-<dd><code>LOCATION</code>: Stops lookup as soon as a version satisfying version constraints is founded. This is the default if policy <code>CMP0094</code> is set to <code>NEW</code>.</p>
-<dt><code>Python3_FIND_REGISTRY</code></p>
-<dd>New in version 3.13. </p>
+<dt>&bull;</dt>
+<dd><code>VERSION</code>: Try to find the most recent version in all specified locations. This is the default if policy <code>CMP0094</code> is undefined or set to <code>OLD</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>LOCATION</code>: Stops lookup as soon as a version satisfying version constraints is founded. This is the default if policy <code>CMP0094</code> is set to <code>NEW</code>.</dd>
+<dt><code>Python3_FIND_REGISTRY</code></dt>
+<dd>New in version 3.13. </dd>
 <p> On Windows the <code>Python3_FIND_REGISTRY</code> variable determine the order of preference between registry and environment variables. The <code>Python3_FIND_REGISTRY</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: Try to use registry before environment variables. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>LAST</code>: Try to use registry after environment variables.</p>
-<dt>&bull;</p>
-<dd><code>NEVER</code>: Never try to use registry.</p>
-<dt><code>Python3_FIND_FRAMEWORK</code></p>
-<dd>New in version 3.15. </p>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: Try to use registry before environment variables. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>LAST</code>: Try to use registry after environment variables.</dd>
+<dt>&bull;</dt>
+<dd><code>NEVER</code>: Never try to use registry.</dd>
+<dt><code>Python3_FIND_FRAMEWORK</code></dt>
+<dd>New in version 3.15. </dd>
 <p> On macOS the <code>Python3_FIND_FRAMEWORK</code> variable determine the order of preference between Apple-style and unix-style package components. This variable can take same values as <code>CMAKE_FIND_FRAMEWORK</code> variable. </p>
 <p> <code>NOTE:</code> Value <code>ONLY</code> is not supported so <code>FIRST</code> will be used instead. </p>
 <p> If <code>Python3_FIND_FRAMEWORK</code> is not defined, <code>CMAKE_FIND_FRAMEWORK</code> variable will be used, if any.</p>
-<dt><code>Python3_FIND_VIRTUALENV</code></p>
-<dd>New in version 3.15. </p>
+<dt><code>Python3_FIND_VIRTUALENV</code></dt>
+<dd>New in version 3.15. </dd>
 <p> This variable defines the handling of virtual environments managed by <code>virtualenv</code> or <code>conda</code>. It is meaningful only when a virtual environment is active (i.e. the <code>activate</code> script has been evaluated). In this case, it takes precedence over <code>Python3_FIND_REGISTRY</code> and <code>CMAKE_FIND_FRAMEWORK</code> variables. The <code>Python3_FIND_VIRTUALENV</code> variable can be set to one of the following:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</p>
-<dt>&bull;</p>
-<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter but environment variable <code>PATH</code> is always considered. In this case, variable <code>Python3_FIND_REGISTRY</code> (Windows) or <code>CMAKE_FIND_FRAMEWORK</code> (macOS) can be set with value <code>LAST</code> or <code>NEVER</code> to select preferably the interpreter from the virtual environment. </p>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</dd>
+<dt>&bull;</dt>
+<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter but environment variable <code>PATH</code> is always considered. In this case, variable <code>Python3_FIND_REGISTRY</code> (Windows) or <code>CMAKE_FIND_FRAMEWORK</code> (macOS) can be set with value <code>LAST</code> or <code>NEVER</code> to select preferably the interpreter from the virtual environment. </dd>
 <p> New in version 3.17: Added support for <code>conda</code> environments. </p>
 <p> <code>NOTE:</code> If the component <code>Development</code> is requested, it is <code>strongly</code> recommended to also include the component <code>Interpreter</code> to get expected result.</p>
-<dt><code>Python3_FIND_IMPLEMENTATIONS</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python3_FIND_IMPLEMENTATIONS</code></dt>
+<dd>New in version 3.18. </dd>
 <p> This variable defines, in an ordered list, the different implementations which will be searched. The <code>Python3_FIND_IMPLEMENTATIONS</code> variable can hold the following values:</p>
-<dt>&bull;</p>
-<dd><code>CPython</code>: this is the standard implementation. Various products, like <code>Anaconda</code> or <code>ActivePython</code>, rely on this implementation.</p>
-<dt>&bull;</p>
-<dd><code>IronPython</code>: This implementation use the <code>CSharp</code> language for <code>.NET Framework</code> on top of the <i>Dynamic Language Runtime</i> (<code>DLR</code>). See <i>IronPython</i>.</p>
-<dt>&bull;</p>
-<dd><code>PyPy</code>: This implementation use <code>RPython</code> language and <code>RPython translation toolchain</code> to produce the python interpreter. See <i>PyPy</i>. </p>
+<dt>&bull;</dt>
+<dd><code>CPython</code>: this is the standard implementation. Various products, like <code>Anaconda</code> or <code>ActivePython</code>, rely on this implementation.</dd>
+<dt>&bull;</dt>
+<dd><code>IronPython</code>: This implementation use the <code>CSharp</code> language for <code>.NET Framework</code> on top of the <i>Dynamic Language Runtime</i> (<code>DLR</code>). See <i>IronPython</i>.</dd>
+<dt>&bull;</dt>
+<dd><code>PyPy</code>: This implementation use <code>RPython</code> language and <code>RPython translation toolchain</code> to produce the python interpreter. See <i>PyPy</i>. </dd>
 <p> The default value is:</p>
-<dt>&bull;</p>
-<dd>Windows platform: <code>CPython</code>, <code>IronPython</code></p>
-<dt>&bull;</p>
-<dd>Other platforms: <code>CPython</code> </p>
+<dt>&bull;</dt>
+<dd>Windows platform: <code>CPython</code>, <code>IronPython</code></dd>
+<dt>&bull;</dt>
+<dd>Other platforms: <code>CPython</code> </dd>
 <p> <code>NOTE:</code> This hint has the lowest priority of all hints, so even if, for example, you specify <code>IronPython</code> first and <code>CPython</code> in second, a python product based on <code>CPython</code> can be selected because, for example with <code>Python3_FIND_STRATEGY=LOCATION</code>, each location will be search first for <code>IronPython</code> and second for <code>CPython</code>. </p>
 <p> <code>NOTE:</code> When <code>IronPython</code> is specified, on platforms other than <code>Windows</code>, the <code>.Net</code> interpreter (i.e. <code>mono</code> command) is expected to be available through the <code>PATH</code> variable.</p>
-<dt><code>Python3_FIND_UNVERSIONED_NAMES</code></p>
-<dd>New in version 3.20. </p>
+<dt><code>Python3_FIND_UNVERSIONED_NAMES</code></dt>
+<dd>New in version 3.20. </dd>
 <p> This variable defines how the generic names will be searched. Currently, it only applies to the generic names of the interpreter, namely, <code>python3</code> and <code>python</code>. The <code>Python3_FIND_UNVERSIONED_NAMES</code> variable can be set to one of the following values:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: The generic names are searched before the more specialized ones (such as <code>python3.5</code> for example).</p>
-<dt>&bull;</p>
-<dd><code>LAST</code>: The generic names are searched after the more specialized ones. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>NEVER</code>: The generic name are not searched at all.</dl>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: The generic names are searched before the more specialized ones (such as <code>python3.5</code> for example).</dd>
+<dt>&bull;</dt>
+<dd><code>LAST</code>: The generic names are searched after the more specialized ones. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>NEVER</code>: The generic name are not searched at all.</dd></dl>
 <h3>Artifacts Specification</h3>
 <p>New in version 3.16. </p>
 <p> To solve special cases, it is possible to specify directly the artifacts by setting the following variables:</p>
 <dl>
-<dt><code>Python3_EXECUTABLE</code></p>
-<dd>The path to the interpreter.</p>
-<dt><code>Python3_COMPILER</code></p>
-<dd>The path to the compiler.</p>
-<dt><code>Python3_DOTNET_LAUNCHER</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python3_EXECUTABLE</code></dt>
+<dd>The path to the interpreter.</dd>
+<dt><code>Python3_COMPILER</code></dt>
+<dd>The path to the compiler.</dd>
+<dt><code>Python3_DOTNET_LAUNCHER</code></dt>
+<dd>New in version 3.18. </dd>
 <p> The <code>.Net</code> interpreter. Only used by <code>IronPython</code> implementation.</p>
-<dt><code>Python3_LIBRARY</code></p>
-<dd>The path to the library. It will be used to compute the variables <code>Python3_LIBRARIES</code>, <code>Python3_LIBRARY_DIRS</code> and <code>Python3_RUNTIME_LIBRARY_DIRS</code>.</p>
-<dt><code>Python3_INCLUDE_DIR</code></p>
-<dd>The path to the directory of the <code>Python</code> headers. It will be used to compute the variable <code>Python3_INCLUDE_DIRS</code>.</p>
-<dt><code>Python3_NumPy_INCLUDE_DIR</code></p>
-<dd>The path to the directory of the <code>NumPy</code> headers. It will be used to compute the variable <code>Python3_NumPy_INCLUDE_DIRS</code>. </p>
+<dt><code>Python3_LIBRARY</code></dt>
+<dd>The path to the library. It will be used to compute the variables <code>Python3_LIBRARIES</code>, <code>Python3_LIBRARY_DIRS</code> and <code>Python3_RUNTIME_LIBRARY_DIRS</code>.</dd>
+<dt><code>Python3_INCLUDE_DIR</code></dt>
+<dd>The path to the directory of the <code>Python</code> headers. It will be used to compute the variable <code>Python3_INCLUDE_DIRS</code>.</dd>
+<dt><code>Python3_NumPy_INCLUDE_DIR</code></dt>
+<dd>The path to the directory of the <code>NumPy</code> headers. It will be used to compute the variable <code>Python3_NumPy_INCLUDE_DIRS</code>. </dd>
 <p> <code>NOTE:</code> All paths must be absolute. Any artifact specified with a relative path will be ignored. </p>
 <p> <code>NOTE:</code> When an artifact is specified, all <code>HINTS</code> will be ignored and no search will be performed for this artifact. </p>
 <p> If more than one artifact is specified, it is the user&#8217;s responsibility to ensure the consistency of the various artifacts. </p>
 <p> By default, this module supports multiple calls in different directories of a project with different version/component requirements while providing correct and consistent results for each call. To support this behavior, <code>CMake</code> cache is not used in the traditional way which can be problematic for interactive specification. So, to enable also interactive specification, module behavior can be controlled with the following variable:</p>
-<dt><code>Python3_ARTIFACTS_INTERACTIVE</code></p>
-<dd>New in version 3.18. </p>
+<dt><code>Python3_ARTIFACTS_INTERACTIVE</code></dt>
+<dd>New in version 3.18. </dd>
 <p> Selects the behavior of the module. This is a boolean variable:</p>
-<dt>&bull;</p>
-<dd>If set to <code>TRUE</code>: Create CMake cache entries for the above artifact specification variables so that users can edit them interactively. This disables support for multiple version/component requirements.</p>
-<dt>&bull;</p>
-<dd>If set to <code>FALSE</code> or undefined: Enable multiple version/component requirements.</dl>
+<dt>&bull;</dt>
+<dd>If set to <code>TRUE</code>: Create CMake cache entries for the above artifact specification variables so that users can edit them interactively. This disables support for multiple version/component requirements.</dd>
+<dt>&bull;</dt>
+<dd>If set to <code>FALSE</code> or undefined: Enable multiple version/component requirements.</dd></dl>
 <h3>Commands</h3>
 <p>This module defines the command <code>Python3_add_library</code> (when <code>CMAKE_ROLE</code> is <code>PROJECT</code>), which has the same semantics as <code>add_library()</code> and adds a dependency to target <code>Python3::Python</code> or, when library type is <code>MODULE</code>, to target <code>Python3::Module</code> and takes care of Python module naming rules: </p>
 <pre>Python3_add_library (&lt;name&gt; [STATIC | SHARED | MODULE [WITH_SOABI]]
@@ -8738,75 +8738,75 @@ target_link_libraries(myexe Qt4::QtGui Qt4::QtXml)</pre>
 <p> Targets are aware of their dependencies, so for example it is not necessary to list <code>Qt4::QtCore</code> if another Qt library is listed, and it is not necessary to list <code>Qt4::QtGui</code> if <code>Qt4::QtDeclarative</code> is listed. Targets may be tested for existence in the usual way with the <code>if(TARGET)</code> command. </p>
 <p> The Qt toolkit may contain both debug and release libraries. <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> will choose the appropriate version based on the build configuration.</p>
 <dl>
-<dt><code>Qt4::QtCore</code></p>
-<dd>The QtCore target</p>
-<dt><code>Qt4::QtGui</code></p>
-<dd>The QtGui target</p>
-<dt><code>Qt4::Qt3Support</code></p>
-<dd>The Qt3Support target</p>
-<dt><code>Qt4::QtAssistant</code></p>
-<dd>The QtAssistant target</p>
-<dt><code>Qt4::QtAssistantClient</code></p>
-<dd>The QtAssistantClient target</p>
-<dt><code>Qt4::QAxContainer</code></p>
-<dd>The QAxContainer target (Windows only)</p>
-<dt><code>Qt4::QAxServer</code></p>
-<dd>The QAxServer target (Windows only)</p>
-<dt><code>Qt4::QtDBus</code></p>
-<dd>The QtDBus target</p>
-<dt><code>Qt4::QtDeclarative</code></p>
-<dd>The QtDeclarative target</p>
-<dt><code>Qt4::QtDesigner</code></p>
-<dd>The QtDesigner target</p>
-<dt><code>Qt4::QtDesignerComponents</code></p>
-<dd>The QtDesignerComponents target</p>
-<dt><code>Qt4::QtHelp</code></p>
-<dd>The QtHelp target</p>
-<dt><code>Qt4::QtMotif</code></p>
-<dd>The QtMotif target</p>
-<dt><code>Qt4::QtMultimedia</code></p>
-<dd>The QtMultimedia target</p>
-<dt><code>Qt4::QtNetwork</code></p>
-<dd>The QtNetwork target</p>
-<dt><code>Qt4::QtNsPLugin</code></p>
-<dd>The QtNsPLugin target</p>
-<dt><code>Qt4::QtOpenGL</code></p>
-<dd>The QtOpenGL target</p>
-<dt><code>Qt4::QtScript</code></p>
-<dd>The QtScript target</p>
-<dt><code>Qt4::QtScriptTools</code></p>
-<dd>The QtScriptTools target</p>
-<dt><code>Qt4::QtSql</code></p>
-<dd>The QtSql target</p>
-<dt><code>Qt4::QtSvg</code></p>
-<dd>The QtSvg target</p>
-<dt><code>Qt4::QtTest</code></p>
-<dd>The QtTest target</p>
-<dt><code>Qt4::QtUiTools</code></p>
-<dd>The QtUiTools target</p>
-<dt><code>Qt4::QtWebKit</code></p>
-<dd>The QtWebKit target</p>
-<dt><code>Qt4::QtXml</code></p>
-<dd>The QtXml target</p>
-<dt><code>Qt4::QtXmlPatterns</code></p>
-<dd>The QtXmlPatterns target</p>
-<dt><code>Qt4::phonon</code></p>
-<dd>The phonon target</dl>
+<dt><code>Qt4::QtCore</code></dt>
+<dd>The QtCore target</dd>
+<dt><code>Qt4::QtGui</code></dt>
+<dd>The QtGui target</dd>
+<dt><code>Qt4::Qt3Support</code></dt>
+<dd>The Qt3Support target</dd>
+<dt><code>Qt4::QtAssistant</code></dt>
+<dd>The QtAssistant target</dd>
+<dt><code>Qt4::QtAssistantClient</code></dt>
+<dd>The QtAssistantClient target</dd>
+<dt><code>Qt4::QAxContainer</code></dt>
+<dd>The QAxContainer target (Windows only)</dd>
+<dt><code>Qt4::QAxServer</code></dt>
+<dd>The QAxServer target (Windows only)</dd>
+<dt><code>Qt4::QtDBus</code></dt>
+<dd>The QtDBus target</dd>
+<dt><code>Qt4::QtDeclarative</code></dt>
+<dd>The QtDeclarative target</dd>
+<dt><code>Qt4::QtDesigner</code></dt>
+<dd>The QtDesigner target</dd>
+<dt><code>Qt4::QtDesignerComponents</code></dt>
+<dd>The QtDesignerComponents target</dd>
+<dt><code>Qt4::QtHelp</code></dt>
+<dd>The QtHelp target</dd>
+<dt><code>Qt4::QtMotif</code></dt>
+<dd>The QtMotif target</dd>
+<dt><code>Qt4::QtMultimedia</code></dt>
+<dd>The QtMultimedia target</dd>
+<dt><code>Qt4::QtNetwork</code></dt>
+<dd>The QtNetwork target</dd>
+<dt><code>Qt4::QtNsPLugin</code></dt>
+<dd>The QtNsPLugin target</dd>
+<dt><code>Qt4::QtOpenGL</code></dt>
+<dd>The QtOpenGL target</dd>
+<dt><code>Qt4::QtScript</code></dt>
+<dd>The QtScript target</dd>
+<dt><code>Qt4::QtScriptTools</code></dt>
+<dd>The QtScriptTools target</dd>
+<dt><code>Qt4::QtSql</code></dt>
+<dd>The QtSql target</dd>
+<dt><code>Qt4::QtSvg</code></dt>
+<dd>The QtSvg target</dd>
+<dt><code>Qt4::QtTest</code></dt>
+<dd>The QtTest target</dd>
+<dt><code>Qt4::QtUiTools</code></dt>
+<dd>The QtUiTools target</dd>
+<dt><code>Qt4::QtWebKit</code></dt>
+<dd>The QtWebKit target</dd>
+<dt><code>Qt4::QtXml</code></dt>
+<dd>The QtXml target</dd>
+<dt><code>Qt4::QtXmlPatterns</code></dt>
+<dd>The QtXmlPatterns target</dd>
+<dt><code>Qt4::phonon</code></dt>
+<dd>The phonon target</dd></dl>
 <h3>Result Variables</h3>
 <p>Below is a detailed list of variables that FindQt4.cmake sets.</p>
 <dl>
-<dt><code>Qt4_FOUND</code></p>
-<dd>If false, don&#8217;t try to use Qt 4.</p>
-<dt><code>QT_FOUND</code></p>
-<dd>If false, don&#8217;t try to use Qt. This variable is for compatibility only.</p>
-<dt><code>QT4_FOUND</code></p>
-<dd>If false, don&#8217;t try to use Qt 4. This variable is for compatibility only.</p>
-<dt><code>QT_VERSION_MAJOR</code></p>
-<dd>The major version of Qt found.</p>
-<dt><code>QT_VERSION_MINOR</code></p>
-<dd>The minor version of Qt found.</p>
-<dt><code>QT_VERSION_PATCH</code></p>
-<dd>The patch version of Qt found.</dl>
+<dt><code>Qt4_FOUND</code></dt>
+<dd>If false, don&#8217;t try to use Qt 4.</dd>
+<dt><code>QT_FOUND</code></dt>
+<dd>If false, don&#8217;t try to use Qt. This variable is for compatibility only.</dd>
+<dt><code>QT4_FOUND</code></dt>
+<dd>If false, don&#8217;t try to use Qt 4. This variable is for compatibility only.</dd>
+<dt><code>QT_VERSION_MAJOR</code></dt>
+<dd>The major version of Qt found.</dd>
+<dt><code>QT_VERSION_MINOR</code></dt>
+<dd>The minor version of Qt found.</dd>
+<dt><code>QT_VERSION_PATCH</code></dt>
+<dd>The patch version of Qt found.</dd></dl>
 <h3>FindQuickTime</h3>
 <p>Locate QuickTime This module defines QUICKTIME_LIBRARY QUICKTIME_FOUND, if false, do not try to link to gdal QUICKTIME_INCLUDE_DIR, where to find the headers </p>
 <p> $QUICKTIME_DIR is an environment variable that would correspond to the ./configure &#8211;prefix=$QUICKTIME_DIR </p>
@@ -8834,93 +8834,93 @@ find_package(Ruby 2.4)</pre>
 <h3>Result Variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>Ruby_FOUND</code></p>
-<dd>set to true if ruby was found successfully</p>
-<dt><code>Ruby_EXECUTABLE</code></p>
-<dd>full path to the ruby binary</p>
-<dt><code>Ruby_INCLUDE_DIRS</code></p>
-<dd>include dirs to be used when using the ruby library</p>
-<dt><code>Ruby_LIBRARIES</code></p>
-<dd>New in version 3.18: libraries needed to use ruby from C. </p>
-<dt><code>Ruby_VERSION</code></p>
-<dd>the version of ruby which was found, e.g. &quot;1.8.7&quot;</p>
-<dt><code>Ruby_VERSION_MAJOR</code></p>
-<dd>Ruby major version.</p>
-<dt><code>Ruby_VERSION_MINOR</code></p>
-<dd>Ruby minor version.</p>
-<dt><code>Ruby_VERSION_PATCH</code></p>
-<dd>Ruby patch version. </p>
+<dt><code>Ruby_FOUND</code></dt>
+<dd>set to true if ruby was found successfully</dd>
+<dt><code>Ruby_EXECUTABLE</code></dt>
+<dd>full path to the ruby binary</dd>
+<dt><code>Ruby_INCLUDE_DIRS</code></dt>
+<dd>include dirs to be used when using the ruby library</dd>
+<dt><code>Ruby_LIBRARIES</code></dt>
+<dd>New in version 3.18: libraries needed to use ruby from C. </dd>
+<dt><code>Ruby_VERSION</code></dt>
+<dd>the version of ruby which was found, e.g. &quot;1.8.7&quot;</dd>
+<dt><code>Ruby_VERSION_MAJOR</code></dt>
+<dd>Ruby major version.</dd>
+<dt><code>Ruby_VERSION_MINOR</code></dt>
+<dd>Ruby minor version.</dd>
+<dt><code>Ruby_VERSION_PATCH</code></dt>
+<dd>Ruby patch version. </dd>
 <p> Changed in version 3.18: Previous versions of CMake used the <code>RUBY_</code> prefix for all variables. The following variables are provided for compatibility reasons, don&#8217;t use them in new code: </p>
-<dt><code>RUBY_EXECUTABLE</code></p>
-<dd>same as Ruby_EXECUTABLE.</p>
-<dt><code>RUBY_INCLUDE_DIRS</code></p>
-<dd>same as Ruby_INCLUDE_DIRS.</p>
-<dt><code>RUBY_INCLUDE_PATH</code></p>
-<dd>same as Ruby_INCLUDE_DIRS.</p>
-<dt><code>RUBY_LIBRARY</code></p>
-<dd>same as Ruby_LIBRARY.</p>
-<dt><code>RUBY_VERSION</code></p>
-<dd>same as Ruby_VERSION.</p>
-<dt><code>RUBY_FOUND</code></p>
-<dd>same as Ruby_FOUND.</dl>
+<dt><code>RUBY_EXECUTABLE</code></dt>
+<dd>same as Ruby_EXECUTABLE.</dd>
+<dt><code>RUBY_INCLUDE_DIRS</code></dt>
+<dd>same as Ruby_INCLUDE_DIRS.</dd>
+<dt><code>RUBY_INCLUDE_PATH</code></dt>
+<dd>same as Ruby_INCLUDE_DIRS.</dd>
+<dt><code>RUBY_LIBRARY</code></dt>
+<dd>same as Ruby_LIBRARY.</dd>
+<dt><code>RUBY_VERSION</code></dt>
+<dd>same as Ruby_VERSION.</dd>
+<dt><code>RUBY_FOUND</code></dt>
+<dd>same as Ruby_FOUND.</dd></dl>
 <h3>Hints</h3>
 <p>New in version 3.18. </p>
 <dl>
-<dt><code>Ruby_ROOT_DIR</code></p>
-<dd>Define the root directory of a Ruby installation.</p>
-<dt><code>Ruby_FIND_VIRTUALENV</code></p>
-<dd>This variable defines the handling of virtual environments managed by <code>rvm</code>. It is meaningful only when a virtual environment is active (i.e. the <code>rvm</code> script has been evaluated or at least the <code>MY_RUBY_HOME</code> environment variable is set). The <code>Ruby_FIND_VIRTUALENV</code> variable can be set to empty or one of the following:</p>
-<dt>&bull;</p>
-<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</p>
-<dt>&bull;</p>
-<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</p>
-<dt>&bull;</p>
-<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter (assuming it isn&#8217;t still in the PATH&#8230;)</dl>
+<dt><code>Ruby_ROOT_DIR</code></dt>
+<dd>Define the root directory of a Ruby installation.</dd>
+<dt><code>Ruby_FIND_VIRTUALENV</code></dt>
+<dd>This variable defines the handling of virtual environments managed by <code>rvm</code>. It is meaningful only when a virtual environment is active (i.e. the <code>rvm</code> script has been evaluated or at least the <code>MY_RUBY_HOME</code> environment variable is set). The <code>Ruby_FIND_VIRTUALENV</code> variable can be set to empty or one of the following:</dd>
+<dt>&bull;</dt>
+<dd><code>FIRST</code>: The virtual environment is used before any other standard paths to look-up for the interpreter. This is the default.</dd>
+<dt>&bull;</dt>
+<dd><code>ONLY</code>: Only the virtual environment is used to look-up for the interpreter.</dd>
+<dt>&bull;</dt>
+<dd><code>STANDARD</code>: The virtual environment is not used to look-up for the interpreter (assuming it isn&#8217;t still in the PATH&#8230;)</dd></dl>
 <h3>FindSDL</h3>
 <p>Locate the SDL library</p>
 <h3>Imported targets</h3>
 <p>New in version 3.19. </p>
 <p> This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>SDL::SDL</code></p>
-<dd>The SDL library, if found</dl>
+<dt><code>SDL::SDL</code></dt>
+<dd>The SDL library, if found</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>SDL_INCLUDE_DIRS</code></p>
-<dd>where to find SDL.h</p>
-<dt><code>SDL_LIBRARIES</code></p>
-<dd>the name of the library to link against</p>
-<dt><code>SDL_FOUND</code></p>
-<dd>if false, do not try to link to SDL</p>
-<dt><code>SDL_VERSION</code></p>
-<dd>the human-readable string containing the version of SDL if found</p>
-<dt><code>SDL_VERSION_MAJOR</code></p>
-<dd>SDL major version</p>
-<dt><code>SDL_VERSION_MINOR</code></p>
-<dd>SDL minor version</p>
-<dt><code>SDL_VERSION_PATCH</code></p>
-<dd>SDL patch version </p>
+<dt><code>SDL_INCLUDE_DIRS</code></dt>
+<dd>where to find SDL.h</dd>
+<dt><code>SDL_LIBRARIES</code></dt>
+<dd>the name of the library to link against</dd>
+<dt><code>SDL_FOUND</code></dt>
+<dd>if false, do not try to link to SDL</dd>
+<dt><code>SDL_VERSION</code></dt>
+<dd>the human-readable string containing the version of SDL if found</dd>
+<dt><code>SDL_VERSION_MAJOR</code></dt>
+<dd>SDL major version</dd>
+<dt><code>SDL_VERSION_MINOR</code></dt>
+<dd>SDL minor version</dd>
+<dt><code>SDL_VERSION_PATCH</code></dt>
+<dd>SDL patch version </dd>
 <p> New in version 3.19: Added the <code>SDL_INCLUDE_DIRS</code>, <code>SDL_LIBRARIES</code> and <code>SDL_VERSION[_&lt;PART&gt;]</code> variables. </p>
 </dl>
 <h3>Cache variables</h3>
 <p>These variables may optionally be set to help this module find the correct files:</p>
 <dl>
-<dt><code>SDL_INCLUDE_DIR</code></p>
-<dd>where to find SDL.h</p>
-<dt><code>SDL_LIBRARY</code></p>
-<dd>the name of the library to link against</dl>
+<dt><code>SDL_INCLUDE_DIR</code></dt>
+<dd>where to find SDL.h</dd>
+<dt><code>SDL_LIBRARY</code></dt>
+<dd>the name of the library to link against</dd></dl>
 <h3>Variables for locating SDL</h3>
 <p>This module responds to the flag:</p>
 <dl>
-<dt><code>SDL_BUILDING_LIBRARY</code></p>
-<dd>If this is defined, then no SDL_main will be linked in because only applications need main(). Otherwise, it is assumed you are building an application and this module will attempt to locate and set the proper link flags as part of the returned SDL_LIBRARY variable.</dl>
+<dt><code>SDL_BUILDING_LIBRARY</code></dt>
+<dd>If this is defined, then no SDL_main will be linked in because only applications need main(). Otherwise, it is assumed you are building an application and this module will attempt to locate and set the proper link flags as part of the returned SDL_LIBRARY variable.</dd></dl>
 <h3>Obsolete variables</h3>
 <p>Deprecated since version 3.19. </p>
 <p> These variables are obsolete and provided for backwards compatibility:</p>
 <dl>
-<dt><code>SDL_VERSION_STRING</code></p>
-<dd>the human-readable string containing the version of SDL if found. Identical to SDL_VERSION </p>
+<dt><code>SDL_VERSION_STRING</code></dt>
+<dd>the human-readable string containing the version of SDL if found. Identical to SDL_VERSION </dd>
 <p> Don&#8217;t forget to include SDLmain.h and SDLmain.m your project for the OS X framework based version. (Other versions link to -lSDLmain which this module will try to find on your behalf.) Also for OS X, this module will automatically add the -framework Cocoa on your behalf. </p>
 <p> Additional Note: If you see an empty SDL_LIBRARY_TEMP in your configuration and no SDL_LIBRARY, it means CMake did not find your SDL library (SDL.dll, libsdl.so, SDL.framework, etc). Set SDL_LIBRARY_TEMP to point to your SDL library, and configure again. Similarly, if you see an empty SDLMAIN_LIBRARY, you should set this value as appropriate. These values are used to generate the final SDL_LIBRARY variable, but when these values are unset, SDL_LIBRARY does not get created. </p>
 <p> $SDLDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$SDLDIR used in building SDL. l.e.galup 9-20-02 </p>
@@ -9035,20 +9035,20 @@ SQUISH_CLIENT_EXECUTABLE_FOUND Was the client executable found?</pre>
 <p>Changed in version 3.18: In previous CMake versions, this function was named <code>squish_v4_add_test</code>. </p>
 <p> The arguments have the following meaning:</p>
 <dl>
-<dt><code>cmakeTestName</code></p>
-<dd>this will be used as the first argument for add_test()</p>
-<dt><code>AUT targetName</code></p>
-<dd>the name of the cmake target which will be used as AUT, i.e. the executable which will be tested.</p>
-<dt><code>SUITE suiteName</code></p>
-<dd>this is either the full path to the squish suite, or just the last directory of the suite, i.e. the suite name. In this case the CMakeLists.txt which calls squish_add_test() must be located in the parent directory of the suite directory.</p>
-<dt><code>TEST squishTestName</code></p>
-<dd>the name of the squish test, i.e. the name of the subdirectory of the test inside the suite directory.</p>
-<dt><code>SETTINGSGROUP group</code></p>
-<dd>deprecated, this argument will be ignored.</p>
-<dt><code>PRE_COMMAND command</code></p>
-<dd>if specified, the given command will be executed before starting the squish test.</p>
-<dt><code>POST_COMMAND command</code></p>
-<dd>same as PRE_COMMAND, but after the squish test has been executed. </p>
+<dt><code>cmakeTestName</code></dt>
+<dd>this will be used as the first argument for add_test()</dd>
+<dt><code>AUT targetName</code></dt>
+<dd>the name of the cmake target which will be used as AUT, i.e. the executable which will be tested.</dd>
+<dt><code>SUITE suiteName</code></dt>
+<dd>this is either the full path to the squish suite, or just the last directory of the suite, i.e. the suite name. In this case the CMakeLists.txt which calls squish_add_test() must be located in the parent directory of the suite directory.</dd>
+<dt><code>TEST squishTestName</code></dt>
+<dd>the name of the squish test, i.e. the name of the subdirectory of the test inside the suite directory.</dd>
+<dt><code>SETTINGSGROUP group</code></dt>
+<dd>deprecated, this argument will be ignored.</dd>
+<dt><code>PRE_COMMAND command</code></dt>
+<dd>if specified, the given command will be executed before starting the squish test.</dd>
+<dt><code>POST_COMMAND command</code></dt>
+<dd>same as PRE_COMMAND, but after the squish test has been executed. </dd>
 <pre>enable_testing()
 find_package(Squish 6.5)
 if (SQUISH_FOUND)
@@ -9076,14 +9076,14 @@ endif ()</pre>
 <h3>Result variables</h3>
 <p>This module will set the following variables if found:</p>
 <dl>
-<dt><code>SQLite3_INCLUDE_DIRS</code></p>
-<dd>where to find sqlite3.h, etc.</p>
-<dt><code>SQLite3_LIBRARIES</code></p>
-<dd>the libraries to link against to use SQLite3.</p>
-<dt><code>SQLite3_VERSION</code></p>
-<dd>version of the SQLite3 library found</p>
-<dt><code>SQLite3_FOUND</code></p>
-<dd>TRUE if found</dl>
+<dt><code>SQLite3_INCLUDE_DIRS</code></dt>
+<dd>where to find sqlite3.h, etc.</dd>
+<dt><code>SQLite3_LIBRARIES</code></dt>
+<dd>the libraries to link against to use SQLite3.</dd>
+<dt><code>SQLite3_VERSION</code></dt>
+<dd>version of the SQLite3 library found</dd>
+<dt><code>SQLite3_FOUND</code></dt>
+<dd>TRUE if found</dd></dl>
 <h3>FindSubversion</h3>
 <p>Extract information from a subversion working copy </p>
 <p> The module defines the following variables: </p>
@@ -9121,16 +9121,16 @@ endif()</pre>
 <p> New in version 3.19: When a version is requested, it can be specified as a simple value or as a range. For a detailed description of version range usage and capabilities, refer to the <code>find_package()</code> command. </p>
 <p> The module defines the following variables:</p>
 <dl>
-<dt><code>SWIG_FOUND</code></p>
-<dd>Whether SWIG and any required components were found on the system.</p>
-<dt><code>SWIG_EXECUTABLE</code></p>
-<dd>Path to the SWIG executable.</p>
-<dt><code>SWIG_DIR</code></p>
-<dd>Path to the installed SWIG <code>Lib</code> directory (result of <code>swig -swiglib</code>).</p>
-<dt><code>SWIG_VERSION</code></p>
-<dd>SWIG executable version (result of <code>swig -version</code>).</p>
-<dt><code>SWIG_&lt;lang&gt;_FOUND</code></p>
-<dd>If <code>COMPONENTS</code> or <code>OPTIONAL_COMPONENTS</code> are requested, each available target language <code>&lt;lang&gt;</code> (lowercase) will be set to TRUE. </p>
+<dt><code>SWIG_FOUND</code></dt>
+<dd>Whether SWIG and any required components were found on the system.</dd>
+<dt><code>SWIG_EXECUTABLE</code></dt>
+<dd>Path to the SWIG executable.</dd>
+<dt><code>SWIG_DIR</code></dt>
+<dd>Path to the installed SWIG <code>Lib</code> directory (result of <code>swig -swiglib</code>).</dd>
+<dt><code>SWIG_VERSION</code></dt>
+<dd>SWIG executable version (result of <code>swig -version</code>).</dd>
+<dt><code>SWIG_&lt;lang&gt;_FOUND</code></dt>
+<dd>If <code>COMPONENTS</code> or <code>OPTIONAL_COMPONENTS</code> are requested, each available target language <code>&lt;lang&gt;</code> (lowercase) will be set to TRUE. </dd>
 <p> Any <code>COMPONENTS</code> given to <code>find_package</code> should be the names of supported target languages as provided to the LANGUAGE argument of <code>swig_add_library</code>, such as <code>python</code> or <code>perl5</code>. Language names <i>must</i> be lowercase. </p>
 <p> All information is collected from the <code>SWIG_EXECUTABLE</code>, so the version to be found can be changed from the command line by means of setting <code>SWIG_EXECUTABLE</code>. </p>
 <p> Example usage requiring SWIG 4.0 or higher and Python language support, with optional Fortran support: </p>
@@ -9195,25 +9195,25 @@ TTK_STUB_LIBRARY = path to ttk stub library</pre>
 <p>New in version 3.1. </p>
 <p> This module defines the following <code>IMPORTED</code> target:</p>
 <dl>
-<dt><code>Threads::Threads</code></p>
-<dd>The thread library, if found.</dl>
+<dt><code>Threads::Threads</code></dt>
+<dd>The thread library, if found.</dd></dl>
 <h3>Result Variables</h3>
 <p>The following variables are set:</p>
 <dl>
-<dt><code>Threads_FOUND</code></p>
-<dd>If a supported thread library was found.</p>
-<dt><code>CMAKE_THREAD_LIBS_INIT</code></p>
-<dd>The thread library to use. This may be empty if the thread functions are provided by the system libraries and no special flags are needed to use them.</p>
-<dt><code>CMAKE_USE_WIN32_THREADS_INIT</code></p>
-<dd>If the found thread library is the win32 one.</p>
-<dt><code>CMAKE_USE_PTHREADS_INIT</code></p>
-<dd>If the found thread library is pthread compatible.</p>
-<dt><code>CMAKE_HP_PTHREADS_INIT</code></p>
-<dd>If the found thread library is the HP thread library.</dl>
+<dt><code>Threads_FOUND</code></dt>
+<dd>If a supported thread library was found.</dd>
+<dt><code>CMAKE_THREAD_LIBS_INIT</code></dt>
+<dd>The thread library to use. This may be empty if the thread functions are provided by the system libraries and no special flags are needed to use them.</dd>
+<dt><code>CMAKE_USE_WIN32_THREADS_INIT</code></dt>
+<dd>If the found thread library is the win32 one.</dd>
+<dt><code>CMAKE_USE_PTHREADS_INIT</code></dt>
+<dd>If the found thread library is pthread compatible.</dd>
+<dt><code>CMAKE_HP_PTHREADS_INIT</code></dt>
+<dd>If the found thread library is the HP thread library.</dd></dl>
 <h3>Variables Affecting Behavior</h3>
 <dl>
-<dt><code>THREADS_PREFER_PTHREAD_FLAG</code></p>
-<dd>New in version 3.1. </p>
+<dt><code>THREADS_PREFER_PTHREAD_FLAG</code></dt>
+<dd>New in version 3.1. </dd>
 <p> If the use of the -pthread compiler and linker flag is preferred then the caller can set this variable to TRUE. The compiler flag can only be used with the imported target. Use of both the imported target as well as this switch is highly recommended for new code. </p>
 <p> This variable has no effect if the system libraries provide the thread functions, i.e. when <code>CMAKE_THREAD_LIBS_INIT</code> will be empty.</dl>
 <h3>FindTIFF</h3>
@@ -9224,35 +9224,35 @@ TTK_STUB_LIBRARY = path to ttk stub library</pre>
 <p>New in version 3.5. </p>
 <p> This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>TIFF::TIFF</code></p>
-<dd>The TIFF library, if found.</p>
-<dt><code>TIFF::CXX</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>TIFF::TIFF</code></dt>
+<dd>The TIFF library, if found.</dd>
+<dt><code>TIFF::CXX</code></dt>
+<dd>New in version 3.19. </dd>
 <p> The C++ wrapper libtiffxx, if requested by the <i>COMPONENTS CXX</i> option, if the compiler is not MSVC (which includes the C++ wrapper in libtiff), and if found.</dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>TIFF_FOUND</code></p>
-<dd>true if the TIFF headers and libraries were found</p>
-<dt><code>TIFF_INCLUDE_DIR</code></p>
-<dd>the directory containing the TIFF headers</p>
-<dt><code>TIFF_INCLUDE_DIRS</code></p>
-<dd>the directory containing the TIFF headers</p>
-<dt><code>TIFF_LIBRARIES</code></p>
-<dd>TIFF libraries to be linked</dl>
+<dt><code>TIFF_FOUND</code></dt>
+<dd>true if the TIFF headers and libraries were found</dd>
+<dt><code>TIFF_INCLUDE_DIR</code></dt>
+<dd>the directory containing the TIFF headers</dd>
+<dt><code>TIFF_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the TIFF headers</dd>
+<dt><code>TIFF_LIBRARIES</code></dt>
+<dd>TIFF libraries to be linked</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>TIFF_INCLUDE_DIR</code></p>
-<dd>the directory containing the TIFF headers</p>
-<dt><code>TIFF_LIBRARY_RELEASE</code></p>
-<dd>the path to the TIFF library for release configurations</p>
-<dt><code>TIFF_LIBRARY_DEBUG</code></p>
-<dd>the path to the TIFF library for debug configurations</p>
-<dt><code>TIFFXX_LIBRARY_RELEASE</code></p>
-<dd>the path to the TIFFXX library for release configurations</p>
-<dt><code>TIFFXX_LIBRARY_DEBUG</code></p>
-<dd>the path to the TIFFXX library for debug configurations </p>
+<dt><code>TIFF_INCLUDE_DIR</code></dt>
+<dd>the directory containing the TIFF headers</dd>
+<dt><code>TIFF_LIBRARY_RELEASE</code></dt>
+<dd>the path to the TIFF library for release configurations</dd>
+<dt><code>TIFF_LIBRARY_DEBUG</code></dt>
+<dd>the path to the TIFF library for debug configurations</dd>
+<dt><code>TIFFXX_LIBRARY_RELEASE</code></dt>
+<dd>the path to the TIFFXX library for release configurations</dd>
+<dt><code>TIFFXX_LIBRARY_DEBUG</code></dt>
+<dd>the path to the TIFFXX library for debug configurations </dd>
 <p> New in version 3.4: Debug and Release variants are found separately. </p>
 </dl>
 <h3>FindUnixCommands</h3>
@@ -9267,16 +9267,16 @@ TTK_STUB_LIBRARY = path to ttk stub library</pre>
 <h3>IMPORTED Targets</h3>
 <p>This module defines <code>IMPORTED</code> targets if Vulkan has been found:</p>
 <dl>
-<dt><code>Vulkan::Vulkan</code></p>
-<dd>The main Vulkan library.</p>
-<dt><code>Vulkan::glslc</code></p>
-<dd>New in version 3.19. </p>
+<dt><code>Vulkan::Vulkan</code></dt>
+<dd>The main Vulkan library.</dd>
+<dt><code>Vulkan::glslc</code></dt>
+<dd>New in version 3.19. </dd>
 <p> The GLSLC SPIR-V compiler, if it has been found.</p>
-<dt><code>Vulkan::Headers</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Vulkan::Headers</code></dt>
+<dd>New in version 3.21. </dd>
 <p> Provides just Vulkan headers include paths, if found. No library is included in this target. This can be useful for applications that load Vulkan library dynamically.</p>
-<dt><code>Vulkan::glslangValidator</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>Vulkan::glslangValidator</code></dt>
+<dd>New in version 3.21. </dd>
 <p> The glslangValidator tool, if found. It is used to compile GLSL and HLSL shaders into SPIR-V.</dl>
 <h3>Result Variables</h3>
 <p>This module defines the following variables: </p>
@@ -9417,40 +9417,40 @@ X11_Xaw_INCLUDE_PATH, X11_Xaw_LIB X11_Xaw_FOUND X11::Xaw</pre>
 <h3>Imported targets</h3>
 <p>This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>XalanC::XalanC</code></p>
-<dd>The Xalan-C++ <code>xalan-c</code> library, if found.</dl>
+<dt><code>XalanC::XalanC</code></dt>
+<dd>The Xalan-C++ <code>xalan-c</code> library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>XalanC_FOUND</code></p>
-<dd>true if the Xalan headers and libraries were found</p>
-<dt><code>XalanC_VERSION</code></p>
-<dd>Xalan release version</p>
-<dt><code>XalanC_INCLUDE_DIRS</code></p>
-<dd>the directory containing the Xalan headers; note <code>XercesC_INCLUDE_DIRS</code> is also required</p>
-<dt><code>XalanC_LIBRARIES</code></p>
-<dd>Xalan libraries to be linked; note <code>XercesC_LIBRARIES</code> is also required</dl>
+<dt><code>XalanC_FOUND</code></dt>
+<dd>true if the Xalan headers and libraries were found</dd>
+<dt><code>XalanC_VERSION</code></dt>
+<dd>Xalan release version</dd>
+<dt><code>XalanC_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the Xalan headers; note <code>XercesC_INCLUDE_DIRS</code> is also required</dd>
+<dt><code>XalanC_LIBRARIES</code></dt>
+<dd>Xalan libraries to be linked; note <code>XercesC_LIBRARIES</code> is also required</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>XalanC_INCLUDE_DIR</code></p>
-<dd>the directory containing the Xalan headers</p>
-<dt><code>XalanC_LIBRARY</code></p>
-<dd>the Xalan library</dl>
+<dt><code>XalanC_INCLUDE_DIR</code></dt>
+<dd>the directory containing the Xalan headers</dd>
+<dt><code>XalanC_LIBRARY</code></dt>
+<dd>the Xalan library</dd></dl>
 <h3>FindXCTest</h3>
 <p>New in version 3.3. </p>
 <p> Functions to help creating and executing XCTest bundles. </p>
 <p> An XCTest bundle is a CFBundle with a special product-type and bundle extension. The Mac Developer Library provides more information in the <i>Testing with Xcode</i> document.</p>
 <h3>Module Functions</h3>
 <dl>
-<dt><code>xctest_add_bundle</code></p>
-<dd>The <code>xctest_add_bundle</code> function creates a XCTest bundle named &lt;target&gt; which will test the target &lt;testee&gt;. Supported target types for testee are Frameworks and App Bundles: </p>
+<dt><code>xctest_add_bundle</code></dt>
+<dd>The <code>xctest_add_bundle</code> function creates a XCTest bundle named &lt;target&gt; which will test the target &lt;testee&gt;. Supported target types for testee are Frameworks and App Bundles: </dd>
 <pre>xctest_add_bundle(
  &lt;target&gt; # Name of the XCTest bundle
  &lt;testee&gt; # Target name of the testee
  )</pre>
-<dt><code>xctest_add_test</code></p>
-<dd>The <code>xctest_add_test</code> function adds an XCTest bundle to the project to be run by <code><a href="/docs/linux/man/1-ctest/">ctest</a>(1)</code>. The test will be named &lt;name&gt; and tests &lt;bundle&gt;: </p>
+<dt><code>xctest_add_test</code></dt>
+<dd>The <code>xctest_add_test</code> function adds an XCTest bundle to the project to be run by <code><a href="/docs/linux/man/1-ctest/">ctest</a>(1)</code>. The test will be named &lt;name&gt; and tests &lt;bundle&gt;: </dd>
 <pre>xctest_add_test(
  &lt;name&gt; # Test name
  &lt;bundle&gt; # Target name of XCTest bundle
@@ -9459,14 +9459,14 @@ X11_Xaw_INCLUDE_PATH, X11_Xaw_LIB X11_Xaw_FOUND X11::Xaw</pre>
 <h3>Module Variables</h3>
 <p>The following variables are set by including this module:</p>
 <dl>
-<dt><code>XCTest_FOUND</code></p>
-<dd>True if the XCTest Framework and executable were found.</p>
-<dt><code>XCTest_EXECUTABLE</code></p>
-<dd>The path to the xctest command line tool used to execute XCTest bundles.</p>
-<dt><code>XCTest_INCLUDE_DIRS</code></p>
-<dd>The directory containing the XCTest Framework headers.</p>
-<dt><code>XCTest_LIBRARIES</code></p>
-<dd>The location of the XCTest Framework.</dl>
+<dt><code>XCTest_FOUND</code></dt>
+<dd>True if the XCTest Framework and executable were found.</dd>
+<dt><code>XCTest_EXECUTABLE</code></dt>
+<dd>The path to the xctest command line tool used to execute XCTest bundles.</dd>
+<dt><code>XCTest_INCLUDE_DIRS</code></dt>
+<dd>The directory containing the XCTest Framework headers.</dd>
+<dt><code>XCTest_LIBRARIES</code></dt>
+<dd>The location of the XCTest Framework.</dd></dl>
 <h3>FindXercesC</h3>
 <p>New in version 3.1. </p>
 <p> Find the Apache Xerces-C++ validating XML parser headers and libraries.</p>
@@ -9474,26 +9474,26 @@ X11_Xaw_INCLUDE_PATH, X11_Xaw_LIB X11_Xaw_FOUND X11::Xaw</pre>
 <p>New in version 3.5. </p>
 <p> This module defines the following <code>IMPORTED</code> targets:</p>
 <dl>
-<dt><code>XercesC::XercesC</code></p>
-<dd>The Xerces-C++ <code>xerces-c</code> library, if found.</dl>
+<dt><code>XercesC::XercesC</code></dt>
+<dd>The Xerces-C++ <code>xerces-c</code> library, if found.</dd></dl>
 <h3>Result variables</h3>
 <p>This module will set the following variables in your project:</p>
 <dl>
-<dt><code>XercesC_FOUND</code></p>
-<dd>true if the Xerces headers and libraries were found</p>
-<dt><code>XercesC_VERSION</code></p>
-<dd>Xerces release version</p>
-<dt><code>XercesC_INCLUDE_DIRS</code></p>
-<dd>the directory containing the Xerces headers</p>
-<dt><code>XercesC_LIBRARIES</code></p>
-<dd>Xerces libraries to be linked</dl>
+<dt><code>XercesC_FOUND</code></dt>
+<dd>true if the Xerces headers and libraries were found</dd>
+<dt><code>XercesC_VERSION</code></dt>
+<dd>Xerces release version</dd>
+<dt><code>XercesC_INCLUDE_DIRS</code></dt>
+<dd>the directory containing the Xerces headers</dd>
+<dt><code>XercesC_LIBRARIES</code></dt>
+<dd>Xerces libraries to be linked</dd></dl>
 <h3>Cache variables</h3>
 <p>The following cache variables may also be set:</p>
 <dl>
-<dt><code>XercesC_INCLUDE_DIR</code></p>
-<dd>the directory containing the Xerces headers</p>
-<dt><code>XercesC_LIBRARY</code></p>
-<dd>the Xerces library </p>
+<dt><code>XercesC_INCLUDE_DIR</code></dt>
+<dd>the directory containing the Xerces headers</dd>
+<dt><code>XercesC_LIBRARY</code></dt>
+<dd>the Xerces library </dd>
 <p> New in version 3.4: Debug and Release variants are found separately. </p>
 </dl>
 <h3>FindXMLRPC</h3>
@@ -9605,10 +9605,10 @@ CMAKE_FORCE_CXX_COMPILER (chc12 MetrowerksHicross)</pre>
 <p> Check if the CXX compiler accepts a flag. </p>
 <pre>CHECK_CXX_ACCEPTS_FLAG(&lt;flags&gt; &lt;variable&gt;)</pre>
 <dl>
-<dt><code>&lt;flags&gt;</code></p>
-<dd>the flags to try</p>
-<dt><code>&lt;variable&gt;</code></p>
-<dd>variable to store the result</dl>
+<dt><code>&lt;flags&gt;</code></dt>
+<dd>the flags to try</dd>
+<dt><code>&lt;variable&gt;</code></dt>
+<dd>variable to store the result</dd></dl>
 <h3>UseJavaClassFilelist</h3>
 <p>Changed in version 3.20: This module was previously documented by mistake and was never meant for direct inclusion by project code. See the <code>UseJava</code> module.</p>
 <h3>UseJavaSymlinks</h3>
@@ -10037,40 +10037,40 @@ target_compile_features(foo_impl PRIVATE cxx_constexpr)</pre>
 <h3>Input Variables</h3>
 <p>The following variables affect the behavior of the macros in the script (in alphabetical order). Note that any of these flags can be changed multiple times in the same directory before calling <code>cuda_add_executable()</code>, <code>cuda_add_library()</code>, <code>cuda_compile()</code>, <code>cuda_compile_ptx()</code>, <code>cuda_compile_fatbin()</code>, <code>cuda_compile_cubin()</code> or <code>cuda_wrap_srcs()</code>:</p>
 <dl>
-<dt><code>CUDA_64_BIT_DEVICE_CODE</code> (Default: host bit size)</p>
-<dd>Set to <code>ON</code> to compile for 64 bit device code, OFF for 32 bit device code. Note that making this different from the host code when generating object or C files from CUDA code just won&#8217;t work, because size_t gets defined by nvcc in the generated source. If you compile to PTX and then load the file yourself, you can mix bit sizes between device and host.</p>
-<dt><code>CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE</code> (Default: <code>ON</code>)</p>
-<dd>Set to <code>ON</code> if you want the custom build rule to be attached to the source file in Visual Studio. Turn OFF if you add the same cuda file to multiple targets. </p>
+<dt><code>CUDA_64_BIT_DEVICE_CODE</code> (Default: host bit size)</dt>
+<dd>Set to <code>ON</code> to compile for 64 bit device code, OFF for 32 bit device code. Note that making this different from the host code when generating object or C files from CUDA code just won&#8217;t work, because size_t gets defined by nvcc in the generated source. If you compile to PTX and then load the file yourself, you can mix bit sizes between device and host.</dd>
+<dt><code>CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE</code> (Default: <code>ON</code>)</dt>
+<dd>Set to <code>ON</code> if you want the custom build rule to be attached to the source file in Visual Studio. Turn OFF if you add the same cuda file to multiple targets. </dd>
 <p> This allows the user to build the target from the CUDA file; however, bad things can happen if the CUDA source file is added to multiple targets. When performing parallel builds it is possible for the custom build command to be run more than once and in parallel causing cryptic build errors. VS runs the rules for every source file in the target, and a source can have only one rule no matter how many projects it is added to. When the rule is run from multiple targets race conditions can occur on the generated file. Eventually everything will get built, but if the user is unaware of this behavior, there may be confusion. It would be nice if this script could detect the reuse of source files across multiple targets and turn the option off for the user, but no good solution could be found.</p>
-<dt><code>CUDA_BUILD_CUBIN</code> (Default: <code>OFF</code>)</p>
-<dd>Set to <code>ON</code> to enable and extra compilation pass with the <code>-cubin</code> option in Device mode. The output is parsed and register, shared memory usage is printed during build.</p>
-<dt><code>CUDA_BUILD_EMULATION</code> (Default: <code>OFF</code> for device mode)</p>
-<dd>Set to <code>ON</code> for Emulation mode. <code>-D_DEVICEEMU</code> is defined for CUDA C files when <code>CUDA_BUILD_EMULATION</code> is <code>TRUE</code>.</p>
-<dt><code>CUDA_LINK_LIBRARIES_KEYWORD</code> (Default: )</p>
-<dd>New in version 3.9. </p>
+<dt><code>CUDA_BUILD_CUBIN</code> (Default: <code>OFF</code>)</dt>
+<dd>Set to <code>ON</code> to enable and extra compilation pass with the <code>-cubin</code> option in Device mode. The output is parsed and register, shared memory usage is printed during build.</dd>
+<dt><code>CUDA_BUILD_EMULATION</code> (Default: <code>OFF</code> for device mode)</dt>
+<dd>Set to <code>ON</code> for Emulation mode. <code>-D_DEVICEEMU</code> is defined for CUDA C files when <code>CUDA_BUILD_EMULATION</code> is <code>TRUE</code>.</dd>
+<dt><code>CUDA_LINK_LIBRARIES_KEYWORD</code> (Default: )</dt>
+<dd>New in version 3.9. </dd>
 <p> The <code>&lt;PRIVATE|PUBLIC|INTERFACE&gt;</code> keyword to use for internal <code>target_link_libraries()</code> calls. The default is to use no keyword which uses the old &quot;plain&quot; form of <code>target_link_libraries()</code>. Note that is matters because whatever is used inside the <code>FindCUDA</code> module must also be used outside &#8211; the two forms of <code>target_link_libraries()</code> cannot be mixed.</p>
-<dt><code>CUDA_GENERATED_OUTPUT_DIR</code> (Default: <code>CMAKE_CURRENT_BINARY_DIR</code>)</p>
-<dd>Set to the path you wish to have the generated files placed. If it is blank output files will be placed in <code>CMAKE_CURRENT_BINARY_DIR</code>. Intermediate files will always be placed in <code>CMAKE_CURRENT_BINARY_DIR/CMakeFiles</code>.</p>
-<dt><code>CUDA_HOST_COMPILATION_CPP</code> (Default: <code>ON</code>)</p>
-<dd>Set to <code>OFF</code> for C compilation of host code.</p>
-<dt><code>CUDA_HOST_COMPILER</code> (Default: <code>CMAKE_C_COMPILER</code>)</p>
-<dd>Set the host compiler to be used by nvcc. Ignored if <code>-ccbin</code> or <code>&#8211;compiler-bindir</code> is already present in the <code>CUDA_NVCC_FLAGS</code> or <code>CUDA_NVCC_FLAGS_&lt;CONFIG&gt;</code> variables. For Visual Studio targets, the host compiler is constructed with one or more visual studio macros such as <code>$(VCInstallDir)</code>, that expands out to the path when the command is run from within VS. </p>
+<dt><code>CUDA_GENERATED_OUTPUT_DIR</code> (Default: <code>CMAKE_CURRENT_BINARY_DIR</code>)</dt>
+<dd>Set to the path you wish to have the generated files placed. If it is blank output files will be placed in <code>CMAKE_CURRENT_BINARY_DIR</code>. Intermediate files will always be placed in <code>CMAKE_CURRENT_BINARY_DIR/CMakeFiles</code>.</dd>
+<dt><code>CUDA_HOST_COMPILATION_CPP</code> (Default: <code>ON</code>)</dt>
+<dd>Set to <code>OFF</code> for C compilation of host code.</dd>
+<dt><code>CUDA_HOST_COMPILER</code> (Default: <code>CMAKE_C_COMPILER</code>)</dt>
+<dd>Set the host compiler to be used by nvcc. Ignored if <code>-ccbin</code> or <code>&#8211;compiler-bindir</code> is already present in the <code>CUDA_NVCC_FLAGS</code> or <code>CUDA_NVCC_FLAGS_&lt;CONFIG&gt;</code> variables. For Visual Studio targets, the host compiler is constructed with one or more visual studio macros such as <code>$(VCInstallDir)</code>, that expands out to the path when the command is run from within VS. </dd>
 <p> New in version 3.13: If the <code>CUDAHOSTCXX</code> environment variable is set it will be used as the default. </p>
-<dt><code>CUDA_NVCC_FLAGS</code>, <code>CUDA_NVCC_FLAGS_&lt;CONFIG&gt;</code></p>
-<dd>Additional NVCC command line arguments. NOTE: multiple arguments must be semi-colon delimited (e.g. <code>&#8211;compiler-options;-Wall</code>) </p>
+<dt><code>CUDA_NVCC_FLAGS</code>, <code>CUDA_NVCC_FLAGS_&lt;CONFIG&gt;</code></dt>
+<dd>Additional NVCC command line arguments. NOTE: multiple arguments must be semi-colon delimited (e.g. <code>&#8211;compiler-options;-Wall</code>) </dd>
 <p> New in version 3.6: Contents of these variables may use <code>generator expressions</code>. </p>
-<dt><code>CUDA_PROPAGATE_HOST_FLAGS</code> (Default: <code>ON</code>)</p>
-<dd>Set to <code>ON</code> to propagate <code>CMAKE_{C,CXX}_FLAGS</code> and their configuration dependent counterparts (e.g. <code>CMAKE_C_FLAGS_DEBUG</code>) automatically to the host compiler through nvcc&#8217;s <code>-Xcompiler</code> flag. This helps make the generated host code match the rest of the system better. Sometimes certain flags give nvcc problems, and this will help you turn the flag propagation off. This does not affect the flags supplied directly to nvcc via <code>CUDA_NVCC_FLAGS</code> or through the <code>OPTION</code> flags specified through <code>cuda_add_library()</code>, <code>cuda_add_executable()</code>, or <code>cuda_wrap_srcs()</code>. Flags used for shared library compilation are not affected by this flag.</p>
-<dt><code>CUDA_SEPARABLE_COMPILATION</code> (Default: <code>OFF</code>)</p>
-<dd>If set this will enable separable compilation for all CUDA runtime object files. If used outside of <code>cuda_add_executable()</code> and <code>cuda_add_library()</code> (e.g. calling <code>cuda_wrap_srcs()</code> directly), <code>cuda_compute_separable_compilation_object_file_name()</code> and <code>cuda_link_separable_compilation_objects()</code> should be called.</p>
-<dt><code>CUDA_SOURCE_PROPERTY_FORMAT</code></p>
-<dd>New in version 3.3. </p>
+<dt><code>CUDA_PROPAGATE_HOST_FLAGS</code> (Default: <code>ON</code>)</dt>
+<dd>Set to <code>ON</code> to propagate <code>CMAKE_{C,CXX}_FLAGS</code> and their configuration dependent counterparts (e.g. <code>CMAKE_C_FLAGS_DEBUG</code>) automatically to the host compiler through nvcc&#8217;s <code>-Xcompiler</code> flag. This helps make the generated host code match the rest of the system better. Sometimes certain flags give nvcc problems, and this will help you turn the flag propagation off. This does not affect the flags supplied directly to nvcc via <code>CUDA_NVCC_FLAGS</code> or through the <code>OPTION</code> flags specified through <code>cuda_add_library()</code>, <code>cuda_add_executable()</code>, or <code>cuda_wrap_srcs()</code>. Flags used for shared library compilation are not affected by this flag.</dd>
+<dt><code>CUDA_SEPARABLE_COMPILATION</code> (Default: <code>OFF</code>)</dt>
+<dd>If set this will enable separable compilation for all CUDA runtime object files. If used outside of <code>cuda_add_executable()</code> and <code>cuda_add_library()</code> (e.g. calling <code>cuda_wrap_srcs()</code> directly), <code>cuda_compute_separable_compilation_object_file_name()</code> and <code>cuda_link_separable_compilation_objects()</code> should be called.</dd>
+<dt><code>CUDA_SOURCE_PROPERTY_FORMAT</code></dt>
+<dd>New in version 3.3. </dd>
 <p> If this source file property is set, it can override the format specified to <code>cuda_wrap_srcs()</code> (<code>OBJ</code>, <code>PTX</code>, <code>CUBIN</code>, or <code>FATBIN</code>). If an input source file is not a <code>.cu</code> file, setting this file will cause it to be treated as a <code>.cu</code> file. See documentation for set_source_files_properties on how to set this property.</p>
-<dt><code>CUDA_USE_STATIC_CUDA_RUNTIME</code> (Default: <code>ON</code>)</p>
-<dd>New in version 3.3. </p>
+<dt><code>CUDA_USE_STATIC_CUDA_RUNTIME</code> (Default: <code>ON</code>)</dt>
+<dd>New in version 3.3. </dd>
 <p> When enabled the static version of the CUDA runtime library will be used in <code>CUDA_LIBRARIES</code>. If the version of CUDA configured doesn&#8217;t support this option, then it will be silently disabled.</p>
-<dt><code>CUDA_VERBOSE_BUILD</code> (Default: <code>OFF</code>)</p>
-<dd>Set to <code>ON</code> to see all the commands used when building the CUDA file. When using a Makefile generator the value defaults to <code>VERBOSE</code> (run <code>make VERBOSE=1</code> to see output), although setting <code>CUDA_VERBOSE_BUILD</code> to <code>ON</code> will always print the output.</dl>
+<dt><code>CUDA_VERBOSE_BUILD</code> (Default: <code>OFF</code>)</dt>
+<dd>Set to <code>ON</code> to see all the commands used when building the CUDA file. When using a Makefile generator the value defaults to <code>VERBOSE</code> (run <code>make VERBOSE=1</code> to see output), although setting <code>CUDA_VERBOSE_BUILD</code> to <code>ON</code> will always print the output.</dd></dl>
 <h3>Commands</h3>
 <p>The script creates the following functions and macros (in alphabetical order): </p>
 <pre>cuda_add_cufft_to_target(&lt;cuda_target&gt;)</pre>
@@ -10109,14 +10109,14 @@ target_compile_features(foo_impl PRIVATE cxx_constexpr)</pre>
 <p>Selects GPU arch flags for nvcc based on <code>target_CUDA_architecture</code>. </p>
 <p> Values for <code>target_CUDA_architecture</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Auto</code>: detects local machine GPU compute arch at runtime.</p>
-<dt>&bull;</p>
-<dd><code>Common</code> and <code>All</code>: cover common and entire subsets of architectures.</p>
-<dt>&bull;</p>
-<dd><code>&lt;name&gt;</code>: one of <code>Fermi</code>, <code>Kepler</code>, <code>Maxwell</code>, <code>Kepler+Tegra</code>, <code>Kepler+Tesla</code>, <code>Maxwell+Tegra</code>, <code>Pascal</code>.</p>
-<dt>&bull;</p>
-<dd><code>&lt;ver&gt;</code>, <code>&lt;ver&gt;(&lt;ver&gt;)</code>, <code>&lt;ver&gt;+PTX</code>, where <code>&lt;ver&gt;</code> is one of <code>2.0</code>, <code>2.1</code>, <code>3.0</code>, <code>3.2</code>, <code>3.5</code>, <code>3.7</code>, <code>5.0</code>, <code>5.2</code>, <code>5.3</code>, <code>6.0</code>, <code>6.2</code>. </p>
+<dt>&bull;</dt>
+<dd><code>Auto</code>: detects local machine GPU compute arch at runtime.</dd>
+<dt>&bull;</dt>
+<dd><code>Common</code> and <code>All</code>: cover common and entire subsets of architectures.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;name&gt;</code>: one of <code>Fermi</code>, <code>Kepler</code>, <code>Maxwell</code>, <code>Kepler+Tegra</code>, <code>Kepler+Tesla</code>, <code>Maxwell+Tegra</code>, <code>Pascal</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;ver&gt;</code>, <code>&lt;ver&gt;(&lt;ver&gt;)</code>, <code>&lt;ver&gt;+PTX</code>, where <code>&lt;ver&gt;</code> is one of <code>2.0</code>, <code>2.1</code>, <code>3.0</code>, <code>3.2</code>, <code>3.5</code>, <code>3.7</code>, <code>5.0</code>, <code>5.2</code>, <code>5.3</code>, <code>6.0</code>, <code>6.2</code>. </dd>
 <p> Returns list of flags to be added to <code>CUDA_NVCC_FLAGS</code> in <code>&lt;out_variable&gt;</code>. Additionally, sets <code>&lt;out_variable&gt;_readable</code> to the resulting numeric list. </p>
 <p> Example: </p>
 <pre>cuda_select_nvcc_arch_flags(ARCH_FLAGS 3.0 3.5+PTX 5.2(5.0) Maxwell)
@@ -10135,85 +10135,85 @@ list(APPEND CUDA_NVCC_FLAGS ${ARCH_FLAGS})</pre>
  MINSIZEREL --use_fast_math)</pre>
 <p>For certain configurations (namely VS generating object files with <code>CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE</code> set to <code>ON</code>), no generated file will be produced for the given cuda file. This is because when you add the cuda file to Visual Studio it knows that this file produces an object file and will link in the resulting object file automatically. </p>
 <p> This script will also generate a separate cmake script that is used at build time to invoke nvcc. This is for several reasons:</p>
-<dt>&bull;</p>
-<dd>nvcc can return negative numbers as return values which confuses Visual Studio into thinking that the command succeeded. The script now checks the error codes and produces errors when there was a problem.</p>
-<dt>&bull;</p>
-<dd>nvcc has been known to not delete incomplete results when it encounters problems. This confuses build systems into thinking the target was generated when in fact an unusable file exists. The script now deletes the output files if there was an error.</p>
-<dt>&bull;</p>
-<dd>By putting all the options that affect the build into a file and then make the build rule dependent on the file, the output files will be regenerated when the options change. </p>
+<dt>&bull;</dt>
+<dd>nvcc can return negative numbers as return values which confuses Visual Studio into thinking that the command succeeded. The script now checks the error codes and produces errors when there was a problem.</dd>
+<dt>&bull;</dt>
+<dd>nvcc has been known to not delete incomplete results when it encounters problems. This confuses build systems into thinking the target was generated when in fact an unusable file exists. The script now deletes the output files if there was an error.</dd>
+<dt>&bull;</dt>
+<dd>By putting all the options that affect the build into a file and then make the build rule dependent on the file, the output files will be regenerated when the options change. </dd>
 <p> This script also looks at optional arguments <code>STATIC</code>, <code>SHARED</code>, or <code>MODULE</code> to determine when to target the object compilation for a shared library. <code>BUILD_SHARED_LIBS</code> is ignored in <code>cuda_wrap_srcs()</code>, but it is respected in <code>cuda_add_library()</code>. On some systems special flags are added for building objects intended for shared libraries. A preprocessor macro, <code>&lt;target_name&gt;_EXPORTS</code> is defined when a shared library compilation is detected. </p>
 <p> Flags passed into add_definitions with <code>-D</code> or <code>/D</code> are passed along to nvcc.</dl>
 <h3>Result Variables</h3>
 <p>The script defines the following variables:</p>
 <dl>
-<dt><code>CUDA_VERSION_MAJOR</code></p>
-<dd>The major version of cuda as reported by nvcc.</p>
-<dt><code>CUDA_VERSION_MINOR</code></p>
-<dd>The minor version.</p>
-<dt><code>CUDA_VERSION</code>, <code>CUDA_VERSION_STRING</code></p>
-<dd>Full version in the <code>X.Y</code> format.</p>
-<dt><code>CUDA_HAS_FP16</code></p>
-<dd>New in version 3.6: Whether a short float (<code>float16</code>, <code>fp16</code>) is supported. </p>
-<dt><code>CUDA_TOOLKIT_ROOT_DIR</code></p>
-<dd>Path to the CUDA Toolkit (defined if not set).</p>
-<dt><code>CUDA_SDK_ROOT_DIR</code></p>
-<dd>Path to the CUDA SDK. Use this to find files in the SDK. This script will not directly support finding specific libraries or headers, as that isn&#8217;t supported by NVIDIA. If you want to change libraries when the path changes see the <code>FindCUDA.cmake</code> script for an example of how to clear these variables. There are also examples of how to use the <code>CUDA_SDK_ROOT_DIR</code> to locate headers or libraries, if you so choose (at your own risk).</p>
-<dt><code>CUDA_INCLUDE_DIRS</code></p>
-<dd>Include directory for cuda headers. Added automatically for <code>cuda_add_executable()</code> and <code>cuda_add_library()</code>.</p>
-<dt><code>CUDA_LIBRARIES</code></p>
-<dd>Cuda RT library.</p>
-<dt><code>CUDA_CUFFT_LIBRARIES</code></p>
-<dd>Device or emulation library for the Cuda FFT implementation (alternative to <code>cuda_add_cufft_to_target()</code> macro)</p>
-<dt><code>CUDA_CUBLAS_LIBRARIES</code></p>
-<dd>Device or emulation library for the Cuda BLAS implementation (alternative to <code>cuda_add_cublas_to_target()</code> macro).</p>
-<dt><code>CUDA_cudart_static_LIBRARY</code></p>
-<dd>Statically linkable cuda runtime library. Only available for CUDA version 5.5+.</p>
-<dt><code>CUDA_cudadevrt_LIBRARY</code></p>
-<dd>New in version 3.7: Device runtime library. Required for separable compilation. </p>
-<dt><code>CUDA_cupti_LIBRARY</code></p>
-<dd>CUDA Profiling Tools Interface library. Only available for CUDA version 4.0+.</p>
-<dt><code>CUDA_curand_LIBRARY</code></p>
-<dd>CUDA Random Number Generation library. Only available for CUDA version 3.2+.</p>
-<dt><code>CUDA_cusolver_LIBRARY</code></p>
-<dd>New in version 3.2: CUDA Direct Solver library. Only available for CUDA version 7.0+. </p>
-<dt><code>CUDA_cusparse_LIBRARY</code></p>
-<dd>CUDA Sparse Matrix library. Only available for CUDA version 3.2+.</p>
-<dt><code>CUDA_npp_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib. Only available for CUDA version 4.0+.</p>
-<dt><code>CUDA_nppc_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (core). Only available for CUDA version 5.5+.</p>
-<dt><code>CUDA_nppi_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 5.5 &#8211; 8.0.</p>
-<dt><code>CUDA_nppial_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppicc_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppicom_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0 &#8211; 10.2. Replaced by nvjpeg.</p>
-<dt><code>CUDA_nppidei_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppif_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppig_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppim_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppist_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppisu_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_nppitc_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</p>
-<dt><code>CUDA_npps_LIBRARY</code></p>
-<dd>NVIDIA Performance Primitives lib (signal processing). Only available for CUDA version 5.5+.</p>
-<dt><code>CUDA_nvcuvenc_LIBRARY</code></p>
-<dd>CUDA Video Encoder library. Only available for CUDA version 3.2+. Windows only.</p>
-<dt><code>CUDA_nvcuvid_LIBRARY</code></p>
-<dd>CUDA Video Decoder library. Only available for CUDA version 3.2+. Windows only.</p>
-<dt><code>CUDA_nvToolsExt_LIBRARY</code></p>
-<dd>New in version 3.16: NVIDA CUDA Tools Extension library. Available for CUDA version 5+. </p>
-<dt><code>CUDA_OpenCL_LIBRARY</code></p>
-<dd>New in version 3.16: NVIDA CUDA OpenCL library. Available for CUDA version 5+. </p>
+<dt><code>CUDA_VERSION_MAJOR</code></dt>
+<dd>The major version of cuda as reported by nvcc.</dd>
+<dt><code>CUDA_VERSION_MINOR</code></dt>
+<dd>The minor version.</dd>
+<dt><code>CUDA_VERSION</code>, <code>CUDA_VERSION_STRING</code></dt>
+<dd>Full version in the <code>X.Y</code> format.</dd>
+<dt><code>CUDA_HAS_FP16</code></dt>
+<dd>New in version 3.6: Whether a short float (<code>float16</code>, <code>fp16</code>) is supported. </dd>
+<dt><code>CUDA_TOOLKIT_ROOT_DIR</code></dt>
+<dd>Path to the CUDA Toolkit (defined if not set).</dd>
+<dt><code>CUDA_SDK_ROOT_DIR</code></dt>
+<dd>Path to the CUDA SDK. Use this to find files in the SDK. This script will not directly support finding specific libraries or headers, as that isn&#8217;t supported by NVIDIA. If you want to change libraries when the path changes see the <code>FindCUDA.cmake</code> script for an example of how to clear these variables. There are also examples of how to use the <code>CUDA_SDK_ROOT_DIR</code> to locate headers or libraries, if you so choose (at your own risk).</dd>
+<dt><code>CUDA_INCLUDE_DIRS</code></dt>
+<dd>Include directory for cuda headers. Added automatically for <code>cuda_add_executable()</code> and <code>cuda_add_library()</code>.</dd>
+<dt><code>CUDA_LIBRARIES</code></dt>
+<dd>Cuda RT library.</dd>
+<dt><code>CUDA_CUFFT_LIBRARIES</code></dt>
+<dd>Device or emulation library for the Cuda FFT implementation (alternative to <code>cuda_add_cufft_to_target()</code> macro)</dd>
+<dt><code>CUDA_CUBLAS_LIBRARIES</code></dt>
+<dd>Device or emulation library for the Cuda BLAS implementation (alternative to <code>cuda_add_cublas_to_target()</code> macro).</dd>
+<dt><code>CUDA_cudart_static_LIBRARY</code></dt>
+<dd>Statically linkable cuda runtime library. Only available for CUDA version 5.5+.</dd>
+<dt><code>CUDA_cudadevrt_LIBRARY</code></dt>
+<dd>New in version 3.7: Device runtime library. Required for separable compilation. </dd>
+<dt><code>CUDA_cupti_LIBRARY</code></dt>
+<dd>CUDA Profiling Tools Interface library. Only available for CUDA version 4.0+.</dd>
+<dt><code>CUDA_curand_LIBRARY</code></dt>
+<dd>CUDA Random Number Generation library. Only available for CUDA version 3.2+.</dd>
+<dt><code>CUDA_cusolver_LIBRARY</code></dt>
+<dd>New in version 3.2: CUDA Direct Solver library. Only available for CUDA version 7.0+. </dd>
+<dt><code>CUDA_cusparse_LIBRARY</code></dt>
+<dd>CUDA Sparse Matrix library. Only available for CUDA version 3.2+.</dd>
+<dt><code>CUDA_npp_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib. Only available for CUDA version 4.0+.</dd>
+<dt><code>CUDA_nppc_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (core). Only available for CUDA version 5.5+.</dd>
+<dt><code>CUDA_nppi_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 5.5 &#8211; 8.0.</dd>
+<dt><code>CUDA_nppial_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppicc_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppicom_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0 &#8211; 10.2. Replaced by nvjpeg.</dd>
+<dt><code>CUDA_nppidei_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppif_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppig_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppim_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppist_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppisu_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_nppitc_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (image processing). Only available for CUDA version 9.0.</dd>
+<dt><code>CUDA_npps_LIBRARY</code></dt>
+<dd>NVIDIA Performance Primitives lib (signal processing). Only available for CUDA version 5.5+.</dd>
+<dt><code>CUDA_nvcuvenc_LIBRARY</code></dt>
+<dd>CUDA Video Encoder library. Only available for CUDA version 3.2+. Windows only.</dd>
+<dt><code>CUDA_nvcuvid_LIBRARY</code></dt>
+<dd>CUDA Video Decoder library. Only available for CUDA version 3.2+. Windows only.</dd>
+<dt><code>CUDA_nvToolsExt_LIBRARY</code></dt>
+<dd>New in version 3.16: NVIDA CUDA Tools Extension library. Available for CUDA version 5+. </dd>
+<dt><code>CUDA_OpenCL_LIBRARY</code></dt>
+<dd>New in version 3.16: NVIDA CUDA OpenCL library. Available for CUDA version 5+. </dd>
 </dl>
 <h3>FindPythonInterp</h3>
 <p>Deprecated since version 3.12: Use <code>FindPython3</code>, <code>FindPython2</code> or <code>FindPython</code> instead. </p>

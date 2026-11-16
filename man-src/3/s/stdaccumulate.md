@@ -11,15 +11,10 @@ std::accumulate - std::accumulate
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class InputIt, class T &gt;                        (1)
-
 T accumulate( InputIt first, InputIt last, T init );
-
 template&lt; class InputIt, class T, class BinaryOperation &gt;
-
 T accumulate( InputIt first, InputIt last, T init,        (2)
-
 BinaryOperation op );</code></pre> 
 Computes the sum of the given value init and the elements in the range [first, last). The first version uses operator+ to sum up the elements, the second version uses the given binary function op 
 , both applying std::move to their operands on the left hand side 
@@ -81,16 +76,11 @@ std::accumulate performs a left fold. In order to perform a right fold, one must
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;string&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int sum = std::accumulate(v.begin(), v.end(), 0);

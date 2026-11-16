@@ -26,29 +26,27 @@ url: "/docs/linux/man/1-xml_spellcheck/"
  Note that all options can be abbreviated to the first letter
 <dl>
 <dt>--conf &lt;configuration_file&gt;
-<dd> Gets the options from a configuration file. <font SIZE="-1">NOT IMPLEMENTED YET.</font>
-<dt>--spellchecker &lt;spellchecker&gt;
-<dd> The command to use for spell checking, including any option 
-
+</dt><dd> Gets the options from a configuration file. <font SIZE="-1">NOT IMPLEMENTED YET.</font>
+</dd><dt>--spellchecker &lt;spellchecker&gt;
+</dt><dd> The command to use for spell checking, including any option 
  By default <tt>&quot;aspell -c&quot;</tt> is used
-<dt>--backup-extension &lt;extension&gt;
-<dd> By default the original file is saved with a <tt>&quot;.bak&quot;</tt> extension. This option changes the extension
-<dt>--attributes
-<dd> Spell check attribute content. By default attribute values are <font SIZE="-1">NOT</font> spell checked. <font SIZE="-1">NOT YET IMPLEMENTED</font>
-<dt>--exclude_elements &lt;list_of_excluded_elements&gt;
-<dd> A list of elements that should not be spell checked
-<dt>--include_elements &lt;list_of_included_elements&gt;
-<dd> A list of elements that should be spell checked (by default all elements are spell checked). 
-
+</dd><dt>--backup-extension &lt;extension&gt;
+</dt><dd> By default the original file is saved with a <tt>&quot;.bak&quot;</tt> extension. This option changes the extension
+</dd><dt>--attributes
+</dt><dd> Spell check attribute content. By default attribute values are <font SIZE="-1">NOT</font> spell checked. <font SIZE="-1">NOT YET IMPLEMENTED</font>
+</dd><dt>--exclude_elements &lt;list_of_excluded_elements&gt;
+</dt><dd> A list of elements that should not be spell checked
+</dd><dt>--include_elements &lt;list_of_included_elements&gt;
+</dt><dd> A list of elements that should be spell checked (by default all elements are spell checked). 
  <tt>&quot;--exclude_elements&quot;</tt> and <tt>&quot;--include_elements&quot;</tt> are mutually exclusive
-<dt>--pretty_print &lt;optional_pretty_print_style&gt;
-<dd> A pretty print style for the document, as defined in XML::Twig. If the option is provided without a value then the <tt>&quot;indented&quot;</tt> style is used
-<dt>--version
-<dd> Dislay the tool version and exit
-<dt>--help
-<dd> Display help message and exit
-<dt>--man
-<dd> Display longer help message and exit</dl>
+</dd><dt>--pretty_print &lt;optional_pretty_print_style&gt;
+</dt><dd> A pretty print style for the document, as defined in XML::Twig. If the option is provided without a value then the <tt>&quot;indented&quot;</tt> style is used
+</dd><dt>--version
+</dt><dd> Dislay the tool version and exit
+</dd><dt>--help
+</dt><dd> Display help message and exit
+</dd><dt>--man
+</dt><dd> Display longer help message and exit</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -58,9 +56,9 @@ url: "/docs/linux/man/1-xml_spellcheck/"
 
 <dl>
 <dt>--conf option
-<dd>
-<dt>--attribute option
-<dd></dl>
+</dt><dd>
+</dd><dt>--attribute option
+</dt><dd></dd></dl>
 
 <h2>PRE-REQUISITE</h2>
 

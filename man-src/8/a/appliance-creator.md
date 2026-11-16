@@ -14,48 +14,48 @@ description: "appliance-creator, creates pre-installed appliance images and meta
 <p><code>appliance-creator</code> creates pre-installed appliance images from kickstart files. Kickstart files contain the information about packages and configurations that are built into the image.</p>
 <h2>Options</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd>Shows a help message and exits.</dl>
+<dt>-h, &#8211;help</dt>
+<dd>Shows a help message and exits.</dd></dl>
 <h2>Image Options</h2>
 <p>These options define the created appliance image.</p>
 <dl>
-<dt>-c <font SIZE="-1">KSCFG</font>, &#8211;config=KSCFG</p>
-<dd>Path to kickstart config file</p>
-<dt>-n <font SIZE="-1">NAME</font>, &#8211;name=NAME</p>
-<dd>Name of appliance image to be created (default based on config name)</p>
-<dt>-f <font SIZE="-1">FORMAT</font>, &#8211;format=FORMAT</p>
-<dd>Disk format, this will take any input that qemu-img convert will take (raw, qcow2, vmdk, &#8230;) Note: not all disk formats with work with all virt technologies.</p>
-<dt>&#8211;vmem=VMEM</p>
-<dd>Amount of virtual memory for appliance in <font SIZE="-1">MB</font> (default: 512)</p>
-<dt>&#8211;vcpu=VCPU</p>
-<dd>Number of virtual cpus for appliance (default: 1)</p>
-<dt>&#8211;checksum</p>
-<dd>Generate a checksum for the created appliance</dl>
+<dt>-c <font SIZE="-1">KSCFG</font>, &#8211;config=KSCFG</dt>
+<dd>Path to kickstart config file</dd>
+<dt>-n <font SIZE="-1">NAME</font>, &#8211;name=NAME</dt>
+<dd>Name of appliance image to be created (default based on config name)</dd>
+<dt>-f <font SIZE="-1">FORMAT</font>, &#8211;format=FORMAT</dt>
+<dd>Disk format, this will take any input that qemu-img convert will take (raw, qcow2, vmdk, &#8230;) Note: not all disk formats with work with all virt technologies.</dd>
+<dt>&#8211;vmem=VMEM</dt>
+<dd>Amount of virtual memory for appliance in <font SIZE="-1">MB</font> (default: 512)</dd>
+<dt>&#8211;vcpu=VCPU</dt>
+<dd>Number of virtual cpus for appliance (default: 1)</dd>
+<dt>&#8211;checksum</dt>
+<dd>Generate a checksum for the created appliance</dd></dl>
 <h2>System Directory Options</h2>
 <p>These options define the way the created Appliance is packaged</p>
 <dl>
-<dt>-p <font SIZE="-1">PACKAGE</font>, &#8211;package=PACKAGE</p>
-<dd>Package format, will package up output, disk images and meta into a package. Currently only &#8220;zip&#8221;, &#8220;zip.64&#8221;, &#8220;tar&#8221;, &#8220;tar.gz&#8221;, &#8220;tar.bz2&#8221; are supported. (default is &#8220;none&#8221;)</p>
-<dt>-i <font SIZE="-1">INCLUDE</font>, &#8211;include=INCLUDE</p>
-<dd>path to a file or dir to include in the appliance package</p>
-<dt>-o <font SIZE="-1">OUTDIR</font>, &#8211;outdir=OUTDIR</p>
-<dd>output directory</dl>
+<dt>-p <font SIZE="-1">PACKAGE</font>, &#8211;package=PACKAGE</dt>
+<dd>Package format, will package up output, disk images and meta into a package. Currently only &#8220;zip&#8221;, &#8220;zip.64&#8221;, &#8220;tar&#8221;, &#8220;tar.gz&#8221;, &#8220;tar.bz2&#8221; are supported. (default is &#8220;none&#8221;)</dd>
+<dt>-i <font SIZE="-1">INCLUDE</font>, &#8211;include=INCLUDE</dt>
+<dd>path to a file or dir to include in the appliance package</dd>
+<dt>-o <font SIZE="-1">OUTDIR</font>, &#8211;outdir=OUTDIR</dt>
+<dd>output directory</dd></dl>
 <h2>System Directory Options</h2>
 <p>These options define directories used on your system for creating the appliance image</p>
 <dl>
-<dt>-t <font SIZE="-1">TMPDIR</font>, &#8211;tmpdir=TMPDIR</p>
-<dd>Temporary directory to use (default: /var/tmp)</p>
-<dt>&#8211;cache=CACHEDIR</p>
-<dd>Cache directory to use (default: private cache)</dl>
+<dt>-t <font SIZE="-1">TMPDIR</font>, &#8211;tmpdir=TMPDIR</dt>
+<dd>Temporary directory to use (default: /var/tmp)</dd>
+<dt>&#8211;cache=CACHEDIR</dt>
+<dd>Cache directory to use (default: private cache)</dd></dl>
 <h2>Debugging options</h2>
 <p>These options define extra options for debugging</p>
 <dl>
-<dt>-d, &#8211;debug</p>
-<dd>Output debugging information</p>
-<dt>-v, &#8211;verbose</p>
-<dd>Output verbose progress information</p>
-<dt>&#8211;logfile=FILE</p>
-<dd>Save debug information to <font SIZE="-1">FILE</font></dl>
+<dt>-d, &#8211;debug</dt>
+<dd>Output debugging information</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd>Output verbose progress information</dd>
+<dt>&#8211;logfile=FILE</dt>
+<dd>Save debug information to <font SIZE="-1">FILE</font></dd></dl>
 <h2>Examples</h2>
 <p>Appliance Example </p>
 <p> appliance-creator \<br />
@@ -71,6 +71,6 @@ description: "appliance-creator, creates pre-installed appliance images and meta
 <h2>Pod Errors</h2>
 <p>Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl>
-<dt>Around line 138:</p>
-<dd>Unterminated C&lt;C&lt;&#8230;&gt;&gt; sequence </p>
+<dt>Around line 138:</dt>
+<dd>Unterminated C&lt;C&lt;&#8230;&gt;&gt; sequence </dd>
 </dl>

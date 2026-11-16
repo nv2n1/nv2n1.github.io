@@ -13,8 +13,8 @@ description: "mongoc_cursor_destroy() – Frees a mongoc_cursor_t and releases a
 mongoc_cursor_destroy (mongoc_cursor_t *cursor);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Frees a <code>mongoc_cursor_t</code> and releases all associated resources. If a server-side cursor has been allocated, it will be released as well. </p>
 <h2>Colophon</h2>

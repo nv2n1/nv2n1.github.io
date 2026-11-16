@@ -16,16 +16,16 @@ description: "sg_rmsn – send SCSI READ MEDIA SERIAL NUMBER command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>sends the serial number (if found) to stdout. This output may contain non-printable characters (e.g. the serial number is padded with NULLs at the end so its length is a multiple of 4). The default action is to print the serial number out in ASCII-HEX with ASCII characters to the right. All error messages are sent to stderr.</p>
-<dt><code>-R</code>, <code>&#8211;readonly</code></p>
-<dd>opens the DEVICE read-only rather than read-write which is the default. The Linux sg driver needs read-write access for the SCSI READ MEDIA SERIAL NUMBER command but other access methods may require read-only access.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>sends the serial number (if found) to stdout. This output may contain non-printable characters (e.g. the serial number is padded with NULLs at the end so its length is a multiple of 4). The default action is to print the serial number out in ASCII-HEX with ASCII characters to the right. All error messages are sent to stderr.</dd>
+<dt><code>-R</code>, <code>&#8211;readonly</code></dt>
+<dd>opens the DEVICE read-only rather than read-write which is the default. The Linux sg driver needs read-write access for the SCSI READ MEDIA SERIAL NUMBER command but other access methods may require read-only access.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>Device identification information is also found in a standard INQUIRY response and its VPD pages (see sg_vpd). The relevant VPD pages are the &quot;device identification page&quot; (VPD page 0x83) and the &quot;unit serial number&quot; page (VPD page 0x80). </p>
 <p> The MMC-4 command set for CD/DVD/HD-DVD/BD drives has a &quot;media serial number&quot; feature (0x109) [and a &quot;logical unit serial number&quot; feature]. These can be viewed with sg_get_config.</p>

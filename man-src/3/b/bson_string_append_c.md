@@ -16,11 +16,11 @@ void bson_string_append_c(bson_string_t *string,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>string</code></p>
-<dd> A <code>bson_string_t</code> \&amp;.</dl>
+<dt><code>string</code></dt>
+<dd> A <code>bson_string_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>str</code></p>
-<dd> An ASCII char.</dl>
+<dt><code>str</code></dt>
+<dd> An ASCII char.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Appends <code>c</code> to the string builder <code>string</code> \&amp;. </p>
 <h2>COLOPHON</h2>

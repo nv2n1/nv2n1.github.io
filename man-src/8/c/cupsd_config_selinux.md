@@ -140,8 +140,8 @@ description: "cupsd_config_selinux – Security Enhanced Linux Policy for the cu
 <p> <code>cupsd_config_exec_t</code> </p>
 <p> &#8211; Set files with the cupsd_config_exec_t type, if you want to transition an executable to the cupsd_config_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/hal_lpadmin, /usr/libexec/hal_lpadmin, /usr/bin/cups-config-daemon, /usr/sbin/printconf-backend, /usr/lib/udev/udev-configure-printer, /usr/libexec/cups-pk-helper-mechanism </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/hal_lpadmin, /usr/libexec/hal_lpadmin, /usr/bin/cups-config-daemon, /usr/sbin/printconf-backend, /usr/lib/udev/udev-configure-printer, /usr/libexec/cups-pk-helper-mechanism </dd>
 </dl>
 <p> <code>cupsd_config_var_run_t</code> </p>
 <p> &#8211; Set files with the cupsd_config_var_run_t type, if you want to store the cupsd config files under the /run or /var/run directory. </p>

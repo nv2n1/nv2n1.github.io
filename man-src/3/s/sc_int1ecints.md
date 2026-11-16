@@ -11,7 +11,6 @@ description: "sc::Int1eCints –"
 <p> <code>Int1eCints</code> is used by <code>OneBodyIntCints</code> and OneBodyDerivIntCints to implement <code>IntegralCints</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;int1e.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>
@@ -34,97 +33,28 @@ description: "sc::Int1eCints –"
 <p> void <code>equadrupole</code> (int ish, int jsh)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void AI_OSrecurs_ (double ***AI0, double PA[3], double PB[3], double PC[3], double gamma, int iang, int jang)
-
-
-
 void OI_OSrecurs_ (double **OIX, double **OIY, double **OIZ, double PA[3], double PB[3], double gamma, int lmaxi, int lmaxj)
-
-
-
 void compute_doublet_info_ (int, int)
-
-
-
 void zero_buffers_ ()
-
-
-
 void transform_contrquartets_ (double *, double *)
-
-
-
 void sort_contrdoublets_to_shelldoublet_ (double *, double *)
-
-
-
 void zero_buffers_vec_ (const int)
-
-
-
 void transform_contrquartets_vec_ (const int, double *, double *)
-
-
-
 void sort_contrdoublets_to_shelldoublet_vec_ (const int, double *, double *)
-
-
-
 void overlap_full_general_ ()
-
-
-
 void overlap_sameam_general_ ()
-
-
-
 void kinetic_full_general_ ()
-
-
-
 void kinetic_sameam_general_ ()
-
-
-
 void nuclear_full_general_ ()
-
-
-
 void nuclear_sameam_general_ ()
-
-
-
 void hcore_full_general_ ()
-
-
-
 void hcore_sameam_general_ ()
-
-
-
 void edipole_full_general_ ()
-
-
-
 void equadrupole_full_general_ ()
-
-
-
 double ** init_block_ (int, int)
-
-
-
 void free_block_ (double **)
-
-
-
 double *** init_box_ (int, int, int)
-
-
-
 void free_box_ (double ***)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Integral</code> * <code>integral_</code> </p>
 <p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs1_</code> </p>

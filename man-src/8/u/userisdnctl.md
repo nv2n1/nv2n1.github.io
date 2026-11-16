@@ -14,16 +14,16 @@ description: "userisdnctl – Control and setup ISDN parameters"
 <p>This tool fetches the interface configuration parameters for the ISDN and then calls the apropriate scripts to take the requested action, or report the interface status.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>interface</code></p>
-<dd>The interface to be used (will search interface parameters at /etc/sysconfig/ifcfg-INTERFACE)</p>
-<dt><code>dial </code></p>
-<dd>Dial a connection calling the isdndial</p>
-<dt><code>hangup </code></p>
-<dd>Finish an existing connection using the isdnhangup</p>
-<dt><code>status </code></p>
-<dd>Show the status of an existing connection calling the isdnstatus</p>
-<dt><code>report </code></p>
-<dd>Report the interface status by returning 0 if the interface status looks good and 1 otherwise</dl>
+<dt><code>interface</code></dt>
+<dd>The interface to be used (will search interface parameters at /etc/sysconfig/ifcfg-INTERFACE)</dd>
+<dt><code>dial </code></dt>
+<dd>Dial a connection calling the isdndial</dd>
+<dt><code>hangup </code></dt>
+<dd>Finish an existing connection using the isdnhangup</dd>
+<dt><code>status </code></dt>
+<dd>Show the status of an existing connection calling the isdnstatus</dd>
+<dt><code>report </code></dt>
+<dd>Report the interface status by returning 0 if the interface status looks good and 1 otherwise</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/4-isdnctrl/">isdnctrl</a></code>(4), <code><a href="/docs/linux/man/4-isdninfo/">isdninfo</a></code>(4) </p>
 <h2>Security</h2>

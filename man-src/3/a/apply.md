@@ -47,11 +47,11 @@ description: "QuantLib::LiborForwardModelProcess – libor-forward-model process
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet NPVs and comparison with Black pricing.</dl>
+</dt><dd> the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet NPVs and comparison with Black pricing.</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> this class does not work correctly with Visual C++ 6.</dl>
+</dt><dd> this class does not work correctly with Visual C++ 6.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Disposable</code>&lt;<code>Matrix</code>&gt; covariance (Time t0, const <code>Array</code> &amp; x0, Time dt) const [virtual]</h3>
 <p> returns the covariance $ V(mathrm{x}_{t_0 + Delta t} | mathrm{x}_{t_0} = mathrm{x}_0) $ of the process after a time interval $ Delta t $ according to the given discretization. This method can be overridden in derived classes which want to hard-code a particular discretization. </p>
@@ -65,5 +65,5 @@ description: "QuantLib::LiborForwardModelProcess – libor-forward-model process
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

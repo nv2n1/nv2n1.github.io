@@ -14,10 +14,10 @@ description: "snd_ctl_add_slave_uncached – Add a virtual slave control"
 <p><i>master</i></p>
 <dl>
 <dd>
-<dd>vmaster element</dl>
+</dd><dd>vmaster element</dd></dl>
 <p> <i>slave</i></p>
 <dl>
-<dd>slave element to add</dl>
+<dd>slave element to add</dd></dl>
 <h2>Description</h2>
 <p>Add a virtual slave control to the given master. Unlike <code>snd_ctl_add_slave</code>, the element added via this function is supposed to have volatile values, and get callback is called at each time queried from the master. </p>
 <p> When the control peeks the hardware values directly and the value can be changed by other means than the put callback of the element, this function should be used to keep the value always up-to-date.</p>

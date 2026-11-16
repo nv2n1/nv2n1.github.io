@@ -15,15 +15,15 @@ description: "xapian-replicate-server – Service database replication requests 
 <p> xapian-replicate-server &#8211; Service database replication requests from clients</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>ADDR</i></p>
-<dd> listen on interface ADDR</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> port to listen on</p>
-<dt><code>-o</code>, <code>&#8211;one-shot</code></p>
-<dd> serve a single connection and exit</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit </p>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>ADDR</i></dt>
+<dd> listen on interface ADDR</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> port to listen on</dd>
+<dt><code>-o</code>, <code>&#8211;one-shot</code></dt>
+<dd> serve a single connection and exit</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit </dd>
 </dl>
 <h2>Index</h2>

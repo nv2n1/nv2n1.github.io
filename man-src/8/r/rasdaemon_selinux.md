@@ -93,14 +93,14 @@ description: "rasdaemon_selinux – Security Enhanced Linux Policy for the rasda
 <p> <code>rasdaemon_exec_t</code> </p>
 <p> &#8211; Set files with the rasdaemon_exec_t type, if you want to transition an executable to the rasdaemon_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/rasdaemon, /usr/sbin/ras-mc-ctl </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/rasdaemon, /usr/sbin/ras-mc-ctl </dd>
 </dl>
 <p> <code>rasdaemon_unit_file_t</code> </p>
 <p> &#8211; Set files with the rasdaemon_unit_file_t type, if you want to treat the files as rasdaemon unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/rasdaemon.*, /usr/lib/systemd/system/ras-mc-ctl.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/rasdaemon.*, /usr/lib/systemd/system/ras-mc-ctl.* </dd>
 </dl>
 <p> <code>rasdaemon_var_lib_t</code> </p>
 <p> &#8211; Set files with the rasdaemon_var_lib_t type, if you want to store the rasdaemon files under the /var/lib directory. </p>

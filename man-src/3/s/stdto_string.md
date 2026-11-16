@@ -41,10 +41,8 @@ Converts a numeric value to std::string.<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     double f = 23.43;
     double f2 = 1e-9;
@@ -59,22 +57,18 @@ int main()
     std::cout &lt;&lt; &quot;std::cout: &quot; &lt;&lt; f &lt;&lt; '
 '
               &lt;&lt; &quot;to_string: &quot; &lt;&lt; f_str &lt;&lt; &quot;
-
 &quot;
               &lt;&lt; &quot;std::cout: &quot; &lt;&lt; f2 &lt;&lt; '
 '
               &lt;&lt; &quot;to_string: &quot; &lt;&lt; f_str2 &lt;&lt; &quot;
-
 &quot;
               &lt;&lt; &quot;std::cout: &quot; &lt;&lt; f3 &lt;&lt; '
 '
               &lt;&lt; &quot;to_string: &quot; &lt;&lt; f_str3 &lt;&lt; &quot;
-
 &quot;
               &lt;&lt; &quot;std::cout: &quot; &lt;&lt; f4 &lt;&lt; '
 '
               &lt;&lt; &quot;to_string: &quot; &lt;&lt; f_str4 &lt;&lt; &quot;
-
 &quot;
               &lt;&lt; &quot;std::cout: &quot; &lt;&lt; f5 &lt;&lt; '
 '

@@ -40,12 +40,12 @@ description: "pamditherbw – dither grayscale image to black and white"
       pamtopnm | pnmtops -scale 0.25 &gt; image.ps 
 </pre>
 <dl>
-<dt><code>-value</code></p>
-<dd> This option alters the thresholding value for Floyd-Steinberg, Atkinson, and simple thresholding. It should be a real number between 0 and 1. Above 0.5 means darker images; below 0.5 means lighter. </p>
-<dt><code>-clump</code></p>
-<dd> This option alters the number of pixels in a clump. This is usually an integer between 2 and 100 (default 5). Smaller clump sizes smear the image less and are less grainy, but seem to lose some grey scale linearity. </p>
-<dt><code>-randomseed=</code><i>integer</i></p>
-<dd> This is the seed for the random number generator that generates the pixels. </p>
+<dt><code>-value</code></dt>
+<dd> This option alters the thresholding value for Floyd-Steinberg, Atkinson, and simple thresholding. It should be a real number between 0 and 1. Above 0.5 means darker images; below 0.5 means lighter. </dd>
+<dt><code>-clump</code></dt>
+<dd> This option alters the number of pixels in a clump. This is usually an integer between 2 and 100 (default 5). Smaller clump sizes smear the image less and are less grainy, but seem to lose some grey scale linearity. </dd>
+<dt><code>-randomseed=</code><i>integer</i></dt>
+<dd> This is the seed for the random number generator that generates the pixels. </dd>
 <p> Use this to ensure you get the same image on separate invocations. </p>
 <p> By default, <code>pgmnoise</code> uses a seed derived from the time of day and process ID, which gives you fairly uncorrelated results in multiple invocations. </p>
 <p> This option was new in Netpbm 10.45 (December 2008). </p>

@@ -14,8 +14,8 @@ description: "aa_autoinit – easy to use AA-lib initialization function."
 <p> aa_context *aa_autoinit(const struct aa_hardware_params *params); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>const struct aa_hardware_params *params</code></p>
-<dd> Hardware parameters you want. Use aa_defparams for default values.</dl>
+<dt><code>const struct aa_hardware_params *params</code></dt>
+<dd> Hardware parameters you want. Use aa_defparams for default values.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Attempts to find available output driver supporting the specified parameters. First attempts to initialize the recommended drivers and then in order drivers available in the aa_drivers array (all regular output drivers compiled into AA-lib).</p>
 <h2>RETURNS</h2>

@@ -14,19 +14,19 @@ description: "ata_host_activate – start host, request IRQ and register it"
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>target ATA host</dl>
+</dd><dd>target ATA host</dd></dl>
 <p> <i>irq</i></p>
 <dl>
-<dd>IRQ to request</dl>
+<dd>IRQ to request</dd></dl>
 <p> <i>irq_handler</i></p>
 <dl>
-<dd>irq_handler used when requesting IRQ</dl>
+<dd>irq_handler used when requesting IRQ</dd></dl>
 <p> <i>irq_flags</i></p>
 <dl>
-<dd>irq_flags used when requesting IRQ</dl>
+<dd>irq_flags used when requesting IRQ</dd></dl>
 <p> <i>sht</i></p>
 <dl>
-<dd>scsi_host_template to use when registering the host</dl>
+<dd>scsi_host_template to use when registering the host</dd></dl>
 <h2>Description</h2>
 <p>After allocating an ATA host and initializing it, most libata LLDs perform three steps to activate the host &#8211; start host, request IRQ and register it. This helper takes necessary arguments and performs the three steps in one go. </p>
 <p> An invalid IRQ skips the IRQ registration and expects the host to have set polling mode on the port. In this case, <i>irq_handler</i> should be NULL. </p>
@@ -36,5 +36,5 @@ description: "ata_host_activate – start host, request IRQ and register it"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

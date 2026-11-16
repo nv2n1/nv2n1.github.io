@@ -28,44 +28,45 @@ description: "luatex, dviluatex, luahbtex, luajittex, texlua, texluac – An ext
 <h2>OPTIONS</h2>
 <p> When the LuaTeX executable starts, it looks for the <code>&#8211;lua</code> command-line option. If there is no <code>&#8211;lua</code> option, the command line is interpreted in a similar fashion as in traditional pdfTeX and Aleph. But if the option is present, LuaTeX will enter an alternative mode of command-line parsing in comparison to the standard web2c programs. The presence of <code>&#8211;lua</code> makes most of other options unreliable, because the lua initialization file can disable kpathsea and/or hook functions into various callbacks.</p>
 <dl>
-<dt><code>&#8211;lua=</code><i>FILE</i></p>
-<dd> The lua initialization file.</dl>
+<dt><code>&#8211;lua=</code><i>FILE</i></dt>
+<dd> The lua initialization file.</dd></dl>
 <p> The following two options alter the executable behaviour:</p>
 <dl>
-<dt><code>&#8211;luaonly</code></p>
-<dd> Start LuaTeX as a Lua interpreter. In this mode, it will set Lua&#8217;s <i>arg[0]</i> to the found script name, pushing preceding options in negative values and the rest of the command line in the positive values, just like the Lua interpreter. LuaTeX will exit immediately after executing the specified Lua script.</p>
-<dt><code>&#8211;luaconly</code></p>
-<dd> Start LuaTeX as a Lua byte compiler. In this mode, LuaTeX is exactly like <code>luac</code> from the standalone Lua distribution, except that it does not have the <code>-l</code> switch, and that it accepts (but ignores) the <code>&#8211;luaconly</code> switch.</dl>
+<dt><code>&#8211;luaonly</code></dt>
+<dd> Start LuaTeX as a Lua interpreter. In this mode, it will set Lua&#8217;s <i>arg[0]</i> to the found script name, pushing preceding options in negative values and the rest of the command line in the positive values, just like the Lua interpreter. LuaTeX will exit immediately after executing the specified Lua script.</dd>
+<dt><code>&#8211;luaconly</code></dt>
+<dd> Start LuaTeX as a Lua byte compiler. In this mode, LuaTeX is exactly like <code>luac</code> from the standalone Lua distribution, except that it does not have the <code>-l</code> switch, and that it accepts (but ignores) the <code>&#8211;luaconly</code> switch.</dd></dl>
 <p> Then the regular web2c options:</p>
 <dl>
-<dt><code>&#8211;debug-format</code></p>
+<dt><code>&#8211;debug-format</code></dt>
 <dd>
- Debug format loading.</p>
-<dt><code>&#8211;draftmode</code></p>
-<dd> Sets \pdfdraftmode so luaTeX doesn&#8217;t write a PDF and doesn&#8217;t read any included images, thus speeding up execution.</p>
-<dt><code>&#8211;enable-write18</code></p>
+ Debug format loading.</dd>
+<dt><code>&#8211;draftmode</code></dt>
+<dd> Sets \pdfdraftmode so luaTeX doesn&#8217;t write a PDF and doesn&#8217;t read any included images, thus speeding up execution.</dd>
+<dt><code>&#8211;enable-write18</code></dt>
 <dd>
- Synonym for <code>&#8211;shell-escape</code>.</p>
-<dt><code>&#8211;disable-write18</code></p>
+ Synonym for <code>&#8211;shell-escape</code>.</dd>
+<dt><code>&#8211;disable-write18</code></dt>
 <dd>
- Synonym for <code>&#8211;no-shell-escape</code>.</p>
-<dt><code>&#8211;shell-escape</code></p>
+ Synonym for <code>&#8211;no-shell-escape</code>.</dd>
+<dt><code>&#8211;shell-escape</code></dt>
 <dd>
- Enable the <code>\write18{</code><i>command</i><code>}</code> construct, and Lua functions <code>os.execute()</code>, <code>os.exec()</code>, <code>os.spawn()</code>, and <code>io.popen()</code>. The <i>command</i> can be any shell command. This construct is normally disallowed for security reasons.</p>
-<dt><code>&#8211;no-shell-escape</code></p>
+ Enable the <code>\write18{</code><i>command</i><code>}</code> construct, and Lua functions <code>os.execute()</code>, <code>os.exec()</code>, <code>os.spawn()</code>, and <code>io.popen()</code>. The <i>command</i> can be any shell command. This construct is normally disallowed for security reasons.</dd>
+<dt><code>&#8211;no-shell-escape</code></dt>
 <dd>
- Disable the <code>\write18{</code><i>command</i><code>}</code> construct and the other Lua functions, even if it is enabled in the <i>texmf.cnf</i> file.</p>
-<dt><code>&#8211;shell-restricted</code></p>
-<dd> Enable restricted version of <code>\write18</code>, <code>os.execute()</code>, <code>os.exec()</code>, <code>os.spawn()</code>, and <code>io.popen()</code>, only commands listed in <i>texmf.cnf</i> file are allowed.</p>
-<dt><code>&#8211;file-line-error</code></p>
-<dd> Print error messages in the form <i>file:line:error</i> which is similar to the way many compilers format them.</p>
-<dt><code>&#8211;no-file-line-error</code></p>
-<dd> Disable printing error messages in the <i>file:line:error</i> style.</p>
-<dt><code>&#8211;fmt=</code><i>FORMAT</i></p>
-<dd> Use <i>FORMAT</i> as the name of the format to be used, instead of the name by which luaTeX was called or a <i>%&amp;</i> line.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;ini</code></p>
-<dd> Start in <i>INI</i> mode, which is used to dump formats. The <i>INI</i> mode can be used for typesetting, but no format is preloaded, and basic initializations like setting catcodes may be required.</p>
-<dt><code>&#8211;interaction=</code><i>MODE</i></p>
+ Disable the <code>\write18{</code><i>command</i><code>}</code> construct and the other Lua functions, even if it is enabled in the <i>texmf.cnf</i> file.</dd>
+<dt><code>&#8211;shell-restricted</code></dt>
+<dd> Enable restricted version of <code>\write18</code>, <code>os.execute()</code>, <code>os.exec()</code>, <code>os.spawn()</code>, and <code>io.popen()</code>, only commands listed in <i>texmf.cnf</i> file are allowed.</dd>
+<dt><code>&#8211;file-line-error</code></dt>
+<dd> Print error messages in the form <i>file:line:error</i> which is similar to the way many compilers format them.</dd>
+<dt><code>&#8211;no-file-line-error</code></dt>
+<dd> Disable printing error messages in the <i>file:line:error</i> style.</dd>
+<dt><code>&#8211;fmt=</code><i>FORMAT</i></dt>
+<dd> Use <i>FORMAT</i> as the name of the format to be used, instead of the name by which luaTeX was called or a <i>%&amp;</i> line.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;ini</code></dt>
+<dd> Start in <i>INI</i> mode, which is used to dump formats. The <i>INI</i> mode can be used for typesetting, but no format is preloaded, and basic initializations like setting catcodes may be required.</dd>
+<dt><code>&#8211;interaction=</code><i>MODE</i></dt>
 <dd> Sets the interaction mode. The <i>MODE</i> can be either <i>batchmode</i>, <i>nonstopmode</i>, <i>scrollmode</i>, and <i>errorstopmode</i>. The meaning of these modes is the same as that of the corresponding 
+</dd></dl>

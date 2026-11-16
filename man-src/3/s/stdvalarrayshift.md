@@ -35,9 +35,7 @@ The function can be implemented with the return type different from std::valarra
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
-
 int main()
 {
     std::valarray&lt;int&gt; v{1, 2, 3, 4, 5, 6, 7, 8};

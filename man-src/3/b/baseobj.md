@@ -129,20 +129,15 @@ close_log(self)
 Close log file.
 debug_level(self, level=0)
 Set debug level mask.
-
 level:
 Level to set. This could be a number or a string expression
 of names defined by debug_map()
-
-
-
 Examples:
 #Set level
     x.debug_level(0xFF)
 #Set level using expression
     x.debug_level('all')
     x.debug_level('debug ^ 1')
-
 dprint(self, level, msg, indent=0)
 Print debug message if level is allowed by the verbose level
 given in debug_level().
@@ -151,57 +146,41 @@ Format the arguments and return the string using the format given.
 If no arguments are given either positional or named then object
 attributes set by set_attrlist() are used as positional arguments
 and all object attributes are used as named arguments
-
 fmt:
 String format to use for the arguments, where {0}, {1}, etc.
 are used for positional arguments and {name1}, {name2}, etc.
 are used for named arguments given after fmt.
-
-
 open_log(self, logfile)
 Open log file.
 set_attr(self, name, value, switch=False)
 Add name/value as an object attribute and add the name to the
 list of attributes to display
-
 name:
 Attribute name
 value:
 Attribute value
-
-
 set_attrlist(self, attr)
 Add list of attribute names in object to display by str() or repr()
-
                                                                  attr : Name
                                                                         or
                                                                         list of names to add to the list of attribute names
                                                                         to display
-
                                                                         set_eqattr(self, attr)
 Set the comparison attribute
-
 attr:
 Attribute to use for object comparison
-
-
-
 Examples:
     x = BaseObj(a=1, b=2)
     x.set_eqattr("a")
     x == 1 will return True, the same as x.a == 1
-
 set_global(self, name, value)
 Set global variable.
 set_strfmt(self, level, format)
 Save format for given display level
-
 level:
 Display level given as a first argument
 format:
 String format for given display level, given as a second argument
-
-
 Static methods defined here:
 ----------------------------
 debug_map(bitmap, name='', disp='')
@@ -216,12 +195,8 @@ debug_repr(level=None)
 Return or set verbose level of object's string representation.
 When setting the verbose level, return the verbose level before
 setting it.
-
 level:
 Level of verbosity to set
-
-
-
 Examples:
 #Set verbose level to its minimal object representation
     x.debug_repr(0)
@@ -229,7 +204,6 @@ Examples:
     x.debug_repr(1)
 #Object representation is a lot more verbose
     x.debug_repr(2)
-
 dindent(indent=None)
 Set global dprint indentation.
 flush_log()
@@ -240,22 +214,16 @@ strsize(size)
 Set global string truncation.
 timestamp(fmt=None)
 Return the timestamp if it is enabled.
-
 fmt:
 Timestamp format, default is given by the format
 set by tstamp()
-
-
 tstamp(enable=None, fmt=None)
 Enable/disable timestamps on dprint messages and/or
 set the default format for timestamps
-
 enable:
 Boolean to enable/disable timestamps
 fmt:
 Set timestamp format
-
-
 write_log(data)
 Write data to log file.
 </code></pre>

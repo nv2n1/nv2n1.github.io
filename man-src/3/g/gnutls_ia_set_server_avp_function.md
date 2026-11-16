@@ -14,10 +14,10 @@ description: "gnutls_ia_set_server_avp_function – Used to set a AVP callback"
 <p> <code>void gnutls_ia_set_server_avp_function(gnutls_ia_server_credentials_t </code><i>cred</i><code>, gnutls_ia_avp_func </code><i>avp_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ia_server_credentials_t cred</p>
-<dd> is a <code>gnutls_ia_server_credentials_t</code> structure.</p>
-<dt>gnutls_ia_avp_func avp_func</p>
-<dd></dl>
+<dt>gnutls_ia_server_credentials_t cred</dt>
+<dd> is a <code>gnutls_ia_server_credentials_t</code> structure.</dd>
+<dt>gnutls_ia_avp_func avp_func</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Set the TLS/IA AVP callback handler used for the session. </p>
 <p> The callback&#8217;s function form is: int (*avp_func) (gnutls_session_t session, void *ptr, const char *last, size_t lastlen, char **next, size_t *nextlen); </p>
@@ -35,6 +35,6 @@ description: "gnutls_ia_set_server_avp_function – Used to set a AVP callback"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

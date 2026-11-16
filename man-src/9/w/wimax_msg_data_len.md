@@ -14,10 +14,10 @@ description: "wimax_msg_data_len – Return a pointer and size of a message’s 
 <p><i>msg</i></p>
 <dl>
 <dd>
-<dd>Pointer to a message created with <code>wimax_msg_alloc</code></dl>
+</dd><dd>Pointer to a message created with <code>wimax_msg_alloc</code></dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>Pointer to where to store the message&#8217;s size</dl>
+<dd>Pointer to where to store the message&#8217;s size</dd></dl>
 <h2>Description</h2>
 <p>Returns the pointer to the message data.</p>
 <h2>Copyright</h2>

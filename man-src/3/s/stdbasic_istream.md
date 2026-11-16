@@ -20,19 +20,15 @@ This destructor does not perform any operation on the underlying streambuffer (r
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;sstream&gt;
-
 #include &lt;iostream&gt;
 void print_stringbuf(std::streambuf *p)
-
 {
     std::istream buf(p); // buf shares the buffer with s1
     int n;
     buf &gt;&gt; n;
     std::cout &lt;&lt; n;
-
 } // calls the destructor of buf. p remains unaffected
 int main()
-
 {
     std::istringstream s1(&quot;10 20&quot;);
     print_stringbuf(s1.rdbuf());

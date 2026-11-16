@@ -32,12 +32,12 @@ description: "dockerd – Enable daemon mode"
  }
  }
 }</pre>
-</dl>
+</dd></dl>
 <p> This is the same example via the command line: </p>
 <dl>
 <dd>
 <pre>$ sudo dockerd --add-runtime runc=runc --add-runtime custom=/usr/local/bin/my-runc-replacement</pre>
-</dl>
+</dd></dl>
 <p> <code>Note</code>: defining runtime arguments via the command line is not supported. </p>
 <p> <code>&#8211;allow-nondistributable-artifacts</code>=[]<br />
 &nbsp;<wbr>&nbsp;Push nondistributable artifacts to the specified registries. </p>
@@ -302,7 +302,7 @@ description: "dockerd – Enable daemon mode"
 <pre> $ sudo service docker stop
  $ sudo rm -rf /var/lib/docker
  $ sudo service docker start</pre>
-</dl>
+</dd></dl>
 <p> Example use: dockerd &#8211;storage-opt dm.basesize=20G</p>
 <h3>dm.fs</h3>
 <p>Specifies the filesystem type to use for the base device. The supported options are ext4 and xfs. The default is ext4. </p>
@@ -355,14 +355,14 @@ description: "dockerd – Enable daemon mode"
  [...]
  Udev Sync Supported: true
  [...]</pre>
-</dl>
+</dd></dl>
 <p> When udev sync support is true, then devicemapper and udev can coordinate the activation and deactivation of devices for containers. </p>
 <p> When udev sync support is false, a race condition occurs between the devicemapper and udev during create and cleanup. The race condition results in errors and failures. (For information on these failures, see docker#4036 &lt;<a rel="nofollow" href="https://github.com/docker/docker/issues/4036">https://github.com/docker/docker/issues/4036</a>&gt;) </p>
 <p> To allow the docker daemon to start, regardless of whether udev sync is false, set dm.override_udev_sync_check to true: </p>
 <dl>
 <dd>
 <pre> $ dockerd --storage-opt dm.override_udev_sync_check=true</pre>
-</dl>
+</dd></dl>
 <p> When this value is true, the driver continues and simply warns you the errors are happening. </p>
 <p> <code>Note</code>: The ideal is to pursue a docker daemon and environment that does support synchronizing with udev. For further discussion on this topic, see docker#4036 &lt;<a rel="nofollow" href="https://github.com/docker/docker/issues/4036">https://github.com/docker/docker/issues/4036</a>&gt;. Otherwise, set this flag for migrating existing Docker daemons to a daemon with a supported environment.</p>
 <h3>dm.min_free_space</h3>
@@ -378,7 +378,7 @@ description: "dockerd – Enable daemon mode"
 <dl>
 <dd>
 <pre>$ sudo dockerd --storage-opt dm.xfs_nospace_max_retries=0</pre>
-</dl>
+</dd></dl>
 <h3>dm.libdm_log_level</h3>
 <p>Specifies the maxmimum libdm log level that will be forwarded to the dockerd log (as specified by &#8211;log-level). This option is primarily intended for debugging problems involving libdm. Using values other than the defaults may cause false-positive warnings to be logged. </p>
 <p> Values specified must fall within the range of valid libdm log levels. At the time of writing, the following is the list of libdm log levels as well as their corresponding levels when output by dockerd. </p>
@@ -432,7 +432,7 @@ description: "dockerd – Enable daemon mode"
 <pre>$ sudo dockerd \
  --log-level debug \
  --storage-opt dm.libdm_log_level=7</pre>
-</dl>
+</dd></dl>
 <h2>ZFS options</h2>
 <h3>zfs.fsname</h3>
 <p>Set zfs filesystem under which docker will create its own datasets. By default docker will pick up the zfs filesystem where docker graph (/var/lib/docker) is located. </p>
@@ -454,7 +454,7 @@ description: "dockerd – Enable daemon mode"
 <dl>
 <dd>
 <pre>dockerd --authorization-plugin=plugin1 --authorization-plugin=plugin2,...</pre>
-</dl>
+</dd></dl>
 <p> The PLUGIN_ID value is either the plugin&#8217;s name or a path to its specification file. The plugin&#8217;s implementation determines whether you can specify a name or path. Consult with your Docker administrator to get information about the plugins available to you. </p>
 <p> Once a plugin is installed, requests made to the daemon through the command line or Docker&#8217;s Engine API are allowed or denied by the plugin. If you have multiple plugins installed, each plugin, in order, must allow the request for it to complete. </p>
 <p> For information about how to create an authorization plugin, see access authorization plugin &lt;<a rel="nofollow" href="https://docs.docker.com/engine/extend/plugins_authorization/">https://docs.docker.com/engine/extend/plugins_authorization/</a>&gt; section in the Docker extend section of this documentation.</p>
@@ -465,7 +465,7 @@ description: "dockerd – Enable daemon mode"
 <dl>
 <dd>
 <pre>$ sudo dockerd --exec-opt native.cgroupdriver=systemd</pre>
-</dl>
+</dd></dl>
 <p> Setting this option applies to all containers the daemon launches.</p>
 <h2>History</h2>
 <p>Sept 2015, Originally compiled by Shishir Mahajan shishir.mahajan [at] redhat.com &lt;mailto:shishir.mahajan [at] redhat.com&gt; based on docker.com source material and internal work.</p>

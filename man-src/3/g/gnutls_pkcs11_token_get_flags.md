@@ -14,10 +14,10 @@ description: "gnutls_pkcs11_token_get_flags – API function"
 <p> <code>int gnutls_pkcs11_token_get_flags(const char * </code><i>url</i><code>, unsigned int * </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * url</p>
-<dd> should contain a PKCS 11 URL</p>
-<dt>unsigned int * flags</p>
-<dd> The output flags (GNUTLS_PKCS11_TOKEN_*)</dl>
+<dt>const char * url</dt>
+<dd> should contain a PKCS 11 URL</dd>
+<dt>unsigned int * flags</dt>
+<dd> The output flags (GNUTLS_PKCS11_TOKEN_*)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return information about the PKCS 11 token flags. </p>
 <p> The supported flags are: <code>GNUTLS_PKCS11_TOKEN_HW</code> and <code>GNUTLS_PKCS11_TOKEN_TRUSTED</code>.</p>
@@ -34,6 +34,6 @@ description: "gnutls_pkcs11_token_get_flags – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

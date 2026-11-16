@@ -12,7 +12,6 @@ std::experimental::filesystem::directory_entry::path - std::experimental::filesy
 
 <pre><code>const path &amp;path() const;
 (filesystem TS)
-
 operator const path &amp;() const;
 (filesystem TS)</code></pre> 
 Returns the full path the directory entry refers to. 

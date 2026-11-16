@@ -17,12 +17,12 @@ description: "CREATE USER MAPPING – define a new mapping of a user to a foreig
 <p> The owner of a foreign server can create user mappings for that server for any user. Also, a user can create a user mapping for his own user name if USAGE privilege on the server has been granted to the user.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>username</i></p>
-<dd>The name of an existing user that is mapped to foreign server. CURRENT_USER and USER match the name of the current user. When PUBLIC is specified, a so-called public mapping is created that is used when no user-specific mapping is applicable.</p>
-<dt><i>servername</i></p>
-<dd>The name of an existing server for which the user mapping is to be created.</p>
-<dt><code>OPTIONS ( </code><i>option</i><code> &#8216;</code><i>value</i><code>&#8216; [, &#8230; ] )</code></p>
-<dd>This clause specifies the options of the user mapping. The options typically define the actual user name and password of the mapping. Option names must be unique. The allowed option names and values are specific to the server&#8217;s foreign-data wrapper.</dl>
+<dt><i>username</i></dt>
+<dd>The name of an existing user that is mapped to foreign server. CURRENT_USER and USER match the name of the current user. When PUBLIC is specified, a so-called public mapping is created that is used when no user-specific mapping is applicable.</dd>
+<dt><i>servername</i></dt>
+<dd>The name of an existing server for which the user mapping is to be created.</dd>
+<dt><code>OPTIONS ( </code><i>option</i><code> &#8216;</code><i>value</i><code>&#8216; [, &#8230; ] )</code></dt>
+<dd>This clause specifies the options of the user mapping. The options typically define the actual user name and password of the mapping. Option names must be unique. The allowed option names and values are specific to the server&#8217;s foreign-data wrapper.</dd></dl>
 <h2>Examples</h2>
 <p>Create a user mapping for user bob, server foo: </p>
 <pre>CREATE USER MAPPING FOR bob SERVER foo OPTIONS (user 'bob', password 'secret');</pre>

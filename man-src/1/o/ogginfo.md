@@ -18,14 +18,14 @@ description: "ogginfo – gives information about Ogg files, and does extensive 
 <p> Similarly, for <code>Theora</code> streams, basic information about the video is provided, including frame rate, aspect ratio, bitrate, length, and the comment header. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> Show a help and usage message.</p>
-<dt>-q</p>
-<dd> Quiet mode. This may be specified multiple times. Doing so once will remove the detailed informative messages, twice will remove warnings as well.</p>
-<dt>-v</p>
-<dd> Verbose mode. At the current time, this does not do anything.</p>
-<dt>-V</p>
-<dd> Output version information and exit. </p>
+<dt>-h</dt>
+<dd> Show a help and usage message.</dd>
+<dt>-q</dt>
+<dd> Quiet mode. This may be specified multiple times. Doing so once will remove the detailed informative messages, twice will remove warnings as well.</dd>
+<dt>-v</dt>
+<dd> Verbose mode. At the current time, this does not do anything.</dd>
+<dt>-V</dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Michael Smith &lt;msmith [at] xiph.org&gt; </p>

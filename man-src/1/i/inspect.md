@@ -17,19 +17,17 @@ description: "inspect – Boost code inspection tool"
 <p> If the first program argument is -cvs, only files and directories in the CVS tree of the current directory are scanned. Otherwise all files and sub-directories are included in the scan.</p>
 <dl>
 <dt>
-<dd> Options:</p>
-<dt> <code>-license</code></p>
-<dt> <code>-copyright</code></p>
-<dt> <code>-crlf</code></p>
-<dt> <code>-link</code></p>
-<dt> <code>-path_name</code></p>
-<dt> <code>-tab</code></p>
-<dt> <code>-ascii</code></p>
-<dt> <code>-minmax</code></p>
-<dt> <code>-unnamed</code></p>
-<dt>
-<dd>
-<dd>The default is to have all checks on; otherwise options specify desired checks.</dl>
+</dt><dd> Options:</dd>
+<dt> <code>-license</code></dt>
+<dt> <code>-copyright</code></dt>
+<dt> <code>-crlf</code></dt>
+<dt> <code>-link</code></dt>
+<dt> <code>-path_name</code></dt>
+<dt> <code>-tab</code></dt>
+<dt> <code>-ascii</code></dt>
+<dt> <code>-minmax</code></dt>
+<dt> <code>-unnamed</code></dt>
+<dd>The default is to have all checks on; otherwise options specify desired checks.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>inspect</code> is maintained in HTML; see /usr/share/doc/libboostX.Y-doc/HTML/tools/inspect/index.html </p>
 <h2>Index</h2>

@@ -16,10 +16,10 @@ description: "XmFileSelectionDoSearch — A FileSelectionBox function that initi
 <h2>Description</h2>
 <p><code>XmFileSelectionDoSearch</code> initiates a directory and file search in a FileSelectionBox widget. For a description of the actions that the FileSelectionBox takes when doing a search, see <code><a href="/docs/linux/man/3-xmfileselectionbox/">XmFileSelectionBox</a></code>(3).</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the FileSelectionBox widget ID.</p>
-<dt><i>dirmask</i></p>
-<dd>Specifies the directory mask used in determining the directories and files displayed in the FileSelectionBox lists. This value is used as the <i>mask</i> member of the input data <code>XmFileSelectionBoxCallbackStruct</code> structure passed to the FileSelectionBox&#8217;s <code>XmNqualifySearchDataProc</code>. The <i>dir</i> and <i>pattern</i> members of that structure are NULL.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the FileSelectionBox widget ID.</dd>
+<dt><i>dirmask</i></dt>
+<dd>Specifies the directory mask used in determining the directories and files displayed in the FileSelectionBox lists. This value is used as the <i>mask</i> member of the input data <code>XmFileSelectionBoxCallbackStruct</code> structure passed to the FileSelectionBox&#8217;s <code>XmNqualifySearchDataProc</code>. The <i>dir</i> and <i>pattern</i> members of that structure are NULL.</dd></dl>
 <p> For a complete definition of FileSelectionBox and its associated resources, see <code><a href="/docs/linux/man/3-xmfileselectionbox/">XmFileSelectionBox</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmfileselectionbox/">XmFileSelectionBox</a></code>(3).</p>

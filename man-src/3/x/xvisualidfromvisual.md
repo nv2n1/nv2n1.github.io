@@ -10,29 +10,29 @@ description: "XGetVisualInfo, XMatchVisualInfo, XVisualIDFromVisual, XVisualInfo
 <p>XGetVisualInfo, XMatchVisualInfo, XVisualIDFromVisual, XVisualInfo &#8211; obtain visual information and visual structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XVisualInfo *XGetVisualInfo(Display *<i>display</i>, long <i>vinfo_mask</i>, XVisualInfo *<i>vinfo_template</i>, int *<i>nitems_return</i>);</p>
-<dd>Status XMatchVisualInfo(Display *<i>display</i>, int <i>screen</i>, int <i>depth</i>, int <i>class</i>, XVisualInfo *<i>vinfo_return</i>);</p>
-<dd>VisualID XVisualIDFromVisual(Visual *<i>visual</i>);</dl>
+<dd>XVisualInfo *XGetVisualInfo(Display *<i>display</i>, long <i>vinfo_mask</i>, XVisualInfo *<i>vinfo_template</i>, int *<i>nitems_return</i>);</dd>
+<dd>Status XMatchVisualInfo(Display *<i>display</i>, int <i>screen</i>, int <i>depth</i>, int <i>class</i>, XVisualInfo *<i>vinfo_return</i>);</dd>
+<dd>VisualID XVisualIDFromVisual(Visual *<i>visual</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>class</i></p>
-<dd>Specifies the class of the screen.</p>
-<dt><i>depth</i></p>
-<dd>Specifies the depth of the screen.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>nitems_return</i></p>
-<dd>Returns the number of matching visual structures.</p>
-<dt><i>screen</i></p>
-<dd>Specifies the screen.</p>
-<dt><i>visual</i></p>
-<dd>Specifies the visual type.</p>
-<dt><i>vinfo_mask</i></p>
-<dd>Specifies the visual mask value.</p>
-<dt><i>vinfo_return</i></p>
-<dd>Returns the matched visual information.</p>
-<dt><i>vinfo_template</i></p>
-<dd>Specifies the visual attributes that are to be used in matching the visual structures.</dl>
+<dt><i>class</i></dt>
+<dd>Specifies the class of the screen.</dd>
+<dt><i>depth</i></dt>
+<dd>Specifies the depth of the screen.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>nitems_return</i></dt>
+<dd>Returns the number of matching visual structures.</dd>
+<dt><i>screen</i></dt>
+<dd>Specifies the screen.</dd>
+<dt><i>visual</i></dt>
+<dd>Specifies the visual type.</dd>
+<dt><i>vinfo_mask</i></dt>
+<dd>Specifies the visual mask value.</dd>
+<dt><i>vinfo_return</i></dt>
+<dd>Returns the matched visual information.</dd>
+<dt><i>vinfo_template</i></dt>
+<dd>Specifies the visual attributes that are to be used in matching the visual structures.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XGetVisualInfo</code> function returns a list of visual structures that have attributes equal to the attributes specified by vinfo_template. If no visual structures match the template using the specified vinfo_mask, <code>XGetVisualInfo</code> returns a NULL. To free the data returned by this function, use <code>XFree</code>. </p>
 <p> The <code>XMatchVisualInfo</code> function returns the visual information for a visual that matches the specified depth and class for a screen. Because multiple visuals that match the specified depth and class can exist, the exact visual chosen is undefined. If a visual is found, <code>XMatchVisualInfo</code> returns nonzero and the information on the visual to vinfo_return. Otherwise, when a visual is not found, <code>XMatchVisualInfo</code> returns zero. </p>

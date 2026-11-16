@@ -17,23 +17,23 @@ description: "nwpurge – Permanently delete previously erased files"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> <code>-h</code> is used to print out a short help text.</dl>
+</dt><dd> <code>-h</code> is used to print out a short help text.</dd></dl>
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> <code>-a</code> is used to specify that not only specified directory, but also its subdirectories have to be purged.</dl>
+</dt><dd> <code>-a</code> is used to specify that not only specified directory, but also its subdirectories have to be purged.</dd></dl>
 <p> <code>-l</code></p>
 <dl>
 <dt>
-<dd> <code>-l</code> is used to disable purge. Files are only printed out.</dl>
+</dt><dd> <code>-l</code> is used to disable purge. Files are only printed out.</dd></dl>
 <p> <code>-s</code></p>
 <dl>
 <dt>
-<dd> <code>-s</code> specifies silent mode (no print output, only total is printed).</dl>
+</dt><dd> <code>-s</code> specifies silent mode (no print output, only total is printed).</dd></dl>
 <p> <code>directory</code></p>
 <dl>
 <dt>
-<dd> You can specify the directory in which you want to purge files. Current working directory is used by default. You have to specify path in Linux format, not in NetWare format. </p>
+</dt><dd> You can specify the directory in which you want to purge files. Current working directory is used by default. You have to specify path in Linux format, not in NetWare format. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> nwpurge -a /NetWare/server/sys </p>

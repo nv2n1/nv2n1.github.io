@@ -14,14 +14,14 @@ description: "ata_sas_queuecmd – Issue SCSI cdb to libata-managed device"
 <p><i>cmd</i></p>
 <dl>
 <dd>
-<dd>SCSI command to be sent</dl>
+</dd><dd>SCSI command to be sent</dd></dl>
 <p> <i>ap</i></p>
 <dl>
-<dd>ATA port to which the command is being sent</dl>
+<dd>ATA port to which the command is being sent</dd></dl>
 <h2>Return</h2>
 <p>Return value from <code>__ata_scsi_queuecmd</code> if <i>cmd</i> can be queued, 0 otherwise.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

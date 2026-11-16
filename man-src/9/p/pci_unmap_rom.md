@@ -15,11 +15,11 @@ pci_unmap_rom - unmap the ROM from kernel space
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>pointer to pci device struct</dl>
+<dl><dd></dd><dd>pointer to pci device struct</dd></dl>
  
 
  <i>rom</i>
-<dl><dd>virtual address of the previous mapping</dl>
+<dl><dd>virtual address of the previous mapping</dd></dl>
 
 <h2>Description</h2>
 

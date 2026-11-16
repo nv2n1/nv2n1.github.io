@@ -32,6 +32,6 @@ description: "QuantLib::DriftTermStructure – Drift term structure."
 <p> Drift term structure for modelling the common drift term: riskFreeRate &#8211; dividendYield &#8211; 0.5*vol*vol </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This term structure will remain linked to the original structures, i.e., any changes in the latters will be reflected in this structure as well.</dl>
+<dd>This term structure will remain linked to the original structures, i.e., any changes in the latters will be reflected in this structure as well.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -17,10 +17,10 @@ description: "pamtooctaveimg – convert a Netpbm image to a GNU Octave image"
 <p> <code>pamtooctaveimg</code> reads a Netpbm image as input and produces a GNU Octave image file as output. </p>
 <p> An Octave image file (called &#8216;Octave&#8217;s image format&#8217; in Octave documentation) is a particular kind of Octave data file. It describes two matrices: </p>
 <dl>
-<dt>&bull;</p>
-<dd> the image itself as a list of indexes into a colormap, and</p>
-<dt>&bull;</p>
-<dd> the corresponding colormap as a list of {red, green, blue} triplets. </p>
+<dt>&bull;</dt>
+<dd> the image itself as a list of indexes into a colormap, and</dd>
+<dt>&bull;</dt>
+<dd> the corresponding colormap as a list of {red, green, blue} triplets. </dd>
 </dl>
 <p> An Octave data file is an ASCII text file that you use to import data to Octave. </p>
 <p> See the<br />
@@ -30,7 +30,6 @@ description: "pamtooctaveimg – convert a Netpbm image to a GNU Octave image"
 <p> <i>netpbmfile</i> is the name of the file containing the input PNM or PAM image, or <code>&#8211;</code> to indicate Standard Input. If you don&#8217;t specify <i>netpbmfile</i>, the input is from Standard Input. <code>pamtooctaveimg</code> converts only the first image in the input stream. </p>
 <h2>Examples</h2>
 <pre><code>
-
 % pamtooctaveimg myimage.ppm &gt; myimage.img % octave &gt; [ img, map ] = loadimage("myimage.img");
 #(At this point, img is an X by Y matrix and map is a 3 by M matrix.)
 &gt; imshow(img, map);

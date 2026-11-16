@@ -17,19 +17,19 @@ description: "csscombine – Utility to combine several stylesheets into one."
 <p> <code>csscombine</code> may also be used to change the encoding of the stylesheet if a target encoding is given.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help message and exit.</p>
-<dt><code>-m</code>, <code>&#8211;minify</code></p>
-<dd> Saves minified version of combined files, default is false.</p>
-<dt><code>-s</code><i> SOURCEENCODING</i>, <code>&#8211;sourceencoding</code>=<i>SOURCEENCODING</i></p>
-<dd> Encoding of input, defaulting to &quot;css&quot;. If given, overwrites other encoding information like @charset declarations.</p>
-<dt><code>-t</code><i> TARGETENCODING</i>, <code>&#8211;targetencoding</code>=<i>TARGETENCODING</i></p>
-<dd> Encoding of output, defaulting to &quot;UTF-8&quot;.</p>
-<dt><code>-u</code><i> URL</i>, <code>&#8211;url</code>=<i>URL</i></p>
-<dd> <i>URL</i> to parse, path&#8230; is ignored if <i>URL</i> is given.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help message and exit.</dd>
+<dt><code>-m</code>, <code>&#8211;minify</code></dt>
+<dd> Saves minified version of combined files, default is false.</dd>
+<dt><code>-s</code><i> SOURCEENCODING</i>, <code>&#8211;sourceencoding</code>=<i>SOURCEENCODING</i></dt>
+<dd> Encoding of input, defaulting to &quot;css&quot;. If given, overwrites other encoding information like @charset declarations.</dd>
+<dt><code>-t</code><i> TARGETENCODING</i>, <code>&#8211;targetencoding</code>=<i>TARGETENCODING</i></dt>
+<dd> Encoding of output, defaulting to &quot;UTF-8&quot;.</dd>
+<dt><code>-u</code><i> URL</i>, <code>&#8211;url</code>=<i>URL</i></dt>
+<dd> <i>URL</i> to parse, path&#8230; is ignored if <i>URL</i> is given.</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>/usr/share/doc/python-cssutils-doc/docs/html/docs/index.html</p>
+<dt>/usr/share/doc/python-cssutils-doc/docs/html/docs/index.html</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

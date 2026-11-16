@@ -14,14 +14,14 @@ description: "lwres_conf_init, lwres_conf_clear, lwres_conf_parse, lwres_conf_pr
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
 <dl>
-<dt> <code>void lwres_conf_init(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>);</code></p>
-<dt> <code>void lwres_conf_clear(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>);</code></p>
-<dt> <code>lwres_result_t lwres_conf_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, const char&nbsp;<wbr>*</code><i>filename</i><code>);</code></p>
-<dt> <code>lwres_result_t lwres_conf_print(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, FILE&nbsp;<wbr>*</code><i>fp</i><code>);</code></p>
-<dt> <code>lwres_conf_t * lwres_conf_get(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>);</code></dl>
+<dt> <code>void lwres_conf_init(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>);</code></dt>
+<dt> <code>void lwres_conf_clear(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>);</code></dt>
+<dt> <code>lwres_result_t lwres_conf_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, const char&nbsp;<wbr>*</code><i>filename</i><code>);</code></dt>
+<dt> <code>lwres_result_t lwres_conf_print(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, FILE&nbsp;<wbr>*</code><i>fp</i><code>);</code></dt>
+<dt> <code>lwres_conf_t * lwres_conf_get(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>lwres_conf_init()</code></p>
-<dd>creates an empty <code>lwres_conf_t</code> structure for lightweight resolver context <i>ctx</i>. </p>
+<dd>creates an empty <code>lwres_conf_t</code> structure for lightweight resolver context <i>ctx</i>. </dd>
 <p> <code>lwres_conf_clear()</code> frees up all the internal memory used by that <code>lwres_conf_t</code> structure in resolver context <i>ctx</i>. </p>
 <p> <code>lwres_conf_parse()</code> opens the file <i>filename</i> and parses it to initialise the resolver context <i>ctx</i>&#8216;s <code>lwres_conf_t</code> structure. </p>
 <p> <code>lwres_conf_print()</code> prints the <code>lwres_conf_t</code> structure for resolver context <i>ctx</i> to the <code>FILE</code> <i>fp</i>.</p>

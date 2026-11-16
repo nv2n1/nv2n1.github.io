@@ -71,5 +71,5 @@ description: "globus_i_gass_copy_state_target_s –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus gass copy from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAW">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAW">Author</a></dt>
+<dd></dd></dl>

@@ -17,12 +17,12 @@ description: "omnicpp – OmniORB cpp preprocessor for IDL compiler"
 <h2>OPTIONS</h2>
 <p> As this is just the GNU C preprocessor <code>cpp</code> you can see that program for the full options. Normally you should not be invoking this directly but should use <code>omniidl</code> instead. The options listed here should really be given to <code>omniidl</code>, but they are passed straight to <code>omnicpp</code>.</p>
 <dl>
-<dt><code>-D</code><i>&nbsp;<wbr>name</i></p>
-<dd> Define <i>name</i> for the preprocessor.</p>
-<dt><code>-U</code><i>&nbsp;<wbr>name</i></p>
-<dd> Undefine <i>name</i> for the preprocessor.</p>
-<dt><code>-I</code><i>&nbsp;<wbr>dir</i></p>
-<dd> Include <i>dir</i> in the preprocessor search path. Note that the current directory is not on the include search path by default. Use <i>-I.</i> for that.</dl>
+<dt><code>-D</code><i>&nbsp;<wbr>name</i></dt>
+<dd> Define <i>name</i> for the preprocessor.</dd>
+<dt><code>-U</code><i>&nbsp;<wbr>name</i></dt>
+<dd> Undefine <i>name</i> for the preprocessor.</dd>
+<dt><code>-I</code><i>&nbsp;<wbr>dir</i></dt>
+<dd> Include <i>dir</i> in the preprocessor search path. Note that the current directory is not on the include search path by default. Use <i>-I.</i> for that.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-omniidl/">omniidl</a></code>(1).<br />
  The programs are documented fully by the HTML documentation in the omniorb4-doc package.</p>

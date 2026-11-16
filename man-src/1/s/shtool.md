@@ -18,55 +18,55 @@ description: "GNU shtool – The GNU Portable Shell Tool"
 <h2>GLOBAL OPTIONS</h2>
 <p> The following <i>global options</i> are available for <code>shtool</code>. Any <i>command</i>s are ignored if one of them is present on the <code>shtool</code> command line.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Displays a short help page describing the usage of <code>shtool</code> and it&#8217;s ingredient <i>command</i>s in a compact way.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Displays the version number of <code>shtool</code>.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Displays shell trace messages for debugging purposes.</p>
-<dt><code>-r</code>, <code>&#8211;recreate</code></p>
-<dd> Recreate the <code>shtool</code> script with its own individual <i><a href="/docs/linux/man/1-shtoolize/">shtoolize</a></i>(1) call.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Displays a short help page describing the usage of <code>shtool</code> and it&#8217;s ingredient <i>command</i>s in a compact way.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Displays the version number of <code>shtool</code>.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Displays shell trace messages for debugging purposes.</dd>
+<dt><code>-r</code>, <code>&#8211;recreate</code></dt>
+<dd> Recreate the <code>shtool</code> script with its own individual <i><a href="/docs/linux/man/1-shtoolize/">shtoolize</a></i>(1) call.</dd></dl>
 <h2>COMMANDS</h2>
 <p> The following <i>command</i>s are provided by <code>shtool</code>. They are all called via &quot;<tt>&quot;shtool&quot;</tt> <i>command</i>&quot;. Any command options <i>command_opts</i> and arguments <i>command_args</i> are specific to the particular <i>command</i> and are described in the corresponding manual page <code>shtool_</code><i><a href="/docs/linux/man/1-command/">command</a></i>(1). The commands are listed here sorted by topic, i.e., related commands are listed side-by-side.</p>
 <dl>
-<dt><code>echo</code></p>
-<dd> <i><a href="/docs/linux/man/1-echo/">echo</a></i>(1) style print command providing special expansion constructs (terminal bold mode, environment details, date) and newline control.</p>
-<dt><code>mdate</code></p>
-<dd> Pretty-printing of the last modification time of a file or directory.</p>
-<dt><code>table</code></p>
-<dd> Pretty-printing a field-separated list as a two-dimensional table.</p>
-<dt><code>prop</code></p>
-<dd> Displaying of a processing indication though a running terminal character propeller.</p>
-<dt><code>move</code></p>
-<dd> <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1) style command for renaming/moving multiple files at once and allowing source files just to be deleted if contents did not change.</p>
-<dt><code>install</code></p>
-<dd> <i><a href="/docs/linux/man/1-install/">install</a></i>(1) style command for installing a program, script or data file in a portable way.</p>
-<dt><code>mkdir</code></p>
-<dd> <i><a href="/docs/linux/man/1-mkdir/">mkdir</a></i>(1) style command providing support for automatical parent directory creation, directory permission control and smart skipping if directory already exists.</p>
-<dt><code>mkln</code></p>
-<dd> <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1) style command providing automatic calculation and usage of relative links if possible.</p>
-<dt><code>mkshadow</code></p>
-<dd> Creation of a shadow filesystem tree by the help of symbolic links.</p>
-<dt><code>fixperm</code></p>
-<dd> Fixing of file permissions in a source tree by cleaning up the permission bits.</p>
-<dt><code>rotate</code></p>
-<dd> Rotate a logfile.</p>
-<dt><code>tarball</code></p>
-<dd> Roll standardized distribution tarballs.</p>
-<dt><code>subst</code></p>
-<dd> Apply <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) substitution operations.</p>
-<dt><code>platform</code></p>
-<dd> Determines platform identification information.</p>
-<dt><code>arx</code></p>
-<dd> Extended archive command which can even put existing archives into an archive.</p>
-<dt><code>slo</code></p>
-<dd> Separate linker options by library class.</p>
-<dt><code>scpp</code></p>
-<dd> An additional C source file pre-processor for sharing <i><a href="/docs/linux/man/1-cpp/">cpp</a></i>(1) code, internal variables and internal functions.</p>
-<dt><code>version</code></p>
-<dd> Maintain a version information file in either Text, C/C<font SIZE="-2">++</font>, Perl or Python. format.</p>
-<dt><code>path</code></p>
-<dd> Deal with shell path variables.</dl>
+<dt><code>echo</code></dt>
+<dd> <i><a href="/docs/linux/man/1-echo/">echo</a></i>(1) style print command providing special expansion constructs (terminal bold mode, environment details, date) and newline control.</dd>
+<dt><code>mdate</code></dt>
+<dd> Pretty-printing of the last modification time of a file or directory.</dd>
+<dt><code>table</code></dt>
+<dd> Pretty-printing a field-separated list as a two-dimensional table.</dd>
+<dt><code>prop</code></dt>
+<dd> Displaying of a processing indication though a running terminal character propeller.</dd>
+<dt><code>move</code></dt>
+<dd> <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1) style command for renaming/moving multiple files at once and allowing source files just to be deleted if contents did not change.</dd>
+<dt><code>install</code></dt>
+<dd> <i><a href="/docs/linux/man/1-install/">install</a></i>(1) style command for installing a program, script or data file in a portable way.</dd>
+<dt><code>mkdir</code></dt>
+<dd> <i><a href="/docs/linux/man/1-mkdir/">mkdir</a></i>(1) style command providing support for automatical parent directory creation, directory permission control and smart skipping if directory already exists.</dd>
+<dt><code>mkln</code></dt>
+<dd> <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1) style command providing automatic calculation and usage of relative links if possible.</dd>
+<dt><code>mkshadow</code></dt>
+<dd> Creation of a shadow filesystem tree by the help of symbolic links.</dd>
+<dt><code>fixperm</code></dt>
+<dd> Fixing of file permissions in a source tree by cleaning up the permission bits.</dd>
+<dt><code>rotate</code></dt>
+<dd> Rotate a logfile.</dd>
+<dt><code>tarball</code></dt>
+<dd> Roll standardized distribution tarballs.</dd>
+<dt><code>subst</code></dt>
+<dd> Apply <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) substitution operations.</dd>
+<dt><code>platform</code></dt>
+<dd> Determines platform identification information.</dd>
+<dt><code>arx</code></dt>
+<dd> Extended archive command which can even put existing archives into an archive.</dd>
+<dt><code>slo</code></dt>
+<dd> Separate linker options by library class.</dd>
+<dt><code>scpp</code></dt>
+<dd> An additional C source file pre-processor for sharing <i><a href="/docs/linux/man/1-cpp/">cpp</a></i>(1) code, internal variables and internal functions.</dd>
+<dt><code>version</code></dt>
+<dd> Maintain a version information file in either Text, C/C<font SIZE="-2">++</font>, Perl or Python. format.</dd>
+<dt><code>path</code></dt>
+<dd> Deal with shell path variables.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtoolize/">shtoolize</a></i>(1), <i><a href="/docs/linux/man/1-shtool-arx/">shtool-arx</a></i>(1), <i><a href="/docs/linux/man/1-shtool-echo/">shtool-echo</a></i>(1), <i><a href="/docs/linux/man/1-shtool-fixperm/">shtool-fixperm</a></i>(1), <i><a href="/docs/linux/man/1-shtool-install/">shtool-install</a></i>(1), <i><a href="/docs/linux/man/1-shtool-mdate/">shtool-mdate</a></i>(1), <i><a href="/docs/linux/man/1-shtool-mkdir/">shtool-mkdir</a></i>(1), <i><a href="/docs/linux/man/1-shtool-mkln/">shtool-mkln</a></i>(1), <i><a href="/docs/linux/man/1-shtool-mkshadow/">shtool-mkshadow</a></i>(1), <i><a href="/docs/linux/man/1-shtool-move/">shtool-move</a></i>(1), <i><a href="/docs/linux/man/1-shtool-path/">shtool-path</a></i>(1), <i><a href="/docs/linux/man/1-shtool-platform/">shtool-platform</a></i>(1), <i><a href="/docs/linux/man/1-shtool-prop/">shtool-prop</a></i>(1), <i><a href="/docs/linux/man/1-shtool-rotate/">shtool-rotate</a></i>(1), <i><a href="/docs/linux/man/1-shtool-scpp/">shtool-scpp</a></i>(1), <i><a href="/docs/linux/man/1-shtool-slo/">shtool-slo</a></i>(1), <i><a href="/docs/linux/man/1-shtool-subst/">shtool-subst</a></i>(1), <i><a href="/docs/linux/man/1-shtool-table/">shtool-table</a></i>(1), <i><a href="/docs/linux/man/1-shtool-tarball/">shtool-tarball</a></i>(1), <i><a href="/docs/linux/man/1-shtool-version/">shtool-version</a></i>(1).</p>
 <h2>HISTORY</h2>

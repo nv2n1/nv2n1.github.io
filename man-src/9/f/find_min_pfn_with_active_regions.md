@@ -14,7 +14,7 @@ description: "find_min_pfn_with_active_regions – Find the minimum PFN register
 <p><i>void</i></p>
 <dl>
 <dd>
-<dd>no arguments</dl>
+</dd><dd>no arguments</dd></dl>
 <h2>Description</h2>
 <p>It returns the minimum PFN based on information provided via <code>memblock_set_node</code>.</p>
 <h2>Copyright</h2>

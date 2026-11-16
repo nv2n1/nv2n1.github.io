@@ -16,35 +16,35 @@ description: "yuv2lav – encodes lavtool’s raw YUV frame streams into MJPEG f
 <h2>OPTIONS</h2>
 <p> The command line options allow to specify the output file name, JPEG encoding quality and the amount of memory that will be allocated for JPEG compressed data. </p>
 <dl>
-<dt><code>-o</code><i>&nbsp;<wbr>output-file</i></p>
-<dd> This (compulsorary) option sets the name of the file that yuv2lav will write its output to. If the output file contains a % (e.g. file%02d.avi), the output will be written to multiple files in case this is necessary (file00.avi, file01.avi and so on). </p>
-<dt><code>-f</code><code>&nbsp;<wbr>a</code>|<code>A</code>|<code>q</code></p>
+<dt><code>-o</code><i>&nbsp;<wbr>output-file</i></dt>
+<dd> This (compulsorary) option sets the name of the file that yuv2lav will write its output to. If the output file contains a % (e.g. file%02d.avi), the output will be written to multiple files in case this is necessary (file00.avi, file01.avi and so on). </dd>
+<dt><code>-f</code><code>&nbsp;<wbr>a</code>|<code>A</code>|<code>q</code></dt>
 <dd> This sets the output file format, which has to be one of<br />
  <code>&nbsp;<wbr>a</code> &#8211; for AVI file output,<br />
  <code>&nbsp;<wbr>A</code> &#8211; for AVI with reversed fields,<br />
  <code>&nbsp;<wbr>q</code> &#8211; for Quicktime output or<br />
- AVI with reversed field of course only makes sense if yuv2lav&#8217;s feed is an interlaced video source and should only be needed if you experience frame reversal problems in your output. If you don&#8217;t use that option yuv2lav will set the output format to AVI if the last 3 char are avi, or to Quicktime if you use mov. If you use the -f option it overides the setting in the filename</p>
-<dt><code>-q</code><i>&nbsp;<wbr>num</i></p>
-<dd> This option specifies the JPEG encoding quality as passed through to libjpeg. The default value is 80, <i>num</i> must lie within 24&#8230;100 inclusive (think of it as percentage values, although with a lossy compression algorithm like JPEG, keeping 100% of the original quality is of course not really possible). </p>
-<dt><code>-b</code><i>&nbsp;<wbr>num</i></p>
-<dd> This option specifies the size of the buffer (in kBytes) that yuv2lav allocates in order to store the compressed JPEG data in it. The default value (256k) is perfectly enough for 100% quality full sized PAL/NTSC, but if you want to compress Super-Mega-HDTV or if you are low on memory, you can use this option to suit your needs. </p>
-<dt><code>-m</code><i>&nbsp;<wbr>num</i></p>
-<dd> This is the maximum size (in MB) per file. Normally this depends on the output file type. </p>
-<dt><code>-I</code><i>&nbsp;<wbr>num</i></p>
-<dd> Force a specific interlacing type. 0 means no interlacing, 1 means top-field-first, 2 means bottom-field-first. </p>
-<dt><code>-w</code><i>&nbsp;<wbr>file</i></p>
-<dd> This is the WAV file containing audio data to be combined with the video stream into the output file. </p>
-<dt><code>-v</code><i>&nbsp;<wbr>num</i></p>
-<dd> Verbosity level. 0 means only print error messages, 2 prints full debug output. </p>
-<dt><code>-?</code></p>
-<dd> Display a synopsis of the command syntax. </p>
+ AVI with reversed field of course only makes sense if yuv2lav&#8217;s feed is an interlaced video source and should only be needed if you experience frame reversal problems in your output. If you don&#8217;t use that option yuv2lav will set the output format to AVI if the last 3 char are avi, or to Quicktime if you use mov. If you use the -f option it overides the setting in the filename</dd>
+<dt><code>-q</code><i>&nbsp;<wbr>num</i></dt>
+<dd> This option specifies the JPEG encoding quality as passed through to libjpeg. The default value is 80, <i>num</i> must lie within 24&#8230;100 inclusive (think of it as percentage values, although with a lossy compression algorithm like JPEG, keeping 100% of the original quality is of course not really possible). </dd>
+<dt><code>-b</code><i>&nbsp;<wbr>num</i></dt>
+<dd> This option specifies the size of the buffer (in kBytes) that yuv2lav allocates in order to store the compressed JPEG data in it. The default value (256k) is perfectly enough for 100% quality full sized PAL/NTSC, but if you want to compress Super-Mega-HDTV or if you are low on memory, you can use this option to suit your needs. </dd>
+<dt><code>-m</code><i>&nbsp;<wbr>num</i></dt>
+<dd> This is the maximum size (in MB) per file. Normally this depends on the output file type. </dd>
+<dt><code>-I</code><i>&nbsp;<wbr>num</i></dt>
+<dd> Force a specific interlacing type. 0 means no interlacing, 1 means top-field-first, 2 means bottom-field-first. </dd>
+<dt><code>-w</code><i>&nbsp;<wbr>file</i></dt>
+<dd> This is the WAV file containing audio data to be combined with the video stream into the output file. </dd>
+<dt><code>-v</code><i>&nbsp;<wbr>num</i></dt>
+<dd> Verbosity level. 0 means only print error messages, 2 prints full debug output. </dd>
+<dt><code>-?</code></dt>
+<dd> Display a synopsis of the command syntax. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>lav2yuv movie.avi | yuv2lav -fq -q 30 lowbitrate.qt</p>
-<dd> would recompress movie.avi as a low bit rate Quicktime file.</p>
-<dt>lavpipe input.pli | yuv2lav -q80 output.avi</p>
-<dd> would save the movie assembled by lavpipe as a single AVI file. </p>
+<dt>lav2yuv movie.avi | yuv2lav -fq -q 30 lowbitrate.qt</dt>
+<dd> would recompress movie.avi as a low bit rate Quicktime file.</dd>
+<dt>lavpipe input.pli | yuv2lav -q80 output.avi</dt>
+<dd> would save the movie assembled by lavpipe as a single AVI file. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> If you experience any problems with this tool, please feel free to contact the developers (see below). </p>

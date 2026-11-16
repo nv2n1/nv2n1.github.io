@@ -39,7 +39,8 @@ This guards against portability problems when updating the PAPI shared libraries
 <p>&nbsp;<wbr><code>PAPI_is_initialized()</code>&nbsp;<wbr>returns the status of the PAPI library. The PAPI library can be in one of four states, as described under RETURN VALUES.&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>PAPI </p>
+<dd>PAPI </dd>
 <p> <code>PAPI_thread_init</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

@@ -16,18 +16,18 @@ description: "fusermount3 – mount and unmount FUSE filesystems"
 <p> <code>fusermount3</code> is a program to mount and unmount FUSE filesystems. It should be called directly only for unmounting FUSE file systems. To allow mounting and unmounting by unprivileged users, <code>fusermount3</code> needs to be installed set-uid root.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> print help.</p>
-<dt>-V</p>
-<dd> print version.</p>
-<dt>-o <i>OPTION</i>[,<i>OPTION</i>&#8230;]</p>
-<dd> mount options.</p>
-<dt>-u</p>
-<dd> unmount.</p>
-<dt>-q</p>
-<dd> quiet.</p>
-<dt>-z</p>
-<dd> lazy unmount. </p>
+<dt>-h</dt>
+<dd> print help.</dd>
+<dt>-V</dt>
+<dd> print version.</dd>
+<dt>-o <i>OPTION</i>[,<i>OPTION</i>&#8230;]</dt>
+<dd> mount options.</dd>
+<dt>-u</dt>
+<dd> unmount.</dd>
+<dt>-q</dt>
+<dd> quiet.</dd>
+<dt>-z</dt>
+<dd> lazy unmount. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-mount/">mount</a></i>(8), <i><a href="/docs/linux/man/8-mount-fuse3/">mount.fuse3</a></i>(8), <i><a href="/docs/linux/man/4-fuse/">fuse</a></i>(4), </p>

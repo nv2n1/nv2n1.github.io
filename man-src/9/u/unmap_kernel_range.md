@@ -14,10 +14,10 @@ description: "unmap_kernel_range – unmap kernel VM area and flush cache and TL
 <p><i>addr</i></p>
 <dl>
 <dd>
-<dd>start of the VM area to unmap</dl>
+</dd><dd>start of the VM area to unmap</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of the VM area to unmap</dl>
+<dd>size of the VM area to unmap</dd></dl>
 <h2>Description</h2>
 <p>Similar to <code>unmap_kernel_range_noflush</code> but flushes vcache before the unmapping and tlb after.</p>
 <h2>Copyright</h2>

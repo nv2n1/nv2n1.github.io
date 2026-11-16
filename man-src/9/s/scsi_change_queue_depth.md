@@ -14,17 +14,17 @@ description: "scsi_change_queue_depth – change a device’s queue depth"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>SCSI Device in question</dl>
+</dd><dd>SCSI Device in question</dd></dl>
 <p> <i>depth</i></p>
 <dl>
-<dd>number of commands allowed to be queued to the driver</dl>
+<dd>number of commands allowed to be queued to the driver</dd></dl>
 <h2>Description</h2>
 <p>Sets the device queue depth and returns the new value.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -16,14 +16,14 @@ description: "saidar – a curses-based tool for viewing system statistics"
 <h2>OPTIONS</h2>
 <p> The following options are supported.</p>
 <dl>
-<dt><code>-d</code> <i>DELAY</i></p>
-<dd> Wait DELAY seconds between updates (default 3)</p>
-<dt><code>-c</code></p>
-<dd> Enables coloured output</p>
-<dt><code>-v</code></p>
-<dd> Prints the version number</p>
-<dt><code>-h</code></p>
-<dd> Display help and exits</dl>
+<dt><code>-d</code> <i>DELAY</i></dt>
+<dd> Wait DELAY seconds between updates (default 3)</dd>
+<dt><code>-c</code></dt>
+<dd> Enables coloured output</dd>
+<dt><code>-v</code></dt>
+<dd> Prints the version number</dd>
+<dt><code>-h</code></dt>
+<dd> Display help and exits</dd></dl>
 <h2>COLOURED OUTPUT</h2>
 <p> When the <code>-c</code> option is used saidar uses colours to display the data. Each area has a different colour to distinguish it from the nearby fields. Bold and reverse video effects are used to emphasis fields where necessary. </p>
 <p> The load average figures are displayed in bold when they&#8217;re notably (greater that 1) different to each other. This purely shows that a change in the load is occurring. </p>

@@ -20,47 +20,47 @@ description: "dnscrypt-proxy – A DNSCrypt forwarder"
 <p> Intead, run a DNS cache like <code>Unbound</code>, and configure it to use <code>dnscrypt-proxy</code> as a forwarder. Both can safely run on the same machine as long as they use different IP addresses and/or different ports.</p>
 <h2>Options</h2>
 <dl>
-<dt>&bull;</p>
-<dd><code>-a</code>, <code>&#8211;local-address=&lt;ip&gt;[:port]</code>: what local IP the daemon will listen to, with an optional port. The default port is 53.</p>
-<dt>&bull;</p>
-<dd><code>-d</code>, <code>&#8211;daemonize</code>: detach from the current terminal and run the server in background.</p>
-<dt>&bull;</p>
-<dd><code>-E</code>, <code>&#8211;ephemeral-keys</code>: By default, queries are always sent with the same public key, allowing providers to link this public key to the different IP addresses you are using. This option requires extra CPU cycles, but mitigates this by computing an ephemeral key pair for every query.</p>
-<dt>&bull;</p>
-<dd><code>-e</code>, <code>&#8211;edns-payload-size=&lt;bytes&gt;</code>: transparently add an OPT pseudo-RR to outgoing queries in order to enable the EDNS0 extension mechanism. The payload size is the size of the largest response we accept from the resolver before retrying over TCP. This feature is enabled by default, with a payload size of 1252 bytes. Any value below 512 disables it.</p>
-<dt>&bull;</p>
-<dd><code>-h</code>, <code>&#8211;help</code>: show usage.</p>
-<dt>&bull;</p>
-<dd><code>-k</code>, <code>&#8211;provider-key=&lt;key&gt;</code>: specify the provider public key (see below).</p>
-<dt>&bull;</p>
-<dd><code>-K</code>, <code>&#8211;client-key=&lt;file&gt;</code>: use a static client secret key stored in <code>&lt;file&gt;</code>.</p>
-<dt>&bull;</p>
-<dd><code>-L</code>, <code>&#8211;resolvers-list=&lt;file&gt;</code>: path to the CSV file containing the list of available resolvers, and the parameters to use them.</p>
-<dt>&bull;</p>
-<dd><code>-l</code>, <code>&#8211;logfile=&lt;file&gt;</code>: log events to this file instead of the standard output.</p>
-<dt>&bull;</p>
-<dd><code>-m</code>, <code>&#8211;loglevel=&lt;level&gt;</code>: don&#8217;t log events with priority above this level after the service has been started up. Default is <code>6</code>, the value for <code>LOG_INFO</code>. Valid values are <code>0</code> (system is unusable), <code>1</code> (action must be taken immediately), <code>2</code> (critical conditions), <code>3</code> (error conditions), <code>4</code> (warning conditions), <code>5</code> (normal but significant condition), <code>6</code> (informational) and <code>7</code> (debug-level messages).</p>
-<dt>&bull;</p>
-<dd><code>-n</code>, <code>&#8211;max-active-requests=&lt;count&gt;</code>: set the maximum number of simultaneous active requests. The default value is 250.</p>
-<dt>&bull;</p>
-<dd><code>-p</code>, <code>&#8211;pidfile=&lt;file&gt;</code>: write the PID number to a file.</p>
-<dt>&bull;</p>
-<dd><code>-R</code>, <code>&#8211;resolver-name=&lt;name&gt;</code>: name of the resolver to use, from the list of available resolvers (see <code>-L</code>).</p>
-<dt>&bull;</p>
-<dd><code>-r</code>, <code>&#8211;resolver-address=&lt;ip&gt;[:port]</code>: a DNSCrypt-capable resolver IP address with an optional port. The default port is 443.</p>
-<dt>&bull;</p>
-<dd>-S, &#8211;syslog: if a log file hasn&#8217;t been set, log diagnostic messages to syslog instead of printing them. &#8211;daemonize implies &#8211;syslog.</p>
-<dt>&bull;</p>
-<dd><code>-t</code>, <code>&#8211;test=&lt;margin&gt;</code>: don&#8217;t actually start the proxy, but check that a valid certificate can be retrieved from the server and that it will remain valid for the next <i>margin</i> minutes. The exit code is 0 if a valid certificate can be used, 2 if no valid certificates can be used, 3 if a timeout occurred, and 4 if a currently valid certificate is going to expire before <i>margin</i>. The margin is always specificied in minutes.</p>
-<dt>&bull;</p>
-<dd><code>-u</code>, <code>&#8211;user=&lt;user name&gt;</code>: <a href="/docs/linux/man/2-chroot/">chroot</a>(2) to this user&#8217;s home directory and drop privileges.</p>
-<dt>&bull;</p>
-<dd><code>-N</code>, <code>&#8211;provider-name=&lt;FQDN&gt;</code>: the fully-qualified name of the dnscrypt certificate provider.</p>
-<dt>&bull;</p>
-<dd><code>-T</code>, <code>&#8211;tcp-only</code>: always use TCP. A connection made using UDP will get a truncated response, so that the (stub) resolver retries using TCP.</p>
-<dt>&bull;</p>
-<dd><code>-V</code>, <code>&#8211;version</code>: show version number.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><code>-a</code>, <code>&#8211;local-address=&lt;ip&gt;[:port]</code>: what local IP the daemon will listen to, with an optional port. The default port is 53.</dd>
+<dt>&bull;</dt>
+<dd><code>-d</code>, <code>&#8211;daemonize</code>: detach from the current terminal and run the server in background.</dd>
+<dt>&bull;</dt>
+<dd><code>-E</code>, <code>&#8211;ephemeral-keys</code>: By default, queries are always sent with the same public key, allowing providers to link this public key to the different IP addresses you are using. This option requires extra CPU cycles, but mitigates this by computing an ephemeral key pair for every query.</dd>
+<dt>&bull;</dt>
+<dd><code>-e</code>, <code>&#8211;edns-payload-size=&lt;bytes&gt;</code>: transparently add an OPT pseudo-RR to outgoing queries in order to enable the EDNS0 extension mechanism. The payload size is the size of the largest response we accept from the resolver before retrying over TCP. This feature is enabled by default, with a payload size of 1252 bytes. Any value below 512 disables it.</dd>
+<dt>&bull;</dt>
+<dd><code>-h</code>, <code>&#8211;help</code>: show usage.</dd>
+<dt>&bull;</dt>
+<dd><code>-k</code>, <code>&#8211;provider-key=&lt;key&gt;</code>: specify the provider public key (see below).</dd>
+<dt>&bull;</dt>
+<dd><code>-K</code>, <code>&#8211;client-key=&lt;file&gt;</code>: use a static client secret key stored in <code>&lt;file&gt;</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>-L</code>, <code>&#8211;resolvers-list=&lt;file&gt;</code>: path to the CSV file containing the list of available resolvers, and the parameters to use them.</dd>
+<dt>&bull;</dt>
+<dd><code>-l</code>, <code>&#8211;logfile=&lt;file&gt;</code>: log events to this file instead of the standard output.</dd>
+<dt>&bull;</dt>
+<dd><code>-m</code>, <code>&#8211;loglevel=&lt;level&gt;</code>: don&#8217;t log events with priority above this level after the service has been started up. Default is <code>6</code>, the value for <code>LOG_INFO</code>. Valid values are <code>0</code> (system is unusable), <code>1</code> (action must be taken immediately), <code>2</code> (critical conditions), <code>3</code> (error conditions), <code>4</code> (warning conditions), <code>5</code> (normal but significant condition), <code>6</code> (informational) and <code>7</code> (debug-level messages).</dd>
+<dt>&bull;</dt>
+<dd><code>-n</code>, <code>&#8211;max-active-requests=&lt;count&gt;</code>: set the maximum number of simultaneous active requests. The default value is 250.</dd>
+<dt>&bull;</dt>
+<dd><code>-p</code>, <code>&#8211;pidfile=&lt;file&gt;</code>: write the PID number to a file.</dd>
+<dt>&bull;</dt>
+<dd><code>-R</code>, <code>&#8211;resolver-name=&lt;name&gt;</code>: name of the resolver to use, from the list of available resolvers (see <code>-L</code>).</dd>
+<dt>&bull;</dt>
+<dd><code>-r</code>, <code>&#8211;resolver-address=&lt;ip&gt;[:port]</code>: a DNSCrypt-capable resolver IP address with an optional port. The default port is 443.</dd>
+<dt>&bull;</dt>
+<dd>-S, &#8211;syslog: if a log file hasn&#8217;t been set, log diagnostic messages to syslog instead of printing them. &#8211;daemonize implies &#8211;syslog.</dd>
+<dt>&bull;</dt>
+<dd><code>-t</code>, <code>&#8211;test=&lt;margin&gt;</code>: don&#8217;t actually start the proxy, but check that a valid certificate can be retrieved from the server and that it will remain valid for the next <i>margin</i> minutes. The exit code is 0 if a valid certificate can be used, 2 if no valid certificates can be used, 3 if a timeout occurred, and 4 if a currently valid certificate is going to expire before <i>margin</i>. The margin is always specificied in minutes.</dd>
+<dt>&bull;</dt>
+<dd><code>-u</code>, <code>&#8211;user=&lt;user name&gt;</code>: <a href="/docs/linux/man/2-chroot/">chroot</a>(2) to this user&#8217;s home directory and drop privileges.</dd>
+<dt>&bull;</dt>
+<dd><code>-N</code>, <code>&#8211;provider-name=&lt;FQDN&gt;</code>: the fully-qualified name of the dnscrypt certificate provider.</dd>
+<dt>&bull;</dt>
+<dd><code>-T</code>, <code>&#8211;tcp-only</code>: always use TCP. A connection made using UDP will get a truncated response, so that the (stub) resolver retries using TCP.</dd>
+<dt>&bull;</dt>
+<dd><code>-V</code>, <code>&#8211;version</code>: show version number.</dd>
+<dd></dd></dl>
 <p> A public key is 256-bit long, and it has to be specified as a hexadecimal string, with optional columns.</p>
 <h2>Common Usage Example</h2>
 <pre>$ dnscrypt-proxy --daemonize --resolver-name=...</pre>

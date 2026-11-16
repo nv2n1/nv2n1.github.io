@@ -17,21 +17,21 @@ description: "hpcopy — copy files from an HFS+ volume"
 <p> Since Macintosh files contain two forks, which are not representably in Unix file systems, copies use one of several translation modes:<br />
 &nbsp;</p>
 <dl>
-<dt><code>-m</code></p>
+<dt><code>-m</code></dt>
 <dd> <code>Mac Binary II</code> is a format for binary file transfer. Both forks of the Macintosh file are preserved. This is the recommended mode for transferring arbitrary Macintosh files.<br />
-&nbsp;</p>
-<dt><code>-b</code></p>
+&nbsp;</dd>
+<dt><code>-b</code></dt>
 <dd> <code>BinHex</code> also preserves both forks of the Macintosh file. In addition, the encoded file contains only ASCII characters, making it suitable for electronic mail transmission.<br />
-&nbsp;</p>
-<dt><code>-t</code></p>
+&nbsp;</dd>
+<dt><code>-t</code></dt>
 <dd> <code>Text</code> copies only the data fork of the Macintosh file, while the contents of the resource fork are lost. In addition, this mode translates end-of-line characters. This translation should be used for text files.<br />
-&nbsp;</p>
-<dt><code>-r</code></p>
+&nbsp;</dd>
+<dt><code>-r</code></dt>
 <dd> <code>Raw Data</code> copies only the data fork of the Macintosh file, while the contents of the resource fork are lost.<br />
-&nbsp;</p>
-<dt><code>-a</code></p>
+&nbsp;</dd>
+<dt><code>-a</code></dt>
 <dd> <code>Automatic</code> mode applies a set of predefined heuristics to determine the appropriate translation. This is the default if no mode is specified.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>See also</h2>
 <p> <a href="/docs/linux/man/7-hfsplus/">hfsplus</a>(7), <a href="/docs/linux/man/1-hpmount/">hpmount</a>(1), <a href="/docs/linux/man/1-hpls/">hpls</a>(1), <a href="/docs/linux/man/1-hpcd/">hpcd</a>(1), <a href="/docs/linux/man/1-hprm/">hprm</a>(1), <a href="/docs/linux/man/1-hpmkdir/">hpmkdir</a>(1), <a href="/docs/linux/man/1-hppwd/">hppwd</a>(1), <a href="/docs/linux/man/1-hpumount/">hpumount</a>(1), <a href="/docs/linux/man/1-hpfsck/">hpfsck</a>(1).<br />
 &nbsp;</p>

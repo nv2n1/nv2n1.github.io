@@ -11,16 +11,16 @@ description: "XkbResizeKeyActions – Change the number of actions bound to a ke
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbAction * XkbResizeKeyActions</code> <code>(XkbDescRec *</code><i>xkb</i><code>,</code> <code>int </code><i>key</i><code>,</code> <code>int </code><i>needed</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description to change</p>
-<dt><i>&#8211; key</i></p>
-<dd>keycode of key to change</p>
-<dt><i>&#8211; needed</i></p>
-<dd>new number of actions required</dl>
+</dd><dd>keyboard description to change</dd>
+<dt><i>&#8211; key</i></dt>
+<dd>keycode of key to change</dd>
+<dt><i>&#8211; needed</i></dt>
+<dd>new number of actions required</dd></dl>
 <h2>Description</h2>
 <p>The <i>xkb </i> parameter points to the keyboard description containing the <i>key </i> whose number of actions is to be changed. The <i>key </i> parameter is the keycode of the key to change, and needed specifies the new number of actions required for the key. </p>
 <p> <i>XkbResizeKeyActions </i> reserves the space needed for the actions and returns a pointer to the beginning of the new array that holds the actions. It can change the <i>acts, num_acts, </i> and <i>size_acts </i> fields of <i>xkb-&gt;server </i> if it is necessary to reallocate the <i>acts </i> array. </p>

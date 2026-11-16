@@ -21,9 +21,9 @@ CALL STSETR (CNM,RVL)
 <h2>Description</h2>
 
 <dl><dt>CNM
-<dd>(CHARACTER, input) is the name of a parameter to be given a real value. Only the first three characters of CNM are examined. The three characters may either be entirely upper or entirely lower case; mixed case is not recognized. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of 'DFM', use 'DFM - Differential Magnitude'.
-<dt>RVL
-<dd>(REAL, input) is an expression, the value of which is to be given to the parameter specified by CNM.</dl>
+</dt><dd>(CHARACTER, input) is the name of a parameter to be given a real value. Only the first three characters of CNM are examined. The three characters may either be entirely upper or entirely lower case; mixed case is not recognized. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of 'DFM', use 'DFM - Differential Magnitude'.
+</dd><dt>RVL
+</dt><dd>(REAL, input) is an expression, the value of which is to be given to the parameter specified by CNM.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -17,12 +17,12 @@ description: "XmContainerReorder — Container widget function to reorder childr
 <h2>Description</h2>
 <p><code>XmContainerReorder</code> obtains the <code>XmNpositionIndex</code> constraint resources of each widget specified in <i>widgets</i>, sorts them in ascending order, and inserts the <code>XmNpositionIndex</code> constraint resources in the new order into each widget. If the <code>XmNlayoutType</code> resource of Container is <code>XmOUTLINE</code> or <code>XmDETAIL</code>, <code>XmContainerReorder</code> will force a layout of all items.</p>
 <dl COMPACT>
-<dt><i>container</i></p>
-<dd>Specifies the Container widget ID.</p>
-<dt><i>widgets</i></p>
-<dd>Specifies an array of widget children of <i>container</i>.</p>
-<dt><i>num_widgets</i></p>
-<dd>Specifies the number of items in the <i>widgets</i> array.</dl>
+<dt><i>container</i></dt>
+<dd>Specifies the Container widget ID.</dd>
+<dt><i>widgets</i></dt>
+<dd>Specifies an array of widget children of <i>container</i>.</dd>
+<dt><i>num_widgets</i></dt>
+<dd>Specifies the number of items in the <i>widgets</i> array.</dd></dl>
 <p> For a complete definition of Container and its associated resources, see <code><a href="/docs/linux/man/3-xmcontainer/">XmContainer</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmcontainer/">XmContainer</a></code>(3).</p>

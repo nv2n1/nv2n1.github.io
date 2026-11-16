@@ -32,10 +32,10 @@ description: "clalsd.f –"
  which subtract like the Cray XMP, Cray YMP, Cray C 90, or Cray 2.
  It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': D and E define an upper bidiagonal matrix.
  = 'L': D and E define a lower bidiagonal matrix.</pre>
@@ -100,18 +100,19 @@ description: "clalsd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </p>
+<dd>Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 186 of file clalsd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

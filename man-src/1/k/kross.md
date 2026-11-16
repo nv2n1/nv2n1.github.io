@@ -11,44 +11,44 @@ description: "kross – KDE application to run kross scripts."
 <p> kross &#8211; KDE application to run kross scripts. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>kross</code> [&#8211;help] [Generic-options] [Qt-options] [KDE-options] [file &#8230;]</dl>
+<dt> <code>kross</code> [&#8211;help] [Generic-options] [Qt-options] [KDE-options] [file &#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>kross</code></p>
-<dd>executes kross scripts written in KDE Javascript, Python, Ruby, Java and Falcon.</p>
+<dd>executes kross scripts written in KDE Javascript, Python, Ruby, Java and Falcon.</dd>
 <h2>GENERIC OPTIONS</h2>
 <p> <code>&#8211;author</code></p>
 <dl>
 <dt>
-<dd> Show author information.</dl>
+</dt><dd> Show author information.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help about options.</dl>
+</dt><dd> Show help about options.</dd></dl>
 <p> <code>&#8211;help-all</code></p>
 <dl>
 <dt>
-<dd> Show all options.</dl>
+</dt><dd> Show all options.</dd></dl>
 <p> <code>&#8211;help-kde</code></p>
 <dl>
 <dt>
-<dd> Show KDE specific options.</dl>
+</dt><dd> Show KDE specific options.</dd></dl>
 <p> <code>&#8211;help-qt</code></p>
 <dl>
 <dt>
-<dd> Show Qt specific options.</dl>
+</dt><dd> Show Qt specific options.</dd></dl>
 <p> <code>&#8211;license</code></p>
 <dl>
 <dt>
-<dd> Show license information.</dl>
+</dt><dd> Show license information.</dd></dl>
 <p> <code>-v</code><code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Show version information</dl>
+</dt><dd> Show version information</dd></dl>
 <h2>APPLICATION OPTIONS</h2>
 <p> <code>file</code>&#8230;</p>
 <dl>
 <dt>
-<dd> The files with the scripts to run.</dl>
+</dt><dd> The files with the scripts to run.</dd></dl>
 <h2>USAGE</h2>
 <p> <code>kross</code><i>file</i> runs the script in <i>file</i> after loading the interpreter plugin for the script language (detected by filename suffix). </p>
 <p> To interpret other languages than KDE Javascript, <i>kdebindings</i> must be installed.</p>
@@ -61,13 +61,13 @@ description: "kross – KDE application to run kross scripts."
 <p> <code>Sebastian Sauer</code> &lt;mail [at] dipe.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> bugs.kde.org</p>
+<dt> 1.</dt>
+<dd> bugs.kde.org</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dl>
+</dt><dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dd></dl>
 </dl>
 <h2>Index</h2>

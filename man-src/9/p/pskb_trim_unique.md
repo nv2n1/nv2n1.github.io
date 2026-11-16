@@ -15,11 +15,11 @@ pskb_trim_unique - remove end from a paged unique (not cloned) buffer
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to alter</dl>
+<dl><dd></dd><dd>buffer to alter</dd></dl>
  
 
  <i>len</i>
-<dl><dd>new length</dl>
+<dl><dd>new length</dd></dl>
 
 <h2>Description</h2>
 

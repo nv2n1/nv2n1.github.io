@@ -14,7 +14,7 @@ description: "splice_from_pipe_begin – start splicing from pipe"
 <p><i>sd</i></p>
 <dl>
 <dd>
-<dd>information about the splice operation</dl>
+</dd><dd>information about the splice operation</dd></dl>
 <h2>Description</h2>
 <p>This function should be called before a loop containing <code>splice_from_pipe_next</code> and <code>splice_from_pipe_feed</code> to initialize the necessary fields of <i>sd</i>.</p>
 <h2>Copyright</h2>

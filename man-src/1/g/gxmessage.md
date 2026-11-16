@@ -18,15 +18,15 @@ description: "gxmessage – a GTK-based xmessage clone"
 <h2>OPTIONS</h2>
 <p> <code>gxmessage</code> should accept any option <code>xmessage</code> would, although some (such as <code>-bw</code> and <code>-xrm</code>) are silently ignored. Options supported by <code>gxmessage</code> are as follows:</p>
 <dl>
-<dt><code>-bg</code> <i>COLOR</i></p>
+<dt><code>-bg</code> <i>COLOR</i></dt>
 <dd>
- Sets the background color of the message to <i>COLOR</i>. Examples: red, &quot;#c90&quot;, &quot;#446a7e&quot;.</p>
-<dt><code>-borderless</code></p>
+ Sets the background color of the message to <i>COLOR</i>. Examples: red, &quot;#c90&quot;, &quot;#446a7e&quot;.</dd>
+<dt><code>-borderless</code></dt>
 <dd>
- Opens the <code>gxmessage</code> window without the usual window frame. This option is not compatible with <code>xmessage</code>.</p>
-<dt><code>-buttons</code> <i>BUTTON_LIST</i></p>
+ Opens the <code>gxmessage</code> window without the usual window frame. This option is not compatible with <code>xmessage</code>.</dd>
+<dt><code>-buttons</code> <i>BUTTON_LIST</i></dt>
 <dd>
- Defines the buttons to be created. <i>BUTTON_LIST</i> is a comma-separated list of <i>LABEL</i><code>:</code><i>VALUE</i> pairs, one for each button. The <i>LABEL</i> is the text that appears on the button. The <i>VALUE</i> (0..255) is the code the program will exit with if that button is pressed. Commas and colons can be escaped using backslashes (\). As well as ordinary text, the <i>LABEL</i> can specify a GTK &quot;stock&quot; button, like &quot;GTK_STOCK_CANCEL&quot;, or it can include an underscore (_) to specify a keyboard accelerator. If <i>VALUE</i>s are omitted, they default to 101, 102, 103, etc., in order. If no <code>-buttons</code> option is given, <i>BUTTON_LIST</i> defaults to <code>&quot;okay:0&quot;</code>. </p>
+ Defines the buttons to be created. <i>BUTTON_LIST</i> is a comma-separated list of <i>LABEL</i><code>:</code><i>VALUE</i> pairs, one for each button. The <i>LABEL</i> is the text that appears on the button. The <i>VALUE</i> (0..255) is the code the program will exit with if that button is pressed. Commas and colons can be escaped using backslashes (\). As well as ordinary text, the <i>LABEL</i> can specify a GTK &quot;stock&quot; button, like &quot;GTK_STOCK_CANCEL&quot;, or it can include an underscore (_) to specify a keyboard accelerator. If <i>VALUE</i>s are omitted, they default to 101, 102, 103, etc., in order. If no <code>-buttons</code> option is given, <i>BUTTON_LIST</i> defaults to <code>&quot;okay:0&quot;</code>. </dd>
 <pre>
 gxmessage -buttons &quot;Foo:42,Bar:63&quot; &quot;Example&quot;
 echo $?
@@ -38,66 +38,66 @@ gxmessage -buttons &quot;GTK_STOCK_OK:0&quot; &quot;Example&quot;
 echo $?
 gxmessage -buttons &quot;Hello\, world&quot; &quot;Example&quot;
 </pre>
-<dt><code>-center</code></p>
+<dt><code>-center</code></dt>
 <dd>
- Opens the <code>gxmessage</code> window in the middle of the screen.</p>
-<dt><code>-default</code> <i>LABEL</i></p>
+ Opens the <code>gxmessage</code> window in the middle of the screen.</dd>
+<dt><code>-default</code> <i>LABEL</i></dt>
 <dd>
- Opens the <code>gxmessage</code> window with input focused on the specified button. <i>LABEL</i> is one of the <i>LABEL</i>s in <i>BUTTON_LIST</i> (see <code>-buttons</code>, above).</p>
-<dt><code>-display</code> <i>DISPLAY</i></p>
+ Opens the <code>gxmessage</code> window with input focused on the specified button. <i>LABEL</i> is one of the <i>LABEL</i>s in <i>BUTTON_LIST</i> (see <code>-buttons</code>, above).</dd>
+<dt><code>-display</code> <i>DISPLAY</i></dt>
 <dd>
- Specifies the X display to use.</p>
-<dt><code>-encoding</code> <i>CHARSET</i></p>
+ Specifies the X display to use.</dd>
+<dt><code>-encoding</code> <i>CHARSET</i></dt>
 <dd>
- Specifies the encoding of the message text. By default, the message text is assumed to match the encoding of the current locale. This option is not compatible with <code>xmessage</code>.</p>
-<dt><code>-entry</code></p>
+ Specifies the encoding of the message text. By default, the message text is assumed to match the encoding of the current locale. This option is not compatible with <code>xmessage</code>.</dd>
+<dt><code>-entry</code></dt>
 <dd>
- Adds a text entry box to the <code>gxmessage</code> window. When the window closes, any text in the entry box will be copied to <i>stdout</i>. This option is not compatible with <code>xmessage</code> and can&#8217;t be used at the same time as the <code>-print</code> option.</p>
-<dt><code>-entrytext</code> <i>TEXT</i></p>
+ Adds a text entry box to the <code>gxmessage</code> window. When the window closes, any text in the entry box will be copied to <i>stdout</i>. This option is not compatible with <code>xmessage</code> and can&#8217;t be used at the same time as the <code>-print</code> option.</dd>
+<dt><code>-entrytext</code> <i>TEXT</i></dt>
 <dd>
- Same as <code>-entry</code>, but sets the default entry box contents to <i>TEXT</i>. This option is not compatible with <code>xmessage</code>.</p>
-<dt><code>-fg</code> <i>COLOR</i></p>
+ Same as <code>-entry</code>, but sets the default entry box contents to <i>TEXT</i>. This option is not compatible with <code>xmessage</code>.</dd>
+<dt><code>-fg</code> <i>COLOR</i></dt>
 <dd>
- Sets the message text color to <i>COLOR</i>.</p>
-<dt><code>-file</code> <i>FILENAME</i></p>
+ Sets the message text color to <i>COLOR</i>.</dd>
+<dt><code>-file</code> <i>FILENAME</i></dt>
 <dd>
- Causes the named file to be used as the message source. If a dash (-) is used in place of <i>FILENAME</i>, the message will be read from <i>stdin</i>.</p>
-<dt><code>-fn</code> | <code>-font</code> <i>FONT</i></p>
+ Causes the named file to be used as the message source. If a dash (-) is used in place of <i>FILENAME</i>, the message will be read from <i>stdin</i>.</dd>
+<dt><code>-fn</code> | <code>-font</code> <i>FONT</i></dt>
 <dd>
- Specifies the message font, using GTK2&#8217;s font specification system. For example, <code>-font &quot;serif italic 14&quot;</code>. (GTK2&#8217;s font system is not compatible with <code>xmessage</code>. See the Compatibility section, below, for a workaround.)</p>
-<dt><code>-geometry</code> <i>GEOMETRY</i></p>
+ Specifies the message font, using GTK2&#8217;s font specification system. For example, <code>-font &quot;serif italic 14&quot;</code>. (GTK2&#8217;s font system is not compatible with <code>xmessage</code>. See the Compatibility section, below, for a workaround.)</dd>
+<dt><code>-geometry</code> <i>GEOMETRY</i></dt>
 <dd>
- Sets the window&#8217;s size (position is ignored by <code>gxmessage</code>). Example: <code>-geometry 400&#215;200</code></p>
-<dt><code>-help</code></p>
+ Sets the window&#8217;s size (position is ignored by <code>gxmessage</code>). Example: <code>-geometry 400&#215;200</code></dd>
+<dt><code>-help</code></dt>
 <dd>
- Displays basic usage information then exits.</p>
-<dt><code>-iconic</code></p>
+ Displays basic usage information then exits.</dd>
+<dt><code>-iconic</code></dt>
 <dd>
- Opens the <code>gxmessage</code> window in its iconized (minimized) state.</p>
-<dt><code>-name</code> <i>NAME</i></p>
+ Opens the <code>gxmessage</code> window in its iconized (minimized) state.</dd>
+<dt><code>-name</code> <i>NAME</i></dt>
 <dd>
- Sets the <code>gxmessage</code> window&#8217;s name to <i>NAME</i>.</p>
-<dt><code>-nearmouse</code></p>
+ Sets the <code>gxmessage</code> window&#8217;s name to <i>NAME</i>.</dd>
+<dt><code>-nearmouse</code></dt>
 <dd>
- Opens the <code>gxmessage</code> window near the mouse pointer.</p>
-<dt><code>-nofocus</code></p>
+ Opens the <code>gxmessage</code> window near the mouse pointer.</dd>
+<dt><code>-nofocus</code></dt>
 <dd>
- Prevents the <code>gxmessage</code> window from receiving focus when it opens. This option is not compatible with <code>xmessage</code>.</p>
-<dt><code>-print</code></p>
+ Prevents the <code>gxmessage</code> window from receiving focus when it opens. This option is not compatible with <code>xmessage</code>.</dd>
+<dt><code>-print</code></dt>
 <dd>
- Writes the <i>LABEL</i> of the selected button to <i>stdout</i>.</p>
-<dt><code>-timeout</code> <i>SECONDS</i></p>
+ Writes the <i>LABEL</i> of the selected button to <i>stdout</i>.</dd>
+<dt><code>-timeout</code> <i>SECONDS</i></dt>
 <dd>
- Automatically closes the <code>gxmessage</code> window with an exit code of 0 if no button is pressed within <i>SECONDS</i> seconds. (The <code>-entry</code> and <code>-entrytext</code> options cause <code>-timeout</code> to be ignored.)</p>
-<dt><code>-title</code> <i>TITLE</i></p>
+ Automatically closes the <code>gxmessage</code> window with an exit code of 0 if no button is pressed within <i>SECONDS</i> seconds. (The <code>-entry</code> and <code>-entrytext</code> options cause <code>-timeout</code> to be ignored.)</dd>
+<dt><code>-title</code> <i>TITLE</i></dt>
 <dd>
- Sets the <code>gxmessage</code> window&#8217;s title to <i>TITLE</i>.</p>
-<dt><code>-version</code></p>
+ Sets the <code>gxmessage</code> window&#8217;s title to <i>TITLE</i>.</dd>
+<dt><code>-version</code></dt>
 <dd>
- Displays the program&#8217;s version number and Copyright details, then exits. This option is not compatible with <code>xmessage</code>.</p>
-<dt><code>-wrap</code></p>
+ Displays the program&#8217;s version number and Copyright details, then exits. This option is not compatible with <code>xmessage</code>.</dd>
+<dt><code>-wrap</code></dt>
 <dd>
- Causes lines to wrap rather than exceed the width of the window. This option is not compatible with <code>xmessage</code>.</dl>
+ Causes lines to wrap rather than exceed the width of the window. This option is not compatible with <code>xmessage</code>.</dd></dl>
 <h2>GTK DEFAULTS</h2>
 <p> The program&#8217;s default appearance can be adjusted using GTK resource files. The main text display widget is named <code>gxmessage-textview</code>. The text entry widget is named <code>gxmessage-entry</code>. </p>
 <pre><code>

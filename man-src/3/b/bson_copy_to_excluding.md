@@ -18,20 +18,20 @@ void bson_copy_to_excluding(const bson_t *src,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>src</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>src</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>dst</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>dst</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>first_exclude</code></p>
-<dd> The first field name to exclude.</dl>
+<dt><code>first_exclude</code></dt>
+<dd> The first field name to exclude.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_copy_to_excluding/">bson_copy_to_excluding</a>(3)</code> function shall copy all fields from <code>src</code> to <code>dst</code> except those speified by the variadic, NULL terminated list of keys starting from <code>first_exclude</code> \&amp;. </p>
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> This is generally not needed except in very special situations.</dl>
+</dt><dd> This is generally not needed except in very special situations.</dd></dl>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
 <h2>Index</h2>

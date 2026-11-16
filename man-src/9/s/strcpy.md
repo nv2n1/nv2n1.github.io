@@ -14,8 +14,8 @@ description: "strcpy – Copy a NUL terminated string"
 <p><i>dest</i></p>
 <dl>
 <dd>
-<dd>Where to copy the string to</dl>
+</dd><dd>Where to copy the string to</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>Where to copy the string from</dl>
+<dd>Where to copy the string from</dd></dl>
 <h2>Copyright</h2>

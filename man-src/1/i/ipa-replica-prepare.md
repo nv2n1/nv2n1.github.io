@@ -22,30 +22,30 @@ description: "ipa-replica-prepare – Create an IPA replica file"
 <p> A replica with PKI can only be installed from a replica file prepared on a master with PKI.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;dirsrv-cert-file</code>=<i>FILE</i></p>
-<dd> File containing the Directory Server SSL certificate and private key. The files are accepted in PEM and DER certificate, PKCS#7 certificate chain, PKCS#8 and raw private key and PKCS#12 formats. This option may be used multiple times.</p>
-<dt><code>&#8211;http-cert-file</code>=<i>FILE</i></p>
-<dd> File containing the Apache Server SSL certificate and private key. The files are accepted in PEM and DER certificate, PKCS#7 certificate chain, PKCS#8 and raw private key and PKCS#12 formats. This option may be used multiple times.</p>
-<dt><code>&#8211;dirsrv-pin</code>=<i>PIN</i></p>
-<dd> The password to unlock the Directory Server private key</p>
-<dt><code>&#8211;http-pin</code>=<i>PIN</i></p>
-<dd> The password to unlock the Apache Server private key</p>
-<dt><code>&#8211;dirsrv-cert-name</code>=<i>NAME</i></p>
-<dd> Name of the Directory Server SSL certificate to install</p>
-<dt><code>&#8211;http-cert-name</code>=<i>NAME</i></p>
-<dd> Name of the Apache Server SSL certificate to install</p>
-<dt><code>-p</code> <i>DM_PASSWORD</i>, <code>&#8211;password</code>=<i>DM_PASSWORD</i></p>
-<dd> Directory Manager (existing master) password</p>
-<dt><code>&#8211;ip-address</code>=<i>IP_ADDRESS</i></p>
-<dd> IPv4 or IPv6 address of the replica server. This option can be specified multiple times for each interface of the server (e.g. multihomed and/or dualstacked server), or for each IPv4 and IPv6 address of the server. The corresponding A or AAAA and PTR records will be added to the DNS if they do not exist already.</p>
-<dt><code>&#8211;reverse-zone</code>=<i>REVERSE_ZONE</i></p>
-<dd> The reverse DNS zone to use. This option can be used multiple times to specify multiple reverse zones.</p>
-<dt><code>&#8211;no-reverse</code></p>
-<dd> Do not create reverse DNS zone</p>
-<dt><code>&#8211;ca</code>=<i>CA_FILE</i></p>
-<dd> Location of CA PKCS#12 file, default /root/cacert.p12</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Prints info log messages to the output</dl>
+<dt><code>&#8211;dirsrv-cert-file</code>=<i>FILE</i></dt>
+<dd> File containing the Directory Server SSL certificate and private key. The files are accepted in PEM and DER certificate, PKCS#7 certificate chain, PKCS#8 and raw private key and PKCS#12 formats. This option may be used multiple times.</dd>
+<dt><code>&#8211;http-cert-file</code>=<i>FILE</i></dt>
+<dd> File containing the Apache Server SSL certificate and private key. The files are accepted in PEM and DER certificate, PKCS#7 certificate chain, PKCS#8 and raw private key and PKCS#12 formats. This option may be used multiple times.</dd>
+<dt><code>&#8211;dirsrv-pin</code>=<i>PIN</i></dt>
+<dd> The password to unlock the Directory Server private key</dd>
+<dt><code>&#8211;http-pin</code>=<i>PIN</i></dt>
+<dd> The password to unlock the Apache Server private key</dd>
+<dt><code>&#8211;dirsrv-cert-name</code>=<i>NAME</i></dt>
+<dd> Name of the Directory Server SSL certificate to install</dd>
+<dt><code>&#8211;http-cert-name</code>=<i>NAME</i></dt>
+<dd> Name of the Apache Server SSL certificate to install</dd>
+<dt><code>-p</code> <i>DM_PASSWORD</i>, <code>&#8211;password</code>=<i>DM_PASSWORD</i></dt>
+<dd> Directory Manager (existing master) password</dd>
+<dt><code>&#8211;ip-address</code>=<i>IP_ADDRESS</i></dt>
+<dd> IPv4 or IPv6 address of the replica server. This option can be specified multiple times for each interface of the server (e.g. multihomed and/or dualstacked server), or for each IPv4 and IPv6 address of the server. The corresponding A or AAAA and PTR records will be added to the DNS if they do not exist already.</dd>
+<dt><code>&#8211;reverse-zone</code>=<i>REVERSE_ZONE</i></dt>
+<dd> The reverse DNS zone to use. This option can be used multiple times to specify multiple reverse zones.</dd>
+<dt><code>&#8211;no-reverse</code></dt>
+<dd> Do not create reverse DNS zone</dd>
+<dt><code>&#8211;ca</code>=<i>CA_FILE</i></dt>
+<dd> Location of CA PKCS#12 file, default /root/cacert.p12</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Prints info log messages to the output</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>

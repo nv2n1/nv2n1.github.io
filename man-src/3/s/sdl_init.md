@@ -14,22 +14,22 @@ description: "SDL_Init – Initializes SDL"
 <h2>Description</h2>
 <p>Initializes SDL. This should be called before all other SDL functions. The <code>flags</code> parameter specifies what part(s) of SDL to initialize.</p>
 <dl COMPACT>
-<dt><code>SDL_INIT_TIMER</code></p>
-<dd>Initializes the <i>timer</i> subsystem.</p>
-<dt><code>SDL_INIT_AUDIO</code></p>
-<dd>Initializes the <i>audio</i> subsystem.</p>
-<dt><code>SDL_INIT_VIDEO</code></p>
-<dd>Initializes the <i>video</i> subsystem.</p>
-<dt><code>SDL_INIT_CDROM</code></p>
-<dd>Initializes the <i>cdrom</i> subsystem.</p>
-<dt><code>SDL_INIT_JOYSTICK</code></p>
-<dd>Initializes the <i>joystick</i> subsystem.</p>
-<dt><code>SDL_INIT_EVERYTHING</code></p>
-<dd>Initialize all of the above.</p>
-<dt><code>SDL_INIT_NOPARACHUTE</code></p>
-<dd>Prevents SDL from catching fatal signals.</p>
-<dt><code>SDL_INIT_EVENTTHREAD</code></p>
-<dd></dl>
+<dt><code>SDL_INIT_TIMER</code></dt>
+<dd>Initializes the <i>timer</i> subsystem.</dd>
+<dt><code>SDL_INIT_AUDIO</code></dt>
+<dd>Initializes the <i>audio</i> subsystem.</dd>
+<dt><code>SDL_INIT_VIDEO</code></dt>
+<dd>Initializes the <i>video</i> subsystem.</dd>
+<dt><code>SDL_INIT_CDROM</code></dt>
+<dd>Initializes the <i>cdrom</i> subsystem.</dd>
+<dt><code>SDL_INIT_JOYSTICK</code></dt>
+<dd>Initializes the <i>joystick</i> subsystem.</dd>
+<dt><code>SDL_INIT_EVERYTHING</code></dt>
+<dd>Initialize all of the above.</dd>
+<dt><code>SDL_INIT_NOPARACHUTE</code></dt>
+<dd>Prevents SDL from catching fatal signals.</dd>
+<dt><code>SDL_INIT_EVENTTHREAD</code></dt>
+<dd></dd></dl>
 <h2>Return Value</h2>
 <p>Returns <code>-1</code> on an error or <code>0</code> on success.</p>
 <h2>See Also</h2>

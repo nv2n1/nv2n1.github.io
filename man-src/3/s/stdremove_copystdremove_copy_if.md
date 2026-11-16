@@ -11,43 +11,25 @@ std::remove_copy,std::remove_copy_if - std::remove_copy,std::remove_copy_if
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class InputIt, class OutputIt, class T&gt;
-
     OutputIt remove_copy(InputIt first, InputIt last, OutputIt d_first, (until C++ 20)
-
                                                                             const T &amp;value);
-
 template &lt;class InputIt, class OutputIt, class T&gt;
-
 constexpr OutputIt remove_copy(InputIt first, InputIt last, OutputIt d_first, (since C++ 20)
-
                                                                                   const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class T&gt;
-
 ForwardIt2 remove_copy(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (2)(since C++ 17)
-
                                                                                         ForwardIt2 d_first,
                        const T &amp;value);
 (1)
-
     template &lt;class InputIt, class OutputIt, class UnaryPredicate&gt;
-
     OutputIt remove_copy_if(InputIt first, InputIt last, OutputIt d_first, (until C++ 20)
-
                                                                                UnaryPredicate p);
-
 template &lt;class InputIt, class OutputIt, class UnaryPredicate&gt;
-
 constexpr OutputIt remove_copy_if(InputIt first, InputIt last, OutputIt d_first, (3)(since C++ 20)
-
                                                                                      UnaryPredicate p);
-
 template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class UnaryPredicate&gt;
-
 ForwardIt2 remove_copy_if(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (4)(since C++ 17)
-
                                                                                            ForwardIt2 d_first,
                           UnaryPredicate p);</code></pre> 
 Copies elements from the range [first, last), to another range beginning at d_first, omitting the elements which satisfy specific criteria. Source and destination ranges cannot overlap. 
@@ -124,15 +106,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 
 The following code outputs a string while erasing the spaces on the fly. 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::string str = &quot;Text with some   spaces&quot;;
     std::cout &lt;&lt; &quot;before: &quot; &lt;&lt; str &lt;&lt; &quot;\n&quot;;

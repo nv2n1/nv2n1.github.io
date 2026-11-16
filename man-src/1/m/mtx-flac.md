@@ -15,10 +15,10 @@ description: "mtx-flac – ConTeXt Flac Helpers"
 <p> <code>ConTeXt Flac Helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;collect</code></p>
-<dd> collect albums in xml file</p>
-<dt><code>&#8211;pattern</code></p>
-<dd> use pattern for locating files</dl>
+<dt><code>&#8211;collect</code></dt>
+<dd> collect albums in xml file</dd>
+<dt><code>&#8211;pattern</code></dt>
+<dd> use pattern for locating files</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

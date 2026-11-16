@@ -14,14 +14,14 @@ description: "scsi_schedule_eh – schedule EH for SCSI host"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>SCSI host to invoke error handling on.</dl>
+</dd><dd>SCSI host to invoke error handling on.</dd></dl>
 <h2>Description</h2>
 <p>Schedule SCSI EH without scmd.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

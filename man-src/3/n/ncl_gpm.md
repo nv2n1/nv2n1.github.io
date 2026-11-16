@@ -12,11 +12,11 @@ GPM (Polymarker) - the polymarker output primitive draws selected symmetric symb
 
  void gpolymarker(const Gpoint_list *point_list);
 <h2>Description</h2><dl COMPACT><dt>N
-<dd>(Integer, Input) - The number of markers to be drawn. N must be greater than zero.
-<dt>X (N)
-<dd>(Real Array, Input) - The X coordinates of the N markers to be drawn, in world coordinates.
-<dt>Y (N)
-<dd>(Real Array, Input) - The Y coordinates of the N markers to be drawn, in world coordinates.</dl><h2>Usage</h2>By default, the polymarker type is an asterisk. To select other polymarker types and attributes, see the man page for gsmk. 
+</dt><dd>(Integer, Input) - The number of markers to be drawn. N must be greater than zero.
+</dd><dt>X (N)
+</dt><dd>(Real Array, Input) - The X coordinates of the N markers to be drawn, in world coordinates.
+</dd><dt>Y (N)
+</dt><dd>(Real Array, Input) - The Y coordinates of the N markers to be drawn, in world coordinates.</dd></dl><h2>Usage</h2>By default, the polymarker type is an asterisk. To select other polymarker types and attributes, see the man page for gsmk. 
 
  Note that the coordinate pairs must be in world coordinates and not user coordinates. Among other things, this means that the log scaling and mirror-imaging features available via the SET call and the SPPS functions for drawing dots and markers are not applicable here.
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.

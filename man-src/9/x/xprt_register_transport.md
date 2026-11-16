@@ -15,7 +15,7 @@ xprt_register_transport - register a transport implementation
 <h2>Arguments</h2>
 
 <i>transport</i>
-<dl><dd><dd>transport to register</dl>
+<dl><dd></dd><dd>transport to register</dd></dl>
 
 <h2>Description</h2>
 

@@ -22,7 +22,7 @@ description: "modules.dep, modules.dep.bin – Module dependency information"
 <h2>Authors</h2>
 <p><code>Jon Masters</code> &lt;jcm [at] jonmasters.org&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>
 <p> <code>Lucas De Marchi</code> &lt;lucas.de.marchi [at] gmail.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>

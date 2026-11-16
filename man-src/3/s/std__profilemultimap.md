@@ -30,183 +30,50 @@ description: "std::__profile::multimap< _Key, _Tp, _Compare, _Allocator > –"
  _Tp &gt; <code>value_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>multimap (const _Compare &amp;__comp=_Compare(), const _Allocator &amp;__a=_Allocator())
-
-
-
 template&lt;typename _InputIterator , typename  = std::_RequireInputIter&lt;_InputIterator&gt;&gt; multimap (_InputIterator __first, _InputIterator __last, const _Compare &amp;__comp=_Compare(), const _Allocator &amp;__a=_Allocator())
-
-
-
 multimap (const multimap &amp;__x)
-
-
-
 multimap (const _Base &amp;__x)
-
-
-
 multimap (initializer_list&lt; value_type &gt; __l, const _Compare &amp;__c=_Compare(), const allocator_type &amp;__a=allocator_type())
-
-
-
 _Base &amp; _M_base () noexcept
-
-
-
 const _Base &amp; _M_base () const noexcept
-
-
-
 iterator begin () noexcept
-
-
-
 const_iterator begin () const noexcept
-
-
-
 const_iterator cbegin () const noexcept
-
-
-
 const_iterator cend () const noexcept
-
-
-
 void clear () noexcept
-
-
-
 const_reverse_iterator crbegin () const noexcept
-
-
-
 const_reverse_iterator crend () const noexcept
-
-
-
 template&lt;typename... _Args&gt; iterator emplace (_Args &amp;&amp;...__args)
-
-
-
 template&lt;typename... _Args&gt; iterator emplace_hint (const_iterator __pos, _Args &amp;&amp;...__args)
-
-
-
 iterator end () noexcept
-
-
-
 const_iterator end () const noexcept
-
-
-
 std::pair&lt; iterator, iterator &gt; equal_range (const key_type &amp;__x)
-
-
-
 std::pair&lt; const_iterator,
-
-
 const_iterator &gt; equal_range (const key_type &amp;__x) const &quot;
-
-
 iterator erase (const_iterator __position)
-
-
-
 iterator erase (iterator __position)
-
-
-
 size_type erase (const key_type &amp;__x)
-
-
-
 iterator erase (const_iterator __first, const_iterator __last)
-
-
-
 iterator find (const key_type &amp;__x)
-
-
-
 const_iterator find (const key_type &amp;__x) const
-
-
-
 iterator insert (const value_type &amp;__x)
-
-
-
 template&lt;typename _Pair , typename  = typename std::enable_if&lt;std::is_constructible&lt;value_type,    _Pair&amp;&amp;&gt;::value&gt;::type&gt; iterator insert (_Pair &amp;&amp;__x)
-
-
-
 void insert (std::initializer_list&lt; value_type &gt; __list)
-
-
-
 template&lt;typename _Pair , typename  = typename std::enable_if&lt;std::is_constructible&lt;value_type,    _Pair&amp;&amp;&gt;::value&gt;::type&gt; iterator insert (const_iterator __position, _Pair &amp;&amp;__x)
-
-
-
 template&lt;typename _InputIterator , typename  = std::_RequireInputIter&lt;_InputIterator&gt;&gt; void insert (_InputIterator __first, _InputIterator __last)
-
-
-
 iterator lower_bound (const key_type &amp;__x)
-
-
-
 const_iterator lower_bound (const key_type &amp;__x) const
-
-
-
 noexcept (is_nothrow_copy_constructible&lt; _Compare &gt;::value)
-
-
-
 multimap &amp; operator= (const multimap &amp;__x)
-
-
-
 multimap &amp; operator= (multimap &amp;&amp;__x)
-
-
-
 multimap &amp; operator= (initializer_list&lt; value_type &gt; __l)
-
-
-
 reverse_iterator rbegin () noexcept
-
-
-
 const_reverse_iterator rbegin () const noexcept
-
-
-
 reverse_iterator rend () noexcept
-
-
-
 const_reverse_iterator rend () const noexcept
-
-
-
 void swap (multimap &amp;__x)
-
-
-
 iterator upper_bound (const key_type &amp;__x)
-
-
-
 const_iterator upper_bound (const key_type &amp;__x) const
-
-
-
 Public Attributes</code></pre>
 <p> <code>iterator</code></p>
 <h2>Detailed Description</h2>

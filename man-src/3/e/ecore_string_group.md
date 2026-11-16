@@ -22,17 +22,17 @@ description: "String Instance Functions – These functions allow you to store o
 <p>Retrieves an instance of a string for use in an ecore program. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>string</i> The string to retrieve an instance of.</dl>
+<dd><i>string</i> The string to retrieve an instance of.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to an instance of the string on success. NULL on failure.</dl>
+<dd>A pointer to an instance of the string on success. NULL on failure.</dd></dl>
 <p> References ecore_hash_get(), and ecore_hash_set().</p>
 <h3>EAPI void ecore_string_release (const char * string)</h3>
 <p>Notes that the given string has lost an instance. </p>
 <p> It will free the string if no other instances are left. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>string</i> The given string.</dl>
+<dd><i>string</i> The given string.</dd></dl>
 <p> References ecore_hash_get(), and ecore_hash_remove().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

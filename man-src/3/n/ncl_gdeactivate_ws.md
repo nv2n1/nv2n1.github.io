@@ -13,8 +13,8 @@ description: "gdeactivate_ws (Deactivate workstation) – deactivates a workstat
 <p> void gdeactivate_ws(Gint ws_id);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) &#8211; A number identifying the workstation to be deactivated. ws_id must be the same as that used in some previous gactivate_ws call.</dl>
+<dt>ws_id</dt>
+<dd>(Input) &#8211; A number identifying the workstation to be deactivated. ws_id must be the same as that used in some previous gactivate_ws call.</dd></dl>
 <h2>Usage</h2>
 <p>The specified workstation is removed from the set of active workstations. GKS output primitives are not sent to workstations that are not active.</p>
 <h2>Access</h2>

@@ -14,10 +14,10 @@ description: "filecap – a program to see capabilities"
 <p><code>filecap</code> is a program that prints out a report of programs with file based capabilities. If a file is not in the report or there is no report at all, no capabilities were found. For expedience, the default is to check only the directories in the PATH environmental variable. If the -a command line option is given, then all directories will be checked. If a directory is passed, it will recursively check that directory. If a path to a file is given, it will only check that file. If the path to the file includes capabilities, then they are written to the file. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>This tells the program to show all capabilities starting from the / directory. Normally the PATH environmental variable is used to show you capabilities on files you are likely to execute.</p>
-<dt><code>-d</code></p>
-<dd>This dumps all capabilities for reference. </p>
+<dt><code>-a</code></dt>
+<dd>This tells the program to show all capabilities starting from the / directory. Normally the PATH environmental variable is used to show you capabilities on files you are likely to execute.</dd>
+<dt><code>-d</code></dt>
+<dd>This dumps all capabilities for reference. </dd>
 </dl>
 <h2>Examples</h2>
 <pre><code>To check file capabilities in $PATH:</code>

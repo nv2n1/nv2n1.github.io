@@ -542,27 +542,27 @@ foreach<br />
 <h2>Copyrights</h2>
 <p> The original version of this article originally appeared in The Perl Journal #10, and is copyright 1998 The Perl Journal. It appears courtesy of Jon Orwant and The Perl Journal. This document may be distributed under the same terms as Perl itself. </p>
 <h2>Index</h2>
-<dt><a href="#lbBD">General Thread Utility Routines</a></p>
+<dt><a href="#lbBD">General Thread Utility Routines</a></dt>
 <dd>
-<dt><a href="#lbBI">A Complete Example</a></p>
+</dd><dt><a href="#lbBI">A Complete Example</a></dt>
 <dd>
-<dt><a href="#lbBJ">Different implementations of threads</a></p>
+</dd><dt><a href="#lbBJ">Different implementations of threads</a></dt>
 <dd>
-<dt><a href="#lbBK">Performance considerations</a></p>
+</dd><dt><a href="#lbBK">Performance considerations</a></dt>
 <dd>
-<dt><a href="#lbBL">Process-scope Changes</a></p>
+</dd><dt><a href="#lbBL">Process-scope Changes</a></dt>
 <dd>
-<dt><a href="#lbBM">Thread-Safety of System Libraries</a></p>
+</dd><dt><a href="#lbBM">Thread-Safety of System Libraries</a></dt>
 <dd>
-<dt><a href="#lbBN">Conclusion</a></p>
+</dd><dt><a href="#lbBN">Conclusion</a></dt>
 <dd>
-<dt><a href="#lbBO">SEE ALSO</a></p>
+</dd><dt><a href="#lbBO">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBP">Bibliography</a></p>
+</dd><dt><a href="#lbBP">Bibliography</a></dt>
 <dd>
-<dt><a href="#lbBT">Acknowledgements</a></p>
+</dd><dt><a href="#lbBT">Acknowledgements</a></dt>
 <dd>
-<dt><a href="#lbBU">AUTHOR</a></p>
+</dd><dt><a href="#lbBU">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbBV">Copyrights</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBV">Copyrights</a></dt>
+<dd></dd></dl>

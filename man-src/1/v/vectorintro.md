@@ -18,33 +18,31 @@ url: "/docs/linux/man/1-vectorintro/"
 <p> Sometimes topology is not necessary and the additional memory and space requirements are burdensome to a particular task. Therefore two modules allow for working level 1 (non-topological) data within GRASS. The v.in.ascii module allows users to input points without building topology. This is very useful for large files where memory restrictions may cause difficulties. The other module which works with level 1 data is v.surf.rst which enables spatial approximation and topographic analysis from a point or isoline file. </p>
 <p>&nbsp;<wbr>In GRASS, the following vector objects are defined:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>point: a point;&nbsp;<wbr></p>
+</dt><dd>
+&nbsp;<wbr>point: a point;&nbsp;<wbr></dd>
 <dt>
-<dd>
-&nbsp;<wbr>line: a directed sequence of connected vertices with two endpoints called nodes;&nbsp;<wbr></p>
+</dt><dd>
+&nbsp;<wbr>line: a directed sequence of connected vertices with two endpoints called nodes;&nbsp;<wbr></dd>
 <dt>
-<dd>
-&nbsp;<wbr>boundary: the border line to describe an area;&nbsp;<wbr></p>
+</dt><dd>
+&nbsp;<wbr>boundary: the border line to describe an area;&nbsp;<wbr></dd>
 <dt>
-<dd>
-&nbsp;<wbr>centroid: a point within a closed boundary;&nbsp;<wbr></p>
+</dt><dd>
+&nbsp;<wbr>centroid: a point within a closed boundary;&nbsp;<wbr></dd>
 <dt>
-<dd>
-&nbsp;<wbr>area: the topological composition of centroid and boundary;&nbsp;<wbr></p>
+</dt><dd>
+&nbsp;<wbr>area: the topological composition of centroid and boundary;&nbsp;<wbr></dd>
 <dt>
-<dd>
-&nbsp;<wbr>face: a 3D area;&nbsp;<wbr></p>
+</dt><dd>
+&nbsp;<wbr>face: a 3D area;&nbsp;<wbr></dd>
 <dt>
-<dd>
-&nbsp;<wbr>kernel: a 3D centroid in a volume&nbsp;<wbr>(not yet implemented);&nbsp;<wbr></p>
+</dt><dd>
+&nbsp;<wbr>kernel: a 3D centroid in a volume&nbsp;<wbr>(not yet implemented);&nbsp;<wbr></dd>
 <dt>
-<dd>
-&nbsp;<wbr>volume: a 3D corpus, the topological composition of faces and kernel&nbsp;<wbr>(not yet implemented).&nbsp;<wbr></dl>
+</dt><dd>
+&nbsp;<wbr>volume: a 3D corpus, the topological composition of faces and kernel&nbsp;<wbr>(not yet implemented).&nbsp;<wbr></dd></dl>
 </dl>
 <p> Note that all lines and boundaries can be polylines (with nodes in between). </p>
 <p> The v.type module can be used to convert between vector types if possible. The v.build module is used to generate topology. It optionally allows to extract the erroneous vector objects into a separate map. Topological errors can be corrected either manually within v.digit or, to some extent, automatically in v.clean. Adjacent polygons can be found by v.to.db (see &#8216;sides&#8217; option). </p>
@@ -52,16 +50,14 @@ url: "/docs/linux/man/1-vectorintro/"
 <h3>Attribute management</h3>
 <p> GRASS can be linked to one or many database management systems (DBMS). The <i>db.*</i> set of commands provides basic SQL support for attribute management, while the <i>v.db.*</i> set of commands operates on the vector map.</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> <code>Categories:</code> The category number is the vector ID. It is used to link attribute(s) to each vector object. A vector object can have zero, one, two, or more categories. Category numbers are stored both within the geometry file and within the attribute table(s) for each vector object (usually the &quot;cat&quot; column). Using v.category, category numbers can be printed or maintained. In order to link one vector object to several attribute tables, several category numbers per vector object are needed.</p>
+</dt><dd> <code>Categories:</code> The category number is the vector ID. It is used to link attribute(s) to each vector object. A vector object can have zero, one, two, or more categories. Category numbers are stored both within the geometry file and within the attribute table(s) for each vector object (usually the &quot;cat&quot; column). Using v.category, category numbers can be printed or maintained. In order to link one vector object to several attribute tables, several category numbers per vector object are needed.</dd>
 <dt>
-<dd> <code>Layers:</code> It is possible to link the geographic objects in a vector map to one or more tables. Each link to a distinct attribute table is called a layer. A link defines which database driver, database and table is to be used. Each category numbers in a geometry file corresponds to a row in the attribute table (the linking column is usually the &quot;cat&quot; key column). Using v.db.connect layers can be listed or maintained.<br />
- GRASS layers do not contain any geographic objects, but they consist of links to attribute tables in which vector objects can have zero, one or more categories. If a vector object has zero categories in a layer, then it does not appear in that layer. In this fashion some vector objects may appear in some layers but not in others. The practical benefit of this system is that it allows placement of thematically distinct but topologically related objects into a single map (e.g. forests and lakes). These virtual layers are also useful for linking time series attribute data to a series of locations that did not change over time. By default the first layer is active, i.e. the first table corresponds to the first layer. Further tables are linked to subsequent layers.</p>
+</dt><dd> <code>Layers:</code> It is possible to link the geographic objects in a vector map to one or more tables. Each link to a distinct attribute table is called a layer. A link defines which database driver, database and table is to be used. Each category numbers in a geometry file corresponds to a row in the attribute table (the linking column is usually the &quot;cat&quot; key column). Using v.db.connect layers can be listed or maintained.<br />
+ GRASS layers do not contain any geographic objects, but they consist of links to attribute tables in which vector objects can have zero, one or more categories. If a vector object has zero categories in a layer, then it does not appear in that layer. In this fashion some vector objects may appear in some layers but not in others. The practical benefit of this system is that it allows placement of thematically distinct but topologically related objects into a single map (e.g. forests and lakes). These virtual layers are also useful for linking time series attribute data to a series of locations that did not change over time. By default the first layer is active, i.e. the first table corresponds to the first layer. Further tables are linked to subsequent layers.</dd>
 <dt>
-<dd> <code>SQL support:</code> The DBF driver provides only very limited SQL support (as DBF is not an SQL DB) while the other DBMS backends (such as PostgreSQL, MySQL etc) provide full SQL support since the SQL commands are sent directly to the DBMI. SQL commands can be directly executed with db.execute, db.select and the other db.* modules.</dl>
+</dt><dd> <code>SQL support:</code> The DBF driver provides only very limited SQL support (as DBF is not an SQL DB) while the other DBMS backends (such as PostgreSQL, MySQL etc) provide full SQL support since the SQL commands are sent directly to the DBMI. SQL commands can be directly executed with db.execute, db.select and the other db.* modules.</dd></dl>
 </dl>
 <p> When creating vector maps from scratch, in general an attribute table must be created and the table must be populated with one row per category (using v.to.db). However, this can be performed in a single step using v.db.addtable along with the definition of table column types. Column adding and dropping can be done with v.db.addcol and v.db.dropcol. A table column can be renamed with v.db.renamecol. To drop a table from a map, use v.db.droptable. Values in a table can be updated with v.db.update. Tables can be joined with with v.db.join.</p>
 <h3>Editing vector attributes</h3>
@@ -81,27 +77,25 @@ url: "/docs/linux/man/1-vectorintro/"
 <h3>Vector network analysis</h3>
 <p> GRASS provides support for vector network analysis. The following algorithms are implemented:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>Vector maintenance: v.net</p>
+</dt><dd>
+&nbsp;<wbr>Vector maintenance: v.net</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Shortest path: d.path and&nbsp;<wbr> v.net.path</p>
+</dt><dd>
+&nbsp;<wbr>Shortest path: d.path and&nbsp;<wbr> v.net.path</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Traveling salesman&nbsp;<wbr>(round trip): v.net.salesman</p>
+</dt><dd>
+&nbsp;<wbr>Traveling salesman&nbsp;<wbr>(round trip): v.net.salesman</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Allocation of sources&nbsp;<wbr>(create subnetworks, e.g. police station zones): v.net.alloc</p>
+</dt><dd>
+&nbsp;<wbr>Allocation of sources&nbsp;<wbr>(create subnetworks, e.g. police station zones): v.net.alloc</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Minimum Steiner trees&nbsp;<wbr>(star-like connections, e.g. broadband cable&nbsp;<wbr> connections): v.net.steiner</p>
+</dt><dd>
+&nbsp;<wbr>Minimum Steiner trees&nbsp;<wbr>(star-like connections, e.g. broadband cable&nbsp;<wbr> connections): v.net.steiner</dd>
 <dt>
-<dd>
-&nbsp;<wbr>Iso-distances&nbsp;<wbr>(from centers): v.net.iso</dl>
+</dt><dd>
+&nbsp;<wbr>Iso-distances&nbsp;<wbr>(from centers): v.net.iso</dd></dl>
 </dl>
 <p> &#8211;b). Both directions are supported, network modules provide parameters to assign attribute columns to the forward and backward direction.</p>
 <h3>Vector networks: Linear referencing system (LRS)</h3>
@@ -113,15 +107,13 @@ url: "/docs/linux/man/1-vectorintro/"
 <p> Lidar point clouds (first and last return) are imported with &lt;a href=&quot;v.in.ascii.html&quot;&gt;v.in.ascii (-b flag to not build the topology). Outlier detection is done with v.outlier on both first and last return data. Then, with v.lidar.edgedetection, edges are detected from last return data. The building are generated by v.lidar.growing from detected edges. The resulting data are post-processed with v.lidar.correction. Finally, the DTM and DSM are generated with v.surf.bspline (DTM: uses the &#8216;v.lidar.correction&#8217; output; DSM: uses last return output from outlier detection).</p>
 <h3>See also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> Introduction to GRASS database management</p>
+</dt><dd> Introduction to GRASS database management</dd>
 <dt>
-<dd> Introduction to GRASS raster map processing</p>
+</dt><dd> Introduction to GRASS raster map processing</dd>
 <dt>
-<dd> Introduction to GRASS 3D raster map (voxel) processing</dl>
+</dt><dd> Introduction to GRASS 3D raster map (voxel) processing</dd></dl>
 </dl>
 <p> full index </p>
 <h2>Index</h2>

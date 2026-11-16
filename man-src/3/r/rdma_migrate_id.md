@@ -12,17 +12,15 @@ rdma_migrate_id - Move a communication identifer to a different event channel.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_migrate_id
-
     (struct rdma_cm_id *id,
-
      struct rdma_event_channel *channel);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>An existing communication identifier to migrate.
-<dt>channel
-<dd>The communication channel that events associated with the allocated rdma_cm_id will be reported on. May be NULL.</dl>
+</dt><dd>An existing communication identifier to migrate.
+</dd><dt>channel
+</dt><dd>The communication channel that events associated with the allocated rdma_cm_id will be reported on. May be NULL.</dd></dl>
 
 <h2>Description</h2>
 

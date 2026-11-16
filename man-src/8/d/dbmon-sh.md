@@ -17,22 +17,22 @@ description: "dbmon.sh – Directory Server script for monitoring database and e
 <p> dbmon.sh will loop repeatedly showing the db information until it is killed or Ctrl-C </p>
 <p> All arguments are optional, but you will most likely have to provide BINDPW </p>
 <dl>
-<dt><code>INCR</code> &#8211; show results every INCR seconds &#8211; default is 1 second</p>
+<dt><code>INCR</code> &#8211; show results every INCR seconds &#8211; default is 1 second</dt>
 <dd>
-<dt><code>HOST</code> &#8211; name of host or IP address &#8211; default is localhost</p>
+</dd><dt><code>HOST</code> &#8211; name of host or IP address &#8211; default is localhost</dt>
 <dd>
-<dt><code>PORT</code> &#8211; port number (LDAP not LDAPS) &#8211; default is 389</p>
+</dd><dt><code>PORT</code> &#8211; port number (LDAP not LDAPS) &#8211; default is 389</dt>
 <dd>
-<dt><code>BINDDN</code> &#8211; DN to use to bind &#8211; must have permission to read everything under cn=config &#8211; default is cn=Directory Manager</p>
+</dd><dt><code>BINDDN</code> &#8211; DN to use to bind &#8211; must have permission to read everything under cn=config &#8211; default is cn=Directory Manager</dt>
 <dd>
-<dt><code>BINDPW</code> &#8211; password for BINDDN &#8211; default is secret</p>
+</dd><dt><code>BINDPW</code> &#8211; password for BINDDN &#8211; default is secret</dt>
 <dd>
-<dt><code>DBLIST</code> &#8211; a list of databases you want to check &#8211; default is all; for more than one, delimit with spaces e.g. DBLIST=one two three</p>
+</dd><dt><code>DBLIST</code> &#8211; a list of databases you want to check &#8211; default is all; for more than one, delimit with spaces e.g. DBLIST=one two three</dt>
 <dd>
-<dt><code>INDEXLIST</code> &#8211; a list of indexes to show for each named database &#8211; default is none; specify all for all indexes, or named e.g. INDEXLIST=id2entry entryrdn</p>
+</dd><dt><code>INDEXLIST</code> &#8211; a list of indexes to show for each named database &#8211; default is none; specify all for all indexes, or named e.g. INDEXLIST=id2entry entryrdn</dt>
 <dd>
-<dt><code>VERBOSE</code> &#8211; output level &#8211; 0 == suitable for parsing by a script &#8211; 1 == has column headings &#8211; 2 == provides detailed descriptions of the data &#8211; default is 0</p>
-<dd></dl>
+</dd><dt><code>VERBOSE</code> &#8211; output level &#8211; 0 == suitable for parsing by a script &#8211; 1 == has column headings &#8211; 2 == provides detailed descriptions of the data &#8211; default is 0</dt>
+<dd></dd></dl>
 <h2>Example</h2>
 <p>INCR=1 HOST=ldap.example.com BINDDN=&quot;cn=directory manager&quot; BINDPW=&quot;secret&quot; VERBOSE=2 dbmon.sh </p>
 <h2>Author</h2>

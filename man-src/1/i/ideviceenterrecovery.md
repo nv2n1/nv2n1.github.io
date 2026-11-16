@@ -15,10 +15,10 @@ description: "ideviceenterrecovery – Make a device enter recovery mode."
 <p> Makes a device with the supplied 40-digit UDID enter recovery mode immediately. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> enable communication debugging.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> prints usage information. </p>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> enable communication debugging.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> prints usage information. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Martin Szulecki </p>

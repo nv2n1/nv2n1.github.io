@@ -64,71 +64,71 @@ int mhash_hmac_deinit(MHASH thread, void *result);</p>
 <h2>API FUNCTIONS</h2>
 <p> We will describe the <font SIZE="-1">API</font> of <code>mhash</code> in detail now. The order follows the one in the <font SIZE="-1">SYNOPSIS</font> directly.</p>
 <dl>
-<dt>size_t <code>mhash_count</code>(void);</p>
-<dd> This returns the <tt>&quot;hashid&quot;</tt> of the last available hash. Hashes are numbered from 0 to <tt>&quot;mhash_count()&quot;</tt>.</p>
-<dt>size_t <code>mhash_get_block_size</code>(hashid <i>type</i>);</p>
-<dd> If <i>type</i> exists, this returns the used blocksize of the hash <i>type</i> in bytes. Otherwise, it returns 0.</p>
-<dt>char *<code>mhash_get_hash_name</code>(hashid <i>type</i>);</p>
-<dd> If <i>type</i> exists, this returns the name of the hash <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned. The string is allocated with <i><a href="/docs/linux/man/3-malloc/">malloc</a></i>(3) seperately, so do not forget to <i><a href="/docs/linux/man/3-free/">free</a></i>(3) it.</p>
-<dt>const char *<code>mhash_get_hash_name_static</code>(hashid <i>type</i>);</p>
-<dd> If <i>type</i> exists, this returns the name of the hash <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned.</p>
-<dt>size_t <code>mhash_get_hash_pblock</code>(hashid <i>type</i>);</p>
-<dd> It returns the block size that the algorithm operates. This is used in mhash_hmac_init. If the return value is 0 you shouldn&#8217;t use that algorithm in <font SIZE="-1">HMAC</font>.</p>
-<dt>hashid <code>mhash_get_mhash_algo</code>(<font SIZE="-1">MHASH</font> <i>src</i>);</p>
-<dd> Returns the algorithm used in the state of <i>src</i>.</p>
-<dt><font SIZE="-1">MHASH</font> <code>mhash_init</code>(hashid <i>type</i>);</p>
-<dd> This setups a context to begin hashing using the algorithm <i>type</i>. It returns a descriptor to that context which will result in leaking memory, if you do not call <i>mhash_deinit</i>(3) later. Returns <tt>&quot;MHASH_FAILED&quot;</tt> on failure.</p>
-<dt><font SIZE="-1">MHASH</font> <code>mhash_hmac_init</code>(const hashid <i>type</i>, void *<i>key</i>, int <i>keysize</i>, int <i>block</i>);</p>
-<dd> This setups a context to begin hashing using the algorithm type in <font SIZE="-1">HMAC</font> mode. <i>key</i> should be a pointer to the key and <i>keysize</i> its len. The <i>block</i> is the block size (in bytes) that the algorithm operates. It should be obtained by <i>mhash_get_hash_pblock()</i>. If its 0 it defaults to 64. After calling it you should use <i>mhash()</i> to update the context. It returns a descriptor to that context which will result in leaking memory, if you do not call <i>mhash_hmac_deinit</i>(3) later. Returns <tt>&quot;MHASH_FAILED&quot;</tt> on failure.</p>
-<dt><font SIZE="-1">MHASH</font> <code>mhash_cp</code>(<font SIZE="-1">MHASH</font> <i>src</i>);</p>
-<dd> This setups a new context using the state of <i>src</i>.</p>
-<dt>int <code>mhash</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, const void *<i>plaintext</i>, size_t <i>size</i>);</p>
-<dd> This updates the context described by <i>thread</i> with <i>plaintext</i>. <i>size</i> is the length of <i>plaintext</i> which may be binary data.</p>
-<dt>int <code>mhash_save_state_mem</code>( <font SIZE="-1">MHASH</font> <i>thread</i>, void *<i>mem</i>, int* <i>mem_size</i>);</p>
-<dd> Saves the state of a hashing algorithm such that it can be restored at some later point in time using <code>mhash_restore_state_mem</code>(). <i>mem_size</i> should contain the size of the given <i>mem</i> pointer. If it is not enough to hold the buffer the required value will be copied there.</p>
-<dt><font SIZE="-1">MHASH</font> <code>mhash_restore_state_mem</code>(void* <i>mem</i>);</p>
-<dd> Restores the state of a hashing algorithm that was saved using <code>mhash_save_state_mem</code>(). Use like <code>mhash_init</code>().</p>
-<dt>void *<code>mhash_end</code>(<font SIZE="-1">MHASH</font> <i>thread</i>);</p>
-<dd> This frees all resources associated with <i>thread</i> and returns the result of the whole hashing operation (the &#8220;<i>digest</i>&#8221;).</p>
-<dt>void <code>mhash_deinit</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* digest);</p>
-<dd> This frees all resources associated with <i>thread</i> and stores the result of the whole hashing operation in memory pointed by <i>digest</i>. <i>digest</i> may be null.</p>
-<dt>void *<code>mhash_hmac_end</code>(<font SIZE="-1">MHASH</font> <i>thread</i>);</p>
-<dd> This frees all resources associated with thread and returns the result of the whole hashing operation (the &#8220;<i>mac</i>&#8221;).</p>
-<dt>int <code>mhash_hmac_deinit</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* digest);</p>
-<dd> This frees all resources associated with <i>thread</i> and stores the result of the whole hashing operation in memory pointed by digest. Digest may be null. Returns non-zero in case of an error.</p>
-<dt>void *<code>mhash_end_m</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* (*hash_malloc)(size_t));</p>
-<dd> This frees all resources associated with <i>thread</i> and returns the result of the whole hashing operation (the &#8220;<i>digest</i>&#8221;). The result will be allocated by using the <i>hash_malloc()</i> function provided.</p>
-<dt>void *<code>mhash_hmac_end</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* (*hash_malloc)(size_t));</p>
-<dd> This frees all resources associated with thread and returns the result of the whole hashing operation (the &#8220;<i>mac</i>&#8221;). The result will be allocated by using the <i>hash_malloc()</i> function provided.</dl>
+<dt>size_t <code>mhash_count</code>(void);</dt>
+<dd> This returns the <tt>&quot;hashid&quot;</tt> of the last available hash. Hashes are numbered from 0 to <tt>&quot;mhash_count()&quot;</tt>.</dd>
+<dt>size_t <code>mhash_get_block_size</code>(hashid <i>type</i>);</dt>
+<dd> If <i>type</i> exists, this returns the used blocksize of the hash <i>type</i> in bytes. Otherwise, it returns 0.</dd>
+<dt>char *<code>mhash_get_hash_name</code>(hashid <i>type</i>);</dt>
+<dd> If <i>type</i> exists, this returns the name of the hash <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned. The string is allocated with <i><a href="/docs/linux/man/3-malloc/">malloc</a></i>(3) seperately, so do not forget to <i><a href="/docs/linux/man/3-free/">free</a></i>(3) it.</dd>
+<dt>const char *<code>mhash_get_hash_name_static</code>(hashid <i>type</i>);</dt>
+<dd> If <i>type</i> exists, this returns the name of the hash <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned.</dd>
+<dt>size_t <code>mhash_get_hash_pblock</code>(hashid <i>type</i>);</dt>
+<dd> It returns the block size that the algorithm operates. This is used in mhash_hmac_init. If the return value is 0 you shouldn&#8217;t use that algorithm in <font SIZE="-1">HMAC</font>.</dd>
+<dt>hashid <code>mhash_get_mhash_algo</code>(<font SIZE="-1">MHASH</font> <i>src</i>);</dt>
+<dd> Returns the algorithm used in the state of <i>src</i>.</dd>
+<dt><font SIZE="-1">MHASH</font> <code>mhash_init</code>(hashid <i>type</i>);</dt>
+<dd> This setups a context to begin hashing using the algorithm <i>type</i>. It returns a descriptor to that context which will result in leaking memory, if you do not call <i>mhash_deinit</i>(3) later. Returns <tt>&quot;MHASH_FAILED&quot;</tt> on failure.</dd>
+<dt><font SIZE="-1">MHASH</font> <code>mhash_hmac_init</code>(const hashid <i>type</i>, void *<i>key</i>, int <i>keysize</i>, int <i>block</i>);</dt>
+<dd> This setups a context to begin hashing using the algorithm type in <font SIZE="-1">HMAC</font> mode. <i>key</i> should be a pointer to the key and <i>keysize</i> its len. The <i>block</i> is the block size (in bytes) that the algorithm operates. It should be obtained by <i>mhash_get_hash_pblock()</i>. If its 0 it defaults to 64. After calling it you should use <i>mhash()</i> to update the context. It returns a descriptor to that context which will result in leaking memory, if you do not call <i>mhash_hmac_deinit</i>(3) later. Returns <tt>&quot;MHASH_FAILED&quot;</tt> on failure.</dd>
+<dt><font SIZE="-1">MHASH</font> <code>mhash_cp</code>(<font SIZE="-1">MHASH</font> <i>src</i>);</dt>
+<dd> This setups a new context using the state of <i>src</i>.</dd>
+<dt>int <code>mhash</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, const void *<i>plaintext</i>, size_t <i>size</i>);</dt>
+<dd> This updates the context described by <i>thread</i> with <i>plaintext</i>. <i>size</i> is the length of <i>plaintext</i> which may be binary data.</dd>
+<dt>int <code>mhash_save_state_mem</code>( <font SIZE="-1">MHASH</font> <i>thread</i>, void *<i>mem</i>, int* <i>mem_size</i>);</dt>
+<dd> Saves the state of a hashing algorithm such that it can be restored at some later point in time using <code>mhash_restore_state_mem</code>(). <i>mem_size</i> should contain the size of the given <i>mem</i> pointer. If it is not enough to hold the buffer the required value will be copied there.</dd>
+<dt><font SIZE="-1">MHASH</font> <code>mhash_restore_state_mem</code>(void* <i>mem</i>);</dt>
+<dd> Restores the state of a hashing algorithm that was saved using <code>mhash_save_state_mem</code>(). Use like <code>mhash_init</code>().</dd>
+<dt>void *<code>mhash_end</code>(<font SIZE="-1">MHASH</font> <i>thread</i>);</dt>
+<dd> This frees all resources associated with <i>thread</i> and returns the result of the whole hashing operation (the &#8220;<i>digest</i>&#8221;).</dd>
+<dt>void <code>mhash_deinit</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* digest);</dt>
+<dd> This frees all resources associated with <i>thread</i> and stores the result of the whole hashing operation in memory pointed by <i>digest</i>. <i>digest</i> may be null.</dd>
+<dt>void *<code>mhash_hmac_end</code>(<font SIZE="-1">MHASH</font> <i>thread</i>);</dt>
+<dd> This frees all resources associated with thread and returns the result of the whole hashing operation (the &#8220;<i>mac</i>&#8221;).</dd>
+<dt>int <code>mhash_hmac_deinit</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* digest);</dt>
+<dd> This frees all resources associated with <i>thread</i> and stores the result of the whole hashing operation in memory pointed by digest. Digest may be null. Returns non-zero in case of an error.</dd>
+<dt>void *<code>mhash_end_m</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* (*hash_malloc)(size_t));</dt>
+<dd> This frees all resources associated with <i>thread</i> and returns the result of the whole hashing operation (the &#8220;<i>digest</i>&#8221;). The result will be allocated by using the <i>hash_malloc()</i> function provided.</dd>
+<dt>void *<code>mhash_hmac_end</code>(<font SIZE="-1">MHASH</font> <i>thread</i>, void* (*hash_malloc)(size_t));</dt>
+<dd> This frees all resources associated with thread and returns the result of the whole hashing operation (the &#8220;<i>mac</i>&#8221;). The result will be allocated by using the <i>hash_malloc()</i> function provided.</dd></dl>
 <h2>KEYGEN API FUNCTIONS</h2>
 <p> We will now describe the Key Generation <font SIZE="-1">API</font> of <code>mhash</code> in detail.</p>
 <dl>
-<dt>int <code>mhash_keygen_ext</code>(keygenid <i>algorithm</i>, <font SIZE="-1">KEYGEN</font> <i>algorithm_data</i>, void* <i>keyword</i>, int <i>keysize</i>, unsigned char* <i>password</i>, int <i>passwordlen</i>);</p>
+<dt>int <code>mhash_keygen_ext</code>(keygenid <i>algorithm</i>, <font SIZE="-1">KEYGEN</font> <i>algorithm_data</i>, void* <i>keyword</i>, int <i>keysize</i>, unsigned char* <i>password</i>, int <i>passwordlen</i>);</dt>
 <dd> This function, generates a key from a password. The password is read from <i>password</i> and it&#8217;s len should be in <i>passwordlen</i>. The key generation algorithm is specified in <i>algorithm</i>, and that algorithm may (internally) use the <font SIZE="-1">KEYGEN</font> structure. The <font SIZE="-1">KEYGEN</font> structure consists of:<br />
 &nbsp;<wbr>typedef struct keygen&nbsp;<wbr>{<br />
 &nbsp;<wbr>&nbsp;<wbr>hashid&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>hash_algorithm[2];<br />
 &nbsp;<wbr>&nbsp;<wbr>unsigned int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>count;<br />
 &nbsp;<wbr>&nbsp;<wbr>void*&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>salt;<br />
 &nbsp;<wbr>&nbsp;<wbr>int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>salt_size;<br />
-&nbsp;<wbr>}&nbsp;<wbr><font SIZE="-1">KEYGEN</font>; </p>
+&nbsp;<wbr>}&nbsp;<wbr><font SIZE="-1">KEYGEN</font>; </dd>
 <p> The algorithm(s) specified in <i>algorithm_data.hash_algorithm</i>, should be hash algorithms and may be used by the key generation algorithm. Some key generation algorithms may use more than one hash algorithms (view also <i>mhash_keygen_uses_hash_algorithm()</i>). If it is desirable (and supported by the algorithm, eg. <font SIZE="-1">KEYGEN_S2K_SALTED</font>) a salt may be specified in <i>algorithm_data.salt</i> of size <i>algorithm_data.salt_size</i> or may be <font SIZE="-1">NULL</font>. </p>
 <p> The algorithm may use the <i>algorithm_data.count</i> internally (eg. <font SIZE="-1">KEYGEN_S2K_ISALTED</font>). The generated keyword is stored in <i>keyword</i>, which should be (at least) <i>keysize</i> bytes long. The generated keyword is a binary one. Returns a negative number on failure.</p>
-<dt>int <code>mhash_keygen_uses_salt</code>( keygenid <i>algorithm</i>);</p>
-<dd> This function returns 1 if the specified key generation algorithm needs a salt to be specified.</p>
-<dt>int <code>mhash_keygen_uses_count</code>( keygenid <i>algorithm</i>);</p>
-<dd> This function returns 1 if the specified key generation algorithm needs the algorithm_data.count field in <i>mhash_keygen_ext()</i>. The count field tells the algorithm to hash repeatedly the password and to stop when <code>count</code> bytes have been processed.</p>
-<dt>int <code>mhash_get_keygen_salt_size</code>( keygenid <i>algorithm</i>);</p>
-<dd> This function returns the size of the salt size, that the specific <i>algorithm</i> will use. If it returns 0, then there is no limitation in the size.</p>
-<dt>int <code>mhash_get_keygen_max_key_size</code>( keygenid <i>algorithm</i>);</p>
-<dd> This function returns the maximum size of the key, that the key generation algorithm may produce. If it returns 0, then there is no limitation in the size.</p>
-<dt>int <code>mhash_keygen_uses_hash_algorithm</code>( keygenid <i>algorithm</i>);</p>
-<dd> This function returns the number of the hash algorithms the key generation algorithm will use. If it is 0 then no hash algorithm is used by the key generation algorithm. This is for the <i>algorithm_data.hash_algorithm</i> field in <i>mhash_keygen_ext()</i>. If</p>
-<dt>size_t <code>mhash_keygen_count</code>(void);</p>
-<dd> This returns the <tt>&quot;keygenid&quot;</tt> of the last available key generation algorithm. Algorithms are numbered from 0 to <tt>&quot;mhash_keygen_count()&quot;</tt>.</p>
-<dt>char *<code>mhash_get_keygen_name</code>(keygenid <i>type</i>);</p>
-<dd> If <i>type</i> exists, this returns the name of the keygen <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned. The string is allocated with <i><a href="/docs/linux/man/3-malloc/">malloc</a></i>(3) seperately, so do not forget to <i><a href="/docs/linux/man/3-free/">free</a></i>(3) it.</p>
-<dt>const char *<code>mhash_get_keygen_name_static</code>(keygenid <i>type</i>);</p>
-<dd> If <i>type</i> exists, this returns the name of the keygen <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned.</dl>
+<dt>int <code>mhash_keygen_uses_salt</code>( keygenid <i>algorithm</i>);</dt>
+<dd> This function returns 1 if the specified key generation algorithm needs a salt to be specified.</dd>
+<dt>int <code>mhash_keygen_uses_count</code>( keygenid <i>algorithm</i>);</dt>
+<dd> This function returns 1 if the specified key generation algorithm needs the algorithm_data.count field in <i>mhash_keygen_ext()</i>. The count field tells the algorithm to hash repeatedly the password and to stop when <code>count</code> bytes have been processed.</dd>
+<dt>int <code>mhash_get_keygen_salt_size</code>( keygenid <i>algorithm</i>);</dt>
+<dd> This function returns the size of the salt size, that the specific <i>algorithm</i> will use. If it returns 0, then there is no limitation in the size.</dd>
+<dt>int <code>mhash_get_keygen_max_key_size</code>( keygenid <i>algorithm</i>);</dt>
+<dd> This function returns the maximum size of the key, that the key generation algorithm may produce. If it returns 0, then there is no limitation in the size.</dd>
+<dt>int <code>mhash_keygen_uses_hash_algorithm</code>( keygenid <i>algorithm</i>);</dt>
+<dd> This function returns the number of the hash algorithms the key generation algorithm will use. If it is 0 then no hash algorithm is used by the key generation algorithm. This is for the <i>algorithm_data.hash_algorithm</i> field in <i>mhash_keygen_ext()</i>. If</dd>
+<dt>size_t <code>mhash_keygen_count</code>(void);</dt>
+<dd> This returns the <tt>&quot;keygenid&quot;</tt> of the last available key generation algorithm. Algorithms are numbered from 0 to <tt>&quot;mhash_keygen_count()&quot;</tt>.</dd>
+<dt>char *<code>mhash_get_keygen_name</code>(keygenid <i>type</i>);</dt>
+<dd> If <i>type</i> exists, this returns the name of the keygen <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned. The string is allocated with <i><a href="/docs/linux/man/3-malloc/">malloc</a></i>(3) seperately, so do not forget to <i><a href="/docs/linux/man/3-free/">free</a></i>(3) it.</dd>
+<dt>const char *<code>mhash_get_keygen_name_static</code>(keygenid <i>type</i>);</dt>
+<dd> If <i>type</i> exists, this returns the name of the keygen <i>type</i>. Otherwise, a <tt>&quot;NULL&quot;</tt> pointer is returned.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Hashing <font SIZE="-1">STDIN</font> until <font SIZE="-1">EOF</font>. </p>
 <p>#include &lt;mhash.h&gt;<br />

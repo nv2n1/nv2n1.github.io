@@ -15,15 +15,15 @@ phy_mii_ioctl - generic PHY MII ioctl interface
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>the phy_device struct</dl>
+<dl><dd></dd><dd>the phy_device struct</dd></dl>
  
 
  <i>ifr</i>
-<dl><dd>struct ifreq for socket ioctl's</dl>
+<dl><dd>struct ifreq for socket ioctl's</dd></dl>
  
 
  <i>cmd</i>
-<dl><dd>ioctl cmd to execute</dl>
+<dl><dd>ioctl cmd to execute</dd></dl>
 
 <h2>Description</h2>
 

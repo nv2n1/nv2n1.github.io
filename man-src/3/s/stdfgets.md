@@ -11,7 +11,6 @@ std::fgets - std::fgets
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     char *fgets(char *str, int count, std::FILE *stream);</code></pre> 
 Reads at most count - 1 characters from the given file stream and stores them in the character array pointed to by str. Reading stops if end-of-file occurs or a newline character is found, in which case str will contain that newline character. If no errors occur, writes a null character at the position immediately after the last character written to str. 
 
@@ -30,12 +29,9 @@ If the failure has been caused by some other error, sets the error indicator (se
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     std::FILE *tmpf = std::tmpfile();
     std::fputs(&quot;Alan Turing\n&quot;, tmpf);

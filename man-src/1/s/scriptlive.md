@@ -20,43 +20,43 @@ description: "scriptlive – re-run session typescripts, using timing informatio
 <p> <code>-I</code>, <code>&#8211;log-in</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> File containing <code>script</code>&#8216;s terminal input.</dl>
+</dt><dd> File containing <code>script</code>&#8216;s terminal input.</dd></dl>
 <p> <code>-B</code>, <code>&#8211;log-io</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> File containing <code>script</code>&#8216;s terminal output and input.</dl>
+</dt><dd> File containing <code>script</code>&#8216;s terminal output and input.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;timing</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> File containing <code>script</code>&#8216;s timing output. This option overrides old-style arguments.</dl>
+</dt><dd> File containing <code>script</code>&#8216;s timing output. This option overrides old-style arguments.</dd></dl>
 <p> <code>-T</code>, <code>&#8211;log-timing</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Aliased to <code>-t</code>, maintained for compatibility with <code><a href="/docs/linux/man/1-script/">script</a></code>(1) command-line options.</dl>
+</dt><dd> Aliased to <code>-t</code>, maintained for compatibility with <code><a href="/docs/linux/man/1-script/">script</a></code>(1) command-line options.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;divisor</code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Speed up the replay displaying this <i>number</i> of times. The argument is a floating-point number. It&#8217;s called divisor because it divides the timings by this factor. This option overrides old-style arguments.</dl>
+</dt><dd> Speed up the replay displaying this <i>number</i> of times. The argument is a floating-point number. It&#8217;s called divisor because it divides the timings by this factor. This option overrides old-style arguments.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;maxdelay</code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Set the maximum delay between updates to <i>number</i> of seconds. The argument is a floating-point number. This can be used to avoid long pauses in the typescript replay.</dl>
+</dt><dd> Set the maximum delay between updates to <i>number</i> of seconds. The argument is a floating-point number. This can be used to avoid long pauses in the typescript replay.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 % script-- log - timing file.tm-- log - in script.in Script started, file is script.out % date&lt;etc, etc&gt; % exit Script done, file is script.out % scriptlive-- log - timing file.tm-- log - in script.in
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <h2>COPYRIGHT</h2>
 <p> Copyright © 2019 Karel Zak </p>

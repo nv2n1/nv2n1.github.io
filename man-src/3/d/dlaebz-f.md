@@ -49,10 +49,10 @@ description: "dlaebz.f –"
  University, July 21, 1966
  Note: the arguments are, in general, *not* checked for unreasonable
  values.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>IJOB</i> </p>
+<dd><i>IJOB</i> </dd>
 <pre> IJOB is INTEGER
  Specifies what is to be done:
  = 1: Compute NAB for the initial intervals.
@@ -180,13 +180,13 @@ description: "dlaebz.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -218,7 +218,8 @@ description: "dlaebz.f –"
  &gt;= 0, then the interval will have N(AB(j,1))=NAB(j,1)=f-k and
  N(AB(j,2))=NAB(j,2)=f+r. The cases w(l) &lt; w(l+1) and
  w(l-r)=...=w(l+k) are handled similarly.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 318 of file dlaebz.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

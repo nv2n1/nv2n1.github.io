@@ -14,16 +14,16 @@ description: "gnutls_openpgp_privkey_import – API function"
 <p> <code>int gnutls_openpgp_privkey_import(gnutls_openpgp_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_privkey_t key</p>
-<dd> The structure to store the parsed key.</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> The RAW or BASE64 encoded key.</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> One of <code>gnutls_openpgp_crt_fmt_t</code> elements.</p>
-<dt>const char * password</p>
-<dd> not used for now</p>
-<dt>unsigned int flags</p>
-<dd> should be (0)</dl>
+<dt>gnutls_openpgp_privkey_t key</dt>
+<dd> The structure to store the parsed key.</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> The RAW or BASE64 encoded key.</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> One of <code>gnutls_openpgp_crt_fmt_t</code> elements.</dd>
+<dt>const char * password</dt>
+<dd> not used for now</dd>
+<dt>unsigned int flags</dt>
+<dd> should be (0)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given RAW or Base64 encoded key to the native gnutls_openpgp_privkey_t format. The output will be stored in &#8216;key&#8217;.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_openpgp_privkey_import – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

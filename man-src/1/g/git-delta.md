@@ -17,21 +17,19 @@ description: "git-delta – Lists changed files"
 <p> Lists all modified and renamed files vs. <code>master</code>:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git delta master MR
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Lists all deleted files vs. <code>example</code>:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git delta example D
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Ivan Malopinsky &lt;<i>hello [at] imsky.co</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

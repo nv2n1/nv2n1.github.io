@@ -15,7 +15,7 @@ rpc_create - create an RPC client and transport with one call
 <h2>Arguments</h2>
 
 <i>args</i>
-<dl><dd><dd>rpc_clnt create argument structure</dl>
+<dl><dd></dd><dd>rpc_clnt create argument structure</dd></dl>
 
 <h2>Description</h2>
 

@@ -21,58 +21,58 @@ description: "trafshow – full screen show network traffic"
 <p> The program pretend to be IPv6 compatible and ready to using, but it is not tested enough. You can define INET6 to do so.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Print detailed version information and exit.</p>
-<dt><code>-p</code></p>
-<dd> Do not put interface(s) into promiscuous mode.</p>
-<dt><code>-n</code></p>
-<dd> Do not convert numeric values to names (host addresses, port numbers, etc.). The mode can be toggled On/Off during a show by pressing the `<code>N</code>&#8216; key.</p>
-<dt><code>-b</code></p>
+<dt><code>-v</code></dt>
+<dd> Print detailed version information and exit.</dd>
+<dt><code>-p</code></dt>
+<dd> Do not put interface(s) into promiscuous mode.</dd>
+<dt><code>-n</code></dt>
+<dd> Do not convert numeric values to names (host addresses, port numbers, etc.). The mode can be toggled On/Off during a show by pressing the `<code>N</code>&#8216; key.</dd>
+<dt><code>-b</code></dt>
 <dd> To place a backflow entries near to the main streams in the sorted list of traffic flows.<br />
- <code>Note</code>: this mode can raise the system load dangerously high because it take a lot of CPU cycles!</p>
-<dt><code>-a</code> <i>len</i></p>
+ <code>Note</code>: this mode can raise the system load dangerously high because it take a lot of CPU cycles!</dd>
+<dt><code>-a</code> <i>len</i></dt>
 <dd> To aggregate traffic flows using IP netmask prefix <i>len</i>. This option also turn on service ports aggregation. The <i>len</i> expected as number of <code>bits</code> in the network portion of IP addresses (like CIDR). The aggragation <i>len</i> can be changed during a show by pressing the `<code>A</code>&#8216; key, and turned Off by empty string.<br />
- <code>Hint</code>: Please use <i>0</i> to reduce output just for network services.</p>
-<dt><code>-c</code> <i>conf</i></p>
-<dd> Use alternate color <i>config file</i> instead of default <i>/etc/trafshow</i>.</p>
-<dt><code>-i</code> <i>name</i></p>
-<dd> Listen on the specified network interface <i>name</i>. If unspecified, <code>TrafShow</code> collect data from <i>all</i> network interfaces, configured <code>UP</code> in the system. In the last case the system must supply enough number of packet capture devices (like /dev/bpf#).</p>
-<dt><code>-s</code> <i>str</i></p>
-<dd> To search and follow for list <code>item</code> matched by <i>string</i>, moving the cursor bar. The found <code>item</code> try to stay highlighted. The mode can be turned Off by `<code>Ctrl</code>&#8211;<code>/</code>&#8216; key press or [re]entered again by `<code>/</code>&#8216; key directly in the live show.</p>
-<dt><code>-u</code> <i>port</i></p>
+ <code>Hint</code>: Please use <i>0</i> to reduce output just for network services.</dd>
+<dt><code>-c</code> <i>conf</i></dt>
+<dd> Use alternate color <i>config file</i> instead of default <i>/etc/trafshow</i>.</dd>
+<dt><code>-i</code> <i>name</i></dt>
+<dd> Listen on the specified network interface <i>name</i>. If unspecified, <code>TrafShow</code> collect data from <i>all</i> network interfaces, configured <code>UP</code> in the system. In the last case the system must supply enough number of packet capture devices (like /dev/bpf#).</dd>
+<dt><code>-s</code> <i>str</i></dt>
+<dd> To search and follow for list <code>item</code> matched by <i>string</i>, moving the cursor bar. The found <code>item</code> try to stay highlighted. The mode can be turned Off by `<code>Ctrl</code>&#8211;<code>/</code>&#8216; key press or [re]entered again by `<code>/</code>&#8216; key directly in the live show.</dd>
+<dt><code>-u</code> <i>port</i></dt>
 <dd> Listen on the specified UDP <i>port</i> number for the <code>Cisco Netflow</code> feed. The default port number is <i>9995</i>.<br />
- <code>Hint</code>: Please use <i>0</i> to disable this functionality.</p>
-<dt><code>-R</code> <i>refresh</i></p>
-<dd> Set the <code>refresh period</code> of data show to <i>seconds</i>, <i>2</i> seconds by default. This option can be changed during a show by pressing the `<code>R</code>&#8216; key.</p>
-<dt><code>-P</code> <i>purge</i></p>
-<dd> Set the expired data <code>purge period</code> to <i>seconds</i>, <i>10</i> seconds by default. This option can be changed during a show by pressing the `<code>P</code>&#8216; key.</p>
-<dt><code>-F</code> <i>file</i></p>
-<dd> Use <i>file</i> as input for the <code>filter expression</code>.</p>
-<dt><i>expr</i></p>
+ <code>Hint</code>: Please use <i>0</i> to disable this functionality.</dd>
+<dt><code>-R</code> <i>refresh</i></dt>
+<dd> Set the <code>refresh period</code> of data show to <i>seconds</i>, <i>2</i> seconds by default. This option can be changed during a show by pressing the `<code>R</code>&#8216; key.</dd>
+<dt><code>-P</code> <i>purge</i></dt>
+<dd> Set the expired data <code>purge period</code> to <i>seconds</i>, <i>10</i> seconds by default. This option can be changed during a show by pressing the `<code>P</code>&#8216; key.</dd>
+<dt><code>-F</code> <i>file</i></dt>
+<dd> Use <i>file</i> as input for the <code>filter expression</code>.</dd>
+<dt><i>expr</i></dt>
 <dd> Select which packets will be displayed. If no <i>expression</i> is given, all packets on the net will be displayed. Otherwise, only packets for which <i>expression</i> is `true&#8217; will be displayed.<br />
  The <code>filter expression</code> can be changed during a show by pressing the `<code>F</code>&#8216; key, and turned Off by empty string.<br />
- Please see <code>tcpdump</code>(1) man page for syntax of <code>filter expression</code>.</dl>
+ Please see <code>tcpdump</code>(1) man page for syntax of <code>filter expression</code>.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/trafshow</i></p>
-<dd> The default colors configuration file if any.</p>
-<dt><i>$HOME/.trafshow</i></p>
-<dd> The personal file with the user defined colors.</dl>
+<dt><i>/etc/trafshow</i></dt>
+<dd> The default colors configuration file if any.</dd>
+<dt><i>$HOME/.trafshow</i></dt>
+<dd> The personal file with the user defined colors.</dd></dl>
 <h2>COLORS</h2>
 <p> If <code>TrafShow</code> has been compiled with modern curses libraries such as <code>Slang</code> or <code>Ncurses</code> it been able to show colored traffic on the color-capable terminal. Hopefully, no special actions required to install them because your system has it by default (leastwise last years). </p>
 <p> The syntax of <code>TrafShow</code> color configuration file as follow:</p>
 <dl>
-<dt><i>default</i> <i>fcolor</i><code>:</code><i>bcolor</i></p>
-<dd> Set the default screen background color-pair</p>
-<dt><i>port</i>[<code>/</code><i>proto</i>] <i>fcolor</i><code>:</code><i>bcolor</i></p>
-<dd> Set color pattern by service port</p>
-<dt>[<i>proto</i>] <i>src</i>[<code>/</code><i>mask</i>][<code>,</code><i>port</i>] <i>dst</i>[<code>/</code><i>mask</i>][<code>,</code><i>port</i>] <i>fcolor</i><code>:</code><i>bcolor</i></p>
-<dd> Set color pattern by pair of source and destination addresses</dl>
+<dt><i>default</i> <i>fcolor</i><code>:</code><i>bcolor</i></dt>
+<dd> Set the default screen background color-pair</dd>
+<dt><i>port</i>[<code>/</code><i>proto</i>] <i>fcolor</i><code>:</code><i>bcolor</i></dt>
+<dd> Set color pattern by service port</dd>
+<dt>[<i>proto</i>] <i>src</i>[<code>/</code><i>mask</i>][<code>,</code><i>port</i>] <i>dst</i>[<code>/</code><i>mask</i>][<code>,</code><i>port</i>] <i>fcolor</i><code>:</code><i>bcolor</i></dt>
+<dd> Set color pattern by pair of source and destination addresses</dd></dl>
 <p> The tokens <i>*</i>, <i>any</i>, or <i>all</i> matchs <code>ANY</code> in the pattern. Where <i>fcolor</i> is foreground color and <i>bcolor</i> is background color.<br />
  The fcolor and bcolor may be one of the following:</p>
 <dl>
-<dt><i>black red green yellow blue magenta cyan white</i></p>
-<dd> It posible to indicate color as number from 0 to 7.</dl>
+<dt><i>black red green yellow blue magenta cyan white</i></dt>
+<dd> It posible to indicate color as number from 0 to 7.</dd></dl>
 <p> The upper-case <i>F</i>color mean <code>bright on</code>. The upper-case <i>B</i>color mean <code>blink on</code>.</p>
 <h2>SEE ALSO</h2>
 <p> pcap(3), tcpdump(1), bpf(4)</p>

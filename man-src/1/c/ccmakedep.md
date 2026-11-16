@@ -33,18 +33,18 @@ $(SRCS)
 <h2>OPTIONS</h2>
 <p> The program will ignore any option that it does not understand, so you may use the same arguments that you would for <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), including <code>-D</code> and <code>-U</code> options to define and undefine symbols and <code>-I</code> to set the include path.</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Append the dependencies to the file instead of replacing existing dependencies.</p>
-<dt><code>-cc</code><i>compiler</i></p>
-<dd> Use this compiler to generate dependencies.</p>
-<dt><code>-f</code><i>makefile</i></p>
-<dd> Filename. This allows you to specify an alternate makefile in which <code>ccmakedep</code> can place its output. Specifying &#8220;-&#8221; as the file name (that is, <code>-f-</code>) sends the output to standard output instead of modifying an existing file.</p>
-<dt><code>-s</code><i>string</i></p>
-<dd> Starting string delimiter. This option permits you to specify a different string for <code>ccmakedep</code> to look for in the makefile. The default is &#8220;# DO NOT DELETE&#8221;.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose: display the C compiler command before running it.</p>
-<dt><code>&#8212;</code><i> options </i><code>&#8212;</code></p>
-<dd> If <code>ccmakedep</code> encounters a double hyphen (&#8211;) in the argument list, then any unrecognized arguments following it will be silently ignored. A second double hyphen terminates this special treatment. In this way, <code>ccmakedep</code> can be made to safely ignore esoteric compiler arguments that might normally be found in a CFLAGS <code>make</code> macro (see the <code>EXAMPLE</code> section above). <code>-D</code>, <code>-I</code>, and <code>-U</code> options appearing between the pair of double hyphens are still processed normally.</dl>
+<dt><code>-a</code></dt>
+<dd> Append the dependencies to the file instead of replacing existing dependencies.</dd>
+<dt><code>-cc</code><i>compiler</i></dt>
+<dd> Use this compiler to generate dependencies.</dd>
+<dt><code>-f</code><i>makefile</i></dt>
+<dd> Filename. This allows you to specify an alternate makefile in which <code>ccmakedep</code> can place its output. Specifying &#8220;-&#8221; as the file name (that is, <code>-f-</code>) sends the output to standard output instead of modifying an existing file.</dd>
+<dt><code>-s</code><i>string</i></dt>
+<dd> Starting string delimiter. This option permits you to specify a different string for <code>ccmakedep</code> to look for in the makefile. The default is &#8220;# DO NOT DELETE&#8221;.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose: display the C compiler command before running it.</dd>
+<dt><code>&#8212;</code><i> options </i><code>&#8212;</code></dt>
+<dd> If <code>ccmakedep</code> encounters a double hyphen (&#8211;) in the argument list, then any unrecognized arguments following it will be silently ignored. A second double hyphen terminates this special treatment. In this way, <code>ccmakedep</code> can be made to safely ignore esoteric compiler arguments that might normally be found in a CFLAGS <code>make</code> macro (see the <code>EXAMPLE</code> section above). <code>-D</code>, <code>-I</code>, and <code>-U</code> options appearing between the pair of double hyphens are still processed normally.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), <code><a href="/docs/linux/man/1-make/">make</a></code>(1), <code><a href="/docs/linux/man/1-makedepend/">makedepend</a></code>(1), <code><a href="/docs/linux/man/1-ccmakedep/">ccmakedep</a></code>(1).</p>
 <h2>AUTHOR</h2>

@@ -15,36 +15,36 @@ description: "synce-install-cab – install .cab file"
 <p> <code>synce-install-cab</code> installs a .cab file on a device connected through SynCE. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d <i>LEVEL</i></p>
-<dd> Set debug log level:</p>
+<dt>-d <i>LEVEL</i></dt>
+<dd> Set debug log level:</dd>
 <dt>
-<dd> 0 &#8211; No logging (default)</p>
+</dt><dd> 0 &#8211; No logging (default)</dd>
 <dt>
-<dd> 1 &#8211; Errors only</p>
+</dt><dd> 1 &#8211; Errors only</dd>
 <dt>
-<dd> 2 &#8211; Errors and warnings</p>
+</dt><dd> 2 &#8211; Errors and warnings</dd>
 <dt>
-<dd> 3 &#8211; Everything </p>
-<dt>-p <i>PATH</i></p>
-<dd> Path to device </p>
-<dt>-h</p>
-<dd> Display help message. </p>
-<dt>-o <i>WCE_OPT</i></p>
-<dd> Flags to pass to <i>wceload.exe</i> on the remote device. Useful flags include:</p>
+</dt><dd> 3 &#8211; Everything </dd>
+<dt>-p <i>PATH</i></dt>
+<dd> Path to device </dd>
+<dt>-h</dt>
+<dd> Display help message. </dd>
+<dt>-o <i>WCE_OPT</i></dt>
+<dd> Flags to pass to <i>wceload.exe</i> on the remote device. Useful flags include:</dd>
 <dt>
-<dd> /noui &#8211; Install silently</p>
+</dt><dd> /noui &#8211; Install silently</dd>
 <dt>
-<dd> /delete 1 &#8211; Don&#8217;t delete CAB file after installation</p>
+</dt><dd> /delete 1 &#8211; Don&#8217;t delete CAB file after installation</dd>
 <dt>
-<dd> /nouninstall &#8211; Don&#8217;t create an uninstall file</p>
+</dt><dd> /nouninstall &#8211; Don&#8217;t create an uninstall file</dd>
 <dt>
-<dd> /askdest &#8211; Ask where to install</p>
+</dt><dd> /askdest &#8211; Ask where to install</dd>
 <dt>
-<dd> /noaskdest &#8211; Get install information from registry </p>
-<dt>-n</p>
-<dd> Don&#8217;t run wceload (just copy CAB files) </p>
-<dt><i>FILENAME</i></p>
-<dd> The .cab file(s) that will be installed. If no filenames are specified, <i>wceload.exe</i> will nontheless be run on the remote device; this will install any CAB files already copied, for example with the <i>-n</i> flag. </p>
+</dt><dd> /noaskdest &#8211; Get install information from registry </dd>
+<dt>-n</dt>
+<dd> Don&#8217;t run wceload (just copy CAB files) </dd>
+<dt><i>FILENAME</i></dt>
+<dd> The .cab file(s) that will be installed. If no filenames are specified, <i>wceload.exe</i> will nontheless be run on the remote device; this will install any CAB files already copied, for example with the <i>-n</i> flag. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>

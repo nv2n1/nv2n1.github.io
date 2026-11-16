@@ -19,22 +19,22 @@ description: "docker-container-commit – Create a new image from a container’
 <p> An existing Fedora based container has had Apache installed while running in interactive mode with the bash shell. Apache is also running. To create a new image run docker ps to find the container&#8217;s ID and then run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker commit -m=&quot;Added Apache to Fedora base image&quot; \
   -a=&quot;A D Ministrator&quot; 98bd7fc99854 fedora/fedora_httpd:20
 </pre>
-</dl>
+</dd></dl>
 <p> Note that only a-z0-9-_. are allowed when naming images from an existing container. </p>
 <h2>Apply specified Dockerfile instructions while committing the image</h2>
 <p> If an existing container was created without the DEBUG environment variable set to &quot;true&quot;, you can create a new image based on that container by first getting the container&#8217;s ID with docker ps and then running: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container commit -c=&quot;ENV DEBUG=true&quot; 98bd7fc99854 debug-image
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;author</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Author (e.g., &quot;John Hannibal Smith hannibal [at] a-team.com<br />
  &lt;mailto:hannibal [at] a-team.com&gt;&quot;) </p>

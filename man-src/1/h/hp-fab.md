@@ -15,16 +15,16 @@ description: "hp-fab – Fax Address Book"
 <p> <code>hp-fab [MODE] [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>
-<dt>Run in interactive mode:</p>
-<dd> -i or &#8211;interactive</dl>
+<dt>Run in interactive mode:</dt>
+<dd> -i or &#8211;interactive</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd></dl>
 <h2>AUTHOR</h2>
 <p> HPLIP (Hewlett-Packard Linux Imaging and Printing) is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.</p>
 <h2>REPORTING BUGS</h2>

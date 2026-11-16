@@ -19,7 +19,7 @@ description: "dggbal.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGGBAL balances a pair of general real matrices (A,B).  This
  involves, first, permuting A and B by similarity transformations to
@@ -31,11 +31,11 @@ description: "dggbal.f –"
  accuracy of the computed eigenvalues and/or eigenvectors in the
  generalized eigenvalue problem A*x = lambda*B*x.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre>
           JOB is CHARACTER*1
           Specifies the operations to be performed on A and B:
@@ -128,24 +128,25 @@ description: "dggbal.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   See R.C. WARD, Balancing the generalized eigenvalue problem,
                  SIAM J. Sci. Stat. Comp. 2 (1981), 141-152.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 177 of file dggbal.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

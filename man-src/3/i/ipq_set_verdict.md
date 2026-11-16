@@ -19,12 +19,12 @@ description: "ipq_set_verdict — issue verdict and optionally modified packet t
 <p> The <i>id</i> parameter is the packet identifier obtained via <code>ipq_get_packet</code>. </p>
 <p> The <i>verdict</i> parameter must be one of:</p>
 <dl>
-<dt><code>NF_ACCEPT</code></p>
-<dd> Accept the packet and continue traversal within the kernel. </p>
-<dt><code>NF_DROP</code></p>
-<dd> Drop the packet.</p>
-<dt><code>NF_QUEUE</code></p>
-<dd> Requeue the packet.</dl>
+<dt><code>NF_ACCEPT</code></dt>
+<dd> Accept the packet and continue traversal within the kernel. </dd>
+<dt><code>NF_DROP</code></dt>
+<dd> Drop the packet.</dd>
+<dt><code>NF_QUEUE</code></dt>
+<dd> Requeue the packet.</dd></dl>
 <p> <code>NF_STOLEN</code> and <code>NF_REPEAT</code> are kernel-internal constants and should not be used from userspace as their exact side effects have not been investigated. </p>
 <p> The <i>data_len</i> parameter is the length of the data pointed to by <i>buf</i>, the optional replacement payload data. </p>
 <p> If simply setting a verdict without modifying the payload data, use zero for <i>data_len</i> and NULL for <i>buf</i>. </p>

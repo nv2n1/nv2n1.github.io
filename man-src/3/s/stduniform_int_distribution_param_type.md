@@ -15,17 +15,8 @@ description: "std::uniform_int_distribution< _IntType >::param_type –"
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (_IntType __a=0, _IntType __b=std::numeric_limits&lt; _IntType &gt;::max())
-
-
-
 result_type a () const
-
-
-
 result_type b () const
-
-
-
 Friends</code></pre>
 <p> bool <code>operator==</code> (const <code>param_type</code> &amp;__p1, const <code>param_type</code> &amp;__p2)</p>
 <h2>Detailed Description</h2>

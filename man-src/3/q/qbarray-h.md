@@ -12,9 +12,7 @@ description: "qbarray.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;stdint.h&gt;
-
 #include &lt;unistd.h&gt;
-
 #include &lt;qb/qbdefs.h&gt;</code></pre>
 <h3>Typedefs</h3>
 <p>typedef struct qb_array <code>qb_array_t</code><br />
@@ -58,46 +56,46 @@ description: "qbarray.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>max_elements</i> initial max elements.<br />
- <i>element_size</i> size of each element.</dl>
+ <i>element_size</i> size of each element.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>array instance.</dl>
+<dd>array instance.</dd></dl>
 <h3><code>qb_array_t</code>* qb_array_create_2 (size_tmax_elements, size_telement_size, size_tautogrow_elements)</h3>
 <p>Create an array with fixed sized elements. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>max_elements</i> initial max elements.<br />
  <i>element_size</i> size of each element.<br />
- <i>autogrow_elements</i> the number of elements to grow automatically by.</dl>
+ <i>autogrow_elements</i> the number of elements to grow automatically by.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>array instance.</dl>
+<dd>array instance.</dd></dl>
 <h3>size_t qb_array_elems_per_bin_get (<code>qb_array_t</code> *a)</h3>
 <p>Get the number of elements per bin.</p>
 <h3>void qb_array_free (<code>qb_array_t</code> *a)</h3>
 <p>Free all the memory used by the array. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>a</i> array instance.</dl>
+<dd><i>a</i> array instance.</dd></dl>
 <h3>int32_t qb_array_grow (<code>qb_array_t</code> *a, size_tmax_elements)</h3>
 <p>Grow the array. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>a</i> array instance.<br />
- <i>max_elements</i> the new maximum size of the array.</dl>
+ <i>max_elements</i> the new maximum size of the array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>(0 == success, else -errno)</dl>
+<dd>(0 == success, else -errno)</dd></dl>
 <h3>int32_t qb_array_index (<code>qb_array_t</code> *a, int32_tidx, void **element_out)</h3>
 <p>Get an element at a particular index. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>a</i> array instance.<br />
  <i>idx</i> the index<br />
- <i>element_out</i> the pointer to the element data.</dl>
+ <i>element_out</i> the pointer to the element data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>(0 == success, else -errno)</dl>
+<dd>(0 == success, else -errno)</dd></dl>
 <h3>int32_t qb_array_new_bin_cb_set (<code>qb_array_t</code> *a, <code>qb_array_new_bin_cb_fn</code>fn)</h3>
 <p>Get a callback when a new bin is allocated.</p>
 <h3>size_t qb_array_num_bins_get (<code>qb_array_t</code> *a)</h3>

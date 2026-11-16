@@ -133,12 +133,12 @@ description: "virtd_selinux – Security Enhanced Linux Policy for the virtd pro
 <p> Policy governs the access confined processes have to these ports. SELinux virtd policy is very flexible allowing users to setup their virtd processes in as secure a method as possible. </p>
 <p> The following port types are defined for virtd: </p>
 <dl>
-<dt><code>virt_migration_port_t</code></p>
+<dt><code>virt_migration_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 49152-49216 </p>
-<dt><code>virt_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 49152-49216 </dd>
+<dt><code>virt_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 16509,16514 udp 16509,16514</dl>
+</dd><dd>Default Defined Ports: tcp 16509,16514 udp 16509,16514</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type virtd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>file_type</code> </p>
@@ -155,8 +155,8 @@ description: "virtd_selinux – Security Enhanced Linux Policy for the virtd pro
 <p> <code>virtd_exec_t</code> </p>
 <p> &#8211; Set files with the virtd_exec_t type, if you want to transition an executable to the virtd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/virt-who, /usr/sbin/libvirtd, /usr/bin/imgfac.py, /usr/sbin/virtlockd, /usr/share/vdsm/vdsm, /usr/bin/imagefactory, /usr/bin/nova-compute, /usr/share/vdsm/respawn, /usr/sbin/condor_vm-gahp, /usr/bin/vios-proxy-host, /usr/bin/vios-proxy-guest, /usr/share/vdsm/daemonAdapter, /usr/share/vdsm/supervdsmServer </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/virt-who, /usr/sbin/libvirtd, /usr/bin/imgfac.py, /usr/sbin/virtlockd, /usr/share/vdsm/vdsm, /usr/bin/imagefactory, /usr/bin/nova-compute, /usr/share/vdsm/respawn, /usr/sbin/condor_vm-gahp, /usr/bin/vios-proxy-host, /usr/bin/vios-proxy-guest, /usr/share/vdsm/daemonAdapter, /usr/share/vdsm/supervdsmServer </dd>
 </dl>
 <p> <code>virtd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the virtd_initrc_exec_t type, if you want to transition an executable to the virtd_initrc_t domain. </p>
@@ -167,8 +167,8 @@ description: "virtd_selinux – Security Enhanced Linux Policy for the virtd pro
 <p> <code>virtd_unit_file_t</code> </p>
 <p> &#8211; Set files with the virtd_unit_file_t type, if you want to treat the files as virtd unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/.*xen.*.service, /usr/lib/systemd/system/virt.*.service, /usr/lib/systemd/system/libvirt.*.service </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/.*xen.*.service, /usr/lib/systemd/system/virt.*.service, /usr/lib/systemd/system/libvirt.*.service </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

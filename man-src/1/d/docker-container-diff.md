@@ -40,7 +40,7 @@ description: "docker-container-diff – Inspect changes to files or directories 
 <p> Inspect the changes to an nginx container: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker diff 1fdfd1f54c1b
 C /dev
@@ -63,7 +63,7 @@ C /var/log/nginx
 A /var/log/nginx/access.log
 A /var/log/nginx/error.log
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for diff</p>
 <h2>SEE ALSO</h2>

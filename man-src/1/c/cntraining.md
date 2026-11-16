@@ -17,7 +17,7 @@ description: "cntraining – character normalization training for Tesseract"
 <p> -D <i>dir</i></p>
 <dl>
 <dt>
-<dd> Directory to write output files to.</dl>
+</dt><dd> Directory to write output files to.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-tesseract/">tesseract</a>(1), <a href="/docs/linux/man/1-shapeclustering/">shapeclustering</a>(1), <a href="/docs/linux/man/1-mftraining/">mftraining</a>(1) </p>
 <p> m[blue]<code><a rel="nofollow" href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a></code>m[]</p>

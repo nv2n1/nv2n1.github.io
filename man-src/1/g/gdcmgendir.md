@@ -53,10 +53,10 @@ file-out  DICOM output filename
 <h2>NOTE</h2>
 <p> One may have to run some preliminary steps in order to get gdcmgendir to generate the DICOMDIR file. Namely two steps: </p>
 <dl>
-<dt>*</p>
-<dd> Batch renaming of the DICOM filename into something compatible with ISO 9660 filename convention</p>
-<dt>*</p>
-<dd> Convert all DICOM file into the Explicit VR Little Endian Uncompressed (1.2.840.10008.1.2.1)</dl>
+<dt>*</dt>
+<dd> Batch renaming of the DICOM filename into something compatible with ISO 9660 filename convention</dd>
+<dt>*</dt>
+<dd> Convert all DICOM file into the Explicit VR Little Endian Uncompressed (1.2.840.10008.1.2.1)</dd></dl>
 <p> Step 1. can be solved in a numerous way. Eg. on UNIX environment this could either be solved using the mkisofs command line tool. filename should not contains any extension since the VR CS does not allow for the &#8216;.&#8217; character. Only upper case, digit 0-9, the space &#8216; &#8216; and the underscore &#8216;_&#8217; character are valid in VR CS, with a maximum of 8 bytes. Another simple tool that can be handy is &#8216;rename&#8217; in conjunction with &#8216;basename&#8217;. </p>
 <p> Step 2. can simply be achieved using the gdcmconv command line tool: </p>
 <pre><code>

@@ -19,12 +19,12 @@ description: "aa_initmouse – initialize the AA-lib mouse driver."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>struct aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>const struct aa_mousedriver *d</code></p>
-<dd> Driver you wish to use.</p>
-<dt><code>int mode</code></p>
-<dd> Mask of extra features you request. No such features are available in the current AA-lib version.</dl>
+<dt><code>struct aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>const struct aa_mousedriver *d</code></dt>
+<dd> Driver you wish to use.</dd>
+<dt><code>int mode</code></dt>
+<dd> Mask of extra features you request. No such features are available in the current AA-lib version.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is the most primitive AA-lib keyboard initialization function. Allows better control over the process than the easier to use aa_autoinitmouse function.</p>
 <h2>RETURNS</h2>

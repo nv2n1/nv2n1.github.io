@@ -16,40 +16,40 @@ description: "bmc-device – perform advanced BMC commands"
 <h2>General Options</h2>
 <p>The following options are general options for configuring IPMI communication and executing general tool commands.</p>
 <dl>
-<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></p>
-<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</p>
-<dt><code>&#8211;disable-auto-probe</code></p>
-<dd>Do not probe in-band IPMI devices for default settings.</p>
-<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></p>
-<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</p>
-<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></p>
-<dd>Specify the in-band driver device path to be used instead of the probed path.</p>
-<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></p>
-<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</p>
-<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</p>
-<dd>Specify the in-band driver target channel number to send IPMI requests to.</p>
-<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</p>
-<dd>Specify the in-band driver target slave number to send IPMI requests to.</p>
-<dt></i><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></p>
-<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</p>
-<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></p>
-<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast USER privileges in order for this tool to operate fully.</p>
-<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></p>
-<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</p>
-<dt><code>-P</code>, <code>&#8211;password-prompt</code></p>
-<dd>Prompt for password to avoid possibility of listing it in process lists.</p>
-<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></p>
-<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</p>
-<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></p>
-<dd>Prompt for k-g to avoid possibility of listing it in process lists.</p>
-<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</p>
-<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 1000 milliseconds (1 second) if not specified. The retransmission timeout cannot be larger than the session timeout.</p>
-<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></p>
-<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</p>
-<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></p>
-<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </p>
+<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></dt>
+<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</dd>
+<dt><code>&#8211;disable-auto-probe</code></dt>
+<dd>Do not probe in-band IPMI devices for default settings.</dd>
+<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></dt>
+<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</dd>
+<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></dt>
+<dd>Specify the in-band driver device path to be used instead of the probed path.</dd>
+<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></dt>
+<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</dd>
+<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</dt>
+<dd>Specify the in-band driver target channel number to send IPMI requests to.</dd>
+<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</dt>
+<dd>Specify the in-band driver target slave number to send IPMI requests to.</dd>
+<dt></i><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></dt>
+<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</dd>
+<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></dt>
+<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast USER privileges in order for this tool to operate fully.</dd>
+<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></dt>
+<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</dd>
+<dt><code>-P</code>, <code>&#8211;password-prompt</code></dt>
+<dd>Prompt for password to avoid possibility of listing it in process lists.</dd>
+<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></dt>
+<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</dd>
+<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></dt>
+<dd>Prompt for k-g to avoid possibility of listing it in process lists.</dd>
+<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</dd>
+<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 1000 milliseconds (1 second) if not specified. The retransmission timeout cannot be larger than the session timeout.</dd>
+<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></dt>
+<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</dd>
+<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></dt>
+<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </dd>
 <p> 0 &#8211; Authentication Algorithm = None; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 1 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 2 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = HMAC-SHA1-96; Confidentiality Algorithm = None </p>
@@ -62,101 +62,101 @@ description: "bmc-device – perform advanced BMC commands"
 <p> 15 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 16 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = None </p>
 <p> 17 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = AES-CBC-128</p>
-<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></p>
-<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to ADMIN if not specified.</p>
-<dt><code>&#8211;config-file</code>=<i>FILE</i></p>
-<dd>Specify an alternate configuration file.</p>
-<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></p>
-<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Turn on debugging.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Output a help list and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Output a usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output the program version and exit.</dl>
+<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></dt>
+<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to ADMIN if not specified.</dd>
+<dt><code>&#8211;config-file</code>=<i>FILE</i></dt>
+<dd>Specify an alternate configuration file.</dd>
+<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></dt>
+<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Output a help list and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Output a usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output the program version and exit.</dd></dl>
 <h2>Bmc-Device Options</h2>
 <p>The following options are specific to <code>bmc-device.</code></p>
 <dl>
-<dt><code>&#8211;cold-reset</code></p>
-<dd>Perform a cold reset.</p>
-<dt><code>&#8211;warm-reset</code></p>
-<dd>Perform a warm reset.</p>
-<dt><code>&#8211;get-self-test-results</code></p>
-<dd>Output BMC self test results.</p>
-<dt><code>&#8211;get-acpi-power-state</code></p>
-<dd>Get ACPI system and device power state.</p>
-<dt><code>&#8211;set-acpi-power-state</code></p>
-<dd>Set ACPI power state. Must be specified to use the <code>&#8211;set-acpi-system-power-state</code>, and <code>&#8211;set-acpi-device-power-state</code> options listed below.</p>
-<dt><code>&#8211;set-acpi-system-power-state</code>=<i>SYSTEM_POWER_STATE</i></p>
-<dd>Set ACPI system power state. Allowed values: S0_G0, S1, S2, S3, S4, S5_G2, S4_S5, G3, SLEEPING, G1_SLEEPING, OVERRIDE, LEGACY_ON, LEGACY_OFF, UNKNOWN. Used with the <code>&#8211;set-acpi-power-state</code> option.</p>
-<dt><code>&#8211;set-acpi-device-power-state</code>=<i>DEVICE_POWER_STATE</i></p>
-<dd>Set ACPI device power state. Allowed values: D0, D1, D2, D3, UNKNOWN. Used with the <code>&#8211;set-acpi-power-state</code> option.</p>
-<dt><code>&#8211;get-lan-statistics</code></p>
-<dd>Get IP, UDP, and RMCP statistics.</p>
-<dt><code>&#8211;clear-lan-statistics</code></p>
-<dd>Clear IP, UDP, and RMCP statistics.</p>
-<dt><code>&#8211;rearm-sensor</code>=<i>&quot;&lt;record_id&gt; [&lt;assertion_bitmask&gt; &lt;deassertion_bitmask&gt;]&quot;</i></p>
-<dd>Re-arm a sensor. Re-arming a sensor informs the internal device to reset and re-evaluate a sensor reading and events. Most sensors are automatically re-armed, however a rare few do require manual re-arming. This option may also be useful to reset a sensor reading or event that may be stuck due to an internal hardware or firmware error. If the <i>assertion_bitmask</i> and <i>deassertion_bitmask</i> are specified, only the specific events will be re-armed. If not specified, all possible events will be re-armed. This command requires the loading of the SDR.</p>
-<dt><code>&#8211;get-sdr-repository-time</code></p>
-<dd>Get SDR repository time.</p>
-<dt><code>&#8211;set-sdr-repository-time</code>=<i>TIME</i></p>
-<dd>Set SDR repository time. Input format = &quot;MM/DD/YYYY &#8211; HH:MM:SS&quot;. Note that hours are input in 24 hour form. Alternatively, the local system time can be specified with &quot;now&quot;.</p>
-<dt><code>&#8211;get-sel-time</code></p>
-<dd>Get SEL time.</p>
-<dt><code>&#8211;set-sel-time</code>=<i>TIME</i></p>
-<dd>Set SEL time. Input format = &quot;MM/DD/YYYY &#8211; HH:MM:SS&quot;. Note that hours are input in 24 hour form. Alternatively, the local system time can be specified with &quot;now&quot;.</p>
-<dt><code>&#8211;platform-event</code>=<i>&quot;[generator_id] &lt;event_message_format_version&gt; &lt;sensor_type&gt; &lt;sensor_number&gt; &lt;event_type&gt; &lt;event_direction&gt; &lt;event_data1&gt; &lt;event_data2&gt; &lt;event_data3&gt;&quot;</i></p>
-<dd>Instruct the BMC to process the specified event data. Typically, this data will be logged to the System Event Log (SEL), but depending on implementation it may be processed by other subsystems such as Platform Event Filtering (PEF). The keywords <i>assertion</i> or <i>deassertion</i> may be used for <i>event_direction</i>, or the numerical values may be used instead. The <i>event_message_format_version</i> is 0x03 for IPMI 1.0 and 0x04 for IPMI 1.5. The <i>generator_id</i> above is optional, however it is required if generating the event via a system interface (i.e. inband). If generating the event via a system interface, the system management software generator id range is 0x41 to 6Fh.</p>
-<dt><code>&#8211;set-sensor-reading-and-event-status</code>=<i>&quot;&lt;sensor_number&gt; &lt;sensor_reading&gt; &lt;sensor_reading_operation&gt; &lt;assertion_bitmask&gt; &lt;assertion_bitmask_operation&gt; &lt;deassertion_bitmask&gt; &lt;deassertion_bitmask_operation&gt; &lt;event_data1&gt; &lt;event_data2&gt; &lt;event_data3&gt; &lt;event_data_operation&gt;&quot;</i></p>
-<dd>Instruct the BMC to set a sensor reading and/or event status. How the various fields are written depends on a set of operation instructions specified. The <i>sensor_reading</i> can be written or not changed with the respective operation <i>write</i> and <i>nochange</i>. For the <i>assertion_bitmask</i> and <i>deassertion_bitmask</i>, the 0 bits of the bitmask can clear the bits of the status, the 1 bits of the bitmask can set the bits of the status, the entire bitmask can be written as the status, or the status cannot be changed respecitvely with the respective operations <i>clear0bits</i>, <i>set1bits</i>, <i>write</i>, and <i>nochange</i>. The <i>event_data1</i> byte can be written fully, written without the event offset (bits 3:0), or not be changed via the <i>write</i>, <i>nooffsetwrite</i>, or <i>nochange</i> operations.</p>
-<dt><code>&#8211;get-mca-auxiliary-log-status</code></p>
-<dd>Get machine check architecture (MCA) auxiliary log status information.</p>
-<dt><code>&#8211;get-ssif-interface-capabilities</code></p>
-<dd>Get SSIF interface capabilities.</p>
-<dt><code>&#8211;get-kcs-interface-capabilities</code></p>
-<dd>Get KCS interface capabilities.</p>
-<dt><code>&#8211;get-bt-interface-capabilities</code></p>
-<dd>Get BT interface capabilities.</p>
-<dt><code>&#8211;get-bmc-global-enables</code></p>
-<dd>Get BMC Global Enables.</p>
-<dt><code>&#8211;set-system-firmware-version</code>=<i>STRING</i></p>
-<dd>Set System Firmware Version.</p>
-<dt><code>&#8211;set-system-name</code>=<i>STRING</i></p>
-<dd>Set System Name.</p>
-<dt><code>&#8211;set-primary-operating-system-name</code>=<i>STRING</i></p>
-<dd>Set Primary Operating System Name.</p>
-<dt><code>&#8211;set-operating-system-name</code>=<i>STRING</i></p>
-<dd>Set Operating System Name.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Increase verbosity in output.</dl>
+<dt><code>&#8211;cold-reset</code></dt>
+<dd>Perform a cold reset.</dd>
+<dt><code>&#8211;warm-reset</code></dt>
+<dd>Perform a warm reset.</dd>
+<dt><code>&#8211;get-self-test-results</code></dt>
+<dd>Output BMC self test results.</dd>
+<dt><code>&#8211;get-acpi-power-state</code></dt>
+<dd>Get ACPI system and device power state.</dd>
+<dt><code>&#8211;set-acpi-power-state</code></dt>
+<dd>Set ACPI power state. Must be specified to use the <code>&#8211;set-acpi-system-power-state</code>, and <code>&#8211;set-acpi-device-power-state</code> options listed below.</dd>
+<dt><code>&#8211;set-acpi-system-power-state</code>=<i>SYSTEM_POWER_STATE</i></dt>
+<dd>Set ACPI system power state. Allowed values: S0_G0, S1, S2, S3, S4, S5_G2, S4_S5, G3, SLEEPING, G1_SLEEPING, OVERRIDE, LEGACY_ON, LEGACY_OFF, UNKNOWN. Used with the <code>&#8211;set-acpi-power-state</code> option.</dd>
+<dt><code>&#8211;set-acpi-device-power-state</code>=<i>DEVICE_POWER_STATE</i></dt>
+<dd>Set ACPI device power state. Allowed values: D0, D1, D2, D3, UNKNOWN. Used with the <code>&#8211;set-acpi-power-state</code> option.</dd>
+<dt><code>&#8211;get-lan-statistics</code></dt>
+<dd>Get IP, UDP, and RMCP statistics.</dd>
+<dt><code>&#8211;clear-lan-statistics</code></dt>
+<dd>Clear IP, UDP, and RMCP statistics.</dd>
+<dt><code>&#8211;rearm-sensor</code>=<i>&quot;&lt;record_id&gt; [&lt;assertion_bitmask&gt; &lt;deassertion_bitmask&gt;]&quot;</i></dt>
+<dd>Re-arm a sensor. Re-arming a sensor informs the internal device to reset and re-evaluate a sensor reading and events. Most sensors are automatically re-armed, however a rare few do require manual re-arming. This option may also be useful to reset a sensor reading or event that may be stuck due to an internal hardware or firmware error. If the <i>assertion_bitmask</i> and <i>deassertion_bitmask</i> are specified, only the specific events will be re-armed. If not specified, all possible events will be re-armed. This command requires the loading of the SDR.</dd>
+<dt><code>&#8211;get-sdr-repository-time</code></dt>
+<dd>Get SDR repository time.</dd>
+<dt><code>&#8211;set-sdr-repository-time</code>=<i>TIME</i></dt>
+<dd>Set SDR repository time. Input format = &quot;MM/DD/YYYY &#8211; HH:MM:SS&quot;. Note that hours are input in 24 hour form. Alternatively, the local system time can be specified with &quot;now&quot;.</dd>
+<dt><code>&#8211;get-sel-time</code></dt>
+<dd>Get SEL time.</dd>
+<dt><code>&#8211;set-sel-time</code>=<i>TIME</i></dt>
+<dd>Set SEL time. Input format = &quot;MM/DD/YYYY &#8211; HH:MM:SS&quot;. Note that hours are input in 24 hour form. Alternatively, the local system time can be specified with &quot;now&quot;.</dd>
+<dt><code>&#8211;platform-event</code>=<i>&quot;[generator_id] &lt;event_message_format_version&gt; &lt;sensor_type&gt; &lt;sensor_number&gt; &lt;event_type&gt; &lt;event_direction&gt; &lt;event_data1&gt; &lt;event_data2&gt; &lt;event_data3&gt;&quot;</i></dt>
+<dd>Instruct the BMC to process the specified event data. Typically, this data will be logged to the System Event Log (SEL), but depending on implementation it may be processed by other subsystems such as Platform Event Filtering (PEF). The keywords <i>assertion</i> or <i>deassertion</i> may be used for <i>event_direction</i>, or the numerical values may be used instead. The <i>event_message_format_version</i> is 0x03 for IPMI 1.0 and 0x04 for IPMI 1.5. The <i>generator_id</i> above is optional, however it is required if generating the event via a system interface (i.e. inband). If generating the event via a system interface, the system management software generator id range is 0x41 to 6Fh.</dd>
+<dt><code>&#8211;set-sensor-reading-and-event-status</code>=<i>&quot;&lt;sensor_number&gt; &lt;sensor_reading&gt; &lt;sensor_reading_operation&gt; &lt;assertion_bitmask&gt; &lt;assertion_bitmask_operation&gt; &lt;deassertion_bitmask&gt; &lt;deassertion_bitmask_operation&gt; &lt;event_data1&gt; &lt;event_data2&gt; &lt;event_data3&gt; &lt;event_data_operation&gt;&quot;</i></dt>
+<dd>Instruct the BMC to set a sensor reading and/or event status. How the various fields are written depends on a set of operation instructions specified. The <i>sensor_reading</i> can be written or not changed with the respective operation <i>write</i> and <i>nochange</i>. For the <i>assertion_bitmask</i> and <i>deassertion_bitmask</i>, the 0 bits of the bitmask can clear the bits of the status, the 1 bits of the bitmask can set the bits of the status, the entire bitmask can be written as the status, or the status cannot be changed respecitvely with the respective operations <i>clear0bits</i>, <i>set1bits</i>, <i>write</i>, and <i>nochange</i>. The <i>event_data1</i> byte can be written fully, written without the event offset (bits 3:0), or not be changed via the <i>write</i>, <i>nooffsetwrite</i>, or <i>nochange</i> operations.</dd>
+<dt><code>&#8211;get-mca-auxiliary-log-status</code></dt>
+<dd>Get machine check architecture (MCA) auxiliary log status information.</dd>
+<dt><code>&#8211;get-ssif-interface-capabilities</code></dt>
+<dd>Get SSIF interface capabilities.</dd>
+<dt><code>&#8211;get-kcs-interface-capabilities</code></dt>
+<dd>Get KCS interface capabilities.</dd>
+<dt><code>&#8211;get-bt-interface-capabilities</code></dt>
+<dd>Get BT interface capabilities.</dd>
+<dt><code>&#8211;get-bmc-global-enables</code></dt>
+<dd>Get BMC Global Enables.</dd>
+<dt><code>&#8211;set-system-firmware-version</code>=<i>STRING</i></dt>
+<dd>Set System Firmware Version.</dd>
+<dt><code>&#8211;set-system-name</code>=<i>STRING</i></dt>
+<dd>Set System Name.</dd>
+<dt><code>&#8211;set-primary-operating-system-name</code>=<i>STRING</i></dt>
+<dd>Set Primary Operating System Name.</dd>
+<dt><code>&#8211;set-operating-system-name</code>=<i>STRING</i></dt>
+<dd>Set Operating System Name.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Increase verbosity in output.</dd></dl>
 <h2>Sdr Cache Options</h2>
 <p>This tool requires access to the sensor data repository (SDR) cache for general operation. By default, SDR data will be downloaded and cached on the local machine. The following options apply to the SDR cache.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;flush-cache</code></p>
-<dd>Flush a cached version of the sensor data repository (SDR) cache. The SDR is typically cached for faster subsequent access. However, it may need to be flushed and re-generated if the SDR has been updated on a system.</p>
-<dt><code>-Q</code>, <code>&#8211;quiet-cache</code></p>
-<dd>Do not output information about cache creation/deletion. May be useful in scripting.</p>
-<dt><code>&#8211;sdr-cache-recreate</code></p>
-<dd>If the SDR cache is out of date or invalid, automatically recreate the sensor data repository (SDR) cache. This option may be useful for scripting purposes.</p>
-<dt><code>&#8211;sdr-cache-file</code>=<i>FILE</i></p>
-<dd>Specify a specific sensor data repository (SDR) cache file to be stored or read from. If this option is used when multiple hosts are specified, the same SDR cache file will be used for all hosts.</p>
-<dt><code>&#8211;sdr-cache-directory</code>=<i>DIRECTORY</i></p>
-<dd>Specify an alternate directory for sensor data repository (SDR) caches to be stored or read from. Defaults to the home directory if not specified.</dl>
+<dt><code>-f</code>, <code>&#8211;flush-cache</code></dt>
+<dd>Flush a cached version of the sensor data repository (SDR) cache. The SDR is typically cached for faster subsequent access. However, it may need to be flushed and re-generated if the SDR has been updated on a system.</dd>
+<dt><code>-Q</code>, <code>&#8211;quiet-cache</code></dt>
+<dd>Do not output information about cache creation/deletion. May be useful in scripting.</dd>
+<dt><code>&#8211;sdr-cache-recreate</code></dt>
+<dd>If the SDR cache is out of date or invalid, automatically recreate the sensor data repository (SDR) cache. This option may be useful for scripting purposes.</dd>
+<dt><code>&#8211;sdr-cache-file</code>=<i>FILE</i></dt>
+<dd>Specify a specific sensor data repository (SDR) cache file to be stored or read from. If this option is used when multiple hosts are specified, the same SDR cache file will be used for all hosts.</dd>
+<dt><code>&#8211;sdr-cache-directory</code>=<i>DIRECTORY</i></dt>
+<dd>Specify an alternate directory for sensor data repository (SDR) caches to be stored or read from. Defaults to the home directory if not specified.</dd></dl>
 <h2>Hostranged Options</h2>
 <p>The following options manipulate hostranged output. See HOSTRANGED SUPPORT below for additional information on hostranges.</p>
 <dl>
-<dt><code>-B</code>, <code>&#8211;buffer-output</code></p>
-<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-C</code>, <code>&#8211;consolidate-output</code></p>
-<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></p>
-<dd>Specify multiple host fanout. A &quot;sliding window&quot; (or fanout) algorithm is used for parallel IPMI communication so that slower nodes or timed out nodes will not impede parallel communication. The maximum number of threads available at the same time is limited by the fanout. The default is 64.</p>
-<dt><code>-E</code>, <code>&#8211;eliminate</code></p>
-<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</p>
-<dt><code>&#8211;always-prefix</code></p>
-<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dl>
+<dt><code>-B</code>, <code>&#8211;buffer-output</code></dt>
+<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-C</code>, <code>&#8211;consolidate-output</code></dt>
+<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></dt>
+<dd>Specify multiple host fanout. A &quot;sliding window&quot; (or fanout) algorithm is used for parallel IPMI communication so that slower nodes or timed out nodes will not impede parallel communication. The maximum number of threads available at the same time is limited by the fanout. The default is 64.</dd>
+<dt><code>-E</code>, <code>&#8211;eliminate</code></dt>
+<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</dd>
+<dt><code>&#8211;always-prefix</code></dt>
+<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dd></dl>
 <h2>Hostranged Support</h2>
 <p>Multiple hosts can be input either as an explicit comma separated lists of hosts or a range of hostnames in the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc. The later form should not be confused with regular expression character classes (also denoted by []). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>

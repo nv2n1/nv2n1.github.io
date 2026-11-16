@@ -12,9 +12,9 @@ description: "get_entry — retrieve a dirfile field’s metadata"
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
-<dt> <code>int get_entry(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>gd_entry_t *</code><i>entry</i><code>);</code></dl>
+<dt> <code>int get_entry(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>gd_entry_t *</code><i>entry</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>get_entry</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the metadata associated with the field specified by <i>field_code</i>. If <i>field_code</i> contains a valid representation suffix, the suffix will be ignored. </p>
+<dd>The <code>get_entry</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the metadata associated with the field specified by <i>field_code</i>. If <i>field_code</i> contains a valid representation suffix, the suffix will be ignored. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <p> The entry will be stored in the gd_entry_t structure indicated by the <i>entry</i> argument, which must be allocated by the caller. Members available in this structure depend on the field type of the field queried. See below for a complete description of this data type. </p>
 <p> Strings members in <i>entry</i> filled by this function (variously, depending on field type: <i>field</i>, the elements of the <i>in_fields</i>[] array, <i>table</i>; see below) will by dynamically allocated by <code>get_entry</code>() and should not point to allocated memory locations before calling this function. Only strings provided by the gd_entry_t for the particular field type described will be allocated. These strings should be deallocated with <code><a href="/docs/linux/man/3-free/">free</a></code>(3) by the caller once they are no longer needed. The <code><a href="/docs/linux/man/3-dirfile_free_entry_strings/">dirfile_free_entry_strings</a></code>(3) function is provided as a convenience to do this. </p>
@@ -22,14 +22,14 @@ description: "get_entry — retrieve a dirfile field’s metadata"
 <h2>RETURN VALUE</h2>
 <p> Upon successful completion, <code>get_entry</code>() returns zero, and writes the field metadata in the supplied gd_entry_t buffer. On error, the supplied gd_entry_t buffer is not modified. In this case, <code>get_entry</code>() returns -1 and sets the dirfile error to a non-zero error value. Possible error values are:</p>
 <dl>
-<dt><code>GD_E_BAD_CODE</code></p>
-<dd> The field specified by <i>field_code</i> was not found in the database.</p>
-<dt><code>GD_E_BAD_DIRFILE</code></p>
-<dd> The supplied dirfile was invalid.</p>
-<dt><code>GD_E_BAD_REPR</code></p>
-<dd> The representation suffix specified in <i>field_code</i> was not recognised.</p>
-<dt><code>GD_E_BAD_SCALAR</code></p>
-<dd> A scalar parameter used in the definition of the field was invalid. The dirfile error may be retrieved by calling <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3). A descriptive error string for the last error encountered can be obtained from a call to <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3).</dl>
+<dt><code>GD_E_BAD_CODE</code></dt>
+<dd> The field specified by <i>field_code</i> was not found in the database.</dd>
+<dt><code>GD_E_BAD_DIRFILE</code></dt>
+<dd> The supplied dirfile was invalid.</dd>
+<dt><code>GD_E_BAD_REPR</code></dt>
+<dd> The representation suffix specified in <i>field_code</i> was not recognised.</dd>
+<dt><code>GD_E_BAD_SCALAR</code></dt>
+<dd> A scalar parameter used in the definition of the field was invalid. The dirfile error may be retrieved by calling <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3). A descriptive error string for the last error encountered can be obtained from a call to <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3).</dd></dl>
 <h2>THE ENTRY TYPE</h2>
 <p> Members available in the gd_entry_t structure depend on the field type described. All gd_entry_t objects are guaranteed to have at least: </p>
 <pre><code>
@@ -43,7 +43,7 @@ typedef struct {
 <p> The <i>field</i> member is the field code of the entry (i.e. its string name). If the call to <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3) is successful, this will be the field name specified as part of the <i>field_code</i> argument. The <i>field_type</i> member indicates the field type of the entry. This is an integer type equal to one of the following symbols:</p>
 <dl>
 <dt>
-<dd> <code>GD_BIT_ENTRY</code>,~<code>GD_CONST_ENTRY</code>,~<code>GD_INDEX_ENTRY</code>,~ <code>GD_LINCOM_ENTRY</code>,~<code>GD_LINTERP_ENTRY</code>,~<code>GD_MULTIPLY_ENTRY</code>,~ <code>GD_PHASE_ENTRY</code>,~<code>GD_POLYNOM_ENTRY</code>,~<code>GD_RAW_ENTRY</code>,~<code>GD_SBIT_ENTRY</code>,~ <code>GD_STRING_ENTRY</code>. <code>GD_INDEX_ENTRY</code> is a special field type used only for the implicit <i>INDEX</i> field. The meaning of the other symbols should be self-explanatory. The <i>fragment_index</i> member indicates the format file fragment in which this field is defined. This is an integer index to the Dirfile&#8217;s list of parsed format file fragments. The name of the file corresponding to <i>fragment_index</i> may be obtained by calling <code><a href="/docs/linux/man/3-get_fragmentname/">get_fragmentname</a></code>(3). A value of zero for this field indicates that the field is defined in the primary format file, the file called <code>format</code> in the root dirfile directory (see <i><a href="/docs/linux/man/5-dirfile/">dirfile</a></i>(5)). Remaining fields in the gd_entry_t structure depend on the value of <i>field_type</i>. Callers are advised to check <i>field_type</i> before attempting to access the remaining members. Members for different field types may be stored in the same physical location in core. Accordingly, attempting to access a member not declared for the appropriate field type will have unspecified results. </p>
+</dt><dd> <code>GD_BIT_ENTRY</code>,~<code>GD_CONST_ENTRY</code>,~<code>GD_INDEX_ENTRY</code>,~ <code>GD_LINCOM_ENTRY</code>,~<code>GD_LINTERP_ENTRY</code>,~<code>GD_MULTIPLY_ENTRY</code>,~ <code>GD_PHASE_ENTRY</code>,~<code>GD_POLYNOM_ENTRY</code>,~<code>GD_RAW_ENTRY</code>,~<code>GD_SBIT_ENTRY</code>,~ <code>GD_STRING_ENTRY</code>. <code>GD_INDEX_ENTRY</code> is a special field type used only for the implicit <i>INDEX</i> field. The meaning of the other symbols should be self-explanatory. The <i>fragment_index</i> member indicates the format file fragment in which this field is defined. This is an integer index to the Dirfile&#8217;s list of parsed format file fragments. The name of the file corresponding to <i>fragment_index</i> may be obtained by calling <code><a href="/docs/linux/man/3-get_fragmentname/">get_fragmentname</a></code>(3). A value of zero for this field indicates that the field is defined in the primary format file, the file called <code>format</code> in the root dirfile directory (see <i><a href="/docs/linux/man/5-dirfile/">dirfile</a></i>(5)). Remaining fields in the gd_entry_t structure depend on the value of <i>field_type</i>. Callers are advised to check <i>field_type</i> before attempting to access the remaining members. Members for different field types may be stored in the same physical location in core. Accordingly, attempting to access a member not declared for the appropriate field type will have unspecified results. </dd>
 </dl>
 <h3>BIT and SBIT Members</h3>
 <p> A gd_entry_t describing a <code>BIT</code> or <code>SBIT</code> entry, will also provide: </p>

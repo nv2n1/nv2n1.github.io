@@ -10,29 +10,27 @@ description: "xcb_xkb_set_device_info –"
 <p>xcb_xkb_set_device_info &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_xkb_set_device_info(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint8_t firstBtn, uint8_t nBtns, uint16_t change, uint16_t nDeviceLedFBs, const xcb_xkb_action_t *btnActions, const xcb_xkb_device_led_info_t *leds);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstBtn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nBtns</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>change</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nDeviceLedFBs</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>btnActions</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>leds</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstBtn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nBtns</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>change</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nDeviceLedFBs</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>btnActions</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>leds</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

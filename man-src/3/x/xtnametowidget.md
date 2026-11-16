@@ -11,18 +11,18 @@ description: "XtNameToWidget, XtWindowToWidget – translating strings to widget
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>Widget XtNameToWidget(Widget <i>reference</i>, const char *<i>names</i>);</p>
-<dd>Widget XtWindowToWidget(Display *<i>display</i>, Window <i>window</i>);</dl>
+<dd>Widget XtNameToWidget(Widget <i>reference</i>, const char *<i>names</i>);</dd>
+<dd>Widget XtWindowToWidget(Display *<i>display</i>, Window <i>window</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the display on which the window is defined.</p>
-<dt><i>names</i></p>
-<dd>Specifies the fully qualified name of the desired widget.</p>
-<dt><i>reference</i></p>
-<dd>Specifies the widget from which the search is to start.</p>
-<dt><i>window</i></p>
-<dd>Specify the window for which you want the widget.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the display on which the window is defined.</dd>
+<dt><i>names</i></dt>
+<dd>Specifies the fully qualified name of the desired widget.</dd>
+<dt><i>reference</i></dt>
+<dd>Specifies the widget from which the search is to start.</dd>
+<dt><i>window</i></dt>
+<dd>Specify the window for which you want the widget.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtNameToWidget</code> function looks for a widget whose name is the first component in the specified names and that is a pop-up child of reference (or a normal child if reference is a subclass of <code>compositeWidgetClass</code>). It then uses that widget as the new reference and repeats the search after deleting the first component from the specified names. If it cannot find the specified widget, <code>XtNameToWidget</code> returns NULL. </p>
 <p> Note that the names argument contains the name of a widget with respect to the specified reference widget and can contain more than one widget name (separated by periods) for widgets that are not direct children of the specified reference widget. </p>

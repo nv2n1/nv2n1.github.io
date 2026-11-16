@@ -16,8 +16,8 @@ description: "WildMidi_GetInfo – get information on a midi"
 <h2>Description</h2>
 <p>Obtains information allowing you to determine song position, current options, and any copyright information. </p>
 <dl COMPACT>
-<dt><i>handle</i></p>
-<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dl>
+<dt><i>handle</i></dt>
+<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dd></dl>
 <h2>Return Value</h2>
 <p>On error returns NULL with an error message displayed to stderr. </p>
 <p> Otherwise returns a pointer to a struct containing the information. </p>
@@ -30,5 +30,6 @@ description: "WildMidi_GetInfo – get information on a midi"
  unsigned long int <i>total_midi_time</i>;
 };</pre>
 <dl COMPACT>
-<dt><i>copyright</i></p>
+<dt><i>copyright</i></dt>
 <dd>A pointer to a 
+</dd></dl>

@@ -16,12 +16,12 @@ description: "struct_erw_eadm – EADM Subchannel extended report word"
 <h2>Members</h2>
 <p>b</p>
 <dl>
-<dd>aob error</dl>
+<dd>aob error</dd></dl>
 <p> r</p>
 <dl>
-<dd>arsb error</dl>
+<dd>arsb error</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

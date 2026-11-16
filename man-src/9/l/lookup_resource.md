@@ -15,11 +15,11 @@ lookup_resource - find an existing resource by a resource start address
 <h2>Arguments</h2>
 
 <i>root</i>
-<dl><dd><dd>root resource descriptor</dl>
+<dl><dd></dd><dd>root resource descriptor</dd></dl>
  
 
  <i>start</i>
-<dl><dd>resource start address</dl>
+<dl><dd>resource start address</dd></dl>
 
 <h2>Description</h2>
 

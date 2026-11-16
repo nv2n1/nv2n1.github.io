@@ -14,18 +14,18 @@ description: "cfetool info – Get information about a database"
 <p>Prints out some basic information about the specified database, including: the location of the database, the location of the histogram file (if there is one), the step interval, the database age, the time it was last updated, and the current overall average and variation.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></p>
-<dd>The directory in which to find the database folder. If this argument is not provided, the current working directory will be assumed.</p>
-<dt><code>&#8211;daily</code>|<code>-d</code></p>
-<dd>Provide information about the daily averages database.</p>
-<dt><code>&#8211;weekly</code>|<code>-w</code></p>
-<dd>Provide information about the weekly averages database.</p>
-<dt><code>&#8211;yearly</code>|<code>-y</code></p>
-<dd>Provide information about the yearly averages database.</p>
-<dt><code>&#8211;verbose</code>|<code>-v</code></p>
-<dd>Print details of the command&#8217;s execution to the standard output stream.</p>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd>Prints a short help message and then exits.</dl>
+<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></dt>
+<dd>The directory in which to find the database folder. If this argument is not provided, the current working directory will be assumed.</dd>
+<dt><code>&#8211;daily</code>|<code>-d</code></dt>
+<dd>Provide information about the daily averages database.</dd>
+<dt><code>&#8211;weekly</code>|<code>-w</code></dt>
+<dd>Provide information about the weekly averages database.</dd>
+<dt><code>&#8211;yearly</code>|<code>-y</code></dt>
+<dd>Provide information about the yearly averages database.</dd>
+<dt><code>&#8211;verbose</code>|<code>-v</code></dt>
+<dd>Print details of the command&#8217;s execution to the standard output stream.</dd>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Prints a short help message and then exits.</dd></dl>
 <h2>Example</h2>
 <pre> % cfetool info temperature --path /my/path</pre>
 <pre> Weekly average database:
@@ -38,10 +38,10 @@ description: "cfetool info – Get information about a database"
 <h2>Authors</h2>
 <p>The code and documentation were contributed by Stanford Linear Accelerator Center, a department of Stanford University. This documentation was written by</p>
 <dl>
-<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</p>
+<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</dt>
 <dd>
-<dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</p>
-<dd></dl>
+</dd><dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</dt>
+<dd></dd></dl>
 <h2>Copyright And Disclaimer</h2>
 <pre> Copyright 2004 Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt; and
  Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt;

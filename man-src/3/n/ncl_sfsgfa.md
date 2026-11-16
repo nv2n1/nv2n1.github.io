@@ -71,46 +71,31 @@ SFSGFA fills the area defined by the points (XRA(I),YRA(I)), for I from 1 to NRA
 
  The values of the internal parameter 'TY' (for 'TYPE OF FILL') and the argument ICI determine how the fill is done. The function of ICI changes depending on the value of 'TY'. ICI can determine the fill area color index, the polyline color index, or the density of the fill pattern.
 <dl><dt>'TY' = 0
-<dd>This is the default. SFSGFA does color fill by calling GFA. GFA does either hollow, solid, or pattern fill. Hollow fill (only boundaries are drawn) is GFA's default, but you can change the type of fill by calling the GKS subroutine GSFAIS. Notice that one of the first steps in the code for the example &quot;sfex02&quot; is to force solid fill by calling GSFAIS with the argument &quot;1&quot;. 
-
+</dt><dd>This is the default. SFSGFA does color fill by calling GFA. GFA does either hollow, solid, or pattern fill. Hollow fill (only boundaries are drawn) is GFA's default, but you can change the type of fill by calling the GKS subroutine GSFAIS. Notice that one of the first steps in the code for the example &quot;sfex02&quot; is to force solid fill by calling GSFAIS with the argument &quot;1&quot;. 
  A value of ICI greater than or equal to zero specifies the color index of the fill area. 
-
  A value of ICI less than zero specifies that the fill area color index is not to be set before calling GFA; the last call to the GKS subroutine GSFACI then determines the fill area color index.
-<dt>'TY' = 1
-<dd>SFSGFA fills the area with parallel lines by calling SFWRLD. 
-
+</dd><dt>'TY' = 1
+</dt><dd>SFSGFA fills the area with parallel lines by calling SFWRLD. 
  A value of ICI greater than or equal to zero specifies the polyline color index. 
-
  A value of ICI less than zero specifies that the polyline color index is not to be set before calling SFWRLD; the last call to the GKS subroutine GSPLCI determines the polyline color index. 
-
  Parameters 'AN', 'CH', 'DO', and 'SP' further affect the nature of the fill. 
-
  Note: If 'CH' and 'DO' are set to select dot fill or character fill, the values of ICI will not affect the color of the dots or characters. The intended use of 'TY' &gt; 0 is to do color fill using colored lines; no provision is made for the use of colored dots or colored characters. (The current values of the polymarker and text color indices are used to determine the color.)
-<dt>'TY' = 2
-<dd>SFSGFA calls SFWRLD to fill the area with parallel lines and calls SFNORM to fill the area again with parallel lines perpendicular to the first set. 
-
+</dd><dt>'TY' = 2
+</dt><dd>SFSGFA calls SFWRLD to fill the area with parallel lines and calls SFNORM to fill the area again with parallel lines perpendicular to the first set. 
  ICI, if zero or greater, specifies the polyline color index. 
-
  A negative value of ICI specifies that the polyline color index is not to be set before calling SFWRLD; the last call to the GKS subroutine GSPLCI determines the polyline color index. 
-
  Parameters 'AN', 'CH', 'DO', and 'SP' further affect the nature of the fill. See the note above about ICI's function with 'CH' and 'DO'.
-<dt>'TY' = -4, -3, -2, -1
-<dd>SFSGFA fills the area with line patterns by calling SFWRLD and/or SFNORM. The absolute value of 'TY' determines the maximum number of fill-line angles used in a pattern. 
-
+</dd><dt>'TY' = -4, -3, -2, -1
+</dt><dd>SFSGFA fills the area with line patterns by calling SFWRLD and/or SFNORM. The absolute value of 'TY' determines the maximum number of fill-line angles used in a pattern. 
  ICI determines the density of the lines drawn at each angle. 
-
  Angles Used: When 'TY' has one of the following values, fill is done by using lines drawn at the angles shown ('AN' is an internal parameter that specifies an angle in degrees): 
-
  'TY' Angles Used (in Degrees) 
-
  -1 'AN' 
  -2 'AN', 'AN'+90 
  -3 'AN', 'AN'+60, 'AN'+120 
  -4 'AN', 'AN'+45, 'AN'+90, 'AN'+135 
-
  Line Density: ICI is used to select the density of the lines in each direction. A zero or negative value of ICI selects a blank pattern. Positive values of ICI select patterns that increase in density as the value of ICI increases. The largest usable value of ICI is approximately 5*ABS('TY'); beyond that, the pattern becomes essentially solid. For example, if 'TY' is -4, 20 is about the largest value of ICI that you can use and still see a pattern. 
-
- For each increase in ICI, fill lines are added at one of the usable angles. The first time lines are added at a given angle, they are spaced 32*'SP' units apart. (The default value of the internal parameter 'SP' is .00125.) After the first time, each time lines are added at a given angle, they are added between the existing lines so that the distance between lines at that angle is halved. An ICI value that is evenly divisible by the absolute value of 'TY' yields a pattern that is evenly dense at all angles. For example, if 'TY' has the value -2, the patterns associated with the first three values of ICI are formed as follows: ICI=1 uses lines at the angle 'AN', spaced 32*'SP' units apart; ICI=2 uses lines at the angles 'AN' and 'AN'+90, both spaced 32*'SP' units apart; ICI=3 uses lines at the angle 'AN', spaced 32*'SP' units apart, and lines at the angle 'AN'+90, spaced 16*'SP' units apart.</dl>
+ For each increase in ICI, fill lines are added at one of the usable angles. The first time lines are added at a given angle, they are spaced 32*'SP' units apart. (The default value of the internal parameter 'SP' is .00125.) After the first time, each time lines are added at a given angle, they are added between the existing lines so that the distance between lines at that angle is halved. An ICI value that is evenly divisible by the absolute value of 'TY' yields a pattern that is evenly dense at all angles. For example, if 'TY' has the value -2, the patterns associated with the first three values of ICI are formed as follows: ICI=1 uses lines at the angle 'AN', spaced 32*'SP' units apart; ICI=2 uses lines at the angles 'AN' and 'AN'+90, both spaced 32*'SP' units apart; ICI=3 uses lines at the angle 'AN', spaced 32*'SP' units apart, and lines at the angle 'AN'+90, spaced 16*'SP' units apart.</dd></dl>
  
 
  For SFSGFA to fill an uncomplicated polygon (one without holes), XRA and YRA should contain the world coordinates of the polygon's vertices in the order in which they are encountered as the boundary of the polygon is traced. 

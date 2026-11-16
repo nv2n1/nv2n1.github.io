@@ -21,84 +21,84 @@ description: "cmake-commands – CMake Language Command Reference"
 <p>Queries system information of the host system on which cmake runs. One or more <code>&lt;key&gt;</code> can be provided to select the information to be queried. The list of queried values is stored in <code>&lt;variable&gt;</code>. </p>
 <p> <code>&lt;key&gt;</code> can be one of the following values:</p>
 <dl>
-<dt><code>NUMBER_OF_LOGICAL_CORES</code></p>
-<dd>Number of logical cores</p>
-<dt><code>NUMBER_OF_PHYSICAL_CORES</code></p>
-<dd>Number of physical cores</p>
-<dt><code>HOSTNAME</code></p>
-<dd>Hostname</p>
-<dt><code>FQDN</code></p>
-<dd>Fully qualified domain name</p>
-<dt><code>TOTAL_VIRTUAL_MEMORY</code></p>
-<dd>Total virtual memory in MiB [1]</p>
-<dt><code>AVAILABLE_VIRTUAL_MEMORY</code></p>
-<dd>Available virtual memory in MiB [1]</p>
-<dt><code>TOTAL_PHYSICAL_MEMORY</code></p>
-<dd>Total physical memory in MiB [1]</p>
-<dt><code>AVAILABLE_PHYSICAL_MEMORY</code></p>
-<dd>Available physical memory in MiB [1]</p>
-<dt><code>IS_64BIT</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>NUMBER_OF_LOGICAL_CORES</code></dt>
+<dd>Number of logical cores</dd>
+<dt><code>NUMBER_OF_PHYSICAL_CORES</code></dt>
+<dd>Number of physical cores</dd>
+<dt><code>HOSTNAME</code></dt>
+<dd>Hostname</dd>
+<dt><code>FQDN</code></dt>
+<dd>Fully qualified domain name</dd>
+<dt><code>TOTAL_VIRTUAL_MEMORY</code></dt>
+<dd>Total virtual memory in MiB [1]</dd>
+<dt><code>AVAILABLE_VIRTUAL_MEMORY</code></dt>
+<dd>Available virtual memory in MiB [1]</dd>
+<dt><code>TOTAL_PHYSICAL_MEMORY</code></dt>
+<dd>Total physical memory in MiB [1]</dd>
+<dt><code>AVAILABLE_PHYSICAL_MEMORY</code></dt>
+<dd>Available physical memory in MiB [1]</dd>
+<dt><code>IS_64BIT</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor is 64Bit</p>
-<dt><code>HAS_FPU</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_FPU</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor has floating point unit</p>
-<dt><code>HAS_MMX</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_MMX</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports MMX instructions</p>
-<dt><code>HAS_MMX_PLUS</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_MMX_PLUS</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports Ext. MMX instructions</p>
-<dt><code>HAS_SSE</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_SSE</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports SSE instructions</p>
-<dt><code>HAS_SSE2</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_SSE2</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports SSE2 instructions</p>
-<dt><code>HAS_SSE_FP</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_SSE_FP</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports SSE FP instructions</p>
-<dt><code>HAS_SSE_MMX</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_SSE_MMX</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports SSE MMX instructions</p>
-<dt><code>HAS_AMD_3DNOW</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_AMD_3DNOW</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports 3DNow instructions</p>
-<dt><code>HAS_AMD_3DNOW_PLUS</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_AMD_3DNOW_PLUS</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor supports 3DNow+ instructions</p>
-<dt><code>HAS_IA64</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_IA64</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if IA64 processor emulating x86</p>
-<dt><code>HAS_SERIAL_NUMBER</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>HAS_SERIAL_NUMBER</code></dt>
+<dd>New in version 3.10. </dd>
 <p> One if processor has serial number</p>
-<dt><code>PROCESSOR_SERIAL_NUMBER</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>PROCESSOR_SERIAL_NUMBER</code></dt>
+<dd>New in version 3.10. </dd>
 <p> Processor serial number</p>
-<dt><code>PROCESSOR_NAME</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>PROCESSOR_NAME</code></dt>
+<dd>New in version 3.10. </dd>
 <p> Human readable processor name</p>
-<dt><code>PROCESSOR_DESCRIPTION</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>PROCESSOR_DESCRIPTION</code></dt>
+<dd>New in version 3.10. </dd>
 <p> Human readable full processor description</p>
-<dt><code>OS_NAME</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>OS_NAME</code></dt>
+<dd>New in version 3.10. </dd>
 <p> See <code>CMAKE_HOST_SYSTEM_NAME</code></p>
-<dt><code>OS_RELEASE</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>OS_RELEASE</code></dt>
+<dd>New in version 3.10. </dd>
 <p> The OS sub-type e.g. on Windows <code>Professional</code></p>
-<dt><code>OS_VERSION</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>OS_VERSION</code></dt>
+<dd>New in version 3.10. </dd>
 <p> The OS build ID</p>
-<dt><code>OS_PLATFORM</code></p>
-<dd>New in version 3.10. </p>
+<dt><code>OS_PLATFORM</code></dt>
+<dd>New in version 3.10. </dd>
 <p> See <code>CMAKE_HOST_SYSTEM_PROCESSOR</code></p>
-<dt><code>DISTRIB_INFO</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>DISTRIB_INFO</code></dt>
+<dd>New in version 3.22. </dd>
 <p> Read <code>/etc/os-release</code> file and define the given <code>&lt;variable&gt;</code> into a list of read variables</p>
-<dt><code>DISTRIB_&lt;name&gt;</code></p>
-<dd>New in version 3.22. </p>
+<dt><code>DISTRIB_&lt;name&gt;</code></dt>
+<dd>New in version 3.22. </dd>
 <p> Get the <code>&lt;name&gt;</code> variable (see <i>man 5 os-release</i>) if it exists in the <code>/etc/os-release</code> file </p>
 <p> Example: </p>
 <pre>cmake_host_system_information(RESULT PRETTY_NAME QUERY DISTRIB_PRETTY_NAME)
@@ -124,12 +124,12 @@ endforeach()</pre>
 <p>If <code>/etc/os-release</code> file is not found, the command tries to gather OS identification via fallback scripts. The fallback script can use <i>various distribution-specific files</i> to collect OS identification data and map it into <i>man 5 os-release</i> variables.</dl>
 <h3>Fallback Interface Variables</h3>
 <dl>
-<dt><code>CMAKE_GET_OS_RELEASE_FALLBACK_SCRIPTS</code></p>
-<dd>In addition to the scripts shipped with CMake, a user may append full paths to his script(s) to the this list. The script filename has the following format: <code>NNN-&lt;name&gt;.cmake</code>, where <code>NNN</code> is three digits used to apply collected scripts in a specific order.</p>
-<dt><code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT_&lt;varname&gt;</code></p>
-<dd>Variables collected by the user provided fallback script ought to be assigned to CMake variables using this naming convention. Example, the <code>ID</code> variable from the manual becomes <code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT_ID</code>.</p>
-<dt><code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT</code></p>
-<dd>The fallback script ought to store names of all assigned <code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT_&lt;varname&gt;</code> variables in this list. </p>
+<dt><code>CMAKE_GET_OS_RELEASE_FALLBACK_SCRIPTS</code></dt>
+<dd>In addition to the scripts shipped with CMake, a user may append full paths to his script(s) to the this list. The script filename has the following format: <code>NNN-&lt;name&gt;.cmake</code>, where <code>NNN</code> is three digits used to apply collected scripts in a specific order.</dd>
+<dt><code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT_&lt;varname&gt;</code></dt>
+<dd>Variables collected by the user provided fallback script ought to be assigned to CMake variables using this naming convention. Example, the <code>ID</code> variable from the manual becomes <code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT_ID</code>.</dd>
+<dt><code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT</code></dt>
+<dd>The fallback script ought to store names of all assigned <code>CMAKE_GET_OS_RELEASE_FALLBACK_RESULT_&lt;varname&gt;</code> variables in this list. </dd>
 <p> Example: </p>
 <pre># Try to detect some old distribution
 # See also
@@ -167,8 +167,8 @@ unset(CMAKE_GET_OS_RELEASE_FALLBACK_CONTENT)</pre>
 </dl>
 <h2>Footnotes</h2>
 <dl>
-<dt>[1]</p>
-<dd>One MiB (mebibyte) is equal to 1024&#215;1024 bytes.</dl>
+<dt>[1]</dt>
+<dd>One MiB (mebibyte) is equal to 1024&#215;1024 bytes.</dd></dl>
 <h3>cmake_language</h3>
 <p>New in version 3.18. </p>
 <p> Call meta-operations on CMake commands.</p>
@@ -188,16 +188,16 @@ cmake_language(CALL ${message_command} STATUS &quot;Hello World!&quot;)</pre>
 <pre>message(STATUS &quot;Hello World!&quot;)</pre>
 <p><code>NOTE:</code> To ensure consistency of the code, the following commands are not allowed:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>if</code> / <code>elseif</code> / <code>else</code> / <code>endif</code></p>
-<dt>&bull;</p>
-<dd><code>while</code> / <code>endwhile</code></p>
-<dt>&bull;</p>
-<dd><code>foreach</code> / <code>endforeach</code></p>
-<dt>&bull;</p>
-<dd><code>function</code> / <code>endfunction</code></p>
-<dt>&bull;</p>
-<dd><code>macro</code> / <code>endmacro</code></dl>
+<dt>&bull;</dt>
+<dd><code>if</code> / <code>elseif</code> / <code>else</code> / <code>endif</code></dd>
+<dt>&bull;</dt>
+<dd><code>while</code> / <code>endwhile</code></dd>
+<dt>&bull;</dt>
+<dd><code>foreach</code> / <code>endforeach</code></dd>
+<dt>&bull;</dt>
+<dd><code>function</code> / <code>endfunction</code></dd>
+<dt>&bull;</dt>
+<dd><code>macro</code> / <code>endmacro</code></dd></dl>
 <h3>Evaluating Code</h3>
 <pre>cmake_language(EVAL CODE &lt;code&gt;...)</pre>
 <p>Evaluates the <code>&lt;code&gt;&#8230;</code> as CMake code. </p>
@@ -232,13 +232,13 @@ include(${CMAKE_CURRENT_BINARY_DIR}/eval.cmake)</pre>
 <p>Schedules a call to the named <code>&lt;command&gt;</code> with the given arguments (if any) to occur at a later time. By default, deferred calls are executed as if written at the end of the current directory&#8217;s <code>CMakeLists.txt</code> file, except that they run even after a <code>return()</code> call. Variable references in arguments are evaluated at the time the deferred call is executed. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>DIRECTORY &lt;dir&gt;</code></p>
-<dd>Schedule the call for the end of the given directory instead of the current directory. The <code>&lt;dir&gt;</code> may reference either a source directory or its corresponding binary directory. Relative paths are treated as relative to the current source directory. </p>
+<dt><code>DIRECTORY &lt;dir&gt;</code></dt>
+<dd>Schedule the call for the end of the given directory instead of the current directory. The <code>&lt;dir&gt;</code> may reference either a source directory or its corresponding binary directory. Relative paths are treated as relative to the current source directory. </dd>
 <p> The given directory must be known to CMake, being either the top-level directory or one added by <code>add_subdirectory()</code>. Furthermore, the given directory must not yet be finished processing. This means it can be the current directory or one of its ancestors.</p>
-<dt><code>ID &lt;id&gt;</code></p>
-<dd>Specify an identification for the deferred call. The <code>&lt;id&gt;</code> may not be empty and may not begin with a capital letter <code>A-Z</code>. The <code>&lt;id&gt;</code> may begin with an underscore (<code>_</code>) only if it was generated automatically by an earlier call that used <code>ID_VAR</code> to get the id.</p>
-<dt><code>ID_VAR &lt;var&gt;</code></p>
-<dd>Specify a variable in which to store the identification for the deferred call. If <code>ID &lt;id&gt;</code> is not given, a new identification will be generated and the generated id will start with an underscore (<code>_</code>). </p>
+<dt><code>ID &lt;id&gt;</code></dt>
+<dd>Specify an identification for the deferred call. The <code>&lt;id&gt;</code> may not be empty and may not begin with a capital letter <code>A-Z</code>. The <code>&lt;id&gt;</code> may begin with an underscore (<code>_</code>) only if it was generated automatically by an earlier call that used <code>ID_VAR</code> to get the id.</dd>
+<dt><code>ID_VAR &lt;var&gt;</code></dt>
+<dd>Specify a variable in which to store the identification for the deferred call. If <code>ID &lt;id&gt;</code> is not given, a new identification will be generated and the generated id will start with an underscore (<code>_</code>). </dd>
 <p> The currently scheduled list of deferred calls may be retrieved: </p>
 <pre>cmake_language(DEFER [DIRECTORY &lt;dir&gt;] GET_CALL_IDS &lt;var&gt;)</pre>
 <p>This will store in <code>&lt;var&gt;</code> a semicolon-separated list of deferred call ids. The ids are for the directory scope in which the calls have been deferred to (i.e. where they will be executed), which can be different to the scope in which they were created. The <code>DIRECTORY</code> option can be used to specify the scope for which to retrieve the call ids. If that option is not given, the call ids for the current directory scope will be returned. </p>
@@ -380,39 +380,39 @@ MY_INSTALL_KEYWORDS_MISSING_VALUES = &quot;CONFIGURATIONS&quot;
 <h3>Conventions</h3>
 <p>The following conventions are used in this command&#8217;s documentation:</p>
 <dl>
-<dt><code>&lt;path-var&gt;</code></p>
-<dd>Always the name of a variable. For commands that expect a <code>&lt;path-var&gt;</code> as input, the variable must exist and it is expected to hold a single path.</p>
-<dt><code>&lt;input&gt;</code></p>
-<dd>A string literal which may contain a path, path fragment, or multiple paths with a special separator depending on the command. See the description of each command to see how this is interpreted.</p>
-<dt><code>&lt;input&gt;&#8230;</code></p>
-<dd>Zero or more string literal arguments.</p>
-<dt><code>&lt;out-var&gt;</code></p>
-<dd>The name of a variable into which the result of a command will be written.</dl>
+<dt><code>&lt;path-var&gt;</code></dt>
+<dd>Always the name of a variable. For commands that expect a <code>&lt;path-var&gt;</code> as input, the variable must exist and it is expected to hold a single path.</dd>
+<dt><code>&lt;input&gt;</code></dt>
+<dd>A string literal which may contain a path, path fragment, or multiple paths with a special separator depending on the command. See the description of each command to see how this is interpreted.</dd>
+<dt><code>&lt;input&gt;&#8230;</code></dt>
+<dd>Zero or more string literal arguments.</dd>
+<dt><code>&lt;out-var&gt;</code></dt>
+<dd>The name of a variable into which the result of a command will be written.</dd></dl>
 <h3>Path Structure And Terminology</h3>
 <p>A path has the following structure (all components are optional, with some constraints): </p>
 <pre>root-name root-directory-separator (item-name directory-separator)* filename</pre>
 <dl>
-<dt><code>root-name</code></p>
-<dd>Identifies the root on a filesystem with multiple roots (such as <code>&quot;C:&quot;</code> or <code>&quot;//myserver&quot;</code>). It is optional.</p>
-<dt><code>root-directory-separator</code></p>
-<dd>A directory separator that, if present, indicates that this path is absolute. If it is missing and the first element other than the <code>root-name</code> is an <code>item-name</code>, then the path is relative.</p>
-<dt><code>item-name</code></p>
-<dd>A sequence of characters that aren&#8217;t directory separators. This name may identify a file, a hard link, a symbolic link, or a directory. Two special cases are recognized:</p>
-<dt>&bull;</p>
-<dd>The item name consisting of a single dot character <code>.</code> is a directory name that refers to the current directory.</p>
-<dt>&bull;</p>
-<dd>The item name consisting of two dot characters <code>..</code> is a directory name that refers to the parent directory. </p>
+<dt><code>root-name</code></dt>
+<dd>Identifies the root on a filesystem with multiple roots (such as <code>&quot;C:&quot;</code> or <code>&quot;//myserver&quot;</code>). It is optional.</dd>
+<dt><code>root-directory-separator</code></dt>
+<dd>A directory separator that, if present, indicates that this path is absolute. If it is missing and the first element other than the <code>root-name</code> is an <code>item-name</code>, then the path is relative.</dd>
+<dt><code>item-name</code></dt>
+<dd>A sequence of characters that aren&#8217;t directory separators. This name may identify a file, a hard link, a symbolic link, or a directory. Two special cases are recognized:</dd>
+<dt>&bull;</dt>
+<dd>The item name consisting of a single dot character <code>.</code> is a directory name that refers to the current directory.</dd>
+<dt>&bull;</dt>
+<dd>The item name consisting of two dot characters <code>..</code> is a directory name that refers to the parent directory. </dd>
 <p> The <code>(&#8230;)*</code> pattern shown above is to indicate that there can be zero or more item names, with multiple items separated by a <code>directory-separator</code>. The <code>()*</code> characters are not part of the path.</p>
-<dt><code>directory-separator</code></p>
-<dd>The only recognized directory separator is a forward slash character <code>/</code>. If this character is repeated, it is treated as a single directory separator. In other words, <code>/usr///////lib</code> is the same as <code>/usr/lib</code>.</p>
-<dt><code>filename</code></p>
-<dd>A path has a <code>filename</code> if it does not end with a <code>directory-separator</code>. The <code>filename</code> is effectively the last <code>item-name</code> of the path, so it can also be a hard link, symbolic link or a directory. </p>
+<dt><code>directory-separator</code></dt>
+<dd>The only recognized directory separator is a forward slash character <code>/</code>. If this character is repeated, it is treated as a single directory separator. In other words, <code>/usr///////lib</code> is the same as <code>/usr/lib</code>.</dd>
+<dt><code>filename</code></dt>
+<dd>A path has a <code>filename</code> if it does not end with a <code>directory-separator</code>. The <code>filename</code> is effectively the last <code>item-name</code> of the path, so it can also be a hard link, symbolic link or a directory. </dd>
 <p> A <code>filename</code> can have an <i>extension</i>. By default, the extension is defined as the sub-string beginning at the left-most period (including the period) and until the end of the <code>filename</code>. In commands that accept a <code>LAST_ONLY</code> keyword, <code>LAST_ONLY</code> changes the interpretation to the sub-string beginning at the right-most period. </p>
 <p> The following exceptions apply to the above interpretation:</p>
-<dt>&bull;</p>
-<dd>If the first character in the <code>filename</code> is a period, that period is ignored (i.e. a <code>filename</code> like <code>&quot;.profile&quot;</code> is treated as having no extension).</p>
-<dt>&bull;</p>
-<dd>If the <code>filename</code> is either <code>.</code> or <code>..</code>, it has no extension. </p>
+<dt>&bull;</dt>
+<dd>If the first character in the <code>filename</code> is a period, that period is ignored (i.e. a <code>filename</code> like <code>&quot;.profile&quot;</code> is treated as having no extension).</dd>
+<dt>&bull;</dt>
+<dd>If the <code>filename</code> is either <code>.</code> or <code>..</code>, it has no extension. </dd>
 <p> The <i>stem</i> is the part of the <code>filename</code> before the extension. </p>
 <p> Some commands refer to a <code>root-path</code>. This is the concatenation of <code>root-name</code> and <code>root-directory-separator</code>, either or both of which can be empty. A <code>relative-part</code> refers to the full path with any <code>root-path</code> removed.</dl>
 <h3>Creating A Path Variable</h3>
@@ -424,20 +424,20 @@ cmake_path(APPEND path3 &quot;${CMAKE_CURRENT_SOURCE_DIR}&quot; &quot;data&quot;
 <h3>Normalization</h3>
 <p>Some sub-commands support <i>normalizing</i> a path. The algorithm used to normalize a path is as follows:</p>
 <dl>
-<dt>1.</p>
-<dd>If the path is empty, stop (the normalized form of an empty path is also an empty path).</p>
-<dt>2.</p>
-<dd>Replace each <code>directory-separator</code>, which may consist of multiple separators, with a single <code>/</code> (<code>/a///b &#8211;&gt; /a/b</code>).</p>
-<dt>3.</p>
-<dd>Remove each solitary period (<code>.</code>) and any immediately following <code>directory-separator</code> (<code>/a/./b/. &#8211;&gt; /a/b</code>).</p>
-<dt>4.</p>
-<dd>Remove each <code>item-name</code> (other than <code>..</code>) that is immediately followed by a <code>directory-separator</code> and a <code>..</code>, along with any immediately following <code>directory-separator</code> (<code>/a/b/../c &#8211;&gt; a/c</code>).</p>
-<dt>5.</p>
-<dd>If there is a <code>root-directory</code>, remove any <code>..</code> and any <code>directory-separators</code> immediately following them. The parent of the root directory is treated as still the root directory (<code>/../a &#8211;&gt; /a</code>).</p>
-<dt>6.</p>
-<dd>If the last <code>item-name</code> is <code>..</code>, remove any trailing <code>directory-separator</code> (<code>../ &#8211;&gt; ..</code>).</p>
-<dt>7.</p>
-<dd>If the path is empty by this stage, add a <code>dot</code> (normal form of <code>./</code> is <code>.</code>).</dl>
+<dt>1.</dt>
+<dd>If the path is empty, stop (the normalized form of an empty path is also an empty path).</dd>
+<dt>2.</dt>
+<dd>Replace each <code>directory-separator</code>, which may consist of multiple separators, with a single <code>/</code> (<code>/a///b &#8211;&gt; /a/b</code>).</dd>
+<dt>3.</dt>
+<dd>Remove each solitary period (<code>.</code>) and any immediately following <code>directory-separator</code> (<code>/a/./b/. &#8211;&gt; /a/b</code>).</dd>
+<dt>4.</dt>
+<dd>Remove each <code>item-name</code> (other than <code>..</code>) that is immediately followed by a <code>directory-separator</code> and a <code>..</code>, along with any immediately following <code>directory-separator</code> (<code>/a/b/../c &#8211;&gt; a/c</code>).</dd>
+<dt>5.</dt>
+<dd>If there is a <code>root-directory</code>, remove any <code>..</code> and any <code>directory-separators</code> immediately following them. The parent of the root directory is treated as still the root directory (<code>/../a &#8211;&gt; /a</code>).</dd>
+<dt>6.</dt>
+<dd>If the last <code>item-name</code> is <code>..</code>, remove any trailing <code>directory-separator</code> (<code>../ &#8211;&gt; ..</code>).</dd>
+<dt>7.</dt>
+<dd>If the path is empty by this stage, add a <code>dot</code> (normal form of <code>./</code> is <code>.</code>).</dd></dl>
 <h3>Decomposition</h3>
 <p>The following forms of the <code>GET</code> subcommand each retrieve a different component or group of components from a path. See <i>Path Structure And Terminology</i> for the meaning of each path component. </p>
 <pre>cmake_path(GET &lt;path-var&gt; ROOT_NAME &lt;out-var&gt;)
@@ -542,10 +542,10 @@ cmake_path(HAS_RELATIVE_PART &lt;path-var&gt; &lt;out-var&gt;)
 cmake_path(HAS_PARENT_PATH &lt;path-var&gt; &lt;out-var&gt;)</pre>
 <p>Each of the above follows the predictable pattern of setting <code>&lt;out-var&gt;</code> to true if the path has the associated component, or false otherwise. Note the following special cases:</p>
 <dl>
-<dt>&bull;</p>
-<dd>For <code>HAS_ROOT_PATH</code>, a true result will only be returned if at least one of <code>root-name</code> or <code>root-directory</code> is non-empty.</p>
-<dt>&bull;</p>
-<dd>For <code>HAS_PARENT_PATH</code>, the root directory is also considered to have a parent, which will be itself. The result is true except if the path consists of just a <i>filename</i>. </p>
+<dt>&bull;</dt>
+<dd>For <code>HAS_ROOT_PATH</code>, a true result will only be returned if at least one of <code>root-name</code> or <code>root-directory</code> is non-empty.</dd>
+<dt>&bull;</dt>
+<dd>For <code>HAS_PARENT_PATH</code>, the root directory is also considered to have a parent, which will be itself. The result is true except if the path consists of just a <i>filename</i>. </dd>
 <pre>cmake_path(IS_ABSOLUTE &lt;path-var&gt; &lt;out-var&gt;)</pre>
 <p>Sets <code>&lt;out-var&gt;</code> to true if <code>&lt;path-var&gt;</code> is absolute. An absolute path is a path that unambiguously identifies the location of a file without reference to an additional starting location. On Windows, this means the path must have both a <code>root-name</code> and a <code>root-directory-separator</code> to be considered absolute. On other platforms, just a <code>root-directory-separator</code> is sufficient. Note that this means on Windows, <code>IS_ABSOLUTE</code> can be false while <code>HAS_ROOT_DIRECTORY</code> can be true. </p>
 <pre>cmake_path(IS_RELATIVE &lt;path-var&gt; &lt;out-var&gt;)</pre>
@@ -663,3 +663,5 @@ cmake_path(CONVERT &quot;${paths}&quot; TO_NATIVE_PATH_LIST native_paths)
 message(&quot;Native path list is \&quot;${native_paths}\&quot;&quot;)</pre>
 <p>Output on Windows: </p>
 <pre>Native path list is &quot;
+</p>
+</pre>

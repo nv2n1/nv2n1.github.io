@@ -42,20 +42,20 @@ keyDel(key);</p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Note that the Key structure keeps its own size field that is calculated by library internal calls, so to avoid inconsistencies, you must never use the pointer returned by <code>keyComment()</code> method to set a new value. Use <code>keySetComment()</code> instead.</dl>
+</dt><dd> Note that the Key structure keeps its own size field that is calculated by library internal calls, so to avoid inconsistencies, you must never use the pointer returned by <code>keyComment()</code> method to set a new value. Use <code>keySetComment()</code> instead.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the key object to work with</dl>
+</dt><dd> <i>key</i> the key object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> a pointer to the internal managed comment </p>
+</dt><dd> a pointer to the internal managed comment </dd>
 <p> 0 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyGetCommentSize()</code> for size and <code>keyGetComment()</code> as alternative</dl>
+</dt><dd> <code>keyGetCommentSize()</code> for size and <code>keyGetComment()</code> as alternative</dd></dl>
 <h3>ssize_t keyGetBinary (const Key * key, void * returnedBinary, size_t maxSize)Get the value of a key as a binary.</h3>
 <p> If the type is not binary -1 will be returned. </p>
 <p> When the binary data is empty (this is not the same as &#8221;!) 0 will be returned and the returnedBinary will not be changed. </p>
@@ -70,13 +70,13 @@ if (keyGetBinary(key, buffer, sizeof(buffer)) == -1) {<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the object to gather the value from<br />
+</dt><dd> <i>key</i> the object to gather the value from<br />
  <i>returnedBinary</i> pre-allocated memory to store a copy of the key value<br />
- <i>maxSize</i> number of bytes of pre-allocated memory in returnedBinary</dl>
+ <i>maxSize</i> number of bytes of pre-allocated memory in returnedBinary</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of bytes actually copied to returnedBinary </p>
+</dt><dd> the number of bytes actually copied to returnedBinary </dd>
 <p> 0 if the binary is empty </p>
 <p> -1 on NULL pointers </p>
 <p> -1 when maxSize is 0, too small to hold the value or larger than SSIZE_MAX </p>
@@ -84,7 +84,7 @@ if (keyGetBinary(key, buffer, sizeof(buffer)) == -1) {<br />
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyValue()</code>, <code>keyGetValueSize()</code>, <code>keySetBinary()</code> </p>
+</dt><dd> <code>keyValue()</code>, <code>keyGetValueSize()</code>, <code>keySetBinary()</code> </dd>
 <p> <code>keyGetString()</code> and <code>keySetString()</code> as preferred alternative to binary </p>
 <p> <code>keyIsBinary()</code> to see how to check for binary type</dl>
 <h3>ssize_t keyGetComment (const Key * key, char * returnedComment, size_t maxSize)Get the key comment.</h3>
@@ -94,20 +94,20 @@ if (keyGetBinary(key, buffer, sizeof(buffer)) == -1) {<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the key object to work with<br />
+</dt><dd> <i>key</i> the key object to work with<br />
  <i>returnedComment</i> pre-allocated memory to copy the comments to<br />
- <i>maxSize</i> number of bytes that will fit returnedComment</dl>
+ <i>maxSize</i> number of bytes that will fit returnedComment</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of bytes actually copied to returnedString, including final NULL </p>
+</dt><dd> the number of bytes actually copied to returnedString, including final NULL </dd>
 <p> 1 if the string is empty </p>
 <p> -1 on NULL pointer </p>
 <p> -1 if maxSize is 0, not enough to store the comment or when larger then SSIZE_MAX</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyGetCommentSize()</code>, <code>keySetComment()</code></dl>
+</dt><dd> <code>keyGetCommentSize()</code>, <code>keySetComment()</code></dd></dl>
 <h3>ssize_t keyGetCommentSize (const Key * key)Calculates number of bytes needed to store a key comment, including final NULL.</h3>
 <p> Use this method to know to size for allocated memory to retrieve a key comment. </p>
 <p> See <code>keySetComment()</code> for more information on comments. </p>
@@ -119,17 +119,17 @@ buffer = malloc(keyGetCommentSize(key));<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the key object to work with</dl>
+</dt><dd> <i>key</i> the key object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> number of bytes needed </p>
+</dt><dd> number of bytes needed </dd>
 <p> 1 if there is no comment </p>
 <p> -1 on NULL pointer</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyGetComment()</code>, <code>keySetComment()</code></dl>
+</dt><dd> <code>keyGetComment()</code>, <code>keySetComment()</code></dd></dl>
 <h3>ssize_t keyGetString (const Key * key, char * returnedString, size_t maxSize)Get the value of a key as a string.</h3>
 <p> When there is no value inside the string, 1 will be returned and the returnedString will be empty &#8221; to avoid programming errors that old strings are shown to the user. </p>
 <p> For binary values see <code>keyGetBinary()</code> and <code>keyIsBinary()</code>. </p>
@@ -144,13 +144,13 @@ if (keyGetString(key, buffer, sizeof(buffer)) == -1) {<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> the object to gather the value from<br />
+</dt><dd> <i>key</i> the object to gather the value from<br />
  <i>returnedString</i> pre-allocated memory to store a copy of the key value<br />
- <i>maxSize</i> number of bytes of allocated memory in returnedString</dl>
+ <i>maxSize</i> number of bytes of allocated memory in returnedString</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of bytes actually copied to returnedString, including final NULL </p>
+</dt><dd> the number of bytes actually copied to returnedString, including final NULL </dd>
 <p> 1 if the string is empty </p>
 <p> -1 on NULL pointer </p>
 <p> -1 on type mismatch </p>
@@ -158,7 +158,8 @@ if (keyGetString(key, buffer, sizeof(buffer)) == -1) {<br />
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyValue()</code>, <code>keyGetValueSize()</code>, <code>keySetString()</code> </p>
+</dt><dd> <code>keyValue()</code>, <code>keyGetValueSize()</code>, <code>keySetString()</code> </dd>
 <p> <code>keyGetBinary()</code> for working with binary data</dl>
 <h3>ssize_t keyGetValueSize (const Key * key)Returns the number of bytes needed to store the key value, including the NULL terminator.</h3>
 <p> It returns the correct size, independent of the Key Type. If it is a binary there might be &#8216;
+</p></p>

@@ -12,17 +12,15 @@ rdma_leave_multicast - Leaves a multicast group.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_leave_multicast
-
     (struct rdma_cm_id *id,
-
      struct sockaddr *addr);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>Communication identifier associated with the request.
-<dt>addr
-<dd>Multicast address identifying the group to leave.</dl>
+</dt><dd>Communication identifier associated with the request.
+</dd><dt>addr
+</dt><dd>Multicast address identifying the group to leave.</dd></dl>
 
 <h2>Description</h2>
 

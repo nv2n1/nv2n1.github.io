@@ -14,7 +14,7 @@ description: "snd_soc_kcontrol_platform – Returns the platform that registered
 <p><i>kcontrol</i></p>
 <dl>
 <dd>
-<dd>The control for which to get the platform</dl>
+</dd><dd>The control for which to get the platform</dd></dl>
 <h2>Note</h2>
 <p>This function will only work correctly if the control has been registered with <code>snd_soc_add_platform_controls</code> or via table based setup of a snd_soc_platform_driver. Otherwise the behavior is undefined.</p>
 <h2>Copyright</h2>

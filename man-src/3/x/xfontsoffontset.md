@@ -10,20 +10,20 @@ description: "XFontsOfFontSet, XBaseFontNameListOfFontSet, XLocaleOfFontSet, XCo
 <p>XFontsOfFontSet, XBaseFontNameListOfFontSet, XLocaleOfFontSet, XContextDependentDrawing, XContextualDrawing, XDirectionalDependentDrawing &#8211; obtain fontset information </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XFontsOfFontSet(XFontSet <i>font_set</i>, XFontStruct ***<i>font_struct_list_return</i>, char ***<i>font_name_list_return</i>);</p>
-<dd>char *XBaseFontNameListOfFontSet(XFontSet <i>font_set</i>);</p>
-<dd>char *XLocaleOfFontSet(XFontSet <i>font_set</i>);</p>
-<dd>Bool XContextDependentDrawing(XFontSet <i>font_set</i>);</p>
-<dd>Bool XContextualDrawing(XFontSet <i>font_set</i>);</p>
-<dd>Bool XDirectionalDependentDrawing(XFontSet <i>font_set</i>);</dl>
+<dd>int XFontsOfFontSet(XFontSet <i>font_set</i>, XFontStruct ***<i>font_struct_list_return</i>, char ***<i>font_name_list_return</i>);</dd>
+<dd>char *XBaseFontNameListOfFontSet(XFontSet <i>font_set</i>);</dd>
+<dd>char *XLocaleOfFontSet(XFontSet <i>font_set</i>);</dd>
+<dd>Bool XContextDependentDrawing(XFontSet <i>font_set</i>);</dd>
+<dd>Bool XContextualDrawing(XFontSet <i>font_set</i>);</dd>
+<dd>Bool XDirectionalDependentDrawing(XFontSet <i>font_set</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>font_set</i></p>
-<dd>Specifies the font set.</p>
-<dt><i>font_name_list_return</i></p>
-<dd>Returns the list of font names.</p>
-<dt><i>font_struct_list_return</i></p>
-<dd>Returns the list of font structs.</dl>
+<dt><i>font_set</i></dt>
+<dd>Specifies the font set.</dd>
+<dt><i>font_name_list_return</i></dt>
+<dd>Returns the list of font names.</dd>
+<dt><i>font_struct_list_return</i></dt>
+<dd>Returns the list of font structs.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XFontsOfFontSet</code> function returns a list of one or more <code>XFontStructs</code> and font names for the fonts used by the Xmb and Xwc layers for the given font set. A list of pointers to the <code>XFontStruct</code> structures is returned to font_struct_list_return. A list of pointers to null-terminated, fully specified font name strings in the locale of the font set is returned to font_name_list_return. The font_name_list order corresponds to the font_struct_list order. The number of <code>XFontStruct</code> structures and font names is returned as the value of the function. </p>
 <p> Because it is not guaranteed that a given character will be imaged using a single font glyph, there is no provision for mapping a character or default string to the font properties, font ID, or direction hint for the font for the character. The client may access the <code>XFontStruct</code> list to obtain these values for all the fonts currently in use. </p>

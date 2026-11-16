@@ -11,36 +11,24 @@ std::sort - std::sort
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (until C++ 20)
-
         void sort(RandomIt first, RandomIt last);
-
 template &lt;class RandomIt&gt;
 (since C++ 20)
-
     constexpr void sort(RandomIt first, RandomIt last);
-
 template &lt;class ExecutionPolicy, class RandomIt&gt;
 (2)(since C++ 17)
-
     void sort(ExecutionPolicy &amp;&amp;policy, RandomIt first, RandomIt last);
 (1)
-
     template &lt;class RandomIt, class Compare&gt;
     (until C++ 20)
-
         void sort(RandomIt first, RandomIt last, Compare comp);
-
 template &lt;class RandomIt, class Compare&gt;
 (3)(since C++ 20)
-
     constexpr void sort(RandomIt first, RandomIt last, Compare comp);
-
 template &lt;class ExecutionPolicy, class RandomIt, class Compare&gt;
 (4)(since C++ 17)
-
     void sort(ExecutionPolicy &amp;&amp;policy, RandomIt first, RandomIt last, Compare comp);</code></pre> 
 Sorts the elements in the range [first, last) in ascending order. The order of equal elements is not guaranteed to be preserved. 
 1) Elements are compared using operator&lt;. 
@@ -88,14 +76,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;array&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::array&lt;int, 10&gt; s = {5, 7, 4, 2, 8, 6, 1, 9, 0, 3};
     // sort using the default operator&lt;

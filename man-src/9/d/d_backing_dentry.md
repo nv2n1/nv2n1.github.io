@@ -15,7 +15,7 @@ d_backing_dentry - Get upper or lower dentry we should be using
 <h2>Arguments</h2>
 
 <i>upper</i>
-<dl><dd><dd>The upper layer</dl>
+<dl><dd></dd><dd>The upper layer</dd></dl>
 
 <h2>Description</h2>
 

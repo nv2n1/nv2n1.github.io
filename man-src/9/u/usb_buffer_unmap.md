@@ -14,7 +14,7 @@ description: "usb_buffer_unmap – free DMA mapping(s) for an urb"
 <p><i>urb</i></p>
 <dl>
 <dd>
-<dd>urb whose transfer_buffer will be unmapped</dl>
+</dd><dd>urb whose transfer_buffer will be unmapped</dd></dl>
 <h2>Description</h2>
 <p>Reverses the effect of <code>usb_buffer_map</code>.</p>
 <h2>Copyright</h2>

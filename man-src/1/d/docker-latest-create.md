@@ -206,9 +206,9 @@ bind mounts&nbsp;<wbr>/HOST-DIR in the host to&nbsp;<wbr>/CONTAINER-DIR in the D
 container. If&nbsp;<wbr>&#8216;HOST-DIR&#8217;&nbsp;<wbr>is omitted,&nbsp;<wbr>&nbsp;<wbr>Docker automatically creates the new<br />
 volume on the host.&nbsp;<wbr>&nbsp;<wbr>The OPTIONS are a comma delimited list and can be:</p>
 <dl>
-<dt>step]</p>
+<dt>step]</dt>
 <dd>
-<p> item [rw|ro] item [z|Z] item [[r]shared|[r]slave|[r]private]</dl>
+<p> item [rw|ro] item [z|Z] item [[r]shared|[r]slave|[r]private]</dd></dl>
 <p> The CONTAINER-DIR must be an absolute path such as /src/docs. The HOST-DIR can be an absolute path or a name value. A name value must start with an alphanumeric character, followed by a-z0-9, _ (underscore), . (period) or &#8211; (hyphen). An absolute path starts with a / (forward slash). </p>
 <p> If you supply a HOST-DIR that is an absolute path, Docker bind-mounts to the path you specify. If you supply a name, Docker creates a named volume by that name. For example, you can specify either /foo or foo for a HOST-DIR value. If you supply the /foo value, Docker creates a bind-mount. If you supply the foo specification, Docker creates a named volume. </p>
 <p> You can specify multiple <code>-v</code> options to mount one or more mounts to a container. To use these same mounts in other containers, specify the <code>&#8211;volumes-from</code> option also. </p>
@@ -221,8 +221,8 @@ volume on the host.&nbsp;<wbr>&nbsp;<wbr>The OPTIONS are a comma delimited list 
 <p> To change propagation properties of a mount point use mount command. For example, if one wants to bind mount source directory /foo one can do mount &#8211;bind /foo /foo and mount &#8211;make-private &#8211;make-shared /foo. This will convert /foo into a shared mount point. Alternatively one can directly change propagation properties of source mount. Say / is source mount for /foo, then use mount &#8211;make-shared / to convert / into a shared mount. </p>
 <dl>
 <dt>
-<dd>
-<p> <code>Note</code>: When using systemd to manage the Docker daemon&#8217;s start and stop, in the systemd unit file there is an option to control mount propagation for the Docker daemon itself, called MountFlags. The value of this setting may cause Docker to not see mount propagation changes made on the mount point. For example, if this value is slave, you may not be able to use the shared or rshared propagation on a volume.</dl>
+</dt><dd>
+<p> <code>Note</code>: When using systemd to manage the Docker daemon&#8217;s start and stop, in the systemd unit file there is an option to control mount propagation for the Docker daemon itself, called MountFlags. The value of this setting may cause Docker to not see mount propagation changes made on the mount point. For example, if this value is slave, you may not be able to use the shared or rshared propagation on a volume.</dd></dl>
 <p> To disable automatic copying of data from the container path to the volume, use the nocopy flag. The nocopy flag can be set on bind mounts and named volumes. </p>
 <p> <code>&#8211;volume-driver</code>=&quot;&quot;<br />
 Container&#8217;s volume driver. This driver creates volumes specified either from<br />
@@ -236,10 +236,11 @@ Working directory inside the container </p>
 <h2>Specify isolation technology for container (&#8211;isolation)</h2>
 <p> This option is useful in situations where you are running Docker containers on Windows. The &#8211;isolation=&lt;value&gt; option sets a container&#8217;s isolation technology. On Linux, the only supported is the default option which uses Linux namespaces. On Microsoft Windows, you can specify these values:</p>
 <dl>
-<dt>step]</p>
+<dt>step]</dt>
 <dd>
-<p> item default: Use the value specified by the Docker daemon&#8217;s &#8211;exec-opt . If the daemon does not specify an isolation technology, Microsoft Windows uses process as its default value. item process: Namespace isolation only. item hyperv: Hyper-V hypervisor partition-based isolation.</dl>
+<p> item default: Use the value specified by the Docker daemon&#8217;s &#8211;exec-opt . If the daemon does not specify an isolation technology, Microsoft Windows uses process as its default value. item process: Namespace isolation only. item hyperv: Hyper-V hypervisor partition-based isolation.</dd></dl>
 <p> Specifying the &#8211;isolation flag without a value is the same as setting &#8211;isolation=&quot;default&quot;. </p>
 <h2>HISTORY</h2>
 <p> August 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; September 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; November 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
 <h2>Index</h2>
+</p>

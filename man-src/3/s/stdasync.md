@@ -10,53 +10,29 @@ description: "std::async – std::async"
 <p>std::async &#8211; std::async</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;future&gt;
-
 template&lt; class Function, class... Args&gt;                                             (since C++11)
-
 std::future&lt;std::result_of_t&lt;std::decay_t&lt;Function&gt;(std::decay_t&lt;Args&gt;...)&gt;&gt;         (until C++17)
-
 async( Function&amp;&amp; f, Args&amp;&amp;... args );
-
 template&lt; class Function, class... Args&gt;
-
 std::future&lt;std::invoke_result_t&lt;std::decay_t&lt;Function&gt;,                             (since C++17)
-
 std::decay_t&lt;Args&gt;...&gt;&gt;                                                              (until C++20)
-
 async( Function&amp;&amp; f, Args&amp;&amp;... args );
-
 template&lt; class Function, class... Args&gt;
-
 [[nodiscard]]
-
 std::future&lt;std::invoke_result_t&lt;std::decay_t&lt;Function&gt;,                             (since C++20)
-
 std::decay_t&lt;Args&gt;...&gt;&gt;
-
 async( Function&amp;&amp; f, Args&amp;&amp;... args );                                       (1)
-
 template&lt; class Function, class... Args &gt;                                                           (since C++11)
-
 std::future&lt;std::result_of_t&lt;std::decay_t&lt;Function&gt;(std::decay_t&lt;Args&gt;...)&gt;&gt;                        (until C++17)
-
 async( std::launch policy, Function&amp;&amp; f, Args&amp;&amp;... args );
-
 template&lt; class Function, class... Args &gt;
-
 std::future&lt;std::invoke_result_t&lt;std::decay_t&lt;Function&gt;,                                            (since C++17)
-
 std::decay_t&lt;Args&gt;...&gt;&gt;                                                          (2)                (until C++20)
-
 async( std::launch policy, Function&amp;&amp; f, Args&amp;&amp;... args );
-
 template&lt; class Function, class... Args &gt;
-
 [[nodiscard]]
-
 std::future&lt;std::invoke_result_t&lt;std::decay_t&lt;Function&gt;,                                            (since C++20)
-
 std::decay_t&lt;Args&gt;...&gt;&gt;
-
 async( std::launch policy, Function&amp;&amp; f, Args&amp;&amp;... args );</code></pre>
 <p>The template function async runs the function f asynchronously (potentially in a separate thread which may be part of a thread pool) and returns a std::future that will eventually hold the result of that function call.<br />
 1) Behaves as if <code>(2)</code> is called with policy being std::launch::async | std::launch::deferred. In other words, f may be executed in another thread or it may be run synchronously when the resulting std::future is queried for a value.<br />
@@ -93,20 +69,13 @@ The following behavior-changing defect reports were applied retroactively to pre
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;future&gt;
-
 #include &lt;string&gt;
-
 #include &lt;mutex&gt;
 std::mutex m;
-
 struct X {
     void foo(int i, const std::string &amp;str)
     {
@@ -129,9 +98,7 @@ struct X {
     }
 };
 template &lt;typename RandomIt&gt;
-
 int parallel_sum(RandomIt beg, RandomIt end)
-
 {
     auto len = end - beg;
     if (len &lt; 1000)
@@ -143,7 +110,6 @@ int parallel_sum(RandomIt beg, RandomIt end)
     return sum + handle.get();
 }
 int main()
-
 {
     std::vector&lt;int&gt; v(10000, 1);
     std::cout &lt;&lt; &quot;The sum is &quot; &lt;&lt; parallel_sum(v.begin(), v.end()) &lt;&lt; '
@@ -161,7 +127,6 @@ int main()
     a2.wait();                     // prints &quot;world!&quot;
     std::cout &lt;&lt; a3.get() &lt;&lt; '
 '; // prints &quot;53&quot;
-
 } // if a1 is not done at this point, destructor of a1 prints &quot;Hello 42&quot; here
 </code></pre>
 <h2>Possible output:</h2>

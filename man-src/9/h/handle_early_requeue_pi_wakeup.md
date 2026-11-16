@@ -14,16 +14,16 @@ description: "handle_early_requeue_pi_wakeup – Detect early wakeup on the init
 <p><i>hb</i></p>
 <dl>
 <dd>
-<dd>the hash_bucket futex_q was original enqueued on</dl>
+</dd><dd>the hash_bucket futex_q was original enqueued on</dd></dl>
 <p> <i>q</i></p>
 <dl>
-<dd>the futex_q woken while waiting to be requeued</dl>
+<dd>the futex_q woken while waiting to be requeued</dd></dl>
 <p> <i>key2</i></p>
 <dl>
-<dd>the futex_key of the requeue target futex</dl>
+<dd>the futex_key of the requeue target futex</dd></dl>
 <p> <i>timeout</i></p>
 <dl>
-<dd>the timeout associated with the wait (NULL if none)</dl>
+<dd>the timeout associated with the wait (NULL if none)</dd></dl>
 <h2>Description</h2>
 <p>Detect if the task was woken on the initial futex as opposed to the requeue target futex. If so, determine if it was a timeout or a signal that caused the wakeup and return the appropriate error code to the caller. Must be called with the hb lock held.</p>
 <h2>Return</h2>
@@ -31,5 +31,5 @@ description: "handle_early_requeue_pi_wakeup – Detect early wakeup on the init
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

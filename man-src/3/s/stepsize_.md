@@ -10,24 +10,12 @@ description: "QuantLib::IntegralCDOEngine – CDO base engine taking (possibly) 
 <p>QuantLib::IntegralCDOEngine &#8211; <code>CDO</code> base engine taking (possibly) small time steps. </p>
 <h2>Synopsis</h2>
 <pre><code>void calculate () const
-
-
-
 IntegralCDOEngine (Period stepSize=3 *Months)
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::SyntheticCDO::engine</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void calculate () const
-
-
-
 IntegralCDOEngine (Period stepSize=3 *Months)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Period</code> <code>stepSize_</code></p>
 <h2>Detailed Description</h2>

@@ -12,12 +12,9 @@ std::experimental::filesystem::path::assign - std::experimental::filesystem::pat
 
 <pre><code>template &lt;class Source&gt;
 (1)(filesystem TS)
-
     path &amp;assign(const Source &amp;source);
-
 template &lt;class InputIt&gt;
 (2)(filesystem TS)
-
     path &amp;assign(InputIt first, InputIt last);</code></pre> 
 Assigns the contents to the path object. 
 1) Assigns the range of source. 
@@ -50,10 +47,5 @@ The value type of InputIt must be one of the encoded character types (char, wcha
 <h2>See also</h2>
 
 <pre><code>assigns another path
-
 operator= (public member function)
-
-
-
-
 </code></pre>

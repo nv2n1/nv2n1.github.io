@@ -14,9 +14,9 @@ Tk_Uid
 <code>Tk_GetOption</code>(<i>tkwin, name, class</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window.</p>
-<dd>const char <i>*name</i> (in) Name of desired option.</p>
-<dd>const char <i>*class</i> (in) Class of desired option. Null means there is no class for this option; do lookup based on name only. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>const char <i>*name</i> (in) Name of desired option.</dd>
+<dd>const char <i>*class</i> (in) Class of desired option. Null means there is no class for this option; do lookup based on name only. </dd>
 </dl>
 <h2>Description</h2>
 <p>This procedure is invoked to retrieve an option from the database associated with <i>tkwin</i>&#8216;s main window. If there is an option for <i>tkwin</i> that matches the given <i>name</i> or <i>class</i>, then it is returned in the form of a Tk_Uid. If multiple options match <i>name</i> and <i>class</i>, then the highest-priority one is returned. If no option matches, then NULL is returned. </p>

@@ -26,44 +26,44 @@ description: "QwtPolygonFData – Data class containing a single QwtArray<QwtDou
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>polygon</i> Polygon data</dl>
+<dd><i>polygon</i> Polygon data</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCurve::setData()</code></dl>
+<dd><code>QwtPlotCurve::setData()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtData</code> * QwtPolygonFData::copy () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pointer to a copy (virtual copy constructor)</dl>
+<dd>Pointer to a copy (virtual copy constructor)</dd></dl>
 <p> Implements <code>QwtData</code>.</p>
 <h3>const QPolygonF &amp; QwtPolygonFData::data () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Point array</dl>
+<dd>Point array</dd></dl>
 <h3><code>QwtPolygonFData</code> &amp; QwtPolygonFData::operator= (const <code>QwtPolygonFData</code> &amp; data)</h3>
 <p>Assignment. </p>
 <h3>size_t QwtPolygonFData::size () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size of the data set</dl>
+<dd>Size of the data set</dd></dl>
 <p> Implements <code>QwtData</code>.</p>
 <h3>double QwtPolygonFData::x (size_t i) const [virtual]</h3>
 <p>Return the x value of data point i </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>i</i> Index</dl>
+<dd><i>i</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>x X value of data point i</dl>
+<dd>x X value of data point i</dd></dl>
 <p> Implements <code>QwtData</code>.</p>
 <h3>double QwtPolygonFData::y (size_t i) const [virtual]</h3>
 <p>Return the y value of data point i </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>i</i> Index</dl>
+<dd><i>i</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>y Y value of data point i</dl>
+<dd>y Y value of data point i</dd></dl>
 <p> Implements <code>QwtData</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

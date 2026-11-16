@@ -16,18 +16,18 @@ description: "gv-update-userconfig – update ~/.gv config file"
 <p> You can specify a file which is used instead of <code>.gv</code> by using the optional filename argument. This is useful if the environment variable XUSERSEARCHPATH is used. </p>
 <p> This is done by removing all entries known to cause problems with the current version of GNU gv (i.e. the one the version of this program belongs to) and updating the version information in that file. This resets all problematic items back to the default values. </p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code>, <code>&#8211;usage</code></p>
-<dd> displays a short help message</p>
-<dt><code>-r</code></p>
-<dd> removes all resources from <i>~</i><code>/.gv</code> that equal the default resources being shipped with GNU gv (ignoring whitespaces).</p>
-<dt><code>-n</code></p>
-<dd> switches to alternative navigation by adding resp. updating navigation resources to <i>~</i><code>/.gv</code>, i. e. after each page switch (except if selected by the page number) the page is scrolled to top (if switching forward) resp. to the bottom (if switching backward).</p>
-<dt><code>-N</code></p>
-<dd> switches to standard navigation by adding resp. updating navigation resources to <i>~</i><code>/.gv</code>.</p>
-<dt><code>-s</code></p>
-<dd> removes navigation resources from <i>~</i><code>/.gv</code> and therefore enables standard navigation.</p>
-<dt><code>-i</code></p>
-<dd> updates translation file. Using the optional filename parameter is strongly recommended for using this option. This option cannot be used together with any of the other options. </p>
+<dt><code>-h</code>, <code>&#8211;help</code>, <code>&#8211;usage</code></dt>
+<dd> displays a short help message</dd>
+<dt><code>-r</code></dt>
+<dd> removes all resources from <i>~</i><code>/.gv</code> that equal the default resources being shipped with GNU gv (ignoring whitespaces).</dd>
+<dt><code>-n</code></dt>
+<dd> switches to alternative navigation by adding resp. updating navigation resources to <i>~</i><code>/.gv</code>, i. e. after each page switch (except if selected by the page number) the page is scrolled to top (if switching forward) resp. to the bottom (if switching backward).</dd>
+<dt><code>-N</code></dt>
+<dd> switches to standard navigation by adding resp. updating navigation resources to <i>~</i><code>/.gv</code>.</dd>
+<dt><code>-s</code></dt>
+<dd> removes navigation resources from <i>~</i><code>/.gv</code> and therefore enables standard navigation.</dd>
+<dt><code>-i</code></dt>
+<dd> updates translation file. Using the optional filename parameter is strongly recommended for using this option. This option cannot be used together with any of the other options. </dd>
 </dl>
 <h2>BACKGROUND</h2>
 <p> The <i>$(HOME)</i><code>/.gv</code> file is written by GNU gv when activating the <code>Save</code> button in one of the configuration dialogs. </p>

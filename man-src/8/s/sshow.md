@@ -14,17 +14,17 @@ description: "sshow – SSH traffic analysis tool"
 <p><code>sshow</code> analyzes encrypted SSH-1 and SSH-2 traffic, identifying authentication attempts, the lengths of passwords entered in interactive sessions, and command line lengths. </p>
 <p> The following advisory describes the attacks implemented by <code>sshow</code> in detail: </p>
 <dl>
-<dd><i><a rel="nofollow" href="http://www.openwall.com/advisories/OW-003-ssh-traffic-analysis.txt">http://www.openwall.com/advisories/OW-003-ssh-traffic-analysis.txt</a></i></dl>
+<dd><i><a rel="nofollow" href="http://www.openwall.com/advisories/OW-003-ssh-traffic-analysis.txt">http://www.openwall.com/advisories/OW-003-ssh-traffic-analysis.txt</a></i></dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Enable verbose debugging output.</p>
-<dt><code>-i </code><i>interface</i></p>
-<dd>Specify the interface to listen on.</p>
-<dt><code>-p </code><i>pcapfile</i></p>
-<dd>Process packets from the specified PCAP capture file instead of the network.</p>
-<dt><i>expression</i></p>
-<dd>Specify a <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8) filter expression to select traffic to sniff.</dl>
+<dt><code>-d</code></dt>
+<dd>Enable verbose debugging output.</dd>
+<dt><code>-i </code><i>interface</i></dt>
+<dd>Specify the interface to listen on.</dd>
+<dt><code>-p </code><i>pcapfile</i></dt>
+<dd>Process packets from the specified PCAP capture file instead of the network.</dd>
+<dt><i>expression</i></dt>
+<dd>Specify a <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8) filter expression to select traffic to sniff.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-dsniff/">dsniff</a>(8), <a href="/docs/linux/man/8-sshmitm/">sshmitm</a>(8)</p>
 <h2>Authors</h2>

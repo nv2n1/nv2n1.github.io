@@ -14,20 +14,18 @@ description: "rmdir – remove empty directories"
 <h2>DESCRIPTION</h2>
 <p> Remove the DIRECTORY(ies), if they are empty.</p>
 <dl>
-<dt> <code>&#8211;ignore-fail-on-non-empty</code></p>
+<dt> <code>&#8211;ignore-fail-on-non-empty</code></dt>
+<dd>ignore each failure that is solely because a directory</dd>
 <dt>
-<dd>
-<dd>ignore each failure that is solely because a directory</p>
-<dt>
-<dd> is non-empty</p>
-<dt><code>-p</code>, <code>&#8211;parents</code></p>
-<dd> remove DIRECTORY and its ancestors; e.g., &#8216;rmdir <code>-p</code> a/b/c&#8217; is similar to &#8216;rmdir a/b/c a/b a&#8217;</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> output a diagnostic for every directory processed</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+</dt><dd> is non-empty</dd>
+<dt><code>-p</code>, <code>&#8211;parents</code></dt>
+<dd> remove DIRECTORY and its ancestors; e.g., &#8216;rmdir <code>-p</code> a/b/c&#8217; is similar to &#8216;rmdir a/b/c a/b a&#8217;</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> output a diagnostic for every directory processed</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

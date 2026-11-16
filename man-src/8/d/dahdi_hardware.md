@@ -15,9 +15,9 @@ dahdi_hardware [-v][-x]
 <h2>Options</h2>
 
 <dl><dt>-v
-<dd>Verbose ouput - show spans used by each device etc. Currently only implemented for the Xorcom Astribank.
-<dt>-x
-<dd>Show disconnected Astribank unit, if any.</dl>
+</dt><dd>Verbose ouput - show spans used by each device etc. Currently only implemented for the Xorcom Astribank.
+</dd><dt>-x
+</dt><dd>Show disconnected Astribank unit, if any.</dd></dl>
 
 <h2>Description</h2>
 

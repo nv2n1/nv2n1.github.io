@@ -15,7 +15,7 @@ snd_pcm_format_signed - Check the PCM format is signed linear
 <h2>Arguments</h2>
 
 <i>format</i>
-<dl><dd><dd>the format to check</dl>
+<dl><dd></dd><dd>the format to check</dd></dl>
 
 <h2>Return</h2>
 

@@ -16,24 +16,24 @@ description: "memusagestat – generate graphic from memory profiling data"
 <p> The red line in the graph shows the heap usage (allocated memory) and the green line shows the stack usage. The x-scale is either the number of memory-handling function calls or (if the <i>-t</i> option is specified) time.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;output=</code><i>file</i></p>
-<dd> Name of the output file.</p>
-<dt><code>-s&nbsp;</code><i>string</i>,&nbsp;<code>&#8211;string=</code><i>string</i></p>
-<dd> Use <i>string</i> as the title inside the output graph.</p>
-<dt><code>-t</code>,&nbsp;<code>&#8211;time</code></p>
-<dd> Use time (rather than number of function calls) as the scale for the X axis.</p>
-<dt><code>-T</code>,&nbsp;<code>&#8211;total</code></p>
-<dd> Also draw a graph of total memory consumption.</p>
-<dt><code>-x&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;x-size=</code><i>size</i></p>
-<dd> Make the output graph <i>size</i> pixels wide.</p>
-<dt><code>-y&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;y-size=</code><i>size</i></p>
-<dd> Make the output graph <i>size</i> pixels high.</p>
-<dt><code>-?</code>,&nbsp;<code>&#8211;help</code></p>
-<dd> Print a help message and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Print a short usage message and exit.</p>
-<dt><code>-V</code>,&nbsp;<code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-o&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;output=</code><i>file</i></dt>
+<dd> Name of the output file.</dd>
+<dt><code>-s&nbsp;</code><i>string</i>,&nbsp;<code>&#8211;string=</code><i>string</i></dt>
+<dd> Use <i>string</i> as the title inside the output graph.</dd>
+<dt><code>-t</code>,&nbsp;<code>&#8211;time</code></dt>
+<dd> Use time (rather than number of function calls) as the scale for the X axis.</dd>
+<dt><code>-T</code>,&nbsp;<code>&#8211;total</code></dt>
+<dd> Also draw a graph of total memory consumption.</dd>
+<dt><code>-x&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;x-size=</code><i>size</i></dt>
+<dd> Make the output graph <i>size</i> pixels wide.</dd>
+<dt><code>-y&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;y-size=</code><i>size</i></dt>
+<dd> Make the output graph <i>size</i> pixels high.</dd>
+<dt><code>-?</code>,&nbsp;<code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Print a short usage message and exit.</dd>
+<dt><code>-V</code>,&nbsp;<code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> To report bugs, see</p>
 <h2>EXAMPLES</h2>

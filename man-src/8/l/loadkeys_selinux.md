@@ -41,8 +41,8 @@ description: "loadkeys_selinux – Security Enhanced Linux Policy for the loadke
 <p> <code>loadkeys_exec_t</code> </p>
 <p> &#8211; Set files with the loadkeys_exec_t type, if you want to transition an executable to the loadkeys_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/unikeys, /bin/loadkeys, /usr/bin/unikeys, /usr/bin/loadkeys </p>
+<dt>Paths:</dt>
+<dd>/bin/unikeys, /bin/loadkeys, /usr/bin/unikeys, /usr/bin/loadkeys </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -31,10 +31,10 @@ url: "/docs/linux/man/1-abrt-action-notify/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=notify package!=
     abrt-action-notify
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -43,31 +43,31 @@ EVENT=notify package!=
  -v, --verbose
 <dl>
 <dt>
-<dd> Be verbose</dl>
+</dt><dd> Be verbose</dd></dl>
  
 
  -d, --problem-dir PROBLEM_DIR
 <dl>
 <dt>
-<dd> Problem directory [Default: current directory]</dl>
+</dt><dd> Problem directory [Default: current directory]</dd></dl>
  
 
  -h, --help
 <dl>
 <dt>
-<dd> Show help message</dl>
+</dt><dd> Show help message</dd></dl>
  
 
  -a, --autoreporting
 <dl>
 <dt>
-<dd> Force to run autoreporting event</dl>
+</dt><dd> Force to run autoreporting event</dd></dl>
  
 
  -e, --autoreporting-event AUTOREPORTING_EVENT
 <dl>
 <dt>
-<dd> Overwrite autoreporting event name</dl>
+</dt><dd> Overwrite autoreporting event name</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -76,7 +76,7 @@ EVENT=notify package!=
  ABRT_VERBOSE
 <dl>
 <dt>
-<dd> ABRT verbosity level</dl>
+</dt><dd> ABRT verbosity level</dd></dl>
 
 <h2>FILES</h2>
 
@@ -87,13 +87,13 @@ EVENT=notify package!=
  AutoreportingEnabled
 <dl>
 <dt>
-<dd> If enabled, abrt-action-notify runs AutoreportingEvent</dl>
+</dt><dd> If enabled, abrt-action-notify runs AutoreportingEvent</dd></dl>
  
 
  AutoreportingEvent
 <dl>
 <dt>
-<dd> Name of event to be run if autoreporting is enabled</dl>
+</dt><dd> Name of event to be run if autoreporting is enabled</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -107,7 +107,7 @@ EVENT=notify package!=
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

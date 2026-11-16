@@ -18,8 +18,10 @@ bson_new_from_json (const uint8_t *data,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>data</code></p>
-<dd> A UTF-8 encoded string containing valid JSON.</dl>
+<dt><code>data</code></dt>
+<dd> A UTF-8 encoded string containing valid JSON.</dd></dl>
 <dl>
-<dt><code>len</code></p>
+<dt><code>len</code></dt>
 <dd> The length of <code>data</code> in bytes excluding a trailing <code>
+</dd></dl>
+</code>

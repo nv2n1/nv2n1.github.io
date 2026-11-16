@@ -11,35 +11,35 @@ description: "mysqldbimport – Import Object Definitions or Data into a Databas
 <p> mysqldbimport &#8211; Import Object Definitions or Data into a Databases </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysqldbimport [</code><i>options</i><code>] </code><i>import_file</i><code> &#8230;</code></dl>
+<dt> <code>mysqldbimport [</code><i>options</i><code>] </code><i>import_file</i><code> &#8230;</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This utility imports metadata (object definitions) or data or both for one or more databases from one or more files. </p>
+<dd>This utility imports metadata (object definitions) or data or both for one or more databases from one or more files. </dd>
 <p> If an object exists on the destination server with the same name as an imported object, it is dropped first before importing the new object. </p>
 <p> To skip objects by type, use the <code>&#8211;skip</code> option with a list of the objects to skip. This enables you to extract a particular set of objects, say, for importing only events (by excluding all other types). Similarly, to skip creation of <code>UPDATE</code> statements for BLOB data, specify the <code>&#8211;skip-blobs</code> option. </p>
 <p> To specify the input format, use one of the following values with the <code>&#8211;format</code> option. These correspond to the output formats of the <code>mysqldbexport</code> utility: </p>
 <dl>
 <dt>
-<dd> &bull; <code>sql</code> (default) </p>
+</dt><dd> &bull; <code>sql</code> (default) </dd>
 <p> Input consists of SQL statements. For definitions, this consists of the appropriate <code>CREATE</code> and <code>GRANT</code> statements. For data, this is an <code>INSERT</code> statement (or bulk insert if the <code>&#8211;bulk-insert</code> option is specified).</dl>
 <dl>
 <dt>
-<dd> &bull; <code>grid</code> </p>
+</dt><dd> &bull; <code>grid</code> </dd>
 <p> Display output in grid or table format like that of the <code>mysql</code> monitor.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>csv</code> </p>
+</dt><dd> &bull; <code>csv</code> </dd>
 <p> Input is formatted in comma-separated values format.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>raw_csv</code> </p>
+</dt><dd> &bull; <code>raw_csv</code> </dd>
 <p> Input is a simple CSV file containing uniform rows with values separated with commas. The file can contain a header (the first row) that lists the table columns. The option <code>&#8211;table</code> is required to use this format.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>tab</code> </p>
+</dt><dd> &bull; <code>tab</code> </dd>
 <p> Input is formatted in tab-separated format.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>vertical</code> </p>
+</dt><dd> &bull; <code>vertical</code> </dd>
 <p> Display output in single-column format like that of the \G command for the <code>mysql</code> monitor.</dl>
 <p> To indicate that input in <code>csv</code> or <code>tab</code> format does not contain column headers, specify the <code>&#8211;no-headers</code> option. </p>
 <p> To turn off all feedback information, specify the <code>&#8211;quiet</code> option. </p>
@@ -55,76 +55,76 @@ OPTIONS </p>
 <p> <code>mysqldbimport</code> accepts the following command-line options: </p>
 <dl>
 <dt>
-<dd> &bull; &#8211;help </p>
+</dt><dd> &bull; &#8211;help </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;bulk-insert, -b </p>
+</dt><dd> &bull; &#8211;bulk-insert, -b </dd>
 <p> Use bulk insert statements for data.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;default-storage-engine=&lt;def_engine&gt; </p>
+</dt><dd> &bull; &#8211;default-storage-engine=&lt;def_engine&gt; </dd>
 <p> The engine to use for tables if the destination server does not support the original storage engine on the source server.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;drop-first, -d </p>
+</dt><dd> &bull; &#8211;drop-first, -d </dd>
 <p> Drop each database to be imported if exists before importing anything into it.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;dryrun </p>
+</dt><dd> &bull; &#8211;dryrun </dd>
 <p> Import the files and generate the statements but do not execute them. This is useful for testing input file validity.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;format=&lt;format&gt;, -f&lt;format&gt; </p>
+</dt><dd> &bull; &#8211;format=&lt;format&gt;, -f&lt;format&gt; </dd>
 <p> Specify the input format. Permitted format values are <code>sql</code>, <code>grid</code>, <code>tab</code>, <code>csv</code>, <code>raw_csv</code>, and <code>vertical</code>. The default is <code>sql</code>.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;import=&lt;import_type&gt;, -i&lt;import_type&gt; </p>
+</dt><dd> &bull; &#8211;import=&lt;import_type&gt;, -i&lt;import_type&gt; </dd>
 <p> Specify the import format. Permitted format values are <code>definitions</code> = import only the definitions (metadata) for the objects in the database list, <code>data</code> = import only the table data for the tables in the database list, and <code>both</code> = import the definitions and the data. The default is <code>definitions</code>. </p>
 <p> If you attempt to import objects into an existing database, the result depends on the import format. If the format is <code>definitions</code> or <code>both</code>, an error occurs unless <code>&#8211;drop-first</code> is given. If the format is <code>data</code>, imported table data is added to existing table data.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;new-storage-engine=&lt;new_engine&gt; </p>
+</dt><dd> &bull; &#8211;new-storage-engine=&lt;new_engine&gt; </dd>
 <p> The engine to use for all tables created on the destination server.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;no-headers, -h </p>
+</dt><dd> &bull; &#8211;no-headers, -h </dd>
 <p> Input does not contain column headers. This option applies only for <code>csv</code> and <code>tab</code> output.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;quiet, -q </p>
+</dt><dd> &bull; &#8211;quiet, -q </dd>
 <p> Turn off all messages for quiet execution.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;server=&lt;server&gt; </p>
+</dt><dd> &bull; &#8211;server=&lt;server&gt; </dd>
 <p> Connection information for the server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;] or &lt;<i>login-path</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip=&lt;skip_objects&gt; </p>
+</dt><dd> &bull; &#8211;skip=&lt;skip_objects&gt; </dd>
 <p> Specify objects to skip in the operation as a comma-separated list (no spaces). Permitted values are <code>CREATE_DB</code>, <code>DATA</code>, <code>EVENTS</code>, <code>FUNCTIONS</code>, <code>GRANTS</code>, <code>PROCEDURES</code>, <code>TABLES</code>, <code>TRIGGERS</code>, and <code>VIEWS</code>.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip-blobs </p>
+</dt><dd> &bull; &#8211;skip-blobs </dd>
 <p> Do not import BLOB data.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip-gtid </p>
+</dt><dd> &bull; &#8211;skip-gtid </dd>
 <p> Skip execution of GTID_PURGED statements.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip-rpl </p>
+</dt><dd> &bull; &#8211;skip-rpl </dd>
 <p> Do not execute replication commands.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;table=&lt;db&gt;,&lt;table&gt; </p>
+</dt><dd> &bull; &#8211;table=&lt;db&gt;,&lt;table&gt; </dd>
 <p> Specify the table for importing. This option is required while using <code>&#8211;format=raw_csv</code>.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;verbose, -v </p>
+</dt><dd> &bull; &#8211;verbose, -v </dd>
 <p> Specify how much information to display. Use this option multiple times to increase the amount of information. For example, <code>-v</code> = verbose, <code>-vv</code> = more verbose, <code>-vvv</code> = debug.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;version </p>
+</dt><dd> &bull; &#8211;version </dd>
 <p> Display version information and exit.</dl>
 <p>NOTES </p>
 <p> The login user must have the appropriate permissions to create new objects, access (read) the mysql database, and grant privileges. If a database to be imported already exists, the user must have read permission for it, which is needed to check the existence of objects in the database. </p>
@@ -138,34 +138,34 @@ EXAMPLES </p>
 <p> To import the metadata from the util_test database to the server on the local host using a file in CSV format, use this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqldbimport-- server = root[at] localhost-- import = definitions-- format = csv data.csv
 #Source on localhost : ... connected.
 #Importing definitions from data.csv.
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <p> Similarly, to import the data from the util_test database to the server on the local host, importing the data using bulk insert statements, use this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqldbimport&#8211; server = root[at] localhost&#8211; import = data&#8211; bulk &#8211; insert&#8211; format = csv data.csv<br />
 #Source on localhost : &#8230; connected.<br />
 #Importing data from data.csv.<br />
 #&#8230; done.
-</dl>
+</dd></dl>
 <p> To import both data and definitions from the util_test database, importing the data using bulk insert statements from a file that contains SQL statements, use this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqldbimport-- server = root[at] localhost-- import = both-- bulk - insert-- format = sql data.sql
 #Source on localhost : ... connected.
 #Importing definitions and data from data.sql.
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <h2>COPYRIGHT</h2>
 <h2>SEE ALSO</h2>
 <p> For more information, please refer to the MySQL Utilities section of the MySQL Workbench Reference Manual, which is available online at <a rel="nofollow" href="http://dev.mysql.com/doc/workbench/en/.">http://dev.mysql.com/doc/workbench/en/.</a></p>

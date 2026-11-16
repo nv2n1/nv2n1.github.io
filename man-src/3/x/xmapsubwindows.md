@@ -10,15 +10,15 @@ description: "XMapWindow, XMapRaised, XMapSubwindows – map windows"
 <p>XMapWindow, XMapRaised, XMapSubwindows &#8211; map windows </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XMapWindow(Display *<i>display</i>, Window <i>w</i>);</p>
-<dd>int XMapRaised(Display *<i>display</i>, Window <i>w</i>);</p>
-<dd>int XMapSubwindows(Display *<i>display</i>, Window <i>w</i>);</dl>
+<dd>int XMapWindow(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XMapRaised(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XMapSubwindows(Display *<i>display</i>, Window <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XMapWindow</code> function maps the window and all of its subwindows that have had map requests. Mapping a window that has an unmapped ancestor does not display the window but marks it as eligible for display when the ancestor becomes mapped. Such a window is called unviewable. When all its ancestors are mapped, the window becomes viewable and will be visible on the screen if it is not obscured by another window. This function has no effect if the window is already mapped. </p>
 <p> If the override-redirect of the window is <code>False</code> and if some other client has selected <code>SubstructureRedirectMask</code> on the parent window, then the X server generates a <code>MapRequest</code> event, and the <code>XMapWindow</code> function does not map the window. Otherwise, the window is mapped, and the X server generates a <code>MapNotify</code> event. </p>
@@ -31,8 +31,8 @@ description: "XMapWindow, XMapRaised, XMapSubwindows – map windows"
 <p> <code>XMapSubwindows</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xconfigurewindow/">XConfigureWindow</a>(3), <a href="/docs/linux/man/3-xcreatewindow/">XCreateWindow</a>(3), <a href="/docs/linux/man/3-xdestroywindow/">XDestroyWindow</a>(3), <a href="/docs/linux/man/3-xraisewindow/">XRaiseWindow</a>(3), <a href="/docs/linux/man/3-xunmapwindow/">XUnmapWindow</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

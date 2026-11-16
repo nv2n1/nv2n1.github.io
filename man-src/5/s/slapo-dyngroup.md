@@ -16,8 +16,8 @@ description: "slapo-dyngroup – Dynamic Group overlay to slapd"
 <h2>Configuration</h2>
 <p>This <code>slapd.conf</code> option applies to the Dynamic Group overlay. It should appear after the <code>overlay</code> directive.</p>
 <dl>
-<dt><code>attrpair &lt;memberAttr&gt; &lt;URLattr&gt;</code></p>
-<dd>Specify the attributes to be compared. A compare operation on the <i>memberAttr</i> will cause the <i>URLattr</i> to be evaluated for the result.</dl>
+<dt><code>attrpair &lt;memberAttr&gt; &lt;URLattr&gt;</code></dt>
+<dd>Specify the attributes to be compared. A compare operation on the <i>memberAttr</i> will cause the <i>URLattr</i> to be evaluated for the result.</dd></dl>
 <h2>Examples</h2>
 <pre> database bdb
  ...
@@ -25,8 +25,8 @@ description: "slapo-dyngroup – Dynamic Group overlay to slapd"
  attrpair member memberURL</pre>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5).</p>
 <h2>Author</h2>

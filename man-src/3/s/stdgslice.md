@@ -10,7 +10,6 @@ description: "std::gslice – std::gslice"
 <p>std::gslice &#8211; std::gslice</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;valarray&gt;
-
 class gslice;</code></pre>
 <p>std::gslice is the selector class that identifies a subset of std::valarray indices defined by a multi-level set of strides and sizes. Objects of type std::gslice can be used as indices with valarray&#8217;s operator[] to select, for example, columns of a multidimensional array represented as a valarray.<br />
 Given the starting value s, a list of strides i<br />
@@ -64,11 +63,8 @@ std::valarray&lt;std::size_t&gt; stride() const; <code>(3)</code> </p>
 <p>demonstrates the use of gslices to address columns of a 3D array<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
-
 void test_print(std::valarray&lt;int&gt; &amp;v, int rows, int cols, int planes)
-
 {
     for (int r = 0; r &lt; rows; ++r) {
         for (int c = 0; c &lt; cols; ++c) {
@@ -81,9 +77,7 @@ void test_print(std::valarray&lt;int&gt; &amp;v, int rows, int cols, int planes)
 ';
     }
 }
-
 int main()
-
 {
     std::valarray&lt;int&gt; v = // 3d array: 2 x 4 x 3 elements
         {111, 112, 113, 121, 122, 123, 131, 132, 133, 141, 142, 143,

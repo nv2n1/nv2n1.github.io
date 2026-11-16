@@ -14,7 +14,7 @@ description: "ipc_free – free ipc space"
 <p><i>ptr</i></p>
 <dl>
 <dd>
-<dd>pointer returned by ipc_alloc</dl>
+</dd><dd>pointer returned by ipc_alloc</dd></dl>
 <h2>Description</h2>
 <p>Free a block created with <code>ipc_alloc</code>.</p>
 <h2>Copyright</h2>

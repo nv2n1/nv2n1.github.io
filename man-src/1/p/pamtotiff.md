@@ -34,12 +34,12 @@ description: "pamtotiff – convert a Netpbm image to a TIFF file"
 <h3>The Output File</h3>
 <p> The output goes to Standard Output. <code>pamtotiff</code> approaches this output file differently from Unix and Netpbm convention. This is entirely due to <code>pamtotiff</code>&#8216;s use of the TIFF library to do all TIFF output. </p>
 <dl>
-<dt>&bull;</p>
-<dd> The output file must be seekable. <code>pamtotiff</code> does not write it sequentially. Therefore, you can&#8217;t use a pipe; you can&#8217;t pipe the output of <code>pamtotiff</code> to some other program. But any regular file should work. </p>
-<dt>&bull;</p>
-<dd> If the output file descriptor is readable, you must either specify <code>-append</code> so as to add to the existing file, or make sure the file is empty. Otherwise, <code>pamtotiff</code> will fail with an unhelpful message telling you that a TIFF library function failed to open the TIFF output stream. </p>
-<dt>&bull;</p>
-<dd> If you are converting multiple images (your input stream contains multiple images), the output file must be both readable and writable. </p>
+<dt>&bull;</dt>
+<dd> The output file must be seekable. <code>pamtotiff</code> does not write it sequentially. Therefore, you can&#8217;t use a pipe; you can&#8217;t pipe the output of <code>pamtotiff</code> to some other program. But any regular file should work. </dd>
+<dt>&bull;</dt>
+<dd> If the output file descriptor is readable, you must either specify <code>-append</code> so as to add to the existing file, or make sure the file is empty. Otherwise, <code>pamtotiff</code> will fail with an unhelpful message telling you that a TIFF library function failed to open the TIFF output stream. </dd>
+<dt>&bull;</dt>
+<dd> If you are converting multiple images (your input stream contains multiple images), the output file must be both readable and writable. </dd>
 </dl>
 <p> If you&#8217;re using a Unix command shell to run <code>pamtotiff</code>, you use facilities of your shell to set up Standard Output. In Bash, for example, you would set up a write-only Standard Output to the file /tmp/myimage.tiff like this: </p>
 <pre>
@@ -100,14 +100,14 @@ description: "pamtotiff – convert a Netpbm image to a TIFF file"
 <p> As you see, it is a list of tag specifications separated by commas. Each tag specification is a name and a value separated by an equal sign. The name is the name of the tag type, except in arbitrary upper/lower case. One place to see the names of TIFF tag types is in the TIFF library&#8217;s <code>tiff.h</code> file, where there is a macro defined for each consisting of &#8216;TIFF_&#8217; plus the name. E.g. for the SUBFILETYPE tag type, there is a macro TIFF_SUBFILETYPE. </p>
 <p> The format of the value specification for a tag (stuff after the equal sign) depends upon what kind of value the tag type has: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Integer: a decimal number </p>
-<dt>&bull;</p>
-<dd> Floating point number: a decimal number </p>
-<dt>&bull;</p>
-<dd> String: a string </p>
-<dt>&bull;</p>
-<dd> Enumerated (For example, a &#8216;subfiletype&#8217; tag takes an enumerated value. Its possible values are REDUCEDIMAGE, PAGE, and MASK.): The name of the value. You can see the possible value names in the TIFF library&#8217;s <code>tiff.h</code> file, where there is a macro defined for each consisting of a qualifier plus the value name. E.g. for the REDUCEDIMAGE value of a SUBFILETYPE tag, you see the macro FILETYPE_REDUCEDIMAGE. </p>
+<dt>&bull;</dt>
+<dd> Integer: a decimal number </dd>
+<dt>&bull;</dt>
+<dd> Floating point number: a decimal number </dd>
+<dt>&bull;</dt>
+<dd> String: a string </dd>
+<dt>&bull;</dt>
+<dd> Enumerated (For example, a &#8216;subfiletype&#8217; tag takes an enumerated value. Its possible values are REDUCEDIMAGE, PAGE, and MASK.): The name of the value. You can see the possible value names in the TIFF library&#8217;s <code>tiff.h</code> file, where there is a macro defined for each consisting of a qualifier plus the value name. E.g. for the REDUCEDIMAGE value of a SUBFILETYPE tag, you see the macro FILETYPE_REDUCEDIMAGE. </dd>
 <p> The TIFF format assigns a unique number to each enumerated value and you can specify that number, in decimal, as an alternative. This is useful if you are using an extension of TIFF that <code>pamtotiff</code> doesn&#8217;t know about. </p>
 </dl>
 <p> If you specify a tag type with <code>-tag</code> that is not independent of the content of your PNM source image and <code>pamtotiff</code>&#8216;s conversion process (i.e. a tag type in which <code>pamtotiff</code> is interested), <code>pamtotiff</code> fails. For example, you cannot specify an IMAGEWIDTH tag with <code>-tag</code>, because <code>pamtotiff</code> generates an IMAGEWIDTH tag that gives the actual width of the image. </p>
@@ -140,10 +140,10 @@ description: "pamtotiff – convert a Netpbm image to a TIFF file"
 <p> The unit of distance is given by the value of the RESOLUTIONUNIT option. That value is either INCH, CENTIMETER, or NONE. NONE means the unit is arbitrary or unspecified. This could mean that the creator and user of the image have a separate agreement as to what the unit is. But usually, it just means that the horizontal and vertical resolution values cannot be used for anything except to determine aspect ratio (because even though the unit is arbitrary or unspecified, it has to be the same for both resolution numbers). </p>
 <p> If you <i>don&#8217;t</i> use a <code>-tag</code> option to specify the resolution tag and use the obsolete options instead, note the following: </p>
 <dl>
-<dt>&bull;</p>
-<dd> If you don&#8217;t include an specify <code>-xresolution</code>, the Tiff image does not contain horizontal resolution information. Likewise for <code>-yresolution</code>. If you don&#8217;t specify <code>-resolutionunit</code>, the default is inches. </p>
-<dt>&bull;</p>
-<dd> Before Netpbm 10.16 (June 2003), <code>-resolutionunit</code> did not exist and the resolution unit was always inches. </p>
+<dt>&bull;</dt>
+<dd> If you don&#8217;t include an specify <code>-xresolution</code>, the Tiff image does not contain horizontal resolution information. Likewise for <code>-yresolution</code>. If you don&#8217;t specify <code>-resolutionunit</code>, the default is inches. </dd>
+<dt>&bull;</dt>
+<dd> Before Netpbm 10.16 (June 2003), <code>-resolutionunit</code> did not exist and the resolution unit was always inches. </dd>
 </dl>
 <h2>HISTORY</h2>
 <p> <code>pamtotiff</code> was originally <code>pnmtotiff</code> and did not handle PAM input. It was extended and renamed in Netpbm 10.30 (October 2005). </p>

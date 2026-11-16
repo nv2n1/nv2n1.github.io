@@ -15,27 +15,27 @@ request_threaded_irq - allocate an interrupt line
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>Interrupt line to allocate</dl>
+<dl><dd></dd><dd>Interrupt line to allocate</dd></dl>
  
 
  <i>handler</i>
-<dl><dd>Function to be called when the IRQ occurs. Primary handler for threaded interrupts If NULL and thread_fn != NULL the default primary handler is installed</dl>
+<dl><dd>Function to be called when the IRQ occurs. Primary handler for threaded interrupts If NULL and thread_fn != NULL the default primary handler is installed</dd></dl>
  
 
  <i>thread_fn</i>
-<dl><dd>Function called from the irq handler thread If NULL, no irq thread is created</dl>
+<dl><dd>Function called from the irq handler thread If NULL, no irq thread is created</dd></dl>
  
 
  <i>irqflags</i>
-<dl><dd>Interrupt type flags</dl>
+<dl><dd>Interrupt type flags</dd></dl>
  
 
  <i>devname</i>
-<dl><dd>An ascii name for the claiming device</dl>
+<dl><dd>An ascii name for the claiming device</dd></dl>
  
 
  <i>dev_id</i>
-<dl><dd>A cookie passed back to the handler function</dl>
+<dl><dd>A cookie passed back to the handler function</dd></dl>
 
 <h2>Description</h2>
 

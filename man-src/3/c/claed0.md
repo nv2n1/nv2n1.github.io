@@ -19,18 +19,18 @@ description: "claed0.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  Using the divide and conquer method, CLAED0 computes all eigenvalues
  of a symmetric tridiagonal matrix which is one diagonal block of
  those from reducing a dense or band Hermitian matrix and
  corresponding eigenvectors of the dense or band matrix.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>QSIZ</i> </p>
+</dt><dd> <i>QSIZ</i> </dd>
 <pre>
           QSIZ is INTEGER
          The dimension of the unitary matrix used to reduce
@@ -107,14 +107,14 @@ description: "claed0.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 145 of file claed0.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

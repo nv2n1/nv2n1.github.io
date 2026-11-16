@@ -36,6 +36,6 @@ description: "QuantLib::InterestRateVolSurface – Interest rate volatility (smi
 <h3><code>InterestRateVolSurface</code> (const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp;, const <code>Calendar</code> &amp; cal = <code>Calendar</code>(), <code>BusinessDayConvention</code> bdc = Following, const <code>DayCounter</code> &amp; dc = <code>DayCounter</code>())</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

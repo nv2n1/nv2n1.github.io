@@ -12,17 +12,15 @@ rdma_resolve_route - Resolve the route information needed to establish a connect
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_resolve_route
-
     (struct rdma_cm_id *id,
-
      int timeout_ms);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>timeout_ms
-<dd>Time to wait for resolution to complete.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>timeout_ms
+</dt><dd>Time to wait for resolution to complete.</dd></dl>
 
 <h2>Description</h2>
 

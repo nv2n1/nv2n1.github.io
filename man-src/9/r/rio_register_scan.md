@@ -14,15 +14,15 @@ description: "rio_register_scan – enumeration/discovery method registration in
 <p><i>mport_id</i></p>
 <dl>
 <dd>
-<dd>mport device ID for which fabric scan routine has to be set (RIO_MPORT_ANY = set for all available mports)</dl>
+</dd><dd>mport device ID for which fabric scan routine has to be set (RIO_MPORT_ANY = set for all available mports)</dd></dl>
 <p> <i>scan_ops</i></p>
 <dl>
-<dd>enumeration/discovery operations structure</dl>
+<dd>enumeration/discovery operations structure</dd></dl>
 <h2>Description</h2>
 <p>Registers enumeration/discovery operations with RapidIO subsystem and attaches it to the specified mport device (or all available mports if RIO_MPORT_ANY is specified). </p>
 <p> Returns error if the mport already has an enumerator attached to it. In case of RIO_MPORT_ANY skips mports with valid scan routines (no error).</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

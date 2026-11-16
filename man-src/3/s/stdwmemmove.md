@@ -11,7 +11,6 @@ std::wmemmove - std::wmemmove
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     wchar_t *wmemmove(wchar_t *dest, const wchar_t *src, std::size_t count);</code></pre> 
 Copies exactly count successive wide characters from the wide character array pointed to by src to the wide character array pointed to by dest. 
 If count is zero, the function does nothing. 
@@ -34,14 +33,10 @@ This function is not locale-sensitive and pays no attention to the values of the
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::wcout.imbue(std::locale(&quot;en_US.utf8&quot;));

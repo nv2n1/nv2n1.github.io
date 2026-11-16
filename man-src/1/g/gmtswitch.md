@@ -17,33 +17,33 @@ description: "gmtswitch – Switching between different GMT versions"
 <p> None. If no arguments are given you are presented with a menu of installed GMT versions from 1 to <i>n</i> and you specify which one you wish to switch to.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>D</code></p>
-<dd> Select the default GMT version. This is the first entry in the ~/.gmtversions file</p>
-<dt><i>version</i></p>
-<dd> Search for a unique match in the ~/.gmtversions file. If one match is found we switch to that entry; otherwise an error is generated. where module is the name of a GMT program and the options are those that pertain to that particular program.</dl>
+<dt><code>D</code></dt>
+<dd> Select the default GMT version. This is the first entry in the ~/.gmtversions file</dd>
+<dt><i>version</i></dt>
+<dd> Search for a unique match in the ~/.gmtversions file. If one match is found we switch to that entry; otherwise an error is generated. where module is the name of a GMT program and the options are those that pertain to that particular program.</dd></dl>
 <h2>SETUP</h2>
 <p> If you have official versions installed then running gmtswitch the very first time will examine your hard disk starting at / and look for directories with GMT4 or GMT5 in the name. This will fail to find the subversion directories and possibly others you have placed elsewhere. The fastest way to get up and running is this:</p>
 <dl>
-<dt>1.</p>
+<dt>1.</dt>
 <dd>
-<dt><code>Edit/Create ~/.gmtversions and add the paths to all GMT installations</code></p>
-<dd> you have or care to consider. Each path goes on separate lines and points to the top dir of each distribution, e.g., /Users/pwessel/UH/RESEARCH/PROJECTS/GMTdev/GMT4.5.7</p>
-<dt>2.</p>
+</dd><dt><code>Edit/Create ~/.gmtversions and add the paths to all GMT installations</code></dt>
+<dd> you have or care to consider. Each path goes on separate lines and points to the top dir of each distribution, e.g., /Users/pwessel/UH/RESEARCH/PROJECTS/GMTdev/GMT4.5.7</dd>
+<dt>2.</dt>
 <dd>
-<dt><code>In your .bashrc or .[t]csrh or wherever you are maintaining your PATH</code></p>
-<dd> or path variable, remove any directories you have added that contain GMT, and add the new path $HOME/this_gmt/bin (might be $home for csh users). Make sure this path appears before any others that might contain a GMT installation, such as those used by package managers (e.g., /sw/bin for fink, /opt/local/bin for Macports, etc.).</p>
-<dt>3.</p>
-<dd> Make the new path take effect (quit/restart terminal, logout/login, etc).</p>
-<dt>4.</p>
+</dd><dt><code>In your .bashrc or .[t]csrh or wherever you are maintaining your PATH</code></dt>
+<dd> or path variable, remove any directories you have added that contain GMT, and add the new path $HOME/this_gmt/bin (might be $home for csh users). Make sure this path appears before any others that might contain a GMT installation, such as those used by package managers (e.g., /sw/bin for fink, /opt/local/bin for Macports, etc.).</dd>
+<dt>3.</dt>
+<dd> Make the new path take effect (quit/restart terminal, logout/login, etc).</dd>
+<dt>4.</dt>
 <dd>
-<dt><code>cd to the most recent GMT directory where a gmtswitch version lives,</code></p>
-<dd> and run gmtswitch with no argument. Select one of the version from the menu.</p>
-<dt>5.</p>
-<dd> If in csh you may have to say rehash afterwards.</p>
-<dt>6.</p>
+</dd><dt><code>cd to the most recent GMT directory where a gmtswitch version lives,</code></dt>
+<dd> and run gmtswitch with no argument. Select one of the version from the menu.</dd>
+<dt>5.</dt>
+<dd> If in csh you may have to say rehash afterwards.</dd>
+<dt>6.</dt>
 <dd>
-<dt><code>Type psxy &#8211; and the synopsis should tell you that you got the</code></p>
-<dd> correct version. You can now run gmtswitch from anywhere; try it out and make sure that you can switch between the versions.</dl>
+</dd><dt><code>Type psxy &#8211; and the synopsis should tell you that you got the</code></dt>
+<dd> correct version. You can now run gmtswitch from anywhere; try it out and make sure that you can switch between the versions.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To switch to GMT version 4.5.7 (assuming it was installed as such and not via a package manager), try gmtswitch GMT4.5.7 </p>
 <p> To switch to the default (your top choice), do gmtswitch D </p>

@@ -33,16 +33,11 @@ The following expressions (including conversions to the destination type) are ma
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* initializers of variables with reference type or const-qualified integral or enumeration type, when the initializers are constant_expressions 
 * initializers of static and thread local variables, when all subexpressions of the initializers (including constructor calls and implicit conversions) are constant_expressions (that is, when the initializers are constant_initializers) 
 To test the last two conditions, compilers may first perform a trial constant evaluation of the initializers. It is not recommended to depend on the result in this case. <pre><code>int y;
-
 const int a = std::is_constant_evaluated() ? y : 1;
-
 // Trial constant evaluation fails. The constant evaluation is discarded.
-
 // Variable a is dynamically initialized with 1
 const int b = std::is_constant_evaluated() ? 2 : y;
-
 // Constant evaluation with std::is_constant_evaluation() == true succeeds.
-
 // Variable b is statically initialized with 2
 </code></pre>
 

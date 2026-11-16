@@ -10,9 +10,7 @@ description: "std::experimental::simd_mask – std::experimental::simd_mask"
 <p>std::experimental::simd_mask &#8211; std::experimental::simd_mask</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/simd&gt;
-
 template&lt; class T, class Abi = simd_abi::compatible&lt;T&gt; &gt;
-
 class simd_mask;</code></pre>
 <p>The class template simd_mask is a data-parallel type with the element type bool. The width of a given simd_mask instantiation is a constant expression, determined by the template parameters. Specifically, simd_mask&lt;T, Abi&gt;::size() is always simd&lt;T, Abi&gt;::size(). </p>
 <h2>Template parameters</h2>

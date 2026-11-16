@@ -18,29 +18,29 @@ description: "mono-config – Mono runtime file format configuration"
 <p>You use the dllmap directive to map shared libraries referenced by P/Invoke in your assemblies to a different shared library. </p>
 <p> This is typically used to map Windows libraries to Unix library names. The <code>dllmap</code> element takes two attributes:</p>
 <dl>
-<dt><i>dll</i></p>
-<dd>This should be the same string used in the DllImport attribute, optionally prefixed with &quot;i:&quot; to indicate that the string must be matched in a case-insensitive way</p>
-<dt><i>target</i></p>
-<dd>This should be the name of the library where the function can be found: this name should be suitable for use with the platform native shared library loading routines (dlopen etc.), so you may want to check the manpages for that, too.</dl>
+<dt><i>dll</i></dt>
+<dd>This should be the same string used in the DllImport attribute, optionally prefixed with &quot;i:&quot; to indicate that the string must be matched in a case-insensitive way</dd>
+<dt><i>target</i></dt>
+<dd>This should be the name of the library where the function can be found: this name should be suitable for use with the platform native shared library loading routines (dlopen etc.), so you may want to check the manpages for that, too.</dd></dl>
 <h2>&lt;dllentry&gt; directive</h2>
 <p>This directive can be used to map a specific dll/function pair to a different library and also a different function name. It should appear inside a <code>dllmap</code> element with only the dll attribute specified. </p>
 <p> The <code>dllentry</code> element takes 3 attributes:</p>
 <dl>
-<dt><i>dll</i></p>
-<dd>This is the target library, where the function can be found.</p>
-<dt><i>name</i></p>
-<dd>This is the name of the function as it appears in the metadata: it is the name of the P/Invoke method.</p>
-<dt><i>target</i></p>
-<dd>This is the name of the function to lookup instead of the name specified in the P/Invoke method.</dl>
+<dt><i>dll</i></dt>
+<dd>This is the target library, where the function can be found.</dd>
+<dt><i>name</i></dt>
+<dd>This is the name of the function as it appears in the metadata: it is the name of the P/Invoke method.</dd>
+<dt><i>target</i></dt>
+<dd>This is the name of the function to lookup instead of the name specified in the P/Invoke method.</dd></dl>
 <h2>Mapping based on operating system and cpu</h2>
 <p>Both the <code>dllmap</code> and the <code>dllentry</code> elements allow the following two attributes which make it easy to use a single configuration file and support multiple operating systems and architectures with different mapping requirements:</p>
 <dl>
-<dt><i>os</i></p>
-<dd>This is the name of the operating system for which the mapping should be applied. Allowed values are: linux, osx, solaris, freebsd, openbsd, netbsd, windows, aix, hpux.</p>
-<dt><i>cpu</i></p>
-<dd>This is the name of the architecture for which the mapping should be applied. Allowed values are: x86, x86-64, sparc, ppc, s390, s390x, arm, mips, alpha, hppa, ia64.</p>
-<dt><i>wordsize</i></p>
-<dd>This is the size of registers on the target architecture, it can be either 32 or 64.</dl>
+<dt><i>os</i></dt>
+<dd>This is the name of the operating system for which the mapping should be applied. Allowed values are: linux, osx, solaris, freebsd, openbsd, netbsd, windows, aix, hpux.</dd>
+<dt><i>cpu</i></dt>
+<dd>This is the name of the architecture for which the mapping should be applied. Allowed values are: x86, x86-64, sparc, ppc, s390, s390x, arm, mips, alpha, hppa, ia64.</dd>
+<dt><i>wordsize</i></dt>
+<dd>This is the size of registers on the target architecture, it can be either 32 or 64.</dd></dl>
 <p> The attribute value for both attributes can be a comma-separated list of the allowed values. Additionally, the first character may be a <i>&#8216;!&#8217;</i> to reverse the meaning. An attribute value of &quot;!windows,osx&quot;, for example, would mean that the entry is considered on all operating systems, except on Windows and OS X. No spaces are allowed in any part of the value. </p>
 <p> Note that later entries will override the entries defined earlier in the file.</p>
 <h2>Examples</h2>

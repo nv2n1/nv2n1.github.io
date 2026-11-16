@@ -20,13 +20,13 @@ Tk_Window
 <code>Tk_MakeWindowExist</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (out) Tcl interpreter to use for error reporting. If no error occurs, then <i>*interp</i> is not modified.</p>
-<dd>Tk_Window <i>parent</i> (in) Token for the window that is to serve as the logical parent of the new window.</p>
-<dd>const char <i>*name</i> (in) Name to use for this window. Must be unique among all children of the same <i>parent</i>.</p>
-<dd>const char <i>*topLevScreen</i> (in) Has same format as <i>screenName</i>. If NULL, then new window is created as an internal window. If non-NULL, new window is created as a top-level window on screen <i>topLevScreen</i>. If <i>topLevScreen</i> is an empty string (&#8220;&#8221;) then new window is created as top-level window of <i>parent</i>&#8216;s screen.</p>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window.</p>
+<dd>Tcl_Interp <i>*interp</i> (out) Tcl interpreter to use for error reporting. If no error occurs, then <i>*interp</i> is not modified.</dd>
+<dd>Tk_Window <i>parent</i> (in) Token for the window that is to serve as the logical parent of the new window.</dd>
+<dd>const char <i>*name</i> (in) Name to use for this window. Must be unique among all children of the same <i>parent</i>.</dd>
+<dd>const char <i>*topLevScreen</i> (in) Has same format as <i>screenName</i>. If NULL, then new window is created as an internal window. If non-NULL, new window is created as a top-level window on screen <i>topLevScreen</i>. If <i>topLevScreen</i> is an empty string (&#8220;&#8221;) then new window is created as top-level window of <i>parent</i>&#8216;s screen.</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
 <dd>const char <i>*pathName</i> (in) Name of new window, specified as path name within application (e.g. <code>.a.b.c</code>).
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p>The procedures <code>Tk_CreateWindow</code>, <code>Tk_CreateAnonymousWindow</code>, and <code>Tk_CreateWindowFromPath</code> are used to create new windows for use in Tk-based applications. Each of the procedures returns a token that can be used to manipulate the window in other calls to the Tk library. If the window could not be created successfully, then NULL is returned and <i>interp-&gt;result</i> is modified to hold an error message. </p>
 <p> Tk supports two different kinds of windows: internal windows and top-level windows. An internal window is an interior window of a Tk application, such as a scrollbar or menu bar or button. A top-level window is one that is created as a child of a screen&#8217;s root window, rather than as an interior window, but which is logically part of some existing main window. Examples of top-level windows are pop-up menus and dialog boxes. </p>

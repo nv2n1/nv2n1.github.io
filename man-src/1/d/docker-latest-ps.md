@@ -59,7 +59,7 @@ Display total file sizes. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>Display all containers, including non-running</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker ps -a
 CONTAINER ID        IMAGE                 COMMAND                CREATED             STATUS      PORTS    NAMES
@@ -68,11 +68,11 @@ a87ecb4f327c        fedora:20             /bin/sh -c #(nop) MA   20 minutes ago 
 c1d3b0166030        acffc0358b9e          /bin/sh -c yum -y up   2 weeks ago         Exit 1               determined_torvalds
 41d50ecd2f57        fedora:20             /bin/sh -c #(nop) MA   2 weeks ago         Exit 0               drunk_pike
 </pre>
-</dl>
+</dd></dl>
 <h2>Display only IDs of all containers, including non-running</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker ps -a -q
 a87ecb4f327c
@@ -80,56 +80,56 @@ a87ecb4f327c
 c1d3b0166030
 41d50ecd2f57
 </pre>
-</dl>
+</dd></dl>
 <h2>Display only IDs of all containers that have the name determined_torvalds</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker ps -a -q --filter=name=determined_torvalds
 c1d3b0166030
 </pre>
-</dl>
+</dd></dl>
 <h2>Display containers with their commands</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 #docker ps-- format "&#123;&#123;.ID}}: &#123;&#123;.Command}}"
 a87ecb4f327c : / bin / sh - c #(nop)MA 01946d9d34d8 : / bin / sh - c #(nop)MA c1d3b0166030 : / bin / sh - c yum - y up 41d50ecd2f57 : / bin / sh - c #(nop)MA
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Display containers with their labels in a table</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>#docker ps&#8211; format &#8220;table &#123;&#123;.ID}}	&#123;&#123;.Labels}}&#8221;<br />
 CONTAINER ID LABELS<br />
     a87ecb4f327c com.docker.swarm.node = ubuntu,<br />
                  com.docker.swarm.storage = ssd 01946d9d34d8 c1d3b0166030 com.docker.swarm.node = debian, com.docker.swarm.cpu = 6 41d50ecd2f57 com.docker.swarm.node = fedora, com.docker.swarm.cpu = 3, com.docker.swarm.storage = ssd
-</dl>
+</dd></dl>
 <h2>Display containers with their node label in a table</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>#docker ps&#8211; format &#8216;table &#123;&#123;.ID}}	&#123;&#123;(.Label &#8220;com.docker.swarm.node&#8221;)}}&#8217;<br />
 CONTAINER ID NODE<br />
     a87ecb4f327c ubuntu 01946d9d34d8 c1d3b0166030 debian 41d50ecd2f57 fedora
-</dl>
+</dd></dl>
 <h2>Display containers with remote-volume mounted</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker ps&#8211; filter volume = remote &#8211; volume&#8211; format &#8220;table &#123;&#123;.ID}}	&#123;&#123;.Mounts}}&#8221; CONTAINER ID MOUNTS 9c3527ed70ce remote &#8211; volume
-</dl>
+</dd></dl>
 <h2>Display containers with a volume mounted in /data</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker ps-- filter volume = / data-- format "table &#123;&#123;.ID}}	&#123;&#123;.Mounts}}" CONTAINER ID MOUNTS 9c3527ed70ce remote - volume
 </code></pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; August 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; November 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; February 2015, updated by André Martins &lt;martins [at] noironetworks.com&gt; </p>
 <h2>Index</h2>

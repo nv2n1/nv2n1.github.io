@@ -19,7 +19,7 @@ description: "svgakeymap – generates keymaps for svgalib"
 <p> <i>/lib/kbd/keymaps/*/*/*.map[.gz]</i></p>
 <dl>
 <dt>
-<dd> The system keytable files used by <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1).</dl>
+</dt><dd> The system keytable files used by <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1).</dd></dl>
 <h2>BUGS</h2>
 <p> Can get confused if there is more than one key with a given name or if names do not match properly between keytables. Keymaps may require manual editing. </p>
 <h2>AUTHOR</h2>

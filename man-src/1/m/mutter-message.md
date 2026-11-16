@@ -16,14 +16,14 @@ description: "MUTTER-MESSAGE – a command to send a message to Mutter"
 <p> <code>mutter-message</code> send a specified message to <code><a href="/docs/linux/man/1-mutter/">mutter</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>restart</code></p>
-<dd> Restart <code><a href="/docs/linux/man/1-mutter/">mutter</a></code>(1) which is running.</p>
-<dt><code>reload-theme</code></p>
-<dd> Reload a theme which is specified on gsettings database.</p>
-<dt><code>enable-keybindings</code></p>
-<dd> Enable all of keybindings which is specified on gsettings database.</p>
-<dt><code>disable-keybindings</code></p>
-<dd> Disable all of keybindings which is specified on gsettings database.</dl>
+<dt><code>restart</code></dt>
+<dd> Restart <code><a href="/docs/linux/man/1-mutter/">mutter</a></code>(1) which is running.</dd>
+<dt><code>reload-theme</code></dt>
+<dd> Reload a theme which is specified on gsettings database.</dd>
+<dt><code>enable-keybindings</code></dt>
+<dd> Enable all of keybindings which is specified on gsettings database.</dd>
+<dt><code>disable-keybindings</code></dt>
+<dd> Disable all of keybindings which is specified on gsettings database.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mutter/">mutter</a></code>(1)</p>
 <h2>AUTHOR</h2>

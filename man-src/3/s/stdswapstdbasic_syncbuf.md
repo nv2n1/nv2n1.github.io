@@ -11,9 +11,7 @@ std::swap(std::basic_syncbuf) - std::swap(std::basic_syncbuf)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Allocator&gt;
-
 void swap(std::basic_syncbuf&lt;CharT, Traits, Allocator&gt; &amp;lhs, (since C++ 20)
-
                                                                  std::basic_syncbuf&lt;CharT, Traits, Allocator&gt; &amp;rhs) noexcept;</code></pre> 
 Overloads the std::swap algorithm for std::basic_syncbuf. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

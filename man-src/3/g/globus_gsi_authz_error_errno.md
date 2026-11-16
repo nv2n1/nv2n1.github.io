@@ -16,13 +16,13 @@ description: "GSI Credential Constants –"
 <p>GSI Authz Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_GSI_AUTHZ_ERROR_SUCCESS </i></p>
-<dd>Success</p>
-<dt><i>GLOBUS_GSI_AUTHZ_ERROR_ERRNO </i></p>
-<dd>Error with system call</p>
-<dt><i>GLOBUS_GSI_AUTHZ_ERROR_BAD_PARAMETER </i></p>
-<dd>Invalid parameter</p>
-<dt><i>GLOBUS_GSI_AUTHZ_ERROR_CALLOUT </i></p>
-<dd>Callout returned an error</dl>
+<dt><i>GLOBUS_GSI_AUTHZ_ERROR_SUCCESS </i></dt>
+<dd>Success</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_ERROR_ERRNO </i></dt>
+<dd>Error with system call</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_ERROR_BAD_PARAMETER </i></dt>
+<dd>Invalid parameter</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_ERROR_CALLOUT </i></dt>
+<dd>Callout returned an error</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_authz from the source code.</p>

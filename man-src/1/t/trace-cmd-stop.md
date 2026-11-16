@@ -19,15 +19,15 @@ description: "trace-cmd-stop – stop the Ftrace Linux kernel tracer from writin
 <p> <code>-B</code> <i>buffer-name</i></p>
 <dl>
 <dt>
-<dd> If the kernel supports multiple buffers, this will stop the trace for only the given buffer. It does not affect any other buffer. This may be used multiple times to specify different buffers. When this option is used, the top level instance will not be stopped unless <code>-t</code> is given.</dl>
+</dt><dd> If the kernel supports multiple buffers, this will stop the trace for only the given buffer. It does not affect any other buffer. This may be used multiple times to specify different buffers. When this option is used, the top level instance will not be stopped unless <code>-t</code> is given.</dd></dl>
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> Stop the trace for all existing buffer instances. When this option is used, the top level instance will not be stopped unless <code>-t</code> is given.</dl>
+</dt><dd> Stop the trace for all existing buffer instances. When this option is used, the top level instance will not be stopped unless <code>-t</code> is given.</dd></dl>
 <p> <code>-t</code></p>
 <dl>
 <dt>
-<dd> Stops the top level instance buffer. Without the <code>-B</code> or <code>-a</code> option this is the same as the default. But if <code>-B</code> or <code>-a</code> is used, this is required if the top level instance buffer should also be stopped.</dl>
+</dt><dd> Stops the top level instance buffer. Without the <code>-B</code> or <code>-a</code> option this is the same as the default. But if <code>-B</code> or <code>-a</code> is used, this is required if the top level instance buffer should also be stopped.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-split/">trace-cmd-split</a>(1), <a href="/docs/linux/man/1-trace-cmd-list/">trace-cmd-list</a>(1), <a href="/docs/linux/man/1-trace-cmd-listen/">trace-cmd-listen</a>(1)</p>
 <h2>AUTHOR</h2>
@@ -38,10 +38,10 @@ description: "trace-cmd-stop – stop the Ftrace Linux kernel tracer from writin
 <p> Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

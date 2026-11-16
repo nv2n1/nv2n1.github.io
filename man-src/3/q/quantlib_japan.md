@@ -15,48 +15,48 @@ description: "QuantLib::Japan – Japanese calendar."
 <p>Japanese calendar. </p>
 <p> Holidays: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st</p>
-<dt>*</p>
-<dd>Bank Holiday, January 2nd</p>
-<dt>*</p>
-<dd>Bank Holiday, January 3rd</p>
-<dt>*</p>
-<dd>Coming of Age Day, 2nd Monday in January</p>
-<dt>*</p>
-<dd>National Foundation Day, February 11th</p>
-<dt>*</p>
-<dd>Vernal Equinox</p>
-<dt>*</p>
-<dd>Greenery Day, April 29th</p>
-<dt>*</p>
-<dd>Constitution Memorial Day, May 3rd</p>
-<dt>*</p>
-<dd>Holiday for a Nation, May 4th</p>
-<dt>*</p>
-<dd>Children&#8217;s Day, May 5th</p>
-<dt>*</p>
-<dd>Marine Day, 3rd Monday in July</p>
-<dt>*</p>
-<dd>Respect for the Aged Day, 3rd Monday in September</p>
-<dt>*</p>
-<dd>Autumnal Equinox</p>
-<dt>*</p>
-<dd>Health and Sports Day, 2nd Monday in October</p>
-<dt>*</p>
-<dd>National Culture Day, November 3rd</p>
-<dt>*</p>
-<dd>Labor Thanksgiving Day, November 23rd</p>
-<dt>*</p>
-<dd>Emperor&#8217;s Birthday, December 23rd</p>
-<dt>*</p>
-<dd>Bank Holiday, December 31st</p>
-<dt>*</p>
-<dd>a few one-shot holidays</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st</dd>
+<dt>*</dt>
+<dd>Bank Holiday, January 2nd</dd>
+<dt>*</dt>
+<dd>Bank Holiday, January 3rd</dd>
+<dt>*</dt>
+<dd>Coming of Age Day, 2nd Monday in January</dd>
+<dt>*</dt>
+<dd>National Foundation Day, February 11th</dd>
+<dt>*</dt>
+<dd>Vernal Equinox</dd>
+<dt>*</dt>
+<dd>Greenery Day, April 29th</dd>
+<dt>*</dt>
+<dd>Constitution Memorial Day, May 3rd</dd>
+<dt>*</dt>
+<dd>Holiday for a Nation, May 4th</dd>
+<dt>*</dt>
+<dd>Children&#8217;s Day, May 5th</dd>
+<dt>*</dt>
+<dd>Marine Day, 3rd Monday in July</dd>
+<dt>*</dt>
+<dd>Respect for the Aged Day, 3rd Monday in September</dd>
+<dt>*</dt>
+<dd>Autumnal Equinox</dd>
+<dt>*</dt>
+<dd>Health and Sports Day, 2nd Monday in October</dd>
+<dt>*</dt>
+<dd>National Culture Day, November 3rd</dd>
+<dt>*</dt>
+<dd>Labor Thanksgiving Day, November 23rd</dd>
+<dt>*</dt>
+<dd>Emperor&#8217;s Birthday, December 23rd</dd>
+<dt>*</dt>
+<dd>Bank Holiday, December 31st</dd>
+<dt>*</dt>
+<dd>a few one-shot holidays</dd></dl>
 <p> Holidays falling on a Sunday are observed on the Monday following except for the bank holidays associated with the new year. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

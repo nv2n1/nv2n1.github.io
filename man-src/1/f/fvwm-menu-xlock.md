@@ -15,16 +15,16 @@ description: "fvwm-menu-xlock – builds xlock menu definition for fvwm"
 <p> A simple perl script which parses xlock&#8217;s output to build an fvwm menu definition of all xlock&#8217;s modes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> show the help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> show the version and exit</p>
-<dt><code>&#8211;name</code> name</p>
-<dd> define menu name in the following argument. Default is &#8220;XLockMenu&#8221;</p>
-<dt><code>&#8211;title</code> title</p>
-<dd> define menu title in the following argument. Default is &#8220;XLock Modes&#8221;.</p>
-<dt><code>&#8211;item</code> format</p>
-<dd> define menu item format in the following argument, default is &#8216;%n	(%d)&#8217;. <font SIZE="-1">TAB</font> can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real <font SIZE="-1">TAB</font>. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> show the help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show the version and exit</dd>
+<dt><code>&#8211;name</code> name</dt>
+<dd> define menu name in the following argument. Default is &#8220;XLockMenu&#8221;</dd>
+<dt><code>&#8211;title</code> title</dt>
+<dd> define menu title in the following argument. Default is &#8220;XLock Modes&#8221;.</dd>
+<dt><code>&#8211;item</code> format</dt>
+<dd> define menu item format in the following argument, default is &#8216;%n	(%d)&#8217;. <font SIZE="-1">TAB</font> can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real <font SIZE="-1">TAB</font>. </dd>
 <p> Format specifiers: </p>
 <pre>
   %n - mode name
@@ -32,14 +32,14 @@ description: "fvwm-menu-xlock – builds xlock menu definition for fvwm"
   %D - mode description without &quot;Shows &quot; prefix if any
 </pre>
 <p> These specifiers can receive an optional integer size, positive for right adjusted string or negative for left adjusted, example: <tt>%8x</tt>; and optional *num or *-num, which means to leave only the first or last (if minus) num of chars, the num must be greater than 3, since the striped part is replaced with &#8220;&#8230;&#8221;, example: %*30x. Both can be combined: %-10*-20x, this instructs to get only the 20 last characters, but if the length is less then 10 &#8211; to fill with up to 10 spaces on the right.</p>
-<dt><code>&#8211;icon-title</code> icon</p>
+<dt><code>&#8211;icon-title</code> icon</dt>
 <dd>
-<dt><code>&#8211;icon-item</code> icon</p>
-<dd> define menu icon for title and regular item accordingly. Default is no menu icons (equivalent to an empty icon argument).</p>
-<dt><code>&#8211;wm-icons</code></p>
-<dd> define icon names suitable for use with wm-icons package. Currently this is equivalent to: &#8211;icon-title &#8221; &#8211;icon-item menu/lock.xpm.</p>
-<dt><code>&#8211;special-first</code></p>
-<dd> instructs to include special modes (usually black, bomb and random) first.</dl>
+</dd><dt><code>&#8211;icon-item</code> icon</dt>
+<dd> define menu icon for title and regular item accordingly. Default is no menu icons (equivalent to an empty icon argument).</dd>
+<dt><code>&#8211;wm-icons</code></dt>
+<dd> define icon names suitable for use with wm-icons package. Currently this is equivalent to: &#8211;icon-title &#8221; &#8211;icon-item menu/lock.xpm.</dd>
+<dt><code>&#8211;special-first</code></dt>
+<dd> instructs to include special modes (usually black, bomb and random) first.</dd></dl>
 <p> Option parameters can be specified either using &#8216;=&#8217; or in the next argument. Short options are ok if not ambiguous: -h, -t; but be careful with short options, what is now unambiguous, can became ambiguous in the next versions. </p>
 <p> Additional arguments (after <code>&#8212;</code>) will be passed to xlock. </p>
 <p> Please see the <code><a href="/docs/linux/man/1-xlock/">xlock</a></code>(1) man page for the xlock options.</p>

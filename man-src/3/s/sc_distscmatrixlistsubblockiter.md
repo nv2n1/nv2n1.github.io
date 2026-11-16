@@ -18,13 +18,7 @@ description: "sc::DistSCMatrixListSubblockIter –"
  <i>Proceed to the next block. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void maybe_advance_list ()
-
-
-
 void advance_list ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>MessageGrp</code> &gt; <code>grp_</code> </p>
 <p> <code>StateSend</code> <code>out_</code> </p>

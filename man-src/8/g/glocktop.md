@@ -14,47 +14,47 @@ description: "glocktop – Display or print active GFS2 locks."
 <p>The glocktop tool is used to display active GFS2 inter-node locks, also known as glocks. Simply put, it&#8217;s a tool to filter and interpret the contents of the glocks debugfs file. The glocks debugfs file shows all glocks known to GFS2, their holders, and technical data such as flags. The glocktop tool will only show the glocks that are important: glocks that are being held or for which there are waiters. It also interprets the debugfs file of DLM (Distributed Lock Manager). </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code> <i>&lt;delay&gt;</i></p>
-<dd>Specify a time delay (in seconds) between reports. (Default is 30 seconds)</p>
-<dt><code>-h</code></p>
-<dd>Print help information.</p>
-<dt><code>-i</code></p>
-<dd>Interactive mode. In this mode, glocktop acts more like the top command. It shows the pertinent glocks on the terminal session (as many as it can fit). The advantage is that it uses different colors to draw attention to what&#8217;s important. The disadvantage is that it&#8217;s limited by the size of your display, so you may not see all the glocks.</p>
-<dt><code>-D</code></p>
-<dd>Omit DLM status. This may be used to reduce the amount of output for interactive mode.</p>
-<dt><code>-n</code> <i>&lt;iterations&gt;</i></p>
-<dd>End the program after the specified number of iterations (reports). The default is to keep running until interrupted.</p>
-<dt><code>-r</code></p>
-<dd>Show resource group reservation information. Normally, glocktop omits resource group reservation information to condense the output. This information is only important when debugging information related to the GFS2 block allocator and file system fragmentation.</p>
-<dt><code>-s</code> <i>&lt;freq&gt;</i></p>
-<dd>Print glock summary information every <i>&lt;freq&gt;</i> reports. The glock summary information is bulky and often not needed, so it&#8217;s only printed once every 10 reports. You can eliminate it entirely from the output by specifying a value of 0. If you want the statistics to print after every report, specify freq as 1.</p>
-<dt><code>-t</code></p>
-<dd>Trace directory path. A lot of GFS2 glock performance problems are caused by an application&#8217;s contention for one or two directories. These show up as regular inodes in the output, but there&#8217;s no good way to tell from the output which directory is contended. Ordinarily, glocktop won&#8217;t try to look up the full pathname of a contended directory because it&#8217;s slow, especially if there are millions of glocks. This option instructs glocktop to try to determine the full directory path names when it can, so you can tell the full path (within the mount point) of contended directories.</p>
-<dt><code>-H</code></p>
-<dd>Don&#8217;t show Held glocks, unless there are also waiters for the lock. Ordinarily, glocktop will show glocks that are held (but not iopen glocks which are almost always held by the thousands) as well as glocks for which there are waiters. If it only showed glocks with waiters, you could see, for example, that a glock is being blocked on one node, but you couldn&#8217;t see the information for a different node currently holding the lock and thus, blocking the waiter. This option forces glocktop to stop printing information for glocks with no waiters (on that node). The advantage is that the output is smaller and easier to look at. The disadvantage is that you can&#8217;t see information from the node that&#8217;s blocking the waiter, unless both waiter and holder are on the same node.</dl>
+<dt><code>-d</code> <i>&lt;delay&gt;</i></dt>
+<dd>Specify a time delay (in seconds) between reports. (Default is 30 seconds)</dd>
+<dt><code>-h</code></dt>
+<dd>Print help information.</dd>
+<dt><code>-i</code></dt>
+<dd>Interactive mode. In this mode, glocktop acts more like the top command. It shows the pertinent glocks on the terminal session (as many as it can fit). The advantage is that it uses different colors to draw attention to what&#8217;s important. The disadvantage is that it&#8217;s limited by the size of your display, so you may not see all the glocks.</dd>
+<dt><code>-D</code></dt>
+<dd>Omit DLM status. This may be used to reduce the amount of output for interactive mode.</dd>
+<dt><code>-n</code> <i>&lt;iterations&gt;</i></dt>
+<dd>End the program after the specified number of iterations (reports). The default is to keep running until interrupted.</dd>
+<dt><code>-r</code></dt>
+<dd>Show resource group reservation information. Normally, glocktop omits resource group reservation information to condense the output. This information is only important when debugging information related to the GFS2 block allocator and file system fragmentation.</dd>
+<dt><code>-s</code> <i>&lt;freq&gt;</i></dt>
+<dd>Print glock summary information every <i>&lt;freq&gt;</i> reports. The glock summary information is bulky and often not needed, so it&#8217;s only printed once every 10 reports. You can eliminate it entirely from the output by specifying a value of 0. If you want the statistics to print after every report, specify freq as 1.</dd>
+<dt><code>-t</code></dt>
+<dd>Trace directory path. A lot of GFS2 glock performance problems are caused by an application&#8217;s contention for one or two directories. These show up as regular inodes in the output, but there&#8217;s no good way to tell from the output which directory is contended. Ordinarily, glocktop won&#8217;t try to look up the full pathname of a contended directory because it&#8217;s slow, especially if there are millions of glocks. This option instructs glocktop to try to determine the full directory path names when it can, so you can tell the full path (within the mount point) of contended directories.</dd>
+<dt><code>-H</code></dt>
+<dd>Don&#8217;t show Held glocks, unless there are also waiters for the lock. Ordinarily, glocktop will show glocks that are held (but not iopen glocks which are almost always held by the thousands) as well as glocks for which there are waiters. If it only showed glocks with waiters, you could see, for example, that a glock is being blocked on one node, but you couldn&#8217;t see the information for a different node currently holding the lock and thus, blocking the waiter. This option forces glocktop to stop printing information for glocks with no waiters (on that node). The advantage is that the output is smaller and easier to look at. The disadvantage is that you can&#8217;t see information from the node that&#8217;s blocking the waiter, unless both waiter and holder are on the same node.</dd></dl>
 <h2>Output Lines</h2>
 <dl>
-<dt><code>@ name</code></p>
-<dd>This is the GFS2 file system name for which the information is printed. It also gives the time stamp of the report, and the cluster node name.</p>
-<dt><code>G:</code></p>
+<dt><code>@ name</code></dt>
+<dd>This is the GFS2 file system name for which the information is printed. It also gives the time stamp of the report, and the cluster node name.</dd>
+<dt><code>G:</code></dt>
 <dd>This line represents a glock (internode GFS2 lock).<br />
-&nbsp;<wbr>G:&nbsp;<wbr>&nbsp;<wbr>s:UN n:2/609b4 f:lIqob t:EX d:EX/0 a:0 v:0 r:3 m:200&nbsp;<wbr>(inode)</p>
-<dt><code>D:</code></p>
+&nbsp;<wbr>G:&nbsp;<wbr>&nbsp;<wbr>s:UN n:2/609b4 f:lIqob t:EX d:EX/0 a:0 v:0 r:3 m:200&nbsp;<wbr>(inode)</dd>
+<dt><code>D:</code></dt>
 <dd>This line gives you glocktop&#8217;s interpretation of the glock&#8217;s state as far as DLM (distributed lock manager) is concerned.<br />
-&nbsp;<wbr>&nbsp;<wbr>D: Granted PR on node 2 to pid 17511&nbsp;<wbr>[python]</p>
-<dt><code>H:</code></p>
+&nbsp;<wbr>&nbsp;<wbr>D: Granted PR on node 2 to pid 17511&nbsp;<wbr>[python]</dd>
+<dt><code>H:</code></dt>
 <dd>This line represents a glock holder: a process that&#8217;s either holding the glock, or is waiting to hold it. The value after S: represents how this holder needs the lock: EX (Exclusive), SH (Shared), PR (Protected Read), or UN (Unlocked). The value after F: indicates the holder flags: a W indicates the holder is Waiting for the lock to be granted. An H indicates the holder is currently holding the lock.<br />
-&nbsp;<wbr>&nbsp;<wbr>H: s:EX f:W e:0 p:17511&nbsp;<wbr>[python]&nbsp;<wbr>gfs2_unlink+0x7e/0x250&nbsp;<wbr>[gfs2]</p>
-<dt><code>U:</code></p>
+&nbsp;<wbr>&nbsp;<wbr>H: s:EX f:W e:0 p:17511&nbsp;<wbr>[python]&nbsp;<wbr>gfs2_unlink+0x7e/0x250&nbsp;<wbr>[gfs2]</dd>
+<dt><code>U:</code></dt>
 <dd>These lines represent glocktop&#8217;s user interpretation of the data, both glock and holder. Lines that begin with (N/A:&#8230;) can probably be ignored because they ought to be unimportant: system files such as journals, etc.<br />
 &nbsp;<wbr>&nbsp;<wbr>U:&nbsp;<wbr>&nbsp;<wbr>W inode&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>183f5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Is:Shared, Want:Exclusive&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[Demote pending, Reply pending, Queued, Blocking]<br />
-&nbsp;<wbr>&nbsp;<wbr>U:&nbsp;<wbr>&nbsp;<wbr>W&nbsp;<wbr>&nbsp;<wbr>&#8212;&gt;&nbsp;<wbr>&nbsp;<wbr>waiting pid 17511&nbsp;<wbr>[python]&nbsp;<wbr>&nbsp;<wbr>(Granted PR on node 2 to pid 17511&nbsp;<wbr>[python])</p>
-<dt><code>C:</code></p>
-<dd>These lines give you the call trace (call stack) of the process that&#8217;s either holding or waiting to hold the glock.</p>
-<dt><code>S</code></p>
-<dd>These lines give you the summary of all glocks for this file system: How many of each category are unlocked, locked, how many are held in EX, SH, and DF, and how many are waiting. G Waiting is how many glocks have waiters. P Waiting is how many processes are waiting. Thus, you could have one glock that&#8217;s got ten processes waiting, or ten glocks that have ten processes waiting.</dl>
+&nbsp;<wbr>&nbsp;<wbr>U:&nbsp;<wbr>&nbsp;<wbr>W&nbsp;<wbr>&nbsp;<wbr>&#8212;&gt;&nbsp;<wbr>&nbsp;<wbr>waiting pid 17511&nbsp;<wbr>[python]&nbsp;<wbr>&nbsp;<wbr>(Granted PR on node 2 to pid 17511&nbsp;<wbr>[python])</dd>
+<dt><code>C:</code></dt>
+<dd>These lines give you the call trace (call stack) of the process that&#8217;s either holding or waiting to hold the glock.</dd>
+<dt><code>S</code></dt>
+<dd>These lines give you the summary of all glocks for this file system: How many of each category are unlocked, locked, how many are held in EX, SH, and DF, and how many are waiting. G Waiting is how many glocks have waiters. P Waiting is how many processes are waiting. Thus, you could have one glock that&#8217;s got ten processes waiting, or ten glocks that have ten processes waiting.</dd></dl>
 <h2>Example Output</h2>
-<pre><dl><dt><dd># glocktop
+<pre><dl><dt></dt><dd># glocktop
 @ nate_bob1 Wed Jan 27 07:24:14 2016 @host-050
  G: s:EX n:9/1 f:Iqb t:EX d:EX/0 a:0 v:0 r:2 m:200 (journal)
  D: Granted EX on node 2 to pid 17468 [ended]
@@ -171,7 +171,7 @@ S Held DF: 0 0 0 0 0 0 0 0
 S G Waiting: 0 2 0 0 0 0 0 2
 S P Waiting: 0 3 0 0 0 0 0 3
 S DLM wait: 0
-</dl></pre>
+</dd></dl></pre>
 <p>From this example output, we can see there are two GFS2 file systems mounted on system host-050: nate_bob1 and nate_bob0. In nate_bob1, we can see six glocks, but we can ignore all of them marked (N/A:&#8230;) because they are system files or held in SHared mode, and therefore other nodes should be able to hold the lock in SHared as well. </p>
 <p> There is one glock, for inode 183f5, which is has a process waiting to hold it. The lock is currently in SHared mode (s:SH on the G: line) but process 17511 (python) wants to hold the lock in EXclusive mode (S:EX on the H: line). That process has a call stack that indicates it is trying to hold the glock from gfs2_unlink. The DLM says the lock is currently granted on node 2 in PR (Protected Read) mode. </p>
 <p> For file system nate_bob0, there are 7 glocks listed. All but two are uninteresting. Locks 2/609b4 and 2/4fe12 have processes waiting to hold them. </p>

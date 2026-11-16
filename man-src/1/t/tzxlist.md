@@ -15,8 +15,8 @@ description: "tzxlist – Sinclair ZX Spectrum \"real\" tape file lister"
 <p> tzxlist outputs a description of the contents of TZX, TAP and Warajevo TAP tape files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>tapefile</i></p>
-<dd> specifies a tape file whose contents are to be listed.</dl>
+<dt><i>tapefile</i></dt>
+<dd> specifies a tape file whose contents are to be listed.</dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>SEE ALSO</h2>

@@ -25,22 +25,22 @@ description: "xcb_expose_event_t – NOT YET DOCUMENTED"
 } <code>xcb_expose_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_EXPOSE</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>window</i></p>
-<dd>The exposed (damaged) window.</p>
-<dt><i>x</i></p>
-<dd>The X coordinate of the left-upper corner of the exposed rectangle, relative to the <i>window</i>&#8216;s origin.</p>
-<dt><i>y</i></p>
-<dd>The Y coordinate of the left-upper corner of the exposed rectangle, relative to the <i>window</i>&#8216;s origin.</p>
-<dt><i>width</i></p>
-<dd>The width of the exposed rectangle.</p>
-<dt><i>height</i></p>
-<dd>The height of the exposed rectangle.</p>
-<dt><i>count</i></p>
-<dd>The amount of <i>Expose</i> events following this one. Simple applications that do not want to optimize redisplay by distinguishing between subareas of its window can just ignore all Expose events with nonzero counts and perform full redisplays on events with zero counts.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_EXPOSE</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>window</i></dt>
+<dd>The exposed (damaged) window.</dd>
+<dt><i>x</i></dt>
+<dd>The X coordinate of the left-upper corner of the exposed rectangle, relative to the <i>window</i>&#8216;s origin.</dd>
+<dt><i>y</i></dt>
+<dd>The Y coordinate of the left-upper corner of the exposed rectangle, relative to the <i>window</i>&#8216;s origin.</dd>
+<dt><i>width</i></dt>
+<dd>The width of the exposed rectangle.</dd>
+<dt><i>height</i></dt>
+<dd>The height of the exposed rectangle.</dd>
+<dt><i>count</i></dt>
+<dd>The amount of <i>Expose</i> events following this one. Simple applications that do not want to optimize redisplay by distinguishing between subareas of its window can just ignore all Expose events with nonzero counts and perform full redisplays on events with zero counts.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <p><code>xcb_generic_event_t</code>(3)</p>

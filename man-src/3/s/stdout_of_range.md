@@ -10,7 +10,6 @@ description: "std::out_of_range – std::out_of_range"
 <p>std::out_of_range &#8211; std::out_of_range</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 class out_of_range;</code></pre>
 <p>Defines a type of object to be thrown as exception. It reports errors that are consequence of attempt to access elements out of defined range.<br />
 It may be thrown by the member functions of std::bitset and std::basic_string, by std::stoi and std::stod families of functions, and by the bounds-checked member access functions (e.g. std::vector::at and std::map::at)<br />

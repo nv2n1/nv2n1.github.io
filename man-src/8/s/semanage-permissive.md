@@ -14,20 +14,20 @@ description: "semanage-permissive – SELinux Policy Management permissive mappi
 <p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. semanage permissive adds or removes a SELinux Policy permissive module. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd>show this help message and exit</p>
-<dt><i>-a, &#8211;add</i></p>
-<dd>Add a record of the specified object type</p>
-<dt><i>-d, &#8211;delete</i></p>
-<dd>Delete a record of the specified object type</p>
-<dt><i>-l, &#8211;list</i></p>
-<dd>List records of the specified object type</p>
-<dt><i>-n, &#8211;noheading</i></p>
-<dd>Do not print heading when listing the specified object type</p>
-<dt><i>-N, &#8211;noreload</i></p>
-<dd>Do not reload the policy after commit</p>
-<dt><i>-S STORE, &#8211;store STORE</i></p>
-<dd>Select an alternate SELinux Policy Store to manage </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>show this help message and exit</dd>
+<dt><i>-a, &#8211;add</i></dt>
+<dd>Add a record of the specified object type</dd>
+<dt><i>-d, &#8211;delete</i></dt>
+<dd>Delete a record of the specified object type</dd>
+<dt><i>-l, &#8211;list</i></dt>
+<dd>List records of the specified object type</dd>
+<dt><i>-n, &#8211;noheading</i></dt>
+<dd>Do not print heading when listing the specified object type</dd>
+<dt><i>-N, &#8211;noreload</i></dt>
+<dd>Do not reload the policy after commit</dd>
+<dt><i>-S STORE, &#8211;store STORE</i></dt>
+<dd>Select an alternate SELinux Policy Store to manage </dd>
 </dl>
 <h2>Example</h2>
 <pre>List all permissive modules

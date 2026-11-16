@@ -14,18 +14,18 @@ description: "pki –keyid – Calculate key identifiers of a key or certificate
 <p>This sub-command of <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1) calculates key identifiers of private keys and certificates.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print usage information with a summary of the available options.</p>
-<dt><code>-v, &#8211;debug </code><i>level</i></p>
-<dd>Set debug level, default: 1.</p>
-<dt><code>-+, &#8211;options </code><i>file</i></p>
-<dd>Read command line options from <i>file</i>.</p>
-<dt><code>-i, &#8211;in </code><i>file</i></p>
-<dd>Input file. If not given the input is read from <i>STDIN</i>.</p>
-<dt><code>-x, &#8211;keyid </code><i>hex</i></p>
-<dd>Smartcard or TPM private key object handle in hex format with an optional 0x prefix.</p>
-<dt><code>-t, &#8211;type </code><i>type</i></p>
-<dd>Type of input. One of <i>priv</i> (private key), <i>rsa</i> (RSA private key), <i>ecdsa</i> (ECDSA private key), <i>bliss</i> (BLISS private key), <i>pub</i> (public key), <i>pkcs10</i> (PKCS#10 certificate request), <i>x509</i> (X.509 certificate), defaults to <i>priv</i>.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print usage information with a summary of the available options.</dd>
+<dt><code>-v, &#8211;debug </code><i>level</i></dt>
+<dd>Set debug level, default: 1.</dd>
+<dt><code>-+, &#8211;options </code><i>file</i></dt>
+<dd>Read command line options from <i>file</i>.</dd>
+<dt><code>-i, &#8211;in </code><i>file</i></dt>
+<dd>Input file. If not given the input is read from <i>STDIN</i>.</dd>
+<dt><code>-x, &#8211;keyid </code><i>hex</i></dt>
+<dd>Smartcard or TPM private key object handle in hex format with an optional 0x prefix.</dd>
+<dt><code>-t, &#8211;type </code><i>type</i></dt>
+<dd>Type of input. One of <i>priv</i> (private key), <i>rsa</i> (RSA private key), <i>ecdsa</i> (ECDSA private key), <i>bliss</i> (BLISS private key), <i>pub</i> (public key), <i>pkcs10</i> (PKCS#10 certificate request), <i>x509</i> (X.509 certificate), defaults to <i>priv</i>.</dd></dl>
 <h2>Examples</h2>
 <p>Calculate key identifiers of an RSA private key: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;keyid &#8211;in key.der<br />

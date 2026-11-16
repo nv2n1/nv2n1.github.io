@@ -15,7 +15,7 @@ proc_flush_task - Remove dcache entries for <i>task</i> from the /proc dcache.
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>task that should be flushed.</dl>
+<dl><dd></dd><dd>task that should be flushed.</dd></dl>
 
 <h2>Description</h2>
 

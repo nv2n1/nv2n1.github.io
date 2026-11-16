@@ -15,12 +15,12 @@ description: "mtx-rsync – Rsync Helpers"
 <p> <code>Rsync Helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;job</code></p>
-<dd> use given file as specification</p>
-<dt><code>&#8211;dryrun</code></p>
-<dd> show what would happen</p>
-<dt><code>&#8211;force</code></p>
-<dd> force run</dl>
+<dt><code>&#8211;job</code></dt>
+<dd> use given file as specification</dd>
+<dt><code>&#8211;dryrun</code></dt>
+<dd> show what would happen</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> force run</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

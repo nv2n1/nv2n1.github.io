@@ -10,7 +10,6 @@ description: "tempnam – create a name for a temporary file"
 <p>tempnam &#8211; create a name for a temporary file</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
-
 char *tempnam(const char *dir, const char *pfx);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>tempnam</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
@@ -22,21 +21,21 @@ char *tempnam(const char *dir, const char *pfx);</code></pre>
 <p> The <code>tempnam</code>() function returns a pointer to a string that is a valid filename, and such that a file with this name did not exist when <code>tempnam</code>() checked. The filename suffix of the pathname generated will start with <i>pfx</i> in case <i>pfx</i> is a non-NULL string of at most five bytes. The directory prefix part of the pathname generated is required to be &quot;appropriate&quot; (often that at least implies writable). </p>
 <p> Attempts to find an appropriate directory go through the following steps:</p>
 <dl>
-<dt>a)</p>
-<dd>In case the environment variable <code>TMPDIR</code> exists and contains the name of an appropriate directory, that is used.</p>
-<dt>b)</p>
-<dd>Otherwise, if the <i>dir</i> argument is non-NULL and appropriate, it is used.</p>
-<dt>c)</p>
-<dd>Otherwise, <i>P_tmpdir</i> (as defined in <i>&lt;stdio.h&gt;</i>) is used when appropriate.</p>
-<dt>d)</p>
-<dd>Finally an implementation-defined directory may be used.</dl>
+<dt>a)</dt>
+<dd>In case the environment variable <code>TMPDIR</code> exists and contains the name of an appropriate directory, that is used.</dd>
+<dt>b)</dt>
+<dd>Otherwise, if the <i>dir</i> argument is non-NULL and appropriate, it is used.</dd>
+<dt>c)</dt>
+<dd>Otherwise, <i>P_tmpdir</i> (as defined in <i>&lt;stdio.h&gt;</i>) is used when appropriate.</dd>
+<dt>d)</dt>
+<dd>Finally an implementation-defined directory may be used.</dd></dl>
 <p> The string returned by <code>tempnam</code>() is allocated using <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) and hence should be freed by <code><a href="/docs/linux/man/3-free/">free</a></code>(3).</p>
 <h2>Return Value</h2>
 <p>On success, the <code>tempnam</code>() function returns a pointer to a unique temporary filename. It returns NULL if a unique name cannot be generated, with <i>errno</i> set to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>Allocation of storage failed.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>Allocation of storage failed.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -14,43 +14,43 @@ description: "kdb5_ldap_util – Kerberos configuration utility"
 <p>kdb5_ldap_util allows an administrator to manage realms, Kerberos services and ticket policies.</p>
 <h2>Command-Line Options</h2>
 <dl>
-<dt><code>-D</code> <i>user_dn</i></p>
-<dd>Specifies the Distinguished Name (DN) of the user who has sufficient rights to perform the operation on the LDAP server.</p>
-<dt><code>-w</code> <i>passwd</i></p>
-<dd>Specifies the password of <i>user_dn</i>. This option is not recommended.</p>
-<dt><code>-H</code> <i>ldapuri</i></p>
-<dd>Specifies the URI of the LDAP server. It is recommended to use <code>ldapi://</code> or <code>ldaps://</code> to connect to the LDAP server.</dl>
+<dt><code>-D</code> <i>user_dn</i></dt>
+<dd>Specifies the Distinguished Name (DN) of the user who has sufficient rights to perform the operation on the LDAP server.</dd>
+<dt><code>-w</code> <i>passwd</i></dt>
+<dd>Specifies the password of <i>user_dn</i>. This option is not recommended.</dd>
+<dt><code>-H</code> <i>ldapuri</i></dt>
+<dd>Specifies the URI of the LDAP server. It is recommended to use <code>ldapi://</code> or <code>ldaps://</code> to connect to the LDAP server.</dd></dl>
 <h2>Commands</h2>
 <h3>create</h3>
 <p><code>create</code> [<code>-subtrees</code> <i>subtree_dn_list</i>] [<code>-sscope</code> <i>search_scope</i>] [<code>-containerref</code> <i>container_reference_dn</i>] [<code>-k</code> <i>mkeytype</i>] [<code>-kv</code> <i>mkeyVNO</i>] [<code>-m|-P</code> <i>password</i>|<code>-sf</code> <i>stashfilename</i>] [<code>-s</code>] [<code>-r</code> <i>realm</i>] [<code>-maxtktlife</code> <i>max_ticket_life</i>] [<code>-maxrenewlife</code> <i>max_renewable_ticket_life</i>] [<i>ticket_flags</i>] </p>
 <p> Creates realm in directory. Options:</p>
 <dl>
-<dt><code>-subtrees</code> <i>subtree_dn_list</i></p>
-<dd>Specifies the list of subtrees containing the principals of a realm. The list contains the DNs of the subtree objects separated by colon (<code>:</code>).</p>
-<dt><code>-sscope</code> <i>search_scope</i></p>
-<dd>Specifies the scope for searching the principals under the subtree. The possible values are 1 or one (one level), 2 or sub (subtrees).</p>
-<dt><code>-containerref</code> <i>container_reference_dn</i></p>
-<dd>Specifies the DN of the container object in which the principals of a realm will be created. If the container reference is not configured for a realm, the principals will be created in the realm container.</p>
-<dt><code>-k</code> <i>mkeytype</i></p>
-<dd>Specifies the key type of the master key in the database. The default is given by the <code>master_key_type</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</p>
-<dt><code>-kv</code> <i>mkeyVNO</i></p>
-<dd>Specifies the version number of the master key in the database; the default is 1. Note that 0 is not allowed.</p>
-<dt><code>-m</code></p>
-<dd>Specifies that the master database password should be read from the TTY rather than fetched from a file on the disk.</p>
-<dt><code>-P</code> <i>password</i></p>
-<dd>Specifies the master database password. This option is not recommended.</p>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the Kerberos realm of the database.</p>
-<dt><code>-sf</code> <i>stashfilename</i></p>
-<dd>Specifies the stash file of the master database password.</p>
-<dt><code>-s</code></p>
-<dd>Specifies that the stash file is to be created.</p>
-<dt><code>-maxtktlife</code> <i>max_ticket_life</i></p>
-<dd>(<i>getdate</i> string) Specifies maximum ticket life for principals in this realm.</p>
-<dt><code>-maxrenewlife</code> <i>max_renewable_ticket_life</i></p>
-<dd>(<i>getdate</i> string) Specifies maximum renewable life of tickets for principals in this realm.</p>
-<dt><i>ticket_flags</i></p>
-<dd>Specifies global ticket flags for the realm. Allowable flags are documented in the description of the <code>add_principal</code> command in <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>. </p>
+<dt><code>-subtrees</code> <i>subtree_dn_list</i></dt>
+<dd>Specifies the list of subtrees containing the principals of a realm. The list contains the DNs of the subtree objects separated by colon (<code>:</code>).</dd>
+<dt><code>-sscope</code> <i>search_scope</i></dt>
+<dd>Specifies the scope for searching the principals under the subtree. The possible values are 1 or one (one level), 2 or sub (subtrees).</dd>
+<dt><code>-containerref</code> <i>container_reference_dn</i></dt>
+<dd>Specifies the DN of the container object in which the principals of a realm will be created. If the container reference is not configured for a realm, the principals will be created in the realm container.</dd>
+<dt><code>-k</code> <i>mkeytype</i></dt>
+<dd>Specifies the key type of the master key in the database. The default is given by the <code>master_key_type</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>.</dd>
+<dt><code>-kv</code> <i>mkeyVNO</i></dt>
+<dd>Specifies the version number of the master key in the database; the default is 1. Note that 0 is not allowed.</dd>
+<dt><code>-m</code></dt>
+<dd>Specifies that the master database password should be read from the TTY rather than fetched from a file on the disk.</dd>
+<dt><code>-P</code> <i>password</i></dt>
+<dd>Specifies the master database password. This option is not recommended.</dd>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the Kerberos realm of the database.</dd>
+<dt><code>-sf</code> <i>stashfilename</i></dt>
+<dd>Specifies the stash file of the master database password.</dd>
+<dt><code>-s</code></dt>
+<dd>Specifies that the stash file is to be created.</dd>
+<dt><code>-maxtktlife</code> <i>max_ticket_life</i></dt>
+<dd>(<i>getdate</i> string) Specifies maximum ticket life for principals in this realm.</dd>
+<dt><code>-maxrenewlife</code> <i>max_renewable_ticket_life</i></dt>
+<dd>(<i>getdate</i> string) Specifies maximum renewable life of tickets for principals in this realm.</dd>
+<dt><i>ticket_flags</i></dt>
+<dd>Specifies global ticket flags for the realm. Allowable flags are documented in the description of the <code>add_principal</code> command in <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>. </dd>
 <p> Example: </p>
 <pre>kdb5_ldap_util -D cn=admin,o=org -H <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a>
  create -subtrees o=org -sscope SUB -r ATHENA.MIT.EDU
@@ -65,20 +65,20 @@ Re-enter KDC database master key to verify:</pre>
 <p><code>modify</code> [<code>-subtrees</code> <i>subtree_dn_list</i>] [<code>-sscope</code> <i>search_scope</i>] [<code>-containerref</code> <i>container_reference_dn</i>] [<code>-r</code> <i>realm</i>] [<code>-maxtktlife</code> <i>max_ticket_life</i>] [<code>-maxrenewlife</code> <i>max_renewable_ticket_life</i>] [<i>ticket_flags</i>] </p>
 <p> Modifies the attributes of a realm. Options:</p>
 <dl>
-<dt><code>-subtrees</code> <i>subtree_dn_list</i></p>
-<dd>Specifies the list of subtrees containing the principals of a realm. The list contains the DNs of the subtree objects separated by colon (<code>:</code>). This list replaces the existing list.</p>
-<dt><code>-sscope</code> <i>search_scope</i></p>
-<dd>Specifies the scope for searching the principals under the subtrees. The possible values are 1 or one (one level), 2 or sub (subtrees).</p>
-<dt><code>-containerref</code> <i>container_reference_dn</i> Specifies the DN of the</p>
-<dd>container object in which the principals of a realm will be created.</p>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the Kerberos realm of the database.</p>
-<dt><code>-maxtktlife</code> <i>max_ticket_life</i></p>
-<dd>(<i>getdate</i> string) Specifies maximum ticket life for principals in this realm.</p>
-<dt><code>-maxrenewlife</code> <i>max_renewable_ticket_life</i></p>
-<dd>(<i>getdate</i> string) Specifies maximum renewable life of tickets for principals in this realm.</p>
-<dt><i>ticket_flags</i></p>
-<dd>Specifies global ticket flags for the realm. Allowable flags are documented in the description of the <code>add_principal</code> command in <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>. </p>
+<dt><code>-subtrees</code> <i>subtree_dn_list</i></dt>
+<dd>Specifies the list of subtrees containing the principals of a realm. The list contains the DNs of the subtree objects separated by colon (<code>:</code>). This list replaces the existing list.</dd>
+<dt><code>-sscope</code> <i>search_scope</i></dt>
+<dd>Specifies the scope for searching the principals under the subtrees. The possible values are 1 or one (one level), 2 or sub (subtrees).</dd>
+<dt><code>-containerref</code> <i>container_reference_dn</i> Specifies the DN of the</dt>
+<dd>container object in which the principals of a realm will be created.</dd>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the Kerberos realm of the database.</dd>
+<dt><code>-maxtktlife</code> <i>max_ticket_life</i></dt>
+<dd>(<i>getdate</i> string) Specifies maximum ticket life for principals in this realm.</dd>
+<dt><code>-maxrenewlife</code> <i>max_renewable_ticket_life</i></dt>
+<dd>(<i>getdate</i> string) Specifies maximum renewable life of tickets for principals in this realm.</dd>
+<dt><i>ticket_flags</i></dt>
+<dd>Specifies global ticket flags for the realm. Allowable flags are documented in the description of the <code>add_principal</code> command in <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>. </dd>
 <p> Example: </p>
 <pre>shell% kdb5_ldap_util -D cn=admin,o=org -H
  <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a> modify +requires_preauth -r
@@ -90,8 +90,8 @@ shell%</pre>
 <p><code>view</code> [<code>-r</code> <i>realm</i>] </p>
 <p> Displays the attributes of a realm. Options:</p>
 <dl>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the Kerberos realm of the database. </p>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the Kerberos realm of the database. </dd>
 <p> Example: </p>
 <pre>kdb5_ldap_util -D cn=admin,o=org -H <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a>
  view -r ATHENA.MIT.EDU
@@ -108,10 +108,10 @@ Ticket flags: DISALLOW_FORWARDABLE REQUIRES_PWCHANGE</pre>
 <p><code>destroy</code> [<code>-f</code>] [<code>-r</code> <i>realm</i>] </p>
 <p> Destroys an existing realm. Options:</p>
 <dl>
-<dt><code>-f</code></p>
-<dd>If specified, will not prompt the user for confirmation.</p>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the Kerberos realm of the database. </p>
+<dt><code>-f</code></dt>
+<dd>If specified, will not prompt the user for confirmation.</dd>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the Kerberos realm of the database. </dd>
 <p> Example: </p>
 <pre>shell% kdb5_ldap_util -D cn=admin,o=org -H
  <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a> destroy -r ATHENA.MIT.EDU
@@ -136,10 +136,10 @@ shell%</pre>
 <p><code>stashsrvpw</code> [<code>-f</code> <i>filename</i>] <i>name</i> </p>
 <p> Allows an administrator to store the password for service object in a file so that KDC and Administration server can use it to authenticate to the LDAP server. Options:</p>
 <dl>
-<dt><code>-f</code> <i>filename</i></p>
-<dd>Specifies the complete path of the service password file. By default, <code>/usr/local/var/service_passwd</code> is used.</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the object whose password is to be stored. If <i><a href="/docs/linux/man/8-krb5kdc/">krb5kdc</a>(8)</i> or <i><a href="/docs/linux/man/8-kadmind/">kadmind</a>(8)</i> are configured for simple binding, this should be the distinguished name it will use as given by the <code>ldap_kdc_dn</code> or <code>ldap_kadmind_dn</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>. If the KDC or kadmind is configured for SASL binding, this should be the authentication name it will use as given by the <code>ldap_kdc_sasl_authcid</code> or <code>ldap_kadmind_sasl_authcid</code> variable. </p>
+<dt><code>-f</code> <i>filename</i></dt>
+<dd>Specifies the complete path of the service password file. By default, <code>/usr/local/var/service_passwd</code> is used.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the object whose password is to be stored. If <i><a href="/docs/linux/man/8-krb5kdc/">krb5kdc</a>(8)</i> or <i><a href="/docs/linux/man/8-kadmind/">kadmind</a>(8)</i> are configured for simple binding, this should be the distinguished name it will use as given by the <code>ldap_kdc_dn</code> or <code>ldap_kadmind_dn</code> variable in <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>. If the KDC or kadmind is configured for SASL binding, this should be the authentication name it will use as given by the <code>ldap_kdc_sasl_authcid</code> or <code>ldap_kadmind_sasl_authcid</code> variable. </dd>
 <p> Example: </p>
 <pre>kdb5_ldap_util stashsrvpw -f /home/andrew/conf_keyfile
  cn=service-kdc,o=org
@@ -150,16 +150,16 @@ Re-enter password for &quot;cn=service-kdc,o=org&quot;:</pre>
 <p><code>create_policy</code> [<code>-r</code> <i>realm</i>] [<code>-maxtktlife</code> <i>max_ticket_life</i>] [<code>-maxrenewlife</code> <i>max_renewable_ticket_life</i>] [<i>ticket_flags</i>] <i>policy_name</i> </p>
 <p> Creates a ticket policy in the directory. Options:</p>
 <dl>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the Kerberos realm of the database.</p>
-<dt><code>-maxtktlife</code> <i>max_ticket_life</i></p>
-<dd>(<i>getdate</i> string) Specifies maximum ticket life for principals.</p>
-<dt><code>-maxrenewlife</code> <i>max_renewable_ticket_life</i></p>
-<dd>(<i>getdate</i> string) Specifies maximum renewable life of tickets for principals.</p>
-<dt><i>ticket_flags</i></p>
-<dd>Specifies the ticket flags. If this option is not specified, by default, no restriction will be set by the policy. Allowable flags are documented in the description of the <code>add_principal</code> command in <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>.</p>
-<dt><i>policy_name</i></p>
-<dd>Specifies the name of the ticket policy. </p>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the Kerberos realm of the database.</dd>
+<dt><code>-maxtktlife</code> <i>max_ticket_life</i></dt>
+<dd>(<i>getdate</i> string) Specifies maximum ticket life for principals.</dd>
+<dt><code>-maxrenewlife</code> <i>max_renewable_ticket_life</i></dt>
+<dd>(<i>getdate</i> string) Specifies maximum renewable life of tickets for principals.</dd>
+<dt><i>ticket_flags</i></dt>
+<dd>Specifies the ticket flags. If this option is not specified, by default, no restriction will be set by the policy. Allowable flags are documented in the description of the <code>add_principal</code> command in <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>.</dd>
+<dt><i>policy_name</i></dt>
+<dd>Specifies the name of the ticket policy. </dd>
 <p> Example: </p>
 <pre>kdb5_ldap_util -D cn=admin,o=org -H <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a>
  create_policy -r ATHENA.MIT.EDU -maxtktlife &quot;1 day&quot;
@@ -180,8 +180,8 @@ Password for &quot;cn=admin,o=org&quot;:</pre>
 <p><code>view_policy</code> [<code>-r</code> <i>realm</i>] <i>policy_name</i> </p>
 <p> Displays the attributes of a ticket policy. Options:</p>
 <dl>
-<dt><i>policy_name</i></p>
-<dd>Specifies the name of the ticket policy. </p>
+<dt><i>policy_name</i></dt>
+<dd>Specifies the name of the ticket policy. </dd>
 <p> Example: </p>
 <pre>kdb5_ldap_util -D cn=admin,o=org -H <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a>
  view_policy -r ATHENA.MIT.EDU tktpolicy
@@ -195,12 +195,12 @@ Ticket flags: DISALLOW_FORWARDABLE REQUIRES_PWCHANGE</pre>
 <p><code>destroy_policy</code> [<code>-r</code> <i>realm</i>] [<code>-force</code>] <i>policy_name</i> </p>
 <p> Destroys an existing ticket policy. Options:</p>
 <dl>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the Kerberos realm of the database.</p>
-<dt><code>-force</code></p>
-<dd>Forces the deletion of the policy object. If not specified, the user will be prompted for confirmation before deleting the policy.</p>
-<dt><i>policy_name</i></p>
-<dd>Specifies the name of the ticket policy. </p>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the Kerberos realm of the database.</dd>
+<dt><code>-force</code></dt>
+<dd>Forces the deletion of the policy object. If not specified, the user will be prompted for confirmation before deleting the policy.</dd>
+<dt><i>policy_name</i></dt>
+<dd>Specifies the name of the ticket policy. </dd>
 <p> Example: </p>
 <pre>kdb5_ldap_util -D cn=admin,o=org -H <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a>
  destroy_policy -r ATHENA.MIT.EDU tktpolicy
@@ -213,8 +213,8 @@ This will delete the policy object 'tktpolicy', are you sure?
 <p><code>list_policy</code> [<code>-r</code> <i>realm</i>] </p>
 <p> Lists the ticket policies in realm if specified or in the default realm. Options:</p>
 <dl>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the Kerberos realm of the database. </p>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the Kerberos realm of the database. </dd>
 <p> Example: </p>
 <pre>kdb5_ldap_util -D cn=admin,o=org -H <a href="ldaps://ldap-server1.mit.edu">ldaps://ldap-server1.mit.edu</a>
  list_policy -r ATHENA.MIT.EDU

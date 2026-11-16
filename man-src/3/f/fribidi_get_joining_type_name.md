@@ -21,27 +21,24 @@ url: "/docs/linux/man/3-fribidi_get_joining_type_name/"
 
 <dl>
 <dt><b>FriBidiJoiningType j</b>
-<dd> Input joining type. 
-
+</dt><dd> Input joining type. 
  Possible values for a <b>FriBidiJoiningType</b> are as follows:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt><b>FRIBIDI_JOINING_TYPE_U</b>
-<dd> NUn-joining, e.g. Full Stop.
-<dt><b>FRIBIDI_JOINING_TYPE_R</b>
-<dd> Right-joining, e.g. Arabic Letter Dal.
-<dt><b>FRIBIDI_JOINING_TYPE_D</b>
-<dd> Dual-joining, e.g. Arabic Letter Ain.
-<dt><b>FRIBIDI_JOINING_TYPE_C</b>
-<dd> Join-Causing, e.g. Tatweel, ZWJ.
-<dt><b>FRIBIDI_JOINING_TYPE_T</b>
-<dd> Transparent, e.g. Arabic Fatha.
-<dt><b>FRIBIDI_JOINING_TYPE_L</b>
-<dd> Left-joining, i.e. Fictional.
-<dt><b>FRIBIDI_JOINING_TYPE_G</b>
-<dd> IGnored, e.g. LRE, RLE, ZWNBSP.</dl>
+</dt><dd> NUn-joining, e.g. Full Stop.
+</dd><dt><b>FRIBIDI_JOINING_TYPE_R</b>
+</dt><dd> Right-joining, e.g. Arabic Letter Dal.
+</dd><dt><b>FRIBIDI_JOINING_TYPE_D</b>
+</dt><dd> Dual-joining, e.g. Arabic Letter Ain.
+</dd><dt><b>FRIBIDI_JOINING_TYPE_C</b>
+</dt><dd> Join-Causing, e.g. Tatweel, ZWJ.
+</dd><dt><b>FRIBIDI_JOINING_TYPE_T</b>
+</dt><dd> Transparent, e.g. Arabic Fatha.
+</dd><dt><b>FRIBIDI_JOINING_TYPE_L</b>
+</dt><dd> Left-joining, i.e. Fictional.
+</dd><dt><b>FRIBIDI_JOINING_TYPE_G</b>
+</dt><dd> IGnored, e.g. LRE, RLE, ZWNBSP.</dd></dl>
 </dl>
 </dl>
 

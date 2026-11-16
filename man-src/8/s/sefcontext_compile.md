@@ -16,11 +16,11 @@ description: "sefcontext_compile – compile file context regular expression fil
 <p> By default <code>sefcontext_compile</code> writes the compiled pcre file with the <code>.bin</code> suffix appended (e.g. <i>inputfile</i><code>.bin</code>).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-o</code></p>
-<dd>Specify an <i>outputfile</i> that must be a fully qualified file name as the <code>.bin</code> suffix is not automatically added.</p>
-<dt><code>-p</code></p>
+<dt><code>-o</code></dt>
+<dd>Specify an <i>outputfile</i> that must be a fully qualified file name as the <code>.bin</code> suffix is not automatically added.</dd>
+<dt><code>-p</code></dt>
 <dd>Specify a binary <i>policyfile</i> that will be used to validate the context entries in the <i>inputfile</i><br />
- If an invalid context is found the pcre formatted file will not be written and an error will be returned. </p>
+ If an invalid context is found the pcre formatted file will not be written and an error will be returned. </dd>
 </dl>
 <h2>Return Value</h2>
 <p>On error -1 is returned. On success 0 is returned. </p>
@@ -29,12 +29,12 @@ description: "sefcontext_compile – compile file context regular expression fil
  sefcontext_compile /etc/selinux/targeted/contexts/files/file_contexts </p>
 <p> Results in the following file being generated:</p>
 <dl>
-<dd>/etc/selinux/targeted/contexts/files/file_contexts.bin</dl>
+<dd>/etc/selinux/targeted/contexts/files/file_contexts.bin</dd></dl>
 <p> <code>Example 2:</code><br />
  sefcontext_compile -o new_fc.bin /etc/selinux/targeted/contexts/files/file_contexts </p>
 <p> Results in the following file being generated in the cwd:</p>
 <dl>
-<dd>new_fc.bin</dl>
+<dd>new_fc.bin</dd></dl>
 <h2>Author</h2>
 <p>Dan Walsh, &lt;dwalsh [at] redhat.com&gt;</p>
 <h2>See Also</h2>

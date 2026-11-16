@@ -44,21 +44,21 @@ description: "QuantLib::VanillaSwap – Plain-vanilla swap."
 <p>Plain-vanilla swap. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>if QL_TODAYS_PAYMENTS was defined (in userconfig.hpp or when calling ./configure; it is undefined by default) payments occurring at the settlement date of the swap are included in the NPV, and therefore affect the fair-rate and fair-spread calculation. This might not be what you want.</dl>
+<dd>if QL_TODAYS_PAYMENTS was defined (in userconfig.hpp or when calling ./configure; it is undefined by default) payments occurring at the settlement date of the swap are included in the NPV, and therefore affect the fair-rate and fair-spread calculation. This might not be what you want.</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a swap paying the fair fixed rate is null.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a swap receiving the fair floating-rate spread is null.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a swap decreases with the paid fixed rate.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a swap increases with the received floating-rate spread.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking it against a known good value.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a swap paying the fair fixed rate is null.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a swap receiving the fair floating-rate spread is null.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a swap decreases with the paid fixed rate.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a swap increases with the received floating-rate spread.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking it against a known good value.</dd></dl>
 </dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, and <code>swapvaluation.cpp</code>.</p>

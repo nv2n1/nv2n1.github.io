@@ -29,44 +29,44 @@ description: "pamcomp – composite (overlay) two Netpbm images together"
 <p>&nbsp;<wbr>The overlay and underlying images may be of different formats (e.g. overlaying a PBM text image over a full color PPM image) and have different maxvals. The output image has the more general of the two input formats and a maxval that is the least common multiple the two maxvals (or the maximum maxval allowable by the format, if the LCM is more than that). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-align=</code><i>alignment</i></p>
-<dd> This option selects the basic horizontal position of the overlay image with respect to the underlying image, in syntax reminiscent of HTML. <code>left</code> means flush left, <code>center</code> means centered, and <code>right</code> means flush right. </p>
+<dt><code>-align=</code><i>alignment</i></dt>
+<dd> This option selects the basic horizontal position of the overlay image with respect to the underlying image, in syntax reminiscent of HTML. <code>left</code> means flush left, <code>center</code> means centered, and <code>right</code> means flush right. </dd>
 <p> The <code>-xoff</code> option modifies this position. </p>
 <p> <code>beyondleft</code> means just out of frame to the left &#8212; the right edge of the overlay is flush with the left edge of the underlying image. <code>beyondright</code> means just out of frame to the right. These alignments are useful only if you add a <code>-xoff</code> option. These two values were added in Netpbm 10.10 (October 2002). </p>
 <p> The default is <code>left</code>. </p>
-<dt><code>-valign=</code><i>alignment</i></p>
-<dd> This option selects the basic vertical position of the overlay image with respect to the underlying image, in syntax reminiscent of HTML. <code>top</code> means flush top, <code>middle</code> means centered, and <code>bottom</code> means flush bottom. </p>
+<dt><code>-valign=</code><i>alignment</i></dt>
+<dd> This option selects the basic vertical position of the overlay image with respect to the underlying image, in syntax reminiscent of HTML. <code>top</code> means flush top, <code>middle</code> means centered, and <code>bottom</code> means flush bottom. </dd>
 <p> The <code>-yoff</code> option modifies this position. </p>
 <p> <code>above</code> means just out of frame to the top &#8212; the bottom edge of the overlay is flush with the top edge of the underlying image. <code>below</code> means just out of frame to the bottom. These alignments are useful only if you add a <code>-yoff</code> option. These two values were added in Netpbm 10.10 (October 2002). </p>
 <p> The default is <code>top</code>. </p>
-<dt><code>-xoff=</code><i>x</i></p>
-<dd> This option modifies the horizontal positioning of the overlay image with respect to the underlying image as selected by the <code>-align</code> option. <code>pamcomp</code> shifts the overlay image from that basic position <i>x</i> pixels to the right. <i>x</i> can be negative to indicate shifting to the left. </p>
+<dt><code>-xoff=</code><i>x</i></dt>
+<dd> This option modifies the horizontal positioning of the overlay image with respect to the underlying image as selected by the <code>-align</code> option. <code>pamcomp</code> shifts the overlay image from that basic position <i>x</i> pixels to the right. <i>x</i> can be negative to indicate shifting to the left. </dd>
 <p> The overlay need not fit entirely (or at all) on the underlying image. <code>pamcomp</code> uses only the parts that lie over the underlying image. </p>
 <p> Before Netpbm 10.10 (October 2002), <code>-xoff</code> was mutually exclusive with <code>-align</code> and always measured from the left edge. </p>
-<dt><code>-yoff=</code><i>y</i></p>
-<dd> This option modifies the vertical positioning of the overlay image with respect to the underlying image as selected by the <code>-valign</code> option. <code>pamcomp</code> shifts the overlay image from that basic position <i>y</i> pixels downward. <i>y</i> can be negative to indicate shifting upward. </p>
+<dt><code>-yoff=</code><i>y</i></dt>
+<dd> This option modifies the vertical positioning of the overlay image with respect to the underlying image as selected by the <code>-valign</code> option. <code>pamcomp</code> shifts the overlay image from that basic position <i>y</i> pixels downward. <i>y</i> can be negative to indicate shifting upward. </dd>
 <p> The overlay need not fit entirely (or at all) on the underlying image. <code>pamcomp</code> uses only the parts that lie over the underlying image. </p>
 <p> Before Netpbm 10.10 (October 2002), <code>-xoff</code> was mutually exclusive with <code>-valign</code> and always measured from the top edge. </p>
-<dt><code>-alpha=</code><i>alpha-pgmfile</i></p>
-<dd> This option names a file that contains the alpha mask. If you don&#8217;t specify this option, there is no alpha mask, which is equivalent to having an alpha mask specify total opaqueness everywhere. </p>
+<dt><code>-alpha=</code><i>alpha-pgmfile</i></dt>
+<dd> This option names a file that contains the alpha mask. If you don&#8217;t specify this option, there is no alpha mask, which is equivalent to having an alpha mask specify total opaqueness everywhere. </dd>
 <p> You can specify <code>&#8211;</code> as the value of this option and the alpha mask will come from Standard Input. If you do this, don&#8217;t specify Standard Input as the source of any other input image. </p>
-<dt><code>-invert</code></p>
-<dd> This option inverts the sense of the values in the alpha mask, which effectively switches the roles of the overlay image and the underlying image in places where the two intersect. </p>
-<dt><code>-opacity=</code><i>opacity</i></p>
-<dd> This option tells how opaque the overlay image is to be, i.e. how much of the composite image should be from the overlay image, as opposed to the underlying image. <i>opacity</i> is a floating point number, with 1.0 meaning the overlay image is totally opaque and 0.0 meaning it is totally transparent. The default is 1.0. </p>
+<dt><code>-invert</code></dt>
+<dd> This option inverts the sense of the values in the alpha mask, which effectively switches the roles of the overlay image and the underlying image in places where the two intersect. </dd>
+<dt><code>-opacity=</code><i>opacity</i></dt>
+<dd> This option tells how opaque the overlay image is to be, i.e. how much of the composite image should be from the overlay image, as opposed to the underlying image. <i>opacity</i> is a floating point number, with 1.0 meaning the overlay image is totally opaque and 0.0 meaning it is totally transparent. The default is 1.0. </dd>
 <p> If you specify an alpha mask (the <code>-alpha</code> option), <code>pamcomp</code> uses the product of the opacity indicated by the alpha mask (as modified by the <code>-invert</code> option, as a fraction, and this opacity value. The <code>-invert</code> option does not apply to this opacity value. </p>
 <p> As a simple opacity value, the value makes sense only if it is between 0 and 1, inclusive. However, <code>pamcomp</code> accepts all values and performs the same arithmetic computation using whatever value you provide. An opacity value less than zero means the underlay image is intensified and then the overlay image is &quot;subtracted&quot; from it. An opacity value greater than unity means the overlay image is intensified and the underlaying image subtracted from it. In either case, <code>pamcomp</code> clips the resulting color component intensities so they are nonnegative and don&#8217;t exceed the output image&#8217;s maxval. </p>
 <p> This may seem like a strange thing to do, but it has uses. You can use it to brighten or darken or saturate or desaturate areas of the underlaying image. See this description (1)<br />
 &nbsp;<wbr>of the technique. </p>
 <p> This option was added in Netpbm 10.6 (July 2002). Before Netpbm 10.15 (April 2003), values less than zero or greater than unity were not allowed. </p>
-<dt><code>-mixtransparency</code></p>
-<dd> This option controls what <code>pamcomp</code> does where both the underlying and overlay image are non-opaque. </p>
+<dt><code>-mixtransparency</code></dt>
+<dd> This option controls what <code>pamcomp</code> does where both the underlying and overlay image are non-opaque. </dd>
 <p> By default, the output image has the same transparency as the underlying image and the transparency of the underlying image has no effect on the composition of color. </p>
 <p> But with this option, <code>pamcomp</code> composes the image according to a plastic transparency metaphor: the underlying and overlay images are plastic slides. The output image is the slide you get when you stack up those two slides. So the transparency of the output is a combination of the transparency of the inputs and the transparency of the underlying image affects the underlying image&#8217;s contribution to the output image&#8217;s color. </p>
 <p> Unlike the metaphorical slide, a PAM pixel has a color even where it is completely transparent, so <code>pamcomp</code> departs from the metaphor in that case and makes the output color identical to the underlying image. </p>
 <p> This option was new in Netpbm 10.56 (September 2011). Before that, the output is always opaque and the <code>pamcomp</code> ignores the transparency of the underlying image. </p>
-<dt><code>-linear</code></p>
-<dd> This option indicates that the inputs are not true Netpbm images but rather a non-gamma-adjusted variation. This is relevant only when you mix pixels, using the <code>-opacity</code> option or an alpha mask (the <code>-alpha</code> option). </p>
+<dt><code>-linear</code></dt>
+<dd> This option indicates that the inputs are not true Netpbm images but rather a non-gamma-adjusted variation. This is relevant only when you mix pixels, using the <code>-opacity</code> option or an alpha mask (the <code>-alpha</code> option). </dd>
 <p> The alpha mask and <code>-opacity</code> values indicate a fraction of the light intensity of a pixel. But the PNM and PNM-equivalent PAM image formats represent intensities with gamma-adjusted numbers that are not linearly proportional to intensity. So <code>pamcomp</code>, by default, performs a calculation on each sample read from its input and each sample written to its output to convert between these gamma-adjusted numbers and internal intensity-proportional numbers. </p>
 <p> Sometimes you are not working with true PNM or PAM images, but rather a variation in which the sample values are in fact directly proportional to intensity. If so, use the <code>-linear</code> option to tell <code>pamcomp</code> this. <code>pamcomp</code> then will skip the conversions. </p>
 <p> The conversion takes time. And the difference between intensity-proportional values and gamma-adjusted values may be small enough that you would barely see a difference in the result if you just pretended that the gamma-adjusted values were in fact intensity-proportional. So just to save time, at the expense of some image quality, you can specify <code>-linear</code> even when you have true PPM input and expect true PPM output. </p>

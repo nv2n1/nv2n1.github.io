@@ -20,6 +20,6 @@ description: "QuantLib::MCAmericanBasketEngine – least-square Monte Carlo engi
 <p>least-square Monte Carlo engine </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This method is intrinsically weak for out-of-the-money options.</dl>
+<dd>This method is intrinsically weak for out-of-the-money options.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

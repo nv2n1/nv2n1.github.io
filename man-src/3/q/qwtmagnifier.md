@@ -59,207 +59,207 @@ description: "QwtMagnifier –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Widget to be magnified</dl>
+<dd><i>parent</i> Widget to be magnified</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>bool QwtMagnifier::eventFilter (QObject *object, QEvent *event) [virtual]</h3>
 <p>Event filter. When <code>isEnabled()</code> is true, the mouse events of the observed widget are filtered. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>object</i> Object to be filtered<br />
- <i>event</i> Event</dl>
+ <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Forwarded to QObject::eventFilter()</dl>
+<dd>Forwarded to QObject::eventFilter()</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code>, <code>widgetWheelEvent()</code>, <code>widgetKeyPressEvent()</code> <code>widgetKeyReleaseEvent()</code></dl>
+<dd><code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code>, <code>widgetWheelEvent()</code>, <code>widgetKeyPressEvent()</code> <code>widgetKeyReleaseEvent()</code></dd></dl>
 <h3>void QwtMagnifier::getMouseButton (Qt::MouseButton &amp;button, Qt::KeyboardModifiers &amp;modifiers) const</h3>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMouseButton()</code></dl>
+<dd><code>setMouseButton()</code></dd></dl>
 <h3>void QwtMagnifier::getZoomInKey (int &amp;key, Qt::KeyboardModifiers &amp;modifiers) const</h3>
 <p>Retrieve the settings of the zoom in key. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> Key code, see Qt::Key<br />
- <i>modifiers</i> Keyboard modifiers</dl>
+ <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setZoomInKey()</code></dl>
+<dd><code>setZoomInKey()</code></dd></dl>
 <h3>void QwtMagnifier::getZoomOutKey (int &amp;key, Qt::KeyboardModifiers &amp;modifiers) const</h3>
 <p>Retrieve the settings of the zoom out key. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> Key code, see Qt::Key<br />
- <i>modifiers</i> Keyboard modifiers</dl>
+ <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setZoomOutKey()</code></dl>
+<dd><code>setZoomOutKey()</code></dd></dl>
 <h3>bool QwtMagnifier::isEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true when enabled, false otherwise</dl>
+<dd>true when enabled, false otherwise</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setEnabled()</code>, <code>eventFilter()</code></dl>
+<dd><code>setEnabled()</code>, <code>eventFilter()</code></dd></dl>
 <h3>double QwtMagnifier::keyFactor () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Key factor</dl>
+<dd>Key factor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setKeyFactor()</code></dl>
+<dd><code>setKeyFactor()</code></dd></dl>
 <h3>double QwtMagnifier::mouseFactor () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mouse factor</dl>
+<dd>Mouse factor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMouseFactor()</code></dl>
+<dd><code>setMouseFactor()</code></dd></dl>
 <h3>QWidget * QwtMagnifier::parentWidget ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Parent widget, where the rescaling happens</dl>
+<dd>Parent widget, where the rescaling happens</dd></dl>
 <h3>const QWidget * QwtMagnifier::parentWidget () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Parent widget, where the rescaling happens</dl>
+<dd>Parent widget, where the rescaling happens</dd></dl>
 <h3>virtual void QwtMagnifier::rescale (doublefactor) [protected], [pure virtual]</h3>
 <p>Rescale the parent widget </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factor</i> Scale factor</dl>
+<dd><i>factor</i> Scale factor</dd></dl>
 <p> Implemented in <code>QwtPlotMagnifier</code>.</p>
 <h3>void QwtMagnifier::setEnabled (boolon)</h3>
 <p>En/disable the magnifier. When enabled is true an event filter is installed for the observed widget, otherwise the event filter is removed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> true or false</dl>
+<dd><i>on</i> true or false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isEnabled()</code>, <code>eventFilter()</code></dl>
+<dd><code>isEnabled()</code>, <code>eventFilter()</code></dd></dl>
 <h3>void QwtMagnifier::setKeyFactor (doublefactor)</h3>
 <p>Change the key factor. The key factor defines the ratio between the current range on the parent widget and the zoomed range for each key press of the zoom in/out keys. The default value is 0.9. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factor</i> Key factor</dl>
+<dd><i>factor</i> Key factor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>keyFactor()</code>, <code>setZoomInKey()</code>, <code>setZoomOutKey()</code>, <code>setWheelFactor</code>, <code>setMouseFactor()</code></dl>
+<dd><code>keyFactor()</code>, <code>setZoomInKey()</code>, <code>setZoomOutKey()</code>, <code>setWheelFactor</code>, <code>setMouseFactor()</code></dd></dl>
 <h3>void QwtMagnifier::setMouseButton (Qt::MouseButtonbutton, Qt::KeyboardModifiersmodifiers = Qt::NoModifier)</h3>
 <p>Assign the mouse button, that is used for zooming in/out. The default value is Qt::RightButton. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>button</i> Button<br />
- <i>modifiers</i> Keyboard modifiers</dl>
+ <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>getMouseButton()</code></dl>
+<dd><code>getMouseButton()</code></dd></dl>
 <h3>void QwtMagnifier::setMouseFactor (doublefactor)</h3>
 <p>Change the mouse factor. The mouse factor defines the ratio between the current range on the parent widget and the zoomed range for each vertical mouse movement. The default value is 0.95. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factor</i> Wheel factor</dl>
+<dd><i>factor</i> Wheel factor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mouseFactor()</code>, <code>setMouseButton()</code>, <code>setWheelFactor()</code>, <code>setKeyFactor()</code></dl>
+<dd><code>mouseFactor()</code>, <code>setMouseButton()</code>, <code>setWheelFactor()</code>, <code>setKeyFactor()</code></dd></dl>
 <h3>void QwtMagnifier::setWheelFactor (doublefactor)</h3>
 <p>Change the wheel factor. The wheel factor defines the ratio between the current range on the parent widget and the zoomed range for each step of the wheel. </p>
 <p> Use values &gt; 1 for magnification (i.e. 2.0) and values &lt; 1 for scaling down (i.e. 1/2.0 = 0.5). You can use this feature for inverting the direction of the wheel. </p>
 <p> The default value is 0.9. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factor</i> Wheel factor</dl>
+<dd><i>factor</i> Wheel factor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>wheelFactor()</code>, setWheelButtonState(), <code>setMouseFactor()</code>, <code>setKeyFactor()</code></dl>
+<dd><code>wheelFactor()</code>, setWheelButtonState(), <code>setMouseFactor()</code>, <code>setKeyFactor()</code></dd></dl>
 <h3>void QwtMagnifier::setWheelModifiers (Qt::KeyboardModifiersmodifiers)</h3>
 <p>Assign keyboard modifiers for zooming in/out using the wheel. The default modifiers are Qt::NoModifiers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>modifiers</i> Keyboard modifiers</dl>
+<dd><i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>wheelModifiers()</code></dl>
+<dd><code>wheelModifiers()</code></dd></dl>
 <h3>void QwtMagnifier::setZoomInKey (intkey, Qt::KeyboardModifiersmodifiers = Qt::NoModifier)</h3>
 <p>Assign the key, that is used for zooming in. The default combination is Qt::Key_Plus + Qt::NoModifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i><br />
- <i>modifiers</i></dl>
+ <i>modifiers</i></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>getZoomInKey()</code>, <code>setZoomOutKey()</code></dl>
+<dd><code>getZoomInKey()</code>, <code>setZoomOutKey()</code></dd></dl>
 <h3>void QwtMagnifier::setZoomOutKey (intkey, Qt::KeyboardModifiersmodifiers = Qt::NoModifier)</h3>
 <p>Assign the key, that is used for zooming out. The default combination is Qt::Key_Minus + Qt::NoModifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i><br />
- <i>modifiers</i></dl>
+ <i>modifiers</i></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>getZoomOutKey()</code>, <code>setZoomOutKey()</code></dl>
+<dd><code>getZoomOutKey()</code>, <code>setZoomOutKey()</code></dd></dl>
 <h3>double QwtMagnifier::wheelFactor () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Wheel factor</dl>
+<dd>Wheel factor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWheelFactor()</code></dl>
+<dd><code>setWheelFactor()</code></dd></dl>
 <h3>Qt::KeyboardModifiers QwtMagnifier::wheelModifiers () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Wheel modifiers</dl>
+<dd>Wheel modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWheelModifiers()</code></dl>
+<dd><code>setWheelModifiers()</code></dd></dl>
 <h3>void QwtMagnifier::widgetKeyPressEvent (QKeyEvent *keyEvent) [protected], [virtual]</h3>
 <p>Handle a key press event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>keyEvent</i> Key event</dl>
+<dd><i>keyEvent</i> Key event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dl>
+<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dd></dl>
 <h3>void QwtMagnifier::widgetKeyReleaseEvent (QKeyEvent *keyEvent) [protected], [virtual]</h3>
 <p>Handle a key release event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>keyEvent</i> Key event</dl>
+<dd><i>keyEvent</i> Key event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dl>
+<dd><code>eventFilter()</code>, <code>widgetKeyReleaseEvent()</code></dd></dl>
 <h3>void QwtMagnifier::widgetMouseMoveEvent (QMouseEvent *mouseEvent) [protected], [virtual]</h3>
 <p>Handle a mouse move event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mouseEvent</i> Mouse event</dl>
+<dd><i>mouseEvent</i> Mouse event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code>,</dl>
+<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseReleaseEvent()</code>,</dd></dl>
 <h3>void QwtMagnifier::widgetMousePressEvent (QMouseEvent *mouseEvent) [protected], [virtual]</h3>
 <p>Handle a mouse press event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mouseEvent</i> Mouse event</dl>
+<dd><i>mouseEvent</i> Mouse event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code></dl>
+<dd><code>eventFilter()</code>, <code>widgetMouseReleaseEvent()</code>, <code>widgetMouseMoveEvent()</code></dd></dl>
 <h3>void QwtMagnifier::widgetMouseReleaseEvent (QMouseEvent *mouseEvent) [protected], [virtual]</h3>
 <p>Handle a mouse release event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mouseEvent</i> Mouse event</dl>
+<dd><i>mouseEvent</i> Mouse event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseMoveEvent()</code>,</dl>
+<dd><code>eventFilter()</code>, <code>widgetMousePressEvent()</code>, <code>widgetMouseMoveEvent()</code>,</dd></dl>
 <h3>void QwtMagnifier::widgetWheelEvent (QWheelEvent *wheelEvent) [protected], [virtual]</h3>
 <p>Handle a wheel event for the observed widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>wheelEvent</i> Wheel event</dl>
+<dd><i>wheelEvent</i> Wheel event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>eventFilter()</code></dl>
+<dd><code>eventFilter()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

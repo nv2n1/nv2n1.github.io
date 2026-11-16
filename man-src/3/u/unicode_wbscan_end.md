@@ -10,22 +10,15 @@ description: "unicode_wb_init, unicode_wb_next, unicode_wb_next_cnt, unicode_wb_
 <p>unicode_wb_init, unicode_wb_next, unicode_wb_next_cnt, unicode_wb_end, unicode_wbscan_init, unicode_wbscan_next, unicode_wbscan_end &#8211; calculate word breaks</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;courier-unicode.h&gt;
-
 unicode_wb_info_t unicode_wb_init(int (*cb_func)(int, void *), void *cb_arg);
-
 int unicode_wb_next(unicode_wb_info_t wb, unicode_char c);
-
 int unicode_wb_next_cnt(unicode_wb_info_t wb, const unicode_char *cptr, size_t cnt);
-
 int unicode_wb_end(unicode_wb_info_t wb);
-
 unicode_wbscan_info_t unicode_wbscan_init(void);
-
 int unicode_wbscan_next(unicode_wbscan_info_t wbs, unicode_char c);
-
 size_t unicode_wbscan_end(unicode_wbscan_info_t wbs);</code></pre>
 <h2>Description</h2>
-<dd>These functions implement the unicode word breaking algorithm. Invoke <code>unicode_wb_init</code>() to initialize the word breaking algorithm. The first parameter is a callback function. The second parameter is an opaque pointer. The callback function gets invoked with two parameters. The second parameter is the opaque pointer that was given to <code>unicode_wb_init</code>(); and the opaque pointer is not subject to any further interpretation by these functions. </p>
+<dd>These functions implement the unicode word breaking algorithm. Invoke <code>unicode_wb_init</code>() to initialize the word breaking algorithm. The first parameter is a callback function. The second parameter is an opaque pointer. The callback function gets invoked with two parameters. The second parameter is the opaque pointer that was given to <code>unicode_wb_init</code>(); and the opaque pointer is not subject to any further interpretation by these functions. </dd>
 <p> <code>unicode_wb_init</code>() returns an opaque handle. Repeated invocations of <code>unicode_wb_next</code>(), passing the handle, and one unicode character defines a sequence of unicode characters over which the word breaking algorithm calculation takes place. <code>unicode_wb_next_cnt</code>() is a shortcut for invoking <code>unicode_wb_next</code>() repeatedly over an array cptr containing cnt unicode characters. </p>
 <p> <code>unicode_wb_end</code>() denotes the end of the unicode character sequence. After the call to <code>unicode_wb_end</code>() the word breaking unicode_wb_info_t handle is no longer valid. </p>
 <p> Between the call to <code>unicode_wb_init</code>() and <code>unicode_wb_end</code>(), the callback function gets invoked exactly once for each unicode character given to <code>unicode_wb_next</code>() or <code>unicode_wb_next_cnt</code>(). Usually each call to <code>unicode_wb_next</code>() results in the callback function getting invoked immediately, but it does not have to be. It&#8217;s possible that a call to <code>unicode_wb_next</code>() returns without invoking the callback function, and some subsequent call to <code>unicode_wb_next</code>() (or <code>unicode_wb_end</code>()) invokes the callback function more than once, to catch things up. The contract is that before <code>unicode_wb_end</code>() returns, the callback function gets invoked the exact number of times as the number of characters in the unicode sequence defined by the intervening calls to <code>unicode_wb_next</code>() and <code>unicode_wb_next_cnt</code>(), unless an error occurs. </p>
@@ -40,10 +33,11 @@ size_t unicode_wbscan_end(unicode_wbscan_info_t wbs);</code></pre>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
-<dd>Author</dl>
+<dd>Author</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>TR-29</p>
+<dt> 1.</dt>
+<dd>TR-29</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.unicode.org/reports/tr29/tr29-27.html">http://www.unicode.org/reports/tr29/tr29-27.html</a></dl>
+<dd><a rel="nofollow" href="http://www.unicode.org/reports/tr29/tr29-27.html">http://www.unicode.org/reports/tr29/tr29-27.html</a></dd></dl>
+</dl>

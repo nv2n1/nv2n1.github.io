@@ -16,28 +16,28 @@ description: "iconvconfig – create iconv module configuration cache"
 <p> In addition to the system provided gconv modules, the user can specify custom gconv module directories with the environment variable <code>GCONV_PATH</code>. However, iconv module configuration caching is used only when the environment variable <code>GCONV_PATH</code> is not set.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;nostdlib</code></p>
-<dd>Do not search the system default gconv directory, only the directories provided on the command line.</p>
-<dt><code>-o</code><i> outputfile</i><code>, &#8211;output=</code><i>outputfile</i></p>
-<dd>Use <i>outputfile</i> for output instead of the system default cache location.</p>
-<dt><code>&#8211;prefix=</code><i>pathname</i></p>
-<dd>Set the prefix to be prepended to the system pathnames. See FILES, below. By default, the prefix is empty. Setting the prefix to <i>foo</i>, the gconv module configuration would be read from <i>foo/usr/lib/gconv/gconv-modules</i> and the cache would be written to <i>foo/usr/lib/gconv/gconv-modules.cache</i>.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Print a usage summary and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Print a short usage summary and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print the version number, license, and disclaimer of warranty for <code>iconv</code>.</dl>
+<dt><code>&#8211;nostdlib</code></dt>
+<dd>Do not search the system default gconv directory, only the directories provided on the command line.</dd>
+<dt><code>-o</code><i> outputfile</i><code>, &#8211;output=</code><i>outputfile</i></dt>
+<dd>Use <i>outputfile</i> for output instead of the system default cache location.</dd>
+<dt><code>&#8211;prefix=</code><i>pathname</i></dt>
+<dd>Set the prefix to be prepended to the system pathnames. See FILES, below. By default, the prefix is empty. Setting the prefix to <i>foo</i>, the gconv module configuration would be read from <i>foo/usr/lib/gconv/gconv-modules</i> and the cache would be written to <i>foo/usr/lib/gconv/gconv-modules.cache</i>.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Print a usage summary and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Print a short usage summary and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print the version number, license, and disclaimer of warranty for <code>iconv</code>.</dd></dl>
 <h2>Exit Status</h2>
 <p>Zero on success, nonzero on errors.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/gconv</i></p>
-<dd>Usual default gconv module path.</p>
-<dt><i>/usr/lib/gconv/gconv-modules</i></p>
-<dd>Usual system default gconv module configuration file.</p>
-<dt><i>/usr/lib/gconv/gconv-modules.cache</i></p>
-<dd>Usual system gconv module configuration cache.</dl>
+<dt><i>/usr/lib/gconv</i></dt>
+<dd>Usual default gconv module path.</dd>
+<dt><i>/usr/lib/gconv/gconv-modules</i></dt>
+<dd>Usual system default gconv module configuration file.</dd>
+<dt><i>/usr/lib/gconv/gconv-modules.cache</i></dt>
+<dd>Usual system gconv module configuration cache.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code>iconv</code>(3)</p>
 <h2>Colophon</h2>

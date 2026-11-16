@@ -11,22 +11,22 @@ description: "xtables-compat – compat tools to migrate from iptables to nftabl
 <h2>Description</h2>
 <p><code>xtables-compat</code> is set of tools to help the system administrator migrate the ruleset from <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code>, <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a>(8)</code>, <code><a href="/docs/linux/man/8-arptables/">arptables</a>(8)</code>, and <code><a href="/docs/linux/man/8-ebtables/">ebtables</a>(8)</code> to <code><a href="/docs/linux/man/8-nftables/">nftables</a>(8)</code>. The <code>xtables-compat</code> set is composed of several commands:</p>
 <dl>
-<dt>&bull;</p>
-<dd>iptables-compat</p>
-<dt>&bull;</p>
-<dd>iptables-compat-save</p>
-<dt>&bull;</p>
-<dd>iptables-compat-restore</p>
-<dt>&bull;</p>
-<dd>ip6tables-compat</p>
-<dt>&bull;</p>
-<dd>ip6tables-compat-save</p>
-<dt>&bull;</p>
-<dd>ip6tables-compat-restore</p>
-<dt>&bull;</p>
-<dd>arptables-compat</p>
-<dt>&bull;</p>
-<dd>ebtables-compat These tools use the libxtables framework extensions and hook to the nf_tables kernel subsystem using the <code>nft_compat</code> module. </p>
+<dt>&bull;</dt>
+<dd>iptables-compat</dd>
+<dt>&bull;</dt>
+<dd>iptables-compat-save</dd>
+<dt>&bull;</dt>
+<dd>iptables-compat-restore</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-compat</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-compat-save</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-compat-restore</dd>
+<dt>&bull;</dt>
+<dd>arptables-compat</dd>
+<dt>&bull;</dt>
+<dd>ebtables-compat These tools use the libxtables framework extensions and hook to the nf_tables kernel subsystem using the <code>nft_compat</code> module. </dd>
 <h2>Usage</h2>
 <p>The compat tools set allows you to manage the nf_tables backend using the native syntax of <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code>, <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a>(8)</code>, <code><a href="/docs/linux/man/8-arptables/">arptables</a>(8)</code>, and <code><a href="/docs/linux/man/8-ebtables/">ebtables</a>(8)</code>. </p>
 <p> You should use the compat tools exactly the same way as you would use the corresponding original tool. </p>
@@ -104,3 +104,4 @@ description: "xtables-compat – compat tools to migrate from iptables to nftabl
 <p>The nftables framework is written by the Netfilter project (<a rel="nofollow" href="https://www.netfilter.org">https://www.netfilter.org</a>). </p>
 <p> This manual page was written by Arturo Borrero Gonzalez &lt;arturo [at] debian.org&gt; for the Debian project, but may be used by others. </p>
 <p> This documentation is free/libre under the terms of the GPLv2+.</p>
+</dl>

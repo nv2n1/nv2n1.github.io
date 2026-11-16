@@ -15,15 +15,15 @@ sysfs_chmod_file - update the modified mode value on an object attribute.
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object we're acting for.</dl>
+<dl><dd></dd><dd>object we're acting for.</dd></dl>
  
 
  <i>attr</i>
-<dl><dd>attribute descriptor.</dl>
+<dl><dd>attribute descriptor.</dd></dl>
  
 
  <i>mode</i>
-<dl><dd>file permissions.</dl>
+<dl><dd>file permissions.</dd></dl>
 
 <h2>Copyright</h2>
 

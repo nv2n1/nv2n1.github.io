@@ -12,17 +12,17 @@ description: "memcached_free – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_st</code></p>
+<dt><code>memcached_st</code></dt>
 <dd>
-<dt><i>memcached_st</i>* memcached_create(<i>memcached_st</i><i>&nbsp;<wbr>*ptr</i>)</p>
+</dd><dt><i>memcached_st</i>* memcached_create(<i>memcached_st</i><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<dt><code>void memcached_free(</code><i>memcached_st</i><i>&nbsp;<wbr>*ptr</i>)</p>
+</dd><dt><code>void memcached_free(</code><i>memcached_st</i><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<dt><i>memcached_st</i>* memcached_clone(<i>memcached_st</i><i>&nbsp;<wbr>*destination</i>, <i>memcached_st</i><i>&nbsp;<wbr>*source</i>)</p>
+</dd><dt><i>memcached_st</i>* memcached_clone(<i>memcached_st</i><i>&nbsp;<wbr>*destination</i>, <i>memcached_st</i><i>&nbsp;<wbr>*source</i>)</dt>
 <dd>
-<dt><code>void memcached_servers_reset(</code><i>memcached_st</i>)</p>
+</dd><dt><code>void memcached_servers_reset(</code><i>memcached_st</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_create()</i> is used to create a <i>memcached_st</i> structure that will then be used by other <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) functions to communicate with the server. You should either pass a statically declared <i>memcached_st</i> to <i>memcached_create()</i> or a NULL. If a NULL passed in then a structure is allocated for you. </p>
 <p> Please note, when you write new application use <code>memcached()</code> over <i>memcached_create()</i>. </p>
@@ -42,3 +42,4 @@ description: "memcached_free – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

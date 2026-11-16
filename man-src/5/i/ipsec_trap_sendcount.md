@@ -10,9 +10,9 @@ description: "ipsec_trap_sendcount – KLIPS statistic on number of successful A
 <p>ipsec_trap_sendcount &#8211; KLIPS statistic on number of successful ACQUIREs</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>cat</code> <i>/proc/net/ipsec/stats/trap_sendcount</i></dl>
+<dt> <code>cat</code> <i>/proc/net/ipsec/stats/trap_sendcount</i></dt></dl>
 <h2>Obsolete</h2>
-<dd>Note that trap_sendcount is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</p>
+<dd>Note that trap_sendcount is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</dd>
 <h2>Description</h2>
 <p>/proc/net/ipsec/stats/trap_sendcount is a read-only file. It contains a hexadecimal number which records the number of successful PF_ACQUIRE messages that were sent.</p>
 <h2>Files</h2>
@@ -24,4 +24,4 @@ description: "ipsec_trap_sendcount – KLIPS statistic on number of successful A
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

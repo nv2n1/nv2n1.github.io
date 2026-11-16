@@ -16,8 +16,8 @@ bson_malloc0(size_t num_bytes);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>num_bytes</code></p>
-<dd> A size_t.</dl>
+<dt><code>num_bytes</code></dt>
+<dd> A size_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is a portable <code><a href="/docs/linux/man/3-malloc/">malloc</a>(3)</code> wrapper that also sets the memory to zero. Similar to <code><a href="/docs/linux/man/3-calloc/">calloc</a>(3)</code> \&amp;. </p>
 <p> In general, this function will return an allocation at least <code>sizeof(void*)</code> bytes or bigger. </p>
@@ -25,7 +25,7 @@ bson_malloc0(size_t num_bytes);
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> This function will abort on failure to allocate memory.</dl>
+</dt><dd> This function will abort on failure to allocate memory.</dd></dl>
 <h2>RETURNS</h2>
 <p> A pointer to a memory region which <code>HAS</code> been zeroed. </p>
 <h2>COLOPHON</h2>

@@ -11,9 +11,7 @@ description: "sc::SphericalTransformIter –"
 <p> This iterates through the components of a <code>SphericalTransform</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;transform.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>SphericalTransformIter</code> (const <code>SphericalTransform</code> *) </p>
 <p> void <code>begin</code> () </p>

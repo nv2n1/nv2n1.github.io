@@ -33,21 +33,21 @@ description: "QuantLib::Swaption – Swaption class"
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a payer (resp. receiver) swaption decreases (resp. increases) with the strike.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a payer (resp. receiver) swaption increases (resp. decreases) with the spread.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking it against that of a swaption on a swap with no spread and a correspondingly adjusted fixed rate.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking it against a known good value.</p>
-<dt>*</p>
-<dd>the correctness of the returned value of cash settled swaptions is tested by checking the modified annuity against a value calculated without using the <code>Swaption</code> class.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a payer (resp. receiver) swaption decreases (resp. increases) with the strike.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a payer (resp. receiver) swaption increases (resp. decreases) with the spread.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking it against that of a swaption on a swap with no spread and a correspondingly adjusted fixed rate.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking it against a known good value.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value of cash settled swaptions is tested by checking the modified annuity against a value calculated without using the <code>Swaption</code> class.</dd></dl>
 </dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add greeks and explicit exercise lag</dl>
+<dd>add greeks and explicit exercise lag</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

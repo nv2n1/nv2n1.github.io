@@ -11,11 +11,8 @@ std::filesystem::hard_link_count - std::filesystem::hard_link_count
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     std::uintmax_t hard_link_count(const std::filesystem::path &amp;p);
-
 std::uintmax_t hard_link_count(const std::filesystem::path &amp;p, (1)(since C++ 17)
-
                                                                    std::error_code &amp;ec) noexcept;</code></pre> 
 Returns the number of hard links for the filesystem object identified by path p. 
 The non-throwing overload returns static_cast&lt;uintmax_t&gt;(-1) on errors. 
@@ -36,13 +33,9 @@ The overload that does not take a std::error_code&amp; parameter throws filesyst
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     // On a POSIX-style filesystem, each directory has at least 2 hard links:
     // itself and the special member pathname &quot;.&quot;

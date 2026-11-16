@@ -15,173 +15,157 @@ description: "opapmaquery"
  [-m <i>port</i>] [-n <i>mask</i>] [-e <i>mask</i>] [-w <i>mask</i>] </p>
 <h2>Options</h2>
 <dl>
-<dt>-v</p>
-<dd> Verbose output. Can be specified more than once for additional openib debugging and libibumad debugging. </p>
-<dt>-s <i>sl</i></p>
-<dd> Specifies different service level. Default is 0. </p>
-<dt>-l <i>lid</i></p>
-<dd> Destination LID. Default is local port. </p>
-<dt>-h <i>hfi</i></p>
-<dd> HFI, numbered 1..n. Using 0 specifies that the -p <i>port</i> port is a system-wide port number. Default is 0. </p>
-<dt>-p <i>port</i></p>
-<dd> Port, numbered 1..n. If -h <i>hfi</i> is 0, then <i>port</i> is a system-wide port number. Default is first active port. </p>
-<dt>-o <i>otype</i></p>
-<dd> Output type. Default is getportstatus. </p>
+<dt>-v</dt>
+<dd> Verbose output. Can be specified more than once for additional openib debugging and libibumad debugging. </dd>
+<dt>-s <i>sl</i></dt>
+<dd> Specifies different service level. Default is 0. </dd>
+<dt>-l <i>lid</i></dt>
+<dd> Destination LID. Default is local port. </dd>
+<dt>-h <i>hfi</i></dt>
+<dd> HFI, numbered 1..n. Using 0 specifies that the -p <i>port</i> port is a system-wide port number. Default is 0. </dd>
+<dt>-p <i>port</i></dt>
+<dd> Port, numbered 1..n. If -h <i>hfi</i> is 0, then <i>port</i> is a system-wide port number. Default is first active port. </dd>
+<dt>-o <i>otype</i></dt>
+<dd> Output type. Default is getportstatus. </dd>
 <dt>
-<dd> Valid output types are:</p>
+</dt><dd> Valid output types are:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> classportinfo List of port info records. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> getportstatus List of port status records. </p>
-<dt>
-<dd> [-m port] [-w vl mask]</dl>
+</dd><dt>
+</dt><dd> [-m port] [-w vl mask]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> clearportstatus Clears the port status. </p>
-<dt>
-<dd> [-n port mask] [-e counter mask] [-w vl mask]</dl>
+</dd><dt>
+</dt><dd> [-n port mask] [-e counter mask] [-w vl mask]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> getdatacounters List of data counters. </p>
-<dt>
-<dd> [-n port mask] [-w vl mask]</dl>
+</dd><dt>
+</dt><dd> [-n port mask] [-w vl mask]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> geterrorcounters List of error counters. </p>
-<dt>
-<dd> [-n port mask] [-w vl mask]</dl>
+</dd><dt>
+</dt><dd> [-n port mask] [-w vl mask]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> geterrorinfo List of error info. </p>
-<dt>
-<dd> [-n port mask]</dl>
+</dd><dt>
+</dt><dd> [-n port mask]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> clearerrorinfo Clears the error info. </p>
-<dt>
-<dd> [-n port mask] [-e counter mask]</dl>
+</dd><dt>
+</dt><dd> [-n port mask] [-e counter mask]</dd></dl>
 </dl>
-<dt><code>-h and -p options permit a variety of selections:</code></p>
+<dt><code>-h and -p options permit a variety of selections:</code></dt>
 <dd>
-<dt>-h 0</p>
-<dd> First active port in system (default). </p>
-<dt>-h 0 -p 0</p>
-<dd> First active port in system. </p>
-<dt>-h <i>x</i></p>
-<dd> First active port on HFI <i>x</i>. </p>
-<dt>-h <i>x</i>#8217#160;-p 0</p>
-<dd> First active port on HFI <i>x</i>. </p>
-<dt>-h 0 -p <i>y</i></p>
-<dd> Port <i>y</i>#8217#160;within system (no matter which ports are active). </p>
-<dt>-h <i>x</i>#8217#160;-p <i>y</i></p>
-<dd> HFI <i>x</i>, port <i>y</i>. </p>
-<dt><code>otype options vary by report</code></p>
+</dd><dt>-h 0</dt>
+<dd> First active port in system (default). </dd>
+<dt>-h 0 -p 0</dt>
+<dd> First active port in system. </dd>
+<dt>-h <i>x</i></dt>
+<dd> First active port on HFI <i>x</i>. </dd>
+<dt>-h <i>x</i>#8217#160;-p 0</dt>
+<dd> First active port on HFI <i>x</i>. </dd>
+<dt>-h 0 -p <i>y</i></dt>
+<dd> Port <i>y</i>#8217#160;within system (no matter which ports are active). </dd>
+<dt>-h <i>x</i>#8217#160;-p <i>y</i></dt>
+<dd> HFI <i>x</i>, port <i>y</i>. </dd>
+<dt><code>otype options vary by report</code></dt>
 <dd>
-<dt>-m <i>port</i></p>
-<dd> Port in destination device to query/clear. Required when using -l option for all but -o classportinfo. </p>
-<dt>-n <i>mask</i></p>
-<dd> Port mask, in hexadecimal. Bits represent ports 63-0. For example: 0x2 for port 1, 0x6 for ports 1, 2. </p>
-<dt>-e <i>mask</i></p>
-<dd> Counter/error select mask, in hexadecimal. The following lists &quot;Mask &#8211; Bit &#8211; Location for Counters&quot;. Where applicable, location &quot;for Error Info&quot; is presented. The default is all bits set (0xffffffe0). </p>
+</dd><dt>-m <i>port</i></dt>
+<dd> Port in destination device to query/clear. Required when using -l option for all but -o classportinfo. </dd>
+<dt>-n <i>mask</i></dt>
+<dd> Port mask, in hexadecimal. Bits represent ports 63-0. For example: 0x2 for port 1, 0x6 for ports 1, 2. </dd>
+<dt>-e <i>mask</i></dt>
+<dd> Counter/error select mask, in hexadecimal. The following lists &quot;Mask &#8211; Bit &#8211; Location for Counters&quot;. Where applicable, location &quot;for Error Info&quot; is presented. The default is all bits set (0xffffffe0). </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> 0x80000000 &#8211; 31 &#8211; Transmit Data For Error Info: Receive Error Info </p>
-<dt>&bull;</p>
-<dd> 0x40000000 &#8211; 30 &#8211; Receive Data For Error Info: Excessive Buffer Overrun </p>
-<dt>&bull;</p>
-<dd> 0x20000000 &#8211; 29 &#8211; Transmit Packets For Error Info: Transmit Const Error Info </p>
-<dt>&bull;</p>
-<dd> 0x10000000 &#8211; 28 &#8211; Receive Packets For Error Info: Receive Const Error Info </p>
-<dt>&bull;</p>
-<dd> 0x08000000 &#8211; 27 &#8211; Multicast Transmit Packets For Error Info: Receive Switch Relay Error Info </p>
-<dt>&bull;</p>
-<dd> 0x04000000 &#8211; 26 &#8211; Multicast Receive Packets For Error Info: Uncorrectable Error Info </p>
-<dt>&bull;</p>
-<dd> 0x02000000 &#8211; 25 &#8211; Transmit Wait For Error Info: FM Configuration Error Info </p>
-<dt>&bull;</p>
-<dd> 0x01000000 &#8211; 24 &#8211; Congestion Discards </p>
-<dt>&bull;</p>
-<dd> 0x00800000 &#8211; 23 &#8211; Receive FECN </p>
-<dt>&bull;</p>
-<dd> 0x00400000 &#8211; 22 &#8211; Receive BECN </p>
-<dt>&bull;</p>
-<dd> 0x00200000 &#8211; 21 &#8211; Transmit Time Cong. </p>
-<dt>&bull;</p>
-<dd> 0x00100000 &#8211; 20 &#8211; Transmit Time Wasted BW </p>
-<dt>&bull;</p>
-<dd> 0x00080000 &#8211; 19 &#8211; Transmit Time Wait Data </p>
-<dt>&bull;</p>
-<dd> 0x00040000 &#8211; 18 &#8211; Receive Bubble </p>
-<dt>&bull;</p>
-<dd> 0x00020000 &#8211; 17 &#8211; Mark FECN </p>
-<dt>&bull;</p>
-<dd> 0x00010000 &#8211; 16 &#8211; Receive Constraint Errors </p>
-<dt>&bull;</p>
-<dd> 0x00008000 &#8211; 15 &#8211; Receive Switch Relay </p>
-<dt>&bull;</p>
-<dd> 0x00004000 &#8211; 14 &#8211; Transmit Discards </p>
-<dt>&bull;</p>
-<dd> 0x00002000 &#8211; 13 &#8211; Transmit Constraint Errors </p>
-<dt>&bull;</p>
-<dd> 0x00001000 &#8211; 12 &#8211; Receive Remote Physical Errors </p>
-<dt>&bull;</p>
-<dd> 0x00000800 &#8211; 11 &#8211; Local Link Integrity </p>
-<dt>&bull;</p>
-<dd> 0x00000400 &#8211; 10 &#8211; Receive Errors </p>
-<dt>&bull;</p>
-<dd> 0x00000200 &#8211; 9 &#8211; Exc. Buffer Overrun </p>
-<dt>&bull;</p>
-<dd> 0x00000100 &#8211; 8 &#8211; FM Configuration Errors </p>
-<dt>&bull;</p>
-<dd> 0x00000080 &#8211; 7 &#8211; Link Error Recovery </p>
-<dt>&bull;</p>
-<dd> 0x00000040 &#8211; 6 &#8211; Link Error Downed </p>
-<dt>&bull;</p>
-<dd> 0x00000020 &#8211; 5 &#8211; Uncorrectable Errors </p>
+<dt>&bull;</dt>
+<dd> 0x80000000 &#8211; 31 &#8211; Transmit Data For Error Info: Receive Error Info </dd>
+<dt>&bull;</dt>
+<dd> 0x40000000 &#8211; 30 &#8211; Receive Data For Error Info: Excessive Buffer Overrun </dd>
+<dt>&bull;</dt>
+<dd> 0x20000000 &#8211; 29 &#8211; Transmit Packets For Error Info: Transmit Const Error Info </dd>
+<dt>&bull;</dt>
+<dd> 0x10000000 &#8211; 28 &#8211; Receive Packets For Error Info: Receive Const Error Info </dd>
+<dt>&bull;</dt>
+<dd> 0x08000000 &#8211; 27 &#8211; Multicast Transmit Packets For Error Info: Receive Switch Relay Error Info </dd>
+<dt>&bull;</dt>
+<dd> 0x04000000 &#8211; 26 &#8211; Multicast Receive Packets For Error Info: Uncorrectable Error Info </dd>
+<dt>&bull;</dt>
+<dd> 0x02000000 &#8211; 25 &#8211; Transmit Wait For Error Info: FM Configuration Error Info </dd>
+<dt>&bull;</dt>
+<dd> 0x01000000 &#8211; 24 &#8211; Congestion Discards </dd>
+<dt>&bull;</dt>
+<dd> 0x00800000 &#8211; 23 &#8211; Receive FECN </dd>
+<dt>&bull;</dt>
+<dd> 0x00400000 &#8211; 22 &#8211; Receive BECN </dd>
+<dt>&bull;</dt>
+<dd> 0x00200000 &#8211; 21 &#8211; Transmit Time Cong. </dd>
+<dt>&bull;</dt>
+<dd> 0x00100000 &#8211; 20 &#8211; Transmit Time Wasted BW </dd>
+<dt>&bull;</dt>
+<dd> 0x00080000 &#8211; 19 &#8211; Transmit Time Wait Data </dd>
+<dt>&bull;</dt>
+<dd> 0x00040000 &#8211; 18 &#8211; Receive Bubble </dd>
+<dt>&bull;</dt>
+<dd> 0x00020000 &#8211; 17 &#8211; Mark FECN </dd>
+<dt>&bull;</dt>
+<dd> 0x00010000 &#8211; 16 &#8211; Receive Constraint Errors </dd>
+<dt>&bull;</dt>
+<dd> 0x00008000 &#8211; 15 &#8211; Receive Switch Relay </dd>
+<dt>&bull;</dt>
+<dd> 0x00004000 &#8211; 14 &#8211; Transmit Discards </dd>
+<dt>&bull;</dt>
+<dd> 0x00002000 &#8211; 13 &#8211; Transmit Constraint Errors </dd>
+<dt>&bull;</dt>
+<dd> 0x00001000 &#8211; 12 &#8211; Receive Remote Physical Errors </dd>
+<dt>&bull;</dt>
+<dd> 0x00000800 &#8211; 11 &#8211; Local Link Integrity </dd>
+<dt>&bull;</dt>
+<dd> 0x00000400 &#8211; 10 &#8211; Receive Errors </dd>
+<dt>&bull;</dt>
+<dd> 0x00000200 &#8211; 9 &#8211; Exc. Buffer Overrun </dd>
+<dt>&bull;</dt>
+<dd> 0x00000100 &#8211; 8 &#8211; FM Configuration Errors </dd>
+<dt>&bull;</dt>
+<dd> 0x00000080 &#8211; 7 &#8211; Link Error Recovery </dd>
+<dt>&bull;</dt>
+<dd> 0x00000040 &#8211; 6 &#8211; Link Error Downed </dd>
+<dt>&bull;</dt>
+<dd> 0x00000020 &#8211; 5 &#8211; Uncorrectable Errors </dd>
 </dl>
 </dl>
-<dt>-w <i>mask</i></p>
-<dd> Virtual Lane Select Mask, in hexadecimal. Bits represent VL number 31-0. For example, 0x1 for VL 0, 0x3 for VL 0,1. Default is none. </p>
+<dt>-w <i>mask</i></dt>
+<dd> Virtual Lane Select Mask, in hexadecimal. Bits represent VL number 31-0. For example, 0x1 for VL 0, 0x3 for VL 0,1. Default is none. </dd>
 </dl>
 <h2>Examples</h2>
 <p> opapmaquery -o classportinfo </p>

@@ -54,10 +54,10 @@ struct mntent *getmntent_r(FILE *streamp, struct mntent *mntbuf,
 <p> The <code>hasmntopt</code>() function returns the address of the substring if a match is found and NULL otherwise.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/fstab</i></p>
-<dd> filesystem description file</p>
-<dt><i>/etc/mtab</i></p>
-<dd> mounted filesystem description file</dl>
+<dt><i>/etc/fstab</i></dt>
+<dd> filesystem description file</dd>
+<dt><i>/etc/mtab</i></dt>
+<dd> mounted filesystem description file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -15,12 +15,12 @@ description: "install – Installation Before installing QuantLib, make sure tha
 <p>&nbsp;<wbr><a rel="nofollow" href="http://quantlib.org/download.shtml">http://quantlib.org/download.shtml</a> </p>
 <p> After uncompressing the sources:</p>
 <dl>
-<dt>1.</p>
-<dd> `cd&#8217; to the QuantLib directory and type `./configure&#8217; to configure the package for your system; see the <code>User configuration</code> section for configuration options.</p>
-<dt>2.</p>
-<dd> Type `make&#8217; to compile the package.</p>
-<dt>3.</p>
-<dd> Type `make install&#8217; to install the library. This might require administrative privileges.</dl>
+<dt>1.</dt>
+<dd> `cd&#8217; to the QuantLib directory and type `./configure&#8217; to configure the package for your system; see the <code>User configuration</code> section for configuration options.</dd>
+<dt>2.</dt>
+<dd> Type `make&#8217; to compile the package.</dd>
+<dt>3.</dt>
+<dd> Type `make install&#8217; to install the library. This might require administrative privileges.</dd></dl>
 <h2>Win32</h2>
 <p> An installer for the source distribution is available at </p>
 <p>&nbsp;<wbr><a rel="nofollow" href="http://quantlib.org/download.shtml">http://quantlib.org/download.shtml</a> </p>

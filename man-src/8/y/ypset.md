@@ -14,20 +14,20 @@ description: "ypset – bind ypbind to a particular NIS server"
 <p>In order to run <code>ypset</code>, <code>ypbind</code> must be initiated with the <code>-ypset</code> or <code>-ypsetme</code> options. See <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8). <code>ypset</code> tells <code>ypbind</code> to get NIS services for the specified <i>domain</i> from the <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8) process running on <i>server.</i> In cases where several hosts on the local net are supplying NIS services, it is possible for <code>ypbind</code> to rebind to another host even while you attempt to find out if the <code>ypset</code> operation succeeded. For example, you can type:</p>
 <dl>
 <dd>
-<dt><code>example% ypset host1</p>
+</dd><dt><code>example% ypset host1</dt>
 <dd>
-<dt>example% ypwhich</p>
+</dd><dt>example% ypwhich</dt>
 <dd>
-<dt>host2</p>
-<dd></dl>
+</dd><dt>host2</dt>
+<dd></dd></dl>
 <p> which can be confusing. This is a function of the NIS subsystem&#8217;s attempt to know always a running NIS server, and occurs when host1 does not respond to ypbind because it is not running ypserv (or is overloaded), and host2, running ypserv, gets the binding. </code><i>Server</i> indicates the NIS server to bind to, and must be specified as a name or an IP address. This will work only if the node has a current valid binding for the domain in question, and <code>ypbind</code> has been set to allow use of <code>ypset</code>. In most cases, <i>server</i> should be specified as an IP address. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code><i> domain</i></p>
-<dd>Specify a domain other than the default domain as returned by <code>domainname</code>(8).</p>
-<dt><code>-h</code><i> hostname</i></p>
+<dt><code>-d</code><i> domain</i></dt>
+<dd>Specify a domain other than the default domain as returned by <code>domainname</code>(8).</dd>
+<dt><code>-h</code><i> hostname</i></dt>
 <dd>Set the NIS binding on host <i>hostname</i><br />
-&nbsp;<wbr>instead of the local machine.</dl>
+&nbsp;<wbr>instead of the local machine.</dd></dl>
 <h2>See Also</h2>
 <p><code>domainname</code>(8), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code>ypcat</code>(8), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
 <h2>Author</h2>

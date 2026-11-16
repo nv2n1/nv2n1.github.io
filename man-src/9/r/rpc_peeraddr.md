@@ -15,15 +15,15 @@ rpc_peeraddr - extract remote peer address from clnt's xprt
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client structure</dl>
+<dl><dd></dd><dd>RPC client structure</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>target buffer</dl>
+<dl><dd>target buffer</dd></dl>
  
 
  <i>bufsize</i>
-<dl><dd>length of target buffer</dl>
+<dl><dd>length of target buffer</dd></dl>
 
 <h2>Description</h2>
 

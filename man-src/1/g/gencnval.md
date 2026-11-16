@@ -16,24 +16,24 @@ description: "gencnval – compile the converters aliases file"
 <p> If <i>converterfile</i> is not provided, the default ICU <code>convrtrs.txt</code> file is used.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help about usage and exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display verbose output. This information can include information about conflicting aliases and the converters the aliases resolve to.</p>
-<dt><code>-c</code>, <code>&#8211;copyright</code></p>
-<dd> Include a copyright notice in the binary data.</p>
-<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></p>
-<dd> Set the source directory to <i>source</i>. The default source directory is specified by the environment variable <code>ICU_DATA</code>.</p>
-<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></p>
-<dd> Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code>.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help about usage and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display verbose output. This information can include information about conflicting aliases and the converters the aliases resolve to.</dd>
+<dt><code>-c</code>, <code>&#8211;copyright</code></dt>
+<dd> Include a copyright notice in the binary data.</dd>
+<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></dt>
+<dd> Set the source directory to <i>source</i>. The default source directory is specified by the environment variable <code>ICU_DATA</code>.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></dt>
+<dd> Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>ICU_DATA</code></p>
-<dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dl>
+<dt><code>ICU_DATA</code></dt>
+<dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>icu/source/data/mappings/convrtrs.txt</code></p>
-<dd> Description of ICU&#8217;s converters and their aliases. This data file is not normally installed, and it is available as a part of ICU source code.</dl>
+<dt><code>icu/source/data/mappings/convrtrs.txt</code></dt>
+<dd> Description of ICU&#8217;s converters and their aliases. This data file is not normally installed, and it is available as a part of ICU source code.</dd></dl>
 <h2>VERSION</h2>
 <p> 70.1</p>
 <h2>COPYRIGHT</h2>

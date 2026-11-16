@@ -15,14 +15,14 @@ description: "bundle-viz – Generates a visual dependency graph for your Gemfil
 <p> The associated gems must also be installed via <code>bundle <a href="/docs/linux/man/1-install/">install</a>(1)</code> <i>bundle-install.1.html</i>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;file</code>, <code>-f</code></p>
-<dd>The name to use for the generated file. See <code>&#8211;format</code> option</p>
-<dt><code>&#8211;format</code>, <code>-F</code></p>
-<dd>This is output format option. Supported format is png, jpg, svg, dot &#8230;</p>
-<dt><code>&#8211;requirements</code>, <code>-R</code></p>
-<dd>Set to show the version of each required dependency.</p>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd>Set to show each gem version.</p>
-<dt><code>&#8211;without</code>, <code>-W</code></p>
-<dd>Exclude gems that are part of the specified named group. </p>
+<dt><code>&#8211;file</code>, <code>-f</code></dt>
+<dd>The name to use for the generated file. See <code>&#8211;format</code> option</dd>
+<dt><code>&#8211;format</code>, <code>-F</code></dt>
+<dd>This is output format option. Supported format is png, jpg, svg, dot &#8230;</dd>
+<dt><code>&#8211;requirements</code>, <code>-R</code></dt>
+<dd>Set to show the version of each required dependency.</dd>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd>Set to show each gem version.</dd>
+<dt><code>&#8211;without</code>, <code>-W</code></dt>
+<dd>Exclude gems that are part of the specified named group. </dd>
 </dl>

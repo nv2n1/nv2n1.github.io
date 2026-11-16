@@ -10,7 +10,6 @@ description: "uuid_copy – copy a UUID value"
 <p>uuid_copy &#8211; copy a UUID value</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;uuid.h&gt;
-
 void uuid_copy(uuid_t dst, uuid_t src);</code></pre>
 <h2>Description</h2>
 <p>The <code>uuid_copy</code> function copies the UUID variable <i>src</i> to <i>dst</i>.</p>

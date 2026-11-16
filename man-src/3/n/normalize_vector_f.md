@@ -10,7 +10,6 @@ description: "normalize_vector, normalize_vector_f – Converts the vector to a 
 <p>normalize_vector, normalize_vector_f &#8211; Converts the vector to a unit vector. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void normalize_vector(fixed *x, fixed *y, fixed *z);
 void normalize_vector_f(float *x, float *y, float *z);</code></pre>
 <h2>Description</h2>

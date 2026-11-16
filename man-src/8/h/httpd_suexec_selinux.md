@@ -91,8 +91,8 @@ description: "httpd_suexec_selinux – Security Enhanced Linux Policy for the ht
 <p> <code>httpd_suexec_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_suexec_exec_t type, if you want to transition an executable to the httpd_suexec_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/apache(2)?/suexec(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/apache(2)?/suexec(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </dd>
 </dl>
 <p> <code>httpd_suexec_tmp_t</code> </p>
 <p> &#8211; Set files with the httpd_suexec_tmp_t type, if you want to store httpd suexec temporary files in the /tmp directories. </p>

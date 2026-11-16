@@ -16,13 +16,13 @@ description: "retrace-server-worker – Executes the retrace job."
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-<dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[]<font SIZE="-2">[1]</font>&gt;</dl>
+</dt><dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[]<font SIZE="-2">[1]</font>&gt;</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> _mtoman [at] redhat.com_</p>
+<dt> 1.</dt>
+<dd> _mtoman [at] redhat.com_</dd>
 <dl>
 <dt>
-<dd> mailto:_mtoman [at] redhat.com_</dl>
+</dt><dd> mailto:_mtoman [at] redhat.com_</dd></dl>
 </dl>
 <h2>Index</h2>

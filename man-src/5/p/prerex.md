@@ -20,34 +20,36 @@ description: "prerex_format — a format for prerequisite-chart descriptions"
 <h2>Course Boxes</h2>
 <p>The instructions producing course boxes have the following forms:</p>
 <dl>
-<dt> <code>\halfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
-<dt> <code>ullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
+<dt> <code>\halfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dt>
+<dt> <code>ullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dt>
 <dt> <code>
-eqhalfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
+eqhalfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dt>
 <dt> <code>
-eqfullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
-<dt> <code>\opthalfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
-<dt> <code>\optfullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dl>
-<dd>where <i>x,y</i> are the coordinates of the <i>centerpoint </i> of the box, relative to the origin of the coordinate system at the lower-left corner of the diagram. The <i>code,</i> <i>title,</i> and <i>timetable</i> arguments are arbitrary (well-bracketed) text, possibly with LaTeX markup. </p>
+eqfullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dt>
+<dt> <code>\opthalfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dt>
+<dt> <code>\optfullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dt></dl>
+<dd>where <i>x,y</i> are the coordinates of the <i>centerpoint </i> of the box, relative to the origin of the coordinate system at the lower-left corner of the diagram. The <i>code,</i> <i>title,</i> and <i>timetable</i> arguments are arbitrary (well-bracketed) text, possibly with LaTeX markup. </dd>
 <p> The following are similar but take an additional argument to specify the (non-default) background color of the course box:</p>
 <dl>
-<dd><code>\halfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
-<dd><code>ullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
+<dd><code>\halfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dd>
+<dd><code>ullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dd>
 <dd><code>
-eqhalfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
+eqhalfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dd>
 <dd><code>
-eqfullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
-<dd><code>\opthalfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
-<dd><code>\optfullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dl>
+eqfullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dd>
+<dd><code>\opthalfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dd>
+<dd><code>\optfullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dd></dl>
 <h2>Mini Course Boxes And Text</h2>
 <p>A mini course is produced by an instruction of the form</p>
 <dl>
-<dt> <code>\mini</code><i> x,y</i><code>:{</code><i>code</i><code>}</code></p>
-<dd>A text line is inserted into the chart by an instruction of the form</p>
-<dt> <code>	ext</code><i> x,y</i><code>:{</code><i>line-of-text</i><code>}</code></p>
-<dd>The maximum allowed length of a course-code may be smaller that the maximum allowed for a line of text.</dl>
+<dt> <code>\mini</code><i> x,y</i><code>:{</code><i>code</i><code>}</code></dt>
+<dd>A text line is inserted into the chart by an instruction of the form</dd>
+<dt> <code>	ext</code><i> x,y</i><code>:{</code><i>line-of-text</i><code>}</code></dt>
+<dd>The maximum allowed length of a course-code may be smaller that the maximum allowed for a line of text.</dd></dl>
 <h2>Arrows</h2>
 <p>Arrows between course boxes (or from a mini to a course box) are produced by instructions of the form</p>
 <dl>
-<dt> <code>\prereq</code><i> x0,y0,x1,y1</i><code>:</code></p>
+<dt> <code>\prereq</code><i> x0,y0,x1,y1</i><code>:</code></dt>
 <dt> <code>
+</dt></dl>
+</code>

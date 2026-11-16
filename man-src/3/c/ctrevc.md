@@ -19,33 +19,29 @@ description: "ctrevc.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CTREVC computes some or all of the right and/or left eigenvectors of
  a complex upper triangular matrix T.
  Matrices of this type are produced by the Schur factorization of
  a complex general matrix:  A = Q*T*Q**H, as computed by CHSEQR.
- 
  The right eigenvector x and the left eigenvector y of T corresponding
  to an eigenvalue w are defined by:
- 
               T*x = w*x,     (y**H)*T = w*(y**H)
- 
  where y**H denotes the conjugate transpose of the vector y.
  The eigenvalues are not input to this routine, but are read directly
  from the diagonal of T.
- 
  This routine returns the matrices X and/or Y of right and left
  eigenvectors of T, or the products Q*X and/or Q*Y, where Q is an
  input matrix.  If Q is the unitary factor that reduces a matrix A to
  Schur form T, then Q*X and Q*Y are the matrices of right and left
  eigenvectors of A.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
           = 'R':  compute right eigenvectors only;
@@ -145,18 +141,18 @@ LDVR &gt;= N.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The algorithm used in this program is basically backward (forward)
   substitution, with scaling to make the the code robust against
@@ -165,8 +161,9 @@ LDVR &gt;= N.
   magnitude has magnitude 1; here the magnitude of a complex number
   (x,y) is taken to be |x| + |y|.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 218 of file ctrevc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

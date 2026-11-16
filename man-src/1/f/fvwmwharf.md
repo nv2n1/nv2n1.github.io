@@ -23,32 +23,32 @@ description: "FvwmWharf – the AfterStep application \"dock\" module ported to 
 <p>FvwmWharf should be invoked in the same way as other fvwm modules. </p>
 <h2>Configuration Options</h2>
 <dl>
-<dt>*FvwmWharfAnimate</p>
-<dd>If specified, the opening and closing of Folders will be animated, rather than simply drawn in one frame. </p>
-<dt>*FvwmWharfAnimateMain</p>
-<dd>Designates that full-length Wharf windows will be animated. </p>
-<dt>*FvwmWharfBgColor <i>color</i></p>
-<dd>If <i>*FvwmWharfTextureType 0</i> is specified, <i>FvwmWharf</i>&#8216;s buttons will be filled with <i>color</i>. </p>
-<dt>*FvwmWharfColorset <i>colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> for the background of all buttons. This option disables the options &#8216;BgColor&#8217;, &#8216;TextureType&#8217; and &#8216;TextureColor&#8217; if specified after these and is disabled by them if used before any of them in the configuration. Please refer to the man page of the FvwmTheme module for details about colorsets. </p>
-<dt>*FvwmWharfColumns <i>columns</i></p>
-<dd>Specifies the number of columns of buttons to be created. If unspecified, the number of columns will be set to 1. If the columns are set to a number greater than 1 then there will be that number of columns with enough rows to satisfy the requested number of buttons. </p>
-<dt>*FvwmWharfForceSize</p>
-<dd>If specified, will force pixmaps larger than 64&#215;64 to the default size. Pixmaps smaller than 64&#215;64 are not supported. </p>
-<dt>*FvwmWharfFullPush</p>
-<dd>If specified, the entire FvwmWharf button background will be moved down and to the right when pushed. Especially useful with *FvwmWharfNoBorder textures. </p>
-<dt>*FvwmWharfGeometry <i>geometry</i></p>
-<dd>Specifies the FvwmWharf window location and/or size. If the size is not specified, FvwmWharf will auto-size itself in a reasonable manner. The geometry is a standard X11 window geometry specification. This option is pre-set in the Nextstep(tm) style section for a consistent look and feel with NEXTSTEP(tm). Secondary FvwmWharf invocations from links may have their own geometry. </p>
-<dt>*FvwmWharfMaxColors <i>number</i></p>
-<dd>Specifies the maximum <i>number</i> of colors to use on a gradient fill. </p>
-<dt>*FvwmWharfNoBorder</p>
-<dd>Denotes that beveled borders should not be drawn around the FvwmWharf button. Useful with textures that include their own bevels. </p>
-<dt>*FvwmWharfPixmap <i>pixmap</i></p>
-<dd>Sets the pixmap file to be used as <i>FvwmWharf</i>&#8216;s button. To be used with <i>*FvwmWharfTextureType 128</i>. </p>
-<dt>*FvwmWharfTextureColor <i>from</i> <i>to</i></p>
-<dd>When used with a <i>*FvwmWharfTextureType</i> of 1 to 5, designates the ends of the gradient range to be used on <i>FvwmWharf</i>&#8216;s buttons. </p>
-<dt>*FvwmWharfTextureType <i>type</i></p>
-<dd>Specifies the type of gradient fill to be used on <i>FvwmWharf</i>&#8216;s buttons. Valid values are: </p>
+<dt>*FvwmWharfAnimate</dt>
+<dd>If specified, the opening and closing of Folders will be animated, rather than simply drawn in one frame. </dd>
+<dt>*FvwmWharfAnimateMain</dt>
+<dd>Designates that full-length Wharf windows will be animated. </dd>
+<dt>*FvwmWharfBgColor <i>color</i></dt>
+<dd>If <i>*FvwmWharfTextureType 0</i> is specified, <i>FvwmWharf</i>&#8216;s buttons will be filled with <i>color</i>. </dd>
+<dt>*FvwmWharfColorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> for the background of all buttons. This option disables the options &#8216;BgColor&#8217;, &#8216;TextureType&#8217; and &#8216;TextureColor&#8217; if specified after these and is disabled by them if used before any of them in the configuration. Please refer to the man page of the FvwmTheme module for details about colorsets. </dd>
+<dt>*FvwmWharfColumns <i>columns</i></dt>
+<dd>Specifies the number of columns of buttons to be created. If unspecified, the number of columns will be set to 1. If the columns are set to a number greater than 1 then there will be that number of columns with enough rows to satisfy the requested number of buttons. </dd>
+<dt>*FvwmWharfForceSize</dt>
+<dd>If specified, will force pixmaps larger than 64&#215;64 to the default size. Pixmaps smaller than 64&#215;64 are not supported. </dd>
+<dt>*FvwmWharfFullPush</dt>
+<dd>If specified, the entire FvwmWharf button background will be moved down and to the right when pushed. Especially useful with *FvwmWharfNoBorder textures. </dd>
+<dt>*FvwmWharfGeometry <i>geometry</i></dt>
+<dd>Specifies the FvwmWharf window location and/or size. If the size is not specified, FvwmWharf will auto-size itself in a reasonable manner. The geometry is a standard X11 window geometry specification. This option is pre-set in the Nextstep(tm) style section for a consistent look and feel with NEXTSTEP(tm). Secondary FvwmWharf invocations from links may have their own geometry. </dd>
+<dt>*FvwmWharfMaxColors <i>number</i></dt>
+<dd>Specifies the maximum <i>number</i> of colors to use on a gradient fill. </dd>
+<dt>*FvwmWharfNoBorder</dt>
+<dd>Denotes that beveled borders should not be drawn around the FvwmWharf button. Useful with textures that include their own bevels. </dd>
+<dt>*FvwmWharfPixmap <i>pixmap</i></dt>
+<dd>Sets the pixmap file to be used as <i>FvwmWharf</i>&#8216;s button. To be used with <i>*FvwmWharfTextureType 128</i>. </dd>
+<dt>*FvwmWharfTextureColor <i>from</i> <i>to</i></dt>
+<dd>When used with a <i>*FvwmWharfTextureType</i> of 1 to 5, designates the ends of the gradient range to be used on <i>FvwmWharf</i>&#8216;s buttons. </dd>
+<dt>*FvwmWharfTextureType <i>type</i></dt>
+<dd>Specifies the type of gradient fill to be used on <i>FvwmWharf</i>&#8216;s buttons. Valid values are: </dd>
 <pre>0 - No texture - use <i>FvwmWharfBgColor</i> to set the desired color
 1 - Gradient from upper-left to lower right
 2 - Horizontal one way gradient from top to bottom
@@ -57,8 +57,8 @@ description: "FvwmWharf – the AfterStep application \"dock\" module ported to 
 5 - Vertical cylindrical gradient from left/right to center
 128 - User specified pixmap</pre>
 <p>The default is the builtin <i>FvwmWharf</i> texture pixmap. </p>
-<dt>*FvwmWharf <i>label icon command</i></p>
-<dd>Specifies a window manager built-in command or folder to activate (folders will be discussed below), as described in the Fvwm man page, which should be executed when a button is pressed. The label field is an internal item that is still around from the GoodStuff module. The icon field specifies an X11 bitmap file, XPM color icon file, or a comma-delimited set of pixmaps containing the icon(s) to display on the button. FvwmWharf will search through the path specified in the ImagePath configuration item to find the icon file. </p>
+<dt>*FvwmWharf <i>label icon command</i></dt>
+<dd>Specifies a window manager built-in command or folder to activate (folders will be discussed below), as described in the Fvwm man page, which should be executed when a button is pressed. The label field is an internal item that is still around from the GoodStuff module. The icon field specifies an X11 bitmap file, XPM color icon file, or a comma-delimited set of pixmaps containing the icon(s) to display on the button. FvwmWharf will search through the path specified in the ImagePath configuration item to find the icon file. </dd>
 <p> NOTE: Icons must have one transparent pixel or the definition of a transparent color in order to be valid. </p>
 <p> If <i>command</i> is an fvwm Exec command, then the button will appear pushed in until the mouse button is released. </p>
 <p> A single extension to the fvwm built-in command set is provided. A command of the form: </p>

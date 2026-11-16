@@ -16,10 +16,10 @@ description: "XmStringHasSubstring — A compound string function that indicates
 <h2>Description</h2>
 <p><code>XmStringHasSubstring</code> indicates whether or not one compound string is contained within another.</p>
 <dl COMPACT>
-<dt><i>string</i></p>
-<dd>Specifies the compound string to be searched</p>
-<dt><i>substring</i></p>
-<dd>Specifies the compound string to be searched for</dl>
+<dt><i>string</i></dt>
+<dd>Specifies the compound string to be searched</dd>
+<dt><i>substring</i></dt>
+<dd>Specifies the compound string to be searched for</dd></dl>
 <h2>Return</h2>
 <p>Returns True if <i>substring</i> has a single text component and if its text is completely contained within any single text component of <i>string</i>; otherwise, it returns False.</p>
 <h2>Related</h2>

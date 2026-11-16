@@ -44,90 +44,74 @@ url: "/docs/linux/man/1-perlnewmod/"
  Before we even start scraping out the code, there are a few things we'll want to do in advance.
 <dl>
 <dt>Look around
-<dd> Dig into a bunch of modules to see how they're written. I'd suggest starting with Text::Tabs, since it's in the standard library and is nice and simple, and then looking at something a little more complex like File::Copy. For object oriented code, WWW::Mechanize or the <tt>&quot;Email::*&quot;</tt> modules provide some good examples. 
-
+</dt><dd> Dig into a bunch of modules to see how they're written. I'd suggest starting with Text::Tabs, since it's in the standard library and is nice and simple, and then looking at something a little more complex like File::Copy. For object oriented code, WWW::Mechanize or the <tt>&quot;Email::*&quot;</tt> modules provide some good examples. 
  These should give you an overall feel for how modules are laid out and written.
-<dt>Check it's new
-<dd> There are a lot of modules on <font SIZE="-1">CPAN,</font> and it's easy to miss one that's similar to what you're planning on contributing. Have a good plough through &lt;<a rel="nofollow" HREF="http://metacpan.org">http://metacpan.org</a>&gt; and make sure you're not the one reinventing the wheel!
-<dt>Discuss the need
-<dd> You might love it. You might feel that everyone else needs it. But there might not actually be any real demand for it out there. If you're unsure about the demand your module will have, consider asking the <tt>&quot;module-authors [at] perl.org&quot;</tt> mailing list (send an email to <tt>&quot;module-authors-subscribe [at] perl.org&quot;</tt> to subscribe; see &lt;<a rel="nofollow" HREF="http://lists.perl.org/list/module-authors.html">http://lists.perl.org/list/module-authors.html</a>&gt; for more information and a link to the archives).
-<dt>Choose a name
-<dd> Perl modules included on <font SIZE="-1">CPAN</font> have a naming hierarchy you should try to fit in with. See perlmodlib for more details on how this works, and browse around <font SIZE="-1">CPAN</font> and the modules list to get a feel of it. At the very least, remember this: modules should be title capitalised, (This::Thing) fit in with a category, and explain their purpose succinctly.
-<dt>Check again
-<dd> While you're doing that, make really sure you haven't missed a module similar to the one you're about to write. 
-
- When you've got your name sorted out and you're sure that your module is wanted and not currently available, it's time to start coding.</dl>
+</dd><dt>Check it's new
+</dt><dd> There are a lot of modules on <font SIZE="-1">CPAN,</font> and it's easy to miss one that's similar to what you're planning on contributing. Have a good plough through &lt;<a rel="nofollow" HREF="http://metacpan.org">http://metacpan.org</a>&gt; and make sure you're not the one reinventing the wheel!
+</dd><dt>Discuss the need
+</dt><dd> You might love it. You might feel that everyone else needs it. But there might not actually be any real demand for it out there. If you're unsure about the demand your module will have, consider asking the <tt>&quot;module-authors [at] perl.org&quot;</tt> mailing list (send an email to <tt>&quot;module-authors-subscribe [at] perl.org&quot;</tt> to subscribe; see &lt;<a rel="nofollow" HREF="http://lists.perl.org/list/module-authors.html">http://lists.perl.org/list/module-authors.html</a>&gt; for more information and a link to the archives).
+</dd><dt>Choose a name
+</dt><dd> Perl modules included on <font SIZE="-1">CPAN</font> have a naming hierarchy you should try to fit in with. See perlmodlib for more details on how this works, and browse around <font SIZE="-1">CPAN</font> and the modules list to get a feel of it. At the very least, remember this: modules should be title capitalised, (This::Thing) fit in with a category, and explain their purpose succinctly.
+</dd><dt>Check again
+</dt><dd> While you're doing that, make really sure you haven't missed a module similar to the one you're about to write. 
+ When you've got your name sorted out and you're sure that your module is wanted and not currently available, it's time to start coding.</dd></dl>
 
 <h3>Step-by-step: Making the module</h3>
 
 <dl>
 <dt>Start with <i>module-starter</i> or <i>h2xs</i>
-<dd> The <i>module-starter</i> utility is distributed as part of the Module::Starter <font SIZE="-1">CPAN</font> package. It creates a directory with stubs of all the necessary files to start a new module, according to recent ``best practice'' for module development, and is invoked from the command line, thus: 
-
+</dt><dd> The <i>module-starter</i> utility is distributed as part of the Module::Starter <font SIZE="-1">CPAN</font> package. It creates a directory with stubs of all the necessary files to start a new module, according to recent ``best practice'' for module development, and is invoked from the command line, thus: 
  <pre><code>
 module - starter-- module = Foo::Bar-- author = "Your Name" --email = yourname[at] cpan.org
 </code></pre> 
-
  If you do not wish to install the Module::Starter package from <font SIZE="-1">CPAN,</font> <i>h2xs</i> is an older tool, originally intended for the development of <font SIZE="-1">XS</font> modules, which comes packaged with the Perl distribution. 
-
  A typical invocation of h2xs for a pure Perl module is: 
-
  <pre>
     h2xs -AX --skip-exporter --use-new-tests -n Foo::Bar
 </pre> 
-
  The <tt>&quot;-A&quot;</tt> omits the Autoloader code, <tt>&quot;-X&quot;</tt> omits <font SIZE="-1">XS</font> elements, <tt>&quot;--skip-exporter&quot;</tt> omits the Exporter code, <tt>&quot;--use-new-tests&quot;</tt> sets up a modern testing environment, and <tt>&quot;-n&quot;</tt> specifies the name of the module.
-<dt>Use strict and warnings
-<dd> A module's code has to be warning and strict-clean, since you can't guarantee the conditions that it'll be used under. Besides, you wouldn't want to distribute code that wasn't warning or strict-clean anyway, right?
-<dt>Use Carp
-<dd> The Carp module allows you to present your error messages from the caller's perspective; this gives you a way to signal a problem with the caller and not your module. For instance, if you say this: 
-
+</dd><dt>Use strict and warnings
+</dt><dd> A module's code has to be warning and strict-clean, since you can't guarantee the conditions that it'll be used under. Besides, you wouldn't want to distribute code that wasn't warning or strict-clean anyway, right?
+</dd><dt>Use Carp
+</dt><dd> The Carp module allows you to present your error messages from the caller's perspective; this gives you a way to signal a problem with the caller and not your module. For instance, if you say this: 
  <pre>
     warn &quot;No hostname given&quot;;
 </pre> 
-
  the user will see something like this: 
-
  <pre>
  No hostname given at
  /usr/local/lib/perl5/site_perl/5.6.0/Net/Acme.pm line 123.
 </pre> 
-
  which looks like your module is doing something wrong. Instead, you want to put the blame on the user, and say this: 
-
  <pre>
     No hostname given at bad_code, line 10.
 </pre> 
-
  You do this by using Carp and replacing your <tt>&quot;warn&quot;</tt>s with <tt>&quot;carp&quot;</tt>s. If you need to <tt>&quot;die&quot;</tt>, say <tt>&quot;croak&quot;</tt> instead. However, keep <tt>&quot;warn&quot;</tt> and <tt>&quot;die&quot;</tt> in place for your sanity checks - where it really is your module at fault.
-<dt>Use Exporter - wisely!
-<dd> Exporter gives you a standard way of exporting symbols and subroutines from your module into the caller's namespace. For instance, saying <tt>&quot;use Net::Acme qw(&amp;frob)&quot;</tt> would import the <tt>&quot;frob&quot;</tt> subroutine. 
-
+</dd><dt>Use Exporter - wisely!
+</dt><dd> Exporter gives you a standard way of exporting symbols and subroutines from your module into the caller's namespace. For instance, saying <tt>&quot;use Net::Acme qw(&amp;frob)&quot;</tt> would import the <tt>&quot;frob&quot;</tt> subroutine. 
  The package variable <tt>@EXPORT</tt> will determine which symbols will get exported when the caller simply says <tt>&quot;use Net::Acme&quot;</tt> - you will hardly ever want to put anything in there. <tt>@EXPORT_OK</tt>, on the other hand, specifies which symbols you're willing to export. If you do want to export a bunch of symbols, use the <tt>%EXPORT_TAGS</tt> and define a standard export set - look at Exporter for more details.
-<dt>Use plain old documentation
-<dd> The work isn't over until the paperwork is done, and you're going to need to put in some time writing some documentation for your module. <tt>&quot;module-starter&quot;</tt> or <tt>&quot;h2xs&quot;</tt> will provide a stub for you to fill in; if you're not sure about the format, look at perlpod for an introduction. Provide a good synopsis of how your module is used in code, a description, and then notes on the syntax and function of the individual subroutines or methods. Use Perl comments for developer notes and <font SIZE="-1">POD</font> for end-user notes.
-<dt>Write tests
-<dd> You're encouraged to create self-tests for your module to ensure it's working as intended on the myriad platforms Perl supports; if you upload your module to <font SIZE="-1">CPAN,</font> a host of testers will build your module and send you the results of the tests. Again, <tt>&quot;module-starter&quot;</tt> and <tt>&quot;h2xs&quot;</tt> provide a test framework which you can extend - you should do something more than just checking your module will compile. Test::Simple and Test::More are good places to start when writing a test suite.
-<dt>Write the <i></i><font SIZE="-1"><i>README</i></font><i></i>
-<dd> If you're uploading to <font SIZE="-1">CPAN,</font> the automated gremlins will extract the <font SIZE="-1">README</font> file and place that in your <font SIZE="-1">CPAN</font> directory. It'll also appear in the main <i>by-module</i> and <i>by-category</i> directories if you make it onto the modules list. It's a good idea to put here what the module actually does in detail.
-<dt>Write <i>Changes</i>
-<dd> Add any user-visible changes since the last release to your <i>Changes</i> file.</dl>
+</dd><dt>Use plain old documentation
+</dt><dd> The work isn't over until the paperwork is done, and you're going to need to put in some time writing some documentation for your module. <tt>&quot;module-starter&quot;</tt> or <tt>&quot;h2xs&quot;</tt> will provide a stub for you to fill in; if you're not sure about the format, look at perlpod for an introduction. Provide a good synopsis of how your module is used in code, a description, and then notes on the syntax and function of the individual subroutines or methods. Use Perl comments for developer notes and <font SIZE="-1">POD</font> for end-user notes.
+</dd><dt>Write tests
+</dt><dd> You're encouraged to create self-tests for your module to ensure it's working as intended on the myriad platforms Perl supports; if you upload your module to <font SIZE="-1">CPAN,</font> a host of testers will build your module and send you the results of the tests. Again, <tt>&quot;module-starter&quot;</tt> and <tt>&quot;h2xs&quot;</tt> provide a test framework which you can extend - you should do something more than just checking your module will compile. Test::Simple and Test::More are good places to start when writing a test suite.
+</dd><dt>Write the <i></i><font SIZE="-1"><i>README</i></font><i></i>
+</dt><dd> If you're uploading to <font SIZE="-1">CPAN,</font> the automated gremlins will extract the <font SIZE="-1">README</font> file and place that in your <font SIZE="-1">CPAN</font> directory. It'll also appear in the main <i>by-module</i> and <i>by-category</i> directories if you make it onto the modules list. It's a good idea to put here what the module actually does in detail.
+</dd><dt>Write <i>Changes</i>
+</dt><dd> Add any user-visible changes since the last release to your <i>Changes</i> file.</dd></dl>
 
 <h3>Step-by-step: Distributing your module</h3>
 
 <dl>
 <dt>Get a <font SIZE="-1">CPAN</font> user <font SIZE="-1">ID</font>
-<dd> Every developer publishing modules on <font SIZE="-1">CPAN</font> needs a <font SIZE="-1">CPAN ID.</font> Visit <tt>&quot;&lt;<a rel="nofollow" HREF="http://pause.perl.org/">http://pause.perl.org/</a>&gt;&quot;</tt>, select ``Request <font SIZE="-1">PAUSE</font> Account'', and wait for your request to be approved by the <font SIZE="-1">PAUSE</font> administrators.
-<dt>&quot;perl Makefile.PL; make test; make distcheck; make dist&quot;
-<dd> Once again, <tt>&quot;module-starter&quot;</tt> or <tt>&quot;h2xs&quot;</tt> has done all the work for you. They produce the standard <tt>&quot;Makefile.PL&quot;</tt> you see when you download and install modules, and this produces a Makefile with a <tt>&quot;dist&quot;</tt> target. 
-
+</dt><dd> Every developer publishing modules on <font SIZE="-1">CPAN</font> needs a <font SIZE="-1">CPAN ID.</font> Visit <tt>&quot;&lt;<a rel="nofollow" HREF="http://pause.perl.org/">http://pause.perl.org/</a>&gt;&quot;</tt>, select ``Request <font SIZE="-1">PAUSE</font> Account'', and wait for your request to be approved by the <font SIZE="-1">PAUSE</font> administrators.
+</dd><dt>&quot;perl Makefile.PL; make test; make distcheck; make dist&quot;
+</dt><dd> Once again, <tt>&quot;module-starter&quot;</tt> or <tt>&quot;h2xs&quot;</tt> has done all the work for you. They produce the standard <tt>&quot;Makefile.PL&quot;</tt> you see when you download and install modules, and this produces a Makefile with a <tt>&quot;dist&quot;</tt> target. 
  Once you've ensured that your module passes its own tests - always a good thing to make sure - you can <tt>&quot;make distcheck&quot;</tt> to make sure everything looks <font SIZE="-1">OK,</font> followed by <tt>&quot;make dist&quot;</tt>, and the Makefile will hopefully produce you a nice tarball of your module, ready for upload.
-<dt>Upload the tarball
-<dd> The email you got when you received your <font SIZE="-1">CPAN ID</font> will tell you how to log in to <font SIZE="-1">PAUSE,</font> the Perl Authors Upload SErver. From the menus there, you can upload your module to <font SIZE="-1">CPAN.</font> 
-
+</dd><dt>Upload the tarball
+</dt><dd> The email you got when you received your <font SIZE="-1">CPAN ID</font> will tell you how to log in to <font SIZE="-1">PAUSE,</font> the Perl Authors Upload SErver. From the menus there, you can upload your module to <font SIZE="-1">CPAN.</font> 
  Alternatively you can use the <i>cpan-upload</i> script, part of the CPAN::Uploader distribution on <font SIZE="-1">CPAN.</font>
-<dt>Fix bugs!
-<dd> Once you start accumulating users, they'll send you bug reports. If you're lucky, they'll even send you patches. Welcome to the joys of maintaining a software project...</dl>
+</dd><dt>Fix bugs!
+</dt><dd> Once you start accumulating users, they'll send you bug reports. If you're lucky, they'll even send you patches. Welcome to the joys of maintaining a software project...</dd></dl>
 
 <h2>AUTHOR</h2>
 

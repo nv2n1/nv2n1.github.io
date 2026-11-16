@@ -15,15 +15,15 @@ description: "net-snmp-create-v3-user – create a SNMPv3 user in net-snmp confi
 <p> The <i>net-snmp-create-v3-user</i> shell script is designed to create a new user in net-snmp configuration file (/var/net-snmp/snmpd.conf by default). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> displays the net-snmp version number</p>
-<dt><code>-ro</code></p>
-<dd> create an user with read-only permissions</p>
-<dt><code>-a authpass</code></p>
-<dd> specify authentication password</p>
-<dt><code>-x privpass</code></p>
-<dd> specify encryption password</p>
-<dt><code>-X DES|AES</code></p>
-<dd> specify encryption algorithm </p>
+<dt><code>&#8211;version</code></dt>
+<dd> displays the net-snmp version number</dd>
+<dt><code>-ro</code></dt>
+<dd> create an user with read-only permissions</dd>
+<dt><code>-a authpass</code></dt>
+<dd> specify authentication password</dd>
+<dt><code>-x privpass</code></dt>
+<dd> specify encryption password</dd>
+<dt><code>-X DES|AES</code></dt>
+<dd> specify encryption algorithm </dd>
 </dl>
 <h2>Index</h2>

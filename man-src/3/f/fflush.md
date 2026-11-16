@@ -22,8 +22,8 @@ description: "fflush – flush a stream"
 <p> Upon successful completion 0 is returned. Otherwise, <code>EOF</code> is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>stream</i> is not an open stream, or is not open for writing.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>stream</i> is not an open stream, or is not open for writing.</dd></dl>
 <p> The function <code>fflush</code>() may also fail and set <i>errno</i> for any of the errors specified for <code><a href="/docs/linux/man/2-write/">write</a></code>(2).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

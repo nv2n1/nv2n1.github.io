@@ -18,22 +18,22 @@ description: "wimlib-imagex-info – Display information about a WIM file, or ch
 <p> <code>wimlib-imagex info</code> does not support modifying a split WIM, although you may display information about one.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;boot</code></p>
-<dd> Indicates that the specified image is to be made the bootable image of the WIM archive.</p>
-<dt><code>&#8211;check</code></p>
-<dd> When reading <i>WIMFILE</i>, verify its integrity if the integrity table is present; additionally if an action that requires modifying the WIM archive is specified, include an integrity table in the modified WIM. If this option is not specified and <i>WIMFILE</i> is modified, an integrity table will be included in the modified WIM if and only if there was one before.</p>
-<dt><code>&#8211;nocheck</code></p>
-<dd> If an action that requires modifying the WIM archive is specified, do not include an integrity table in the modified WIM. If this option is not specified and <i>WIMFILE</i> is modified, an integrity table will be included in the modified WIM if and only if there was one before.</p>
-<dt><code>&#8211;extract-xml</code>=<i>FILE</i></p>
-<dd> Extracts the raw data from the XML resource in the WIM file to <i>FILE</i>. Note: the XML data will be encoded using UTF-16LE, and it will begin with a byte-order mark.</p>
-<dt><code>&#8211;header</code></p>
-<dd> Shows detailed information from the WIM header.</p>
-<dt><code>&#8211;blobs</code></p>
-<dd> Prints information about all the blobs (&quot;file data&quot;) in the WIM. A WIM file stores only one copy of each unique blob.</p>
-<dt><code>&#8211;xml</code></p>
-<dd> Prints the raw XML data from the WIM. Note: the XML data will be encoded using UTF-16LE, and it will begin with a byte-order mark.</p>
-<dt><code>&#8211;image-property</code> <i>NAME</i>=<i>VALUE</i></p>
-<dd> Set an arbitrary per-image property in the XML document of the WIM file. <i>NAME</i> is an element path such as &quot;WINDOWS/VERSION/MAJOR&quot;, and <i>VALUE</i> is the string to place in the element, such as &quot;10&quot;. See the documentation for this option to <code>wimlib-imagex capture</code> (1) for more details. This option may be specified multiple times.</dl>
+<dt><code>&#8211;boot</code></dt>
+<dd> Indicates that the specified image is to be made the bootable image of the WIM archive.</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> When reading <i>WIMFILE</i>, verify its integrity if the integrity table is present; additionally if an action that requires modifying the WIM archive is specified, include an integrity table in the modified WIM. If this option is not specified and <i>WIMFILE</i> is modified, an integrity table will be included in the modified WIM if and only if there was one before.</dd>
+<dt><code>&#8211;nocheck</code></dt>
+<dd> If an action that requires modifying the WIM archive is specified, do not include an integrity table in the modified WIM. If this option is not specified and <i>WIMFILE</i> is modified, an integrity table will be included in the modified WIM if and only if there was one before.</dd>
+<dt><code>&#8211;extract-xml</code>=<i>FILE</i></dt>
+<dd> Extracts the raw data from the XML resource in the WIM file to <i>FILE</i>. Note: the XML data will be encoded using UTF-16LE, and it will begin with a byte-order mark.</dd>
+<dt><code>&#8211;header</code></dt>
+<dd> Shows detailed information from the WIM header.</dd>
+<dt><code>&#8211;blobs</code></dt>
+<dd> Prints information about all the blobs (&quot;file data&quot;) in the WIM. A WIM file stores only one copy of each unique blob.</dd>
+<dt><code>&#8211;xml</code></dt>
+<dd> Prints the raw XML data from the WIM. Note: the XML data will be encoded using UTF-16LE, and it will begin with a byte-order mark.</dd>
+<dt><code>&#8211;image-property</code> <i>NAME</i>=<i>VALUE</i></dt>
+<dd> Set an arbitrary per-image property in the XML document of the WIM file. <i>NAME</i> is an element path such as &quot;WINDOWS/VERSION/MAJOR&quot;, and <i>VALUE</i> is the string to place in the element, such as &quot;10&quot;. See the documentation for this option to <code>wimlib-imagex capture</code> (1) for more details. This option may be specified multiple times.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-dir/">wimlib-imagex-dir</a></code>(1) </p>
 <h2>Index</h2>

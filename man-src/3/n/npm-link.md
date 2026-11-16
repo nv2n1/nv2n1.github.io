@@ -18,5 +18,5 @@ npm.command.link(packages, callback)</pre>
 <pre>npm.commands.link(cb) # creates global link from the cwd
  # (say redis package)
 npm.commands.link('redis', cb) # link-install the package</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Now, any changes to the redis package will be reflected in the package in the current working directory </p>

@@ -14,12 +14,12 @@ description: "gnutls_pubkey_import_ecc_x962 – API function"
 <p> <code>int gnutls_pubkey_import_ecc_x962(gnutls_pubkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>parameters</i><code>, const gnutls_datum_t * </code><i>ecpoint</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t key</p>
-<dd> The structure to store the parsed key</p>
-<dt>const gnutls_datum_t * parameters</p>
-<dd> DER encoding of an ANSI X9.62 parameters</p>
-<dt>const gnutls_datum_t * ecpoint</p>
-<dd> DER encoding of ANSI X9.62 ECPoint</dl>
+<dt>gnutls_pubkey_t key</dt>
+<dd> The structure to store the parsed key</dd>
+<dt>const gnutls_datum_t * parameters</dt>
+<dd> DER encoding of an ANSI X9.62 parameters</dd>
+<dt>const gnutls_datum_t * ecpoint</dt>
+<dd> DER encoding of ANSI X9.62 ECPoint</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given elliptic curve parameters to a <code>gnutls_pubkey_t</code>. The output will be stored in <i>key</i> .</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pubkey_import_ecc_x962 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

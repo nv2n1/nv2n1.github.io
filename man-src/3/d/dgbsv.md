@@ -19,7 +19,7 @@ description: "dgbsv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGBSV computes the solution to a real system of linear equations
  A * X = B, where A is a band matrix of order N with KL subdiagonals
@@ -30,11 +30,11 @@ description: "dgbsv.f –"
  upper triangular with KL+KU superdiagonals.  The factored form of A
  is then used to solve the system of equations A * X = B.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The number of linear equations, i.e., the order of the
@@ -103,18 +103,18 @@ AB is DOUBLE PRECISION array, dimension(LDAB, N) On entry, the matrix A in band 
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The band storage scheme is illustrated by the following example, when
   M = N = 6, KL = 2, KU = 1:
@@ -129,8 +129,9 @@ AB is DOUBLE PRECISION array, dimension(LDAB, N) On entry, the matrix A in band 
   + need not be set on entry, but are required by the routine to store
   elements of U because of fill-in resulting from the row interchanges.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 163 of file dgbsv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

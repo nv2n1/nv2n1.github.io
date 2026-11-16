@@ -26,58 +26,58 @@ description: "tmpfiles.d – Configuration for creation, deletion and cleaning o
 <pre>#Type Path Mode UID GID Age Argument
 d /run/user 0755 root root 10d -
 L /tmp/foobar - - - - /dev/null</pre>
-</dl>
+</dd></dl>
 <h3>Type</h3>
 <p>The type consists of a single letter and optionally an exclamation mark. </p>
 <p> The following line types are understood: </p>
 <p> <i>f</i></p>
 <dl>
-<dd>Create a file if it does not exist yet. If the argument parameter is given, it will be written to the file.</dl>
+<dd>Create a file if it does not exist yet. If the argument parameter is given, it will be written to the file.</dd></dl>
 <p> <i>F</i></p>
 <dl>
-<dd>Create or truncate a file. If the argument parameter is given, it will be written to the file.</dl>
+<dd>Create or truncate a file. If the argument parameter is given, it will be written to the file.</dd></dl>
 <p> <i>w</i></p>
 <dl>
-<dd>Write the argument parameter to a file, if the file exists. Lines of this type accept shell-style globs in place of normal path names. The argument parameter will be written without a trailing newline. C-style backslash escapes are interpreted.</dl>
+<dd>Write the argument parameter to a file, if the file exists. Lines of this type accept shell-style globs in place of normal path names. The argument parameter will be written without a trailing newline. C-style backslash escapes are interpreted.</dd></dl>
 <p> <i>d</i></p>
 <dl>
-<dd>Create a directory if it does not exist yet.</dl>
+<dd>Create a directory if it does not exist yet.</dd></dl>
 <p> <i>D</i></p>
 <dl>
-<dd>Create or empty a directory.</dl>
+<dd>Create or empty a directory.</dd></dl>
 <p> <i>p</i>, <i>p+</i></p>
 <dl>
-<dd>Create a named pipe (FIFO) if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the pipe is to be created, it will be removed and be replaced by the pipe.</dl>
+<dd>Create a named pipe (FIFO) if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the pipe is to be created, it will be removed and be replaced by the pipe.</dd></dl>
 <p> <i>L</i>, <i>L+</i></p>
 <dl>
-<dd>Create a symlink if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the symlink is to be created, it will be removed and be replaced by the symlink. If the argument is omitted, symlinks to files with the same name residing in the directory /usr/share/factory/ are created.</dl>
+<dd>Create a symlink if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the symlink is to be created, it will be removed and be replaced by the symlink. If the argument is omitted, symlinks to files with the same name residing in the directory /usr/share/factory/ are created.</dd></dl>
 <p> <i>c</i>, <i>c+</i></p>
 <dl>
-<dd>Create a character device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dl>
+<dd>Create a character device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dd></dl>
 <p> <i>b</i>, <i>b+</i></p>
 <dl>
-<dd>Create a block device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dl>
+<dd>Create a block device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dd></dl>
 <p> <i>C</i></p>
 <dl>
-<dd>Recursively copy a file or directory, if the destination files or directories do not exist yet. Note that this command will not descend into subdirectories if the destination directory already exists. Instead, the entire copy operation is skipped. If the argument is omitted, files from the source directory /usr/share/factory/ with the same name are copied.</dl>
+<dd>Recursively copy a file or directory, if the destination files or directories do not exist yet. Note that this command will not descend into subdirectories if the destination directory already exists. Instead, the entire copy operation is skipped. If the argument is omitted, files from the source directory /usr/share/factory/ with the same name are copied.</dd></dl>
 <p> <i>x</i></p>
 <dl>
-<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> <i>X</i></p>
 <dl>
-<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Unlike <i>x</i>, this parameter will not exclude the content if path is a directory, but only directory itself. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Unlike <i>x</i>, this parameter will not exclude the content if path is a directory, but only directory itself. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> <i>r</i></p>
 <dl>
-<dd>Remove a file or directory if it exists. This may not be used to remove non-empty directories, use <i>R</i> for that. Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Remove a file or directory if it exists. This may not be used to remove non-empty directories, use <i>R</i> for that. Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> <i>R</i></p>
 <dl>
-<dd>Recursively remove a path and all its subdirectories (if it is a directory). Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Recursively remove a path and all its subdirectories (if it is a directory). Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> <i>z</i></p>
 <dl>
-<dd>Adjust the access mode, group and user, and restore the SELinux security context of a file or directory, if it exists. Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Adjust the access mode, group and user, and restore the SELinux security context of a file or directory, if it exists. Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> <i>Z</i></p>
 <dl>
-<dd>Recursively set the access mode, group and user, and restore the SELinux security context of a file or directory if it exists, as well as of its subdirectories and the files contained therein (if applicable). Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Recursively set the access mode, group and user, and restore the SELinux security context of a file or directory if it exists, as well as of its subdirectories and the files contained therein (if applicable). Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> If the exclamation mark is used, this line is only safe of execute during boot, and can break a running system. Lines without the exclamation mark are presumed to be safe to execute at any time, e.g. on package upgrades. <code>systemd-tmpfiles</code> will execute line with an exclamation mark only if option <code>&#8211;boot</code> is given. </p>
 <p> For example: </p>
 <dl>
@@ -86,7 +86,7 @@ L /tmp/foobar - - - - /dev/null</pre>
 d /tmp/.X11-unix 1777 root root 10d
 # Unlink the X11 lock files
 r! /tmp/.X[0-9]*-lock</pre>
-</dl>
+</dd></dl>
 <p> The second line in contrast to the first one would break a running system, and will only be executed with <code>&#8211;boot</code>.</p>
 <h3>Path</h3>
 <p>The file system path specification supports simple specifier expansion. The following expansions are understood: </p>
@@ -138,7 +138,7 @@ r! /tmp/.X[0-9]*-lock</pre>
 <p>The date field, when set, is used to decide what files to delete when cleaning. If a file or directory is older than the current time minus the age field, it is deleted. The field format is a series of integers each followed by one of the following postfixes for the respective time units: </p>
 <p> <i>s</i>, <i>min</i>, <i>h</i>, <i>d</i>, <i>w</i>, <i>ms</i>, <i>m</i>, <i>us</i></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> If multiple integers and units are specified, the time values are summed up. If an integer is given without a unit, s is assumed. </p>
 <p> When the age is set to zero, the files are cleaned unconditionally. </p>
 <p> The age field only applies to lines starting with <i>d</i>, <i>D</i>, and <i>x</i>. If omitted or set to &quot;-&quot;, no automatic clean-up is done. </p>
@@ -152,13 +152,13 @@ r! /tmp/.X[0-9]*-lock</pre>
 <dd>
 <pre>d /run/screens 1777 root root 10d
 d /run/uscreens 0755 root root 10d12h</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2.&nbsp;<wbr>/etc/tmpfiles.d/abrt.conf example</code> </p>
 <p> <code>abrt</code> needs a directory created at boot with specific mode and ownership and its content should be preserved. </p>
 <dl>
 <dd>
 <pre>d /var/tmp/abrt 0755 abrt abrt
 x /var/tmp/abrt/*</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code><a href="/docs/linux/man/5-systemd-exec/">systemd.exec</a></code>(5) </p>

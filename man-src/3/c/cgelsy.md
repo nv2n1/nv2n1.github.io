@@ -19,7 +19,7 @@ description: "cgelsy.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CGELSY computes the minimum - norm solution to a complex linear least
                                   squares problem : minimize ||
@@ -31,11 +31,11 @@ they are stored as the columns of the
                                                                                                                                                       RANK,
                                                                                                                                                       is the effective rank of A.Then, R22 is considered to be negligible, and R12 is annihilated by unitary transformations from the right, arriving at the complete orthogonal factorization : A *P = Q * [T11 0] * Z[0 0] The minimum - norm solution is then X = P * Z * *H[inv(T11) * Q1 * *H * B][0] where Q1 consists of the first RANK columns of Q.This routine is basically identical to the original xGELSX except three differences : o The permutation of matrix B(the right hand side) is faster and more simple.o The call to the subroutine xGEQPF has been substituted by the the call to the subroutine xGEQP3.This subroutine is a Blas - 3 version of the QR factorization with column pivoting.o Matrix B(the right hand side) is updated with Blas - 3.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -133,18 +133,18 @@ they are stored as the columns of the
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA </p>
+</dt><dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA </dd>
 <p>&nbsp;<wbr>E. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>G. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
@@ -152,3 +152,4 @@ they are stored as the columns of the
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

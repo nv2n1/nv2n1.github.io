@@ -15,18 +15,18 @@ description: "stap-authorize-signing-cert – systemtap signing authorization ut
 <h2>Arguments</h2>
 <p>The <i>stap-authorize-signing-cert</i> program accepts two arguments: </p>
 <dl>
-<dt><code>CERTFILE</code></p>
-<dd>This is the name of the file containing the certificate of the new trusted signer. For systemtap compile servers, this is the file named <i>stap.cert</i> which can be found in the server[aq]s certificate database. On the server host, for servers started by the <i>stap-server</i> service, this database can be found in <i>/var/lib/stap-server/.systemtap/ssl/server/</i>. For servers run by other non-root users, this database can be found in <i>$HOME/.systemtap/ssl/server/</i>. For root users (EUID=0), it can be found in the stappaths (7) manual page. </p>
-<dt><code>DIRNAME</code></p>
-<dd>This optional argument is the name of the directory containing the certificate database to which the certificate is to be added. If not specified, the default can be found in the stappaths (7) manual page. That is, the default result is that all users on the local host will trust this signer. Note that this default directory is only writable by root. </p>
+<dt><code>CERTFILE</code></dt>
+<dd>This is the name of the file containing the certificate of the new trusted signer. For systemtap compile servers, this is the file named <i>stap.cert</i> which can be found in the server[aq]s certificate database. On the server host, for servers started by the <i>stap-server</i> service, this database can be found in <i>/var/lib/stap-server/.systemtap/ssl/server/</i>. For servers run by other non-root users, this database can be found in <i>$HOME/.systemtap/ssl/server/</i>. For root users (EUID=0), it can be found in the stappaths (7) manual page. </dd>
+<dt><code>DIRNAME</code></dt>
+<dd>This optional argument is the name of the directory containing the certificate database to which the certificate is to be added. If not specified, the default can be found in the stappaths (7) manual page. That is, the default result is that all users on the local host will trust this signer. Note that this default directory is only writable by root. </dd>
 </dl>
 <h2>Safety And Security</h2>
 <p>Systemtap is an administrative tool. It exposes kernel internal data structures and potentially private user information. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for additional information on safety and security. </p>
 <p> <i>Systemtap</i> uses Network Security Services (NSS) for module signing and verification. The NSS tool <i>certutil</i> is used for the generation of certificates. The related certificate databases must be protected in order to maintain the security of the system. Use of the utilities provided will help to ensure that the proper protection is maintained. <i>staprun</i> will check for proper access permissions before making use of any certificate database.</p>
 <h2>Files</h2>
 <dl>
-<dt>/var/lib/stap-server/.systemtap/ssl/server/stap.cert</p>
-<dd>Signing certificate for servers started by the <i>stap-server</i> service. </p>
+<dt>/var/lib/stap-server/.systemtap/ssl/server/stap.cert</dt>
+<dd>Signing certificate for servers started by the <i>stap-server</i> service. </dd>
 </dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-stap/">stap</a></i>(1), <i>stappathss</i>(7), <i><a href="/docs/linux/man/8-staprun/">staprun</a></i>(8), <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8), <i>stap-client</i>(8), <i>NSS</i>, <i>certutil</i> </p>

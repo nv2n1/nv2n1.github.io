@@ -12,21 +12,18 @@ rdma_reject - Called to reject a connection request.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_reject
-
     (struct rdma_cm_id *id,
-
      const void *private_data,
-
      uint8_t private_data_len);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>Connection identifier associated with the request.
-<dt>private_data
-<dd>Optional private data to send with the reject message.
-<dt>private_data_len
-<dd>Specifies the size of the user-controlled data buffer. Note that the actual amount of data transferred to the remote side is transport dependent and may be larger than that requested.</dl>
+</dt><dd>Connection identifier associated with the request.
+</dd><dt>private_data
+</dt><dd>Optional private data to send with the reject message.
+</dd><dt>private_data_len
+</dt><dd>Specifies the size of the user-controlled data buffer. Note that the actual amount of data transferred to the remote side is transport dependent and may be larger than that requested.</dd></dl>
 
 <h2>Description</h2>
 

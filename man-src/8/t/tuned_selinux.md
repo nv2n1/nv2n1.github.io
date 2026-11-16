@@ -93,8 +93,8 @@ description: "tuned_selinux – Security Enhanced Linux Policy for the tuned pro
 <p> <code>tuned_log_t</code> </p>
 <p> &#8211; Set files with the tuned_log_t type, if you want to treat the data as tuned log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/tuned(/.*)?, /var/log/tuned.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/tuned(/.*)?, /var/log/tuned.log.* </dd>
 </dl>
 <p> <code>tuned_rw_etc_t</code> </p>
 <p> &#8211; Set files with the tuned_rw_etc_t type, if you want to store tuned rw files in the /etc directories. </p>
@@ -103,8 +103,8 @@ description: "tuned_selinux – Security Enhanced Linux Policy for the tuned pro
 <p> <code>tuned_var_run_t</code> </p>
 <p> &#8211; Set files with the tuned_var_run_t type, if you want to store the tuned files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/tuned(/.*)?, /var/run/tuned.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/tuned(/.*)?, /var/run/tuned.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

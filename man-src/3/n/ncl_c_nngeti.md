@@ -11,9 +11,9 @@ c_nngeti - Retrieves the value of an internal parameter of type int.
 <h2>Function Prototype</h2>void c_nngeti(char *, int *);
 <h2>Synopsis</h2>c_nngeti (pnam,ival)
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>A string that specifies the name of the parameter to get. The name must appear as the first three characters of the string.
-<dt>ival
-<dd>*ival will be the value currently assigned to the control parameter whose name is pointed to by pnam.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Natgrid parameters. For a complete list of parameters available in this utility, see the natgrid_params man page.
+</dt><dd>A string that specifies the name of the parameter to get. The name must appear as the first three characters of the string.
+</dd><dt>ival
+</dt><dd>*ival will be the value currently assigned to the control parameter whose name is pointed to by pnam.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Natgrid parameters. For a complete list of parameters available in this utility, see the natgrid_params man page.
 <h2>Access</h2>To use c_nngeti, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>natgrid, natgrid_params, c_natgrids, c_nnseti. 
 

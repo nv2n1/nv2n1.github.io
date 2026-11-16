@@ -10,10 +10,10 @@ description: "kfifo_free – frees the fifo"
 <p>kfifo_free &#8211; frees the fifo</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kfifo_free(</code><i>fifo</i><code>);</code></dl>
+<dt> <code>kfifo_free(</code><i>fifo</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>fifo</i></p>
 <dl>
 <dd>
-<dd>the fifo to be freed</dl>
+</dd><dd>the fifo to be freed</dd></dl>
 <h2>Copyright</h2>

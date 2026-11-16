@@ -14,14 +14,14 @@ description: "scsi_device_put – release a reference to a scsi_device"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>device to release a reference on.</dl>
+</dd><dd>device to release a reference on.</dd></dl>
 <h2>Description</h2>
 <p>Release a reference to the scsi_device and decrements the use count of the underlying LLDD module. The device is freed once the last user vanishes.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

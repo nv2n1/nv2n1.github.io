@@ -17,50 +17,50 @@ description: "sge_schedule – format of the xxQS_NAMExx schedule file"
  <code>::::::::</code><br />
  indicates the start of a scheduling interval. It is followed by lines showing the resource usage considered for the interval. They contain the following fields, delimited by &#8216;<code>:</code>&#8216;.</p>
 <dl>
-<dt><code>job id</code></p>
-<dd>The numeric job id;</p>
-<dt><code>task id</code></p>
-<dd>The task id (1 for serial jobs);</p>
-<dt><code>reason</code></p>
-<dd>The for listing the utilization. One of the following, depending on the job&#8217;s state:</p>
+<dt><code>job id</code></dt>
+<dd>The numeric job id;</dd>
+<dt><code>task id</code></dt>
+<dd>The task id (1 for serial jobs);</dd>
+<dt><code>reason</code></dt>
+<dd>The for listing the utilization. One of the following, depending on the job&#8217;s state:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>RUNNING</code></p>
-<dd>Running before the interval;</p>
-<dt><code>SUSPENDED</code></p>
-<dd>Suspended before the interval;</p>
-<dt><code>MIGRATING</code></p>
-<dd>To be preempted/migrated (currently unused);</p>
-<dt><code>STARTING</code></p>
-<dd>To be started;</p>
-<dt><code>RESERVING</code></p>
-<dd>Having resources reserved through advance or normal resource reservation.</dl>
+</dd><dl>
+<dt><code>RUNNING</code></dt>
+<dd>Running before the interval;</dd>
+<dt><code>SUSPENDED</code></dt>
+<dd>Suspended before the interval;</dd>
+<dt><code>MIGRATING</code></dt>
+<dd>To be preempted/migrated (currently unused);</dd>
+<dt><code>STARTING</code></dt>
+<dd>To be started;</dd>
+<dt><code>RESERVING</code></dt>
+<dd>Having resources reserved through advance or normal resource reservation.</dd></dl>
 </dl>
-<dt><code>start time</code></p>
-<dd>Start of resource utilization, in seconds after the epoch;</p>
-<dt><code>end time</code></p>
-<dd>End of resource utilization, as above;</p>
-<dt><code>level</code></p>
-<dd>The level at which resources are considered. One of:</p>
+<dt><code>start time</code></dt>
+<dd>Start of resource utilization, in seconds after the epoch;</dd>
+<dt><code>end time</code></dt>
+<dd>End of resource utilization, as above;</dd>
+<dt><code>level</code></dt>
+<dd>The level at which resources are considered. One of:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Q</code></p>
-<dd>Queue;</p>
-<dt><code>H</code></p>
-<dd>Host;</p>
-<dt><code>G</code></p>
-<dd>Global;</p>
-<dt><code>P</code></p>
-<dd>Parallel environment.</dl>
+</dd><dl>
+<dt><code>Q</code></dt>
+<dd>Queue;</dd>
+<dt><code>H</code></dt>
+<dd>Host;</dd>
+<dt><code>G</code></dt>
+<dd>Global;</dd>
+<dt><code>P</code></dt>
+<dd>Parallel environment.</dd></dl>
 </dl>
-<dt><code>object name</code></p>
-<dd>Name of the relevant queue, host, parallel environment, or &quot;global&quot;;</p>
-<dt><code>resource name</code></p>
-<dd>Complex name in use or being reserved;</p>
-<dt><code>utilization</code></p>
-<dd>Amount of the named complex.</dl>
+<dt><code>object name</code></dt>
+<dd>Name of the relevant queue, host, parallel environment, or &quot;global&quot;;</dd>
+<dt><code>resource name</code></dt>
+<dd>Complex name in use or being reserved;</dd>
+<dt><code>utilization</code></dt>
+<dd>Amount of the named complex.</dd></dl>
 <h2>Files</h2>
 <p><i>$SGE_ROOT/$SGE_$CELL/common/schedule</i></p>
 <h2>See Also</h2>

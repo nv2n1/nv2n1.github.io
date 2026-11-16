@@ -20,12 +20,12 @@ description: "xfce4-popup-whiskermenu – shows Whisker Menu"
 <p> The default behavior is to show Whisker Menu near the applet button. If you have several Whisker Menu applets, only the first one you have set up will pop up. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options.</p>
-<dt><code>-p</code>, <code>&#8211;pointer</code></p>
-<dd> Popup menu at current mouse position.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version information and exit. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options.</dd>
+<dt><code>-p</code>, <code>&#8211;pointer</code></dt>
+<dd> Popup menu at current mouse position.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version information and exit. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2013 Graeme Gott </p>

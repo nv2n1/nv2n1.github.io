@@ -49,11 +49,11 @@ description: "QuantLib::FittedBondDiscountCurve::FittingMethod – Base fitting 
 <p> <code>Possible enhancements</code></p>
 <dl>
 <dt>
-<dd> derive the special-case class LinearFittingMethods from <code>FittingMethod</code>. A linear fitting to a set of basis functions $ b_i(t) $ is any fitting of the form [ d(t) = um_{i=0} c_i b_i(t) ] i.e., linear in the unknown coefficients $ c_i $. Such a fitting can be reduced to a linear algebra problem $ Ax = b $, and for large numbers of bonds, would typically be much faster computationally than the generic non-linear fitting method.</dl>
+</dt><dd> derive the special-case class LinearFittingMethods from <code>FittingMethod</code>. A linear fitting to a set of basis functions $ b_i(t) $ is any fitting of the form [ d(t) = um_{i=0} c_i b_i(t) ] i.e., linear in the unknown coefficients $ c_i $. Such a fitting can be reduced to a linear algebra problem $ Ax = b $, and for large numbers of bonds, would typically be much faster computationally than the generic non-linear fitting method.</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> some parameters to the <code>Simplex</code> optimization method may need to be tweaked internally to the class, depending on the fitting method used, in order to get proper/reasonable/faster convergence.</dl>
+</dt><dd> some parameters to the <code>Simplex</code> optimization method may need to be tweaked internally to the class, depending on the fitting method used, in order to get proper/reasonable/faster convergence.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual <code>DiscountFactor</code> discountFunction (const <code>Array</code> &amp; x, Time t) const [protected, pure virtual]</h3>
 <p> derived classes must set this </p>
@@ -65,7 +65,7 @@ description: "QuantLib::FittedBondDiscountCurve::FittingMethod – Base fitting 
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Member Data Documentation</a></p>
+<dt><a href="#lbAK">Member Data Documentation</a></dt>
 <dd>
-<dt><a href="#lbAM">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAM">Author</a></dt>
+<dd></dd></dl>

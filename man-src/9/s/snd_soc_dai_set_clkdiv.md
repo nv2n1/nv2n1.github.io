@@ -15,15 +15,15 @@ snd_soc_dai_set_clkdiv - configure DAI clock dividers.
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>div_id</i>
-<dl><dd>DAI specific clock divider ID</dl>
+<dl><dd>DAI specific clock divider ID</dd></dl>
  
 
  <i>div</i>
-<dl><dd>new clock divisor.</dl>
+<dl><dd>new clock divisor.</dd></dl>
 
 <h2>Description</h2>
 

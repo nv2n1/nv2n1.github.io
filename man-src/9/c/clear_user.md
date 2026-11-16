@@ -15,11 +15,11 @@ clear_user - Zero a block of memory in user space.
 <h2>Arguments</h2>
 
 <i>to</i>
-<dl><dd><dd>Destination address, in user space.</dl>
+<dl><dd></dd><dd>Destination address, in user space.</dd></dl>
  
 
  <i>n</i>
-<dl><dd>Number of bytes to zero.</dl>
+<dl><dd>Number of bytes to zero.</dd></dl>
 
 <h2>Description</h2>
 

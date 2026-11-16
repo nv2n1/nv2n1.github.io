@@ -19,33 +19,33 @@ description: "QuantLib::China – Chinese calendar."
 <p>Chinese calendar. </p>
 <p> Holidays: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s day, January 1st (possibly followed by one or two more holidays)</p>
-<dt>*</p>
-<dd>Labour Day, first week in May</p>
-<dt>*</p>
-<dd>National Day, one week from October 1st</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s day, January 1st (possibly followed by one or two more holidays)</dd>
+<dt>*</dt>
+<dd>Labour Day, first week in May</dd>
+<dt>*</dt>
+<dd>National Day, one week from October 1st</dd></dl>
 <p> Other holidays for which no rule is given (data available for 2004-2008 only): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Chinese New Year</p>
-<dt>*</p>
-<dd>Ching Ming Festival</p>
-<dt>*</p>
-<dd>Tuen Ng Festival</p>
-<dt>*</p>
-<dd>Mid-Autumn Festival</dl>
+<dt>*</dt>
+<dd>Chinese New Year</dd>
+<dt>*</dt>
+<dd>Ching Ming Festival</dd>
+<dt>*</dt>
+<dd>Tuen Ng Festival</dd>
+<dt>*</dt>
+<dd>Mid-Autumn Festival</dd></dl>
 <p> Data from &lt;<a rel="nofollow" href="http://www.sse.com.cn/sseportal/en_us/ps/home.shtml">http://www.sse.com.cn/sseportal/en_us/ps/home.shtml</a>&gt;</p>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>SSE </i></p>
-<dd>Shanghai stock exchange. </p>
+<dt><i>SSE </i></dt>
+<dd>Shanghai stock exchange. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

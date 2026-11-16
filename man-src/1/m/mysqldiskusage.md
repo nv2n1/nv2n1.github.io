@@ -11,9 +11,9 @@ description: "mysqldiskusage – Show Database Disk Usage"
 <p> mysqldiskusage &#8211; Show Database Disk Usage </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysqldiskusage [</code><i>options</i><code>] </code><i>db</i><code> &#8230;</code></dl>
+<dt> <code>mysqldiskusage [</code><i>options</i><code>] </code><i>db</i><code> &#8230;</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This utility displays disk space usage for one or more databases. The utility optionally displays disk usage for the binary log, slow query log, error log, general query log, relay log, and InnoDB tablespaces. The default is to show only database disk usage. </p>
+<dd>This utility displays disk space usage for one or more databases. The utility optionally displays disk usage for the binary log, slow query log, error log, general query log, relay log, and InnoDB tablespaces. The default is to show only database disk usage. </dd>
 <p> If the command line lists no databases, the utility shows the disk space usage for all databases. </p>
 <p> Sizes displayed without a unit indicator such as MB are in bytes. </p>
 <p> The utility determines the the location of the data directory by requesting it from the server. For a local server, the utility obtains size information directly from files in the data directory and InnoDB home directory. In this case, you must have file system access to read those directories. Disk space usage shown includes the sum of all storage engine- specific files such as the .MYI and .MYD files for MyISAM and the tablespace files for InnoDB. </p>
@@ -22,74 +22,74 @@ description: "mysqldiskusage – Show Database Disk Usage"
 <p> To specify how to display output, use one of the following values with the <code>&#8211;format</code> option: </p>
 <dl>
 <dt>
-<dd> &bull; <code>grid</code> (default) </p>
+</dt><dd> &bull; <code>grid</code> (default) </dd>
 <p> Display output in grid or table format like that of the <code>mysql</code> monitor.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>csv</code> </p>
+</dt><dd> &bull; <code>csv</code> </dd>
 <p> Display output in comma-separated values format.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>tab</code> </p>
+</dt><dd> &bull; <code>tab</code> </dd>
 <p> Display output in tab-separated format.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>vertical</code> </p>
+</dt><dd> &bull; <code>vertical</code> </dd>
 <p> Display output in single-column format like that of the \G command for the <code>mysql</code> monitor.</dl>
 <p> To turn off the headers for <code>csv</code> or <code>tab</code> display format, specify the <code>&#8211;no-headers</code> option.<br />
 OPTIONS </p>
 <p> <code>mysqldiskusage</code> accepts the following command-line options: </p>
 <dl>
 <dt>
-<dd> &bull; &#8211;help </p>
+</dt><dd> &bull; &#8211;help </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;all, -a </p>
+</dt><dd> &bull; &#8211;all, -a </dd>
 <p> Display all disk usage. This includes usage for databases, logs, and InnoDB tablespaces.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;binlog, -b </p>
+</dt><dd> &bull; &#8211;binlog, -b </dd>
 <p> Display binary log usage.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;empty, -m </p>
+</dt><dd> &bull; &#8211;empty, -m </dd>
 <p> Include empty databases.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;format=&lt;format&gt;, -f&lt;format&gt; </p>
+</dt><dd> &bull; &#8211;format=&lt;format&gt;, -f&lt;format&gt; </dd>
 <p> Specify the output display format. Permitted format values are <code>grid</code>, <code>csv</code>, <code>tab</code>, and <code>vertical</code>. The default is <code>grid</code>.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;innodb, -i </p>
+</dt><dd> &bull; &#8211;innodb, -i </dd>
 <p> Display InnoDB tablespace usage. This includes information about the shared InnoDB tablespace as well as .idb files for InnoDB tables with their own tablespace.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;logs, -l </p>
+</dt><dd> &bull; &#8211;logs, -l </dd>
 <p> Display general query log, error log, and slow query log usage.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;no-headers, -h </p>
+</dt><dd> &bull; &#8211;no-headers, -h </dd>
 <p> Do not display column headers. This option applies only for <code>csv</code> and <code>tab</code> output.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;quiet, -q </p>
+</dt><dd> &bull; &#8211;quiet, -q </dd>
 <p> Suppress informational messages.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;relaylog, -r </p>
+</dt><dd> &bull; &#8211;relaylog, -r </dd>
 <p> Display relay log usage.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;server=&lt;server&gt; </p>
+</dt><dd> &bull; &#8211;server=&lt;server&gt; </dd>
 <p> Connection information for the server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;] or &lt;<i>login-path</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;verbose, -v </p>
+</dt><dd> &bull; &#8211;verbose, -v </dd>
 <p> Specify how much information to display. Use this option multiple times to increase the amount of information. For example, <code>-v</code> = verbose, <code>-vv</code> = more verbose, <code>-vvv</code> = debug.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;version </p>
+</dt><dd> &bull; &#8211;version </dd>
 <p> Display version information and exit.</dl>
 <p> For the <code>&#8211;format</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;format=g</code> specifies the grid format. An error occurs if a prefix matches more than one valid value.<br />
 NOTES </p>
@@ -99,7 +99,7 @@ EXAMPLES </p>
 <p> To show only the disk space usage for the employees and test databases in grid format (the default), use this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqldiskusage-- server = root[at] localhost employees test
 #Source on localhost : ... connected.
@@ -110,11 +110,11 @@ $ mysqldiskusage-- server = root[at] localhost employees test
                    979, 648 | | test | 4, 096 | +-- -- -- -- -- --+-- -- -- -- -- -- --+Total database disk usage = 205, 983, 744 bytes or 196.00 MB
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <p> To see all disk usage for the server in CSV format, use this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqldiskusage-- server = root[at] localhost-- format = csv - a - vv
 #Source on localhost : ... connected.
@@ -141,7 +141,7 @@ $ mysqldiskusage-- server = root[at] localhost-- format = csv - a - vv
                    Total size of InnoDB files = 494, 125, 056 bytes or 471.00 MB
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <h2>COPYRIGHT</h2>
 <h2>SEE ALSO</h2>
 <p> For more information, please refer to the MySQL Utilities section of the MySQL Workbench Reference Manual, which is available online at <a rel="nofollow" href="http://dev.mysql.com/doc/workbench/en/.">http://dev.mysql.com/doc/workbench/en/.</a></p>

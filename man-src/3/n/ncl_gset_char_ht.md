@@ -13,8 +13,8 @@ description: "gset_char_ht (Set character height) – sets the character height 
 <p> void gset_char_ht(Gdouble char_ht);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>char_ht</p>
-<dd>(Input) &#8211; Gives the height in world coordinates at which a character is drawn using the GTX output primitive. char_ht &gt; 0. By default char_ht = 0.01.</dl>
+<dt>char_ht</dt>
+<dd>(Input) &#8211; Gives the height in world coordinates at which a character is drawn using the GTX output primitive. char_ht &gt; 0. By default char_ht = 0.01.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

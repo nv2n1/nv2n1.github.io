@@ -11,77 +11,77 @@ description: "storagectl – The storaged command line tool"
 <p> storagectl &#8211; The storaged command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>storagectl</code> status</p>
-<dt> <code>storagectl</code> info {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>}</p>
-<dt> <code>storagectl</code> mount {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;filesystem-type&nbsp;<wbr><i>TYPE</i>] [&#8211;options&nbsp;<wbr><i>OPTIONS</i>&#8230;] [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> unmount {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;force] [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> unlock {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> lock {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> loop-setup &#8211;file&nbsp;<wbr><i>PATH</i> [&#8211;read-only] [&#8211;offset&nbsp;<wbr><i>OFFSET</i>] [&#8211;size&nbsp;<wbr><i>SIZE</i>] [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> loop-delete {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> power-off {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> smart-simulate &#8211;file&nbsp;<wbr><i>PATH</i> {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</p>
-<dt> <code>storagectl</code> monitor</p>
-<dt> <code>storagectl</code> dump</p>
-<dt> <code>storagectl</code> help</dl>
+<dt> <code>storagectl</code> status</dt>
+<dt> <code>storagectl</code> info {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>}</dt>
+<dt> <code>storagectl</code> mount {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;filesystem-type&nbsp;<wbr><i>TYPE</i>] [&#8211;options&nbsp;<wbr><i>OPTIONS</i>&#8230;] [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> unmount {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;force] [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> unlock {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> lock {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> loop-setup &#8211;file&nbsp;<wbr><i>PATH</i> [&#8211;read-only] [&#8211;offset&nbsp;<wbr><i>OFFSET</i>] [&#8211;size&nbsp;<wbr><i>SIZE</i>] [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> loop-delete {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> power-off {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> smart-simulate &#8211;file&nbsp;<wbr><i>PATH</i> {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>} [&#8211;no-user-interaction]</dt>
+<dt> <code>storagectl</code> monitor</dt>
+<dt> <code>storagectl</code> dump</dt>
+<dt> <code>storagectl</code> help</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>storagectl</code></p>
-<dd>is a command-line program used to interact with the <code><a href="/docs/linux/man/8-storaged/">storaged</a></code>(8) daemon process.</p>
+<dd>is a command-line program used to interact with the <code><a href="/docs/linux/man/8-storaged/">storaged</a></code>(8) daemon process.</dd>
 <h2>COMMANDS</h2>
 <p> <code>status</code></p>
 <dl>
 <dt>
-<dd> Shows high-level information about disk drives and block devices.</dl>
+</dt><dd> Shows high-level information about disk drives and block devices.</dd></dl>
 <p> <code>info</code></p>
 <dl>
 <dt>
-<dd> Shows detailed information about <i>OBJECT</i> or <i>DEVICE</i>.</dl>
+</dt><dd> Shows detailed information about <i>OBJECT</i> or <i>DEVICE</i>.</dd></dl>
 <p> <code>mount</code></p>
 <dl>
 <dt>
-<dd> Mounts a device. The device will be mounted in a subdirectory in the /media hierarchy &#8211; upon successful completion, the mount point will be printed to standard output. </p>
+</dt><dd> Mounts a device. The device will be mounted in a subdirectory in the /media hierarchy &#8211; upon successful completion, the mount point will be printed to standard output. </dd>
 <p> The device will be mounted with a safe set of default options. You can influence the options passed to the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) command with <code>&#8211;options</code>. Note that only safe options are allowed &#8211; requests with inherently unsafe options such as <i>suid</i> or <i>dev</i> that would allow the caller to gain additional privileges, are rejected.</dl>
 <p> <code>unmount</code></p>
 <dl>
 <dt>
-<dd> Unmounts a device. This only works if the device is mounted. The option <code>&#8211;force</code> can be used to request that the device is unmounted even if active references exists.</dl>
+</dt><dd> Unmounts a device. This only works if the device is mounted. The option <code>&#8211;force</code> can be used to request that the device is unmounted even if active references exists.</dd></dl>
 <p> <code>unlock</code></p>
 <dl>
 <dt>
-<dd> Unlocks an encrypted device. The passphrase will be requested from the controlling terminal and upon successful completion, the cleartext device will be printed to standard output.</dl>
+</dt><dd> Unlocks an encrypted device. The passphrase will be requested from the controlling terminal and upon successful completion, the cleartext device will be printed to standard output.</dd></dl>
 <p> <code>lock</code></p>
 <dl>
 <dt>
-<dd> Locks a device. This only works if the device is a cleartext device backed by a cryptotext device.</dl>
+</dt><dd> Locks a device. This only works if the device is a cleartext device backed by a cryptotext device.</dd></dl>
 <p> <code>loop-setup</code></p>
 <dl>
 <dt>
-<dd> Sets up a loop device backed by <i>FILE</i>.</dl>
+</dt><dd> Sets up a loop device backed by <i>FILE</i>.</dd></dl>
 <p> <code>loop-delete</code></p>
 <dl>
 <dt>
-<dd> Tears down a loop device.</dl>
+</dt><dd> Tears down a loop device.</dd></dl>
 <p> <code>power-off</code></p>
 <dl>
 <dt>
-<dd> Arranges for the drive to be safely removed and powered off. On the OS side this includes ensuring that no process is using the drive, then requesting that in-flight buffers and caches are committed to stable storage. The exact steps for powering off the drive depends on the drive itself and the interconnect used. For drives connected through USB, the effect is that the USB device will be deconfigured followed by disabling the upstream hub port it is connected to. </p>
+</dt><dd> Arranges for the drive to be safely removed and powered off. On the OS side this includes ensuring that no process is using the drive, then requesting that in-flight buffers and caches are committed to stable storage. The exact steps for powering off the drive depends on the drive itself and the interconnect used. For drives connected through USB, the effect is that the USB device will be deconfigured followed by disabling the upstream hub port it is connected to. </dd>
 <p> Note that as some physical devices contain multiple drives (for example 4-in-1 flash card reader USB devices) powering off one drive may affect other drives. As such there are not a lot of guarantees associated with performing this action. Usually the effect is that the drive disappears as if it was unplugged.</dl>
 <p> <code>smart-simulate</code></p>
 <dl>
 <dt>
-<dd> Sets SMART data from the libatasmart blob given by <i>FILE</i> &#8211; see /usr/share/doc/libatasmart-devel-VERSION/ for blobs shipped with libatasmart. This is a debugging feature used to check that applications act correctly when a disk is failing.</dl>
+</dt><dd> Sets SMART data from the libatasmart blob given by <i>FILE</i> &#8211; see /usr/share/doc/libatasmart-devel-VERSION/ for blobs shipped with libatasmart. This is a debugging feature used to check that applications act correctly when a disk is failing.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
 <dt>
-<dd> Monitors the daemon for events.</dl>
+</dt><dd> Monitors the daemon for events.</dd></dl>
 <p> <code>dump</code></p>
 <dl>
 <dt>
-<dd> Prints the current state of the daemon.</dl>
+</dt><dd> Prints the current state of the daemon.</dd></dl>
 <p> <code>help</code></p>
 <dl>
 <dt>
-<dd> Prints help and exit.</dl>
+</dt><dd> Prints help and exit.</dd></dl>
 <h2>COMMON OPTIONS</h2>
 <p> The option <code>&#8211;no-user-interaction</code> can be used to request that no interaction (such as the user being presented with an authentication dialog) must occur when checking with <code><a href="/docs/linux/man/8-polkit/">polkit</a></code>(8) whether the caller is authorized to perform the requested action.</p>
 <h2>AUDIENCE</h2>

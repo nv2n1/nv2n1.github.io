@@ -14,15 +14,15 @@ description: "ata_scsi_simulate – simulate SCSI command on ATA device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the target device</dl>
+</dd><dd>the target device</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>SCSI command being sent to device.</dl>
+<dd>SCSI command being sent to device.</dd></dl>
 <h2>Description</h2>
 <p>Interprets and directly executes a select list of SCSI commands that can be handled internally. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

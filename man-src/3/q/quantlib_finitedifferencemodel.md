@@ -30,11 +30,11 @@ description: "QuantLib::FiniteDifferenceModel – Generic finite difference mode
 <p>solves the problem between the given times. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>being this a rollback, from must be a later time than to.</dl>
+<dd>being this a rollback, from must be a later time than to.</dd></dl>
 <h3>void rollback (array_type &amp; a, <code>Time</code> from, <code>Time</code> to, Size steps, const condition_type &amp; condition)</h3>
 <p>solves the problem between the given times, applying a condition at every step. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>being this a rollback, from must be a later time than to.</dl>
+<dd>being this a rollback, from must be a later time than to.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

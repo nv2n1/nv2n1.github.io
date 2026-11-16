@@ -19,19 +19,19 @@ description: "SPI_cursor_open – set up a cursor using a statement created with
 <h2>Arguments</h2>
 <p>const char * <i>name</i></p>
 <dl COMPACT>
-<dd>name for portal, or NULL to let the system select a name</dl>
+<dd>name for portal, or NULL to let the system select a name</dd></dl>
 <p> SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>prepared statement (returned by <code>SPI_prepare</code>)</dl>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
 <p> Datum * <i>values</i></p>
 <dl COMPACT>
-<dd>An array of actual parameter values. Must have same length as the statement&#8217;s number of arguments.</dl>
+<dd>An array of actual parameter values. Must have same length as the statement&#8217;s number of arguments.</dd></dl>
 <p> const char * <i>nulls</i></p>
 <dl COMPACT>
-<dd>An array describing which parameters are null. Must have same length as the statement&#8217;s number of arguments. n indicates a null value (entry in <i>values</i> will be ignored); a space indicates a nonnull value (entry in <i>values</i> is valid). </p>
+<dd>An array describing which parameters are null. Must have same length as the statement&#8217;s number of arguments. n indicates a null value (entry in <i>values</i> will be ignored); a space indicates a nonnull value (entry in <i>values</i> is valid). </dd>
 <p> If <i>nulls</i> is NULL then <code>SPI_cursor_open</code> assumes that no parameters are null.</dl>
 <p> bool <i>read_only</i></p>
 <dl COMPACT>
-<dd>true for read-only execution</dl>
+<dd>true for read-only execution</dd></dl>
 <h2>Return Value</h2>
 <p>Pointer to portal containing the cursor. Note there is no error return convention; any error will be reported via <code>elog</code>.</p>

@@ -19,8 +19,8 @@ description: "idle – make process 0 idle"
 <p> <code>idle</code>() never returns for process 0, and always returns -1 for a user process.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> Always, for a user process.</dl>
+<dt><code>EPERM</code></dt>
+<dd> Always, for a user process.</dd></dl>
 <h2>VERSIONS</h2>
 <p> Since Linux 2.3.13, this system call does not exist anymore.</p>
 <h2>CONFORMING TO</h2>

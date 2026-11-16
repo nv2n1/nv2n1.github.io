@@ -17,14 +17,14 @@ description: "xmlcopyeditor – fast, free, validating XML editor"
 <h2>OPTIONS</h2>
 <p> <code></p>
 <dl>
-<dt>&#8211;version</p>
-<dd> </code> Display version information and exit. </p>
+<dt>&#8211;version</dt>
+<dd> </code> Display version information and exit. </dd>
 <p> <code></p>
-<dt>&#8211;help</p>
-<dd> </code> Print a help message and exit. </p>
+<dt>&#8211;help</dt>
+<dd> </code> Print a help message and exit. </dd>
 <p> <code></p>
-<dt>FILE&#8230;</p>
-<dd> </code> Specifies the file to open when <code>xmlcopyeditor</code> starts. </p>
+<dt>FILE&#8230;</dt>
+<dd> </code> Specifies the file to open when <code>xmlcopyeditor</code> starts. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Gerald Schmidt (gnschmidt [at] users.sourceforge.net) </p>

@@ -30,53 +30,53 @@ description: "cmake-developer – CMake Developer Reference"
 <p>In addition to using Sphinx to generate the CMake help manuals, we also use a C++-implemented document processor to print documents for the <code>&#8211;help-*</code> command-line help options. It supports a subset of reStructuredText markup. When authoring or modifying documents, please verify that the command-line help looks good in addition to the Sphinx-generated html and man pages. </p>
 <p> The command-line help processor supports the following constructs defined by reStructuredText, Sphinx, and a CMake extension to Sphinx.</p>
 <dl>
-<dt><code>CMake Domain directives</code></p>
-<dd>Directives defined in the <i>CMake Domain</i> for defining CMake documentation objects are printed in command-line help output as if the lines were normal paragraph text with interpretation.</p>
-<dt><code>CMake Domain interpreted text roles</code></p>
-<dd>Interpreted text roles defined in the <i>CMake Domain</i> for cross-referencing CMake documentation objects are replaced by their link text in command-line help output. Other roles are printed literally and not processed.</p>
-<dt><code>code-block</code> directive</p>
-<dd>Add a literal code block without interpretation. The command-line help processor prints the block content without the leading directive line and with common indentation replaced by one space.</p>
-<dt><code>include</code> directive</p>
-<dd>Include another document source file. The command-line help processor prints the included document inline with the referencing document.</p>
-<dt><code>literal block after ::</code></p>
-<dd>A paragraph ending in <code>::</code> followed by a blank line treats the following indented block as literal text without interpretation. The command-line help processor prints the <code>::</code> literally and prints the block content with common indentation replaced by one space.</p>
-<dt><code>note</code> directive</p>
-<dd>Call out a side note. The command-line help processor prints the block content as if the lines were normal paragraph text with interpretation.</p>
-<dt><code>parsed-literal</code> directive</p>
-<dd>Add a literal block with markup interpretation. The command-line help processor prints the block content without the leading directive line and with common indentation replaced by one space.</p>
-<dt><code>productionlist</code> directive</p>
-<dd>Render context-free grammar productions. The command-line help processor prints the block content as if the lines were normal paragraph text with interpretation.</p>
-<dt><code>replace</code> directive</p>
-<dd>Define a <code>|substitution|</code> replacement. The command-line help processor requires a substitution replacement to be defined before it is referenced.</p>
-<dt><code>|substitution|</code> reference</p>
-<dd>Reference a substitution replacement previously defined by the <code>replace</code> directive. The command-line help processor performs the substitution and replaces all newlines in the replacement text with spaces.</p>
-<dt><code>toctree</code> directive</p>
-<dd>Include other document sources in the Table-of-Contents document tree. The command-line help processor prints the referenced documents inline as part of the referencing document. </p>
+<dt><code>CMake Domain directives</code></dt>
+<dd>Directives defined in the <i>CMake Domain</i> for defining CMake documentation objects are printed in command-line help output as if the lines were normal paragraph text with interpretation.</dd>
+<dt><code>CMake Domain interpreted text roles</code></dt>
+<dd>Interpreted text roles defined in the <i>CMake Domain</i> for cross-referencing CMake documentation objects are replaced by their link text in command-line help output. Other roles are printed literally and not processed.</dd>
+<dt><code>code-block</code> directive</dt>
+<dd>Add a literal code block without interpretation. The command-line help processor prints the block content without the leading directive line and with common indentation replaced by one space.</dd>
+<dt><code>include</code> directive</dt>
+<dd>Include another document source file. The command-line help processor prints the included document inline with the referencing document.</dd>
+<dt><code>literal block after ::</code></dt>
+<dd>A paragraph ending in <code>::</code> followed by a blank line treats the following indented block as literal text without interpretation. The command-line help processor prints the <code>::</code> literally and prints the block content with common indentation replaced by one space.</dd>
+<dt><code>note</code> directive</dt>
+<dd>Call out a side note. The command-line help processor prints the block content as if the lines were normal paragraph text with interpretation.</dd>
+<dt><code>parsed-literal</code> directive</dt>
+<dd>Add a literal block with markup interpretation. The command-line help processor prints the block content without the leading directive line and with common indentation replaced by one space.</dd>
+<dt><code>productionlist</code> directive</dt>
+<dd>Render context-free grammar productions. The command-line help processor prints the block content as if the lines were normal paragraph text with interpretation.</dd>
+<dt><code>replace</code> directive</dt>
+<dd>Define a <code>|substitution|</code> replacement. The command-line help processor requires a substitution replacement to be defined before it is referenced.</dd>
+<dt><code>|substitution|</code> reference</dt>
+<dd>Reference a substitution replacement previously defined by the <code>replace</code> directive. The command-line help processor performs the substitution and replaces all newlines in the replacement text with spaces.</dd>
+<dt><code>toctree</code> directive</dt>
+<dd>Include other document sources in the Table-of-Contents document tree. The command-line help processor prints the referenced documents inline as part of the referencing document. </dd>
 <p> Inline markup constructs not listed above are printed literally in the command-line help output. We prefer to use inline markup constructs that look correct in source form, so avoid use of \-escapes in favor of inline literals when possible. </p>
 <p> Explicit markup blocks not matching directives listed above are removed from command-line help output. Do not use them, except for plain <code>..</code> comments that are removed by Sphinx too. </p>
 <p> Note that nested indentation of blocks is not recognized by the command-line help processor. Therefore:</p>
-<dt>&bull;</p>
-<dd>Explicit markup blocks are recognized only when not indented inside other blocks.</p>
-<dt>&bull;</p>
-<dd>Literal blocks after paragraphs ending in <code>::</code> but not at the top indentation level may consume all indented lines following them. </p>
+<dt>&bull;</dt>
+<dd>Explicit markup blocks are recognized only when not indented inside other blocks.</dd>
+<dt>&bull;</dt>
+<dd>Literal blocks after paragraphs ending in <code>::</code> but not at the top indentation level may consume all indented lines following them. </dd>
 <p> Try to avoid these cases in practice.</dl>
 <h3>CMake Domain</h3>
 <p>CMake adds a <i>Sphinx Domain</i> called <code>cmake</code>, also called the &quot;CMake Domain&quot;. It defines several &quot;object&quot; types for CMake documentation:</p>
 <dl>
-<dt><code>command</code></p>
-<dd>A CMake language command.</p>
-<dt><code>generator</code></p>
-<dd>A CMake native build system generator. See the <code><a href="/docs/linux/man/1-cmake3/">cmake3</a>(1)</code> command-line tool&#8217;s <code>-G</code> option.</p>
-<dt><code>manual</code></p>
-<dd>A CMake manual page, like this <i><a href="/docs/linux/man/7-cmake3-developer/">cmake3-developer</a>(7)</i> manual.</p>
-<dt><code>module</code></p>
-<dd>A CMake module. See the <code><a href="/docs/linux/man/7-cmake3-modules/">cmake3-modules</a>(7)</code> manual and the <code>include()</code> command.</p>
-<dt><code>policy</code></p>
-<dd>A CMake policy. See the <code><a href="/docs/linux/man/7-cmake3-policies/">cmake3-policies</a>(7)</code> manual and the <code>cmake_policy()</code> command.</p>
-<dt><code>prop_cache, prop_dir, prop_gbl, prop_sf, prop_inst, prop_test, prop_tgt</code></p>
-<dd>A CMake cache, directory, global, source file, installed file, test, or target property, respectively. See the <code><a href="/docs/linux/man/7-cmake3-properties/">cmake3-properties</a>(7)</code> manual and the <code>set_property()</code> command.</p>
-<dt><code>variable</code></p>
-<dd>A CMake language variable. See the <code><a href="/docs/linux/man/7-cmake3-variables/">cmake3-variables</a>(7)</code> manual and the <code>set()</code> command. </p>
+<dt><code>command</code></dt>
+<dd>A CMake language command.</dd>
+<dt><code>generator</code></dt>
+<dd>A CMake native build system generator. See the <code><a href="/docs/linux/man/1-cmake3/">cmake3</a>(1)</code> command-line tool&#8217;s <code>-G</code> option.</dd>
+<dt><code>manual</code></dt>
+<dd>A CMake manual page, like this <i><a href="/docs/linux/man/7-cmake3-developer/">cmake3-developer</a>(7)</i> manual.</dd>
+<dt><code>module</code></dt>
+<dd>A CMake module. See the <code><a href="/docs/linux/man/7-cmake3-modules/">cmake3-modules</a>(7)</code> manual and the <code>include()</code> command.</dd>
+<dt><code>policy</code></dt>
+<dd>A CMake policy. See the <code><a href="/docs/linux/man/7-cmake3-policies/">cmake3-policies</a>(7)</code> manual and the <code>cmake_policy()</code> command.</dd>
+<dt><code>prop_cache, prop_dir, prop_gbl, prop_sf, prop_inst, prop_test, prop_tgt</code></dt>
+<dd>A CMake cache, directory, global, source file, installed file, test, or target property, respectively. See the <code><a href="/docs/linux/man/7-cmake3-properties/">cmake3-properties</a>(7)</code> manual and the <code>set_property()</code> command.</dd>
+<dt><code>variable</code></dt>
+<dd>A CMake language variable. See the <code><a href="/docs/linux/man/7-cmake3-variables/">cmake3-variables</a>(7)</code> manual and the <code>set()</code> command. </dd>
 <p> Documentation objects in the CMake Domain come from two sources. First, the CMake extension to Sphinx transforms every document named with the form <code>Help/&lt;type&gt;/&lt;file-name&gt;.rst</code> to a domain object with type <code>&lt;type&gt;</code>. The object name is extracted from the document title, which is expected to be of the form: </p>
 <pre>&lt;object-name&gt;
 -------------</pre>
@@ -100,18 +100,18 @@ description: "cmake-developer – CMake Developer Reference"
 * The :prop_tgt:`OUTPUT_NAME_&lt;CONFIG&gt;` target property.</pre>
 <p>produces:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The <code>list()</code> command.</p>
-<dt>&bull;</p>
-<dd>The <code>list(APPEND)</code> sub-command.</p>
-<dt>&bull;</p>
-<dd>The <code>list() command</code>.</p>
-<dt>&bull;</p>
-<dd>The <code>list(APPEND) sub-command</code>.</p>
-<dt>&bull;</p>
-<dd>The <code>CMAKE_VERSION</code> variable.</p>
-<dt>&bull;</p>
-<dd>The <code>OUTPUT_NAME_&lt;CONFIG&gt;</code> target property. </p>
+<dt>&bull;</dt>
+<dd>The <code>list()</code> command.</dd>
+<dt>&bull;</dt>
+<dd>The <code>list(APPEND)</code> sub-command.</dd>
+<dt>&bull;</dt>
+<dd>The <code>list() command</code>.</dd>
+<dt>&bull;</dt>
+<dd>The <code>list(APPEND) sub-command</code>.</dd>
+<dt>&bull;</dt>
+<dd>The <code>CMAKE_VERSION</code> variable.</dd>
+<dt>&bull;</dt>
+<dd>The <code>OUTPUT_NAME_&lt;CONFIG&gt;</code> target property. </dd>
 <p> Note that CMake Domain roles differ from Sphinx and reStructuredText convention in that the form <code>a&lt;b&gt;</code>, without a space preceding <code>&lt;</code>, is interpreted as a name instead of link text with an explicit target. This is necessary because we use <code>&lt;placeholders&gt;</code> frequently in object names like <code>OUTPUT_NAME_&lt;CONFIG&gt;</code>. The form <code>a &lt;b&gt;</code>, with a space preceding <code>&lt;</code>, is still interpreted as a link text with an explicit target.</dl>
 <h3>Style</h3>
 <h3>Style: Section Headers</h3>
@@ -121,18 +121,18 @@ description: "cmake-developer – CMake Developer Reference"
 <p>Capitalize the first letter of each non-minor word in the title. </p>
 <p> The section header underline character hierarchy is</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>#</code>: Manual group (part) in the master document</p>
-<dt>&bull;</p>
-<dd><code>*</code>: Manual (chapter) title</p>
-<dt>&bull;</p>
-<dd><code>=</code>: Section within a manual</p>
-<dt>&bull;</p>
-<dd><code>&#8211;</code>: Subsection or <i>CMake Domain</i> object document title</p>
-<dt>&bull;</p>
-<dd><code>^</code>: Subsubsection or <i>CMake Domain</i> object document section</p>
-<dt>&bull;</p>
-<dd><code>&quot;</code>: Paragraph or <i>CMake Domain</i> object document subsection</dl>
+<dt>&bull;</dt>
+<dd><code>#</code>: Manual group (part) in the master document</dd>
+<dt>&bull;</dt>
+<dd><code>*</code>: Manual (chapter) title</dd>
+<dt>&bull;</dt>
+<dd><code>=</code>: Section within a manual</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;</code>: Subsection or <i>CMake Domain</i> object document title</dd>
+<dt>&bull;</dt>
+<dd><code>^</code>: Subsubsection or <i>CMake Domain</i> object document section</dd>
+<dt>&bull;</dt>
+<dd><code>&quot;</code>: Paragraph or <i>CMake Domain</i> object document subsection</dd></dl>
 <h3>Style: Whitespace</h3>
 <p>Use two spaces for indentation. Use two spaces between sentences in prose.</p>
 <h3>Style: Line Length</h3>
@@ -262,49 +262,49 @@ endmacro()</pre>
 <h3>Standard Variable Names</h3>
 <p>For a <code>FindXxx.cmake</code> module that takes the approach of setting variables (either instead of or in addition to creating imported targets), the following variable names should be used to keep things consistent between find modules. Note that all variables start with <code>Xxx_</code> to make sure they do not interfere with other find modules; the same consideration applies to macros, functions and imported targets.</p>
 <dl>
-<dt><code>Xxx_INCLUDE_DIRS</code></p>
-<dd>The final set of include directories listed in one variable for use by client code. This should not be a cache entry.</p>
-<dt><code>Xxx_LIBRARIES</code></p>
-<dd>The libraries to link against to use Xxx. These should include full paths. This should not be a cache entry.</p>
-<dt><code>Xxx_DEFINITIONS</code></p>
-<dd>Definitions to use when compiling code that uses Xxx. This really shouldn&#8217;t include options such as <code>-DHAS_JPEG</code> that a client source-code file uses to decide whether to <code>#include &lt;jpeg.h&gt;</code></p>
-<dt><code>Xxx_EXECUTABLE</code></p>
-<dd>Where to find the Xxx tool.</p>
-<dt><code>Xxx_Yyy_EXECUTABLE</code></p>
-<dd>Where to find the Yyy tool that comes with Xxx.</p>
-<dt><code>Xxx_LIBRARY_DIRS</code></p>
-<dd>Optionally, the final set of library directories listed in one variable for use by client code. This should not be a cache entry.</p>
-<dt><code>Xxx_ROOT_DIR</code></p>
-<dd>Where to find the base directory of Xxx.</p>
-<dt><code>Xxx_VERSION_Yy</code></p>
-<dd>Expect Version Yy if true. Make sure at most one of these is ever true.</p>
-<dt><code>Xxx_WRAP_Yy</code></p>
-<dd>If False, do not try to use the relevant CMake wrapping command.</p>
-<dt><code>Xxx_Yy_FOUND</code></p>
-<dd>If False, optional Yy part of Xxx system is not available.</p>
-<dt><code>Xxx_FOUND</code></p>
-<dd>Set to false, or undefined, if we haven&#8217;t found, or don&#8217;t want to use Xxx.</p>
-<dt><code>Xxx_NOT_FOUND_MESSAGE</code></p>
-<dd>Should be set by config-files in the case that it has set <code>Xxx_FOUND</code> to FALSE. The contained message will be printed by the <code>find_package()</code> command and by <code>find_package_handle_standard_args()</code> to inform the user about the problem.</p>
-<dt><code>Xxx_RUNTIME_LIBRARY_DIRS</code></p>
-<dd>Optionally, the runtime library search path for use when running an executable linked to shared libraries. The list should be used by user code to create the <code>PATH</code> on windows or <code>LD_LIBRARY_PATH</code> on UNIX. This should not be a cache entry.</p>
-<dt><code>Xxx_VERSION</code></p>
-<dd>The full version string of the package found, if any. Note that many existing modules provide <code>Xxx_VERSION_STRING</code> instead.</p>
-<dt><code>Xxx_VERSION_MAJOR</code></p>
-<dd>The major version of the package found, if any.</p>
-<dt><code>Xxx_VERSION_MINOR</code></p>
-<dd>The minor version of the package found, if any.</p>
-<dt><code>Xxx_VERSION_PATCH</code></p>
-<dd>The patch version of the package found, if any. </p>
+<dt><code>Xxx_INCLUDE_DIRS</code></dt>
+<dd>The final set of include directories listed in one variable for use by client code. This should not be a cache entry.</dd>
+<dt><code>Xxx_LIBRARIES</code></dt>
+<dd>The libraries to link against to use Xxx. These should include full paths. This should not be a cache entry.</dd>
+<dt><code>Xxx_DEFINITIONS</code></dt>
+<dd>Definitions to use when compiling code that uses Xxx. This really shouldn&#8217;t include options such as <code>-DHAS_JPEG</code> that a client source-code file uses to decide whether to <code>#include &lt;jpeg.h&gt;</code></dd>
+<dt><code>Xxx_EXECUTABLE</code></dt>
+<dd>Where to find the Xxx tool.</dd>
+<dt><code>Xxx_Yyy_EXECUTABLE</code></dt>
+<dd>Where to find the Yyy tool that comes with Xxx.</dd>
+<dt><code>Xxx_LIBRARY_DIRS</code></dt>
+<dd>Optionally, the final set of library directories listed in one variable for use by client code. This should not be a cache entry.</dd>
+<dt><code>Xxx_ROOT_DIR</code></dt>
+<dd>Where to find the base directory of Xxx.</dd>
+<dt><code>Xxx_VERSION_Yy</code></dt>
+<dd>Expect Version Yy if true. Make sure at most one of these is ever true.</dd>
+<dt><code>Xxx_WRAP_Yy</code></dt>
+<dd>If False, do not try to use the relevant CMake wrapping command.</dd>
+<dt><code>Xxx_Yy_FOUND</code></dt>
+<dd>If False, optional Yy part of Xxx system is not available.</dd>
+<dt><code>Xxx_FOUND</code></dt>
+<dd>Set to false, or undefined, if we haven&#8217;t found, or don&#8217;t want to use Xxx.</dd>
+<dt><code>Xxx_NOT_FOUND_MESSAGE</code></dt>
+<dd>Should be set by config-files in the case that it has set <code>Xxx_FOUND</code> to FALSE. The contained message will be printed by the <code>find_package()</code> command and by <code>find_package_handle_standard_args()</code> to inform the user about the problem.</dd>
+<dt><code>Xxx_RUNTIME_LIBRARY_DIRS</code></dt>
+<dd>Optionally, the runtime library search path for use when running an executable linked to shared libraries. The list should be used by user code to create the <code>PATH</code> on windows or <code>LD_LIBRARY_PATH</code> on UNIX. This should not be a cache entry.</dd>
+<dt><code>Xxx_VERSION</code></dt>
+<dd>The full version string of the package found, if any. Note that many existing modules provide <code>Xxx_VERSION_STRING</code> instead.</dd>
+<dt><code>Xxx_VERSION_MAJOR</code></dt>
+<dd>The major version of the package found, if any.</dd>
+<dt><code>Xxx_VERSION_MINOR</code></dt>
+<dd>The minor version of the package found, if any.</dd>
+<dt><code>Xxx_VERSION_PATCH</code></dt>
+<dd>The patch version of the package found, if any. </dd>
 <p> The following names should not usually be used in CMakeLists.txt files, but are typically cache variables for users to edit and control the behaviour of find modules (like entering the path to a library manually)</p>
-<dt><code>Xxx_LIBRARY</code></p>
-<dd>The path of the Xxx library (as used with <code>find_library()</code>, for example).</p>
-<dt><code>Xxx_Yy_LIBRARY</code></p>
-<dd>The path of the Yy library that is part of the Xxx system. It may or may not be required to use Xxx.</p>
-<dt><code>Xxx_INCLUDE_DIR</code></p>
-<dd>Where to find headers for using the Xxx library.</p>
-<dt><code>Xxx_Yy_INCLUDE_DIR</code></p>
-<dd>Where to find headers for using the Yy library of the Xxx system. </p>
+<dt><code>Xxx_LIBRARY</code></dt>
+<dd>The path of the Xxx library (as used with <code>find_library()</code>, for example).</dd>
+<dt><code>Xxx_Yy_LIBRARY</code></dt>
+<dd>The path of the Yy library that is part of the Xxx system. It may or may not be required to use Xxx.</dd>
+<dt><code>Xxx_INCLUDE_DIR</code></dt>
+<dd>Where to find headers for using the Xxx library.</dd>
+<dt><code>Xxx_Yy_INCLUDE_DIR</code></dt>
+<dd>Where to find headers for using the Yy library of the Xxx system. </dd>
 <p> To prevent users being overwhelmed with settings to configure, try to keep as many options as possible out of the cache, leaving at least one option which can be used to disable use of the module, or locate a not-found library (e.g. <code>Xxx_ROOT_DIR</code>). For the same reason, mark most cache options as advanced. For packages which provide both debug and release binaries, it is common to create cache variables with a <code>_LIBRARY_&lt;CONFIG&gt;</code> suffix, such as <code>Foo_LIBRARY_RELEASE</code> and <code>Foo_LIBRARY_DEBUG</code>. </p>
 <p> While these are the standard variable names, you should provide backwards compatibility for any old names that were actually in use. Make sure you comment them as deprecated, so that no-one starts using them.</dl>
 <h3>A Sample Find Module</h3>
@@ -421,3 +421,4 @@ endif()</pre>
 set(Foo_VERSION_STRING ${Foo_VERSION})</pre>
 <h2>Copyright</h2>
 <p>2000-2016 Kitware, Inc.</p>
+</p>

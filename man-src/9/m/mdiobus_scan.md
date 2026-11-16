@@ -15,11 +15,11 @@ mdiobus_scan - scan a bus for MDIO devices.
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>mii_bus to scan</dl>
+<dl><dd></dd><dd>mii_bus to scan</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>address on bus to scan</dl>
+<dl><dd>address on bus to scan</dd></dl>
 
 <h2>Description</h2>
 

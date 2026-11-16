@@ -16,130 +16,128 @@ description: "rasort – sort argus(8) data file."
 <h2>OPTIONS</h2>
 <p> Rasort, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-rasort/">rasort</a>(1)</code> specific options are: </p>
 <dl>
-<dt><code>-M replace</code></p>
-<dd> Replace the existing file(s) with the sorted output(s). </p>
-<dt><code>-m</code><i> field [field &#8230;]</i></p>
-<dd> Supported sort fields are:</dl>
+<dt><code>-M replace</code></dt>
+<dd> Replace the existing file(s) with the sorted output(s). </dd>
+<dt><code>-m</code><i> field [field &#8230;]</i></dt>
+<dd> Supported sort fields are:</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>stime</code></p>
-<dd> record start time &lt;default&gt;</p>
-<dt><code>ltime</code></p>
-<dd> record last time.</p>
-<dt><code>trans</code></p>
-<dd> aggregation record count.</p>
-<dt><code>dur</code></p>
-<dd> record total duration.</p>
-<dt><code>avgdur</code></p>
-<dd> record average duration.</p>
-<dt><code>mindur</code></p>
-<dd> record minimum duration.</p>
-<dt><code>maxdur</code></p>
-<dd> record maximum duration.</p>
-<dt><code>smac</code></p>
-<dd> source MAC addr.</p>
-<dt><code>dmac</code></p>
-<dd> destination MAC addr.</p>
-<dt><code>soui</code></p>
-<dd> oui portion of the source MAC addr.</p>
-<dt><code>doui</code></p>
-<dd> oui portion of the destination MAC addr.</p>
-<dt><code>saddr[/cidr]</code></p>
-<dd> source IP addr, with optional cidr specification for IPv4 addresses.</p>
-<dt><code>daddr[/cidr]</code></p>
-<dd> destination IP addr, with optional cidr specification for IPv4 addresses.</p>
-<dt><code>proto</code></p>
-<dd> transaction protocol.</p>
-<dt><code>sport</code></p>
-<dd> source port number.</p>
-<dt><code>dport</code></p>
-<dd> destination port number.</p>
-<dt><code>stos</code></p>
-<dd> source TOS byte value.</p>
-<dt><code>dtos</code></p>
-<dd> destination TOS byte value.</p>
-<dt><code>sttl</code></p>
-<dd> src -&gt; dst TTL value.</p>
-<dt><code>dttl</code></p>
-<dd> dst -&gt; src TTL value.</p>
-<dt><code>bytes</code></p>
-<dd> total transaction bytes.</p>
-<dt><code>sbytes</code></p>
-<dd> src -&gt; dst transaction bytes.</p>
-<dt><code>dbytes</code></p>
-<dd> dst -&gt; src transaction bytes.</p>
-<dt><code>pkts</code></p>
-<dd> total transaction packet count.</p>
-<dt><code>spkts</code></p>
-<dd> src -&gt; dst packet count.</p>
-<dt><code>dpkts</code></p>
-<dd> dst -&gt; src packet count.</p>
-<dt><code>load</code></p>
-<dd> bits per second.</p>
-<dt><code>sload</code></p>
-<dd> source bits per second.</p>
-<dt><code>dload</code></p>
-<dd> destination bits per second.</p>
-<dt><code>loss</code></p>
-<dd> pkts retransmitted or dropped.</p>
-<dt><code>sloss</code></p>
-<dd> source pkts retransmitted or dropped.</p>
-<dt><code>dloss</code></p>
-<dd> destination pkts retransmitted or dropped.</p>
-<dt><code>ploss</code></p>
-<dd> percent pkts retransmitted or dropped.</p>
-<dt><code>sploss</code></p>
-<dd> percent source pkts retransmitted or dropped.</p>
-<dt><code>dploss</code></p>
-<dd> percent destination pkts retransmitted or dropped.</p>
-<dt><code>rate</code></p>
-<dd> pkts per second.</p>
-<dt><code>srate</code></p>
-<dd> source pkts per second.</p>
-<dt><code>drate</code></p>
-<dd> destination pkts per second.</p>
-<dt><code>tranref</code></p>
-<dd> argus transaction reference number.</p>
-<dt><code>seq</code></p>
-<dd> argus sequence number.</p>
-<dt><code>smpls</code></p>
-<dd> source MPLS identifier.</p>
-<dt><code>dmpls</code></p>
-<dd> destination MPLS identifier.</p>
-<dt><code>svlan</code></p>
-<dd> source VLAN identifier.</p>
-<dt><code>dvlan</code></p>
-<dd> destination VLAN identifier.</p>
-<dt><code>srcid</code></p>
-<dd> argus source identifier.</p>
-<dt><code>stcpb</code></p>
-<dd> source TCP base sequence number.</p>
-<dt><code>dtcpb</code></p>
-<dd> destination TCP base sequence number.</p>
-<dt><code>tcprtt</code></p>
-<dd> TCP connection setup round-trip time.</p>
-<dt><code>smeansz</code></p>
-<dd> source mean packet size</p>
-<dt><code>dmeansz</code></p>
-<dd> destination mean packet size</p>
-<dt><code>sco</code></p>
-<dd> source country code</p>
-<dt><code>dco</code></p>
-<dd> destination country code</p>
-<dt><code>sas</code></p>
-<dd> source autonomous system number</p>
-<dt><code>das</code></p>
-<dd> destination autonomous system number </p>
+<dt><code>stime</code></dt>
+<dd> record start time &lt;default&gt;</dd>
+<dt><code>ltime</code></dt>
+<dd> record last time.</dd>
+<dt><code>trans</code></dt>
+<dd> aggregation record count.</dd>
+<dt><code>dur</code></dt>
+<dd> record total duration.</dd>
+<dt><code>avgdur</code></dt>
+<dd> record average duration.</dd>
+<dt><code>mindur</code></dt>
+<dd> record minimum duration.</dd>
+<dt><code>maxdur</code></dt>
+<dd> record maximum duration.</dd>
+<dt><code>smac</code></dt>
+<dd> source MAC addr.</dd>
+<dt><code>dmac</code></dt>
+<dd> destination MAC addr.</dd>
+<dt><code>soui</code></dt>
+<dd> oui portion of the source MAC addr.</dd>
+<dt><code>doui</code></dt>
+<dd> oui portion of the destination MAC addr.</dd>
+<dt><code>saddr[/cidr]</code></dt>
+<dd> source IP addr, with optional cidr specification for IPv4 addresses.</dd>
+<dt><code>daddr[/cidr]</code></dt>
+<dd> destination IP addr, with optional cidr specification for IPv4 addresses.</dd>
+<dt><code>proto</code></dt>
+<dd> transaction protocol.</dd>
+<dt><code>sport</code></dt>
+<dd> source port number.</dd>
+<dt><code>dport</code></dt>
+<dd> destination port number.</dd>
+<dt><code>stos</code></dt>
+<dd> source TOS byte value.</dd>
+<dt><code>dtos</code></dt>
+<dd> destination TOS byte value.</dd>
+<dt><code>sttl</code></dt>
+<dd> src -&gt; dst TTL value.</dd>
+<dt><code>dttl</code></dt>
+<dd> dst -&gt; src TTL value.</dd>
+<dt><code>bytes</code></dt>
+<dd> total transaction bytes.</dd>
+<dt><code>sbytes</code></dt>
+<dd> src -&gt; dst transaction bytes.</dd>
+<dt><code>dbytes</code></dt>
+<dd> dst -&gt; src transaction bytes.</dd>
+<dt><code>pkts</code></dt>
+<dd> total transaction packet count.</dd>
+<dt><code>spkts</code></dt>
+<dd> src -&gt; dst packet count.</dd>
+<dt><code>dpkts</code></dt>
+<dd> dst -&gt; src packet count.</dd>
+<dt><code>load</code></dt>
+<dd> bits per second.</dd>
+<dt><code>sload</code></dt>
+<dd> source bits per second.</dd>
+<dt><code>dload</code></dt>
+<dd> destination bits per second.</dd>
+<dt><code>loss</code></dt>
+<dd> pkts retransmitted or dropped.</dd>
+<dt><code>sloss</code></dt>
+<dd> source pkts retransmitted or dropped.</dd>
+<dt><code>dloss</code></dt>
+<dd> destination pkts retransmitted or dropped.</dd>
+<dt><code>ploss</code></dt>
+<dd> percent pkts retransmitted or dropped.</dd>
+<dt><code>sploss</code></dt>
+<dd> percent source pkts retransmitted or dropped.</dd>
+<dt><code>dploss</code></dt>
+<dd> percent destination pkts retransmitted or dropped.</dd>
+<dt><code>rate</code></dt>
+<dd> pkts per second.</dd>
+<dt><code>srate</code></dt>
+<dd> source pkts per second.</dd>
+<dt><code>drate</code></dt>
+<dd> destination pkts per second.</dd>
+<dt><code>tranref</code></dt>
+<dd> argus transaction reference number.</dd>
+<dt><code>seq</code></dt>
+<dd> argus sequence number.</dd>
+<dt><code>smpls</code></dt>
+<dd> source MPLS identifier.</dd>
+<dt><code>dmpls</code></dt>
+<dd> destination MPLS identifier.</dd>
+<dt><code>svlan</code></dt>
+<dd> source VLAN identifier.</dd>
+<dt><code>dvlan</code></dt>
+<dd> destination VLAN identifier.</dd>
+<dt><code>srcid</code></dt>
+<dd> argus source identifier.</dd>
+<dt><code>stcpb</code></dt>
+<dd> source TCP base sequence number.</dd>
+<dt><code>dtcpb</code></dt>
+<dd> destination TCP base sequence number.</dd>
+<dt><code>tcprtt</code></dt>
+<dd> TCP connection setup round-trip time.</dd>
+<dt><code>smeansz</code></dt>
+<dd> source mean packet size</dd>
+<dt><code>dmeansz</code></dt>
+<dd> destination mean packet size</dd>
+<dt><code>sco</code></dt>
+<dd> source country code</dd>
+<dt><code>dco</code></dt>
+<dd> destination country code</dd>
+<dt><code>sas</code></dt>
+<dd> source autonomous system number</dd>
+<dt><code>das</code></dt>
+<dd> destination autonomous system number </dd>
 </dl>
 </dl>
 <h2>INVOCATION</h2>
 <p> A sample invocation of <code><a href="/docs/linux/man/1-rasort/">rasort</a>(1)</code>. This call reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and sorts the IP protocol based <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data, first by the destination IP address, then by the service (destination) port number and then by the source IP address, and writes the results to stdout. For most services, this arranges <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> formatted data by server, service, and then by client.</p>
 <dl>
-<dt><code>rasort</code> -r inputfile -m daddr dport saddr &#8211; ip</p>
+<dt><code>rasort</code> -r inputfile -m daddr dport saddr &#8211; ip</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2016 QoSient. All rights reserved.</p>
 <h2>SEE ALSO</h2>

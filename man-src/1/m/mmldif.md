@@ -16,12 +16,12 @@ description: "mmldif – mmldif util"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Write a change file (.delta) for each input file</p>
-<dt><code>-D</code></p>
-<dd> Print debugging information</p>
-<dt><code>-o</code></p>
-<dd> Write authoritative data to this file</dl>
+<dt><code>-c</code></dt>
+<dd> Write a change file (.delta) for each input file</dd>
+<dt><code>-D</code></dt>
+<dd> Print debugging information</dd>
+<dt><code>-o</code></dt>
+<dd> Write authoritative data to this file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ldif/">ldif</a></code>(1) </p>
 <h2>AUTHOR</h2>

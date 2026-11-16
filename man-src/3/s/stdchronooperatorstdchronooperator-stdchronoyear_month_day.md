@@ -11,29 +11,17 @@ std::chrono::operator+,std::chrono::operator-(std::chrono::year_month_day) - std
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     constexpr std::chrono::year_month_day operator+(const std::chrono::year_month_day &amp;ymd, (since C++ 20)
-
                                                                                                 const std::chrono::months &amp;dm) noexcept;
-
 constexpr std::chrono::year_month_day operator+(const std::chrono::months &amp;dm, (since C++ 20)
-
                                                                                    const std::chrono::year_month_day &amp;ymd) noexcept;
-
 constexpr std::chrono::year_month_day operator+(const std::chrono::year_month_day &amp;ymd, (since C++ 20)
-
                                                                                             const std::chrono::years &amp;dy) noexcept;
-
 constexpr std::chrono::year_month_day operator+(const std::chrono::years &amp;dy, (since C++ 20)
-
                                                                                   const std::chrono::year_month_day &amp;ymd) noexcept;
-
 constexpr std::chrono::year_month_day operator-(const std::chrono::year_month_day &amp;ymd, (since C++ 20)
-
                                                                                             const std::chrono::months &amp;dm) noexcept;
-
 constexpr std::chrono::year_month_day operator-(const std::chrono::year_month_day &amp;ymd, (since C++ 20)
-
                                                                                             const std::chrono::years &amp;dy) noexcept;</code></pre> 
 1-2) Adds dm.count() months to the date represented by ymd. The result has the same day() as ymd and the same year() and month() as std::chrono::year_month(ymd.year(), ymd.month()) + dm. 
 3-4) Adds dy.count() years to the date represented by ymd. The result is equivalent to std::chrono::year_month_day(ymd.year() + dy, ymd.month(), ymd.day(). 

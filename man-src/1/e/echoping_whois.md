@@ -15,12 +15,12 @@ description: "echoping_whois – echoping plugin which connects to a whois serve
 <p> whois is an echoping plugin to connect to whois/nicname servers (see RFC 3912).</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>request</code></p>
-<dd> The request to the whois server (typically a domain name)</dl>
+<dt><code>request</code></dt>
+<dd> The request to the whois server (typically a domain name)</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d, &#8211;dump</code></p>
-<dd> Dumps the result of the request</dl>
+<dt><code>-d, &#8211;dump</code></dt>
+<dd> Dumps the result of the request</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-echoping/">echoping</a></code>(1),</p>
 <h2>AUTHOR</h2>

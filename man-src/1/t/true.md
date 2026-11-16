@@ -15,10 +15,10 @@ description: "true – do nothing, successfully"
 <h2>DESCRIPTION</h2>
 <p> Exit with a status code indicating success.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> NOTE: your shell may have its own version of true, which usually supersedes the version described here. Please refer to your shell&#8217;s documentation for details about the options it supports.</p>
 <h2>AUTHOR</h2>
 <p> Written by Jim Meyering.</p>

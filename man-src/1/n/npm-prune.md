@@ -12,11 +12,11 @@ description: "npm-prune – Remove extraneous packages"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm prune[[&lt;@scope&gt; / ]&lt;pkg&gt;...][--production][--dry - run][--json]
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> This command removes &quot;extraneous&quot; packages. If a package name is provided, then only packages matching one of the supplied names are removed. </p>
 <p> Extraneous packages are packages that are not listed on the parent package&#8217;s dependencies list. </p>
@@ -27,15 +27,13 @@ npm prune[[&lt;@scope&gt; / ]&lt;pkg&gt;...][--production][--dry - run][--json]
 <p> If you&#8217;ve disabled package-locks then extraneous modules will not be removed and it&#8217;s up to you to run <code>npm prune</code> from time-to-time to remove them.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help uninstall</p>
-<dt>&bull;</p>
-<dd> npm help folders</p>
-<dt>&bull;</p>
-<dd> npm help ls </p>
+<dt>&bull;</dt>
+<dd> npm help uninstall</dd>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help ls </dd>
 </dl>
 </dl>
 <h2>Index</h2>

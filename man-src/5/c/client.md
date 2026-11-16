@@ -13,22 +13,22 @@ description: "client.conf – client configuration file for cups"
 <h2>Directives</h2>
 <p>The following directives are understood by the client. Consult the on-line help for detailed descriptions:</p>
 <dl>
-<dt>Encryption IfRequested</p>
+<dt>Encryption IfRequested</dt>
 <dd>
-<dt>Encryption Never</p>
+</dd><dt>Encryption Never</dt>
 <dd>
-<dt>Encryption Required</p>
-<dd>Specifies the level of encryption that is required for a particular location.</p>
-<dt>GSSServiceName name</p>
-<dd>Specifies the Kerberos service name that is used for authentication, typically &quot;host&quot;, &quot;http&quot;, or &quot;ipp&quot;. CUPS adds the remote hostname (&quot;name [at] server.example.com&quot;) for you. The default name is &quot;http&quot;.</p>
-<dt>ServerName hostname-or-ip-address[:port]</p>
+</dd><dt>Encryption Required</dt>
+<dd>Specifies the level of encryption that is required for a particular location.</dd>
+<dt>GSSServiceName name</dt>
+<dd>Specifies the Kerberos service name that is used for authentication, typically &quot;host&quot;, &quot;http&quot;, or &quot;ipp&quot;. CUPS adds the remote hostname (&quot;name [at] server.example.com&quot;) for you. The default name is &quot;http&quot;.</dd>
+<dt>ServerName hostname-or-ip-address[:port]</dt>
 <dd>
-<dt>ServerName /domain/socket</p>
-<dd>Specifies the address and optionally the port to use when connecting to the server. <code>Note: Not supported on OS X 10.7 or later.</code></p>
-<dt>ServerName hostname-or-ip-address[:port]/version=1.1</p>
-<dd>Specifies the address and optionally the port to use when connecting to a server running CUPS 1.3.12 and earlier. <code>Note: Not supported on OS X 10.7 or later.</code></p>
-<dt>User name</p>
-<dd>Specifies the default user name to use for requests.</dl>
+</dd><dt>ServerName /domain/socket</dt>
+<dd>Specifies the address and optionally the port to use when connecting to the server. <code>Note: Not supported on OS X 10.7 or later.</code></dd>
+<dt>ServerName hostname-or-ip-address[:port]/version=1.1</dt>
+<dd>Specifies the address and optionally the port to use when connecting to a server running CUPS 1.3.12 and earlier. <code>Note: Not supported on OS X 10.7 or later.</code></dd>
+<dt>User name</dt>
+<dd>Specifies the default user name to use for requests.</dd></dl>
 <h2>See Also</h2>
 <p><a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>Copyright</h2>

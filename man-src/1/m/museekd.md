@@ -17,14 +17,14 @@ description: "Museekd – C++ Daemon/Client for Soulseek"
 <h2>OPTIONS</h2>
 <p> Museekd accepts the following options:</p>
 <dl>
-<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</p>
-<dd> Use a different config file.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display Version and exit.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Show debugging messages.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help and exit. </p>
+<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</dt>
+<dd> Use a different config file.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display Version and exit.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Show debugging messages.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help and exit. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To run this program the standard way type: </p>
@@ -34,8 +34,8 @@ description: "Museekd – C++ Daemon/Client for Soulseek"
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.xml</i></p>
-<dd> The default location for the <code>museekd</code> config file.</dl>
+&nbsp;<wbr><i>~/.museekd/config.xml</i></dt>
+<dd> The default location for the <code>museekd</code> config file.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Hyriand &lt;hyriand [at] thegraveyard.org&gt; </p>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>

@@ -15,7 +15,7 @@ description: "ttembed – remove embedding restrictions from TrueType files"
 <p> <code>ttembed</code> sets the <code>fsType</code> field of the OS/2 table to zero and recalculates the OS/2 table&#8217;s checksum.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-n</p>
-<dd> Dry-run mode, which just displays the fsType field and filename of the given fonts if it is non-zero (i.e. if <code>ttembed</code> would change it. </p>
+<dt>-n</dt>
+<dd> Dry-run mode, which just displays the fsType field and filename of the given fonts if it is non-zero (i.e. if <code>ttembed</code> would change it. </dd>
 </dl>
 <h2>Index</h2>

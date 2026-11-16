@@ -15,11 +15,11 @@ rpc_peeraddr2str - return remote peer address in printable format
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client structure</dl>
+<dl><dd></dd><dd>RPC client structure</dd></dl>
  
 
  <i>format</i>
-<dl><dd>address format</dl>
+<dl><dd>address format</dd></dl>
 
 <h2>Description</h2>
 

@@ -11,34 +11,23 @@ std::swap - std::swap
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;(until C++ 11)
-
     Defined in header&lt;utility&gt;(since C++ 11)
-
         template &lt;class T&gt;
         (until C++ 11)
-
             void swap(T &amp;a, T &amp;b);
-
 template &lt;class T&gt;
 (since C++ 11)
-
     void swap(T &amp;a, T &amp;b) noexcept(/* see below */);
 (until C++ 20)
-
     template &lt;class T&gt;
     (1)(since C++ 20)
-
         constexpr void swap(T &amp;a, T &amp;b) noexcept(/* see below */);
-
 template &lt;class T2, std::size_t N&gt;
 (since C++ 11)
-
     void swap(T2 (&amp;a)[N], T2 (&amp;b)[N]) noexcept(/* see below */);
 (2)(until C++ 20)
-
     template &lt;class T2, std::size_t N&gt;
     (since C++ 20)
-
         constexpr void swap(T2 (&amp;a)[N], T2 (&amp;b)[N]) noexcept(/* see below */);</code></pre> 
 Exchanges the given values. 
 1) Swaps the values a and b. 
@@ -282,10 +271,8 @@ swap(std::filesystem::path) <i>(function)</i>
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     int a = 5, b = 3;
     // before

@@ -19,7 +19,7 @@ description: "dgegs.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  This routine is deprecated and has been replaced by routine DGGES.
  DGEGS computes the eigenvalues, real Schur form, and, optionally,
@@ -37,11 +37,11 @@ description: "dgegs.f –"
  eigenvalues of the generalized nonsymmetric eigenvalue problem
  (GNEP).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVSL</i> </p>
+</dt><dd> <i>JOBVSL</i> </dd>
 <pre>
           JOBVSL is CHARACTER*1
           = 'N':  do not compute the left Schur vectors;
@@ -175,14 +175,14 @@ description: "dgegs.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 226 of file dgegs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

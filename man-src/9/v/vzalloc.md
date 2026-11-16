@@ -14,7 +14,7 @@ description: "vzalloc – allocate virtually contiguous memory with zero fill"
 <p><i>size</i></p>
 <dl>
 <dd>
-<dd>allocation size Allocate enough pages to cover <i>size</i> from the page level allocator and map them into contiguous kernel virtual space. The memory allocated is set to zero.</dl>
+</dd><dd>allocation size Allocate enough pages to cover <i>size</i> from the page level allocator and map them into contiguous kernel virtual space. The memory allocated is set to zero.</dd></dl>
 <h2>Description</h2>
 <p>For tight control over page level allocator and protection flags use <code>__vmalloc</code> instead.</p>
 <h2>Copyright</h2>

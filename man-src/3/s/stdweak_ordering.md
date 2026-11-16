@@ -62,9 +62,7 @@ u &#8211; an unused parameter of any type that accepts literal zero argument</p>
 <p>true if v is equivalent, false if v is less or greater<br />
 &nbsp;operator!= </p>
 <pre><code>friend constexpr bool operator!=(weak_ordering v, /*unspecified*/ u) noexcept;
-
 friend constexpr bool operator!=(/*unspecified*/ u, weak_ordering v) noexcept;
-
 </code></pre>
 <h2>Parameters</h2>
 <p>v &#8211; a std::weak_ordering value to check<br />

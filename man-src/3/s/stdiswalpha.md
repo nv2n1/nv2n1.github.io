@@ -11,7 +11,6 @@ std::iswalpha - std::iswalpha
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     int iswalpha(std::wint_t ch);</code></pre> 
 Checks if the given wide character is an alphabetic character, i.e. either an uppercase letter (ABCDEFGHIJKLMNOPQRSTUVWXYZ), a lowercase letter (abcdefghijklmnopqrstuvwxyz) or any alphabetic character specific to the current locale. 
 If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 
@@ -31,12 +30,9 @@ ISO_30112 specifies which Unicode characters are include in POSIX alpha category
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     wchar_t c = L'\u0b83'; // Tamil sign Visarga ('ஃ')
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; std::boolalpha;

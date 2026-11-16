@@ -10,7 +10,7 @@ description: "vfs_dirsort – Sort directory contents"
 <p>vfs_dirsort &#8211; Sort directory contents</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = dirsort</dl>
+<dd>vfs objects = dirsort</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_dirsort module sorts directory entries alphabetically before sending them to the client. </p>
@@ -21,7 +21,7 @@ description: "vfs_dirsort – Sort directory contents"
 <dd>
 <pre> <i>[global]</i>
  m[blue]<code>vfs objects = dirsort</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 3.3 of the Samba suite.</p>
 <h2>Author</h2>

@@ -11,13 +11,9 @@ std::inserter - std::inserter
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class Container &gt;                                                                           (until C++20)
-
 std::insert_iterator&lt;Container&gt; inserter( Container&amp; c, typename Container::iterator i );
-
 template&lt; class Container &gt;                                                                           (since C++20)
-
 constexpr std::insert_iterator&lt;Container&gt; inserter( Container&amp; c, ranges::iterator_t&lt;Container&gt; i );</code></pre> 
 inserter is a convenience function template that constructs a std::insert_iterator for the container c and its iterator i with the type deduced from the type of the argument. 
 
@@ -41,16 +37,11 @@ A std::insert_iterator which can be used to insert elements into the container c
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;set&gt;
 int main()
-
 {
     std::multiset&lt;int&gt; s{1, 2, 3};
     // std::inserter is commonly used with sets

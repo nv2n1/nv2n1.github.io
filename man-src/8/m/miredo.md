@@ -18,20 +18,20 @@ description: "miredo – Teredo IPv6 tunneling for Unix"
 <p> A Teredo server is a special Teredo relay which is required for Teredo clients to setup their IPv6 connectivity through Teredo. A Teredo server must have to global static subsequent IPv4 addresses. It receives packets from Teredo clients and Teredo relays on UDP port 3544.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c config_file</code> or <code>&#8211;config config_file</code></p>
-<dd>Specify an alternate configuration file for Miredo instead of the default, <i>/etc/miredo/miredo.conf</i>. </p>
-<dt><code>-f</code> or <code>&#8211;foreground</code></p>
-<dd>Do not detach from the console. Run the program in the foreground. </p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Display some help and exit. </p>
-<dt><code>-t</code> or <code>&#8211;chrootdir</code></p>
-<dd>Specify a directory to use as a root after initialization is completed. When used as a Teredo client, the hostname resolver library files must be present in the chroot. The directory can safely be left empty for a Teredo relay. </p>
-<dt><code>-u username</code> or <code>&#8211;user username</code></p>
-<dd>Override the user that the program will run as. By default, it runs as <code>nobody</code>. </p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd>Display program version and license and exit. </p>
-<dt><code>server_name</code></p>
-<dd>This optional command argument specifies a Teredo server to use. It will override any ServerAddress directive found in the configuration file. It is ignored if RelayType is not set to &quot;client&quot; (see miredo.conf). </p>
+<dt><code>-c config_file</code> or <code>&#8211;config config_file</code></dt>
+<dd>Specify an alternate configuration file for Miredo instead of the default, <i>/etc/miredo/miredo.conf</i>. </dd>
+<dt><code>-f</code> or <code>&#8211;foreground</code></dt>
+<dd>Do not detach from the console. Run the program in the foreground. </dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Display some help and exit. </dd>
+<dt><code>-t</code> or <code>&#8211;chrootdir</code></dt>
+<dd>Specify a directory to use as a root after initialization is completed. When used as a Teredo client, the hostname resolver library files must be present in the chroot. The directory can safely be left empty for a Teredo relay. </dd>
+<dt><code>-u username</code> or <code>&#8211;user username</code></dt>
+<dd>Override the user that the program will run as. By default, it runs as <code>nobody</code>. </dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd>Display program version and license and exit. </dd>
+<dt><code>server_name</code></dt>
+<dd>This optional command argument specifies a Teredo server to use. It will override any ServerAddress directive found in the configuration file. It is ignored if RelayType is not set to &quot;client&quot; (see miredo.conf). </dd>
 </dl>
 <h2>Security</h2>
 <p><code>Miredo</code> requires <i>root</i> privileges to create its IPv6 tunneling network interface, and to set it up properly. Once its initialization is complete, it will <i>setgid</i>, <i>chroot</i> into an empty directory and ultimately <i>setuid</i> (see option <i>-u</i>), so as to decrease the system&#8217;s exposure to potential security issues. However, if Miredo runs as a Teredo client, it needs root privileges when running, in order to change the tunneling network interface settings automatically. To prevent possible root compromise, Miredo implements <i>priveleges</i> <i>separation</i>. The process that handles data from the network is not privileged. </p>
@@ -42,10 +42,10 @@ description: "miredo – Teredo IPv6 tunneling for Unix"
 <p> <code>SIGUSR1</code>, <code>SIGUSR2</code> Do nothing, might be used in future versions.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/miredo/miredo.conf</i></p>
-<dd>The default configuration file. </p>
-<dt><i>/var/run/miredo.pid</i></p>
-<dd>The process-id file. </p>
+<dt><i>/etc/miredo/miredo.conf</i></dt>
+<dd>The default configuration file. </dd>
+<dt><i>/var/run/miredo.pid</i></dt>
+<dd>The process-id file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-miredo-conf/">miredo.conf</a>(5), <a href="/docs/linux/man/8-miredo-server/">miredo-server</a>(8), <a href="/docs/linux/man/7-ipv6/">ipv6</a>(7), <a href="/docs/linux/man/8-route/">route</a>(8), <a href="/docs/linux/man/8-ip/">ip</a>(8) </p>

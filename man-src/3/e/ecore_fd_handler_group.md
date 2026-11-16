@@ -27,17 +27,17 @@ description: "File Event Handling Functions – Functions that deal with file de
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd_handler</i> The given FD handler.<br />
- <i>flags</i> The flags, ECORE_FD_READ, ECORE_FD_WRITE or ECORE_FD_ERROR to query.</dl>
+ <i>flags</i> The flags, ECORE_FD_READ, ECORE_FD_WRITE or ECORE_FD_ERROR to query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if any of the given flags are active. 0 otherwise.</dl>
+<dd>1 if any of the given flags are active. 0 otherwise.</dd></dl>
 <p> References ECORE_FD_ERROR, ECORE_FD_READ, and ECORE_FD_WRITE.</p>
 <h3>EAPI void ecore_main_fd_handler_active_set (<code>Ecore_Fd_Handler</code> * fd_handler, Ecore_Fd_Handler_Flags flags)</h3>
 <p>Set what active streams the given FD handler should be monitoring. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>fd_handler</i> The given FD handler.<br />
- <i>flags</i> The flags to be watching.</dl>
+ <i>flags</i> The flags to be watching.</dd></dl>
 <p> Referenced by ecore_con_client_send(), ecore_con_server_send(), ecore_exe_pipe_run(), and ecore_exe_send().</p>
 <h3>EAPI <code>Ecore_Fd_Handler</code>* ecore_main_fd_handler_add (int fd, Ecore_Fd_Handler_Flags flags, int(*)(void *data, <code>Ecore_Fd_Handler</code> *fd_handler) func, const void * data, int(*)(void *buf_data, <code>Ecore_Fd_Handler</code> *fd_handler) buf_func, const void * buf_data)</h3>
 <p>Adds a callback for activity on the given file descriptor. </p>
@@ -51,27 +51,27 @@ description: "File Event Handling Functions – Functions that deal with file de
  <i>func</i> The callback function.<br />
  <i>data</i> The data to pass to the callback.<br />
  <i>buf_func</i> The function to call to check if any data has been buffered and already read from the fd. Can be NULL.<br />
- <i>buf_data</i> The data to pass to the buf_func function.</dl>
+ <i>buf_data</i> The data to pass to the buf_func function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A fd handler handle if successful. NULL otherwise.</dl>
+<dd>A fd handler handle if successful. NULL otherwise.</dd></dl>
 <p> Referenced by ecore_con_server_add(), ecore_con_server_connect(), ecore_evas_init(), ecore_exe_pipe_run(), and ecore_x_init().</p>
 <h3>EAPI void* ecore_main_fd_handler_del (<code>Ecore_Fd_Handler</code> * fd_handler)</h3>
 <p>Deletes the given FD handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd_handler</i> The given FD handler.</dl>
+<dd><i>fd_handler</i> The given FD handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer set using <code>ecore_main_fd_handler_add</code>, for fd_handler on success. NULL otherwise.</dl>
+<dd>The data pointer set using <code>ecore_main_fd_handler_add</code>, for fd_handler on success. NULL otherwise.</dd></dl>
 <p> Referenced by ecore_con_client_del(), ecore_con_server_add(), ecore_con_server_connect(), ecore_con_server_del(), ecore_con_url_destroy(), ecore_evas_shutdown(), and ecore_exe_free().</p>
 <h3>EAPI int ecore_main_fd_handler_fd_get (<code>Ecore_Fd_Handler</code> * fd_handler)</h3>
 <p>Retrieves the file descriptor that the given handler is handling. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd_handler</i> The given FD handler.</dl>
+<dd><i>fd_handler</i> The given FD handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The file descriptor the handler is watching.</dl>
+<dd>The file descriptor the handler is watching.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

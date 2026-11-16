@@ -19,42 +19,42 @@ description: "servertool – The Java(TM) IDL Server Tool"
 <h2>Options</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-ORBInitialHost nameserverhost</p>
-<dd>Specifies the host machine on which the name server is running and listening for incoming requests. The <i>nameserverhost</i> defaults to <i>localhost</i> if this option is not specified. If <i>orbd</i> and <i>servertool</i> are running on different machines, you must specify the name or IP address of the host on which <i>orbd</i> is running.</p>
-<dt>-Joption</p>
-<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for <a href="/docs/linux/man/1-java/">java</a>(1). For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying virtual machine.</dl>
+</dd><dl COMPACT>
+<dt>-ORBInitialHost nameserverhost</dt>
+<dd>Specifies the host machine on which the name server is running and listening for incoming requests. The <i>nameserverhost</i> defaults to <i>localhost</i> if this option is not specified. If <i>orbd</i> and <i>servertool</i> are running on different machines, you must specify the name or IP address of the host on which <i>orbd</i> is running.</dd>
+<dt>-Joption</dt>
+<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for <a href="/docs/linux/man/1-java/">java</a>(1). For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying virtual machine.</dd></dl>
 </dl>
 <h2>Commands</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>register -server&nbsp;<wbr>&lt;server class name&gt; &nbsp;<wbr>-classpath&nbsp;<wbr>&lt;classpath to server&gt; [&nbsp;<wbr>-applicationName&nbsp;<wbr>&lt;application name&gt; -args&nbsp;<wbr>&lt;args to server&gt; -vmargs&nbsp;<wbr>&lt;flags to be passed to Java VM&gt; &nbsp;<wbr>]</p>
-<dd>Register a new persistent server with the Object Request Broker Daemon (ORBD). If the server is not already registered, it is registered and activated. This command causes an install method to be invoked in the main class of the server identified by the <i>-server</i> option. The install method must be <i>public static void install(org.omg.CORBA.ORB)</i>. The install method is optional and enables the developer to provide their own server installation behavior (for example, creating database schema).</p>
-<dt>unregister -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</p>
-<dd>Unregister a server from the ORBD by using either its server id or its application name. This command causes an uninstall method to be invoked in the main class of the server identified by the <i>-server</i> option. The uninstall method must be <i>public static void uninstall(org.omg.CORBA.ORB)</i>. The uninstall method is optional and enables the developer to provide their own server uninstall behavior (for example, undoing the behavior of the install method).</p>
-<dt>getserverid -applicationName&nbsp;<wbr>&lt;application name&gt;</p>
-<dd>Return the server id that corresponds with an application.</p>
-<dt>list</p>
-<dd>List information about all persistent servers registered with the ORBD.</p>
-<dt>listappnames</p>
-<dd>List the application names for all servers currently registered with the ORBD.</p>
-<dt>listactive</p>
-<dd>List information about all persistent servers that have been launched by the ORBD and are currently running.</p>
-<dt>locate -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt; [-endpointType&nbsp;<wbr>&lt;endpointType&gt;&nbsp;<wbr>]</p>
-<dd>Locate the endpoints (ports) of a specific type for all ORBs created by a registered server. If a server is not already running, it is activated. If an endpoint type is not specified, then the plain/non-protected endpoint associated with each ORB in a server is returned.</p>
-<dt>locateperorb -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt; [-orbid&nbsp;<wbr>&lt;ORB name&gt;&nbsp;<wbr>]</p>
-<dd>Locate all the endpoints (ports) registered by a specific ORB of registered server. If a server is not already running, then it is activated. If an <i>orbid</i> is not specified, the default value of &quot;&quot; is assigned to the <i>orbid</i>. If any ORBs are created with an <i>orbid</i> of empty string, all ports registered by it are returned.</p>
-<dt>orblist -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</p>
-<dd>Lists the ORBId of the ORBs defined on a server. An ORBId is the string name for the ORB created by the server. If the server is not already running, it is activated.</p>
-<dt>shutdown -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</p>
-<dd>Shutdown an active server that is registered with ORBD. During execution of this command, the <i>shutdown()</i> method defined in the class specified by either the <i>-serverid</i> or <i>-applicationName</i> parameter is also invoked to shutdown the server process appropriately.</p>
-<dt>startup -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</p>
-<dd>Startup or activate a server that is registered with ORBD. If the server is not running, this command launches the server. If the server is already running, an error message is returned to the user.</p>
-<dt>help</p>
-<dd>List all the commands available to the server through the server tool.</p>
-<dt>quit</p>
-<dd>Exit the server tool.</dl>
+</dd><dl COMPACT>
+<dt>register -server&nbsp;<wbr>&lt;server class name&gt; &nbsp;<wbr>-classpath&nbsp;<wbr>&lt;classpath to server&gt; [&nbsp;<wbr>-applicationName&nbsp;<wbr>&lt;application name&gt; -args&nbsp;<wbr>&lt;args to server&gt; -vmargs&nbsp;<wbr>&lt;flags to be passed to Java VM&gt; &nbsp;<wbr>]</dt>
+<dd>Register a new persistent server with the Object Request Broker Daemon (ORBD). If the server is not already registered, it is registered and activated. This command causes an install method to be invoked in the main class of the server identified by the <i>-server</i> option. The install method must be <i>public static void install(org.omg.CORBA.ORB)</i>. The install method is optional and enables the developer to provide their own server installation behavior (for example, creating database schema).</dd>
+<dt>unregister -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</dt>
+<dd>Unregister a server from the ORBD by using either its server id or its application name. This command causes an uninstall method to be invoked in the main class of the server identified by the <i>-server</i> option. The uninstall method must be <i>public static void uninstall(org.omg.CORBA.ORB)</i>. The uninstall method is optional and enables the developer to provide their own server uninstall behavior (for example, undoing the behavior of the install method).</dd>
+<dt>getserverid -applicationName&nbsp;<wbr>&lt;application name&gt;</dt>
+<dd>Return the server id that corresponds with an application.</dd>
+<dt>list</dt>
+<dd>List information about all persistent servers registered with the ORBD.</dd>
+<dt>listappnames</dt>
+<dd>List the application names for all servers currently registered with the ORBD.</dd>
+<dt>listactive</dt>
+<dd>List information about all persistent servers that have been launched by the ORBD and are currently running.</dd>
+<dt>locate -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt; [-endpointType&nbsp;<wbr>&lt;endpointType&gt;&nbsp;<wbr>]</dt>
+<dd>Locate the endpoints (ports) of a specific type for all ORBs created by a registered server. If a server is not already running, it is activated. If an endpoint type is not specified, then the plain/non-protected endpoint associated with each ORB in a server is returned.</dd>
+<dt>locateperorb -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt; [-orbid&nbsp;<wbr>&lt;ORB name&gt;&nbsp;<wbr>]</dt>
+<dd>Locate all the endpoints (ports) registered by a specific ORB of registered server. If a server is not already running, then it is activated. If an <i>orbid</i> is not specified, the default value of &quot;&quot; is assigned to the <i>orbid</i>. If any ORBs are created with an <i>orbid</i> of empty string, all ports registered by it are returned.</dd>
+<dt>orblist -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</dt>
+<dd>Lists the ORBId of the ORBs defined on a server. An ORBId is the string name for the ORB created by the server. If the server is not already running, it is activated.</dd>
+<dt>shutdown -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</dt>
+<dd>Shutdown an active server that is registered with ORBD. During execution of this command, the <i>shutdown()</i> method defined in the class specified by either the <i>-serverid</i> or <i>-applicationName</i> parameter is also invoked to shutdown the server process appropriately.</dd>
+<dt>startup -serverid&nbsp;<wbr>&lt;server id&nbsp;<wbr>&gt;&nbsp;<wbr>| -applicationName&nbsp;<wbr>&lt;application name&gt;</dt>
+<dd>Startup or activate a server that is registered with ORBD. If the server is not running, this command launches the server. If the server is already running, an error message is returned to the user.</dd>
+<dt>help</dt>
+<dd>List all the commands available to the server through the server tool.</dd>
+<dt>quit</dt>
+<dd>Exit the server tool.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p>orbd(1)</p>

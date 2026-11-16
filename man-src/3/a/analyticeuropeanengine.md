@@ -19,25 +19,25 @@ description: "QuantLib::AnalyticEuropeanEngine – Pricing engine for European v
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</p>
-<dt>*</p>
-<dd>the correctness of the returned implied volatility is tested by using it for reproducing the target value.</p>
-<dt>*</p>
-<dd>the implied-volatility calculation is tested by checking that it does not modify the option.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of cash-or-nothing digital payoff is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of asset-or-nothing digital payoff is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of gap digital payoff is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks in case of cash-or-nothing digital payoff is tested by reproducing numerical derivatives.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned implied volatility is tested by using it for reproducing the target value.</dd>
+<dt>*</dt>
+<dd>the implied-volatility calculation is tested by checking that it does not modify the option.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of cash-or-nothing digital payoff is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of asset-or-nothing digital payoff is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of gap digital payoff is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks in case of cash-or-nothing digital payoff is tested by reproducing numerical derivatives.</dd></dl>
 </dl>
 <p> <code>Examples: </code> </p>
 <p> <code>EquityOption.cpp</code>, and <code>Replication.cpp</code>. </p>

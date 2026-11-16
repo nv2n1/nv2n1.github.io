@@ -10,11 +10,8 @@ description: "std::strstreambuf::seekoff – std::strstreambuf::seekoff"
 <p>std::strstreambuf::seekoff &#8211; std::strstreambuf::seekoff</p>
 <h2>Synopsis</h2>
 <pre><code>protected:
-
 virtual pos_type seekoff(off_type off,
-
 ios_base::seekdir way,
-
 ios_base::openmode which = ios_base::in | ios_base::out);</code></pre>
 <p>Repositions std::basic_streambuf::gptr and/or std::basic_streambuf::pptr, if possible, to the position that corresponds to exactly off characters from beginning, end, or current position of the get and/or put area of the buffer.<br />
 * If which includes ios_base::in and this buffer is open for reading, then repositions the read pointer std::basic_streambuf::gptr inside the get area as described below<br />
@@ -45,10 +42,8 @@ way &#8211; beg the beginning of a stream<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;strstream&gt;
 int main()
-
 {
     char a[] = &quot;123&quot;;
     std::strstream ss(a, sizeof a); // in/out

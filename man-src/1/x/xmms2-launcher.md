@@ -16,18 +16,18 @@ description: "xmms2-launcher – XMMS2 daemon launcher"
 <p> <i>xmms2-launcher</i> starts <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1)</i> in the background. The main feature is that it does not exit until the IPC system of <code>XMMS2</code> is available, meaning that as soon as the <i>xmms2-launcher</i> process has exited successfully <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1)</i> is ready to accept commands. </p>
 <p> <i>xmms2-launcher</i> includes command line options to change the way in which the daemon is invoked.</p>
 <dl>
-<dt><code>These</code>options<code>are</code>currently<code>recognised:</code></p>
+<dt><code>These</code>options<code>are</code>currently<code>recognised:</code></dt>
 <dd>
-<dt><i>-l logfile / &#8211;logfile=logfile</i></p>
-<dd> Write log file to <i>logfile</i> instead of the default log file location</p>
-<dt><i>&#8211; P pidfile / &#8211;pidfile=pidfile</i></p>
-<dd> Write the pid of <i>xmms2d</i> to the file specified by <i>pidfile</i></p>
-<dt><i>-? / &#8211;help </i></p>
-<dd> Show help options</dl>
+</dd><dt><i>-l logfile / &#8211;logfile=logfile</i></dt>
+<dd> Write log file to <i>logfile</i> instead of the default log file location</dd>
+<dt><i>&#8211; P pidfile / &#8211;pidfile=pidfile</i></dt>
+<dd> Write the pid of <i>xmms2d</i> to the file specified by <i>pidfile</i></dd>
+<dt><i>-? / &#8211;help </i></dt>
+<dd> Show help options</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>$XDG_CACHE_HOME/xmms2/xmms2d.log</i></p>
-<dd> The default location for a file where the log output of <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1)</i> is redirected. Usually ~/.cache/xmms2/xmms2d.log.</dl>
+<dt><i>$XDG_CACHE_HOME/xmms2/xmms2d.log</i></dt>
+<dd> The default location for a file where the log output of <i><a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1)</i> is redirected. Usually ~/.cache/xmms2/xmms2d.log.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xmms2d/">xmms2d</a>(1), <a rel="nofollow" href="http://xmms2.xmms.org">http://xmms2.xmms.org</a></p>
 <h2>HISTORY</h2>

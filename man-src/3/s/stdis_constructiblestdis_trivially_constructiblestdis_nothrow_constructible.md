@@ -10,20 +10,14 @@ description: "std::is_constructible,std::is_trivially_constructible,std::is_noth
 <p>std::is_constructible,std::is_trivially_constructible,std::is_nothrow_constructible &#8211; std::is_constructible,std::is_trivially_constructible,std::is_nothrow_constructible</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T, class... Args&gt;
     (1)(since C++ 11)
-
         struct is_constructible;
-
 template &lt;class T, class... Args&gt;
 (2)(since C++ 11)
-
     struct is_trivially_constructible;
-
 template &lt;class T, class... Args&gt;
 (3)(since C++ 11)
-
     struct is_nothrow_constructible;</code></pre>
 <p>1) If T is an object or reference type and the variable definition T obj(std::declval&lt;Args&gt;()&#8230;); is well-formed, provides the member constant value equal to true. In all other cases, value is false.<br />
 For the purposes of this check, the variable definition is never interpreted as a function declaration, and the use of std::declval is not considered an odr-use. Access_checks are performed as if from a context unrelated to T and any of the types in Args. Only the validity of the immediate context of the variable definition is considered.<br />
@@ -57,13 +51,11 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class Foo
 {
     int v1;
     double v2;
-
   public:
     Foo(int n)
         : v1(n), v2()

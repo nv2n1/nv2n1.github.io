@@ -13,8 +13,8 @@ description: "pskc_check_version – API function"
 const char *pskc_check_version(const char *req_version);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * req_version</p>
-<dd>version string to compare with, or NULL.</dl>
+<dt>const char * req_version</dt>
+<dd>version string to compare with, or NULL.</dd></dl>
 <h2>Description</h2>
 <p>Check PSKC library version. </p>
 <p> See <code>PSKC_VERSION</code> for a suitable <i>req_version</i> string. </p>

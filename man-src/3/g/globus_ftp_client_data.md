@@ -50,13 +50,13 @@ url: "/docs/linux/man/3-globus_ftp_client_data/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>user_arg</i> The user_arg parameter passed to the read or write function. 
+</dt><dd> <i>user_arg</i> The user_arg parameter passed to the read or write function. 
  <i>handle</i> The handle on which the data block operation was done. 
  <i>error</i> A Globus error object indicating any problem which occurred processing this data block, or or GLOBUS_SUCCESS if the operation completed successfully. 
  <i>buffer</i> The data buffer passed to the original read or write call. 
  <i>length</i> The amount of data in the data buffer. When reading data, this may be smaller than original buffer's length. 
  <i>offset</i> The offset into the file which this data block contains. 
- <i>eof</i> GLOBUS_TRUE if EOF has been reached on this data transfer, GLOBUS_FALSE otherwise. This may be set to GLOBUS_TRUE for multiple callbacks.</dl>
+ <i>eof</i> GLOBUS_TRUE if EOF has been reached on this data transfer, GLOBUS_FALSE otherwise. This may be set to GLOBUS_TRUE for multiple callbacks.</dd></dl>
  
 
  
@@ -74,17 +74,17 @@ url: "/docs/linux/man/3-globus_ftp_client_data/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> A pointer to a FTP Client handle which contains state information about the get operation. 
+</dt><dd> <i>handle</i> A pointer to a FTP Client handle which contains state information about the get operation. 
  <i>buffer</i> A user-supplied buffer into which data from the FTP server will be stored. 
  <i>buffer_length</i> The maximum amount of data that can be stored into the buffer. 
  <i>callback</i> The function to be called once the data has been read. 
- <i>callback_arg</i> Argument passed to the callback function</dl>
+ <i>callback_arg</i> Argument passed to the callback function</dd></dl>
  
 
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_operationattr_set_read_all()</b></dl>
+</dt><dd> <b>globus_ftp_client_operationattr_set_read_all()</b></dd></dl>
  
 
  
@@ -98,13 +98,13 @@ url: "/docs/linux/man/3-globus_ftp_client_data/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> A pointer to a FTP Client handle which contains state information about the put operation. 
+</dt><dd> <i>handle</i> A pointer to a FTP Client handle which contains state information about the put operation. 
  <i>buffer</i> A user-supplied buffer containing the data to write to the server. 
  <i>buffer_length</i> The size of the buffer to be written. 
  <i>offset</i> The offset of the buffer to be written. In extended-block mode, the data does not need to be sent in order. In stream mode (the default), data must be sent in sequential order. The behavior is undefined if multiple writes overlap. 
  <i>eof</i> 
  <i>callback</i> The function to be called once the data has been written. 
- <i>callback_arg</i> Argument passed to the callback function</dl>
+ <i>callback_arg</i> Argument passed to the callback function</dd></dl>
  
 
  
@@ -120,8 +120,8 @@ url: "/docs/linux/man/3-globus_ftp_client_data/"
 
 
 <dt><a HREF="#lbAH">Function Documentation</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAK">Author</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAK">Author</a>
+</dt><dd></dd></dl>

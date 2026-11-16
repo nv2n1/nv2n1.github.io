@@ -14,12 +14,12 @@ description: "srp_attach_transport – instantiate SRP transport template"
 <p><i>ft</i></p>
 <dl>
 <dd>
-<dd>SRP transport class function template</dl>
+</dd><dd>SRP transport class function template</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

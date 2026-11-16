@@ -11,8 +11,8 @@ description: "tccat – concatenate multimedia streams from medium and print on 
 <p> tccat &#8211; concatenate multimedia streams from medium and print on the standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>tccat</code></p>
-<dd> <code>-i</code> <i>name</i> [ <code>-t</code> <i>magic</i> ] [ <code>-T</code> <i>title[,chapter[,angle]]</i> ] [ <code>-L</code> ] [ <code>-S</code> <i>n</i> ] [ <code>-P</code> ] [ <code>-a</code> ] [ <code>-d</code> <i>mode</i> ] [ <code>-v</code> ]</dl>
+<dt><code>tccat</code></dt>
+<dd> <code>-i</code> <i>name</i> [ <code>-t</code> <i>magic</i> ] [ <code>-T</code> <i>title[,chapter[,angle]]</i> ] [ <code>-L</code> ] [ <code>-S</code> <i>n</i> ] [ <code>-P</code> ] [ <code>-a</code> ] [ <code>-d</code> <i>mode</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tccat</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
@@ -21,24 +21,24 @@ description: "tccat – concatenate multimedia streams from medium and print on 
  <code>tccat</code> reads source (from stdin if not explicitely defined) and prints on the standard output. Directory contents is concatenated, if source files have the same format. Multiple AVI-files are also supported.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i </code><i>name</i></p>
+<dt><code>-i </code><i>name</i></dt>
 <dd> Specify input source. If ommited, <i>stdin</i> is assumed.<br />
- You can specify a file, directory, device, mountpoint or host address as input source. <code>tccat</code> usually handles the different types correctly.</p>
-<dt><code>-t</code> <i>magic</i></p>
-<dd> Tell <code>tccat</code> about the type of input. Currently only <code>dvd</code> is supported &#8211; any other parameter will be ignored.</p>
-<dt><code>-T </code><i>title</i>[<code>,</code><i>chapter</i>[<code>,</code><i>angle</i>]]</p>
+ You can specify a file, directory, device, mountpoint or host address as input source. <code>tccat</code> usually handles the different types correctly.</dd>
+<dt><code>-t</code> <i>magic</i></dt>
+<dd> Tell <code>tccat</code> about the type of input. Currently only <code>dvd</code> is supported &#8211; any other parameter will be ignored.</dd>
+<dt><code>-T </code><i>title</i>[<code>,</code><i>chapter</i>[<code>,</code><i>angle</i>]]</dt>
 <dd> Select DVD <i>title</i> and extract only a single <i>chapter</i> with selected viewing <i>angle</i>. Setting the argument <i>chapter</i> to <code>-1</code> means to process all available chapters on the DVD.<br />
- If this option is given, the input type of <code>dvd</code> will also be assumed (see option <code>-t</code>).</p>
-<dt><code>-L</code></p>
-<dd> This option tells <code>tccat</code> to loop through all chapters starting at the one given with the option <code>-T</code>.</p>
-<dt><code>-S</code> <i>n</i></p>
-<dd> Seek to program stream (VOB) offset <i>n</i>x2kB before starting output.</p>
-<dt><code>-P</code></p>
-<dd> Stream full DVD title specified by -T.</p>
-<dt><code>-a</code></p>
-<dd> Use this option to dump an AVI-file/socket audio stream. The default is to extract and concatenate AVI-file video stream.</p>
-<dt><code>-d</code> <i>level</i></p>
-<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </p>
+ If this option is given, the input type of <code>dvd</code> will also be assumed (see option <code>-t</code>).</dd>
+<dt><code>-L</code></dt>
+<dd> This option tells <code>tccat</code> to loop through all chapters starting at the one given with the option <code>-T</code>.</dd>
+<dt><code>-S</code> <i>n</i></dt>
+<dd> Seek to program stream (VOB) offset <i>n</i>x2kB before starting output.</dd>
+<dt><code>-P</code></dt>
+<dd> Stream full DVD title specified by -T.</dd>
+<dt><code>-a</code></dt>
+<dd> Use this option to dump an AVI-file/socket audio stream. The default is to extract and concatenate AVI-file video stream.</dd>
+<dt><code>-d</code> <i>level</i></dt>
+<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </dd>
 <p> QUIET 0 </p>
 <p> INFO 1 </p>
 <p> DEBUG 2 </p>
@@ -49,8 +49,8 @@ description: "tccat – concatenate multimedia streams from medium and print on 
 <p> SYNC 64 </p>
 <p> COUNTER 128 </p>
 <p> PRIVATE 256</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>tccat</code> is a front end for streaming various source types and is used in <code>transcode</code>&#8216;s import modules.</p>
 <h2>EXAMPLES</h2>

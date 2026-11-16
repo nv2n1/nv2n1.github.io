@@ -16,50 +16,48 @@ description: "qquota – shows current usage of xxQS_NAMExx resource quotas"
 <p> Selection options allow you to filter for specific hosts, cluster queues, projects, parallel environments (pe), resources or users. Without any option <i>qquota</i> will display a list of all resource quota sets for the calling user. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h wc_host|wc_hostgroup,&#8230;</code></p>
-<dd> <i>Display only resource quota sets that match the hosts</i> in the given wildcard host or hostgroup list. The definition of <code>wc_host</code> and <code>wc_hostgroup</code> is in</p>
-<dt><code>-help</code></p>
-<dd> Prints a listing of all options.</p>
-<dt><code>-l resource_name,&#8230;</code></p>
-<dd> Display only resource quota sets matching the resources in the given resource list.</p>
-<dt><code>-u wc_user,&#8230;</code></p>
-<dd> Display only resource quota sets matching the users in the given wildcard user list. The definition of <code>wc_user</code> is in</p>
-<dt><code>-P wc_project,&#8230;</code></p>
-<dd> Display only resource quota sets matching the projects in the given wildcard project list. The definition of <code>wc_project</code> is in</p>
-<dt><code>-pe wc_pe_name,&#8230;</code></p>
-<dd> Display only resource quota sets matching the parallel environments (pe) in the given wildcard pe list. The definition of <code>wc_pe_name</code> is in</p>
-<dt><code>-q wc_cqueue,&#8230;</code></p>
-<dd> Display only resource quota sets matching the queues in the given wildcard cluster queue list. The definition of <code>wc_cqueue</code> is in</p>
-<dt><code>-xml </code></p>
-<dd> This option can be used with all other options, and changes the output to XML. The schema used is referenced in the XML output. The output is printed to stdout.</dl>
+<dt><code>-h wc_host|wc_hostgroup,&#8230;</code></dt>
+<dd> <i>Display only resource quota sets that match the hosts</i> in the given wildcard host or hostgroup list. The definition of <code>wc_host</code> and <code>wc_hostgroup</code> is in</dd>
+<dt><code>-help</code></dt>
+<dd> Prints a listing of all options.</dd>
+<dt><code>-l resource_name,&#8230;</code></dt>
+<dd> Display only resource quota sets matching the resources in the given resource list.</dd>
+<dt><code>-u wc_user,&#8230;</code></dt>
+<dd> Display only resource quota sets matching the users in the given wildcard user list. The definition of <code>wc_user</code> is in</dd>
+<dt><code>-P wc_project,&#8230;</code></dt>
+<dd> Display only resource quota sets matching the projects in the given wildcard project list. The definition of <code>wc_project</code> is in</dd>
+<dt><code>-pe wc_pe_name,&#8230;</code></dt>
+<dd> Display only resource quota sets matching the parallel environments (pe) in the given wildcard pe list. The definition of <code>wc_pe_name</code> is in</dd>
+<dt><code>-q wc_cqueue,&#8230;</code></dt>
+<dd> Display only resource quota sets matching the queues in the given wildcard cluster queue list. The definition of <code>wc_cqueue</code> is in</dd>
+<dt><code>-xml </code></dt>
+<dd> This option can be used with all other options, and changes the output to XML. The schema used is referenced in the XML output. The output is printed to stdout.</dd></dl>
 <h2>OUTPUT FORMAT</h2>
 <p> A line is printed for every resource quota with a positive usage count or static resource. The line consists of</p>
 <dl>
-<dt>&bull;</p>
-<dd> the resource quota &#8211; rule set name/rule name or number of rule in ruleset</p>
-<dt>&bull;</p>
-<dd> the limit &#8211; resource name, the number of used and available entities of that resource</p>
-<dt>&bull;</p>
-<dd> the effective resource quota set filter</dl>
+<dt>&bull;</dt>
+<dd> the resource quota &#8211; rule set name/rule name or number of rule in ruleset</dd>
+<dt>&bull;</dt>
+<dd> the limit &#8211; resource name, the number of used and available entities of that resource</dd>
+<dt>&bull;</dt>
+<dd> the effective resource quota set filter</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell <i>qquota</i> uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell <i>qquota</i> uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition, the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry for the service &quot;sge_qmaster&quot; instead to define that port.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition, the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry for the service &quot;sge_qmaster&quot; instead to define that port.</dd></dl>
 <h2>FILES</h2>
 <pre>
 <i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/act_qmaster</i>

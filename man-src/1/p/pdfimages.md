@@ -17,168 +17,164 @@ description: "pdfimages – Portable Document Format (PDF) image extractor (vers
 <p> The default output format is PBM (for monochrome images) or PPM for non-monochrome. The -png or -tiff options change to default output to PNG or TIFF respectively. If both -png and -tiff are specified, CMYK images will be written as TIFF and all other images will be written as PNG. In addition the -j, -jp2, and -jbig2 options will cause JPEG, JPEG2000, and JBIG2, respectively, images in the PDF file to be written in their native format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code><i> number</i></p>
-<dd> Specifies the first page to scan.</p>
-<dt><code>-l</code><i> number</i></p>
-<dd> Specifies the last page to scan.</p>
-<dt><code>-png</code></p>
-<dd> Change the default output format to PNG.</p>
-<dt><code>-tiff</code></p>
-<dd> Change the default output format to TIFF.</p>
-<dt><code>-j</code></p>
-<dd> Write images in JPEG format as JPEG files instead of the default format. The JPEG file is identical to the JPEG data stored in the PDF.</p>
-<dt><code>-jp2</code></p>
-<dd> Write images in JPEG2000 format as JP2 files instead of the default format. The JP2 file is identical to the JPEG2000 data stored in the PDF.</p>
-<dt><code>-jbig2</code></p>
-<dd> Write images in JBIG2 format as JBIG2 files instead of the default format. JBIG2 data in PDF is of the embedded type. The embedded type of JBIG2 has an optional separate file containing global data. The embedded data is written with the extension .jb2e and the global data (if available) will be written to the same image number with the extension .jb2g. The content of both these files is identical to the JBIG2 data in the PDF.</p>
-<dt><code>-ccitt</code></p>
-<dd> Write images in CCITT format as CCITT files instead of the default format. The CCITT file is identical to the CCITT data stored in the PDF. PDF files contain additional parameters specifying how to decode the CCITT data. These parameters are translated to fax2tiff input options and written to a .params file with the same image number. The parameters are:</p>
+<dt><code>-f</code><i> number</i></dt>
+<dd> Specifies the first page to scan.</dd>
+<dt><code>-l</code><i> number</i></dt>
+<dd> Specifies the last page to scan.</dd>
+<dt><code>-png</code></dt>
+<dd> Change the default output format to PNG.</dd>
+<dt><code>-tiff</code></dt>
+<dd> Change the default output format to TIFF.</dd>
+<dt><code>-j</code></dt>
+<dd> Write images in JPEG format as JPEG files instead of the default format. The JPEG file is identical to the JPEG data stored in the PDF.</dd>
+<dt><code>-jp2</code></dt>
+<dd> Write images in JPEG2000 format as JP2 files instead of the default format. The JP2 file is identical to the JPEG2000 data stored in the PDF.</dd>
+<dt><code>-jbig2</code></dt>
+<dd> Write images in JBIG2 format as JBIG2 files instead of the default format. JBIG2 data in PDF is of the embedded type. The embedded type of JBIG2 has an optional separate file containing global data. The embedded data is written with the extension .jb2e and the global data (if available) will be written to the same image number with the extension .jb2g. The content of both these files is identical to the JBIG2 data in the PDF.</dd>
+<dt><code>-ccitt</code></dt>
+<dd> Write images in CCITT format as CCITT files instead of the default format. The CCITT file is identical to the CCITT data stored in the PDF. PDF files contain additional parameters specifying how to decode the CCITT data. These parameters are translated to fax2tiff input options and written to a .params file with the same image number. The parameters are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-1</code></p>
-<dd> 1D Group 3 encoding</p>
-<dt><code>-2</code></p>
-<dd> 2D Group 3 encoding</p>
-<dt><code>-4</code></p>
-<dd> Group 4 encoding</p>
-<dt><code>-A</code></p>
-<dd> Beginning of line is aligned on a byte boundary</p>
-<dt><code>-P</code></p>
-<dd> Beginning of line is not aligned on a byte boundary</p>
-<dt><code>-X n</code></p>
-<dd> The image width in pixels</p>
-<dt><code>-W</code></p>
-<dd> Encoding uses 1 for black and 0 for white</p>
-<dt><code>-B</code></p>
-<dd> Encoding uses 0 for black and 1 for white</p>
-<dt><code>-M</code></p>
-<dd> Input data fills from most significant bit to least significant bit.</dl>
+<dt><code>-1</code></dt>
+<dd> 1D Group 3 encoding</dd>
+<dt><code>-2</code></dt>
+<dd> 2D Group 3 encoding</dd>
+<dt><code>-4</code></dt>
+<dd> Group 4 encoding</dd>
+<dt><code>-A</code></dt>
+<dd> Beginning of line is aligned on a byte boundary</dd>
+<dt><code>-P</code></dt>
+<dd> Beginning of line is not aligned on a byte boundary</dd>
+<dt><code>-X n</code></dt>
+<dd> The image width in pixels</dd>
+<dt><code>-W</code></dt>
+<dd> Encoding uses 1 for black and 0 for white</dd>
+<dt><code>-B</code></dt>
+<dd> Encoding uses 0 for black and 1 for white</dd>
+<dt><code>-M</code></dt>
+<dd> Input data fills from most significant bit to least significant bit.</dd></dl>
 </dl>
-<dt><code>-all</code></p>
-<dd> Write JPEG, JPEG2000, JBIG2, and CCITT images in their native format. CMYK files are written as TIFF files. All other images are written as PNG files. This is equivalent to specifying the options -png -tiff -j -jp2 -jbig2 -ccitt.</p>
-<dt><code>-list</code></p>
-<dd> Instead of writing the images, list the images along with various information for each image. Do not specify an <i>image-root</i> with this option.</p>
+<dt><code>-all</code></dt>
+<dd> Write JPEG, JPEG2000, JBIG2, and CCITT images in their native format. CMYK files are written as TIFF files. All other images are written as PNG files. This is equivalent to specifying the options -png -tiff -j -jp2 -jbig2 -ccitt.</dd>
+<dt><code>-list</code></dt>
+<dd> Instead of writing the images, list the images along with various information for each image. Do not specify an <i>image-root</i> with this option.</dd>
 <dt>
-<dd> The following information is listed for each image:</p>
+</dt><dd> The following information is listed for each image:</dd>
+<dl>
+<dl>
+<dt><code>page</code></dt>
+<dd> the page number containing the image</dd>
+<dt><code>num</code></dt>
+<dd> the image number</dd>
+<dt><code>type</code></dt>
+<dd> the image type:</dd></dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt><code>page</code></p>
-<dd> the page number containing the image</p>
-<dt><code>num</code></p>
-<dd> the image number</p>
-<dt><code>type</code></p>
-<dd> the image type:</dl>
+</dt><dd> image &#8211; an opaque image</dd></dl>
 <dl>
 <dt>
-<dd> image &#8211; an opaque image</dl>
+</dt><dd> mask &#8211; a monochrome mask image</dd></dl>
 <dl>
 <dt>
-<dd> mask &#8211; a monochrome mask image</dl>
+</dt><dd> smask &#8211; a soft-mask image</dd></dl>
 <dl>
 <dt>
-<dd> smask &#8211; a soft-mask image</dl>
-<dl>
-<dt>
-<dd> stencil &#8211; a monochrome mask image used for painting a color or pattern</dl>
+</dt><dd> stencil &#8211; a monochrome mask image used for painting a color or pattern</dd></dl>
 <p> Note: Tranparency in images is represented in PDF using a separate image for the image and the mask/smask. The mask/smask used as part of a transparent image always immediately follows the image in the image list.</p>
 <dl>
-<dt><code>width</code></p>
-<dd> image width (in pixels)</p>
-<dt><code>height</code></p>
-<dd> image height (in pixels)</dl>
+<dt><code>width</code></dt>
+<dd> image width (in pixels)</dd>
+<dt><code>height</code></dt>
+<dd> image height (in pixels)</dd></dl>
 <p> Note: the image width/height is the size of the embedded image, not the size the image will be rendered at.</p>
 <dl>
-<dt><code>color</code></p>
-<dd> image color space:</dl>
+<dt><code>color</code></dt>
+<dd> image color space:</dd></dl>
 <dl>
 <dt>
-<dd> gray &#8211; Gray</dl>
+</dt><dd> gray &#8211; Gray</dd></dl>
 <dl>
 <dt>
-<dd> rgb &#8211; RGB</dl>
+</dt><dd> rgb &#8211; RGB</dd></dl>
 <dl>
 <dt>
-<dd> cmyk &#8211; CMYK</dl>
+</dt><dd> cmyk &#8211; CMYK</dd></dl>
 <dl>
 <dt>
-<dd> lab &#8211; L*a*b</dl>
+</dt><dd> lab &#8211; L*a*b</dd></dl>
 <dl>
 <dt>
-<dd> icc &#8211; ICC Based</dl>
+</dt><dd> icc &#8211; ICC Based</dd></dl>
 <dl>
 <dt>
-<dd> index &#8211; Indexed Color</dl>
+</dt><dd> index &#8211; Indexed Color</dd></dl>
 <dl>
 <dt>
-<dd> sep &#8211; Separation</dl>
+</dt><dd> sep &#8211; Separation</dd></dl>
 <dl>
 <dt>
-<dd> devn &#8211; DeviceN</dl>
+</dt><dd> devn &#8211; DeviceN</dd></dl>
 <dl>
-<dt><code>comp</code></p>
-<dd> number of color components</p>
-<dt><code>bpc</code></p>
-<dd> bits per component</p>
-<dt><code>enc</code></p>
-<dd> encoding:</dl>
-<dl>
-<dt>
-<dd> image &#8211; raster image (may be Flate or LZW compressed but does not use an image encoding)</dl>
+<dt><code>comp</code></dt>
+<dd> number of color components</dd>
+<dt><code>bpc</code></dt>
+<dd> bits per component</dd>
+<dt><code>enc</code></dt>
+<dd> encoding:</dd></dl>
 <dl>
 <dt>
-<dd> jpeg &#8211; Joint Photographic Experts Group</dl>
+</dt><dd> image &#8211; raster image (may be Flate or LZW compressed but does not use an image encoding)</dd></dl>
 <dl>
 <dt>
-<dd> jp2 &#8211; JPEG2000</dl>
+</dt><dd> jpeg &#8211; Joint Photographic Experts Group</dd></dl>
 <dl>
 <dt>
-<dd> jbig2 &#8211; Joint Bi-Level Image Experts Group</dl>
+</dt><dd> jp2 &#8211; JPEG2000</dd></dl>
 <dl>
 <dt>
-<dd> ccitt &#8211; CCITT Group 3 or Group 4 Fax</dl>
+</dt><dd> jbig2 &#8211; Joint Bi-Level Image Experts Group</dd></dl>
 <dl>
-<dt><code>interp</code></p>
-<dd> &quot;yes&quot; if the interpolation is to be performed when scaling up the image</p>
-<dt><code>object ID</code></p>
-<dd> the image dictionary object ID (number and generation)</p>
-<dt><code>x-ppi</code></p>
-<dd> The horizontal resolution of the image (in pixels per inch) when rendered on the pdf page.</p>
-<dt><code>y-ppi</code></p>
-<dd> The vertical resolution of the image (in pixels per inch) when rendered on the pdf page.</p>
-<dt><code>size</code></p>
-<dd> The size of the embedded image in the pdf file. The following suffixes are used: &#8216;B&#8217; bytes, &#8216;K&#8217; kilobytes, &#8216;M&#8217; megabytes, and &#8216;G&#8217; gigabytes.</p>
-<dt><code>ratio</code></p>
-<dd> The compression ratio of the embedded image.</dl>
+<dt>
+</dt><dd> ccitt &#8211; CCITT Group 3 or Group 4 Fax</dd></dl>
+<dl>
+<dt><code>interp</code></dt>
+<dd> &quot;yes&quot; if the interpolation is to be performed when scaling up the image</dd>
+<dt><code>object ID</code></dt>
+<dd> the image dictionary object ID (number and generation)</dd>
+<dt><code>x-ppi</code></dt>
+<dd> The horizontal resolution of the image (in pixels per inch) when rendered on the pdf page.</dd>
+<dt><code>y-ppi</code></dt>
+<dd> The vertical resolution of the image (in pixels per inch) when rendered on the pdf page.</dd>
+<dt><code>size</code></dt>
+<dd> The size of the embedded image in the pdf file. The following suffixes are used: &#8216;B&#8217; bytes, &#8216;K&#8217; kilobytes, &#8216;M&#8217; megabytes, and &#8216;G&#8217; gigabytes.</dd>
+<dt><code>ratio</code></dt>
+<dd> The compression ratio of the embedded image.</dd></dl>
 </dl>
-<dt><code>-opw</code><i> password</i></p>
-<dd> Specify the owner password for the PDF file. Providing this will bypass all security restrictions.</p>
-<dt><code>-upw</code><i> password</i></p>
-<dd> Specify the user password for the PDF file.</p>
-<dt><code>-p</code></p>
-<dd> Include page numbers in output file names.</p>
-<dt><code>-q</code></p>
-<dd> Don&#8217;t print any messages or errors.</p>
-<dt><code>-v</code></p>
-<dd> Print copyright and version information.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dl>
+<dt><code>-opw</code><i> password</i></dt>
+<dd> Specify the owner password for the PDF file. Providing this will bypass all security restrictions.</dd>
+<dt><code>-upw</code><i> password</i></dt>
+<dd> Specify the user password for the PDF file.</dd>
+<dt><code>-p</code></dt>
+<dd> Include page numbers in output file names.</dd>
+<dt><code>-q</code></dt>
+<dd> Don&#8217;t print any messages or errors.</dd>
+<dt><code>-v</code></dt>
+<dd> Print copyright and version information.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dd></dl>
 <h2>EXIT CODES</h2>
 <p> The Xpdf tools use the following exit codes:</p>
 <dl>
-<dt>0</p>
-<dd> No error.</p>
-<dt>1</p>
-<dd> Error opening a PDF file.</p>
-<dt>2</p>
-<dd> Error opening an output file.</p>
-<dt>3</p>
-<dd> Error related to PDF permissions.</p>
-<dt>99</p>
-<dd> Other error.</dl>
+<dt>0</dt>
+<dd> No error.</dd>
+<dt>1</dt>
+<dd> Error opening a PDF file.</dd>
+<dt>2</dt>
+<dd> Error opening an output file.</dd>
+<dt>3</dt>
+<dd> Error related to PDF permissions.</dd>
+<dt>99</dt>
+<dd> Other error.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The pdfimages software and documentation are copyright 1998-2011 Glyph &amp; Cog, LLC.</p>
 <h2>SEE ALSO</h2>

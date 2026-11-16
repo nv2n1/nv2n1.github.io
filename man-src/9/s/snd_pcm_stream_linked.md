@@ -15,7 +15,7 @@ snd_pcm_stream_linked - Check whether the substream is linked with others
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>substream to check</dl>
+<dl><dd></dd><dd>substream to check</dd></dl>
 
 <h2>Description</h2>
 

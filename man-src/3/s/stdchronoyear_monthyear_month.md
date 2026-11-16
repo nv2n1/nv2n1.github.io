@@ -12,7 +12,6 @@ std::chrono::year_month::year_month - std::chrono::year_month::year_month
 
 <pre><code>year_month() = default;
 (1)(since C++ 20)
-
     constexpr year_month(const std::chrono::year &amp;y, const std::chrono::month &amp;m) noexcept;
 (2)(since C++ 20)</code></pre> 
 Constructs a year_month object. 

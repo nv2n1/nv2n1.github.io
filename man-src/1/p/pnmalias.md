@@ -17,31 +17,31 @@ description: "pnmalias – antialias a portable anyumap."
 <p> <code>-bgcolor </code> <i>colorb,</i> <code>-fgcolor</code> <i>colorf</i></p>
 <dl>
 <dt>
-<dd> set the background color to <i>colorb,</i> and the foreground to color to <i>colorf.</i> Pixels with these values will be anti-aliased. by default, the background color is taken to be black, and foreground color is assumed to be white. The colors can be specified in five ways:</p>
+</dt><dd> set the background color to <i>colorb,</i> and the foreground to color to <i>colorf.</i> Pixels with these values will be anti-aliased. by default, the background color is taken to be black, and foreground color is assumed to be white. The colors can be specified in five ways:</dd>
 <dl>
-<dt><code>o</code></p>
-<dd> A name, assuming that a pointer to an X11-style color names file was compiled in.</p>
-<dt><code>o</code></p>
-<dd> An X11-style hexadecimal specifier: rgb:r/g/b, where r g and b are each 1- to 4-digit hexadecimal numbers.</p>
-<dt><code>o</code></p>
-<dd> An X11-style decimal specifier: rgbi:r/g/b, where r g and b are floating point numbers between 0 and 1.</p>
-<dt><code>o</code></p>
-<dd> For backwards compatibility, an old-X11-style hexadecimal number: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.</p>
-<dt><code>o</code></p>
-<dd> For backwards compatibility, a triplet of numbers separated by commas: r,g,b, where r g and b are floating point numbers between 0 and 1. (This style was added before MIT came up with the similar rgbi style.)</dl>
+<dt><code>o</code></dt>
+<dd> A name, assuming that a pointer to an X11-style color names file was compiled in.</dd>
+<dt><code>o</code></dt>
+<dd> An X11-style hexadecimal specifier: rgb:r/g/b, where r g and b are each 1- to 4-digit hexadecimal numbers.</dd>
+<dt><code>o</code></dt>
+<dd> An X11-style decimal specifier: rgbi:r/g/b, where r g and b are floating point numbers between 0 and 1.</dd>
+<dt><code>o</code></dt>
+<dd> For backwards compatibility, an old-X11-style hexadecimal number: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.</dd>
+<dt><code>o</code></dt>
+<dd> For backwards compatibility, a triplet of numbers separated by commas: r,g,b, where r g and b are floating point numbers between 0 and 1. (This style was added before MIT came up with the similar rgbi style.)</dd></dl>
 <p> Note that even when dealing with graymaps, background and foreground colors need to be specified in the fashion described above. In this case, background and foreground pixel values are taken to be the value of the red component for the given color.</dl>
 <p> <code>-bonly</code>, <code>-fonly</code></p>
 <dl>
 <dt>
-<dd> Apply anti-aliasing only to background (<code>-bonly</code>), or foreground (<code>-fonly</code>) pixels.</dl>
+</dt><dd> Apply anti-aliasing only to background (<code>-bonly</code>), or foreground (<code>-fonly</code>) pixels.</dd></dl>
 <p> <code>-balias</code>, <code>-falias</code></p>
 <dl>
 <dt>
-<dd> Apply anti-aliasing to all pixels surrounding background (<code>-balias</code>), or foreground (<code>-falias</code>) pixels. By default, anti-aliasing takes place only among neighboring background and foreground pixels.</dl>
+</dt><dd> Apply anti-aliasing to all pixels surrounding background (<code>-balias</code>), or foreground (<code>-falias</code>) pixels. By default, anti-aliasing takes place only among neighboring background and foreground pixels.</dd></dl>
 <p> <code>-weight</code> <i>w</i></p>
 <dl>
 <dt>
-<dd> Use <i>w</i> as the central weight for the aliasing filter. <i>W </i> must be a real number in the range 0 &lt; <i>w</i> &lt; 1. The lower the value of <i>w </i> is, the &quot;blurrier&quot; the output image is. The default is w = 1/3.</dl>
+</dt><dd> Use <i>w</i> as the central weight for the aliasing filter. <i>W </i> must be a real number in the range 0 &lt; <i>w</i> &lt; 1. The lower the value of <i>w </i> is, the &quot;blurrier&quot; the output image is. The default is w = 1/3.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pbmtext/">pbmtext</a>(1), <a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHOR</h2>

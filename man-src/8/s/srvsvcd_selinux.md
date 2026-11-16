@@ -85,8 +85,8 @@ description: "srvsvcd_selinux – Security Enhanced Linux Policy for the srvsvcd
 <p> <code>srvsvcd_exec_t</code> </p>
 <p> &#8211; Set files with the srvsvcd_exec_t type, if you want to transition an executable to the srvsvcd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/srvsvcd, /opt/likewise/sbin/srvsvcd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/srvsvcd, /opt/likewise/sbin/srvsvcd </dd>
 </dl>
 <p> <code>srvsvcd_var_lib_t</code> </p>
 <p> &#8211; Set files with the srvsvcd_var_lib_t type, if you want to store the srvsvcd files under the /var/lib directory. </p>

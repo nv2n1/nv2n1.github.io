@@ -11,10 +11,8 @@ std::erase_if(std::multimap) - std::erase_if(std::multimap)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;map&gt;
-
     template &lt;class Key, class T, class Compare, class Alloc, class Pred&gt;
     (1)(since C++ 20)
-
         void erase_if(std::multimap&lt;Key, T, Compare, Alloc&gt; &amp;c, Pred pred);</code></pre> 
 Erases all elements that satisfy the predicate pred from the container. Equivalent to <pre><code>for (auto i = c.begin(), last = c.end(); i != last;) {
     if (pred(*i)) {

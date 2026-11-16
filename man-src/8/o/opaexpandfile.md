@@ -13,11 +13,11 @@ description: "opaexpandfile"
 <p>opaexpandfile <i>file</i></p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
 <dt>
-&nbsp;<wbr><i>file</i>&nbsp;<wbr></p>
-<dd>FastFabric file to be processed. </p>
+&nbsp;<wbr><i>file</i>&nbsp;<wbr></dt>
+<dd>FastFabric file to be processed. </dd>
 </dl>
 <h2>Example</h2>
 <p>opaexpandfile allhosts </p>

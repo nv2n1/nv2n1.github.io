@@ -23,7 +23,7 @@ Suppress the load progress bar but still outputs the imported images. </p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker images
     REPOSITORY TAG IMAGE ID CREATED SIZE
@@ -42,7 +42,7 @@ $ docker images
                                                                                fedora heisenbug 58394af37342 7 weeks ago 385.5 MB
                                                                                    fedora latest 58394af37342 7 weeks ago 385.5 MB
 </code></pre>
-</dl>
+</dd></dl>
 <h2>See also</h2>
 <p> <code><a href="/docs/linux/man/1-docker-save/">docker-save</a>(1)</code> to save one or more images to a tar archive (streamed to STDOUT by default). </p>
 <h2>HISTORY</h2>

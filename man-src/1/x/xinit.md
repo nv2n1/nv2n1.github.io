@@ -27,16 +27,16 @@ description: "xinit – X Window System initializer"
 <h2>EXAMPLES</h2>
 <p> Below are several examples of how command line arguments in <code>xinit</code> are used.</p>
 <dl>
-<dt><code>xinit</code></p>
-<dd> This will start up a server named <i>X</i> and run the user&#8217;s <i>.xinitrc</i>, if it exists, or else start an <i>xterm</i>.</p>
-<dt><code>xinit &#8212; /usr/bin/Xvnc :1</code></p>
-<dd> This is how one could start a specific type of server on an alternate display.</p>
-<dt><code>xinit -geometry =80&#215;65+10+10 -fn 8&#215;13 -j -fg white -bg navy</code></p>
-<dd> This will start up a server named <i>X</i>, and will append the given arguments to the default <i>xterm</i> command. It will ignore <i>.xinitrc</i>.</p>
-<dt><code>xinit -e widgets &#8212; ./Xorg -l -c</code></p>
-<dd> This will use the command <i>./Xorg -l -c</i> to start the server and will append the arguments <i>-e widgets</i> to the default <i>xterm</i> command.</p>
-<dt><code>xinit /usr/ucb/rsh fasthost cpupig -display ws:1 &#8212; :1 -a 2 -t 5</code></p>
-<dd> This will start a server named <i>X</i> on display 1 with the arguments <i>-a 2 -t 5</i>. It will then start a remote shell on the machine <code>fasthost</code> in which it will run the command <i>cpupig</i>, telling it to display back on the local workstation.</dl>
+<dt><code>xinit</code></dt>
+<dd> This will start up a server named <i>X</i> and run the user&#8217;s <i>.xinitrc</i>, if it exists, or else start an <i>xterm</i>.</dd>
+<dt><code>xinit &#8212; /usr/bin/Xvnc :1</code></dt>
+<dd> This is how one could start a specific type of server on an alternate display.</dd>
+<dt><code>xinit -geometry =80&#215;65+10+10 -fn 8&#215;13 -j -fg white -bg navy</code></dt>
+<dd> This will start up a server named <i>X</i>, and will append the given arguments to the default <i>xterm</i> command. It will ignore <i>.xinitrc</i>.</dd>
+<dt><code>xinit -e widgets &#8212; ./Xorg -l -c</code></dt>
+<dd> This will use the command <i>./Xorg -l -c</i> to start the server and will append the arguments <i>-e widgets</i> to the default <i>xterm</i> command.</dd>
+<dt><code>xinit /usr/ucb/rsh fasthost cpupig -display ws:1 &#8212; :1 -a 2 -t 5</code></dt>
+<dd> This will start a server named <i>X</i> on display 1 with the arguments <i>-a 2 -t 5</i>. It will then start a remote shell on the machine <code>fasthost</code> in which it will run the command <i>cpupig</i>, telling it to display back on the local workstation.</dd></dl>
 <p> Below is a sample <i>.xinitrc</i> that starts a clock, several terminals, and leaves the window manager running as the &#8220;last&#8221; application. Assuming that the window manager has been configured properly, the user then chooses the &#8220;Exit&#8221; menu item to shut down X. </p>
 <pre>
 xrdb -load $HOME/.Xresources
@@ -59,20 +59,20 @@ xinit /etc/X11/xinit/site.xinitrc -- /usr/bin/X -br
 </pre>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> This variable gets set to the name of the display to which clients should connect.</p>
-<dt><code>XINITRC</code></p>
-<dd> This variable specifies an init file containing shell commands to start up the initial windows. By default, <i>.xinitrc</i> in the home directory will be used.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> This variable gets set to the name of the display to which clients should connect.</dd>
+<dt><code>XINITRC</code></dt>
+<dd> This variable specifies an init file containing shell commands to start up the initial windows. By default, <i>.xinitrc</i> in the home directory will be used.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>.xinitrc</i></p>
-<dd> default client script</p>
-<dt><i>xterm</i></p>
-<dd> client to run if <i>.xinitrc</i> does not exist</p>
-<dt><i>.xserverrc</i></p>
-<dd> default server script</p>
-<dt><i>X</i></p>
-<dd> server to run if <i>.xserverrc</i> does not exist</dl>
+<dt><i>.xinitrc</i></dt>
+<dd> default client script</dd>
+<dt><i>xterm</i></dt>
+<dd> client to run if <i>.xinitrc</i> does not exist</dd>
+<dt><i>.xserverrc</i></dt>
+<dd> default server script</dd>
+<dt><i>X</i></dt>
+<dd> server to run if <i>.xserverrc</i> does not exist</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-x/">X</a></code>(7), <code><a href="/docs/linux/man/1-startx/">startx</a></code>(1), <code><a href="/docs/linux/man/1-xserver/">Xserver</a></code>(1), <code><a href="/docs/linux/man/1-xorg/">Xorg</a></code>(1), <code><a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a></code>(5), <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1)</p>
 <h2>AUTHOR</h2>

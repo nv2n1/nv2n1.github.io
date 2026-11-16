@@ -27,46 +27,46 @@ int finit_module(int fd, const char *param_values,
 <p> The <code>finit_module</code>() system call is like <code>init_module</code>(), but reads the module to be loaded from the file descriptor <i>fd</i>. It is useful when the authenticity of a kernel module can be determined from its location in the filesystem; in cases where that is possible, the overhead of using cryptographically signed modules to determine the authenticity of a module can be avoided. The <i>param_values</i> argument is as for <code>init_module</code>(). </p>
 <p> The <i>flags</i> argument modifies the operation of <code>finit_module</code>(). It is a bit mask value created by ORing together zero or more of the following flags:</p>
 <dl>
-<dt><code>MODULE_INIT_IGNORE_MODVERSIONS</code></p>
-<dd> Ignore symbol version hashes.</p>
-<dt><code>MODULE_INIT_IGNORE_VERMAGIC</code></p>
-<dd> Ignore kernel version magic.</dl>
+<dt><code>MODULE_INIT_IGNORE_MODVERSIONS</code></dt>
+<dd> Ignore symbol version hashes.</dd>
+<dt><code>MODULE_INIT_IGNORE_VERMAGIC</code></dt>
+<dd> Ignore kernel version magic.</dd></dl>
 <p> There are some safety checks built into a module to ensure that it matches the kernel against which it is loaded. These checks are recorded when the module is built and verified when the module is loaded. First, the module records a &quot;vermagic&quot; string containing the kernel version number and prominent features (such as the CPU type). Second, if the module was built with the <code>CONFIG_MODVERSIONS</code> configuration option enabled, a version hash is recorded for each symbol the module uses. This hash is based on the types of the arguments and return value for the function named by the symbol. In this case, the kernel version number within the &quot;vermagic&quot; string is ignored, as the symbol version hashes are assumed to be sufficiently reliable. </p>
 <p> Using the <code>MODULE_INIT_IGNORE_VERMAGIC</code> flag indicates that the &quot;vermagic&quot; string is to be ignored, and the <code>MODULE_INIT_IGNORE_MODVERSIONS</code> flag indicates that the symbol version hashes are to be ignored. If the kernel is built to permit forced loading (i.e., configured with <code>CONFIG_MODULE_FORCE_LOAD</code>), then loading continues, otherwise it fails with the error <code>ENOEXEC</code> as expected for malformed modules.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these system calls return 0. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADMSG</code> (since Linux 3.7)</p>
-<dd> Module signature is misformatted.</p>
-<dt><code>EBUSY</code></p>
-<dd> Timeout while trying to resolve a symbol reference by this module.</p>
-<dt><code>EFAULT</code></p>
-<dd> An address argument referred to a location that is outside the process&#8217;s accessible address space.</p>
-<dt><code>ENOKEY</code> (since Linux 3.7)</p>
-<dd> Module signature is invalid or the kernel does not have a key for this module. This error is returned only if the kernel was configured with <code>CONFIG_MODULE_SIG_FORCE</code>; if the kernel was not configured with this option, then an invalid or unsigned module simply taints the kernel.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller was not privileged (did not have the <code>CAP_SYS_MODULE</code> capability), or module loading is disabled (see <i>/proc/sys/kernel/modules_disabled</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</dl>
+<dt><code>EBADMSG</code> (since Linux 3.7)</dt>
+<dd> Module signature is misformatted.</dd>
+<dt><code>EBUSY</code></dt>
+<dd> Timeout while trying to resolve a symbol reference by this module.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> An address argument referred to a location that is outside the process&#8217;s accessible address space.</dd>
+<dt><code>ENOKEY</code> (since Linux 3.7)</dt>
+<dd> Module signature is invalid or the kernel does not have a key for this module. This error is returned only if the kernel was configured with <code>CONFIG_MODULE_SIG_FORCE</code>; if the kernel was not configured with this option, then an invalid or unsigned module simply taints the kernel.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller was not privileged (did not have the <code>CAP_SYS_MODULE</code> capability), or module loading is disabled (see <i>/proc/sys/kernel/modules_disabled</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</dd></dl>
 <p> The following errors may additionally occur for <code>init_module</code>():</p>
 <dl>
-<dt><code>EEXIST</code></p>
-<dd> A module with this name is already loaded.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>param_values</i> is invalid, or some part of the ELF image in <i>module_image</i> contains inconsistencies.</p>
-<dt><code>ENOEXEC</code></p>
-<dd> The binary image supplied in <i>module_image</i> is not an ELF image, or is an ELF image that is invalid or for a different architecture.</dl>
+<dt><code>EEXIST</code></dt>
+<dd> A module with this name is already loaded.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>param_values</i> is invalid, or some part of the ELF image in <i>module_image</i> contains inconsistencies.</dd>
+<dt><code>ENOEXEC</code></dt>
+<dd> The binary image supplied in <i>module_image</i> is not an ELF image, or is an ELF image that is invalid or for a different architecture.</dd></dl>
 <p> The following errors may additionally occur for <code>finit_module</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> The file referred to by <i>fd</i> is not opened for reading.</p>
-<dt><code>EFBIG</code></p>
-<dd> The file referred to by <i>fd</i> is too large.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>flags</i> is invalid.</p>
-<dt><code>ENOEXEC</code></p>
-<dd> <i>fd</i> does not refer to an open file.</dl>
+<dt><code>EBADF</code></dt>
+<dd> The file referred to by <i>fd</i> is not opened for reading.</dd>
+<dt><code>EFBIG</code></dt>
+<dd> The file referred to by <i>fd</i> is too large.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>flags</i> is invalid.</dd>
+<dt><code>ENOEXEC</code></dt>
+<dd> <i>fd</i> does not refer to an open file.</dd></dl>
 <p> In addition to the above errors, if the module&#8217;s <i>init</i> function is executed and returns an error, then <code>init_module</code>() or <code>finit_module</code>() fails and <i>errno</i> is set to the value returned by the <i>init</i> function.</p>
 <h2>VERSIONS</h2>
 <p> <code>finit_module</code>() is available since Linux 3.8.</p>

@@ -25,13 +25,7 @@ description: "sc::SCMatrixCompositeSubblockIter –"
  int <code>current_block</code> () const</p>
 <h3>Protected Attributes</h3>
 <pre><code>int niters_
-
-
-
 Ref&lt; SCMatrixSubblockIter &gt; * iters_
-
-
-
 int iiter_
 </code></pre>
 <h2>Author</h2>

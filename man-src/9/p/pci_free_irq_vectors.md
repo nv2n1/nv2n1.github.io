@@ -14,7 +14,7 @@ description: "pci_free_irq_vectors – free previously allocated IRQs for a devi
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device to operate on</dl>
+</dd><dd>PCI device to operate on</dd></dl>
 <h2>Description</h2>
 <p>Undoes the allocations and enabling in <code>pci_alloc_irq_vectors</code>.</p>
 <h2>Copyright</h2>

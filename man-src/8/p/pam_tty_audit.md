@@ -10,31 +10,31 @@ description: "pam_tty_audit – Enable or disable TTY auditing for specified use
 <p>pam_tty_audit &#8211; Enable or disable TTY auditing for specified users</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pam_tty_audit.so</code> [disable=<i>patterns</i>] [enable=<i>patterns</i>]</dl>
+<dt> <code>pam_tty_audit.so</code> [disable=<i>patterns</i>] [enable=<i>patterns</i>]</dt></dl>
 <h2>Description</h2>
-<dd>The pam_tty_audit PAM module is used to enable or disable TTY auditing. By default, the kernel does not audit input on any TTY.</p>
+<dd>The pam_tty_audit PAM module is used to enable or disable TTY auditing. By default, the kernel does not audit input on any TTY.</dd>
 <h2>Options</h2>
 <p><code>disable=</code><i>patterns</i></p>
 <dl>
-<dd>For each user matching <i>patterns</i>, disable TTY auditing. This overrides any previous <code>enable</code> option matching the same user name on the command line. See NOTES for further description of <i>patterns</i>.</dl>
+<dd>For each user matching <i>patterns</i>, disable TTY auditing. This overrides any previous <code>enable</code> option matching the same user name on the command line. See NOTES for further description of <i>patterns</i>.</dd></dl>
 <p> <code>enable=</code><i>patterns</i></p>
 <dl>
-<dd>For each user matching <i>patterns</i>, enable TTY auditing. This overrides any previous <code>disable</code> option matching the same user name on the command line. See NOTES for further description of <i>patterns</i>.</dl>
+<dd>For each user matching <i>patterns</i>, enable TTY auditing. This overrides any previous <code>disable</code> option matching the same user name on the command line. See NOTES for further description of <i>patterns</i>.</dd></dl>
 <p> <code>open_only</code></p>
 <dl>
-<dd>Set the TTY audit flag when opening the session, but do not restore it when closing the session. Using this option is necessary for some services that don&#8217;t <code>fork()</code> to run the authenticated session, such as <code>sudo</code>.</dl>
+<dd>Set the TTY audit flag when opening the session, but do not restore it when closing the session. Using this option is necessary for some services that don&#8217;t <code>fork()</code> to run the authenticated session, such as <code>sudo</code>.</dd></dl>
 <p> <code>log_passwd</code></p>
 <dl>
-<dd>Log keystrokes when ECHO mode is off but ICANON mode is active. This is the mode in which the tty is placed during password entry. By default, passwords are not logged. This option may not be available on older kernels (3.9?).</dl>
+<dd>Log keystrokes when ECHO mode is off but ICANON mode is active. This is the mode in which the tty is placed during password entry. By default, passwords are not logged. This option may not be available on older kernels (3.9?).</dd></dl>
 <h2>Module Types Provided</h2>
 <p>Only the <code>session</code> type is supported.</p>
 <h2>Return Values</h2>
 <p>PAM_SESSION_ERR</p>
 <dl>
-<dd>Error reading or modifying the TTY audit flag. See the system log for more details.</dl>
+<dd>Error reading or modifying the TTY audit flag. See the system log for more details.</dd></dl>
 <p> PAM_SUCCESS</p>
 <dl>
-<dd>Success.</dl>
+<dd>Success.</dd></dl>
 <h2>Notes</h2>
 <p>When TTY auditing is enabled, it is inherited by all processes started by that user. In particular, daemons restarted by an user will still have TTY auditing enabled, and audit TTY input even by other users unless auditing for these users is explicitly disabled. Therefore, it is recommended to use <code>disable=*</code> as the first option for most daemons using PAM. </p>
 <p> To view the data that was logged by the kernel to audit use the command <code>aureport &#8211;tty</code>. </p>
@@ -45,7 +45,7 @@ description: "pam_tty_audit – Enable or disable TTY auditing for specified use
 <dl>
 <dd>
 <pre>session required pam_tty_audit.so disable=* enable=root</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-aureport/">aureport</a></code>(8), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
 <h2>Author</h2>

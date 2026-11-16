@@ -14,26 +14,26 @@ description: "gstat – manual page for Ganglia Status Tool"
 <h2>DESCRIPTION</h2>
 <p> The Ganglia Status Client (gstat) connects with a Ganglia Monitoring Daemon (gmond) and outputs a load-balanced list of hosts</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</p>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> List all hosts. Not just hosts running gexec (default=off)</p>
-<dt><code>-d</code>, <code>&#8211;dead</code></p>
-<dd> Print only the hosts which are dead (default=off)</p>
-<dt><code>-m</code>, <code>&#8211;mpifile</code></p>
-<dd> Print a load-balanced mpifile (default=off)</p>
-<dt><code>-1</code>, <code>&#8211;single_line</code></p>
-<dd> Print host and information all on one line (default= off)</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd> Print ONLY the host list (default=off)</p>
-<dt><code>-n</code>, <code>&#8211;numeric</code></p>
-<dd> Print numeric addresses instead of hostnames (default=off)</p>
-<dt><code>-i</code>, <code>&#8211;gmond_ip</code>=<i>STRING</i></p>
-<dd> Specify the ip address of the gmond to query (default=`localhost&#8217;)</p>
-<dt><code>-p</code>, <code>&#8211;gmond_port</code>=<i>INT</i></p>
-<dd> Specify the gmond port to query (default=`8649&#8242;)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> List all hosts. Not just hosts running gexec (default=off)</dd>
+<dt><code>-d</code>, <code>&#8211;dead</code></dt>
+<dd> Print only the hosts which are dead (default=off)</dd>
+<dt><code>-m</code>, <code>&#8211;mpifile</code></dt>
+<dd> Print a load-balanced mpifile (default=off)</dd>
+<dt><code>-1</code>, <code>&#8211;single_line</code></dt>
+<dd> Print host and information all on one line (default= off)</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd> Print ONLY the host list (default=off)</dd>
+<dt><code>-n</code>, <code>&#8211;numeric</code></dt>
+<dd> Print numeric addresses instead of hostnames (default=off)</dd>
+<dt><code>-i</code>, <code>&#8211;gmond_ip</code>=<i>STRING</i></dt>
+<dd> Specify the ip address of the gmond to query (default=`localhost&#8217;)</dd>
+<dt><code>-p</code>, <code>&#8211;gmond_port</code>=<i>INT</i></dt>
+<dd> Specify the gmond port to query (default=`8649&#8242;)</dd></dl>
 <h2>AUTHOR</h2>
 <p> Matt Massie &lt;massie [at] cs.berkeley.edu&gt;</p>
 <h2>REPORTING BUGS</h2>

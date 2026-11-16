@@ -11,7 +11,6 @@ description: "sc::TwoBodyGrid –"
 <p> Class <code>TwoBodyGrid</code> describes a set of coordinates of 2 particles.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;twobodygrid.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>

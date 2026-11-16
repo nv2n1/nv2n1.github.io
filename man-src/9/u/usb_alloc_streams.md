@@ -15,23 +15,23 @@ usb_alloc_streams - allocate bulk endpoint stream IDs.
 <h2>Arguments</h2>
 
 <i>interface</i>
-<dl><dd><dd>alternate setting that includes all endpoints.</dl>
+<dl><dd></dd><dd>alternate setting that includes all endpoints.</dd></dl>
  
 
  <i>eps</i>
-<dl><dd>array of endpoints that need streams.</dl>
+<dl><dd>array of endpoints that need streams.</dd></dl>
  
 
  <i>num_eps</i>
-<dl><dd>number of endpoints in the array.</dl>
+<dl><dd>number of endpoints in the array.</dd></dl>
  
 
  <i>num_streams</i>
-<dl><dd>number of streams to allocate.</dl>
+<dl><dd>number of streams to allocate.</dd></dl>
  
 
  <i>mem_flags</i>
-<dl><dd>flags hcd should use to allocate memory.</dl>
+<dl><dd>flags hcd should use to allocate memory.</dd></dl>
 
 <h2>Description</h2>
 

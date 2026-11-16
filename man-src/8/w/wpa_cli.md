@@ -24,81 +24,81 @@ description: "wpa_cli – WPA command line client"
 <dd>
 <pre>CTRL-REQ-PASSWORD-1:Password needed for SSID foobar
 &gt; password 1 mysecretpassword</pre>
-</dl>
+</dd></dl>
 <p> Example request for generic token card challenge-response: </p>
 <dl>
 <dd>
 <pre>CTRL-REQ-OTP-2:Challenge 1235663 needed for SSID foobar
 &gt; otp 2 9876</pre>
-</dl>
+</dd></dl>
 <h2>Command Arguments</h2>
 <dl>
-<dt><code>-p path</code></p>
-<dd>Change the path where control sockets should be found.</p>
-<dt><code>-g control socket path</code></p>
-<dd>Connect to the global control socket at the indicated path rather than an interface-specific control socket.</p>
-<dt><code>-i ifname</code></p>
-<dd>Specify the interface that is being configured. By default, choose the first interface found with a control socket in the socket path.</p>
-<dt><code>-h</code></p>
-<dd>Help. Show a usage message.</p>
-<dt><code>-v</code></p>
-<dd>Show version information.</p>
-<dt><code>-B</code></p>
-<dd>Run as a daemon in the background.</p>
-<dt><code>-a file</code></p>
-<dd>Run in daemon mode executing the action file based on events from wpa_supplicant. The specified file will be executed with the first argument set to interface name and second to &quot;CONNECTED&quot; or &quot;DISCONNECTED&quot; depending on the event. This can be used to execute networking tools required to configure the interface. </p>
+<dt><code>-p path</code></dt>
+<dd>Change the path where control sockets should be found.</dd>
+<dt><code>-g control socket path</code></dt>
+<dd>Connect to the global control socket at the indicated path rather than an interface-specific control socket.</dd>
+<dt><code>-i ifname</code></dt>
+<dd>Specify the interface that is being configured. By default, choose the first interface found with a control socket in the socket path.</dd>
+<dt><code>-h</code></dt>
+<dd>Help. Show a usage message.</dd>
+<dt><code>-v</code></dt>
+<dd>Show version information.</dd>
+<dt><code>-B</code></dt>
+<dd>Run as a daemon in the background.</dd>
+<dt><code>-a file</code></dt>
+<dd>Run in daemon mode executing the action file based on events from wpa_supplicant. The specified file will be executed with the first argument set to interface name and second to &quot;CONNECTED&quot; or &quot;DISCONNECTED&quot; depending on the event. This can be used to execute networking tools required to configure the interface. </dd>
 <p> Additionally, three environmental variables are available to the file: WPA_CTRL_DIR, WPA_ID, and WPA_ID_STR. WPA_CTRL_DIR contains the absolute path to the ctrl_interface socket. WPA_ID contains the unique network_id identifier assigned to the active network, and WPA_ID_STR contains the content of the id_str option.</p>
-<dt><code>-P file</code></p>
-<dd>Set the location of the PID file.</p>
-<dt><code>-G ping interval</code></p>
-<dd>Set the interval (in seconds) at which wpa_cli pings the supplicant.</p>
-<dt><code>command</code></p>
-<dd>Run a command. The available commands are listed in the next section.</dl>
+<dt><code>-P file</code></dt>
+<dd>Set the location of the PID file.</dd>
+<dt><code>-G ping interval</code></dt>
+<dd>Set the interval (in seconds) at which wpa_cli pings the supplicant.</dd>
+<dt><code>command</code></dt>
+<dd>Run a command. The available commands are listed in the next section.</dd></dl>
 <h2>Commands</h2>
 <p>The following commands are available:</p>
 <dl>
-<dt><code>status</code></p>
-<dd>get current WPA/EAPOL/EAP status</p>
-<dt><code>mib</code></p>
-<dd>get MIB variables (dot1x, dot11)</p>
-<dt><code>help</code></p>
-<dd>show this usage help</p>
-<dt><code>interface [ifname]</code></p>
-<dd>show interfaces/select interface</p>
-<dt><code>level &lt;debug level&gt;</code></p>
-<dd>change debug level</p>
-<dt><code>license</code></p>
-<dd>show full wpa_cli license</p>
-<dt><code>logoff</code></p>
-<dd>IEEE 802.1X EAPOL state machine logoff</p>
-<dt><code>logon</code></p>
-<dd>IEEE 802.1X EAPOL state machine logon</p>
-<dt><code>set</code></p>
-<dd>set variables (shows list of variables when run without arguments)</p>
-<dt><code>pmksa</code></p>
-<dd>show PMKSA cache</p>
-<dt><code>reassociate</code></p>
-<dd>force reassociation</p>
-<dt><code>reconfigure</code></p>
-<dd>force wpa_supplicant to re-read its configuration file</p>
-<dt><code>preauthenticate &lt;BSSID&gt;</code></p>
-<dd>force preauthentication</p>
-<dt><code>identity &lt;network id&gt; &lt;identity&gt;</code></p>
-<dd>configure identity for an SSID</p>
-<dt><code>password &lt;network id&gt; &lt;password&gt;</code></p>
-<dd>configure password for an SSID</p>
-<dt><code>pin &lt;network id&gt; &lt;pin&gt;</code></p>
-<dd>configure pin for an SSID</p>
-<dt><code>otp &lt;network id&gt; &lt;password&gt;</code></p>
-<dd>configure one-time-password for an SSID</p>
-<dt><code>bssid &lt;network id&gt; &lt;BSSID&gt;</code></p>
-<dd>set preferred BSSID for an SSID</p>
-<dt><code>list_networks</code></p>
-<dd>list configured networks</p>
-<dt><code>terminate</code></p>
-<dd>terminate <code>wpa_supplicant</code></p>
-<dt><code>quit</code></p>
-<dd>exit wpa_cli</dl>
+<dt><code>status</code></dt>
+<dd>get current WPA/EAPOL/EAP status</dd>
+<dt><code>mib</code></dt>
+<dd>get MIB variables (dot1x, dot11)</dd>
+<dt><code>help</code></dt>
+<dd>show this usage help</dd>
+<dt><code>interface [ifname]</code></dt>
+<dd>show interfaces/select interface</dd>
+<dt><code>level &lt;debug level&gt;</code></dt>
+<dd>change debug level</dd>
+<dt><code>license</code></dt>
+<dd>show full wpa_cli license</dd>
+<dt><code>logoff</code></dt>
+<dd>IEEE 802.1X EAPOL state machine logoff</dd>
+<dt><code>logon</code></dt>
+<dd>IEEE 802.1X EAPOL state machine logon</dd>
+<dt><code>set</code></dt>
+<dd>set variables (shows list of variables when run without arguments)</dd>
+<dt><code>pmksa</code></dt>
+<dd>show PMKSA cache</dd>
+<dt><code>reassociate</code></dt>
+<dd>force reassociation</dd>
+<dt><code>reconfigure</code></dt>
+<dd>force wpa_supplicant to re-read its configuration file</dd>
+<dt><code>preauthenticate &lt;BSSID&gt;</code></dt>
+<dd>force preauthentication</dd>
+<dt><code>identity &lt;network id&gt; &lt;identity&gt;</code></dt>
+<dd>configure identity for an SSID</dd>
+<dt><code>password &lt;network id&gt; &lt;password&gt;</code></dt>
+<dd>configure password for an SSID</dd>
+<dt><code>pin &lt;network id&gt; &lt;pin&gt;</code></dt>
+<dd>configure pin for an SSID</dd>
+<dt><code>otp &lt;network id&gt; &lt;password&gt;</code></dt>
+<dd>configure one-time-password for an SSID</dd>
+<dt><code>bssid &lt;network id&gt; &lt;BSSID&gt;</code></dt>
+<dd>set preferred BSSID for an SSID</dd>
+<dt><code>list_networks</code></dt>
+<dd>list configured networks</dd>
+<dt><code>terminate</code></dt>
+<dd>terminate <code>wpa_supplicant</code></dd>
+<dt><code>quit</code></dt>
+<dd>exit wpa_cli</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8)</p>
 <h2>Legal</h2>

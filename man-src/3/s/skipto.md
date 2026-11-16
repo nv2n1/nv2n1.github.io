@@ -37,20 +37,18 @@ description: "QuantLib::SobolRsg – Sobol low-discrepancy sequence generator."
 <p> Note that the Kuo numbers were generated to work with a different ordering of primitive polynomials for the first 40 or so dimensions which is why we have the Alternative Primitive Polynomials. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> the correctness of the returned values is tested by reproducing known good values.</p>
-<dt>*</p>
-<dd> the correctness of the returned values is tested by checking their discrepancy against known good values.</dl>
+<dt>*</dt>
+<dd> the correctness of the returned values is tested by reproducing known good values.</dd>
+<dt>*</dt>
+<dd> the correctness of the returned values is tested by checking their discrepancy against known good values.</dd></dl>
 </dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>SobolRsg</code> (Size dimensionality, unsigned long seed = 0, DirectionIntegers directionIntegers = Jaeckel)</h3>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
 <dt>
-<dd> dimensionality must be &lt;= PPMT_MAX_DIM</dl>
+</dt><dd> dimensionality must be &lt;= PPMT_MAX_DIM</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void skipTo (unsigned long n)</h3>
 <p> skip to the n-th sample in the low-discrepancy sequence </p>

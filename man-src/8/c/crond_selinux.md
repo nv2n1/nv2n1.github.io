@@ -92,8 +92,8 @@ description: "crond_selinux – Security Enhanced Linux Policy for the crond pro
 <p> <code>crond_exec_t</code> </p>
 <p> &#8211; Set files with the crond_exec_t type, if you want to transition an executable to the crond_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/cron(d)?, /usr/sbin/atd, /usr/sbin/fcron, /usr/libexec/fcron </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/cron(d)?, /usr/sbin/atd, /usr/sbin/fcron, /usr/libexec/fcron </dd>
 </dl>
 <p> <code>crond_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the crond_initrc_exec_t type, if you want to transition an executable to the crond_initrc_t domain. </p>
@@ -102,14 +102,14 @@ description: "crond_selinux – Security Enhanced Linux Policy for the crond pro
 <p> <code>crond_unit_file_t</code> </p>
 <p> &#8211; Set files with the crond_unit_file_t type, if you want to treat the files as crond unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/atd.*, /usr/lib/systemd/system/crond.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/atd.*, /usr/lib/systemd/system/crond.* </dd>
 </dl>
 <p> <code>crond_var_run_t</code> </p>
 <p> &#8211; Set files with the crond_var_run_t type, if you want to store the crond files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/.*cron.*, /var/run/crond?.pid, /var/run/crond?.reboot, /var/run/atd.pid, /var/run/fcron.pid, /var/run/fcron.fifo, /var/run/anacron.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/.*cron.*, /var/run/crond?.pid, /var/run/crond?.reboot, /var/run/atd.pid, /var/run/fcron.pid, /var/run/fcron.fifo, /var/run/anacron.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -15,17 +15,15 @@ description: "getdtablesize – get file descriptor table size"
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>getdtablesize</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.12:</p>
+<dt>Since glibc 2.12:</dt>
 <dd>
 <pre><code>
 /* Glibc since 2.19: */ _DEFAULT_SOURCE
 || /* Glibc versions &lt;= 2.19: */ _BSD_SOURCE || !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L)
 </code></pre>
-<dt>Before glibc 2.12:</p>
-<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dd><dt>Before glibc 2.12:</dt>
+<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>getdtablesize</code>() returns the maximum number of files a process can have open, one more than the largest possible value for a file descriptor.</p>

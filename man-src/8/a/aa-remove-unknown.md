@@ -14,10 +14,10 @@ description: "aa-remove-unknown – remove unknown AppArmor profiles"
 <p><code>aa-remove-unknown</code> will inventory all profiles in /etc/apparmor.d/, compare that list to the profiles currently loaded into the kernel, and then remove all of the loaded profiles that were not found in /etc/apparmor.d/. It will also report the name of each profile that it removes on standard out.</p>
 <h2>Options</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd>displays a short usage statement.</p>
-<dt>-n</p>
-<dd>dry run; only prints the names of profiles that would be removed</dl>
+<dt>-h, &#8211;help</dt>
+<dd>displays a short usage statement.</dd>
+<dt>-n</dt>
+<dd>dry run; only prints the names of profiles that would be removed</dd></dl>
 <h2>Examples</h2>
 <pre> $ sudo ./aa-remove-unknown -n
  Would remove 'test//null-/usr/bin/whoami'

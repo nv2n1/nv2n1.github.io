@@ -10,27 +10,11 @@ description: "QuantLib::Lattice – Lattice (tree, finite-differences) base clas
 <p>QuantLib::Lattice &#8211; Lattice (tree, finite-differences) base class </p>
 <h2>Synopsis</h2>
 <pre><code>virtual void initialize (DiscretizedAsset &amp;, Time time) const =0
-
-
 initialize an asset at the given time.
-
-
 virtual void rollback (DiscretizedAsset &amp;, Time to) const =0
-
-
-
 virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0
-
-
-
 virtual Real presentValue (DiscretizedAsset &amp;) const =0
-
-
 computes the present value of an asset.
-
-
-
-
 Protected Attributes</code></pre>
 <p> Inherited by <code>TreeLattice&lt; Impl &gt;</code>, <code>TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</code>, <code>TreeLattice&lt; Impl &gt;</code>, <code>TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</code>, and <code>TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -50,27 +34,11 @@ Protected Attributes</code></pre>
 <p>Protected Attributes <code>Numerical method interface</code><br />
  These methods are to be used by discretized assets and must be overridden by developers implementing numerical methods. Users are advised to use the corresponding methods of <code>DiscretizedAsset</code> instead. </p>
 <pre><code>virtual void initialize (DiscretizedAsset &amp;, Time time) const =0
-
-
 initialize an asset at the given time.
-
-
 virtual void rollback (DiscretizedAsset &amp;, Time to) const =0
-
-
-
 virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0
-
-
-
 virtual Real presentValue (DiscretizedAsset &amp;) const =0
-
-
 computes the present value of an asset.
-
-
-
-
 Protected Attributes</code></pre>
 <p> <code>TimeGrid</code> <code>t_</code></p>
 <h2>Detailed Description</h2>
@@ -83,7 +51,7 @@ Protected Attributes</code></pre>
 <p>Roll back an asset until the given time, but do not perform the final adjustment. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dl>
+<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dd></dl>
 <pre> method-&gt;rollAlmostBack(asset,t);</pre>
 <p>&nbsp;<wbr>with the two statements:&nbsp;<wbr> </p>
 <pre> method-&gt;partialRollback(asset,t);

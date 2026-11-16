@@ -15,7 +15,7 @@ MPNAME - Given the area identifier of one of the areas defined by whatever datab
 
  char *c_mpname (int iain)
 <h2>Description</h2><dl COMPACT><dt>IAIN
-<dd>is an input expression of type INTEGER, specifying the area identifier of a particular area of interest.</dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
+</dt><dd>is an input expression of type INTEGER, specifying the area identifier of a particular area of interest.</dd></dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
 <h2>Usage</h2>Given the declaration &quot;CHARACTER*64 MPNAME,NAME&quot;, the executable statement &quot;NAME=MPNAME(IAIN)&quot; will retrieve in NAME the name of the area with area identifier IAIN. For example, if IMAD is the area identifier of the little island in Lake Superior called &quot;Lake Madeline&quot;, then MPNAME(IMAD) = 'Madeline Island (Lake Superior)'. 
 
  To get the name of the area, at a specified level, that contains an area with a specified area identifier, use MPNAME in combination with MPIOAR. For example, MPNAME(MPIOAR(IMAD,3)) = 'Conterminous US', and MPNAME(MPIOAR(IMAD,2)) = 'North America'.

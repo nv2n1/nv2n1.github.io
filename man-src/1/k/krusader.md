@@ -11,46 +11,46 @@ description: "krusader – advanced twin-panel file manager and FTP client for K
 <p> krusader &#8211; advanced twin-panel file manager and FTP client for KDE </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>krusader</code> [KDE Generic Options] [Qt Generic Options] [Options] url</dl>
+<dt> <code>krusader</code> [KDE Generic Options] [Qt Generic Options] [Options] url</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Krusader is an advanced twin panel (commander style) file manager for KDE and other desktops in the *nix world, similar to Midnight or Total Commander. It provides all the file management features you could possibly want. Plus: extensive archive handling, mounted filesystem support, FTP, advanced search module, viewer/editor, directory synchronisation, file content comparisons, powerful batch renaming and much much more. It supports the following archive formats: ace, arj, bzip2, deb, gzip, iso, lha, rar, rpm, tar, xz, zip, and 7-zip and can handle other KIOSlaves such as smb:// or fish:// It is (almost) completely customizable, very user friendly, fast and looks great on your desktop! :-) You should give it a try.</p>
+<dd>Krusader is an advanced twin panel (commander style) file manager for KDE and other desktops in the *nix world, similar to Midnight or Total Commander. It provides all the file management features you could possibly want. Plus: extensive archive handling, mounted filesystem support, FTP, advanced search module, viewer/editor, directory synchronisation, file content comparisons, powerful batch renaming and much much more. It supports the following archive formats: ace, arj, bzip2, deb, gzip, iso, lha, rar, rpm, tar, xz, zip, and 7-zip and can handle other KIOSlaves such as smb:// or fish:// It is (almost) completely customizable, very user friendly, fast and looks great on your desktop! :-) You should give it a try.</dd>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;left</code> <i>&lt;path&gt;</i></p>
 <dl>
 <dt>
-<dd> start left panel at <i>&lt;path&gt;</i></dl>
+</dt><dd> start left panel at <i>&lt;path&gt;</i></dd></dl>
 <p> <code>&#8211;right</code> <i>&lt;path&gt;</i></p>
 <dl>
 <dt>
-<dd> start right panel at <i>&lt;path&gt;</i></dl>
+</dt><dd> start right panel at <i>&lt;path&gt;</i></dd></dl>
 <p> <code>&#8211;profile </code><i>&lt;panel-profile&gt;</i></p>
 <dl>
 <dt>
-<dd> Load <i>&lt;panel-profile&gt;</i> on startup</dl>
+</dt><dd> Load <i>&lt;panel-profile&gt;</i> on startup</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> show the general options</dl>
+</dt><dd> show the general options</dd></dl>
 <p> <code>&#8211;help-all</code></p>
 <dl>
 <dt>
-<dd> show all options</dl>
+</dt><dd> show all options</dd></dl>
 <p> <code>&#8211;author</code></p>
 <dl>
 <dt>
-<dd> show the authors</dl>
+</dt><dd> show the authors</dd></dl>
 <p> <code>-v, &#8211;version</code></p>
 <dl>
 <dt>
-<dd> show the version</dl>
+</dt><dd> show the version</dd></dl>
 <p> <code>&#8211;license</code></p>
 <dl>
 <dt>
-<dd> show the license</dl>
+</dt><dd> show the license</dd></dl>
 <p> <code>url</code></p>
 <dl>
 <dt>
-<dd> if there is already a tab open with that url, it is activated, otherwise a new tab is opened in the active panel</dl>
+</dt><dd> if there is already a tab open with that url, it is activated, otherwise a new tab is opened in the active panel</dd></dl>
 <h2>QT-OPTIONS</h2>
 <p> &quot;$ krusader &#8211;help-qt&quot; shows all Qt-options</p>
 <h2>KDE-OPTIONS</h2>
@@ -58,13 +58,13 @@ description: "krusader – advanced twin-panel file manager and FTP client for K
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> &bull; $ krusader &#8211;left=/mnt/cdrom &#8211;right=<a href="ftp://downloads@myserver.net">ftp://downloads@myserver.net</a></dl>
+</dt><dd> &bull; $ krusader &#8211;left=/mnt/cdrom &#8211;right=<a href="ftp://downloads@myserver.net">ftp://downloads@myserver.net</a></dd></dl>
 <dl>
 <dt>
-<dd> &bull; $ krusader &#8211;left=/home,/usr,<a href="smb://workgroup.net">smb://workgroup.net</a> &#8211;right=<a href="fish://myserver.net">fish://myserver.net</a></dl>
+</dt><dd> &bull; $ krusader &#8211;left=/home,/usr,<a href="smb://workgroup.net">smb://workgroup.net</a> &#8211;right=<a href="fish://myserver.net">fish://myserver.net</a></dd></dl>
 <dl>
 <dt>
-<dd> &bull; $ krusader &#8211;profile=ftp_managment</dl>
+</dt><dd> &bull; $ krusader &#8211;profile=ftp_managment</dd></dl>
 <h2>FILES</h2>
 <p> Configuration files: </p>
 <p> ~/.kde/share/config/krusaderrc </p>
@@ -138,18 +138,18 @@ description: "krusader – advanced twin-panel file manager and FTP client for K
 <p> <code>Krusader Krew</code> &lt;krusader-devel [at] googlegroups.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> KDE translation howto</p>
+<dt> 1.</dt>
+<dd> KDE translation howto</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://l10n.kde.org/docs/translation-howto/">http://l10n.kde.org/docs/translation-howto/</a></dl>
-<dt> 2.</p>
-<dd> here</p>
+</dt><dd> <a rel="nofollow" href="http://l10n.kde.org/docs/translation-howto/">http://l10n.kde.org/docs/translation-howto/</a></dd></dl>
+<dt> 2.</dt>
+<dd> here</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://docs.kde.org/development/en/extragear-utils/krusader/faq.html">http://docs.kde.org/development/en/extragear-utils/krusader/faq.html</a></dl>
+</dt><dd> <a rel="nofollow" href="http://docs.kde.org/development/en/extragear-utils/krusader/faq.html">http://docs.kde.org/development/en/extragear-utils/krusader/faq.html</a></dd></dl>
 </dl>
 <h2>Index</h2>

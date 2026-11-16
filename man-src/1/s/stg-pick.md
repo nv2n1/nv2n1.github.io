@@ -19,39 +19,39 @@ stg pick[options][--]([&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch
 <p> -n NAME, &#8211;name NAME</p>
 <dl>
 <dt>
-<dd> Use NAME as the patch name.</dl>
+</dt><dd> Use NAME as the patch name.</dd></dl>
 <p> -B REF-BRANCH, &#8211;ref-branch REF-BRANCH</p>
 <dl>
 <dt>
-<dd> Pick patches from BRANCH.</dl>
+</dt><dd> Pick patches from BRANCH.</dd></dl>
 <p> -r, &#8211;revert</p>
 <dl>
 <dt>
-<dd> Revert the given commit object.</dl>
+</dt><dd> Revert the given commit object.</dd></dl>
 <p> -p COMMITID, &#8211;parent COMMITID</p>
 <dl>
 <dt>
-<dd> Use COMMITID as parent.</dl>
+</dt><dd> Use COMMITID as parent.</dd></dl>
 <p> -x, &#8211;expose</p>
 <dl>
 <dt>
-<dd> Append the imported commit id to the patch log.</dl>
+</dt><dd> Append the imported commit id to the patch log.</dd></dl>
 <p> &#8211;fold</p>
 <dl>
 <dt>
-<dd> Fold the commit object into the current patch.</dl>
+</dt><dd> Fold the commit object into the current patch.</dd></dl>
 <p> &#8211;update</p>
 <dl>
 <dt>
-<dd> Like fold but only update the current patch files.</dl>
+</dt><dd> Like fold but only update the current patch files.</dd></dl>
 <p> -f FILE, &#8211;file FILE</p>
 <dl>
 <dt>
-<dd> Only fold the given file (can be used multiple times).</dl>
+</dt><dd> Only fold the given file (can be used multiple times).</dd></dl>
 <p> &#8211;unapplied</p>
 <dl>
 <dt>
-<dd> Keep the patch unapplied.</dl>
+</dt><dd> Keep the patch unapplied.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

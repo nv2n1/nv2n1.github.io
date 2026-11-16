@@ -10,17 +10,8 @@ description: "QuantLib::BarrierOption – Barrier option on a single asset."
 <p>QuantLib::BarrierOption &#8211; Barrier option on a single asset. </p>
 <h2>Synopsis</h2>
 <pre><code>BarrierOption (Barrier::Type barrierType, Real barrier, Real rebate, const boost::shared_ptr&lt; StrikedTypePayoff &gt; &amp;payoff, const boost::shared_ptr&lt; Exercise &gt; &amp;exercise)
-
-
-
 void setupArguments (PricingEngine::arguments *) const
-
-
-
 Volatility impliedVolatility (Real price, const boost::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process, Real accuracy=1.0e-4, Size maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::OneAssetOption</code>. Inherited by <code>DividendBarrierOption</code>, and <code>QuantoBarrierOption</code>.</p>
 <h3>Classes</h3>
@@ -30,17 +21,8 @@ Protected Attributes</code></pre>
  <i>Barrier-option engine base class </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>BarrierOption (Barrier::Type barrierType, Real barrier, Real rebate, const boost::shared_ptr&lt; StrikedTypePayoff &gt; &amp;payoff, const boost::shared_ptr&lt; Exercise &gt; &amp;exercise)
-
-
-
 void setupArguments (PricingEngine::arguments *) const
-
-
-
 Volatility impliedVolatility (Real price, const boost::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process, Real accuracy=1.0e-4, Size maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const
-
-
-
 Protected Attributes</code></pre>
 <p> Barrier::Type <code>barrierType_</code> </p>
 <p> <code>Real</code> <code>barrier_</code> </p>
@@ -58,6 +40,6 @@ Protected Attributes</code></pre>
 <h3><code>Volatility</code> impliedVolatility (<code>Real</code> price, const boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; &amp; process, <code>Real</code> accuracy = 1.0e-4, Size maxEvaluations = 100, <code>Volatility</code> minVol = 1.0e-7, <code>Volatility</code> maxVol = 4.0) const</h3>
 <p><code>Warning</code></p>
 <dl>
-<dd>see <code>VanillaOption</code> for notes on implied-volatility calculation.</dl>
+<dd>see <code>VanillaOption</code> for notes on implied-volatility calculation.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

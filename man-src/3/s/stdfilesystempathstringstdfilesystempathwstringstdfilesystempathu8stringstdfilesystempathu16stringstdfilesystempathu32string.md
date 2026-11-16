@@ -11,26 +11,17 @@ std::filesystem::path::string,std::filesystem::path::wstring,std::filesystem::pa
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits = std::char_traits&lt;CharT&gt;,
-
           class Alloc = std::allocator&lt;CharT&gt;&gt;
 (1)(since C++ 17)
-
     std::basic_string&lt;CharT, Traits, Alloc&gt;
-
     string(const Alloc &amp;a = Alloc()) const;
-
 std::string string() const;
-
 std::wstring wstring() const;
-
 std::u16string u16string() const;
-
 std::u32string u32string() const;
 (2)(since C++ 17)
-
     std::string u8string() const;
 (since C++ 17)(3)(until C++ 20)
-
     std::u8string u8string() const;
 (since C++ 20)</code></pre> 
 Returns the internal pathname in native pathname format, converted to specific string type. Conversion, if any, is performed as follows: 
@@ -57,41 +48,26 @@ The internal pathname in native pathname format, converted to specified string t
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #ifdef _MSC_VER
-
 #include &lt;io.h&gt;
-
 #include &lt;fcntl.h&gt;
-
 #else
-
 #include &lt;locale&gt;
-
 #include &lt;clocale&gt;
-
 #endif
-
 #include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
-
 #ifdef _MSC_VER
     _setmode(_fileno(stderr), _O_WTEXT);
-
 #else
     std::setlocale(LC_ALL, &quot;&quot;);
     std::locale::global(std::locale(&quot;&quot;));
     std::cout.imbue(std::locale());
     std::wcerr.imbue(std::locale());
-
 #endif
     fs::path p = fs::u8path(u8&quot;要らない.txt&quot;);
     std::ofstream(p) &lt;&lt; &quot;File contents&quot;; // Prior to LWG2676 uses operator string_type()
@@ -100,13 +76,10 @@ int main()
                                          // Post-LWG2676 uses new fstream constructors
                                          // native string representation can be used with OS APIs
     if (std::FILE *f =
-
 #ifdef _MSC_VER
             _wfopen(p.c_str(), L&quot;r&quot;)
-
 #else
             std::fopen(p.c_str(), &quot;r&quot;)
-
 #endif
     ) {
         int ch;

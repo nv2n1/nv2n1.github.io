@@ -14,8 +14,8 @@ mongoc_client_pool_new (const mongoc_uri_t *uri);</pre>
 <p>This function creates a new <code>mongoc_client_pool_t</code> using the <code>mongoc_uri_t</code> provided. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>uri</code></p>
-<dd>A <code>mongoc_uri_t</code> \&amp;.</dl>
+<dt><code>uri</code></dt>
+<dd>A <code>mongoc_uri_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_client_pool_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_client_pool_destroy/">mongoc_client_pool_destroy</a>(3)</code> when no longer in use. </p>
 <h2>Colophon</h2>

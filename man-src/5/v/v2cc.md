@@ -28,32 +28,22 @@ description: "v2cc.libs – VHDL library mapping file for the FreeHDL compiler/s
 &nbsp;<wbr>&nbsp;<wbr>pattern: filename When the &quot;: filename&quot; part is omitted, it defaults to &quot;patternEXT&quot; where &quot;EXT&quot; is determined by the user of the mapping file. The &quot;pattern&quot; can contain the special character &quot;&lt;&quot; which introduces a `wildcard&#8217;. The &quot;&lt;&quot; must be followed by a &quot;&gt;&quot;, with arbitrary characters inbetween. These characters form the name of the wildcard. A wildcard matches any sequence of characters. There can be any number of wildcards in the pattern, but each must have a unique name. The &quot;filename&quot; can also contain the character &quot;&lt;&quot;, followed by a name, followed by &quot;&gt;&quot;. There, it introduces a `wildcard substitution&#8217;. It will be replaced with the characters that matched the wildcard with the same name in &quot;pattern&quot;. When there is no wildcard in &quot;pattern&quot; with the right name, it will be replaced with nothing. While doing this replacement, the characters &quot;#&quot; and &quot;/&quot; are replaced as &quot;##&quot;, and &quot;#-&quot; respectively. No other character translations are done, so if you have funny characters in your VHDL identifiers, you will have funny characters in your filenames. Before doing the comparison with the patterns, the VHDL identifier is brought into a canonical form: when it is not an abstract identifier, all its characters are down-cased. When the resulting filename is relative (does not begin with &quot;/&quot;), it is prefixed with the directory of the mapping file. A non-existent mapping file is equivalent to the single rule<br />
 &nbsp;<wbr>&nbsp;<wbr>&lt;&gt; An empty mapping file is just that: an empty mapping. The mapping does not need to be reversible. It is OK when multiple identifiers map to a single filename. No special character besides &quot;&lt;&quot; and &quot;&gt;&quot; is valid in &quot;pattern&quot; or &quot;filename&quot;. They are reserved for future extensions. The mapping files for going from design unit names to filenames are found by looking into directories specified by the `v2cc library path&#8217;. You can use the environment variable V2CC_LIBRARY_PATH and command line options to define the path. When the environment variable is not set, it defaults to a value that makes the standard libraries available that are distributed and installed with v2cc itself. When it is set, it completely overwrites this default value. The variable V2CC_LIBRARY_PATH consists of &quot;:&quot; separated filenames. The filename &quot;*&quot; is replaced with the default value mentioned above. In addition to the environment variable, you can use the &quot;-L libdir&quot; command line option with v2cc. The directories specified with &quot;-L&quot; are added in front of the ones specified by V2CC_LIBRARY_PATH. In the final library path, they appear in the same order as on the command line. Looking for a design unit named UNIT in a library named LIB is done like this: </p>
 <pre><code>for each component of the library path, L
-
 if L is a regular file
 set LMAP to L
-
 else if L is a directory
 set LMAP to L/v2cc.libs
-
 else
 continue with next component
-
 translate LIB into FLIB using LMAP with EXT=&quot;&quot;
-
 if FLIB.vhdl exists
 terminate with FLIB.vhdl as the result
-
 if FLIB.v2cc exists
 set UMAP to FLIB.v2cc
-
 else if FLIB is a directory
 set UMAP to FLIB/v2cc.units
-
 else
 continue with next component
-
 translate UNIT into FUNIT using UMAP with EXT=&quot;.vhdl&quot;
-
 terminate with FUNIT as the result
 terminate unsuccessfully
 </code></pre>

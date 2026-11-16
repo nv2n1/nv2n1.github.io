@@ -11,17 +11,12 @@ std::atomic_ref&lt;T&gt;::fetch_add - std::atomic_ref&lt;T&gt;::fetch_add
 <h2>Synopsis</h2>
 
 <pre><code>member only of atomic_ref&lt;Integral&gt; and atomic_ref&lt;Floating&gt; template specializations
-
     T
     fetch_add(T arg, (1)
-
                          std::memory_order order = std::memory_order_seq_cst) const noexcept;
-
 member only of atomic_ref&lt;T *&gt; template specialization
-
     T *
     fetch_add(std::ptrdiff_t arg, (2)
-
                                       std::memory_order order = std::memory_order_seq_cst) const noexcept;</code></pre> 
 Atomically replaces the current value of the referenced object with the result of arithmetic addition of the value and arg. This operation is a read-modify-write operation. Memory is affected according to the value of order. 
 For signed integral types, arithmetic is defined to use two’s complement representation. There are no undefined results. 

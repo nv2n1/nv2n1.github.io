@@ -10,48 +10,18 @@ description: "QuantLib::ExtendedDiscountCurve – Term structure based on loglin
 <p>QuantLib::ExtendedDiscountCurve &#8211; Term structure based on loglinear interpolation of discount factors. </p>
 <h2>Synopsis</h2>
 <pre><code>ExtendedDiscountCurve (const std::vector&lt; Date &gt; &amp;dates, const std::vector&lt; DiscountFactor &gt; &amp;dfs, const Calendar &amp;calendar, const BusinessDayConvention conv, const DayCounter &amp;dayCounter)
-
-
-
 BusinessDayConvention businessDayConvention () const
-
-
-
 void update ()
-
-
-
 Rate compoundForward (const Date &amp;d1, Integer f, bool extrapolate=false) const
-
-
-
 Rate compoundForward (Time t1, Integer f, bool extrapolate=false) const
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::InterpolatedDiscountCurve&lt; LogLinear &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>ExtendedDiscountCurve (const std::vector&lt; Date &gt; &amp;dates, const std::vector&lt; DiscountFactor &gt; &amp;dfs, const Calendar &amp;calendar, const BusinessDayConvention conv, const DayCounter &amp;dayCounter)
-
-
-
 BusinessDayConvention businessDayConvention () const
-
-
-
 void update ()
-
-
-
 Rate compoundForward (const Date &amp;d1, Integer f, bool extrapolate=false) const
-
-
-
 Rate compoundForward (Time t1, Integer f, bool extrapolate=false) const
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>Rate</code> <code>compoundForwardImpl</code> (Time, Integer) const </p>
 <p> <code>Rate</code> <code>zeroYieldImpl</code> (Time) const </p>

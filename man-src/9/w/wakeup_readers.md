@@ -15,7 +15,7 @@ wakeup_readers - wake up readers waiting on a channel
 <h2>Arguments</h2>
 
 <i>work</i>
-<dl><dd><dd>contains the channel buffer</dl>
+<dl><dd></dd><dd>contains the channel buffer</dd></dl>
 
 <h2>Description</h2>
 

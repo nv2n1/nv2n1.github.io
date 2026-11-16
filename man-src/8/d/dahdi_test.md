@@ -15,14 +15,14 @@ description: "dahdi_test — Test if the DAHDI timer provides timely response"
 <h2>Options</h2>
 <p><code>-v</code></p>
 <dl>
-<dd>Be more verbose: print one line per test.</dl>
+<dd>Be more verbose: print one line per test.</dd></dl>
 <p> <code>-c </code> <i>count</i></p>
 <dl>
-<dd>Run for <i>count</i> times instead of running forever.</dl>
+<dd>Run for <i>count</i> times instead of running forever.</dd></dl>
 <h2>Files</h2>
 <p><code>/dev/dahdi/pseudo</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> The device file used to access the DAHDI timer.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-dahdi_tool/">dahdi_tool</a>(8), <a href="/docs/linux/man/8-dahdi_cfg/">dahdi_cfg</a>(8), <a href="/docs/linux/man/8-asterisk/">asterisk</a>(8). <a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a>(2) </p>

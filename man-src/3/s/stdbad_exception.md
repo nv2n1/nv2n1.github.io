@@ -10,7 +10,6 @@ description: "std::bad_exception – std::bad_exception"
 <p>std::bad_exception &#8211; std::bad_exception</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;exception&gt;
-
 class bad_exception;</code></pre>
 <p>std::bad_exception is the type of the exception thrown by the C++ runtime in the following situations:<br />
 1) If std::exception_ptr stores a copy of the caught exception and if the copy constructor of the exception object caught by std::current_exception throws an exception, the captured exception is an instance of std::bad_exception.<br />
@@ -36,21 +35,17 @@ operator= <i>(public member function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;exception&gt;
-
 #include &lt;stdexcept&gt;
 void my_unexp()
 {
     throw;
 }
 void test() throw(std::bad_exception)
-
 {
     throw std::runtime_error(&quot;test&quot;);
 }
 int main()
-
 {
     std::set_unexpected(my_unexp);
     try {

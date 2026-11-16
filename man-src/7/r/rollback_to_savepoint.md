@@ -15,8 +15,8 @@ description: "ROLLBACK TO SAVEPOINT – roll back to a savepoint"
 <p> <code>ROLLBACK TO SAVEPOINT</code> implicitly destroys all savepoints that were established after the named savepoint.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>savepoint_name</i></p>
-<dd>The savepoint to roll back to.</dl>
+<dt><i>savepoint_name</i></dt>
+<dd>The savepoint to roll back to.</dd></dl>
 <h2>Notes</h2>
 <p>Use RELEASE SAVEPOINT [<code><a href="/docs/linux/man/7-release_savepoint/">release_savepoint</a></code>(7)] to destroy a savepoint without discarding the effects of commands executed after it was established. </p>
 <p> Specifying a savepoint name that has not been established is an error. </p>

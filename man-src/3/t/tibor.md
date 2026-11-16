@@ -18,9 +18,9 @@ description: "QuantLib::Tibor – JPY TIBOR index"
 <p> Tokyo Interbank Offered Rate. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This is the rate fixed in Tokio by JBA. Use <code>JPYLibor</code> if you&#8217;re interested in the London fixing by BBA.</dl>
+<dd>This is the rate fixed in Tokio by JBA. Use <code>JPYLibor</code> if you&#8217;re interested in the London fixing by BBA.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>check settlement days and end-of-month adjustment.</dl>
+<dd>check settlement days and end-of-month adjustment.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -15,10 +15,10 @@ description: "virt-pki-validate – validate libvirt PKI files are configured co
 <p> This tool validates that the necessary <font SIZE="-1">PKI</font> files are configured for a secure libvirt server or client using the <font SIZE="-1">TLS</font> encryption protocol. It will report any missing certificate or key files on the host. It should be run as root to ensure it can read all the necessary files</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display command line help usage then exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information then exit.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display command line help usage then exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information then exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Upon successful validation, an exit status of 0 will be set. Upon failure a non-zero status will be set.</p>
 <h2>AUTHOR</h2>

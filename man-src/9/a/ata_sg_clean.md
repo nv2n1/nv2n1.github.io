@@ -14,12 +14,12 @@ description: "ata_sg_clean – Unmap DMA memory associated with command"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Command containing DMA memory to be released</dl>
+</dd><dd>Command containing DMA memory to be released</dd></dl>
 <h2>Description</h2>
 <p>Unmap all mapped DMA memory associated with this command. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -49,7 +49,7 @@ description: "log4cpp::CategoryStream –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>category</i> The category this stream will send log messages to.<br />
- <i>priority</i> The priority the log messages will get or <code>Priority::NOTSET</code> to silently discard any streamed in messages.</dl>
+ <i>priority</i> The priority the log messages will get or <code>Priority::NOTSET</code> to silently discard any streamed in messages.</dd></dl>
 <h3>log4cpp::CategoryStream::~CategoryStream ()</h3>
 <p>Destructor for <code>CategoryStream</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -59,20 +59,20 @@ description: "log4cpp::CategoryStream –"
 <p>Returns the destination <code>Category</code> for this stream. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>Category</code>.</dl>
+<dd>The <code>Category</code>.</dd></dl>
 <h3><code>Priority::Value</code> log4cpp::CategoryStream::getPriority () const [inline]</h3>
 <p>Returns the priority for this stream. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The priority.</dl>
+<dd>The priority.</dd></dl>
 <h3>template&lt;typename T &gt; <code>CategoryStream</code>&amp; log4cpp::CategoryStream::operator&lt;&lt; (const T &amp;t) [inline]</h3>
 <p>Stream in arbitrary types and objects. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>t</i> The value or object to stream in.</dl>
+<dd><i>t</i> The value or object to stream in.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A reference to itself.</dl>
+<dd>A reference to itself.</dd></dl>
 <h3><code>CategoryStream</code> &amp; log4cpp::CategoryStream::operator&lt;&lt; (const char *t)</h3>
 <h3>template&lt;typename T &gt; <code>CategoryStream</code>&amp; log4cpp::CategoryStream::operator&lt;&lt; (const std::string &amp;t) [inline]</h3>
 <h3><code>CategoryStream</code> &amp; log4cpp::CategoryStream::operator&lt;&lt; (<code>cspf</code>pf)</h3>

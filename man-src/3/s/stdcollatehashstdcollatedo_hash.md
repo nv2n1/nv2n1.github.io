@@ -11,14 +11,10 @@ std::collate&lt;CharT&gt;::hash,std::collate&lt;CharT&gt;::do_hash - std::collat
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  long hash(const CharT *beg, const CharT *end) const;
-
 protected:
 (2)
-
     virtual long do_hash(const CharT *beg, const CharT *end) const;</code></pre> 
 1) Public member function, calls the protected virtual member function do_hash of the most derived class. 
 2) Converts the character sequence [beg, end) to an integer value that is equal to the hash obtained for all strings that collate equivalent in this locale (compare() returns 0). For two strings that do not collate equivalent, the probability that their hashes are equal should be very small, approaching 1.0/std::numeric_limits&lt;unsigned long&gt;::max(). 
@@ -40,11 +36,8 @@ The system-supplied locales normally do not collate two strings as equivalent (c
 
 Demonstrates a locale-aware unordered container 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;unordered_set&gt;
 struct CollateHash {
     template &lt;typename CharT&gt;
@@ -53,7 +46,6 @@ struct CollateHash {
         return std::use_facet&lt;std::collate&lt;CharT&gt;&gt;(std::locale()).hash(&amp;s[0], &amp;s[0] + s.size());
     }
 };
-
 struct CollateEq {
     template &lt;typename CharT&gt;
     bool operator()(const std::basic_string&lt;CharT&gt; &amp;s1,
@@ -63,7 +55,6 @@ struct CollateEq {
     }
 };
 int main()
-
 {
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));
     std::wcout.imbue(std::locale());

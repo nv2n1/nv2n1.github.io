@@ -16,22 +16,22 @@ description: "gspiceui – GUI frontend for various electronic circuit simulatio
 <h2>OPTIONS</h2>
 <p> <i>gspiceui</i> accepts the following options : </p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Print version information. </p>
-<dt><code>-h</code></p>
-<dd> Print usage information. </p>
-<dt><code>-r RCFILE</code></p>
-<dd> Specify a configuration file. </p>
-<dt><code>-s SIMENG</code></p>
-<dd> Specify the simulation engine to be used. </p>
-<dt><code>-a ANA</code></p>
-<dd> Specify the analysis page to be displayed. </p>
-<dt><code>-g [PROC]</code></p>
-<dd> Specify the guile procedure which is executed to create the netlist. </p>
-<dt><code>-w VIEWER</code></p>
-<dd> Specify the waveform viewer to be used. </p>
-<dt><code>FILE/S</code></p>
-<dd> Specify a circuit description file to load or schematic file/s to import. If multiple schematics files are specified they are read sequentially and parsed with the assumption that they are all part of the same design. Any file/s must be specified at the end of the command line.</dl>
+<dt><code>-v</code></dt>
+<dd> Print version information. </dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information. </dd>
+<dt><code>-r RCFILE</code></dt>
+<dd> Specify a configuration file. </dd>
+<dt><code>-s SIMENG</code></dt>
+<dd> Specify the simulation engine to be used. </dd>
+<dt><code>-a ANA</code></dt>
+<dd> Specify the analysis page to be displayed. </dd>
+<dt><code>-g [PROC]</code></dt>
+<dd> Specify the guile procedure which is executed to create the netlist. </dd>
+<dt><code>-w VIEWER</code></dt>
+<dd> Specify the waveform viewer to be used. </dd>
+<dt><code>FILE/S</code></dt>
+<dd> Specify a circuit description file to load or schematic file/s to import. If multiple schematics files are specified they are read sequentially and parsed with the assumption that they are all part of the same design. Any file/s must be specified at the end of the command line.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;m.waters [at] bom.gov.au&gt;. </p>
 <h2>AUTHOR</h2>

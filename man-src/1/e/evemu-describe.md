@@ -25,7 +25,7 @@ evemu - record[--autorestart = s][/ dev / input / eventX][output file]
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 --autorestart=&lt;s&gt;
       Terminate the current recording after &lt;s&gt; seconds of device
@@ -33,27 +33,27 @@ evemu - record[--autorestart = s][/ dev / input / eventX][output file]
       with the date and time of the recording's start.
       The timeout must be greater than 0.
 </pre>
-</dl>
+</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> If evtest-record does not see any events even though the device is being used, the device may be grabbed by a process (EVIOCGRAB). This is usually the case when debugging a synaptics or wacom device from within X. VT switching to a TTY or shutting down the X server terminates this grab and the devices can be recorded. For most X drivers, disabling the device also removes the grab. </p>
 <p> The following command shows the processes with an open file descriptor on the device. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fuser -v /dev/input/eventX
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-evemu-device/">evemu-device</a>(1) <a href="/docs/linux/man/1-evemu-play/">evemu-play</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> evemu was written by Henrik Rydberg &lt;m[blue]<code>rydberg [at] euromail.se</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rydberg [at] euromail.se</p>
+<dt> 1.</dt>
+<dd> rydberg [at] euromail.se</dd>
 <dl>
 <dt>
-<dd> mailto:rydberg [at] euromail.se</dl>
+</dt><dd> mailto:rydberg [at] euromail.se</dd></dl>
 </dl>
 <h2>Index</h2>

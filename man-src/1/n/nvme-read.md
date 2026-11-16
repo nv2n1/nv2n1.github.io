@@ -44,13 +44,13 @@ nvme - read&lt;device&gt;[--start - block = &lt;slba&gt; | -s&lt;slba&gt;]
  --start-block=&lt;slba&gt;, -s &lt;slba&gt;
 <dl>
 <dt>
-<dd> Start block.</dl>
+</dt><dd> Start block.</dd></dl>
  
 
  --latency, -t
 <dl>
 <dt>
-<dd> Print out the latency the IOCTL took (in us).</dl>
+</dt><dd> Print out the latency the IOCTL took (in us).</dd></dl>
 
 <h2>EXAMPLES</h2>
 

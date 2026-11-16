@@ -12,7 +12,6 @@ std::valarray&lt;T&gt;::swap - std::valarray&lt;T&gt;::swap
 
 <pre><code>void swap(valarray &amp;other);
 (until C++ 11)
-
     void swap(valarray &amp;other) noexcept;
 (since C++ 11)</code></pre> 
 Swaps the contents with those of other. 

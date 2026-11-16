@@ -17,16 +17,16 @@ description: "pmdaConnect – establish a connection between a daemon PMDA and P
 <h2>Description</h2>
 <p><code>pmdaConnect</code> initializes an IPC channel between a <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) and the <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) process on the local host. The type of the connection is dependent on the <i>e_io</i> field of the <code>pmdaExt</code> structure:</p>
 <dl>
-<dt><code>pmdaPipe</code></p>
-<dd>Use <code>stdin</code>/<code>stdout</code> to communicate; assumes this is a pipe created by <code>pmcd</code> before the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) was launched.</p>
-<dt><code>pmdaInet</code></p>
-<dd>Assume <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) will establish a connection to an IPv4 internet domain socket set up by the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3). The name or number of the port must be specified in the <i>e_sockname</i> or <i>e_port</i> fields of the <code>pmdaExt</code> structure, respectively.</p>
-<dt><code>pmdaIPv6</code></p>
-<dd>Assume <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) will establish a connection to an IPv6 internet domain socket set up by the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3). The name or number of the port must be specified in the <i>e_sockname</i> or <i>e_port</i> fields of the <code>pmdaExt</code> structure, respectively.</p>
-<dt><code>pmdaUnix</code></p>
-<dd>Assume <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) will establish a connection to a unix domain socket set up by the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3). The port number must be specified in the <i>e_port</i> field of the <code>pmdaExt structure.</code></p>
-<dt><code>pmdaUnknown</code></p>
-<dd>The initial value of <i>e_io</i> which defaults to using <code>stdin</code>/<code>stdout</code>.</dl>
+<dt><code>pmdaPipe</code></dt>
+<dd>Use <code>stdin</code>/<code>stdout</code> to communicate; assumes this is a pipe created by <code>pmcd</code> before the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) was launched.</dd>
+<dt><code>pmdaInet</code></dt>
+<dd>Assume <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) will establish a connection to an IPv4 internet domain socket set up by the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3). The name or number of the port must be specified in the <i>e_sockname</i> or <i>e_port</i> fields of the <code>pmdaExt</code> structure, respectively.</dd>
+<dt><code>pmdaIPv6</code></dt>
+<dd>Assume <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) will establish a connection to an IPv6 internet domain socket set up by the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3). The name or number of the port must be specified in the <i>e_sockname</i> or <i>e_port</i> fields of the <code>pmdaExt</code> structure, respectively.</dd>
+<dt><code>pmdaUnix</code></dt>
+<dd>Assume <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) will establish a connection to a unix domain socket set up by the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3). The port number must be specified in the <i>e_port</i> field of the <code>pmdaExt structure.</code></dd>
+<dt><code>pmdaUnknown</code></dt>
+<dd>The initial value of <i>e_io</i> which defaults to using <code>stdin</code>/<code>stdout</code>.</dd></dl>
 <p> The relevant <code>pmdaExt</code> fields are initialized by <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3) and set by <code><a href="/docs/linux/man/3-pmdagetopt/">pmdaGetOpt</a></code>(3) or <code>pmdaGetOptions</code>(3) so most PMDAs should not need to access or modify them. </p>
 <p> Traditionally most PMDAs have called <code>pmdaConnect</code> after calls to <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3), <code>pmdaGetOptions</code>(3) (or <code><a href="/docs/linux/man/3-pmdagetopt/">pmdaGetOpt</a></code>(3)) and <code><a href="/docs/linux/man/3-pmdainit/">pmdaInit</a></code>(3). If the PMDA requires significant processing at startup to identify the available metrics and/or instance domains before <code><a href="/docs/linux/man/3-pmdainit/">pmdaInit</a></code>(3) can be called, then it risks timing out during the handshake protocol that starts as soon as <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) launches the PMDA and does not conclude until <code>pmdaConnect</code> is called. In this case, it is advisable to move the <code>pmdaConnect</code> call, so that it comes <i>after</i> the call to <code>pmdaGetOptions</code>(3) (or <code><a href="/docs/linux/man/3-pmdagetopt/">pmdaGetOpt</a></code>(3)) and <i>before</i> the call to <code><a href="/docs/linux/man/3-pmdainit/">pmdaInit</a></code>(3).</p>
 <h2>Diagnostics</h2>

@@ -15,7 +15,7 @@ snd_info_free_entry - release the info entry
 <h2>Arguments</h2>
 
 <i>entry</i>
-<dl><dd><dd>the info entry</dl>
+<dl><dd></dd><dd>the info entry</dd></dl>
 
 <h2>Description</h2>
 

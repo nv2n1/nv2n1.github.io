@@ -16,3 +16,4 @@ wchar_t *fgetws(wchar_t *ws, int n, FILE *stream);
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> The <code>fgetws</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-fgets/">fgets</a></code>(3) function. It reads a string of at most <i>n-1</i> wide characters into the wide-character array pointed to by <i>ws</i>, and adds a terminating null wide character (L&#8217;
+</p>

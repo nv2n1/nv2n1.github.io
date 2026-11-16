@@ -71,52 +71,52 @@ description: "spamassassin – extensible email filter used to identify spam"
 <p> The SpamAssassin rule base, text templates, and rule description text are loaded from configuration files. </p>
 <p> Default configuration data is loaded from the first existing directory in:</p>
 <dl>
-<dt>/var/lib/spamassassin/3.004000</p>
+<dt>/var/lib/spamassassin/3.004000</dt>
 <dd>
-<dt>/usr/share/spamassassin</p>
+</dd><dt>/usr/share/spamassassin</dt>
 <dd>
-<dt>/usr/share/spamassassin</p>
+</dd><dt>/usr/share/spamassassin</dt>
 <dd>
-<dt>/usr/local/share/spamassassin</p>
+</dd><dt>/usr/local/share/spamassassin</dt>
 <dd>
-<dt>/usr/share/spamassassin</p>
-<dd></dl>
+</dd><dt>/usr/share/spamassassin</dt>
+<dd></dd></dl>
 <p> Site-specific configuration data is used to override any values which had already been set. This is loaded from the first existing directory in:</p>
 <dl>
-<dt>/etc/mail/spamassassin</p>
+<dt>/etc/mail/spamassassin</dt>
 <dd>
-<dt>/usr/etc/mail/spamassassin</p>
+</dd><dt>/usr/etc/mail/spamassassin</dt>
 <dd>
-<dt>/usr/etc/spamassassin</p>
+</dd><dt>/usr/etc/spamassassin</dt>
 <dd>
-<dt>/usr/local/etc/spamassassin</p>
+</dd><dt>/usr/local/etc/spamassassin</dt>
 <dd>
-<dt>/usr/pkg/etc/spamassassin</p>
+</dd><dt>/usr/pkg/etc/spamassassin</dt>
 <dd>
-<dt>/usr/etc/spamassassin</p>
+</dd><dt>/usr/etc/spamassassin</dt>
 <dd>
-<dt>/etc/mail/spamassassin</p>
+</dd><dt>/etc/mail/spamassassin</dt>
 <dd>
-<dt>/etc/spamassassin</p>
-<dd></dl>
+</dd><dt>/etc/spamassassin</dt>
+<dd></dd></dl>
 <p> From those three directories, SpamAssassin will first read files ending in &#8220;.pre&#8221; in lexical order and then it will read files ending in &#8220;.cf&#8221; in lexical order (most files begin with two numbers to make the sorting order obvious). </p>
 <p> In other words, it will read <i>init.pre</i> first, then <i>10_default_prefs.cf</i> before <i>50_scores.cf</i> and <i>20_body_tests.cf</i> before <i>20_head_tests.cf</i>. Options in later files will override earlier files. </p>
 <p> Individual user preferences are loaded from the location specified on the <tt>&quot;spamassassin&quot;</tt>, <tt>&quot;sa-learn&quot;</tt>, or <tt>&quot;spamd&quot;</tt> command line (see respective manual page for details). If the location is not specified, <i>~/.spamassassin/user_prefs</i> is used if it exists. SpamAssassin will create that file if it does not already exist, using <i>user_prefs.template</i> as a template. That file will be looked for in:</p>
 <dl>
-<dt>/etc/mail/spamassassin</p>
+<dt>/etc/mail/spamassassin</dt>
 <dd>
-<dt>/usr/etc/mail/spamassassin</p>
+</dd><dt>/usr/etc/mail/spamassassin</dt>
 <dd>
-<dt>/usr/share/spamassassin</p>
+</dd><dt>/usr/share/spamassassin</dt>
 <dd>
-<dt>/etc/spamassassin</p>
+</dd><dt>/etc/spamassassin</dt>
 <dd>
-<dt>/etc/mail/spamassassin</p>
+</dd><dt>/etc/mail/spamassassin</dt>
 <dd>
-<dt>/usr/local/share/spamassassin</p>
+</dd><dt>/usr/local/share/spamassassin</dt>
 <dd>
-<dt>/usr/share/spamassassin</p>
-<dd></dl>
+</dd><dt>/usr/share/spamassassin</dt>
+<dd></dd></dl>
 <h2>TAGGING</h2>
 <p> The following two sections detail the default tagging and markup that takes place for messages when running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamc&quot;</tt> with <tt>&quot;spamd&quot;</tt> in the default configuration. </p>
 <p> Note: before header modification and addition, all headers beginning with <tt>&quot;X-Spam-&quot;</tt> are removed to prevent spammer mischief and also to avoid potential problems caused by prior invocations of SpamAssassin.</p>
@@ -125,36 +125,36 @@ description: "spamassassin – extensible email filter used to identify spam"
 <p> If an incoming message is tagged as spam, instead of modifying the original message, SpamAssassin will create a new report message and attach the original message as a message/rfc822 <font SIZE="-1">MIME</font> part (ensuring the original message is completely preserved and easier to recover). </p>
 <p> The new report message inherits the following headers (if they are present) from the original spam message:</p>
 <dl>
-<dt>From: header</p>
+<dt>From: header</dt>
 <dd>
-<dt>To: header</p>
+</dd><dt>To: header</dt>
 <dd>
-<dt>Cc: header</p>
+</dd><dt>Cc: header</dt>
 <dd>
-<dt>Subject: header</p>
+</dd><dt>Subject: header</dt>
 <dd>
-<dt>Date: header</p>
+</dd><dt>Date: header</dt>
 <dd>
-<dt>Message-ID: header</p>
-<dd></dl>
+</dd><dt>Message-ID: header</dt>
+<dd></dd></dl>
 <p> The above headers can be modified if the relevant <tt>&quot;rewrite_header&quot;</tt> option is given (see <tt>&quot;Mail::SpamAssassin::Conf&quot;</tt> for more information). </p>
 <p> By default these message headers are added to spam:</p>
 <dl>
-<dt>X-Spam-Flag: header</p>
-<dd> Set to <tt>&quot;YES&quot;</tt>.</dl>
+<dt>X-Spam-Flag: header</dt>
+<dd> Set to <tt>&quot;YES&quot;</tt>.</dd></dl>
 <p> The headers that added are fully configurable via the <tt>&quot;add_header&quot;</tt> option (see <tt>&quot;Mail::SpamAssassin::Conf&quot;</tt> for more information).</p>
 <dl>
-<dt>spam mail body text</p>
-<dd> The SpamAssassin report is added to top of the mail message body, if the message is marked as spam.</dl>
+<dt>spam mail body text</dt>
+<dd> The SpamAssassin report is added to top of the mail message body, if the message is marked as spam.</dd></dl>
 <h3><font SIZE="-1">DEFAULT TAGGING FOR ALL MAILS</font></h3>
 <p> These headers are added to all messages, both spam and ham (non-spam).</p>
 <dl>
-<dt>X-Spam-Checker-Version: header</p>
-<dd> The version and subversion of SpamAssassin and the host where SpamAssassin was run.</p>
-<dt>X-Spam-Level: header</p>
-<dd> A series of &#8220;*&#8221; charactes where each one represents a full score point.</p>
-<dt>X-Spam-Status: header</p>
-<dd> A string, <tt>&quot;(Yes|No), score=nn required=nn tests=xxx,xxx autolearn=(ham|spam|no|unavailable|failed)&quot;</tt> is set in this header to reflect the filter status. For the first word, &#8220;Yes&#8221; means spam and &#8220;No&#8221; means ham (non-spam).</dl>
+<dt>X-Spam-Checker-Version: header</dt>
+<dd> The version and subversion of SpamAssassin and the host where SpamAssassin was run.</dd>
+<dt>X-Spam-Level: header</dt>
+<dd> A series of &#8220;*&#8221; charactes where each one represents a full score point.</dd>
+<dt>X-Spam-Status: header</dt>
+<dd> A string, <tt>&quot;(Yes|No), score=nn required=nn tests=xxx,xxx autolearn=(ham|spam|no|unavailable|failed)&quot;</tt> is set in this header to reflect the filter status. For the first word, &#8220;Yes&#8221; means spam and &#8220;No&#8221; means ham (non-spam).</dd></dl>
 <p> The headers that added are fully configurable via the <tt>&quot;add_header&quot;</tt> option (see <tt>&quot;Mail::SpamAssassin::Conf&quot;</tt> for more information).</p>
 <h2>INSTALLATION</h2>
 <p> The <code>spamassassin</code> command is part of the <code>Mail::SpamAssassin</code> Perl module. Install this as a normal Perl module, using <tt>&quot;perl -MCPAN -e shell&quot;</tt>, or by hand. </p>
@@ -212,21 +212,21 @@ description: "spamassassin – extensible email filter used to identify spam"
 <h2>COPYRIGHT</h2>
 <p> SpamAssassin is distributed under the Apache License, Version 2.0, as described in the file <tt>&quot;LICENSE&quot;</tt> included with the distribution. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">WEB SITES</a></p>
+<dt><a href="#lbAI">WEB SITES</a></dt>
 <dd>
-<dt><a href="#lbAJ">USER MAILING LIST</a></p>
+</dd><dt><a href="#lbAJ">USER MAILING LIST</a></dt>
 <dd>
-<dt><a href="#lbAK">CONFIGURATION FILES</a></p>
+</dd><dt><a href="#lbAK">CONFIGURATION FILES</a></dt>
 <dd>
-<dt><a href="#lbAL">TAGGING</a></p>
+</dd><dt><a href="#lbAL">TAGGING</a></dt>
 <dd>
-<dt><a href="#lbAO">INSTALLATION</a></p>
+</dd><dt><a href="#lbAO">INSTALLATION</a></dt>
 <dd>
-<dt><a href="#lbAP">DEVELOPER DOCUMENTATION</a></p>
+</dd><dt><a href="#lbAP">DEVELOPER DOCUMENTATION</a></dt>
 <dd>
-<dt><a href="#lbAQ">BUGS</a></p>
+</dd><dt><a href="#lbAQ">BUGS</a></dt>
 <dd>
-<dt><a href="#lbAR">AUTHORS</a></p>
+</dd><dt><a href="#lbAR">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAS">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAS">COPYRIGHT</a></dt>
+<dd></dd></dl>

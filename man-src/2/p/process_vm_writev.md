@@ -29,7 +29,7 @@ ssize_t process_vm_writev(pid_t pid,
 <p> <code>process_vm_readv</code>(), <code>process_vm_writev</code>():</p>
 <dl>
 <dt>
-<dd> <code>_GNU_SOURCE</code></dl>
+</dt><dd> <code>_GNU_SOURCE</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These system calls transfer data between the address space of the calling process (&quot;the local process&quot;) and the process identified by <i>pid</i> (&quot;the remote process&quot;). The data moves directly between the address spaces of the two processes, without passing through kernel space. </p>
 <p> The <code>process_vm_readv</code>() system call transfers data from the remote process to the local process. The data to be transferred is identified by <i>remote_iov</i> and <i>riovcnt</i>: <i>remote_iov</i> is a pointer to an array describing address ranges in the process <i>pid</i>, and <i>riovcnt</i> specifies the number of elements in <i>remote_iov</i>. The data is transferred to the locations specified by <i>local_iov</i> and <i>liovcnt</i>: <i>local_iov</i> is a pointer to an array describing address ranges in the calling process, and <i>liovcnt</i> specifies the number of elements in <i>local_iov</i>. </p>
@@ -51,22 +51,22 @@ ssize_t process_vm_writev(pid_t pid,
 <p> On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The memory described by <i>local_iov</i> is outside the caller&#8217;s accessible address space.</p>
-<dt><code>EFAULT</code></p>
-<dd> The memory described by <i>remote_iov</i> is outside the accessible address space of the process <i>pid</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> The sum of the <i>iov_len</i> values of either <i>local_iov</i> or <i>remote_iov</i> overflows a <i>ssize_t</i> value.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>flags</i> is not 0.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>liovcnt</i> or <i>riovcnt</i> is too large.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Could not allocate memory for internal copies of the <i>iovec</i> structures.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller does not have permission to access the address space of the process <i>pid</i>.</p>
-<dt><code>ESRCH</code></p>
-<dd> No process with ID <i>pid</i> exists.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The memory described by <i>local_iov</i> is outside the caller&#8217;s accessible address space.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The memory described by <i>remote_iov</i> is outside the accessible address space of the process <i>pid</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The sum of the <i>iov_len</i> values of either <i>local_iov</i> or <i>remote_iov</i> overflows a <i>ssize_t</i> value.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>flags</i> is not 0.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>liovcnt</i> or <i>riovcnt</i> is too large.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Could not allocate memory for internal copies of the <i>iovec</i> structures.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller does not have permission to access the address space of the process <i>pid</i>.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No process with ID <i>pid</i> exists.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls were added in Linux 3.2. Support is provided in glibc since version 2.15.</p>
 <h2>CONFORMING TO</h2>

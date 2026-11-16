@@ -19,14 +19,14 @@ description: "Heimdal Kerberos 5 digest service –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Keberos context.<br />
+</dt><dd> <i>context</i> A Keberos context.<br />
  <i>realm</i> The realm of the KDC.<br />
  <i>ccache</i> The credential cache to use when talking to the KDC.<br />
- <i>flags</i> The supported mechanism.</dl>
+ <i>flags</i> The supported mechanism.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Return an error code or 0.</dl>
+</dt><dd> Return an error code or 0.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
 <h2>Index</h2>

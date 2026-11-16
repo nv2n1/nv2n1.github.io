@@ -16,15 +16,15 @@ description: "perlfaq6 – Regular Expressions"
 <h3>How can I hope to use regular expressions without creating illegible and unmaintainable code?</h3>
 <p> Three techniques can make regular expressions maintainable and understandable.</p>
 <dl>
-<dt>Comments Outside the Regex</p>
-<dd> Describe what you&#8217;re doing and how you&#8217;re doing it, using normal Perl comments. </p>
+<dt>Comments Outside the Regex</dt>
+<dd> Describe what you&#8217;re doing and how you&#8217;re doing it, using normal Perl comments. </dd>
 <pre>
     # turn the line into the first word, a colon, and the
     # number of characters on the rest of the line
     s/^(\w+)(.*)/ lc($1) . &quot;:&quot; . length($2) /meg;
 </pre>
-<dt>Comments Inside the Regex</p>
-<dd> The <tt>&quot;/x&quot;</tt> modifier causes whitespace to be ignored in a regex pattern (except in a character class and a few other places), and also allows you to use normal comments there, too. As you can imagine, whitespace and comments help a lot. </p>
+<dt>Comments Inside the Regex</dt>
+<dd> The <tt>&quot;/x&quot;</tt> modifier causes whitespace to be ignored in a regex pattern (except in a character class and a few other places), and also allows you to use normal comments there, too. As you can imagine, whitespace and comments help a lot. </dd>
 <p> <tt>&quot;/x&quot;</tt> lets you turn this: </p>
 <pre>
     s{&lt;(?:[^&gt;'&quot;]*|&quot;.*?&quot;|'.*?')+&gt;}{}gs;
@@ -47,8 +47,8 @@ description: "perlfaq6 – Regular Expressions"
 #replace with nothing, i.e.delete
 </code></pre>
 <p> It&#8217;s still not quite so clear as prose, but it is very useful for describing the meaning of each part of the pattern.</p>
-<dt>Different Delimiters</p>
-<dd> While we normally think of patterns as being delimited with <tt>&quot;/&quot;</tt> characters, they can be delimited by almost any character. perlre describes this. For example, the <tt>&quot;s///&quot;</tt> above uses braces as delimiters. Selecting another delimiter can avoid quoting the delimiter within the pattern: </p>
+<dt>Different Delimiters</dt>
+<dd> While we normally think of patterns as being delimited with <tt>&quot;/&quot;</tt> characters, they can be delimited by almost any character. perlre describes this. For example, the <tt>&quot;s///&quot;</tt> above uses braces as delimiters. Selecting another delimiter can avoid quoting the delimiter within the pattern: </dd>
 <pre>
     s/\/usr\/local/\/usr\/share/g;    # bad delimiter choice
     s#/usr/local#/usr/share#g;        # better
@@ -696,5 +696,5 @@ if (defined $regex) {
 <p> This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> Irrespective of its distribution, all code examples in this file are hereby placed into the public domain. You are permitted and encouraged to use this code in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit would be courteous but is not required. </p>
 <h2>Index</h2>
-<dt><a href="#lbBC">AUTHOR AND COPYRIGHT</a></p>
-<dd></dl>
+<dt><a href="#lbBC">AUTHOR AND COPYRIGHT</a></dt>
+<dd></dd></dl>

@@ -18,15 +18,15 @@ description: "ssdiff – compare two spreadsheets"
 <p> This program follows the usual GNU command line syntax, with single letter options starting with a single dash (`-&#8216;) and longer options starting with two dashes (`&#8211;&#8216;). </p>
 <h3>Output options</h3>
 <dl>
-<dt><code>-x, &#8211;xml</code></p>
-<dd> Display differences in xml format </p>
+<dt><code>-x, &#8211;xml</code></dt>
+<dd> Display differences in xml format </dd>
 </dl>
 <h3>Help options</h3>
 <dl>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display ssdiff&#8217;s version</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Display the supported options </p>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display ssdiff&#8217;s version</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Display the supported options </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To compare an old version of a file with a newer file, run: </p>

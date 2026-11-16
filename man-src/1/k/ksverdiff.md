@@ -17,10 +17,10 @@ description: "ksverdiff — display the differences in kickstart syntax"
 <p> <code>ksverdiff</code> returns 0 on success, and 1 if either FROMVER or TOVER are invalid.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code> | <code>&#8211;from FROMVER</code></p>
-<dd> The version of kickstart syntax to start with. In other words, this is the lower bound version.</p>
-<dt><code>-t</code> | <code>&#8211;TO TOVER</code></p>
-<dd> The version of kickstart syntax to end with. In other words, this is the upper bound version.</dl>
+<dt><code>-f</code> | <code>&#8211;from FROMVER</code></dt>
+<dd> The version of kickstart syntax to start with. In other words, this is the lower bound version.</dd>
+<dt><code>-t</code> | <code>&#8211;TO TOVER</code></dt>
+<dd> The version of kickstart syntax to end with. In other words, this is the upper bound version.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ksflatten (1), ksvalidator (1) </p>
 <h2>Index</h2>

@@ -107,22 +107,22 @@ description: "XmSlideContext – The SlideContext widget class"
 </table>
 <p></center> </p>
 <dl COMPACT>
-<dt><i>XmNslideDestHeight</i></p>
-<dd>If not specified, the current height of XmNslideWidget is used. </p>
-<dt><i>XmNslideDestWidth</i></p>
-<dd>If not specified, the current width of XmNslideWidget is used. </p>
-<dt><i>XmNslideDestX</i></p>
-<dd>If not specified, the current x of XmNslideWidget is used. </p>
-<dt><i>XmNslideDestY</i></p>
-<dd>If not specified, the current y of XmNslideWidget is used. </p>
-<dt><i>XmNslideFinishCallback</i></p>
-<dd>Specifies the list of callbacks that is called when the XmNslideWidget reaches it&#8217;s destination. </p>
-<dt><i>XmNslideInterval</i></p>
-<dd>The time between each geometry change. A value of 0 will set the destination values on the first iteration. </p>
-<dt><i>XmNslideMotionCallback</i></p>
-<dd>Specifies the list of callbacks that is called when the widget geometry changes. </p>
-<dt><i>XmNslideWidget</i></p>
-<dd>The widget to alter. This _must_ be specified during creation. </p>
+<dt><i>XmNslideDestHeight</i></dt>
+<dd>If not specified, the current height of XmNslideWidget is used. </dd>
+<dt><i>XmNslideDestWidth</i></dt>
+<dd>If not specified, the current width of XmNslideWidget is used. </dd>
+<dt><i>XmNslideDestX</i></dt>
+<dd>If not specified, the current x of XmNslideWidget is used. </dd>
+<dt><i>XmNslideDestY</i></dt>
+<dd>If not specified, the current y of XmNslideWidget is used. </dd>
+<dt><i>XmNslideFinishCallback</i></dt>
+<dd>Specifies the list of callbacks that is called when the XmNslideWidget reaches it&#8217;s destination. </dd>
+<dt><i>XmNslideInterval</i></dt>
+<dd>The time between each geometry change. A value of 0 will set the destination values on the first iteration. </dd>
+<dt><i>XmNslideMotionCallback</i></dt>
+<dd>Specifies the list of callbacks that is called when the widget geometry changes. </dd>
+<dt><i>XmNslideWidget</i></dt>
+<dd>The widget to alter. This _must_ be specified during creation. </dd>
 </dl>
 <h3>Inherited Resources</h3>
 <p>SlideContext inherits behavior and resources from the following superclasses. For a complete description of each resource, refer to the man page for that superclass. </p>

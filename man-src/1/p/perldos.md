@@ -17,8 +17,8 @@ description: "perldos – Perl under DOS, W31, W95."
 <p> Detailed instructions on how to build and install perl extension modules, including XS-type modules, is included. See &#8216;<font SIZE="-1">BUILDING AND INSTALLING MODULES</font>&#8216;.</p>
 <h3>Prerequisites for Compiling Perl on <font SIZE="-1">DOS</font></h3>
 <dl>
-<dt><font SIZE="-1">DJGPP</font></p>
-<dd> <font SIZE="-1">DJGPP</font> is a port of <font SIZE="-1">GNU C/C<font SIZE="-2">++</font></font> compiler and development tools to 32-bit, protected-mode environment on Intel 32-bit CPUs running MS-DOS and compatible operating systems, by <font SIZE="-1">DJ</font> Delorie &lt;dj [at] delorie.com&gt; and friends. </p>
+<dt><font SIZE="-1">DJGPP</font></dt>
+<dd> <font SIZE="-1">DJGPP</font> is a port of <font SIZE="-1">GNU C/C<font SIZE="-2">++</font></font> compiler and development tools to 32-bit, protected-mode environment on Intel 32-bit CPUs running MS-DOS and compatible operating systems, by <font SIZE="-1">DJ</font> Delorie &lt;dj [at] delorie.com&gt; and friends. </dd>
 <p> For more details (<font SIZE="-1">FAQ</font>), check out the home of <font SIZE="-1">DJGPP</font> at: </p>
 <pre>
         <a rel="nofollow" href="http://www.delorie.com/djgpp/">http://www.delorie.com/djgpp/</a>
@@ -45,30 +45,30 @@ description: "perldos – Perl under DOS, W31, W95."
         v2misc/csdpmi5b.zip
 </pre>
 <p> or possibly any newer version.</p>
-<dt>Pthreads</p>
-<dd> Thread support is not tested in this version of the djgpp perl.</dl>
+<dt>Pthreads</dt>
+<dd> Thread support is not tested in this version of the djgpp perl.</dd></dl>
 <h3>Shortcomings of Perl under <font SIZE="-1">DOS</font></h3>
 <p> Perl under <font SIZE="-1">DOS</font> lacks some features of perl under <font SIZE="-1">UNIX</font> because of deficiencies in the UNIX-emulation, most notably:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>fork()</code> and <code>pipe()</code></p>
-<dt>&bull;</p>
-<dd> some features of the <font SIZE="-1">UNIX</font> filesystem regarding link count and file dates</p>
-<dt>&bull;</p>
-<dd> in-place operation is a little bit broken with short filenames</p>
-<dt>&bull;</p>
-<dd> sockets</dl>
+<dt>&bull;</dt>
+<dd> <code>fork()</code> and <code>pipe()</code></dd>
+<dt>&bull;</dt>
+<dd> some features of the <font SIZE="-1">UNIX</font> filesystem regarding link count and file dates</dd>
+<dt>&bull;</dt>
+<dd> in-place operation is a little bit broken with short filenames</dd>
+<dt>&bull;</dt>
+<dd> sockets</dd></dl>
 <h3>Building Perl on <font SIZE="-1">DOS</font></h3>
 <dl>
-<dt>&bull;</p>
-<dd> Unpack the source package <i>perl5.8*.tar.gz</i> with djtarx. If you want to use long file names under w95 and also to get Perl to pass all its tests, don&#8217;t forget to use </p>
+<dt>&bull;</dt>
+<dd> Unpack the source package <i>perl5.8*.tar.gz</i> with djtarx. If you want to use long file names under w95 and also to get Perl to pass all its tests, don&#8217;t forget to use </dd>
 <pre>
         set LFN=y
         set FNCASE=y
 </pre>
 <p> before unpacking the archive.</p>
-<dt>&bull;</p>
-<dd> Create a &#8220;symlink&#8221; or copy your bash.exe to sh.exe in your <tt>&quot;($DJDIR)/bin&quot;</tt> directory. </p>
+<dt>&bull;</dt>
+<dd> Create a &#8220;symlink&#8221; or copy your bash.exe to sh.exe in your <tt>&quot;($DJDIR)/bin&quot;</tt> directory. </dd>
 <pre>
         ln -s bash.exe sh.exe
 </pre>
@@ -81,11 +81,11 @@ description: "perldos – Perl under DOS, W31, W95."
 <pre>
         +SHELL=%DJDIR%/bin/sh.exe
 </pre>
-<dt>&bull;</p>
-<dd> If you have <i>split.exe</i> and <i>gsplit.exe</i> in your path, then rename <i>split.exe</i> to <i>djsplit.exe</i>, and <i>gsplit.exe</i> to <i>split.exe</i>. Copy or link <i>gecho.exe</i> to <i>echo.exe</i> if you don&#8217;t have <i>echo.exe</i>. Copy or link <i>gawk.exe</i> to <i>awk.exe</i> if you don&#8217;t have <i>awk.exe</i>. </p>
+<dt>&bull;</dt>
+<dd> If you have <i>split.exe</i> and <i>gsplit.exe</i> in your path, then rename <i>split.exe</i> to <i>djsplit.exe</i>, and <i>gsplit.exe</i> to <i>split.exe</i>. Copy or link <i>gecho.exe</i> to <i>echo.exe</i> if you don&#8217;t have <i>echo.exe</i>. Copy or link <i>gawk.exe</i> to <i>awk.exe</i> if you don&#8217;t have <i>awk.exe</i>. </dd>
 <p> [If you have the recommended versions of djdev, shell utilities and gawk, all these are already done for you, and you will not need to do anything.]</p>
-<dt>&bull;</p>
-<dd> Chdir to the djgpp subdirectory of perl toplevel and type the following commands: </p>
+<dt>&bull;</dt>
+<dd> Chdir to the djgpp subdirectory of perl toplevel and type the following commands: </dd>
 <pre>
         set FNCASE=y
         configure.bat
@@ -110,8 +110,8 @@ description: "perldos – Perl under DOS, W31, W95."
 <pre>
         set CONFIG=
 </pre>
-<dt>&bull;</p>
-<dd> Now you can compile Perl. Type: </p>
+<dt>&bull;</dt>
+<dd> Now you can compile Perl. Type: </dd>
 <pre>
         make
 </pre>
@@ -173,9 +173,9 @@ description: "perldos – Perl under DOS, W31, W95."
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1). </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">BUILDING AND INSTALLING MODULES ON DOS</a></p>
+<dt><a href="#lbAJ">BUILDING AND INSTALLING MODULES ON DOS</a></dt>
 <dd>
-<dt><a href="#lbAO">AUTHOR</a></p>
+</dd><dt><a href="#lbAO">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAP">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
+<dd></dd></dl>

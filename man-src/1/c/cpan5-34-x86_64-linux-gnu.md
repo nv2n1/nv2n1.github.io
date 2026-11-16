@@ -28,74 +28,74 @@ description: "cpan – easily interact with CPAN from the command line"
 <p>This script provides a command interface (not a shell) to <font SIZE="-1">CPAN.</font> At the moment it uses <font SIZE="-1">CPAN</font>.pm to do the work, but it is not a one-shot command runner for <font SIZE="-1">CPAN</font>.pm.</p>
 <h3>Options</h3>
 <dl>
-<dt>-a</p>
-<dd>Creates a <font SIZE="-1">CPAN</font>.pm autobundle with CPAN::Shell-&gt;autobundle.</p>
-<dt>-A module [ module &#8230; ]</p>
-<dd>Shows the primary maintainers for the specified modules.</p>
-<dt>-c module</p>
-<dd>Runs a `make clean` in the specified module&#8217;s directories.</p>
-<dt>-C module [ module &#8230; ]</p>
-<dd>Show the <i>Changes</i> files for the specified modules</p>
-<dt>-D module [ module &#8230; ]</p>
-<dd>Show the module details. This prints one line for each out-of-date module (meaning, modules locally installed but have newer versions on <font SIZE="-1">CPAN</font>). Each line has three columns: module name, local version, and <font SIZE="-1">CPAN</font> version.</p>
-<dt>-f</p>
-<dd>Force the specified action, when it normally would have failed. Use this to install a module even if its tests fail. When you use this option, -i is not optional for installing a module when you need to force it: </p>
+<dt>-a</dt>
+<dd>Creates a <font SIZE="-1">CPAN</font>.pm autobundle with CPAN::Shell-&gt;autobundle.</dd>
+<dt>-A module [ module &#8230; ]</dt>
+<dd>Shows the primary maintainers for the specified modules.</dd>
+<dt>-c module</dt>
+<dd>Runs a `make clean` in the specified module&#8217;s directories.</dd>
+<dt>-C module [ module &#8230; ]</dt>
+<dd>Show the <i>Changes</i> files for the specified modules</dd>
+<dt>-D module [ module &#8230; ]</dt>
+<dd>Show the module details. This prints one line for each out-of-date module (meaning, modules locally installed but have newer versions on <font SIZE="-1">CPAN</font>). Each line has three columns: module name, local version, and <font SIZE="-1">CPAN</font> version.</dd>
+<dt>-f</dt>
+<dd>Force the specified action, when it normally would have failed. Use this to install a module even if its tests fail. When you use this option, -i is not optional for installing a module when you need to force it: </dd>
 <pre> % cpan -f -i Module::Foo</pre>
-<dt>-F</p>
-<dd>Turn off <font SIZE="-1">CPAN</font>.pm&#8217;s attempts to lock anything. You should be careful with this since you might end up with multiple scripts trying to muck in the same directory. This isn&#8217;t so much of a concern if you&#8217;re loading a special config with <tt>&quot;-j&quot;</tt>, and that config sets up its own work directories.</p>
-<dt>-g module [ module &#8230; ]</p>
-<dd>Downloads to the current directory the latest distribution of the module.</p>
-<dt>-G module [ module &#8230; ]</p>
-<dd><font SIZE="-1">UNIMPLEMENTED</font> </p>
+<dt>-F</dt>
+<dd>Turn off <font SIZE="-1">CPAN</font>.pm&#8217;s attempts to lock anything. You should be careful with this since you might end up with multiple scripts trying to muck in the same directory. This isn&#8217;t so much of a concern if you&#8217;re loading a special config with <tt>&quot;-j&quot;</tt>, and that config sets up its own work directories.</dd>
+<dt>-g module [ module &#8230; ]</dt>
+<dd>Downloads to the current directory the latest distribution of the module.</dd>
+<dt>-G module [ module &#8230; ]</dt>
+<dd><font SIZE="-1">UNIMPLEMENTED</font> </dd>
 <p> Download to the current directory the latest distribution of the modules, unpack each distribution, and create a git repository for each distribution. </p>
 <p> If you want this feature, check out Yanick Champoux&#8217;s <tt>&quot;Git::CPAN::Patch&quot;</tt> distribution.</p>
-<dt>-h</p>
-<dd>Print a help message and exit. When you specify <tt>&quot;-h&quot;</tt>, it ignores all of the other options and arguments.</p>
-<dt>-i module [ module &#8230; ]</p>
-<dd>Install the specified modules. With no other switches, this switch is implied.</p>
-<dt>-I</p>
-<dd>Load <tt>&quot;local::lib&quot;</tt> (think like <tt>&quot;-I&quot;</tt> for loading lib paths). Too bad <tt>&quot;-l&quot;</tt> was already taken.</p>
-<dt>-j Config.pm</p>
-<dd>Load the file that has the <font SIZE="-1">CPAN</font> configuration data. This should have the same format as the standard <i>CPAN/Config.pm</i> file, which defines <tt>$CPAN::Config</tt> as an anonymous hash.</p>
-<dt>-J</p>
-<dd>Dump the configuration in the same format that <font SIZE="-1">CPAN</font>.pm uses. This is useful for checking the configuration as well as using the dump as a starting point for a new, custom configuration.</p>
-<dt>-l</p>
-<dd>List all installed modules with their versions</p>
-<dt>-L author [ author &#8230; ]</p>
-<dd>List the modules by the specified authors.</p>
-<dt>-m</p>
-<dd>Make the specified modules.</p>
-<dt>-M mirror1,mirror2,&#8230;</p>
-<dd>A comma-separated list of mirrors to use for just this run. The <tt>&quot;-P&quot;</tt> option can find them for you automatically.</p>
-<dt>-n</p>
-<dd>Do a dry run, but don&#8217;t actually install anything. (unimplemented)</p>
-<dt>-O</p>
-<dd>Show the out-of-date modules.</p>
-<dt>-p</p>
-<dd>Ping the configured mirrors and print a report</p>
-<dt>-P</p>
-<dd>Find the best mirrors you could be using and use them for the current session.</p>
-<dt>-r</p>
-<dd>Recompiles dynamically loaded modules with CPAN::Shell-&gt;recompile.</p>
-<dt>-s</p>
-<dd>Drop in the <font SIZE="-1">CPAN</font>.pm shell. This command does this automatically if you don&#8217;t specify any arguments.</p>
-<dt>-t module [ module &#8230; ]</p>
-<dd>Run a `make test` on the specified modules.</p>
-<dt>-T</p>
-<dd>Do not test modules. Simply install them.</p>
-<dt>-u</p>
-<dd>Upgrade all installed modules. Blindly doing this can really break things, so keep a backup.</p>
-<dt>-v</p>
-<dd>Print the script version and <font SIZE="-1">CPAN</font>.pm version then exit.</p>
-<dt>-V</p>
-<dd>Print detailed information about the cpan client.</p>
-<dt>-w</p>
-<dd><font SIZE="-1">UNIMPLEMENTED</font> </p>
+<dt>-h</dt>
+<dd>Print a help message and exit. When you specify <tt>&quot;-h&quot;</tt>, it ignores all of the other options and arguments.</dd>
+<dt>-i module [ module &#8230; ]</dt>
+<dd>Install the specified modules. With no other switches, this switch is implied.</dd>
+<dt>-I</dt>
+<dd>Load <tt>&quot;local::lib&quot;</tt> (think like <tt>&quot;-I&quot;</tt> for loading lib paths). Too bad <tt>&quot;-l&quot;</tt> was already taken.</dd>
+<dt>-j Config.pm</dt>
+<dd>Load the file that has the <font SIZE="-1">CPAN</font> configuration data. This should have the same format as the standard <i>CPAN/Config.pm</i> file, which defines <tt>$CPAN::Config</tt> as an anonymous hash.</dd>
+<dt>-J</dt>
+<dd>Dump the configuration in the same format that <font SIZE="-1">CPAN</font>.pm uses. This is useful for checking the configuration as well as using the dump as a starting point for a new, custom configuration.</dd>
+<dt>-l</dt>
+<dd>List all installed modules with their versions</dd>
+<dt>-L author [ author &#8230; ]</dt>
+<dd>List the modules by the specified authors.</dd>
+<dt>-m</dt>
+<dd>Make the specified modules.</dd>
+<dt>-M mirror1,mirror2,&#8230;</dt>
+<dd>A comma-separated list of mirrors to use for just this run. The <tt>&quot;-P&quot;</tt> option can find them for you automatically.</dd>
+<dt>-n</dt>
+<dd>Do a dry run, but don&#8217;t actually install anything. (unimplemented)</dd>
+<dt>-O</dt>
+<dd>Show the out-of-date modules.</dd>
+<dt>-p</dt>
+<dd>Ping the configured mirrors and print a report</dd>
+<dt>-P</dt>
+<dd>Find the best mirrors you could be using and use them for the current session.</dd>
+<dt>-r</dt>
+<dd>Recompiles dynamically loaded modules with CPAN::Shell-&gt;recompile.</dd>
+<dt>-s</dt>
+<dd>Drop in the <font SIZE="-1">CPAN</font>.pm shell. This command does this automatically if you don&#8217;t specify any arguments.</dd>
+<dt>-t module [ module &#8230; ]</dt>
+<dd>Run a `make test` on the specified modules.</dd>
+<dt>-T</dt>
+<dd>Do not test modules. Simply install them.</dd>
+<dt>-u</dt>
+<dd>Upgrade all installed modules. Blindly doing this can really break things, so keep a backup.</dd>
+<dt>-v</dt>
+<dd>Print the script version and <font SIZE="-1">CPAN</font>.pm version then exit.</dd>
+<dt>-V</dt>
+<dd>Print detailed information about the cpan client.</dd>
+<dt>-w</dt>
+<dd><font SIZE="-1">UNIMPLEMENTED</font> </dd>
 <p> Turn on cpan warnings. This checks various things, like directory permissions, and tells you about problems you might have.</p>
-<dt>-x module [ module &#8230; ]</p>
-<dd>Find close matches to the named modules that you think you might have mistyped. This requires the optional installation of Text::Levenshtein or Text::Levenshtein::Damerau.</p>
-<dt>-X</p>
-<dd>Dump all the namespaces to standard output.</dl>
+<dt>-x module [ module &#8230; ]</dt>
+<dd>Find close matches to the named modules that you think you might have mistyped. This requires the optional installation of Text::Levenshtein or Text::Levenshtein::Damerau.</dd>
+<dt>-X</dt>
+<dd>Dump all the namespaces to standard output.</dd></dl>
 <h3>Examples</h3>
 <pre> # print a help message
  cpan -h
@@ -118,16 +118,16 @@ description: "cpan – easily interact with CPAN from the command line"
 <p> Lancaster Concensus: &lt;<a rel="nofollow" href="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md">https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md</a>&gt; </p>
 <p> Oslo Concensus: &lt;<a rel="nofollow" href="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/oslo-consensus.md">https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/oslo-consensus.md</a>&gt;</p>
 <dl>
-<dt><font SIZE="-1">NONINTERACTIVE_TESTING</font></p>
-<dd>Assume no one is paying attention and skips prompts for distributions that do that correctly. <tt><a href="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> sets this to <tt>1</tt> unless it already has a value (even if that value is false).</p>
-<dt><font SIZE="-1">PERL_MM_USE_DEFAULT</font></p>
-<dd>Use the default answer for a prompted questions. <tt><a href="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> sets this to <tt>1</tt> unless it already has a value (even if that value is false).</p>
-<dt><font SIZE="-1">CPAN_OPTS</font></p>
-<dd>As with <tt>&quot;PERL5OPT&quot;</tt>, a string of additional <tt><a href="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> options to add to those you specify on the command line.</p>
-<dt><font SIZE="-1">CPANSCRIPT_LOGLEVEL</font></p>
-<dd>The log level to use, with either the embedded, minimal logger or Log::Log4perl if it is installed. Possible values are the same as the <tt>&quot;Log::Log4perl&quot;</tt> levels: <tt>&quot;TRACE&quot;</tt>, <tt>&quot;DEBUG&quot;</tt>, <tt>&quot;INFO&quot;</tt>, <tt>&quot;WARN&quot;</tt>, <tt>&quot;ERROR&quot;</tt>, and <tt>&quot;FATAL&quot;</tt>. The default is <tt>&quot;INFO&quot;</tt>.</p>
-<dt><font SIZE="-1">GIT_COMMAND</font></p>
-<dd>The path to the <tt>&quot;git&quot;</tt> binary to use for the Git features. The default is <tt>&quot;/usr/local/bin/git&quot;</tt>.</dl>
+<dt><font SIZE="-1">NONINTERACTIVE_TESTING</font></dt>
+<dd>Assume no one is paying attention and skips prompts for distributions that do that correctly. <tt><a href="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> sets this to <tt>1</tt> unless it already has a value (even if that value is false).</dd>
+<dt><font SIZE="-1">PERL_MM_USE_DEFAULT</font></dt>
+<dd>Use the default answer for a prompted questions. <tt><a href="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> sets this to <tt>1</tt> unless it already has a value (even if that value is false).</dd>
+<dt><font SIZE="-1">CPAN_OPTS</font></dt>
+<dd>As with <tt>&quot;PERL5OPT&quot;</tt>, a string of additional <tt><a href="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> options to add to those you specify on the command line.</dd>
+<dt><font SIZE="-1">CPANSCRIPT_LOGLEVEL</font></dt>
+<dd>The log level to use, with either the embedded, minimal logger or Log::Log4perl if it is installed. Possible values are the same as the <tt>&quot;Log::Log4perl&quot;</tt> levels: <tt>&quot;TRACE&quot;</tt>, <tt>&quot;DEBUG&quot;</tt>, <tt>&quot;INFO&quot;</tt>, <tt>&quot;WARN&quot;</tt>, <tt>&quot;ERROR&quot;</tt>, and <tt>&quot;FATAL&quot;</tt>. The default is <tt>&quot;INFO&quot;</tt>.</dd>
+<dt><font SIZE="-1">GIT_COMMAND</font></dt>
+<dd>The path to the <tt>&quot;git&quot;</tt> binary to use for the Git features. The default is <tt>&quot;/usr/local/bin/git&quot;</tt>.</dd></dl>
 <h2>Exit Values</h2>
 <p>The script exits with zero if it thinks that everything worked, or a positive number if it thinks that something failed. Note, however, that in some cases it has to divine a failure by the output of things it does not control. For now, the exit codes are vague: </p>
 <pre> 1 An unknown error

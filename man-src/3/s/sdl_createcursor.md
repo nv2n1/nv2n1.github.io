@@ -15,16 +15,16 @@ description: "SDL_CreateCursor – Creates a new mouse cursor."
 <p>Create a cursor using the specified <code>data</code> and <code>mask</code> (in MSB format). The cursor width must be a multiple of 8 bits. </p>
 <p> The cursor is created in black and white according to the following:</p>
 <dl COMPACT>
-<dt><code>Data / Mask</code></p>
-<dd><code>Resulting pixel on screen</code></p>
-<dt>0 / 1</p>
-<dd>White</p>
-<dt>1 / 1</p>
-<dd>Black</p>
-<dt>0 / 0</p>
-<dd>Transparent</p>
-<dt>1 / 0</p>
-<dd>Inverted color if possible, black if not.</dl>
+<dt><code>Data / Mask</code></dt>
+<dd><code>Resulting pixel on screen</code></dd>
+<dt>0 / 1</dt>
+<dd>White</dd>
+<dt>1 / 1</dt>
+<dd>Black</dd>
+<dt>0 / 0</dt>
+<dd>Transparent</dd>
+<dt>1 / 0</dt>
+<dd>Inverted color if possible, black if not.</dd></dl>
 <p> Cursors created with this function must be freed with <i>SDL_FreeCursor</i>.</p>
 <h2>Example</h2>
 <pre><tt>/* Stolen from the mailing list */

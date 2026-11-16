@@ -10,7 +10,6 @@ description: "umad_send – send umad"
 <p>umad_send &#8211; send umad</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_send(int portid, int agentid, void *umad, int length, int timeout_ms, int retries);</code></pre>
 <h2>Description</h2>
 <p><code>umad_send()</code> sends <i>length</i> bytes from the specified <i>umad</i> buffer from the port specified by <i>portid</i>, and using the agent specified by <i>agentid</i>. </p>
@@ -22,5 +21,5 @@ int umad_send(int portid, int agentid, void *umad, int length, int timeout_ms, i
 &nbsp;<wbr>-EIO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>send operation failed</p>
 <h2>Author</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

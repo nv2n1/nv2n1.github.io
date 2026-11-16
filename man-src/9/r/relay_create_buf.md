@@ -14,7 +14,7 @@ description: "relay_create_buf – allocate and initialize a channel buffer"
 <p><i>chan</i></p>
 <dl>
 <dd>
-<dd>the relay channel</dl>
+</dd><dd>the relay channel</dd></dl>
 <h2>Description</h2>
 <p>Returns channel buffer if successful, <code>NULL</code> otherwise.</p>
 <h2>Copyright</h2>

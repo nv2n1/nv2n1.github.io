@@ -12,22 +12,15 @@ std::system_error::system_error - std::system_error::system_error
 
 <pre><code>system_error(std::error_code ec);
 (1)(since C++ 11)
-
     system_error(std::error_code ec, const std::string &amp;what_arg);
 (2)(since C++ 11)
-
     system_error(std::error_code ec, const char *what_arg);
 (2)(since C++ 11)
-
     system_error(int ev, const std::error_category &amp;ecat);
 (3)(since C++ 11)
-
     system_error(int ev, const std::error_category &amp;ecat, (4)(since C++ 11)
-
                                                               const std::string &amp;what_arg);
-
 system_error(int ev, const std::error_category &amp;ecat, (4)(since C++ 11)
-
                                                           const char *what_arg);</code></pre> 
 Constructs new system error object. 
 1) Constructs with error code ec 
@@ -46,10 +39,8 @@ what_arg - explanatory string
 
 Demonstrates how to create a system_error exception from an errno value. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;system_error&gt;
 int main()
-
 {
     try {
         throw std::system_error(EDOM, std::generic_category(), &quot;hello world&quot;);

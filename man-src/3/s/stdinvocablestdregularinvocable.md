@@ -11,21 +11,13 @@ std::Invocable,std::RegularInvocable - std::Invocable,std::RegularInvocable
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template&lt; class F, class... Args &gt;
-
 concept Invocable =
-
 requires(F&amp;&amp; f, Args&amp;&amp;... args) {                               (since C++20)
-
     std::invoke(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);
-
     /* not required to be equality preserving */
-
 };
-
 template&lt; class F, class... Args &gt;                              (since C++20)
-
 concept RegularInvocable = std::Invocable&lt;F, Args...&gt;;</code></pre> 
 The Invocable concept specifies that a callable type F can be called with a set of argument types Args... using the function template std::invoke. 
 The RegularInvocable concept adds to the Invocable concept by requiring the invoke expression to be equality preserving and not modify either the function object or the arguments. 

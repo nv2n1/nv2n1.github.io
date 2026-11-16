@@ -13,10 +13,10 @@ usage - Usage To use QuantLib classes in your own code just add <pre><code>#incl
 
 A few suggestions for Visual C++ users wanting to use QuantLib into their own application:
 <dl><dt>1.
-<dd>you won't have to explicitly link your application to the QuantLib library. This is done automatically by compiler directives embedded in the sources.
-<dt>2.
-<dd>Your project must be compiled with the same options that were used in compiling the QuantLib library you're linking with, namely,
-<dt> *
-<dd>Property Pages -&gt; C/C++ -&gt; Code Generation -&gt; Runtime Library: select the appropriate run-time library.
-<dt> *
-<dd>Property Pages -&gt; C/C++ -&gt; Code Generation -&gt; Basic Runtime Checks: select 'Both (/RTC1, equiv. to /RTCsu)'.</dl>
+</dt><dd>you won't have to explicitly link your application to the QuantLib library. This is done automatically by compiler directives embedded in the sources.
+</dd><dt>2.
+</dt><dd>Your project must be compiled with the same options that were used in compiling the QuantLib library you're linking with, namely,
+</dd><dt> *
+</dt><dd>Property Pages -&gt; C/C++ -&gt; Code Generation -&gt; Runtime Library: select the appropriate run-time library.
+</dd><dt> *
+</dt><dd>Property Pages -&gt; C/C++ -&gt; Code Generation -&gt; Basic Runtime Checks: select 'Both (/RTC1, equiv. to /RTCsu)'.</dd></dl>

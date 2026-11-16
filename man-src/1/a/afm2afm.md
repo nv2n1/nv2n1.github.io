@@ -11,8 +11,8 @@ description: "afm2afm – reencode an afm file"
 <p> afm2afm &#8211; reencode an afm file </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>afm2afm</code></p>
-<dd> [<code>-help</code>] [<code>-version</code>] [<code>-encoding</code>=<i>&lt;encodingfile&gt;</i>] [<code>-kpx</code>=<i>&lt;kpxfile&gt;</i>] [<code>-output</code>=<i>&lt;outputfile&gt;</i>] <code>&lt;afmfile&gt;</code></dl>
+<dt><code>afm2afm</code></dt>
+<dd> [<code>-help</code>] [<code>-version</code>] [<code>-encoding</code>=<i>&lt;encodingfile&gt;</i>] [<code>-kpx</code>=<i>&lt;kpxfile&gt;</i>] [<code>-output</code>=<i>&lt;outputfile&gt;</i>] <code>&lt;afmfile&gt;</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>afm2afm</code> re-encodes an <i>afm</i> file. </p>
 <p> Metrics (including kerning data) for characters not present in the chosen encoding are excluded from the output, which resuls in (potentially much) smaller files. </p>
@@ -20,23 +20,23 @@ description: "afm2afm – reencode an afm file"
 <p> The program also generates an entry for a <i>dvips</i>-style map file, but only if the <i>afm</i> file has been re-encoded and the output was written to file (i.e., if both the <i>-encoding</i> and <i>-output</i> options were specified).</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print a short description of the syntax</p>
-<dt><code>-version</code></p>
-<dd> Print version number and exit</p>
-<dt><code>-encoding</code>=<i>&lt;encodingfile&gt;</i></p>
-<dd> Re-encode to the enconding in <i>&lt;encodingfile&gt;</i></p>
-<dt><code>-kpx</code>=<i>&lt;kpxfile&gt;</i></p>
-<dd> Read additional kerning pairs from <i>&lt;kpxfile&gt;</i> and add these to the output. This option cannot be used to override values from the input <i>afm</i> file, since <code>afm2afm</code> will write both old and new values to the output! </p>
+<dt><code>-help</code></dt>
+<dd> Print a short description of the syntax</dd>
+<dt><code>-version</code></dt>
+<dd> Print version number and exit</dd>
+<dt><code>-encoding</code>=<i>&lt;encodingfile&gt;</i></dt>
+<dd> Re-encode to the enconding in <i>&lt;encodingfile&gt;</i></dd>
+<dt><code>-kpx</code>=<i>&lt;kpxfile&gt;</i></dt>
+<dd> Read additional kerning pairs from <i>&lt;kpxfile&gt;</i> and add these to the output. This option cannot be used to override values from the input <i>afm</i> file, since <code>afm2afm</code> will write both old and new values to the output! </dd>
 <p> The <i>&lt;kpxfile&gt;</i> should contain kerning data in standard <i>afm</i> format, i.e. for each kerning pair there should be a line </p>
 <pre>
     KPX &lt;left_glyph&gt; &lt;right_glyph&gt; &lt;amount&gt;
 </pre>
 <p> All other lines in the <i>&lt;kpxfile&gt;</i> are ignored.</p>
-<dt><code>-output</code>=<i>&lt;outputfile&gt;</i></p>
-<dd> Write the result to <i>&lt;outputfile&gt;</i> instead of <tt>&quot;stdout&quot;</tt>.</p>
-<dt><code>&lt;afmfile&gt;</code></p>
-<dd> The <i>afm</i> file to be re-encoded.</dl>
+<dt><code>-output</code>=<i>&lt;outputfile&gt;</i></dt>
+<dd> Write the result to <i>&lt;outputfile&gt;</i> instead of <tt>&quot;stdout&quot;</tt>.</dd>
+<dt><code>&lt;afmfile&gt;</code></dt>
+<dd> The <i>afm</i> file to be re-encoded.</dd></dl>
 <p> You may use either one or two dashes before options, and option names may be shortened to a unique prefix.</p>
 <h2>AUTHOR</h2>
 <p> Marc Penninga &lt;marcpenninga [at] gmail.com&gt;</p>
@@ -51,7 +51,7 @@ description: "afm2afm – reencode an afm file"
 <h2>RECENT CHANGES</h2>
 <p> (See the source code for the rest of the story.)</p>
 <dl>
-<dt><i>2019-05-20</i></p>
-<dd> Added the <i>-version</i> option. </p>
+<dt><i>2019-05-20</i></dt>
+<dd> Added the <i>-version</i> option. </dd>
 </dl>
 <h2>Index</h2>

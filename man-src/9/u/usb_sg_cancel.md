@@ -14,7 +14,7 @@ description: "usb_sg_cancel – stop scatter/gather i/o issued by usb_sg_wait"
 <p><i>io</i></p>
 <dl>
 <dd>
-<dd>request block, initialized with <code>usb_sg_init</code></dl>
+</dd><dd>request block, initialized with <code>usb_sg_init</code></dd></dl>
 <h2>Description</h2>
 <p>This stops a request after it has been started by <code>usb_sg_wait</code>. It can also prevents one initialized by <code>usb_sg_init</code> from starting, so that call just frees resources allocated to the request.</p>
 <h2>Copyright</h2>

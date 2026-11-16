@@ -12,7 +12,6 @@ std::experimental::atomic_weak_ptr&lt;T&gt;::operator= - std::experimental::atom
 
 <pre><code>void operator=(weak_ptr&lt;T&gt; desired) noexcept;
 (1)
-
     void
     operator=(const atomic_weak_ptr &amp;) = delete;
 (2)</code></pre> 

@@ -21,117 +21,117 @@ description: "javaws – a Java Web Start client"
  The JNLP file should only be specified once, whether as a main argument, after -jnlp or through an html file. </p>
 <p> <code>Control options:</code> </p>
 <dl>
-<dt>-about</p>
-<dd> Shows a sample application.(No argument expected)</p>
-<dt>-help</p>
-<dd> Prints out information about supported command and basic usage.(No argument expected)</p>
-<dt>-license</p>
-<dd> Display the GPL license and exit.(No argument expected)</p>
-<dt>-viewer</p>
-<dd> Shows the trusted certificate viewer.(No argument expected)</p>
-<dt>-Xclearcache</p>
-<dd> Clean the JNLP application cache.(No argument expected) </p>
+<dt>-about</dt>
+<dd> Shows a sample application.(No argument expected)</dd>
+<dt>-help</dt>
+<dd> Prints out information about supported command and basic usage.(No argument expected)</dd>
+<dt>-license</dt>
+<dd> Display the GPL license and exit.(No argument expected)</dd>
+<dt>-viewer</dt>
+<dd> Shows the trusted certificate viewer.(No argument expected)</dd>
+<dt>-Xclearcache</dt>
+<dd> Clean the JNLP application cache.(No argument expected) </dd>
 </dl>
 <p> <code>Run options:</code> </p>
 <dl>
-<dt>-allowredirect</p>
-<dd> Follows HTTP redirects.(No argument expected)</p>
-<dt>-arg arg</p>
-<dd> Adds an application argument before launching.(Expected one or more arguments)</p>
-<dt>-headless</p>
-<dd> Disables download window, other UIs.(No argument expected)</p>
-<dt>-html</p>
-<dd> Location of HTML file to launch (url or file). You can use parameter ALL or numbers (like 1 2 5) to select applets on page. However experimental, this switch should keep you still in safety.(Expected one or more arguments)</p>
-<dt>-jnlp</p>
-<dd> Location of JNLP file to launch (url or file).(Exactly one argument expected)</p>
-<dt>-nosecurity</p>
-<dd> Disables the secure runtime environment.(No argument expected)</p>
-<dt>-noupdate</p>
-<dd> Disables checking for updates.(No argument expected)</p>
-<dt>-param name=value</p>
-<dd> Adds an applet parameter before launching.(Expected one or more arguments)</p>
-<dt>-property name=value</p>
-<dd> Sets a system property before launching.(Expected one or more arguments)</p>
-<dt>-strict</p>
-<dd> Enables strict checking of JNLP file format.(No argument expected)</p>
-<dt>-update seconds</p>
-<dd> Check for updates.(Exactly one argument expected)</p>
-<dt>-verbose</p>
-<dd> Enable verbose output.(No argument expected)</p>
-<dt>-version</p>
-<dd> Print the IcedTea-Web version and exit.(No argument expected)</p>
-<dt>-Xignoreheaders</p>
-<dd> Skip jar header verification.(No argument expected)</p>
-<dt>-xml</p>
-<dd> Uses a strict XML parser to parse the JNLP file.(No argument expected)</p>
-<dt>-Xnofork</p>
-<dd> Do not create another JVM.(No argument expected)</p>
-<dt>-Xoffline</p>
-<dd> Prevent ITW network connection. Only cache will be used. Application can still connect.(No argument expected)</p>
-<dt>-Xtrustnone</p>
-<dd> Instead of asking user, will foretold all answers as no.(No argument expected) </p>
+<dt>-allowredirect</dt>
+<dd> Follows HTTP redirects.(No argument expected)</dd>
+<dt>-arg arg</dt>
+<dd> Adds an application argument before launching.(Expected one or more arguments)</dd>
+<dt>-headless</dt>
+<dd> Disables download window, other UIs.(No argument expected)</dd>
+<dt>-html</dt>
+<dd> Location of HTML file to launch (url or file). You can use parameter ALL or numbers (like 1 2 5) to select applets on page. However experimental, this switch should keep you still in safety.(Expected one or more arguments)</dd>
+<dt>-jnlp</dt>
+<dd> Location of JNLP file to launch (url or file).(Exactly one argument expected)</dd>
+<dt>-nosecurity</dt>
+<dd> Disables the secure runtime environment.(No argument expected)</dd>
+<dt>-noupdate</dt>
+<dd> Disables checking for updates.(No argument expected)</dd>
+<dt>-param name=value</dt>
+<dd> Adds an applet parameter before launching.(Expected one or more arguments)</dd>
+<dt>-property name=value</dt>
+<dd> Sets a system property before launching.(Expected one or more arguments)</dd>
+<dt>-strict</dt>
+<dd> Enables strict checking of JNLP file format.(No argument expected)</dd>
+<dt>-update seconds</dt>
+<dd> Check for updates.(Exactly one argument expected)</dd>
+<dt>-verbose</dt>
+<dd> Enable verbose output.(No argument expected)</dd>
+<dt>-version</dt>
+<dd> Print the IcedTea-Web version and exit.(No argument expected)</dd>
+<dt>-Xignoreheaders</dt>
+<dd> Skip jar header verification.(No argument expected)</dd>
+<dt>-xml</dt>
+<dd> Uses a strict XML parser to parse the JNLP file.(No argument expected)</dd>
+<dt>-Xnofork</dt>
+<dd> Do not create another JVM.(No argument expected)</dd>
+<dt>-Xoffline</dt>
+<dd> Prevent ITW network connection. Only cache will be used. Application can still connect.(No argument expected)</dd>
+<dt>-Xtrustnone</dt>
+<dd> Instead of asking user, will foretold all answers as no.(No argument expected) </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>javaws -about</p>
-<dd> Shows basic help and about informations.</p>
-<dt>javaws -about -headless</p>
-<dd> Shows basic help and about informations in terminal only.</p>
-<dt>javaws -Xnofork -Xignoreheaders -allowredirect -Xoffline <a rel="nofollow" href="http://mypage.web/dangerous.jnlp">http://mypage.web/dangerous.jnlp</a></p>
-<dd> Will start dangerous.jnlp application, originally from mypage.web, without downloading it, without headers check and in forced single VM. </p>
+<dt>javaws -about</dt>
+<dd> Shows basic help and about informations.</dd>
+<dt>javaws -about -headless</dt>
+<dd> Shows basic help and about informations in terminal only.</dd>
+<dt>javaws -Xnofork -Xignoreheaders -allowredirect -Xoffline <a rel="nofollow" href="http://mypage.web/dangerous.jnlp">http://mypage.web/dangerous.jnlp</a></dt>
+<dd> Will start dangerous.jnlp application, originally from mypage.web, without downloading it, without headers check and in forced single VM. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>$JAVA_HOME/lib/deployment.config</p>
-<dd> java-global deployment properties file. May be affected by deployment.jre.dir.</p>
-<dt>$JAVA_HOME/lib/security/cacerts</p>
-<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.cacerts</code> </p>
-<dt>$JAVA_HOME/lib/security/jssecacerts</p>
-<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.jssecacerts</code> </p>
-<dt>$JAVA_HOME/lib/security/trusted.certs</p>
-<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.trusted.certs</code> </p>
-<dt>$JAVA_HOME/lib/security/trusted.clientcerts</p>
-<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.trusted.clientautcerts</code> </p>
-<dt>$JAVA_HOME/lib/security/trusted.jssecerts</p>
-<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.trusted.jssecerts</code> </p>
-<dt>$TMP/$USER/netx/locks</p>
-<dd> Location of netx locks. Controlled by <code>deployment.user.locksdir</code> </p>
-<dt>$TMP/$USER/netx/locks/netx_running</p>
-<dd> Location of netx main lock. Controlled by <code>deployment.user.runningfile</code> </p>
-<dt>$XDG_CACHE_HOME/icedtea-web/cache</p>
-<dd> Contains cached runtime entries. Controlled by <code>deployment.user.cachedir</code> </p>
-<dt>$XDG_CACHE_HOME/icedtea-web/cache/recently_used</p>
-<dd> Additional information about items in cache</p>
-<dt>$XDG_CACHE_HOME/icedtea-web/pcache</p>
-<dd> Contains saved application data. Controlled by <code>deployment.user.pcachedir</code> </p>
-<dt>$XDG_CACHE_HOME/icedtea-web/tmp</p>
-<dd> Contains temporary runtime files. Controlled by <code>deployment.user.tmp</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/.appletTrustSettings</p>
-<dd> File responsible for various actions on applets and apps based on their codebase based on users actions.</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/deployment.properties</p>
-<dd> Users main deployment properties file.</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/icons</p>
-<dd> Location where icons of javaws applications desktop/menu launchers icons are stored</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/log</p>
-<dd> contains file-log files (if enabled), itw-cplugin-date_time.log for native part of plugin, itw-javantx-date_time.log for everything else. Controlled by <code>deployment.user.logdir</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/security/java.policy</p>
-<dd> Contains granted permissions for selected unsigned apps. Controlled by <code>deployment.user.security.policy</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.cacerts</p>
-<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.cacerts</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.certs</p>
-<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.certs</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.clientcerts</p>
-<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.clientauthcerts</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecacerts</p>
-<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.jssecacerts</code> </p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecerts</p>
-<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.jssecerts</code> </p>
-<dt>$XDG_DATA_HOME/applications/javaws</p>
-<dd> Subdirectory in users menus space, for placing custom menu shortcuts.</p>
-<dt>/etc/.java/deployment/.appletTrustSettings</p>
-<dd> File responsible for various actions on applets and apps based on their codebase based on admins actions.</p>
-<dt>/etc/.java/deployment/deployment.config</p>
-<dd> Global deployment config file. </p>
+<dt>$JAVA_HOME/lib/deployment.config</dt>
+<dd> java-global deployment properties file. May be affected by deployment.jre.dir.</dd>
+<dt>$JAVA_HOME/lib/security/cacerts</dt>
+<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.cacerts</code> </dd>
+<dt>$JAVA_HOME/lib/security/jssecacerts</dt>
+<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.jssecacerts</code> </dd>
+<dt>$JAVA_HOME/lib/security/trusted.certs</dt>
+<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.trusted.certs</code> </dd>
+<dt>$JAVA_HOME/lib/security/trusted.clientcerts</dt>
+<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.trusted.clientautcerts</code> </dd>
+<dt>$JAVA_HOME/lib/security/trusted.jssecerts</dt>
+<dd> Contains various system java-wide stored certificates. Controlled by <code>deployment.system.security.trusted.jssecerts</code> </dd>
+<dt>$TMP/$USER/netx/locks</dt>
+<dd> Location of netx locks. Controlled by <code>deployment.user.locksdir</code> </dd>
+<dt>$TMP/$USER/netx/locks/netx_running</dt>
+<dd> Location of netx main lock. Controlled by <code>deployment.user.runningfile</code> </dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/cache</dt>
+<dd> Contains cached runtime entries. Controlled by <code>deployment.user.cachedir</code> </dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/cache/recently_used</dt>
+<dd> Additional information about items in cache</dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/pcache</dt>
+<dd> Contains saved application data. Controlled by <code>deployment.user.pcachedir</code> </dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/tmp</dt>
+<dd> Contains temporary runtime files. Controlled by <code>deployment.user.tmp</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/.appletTrustSettings</dt>
+<dd> File responsible for various actions on applets and apps based on their codebase based on users actions.</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/deployment.properties</dt>
+<dd> Users main deployment properties file.</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/icons</dt>
+<dd> Location where icons of javaws applications desktop/menu launchers icons are stored</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/log</dt>
+<dd> contains file-log files (if enabled), itw-cplugin-date_time.log for native part of plugin, itw-javantx-date_time.log for everything else. Controlled by <code>deployment.user.logdir</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/security/java.policy</dt>
+<dd> Contains granted permissions for selected unsigned apps. Controlled by <code>deployment.user.security.policy</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.cacerts</dt>
+<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.cacerts</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.certs</dt>
+<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.certs</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.clientcerts</dt>
+<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.clientauthcerts</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecacerts</dt>
+<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.jssecacerts</code> </dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/security/trusted.jssecerts</dt>
+<dd> Contains various users stored certificates. Controlled by <code>deployment.user.security.trusted.jssecerts</code> </dd>
+<dt>$XDG_DATA_HOME/applications/javaws</dt>
+<dd> Subdirectory in users menus space, for placing custom menu shortcuts.</dd>
+<dt>/etc/.java/deployment/.appletTrustSettings</dt>
+<dd> File responsible for various actions on applets and apps based on their codebase based on admins actions.</dd>
+<dt>/etc/.java/deployment/deployment.config</dt>
+<dd> Global deployment config file. </dd>
 </dl>
 <p> Where $XDG_CONFIG_DIR, $XDG_CACHE_DIR and $XDG_RUNTIME_DIR are set as ~/.config, ~/.cache and /tmp or /var/tmp if not set.</p>
 <h2>BUGS</h2>

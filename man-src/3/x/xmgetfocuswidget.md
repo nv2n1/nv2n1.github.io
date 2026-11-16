@@ -15,8 +15,8 @@ description: "XmGetFocusWidget — Returns the ID of the widget that has keyboar
 <h2>Description</h2>
 <p><code>XmGetFocusWidget</code> examines the hierarchy that contains the specified widget and returns the ID of the widget that has keyboard focus. The function extracts the widget ID from the associated Shell widget; therefore, the specified widget can be located anywhere in the hierarchy.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies a widget ID within a given hierarchy</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies a widget ID within a given hierarchy</dd></dl>
 <h2>Return</h2>
 <p>Returns the ID of the widget with keyboard focus. If no child of the Shell has focus, the function returns NULL.</p>
 <h2>Related</h2>

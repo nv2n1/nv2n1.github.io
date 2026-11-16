@@ -15,16 +15,16 @@ description: "echoping_dns – echoping plugin which queries a DNS server"
 <p> dns is an echoping plugin, fo testing the performances of DNS (RFC 1034 and 1035) servers.</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>request </code></p>
-<dd> A domain name</dl>
+<dt><code>request </code></dt>
+<dd> A domain name</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t, &#8211;type</code></p>
-<dd> The type of data requested (NS, A, SOA, etc)</p>
-<dt><code>&#8211;no-recurse</code></p>
-<dd> Do not request recursive queries</p>
-<dt><code>&#8211;tcp</code></p>
-<dd> Use only TCP (&quot;virtual circuit&quot;)</dl>
+<dt><code>-t, &#8211;type</code></dt>
+<dd> The type of data requested (NS, A, SOA, etc)</dd>
+<dt><code>&#8211;no-recurse</code></dt>
+<dd> Do not request recursive queries</dd>
+<dt><code>&#8211;tcp</code></dt>
+<dd> Use only TCP (&quot;virtual circuit&quot;)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-echoping/">echoping</a></code>(1),</p>
 <h2>AUTHOR</h2>

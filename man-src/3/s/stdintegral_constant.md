@@ -10,10 +10,8 @@ description: "std::integral_constant – std::integral_constant"
 <p>std::integral_constant &#8211; std::integral_constant</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T, T v&gt;
     (since C++ 11)
-
         struct integral_constant;</code></pre>
 <p>std::integral_constant wraps a static constant of specified type. It is the base class for the C++ type traits.<br />
 Helper templates<br />
@@ -57,17 +55,13 @@ operator value_type <i>(public member function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     typedef std::integral_constant&lt;int, 2&gt; two_t;
     typedef std::integral_constant&lt;int, 4&gt; four_t;
     //  static_assert(std::is_same&lt;two_t, four_t&gt;::value,
-
     //                &quot;two_t and four_t are not equal!&quot;);
-
     //  error: static assertion failed: &quot;two_t and four_t are not equal!&quot;
     static_assert(two_t::value * 2 == four_t::value,
                   &quot;2*2 != 4&quot;);
@@ -78,9 +72,7 @@ int main()
     typedef std::integral_constant&lt;my_e, my_e::e1&gt; my_e_e1;
     typedef std::integral_constant&lt;my_e, my_e::e2&gt; my_e_e2;
     //  static_assert(my_e_e1::value == my_e::e2,
-
     //               &quot;my_e_e1::value != my_e::e2&quot;);
-
     //  error: static assertion failed: &quot;my_e_e1::value != my_e::e2&quot;
     static_assert(std::is_same&lt;my_e_e2, my_e_e2&gt;::value,
                   &quot;my_e_e2 != my_e_e2&quot;);

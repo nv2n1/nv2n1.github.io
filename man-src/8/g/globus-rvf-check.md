@@ -15,10 +15,10 @@ description: "globus-rvf-check – Edit a GRAM5 RSL validation file"
 <p> The full set of command-line options to <code>globus-rvf-check</code> consists of: consists of: </p>
 <p> <i>-h</i><code>,</code><i>-help</i><code>,</code><i>&#8211;help</i></p>
 <dl>
-<dd>Print command-line option summary and exit</dl>
+<dd>Print command-line option summary and exit</dd></dl>
 <p> <i>-d</i></p>
 <dl>
-<dd>Dump the RVF contents to stdout. In the output, Each file which is parsed will be prefixed by an RVF comment which contains the input filename. If not specified, <code>globus-rvf-check</code> just prints a diagnostic message to standard output indicating whether the file could be parsed. just prints a diagnostic message to standard output indicating whether the file could be parsed.</dl>
+<dd>Dump the RVF contents to stdout. In the output, Each file which is parsed will be prefixed by an RVF comment which contains the input filename. If not specified, <code>globus-rvf-check</code> just prints a diagnostic message to standard output indicating whether the file could be parsed. just prints a diagnostic message to standard output indicating whether the file could be parsed.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-globus-rvf-edit/">globus-rvf-edit</a>(8)</p>
 <h2>Author</h2>

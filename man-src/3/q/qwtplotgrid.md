@@ -57,58 +57,58 @@ description: "QwtPlotGrid –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> X axis map<br />
  <i>yMap</i> Y axis<br />
- <i>canvasRect</i> Contents rectangle of the plot canvas</dl>
+ <i>canvasRect</i> Contents rectangle of the plot canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotGrid::enableX (boolon)</h3>
 <p>Enable or disable vertical grid lines. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Enable (true) or disable</dl>
+<dd><i>on</i> Enable (true) or disable</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>Minor grid lines can be enabled or disabled with <code>enableXMin()</code></dl>
+<dd>Minor grid lines can be enabled or disabled with <code>enableXMin()</code></dd></dl>
 <h3>void QwtPlotGrid::enableXMin (boolon)</h3>
 <p>Enable or disable minor vertical grid lines. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Enable (true) or disable</dl>
+<dd><i>on</i> Enable (true) or disable</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>enableX()</code></dl>
+<dd><code>enableX()</code></dd></dl>
 <h3>void QwtPlotGrid::enableY (boolon)</h3>
 <p>Enable or disable horizontal grid lines. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Enable (true) or disable</dl>
+<dd><i>on</i> Enable (true) or disable</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>Minor grid lines can be enabled or disabled with <code>enableYMin()</code></dl>
+<dd>Minor grid lines can be enabled or disabled with <code>enableYMin()</code></dd></dl>
 <h3>void QwtPlotGrid::enableYMin (boolon)</h3>
 <p>Enable or disable minor horizontal grid lines. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Enable (true) or disable</dl>
+<dd><i>on</i> Enable (true) or disable</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>enableY()</code></dl>
+<dd><code>enableY()</code></dd></dl>
 <h3>const QPen &amp; QwtPlotGrid::majorPen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the pen for the major grid lines</dl>
+<dd>the pen for the major grid lines</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMajorPen()</code>, <code>setMinorPen()</code>, <code>setPen()</code></dl>
+<dd><code>setMajorPen()</code>, <code>setMinorPen()</code>, <code>setPen()</code></dd></dl>
 <h3>const QPen &amp; QwtPlotGrid::minorPen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the pen for the minor grid lines</dl>
+<dd>the pen for the minor grid lines</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMinorPen()</code>, <code>setMajorPen()</code>, <code>setPen()</code></dl>
+<dd><code>setMinorPen()</code>, <code>setMajorPen()</code>, <code>setPen()</code></dd></dl>
 <h3>int QwtPlotGrid::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotGrid</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotGrid</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotGrid::setMajorPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen for both major grid lines </p>
@@ -117,18 +117,18 @@ description: "QwtPlotGrid –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>pen(), brush()</dl>
+<dd>pen(), brush()</dd></dl>
 <h3>void QwtPlotGrid::setMajorPen (const QPen &amp;pen)</h3>
 <p>Assign a pen for the major grid lines </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Pen</dl>
+<dd><i>pen</i> Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>majorPen()</code>, <code>setMinorPen()</code>, <code>setPen()</code></dl>
+<dd><code>majorPen()</code>, <code>setMinorPen()</code>, <code>setPen()</code></dd></dl>
 <h3>void QwtPlotGrid::setMinorPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen for the minor grid lines </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -136,18 +136,18 @@ description: "QwtPlotGrid –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>pen(), brush()</dl>
+<dd>pen(), brush()</dd></dl>
 <h3>void QwtPlotGrid::setMinorPen (const QPen &amp;pen)</h3>
 <p>Assign a pen for the minor grid lines </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Pen</dl>
+<dd><i>pen</i> Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minorPen()</code>, <code>setMajorPen()</code>, <code>setPen()</code></dl>
+<dd><code>minorPen()</code>, <code>setMajorPen()</code>, <code>setPen()</code></dd></dl>
 <h3>void QwtPlotGrid::setPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen for both major and minor grid lines </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -155,73 +155,73 @@ description: "QwtPlotGrid –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>pen(), brush()</dl>
+<dd>pen(), brush()</dd></dl>
 <h3>void QwtPlotGrid::setPen (const QPen &amp;pen)</h3>
 <p>Assign a pen for both major and minor grid lines </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Pen</dl>
+<dd><i>pen</i> Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMajorPen()</code>, <code>setMinorPen()</code></dl>
+<dd><code>setMajorPen()</code>, <code>setMinorPen()</code></dd></dl>
 <h3>void QwtPlotGrid::setXDiv (const <code>QwtScaleDiv</code> &amp;scaleDiv)</h3>
 <p>Assign an x axis scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDiv</i> Scale division</dl>
+<dd><i>scaleDiv</i> Scale division</dd></dl>
 <h3>void QwtPlotGrid::setYDiv (const <code>QwtScaleDiv</code> &amp;scaleDiv)</h3>
 <p>Assign a y axis division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDiv</i> Scale division</dl>
+<dd><i>scaleDiv</i> Scale division</dd></dl>
 <h3>void QwtPlotGrid::updateScaleDiv (const <code>QwtScaleDiv</code> &amp;xScaleDiv, const <code>QwtScaleDiv</code> &amp;yScaleDiv) [virtual]</h3>
 <p>Update the grid to changes of the axes scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xScaleDiv</i> Scale division of the x-axis<br />
- <i>yScaleDiv</i> Scale division of the y-axis</dl>
+ <i>yScaleDiv</i> Scale division of the y-axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::updateAxes()</code></dl>
+<dd><code>QwtPlot::updateAxes()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>bool QwtPlotGrid::xEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if vertical grid lines are enabled</dl>
+<dd>true if vertical grid lines are enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>enableX()</code></dl>
+<dd><code>enableX()</code></dd></dl>
 <h3>bool QwtPlotGrid::xMinEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if minor vertical grid lines are enabled</dl>
+<dd>true if minor vertical grid lines are enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>enableXMin()</code></dl>
+<dd><code>enableXMin()</code></dd></dl>
 <h3>const <code>QwtScaleDiv</code> &amp; QwtPlotGrid::xScaleDiv () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale division of the x axis</dl>
+<dd>the scale division of the x axis</dd></dl>
 <h3>bool QwtPlotGrid::yEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if horizontal grid lines are enabled</dl>
+<dd>true if horizontal grid lines are enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>enableY()</code></dl>
+<dd><code>enableY()</code></dd></dl>
 <h3>bool QwtPlotGrid::yMinEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if minor horizontal grid lines are enabled</dl>
+<dd>true if minor horizontal grid lines are enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>enableYMin()</code></dl>
+<dd><code>enableYMin()</code></dd></dl>
 <h3>const <code>QwtScaleDiv</code> &amp; QwtPlotGrid::yScaleDiv () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale division of the y axis</dl>
+<dd>the scale division of the y axis</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

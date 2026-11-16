@@ -14,15 +14,15 @@ description: "ixpdimm-monitor – Daemon to monitor Intel(R) DIMM management eve
 <p>Daemon to monitor Intel(R) DIMM management events. These events can be viewed using ixpdimm-cli. </p>
 <h2>Option</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Starts <code>ixpdimm-monitor</code> as a background daemon. </p>
+<dt><code>-d</code></dt>
+<dd>Starts <code>ixpdimm-monitor</code> as a background daemon. </dd>
 </dl>
 <h2>Exit Codes</h2>
 <dl>
-<dt><code>0</code></p>
-<dd>The operation succeeded.</p>
-<dt><code>1</code></p>
-<dd>An error occurred. </p>
+<dt><code>0</code></dt>
+<dd>The operation succeeded.</dd>
+<dt><code>1</code></dt>
+<dd>An error occurred. </dd>
 </dl>
 <h2>Files</h2>
 <p>/var/lib/ixpdimm_sw/apss.dat<br />

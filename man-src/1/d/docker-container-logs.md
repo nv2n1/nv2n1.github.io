@@ -20,14 +20,14 @@ description: "docker-container-logs – Fetch the logs of a container"
 <p> In order to retrieve logs before a specific point in time, run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker run-- name test - d busybox sh - c "while true; do $(echo date); sleep 1; done" $ date Tue 14 Nov 2017 16 : 40 : 00 CET $ docker logs - f-- until = 2s test
     Tue 14 Nov 2017 16 : 40 : 00 CET
         Tue 14 Nov 2017 16 : 40 : 01 CET
             Tue 14 Nov 2017 16 : 40 : 02 CET
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;details</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show extra details provided to logs</p>
 <p> <code>-f</code>, <code>&#8211;follow</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Follow log output</p>

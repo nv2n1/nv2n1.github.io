@@ -14,17 +14,17 @@ description: "proc_print_scsidevice – return data about this host"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>A scsi device</dl>
+</dd><dd>A scsi device</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>struct seq_file to output to.</dl>
+<dd>struct seq_file to output to.</dd></dl>
 <h2>Description</h2>
 <p>prints Host, Channel, Id, Lun, Vendor, Model, Rev, Type, and revision.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

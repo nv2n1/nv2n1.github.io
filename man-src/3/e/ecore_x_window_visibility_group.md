@@ -23,20 +23,20 @@ description: "X Window Visibility Functions – Functions to change the visibili
 <p> Synonymous to &#8216;unmapping&#8217; a window in X Window System terminology. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The window to hide.</dl>
+<dd><i>window</i> The window to hide.</dd></dl>
 <h3>EAPI void ecore_x_window_show (Ecore_X_Window window)</h3>
 <p>Shows a window. </p>
 <p> Synonymous to &#8216;mapping&#8217; a window in X Window System terminology. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The window to show.</dl>
+<dd><i>window</i> The window to show.</dd></dl>
 <h3>EAPI int ecore_x_window_visible_get (Ecore_X_Window win)</h3>
 <p>Finds out whether the given window is currently visible. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The given window.</dl>
+<dd><i>win</i> The given window.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the window is visible, otherwise 0.</dl>
+<dd>1 if the window is visible, otherwise 0.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

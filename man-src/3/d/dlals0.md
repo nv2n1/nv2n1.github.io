@@ -19,7 +19,7 @@ description: "dlals0.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DLALS0 applies back the multiplying factors of either the left or the
                                                                           right singular vector matrix of a diagonal matrix appended by a row
@@ -43,11 +43,11 @@ the
  (3R) The inverse transformation of (2L).
  (4R) The inverse transformation of (1L).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ICOMPQ</i> </p>
+</dt><dd> <i>ICOMPQ</i> </dd>
 <pre>
           ICOMPQ is INTEGER
          Specifies whether singular vectors are to be computed in
@@ -196,21 +196,22 @@ the
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </p>
+</dt><dd> Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 267 of file dlals0.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

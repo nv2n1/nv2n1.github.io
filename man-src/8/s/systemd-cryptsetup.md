@@ -19,7 +19,8 @@ description: "systemd-cryptsetup [at] .service, systemd-cryptsetup – Full disk
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-cryptsetup-generator/">systemd-cryptsetup-generator</a></code>(8), <code><a href="/docs/linux/man/5-crypttab/">crypttab</a></code>(5), <code><a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>password agent logic</p>
+<dt> 1.</dt>
+<dd>password agent logic</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents">http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents</a></dl>
+<dd><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents">http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents</a></dd></dl>
+</dl>

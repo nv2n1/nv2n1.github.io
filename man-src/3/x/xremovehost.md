@@ -10,30 +10,30 @@ description: "XAddHost, XAddHosts, XListHosts, XRemoveHost, XRemoveHosts, XSetAc
 <p>XAddHost, XAddHosts, XListHosts, XRemoveHost, XRemoveHosts, XSetAccessControl, XEnableAccessControl, XDisableAccessControl, XHostAddress, XServerInterpretedAddress &#8211; control host access and host control structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XAddHost(Display *<i>display</i>, XHostAddress *<i>host</i>);</p>
-<dd>int XAddHosts(Display *<i>display</i>, XHostAddress *<i>hosts</i>, int <i>num_hosts</i>);</p>
-<dd>XHostAddress *XListHosts(Display *<i>display</i>, int *<i>nhosts_return</i>, Bool <i>state_return</i>);</p>
-<dd>int XRemoveHost(Display *<i>display</i>, XHostAddress *<i>host</i>);</p>
-<dd>int XRemoveHosts(Display *<i>display</i>, XHostAddress *<i>hosts</i>, int <i>num_hosts</i>);</p>
-<dd>int XSetAccessControl(Display *<i>display</i>, int <i>mode</i>);</p>
-<dd>int XEnableAccessControl(Display *<i>display</i>);</p>
-<dd>int XDisableAccessControl(Display *<i>display</i>);</dl>
+<dd>int XAddHost(Display *<i>display</i>, XHostAddress *<i>host</i>);</dd>
+<dd>int XAddHosts(Display *<i>display</i>, XHostAddress *<i>hosts</i>, int <i>num_hosts</i>);</dd>
+<dd>XHostAddress *XListHosts(Display *<i>display</i>, int *<i>nhosts_return</i>, Bool <i>state_return</i>);</dd>
+<dd>int XRemoveHost(Display *<i>display</i>, XHostAddress *<i>host</i>);</dd>
+<dd>int XRemoveHosts(Display *<i>display</i>, XHostAddress *<i>hosts</i>, int <i>num_hosts</i>);</dd>
+<dd>int XSetAccessControl(Display *<i>display</i>, int <i>mode</i>);</dd>
+<dd>int XEnableAccessControl(Display *<i>display</i>);</dd>
+<dd>int XDisableAccessControl(Display *<i>display</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>host</i></p>
-<dd>Specifies the host that is to be added or removed.</p>
-<dt><i>hosts</i></p>
-<dd>Specifies each host that is to be added or removed.</p>
-<dt><i>mode</i></p>
-<dd>Specifies the mode. You can pass <code>EnableAccess</code> or <code>DisableAccess</code>.</p>
-<dt><i>nhosts_return</i></p>
-<dd>Returns the number of hosts currently in the access control list.</p>
-<dt><i>num_hosts</i></p>
-<dd>Specifies the number of hosts.</p>
-<dt><i>state_return</i></p>
-<dd>Returns the state of the access control.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>host</i></dt>
+<dd>Specifies the host that is to be added or removed.</dd>
+<dt><i>hosts</i></dt>
+<dd>Specifies each host that is to be added or removed.</dd>
+<dt><i>mode</i></dt>
+<dd>Specifies the mode. You can pass <code>EnableAccess</code> or <code>DisableAccess</code>.</dd>
+<dt><i>nhosts_return</i></dt>
+<dd>Returns the number of hosts currently in the access control list.</dd>
+<dt><i>num_hosts</i></dt>
+<dd>Specifies the number of hosts.</dd>
+<dt><i>state_return</i></dt>
+<dd>Returns the state of the access control.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAddHost</code> function adds the specified host to the access control list for that display. The server must be on the same host as the client issuing the command, or a <code>BadAccess</code> error results. </p>
 <p> <code>XAddHost</code> can generate <code>BadAccess</code> and <code>BadValue</code> errors. </p>
@@ -66,10 +66,10 @@ description: "XAddHost, XAddHosts, XListHosts, XRemoveHost, XRemoveHosts, XSetAc
 <p> The type and value members point to strings representing the type and value of the server interpreted entry. These strings may not be NULL-terminated so care should be used when accessing them. The typelength and valuelength members specify the length in byte of the type and value strings.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAccess</code></p>
-<dd>A client attempted to modify the access control list from other than the local (or otherwise authorized) host.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAccess</code></dt>
+<dd>A client attempted to modify the access control list from other than the local (or otherwise authorized) host.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xfree/">XFree</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

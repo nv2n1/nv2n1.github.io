@@ -17,58 +17,58 @@ description: "gammu-smsd – SMS daemon for Gammu"
 <p> The daemon can reload configuration file after sending hangup signal (SIGHUP) and properly terminates itself on SIGINT and SIGTERM. </p>
 <p> Program accepts following options (please note that long options might be not accepted on some platforms):</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Shows help.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Shows version information and compiled in features.</p>
-<dt><code>-c</code>, <code>&#8211;config</code>=<i>file</i></p>
-<dd> Configuration file to use, default is /etc/gammu-smsdrc, on Windows there is no default and configuration file path has to be always specified.</p>
-<dt><code>-p</code>, <code>&#8211;pid</code>=<i>file</i></p>
-<dd> Lock file for storing pid, empty for no locking. Not supported on Windows.</p>
-<dt><code>-U</code>, <code>&#8211;user</code>=<i>user</i></p>
-<dd> Drop daemon privileges to chosed user after starting.</p>
-<dt><code>-G</code>, <code>&#8211;group</code>=<i>group</i></p>
-<dd> Drop daemon privileges to chosen group after starting.</p>
-<dt><code>-d</code>, <code>&#8211;daemon</code></p>
-<dd> Daemonize program on startup. Not supported on Windows.</p>
-<dt><code>-i</code>, <code>&#8211;install-service</code></p>
-<dd> Installs SMSD as a Windows service.</p>
-<dt><code>-u</code>, <code>&#8211;uninstall-service</code></p>
-<dd> Uninstalls SMSD as a Windows service.</p>
-<dt><code>-s</code>, <code>&#8211;start-service</code></p>
-<dd> Starts SMSD Windows service.</p>
-<dt><code>-k</code>, <code>&#8211;stop-service</code></p>
-<dd> Stops SMSD Windows service.</p>
-<dt><code>-X</code>, <code>&#8211;suicide</code>=<i>seconds</i></p>
-<dd> Kills itself after number of seconds.</p>
-<dt><code>-S</code>, <code>&#8211;run-service</code></p>
-<dd> Runs pogram as SMSD Windows service. This should not be used manually, but only Windows Service manager should use this command.</p>
-<dt><code>-n</code>, <code>&#8211;service-name</code>=<i>name</i></p>
-<dd> Defines name of a Windows service. Each service requires an unique name, so if you want to run several SMSD instances, you have to name each service differently. Default is &quot;GammuSMSD&quot;. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Shows help.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Shows version information and compiled in features.</dd>
+<dt><code>-c</code>, <code>&#8211;config</code>=<i>file</i></dt>
+<dd> Configuration file to use, default is /etc/gammu-smsdrc, on Windows there is no default and configuration file path has to be always specified.</dd>
+<dt><code>-p</code>, <code>&#8211;pid</code>=<i>file</i></dt>
+<dd> Lock file for storing pid, empty for no locking. Not supported on Windows.</dd>
+<dt><code>-U</code>, <code>&#8211;user</code>=<i>user</i></dt>
+<dd> Drop daemon privileges to chosed user after starting.</dd>
+<dt><code>-G</code>, <code>&#8211;group</code>=<i>group</i></dt>
+<dd> Drop daemon privileges to chosen group after starting.</dd>
+<dt><code>-d</code>, <code>&#8211;daemon</code></dt>
+<dd> Daemonize program on startup. Not supported on Windows.</dd>
+<dt><code>-i</code>, <code>&#8211;install-service</code></dt>
+<dd> Installs SMSD as a Windows service.</dd>
+<dt><code>-u</code>, <code>&#8211;uninstall-service</code></dt>
+<dd> Uninstalls SMSD as a Windows service.</dd>
+<dt><code>-s</code>, <code>&#8211;start-service</code></dt>
+<dd> Starts SMSD Windows service.</dd>
+<dt><code>-k</code>, <code>&#8211;stop-service</code></dt>
+<dd> Stops SMSD Windows service.</dd>
+<dt><code>-X</code>, <code>&#8211;suicide</code>=<i>seconds</i></dt>
+<dd> Kills itself after number of seconds.</dd>
+<dt><code>-S</code>, <code>&#8211;run-service</code></dt>
+<dd> Runs pogram as SMSD Windows service. This should not be used manually, but only Windows Service manager should use this command.</dd>
+<dt><code>-n</code>, <code>&#8211;service-name</code>=<i>name</i></dt>
+<dd> Defines name of a Windows service. Each service requires an unique name, so if you want to run several SMSD instances, you have to name each service differently. Default is &quot;GammuSMSD&quot;. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <h3>Linux/Unix Examples</h3>
 <dl>
-<dt>Start SMSD as a deamon on Linux:</p>
+<dt>Start SMSD as a deamon on Linux:</dt>
 <dd>
 <p> gammu-smsd &#8211;config /etc/gammu-smsdrc &#8211;pid /var/run/gammu-smsd.pid &#8211;daemon </p>
-<dt>Start SMSD as a deamon on Linux with reduced privileges:</p>
+</dd><dt>Start SMSD as a deamon on Linux with reduced privileges:</dt>
 <dd>
 <p> gammu-smsd &#8211;config /etc/gammu-smsdrc &#8211;pid /var/run/gammu-smsd.pid &#8211;daemon &#8211;user gammu &#8211;group gammu </p>
-</dl>
+</dd></dl>
 <h3>Windows Service Examples</h3>
 <dl>
-<dt>Install Gammu SMSD Windows service:</p>
+<dt>Install Gammu SMSD Windows service:</dt>
 <dd>
 <p> gammu-smsd.exe -c c:\Gammu\smsdrc -i </p>
-<dt>Install two instances of SMSD Windows service:</p>
+</dd><dt>Install two instances of SMSD Windows service:</dt>
 <dd>
 <p> gammu-smsd.exe -c c:\Gammu\smsdrc-1 -n Gammu-first-phone -i </p>
 <p> gammu-smsd.exe -c c:\Gammu\smsdrc-2 -n Gammu-second-phone -i </p>
-<dt>To uninstall a Windows service:</p>
+</dd><dt>To uninstall a Windows service:</dt>
 <dd>
 <p> gammu-smsd.exe -u </p>
-</dl>
+</dd></dl>
 <h3>Troubleshooting Windows Service</h3>
 <p> If Gammu fails to start as a Windows service (you will usually get &quot;Error 1053: The service did not respond to the start or control request in a timely fashion&quot;), first check your SMSD logs. If they do not contain any useful hint, try starting SMSD manually with exactly same parameters as you installed the service (without -i), for example: </p>
 <p>&nbsp;<wbr>gammu-smsd.exe -c smsdrc </p>

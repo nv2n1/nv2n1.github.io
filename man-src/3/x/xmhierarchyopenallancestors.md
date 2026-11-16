@@ -15,8 +15,8 @@ description: "XmHierarchyOpenAllAncestors — A Hierarchy function that opens al
 <h2>Description</h2>
 <p><code>XmHierarchyOpenAllAncestors</code> opens all ancestors of a given node assuring that the node will be visible to the user.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the node widget that would like to be shown.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the node widget that would like to be shown.</dd></dl>
 <p> For a complete definition of Hierarchy and its associated resources, see <code><a href="/docs/linux/man/3-xmhierarchy/">XmHierarchy</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmhierarchy/">XmHierarchy</a></code>(3).</p>

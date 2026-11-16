@@ -17,68 +17,64 @@ description: "eventfd – create a file descriptor for event notification"
 <p> As its return value, <code>eventfd</code>() returns a new file descriptor that can be used to refer to the eventfd object. </p>
 <p> The following values may be bitwise ORed in <i>flags</i> to change the behavior of <code>eventfd</code>():</p>
 <dl>
-<dt><code>EFD_CLOEXEC</code> (since Linux 2.6.27)</p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</p>
-<dt><code>EFD_NONBLOCK</code> (since Linux 2.6.27)</p>
-<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</p>
-<dt><code>EFD_SEMAPHORE</code> (since Linux 2.6.30)</p>
-<dd> Provide semaphore-like semantics for reads from the new file descriptor. See below.</dl>
+<dt><code>EFD_CLOEXEC</code> (since Linux 2.6.27)</dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd>
+<dt><code>EFD_NONBLOCK</code> (since Linux 2.6.27)</dt>
+<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</dd>
+<dt><code>EFD_SEMAPHORE</code> (since Linux 2.6.30)</dt>
+<dd> Provide semaphore-like semantics for reads from the new file descriptor. See below.</dd></dl>
 <p> In Linux up to version 2.6.26, the <i>flags</i> argument is unused, and must be specified as zero. </p>
 <p> The following operations can be performed on the file descriptor returned by <code>eventfd</code>():</p>
 <dl>
-<dt><code><a href="/docs/linux/man/2-read/">read</a></code>(2)</p>
-<dd> Each successful <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns an 8-byte integer. A <code><a href="/docs/linux/man/2-read/">read</a></code>(2) fails with the error <code>EINVAL</code> if the size of the supplied buffer is less than 8 bytes.</p>
+<dt><code><a href="/docs/linux/man/2-read/">read</a></code>(2)</dt>
+<dd> Each successful <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns an 8-byte integer. A <code><a href="/docs/linux/man/2-read/">read</a></code>(2) fails with the error <code>EINVAL</code> if the size of the supplied buffer is less than 8 bytes.</dd>
 <dt>
-<dd> The value returned by <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is in host byte order&#8212;that is, the native byte order for integers on the host machine.</p>
+</dt><dd> The value returned by <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is in host byte order&#8212;that is, the native byte order for integers on the host machine.</dd>
 <dt>
-<dd> The semantics of <code><a href="/docs/linux/man/2-read/">read</a></code>(2) depend on whether the eventfd counter currently has a nonzero value and whether the <code>EFD_SEMAPHORE</code> flag was specified when creating the eventfd file descriptor:</p>
+</dt><dd> The semantics of <code><a href="/docs/linux/man/2-read/">read</a></code>(2) depend on whether the eventfd counter currently has a nonzero value and whether the <code>EFD_SEMAPHORE</code> flag was specified when creating the eventfd file descriptor:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> If <code>EFD_SEMAPHORE</code> was not specified and the eventfd counter has a nonzero value, then a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns 8 bytes containing that value, and the counter&#8217;s value is reset to zero.</p>
-<dt>*</p>
-<dd> If <code>EFD_SEMAPHORE</code> was specified and the eventfd counter has a nonzero value, then a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns 8 bytes containing the value 1, and the counter&#8217;s value is decremented by 1.</p>
-<dt>*</p>
-<dd> If the eventfd counter is zero at the time of the call to <code><a href="/docs/linux/man/2-read/">read</a></code>(2), then the call either blocks until the counter becomes nonzero (at which time, the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) proceeds as described above) or fails with the error <code>EAGAIN</code> if the file descriptor has been made nonblocking.</dl>
+<dt>*</dt>
+<dd> If <code>EFD_SEMAPHORE</code> was not specified and the eventfd counter has a nonzero value, then a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns 8 bytes containing that value, and the counter&#8217;s value is reset to zero.</dd>
+<dt>*</dt>
+<dd> If <code>EFD_SEMAPHORE</code> was specified and the eventfd counter has a nonzero value, then a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns 8 bytes containing the value 1, and the counter&#8217;s value is decremented by 1.</dd>
+<dt>*</dt>
+<dd> If the eventfd counter is zero at the time of the call to <code><a href="/docs/linux/man/2-read/">read</a></code>(2), then the call either blocks until the counter becomes nonzero (at which time, the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) proceeds as described above) or fails with the error <code>EAGAIN</code> if the file descriptor has been made nonblocking.</dd></dl>
 </dl>
-<dt><code><a href="/docs/linux/man/2-write/">write</a></code>(2)</p>
-<dd> A <code><a href="/docs/linux/man/2-write/">write</a></code>(2) call adds the 8-byte integer value supplied in its buffer to the counter. The maximum value that may be stored in the counter is the largest unsigned 64-bit value minus 1 (i.e., 0xfffffffffffffffe). If the addition would cause the counter&#8217;s value to exceed the maximum, then the <code><a href="/docs/linux/man/2-write/">write</a></code>(2) either blocks until a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is performed on the file descriptor, or fails with the error <code>EAGAIN</code> if the file descriptor has been made nonblocking.</p>
+<dt><code><a href="/docs/linux/man/2-write/">write</a></code>(2)</dt>
+<dd> A <code><a href="/docs/linux/man/2-write/">write</a></code>(2) call adds the 8-byte integer value supplied in its buffer to the counter. The maximum value that may be stored in the counter is the largest unsigned 64-bit value minus 1 (i.e., 0xfffffffffffffffe). If the addition would cause the counter&#8217;s value to exceed the maximum, then the <code><a href="/docs/linux/man/2-write/">write</a></code>(2) either blocks until a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is performed on the file descriptor, or fails with the error <code>EAGAIN</code> if the file descriptor has been made nonblocking.</dd>
 <dt>
-<dd> A <code><a href="/docs/linux/man/2-write/">write</a></code>(2) fails with the error <code>EINVAL</code> if the size of the supplied buffer is less than 8 bytes, or if an attempt is made to write the value 0xffffffffffffffff.</p>
-<dt><code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2) (and similar)</p>
-<dd> The returned file descriptor supports <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) (and analogously <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7)) and <code><a href="/docs/linux/man/2-select/">select</a></code>(2), as follows:</p>
+</dt><dd> A <code><a href="/docs/linux/man/2-write/">write</a></code>(2) fails with the error <code>EINVAL</code> if the size of the supplied buffer is less than 8 bytes, or if an attempt is made to write the value 0xffffffffffffffff.</dd>
+<dt><code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2) (and similar)</dt>
+<dd> The returned file descriptor supports <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) (and analogously <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7)) and <code><a href="/docs/linux/man/2-select/">select</a></code>(2), as follows:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> The file descriptor is readable (the <code><a href="/docs/linux/man/2-select/">select</a></code>(2) <i>readfds</i> argument; the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) <code>POLLIN</code> flag) if the counter has a value greater than 0.</p>
-<dt>*</p>
-<dd> The file descriptor is writable (the <code><a href="/docs/linux/man/2-select/">select</a></code>(2) <i>writefds</i> argument; the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) <code>POLLOUT</code> flag) if it is possible to write a value of at least &quot;1&quot; without blocking.</p>
-<dt>*</p>
-<dd> If an overflow of the counter value was detected, then <code><a href="/docs/linux/man/2-select/">select</a></code>(2) indicates the file descriptor as being both readable and writable, and <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) returns a <code>POLLERR</code> event. As noted above, <code><a href="/docs/linux/man/2-write/">write</a></code>(2) can never overflow the counter. However an overflow can occur if 2^64 eventfd &quot;signal posts&quot; were performed by the KAIO subsystem (theoretically possible, but practically unlikely). If an overflow has occurred, then <code><a href="/docs/linux/man/2-read/">read</a></code>(2) will return that maximum <i>uint64_t</i> value (i.e., 0xffffffffffffffff).</dl>
+<dt>*</dt>
+<dd> The file descriptor is readable (the <code><a href="/docs/linux/man/2-select/">select</a></code>(2) <i>readfds</i> argument; the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) <code>POLLIN</code> flag) if the counter has a value greater than 0.</dd>
+<dt>*</dt>
+<dd> The file descriptor is writable (the <code><a href="/docs/linux/man/2-select/">select</a></code>(2) <i>writefds</i> argument; the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) <code>POLLOUT</code> flag) if it is possible to write a value of at least &quot;1&quot; without blocking.</dd>
+<dt>*</dt>
+<dd> If an overflow of the counter value was detected, then <code><a href="/docs/linux/man/2-select/">select</a></code>(2) indicates the file descriptor as being both readable and writable, and <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) returns a <code>POLLERR</code> event. As noted above, <code><a href="/docs/linux/man/2-write/">write</a></code>(2) can never overflow the counter. However an overflow can occur if 2^64 eventfd &quot;signal posts&quot; were performed by the KAIO subsystem (theoretically possible, but practically unlikely). If an overflow has occurred, then <code><a href="/docs/linux/man/2-read/">read</a></code>(2) will return that maximum <i>uint64_t</i> value (i.e., 0xffffffffffffffff).</dd></dl>
 </dl>
 <dt>
-<dd> The eventfd file descriptor also supports the other file-descriptor multiplexing APIs: <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2) and <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2).</p>
-<dt><code><a href="/docs/linux/man/2-close/">close</a></code>(2)</p>
-<dd> When the file descriptor is no longer required it should be closed. When all file descriptors associated with the same eventfd object have been closed, the resources for object are freed by the kernel.</dl>
+</dt><dd> The eventfd file descriptor also supports the other file-descriptor multiplexing APIs: <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2) and <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2).</dd>
+<dt><code><a href="/docs/linux/man/2-close/">close</a></code>(2)</dt>
+<dd> When the file descriptor is no longer required it should be closed. When all file descriptors associated with the same eventfd object have been closed, the resources for object are freed by the kernel.</dd></dl>
 <p> A copy of the file descriptor created by <code>eventfd</code>() is inherited by the child produced by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2). The duplicate file descriptor is associated with the same eventfd object. File descriptors created by <code>eventfd</code>() are preserved across <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), unless the close-on-exec flag has been set.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>eventfd</code>() returns a new eventfd file descriptor. On error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> An unsupported value was specified in <i>flags</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENODEV</code></p>
-<dd> Could not mount (internal) anonymous inode device.</p>
-<dt><code>ENOMEM</code></p>
-<dd> There was insufficient memory to create a new eventfd file descriptor.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> An unsupported value was specified in <i>flags</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENODEV</code></dt>
+<dd> Could not mount (internal) anonymous inode device.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> There was insufficient memory to create a new eventfd file descriptor.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>eventfd</code>() is available on Linux since kernel 2.6.22. Working support is provided in glibc since version 2.8. The <code>eventfd2</code>() system call (see NOTES) is available on Linux since kernel 2.6.27. Since version 2.9, the glibc <code>eventfd</code>() wrapper will employ the <code>eventfd2</code>() system call, if it is supported by the kernel.</p>
 <h2>ATTRIBUTES</h2>

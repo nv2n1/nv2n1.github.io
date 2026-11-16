@@ -22,40 +22,40 @@ description: "pstopnm – convert a PostScript file into a portable anymap"
 <p> It has been reported that on some Postscript Version 1 input, Ghostscript, and therefore <code>pstopnm</code>, produces no output. To solve this problem, you can convert the file to Postscript Version 3 with the program <code>ps2ps</code>. It is reported that the program <code>pstops</code> does not work. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-forceplain</code></p>
-<dd> forces the output file to be in plain (text) format. Otherwise, it is in raw (binary) format. See <code>pbm</code>(1), etc.</p>
-<dt><code>-llx </code><i>bx</i></p>
-<dd> selects <i>bx</i> as the lower left corner x coordinate (in inches).</p>
-<dt><code>-lly </code><i>by</i></p>
-<dd> selects <i>by</i> as the lower left corner y coordinate (in inches).</p>
-<dt><code>-landscape</code></p>
-<dd> renders the image in landscape mode.</p>
-<dt><code>-portrait</code></p>
-<dd> renders the image in portrait mode.</p>
-<dt><code>-nocrop</code></p>
-<dd> does not crop the output image dimensions to match the PostScript image area dimensions.</p>
-<dt><code>-pbm -pgm -ppm</code></p>
-<dd> selects the format of the output file. By default, all files are rendered as portable pixmaps (ppm format).</p>
-<dt><code>-stdout</code></p>
-<dd> causes output to go to Standard Output instead of to regular files, one per page (see description of output files above). Use <code>pnmsplit</code> to extract individual pages from Standard Output.</p>
-<dt><code>-urx </code><i>tx</i></p>
-<dd> selects <i>tx</i> as the upper right corner x coordinate (in inches).</p>
-<dt><code>-ury </code><i>ty</i></p>
-<dd> selects <i>ty</i> as the upper right corner y coordinate (in inches).</p>
-<dt><code>-verbose</code></p>
-<dd> prints processing information to stdout.</p>
-<dt><code>-xborder </code><i>frac</i></p>
-<dd> specifies that the border width along the Y axis should be <i>frac</i> times the document width as specified by the bounding box comment in the PostScript file header. The default value is 0.1.</p>
-<dt><code>-xmax </code><i>xs</i></p>
-<dd> specifies that the maximum output image width should have a size less or equal to <i>xs</i> pixels (default: 612).</p>
-<dt><code>-xsize </code><i>xsize</i></p>
-<dd> specifies that the output image width must be exactly <i>xs</i> pixels.</p>
-<dt><code>-yborder </code><i>frac</i></p>
-<dd> specifies that the border width along the X axis should be <i>frac</i> times the document width as specified by the bounding box comment in the PostScript file header. The default value is 0.1.</p>
-<dt><code>-ymax </code><i>ys</i></p>
-<dd> specifies that the maximum output image height should have a size less or equal to <i>ys</i> pixels (default: 792).</p>
-<dt><code>-ysize </code><i>ys</i></p>
-<dd> specifies that the output image height must be exactly <i>ys</i> pixels. </p>
+<dt><code>-forceplain</code></dt>
+<dd> forces the output file to be in plain (text) format. Otherwise, it is in raw (binary) format. See <code>pbm</code>(1), etc.</dd>
+<dt><code>-llx </code><i>bx</i></dt>
+<dd> selects <i>bx</i> as the lower left corner x coordinate (in inches).</dd>
+<dt><code>-lly </code><i>by</i></dt>
+<dd> selects <i>by</i> as the lower left corner y coordinate (in inches).</dd>
+<dt><code>-landscape</code></dt>
+<dd> renders the image in landscape mode.</dd>
+<dt><code>-portrait</code></dt>
+<dd> renders the image in portrait mode.</dd>
+<dt><code>-nocrop</code></dt>
+<dd> does not crop the output image dimensions to match the PostScript image area dimensions.</dd>
+<dt><code>-pbm -pgm -ppm</code></dt>
+<dd> selects the format of the output file. By default, all files are rendered as portable pixmaps (ppm format).</dd>
+<dt><code>-stdout</code></dt>
+<dd> causes output to go to Standard Output instead of to regular files, one per page (see description of output files above). Use <code>pnmsplit</code> to extract individual pages from Standard Output.</dd>
+<dt><code>-urx </code><i>tx</i></dt>
+<dd> selects <i>tx</i> as the upper right corner x coordinate (in inches).</dd>
+<dt><code>-ury </code><i>ty</i></dt>
+<dd> selects <i>ty</i> as the upper right corner y coordinate (in inches).</dd>
+<dt><code>-verbose</code></dt>
+<dd> prints processing information to stdout.</dd>
+<dt><code>-xborder </code><i>frac</i></dt>
+<dd> specifies that the border width along the Y axis should be <i>frac</i> times the document width as specified by the bounding box comment in the PostScript file header. The default value is 0.1.</dd>
+<dt><code>-xmax </code><i>xs</i></dt>
+<dd> specifies that the maximum output image width should have a size less or equal to <i>xs</i> pixels (default: 612).</dd>
+<dt><code>-xsize </code><i>xsize</i></dt>
+<dd> specifies that the output image width must be exactly <i>xs</i> pixels.</dd>
+<dt><code>-yborder </code><i>frac</i></dt>
+<dd> specifies that the border width along the X axis should be <i>frac</i> times the document width as specified by the bounding box comment in the PostScript file header. The default value is 0.1.</dd>
+<dt><code>-ymax </code><i>ys</i></dt>
+<dd> specifies that the maximum output image height should have a size less or equal to <i>ys</i> pixels (default: 792).</dd>
+<dt><code>-ysize </code><i>ys</i></dt>
+<dd> specifies that the output image height must be exactly <i>ys</i> pixels. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> The program will produce incorrect results with PostScript files that initialize the current transformation matrix. In these cases, page translation and rotation will not have any effect. To render these files, probably the best bet is to use the following options: </p>

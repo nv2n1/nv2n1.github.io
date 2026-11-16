@@ -13,8 +13,8 @@ description: "pskc_strerror – API function"
 const char *pskc_strerror(int err);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>int err</p>
-<dd>error code, a <code>pskc_rc</code> value.</dl>
+<dt>int err</dt>
+<dd>error code, a <code>pskc_rc</code> value.</dd></dl>
 <h2>Description</h2>
 <p>Convert return code to human readable string explanation of the reason for the particular error code. </p>
 <p> This string can be used to output a diagnostic message to the user. </p>

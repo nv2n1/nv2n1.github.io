@@ -20,24 +20,24 @@ description: "wpa_action – wpa_cli action script"
 <h2>Action</h2>
 <p>An <i>ACTION</i> to be performed on the <i>IFACE</i>.</p>
 <dl>
-<dt><code>CONNECTED</code></p>
-<dd><code>wpa_supplicant</code> has completed authentication. <code>ifup</code> <i>IFACE=WPA_ID_STR</i> is invoked and the action is logged to syslog. Network settings for the <i>LOGICAL</i> interface <i>WPA_ID_STR</i> are applied.</p>
-<dt><code>DISCONNECTED</code></p>
-<dd><code>wpa_supplicant</code> has detected disconnection. <code>ifdown</code> <i>IFACE=WPA_ID_STR</i> is invoked and the action is logged to syslog. Network settings for the <i>LOGICAL</i> interface <i>WPA_ID_STR</i> are undone.</p>
-<dt><code>stop</code></p>
-<dd>The &#8216;stop&#8217; <i>ACTION</i> is a called manually by the user, to stop the <code>wpa_cli</code> daemon, invoke <code>ifdown</code> <i>IFACE</i> (if the <i>IFACE</i> is present in the <i>ifstate</i> file) and stop the <code>wpa_supplicant</code> daemon.</p>
-<dt><code>reload</code></p>
-<dd>The &#8216;reload&#8217; <i>ACTION</i> can be used to reload the <code>wpa_supplicant</code> configuration file specified by <i>wpa-roam</i> . &#8216;restart&#8217; is a synonym for &#8216;reload&#8217; and can be used equally. The action is logged to <i>/var/log/wpa_action.log</i>.</dl>
+<dt><code>CONNECTED</code></dt>
+<dd><code>wpa_supplicant</code> has completed authentication. <code>ifup</code> <i>IFACE=WPA_ID_STR</i> is invoked and the action is logged to syslog. Network settings for the <i>LOGICAL</i> interface <i>WPA_ID_STR</i> are applied.</dd>
+<dt><code>DISCONNECTED</code></dt>
+<dd><code>wpa_supplicant</code> has detected disconnection. <code>ifdown</code> <i>IFACE=WPA_ID_STR</i> is invoked and the action is logged to syslog. Network settings for the <i>LOGICAL</i> interface <i>WPA_ID_STR</i> are undone.</dd>
+<dt><code>stop</code></dt>
+<dd>The &#8216;stop&#8217; <i>ACTION</i> is a called manually by the user, to stop the <code>wpa_cli</code> daemon, invoke <code>ifdown</code> <i>IFACE</i> (if the <i>IFACE</i> is present in the <i>ifstate</i> file) and stop the <code>wpa_supplicant</code> daemon.</dd>
+<dt><code>reload</code></dt>
+<dd>The &#8216;reload&#8217; <i>ACTION</i> can be used to reload the <code>wpa_supplicant</code> configuration file specified by <i>wpa-roam</i> . &#8216;restart&#8217; is a synonym for &#8216;reload&#8217; and can be used equally. The action is logged to <i>/var/log/wpa_action.log</i>.</dd></dl>
 <h2>Environment</h2>
 <p>An alphanumeric identification string provided by the &#8216;id_str&#8217; network block option of <code>wpa_supplicant.conf</code> is exported to <code>wpa_action</code> as an environment variable, <i>WPA_ID_STR</i>. When &#8216;id_str&#8217; is not configured for the <i>CURRENT</i> network block, &#8216;default&#8217; is substituted for the absent <i>WPA_ID_STR</i> environment variable. </p>
 <p> A unique network identifier, <i>WPA_ID</i>, is exported to <code>wpa_action</code>. It is the number assigned to the <i>CURRENT</i> <code>wpa_supplicant</code> network block (network_id).</p>
 <h2>Usage</h2>
 <p>The only reasons for <code>wpa_action</code> to be explicitly executed by the user is to stop <code>wpa_cli</code> from controlling <code>ifupdown</code> or reload the <i>wpa_supplicant.conf</i> file after editing. </p>
 <dl>
-<dd><code>wpa_action</code> <i>eth1 stop</i></dl>
+<dd><code>wpa_action</code> <i>eth1 stop</i></dd></dl>
 <p> Otherwise, <code>wpa_action</code> is given as an argument to a <code>wpa_cli</code> daemon. </p>
 <dl>
-<dd><code>wpa_cli</code> <i>-i eth1 -a /sbin/wpa_action -B</i></dl>
+<dd><code>wpa_cli</code> <i>-i eth1 -a /sbin/wpa_action -B</i></dd></dl>
 <p> This can be done by using the <i>wpa-roam</i> option in the <code>interfaces</code> file. <i>wpa-roam</i> takes one argument, a user provided <code>wpa_supplicant.conf</code> file. </p>
 <p> The inet <i>METHOD</i> must be &#8216;manual&#8217; for this interface, as it will be configured according to <code>wpa_cli</code> action events. Also supply a &#8216;default&#8217; <code>interfaces</code> stanza using the dhcp inet <i>METHOD</i> so that networks without an &#8216;id_str&#8217; option can fallback to attempting to receive an ip via dhcp. If one or more networks requires additional network configuration, provide an unique &#8216;id_str&#8217; for each network, and an <code>interfaces</code> stanza using the &#8216;id_str&#8217; value as a <i>LOGICAL</i> interface. The following interfaces file is configured to use dhcp for any network without an &#8216;id_str&#8217;, a static ip for the network with an &#8216;id_str&#8217; of &#8216;home_static&#8217; and dhcp plus an additional post-up command for the network with an &#8216;id_str&#8217; of &#8216;uni&#8217;. </p>
 <p> An example wpa_supplicant.conf configured to roam between 3 different networks: </p>
@@ -57,7 +57,7 @@ network={
  ssid=&quot;&quot;
  key_mgmt=NONE
 }</pre>
-</dl>
+</dd></dl>
 <p> The corresponding <code>interfaces</code> file would contain <i>LOGICAL</i> interfaces, that correlate to each unique &#8216;id_str&#8217; provided by the configuration file: </p>
 <dl>
 <dd>
@@ -72,7 +72,7 @@ iface home_static inet static
  network 192.168.0.0
  broadcast 192.168.0.255
  gateway 192.168.0.1</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-wpa_cli/">wpa_cli</a>(8)</code>, <code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a>(8)</code>, <code><a href="/docs/linux/man/5-wpa_supplicant-conf/">wpa_supplicant.conf</a>(5)</code>, <code><a href="/docs/linux/man/8-ifup/">ifup</a>(8)</code>, <code><a href="/docs/linux/man/5-interfaces/">interfaces</a>(5)</code></p>
 <h2>Author</h2>

@@ -16,9 +16,11 @@ description: "jv-convert – Convert file from one encoding to another"
 <p> The encodings supported by <code>jv-convert</code> are platform-dependent. Currently there is no way to get a list of all supported encodings.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;encoding</code> <i>name</i></p>
+<dt><code>&#8211;encoding</code> <i>name</i></dt>
 <dd>
-<dt><code>&#8211;from</code> <i>name</i></p>
-<dd> Use <i>name</i> as the input encoding. The default is the current locale&#8217;s encoding.</p>
-<dt><code>&#8211;to</code> <i>name</i></p>
+</dd><dt><code>&#8211;from</code> <i>name</i></dt>
+<dd> Use <i>name</i> as the input encoding. The default is the current locale&#8217;s encoding.</dd>
+<dt><code>&#8211;to</code> <i>name</i></dt>
 <dd> Use <i>name</i> as the output encoding. The default is the <tt>&quot;JavaSrc&quot;</tt> encoding; this is <font SIZE="-1">ASCII</font> with <code>
+</dd></dl>
+</code>

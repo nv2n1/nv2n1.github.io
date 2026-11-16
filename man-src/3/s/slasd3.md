@@ -19,7 +19,7 @@ description: "slasd3.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLASD3 finds all the square roots of the roots of the secular
  equation, as defined by the values in D and Z.  It makes the
@@ -33,11 +33,11 @@ description: "slasd3.f –"
  without guard digits, but we know of none.
  SLASD3 is called from SLASD1.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>NL</i> </p>
+</dt><dd> <i>NL</i> </dd>
 <pre>
           NL is INTEGER
          The row dimension of the upper block.  NL &gt;= 1.
@@ -170,18 +170,18 @@ and the third is dense.The first column of U and the row of
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 224 of file slasd3.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

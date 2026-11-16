@@ -16,8 +16,8 @@ description: "MeshLab – a tool for mesh inspection, processing, and conversion
 <h2>OPTIONS</h2>
 <p> <i> meshlabserver</i> accepts the following options:</p>
 <dl>
-<dt><code>-i meshfilename </code></p>
-<dd> The mesh that has to be loaded <code>-o meshfilename </code> The mesh where to write the result <code>-s scriptfilename </code> an optional script to be applied to the mesh before saving it. </p>
+<dt><code>-i meshfilename </code></dt>
+<dd> The mesh that has to be loaded <code>-o meshfilename </code> The mesh where to write the result <code>-s scriptfilename </code> an optional script to be applied to the mesh before saving it. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> meshlab (1) </p>

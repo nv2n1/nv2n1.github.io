@@ -14,16 +14,16 @@ description: "axgetput – upload or download files via AX.25 / axspawn Linux lo
  <code>axgetput</code> [-b <i>blocksize</i>] [-i] -s [-v] [-h] [?] [<i>filename</i>] </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-b blocksize</code></p>
-<dd> Set the blocksize (frame length) of transmitted data. Defaults to 256 bytes which matches typical AX.25 network confurations best.</p>
-<dt><code>-i</code></p>
-<dd> Compute CRC checksum only.</p>
-<dt><code>.B -s</code></p>
-<dd> Indicates input from a stream. This option is available only if STDIN is a pipe. The filename argument may be omitted if -s is given. The length of the file need not to be known.</p>
-<dt><code>-v</code></p>
-<dd> print version and exit.</p>
-<dt><code>-h, ?</code></p>
-<dd> print usage and exit.</dl>
+<dt><code>-b blocksize</code></dt>
+<dd> Set the blocksize (frame length) of transmitted data. Defaults to 256 bytes which matches typical AX.25 network confurations best.</dd>
+<dt><code>-i</code></dt>
+<dd> Compute CRC checksum only.</dd>
+<dt><code>.B -s</code></dt>
+<dd> Indicates input from a stream. This option is available only if STDIN is a pipe. The filename argument may be omitted if -s is given. The length of the file need not to be known.</dd>
+<dt><code>-v</code></dt>
+<dd> print version and exit.</dd>
+<dt><code>-h, ?</code></dt>
+<dd> print usage and exit.</dd></dl>
 <p> <code>axgetput</code> is the actual name of the program. You execute for e.g. <code>bget</code> or <code>bput</code> while axgetput is the common program to which bget and bput are linked to. axgetput autodetermines which operation mode the user desires. </p>
 <p> axgetput sets the pty to be 8bit clean (thus enables binary mode for the file transfer). It requires that the user is logged in through <a href="/docs/linux/man/8-axspawn/">axspawn</a>(8). </p>
 <p> <code>I. #BIN Protocol</code> </p>

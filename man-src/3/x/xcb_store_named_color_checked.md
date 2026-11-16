@@ -10,25 +10,23 @@ description: "xcb_store_named_color –"
 <p>xcb_store_named_color &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_store_named_color(xcb_connection_t *conn, uint8_t flags, xcb_colormap_t cmap, uint32_t pixel, uint16_t name_len, const char *name);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>flags</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>cmap</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>pixel</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>name_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>name</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>flags</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>cmap</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>pixel</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>name_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>name</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

@@ -8,11 +8,11 @@ url: "/docs/linux/man/1-node-supervisor/"
 
 <dl>
 <dt>
-<dd> Node Supervisor is used to restart programs when they crash. </p>
+</dt><dd> Node Supervisor is used to restart programs when they crash. </dd>
 <p> It can also be used to restart programs when a *.js file changes.</dl>
 <dl>
 <dt>
-<dd> Usage: </p>
+</dt><dd> Usage: </dd>
 <pre><code>
 supervisor[options]&lt;program&gt;
     supervisor[options]--&lt;program&gt;[args...]
@@ -31,7 +31,7 @@ supervisor[options]&lt;program&gt;
 </pre>
 <dl>
 <dt>
-<dd> <code>-i</code>|<code>&#8211;ignore</code> &lt;ignoreItems&gt; </p>
+</dt><dd> <code>-i</code>|<code>&#8211;ignore</code> &lt;ignoreItems&gt; </dd>
 <pre>
     A comma-delimited list of folders to ignore for changes.
     No default

@@ -16,10 +16,10 @@ description: "pklogin_finder – maps certificates into a user"
 <p> <code>pklogin_finder</code> uses the the same configuration file and arguments than <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8) PAM module. Load defined mapper modules, and try to find a map between found certificates and a user login.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>debug </code></p>
-<dd> Enable debugging output. Default is no debug.</p>
-<dt><code>config_file=</code><i>&lt;configuration file&gt;</i></p>
-<dd> Sets the configuration file to use. Default value is <i>/etc/pam_pkcs11/pam_pkcs11.conf</i>.</dl>
+<dt><code>debug </code></dt>
+<dd> Enable debugging output. Default is no debug.</dd>
+<dt><code>config_file=</code><i>&lt;configuration file&gt;</i></dt>
+<dd> Sets the configuration file to use. Default value is <i>/etc/pam_pkcs11/pam_pkcs11.conf</i>.</dd></dl>
 <p> As it uses the same configuration file than pam_pkcs11, all pam_pkcs11 options are also available. Note that some of them has no sense in a non-PAM environment, so they will be ignored.</p>
 <h2>RETURN VALUE</h2>
 <p> On success <code>pklogin_finder</code> prints on stdout the login name and exits returns 0. </p>

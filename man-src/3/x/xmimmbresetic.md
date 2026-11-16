@@ -16,10 +16,10 @@ description: "XmImMbResetIC — An input manager function that resets the input 
 <h2>Description</h2>
 <p><code>XmImMbResetIC</code> gets the XIC of the widget and resets it. It puts a pointer to a string containing the current preedit string to <i>mb</i>. The caller should free the returned string after use by calling <code>Xfree</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget.</p>
-<dt><i>mb</i></p>
-<dd>Contains a pointer to the preedit string upon return.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget.</dd>
+<dt><i>mb</i></dt>
+<dd>Contains a pointer to the preedit string upon return.</dd></dl>
 <h2>Return Value</h2>
 <p>None</p>
 <h2>See Also</h2>

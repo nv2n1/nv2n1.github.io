@@ -12,17 +12,17 @@ GQTXP (Inquire text path) - retrieves the current text path.
 
  void ginq_text_path(Gint *err_ind, Gtext_path *text_path);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt>TXP
-<dd>(Integer, Output) - Returns the current text path as set by default or by a call to GSTXP. Legal values are:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Draw successive characters in the string such that character n+l appears to the right of character n. This is text path &quot;right&quot; and is the default.
-<dt>1
-<dd>Draw character n+1 to the left of character n. This is text path &quot;left&quot;.
-<dt>2
-<dd>Draw character n+1 above character n. This is text path &quot;up&quot;.
-<dt>3
-<dd>Draw character n+1 below character n. This is text path &quot;down&quot;.</dl></dl>
+</dt><dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
+</dd><dt>TXP
+</dt><dd>(Integer, Output) - Returns the current text path as set by default or by a call to GSTXP. Legal values are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Draw successive characters in the string such that character n+l appears to the right of character n. This is text path &quot;right&quot; and is the default.
+</dd><dt>1
+</dt><dd>Draw character n+1 to the left of character n. This is text path &quot;left&quot;.
+</dd><dt>2
+</dt><dd>Draw character n+1 above character n. This is text path &quot;up&quot;.
+</dd><dt>3
+</dt><dd>Draw character n+1 below character n. This is text path &quot;down&quot;.</dd></dl></dl>
 </dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gtx, gstxp, gstxal, gstxfp, gschh, gschsp, gschup, gschxp, gscr, gstxci, gqtxp, gqtxal, gqtxfp, gqchh, gqchsp, gqchup, gqchxp, plotchar, ginq_text_path 
 

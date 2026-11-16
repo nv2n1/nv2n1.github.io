@@ -17,18 +17,18 @@ description: "tzselect – select a timezone"
 <p>The exit status is zero if a timezone was successfully obtained from the user, and is nonzero otherwise.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>AWK</code></p>
-<dd>Name of a POSIX-compliant <i>awk</i> program (default: <code>awk</code>).</p>
-<dt><code>TZDIR</code></p>
-<dd>Name of the directory containing timezone data files (default: <i>/usr/share/zoneinfo</i>).</dl>
+<dt><code>AWK</code></dt>
+<dd>Name of a POSIX-compliant <i>awk</i> program (default: <code>awk</code>).</dd>
+<dt><code>TZDIR</code></dt>
+<dd>Name of the directory containing timezone data files (default: <i>/usr/share/zoneinfo</i>).</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>TZDIR</code><i>/iso3166.tab</i></p>
-<dd>Table of ISO 3166 2-letter country codes and country names.</p>
-<dt><code>TZDIR</code><i>/zone.tab</i></p>
-<dd>Table of country codes, latitude and longitude, TZ values, and descriptive comments.</p>
-<dt><code>TZDIR</code><i>/</i><i>TZ</i></p>
-<dd>Timezone data file for timezone <i>TZ</i>.</dl>
+<dt><code>TZDIR</code><i>/iso3166.tab</i></dt>
+<dd>Table of ISO 3166 2-letter country codes and country names.</dd>
+<dt><code>TZDIR</code><i>/zone.tab</i></dt>
+<dd>Table of country codes, latitude and longitude, TZ values, and descriptive comments.</dd>
+<dt><code>TZDIR</code><i>/</i><i>TZ</i></dt>
+<dd>Timezone data file for timezone <i>TZ</i>.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-tzfile/">tzfile</a></code>(5), <code><a href="/docs/linux/man/8-zdump/">zdump</a></code>(8), <code><a href="/docs/linux/man/8-zic/">zic</a></code>(8)</p>
 <h2>Colophon</h2>

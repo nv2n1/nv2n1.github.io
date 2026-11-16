@@ -19,24 +19,24 @@ description: "QuantLib::SaudiArabia – Saudi Arabian calendar."
 <p>Saudi Arabian calendar. </p>
 <p> Holidays for the Tadawul financial market (data from &lt;<a rel="nofollow" href="http://www.tadawul.com.sa">http://www.tadawul.com.sa</a>&gt;): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Thursdays</p>
-<dt>*</p>
-<dd>Fridays</p>
-<dt>*</p>
-<dd>National Day of Saudi Arabia, September 23rd</dl>
+<dt>*</dt>
+<dd>Thursdays</dd>
+<dt>*</dt>
+<dd>Fridays</dd>
+<dt>*</dt>
+<dd>National Day of Saudi Arabia, September 23rd</dd></dl>
 <p> Other holidays for which no rule is given (data available for 2004-2005 only:) </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Eid Al-Adha</p>
-<dt>*</p>
-<dd>Eid Al-Fitr</dl>
+<dt>*</dt>
+<dd>Eid Al-Adha</dd>
+<dt>*</dt>
+<dd>Eid Al-Fitr</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>Tadawul </i></p>
-<dd>Tadawul financial market. </p>
+<dt><i>Tadawul </i></dt>
+<dd>Tadawul financial market. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

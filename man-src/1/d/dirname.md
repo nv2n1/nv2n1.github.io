@@ -14,20 +14,20 @@ description: "dirname – strip last component from file name"
 <h2>DESCRIPTION</h2>
 <p> Output each NAME with its last non-slash component and trailing slashes removed; if NAME contains no /&#8217;s, output &#8216;.&#8217; (meaning the current directory).</p>
 <dl>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> end each output line with NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> end each output line with NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>dirname /usr/bin/</p>
-<dd> -&gt; &quot;/usr&quot;</p>
-<dt>dirname dir1/str dir2/str</p>
-<dd> -&gt; &quot;dir1&quot; followed by &quot;dir2&quot;</p>
-<dt>dirname stdio.h</p>
-<dd> -&gt; &quot;.&quot;</dl>
+<dt>dirname /usr/bin/</dt>
+<dd> -&gt; &quot;/usr&quot;</dd>
+<dt>dirname dir1/str dir2/str</dt>
+<dd> -&gt; &quot;dir1&quot; followed by &quot;dir2&quot;</dd>
+<dt>dirname stdio.h</dt>
+<dd> -&gt; &quot;.&quot;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>

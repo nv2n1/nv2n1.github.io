@@ -34,7 +34,7 @@ description: "QuantLib::GenericRiskStatistics – empirical-distribution risk me
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
 <dt>
-<dd> add historical annualized volatility</dl>
+</dt><dd> add historical annualized volatility</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>DiscreteHedging.cpp</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -61,13 +61,13 @@ description: "QuantLib::GenericRiskStatistics – empirical-distribution risk me
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
 <dt>
-<dd> percentile must be in range [90-100%)</dl>
+</dt><dd> percentile must be in range [90-100%)</dd></dl>
 <h3>Real valueAtRisk (Real centile) const</h3>
 <p> value-at-risk at a given percentile </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
 <dt>
-<dd> percentile must be in range [90-100%)</dl>
+</dt><dd> percentile must be in range [90-100%)</dd></dl>
 <h3>Real expectedShortfall (Real centile) const</h3>
 <p> expected shortfall at a given percentile </p>
 <p> returns the expected loss in case that the loss exceeded a VaR threshold, </p>
@@ -78,7 +78,7 @@ description: "QuantLib::GenericRiskStatistics – empirical-distribution risk me
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
 <dt>
-<dd> percentile must be in range [90-100%)</dl>
+</dt><dd> percentile must be in range [90-100%)</dd></dl>
 <h3>Real shortfall (Real target) const</h3>
 <p> probability of missing the given target, defined as [ mathrm{E}</p>
 <hr>

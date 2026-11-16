@@ -41,8 +41,9 @@ about the current program.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_opt</code> </p>
+<dd><code>PAPI_get_opt</code> </dd>
 <p> <code>PAPI_get_hardware_info</code> </p>
 <p> <code>PAPI_exe_info_t</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

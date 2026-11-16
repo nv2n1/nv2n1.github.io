@@ -10,61 +10,61 @@ description: "amreport – generate a formatted output of statistics for an Aman
 <p>amreport &#8211; generate a formatted output of statistics for an Amanda run</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amreport</code> [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] [(1)&nbsp;<wbr><i>command-line options</i> | (2)&nbsp;<wbr><i>script options</i>] [<i>config</i>]</p>
+<dt> <code>amreport</code> [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] [(1)&nbsp;<wbr><i>command-line options</i> | (2)&nbsp;<wbr><i>script options</i>] [<i>config</i>]</dt>
 <dd>
-<dt> (1)&nbsp;<wbr>[&#8211;log=<i>logfile</i>] [&#8211;ps=<i>filename</i>] [&#8211;text=<i>filename</i>] [&#8211;xml=<i>filename</i>] [&#8211;print=<i>printer</i>] [&#8211;mail-text=<i>recipient</i>]</p>
-<dt> (2)&nbsp;<wbr>[-i] [-M&nbsp;<wbr><i>address</i>] [-l&nbsp;<wbr><i>logfile</i>] [-f&nbsp;<wbr><i>outputfile</i>] [-p&nbsp;<wbr><i>postscriptfile</i>] [&#8211;from-amdump]</dl>
+</dd><dt> (1)&nbsp;<wbr>[&#8211;log=<i>logfile</i>] [&#8211;ps=<i>filename</i>] [&#8211;text=<i>filename</i>] [&#8211;xml=<i>filename</i>] [&#8211;print=<i>printer</i>] [&#8211;mail-text=<i>recipient</i>]</dt>
+<dt> (2)&nbsp;<wbr>[-i] [-M&nbsp;<wbr><i>address</i>] [-l&nbsp;<wbr><i>logfile</i>] [-f&nbsp;<wbr><i>outputfile</i>] [-p&nbsp;<wbr><i>postscriptfile</i>] [&#8211;from-amdump]</dt></dl>
 <h2>Description</h2>
 <p><code>Amreport</code></p>
-<dd>generates a summary report of an Amanda backup run. </p>
+<dd>generates a summary report of an Amanda backup run. </dd>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Options</h2>
 <p><i>config</i></p>
 <dl>
-<dd>Name of the configuration to process. If no configuration name is specified, amanda.conf is read from the current directory.</dl>
+<dd>Name of the configuration to process. If no configuration name is specified, amanda.conf is read from the current directory.</dd></dl>
 <p> <code>-o </code><i>configoption</i></p>
 <dl>
-<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dl>
+<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dd></dl>
 <p> Amreport operates in two distinct modes. Command-line mode is intended for use by an administrator from the command line, and uses long command-line options for clarity. Script mode is intended for use from scripts such as amdump, and has a lot of non-obvious default behaviors to suit that need. </p>
 <p> Unless a script-mode option is given, amreport defaults to command-line mode. If no options are given, amreport writes a report for the most recent logfile to stdout.</p>
 <h3>Command-Line Mode Options</h3>
 <p><code>&#8211;log=</code><i>logfile</i></p>
 <dl>
-<dd>Use this logfile as the basis for the report. If this option is given, then the report is a &quot;historical&quot; report and will not include current state from e.g., holding disk and curinfo. If this option is not specified, then the most recent logfile will be used.</dl>
+<dd>Use this logfile as the basis for the report. If this option is given, then the report is a &quot;historical&quot; report and will not include current state from e.g., holding disk and curinfo. If this option is not specified, then the most recent logfile will be used.</dd></dl>
 <p> <code>&#8211;ps=</code><i>filename</i></p>
 <dl>
-<dd>Write a postscript label to <i>filename</i>. See &quot;LABEL PRINTING&quot; below. If filename is not specified, then the label is written to stdout.</dl>
+<dd>Write a postscript label to <i>filename</i>. See &quot;LABEL PRINTING&quot; below. If filename is not specified, then the label is written to stdout.</dd></dl>
 <p> <code>&#8211;text=</code><i>filename</i></p>
 <dl>
-<dd>Write a human-readable text report to <i>filename</i>. If filename is not specified, then the report is written to stdout.</dl>
+<dd>Write a human-readable text report to <i>filename</i>. If filename is not specified, then the report is written to stdout.</dd></dl>
 <p> <code>&#8211;xml=</code><i>filename</i></p>
 <dl>
-<dd>Write an XML-formatted report to <i>filename</i>. If filename is not specified, then the report is written to stdout.</dl>
+<dd>Write an XML-formatted report to <i>filename</i>. If filename is not specified, then the report is written to stdout.</dd></dl>
 <p> <code>&#8211;print=</code><i>printer</i></p>
 <dl>
-<dd>Pipe a postscript label to <code>lp</code> or <code>lpr</code>, specifying the given <i>printer</i>. If the printer is not specified, uses the default from the Amanda configuration, or the system default printer.</dl>
+<dd>Pipe a postscript label to <code>lp</code> or <code>lpr</code>, specifying the given <i>printer</i>. If the printer is not specified, uses the default from the Amanda configuration, or the system default printer.</dd></dl>
 <p> <code>&#8211;mail-text=</code><i>recipient</i></p>
 <dl>
-<dd>Send a human-readable text report to the given <i>recipient</i> via the mailer specified in the Amanda configuration. If the recipient is not specified, this uses the <i>mailto</i> from the Amanda configuration.</dl>
+<dd>Send a human-readable text report to the given <i>recipient</i> via the mailer specified in the Amanda configuration. If the recipient is not specified, this uses the <i>mailto</i> from the Amanda configuration.</dd></dl>
 <h3>Script Mode Options</h3>
 <p><code>-i</code></p>
 <dl>
-<dd>Don&#8217;t email the report.</dl>
+<dd>Don&#8217;t email the report.</dd></dl>
 <p> <code>-M</code> <i>address</i></p>
 <dl>
-<dd>Mail the report to <i>address</i> instead of the <code>mailto</code> value from <i>amanda.conf</i>.</dl>
+<dd>Mail the report to <i>address</i> instead of the <code>mailto</code> value from <i>amanda.conf</i>.</dd></dl>
 <p> <code>-l</code> <i>logfile</i></p>
 <dl>
-<dd>Name of the log file to parse to generate the report. If a log file is not specified, it defaults to the file $logdir/log, where $logdir is the log directory defined in amanda.conf.</dl>
+<dd>Name of the log file to parse to generate the report. If a log file is not specified, it defaults to the file $logdir/log, where $logdir is the log directory defined in amanda.conf.</dd></dl>
 <p> <code>-f</code> <i>outputfile</i></p>
 <dl>
-<dd>Normally, <code>amreport</code> sends the report via e-mail to the <i>mailto</i> user as defined in the amanda.conf file. If <i>outputfile</i> is specified, then the report is put in <i>outputfile</i>.</dl>
+<dd>Normally, <code>amreport</code> sends the report via e-mail to the <i>mailto</i> user as defined in the amanda.conf file. If <i>outputfile</i> is specified, then the report is put in <i>outputfile</i>.</dd></dl>
 <p> <code>-p</code> <i>postscriptfile</i></p>
 <dl>
-<dd>Send the postscript output to the file <i>postscriptfile</i> instead of to the <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1) command. This option has an effect only if the <i>lbl-templ</i> directive is specified in amanda.conf.</dl>
+<dd>Send the postscript output to the file <i>postscriptfile</i> instead of to the <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1) command. This option has an effect only if the <i>lbl-templ</i> directive is specified in amanda.conf.</dd></dl>
 <p> <code>&#8211;from-amdump</code></p>
 <dl>
-<dd>Force script mode. Has no other effect.</dl>
+<dd>Force script mode. Has no other effect.</dd></dl>
 <h2>Text Report Format</h2>
 <p>Amanda&#8217;s text report format is divided into several sections. Some of these sections only appear if they are not empty. </p>
 <p> Although newer versions of Amanda try to use the term &quot;volume&quot; to refer to a unit of storage, amreport still uses the term &quot;tape&quot;, even if backups are done to non-tape devices, to allow scripts which parse amreport&#8217;s output to continue to function.</p>
@@ -105,46 +105,46 @@ USAGE BY TAPE:
 <p> The rows have the following meanings: </p>
 <p> Estimate Time</p>
 <dl>
-<dd>The time used by the planner to estimate dump sizes.</dl>
+<dd>The time used by the planner to estimate dump sizes.</dd></dl>
 <p> Run Time</p>
 <dl>
-<dd>Total runtime, from the invocation of amdump to its completion.</dl>
+<dd>Total runtime, from the invocation of amdump to its completion.</dd></dl>
 <p> Dump Time</p>
 <dl>
-<dd>Total time spent dumping clients.</dl>
+<dd>Total time spent dumping clients.</dd></dl>
 <p> Output Size</p>
 <dl>
-<dd>Total quantity of data dumped, after compression.</dl>
+<dd>Total quantity of data dumped, after compression.</dd></dl>
 <p> Original Size</p>
 <dl>
-<dd>Total quantity of data dumped, before compression.</dl>
+<dd>Total quantity of data dumped, before compression.</dd></dl>
 <p> Avg Compressed Size</p>
 <dl>
-<dd>Compression ratio, calculated from the previous two rows.</dl>
+<dd>Compression ratio, calculated from the previous two rows.</dd></dl>
 <p> Filesystems Dumped</p>
 <dl>
-<dd>Number of DLEs dumped.</dl>
+<dd>Number of DLEs dumped.</dd></dl>
 <p> Avg Dump Rate</p>
 <dl>
-<dd>Average speed at which clients produced data. Note that, for dumps done directly to a slow device, rather than to holding disk, this rate may reflect a write speed constrained by the device speed.</dl>
+<dd>Average speed at which clients produced data. Note that, for dumps done directly to a slow device, rather than to holding disk, this rate may reflect a write speed constrained by the device speed.</dd></dl>
 <p> Tape Time</p>
 <dl>
-<dd>Total time spent writing to storage volumes. This includes time spent changing tapes, including time spent waiting for flush thresholds to be met.</dl>
+<dd>Total time spent writing to storage volumes. This includes time spent changing tapes, including time spent waiting for flush thresholds to be met.</dd></dl>
 <p> Tape Size</p>
 <dl>
-<dd>Total quantity of data written to storage volumes.</dl>
+<dd>Total quantity of data written to storage volumes.</dd></dl>
 <p> Tape Used</p>
 <dl>
-<dd>Fraction of the total allocated storage (tapetype length times runtapes) actually used.</dl>
+<dd>Fraction of the total allocated storage (tapetype length times runtapes) actually used.</dd></dl>
 <p> Filesystems Taped</p>
 <dl>
-<dd>Number of filesystems written to storage. This may be larger or smaller than the number of filesystems dumped, due to flushes or dumps left on holding disk.</dl>
+<dd>Number of filesystems written to storage. This may be larger or smaller than the number of filesystems dumped, due to flushes or dumps left on holding disk.</dd></dl>
 <p> Parts Taped</p>
 <dl>
-<dd>Number of split parts writtten to storage. If this number is very large, then the split size may be too small.</dl>
+<dd>Number of split parts writtten to storage. If this number is very large, then the split size may be too small.</dd></dl>
 <p> Avg Tp Write Rate</p>
 <dl>
-<dd>Taper speed, based on the tape time and tape size, above. Note that, because the tape time includes time spent on tasks other than writing to tape, this does not necessary reflect the device&#8217;s real write speed. However, the value is useful for capacity planning, as it reflects a realistic estimate of how quickly Amanda can write data to storage.</dl>
+<dd>Taper speed, based on the tape time and tape size, above. Note that, because the tape time includes time spent on tasks other than writing to tape, this does not necessary reflect the device&#8217;s real write speed. However, the value is useful for capacity planning, as it reflects a realistic estimate of how quickly Amanda can write data to storage.</dd></dl>
 <h3>Usage by Tape</h3>
 <pre>USAGE BY TAPE:
  Label Time Size % DLEs Parts
@@ -208,7 +208,7 @@ strontium -ository_13 1 1350 1350 -- 0:01 2568.5 0:00 175006.5</pre>
 * DAT 4mm tapes
 * DLT tapes
 * 3-ring binder</pre>
-</dl>
+</dd></dl>
 <p> The 3-ring binder type is the most generic. It may be used to make a hardcopy log of the tapes.</p>
 <h2>Exit Code</h2>
 <p>The exit code of <code>amreport</code> is the ORed value of: </p>

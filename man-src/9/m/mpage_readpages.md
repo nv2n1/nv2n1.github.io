@@ -14,16 +14,16 @@ description: "mpage_readpages – populate an address space with some pages & st
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>the address_space</dl>
+</dd><dd>the address_space</dd></dl>
 <p> <i>pages</i></p>
 <dl>
-<dd>The address of a list_head which contains the target pages. These pages have their -&gt;index populated and are otherwise uninitialised. The page at <i>pages</i>-&gt;prev has the lowest file offset, and reads should be issued in <i>pages</i>-&gt;prev to <i>pages</i>-&gt;next order.</dl>
+<dd>The address of a list_head which contains the target pages. These pages have their -&gt;index populated and are otherwise uninitialised. The page at <i>pages</i>-&gt;prev has the lowest file offset, and reads should be issued in <i>pages</i>-&gt;prev to <i>pages</i>-&gt;next order.</dd></dl>
 <p> <i>nr_pages</i></p>
 <dl>
-<dd>The number of pages at *<i>pages</i></dl>
+<dd>The number of pages at *<i>pages</i></dd></dl>
 <p> <i>get_block</i></p>
 <dl>
-<dd>The filesystem&#8217;s block mapper function.</dl>
+<dd>The filesystem&#8217;s block mapper function.</dd></dl>
 <h2>Description</h2>
 <p>This function walks the pages and the blocks within each page, building and emitting large BIOs. </p>
 <p> If anything unusual happens, such as: </p>

@@ -18,8 +18,8 @@ description: "pamtodjvurle – convert a Netpbm image to DjVu Color RLE format"
 <p> <code>pamtodjvurle</code> reads a Netpbm image (PNM or PAM equivalent of PNM) as input and produces DjVu Color RLE format as output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-transparent</code> <i>colorname</i></p>
-<dd> This option indicates which color in the image should be considered transparent. </p>
+<dt><code>-transparent</code> <i>colorname</i></dt>
+<dd> This option indicates which color in the image should be considered transparent. </dd>
 <p> Specify the color (<i>color</i>) as described for the argument of the <code>ppm_parsecolor()</code> library routine . </p>
 <p> Default is &#8216;white&#8217;. </p>
 </dl>

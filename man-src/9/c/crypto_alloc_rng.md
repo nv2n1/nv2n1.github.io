@@ -14,13 +14,13 @@ description: "crypto_alloc_rng – – allocate RNG handle"
 <p><i>alg_name</i></p>
 <dl>
 <dd>
-<dd>is the cra_name / name or cra_driver_name / driver name of the message digest cipher</dl>
+</dd><dd>is the cra_name / name or cra_driver_name / driver name of the message digest cipher</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>specifies the type of the cipher</dl>
+<dd>specifies the type of the cipher</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>specifies the mask for the cipher</dl>
+<dd>specifies the mask for the cipher</dd></dl>
 <h2>Description</h2>
 <p>Allocate a cipher handle for a random number generator. The returned struct crypto_rng is the cipher handle that is required for any subsequent API invocation for that random number generator. </p>
 <p> For all random number generators, this call creates a new private copy of the random number generator that does not share a state with other instances. The only exception is the &#8220;krng&#8221; random number generator which is a kernel crypto API use case for the <code>get_random_bytes</code> function of the /dev/random driver.</p>
@@ -29,8 +29,8 @@ description: "crypto_alloc_rng – – allocate RNG handle"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

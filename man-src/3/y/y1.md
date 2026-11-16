@@ -10,15 +10,12 @@ description: "y0, y0f, y0l, y1, y1f, y1l, yn, ynf, ynl – Bessel functions of t
 <p>y0, y0f, y0l, y1, y1f, y1l, yn, ynf, ynl &#8211; Bessel functions of the second kind</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
-
 double y0(double x);
 double y1(double x);
 double yn(int n, double x);
-
 float y0f(float x);
 float y1f(float x);
 float ynf(int n, float x);
-
 long double y0l(long double x);
 long double y1l(long double x);
 long double ynl(int n, long double x);</code></pre>
@@ -26,13 +23,13 @@ long double ynl(int n, long double x);</code></pre>
 <dl>
 <dd>_XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>y0f</code>(), <code>y0l</code>(), <code>y1f</code>(), <code>y1l</code>(), <code>ynf</code>(), <code>ynl</code>():</p>
 <dl>
 <dd>_XOPEN_SOURCE &nbsp;&gt;=&nbsp;600<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;(_ISOC99_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>y0</code>() and <code>y1</code>() functions return Bessel functions of <i>x</i> of the second kind of orders 0 and 1, respectively. The <code>yn</code>() function returns the Bessel function of <i>x</i> of the second kind of order <i>n</i>. </p>
 <p> The value of <i>x</i> must be positive. </p>
@@ -48,14 +45,14 @@ long double ynl(int n, long double x);</code></pre>
 <p>See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Domain error: <i>x</i> is negative</p>
-<dd><i>errno</i> is set to <code>EDOM</code>. An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</p>
-<dt>Pole error: <i>x</i> is 0.0</p>
-<dd><i>errno</i> is set to <code>ERANGE</code> and an <code>FE_DIVBYZERO</code> exception is raised (but see BUGS).</p>
-<dt>Range error: result underflow</p>
-<dd><i>errno</i> is set to <code>ERANGE</code>. No <code>FE_UNDERFLOW</code> exception is returned by <code><a href="/docs/linux/man/3-fetestexcept/">fetestexcept</a></code>(3) for this case.</p>
-<dt>Range error: result overflow</p>
-<dd><i>errno</i> is set to <code>ERANGE</code> (but see BUGS). An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dl>
+<dt>Domain error: <i>x</i> is negative</dt>
+<dd><i>errno</i> is set to <code>EDOM</code>. An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dd>
+<dt>Pole error: <i>x</i> is 0.0</dt>
+<dd><i>errno</i> is set to <code>ERANGE</code> and an <code>FE_DIVBYZERO</code> exception is raised (but see BUGS).</dd>
+<dt>Range error: result underflow</dt>
+<dd><i>errno</i> is set to <code>ERANGE</code>. No <code>FE_UNDERFLOW</code> exception is returned by <code><a href="/docs/linux/man/3-fetestexcept/">fetestexcept</a></code>(3) for this case.</dd>
+<dt>Range error: result overflow</dt>
+<dd><i>errno</i> is set to <code>ERANGE</code> (but see BUGS). An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -14,10 +14,10 @@ description: "pci_match_id – See if a pci device matches a given pci_id table"
 <p><i>ids</i></p>
 <dl>
 <dd>
-<dd>array of PCI device id structures to search in</dl>
+</dd><dd>array of PCI device id structures to search in</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>the PCI device structure to match against.</dl>
+<dd>the PCI device structure to match against.</dd></dl>
 <h2>Description</h2>
 <p>Used by a driver to check whether a PCI device present in the system is in its list of supported devices. Returns the matching pci_device_id structure or <code>NULL</code> if there is no match. </p>
 <p> Deprecated, don&#8217;t use this as it will not catch any dynamic ids that a driver might want to check for.</p>

@@ -11,50 +11,46 @@ description: "selabel_db – userspace SELinux labeling interface and configurat
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/label.h&gt;
 int selabel_lookup(struct selabel_handle *hnd,
-
                    char **context,
-
                    const char *object_name, int object_type);
 int selabel_lookup_raw(struct selabel_handle *hnd,
-
                        char **context,
-
                        const char *object_name, int object_type);</code></pre>
 <h2>Description</h2>
 <p>The DB contexts backend maps from a pair of object name and class into security contexts. It is used to find the appropriate context for database objects when relabeling a certain database. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br />
  <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) describes the function with its return and error codes. </p>
 <p> The <i>object_name</i> should be a fully qualified name using the hierarchy of database objects. For example, the <code>pg_class</code> table in the <code>postgres</code> database and <code>pg_catalog</code> schema should be qualified as:</p>
 <dl>
-<dd><code>Bpostgres.pg_catalog.pg_class</code></dl>
+<dd><code>Bpostgres.pg_catalog.pg_class</code></dd></dl>
 <p> The <code>NOTES</code> section has further information on database support for namespace hierarchies. </p>
 <p> The <i>object_type</i> argument should be set to one of the following values:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>SELABEL_DB_DATABASE</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a database itself, such as &quot;postgres&quot;.</p>
-<dt><code>SELABEL_DB_SCHEMA</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a schema object, such as &quot;postgres.public&quot;.</p>
-<dt><code>SELABEL_DB_TABLE</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a table object, such as &quot;postgres.public.my_table&quot;</p>
-<dt><code>SELABEL_DB_COLUMN</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a column object, such as &quot;postgres.public.my_table.user_id&quot;</p>
-<dt><code>SELABEL_DB_TUPLE</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a table object which contains the tuples to be relabeled, such as &quot;postgresql.public.my_table&quot;. Note that we have no way to identify individual tuple objects, except for WHERE clause on DML statements, because it has no name.</p>
-<dt><code>SELABEL_DB_PROCEDURE</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a procedure object, such as &quot;postgres.public.my_func&quot;. Note that we don&#8217;t support lookup of individual security contexts for procedures which have the same name but different arguments.</p>
-<dt><code>SELABEL_DB_SEQUENCE</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a sequence object, such as &quot;postgres.public.my_seq&quot;.</p>
-<dt><code>SELABEL_DB_BLOB</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a large object, such as &quot;postgres.16308&quot;. Note that a large object does not have a name, so it is identified by its identifier value.</p>
-<dt><code>SELABEL_DB_VIEW</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a view object, such as &quot;postgres.public.my_view&quot;.</p>
-<dt><code>SELABEL_DB_LANGUAGE</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a language object, such as &quot;postgres.public.tcl&quot;.</p>
-<dt><code>SELABEL_DB_EXCEPTION</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a exception object.</p>
-<dt><code>SELABEL_DB_DATATYPE</code></p>
-<dd>The <i>object_name</i> argument specifies the name of a type or domain object, such as postgres.public.my_type.</dl>
+</dd><dl>
+<dt><code>SELABEL_DB_DATABASE</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a database itself, such as &quot;postgres&quot;.</dd>
+<dt><code>SELABEL_DB_SCHEMA</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a schema object, such as &quot;postgres.public&quot;.</dd>
+<dt><code>SELABEL_DB_TABLE</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a table object, such as &quot;postgres.public.my_table&quot;</dd>
+<dt><code>SELABEL_DB_COLUMN</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a column object, such as &quot;postgres.public.my_table.user_id&quot;</dd>
+<dt><code>SELABEL_DB_TUPLE</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a table object which contains the tuples to be relabeled, such as &quot;postgresql.public.my_table&quot;. Note that we have no way to identify individual tuple objects, except for WHERE clause on DML statements, because it has no name.</dd>
+<dt><code>SELABEL_DB_PROCEDURE</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a procedure object, such as &quot;postgres.public.my_func&quot;. Note that we don&#8217;t support lookup of individual security contexts for procedures which have the same name but different arguments.</dd>
+<dt><code>SELABEL_DB_SEQUENCE</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a sequence object, such as &quot;postgres.public.my_seq&quot;.</dd>
+<dt><code>SELABEL_DB_BLOB</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a large object, such as &quot;postgres.16308&quot;. Note that a large object does not have a name, so it is identified by its identifier value.</dd>
+<dt><code>SELABEL_DB_VIEW</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a view object, such as &quot;postgres.public.my_view&quot;.</dd>
+<dt><code>SELABEL_DB_LANGUAGE</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a language object, such as &quot;postgres.public.tcl&quot;.</dd>
+<dt><code>SELABEL_DB_EXCEPTION</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a exception object.</dd>
+<dt><code>SELABEL_DB_DATATYPE</code></dt>
+<dd>The <i>object_name</i> argument specifies the name of a type or domain object, such as postgres.public.my_type.</dd></dl>
 </dl>
 <p> Any messages generated by <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) are sent to <i>stderr</i> by default, although this can be changed by <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3). </p>
 <p> <code><a href="/docs/linux/man/3-selabel_lookup_raw/">selabel_lookup_raw</a></code>(3) behaves identically to <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) but does not perform context translation. </p>
@@ -63,15 +59,15 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <p>In addition to the global options described in <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), this backend recognizes the following options:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>SELABEL_OPT_PATH</code></p>
-<dd>A non-null value for this option specifies a path to a file that will be opened in lieu of the standard DB contexts file. It tries to open the specfile designed for SE-PostgreSQL as default, so if another RDBMS uses this interface, it needs to give an explicit specfile designed for that RDBMS (see the <code>FILES</code> section for details).</dl>
+</dd><dl>
+<dt><code>SELABEL_OPT_PATH</code></dt>
+<dd>A non-null value for this option specifies a path to a file that will be opened in lieu of the standard DB contexts file. It tries to open the specfile designed for SE-PostgreSQL as default, so if another RDBMS uses this interface, it needs to give an explicit specfile designed for that RDBMS (see the <code>FILES</code> section for details).</dd></dl>
 </dl>
 <h2>Files</h2>
 <p>The database context file used to retrieve a context depends on the <code>SELABEL_OPT_PATH</code> parameter passed to <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3). If <i>NULL</i>, then the <code>SELABEL_OPT_PATH</code> value will default to the active policy database contexts location (as returned by <code>selinux_sepgsql_context_path</code>(3)), otherwise the actual <code>SELABEL_OPT_PATH</code> value specified is used (this option must be used to support databases other than SE-PostgreSQL). </p>
 <p> The default database object contexts file is:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/sepgsql_context</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/sepgsql_context</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> The entries within the database contexts file are shown in the <code>Object Name String Values</code> and <code>FILE FORMAT</code> sections.</p>
 <h2>Object Name String Values</h2>
@@ -147,20 +143,20 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <h2>File Format</h2>
 <p>Each line within the database contexts file is as follows:</p>
 <dl>
-<dd><i>object_type object_name context</i></dl>
+<dd><i>object_type object_name context</i></dd></dl>
 <p> Where:</p>
 <dl>
-<dd><i>object_type</i></p>
+<dd><i>object_type</i></dd>
 <dl>
-<dd>This is the string representation of the object type shown in the <code>Object Name String Values</code> section.</dl>
+<dd>This is the string representation of the object type shown in the <code>Object Name String Values</code> section.</dd></dl>
 <p> <i>object_name</i></p>
 <dl>
-<dd>The key used to obtain the context based on the <i>object_type</i>. </p>
+<dd>The key used to obtain the context based on the <i>object_type</i>. </dd>
 <p> The entry can contain &#8216;*&#8217; for wildcard matching or &#8216;?&#8217; for substitution. </p>
 <p> Note that if the &#8216;*&#8217; is used, then be aware that the order of entries in the file is important. The &#8216;*&#8217; on its own is used to ensure a default fallback context is assigned and should be the last entry in the <i>object_type</i> block.</dl>
 <p> <i>context</i></p>
 <dl>
-<dd>The security context that will be applied to the object.</dl>
+<dd>The security context that will be applied to the object.</dd></dl>
 </dl>
 <p> The following example is for SE-PostgreSQL: </p>
 <p> # ./contexts/sepgsql_contexts file<br />
@@ -173,17 +169,17 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
  db_tuple *.*.* system_u:object_r:sepgsql_table_t:s0</p>
 <h2>Notes</h2>
 <dl>
-<dt>1.</p>
-<dd>A suitable database contexts file needs to be written for the target RDBMS and the <code>SELABEL_OPT_PATH</code> option must be used in <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3) to load it.</p>
-<dt>2.</p>
-<dd>The hierarchy of the namespace for database objects depends on the RDBMS, however the <i>selabel*</i> interfaces do not have any specific support for a namespace hierarchy. </p>
+<dt>1.</dt>
+<dd>A suitable database contexts file needs to be written for the target RDBMS and the <code>SELABEL_OPT_PATH</code> option must be used in <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3) to load it.</dd>
+<dt>2.</dt>
+<dd>The hierarchy of the namespace for database objects depends on the RDBMS, however the <i>selabel*</i> interfaces do not have any specific support for a namespace hierarchy. </dd>
 <p> SE-PostgreSQL has a namespace hierarchy where a database is the top level object with the schema being the next level. Under the schema object there can be other types of objects such as tables and procedures. This hierarchy is supported as follows:</p>
 <dl>
 <dd>
-<dl>
-<dd>If a security context is required for &quot;my_table&quot; table in the &quot;public&quot; schema within the &quot;postgres&quot; database, then the <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) parameters for <i>object_type</i> would be <code>SELABEL_DB_TABLE</code> and the <i>object_name</i> would be &quot;postgres.public.my_table&quot;, the security context (if available), would be returned in <i>context</i>.</dl>
+</dd><dl>
+<dd>If a security context is required for &quot;my_table&quot; table in the &quot;public&quot; schema within the &quot;postgres&quot; database, then the <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) parameters for <i>object_type</i> would be <code>SELABEL_DB_TABLE</code> and the <i>object_name</i> would be &quot;postgres.public.my_table&quot;, the security context (if available), would be returned in <i>context</i>.</dd></dl>
 </dl>
-<dt>3.</p>
-<dd>If contexts are to be validated, then the global option <code>SELABEL_OPT_VALIDATE</code> must be set before calling <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3). If this is not set, then it is possible for an invalid context to be returned.</dl>
+<dt>3.</dt>
+<dd>If contexts are to be validated, then the global option <code>SELABEL_OPT_VALIDATE</code> must be set before calling <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3). If this is not set, then it is possible for an invalid context to be returned.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3), <code><a href="/docs/linux/man/3-selabel_stats/">selabel_stats</a></code>(3), <code><a href="/docs/linux/man/3-selabel_close/">selabel_close</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code>selinux_sepgsql_context_path</code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

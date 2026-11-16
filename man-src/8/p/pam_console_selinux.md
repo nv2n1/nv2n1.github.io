@@ -49,8 +49,8 @@ description: "pam_console_selinux – Security Enhanced Linux Policy for the pam
 <p> <code>pam_console_exec_t</code> </p>
 <p> &#8211; Set files with the pam_console_exec_t type, if you want to transition an executable to the pam_console_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/pam_console_apply, /usr/sbin/pam_console_apply </p>
+<dt>Paths:</dt>
+<dd>/sbin/pam_console_apply, /usr/sbin/pam_console_apply </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

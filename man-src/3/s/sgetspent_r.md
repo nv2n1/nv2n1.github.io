@@ -76,16 +76,16 @@ description: "getspnam, getspnam_r, getspent, getspent_r, setspent, endspent, fg
 <p> The reentrant functions return zero on success. In case of error, an error number is returned.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EACCES</code></p>
-<dd> The caller does not have permission to access the shadow password file.</p>
-<dt><code>ERANGE</code></p>
-<dd> Supplied buffer is too small.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The caller does not have permission to access the shadow password file.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> Supplied buffer is too small.</dd></dl>
 <h2>Files</h2>
 <dl COMPACT>
-<dt><i>/etc/shadow</i></p>
-<dd> local shadow password database file</p>
-<dt><i>/etc/.pwd.lock</i></p>
-<dd> lock file</dl>
+<dt><i>/etc/shadow</i></dt>
+<dd> local shadow password database file</dd>
+<dt><i>/etc/.pwd.lock</i></dt>
+<dd> lock file</dd></dl>
 <p> The include file <i>&lt;paths.h&gt;</i> defines the constant <code>_PATH_SHADOW</code> to the pathname of the shadow password file.</p>
 <h2>Attributes</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

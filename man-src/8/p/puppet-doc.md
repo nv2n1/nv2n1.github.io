@@ -20,41 +20,41 @@ description: "puppet-doc – Generate Puppet documentation and references"
 <p> WARNING: RDoc support is only available under Ruby 1.8.7 and earlier. The internal API used to support manifest documentation has changed radically in newer versions, and support is not yet available for using those versions of RDoc.</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;all</p>
-<dd>Output the docs for all of the reference types. In &#8216;rdoc&#8217; mode, this also outputs documentation for all resources.</p>
-<dt>&#8211;help</p>
-<dd>Print this help message</p>
-<dt>&#8211;outputdir</p>
-<dd>Used only in &#8216;rdoc&#8217; mode. The directory to which the rdoc output should be written.</p>
-<dt>&#8211;mode</p>
-<dd>Determine the output mode. Valid modes are &#8216;text&#8217;, &#8216;pdf&#8217; and &#8216;rdoc&#8217;. The &#8216;pdf&#8217; mode creates PDF formatted files in the /tmp directory. The default mode is &#8216;text&#8217;.</p>
-<dt>&#8211;reference</p>
-<dd>Build a particular reference. Get a list of references by running &#8216;puppet doc &#8211;list&#8217;.</p>
-<dt>&#8211;charset</p>
-<dd>Used only in &#8216;rdoc&#8217; mode. It sets the charset used in the html files produced.</p>
-<dt>&#8211;manifestdir</p>
-<dd>Used only in &#8216;rdoc&#8217; mode. The directory to scan for stand-alone manifests. If not supplied, puppet doc will use the manifestdir from puppet.conf.</p>
-<dt>&#8211;modulepath</p>
-<dd>Used only in &#8216;rdoc&#8217; mode. The directory or directories to scan for modules. If not supplied, puppet doc will use the modulepath from puppet.conf.</p>
-<dt>&#8211;environment</p>
-<dd>Used only in &#8216;rdoc&#8217; mode. The configuration environment from which to read the modulepath and manifestdir settings, when reading said settings from puppet.conf.</dl>
+<dt>&#8211;all</dt>
+<dd>Output the docs for all of the reference types. In &#8216;rdoc&#8217; mode, this also outputs documentation for all resources.</dd>
+<dt>&#8211;help</dt>
+<dd>Print this help message</dd>
+<dt>&#8211;outputdir</dt>
+<dd>Used only in &#8216;rdoc&#8217; mode. The directory to which the rdoc output should be written.</dd>
+<dt>&#8211;mode</dt>
+<dd>Determine the output mode. Valid modes are &#8216;text&#8217;, &#8216;pdf&#8217; and &#8216;rdoc&#8217;. The &#8216;pdf&#8217; mode creates PDF formatted files in the /tmp directory. The default mode is &#8216;text&#8217;.</dd>
+<dt>&#8211;reference</dt>
+<dd>Build a particular reference. Get a list of references by running &#8216;puppet doc &#8211;list&#8217;.</dd>
+<dt>&#8211;charset</dt>
+<dd>Used only in &#8216;rdoc&#8217; mode. It sets the charset used in the html files produced.</dd>
+<dt>&#8211;manifestdir</dt>
+<dd>Used only in &#8216;rdoc&#8217; mode. The directory to scan for stand-alone manifests. If not supplied, puppet doc will use the manifestdir from puppet.conf.</dd>
+<dt>&#8211;modulepath</dt>
+<dd>Used only in &#8216;rdoc&#8217; mode. The directory or directories to scan for modules. If not supplied, puppet doc will use the modulepath from puppet.conf.</dd>
+<dt>&#8211;environment</dt>
+<dd>Used only in &#8216;rdoc&#8217; mode. The configuration environment from which to read the modulepath and manifestdir settings, when reading said settings from puppet.conf.</dd></dl>
 <h2>Example</h2>
 <pre>$ puppet doc -r type &gt; /tmp/type_reference.markdown</pre>
 <p>or</p>
 <dl>
 <dd>
 <pre>$ puppet doc --outputdir /tmp/rdoc --mode rdoc /path/to/manifests</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> or</p>
 <dl>
 <dd>
 <pre>$ puppet doc /etc/puppet/manifests/site.pp</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> or</p>
 <dl>
 <dd>
 <pre>$ puppet doc -m pdf -r configuration</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Author</h2>
 <p>Luke Kanies</p>
 <h2>Copyright</h2>

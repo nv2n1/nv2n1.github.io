@@ -15,8 +15,8 @@ description: "lgroupdel – Delete an user group"
 <p> Deletes the user group with name <i>group</i>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </p>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>

@@ -16,13 +16,13 @@ mongoc_client_set_stream_initiator (mongoc_client_t *client,
 <p>The <code><a href="/docs/linux/man/3-mongoc_client_set_stream_initiator/">mongoc_client_set_stream_initiator</a>(3)</code> function shall associate a given <code>mongoc_client_t</code> with a new stream initiator. This will completely replace the default transport (buffered TCP, possibly with TLS). The <code>initiator</code> should fulfill the <code>mongoc_stream_t</code> contract. <code>user_data</code> is passed through to the <code>initiator</code> callback and may be used for whatever run time customization is necessary. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>initiator</code></p>
-<dd>A <code>mongoc_stream_initiator_t</code> \&amp;.</dl>
+<dt><code>initiator</code></dt>
+<dd>A <code>mongoc_stream_initiator_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>user_data</code></p>
-<dd>User supplied pointer for callback function.</dl>
+<dt><code>user_data</code></dt>
+<dd>User supplied pointer for callback function.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

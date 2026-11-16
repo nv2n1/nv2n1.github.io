@@ -12,28 +12,28 @@ GSTXAL (Set text alignment) - sets the text alignment.
 
  void gset_text_align(const Gtext_align *text_align);
 <h2>Description</h2><dl COMPACT><dt>TXALH
-<dd>(Integer, Input) - Determines the horizontal alignment of the text to be drawn. Options are:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Normal (default)
-<dt>1
-<dd>Left
-<dt>2
-<dd>Center
-<dt>3
-<dd>Right</dl></dl><dt>TXALV
-<dd>(Integer, Input) - Determines the vertical alignment of the text to be drawn. Options are:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Normal (default)
-<dt>1
-<dd>Top
-<dt>2
-<dd>Cap
-<dt>3
-<dd>Half
-<dt>4
-<dd>Base
-<dt>5
-<dd>Bottom</dl></dl>
+</dt><dd>(Integer, Input) - Determines the horizontal alignment of the text to be drawn. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Normal (default)
+</dd><dt>1
+</dt><dd>Left
+</dd><dt>2
+</dt><dd>Center
+</dd><dt>3
+</dt><dd>Right</dd></dl></dl><dt>TXALV
+</dt><dd>(Integer, Input) - Determines the vertical alignment of the text to be drawn. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Normal (default)
+</dd><dt>1
+</dt><dd>Top
+</dd><dt>2
+</dt><dd>Cap
+</dd><dt>3
+</dt><dd>Half
+</dd><dt>4
+</dt><dd>Base
+</dd><dt>5
+</dt><dd>Bottom</dd></dl></dl>
 </dl><h2>Usage</h2>Text alignment is used to position the text extent rectangle. The text extent rectangle rotates about the point determined by the horizontal and vertical text alignment settings (TXALH, TXALV).
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gtx, gstxp, gstxfp, gschh, gschsp, gschup, gschxp, gscr, gstxci, gqtxp, gqtxal, gqtxfp, gqchh, gqchsp, gqchup, gqchxp, plotchar, gset_text_align 

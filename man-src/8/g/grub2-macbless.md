@@ -14,12 +14,12 @@ description: "grub-macbless — Mac-style bless utility for HFS or HFS+"
 <p><code>grub-mkimage</code> blesses a file on an HFS or HFS+ file system, so that it can be used to boot a Mac. </p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;ppc</p>
-<dd>Bless the file for use on PPC-based Macs. </p>
-<dt>&#8211;verbose</p>
-<dd>Print verbose messages. </p>
-<dt>&#8211;x86</p>
-<dd>Bless the file for use on x86-based Macs. </p>
+<dt>&#8211;ppc</dt>
+<dd>Bless the file for use on PPC-based Macs. </dd>
+<dt>&#8211;verbose</dt>
+<dd>Print verbose messages. </dd>
+<dt>&#8211;x86</dt>
+<dd>Bless the file for use on x86-based Macs. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>info grub</code> </p>

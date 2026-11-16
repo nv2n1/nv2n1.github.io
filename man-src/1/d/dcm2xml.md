@@ -109,3 +109,4 @@ XML structure : +Xd-- add - dtd - reference add reference to document type defin
         &lt;element tag=&quot;0028,3002&quot; vr=&quot;xs&quot; vm=&quot;3&quot; len=&quot;6&quot;
                  name=&quot;LUTDescriptor&quot;&gt;
           256
+</pre>

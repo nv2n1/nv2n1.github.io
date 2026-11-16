@@ -15,24 +15,24 @@ description: "lp – line printer devices"
 <h2>Description</h2>
 <p>The following <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) calls are supported:</p>
 <dl>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPTIME, int </code><i>arg</i><code>)</code></p>
-<dd>Sets the amount of time that the driver sleeps before rechecking the printer when the printer&#8217;s buffer appears to be filled to <i>arg</i>. If you have a fast printer, decrease this number; if you have a slow printer, then increase it. This is in hundredths of a second, the default 2 being 0.02 seconds. It influences only the polling driver.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPCHAR, int </code><i>arg</i><code>)</code></p>
-<dd>Sets the maximum number of busy-wait iterations which the polling driver does while waiting for the printer to get ready for receiving a character to <i>arg</i>. If printing is too slow, increase this number; if the system gets too slow, decrease this number. The default is 1000. It influences only the polling driver.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPABORT, int </code><i>arg</i><code>)</code></p>
-<dd>If <i>arg</i> is 0, the printer driver will retry on errors, otherwise it will abort. The default is 0.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPABORTOPEN, int </code><i>arg</i><code>)</code></p>
-<dd>If <i>arg</i> is 0, <code><a href="/docs/linux/man/2-open/">open</a></code>(2) will be aborted on error, otherwise error will be ignored. The default is to ignore it.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPCAREFUL, int </code><i>arg</i><code>)</code></p>
-<dd>If <i>arg</i> is 0, then the out-of-paper, offline, and error signals are required to be false on all writes, otherwise they are ignored. The default is to ignore them.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPWAIT, int </code><i>arg</i><code>)</code></p>
-<dd>Sets the number of busy waiting iterations to wait before strobing the printer to accept a just-written character, and the number of iterations to wait before turning the strobe off again, to <i>arg</i>. The specification says this time should be 0.5 microseconds, but experience has shown the delay caused by the code is already enough. For that reason, the default value is 0. This is used for both the polling and the interrupt driver.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPSETIRQ, int </code><i>arg</i><code>)</code></p>
-<dd>This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) requires superuser privileges. It takes an <i>int</i> containing the new IRQ as argument. As a side effect, the printer will be reset. When <i>arg</i> is 0, the polling driver will be used, which is also default.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPGETIRQ, int *</code><i>arg</i><code>)</code></p>
-<dd>Stores the currently used IRQ in <i>arg</i>.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPGETSTATUS, int *</code><i>arg</i><code>)</code></p>
-<dd>Stores the value of the status port in <i>arg</i>. The bits have the following meaning: </p>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPTIME, int </code><i>arg</i><code>)</code></dt>
+<dd>Sets the amount of time that the driver sleeps before rechecking the printer when the printer&#8217;s buffer appears to be filled to <i>arg</i>. If you have a fast printer, decrease this number; if you have a slow printer, then increase it. This is in hundredths of a second, the default 2 being 0.02 seconds. It influences only the polling driver.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPCHAR, int </code><i>arg</i><code>)</code></dt>
+<dd>Sets the maximum number of busy-wait iterations which the polling driver does while waiting for the printer to get ready for receiving a character to <i>arg</i>. If printing is too slow, increase this number; if the system gets too slow, decrease this number. The default is 1000. It influences only the polling driver.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPABORT, int </code><i>arg</i><code>)</code></dt>
+<dd>If <i>arg</i> is 0, the printer driver will retry on errors, otherwise it will abort. The default is 0.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPABORTOPEN, int </code><i>arg</i><code>)</code></dt>
+<dd>If <i>arg</i> is 0, <code><a href="/docs/linux/man/2-open/">open</a></code>(2) will be aborted on error, otherwise error will be ignored. The default is to ignore it.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPCAREFUL, int </code><i>arg</i><code>)</code></dt>
+<dd>If <i>arg</i> is 0, then the out-of-paper, offline, and error signals are required to be false on all writes, otherwise they are ignored. The default is to ignore them.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPWAIT, int </code><i>arg</i><code>)</code></dt>
+<dd>Sets the number of busy waiting iterations to wait before strobing the printer to accept a just-written character, and the number of iterations to wait before turning the strobe off again, to <i>arg</i>. The specification says this time should be 0.5 microseconds, but experience has shown the delay caused by the code is already enough. For that reason, the default value is 0. This is used for both the polling and the interrupt driver.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPSETIRQ, int </code><i>arg</i><code>)</code></dt>
+<dd>This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) requires superuser privileges. It takes an <i>int</i> containing the new IRQ as argument. As a side effect, the printer will be reset. When <i>arg</i> is 0, the polling driver will be used, which is also default.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPGETIRQ, int *</code><i>arg</i><code>)</code></dt>
+<dd>Stores the currently used IRQ in <i>arg</i>.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPGETSTATUS, int *</code><i>arg</i><code>)</code></dt>
+<dd>Stores the value of the status port in <i>arg</i>. The bits have the following meaning: </dd>
 <table>
 <tr VALIGN=top>
 <td>LP_PBUSY</td>
@@ -60,9 +60,9 @@ description: "lp – line printer devices"
 </td>
 </tr>
 </table>
-<dd>Refer to your printer manual for the meaning of the signals. Note that undocumented bits may also be set, depending on your printer.</p>
-<dt><code>int ioctl(int </code><i>fd</i><code>, LPRESET)</code></p>
-<dd>Resets the printer. No argument is used.</dl>
+<dd>Refer to your printer manual for the meaning of the signals. Note that undocumented bits may also be set, depending on your printer.</dd>
+<dt><code>int ioctl(int </code><i>fd</i><code>, LPRESET)</code></dt>
+<dd>Resets the printer. No argument is used.</dd></dl>
 <h2>Files</h2>
 <p><i>/dev/lp*</i></p>
 <h2>See Also</h2>

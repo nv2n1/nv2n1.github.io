@@ -21,12 +21,12 @@ description: "acl_set_qualifier – set the qualifier of an ACL entry"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_set_qualifier function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>entry_d</i> is not a valid descriptor for an ACL entry. </p>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>entry_d</i> is not a valid descriptor for an ACL entry. </dd>
 <p> The value of the tag type in the ACL entry referenced by the argument <i>entry_d</i> is neither ACL_USER nor ACL_GROUP. </p>
 <p> The value pointed to by the argument <i>qualifier_p</i> is not valid.</p>
-<dt><code>Bq </code>Er ENOMEM</p>
-<dd> The Fn acl_set_qualifier function is unable to allocate the memory required for the ACL qualifier.</dl>
+<dt><code>Bq </code>Er ENOMEM</dt>
+<dd> The Fn acl_set_qualifier function is unable to allocate the memory required for the ACL qualifier.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

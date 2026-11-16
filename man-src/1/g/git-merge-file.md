@@ -20,7 +20,7 @@ git merge - file[-L&lt;current - name&gt;[-L&lt;base - name&gt;[-L&lt;other - na
 <p> A conflict occurs if both <code>&lt;current-file&gt;</code> and <code>&lt;other-file&gt;</code> have changes in a common segment of lines. If a conflict is found, <i>git merge-file</i> normally outputs a warning and brackets the conflict with lines containing &lt;&lt;&lt;&lt;&lt;&lt;&lt; and &gt;&gt;&gt;&gt;&gt;&gt;&gt; markers. A typical conflict will look like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; A
 lines in file A
@@ -28,7 +28,7 @@ lines in file A
 lines in file B
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; B
 </pre>
-</dl>
+</dd></dl>
 <p> If there are conflicts, the user should edit the result and delete one of the alternatives. When <code>&#8211;ours</code>, <code>&#8211;theirs</code>, or <code>&#8211;union</code> option is in effect, however, these conflicts are resolved favouring lines from <code>&lt;current-file&gt;</code>, lines from <code>&lt;other-file&gt;</code>, or lines from both respectively. The length of the conflict markers can be given with the <code>&#8211;marker-size</code> option. </p>
 <p> The exit value of this program is negative on error, and the number of conflicts otherwise (truncated to 127 if there are more than that many conflicts). If the merge was clean, the exit value is 0. </p>
 <p> <i>git merge-file</i> is designed to be a minimal clone of RCS <i>merge</i>; that is, it implements all of RCS <i>merge</i>&#8216;s functionality which is needed by <code><a href="/docs/linux/man/1-git/">git</a></code>(1).</p>
@@ -36,32 +36,32 @@ lines in file B
 <p> -L &lt;label&gt;</p>
 <dl>
 <dt>
-<dd> This option may be given up to three times, and specifies labels to be used in place of the corresponding file names in conflict reports. That is, <code>git merge-file -L x -L y -L z a b c</code> generates output that looks like it came from files x, y and z instead of from files a, b and c.</dl>
+</dt><dd> This option may be given up to three times, and specifies labels to be used in place of the corresponding file names in conflict reports. That is, <code>git merge-file -L x -L y -L z a b c</code> generates output that looks like it came from files x, y and z instead of from files a, b and c.</dd></dl>
 <p> -p</p>
 <dl>
 <dt>
-<dd> Send results to standard output instead of overwriting <code>&lt;current-file&gt;</code>.</dl>
+</dt><dd> Send results to standard output instead of overwriting <code>&lt;current-file&gt;</code>.</dd></dl>
 <p> -q</p>
 <dl>
 <dt>
-<dd> Quiet; do not warn about conflicts.</dl>
+</dt><dd> Quiet; do not warn about conflicts.</dd></dl>
 <p> &#8211;diff3</p>
 <dl>
 <dt>
-<dd> Show conflicts in &quot;diff3&quot; style.</dl>
+</dt><dd> Show conflicts in &quot;diff3&quot; style.</dd></dl>
 <p> &#8211;ours, &#8211;theirs, &#8211;union</p>
 <dl>
 <dt>
-<dd> Instead of leaving conflicts in the file, resolve conflicts favouring our (or their or both) side of the lines.</dl>
+</dt><dd> Instead of leaving conflicts in the file, resolve conflicts favouring our (or their or both) side of the lines.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>git merge-file README.my README README.upstream</code></p>
 <dl>
 <dt>
-<dd> combines the changes of README.my and README.upstream since README, tries to merge them and writes the result into README.my.</dl>
+</dt><dd> combines the changes of README.my and README.upstream since README, tries to merge them and writes the result into README.my.</dd></dl>
 <p> <code>git merge-file -L a -L b -L c tmp/a123 tmp/b234 tmp/c345</code></p>
 <dl>
 <dt>
-<dd> merges tmp/a123 and tmp/c345 with the base tmp/b234, but uses labels <code>a</code> and <code>c</code> instead of <code>tmp/a123</code> and <code>tmp/c345</code>.</dl>
+</dt><dd> merges tmp/a123 and tmp/c345 with the base tmp/b234, but uses labels <code>a</code> and <code>c</code> instead of <code>tmp/a123</code> and <code>tmp/c345</code>.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

@@ -16,12 +16,12 @@ description: "XmTextScroll — A Text function that scrolls text"
 <h2>Description</h2>
 <p><code>XmTextScroll</code> scrolls text by a given number of lines in a Text widget. The sign of the number is interpreted according to the value of the <code>XmNlayoutDirection</code> resource.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</p>
-<dt><i>lines</i></p>
-<dd>Specifies the number of lines of text to scroll. A positive value causes text to scroll upward; a negative value causes text to scroll downward. Note that the text will scroll only as long as one line of text remains visible in the window.</p>
-<dd>If a navigator exists, this function uses the <code>XmQTnavigator</code> trait to update the vertical navigator&#8217;s value.</p>
-<dd>In the case of vertical writing, a positive value causes the text to scroll forward; a negative value causes the lines to scroll backward.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd>
+<dt><i>lines</i></dt>
+<dd>Specifies the number of lines of text to scroll. A positive value causes text to scroll upward; a negative value causes text to scroll downward. Note that the text will scroll only as long as one line of text remains visible in the window.</dd>
+<dd>If a navigator exists, this function uses the <code>XmQTnavigator</code> trait to update the vertical navigator&#8217;s value.</dd>
+<dd>In the case of vertical writing, a positive value causes the text to scroll forward; a negative value causes the lines to scroll backward.</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>

@@ -14,8 +14,8 @@ description: "proftpd.conf – ProFTPD server configuration file"
  <i>/etc/proftpd/proftpd.conf</i><br />
  <i>/usr/local/etc/proftpd.conf</i></p>
 <dl>
-<dt>or passed to proftpd with the -c command-line option.</p>
-<dd></dl>
+<dt>or passed to proftpd with the -c command-line option.</dt>
+<dd></dd></dl>
 <p> The <code>proftpd.conf</code> configuration file contains <i>directives</i> , one per line. Lines starting with # and empty lines are comments and are ignored. Directives are case-insensitive, whereas values are case-sensitive. Values may be enclosed in double-quotes (&quot;) if they contain spaces. </p>
 <p> The possible directives and their descriptions are described online at <code><a rel="nofollow" href="http://www.proftpd.org/docs/directives/linked/by-name.html">http://www.proftpd.org/docs/directives/linked/by-name.html</a></code></p>
 <h2>Files</h2>

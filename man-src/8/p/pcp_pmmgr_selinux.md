@@ -93,8 +93,8 @@ description: "pcp_pmmgr_selinux – Security Enhanced Linux Policy for the pcp_p
 <p> <code>pcp_pmmgr_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmmgr_exec_t type, if you want to transition an executable to the pcp_pmmgr_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pmmgr, /usr/libexec/pcp/bin/pmmgr </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pmmgr, /usr/libexec/pcp/bin/pmmgr </dd>
 </dl>
 <p> <code>pcp_pmmgr_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmmgr_initrc_exec_t type, if you want to transition an executable to the pcp_pmmgr_initrc_t domain. </p>

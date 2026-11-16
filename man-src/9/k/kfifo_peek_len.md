@@ -10,12 +10,12 @@ description: "kfifo_peek_len – gets the size of the next fifo record"
 <p>kfifo_peek_len &#8211; gets the size of the next fifo record</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kfifo_peek_len(</code><i>fifo</i><code>);</code></dl>
+<dt> <code>kfifo_peek_len(</code><i>fifo</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>fifo</i></p>
 <dl>
 <dd>
-<dd>address of the fifo to be used</dl>
+</dd><dd>address of the fifo to be used</dd></dl>
 <h2>Description</h2>
 <p>This function returns the size of the next fifo record in number of bytes.</p>
 <h2>Copyright</h2>

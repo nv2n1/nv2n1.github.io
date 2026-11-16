@@ -19,7 +19,7 @@ description: "sgees.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SGEES computes for an N-by-N real nonsymmetric matrix A, the
  eigenvalues, the real Schur form T, and, optionally, the matrix of
@@ -35,11 +35,11 @@ description: "sgees.f –"
          [  c  a  ]
  where b*c &lt; 0. The eigenvalues of such a block are a +- sqrt(bc).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVS</i> </p>
+</dt><dd> <i>JOBVS</i> </dd>
 <pre>
           JOBVS is CHARACTER*1
           = 'N': Schur vectors are not computed;
@@ -154,14 +154,14 @@ if JOBVS
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 216 of file sgees.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

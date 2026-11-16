@@ -17,11 +17,9 @@ description: "load_bmp_pf – Packfile version of load_bmp. Allegro game program
 <pre><code>
 PACKFILE *packfile;
 BITMAP *bmp;
-
 packfile = pack_fopen("mybitmap.bmp", F_READ);
 if (!packfile)
     abort_on_error("Couldn't open mybitmap.bmp");
-
 bmp = load_bmp_pf(packfile, pal);
 if (!bmp)
     abort_on_error("Error loading mybitmap.bmp");

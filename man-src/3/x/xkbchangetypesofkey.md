@@ -11,22 +11,22 @@ description: "XkbChangeTypesOfKey – Change the number of groups and the types 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbChangeTypesOfKey</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>key</i><code>,</code> <code>int </code><i>n_groups</i><code>,</code> <code>unsigned int </code><i>groups</i><code>,</code> <code>int *</code><i>new_types_in</i><code>,</code> <code>XkbMapChangesPtr </code><i>p_changes</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description to be changed</p>
-<dt><i>&#8211; key</i></p>
-<dd>keycode for key of interest</p>
-<dt><i>&#8211; n_groups</i></p>
-<dd>new number of groups for key</p>
-<dt><i>&#8211; groups</i></p>
-<dd>mask indicating groups to change</p>
-<dt><i>&#8211; new_types_in</i></p>
-<dd>indices for new groups specified in groups</p>
-<dt><i>&#8211; p_changes</i></p>
-<dd>notes changes made to xkb</dl>
+</dd><dd>keyboard description to be changed</dd>
+<dt><i>&#8211; key</i></dt>
+<dd>keycode for key of interest</dd>
+<dt><i>&#8211; n_groups</i></dt>
+<dd>new number of groups for key</dd>
+<dt><i>&#8211; groups</i></dt>
+<dd>mask indicating groups to change</dd>
+<dt><i>&#8211; new_types_in</i></dt>
+<dd>indices for new groups specified in groups</dd>
+<dt><i>&#8211; p_changes</i></dt>
+<dd>notes changes made to xkb</dd></dl>
 <h2>Description</h2>
 <p><i>XkbChangeTypesOfKey </i> reallocates the symbols and actions bound to the key, if necessary, and initializes any new symbols or actions to NoSymbol or NoAction, as appropriate. If the p_changes parameter is not NULL, <i>XkbChangeTypesOfKey </i> adds the XkbKeySymsMask to the changes field of <i>p_changes </i> and modifies the <i>first_key_sym </i> and <i>num_key_syms </i> fields of <i>p_changes </i> to include the <i>key </i> that was changed. See STRUCTURE for more information on the XkbMapChangesPtr structure. If successful, <i>XkbChangeTypesOfKey </i> returns Success. </p>
 <p> The <i>n_groups </i> parameter specifies the new number of groups for the key. The <i>groups </i> parameter is a mask specifying the groups for which new types are supplied and is a bitwise inclusive OR of the following masks: XkbGroup1Mask, XkbGroup2Mask, XkbGroup3Mask, and XkbGroup4Mask. </p>
@@ -111,12 +111,12 @@ changed */
 } XkbMapChangesRec,*XkbMapChangesPtr;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAccess</code></p>
-<dd>The Xkb extension has not been properly initialized</p>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range </p>
+<dt><code>BadAccess</code></dt>
+<dd>The Xkb extension has not been properly initialized</dd>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range </dd>
 </dl>

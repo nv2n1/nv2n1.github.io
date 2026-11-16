@@ -15,15 +15,15 @@ strnstr - Find the first substring in a length-limited string
 <h2>Arguments</h2>
 
 <i>s1</i>
-<dl><dd><dd>The string to be searched</dl>
+<dl><dd></dd><dd>The string to be searched</dd></dl>
  
 
  <i>s2</i>
-<dl><dd>The string to search for</dl>
+<dl><dd>The string to search for</dd></dl>
  
 
  <i>len</i>
-<dl><dd>the maximum number of characters to search</dl>
+<dl><dd>the maximum number of characters to search</dd></dl>
 
 <h2>Copyright</h2>
 

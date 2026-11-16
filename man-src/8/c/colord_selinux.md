@@ -118,8 +118,8 @@ description: "colord_selinux – Security Enhanced Linux Policy for the colord p
 <p> <code>colord_exec_t</code> </p>
 <p> &#8211; Set files with the colord_exec_t type, if you want to transition an executable to the colord_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/[^/]*/colord/colord, /usr/lib/[^/]*/colord/colord-sane, /usr/libexec/colord, /usr/lib/colord/colord, /usr/libexec/colord-sane, /usr/lib/colord/colord-sane </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/[^/]*/colord/colord, /usr/lib/[^/]*/colord/colord-sane, /usr/libexec/colord, /usr/lib/colord/colord, /usr/libexec/colord-sane, /usr/lib/colord/colord-sane </dd>
 </dl>
 <p> <code>colord_tmp_t</code> </p>
 <p> &#8211; Set files with the colord_tmp_t type, if you want to store colord temporary files in the /tmp directories. </p>
@@ -130,8 +130,8 @@ description: "colord_selinux – Security Enhanced Linux Policy for the colord p
 <p> <code>colord_var_lib_t</code> </p>
 <p> &#8211; Set files with the colord_var_lib_t type, if you want to store the colord files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/color(/.*)?, /var/lib/colord(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/color(/.*)?, /var/lib/colord(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

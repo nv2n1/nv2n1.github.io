@@ -14,8 +14,8 @@ description: "sys-unconfig – shell script to reconfigure the system upon next 
 <p><code>sys-unconfig</code> provides a simple method of reconfiguring a system in a new environment. Upon executing sys-unconfig will poweroff your system, and run firstboot at next boot. </p>
 <h2>Files</h2>
 <dl>
-<dt><i>/.unconfigured</i></p>
-<dd>The presence of this file will trigger firsboot. </p>
+<dt><i>/.unconfigured</i></dt>
+<dd>The presence of this file will trigger firsboot. </dd>
 </dl>
 <h2>Notes</h2>
 <p>This utility should not be used for creating cloud or virtual machine images. For that use please see <code>virt-sysprep</code>. </p>

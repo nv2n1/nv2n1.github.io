@@ -16,81 +16,72 @@ description: "nona – Stitch a panorama image"
 <p> Only the non-antialiasing interpolators of PanoTools are supported. </p>
 <p> The following output formats (<code>n</code> option of PanoTools <code>p</code> script line) are supported:</p>
 <dl>
-<dt><font SIZE="-1">JPEG, TIFF, PNG :</font> Single image formats without feathered blending</p>
+<dt><font SIZE="-1">JPEG, TIFF, PNG :</font> Single image formats without feathered blending</dt>
 <dd>
-<dt>TIFF_m : multiple tiff files</p>
+</dd><dt>TIFF_m : multiple tiff files</dt>
 <dd>
-<dt>TIFF_multilayer : Multilayer tiff files, readable by The Gimp 2.0</p>
-<dd></dl>
+</dd><dt>TIFF_multilayer : Multilayer tiff files, readable by The Gimp 2.0</dt>
+<dd></dd></dl>
 <h2>OPTIONS</h2>
 <p> General options:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Create coordinate images (only TIFF_m output)</p>
-<dt><code>-v</code></p>
-<dd> Quiet, do not output progress indicators</p>
-<dt><code>-t</code> <i>num</i></p>
-<dd> Number of threads to be used (default: number of available cores)</dl>
+<dt><code>-c</code></dt>
+<dd> Create coordinate images (only TIFF_m output)</dd>
+<dt><code>-v</code></dt>
+<dd> Quiet, do not output progress indicators</dd>
+<dt><code>-t</code> <i>num</i></dt>
+<dd> Number of threads to be used (default: number of available cores)</dd></dl>
 <p> The following options can be used to override settings in the project file:</p>
 <dl>
-<dt><code>-i</code> <i>num</i></p>
-<dd> Remap only image with number num (can be specified multiple times)</p>
-<dt><code>-m</code> <i>str</i></p>
-<dd> Set output file format (<font SIZE="-1">TIFF,</font> TIFF_m, TIFF_multilayer, <font SIZE="-1">EXR,</font> EXR_m)</p>
-<dt><code>-r</code> <i>ldr</i>/<i>hdr</i></p>
-<dd> Set output mode:</p>
+<dt><code>-i</code> <i>num</i></dt>
+<dd> Remap only image with number num (can be specified multiple times)</dd>
+<dt><code>-m</code> <i>str</i></dt>
+<dd> Set output file format (<font SIZE="-1">TIFF,</font> TIFF_m, TIFF_multilayer, <font SIZE="-1">EXR,</font> EXR_m)</dd>
+<dt><code>-r</code> <i>ldr</i>/<i>hdr</i></dt>
+<dd> Set output mode:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>ldr &#8211; keep original bit depth and response</p>
+<dt>ldr &#8211; keep original bit depth and response</dt>
 <dd>
-<dt>hdr &#8211; merge to hdr</p>
-<dd></dl>
+</dd><dt>hdr &#8211; merge to hdr</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-e</code> <i>exposure</i></p>
-<dd> Set exposure for ldr mode</p>
-<dt><code>-p</code> <i></i><font SIZE="-1"><i>TYPE</i></font><i></i></p>
-<dd> Pixel type of the output. Can be one of:</p>
+</dl>
+<dt><code>-e</code> <i>exposure</i></dt>
+<dd> Set exposure for ldr mode</dd>
+<dt><code>-p</code> <i></i><font SIZE="-1"><i>TYPE</i></font><i></i></dt>
+<dd> Pixel type of the output. Can be one of:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><font SIZE="-1">UINT8 8</font> bit unsigned integer</p>
+<dt><font SIZE="-1">UINT8 8</font> bit unsigned integer</dt>
 <dd>
-<dt><font SIZE="-1">UINT16 16</font> bit unsigned integer</p>
+</dd><dt><font SIZE="-1">UINT16 16</font> bit unsigned integer</dt>
 <dd>
-<dt><font SIZE="-1">INT16 16</font> bit signed integer</p>
+</dd><dt><font SIZE="-1">INT16 16</font> bit signed integer</dt>
 <dd>
-<dt><font SIZE="-1">UINT32 32</font> bit unsigned integer</p>
+</dd><dt><font SIZE="-1">UINT32 32</font> bit unsigned integer</dt>
 <dd>
-<dt><font SIZE="-1">INT32 32</font> bit signed integer</p>
+</dd><dt><font SIZE="-1">INT32 32</font> bit signed integer</dt>
 <dd>
-<dt><font SIZE="-1">FLOAT 32</font> bit floating point</p>
-<dd></dl>
+</dd><dt><font SIZE="-1">FLOAT 32</font> bit floating point</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-z</code></p>
-<dd> Set compression type. Possible options for tiff output:</p>
+</dl>
+<dt><code>-z</code></dt>
+<dd> Set compression type. Possible options for tiff output:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><font SIZE="-1">NONE </font> no compression</p>
+<dt><font SIZE="-1">NONE </font> no compression</dt>
 <dd>
-<dt><font SIZE="-1">LZW LZW</font> compression</p>
+</dd><dt><font SIZE="-1">LZW LZW</font> compression</dt>
 <dd>
-<dt><font SIZE="-1">DEFLATE </font> deflate compression</p>
-<dd></dl>
+</dd><dt><font SIZE="-1">DEFLATE </font> deflate compression</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo. Also contains contributions from Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>

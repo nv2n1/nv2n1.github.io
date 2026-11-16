@@ -26,39 +26,39 @@ description: "ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcod
 <p> void ldns_pkt_set_edns_data(ldns_pkt *packet, ldns_rdf *data); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_pkt_edns</i>()</p>
-<dd>returns true if this packet needs and EDNS rr to be sent. At the moment the only reason is an expected packet size larger than 512 bytes, but for instance dnssec would be a good reason too. </p>
+<dt> <i>ldns_pkt_edns</i>()</dt>
+<dd>returns true if this packet needs and EDNS rr to be sent. At the moment the only reason is an expected packet size larger than 512 bytes, but for instance dnssec would be a good reason too. </dd>
 <p> .br <code>packet</code>: the packet to check .br Returns true if packet needs edns rr</dl>
 <dl>
-<dt> <i>ldns_pkt_edns_udp_size</i>()</p>
-<dd>return the packet&#8217;s edns udp size .br <code>packet</code>: the packet .br Returns the size</dl>
+<dt> <i>ldns_pkt_edns_udp_size</i>()</dt>
+<dd>return the packet&#8217;s edns udp size .br <code>packet</code>: the packet .br Returns the size</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_edns_extended_rcode</i>()</p>
-<dd>return the packet&#8217;s edns extended rcode .br <code>packet</code>: the packet .br Returns the rcode</dl>
+<dt> <i>ldns_pkt_edns_extended_rcode</i>()</dt>
+<dd>return the packet&#8217;s edns extended rcode .br <code>packet</code>: the packet .br Returns the rcode</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_edns_version</i>()</p>
-<dd>return the packet&#8217;s edns version .br <code>packet</code>: the packet .br Returns the version</dl>
+<dt> <i>ldns_pkt_edns_version</i>()</dt>
+<dd>return the packet&#8217;s edns version .br <code>packet</code>: the packet .br Returns the version</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_edns_z</i>()</p>
-<dd>return the packet&#8217;s edns z value .br <code>packet</code>: the packet .br Returns the z value</dl>
+<dt> <i>ldns_pkt_edns_z</i>()</dt>
+<dd>return the packet&#8217;s edns z value .br <code>packet</code>: the packet .br Returns the z value</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_edns_data</i>()</p>
-<dd>return the packet&#8217;s edns data .br <code>packet</code>: the packet .br Returns the data</dl>
+<dt> <i>ldns_pkt_edns_data</i>()</dt>
+<dd>return the packet&#8217;s edns data .br <code>packet</code>: the packet .br Returns the data</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_edns_udp_size</i>()</p>
-<dd>Set the packet&#8217;s edns udp size .br <code>packet</code>: the packet .br <code>s</code>: the size</dl>
+<dt> <i>ldns_pkt_set_edns_udp_size</i>()</dt>
+<dd>Set the packet&#8217;s edns udp size .br <code>packet</code>: the packet .br <code>s</code>: the size</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_edns_extended_rcode</i>()</p>
-<dd>Set the packet&#8217;s edns extended rcode .br <code>packet</code>: the packet .br <code>c</code>: the code</dl>
+<dt> <i>ldns_pkt_set_edns_extended_rcode</i>()</dt>
+<dd>Set the packet&#8217;s edns extended rcode .br <code>packet</code>: the packet .br <code>c</code>: the code</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_edns_version</i>()</p>
-<dd>Set the packet&#8217;s edns version .br <code>packet</code>: the packet .br <code>v</code>: the version</dl>
+<dt> <i>ldns_pkt_set_edns_version</i>()</dt>
+<dd>Set the packet&#8217;s edns version .br <code>packet</code>: the packet .br <code>v</code>: the version</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_edns_z</i>()</p>
-<dd>Set the packet&#8217;s edns z value .br <code>packet</code>: the packet .br <code>z</code>: the value</dl>
+<dt> <i>ldns_pkt_set_edns_z</i>()</dt>
+<dd>Set the packet&#8217;s edns z value .br <code>packet</code>: the packet .br <code>z</code>: the value</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_set_edns_data</i>()</p>
-<dd>Set the packet&#8217;s edns data .br <code>packet</code>: the packet .br <code>data</code>: the data</dl>
+<dt> <i>ldns_pkt_set_edns_data</i>()</dt>
+<dd>Set the packet&#8217;s edns data .br <code>packet</code>: the packet .br <code>data</code>: the data</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

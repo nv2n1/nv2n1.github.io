@@ -14,13 +14,13 @@ description: "usb_create_hcd – create and initialize an HCD structure"
 <p><i>driver</i></p>
 <dl>
 <dd>
-<dd>HC driver that will use this hcd</dl>
+</dd><dd>HC driver that will use this hcd</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>device for this HC, stored in hcd-&gt;self.controller</dl>
+<dd>device for this HC, stored in hcd-&gt;self.controller</dd></dl>
 <p> <i>bus_name</i></p>
 <dl>
-<dd>value to store in hcd-&gt;self.bus_name</dl>
+<dd>value to store in hcd-&gt;self.bus_name</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

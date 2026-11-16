@@ -34,16 +34,13 @@ The previously-installed new handler, or a null pointer value if none was instal
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;new&gt;
 void handler()
-
 {
     std::cout &lt;&lt; &quot;Memory allocation failed, terminating\n&quot;;
     std::set_new_handler(nullptr);
 }
 int main()
-
 {
     std::set_new_handler(handler);
     try {

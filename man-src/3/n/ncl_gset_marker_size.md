@@ -13,8 +13,8 @@ description: "gset_marker_size (Set marker size scale factor) – sets the polym
 <p> void gset_marker_size(Gdouble marker_size);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>marker_size</p>
-<dd>(Input) A scale factor to control the size of the marker. It must be greater than or equal to 0. Since marker_size = 1.0 by default, setting marker_size = 2.0 doubles polymarker size.</dl>
+<dt>marker_size</dt>
+<dd>(Input) A scale factor to control the size of the marker. It must be greater than or equal to 0. Since marker_size = 1.0 by default, setting marker_size = 2.0 doubles polymarker size.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

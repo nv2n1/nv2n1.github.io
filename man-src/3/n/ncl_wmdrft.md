@@ -21,11 +21,11 @@ CALL WMDRFT (N, X, Y)
 <h2>Description</h2>
 
 <dl><dt>N
-<dd>(Integer, Input) - The number of points supplied in the second and third arguments.
-<dt>X
-<dd>(Real, Input) - The X coordinates (specified in world coordinates) of N points that specify the control points of a spline curve that will be fitted to represent the requested weather front.
-<dt>Y
-<dd>(Real, Input) - The Y coordinates (specified in world coordinates) of N points that specify the control points of a spline curve that will be fitted to represent the requested weather front.</dl>
+</dt><dd>(Integer, Input) - The number of points supplied in the second and third arguments.
+</dd><dt>X
+</dt><dd>(Real, Input) - The X coordinates (specified in world coordinates) of N points that specify the control points of a spline curve that will be fitted to represent the requested weather front.
+</dd><dt>Y
+</dt><dd>(Real, Input) - The Y coordinates (specified in world coordinates) of N points that specify the control points of a spline curve that will be fitted to represent the requested weather front.</dd></dl>
 
 <h2>Usage</h2>
 

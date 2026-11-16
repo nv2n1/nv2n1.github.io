@@ -19,7 +19,7 @@ description: "cla_herpvgrw.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLA_HERPVGRW computes the reciprocal pivot growth factor
  norm(A)/norm(U). The &quot;max absolute element&quot; norm is used. If this is
@@ -28,11 +28,11 @@ description: "cla_herpvgrw.f –"
  solution X, estimated condition numbers, and error bounds could be
  unreliable.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
        = 'U':  Upper triangle of A is stored;
@@ -85,14 +85,14 @@ description: "cla_herpvgrw.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 123 of file cla_herpvgrw.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

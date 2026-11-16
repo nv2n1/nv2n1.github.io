@@ -18,12 +18,12 @@ description: "axohelp – helper program for use of LaTeX package axodraw2 with 
 <h2>OPTIONS</h2>
 <p> Options can be introduced by single or double hyphen characters. The possible options are: </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Gives usage information </p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Gives version information </p>
-<dt><code>-V</code></p>
-<dd> NOT CURRENTLY IMPLEMENTED: Give information on each function used. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Gives usage information </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Gives version information </dd>
+<dt><code>-V</code></dt>
+<dd> NOT CURRENTLY IMPLEMENTED: Give information on each function used. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Current version, by John Collins (username jcc8 at node psu.edu) and Jos Vermaseren (username t68 at nikhef dot nl). </p>

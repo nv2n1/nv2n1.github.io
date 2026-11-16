@@ -11,11 +11,8 @@ std::literals::chrono_literals::operator&quot;&quot;ms - std::literals::chrono_l
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;chrono&gt;
-
 constexpr std::chrono::milliseconds operator &quot;&quot; ms(unsigned long long ms); (1) (since C++14)
-
 constexpr std::chrono::duration&lt;/*unspecified*/,                           (2) (since C++14)
-
 std::milli&gt; operator &quot;&quot; ms(long double ms);</code></pre> 
 Forms a std::chrono::duration literal representing milliseconds. 
 1) integer literal, returns exactly std::chrono::milliseconds(ms) 
@@ -48,10 +45,8 @@ In addition, within the namespace std::chrono, the directive using namespace lit
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     using namespace std::chrono_literals;
     auto d1 = 250ms;

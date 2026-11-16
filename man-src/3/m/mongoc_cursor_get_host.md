@@ -14,11 +14,11 @@ mongoc_cursor_get_host (mongoc_cursor_t *cursor,
  mongoc_host_list_t *host);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>host</code></p>
-<dd>A <code>mongoc_host_list_t</code> \&amp;.</dl>
+<dt><code>host</code></dt>
+<dd>A <code>mongoc_host_list_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the MongoDB host that the cursor is communicating with in the <code>host</code> out parameter. </p>
 <h2>Colophon</h2>

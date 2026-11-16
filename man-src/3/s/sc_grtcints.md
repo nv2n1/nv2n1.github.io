@@ -11,7 +11,6 @@ description: "sc::GRTCints –"
 <p> <code>GRTCints</code> is a specialization of <code>Int2eCints</code> that computes two-electron integrals specific to linear R12 methods.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;grt.h&gt;</code></pre>
 <p> Inherits <code>sc::Int2eCints</code>.</p>
 <h3>Public Member Functions</h3>

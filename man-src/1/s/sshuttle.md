@@ -18,54 +18,54 @@ description: "sshuttle – sshuttle documentation"
 <p> If run on a router, <code>sshuttle</code> can forward traffic for your entire subnet to the VPN.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>subnets</code></p>
-<dd> A list of subnets to route over the VPN, in the form <code>a.b.c.d[/width][port[-port]]</code>. Valid examples are 1.2.3.4 (a single IP address), 1.2.3.4/32 (equivalent to 1.2.3.4), 1.2.3.0/24 (a 24-bit subnet, ie. with a 255.255.255.0 netmask), and 0/0 (‘just route everything through the VPN’). Any of the previous examples are also valid if you append a port or a port range, so 1.2.3.4:8000 will only tunnel traffic that has as the destination port 8000 of 1.2.3.4 and 1.2.3.0/24:8000-9000 will tunnel traffic going to any port between 8000 and 9000 (inclusive) for all IPs in the 1.2.3.0/24 subnet. It is also possible to use a name in which case the first IP it resolves to during startup will be routed over the VPN. Valid examples are example.com, example.com:8000 and example.com:8000-9000.</p>
-<dt><code>&#8211;method [auto|nat|tproxy|pf]</code></p>
-<dd> Which firewall method should sshuttle use? For auto, sshuttle attempts to guess the appropriate method depending on what it can find in PATH. The default value is auto.</p>
-<dt><code>-l, &#8211;listen=[ip:]port</code></p>
-<dd> Use this ip address and port number as the transparent proxy port. By default <code>sshuttle</code> finds an available port automatically and listens on IP 127.0.0.1 (localhost), so you don’t need to override it, and connections are only proxied from the local machine, not from outside machines. If you want to accept connections from other machines on your network (ie. to run <code>sshuttle</code> on a router) try enabling IP Forwarding in your kernel, then using <code>&#8211;listen 0.0.0.0:0</code>. You can use any name resolving to an IP address of the machine running <code>sshuttle</code>, e.g. <code>&#8211;listen localhost</code>. </p>
+<dt><code>subnets</code></dt>
+<dd> A list of subnets to route over the VPN, in the form <code>a.b.c.d[/width][port[-port]]</code>. Valid examples are 1.2.3.4 (a single IP address), 1.2.3.4/32 (equivalent to 1.2.3.4), 1.2.3.0/24 (a 24-bit subnet, ie. with a 255.255.255.0 netmask), and 0/0 (‘just route everything through the VPN’). Any of the previous examples are also valid if you append a port or a port range, so 1.2.3.4:8000 will only tunnel traffic that has as the destination port 8000 of 1.2.3.4 and 1.2.3.0/24:8000-9000 will tunnel traffic going to any port between 8000 and 9000 (inclusive) for all IPs in the 1.2.3.0/24 subnet. It is also possible to use a name in which case the first IP it resolves to during startup will be routed over the VPN. Valid examples are example.com, example.com:8000 and example.com:8000-9000.</dd>
+<dt><code>&#8211;method [auto|nat|tproxy|pf]</code></dt>
+<dd> Which firewall method should sshuttle use? For auto, sshuttle attempts to guess the appropriate method depending on what it can find in PATH. The default value is auto.</dd>
+<dt><code>-l, &#8211;listen=[ip:]port</code></dt>
+<dd> Use this ip address and port number as the transparent proxy port. By default <code>sshuttle</code> finds an available port automatically and listens on IP 127.0.0.1 (localhost), so you don’t need to override it, and connections are only proxied from the local machine, not from outside machines. If you want to accept connections from other machines on your network (ie. to run <code>sshuttle</code> on a router) try enabling IP Forwarding in your kernel, then using <code>&#8211;listen 0.0.0.0:0</code>. You can use any name resolving to an IP address of the machine running <code>sshuttle</code>, e.g. <code>&#8211;listen localhost</code>. </dd>
 <p> For the tproxy and pf methods this can be an IPv6 address. Use this option twice if required, to provide both IPv4 and IPv6 addresses.</p>
-<dt><code>-H, &#8211;auto-hosts</code></p>
-<dd> Scan for remote hostnames and update the local /etc/hosts file with matching entries for as long as the VPN is open. This is nicer than changing your system’s DNS (/etc/resolv.conf) settings, for several reasons. First, hostnames are added without domain names attached, so you can <code>ssh thatserver</code> without worrying if your local domain matches the remote one. Second, if you <code>sshuttle</code> into more than one VPN at a time, it’s impossible to use more than one DNS server at once anyway, but <code>sshuttle</code> correctly merges /etc/hosts entries between all running copies. Third, if you’re only routing a few subnets over the VPN, you probably would prefer to keep using your local DNS server for everything else.</p>
-<dt><code>-N, &#8211;auto-nets</code></p>
-<dd> In addition to the subnets provided on the command line, ask the server which subnets it thinks we should route, and route those automatically. The suggestions are taken automatically from the server’s routing table.</p>
-<dt><code>&#8211;dns</code></p>
-<dd> Capture local DNS requests and forward to the remote DNS server. All queries to any of the local system’s DNS servers (/etc/resolv.conf) will be intercepted and resolved on the remote side of the tunnel instead, there using the DNS specified via the <code>&#8211;to-ns=</code> option, if specified.</p>
-<dt><code>&#8211;ns-hosts=server1[,server2[,server3[&#8230;]]]</code></p>
-<dd> Capture local DNS requests to the specified server(s) and forward to the remote DNS server. Contrary to the <i>&#8211;dns</i> option, this flag allows to specify the DNS server(s) the queries to which to intercept, instead of intercepting all DNS traffic on the local machine. This can be useful when only certain DNS requests should be resolved on the remote side of the tunnel, e.g. in combination with dnsmasq.</p>
-<dt><code>&#8211;to-ns=server</code></p>
-<dd> The DNS to forward requests to when remote DNS resolution is enabled. If not given, sshuttle will simply resolve using the system configured resolver on the remote side (via /etc/resolv.conf on the remote side).</p>
-<dt><code>&#8211;python</code></p>
-<dd> Specify the name/path of the remote python interpreter. The default is just <code>python</code>, which means to use the default python interpreter on the remote system’s PATH.</p>
-<dt><code>-r, &#8211;remote=[username@]sshserver[:port]</code></p>
-<dd> The remote hostname and optional username and ssh port number to use for connecting to the remote server. For example, example.com, <i>testuser [at] example.com</i>, <i>testuser [at] example.com</i>:2222, or example.com:2244.</p>
-<dt><code>-x, &#8211;exclude=subnet</code></p>
-<dd> Explicitly exclude this subnet from forwarding. The format of this option is the same as the <code>&lt;subnets&gt;</code> option. To exclude more than one subnet, specify the <code>-x</code> option more than once. You can say something like <code>0/0 -x 1.2.3.0/24</code> to forward everything except the local subnet over the VPN, for example.</p>
-<dt><code>-X, &#8211;exclude-from=file</code></p>
-<dd> Exclude the subnets specified in a file, one subnet per line. Useful when you have lots of subnets to exclude.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Print more information about the session. This option can be used more than once for increased verbosity. By default, <code>sshuttle</code> prints only error messages.</p>
-<dt><code>-e, &#8211;ssh-cmd</code></p>
-<dd> The command to use to connect to the remote server. The default is just <code>ssh</code>. Use this if your ssh client is in a non-standard location or you want to provide extra options to the ssh command, for example, <code>-e &#8216;ssh -v&#8217;</code>.</p>
-<dt><code>&#8211;seed-hosts</code></p>
-<dd> A comma-separated list of hostnames to use to initialize the <i>&#8211;auto-hosts</i> scan algorithm. <i>&#8211;auto-hosts</i> does things like poll local SMB servers for lists of local hostnames, but can speed things up if you use this option to give it a few names to start from. </p>
+<dt><code>-H, &#8211;auto-hosts</code></dt>
+<dd> Scan for remote hostnames and update the local /etc/hosts file with matching entries for as long as the VPN is open. This is nicer than changing your system’s DNS (/etc/resolv.conf) settings, for several reasons. First, hostnames are added without domain names attached, so you can <code>ssh thatserver</code> without worrying if your local domain matches the remote one. Second, if you <code>sshuttle</code> into more than one VPN at a time, it’s impossible to use more than one DNS server at once anyway, but <code>sshuttle</code> correctly merges /etc/hosts entries between all running copies. Third, if you’re only routing a few subnets over the VPN, you probably would prefer to keep using your local DNS server for everything else.</dd>
+<dt><code>-N, &#8211;auto-nets</code></dt>
+<dd> In addition to the subnets provided on the command line, ask the server which subnets it thinks we should route, and route those automatically. The suggestions are taken automatically from the server’s routing table.</dd>
+<dt><code>&#8211;dns</code></dt>
+<dd> Capture local DNS requests and forward to the remote DNS server. All queries to any of the local system’s DNS servers (/etc/resolv.conf) will be intercepted and resolved on the remote side of the tunnel instead, there using the DNS specified via the <code>&#8211;to-ns=</code> option, if specified.</dd>
+<dt><code>&#8211;ns-hosts=server1[,server2[,server3[&#8230;]]]</code></dt>
+<dd> Capture local DNS requests to the specified server(s) and forward to the remote DNS server. Contrary to the <i>&#8211;dns</i> option, this flag allows to specify the DNS server(s) the queries to which to intercept, instead of intercepting all DNS traffic on the local machine. This can be useful when only certain DNS requests should be resolved on the remote side of the tunnel, e.g. in combination with dnsmasq.</dd>
+<dt><code>&#8211;to-ns=server</code></dt>
+<dd> The DNS to forward requests to when remote DNS resolution is enabled. If not given, sshuttle will simply resolve using the system configured resolver on the remote side (via /etc/resolv.conf on the remote side).</dd>
+<dt><code>&#8211;python</code></dt>
+<dd> Specify the name/path of the remote python interpreter. The default is just <code>python</code>, which means to use the default python interpreter on the remote system’s PATH.</dd>
+<dt><code>-r, &#8211;remote=[username@]sshserver[:port]</code></dt>
+<dd> The remote hostname and optional username and ssh port number to use for connecting to the remote server. For example, example.com, <i>testuser [at] example.com</i>, <i>testuser [at] example.com</i>:2222, or example.com:2244.</dd>
+<dt><code>-x, &#8211;exclude=subnet</code></dt>
+<dd> Explicitly exclude this subnet from forwarding. The format of this option is the same as the <code>&lt;subnets&gt;</code> option. To exclude more than one subnet, specify the <code>-x</code> option more than once. You can say something like <code>0/0 -x 1.2.3.0/24</code> to forward everything except the local subnet over the VPN, for example.</dd>
+<dt><code>-X, &#8211;exclude-from=file</code></dt>
+<dd> Exclude the subnets specified in a file, one subnet per line. Useful when you have lots of subnets to exclude.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Print more information about the session. This option can be used more than once for increased verbosity. By default, <code>sshuttle</code> prints only error messages.</dd>
+<dt><code>-e, &#8211;ssh-cmd</code></dt>
+<dd> The command to use to connect to the remote server. The default is just <code>ssh</code>. Use this if your ssh client is in a non-standard location or you want to provide extra options to the ssh command, for example, <code>-e &#8216;ssh -v&#8217;</code>.</dd>
+<dt><code>&#8211;seed-hosts</code></dt>
+<dd> A comma-separated list of hostnames to use to initialize the <i>&#8211;auto-hosts</i> scan algorithm. <i>&#8211;auto-hosts</i> does things like poll local SMB servers for lists of local hostnames, but can speed things up if you use this option to give it a few names to start from. </dd>
 <p> If this option is used <i>without</i> <i>&#8211;auto-hosts</i>, then the listed hostnames will be scanned and added, but no further hostnames will be added.</p>
-<dt><code>&#8211;no-latency-control</code></p>
-<dd> Sacrifice latency to improve bandwidth benchmarks. ssh uses really big socket buffers, which can overload the connection if you start doing large file transfers, thus making all your other sessions inside the same tunnel go slowly. Normally, <code>sshuttle</code> tries to avoid this problem using a “fullness check” that allows only a certain amount of outstanding data to be buffered at a time. But on high-bandwidth links, this can leave a lot of your bandwidth underutilized. It also makes <code>sshuttle</code> seem slow in bandwidth benchmarks (benchmarks rarely test ping latency, which is what <code>sshuttle</code> is trying to control). This option disables the latency control feature, maximizing bandwidth usage. Use at your own risk.</p>
-<dt><code>-D, &#8211;daemon</code></p>
-<dd> Automatically fork into the background after connecting to the remote server. Implies <i>&#8211;syslog</i>.</p>
-<dt><code>&#8211;syslog</code></p>
-<dd> after connecting, send all log messages to the <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code> service instead of stderr. This is implicit if you use <i>&#8211;daemon</i>.</p>
-<dt><code>&#8211;pidfile=pidfilename</code></p>
-<dd> when using <i>&#8211;daemon</i>, save <code>sshuttle</code>’s pid to <i>pidfilename</i>. The default is <code>sshuttle.pid</code> in the current directory.</p>
-<dt><code>&#8211;disable-ipv6</code></p>
-<dd> If using tproxy or pf methods, this will disable IPv6 support.</p>
-<dt><code>&#8211;firewall</code></p>
-<dd> (internal use only) run the firewall manager. This is the only part of <code>sshuttle</code> that must run as root. If you start <code>sshuttle</code> as a non-root user, it will automatically run <code>sudo</code> or <code>su</code> to start the firewall manager, but the core of <code>sshuttle</code> still runs as a normal user.</p>
-<dt><code>&#8211;hostwatch</code></p>
-<dd> (internal use only) run the hostwatch daemon. This process runs on the server side and collects hostnames for the <i>&#8211;auto-hosts</i> option. Using this option by itself makes it a lot easier to debug and test the <i>&#8211;auto-hosts</i> feature.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print program version.</dl>
+<dt><code>&#8211;no-latency-control</code></dt>
+<dd> Sacrifice latency to improve bandwidth benchmarks. ssh uses really big socket buffers, which can overload the connection if you start doing large file transfers, thus making all your other sessions inside the same tunnel go slowly. Normally, <code>sshuttle</code> tries to avoid this problem using a “fullness check” that allows only a certain amount of outstanding data to be buffered at a time. But on high-bandwidth links, this can leave a lot of your bandwidth underutilized. It also makes <code>sshuttle</code> seem slow in bandwidth benchmarks (benchmarks rarely test ping latency, which is what <code>sshuttle</code> is trying to control). This option disables the latency control feature, maximizing bandwidth usage. Use at your own risk.</dd>
+<dt><code>-D, &#8211;daemon</code></dt>
+<dd> Automatically fork into the background after connecting to the remote server. Implies <i>&#8211;syslog</i>.</dd>
+<dt><code>&#8211;syslog</code></dt>
+<dd> after connecting, send all log messages to the <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code> service instead of stderr. This is implicit if you use <i>&#8211;daemon</i>.</dd>
+<dt><code>&#8211;pidfile=pidfilename</code></dt>
+<dd> when using <i>&#8211;daemon</i>, save <code>sshuttle</code>’s pid to <i>pidfilename</i>. The default is <code>sshuttle.pid</code> in the current directory.</dd>
+<dt><code>&#8211;disable-ipv6</code></dt>
+<dd> If using tproxy or pf methods, this will disable IPv6 support.</dd>
+<dt><code>&#8211;firewall</code></dt>
+<dd> (internal use only) run the firewall manager. This is the only part of <code>sshuttle</code> that must run as root. If you start <code>sshuttle</code> as a non-root user, it will automatically run <code>sudo</code> or <code>su</code> to start the firewall manager, but the core of <code>sshuttle</code> still runs as a normal user.</dd>
+<dt><code>&#8211;hostwatch</code></dt>
+<dd> (internal use only) run the hostwatch daemon. This process runs on the server side and collects hostnames for the <i>&#8211;auto-hosts</i> option. Using this option by itself makes it a lot easier to debug and test the <i>&#8211;auto-hosts</i> feature.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print program version.</dd></dl>
 <h2>CONFIGURATION FILE</h2>
 <p> All the options described above can optionally be specified in a configuration file. </p>
 <p> To run <code>sshuttle</code> with options defined in, e.g., <i>/etc/sshuttle.conf</i> just pass the path to the file preceded by the <i>@</i> character, e.g. <code>@/etc/sshuttle.conf</code>. </p>

@@ -14,8 +14,8 @@ description: "audisp-prelude – plugin for IDMEF alerts"
 <p><code>audisp-prelude</code> is a plugin for the audit event dispatcher daemon, audispd, that uses libprelude to send IDMEF alerts for possible Intrusion Detection events. This plugin requires connecting to a prelude-manager to record the events it sends. This plugin will analyze audit events in realtime and send detected events to the prelude-manager for correlation, recording, and display. Events that are currently supported are: Logins, Forbidden Login Location, Max Concurrent Sessions, Max Login Failures, Forbidden Login Time, SE Linux AVCs, SE Linux Enforcement Changes, Abnormal Program Termination, Promiscuous Socket Changes, and watched account logins. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;test</code></p>
-<dd>Take input from stdin and write prelude events to stdout but does not send them to the prelude-manager. This can be used for debugging or testing the system with suspicious log files when you do not want it to alert or react. </p>
+<dt><code>&#8211;test</code></dt>
+<dd>Take input from stdin and write prelude events to stdout but does not send them to the prelude-manager. This can be used for debugging or testing the system with suspicious log files when you do not want it to alert or react. </dd>
 </dl>
 <h2>Installation</h2>
 <p>This sensor has to be registered with the prelude-manager before it will work properly. If the prelude-manager is on the same host as the sensor, you will need to open two windows to register. If not, you will have to adjust this example to fit your environment. </p>

@@ -31,7 +31,7 @@ url: "/docs/linux/man/1-memerror/"
  For a full list of operations run the tool with option:
 <dl>
 <dt><b>--help</b>
-<dd></dl>
+</dt><dd></dd></dl>
 
 <h2>HOME</h2>
 

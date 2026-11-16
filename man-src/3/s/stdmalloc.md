@@ -11,7 +11,6 @@ std::malloc - std::malloc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     void *malloc(std::size_t size);</code></pre> 
 Allocates size bytes of uninitialized storage. 
 If allocation succeeds, returns a pointer to the lowest (first) byte in the allocated memory block that is suitably aligned for any scalar type. 
@@ -40,12 +39,9 @@ This function does not call constructors or initialize memory in any way. There 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     // allocates enough for an array of 4 strings
     if (auto p = (std::string *)std::malloc(4 * sizeof(std::string))) {

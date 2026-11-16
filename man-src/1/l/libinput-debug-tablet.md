@@ -18,8 +18,8 @@ description: "libinput-debug-tablet – debug and visualize tablet axes"
 <h2>OPTIONS</h2>
 <p> If a device node is given, this tool opens that device node. Otherwise, this tool searches for the first node that looks like a tablet and uses that node.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help</dd></dl>
 <p> Events shown by this tool may not correspond to the events seen by a different user of libinput. This tool initializes a separate context.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>

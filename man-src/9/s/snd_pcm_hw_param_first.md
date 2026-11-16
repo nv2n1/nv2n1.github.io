@@ -14,16 +14,16 @@ description: "snd_pcm_hw_param_first – refine config space and return minimum 
 <p><i>pcm</i></p>
 <dl>
 <dd>
-<dd>PCM instance</dl>
+</dd><dd>PCM instance</dd></dl>
 <p> <i>params</i></p>
 <dl>
-<dd>the hw_params instance</dl>
+<dd>the hw_params instance</dd></dl>
 <p> <i>var</i></p>
 <dl>
-<dd>parameter to retrieve</dl>
+<dd>parameter to retrieve</dd></dl>
 <p> <i>dir</i></p>
 <dl>
-<dd>pointer to the direction (-1,0,1) or <code>NULL</code></dl>
+<dd>pointer to the direction (-1,0,1) or <code>NULL</code></dd></dl>
 <h2>Description</h2>
 <p>Inside configuration space defined by <i>params</i> remove from <i>var</i> all values &gt; minimum. Reduce configuration space accordingly.</p>
 <h2>Return</h2>

@@ -11,71 +11,27 @@ description: "sc::LebedevLaikovIntegrator –"
 <p> An implementation of a Lebedev angular integrator.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::AngularIntegrator</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>LebedevLaikovIntegrator (const Ref&lt; KeyVal &gt; &amp;)
-
-
 Construct a LebedevLaikovIntegrator using the given KeyVal input.
-
-
 LebedevLaikovIntegrator (StateIn &amp;)
-
-
-
 LebedevLaikovIntegrator (int)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 int nw (void) const
-
-
-
 int num_angular_points (double r_value, int ir)
-
-
-
 double angular_point_cartesian (int iangular, double r, SCVector3 &amp;integration_point) const
-
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the object.
-
-
-
 Protected Member Functions
 void init (int n)
-
-
-
 Protected Attributes
 int npoint_
-
-
-
 double * x_
-
-
-
 double * y_
-
-
-
 double * z_
-
-
-
 double * w_</code></pre>
 <h2>Detailed Description</h2>
 <p>An implementation of a Lebedev angular integrator. </p>

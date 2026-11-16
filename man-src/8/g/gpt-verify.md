@@ -14,16 +14,16 @@ description: "gpt-verify – Verify dependencies needed for Globus are avaliable
 <p><code>gpt-verify</code> is used to verify both runtime and setup dependencies along with setup packages for the current Globus installation. <code>gpt-verify</code> will serach through the list of dependencies and make sure that each is met. If a problem is found, <code>gpt-verify</code> will exit with an error and list missing files.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-sdk</code>: Verify build dependencies.</p>
+<dt><code>-sdk</code>: Verify build dependencies.</dt>
 <dd>
-<dt><code>-bundle</code></p>
-<dd>Verify installed bundles only.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dl>
+</dd><dt><code>-bundle</code></dt>
+<dd>Verify installed bundles only.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-gpt-install/">gpt-install</a></i>(8) <i><a href="/docs/linux/man/8-gpt-uninstall/">gpt-uninstall</a></i>(8) <i><a href="/docs/linux/man/8-gpt-query/">gpt-query</a></i>(8) <i><a href="/docs/linux/man/8-gpt-postinstall/">gpt-postinstall</a></i>(8)</p>
 <h2>Author</h2>

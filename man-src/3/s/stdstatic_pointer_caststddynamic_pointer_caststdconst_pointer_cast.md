@@ -10,53 +10,29 @@ description: "std::static_pointer_cast,std::dynamic_pointer_cast,std::const_poin
 <p>std::static_pointer_cast,std::dynamic_pointer_cast,std::const_pointer_cast, &#8211; std::static_pointer_cast,std::dynamic_pointer_cast,std::const_pointer_cast,</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T, class U&gt;
-
     std::shared_ptr&lt;T&gt; static_pointer_cast(const std::shared_ptr&lt;U&gt; &amp;(1)(since C++ 11)
-
                                                r) noexcept;
-
 template &lt;class T, class U&gt;
-
 std::shared_ptr&lt;T&gt; static_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp;r)(2)(since C++ 20)
-
     noexcept;
-
 template &lt;class T, class U&gt;
-
 std::shared_ptr&lt;T&gt; dynamic_pointer_cast(const std::shared_ptr&lt;U&gt; &amp;(3)(since C++ 11)
-
                                             r) noexcept;
-
 template &lt;class T, class U&gt;
-
 std::shared_ptr&lt;T&gt; dynamic_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp;r)(4)(since C++ 20)
-
     noexcept;
-
 template &lt;class T, class U&gt;
-
 std::shared_ptr&lt;T&gt; const_pointer_cast(const std::shared_ptr&lt;U&gt; &amp;r(5)(since C++ 11)
-
                                           ) noexcept;
-
 template &lt;class T, class U&gt;
-
 std::shared_ptr&lt;T&gt; const_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp;r)(6)(since C++ 20)
-
     noexcept;
-
 template &lt;class T, class U&gt;
-
 std::shared_ptr&lt;T&gt; reinterpret_pointer_cast(const(7)(since C++ 17)
-
                                                 std::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
-
 std::shared_ptr&lt;T&gt; reinterpret_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp; (8)(since C++ 20)
-
                                                                       r) noexcept;</code></pre>
 <p>Creates a new instance of std::shared_ptr whose stored pointer is obtained from r&#8217;s<br />
 stored pointer using a cast expression.<br />
@@ -124,10 +100,8 @@ std::shared_ptr&lt;T&gt;&nbsp;<wbr>reinterpret_pointer_cast(&nbsp;<wbr>const std
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 struct Base
-
 {
     int a;
     virtual void f() const
@@ -140,7 +114,6 @@ struct Base
     }
 };
 struct Derived : Base
-
 {
     void f() const override
     {
@@ -166,9 +139,7 @@ int main()
     // dynamic_pointer_cast to go down/across class hierarchy
     auto downcastedPtr = std::dynamic_pointer_cast&lt;Derived&gt;(basePtr);
     if (downcastedPtr) {
-
         std::cout &lt;&lt; &quot;Downcasted pointer says: &quot;;
-
         downcastedPtr-&gt;f();
     }
     // All pointers to derived share ownership

@@ -10,30 +10,30 @@ description: "amservice – run an amanda service on a client"
 <p>amservice &#8211; run an amanda service on a client</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amservice</code> [-f&nbsp;<wbr><i>input_file</i>&nbsp;<wbr>[-s]] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] <i>hostname</i> <i>auth</i> <i>service</i></dl>
+<dt> <code>amservice</code> [-f&nbsp;<wbr><i>input_file</i>&nbsp;<wbr>[-s]] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] <i>hostname</i> <i>auth</i> <i>service</i></dt></dl>
 <h2>Description</h2>
 <p><code>Amservice</code></p>
-<dd>execute an Amanda service on a client. It can be used without amanda server configuration (amanda.conf and disklist). It can be used to check communication between a server and a client. Amservice reads stdin to capture the REQ packet to send to the client. </p>
+<dd>execute an Amanda service on a client. It can be used without amanda server configuration (amanda.conf and disklist). It can be used to check communication between a server and a client. Amservice reads stdin to capture the REQ packet to send to the client. </dd>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Options</h2>
 <p><code>hostname</code></p>
 <dl>
-<dd>The hostname of the client.</dl>
+<dd>The hostname of the client.</dd></dl>
 <p> <code>auth</code></p>
 <dl>
-<dd>The auth to use, one of: bsd, bsdudp, bsdtcp, ssh, rsh or krb5. The client must be configured with this auth.</dl>
+<dd>The auth to use, one of: bsd, bsdudp, bsdtcp, ssh, rsh or krb5. The client must be configured with this auth.</dd></dl>
 <p> <code>service</code></p>
 <dl>
-<dd>The amanda service to execute on the client. One of noop, selfcheck or sendsize.</dl>
+<dd>The amanda service to execute on the client. One of noop, selfcheck or sendsize.</dd></dl>
 <p> <code>-f input_file</code></p>
 <dl>
-<dd>Use the file input_file instead of stdin to read the REQ packet from.</dl>
+<dd>Use the file input_file instead of stdin to read the REQ packet from.</dd></dl>
 <p> <code>-s</code></p>
 <dl>
-<dd>Redirect the first connected stream to stdin/stdout. The -f argument is required for the REQ packet, the REP packet is not printed on stdout.</dl>
+<dd>Redirect the first connected stream to stdin/stdout. The -f argument is required for the REQ packet, the REP packet is not printed on stdout.</dd></dl>
 <p> <code>-o </code><i>configoption</i></p>
 <dl>
-<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dl>
+<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dd></dl>
 <h2>Example</h2>
 <p>The noop service is easy to execute because it does not require a REQ packet: </p>
 <pre>amservice hostname bsdtcp noop &lt; /dev/null</pre>
@@ -50,4 +50,4 @@ description: "amservice – run an amanda service on a client"
 <h2>Author</h2>
 <p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

@@ -20,15 +20,16 @@ description: "afCloseFile – close an open audio file"
 <h2>Errors</h2>
 <p>afCloseFile can generate these possible errors: </p>
 <dl COMPACT>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> AF_BAD_FILEHANDLE</dl>
 <dl COMPACT>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> AF_BAD_LSEEK</dl>
 <dl COMPACT>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> AF_BAD_WRITE</dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-afopenfile/">afOpenFile</a></code>(3)</p>
 <h2>Author</h2>
 <p>Michael Pruett &lt;michael [at] 68k.org&gt;</p>
+</p>

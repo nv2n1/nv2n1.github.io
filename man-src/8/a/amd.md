@@ -18,58 +18,58 @@ description: "amd – automatically mount file systems"
 <p> In the first form depicted above, <code>amd</code> will print a short help string. In the second form, if no options are specified, or the <code>-F</code> is used, <code>amd</code> will read configuration parameters from the file <i>conf_file</i> which defaults to <code>/etc/amd.conf</code>. The last form is described below.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code><i> temporary-directory</i></p>
-<dd>Specify an alternative location for the real mount points. The default is <code>/a</code>. </p>
-<dt><code>-c</code><i> duration</i></p>
-<dd>Specify a <i>duration</i>, in seconds, that a looked up name remains cached when not in use. The default is 5 minutes. </p>
-<dt><code>-d</code><i> domain</i></p>
-<dd>Specify the local domain name. If this option is not given the domain name is determined from the hostname. </p>
-<dt><code>-k</code><i> kernel-arch</i></p>
-<dd>Specifies the kernel architecture. This is used solely to set the ${karch} selector. </p>
-<dt><code>-l</code><i> logfile</i></p>
-<dd>Specify a logfile in which to record mount and unmount events. If <i>logfile</i> is the string <code>syslog</code> then the log messages will be sent to the system log daemon by <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3). The default syslog facility used is LOG_DAEMON. If you wish to change it, append its name to the log file name, delimited by a single colon. For example, if <i>logfile</i> is the string <code>syslog:local7</code> then <code>Amd</code> will log messages via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3) using the LOG_LOCAL7 facility (if it exists on the system). </p>
-<dt><code>-n</code></p>
-<dd>Normalize hostnames. The name refereed to by ${rhost} is normalized relative to the host database before being used. The effect is to translate aliases into &#8220;official&#8221; names. </p>
-<dt><code>-o</code><i> op_sys_ver</i></p>
-<dd>Override the compiled-in version number of the operating system. Useful when the built in version is not desired for backward compatibility reasons. For example, if the build in version is &#8220;2.5.1&#8221;, you can override it to &#8220;5.5.1&#8221;, and use older maps that were written with the latter in mind. </p>
-<dt><code>-p</code></p>
-<dd>Print PID. Outputs the process-id of <code>amd</code> to standard output where it can be saved into a file. </p>
-<dt><code>-r</code></p>
-<dd>Restart existing mounts. <code>Amd</code> will scan the mount file table to determine which filesystems are currently mounted. Whenever one of these would have been auto-mounted, <code>amd</code> <i>inherits</i> it. </p>
-<dt><code>-t</code><i> timeout.retransmit</i></p>
-<dd>Specify the NFS timeout <i>interval</i>, in tenths of a second, between NFS/RPC retries (for UDP only). The default is 0.8 seconds. The second value alters the retransmit counter, which defaults to 11 retransmissions. Both of these values are used by the kernel to communicate with amd. Useful defaults are supplied if either or both values are missing. </p>
+<dt><code>-a</code><i> temporary-directory</i></dt>
+<dd>Specify an alternative location for the real mount points. The default is <code>/a</code>. </dd>
+<dt><code>-c</code><i> duration</i></dt>
+<dd>Specify a <i>duration</i>, in seconds, that a looked up name remains cached when not in use. The default is 5 minutes. </dd>
+<dt><code>-d</code><i> domain</i></dt>
+<dd>Specify the local domain name. If this option is not given the domain name is determined from the hostname. </dd>
+<dt><code>-k</code><i> kernel-arch</i></dt>
+<dd>Specifies the kernel architecture. This is used solely to set the ${karch} selector. </dd>
+<dt><code>-l</code><i> logfile</i></dt>
+<dd>Specify a logfile in which to record mount and unmount events. If <i>logfile</i> is the string <code>syslog</code> then the log messages will be sent to the system log daemon by <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3). The default syslog facility used is LOG_DAEMON. If you wish to change it, append its name to the log file name, delimited by a single colon. For example, if <i>logfile</i> is the string <code>syslog:local7</code> then <code>Amd</code> will log messages via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3) using the LOG_LOCAL7 facility (if it exists on the system). </dd>
+<dt><code>-n</code></dt>
+<dd>Normalize hostnames. The name refereed to by ${rhost} is normalized relative to the host database before being used. The effect is to translate aliases into &#8220;official&#8221; names. </dd>
+<dt><code>-o</code><i> op_sys_ver</i></dt>
+<dd>Override the compiled-in version number of the operating system. Useful when the built in version is not desired for backward compatibility reasons. For example, if the build in version is &#8220;2.5.1&#8221;, you can override it to &#8220;5.5.1&#8221;, and use older maps that were written with the latter in mind. </dd>
+<dt><code>-p</code></dt>
+<dd>Print PID. Outputs the process-id of <code>amd</code> to standard output where it can be saved into a file. </dd>
+<dt><code>-r</code></dt>
+<dd>Restart existing mounts. <code>Amd</code> will scan the mount file table to determine which filesystems are currently mounted. Whenever one of these would have been auto-mounted, <code>amd</code> <i>inherits</i> it. </dd>
+<dt><code>-t</code><i> timeout.retransmit</i></dt>
+<dd>Specify the NFS timeout <i>interval</i>, in tenths of a second, between NFS/RPC retries (for UDP only). The default is 0.8 seconds. The second value alters the retransmit counter, which defaults to 11 retransmissions. Both of these values are used by the kernel to communicate with amd. Useful defaults are supplied if either or both values are missing. </dd>
 <p> Amd relies on the kernel RPC retransmit mechanism to trigger mount retries. The values of these parameters change the overall retry interval. Too long an interval gives poor interactive response; too short an interval causes excessive retries. </p>
-<dt><code>-v</code></p>
-<dd>Version. Displays version and configuration information on standard error. </p>
-<dt><code>-w</code><i> interval</i></p>
-<dd>Specify an <i>interval</i>, in seconds, between attempts to dismount filesystems that have exceeded their cached times. The default is 2 minutes. </p>
-<dt><code>-x</code><i> options</i></p>
-<dd>Specify run-time logging options. The options are a comma separated list chosen from: fatal, error, user, warn, info, map, stats, defaults, and all. Note that &quot;fatal&quot; and &quot;error&quot; are mandatory and cannot be turned off. </p>
-<dt><code>-y</code><i> domain</i></p>
-<dd>Specify an alternative NIS domain from which to fetch the NIS maps. The default is the system domain name. This option is ignored if NIS support is not available. </p>
-<dt><code>-A</code><i> arch</i></p>
-<dd>Specifies the OS architecture. This is used solely to set the ${arch} selector. </p>
-<dt><code>-C</code><i> cluster-name</i></p>
-<dd>Specify an alternative HP-UX cluster name to use. </p>
-<dt><code>-D</code><i> option</i></p>
-<dd>Select from a variety of debug options. Prefixing an option with the strings <code>no</code> reverses the effect of that option. Options are cumulative. The most useful option is <code>all</code>. Since <i>-D</i> is only used for debugging other options are not documented here: the current supported set of options is listed by the -v option and a fuller description is available in the program source. </p>
-<dt><code>-F</code><i> conf_file</i></p>
-<dd>Specify an amd configuration file to use. See <code><a href="/docs/linux/man/5-amd-conf/">amd.conf</a></code>(5) for description of this file&#8217;s format. This configuration file is used to specify any options in lieu of typing many of them on the command line. The <i>amd.conf</i> file includes directives for every command line option amd has, and many more that are only available via the configuration file facility. The configuration file specified by this option is processed after all other options had been processed, regardless of the actual location of this option on the command line. </p>
-<dt><code>-H</code></p>
-<dd>Print help and usage string. </p>
-<dt><code>-O</code><i> op_sys_name</i></p>
-<dd>Override the compiled-in name of the operating system. Useful when the built in name is not desired for backward compatibility reasons. For example, if the build in name is &#8220;sunos5&#8221;, you can override it to &#8220;sos5&#8221;, and use older maps which were written with the latter in mind. </p>
-<dt><code>-S</code></p>
-<dd>Do not lock the running executable pages of amd into memory. To improve amd&#8217;s performance, systems that support the <code>plock</code>(3) call, could lock the amd process into memory. This way there is less chance the operating system will schedule, page out, and swap the amd process as needed. This tends improves amd&#8217;s performance, at the cost of reserving the memory used by the amd process (making it unavailable for other processes). If this behavior is not desired, use the <code>-S</code> option. </p>
-<dt><code>-T</code><i> tag</i></p>
-<dd>Specify a tag to use with <code><a href="/docs/linux/man/5-amd-conf/">amd.conf</a></code>(5). All map entries tagged with <i>tag</i> will be processed. Map entries that are not tagged are always processed. Map entries that are tagged with a tag other than <i>tag</i> will not be processed. </p>
+<dt><code>-v</code></dt>
+<dd>Version. Displays version and configuration information on standard error. </dd>
+<dt><code>-w</code><i> interval</i></dt>
+<dd>Specify an <i>interval</i>, in seconds, between attempts to dismount filesystems that have exceeded their cached times. The default is 2 minutes. </dd>
+<dt><code>-x</code><i> options</i></dt>
+<dd>Specify run-time logging options. The options are a comma separated list chosen from: fatal, error, user, warn, info, map, stats, defaults, and all. Note that &quot;fatal&quot; and &quot;error&quot; are mandatory and cannot be turned off. </dd>
+<dt><code>-y</code><i> domain</i></dt>
+<dd>Specify an alternative NIS domain from which to fetch the NIS maps. The default is the system domain name. This option is ignored if NIS support is not available. </dd>
+<dt><code>-A</code><i> arch</i></dt>
+<dd>Specifies the OS architecture. This is used solely to set the ${arch} selector. </dd>
+<dt><code>-C</code><i> cluster-name</i></dt>
+<dd>Specify an alternative HP-UX cluster name to use. </dd>
+<dt><code>-D</code><i> option</i></dt>
+<dd>Select from a variety of debug options. Prefixing an option with the strings <code>no</code> reverses the effect of that option. Options are cumulative. The most useful option is <code>all</code>. Since <i>-D</i> is only used for debugging other options are not documented here: the current supported set of options is listed by the -v option and a fuller description is available in the program source. </dd>
+<dt><code>-F</code><i> conf_file</i></dt>
+<dd>Specify an amd configuration file to use. See <code><a href="/docs/linux/man/5-amd-conf/">amd.conf</a></code>(5) for description of this file&#8217;s format. This configuration file is used to specify any options in lieu of typing many of them on the command line. The <i>amd.conf</i> file includes directives for every command line option amd has, and many more that are only available via the configuration file facility. The configuration file specified by this option is processed after all other options had been processed, regardless of the actual location of this option on the command line. </dd>
+<dt><code>-H</code></dt>
+<dd>Print help and usage string. </dd>
+<dt><code>-O</code><i> op_sys_name</i></dt>
+<dd>Override the compiled-in name of the operating system. Useful when the built in name is not desired for backward compatibility reasons. For example, if the build in name is &#8220;sunos5&#8221;, you can override it to &#8220;sos5&#8221;, and use older maps which were written with the latter in mind. </dd>
+<dt><code>-S</code></dt>
+<dd>Do not lock the running executable pages of amd into memory. To improve amd&#8217;s performance, systems that support the <code>plock</code>(3) call, could lock the amd process into memory. This way there is less chance the operating system will schedule, page out, and swap the amd process as needed. This tends improves amd&#8217;s performance, at the cost of reserving the memory used by the amd process (making it unavailable for other processes). If this behavior is not desired, use the <code>-S</code> option. </dd>
+<dt><code>-T</code><i> tag</i></dt>
+<dd>Specify a tag to use with <code><a href="/docs/linux/man/5-amd-conf/">amd.conf</a></code>(5). All map entries tagged with <i>tag</i> will be processed. Map entries that are not tagged are always processed. Map entries that are tagged with a tag other than <i>tag</i> will not be processed. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/a</code></p>
-<dd>directory under which filesystems are dynamically mounted</p>
-<dt><code>/etc/amd.conf</code></p>
-<dd>default configuration file</dl>
+<dt><code>/a</code></dt>
+<dd>directory under which filesystems are dynamically mounted</dd>
+<dt><code>/etc/amd.conf</code></dt>
+<dd>default configuration file</dd></dl>
 <h2>Caveats</h2>
 <p>Some care may be required when creating a mount map. </p>
 <p> Symbolic links on an NFS filesystem can be incredibly inefficient. In most implementations of NFS, their interpolations are not cached by the kernel and each time a symlink is encountered during a <i>lookuppn</i> translation it costs an RPC call to the NFS server. It would appear that a large improvement in real-time performance could be gained by adding a cache somewhere. Replacing symlinks with a suitable incarnation of the auto-mounter results in a large real-time speedup, but also causes a large number of process context switches. </p>

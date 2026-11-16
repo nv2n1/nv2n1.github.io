@@ -25,15 +25,15 @@ description: "zshroadmap – informal introduction to the zsh manual The Zsh Man
 <p> Apart from completion, the line editor is highly extensible by means of shell functions. Some useful functions are provided with the shell; they provide facilities such as: </p>
 <dl>
 <dt>
-<dd> <code>insert-composed-char</code> composing characters not found on the keyboard</p>
-<dt><code>match-words-by-style</code></p>
-<dd> configuring what the line editor considers a word when moving or deleting by word</p>
-<dt><code>history-beginning-search-backward-end</code>, etc.</p>
-<dd> alternative ways of searching the shell history</p>
-<dt><code>replace-string</code>, <code>replace-pattern</code></p>
-<dd> functions for replacing strings or patterns globally in the command line</p>
-<dt><code>edit-command-line</code></p>
-<dd> edit the command line with an external editor.</dl>
+</dt><dd> <code>insert-composed-char</code> composing characters not found on the keyboard</dd>
+<dt><code>match-words-by-style</code></dt>
+<dd> configuring what the line editor considers a word when moving or deleting by word</dd>
+<dt><code>history-beginning-search-backward-end</code>, etc.</dt>
+<dd> alternative ways of searching the shell history</dd>
+<dt><code>replace-string</code>, <code>replace-pattern</code></dt>
+<dd> functions for replacing strings or patterns globally in the command line</dd>
+<dt><code>edit-command-line</code></dt>
+<dd> edit the command line with an external editor.</dd></dl>
 <p> See the section `ZLE Functions&#8217; in <i><a href="/docs/linux/man/1-zshcontrib/">zshcontrib</a></i>(1) for descriptions of these. </p>
 <h2>OPTIONS</h2>
 <p> The shell has a large number of options for changing its behaviour. These cover all aspects of the shell; browsing the full documentation is the only good way to become acquainted with the many possibilities. See <i><a href="/docs/linux/man/1-zshoptions/">zshoptions</a></i>(1). </p>
@@ -42,13 +42,13 @@ description: "zshroadmap – informal introduction to the zsh manual The Zsh Man
 <p> Of particular interest are the following patterns that are not commonly supported by other systems of pattern matching: </p>
 <dl>
 <dt>
-<dd> <code>**</code> for matching over multiple directories</p>
-<dt><code>|</code></p>
-<dd> for matching either of two alternatives</p>
-<dt><code>~</code>, <code>^</code></p>
-<dd> the ability to exclude patterns from matching when the <code>EXTENDED_GLOB</code> option is set</p>
-<dt><code>(</code><i>&#8230;</i><code>)</code></p>
-<dd> glob qualifiers, included in parentheses at the end of the pattern, which select files by type (such as directories) or attribute (such as size).</dl>
+</dt><dd> <code>**</code> for matching over multiple directories</dd>
+<dt><code>|</code></dt>
+<dd> for matching either of two alternatives</dd>
+<dt><code>~</code>, <code>^</code></dt>
+<dd> the ability to exclude patterns from matching when the <code>EXTENDED_GLOB</code> option is set</dd>
+<dt><code>(</code><i>&#8230;</i><code>)</code></dt>
+<dd> glob qualifiers, included in parentheses at the end of the pattern, which select files by type (such as directories) or attribute (such as size).</dd></dl>
 <h2>GENERAL COMMENTS ON SYNTAX</h2>
 <p> Although the syntax of zsh is in ways similar to the Korn shell, and therefore more remotely to the original UNIX shell, the Bourne shell, its default behaviour does not entirely correspond to those shells. General shell syntax is introduced in the section `Shell Grammar&#8217; in <i><a href="/docs/linux/man/1-zshmisc/">zshmisc</a></i>(1). </p>
 <p> One commonly encountered difference is that variables substituted onto the command line are not split into words. See the description of the shell option <code>SH_WORD_SPLIT</code> in the section `Parameter Expansion&#8217; in <i><a href="/docs/linux/man/1-zshexpn/">zshexpn</a></i>(1). In zsh, you can either explicitly request the splitting (e.g. <code>${=foo}</code>) or use an array when you want a variable to expand to more than one word. See the section `Array Parameters&#8217; in <i><a href="/docs/linux/man/1-zshparam/">zshparam</a></i>(1). </p>
@@ -57,14 +57,14 @@ description: "zshroadmap – informal introduction to the zsh manual The Zsh Man
 <p> A few general functions, other than those for the line editor described above, are provided with the shell and are described in <i><a href="/docs/linux/man/1-zshcontrib/">zshcontrib</a></i>(1). Features include: </p>
 <dl>
 <dt>
-<dd> <code>promptinit</code> a prompt theme system for changing prompts easily, see the section `Prompt Themes&#8217; </p>
-<dt><code>zsh-mime-setup</code></p>
-<dd> a MIME-handling system which dispatches commands according to the suffix of a file as done by graphical file managers</p>
-<dt><code>zcalc</code></p>
-<dd> a calculator</p>
-<dt><code>zargs</code></p>
-<dd> a version of <code>xargs</code> that makes the <code>find</code> command redundant</p>
-<dt><code>zmv</code></p>
-<dd> a command for renaming files by means of shell patterns. </p>
+</dt><dd> <code>promptinit</code> a prompt theme system for changing prompts easily, see the section `Prompt Themes&#8217; </dd>
+<dt><code>zsh-mime-setup</code></dt>
+<dd> a MIME-handling system which dispatches commands according to the suffix of a file as done by graphical file managers</dd>
+<dt><code>zcalc</code></dt>
+<dd> a calculator</dd>
+<dt><code>zargs</code></dt>
+<dd> a version of <code>xargs</code> that makes the <code>find</code> command redundant</dd>
+<dt><code>zmv</code></dt>
+<dd> a command for renaming files by means of shell patterns. </dd>
 </dl>
 <h2>Index</h2>

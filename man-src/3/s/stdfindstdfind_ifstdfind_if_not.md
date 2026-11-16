@@ -11,59 +11,35 @@ std::find,std::find_if,std::find_if_not - std::find,std::find_if,std::find_if_no
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class InputIt, class T&gt;
     (until C++ 20)
-
         InputIt find(InputIt first, InputIt last, const T &amp;value);
-
 template &lt;class InputIt, class T&gt;
 (since C++ 20)
-
     constexpr InputIt find(InputIt first, InputIt last, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
 (2)(since C++ 17)
-
     ForwardIt find(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class InputIt, class UnaryPredicate&gt;
-
 InputIt find_if(InputIt first, InputIt last, (until C++ 20)
-
                                                  UnaryPredicate p);
-
 template &lt;class InputIt, class UnaryPredicate&gt;
-
 constexpr InputIt find_if(InputIt first, InputIt last, (since C++ 20)
-
                                                            UnaryPredicate p);
 (1)
-
     template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate&gt;
-
     ForwardIt find_if(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (4)(since C++ 17)
-
                                                                                      UnaryPredicate p);
 (3)
-
     template &lt;class InputIt, class UnaryPredicate&gt;
     (since C++ 11)
-
         InputIt find_if_not(InputIt first, InputIt last, (until C++ 20)
-
                                                              UnaryPredicate q);
-
 template &lt;class InputIt, class UnaryPredicate&gt;
-
 constexpr InputIt find_if_not(InputIt first, InputIt last, (5)(since C++ 20)
-
                                                                UnaryPredicate q);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate&gt;
-
 ForwardIt find_if_not(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (6)(since C++ 17)
-
                                                                                      UnaryPredicate q);</code></pre> 
 Returns the first element in the range [first, last) that satisfies specific criteria: 
 1) find searches for an element equal to value 
@@ -168,14 +144,10 @@ InputIt find_if_not(InputIt first, InputIt last, UnaryPredicate q)
 
 The following example finds an integer in a vector of integers. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     int n1 = 3;
     int n2 = 5;

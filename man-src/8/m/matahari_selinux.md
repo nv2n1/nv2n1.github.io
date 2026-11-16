@@ -18,22 +18,22 @@ description: "matahari_selinux – Security Enhanced Linux Policy for the mataha
 <p> matahari_hostd_exec_t </code> </p>
 <p> &#8211; Set files with the matahari_hostd_exec_t type, if you want to transition an executable to the matahari_hostd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/matahari-qmf-hostd, /usr/sbin/matahari-hostd, /usr/sbin/matahari-dbus-hostd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/matahari-qmf-hostd, /usr/sbin/matahari-hostd, /usr/sbin/matahari-dbus-hostd </dd>
 </dl>
 <p> <code>matahari_hostd_unit_file_t </code> </p>
 <p> &#8211; Set files with the matahari_hostd_unit_file_t type, if you want to treat the files as matahari hostd unit content. </p>
 <p> <code>matahari_initrc_exec_t </code> </p>
 <p> &#8211; Set files with the matahari_initrc_exec_t type, if you want to transition an executable to the matahari_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/matahari-sysconfig, /etc/rc.d/init.d/matahari-host, /etc/rc.d/init.d/matahari-service, /etc/rc.d/init.d/matahari-sysconfig-console, /etc/rc.d/init.d/matahari-net </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/matahari-sysconfig, /etc/rc.d/init.d/matahari-host, /etc/rc.d/init.d/matahari-service, /etc/rc.d/init.d/matahari-sysconfig-console, /etc/rc.d/init.d/matahari-net </dd>
 </dl>
 <p> <code>matahari_netd_exec_t </code> </p>
 <p> &#8211; Set files with the matahari_netd_exec_t type, if you want to transition an executable to the matahari_netd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/matahari-qmf-networkd, /usr/sbin/matahari-netd, /usr/sbin/matahari-dbus-networkd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/matahari-qmf-networkd, /usr/sbin/matahari-netd, /usr/sbin/matahari-dbus-networkd </dd>
 </dl>
 <p> <code>matahari_netd_unit_file_t </code> </p>
 <p> &#8211; Set files with the matahari_netd_unit_file_t type, if you want to treat the files as matahari netd unit content. </p>
@@ -44,30 +44,30 @@ description: "matahari_selinux – Security Enhanced Linux Policy for the mataha
 <p> <code>matahari_serviced_exec_t </code> </p>
 <p> &#8211; Set files with the matahari_serviced_exec_t type, if you want to transition an executable to the matahari_serviced_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/matahari-serviced, /usr/sbin/matahari-dbus-serviced, /usr/sbin/matahari-qmf-serviced </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/matahari-serviced, /usr/sbin/matahari-dbus-serviced, /usr/sbin/matahari-qmf-serviced </dd>
 </dl>
 <p> <code>matahari_serviced_unit_file_t </code> </p>
 <p> &#8211; Set files with the matahari_serviced_unit_file_t type, if you want to treat the files as matahari serviced unit content. </p>
 <p> <code>matahari_sysconfigd_exec_t </code> </p>
 <p> &#8211; Set files with the matahari_sysconfigd_exec_t type, if you want to transition an executable to the matahari_sysconfigd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/matahari-qmf-sysconfig-consoled, /usr/sbin/matahari-dbus-sysconfigd, /usr/sbin/matahari-qmf-sysconfigd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/matahari-qmf-sysconfig-consoled, /usr/sbin/matahari-dbus-sysconfigd, /usr/sbin/matahari-qmf-sysconfigd </dd>
 </dl>
 <p> <code>matahari_sysconfigd_unit_file_t </code> </p>
 <p> &#8211; Set files with the matahari_sysconfigd_unit_file_t type, if you want to treat the files as matahari sysconfigd unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/matahari-sysconfig-console.*, /usr/lib/systemd/system/matahari-sysconfig.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/matahari-sysconfig-console.*, /usr/lib/systemd/system/matahari-sysconfig.* </dd>
 </dl>
 <p> <code>matahari_var_lib_t </code> </p>
 <p> &#8211; Set files with the matahari_var_lib_t type, if you want to store the matahari files under the /var/lib directory. </p>
 <p> <code>matahari_var_run_t </code> </p>
 <p> &#8211; Set files with the matahari_var_run_t type, if you want to store the matahari files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/matahari(/.*)?, /var/run/matahari.pid, /var/run/matahari-broker.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/matahari(/.*)?, /var/run/matahari.pid, /var/run/matahari-broker.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanantly change the file context you need to use the <code>semanage fcontext </code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Port Types</h2>
@@ -77,9 +77,9 @@ description: "matahari_selinux – Security Enhanced Linux Policy for the mataha
 <p> Policy governs the access confined processes have to these ports. SELinux matahari policy is very flexible allowing users to setup their matahari processes in as secure a method as possible. </p>
 <p> The following port types are defined for matahari: </p>
 <dl>
-<dt><code>matahari_port_t </code></p>
+<dt><code>matahari_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 49000 udp 49000</dl>
+</dd><dd>Default Defined Ports: tcp 49000 udp 49000</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux matahari policy is very flexible allowing users to setup their matahari processes in as secure a method as possible. </p>

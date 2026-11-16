@@ -15,10 +15,10 @@ description: "kpsewhere – Expanding kpsewhich to separately iterate over each 
 <p> <code>kpsewhere</code> is an extension to <code>kpsewhich</code> (as <code>where</code> is for <code>which</code> in tcsh). The intention is to provide a way to check for conflicts/shadowed files. It will, however, only find <code>one</code> file per TEXMF tree. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h|&#8211;help</code></p>
-<dd> show a short help message</p>
-<dt><code>*</code></p>
-<dd> all other options are directly handed to kpsewhich</dl>
+<dt><code>-h|&#8211;help</code></dt>
+<dd> show a short help message</dd>
+<dt><code>*</code></dt>
+<dd> all other options are directly handed to kpsewhich</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kpsewhich/">kpsewhich</a></code>(1) </p>
 <p> <i>Kpathsea: A library for path searching</i> (info or DVI file) </p>

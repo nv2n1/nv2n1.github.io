@@ -14,7 +14,7 @@ description: "crypto_shash_digestsize – obtain message digest size"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <h2>Description</h2>
 <p>The size for the message digest created by the message digest cipher referenced with the cipher handle is returned.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_shash_digestsize – obtain message digest size"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

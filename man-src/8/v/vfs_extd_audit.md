@@ -10,7 +10,7 @@ description: "vfs_extd_audit – record selected Samba VFS operations"
 <p>vfs_extd_audit &#8211; record selected Samba VFS operations</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = extd_audit</dl>
+<dd>vfs objects = extd_audit</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The extd_audit VFS module records selected client operations to both the <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8) log and system log (using <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)). </p>

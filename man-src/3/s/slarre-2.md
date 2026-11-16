@@ -31,10 +31,10 @@ description: "slarre.f –"
  conpute all and then discard any unwanted one.
  As an added benefit, SLARRE also outputs the n
  Gerschgorin intervals for the matrices L_i D_i L_i^T.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>RANGE</i> </p>
+<dd><i>RANGE</i> </dd>
 <pre> RANGE is CHARACTER*1
  = 'A': (&quot;All&quot;) all eigenvalues will be found.
  = 'V': (&quot;Value&quot;) all eigenvalues in the half-open interval
@@ -162,23 +162,23 @@ description: "slarre.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
 <pre> The base representations are required to suffer very little
  element growth and consequently define all their eigenvalues to
  high relative accuracy.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Beresford Parlett, University of California, Berkeley, USA </p>
+<dd>Beresford Parlett, University of California, Berkeley, USA </dd>
 <p>&nbsp;<wbr>Jim Demmel, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Inderjit Dhillon, University of Texas, Austin, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
@@ -187,3 +187,4 @@ description: "slarre.f –"
 <p> Definition at line 295 of file slarre.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

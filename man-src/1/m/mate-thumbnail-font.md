@@ -16,12 +16,12 @@ description: "mate-thumbnail-font – configure MATE network proxy"
 <p> <code>mate-thumbnail-font</code> is a command-line tool for creating thumbnails of PCF fonts.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>|<code>&#8211;help</code></p>
-<dd> Show some help text.</p>
-<dt><code>-t</code> <i>&lt;TEXT&gt;</i>, <code>&#8211;text</code> <i>&lt;TEXT&gt;</i></p>
-<dd> Text to thumbnail (default: Aa).</p>
-<dt><code>-s</code> <i>&lt;SIZE&gt;</i>, <code>&#8211;size</code> <i>&lt;SIZE&gt;</i></p>
-<dd> Font size (default: 64).</dl>
+<dt><code>-h</code>|<code>&#8211;help</code></dt>
+<dd> Show some help text.</dd>
+<dt><code>-t</code> <i>&lt;TEXT&gt;</i>, <code>&#8211;text</code> <i>&lt;TEXT&gt;</i></dt>
+<dd> Text to thumbnail (default: Aa).</dd>
+<dt><code>-s</code> <i>&lt;SIZE&gt;</i>, <code>&#8211;size</code> <i>&lt;SIZE&gt;</i></dt>
+<dd> Font size (default: 64).</dd></dl>
 <h2>AUTHORS</h2>
 <p> This manual page was writtenby Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the Debian project (but may be used by others).</p>
 <h2>SEE ALSO</h2>

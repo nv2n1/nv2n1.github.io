@@ -20,10 +20,10 @@ description: "zla_gbrcond_x.f –"
 <dd>
 <pre> ZLA_GBRCOND_X Computes the infinity norm condition number of
  op(A) * diag(X) where X is a COMPLEX*16 vector.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  Specifies the form of the system of equations:
  = 'N': A * X = B (No transpose)
@@ -79,13 +79,13 @@ description: "zla_gbrcond_x.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 154 of file zla_gbrcond_x.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

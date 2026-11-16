@@ -21,22 +21,17 @@ opafmconfigdiff [-f] [-l] [-d '<i>diff_args</i>'] <i>file1 file2</i>
 <h2>Options</h2>
 
 <dl><dt>--help
-<dd>Produces full help text. 
-
-<dt>-f
-<dd>Filters out FM parameters that are not part of the consistency check. Removes config tags that do not cause consistency checks on the FM to fail from diff. 
-
-<dt>-l
-<dd>Includes comments in XML to indicate original line numbers. 
-
-<dt>-d '<i>diff_args</i>'
-<dd>Specifies additional arguments to add to diff command. For example, enter uw for unified format ignoring whitespace. 
-
-<dt>
+</dt><dd>Produces full help text. 
+</dd><dt>-f
+</dt><dd>Filters out FM parameters that are not part of the consistency check. Removes config tags that do not cause consistency checks on the FM to fail from diff. 
+</dd><dt>-l
+</dt><dd>Includes comments in XML to indicate original line numbers. 
+</dd><dt>-d '<i>diff_args</i>'
+</dt><dd>Specifies additional arguments to add to diff command. For example, enter uw for unified format ignoring whitespace. 
+</dd><dt>
 &nbsp;<wbr><i>file1 file2</i>&nbsp;<wbr>
-<dd>Names of the configuration files to be compared. 
-
-</dl>
+</dt><dd>Names of the configuration files to be compared. 
+</dd></dl>
 
 <h2>Example</h2>
 

@@ -10,10 +10,8 @@ description: "unicode::wordbreak_callback_base, unicode::wordbreak_callback_base
 <p>unicode::wordbreak_callback_base, unicode::wordbreak_callback_base &#8211; unicode word-breaking rules</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;courier-unicode.h&gt;
-
 class wordbreak : public unicode::wordbreak_callback_base
 {
-
   public:
     using unicode::wordbreak_callback_base::operator&lt;&lt;;
     using unicode::wordbreak_callback_base::operator();
@@ -22,25 +20,16 @@ class wordbreak : public unicode::wordbreak_callback_base
         // ...
     }
 };
-
 unicode_char c;
 std::vector&lt;unicode_char&gt; buf;
-
 wordbreak compute_wordbreak;
-
 compute_wordbreak &lt;&lt; c;
-
 compute_wordbreak(buf);
 compute_wordbreak(buf.begin(), buf.end());
-
 compute_wordbreak.finish();
-
 // ...
-
 unicode_wordbreakscan scan;
-
 scan &lt;&lt; c;
-
 size_t nchars = scan.finish();</code></pre>
 <h2>Description</h2>
 <p>unicode::wordbreak_callback_base is a C++ binding for the unicode word-breaking rule implementation described in <code>unicode_word_break</code>(3). </p>
@@ -53,4 +42,4 @@ size_t nchars = scan.finish();</code></pre>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
-<dd>Author</dl>
+<dd>Author</dd></dl>

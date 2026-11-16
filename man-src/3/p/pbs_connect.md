@@ -10,10 +10,8 @@ description: "pbs_connect – connect to a pbs batch server"
 <p>pbs_connect &#8211; connect to a pbs batch server</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;
 int pbs_connect(char *server)
-
     extern char *pbs_server;</code></pre>
 <h2>Description</h2>
 <p>A virtual stream (TCP/IP) connection is established with the server specified by <i> </p>

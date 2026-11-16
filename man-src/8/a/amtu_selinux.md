@@ -48,8 +48,8 @@ description: "amtu_selinux – Security Enhanced Linux Policy for the amtu proce
 <p> <code>amtu_exec_t</code> </p>
 <p> &#8211; Set files with the amtu_exec_t type, if you want to transition an executable to the amtu_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/amtu, /usr/sbin/amtu </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/amtu, /usr/sbin/amtu </dd>
 </dl>
 <p> <code>amtu_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the amtu_initrc_exec_t type, if you want to transition an executable to the amtu_initrc_t domain. </p>

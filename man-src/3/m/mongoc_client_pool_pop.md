@@ -14,8 +14,8 @@ mongoc_client_pool_pop (mongoc_client_pool_t *pool);</pre>
 <p>Retrieve a <code>mongoc_client_t</code> from the client pool, possibly blocking until one is available. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>pool</code></p>
-<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dl>
+<dt><code>pool</code></dt>
+<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>A <code>mongoc_client_t</code> \&amp;. </p>
 <h2>Colophon</h2>

@@ -15,17 +15,16 @@ description: "evcd2vcd – Converts EVCD files to VCD files"
 <p> Converts EVCD files with bidirectional port definitions to VCD files with separate in and out ports.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f,&#8211;filename</code> &lt;<i>filename</i>&gt;</p>
-<dd> Specify EVCD input filename.</p>
-<dt><code>-h,&#8211;help</code></p>
-<dd> Show help screen.</p>
-<dt>
-<dd></dl>
+<dt><code>-f,&#8211;filename</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Specify EVCD input filename.</dd>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Show help screen.</dd>
+</dl>
 <h2>EXAMPLES</h2>
 <p> Note that you should specify dumpfile.vcd directly or use &quot;-&quot; for stdin.</p>
 <dl>
-<dt>evcd2vcd dumpfile.evcd</p>
-<dd> VCD is emitted to stdout.</dl>
+<dt>evcd2vcd dumpfile.evcd</dt>
+<dd> VCD is emitted to stdout.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>

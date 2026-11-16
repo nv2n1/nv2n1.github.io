@@ -13,27 +13,27 @@ description: "ccls – C/C++/Objective-C language server"
 <p> <code>ccls [options]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> alias for -help</p>
-<dt>-index=&lt;root&gt;</p>
-<dd> standalone mode: index a project and exit</p>
-<dt>-init=&lt;string&gt;</p>
-<dd> extra initialization options in JSON</p>
-<dt>-log-file=&lt;file&gt;</p>
-<dd> stderr or log file</p>
-<dt>-log-file-append</p>
-<dd> append to log file</p>
-<dt>-test-index=&lt;string&gt;</p>
-<dd> run index tests</p>
-<dt>-v=&lt;int&gt;</p>
-<dd> verbosity, from -3 (fatal) to 2 (verbose) </p>
+<dt>-h</dt>
+<dd> alias for -help</dd>
+<dt>-index=&lt;root&gt;</dt>
+<dd> standalone mode: index a project and exit</dd>
+<dt>-init=&lt;string&gt;</dt>
+<dd> extra initialization options in JSON</dd>
+<dt>-log-file=&lt;file&gt;</dt>
+<dd> stderr or log file</dd>
+<dt>-log-file-append</dt>
+<dd> append to log file</dd>
+<dt>-test-index=&lt;string&gt;</dt>
+<dd> run index tests</dd>
+<dt>-v=&lt;int&gt;</dt>
+<dd> verbosity, from -3 (fatal) to 2 (verbose) </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>1.</p>
-<dd> <a rel="nofollow" href="https://github.com/MaskRay/ccls/wiki">https://github.com/MaskRay/ccls/wiki</a></p>
-<dt>2.</p>
-<dd> <a rel="nofollow" href="https://langserver.org/">https://langserver.org/</a> </p>
+<dt>1.</dt>
+<dd> <a rel="nofollow" href="https://github.com/MaskRay/ccls/wiki">https://github.com/MaskRay/ccls/wiki</a></dd>
+<dt>2.</dt>
+<dd> <a rel="nofollow" href="https://langserver.org/">https://langserver.org/</a> </dd>
 </dl>
 <h2>NOTES</h2>
 <p> This command is not intended for direct use. You should have an LSP(Language Server Protocol) client for your editors. </p>

@@ -10,30 +10,30 @@ description: "XInternAtom, XInternAtoms, XGetAtomName, XGetAtomNames – create 
 <p>XInternAtom, XInternAtoms, XGetAtomName, XGetAtomNames &#8211; create or return atom names </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Atom XInternAtom(Display *<i>display</i>, char *<i>atom_name</i>, Bool <i>only_if_exists</i>);</p>
-<dd>Status XInternAtoms(Display *<i>display</i>, char **<i>names</i>, int <i>count</i>, Bool <i>only_if_exists</i>, Atom *<i>atoms_return</i>);</p>
-<dd>char *XGetAtomName(Display *<i>display</i>, Atom <i>atom</i>);</p>
-<dd>Status XGetAtomNames(Display *<i>display</i>, Atom *<i>atoms</i>, int <i>count</i>, char **<i>names_return</i>);</dl>
+<dd>Atom XInternAtom(Display *<i>display</i>, char *<i>atom_name</i>, Bool <i>only_if_exists</i>);</dd>
+<dd>Status XInternAtoms(Display *<i>display</i>, char **<i>names</i>, int <i>count</i>, Bool <i>only_if_exists</i>, Atom *<i>atoms_return</i>);</dd>
+<dd>char *XGetAtomName(Display *<i>display</i>, Atom <i>atom</i>);</dd>
+<dd>Status XGetAtomNames(Display *<i>display</i>, Atom *<i>atoms</i>, int <i>count</i>, char **<i>names_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>atom</i></p>
-<dd>Specifies the atom for the property name you want returned.</p>
-<dt><i>atoms</i></p>
-<dd>Specifies the array of atoms.</p>
-<dt><i>atom_name</i></p>
-<dd>Specifies the name associated with the atom you want returned.</p>
-<dt><i>atoms_return</i></p>
-<dd>Returns the atoms.</p>
-<dt><i>count</i></p>
-<dd>Specifies the number of atom names in the array.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>names</i></p>
-<dd>Specifies the array of atom names.</p>
-<dt><i>names_return</i></p>
-<dd>Returns the atom names.</p>
-<dt><i>only_if_exists</i></p>
-<dd>Specifies a Boolean value that indicates whether the atom must be created.</dl>
+<dt><i>atom</i></dt>
+<dd>Specifies the atom for the property name you want returned.</dd>
+<dt><i>atoms</i></dt>
+<dd>Specifies the array of atoms.</dd>
+<dt><i>atom_name</i></dt>
+<dd>Specifies the name associated with the atom you want returned.</dd>
+<dt><i>atoms_return</i></dt>
+<dd>Returns the atoms.</dd>
+<dt><i>count</i></dt>
+<dd>Specifies the number of atom names in the array.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>names</i></dt>
+<dd>Specifies the array of atom names.</dd>
+<dt><i>names_return</i></dt>
+<dd>Returns the atom names.</dd>
+<dt><i>only_if_exists</i></dt>
+<dd>Specifies a Boolean value that indicates whether the atom must be created.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XInternAtom</code> function returns the atom identifier associated with the specified atom_name string. If only_if_exists is <code>False</code>, the atom is created if it does not exist. Therefore, <code>XInternAtom</code> can return <code>None</code>. If the atom name is not in the Host Portable Character Encoding, the result is implementation-dependent. Uppercase and lowercase matter; the strings &#8220;thing&#8221;, &#8220;Thing&#8221;, and &#8220;thinG&#8221; all designate different atoms. The atom will remain defined even after the client&#8217;s connection closes. It will become undefined only when the last connection to the X server closes. </p>
 <p> <code>XInternAtom</code> can generate <code>BadAlloc</code> and <code>BadValue</code> errors. </p>
@@ -47,12 +47,12 @@ description: "XInternAtom, XInternAtoms, XGetAtomName, XGetAtomNames – create 
 <p> <code>XGetAtomNames</code> can generate a <code>BadAtom</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadAtom</code></p>
-<dd>A value for an Atom argument does not name a defined Atom.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadAtom</code></dt>
+<dd>A value for an Atom argument does not name a defined Atom.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xgetwindowproperty/">XGetWindowProperty</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

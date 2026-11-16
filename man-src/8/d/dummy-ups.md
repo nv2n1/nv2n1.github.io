@@ -27,7 +27,7 @@ description: "dummy-ups – Driver for multi-purpose UPS emulation"
  driver = dummy-ups
  port = evolution500.dev
  desc = &quot;dummy-ups in dummy mode&quot;</pre>
-</dl>
+</dd></dl>
 <p> This file is generally named &quot;something.dev&quot;. It contains a list of all valid data and associated values, and has the same format as an <code><a href="/docs/linux/man/8-upsc/">upsc</a></code>(8) dump (&lt;varname&gt;: &lt;value&gt;). So you can easily create definition files from an existing UPS using &quot;upsc &gt; file.dev&quot;. It can also be empty, in which case only a basic set of data is available: device.<code>, driver.</code>, ups.mfr, ups.model, ups.status </p>
 <p> Samples definition files are available in the &quot;data&quot; directory of the nut source tree, and generally in the sysconfig directory of your system distribution. </p>
 <p> Since <code>dummy-ups</code> will loop on reading this file, you can dynamically modify it to interact with the driver. This will avoid message spam into your system log files, if you are using NUT default configuration. </p>
@@ -40,14 +40,14 @@ ups.status: OB
 TIMER 60
 ups.status: LB
 TIMER 60</pre>
-</dl>
+</dd></dl>
 <p> It is wise to end the script with a TIMER. Otherwise dummy-ups will directly go back to the beginning of the file.</p>
 <h3>Repeater Mode</h3>
 <p>Port is the name of a remote UPS, using the NUT form, ie: </p>
 <dl>
 <dd>
 <pre>&lt;upsname&gt;[@&lt;hostname&gt;[:&lt;port&gt;]]</pre>
-</dl>
+</dd></dl>
 <p> For instance: </p>
 <dl>
 <dd>
@@ -55,7 +55,7 @@ TIMER 60</pre>
  driver = dummy-ups
  port = ups [at] hostname
  desc = &quot;dummy-ups in repeater mode&quot;</pre>
-</dl>
+</dd></dl>
 <h2>Interaction</h2>
 <p>Once the driver is loaded in dummy mode, you can change any variables, except those of the driver.* and server.* collections. You can do this by either editing the definition file, or use the <code>upsrw</code>(1) and <code>upscmd</code>(1) commands. </p>
 <p> Note that in simulation mode, new variables can be added on the fly, by adding these to the definition file. Conversely, if you need to remove variable (such as transient ones, like ups.alarm), simply update these by setting an empty value. As a result, they will get removed from the data. </p>

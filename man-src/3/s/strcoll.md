@@ -10,7 +10,6 @@ description: "strcoll – compare two strings using the current locale"
 <p>strcoll &#8211; compare two strings using the current locale</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;string.h&gt;
-
 int strcoll(const char *s1, const char *s2);</code></pre>
 <h2>Description</h2>
 <p>The <code>strcoll</code>() function compares the two strings <i>s1</i> and <i>s2</i>. It returns an integer less than, equal to, or greater than zero if <i>s1</i> is found, respectively, to be less than, to match, or be greater than <i>s2</i>. The comparison is based on strings interpreted as appropriate for the program&#8217;s current locale for category <code>LC_COLLATE</code>. (See <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3).)</p>

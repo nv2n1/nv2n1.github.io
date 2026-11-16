@@ -15,12 +15,12 @@ description: "ldns-update – send a dynamic update packet"
 <p> <code>ldns-update</code> is used to send a dynamic update packet. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>zone</code></p>
-<dd> Use this zone instead of trying to read it from the zonefile&#8217;s SOA record. </p>
-<dt><code>ip</code></p>
-<dd> Send the update to this IP address </p>
-<dt><code>tsig_name tsig_alg tsig_hmac</code></p>
-<dd> Use TSIG (rfc2845) to authenticate. </p>
+<dt><code>zone</code></dt>
+<dd> Use this zone instead of trying to read it from the zonefile&#8217;s SOA record. </dd>
+<dt><code>ip</code></dt>
+<dd> Send the update to this IP address </dd>
+<dt><code>tsig_name tsig_alg tsig_hmac</code></dt>
+<dd> Use TSIG (rfc2845) to authenticate. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> ldns-update my.example.org 1.2.3.4 </p>

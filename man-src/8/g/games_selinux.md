@@ -83,14 +83,14 @@ description: "games_selinux – Security Enhanced Linux Policy for the games pro
 <p> <code>games_data_t</code> </p>
 <p> &#8211; Set files with the games_data_t type, if you want to treat the files as games content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/games(/.*)?, /var/lib/games(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/games(/.*)?, /var/lib/games(/.*)? </dd>
 </dl>
 <p> <code>games_exec_t</code> </p>
 <p> &#8211; Set files with the games_exec_t type, if you want to transition an executable to the games_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/games/.*, /usr/lib/games(/.*)?, /usr/bin/civclient.*, /usr/bin/civserver.*, /usr/bin/sol, /usr/bin/kolf, /usr/bin/kpat, /usr/bin/micq, /usr/bin/gnect, /usr/bin/gtali, /usr/bin/iagno, /usr/bin/ksame, /usr/bin/ktron, /usr/bin/kwin4, /usr/bin/lskat, /usr/bin/gataxx, /usr/bin/glines, /usr/bin/klines, /usr/bin/kmines, /usr/bin/kpoker, /usr/bin/ksnake, /usr/bin/gnomine, /usr/bin/gnotski, /usr/bin/katomic, /usr/bin/kbounce, /usr/bin/kshisen, /usr/bin/ksirtet, /usr/bin/atlantik, /usr/bin/gnibbles, /usr/bin/gnobots2, /usr/bin/kenolaba, /usr/bin/klickety, /usr/bin/konquest, /usr/bin/kreversi, /usr/bin/ksokoban, /usr/bin/mahjongg, /usr/bin/blackjack, /usr/bin/gnotravex, /usr/bin/kblackbox, /usr/bin/kfouleggs, /usr/bin/kmahjongg, /usr/bin/kwin4proc, /usr/bin/lskatproc, /usr/bin/Maelstrom, /usr/bin/kasteroids, /usr/bin/ksmiletris, /usr/bin/kspaceduel, /usr/bin/ktuberling, /usr/bin/same-gnome, /usr/bin/kbackgammon, /usr/bin/kbattleship, /usr/bin/kgoldrunner, /usr/bin/gnome-stones, /usr/bin/kjumpingcube </p>
+<dt>Paths:</dt>
+<dd>/usr/games/.*, /usr/lib/games(/.*)?, /usr/bin/civclient.*, /usr/bin/civserver.*, /usr/bin/sol, /usr/bin/kolf, /usr/bin/kpat, /usr/bin/micq, /usr/bin/gnect, /usr/bin/gtali, /usr/bin/iagno, /usr/bin/ksame, /usr/bin/ktron, /usr/bin/kwin4, /usr/bin/lskat, /usr/bin/gataxx, /usr/bin/glines, /usr/bin/klines, /usr/bin/kmines, /usr/bin/kpoker, /usr/bin/ksnake, /usr/bin/gnomine, /usr/bin/gnotski, /usr/bin/katomic, /usr/bin/kbounce, /usr/bin/kshisen, /usr/bin/ksirtet, /usr/bin/atlantik, /usr/bin/gnibbles, /usr/bin/gnobots2, /usr/bin/kenolaba, /usr/bin/klickety, /usr/bin/konquest, /usr/bin/kreversi, /usr/bin/ksokoban, /usr/bin/mahjongg, /usr/bin/blackjack, /usr/bin/gnotravex, /usr/bin/kblackbox, /usr/bin/kfouleggs, /usr/bin/kmahjongg, /usr/bin/kwin4proc, /usr/bin/lskatproc, /usr/bin/Maelstrom, /usr/bin/kasteroids, /usr/bin/ksmiletris, /usr/bin/kspaceduel, /usr/bin/ktuberling, /usr/bin/same-gnome, /usr/bin/kbackgammon, /usr/bin/kbattleship, /usr/bin/kgoldrunner, /usr/bin/gnome-stones, /usr/bin/kjumpingcube </dd>
 </dl>
 <p> <code>games_srv_var_run_t</code> </p>
 <p> &#8211; Set files with the games_srv_var_run_t type, if you want to store the games srv files under the /run or /var/run directory. </p>

@@ -48,14 +48,14 @@ description: "log4cpp::RemoteSyslogAppender –"
  <i>syslogName</i> The ident parameter in the openlog(3) call.<br />
  <i>relayer</i> The IP address or hostname of a standard syslog host.<br />
  <i>facility</i> The syslog facility to log to. Defaults to LOG_USER. Value &#8216;-1&#8217; implies to use the default.<br />
- <i>portNumber</i> An alternative port number. Defaults to the standard syslog port number (514). Value &#8216;-1&#8217; implies to use the default.</dl>
+ <i>portNumber</i> An alternative port number. Defaults to the standard syslog port number (514). Value &#8216;-1&#8217; implies to use the default.</dd></dl>
 <h3>log4cpp::RemoteSyslogAppender::~RemoteSyslogAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>
 <h3>void log4cpp::RemoteSyslogAppender::_append (const <code>LoggingEvent</code> &amp;event) [protected], [virtual]</h3>
 <p>Sends a <code>LoggingEvent</code> to the remote syslog. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> the <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> the <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::RemoteSyslogAppender::close () [virtual]</h3>
 <p>Closes the socket. </p>
@@ -69,10 +69,10 @@ description: "log4cpp::RemoteSyslogAppender –"
 <p>Translates a <code>log4cpp</code> priority to a syslog priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The <code>log4cpp</code> priority.</dl>
+<dd><i>priority</i> The <code>log4cpp</code> priority.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the syslog priority.</dl>
+<dd>the syslog priority.</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3>int log4cpp::RemoteSyslogAppender::_facility [protected]</h3>
 <h3>in_addr_t log4cpp::RemoteSyslogAppender::_ipAddr [protected]</h3>

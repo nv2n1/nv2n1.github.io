@@ -10,18 +10,13 @@ description: "rdma – RDMA tool"
 <p>rdma &#8211; RDMA tool</p>
 <h2>Synopsis</h2>
 <pre><code>rdma
-
 [ OPTIONS ] OBJECT { COMMAND |
-
     help }
 </code></pre>
 <p> <code>rdma</code> [ <code>-force</code> ] <code>-batch </code><i>filename</i> </p>
 <pre><code>OBJECT := {
-
     dev | link | resource | system | statistic }
-
 OPTIONS := {
-
     -V[ersion] |
     -d[etails] }
 -j[son] }
@@ -29,33 +24,33 @@ OPTIONS := {
 </code></pre>
 <h2>Options</h2>
 <dl>
-<dt><code>-V</code>,<code> -Version</code></p>
-<dd>Print the version of the <code>rdma</code> tool and exit. </p>
-<dt><code>-b,</code> -batch <code>&lt;FILENAME&gt;</code></p>
-<dd>Read commands from provided file or standard input and invoke them. First failure will cause termination of rdma. </p>
-<dt><code>-force</code></p>
-<dd>Don&#8217;t terminate rdma on errors in batch mode. If there were any errors during execution of the commands, the application return code will be non zero. </p>
-<dt><code>-d</code>,<code> &#8211;details</code></p>
-<dd>Output detailed information. Adding a second -d includes driver-specific details. </p>
-<dt><code>-r</code>,<code> &#8211;raw</code></p>
-<dd>Output includes driver-specific details in raw format. </p>
-<dt><code>-p</code>,<code> &#8211;pretty</code></p>
-<dd>When combined with -j generate a pretty JSON output. </p>
-<dt><code>-j</code>,<code> &#8211;json</code></p>
-<dd>Generate JSON output. </p>
+<dt><code>-V</code>,<code> -Version</code></dt>
+<dd>Print the version of the <code>rdma</code> tool and exit. </dd>
+<dt><code>-b,</code> -batch <code>&lt;FILENAME&gt;</code></dt>
+<dd>Read commands from provided file or standard input and invoke them. First failure will cause termination of rdma. </dd>
+<dt><code>-force</code></dt>
+<dd>Don&#8217;t terminate rdma on errors in batch mode. If there were any errors during execution of the commands, the application return code will be non zero. </dd>
+<dt><code>-d</code>,<code> &#8211;details</code></dt>
+<dd>Output detailed information. Adding a second -d includes driver-specific details. </dd>
+<dt><code>-r</code>,<code> &#8211;raw</code></dt>
+<dd>Output includes driver-specific details in raw format. </dd>
+<dt><code>-p</code>,<code> &#8211;pretty</code></dt>
+<dd>When combined with -j generate a pretty JSON output. </dd>
+<dt><code>-j</code>,<code> &#8211;json</code></dt>
+<dd>Generate JSON output. </dd>
 </dl>
 <h3><i>OBJECT</i></h3>
 <dl>
-<dt><code>dev</code></p>
-<dd>&#8211; RDMA device. </p>
-<dt><code>link</code></p>
-<dd>&#8211; RDMA port related. </p>
-<dt><code>resource</code></p>
-<dd>&#8211; RDMA resource configuration. </p>
-<dt><code>sys</code></p>
-<dd>&#8211; RDMA subsystem related. </p>
-<dt><code>statistic</code></p>
-<dd>&#8211; RDMA counter statistic related. </p>
+<dt><code>dev</code></dt>
+<dd>&#8211; RDMA device. </dd>
+<dt><code>link</code></dt>
+<dd>&#8211; RDMA port related. </dd>
+<dt><code>resource</code></dt>
+<dd>&#8211; RDMA resource configuration. </dd>
+<dt><code>sys</code></dt>
+<dd>&#8211; RDMA subsystem related. </dd>
+<dt><code>statistic</code></dt>
+<dd>&#8211; RDMA counter statistic related. </dd>
 </dl>
 <p> The names of all objects may be written in full or abbreviated form, for example <code>stats</code> can be abbreviated as <code>stat</code> or just <code>s.</code></p>
 <h3><i>COMMAND</i></h3>

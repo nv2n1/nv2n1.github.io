@@ -25,10 +25,8 @@ number of bits that are set to true.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     std::bitset&lt;8&gt; b(&quot;00010010&quot;);
     std::cout &lt;&lt; &quot;initial value: &quot; &lt;&lt; b &lt;&lt; '\n';

@@ -44,31 +44,31 @@ description: "libipq — iptables userspace packet queuing library."
  To free up the Netlink socket and destroy resources associated with the context handle, call <code>ipq_destroy_handle</code>(3).</p>
 <h2>SUMMARY</h2>
 <dl>
-<dt><code>ipq_create_handle</code>(3)</p>
-<dd> Initialise library, return context handle.</p>
-<dt><code>ipq_set_mode</code>(3)</p>
-<dd> Set the queue mode, to copy either packet metadata, or payloads as well as metadata to userspace.</p>
-<dt><code>ipq_read</code>(3)</p>
-<dd> Wait for a queue message to arrive from ip_queue and read it into a buffer.</p>
-<dt><code>ipq_message_type</code>(3)</p>
-<dd> Determine message type in the buffer.</p>
-<dt><code>ipq_get_packet</code>(3)</p>
-<dd> Retrieve a packet message from the buffer.</p>
-<dt><code>ipq_get_msgerr</code>(3)</p>
-<dd> Retrieve an error message from the buffer.</p>
-<dt><code>ipq_set_verdict</code>(3)</p>
-<dd> Set a verdict on a packet, optionally replacing its contents.</p>
-<dt><code>ipq_errstr</code>(3)</p>
-<dd> Return an error message corresponding to the internal ipq_errno variable.</p>
-<dt><code>ipq_perror</code>(3)</p>
-<dd> Helper function to print error messages to stderr.</p>
-<dt><code>ipq_destroy_handle</code>(3)</p>
-<dd> Destroy context handle and associated resources.</dl>
+<dt><code>ipq_create_handle</code>(3)</dt>
+<dd> Initialise library, return context handle.</dd>
+<dt><code>ipq_set_mode</code>(3)</dt>
+<dd> Set the queue mode, to copy either packet metadata, or payloads as well as metadata to userspace.</dd>
+<dt><code>ipq_read</code>(3)</dt>
+<dd> Wait for a queue message to arrive from ip_queue and read it into a buffer.</dd>
+<dt><code>ipq_message_type</code>(3)</dt>
+<dd> Determine message type in the buffer.</dd>
+<dt><code>ipq_get_packet</code>(3)</dt>
+<dd> Retrieve a packet message from the buffer.</dd>
+<dt><code>ipq_get_msgerr</code>(3)</dt>
+<dd> Retrieve an error message from the buffer.</dd>
+<dt><code>ipq_set_verdict</code>(3)</dt>
+<dd> Set a verdict on a packet, optionally replacing its contents.</dd>
+<dt><code>ipq_errstr</code>(3)</dt>
+<dd> Return an error message corresponding to the internal ipq_errno variable.</dd>
+<dt><code>ipq_perror</code>(3)</dt>
+<dd> Helper function to print error messages to stderr.</dd>
+<dt><code>ipq_destroy_handle</code>(3)</dt>
+<dd> Destroy context handle and associated resources.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The following is an example of a simple application which receives packets and issues NF_ACCEPT verdicts on each packet.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 /*
  * This code is GPL.
@@ -88,44 +88,36 @@ int main(int argc, char **argv)
     int status;
     unsigned char buf[BUFSIZE];
     struct ipq_handle *h;
-
     h = ipq_create_handle(0, NFPROTO_IPV4);
     if (!h)
         die(h);
-
     status = ipq_set_mode(h, IPQ_COPY_PACKET, BUFSIZE);
     if (status &lt; 0)
         die(h);
-
     do {
         status = ipq_read(h, buf, BUFSIZE, 0);
         if (status &lt; 0)
             die(h);
-
         switch (ipq_message_type(buf)) {
         case NLMSG_ERROR:
             fprintf(stderr, "Received error message %d
 ",
                     ipq_get_msgerr(buf));
             break;
-
         case IPQM_PACKET: {
             ipq_packet_msg_t *m = ipq_get_packet(buf);
-
             status = ipq_set_verdict(h, m-&gt;packet_id,
                                      NF_ACCEPT, 0, NULL);
             if (status &lt; 0)
                 die(h);
             break;
         }
-
         default:
             fprintf(stderr, "Unknown message type!
 ");
             break;
         }
     } while (1);
-
     ipq_destroy_handle(h);
     return 0;
 }
@@ -152,3 +144,4 @@ int main(int argc, char **argv)
 <p> <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code>ipq_create_handle</code>(3), <code>ipq_destroy_handle</code>(3), <code>ipq_errstr</code>(3), <code>ipq_get_msgerr</code>(3), <code>ipq_get_packet</code>(3), <code>ipq_message_type</code>(3), <code>ipq_perror</code>(3), <code>ipq_read</code>(3), <code>ipq_set_mode</code>(3), <code>ipq_set_verdict</code>(3). </p>
 <p> The Netfilter home page at <a rel="nofollow" href="http://netfilter.samba.org/">http://netfilter.samba.org/</a> which has links to The Networking Concepts HOWTO, The Linux 2.4 Packet Filtering HOWTO, The Linux 2.4 NAT HOWTO, The Netfilter Hacking HOWTO, The Netfilter FAQ and many other useful resources. </p>
 <h2>Index</h2>
+</dd></dl>

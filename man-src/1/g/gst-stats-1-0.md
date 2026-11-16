@@ -15,14 +15,14 @@ description: "gst-stats-1.0 – print info gathered from a GStreamer log file"
 <h2>Options</h2>
 <p><i>gst-stats-1.0</i> accepts the following arguments and options:</p>
 <dl>
-<dt><code>FILE</code></p>
-<dd>Name of a file</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print help synopsis and available FLAGS</p>
-<dt><code>&#8211;gst-help-all</code></p>
-<dd>Show all help options</p>
-<dt><code>&#8211;gst-help-gst</code></p>
-<dd>Show FIGstreamer options</dl>
+<dt><code>FILE</code></dt>
+<dd>Name of a file</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print help synopsis and available FLAGS</dd>
+<dt><code>&#8211;gst-help-all</code></dt>
+<dd>Show all help options</dd>
+<dt><code>&#8211;gst-help-gst</code></dt>
+<dd>Show FIGstreamer options</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-gst-launch-1-0/">gst-launch-1.0</a></code>(1)</p>
 <h2>Author</h2>

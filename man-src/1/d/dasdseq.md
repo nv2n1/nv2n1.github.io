@@ -61,15 +61,15 @@ description: "dasdseq – Hercules DSORG=PS retrieval command"
 <p> z dasdutil </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>dasdpdsu for DSORG=PO datasets</p>
+<dt>dasdpdsu for DSORG=PO datasets</dt>
 <dd>
-<dt><a href="/docs/linux/man/4-cckd/">cckd</a>(4) for CCKD DASD</p>
+</dd><dt><a href="/docs/linux/man/4-cckd/">cckd</a>(4) for CCKD DASD</dt>
 <dd>
-<dt><a rel="nofollow" href="http://www.hercules-390.org/cckddasd.html">http://www.hercules-390.org/cckddasd.html</a> which describes</p>
-<dd> the Hercules CCKD DASD facility.</p>
-<dt><a rel="nofollow" href="http://www.hercules-390.org/">http://www.hercules-390.org/</a> the Hercules emulator homepage.</p>
+</dd><dt><a rel="nofollow" href="http://www.hercules-390.org/cckddasd.html">http://www.hercules-390.org/cckddasd.html</a> which describes</dt>
+<dd> the Hercules CCKD DASD facility.</dd>
+<dt><a rel="nofollow" href="http://www.hercules-390.org/">http://www.hercules-390.org/</a> the Hercules emulator homepage.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> 2003-03-10 originally written by James M. Morrison </p>
 <h2>Index</h2>

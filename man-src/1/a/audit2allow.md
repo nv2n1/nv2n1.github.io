@@ -14,38 +14,38 @@ description: "audit2allow – generate SELinux policy allow/dontaudit rules from
 <p> <code>audit2allow</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a | &#8211;all</code></p>
-<dd> Read input from audit and message log, conflicts with -i</p>
-<dt><code>-b | &#8211;boot</code></p>
-<dd> Read input from audit messages since last boot conflicts with -i</p>
-<dt><code>-d | &#8211;dmesg</code></p>
-<dd> Read input from output of <i>/bin/dmesg.</i> Note that all audit messages are not available via dmesg when auditd is running; use &quot;ausearch -m avc | audit2allow&quot; or &quot;-a&quot; instead.</p>
-<dt><code>-D | &#8211;dontaudit</code></p>
-<dd> Generate dontaudit rules (Default: allow)</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Print a short usage message</p>
-<dt><code>-i &lt;inputfile&gt; | &#8211;input &lt;inputfile&gt;</code></p>
-<dd> read input from <i>&lt;inputfile&gt;</i></p>
-<dt><code>-l | &#8211;lastreload</code></p>
-<dd> read input only after last policy reload</p>
-<dt><code>-m &lt;modulename&gt; | &#8211;module &lt;modulename&gt;</code></p>
-<dd> Generate module/require output &lt;modulename&gt;</p>
-<dt><code>-M &lt;modulename&gt; </code></p>
-<dd> Generate loadable module package, conflicts with -o</p>
-<dt><code>-p &lt;policyfile&gt; | &#8211;policy &lt;policyfile&gt;</code></p>
-<dd> Policy file to use for analysis</p>
-<dt><code>-o &lt;outputfile&gt; | &#8211;output &lt;outputfile&gt;</code></p>
-<dd> append output to <i>&lt;outputfile&gt;</i></p>
-<dt><code>-r | &#8211;requires</code></p>
-<dd> Generate require output syntax for loadable modules.</p>
-<dt><code>-N | &#8211;noreference</code></p>
-<dd> Do not generate reference policy, traditional style allow rules. This is the default behavior.</p>
-<dt><code>-R | &#8211;reference</code></p>
-<dd> Generate reference policy using installed macros. This attempts to match denials against interfaces and may be inaccurate.</p>
-<dt><code>-w | &#8211;why</code></p>
-<dd> Translates SELinux audit messages into a description of why the access was denied </p>
-<dt><code>-v | &#8211;verbose</code></p>
-<dd> Turn on verbose output </p>
+<dt><code>-a | &#8211;all</code></dt>
+<dd> Read input from audit and message log, conflicts with -i</dd>
+<dt><code>-b | &#8211;boot</code></dt>
+<dd> Read input from audit messages since last boot conflicts with -i</dd>
+<dt><code>-d | &#8211;dmesg</code></dt>
+<dd> Read input from output of <i>/bin/dmesg.</i> Note that all audit messages are not available via dmesg when auditd is running; use &quot;ausearch -m avc | audit2allow&quot; or &quot;-a&quot; instead.</dd>
+<dt><code>-D | &#8211;dontaudit</code></dt>
+<dd> Generate dontaudit rules (Default: allow)</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Print a short usage message</dd>
+<dt><code>-i &lt;inputfile&gt; | &#8211;input &lt;inputfile&gt;</code></dt>
+<dd> read input from <i>&lt;inputfile&gt;</i></dd>
+<dt><code>-l | &#8211;lastreload</code></dt>
+<dd> read input only after last policy reload</dd>
+<dt><code>-m &lt;modulename&gt; | &#8211;module &lt;modulename&gt;</code></dt>
+<dd> Generate module/require output &lt;modulename&gt;</dd>
+<dt><code>-M &lt;modulename&gt; </code></dt>
+<dd> Generate loadable module package, conflicts with -o</dd>
+<dt><code>-p &lt;policyfile&gt; | &#8211;policy &lt;policyfile&gt;</code></dt>
+<dd> Policy file to use for analysis</dd>
+<dt><code>-o &lt;outputfile&gt; | &#8211;output &lt;outputfile&gt;</code></dt>
+<dd> append output to <i>&lt;outputfile&gt;</i></dd>
+<dt><code>-r | &#8211;requires</code></dt>
+<dd> Generate require output syntax for loadable modules.</dd>
+<dt><code>-N | &#8211;noreference</code></dt>
+<dd> Do not generate reference policy, traditional style allow rules. This is the default behavior.</dd>
+<dt><code>-R | &#8211;reference</code></dt>
+<dd> Generate reference policy using installed macros. This attempts to match denials against interfaces and may be inaccurate.</dd>
+<dt><code>-w | &#8211;why</code></dt>
+<dd> Translates SELinux audit messages into a description of why the access was denied </dd>
+<dt><code>-v | &#8211;verbose</code></dt>
+<dd> Turn on verbose output </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> This utility scans the logs for messages logged when the system denied permission for operations, and generates a snippet of policy rules which, if loaded into policy, might have allowed those operations to succeed. However, this utility only generates Type Enforcement (TE) allow rules. Certain permission denials may require other kinds of policy changes, e.g. adding an attribute to a type declaration to satisfy an existing constraint, adding a role allow rule, or modifying a constraint. The <code>audit2why</code>(8) utility may be used to diagnose the reason when it is unclear. </p>

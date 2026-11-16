@@ -87,6 +87,6 @@ url: "/docs/linux/man/1-perldgux/"
 
 
 <dt><a HREF="#lbAJ">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbAK">SEE ALSO</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">SEE ALSO</a>
+</dt><dd></dd></dl>

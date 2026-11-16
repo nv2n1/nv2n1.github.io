@@ -25,10 +25,10 @@ description: "dlasd2.f –"
  Z vector. For each such occurrence the order of the related secular
  equation problem is reduced by one.
  DLASD2 is called from DLASD1.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>NL</i> </p>
+<dd><i>NL</i> </dd>
 <pre> NL is INTEGER
  The row dimension of the upper block. NL &gt;= 1.</pre>
 <p><i>NR</i> </p>
@@ -153,16 +153,16 @@ description: "dlasd2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 268 of file dlasd2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

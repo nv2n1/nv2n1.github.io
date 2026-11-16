@@ -11,128 +11,128 @@ description: "sane-hp5590 – SANE backend for Hewlett-Packard 4500C/4570C/5500C
 <h2>Description</h2>
 <p>The <code>sane-hp5590</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Hewlett-Packard Workgroup/Document scanners:</p>
 <dl>
-<dt>&bull;</p>
-<dd>ScanJet 4500C</p>
-<dt>&bull;</p>
-<dd>ScanJet 4570C</p>
-<dt>&bull;</p>
-<dd>ScanJet 5500C</p>
-<dt>&bull;</p>
-<dd>ScanJet 5550C</p>
-<dt>&bull;</p>
-<dd>ScanJet 5590</p>
-<dt>&bull;</p>
-<dd>ScanJet 7650</dl>
+<dt>&bull;</dt>
+<dd>ScanJet 4500C</dd>
+<dt>&bull;</dt>
+<dd>ScanJet 4570C</dd>
+<dt>&bull;</dt>
+<dd>ScanJet 5500C</dd>
+<dt>&bull;</dt>
+<dd>ScanJet 5550C</dd>
+<dt>&bull;</dt>
+<dd>ScanJet 5590</dd>
+<dt>&bull;</dt>
+<dd>ScanJet 7650</dd></dl>
 <p> If you own a scanner other than the ones listed above that works with this backend, please let us know this by sending the scanner&#8217;s exact model name and the USB vendor and device ids (e.g. from <i>/sys/bus/usb/devices</i>, <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) or syslog) to us. Even if the scanner&#8217;s name is only slightly different from the models mentioned above, please let us know.</p>
 <h2>Options</h2>
 <p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). Valid command line options and their syntax can be listed by using:</p>
 <dl>
 <dd>
 <pre>scanimage --help -d hp5590:interface:device</pre>
-</dl>
+</dd></dl>
 <p> where interface and device specify the device in question, as in the configuration file. Add <code>&#8211;all-options</code> to also list the hardware read-out options. The <code>-d</code> parameter and its argument can be omitted to obtain information on the first scanner identified. </p>
 <p> Use the command:</p>
 <dl>
 <dd>
 <pre>scanimage -L</pre>
-</dl>
+</dd></dl>
 <p> to list all devices recognized by your SANE installation.</p>
 <h2>Device Specific Options</h2>
 <dl>
-<dt><code>-l </code>n</p>
-<dd>Top-left X position of scan area in mm. Allowed range: 0 .. 215.889.</p>
-<dt><code>-t </code>n</p>
-<dd>Top-left Y position of scan area in mm. Allowed range: 0 .. 297.699.</p>
-<dt><code>-x </code>n</p>
-<dd>X width of scan-area in mm. Allowed range: 0 .. 215.889.</p>
-<dt><code>-y </code>n</p>
-<dd>Y height of scan-area in mm. Allowed range: 0 .. 297.699.</dl>
+<dt><code>-l </code>n</dt>
+<dd>Top-left X position of scan area in mm. Allowed range: 0 .. 215.889.</dd>
+<dt><code>-t </code>n</dt>
+<dd>Top-left Y position of scan area in mm. Allowed range: 0 .. 297.699.</dd>
+<dt><code>-x </code>n</dt>
+<dd>X width of scan-area in mm. Allowed range: 0 .. 215.889.</dd>
+<dt><code>-y </code>n</dt>
+<dd>Y height of scan-area in mm. Allowed range: 0 .. 297.699.</dd></dl>
 <p> By default, the maximum size will be scanned.</p>
 <dl>
-<dt><code>&#8211;mode </code>mode</p>
-<dd>Select color mode. mode must be one of: &#8220;Color&#8221;, &#8220;Color (48 bits)&#8221;, &#8220;Gray&#8221;, &#8220;Lineart&#8221;.</p>
+<dt><code>&#8211;mode </code>mode</dt>
+<dd>Select color mode. mode must be one of: &#8220;Color&#8221;, &#8220;Color (48 bits)&#8221;, &#8220;Gray&#8221;, &#8220;Lineart&#8221;.</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>&#8220;Color&#8221; &#8211; Scanning is done with 3 * 8 bit RGB color values per pixel.</p>
-<dt>&bull;</p>
-<dd>&#8220;Color (48 bits)&#8221; &#8211; Scanning is done with 3 * 16 bit RGB color values per pixel.</p>
-<dt>&bull;</p>
-<dd>&#8220;Gray&#8221; &#8211; Scanning is done with 1 * 8 bit gray value per pixel.</p>
-<dt>&bull;</p>
-<dd>&#8220;Lineart&#8221; &#8211; Scanning is done with 1 bit black and white value per pixel.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>&#8220;Color&#8221; &#8211; Scanning is done with 3 * 8 bit RGB color values per pixel.</dd>
+<dt>&bull;</dt>
+<dd>&#8220;Color (48 bits)&#8221; &#8211; Scanning is done with 3 * 16 bit RGB color values per pixel.</dd>
+<dt>&bull;</dt>
+<dd>&#8220;Gray&#8221; &#8211; Scanning is done with 1 * 8 bit gray value per pixel.</dd>
+<dt>&bull;</dt>
+<dd>&#8220;Lineart&#8221; &#8211; Scanning is done with 1 bit black and white value per pixel.</dd></dl>
 </dl>
-<dt><code>&#8211;source </code>source</p>
-<dd>Select the source for scanning. source must be one of: &#8220;Flatbed&#8221;, &#8220;ADF&#8221;, &#8220;ADF Duplex&#8221;, &#8220;TMA Slides&#8221;, &#8220;TMA Negatives&#8221;.</p>
+<dt><code>&#8211;source </code>source</dt>
+<dd>Select the source for scanning. source must be one of: &#8220;Flatbed&#8221;, &#8220;ADF&#8221;, &#8220;ADF Duplex&#8221;, &#8220;TMA Slides&#8221;, &#8220;TMA Negatives&#8221;.</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>&#8220;Flatbed&#8221; &#8211; Scan document on the flat document glass.</p>
-<dt>&bull;</p>
-<dd>&#8220;ADF&#8221; &#8211; Scan frontsides of documents with automatic document feeder.</p>
-<dt>&bull;</p>
-<dd>&#8220;ADF Duplex&#8221; &#8211; Scan front- and backsides of documents with automatic document feeder. Note, the backside images must be rotated in a separate post process step.</p>
-<dt>&bull;</p>
-<dd>&#8220;TMA Slides&#8221; &#8211; Slide scanning with transparent media adapter. (Not fully supported by hp5590 backend).</p>
-<dt>&bull;</p>
-<dd>&#8220;TMA Negatives&#8221; &#8211; Negative film scanning with transparent media adapter. (Not fully supported by hp5590 backend).</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>&#8220;Flatbed&#8221; &#8211; Scan document on the flat document glass.</dd>
+<dt>&bull;</dt>
+<dd>&#8220;ADF&#8221; &#8211; Scan frontsides of documents with automatic document feeder.</dd>
+<dt>&bull;</dt>
+<dd>&#8220;ADF Duplex&#8221; &#8211; Scan front- and backsides of documents with automatic document feeder. Note, the backside images must be rotated in a separate post process step.</dd>
+<dt>&bull;</dt>
+<dd>&#8220;TMA Slides&#8221; &#8211; Slide scanning with transparent media adapter. (Not fully supported by hp5590 backend).</dd>
+<dt>&bull;</dt>
+<dd>&#8220;TMA Negatives&#8221; &#8211; Negative film scanning with transparent media adapter. (Not fully supported by hp5590 backend).</dd></dl>
 </dl>
-<dt><code>&#8211;resolution </code>res</p>
-<dd>Set the resolution of the scanned image in dpi. res must be one of: 100, 200, 300, 600, 1200, 2400.</dl>
+<dt><code>&#8211;resolution </code>res</dt>
+<dd>Set the resolution of the scanned image in dpi. res must be one of: 100, 200, 300, 600, 1200, 2400.</dd></dl>
 <p> Default settings: Lineart, Flatbed, 100dpi.</p>
 <dl>
-<dt><code>&#8211;extend-lamp-timeout[=yes|no]</code></p>
-<dd>Extend lamp timeout period. no = 15 minutes, yes = 1 hour. (Default: no)</p>
-<dt><code>&#8211;wait-for-button[=yes|no]</code></p>
-<dd>Wait for button press before scanning starts. (Default: no)</p>
-<dt><code>&#8211;preview[=yes|no]</code></p>
-<dd>Request a preview-quality scan. (Default: no)</p>
-<dt><code>&#8211;hide-eop-pixel[=yes|no]</code></p>
+<dt><code>&#8211;extend-lamp-timeout[=yes|no]</code></dt>
+<dd>Extend lamp timeout period. no = 15 minutes, yes = 1 hour. (Default: no)</dd>
+<dt><code>&#8211;wait-for-button[=yes|no]</code></dt>
+<dd>Wait for button press before scanning starts. (Default: no)</dd>
+<dt><code>&#8211;preview[=yes|no]</code></dt>
+<dd>Request a preview-quality scan. (Default: no)</dd>
+<dt><code>&#8211;hide-eop-pixel[=yes|no]</code></dt>
 <dd>Hide end-of-page indicator pixels and overwrite with color of next neighbor pixels. (Default: yes)<br />
- The scanner uses the last pixel in every scan line for storing the end-of-page status. This is needed to detect the end of the document sheet when the automatic document feeder (ADF) is used. Unfortunately the end-of-page pixels are also generated in flatbed scans. It is recommended to hide these pixels.</p>
-<dt><code>&#8211;trailing-lines-mode </code>mode</p>
-<dd>Filling mode of trailing lines after end of page when automatic document feeder (ADF) is used. mode must be one of: &#8220;last&#8221;, &#8220;raw&#8221;, &#8220;raster&#8221;, &#8220;white&#8221;, &#8220;black&#8221;, &#8220;color&#8221;. (Default: &#8220;last&#8221;)</p>
+ The scanner uses the last pixel in every scan line for storing the end-of-page status. This is needed to detect the end of the document sheet when the automatic document feeder (ADF) is used. Unfortunately the end-of-page pixels are also generated in flatbed scans. It is recommended to hide these pixels.</dd>
+<dt><code>&#8211;trailing-lines-mode </code>mode</dt>
+<dd>Filling mode of trailing lines after end of page when automatic document feeder (ADF) is used. mode must be one of: &#8220;last&#8221;, &#8220;raw&#8221;, &#8220;raster&#8221;, &#8220;white&#8221;, &#8220;black&#8221;, &#8220;color&#8221;. (Default: &#8220;last&#8221;)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>&#8220;last&#8221; = repeat the last scan line (recommended),</p>
-<dt>&bull;</p>
-<dd>&#8220;raw&#8221; = read raw scan data (not recommended),</p>
-<dt>&bull;</p>
-<dd>&#8220;raster&#8221; = generate black and white pixel pattern,</p>
-<dt>&bull;</p>
-<dd>&#8220;white&#8221; = white pixels,</p>
-<dt>&bull;</p>
-<dd>&#8220;black&#8221; = black pixels,</p>
-<dt>&bull;</p>
-<dd>&#8220;color&#8221; = RGB or gray colored pixels (see next option).</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>&#8220;last&#8221; = repeat the last scan line (recommended),</dd>
+<dt>&bull;</dt>
+<dd>&#8220;raw&#8221; = read raw scan data (not recommended),</dd>
+<dt>&bull;</dt>
+<dd>&#8220;raster&#8221; = generate black and white pixel pattern,</dd>
+<dt>&bull;</dt>
+<dd>&#8220;white&#8221; = white pixels,</dd>
+<dt>&bull;</dt>
+<dd>&#8220;black&#8221; = black pixels,</dd>
+<dt>&bull;</dt>
+<dd>&#8220;color&#8221; = RGB or gray colored pixels (see next option).</dd></dl>
 </dl>
-<dt><code>&#8211;trailing-lines-color </code>n</p>
+<dt><code>&#8211;trailing-lines-color </code>n</dt>
 <dd>Set color value for filling trailing scan lines in trailing lines mode &#8220;color&#8221; (see previous option). (Default color: violet)<br />
- The RGB color value must be specified and calculated as 65536 * r + 256 * g + b, with r, g, b being values in the range of 0 .. 255.</dl>
+ The RGB color value must be specified and calculated as 65536 * r + 256 * g + b, with r, g, b being values in the range of 0 .. 255.</dd></dl>
 <h2>Read Out Options</h2>
 <p>The following options allow reading out the button state, counter value, color setting, and the state of document in ADF. This can be used to programmatically control corresponding scanner options like switching between flatbed and ADF mode, or triggering post processing tasks after scanning.</p>
 <dl>
-<dt><code>&#8211;button-pressed</code></p>
+<dt><code>&#8211;button-pressed</code></dt>
 <dd>Get the id of the last button pressed. Id is one of &#8220;none&#8221;, &#8220;power&#8221;, &#8220;scan&#8221;, &#8220;collect&#8221;, &#8220;file&#8221;, &#8220;email&#8221;, &#8220;copy&#8221;, &#8220;up&#8221;, &#8220;down&#8221;, &#8220;mode&#8221;, &#8220;cancel&#8221;.<br />
- The scanner stores the id of the last button pressed until it is read. After read out, the state is reset and subsequent readings will return &#8220;none&#8221;. </p>
-<dt><code>&#8211;color-led</code></p>
-<dd>Get the state of the color LED indicators. The state is either &#8220;color&#8221; or &#8220;black_white&#8221;. </p>
-<dt><code>&#8211;counter-value</code></p>
-<dd>Get the counter value as shown on LCD. The value is in the range of 1 .. 99. </p>
-<dt><code>&#8211;doc-in-adf</code></p>
-<dd>Get the state of the document-available indicator of the automatic document feeder (ADF). The state is either &#8220;yes&#8221; or &#8220;no&#8221;. </p>
+ The scanner stores the id of the last button pressed until it is read. After read out, the state is reset and subsequent readings will return &#8220;none&#8221;. </dd>
+<dt><code>&#8211;color-led</code></dt>
+<dd>Get the state of the color LED indicators. The state is either &#8220;color&#8221; or &#8220;black_white&#8221;. </dd>
+<dt><code>&#8211;counter-value</code></dt>
+<dd>Get the counter value as shown on LCD. The value is in the range of 1 .. 99. </dd>
+<dt><code>&#8211;doc-in-adf</code></dt>
+<dd>Get the state of the document-available indicator of the automatic document feeder (ADF). The state is either &#8220;yes&#8221; or &#8220;no&#8221;. </dd>
 </dl>
 <h2>Hints For Users Of Scanbd</h2>
 <p><code>scanbd</code>(8) is a scanner button daemon, which can read scanner buttons and trigger scan actions. </p>
 <p> Do not use the old <code>scanbuttond</code>(8) interface with hp5590. It is outdated and shall not be used any more. The regular interface of <code>scanbd</code>(8) is fully supported by the current version of the hp5590 backend. </p>
 <p> This example shows a minimum configuration file and the corresponding script file for <code>scanbd</code>(8) to be included in <i>scanbd.conf</i>.</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>hp5590.conf</i></p>
+<dt>&bull;</dt>
+<dd><i>hp5590.conf</i></dd>
 <dd>
 <pre>device hp5590 {
  # Device matching
@@ -155,8 +155,8 @@ description: "sane-hp5590 – SANE backend for Hewlett-Packard 4500C/4570C/5500C
  }
  }
 }</pre>
-<dt>&bull;</p>
-<dd>scan_action.script</p>
+</dd><dt>&bull;</dt>
+<dd>scan_action.script</dd>
 <dd>
 <pre>#!/bin/bash
 echo device = $SCANBD_DEVICE
@@ -171,13 +171,13 @@ do-scan)
  echo Warning: Unknown scanbd action: &quot;$SCANBD_ACTION&quot;
  ;;
 esac</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>@LIBDIR@/libsane-hp5590.a</p>
-<dd>The static library implementing this backend.</p>
-<dt>@LIBDIR@/libsane-hp5590.so</p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt>@LIBDIR@/libsane-hp5590.a</dt>
+<dd>The static library implementing this backend.</dd>
+<dt>@LIBDIR@/libsane-hp5590.so</dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <p>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. </p>
 <p> SANE_DEBUG_HP5590 </p>
@@ -188,8 +188,8 @@ esac</pre>
 20 - verbose backend messages
 40 - HP5590 high-level commands
 50 - HP5590 low-level (USB-in-USB) commands</pre>
-<dt><code>Example:</code></p>
-<dd>export SANE_DEBUG_HP5590=50</dl>
+</dd><dt><code>Example:</code></dt>
+<dd>export SANE_DEBUG_HP5590=50</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) <code>scanbd</code>(8), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
 <h2>Authors</h2>

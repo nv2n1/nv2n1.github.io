@@ -10,12 +10,7 @@ description: "xcb_query_tree – query the window tree"
 <p>xcb_query_tree &#8211; query the window tree</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_query_tree_cookie_t xcb_query_tree(xcb_connection_t *conn, xcb_window_t window);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_query_tree_reply_t {
@@ -30,33 +25,33 @@ xcb_query_tree_cookie_t xcb_query_tree(xcb_connection_t *conn, xcb_window_t wind
 } <code>xcb_query_tree_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_query_tree_reply_t *<code>xcb_query_tree_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_query_tree_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_query_tree_reply_t *<code>xcb_query_tree_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_query_tree_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_window_t *<code>xcb_query_tree_children</code>(const xcb_query_tree_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_query_tree_children_length</code>(const xcb_query_tree_reply_t *<i>reply</i>);</p>
+<dd>xcb_window_t *<code>xcb_query_tree_children</code>(const xcb_query_tree_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_query_tree_children_length</code>(const xcb_query_tree_reply_t *<i>reply</i>);</dd>
 <dd>xcb_generic_iterator_t <code>xcb_query_tree_children_end</code>(const xcb_query_tree_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>window</i></p>
-<dd>The <i>window</i> to query.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>window</i></dt>
+<dd>The <i>window</i> to query.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_QUERY_TREE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>root</i></p>
-<dd>The root window of <i>window</i>.</p>
-<dt><i>parent</i></p>
-<dd>The parent window of <i>window</i>.</p>
-<dt><i>children_len</i></p>
-<dd>The number of child windows.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_QUERY_TREE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>root</i></dt>
+<dd>The root window of <i>window</i>.</dd>
+<dt><i>parent</i></dt>
+<dd>The parent window of <i>window</i>.</dd>
+<dt><i>children_len</i></dt>
+<dd>The number of child windows.</dd></dl>
 <h2>Description</h2>
 <p>Gets the root window ID, parent window ID and list of children windows for the specified <i>window</i>. The children are listed in bottom-to-top stacking order.</p>
 <h2>Return Value</h2>
@@ -73,19 +68,16 @@ void my_example(xcb_connection_t *conn, xcb_window_t window)
 {
     xcb_query_tree_cookie_t cookie;
     xcb_query_tree_reply_t *reply;
-
     cookie = xcb_query_tree(conn, window);
     if ((reply = xcb_query_tree_reply(conn, cookie, NULL))) {
         printf(&quot;root = 0x%08x
 &quot;, reply-&gt;root);
         printf(&quot;parent = 0x%08x
 &quot;, reply-&gt;parent);
-
         xcb_window_t *children = xcb_query_tree_children(reply);
         for (int i = 0; i &lt; xcb_query_tree_children_length(reply); i++)
             printf(&quot;child window = 0x%08x
 &quot;, children[i]);
-
         free(reply);
     }
 }</code></pre>

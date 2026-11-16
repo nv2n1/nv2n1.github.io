@@ -14,11 +14,11 @@ description: "ata_sas_async_probe – simply schedule probing and return"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>Port to probe</dl>
+</dd><dd>Port to probe</dd></dl>
 <h2>Description</h2>
 <p>For batch scheduling of probe for sas attached ata devices, assumes the port has already been through <code>ata_sas_port_init</code></p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -18,19 +18,17 @@ description: "docker-image-ls – List images"
 <h2>Filters</h2>
 <p> Filters the output based on these conditions: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> dangling=(true|false) &#8211; find unused images</p>
-<dt>&bull;</p>
-<dd> label= or label==</p>
-<dt>&bull;</p>
-<dd> before=([:tag]||image [at] digest &lt;mailto:image [at] digest&gt;)</p>
-<dt>&bull;</p>
-<dd> since=([:tag]||image [at] digest &lt;mailto:image [at] digest&gt;)</p>
-<dt>&bull;</p>
-<dd> reference=(pattern of an image reference) </p>
+<dt>&bull;</dt>
+<dd> dangling=(true|false) &#8211; find unused images</dd>
+<dt>&bull;</dt>
+<dd> label= or label==</dd>
+<dt>&bull;</dt>
+<dd> before=([:tag]||image [at] digest &lt;mailto:image [at] digest&gt;)</dd>
+<dt>&bull;</dt>
+<dd> since=([:tag]||image [at] digest &lt;mailto:image [at] digest&gt;)</dd>
+<dt>&bull;</dt>
+<dd> reference=(pattern of an image reference) </dd>
 </dl>
 </dl>
 <h2>Format</h2>
@@ -48,68 +46,68 @@ description: "docker-image-ls – List images"
 <p> To list the images in a local repository (not the registry) run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image ls
 </pre>
-</dl>
+</dd></dl>
 <p> The list will contain the image repository name, a tag for the image, and an image ID, when it was created and its virtual size. Columns: REPOSITORY, TAG, IMAGE ID, CREATED, and SIZE. </p>
 <p> The docker image ls command takes an optional [REPOSITORY[:TAG]] argument that restricts the list to images that match the argument. If you specify REPOSITORY but no TAG, the docker image ls command lists all images in the given repository. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image ls java
 </pre>
-</dl>
+</dd></dl>
 <p> The [REPOSITORY[:TAG]] value must be an &quot;exact match&quot;. This means that, for example, docker image ls jav does not match the image java. </p>
 <p> If both REPOSITORY and TAG are provided, only images matching that repository and tag are listed. To find all local images in the &quot;java&quot; repository with tag &quot;8&quot; you can use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image ls java:8
 </pre>
-</dl>
+</dd></dl>
 <p> To get a verbose list of images which contains all the intermediate images used in builds use <code>-a</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image ls -a
 </pre>
-</dl>
+</dd></dl>
 <p> Previously, the docker image ls command supported the &#8211;tree and &#8211;dot arguments, which displayed different visualizations of the image data. Docker core removed this functionality in the 1.7 version. If you liked this functionality, you can still find it in the third-party dockviz tool: <a rel="nofollow" href="https://github.com/justone/dockviz.">https://github.com/justone/dockviz.</a> </p>
 <h2>Listing images in a desired format</h2>
 <p> When using the &#8211;format option, the image command will either output the data exactly as the template declares or, when using the table directive, will include column headers as well. You can use special characters like 	 for inserting tab spacing between columns. </p>
 <p> The following example uses a template without headers and outputs the ID and Repository entries separated by a colon for all images: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 docker images-- format "&#123;&#123;.ID}}: &#123;&#123;.Repository}}" 77af4d6b9913 : &lt;none&gt;
                                                                      b6fa739cedf5 : committ 78a85c484bad : ipbabble 30557a29d5ab : docker 5ed6274db6ce : &lt;none&gt; 746b819f315e : postgres 746b819f315e : postgres 746b819f315e : postgres 746b819f315e : postgres
 </code></pre>
-</dl>
+</dd></dl>
 <p> To list all images with their repository and tag in a table format you can use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 docker images-- format "table &#123;&#123;.ID}}	&#123;&#123;.Repository}}	&#123;&#123;.Tag}}" IMAGE ID REPOSITORY TAG 77af4d6b9913 &lt; none &gt; &lt;none&gt;
                                                                                                                     b6fa739cedf5 committ latest 78a85c484bad ipbabble&lt;none&gt; 30557a29d5ab docker latest 5ed6274db6ce &lt; none &gt; &lt;none&gt; 746b819f315e postgres 9 746b819f315e postgres 9.3 746b819f315e postgres 9.3.5 746b819f315e postgres latest
 </code></pre>
-</dl>
+</dd></dl>
 <p> Valid template placeholders are listed above. </p>
 <h2>Listing only the shortened image IDs</h2>
 <p> Listing just the shortened image IDs. This can be useful for some automated tools. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image ls -q
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show all images (default hides intermediate images)</p>
 <p> <code>&#8211;digests</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show digests</p>

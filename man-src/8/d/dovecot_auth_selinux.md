@@ -67,8 +67,8 @@ description: "dovecot_auth_selinux – Security Enhanced Linux Policy for the do
 <p> <code>dovecot_auth_exec_t</code> </p>
 <p> &#8211; Set files with the dovecot_auth_exec_t type, if you want to transition an executable to the dovecot_auth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/dovecot/auth, /usr/libexec/dovecot/dovecot-auth </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/dovecot/auth, /usr/libexec/dovecot/dovecot-auth </dd>
 </dl>
 <p> <code>dovecot_auth_tmp_t</code> </p>
 <p> &#8211; Set files with the dovecot_auth_tmp_t type, if you want to store dovecot auth temporary files in the /tmp directories. </p>

@@ -27,8 +27,6 @@ SIZE
 expressed in normalized device coordinates.
 ITYPE
 (an input parameter of type INTEGER) the logo type.  The choices are:
-
-
 '1'
 -  An NCAR logo.  This logo will be drawn in a single color if IWK
 is not a PostScript workstation.  A full color logo will be put to a
@@ -44,9 +42,6 @@ PostScript workstation.
 half the height of the star.  In this case, the
 coordinate (X,Y) specifies the center of the star part
 of the logo.
-
-
-
 ICOL1
 (an input parameter of type INTEGER) The color index to be used for the
 logo color.  For the NCAR logo on PostScript output, this argument
@@ -61,9 +56,9 @@ color index ICOL2.</code></pre>
 
  Use the ncargex command to see the following relevant example: miex01.
 <h2>Examples</h2><dl COMPACT><dt>CALL NGLOGO(1, 0.5, 0.5, 0.1, 1, 1, 1)
-<dd>Plots an NCAR logo on workstation with ID 1 in the center of the plot with height one-tenth the maximum plot size. If going to a PostScript workstation, the logo will be a full-color logo, otherwise the logo will be plotted using color index 1.
-<dt>CALL NGLOGO(1, 0.5, 0.5, 0.1, 2, 2, 1)
-<dd>Plots a UCAR star logo on workstation with ID 1 in the center of the plot with height one-tenth the maximum plot size. The logo will be plotted using color index 2.</dl><h2>Access</h2>To use NGLOGO or c_nglogo, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
+</dt><dd>Plots an NCAR logo on workstation with ID 1 in the center of the plot with height one-tenth the maximum plot size. If going to a PostScript workstation, the logo will be a full-color logo, otherwise the logo will be plotted using color index 1.
+</dd><dt>CALL NGLOGO(1, 0.5, 0.5, 0.1, 2, 2, 1)
+</dt><dd>Plots a UCAR star logo on workstation with ID 1 in the center of the plot with height one-tenth the maximum plot size. The logo will be plotted using color index 2.</dd></dl><h2>Access</h2>To use NGLOGO or c_nglogo, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: plotchar (font 35) (3NCARG), 
 
  Hardcopy: NCAR Graphics Fundamentals, UNIX Version

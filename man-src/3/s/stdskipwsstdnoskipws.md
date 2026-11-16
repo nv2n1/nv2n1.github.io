@@ -24,11 +24,8 @@ This is an I/O manipulator, it may be called with an expression such as out &lt;
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
-
 int main()
-
 {
     char c1, c2, c3;
     std::istringstream(&quot;a b c&quot;) &gt;&gt; c1 &gt;&gt; c2 &gt;&gt; c3;

@@ -11,9 +11,7 @@ description: "sc::MolecularFormula –"
 <p> The <code>MolecularFormula</code> class is used to calculate the molecular formula of a <code>Molecule</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;formula.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>MolecularFormula</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;m)<br />
  <i>Constructors. The argument must be nonnull. </i><br />

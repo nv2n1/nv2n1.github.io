@@ -19,39 +19,39 @@ description: "uuidgen – create a new UUID value"
 <p> <code>-r</code>, <code>&#8211;random</code></p>
 <dl>
 <dt>
-<dd> Generate a random-based UUID. This method creates a UUID consisting mostly of random bits. It requires that the operating system has a high quality random number generator, such as <i>/dev/random</i>.</dl>
+</dt><dd> Generate a random-based UUID. This method creates a UUID consisting mostly of random bits. It requires that the operating system has a high quality random number generator, such as <i>/dev/random</i>.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;time</code></p>
 <dl>
 <dt>
-<dd> Generate a time-based UUID. This method creates a UUID based on the system clock plus the system&#8217;s ethernet hardware address, if present.</dl>
+</dt><dd> Generate a time-based UUID. This method creates a UUID based on the system clock plus the system&#8217;s ethernet hardware address, if present.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;md5</code></p>
 <dl>
 <dt>
-<dd> Use MD5 as the hash algorithm.</dl>
+</dt><dd> Use MD5 as the hash algorithm.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;sha1</code></p>
 <dl>
 <dt>
-<dd> Use SHA1 as the hash algorithm.</dl>
+</dt><dd> Use SHA1 as the hash algorithm.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;namespace</code> <i>namespace</i></p>
 <dl>
 <dt>
-<dd> Generate the hash with the <i>namespace</i> prefix. The <i>namespace</i> is UUID, or &#8216;@ns&#8217; where &quot;ns&quot; is well-known predefined UUID addressed by namespace name (see above).</dl>
+</dt><dd> Generate the hash with the <i>namespace</i> prefix. The <i>namespace</i> is UUID, or &#8216;@ns&#8217; where &quot;ns&quot; is well-known predefined UUID addressed by namespace name (see above).</dd></dl>
 <p> <code>-N</code>, <code>&#8211;name</code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Generate the hash of the <i>name</i>.</dl>
+</dt><dd> Generate the hash of the <i>name</i>.</dd></dl>
 <p> <code>-x</code>, <code>&#8211;hex</code></p>
 <dl>
 <dt>
-<dd> Interpret name <i>name</i> as a hexadecimal string.</dl>
+</dt><dd> Interpret name <i>name</i> as a hexadecimal string.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> OSF DCE 1.1</p>
 <h2>EXAMPLES</h2>

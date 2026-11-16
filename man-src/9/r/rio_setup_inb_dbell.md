@@ -14,20 +14,20 @@ description: "rio_setup_inb_dbell – bind inbound doorbell callback"
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO master port to bind the doorbell callback</dl>
+</dd><dd>RIO master port to bind the doorbell callback</dd></dl>
 <p> <i>dev_id</i></p>
 <dl>
-<dd>Device specific pointer to pass on event</dl>
+<dd>Device specific pointer to pass on event</dd></dl>
 <p> <i>res</i></p>
 <dl>
-<dd>Doorbell message resource</dl>
+<dd>Doorbell message resource</dd></dl>
 <p> <i>dinb</i></p>
 <dl>
-<dd>Callback to execute when doorbell is received</dl>
+<dd>Callback to execute when doorbell is received</dd></dl>
 <h2>Description</h2>
 <p>Adds a doorbell resource/callback pair into a port&#8217;s doorbell event list. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

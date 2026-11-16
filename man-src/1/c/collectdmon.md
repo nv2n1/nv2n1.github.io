@@ -16,21 +16,21 @@ description: "collectdmon – Monitoring daemon for collectd"
 <h2>OPTIONS</h2>
 <p> collectdmon supports the following options:</p>
 <dl>
-<dt><code>-c</code> <i>&lt;path&gt;</i></p>
-<dd> Specify the pathname of the collectd binary. You may either specify an absolute path or simply the name of the binary in which case the <font SIZE="-1"><code>PATH</code></font> variable will be searched for it. The default is &quot;<code>collectd</code>&quot;.</p>
-<dt><code>-P</code> <i>&lt;pid-file&gt;</i></p>
-<dd> Specify the pid file. The default is &quot;<i>/var/run/collectdmon.pid</i>&quot;.</p>
-<dt><code>-h</code></p>
-<dd> Output usage information and exit.</p>
-<dt><i>collectd options</i></p>
-<dd> Specify options that are passed on to collectd. If it is not already included, <code>-f</code> will be added to these options. See <i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1).</dl>
+<dt><code>-c</code> <i>&lt;path&gt;</i></dt>
+<dd> Specify the pathname of the collectd binary. You may either specify an absolute path or simply the name of the binary in which case the <font SIZE="-1"><code>PATH</code></font> variable will be searched for it. The default is &quot;<code>collectd</code>&quot;.</dd>
+<dt><code>-P</code> <i>&lt;pid-file&gt;</i></dt>
+<dd> Specify the pid file. The default is &quot;<i>/var/run/collectdmon.pid</i>&quot;.</dd>
+<dt><code>-h</code></dt>
+<dd> Output usage information and exit.</dd>
+<dt><i>collectd options</i></dt>
+<dd> Specify options that are passed on to collectd. If it is not already included, <code>-f</code> will be added to these options. See <i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1).</dd></dl>
 <h2>SIGNALS</h2>
 <p> <code>collectdmon</code> accepts the following signals:</p>
 <dl>
-<dt><font SIZE="-1"><code>SIGINT</code></font>, <font SIZE="-1"><code>SIGTERM</code></font></p>
-<dd> These signals cause <code>collectdmon</code> to terminate <code>collectd</code>, wait for its termination and then shut down.</p>
-<dt><font SIZE="-1"><code>SIGHUP</code></font></p>
-<dd> This signal causes <code>collectdmon</code> to terminate <code>collectd</code>, wait for its termination and then restart it.</dl>
+<dt><font SIZE="-1"><code>SIGINT</code></font>, <font SIZE="-1"><code>SIGTERM</code></font></dt>
+<dd> These signals cause <code>collectdmon</code> to terminate <code>collectd</code>, wait for its termination and then shut down.</dd>
+<dt><font SIZE="-1"><code>SIGHUP</code></font></dt>
+<dd> This signal causes <code>collectdmon</code> to terminate <code>collectd</code>, wait for its termination and then restart it.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5), &lt;<a rel="nofollow" href="http://collectd.org/">http://collectd.org/</a>&gt;</p>
 <h2>AUTHOR</h2>

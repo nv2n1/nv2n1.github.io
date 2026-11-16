@@ -16,74 +16,74 @@ description: "FileCheck – Flexible pattern matching file verifier"
 <h2>Options</h2>
 <p>Options are parsed from the environment variable <code>FILECHECK_OPTS</code> and from the command line.</p>
 <dl>
-<dt><code>-help</code></p>
-<dd>Print a summary of command line options.</p>
-<dt><code>&#8211;check-prefix prefix</code></p>
-<dd>FileCheck searches the contents of <code>match-filename</code> for patterns to match. By default, these patterns are prefixed with “<code>CHECK:</code>”. If you’d like to use a different prefix (e.g. because the same input file is checking multiple different tool or options), the <i>&#8211;check-prefix</i> argument allows you to specify (without the trailing “<code>:</code>”) one or more prefixes to match. Multiple prefixes are useful for tests which might change for different run options, but most lines remain the same. </p>
+<dt><code>-help</code></dt>
+<dd>Print a summary of command line options.</dd>
+<dt><code>&#8211;check-prefix prefix</code></dt>
+<dd>FileCheck searches the contents of <code>match-filename</code> for patterns to match. By default, these patterns are prefixed with “<code>CHECK:</code>”. If you’d like to use a different prefix (e.g. because the same input file is checking multiple different tool or options), the <i>&#8211;check-prefix</i> argument allows you to specify (without the trailing “<code>:</code>”) one or more prefixes to match. Multiple prefixes are useful for tests which might change for different run options, but most lines remain the same. </dd>
 <p> FileCheck does not permit duplicate prefixes, even if one is a check prefix and one is a comment prefix (see <i>&#8211;comment-prefixes</i> below).</p>
-<dt><code>&#8211;check-prefixes prefix1,prefix2,&#8230;</code></p>
-<dd>An alias of <i>&#8211;check-prefix</i> that allows multiple prefixes to be specified as a comma separated list.</p>
-<dt><code>&#8211;comment-prefixes prefix1,prefix2,&#8230;</code></p>
-<dd>By default, FileCheck ignores any occurrence in <code>match-filename</code> of any check prefix if it is preceded on the same line by “<code>COM:</code>” or “<code>RUN:</code>”. See the section <i>The “COM:” directive</i> for usage details. </p>
+<dt><code>&#8211;check-prefixes prefix1,prefix2,&#8230;</code></dt>
+<dd>An alias of <i>&#8211;check-prefix</i> that allows multiple prefixes to be specified as a comma separated list.</dd>
+<dt><code>&#8211;comment-prefixes prefix1,prefix2,&#8230;</code></dt>
+<dd>By default, FileCheck ignores any occurrence in <code>match-filename</code> of any check prefix if it is preceded on the same line by “<code>COM:</code>” or “<code>RUN:</code>”. See the section <i>The “COM:” directive</i> for usage details. </dd>
 <p> These default comment prefixes can be overridden by <i>&#8211;comment-prefixes</i> if they are not appropriate for your testing environment. However, doing so is not recommended in LLVM’s LIT-based test suites, which should be easier to maintain if they all follow a consistent comment style. In that case, consider proposing a change to the default comment prefixes instead.</p>
-<dt><code>&#8211;allow-unused-prefixes</code></p>
-<dd>This option controls the behavior when using more than one prefix as specified by <i>&#8211;check-prefix</i> or <i>&#8211;check-prefixes</i>, and some of these prefixes are missing in the test file. If true, this is allowed, if false, FileCheck will report an error, listing the missing prefixes. </p>
+<dt><code>&#8211;allow-unused-prefixes</code></dt>
+<dd>This option controls the behavior when using more than one prefix as specified by <i>&#8211;check-prefix</i> or <i>&#8211;check-prefixes</i>, and some of these prefixes are missing in the test file. If true, this is allowed, if false, FileCheck will report an error, listing the missing prefixes. </dd>
 <p> It is currently, temporarily, true by default, and will be subsequently switched to false.</p>
-<dt><code>&#8211;input-file filename</code></p>
-<dd>File to check (defaults to stdin).</p>
-<dt><code>&#8211;match-full-lines</code></p>
-<dd>By default, FileCheck allows matches of anywhere on a line. This option will require all positive matches to cover an entire line. Leading and trailing whitespace is ignored, unless <i>&#8211;strict-whitespace</i> is also specified. (Note: negative matches from <code>CHECK-NOT</code> are not affected by this option!) </p>
+<dt><code>&#8211;input-file filename</code></dt>
+<dd>File to check (defaults to stdin).</dd>
+<dt><code>&#8211;match-full-lines</code></dt>
+<dd>By default, FileCheck allows matches of anywhere on a line. This option will require all positive matches to cover an entire line. Leading and trailing whitespace is ignored, unless <i>&#8211;strict-whitespace</i> is also specified. (Note: negative matches from <code>CHECK-NOT</code> are not affected by this option!) </dd>
 <p> Passing this option is equivalent to inserting <code>&#123;&#123;^ *}}</code> or <code>&#123;&#123;^}}</code> before, and <code>&#123;&#123; *$}}</code> or <code>&#123;&#123;$}}</code> after every positive check pattern.</p>
-<dt><code>&#8211;strict-whitespace</code></p>
+<dt><code>&#8211;strict-whitespace</code></dt>
 <dd>By default, FileCheck canonicalizes input horizontal whitespace (spaces and tabs) which causes it to ignore these differences (a space will match a tab). The <i>&#8211;strict-whitespace</i> argument disables this behavior. End-of-line sequences are canonicalized to UNIX-style <code>
-</code> in all modes.</p>
-<dt><code>&#8211;ignore-case</code></p>
-<dd>By default, FileCheck uses case-sensitive matching. This option causes FileCheck to use case-insensitive matching.</p>
-<dt><code>&#8211;implicit-check-not check-pattern</code></p>
-<dd>Adds implicit negative checks for the specified patterns between positive checks. The option allows writing stricter tests without stuffing them with <code>CHECK-NOT</code>s. </p>
+</code> in all modes.</dd>
+<dt><code>&#8211;ignore-case</code></dt>
+<dd>By default, FileCheck uses case-sensitive matching. This option causes FileCheck to use case-insensitive matching.</dd>
+<dt><code>&#8211;implicit-check-not check-pattern</code></dt>
+<dd>Adds implicit negative checks for the specified patterns between positive checks. The option allows writing stricter tests without stuffing them with <code>CHECK-NOT</code>s. </dd>
 <p> For example, “<code>&#8211;implicit-check-not warning:</code>” can be useful when testing diagnostic messages from tools that don’t have an option similar to <code>clang -verify</code>. With this option FileCheck will verify that input does not contain warnings not covered by any <code>CHECK:</code> patterns.</p>
-<dt><code>&#8211;dump-input &lt;value&gt;</code></p>
-<dd>Dump input to stderr, adding annotations representing currently enabled diagnostics. When there are multiple occurrences of this option, the <code>&lt;value&gt;</code> that appears earliest in the list below has precedence. The default is <code>fail</code>.</p>
-<dt>&bull;</p>
-<dd><code>help</code> &#8211; Explain input dump and quit</p>
-<dt>&bull;</p>
-<dd><code>always</code> &#8211; Always dump input</p>
-<dt>&bull;</p>
-<dd><code>fail</code> &#8211; Dump input on failure</p>
-<dt>&bull;</p>
-<dd><code>never</code> &#8211; Never dump input</p>
-<dt><code>&#8211;dump-input-context &lt;N&gt;</code></p>
-<dd>In the dump requested by <code>&#8211;dump-input</code>, print <code>&lt;N&gt;</code> input lines before and <code>&lt;N&gt;</code> input lines after any lines specified by <code>&#8211;dump-input-filter</code>. When there are multiple occurrences of this option, the largest specified <code>&lt;N&gt;</code> has precedence. The default is 5.</p>
-<dt><code>&#8211;dump-input-filter &lt;value&gt;</code></p>
-<dd>In the dump requested by <code>&#8211;dump-input</code>, print only input lines of kind <code>&lt;value&gt;</code> plus any context specified by <code>&#8211;dump-input-context</code>. When there are multiple occurrences of this option, the <code>&lt;value&gt;</code> that appears earliest in the list below has precedence. The default is <code>error</code> when <code>&#8211;dump-input=fail</code>, and it’s <code>all</code> when <code>&#8211;dump-input=always</code>.</p>
-<dt>&bull;</p>
-<dd><code>all</code> &#8211; All input lines</p>
-<dt>&bull;</p>
-<dd><code>annotation-full</code> &#8211; Input lines with annotations</p>
-<dt>&bull;</p>
-<dd><code>annotation</code> &#8211; Input lines with starting points of annotations</p>
-<dt>&bull;</p>
-<dd><code>error</code> &#8211; Input lines with starting points of error annotations</p>
-<dt><code>&#8211;enable-var-scope</code></p>
-<dd>Enables scope for regex variables. </p>
+<dt><code>&#8211;dump-input &lt;value&gt;</code></dt>
+<dd>Dump input to stderr, adding annotations representing currently enabled diagnostics. When there are multiple occurrences of this option, the <code>&lt;value&gt;</code> that appears earliest in the list below has precedence. The default is <code>fail</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>help</code> &#8211; Explain input dump and quit</dd>
+<dt>&bull;</dt>
+<dd><code>always</code> &#8211; Always dump input</dd>
+<dt>&bull;</dt>
+<dd><code>fail</code> &#8211; Dump input on failure</dd>
+<dt>&bull;</dt>
+<dd><code>never</code> &#8211; Never dump input</dd>
+<dt><code>&#8211;dump-input-context &lt;N&gt;</code></dt>
+<dd>In the dump requested by <code>&#8211;dump-input</code>, print <code>&lt;N&gt;</code> input lines before and <code>&lt;N&gt;</code> input lines after any lines specified by <code>&#8211;dump-input-filter</code>. When there are multiple occurrences of this option, the largest specified <code>&lt;N&gt;</code> has precedence. The default is 5.</dd>
+<dt><code>&#8211;dump-input-filter &lt;value&gt;</code></dt>
+<dd>In the dump requested by <code>&#8211;dump-input</code>, print only input lines of kind <code>&lt;value&gt;</code> plus any context specified by <code>&#8211;dump-input-context</code>. When there are multiple occurrences of this option, the <code>&lt;value&gt;</code> that appears earliest in the list below has precedence. The default is <code>error</code> when <code>&#8211;dump-input=fail</code>, and it’s <code>all</code> when <code>&#8211;dump-input=always</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>all</code> &#8211; All input lines</dd>
+<dt>&bull;</dt>
+<dd><code>annotation-full</code> &#8211; Input lines with annotations</dd>
+<dt>&bull;</dt>
+<dd><code>annotation</code> &#8211; Input lines with starting points of annotations</dd>
+<dt>&bull;</dt>
+<dd><code>error</code> &#8211; Input lines with starting points of error annotations</dd>
+<dt><code>&#8211;enable-var-scope</code></dt>
+<dd>Enables scope for regex variables. </dd>
 <p> Variables with names that start with <code>$</code> are considered global and remain set throughout the file. </p>
 <p> All other variables get undefined after each encountered <code>CHECK-LABEL</code>.</p>
-<dt><code>-D&lt;VAR=VALUE&gt;</code></p>
-<dd>Sets a filecheck pattern variable <code>VAR</code> with value <code>VALUE</code> that can be used in <code>CHECK:</code> lines.</p>
-<dt><code>-D#&lt;FMT&gt;,&lt;NUMVAR&gt;=&lt;NUMERIC EXPRESSION&gt;</code></p>
-<dd>Sets a filecheck numeric variable <code>NUMVAR</code> of matching format <code>FMT</code> to the result of evaluating <code>&lt;NUMERIC EXPRESSION&gt;</code> that can be used in <code>CHECK:</code> lines. See section <code>FileCheck Numeric Variables and Expressions</code> for details on supported numeric expressions.</p>
-<dt><code>-version</code></p>
-<dd>Show the version number of this program.</p>
-<dt><code>-v</code></p>
-<dd>Print good directive pattern matches. However, if <code>-dump-input=fail</code> or <code>-dump-input=always</code>, add those matches as input annotations instead.</p>
-<dt><code>-vv</code></p>
-<dd>Print information helpful in diagnosing internal FileCheck issues, such as discarded overlapping <code>CHECK-DAG:</code> matches, implicit EOF pattern matches, and <code>CHECK-NOT:</code> patterns that do not have matches. Implies <code>-v</code>. However, if <code>-dump-input=fail</code> or <code>-dump-input=always</code>, just add that information as input annotations instead.</p>
-<dt><code>&#8211;allow-deprecated-dag-overlap</code></p>
-<dd>Enable overlapping among matches in a group of consecutive <code>CHECK-DAG:</code> directives. This option is deprecated and is only provided for convenience as old tests are migrated to the new non-overlapping <code>CHECK-DAG:</code> implementation.</p>
-<dt><code>&#8211;allow-empty</code></p>
-<dd>Allow checking empty input. By default, empty input is rejected.</p>
-<dt><code>&#8211;color</code></p>
-<dd>Use colors in output (autodetected by default).</dl>
+<dt><code>-D&lt;VAR=VALUE&gt;</code></dt>
+<dd>Sets a filecheck pattern variable <code>VAR</code> with value <code>VALUE</code> that can be used in <code>CHECK:</code> lines.</dd>
+<dt><code>-D#&lt;FMT&gt;,&lt;NUMVAR&gt;=&lt;NUMERIC EXPRESSION&gt;</code></dt>
+<dd>Sets a filecheck numeric variable <code>NUMVAR</code> of matching format <code>FMT</code> to the result of evaluating <code>&lt;NUMERIC EXPRESSION&gt;</code> that can be used in <code>CHECK:</code> lines. See section <code>FileCheck Numeric Variables and Expressions</code> for details on supported numeric expressions.</dd>
+<dt><code>-version</code></dt>
+<dd>Show the version number of this program.</dd>
+<dt><code>-v</code></dt>
+<dd>Print good directive pattern matches. However, if <code>-dump-input=fail</code> or <code>-dump-input=always</code>, add those matches as input annotations instead.</dd>
+<dt><code>-vv</code></dt>
+<dd>Print information helpful in diagnosing internal FileCheck issues, such as discarded overlapping <code>CHECK-DAG:</code> matches, implicit EOF pattern matches, and <code>CHECK-NOT:</code> patterns that do not have matches. Implies <code>-v</code>. However, if <code>-dump-input=fail</code> or <code>-dump-input=always</code>, just add that information as input annotations instead.</dd>
+<dt><code>&#8211;allow-deprecated-dag-overlap</code></dt>
+<dd>Enable overlapping among matches in a group of consecutive <code>CHECK-DAG:</code> directives. This option is deprecated and is only provided for convenience as old tests are migrated to the new non-overlapping <code>CHECK-DAG:</code> implementation.</dd>
+<dt><code>&#8211;allow-empty</code></dt>
+<dd>Allow checking empty input. By default, empty input is rejected.</dd>
+<dt><code>&#8211;color</code></dt>
+<dd>Use colors in output (autodetected by default).</dd></dl>
 <h2>Exit Status</h2>
 <p>If <code>FileCheck</code> verifies that the file matches the expected contents, it exits with 0. Otherwise, if not, or if an error occurs, it will exit with a non-zero value.</p>
 <h2>Tutorial</h2>
@@ -134,14 +134,14 @@ define &lt;4 x i32&gt; @pinsrd_1(i32 %s, &lt;4 x i32&gt; %tmp) nounwind {
 <p>Without “<code>COM:</code>”, you would need to use some combination of rewording and directive syntax mangling to prevent FileCheck from recognizing the commented occurrences of “<code>X32:</code>” and “<code>X64:</code>” above as directives. Moreover, FileCheck diagnostics have been proposed that might complain about the above occurrences of “<code>X64</code>” that don’t have the trailing “<code>:</code>” because they look like directive typos. Dodging all these problems can be tedious for a test author, and directive syntax mangling can make the purpose of test code unclear. “<code>COM:</code>” avoids all these problems. </p>
 <p> A few important usage notes:</p>
 <dl>
-<dt>&bull;</p>
-<dd>“<code>COM:</code>” within another directive’s pattern does <i>not</i> comment out the remainder of the pattern. For example: </p>
+<dt>&bull;</dt>
+<dd>“<code>COM:</code>” within another directive’s pattern does <i>not</i> comment out the remainder of the pattern. For example: </dd>
 <pre>; X32: pinsrd $1, 4(%esp), %xmm0 COM: This is part of the X32 pattern!</pre>
 <p>If you need to temporarily comment out part of a directive’s pattern, move it to another line. The reason is that FileCheck parses “<code>COM:</code>” in the same manner as any other directive: only the first directive on the line is recognized as a directive.</p>
-<dt>&bull;</p>
-<dd>For the sake of LIT, FileCheck treats “<code>RUN:</code>” just like “<code>COM:</code>”. If this is not suitable for your test environment, see <i>&#8211;comment-prefixes</i>.</p>
-<dt>&bull;</p>
-<dd>FileCheck does not recognize “<code>COM</code>”, “<code>RUN</code>”, or any user-defined comment prefix as a comment directive if it’s combined with one of the usual check directive suffixes, such as “<code>-NEXT:</code>” or “<code>-NOT:</code>”, discussed below. FileCheck treats such a combination as plain text instead. If it needs to act as a comment directive for your test environment, define it as such with <i>&#8211;comment-prefixes</i>.</dl>
+<dt>&bull;</dt>
+<dd>For the sake of LIT, FileCheck treats “<code>RUN:</code>” just like “<code>COM:</code>”. If this is not suitable for your test environment, see <i>&#8211;comment-prefixes</i>.</dd>
+<dt>&bull;</dt>
+<dd>FileCheck does not recognize “<code>COM</code>”, “<code>RUN</code>”, or any user-defined comment prefix as a comment directive if it’s combined with one of the usual check directive suffixes, such as “<code>-NEXT:</code>” or “<code>-NOT:</code>”, discussed below. FileCheck treats such a combination as plain text instead. If it needs to act as a comment directive for your test environment, define it as such with <i>&#8211;comment-prefixes</i>.</dd></dl>
 <h3>The “CHECK-NEXT:” directive</h3>
 <p>Sometimes you want to match lines and would like to verify that matches happen on exactly consecutive lines with no other lines in between them. In this case, you can use “<code>CHECK:</code>” and “<code>CHECK-NEXT:</code>” directives to specify this. If you specified a custom check prefix, just use “<code>&lt;PREFIX&gt;-NEXT:</code>”. For example, something like this works as you’d expect: </p>
 <pre>define void @t2(&lt;2 x double&gt;* %r, &lt;2 x double&gt;* %A, double %B) {
@@ -314,17 +314,17 @@ Output %r10: [[30, 40]]
 <p><code>FileCheck</code> also supports numeric substitution blocks that allow defining numeric variables and checking for numeric values that satisfy a numeric expression constraint based on those variables via a numeric substitution. This allows <code>CHECK:</code> directives to verify a numeric relation between two numbers, such as the need for consecutive registers to be used. </p>
 <p> The syntax to capture a numeric value is <code>[[#%&lt;fmtspec&gt;,&lt;NUMVAR&gt;:]]</code> where:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>%&lt;fmtspec&gt;,</code> is an optional format specifier to indicate what number format to match and the minimum number of digits to expect.</p>
-<dt>&bull;</p>
-<dd><code>&lt;NUMVAR&gt;:</code> is an optional definition of variable <code>&lt;NUMVAR&gt;</code> from the captured value. </p>
+<dt>&bull;</dt>
+<dd><code>%&lt;fmtspec&gt;,</code> is an optional format specifier to indicate what number format to match and the minimum number of digits to expect.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;NUMVAR&gt;:</code> is an optional definition of variable <code>&lt;NUMVAR&gt;</code> from the captured value. </dd>
 <p> The syntax of <code>&lt;fmtspec&gt;</code> is: <code>#.&lt;precision&gt;&lt;conversion specifier&gt;</code> where:</p>
-<dt>&bull;</p>
-<dd><code>#</code> is an optional flag available for hex values (see <code>&lt;conversion specifier&gt;</code> below) which requires the value matched to be prefixed by <code>0x</code>.</p>
-<dt>&bull;</p>
-<dd><code>.&lt;precision&gt;</code> is an optional printf-style precision specifier in which <code>&lt;precision&gt;</code> indicates the minimum number of digits that the value matched must have, expecting leading zeros if needed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;conversion specifier&gt;</code> is an optional scanf-style conversion specifier to indicate what number format to match (e.g. hex number). Currently accepted format specifiers are <code>%u</code>, <code>%d</code>, <code>%x</code> and <code>%X</code>. If absent, the format specifier defaults to <code>%u</code>. </p>
+<dt>&bull;</dt>
+<dd><code>#</code> is an optional flag available for hex values (see <code>&lt;conversion specifier&gt;</code> below) which requires the value matched to be prefixed by <code>0x</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>.&lt;precision&gt;</code> is an optional printf-style precision specifier in which <code>&lt;precision&gt;</code> indicates the minimum number of digits that the value matched must have, expecting leading zeros if needed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;conversion specifier&gt;</code> is an optional scanf-style conversion specifier to indicate what number format to match (e.g. hex number). Currently accepted format specifiers are <code>%u</code>, <code>%d</code>, <code>%x</code> and <code>%X</code>. If absent, the format specifier defaults to <code>%u</code>. </dd>
 <p> For example: </p>
 <pre>; CHECK: mov r[[#REG:]], 0x[[#%.8X,ADDR:]]</pre>
 <p>would match <code>mov r5, 0x0000FEFE</code> and set <code>REG</code> to the value <code>5</code> and <code>ADDR</code> to the value <code>0xFEFE</code>. Note that due to the precision it would fail to match <code>mov r5, 0xFEFE</code>. </p>
@@ -332,39 +332,39 @@ Output %r10: [[30, 40]]
 <pre>; CHECK-NOT: mov r0, r[[#]]</pre>
 <p>to check that a value is synthesized rather than moved around. </p>
 <p> The syntax of a numeric substitution is <code>[[#%&lt;fmtspec&gt;, &lt;constraint&gt; &lt;expr&gt;]]</code> where:</p>
-<dt>&bull;</p>
-<dd><code>&lt;fmtspec&gt;</code> is the same format specifier as for defining a variable but in this context indicating how a numeric expression value should be matched against. If absent, both components of the format specifier are inferred from the matching format of the numeric variable(s) used by the expression constraint if any, and defaults to <code>%u</code> if no numeric variable is used, denoting that the value should be unsigned with no leading zeros. In case of conflict between format specifiers of several numeric variables, the conversion specifier becomes mandatory but the precision specifier remains optional.</p>
-<dt>&bull;</p>
-<dd><code>&lt;constraint&gt;</code> is the constraint describing how the value to match must relate to the value of the numeric expression. The only currently accepted constraint is <code>==</code> for an exact match and is the default if <code>&lt;constraint&gt;</code> is not provided. No matching constraint must be specified when the <code>&lt;expr&gt;</code> is empty.</p>
-<dt>&bull;</p>
-<dd><code>&lt;expr&gt;</code> is an expression. An expression is in turn recursively defined as:</p>
-<dt>&bull;</p>
-<dd>a numeric operand, or</p>
-<dt>&bull;</p>
-<dd>an expression followed by an operator and a numeric operand. </p>
+<dt>&bull;</dt>
+<dd><code>&lt;fmtspec&gt;</code> is the same format specifier as for defining a variable but in this context indicating how a numeric expression value should be matched against. If absent, both components of the format specifier are inferred from the matching format of the numeric variable(s) used by the expression constraint if any, and defaults to <code>%u</code> if no numeric variable is used, denoting that the value should be unsigned with no leading zeros. In case of conflict between format specifiers of several numeric variables, the conversion specifier becomes mandatory but the precision specifier remains optional.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;constraint&gt;</code> is the constraint describing how the value to match must relate to the value of the numeric expression. The only currently accepted constraint is <code>==</code> for an exact match and is the default if <code>&lt;constraint&gt;</code> is not provided. No matching constraint must be specified when the <code>&lt;expr&gt;</code> is empty.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;expr&gt;</code> is an expression. An expression is in turn recursively defined as:</dd>
+<dt>&bull;</dt>
+<dd>a numeric operand, or</dd>
+<dt>&bull;</dt>
+<dd>an expression followed by an operator and a numeric operand. </dd>
 <p> A numeric operand is a previously defined numeric variable, an integer literal, or a function. Spaces are accepted before, after and between any of these elements. Numeric operands have 64-bit precision. Overflow and underflow are rejected. There is no support for operator precedence, but parentheses can be used to change the evaluation order. </p>
 <p> The supported operators are:</p>
-<dt>&bull;</p>
-<dd><code>+</code> &#8211; Returns the sum of its two operands.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;</code> &#8211; Returns the difference of its two operands. </p>
+<dt>&bull;</dt>
+<dd><code>+</code> &#8211; Returns the sum of its two operands.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;</code> &#8211; Returns the difference of its two operands. </dd>
 <p> The syntax of a function call is <code>&lt;name&gt;(&lt;arguments&gt;)</code> where:</p>
-<dt>&bull;</p>
-<dd><code>name</code> is a predefined string literal. Accepted values are:</p>
-<dt>&bull;</p>
-<dd>add &#8211; Returns the sum of its two operands.</p>
-<dt>&bull;</p>
-<dd>div &#8211; Returns the quotient of its two operands.</p>
-<dt>&bull;</p>
-<dd>max &#8211; Returns the largest of its two operands.</p>
-<dt>&bull;</p>
-<dd>min &#8211; Returns the smallest of its two operands.</p>
-<dt>&bull;</p>
-<dd>mul &#8211; Returns the product of its two operands.</p>
-<dt>&bull;</p>
-<dd>sub &#8211; Returns the difference of its two operands.</p>
-<dt>&bull;</p>
-<dd><code>&lt;arguments&gt;</code> is a comma separated list of expressions. </p>
+<dt>&bull;</dt>
+<dd><code>name</code> is a predefined string literal. Accepted values are:</dd>
+<dt>&bull;</dt>
+<dd>add &#8211; Returns the sum of its two operands.</dd>
+<dt>&bull;</dt>
+<dd>div &#8211; Returns the quotient of its two operands.</dd>
+<dt>&bull;</dt>
+<dd>max &#8211; Returns the largest of its two operands.</dd>
+<dt>&bull;</dt>
+<dd>min &#8211; Returns the smallest of its two operands.</dd>
+<dt>&bull;</dt>
+<dd>mul &#8211; Returns the product of its two operands.</dd>
+<dt>&bull;</dt>
+<dd>sub &#8211; Returns the difference of its two operands.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;arguments&gt;</code> is a comma separated list of expressions. </dd>
 <p> For example: </p>
 <pre>; CHECK: load r[[#REG:]], [r0]
 ; CHECK: load r[[#REG+1]], [r1]
@@ -408,3 +408,4 @@ DW_AT_name [DW_FORM_strp] ( .debug_str[0x000000c9] = &quot;intd&quot;)</pre>
 <p>Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>Copyright</h2>
 <p>2003-2022, LLVM Project</p>
+</p>

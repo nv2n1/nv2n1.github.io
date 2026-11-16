@@ -17,24 +17,25 @@ description: "rubber-info – extract information from LaTeX documents"
 <h2>ACTIONS</h2>
 <p> One of the following command-line options must be specified, to decide which information to extract. Of course, for actions that read a log file, a compilation must have been done before. If none of these actions is specified, <i>&#8211;check</i> is assumed.</p>
 <dl>
-<dt><code>&#8211;boxes</code></p>
-<dd> Extracts from the log file the places in the source where bad boxes appeared (these are the famous overfull and underfull \hbox and box)</p>
-<dt><code>&#8211;check</code></p>
-<dd> Report errors if there are any, otherwise report undefined references if there are any, otherwise list warnings and bad boxes. This is the default action.</p>
-<dt><code>&#8211;deps</code></p>
-<dd> Analyse the source files and produce a space-separated list of all the files that the document depends on and that Rubber cannot rebuild.</p>
-<dt><code>&#8211;errors</code></p>
-<dd> Extract from the log file the list of errors that occured during the last compilation.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display the list of all available options and exit nicely.</p>
-<dt><code>&#8211;refs</code></p>
-<dd> Report the list of undefined or multiply defined references (i.e. the ef&#8217;s that are not defined by one \label).</p>
-<dt><code>&#8211;rules</code></p>
-<dd> Analyse the source files and produce a list of dependency rules. One rule is produced for each intermediate target that would be made when running <code>rubber</code>. Rules are formatted in the style of Makefiles.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and exit nicely.</p>
-<dt><code>&#8211;warnings</code></p>
-<dd> Stupidly enumerate all LaTeX warnings, i.e. all the lines in the log file that contain the string &quot;Warning&quot;.</dl>
+<dt><code>&#8211;boxes</code></dt>
+<dd> Extracts from the log file the places in the source where bad boxes appeared (these are the famous overfull and underfull \hbox and box)</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> Report errors if there are any, otherwise report undefined references if there are any, otherwise list warnings and bad boxes. This is the default action.</dd>
+<dt><code>&#8211;deps</code></dt>
+<dd> Analyse the source files and produce a space-separated list of all the files that the document depends on and that Rubber cannot rebuild.</dd>
+<dt><code>&#8211;errors</code></dt>
+<dd> Extract from the log file the list of errors that occured during the last compilation.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display the list of all available options and exit nicely.</dd>
+<dt><code>&#8211;refs</code></dt>
+<dd> Report the list of undefined or multiply defined references (i.e. the 
+ef&#8217;s that are not defined by one \label).</dd>
+<dt><code>&#8211;rules</code></dt>
+<dd> Analyse the source files and produce a list of dependency rules. One rule is produced for each intermediate target that would be made when running <code>rubber</code>. Rules are formatted in the style of Makefiles.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and exit nicely.</dd>
+<dt><code>&#8211;warnings</code></dt>
+<dd> Stupidly enumerate all LaTeX warnings, i.e. all the lines in the log file that contain the string &quot;Warning&quot;.</dd></dl>
 <h2>BUGS</h2>
 <p> There are surely a some&#8230; </p>
 <p> This page documents Rubber version 1.1. The program and this man-page are maintained by Emmanuel Beffara &lt;manu [at] beffara.org&gt;. The homepage for Rubber can be found at <a rel="nofollow" href="http://www.pps.jussieu.fr/~beffara/soft/rubber/.">http://www.pps.jussieu.fr/~beffara/soft/rubber/.</a> </p>
@@ -42,6 +43,6 @@ description: "rubber-info – extract information from LaTeX documents"
 <p> The full documentation for <code>rubber</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>rubber</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info rubber</code></dl>
+</dt><dd> <code>info rubber</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

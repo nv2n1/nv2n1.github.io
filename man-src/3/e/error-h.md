@@ -26,8 +26,8 @@ description: "src/error.h –"
 <h3>int drmaa_get_pbs_error (char *error_diagnosis, size_terror_diag_len)</h3>
 <p>Retrieves last PBS error message.</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>no longer viable in multi-threaded torque</dl>
+<dt>&bull;</dt>
+<dd>no longer viable in multi-threaded torque</dd></dl>
 <h3>int drmaa_map_pbs_error (intpbs_errcode)</h3>
 <p>Maps PBS error code into DMRAA code.</p>
 <h2>Author</h2>

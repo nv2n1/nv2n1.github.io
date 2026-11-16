@@ -17,60 +17,60 @@ description: "pmcollectl, pcp-collectl – collect data that describes the curre
 <p> It makes use of the Performance Co-Pilot (PCP) toolkit to simplify its implementation, as well as provide more of the <code>collectl</code> functionality on platforms other than Linux. </p>
 <p> <code>pcp-collectl</code> has two primary modes of operation:</p>
 <dl>
-<dt>1.</p>
-<dd> Record Mode (<code>-f</code> or <code>&#8211;filename</code> option) which reads data from a live system and writes output to a file or displays it on a terminal.</p>
-<dt>2.</p>
-<dd> Playback Mode (<code>-p</code> or <code>-a</code> option) which reads data from one or more PCP archive files and displays output on a terminal. Note that these files are <i>not</i> raw <code>collectl</code> format data, rather they are archives created by the <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) utility (possibly indirectly, through use of the <code>-f</code> option to <code>pcp-collectl</code>).</dl>
+<dt>1.</dt>
+<dd> Record Mode (<code>-f</code> or <code>&#8211;filename</code> option) which reads data from a live system and writes output to a file or displays it on a terminal.</dd>
+<dt>2.</dt>
+<dd> Playback Mode (<code>-p</code> or <code>-a</code> option) which reads data from one or more PCP archive files and displays output on a terminal. Note that these files are <i>not</i> raw <code>collectl</code> format data, rather they are archives created by the <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) utility (possibly indirectly, through use of the <code>-f</code> option to <code>pcp-collectl</code>).</dd></dl>
 <h2>RECORD MODE OPTIONS</h2>
 <p> In this mode data is taken from a <code>live</code> system and either displayed on the terminal or written to a PCP archive. </p>
 <p> <code>-h host</code></p>
 <dl>
 <dt>
-<dd> Display metrics from <i>host</i> instead of displaying metrics from the local host.</dl>
+</dt><dd> Display metrics from <i>host</i> instead of displaying metrics from the local host.</dd></dl>
 <p> <code>-c, &#8211;count samples</code></p>
 <dl>
 <dt>
-<dd> The number of samples to record.</dl>
+</dt><dd> The number of samples to record.</dd></dl>
 <p> <code>-f, &#8211;filename filename</code></p>
 <dl>
 <dt>
-<dd> This is the name of a PCP archive to write the output to.</dl>
+</dt><dd> This is the name of a PCP archive to write the output to.</dd></dl>
 <p> <code>-i, &#8211;interval interval</code></p>
 <dl>
 <dt>
-<dd> This is the sampling interval in seconds. The default is 1 second.</dl>
+</dt><dd> This is the sampling interval in seconds. The default is 1 second.</dd></dl>
 <p> <code>-R, &#8211;runtime duration</code></p>
 <dl>
 <dt>
-<dd> Specify the duration of data collection where the duration is a number followed by one of <code>wdhms,</code> indicating how many weeks, days, hours, minutes or seconds the collection is to be taken for.</dl>
+</dt><dd> Specify the duration of data collection where the duration is a number followed by one of <code>wdhms,</code> indicating how many weeks, days, hours, minutes or seconds the collection is to be taken for.</dd></dl>
 <h2>PLAYBACK MODE OPTIONS</h2>
 <p> In this mode, data is read from one or more PCP data files that were generated with the recording option, or indirectly via the <code>pmlogger</code> utility. </p>
 <p> <code>-f, &#8211;filename filename</code></p>
 <dl>
 <dt>
-<dd> If specified, this is the name of a PCP archive to write the output to (rather than the terminal).</dl>
+</dt><dd> If specified, this is the name of a PCP archive to write the output to (rather than the terminal).</dd></dl>
 <p> <code>-p, &#8211;playback filename</code></p>
 <dl>
 <dt>
-<dd> Read data from the specified PCP archive folio files(s) &#8211; refer to <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1) for archive folio details.</dl>
+</dt><dd> Read data from the specified PCP archive folio files(s) &#8211; refer to <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1) for archive folio details.</dd></dl>
 <p> <code>-a, &#8211;archive filename</code></p>
 <dl>
 <dt>
-<dd> Read data from the specified PCP raw archive files(s). The argument is a comma-separated list of names, each of which may be the base name of an archive or the name of a directory containing one or more archives.</dl>
+</dt><dd> Read data from the specified PCP raw archive files(s). The argument is a comma-separated list of names, each of which may be the base name of an archive or the name of a directory containing one or more archives.</dd></dl>
 <h2>COMMON OPTIONS</h2>
 <p> The following options are supported in both record and playback modes. </p>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display standard help message.</dl>
+</dt><dd> Display standard help message.</dd></dl>
 <p> <code>-s, &#8211;subsys subsystem</code></p>
 <dl>
 <dt>
-<dd> This field controls which subsystem data is to be collected or played back for. The rules for displaying results vary depending on the type of data to be displayed. If you write data for CPUs and DISKs to a raw file and play it back with -sc, you will only see CPU data. If you play it back with <code>-scm</code> you will still only see CPU data since memory data was not collected. To see the current set of default subsystems, which are a subset of this full list, use <code>-h</code>. </p>
+</dt><dd> This field controls which subsystem data is to be collected or played back for. The rules for displaying results vary depending on the type of data to be displayed. If you write data for CPUs and DISKs to a raw file and play it back with -sc, you will only see CPU data. If you play it back with <code>-scm</code> you will still only see CPU data since memory data was not collected. To see the current set of default subsystems, which are a subset of this full list, use <code>-h</code>. </dd>
 <p> The default is &quot;cdn&quot;, which stands for CPU, Disk and Network summary data.</p>
 <dl>
-<dt><code>SUMMARY SUBSYSTEMS</code></p>
-<dd></dl>
+<dt><code>SUMMARY SUBSYSTEMS</code></dt>
+<dd></dd></dl>
 <p> c &#8211; CPU<br />
  d &#8211; Disk<br />
  f &#8211; NFS V3 Data<br />
@@ -78,11 +78,10 @@ description: "pmcollectl, pcp-collectl – collect data that describes the curre
  m &#8211; Memory<br />
  n &#8211; Networks</p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <dl>
-<dt><code>DETAIL SUBSYSTEMS</code></p>
-<dd></dl>
+<dt><code>DETAIL SUBSYSTEMS</code></dt>
+<dd></dd></dl>
 <p> This is the set of <code>detail</code> data from which in most cases the corresponding summary data is derived. So, if one has 3 disks and chooses <code>-sd,</code> one will only see a single total taken across all 3 disks. If one chooses <code>-sD,</code> individual disk totals will be reported but no totals. </p>
 <p> C &#8211; CPU<br />
  D &#8211; Disk<br />
@@ -93,7 +92,7 @@ description: "pmcollectl, pcp-collectl – collect data that describes the curre
 <p> <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Display output in verbose mode. This often displays more data than in the default mode. When displaying detail data, verbose mode is forced. Furthermore, if summary data for a single subsystem is to be displayed in verbose mode, the headers are only repeated occasionally whereas if multiple subsystems are involved each needs their own header.</dl>
+</dt><dd> Display output in verbose mode. This often displays more data than in the default mode. When displaying detail data, verbose mode is forced. Furthermore, if summary data for a single subsystem is to be displayed in verbose mode, the headers are only repeated occasionally whereas if multiple subsystems are involved each needs their own header.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-collectl/">collectl</a></code>(1), <code><a href="/docs/linux/man/1-collectl2pcp/">collectl2pcp</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/1-python/">python</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1), <code><a href="/docs/linux/man/1-pmprobe/">pmprobe</a></code>(1), <code><a href="/docs/linux/man/1-pmrep/">pmrep</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), and <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5). </p>
 <h2>Index</h2>

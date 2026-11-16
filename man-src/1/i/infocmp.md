@@ -25,18 +25,18 @@ description: "infocmp – compare or print out terminfo descriptions"
 <p> Use the <code>-q</code> option to show the distinction between <i>absent</i> and <i>cancelled</i> capabilities. </p>
 <p> These options produce a list which you can use to compare two or more terminal descriptions:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> produces a list of each capability that is <i>different</i> between two entries. Each item in the list shows &#8220;:&#8221; after the capability name, followed by the capability values, separated by a comma.</p>
-<dt><code>-c</code></p>
-<dd> produces a list of each capability that is <i>common</i> between two or more entries. Missing capabilities are ignored. Each item in the list shows &#8220;=&#8221; after the capability name, followed by the capability value.</p>
+<dt><code>-d</code></dt>
+<dd> produces a list of each capability that is <i>different</i> between two entries. Each item in the list shows &#8220;:&#8221; after the capability name, followed by the capability values, separated by a comma.</dd>
+<dt><code>-c</code></dt>
+<dd> produces a list of each capability that is <i>common</i> between two or more entries. Missing capabilities are ignored. Each item in the list shows &#8220;=&#8221; after the capability name, followed by the capability value.</dd>
 <dt>
-<dd> The <code>-u</code> option provides a related output, showing the first terminal description rewritten to use the second as a building block via the &#8220;use=&#8221; clause.</p>
-<dt><code>-n</code></p>
-<dd> produces a list of each capability that is in <i>none</i> of the given entries. Each item in the list shows &#8220;!&#8221; before the capability name.</p>
+</dt><dd> The <code>-u</code> option provides a related output, showing the first terminal description rewritten to use the second as a building block via the &#8220;use=&#8221; clause.</dd>
+<dt><code>-n</code></dt>
+<dd> produces a list of each capability that is in <i>none</i> of the given entries. Each item in the list shows &#8220;!&#8221; before the capability name.</dd>
 <dt>
-<dd> Normally only the conventional capabilities are shown. Use the <code>-x</code> option to add the BSD-compatibility capabilities (names prefixed with &#8220;OT&#8221;).</p>
+</dt><dd> Normally only the conventional capabilities are shown. Use the <code>-x</code> option to add the BSD-compatibility capabilities (names prefixed with &#8220;OT&#8221;).</dd>
 <dt>
-<dd> If no <i>termnames</i> are given, <code>infocmp</code> uses the environment variable <code>TERM</code> for each of the <i>termnames</i>.</dl>
+</dt><dd> If no <i>termnames</i> are given, <code>infocmp</code> uses the environment variable <code>TERM</code> for each of the <i>termnames</i>.</dd></dl>
 <h3>Source Listing Options [-I] [-L] [-C] [-r]</h3>
 <p> The <code>-I</code>, <code>-L</code>, and <code>-C</code> options will produce a source listing for each terminal named. <center></p>
 <table>
@@ -139,33 +139,33 @@ description: "infocmp – compare or print out terminfo descriptions"
 <p> Using these options, it is possible to compare descriptions for a terminal with the same name located in two different databases. For instance, you can use this feature for comparing descriptions for the same terminal created by different people.</p>
 <h3>Other Options</h3>
 <dl>
-<dt><code>-0</code></p>
-<dd> causes the fields to be printed on one line, without wrapping.</p>
-<dt><code>-1</code></p>
-<dd> causes the fields to be printed out one to a line. Otherwise, the fields will be printed several to a line to a maximum width of 60 characters.</p>
-<dt><code>-a</code></p>
-<dd> tells <code>infocmp</code> to retain commented-out capabilities rather than discarding them. Capabilities are commented by prefixing them with a period.</p>
-<dt><code>-D</code></p>
-<dd> tells <code>infocmp</code> to print the database locations that it knows about, and exit.</p>
-<dt><code>-E</code></p>
-<dd> Dump the capabilities of the given terminal as tables, needed in the C initializer for a TERMTYPE structure (the terminal capability structure in the <code>&lt;term.h&gt;</code>). This option is useful for preparing versions of the curses library hardwired for a given terminal type. The tables are all declared static, and are named according to the type and the name of the corresponding terminal entry. </p>
+<dt><code>-0</code></dt>
+<dd> causes the fields to be printed on one line, without wrapping.</dd>
+<dt><code>-1</code></dt>
+<dd> causes the fields to be printed out one to a line. Otherwise, the fields will be printed several to a line to a maximum width of 60 characters.</dd>
+<dt><code>-a</code></dt>
+<dd> tells <code>infocmp</code> to retain commented-out capabilities rather than discarding them. Capabilities are commented by prefixing them with a period.</dd>
+<dt><code>-D</code></dt>
+<dd> tells <code>infocmp</code> to print the database locations that it knows about, and exit.</dd>
+<dt><code>-E</code></dt>
+<dd> Dump the capabilities of the given terminal as tables, needed in the C initializer for a TERMTYPE structure (the terminal capability structure in the <code>&lt;term.h&gt;</code>). This option is useful for preparing versions of the curses library hardwired for a given terminal type. The tables are all declared static, and are named according to the type and the name of the corresponding terminal entry. </dd>
 <p> Before ncurses 5.0, the split between the <code>-e</code> and <code>-E</code> options was not needed; but support for extended names required making the arrays of terminal capabilities separate from the TERMTYPE structure.</p>
-<dt><code>-e</code></p>
-<dd> Dump the capabilities of the given terminal as a C initializer for a TERMTYPE structure (the terminal capability structure in the <code>&lt;term.h&gt;</code>). This option is useful for preparing versions of the curses library hardwired for a given terminal type.</p>
-<dt><code>-F</code></p>
-<dd> compare terminfo files. This assumes that two following arguments are filenames. The files are searched for pairwise matches between entries, with two entries considered to match if any of their names do. The report printed to standard output lists entries with no matches in the other file, and entries with more than one match. For entries with exactly one match it includes a difference report. Normally, to reduce the volume of the report, use references are not resolved before looking for differences, but resolution can be forced by also specifying <code>-r</code>.</p>
-<dt><code>-f</code></p>
-<dd> Display complex terminfo strings which contain if/then/else/endif expressions indented for readability.</p>
-<dt><code>-G</code></p>
-<dd> Display constant literals in decimal form rather than their character equivalents.</p>
-<dt><code>-g</code></p>
-<dd> Display constant character literals in quoted form rather than their decimal equivalents.</p>
-<dt><code>-i</code></p>
-<dd> Analyze the initialization (<code>is1</code>, <code>is2</code>, <code>is3</code>), and reset (<code>rs1</code>, <code>rs2</code>, <code>rs3</code>), strings in the entry, as well as those used for starting/stopping cursor-positioning mode (<code>smcup</code>, <code>rmcup</code>) as well as starting/stopping keymap mode (<code>smkx</code>, <code>rmkx</code>).</p>
+<dt><code>-e</code></dt>
+<dd> Dump the capabilities of the given terminal as a C initializer for a TERMTYPE structure (the terminal capability structure in the <code>&lt;term.h&gt;</code>). This option is useful for preparing versions of the curses library hardwired for a given terminal type.</dd>
+<dt><code>-F</code></dt>
+<dd> compare terminfo files. This assumes that two following arguments are filenames. The files are searched for pairwise matches between entries, with two entries considered to match if any of their names do. The report printed to standard output lists entries with no matches in the other file, and entries with more than one match. For entries with exactly one match it includes a difference report. Normally, to reduce the volume of the report, use references are not resolved before looking for differences, but resolution can be forced by also specifying <code>-r</code>.</dd>
+<dt><code>-f</code></dt>
+<dd> Display complex terminfo strings which contain if/then/else/endif expressions indented for readability.</dd>
+<dt><code>-G</code></dt>
+<dd> Display constant literals in decimal form rather than their character equivalents.</dd>
+<dt><code>-g</code></dt>
+<dd> Display constant character literals in quoted form rather than their decimal equivalents.</dd>
+<dt><code>-i</code></dt>
+<dd> Analyze the initialization (<code>is1</code>, <code>is2</code>, <code>is3</code>), and reset (<code>rs1</code>, <code>rs2</code>, <code>rs3</code>), strings in the entry, as well as those used for starting/stopping cursor-positioning mode (<code>smcup</code>, <code>rmcup</code>) as well as starting/stopping keymap mode (<code>smkx</code>, <code>rmkx</code>).</dd>
 <dt>
-<dd> For each string, the code tries to analyze it into actions in terms of the other capabilities in the entry, certain X3.64/ISO 6429/ECMA-48 capabilities, and certain DEC VT-series private modes (the set of recognized special sequences has been selected for completeness over the existing terminfo database). Each report line consists of the capability name, followed by a colon and space, followed by a printable expansion of the capability string with sections matching recognized actions translated into {}-bracketed descriptions.</p>
+</dt><dd> For each string, the code tries to analyze it into actions in terms of the other capabilities in the entry, certain X3.64/ISO 6429/ECMA-48 capabilities, and certain DEC VT-series private modes (the set of recognized special sequences has been selected for completeness over the existing terminfo database). Each report line consists of the capability name, followed by a colon and space, followed by a printable expansion of the capability string with sections matching recognized actions translated into {}-bracketed descriptions.</dd>
 <dt>
-<dd> Here is a list of the DEC/ANSI special sequences recognized: <center></p>
+</dt><dd> Here is a list of the DEC/ANSI special sequences recognized: <center></dd>
 <table>
 <tr VALIGN=top>
 <td>Action</td>
@@ -353,91 +353,87 @@ description: "infocmp – compare or print out terminfo descriptions"
 <p> It also recognizes a SGR action corresponding to ANSI/ISO 6429/ECMA Set Graphics Rendition, with the values NORMAL, BOLD, UNDERLINE, BLINK, and REVERSE. All but NORMAL may be prefixed with</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 &#8220;+&#8221; (turn on) or<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 &#8220;-&#8221; (turn off).</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 &#8220;-&#8221; (turn off).</dd></dl>
 <dt>
-<dd> An SGR0 designates an empty highlight sequence (equivalent to {SGR:NORMAL}).</p>
-<dt><code>-l</code></p>
-<dd> Set output format to terminfo.</p>
-<dt><code>-p</code></p>
-<dd> Ignore padding specifications when comparing strings.</p>
-<dt><code>-Q</code> <i>n</i></p>
-<dd> Rather than show source in terminfo (text) format, print the compiled (binary) format in hexadecimal or base64 form, depending on the option&#8217;s value:</p>
+</dt><dd> An SGR0 designates an empty highlight sequence (equivalent to {SGR:NORMAL}).</dd>
+<dt><code>-l</code></dt>
+<dd> Set output format to terminfo.</dd>
+<dt><code>-p</code></dt>
+<dd> Ignore padding specifications when comparing strings.</dd>
+<dt><code>-Q</code> <i>n</i></dt>
+<dd> Rather than show source in terminfo (text) format, print the compiled (binary) format in hexadecimal or base64 form, depending on the option&#8217;s value:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1</p>
-<dd> hexadecimal</p>
-<dt>2</p>
-<dd> base64</p>
-<dt>3</p>
-<dd> hexadecimal and base64</dl>
+<dt>1</dt>
+<dd> hexadecimal</dd>
+<dt>2</dt>
+<dd> base64</dd>
+<dt>3</dt>
+<dd> hexadecimal and base64</dd></dl>
 </dl>
 <dt>
-<dd> For example, this prints the compiled terminfo value as a string which could be assigned to the <code>TERMINFO</code> environment variable:<br />
+</dt><dd> For example, this prints the compiled terminfo value as a string which could be assigned to the <code>TERMINFO</code> environment variable:<br />
 &nbsp;.sp<br />
-&nbsp;.in&nbsp;+4 </p>
+&nbsp;.in&nbsp;+4 </dd>
 <pre>
 infocmp -0 -q -Q2
 </pre>
 <p>&nbsp;.in -4</p>
-<dt><code>-q</code></p>
-<dd> This makes the output a little shorter:</p>
+<dt><code>-q</code></dt>
+<dd> This makes the output a little shorter:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Make the comparison listing shorter by omitting subheadings, and using &#8220;-&#8221; for absent capabilities, &#8220;@&#8221; for canceled rather than &#8220;NULL&#8221;.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 However, show differences between absent and cancelled capabilities.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Omit the &#8220;Reconstructed from&#8221; comment for source listings.</dl>
-<dt><code>-R</code><i>subset</i></p>
-<dd> Restrict output to a given subset. This option is for use with archaic versions of terminfo like those on SVr1, Ultrix, or HP-UX that do not support the full set of SVR4/XSI Curses terminfo; and variants such as AIX that have their own extensions incompatible with SVr4/XSI.</p>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Omit the &#8220;Reconstructed from&#8221; comment for source listings.</dd></dl>
+<dt><code>-R</code><i>subset</i></dt>
+<dd> Restrict output to a given subset. This option is for use with archaic versions of terminfo like those on SVr1, Ultrix, or HP-UX that do not support the full set of SVR4/XSI Curses terminfo; and variants such as AIX that have their own extensions incompatible with SVr4/XSI.</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Available terminfo subsets are &#8220;SVr1&#8221;, &#8220;Ultrix&#8221;, &#8220;HP&#8221;, and &#8220;AIX&#8221;; see <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5) for details.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 You can also choose the subset &#8220;BSD&#8221; which selects only capabilities with termcap equivalents recognized by 4.4BSD. The <code>-C</code> option sets the &#8220;BSD&#8221; subset as a side-effect.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If you select any other value for <code>-R</code>, it is the same as no subset, i.e., all capabilities are used. The <code>-I</code> option likewise selects no subset as a side-effect.</dl>
-<dt><code>-s </code><i>[d|i|l|c]</i></p>
-<dd> The <code>-s</code> option sorts the fields within each type according to the argument below: </p>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If you select any other value for <code>-R</code>, it is the same as no subset, i.e., all capabilities are used. The <code>-I</code> option likewise selects no subset as a side-effect.</dd></dl>
+<dt><code>-s </code><i>[d|i|l|c]</i></dt>
+<dd> The <code>-s</code> option sorts the fields within each type according to the argument below: </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>d</code></p>
-<dd> leave fields in the order that they are stored in the <i>terminfo</i> database.</p>
-<dt><code>i</code></p>
-<dd> sort by <i>terminfo</i> name.</p>
-<dt><code>l</code></p>
-<dd> sort by the long C variable name.</p>
-<dt><code>c</code></p>
-<dd> sort by the <i>termcap</i> name.</dl>
+<dt><code>d</code></dt>
+<dd> leave fields in the order that they are stored in the <i>terminfo</i> database.</dd>
+<dt><code>i</code></dt>
+<dd> sort by <i>terminfo</i> name.</dd>
+<dt><code>l</code></dt>
+<dd> sort by the long C variable name.</dd>
+<dt><code>c</code></dt>
+<dd> sort by the <i>termcap</i> name.</dd></dl>
 </dl>
 <dt>
-<dd> If the <code>-s</code> option is not given, the fields printed out will be sorted alphabetically by the <code>terminfo</code> name within each type, except in the case of the <code>-C</code> or the <code>-L</code> options, which cause the sorting to be done by the <code>termcap</code> name or the long C variable name, respectively.</p>
-<dt><code>-T</code></p>
-<dd> eliminates size-restrictions on the generated text. This is mainly useful for testing and analysis, since the compiled descriptions are limited (e.g., 1023 for termcap, 4096 for terminfo).</p>
-<dt><code>-t</code></p>
-<dd> tells <code>tic</code> to discard commented-out capabilities. Normally when translating from terminfo to termcap, untranslatable capabilities are commented-out.</p>
-<dt><code>-U</code></p>
-<dd> tells <code>infocmp</code> to not post-process the data after parsing the source file. This feature helps when comparing the actual contents of two source files, since it excludes the inferences that <code>infocmp</code> makes to fill in missing data.</p>
-<dt><code>-V</code></p>
-<dd> reports the version of ncurses which was used in this program, and exits.</p>
-<dt><code>-v</code> <i>n</i></p>
-<dd> prints out tracing information on standard error as the program runs.</p>
+</dt><dd> If the <code>-s</code> option is not given, the fields printed out will be sorted alphabetically by the <code>terminfo</code> name within each type, except in the case of the <code>-C</code> or the <code>-L</code> options, which cause the sorting to be done by the <code>termcap</code> name or the long C variable name, respectively.</dd>
+<dt><code>-T</code></dt>
+<dd> eliminates size-restrictions on the generated text. This is mainly useful for testing and analysis, since the compiled descriptions are limited (e.g., 1023 for termcap, 4096 for terminfo).</dd>
+<dt><code>-t</code></dt>
+<dd> tells <code>tic</code> to discard commented-out capabilities. Normally when translating from terminfo to termcap, untranslatable capabilities are commented-out.</dd>
+<dt><code>-U</code></dt>
+<dd> tells <code>infocmp</code> to not post-process the data after parsing the source file. This feature helps when comparing the actual contents of two source files, since it excludes the inferences that <code>infocmp</code> makes to fill in missing data.</dd>
+<dt><code>-V</code></dt>
+<dd> reports the version of ncurses which was used in this program, and exits.</dd>
+<dt><code>-v</code> <i>n</i></dt>
+<dd> prints out tracing information on standard error as the program runs.</dd>
 <dt>
-<dd> The optional parameter <i>n</i> is a number from 1 to 10, inclusive, indicating the desired level of detail of information. If ncurses is built without tracing support, the optional parameter is ignored.</p>
-<dt><code>-W</code></p>
-<dd> By itself, the <code>-w</code> option will not force long strings to be wrapped. Use the <code>-W</code> option to do this.</p>
-<dt><code>-w</code> <i>width</i></p>
-<dd> changes the output to <i>width</i> characters.</p>
-<dt><code>-x</code></p>
-<dd> print information for user-defined capabilities (see <code><a href="/docs/linux/man/5-user_caps/">user_caps</a>(5)</code>. These are extensions to the terminfo repertoire which can be loaded using the <code>-x</code> option of <code>tic</code>.</dl>
+</dt><dd> The optional parameter <i>n</i> is a number from 1 to 10, inclusive, indicating the desired level of detail of information. If ncurses is built without tracing support, the optional parameter is ignored.</dd>
+<dt><code>-W</code></dt>
+<dd> By itself, the <code>-w</code> option will not force long strings to be wrapped. Use the <code>-W</code> option to do this.</dd>
+<dt><code>-w</code> <i>width</i></dt>
+<dd> changes the output to <i>width</i> characters.</dd>
+<dt><code>-x</code></dt>
+<dd> print information for user-defined capabilities (see <code><a href="/docs/linux/man/5-user_caps/">user_caps</a>(5)</code>. These are extensions to the terminfo repertoire which can be loaded using the <code>-x</code> option of <code>tic</code>.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/terminfo</p>
-<dd> Compiled terminal description database.</dl>
+<dt>/etc/terminfo</dt>
+<dd> Compiled terminal description database.</dd></dl>
 <h2>HISTORY</h2>
 <p> Although System V Release 2 provided a terminfo library, it had no documented tool for decompiling the terminal descriptions. Tony Hansen (AT&amp;T) wrote the first <code>infocmp</code> in early 1984, for System V Release 3. </p>
 <p> Eric Raymond used the AT&amp;T documentation in 1995 to provide an equivalent <code>infocmp</code> for ncurses. In addition, he added a few new features such as:<br />
@@ -462,17 +458,17 @@ infocmp -0 -q -Q2
 <p> Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and<br />
  Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">FILES</a></p>
+<dt><a href="#lbAK">FILES</a></dt>
 <dd>
-<dt><a href="#lbAL">HISTORY</a></p>
+</dd><dt><a href="#lbAL">HISTORY</a></dt>
 <dd>
-<dt><a href="#lbAM">PORTABILITY</a></p>
+</dd><dt><a href="#lbAM">PORTABILITY</a></dt>
 <dd>
-<dt><a href="#lbAN">EXTENSIONS</a></p>
+</dd><dt><a href="#lbAN">EXTENSIONS</a></dt>
 <dd>
-<dt><a href="#lbAO">BUGS</a></p>
+</dd><dt><a href="#lbAO">BUGS</a></dt>
 <dd>
-<dt><a href="#lbAP">SEE ALSO</a></p>
+</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAQ">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAQ">AUTHOR</a></dt>
+<dd></dd></dl>

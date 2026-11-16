@@ -20,40 +20,40 @@ git instaweb[--local][--httpd = &lt;httpd&gt;][--port = &lt;port&gt;]
 <p> -l, &#8211;local</p>
 <dl>
 <dt>
-<dd> Only bind the web server to the local IP (127.0.0.1).</dl>
+</dt><dd> Only bind the web server to the local IP (127.0.0.1).</dd></dl>
 <p> -d, &#8211;httpd</p>
 <dl>
 <dt>
-<dd> The HTTP daemon command-line that will be executed. Command-line options may be specified here, and the configuration file will be added at the end of the command-line. Currently apache2, lighttpd, mongoose, plackup, python and webrick are supported. (Default: lighttpd)</dl>
+</dt><dd> The HTTP daemon command-line that will be executed. Command-line options may be specified here, and the configuration file will be added at the end of the command-line. Currently apache2, lighttpd, mongoose, plackup, python and webrick are supported. (Default: lighttpd)</dd></dl>
 <p> -m, &#8211;module-path</p>
 <dl>
 <dt>
-<dd> The module path (only needed if httpd is Apache). (Default: /usr/lib/apache2/modules)</dl>
+</dt><dd> The module path (only needed if httpd is Apache). (Default: /usr/lib/apache2/modules)</dd></dl>
 <p> -p, &#8211;port</p>
 <dl>
 <dt>
-<dd> The port number to bind the httpd to. (Default: 1234)</dl>
+</dt><dd> The port number to bind the httpd to. (Default: 1234)</dd></dl>
 <p> -b, &#8211;browser</p>
 <dl>
 <dt>
-<dd> The web browser that should be used to view the gitweb page. This will be passed to the <i>git web&#8211;browse</i> helper script along with the URL of the gitweb instance. See <code>git-web&#8211;browse</code>(1) for more information about this. If the script fails, the URL will be printed to stdout.</dl>
+</dt><dd> The web browser that should be used to view the gitweb page. This will be passed to the <i>git web&#8211;browse</i> helper script along with the URL of the gitweb instance. See <code>git-web&#8211;browse</code>(1) for more information about this. If the script fails, the URL will be printed to stdout.</dd></dl>
 <p> start, &#8211;start</p>
 <dl>
 <dt>
-<dd> Start the httpd instance and exit. Regenerate configuration files as necessary for spawning a new instance.</dl>
+</dt><dd> Start the httpd instance and exit. Regenerate configuration files as necessary for spawning a new instance.</dd></dl>
 <p> stop, &#8211;stop</p>
 <dl>
 <dt>
-<dd> Stop the httpd instance and exit. This does not generate any of the configuration files for spawning a new instance, nor does it close the browser.</dl>
+</dt><dd> Stop the httpd instance and exit. This does not generate any of the configuration files for spawning a new instance, nor does it close the browser.</dd></dl>
 <p> restart, &#8211;restart</p>
 <dl>
 <dt>
-<dd> Restart the httpd instance and exit. Regenerate configuration files as necessary for spawning a new instance.</dl>
+</dt><dd> Restart the httpd instance and exit. Regenerate configuration files as necessary for spawning a new instance.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> You may specify configuration in your .git/config </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [instaweb]
         local = true
@@ -62,7 +62,7 @@ git instaweb[--local][--httpd = &lt;httpd&gt;][--port = &lt;port&gt;]
         browser = konqueror
         modulePath = /usr/lib/apache2/modules
 </pre>
-</dl>
+</dd></dl>
 <p> If the configuration variable <code>instaweb.browser</code> is not set, <code>web.browser</code> will be used instead if it is defined. See <code>git-web&#8211;browse</code>(1) for more information about this.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gitweb/">gitweb</a></code>(1)</p>

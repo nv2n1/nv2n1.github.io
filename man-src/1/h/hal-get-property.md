@@ -16,18 +16,18 @@ description: "hal-get-property – get a property from a device object"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;udi</i></p>
-<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</p>
-<dt><i>&#8211;key</i></p>
-<dd> The name of the property.</p>
-<dt><i>&#8211;hex</i></p>
-<dd> Show int32/uint64 values in hex (without a leading 0x).</p>
-<dt><i>&#8211;verbose</i></p>
-<dd> Verbose output.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Print out usage.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print the version. </p>
+<dt><i>&#8211;udi</i></dt>
+<dd> The UDI (<i>Unique Device Identifier</i>) of the device object.</dd>
+<dt><i>&#8211;key</i></dt>
+<dd> The name of the property.</dd>
+<dt><i>&#8211;hex</i></dt>
+<dd> Show int32/uint64 values in hex (without a leading 0x).</dd>
+<dt><i>&#8211;verbose</i></dt>
+<dd> Verbose output.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Print out usage.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print the version. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> If both the property and device object exists the value of the property is printed on <i>stdout</i> and the program will exit with exit code 0. Otherwise the exit code will be non-zero. </p>

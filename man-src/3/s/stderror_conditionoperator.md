@@ -12,10 +12,8 @@ std::error_condition::operator= - std::error_condition::operator=
 
 <pre><code>error_condition &amp;operator=(const error_condition &amp;other) noexcept;
 (1)(since C++ 11)(implicitly declared)
-
     template &lt;class ErrorConditionEnum&gt;
     (2)(since C++ 11)
-
         error_condition &amp;
         operator=(ErrorConditionEnum e) noexcept;</code></pre> 
 Assigns contents to an error condition. 

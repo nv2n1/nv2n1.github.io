@@ -24,5 +24,5 @@ arp.dat - ethernet/ip address database</pre>
 <p> Modified for the Debian Project by Peter Kelemen, with additions from Erik Warmelink. </p>
 <p> The current version is available via anonymous ftp: </p>
 <dl>
-<dd><i><a href="ftp://ftp.ee.lbl.gov/arpwatch.tar.gz">ftp://ftp.ee.lbl.gov/arpwatch.tar.gz</a></i></dl>
+<dd><i><a href="ftp://ftp.ee.lbl.gov/arpwatch.tar.gz">ftp://ftp.ee.lbl.gov/arpwatch.tar.gz</a></i></dd></dl>
 <p> This manual page was contributed by Hugo Graumann.</p>

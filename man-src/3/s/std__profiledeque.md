@@ -67,7 +67,6 @@ description: "std::__profile::deque< _Tp, _Allocator > –"
 <p> void <code>swap</code> (<code>deque</code> &amp;__x)</p>
 <h3>Public Attributes</h3>
 <pre><code>const _Tp const _Allocator &amp;__a
-
     __pad0__ : _Base(__a)
 {
 }
@@ -75,9 +74,6 @@ explicit deque(size_type __n)
     : _Base(__n)
 {
 } deque(size_type __n
-
-
-
 const _Tp &amp; __value</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _Tp, typename _Allocator = std::allocator&lt;_Tp&gt;&gt;class std::__profile::deque&lt; _Tp, _Allocator &gt;</h3>

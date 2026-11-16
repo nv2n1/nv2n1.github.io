@@ -10,7 +10,6 @@ description: "umad_free – frees memory of umad buffers"
 <p>umad_free &#8211; frees memory of umad buffers</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 void umad_free(void *umad);</code></pre>
 <h2>Description</h2>
 <p><code>umad_free()</code> frees memory previously allocated with <code>umad_alloc()</code>.</p>
@@ -20,5 +19,5 @@ void umad_free(void *umad);</code></pre>
 <p><code><a href="/docs/linux/man/3-umad_alloc/">umad_alloc</a></code>(3)</p>
 <h2>Author</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

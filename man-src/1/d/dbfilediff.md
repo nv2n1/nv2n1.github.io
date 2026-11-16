@@ -26,30 +26,30 @@ dbfilediff[-Eq][-N diff_column_name]-- input table1.fsdb-- input table2.fsdb
 <p> Because two tables are required, input is typically in files. Standard input is accessible by the file &#8220;-&#8221;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-E</code> or <code>&#8211;epsilon</code></p>
-<dd> Do epsilon-numeric comparison. (Described above.) </p>
+<dt><code>-E</code> or <code>&#8211;epsilon</code></dt>
+<dd> Do epsilon-numeric comparison. (Described above.) </dd>
 <p> Epsilon-comparision is only done on columns that look like floating point numbers, not on strings or integers. Epsilon comparision allows the last digit to vary by 1, or for there to be one extra digit of precision, but only for floating point numbers. </p>
 <p> Rows that are within epsilon are not considered different for purposes of the exit code.</p>
-<dt><code>&#8211;exit</code></p>
-<dd> Exit with a status of 1 if some differences were found. (By default, the exit status is 0 with or without differences if the file is processed successfully.)</p>
-<dt><code>-N</code> on <code>&#8211;new-name</code></p>
-<dd> Specify the name of the <tt>&quot;diff&quot;</tt> column, if any. (Default is <tt>&quot;diff&quot;</tt>.)</p>
-<dt><code>-q</code> or <code>&#8211;quiet</code></p>
-<dd> Be quiet, suppressing output for identical rows. (This behavior is different from Unix <i><a href="/docs/linux/man/1-diff/">diff</a></i>(1) where <tt>&quot;-q&quot;</tt> suppresses <i>all</i> output.) If repeated, omits epsilon-equivalent rows.</dl>
+<dt><code>&#8211;exit</code></dt>
+<dd> Exit with a status of 1 if some differences were found. (By default, the exit status is 0 with or without differences if the file is processed successfully.)</dd>
+<dt><code>-N</code> on <code>&#8211;new-name</code></dt>
+<dd> Specify the name of the <tt>&quot;diff&quot;</tt> column, if any. (Default is <tt>&quot;diff&quot;</tt>.)</dd>
+<dt><code>-q</code> or <code>&#8211;quiet</code></dt>
+<dd> Be quiet, suppressing output for identical rows. (This behavior is different from Unix <i><a href="/docs/linux/man/1-diff/">diff</a></i>(1) where <tt>&quot;-q&quot;</tt> suppresses <i>all</i> output.) If repeated, omits epsilon-equivalent rows.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

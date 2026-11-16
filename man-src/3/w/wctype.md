@@ -10,7 +10,6 @@ description: "wctype – wide-character classification"
 <p>wctype &#8211; wide-character classification</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wctype.h&gt;
-
 wctype_t wctype(const char *name);</code></pre>
 <h2>Description</h2>
 <p>The <i>wctype_t</i> type represents a property which a wide character may or may not have. In other words, it represents a class of wide characters. This type&#8217;s nature is implementation-dependent, but the special value <i>(wctype_t) 0</i> denotes an invalid property. Nonzero <i>wctype_t</i> values can be passed to the <code>iswctype</code>(3) function to actually test whether a given wide character has the property. </p>

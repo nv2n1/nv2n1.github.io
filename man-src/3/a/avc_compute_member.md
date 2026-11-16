@@ -22,10 +22,10 @@ description: "avc_compute_create, avc_compute_member – obtain SELinux label fo
 <p> On success, zero is returned. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The <i>tclass</i> and/or the security contexts referenced by <i>ssid</i> and <i>tsid</i> are not recognized by the currently loaded policy.</p>
-<dt><code>ENOMEM</code></p>
-<dd> An attempt to allocate memory failed.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>tclass</i> and/or the security contexts referenced by <i>ssid</i> and <i>tsid</i> are not recognized by the currently loaded policy.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> An attempt to allocate memory failed.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>SEE ALSO</h2>

@@ -14,10 +14,10 @@ description: "ipsec_rangetosubnet – convert address range to subnet"
 #include &lt;freeswan.h&gt;
 </code></pre>
 <dl>
-<dt> <code>const char *rangetosubnet(const ip_address&nbsp;<wbr>*&nbsp;<wbr></code><i>start</i><code>, const ip_address&nbsp;<wbr>*&nbsp;<wbr></code><i>stop</i><code>, ip_subnet&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>);</code></dl>
+<dt> <code>const char *rangetosubnet(const ip_address&nbsp;<wbr>*&nbsp;<wbr></code><i>start</i><code>, const ip_address&nbsp;<wbr>*&nbsp;<wbr></code><i>stop</i><code>, ip_subnet&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>Rangetosubnet</i></p>
-<dd>accepts two IP addresses which define an address range, from <i>start</i> to <i>stop</i> inclusive, and converts this to a subnet if possible. The addresses must both be IPv4 or both be IPv6, and the address family of the resulting subnet is the same. </p>
+<dd>accepts two IP addresses which define an address range, from <i>start</i> to <i>stop</i> inclusive, and converts this to a subnet if possible. The addresses must both be IPv4 or both be IPv6, and the address family of the resulting subnet is the same. </dd>
 <p> <i>Rangetosubnet</i> returns NULL for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ipsec_initsubnet</code>(3), <code>ipsec_ttosubnet</code>(3)</p>
@@ -30,12 +30,12 @@ description: "ipsec_rangetosubnet – convert address range to subnet"
 <p> The error-reporting convention lends itself to slightly obscure code, because many readers will not think of NULL as signifying success. A good way to make it clearer is to write something like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 const char *error;
 error = rangetosubnet(/* ... */);
 if (error != NULL) {
 /* something went wrong */
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

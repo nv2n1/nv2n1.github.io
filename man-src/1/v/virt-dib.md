@@ -40,169 +40,160 @@ description: "virt-dib – Run diskimage-builder elements"
 <p> This builds a ramdisk for the Ironic OpenStack component based on the Ubuntu distribution.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>-B</code> <font SIZE="-1">PATH</font></p>
-<dd> Set the path to the library directory of <tt>&quot;diskimage-builder&quot;</tt>. This is usually the <i>lib</i> subdirectory in the sources and when installed, and <i>/usr/share/diskimage-builder/lib</i> when installed in <i>/usr</i>. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>-B</code> <font SIZE="-1">PATH</font></dt>
+<dd> Set the path to the library directory of <tt>&quot;diskimage-builder&quot;</tt>. This is usually the <i>lib</i> subdirectory in the sources and when installed, and <i>/usr/share/diskimage-builder/lib</i> when installed in <i>/usr</i>. </dd>
 <p> This parameter is <code>mandatory</code>, as virt-dib needs to provide it for the elements (as some of them might use scripts in it). Virt-dib itself does not make use of the library directory.</p>
-<dt><code>&#8211;arch</code> <font SIZE="-1">ARCHITECTURE</font></p>
-<dd> Use the specified architecture for the output image. The default value is the same as the host running virt-dib. </p>
+<dt><code>&#8211;arch</code> <font SIZE="-1">ARCHITECTURE</font></dt>
+<dd> Use the specified architecture for the output image. The default value is the same as the host running virt-dib. </dd>
 <p> Right now this option does nothing more than setting the <tt>&quot;ARCH&quot;</tt> environment variable for the elements, and it&#8217;s up to them to produce an image for the requested architecture.</p>
-<dt><code>&#8211;colors</code></p>
+<dt><code>&#8211;colors</code></dt>
 <dd>
-<dt><code>&#8211;colours</code></p>
-<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</p>
-<dt><code>&#8211;debug</code> <font SIZE="-1">LEVEL</font></p>
-<dd> Set the debug level to <tt>&quot;LEVEL&quot;</tt>, which is a non-negative integer number. The default is <tt>0</tt>. </p>
+</dd><dt><code>&#8211;colours</code></dt>
+<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</dd>
+<dt><code>&#8211;debug</code> <font SIZE="-1">LEVEL</font></dt>
+<dd> Set the debug level to <tt>&quot;LEVEL&quot;</tt>, which is a non-negative integer number. The default is <tt>0</tt>. </dd>
 <p> This debug level is different than what <i>-x</i> and <i>-v</i> set, and it increases the debugging information printed out. Specifically, this sets the <tt>&quot;DIB_DEBUG_TRACE&quot;</tt>, and any value &gt; <tt>0</tt> enables tracing in the scripts executed.</p>
-<dt><code>&#8211;drive</code> <font SIZE="-1">DISK</font></p>
-<dd> Add the specified disk to be used as helper drive where to cache files of the elements, like disk images, distribution packages, etc. </p>
+<dt><code>&#8211;drive</code> <font SIZE="-1">DISK</font></dt>
+<dd> Add the specified disk to be used as helper drive where to cache files of the elements, like disk images, distribution packages, etc. </dd>
 <p> See &#8220;<font SIZE="-1">HELPER DRIVE&#8221;</font>.</p>
-<dt><code>-p</code> <font SIZE="-1">PATH</font></p>
+<dt><code>-p</code> <font SIZE="-1">PATH</font></dt>
 <dd>
-<dt><code>&#8211;element-path</code> <font SIZE="-1">PATH</font></p>
-<dd> Add a new path with elements. Paths are used in the same order as the <i>-p</i> parameters appear, so a path specified first is looked first, and so on. </p>
+</dd><dt><code>&#8211;element-path</code> <font SIZE="-1">PATH</font></dt>
+<dd> Add a new path with elements. Paths are used in the same order as the <i>-p</i> parameters appear, so a path specified first is looked first, and so on. </dd>
 <p> Obviously, it is recommended to add the path to the own elements of <tt>&quot;diskimage-builder&quot;</tt>, as most of the other elements will rely on them.</p>
-<dt><code>&#8211;extra-packages</code> <font SIZE="-1">PACKAGE,&#8230;</font></p>
-<dd> Install additional packages in the image being built. </p>
+<dt><code>&#8211;extra-packages</code> <font SIZE="-1">PACKAGE,&#8230;</font></dt>
+<dd> Install additional packages in the image being built. </dd>
 <p> This relies on the <tt>&quot;install-packages&quot;</tt> binary provided by the package management elements. </p>
 <p> This option can be specified multiple times, each time with multiple packages separated by comma.</p>
-<dt><code>&#8211;envvar</code> <font SIZE="-1">VARIABLE</font></p>
+<dt><code>&#8211;envvar</code> <font SIZE="-1">VARIABLE</font></dt>
 <dd>
-<dt><code>&#8211;envvar</code> VARIABLE=VALUE</p>
-<dd> Carry or set an environment variable for the elements. </p>
+</dd><dt><code>&#8211;envvar</code> VARIABLE=VALUE</dt>
+<dd> Carry or set an environment variable for the elements. </dd>
 <p> See &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> below for more information on the interaction and usage of environment variables. </p>
 <p> This option can be used in two ways:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;envvar</code> <font SIZE="-1">VARIABLE</font></p>
-<dd> Carry the environment variable <tt>&quot;VARIABLE&quot;</tt>. If it is not set, nothing is exported to the elements.</p>
-<dt><code>&#8211;envvar</code> VARIABLE=VALUE</p>
-<dd> Set the environment variable <tt>&quot;VARIABLE&quot;</tt> with value <tt>&quot;VALUE&quot;</tt> for the elements, regardless whether an environment variable with the same name exists. </p>
+<dt><code>&#8211;envvar</code> <font SIZE="-1">VARIABLE</font></dt>
+<dd> Carry the environment variable <tt>&quot;VARIABLE&quot;</tt>. If it is not set, nothing is exported to the elements.</dd>
+<dt><code>&#8211;envvar</code> VARIABLE=VALUE</dt>
+<dd> Set the environment variable <tt>&quot;VARIABLE&quot;</tt> with value <tt>&quot;VALUE&quot;</tt> for the elements, regardless whether an environment variable with the same name exists. </dd>
 <p> This can be useful to pass environment variable without exporting them in the environment where virt-dib runs.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;exclude-element</code> <font SIZE="-1">ELEMENT</font></p>
-<dd> Ignore the specified element.</p>
-<dt><code>&#8211;exclude-script</code> <font SIZE="-1">SCRIPT</font></p>
-<dd> Ignore any element script named <tt>&quot;SCRIPT&quot;</tt>, whichever element it is in. </p>
+</dl>
+<dt><code>&#8211;exclude-element</code> <font SIZE="-1">ELEMENT</font></dt>
+<dd> Ignore the specified element.</dd>
+<dt><code>&#8211;exclude-script</code> <font SIZE="-1">SCRIPT</font></dt>
+<dd> Ignore any element script named <tt>&quot;SCRIPT&quot;</tt>, whichever element it is in. </dd>
 <p> This can be useful in case some script does not run well with virt-dib, for example when they really need <tt>&quot;diskimage-builder&quot;</tt>&#8216;s environment.</p>
-<dt><code>&#8211;formats</code> <font SIZE="-1">FORMAT,&#8230;</font></p>
-<dd> Set the list of output formats, separating them with comma. </p>
+<dt><code>&#8211;formats</code> <font SIZE="-1">FORMAT,&#8230;</font></dt>
+<dd> Set the list of output formats, separating them with comma. </dd>
 <p> Supported formats are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&quot;qcow2&quot; (enabled by default)</p>
-<dd> <font SIZE="-1">QEMU</font>&#8216;s qcow2.</p>
-<dt>&quot;raw&quot;</p>
-<dd> Raw disk format.</p>
-<dt>&quot;tar&quot;</p>
-<dd> An uncompressed tarball.</p>
-<dt>&quot;vhd&quot;</p>
-<dd> <tt>&quot;Virtual Hard Disk&quot;</tt> disk image. This output format requires the <tt>&quot;vhd-util&quot;</tt> tool. </p>
+<dt>&quot;qcow2&quot; (enabled by default)</dt>
+<dd> <font SIZE="-1">QEMU</font>&#8216;s qcow2.</dd>
+<dt>&quot;raw&quot;</dt>
+<dd> Raw disk format.</dd>
+<dt>&quot;tar&quot;</dt>
+<dd> An uncompressed tarball.</dd>
+<dt>&quot;vhd&quot;</dt>
+<dd> <tt>&quot;Virtual Hard Disk&quot;</tt> disk image. This output format requires the <tt>&quot;vhd-util&quot;</tt> tool. </dd>
 <p> Please note that the version of <tt>&quot;vhd-util&quot;</tt> tool needs to be patched to support the <tt>&quot;convert&quot;</tt> subcommand, and to be bootable. The patch is available here: <a rel="nofollow" href="https://github.com/emonty/vhd-util/blob/master/debian/patches/citrix.">https://github.com/emonty/vhd-util/blob/master/debian/patches/citrix.</a></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;fs-type</code> <font SIZE="-1">FILESYSTEM</font></p>
-<dd> Set the filesystem type to use for the root filesystem. The default is <tt>&quot;ext4&quot;</tt>. </p>
+</dl>
+<dt><code>&#8211;fs-type</code> <font SIZE="-1">FILESYSTEM</font></dt>
+<dd> Set the filesystem type to use for the root filesystem. The default is <tt>&quot;ext4&quot;</tt>. </dd>
 <p> See also &#8220;guestfs_filesystem_available&#8221; in <i>guestfs</i>(3).</p>
-<dt><code>&#8211;image-cache</code> <font SIZE="-1">DIRECTORY</font></p>
-<dd> Set the path in the host where cache the resources used by the elements of the <tt>&quot;extra-data.d&quot;</tt> phase. The default is <i>~/.cache/image-create</i>. </p>
+<dt><code>&#8211;image-cache</code> <font SIZE="-1">DIRECTORY</font></dt>
+<dd> Set the path in the host where cache the resources used by the elements of the <tt>&quot;extra-data.d&quot;</tt> phase. The default is <i>~/.cache/image-create</i>. </dd>
 <p> Please note that most of the resources fetched after <tt>&quot;extra-data&quot;</tt> will be cached in the helper drive specified with <i>&#8211;drive</i>; see also &#8220;<font SIZE="-1">HELPER DRIVE&#8221;</font>.</p>
-<dt><code>&#8211;install-type</code> <font SIZE="-1">TYPE</font></p>
-<dd> Specify the default installation type. Defaults to <tt>&quot;source&quot;</tt>. </p>
+<dt><code>&#8211;install-type</code> <font SIZE="-1">TYPE</font></dt>
+<dd> Specify the default installation type. Defaults to <tt>&quot;source&quot;</tt>. </dd>
 <p> Set to <tt>&quot;package&quot;</tt> to use package based installations by default.</p>
-<dt><code>&#8211;machine-readable</code></p>
-<dd> This option is used to make the output more machine friendly when being parsed by other programs. See &#8220;<font SIZE="-1">MACHINE READABLE OUTPUT&#8221;</font> below.</p>
-<dt><code>-m</code> <font SIZE="-1">MB</font></p>
+<dt><code>&#8211;machine-readable</code></dt>
+<dd> This option is used to make the output more machine friendly when being parsed by other programs. See &#8220;<font SIZE="-1">MACHINE READABLE OUTPUT&#8221;</font> below.</dd>
+<dt><code>-m</code> <font SIZE="-1">MB</font></dt>
 <dd>
-<dt><code>&#8211;memsize</code> <font SIZE="-1">MB</font></p>
-<dd> Change the amount of memory allocated to the appliance. Increase this if you find that the virt-dib execution runs out of memory. </p>
+</dd><dt><code>&#8211;memsize</code> <font SIZE="-1">MB</font></dt>
+<dd> Change the amount of memory allocated to the appliance. Increase this if you find that the virt-dib execution runs out of memory. </dd>
 <p> The default can be found with this command: </p>
 <pre>
  guestfish get-memsize
 </pre>
-<dt><code>&#8211;mkfs-options</code> &quot;OPTION STRING&quot;</p>
-<dd> Add the specified options to <i><a href="/docs/linux/man/1-mkfs/">mkfs</a></i>(1), to be able to fine-tune the root filesystem creation. Note that this is not possible to override the filesystem type. </p>
+<dt><code>&#8211;mkfs-options</code> &quot;OPTION STRING&quot;</dt>
+<dd> Add the specified options to <i><a href="/docs/linux/man/1-mkfs/">mkfs</a></i>(1), to be able to fine-tune the root filesystem creation. Note that this is not possible to override the filesystem type. </dd>
 <p> You should use <i>&#8211;mkfs-options</i> at most once. To pass multiple options, separate them with space, eg: </p>
 <pre>
  virt-dib ... --mkfs-options '-O someopt -I foo'
 </pre>
-<dt><code>&#8211;network</code></p>
+<dt><code>&#8211;network</code></dt>
 <dd>
-<dt><code>&#8211;no-network</code></p>
-<dd> Enable or disable network access from the guest during the installation. </p>
+</dd><dt><code>&#8211;no-network</code></dt>
+<dd> Enable or disable network access from the guest during the installation. </dd>
 <p> Enabled is the default. Use <i>&#8211;no-network</i> to disable access. </p>
 <p> The network only allows outgoing connections and has other minor limitations. See &#8220;<font SIZE="-1">NETWORK&#8221;</font> in <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1). </p>
 <p> This does not affect whether the guest can access the network once it has been booted, because that is controlled by your hypervisor or cloud environment and has nothing to do with virt-dib. </p>
 <p> If you use <i>&#8211;no-network</i>, then the environment variable <tt>&quot;DIB_OFFLINE&quot;</tt> is set to <tt>1</tt>, signaling the elements that they should use only cached resources when available. Note also that, unlike with <tt>&quot;diskimage-builder&quot;</tt> where elements may still be able to access to the network even with <tt>&quot;DIB_OFFLINE=&quot;</tt>, under virt-dib network will be fully unaccessible.</p>
-<dt><code>&#8211;name</code> <font SIZE="-1">NAME</font></p>
-<dd> Set the name of the output image file. The default is <tt>&quot;image&quot;</tt>. </p>
+<dt><code>&#8211;name</code> <font SIZE="-1">NAME</font></dt>
+<dd> Set the name of the output image file. The default is <tt>&quot;image&quot;</tt>. </dd>
 <p> According to the chosen name, there will be the following in the current directory:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>$NAME.ext</i></p>
-<dd> For each output format, a disk image named after the outout image with the extension depending on the format; for example: <i></i>$NAME<i>.qcow2</i>, <i></i>$NAME<i>.raw</i>, etc. </p>
+<dt><i>$NAME.ext</i></dt>
+<dd> For each output format, a disk image named after the outout image with the extension depending on the format; for example: <i></i>$NAME<i>.qcow2</i>, <i></i>$NAME<i>.raw</i>, etc. </dd>
 <p> Not applicable in ramdisk mode, see &#8220;<font SIZE="-1">RAMDISK BUILDING&#8221;</font>.</p>
-<dt><i>$NAME.d</i></p>
-<dd> A directory containing any files created by the elements, for example <i>dib-manifests</i> directory (created by the <tt>&quot;manifests&quot;</tt> element), ramdisks and kernels in ramdisk mode, and so on.</dl>
+<dt><i>$NAME.d</i></dt>
+<dd> A directory containing any files created by the elements, for example <i>dib-manifests</i> directory (created by the <tt>&quot;manifests&quot;</tt> element), ramdisks and kernels in ramdisk mode, and so on.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;no-delete-on-failure</code></p>
-<dd> Don&#8217;t delete the output files on failure to build. You can use this to debug failures to run scripts. </p>
+</dl>
+<dt><code>&#8211;no-delete-on-failure</code></dt>
+<dd> Don&#8217;t delete the output files on failure to build. You can use this to debug failures to run scripts. </dd>
 <p> The default is to delete the output file if virt-dib fails (or, for example, some script that it runs fails).</p>
-<dt><code>-q</code></p>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> Don&#8217;t print ordinary progress messages.</p>
-<dt><code>&#8211;qemu-img-options</code> option[,option,&#8230;]</p>
-<dd> Pass <i>&#8211;qemu-img-options</i> option(s) to the <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1) command to fine-tune the output format. Options available depend on the output format (see <i>&#8211;formats</i>) and the installed version of the qemu-img program. </p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t print ordinary progress messages.</dd>
+<dt><code>&#8211;qemu-img-options</code> option[,option,&#8230;]</dt>
+<dd> Pass <i>&#8211;qemu-img-options</i> option(s) to the <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1) command to fine-tune the output format. Options available depend on the output format (see <i>&#8211;formats</i>) and the installed version of the qemu-img program. </dd>
 <p> You should use <i>&#8211;qemu-img-options</i> at most once. To pass multiple options, separate them with commas, eg: </p>
 <pre>
  virt-dib ... --qemu-img-options cluster_size=512,preallocation=metadata ...
 </pre>
-<dt><code>&#8211;ramdisk</code></p>
-<dd> Set the ramdisk building mode. </p>
+<dt><code>&#8211;ramdisk</code></dt>
+<dd> Set the ramdisk building mode. </dd>
 <p> See &#8220;<font SIZE="-1">RAMDISK BUILDING&#8221;</font>.</p>
-<dt><code>&#8211;ramdisk-element</code> <font SIZE="-1">NAME</font></p>
-<dd> Set the name for the additional element added in ramdisk building mode. The default is <tt>&quot;ramdisk&quot;</tt>. </p>
+<dt><code>&#8211;ramdisk-element</code> <font SIZE="-1">NAME</font></dt>
+<dd> Set the name for the additional element added in ramdisk building mode. The default is <tt>&quot;ramdisk&quot;</tt>. </dd>
 <p> See &#8220;<font SIZE="-1">RAMDISK BUILDING&#8221;</font>.</p>
-<dt><code>&#8211;root-label</code> <font SIZE="-1">LABEL</font></p>
-<dd> Set the label for the root filesystem in the created image. </p>
+<dt><code>&#8211;root-label</code> <font SIZE="-1">LABEL</font></dt>
+<dd> Set the label for the root filesystem in the created image. </dd>
 <p> Please note that some filesystems have different restrictions on the length of their labels; for example, on <tt>&quot;ext2/3/4&quot;</tt> filesystems labels cannot be longer than 16 characters, while on <tt>&quot;xfs&quot;</tt> they have at most 12 characters. </p>
 <p> The default depends on the actual filesystem for the root partition (see <i>&#8211;fs-type</i>): on <tt>&quot;xfs&quot;</tt> is <tt>&quot;img-rootfs&quot;</tt>, while <tt>&quot;cloudimg-rootfs&quot;</tt> on any other filesystem.</p>
-<dt><code>&#8211;size</code> <font SIZE="-1">SIZE</font></p>
-<dd> Select the size of the output disk, where the size can be specified using common names such as <tt>&quot;32G&quot;</tt> (32 gigabytes) etc. The default size is <tt>&quot;5G&quot;</tt>. </p>
+<dt><code>&#8211;size</code> <font SIZE="-1">SIZE</font></dt>
+<dd> Select the size of the output disk, where the size can be specified using common names such as <tt>&quot;32G&quot;</tt> (32 gigabytes) etc. The default size is <tt>&quot;5G&quot;</tt>. </dd>
 <p> To specify size in bytes, the number must be followed by the lowercase letter <i>b</i>, eg: <tt>&quot;--size 10737418240b&quot;</tt>. </p>
 <p> See also <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1) for resizing partitions of an existing disk image.</p>
-<dt><code>&#8211;skip-base</code></p>
-<dd> Skip the inclusion of the <tt>&quot;base&quot;</tt> element.</p>
-<dt><code>&#8211;smp</code> N</p>
-<dd> Enable N ≥ 2 virtual CPUs for scripts to use.</p>
-<dt><code>-u</code></p>
-<dd> Do not compress resulting qcow2 images. The default is to compress them.</p>
-<dt><code>-v</code></p>
+<dt><code>&#8211;skip-base</code></dt>
+<dd> Skip the inclusion of the <tt>&quot;base&quot;</tt> element.</dd>
+<dt><code>&#8211;smp</code> N</dt>
+<dd> Enable N ≥ 2 virtual CPUs for scripts to use.</dd>
+<dt><code>-u</code></dt>
+<dd> Do not compress resulting qcow2 images. The default is to compress them.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable debugging messages.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable debugging messages.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> Unlike with <tt>&quot;diskimage-builder&quot;</tt>, the environment of the host is <code>not</code> inherited in the appliance when running most of the elements (i.e. all the ones different than <tt>&quot;extra-data.d&quot;</tt>). </p>
 <p> To set environment for the elements being run, it is necessary to tell virt-dib to use them, with the option <i>&#8211;envvar</i>. Such option allows to selectively export environment variables when running the elements, and it is the preferred way to pass environment variables to the elements. </p>
@@ -232,20 +223,20 @@ description: "virt-dib – Run diskimage-builder elements"
 <h3><font SIZE="-1">RESOURCES INSIDE THE DRIVE</font></h3>
 <p> Inside the helper drive, it is possible to find the following resources:</p>
 <dl>
-<dt><i>/home</i></p>
-<dd> This directory is set as <tt>&quot;HOME&quot;</tt> environment variable during the build. It contains mostly the image cache (saved as <i>/home/.cache/image-create</i>), and whichever other resource is cached in the home directory of the user running the various tools.</p>
-<dt><i>/virt-dib-*.log</i></p>
-<dd> These are the logs of the elements being run within the libguestfs appliance, which means all the hooks except <tt>&quot;extra-data.d&quot;</tt>.</dl>
+<dt><i>/home</i></dt>
+<dd> This directory is set as <tt>&quot;HOME&quot;</tt> environment variable during the build. It contains mostly the image cache (saved as <i>/home/.cache/image-create</i>), and whichever other resource is cached in the home directory of the user running the various tools.</dd>
+<dt><i>/virt-dib-*.log</i></dt>
+<dd> These are the logs of the elements being run within the libguestfs appliance, which means all the hooks except <tt>&quot;extra-data.d&quot;</tt>.</dd></dl>
 <h2>RAMDISK BUILDING</h2>
 <p> Virt-dib can emulate also <tt>&quot;ramdisk-image-create&quot;</tt>, which is a secondary operation mode of <tt>&quot;diskimage-builder&quot;</tt>. Instead of being a different tool name, virt-dib provides easy access to this mode using the <i>&#8211;ramdisk</i> switch. </p>
 <p> In this mode:</p>
 <dl>
-<dt>&bull;</p>
-<dd> there is an additional ramdisk element added (see <i>&#8211;ramdisk-element</i>)</p>
-<dt>&bull;</p>
-<dd> no image is produced (so <i>&#8211;formats</i> is ignored)</p>
-<dt>&bull;</p>
-<dd> <i></i>$NAME<i>.d</i> (see <i>&#8211;name</i>) will contain initrd, kernel, etc</dl>
+<dt>&bull;</dt>
+<dd> there is an additional ramdisk element added (see <i>&#8211;ramdisk-element</i>)</dd>
+<dt>&bull;</dt>
+<dd> no image is produced (so <i>&#8211;formats</i> is ignored)</dd>
+<dt>&bull;</dt>
+<dd> <i></i>$NAME<i>.d</i> (see <i>&#8211;name</i>) will contain initrd, kernel, etc</dd></dl>
 <h2>TEMPORARY DIRECTORY</h2>
 <p> Virt-dib uses the standard temporary directory used by libguestfs, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3). </p>
 <p> By default this location is <i>/tmp</i> (default value for <tt>&quot;TMPDIR&quot;</tt>), which on some systems may be on a tmpfs filesystem, and thus defaulting to a maximum size of <i>half</i> of physical <font SIZE="-1">RAM.</font> If virt-dib exceeds this, it may hang or exit early with an error. The solution is to point <tt>&quot;TMPDIR&quot;</tt> to a permanent location used as temporary location, for example: </p>
@@ -264,27 +255,27 @@ description: "virt-dib – Run diskimage-builder elements"
 <h2>COMPARISON WITH DISKIMAGE-BUILDER</h2>
 <p> Virt-dib is intended as safe replacement for <tt>&quot;diskimage-builder&quot;</tt> and its <tt>&quot;ramdisk-image-create&quot;</tt> mode; the user-notable differences consist in:</p>
 <dl>
-<dt>&bull;</p>
-<dd> the command line arguments; some of the arguments are the same as available in <tt>&quot;diskimage-builder&quot;</tt>, while some have different names: </p>
+<dt>&bull;</dt>
+<dd> the command line arguments; some of the arguments are the same as available in <tt>&quot;diskimage-builder&quot;</tt>, while some have different names: </dd>
 <pre><code>
 disk - image - create virt - dib-- -- -- -- -- -- -- -- - -- -- -- -- -a ARCH-- arch ARCH-- image - size SIZE-- size SIZE-- max - online - resize SIZE doable using --mkfs - options - n-- skip - base - o IMAGENAME-- name IMAGENAME - p PACKAGE(S)-- extra - packages PACKAGE(S) - t FORMAT(S)-- formats FORMAT(S) - x-- debug N
 </code></pre>
-<dt>&bull;</p>
-<dd> the location of non-image output files (like ramdisks and kernels)</p>
-<dt>&bull;</p>
-<dd> the way some of the cached resources are saved: using an helper drive, not directly on the disk where virt-dib is run</p>
-<dt>&bull;</p>
-<dd> the need to specify a target size for the output disk, as opposed to <tt>&quot;diskimage-builder&quot;</tt> calculating an optimal one</p>
-<dt>&bull;</p>
-<dd> the handling of environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font>. </p>
+<dt>&bull;</dt>
+<dd> the location of non-image output files (like ramdisks and kernels)</dd>
+<dt>&bull;</dt>
+<dd> the way some of the cached resources are saved: using an helper drive, not directly on the disk where virt-dib is run</dd>
+<dt>&bull;</dt>
+<dd> the need to specify a target size for the output disk, as opposed to <tt>&quot;diskimage-builder&quot;</tt> calculating an optimal one</dd>
+<dt>&bull;</dt>
+<dd> the handling of environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font>. </dd>
 <p> Furthermore, other than the libguestfs own environment variables (see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3)), virt-dib does not read any other environment variable: this means that all the options and behaviour changes are specified solely using command line arguments</p>
-<dt>&bull;</p>
-<dd> extra tools needed on some out-of-chroot phases need to be available in the appliance, see &#8220;<font SIZE="-1">EXTRA DEPENDENCIES&#8221;</font>.</dl>
+<dt>&bull;</dt>
+<dd> extra tools needed on some out-of-chroot phases need to be available in the appliance, see &#8220;<font SIZE="-1">EXTRA DEPENDENCIES&#8221;</font>.</dd></dl>
 <p> Elements themselves should notice no difference in they way they are run; behaviour differences may due to wrong assumptions in elements, or not correct virt-dib emulation. </p>
 <p> Known issues at the moment:</p>
 <dl>
-<dt>&bull;</p>
-<dd> (none)</dl>
+<dt>&bull;</dt>
+<dd> (none)</dd></dl>
 <h2>MACHINE READABLE OUTPUT</h2>
 <p> The <i>&#8211;machine-readable</i> option can be used to make the output more machine friendly, which is useful when calling virt-dib from other programs, GUIs etc. </p>
 <p> Use the option on its own to query the capabilities of the virt-dib binary. Typical output looks like this: </p>
@@ -317,37 +308,37 @@ disk - image - create virt - dib-- -- -- -- -- -- -- -- - -- -- -- -- -a ARCH-- 
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAL">RAMDISK BUILDING</a></p>
+<dt><a href="#lbAL">RAMDISK BUILDING</a></dt>
 <dd>
-<dt><a href="#lbAM">TEMPORARY DIRECTORY</a></p>
+</dd><dt><a href="#lbAM">TEMPORARY DIRECTORY</a></dt>
 <dd>
-<dt><a href="#lbAN">EXTRA DEPENDENCIES</a></p>
+</dd><dt><a href="#lbAN">EXTRA DEPENDENCIES</a></dt>
 <dd>
-<dt><a href="#lbAO">COMPARISON WITH DISKIMAGE-BUILDER</a></p>
+</dd><dt><a href="#lbAO">COMPARISON WITH DISKIMAGE-BUILDER</a></dt>
 <dd>
-<dt><a href="#lbAP">MACHINE READABLE OUTPUT</a></p>
+</dd><dt><a href="#lbAP">MACHINE READABLE OUTPUT</a></dt>
 <dd>
-<dt><a href="#lbAQ">TESTING</a></p>
+</dd><dt><a href="#lbAQ">TESTING</a></dt>
 <dd>
-<dt><a href="#lbAR">EXIT STATUS</a></p>
+</dd><dt><a href="#lbAR">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbAS">SEE ALSO</a></p>
+</dd><dt><a href="#lbAS">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAT">AUTHOR</a></p>
+</dd><dt><a href="#lbAT">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAU">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAU">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAV">LICENSE</a></p>
+</dd><dt><a href="#lbAV">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAW">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAW">BUGS</a></dt>
+<dd></dd></dl>

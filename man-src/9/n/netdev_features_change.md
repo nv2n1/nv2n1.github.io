@@ -15,7 +15,7 @@ netdev_features_change - device changes features
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to cause notification</dl>
+<dl><dd></dd><dd>device to cause notification</dd></dl>
 
 <h2>Description</h2>
 

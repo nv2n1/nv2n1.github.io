@@ -15,8 +15,8 @@ description: "ppp-watch – daemon to make PPP interfaces act more like other in
 <p> <code>ppp-watch</code> is not really meant to be called directly. It should only be used from within the ifup-ppp script.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>interface-name</i></p>
-<dd>The name of the PPP interface to bring up.</p>
-<dt>boot</p>
-<dd>ppp-watch is being called at boot time and should time out after a while if the PPP connection does not come up in order not to hang the boot sequence. </p>
+<dt><i>interface-name</i></dt>
+<dd>The name of the PPP interface to bring up.</dd>
+<dt>boot</dt>
+<dd>ppp-watch is being called at boot time and should time out after a while if the PPP connection does not come up in order not to hang the boot sequence. </dd>
 </dl>

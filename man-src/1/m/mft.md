@@ -19,22 +19,22 @@ description: "mft – translate Metafont or MetaPost code to TeX code for pretty
 <p> The output TeX file name is formed by using <code>.tex</code> in place of the extension of <i>mf_file_name</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-change=</code><i>change_file_name</i>[.ch]</p>
-<dd> Apply the change file <i>change_file_name</i> to <i>mf_file_name</i>.</dl>
+<dt><code>-change=</code><i>change_file_name</i>[.ch]</dt>
+<dd> Apply the change file <i>change_file_name</i> to <i>mf_file_name</i>.</dd></dl>
 <dl>
-<dt><code>-metapost</code></p>
-<dd> Assume <i>mf_file_name</i> is a MetaPost source file (this is the default if <i>mf_file_name</i> has the extension <code>.mp</code>).</dl>
+<dt><code>-metapost</code></dt>
+<dd> Assume <i>mf_file_name</i> is a MetaPost source file (this is the default if <i>mf_file_name</i> has the extension <code>.mp</code>).</dd></dl>
 <dl>
-<dt><code>-style=</code><i>style_file_name</i>[.mft]</p>
-<dd> Use the style file <i>style_file_name</i> instead of <code>plain.mft</code> (or <code>mplain.mft</code>); this option can be given more than once.</dl>
+<dt><code>-style=</code><i>style_file_name</i>[.mft]</dt>
+<dd> Use the style file <i>style_file_name</i> instead of <code>plain.mft</code> (or <code>mplain.mft</code>); this option can be given more than once.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>mftmac.tex</i></p>
-<dd> TeX macros used by <code>mft</code> output.</p>
-<dt><i>plain.mft</i>, <i>mplain.mft</i></p>
-<dd> Default style files.</p>
-<dt><i>cmbase.mft</i></p>
-<dd> Style file for Computer Modern.</dl>
+<dt><i>mftmac.tex</i></dt>
+<dd> TeX macros used by <code>mft</code> output.</dd>
+<dt><i>plain.mft</i>, <i>mplain.mft</i></dt>
+<dd> Default style files.</dd>
+<dt><i>cmbase.mft</i></dt>
+<dd> Style file for Computer Modern.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-weave/">weave</a></code>(1).<br />
  Donald E. Knuth, <i>Computer Modern Typefaces</i> (Volume E of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13446-2.<br />

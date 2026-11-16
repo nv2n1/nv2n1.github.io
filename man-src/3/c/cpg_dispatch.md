@@ -17,11 +17,9 @@ description: "cpg_dispatch – Dispatches callbacks from the CPG service"
 <p> Each application may have several connections to the CPG API. Each application uses the <i>handle</i> argument to uniquely identify the connection. </p>
 <p> The <i>dispatch_types</i> argument is used to identify the type of dispatch to execute. The possible types are defined by the structure: </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 typedef enum {
     CS_DISPATCH_ONE,
@@ -29,19 +27,18 @@ typedef enum {
     CS_DISPATCH_BLOCKING
 } cpg_dispatch_t;
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> The dispatch values have the following meanings:</p>
 <dl>
-<dt><code>CS_DISPATCH_ONE</code></p>
-<dd> Dispatch atleast one callback, blocking until the callback is dispatched.</p>
-<dt><code>CS_DISPATCH_ALL</code></p>
-<dd> Dispatch all waiting callbacks without blocking to wait for any callbacks.</p>
-<dt><code>CS_DISPATCH_BLOCKING</code></p>
-<dd> Dispatch all callbacks, blocking indefinitely. This is used in a threaded program where a thread is created, and then cpg_dispatch() is called immediately from the created thread to execute callbacks.</p>
-<dt><code>CS_DISPATCH_ONE_NONBLOCKING</code></p>
-<dd> Dispatch at most one callback. If there is no pending callback, CS_ERR_TRY_AGAIN is returned. </p>
+<dt><code>CS_DISPATCH_ONE</code></dt>
+<dd> Dispatch atleast one callback, blocking until the callback is dispatched.</dd>
+<dt><code>CS_DISPATCH_ALL</code></dt>
+<dd> Dispatch all waiting callbacks without blocking to wait for any callbacks.</dd>
+<dt><code>CS_DISPATCH_BLOCKING</code></dt>
+<dd> Dispatch all callbacks, blocking indefinitely. This is used in a threaded program where a thread is created, and then cpg_dispatch() is called immediately from the created thread to execute callbacks.</dd>
+<dt><code>CS_DISPATCH_ONE_NONBLOCKING</code></dt>
+<dd> Dispatch at most one callback. If there is no pending callback, CS_ERR_TRY_AGAIN is returned. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>

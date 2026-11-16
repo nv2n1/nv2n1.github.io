@@ -23,74 +23,74 @@ description: "pigz, unpigz – compress or expand files"
 <p> Compressed files can be restored to their original form using <i>pigz -d</i> or <i>unpigz.</i> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-# &#8211;fast &#8211;best</code></p>
-<dd> Regulate the speed of compression using the specified digit <i>#</i>, where <code>-1</code> or <code>&#8211;fast</code> indicates the fastest compression method (less compression) and <code>-9</code> or <code>&#8211;best</code> indicates the slowest compression method (best compression). <code>-0</code> is no compression. <code>-11</code> gives a few percent better compression at a severe cost in execution time, using the zopfli algorithm by Jyrki Alakuijala. The default is <code>-6.</code></p>
-<dt><code>-A &#8211;alias xxx</code></p>
-<dd> Use xxx as the name for any &#8211;zip entry from stdin (the default name is &quot;-&quot;).</p>
-<dt><code>-b &#8211;blocksize mmm</code></p>
-<dd> Set compression block size to mmmK (default 128KiB).</p>
-<dt><code>-c &#8211;stdout &#8211;to-stdout</code></p>
-<dd> Write all processed output to stdout (won&#8217;t delete).</p>
-<dt><code>-C &#8211;comment ccc</code></p>
-<dd> Include the provided comment in the gzip header or zip central file header.</p>
-<dt><code>-d &#8211;decompress &#8211;uncompress</code></p>
-<dd> Decompress the compressed input.</p>
-<dt><code>-f &#8211;force</code></p>
-<dd> Force overwrite, compress .gz, links, and to terminal.</p>
-<dt><code>-h &#8211;help</code></p>
-<dd> Display a help screen and quit.</p>
-<dt><code>-H &#8211;huffman</code></p>
-<dd> Compress using the Huffman-only strategy.</p>
-<dt><code>-i &#8211;independent</code></p>
-<dd> Compress blocks independently for damage recovery.</p>
-<dt><code>-k &#8211;keep</code></p>
-<dd> Do not delete original file after processing.</p>
-<dt><code>-K &#8211;zip</code></p>
-<dd> Compress to PKWare zip (.zip) single entry format.</p>
-<dt><code>-l &#8211;list</code></p>
-<dd> List the contents of the compressed input.</p>
-<dt><code>-L &#8211;license</code></p>
-<dd> Display the <i>pigz</i> license and quit.</p>
-<dt><code>-m &#8211;no-time</code></p>
-<dd> Do not store or restore the modification time. -Nm will store or restore the name, but not the modification time. Note that the order of the options is important.</p>
-<dt><code>-M &#8211;time</code></p>
-<dd> Store or restore the modification time. -nM will store or restore the modification time, but not the name. Note that the order of the options is important.</p>
-<dt><code>-n &#8211;no-name</code></p>
-<dd> Do not store or restore the file name or the modification time. This is the default when decompressing. When the file name is not restored from the header, the name of the compressed file with the suffix stripped is the name of the decompressed file. When the modification time is not restored from the header, the modification time of the compressed file is used (not the current time).</p>
-<dt><code>-N &#8211;name</code></p>
-<dd> Store or restore both the file name and the modification time. This is the default when compressing.</p>
-<dt><code>-p &#8211;processes n</code></p>
-<dd> Allow up to n processes (default is the number of online processors)</p>
-<dt><code>-q &#8211;quiet &#8211;silent</code></p>
-<dd> Print no messages, even on error.</p>
-<dt><code>-r &#8211;recursive</code></p>
-<dd> Process the contents of all subdirectories.</p>
-<dt><code>-R &#8211;rsyncable</code></p>
-<dd> Input-determined block locations for rsync.</p>
-<dt><code>-S &#8211;suffix .sss</code></p>
-<dd> Use suffix .sss instead of .gz (for compression).</p>
-<dt><code>-t &#8211;test</code></p>
-<dd> Test the integrity of the compressed input.</p>
-<dt><code>-U &#8211;rle</code></p>
-<dd> Compress using the run length encoding strategy.</p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd> Provide more verbose output.</p>
-<dt><code>-V &#8211;version</code></p>
-<dd> Show the version of pigz. -vV also shows the zlib version.</p>
-<dt><code>-z &#8211;zlib</code></p>
-<dd> Compress to zlib (.zz) instead of gzip format.</p>
-<dt><code>&#8212;</code></p>
-<dd> All arguments after &quot;&#8211;&quot; are treated as file names (for names that start with &quot;-&quot;)</p>
-<dt>These options are unique to the -11 compression level:</p>
+<dt><code>-# &#8211;fast &#8211;best</code></dt>
+<dd> Regulate the speed of compression using the specified digit <i>#</i>, where <code>-1</code> or <code>&#8211;fast</code> indicates the fastest compression method (less compression) and <code>-9</code> or <code>&#8211;best</code> indicates the slowest compression method (best compression). <code>-0</code> is no compression. <code>-11</code> gives a few percent better compression at a severe cost in execution time, using the zopfli algorithm by Jyrki Alakuijala. The default is <code>-6.</code></dd>
+<dt><code>-A &#8211;alias xxx</code></dt>
+<dd> Use xxx as the name for any &#8211;zip entry from stdin (the default name is &quot;-&quot;).</dd>
+<dt><code>-b &#8211;blocksize mmm</code></dt>
+<dd> Set compression block size to mmmK (default 128KiB).</dd>
+<dt><code>-c &#8211;stdout &#8211;to-stdout</code></dt>
+<dd> Write all processed output to stdout (won&#8217;t delete).</dd>
+<dt><code>-C &#8211;comment ccc</code></dt>
+<dd> Include the provided comment in the gzip header or zip central file header.</dd>
+<dt><code>-d &#8211;decompress &#8211;uncompress</code></dt>
+<dd> Decompress the compressed input.</dd>
+<dt><code>-f &#8211;force</code></dt>
+<dd> Force overwrite, compress .gz, links, and to terminal.</dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Display a help screen and quit.</dd>
+<dt><code>-H &#8211;huffman</code></dt>
+<dd> Compress using the Huffman-only strategy.</dd>
+<dt><code>-i &#8211;independent</code></dt>
+<dd> Compress blocks independently for damage recovery.</dd>
+<dt><code>-k &#8211;keep</code></dt>
+<dd> Do not delete original file after processing.</dd>
+<dt><code>-K &#8211;zip</code></dt>
+<dd> Compress to PKWare zip (.zip) single entry format.</dd>
+<dt><code>-l &#8211;list</code></dt>
+<dd> List the contents of the compressed input.</dd>
+<dt><code>-L &#8211;license</code></dt>
+<dd> Display the <i>pigz</i> license and quit.</dd>
+<dt><code>-m &#8211;no-time</code></dt>
+<dd> Do not store or restore the modification time. -Nm will store or restore the name, but not the modification time. Note that the order of the options is important.</dd>
+<dt><code>-M &#8211;time</code></dt>
+<dd> Store or restore the modification time. -nM will store or restore the modification time, but not the name. Note that the order of the options is important.</dd>
+<dt><code>-n &#8211;no-name</code></dt>
+<dd> Do not store or restore the file name or the modification time. This is the default when decompressing. When the file name is not restored from the header, the name of the compressed file with the suffix stripped is the name of the decompressed file. When the modification time is not restored from the header, the modification time of the compressed file is used (not the current time).</dd>
+<dt><code>-N &#8211;name</code></dt>
+<dd> Store or restore both the file name and the modification time. This is the default when compressing.</dd>
+<dt><code>-p &#8211;processes n</code></dt>
+<dd> Allow up to n processes (default is the number of online processors)</dd>
+<dt><code>-q &#8211;quiet &#8211;silent</code></dt>
+<dd> Print no messages, even on error.</dd>
+<dt><code>-r &#8211;recursive</code></dt>
+<dd> Process the contents of all subdirectories.</dd>
+<dt><code>-R &#8211;rsyncable</code></dt>
+<dd> Input-determined block locations for rsync.</dd>
+<dt><code>-S &#8211;suffix .sss</code></dt>
+<dd> Use suffix .sss instead of .gz (for compression).</dd>
+<dt><code>-t &#8211;test</code></dt>
+<dd> Test the integrity of the compressed input.</dd>
+<dt><code>-U &#8211;rle</code></dt>
+<dd> Compress using the run length encoding strategy.</dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd> Provide more verbose output.</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd> Show the version of pigz. -vV also shows the zlib version.</dd>
+<dt><code>-z &#8211;zlib</code></dt>
+<dd> Compress to zlib (.zz) instead of gzip format.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> All arguments after &quot;&#8211;&quot; are treated as file names (for names that start with &quot;-&quot;)</dd>
+<dt>These options are unique to the -11 compression level:</dt>
 <dd>
-<dt><code>-F &#8211;first</code></p>
-<dd> Do iterations first, before block split (default is last).</p>
-<dt><code>-I, &#8211;iterations n</code></p>
-<dd> Number of iterations for optimization (default 15).</p>
-<dt><code>-J, &#8211;maxsplits n</code></p>
-<dd> Maximum number of split blocks (default 15).</p>
-<dt><code>-O &#8211;oneblock</code></p>
-<dd> Do not split into smaller blocks (default is block splitting).</dl>
+</dd><dt><code>-F &#8211;first</code></dt>
+<dd> Do iterations first, before block split (default is last).</dd>
+<dt><code>-I, &#8211;iterations n</code></dt>
+<dd> Number of iterations for optimization (default 15).</dd>
+<dt><code>-J, &#8211;maxsplits n</code></dt>
+<dd> Maximum number of split blocks (default 15).</dd>
+<dt><code>-O &#8211;oneblock</code></dt>
+<dd> Do not split into smaller blocks (default is block splitting).</dd></dl>
 <h2>COPYRIGHT NOTICE</h2>
 <p> This software is provided &#8216;as-is&#8217;, without any express or implied warranty. In no event will the author be held liable for any damages arising from the use of this software. </p>
 <p> Copyright (C) 2007-2021 Mark Adler &lt;madler [at] alumni.caltech.edu&gt; </p>

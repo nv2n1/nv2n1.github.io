@@ -17,11 +17,11 @@ description: "ldns_get_rr_class_by_name, ldns_get_rr_type_by_name"
 <p> ldns_rr_type ldns_get_rr_type_by_name(const char *name); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_get_rr_class_by_name</i>()</p>
-<dd>retrieves a class by looking up its name. .br <code>name</code>: string with the name .br Returns the cass which corresponds with the name</dl>
+<dt> <i>ldns_get_rr_class_by_name</i>()</dt>
+<dd>retrieves a class by looking up its name. .br <code>name</code>: string with the name .br Returns the cass which corresponds with the name</dd></dl>
 <dl>
-<dt> <i>ldns_get_rr_type_by_name</i>()</p>
-<dd>retrieves a rrtype by looking up its name. .br <code>name</code>: a string with the name .br Returns the type which corresponds with the name</dl>
+<dt> <i>ldns_get_rr_type_by_name</i>()</dt>
+<dd>retrieves a rrtype by looking up its name. .br <code>name</code>: a string with the name .br Returns the type which corresponds with the name</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

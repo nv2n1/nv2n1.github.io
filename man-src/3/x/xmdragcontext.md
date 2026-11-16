@@ -683,68 +683,68 @@ description: "XmDragContext — The DragContext widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNblendModel</code></p>
-<dd>Specifies which combination of DragIcons are blended to produce a drag-over visual.</p>
+<dt><code>XmNblendModel</code></dt>
+<dd>Specifies which combination of DragIcons are blended to produce a drag-over visual.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmBLEND_ALL</code></p>
-<dd>Blends all three DragIcons: the source, state and operation icons. The icons are layered from top to bottom with the operation icon on top and the source icon on the bottom. The hotspot is derived from the state icon.</p>
-<dt><code>XmBLEND_STATE_SOURCE</code></p>
-<dd>Blends the state and source icons only. The hotspot is derived from the state icon.</p>
-<dt><code>XmBLEND_JUST_SOURCE</code></p>
-<dd>Specifies that only the source icon is used, which the initiator updates as required.</p>
-<dt><code>XmBLEND_NONE</code></p>
-<dd>Specifies that no drag-over visual is generated. The client tracks the drop site status through callback routines and updates the drag-over visuals as necessary.</dl>
+</dd><dl COMPACT>
+<dt><code>XmBLEND_ALL</code></dt>
+<dd>Blends all three DragIcons: the source, state and operation icons. The icons are layered from top to bottom with the operation icon on top and the source icon on the bottom. The hotspot is derived from the state icon.</dd>
+<dt><code>XmBLEND_STATE_SOURCE</code></dt>
+<dd>Blends the state and source icons only. The hotspot is derived from the state icon.</dd>
+<dt><code>XmBLEND_JUST_SOURCE</code></dt>
+<dd>Specifies that only the source icon is used, which the initiator updates as required.</dd>
+<dt><code>XmBLEND_NONE</code></dt>
+<dd>Specifies that no drag-over visual is generated. The client tracks the drop site status through callback routines and updates the drag-over visuals as necessary.</dd></dl>
 </dl>
-<dt><code>XmNclientData</code></p>
-<dd>Specifies the client data to be passed to <code>XmNconvertProc</code> when it is invoked.</p>
-<dt><code>XmNconvertProc</code></p>
-<dd>If <code>XmNincremental</code> is True, specifies a procedure of type <code>XtConvertSelectionIncrProc</code> that converts the source data to the format(s) requested by the receiver client. The <i>widget</i> argument passed to this procedure is the DragContext widget. The selection atom passed is _MOTIF_DROP. If <code>XmNincremental</code> is False, the procedure is an <code>XtConvertSelectionProc</code>, and should ignore the <i>max_length</i>, <i>client_data</i>, and <i>request_id</i> arguments and should handle the conversion atomically. Data returned by <code>XmNconvertProc</code> must be allocated using <code>XtMalloc</code>, and will be freed automatically by the toolkit after the transfer. For additional information on selection conversion procedures, see <i>X Toolkit Intrinsics&#8212;C Language Interface</i>.</p>
-<dt><code>XmNcursorBackground</code></p>
-<dd>Specifies the background pixel value of the cursor.</p>
-<dt><code>XmNcursorForeground</code></p>
-<dd>Specifies the foreground pixel value of the cursor when the state icon is not blended. This resource defaults to the foreground color of the widget passed to the <code>XmDragStart</code> function.</p>
-<dt><code>XmNdragDropFinishCallback</code></p>
-<dd>Specifies the list of callbacks that are called when the transaction is completed. The type of the structure whose address is passed to this callback is <code>XmDragDropFinishCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DRAG_DROP_FINISH</code>.</p>
-<dt><code>XmNdragMotionCallback</code></p>
-<dd>Specifies the list of callbacks that are invoked when the pointer moves. The type of structure whose address is passed to this callback is <code>XmDragMotionCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DRAG_MOTION</code>.</p>
-<dt><code>XmNdragOperations</code></p>
-<dd>Specifies the set of valid operations associated with an initiator client for a drag transaction. This resource is a bit mask that is formed by combining one or more of the following values using a bitwise operation such as inclusive OR (|): <code>XmDROP_COPY</code>, <code>XmDROP_LINK</code>, <code>XmDROP_MOVE</code>. The value <code>XmDROP_NOOP</code> for this resource indicates that no operations are valid. For Text and TextField widgets, this resource is set to <code>XmDROP_COPY</code> | <code>XmDROP_MOVE</code>; for List widgets, it is set to <code>XmDROP_COPY</code>.</p>
-<dt><code>XmNdropFinishCallback</code></p>
-<dd>Specifies the list of callbacks that are invoked when the drop is completed. The type of the structure whose address is passed to this callback is <code>XmDropFinishCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_FINISH</code>.</p>
-<dt><code>XmNdropSiteEnterCallback</code></p>
-<dd>Specifies the list of callbacks that are invoked when the pointer enters a drop site. The type of the structure whose address is passed to this callback is <code>XmDropSiteEnterCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_SITE_ENTER</code>.</p>
-<dt><code>XmNdropSiteLeaveCallback</code></p>
-<dd>Specifies the list of callbacks that are invoked when the pointer leaves a drop site. The type of the structure whose address is passed to this callback is <code>XmDropSiteLeaveCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_SITE_LEAVE</code>.</p>
-<dt><code>XmNdropStartCallback</code></p>
-<dd>Specifies the list of callbacks that are invoked when a drop is initiated. The type of the structure whose address is passed to this callback is <code>XmDropStartCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_START</code>.</p>
-<dt><code>XmNexportTargets</code></p>
-<dd>Specifies the list of target atoms associated with this source. This resource identifies the selection targets this source can be converted to.</p>
-<dt><code>XmNincremental</code></p>
-<dd>Specifies a Boolean value that indicates whether the transfer on the initiator side uses the Xt incremental selection transfer mechanism described in <i>X Toolkit Intrinsics&#8212;C Language Interface</i>. If the value is True, the initiator uses incremental transfer; if the value is False, the initiator uses atomic transfer.</p>
-<dt><code>XmNinvalidCursorForeground</code></p>
-<dd>Specifies the foreground pixel value of the cursor when the state is invalid. This resource defaults to the value of the <code>XmNcursorForeground</code> resource.</p>
-<dt><code>XmNnoneCursorForeground</code></p>
-<dd>Specifies the foreground pixel value of the cursor when the state is none. This resource defaults to the value of the <code>XmNcursorForeground</code> resource.</p>
-<dt><code>XmNnumExportTargets</code></p>
-<dd>Specifies the number of entries in the list of export targets.</p>
-<dt><code>XmNoperationChangedCallback</code></p>
-<dd>Specifies the list of callbacks that are invoked when the drag is started and when the user requests that a different operation be applied to the drop. The type of the structure whose address is passed to this callback is <code>XmOperationChangedCallbackStruct</code>. The reason sent by the callback is <code>XmCR_OPERATION_CHANGED</code>.</p>
-<dt><code>XmNoperationCursorIcon</code></p>
-<dd>Specifies the cursor icon used to designate the type of operation performed by the drag transaction. If NULL, <code>XmScreen</code> resources provide default icons for copy, link, and move operations.</p>
-<dt><code>XmNsourceCursorIcon</code></p>
-<dd>Specifies the cursor icon used to represent the source when a dynamic visual style is used. If NULL, the <code>XmNdefaultSourceCursorIcon</code> resource of <code>XmScreen</code> provides a default cursor icon.</p>
-<dt><code>XmNsourcePixmapIcon</code></p>
-<dd>Specifies the pixmap icon used to represent the source when a preregister visual style is used. The icon is used in conjunction with the colormap of the widget passed to <code>XmDragStart</code>. If NULL, <code>XmNsourceCursorIcon</code> is used.</p>
-<dt><code>XmNstateCursorIcon</code></p>
-<dd>Specifies the cursor icon used to designate the state of a drop site. If NULL, <code>XmScreen</code> resources provide default icons for a valid, invalid, and no drop site condition.</p>
-<dt><code>XmNtopLevelEnterCallback</code></p>
-<dd>Specifies the list of callbacks that are called when the pointer enters a top-level window or root window (due to changing screens). The type of the structure whose address is passed to this callback is <code>XmTopLevelEnterCallbackStruct</code>. The reason sent by the callback is <code>XmCR_TOP_LEVEL_ENTER</code>.</p>
-<dt><code>XmNtopLevelLeaveCallback</code></p>
-<dd>Specifies the list of callbacks that are called when the pointer leaves a top level window or the root window (due to changing screens). The type of the structure whose address is passed to this callback is <code>XmTopLevelLeaveCallbackStruct</code>. The reason sent by the callback is <code>XmCR_TOP_LEVEL_LEAVE</code>.</p>
-<dt><code>XmNvalidCursorForeground</code></p>
-<dd>Specifies the foreground pixel value of the cursor designated as a valid cursor icon.</dl>
+<dt><code>XmNclientData</code></dt>
+<dd>Specifies the client data to be passed to <code>XmNconvertProc</code> when it is invoked.</dd>
+<dt><code>XmNconvertProc</code></dt>
+<dd>If <code>XmNincremental</code> is True, specifies a procedure of type <code>XtConvertSelectionIncrProc</code> that converts the source data to the format(s) requested by the receiver client. The <i>widget</i> argument passed to this procedure is the DragContext widget. The selection atom passed is _MOTIF_DROP. If <code>XmNincremental</code> is False, the procedure is an <code>XtConvertSelectionProc</code>, and should ignore the <i>max_length</i>, <i>client_data</i>, and <i>request_id</i> arguments and should handle the conversion atomically. Data returned by <code>XmNconvertProc</code> must be allocated using <code>XtMalloc</code>, and will be freed automatically by the toolkit after the transfer. For additional information on selection conversion procedures, see <i>X Toolkit Intrinsics&#8212;C Language Interface</i>.</dd>
+<dt><code>XmNcursorBackground</code></dt>
+<dd>Specifies the background pixel value of the cursor.</dd>
+<dt><code>XmNcursorForeground</code></dt>
+<dd>Specifies the foreground pixel value of the cursor when the state icon is not blended. This resource defaults to the foreground color of the widget passed to the <code>XmDragStart</code> function.</dd>
+<dt><code>XmNdragDropFinishCallback</code></dt>
+<dd>Specifies the list of callbacks that are called when the transaction is completed. The type of the structure whose address is passed to this callback is <code>XmDragDropFinishCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DRAG_DROP_FINISH</code>.</dd>
+<dt><code>XmNdragMotionCallback</code></dt>
+<dd>Specifies the list of callbacks that are invoked when the pointer moves. The type of structure whose address is passed to this callback is <code>XmDragMotionCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DRAG_MOTION</code>.</dd>
+<dt><code>XmNdragOperations</code></dt>
+<dd>Specifies the set of valid operations associated with an initiator client for a drag transaction. This resource is a bit mask that is formed by combining one or more of the following values using a bitwise operation such as inclusive OR (|): <code>XmDROP_COPY</code>, <code>XmDROP_LINK</code>, <code>XmDROP_MOVE</code>. The value <code>XmDROP_NOOP</code> for this resource indicates that no operations are valid. For Text and TextField widgets, this resource is set to <code>XmDROP_COPY</code> | <code>XmDROP_MOVE</code>; for List widgets, it is set to <code>XmDROP_COPY</code>.</dd>
+<dt><code>XmNdropFinishCallback</code></dt>
+<dd>Specifies the list of callbacks that are invoked when the drop is completed. The type of the structure whose address is passed to this callback is <code>XmDropFinishCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_FINISH</code>.</dd>
+<dt><code>XmNdropSiteEnterCallback</code></dt>
+<dd>Specifies the list of callbacks that are invoked when the pointer enters a drop site. The type of the structure whose address is passed to this callback is <code>XmDropSiteEnterCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_SITE_ENTER</code>.</dd>
+<dt><code>XmNdropSiteLeaveCallback</code></dt>
+<dd>Specifies the list of callbacks that are invoked when the pointer leaves a drop site. The type of the structure whose address is passed to this callback is <code>XmDropSiteLeaveCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_SITE_LEAVE</code>.</dd>
+<dt><code>XmNdropStartCallback</code></dt>
+<dd>Specifies the list of callbacks that are invoked when a drop is initiated. The type of the structure whose address is passed to this callback is <code>XmDropStartCallbackStruct</code>. The reason sent by the callback is <code>XmCR_DROP_START</code>.</dd>
+<dt><code>XmNexportTargets</code></dt>
+<dd>Specifies the list of target atoms associated with this source. This resource identifies the selection targets this source can be converted to.</dd>
+<dt><code>XmNincremental</code></dt>
+<dd>Specifies a Boolean value that indicates whether the transfer on the initiator side uses the Xt incremental selection transfer mechanism described in <i>X Toolkit Intrinsics&#8212;C Language Interface</i>. If the value is True, the initiator uses incremental transfer; if the value is False, the initiator uses atomic transfer.</dd>
+<dt><code>XmNinvalidCursorForeground</code></dt>
+<dd>Specifies the foreground pixel value of the cursor when the state is invalid. This resource defaults to the value of the <code>XmNcursorForeground</code> resource.</dd>
+<dt><code>XmNnoneCursorForeground</code></dt>
+<dd>Specifies the foreground pixel value of the cursor when the state is none. This resource defaults to the value of the <code>XmNcursorForeground</code> resource.</dd>
+<dt><code>XmNnumExportTargets</code></dt>
+<dd>Specifies the number of entries in the list of export targets.</dd>
+<dt><code>XmNoperationChangedCallback</code></dt>
+<dd>Specifies the list of callbacks that are invoked when the drag is started and when the user requests that a different operation be applied to the drop. The type of the structure whose address is passed to this callback is <code>XmOperationChangedCallbackStruct</code>. The reason sent by the callback is <code>XmCR_OPERATION_CHANGED</code>.</dd>
+<dt><code>XmNoperationCursorIcon</code></dt>
+<dd>Specifies the cursor icon used to designate the type of operation performed by the drag transaction. If NULL, <code>XmScreen</code> resources provide default icons for copy, link, and move operations.</dd>
+<dt><code>XmNsourceCursorIcon</code></dt>
+<dd>Specifies the cursor icon used to represent the source when a dynamic visual style is used. If NULL, the <code>XmNdefaultSourceCursorIcon</code> resource of <code>XmScreen</code> provides a default cursor icon.</dd>
+<dt><code>XmNsourcePixmapIcon</code></dt>
+<dd>Specifies the pixmap icon used to represent the source when a preregister visual style is used. The icon is used in conjunction with the colormap of the widget passed to <code>XmDragStart</code>. If NULL, <code>XmNsourceCursorIcon</code> is used.</dd>
+<dt><code>XmNstateCursorIcon</code></dt>
+<dd>Specifies the cursor icon used to designate the state of a drop site. If NULL, <code>XmScreen</code> resources provide default icons for a valid, invalid, and no drop site condition.</dd>
+<dt><code>XmNtopLevelEnterCallback</code></dt>
+<dd>Specifies the list of callbacks that are called when the pointer enters a top-level window or root window (due to changing screens). The type of the structure whose address is passed to this callback is <code>XmTopLevelEnterCallbackStruct</code>. The reason sent by the callback is <code>XmCR_TOP_LEVEL_ENTER</code>.</dd>
+<dt><code>XmNtopLevelLeaveCallback</code></dt>
+<dd>Specifies the list of callbacks that are called when the pointer leaves a top level window or the root window (due to changing screens). The type of the structure whose address is passed to this callback is <code>XmTopLevelLeaveCallbackStruct</code>. The reason sent by the callback is <code>XmCR_TOP_LEVEL_LEAVE</code>.</dd>
+<dt><code>XmNvalidCursorForeground</code></dt>
+<dd>Specifies the foreground pixel value of the cursor designated as a valid cursor icon.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>DragContext inherits behavior and resources from the superclass described in the following table. For a complete description of each resource, refer to the <code>Core</code> reference page. </p>
 <table BORDER>
@@ -1267,12 +1267,12 @@ description: "XmDragContext — The DragContext widget class"
  Time <i>timeStamp</i>;
 }XmDragDropFinishCallbackStruct, *XmDragDropFinishCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the time at which either the drag or the drop was completed</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the time at which either the drag or the drop was completed</dd></dl>
 <p> A pointer to the following structure is passed to callbacks for <code>XmNdragMotionCallback</code>: </p>
 <pre>typedef struct
 {
@@ -1286,37 +1286,37 @@ description: "XmDragContext — The DragContext widget class"
  Position <i>y</i>;
 }XmDragMotionCallbackStruct, *XmDragMotionCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the timestamp of the logical event.</p>
-<dt><i>operation</i></p>
-<dd>Identifies an operation.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code> and the pointer is within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code> and the pointer is not within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><i>operations</i></p>
-<dd>Indicates the set of operations supported for the source data.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><code>dropSiteStatus</code></p>
-<dd>Indicates whether or not a drop site is valid.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code>, it initializes <code>dropSiteStatus</code> as follows: the toolkit initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code> if the pointer is over an inactive drop site or is not over a drop site. The toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if all the following conditions are met:</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the timestamp of the logical event.</dd>
+<dt><i>operation</i></dt>
+<dd>Identifies an operation.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code> and the pointer is within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code> and the pointer is not within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><i>operations</i></dt>
+<dd>Indicates the set of operations supported for the source data.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><code>dropSiteStatus</code></dt>
+<dd>Indicates whether or not a drop site is valid.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code>, it initializes <code>dropSiteStatus</code> as follows: the toolkit initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code> if the pointer is over an inactive drop site or is not over a drop site. The toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if all the following conditions are met:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The pointer is over an active drop site.</p>
-<dt> &bull;</p>
-<dd>The DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible.</p>
-<dt> &bull;</p>
-<dd>The initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The pointer is over an active drop site.</dd>
+<dt> &bull;</dt>
+<dd>The DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible.</dd>
+<dt> &bull;</dt>
+<dd>The initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>.</dd></dl>
 </dl>
-<dd>Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</dl>
+<dd>Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</dd></dl>
 <p> A pointer to the following structure is passed for the <code>XmNdropFinishCallback</code> callback: </p>
 <pre>typedef struct
 {
@@ -1330,36 +1330,36 @@ description: "XmDragContext — The DragContext widget class"
  unsigned char <i>completionStatus</i>;
 }XmDropFinishCallbackStruct, *XmDropFinishCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the time at which the drop was completed.</p>
-<dt><i>operation</i></p>
-<dd>Identifies an operation.</p>
-<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</p>
-<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If it finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><i>operations</i></p>
-<dd>Indicates the set of operations supported for the source data.</p>
-<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>If the pointer is not over an active drop site when the drop begins and if the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</p>
-<dd>If the pointer is not over an active drop site when the drop begins and if the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><code>dropSiteStatus</code></p>
-<dd>Indicates whether or not a drop site is valid.</p>
-<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</p>
-<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code>.</p>
-<dt><code>dropAction</code></p>
-<dd>Identifies the drop action. The values are <code>XmDROP</code>, <code>XmDROP_CANCEL</code>, <code>XmDROP_HELP</code>, and <code>XmDROP_INTERRUPT</code>. The <code>XmDROP_INTERRUPT</code> value is currently unsupported; if specified, it will be interpreted as an <code>XmDROP_CANCEL</code>.</p>
-<dt><code>completionStatus</code></p>
-<dd>An IN/OUT member that indicates the status of the drop action. After the last callback procedure has returned, the final value of this member determines what visual transition effects will be applied. There are two values:</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the time at which the drop was completed.</dd>
+<dt><i>operation</i></dt>
+<dd>Identifies an operation.</dd>
+<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If it finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><i>operations</i></dt>
+<dd>Indicates the set of operations supported for the source data.</dd>
+<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins and if the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins and if the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><code>dropSiteStatus</code></dt>
+<dd>Indicates whether or not a drop site is valid.</dd>
+<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code>.</dd>
+<dt><code>dropAction</code></dt>
+<dd>Identifies the drop action. The values are <code>XmDROP</code>, <code>XmDROP_CANCEL</code>, <code>XmDROP_HELP</code>, and <code>XmDROP_INTERRUPT</code>. The <code>XmDROP_INTERRUPT</code> value is currently unsupported; if specified, it will be interpreted as an <code>XmDROP_CANCEL</code>.</dd>
+<dt><code>completionStatus</code></dt>
+<dd>An IN/OUT member that indicates the status of the drop action. After the last callback procedure has returned, the final value of this member determines what visual transition effects will be applied. There are two values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDROP_SUCCESS</code></p>
-<dd>The drop was successful.</p>
-<dt><code>XmDROP_FAILURE</code></p>
-<dd>The drop was unsuccessful.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDROP_SUCCESS</code></dt>
+<dd>The drop was successful.</dd>
+<dt><code>XmDROP_FAILURE</code></dt>
+<dd>The drop was unsuccessful.</dd></dl>
 </dl>
 </dl>
 <p> A pointer to the following structure is passed to callbacks for <code>XmNdropSiteEnterCallback</code>: </p>
@@ -1375,29 +1375,29 @@ description: "XmDragContext — The DragContext widget class"
  Position <i>y</i>;
 }XmDropSiteEnterCallbackStruct, *XmDropSiteEnterCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the time the crossing event occurred.</p>
-<dt><i>operation</i></p>
-<dd>Identifies an operation.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code>, it initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><i>operations</i></p>
-<dd>Indicates the set of operations supported for the source data.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><code>dropSiteStatus</code></p>
-<dd>Indicates whether or not a drop site is valid.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</p>
-<dd>If the toolkit has not called <code>XmNdragProc</code>, it initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if the DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible and if the initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>. Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</p>
-<dt><i>x</i></p>
-<dd>Indicates the x-coordinate of the pointer in root window coordinates.</p>
-<dt><i>y</i></p>
-<dd>Indicates the y-coordinate of the pointer in root window coordinates.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the time the crossing event occurred.</dd>
+<dt><i>operation</i></dt>
+<dd>Identifies an operation.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code>, it initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><i>operations</i></dt>
+<dd>Indicates the set of operations supported for the source data.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code> and the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><code>dropSiteStatus</code></dt>
+<dd>Indicates whether or not a drop site is valid.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</dd>
+<dd>If the toolkit has not called <code>XmNdragProc</code>, it initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if the DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible and if the initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>. Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</dd>
+<dt><i>x</i></dt>
+<dd>Indicates the x-coordinate of the pointer in root window coordinates.</dd>
+<dt><i>y</i></dt>
+<dd>Indicates the y-coordinate of the pointer in root window coordinates.</dd></dl>
 <p> A pointer to the following structure is passed to callbacks for <code>XmNdropSiteLeaveCallback</code>: </p>
 <pre>typedef struct
 {
@@ -1406,12 +1406,12 @@ description: "XmDragContext — The DragContext widget class"
  Time <i>timeStamp</i>;
 }XmDropSiteLeaveCallbackStruct, *XmDropSiteLeaveCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the timestamp of the logical event</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the timestamp of the logical event</dd></dl>
 <p> A pointer to the following structure is passed for the <code>XmNdropStartCallback</code> callback: </p>
 <pre>typedef struct
 {
@@ -1426,32 +1426,32 @@ description: "XmDragContext — The DragContext widget class"
  Position <i>y</i>;
 }XmDropStartCallbackStruct, *XmDropStartCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the time at which the drag was completed.</p>
-<dt><i>operation</i></p>
-<dd>Identifies an operation.</p>
-<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</p>
-<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If it finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><i>operations</i></p>
-<dd>Indicates the set of operations supported for the source data.</p>
-<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>If the pointer is not over an active drop site when the drop begins and if the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</p>
-<dd>If the pointer is not over an active drop site when the drop begins and if the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><code>dropSiteStatus</code></p>
-<dd>Indicates whether or not a drop site is valid.</p>
-<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</p>
-<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code>.</p>
-<dd>This field is invalid if the <code>dropAction</code> field is set to <code>XmDROP_CANCEL</code>.</p>
-<dt><code>dropAction</code></p>
-<dd>An IN/OUT member that identifies the drop action. The values are <code>XmDROP</code>, <code>XmDROP_CANCEL</code>, <code>XmDROP_HELP</code>, and <code>XmDROP_INTERRUPT</code>. The value of <code>dropAction</code> can be modified to change the action actually initiated. The value <code>XmDROP_INTERRUPT</code> is currently unsupported; if specified, it will be interpreted as an <code>XmDROP_CANCEL</code>.</p>
-<dt><i>x</i></p>
-<dd>Indicates the x-coordinate of the pointer in root window coordinates.</p>
-<dt><i>y</i></p>
-<dd>Indicates the y-coordinate of the pointer in root window coordinates.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the time at which the drag was completed.</dd>
+<dt><i>operation</i></dt>
+<dd>Identifies an operation.</dd>
+<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If it finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><i>operations</i></dt>
+<dd>Indicates the set of operations supported for the source data.</dd>
+<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins and if the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins and if the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><code>dropSiteStatus</code></dt>
+<dd>Indicates whether or not a drop site is valid.</dd>
+<dd>If the pointer is over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDropProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdropProc</code> returns.</dd>
+<dd>If the pointer is not over an active drop site when the drop begins, the toolkit initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code>.</dd>
+<dd>This field is invalid if the <code>dropAction</code> field is set to <code>XmDROP_CANCEL</code>.</dd>
+<dt><code>dropAction</code></dt>
+<dd>An IN/OUT member that identifies the drop action. The values are <code>XmDROP</code>, <code>XmDROP_CANCEL</code>, <code>XmDROP_HELP</code>, and <code>XmDROP_INTERRUPT</code>. The value of <code>dropAction</code> can be modified to change the action actually initiated. The value <code>XmDROP_INTERRUPT</code> is currently unsupported; if specified, it will be interpreted as an <code>XmDROP_CANCEL</code>.</dd>
+<dt><i>x</i></dt>
+<dd>Indicates the x-coordinate of the pointer in root window coordinates.</dd>
+<dt><i>y</i></dt>
+<dd>Indicates the y-coordinate of the pointer in root window coordinates.</dd></dl>
 <p> A pointer to the following structure is passed to the <code>XmNoperationChangedCallback</code> callback: </p>
 <pre>typedef struct
 {
@@ -1463,37 +1463,37 @@ description: "XmDragContext — The DragContext widget class"
  unsigned char <i>dropSiteStatus</i>;
 }XmOperationChangedCallbackStruct, *XmOperationChangedCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the time at which the crossing event occurred.</p>
-<dt><i>operation</i></p>
-<dd>Identifies an operation.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the pointer is within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the pointer is not within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><i>operations</i></p>
-<dd>Indicates the set of operations supported for the source data.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dt><code>dropSiteStatus</code></p>
-<dd>Indicates whether or not a drop site is valid.</p>
-<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</p>
-<dd>If the toolkit has not called an <code>XmNdragProc</code> it initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code> if the pointer is over an inactive drop site or is not over a drop site. The toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if all the following conditions are met:</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the time at which the crossing event occurred.</dd>
+<dt><i>operation</i></dt>
+<dd>Identifies an operation.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operation</i> to the value of the <i>operation</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the pointer is within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the pointer is not within an active drop site, the toolkit initializes <i>operation</i> by selecting an operation from the initial value of the <i>operations</i> member. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><i>operations</i></dt>
+<dd>Indicates the set of operations supported for the source data.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <i>operations</i> to the bitwise AND of the DropSite&#8217;s <code>XmNdropOperations</code> and the value of the <i>operations</i> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code>, and the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dt><code>dropSiteStatus</code></dt>
+<dd>Indicates whether or not a drop site is valid.</dd>
+<dd>If the toolkit has just called a DropSite&#8217;s <code>XmNdragProc</code>, the toolkit initializes <code>dropSiteStatus</code> to the value of the <code>dropSiteStatus</code> member of the <code>XmDragProcCallbackStruct</code> at the time the DropSite&#8217;s <code>XmNdragProc</code> returns.</dd>
+<dd>If the toolkit has not called an <code>XmNdragProc</code> it initializes <code>dropSiteStatus</code> to <code>XmNO_DROP_SITE</code> if the pointer is over an inactive drop site or is not over a drop site. The toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if all the following conditions are met:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The pointer is over an active drop site</p>
-<dt> &bull;</p>
-<dd>The DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible</p>
-<dt> &bull;</p>
-<dd>The initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The pointer is over an active drop site</dd>
+<dt> &bull;</dt>
+<dd>The DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible</dd>
+<dt> &bull;</dt>
+<dd>The initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code></dd></dl>
 </dl>
-<dd>Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</dl>
+<dd>Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</dd></dl>
 <p> A pointer to the following structure is passed to callbacks for <code>XmNtopLevelEnterCallback</code>: </p>
 <pre>typedef struct
 {
@@ -1507,22 +1507,22 @@ description: "XmDragContext — The DragContext widget class"
  unsigned char <i>dragProtocolStyle</i>;
 }XmTopLevelEnterCallbackStruct, *XmTopLevelEnterCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the timestamp of the logical event.</p>
-<dt><i>screen</i></p>
-<dd>Specifies the screen associated with the top-level window or root window being entered.</p>
-<dt><i>window</i></p>
-<dd>Specifies the ID of the top-level window or root window being entered.</p>
-<dt><i>x</i></p>
-<dd>Indicates the x-coordinate of the pointer in root window coordinates.</p>
-<dt><i>y</i></p>
-<dd>Indicates the y-coordinate of the pointer in root window coordinates.</p>
-<dt><code>dragProtocolStyle</code></p>
-<dd>Specifies the protocol style adopted by the initiator. The values are <code>XmDRAG_DROP_ONLY</code>, <code>XmDRAG_DYNAMIC</code>, <code>XmDRAG_NONE</code>, and <code>XmDRAG_PREREGISTER</code>.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the timestamp of the logical event.</dd>
+<dt><i>screen</i></dt>
+<dd>Specifies the screen associated with the top-level window or root window being entered.</dd>
+<dt><i>window</i></dt>
+<dd>Specifies the ID of the top-level window or root window being entered.</dd>
+<dt><i>x</i></dt>
+<dd>Indicates the x-coordinate of the pointer in root window coordinates.</dd>
+<dt><i>y</i></dt>
+<dd>Indicates the y-coordinate of the pointer in root window coordinates.</dd>
+<dt><code>dragProtocolStyle</code></dt>
+<dd>Specifies the protocol style adopted by the initiator. The values are <code>XmDRAG_DROP_ONLY</code>, <code>XmDRAG_DYNAMIC</code>, <code>XmDRAG_NONE</code>, and <code>XmDRAG_PREREGISTER</code>.</dd></dl>
 <p> A pointer to the following structure is passed to callbacks for <code>XmNtopLevelLeaveCallback</code>: </p>
 <pre>typedef struct
 {
@@ -1533,72 +1533,72 @@ description: "XmDragContext — The DragContext widget class"
  Window <i>window</i>;
 }XmTopLevelLeaveCallbackStruct, *XmTopLevelLeaveCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the timestamp of the logical event</p>
-<dt><i>screen</i></p>
-<dd>Specifies a screen associated with the top-level window or root window being left</p>
-<dt><i>window</i></p>
-<dd>Specifies the ID of the top-level window or root window being left</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the timestamp of the logical event</dd>
+<dt><i>screen</i></dt>
+<dd>Specifies a screen associated with the top-level window or root window being left</dd>
+<dt><i>window</i></dt>
+<dd>Specifies the ID of the top-level window or root window being left</dd></dl>
 <h3>Translations</h3>
 <p>The XmDragContext translations are described in the following list. The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>Button1&lt;Enter&gt;</code>:</p>
-<dd>DragMotion()</p>
-<dt><code>Button1&lt;Leave&gt;</code>:</p>
-<dd>DragMotion()</p>
-<dt><code>Button1&lt;Motion&gt;</code>:</p>
-<dd>DragMotion()</p>
-<dt><code>Button2&lt;Enter&gt;</code>:</p>
-<dd>DragMotion()</p>
-<dt><code>Button2&lt;Leave&gt;</code>:</p>
-<dd>DragMotion()</p>
-<dt><code>Button2&lt;Motion&gt;</code>:</p>
-<dd>DragMotion()</p>
-<dt><code>&lt;Btn2Up&gt;</code>:</p>
-<dd>FinishDrag()</p>
-<dt><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>FinishDrag()</p>
-<dt><code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>FinishDrag()</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>FinishDrag()</p>
-<dt><code>&lt;BtnDown&gt;</code>:</p>
-<dd>IgnoreButtons()</p>
-<dt><code>&lt;BtnUp&gt;</code>:</p>
-<dd>IgnoreButtons()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>CancelDrag()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>HelpDrag()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>DragKey(<code>Up</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>DragKey(<code>Down</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>DragKey(<code>Left</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>DragKey(<code>Right</code>)</p>
-<dt><code>:&lt;KeyUp&gt;</code>:</p>
-<dd>DragKey(<code>Update</code>)</p>
-<dt><code>:&lt;KeyDown&gt;</code>:</p>
-<dd>DragKey(<code>Update</code>)</dl>
+<dt><code>Button1&lt;Enter&gt;</code>:</dt>
+<dd>DragMotion()</dd>
+<dt><code>Button1&lt;Leave&gt;</code>:</dt>
+<dd>DragMotion()</dd>
+<dt><code>Button1&lt;Motion&gt;</code>:</dt>
+<dd>DragMotion()</dd>
+<dt><code>Button2&lt;Enter&gt;</code>:</dt>
+<dd>DragMotion()</dd>
+<dt><code>Button2&lt;Leave&gt;</code>:</dt>
+<dd>DragMotion()</dd>
+<dt><code>Button2&lt;Motion&gt;</code>:</dt>
+<dd>DragMotion()</dd>
+<dt><code>&lt;Btn2Up&gt;</code>:</dt>
+<dd>FinishDrag()</dd>
+<dt><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>FinishDrag()</dd>
+<dt><code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>FinishDrag()</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>FinishDrag()</dd>
+<dt><code>&lt;BtnDown&gt;</code>:</dt>
+<dd>IgnoreButtons()</dd>
+<dt><code>&lt;BtnUp&gt;</code>:</dt>
+<dd>IgnoreButtons()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>CancelDrag()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>HelpDrag()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>DragKey(<code>Up</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>DragKey(<code>Down</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>DragKey(<code>Left</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>DragKey(<code>Right</code>)</dd>
+<dt><code>:&lt;KeyUp&gt;</code>:</dt>
+<dd>DragKey(<code>Update</code>)</dd>
+<dt><code>:&lt;KeyDown&gt;</code>:</dt>
+<dd>DragKey(<code>Update</code>)</dd></dl>
 <h3>Action Routines</h3>
 <p>The XmDragContext action routines are</p>
 <dl COMPACT>
-<dt>CancelDrag():</p>
-<dd>Cancels the drag operation and frees the associated DragContext.</p>
-<dt>DragKey(<code>String</code><code>)</code></p>
-<dd>If the value of <code>String</code> is <code>Left</code>, <code>Right</code>, <code>Up</code>, or <code>Down</code>, this action moves the dragged object in the corresponding location. Any other values of <code>String</code> are ignored.</p>
-<dt>DragMotion():</p>
-<dd>Drags the selected data as the pointer is moved.</p>
-<dt>FinishDrag():</p>
-<dd>Finishes the drag operation and starts the drop operation.</p>
-<dt>HelpDrag():</p>
-<dd>Initiates a conditional drop that enables the receiver to provide help information to the user. The user can cancel or continue the drop operation in response to this information.</dl>
+<dt>CancelDrag():</dt>
+<dd>Cancels the drag operation and frees the associated DragContext.</dd>
+<dt>DragKey(<code>String</code><code>)</code></dt>
+<dd>If the value of <code>String</code> is <code>Left</code>, <code>Right</code>, <code>Up</code>, or <code>Down</code>, this action moves the dragged object in the corresponding location. Any other values of <code>String</code> are ignored.</dd>
+<dt>DragMotion():</dt>
+<dd>Drags the selected data as the pointer is moved.</dd>
+<dt>FinishDrag():</dt>
+<dd>Finishes the drag operation and starts the drop operation.</dd>
+<dt>HelpDrag():</dt>
+<dd>Initiates a conditional drop that enables the receiver to provide help information to the user. The user can cancel or continue the drop operation in response to this information.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related Information</h2>

@@ -24,12 +24,12 @@ description: "npm-coding-style – npm’s \"funny\" coding style"
 <dd>
 <pre>function ()
 {</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Good:</p>
 <dl>
 <dd>
 <pre>function () {</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> If a block needs to wrap to the next line, use a curly brace. Don&#8217;t use it if it doesn&#8217;t. </p>
 <p> Bad:</p>
 <dl>
@@ -37,7 +37,7 @@ description: "npm-coding-style – npm’s \"funny\" coding style"
 <pre>if (foo) { bar() }
 while (foo)
  bar()</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Good:</p>
 <dl>
 <dd>
@@ -45,19 +45,19 @@ while (foo)
 while (foo) {
  bar()
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Semicolons</h2>
 <p>Don&#8217;t use them except in four situations:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>for (;;)</code> loops. They&#8217;re actually required.</p>
-<dt>&bull;</p>
-<dd>null loops like: <code>while (something) ;</code> (But you&#8217;d better have a good reason for doing that.)</p>
-<dt>&bull;</p>
-<dd><code>case &#8216;foo&#8217;: doSomething(); break</code></p>
-<dt>&bull;</p>
-<dd>In front of a leading <code>(</code> or <code>[</code> at the start of the line. This prevents the expression from being interpreted as a function call or property access, respectively.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><code>for (;;)</code> loops. They&#8217;re actually required.</dd>
+<dt>&bull;</dt>
+<dd>null loops like: <code>while (something) ;</code> (But you&#8217;d better have a good reason for doing that.)</dd>
+<dt>&bull;</dt>
+<dd><code>case &#8216;foo&#8217;: doSomething(); break</code></dd>
+<dt>&bull;</dt>
+<dd>In front of a leading <code>(</code> or <code>[</code> at the start of the line. This prevents the expression from being interpreted as a function call or property access, respectively.</dd>
+<dd></dd></dl>
 <p> Some examples of good semicolon usage:</p>
 <dl>
 <dd>
@@ -71,7 +71,7 @@ for (var i = 0; i &lt; 10; i ++) {
  }
  end()
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Note that starting lines with <code>&#8211;</code> and <code>+</code> also should be prefixed with a semicolon, but this is much less common.</p>
 <h2>Comma First</h2>
 <p>If there is a list of things separated by commas, and it wraps across multiple lines, put the comma at the start of the next line, directly below the token that starts the list. Put the final token in the list on a line by itself. For example:</p>
@@ -88,20 +88,20 @@ for (var i = 0; i &lt; 10; i ++) {
  , b = 'abc'
  , etc
  , somethingElse</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Quotes</h2>
 <p>Use single quotes for strings except to avoid escaping. </p>
 <p> Bad:</p>
 <dl>
 <dd>
 <pre>var notOk = &quot;Just double quotes&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Good:</p>
 <dl>
 <dd>
 <pre>var ok = 'String contains &quot;double&quot; quotes'
 var alsoOk = &quot;String contains 'single' quotes or apostrophe&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Whitespace</h2>
 <p>Put a single space in front of ( for anything other than a function call. Also use a single space wherever it makes things more readable. </p>
 <p> Don&#8217;t leave trailing whitespace at the end of lines. Don&#8217;t indent empty lines. Don&#8217;t use more spaces than are helpful.</p>
@@ -131,10 +131,11 @@ var alsoOk = &quot;String contains 'single' quotes or apostrophe&quot;</pre>
 <p> Boolean objects are verboten.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help 7 developers</p>
-<dt>&bull;</p>
-<dd>npm help 7 faq</p>
-<dt>&bull;</p>
-<dd>npm help npm</p>
+<dt>&bull;</dt>
+<dd>npm help 7 developers</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 faq</dd>
+<dt>&bull;</dt>
+<dd>npm help npm</dd>
 <dd>
+</dd></dl>

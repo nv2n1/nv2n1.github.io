@@ -15,15 +15,15 @@ bio_clone_bioset - clone a bio
 <h2>Arguments</h2>
 
 <i>bio_src</i>
-<dl><dd><dd>bio to clone</dl>
+<dl><dd></dd><dd>bio to clone</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>allocation priority</dl>
+<dl><dd>allocation priority</dd></dl>
  
 
  <i>bs</i>
-<dl><dd>bio_set to allocate from</dl>
+<dl><dd>bio_set to allocate from</dd></dl>
 
 <h2>Description</h2>
 

@@ -10,7 +10,6 @@ description: "umad_set_grh_net – set GRH fields within umad buffer using netwo
 <p>umad_set_grh_net &#8211; set GRH fields within umad buffer using network ordering</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_set_grh_net(void *umad, void *mad_addr);</code></pre>
 <h2>Description</h2>
 <p><code>umad_set_grh_net()</code> sets the GRH fields (grh_present, gid, hop_limit, traffic_class, flow_label) within the specified <i>umad</i> buffer based on the <i>mad_addr</i> supplied. The provided <i>mad_addr</i> fields are expected to be in network order. If the <i>mad_addr</i> pointer supplied is NULL, no GRH is set. The argument <i>mad_addr</i> is a pointer to an <i>ib_mad_addr_t</i> struct, as specified in &lt;infiniband/umad.h&gt;. The argument <i>umad</i> is a pointer to an <i>ib_user_mad_t</i> struct, as specified in <i>&lt;infiniband/umad.h&gt;.</i> </p>
@@ -44,5 +43,5 @@ uint8_t data[0];
 <p><code><a href="/docs/linux/man/3-umad_set_grh/">umad_set_grh</a></code>(3)</p>
 <h2>Author</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

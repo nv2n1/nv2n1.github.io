@@ -11,10 +11,8 @@ std::put_money - std::put_money
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iomanip&gt;
-
     template &lt;class MoneyT&gt;
     (since C++ 11)
-
     /*unspecified*/ put_money(const MoneyT &amp;mon, bool intl = false);</code></pre> 
 When used in an expression out &lt;&lt; put_money(mon, intl), converts the monetary value mon to its character representation as specified by the std::money_put facet of the locale currently imbued in out. 
 The insertion operation in out &lt;&lt; put_money(mon, intl) behaves as a FormattedOutputFunction. 
@@ -45,10 +43,8 @@ if (end.failed())
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
 int main()
-
 {
     long double mon = 123.45; // or std::string mon = &quot;123.45&quot;;
     std::cout.imbue(std::locale(&quot;en_US.utf8&quot;));

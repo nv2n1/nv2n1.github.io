@@ -84,22 +84,22 @@ description: "lwsmd_selinux – Security Enhanced Linux Policy for the lwsmd pro
 <p> <code>lwsmd_exec_t</code> </p>
 <p> &#8211; Set files with the lwsmd_exec_t type, if you want to transition an executable to the lwsmd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/lwsmd, /opt/likewise/sbin/lwsmd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/lwsmd, /opt/likewise/sbin/lwsmd </dd>
 </dl>
 <p> <code>lwsmd_var_lib_t</code> </p>
 <p> &#8211; Set files with the lwsmd_var_lib_t type, if you want to store the lwsmd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/.lwsmd-lock, /var/lib/likewise-open/.lwsmd-lock </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/.lwsmd-lock, /var/lib/likewise-open/.lwsmd-lock </dd>
 </dl>
 <p> <code>lwsmd_var_run_t</code> </p>
 <p> &#8211; Set files with the lwsmd_var_run_t type, if you want to store the lwsmd files under the /run or /var/run directory. </p>
 <p> <code>lwsmd_var_socket_t</code> </p>
 <p> &#8211; Set files with the lwsmd_var_socket_t type, if you want to treat the files as lwsmd var socket data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/.lwsm, /var/lib/likewise-open/.lwsm </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/.lwsm, /var/lib/likewise-open/.lwsm </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

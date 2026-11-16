@@ -11,7 +11,6 @@ description: "sc::AssignedKeyVal –"
 <p> This class allows keyval associations to be set up by the program, rather than determined by an external file.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::KeyVal</code>.</p>
 <h3>Public Member Functions</h3>
@@ -19,37 +18,13 @@ description: "sc::AssignedKeyVal –"
  <i>Erase all of the stored assignments. </i> <code>Assignments.</code><br />
  Each of this routines assigns key to val. </p>
 <pre><code>void assign (const char *key, const Ref&lt; KeyValValue &gt; &amp;val)
-
-
-
 void assign (const char *key, double val)
-
-
-
 void assignboolean (const char *key, int val)
-
-
-
 void assign (const char *key, float val)
-
-
-
 void assign (const char *key, char val)
-
-
-
 void assign (const char *key, int val)
-
-
-
 void assign (const char *key, const char *val)
-
-
-
 void assign (const char *key, const Ref&lt; DescribedClass &gt; &amp;val)
-
-
-
 Protected Member Functions</code></pre>
 <p> int <code>key_exists</code> (const char *)<br />
  <i>Ultimately called by exists. </i><br />

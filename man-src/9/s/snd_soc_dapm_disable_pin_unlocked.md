@@ -14,10 +14,10 @@ description: "snd_soc_dapm_disable_pin_unlocked – disable pin."
 <p><i>dapm</i></p>
 <dl>
 <dd>
-<dd>DAPM context</dl>
+</dd><dd>DAPM context</dd></dl>
 <p> <i>pin</i></p>
 <dl>
-<dd>pin name</dl>
+<dd>pin name</dd></dl>
 <h2>Description</h2>
 <p>Disables input/output pin and its parents or children widgets. </p>
 <p> Requires external locking.</p>

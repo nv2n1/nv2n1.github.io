@@ -21,6 +21,6 @@ description: "X Window Reparent Functions – Functions that retrieve or changes
 <dd><i>window</i> The window to reparent.<br />
  <i>new_parent</i> The new parent window.<br />
  <i>x</i> X position within new parent window.<br />
- <i>y</i> Y position within new parent window.</dl>
+ <i>y</i> Y position within new parent window.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -20,14 +20,14 @@ description: "getlist – Get a list from an NNTP server"
 <p> If the <i>list</i> parameter is <tt>&quot;active&quot;</tt>, a third parameter, <i>types</i>, may also be used to restrict the list. If given, only entries corresponding to newsgroups with a newsgroup mode found in <i>types</i> will be printed. For example, a <i>types</i> value of <tt>&quot;y&quot;</tt> would only show unmoderated groups, and a <i>types</i> value of <tt>&quot;ym&quot;</tt> would show all unmoderated and moderated groups but not aliased groups or groups that disallow postings.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code></p>
-<dd> Try to authenticate using the username and password information in <i><a href="/docs/linux/man/5-passwd-nntp/">passwd.nntp</a></i>(5) before issuing the <font SIZE="-1">LIST</font> command.</p>
-<dt><code>-h</code> <i>host</i></p>
-<dd> Connect to the server <i>host</i> rather than to the value of <i>server</i> in <i>inn.conf</i> or the value of the <font SIZE="-1">NNTPSERVER</font> environment variable.</p>
-<dt><code>-p</code> <i>port</i></p>
-<dd> Connect to the port <i>port</i>, which is by default <tt>119</tt>.</p>
-<dt><code>-R</code></p>
-<dd> Try to switch to <code>nnrpd</code> with a <font SIZE="-1">MODE</font> <font SIZE="-1">READER</font> command before issuing the <font SIZE="-1">LIST</font> request. It can be useful in case a feeding access exists for the news server: more information can be retrieved from <code>nnrpd</code>, compared with <code>innd</code>.</dl>
+<dt><code>-A</code></dt>
+<dd> Try to authenticate using the username and password information in <i><a href="/docs/linux/man/5-passwd-nntp/">passwd.nntp</a></i>(5) before issuing the <font SIZE="-1">LIST</font> command.</dd>
+<dt><code>-h</code> <i>host</i></dt>
+<dd> Connect to the server <i>host</i> rather than to the value of <i>server</i> in <i>inn.conf</i> or the value of the <font SIZE="-1">NNTPSERVER</font> environment variable.</dd>
+<dt><code>-p</code> <i>port</i></dt>
+<dd> Connect to the port <i>port</i>, which is by default <tt>119</tt>.</dd>
+<dt><code>-R</code></dt>
+<dd> Try to switch to <code>nnrpd</code> with a <font SIZE="-1">MODE</font> <font SIZE="-1">READER</font> command before issuing the <font SIZE="-1">LIST</font> request. It can be useful in case a feeding access exists for the news server: more information can be retrieved from <code>nnrpd</code>, compared with <code>innd</code>.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following command will obtain the one-line descriptions of all newsgroups found on <font SIZE="-1">UUNET:</font> </p>
 <pre>

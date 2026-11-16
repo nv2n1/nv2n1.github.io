@@ -55,22 +55,19 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-a, --allowed
-<dd> List allowed devices.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> List allowed devices.
+</dd><dl>
+</dl>
 
 <dt>-b, --blocked
-<dd> List blocked devices.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> List blocked devices.
+</dd><dl>
+</dl>
 
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -83,16 +80,14 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-p, --permanent
-<dd> Make the decision permanent. A device specific allow rule will be appended to the current policy.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Make the decision permanent. A device specific allow rule will be appended to the current policy.
+</dd><dl>
+</dl>
 
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -105,16 +100,14 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-p, --permanent
-<dd> Make the decision permanent. A device specific block rule will be appended to the current policy.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Make the decision permanent. A device specific block rule will be appended to the current policy.
+</dd><dl>
+</dl>
 
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -127,16 +120,14 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-p, --permanent
-<dd> Make the decision permanent. A device specific reject rule will be appended to the current policy.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Make the decision permanent. A device specific reject rule will be appended to the current policy.
+</dd><dl>
+</dl>
 
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -149,10 +140,9 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -165,16 +155,14 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-a, --after &lt;id&gt;
-<dd> Append the new rule after a rule with the specified rule id.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Append the new rule after a rule with the specified rule id.
+</dd><dl>
+</dl>
 
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -187,10 +175,9 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -203,40 +190,34 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-p, --with-ports
-<dd> Generate port specific rules for all devices. By default, port specific rules are generated only for devices which do not export an iSerial value.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Generate port specific rules for all devices. By default, port specific rules are generated only for devices which do not export an iSerial value.
+</dd><dl>
+</dl>
 
 <dt>-P, --no-ports-sn
-<dd> Don't generate port specific rules for devices without an iSerial value. Without this option, the tool will add a via-port attribute to any device that doesn't provide a serial number. This is a security measure to limit devices that cannot be uniquely identified to connect only via a specific port. This makes it harder to bypass the policy since the real device will occupy the allowed USB port most of the time.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Don't generate port specific rules for devices without an iSerial value. Without this option, the tool will add a via-port attribute to any device that doesn't provide a serial number. This is a security measure to limit devices that cannot be uniquely identified to connect only via a specific port. This makes it harder to bypass the policy since the real device will occupy the allowed USB port most of the time.
+</dd><dl>
+</dl>
 
 <dt>-t, --target &lt;target&gt;
-<dd> Generate an explicit &quot;catch all&quot; rule with the specified target. The target can be one of the following values: allow, block, reject
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Generate an explicit &quot;catch all&quot; rule with the specified target. The target can be one of the following values: allow, block, reject
+</dd><dl>
+</dl>
 
 <dt>-X, --no-hashes
-<dd> Don't generate a hash attribute for each device.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Don't generate a hash attribute for each device.
+</dd><dl>
+</dl>
 
 <dt>-H, --hash-only
-<dd> Generate a hash-only policy.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Generate a hash-only policy.
+</dd><dl>
+</dl>
 
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -249,10 +230,9 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
  
 
@@ -265,10 +245,9 @@ url: "/docs/linux/man/1-usbguard/"
  Available options:
 <dl>
 <dt>-h, --help
-<dd> Show help.
-<dl>
-<dt>
-<dd></dl>
+</dt><dd> Show help.
+</dd><dl>
+</dl>
 </dl>
 
 <h2>EXAMPLES</h2>
@@ -278,7 +257,7 @@ url: "/docs/linux/man/1-usbguard/"
  Creating an initial policy
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -312,7 +291,7 @@ sudo install - m 0600 - o root - g root &amp;nbsp;
 &amp;nbsp;
 rules.conf &amp;nbsp;
 / etc / usbguard / rules.conf
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>BUGS</h2>
 

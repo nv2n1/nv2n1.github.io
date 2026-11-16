@@ -13,19 +13,14 @@ std::experimental::ranges::input_iterator_tag, - std::experimental::ranges::inpu
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::experimental::ranges::forward_iterator_tag, 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::experimental::ranges::bidirectional_iterator_tag, 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::experimental::ranges::random_access_iterator_tag <pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
-
     struct input_iterator_tag {
 };
-
 struct output_iterator_tag {
 };
-
 struct forward_iterator_tag : public input_iterator_tag {
 };
-
 struct bidirectional_iterator_tag : public forward_iterator_tag {
 };
-
 struct random_access_iterator_tag : public bidirectional_iterator_tag {
 };</code></pre> 
 Defines the category of an iterator. Each tag is an empty type and corresponds to 

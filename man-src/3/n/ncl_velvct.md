@@ -29,52 +29,52 @@ VELVCT is obsolete, and is supported only to provide compatibility with old NCAR
 <h2>Description</h2>
 
 <dl><dt>U
-<dd>(REAL 2-dimensional array, dimensioned LU x n: n &gt;= N, input): By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
-<dt>LU
-<dd>(INTEGER, input): Actual value of the first dimension of array U.
-<dt>V
-<dd>(REAL 2-dimensional array, dimensioned LV x n: n &gt;= N, input): By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
-<dt>LV
-<dd>LV (INTEGER, input): Actual value of the first dimension of array V.
-<dt>M
-<dd>(INTEGER, input): Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, U and V.
-<dt>N
-<dd>(INTEGER, input): Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, U and V.
-<dt>FLO
-<dd>(REAL, input): Minimum vector magnitude allowed to be displayed in the plot.
-<dt>HI
-<dd>(REAL, input): Maximum vector magnitude allowed to be displayed in the plot. If set to 0.0 there is no upper limit imposed.
-<dt>NSET
-<dd>(INTEGER, input): Flag that controls how and when the SET call is invoked. If NSET is 0, VELVCT makes a SET call to establish a standard viewport and window boundaries coincident with the array coordinate boundaries. PERIM is called to draw a border. If NSET is greater than zero, VELVCT does not call SET or PERIM. If NSET is less than zero, VELVCT calls SET to establish window boundaries coincident with the array grid coordinate boundaries but does not modify the viewport or call PERIM. Unlike the VVINIT/VVECTR interface, when VELVCT does a SET call, it always restores the original coordinate system state before returning.
-<dt>LENGTH
-<dd>(INTEGER, input): The length in plotter address units (PAUs) used to render the vector with the greatest magnitude that is eligible for plotting. A vector is eligible for plotting if it is less than or equal to the value of HI, unless HI is 0.0 in which case all vectors are eligible. If LENGTH is set to 0.0, the length selected is one half the diagonal length of a grid cell assuming a linear mapping of the grid coordinate space into the viewport.
-<dt>ISPV
-<dd>(INTEGER, input): Flag to control the special value feature. 0 means that the feature is not in use. 1 means that if the value of U(I,J)=SPV(1) the vector will not be plotted. 2 means that if the value of V(I,J)=SPV(2) the vector will not be plotted. 3 means that if either U(I,J)=SPV(1) or V(I,J)=SPV(2) then the vector will not be plotted. 4 means that if U(I,J)=SPV(1) and V(I,J)=SPV(2), the vector will not be plotted.
-<dt>SPV
-<dd>(REAL array, dimensioned 2, input): An array of length 2 which gives the value in the U array and the value in the V array which denote special values. This argument is ignored if ISPV=0. The default values are 1.0E12.</dl>
+</dt><dd>(REAL 2-dimensional array, dimensioned LU x n: n &gt;= N, input): By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
+</dd><dt>LU
+</dt><dd>(INTEGER, input): Actual value of the first dimension of array U.
+</dd><dt>V
+</dt><dd>(REAL 2-dimensional array, dimensioned LV x n: n &gt;= N, input): By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
+</dd><dt>LV
+</dt><dd>LV (INTEGER, input): Actual value of the first dimension of array V.
+</dd><dt>M
+</dt><dd>(INTEGER, input): Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, U and V.
+</dd><dt>N
+</dt><dd>(INTEGER, input): Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, U and V.
+</dd><dt>FLO
+</dt><dd>(REAL, input): Minimum vector magnitude allowed to be displayed in the plot.
+</dd><dt>HI
+</dt><dd>(REAL, input): Maximum vector magnitude allowed to be displayed in the plot. If set to 0.0 there is no upper limit imposed.
+</dd><dt>NSET
+</dt><dd>(INTEGER, input): Flag that controls how and when the SET call is invoked. If NSET is 0, VELVCT makes a SET call to establish a standard viewport and window boundaries coincident with the array coordinate boundaries. PERIM is called to draw a border. If NSET is greater than zero, VELVCT does not call SET or PERIM. If NSET is less than zero, VELVCT calls SET to establish window boundaries coincident with the array grid coordinate boundaries but does not modify the viewport or call PERIM. Unlike the VVINIT/VVECTR interface, when VELVCT does a SET call, it always restores the original coordinate system state before returning.
+</dd><dt>LENGTH
+</dt><dd>(INTEGER, input): The length in plotter address units (PAUs) used to render the vector with the greatest magnitude that is eligible for plotting. A vector is eligible for plotting if it is less than or equal to the value of HI, unless HI is 0.0 in which case all vectors are eligible. If LENGTH is set to 0.0, the length selected is one half the diagonal length of a grid cell assuming a linear mapping of the grid coordinate space into the viewport.
+</dd><dt>ISPV
+</dt><dd>(INTEGER, input): Flag to control the special value feature. 0 means that the feature is not in use. 1 means that if the value of U(I,J)=SPV(1) the vector will not be plotted. 2 means that if the value of V(I,J)=SPV(2) the vector will not be plotted. 3 means that if either U(I,J)=SPV(1) or V(I,J)=SPV(2) then the vector will not be plotted. 4 means that if U(I,J)=SPV(1) and V(I,J)=SPV(2), the vector will not be plotted.
+</dd><dt>SPV
+</dt><dd>(REAL array, dimensioned 2, input): An array of length 2 which gives the value in the U array and the value in the V array which denote special values. This argument is ignored if ISPV=0. The default values are 1.0E12.</dd></dl>
 
 <h2>C-Binding Description</h2>
 
 The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions: 
 
 <dl><dt>lu
-<dd>The second dimension of u in the calling program.
-<dt>lv
-<dd>The second dimension of v in the calling program.
-<dt>m
-<dd>Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, u and v.
-<dt>n
-<dd>Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, u and v.</dl>
+</dt><dd>The second dimension of u in the calling program.
+</dd><dt>lv
+</dt><dd>The second dimension of v in the calling program.
+</dd><dt>m
+</dt><dd>Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, u and v.
+</dd><dt>n
+</dt><dd>Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, u and v.</dd></dl>
 
 <h2>Usage</h2>
 
 Beginning with version 3.2 of NCAR Graphics, the VELVCT entry point has been recoded as a front end to the VVINIT/VVECTR interface to Vectors. The compatibility mode parameter, CPM, controls the degree to which a call to the Version 3.2 VELVCT emulates the older call. Appropriate settings of CPM can separately address each of the following three questions regarding the level of emulation:
 <dl><dt>&bull;
-<dd>Should FX, FY, MXF, and MYF rather than the Version 3.2 mapping routines perform the mapping to user coordinates?
-<dt>&bull;
-<dd>Should the input arguments FLO, HI, NSET, LENGTH, ISPV, SPV override the current values of the corresponding Vectors' internal parameters?
-<dt>&bull;
-<dd>Should the values contained in the common blocks VEC1 and VEC2 override the current values of corresponding Vectors' internal parameters?</dl>
+</dt><dd>Should FX, FY, MXF, and MYF rather than the Version 3.2 mapping routines perform the mapping to user coordinates?
+</dd><dt>&bull;
+</dt><dd>Should the input arguments FLO, HI, NSET, LENGTH, ISPV, SPV override the current values of the corresponding Vectors' internal parameters?
+</dd><dt>&bull;
+</dt><dd>Should the values contained in the common blocks VEC1 and VEC2 override the current values of corresponding Vectors' internal parameters?</dd></dl>
  
 
  Given the default value of CPM, all these questions are answered in the affirmative, and a call to VELVCT gives a reasonably faithful emulation of the older version's behavior. 
@@ -82,51 +82,51 @@ Beginning with version 3.2 of NCAR Graphics, the VELVCT entry point has been rec
  However, even in this case, it is possible to use the parameter setting routines to control the behavior of features that have no counterpart in the older version of VELVCT, as long as the feature is accessible without calling the new interface. For instance, you could control the vector linewidth by setting the LWD parameter, although you could not draw vectors masked to an area map because doing so requires direct invocation of VVECTR 
 
  The following two tables show how the VELVCT input arguments and VEC1/VEC2 common block members map into internal parameters currently supported by Vectors. (Consult the vectors_params man page for descriptions of the internal parameters.)
-<dl><dd><dl><dt>Input Argument
-<dd>Internal Parameter
-<dt>FLO
-<dd>VLC (VLC is set to -FLO if FLO is positive, 0.0 otherwise)
-<dt>HI
-<dd>VHC (VHC is set to -HI if HI is positive, 0.0 otherwise)
-<dt>NSET
-<dd>SET (NSET = 0 is approximately equivalent to SET = 1)
-<dt>LENGTH
-<dd>VRL (LENGTH in Plotter Address Units is converted to VRL as a fraction of the viewport width)
-<dt>ISPV
-<dd>SVF
-<dt>SPV(1)
-<dd>USV
-<dt>SPV(2)
-<dd>VSV</dl></dl><dl><dd><dl><dt>Common Block Member
-<dd>Internal Parameter
-<dt>EXT
-<dd>VPS
-<dt>ICTRFG
-<dd>VPO
-<dt>ILAB
-<dd>LBL
-<dt>IOFFD
-<dd>DPF
-<dt>RMN
-<dd>AMN (RMN in metacode coordinates is converted to AMN as a fraction of the viewport width)
-<dt>RMX
-<dd>AMX (RMX in metacode coordinates is converted to AMX as a fraction of the viewport width)
-<dt>SIZE
-<dd>LBS (Character size in metacode coordinates is converted to LBS as a fraction of viewport width)
-<dt>INCX
-<dd>XIN
-<dt>INCY
-<dd>YIN
-<dt>-
-<dd>MNT (When common blocks VEC1 and VEC2 override parameter settings, MNT is always set to &quot; &quot;, indicating that the minimum vector text block is not to be displayed.)
-<dt>IOFFM
-<dd>MXT (If IOFFM is non-zero, MXT is set to &quot; &quot;, indicating that the maximum text block is not to be displayed. Otherwise MXT is set to the string &quot;MAXIMUM VECTOR&quot;)
-<dt>IOFFM
-<dd>MXX (If IOFFM is 0, MXX is set to a computed value that, as a fraction of the viewport width, specifies a point 0.05 in NDC left of the right hand edge of the plotter frame.)
-<dt>IOFFM
-<dd>MXY (If IOFFM is 0, MXY is set to a computed value that, as a fraction of the viewport height, specifies a point 0.005 in NDC up from the bottom edge of the plotter frame.)
-<dt>IOFFM
-<dd>MXP (If IOFFM is 0, MXP is set to -2, indicating that the text block should be lower-right justified.</dl></dl>
+<dl><dd></dd><dl><dt>Input Argument
+</dt><dd>Internal Parameter
+</dd><dt>FLO
+</dt><dd>VLC (VLC is set to -FLO if FLO is positive, 0.0 otherwise)
+</dd><dt>HI
+</dt><dd>VHC (VHC is set to -HI if HI is positive, 0.0 otherwise)
+</dd><dt>NSET
+</dt><dd>SET (NSET = 0 is approximately equivalent to SET = 1)
+</dd><dt>LENGTH
+</dt><dd>VRL (LENGTH in Plotter Address Units is converted to VRL as a fraction of the viewport width)
+</dd><dt>ISPV
+</dt><dd>SVF
+</dd><dt>SPV(1)
+</dt><dd>USV
+</dd><dt>SPV(2)
+</dt><dd>VSV</dd></dl></dl><dl><dd></dd><dl><dt>Common Block Member
+</dt><dd>Internal Parameter
+</dd><dt>EXT
+</dt><dd>VPS
+</dd><dt>ICTRFG
+</dt><dd>VPO
+</dd><dt>ILAB
+</dt><dd>LBL
+</dd><dt>IOFFD
+</dt><dd>DPF
+</dd><dt>RMN
+</dt><dd>AMN (RMN in metacode coordinates is converted to AMN as a fraction of the viewport width)
+</dd><dt>RMX
+</dt><dd>AMX (RMX in metacode coordinates is converted to AMX as a fraction of the viewport width)
+</dd><dt>SIZE
+</dt><dd>LBS (Character size in metacode coordinates is converted to LBS as a fraction of viewport width)
+</dd><dt>INCX
+</dt><dd>XIN
+</dd><dt>INCY
+</dt><dd>YIN
+</dd><dt>-
+</dt><dd>MNT (When common blocks VEC1 and VEC2 override parameter settings, MNT is always set to &quot; &quot;, indicating that the minimum vector text block is not to be displayed.)
+</dd><dt>IOFFM
+</dt><dd>MXT (If IOFFM is non-zero, MXT is set to &quot; &quot;, indicating that the maximum text block is not to be displayed. Otherwise MXT is set to the string &quot;MAXIMUM VECTOR&quot;)
+</dd><dt>IOFFM
+</dt><dd>MXX (If IOFFM is 0, MXX is set to a computed value that, as a fraction of the viewport width, specifies a point 0.05 in NDC left of the right hand edge of the plotter frame.)
+</dd><dt>IOFFM
+</dt><dd>MXY (If IOFFM is 0, MXY is set to a computed value that, as a fraction of the viewport height, specifies a point 0.005 in NDC up from the bottom edge of the plotter frame.)
+</dd><dt>IOFFM
+</dt><dd>MXP (If IOFFM is 0, MXP is set to -2, indicating that the text block should be lower-right justified.</dd></dl></dl>
 
 <h2>Note that the emulation of the maximum vector text block differs from</h2>
 

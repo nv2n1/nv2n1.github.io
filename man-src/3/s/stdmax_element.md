@@ -11,29 +11,17 @@ std::max_element - std::max_element
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt &gt;                                                                               (until C++17)
-
 ForwardIt max_element( ForwardIt first, ForwardIt last );
-
 template&lt; class ForwardIt &gt;                                                                               (since C++17)
-
 constexpr ForwardIt max_element( ForwardIt first, ForwardIt last );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;                                                    (2) (since C++17)
-
 ForwardIt max_element( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last );               (1)
-
 template&lt; class ForwardIt, class Compare &gt;                                                                              (until C++17)
-
 ForwardIt max_element( ForwardIt first, ForwardIt last, Compare comp );
-
 template&lt; class ForwardIt, class Compare &gt;                                                            (3)               (since C++17)
-
 constexpr ForwardIt max_element( ForwardIt first, ForwardIt last, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class Compare &gt;                                         (4)           (since C++17)
-
 ForwardIt max_element( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, Compare comp );</code></pre> 
 Finds the greatest element in the range [first, last). 
 1) Elements are compared using operator&lt;. 
@@ -115,19 +103,14 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;cmath&gt;
 static bool abs_compare(int a, int b)
-
 {
     return (std::abs(a) &lt; std::abs(b));
 }
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, -14, 1, 5, 9};
     std::vector&lt;int&gt;::iterator result;

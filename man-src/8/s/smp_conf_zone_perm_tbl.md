@@ -19,34 +19,34 @@ description: "smp_conf_zone_perm_tbl – invoke CONFIGURE ZONE PERMISSION TABLE 
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;deduce</code></p>
-<dd>deduce number of zone groups from number of bytes on active <i>FN</i> lines. With 128 zone groups each active line will contain 16 (or less) bytes. With this option if any active line in <i>FN</i> contains more than 16 bytes then 256 zone groups are assumed, otherwise 128 zone groups are assumed. This option cannot be given with the <i>&#8211;numzg=NG</i> option (as they may contradict one another).</p>
-<dt><code>-E</code>, <code>&#8211;expected</code>=<i>EX</i></p>
-<dd>set the &#8216;expected expander change count&#8217; field in the SMP request. The value <i>EX</i> is from 0 to 65535 inclusive with 0 being the default value. When <i>EX</i> is greater than zero then if the value doesn&#8217;t match the expander change count of the SMP target (i.e. the expander) when the request arrives then the target ignores the request and sets a function result of &quot;invalid expander change count&quot; in the response.</p>
-<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></p>
-<dd>starting (first) source zone group (default: zone group 0). If multiple function requests are sent, this field in subsequent function requests will be adjusted to reflect those descriptors already sent. Note that the <i>SS</i> value may be picked up from <i>FN</i> and if this option and that value are not the same, an error is generated.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-n</code>, <code>&#8211;numzg</code>=<i>ZG</i></p>
-<dd>number of zone groups. <i>ZG</i> can be 0 (default) or 1. 0 implies 128 zone groups while 1 implies 256 zone groups. This option cannot be used with the <i>&#8211;deduce</i> option.</p>
-<dt><code>-P</code>, <code>&#8211;permf</code>=<i>FN</i></p>
-<dd>FN is a file containing zone permission configuration descriptors in ASCII hexadecimal; either as bytes separated by space, tab, comma or newline, or as longer strings of hexadecimal bytes in which every 2 digits represents a byte. Empty lines and those starting with &quot;#&quot; are ignored. A line with &quot;&#8211;start=&lt;num&gt;&quot; will be taken as the starting source zone group number (i.e. &lt;num&gt; becomes <i>SS</i>) unless it contradicts the command line <i>&#8211;start=SS</i> option. Otherwise lines starting with &quot;-&quot; are ignored.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. The mpt interface needs this option and it will typically be an expander&#8217;s SAS address. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-S</code>, <code>&#8211;save</code>=<i>SAV</i></p>
-<dd>set the &#8216;save&#8217; field in the SMP request. <i>SAV</i> may take these values: 0 for updating the shadow values (default), 1 for updating the saved values, 2 for updating shadow values and if available the saved values, 3 for updating both saved and shadow values.</p>
-<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></p>
-<dd>See entry above, listed in order by its short option letter (i.e. <i>-f</i>).</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-d</code>, <code>&#8211;deduce</code></dt>
+<dd>deduce number of zone groups from number of bytes on active <i>FN</i> lines. With 128 zone groups each active line will contain 16 (or less) bytes. With this option if any active line in <i>FN</i> contains more than 16 bytes then 256 zone groups are assumed, otherwise 128 zone groups are assumed. This option cannot be given with the <i>&#8211;numzg=NG</i> option (as they may contradict one another).</dd>
+<dt><code>-E</code>, <code>&#8211;expected</code>=<i>EX</i></dt>
+<dd>set the &#8216;expected expander change count&#8217; field in the SMP request. The value <i>EX</i> is from 0 to 65535 inclusive with 0 being the default value. When <i>EX</i> is greater than zero then if the value doesn&#8217;t match the expander change count of the SMP target (i.e. the expander) when the request arrives then the target ignores the request and sets a function result of &quot;invalid expander change count&quot; in the response.</dd>
+<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></dt>
+<dd>starting (first) source zone group (default: zone group 0). If multiple function requests are sent, this field in subsequent function requests will be adjusted to reflect those descriptors already sent. Note that the <i>SS</i> value may be picked up from <i>FN</i> and if this option and that value are not the same, an error is generated.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-n</code>, <code>&#8211;numzg</code>=<i>ZG</i></dt>
+<dd>number of zone groups. <i>ZG</i> can be 0 (default) or 1. 0 implies 128 zone groups while 1 implies 256 zone groups. This option cannot be used with the <i>&#8211;deduce</i> option.</dd>
+<dt><code>-P</code>, <code>&#8211;permf</code>=<i>FN</i></dt>
+<dd>FN is a file containing zone permission configuration descriptors in ASCII hexadecimal; either as bytes separated by space, tab, comma or newline, or as longer strings of hexadecimal bytes in which every 2 digits represents a byte. Empty lines and those starting with &quot;#&quot; are ignored. A line with &quot;&#8211;start=&lt;num&gt;&quot; will be taken as the starting source zone group number (i.e. &lt;num&gt; becomes <i>SS</i>) unless it contradicts the command line <i>&#8211;start=SS</i> option. Otherwise lines starting with &quot;-&quot; are ignored.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. The mpt interface needs this option and it will typically be an expander&#8217;s SAS address. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-S</code>, <code>&#8211;save</code>=<i>SAV</i></dt>
+<dd>set the &#8216;save&#8217; field in the SMP request. <i>SAV</i> may take these values: 0 for updating the shadow values (default), 1 for updating the saved values, 2 for updating shadow values and if available the saved values, 3 for updating both saved and shadow values.</dd>
+<dt><code>-f</code>, <code>&#8211;start</code>=<i>SS</i></dt>
+<dd>See entry above, listed in order by its short option letter (i.e. <i>-f</i>).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>For simplicity, each active line in the <i>FN</i> file should contain 16 or 32 bytes. 16 bytes if there are 128 zone groups or 32 bytes if there are 256 zone groups. </p>
 <p> SCSI is big endian. So for 128 zone groups, the first byte placed in the zone permission configuration descriptor is ZP[0,127-120]. If the <i>&#8211;start=SS</i> option is given then the first byte is ZP[<i>SS</i>,127-120]. For 256 zone groups, the first bytes are ZP[0,255-248] and ZP[<i>SS</i>,255-248] respectively. </p>

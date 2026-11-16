@@ -15,11 +15,11 @@ alloc_vm_area - allocate a range of kernel address space
 <h2>Arguments</h2>
 
 <i>size</i>
-<dl><dd><dd>size of the area</dl>
+<dl><dd></dd><dd>size of the area</dd></dl>
  
 
  <i>ptes</i>
-<dl><dd>returns the PTEs for the address space</dl>
+<dl><dd>returns the PTEs for the address space</dd></dl>
 
 <h2>Return</h2>
 

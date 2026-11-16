@@ -23,16 +23,16 @@ description: "BeakerLib – libraries – mechanism for loading shared test code
     rlImport LIBRARY [LIBRARY2...]
 </pre>
 <dl>
-<dt>&#8211;all</p>
-<dd> Read Makefile in current/original directory, pick library requirements up and import them all.</p>
-<dt><font SIZE="-1">LIBRARY</font></p>
-<dd> Must have &#8216;component/library&#8217; format. Identifies the library to import.</dl>
+<dt>&#8211;all</dt>
+<dd> Read Makefile in current/original directory, pick library requirements up and import them all.</dd>
+<dt><font SIZE="-1">LIBRARY</font></dt>
+<dd> Must have &#8216;component/library&#8217; format. Identifies the library to import.</dd></dl>
 <p> Returns 0 if the import of all libraries was successful. Returns non-zero if one or more library failed to import.</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Petr Muller &lt;muller [at] redhat.com&gt;</p>
-<dt>&bull;</p>
-<dd> Dalibor Pospisil &lt;dapospis [at] redhat.com&gt; </p>
+<dt>&bull;</dt>
+<dd> Petr Muller &lt;muller [at] redhat.com&gt;</dd>
+<dt>&bull;</dt>
+<dd> Dalibor Pospisil &lt;dapospis [at] redhat.com&gt; </dd>
 </dl>
 <h2>Index</h2>

@@ -24,17 +24,16 @@ int selinux_set_mapping(struct security_class_mapping *map);</code></pre>
 <p>Zero is returned on success. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>One of the class or permission names requested in the mapping is not present in the loaded policy.</p>
-<dt><code>ENOMEM</code></p>
-<dd>An attempt to allocate memory failed.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>One of the class or permission names requested in the mapping is not present in the loaded policy.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>An attempt to allocate memory failed.</dd></dl>
 <h2>Example</h2>
 <pre><code>struct security_class_mapping map[] = {
     {&quot;file&quot;, {&quot;create&quot;, &quot;unlink&quot;, &quot;read&quot;, &quot;write&quot;, NULL}},
     {&quot;socket&quot;, {&quot;bind&quot;, NULL}},
     {&quot;process&quot;, {&quot;signal&quot;, NULL}},
     {NULL}};
-
 if (selinux_set_mapping(map) &lt; 0)
     exit(1);</code></pre>
 <p> In this example, after the call has succeeded, classes <code>file</code>, <code>socket</code>, and <code>process</code> will be identified by 1, 2 and 3, respectively. Permissions <i>create</i>, <i>unlink</i>, <i>read</i>, and <i>write</i> (for the <code>file</code> class) will be identified by 1, 2, 4, and 8 respectively. Classes and permissions not listed in the mapping cannot be used.</p>

@@ -18,13 +18,13 @@ description: "SPI_prepare – prepare a statement, without executing it yet"
 <h2>Arguments</h2>
 <p>const char * <i>command</i></p>
 <dl COMPACT>
-<dd>command string</dl>
+<dd>command string</dd></dl>
 <p> int <i>nargs</i></p>
 <dl COMPACT>
-<dd>number of input parameters ($1, $2, etc.)</dl>
+<dd>number of input parameters ($1, $2, etc.)</dd></dl>
 <p> Oid * <i>argtypes</i></p>
 <dl COMPACT>
-<dd>pointer to an array containing the OIDs of the data types of the parameters</dl>
+<dd>pointer to an array containing the OIDs of the data types of the parameters</dd></dl>
 <h2>Return Value</h2>
 <p><code>SPI_prepare</code> returns a non-null pointer to an SPIPlan, which is an opaque struct representing a prepared statement. On error, NULL will be returned, and <i>SPI_result</i> will be set to one of the same error codes used by <code>SPI_execute</code>, except that it is set to SPI_ERROR_ARGUMENT if <i>command</i> is NULL, or if <i>nargs</i> is less than 0, or if <i>nargs</i> is greater than 0 and <i>argtypes</i> is NULL.</p>
 <h2>Notes</h2>

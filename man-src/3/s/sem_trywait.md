@@ -10,11 +10,8 @@ description: "sem_wait, sem_timedwait, sem_trywait – lock a semaphore"
 <p>sem_wait, sem_timedwait, sem_trywait &#8211; lock a semaphore</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;semaphore.h&gt;
-
 int sem_wait(sem_t *sem);
-
 int sem_trywait(sem_t *sem);
-
 int sem_timedwait(sem_t *sem, const struct timespec *abs_timeout);</code></pre>
 <p> Link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sem_timedwait</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</p>
 <h2>Description</h2>
@@ -26,20 +23,20 @@ int sem_timedwait(sem_t *sem, const struct timespec *abs_timeout);</code></pre>
 <p>All of these functions return 0 on success; on error, the value of the semaphore is left unchanged, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINTR</code></p>
-<dd>The call was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd><i>sem</i> is not a valid semaphore.</dl>
+<dt><code>EINTR</code></dt>
+<dd>The call was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>sem</i> is not a valid semaphore.</dd></dl>
 <p> The following additional error can occur for <code>sem_trywait</code>():</p>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd>The operation could not be performed without blocking (i.e., the semaphore currently has the value zero).</dl>
+<dt><code>EAGAIN</code></dt>
+<dd>The operation could not be performed without blocking (i.e., the semaphore currently has the value zero).</dd></dl>
 <p> The following additional errors can occur for <code>sem_timedwait</code>():</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>The value of <i>abs_timeout.tv_nsecs</i> is less than 0, or greater than or equal to 1000 million.</p>
-<dt><code>ETIMEDOUT</code></p>
-<dd>The call timed out before the semaphore could be locked.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>The value of <i>abs_timeout.tv_nsecs</i> is less than 0, or greater than or equal to 1000 million.</dd>
+<dt><code>ETIMEDOUT</code></dt>
+<dd>The call timed out before the semaphore could be locked.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -13,19 +13,19 @@ description: "tuned.conf – Tuned profile definition"
 <h2>Main Section</h2>
 <p>The main section is called &quot;[main]&quot; and can contain following options: </p>
 <dl>
-<dt>include=</p>
-<dd>Includes config file defined as value. Config file can be defined as full path or by the profile name to which it belongs. If this parameter is present, the histogram will be shown at the end of the measurement. </p>
+<dt>include=</dt>
+<dd>Includes config file defined as value. Config file can be defined as full path or by the profile name to which it belongs. If this parameter is present, the histogram will be shown at the end of the measurement. </dd>
 </dl>
 <h2>Plugins</h2>
 <p>Every other section defines one plugin. The name of the section is used as name for the plugin and is used in logs to identify the plugin. There can be only one plugin of particular type tuning particular device. Conflicts are by default fixed by merging the options of both plugins together. This can be changed by &quot;replace&quot; option. </p>
 <p> Every plugin section can contain following sections: </p>
 <dl>
-<dt>type=</p>
-<dd>Plugin type. Currently there are following upstream plugins: audio, bootloader, cpu, disk, eeepc_she, mounts, net script, selinux, scheduler, sysctl, sysfs, usb, video, vm. This list may be incomplete. If you installed tuned through RPM you can list upstream plugins by the following command: <code>rpm -ql tuned | grep &#8216;plugins/plugin_.*.py$&#8217;</code> Check the plugins directory returned by this command to see all plugins (e.g. plugins provided by 3rd party packages). </p>
-<dt>devices=</p>
-<dd>Comma separated list of devices which should be tuned by this plugin instance. If you omit this option, all found devices will be tuned.</p>
-<dt>replace=1</p>
-<dd>If there is conflict between two plugins (meaning two plugins of the same type are trying to configure the same devices), then the plugin defined as last replaces all options defined by the previosly defined plugin.</dl>
+<dt>type=</dt>
+<dd>Plugin type. Currently there are following upstream plugins: audio, bootloader, cpu, disk, eeepc_she, mounts, net script, selinux, scheduler, sysctl, sysfs, usb, video, vm. This list may be incomplete. If you installed tuned through RPM you can list upstream plugins by the following command: <code>rpm -ql tuned | grep &#8216;plugins/plugin_.*.py$&#8217;</code> Check the plugins directory returned by this command to see all plugins (e.g. plugins provided by 3rd party packages). </dd>
+<dt>devices=</dt>
+<dd>Comma separated list of devices which should be tuned by this plugin instance. If you omit this option, all found devices will be tuned.</dd>
+<dt>replace=1</dt>
+<dd>If there is conflict between two plugins (meaning two plugins of the same type are trying to configure the same devices), then the plugin defined as last replaces all options defined by the previosly defined plugin.</dd></dl>
 <p> Plugins can also have plugin related options.</p>
 <h2>Example</h2>
 <p>[main] # Includes plugins defined in &quot;included&quot; profile. include=included # Define my_sysctl plugin [my_sysctl] type=sysctl # This plugin will replace any sysctl plugin defined in &quot;included&quot; profile replace=1 # 256 KB default performs well experimentally. net.core.rmem_default = 262144 net.core.wmem_default = 262144 # Define my_script plugin # Both scripts (profile.sh from this profile and script from &quot;included&quot; # profile) will be run, because if there is no &quot;replace=1&quot; option the # default action is merge. [my_script] type=script script=profile.sh </p>

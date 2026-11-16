@@ -16,8 +16,8 @@ description: "cmannotifyd – CMAN Notification Daemon"
 <p>cmannotifyd does not block on cman_notify nor check the exit status of the script. Notifications are dispatched in the same order as they arrive, one by one. CMAN_REASON_TRY_SHUTDOWN is passed to scripts for information only, they can not influence cman&#8217;s decsion about whether or not to shut down. CMAN_REASON_STATECHANGE also implies CMAN_NOTIFICATION_QUORUM exported in the environment. CMAN_NOTIFICATION_QUORUM will be set to 1 (when the node is part of a quorate cluster) or 0 (otherwise). A template for cman_notify scripts can be found in the doc/ directory. </p>
 <h2>Options</h2>
 <dl>
-<dt>-f</p>
-<dd>Run in the foreground (do not fork / daemonize).</p>
-<dt>-d</p>
-<dd>Enable debug output. </p>
+<dt>-f</dt>
+<dd>Run in the foreground (do not fork / daemonize).</dd>
+<dt>-d</dt>
+<dd>Enable debug output. </dd>
 </dl>

@@ -25,25 +25,25 @@ chmoddic [{(-cs | - cannaserver} canna-server] {+ | -}{r|w|rw|wr}
 
 <dl>
 <dt><tt>-cs </tt><i>cannaserver</i> (or <tt>-cannaserver </tt><i>canna-server</i>)
-<dd> Specify the server machine which has a dictionary to be changed.
-<dt><tt>-</tt>
-<dd> Remove the following access rights.
-<dt><tt>+</tt>
-<dd> Add the following access rights.
-<dt><tt>r</tt>
-<dd> Change READ rights. w can be specified at the same time.
-<dt><tt>w</tt>
-<dd> Change WRITE rights. r can be specified at the same time.
-<dt><tt>-G</tt>
-<dd> Change the access rights for the user's own group dictionary.</dl>
+</dt><dd> Specify the server machine which has a dictionary to be changed.
+</dd><dt><tt>-</tt>
+</dt><dd> Remove the following access rights.
+</dd><dt><tt>+</tt>
+</dt><dd> Add the following access rights.
+</dd><dt><tt>r</tt>
+</dt><dd> Change READ rights. w can be specified at the same time.
+</dd><dt><tt>w</tt>
+</dt><dd> Change WRITE rights. r can be specified at the same time.
+</dd><dt><tt>-G</tt>
+</dt><dd> Change the access rights for the user's own group dictionary.</dd></dl>
 
 <h2>EXAMPLE</h2>
 
 <dl>
 <dt><tt>chmoddic -r +w test</tt>
-<dd> Remove READ rights from and add WRITE rights for user dictionary test.
-<dt><tt>chmoddic +wr -G test</tt>
-<dd> Add READ/WRITE rights to group dictionary test.</dl>
+</dt><dd> Remove READ rights from and add WRITE rights for user dictionary test.
+</dd><dt><tt>chmoddic +wr -G test</tt>
+</dt><dd> Add READ/WRITE rights to group dictionary test.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

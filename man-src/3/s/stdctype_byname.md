@@ -10,9 +10,7 @@ description: "std::ctype_byname<char> – std::ctype_byname<char>"
 <p>std::ctype_byname&lt;char&gt; &#8211; std::ctype_byname&lt;char&gt;</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;&gt;
-
     class ctype_byname : public std::ctype&lt;char&gt;;</code></pre>
 <p>This specialization of std::ctype_byname encapsulates character classification features for type char. Like its base class std::ctype&lt;char&gt; and unlike general-purpose std::ctype_byname, table lookup is used to classify characters </p>
 <h2>Member types</h2>
@@ -108,10 +106,8 @@ mask unspecified bitmask type (enumeration, integer type, or bitset)</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     char c = '�'; // capital letter thorn
     std::locale loc(&quot;C&quot;);

@@ -14,7 +14,7 @@ description: "mark_buffer_dirty – mark a buffer_head as needing writeout"
 <p><i>bh</i></p>
 <dl>
 <dd>
-<dd>the buffer_head to mark dirty</dl>
+</dd><dd>the buffer_head to mark dirty</dd></dl>
 <h2>Description</h2>
 <p><code>mark_buffer_dirty</code> will set the dirty bit against the buffer, then set its backing page dirty, then tag the page as dirty in its address_space&#8217;s radix tree and then attach the address_space&#8217;s inode to its superblock&#8217;s dirty inode list. </p>
 <p> <code>mark_buffer_dirty</code> is atomic. It takes bh-&gt;b_page-&gt;mapping-&gt;private_lock, mapping-&gt;tree_lock and mapping-&gt;host-&gt;i_lock.</p>

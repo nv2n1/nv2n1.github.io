@@ -16,18 +16,18 @@ description: "bximage – Interactive Disk Image Creator for Bochs"
 <h2>OPTIONS</h2>
 <p> When you run bximage without one of the following options, it will appear in interactive mode and ask for all required parameters to create an image.</p>
 <dl>
-<dt><code>-fd</code></p>
-<dd> Create a floppy image.</p>
-<dt><code>-hd</code></p>
-<dd> Create a hard disk image.</p>
-<dt><code>-mode=&#8230;</code></p>
-<dd> Image mode (for hard disks only &#8211; see the <i>bochsrc</i> sample for supported options).</p>
-<dt><code>-size=&#8230;</code></p>
-<dd> Image size in megabytes (e.g. 1.44 for floppy image, 10 for hard disk image).</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode (don&#8217;t prompt for user input). Without this option bximage uses the command line parameters as defaults for the interactive mode. If this option is given and one of the required parameters is missing, bximage will fall back to interactive mode.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of the command line options for bximage and exit.</dl>
+<dt><code>-fd</code></dt>
+<dd> Create a floppy image.</dd>
+<dt><code>-hd</code></dt>
+<dd> Create a hard disk image.</dd>
+<dt><code>-mode=&#8230;</code></dt>
+<dd> Image mode (for hard disks only &#8211; see the <i>bochsrc</i> sample for supported options).</dd>
+<dt><code>-size=&#8230;</code></dt>
+<dd> Image size in megabytes (e.g. 1.44 for floppy image, 10 for hard disk image).</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode (don&#8217;t prompt for user input). Without this option bximage uses the command line parameters as defaults for the interactive mode. If this option is given and one of the required parameters is missing, bximage will fall back to interactive mode.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of the command line options for bximage and exit.</dd></dl>
 <p> The <i>filename</i> parameter specifies the name of the image to be created.</p>
 <h2>LICENSE</h2>
 <p> This program is distributed under the terms of the GNU Lesser General Public License as published by the Free Software Foundation. See the COPYING file located in /usr/share/doc/bochs-2.3.8/ for details on the license and the lack of warranty.</p>

@@ -15,11 +15,11 @@ clk_notifier_register - change notifier callback
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock whose rate we are interested in</dl>
+<dl><dd></dd><dd>clock whose rate we are interested in</dd></dl>
  
 
  <i>nb</i>
-<dl><dd>notifier block with callback function pointer</dl>
+<dl><dd>notifier block with callback function pointer</dd></dl>
 
 <h2>Description</h2>
 

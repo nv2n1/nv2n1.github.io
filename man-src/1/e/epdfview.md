@@ -17,30 +17,30 @@ description: "epdfview – view PDF documents"
 <h2>OPTIONS</h2>
 <h3>Help Options</h3>
 <dl>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</dl>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd></dl>
 <h3>GTK+ Options</h3>
 <dl>
-<dt><code>&#8211;class=</code><i>CLASS</i></p>
-<dd> Program class as used by the window manager</p>
-<dt><code>&#8211;name=</code><i>NAME</i></p>
-<dd> Program name as used by the window manager</p>
-<dt><code>&#8211;screen=</code><i>SCREEN</i></p>
-<dd> X screen to use</p>
-<dt><code>&#8211;sync</code></p>
-<dd> Make X calls synchronous</p>
-<dt><code>&#8211;gtk-module=</code><i>MODULES</i></p>
-<dd> Load additional GTK+ modules</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd> Make all warnings fatal</dl>
+<dt><code>&#8211;class=</code><i>CLASS</i></dt>
+<dd> Program class as used by the window manager</dd>
+<dt><code>&#8211;name=</code><i>NAME</i></dt>
+<dd> Program name as used by the window manager</dd>
+<dt><code>&#8211;screen=</code><i>SCREEN</i></dt>
+<dd> X screen to use</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Make X calls synchronous</dd>
+<dt><code>&#8211;gtk-module=</code><i>MODULES</i></dt>
+<dd> Load additional GTK+ modules</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd> Make all warnings fatal</dd></dl>
 <h3>Application Options</h3>
 <dl>
-<dt><code>&#8211;display=</code><i>DISPLAY</i></p>
-<dd> X display to use</dl>
+<dt><code>&#8211;display=</code><i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1), <code><a href="/docs/linux/man/1-xpdf/">xpdf</a></code>(1)</p>
 <h2>AUTHOR</h2>

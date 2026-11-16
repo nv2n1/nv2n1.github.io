@@ -24,10 +24,8 @@ Number of elements in the valarray.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
 int main()
-
 {
     std::valarray&lt;double&gt; a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     std::cout &lt;&lt; &quot;Average: &quot; &lt;&lt; a.sum() / a.size() &lt;&lt; '\n';

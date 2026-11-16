@@ -50,5 +50,5 @@ uint64_t mask; /* Incoming message considered matching if
 <p><code>ibv_create_srq_ex</code>(3),</p>
 <h2>Authors</h2>
 <dl>
-<dt>Artemy Kovalyov &lt;artemyko [at] mellanox.com&gt;</p>
-<dd></dl>
+<dt>Artemy Kovalyov &lt;artemyko [at] mellanox.com&gt;</dt>
+<dd></dd></dl>

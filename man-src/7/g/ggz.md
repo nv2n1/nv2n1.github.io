@@ -19,16 +19,16 @@ description: "ggz – The GGZ Gaming Zone"
 <h2>Files</h2>
 <p>The following layout can vary from site to site, depending on the completeness of a GGZ installation and the operating system distribution in use. It adheres to the File Hierarchy Standard (FHS) as much as possible.</p>
 <dl>
-<dt>/usr/bin</p>
-<dd>GGZ applications, tools, and the games which provide single player mode.</p>
-<dt>/usr/lib/ggz(d)</p>
-<dd>GGZ game clients and servers.</p>
-<dt>/usr/share/ggz(d)</p>
-<dd>Data files for game clients and servers.</p>
-<dt>/etc/ggz.modules</p>
-<dd>Game module registry for game clients.</p>
-<dt>/etc/ggzd</p>
-<dd>Configuration for the GGZ server, including rooms and game types.</dl>
+<dt>/usr/bin</dt>
+<dd>GGZ applications, tools, and the games which provide single player mode.</dd>
+<dt>/usr/lib/ggz(d)</dt>
+<dd>GGZ game clients and servers.</dd>
+<dt>/usr/share/ggz(d)</dt>
+<dd>Data files for game clients and servers.</dd>
+<dt>/etc/ggz.modules</dt>
+<dd>Game module registry for game clients.</dd>
+<dt>/etc/ggzd</dt>
+<dd>Configuration for the GGZ server, including rooms and game types.</dd></dl>
 <h2>Conforming To</h2>
 <p><i>GGZ Design Document</i>, available at <i><a rel="nofollow" href="http://www.ggzgamingzone.org/docs/design/">http://www.ggzgamingzone.org/docs/design/</a></i> </p>
 <p> <i>GGZ Main Client-Server Protocol Reference</i>, available at <i><a rel="nofollow" href="http://www.ggzgamingzone.org/docs/design/mainspec/">http://www.ggzgamingzone.org/docs/design/mainspec/</a></i> </p>

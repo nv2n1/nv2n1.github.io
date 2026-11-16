@@ -15,11 +15,11 @@ pci_release_selected_regions - Release selected PCI I/O and memory resources
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>PCI device whose resources were previously reserved</dl>
+<dl><dd></dd><dd>PCI device whose resources were previously reserved</dd></dl>
  
 
  <i>bars</i>
-<dl><dd>Bitmask of BARs to be released</dl>
+<dl><dd>Bitmask of BARs to be released</dd></dl>
 
 <h2>Description</h2>
 

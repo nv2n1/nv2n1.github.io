@@ -14,19 +14,19 @@ description: "httppower – communicate with HTTP based power distribution units
 <p><code>httppower</code> is a helper program for <code>powerman</code> which enables it to communicate with HTTP based power distribution units. It is run interactively by the powerman daemon.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>-u, &#8211;url URL</i></p>
-<dd>Set the base URL.</dl>
+<dt><i>-u, &#8211;url URL</i></dt>
+<dd>Set the base URL.</dd></dl>
 <h2>Interactive Commands</h2>
 <p>The following commands are accepted at the httppower&gt; prompt:</p>
 <dl>
-<dt><i>auth user:pass</i></p>
-<dd>Authenticate to the base URL with specified user and password, using &#8220;basic&#8221; HTTP authentication which sends the user and password over the network in plain text.</p>
-<dt><i>seturl URL</i></p>
-<dd>Set the base URL. Overrides the command line option.</p>
-<dt><i>get [URL-suffix]</i></p>
-<dd>Send an HTTP GET to the base URL with the optional URL-suffix appended.</p>
-<dt><i>post [URL-suffix] key=val[&amp;key=val]&#8230;</i></p>
-<dd>Send an HTTP POST to the base URL with the optional URL-suffix appended, and key-value pairs as argument. </p>
+<dt><i>auth user:pass</i></dt>
+<dd>Authenticate to the base URL with specified user and password, using &#8220;basic&#8221; HTTP authentication which sends the user and password over the network in plain text.</dd>
+<dt><i>seturl URL</i></dt>
+<dd>Set the base URL. Overrides the command line option.</dd>
+<dt><i>get [URL-suffix]</i></dt>
+<dd>Send an HTTP GET to the base URL with the optional URL-suffix appended.</dd>
+<dt><i>post [URL-suffix] key=val[&amp;key=val]&#8230;</i></dt>
+<dd>Send an HTTP POST to the base URL with the optional URL-suffix appended, and key-value pairs as argument. </dd>
 </dl>
 <h2>Files</h2>
 <p>/usr/sbin/httppower<br />

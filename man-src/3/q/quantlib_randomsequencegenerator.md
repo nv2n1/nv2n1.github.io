@@ -27,6 +27,6 @@ description: "QuantLib::RandomSequenceGenerator – Random sequence generator ba
 <pre> RNG::sample_type RNG::next() const;</pre>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>do not use with low-discrepancy sequence generator.</dl>
+<dd>do not use with low-discrepancy sequence generator.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

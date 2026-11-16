@@ -14,33 +14,33 @@ description: "nand_write_page – [REPLACEABLE] write one page"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>NAND chip descriptor</dl>
+<dd>NAND chip descriptor</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>address offset within the page</dl>
+<dd>address offset within the page</dd></dl>
 <p> <i>data_len</i></p>
 <dl>
-<dd>length of actual data to be written</dl>
+<dd>length of actual data to be written</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>the data to write</dl>
+<dd>the data to write</dd></dl>
 <p> <i>oob_required</i></p>
 <dl>
-<dd>must write chip-&gt;oob_poi to OOB</dl>
+<dd>must write chip-&gt;oob_poi to OOB</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>page number to write</dl>
+<dd>page number to write</dd></dl>
 <p> <i>cached</i></p>
 <dl>
-<dd>cached programming</dl>
+<dd>cached programming</dd></dl>
 <p> <i>raw</i></p>
 <dl>
-<dd>use _raw version of write_page</dl>
+<dd>use _raw version of write_page</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

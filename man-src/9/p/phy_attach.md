@@ -14,13 +14,13 @@ description: "phy_attach – attach a network device to a particular PHY device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>network device to attach</dl>
+</dd><dd>network device to attach</dd></dl>
 <p> <i>bus_id</i></p>
 <dl>
-<dd>Bus ID of PHY device to attach</dl>
+<dd>Bus ID of PHY device to attach</dd></dl>
 <p> <i>interface</i></p>
 <dl>
-<dd>PHY device&#8217;s interface</dl>
+<dd>PHY device&#8217;s interface</dd></dl>
 <h2>Description</h2>
 <p>Same as <code>phy_attach_direct</code> except that a PHY bus_id string is passed instead of a pointer to a struct phy_device.</p>
 <h2>Copyright</h2>

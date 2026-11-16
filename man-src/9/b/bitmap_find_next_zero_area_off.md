@@ -15,27 +15,27 @@ bitmap_find_next_zero_area_off - find a contiguous aligned zero area
 <h2>Arguments</h2>
 
 <i>map</i>
-<dl><dd><dd>The address to base the search on</dl>
+<dl><dd></dd><dd>The address to base the search on</dd></dl>
  
 
  <i>size</i>
-<dl><dd>The bitmap size in bits</dl>
+<dl><dd>The bitmap size in bits</dd></dl>
  
 
  <i>start</i>
-<dl><dd>The bitnumber to start searching at</dl>
+<dl><dd>The bitnumber to start searching at</dd></dl>
  
 
  <i>nr</i>
-<dl><dd>The number of zeroed bits we're looking for</dl>
+<dl><dd>The number of zeroed bits we're looking for</dd></dl>
  
 
  <i>align_mask</i>
-<dl><dd>Alignment mask for zero area</dl>
+<dl><dd>Alignment mask for zero area</dd></dl>
  
 
  <i>align_offset</i>
-<dl><dd>Alignment offset for zero area.</dl>
+<dl><dd>Alignment offset for zero area.</dd></dl>
 
 <h2>Description</h2>
 

@@ -58,17 +58,17 @@ url: "/docs/linux/man/8-openais_overview/"
 <h2>Environment Variables</h2>
 <p>The openais executive process uses four environment variables during startup. If these environment variables are not set, defaults will be used. </p>
 <dl>
-<dt>OPENAIS_MAIN_CONFIG_FILE</p>
-<dd>This specifies the fully qualified path to the openais configuration file. </p>
+<dt>OPENAIS_MAIN_CONFIG_FILE</dt>
+<dd>This specifies the fully qualified path to the openais configuration file. </dd>
 <p> The default is /etc/ais/openais.conf. </p>
-<dt>OPENAIS_AMF_CONFIG_FILE</p>
-<dd>This specifies the fully qualified path to the openais Availability Management Framework configuration file. </p>
+<dt>OPENAIS_AMF_CONFIG_FILE</dt>
+<dd>This specifies the fully qualified path to the openais Availability Management Framework configuration file. </dd>
 <p> The default is /etc/ais/amf.conf. </p>
-<dt>OPENAIS_DEFAULT_CONFIG_IFACE</p>
-<dd>This specifies the LCRSO that is used to parse the configuration file. This allows other configuration file parsers to be implemented within the system. </p>
+<dt>OPENAIS_DEFAULT_CONFIG_IFACE</dt>
+<dd>This specifies the LCRSO that is used to parse the configuration file. This allows other configuration file parsers to be implemented within the system. </dd>
 <p> The default is to use the default openais configuration file parser which parses the format specified in openais.conf (5). </p>
-<dt>OPENAIS_TOTEM_AUTHKEY_FILE</p>
-<dd>This specifies the fully qualified path to the shared key used to authenticate and encrypt data used within the Totem protocol. </p>
+<dt>OPENAIS_TOTEM_AUTHKEY_FILE</dt>
+<dd>This specifies the fully qualified path to the shared key used to authenticate and encrypt data used within the Totem protocol. </dd>
 <p> The default is /etc/ais/authkey. </p>
 </dl>
 <h2>Security</h2>

@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::min_exponent10 – std::numeric_limits<T>:
 <h2>Synopsis</h2>
 <pre><code>static const int min_exponent10;
 (until C++ 11)
-
     static constexpr int min_exponent10;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::min_exponent10 is the lowest negative number n such that 10n<br />
@@ -42,9 +41,7 @@ long double LDBL_MIN_10_EXP</p>
 <p>Demonstrates the relationships of min_exponent, min_exponent10, min, and radix for the type float:<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;min() = &quot; &lt;&lt; std::numeric_limits&lt;float&gt;::min() &lt;&lt; '
 '

@@ -18,14 +18,14 @@ description: "arm4_export – export the ARM 4 database in XML format"
 <p> This is functionally equivalent to running the command <code>arm4_control export all</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display the command line options.</p>
-<dt><code>-V</code>, <code>&#8211;Version</code></p>
-<dd> display the program version and exit.</p>
-<dt><code>-C</code>, <code>&#8211;Config</code> <i>config_file</i></p>
-<dd> specifies a configuration file for this instance instead of using the default configuration file. The default configuration file <i>/etc/arm4.conf</i> is used if none is specified.</p>
-<dt><code>-a</code>, <code>&#8211;archive</code> <i>archive_directory</i></p>
-<dd> read an archive created using the <code>arm4_control</code> <i>&#8211;archive</i> command.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display the command line options.</dd>
+<dt><code>-V</code>, <code>&#8211;Version</code></dt>
+<dd> display the program version and exit.</dd>
+<dt><code>-C</code>, <code>&#8211;Config</code> <i>config_file</i></dt>
+<dd> specifies a configuration file for this instance instead of using the default configuration file. The default configuration file <i>/etc/arm4.conf</i> is used if none is specified.</dd>
+<dt><code>-a</code>, <code>&#8211;archive</code> <i>archive_directory</i></dt>
+<dd> read an archive created using the <code>arm4_control</code> <i>&#8211;archive</i> command.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at &lt;<a rel="nofollow" href="http://www.arm4.org">http://www.arm4.org</a>&gt;</p>
 <h2>COPYRIGHT</h2>

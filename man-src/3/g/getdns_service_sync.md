@@ -17,38 +17,38 @@ description: "getdns_service, getdns_service_sync — getdns lookup of a service
  <code>getdns_service</code> (getdns_context *context,</p>
 <dl>
 <dt>
-<dd> const char *name,<br />
+</dt><dd> const char *name,<br />
  getdns_dict *extensions,<br />
  void *userarg,<br />
  getdns_transaction_t *transaction_id,<br />
- getdns_callback_t callbackfn)</dl>
+ getdns_callback_t callbackfn)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_service_sync</code> (getdns_context *context,</p>
 <dl>
 <dt>
-<dd> const char *name,<br />
+</dt><dd> const char *name,<br />
  getdns_dict *extensions,<br />
- getdns_dict **response)</dl>
+ getdns_dict **response)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The getdns_service (3) and getdns_service_sync functions provide public entry points into the getdns API library to retrieve the SRV information given a name. </p>
 <dl>
-<dt> <i>context</i></p>
-<dd>A pointer to the previously created DNS context that is to be used with this DNS request. see getdns_context (3) </p>
-<dt> <i>name</i></p>
-<dd>the service name to resolve </p>
-<dt> <i>extensions</i></p>
-<dd>extensions for this request, NULL if no extensions, see libgetdns (3) for a detailed description of extensions </p>
-<dt> <i>userarg</i></p>
-<dd>returned to the callback function untouched, can be NULL </p>
-<dt> <i>transaction_id</i></p>
-<dd>populated by the API and used to identify the callback (for example to getdns_cancel_callback), can be NULL, set to 0 if the function fails </p>
-<dt> <i>callbackfn</i></p>
-<dd>non-NULL pointer to a callback function defined by the application, typically used to process the response. Only the asynchronous signature accepts a callback function, the synchronous signature does not include a callback. See libgetdns (3) for a more detailed discussion of callback functions. </p>
-<dt> <i>response</i></p>
-<dd>A getdns_dict type is returned in response and always contains at least three names: replies_full (a list containing the DNS response as binary data), replies_tree (a list containing the parsed DNS response data) and status (an int). The storage associated with this must be freed by a call to getdns_free_sync_request_memory (3). </p>
-<dt></dl>
+<dt> <i>context</i></dt>
+<dd>A pointer to the previously created DNS context that is to be used with this DNS request. see getdns_context (3) </dd>
+<dt> <i>name</i></dt>
+<dd>the service name to resolve </dd>
+<dt> <i>extensions</i></dt>
+<dd>extensions for this request, NULL if no extensions, see libgetdns (3) for a detailed description of extensions </dd>
+<dt> <i>userarg</i></dt>
+<dd>returned to the callback function untouched, can be NULL </dd>
+<dt> <i>transaction_id</i></dt>
+<dd>populated by the API and used to identify the callback (for example to getdns_cancel_callback), can be NULL, set to 0 if the function fails </dd>
+<dt> <i>callbackfn</i></dt>
+<dd>non-NULL pointer to a callback function defined by the application, typically used to process the response. Only the asynchronous signature accepts a callback function, the synchronous signature does not include a callback. See libgetdns (3) for a more detailed discussion of callback functions. </dd>
+<dt> <i>response</i></dt>
+<dd>A getdns_dict type is returned in response and always contains at least three names: replies_full (a list containing the DNS response as binary data), replies_tree (a list containing the parsed DNS response data) and status (an int). The storage associated with this must be freed by a call to getdns_free_sync_request_memory (3). </dd>
+<dt></dt></dl>
 <h2>RETURN VALUES</h2>
-<dd>Upon successful completion the functions return <code>GETDNS_RETURN_GOOD</code> , otherwise the following error values are returned: </p>
+<dd>Upon successful completion the functions return <code>GETDNS_RETURN_GOOD</code> , otherwise the following error values are returned: </dd>
 <p> <code>GETDNS_RETURN_BAD_CONTEXT </code> if the context pointer is invalid or the context has internal deficiencies </p>
 <p> <code>GETDNS_RETURN_BAD_DOMAIN_NAME</code> if the domain name passed to the function is invalid </p>
 <p> <code>GETDNS_RETURN_EXTENSION_MISFORMAT</code> if the data type specified in one or more of the extensions does not match the specifications </p>

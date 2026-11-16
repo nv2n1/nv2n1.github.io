@@ -133,72 +133,72 @@ void OVclose(void);
 <p> The <code>TextToToken</code> function converts a text string into a token. </p>
 <p> The <code>SMsetup</code> function configures some parameters for use by the storage manager. <i>type</i> is one of following:</p>
 <dl>
-<dt>&quot;SM_RDWR&quot;</p>
-<dd> Allow read/write open for storage files (default is false).</p>
-<dt>&quot;SM_PREOPEN&quot;</p>
-<dd> Open all storage files at startup time and keep them (default is false).</dl>
+<dt>&quot;SM_RDWR&quot;</dt>
+<dd> Allow read/write open for storage files (default is false).</dd>
+<dt>&quot;SM_PREOPEN&quot;</dt>
+<dd> Open all storage files at startup time and keep them (default is false).</dd></dl>
 <p> <i>value</i> is the pointer which tells each type&#8217;s value. It returns true if setup is successful, or false if not. </p>
 <p> The <code>SMinit</code> function calls the setup function for all of the configured methods based on <code>SMsetup</code>. This function should be called prior to all other storage <font SIZE="-1">API</font> functions which begin with <tt>&quot;SM&quot;</tt> except <code>SMsetup</code>. It returns true if initialization is successful or returns false if not. <code>SMinit</code> returns true, unless all storage methods fail initialization. </p>
 <p> The <code>SMstore</code> function stores an article specified with <i>article</i>. The headers and body of the article are supplied to <code>SMstore</code> using the <i>iov</i> and <i>iovcnt</i> members of <font SIZE="-1"><code>ARTHANDLE</code></font>. (<i>data</i> and <i>private</i> are ignored by <code>SMstore</code>.) If <i>arrived</i> is specified, <code>SMstore</code> uses its value as article&#8217;s arrival time; otherwise <code>SMstore</code> uses the current time for it. <code>SMstore</code> returns the token type or returns <font SIZE="-1"><code>TOKEN_EMPTY</code></font> if the article is not stored because some error occurs or simply does not match any <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3) expression in <i>storage.conf</i>. <code>SMstore</code> fails if <font SIZE="-1"><code>SM_RDWR</code></font> has not been set to true with <code>SMsetup</code>. </p>
 <p> The <code>SMretrieve</code> function retrieves an article specified with <i>token</i>. <i>amount</i> is the one of following which specifies retrieving type:</p>
 <dl>
-<dt>&quot;RETR_ALL&quot;</p>
-<dd> Retrieve the whole article.</p>
-<dt>&quot;RETR_HEAD&quot;</p>
-<dd> Retrieve the headers of the article.</p>
-<dt>&quot;RETR_BODY&quot;</p>
-<dd> Retrieve the body of the article.</p>
-<dt>&quot;RETR_STAT&quot;</p>
-<dd> Just check to see if the article exists.</dl>
+<dt>&quot;RETR_ALL&quot;</dt>
+<dd> Retrieve the whole article.</dd>
+<dt>&quot;RETR_HEAD&quot;</dt>
+<dd> Retrieve the headers of the article.</dd>
+<dt>&quot;RETR_BODY&quot;</dt>
+<dd> Retrieve the body of the article.</dd>
+<dt>&quot;RETR_STAT&quot;</dt>
+<dd> Just check to see if the article exists.</dd></dl>
 <p> <code>SMretrieve</code> provides the article data via the <i>data</i> and <i>len</i> members of <font SIZE="-1"><code>ARTHANDLE</code></font>. (<i>iov</i> is not set by <code>SMretrieve</code>.) The data area indicated by <font SIZE="-1"><code>ARTHANDLE</code></font> should not be modified. </p>
 <p> The <code>SMnext</code> function is similar in function to <code>SMretrieve</code> except that it is intended for traversing the method&#8217;s article store sequentially. To start a query, <code>SMnext</code> should be called with a <font SIZE="-1">NULL</font> pointer <font SIZE="-1"><code>ARTHANDLE</code></font>. Then <code>SMnext</code> returns <font SIZE="-1"><code>ARTHANDLE</code></font> which should be used for the next query. If a <font SIZE="-1">NULL</font> pointer <font SIZE="-1"><code>ARTHANDLE</code></font> is returned, no articles are left to be queried. If <i>data</i> of <font SIZE="-1"><code>ARTHANDLE</code></font> is <font SIZE="-1">NULL</font> pointer or <i>len</i> of <font SIZE="-1"><code>ARTHANDLE</code></font> is <tt>0</tt>, it indicates the article may be corrupted and should be cancelled by <i>SMcancel</i>. The data area indicated by <font SIZE="-1"><code>ARTHANDLE</code></font> should not be modified. </p>
 <p> The <code>SMfreearticle</code> function frees all allocated memory used by <code>SMretrieve</code> and <code>SMnext</code>. If <code>SMnext</code> will be called with previously returned <font SIZE="-1"><code>ARTHANDLE</code></font>, <code>SMfreearticle</code> should not be called as <code>SMnext</code> frees allocated memory internally. </p>
 <p> The <code>SMcancel</code> function removes the article specified with <i>token</i>. It returns true if cancellation is successful or returns false if not. <code>SMcancel</code> fails if <font SIZE="-1"><code>SM_RDWR</code></font> has not been set to true with <code>SMsetup</code>. </p>
 <p> The <code>SMprobe</code> function checks the token on <font SIZE="-1"><code>PROBETYPE</code></font>. <i>type</i> is one of following:</p>
 <dl>
-<dt>&quot;SELFEXPIRE&quot;</p>
-<dd> Check to see if the method of the token has self expire functionality.</p>
-<dt>&quot;SMARTNGNUM&quot;</p>
-<dd> Get the newsgroup name and the article number of the token.</p>
-<dt>&quot;EXPENSIVESTAT&quot;</p>
-<dd> Check to see whether checking the existence of an article is expensive or not.</dl>
+<dt>&quot;SELFEXPIRE&quot;</dt>
+<dd> Check to see if the method of the token has self expire functionality.</dd>
+<dt>&quot;SMARTNGNUM&quot;</dt>
+<dd> Get the newsgroup name and the article number of the token.</dd>
+<dt>&quot;EXPENSIVESTAT&quot;</dt>
+<dd> Check to see whether checking the existence of an article is expensive or not.</dd></dl>
 <p> The <code>SMprintfiles</code> function shows file name or token usable by <i>fastrm</i>(8). </p>
 <p> The <code>SMflushcacheddata</code> function flushes cached data on each storage method. <i>type</i> is one of following:</p>
 <dl>
-<dt>&quot;SM_HEAD&quot;</p>
-<dd> Flush cached header.</p>
-<dt>&quot;SM_CANCELLEDART&quot;</p>
-<dd> Flush the articles which should be cancelled.</p>
-<dt>&quot;SM_ALL&quot;</p>
-<dd> Flush all cached data.</dl>
+<dt>&quot;SM_HEAD&quot;</dt>
+<dd> Flush cached header.</dd>
+<dt>&quot;SM_CANCELLEDART&quot;</dt>
+<dd> Flush the articles which should be cancelled.</dd>
+<dt>&quot;SM_ALL&quot;</dt>
+<dd> Flush all cached data.</dd></dl>
 <p> The <code>SMexplaintoken</code> function returns a human-readable text string with a clear, decoded form of the storage <font SIZE="-1">API</font> token. </p>
 <p> The <code>SMshutdown</code> function calls the shutdown for each configured storage method and then frees any resources it has allocated for itself. </p>
 <p> <code>SMerrno</code> and <code>SMerrorstr</code> indicate the reason of the last error concerning storage manager. </p>
 <p> <code>OVopen</code> calls the setup function for configured method which is specified as <i>ovmethod</i> in <i>inn.conf</i>. <i>mode</i> is constructed from following:</p>
 <dl>
-<dt>&quot;OV_READ&quot;</p>
-<dd> Allow read open for the overview method.</p>
-<dt>&quot;OV_WRITE&quot;</p>
-<dd> Allow write open for the overview method.</dl>
+<dt>&quot;OV_READ&quot;</dt>
+<dd> Allow read open for the overview method.</dd>
+<dt>&quot;OV_WRITE&quot;</dt>
+<dd> Allow write open for the overview method.</dd></dl>
 <p> This function should be called prior to all other <font SIZE="-1">OV</font> functions which begin with <tt>&quot;OV&quot;</tt>. </p>
 <p> The <code>OVctl</code> function probes or sets some parameters for the overview method. <i>type</i> is one of following:</p>
 <dl>
-<dt>&quot;OVGROUPBASEDEXPIRE&quot;</p>
-<dd> Setup how group-based expiry is done.</p>
-<dt>&quot;OVCUTOFFLOW&quot;</p>
-<dd> Do not add overview data if the data is under the lowest article.</p>
-<dt>&quot;OVSORT&quot;</p>
-<dd> Probe which key is suitable for the overview method.</p>
-<dt>&quot;OVSPACE&quot;</p>
-<dd> Probe the overview space usage.</p>
-<dt>&quot;OVSTATALL&quot;</p>
-<dd> Stat all the articles when <code>OVexpiregroup</code> is called.</p>
-<dt>&quot;OVSTATICSEARCH&quot;</p>
-<dd> Setup if results of <code>OVsearch</code> are stored in a static buffer and must be copied before the next call to <code>OVsearch</code>.</p>
-<dt>&quot;OVCACHEKEEP&quot;</p>
-<dd> Setup whether the cache should be kept.</p>
-<dt>&quot;OVCACHEFREE&quot;</p>
-<dd> Free the cache.</dl>
+<dt>&quot;OVGROUPBASEDEXPIRE&quot;</dt>
+<dd> Setup how group-based expiry is done.</dd>
+<dt>&quot;OVCUTOFFLOW&quot;</dt>
+<dd> Do not add overview data if the data is under the lowest article.</dd>
+<dt>&quot;OVSORT&quot;</dt>
+<dd> Probe which key is suitable for the overview method.</dd>
+<dt>&quot;OVSPACE&quot;</dt>
+<dd> Probe the overview space usage.</dd>
+<dt>&quot;OVSTATALL&quot;</dt>
+<dd> Stat all the articles when <code>OVexpiregroup</code> is called.</dd>
+<dt>&quot;OVSTATICSEARCH&quot;</dt>
+<dd> Setup if results of <code>OVsearch</code> are stored in a static buffer and must be copied before the next call to <code>OVsearch</code>.</dd>
+<dt>&quot;OVCACHEKEEP&quot;</dt>
+<dd> Setup whether the cache should be kept.</dd>
+<dt>&quot;OVCACHEFREE&quot;</dt>
+<dd> Free the cache.</dd></dl>
 <p> The <code>OVgroupstats</code> function retrieves the specified newsgroup information from the overview method. </p>
 <p> The <code>OVgroupadd</code> function informs the overview method that the specified newsgroup is being added. </p>
 <p> The <code>OVgroupdel</code> function informs the overview method that the specified newsgroup is being removed. </p>

@@ -11,7 +11,6 @@ description: "sc::ForceLink –"
 <p> This, together with <code>ForceLinkBase</code>, is used to force code for particular classes to be linked into executables.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;class.h&gt;</code></pre>
 <p> Inherits <code>sc::ForceLinkBase&lt; A &gt;</code>.</p>
 <h3>Public Member Functions</h3>

@@ -20,17 +20,17 @@ CREATE [ TRUSTED ] [ PROCEDURAL ] LANGUAGE <i>name</i>
 <p> Ordinarily, the user must have the PostgreSQL superuser privilege to register a new language. However, the owner of a database can register a new language within that database if the language is listed in the <code>pg_pltemplate</code> catalog and is marked as allowed to be created by database owners (<code>tmpldbacreate</code> is true). The default is that trusted languages can be created by database owners, but this can be adjusted by superusers by modifying the contents of <code>pg_pltemplate</code>. The creator of a language becomes its owner and can later drop it, rename it, or assign it to a new owner.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>TRUSTED</code></p>
-<dd>TRUSTED specifies that the call handler for the language is safe, that is, it does not offer an unprivileged user any functionality to bypass access restrictions. If this key word is omitted when registering the language, only users with the PostgreSQL superuser privilege can use this language to create new functions.</p>
-<dt><code>PROCEDURAL</code></p>
-<dd>This is a noise word.</p>
-<dt><i>name</i></p>
-<dd>The name of the new procedural language. The language name is case insensitive. The name must be unique among the languages in the database. </p>
+<dt><code>TRUSTED</code></dt>
+<dd>TRUSTED specifies that the call handler for the language is safe, that is, it does not offer an unprivileged user any functionality to bypass access restrictions. If this key word is omitted when registering the language, only users with the PostgreSQL superuser privilege can use this language to create new functions.</dd>
+<dt><code>PROCEDURAL</code></dt>
+<dd>This is a noise word.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the new procedural language. The language name is case insensitive. The name must be unique among the languages in the database. </dd>
 <p> For backward compatibility, the name can be enclosed by single quotes.</p>
-<dt><code>HANDLER </code><i>call_handler</i></p>
-<dd><i>call_handler</i> is the name of a previously registered function that will be called to execute the procedural language functions. The call handler for a procedural language must be written in a compiled language such as C with version 1 call convention and registered with PostgreSQL as a function taking no arguments and returning the <code>language_handler</code> type, a placeholder type that is simply used to identify the function as a call handler.</p>
-<dt><code>VALIDATOR </code><i>valfunction</i></p>
-<dd><i>valfunction</i> is the name of a previously registered function that will be called when a new function in the language is created, to validate the new function. If no validator function is specified, then a new function will not be checked when it is created. The validator function must take one argument of type <code>oid</code>, which will be the OID of the to-be-created function, and will typically return <code>void</code>. </p>
+<dt><code>HANDLER </code><i>call_handler</i></dt>
+<dd><i>call_handler</i> is the name of a previously registered function that will be called to execute the procedural language functions. The call handler for a procedural language must be written in a compiled language such as C with version 1 call convention and registered with PostgreSQL as a function taking no arguments and returning the <code>language_handler</code> type, a placeholder type that is simply used to identify the function as a call handler.</dd>
+<dt><code>VALIDATOR </code><i>valfunction</i></dt>
+<dd><i>valfunction</i> is the name of a previously registered function that will be called when a new function in the language is created, to validate the new function. If no validator function is specified, then a new function will not be checked when it is created. The validator function must take one argument of type <code>oid</code>, which will be the OID of the to-be-created function, and will typically return <code>void</code>. </dd>
 <p> A validator function would typically inspect the function body for syntactical correctness, but it can also look at other properties of the function, for example if the language cannot handle certain argument types. To signal an error, the validator function should use the <code>ereport()</code> function. The return value of the function is ignored.</dl>
 <p> The TRUSTED option and the support function name(s) are ignored if the server has an entry for the specified language name in <code>pg_pltemplate</code>.</p>
 <h2>Notes</h2>
@@ -54,3 +54,4 @@ CREATE LANGUAGE plsample
 <p><code>CREATE LANGUAGE</code> is a PostgreSQL extension.</p>
 <h2>See Also</h2>
 <p>ALTER LANGUAGE [<code><a href="/docs/linux/man/7-alter_language/">alter_language</a></code>(7)], CREATE FUNCTION [<code><a href="/docs/linux/man/7-create_function/">create_function</a></code>(7)], DROP LANGUAGE [<code><a href="/docs/linux/man/7-drop_language/">drop_language</a></code>(7)], GRANT [<code><a href="/docs/linux/man/7-grant/">grant</a></code>(7)], REVOKE [<code><a href="/docs/linux/man/7-revoke/">revoke</a></code>(7)], createlang [<code><a href="/docs/linux/man/1-createlang/">createlang</a></code>(1)], droplang [<code><a href="/docs/linux/man/1-droplang/">droplang</a></code>(1)] </p>
+</p>

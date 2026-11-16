@@ -16,10 +16,10 @@ description: "ffmvforce – force orientation test for force-feedback devices"
 <p> <code>Beware, the stress test may damage your device!</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&lt;<i>device</i>&gt;</p>
-<dd> The device to test.</p>
-<dt><code>-u</code> &lt;<i>update rate</i>&gt;</p>
-<dd> The update rate in Hz (5 by default).</dl>
+<dt>&lt;<i>device</i>&gt;</dt>
+<dd> The device to test.</dd>
+<dt><code>-u</code> &lt;<i>update rate</i>&gt;</dt>
+<dd> The update rate in Hz (5 by default).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffcfstress/">ffcfstress</a></code>(1), <code><a href="/docs/linux/man/1-fftest/">fftest</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1).</p>
 <h2>AUTHOR</h2>

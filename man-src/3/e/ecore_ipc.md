@@ -73,28 +73,28 @@ description: "Ecore_Ipc.h – Ecore inter-process communication functions."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cl</i> The given client.<br />
- <i>size</i> The maximum data payload size in bytes.</dl>
+ <i>size</i> The maximum data payload size in bytes.</dd></dl>
 <h3>EAPI void ecore_ipc_client_data_size_max_set (<code>Ecore_Ipc_Client</code> * cl, int size)</h3>
 <p>Sets the max data payload size for an Ipc message in bytes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>client</i> The given client.<br />
- <i>size</i> The maximum data payload size in bytes.</dl>
+ <i>size</i> The maximum data payload size in bytes.</dd></dl>
 <h3>EAPI void ecore_ipc_client_flush (<code>Ecore_Ipc_Client</code> * cl)</h3>
 <p>Flushes all pending data to the given client. </p>
 <p> Will return when done. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> References ecore_con_client_flush().</p>
 <h3>EAPI char* ecore_ipc_client_ip_get (<code>Ecore_Ipc_Client</code> * cl)</h3>
 <p>Gets the IP address of a client that has been connected to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to an internal string that contains the IP address of the connected server in the form &#8216;XXX.YYY.ZZZ.AAA&#8217; IP notation. This string should not be modified or trusted to stay valid after deletion for the cl object. If no IP is known NULL is returned.</dl>
+<dd>A pointer to an internal string that contains the IP address of the connected server in the form &#8216;XXX.YYY.ZZZ.AAA&#8217; IP notation. This string should not be modified or trusted to stay valid after deletion for the cl object. If no IP is known NULL is returned.</dd></dl>
 <p> References ecore_con_client_ip_get().</p>
 <h3>EAPI void ecore_ipc_server_client_limit_set (<code>Ecore_Ipc_Server</code> * svr, int client_limit, char reject_excess_clients)</h3>
 <p>Sets a limit on the number of clients that can be handled concurrently by the given server, and a policy on what to do if excess clients try to connect. </p>
@@ -103,37 +103,37 @@ description: "Ecore_Ipc.h – Ecore inter-process communication functions."
 <dl COMPACT>
 <dd><i>svr</i> The given server.<br />
  <i>client_limit</i> The maximum number of clients to handle concurrently. -1 means unlimited (default). 0 effectively disables the server.<br />
- <i>reject_excess_clients</i> Set to 1 to automatically disconnect excess clients as soon as they connect if you are already handling client_limit clients. Set to 0 (default) to just hold off on the &#8216;accept()&#8217; system call until the number of active clients drops. This causes the kernel to queue up to 4096 connections (or your kernel&#8217;s limit, whichever is lower).</dl>
+ <i>reject_excess_clients</i> Set to 1 to automatically disconnect excess clients as soon as they connect if you are already handling client_limit clients. Set to 0 (default) to just hold off on the &#8216;accept()&#8217; system call until the number of active clients drops. This causes the kernel to queue up to 4096 connections (or your kernel&#8217;s limit, whichever is lower).</dd></dl>
 <p> References ecore_con_server_client_limit_set().</p>
 <h3>EAPI int ecore_ipc_server_data_size_max_get (<code>Ecore_Ipc_Server</code> * svr)</h3>
 <p>Gets the max data payload size for an Ipc message in bytes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>svr</i> The given server.</dl>
+<dd><i>svr</i> The given server.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The maximum data payload in bytes.</dl>
+<dd>The maximum data payload in bytes.</dd></dl>
 <h3>EAPI void ecore_ipc_server_data_size_max_set (<code>Ecore_Ipc_Server</code> * svr, int size)</h3>
 <p>Sets the max data payload size for an Ipc message in bytes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>svr</i> The given server.<br />
- <i>size</i> The maximum data payload size in bytes.</dl>
+ <i>size</i> The maximum data payload size in bytes.</dd></dl>
 <h3>EAPI void ecore_ipc_server_flush (<code>Ecore_Ipc_Server</code> * svr)</h3>
 <p>Flushes all pending data to the given server. </p>
 <p> Will return when done. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>svr</i> The given server.</dl>
+<dd><i>svr</i> The given server.</dd></dl>
 <p> References ecore_con_server_flush().</p>
 <h3>EAPI char* ecore_ipc_server_ip_get (<code>Ecore_Ipc_Server</code> * svr)</h3>
 <p>Gets the IP address of a server that has been connected to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>svr</i> The given server.</dl>
+<dd><i>svr</i> The given server.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to an internal string that contains the IP address of the connected server in the form &#8216;XXX.YYY.ZZZ.AAA&#8217; IP notation. This string should not be modified or trusted to stay valid after deletion for the svr object. If no IP is known NULL is returned.</dl>
+<dd>A pointer to an internal string that contains the IP address of the connected server in the form &#8216;XXX.YYY.ZZZ.AAA&#8217; IP notation. This string should not be modified or trusted to stay valid after deletion for the svr object. If no IP is known NULL is returned.</dd></dl>
 <p> References ecore_con_server_ip_get().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

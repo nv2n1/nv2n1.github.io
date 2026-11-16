@@ -30,14 +30,10 @@ If the arguments are temporaries, forward_as_tuple does not extend their lifetim
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;map&gt;
-
 #include &lt;tuple&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::map&lt;int, std::string&gt; m;
     m.emplace(std::piecewise_construct,

@@ -20,21 +20,21 @@ description: "nmbscan – NMB/SMB network scanner"
 <p> It can discover all the NMB/SMB/NetBIOS/Windows hosts on a local area network by using the hosts lists maintained by master browsers.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
+<dt><code>&#8211;help</code></dt>
 <dd>
- Show summary of options.</p>
-<dt><code>-L</code></p>
-<dd> Show license agreement (GPL).</p>
-<dt><code>-d</code></p>
-<dd> Show all domains.</p>
-<dt><code>-m</code></p>
-<dd> Show all domains with master browsers.</p>
-<dt><code>-a</code></p>
-<dd> Show all domains, master browsers, and servers.</p>
-<dt><code>-h</code></p>
-<dd> Show information on hosts, known by ip name/address.</p>
-<dt><code>-n</code></p>
-<dd> Show information on hosts, known by nmb name.</dl>
+ Show summary of options.</dd>
+<dt><code>-L</code></dt>
+<dd> Show license agreement (GPL).</dd>
+<dt><code>-d</code></dt>
+<dd> Show all domains.</dd>
+<dt><code>-m</code></dt>
+<dd> Show all domains with master browsers.</dd>
+<dt><code>-a</code></dt>
+<dd> Show all domains, master browsers, and servers.</dd>
+<dt><code>-h</code></dt>
+<dd> Show information on hosts, known by ip name/address.</dd>
+<dt><code>-n</code></dt>
+<dd> Show information on hosts, known by nmb name.</dd></dl>
 <h2>AUTHOR</h2>
 <p> nmbscan was written by Grégoire Barbier. </p>
 <h2>Index</h2>

@@ -22,59 +22,57 @@ description: "qstat – show status of pbs batch jobs"
 <p> When requesting queue or server status, synopsis format 3 through 5, qstat will output information about each </i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-f</p>
-<dd> Specifies that a full status display be written to standard out.</p>
-<dt>-a</p>
-<dd> &quot;All&quot; jobs are displayed in the alternative format, see the Standard Output section. If the operand is a destination id, all jobs at that destination are displayed. If the operand is a job id, information about that job is displayed.</p>
-<dt>-e</p>
-<dd> If the operand is a job id or not specified, only jobs in executable queues are displayed. Setting the PBS_QSTAT_EXECONLY environment variable will also enable this option.</p>
-<dt>-i</p>
-<dd> Job status is displayed in the alternative format. For a destination id operand, status for jobs at that destination which are not running are displayed. This includes jobs which are queued, held or waiting. If an operand is a job id, status for that job is displayed regardless of its state.</p>
-<dt>-r</p>
-<dd> If an operand is a job id, status for that job is displayed. For a destination id operand, status for jobs at that destination which are running are displayed, this includes jobs which are suspended.</p>
-<dt>-n</p>
-<dd> In addition to the basic information, nodes allocated to a job are listed.</p>
-<dt>-1</p>
-<dd> In combination with -n, the -1 option puts all of the nodes on the same line as the job ID. In combination with -f, attributes are not folded to fit in a terminal window. This is intended to ease the parsing of the qstat output.</p>
-<dt>-s</p>
-<dd> In addition to the basic information, any comment provided by the batch administrator or scheduler is shown.</p>
-<dt>-G</p>
-<dd> Show size information in giga-bytes.</p>
-<dt>-M</p>
-<dd> Show size information, disk or memory in mega-words. A word is considered to be 8 bytes.</p>
-<dt>-R</p>
-<dd> In addition to other information, disk reservation information is shown. Not applicable to all systems.</p>
-<dt>-t</p>
-<dd> Normal qstat output displays a summary of the array instead of the entire array, job for job. qstat -t expands the output to display the entire array. Note that arrays are now named with brackets following the array name; for example: </p>
+<dt>-f</dt>
+<dd> Specifies that a full status display be written to standard out.</dd>
+<dt>-a</dt>
+<dd> &quot;All&quot; jobs are displayed in the alternative format, see the Standard Output section. If the operand is a destination id, all jobs at that destination are displayed. If the operand is a job id, information about that job is displayed.</dd>
+<dt>-e</dt>
+<dd> If the operand is a job id or not specified, only jobs in executable queues are displayed. Setting the PBS_QSTAT_EXECONLY environment variable will also enable this option.</dd>
+<dt>-i</dt>
+<dd> Job status is displayed in the alternative format. For a destination id operand, status for jobs at that destination which are not running are displayed. This includes jobs which are queued, held or waiting. If an operand is a job id, status for that job is displayed regardless of its state.</dd>
+<dt>-r</dt>
+<dd> If an operand is a job id, status for that job is displayed. For a destination id operand, status for jobs at that destination which are running are displayed, this includes jobs which are suspended.</dd>
+<dt>-n</dt>
+<dd> In addition to the basic information, nodes allocated to a job are listed.</dd>
+<dt>-1</dt>
+<dd> In combination with -n, the -1 option puts all of the nodes on the same line as the job ID. In combination with -f, attributes are not folded to fit in a terminal window. This is intended to ease the parsing of the qstat output.</dd>
+<dt>-s</dt>
+<dd> In addition to the basic information, any comment provided by the batch administrator or scheduler is shown.</dd>
+<dt>-G</dt>
+<dd> Show size information in giga-bytes.</dd>
+<dt>-M</dt>
+<dd> Show size information, disk or memory in mega-words. A word is considered to be 8 bytes.</dd>
+<dt>-R</dt>
+<dd> In addition to other information, disk reservation information is shown. Not applicable to all systems.</dd>
+<dt>-t</dt>
+<dd> Normal qstat output displays a summary of the array instead of the entire array, job for job. qstat -t expands the output to display the entire array. Note that arrays are now named with brackets following the array name; for example: </dd>
 <p> echo sleep 20 | qsub -t 0-299 189[].pali </p>
 <p> Individual jobs in the array are now also noted using square brackets instead of dashes; for example, here is part of the output of qstat -t for the preceding array: </p>
 <p> 189[299].napali STDIN[299] dbeer 0 Q batch</p>
-<dt>-u</p>
+<dt>-u</dt>
 <dd> Job status is displayed in the alternative format. If an operand is a job id, status for that job is displayed. For a destination id operand, status for jobs at that destination which are owned by the user(s) listed in <i> are displayed. The syntax of the is:<br />
  </i><code><br />
- Host names may be wild carded on the left end, e.g. &quot;*.nasa.gov&quot;. User_name without a &quot;@host&quot; is equivalent to &quot;user_name@*&quot;, that is at any host.</p>
-<dt>-Q</p>
-<dd> Specifies that the request is for queue status and that the operands are destination identifiers.</p>
-<dt>-q</p>
-<dd> Specifies that the request is for queue status which should be shown in the alternative format.</p>
-<dt>-B</p>
-<dd> Specifies that the request is for batch server status and that the operands are the names of servers.</p>
-<dt>-x</p>
-<dd> Specifies that the output is to be displayed in XML form. This option is only valid with the -f option or by itself, which will also specify the -f full status display.</p>
-<dt>-l</p>
-<dd> Specifies that the long name of the job (or the job name appended with the suffix alias) should be displayed.</dl>
+ Host names may be wild carded on the left end, e.g. &quot;*.nasa.gov&quot;. User_name without a &quot;@host&quot; is equivalent to &quot;user_name@*&quot;, that is at any host.</dd>
+<dt>-Q</dt>
+<dd> Specifies that the request is for queue status and that the operands are destination identifiers.</dd>
+<dt>-q</dt>
+<dd> Specifies that the request is for queue status which should be shown in the alternative format.</dd>
+<dt>-B</dt>
+<dd> Specifies that the request is for batch server status and that the operands are the names of servers.</dd>
+<dt>-x</dt>
+<dd> Specifies that the output is to be displayed in XML form. This option is only valid with the -f option or by itself, which will also specify the -f full status display.</dd>
+<dt>-l</dt>
+<dd> Specifies that the long name of the job (or the job name appended with the suffix alias) should be displayed.</dd></dl>
 <p> </code></p>
 <h2>OPERANDS</h2>
 <p> If neither the <i> nor the option is given, the operands on the qstat command must be either job identifiers or destinations identifiers. </p>
 <p> If the operand is a job identifier, it must be in the following form:</p>
 <dl>
 <dt>
-<dd> </i><code></dl>
+</dt><dd> </i><code></dd></dl>
 <p> where is the job identifier assigned at submittal time, see qsub</code>. If the <code> is omitted, the name of the default server will be used. If is supplied, the request will be for the job identifier currently at that Server. </p>
 <p> If the operand is a destination identifier, it is one of the following three forms:</p>
 <dl>
-<dt>
-<dd>
 </dl>
 <p> If is specified, the request is for status of all jobs in that queue at the default server. If the form is given, the request is for status of all jobs at that server. If a full destination identifier, is given, the request is for status of all jobs in the named queue at the named server. </p>
 <p> If the </code><i> option is given, the operands are destination identifiers as specified above. If </i><code> is specified, the status of that queue at the default server will be given. If is specified, the status of the named queue at the named server will be given. If is specified, the status of all queues at the named server will be given. If no destination is specified, the status of all queues at the default server will be given. </p>
@@ -83,23 +81,21 @@ description: "qstat – show status of pbs batch jobs"
 <p> Displaying Job Status </p>
 <p> If job status is being displayed in the default format and the <i> option is not specified, the following items are displayed on a single line, in the specified order, separated by white space:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> the job identifier assigned by PBS.</p>
-<dt>&#8211;</p>
-<dd> the job name given by the submitter.</p>
-<dt>&#8211;</p>
-<dd> the job owner</p>
-<dt>&#8211;</p>
-<dd> the CPU time used</p>
-<dt>&#8211;</p>
-<dd> the job state:</p>
+<dt>&#8211;</dt>
+<dd> the job identifier assigned by PBS.</dd>
+<dt>&#8211;</dt>
+<dd> the job name given by the submitter.</dd>
+<dt>&#8211;</dt>
+<dd> the job owner</dd>
+<dt>&#8211;</dt>
+<dd> the CPU time used</dd>
+<dt>&#8211;</dt>
+<dd> the job state:</dd>
 <dl>
 <dt>
-<dd> C &#8211; Job is completed after having run/<br />
- E &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Job is exiting after having run.</p>
+</dt><dd> C &#8211; Job is completed after having run/<br />
+ E &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Job is exiting after having run.</dd>
 <p> H &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Job is held.</p>
 <p> Q &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>job is queued, eligible to run or routed.</p>
 <p> R &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>job is running.</p>
@@ -108,138 +104,128 @@ description: "qstat – show status of pbs batch jobs"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(-a option) to be reached.</p>
 <p> S &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(Unicos only) job is suspend.</p>
 </dl>
-<dt>&#8211;</p>
-<dd> the queue in which the job resides</dl>
+<dt>&#8211;</dt>
+<dd> the queue in which the job resides</dd></dl>
 </dl>
 <p> If job status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, full display for each job consists of the header line:<br />
  <code> job identifier<br />
  Followed by one line per job attribute of the form: </p>
 <p> If any of the options -a, -i, -r, -u, -n, -s, -G or -M are provided, the alternative display format for jobs is used. The following items are displayed on a single line, in the specified order, separated by white space:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> the job identifier assigned by PBS.</p>
-<dt>&#8211;</p>
-<dd> the job owner.</p>
-<dt>&#8211;</p>
-<dd> The queue in which the job currently resides.</p>
-<dt>&#8211;</p>
-<dd> The job name given by the submitter.</p>
-<dt>&#8211;</p>
-<dd> The session id (if the job is running).</p>
-<dt>&#8211;</p>
-<dd> The number of nodes requested by the job.</p>
-<dt>&#8211;</p>
-<dd> The number of cpus or tasks requested by the job.</p>
-<dt>&#8211;</p>
-<dd> The amount of memory requested by the job.</p>
-<dt>&#8211;</p>
-<dd> Either the cpu time, if specified, or wall time requested by the job, (hh:mm).</p>
-<dt>&#8211;</p>
-<dd> The job&#8217;s current state.</p>
-<dt>&#8211;</p>
-<dd> The amount of cpu time or wall time used by the job (hh:mm).</dl>
+<dt>&#8211;</dt>
+<dd> the job identifier assigned by PBS.</dd>
+<dt>&#8211;</dt>
+<dd> the job owner.</dd>
+<dt>&#8211;</dt>
+<dd> The queue in which the job currently resides.</dd>
+<dt>&#8211;</dt>
+<dd> The job name given by the submitter.</dd>
+<dt>&#8211;</dt>
+<dd> The session id (if the job is running).</dd>
+<dt>&#8211;</dt>
+<dd> The number of nodes requested by the job.</dd>
+<dt>&#8211;</dt>
+<dd> The number of cpus or tasks requested by the job.</dd>
+<dt>&#8211;</dt>
+<dd> The amount of memory requested by the job.</dd>
+<dt>&#8211;</dt>
+<dd> Either the cpu time, if specified, or wall time requested by the job, (hh:mm).</dd>
+<dt>&#8211;</dt>
+<dd> The job&#8217;s current state.</dd>
+<dt>&#8211;</dt>
+<dd> The amount of cpu time or wall time used by the job (hh:mm).</dd></dl>
 </dl>
 <p> If the -R option is provided, the line contains:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> the job identifier assigned by PBS.</p>
-<dt>&#8211;</p>
-<dd> the job owner.</p>
-<dt>&#8211;</p>
-<dd> The queue in which the job currently resides.</p>
-<dt>&#8211;</p>
-<dd> The number of nodes requested by the job.</p>
-<dt>&#8211;</p>
-<dd> The number of cpus or tasks requested by the job.</p>
-<dt>&#8211;</p>
-<dd> The amount of memory requested by the job.</p>
-<dt>&#8211;</p>
-<dd> Either the cpu time or wall time requested by the job.</p>
-<dt>&#8211;</p>
-<dd> The job&#8217;s current state.</p>
-<dt>&#8211;</p>
-<dd> The amount of cpu time or wall time used by the job.</p>
-<dt>&#8211;</p>
-<dd> The amount of SRFS space requested on the big file system.</p>
-<dt>&#8211;</p>
-<dd> The amount of SRFS space requested on the fast file system.</p>
-<dt>&#8211;</p>
-<dd> The amount of space requested on the parallel I/O file system.</dl>
+<dt>&#8211;</dt>
+<dd> the job identifier assigned by PBS.</dd>
+<dt>&#8211;</dt>
+<dd> the job owner.</dd>
+<dt>&#8211;</dt>
+<dd> The queue in which the job currently resides.</dd>
+<dt>&#8211;</dt>
+<dd> The number of nodes requested by the job.</dd>
+<dt>&#8211;</dt>
+<dd> The number of cpus or tasks requested by the job.</dd>
+<dt>&#8211;</dt>
+<dd> The amount of memory requested by the job.</dd>
+<dt>&#8211;</dt>
+<dd> Either the cpu time or wall time requested by the job.</dd>
+<dt>&#8211;</dt>
+<dd> The job&#8217;s current state.</dd>
+<dt>&#8211;</dt>
+<dd> The amount of cpu time or wall time used by the job.</dd>
+<dt>&#8211;</dt>
+<dd> The amount of SRFS space requested on the big file system.</dd>
+<dt>&#8211;</dt>
+<dd> The amount of SRFS space requested on the fast file system.</dd>
+<dt>&#8211;</dt>
+<dd> The amount of space requested on the parallel I/O file system.</dd></dl>
 </dl>
 <p> The last three fields may not contain useful information at all sites or on all systems.<br />
  Note: Remaining walltime does not account for walltime multiplication factors. </p>
 <p> Displaying Queue Status </p>
 <p> If queue status is being displayed and the </code><i> option was not specified, the following items are displayed on a single line, in the specified order, separated by white space:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> the queue name</p>
-<dt>&#8211;</p>
-<dd> the maximum number of jobs that may be run in the queue concurrently</p>
-<dt>&#8211;</p>
-<dd> the total number of jobs in the queue</p>
-<dt>&#8211;</p>
-<dd> the enable or disabled status of the queue</p>
-<dt>&#8211;</p>
-<dd> the started or stopped status of the queue</p>
-<dt>&#8211;</p>
-<dd> for each job state, the name of the state and the number of jobs in the queue in that state.</p>
-<dt>&#8211;</p>
-<dd> the type of queue, execution or routing.</dl>
+<dt>&#8211;</dt>
+<dd> the queue name</dd>
+<dt>&#8211;</dt>
+<dd> the maximum number of jobs that may be run in the queue concurrently</dd>
+<dt>&#8211;</dt>
+<dd> the total number of jobs in the queue</dd>
+<dt>&#8211;</dt>
+<dd> the enable or disabled status of the queue</dd>
+<dt>&#8211;</dt>
+<dd> the started or stopped status of the queue</dd>
+<dt>&#8211;</dt>
+<dd> for each job state, the name of the state and the number of jobs in the queue in that state.</dd>
+<dt>&#8211;</dt>
+<dd> the type of queue, execution or routing.</dd></dl>
 </dl>
 <p> If queue status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, the full display for each queue consists of the header line:<br />
  <code> queue_name<br />
  Followed by one line per queue attribute of the form: </p>
 <p> If the -q option is specified, queue information is displayed in the alternative format: The following information is displayed on a single line:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> the queue name</p>
-<dt>&#8211;</p>
-<dd> the maximum amount of memory a job in the queue may request</p>
-<dt>&#8211;</p>
-<dd> the maximum amount of cpu time a job in the queue may request</p>
-<dt>&#8211;</p>
-<dd> the maximum amount of wall time a job in the queue may request</p>
-<dt>&#8211;</p>
-<dd> the maximum amount of nodes a job in the queue may request</p>
-<dt>&#8211;</p>
-<dd> the number of jobs in the queue in the running state</p>
-<dt>&#8211;</p>
-<dd> the number of jobs in the queue in the queued state</p>
-<dt>&#8211;</p>
-<dd> the maximum number (limit) of jobs that may be run in the queue concurrently</p>
-<dt>&#8211;</p>
+<dt>&#8211;</dt>
+<dd> the queue name</dd>
+<dt>&#8211;</dt>
+<dd> the maximum amount of memory a job in the queue may request</dd>
+<dt>&#8211;</dt>
+<dd> the maximum amount of cpu time a job in the queue may request</dd>
+<dt>&#8211;</dt>
+<dd> the maximum amount of wall time a job in the queue may request</dd>
+<dt>&#8211;</dt>
+<dd> the maximum amount of nodes a job in the queue may request</dd>
+<dt>&#8211;</dt>
+<dd> the number of jobs in the queue in the running state</dd>
+<dt>&#8211;</dt>
+<dd> the number of jobs in the queue in the queued state</dd>
+<dt>&#8211;</dt>
+<dd> the maximum number (limit) of jobs that may be run in the queue concurrently</dd>
+<dt>&#8211;</dt>
 <dd> the state of the queue given by a pair of letters:<br />
  &#8211; either the letter E if the queue is Enabled or D if Disabled, and<br />
- &#8211; either the letter R if the queue is Running (started) or S if Stopped.</dl>
+ &#8211; either the letter R if the queue is Running (started) or S if Stopped.</dd></dl>
 </dl>
 <p> Displaying Server Status </p>
 <p> If batch server status is being displayed and the </code><i> option is not specified, the following items are displayed on a single line, in the specified order, separated by white space:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> the server name</p>
-<dt>&#8211;</p>
-<dd> the maximum number of jobs that the server may run concurrently</p>
-<dt>&#8211;</p>
-<dd> the total number of jobs currently managed by the server</p>
-<dt>&#8211;</p>
-<dd> the status of the server</p>
-<dt>&#8211;</p>
-<dd> for each job state, the name of the state and the number of jobs in the server in that state</dl>
+<dt>&#8211;</dt>
+<dd> the server name</dd>
+<dt>&#8211;</dt>
+<dd> the maximum number of jobs that the server may run concurrently</dd>
+<dt>&#8211;</dt>
+<dd> the total number of jobs currently managed by the server</dd>
+<dt>&#8211;</dt>
+<dd> the status of the server</dd>
+<dt>&#8211;</dt>
+<dd> for each job state, the name of the state and the number of jobs in the server in that state</dd></dl>
 </dl>
 <p> If server status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, the full display for the server consist of the header line:<br />
  <code> server name<br />

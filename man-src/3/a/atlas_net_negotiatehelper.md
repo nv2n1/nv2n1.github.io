@@ -19,8 +19,9 @@ description: "Atlas::Net::NegotiateHelper – Negotiation of codecs and filters 
 <p> non blocking negotiation of Codecs and Filters requires a list of avalable Codecs and Filters, along with the name of sender and a Socket </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd>Connection </p>
+<dd>Connection </dd>
 <p> <code>Codec</code> </p>
 <p> <code>Filter</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>
+</p>

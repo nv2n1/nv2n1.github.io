@@ -11,14 +11,14 @@ description: "XtSetMultiClickTime, XtGetMultiClickTime – set and get multi-cli
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtSetMultiClickTime(Display* <i>display</i>, int <i>time</i>);</p>
-<dd>int XtGetMultiClickTime(Display* <i>display</i>);</dl>
+<dd>void XtSetMultiClickTime(Display* <i>display</i>, int <i>time</i>);</dd>
+<dd>int XtGetMultiClickTime(Display* <i>display</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the display connection.</p>
-<dt><i>time</i></p>
-<dd>Specifies the multi-click time in milliseconds.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the display connection.</dd>
+<dt><i>time</i></dt>
+<dd>Specifies the multi-click time in milliseconds.</dd></dl>
 <h2>Description</h2>
 <p><code>XtSetMultiClickTime</code> sets the time interval used by the translation manager to determine when multiple events are interpreted as a repeated event. </p>
 <p> <code>XtGetMultiClickTime</code> returns the time in milliseconds that the translation manager uses to determine if multiple events are to be interpreted as a repeated event for purposes of matching a translation entry containing a repeat count.</p>

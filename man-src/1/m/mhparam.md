@@ -11,28 +11,28 @@ description: "mhparam – print nmh profile and context components"
 <p> mhparam &#8211; print nmh profile and context components </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mhparam</code> [<i>components</i>] [<code>-all</code>] [<code>-component</code> | <code>-nocomponent</code>] [<code>-version</code>] [<code>-help</code>] [<code>-debug</code>]</dl>
+<dt> <code>mhparam</code> [<i>components</i>] [<code>-all</code>] [<code>-component</code> | <code>-nocomponent</code>] [<code>-version</code>] [<code>-help</code>] [<code>-debug</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mhparam</code></p>
-<dd>writes the value of the specified profile component to the standard output separated by newlines. Component name matching is case-insensitive. If the profile component is not present, the default value (or nothing if there is no default) is printed. </p>
+<dd>writes the value of the specified profile component to the standard output separated by newlines. Component name matching is case-insensitive. If the profile component is not present, the default value (or nothing if there is no default) is printed. </dd>
 <p> If the switch <code>-component</code> is given, then the component name is displayed along with the profile components value. This can be disabled with the switch <code>-nocomponent</code>. </p>
 <p> If more than one component is specified in the <i>components</i> list, then the switch <code>-component</code> is on by default. If only one component is specified, then the switch <code>-nocomponent</code> is on by default. </p>
 <p> If <code>-all</code> is specified, then all components in the nmh profile are displayed and other arguments are ignored. </p>
 <p> <code>mhparam</code> can provide other information, such as the <code>nmh</code> version identifier, the locations of the nmh <i>etcdir</i> and <i>libdir</i> install directories, all <i>proc</i> settings, and the <i>datalocking</i> method described in the <i><a href="/docs/linux/man/5-mh-profile/">mh-profile</a></i>(5) man page. Information about the configuration of the <code>nmh</code> installation is also available, including the default mail spool locking method. To test whether the configuration includes support for SASL, TLS, and <i>iconv</i>(3), the following commands, respectively, will output a non-null string to indicate support: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 mhparam sasl
 mhparam tls
 mhparam iconv
 </pre>
-</dl>
+</dd></dl>
 <p> Conversely, no output means that the specified support is not included. The <code>-debug</code> switch displays all such other information available from <code>mhparam</code>. </p>
 <p> Examples: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % mhparam path
 Mail
@@ -66,15 +66,15 @@ tls
 % mhparam iconv
 iconv
 </pre>
-</dl>
+</dd></dl>
 <p> <code>mhparam</code> is also useful in backquoted operations: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % fgrep cornell.edu `mhpath +`/`mhparam aliasfile`
 </pre>
-</dl>
+</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>mhparam</code> returns the number of components that were not found.</p>
 <h2>FILES</h2>

@@ -15,16 +15,16 @@ description: "btrfs-find-root – filter to find btrfs root"
 <h2>Options</h2>
 <p>-a</p>
 <dl>
-<dd>Search through all metadata extents, even the root has been already found.</dl>
+<dd>Search through all metadata extents, even the root has been already found.</dd></dl>
 <p> -g <i>&lt;generation&gt;</i></p>
 <dl>
-<dd>Filter root tree by it&#8217;s original transaction id, tree root&#8217;s generation in default.</dl>
+<dd>Filter root tree by it&#8217;s original transaction id, tree root&#8217;s generation in default.</dd></dl>
 <p> -o <i>&lt;objectid&gt;</i></p>
 <dl>
-<dd>Filter root tree by it&#8217;s objectid,tree root&#8217;s objectid in default.</dl>
+<dd>Filter root tree by it&#8217;s objectid,tree root&#8217;s objectid in default.</dd></dl>
 <p> -l <i>&lt;level&gt;</i></p>
 <dl>
-<dd>Filter root tree by B-+ tree&#8217;s level, level 0 in default.</dl>
+<dd>Filter root tree by B-+ tree&#8217;s level, level 0 in default.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>btrfs-find-root</code> will return 0 if no error happened. If any problems happened, 1 will be returned.</p>
 <h2>See Also</h2>

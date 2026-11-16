@@ -17,11 +17,11 @@ description: "ldns_zone_rrs, ldns_zone_soa"
 <p> ldns_rr * ldns_zone_soa(const ldns_zone *z); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_zone_rrs</i>()</p>
-<dd>Get a list of a zone&#8217;s content. Note that the SOA isn&#8217;t included in this list. You need to get the with ldns_zone_soa. .br <code>z</code>: the zone to read from .br Returns the rrs from this zone</dl>
+<dt> <i>ldns_zone_rrs</i>()</dt>
+<dd>Get a list of a zone&#8217;s content. Note that the SOA isn&#8217;t included in this list. You need to get the with ldns_zone_soa. .br <code>z</code>: the zone to read from .br Returns the rrs from this zone</dd></dl>
 <dl>
-<dt> <i>ldns_zone_soa</i>()</p>
-<dd>Return the soa record of a zone .br <code>z</code>: the zone to read from .br Returns the soa record in the zone</dl>
+<dt> <i>ldns_zone_soa</i>()</dt>
+<dd>Return the soa record of a zone .br <code>z</code>: the zone to read from .br Returns the soa record in the zone</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

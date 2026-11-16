@@ -14,7 +14,7 @@ description: "ata_scsi_verify_xlat – Translate SCSI VERIFY command into an ATA
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Storage for translated ATA taskfile</dl>
+</dd><dd>Storage for translated ATA taskfile</dd></dl>
 <h2>Description</h2>
 <p>Converts SCSI VERIFY command to an ATA READ VERIFY command. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
@@ -23,5 +23,5 @@ description: "ata_scsi_verify_xlat – Translate SCSI VERIFY command into an ATA
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -29,10 +29,8 @@ Pointer to the beginning of the buffer in the associated std::strsteambuf or NUL
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::strstream dyn;      // dynamically-allocated output buffer
     dyn &lt;&lt; &quot;Test: &quot; &lt;&lt; 1.23; // not adding std::ends to demonstrate append behavior

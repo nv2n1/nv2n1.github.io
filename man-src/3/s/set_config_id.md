@@ -10,7 +10,6 @@ description: "set_config_id – Writes a driver ID in the configuration file. Al
 <p>set_config_id &#8211; Writes a driver ID in the configuration file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_config_id(const char *section, const char *name, int val);</code></pre>
 <h2>Description</h2>
 <p>Writes a 4-letter driver ID variable to the current config file. See the comments about set_config_string(). </p>

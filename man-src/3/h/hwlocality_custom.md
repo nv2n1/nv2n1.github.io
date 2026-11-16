@@ -23,7 +23,7 @@ description: "hwlocality_custom – Building Custom Topologies"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The cpuset and nodeset of the new group object are NULL because these sets are meaningless when assembling multiple topologies. </p>
+</dt><dd> The cpuset and nodeset of the new group object are NULL because these sets are meaningless when assembling multiple topologies. </dd>
 <p> The cpuset and nodeset of the parent object are not modified.</dl>
 <h3>int hwloc_custom_insert_topology (<code>hwloc_topology_t</code> newtopology, <code>hwloc_obj_t</code> newparent, <code>hwloc_topology_t</code> oldtopology, <code>hwloc_obj_t</code> oldroot)</h3>
 <p> Insert an existing topology inside a custom topology. Duplicate the existing topology oldtopology inside a new custom topology newtopology as a leaf of object newparent. </p>
@@ -33,9 +33,9 @@ description: "hwlocality_custom – Building Custom Topologies"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The cpuset and nodeset of the newparent object are not modified based on the contents of oldtopology.</dl>
+</dt><dd> The cpuset and nodeset of the newparent object are not modified based on the contents of oldtopology.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAH">Author</a></dt>
+<dd></dd></dl>

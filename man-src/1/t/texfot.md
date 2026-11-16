@@ -22,11 +22,9 @@ url: "/docs/linux/man/1-texfot/"
  <pre>
   # Sample basic invocation:
   texfot pdflatex file.tex
-  
   # Ordinarily all output is copied to /tmp/fot before filtering,
   # but that can be omitted:
   texfot --tee=/dev/null lualatex file.tex
-  
   # Example of more complex engine invocation:
   texfot xelatex --recorder '\nonstopmode\input file'
 </pre> 
@@ -42,17 +40,16 @@ url: "/docs/linux/man/1-texfot/"
  Here is the order in which lines of output are checked:
 <dl>
 <dt>1.
-<dd> If the ``next line'' needs to be printed (see below), print it.
-<dt>2.
-<dd> Otherwise, if the line matches the built-in list of regexps to ignore, or any user-supplied list of regexps to ignore (given with <tt>&quot;--ignore&quot;</tt>, see below), in that order, ignore it.
-<dt>3.
-<dd> Otherwise, if the line matches the list of regexps for which the next line (two lines in all) should be shown, show this line and set the ``next line'' flag for the next time around the loop. Examples are the common <tt>&quot;!&quot;</tt> and <tt>&quot;filename:lineno:&quot;</tt> error messages, which are generally followed by a line with specific detail about the error.
-<dt>4.
-<dd> Otherwise, if the line matches the list of regexps to show, show it.
-<dt>5.
-<dd> Otherwise, the default: if the line came from stdout, ignore it; if the line came from stderr, print it (to stdout). This distinction is made because TeX engines write relatively few messages to stderr, and it's likely that any such should be considered. 
-
- It would be easy to add more options to allow for user additions to the various regex lists, if that ever seems useful. Or email me (see end).</dl>
+</dt><dd> If the ``next line'' needs to be printed (see below), print it.
+</dd><dt>2.
+</dt><dd> Otherwise, if the line matches the built-in list of regexps to ignore, or any user-supplied list of regexps to ignore (given with <tt>&quot;--ignore&quot;</tt>, see below), in that order, ignore it.
+</dd><dt>3.
+</dt><dd> Otherwise, if the line matches the list of regexps for which the next line (two lines in all) should be shown, show this line and set the ``next line'' flag for the next time around the loop. Examples are the common <tt>&quot;!&quot;</tt> and <tt>&quot;filename:lineno:&quot;</tt> error messages, which are generally followed by a line with specific detail about the error.
+</dd><dt>4.
+</dt><dd> Otherwise, if the line matches the list of regexps to show, show it.
+</dd><dt>5.
+</dt><dd> Otherwise, the default: if the line came from stdout, ignore it; if the line came from stderr, print it (to stdout). This distinction is made because TeX engines write relatively few messages to stderr, and it's likely that any such should be considered. 
+ It would be easy to add more options to allow for user additions to the various regex lists, if that ever seems useful. Or email me (see end).</dd></dl>
  
 
  Once a particular check matches, the program moves on to process the next line. 
@@ -70,29 +67,29 @@ url: "/docs/linux/man/1-texfot/"
  Options may start with either - or --, and may be unambiguously abbreviated. It is best to use the full option name in scripts, though, to avoid possible collisions with new options in the future.
 <dl>
 <dt>&quot;--debug&quot;
-<dd>
-<dt>&quot;--no-debug&quot;
-<dd> Output (or not) what is being done on standard error. Off by default.
-<dt>&quot;--ignore&quot; <i>regexp</i>
-<dd> Ignore lines in the TeX output matching (Perl) <i>regexp</i>. Can be repeated. Adds to the default set of ignore regexps rather than replacing. These regexps are not automatically anchored (or otherwise altered), simply used as-is.
-<dt>&quot;--interactive&quot;
-<dd>
-<dt>&quot;--no-interactive&quot;
-<dd> By default, standard input to the TeX process is closed so that TeX's interactive mode (waiting for input upon error, the <tt>&quot;*&quot;</tt> prompt, etc.) is never entered. Giving <tt>&quot;--interactive&quot;</tt> allows interaction to happen.
-<dt>&quot;--quiet&quot;
-<dd>
-<dt>&quot;--no-quiet&quot;
-<dd> By default, the TeX command being invoked is reported on standard output. <tt>&quot;--quiet&quot;</tt> omits that reporting. To get a completely silent run, redirect standard output: <tt>&quot;texfot ...&nbsp;&gt;/dev/null&quot;</tt>. (The only messages to standard error should be errors from <tt>&quot;texfot&quot;</tt> itself, so it shouldn't be necessary to redirect that, but of course that can be done as well.)
-<dt>&quot;--stderr&quot;
-<dd>
-<dt>&quot;--no-stderr&quot;
-<dd> The default is for <tt>&quot;texfot&quot;</tt> to report everything written to stderr by the TeX command (on stdout). <tt>&quot;--no-stderr&quot;</tt> omits that reporting. (Some programs, <tt>&quot;dvisvgm&quot;</tt> is one, can be rather verbose on stderr.)
-<dt>&quot;--tee&quot; <i>file</i>
-<dd> By default, the output being filtered is <tt>&quot;tee&quot;</tt>-ed, before filtering, to <tt>&quot;$TMPDIR/fot&quot;</tt> (or <tt>&quot;$TMP/fot&quot;</tt> if <tt>&quot;TMP&quot;</tt> is set, or <tt>&quot;/tmp/fot&quot;</tt> if neither environment variable is set), to make it easy to check the full output when the filtering seems suspect. This option allows specifying a different file. Use <tt>&quot;--tee&nbsp;/dev/null&quot;</tt> if you don't want the original output at all.
-<dt>&quot;--version&quot;
-<dd> Output version information and exit successfully.
-<dt>&quot;--help&quot;
-<dd> Display this help and exit successfully.</dl>
+</dt><dd>
+</dd><dt>&quot;--no-debug&quot;
+</dt><dd> Output (or not) what is being done on standard error. Off by default.
+</dd><dt>&quot;--ignore&quot; <i>regexp</i>
+</dt><dd> Ignore lines in the TeX output matching (Perl) <i>regexp</i>. Can be repeated. Adds to the default set of ignore regexps rather than replacing. These regexps are not automatically anchored (or otherwise altered), simply used as-is.
+</dd><dt>&quot;--interactive&quot;
+</dt><dd>
+</dd><dt>&quot;--no-interactive&quot;
+</dt><dd> By default, standard input to the TeX process is closed so that TeX's interactive mode (waiting for input upon error, the <tt>&quot;*&quot;</tt> prompt, etc.) is never entered. Giving <tt>&quot;--interactive&quot;</tt> allows interaction to happen.
+</dd><dt>&quot;--quiet&quot;
+</dt><dd>
+</dd><dt>&quot;--no-quiet&quot;
+</dt><dd> By default, the TeX command being invoked is reported on standard output. <tt>&quot;--quiet&quot;</tt> omits that reporting. To get a completely silent run, redirect standard output: <tt>&quot;texfot ...&nbsp;&gt;/dev/null&quot;</tt>. (The only messages to standard error should be errors from <tt>&quot;texfot&quot;</tt> itself, so it shouldn't be necessary to redirect that, but of course that can be done as well.)
+</dd><dt>&quot;--stderr&quot;
+</dt><dd>
+</dd><dt>&quot;--no-stderr&quot;
+</dt><dd> The default is for <tt>&quot;texfot&quot;</tt> to report everything written to stderr by the TeX command (on stdout). <tt>&quot;--no-stderr&quot;</tt> omits that reporting. (Some programs, <tt>&quot;dvisvgm&quot;</tt> is one, can be rather verbose on stderr.)
+</dd><dt>&quot;--tee&quot; <i>file</i>
+</dt><dd> By default, the output being filtered is <tt>&quot;tee&quot;</tt>-ed, before filtering, to <tt>&quot;$TMPDIR/fot&quot;</tt> (or <tt>&quot;$TMP/fot&quot;</tt> if <tt>&quot;TMP&quot;</tt> is set, or <tt>&quot;/tmp/fot&quot;</tt> if neither environment variable is set), to make it easy to check the full output when the filtering seems suspect. This option allows specifying a different file. Use <tt>&quot;--tee&nbsp;/dev/null&quot;</tt> if you don't want the original output at all.
+</dd><dt>&quot;--version&quot;
+</dt><dd> Output version information and exit successfully.
+</dd><dt>&quot;--help&quot;
+</dt><dd> Display this help and exit successfully.</dd></dl>
 
 <h2>RATIONALE</h2>
 

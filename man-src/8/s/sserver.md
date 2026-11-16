@@ -25,26 +25,26 @@ reply len 32, contents:
 You are nlgilman [at] JIMI.MIT.EDU</pre>
 <h2>Common Error Messages</h2>
 <dl>
-<dt>1.</p>
-<dd>kinit returns the error: </p>
+<dt>1.</dt>
+<dd>kinit returns the error: </dd>
 <pre>kinit: Client not found in Kerberos database while getting
  initial credentials</pre>
 <p>This means that you didn&#8217;t create an entry for your username in the Kerberos database.</p>
-<dt>2.</p>
-<dd>sclient returns the error: </p>
+<dt>2.</dt>
+<dd>sclient returns the error: </dd>
 <pre>unknown service sample/tcp; check /etc/services</pre>
 <p>This means that you don&#8217;t have an entry in /etc/services for the sample tcp port.</p>
-<dt>3.</p>
-<dd>sclient returns the error: </p>
+<dt>3.</dt>
+<dd>sclient returns the error: </dd>
 <pre>connect: Connection refused</pre>
 <p>This probably means you didn&#8217;t edit /etc/inetd.conf correctly, or you didn&#8217;t restart inetd after editing inetd.conf.</p>
-<dt>4.</p>
-<dd>sclient returns the error: </p>
+<dt>4.</dt>
+<dd>sclient returns the error: </dd>
 <pre>sclient: Server not found in Kerberos database while using
  sendauth</pre>
 <p>This means that the <code>sample/hostname [at] LOCAL.REALM</code> service was not defined in the Kerberos database; it should be created using <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>, and a keytab file needs to be generated to make the key for that service principal available for sclient.</p>
-<dt>5.</p>
-<dd>sclient returns the error: </p>
+<dt>5.</dt>
+<dd>sclient returns the error: </dd>
 <pre>sendauth rejected, error reply is:
  &quot;No such file or directory&quot;</pre>
 <p>This probably means sserver couldn&#8217;t find the keytab file. It was probably not installed in the proper directory.</dl>
@@ -54,3 +54,4 @@ You are nlgilman [at] JIMI.MIT.EDU</pre>
 <p>MIT</p>
 <h2>Copyright</h2>
 <p>1985-2016, MIT</p>
+</p>

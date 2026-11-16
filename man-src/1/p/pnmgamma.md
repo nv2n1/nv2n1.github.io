@@ -26,13 +26,13 @@ description: "pnmgamma – perform gamma correction on a portable anymap"
 <p> If you don&#8217;t specify any gamma parameters, <code>pnmgamma</code> chooses a default. For the transfer functions defined by standards, the default is the value defined by the standard. If you specify anything else, you will be varying from the standard. For the simple power function transfer function, the default gamma is 1/.45. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-ungamma</code></p>
-<dd> Apply the inverse of the specified transfer function (i.e. go from gamma-corrected nonlinear intensities to linear intensities). </p>
-<dt><code>-cieramp</code></p>
-<dd> Use the CIE Rec. 709 gamma transfer function. Note that it is true CIE Rec. 709 only if you use the default gamma value (i.e. don&#8217;t specify any gamma parameters). This transfer function is a power function modified with a linear ramp near black. </p>
+<dt><code>-ungamma</code></dt>
+<dd> Apply the inverse of the specified transfer function (i.e. go from gamma-corrected nonlinear intensities to linear intensities). </dd>
+<dt><code>-cieramp</code></dt>
+<dd> Use the CIE Rec. 709 gamma transfer function. Note that it is true CIE Rec. 709 only if you use the default gamma value (i.e. don&#8217;t specify any gamma parameters). This transfer function is a power function modified with a linear ramp near black. </dd>
 <p> If you specify neither <code>-cieramp</code> nor <code>-srgbramp</code>, the transfer function defaults to a simple power function.</p>
-<dt><code>-srgbramp </code></p>
-<dd> Use the Internation Electrotechnical Commission (IEC) SRGB gamma transfer function (as specified in the standard IEC 61966-2-1). Note that it is true SRGB only if you use the default gamma value (i.e. don&#8217;t specify any gamma parameters). This transfer function is like the one selected by <code>-cieramp</code>, but with different constants in it. </p>
+<dt><code>-srgbramp </code></dt>
+<dd> Use the Internation Electrotechnical Commission (IEC) SRGB gamma transfer function (as specified in the standard IEC 61966-2-1). Note that it is true SRGB only if you use the default gamma value (i.e. don&#8217;t specify any gamma parameters). This transfer function is like the one selected by <code>-cieramp</code>, but with different constants in it. </dd>
 <p> Note that SRGB is often spelled &quot;sRGB&quot;. In this document, we use standard English typography, though, which doesn&#8217;t allow for that kind of capitalization. </p>
 <p> If you specify neither <code>-cieramp</code> nor <code>-srgbramp</code>, the transfer function defaults to a simple power function. </p>
 </dl>

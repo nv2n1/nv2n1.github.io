@@ -15,10 +15,10 @@ description: "mtx-unzip – Simple Unzipper"
 <p> <code>Simple Unzipper</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;list</code></p>
-<dd> list files in archive</p>
-<dt><code>&#8211;extract</code></p>
-<dd> extract files [&#8211;silent &#8211;steps]</dl>
+<dt><code>&#8211;list</code></dt>
+<dd> list files in archive</dd>
+<dt><code>&#8211;extract</code></dt>
+<dd> extract files [&#8211;silent &#8211;steps]</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

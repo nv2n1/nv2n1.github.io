@@ -15,11 +15,11 @@ description: "sbverify – UEFI secure boot verification tool"
 <p> Verify a UEFI secure boot image.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;cert</code> &lt;certfile&gt;</p>
-<dd> certificate (x509 certificate)</p>
-<dt><code>&#8211;list</code></p>
-<dd> list all signatures (but don&#8217;t verify)</p>
-<dt><code>&#8211;detached</code> &lt;file&gt;</p>
-<dd> read signature from &lt;file&gt;, instead of looking for an embedded signature </p>
+<dt><code>&#8211;cert</code> &lt;certfile&gt;</dt>
+<dd> certificate (x509 certificate)</dd>
+<dt><code>&#8211;list</code></dt>
+<dd> list all signatures (but don&#8217;t verify)</dd>
+<dt><code>&#8211;detached</code> &lt;file&gt;</dt>
+<dd> read signature from &lt;file&gt;, instead of looking for an embedded signature </dd>
 </dl>
 <h2>Index</h2>

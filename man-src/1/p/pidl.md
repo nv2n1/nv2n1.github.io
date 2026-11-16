@@ -33,43 +33,42 @@ url: "/docs/linux/man/1-pidl/"
 
 <dl>
 <dt><i>--help</i>
-<dd> Show list of available options.
-<dt><i>--version</i>
-<dd> Show pidl version
-<dt><i>--outputdir </i><font SIZE="-1"><i>OUTNAME</i></font><i></i>
-<dd> Write output files to the specified directory. Defaults to the current directory.
-<dt><i>--includedir </i><font SIZE="-1"><i>DIR</i></font><i></i>
-<dd> Add <font SIZE="-1">DIR</font> to the search path used by the preprocessor. This option can be specified multiple times.
-<dt><i>--parse-idl-tree</i>
-<dd> Read internal tree structure from input files rather than assuming they contain <font SIZE="-1">IDL.</font>
-<dt><i>--dump-idl</i>
-<dd> Generate a new <font SIZE="-1">IDL</font> file. File will be named <font SIZE="-1">OUTNAME</font>.idl.
-<dt><i>--header</i>
-<dd> Generate a C header file for the specified interface. Filename defaults to <font SIZE="-1">OUTNAME</font>.h.
-<dt><i>--ndr-parser</i>
-<dd> Generate a C file and C header containing <font SIZE="-1">NDR</font> parsers. The filename for the parser defaults to ndr_OUTNAME.c. The header filename will be the parser filename with the extension changed from .c to .h.
-<dt><i>--tdr-parser</i>
-<dd> Generate a C file and C header containing <font SIZE="-1">TDR</font> parsers. The filename for the parser defaults to tdr_OUTNAME.c. The header filename will be the parser filename with the extension changed from .c to .h.
-<dt><i>--typelib</i>
-<dd> Write type information to the specified file.
-<dt><i>--server</i>
-<dd> Generate boilerplate for the <font SIZE="-1">RPC</font> server that implements the interface. Filename defaults to ndr_OUTNAME_s.c.
-<dt><i>--template</i>
-<dd> Generate stubs for a <font SIZE="-1">RPC</font> server that implements the interface. Output will be written to stdout.
-<dt><i>--ws-parser</i>
-<dd> Generate an Wireshark dissector (in C) and header file. The dissector filename defaults to packet-dcerpc-OUTNAME.c while the header filename defaults to packet-dcerpc-OUTNAME.h. 
-
+</dt><dd> Show list of available options.
+</dd><dt><i>--version</i>
+</dt><dd> Show pidl version
+</dd><dt><i>--outputdir </i><font SIZE="-1"><i>OUTNAME</i></font><i></i>
+</dt><dd> Write output files to the specified directory. Defaults to the current directory.
+</dd><dt><i>--includedir </i><font SIZE="-1"><i>DIR</i></font><i></i>
+</dt><dd> Add <font SIZE="-1">DIR</font> to the search path used by the preprocessor. This option can be specified multiple times.
+</dd><dt><i>--parse-idl-tree</i>
+</dt><dd> Read internal tree structure from input files rather than assuming they contain <font SIZE="-1">IDL.</font>
+</dd><dt><i>--dump-idl</i>
+</dt><dd> Generate a new <font SIZE="-1">IDL</font> file. File will be named <font SIZE="-1">OUTNAME</font>.idl.
+</dd><dt><i>--header</i>
+</dt><dd> Generate a C header file for the specified interface. Filename defaults to <font SIZE="-1">OUTNAME</font>.h.
+</dd><dt><i>--ndr-parser</i>
+</dt><dd> Generate a C file and C header containing <font SIZE="-1">NDR</font> parsers. The filename for the parser defaults to ndr_OUTNAME.c. The header filename will be the parser filename with the extension changed from .c to .h.
+</dd><dt><i>--tdr-parser</i>
+</dt><dd> Generate a C file and C header containing <font SIZE="-1">TDR</font> parsers. The filename for the parser defaults to tdr_OUTNAME.c. The header filename will be the parser filename with the extension changed from .c to .h.
+</dd><dt><i>--typelib</i>
+</dt><dd> Write type information to the specified file.
+</dd><dt><i>--server</i>
+</dt><dd> Generate boilerplate for the <font SIZE="-1">RPC</font> server that implements the interface. Filename defaults to ndr_OUTNAME_s.c.
+</dd><dt><i>--template</i>
+</dt><dd> Generate stubs for a <font SIZE="-1">RPC</font> server that implements the interface. Output will be written to stdout.
+</dd><dt><i>--ws-parser</i>
+</dt><dd> Generate an Wireshark dissector (in C) and header file. The dissector filename defaults to packet-dcerpc-OUTNAME.c while the header filename defaults to packet-dcerpc-OUTNAME.h. 
  Pidl will read additional data from an Wireshark conformance file if present. Such a file should have the same location as the <font SIZE="-1">IDL</font> file but with the extension <i>cnf</i> rather than <i>idl</i>. See Parse::Pidl::Wireshark::Conformance for details on the format of this file.
-<dt><i>--diff</i>
-<dd> Parse an <font SIZE="-1">IDL</font> file, generate a new <font SIZE="-1">IDL</font> file based on the internal data structures and see if there are any differences with the original <font SIZE="-1">IDL</font> file. Useful for debugging pidl.
-<dt><i>--dump-idl-tree</i>
-<dd> Tell pidl to dump the internal tree representation of an <font SIZE="-1">IDL</font> file the to disk. Useful for debugging pidl.
-<dt><i>--dump-ndr-tree</i>
-<dd> Tell pidl to dump the internal <font SIZE="-1">NDR</font> information tree it generated from the <font SIZE="-1">IDL</font> file to disk. Useful for debugging pidl.
-<dt><i>--samba3-ndr-client</i>
-<dd> Generate client calls for Samba3, to be placed in rpc_client/. Instead of calling out to the code in Samba3's rpc_parse/, this will call out to Samba4's <font SIZE="-1">NDR</font> code instead.
-<dt><i>--samba3-ndr-server</i>
-<dd> Generate server calls for Samba3, to be placed in rpc_server/. Instead of calling out to the code in Samba3's rpc_parse/, this will call out to Samba4's <font SIZE="-1">NDR</font> code instead.</dl>
+</dd><dt><i>--diff</i>
+</dt><dd> Parse an <font SIZE="-1">IDL</font> file, generate a new <font SIZE="-1">IDL</font> file based on the internal data structures and see if there are any differences with the original <font SIZE="-1">IDL</font> file. Useful for debugging pidl.
+</dd><dt><i>--dump-idl-tree</i>
+</dt><dd> Tell pidl to dump the internal tree representation of an <font SIZE="-1">IDL</font> file the to disk. Useful for debugging pidl.
+</dd><dt><i>--dump-ndr-tree</i>
+</dt><dd> Tell pidl to dump the internal <font SIZE="-1">NDR</font> information tree it generated from the <font SIZE="-1">IDL</font> file to disk. Useful for debugging pidl.
+</dd><dt><i>--samba3-ndr-client</i>
+</dt><dd> Generate client calls for Samba3, to be placed in rpc_client/. Instead of calling out to the code in Samba3's rpc_parse/, this will call out to Samba4's <font SIZE="-1">NDR</font> code instead.
+</dd><dt><i>--samba3-ndr-server</i>
+</dt><dd> Generate server calls for Samba3, to be placed in rpc_server/. Instead of calling out to the code in Samba3's rpc_parse/, this will call out to Samba4's <font SIZE="-1">NDR</font> code instead.</dd></dl>
 
 <h2>IDL SYNTAX</h2>
 
@@ -187,11 +186,11 @@ typedef struct {
  The following <font SIZE="-1">MIDL</font> features are not (yet) implemented in pidl or are implemented with an incompatible interface:
 <dl>
 <dt>&bull;
-<dd> Asynchronous communication
-<dt>&bull;
-<dd> Typelibs (.tlb files)
-<dt>&bull;
-<dd> Datagram support (ncadg_*)</dl>
+</dt><dd> Asynchronous communication
+</dd><dt>&bull;
+</dt><dd> Typelibs (.tlb files)
+</dd><dt>&bull;
+</dt><dd> Datagram support (ncadg_*)</dd></dl>
 
 <h3>Supported attributes and statements</h3>
 
@@ -201,23 +200,22 @@ typedef struct {
 
 <dl>
 <dt>public
-<dd> The [public] property on a structure or union is a pidl extension that forces the generated pull/push functions to be non-static. This allows you to declare types that can be used between modules. If you don't specify [public] then pull/push functions for other than top-level functions are declared static.
-<dt>noprint
-<dd> The [noprint] property is a pidl extension that allows you to specify that pidl should not generate a ndr_print_*() function for that structure or union. This is used when you wish to define your own print function that prints a structure in a nicer manner. A good example is the use of [noprint] on dom_sid, which allows the pretty-printing of SIDs.
-<dt>value
-<dd> The [value(expression)] property is a pidl extension that allows you to specify the value of a field when it is put on the wire. This allows fields that always have a well-known value to be automatically filled in, thus making the <font SIZE="-1">API</font> more programmer friendly. The expression can be any C expression.
-<dt>relative
-<dd> The [relative] property can be supplied on a pointer. When it is used it declares the pointer as a spoolss style ``relative'' pointer, which means it appears on the wire as an offset within the current encapsulating structure. This is not part of normal <font SIZE="-1">IDL/NDR,</font> but it is a very useful extension as it avoids the manual encoding of many complex structures.
-<dt>subcontext(length)
-<dd> Specifies that a size of <i>length</i> bytes should be read, followed by a blob of that size, which will be parsed as <font SIZE="-1">NDR.</font> 
-
+</dt><dd> The [public] property on a structure or union is a pidl extension that forces the generated pull/push functions to be non-static. This allows you to declare types that can be used between modules. If you don't specify [public] then pull/push functions for other than top-level functions are declared static.
+</dd><dt>noprint
+</dt><dd> The [noprint] property is a pidl extension that allows you to specify that pidl should not generate a ndr_print_*() function for that structure or union. This is used when you wish to define your own print function that prints a structure in a nicer manner. A good example is the use of [noprint] on dom_sid, which allows the pretty-printing of SIDs.
+</dd><dt>value
+</dt><dd> The [value(expression)] property is a pidl extension that allows you to specify the value of a field when it is put on the wire. This allows fields that always have a well-known value to be automatically filled in, thus making the <font SIZE="-1">API</font> more programmer friendly. The expression can be any C expression.
+</dd><dt>relative
+</dt><dd> The [relative] property can be supplied on a pointer. When it is used it declares the pointer as a spoolss style ``relative'' pointer, which means it appears on the wire as an offset within the current encapsulating structure. This is not part of normal <font SIZE="-1">IDL/NDR,</font> but it is a very useful extension as it avoids the manual encoding of many complex structures.
+</dd><dt>subcontext(length)
+</dt><dd> Specifies that a size of <i>length</i> bytes should be read, followed by a blob of that size, which will be parsed as <font SIZE="-1">NDR.</font> 
  <i>subcontext()</i> is deprecated now, and should not be used in new code. Instead, use <i>represent_as()</i> or <i>transmit_as()</i>.
-<dt>flag
-<dd> Specify boolean options, mostly used for low-level <font SIZE="-1">NDR</font> options. Several options can be specified using the | character. Note that flags are inherited by substructures!
-<dt>nodiscriminant
-<dd> The [nodiscriminant] property on a union means that the usual uint16 discriminent field at the start of the union on the wire is omitted. This is not normally allowed in <font SIZE="-1">IDL/NDR,</font> but is used for some spoolss structures.
-<dt>charset(name)
-<dd> Specify that the array or string uses the specified charset. If this attribute is specified, pidl will take care of converting the character data from this format to the host format. Commonly used values are <font SIZE="-1">UCS2, DOS</font> and <font SIZE="-1">UTF8.</font></dl>
+</dd><dt>flag
+</dt><dd> Specify boolean options, mostly used for low-level <font SIZE="-1">NDR</font> options. Several options can be specified using the | character. Note that flags are inherited by substructures!
+</dd><dt>nodiscriminant
+</dt><dd> The [nodiscriminant] property on a union means that the usual uint16 discriminent field at the start of the union on the wire is omitted. This is not normally allowed in <font SIZE="-1">IDL/NDR,</font> but is used for some spoolss structures.
+</dd><dt>charset(name)
+</dt><dd> Specify that the array or string uses the specified charset. If this attribute is specified, pidl will take care of converting the character data from this format to the host format. Commonly used values are <font SIZE="-1">UCS2, DOS</font> and <font SIZE="-1">UTF8.</font></dd></dl>
 
 <h3>Unsupported <font SIZE="-1">MIDL</font> properties or statements</h3>
 
@@ -261,14 +259,14 @@ $./ pidl-- ws - parser-- atsvc.idl
 
 
 <dt><a HREF="#lbAJ">COMPATIBILITY WITH MIDL</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAO">EXAMPLES</a>
-<dd>
-<dt><a HREF="#lbAP">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbAQ">LICENSE</a>
-<dd>
-<dt><a HREF="#lbAR">AUTHOR</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAO">EXAMPLES</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAP">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAQ">LICENSE</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAR">AUTHOR</a>
+</dt><dd></dd></dl>

@@ -16,31 +16,31 @@ description: "jobstats – print historic job information or timeline view"
 <p> Note that some information may not be valid if the job failed with certain error codes. If only a certain job range is chosen, then the text output will be sized for the longest job name encountered. Use the <code>-nw</code> option to get around this if the field is very wide.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-start_jid&nbsp;</code><i>jid</i></p>
-<dd> Only start at job id <i>jid</i>. If <i>jid</i> is negative then start with this offset from the last job id in use (like <code>tail -n</code>).</p>
-<dt><code>-end_jid&nbsp;</code><i>jid</i></p>
-<dd> End at job id <i>jid</i>.</p>
-<dt><code>-owner&nbsp;</code><i>opattern</i></p>
-<dd> Only show output where the job owner matches the pattern. <code>-name&nbsp;</code><i>npattern</i> Only show output where the job name matches the pattern.</p>
-<dt><code>-ntw</code></p>
+<dt><code>-start_jid&nbsp;</code><i>jid</i></dt>
+<dd> Only start at job id <i>jid</i>. If <i>jid</i> is negative then start with this offset from the last job id in use (like <code>tail -n</code>).</dd>
+<dt><code>-end_jid&nbsp;</code><i>jid</i></dt>
+<dd> End at job id <i>jid</i>.</dd>
+<dt><code>-owner&nbsp;</code><i>opattern</i></dt>
+<dd> Only show output where the job owner matches the pattern. <code>-name&nbsp;</code><i>npattern</i> Only show output where the job name matches the pattern.</dd>
+<dt><code>-ntw</code></dt>
 <dd>
- Do not show the timing window (start and end times) for each job.</p>
-<dt><code>-tformat&nbsp;</code><i>fmt</i></p>
+ Do not show the timing window (start and end times) for each job.</dd>
+<dt><code>-tformat&nbsp;</code><i>fmt</i></dt>
 <dd> Set time format for timing windows. Can be one of:<br />
- <code>epoch</code>: use Unix epoch time <code>fmt</code>: Specify format string. <code>-timeline</code> Produce a table with job timeline info showing visually where jobs ran. This forces HTML output.</p>
-<dt><code>-tsort&nbsp;</code><i>method</i></p>
+ <code>epoch</code>: use Unix epoch time <code>fmt</code>: Specify format string. <code>-timeline</code> Produce a table with job timeline info showing visually where jobs ran. This forces HTML output.</dd>
+<dt><code>-tsort&nbsp;</code><i>method</i></dt>
 <dd> Define a method to sort the timeline:<br />
  <code>jid</code>: Sort by job id (default)<br />
- <code>start</code>: Sort by start time</p>
-<dt><code>-table_width&nbsp;</code><i>w</i></p>
-<dd> Define width of timeline table as <i>w</i> pixels (default 1100)</p>
-<dt><code>-nw&nbsp;</code><i>w</i></p>
+ <code>start</code>: Sort by start time</dd>
+<dt><code>-table_width&nbsp;</code><i>w</i></dt>
+<dd> Define width of timeline table as <i>w</i> pixels (default 1100)</dd>
+<dt><code>-nw&nbsp;</code><i>w</i></dt>
 <dd>
- Limit the width of the job Name field in text output to <i>w</i>.</p>
-<dt><code>-nojoblist</code></p>
-<dd> Do not produce job list. <code>-html</code> Produce HTML output. <code>-usage</code> Show how each job&#8217;s slot usage aggregates. <code>-available_slots&nbsp;</code><i>s</i> Set the number of slots <i>s</i> available to jobs.</p>
-<dt><i>file</i></p>
-<dd> Job accounting file. If no file is given then <i>$SGE_ROOT/$SGE_CELL/common/accounting</i> will be used.</dl>
+ Limit the width of the job Name field in text output to <i>w</i>.</dd>
+<dt><code>-nojoblist</code></dt>
+<dd> Do not produce job list. <code>-html</code> Produce HTML output. <code>-usage</code> Show how each job&#8217;s slot usage aggregates. <code>-available_slots&nbsp;</code><i>s</i> Set the number of slots <i>s</i> available to jobs.</dd>
+<dt><i>file</i></dt>
+<dd> Job accounting file. If no file is given then <i>$SGE_ROOT/$SGE_CELL/common/accounting</i> will be used.</dd></dl>
 <h2>EXAMPLES</h2>
 <p>&nbsp;<wbr>&nbsp;jobstats -start_jid 1070 sge_runs.acct<br />
 &nbsp;<wbr>&nbsp;jobstats -start_jid -10<br />

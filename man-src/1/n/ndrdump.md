@@ -11,11 +11,11 @@ description: "ndrdump – DCE/RPC Packet Parser and Dumper"
 <p> ndrdump &#8211; DCE/RPC Packet Parser and Dumper </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndrdump</code> [-c context] {pipe} {function} {in|out} {filename}</p>
-<dt> <code>ndrdump</code> [pipe]</p>
-<dt> <code>ndrdump</code></dl>
+<dt> <code>ndrdump</code> [-c context] {pipe} {function} {in|out} {filename}</dt>
+<dt> <code>ndrdump</code> [pipe]</dt>
+<dt> <code>ndrdump</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>ndrdump tries to parse the specified <i>filename</i> using Samba&#8217;s parser for the specified pipe and function. The third argument should be either <i>in</i> or <i>out</i>, depending on whether the data should be parsed as a request or a reply. </p>
+<dd>ndrdump tries to parse the specified <i>filename</i> using Samba&#8217;s parser for the specified pipe and function. The third argument should be either <i>in</i> or <i>out</i>, depending on whether the data should be parsed as a request or a reply. </dd>
 <p> Running ndrdump without arguments will list the pipes for which parsers are available. </p>
 <p> Running ndrdump with one argument will list the functions that Samba can parse for the specified pipe. </p>
 <p> The primary function of ndrdump is debugging Samba&#8217;s internal DCE/RPC parsing functions. The file being parsed is usually one exported by wiresharks &#8220;Export selected packet bytes&#8221; function. </p>
@@ -30,15 +30,15 @@ description: "ndrdump – DCE/RPC Packet Parser and Dumper"
 <p> This manpage was written by Jelmer Vernooij.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Samba</p>
+<dt> 1.</dt>
+<dd> Samba</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dl>
-<dt> 2.</p>
-<dd> Samba Team</p>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dd></dl>
+<dt> 2.</dt>
+<dd> Samba Team</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
 <h2>Index</h2>

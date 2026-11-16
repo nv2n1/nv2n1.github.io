@@ -14,7 +14,7 @@ int
 <code>Tcl_Init</code>(<i>interp</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to initialize. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to initialize. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_Init</code> is a helper procedure that finds and <code>source</code>s the <code>init.tcl</code> script, which should exist somewhere on the Tcl library path. </p>

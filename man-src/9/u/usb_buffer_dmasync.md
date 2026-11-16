@@ -15,7 +15,7 @@ usb_buffer_dmasync - synchronize DMA and CPU view of buffer(s)
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>urb whose transfer_buffer/setup_packet will be synchronized</dl>
+<dl><dd></dd><dd>urb whose transfer_buffer/setup_packet will be synchronized</dd></dl>
 
 <h2>Copyright</h2>
 

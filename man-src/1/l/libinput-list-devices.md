@@ -17,8 +17,8 @@ description: "libinput-list-devices – list local devices as recognized by libi
 <p> This tool usually needs to be run as root to have access to the /dev/input/eventX nodes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help</dd></dl>
 <h2>NOTES</h2>
 <p> Some specific feature may still be available on a device even when no configuration is exposed, a lack of a configuration option does not necessarily mean that this feature does not work. </p>
 <p> A device may be recognized by libinput but not handled by the X.Org libinput driver or the Wayland compositor. </p>

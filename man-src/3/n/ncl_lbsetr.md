@@ -13,9 +13,9 @@ LBSETR - Gives a real value to an internal parameter of Labelbar.
 
  void c_lbsetr (char *pnam, float rval)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) is a string three or more characters in length, beginning with one of the six character strings 'CBL', 'CFL', 'CLB', 'WBL', 'WFL', or 'WLB'.
-<dt>RVAL
-<dd>(an input expression of type REAL) specifies the desired value of the parameter. If the internal parameter is of type INTEGER, the value INT(RVAL) will be given to it.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input constant or variable of type CHARACTER) is a string three or more characters in length, beginning with one of the six character strings 'CBL', 'CFL', 'CLB', 'WBL', 'WFL', or 'WLB'.
+</dd><dt>RVAL
+</dt><dd>(an input expression of type REAL) specifies the desired value of the parameter. If the internal parameter is of type INTEGER, the value INT(RVAL) will be given to it.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to set the current value of Labelbar parameters. For a complete list of parameters available in this utility, see the labelbar_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: cpex05, elblba, and tlblba.
 <h2>Access</h2>To use LBSETR or c_lbsetr, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

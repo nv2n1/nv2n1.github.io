@@ -36,16 +36,16 @@ int utimes(const char *filename, const struct timeval times[2]);
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied for one of the directories in the path prefix of <i>path</i> (see also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7)).</p>
-<dt><code>EACCES</code></p>
-<dd> <i>times</i> is NULL, the caller&#8217;s effective user ID does not match the owner of the file, the caller does not have write access to the file, and the caller is not privileged (Linux: does not have either the <code>CAP_DAC_OVERRIDE</code> or the <code>CAP_FOWNER</code> capability).</p>
-<dt><code>ENOENT</code></p>
-<dd> <i>filename</i> does not exist.</p>
-<dt><code>EPERM</code></p>
-<dd> <i>times</i> is not NULL, the caller&#8217;s effective UID does not match the owner of the file, and the caller is not privileged (Linux: does not have the <code>CAP_FOWNER</code> capability).</p>
-<dt><code>EROFS</code></p>
-<dd> <i>path</i> resides on a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied for one of the directories in the path prefix of <i>path</i> (see also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7)).</dd>
+<dt><code>EACCES</code></dt>
+<dd> <i>times</i> is NULL, the caller&#8217;s effective user ID does not match the owner of the file, the caller does not have write access to the file, and the caller is not privileged (Linux: does not have either the <code>CAP_DAC_OVERRIDE</code> or the <code>CAP_FOWNER</code> capability).</dd>
+<dt><code>ENOENT</code></dt>
+<dd> <i>filename</i> does not exist.</dd>
+<dt><code>EPERM</code></dt>
+<dd> <i>times</i> is not NULL, the caller&#8217;s effective UID does not match the owner of the file, and the caller is not privileged (Linux: does not have the <code>CAP_FOWNER</code> capability).</dd>
+<dt><code>EROFS</code></dt>
+<dd> <i>path</i> resides on a read-only filesystem.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>utime</code>(): SVr4, POSIX.1-2001. POSIX.1-2008 marks <code>utime</code>() as obsolete. </p>
 <p> <code>utimes</code>(): 4.3BSD, POSIX.1-2001.</p>

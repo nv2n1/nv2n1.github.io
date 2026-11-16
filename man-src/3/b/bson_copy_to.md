@@ -16,11 +16,11 @@ void bson_copy_to(const bson_t *src,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>src</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>src</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>dst</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>dst</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_copy_to/">bson_copy_to</a>(3)</code> function shall initialize <code>dst</code> with a copy of the contents of <code>src</code> \&amp;. </p>
 <p> <code>dst</code> </p>

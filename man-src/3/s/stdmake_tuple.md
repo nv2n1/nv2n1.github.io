@@ -53,18 +53,14 @@ A std::tuple object containing the given values, created as if by std::tuple&lt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;tuple&gt;
-
 #include &lt;functional&gt;
 std::tuple&lt;int, int&gt; f() // this function returns multiple values
-
 {
     int x = 5;
     return std::make_tuple(x, 7); // return {x,7}; in C++17
 }
 int main()
-
 {
     // heterogeneous tuple construction
     int n = 1;

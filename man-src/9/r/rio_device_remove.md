@@ -14,11 +14,11 @@ description: "rio_device_remove – Remove a RIO device from the system"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the RIO device structure to match against</dl>
+</dd><dd>the RIO device structure to match against</dd></dl>
 <h2>Description</h2>
 <p>Remove a RIO device from the system. If it has an associated driver, then run the driver <code>remove</code> method. Then update the reference count.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -10,12 +10,12 @@ description: "XSupportsLocale, XSetLocaleModifiers – determine locale support 
 <p>XSupportsLocale, XSetLocaleModifiers &#8211; determine locale support and configure locale modifiers </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Bool XSupportsLocale(void);</p>
-<dd>char *XSetLocaleModifiers(char *<i>modifier_list</i>);</dl>
+<dd>Bool XSupportsLocale(void);</dd>
+<dd>char *XSetLocaleModifiers(char *<i>modifier_list</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>modifier_list</i></p>
-<dd>Specifies the modifiers.</dl>
+<dt><i>modifier_list</i></dt>
+<dd>Specifies the modifiers.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSupportsLocale</code> function returns <code>True</code> if Xlib functions are capable of operating under the current locale. If it returns <code>False</code>, Xlib locale-dependent functions for which the <code>XLocaleNotSupported</code> return status is defined will return <code>XLocaleNotSupported</code>. Other Xlib locale-dependent routines will operate in the &#8220;C&#8221; locale. </p>
 <p> The <code>XSetLocaleModifiers</code> function sets the X modifiers for the current locale setting. The modifier_list argument is a null-terminated string of the form &#8220;{@<i>category</i>=<i>value</i>}&#8221;, that is, having zero or more concatenated &#8220;@<i>category</i>=<i>value</i>&#8221; entries, where <i>category</i> is a category name and <i>value</i> is the (possibly empty) setting for that category. The values are encoded in the current locale. Category names are restricted to the POSIX Portable Filename Character Set. </p>

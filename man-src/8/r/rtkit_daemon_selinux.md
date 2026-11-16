@@ -52,8 +52,8 @@ description: "rtkit_daemon_selinux – Security Enhanced Linux Policy for the rt
 <p> <code>rtkit_daemon_exec_t</code> </p>
 <p> &#8211; Set files with the rtkit_daemon_exec_t type, if you want to transition an executable to the rtkit_daemon_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/rtkit-daemon, /usr/lib/rtkit/rtkit-daemon </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/rtkit-daemon, /usr/lib/rtkit/rtkit-daemon </dd>
 </dl>
 <p> <code>rtkit_daemon_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the rtkit_daemon_initrc_exec_t type, if you want to transition an executable to the rtkit_daemon_initrc_t domain. </p>

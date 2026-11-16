@@ -10,10 +10,8 @@ description: "unicode::linebreak_callback_base, unicode::linebreak_callback_save
 <p>unicode::linebreak_callback_base, unicode::linebreak_callback_save_buf, unicode::linebreakc_callback_base, unicode::linebreak_iter, unicode::linebreakc_iter &#8211; unicode line-breaking rules</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;courier-unicode.h&gt;
-
 class linebreak : public unicode::linebreak_callback_base
 {
-
   public:
     using unicode::linebreak_callback_base::operator&lt;&lt;;
     using unicode::linebreak_callback_base::operator();
@@ -22,29 +20,19 @@ class linebreak : public unicode::linebreak_callback_base
         // ...
     }
 };
-
 unicode_char c;
 std::vector&lt;unicode_char&gt; buf;
-
 linebreak compute_linebreak;
-
 compute_linebreak.set_opts(UNICODE_LB_OPT_SYBREAK);
 compute_linebreak &lt;&lt; c;
-
 compute_linebreak(buf);
 compute_linebreak(buf.begin(), buf.end());
-
 compute_linebreak.finish();
-
 // ...
-
 unicode::linebreak_callback_save_buf linebreaks;
-
 std::list&lt;int&gt; lb = linebreaks.lb_buf;
-
 class linebreakc : public unicode::linebreakc_callback_base
 {
-
   public:
     using unicode::linebreak_callback_base::operator&lt;&lt;;
     using unicode::linebreak_callback_base::operator();
@@ -53,31 +41,18 @@ class linebreakc : public unicode::linebreakc_callback_base
         // ...
     }
 };
-
 // ...
-
 std::vector&lt;unicode_char&gt; buf;
-
 typedef unicode::linebreak_iter&lt;std::vector&lt;unicode_char&gt;::const_iterator&gt; iter_t;
-
 iter_t beg_iter(buf.begin(), buf.end()), end_iter;
-
 beg_iter.set_opts(UNICODE_LB_OPT_SYBREAK);
-
 std::vector&lt;int&gt; linebreaks;
-
 std::copy(beg_iter, end_iter, std::back_insert_iterator&lt;std::vector&lt;int&gt;&gt;(linebreaks));
-
 // ...
-
 typedef unicode::linebreakc_iter&lt;std::vector&lt;unicode_char&gt;::const_iterator&gt; iter_t;
-
 iter_t beg_iter(buf.begin(), buf.end()), end_iter;
-
 beg_iter.set_opts(UNICODE_LB_OPT_SYBREAK);
-
 std::vector&lt;std::pair&lt;int, unicode_char&gt;&gt; linebreaks;
-
 std::copy(beg_iter, end_iter, std::back_insert_iterator&lt;std::vector&lt;int&gt;&gt;(linebreaks));</code></pre>
 <h2>Description</h2>
 <p>unicode::linebreak_callback_base is a C++ binding for the unicode line-breaking rule implementation described in <code>unicode_line_break</code>(3). </p>
@@ -95,4 +70,4 @@ std::copy(beg_iter, end_iter, std::back_insert_iterator&lt;std::vector&lt;int&gt
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
-<dd>Author</dl>
+<dd>Author</dd></dl>

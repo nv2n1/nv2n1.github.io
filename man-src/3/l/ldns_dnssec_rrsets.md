@@ -16,15 +16,15 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 <p>&nbsp;<wbr>ldns_dnssec_zone(); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dnssec_zone</i>()</dl>
+<dt> <i>ldns_dnssec_zone</i>()</dt></dl>
 <dl>
-<dt> <i>ldns_dnssec_name</i></p>
+<dt> <i>ldns_dnssec_name</i></dt>
 <dd>
-<dd>Structure containing all resource records for a domain name<br />
+</dd><dd>Structure containing all resource records for a domain name<br />
  Including the derived NSEC3, if present<br />
  struct ldns_struct_dnssec_name<br />
  {<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/**</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/**</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * pointer to a dname containing the name.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * Usually points to the owner name of the first RR of the first RRset</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> */</p>
@@ -66,22 +66,22 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 <p> }; </p>
 <p> typedef struct ldns_struct_dnssec_name ldns_dnssec_name;</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrs</i></p>
+<dt> <i>ldns_dnssec_rrs</i></dt>
 <dd>
-<dd>Singly linked list of rrs<br />
+</dd><dd>Singly linked list of rrs<br />
  struct ldns_struct_dnssec_rrs<br />
  {<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr *rr;</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr *rr;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrs *next;</p>
 <p> }; </p>
 <p> typedef struct ldns_struct_dnssec_rrs ldns_dnssec_rrs;</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrsets</i></p>
+<dt> <i>ldns_dnssec_rrsets</i></dt>
 <dd>
-<dd>Singly linked list of RRsets<br />
+</dd><dd>Singly linked list of RRsets<br />
  struct ldns_struct_dnssec_rrsets<br />
  {<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrs *rrs;</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrs *rrs;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_type type;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrs *signatures;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrsets *next;</p>
@@ -99,3 +99,4 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

@@ -29,97 +29,97 @@ description: "ipsilon-server-install – Configure an Ipsilon Identity Provider 
 <h2>OPTIONS</h2>
 <h3>BASIC OPTIONS</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show this help message and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show program&#8217;s version number and exit</p>
-<dt><code>-o</code> <i>LM_ORDER</i>, <code>&#8211;login-managers-order</code> <i>LM_ORDER</i></p>
-<dd> Comma separated list of login managers</p>
-<dt><code>&#8211;hostname</code> <i>HOSTNAME</i></p>
-<dd> The hostname used by clients to reach this instance. This is used to determine the URLs provided in SAML metadata</p>
-<dt><code>&#8211;instance</code> <i>INSTANCE</i></p>
-<dd> Ipsilon instance name</p>
-<dt><code>&#8211;system-user</code> <i>SYSTEM_USER</p>
-<dd> User account used to run the server</p>
-<dt></i><code>&#8211;admin-user</code> <i>ADMIN_USER</i></p>
-<dd> User account that is assigned Ipsilon admin privileges</p>
-<dt><code>&#8211;database-url</code> <i>DATABASE_URL</i></p>
-<dd> The (templatized) database URL to use</p>
-<dt><code>&#8211;secure</code></p>
-<dd> Boolean to turn on all security checks</p>
-<dt><code>&#8211;server-debugging</code></p>
-<dd> Enable debugging</p>
-<dt><code>&#8211;uninstall</code></p>
-<dd> Uninstall the server and all data</p>
-<dt><code>&#8211;yes</code></p>
-<dd> Always answer yes</p>
-<dt><code>&#8211;admin-dburi</code> <i>ADMIN_DBURI</i></p>
-<dd> Configuration database URI (override template)</p>
-<dt><code>&#8211;users-dburi </code><i>USERS_DBURI</i></p>
-<dd> User configuration database URI (override template)</p>
-<dt><code>&#8211;transaction-dburi</code> <i>TRANSACTION_DBURI</i></p>
-<dd> Transaction database URI (override template)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show this help message and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show program&#8217;s version number and exit</dd>
+<dt><code>-o</code> <i>LM_ORDER</i>, <code>&#8211;login-managers-order</code> <i>LM_ORDER</i></dt>
+<dd> Comma separated list of login managers</dd>
+<dt><code>&#8211;hostname</code> <i>HOSTNAME</i></dt>
+<dd> The hostname used by clients to reach this instance. This is used to determine the URLs provided in SAML metadata</dd>
+<dt><code>&#8211;instance</code> <i>INSTANCE</i></dt>
+<dd> Ipsilon instance name</dd>
+<dt><code>&#8211;system-user</code> <i>SYSTEM_USER</dt>
+<dd> User account used to run the server</dd>
+<dt></i><code>&#8211;admin-user</code> <i>ADMIN_USER</i></dt>
+<dd> User account that is assigned Ipsilon admin privileges</dd>
+<dt><code>&#8211;database-url</code> <i>DATABASE_URL</i></dt>
+<dd> The (templatized) database URL to use</dd>
+<dt><code>&#8211;secure</code></dt>
+<dd> Boolean to turn on all security checks</dd>
+<dt><code>&#8211;server-debugging</code></dt>
+<dd> Enable debugging</dd>
+<dt><code>&#8211;uninstall</code></dt>
+<dd> Uninstall the server and all data</dd>
+<dt><code>&#8211;yes</code></dt>
+<dd> Always answer yes</dd>
+<dt><code>&#8211;admin-dburi</code> <i>ADMIN_DBURI</i></dt>
+<dd> Configuration database URI (override template)</dd>
+<dt><code>&#8211;users-dburi </code><i>USERS_DBURI</i></dt>
+<dd> User configuration database URI (override template)</dd>
+<dt><code>&#8211;transaction-dburi</code> <i>TRANSACTION_DBURI</i></dt>
+<dd> Transaction database URI (override template)</dd></dl>
 <h3>AUTHENTICATION PROVIDER OPTIONS</h3>
 <dl>
-<dt><code>&#8211;openid</code></p>
-<dd> Configure OpenID Provider</p>
-<dt><code>&#8211;openid-dburi</code> <i>OPENID_DBURI</i></p>
-<dd> OpenID database URI (override template)</p>
-<dt><code>&#8211;persona</code></p>
-<dd> Configure Persona Provider</p>
-<dt><code>&#8211;saml2</code></p>
-<dd> Configure SAML2 Provider</p>
-<dt><code>&#8211;saml2-metadata-validity</code> <i>SAML2_METADATA_VALIDITY</i></p>
-<dd> Metadata validity period in days (default &#8211; 1825) </p>
+<dt><code>&#8211;openid</code></dt>
+<dd> Configure OpenID Provider</dd>
+<dt><code>&#8211;openid-dburi</code> <i>OPENID_DBURI</i></dt>
+<dd> OpenID database URI (override template)</dd>
+<dt><code>&#8211;persona</code></dt>
+<dd> Configure Persona Provider</dd>
+<dt><code>&#8211;saml2</code></dt>
+<dd> Configure SAML2 Provider</dd>
+<dt><code>&#8211;saml2-metadata-validity</code> <i>SAML2_METADATA_VALIDITY</i></dt>
+<dd> Metadata validity period in days (default &#8211; 1825) </dd>
 </dl>
 <h3>LOGIN MANAGER OPTIONS</h3>
 <dl>
-<dt><code>&#8211;form</code></p>
-<dd> Configure External Form authentication</p>
-<dt><code>&#8211;form-service</code> <i>FORM_SERVICE</i></p>
-<dd> PAM service name to use for authentication</p>
-<dt><code>&#8211;fas</code></p>
-<dd> Configure FAS (Fedora Authentication System) authentication</p>
-<dt><code>&#8211;ldap</code></p>
-<dd> Configure LDAP authentication</p>
-<dt><code>&#8211;ldap-server-url</code> <i>LDAP_SERVER_URL</i></p>
-<dd> LDAP Server Url</p>
-<dt><code>&#8211;ldap-bind-dn-template</code> <i>LDAP_BIND_DN_TEMPLATE</i></p>
-<dd> LDAP Bind DN Template</p>
-<dt><code>&#8211;ldap-tls-level</code> <i>LDAP_TLS_LEVEL</i></p>
-<dd> LDAP TLS level</p>
-<dt><code>&#8211;ldap-base-dn</code> <i>LDAP_BASE_DN</i></p>
-<dd> LDAP Base DN</p>
-<dt><code>&#8211;krb</code></p>
-<dd> Configure Kerberos authentication</p>
-<dt><code>&#8211;krb-httpd-keytab</code> <i>KRB_HTTPD_KEYTAB</i></p>
-<dd> Kerberos keytab location for HTTPD</p>
-<dt><code>&#8211;pam</code></p>
-<dd> Configure PAM authentication</p>
-<dt><code>&#8211;pam-service</code> <i>PAM_SERVICE</i></p>
-<dd> PAM service name to use for authentication</p>
-<dt><code>&#8211;testauth</code></p>
-<dd> Configure testing environment authentication </p>
+<dt><code>&#8211;form</code></dt>
+<dd> Configure External Form authentication</dd>
+<dt><code>&#8211;form-service</code> <i>FORM_SERVICE</i></dt>
+<dd> PAM service name to use for authentication</dd>
+<dt><code>&#8211;fas</code></dt>
+<dd> Configure FAS (Fedora Authentication System) authentication</dd>
+<dt><code>&#8211;ldap</code></dt>
+<dd> Configure LDAP authentication</dd>
+<dt><code>&#8211;ldap-server-url</code> <i>LDAP_SERVER_URL</i></dt>
+<dd> LDAP Server Url</dd>
+<dt><code>&#8211;ldap-bind-dn-template</code> <i>LDAP_BIND_DN_TEMPLATE</i></dt>
+<dd> LDAP Bind DN Template</dd>
+<dt><code>&#8211;ldap-tls-level</code> <i>LDAP_TLS_LEVEL</i></dt>
+<dd> LDAP TLS level</dd>
+<dt><code>&#8211;ldap-base-dn</code> <i>LDAP_BASE_DN</i></dt>
+<dd> LDAP Base DN</dd>
+<dt><code>&#8211;krb</code></dt>
+<dd> Configure Kerberos authentication</dd>
+<dt><code>&#8211;krb-httpd-keytab</code> <i>KRB_HTTPD_KEYTAB</i></dt>
+<dd> Kerberos keytab location for HTTPD</dd>
+<dt><code>&#8211;pam</code></dt>
+<dd> Configure PAM authentication</dd>
+<dt><code>&#8211;pam-service</code> <i>PAM_SERVICE</i></dt>
+<dd> PAM service name to use for authentication</dd>
+<dt><code>&#8211;testauth</code></dt>
+<dd> Configure testing environment authentication </dd>
 </dl>
 <h3>INFO PROVIDER OPTIONS</h3>
 <p> <code>&#8211;info-ldap</code> Use LDAP to populate user attrs</p>
 <dl>
-<dt><code>&#8211;info-ldap-server-url</code> <i>INFO_LDAP_SERVER_URL</i></p>
-<dd> LDAP Server Url</p>
-<dt><code>&#8211;info-ldap-bind-dn</code> <i>INFO_LDAP_BIND_DN</i></p>
-<dd> LDAP Bind DN</p>
-<dt><code>&#8211;info-ldap-bind-pwd</code> <i>INFO_LDAP_BIND_PWD</i></p>
-<dd> LDAP Bind Password</p>
-<dt><code>&#8211;info-ldap-user-dn-template</code> <i>INFO_LDAP_USER_DN_TEMPLATE</i></p>
-<dd> LDAP User DN Template</p>
-<dt><code>&#8211;info-ldap-base-dn</code> <i>INFO_LDAP_BASE_DN</i></p>
-<dd> LDAP Base DN</p>
-<dt><code>&#8211;info-nss</code></p>
-<dd> Use passwd data to populate user attrs</p>
-<dt><code>&#8211;info-sssd</code> <i></p>
-<dd> Use mod_lookup_identity and SSSD to populate user attrs. SSSD must be pre-configured for at least one domain.</p>
-<dt></i><code>&#8211;info-sssd-domain</code> <i>INFO_SSSD_DOMAIN</i></p>
-<dd> SSSD domain to enable mod_lookup_identity for (default is all) </p>
+<dt><code>&#8211;info-ldap-server-url</code> <i>INFO_LDAP_SERVER_URL</i></dt>
+<dd> LDAP Server Url</dd>
+<dt><code>&#8211;info-ldap-bind-dn</code> <i>INFO_LDAP_BIND_DN</i></dt>
+<dd> LDAP Bind DN</dd>
+<dt><code>&#8211;info-ldap-bind-pwd</code> <i>INFO_LDAP_BIND_PWD</i></dt>
+<dd> LDAP Bind Password</dd>
+<dt><code>&#8211;info-ldap-user-dn-template</code> <i>INFO_LDAP_USER_DN_TEMPLATE</i></dt>
+<dd> LDAP User DN Template</dd>
+<dt><code>&#8211;info-ldap-base-dn</code> <i>INFO_LDAP_BASE_DN</i></dt>
+<dd> LDAP Base DN</dd>
+<dt><code>&#8211;info-nss</code></dt>
+<dd> Use passwd data to populate user attrs</dd>
+<dt><code>&#8211;info-sssd</code> <i></dt>
+<dd> Use mod_lookup_identity and SSSD to populate user attrs. SSSD must be pre-configured for at least one domain.</dd>
+<dt></i><code>&#8211;info-sssd-domain</code> <i>INFO_SSSD_DOMAIN</i></dt>
+<dd> SSSD domain to enable mod_lookup_identity for (default is all) </dd>
 </dl>
 <h3>ENVIRONMENT HELPER OPTIONS</h3>
 <p> <code>&#8211;ipa</code> Helper for IPA joined machines. This configures Ipsilon for Kerberos authentication.</p>

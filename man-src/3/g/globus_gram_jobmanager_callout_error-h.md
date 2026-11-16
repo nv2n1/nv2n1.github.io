@@ -18,6 +18,6 @@ description: "globus_gram_jobmanager_callout_error.h – Globus GRAM Job Manager
 <p>Globus GRAM Job Manager Callout Error. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Meder</dl>
+<dd>Sam Meder</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gram_job_manager_callout_error from the source code.</p>

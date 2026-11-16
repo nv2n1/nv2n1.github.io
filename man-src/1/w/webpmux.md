@@ -16,7 +16,7 @@ description: "webpmux – command line tool to create WebP Mux/container file."
  <code>webpmux -frame</code> <i>FRAME_OPTIONS</i> <code>[ -frame &#8230; ] [ -loop</code> <i>LOOP_COUNT</i> <code>]</code> </p>
 <dl>
 <dt>
-<dd> <code>[ -bgcolor</code> <i>BACKGROUND_COLOR</i> <code>] -o</code> <i>OUTPUT</i></dl>
+</dt><dd> <code>[ -bgcolor</code> <i>BACKGROUND_COLOR</i> <code>] -o</code> <i>OUTPUT</i></dd></dl>
 <p> <code>webpmux -info</code> <i>INPUT</i><br />
  <code>webpmux [-h|-help]</code><br />
  <code>webpmux -version</code></p>
@@ -26,62 +26,62 @@ description: "webpmux – command line tool to create WebP Mux/container file."
 <h2>OPTIONS</h2>
 <h3>GET_OPTIONS (-get):</h3>
 <dl>
-<dt><code>icc</code></p>
-<dd> Get ICC profile.</p>
-<dt><code>exif</code></p>
-<dd> Get EXIF metadata.</p>
-<dt><code>xmp</code></p>
-<dd> Get XMP metadata.</p>
-<dt><code>frame</code><i> n</i></p>
-<dd> Get nth frame. </p>
+<dt><code>icc</code></dt>
+<dd> Get ICC profile.</dd>
+<dt><code>exif</code></dt>
+<dd> Get EXIF metadata.</dd>
+<dt><code>xmp</code></dt>
+<dd> Get XMP metadata.</dd>
+<dt><code>frame</code><i> n</i></dt>
+<dd> Get nth frame. </dd>
 </dl>
 <h3>SET_OPTIONS (-set)</h3>
 <dl>
-<dt><code>icc</code><i> file.icc</i></p>
-<dd> Set ICC profile.</dl>
+<dt><code>icc</code><i> file.icc</i></dt>
+<dd> Set ICC profile.</dd></dl>
 <p> Where: &#8216;file.icc&#8217; contains the ICC profile to be set.</p>
 <dl>
-<dt><code>exif</code><i> file.exif</i></p>
-<dd> Set EXIF metadata.</dl>
+<dt><code>exif</code><i> file.exif</i></dt>
+<dd> Set EXIF metadata.</dd></dl>
 <p> Where: &#8216;file.exif&#8217; contains the EXIF metadata to be set.</p>
 <dl>
-<dt><code>xmp</code><i> file.xmp</i></p>
-<dd> Set XMP metadata.</dl>
+<dt><code>xmp</code><i> file.xmp</i></dt>
+<dd> Set XMP metadata.</dd></dl>
 <p> Where: &#8216;file.xmp&#8217; contains the XMP metadata to be set. </p>
 <h3>STRIP_OPTIONS (-strip)</h3>
 <dl>
-<dt><code>icc</code></p>
-<dd> Strip ICC profile.</p>
-<dt><code>exif</code></p>
-<dd> Strip EXIF metadata.</p>
-<dt><code>xmp</code></p>
-<dd> Strip XMP metadata. </p>
+<dt><code>icc</code></dt>
+<dd> Strip ICC profile.</dd>
+<dt><code>exif</code></dt>
+<dd> Strip EXIF metadata.</dd>
+<dt><code>xmp</code></dt>
+<dd> Strip XMP metadata. </dd>
 </dl>
 <h3>FRAME_OPTIONS (-frame)</h3>
 <dl>
-<dt><i>file_i +di[+xi+yi[+mi]]</i></p>
-<dd> Where: &#8216;file_i&#8217; is the i&#8217;th frame (WebP format), &#8216;xi&#8217;,&#8217;yi&#8217; specify the image offset for this frame, &#8216;di&#8217; is the pause duration before next frame and &#8216;mi&#8217; is the dispose method for this frame (0 for NONE or 1 for BACKGROUND). Additionally, if &#8216;mi&#8217; is ommitted then&#8217;xi&#8217; and &#8216;yi&#8217; can be omitted and will default to +0+0.</p>
-<dt><code>-loop</code><i> n</i></p>
-<dd> Loop the frames n number of times. 0 indicates the frames should loop forever. Valid range is 0 to 65535 [Default: 0 (infinite)].</p>
-<dt><code>-bgcolor</code><i> A,R,G,B</i></p>
+<dt><i>file_i +di[+xi+yi[+mi]]</i></dt>
+<dd> Where: &#8216;file_i&#8217; is the i&#8217;th frame (WebP format), &#8216;xi&#8217;,&#8217;yi&#8217; specify the image offset for this frame, &#8216;di&#8217; is the pause duration before next frame and &#8216;mi&#8217; is the dispose method for this frame (0 for NONE or 1 for BACKGROUND). Additionally, if &#8216;mi&#8217; is ommitted then&#8217;xi&#8217; and &#8216;yi&#8217; can be omitted and will default to +0+0.</dd>
+<dt><code>-loop</code><i> n</i></dt>
+<dd> Loop the frames n number of times. 0 indicates the frames should loop forever. Valid range is 0 to 65535 [Default: 0 (infinite)].</dd>
+<dt><code>-bgcolor</code><i> A,R,G,B</i></dt>
 <dd> Background color of the canvas.<br />
- where: &#8216;A&#8217;, &#8216;R&#8217;, &#8216;G&#8217; and &#8216;B&#8217; are integers in the range 0 to 255 specifying the Alpha, Red, Green and Blue component values respectively [Default: 255,255,255,255]. </p>
+ where: &#8216;A&#8217;, &#8216;R&#8217;, &#8216;G&#8217; and &#8216;B&#8217; are integers in the range 0 to 255 specifying the Alpha, Red, Green and Blue component values respectively [Default: 255,255,255,255]. </dd>
 </dl>
 <h3>INPUT</h3>
 <dl>
-<dt>Input file in WebP format.</p>
+<dt>Input file in WebP format.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>OUTPUT (-o)</h3>
 <dl>
-<dt>Output file in WebP format.</p>
+<dt>Output file in WebP format.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Note:</h3>
 <dl>
-<dt>The nature of EXIF, XMP and ICC data is not checked and is assumed to be valid.</p>
+<dt>The nature of EXIF, XMP and ICC data is not checked and is assumed to be valid.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> Please report all bugs to our issue tracker: <a rel="nofollow" href="http://code.google.com/p/webp/issues">http://code.google.com/p/webp/issues</a><br />
  Patches welcome! See this page to get started: <a rel="nofollow" href="http://www.webmproject.org/code/contribute/submitting-patches/">http://www.webmproject.org/code/contribute/submitting-patches/</a> </p>
@@ -98,7 +98,7 @@ description: "webpmux – command line tool to create WebP Mux/container file."
  webpmux -frame anim_1.webp +100 -frame anim_2.webp +100+50+50 -loop 10 </p>
 <dl>
 <dt>
-<dd> -bgcolor 255,255,255,255 -o anim_container.webp</dl>
+</dt><dd> -bgcolor 255,255,255,255 -o anim_container.webp</dd></dl>
 <p> webpmux -get frame 2 anim_container.webp -o frame_2.webp </p>
 <h2>AUTHORS</h2>
 <p> <code>webpmux</code> is written by the WebP team.<br />

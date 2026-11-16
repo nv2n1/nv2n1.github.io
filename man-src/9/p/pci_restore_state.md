@@ -15,8 +15,9 @@ pci_restore_state - Restore the saved state of a PCI device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd>- PCI device that we're dealing with</dl>
+<dl><dd>- PCI device that we're dealing with</dd></dl>
 
 <h2>Copyright</h2>
 
 <dd>
+</dd>

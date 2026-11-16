@@ -15,11 +15,11 @@ description: "copydatabase – Perform a document-by-document copy of one or mor
 <p> copydatabase &#8211; Perform a document-by-document copy of one or more Xapian databases</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;no-renumber</code></p>
-<dd> Preserve the numbering of document ids (useful if you have external references to them, or have set them to match unique ids from an external source). If multiple source databases are specified and the same docid occurs in more one, the last occurrence will be the one which ends up in the destination database.</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit </p>
+<dt><code>&#8211;no-renumber</code></dt>
+<dd> Preserve the numbering of document ids (useful if you have external references to them, or have set them to match unique ids from an external source). If multiple source databases are specified and the same docid occurs in more one, the last occurrence will be the one which ends up in the destination database.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit </dd>
 </dl>
 <h2>Index</h2>

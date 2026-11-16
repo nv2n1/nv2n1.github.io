@@ -10,7 +10,6 @@ description: "umad_get_mad – get the MAD pointer of a umad buffer"
 <p>umad_get_mad &#8211; get the MAD pointer of a umad buffer</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 void *umad_get_mad(void *umad);</code></pre>
 <h2>Description</h2>
 <p><code>umad_get_mad()</code> returns a pointer to the MAD contained within the <i>umad</i> buffer.</p>
@@ -18,5 +17,5 @@ void *umad_get_mad(void *umad);</code></pre>
 <p><code>umad_get_mad()</code> returns a pointer to the MAD contained within the supplied <i>umad</i> buffer.</p>
 <h2>Author</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

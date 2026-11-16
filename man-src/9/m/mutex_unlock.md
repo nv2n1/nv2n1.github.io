@@ -14,7 +14,7 @@ description: "mutex_unlock – release the mutex"
 <p><i>lock</i></p>
 <dl>
 <dd>
-<dd>the mutex to be released</dl>
+</dd><dd>the mutex to be released</dd></dl>
 <h2>Description</h2>
 <p>Unlock a mutex that has been locked by this task previously. </p>
 <p> This function must not be used in interrupt context. Unlocking of a not locked mutex is not allowed. </p>
@@ -22,5 +22,5 @@ description: "mutex_unlock – release the mutex"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

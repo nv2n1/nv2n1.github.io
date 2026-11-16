@@ -21,10 +21,10 @@ description: "dlaeda.f –"
 <pre> DLAEDA computes the Z vector corresponding to the merge step in the
  CURLVLth step of the merge process with TLVLS steps for the CURPBMth
  problem.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The dimension of the symmetric tridiagonal matrix. N &gt;= 0.</pre>
 <p><i>TLVLS</i> </p>
@@ -85,16 +85,16 @@ description: "dlaeda.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 166 of file dlaeda.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

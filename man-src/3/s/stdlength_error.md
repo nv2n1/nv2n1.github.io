@@ -10,7 +10,6 @@ description: "std::length_error – std::length_error"
 <p>std::length_error &#8211; std::length_error</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 class length_error;</code></pre>
 <p>Defines a type of object to be thrown as exception. It reports errors that result from attempts to exceed implementation defined length limits for some object.<br />
 This exception is thrown by member functions of std::basic_string and std::vector::reserve<br />

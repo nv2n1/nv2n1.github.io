@@ -15,22 +15,22 @@ description: "backup-manager-purge – backup-manager’s wrapper for outdating 
 <p> Given a <i>time to live (</i><font SIZE="-1"><i>TTL</i></font><i>)</i> and a list of archives, <code>backup-manager-purge</code> will return another list of archives, corresponding to the ones that are outdated by the <font SIZE="-1">TTL. </font></p>
 <h2>Required Args</h2>
 <dl>
-<dt><code>&#8211;ttl=</code><i>time-to-live</i></p>
-<dd>Specify the time to live (in days) for the archives. Any archive that is older than <i>ttl</i> days will be outdated.</dl>
+<dt><code>&#8211;ttl=</code><i>time-to-live</i></dt>
+<dd>Specify the time to live (in days) for the archives. Any archive that is older than <i>ttl</i> days will be outdated.</dd></dl>
 <h2>Optional Args</h2>
 <dl>
-<dt><code>&#8211;files-from=</code>file</p>
-<dd>A file containing a list of archives to parse, one archive per line. If this option is not used, <font SIZE="-1">STDIN</font> will be used for catching the files to parse.</dl>
+<dt><code>&#8211;files-from=</code>file</dt>
+<dd>A file containing a list of archives to parse, one archive per line. If this option is not used, <font SIZE="-1">STDIN</font> will be used for catching the files to parse.</dd></dl>
 <h2>Return</h2>
 <p><code>backup-manager-purge</code> will return the list of outdated files on <font SIZE="-1">STDOUT,</font> one file per line.</p>
 <h2>Error Codes</h2>
 <p>If an error occurs, it will print the error message on stderr and will exit with an error code greater than 0. </p>
 <p> Here are the possible error codes:</p>
 <dl>
-<dt>bad command line (wrong arguments) : 10</p>
+<dt>bad command line (wrong arguments) : 10</dt>
 <dd>
-<dt>internal error (should be reported as a bug) : 20</p>
-<dd></dl>
+</dd><dt>internal error (should be reported as a bug) : 20</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-backup-manager/">backup-manager</a></i>(8) <i><a href="/docs/linux/man/8-backup-manager-upload/">backup-manager-upload</a></i>(8)</p>
 <h2>Authors</h2>

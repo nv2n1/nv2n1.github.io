@@ -25,36 +25,33 @@ url: "/docs/linux/man/1-encguess/"
 
 <dl>
 <dt>-h
-<dd> show this message and exit.
-<dt>-s
-<dd> specify a list of ``suspect encoding types'' to test, separated by either <tt>&quot;:&quot;</tt> or <tt>&quot;,&quot;</tt>
-<dt>-S
-<dd> output a list of all acceptable encoding types that can be used with the -s param
-<dt>-u
-<dd> suppress display of unidentified types</dl>
+</dt><dd> show this message and exit.
+</dd><dt>-s
+</dt><dd> specify a list of ``suspect encoding types'' to test, separated by either <tt>&quot;:&quot;</tt> or <tt>&quot;,&quot;</tt>
+</dd><dt>-S
+</dt><dd> output a list of all acceptable encoding types that can be used with the -s param
+</dd><dt>-u
+</dt><dd> suppress display of unidentified types</dd></dl>
 
 <h3><font SIZE="-1">EXAMPLES:</font></h3>
 
 <dl>
 <dt>&bull;
-<dd> Guess encoding of a file named <tt>&quot;test.txt&quot;</tt>, using only the default suspect types. 
-
+</dt><dd> Guess encoding of a file named <tt>&quot;test.txt&quot;</tt>, using only the default suspect types. 
  <pre>
    encguess test.txt
 </pre>
-<dt>&bull;
-<dd> Guess the encoding type of a file named <tt>&quot;test.txt&quot;</tt>, using the suspect types <tt>&quot;euc-jp,shiftjis,7bit-jis&quot;</tt>. 
-
+</dd><dt>&bull;
+</dt><dd> Guess the encoding type of a file named <tt>&quot;test.txt&quot;</tt>, using the suspect types <tt>&quot;euc-jp,shiftjis,7bit-jis&quot;</tt>. 
  <pre>
    encguess -s euc-jp,shiftjis,7bit-jis test.txt
    encguess -s euc-jp:shiftjis:7bit-jis test.txt
 </pre>
-<dt>&bull;
-<dd> Guess the encoding type of several files, do not display results for unidentified files. 
-
+</dd><dt>&bull;
+</dt><dd> Guess the encoding type of several files, do not display results for unidentified files. 
  <pre>
    encguess -us euc-jp,shiftjis,7bit-jis test*.txt
-</pre></dl>
+</pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -77,8 +74,8 @@ url: "/docs/linux/man/1-encguess/"
 
 
 <dt><a HREF="#lbAG">DESCRIPTION</a>
-<dd>
-<dt><a HREF="#lbAH">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbAI">LICENSE AND COPYRIGHT</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAH">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAI">LICENSE AND COPYRIGHT</a>
+</dt><dd></dd></dl>

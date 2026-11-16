@@ -12,13 +12,10 @@ std::chrono::day::operator+=,std::chrono::day::operator-= - std::chrono::day::op
 
 <pre><code>constexpr std::chrono::day &amp;operator+=(const std::chrono::days &amp;d) noexcept;
 (1)(since C++ 20)
-
     constexpr std::chrono::day &amp;
     operator-=(const std::chrono::days &amp;d) noexcept; (2) (since C++20)
 Adds or subtracts d.count() days from the day value.
-
 1) Equivalent to *this = *this + d;
-
 2) Equivalent to *this = *this - d;
 </code></pre>
 

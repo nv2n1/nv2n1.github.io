@@ -22,26 +22,26 @@ description: "X Sync Extension Functions – Functions related to the X Sync ext
 <p>Delete an alarm. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>alarm</i> The alarm to delete.</dl>
+<dd><i>alarm</i> The alarm to delete.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 otherwise.</dl>
+<dd>1 on success, 0 otherwise.</dd></dl>
 <p> Delete the alarm. Returns 1 on success, 0 otherwise.</p>
 <h3>EAPI Ecore_X_Sync_Alarm ecore_x_sync_alarm_new (Ecore_X_Sync_Counter counter)</h3>
 <p>Create a new alarm. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>counter</i> A counter.</dl>
+<dd><i>counter</i> A counter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A newly created alarm.</dl>
+<dd>A newly created alarm.</dd></dl>
 <p> Create a new alarm. </p>
 <p> References ecore_x_sync().</p>
 <h3>EAPI int ecore_x_sync_query (void)</h3>
 <p>Return whether the X server supports the Sync Extension. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the X Sync Extension is available, 0 otherwise.</dl>
+<dd>1 if the X Sync Extension is available, 0 otherwise.</dd></dl>
 <p> Return 1 if the X server supports the Sync Extension version 3.0, 0 otherwise.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

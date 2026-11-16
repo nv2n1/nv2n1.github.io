@@ -23,10 +23,10 @@ description: "logresolve – Resolve IP-addresses to hostnames in Apache log fil
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-s </code><i>filename</i></p>
-<dd> Specifies a filename to record statistics.</p>
-<dt><code>-c</code></p>
+<dt><code>-s </code><i>filename</i></dt>
+<dd> Specifies a filename to record statistics.</dd>
+<dt><code>-c</code></dt>
 <dd> This causes <code>logresolve</code> to apply some DNS checks: after finding the hostname from the IP address, it looks up the IP addresses for the hostname and checks that one of these matches the original address.<br />
-&nbsp; </p>
+&nbsp; </dd>
 </dl>
 <h2>Index</h2>

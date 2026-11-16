@@ -16,24 +16,24 @@ description: "freight-add – add a package to Freight"
 <p> The package files are organized in the Freight library so <code><a href="/docs/linux/man/1-freight-cache/">freight-cache</a></code>(1) has an easy time of creating package repositories for each <i>manager</i>/<i>distro</i>[/<i>component</i>] later.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>conf</i>, <code>&#8211;conf=</code><i>conf</i></p>
-<dd> Use an alternate configuration file.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose mode.</p>
-<dt><code>-e</code>, <code>&#8211;add-error</code></p>
-<dd> Raises an error if the package to add is already registered.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show a help message.</dl>
+<dt><code>-c</code> <i>conf</i>, <code>&#8211;conf=</code><i>conf</i></dt>
+<dd> Use an alternate configuration file.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-e</code>, <code>&#8211;add-error</code></dt>
+<dd> Raises an error if the package to add is already registered.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show a help message.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></p>
-<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dl>
+<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></dt>
+<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>FREIGHT_CONF</code></p>
-<dd> The pathname of an alternate configuration file. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</p>
-<dt><code>FREIGHT_ADD_ERROR</code></p>
-<dd> If not empty acts as &#8211;add-error option.</dl>
+<dt><code>FREIGHT_CONF</code></dt>
+<dd> The pathname of an alternate configuration file. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dd>
+<dt><code>FREIGHT_ADD_ERROR</code></dt>
+<dd> If not empty acts as &#8211;add-error option.</dd></dl>
 <h2>THEME SONG</h2>
 <p> The New Pornographers &#8211; &quot;All the Old Showstoppers&quot;</p>
 <h2>AUTHOR</h2>

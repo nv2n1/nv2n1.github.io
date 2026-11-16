@@ -26,161 +26,133 @@ pod2html-- help-- htmldir = &lt;name&gt; --htmlroot = &lt;URL&gt; --infile = &lt
  pod2html takes the following arguments:
 <dl>
 <dt>help
-<dd> <pre>
+</dt><dd> <pre>
   --help
 </pre> 
-
  Displays the usage message.
-<dt>htmldir
-<dd> <pre>
+</dd><dt>htmldir
+</dt><dd> <pre>
   --htmldir=name
 </pre> 
-
  Sets the directory to which all cross references in the resulting <font SIZE="-1">HTML</font> file will be relative. Not passing this causes all links to be absolute since this is the value that tells Pod::Html the root of the documentation tree. 
-
  Do not use this and --htmlroot in the same call to pod2html; they are mutually exclusive.
-<dt>htmlroot
-<dd> <pre>
+</dd><dt>htmlroot
+</dt><dd> <pre>
   --htmlroot=URL
 </pre> 
-
  Sets the base <font SIZE="-1">URL</font> for the <font SIZE="-1">HTML</font> files. When cross-references are made, the <font SIZE="-1">HTML</font> root is prepended to the <font SIZE="-1">URL.</font> 
-
  Do not use this if relative links are desired: use --htmldir instead. 
-
  Do not pass both this and --htmldir to pod2html; they are mutually exclusive.
-<dt>infile
-<dd> <pre>
+</dd><dt>infile
+</dt><dd> <pre>
   --infile=name
 </pre> 
-
  Specify the pod file to convert. Input is taken from <font SIZE="-1">STDIN</font> if no infile is specified.
-<dt>outfile
-<dd> <pre>
+</dd><dt>outfile
+</dt><dd> <pre>
   --outfile=name
 </pre> 
-
  Specify the <font SIZE="-1">HTML</font> file to create. Output goes to <font SIZE="-1">STDOUT</font> if no outfile is specified.
-<dt>podroot
-<dd> <pre>
+</dd><dt>podroot
+</dt><dd> <pre>
   --podroot=name
 </pre> 
-
  Specify the base directory for finding library pods.
-<dt>podpath
-<dd> <pre>
+</dd><dt>podpath
+</dt><dd> <pre>
   --podpath=name:...:name
 </pre> 
-
  Specify which subdirectories of the podroot contain pod files whose <font SIZE="-1">HTML</font> converted forms can be linked-to in cross-references.
-<dt>cachedir
-<dd> <pre>
+</dd><dt>cachedir
+</dt><dd> <pre>
   --cachedir=name
 </pre> 
-
  Specify which directory is used for storing cache. Default directory is the current working directory.
-<dt>flush
-<dd> <pre>
+</dd><dt>flush
+</dt><dd> <pre>
   --flush
 </pre> 
-
  Flush the cache.
-<dt>backlink
-<dd> <pre>
+</dd><dt>backlink
+</dt><dd> <pre>
   --backlink
 </pre> 
-
  Turn =head1 directives into links pointing to the top of the <font SIZE="-1">HTML</font> file.
-<dt>nobacklink
-<dd> <pre>
+</dd><dt>nobacklink
+</dt><dd> <pre>
   --nobacklink
 </pre> 
-
  Do not turn =head1 directives into links pointing to the top of the <font SIZE="-1">HTML</font> file (default behaviour).
-<dt>header
-<dd> <pre>
+</dd><dt>header
+</dt><dd> <pre>
   --header
 </pre> 
-
  Create header and footer blocks containing the text of the ``<font SIZE="-1">NAME''</font> section.
-<dt>noheader
-<dd> <pre>
+</dd><dt>noheader
+</dt><dd> <pre>
   --noheader
 </pre> 
-
  Do not create header and footer blocks containing the text of the ``<font SIZE="-1">NAME''</font> section (default behaviour).
-<dt>poderrors
-<dd> <pre>
+</dd><dt>poderrors
+</dt><dd> <pre>
   --poderrors
 </pre> 
-
  Include a ``<font SIZE="-1">POD ERRORS''</font> section in the outfile if there were any <font SIZE="-1">POD</font> errors in the infile (default behaviour).
-<dt>nopoderrors
-<dd> <pre>
+</dd><dt>nopoderrors
+</dt><dd> <pre>
   --nopoderrors
 </pre> 
-
  Do not include a ``<font SIZE="-1">POD ERRORS''</font> section in the outfile if there were any <font SIZE="-1">POD</font> errors in the infile.
-<dt>index
-<dd> <pre>
+</dd><dt>index
+</dt><dd> <pre>
   --index
 </pre> 
-
  Generate an index at the top of the <font SIZE="-1">HTML</font> file (default behaviour).
-<dt>noindex
-<dd> <pre>
+</dd><dt>noindex
+</dt><dd> <pre>
   --noindex
 </pre> 
-
  Do not generate an index at the top of the <font SIZE="-1">HTML</font> file.
-<dt>recurse
-<dd> <pre>
+</dd><dt>recurse
+</dt><dd> <pre>
   --recurse
 </pre> 
-
  Recurse into subdirectories specified in podpath (default behaviour).
-<dt>norecurse
-<dd> <pre>
+</dd><dt>norecurse
+</dt><dd> <pre>
   --norecurse
 </pre> 
-
  Do not recurse into subdirectories specified in podpath.
-<dt>css
-<dd> <pre>
+</dd><dt>css
+</dt><dd> <pre>
   --css=URL
 </pre> 
-
  Specify the <font SIZE="-1">URL</font> of cascading style sheet to link from resulting <font SIZE="-1">HTML</font> file. Default is none style sheet.
-<dt>title
-<dd> <pre>
+</dd><dt>title
+</dt><dd> <pre>
   --title=title
 </pre> 
-
  Specify the title of the resulting <font SIZE="-1">HTML</font> file.
-<dt>quiet
-<dd> <pre>
+</dd><dt>quiet
+</dt><dd> <pre>
   --quiet
 </pre> 
-
  Don't display mostly harmless warning messages.
-<dt>noquiet
-<dd> <pre>
+</dd><dt>noquiet
+</dt><dd> <pre>
   --noquiet
 </pre> 
-
  Display mostly harmless warning messages (default behaviour). But this is not the same as ``verbose'' mode.
-<dt>verbose
-<dd> <pre>
+</dd><dt>verbose
+</dt><dd> <pre>
   --verbose
 </pre> 
-
  Display progress messages.
-<dt>noverbose
-<dd> <pre>
+</dd><dt>noverbose
+</dt><dd> <pre>
   --noverbose
 </pre> 
-
- Do not display progress messages (default behaviour).</dl>
+ Do not display progress messages (default behaviour).</dd></dl>
 
 <h2>AUTHOR</h2>
 

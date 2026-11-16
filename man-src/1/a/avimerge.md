@@ -17,29 +17,29 @@ description: "avimerge – merge several AVI-files into one"
 <p> <code>avimerge</code> is a versatile tool. It can contatenate several AVI files into one. It can also be used to fix an index of a broken file and can also replace audio tracks or muxes new ones. It can read raw AC3 and MP3 files for multplexing.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o </code><i>name</i></p>
-<dd> Specify the name of the output file.</p>
-<dt><code>-i </code><i>file</i></p>
-<dd> Specify the name(s) of the input file(s) to merge into the output file.</p>
-<dt><code>-p </code><i>file</i></p>
-<dd> Specify the name of the audio file to multiplex into the output file. The type of file can be either another AVI file or an MP3 or AC3 file.</p>
-<dt><code>-b </code><i>num</i></p>
-<dd> Specify if avimerge should write an VBR mp3 header into the AVI file. Default is dependent on the input file (and usually correct). <i>num</i> is either 1 or 0.</p>
-<dt><code>-c</code></p>
+<dt><code>-o </code><i>name</i></dt>
+<dd> Specify the name of the output file.</dd>
+<dt><code>-i </code><i>file</i></dt>
+<dd> Specify the name(s) of the input file(s) to merge into the output file.</dd>
+<dt><code>-p </code><i>file</i></dt>
+<dd> Specify the name of the audio file to multiplex into the output file. The type of file can be either another AVI file or an MP3 or AC3 file.</dd>
+<dt><code>-b </code><i>num</i></dt>
+<dd> Specify if avimerge should write an VBR mp3 header into the AVI file. Default is dependent on the input file (and usually correct). <i>num</i> is either 1 or 0.</dd>
+<dt><code>-c</code></dt>
 <dd> Drop video frames in case audio is missing [off]<br />
- Only when merging multiple AVI files. Some AVI files run a little bit (usually for one or two video frames) short on audio. This means avimerge cannot keep up sync when concatinating them. The files play fine when played individually but not when merged because audio from the new file gets played back with video from the old file. <code>avimerge</code> will print a message like </p>
+ Only when merging multiple AVI files. Some AVI files run a little bit (usually for one or two video frames) short on audio. This means avimerge cannot keep up sync when concatinating them. The files play fine when played individually but not when merged because audio from the new file gets played back with video from the old file. <code>avimerge</code> will print a message like </dd>
 <pre>
   No audiodata left for track 0-&gt;0 (59950.25=59950.25) continuing ..
 </pre>
 <p> When you turn on the -c option, the video which is too much will be dropped.</p>
-<dt><code>-f </code><i>commentfile</i></p>
-<dd> Read AVI tombstone data for header comments from <i>commentfile</i>. See /docs/avi_comments.txt for a sample.</p>
-<dt><code>-x </code><i>indexfile</i></p>
-<dd> Read the AVI index from <i>indexfile.</i> See <a href="/docs/linux/man/1-aviindex/">aviindex</a>(1) for information on how to create such a file.</p>
-<dt><code>-a </code><i>num</i></p>
-<dd> Specify the number of the audio track you want to use from the <i>input</i> file.</p>
-<dt><code>-A </code><i>num</i></p>
-<dd> Specify the number of the audio track you want to use in the <i>output</i> file. If you specify an existing track number, the track will be replaced. If omitted, the next free slot will be used.</dl>
+<dt><code>-f </code><i>commentfile</i></dt>
+<dd> Read AVI tombstone data for header comments from <i>commentfile</i>. See /docs/avi_comments.txt for a sample.</dd>
+<dt><code>-x </code><i>indexfile</i></dt>
+<dd> Read the AVI index from <i>indexfile.</i> See <a href="/docs/linux/man/1-aviindex/">aviindex</a>(1) for information on how to create such a file.</dd>
+<dt><code>-a </code><i>num</i></dt>
+<dd> Specify the number of the audio track you want to use from the <i>input</i> file.</dd>
+<dt><code>-A </code><i>num</i></dt>
+<dd> Specify the number of the audio track you want to use in the <i>output</i> file. If you specify an existing track number, the track will be replaced. If omitted, the next free slot will be used.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The command </p>
 <pre>

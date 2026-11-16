@@ -10,8 +10,6 @@ description: "snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_va
 <p>snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_var, snmp_clone_varbind, snmp_set_var_objid, snmp_set_var_value, snmp_set_var_typed_value, snmp_set_var_typed_integer, print_variable, fprint_variable, snprint_variable, print_value, fprint_value, snprint_value, snmp_free_var, snmp_free_varbind &#8211; netsnmp_varbind_api functions</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;net-snmp/varbind_api.h&gt;
-
-
 Creation</code></pre>
 <p> <code>netsnmp_variable_list *snmp_pdu_add_variable(</code><br />
  <code> netsnmp_pdu *</code><i>pdu</i><code>,</code><br />
@@ -59,13 +57,10 @@ Creation</code></pre>
 <h3>Creation</h3>
 <p><code>snmp_pdu_add_variable</code> will create a new varbind structure, initialised with the name ( <i>objid</i>, <i>objidlen</i> ), syntax ( <i>type</i> ) and value ( <i>value , len</i> ) provided. This varbind is then added to the end of the varbind list in the given PDU. </p>
 <pre><code>snmp_varlist_add_variable
-
 is similar, but appends the new varbind to the end of the
 varbind list provided.
 When adding the first varbind to an empty list, simply
 pass the address of the head of the list:
-
-
 netsnmp_variable_list *vl = NULL;
 snmp_varlist_add_variable(
 &amp;vl, name1, name1_len,

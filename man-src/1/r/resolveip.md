@@ -11,35 +11,35 @@ description: "resolveip – resolve host name to IP address or vice versa"
 <p> resolveip &#8211; resolve host name to IP address or vice versa </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>resolveip [</code><i>options</i><code>] {</code><i>host_name</i><code>|</code><i>ip-addr</i><code>} &#8230;</code></dl>
+<dt> <code>resolveip [</code><i>options</i><code>] {</code><i>host_name</i><code>|</code><i>ip-addr</i><code>} &#8230;</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>resolveip</code> utility resolves host names to IP addresses and vice versa. </p>
+<dd>The <code>resolveip</code> utility resolves host names to IP addresses and vice versa. </dd>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> <code>resolveip</code> is deprecated and is removed in MySQL 8.0. <code>nslookup</code>, <code>host</code>, or <code>dig</code> can be used instead. </p>
 </dl>
 <p> Invoke <code>resolveip</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt; resolveip[options]{host_name | ip - addr}...
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>resolveip</code> supports the following options. </p>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;help</code>, <code>&#8211;info</code>, <code>-?</code>, <code>-I</code> </p>
+</dt><dd> &bull; <code>&#8211;help</code>, <code>&#8211;info</code>, <code>-?</code>, <code>-I</code> </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;silent</code>, <code>-s</code> </p>
+</dt><dd> &bull; <code>&#8211;silent</code>, <code>-s</code> </dd>
 <p> Silent mode. Produce less output.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;version</code>, <code>-V</code> </p>
+</dt><dd> &bull; <code>&#8211;version</code>, <code>-V</code> </dd>
 <p> Display version information and exit.</dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1997, 2019, Oracle and/or its affiliates. All rights reserved. </p>
@@ -51,3 +51,4 @@ shell &gt; resolveip[options]{host_name | ip - addr}...
 <h2>AUTHOR</h2>
 <p> Oracle Corporation (<a rel="nofollow" href="http://dev.mysql.com/">http://dev.mysql.com/</a>). </p>
 <h2>Index</h2>
+</p>

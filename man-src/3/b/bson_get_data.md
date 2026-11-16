@@ -16,8 +16,8 @@ bson_get_data(const bson_t *bson);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_get_data/">bson_get_data</a>(3)</code> function shall return the raw buffer of a bson document. This can be used in conjunction with the <code>len</code> property of a <code>bson_t</code> if you want to copy the raw buffer around. </p>
 <h2>RETURNS</h2>

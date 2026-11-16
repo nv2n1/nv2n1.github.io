@@ -15,8 +15,8 @@ description: "XmDropSiteRegistered — A Drag and Drop function that determines 
 <h2>Description</h2>
 <p><code>XmDropSiteRegistered</code> determines if the specified widget has a drop site registered. If a drop site is registered, this function returns True.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget being queried.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget being queried.</dd></dl>
 <p> For a complete definition of DropSite and its associated resources, see <code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3).</p>
 <h2>Return</h2>
 <p>If the widget is not a registered drop site, this function returns False. Otherwise, it returns True.</p>

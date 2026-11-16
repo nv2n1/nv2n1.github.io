@@ -14,13 +14,7 @@ description: "std::poisson_distribution< _IntType >::param_type –"
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (double __mean=1.0)
-
-
-
 double mean () const
-
-
-
 Friends</code></pre>
 <p> bool <code>operator==</code> (const <code>param_type</code> &amp;__p1, const <code>param_type</code> &amp;__p2) </p>
 <p> class <code>poisson_distribution&lt; _IntType &gt;</code></p>

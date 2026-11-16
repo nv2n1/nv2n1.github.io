@@ -14,13 +14,13 @@ description: "memcpy – Copy one area of memory to another"
 <p><i>dest</i></p>
 <dl>
 <dd>
-<dd>Where to copy to</dl>
+</dd><dd>Where to copy to</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>Where to copy from</dl>
+<dd>Where to copy from</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>The size of the area.</dl>
+<dd>The size of the area.</dd></dl>
 <h2>Description</h2>
 <p>You should not use this function to access IO space, use <code>memcpy_toio</code> or <code>memcpy_fromio</code> instead.</p>
 <h2>Copyright</h2>

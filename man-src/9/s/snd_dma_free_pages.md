@@ -14,7 +14,7 @@ description: "snd_dma_free_pages – release the allocated buffer"
 <p><i>dmab</i></p>
 <dl>
 <dd>
-<dd>the buffer allocation record to release</dl>
+</dd><dd>the buffer allocation record to release</dd></dl>
 <h2>Description</h2>
 <p>Releases the allocated buffer via <code>snd_dma_alloc_pages</code>.</p>
 <h2>Copyright</h2>

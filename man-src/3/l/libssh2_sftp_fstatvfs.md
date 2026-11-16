@@ -45,10 +45,10 @@ struct _LIBSSH2_SFTP_STATVFS {
 <p> It is unspecified whether all members of the returned struct have meaningful values on all file systems. </p>
 <p> The field <i>f_flag</i> is a bit mask. Bits are defined as follows:</p>
 <dl>
-<dt>LIBSSH2_SFTP_ST_RDONLY</p>
-<dd> Read-only file system.</p>
-<dt>LIBSSH2_SFTP_ST_NOSUID</p>
-<dd> Set-user-ID/set-group-ID bits are ignored by <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3). </p>
+<dt>LIBSSH2_SFTP_ST_RDONLY</dt>
+<dd> Read-only file system.</dd>
+<dt>LIBSSH2_SFTP_ST_NOSUID</dt>
+<dd> Set-user-ID/set-group-ID bits are ignored by <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3). </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> Returns 0 on success or negative on failure. If used in non-blocking mode, it returns LIBSSH2_ERROR_EAGAIN when it would otherwise block. While LIBSSH2_ERROR_EAGAIN is a negative number, it isn&#8217;t really a failure per se.</p>

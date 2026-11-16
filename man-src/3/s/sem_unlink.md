@@ -10,7 +10,6 @@ description: "sem_unlink – remove a named semaphore"
 <p>sem_unlink &#8211; remove a named semaphore</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;semaphore.h&gt;
-
 int sem_unlink(const char *name);</code></pre>
 <p> Link with <i>-pthread</i>.</p>
 <h2>Description</h2>
@@ -19,12 +18,12 @@ int sem_unlink(const char *name);</code></pre>
 <p>On success <code>sem_unlink</code>() returns 0; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>The caller does not have permission to unlink this semaphore.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd><i>name</i> was too long.</p>
-<dt><code>ENOENT</code></p>
-<dd>There is no semaphore with the given <i>name</i>.</dl>
+<dt><code>EACCES</code></dt>
+<dd>The caller does not have permission to unlink this semaphore.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd><i>name</i> was too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>There is no semaphore with the given <i>name</i>.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

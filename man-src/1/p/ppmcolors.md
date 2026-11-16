@@ -21,8 +21,8 @@ description: "ppmcolors – generate a color map of all colors of a certain maxv
 <p> <code>pgmramp</code> performs a similar function for PGM images. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-maxval=</code><i>maxval</i></p>
-<dd> This is the maxval of the generated color map. Default is 5. </p>
+<dt><code>-maxval=</code><i>maxval</i></dt>
+<dd> This is the maxval of the generated color map. Default is 5. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1), <code><a href="/docs/linux/man/1-pnmcolormap/">pnmcolormap</a></code>(1), <code><a href="/docs/linux/man/1-ppmcie/">ppmcie</a></code>(1), <code><a href="/docs/linux/man/1-ppmrainbow/">ppmrainbow</a></code>(1), <code><a href="/docs/linux/man/1-pgmramp/">pgmramp</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>

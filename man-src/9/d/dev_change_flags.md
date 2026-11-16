@@ -15,11 +15,11 @@ dev_change_flags - change device settings
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>device state flags</dl>
+<dl><dd>device state flags</dd></dl>
 
 <h2>Description</h2>
 

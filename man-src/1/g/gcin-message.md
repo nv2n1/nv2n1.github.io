@@ -15,12 +15,12 @@ description: "gcin-message – gcin’s notification tool"
 <p> <code>gcin-message</code> displays notification image and/or text. It is useful for filters to have interaction with users.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-icon</code> file</p>
-<dd> Display an image.</p>
-<dt><code>-text</code> string</p>
-<dd> Display text string. The space character is not allowed.</p>
-<dt><code>-duration</code> milliseconds</p>
-<dd> Time to show notifications.</dl>
+<dt><code>-icon</code> file</dt>
+<dd> Display an image.</dd>
+<dt><code>-text</code> string</dt>
+<dd> Display text string. The space character is not allowed.</dd>
+<dt><code>-duration</code> milliseconds</dt>
+<dd> Time to show notifications.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1).</p>
 <h2>AUTHOR</h2>

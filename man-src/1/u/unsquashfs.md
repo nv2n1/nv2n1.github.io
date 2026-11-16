@@ -16,50 +16,50 @@ description: "unsquashfs – tool to uncompress squashfs filesystems"
 <p> Squashfs is intended for general read-only filesystem use, for archival use (i.e. in cases where a .tar.gz file may be used), and in constrained block device/memory systems (e.g. embedded systems) where low overhead is needed. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-v, -version</p>
-<dd> print version, licence and copyright information.</p>
-<dt>-d <i>PATHNAME</i>, -dest <i>PATHNAME</i></p>
-<dd> unsquash to <i>PATHNAME</i>, default &quot;squashfs-root&quot;.</p>
-<dt>-n, -no-progress</p>
-<dd> don&#8217;t display the progress bar.</p>
-<dt>-no, -no-xattrs</p>
-<dd> don&#8217;t extract xattrs in file system.</p>
-<dt>-x, -xattrs</p>
-<dd> extract xattrs in file system (default).</p>
-<dt>-p <i>NUMBER</i>, -processors <i>NUMBER</i></p>
-<dd> use <i>NUMBER</i> processors. By default will use number of processors available.</p>
-<dt>-i, -info</p>
-<dd> print files as they are unsquashed.</p>
-<dt>-li, -linfo</p>
-<dd> print files as they are unsquashed with file attributes (like ls -l output).</p>
-<dt>-l, -ls</p>
-<dd> list filesystem, but don&#8217;t unsquash.</p>
-<dt>-ll, -lls</p>
-<dd> list filesystem with file attributes (like ls -l output), but don&#8217;t unsquash.</p>
-<dt>-nl, -nls</p>
-<dd> list filesystem with file attributes (like ls -n output), but don&#8217;t unsquash.</p>
-<dt>-f, -force</p>
-<dd> if file already exists then overwrite.</p>
-<dt>-s, -stat</p>
-<dd> display filesystem superblock information.</p>
-<dt>-e <i>EXTRACT_FILE</i>, -ef <i>EXTRACT_FILE</i></p>
-<dd> list of directories or files to extract. One per line.</p>
-<dt>-da <i>SIZE</i>, -data-queue <i>SIZE</i></p>
-<dd> Set data queue to <i>SIZE</i> Mbytes. Default 256 Mbytes.</p>
-<dt>-fr <i>SIZE</i>, -frag-queue <i>SIZE</i></p>
-<dd> Set fragment queue to <i>SIZE</i> Mbytes. Default 256 Mbytes.</p>
-<dt>-r, -regex</p>
-<dd> treat extract names as POSIX regular expressions rather than use the default shell wildcard expansion (globbing). </p>
+<dt>-v, -version</dt>
+<dd> print version, licence and copyright information.</dd>
+<dt>-d <i>PATHNAME</i>, -dest <i>PATHNAME</i></dt>
+<dd> unsquash to <i>PATHNAME</i>, default &quot;squashfs-root&quot;.</dd>
+<dt>-n, -no-progress</dt>
+<dd> don&#8217;t display the progress bar.</dd>
+<dt>-no, -no-xattrs</dt>
+<dd> don&#8217;t extract xattrs in file system.</dd>
+<dt>-x, -xattrs</dt>
+<dd> extract xattrs in file system (default).</dd>
+<dt>-p <i>NUMBER</i>, -processors <i>NUMBER</i></dt>
+<dd> use <i>NUMBER</i> processors. By default will use number of processors available.</dd>
+<dt>-i, -info</dt>
+<dd> print files as they are unsquashed.</dd>
+<dt>-li, -linfo</dt>
+<dd> print files as they are unsquashed with file attributes (like ls -l output).</dd>
+<dt>-l, -ls</dt>
+<dd> list filesystem, but don&#8217;t unsquash.</dd>
+<dt>-ll, -lls</dt>
+<dd> list filesystem with file attributes (like ls -l output), but don&#8217;t unsquash.</dd>
+<dt>-nl, -nls</dt>
+<dd> list filesystem with file attributes (like ls -n output), but don&#8217;t unsquash.</dd>
+<dt>-f, -force</dt>
+<dd> if file already exists then overwrite.</dd>
+<dt>-s, -stat</dt>
+<dd> display filesystem superblock information.</dd>
+<dt>-e <i>EXTRACT_FILE</i>, -ef <i>EXTRACT_FILE</i></dt>
+<dd> list of directories or files to extract. One per line.</dd>
+<dt>-da <i>SIZE</i>, -data-queue <i>SIZE</i></dt>
+<dd> Set data queue to <i>SIZE</i> Mbytes. Default 256 Mbytes.</dd>
+<dt>-fr <i>SIZE</i>, -frag-queue <i>SIZE</i></dt>
+<dd> Set fragment queue to <i>SIZE</i> Mbytes. Default 256 Mbytes.</dd>
+<dt>-r, -regex</dt>
+<dd> treat extract names as POSIX regular expressions rather than use the default shell wildcard expansion (globbing). </dd>
 </dl>
 <h3>Decompressors available</h3>
 <dl>
-<dt>gzip</p>
+<dt>gzip</dt>
 <dd>
-<dt>lzo</p>
+</dd><dt>lzo</dt>
 <dd>
-<dt>xz</p>
+</dd><dt>xz</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mksquashfs/">mksquashfs</a>(1) </p>
 <h2>HOMEPAGE</h2>

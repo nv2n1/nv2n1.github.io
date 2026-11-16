@@ -15,12 +15,12 @@ description: "CURLOPT_FTPSSLAUTH – set order in which to attempt TLS vs SSL wh
 <p>Pass a long using one of the values from below, to alter how libcurl issues &quot;AUTH TLS&quot; or &quot;AUTH SSL&quot; when FTP over SSL is activated. This is only interesting if <i><a href="/docs/linux/man/3-curlopt_use_ssl/">CURLOPT_USE_SSL</a>(3)</i> is also set. </p>
 <p> Possible <i>order</i> values:</p>
 <dl COMPACT>
-<dt>CURLFTPAUTH_DEFAULT</p>
-<dd>Allow libcurl to decide.</p>
-<dt>CURLFTPAUTH_SSL</p>
-<dd>Try &quot;AUTH SSL&quot; first, and only if that fails try &quot;AUTH TLS&quot;.</p>
-<dt>CURLFTPAUTH_TLS</p>
-<dd>Try &quot;AUTH TLS&quot; first, and only if that fails try &quot;AUTH SSL&quot;.</dl>
+<dt>CURLFTPAUTH_DEFAULT</dt>
+<dd>Allow libcurl to decide.</dd>
+<dt>CURLFTPAUTH_SSL</dt>
+<dd>Try &quot;AUTH SSL&quot; first, and only if that fails try &quot;AUTH TLS&quot;.</dd>
+<dt>CURLFTPAUTH_TLS</dt>
+<dd>Try &quot;AUTH TLS&quot; first, and only if that fails try &quot;AUTH SSL&quot;.</dd></dl>
 <h2>Default</h2>
 <p>CURLFTPAUTH_DEFAULT</p>
 <h2>Protocols</h2>

@@ -14,10 +14,10 @@ description: "snd_pcm_lib_alloc_vmalloc_buffer – allocate virtual DMA buffer"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the substream to allocate the buffer to</dl>
+</dd><dd>the substream to allocate the buffer to</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>the requested buffer size, in bytes</dl>
+<dd>the requested buffer size, in bytes</dd></dl>
 <h2>Description</h2>
 <p>Allocates the PCM substream buffer using <code>vmalloc</code>, i.e., the memory is contiguous in kernel virtual space, but not in physical memory. Use this if the buffer is accessed by kernel code but not by device DMA.</p>
 <h2>Return</h2>

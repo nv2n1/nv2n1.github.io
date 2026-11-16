@@ -28,40 +28,40 @@ dbmerge-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[colum
 <h2>OPTIONS</h2>
 <p> General option:</p>
 <dl>
-<dt><code>&#8211;xargs</code></p>
-<dd> Expect that input filenames are given, one-per-line, on standard input. (In this case, merging can start incrementally.</p>
-<dt><code>&#8211;removeinputs</code></p>
-<dd> Delete the source files after they have been consumed. (Defaults off, leaving the inputs in place.)</p>
-<dt><code>-T TmpDir</code></p>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</p>
-<dt><code>&#8211;parallelism</code> N</p>
-<dd> Allow up to N merges to happen in parallel. Default is the number of CPUs in the machine.</p>
-<dt><code>&#8211;endgame</code> (or <code>&#8211;noendgame</code>)</p>
-<dd> Enable endgame mode, extra parallelism when finishing up. (On by default.)</dl>
+<dt><code>&#8211;xargs</code></dt>
+<dd> Expect that input filenames are given, one-per-line, on standard input. (In this case, merging can start incrementally.</dd>
+<dt><code>&#8211;removeinputs</code></dt>
+<dd> Delete the source files after they have been consumed. (Defaults off, leaving the inputs in place.)</dd>
+<dt><code>-T TmpDir</code></dt>
+<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd>
+<dt><code>&#8211;parallelism</code> N</dt>
+<dd> Allow up to N merges to happen in parallel. Default is the number of CPUs in the machine.</dd>
+<dt><code>&#8211;endgame</code> (or <code>&#8211;noendgame</code>)</dt>
+<dd> Enable endgame mode, extra parallelism when finishing up. (On by default.)</dd></dl>
 <p> Sort specification options (can be interspersed with column names):</p>
 <dl>
-<dt><code>-r</code> or <code>&#8211;descending</code></p>
-<dd> sort in reverse order (high to low)</p>
-<dt><code>-R</code> or <code>&#8211;ascending</code></p>
-<dd> sort in normal order (low to high)</p>
-<dt><code>-n</code> or <code>&#8211;numeric</code></p>
-<dd> sort numerically</p>
-<dt><code>-N</code> or <code>&#8211;lexical</code></p>
-<dd> sort lexicographically</dl>
+<dt><code>-r</code> or <code>&#8211;descending</code></dt>
+<dd> sort in reverse order (high to low)</dd>
+<dt><code>-R</code> or <code>&#8211;ascending</code></dt>
+<dd> sort in normal order (low to high)</dd>
+<dt><code>-n</code> or <code>&#8211;numeric</code></dt>
+<dd> sort numerically</dd>
+<dt><code>-N</code> or <code>&#8211;lexical</code></dt>
+<dd> sort lexicographically</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <p> File <i>a.fsdb</i>: </p>

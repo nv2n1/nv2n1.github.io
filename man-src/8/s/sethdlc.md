@@ -15,16 +15,16 @@ description: "sethdlc – get/set Linux HDLC packet radio modem driver port info
 <h2>Options</h2>
 <p><code>sethdlc</code> accepts the following options: </p>
 <dl>
-<dt><code>-b</code></p>
-<dd>Trace the bits at the output of the demodulator, after RX clock recovery. This option is only available if <code>sethdlc</code> and the soundcard modem kernel driver is compiled with debugging support on. This is useful for driver debugging.</p>
-<dt><code>-d</code></p>
-<dd>Trace DCD, PTT and other status information on stdout. <code>sethdlc</code> displays two times per second a line containing these informations.</p>
-<dt><code>-h</code></p>
-<dd>Display an overview of the available command line parameters and exit.</p>
-<dt><code>-i</code></p>
-<dd>The <i>device</i> argument specifies the HDLC modem device which should be configured or interrogated. It will usually have the following form: <i>bc[0-3]</i> for the baycom driver and <i>sm[0-3]</i> for the soundcard modem driver.</p>
-<dt><code>-s</code></p>
-<dd>Trace the bits at the demodulator output, <i>before</i> the RX clock recovery, to stdout. This option is only available the modem driver is compiled with debugging support on. It may not be available on some modem, such as the <i>par96</i>. </p>
+<dt><code>-b</code></dt>
+<dd>Trace the bits at the output of the demodulator, after RX clock recovery. This option is only available if <code>sethdlc</code> and the soundcard modem kernel driver is compiled with debugging support on. This is useful for driver debugging.</dd>
+<dt><code>-d</code></dt>
+<dd>Trace DCD, PTT and other status information on stdout. <code>sethdlc</code> displays two times per second a line containing these informations.</dd>
+<dt><code>-h</code></dt>
+<dd>Display an overview of the available command line parameters and exit.</dd>
+<dt><code>-i</code></dt>
+<dd>The <i>device</i> argument specifies the HDLC modem device which should be configured or interrogated. It will usually have the following form: <i>bc[0-3]</i> for the baycom driver and <i>sm[0-3]</i> for the soundcard modem driver.</dd>
+<dt><code>-s</code></dt>
+<dd>Trace the bits at the demodulator output, <i>before</i> the RX clock recovery, to stdout. This option is only available the modem driver is compiled with debugging support on. It may not be available on some modem, such as the <i>par96</i>. </dd>
 </dl>
 <h2>Parameters</h2>
 <p>The following parameters can be assigned to a soundcard radio modem port. </p>
@@ -47,14 +47,14 @@ description: "sethdlc – get/set Linux HDLC packet radio modem driver port info
 <p>It is important to note that sethdlc merely tells the Linux kernel where it should expect to find the I/O port and IRQ lines of a particular serial port. It does <i>not</i> configure the hardware to use a particular I/O port. In order to do that, you will need to physically program the serial board, usually by setting some jumpers or by switching some DIP switches. </p>
 <p> This section will provide some pointers in helping you decide how you would like to configure your baycom ports. </p>
 <p> The &quot;standard MS-DOS&quot; port associations are given below: </p>
-<pre><dl><dt><dd>COM1, port 0x3f8, irq 4
+<pre><dl><dt></dt><dd>COM1, port 0x3f8, irq 4
 COM2, port 0x2f8, irq 3
 COM3, port 0x3e8, irq 4
 COM4, port 0x2e8, irq 3
 LPT1, port 0x378, irq 7
 LPT1 (on hercules graphics adapter), port 0x3bc, irq 7
 LPT1, port 0x278, irq 5
-</dl></pre>
+</dd></dl></pre>
 <h2>Considerations Of Configuring Soundcard Radio Modem Ports</h2>
 <p>Some cards need to be initialized before they act as a WSS or SoundBlaster compatible card. This driver does <i>not</i> do this. You can use the standard linux sound driver, if compiled as a module. Just load the sound driver (insmod sound) and remove it again (rmmod sound). The card should then be configured for either soundblaster or WSS compatibility. If this does not work for some reason, you&#8217;ll have to write your own soundcard configuration utility. This is not as complicated as it sounds; it can be done from user space (but requiring root privileges) using <i>ioperm</i> and/or <i>iopl</i>. </p>
 <p> It is important that the audio levels of your radio match those of the soundcard. To help achieve this, there are two utilities: <i>smdiag</i> and <i>smmixer</i>. See their respective manpage. </p>

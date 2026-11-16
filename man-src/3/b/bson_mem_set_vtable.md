@@ -24,14 +24,14 @@ void bson_mem_set_vtable(const bson_mem_vtable_t *vtable);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>vtable</code></p>
-<dd> A bson_mem_vtable_t with every non-padding field set.</dl>
+<dt><code>vtable</code></dt>
+<dd> A bson_mem_vtable_t with every non-padding field set.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function shall install a new memory allocator to be used by Libbson. </p>
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> This function <code>MUST</code> be called at the beginning of the process. Failure to do so will result in memory being freed by the wrong allocator.</dl>
+</dt><dd> This function <code>MUST</code> be called at the beginning of the process. Failure to do so will result in memory being freed by the wrong allocator.</dd></dl>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
 <h2>Index</h2>

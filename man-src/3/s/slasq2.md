@@ -19,7 +19,7 @@ description: "slasq2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLASQ2 computes all the eigenvalues of the symmetric positive 
  definite tridiagonal matrix associated with the qd array Z to high
@@ -35,11 +35,11 @@ description: "slasq2.f –"
  handling of infinities and NaNs, and false otherwise. This variable
  is passed to SLASQ3.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
         The number of rows and columns in the matrix. N &gt;= 0.
@@ -64,25 +64,26 @@ INFO is INTEGER = 0 : successful exit &lt; 0 : if the i - th argument is a scala
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Local Variables: I0:N0 defines a current unreduced segment of Z.
   The shifts are accumulated in SIGMA. Iteration count is in ITER.
   Ping-pong is controlled by PP (alternates between 0 and 1).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 113 of file slasq2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -11,7 +11,6 @@ description: "sc::SCExtrapData –"
 <p> <code>SCExtrapData</code> hold the data to be extrapolated needed by <code>SelfConsistentExtrapolation</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;scextrap.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::SymmSCMatrix2SCExtrapData</code>, <code>sc::SymmSCMatrix4SCExtrapData</code>, <code>sc::SymmSCMatrixNSCExtrapData</code>, and <code>sc::SymmSCMatrixSCExtrapData</code>.</p>
 <h3>Public Member Functions</h3>

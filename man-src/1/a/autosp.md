@@ -18,3 +18,4 @@ otes \Notes \NOtes &#8230;), determined by the actual note values, with \sk spac
 <p> For example, if applied to </p>
 <pre>
     notes\qa J\qa K&amp;
+</pre>

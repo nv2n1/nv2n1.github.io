@@ -38,15 +38,15 @@ Usage:
 Create sparse file object definition, the file is not created
 just the object. Object attributes are defined which makes it
 easy to create the actual file.
-<dl><dt><dd><dl><dt><code>absfile:</code>
-<dd>Absolute path name of file
-<dt><code>file_size:</code>
-<dd>Total size of sparse file
-<dt><code>hole_list:</code>
-<dd>List of hole offsets
-<dt><code>hole_size:</code>
-<dd>Size for each hole
-</dl></dl></pre>
+<dl><dl><dt><code>absfile:</code>
+</dt><dd>Absolute path name of file
+</dd><dt><code>file_size:</code>
+</dt><dd>Total size of sparse file
+</dd><dt><code>hole_list:</code>
+</dt><dd>List of hole offsets
+</dd><dt><code>hole_size:</code>
+</dt><dd>Size for each hole
+</dd></dl></dl></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-baseobj/">baseobj</a>(3)</code> </p>
 <h2>Bugs</h2>

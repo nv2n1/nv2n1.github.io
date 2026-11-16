@@ -23,6 +23,6 @@ description: "QwtPickerClickPointMachine –"
 <p> Pressing <code>QwtEventPattern::MouseSelect1</code> or <code>QwtEventPattern::KeySelect1</code> selects a point. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dl>
+<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

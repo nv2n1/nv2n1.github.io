@@ -19,28 +19,28 @@ description: "zsync – Partial/differential file download client over HTTP"
 <p> zsync retrieves the rest of the target file over HTTP. Once the download is finished, the old version (if the new file wants the same name) is moved aside (a .zs-old extension is appended). The modification time of the file is set to be the same as the remote source file (if specified in the .zsync).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code> <i>hostname</i>=<i>username</i>:<i>password</i></p>
+<dt><code>-A</code> <i>hostname</i>=<i>username</i>:<i>password</i></dt>
 <dd> Specifies a username and password to be used with the given hostname. <code>-A</code> can be used multiple times (with different hostnames), in cases where e.g. the<br />
-&nbsp;.zsync file is on a different server from the download, or there are multiple download servers (there could be different auth details for different servers &#8211; and zsync never assumes that your password should be sent to a server other than the one named &#8211; otherwise redirects would be dangerous!).</p>
-<dt><code>-i</code> <i>inputfile</i></p>
-<dd> Specifies (extra) input files. <i>inputfile</i> is scanned to identify blocks in common with the target file and zsync uses any blocks found. Can be used multiple times.</p>
-<dt><code>-k</code> <i>file</i>.zsync</p>
-<dd> Indicates that zsync should save the zsync file that it downloads, with the given filename. If that file already exists, then zsync will make a conditional request to the web server, such that it will only download it again if the server&#8217;s copy is newer. zsync will append .part to the filename for storing it while it is downloading, and will only overwrite the main file once the download is done &#8211; and if the download is interrupted, it will resume using the data in the .part file.</p>
-<dt><code>-o</code> <i>outputfile</i></p>
-<dd> Override the default output file name.</p>
-<dt><code>-q</code></p>
-<dd> Suppress the progress bar, download rate and ETA display.</p>
-<dt><code>-s</code></p>
-<dd> Deprecated synonym for -q.</p>
-<dt><code>-u</code> <i>url</i></p>
-<dd> This specifies the referring URL. If you have a .zsync file locally (if you downloaded it separately, with wget, say) and the .zsync file contains a relative URL, you need to specify where you got the .zsync file from so that zsync knows which server and path to use for the rest of the download (this is analogous to adding a &lt;base href=&quot;&#8230;&quot;&gt; to a downloaded web page to make the links work).</p>
-<dt><code>-V</code></p>
-<dd> Prints the version of zsync.</dl>
+&nbsp;.zsync file is on a different server from the download, or there are multiple download servers (there could be different auth details for different servers &#8211; and zsync never assumes that your password should be sent to a server other than the one named &#8211; otherwise redirects would be dangerous!).</dd>
+<dt><code>-i</code> <i>inputfile</i></dt>
+<dd> Specifies (extra) input files. <i>inputfile</i> is scanned to identify blocks in common with the target file and zsync uses any blocks found. Can be used multiple times.</dd>
+<dt><code>-k</code> <i>file</i>.zsync</dt>
+<dd> Indicates that zsync should save the zsync file that it downloads, with the given filename. If that file already exists, then zsync will make a conditional request to the web server, such that it will only download it again if the server&#8217;s copy is newer. zsync will append .part to the filename for storing it while it is downloading, and will only overwrite the main file once the download is done &#8211; and if the download is interrupted, it will resume using the data in the .part file.</dd>
+<dt><code>-o</code> <i>outputfile</i></dt>
+<dd> Override the default output file name.</dd>
+<dt><code>-q</code></dt>
+<dd> Suppress the progress bar, download rate and ETA display.</dd>
+<dt><code>-s</code></dt>
+<dd> Deprecated synonym for -q.</dd>
+<dt><code>-u</code> <i>url</i></dt>
+<dd> This specifies the referring URL. If you have a .zsync file locally (if you downloaded it separately, with wget, say) and the .zsync file contains a relative URL, you need to specify where you got the .zsync file from so that zsync knows which server and path to use for the rest of the download (this is analogous to adding a &lt;base href=&quot;&#8230;&quot;&gt; to a downloaded web page to make the links work).</dd>
+<dt><code>-V</code></dt>
+<dd> Prints the version of zsync.</dd></dl>
 <h2>FILES</h2>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>http_proxy</code></p>
-<dd> Should be the [<a rel="nofollow" href="http://]hostname:port">http://]hostname:port</a> for your web proxy, if one is required to access the target web server(s).</dl>
+<dt><code>http_proxy</code></dt>
+<dd> Should be the [<a rel="nofollow" href="http://]hostname:port">http://]hostname:port</a> for your web proxy, if one is required to access the target web server(s).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> zsync -i /var/lib/apt/lists/server.debian.org_debian_dists_etch_main_binary-i386_Packages <a rel="nofollow" href="http://zsync.moria.org.uk/s/etch/Packages.zsync">http://zsync.moria.org.uk/s/etch/Packages.zsync</a> </p>
 <h2>AUTHORS</h2>

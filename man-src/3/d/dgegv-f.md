@@ -39,10 +39,10 @@ description: "dgegv.f –"
  u**H*A = lambda*u**H*B or mu*v**H*A = v**H*B
  are left eigenvectors of (A,B).
  Note: this routine performs &quot;full balancing&quot; on A and B</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBVL</i> </p>
+<dd><i>JOBVL</i> </dd>
 <pre> JOBVL is CHARACTER*1
  = 'N': do not compute the left generalized eigenvectors;
  = 'V': compute the left generalized eigenvectors (returned
@@ -93,7 +93,6 @@ description: "dgegv.f –"
 <p><i>BETA</i> </p>
 <pre> BETA is DOUBLE PRECISION array, dimension (N)
  The scalars beta that define the eigenvalues of GNEP.
- 
  Together, the quantities alpha = (ALPHAR(j),ALPHAI(j)) and
  beta = BETA(j) represent the j-th eigenvalue of the matrix
  pair (A,B), in one of the forms lambda = alpha/beta or
@@ -176,13 +175,13 @@ description: "dgegv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -207,7 +206,8 @@ description: "dgegv.f –"
  are computed, then only the diagonal blocks will be correct.
  [*] See DHGEQZ, DGEGS, or read the book &quot;Matrix Computations&quot;,
  by Golub &amp; van Loan, pub. by Johns Hopkins U. Press.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 306 of file dgegv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

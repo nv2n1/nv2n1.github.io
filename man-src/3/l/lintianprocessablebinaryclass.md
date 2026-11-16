@@ -17,27 +17,27 @@ description: "Lintian::Processable::Binary::Class – Lintian interface to binar
 <p> Native heuristics are only available in source packages.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>is_pkg_class ([<font SIZE="-1">TYPE</font>])</p>
-<dd>Returns a truth value if the package is the given <font SIZE="-1">TYPE</font> of special package. <font SIZE="-1">TYPE</font> can be one of &#8220;transitional&#8221;, &#8220;debug&#8221; or &#8220;any-meta&#8221;. If omitted it defaults to &#8220;any-meta&#8221;. The semantics for these values are:</p>
+<dt>is_pkg_class ([<font SIZE="-1">TYPE</font>])</dt>
+<dd>Returns a truth value if the package is the given <font SIZE="-1">TYPE</font> of special package. <font SIZE="-1">TYPE</font> can be one of &#8220;transitional&#8221;, &#8220;debug&#8221; or &#8220;any-meta&#8221;. If omitted it defaults to &#8220;any-meta&#8221;. The semantics for these values are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>transitional</p>
-<dd>The package is (probably) a transitional package (e.g. it is probably empty, just depend on stuff will eventually disappear.) </p>
+</dd><dl COMPACT>
+<dt>transitional</dt>
+<dd>The package is (probably) a transitional package (e.g. it is probably empty, just depend on stuff will eventually disappear.) </dd>
 <p> Guessed from package description.</p>
-<dt>any-meta</p>
-<dd>This package is (probably) some kind of meta or task package. A meta package is usually empty and just depend on stuff. It will also return a truth value for &#8220;tasks&#8221; (i.e. tasksel &#8220;tasks&#8221;). </p>
+<dt>any-meta</dt>
+<dd>This package is (probably) some kind of meta or task package. A meta package is usually empty and just depend on stuff. It will also return a truth value for &#8220;tasks&#8221; (i.e. tasksel &#8220;tasks&#8221;). </dd>
 <p> A transitional package will also match this. </p>
 <p> Guessed from package description, section or package name.</p>
-<dt>debug</p>
-<dd>The package is (probably) a package containing debug symbols. </p>
+<dt>debug</dt>
+<dd>The package is (probably) a package containing debug symbols. </dd>
 <p> Guessed from the package name.</p>
-<dt>auto-generated</p>
-<dd>The package is (probably) a package generated automatically (e.g. a dbgsym package) </p>
+<dt>auto-generated</dt>
+<dd>The package is (probably) a package generated automatically (e.g. a dbgsym package) </dd>
 <p> Guessed from the &#8220;Auto-Built-Package&#8221; field.</dl>
 </dl>
 <dl COMPACT>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Originally written by Frank Lichtenheld &lt;djpig [at] debian.org&gt; for Lintian. Amended by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>

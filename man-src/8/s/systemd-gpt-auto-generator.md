@@ -166,31 +166,32 @@ description: "systemd-gpt-auto-generator – Generator for automatically discove
 <p>systemd-gpt-auto-generator understands the following kernel command line parameters: </p>
 <p> <i>systemd.gpt_auto</i>, <i>rd.systemd.gpt_auto</i></p>
 <dl>
-<dd>Those options take an optional boolean argument, and default to yes. The generator is enabled by default, and a negative value may be used to disable it.</dl>
+<dd>Those options take an optional boolean argument, and default to yes. The generator is enabled by default, and a negative value may be used to disable it.</dd></dl>
 <p> <i>root=</i></p>
 <dl>
-<dd>When used with the special value &quot;gpt-auto&quot;, automatic discovery of the root partition based on the GPT partition type is enabled. Any other value disables this generator.</dl>
+<dd>When used with the special value &quot;gpt-auto&quot;, automatic discovery of the root partition based on the GPT partition type is enabled. Any other value disables this generator.</dd></dl>
 <p> <i>rw</i>, <i>ro</i></p>
 <dl>
-<dd>Mount the root partition read-write or read-only <i>initially</i>. </p>
+<dd>Mount the root partition read-write or read-only <i>initially</i>. </dd>
 <p> Note that unlike most kernel command line options these settings do not override configuration in the file system, and the file system may be remounted later. See <code><a href="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></code>(8).</dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-mount/">systemd.mount</a></code>(5), <code><a href="/docs/linux/man/5-systemd-swap/">systemd.swap</a></code>(5), <code><a href="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></code>(8), <code>systemd-cryptsetup [at] .service</code>(8), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code><a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a></code>(8), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/8-btrfs/">btrfs</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>UEFI Specification</p>
+<dt> 1.</dt>
+<dd>UEFI Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="https://uefi.org/specifications">https://uefi.org/specifications</a></dl>
-<dt> 2.</p>
-<dd>Discoverable Partitions Specification</p>
+<dd><a rel="nofollow" href="https://uefi.org/specifications">https://uefi.org/specifications</a></dd></dl>
+<dt> 2.</dt>
+<dd>Discoverable Partitions Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/DISCOVERABLE_PARTITIONS">https://systemd.io/DISCOVERABLE_PARTITIONS</a></dl>
-<dt> 3.</p>
-<dd>Boot Loader Interface</p>
+<dd><a rel="nofollow" href="https://systemd.io/DISCOVERABLE_PARTITIONS">https://systemd.io/DISCOVERABLE_PARTITIONS</a></dd></dl>
+<dt> 3.</dt>
+<dd>Boot Loader Interface</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/BOOT_LOADER_INTERFACE">https://systemd.io/BOOT_LOADER_INTERFACE</a></dl>
-<dt> 4.</p>
-<dd>Boot Loader Specification</p>
+<dd><a rel="nofollow" href="https://systemd.io/BOOT_LOADER_INTERFACE">https://systemd.io/BOOT_LOADER_INTERFACE</a></dd></dl>
+<dt> 4.</dt>
+<dd>Boot Loader Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/BOOT_LOADER_SPECIFICATION">https://systemd.io/BOOT_LOADER_SPECIFICATION</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/BOOT_LOADER_SPECIFICATION">https://systemd.io/BOOT_LOADER_SPECIFICATION</a></dd></dl>
+</dl>

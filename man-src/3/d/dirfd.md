@@ -17,8 +17,8 @@ description: "dirfd – get directory stream file descriptor"
 <p> <code>dirfd</code>(): </p>
 <dl>
 <dt>
-<dd> /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+</dt><dd> /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The function <code>dirfd</code>() returns the file descriptor associated with the directory stream <i>dirp</i>. </p>
 <p> This file descriptor is the one used internally by the directory stream. As a result, it is useful only for functions which do not depend on or alter the file position, such as <code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2) and <code><a href="/docs/linux/man/2-fchdir/">fchdir</a></code>(2). It will be automatically closed when <code><a href="/docs/linux/man/3-closedir/">closedir</a></code>(3) is called.</p>
@@ -27,10 +27,10 @@ description: "dirfd – get directory stream file descriptor"
 <h2>ERRORS</h2>
 <p> POSIX.1-2008 specifies two errors, neither of which is returned by the current implementation.</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>dirp</i> does not refer to a valid directory stream.</p>
-<dt><code>ENOTSUP</code></p>
-<dd> The implementation does not support the association of a file descriptor with a directory.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>dirp</i> does not refer to a valid directory stream.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> The implementation does not support the association of a file descriptor with a directory.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

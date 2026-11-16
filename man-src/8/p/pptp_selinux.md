@@ -55,9 +55,9 @@ description: "pptp_selinux – Security Enhanced Linux Policy for the pptp proce
 <p> Policy governs the access confined processes have to these ports. SELinux pptp policy is very flexible allowing users to setup their pptp processes in as secure a method as possible. </p>
 <p> The following port types are defined for pptp: </p>
 <dl>
-<dt><code>pptp_port_t</code></p>
+<dt><code>pptp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1723 udp 1723</dl>
+</dd><dd>Default Defined Ports: tcp 1723 udp 1723</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type pptp_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

@@ -16,8 +16,8 @@ description: "ldns_sign_public"
 <p> ldns_rr_list* ldns_sign_public(ldns_rr_list *rrset, ldns_key_list *keys); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_sign_public</i>()</p>
-<dd>Sign an rrset .br <code>rrset</code>: the rrset .br <code>keys</code>: the keys to use .br Returns a rr_list with the signatures</dl>
+<dt> <i>ldns_sign_public</i>()</dt>
+<dd>Sign an rrset .br <code>rrset</code>: the rrset .br <code>keys</code>: the keys to use .br Returns a rr_list with the signatures</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

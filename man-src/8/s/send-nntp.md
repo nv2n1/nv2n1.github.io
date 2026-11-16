@@ -20,8 +20,8 @@ description: "send-nntp, send-ihave – send Usenet articles to remote site"
 <p> <i>send-*</i> expect that the batchfile for a site is named <i>&lt;pathoutgoing in inn.conf&gt;/sitename</i>. To prevent batchfile corruption, <i><a href="/docs/linux/man/1-shlock/">shlock</a></i>(1) is used to &#8220;lock&#8221; these files.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>The &#8220;-d&#8221; flag causes <i>nntpsend</i> to send output to stdout rather than the log file <i>&lt;pathlog in inn.conf&gt;/&lt;program-name&gt;.log</i>.</dl>
+<dt><code>-d</code></dt>
+<dd>The &#8220;-d&#8221; flag causes <i>nntpsend</i> to send output to stdout rather than the log file <i>&lt;pathlog in inn.conf&gt;/&lt;program-name&gt;.log</i>.</dd></dl>
 <h2>Notes</h2>
 <p>You should probably not use send-nntp, but <i>innfeed</i>, or if that is not possible, <i>nntpsend</i>. </p>
 <p> The usual flags for a batch file for send-nntp are &#8220;<code>Tf,Wfm</code>&#8221;.</p>

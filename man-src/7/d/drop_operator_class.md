@@ -15,16 +15,16 @@ description: "DROP OPERATOR CLASS – remove an operator class"
 <p> <code>DROP OPERATOR CLASS</code> does not drop any of the operators or functions referenced by the class. If there are any indexes depending on the operator class, you will need to specify CASCADE for the drop to complete.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the operator class does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing operator class.</p>
-<dt><i>index_method</i></p>
-<dd>The name of the index access method the operator class is for.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the operator class.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the operator class if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the operator class does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing operator class.</dd>
+<dt><i>index_method</i></dt>
+<dd>The name of the index access method the operator class is for.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the operator class.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the operator class if any objects depend on it. This is the default.</dd></dl>
 <h2>Notes</h2>
 <p><code>DROP OPERATOR CLASS</code> will not drop the operator family containing the class, even if there is nothing else left in the family (in particular, in the case where the family was implicitly created by <code>CREATE OPERATOR CLASS</code>). An empty operator family is harmless, but for the sake of tidiness you might wish to remove the family with <code>DROP OPERATOR FAMILY</code>; or perhaps better, use <code>DROP OPERATOR FAMILY</code> in the first place.</p>
 <h2>Examples</h2>

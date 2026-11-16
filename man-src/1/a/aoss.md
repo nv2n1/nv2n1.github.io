@@ -27,12 +27,11 @@ description: "aoss – Wrapper script to facilitate use of the ALSA OSS compatib
 <p> Note on mmap: aoss mmap support might be buggy. Your results may vary when trying to use an application that uses mmap&#8217;ing to access the OSS device files. </p>
 <h3>Arguments</h3>
 <dl>
-<dt>32</p>
-<dd> Use 32-bit alsa-oss library (on 64-bit systems) <i>osscommand</i> A command that uses the OSS API</p>
-<dt><i>arguments</i></p>
-<dd> The appropriate arguments and options for the OSS command.</p>
-<dt>
-<dd></dl>
+<dt>32</dt>
+<dd> Use 32-bit alsa-oss library (on 64-bit systems) <i>osscommand</i> A command that uses the OSS API</dd>
+<dt><i>arguments</i></dt>
+<dd> The appropriate arguments and options for the OSS command.</dd>
+</dl>
 <h2>AUTHORS</h2>
 <p> The OSS compatibility library is by Abramo Bagnara &lt;abramo [at] alsa-project.org&gt;. The aoss script and this document are by James Tappin &lt;james [at] xena.uklinux.net&gt;. </p>
 <h2>Index</h2>

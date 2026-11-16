@@ -255,33 +255,33 @@ description: "XmDrawnButton — The DrawnButton widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNactivateCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the widget becomes selected. The reason sent by the callback is <code>XmCR_ACTIVATE</code>. This callback uses the <code>XmQTactivatable</code> trait.</p>
-<dt><code>XmNarmCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the widget becomes armed. The reason sent by the callback is <code>XmCR_ARM</code>.</p>
-<dt><code>XmNdisarmCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the widget becomes disarmed. The reason sent by the callback is <code>XmCR_DISARM</code>.</p>
-<dt><code>XmNexposeCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the widget receives an exposure event. The reason sent by the callback is <code>XmCR_EXPOSE</code>.</p>
-<dt><code>XmNmultiClick</code></p>
-<dd>If a button click is followed by another button click within the time span specified by the display&#8217;s multiclick time, and this resource is set to <code>XmMULTICLICK_DISCARD</code>, the second click is not processed. If this resource is set to <code>XmMULTICLICK_KEEP</code>, the event is processed and <i>click_count</i> is incremented in the callback structure. When the button is not in a menu, the default value is <code>XmMULTICLICK_KEEP</code>.</p>
-<dt><code>XmNpushButtonEnabled</code></p>
-<dd>Enables or disables the 3-dimensional shadow drawing as in PushButton.</p>
-<dt><code>XmNresizeCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the widget receives a resize event. The reason sent by the callback is <code>XmCR_RESIZE</code>. The event returned for this callback is NULL.</p>
-<dt><code>XmNshadowType</code></p>
-<dd>Describes the drawing style for the DrawnButton. This resource can have the following values:</p>
+<dt><code>XmNactivateCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the widget becomes selected. The reason sent by the callback is <code>XmCR_ACTIVATE</code>. This callback uses the <code>XmQTactivatable</code> trait.</dd>
+<dt><code>XmNarmCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the widget becomes armed. The reason sent by the callback is <code>XmCR_ARM</code>.</dd>
+<dt><code>XmNdisarmCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the widget becomes disarmed. The reason sent by the callback is <code>XmCR_DISARM</code>.</dd>
+<dt><code>XmNexposeCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the widget receives an exposure event. The reason sent by the callback is <code>XmCR_EXPOSE</code>.</dd>
+<dt><code>XmNmultiClick</code></dt>
+<dd>If a button click is followed by another button click within the time span specified by the display&#8217;s multiclick time, and this resource is set to <code>XmMULTICLICK_DISCARD</code>, the second click is not processed. If this resource is set to <code>XmMULTICLICK_KEEP</code>, the event is processed and <i>click_count</i> is incremented in the callback structure. When the button is not in a menu, the default value is <code>XmMULTICLICK_KEEP</code>.</dd>
+<dt><code>XmNpushButtonEnabled</code></dt>
+<dd>Enables or disables the 3-dimensional shadow drawing as in PushButton.</dd>
+<dt><code>XmNresizeCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the widget receives a resize event. The reason sent by the callback is <code>XmCR_RESIZE</code>. The event returned for this callback is NULL.</dd>
+<dt><code>XmNshadowType</code></dt>
+<dd>Describes the drawing style for the DrawnButton. This resource can have the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSHADOW_IN</code></p>
-<dd>Draws the DrawnButton so that the shadow appears inset. This means that the bottom shadow visuals and top shadow visuals are reversed.</p>
-<dt><code>XmSHADOW_OUT</code></p>
-<dd>Draws the DrawnButton so that the shadow appears outset.</p>
-<dt><code>XmSHADOW_ETCHED_IN</code></p>
-<dd>Draws the DrawnButton using a double line. This gives the effect of a line etched into the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>.</p>
-<dt><code>XmSHADOW_ETCHED_OUT</code></p>
-<dd>Draws the DrawnButton using a double line. This gives the effect of a line coming out of the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmSHADOW_IN</code></dt>
+<dd>Draws the DrawnButton so that the shadow appears inset. This means that the bottom shadow visuals and top shadow visuals are reversed.</dd>
+<dt><code>XmSHADOW_OUT</code></dt>
+<dd>Draws the DrawnButton so that the shadow appears outset.</dd>
+<dt><code>XmSHADOW_ETCHED_IN</code></dt>
+<dd>Draws the DrawnButton using a double line. This gives the effect of a line etched into the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>.</dd>
+<dt><code>XmSHADOW_ETCHED_OUT</code></dt>
+<dd>Draws the DrawnButton using a double line. This gives the effect of a line coming out of the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>.</dd></dl>
 </dl>
 </dl>
 <h3>Inherited Resources</h3>
@@ -474,3 +474,4 @@ description: "XmDrawnButton — The DrawnButton widget class"
 <td>XmCXmString</td>
 <td>XmString</td>
 <td>&quot;
+</table></table>

@@ -16,39 +16,37 @@ description: "doveadm-who – Show who is logged in to the Dovecot server"
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-f&nbsp;<wbr></code><i>formatter</i></p>
-<dd> Specifies the <i>formatter</i> for formatting the output. Supported formatters are:</p>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-f&nbsp;<wbr></code><i>formatter</i></dt>
+<dd> Specifies the <i>formatter</i> for formatting the output. Supported formatters are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>flow</code></p>
-<dd> prints each line with <i>key</i><code>=</code><i>value</i> pairs.</p>
-<dt><code>pager</code></p>
-<dd> prints each <i>key</i>:&nbsp;<wbr><i>value</i> pair on its own line and separates records with form feed character (<code>^L</code>).</p>
-<dt><code>tab</code></p>
-<dd> prints a table header followed by tab separated value lines.</p>
-<dt><code>table</code></p>
-<dd> prints a table header followed by adjusted value lines.</dl>
+<dt><code>flow</code></dt>
+<dd> prints each line with <i>key</i><code>=</code><i>value</i> pairs.</dd>
+<dt><code>pager</code></dt>
+<dd> prints each <i>key</i>:&nbsp;<wbr><i>value</i> pair on its own line and separates records with form feed character (<code>^L</code>).</dd>
+<dt><code>tab</code></dt>
+<dd> prints a table header followed by tab separated value lines.</dd>
+<dt><code>table</code></dt>
+<dd> prints a table header followed by adjusted value lines.</dd></dl>
 </dl>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> This command uses by default the output formatter <code>table</code>. </p>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-1</code></p>
-<dd> Print one line per user and connection. Otherwise the connections are grouped by the username.</p>
-<dt><code>-a&nbsp;<wbr></code><i>anvil_socket_path</i></p>
-<dd> This option is used to specify an alternative socket. The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </p>
+<dt><code>-1</code></dt>
+<dd> Print one line per user and connection. Otherwise the connections are grouped by the username.</dd>
+<dt><code>-a&nbsp;<wbr></code><i>anvil_socket_path</i></dt>
+<dd> This option is used to specify an alternative socket. The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> By default <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will use the socket <i>/var/run/dovecot/anvil</i>. The socket may be located in another directory, when the default <i>base_dir</i> setting was overridden in <i>/etc/dovecot/dovecot.conf</i>.</dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>ip</i>[<code>/</code><i>mask</i>]</p>
-<dd> Specify an <i>ip</i> address or network range, in CIDR notation, to reduce the result to matching connections.</p>
-<dt><i>user</i></p>
-<dd> List only users, whose name match <i>user</i>. It&#8217;s also possible to use wildcards in the <i>user</i> name.</dl>
+<dt><i>ip</i>[<code>/</code><i>mask</i>]</dt>
+<dd> Specify an <i>ip</i> address or network range, in CIDR notation, to reduce the result to matching connections.</dd>
+<dt><i>user</i></dt>
+<dd> List only users, whose name match <i>user</i>. It&#8217;s also possible to use wildcards in the <i>user</i> name.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Show authenticated sessions, filtered by the client&#8217;s IP address. </p>
 <pre>

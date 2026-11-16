@@ -13,171 +13,172 @@ description: "Makefile.fpc – Configuration file for fpcmake."
 <h2>Description</h2>
 <p><code>Makefile.fpc</code> is a plain ASCII file that contains a number of sections as in a Windows <i>ini</i> file. The following sections are recognized (in alphabetical order):</p>
 <dl>
-<dt><code>clean</code></p>
-<dd>Specifies rules for cleaning the directory of units and programs. The following entries are recognized:</p>
+<dt><code>clean</code></dt>
+<dd>Specifies rules for cleaning the directory of units and programs. The following entries are recognized:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>units</i></p>
-<dd>names of all units that should be removed when cleaning. Don&#8217;t specify extensions, the makefile will append these by itself.</p>
-<dt><i>files</i></p>
-<dd>names of files that should be removed. Specify full filenames.</dl>
+</dd><dl>
+<dt><i>units</i></dt>
+<dd>names of all units that should be removed when cleaning. Don&#8217;t specify extensions, the makefile will append these by itself.</dd>
+<dt><i>files</i></dt>
+<dd>names of files that should be removed. Specify full filenames.</dd></dl>
 </dl>
-<dt><code>defaults</code></p>
-<dd>The defaults section contains some default settings. The following keywords are recognized:</p>
+<dt><code>defaults</code></dt>
+<dd>The defaults section contains some default settings. The following keywords are recognized:</dd>
 <dl>
 <dd>
-<dl>
-<dd></dl>
+</dd><dl>
+<dd></dd></dl>
 </dl>
-<dt><code>dirs</code></p>
+<dt><code>dirs</code></dt>
 <dd>
-<dt><code>info</code></p>
+</dd><dt><code>info</code></dt>
 <dd>
-<dt><code>install</code></p>
-<dd>Contains instructions for installation of your units and programs. The following keywods are recognized:</p>
+</dd><dt><code>install</code></dt>
+<dd>Contains instructions for installation of your units and programs. The following keywods are recognized:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>dirprefix</i></p>
-<dd>the directory below wchich all installs are done. This corresponds to the <i>&#8211;prefix</i> argument to GNU <i>configure</i> It is used for the installation of programs and units. By default, this is on linux, and on all other platforms.</p>
-<dt><i>dirbase </i></p>
-<dd>The directory that is used as the base directory for the installation of units. Default this is <i>dirprefix </i> appended with <i>/lib/fpc/FPC_VERSION</i> for linux or simply the dirprefix on other platforms.</dl>
+</dd><dl>
+<dt><i>dirprefix</i></dt>
+<dd>the directory below wchich all installs are done. This corresponds to the <i>&#8211;prefix</i> argument to GNU <i>configure</i> It is used for the installation of programs and units. By default, this is on linux, and on all other platforms.</dd>
+<dt><i>dirbase </i></dt>
+<dd>The directory that is used as the base directory for the installation of units. Default this is <i>dirprefix </i> appended with <i>/lib/fpc/FPC_VERSION</i> for linux or simply the dirprefix on other platforms.</dd></dl>
 </dl>
 <p> Units will be installed in the subdirectory <i>units/$(OS_TARGET)</i> of the <i>dirbase</i> entry.</p>
-<dt><code>libs</code></p>
-<dd>This section specifies what units should be merged into a library, and what external libraries are needed. It can contain the following keywords:</p>
+<dt><code>libs</code></dt>
+<dd>This section specifies what units should be merged into a library, and what external libraries are needed. It can contain the following keywords:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>libname</i></p>
-<dd>the name of the library that should be created.</p>
-<dt><i>libunits</i></p>
-<dd>a comma-separated list of units that should be moved into one library.</p>
-<dt><i>needgcclib</i></p>
-<dd>a boolean value that specifies whether the gcc library is needed. This will make sure that the path to the GCC library is inserted in the library search path.</p>
-<dt><i>needotherlib</i></p>
-<dd>a boolean value that tells the makefile that other library directories will be needed.</dl>
+</dd><dl>
+<dt><i>libname</i></dt>
+<dd>the name of the library that should be created.</dd>
+<dt><i>libunits</i></dt>
+<dd>a comma-separated list of units that should be moved into one library.</dd>
+<dt><i>needgcclib</i></dt>
+<dd>a boolean value that specifies whether the gcc library is needed. This will make sure that the path to the GCC library is inserted in the library search path.</dd>
+<dt><i>needotherlib</i></dt>
+<dd>a boolean value that tells the makefile that other library directories will be needed.</dd></dl>
 </dl>
-<dt><code>packages</code></p>
-<dd>Which packages must be used. This section can contain the following keywords:</p>
+<dt><code>packages</code></dt>
+<dd>Which packages must be used. This section can contain the following keywords:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>packages</i></p>
-<dd>A comma-separated list of packages that are needed to compile the targets. Valid for all platforms. In order to differentiate between platforms, you can prepend the keyword <i>packages</i> with the OS you are compiling for, e.g. <i>linuxpackages</i> if you want the makefile to use the listed packages on linux only.</p>
-<dt><i>fcl</i></p>
-<dd>This is a boolean value (0 or 1) that indicates whether the FCL is used.</p>
-<dt><i>rtl</i></p>
-<dd>This is a boolean value (0 or 1) that indicates whether the RTL should be recompiled.</dl>
+</dd><dl>
+<dt><i>packages</i></dt>
+<dd>A comma-separated list of packages that are needed to compile the targets. Valid for all platforms. In order to differentiate between platforms, you can prepend the keyword <i>packages</i> with the OS you are compiling for, e.g. <i>linuxpackages</i> if you want the makefile to use the listed packages on linux only.</dd>
+<dt><i>fcl</i></dt>
+<dd>This is a boolean value (0 or 1) that indicates whether the FCL is used.</dd>
+<dt><i>rtl</i></dt>
+<dd>This is a boolean value (0 or 1) that indicates whether the RTL should be recompiled.</dd></dl>
 </dl>
-<dt><code>postsettings</code></p>
-<dd>Anything that is in this section will be inserted as-is in the makefile <i>after</i> the makefile rules that are generated by fpcmake, but <i>before</i> the general configuration rules. can define additional rules and configuration variables.</p>
-<dt><code>presettings</code></p>
-<dd>Anything that is in this section will be inserted as-is in the makefile <i>before</i> the makefile target rules that are generated by fpcmake. This means that you cannot use any variables that are normally defined by</p>
-<dt><code>rules</code></p>
-<dd>In this section you can insert dependency rules and any other targets you wish to have. Do not insert &#8216;default rules&#8217; here.</p>
-<dt><code>sections</code></p>
+<dt><code>postsettings</code></dt>
+<dd>Anything that is in this section will be inserted as-is in the makefile <i>after</i> the makefile rules that are generated by fpcmake, but <i>before</i> the general configuration rules. can define additional rules and configuration variables.</dd>
+<dt><code>presettings</code></dt>
+<dd>Anything that is in this section will be inserted as-is in the makefile <i>before</i> the makefile target rules that are generated by fpcmake. This means that you cannot use any variables that are normally defined by</dd>
+<dt><code>rules</code></dt>
+<dd>In this section you can insert dependency rules and any other targets you wish to have. Do not insert &#8216;default rules&#8217; here.</dd>
+<dt><code>sections</code></dt>
 <dd>Here you can specify which &#8216;rule sections&#8217; should be included in the Makefile. The sections consist of a series of boolean keywords; each keyword decies whether a particular section will be written to the makefile. By default, all sections are written.<br />
-&nbsp;<wbr> You can have the following boolean keywords in this section.</p>
+&nbsp;<wbr> You can have the following boolean keywords in this section.</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>none</i></p>
-<dd>If this is set to true, then no sections are written.</p>
-<dt><i>units</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for compiling units.</p>
-<dt><i>exes</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for compiling executables.</p>
-<dt><i>loaders</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for assembling assembler files.</p>
-<dt><i>examples</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for compiling examples.</p>
-<dt><i>package</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for making packages.</p>
-<dt><i>compile</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the generic rules for compiling pascal files.</p>
-<dt><i>depend</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the dependency rules.</p>
-<dt><i>install</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for installing everything.</p>
-<dt><i>sourceinstall</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for installing the sources.</p>
-<dt><i>zipinstall</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for installing archives.</p>
-<dt><i>clean</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for cleaning the directories.</p>
-<dt><i>libs</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for making libraries.</p>
-<dt><i>command</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for composing the command-line based on the various variables.</p>
-<dt><i>exts</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for making libraries.</p>
-<dt><i>dirs</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for running make in subdirectories..</p>
-<dt><i>tools</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for running some tools as the erchiver, UPX and zip.</p>
-<dt><i>info</i></p>
-<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for generating information.</dl>
+</dd><dl>
+<dt><i>none</i></dt>
+<dd>If this is set to true, then no sections are written.</dd>
+<dt><i>units</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for compiling units.</dd>
+<dt><i>exes</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for compiling executables.</dd>
+<dt><i>loaders</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for assembling assembler files.</dd>
+<dt><i>examples</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for compiling examples.</dd>
+<dt><i>package</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for making packages.</dd>
+<dt><i>compile</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the generic rules for compiling pascal files.</dd>
+<dt><i>depend</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the dependency rules.</dd>
+<dt><i>install</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for installing everything.</dd>
+<dt><i>sourceinstall</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for installing the sources.</dd>
+<dt><i>zipinstall</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for installing archives.</dd>
+<dt><i>clean</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for cleaning the directories.</dd>
+<dt><i>libs</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for making libraries.</dd>
+<dt><i>command</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for composing the command-line based on the various variables.</dd>
+<dt><i>exts</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for making libraries.</dd>
+<dt><i>dirs</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for running make in subdirectories..</dd>
+<dt><i>tools</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for running some tools as the erchiver, UPX and zip.</dd>
+<dt><i>info</i></dt>
+<dd>If set to <i>false</i> , <code>fpcmake </code> omits the rules for generating information.</dd></dl>
 </dl>
-<dt><code>targets</code></p>
-<dd>In this section you can define the various targets. The following keywords can be used there:</p>
+<dt><code>targets</code></dt>
+<dd>In this section you can define the various targets. The following keywords can be used there:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>dirs</i></p>
-<dd>A space separated list of directories where make should also be run.</p>
-<dt><i>examples</i></p>
-<dd>A space separated list of example programs that need to be compiled when the user asks to compile the examples. Do not specify an extension, the extension will be appended.</p>
-<dt><i>loaders</i></p>
-<dd>A space separated list of names of assembler files that must be assembled. Don&#8217;t specify the extension, the extension will be appended.</p>
-<dt><i>programs</i></p>
-<dd>A space separated list of program names that need to be compiled. Do not specify an extension, the extension will be appended.</p>
-<dt><i>rst</i></p>
-<dd>a list of <i>rst</i> files that needs to be converted to <i>.po </i> files for use with GNU <code>gettext</code> and internationalization routines.</p>
-<dt><i>units</i></p>
-<dd>A space separated list of unit names that need to be compiled. Do not specify an extension, just the name of the unit as it would appear un a <i>uses</i> clause is sufficient.</dl>
+</dd><dl>
+<dt><i>dirs</i></dt>
+<dd>A space separated list of directories where make should also be run.</dd>
+<dt><i>examples</i></dt>
+<dd>A space separated list of example programs that need to be compiled when the user asks to compile the examples. Do not specify an extension, the extension will be appended.</dd>
+<dt><i>loaders</i></dt>
+<dd>A space separated list of names of assembler files that must be assembled. Don&#8217;t specify the extension, the extension will be appended.</dd>
+<dt><i>programs</i></dt>
+<dd>A space separated list of program names that need to be compiled. Do not specify an extension, the extension will be appended.</dd>
+<dt><i>rst</i></dt>
+<dd>a list of <i>rst</i> files that needs to be converted to <i>.po </i> files for use with GNU <code>gettext</code> and internationalization routines.</dd>
+<dt><i>units</i></dt>
+<dd>A space separated list of unit names that need to be compiled. Do not specify an extension, just the name of the unit as it would appear un a <i>uses</i> clause is sufficient.</dd></dl>
 </dl>
-<dt><code>tools</code></p>
-<dd>In this section you can specify which tools are needed. Definitions to use each of the listed tools will be inserted in the makefile, depending on the setting in this section. </p>
+<dt><code>tools</code></dt>
+<dd>In this section you can specify which tools are needed. Definitions to use each of the listed tools will be inserted in the makefile, depending on the setting in this section. </dd>
 <p> Each keyword is a boolean keyword; you can switch the use of a tool on or off with it. </p>
 <p> The following keywords are recognised:</p>
 <dl>
 <dd>
-<dl>
-<dt><i>toolppdep</i></p>
-<dd>Use <code>ppdep </code> the dependency tool. <i>True</i> by default.</p>
-<dt><i>toolppumove</i></p>
-<dd>Use <code>ppumove</code> the Free Pascal unit mover. <i>True</i> by default.</p>
-<dt><i>toolppufiles</i></p>
-<dd>Use the <code>ppufile</code> tool to determine dependencies of unit files. <i>True</i> by default.</p>
-<dt><i>toolsed</i></p>
-<dd>Use <code>sed</code> the stream line editor. <i>False</i> by default.</p>
-<dt><i>tooldata2inc</i></p>
-<dd>use the <code>data2inc </code> tool to create include files from data files. <i>False</i> by default.</p>
-<dt><i>tooldiff</i></p>
-<dd>Use the GNU <code>diff</code> tool. <i>False</i> by default.</p>
-<dt><i>toolcmp</i></p>
-<dd>Use the <code>cmp</code> file comparer tool <i>False</i> by default.</p>
-<dt><i>toolupx</i></p>
-<dd>Use the <code>upx</code> executable packer <i>True</i> by default.</p>
-<dt><i>tooldate</i></p>
-<dd>use the <code>date</code> date displaying tool. <i>True</i> by default.</p>
-<dt><i>toolzip</i></p>
-<dd>Use the <code>zip</code> file archiver. This is used by the zip targets. <i>True</i> by default.</dl>
+</dd><dl>
+<dt><i>toolppdep</i></dt>
+<dd>Use <code>ppdep </code> the dependency tool. <i>True</i> by default.</dd>
+<dt><i>toolppumove</i></dt>
+<dd>Use <code>ppumove</code> the Free Pascal unit mover. <i>True</i> by default.</dd>
+<dt><i>toolppufiles</i></dt>
+<dd>Use the <code>ppufile</code> tool to determine dependencies of unit files. <i>True</i> by default.</dd>
+<dt><i>toolsed</i></dt>
+<dd>Use <code>sed</code> the stream line editor. <i>False</i> by default.</dd>
+<dt><i>tooldata2inc</i></dt>
+<dd>use the <code>data2inc </code> tool to create include files from data files. <i>False</i> by default.</dd>
+<dt><i>tooldiff</i></dt>
+<dd>Use the GNU <code>diff</code> tool. <i>False</i> by default.</dd>
+<dt><i>toolcmp</i></dt>
+<dd>Use the <code>cmp</code> file comparer tool <i>False</i> by default.</dd>
+<dt><i>toolupx</i></dt>
+<dd>Use the <code>upx</code> executable packer <i>True</i> by default.</dd>
+<dt><i>tooldate</i></dt>
+<dd>use the <code>date</code> date displaying tool. <i>True</i> by default.</dd>
+<dt><i>toolzip</i></dt>
+<dd>Use the <code>zip</code> file archiver. This is used by the zip targets. <i>True</i> by default.</dd></dl>
 </dl>
-<dt><code>zip</code></p>
-<dd>This section can be used to make zip files from the compiled units and programs. By default all compiled units are zipped. The zip behaviour can be influencd with the presettings and postsettings sections. </p>
+<dt><code>zip</code></dt>
+<dd>This section can be used to make zip files from the compiled units and programs. By default all compiled units are zipped. The zip behaviour can be influencd with the presettings and postsettings sections. </dd>
 <p> The following keywords can be used in this unit:</p>
 <dl>
 <dd>
-<dl>
-<dt><i>zipname</i></p>
-<dd>this file is the name of the zip file that will be produced.</p>
-<dt><i>ziptarget</i></p>
-<dd>is the name of a makefile target that will be executed before the zip is made. By default this is the <i>install</i> target.</dl>
+</dd><dl>
+<dt><i>zipname</i></dt>
+<dd>this file is the name of the zip file that will be produced.</dd>
+<dt><i>ziptarget</i></dt>
+<dd>is the name of a makefile target that will be executed before the zip is made. By default this is the <i>install</i> target.</dd></dl>
 </dl>
 </dl>
 <h2>See Also</h2>
 <dl>
-<dd><code><a href="/docs/linux/man/1-fpcmake/">fpcmake</a></code>(1) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </p>
+<dd><code><a href="/docs/linux/man/1-fpcmake/">fpcmake</a></code>(1) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </dd>
+</dl>

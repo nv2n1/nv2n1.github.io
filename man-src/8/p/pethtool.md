@@ -19,21 +19,20 @@ This script mimic ethtool behavior, but is written purely in python and python m
 <h2>Options</h2>
 
 INTERFACE
-<dl><dd>Is the name of the ethernet device on which pethtool should operate.</dl>
+<dl><dd>Is the name of the ethernet device on which pethtool should operate.</dd></dl>
  
 
  -h, --help
-<dl><dd>Show help message and exit.</dl>
+<dl><dd>Show help message and exit.</dd></dl>
  
 
  -c|--show-coalesce
-<dl><dd>Show coalesce options</dl>
+<dl><dd>Show coalesce options</dd></dl>
  
 
  -C|--coalesce
 <dl><dd>Set coalesce options 
-
-<dl><dd><pre>adaptive-rx on|off
+</dd><dl><dd><pre>adaptive-rx on|off
 adaptive-tx on|off
 rx-usecs N
 rx-frames N
@@ -54,20 +53,20 @@ rx-usecs-high N
 rx-frames-high N
 tx-usecs-high N
 tx-frames-high N
-sample-interval N</pre></dl></dl>
+sample-interval N</pre></dd></dl></dl>
  
 
  -i|--driver
-<dl><dd>Show driver information</dl>
+<dl><dd>Show driver information</dd></dl>
  
 
  -k|--show-offload
-<dl><dd>Get protocol offload information</dl>
+<dl><dd>Get protocol offload information</dd></dl>
  
 
  -K|--offload
 <dl><dd>Set protocol offload
-<dl><dd>[ tso on|off ]</dl></dl>
+</dd><dl><dd>[ tso on|off ]</dd></dl></dl>
 
 <h2>See Also</h2>
 

@@ -17,10 +17,10 @@ description: "session-keyring – session shared process keyring"
 <h3>Special operations</h3>
 <p>The <i>keyutils</i> library provides the following special operations for manipulating session keyrings:</p>
 <dl>
-<dt><code><a href="/docs/linux/man/3-keyctl_join_session_keyring/">keyctl_join_session_keyring</a></code>(3)</p>
-<dd>This operation allows the caller to change the session keyring that it subscribes to. The caller can join an existing keyring with a specified name (description), create a new keyring with a given name, or ask the kernel to create a new &quot;anonymous&quot; session keyring with the name &quot;_ses&quot;. (This function is an interface to the <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2) <code>KEYCTL_JOIN_SESSION_KEYRING</code> operation.)</p>
-<dt><code><a href="/docs/linux/man/3-keyctl_session_to_parent/">keyctl_session_to_parent</a></code>(3)</p>
-<dd>This operation allows the caller to make the parent process&#8217;s session keyring to the same as its own. For this to succeed, the parent process must have identical security attributes and must be single threaded. (This function is an interface to the <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2) <code>KEYCTL_SESSION_TO_PARENT</code> operation.)</dl>
+<dt><code><a href="/docs/linux/man/3-keyctl_join_session_keyring/">keyctl_join_session_keyring</a></code>(3)</dt>
+<dd>This operation allows the caller to change the session keyring that it subscribes to. The caller can join an existing keyring with a specified name (description), create a new keyring with a given name, or ask the kernel to create a new &quot;anonymous&quot; session keyring with the name &quot;_ses&quot;. (This function is an interface to the <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2) <code>KEYCTL_JOIN_SESSION_KEYRING</code> operation.)</dd>
+<dt><code><a href="/docs/linux/man/3-keyctl_session_to_parent/">keyctl_session_to_parent</a></code>(3)</dt>
+<dd>This operation allows the caller to make the parent process&#8217;s session keyring to the same as its own. For this to succeed, the parent process must have identical security attributes and must be single threaded. (This function is an interface to the <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2) <code>KEYCTL_SESSION_TO_PARENT</code> operation.)</dd></dl>
 <p> These operations are also exposed through the <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1) utility as: </p>
 <p> keyctl session keyctl session &#8211; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;] keyctl session &lt;name&gt; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;] </p>
 <p> and: </p>

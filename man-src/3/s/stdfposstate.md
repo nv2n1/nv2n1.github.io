@@ -23,12 +23,9 @@ For the specializations of std::fpos that are used in the standard library, Stat
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     std::istringstream s(&quot;test&quot;);
     std::mbstate_t st = s.tellg().state();

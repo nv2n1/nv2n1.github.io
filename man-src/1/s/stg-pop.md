@@ -20,16 +20,16 @@ stg pop[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&
 <p> -a, &#8211;all</p>
 <dl>
 <dt>
-<dd> Pop all the applied patches.</dl>
+</dt><dd> Pop all the applied patches.</dd></dl>
 <p> -n NUMBER, &#8211;number NUMBER</p>
 <dl>
 <dt>
-<dd> Pop the specified number of patches. </p>
+</dt><dd> Pop the specified number of patches. </dd>
 <p> With a negative number, pop all but that many patches.</dl>
 <p> -k, &#8211;keep</p>
 <dl>
 <dt>
-<dd> Keep the local changes.</dl>
+</dt><dd> Keep the local changes.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

@@ -29,16 +29,16 @@ description: "Globus UUID Generator –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>uuid</i> Pointer to a uuid.<br />
- <i>uuid_fields</i> Pointer to uuid fields.</dl>
+</dt><dd> <i>uuid</i> Pointer to a uuid.<br />
+ <i>uuid_fields</i> Pointer to uuid fields.</dd></dl>
 <h3>int globus_uuid_import (globus_uuid_t *uuid, const char *str)</h3>
 <p> Import a UUID </p>
 <p> Import a string in the text UUID format into a globus_uuid_t value. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>uuid</i> UUID to modify<br />
- <i>str</i> A string at least GLOBUS_UUID_TEXTLEN long and be in the format like 1b4e28ba-2fa1-11d2-883f-b9a761bde3fb</dl>
+</dt><dd> <i>uuid</i> UUID to modify<br />
+ <i>str</i> A string at least GLOBUS_UUID_TEXTLEN long and be in the format like 1b4e28ba-2fa1-11d2-883f-b9a761bde3fb</dd></dl>
 <p> 1b4e28ba-2fa1-11d2-883f-b9a761bde3fb 012345678901234567890123456789012345 0 1 2 3</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>

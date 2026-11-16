@@ -15,11 +15,11 @@ sysfs_create_bin_file - create binary file for object.
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object.</dl>
+<dl><dd></dd><dd>object.</dd></dl>
  
 
  <i>attr</i>
-<dl><dd>attribute descriptor.</dl>
+<dl><dd>attribute descriptor.</dd></dl>
 
 <h2>Copyright</h2>
 

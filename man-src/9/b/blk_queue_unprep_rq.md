@@ -15,11 +15,11 @@ blk_queue_unprep_rq - set an unprepare_request function for queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>queue</dl>
+<dl><dd></dd><dd>queue</dd></dl>
  
 
  <i>ufn</i>
-<dl><dd>unprepare_request function</dl>
+<dl><dd>unprepare_request function</dd></dl>
 
 <h2>Description</h2>
 

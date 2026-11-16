@@ -16,7 +16,7 @@ description: "setsysfont – set console font according to /etc/sysconfig/i18n."
 <p><code>setsysfont</code> should not need to be called in normal practice, as the font is set on boot. </p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/sysconfig/i18n</code></p>
-<dd></dl>
+<dt><code>/etc/sysconfig/i18n</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code>/usr/share/doc/initscripts-*/sysconfig.txt,</code> <code><a href="/docs/linux/man/1-unicode_start/">unicode_start</a></code>(1), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8), <code><a href="/docs/linux/man/1-consoletype/">consoletype</a></code>(1) </p>

@@ -19,32 +19,32 @@ description: "foomatic-rip – Universal print filter/RIP wrapper"
 <h2>DESCRIPTION</h2>
 <p> foomatic-rip is a universal print filter which can be used as CUPS filter or stand-alone for spooler-less, direct printing. It has the following features: </p>
 <dl>
-<dt>&bull;</p>
-<dd> It translates PostScript and PDF from standard input or a file to the printer&#8217;s native language on standard output. </p>
-<dt>&bull;</p>
-<dd> The translation is done with an external renderer, usually Ghostscript (<code><a href="/docs/linux/man/1-gs/">gs</a>(1)</code>). If no translation is needed (PostScript printer) the renderer&#8217;s command line reduces to <code><a href="/docs/linux/man/1-cat/">cat</a>(1)</code>. The way how this translation is done is described in a <code>PPD file</code>. </p>
-<dt>&bull;</p>
-<dd> Printer capabilities, how to handle user options, and how to build the renderer command line is always described by <code>PPD files</code>, these PPD files usually come from <code>Foomatic</code> or can be the ones supplied by the manufacturers of PostScript printers. The PPD files are the same for both CUPS and direct printing. </p>
-<dt>&bull;</p>
-<dd> foomatic-rip works with <code>CUPS</code> and for direct printing (<code>without spooler</code>), where the latter is mainly for testing and debugging. The mode is selected by the command line options and environment variables which are supplied to foomatic-rip. </p>
-<dt>&bull;</p>
-<dd> foomatic-rip does not only apply option settings supplied by the user through the command line of the printing command, but also searches the entire job for embedded option settings (only PostScript jobs). Here not only settings which affect the whole job are taken into account, but also settings in the page headers, which are only valid for the page where they were found, so applications which produce PostScript code with page-specific printer option settings are fully supported. </p>
+<dt>&bull;</dt>
+<dd> It translates PostScript and PDF from standard input or a file to the printer&#8217;s native language on standard output. </dd>
+<dt>&bull;</dt>
+<dd> The translation is done with an external renderer, usually Ghostscript (<code><a href="/docs/linux/man/1-gs/">gs</a>(1)</code>). If no translation is needed (PostScript printer) the renderer&#8217;s command line reduces to <code><a href="/docs/linux/man/1-cat/">cat</a>(1)</code>. The way how this translation is done is described in a <code>PPD file</code>. </dd>
+<dt>&bull;</dt>
+<dd> Printer capabilities, how to handle user options, and how to build the renderer command line is always described by <code>PPD files</code>, these PPD files usually come from <code>Foomatic</code> or can be the ones supplied by the manufacturers of PostScript printers. The PPD files are the same for both CUPS and direct printing. </dd>
+<dt>&bull;</dt>
+<dd> foomatic-rip works with <code>CUPS</code> and for direct printing (<code>without spooler</code>), where the latter is mainly for testing and debugging. The mode is selected by the command line options and environment variables which are supplied to foomatic-rip. </dd>
+<dt>&bull;</dt>
+<dd> foomatic-rip does not only apply option settings supplied by the user through the command line of the printing command, but also searches the entire job for embedded option settings (only PostScript jobs). Here not only settings which affect the whole job are taken into account, but also settings in the page headers, which are only valid for the page where they were found, so applications which produce PostScript code with page-specific printer option settings are fully supported. </dd>
 </dl>
 <h2>DIRECT, SPOOLER-LESS PRINTING</h2>
 <h3>Options</h3>
 <dl>
-<dt><code>-v</code></p>
-<dd> verbose mode for debugging. <code>WARNING:</code> This will create a file in /tmp that contains the debugging information. This opens a security loophole and should not be used in production. </p>
-<dt><code>-q</code></p>
-<dd> quiet mode &#8211; minimal information output </p>
-<dt><code>-P</code><i>&nbsp;&lt;printer&gt;</i></p>
-<dd> <i>&lt;printer&gt;</i> is the configured printer which should be used for this job. </p>
-<dt><code>&#8211;ppd</code><i>&nbsp;&lt;ppdfile&gt;</i></p>
-<dd> The PPD file <i>&lt;ppdfile&gt;</i> should be applied for processing this job.</p>
-<dt><code>-o</code><i>&nbsp;&lt;option&gt;</i><code>=</code><i>&lt;value&gt;</i></p>
-<dd> Option settings for this job.</p>
-<dt><i>&lt;files&gt;</i></p>
-<dd> The file(s) to be printed. </p>
+<dt><code>-v</code></dt>
+<dd> verbose mode for debugging. <code>WARNING:</code> This will create a file in /tmp that contains the debugging information. This opens a security loophole and should not be used in production. </dd>
+<dt><code>-q</code></dt>
+<dd> quiet mode &#8211; minimal information output </dd>
+<dt><code>-P</code><i>&nbsp;&lt;printer&gt;</i></dt>
+<dd> <i>&lt;printer&gt;</i> is the configured printer which should be used for this job. </dd>
+<dt><code>&#8211;ppd</code><i>&nbsp;&lt;ppdfile&gt;</i></dt>
+<dd> The PPD file <i>&lt;ppdfile&gt;</i> should be applied for processing this job.</dd>
+<dt><code>-o</code><i>&nbsp;&lt;option&gt;</i><code>=</code><i>&lt;value&gt;</i></dt>
+<dd> Option settings for this job.</dd>
+<dt><i>&lt;files&gt;</i></dt>
+<dd> The file(s) to be printed. </dd>
 </dl>
 <p> <code>foomatic-rip</code> will print from standard input unless at least one file to be printed is specified on the command line. If your printer PPD file is stored as <i>/etc/direct/&lt;printer&gt;.ppd</i> or <i>~/.foomatic/direct/&lt;printer&gt;.ppd</i> you can use it by simply specifying &quot;-P <i>&lt;printer&gt;</i>&quot;. </p>
 <p> Put a line </p>
@@ -69,32 +69,32 @@ Character Replacement-- -- -- -- -- -- -- -- -- -- -
 <h2>CONFIGURATION FILE</h2>
 <p> The file <code>/etc/cups/foomatic-rip.conf</code> or if it is not readable the file <code>/etc/foomatic/filter.conf</code> is read whenever foomatic-rip is executed. It allows one to configure the behavior of foomatic-rip as follows (lines beginning with <code>#</code> are comments and therefore get ignored): </p>
 <dl>
-<dt><code>debug: 0|1</code></p>
-<dd> Turns on (<code>1</code>) or off (<code>0</code>) the debug mode. This is equivalent to supplying the <code>&#8211;debug</code> command line option. Default setting is <code>0</code>. </p>
-<dt><code>echo:</code><i>&nbsp;[&lt;path&gt;/]&lt;executable&gt;</i></p>
-<dd> Sets the path to an <code><a href="/docs/linux/man/1-echo/">echo</a>(1)</code> executable which supports <code>-n</code>. </p>
-<dt><code>gspath:</code><i>&nbsp;[&lt;path&gt;/]&lt;executable&gt;</i></p>
-<dd> Sets the path to the Ghostscript (<code><a href="/docs/linux/man/1-gs/">gs</a>(1)</code>) executable. To be used if Ghostscript is at a non-standard location or if an alternative Ghostscript should be used. </p>
-<dt><code>execpath:</code><i>&nbsp;&lt;path&gt;[:&lt;path&gt;]&#8230;</i></p>
-<dd> Sets the <code>$PATH</code> variable to be used by foomatic-rip. </p>
-<dt><code>cupsfilterpath:</code><i>&nbsp;&lt;path&gt;[:&lt;path&gt;]&#8230;</i></p>
-<dd> Sets the directories (colon-separated) in which foomatic-rip searches for CUPS filters. </p>
-<dt><code>preferred_shell:</code><i>&nbsp;[&lt;path&gt;/]&lt;executable&gt;</i></p>
-<dd> Sets the preferred shell to use when executing FoomaticRIPCommandLine and friends. Several PPD files use shell constructs that require a more modern shell like <code>bash</code>, <code>zsh</code>, or <code>ksh</code>. </p>
+<dt><code>debug: 0|1</code></dt>
+<dd> Turns on (<code>1</code>) or off (<code>0</code>) the debug mode. This is equivalent to supplying the <code>&#8211;debug</code> command line option. Default setting is <code>0</code>. </dd>
+<dt><code>echo:</code><i>&nbsp;[&lt;path&gt;/]&lt;executable&gt;</i></dt>
+<dd> Sets the path to an <code><a href="/docs/linux/man/1-echo/">echo</a>(1)</code> executable which supports <code>-n</code>. </dd>
+<dt><code>gspath:</code><i>&nbsp;[&lt;path&gt;/]&lt;executable&gt;</i></dt>
+<dd> Sets the path to the Ghostscript (<code><a href="/docs/linux/man/1-gs/">gs</a>(1)</code>) executable. To be used if Ghostscript is at a non-standard location or if an alternative Ghostscript should be used. </dd>
+<dt><code>execpath:</code><i>&nbsp;&lt;path&gt;[:&lt;path&gt;]&#8230;</i></dt>
+<dd> Sets the <code>$PATH</code> variable to be used by foomatic-rip. </dd>
+<dt><code>cupsfilterpath:</code><i>&nbsp;&lt;path&gt;[:&lt;path&gt;]&#8230;</i></dt>
+<dd> Sets the directories (colon-separated) in which foomatic-rip searches for CUPS filters. </dd>
+<dt><code>preferred_shell:</code><i>&nbsp;[&lt;path&gt;/]&lt;executable&gt;</i></dt>
+<dd> Sets the preferred shell to use when executing FoomaticRIPCommandLine and friends. Several PPD files use shell constructs that require a more modern shell like <code>bash</code>, <code>zsh</code>, or <code>ksh</code>. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/cups/ppd/&lt;printer&gt;.ppd</p>
+<dt>/etc/cups/ppd/&lt;printer&gt;.ppd</dt>
 <dd>
-<dt>/etc/direct/&lt;printer&gt;.ppd</p>
+</dd><dt>/etc/direct/&lt;printer&gt;.ppd</dt>
 <dd>
 <p> The PPD files of the currently defined printers </p>
-<dt>/etc/cups/foomatic-rip.conf</p>
+</dd><dt>/etc/cups/foomatic-rip.conf</dt>
 <dd>
-<dt>/etc/foomatic/filter.conf</p>
+</dd><dt>/etc/foomatic/filter.conf</dt>
 <dd>
 <p> Configuration file for foomatic-rip </p>
-</dl>
+</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>foomatic-rip</code> returns 0 unless something unexpected happens. </p>
 <h2>AUTHOR</h2>

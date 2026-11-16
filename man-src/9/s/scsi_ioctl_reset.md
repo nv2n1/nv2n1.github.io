@@ -14,15 +14,15 @@ description: "scsi_ioctl_reset –"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>scsi_device to operate on</dl>
+</dd><dd>scsi_device to operate on</dd></dl>
 <p> <i>arg</i></p>
 <dl>
-<dd>reset type (see sg.h)</dl>
+<dd>reset type (see sg.h)</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

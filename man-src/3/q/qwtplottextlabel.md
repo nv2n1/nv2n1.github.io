@@ -36,7 +36,7 @@ description: "QwtPlotTextLabel –"
 <p> As drawing a text is an expensive operation the label is cached in a pixmap to speed up replots. </p>
 <p> <code>Example</code></p>
 <dl COMPACT>
-<dd>The following code shows how to add a title.</dl>
+<dd>The following code shows how to add a title.</dd></dl>
 <pre> QwtText title( &quot;Plot Title&quot; );
  title.setRenderFlags( Qt::AlignHCenter | Qt::AlignTop );
  QFont font;
@@ -47,20 +47,20 @@ description: "QwtPlotTextLabel –"
  titleItem-&gt;attach( this );</pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotMarker</code></dl>
+<dd><code>QwtPlotMarker</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotTextLabel::QwtPlotTextLabel ()</h3>
 <p>Constructor. Initializes an text label with an empty text </p>
 <p> Sets the following item attributes: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::AutoScale</code>: true</p>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::Legend</code>: false</dl>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::AutoScale</code>: true</dd>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::Legend</code>: false</dd></dl>
 <p> The z value is initialized by 150 </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::setItemAttribute()</code>, <code>QwtPlotItem::setZ()</code></dl>
+<dd><code>QwtPlotItem::setItemAttribute()</code>, <code>QwtPlotItem::setZ()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtPlotTextLabel::draw (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const [protected], [virtual]</h3>
 <p>Draw the text label </p>
@@ -69,59 +69,59 @@ description: "QwtPlotTextLabel –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> x Scale Map<br />
  <i>yMap</i> y Scale Map<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dl>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>textRect()</code></dl>
+<dd><code>textRect()</code></dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>int QwtPlotTextLabel::margin () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Margin added to the contentsMargins() of the canvas</dl>
+<dd>Margin added to the contentsMargins() of the canvas</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMargin()</code></dl>
+<dd><code>setMargin()</code></dd></dl>
 <h3>int QwtPlotTextLabel::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotTextLabel</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotTextLabel</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotTextLabel::setMargin (intmargin)</h3>
 <p>Set the margin </p>
 <p> The margin is the distance between the contentsRect() of the plot canvas and the rectangle where the label can be displayed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>margin</i> Margin</dl>
+<dd><i>margin</i> Margin</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>margin()</code>, <code>textRect()</code></dl>
+<dd><code>margin()</code>, <code>textRect()</code></dd></dl>
 <h3>void QwtPlotTextLabel::setText (const <code>QwtText</code> &amp;text)</h3>
 <p>Set the text </p>
 <p> The label will be aligned to the plot canvas according to the alignment flags of text. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> Text to be displayed</dl>
+<dd><i>text</i> Text to be displayed</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>text()</code>, <code>QwtText::renderFlags()</code></dl>
+<dd><code>text()</code>, <code>QwtText::renderFlags()</code></dd></dl>
 <h3><code>QwtText</code> QwtPlotTextLabel::text () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Text to be displayed</dl>
+<dd>Text to be displayed</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setText()</code></dl>
+<dd><code>setText()</code></dd></dl>
 <h3>QRectF QwtPlotTextLabel::textRect (const QRectF &amp;rect, const QSizeF &amp;textSize) const [virtual]</h3>
 <p>Align the text label. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>rect</i> Canvas rectangle with margins subtracted<br />
- <i>textSize</i> Size required to draw the text</dl>
+ <i>textSize</i> Size required to draw the text</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A rectangle aligned according the the alignment flags of the text.</dl>
+<dd>A rectangle aligned according the the alignment flags of the text.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMargin()</code>, <code>QwtText::renderFlags()</code>, <code>QwtText::textSize()</code></dl>
+<dd><code>setMargin()</code>, <code>QwtText::renderFlags()</code>, <code>QwtText::textSize()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

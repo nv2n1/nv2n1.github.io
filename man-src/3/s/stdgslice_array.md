@@ -11,7 +11,6 @@ std::gslice_array - std::gslice_array
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;valarray&gt;
-
 template&lt; class T &gt; class gslice_array;</code></pre> 
 std::gslice_array is a helper template used by std::gslice subscript operator. It has reference semantics to a subset of the array specified by the std::gslice object. 
 

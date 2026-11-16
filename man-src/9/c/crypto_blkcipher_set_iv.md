@@ -14,20 +14,20 @@ description: "crypto_blkcipher_set_iv – set IV for cipher"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>buffer holding the IV</dl>
+<dd>buffer holding the IV</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>length of the IV in bytes</dl>
+<dd>length of the IV in bytes</dd></dl>
 <h2>Description</h2>
 <p>The caller provided IV is set for the block cipher referenced by the cipher handle.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

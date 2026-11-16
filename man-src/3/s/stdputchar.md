@@ -11,7 +11,6 @@ std::putchar - std::putchar
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int putchar(int ch);</code></pre> 
 Writes a character ch to stdout. Internally, the character is converted to unsigned char just before being written. 
 Equivalent to putc(ch, stdout). 
@@ -29,7 +28,6 @@ On failure, returns EOF and sets the error indicator (see ferror()) on stdout.
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
 int main()
-
 {
     for (char c = 'a'; c != 'z'; c++)
         std::putchar(c);

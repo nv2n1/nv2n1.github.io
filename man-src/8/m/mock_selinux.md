@@ -105,8 +105,8 @@ description: "mock_selinux – Security Enhanced Linux Policy for the mock proce
 <p> <code>mock_exec_t</code> </p>
 <p> &#8211; Set files with the mock_exec_t type, if you want to transition an executable to the mock_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/mock, /usr/libexec/mock/mock </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/mock, /usr/libexec/mock/mock </dd>
 </dl>
 <p> <code>mock_tmp_t</code> </p>
 <p> &#8211; Set files with the mock_tmp_t type, if you want to store mock temporary files in the /tmp directories. </p>

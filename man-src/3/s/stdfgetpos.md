@@ -11,7 +11,6 @@ std::fgetpos - std::fgetpos
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fgetpos(std::FILE *stream, std::fpos_t *pos);</code></pre> 
 Obtains the file position indicator and the current parse state (if any) for the file stream stream and stores them in the object pointed to by pos. The value stored is only meaningful as the input to std::fsetpos. 
 

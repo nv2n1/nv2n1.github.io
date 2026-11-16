@@ -12,22 +12,14 @@ std::swap(std::array) - std::swap(std::array)
 
 <pre><code>template &lt;class T, std::size_t N&gt;
 (since C++ 11)
-
     void swap(array&lt;T, N&gt; &amp;lhs, (until C++ 17)
-
                                     array&lt;T, N&gt; &amp;rhs);
-
 template &lt;class T, std::size_t N&gt;
 (since C++ 17)
-
     void swap(array&lt;T, N&gt; &amp;lhs, (until C++ 20)
-
                                     array&lt;T, N&gt; &amp;rhs) noexcept(/* see below */);
-
 template &lt;class T, std::size_t N&gt;
-
 constexpr void swap(array&lt;T, N&gt; &amp;lhs, (since C++ 20)
-
                                           array&lt;T, N&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::array. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 This overload only participates in overload resolution if N == 0 or std::is_swappable&lt;T&gt;::value is true. <i>(since C++17)</i> 

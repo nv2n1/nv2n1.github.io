@@ -15,10 +15,10 @@ description: "zeisstopnm – convert a Zeiss confocal file into a portable anyma
 <p> Reads a Zeiss confocal file as input. Produces a portable anymap as output. The type of the output file depends on the input file &#8211; if it&#8217;s grayscale a <i>pgm</i> file, else a <i>ppm</i> file will be produced. The program tells you which type it is writing.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-pgm</code></p>
-<dd> Force the output to be a <i>pgm</i> file.</p>
-<dt><code>-ppm</code></p>
-<dd> Force the output to be a <i>ppm</i> file.</dl>
+<dt><code>-pgm</code></dt>
+<dd> Force the output to be a <i>pgm</i> file.</dd>
+<dt><code>-ppm</code></dt>
+<dd> Force the output to be a <i>ppm</i> file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHOR</h2>

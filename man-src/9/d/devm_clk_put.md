@@ -14,10 +14,10 @@ description: "devm_clk_put – \"free\" a managed clock source"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device used to acquire the clock</dl>
+</dd><dd>device used to acquire the clock</dd></dl>
 <p> <i>clk</i></p>
 <dl>
-<dd>clock source acquired with <code>devm_clk_get</code></dl>
+<dd>clock source acquired with <code>devm_clk_get</code></dd></dl>
 <h2>Note</h2>
 <p>drivers must ensure that all clk_enable calls made on this clock source are balanced by clk_disable calls prior to calling this function. </p>
 <p> clk_put should not be called from within interrupt context.</p>

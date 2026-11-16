@@ -11,9 +11,7 @@ std::exponential_distribution - std::exponential_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class exponential_distribution;</code></pre> 
 Produces random non-negative floating-point values x, distributed according to probability density function: P(x|λ) = λe-λx 
 The value obtained is the time/distance until the next random event if random events occur at constant rate λ per unit of time/distance. For example, this distribution describes the time between the clicks of a Geiger counter or the distance between point mutations in a DNA strand. 
@@ -69,17 +67,11 @@ Some implementations may occasionally return infinity if RealType is float. This
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
-
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

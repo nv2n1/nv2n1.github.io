@@ -21,11 +21,11 @@ description: "lj4_font – groff fonts for use with devlj4"
 <p> At the time HP last supported TFM files, only version 1.0 of the Unicode standard was available. Consequently, many glyphs lacking assigned code points were assigned by HP to the Private Use Area (PUA). Later versions of the Unicode standard included code points outside the PUA for many of these glyphs. The HP-supplied TrueType TFM files use the PUA assignments; TFM files generated from more recent TrueType font files require the later Unicode values to access the same glyphs. Consequently, two different mapping files may be required: one for the HP-supplied TFM files, and one for more recent TFM files.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/:share/:groff/:1.22.4/:font/:devlj4/:DESC</i></p>
-<dd>device description file</p>
-<dt><i>/usr/:share/:groff/:1.22.4/:font/:devlj4/:</i>F</p>
-<dd>font description file for font <i>F</i></p>
-<dt><i>/usr/:share/:groff/:1.22.4/:font/:devlj4/:generate</i></p>
-<dd>corrects Intellifont-based height metrics for several glyphs in the special font for TrueType CG Times (LaserJet~4000 and later).</dl>
+<dt><i>/usr/:share/:groff/:1.22.4/:font/:devlj4/:DESC</i></dt>
+<dd>device description file</dd>
+<dt><i>/usr/:share/:groff/:1.22.4/:font/:devlj4/:</i>F</dt>
+<dd>font description file for font <i>F</i></dd>
+<dt><i>/usr/:share/:groff/:1.22.4/:font/:devlj4/:generate</i></dt>
+<dd>corrects Intellifont-based height metrics for several glyphs in the special font for TrueType CG Times (LaserJet~4000 and later).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-hpftodit/">hpftodit</a></code>(1), <code><a href="/docs/linux/man/1-grolj4/">grolj4</a></code>(1), <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5) </p>

@@ -12,12 +12,9 @@ std::experimental::optional&lt;T&gt;::value_or - std::experimental::optional&lt;
 
 <pre><code>template &lt;class U&gt;
 (library fundamentals TS)
-
     constexpr T value_or(U &amp;&amp;default_value) const &amp;;
-
 template &lt;class U&gt;
 (library fundamentals TS)
-
     constexpr T value_or(U &amp;&amp;default_value) &amp;&amp;;</code></pre> 
 Returns the contained value if *this has a value, otherwise returns default_value. 
 1) Equivalent to bool(*this) ? **this : static_cast&lt;T&gt;(std::forward&lt;U&gt;(default_value)) 
@@ -47,21 +44,16 @@ Any exception thrown by the selected constructor of the return value T.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;experimental/optional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
 std::experimental::optional&lt;const char *&gt; maybe_getenv(const char *n)
-
 {
     if (const char *x = std::getenv(n))
         return x;
     else
         return {};
 }
-
 int main()
-
 {
     std::cout &lt;&lt; maybe_getenv(&quot;MYPWD&quot;).value_or(&quot;(none)&quot;) &lt;&lt; '\n';
 }

@@ -21,79 +21,79 @@ stg import[options][--][&lt;file&gt; | &lt;url&gt;]
 <p> -m, &#8211;mail</p>
 <dl>
 <dt>
-<dd> Import the patch from a standard e-mail file.</dl>
+</dt><dd> Import the patch from a standard e-mail file.</dd></dl>
 <p> -M, &#8211;mbox</p>
 <dl>
 <dt>
-<dd> Import a series of patches from an mbox file.</dl>
+</dt><dd> Import a series of patches from an mbox file.</dd></dl>
 <p> -s, &#8211;series</p>
 <dl>
 <dt>
-<dd> Import a series of patches from a series file or a tar archive.</dl>
+</dt><dd> Import a series of patches from a series file or a tar archive.</dd></dl>
 <p> -u, &#8211;url</p>
 <dl>
 <dt>
-<dd> Import a patch from a URL.</dl>
+</dt><dd> Import a patch from a URL.</dd></dl>
 <p> -n NAME, &#8211;name NAME</p>
 <dl>
 <dt>
-<dd> Use NAME as the patch name.</dl>
+</dt><dd> Use NAME as the patch name.</dd></dl>
 <p> -p N, &#8211;strip N</p>
 <dl>
 <dt>
-<dd> Remove N leading slashes from diff paths (default 1).</dl>
+</dt><dd> Remove N leading slashes from diff paths (default 1).</dd></dl>
 <p> -t, &#8211;stripname</p>
 <dl>
 <dt>
-<dd> Strip numbering and extension from patch name.</dl>
+</dt><dd> Strip numbering and extension from patch name.</dd></dl>
 <p> -i, &#8211;ignore</p>
 <dl>
 <dt>
-<dd> Ignore the applied patches in the series.</dl>
+</dt><dd> Ignore the applied patches in the series.</dd></dl>
 <p> &#8211;replace</p>
 <dl>
 <dt>
-<dd> Replace the unapplied patches in the series.</dl>
+</dt><dd> Replace the unapplied patches in the series.</dd></dl>
 <p> -b BASE, &#8211;base BASE</p>
 <dl>
 <dt>
-<dd> Use BASE instead of HEAD for file importing.</dl>
+</dt><dd> Use BASE instead of HEAD for file importing.</dd></dl>
 <p> &#8211;reject</p>
 <dl>
 <dt>
-<dd> Leave the rejected hunks in corresponding *.rej files.</dl>
+</dt><dd> Leave the rejected hunks in corresponding *.rej files.</dd></dl>
 <p> -e, &#8211;edit</p>
 <dl>
 <dt>
-<dd> Invoke an editor for the patch description.</dl>
+</dt><dd> Invoke an editor for the patch description.</dd></dl>
 <p> -d, &#8211;showdiff</p>
 <dl>
 <dt>
-<dd> Show the patch content in the editor buffer.</dl>
+</dt><dd> Show the patch content in the editor buffer.</dd></dl>
 <p> -a &quot;NAME &lt;EMAIL&gt;&quot;, &#8211;author &quot;NAME &lt;EMAIL&gt;&quot;</p>
 <dl>
 <dt>
-<dd> Use &quot;NAME &lt;EMAIL&gt;&quot; as the author details.</dl>
+</dt><dd> Use &quot;NAME &lt;EMAIL&gt;&quot; as the author details.</dd></dl>
 <p> &#8211;authname AUTHNAME</p>
 <dl>
 <dt>
-<dd> Use AUTHNAME as the author name.</dl>
+</dt><dd> Use AUTHNAME as the author name.</dd></dl>
 <p> &#8211;authemail AUTHEMAIL</p>
 <dl>
 <dt>
-<dd> Use AUTHEMAIL as the author e-mail.</dl>
+</dt><dd> Use AUTHEMAIL as the author e-mail.</dd></dl>
 <p> &#8211;authdate AUTHDATE</p>
 <dl>
 <dt>
-<dd> Use AUTHDATE as the author date.</dl>
+</dt><dd> Use AUTHDATE as the author date.</dd></dl>
 <p> &#8211;sign</p>
 <dl>
 <dt>
-<dd> Add a &quot;Signed-off-by:&quot; to the end of the patch.</dl>
+</dt><dd> Add a &quot;Signed-off-by:&quot; to the end of the patch.</dd></dl>
 <p> &#8211;ack</p>
 <dl>
 <dt>
-<dd> Add an &quot;Acked-by:&quot; line to the end of the patch.</dl>
+</dt><dd> Add an &quot;Acked-by:&quot; line to the end of the patch.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

@@ -11,9 +11,7 @@ std::optional - std::optional
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;optional&gt;
-
 template&lt; class T &gt;           (since C++17)
-
 class optional;</code></pre> 
 The class template std::optional manages an optional contained value, i.e. a value that may or may not be present. 
 A common use case for optional is the return value of a function that may fail. As opposed to other approaches, such as std::pair&lt;T,bool&gt;, optional handles expensive-to-construct objects well and is more readable, as the intent is expressed explicitly. 
@@ -139,14 +137,10 @@ Deduction_guides
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;optional&gt;
 // optional can be used as the return type of a factory that may fail
-
 std::optional&lt;std::string&gt; create(bool b)
 {
     if (b)
@@ -154,13 +148,11 @@ std::optional&lt;std::string&gt; create(bool b)
     return {};
 }
 // std::nullopt can be used to create any (empty) std::optional
-
 auto create2(bool b)
 {
     return b ? std::optional&lt;std::string&gt;{&quot;Godzilla&quot;} : std::nullopt;
 }
 // std::reference_wrapper may be used to return a reference
-
 auto create_ref(bool b)
 {
     static std::string value = &quot;Godzilla&quot;;
@@ -168,7 +160,6 @@ auto create_ref(bool b)
              : std::nullopt;
 }
 int main()
-
 {
     std::cout &lt;&lt; &quot;create(false) returned &quot;
               &lt;&lt; create(false).value_or(&quot;empty&quot;) &lt;&lt; '\n';

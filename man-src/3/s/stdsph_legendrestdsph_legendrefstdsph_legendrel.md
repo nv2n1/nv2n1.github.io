@@ -10,15 +10,10 @@ description: "std::sph_legendre,std::sph_legendref,std::sph_legendrel – std::s
 <p>std::sph_legendre,std::sph_legendref,std::sph_legendrel &#8211; std::sph_legendre,std::sph_legendref,std::sph_legendrel</p>
 <h2>Synopsis</h2>
 <pre><code>double sph_legendre ( unsigned l, unsigned m, double θ );
-
 float sph_legendre ( unsigned l, unsigned m, float θ );
-
 long double sph_legendre ( unsigned l, unsigned m, long double θ );(1) (since C++17)
-
 float sph_legendref( unsigned l, unsigned m, float θ );
-
 long double sph_legendrel( unsigned l, unsigned m, long double θ );
-
 double sph_legendre ( unsigned l, unsigned m, IntegralType θ );    (2) (since C++17)</code></pre>
 <p>1) Computes the spherical associated Legendre function of degree l, order m, and polar angle θ.<br />
 2) A set of overloads or a function template accepting an argument of any integral_type. Equivalent to <code>(1)</code> after casting the argument to double. </p>
@@ -51,11 +46,8 @@ An implementation of the spherical harmonic function is available_in_boost.math,
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     // spot check for l=3, m=0
     double x = 1.2345;

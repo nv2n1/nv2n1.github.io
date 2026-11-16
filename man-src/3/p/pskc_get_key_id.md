@@ -13,8 +13,8 @@ description: "pskc_get_key_id – API function"
 const char *pskc_get_key_id(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Id attribute value. It is a syntax error for this attribute to not be available.</p>
 <h2>Returns</h2>

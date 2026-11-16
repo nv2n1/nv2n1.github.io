@@ -27,19 +27,19 @@ ZFS logical volume datapool/dbvol</pre>
 <p>This section lists the properties that control amzfs-sendrecv&#8217;s functionality. See <code><a href="/docs/linux/man/7-amanda-applications/">amanda-applications</a></code>(7) for information on the Application API, application configuration. </p>
 <p> DF-PATH</p>
 <dl>
-<dd>Path to the &#8216;df&#8217; binary, search in $PATH by default.</dl>
+<dd>Path to the &#8216;df&#8217; binary, search in $PATH by default.</dd></dl>
 <p> KEEP-SNAPSHOT</p>
 <dl>
-<dd>If &quot;YES&quot; (the default), snapshot are kept after the backup, if set to &quot;NO&quot; then snapshot are no kept and incremental backup will fail.</dl>
+<dd>If &quot;YES&quot; (the default), snapshot are kept after the backup, if set to &quot;NO&quot; then snapshot are no kept and incremental backup will fail.</dd></dl>
 <p> ZFS-PATH</p>
 <dl>
-<dd>Path to the &#8216;zfs&#8217; binary, search in $PATH by default.</dl>
+<dd>Path to the &#8216;zfs&#8217; binary, search in $PATH by default.</dd></dl>
 <p> PFEXEC-PATH</p>
 <dl>
-<dd>Path to the &#8216;pfexec&#8217; binary, search in $PATH by default.</dl>
+<dd>Path to the &#8216;pfexec&#8217; binary, search in $PATH by default.</dd></dl>
 <p> PFEXEC</p>
 <dl>
-<dd>If &quot;NO&quot; (the default), pfexec is not used, if set to &quot;YES&quot; then pfexec is used.</dl>
+<dd>If &quot;NO&quot; (the default), pfexec is not used, if set to &quot;YES&quot; then pfexec is used.</dd></dl>
 <h2>Example</h2>
 <p>In this example, a dumptype is defined to use amzfs-sendrecv application to backup a zfs filesystem. </p>
 <pre> define application-tool amzfs_sendrecv {
@@ -61,4 +61,4 @@ ZFS logical volume datapool/dbvol</pre>
 <h2>Author</h2>
 <p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

@@ -15,7 +15,7 @@ blk_get_backing_dev_info - get the address of a queue's backing_dev_info
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
 
 <h2>Description</h2>
 

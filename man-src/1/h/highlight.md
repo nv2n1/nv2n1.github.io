@@ -16,166 +16,166 @@ description: "Highlight – a universal sourcecode to formatted text converter"
 <p> It&#8217;s easily possible to enhance highlight&#8217;s database of programming languages and colour themes. See the README file for details.</p>
 <h2>General options</h2>
 <dl>
-<dt>-B, &#8211;batch-recursive=&lt;wildcard&gt;</p>
-<dd> convert all files matching the wildcard (uses recursive search)</p>
-<dt>-D, &#8211;data-dir=&lt;path&gt;</p>
-<dd> set path to highlight data directory</p>
-<dt>&#8211;add-config-dir=&lt;path&gt;</p>
-<dd> set path to an additional configuration directory</p>
-<dt>&#8211;config-file=&lt;file&gt;</p>
-<dd> set path to a lang or theme file</p>
-<dt>-h, &#8211;help</p>
-<dd> print this help</p>
-<dt>-i, &#8211;input=&lt;file&gt;</p>
-<dd> name of input file</p>
-<dt>-o, &#8211;output=&lt;file&gt;</p>
-<dd> name of output file</p>
-<dt>-d, &#8211;outdir=&lt;output directory&gt;</p>
-<dd> name of output directory</p>
-<dt>-P, &#8211;progress</p>
-<dd> print progress bar in batch mode</p>
-<dt>-S, &#8211;syntax=&lt;type&gt;</p>
-<dd> set type of source code, necessary if input file suffix is missing</p>
-<dt>-v, &#8211;verbose</p>
-<dd> print debug info to stderr</p>
-<dt>-p, &#8211;list-langs</p>
-<dd> list installed language definitions</p>
-<dt>-q, &#8211;quiet</p>
-<dd> supress progress info in batch mode</p>
-<dt>-w, &#8211;list-themes</p>
-<dd> list installed themes</p>
-<dt>&#8211;force</p>
-<dd> generate output if input syntax is unknown</p>
-<dt>&#8211;plug-in=&lt;script&gt;</p>
-<dd> execute Lua plug-in script; repeat option to apply multiple plug-ins</p>
-<dt>&#8211;plug-in-read</p>
-<dd> set input file for a plug-in (e.g. &#8216;tags&#8217;)</p>
-<dt>&#8211;print-config</p>
-<dd> print path configuration</p>
-<dt>&#8211;print-style</p>
-<dd> print stylesheet only (see &#8211;style-outfile)</p>
-<dt>&#8211;skip=&lt;list&gt;</p>
-<dd> ignore listed unknown file types (Example: &#8211;skip=&#8217;bak;c~;h~&#8217;)</p>
-<dt>&#8211;start-nested=&lt;lang&gt;</p>
-<dd> define nested language which starts input without opening delimiter</p>
-<dt>&#8211;validate-input</p>
-<dd> test if input is a valid text file</p>
-<dt>&#8211;version</p>
-<dd> print version and copyright info </p>
+<dt>-B, &#8211;batch-recursive=&lt;wildcard&gt;</dt>
+<dd> convert all files matching the wildcard (uses recursive search)</dd>
+<dt>-D, &#8211;data-dir=&lt;path&gt;</dt>
+<dd> set path to highlight data directory</dd>
+<dt>&#8211;add-config-dir=&lt;path&gt;</dt>
+<dd> set path to an additional configuration directory</dd>
+<dt>&#8211;config-file=&lt;file&gt;</dt>
+<dd> set path to a lang or theme file</dd>
+<dt>-h, &#8211;help</dt>
+<dd> print this help</dd>
+<dt>-i, &#8211;input=&lt;file&gt;</dt>
+<dd> name of input file</dd>
+<dt>-o, &#8211;output=&lt;file&gt;</dt>
+<dd> name of output file</dd>
+<dt>-d, &#8211;outdir=&lt;output directory&gt;</dt>
+<dd> name of output directory</dd>
+<dt>-P, &#8211;progress</dt>
+<dd> print progress bar in batch mode</dd>
+<dt>-S, &#8211;syntax=&lt;type&gt;</dt>
+<dd> set type of source code, necessary if input file suffix is missing</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> print debug info to stderr</dd>
+<dt>-p, &#8211;list-langs</dt>
+<dd> list installed language definitions</dd>
+<dt>-q, &#8211;quiet</dt>
+<dd> supress progress info in batch mode</dd>
+<dt>-w, &#8211;list-themes</dt>
+<dd> list installed themes</dd>
+<dt>&#8211;force</dt>
+<dd> generate output if input syntax is unknown</dd>
+<dt>&#8211;plug-in=&lt;script&gt;</dt>
+<dd> execute Lua plug-in script; repeat option to apply multiple plug-ins</dd>
+<dt>&#8211;plug-in-read</dt>
+<dd> set input file for a plug-in (e.g. &#8216;tags&#8217;)</dd>
+<dt>&#8211;print-config</dt>
+<dd> print path configuration</dd>
+<dt>&#8211;print-style</dt>
+<dd> print stylesheet only (see &#8211;style-outfile)</dd>
+<dt>&#8211;skip=&lt;list&gt;</dt>
+<dd> ignore listed unknown file types (Example: &#8211;skip=&#8217;bak;c~;h~&#8217;)</dd>
+<dt>&#8211;start-nested=&lt;lang&gt;</dt>
+<dd> define nested language which starts input without opening delimiter</dd>
+<dt>&#8211;validate-input</dt>
+<dd> test if input is a valid text file</dd>
+<dt>&#8211;version</dt>
+<dd> print version and copyright info </dd>
 </dl>
 <h2>Output formatting options</h2>
 <dl>
-<dt>-O, &#8211;out-format=&lt;format&gt;</p>
-<dd> output file in given format &lt;format&gt;=[html, xhtml, latex, tex, rtf, odt, ansi, xterm256, bbcode, svg]</p>
-<dt>-c, &#8211;style-outfile=&lt;file&gt;</p>
-<dd> name of style definition file or output to stdout, if &quot;stdout&quot; is given as file argument</p>
-<dt>-T, &#8211;doc-title</p>
-<dd> document title</p>
-<dt>-e, &#8211;style-infile=&lt;file&gt;</p>
-<dd> name of file to be included in style-outfile</p>
-<dt>-f, &#8211;fragment</p>
-<dd> omit header and footer of the output document</p>
-<dt>-F, &#8211;reformat=&lt;style&gt;</p>
-<dd> reformat output in given style. &lt;style&gt;=[allman, banner, gnu, java, kr, linux, stroustrup, whitesmith]</p>
-<dt>-I, &#8211;include-style</p>
-<dd> include style definition in output</p>
-<dt>-J, &#8211;line-length=&lt;num&gt;</p>
-<dd> line length before wrapping (see -W, -V)</p>
-<dt>-j, &#8211;line-number-length=&lt;num&gt;</p>
-<dd> line number length incl. left padding</p>
-<dt>-k, &#8211;font=&lt;font&gt;</p>
-<dd> set font (specific to output format)</p>
-<dt>-K, &#8211;font-size=&lt;num?&gt;</p>
-<dd> set font size (specific to output format)</p>
-<dt>-l, &#8211;line-numbers</p>
-<dd> print line numbers in output file</p>
-<dt>-m, &#8211;line-number-start=&lt;cnt&gt;</p>
-<dd> start line numbering with cnt (assumes -l)</p>
-<dt>-s, &#8211;style=&lt;style name&gt;</p>
-<dd> set highlighting style (see &#8211;list-themes)</p>
-<dt>-t &#8211;replace-tabs=&lt;num&gt;</p>
-<dd> replace tabs by num spaces</p>
-<dt>-u, &#8211;encoding=&lt;enc&gt;</p>
-<dd> set output encoding which matches input file encoding; omit encoding information if set to &quot;NONE&quot;</p>
-<dt>-V, &#8211;wrap-simple</p>
-<dd> wrap long lines without indenting function parameters and statements</p>
-<dt>-W, &#8211;wrap</p>
-<dd> wrap long lines (use with caution)</p>
-<dt>-z, &#8211;zeroes</p>
-<dd> fill leading space of line numbers with zeroes</p>
-<dt>&#8211;kw-case=&lt;upper|lower|capitalize&gt;</p>
-<dd> output all keywords in given case if language is not case sensitive</p>
-<dt>&#8211;delim-cr</p>
-<dd> set CR as end-of-line delimiter (MacOS 9)</p>
-<dt>&#8211;no-trailing-nl</p>
-<dd> omit trailing newline</p>
-<dt>&#8211;wrap-no-numbers</p>
-<dd> omit line numbers of wrapped lines (assumes -l) </p>
+<dt>-O, &#8211;out-format=&lt;format&gt;</dt>
+<dd> output file in given format &lt;format&gt;=[html, xhtml, latex, tex, rtf, odt, ansi, xterm256, bbcode, svg]</dd>
+<dt>-c, &#8211;style-outfile=&lt;file&gt;</dt>
+<dd> name of style definition file or output to stdout, if &quot;stdout&quot; is given as file argument</dd>
+<dt>-T, &#8211;doc-title</dt>
+<dd> document title</dd>
+<dt>-e, &#8211;style-infile=&lt;file&gt;</dt>
+<dd> name of file to be included in style-outfile</dd>
+<dt>-f, &#8211;fragment</dt>
+<dd> omit header and footer of the output document</dd>
+<dt>-F, &#8211;reformat=&lt;style&gt;</dt>
+<dd> reformat output in given style. &lt;style&gt;=[allman, banner, gnu, java, kr, linux, stroustrup, whitesmith]</dd>
+<dt>-I, &#8211;include-style</dt>
+<dd> include style definition in output</dd>
+<dt>-J, &#8211;line-length=&lt;num&gt;</dt>
+<dd> line length before wrapping (see -W, -V)</dd>
+<dt>-j, &#8211;line-number-length=&lt;num&gt;</dt>
+<dd> line number length incl. left padding</dd>
+<dt>-k, &#8211;font=&lt;font&gt;</dt>
+<dd> set font (specific to output format)</dd>
+<dt>-K, &#8211;font-size=&lt;num?&gt;</dt>
+<dd> set font size (specific to output format)</dd>
+<dt>-l, &#8211;line-numbers</dt>
+<dd> print line numbers in output file</dd>
+<dt>-m, &#8211;line-number-start=&lt;cnt&gt;</dt>
+<dd> start line numbering with cnt (assumes -l)</dd>
+<dt>-s, &#8211;style=&lt;style name&gt;</dt>
+<dd> set highlighting style (see &#8211;list-themes)</dd>
+<dt>-t &#8211;replace-tabs=&lt;num&gt;</dt>
+<dd> replace tabs by num spaces</dd>
+<dt>-u, &#8211;encoding=&lt;enc&gt;</dt>
+<dd> set output encoding which matches input file encoding; omit encoding information if set to &quot;NONE&quot;</dd>
+<dt>-V, &#8211;wrap-simple</dt>
+<dd> wrap long lines without indenting function parameters and statements</dd>
+<dt>-W, &#8211;wrap</dt>
+<dd> wrap long lines (use with caution)</dd>
+<dt>-z, &#8211;zeroes</dt>
+<dd> fill leading space of line numbers with zeroes</dd>
+<dt>&#8211;kw-case=&lt;upper|lower|capitalize&gt;</dt>
+<dd> output all keywords in given case if language is not case sensitive</dd>
+<dt>&#8211;delim-cr</dt>
+<dd> set CR as end-of-line delimiter (MacOS 9)</dd>
+<dt>&#8211;no-trailing-nl</dt>
+<dd> omit trailing newline</dd>
+<dt>&#8211;wrap-no-numbers</dt>
+<dd> omit line numbers of wrapped lines (assumes -l) </dd>
 </dl>
 <h2>(X)HTML OPTIONS</h2>
 <dl>
-<dt>-a, &#8211;anchors</p>
-<dd> attach anchors to line numbers (HTML only)</p>
-<dt>-y, &#8211;anchor-prefix=&lt;str&gt;</p>
-<dd> set anchor name prefix</p>
-<dt>-N, &#8211;anchor-filename</p>
-<dd> use input file name as anchor name</p>
-<dt>-C, &#8211;print-index</p>
-<dd> print index file with links to all output files</p>
-<dt>-n, &#8211;ordered-list</p>
-<dd> print lines as ordered list items</p>
-<dt>&#8211;class-name=&lt;str&gt;</p>
-<dd> set CSS class name prefix; omit class name if set to &quot;NONE&quot;</p>
-<dt>&#8211;inline-css</p>
-<dd> output CSS within each tag (verbose output)</p>
-<dt>&#8211;enclose-pre</p>
-<dd> enclose fragmented output with pre tag (assumes -f) </p>
+<dt>-a, &#8211;anchors</dt>
+<dd> attach anchors to line numbers (HTML only)</dd>
+<dt>-y, &#8211;anchor-prefix=&lt;str&gt;</dt>
+<dd> set anchor name prefix</dd>
+<dt>-N, &#8211;anchor-filename</dt>
+<dd> use input file name as anchor name</dd>
+<dt>-C, &#8211;print-index</dt>
+<dd> print index file with links to all output files</dd>
+<dt>-n, &#8211;ordered-list</dt>
+<dd> print lines as ordered list items</dd>
+<dt>&#8211;class-name=&lt;str&gt;</dt>
+<dd> set CSS class name prefix; omit class name if set to &quot;NONE&quot;</dd>
+<dt>&#8211;inline-css</dt>
+<dd> output CSS within each tag (verbose output)</dd>
+<dt>&#8211;enclose-pre</dt>
+<dd> enclose fragmented output with pre tag (assumes -f) </dd>
 </dl>
 <h2>LaTeX OPTIONS</h2>
 <dl>
-<dt>-b, &#8211;babel</p>
-<dd> disable Babel package shorthands</p>
-<dt>-r, &#8211;replace-quotes</p>
-<dd> replace double quotes by \dq</p>
-<dt>&#8211;pretty-symbols</p>
-<dd> improve appearance of brackets and other symbols </p>
+<dt>-b, &#8211;babel</dt>
+<dd> disable Babel package shorthands</dd>
+<dt>-r, &#8211;replace-quotes</dt>
+<dd> replace double quotes by \dq</dd>
+<dt>&#8211;pretty-symbols</dt>
+<dd> improve appearance of brackets and other symbols </dd>
 </dl>
 <h2>RTF OPTIONS</h2>
 <dl>
-<dt>-x, &#8211;page-size=&lt;size&gt;</p>
-<dd> set page size, &lt;size&gt;=[a3, a4, a5, b4, b5, b6, letter]</p>
-<dt>&#8211;char-styles</p>
-<dd> include character stylesheets </p>
+<dt>-x, &#8211;page-size=&lt;size&gt;</dt>
+<dd> set page size, &lt;size&gt;=[a3, a4, a5, b4, b5, b6, letter]</dd>
+<dt>&#8211;char-styles</dt>
+<dd> include character stylesheets </dd>
 </dl>
 <h2>SVG OPTIONS</h2>
 <dl>
-<dt>&#8211;height=&lt;h&gt;</p>
-<dd> set image height (units allowed)</p>
-<dt>&#8211;width=&lt;w&gt;</p>
-<dd> set image size (see &#8211;height) </p>
+<dt>&#8211;height=&lt;h&gt;</dt>
+<dd> set image height (units allowed)</dd>
+<dt>&#8211;width=&lt;w&gt;</dt>
+<dd> set image size (see &#8211;height) </dd>
 </dl>
 <h2>GNU SOURCE-HIGHLIGHT COMPATIBILITY OPTIONS</h2>
 <dl>
-<dt>&#8211;doc</p>
-<dd> create stand alone document</p>
-<dt>&#8211;no-doc</p>
-<dd> cancel the &#8211;doc option</p>
-<dt>&#8211;css=filename</p>
-<dd> the external style sheet filename</p>
-<dt>&#8211;src-lang=STRING</p>
-<dd> source language</p>
-<dt> -t, &#8211;tab=INT</p>
-<dd> specify tab length</p>
-<dt> -n, &#8211;line-number[=0]</p>
-<dd> number all output lines, optional padding</p>
-<dt>&#8211;line-number-ref[=p]</p>
+<dt>&#8211;doc</dt>
+<dd> create stand alone document</dd>
+<dt>&#8211;no-doc</dt>
+<dd> cancel the &#8211;doc option</dd>
+<dt>&#8211;css=filename</dt>
+<dd> the external style sheet filename</dd>
+<dt>&#8211;src-lang=STRING</dt>
+<dd> source language</dd>
+<dt> -t, &#8211;tab=INT</dt>
+<dd> specify tab length</dd>
+<dt> -n, &#8211;line-number[=0]</dt>
+<dd> number all output lines, optional padding</dd>
+<dt>&#8211;line-number-ref[=p]</dt>
 <dd> number all output lines and generate an anchor, made of the specified prefix<br />
-&nbsp;<wbr>p&nbsp;<wbr>+&nbsp;<wbr>the line number&nbsp;<wbr>&nbsp;<wbr>(default=&#8217;line&#8217;)</p>
-<dt>&#8211;output-dir=path</p>
+&nbsp;<wbr>p&nbsp;<wbr>+&nbsp;<wbr>the line number&nbsp;<wbr>&nbsp;<wbr>(default=&#8217;line&#8217;)</dd>
+<dt>&#8211;output-dir=path</dt>
 <dd>
-&nbsp;<wbr>output directory</p>
-<dt>&#8211;failsafe</p>
-<dd> if no language definition is found for the input, it is simply copied to the output </p>
+&nbsp;<wbr>output directory</dd>
+<dt>&#8211;failsafe</dt>
+<dd> if no language definition is found for the input, it is simply copied to the output </dd>
 </dl>
 <p> If no in- or output files are specified, stdin and stdout will be used for in- or output. HTML will be generated unless an other output format is given. Style definitions are stored in highlight.css (HTML, XHTML, SVG) or highlight.sty (LaTeX, TeX) if neither -c nor -I is given. Reformatting code (-F) will only work with C, C++, C# and Java input files.</p>
 <h2>BUGS</h2>

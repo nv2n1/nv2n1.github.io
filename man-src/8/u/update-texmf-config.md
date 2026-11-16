@@ -16,12 +16,12 @@ description: "update-texmf-config – script used in maintainer scripts to trigg
 <p> The script simply activates the respective trigger, namely texmf-map for font map files, texmf-hyphen for hyphenation patterns, and texmf-format for format updates. All the necessary action will then be carried out by the tex-common package.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>map</code></p>
-<dd>Activate the texmf-map trigger.</p>
-<dt><code>hyphen</code></p>
-<dd>Activate the texmf-hyphen trigger.</p>
-<dt><code>format</code></p>
-<dd>Activate the texmf-format trigger. </p>
+<dt><code>map</code></dt>
+<dd>Activate the texmf-map trigger.</dd>
+<dt><code>hyphen</code></dt>
+<dd>Activate the texmf-hyphen trigger.</dd>
+<dt><code>format</code></dt>
+<dd>Activate the texmf-format trigger. </dd>
 </dl>
 <h2>See Also</h2>
 <p>Further information can be found in /usr/share/doc/tex-common/README.Debian.{txt,pdf.html} </p>

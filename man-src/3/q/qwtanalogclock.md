@@ -45,32 +45,32 @@ clock-&gt;setTime();
 QTimer *timer = new QTimer(clock);
 timer-&gt;connect(timer, SIGNAL(timeout()), clock, SLOT(setCurrentTime()));
 timer-&gt;start(1000);</pre>
-</dl>
+</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The examples/dials example shows how to use <code>QwtAnalogClock</code>.</dl>
+<dd>The examples/dials example shows how to use <code>QwtAnalogClock</code>.</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtAnalogClock::Hand</code></h3>
 <p>Hand type </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setHand()</code>, <code>hand()</code></dl>
+<dd><code>setHand()</code>, <code>hand()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>SecondHand </i></p>
-<dd>Needle displaying the seconds.</p>
-<dt><i>MinuteHand </i></p>
-<dd>Needle displaying the minutes.</p>
-<dt><i>HourHand </i></p>
-<dd>Needle displaying the hours.</p>
-<dt><i>NHands </i></p>
-<dd>Number of needles.</dl>
+<dt><i>SecondHand </i></dt>
+<dd>Needle displaying the seconds.</dd>
+<dt><i>MinuteHand </i></dt>
+<dd>Needle displaying the minutes.</dd>
+<dt><i>HourHand </i></dt>
+<dd>Needle displaying the hours.</dd>
+<dt><i>NHands </i></dt>
+<dd>Number of needles.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtAnalogClock::QwtAnalogClock (QWidget *parent = NULL) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtAnalogClock::drawHand (QPainter *painter, <code>Hand</code>hd, const QPointF &amp;center, doubleradius, doubledirection, QPalette::ColorGroupcg) const [protected], [virtual]</h3>
 <p>Draw a clock hand </p>
@@ -81,7 +81,7 @@ timer-&gt;start(1000);</pre>
  <i>center</i> Center of the clock<br />
  <i>radius</i> Maximum length for the hands<br />
  <i>direction</i> Direction of the hand in degrees, counter clockwise<br />
- <i>cg</i> ColorGroup</dl>
+ <i>cg</i> ColorGroup</dd></dl>
 <h3>void QwtAnalogClock::drawNeedle (QPainter *painter, const QPointF &amp;center, doubleradius, doubledir, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle. A clock has no single needle but three hands instead. <code>drawNeedle()</code> translates <code>value()</code> into directions for the hands and calls <code>drawHand()</code>. </p>
 <p> <code>Parameters:</code></p>
@@ -90,44 +90,44 @@ timer-&gt;start(1000);</pre>
  <i>center</i> Center of the clock<br />
  <i>radius</i> Maximum length for the hands<br />
  <i>dir</i> Dummy, not used.<br />
- <i>colorGroup</i> ColorGroup</dl>
+ <i>colorGroup</i> ColorGroup</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawHand()</code></dl>
+<dd><code>drawHand()</code></dd></dl>
 <p> Reimplemented from <code>QwtDial</code>.</p>
 <h3>const <code>QwtDialNeedle</code> * QwtAnalogClock::hand (<code>Hand</code>hd) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Clock hand</dl>
+<dd>Clock hand</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hd</i> Specifies the type of hand</dl>
+<dd><i>hd</i> Specifies the type of hand</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setHand()</code></dl>
+<dd><code>setHand()</code></dd></dl>
 <h3><code>QwtDialNeedle</code> * QwtAnalogClock::hand (<code>Hand</code>hd)</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Clock hand</dl>
+<dd>Clock hand</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hd</i> Specifies the type of hand</dl>
+<dd><i>hd</i> Specifies the type of hand</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setHand()</code></dl>
+<dd><code>setHand()</code></dd></dl>
 <h3>void QwtAnalogClock::setHand (<code>Hand</code>hand, <code>QwtDialNeedle</code> *needle)</h3>
 <p>Set a clock hand </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hand</i> Specifies the type of hand<br />
- <i>needle</i> Hand</dl>
+ <i>needle</i> Hand</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>hand()</code></dl>
+<dd><code>hand()</code></dd></dl>
 <h3>void QwtAnalogClock::setTime (const QTime &amp;time) [slot]</h3>
 <p>Set a time </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>time</i> Time to display</dl>
+<dd><i>time</i> Time to display</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -15,16 +15,16 @@ description: "verify-db.pl – Directory Server perl script for verifying the da
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-a</code> <i>path</i></p>
-<dd>Gives the path to the database directory. If this option is not passed with the verify-db.pl command, then it uses the default database directory, /var/lib/dirsrv/slapd-instance_name/db.</p>
-<dt><code>-h</code></p>
-<dd>Display usage</dl>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-a</code> <i>path</i></dt>
+<dd>Gives the path to the database directory. If this option is not passed with the verify-db.pl command, then it uses the default database directory, /var/lib/dirsrv/slapd-instance_name/db.</dd>
+<dt><code>-h</code></dt>
+<dd>Display usage</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>verify-db.pl -Z instance2 -a /var/lib/dirsrv/slapd-instance2/db</p>
-<dd></dl>
+<dt>verify-db.pl -Z instance2 -a /var/lib/dirsrv/slapd-instance2/db</dt>
+<dd></dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

@@ -47,12 +47,12 @@ description: "alexandria – a book collection manager"
 &nbsp;<wbr>all warnings and error messages. Possible values are:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>FATAL</code> Only log messages for fatal errors. </p>
 <p> <code>ERROR</code> Log messages for all errors. </p>
 <p> <code>WARN</code> Log warnings and errors. </p>
 <p> <code>INFO</code> Also include information messages. </p>
-<p> <code>DEBUG</code> Log everything, including debug messages.</dl>
+<p> <code>DEBUG</code> Log everything, including debug messages.</dd></dl>
 <p>&nbsp;<wbr>The default level is&nbsp;<wbr> <code>WARN</code> </p>
 <h2>BUGS</h2>
 <p> Please report any bugs you find on the <a rel="nofollow" href="http://rubyforge.org/tracker/?group_id=205">http://rubyforge.org/tracker/?group_id=205</a> laURL: L raTracker Please check for any similar reports before reporting a new bug. </p>
@@ -68,3 +68,4 @@ description: "alexandria – a book collection manager"
 <h2>LICENSE</h2>
 <p> <i>Alexandria</i> is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <h2>Index</h2>
+</p>

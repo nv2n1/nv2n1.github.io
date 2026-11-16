@@ -15,8 +15,8 @@ description: "XmListDeleteAllItems — A List function that deletes all items fr
 <h2>Description</h2>
 <p><code>XmListDeleteAllItems</code> deletes all items from the list.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List from whose list the items are deleted</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List from whose list the items are deleted</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>

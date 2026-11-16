@@ -26,51 +26,53 @@ description: "gfortran – GNU Fortran compiler"
 <h2>OPTIONS</h2>
 <p> Here is a summary of all the options specific to <font SIZE="-1">GNU</font> Fortran, grouped by type. Explanations are in the following sections.</p>
 <dl>
-<dt><i>Fortran Language Options</i></p>
-<dd> <code>-fall-intrinsics -fbackslash -fcray-pointer -fd-lines-as-code -fd-lines-as-comments -fdec -fdec-structure -fdec-intrinsic-ints -fdec-static -fdec-math -fdefault-double-8 -fdefault-integer-8 -fdefault-real-8 -fdefault-real-10 -fdefault-real-16 -fdollar-ok -ffixed-line-length-</code><i>n</i> <code>-ffixed-line-length-none -ffree-form -ffree-line-length-</code><i>n</i> <code>-ffree-line-length-none -fimplicit-none -finteger-4-integer-8 -fmax-identifier-length -fmodule-private -ffixed-form -fno-range-check -fopenacc -fopenmp -freal-4-real-10 -freal-4-real-16 -freal-4-real-8 -freal-8-real-10 -freal-8-real-16 -freal-8-real-4 -std=</code><i>std</i> <code>-ftest-forall-temp</code></p>
-<dt><i>Preprocessing Options</i></p>
-<dd> <code>-A-</code><i>question</i>[<code>=</code><i>answer</i>] <code>-A</code><i>question</i><code>=</code><i>answer</i> <code>-C -CC -D</code><i>macro</i>[<code>=</code><i>defn</i>] <code>-H -P -U</code><i>macro</i> <code>-cpp -dD -dI -dM -dN -dU -fworking-directory -imultilib</code> <i>dir</i> <code>-iprefix</code> <i>file</i> <code>-iquote -isysroot</code> <i>dir</i> <code>-isystem</code> <i>dir</i> <code>-nocpp -nostdinc -undef</code></p>
-<dt><i>Error and Warning Options</i></p>
-<dd> <code>-Waliasing -Wall -Wampersand -Wargument-mismatch -Warray-bounds -Wc-binding-type -Wcharacter-truncation -Wconversion -Wdo-subscript -Wfunction-elimination -Wimplicit-interface -Wimplicit-procedure -Wintrinsic-shadow -Wuse-without-only -Wintrinsics-std -Wline-truncation -Wno-align-commons -Wno-tabs -Wreal-q-constant -Wsurprising -Wunderflow -Wunused-parameter -Wrealloc-lhs -Wrealloc-lhs-all -Wfrontend-loop-interchange -Wtarget-lifetime -fmax-errors=</code><i>n</i> <code>-fsyntax-only -pedantic -pedantic-errors</code></p>
-<dt><i>Debugging Options</i></p>
-<dd> <code>-fbacktrace -fdump-fortran-optimized -fdump-fortran-original -fdump-parse-tree -ffpe-trap=</code><i>list</i> <code>-ffpe-summary=</code><i>list</i></p>
-<dt><i>Directory Options</i></p>
-<dd> <code>-I</code><i>dir</i> <code>-J</code><i>dir</i> <code>-fintrinsic-modules-path</code> <i>dir</i></p>
-<dt><i>Link Options</i></p>
-<dd> <code>-static-libgfortran</code></p>
-<dt><i>Runtime Options</i></p>
-<dd> <code>-fconvert=</code><i>conversion</i> <code>-fmax-subrecord-length=</code><i>length</i> <code>-frecord-marker=</code><i>length</i> <code>-fsign-zero</code></p>
-<dt><i>Interoperability Options</i></p>
-<dd> <code>-fc-prototypes</code></p>
-<dt><i>Code Generation Options</i></p>
-<dd> <code>-faggressive-function-elimination -fblas-matmul-limit=</code><i>n</i> <code>-fbounds-check -ftail-call-workaround -ftail-call-workaround=</code><i>n</i> <code>-fcheck-array-temporaries -fcheck=</code><i>&lt;all|array-temps|bounds|do|mem|pointer|recursion&gt;</i> <code>-fcoarray=</code><i>&lt;none|single|lib&gt;</i> <code>-fexternal-blas -ff2c -ffrontend-loop-interchange -ffrontend-optimize -finit-character=</code><i>n</i> <code>-finit-integer=</code><i>n</i> <code>-finit-local-zero -finit-derived -finit-logical=</code><i>&lt;true|false&gt;</i> <code>-finit-real=</code><i>&lt;zero|inf|-inf|nan|snan&gt;</i> <code>-finline-matmul-limit=</code><i>n</i> <code>-fmax-array-constructor=</code><i>n</i> <code>-fmax-stack-var-size=</code><i>n</i> <code>-fno-align-commons -fno-automatic -fno-protect-parens -fno-underscoring -fsecond-underscore -fpack-derived -frealloc-lhs -frecursive -frepack-arrays -fshort-enums -fstack-arrays</code></dl>
+<dt><i>Fortran Language Options</i></dt>
+<dd> <code>-fall-intrinsics -fbackslash -fcray-pointer -fd-lines-as-code -fd-lines-as-comments -fdec -fdec-structure -fdec-intrinsic-ints -fdec-static -fdec-math -fdefault-double-8 -fdefault-integer-8 -fdefault-real-8 -fdefault-real-10 -fdefault-real-16 -fdollar-ok -ffixed-line-length-</code><i>n</i> <code>-ffixed-line-length-none -ffree-form -ffree-line-length-</code><i>n</i> <code>-ffree-line-length-none -fimplicit-none -finteger-4-integer-8 -fmax-identifier-length -fmodule-private -ffixed-form -fno-range-check -fopenacc -fopenmp -freal-4-real-10 -freal-4-real-16 -freal-4-real-8 -freal-8-real-10 -freal-8-real-16 -freal-8-real-4 -std=</code><i>std</i> <code>-ftest-forall-temp</code></dd>
+<dt><i>Preprocessing Options</i></dt>
+<dd> <code>-A-</code><i>question</i>[<code>=</code><i>answer</i>] <code>-A</code><i>question</i><code>=</code><i>answer</i> <code>-C -CC -D</code><i>macro</i>[<code>=</code><i>defn</i>] <code>-H -P -U</code><i>macro</i> <code>-cpp -dD -dI -dM -dN -dU -fworking-directory -imultilib</code> <i>dir</i> <code>-iprefix</code> <i>file</i> <code>-iquote -isysroot</code> <i>dir</i> <code>-isystem</code> <i>dir</i> <code>-nocpp -nostdinc -undef</code></dd>
+<dt><i>Error and Warning Options</i></dt>
+<dd> <code>-Waliasing -Wall -Wampersand -Wargument-mismatch -Warray-bounds -Wc-binding-type -Wcharacter-truncation -Wconversion -Wdo-subscript -Wfunction-elimination -Wimplicit-interface -Wimplicit-procedure -Wintrinsic-shadow -Wuse-without-only -Wintrinsics-std -Wline-truncation -Wno-align-commons -Wno-tabs -Wreal-q-constant -Wsurprising -Wunderflow -Wunused-parameter -Wrealloc-lhs -Wrealloc-lhs-all -Wfrontend-loop-interchange -Wtarget-lifetime -fmax-errors=</code><i>n</i> <code>-fsyntax-only -pedantic -pedantic-errors</code></dd>
+<dt><i>Debugging Options</i></dt>
+<dd> <code>-fbacktrace -fdump-fortran-optimized -fdump-fortran-original -fdump-parse-tree -ffpe-trap=</code><i>list</i> <code>-ffpe-summary=</code><i>list</i></dd>
+<dt><i>Directory Options</i></dt>
+<dd> <code>-I</code><i>dir</i> <code>-J</code><i>dir</i> <code>-fintrinsic-modules-path</code> <i>dir</i></dd>
+<dt><i>Link Options</i></dt>
+<dd> <code>-static-libgfortran</code></dd>
+<dt><i>Runtime Options</i></dt>
+<dd> <code>-fconvert=</code><i>conversion</i> <code>-fmax-subrecord-length=</code><i>length</i> <code>-frecord-marker=</code><i>length</i> <code>-fsign-zero</code></dd>
+<dt><i>Interoperability Options</i></dt>
+<dd> <code>-fc-prototypes</code></dd>
+<dt><i>Code Generation Options</i></dt>
+<dd> <code>-faggressive-function-elimination -fblas-matmul-limit=</code><i>n</i> <code>-fbounds-check -ftail-call-workaround -ftail-call-workaround=</code><i>n</i> <code>-fcheck-array-temporaries -fcheck=</code><i>&lt;all|array-temps|bounds|do|mem|pointer|recursion&gt;</i> <code>-fcoarray=</code><i>&lt;none|single|lib&gt;</i> <code>-fexternal-blas -ff2c -ffrontend-loop-interchange -ffrontend-optimize -finit-character=</code><i>n</i> <code>-finit-integer=</code><i>n</i> <code>-finit-local-zero -finit-derived -finit-logical=</code><i>&lt;true|false&gt;</i> <code>-finit-real=</code><i>&lt;zero|inf|-inf|nan|snan&gt;</i> <code>-finline-matmul-limit=</code><i>n</i> <code>-fmax-array-constructor=</code><i>n</i> <code>-fmax-stack-var-size=</code><i>n</i> <code>-fno-align-commons -fno-automatic -fno-protect-parens -fno-underscoring -fsecond-underscore -fpack-derived -frealloc-lhs -frecursive -frepack-arrays -fshort-enums -fstack-arrays</code></dd></dl>
 <h3>Options controlling Fortran dialect</h3>
 <p> The following options control the details of the Fortran dialect accepted by the compiler:</p>
 <dl>
-<dt><code>-ffree-form</code></p>
+<dt><code>-ffree-form</code></dt>
 <dd>
-<dt><code>-ffixed-form</code></p>
-<dd> Specify the layout used by the source file. The free form layout was introduced in Fortran 90. Fixed form was traditionally used in older Fortran programs. When neither option is specified, the source form is determined by the file extension.</p>
-<dt><code>-fall-intrinsics</code></p>
-<dd> This option causes all intrinsic procedures (including the GNU-specific extensions) to be accepted. This can be useful with <code>-std=f95</code> to force standard-compliance but get access to the full range of intrinsics available with <code>gfortran</code>. As a consequence, <code>-Wintrinsics-std</code> will be ignored and no user-defined procedure with the same name as any intrinsic will be called except when it is explicitly declared <tt>&quot;EXTERNAL&quot;</tt>.</p>
-<dt><code>-fd-lines-as-code</code></p>
+</dd><dt><code>-ffixed-form</code></dt>
+<dd> Specify the layout used by the source file. The free form layout was introduced in Fortran 90. Fixed form was traditionally used in older Fortran programs. When neither option is specified, the source form is determined by the file extension.</dd>
+<dt><code>-fall-intrinsics</code></dt>
+<dd> This option causes all intrinsic procedures (including the GNU-specific extensions) to be accepted. This can be useful with <code>-std=f95</code> to force standard-compliance but get access to the full range of intrinsics available with <code>gfortran</code>. As a consequence, <code>-Wintrinsics-std</code> will be ignored and no user-defined procedure with the same name as any intrinsic will be called except when it is explicitly declared <tt>&quot;EXTERNAL&quot;</tt>.</dd>
+<dt><code>-fd-lines-as-code</code></dt>
 <dd>
-<dt><code>-fd-lines-as-comments</code></p>
-<dd> Enable special treatment for lines beginning with <tt>&quot;d&quot;</tt> or <tt>&quot;D&quot;</tt> in fixed form sources. If the <code>-fd-lines-as-code</code> option is given they are treated as if the first column contained a blank. If the <code>-fd-lines-as-comments</code> option is given, they are treated as comment lines.</p>
-<dt><code>-fdec</code></p>
-<dd> <font SIZE="-1">DEC</font> compatibility mode. Enables extensions and other features that mimic the default behavior of older compilers (such as <font SIZE="-1">DEC</font>). These features are non-standard and should be avoided at all costs. For details on <font SIZE="-1">GNU</font> Fortran&#8217;s implementation of these extensions see the full documentation. </p>
+</dd><dt><code>-fd-lines-as-comments</code></dt>
+<dd> Enable special treatment for lines beginning with <tt>&quot;d&quot;</tt> or <tt>&quot;D&quot;</tt> in fixed form sources. If the <code>-fd-lines-as-code</code> option is given they are treated as if the first column contained a blank. If the <code>-fd-lines-as-comments</code> option is given, they are treated as comment lines.</dd>
+<dt><code>-fdec</code></dt>
+<dd> <font SIZE="-1">DEC</font> compatibility mode. Enables extensions and other features that mimic the default behavior of older compilers (such as <font SIZE="-1">DEC</font>). These features are non-standard and should be avoided at all costs. For details on <font SIZE="-1">GNU</font> Fortran&#8217;s implementation of these extensions see the full documentation. </dd>
 <p> Other flags enabled by this switch are: <code>-fdollar-ok</code> <code>-fcray-pointer</code> <code>-fdec-structure</code> <code>-fdec-intrinsic-ints</code> <code>-fdec-static</code> <code>-fdec-math</code> </p>
 <p> If <code>-fd-lines-as-code</code>/<code>-fd-lines-as-comments</code> are unset, then <code>-fdec</code> also sets <code>-fd-lines-as-comments</code>.</p>
-<dt><code>-fdec-structure</code></p>
-<dd> Enable <font SIZE="-1">DEC</font> <tt>&quot;STRUCTURE&quot;</tt> and <tt>&quot;RECORD&quot;</tt> as well as <tt>&quot;UNION&quot;</tt>, <tt>&quot;MAP&quot;</tt>, and dot (&#8216;.&#8217;) as a member separator (in addition to &#8216;%&#8217;). This is provided for compatibility only; Fortran 90 derived types should be used instead where possible.</p>
-<dt><code>-fdec-intrinsic-ints</code></p>
-<dd> Enable B/I/J/K kind variants of existing integer functions (e.g. <font SIZE="-1">BIAND, IIAND, JIAND,</font> etc&#8230;). For a complete list of intrinsics see the full documentation.</p>
-<dt><code>-fdec-math</code></p>
-<dd> Enable legacy math intrinsics such as <font SIZE="-1">COTAN</font> and degree-valued trigonometric functions (e.g. <font SIZE="-1">TAND, ATAND,</font> etc&#8230;) for compatability with older code.</p>
-<dt><code>-fdec-static</code></p>
-<dd> Enable DEC-style <font SIZE="-1">STATIC</font> and <font SIZE="-1">AUTOMATIC</font> attributes to explicitly specify the storage of variables and other objects.</p>
-<dt><code>-fdollar-ok</code></p>
-<dd> Allow <code>$</code> as a valid non-first character in a symbol name. Symbols that start with <code>$</code> are rejected since it is unclear which rules to apply to implicit typing as different vendors implement different rules. Using <code>$</code> in <tt>&quot;IMPLICIT&quot;</tt> statements is also rejected.</p>
-<dt><code>-fbackslash</code></p>
+<dt><code>-fdec-structure</code></dt>
+<dd> Enable <font SIZE="-1">DEC</font> <tt>&quot;STRUCTURE&quot;</tt> and <tt>&quot;RECORD&quot;</tt> as well as <tt>&quot;UNION&quot;</tt>, <tt>&quot;MAP&quot;</tt>, and dot (&#8216;.&#8217;) as a member separator (in addition to &#8216;%&#8217;). This is provided for compatibility only; Fortran 90 derived types should be used instead where possible.</dd>
+<dt><code>-fdec-intrinsic-ints</code></dt>
+<dd> Enable B/I/J/K kind variants of existing integer functions (e.g. <font SIZE="-1">BIAND, IIAND, JIAND,</font> etc&#8230;). For a complete list of intrinsics see the full documentation.</dd>
+<dt><code>-fdec-math</code></dt>
+<dd> Enable legacy math intrinsics such as <font SIZE="-1">COTAN</font> and degree-valued trigonometric functions (e.g. <font SIZE="-1">TAND, ATAND,</font> etc&#8230;) for compatability with older code.</dd>
+<dt><code>-fdec-static</code></dt>
+<dd> Enable DEC-style <font SIZE="-1">STATIC</font> and <font SIZE="-1">AUTOMATIC</font> attributes to explicitly specify the storage of variables and other objects.</dd>
+<dt><code>-fdollar-ok</code></dt>
+<dd> Allow <code>$</code> as a valid non-first character in a symbol name. Symbols that start with <code>$</code> are rejected since it is unclear which rules to apply to implicit typing as different vendors implement different rules. Using <code>$</code> in <tt>&quot;IMPLICIT&quot;</tt> statements is also rejected.</dd>
+<dt><code>-fbackslash</code></dt>
 <dd> Change the interpretation of backslashes in string literals from a single backslash character to &#8220;C-style&#8221; escape characters. The following combinations are expanded <tt>&quot;&quot;</tt>, <tt>&quot;&quot;</tt>, <tt>&quot;&quot;</tt>, <tt>&quot;
-&quot;</tt>, <tt>&quot;&quot;</tt>, <tt>&quot;	&quot;</tt>, <tt>&quot;&quot;</tt>, <tt>&quot;\&quot;</tt>, and <tt>&quot;
+&quot;</tt>, <tt>&quot;
+&quot;</tt>, <tt>&quot;	&quot;</tt>, <tt>&quot;&quot;</tt>, <tt>&quot;\&quot;</tt>, and <tt>&quot;
+</dd></dl>

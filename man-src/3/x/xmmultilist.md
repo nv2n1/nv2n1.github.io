@@ -506,42 +506,42 @@ description: "XmMultiList — The Multi-column List widget"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNcolumnTitles</code></p>
-<dd>This is an array of length numColumns of strings displayed at the top of each column. The data is allocated and maintained by the client.</p>
-<dt><code>XmNdoubleClickCallback</code></p>
-<dd>All routines in this list will be called whenever the user double clicks on a row in the list.</p>
-<dt><code>XmNentryData</code></p>
-<dd>This resource is the data associated with each row in the list. The data is an array of XmMultiListRowInfo structures of length numRows allocated by the client. The data is allocated and maintained by the client. The XmMultiListRowInfo structure is defined below.</p>
-<dt><code>XmNfindLabel</code></p>
-<dd>The label to be shown on the find button.</p>
-<dt><code>XmNfirstColumn</code></p>
-<dd>This resource allows the client to adjust the current view of the list data to have a new top left column location. When setting this resource, firstRow should also be updated.</p>
-<dt><code>XmNfirstColumnPixmaps</code></p>
-<dd>This resource specifies that the pixmap stored in the row info structure should be used instead of XmMultiListRowInfo values[0]. If pixmaps are present, the rows may be dragged by pressing on the pixmap with pointer button three. If this resource is True, then values[0] is never referenced. If False, then the XmMultiListRowInfo data pixmap is never referenced.</p>
-<dt><code>XmNfirstRow</code></p>
-<dd>This resource allows the client to adjust the current view of the list data to have a new top left row location. When setting this resource, firstColumn should also be updated.</p>
-<dt><code>XmNfontList</code></p>
-<dd>This is an OSF/Motif style font list. The first font in this list will be used to display all text in the MultiList widget. The MultiList widget currently supports only one font.</p>
-<dt><code>XmNheight</code></p>
-<dd>This is the overall height value assigned to the MultiList widget. Modifying this resource will affect scrollbar size and location.</p>
-<dt><code>XmNnumColumns</code></p>
+<dt><code>XmNcolumnTitles</code></dt>
+<dd>This is an array of length numColumns of strings displayed at the top of each column. The data is allocated and maintained by the client.</dd>
+<dt><code>XmNdoubleClickCallback</code></dt>
+<dd>All routines in this list will be called whenever the user double clicks on a row in the list.</dd>
+<dt><code>XmNentryData</code></dt>
+<dd>This resource is the data associated with each row in the list. The data is an array of XmMultiListRowInfo structures of length numRows allocated by the client. The data is allocated and maintained by the client. The XmMultiListRowInfo structure is defined below.</dd>
+<dt><code>XmNfindLabel</code></dt>
+<dd>The label to be shown on the find button.</dd>
+<dt><code>XmNfirstColumn</code></dt>
+<dd>This resource allows the client to adjust the current view of the list data to have a new top left column location. When setting this resource, firstRow should also be updated.</dd>
+<dt><code>XmNfirstColumnPixmaps</code></dt>
+<dd>This resource specifies that the pixmap stored in the row info structure should be used instead of XmMultiListRowInfo values[0]. If pixmaps are present, the rows may be dragged by pressing on the pixmap with pointer button three. If this resource is True, then values[0] is never referenced. If False, then the XmMultiListRowInfo data pixmap is never referenced.</dd>
+<dt><code>XmNfirstRow</code></dt>
+<dd>This resource allows the client to adjust the current view of the list data to have a new top left row location. When setting this resource, firstColumn should also be updated.</dd>
+<dt><code>XmNfontList</code></dt>
+<dd>This is an OSF/Motif style font list. The first font in this list will be used to display all text in the MultiList widget. The MultiList widget currently supports only one font.</dd>
+<dt><code>XmNheight</code></dt>
+<dd>This is the overall height value assigned to the MultiList widget. Modifying this resource will affect scrollbar size and location.</dd>
+<dt><code>XmNnumColumns</code></dt>
 <dd>
-<dt><code>XmNnumRows</code></p>
-<dd>These resources specify the number of columns and rows the widget expects to display. These resources are used as the maximum indices for many of the other resources in this widget. Care should be taken when modifying these resources to ensure that the other values have also been modified.</p>
-<dt><code>XmNselectedColumn</code></p>
-<dd>This is the index of the currently selected column. This also the column by which the list is being sorted.</p>
-<dt><code>XmNselectionPolicy</code></p>
-<dd>Defines the interpretation of the select action. This resource can have the values XmSINGLE_SELECT or XmEXTENDED_SELECT. Other values result in undefined behavior.</p>
-<dt><code>XmNshowFind</code></p>
-<dd>This boolean manages and unmanages the find button</p>
-<dt><code>XmNsingleSelectionCallback</code></p>
-<dd>All routines in this list will be called whenever the user clicks on a line in the list. A pointer to the XmMultiListRowInfo structure corresponding to the line selected is passed as call_data. If in extended select mode the value of call_data is undefined.</p>
-<dt><code>XmNsortFunctions</code></p>
-<dd>This is an array of functions, one for each column, called to determine the ordering of the rows in the column, similar to qsort.</p>
-<dt><code>XmNtitle</code></p>
-<dd>This is the title that is displayed at the top of the MultiList widget. If this value is NULL, the title area will not be shown.</p>
-<dt><code>XmNwidth</code></p>
-<dd>This is the overall width value assigned to the MultiList widget. Modifying this resource will affect scrollbar size and location.</dl>
+</dd><dt><code>XmNnumRows</code></dt>
+<dd>These resources specify the number of columns and rows the widget expects to display. These resources are used as the maximum indices for many of the other resources in this widget. Care should be taken when modifying these resources to ensure that the other values have also been modified.</dd>
+<dt><code>XmNselectedColumn</code></dt>
+<dd>This is the index of the currently selected column. This also the column by which the list is being sorted.</dd>
+<dt><code>XmNselectionPolicy</code></dt>
+<dd>Defines the interpretation of the select action. This resource can have the values XmSINGLE_SELECT or XmEXTENDED_SELECT. Other values result in undefined behavior.</dd>
+<dt><code>XmNshowFind</code></dt>
+<dd>This boolean manages and unmanages the find button</dd>
+<dt><code>XmNsingleSelectionCallback</code></dt>
+<dd>All routines in this list will be called whenever the user clicks on a line in the list. A pointer to the XmMultiListRowInfo structure corresponding to the line selected is passed as call_data. If in extended select mode the value of call_data is undefined.</dd>
+<dt><code>XmNsortFunctions</code></dt>
+<dd>This is an array of functions, one for each column, called to determine the ordering of the rows in the column, similar to qsort.</dd>
+<dt><code>XmNtitle</code></dt>
+<dd>This is the title that is displayed at the top of the MultiList widget. If this value is NULL, the title area will not be shown.</dd>
+<dt><code>XmNwidth</code></dt>
+<dd>This is the overall width value assigned to the MultiList widget. Modifying this resource will affect scrollbar size and location.</dd></dl>
 <h3>Specifying Children Resources</h3>
 <p>The MultiList widget is composed of many simple widgets. In order to achieve full functionality of the Toolkit, it is sometimes desirable to set attribute values directly on those widgets. The widget ids of the sub-widgets can be obtained by using the XtNameToWidget() function provided by the Xt Intrinsics. </p>
 <p> XmMultiList &lt;named by application&gt; </p>
@@ -1692,32 +1692,32 @@ description: "XmMultiList — The Multi-column List widget"
 <p> The following actions are supported by the MultiList:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>ButtonDown(type)</code></p>
-<dd>Processes a button press action that may begin with either a select or a double click. The type argument can be either Toggle or Extend. These values determine which mode of an extended select will be initiated on this button event. Consult the OSF/Motif Style Guide for details.</p>
-<dt><code>Motion()</code></p>
-<dd>Processes motion events to allow the selection region to be modified when in extended selection mode. It is assumed that this action is called between a ButtonDown() and ButtonUpOrLeave() action.</p>
-<dt><code>ButtonUpOrLeave()</code></p>
-<dd>Cleans up after ButtonDown() and Motion().</dl>
+</dd><dl COMPACT>
+<dt><code>ButtonDown(type)</code></dt>
+<dd>Processes a button press action that may begin with either a select or a double click. The type argument can be either Toggle or Extend. These values determine which mode of an extended select will be initiated on this button event. Consult the OSF/Motif Style Guide for details.</dd>
+<dt><code>Motion()</code></dt>
+<dd>Processes motion events to allow the selection region to be modified when in extended selection mode. It is assumed that this action is called between a ButtonDown() and ButtonUpOrLeave() action.</dd>
+<dt><code>ButtonUpOrLeave()</code></dt>
+<dd>Cleans up after ButtonDown() and Motion().</dd></dl>
 </dl>
 <h2>Callback Routines</h2>
 <p>All procedures on the MultiList&#8217;s singleSelectionCallback and doubleClickCallback lists will have a pointer to a XmMultiListRowInfo structure passed to them in the call_data field. This structure is defined above. </p>
 <p> Note: if a single SelectionCallback is registered on an MultiList in extended_select_mode, the value of call_data is undefined.</p>
 <dl COMPACT>
-<dd><code>void</code> (callback)(<code>Widget</code> <i>w</i>, <code>XtPointer</code> <i>client_data</i>, <code>XtPointer</code> <i>call_data</i>)</p>
-<dt><i>w</i></p>
-<dd>the MultiList widget</p>
-<dt><i>client_data</i></p>
-<dd>the client data specified by the application</p>
-<dt><i>call_data</i></p>
-<dd>a pointer to an XmMultiListRowInfo structure corrsponding the the row selected</dl>
+<dd><code>void</code> (callback)(<code>Widget</code> <i>w</i>, <code>XtPointer</code> <i>client_data</i>, <code>XtPointer</code> <i>call_data</i>)</dd>
+<dt><i>w</i></dt>
+<dd>the MultiList widget</dd>
+<dt><i>client_data</i></dt>
+<dd>the client data specified by the application</dd>
+<dt><i>call_data</i></dt>
+<dd>a pointer to an XmMultiListRowInfo structure corrsponding the the row selected</dd></dl>
 <h2>Sort Function</h2>
 <p>typedef <code>int</code> (XmMultiListSortFunction) (<code>short</code> <i>column</i>, <code>XmMultiRowInfo *</code> <i>row1</i>, <code>XmMultiRowInfo *</code> <i>row2</i>);</p>
 <dl COMPACT>
-<dt><i>column</i></p>
-<dd>the column currently being sorted</p>
-<dt><i>row1</i>, <i>row2</i></p>
-<dd>the two rows being compared. The return value must be an integer less than, equal to, or greater than 0, depending on whether the first argument is less than, equal to, or greater than the second.</dl>
+<dt><i>column</i></dt>
+<dd>the column currently being sorted</dd>
+<dt><i>row1</i>, <i>row2</i></dt>
+<dd>the two rows being compared. The return value must be an integer less than, equal to, or greater than 0, depending on whether the first argument is less than, equal to, or greater than the second.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-constraint/">Constraint</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code>XmCreateMultiList</code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code>XmMultiListDeselectAllItems</code>(3), <code>XmMultiListDeselectItem</code>(3), <code><a href="/docs/linux/man/3-xmmultilistdeselectitems/">XmMultiListDeselectItems</a></code>(3), <code><a href="/docs/linux/man/3-xmmultilistdeselectrow/">XmMultiListDeselectRow</a></code>(3), <code><a href="/docs/linux/man/3-xmmultilistgetselectedrowarray/">XmMultiListGetSelectedRowArray</a></code>(3), <code><a href="/docs/linux/man/3-xmmultilistgetselectedrows/">XmMultiListGetSelectedRows</a></code>(3), <code><a href="/docs/linux/man/3-xmmultilistmakerowvisible/">XmMultiListMakeRowVisible</a></code>(3), <code><a href="/docs/linux/man/3-xmmultilistselectallitems/">XmMultiListSelectAllItems</a></code>(3), <code><a href="/docs/linux/man/3-xmmultilistselectitems/">XmMultiListSelectItems</a></code>(3), <code><a href="/docs/linux/man/3-xmmultilistselectrow/">XmMultiListSelectRow</a></code>(3), and <code><a href="/docs/linux/man/3-xmmultilisttogglerow/">XmMultiListToggleRow</a></code>(3). </p>
 <h2>Copyright</h2>

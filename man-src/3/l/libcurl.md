@@ -19,23 +19,21 @@ description: "libcurl – client-side URL transfers"
 <p> You can have multiple easy handles share certain data, even if they are used in different threads. This magic is setup using the share interface, as described in the <i><a href="/docs/linux/man/3-libcurl-share/">libcurl-share</a>(3)</i> man page. </p>
 <p> There is also a series of other helpful functions to use, including these:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>curl_version_info()</p>
-<dd> gets detailed libcurl (and other used libraries) version info</p>
-<dt>curl_getdate()</p>
-<dd> converts a date string to time_t</p>
-<dt>curl_easy_getinfo()</p>
-<dd> get information about a performed transfer</p>
-<dt>curl_formadd()</p>
-<dd> helps building an HTTP form POST</p>
-<dt>curl_formfree()</p>
-<dd> free a list built with <i><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a>(3)</i></p>
-<dt>curl_slist_append()</p>
-<dd> builds a linked list</p>
-<dt>curl_slist_free_all()</p>
-<dd> frees a whole curl_slist</dl>
+<dt>curl_version_info()</dt>
+<dd> gets detailed libcurl (and other used libraries) version info</dd>
+<dt>curl_getdate()</dt>
+<dd> converts a date string to time_t</dd>
+<dt>curl_easy_getinfo()</dt>
+<dd> get information about a performed transfer</dd>
+<dt>curl_formadd()</dt>
+<dd> helps building an HTTP form POST</dd>
+<dt>curl_formfree()</dt>
+<dd> free a list built with <i><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a>(3)</i></dd>
+<dt>curl_slist_append()</dt>
+<dd> builds a linked list</dd>
+<dt>curl_slist_free_all()</dt>
+<dd> frees a whole curl_slist</dd></dl>
 </dl>
 <h2>LINKING WITH LIBCURL</h2>
 <p> On unix-like machines, there&#8217;s a tool named curl-config that gets installed with the rest of the curl stuff when &#8216;make install&#8217; is performed. </p>

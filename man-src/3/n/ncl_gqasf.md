@@ -12,35 +12,35 @@ GQASF - (Inquire aspect source flags) - Inquires the values for the aspect sourc
 
  void ginq_asfs(Gint *err_ind, Gasfs *list_asf);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt>LASF
-<dd>(Integer array, output) - An array of settings for the thirteen attributes:
-<dl COMPACT><dd><dl COMPACT><dt> 1
-<dd>Linetype
-<dt> 2
-<dd>Linewidth scale factor
-<dt> 3
-<dd>Polyline color index
-<dt> 4
-<dd>Marker type
-<dt> 5
-<dd>Marker size scale factor
-<dt> 6
-<dd>Polymarker color index
-<dt> 7
-<dd>Text font and precision
-<dt> 8
-<dd>Character expansion factor
-<dt> 9
-<dd>Character spacing
-<dt>10
-<dd>Text color index
-<dt>11
-<dd>Fill area interior style
-<dt>12
-<dd>Fill area style index
-<dt>13
-<dd>Fill area color index</dl></dl>
+</dt><dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
+</dd><dt>LASF
+</dt><dd>(Integer array, output) - An array of settings for the thirteen attributes:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt> 1
+</dt><dd>Linetype
+</dd><dt> 2
+</dt><dd>Linewidth scale factor
+</dd><dt> 3
+</dt><dd>Polyline color index
+</dd><dt> 4
+</dt><dd>Marker type
+</dd><dt> 5
+</dt><dd>Marker size scale factor
+</dd><dt> 6
+</dt><dd>Polymarker color index
+</dd><dt> 7
+</dt><dd>Text font and precision
+</dd><dt> 8
+</dt><dd>Character expansion factor
+</dd><dt> 9
+</dt><dd>Character spacing
+</dd><dt>10
+</dt><dd>Text color index
+</dd><dt>11
+</dt><dd>Fill area interior style
+</dd><dt>12
+</dt><dd>Fill area style index
+</dd><dt>13
+</dt><dd>Fill area color index</dd></dl></dl>
  
 
  Each value of LASF is either &quot;0&quot; (for &quot;bundled&quot;) or &quot;1&quot; (for &quot;individual&quot;).</dl><h2>Usage</h2>In NCAR Graphics all attribute aspect source flags are defaulted to &quot;individual&quot; (all values for LASF are &quot;1&quot;). It is advised that for dependable results when using NCAR Graphics these values remain in their default settings. Some GKS packages default these values to &quot;bundled&quot;. GQASF can be called to determine the values of all aspect source flags.

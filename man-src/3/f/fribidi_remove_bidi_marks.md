@@ -33,15 +33,15 @@ url: "/docs/linux/man/3-fribidi_remove_bidi_marks/"
 
 <dl>
 <dt><b>FriBidiChar *str</b>
-<dd> Input string to clean.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input string length.
-<dt><b>FriBidiStrIndex *positions_to_this</b>
-<dd> List mapping positions to the order used in str.
-<dt><b>FriBidiStrIndex *position_from_this_list</b>
-<dd> List mapping positions from the order used in str.
-<dt><b>FriBidiLevel *embedding_levels</b>
-<dd> List of embedding levels.</dl>
+</dt><dd> Input string to clean.
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.
+</dd><dt><b>FriBidiStrIndex *positions_to_this</b>
+</dt><dd> List mapping positions to the order used in str.
+</dd><dt><b>FriBidiStrIndex *position_from_this_list</b>
+</dt><dd> List mapping positions from the order used in str.
+</dd><dt><b>FriBidiLevel *embedding_levels</b>
+</dt><dd> List of embedding levels.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

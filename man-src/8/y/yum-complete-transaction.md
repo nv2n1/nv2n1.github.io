@@ -12,10 +12,10 @@ description: "yum-complete-transaction – attempt to complete failed or aborted
 <p><code>yum-complete-transaction</code> [options]</p>
 <h2>General Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Help; display a help message and then quit.</p>
-<dt><code>&#8211;cleanup-only</code></p>
-<dd>Only clean up only transaction journal files and exit. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Help; display a help message and then quit.</dd>
+<dt><code>&#8211;cleanup-only</code></dt>
+<dd>Only clean up only transaction journal files and exit. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>yum-complete-transaction</code> is a program which finds incomplete or aborted yum transactions on a system and attempts to complete them. It looks at the transaction-all* and transaction-done* files which can normally be found in /var/lib/yum if a yum transaction aborted in the middle of execution. If it finds more than one unfinished transaction it will attempt to complete the most recent one first. You can run it more than once to clean up all unfinished transactions. </p>

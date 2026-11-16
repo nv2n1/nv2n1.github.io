@@ -16,24 +16,24 @@ description: "file – event signalling that a file has changed"
 <p> If the job specified a glob pattern in the file part of the <code>FILE</code> environment variable, the event will contain the <code>MATCH</code> environment variable which will be set to the full path of the file that matched the pattern in <code>FILE</code>.</p>
 <h2>Notes</h2>
 <dl>
-<dt>&bull;</p>
-<dd>When specifying a path that contains spaces, ensure that the path is quoted.</p>
-<dt>&bull;</p>
-<dd><code>FILE</code> values specified by jobs are not canonicalised; this cannot be done reliably as they may not exist so cannot be fully resolved.</p>
-<dt>&bull;</p>
-<dd>If you wish to match on <code>MATCH</code>, ensure that <code>FILE</code> does not contain multiple consecutive runs of slashes since otherwise your job will find it difficult to perform such a match.</dl>
+<dt>&bull;</dt>
+<dd>When specifying a path that contains spaces, ensure that the path is quoted.</dd>
+<dt>&bull;</dt>
+<dd><code>FILE</code> values specified by jobs are not canonicalised; this cannot be done reliably as they may not exist so cannot be fully resolved.</dd>
+<dt>&bull;</dt>
+<dd>If you wish to match on <code>MATCH</code>, ensure that <code>FILE</code> does not contain multiple consecutive runs of slashes since otherwise your job will find it difficult to perform such a match.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt>start on file FILE=/run/app.pid EVENT=create</p>
-<dd>Event emitted when file is created.</p>
-<dt>start on file FILE=/run/app.pid</p>
-<dd>Event emitted when file is created, modified or deleted.</p>
-<dt>start on file FILE=/var/log/</p>
-<dd>Event emitted when files within a directory are created, modified or deleted.</p>
-<dt>start on file FILE=/var/crash/*.crash EVENT=create</p>
-<dd>Event emitted when files that match a glob pattern are created in the indicated directory.</p>
-<dt>start on file FILE=&quot;/this/path/contains whitespace.txt&quot;</p>
-<dd>Specify a file that contains a space character.</dl>
+<dt>start on file FILE=/run/app.pid EVENT=create</dt>
+<dd>Event emitted when file is created.</dd>
+<dt>start on file FILE=/run/app.pid</dt>
+<dd>Event emitted when file is created, modified or deleted.</dd>
+<dt>start on file FILE=/var/log/</dt>
+<dd>Event emitted when files within a directory are created, modified or deleted.</dd>
+<dt>start on file FILE=/var/crash/*.crash EVENT=create</dt>
+<dd>Event emitted when files that match a glob pattern are created in the indicated directory.</dd>
+<dt>start on file FILE=&quot;/this/path/contains whitespace.txt&quot;</dt>
+<dd>Specify a file that contains a space character.</dd></dl>
 <h2>Author</h2>
 <p>Written by James Hunt &lt;<code>james.hunt [at] canonical.com</code>&gt;</p>
 <h2>Bugs</h2>

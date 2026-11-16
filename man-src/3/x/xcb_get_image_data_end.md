@@ -10,12 +10,7 @@ description: "xcb_get_image –"
 <p>xcb_get_image &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_get_image_cookie_t xcb_get_image(xcb_connection_t *conn, uint8_t format, xcb_drawable_t drawable, int16_t x, int16_t y, uint16_t width, uint16_t height, uint32_t plane_mask);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_get_image_reply_t {
@@ -28,55 +23,55 @@ xcb_get_image_cookie_t xcb_get_image(xcb_connection_t *conn, uint8_t format, xcb
 } <code>xcb_get_image_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_get_image_reply_t *<code>xcb_get_image_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_get_image_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_get_image_reply_t *<code>xcb_get_image_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_get_image_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>uint8_t *<code>xcb_get_image_data</code>(const xcb_get_image_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_get_image_data_length</code>(const xcb_get_image_reply_t *<i>reply</i>);</p>
+<dd>uint8_t *<code>xcb_get_image_data</code>(const xcb_get_image_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_get_image_data_length</code>(const xcb_get_image_reply_t *<i>reply</i>);</dd>
 <dd>xcb_generic_iterator_t <code>xcb_get_image_data_end</code>(const xcb_get_image_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>format</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>format</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_IMAGE_FORMAT_XY_BITMAP</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_IMAGE_FORMAT_XY_PIXMAP</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_IMAGE_FORMAT_Z_PIXMAP</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_IMAGE_FORMAT_XY_BITMAP</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_IMAGE_FORMAT_XY_PIXMAP</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_IMAGE_FORMAT_Z_PIXMAP</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>x</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>y</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>width</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>height</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>plane_mask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>x</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>y</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>width</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>height</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>plane_mask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_GET_IMAGE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>depth</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>visual</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_GET_IMAGE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>depth</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>visual</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_get_image_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_get_image_reply</i>. </p>

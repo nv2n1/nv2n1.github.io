@@ -29,7 +29,7 @@ description: "slamchf77.f –"
  IEEE1.</pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>BETA</i> </p>
+<dd><i>BETA</i> </dd>
 <pre> The base of the machine.</pre>
 <p><i>T</i> </p>
 <pre> The number of ( BETA ) digits in the mantissa.</pre>
@@ -44,10 +44,10 @@ description: "slamchf77.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dl>
+<dd>LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dd></dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Further</code> <code>Details</code> </p>
 <pre> The routine is based on the routine ENVRON by Malcolm and
  incorporates suggestions by Gentleman and Marovich. See
@@ -65,13 +65,13 @@ description: "slamchf77.f –"
 <p>&nbsp;<wbr> </p>
 <p> <code>Author:</code></p>
 <dl>
-<dd>LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dl>
+<dd>LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dd></dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>BETA</i> </p>
+<dd><i>BETA</i> </dd>
 <pre> The base of the machine.</pre>
 <p><i>T</i> </p>
 <pre> The number of ( BETA ) digits in the mantissa.</pre>
@@ -110,7 +110,7 @@ description: "slamchf77.f –"
 <p><code>Parameters:</code></p>
 <dl>
 <dd><i>A</i><br />
- <i>B</i> </p>
+ <i>B</i> </dd>
 <pre> The values A and B.</pre>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 646 of file slamchf77.f.</p>
@@ -119,7 +119,7 @@ description: "slamchf77.f –"
 <pre> SLAMC4 is a service routine for SLAMC2.</pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>EMIN</i> </p>
+<dd><i>EMIN</i> </dd>
 <pre> The minimum exponent before (gradual) underflow, computed by
  setting A = START and dividing by BASE until the previous A
  can not be recovered.</pre>
@@ -139,7 +139,7 @@ description: "slamchf77.f –"
  too large (i.e. too close to zero), probably with overflow.</pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>BETA</i> </p>
+<dd><i>BETA</i> </dd>
 <pre> The base of floating-point arithmetic.</pre>
 <p><i>P</i> </p>
 <pre> The number of base BETA digits in the mantissa of a
@@ -160,10 +160,10 @@ description: "slamchf77.f –"
 <dl>
 <dd>
 <pre> SLAMCH determines single precision machine parameters.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>CMACH</i> </p>
+<dd><i>CMACH</i> </dd>
 <pre> Specifies the value to be returned by SLAMCH:
  = 'E' or 'e', SLAMCH := eps
  = 'S' or 's , SLAMCH := sfmin
@@ -189,13 +189,13 @@ description: "slamchf77.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 68 of file slamchf77.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

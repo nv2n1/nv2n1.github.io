@@ -17,78 +17,78 @@ description: "nufw – NUFW User filtering gateway server"
 <p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h </code></p>
-<dd>Issues usage details and exits.</p>
-<dt><code>-V </code></p>
-<dd>Issues version and exits.</p>
-<dt><code>-D </code></p>
-<dd>Run as a daemon. If started as a daemon, nufw logs message to syslog. If you don&#8217;t specify this option, messages go to the console nufw is running on, both on STDOUT and STDERR. Unless you are debugging something, you should run nufw with this option.</p>
-<dt><code>-m </code></p>
-<dd>Mark packets with UserID. This requires the wvmark POM patch applied to netfilter, and is necessary for per user QoS or routing.</p>
-<dt><code>-v </code></p>
-<dd>Increases debug level. Multiple switches are accepted and each of them increases the debug level by one. Default debug level is 2, max is 10.</p>
-<dt><code>-A </code><i>debug_areas</i></p>
-<dd>Chooses debug_area. Default debug area is ALL. To select a subset add value from the following list:</p>
+<dt><code>-h </code></dt>
+<dd>Issues usage details and exits.</dd>
+<dt><code>-V </code></dt>
+<dd>Issues version and exits.</dd>
+<dt><code>-D </code></dt>
+<dd>Run as a daemon. If started as a daemon, nufw logs message to syslog. If you don&#8217;t specify this option, messages go to the console nufw is running on, both on STDOUT and STDERR. Unless you are debugging something, you should run nufw with this option.</dd>
+<dt><code>-m </code></dt>
+<dd>Mark packets with UserID. This requires the wvmark POM patch applied to netfilter, and is necessary for per user QoS or routing.</dd>
+<dt><code>-v </code></dt>
+<dd>Increases debug level. Multiple switches are accepted and each of them increases the debug level by one. Default debug level is 2, max is 10.</dd>
+<dt><code>-A </code><i>debug_areas</i></dt>
+<dd>Chooses debug_area. Default debug area is ALL. To select a subset add value from the following list:</dd>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>DEBUG_AREA_MAIN (1) main domain</p>
-<dt>*</p>
-<dd>DEBUG_AREA_PACKET (2) packet domain</p>
-<dt>*</p>
-<dd>DEBUG_AREA_USER (4) user domain</p>
-<dt>*</p>
-<dd>DEBUG_AREA_GW (8) Gateway domain, interaction with nufw servers.</p>
-<dt>*</p>
-<dd>DEBUG_AREA_AUTH (16) Authentication domain</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>DEBUG_AREA_MAIN (1) main domain</dd>
+<dt>*</dt>
+<dd>DEBUG_AREA_PACKET (2) packet domain</dd>
+<dt>*</dt>
+<dd>DEBUG_AREA_USER (4) user domain</dd>
+<dt>*</dt>
+<dd>DEBUG_AREA_GW (8) Gateway domain, interaction with nufw servers.</dd>
+<dt>*</dt>
+<dd>DEBUG_AREA_AUTH (16) Authentication domain</dd></dl>
 </dl>
-<dt><code>-k </code><i>keyfile</i></p>
-<dd>Use specified file as SSL (private) key file.</p>
-<dt><code>-c </code><i>certfile</i></p>
-<dd>Use specified file as SSL (public) certificate file.</p>
-<dt><code>-a </code><i>cafile</i></p>
-<dd>Use specified file as SSL certificate authority file.</p>
-<dt><code>-r </code><i>crlfile</i></p>
-<dd>Use specified file as SSL certificate revocation list file. You will need to restart nufw if you modify this file. Since 2.2.19, nufw reloads this file dynamically when receiving a HUP signal.</p>
-<dt><code>-n </code><i>nuauth_dn</i></p>
-<dd>Use specified string as the needed DN of nuauth. nufw will refuse to connect if the provided string does not match the DN of the certificate provided by nuauth. If you do not use this option, the DN of the nuauth certificate will be checked against the fully qualified domain name of the nuauth server, obtained from a reverse DNS lookup on nuauth IP address.</p>
-<dt><code>-s </code></p>
-<dd>Disable strict TLS checking of the certificate provided by nuauth.</p>
-<dt><code>-S </code></p>
-<dd>Force strict TLS checking of the certificate provided by nuauth. This is the default behavior of the daemon since 2.2.18.</p>
-<dt><code>-N </code></p>
-<dd>Suppress error if server FQDN does not match certificate CN.</p>
-<dt><code>-d </code><i>address</i></p>
-<dd>Network address of the nuauth server.</p>
-<dt><code>-p </code><i>port</i></p>
-<dd>Specifies TCP port to send data to when addressing the nuauth server. Nuauth server must be setup to listen on that port. Default value : 4128</p>
-<dt><code>-t </code><i>seconds</i></p>
-<dd>Specifies timeout to forget packets not answered for by nuauth. Default value : 15 s.</p>
-<dt><code>-T </code><i>track_size</i></p>
-<dd>Set maximum number of packets that can wait a decision in nufw. Default value : 1000.</p>
-<dt><code>-q </code><i>NfQueue number</i></p>
-<dd>If Nufw was compiled with NfQueue support, Id of the NfQueue to use (default : 0).</p>
-<dt><code>-L </code><i>NfQueue length</i></p>
-<dd>Specify the length of the nfnetlink queue used by nufw. This is the number of packets that the kernel will keep internally before dropping new coming packets.</p>
-<dt><code>-C </code></p>
-<dd>Listen to conntrack events (needed for connection expiration).</p>
-<dt><code>-M </code></p>
-<dd>Only report event on marked connections to nuauth (implies -C and -m) </p>
+<dt><code>-k </code><i>keyfile</i></dt>
+<dd>Use specified file as SSL (private) key file.</dd>
+<dt><code>-c </code><i>certfile</i></dt>
+<dd>Use specified file as SSL (public) certificate file.</dd>
+<dt><code>-a </code><i>cafile</i></dt>
+<dd>Use specified file as SSL certificate authority file.</dd>
+<dt><code>-r </code><i>crlfile</i></dt>
+<dd>Use specified file as SSL certificate revocation list file. You will need to restart nufw if you modify this file. Since 2.2.19, nufw reloads this file dynamically when receiving a HUP signal.</dd>
+<dt><code>-n </code><i>nuauth_dn</i></dt>
+<dd>Use specified string as the needed DN of nuauth. nufw will refuse to connect if the provided string does not match the DN of the certificate provided by nuauth. If you do not use this option, the DN of the nuauth certificate will be checked against the fully qualified domain name of the nuauth server, obtained from a reverse DNS lookup on nuauth IP address.</dd>
+<dt><code>-s </code></dt>
+<dd>Disable strict TLS checking of the certificate provided by nuauth.</dd>
+<dt><code>-S </code></dt>
+<dd>Force strict TLS checking of the certificate provided by nuauth. This is the default behavior of the daemon since 2.2.18.</dd>
+<dt><code>-N </code></dt>
+<dd>Suppress error if server FQDN does not match certificate CN.</dd>
+<dt><code>-d </code><i>address</i></dt>
+<dd>Network address of the nuauth server.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd>Specifies TCP port to send data to when addressing the nuauth server. Nuauth server must be setup to listen on that port. Default value : 4128</dd>
+<dt><code>-t </code><i>seconds</i></dt>
+<dd>Specifies timeout to forget packets not answered for by nuauth. Default value : 15 s.</dd>
+<dt><code>-T </code><i>track_size</i></dt>
+<dd>Set maximum number of packets that can wait a decision in nufw. Default value : 1000.</dd>
+<dt><code>-q </code><i>NfQueue number</i></dt>
+<dd>If Nufw was compiled with NfQueue support, Id of the NfQueue to use (default : 0).</dd>
+<dt><code>-L </code><i>NfQueue length</i></dt>
+<dd>Specify the length of the nfnetlink queue used by nufw. This is the number of packets that the kernel will keep internally before dropping new coming packets.</dd>
+<dt><code>-C </code></dt>
+<dd>Listen to conntrack events (needed for connection expiration).</dd>
+<dt><code>-M </code></dt>
+<dd>Only report event on marked connections to nuauth (implies -C and -m) </dd>
 <p> This is the way to do an efficient selection of events to be sent to nuauth but this REQUIRES a kernel with transmit_mark applied (should be ok for 2.6.18+) and the use of CONNMARK to propagate the initial mark across all the packets of the connection.</dl>
 <h2>Signals</h2>
 <p>The <code>nufw</code> daemon is designed to deal with several signals : USR1, USR2, SYS, WINCH and POLL.</p>
 <dl>
-<dt><code>USR1 </code></p>
-<dd>Increases verbosity. The daemon then acts as if it had been launched with one supplementary &#8216;-v&#8217;.A line is also added to the system log to mention the signal event.</p>
-<dt><code>USR2 </code></p>
-<dd>Decreases verbosity. The daemon then acts as if it had been launched with one less &#8216;-v&#8217;. A line is also added to the system log to mention the signal event.</p>
-<dt><code>SYS </code></p>
-<dd>Removes the Conntrack events thread. This gets the daemon to work as if the &quot;-C&quot; switch had not been set. This is useful on HA configurations, when one firewall gets passive, for instance.</p>
-<dt><code>WINCH </code></p>
-<dd>Starts the Conntrack events thread. This gets the daemon to work as if the &quot;-C&quot; switch had been set at startup. This is useful on HA configurations, when one firewall gets active, for instance.</p>
-<dt><code>POLL </code></p>
-<dd>Logs an &quot;audit&quot; line, mentionning how many network datagrams were received and sent since daemon startup.</dl>
+<dt><code>USR1 </code></dt>
+<dd>Increases verbosity. The daemon then acts as if it had been launched with one supplementary &#8216;-v&#8217;.A line is also added to the system log to mention the signal event.</dd>
+<dt><code>USR2 </code></dt>
+<dd>Decreases verbosity. The daemon then acts as if it had been launched with one less &#8216;-v&#8217;. A line is also added to the system log to mention the signal event.</dd>
+<dt><code>SYS </code></dt>
+<dd>Removes the Conntrack events thread. This gets the daemon to work as if the &quot;-C&quot; switch had not been set. This is useful on HA configurations, when one firewall gets passive, for instance.</dd>
+<dt><code>WINCH </code></dt>
+<dd>Starts the Conntrack events thread. This gets the daemon to work as if the &quot;-C&quot; switch had been set at startup. This is useful on HA configurations, when one firewall gets active, for instance.</dd>
+<dt><code>POLL </code></dt>
+<dd>Logs an &quot;audit&quot; line, mentionning how many network datagrams were received and sent since daemon startup.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-nuauth/">nuauth</a>(8)</p>
 <h2>Author</h2>

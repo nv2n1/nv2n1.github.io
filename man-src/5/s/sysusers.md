@@ -23,21 +23,21 @@ u authd /usr/bin/authd &quot;Authorization user&quot;
 g input - -
 m authd input
 u root 0 &quot;Superuser&quot; /root</pre>
-</dl>
+</dd></dl>
 <h3>Type</h3>
 <p>The type consists of a single letter. The following line types are understood: </p>
 <p> <i>u</i></p>
 <dl>
-<dd>Create a system user and group of the specified name should they not exist yet. The user&#8217;s primary group will be set to the group bearing the same name. The user&#8217;s shell will be set to /sbin/nologin, the home directory to the specified home directory, or / if none is given. The account will be created disabled, so that logins are not allowed.</dl>
+<dd>Create a system user and group of the specified name should they not exist yet. The user&#8217;s primary group will be set to the group bearing the same name. The user&#8217;s shell will be set to /sbin/nologin, the home directory to the specified home directory, or / if none is given. The account will be created disabled, so that logins are not allowed.</dd></dl>
 <p> <i>g</i></p>
 <dl>
-<dd>Create a system group of the specified name should it not exist yet. Note that <i>u</i> implicitly create a matching group. The group will be created with no password set.</dl>
+<dd>Create a system group of the specified name should it not exist yet. Note that <i>u</i> implicitly create a matching group. The group will be created with no password set.</dd></dl>
 <p> <i>m</i></p>
 <dl>
-<dd>Add a user to a group. If the user or group are not existing yet, they will be implicitly created.</dl>
+<dd>Add a user to a group. If the user or group are not existing yet, they will be implicitly created.</dd></dl>
 <p> <i>r</i></p>
 <dl>
-<dd>Add a range of numeric UIDs/GIDs to the pool to allocate new UIDs and GIDs from. If no line of this type is specified the range of UIDs/GIDs is set to some compiled-in default. Note that both UIDs and GIDs are allocated from the same pool, in order to ensure that users and groups of the same name are likely to carry the same numeric UID and GID.</dl>
+<dd>Add a range of numeric UIDs/GIDs to the pool to allocate new UIDs and GIDs from. If no line of this type is specified the range of UIDs/GIDs is set to some compiled-in default. Note that both UIDs and GIDs are allocated from the same pool, in order to ensure that users and groups of the same name are likely to carry the same numeric UID and GID.</dd></dl>
 <h3>Name</h3>
 <p>The name field specifies the user or group name. It should be shorter than 31 characters and avoid any non-ASCII characters, and not begin with a numeric character. It is strongly recommended to pick user and group names that are unlikely to clash with normal users created by the administrator. A good scheme to guarantee this is by prefixing all system and group names with the underscore, and avoiding too generic names. </p>
 <p> For <i>m</i> lines this field should contain the user name to add to a group. </p>

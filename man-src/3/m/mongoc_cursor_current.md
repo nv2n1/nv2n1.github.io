@@ -13,8 +13,8 @@ description: "mongoc_cursor_current() – Fetches the cursors current document o
 mongoc_cursor_current (const mongoc_cursor_t *cursor);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the cursors current document or <code>NULL</code> if there has been an error. </p>
 <h2>Returns</h2>

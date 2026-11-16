@@ -19,15 +19,15 @@ struct_snd_compr_params - compressed stream params
 <h2>Members</h2>
 
 buffer
-<dl><dd>buffer description</dl>
+<dl><dd>buffer description</dd></dl>
  
 
  codec
-<dl><dd>codec parameters</dl>
+<dl><dd>codec parameters</dd></dl>
  
 
  no_wake_mode
-<dl><dd>dont wake on fragment elapsed</dl>
+<dl><dd>dont wake on fragment elapsed</dd></dl>
 
 <h2>Copyright</h2>
 

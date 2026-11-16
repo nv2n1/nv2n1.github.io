@@ -14,17 +14,17 @@ description: "zmq_has – check a ZMQ capability"
 <p>The <i>zmq_has()</i> function shall report whether a specified capability is available in the library. This allows bindings and applications to probe a library directly, for transport and security options. </p>
 <p> Capabilities shall be lowercase strings. The following capabilities are defined: </p>
 <dl>
-<dd>&bull; ipc &#8211; the library supports the ipc:// protocol</dl>
+<dd>&bull; ipc &#8211; the library supports the ipc:// protocol</dd></dl>
 <dl>
-<dd>&bull; pgm &#8211; the library supports the pgm:// protocol</dl>
+<dd>&bull; pgm &#8211; the library supports the pgm:// protocol</dd></dl>
 <dl>
-<dd>&bull; tipc &#8211; the library supports the tipc:// protocol</dl>
+<dd>&bull; tipc &#8211; the library supports the tipc:// protocol</dd></dl>
 <dl>
-<dd>&bull; norm &#8211; the library supports the norm:// protocol</dl>
+<dd>&bull; norm &#8211; the library supports the norm:// protocol</dd></dl>
 <dl>
-<dd>&bull; curve &#8211; the library supports the CURVE security mechanism</dl>
+<dd>&bull; curve &#8211; the library supports the CURVE security mechanism</dd></dl>
 <dl>
-<dd>&bull; gssapi &#8211; the library supports the GSSAPI security mechanism</dl>
+<dd>&bull; gssapi &#8211; the library supports the GSSAPI security mechanism</dd></dl>
 <p> When this method is provided, the zmq.h header file will define ZMQ_HAS_CAPABILITIES.</p>
 <h2>Return Value</h2>
 <p>The <i>zmq_has()</i> function shall return 1 if the specified capability is provided. Otherwise it shall return 0.</p>

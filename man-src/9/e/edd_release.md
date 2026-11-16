@@ -15,7 +15,7 @@ edd_release - free edd structure
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>kobject of edd structure</dl>
+<dl><dd></dd><dd>kobject of edd structure</dd></dl>
 
 <h2>Description</h2>
 

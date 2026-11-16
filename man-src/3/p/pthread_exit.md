@@ -10,9 +10,7 @@ description: "pthread_exit – terminate calling thread"
 <p>pthread_exit &#8211; terminate calling thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 void pthread_exit(void *retval);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_exit</code>() function terminates the calling thread and returns a value via <i>retval</i> that (if the thread is joinable) is available to another thread in the same process that calls <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3). </p>

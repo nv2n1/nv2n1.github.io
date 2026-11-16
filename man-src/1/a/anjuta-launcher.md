@@ -16,10 +16,10 @@ description: "anjuta-launcher – GNOME Integrated Development Environment"
 <p> This program is part of the Anjuta GNOME IDE. It is used to launch programs from within the IDE and to initialize a terminal for a debugging session.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>&#8211;__debug_terminal</code></p>
-<dd> Initalize a terminal for a debugging session. With this options, the second parameter is a temporary file where the name of the tty/terminal is written to.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>&#8211;__debug_terminal</code></dt>
+<dd> Initalize a terminal for a debugging session. With this options, the second parameter is a temporary file where the name of the tty/terminal is written to.</dd></dl>
 <h2>AUTHORS</h2>
 <p> This man page was written by Jens Georg &lt;mail [at] jensgeorg.de&gt;. Anjuta was developed by Kh. Naba Kumar Singh &lt;kh_naba [at] users.sourceforge.net&gt;</p>
 <h2>SEE ALSO</h2>

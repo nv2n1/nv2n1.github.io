@@ -15,19 +15,19 @@ rpc_clnt_test_and_add_xprt - Test and add a new transport to a rpc_clnt
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>pointer to struct rpc_clnt</dl>
+<dl><dd></dd><dd>pointer to struct rpc_clnt</dd></dl>
  
 
  <i>xps</i>
-<dl><dd>pointer to struct rpc_xprt_switch,</dl>
+<dl><dd>pointer to struct rpc_xprt_switch,</dd></dl>
  
 
  <i>xprt</i>
-<dl><dd>pointer struct rpc_xprt</dl>
+<dl><dd>pointer struct rpc_xprt</dd></dl>
  
 
  <i>dummy</i>
-<dl><dd>unused</dl>
+<dl><dd>unused</dd></dl>
 
 <h2>Copyright</h2>
 

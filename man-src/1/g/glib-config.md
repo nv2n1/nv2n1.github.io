@@ -16,18 +16,18 @@ description: "glib-config – script to get information about the installed vers
 <h2>OPTIONS</h2>
 <p> <i>glib-config</i> accepts the following options:</p>
 <dl>
-<dt><code>LIBRARIES</code></p>
-<dd> <i>GLib</i> has three libraries &#8216;glib&#8217;, &#8216;gmodule&#8217; and &#8216;gthread&#8217;. If you specify one of them, only the appropriate things for that library will be printed.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the currently installed version of <i>GLib</i> on the standard output.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Print the linker flags that are necessary to link a <i>GLib</i> program.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Print the compiler flags that are necessary to compile a <i>GLib</i> program.</p>
-<dt><code>&#8211;prefix=PREFIX</code></p>
-<dd> If specified, use PREFIX instead of the installation prefix that <i>GLib</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option is also used for the exec prefix if &#8211;exec-prefix was not specified. This option must be specified before any &#8211;libs or &#8211;cflags options.</p>
-<dt><code>&#8211;exec-prefix=PREFIX</code></p>
-<dd> If specified, use PREFIX instead of the installation exec prefix that <i>GLib</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dl>
+<dt><code>LIBRARIES</code></dt>
+<dd> <i>GLib</i> has three libraries &#8216;glib&#8217;, &#8216;gmodule&#8217; and &#8216;gthread&#8217;. If you specify one of them, only the appropriate things for that library will be printed.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the currently installed version of <i>GLib</i> on the standard output.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print the linker flags that are necessary to link a <i>GLib</i> program.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Print the compiler flags that are necessary to compile a <i>GLib</i> program.</dd>
+<dt><code>&#8211;prefix=PREFIX</code></dt>
+<dd> If specified, use PREFIX instead of the installation prefix that <i>GLib</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option is also used for the exec prefix if &#8211;exec-prefix was not specified. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd>
+<dt><code>&#8211;exec-prefix=PREFIX</code></dt>
+<dd> If specified, use PREFIX instead of the installation exec prefix that <i>GLib</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gtk-config/">gtk-config</a></code>(1), <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code>gimptool</code>(1)</p>
 <h2>COPYRIGHT</h2>

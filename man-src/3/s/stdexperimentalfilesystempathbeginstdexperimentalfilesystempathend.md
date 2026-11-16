@@ -28,13 +28,9 @@ The sequence denoted by this pair of iterators consists of the following:<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::path p = &quot;C:\users\abcdef\AppData\Local\Temp\&quot;;
     std::cout &lt;&lt; &quot;Examining the path &quot; &lt;&lt; p &lt;&lt; &quot; through iterators gives
@@ -46,3 +42,4 @@ int main()
 </code></pre>
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;Examining the path &quot;C:
+</p>

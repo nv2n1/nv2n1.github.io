@@ -23,19 +23,19 @@ description: "hcrypto function controlling behavior –"
 <dd><i>ctx</i> context to perform operation on.<br />
  <i>type</i> type of operation.<br />
  <i>arg</i> argument to operation.<br />
- <i>data</i> addition data to operation.</dl>
+ <i>data</i> addition data to operation.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 for success, 0 for failure.</dl>
+<dd>1 for success, 0 for failure.</dd></dl>
 <h3>int EVP_CIPHER_CTX_rand_key (EVP_CIPHER_CTX *ctx, void *key)</h3>
 <p>Generate a random key for the specificed EVP_CIPHER. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ctx</i> EVP_CIPHER_CTX type to build the key for.<br />
- <i>key</i> return key, must be at least <code>EVP_CIPHER_key_length()</code> byte long.</dl>
+ <i>key</i> return key, must be at least <code>EVP_CIPHER_key_length()</code> byte long.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 for success, 0 for failure.</dl>
+<dd>1 for success, 0 for failure.</dd></dl>
 <h3>void OpenSSL_add_all_algorithms (void)</h3>
 <p>Add all algorithms to the crypto core.</p>
 <h3>void OpenSSL_add_all_algorithms_conf (void)</h3>

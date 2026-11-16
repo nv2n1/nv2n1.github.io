@@ -25,4 +25,4 @@ QuantLib::MultiPathGenerator - Generates a multipath from a random number genera
  <pre> RSG {
  Sample&lt;Array&gt; next();
  };</pre><b>Tests</b>
-<dl COMPACT><dd>the generated paths are checked against cached results</dl><h2>Author</h2>Generated automatically by Doxygen for QuantLib from the source code.
+<dl COMPACT><dd>the generated paths are checked against cached results</dd></dl><h2>Author</h2>Generated automatically by Doxygen for QuantLib from the source code.

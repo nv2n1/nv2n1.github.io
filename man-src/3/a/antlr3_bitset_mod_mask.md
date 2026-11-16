@@ -40,8 +40,8 @@ description: "include/antlr3bitset.h –"
 <h3>#define ANTLR3_BITSET_MOD_MASK ANTLR3_BITSET_BITS &#8211; 1</h3>
 <p>We will often need to do a mod operator (i mod nbits). For powers of two, this mod operation is the same as:</p>
 <dl COMPACT>
-<dt>*</p>
-<dd>(i &amp; (nbits-1)).</dl>
+<dt>*</dt>
+<dd>(i &amp; (nbits-1)).</dd></dl>
 <p> Since mod is relatively slow, we use an easily precomputed mod mask to do the mod instead. </p>
 <p> Referenced by bitMask().</p>
 <h3>#define ANTLR3_BITSET_NIBBLE 4</h3>

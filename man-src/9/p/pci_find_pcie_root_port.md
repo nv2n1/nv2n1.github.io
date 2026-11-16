@@ -15,7 +15,7 @@ pci_find_pcie_root_port - return PCIe Root Port
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to query</dl>
+<dl><dd></dd><dd>PCI device to query</dd></dl>
 
 <h2>Description</h2>
 

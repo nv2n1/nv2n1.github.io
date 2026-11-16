@@ -13,12 +13,10 @@ description: "snmp_sess_init, snmp_open, snmp_send, snmp_free_pdu, snmp_select_i
 void snmp_sess_init(struct snmp_session *);</code></pre>
 <p> struct snmp_session * snmp_open ( struct snmp_session *);</p>
 <dl>
-<dd><code>/* Input parameter not used in active sessions */</code></dl>
+<dd><code>/* Input parameter not used in active sessions */</code></dd></dl>
 <pre><code>int snmp_send(struct snmp_session *session,
-
               struct snmp_pdu *pdu);
 int snmp_select_info(int *numfds, fd_set *fdset,
-
                      struct timeval *timeout, int *block);
 void snmp_read(fd_set *fdset);
 void snmp_timeout(void);
@@ -27,17 +25,16 @@ void snmp_free_pdu(
     struct snmp_pdu *pdu);
 void snmp_error(
     struct snmp_session *session,
-
     int *pcliberr,
     int *psnmperr,
     char **pperrstring);
 char *snmp_api_errstring(int snmperr);</code></pre>
 <p> void snmp_perror ( char * msg );</p>
 <dl>
-<dd><code>/* for parsing errors only */</code></dl>
+<dd><code>/* for parsing errors only */</code></dd></dl>
 <p> void snmp_sess_perror (char * msg, struct snmp_session *);</p>
 <dl>
-<dd><code>/* all other SNMP library errors */</code></dl>
+<dd><code>/* all other SNMP library errors */</code></dd></dl>
 <h2>Description</h2>
 <p><i>Snmp_sess_init</i> prepares a struct snmp_session that sources transport characteristics and common information that will be used for a set of SNMP transactions. After this structure is passed to <i>snmp_open</i> to create an SNMP session, the structure is not used. </p>
 <p> <i>Snmp_open</i> returns a pointer to a newly-formed <i>struct snmp_session</i> object, which the application must use to reference the active SNMP session. </p>
@@ -54,43 +51,43 @@ char *snmp_api_errstring(int snmperr);</code></pre>
 <p> Consult snmp_api.h for the complete set of SNMP library error values. The SNMP library error value <i>snmperr</i> can be one of the following values:</p>
 <dl>
 <dd>
-<dl>
-<dt>SNMPERR_GENERR</p>
-<dd>A generic error occurred.</p>
-<dt>SNMPERR_BAD_LOCPORT</p>
-<dd>The local port was bad because it had already been allocated or permission was denied.</p>
-<dt>SNMPERR_BAD_ADDRESS</p>
-<dd>The host name or address given was not useable.</p>
-<dt>SNMPERR_BAD_SESSION</p>
-<dd>The specified session was not open.</p>
-<dt>SNMPERR_TOO_LONG</p>
+</dd><dl>
+<dt>SNMPERR_GENERR</dt>
+<dd>A generic error occurred.</dd>
+<dt>SNMPERR_BAD_LOCPORT</dt>
+<dd>The local port was bad because it had already been allocated or permission was denied.</dd>
+<dt>SNMPERR_BAD_ADDRESS</dt>
+<dd>The host name or address given was not useable.</dd>
+<dt>SNMPERR_BAD_SESSION</dt>
+<dd>The specified session was not open.</dd>
+<dt>SNMPERR_TOO_LONG</dt>
 <dd>
-<dt>SNMPERR_NO_SOCKET</p>
+</dd><dt>SNMPERR_NO_SOCKET</dt>
 <dd>
-<dt>SNMPERR_V2_IN_V1</p>
+</dd><dt>SNMPERR_V2_IN_V1</dt>
 <dd>
-<dt>SNMPERR_V1_IN_V2</p>
+</dd><dt>SNMPERR_V1_IN_V2</dt>
 <dd>
-<dt>SNMPERR_BAD_REPEATERS</p>
+</dd><dt>SNMPERR_BAD_REPEATERS</dt>
 <dd>
-<dt>SNMPERR_BAD_REPETITIONS</p>
+</dd><dt>SNMPERR_BAD_REPETITIONS</dt>
 <dd>
-<dt>SNMPERR_BAD_ASN1_BUILD</p>
+</dd><dt>SNMPERR_BAD_ASN1_BUILD</dt>
 <dd>
-<dt>SNMPERR_BAD_SENDTO</p>
+</dd><dt>SNMPERR_BAD_SENDTO</dt>
 <dd>
-<dt>SNMPERR_BAD_PARSE</p>
+</dd><dt>SNMPERR_BAD_PARSE</dt>
 <dd>
-<dt>SNMPERR_BAD_VERSION</p>
+</dd><dt>SNMPERR_BAD_VERSION</dt>
 <dd>
-<dt>SNMPERR_NOAUTH_DESPRIV</p>
+</dd><dt>SNMPERR_NOAUTH_DESPRIV</dt>
 <dd>
-<dt>SNMPERR_ABORT</p>
+</dd><dt>SNMPERR_ABORT</dt>
 <dd>
-<dt>SNMPERR_UNKNOWN_PDU</p>
+</dd><dt>SNMPERR_UNKNOWN_PDU</dt>
 <dd>
-<dt>SNMPERR_TIMEOUT</p>
-<dd></dl>
+</dd><dt>SNMPERR_TIMEOUT</dt>
+<dd></dd></dl>
 </dl>
 <p> A string representation of the error code can be obtained with <i>snmp_api_errstring</i>, and a standard error message may be printed using <i>snmp_perror</i> that functions like the <i>perror</i> standard routine.</p>
 <h2>See Also</h2>

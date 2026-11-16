@@ -21,13 +21,11 @@ char *inet_net_ntop(int af, const void *netp, int bits,
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>inet_net_pton</code>(), <code>inet_net_ntop</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.20:</p>
-<dd> _DEFAULT_SOURCE</p>
-<dt>Before glibc 2.20:</p>
-<dd> _BSD_SOURCE || _SVID_SOURCE</dl>
+<dt>Since glibc 2.20:</dt>
+<dd> _DEFAULT_SOURCE</dd>
+<dt>Before glibc 2.20:</dt>
+<dd> _BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> These functions convert network numbers between presentation (i.e., printable) format and network (i.e., binary) format. </p>
@@ -44,12 +42,12 @@ char *inet_net_ntop(int af, const void *netp, int bits,
 <p> On success, <code>inet_net_ntop</code>() returns <i>pres</i>. On error, it returns NULL, and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAFNOSUPPORT</code></p>
-<dd> <i>af</i> specified a value other than <code>AF_INET</code>.</p>
-<dt><code>EMSGSIZE</code></p>
-<dd> The size of the output buffer was insufficient.</p>
-<dt><code>ENOENT</code></p>
-<dd> (<code>inet_net_pton</code>()) <i>pres</i> was not in correct presentation format.</dl>
+<dt><code>EAFNOSUPPORT</code></dt>
+<dd> <i>af</i> specified a value other than <code>AF_INET</code>.</dd>
+<dt><code>EMSGSIZE</code></dt>
+<dd> The size of the output buffer was insufficient.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> (<code>inet_net_pton</code>()) <i>pres</i> was not in correct presentation format.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> The <code>inet_net_pton</code>() and <code>inet_net_ntop</code>() functions are nonstandard, but widely available.</p>
 <h2>NOTES</h2>
@@ -66,16 +64,16 @@ char *inet_net_ntop(int af, const void *netp, int bits,
 <h3>Return value of inet_net_pton()</h3>
 <p> The return value of <code>inet_net_pton</code>() is the number of bits in the network number field. If the input presentation string terminates with a slash and an explicit size value, then that size becomes the return value of <code>inet_net_pton</code>(). Otherwise, the return value, <i>bits</i>, is inferred as follows:</p>
 <dl>
-<dt>*</p>
-<dd> If the most significant byte of the network number is greater than or equal to 240, then <i>bits</i> is 32.</p>
-<dt>*</p>
-<dd> Otherwise, if the most significant byte of the network number is greater than or equal to 224, then <i>bits</i> is 4.</p>
-<dt>*</p>
-<dd> Otherwise, if the most significant byte of the network number is greater than or equal to 192, then <i>bits</i> is 24.</p>
-<dt>*</p>
-<dd> Otherwise, if the most significant byte of the network number is greater than or equal to 128, then <i>bits</i> is 16.</p>
-<dt>*</p>
-<dd> Otherwise, <i>bits</i> is 8.</dl>
+<dt>*</dt>
+<dd> If the most significant byte of the network number is greater than or equal to 240, then <i>bits</i> is 32.</dd>
+<dt>*</dt>
+<dd> Otherwise, if the most significant byte of the network number is greater than or equal to 224, then <i>bits</i> is 4.</dd>
+<dt>*</dt>
+<dd> Otherwise, if the most significant byte of the network number is greater than or equal to 192, then <i>bits</i> is 24.</dd>
+<dt>*</dt>
+<dd> Otherwise, if the most significant byte of the network number is greater than or equal to 128, then <i>bits</i> is 16.</dd>
+<dt>*</dt>
+<dd> Otherwise, <i>bits</i> is 8.</dd></dl>
 <p> If the resulting <i>bits</i> value from the above steps is greater than or equal to 8, but the number of octets specified in the network number exceed <i>bits/8</i>, then <i>bits</i> is set to 8 times the number of octets actually specified.</p>
 <h2>EXAMPLES</h2>
 <p> The program below demonstrates the use of <code>inet_net_pton</code>() and <code>inet_net_ntop</code>(). It uses <code>inet_net_pton</code>() to convert the presentation format network address provided in its first command-line argument to binary form, displays the return value from <code>inet_net_pton</code>(). It then uses <code>inet_net_ntop</code>() to convert the binary form back to presentation format, and displays the resulting string. </p>

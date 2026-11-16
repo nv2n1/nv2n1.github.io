@@ -16,12 +16,12 @@ description: "sane-mustek_usb – SANE backend for Mustek USB flatbed scanners"
  Mustek 1200 CU<br />
  Mustek 1200 CU Plus<br />
  Trust Compact Scan USB 19200
-</dl>
+</dd></dl>
 <p> More details can be found on the Mustek USB backend homepage <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/mustek_usb-backend/">http://www.meier-geinitz.de/sane/mustek_usb-backend/</a></i>. The Mustek BearPaw 1200 and 2400 scanners are supported by the plustek backend. See <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5) for details. The Mustek BearPaw 1200F is supported by the MA-1509 backend. See <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5) for details. Other Mustek USB scanners are supported by the gt68xx backend, see <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5). This backend can only work with scanners that are already detected by the operating system. See <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) for details. If you own a Mustek (or Trust) scanner other than the ones listed above that works with this backend, please let me know this by sending the scanner&#8217;s exact model name and the USB vendor and device ids (e.g. from <i>/proc/bus/usb/devices</i> or syslog) to me. </p>
 <h2>Device Names</h2>
 <p>This backend expects device names of the form: </p>
 <dl>
-<dd><i>special</i></dl>
+<dd><i>special</i></dd></dl>
 <p> Where <i>special</i> is a path-name for the special device that corresponds to a USB scanner. With Linux, such a device name could be <i>/dev/usb/scanner0</i> or <i>/dev/usbscanner1</i>, for example. </p>
 <p> For FreeBSD use <i>/dev/uscanner0</i>.</p>
 <h2>Configuration</h2>
@@ -34,22 +34,22 @@ description: "sane-mustek_usb – SANE backend for Mustek USB flatbed scanners"
  option max_block_size 1024<br />
  usb 0x055f 0x0001<br />
  /dev/usb/scanner0<br />
- option 600cu</dl>
+ option 600cu</dd></dl>
 <p> The first line is ignored. The second line sets the buffer size to a maximum of 1024 bytes. The third line tries to autodetect a scanner with vendor id 0x055f and product id 0x0001 (Mustek 1200 CU). The fourth line tells the backend to attach to <i>/dev/usb/scanner0</i> and the fifth line specifies that <i>/dev/usb/scanner0</i> is a Mustek 600 CU.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/mustek_usb.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/etc/sane.d/mustek_usb.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_MUSTEK_USB</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_MUSTEK_USB</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <pre>Value Description
 0 no output
 1 print fatal errors

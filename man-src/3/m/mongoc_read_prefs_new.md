@@ -13,8 +13,8 @@ description: "mongoc_read_prefs_new() – Creates a new mongoc_read_prefs_t usin
 mongoc_read_prefs_new (mongoc_read_mode_t read_mode);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>read_mode</code></p>
-<dd>A <code>mongoc_read_mode_t</code> \&amp;.</dl>
+<dt><code>read_mode</code></dt>
+<dd>A <code>mongoc_read_mode_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Creates a new <code>mongoc_read_prefs_t</code> using the mode specified. </p>
 <h2>Returns</h2>

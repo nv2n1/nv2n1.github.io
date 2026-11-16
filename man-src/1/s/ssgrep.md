@@ -18,51 +18,51 @@ description: "ssgrep – search spreadsheets for strings"
 <p> This program follows the usual GNU command line syntax, with single letter options starting with a single dash (`-&#8216;) and longer options starting with two dashes (`&#8211;&#8216;). </p>
 <h3>Options controlling input file handling</h3>
 <dl>
-<dt><code>&#8211;recalc</code></p>
-<dd> Recalculate all cells </p>
+<dt><code>&#8211;recalc</code></dt>
+<dd> Recalculate all cells </dd>
 </dl>
 <h3>Options controlling patterns and pattern matching</h3>
 <dl>
-<dt><code>-f, &#8211;keyword-file=</code><i>FILE</i></p>
-<dd> The path to a text file containing one key per line</p>
-<dt><code>-i, &#8211;ignore-case</code></p>
-<dd> Ignore differences in letter case</p>
-<dt><code>-w, &#8211;word-regexp</code></p>
-<dd> Match only whole words</p>
-<dt><code>-F, &#8211;fixed-strings</code></p>
-<dd> Pattern is a set of fixed strings</p>
-<dt><code>-R, &#8211;search-results</code></p>
-<dd> Search results of expressions too</p>
-<dt><code>-v, &#8211;invert-match</code></p>
-<dd> Search for cells that do not match </p>
+<dt><code>-f, &#8211;keyword-file=</code><i>FILE</i></dt>
+<dd> The path to a text file containing one key per line</dd>
+<dt><code>-i, &#8211;ignore-case</code></dt>
+<dd> Ignore differences in letter case</dd>
+<dt><code>-w, &#8211;word-regexp</code></dt>
+<dd> Match only whole words</dd>
+<dt><code>-F, &#8211;fixed-strings</code></dt>
+<dd> Pattern is a set of fixed strings</dd>
+<dt><code>-R, &#8211;search-results</code></dt>
+<dd> Search results of expressions too</dd>
+<dt><code>-v, &#8211;invert-match</code></dt>
+<dd> Search for cells that do not match </dd>
 </dl>
 <h3>Options controlling output in general</h3>
 <dl>
-<dt><code>-c, &#8211;count</code></p>
-<dd> Only print a count of matches per file</p>
-<dt><code>-L, &#8211;files-without-matches</code></p>
-<dd> Print filenames without matches</p>
-<dt><code>-l, &#8211;files-with-matches</code></p>
-<dd> Print filenames with matches</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Suppress all normal output</p>
-<dt><code>-H, &#8211;with-filename</code></p>
-<dd> Print the filename for each match</p>
-<dt><code>-h, &#8211;without-filename</code></p>
-<dd> Do not print the filename for each match</p>
-<dt><code>-n, &#8211;print-locus</code></p>
-<dd> Print the location of each match</p>
-<dt><code>-T, &#8211;print-type</code></p>
-<dd> Print the location type of each match </p>
+<dt><code>-c, &#8211;count</code></dt>
+<dd> Only print a count of matches per file</dd>
+<dt><code>-L, &#8211;files-without-matches</code></dt>
+<dd> Print filenames without matches</dd>
+<dt><code>-l, &#8211;files-with-matches</code></dt>
+<dd> Print filenames with matches</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Suppress all normal output</dd>
+<dt><code>-H, &#8211;with-filename</code></dt>
+<dd> Print the filename for each match</dd>
+<dt><code>-h, &#8211;without-filename</code></dt>
+<dd> Do not print the filename for each match</dd>
+<dt><code>-n, &#8211;print-locus</code></dt>
+<dd> Print the location of each match</dd>
+<dt><code>-T, &#8211;print-type</code></dt>
+<dd> Print the location type of each match </dd>
 </dl>
 <h3>Help options</h3>
 <dl>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display ssgrep&#8217;s version</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Display the supported options</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display a brief usage message </p>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display ssgrep&#8217;s version</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Display the supported options</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display a brief usage message </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To search for the string &quot;SUM&quot; in the file <i>foo.gnumeric</i> : </p>

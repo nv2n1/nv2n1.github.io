@@ -15,7 +15,7 @@ dev_add_offload - register offload handlers
 <h2>Arguments</h2>
 
 <i>po</i>
-<dl><dd><dd>protocol offload declaration</dl>
+<dl><dd></dd><dd>protocol offload declaration</dd></dl>
 
 <h2>Description</h2>
 

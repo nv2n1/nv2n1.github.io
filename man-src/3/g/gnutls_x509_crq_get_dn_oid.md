@@ -14,14 +14,14 @@ description: "gnutls_x509_crq_get_dn_oid – API function"
 <p> <code>int gnutls_x509_crq_get_dn_oid(gnutls_x509_crq_t </code><i>crq</i><code>, int </code><i>indx</i><code>, void * </code><i>oid</i><code>, size_t * </code><i>sizeof_oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a gnutls_x509_crq_t structure</p>
-<dt>int indx</p>
-<dd> Specifies which DN OID to get. Use (0) to get the first one.</p>
-<dt>void * oid</p>
-<dd> a pointer to a structure to hold the name (may be <code>NULL</code>)</p>
-<dt>size_t * sizeof_oid</p>
-<dd> initially holds the size of <i>oid</i></dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a gnutls_x509_crq_t structure</dd>
+<dt>int indx</dt>
+<dd> Specifies which DN OID to get. Use (0) to get the first one.</dd>
+<dt>void * oid</dt>
+<dd> a pointer to a structure to hold the name (may be <code>NULL</code>)</dd>
+<dt>size_t * sizeof_oid</dt>
+<dd> initially holds the size of <i>oid</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the requested OID of the name of the certificate request subject, specified by the given index.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_crq_get_dn_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

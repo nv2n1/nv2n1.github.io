@@ -16,20 +16,20 @@ description: "WMXMMS – a dockable XMMS control applet."
 <h2>OPTIONS</h2>
 <p> wmxmms accepts the following options:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-s, &#8211;session</code></p>
-<dd> Select XMMS session (Default: 0).</p>
-<dt><code>-c, &#8211;command</code></p>
-<dd> Command to start xmms (Default: xmms).</p>
-<dt><code>-i, &#8211;icon </code></p>
-<dd> Icon to show instead of the default one when xmms is not running. The icon must be in XPM format.</p>
-<dt><code>-n, &#8211;single</code></p>
-<dd> Start xmms with only a single click (Default: Double click).</p>
-<dt><code>-t, &#8211;title</code></p>
-<dd> Show the song title when the mouse is in the wmxmms window.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Print version number and exit.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-s, &#8211;session</code></dt>
+<dd> Select XMMS session (Default: 0).</dd>
+<dt><code>-c, &#8211;command</code></dt>
+<dd> Command to start xmms (Default: xmms).</dd>
+<dt><code>-i, &#8211;icon </code></dt>
+<dd> Icon to show instead of the default one when xmms is not running. The icon must be in XPM format.</dd>
+<dt><code>-n, &#8211;single</code></dt>
+<dd> Start xmms with only a single click (Default: Double click).</dd>
+<dt><code>-t, &#8211;title</code></dt>
+<dd> Show the song title when the mouse is in the wmxmms window.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Print version number and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xmms/">xmms</a></code>(1), <code>wmaker</code>(1), <code>gnomexmms</code>(1) </p>
 <h2>Index</h2>

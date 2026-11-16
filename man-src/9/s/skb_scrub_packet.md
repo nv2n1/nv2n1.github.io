@@ -15,11 +15,11 @@ skb_scrub_packet - scrub an skb
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to clean</dl>
+<dl><dd></dd><dd>buffer to clean</dd></dl>
  
 
  <i>xnet</i>
-<dl><dd>packet is crossing netns</dl>
+<dl><dd>packet is crossing netns</dd></dl>
 
 <h2>Description</h2>
 

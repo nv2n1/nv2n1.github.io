@@ -13,11 +13,11 @@ description: "wks2text – convert Works spreadsheet into plain text"
 <p> <code>wks2text</code> [<i>OPTION</i>] <i>&lt;Works Spreadsheet Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>:</p>
-<dd> Shows this help message</p>
-<dt><code>-o</code> file.text:</p>
-<dd> Defines the ouput file</p>
-<dt><code>-v</code>:</p>
-<dd> Output wks2text version </p>
+<dt><code>-h</code>:</dt>
+<dd> Shows this help message</dd>
+<dt><code>-o</code> file.text:</dt>
+<dd> Defines the ouput file</dd>
+<dt><code>-v</code>:</dt>
+<dd> Output wks2text version </dd>
 </dl>
 <h2>Index</h2>

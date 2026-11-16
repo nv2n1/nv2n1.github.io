@@ -15,32 +15,32 @@ description: "sha384sum – compute and check SHA384 message digest"
 <p> Print or check SHA384 (384-bit) checksums. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;binary</code></p>
-<dd> read in binary mode</p>
-<dt><code>-c</code>, <code>&#8211;check</code></p>
-<dd> read SHA384 sums from the FILEs and check them</p>
-<dt><code>&#8211;tag</code></p>
-<dd> create a BSD-style checksum</p>
-<dt><code>-t</code>, <code>&#8211;text</code></p>
-<dd> read in text mode (default)</p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> end each output line with NUL, not newline, and disable file name escaping</dl>
+<dt><code>-b</code>, <code>&#8211;binary</code></dt>
+<dd> read in binary mode</dd>
+<dt><code>-c</code>, <code>&#8211;check</code></dt>
+<dd> read SHA384 sums from the FILEs and check them</dd>
+<dt><code>&#8211;tag</code></dt>
+<dd> create a BSD-style checksum</dd>
+<dt><code>-t</code>, <code>&#8211;text</code></dt>
+<dd> read in text mode (default)</dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> end each output line with NUL, not newline, and disable file name escaping</dd></dl>
 <h3>The following five options are useful only when verifying checksums:</h3>
 <dl>
-<dt><code>&#8211;ignore-missing</code></p>
-<dd> don&#8217;t fail or report status for missing files</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> don&#8217;t print OK for each successfully verified file</p>
-<dt><code>&#8211;status</code></p>
-<dd> don&#8217;t output anything, status code shows success</p>
-<dt><code>&#8211;strict</code></p>
-<dd> exit non-zero for improperly formatted checksum lines</p>
-<dt><code>-w</code>, <code>&#8211;warn</code></p>
-<dd> warn about improperly formatted checksum lines</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;ignore-missing</code></dt>
+<dd> don&#8217;t fail or report status for missing files</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> don&#8217;t print OK for each successfully verified file</dd>
+<dt><code>&#8211;status</code></dt>
+<dd> don&#8217;t output anything, status code shows success</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd> exit non-zero for improperly formatted checksum lines</dd>
+<dt><code>-w</code>, <code>&#8211;warn</code></dt>
+<dd> warn about improperly formatted checksum lines</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> The sums are computed as described in FIPS-180-2. When checking, the input should be a former output of this program. The default mode is to print a line with checksum, a space, a character indicating input mode (&#8216;*&#8217; for binary, &#8216; &#8216; for text or where binary is insignificant), and name for each FILE. </p>
 <p> Note: There is no difference between binary mode and text mode on GNU systems.</p>
 <h2>AUTHOR</h2>

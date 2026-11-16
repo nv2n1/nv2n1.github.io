@@ -11,70 +11,51 @@ description: "std::tuple<Types…>::operator= – std::tuple<Types…>::operator
 <h2>Synopsis</h2>
 <pre><code>tuple &amp;operator=(const tuple &amp;other);
 (since C++ 11)(until C++ 20)
-
     constexpr tuple &amp;
     operator=(const tuple &amp;other);
 (since C++ 20)
-
     tuple &amp;
     operator=(tuple &amp;&amp;other) noexcept(/* see below */);
 (since C++ 11)(until C++ 20)
-
     constexpr tuple &amp;
     operator=(tuple &amp;&amp;other) noexcept(/* see below */);
 (since C++ 20)
-
     template &lt;class... UTypes&gt;
     (since C++ 11)
-
         tuple &amp;
         operator=(const tuple&lt;UTypes...&gt; &amp;other);
 (until C++ 20)
-
     template &lt;class... UTypes&gt;
     (since C++ 20)
-
         constexpr tuple &amp;
         operator=(const tuple&lt;UTypes...&gt; &amp;other);
-
 template &lt;class... UTypes&gt;
 (1)(since C++ 11)
-
     tuple &amp;
     operator=(tuple&lt;UTypes...&gt; &amp;&amp;other);
 (until C++ 20)
-
     template &lt;class... UTypes&gt;
     (2)(since C++ 20)
-
         constexpr tuple &amp;
         operator=(tuple&lt;UTypes...&gt; &amp;&amp;other);
 (3)
-
     template &lt;class U1, class U2&gt;
     (since C++ 11)
-
         tuple &amp;
         operator=(const pair&lt;U1, U2&gt; &amp;p);
 (4)(until C++ 20)
-
     template &lt;class U1, class U2&gt;
     (since C++ 20)
-
         constexpr tuple &amp;
         operator=(const pair&lt;U1, U2&gt; &amp;p);
 (5)
-
     template &lt;class U1, class U2&gt;
     (since C++ 11)
-
         tuple &amp;
         operator=(pair&lt;U1, U2&gt; &amp;&amp;p);
 (6)(until C++ 20)
-
     template &lt;class U1, class U2&gt;
     (since C++ 20)
-
         constexpr tuple &amp;
         operator=(pair&lt;U1, U2&gt; &amp;&amp;p);</code></pre>
 <p>Replaces the contents of the tuple with the contents of another tuple or a pair.<br />

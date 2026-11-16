@@ -84,22 +84,22 @@ description: "dcerpcd_selinux – Security Enhanced Linux Policy for the dcerpcd
 <p> <code>dcerpcd_exec_t</code> </p>
 <p> &#8211; Set files with the dcerpcd_exec_t type, if you want to transition an executable to the dcerpcd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/dcerpcd, /opt/likewise/sbin/dcerpcd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/dcerpcd, /opt/likewise/sbin/dcerpcd </dd>
 </dl>
 <p> <code>dcerpcd_var_lib_t</code> </p>
 <p> &#8211; Set files with the dcerpcd_var_lib_t type, if you want to store the dcerpcd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/run/rpcdep.dat, /var/lib/likewise-open/run/rpcdep.dat </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/run/rpcdep.dat, /var/lib/likewise-open/run/rpcdep.dat </dd>
 </dl>
 <p> <code>dcerpcd_var_run_t</code> </p>
 <p> &#8211; Set files with the dcerpcd_var_run_t type, if you want to store the dcerpcd files under the /run or /var/run directory. </p>
 <p> <code>dcerpcd_var_socket_t</code> </p>
 <p> &#8211; Set files with the dcerpcd_var_socket_t type, if you want to treat the files as dcerpcd var socket data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/rpc/epmapper, /var/lib/likewise-open/rpc/epmapper </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/rpc/epmapper, /var/lib/likewise-open/rpc/epmapper </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

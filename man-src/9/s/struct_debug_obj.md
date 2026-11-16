@@ -19,21 +19,21 @@ description: "struct_debug_obj – representaion of an tracked object"
 <h2>Members</h2>
 <p>node</p>
 <dl>
-<dd>hlist node to link the object into the tracker list</dl>
+<dd>hlist node to link the object into the tracker list</dd></dl>
 <p> state</p>
 <dl>
-<dd>tracked object state</dl>
+<dd>tracked object state</dd></dl>
 <p> astate</p>
 <dl>
-<dd>current active state</dl>
+<dd>current active state</dd></dl>
 <p> object</p>
 <dl>
-<dd>pointer to the real object</dl>
+<dd>pointer to the real object</dd></dl>
 <p> descr</p>
 <dl>
-<dd>pointer to an object type specific debug description structure</dl>
+<dd>pointer to an object type specific debug description structure</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

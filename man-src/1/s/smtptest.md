@@ -19,36 +19,36 @@ description: "smtptest – interactive SMTP test program"
 <p> <i>smtptest</i> is a utility that allows you to authenticate to a SMTP server and interactively issue commands to it. Once authenticated you may issue any SMTP command by simply typing it in. It is capable of multiple SASL authentication mechanisms and handles encryption layers transparently. This utility is often used for testing the operation of a smtp server. Also those developing SMTP clients find it useful. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code><i> keyfile</i></p>
-<dd> Enable TLS. <i>keyfile</i> contains the TLS public and private keys. Specify <code>&quot;&quot;</code> to negotiate a TLS encryption layer but not use TLS authentication.</p>
-<dt><code>-p</code><i> port</i></p>
-<dd> Port to connect to. If left off this defaults to <code>smtp</code> as defined in /etc/services.</p>
-<dt><code>-m</code><i> mechanism</i></p>
-<dd> Force smtptest to use <i>mechanism</i> for authentication. If not specified the strongest authentication mechanism supported by the server is chosen.</p>
-<dt><code>-a</code><i> userid</i></p>
-<dd> Userid to use for authentication; defaults to the current user. This is the userid whose password or credentials will be presented to the server for verification.</p>
-<dt><code>-u</code><i> userid</i></p>
-<dd> Userid to use for authorization; defaults to the current user. This is the userid whose identity will be assumed after authentication. <code>NOTE:</code> This is only used with SASL mechanisms that allow proxying (e.g. PLAIN, DIGEST-MD5).</p>
-<dt><code>-k</code><i> num</i></p>
-<dd> Minimum protection layer required.</p>
-<dt><code>-l</code><i> num</i></p>
-<dd> Maximum protection layer to use (<code>0</code>=none; <code>1=</code>integrity; etc). For example if you are using the KERBEROS_V4 authentication mechanism specifying <code>0</code> will force smtptest to not use any layer and specifying <code>1</code> will force it to use the integrity layer. By default the maximum supported protection layer will be used.</p>
-<dt><code>-r</code><i> realm</i></p>
-<dd> Specify the <i>realm</i> to use. Certain authentication mechanisms (e.g. DIGEST-MD5) may require one to specify the realm.</p>
-<dt><code>-f</code><i> file</i></p>
-<dd> Pipe <i>file</i> into connection after authentication.</p>
-<dt><code>-n</code><i> num</i></p>
-<dd> Number of authentication attempts; default = 1. The client will attempt to do SSL/TLS session reuse and/or fast reauth (e.g. DIGEST-MD5), if possible.</p>
-<dt><code>-s</code></p>
-<dd> Enable SMTP over SSL (smtps).</p>
-<dt><code>-c</code></p>
-<dd> Enable challenge prompt callbacks. This will cause the OTP mechanism to ask for the the one-time password instead of the secret pass-phrase (library generates the correct response).</p>
-<dt><code>-i</code></p>
-<dd> Don&#8217;t send an initial client response for SASL mechanisms, even if the protocol supports it.</p>
-<dt><code>-o </code><i>option</i><code>=</code><i>value</i></p>
-<dd> Set the SASL <i>option</i> to <i>value</i>.</p>
-<dt><code>-v</code></p>
-<dd> Verbose. Print out more information than usual.</dl>
+<dt><code>-t</code><i> keyfile</i></dt>
+<dd> Enable TLS. <i>keyfile</i> contains the TLS public and private keys. Specify <code>&quot;&quot;</code> to negotiate a TLS encryption layer but not use TLS authentication.</dd>
+<dt><code>-p</code><i> port</i></dt>
+<dd> Port to connect to. If left off this defaults to <code>smtp</code> as defined in /etc/services.</dd>
+<dt><code>-m</code><i> mechanism</i></dt>
+<dd> Force smtptest to use <i>mechanism</i> for authentication. If not specified the strongest authentication mechanism supported by the server is chosen.</dd>
+<dt><code>-a</code><i> userid</i></dt>
+<dd> Userid to use for authentication; defaults to the current user. This is the userid whose password or credentials will be presented to the server for verification.</dd>
+<dt><code>-u</code><i> userid</i></dt>
+<dd> Userid to use for authorization; defaults to the current user. This is the userid whose identity will be assumed after authentication. <code>NOTE:</code> This is only used with SASL mechanisms that allow proxying (e.g. PLAIN, DIGEST-MD5).</dd>
+<dt><code>-k</code><i> num</i></dt>
+<dd> Minimum protection layer required.</dd>
+<dt><code>-l</code><i> num</i></dt>
+<dd> Maximum protection layer to use (<code>0</code>=none; <code>1=</code>integrity; etc). For example if you are using the KERBEROS_V4 authentication mechanism specifying <code>0</code> will force smtptest to not use any layer and specifying <code>1</code> will force it to use the integrity layer. By default the maximum supported protection layer will be used.</dd>
+<dt><code>-r</code><i> realm</i></dt>
+<dd> Specify the <i>realm</i> to use. Certain authentication mechanisms (e.g. DIGEST-MD5) may require one to specify the realm.</dd>
+<dt><code>-f</code><i> file</i></dt>
+<dd> Pipe <i>file</i> into connection after authentication.</dd>
+<dt><code>-n</code><i> num</i></dt>
+<dd> Number of authentication attempts; default = 1. The client will attempt to do SSL/TLS session reuse and/or fast reauth (e.g. DIGEST-MD5), if possible.</dd>
+<dt><code>-s</code></dt>
+<dd> Enable SMTP over SSL (smtps).</dd>
+<dt><code>-c</code></dt>
+<dd> Enable challenge prompt callbacks. This will cause the OTP mechanism to ask for the the one-time password instead of the secret pass-phrase (library generates the correct response).</dd>
+<dt><code>-i</code></dt>
+<dd> Don&#8217;t send an initial client response for SASL mechanisms, even if the protocol supports it.</dd>
+<dt><code>-o </code><i>option</i><code>=</code><i>value</i></dt>
+<dd> Set the SASL <i>option</i> to <i>value</i>.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose. Print out more information than usual.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>sendmail(8)</code> </p>
 <h2>Index</h2>

@@ -13,18 +13,18 @@ description: "fuse-zip – a FUSE filesystem for zip archives with write support
 <p> <code>fuse-zip</code> zip-file [<i>fusermount</i> <i>options</i>] mount-point</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> print help</p>
-<dt><code>-V</code></p>
-<dd> print version</p>
-<dt><code>-o opt[,opt&#8230;]</code></p>
-<dd> mount options</p>
-<dt><code>-q</code></p>
-<dd> quiet</p>
-<dt><code>-f</code></p>
-<dd> don&#8217;t detach from terminal</p>
-<dt><code>-d</code></p>
-<dd> turn on debugging, also implies -f</dl>
+<dt><code>-h</code></dt>
+<dd> print help</dd>
+<dt><code>-V</code></dt>
+<dd> print version</dd>
+<dt><code>-o opt[,opt&#8230;]</code></dt>
+<dd> mount options</dd>
+<dt><code>-q</code></dt>
+<dd> quiet</dd>
+<dt><code>-f</code></dt>
+<dd> don&#8217;t detach from terminal</dd>
+<dt><code>-d</code></dt>
+<dd> turn on debugging, also implies -f</dd></dl>
 <p> If you want to specify character set conversion for file names in archive, use the following fusermount options: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>-omodules=iconv,from_code=$charset1,to_code=$charset2 </p>
 <p> See FUSE documentation for details.</p>
@@ -58,8 +58,8 @@ description: "fuse-zip – a FUSE filesystem for zip archives with write support
 <p> Be patient. Wait for fuse-zip process finish after unmounting, especially on a big archives.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/log/user.log</i></p>
-<dd> see this file in case any errors occur</dl>
+<dt><i>/var/log/user.log</i></dt>
+<dd> see this file in case any errors occur</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fusermount/">fusermount</a></code>(1).</p>
 <h2>LICENSE</h2>

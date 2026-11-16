@@ -11,21 +11,13 @@ std::lexicographical_compare_3way - std::lexicographical_compare_3way
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2, class Cmp &gt;
-
 constexpr auto lexicographical_compare_3way( InputIt1 first1, InputIt1 last1,
-
 InputIt2 first2, InputIt2 last2,                                                              (1) (since C++20)
-
 Cmp comp)
-
 -&gt; std::common_comparison_category_t&lt;decltype(comp(*first1, *first2)), std::strong_ordering&gt;;
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 constexpr auto lexicographical_compare_3way( InputIt1 first1, InputIt1 last1,                 (2) (since C++20)
-
 InputIt2 first2, InputIt2 last2);</code></pre> 
 Lexicographically compares two ranges [first1, last1) and [first2, last2) using three-way comparison and produces a result of the strongest applicable comparison category type. 
 1) Behaves as if defined as follows: for (; first1 != last1 &amp;&amp; first2 != last2; void(++first1), void(++first2))

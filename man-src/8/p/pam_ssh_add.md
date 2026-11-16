@@ -15,25 +15,26 @@ description: "pam_ssh_add – PAM module to auto load ssh keys into an agent"
 <h2>Options</h2>
 <p><code>debug</code></p>
 <dl>
-<dd>This option will turn on debug logging to syslog.</dl>
+<dd>This option will turn on debug logging to syslog.</dd></dl>
 <h2>Examples</h2>
 <dl>
 <dd>
 <pre> auth required pam_unix.so
  auth optional pam_ssh_add.so
  session optional pam_ssh_add.so</pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>Cockpit has been written by many m[blue]<code>contributors</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>Bugs</h2>
 <p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[2]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>contributors</p>
+<dt> 1.</dt>
+<dd>contributors</dd>
 <dl>
-<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dl>
-<dt> 2.</p>
-<dd>upstream bug tracker</p>
+<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dd></dl>
+<dt> 2.</dt>
+<dd>upstream bug tracker</dd>
 <dl>
-<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dl>
+<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dd></dl>
+</dl>

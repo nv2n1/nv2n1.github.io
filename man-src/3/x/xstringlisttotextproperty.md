@@ -10,25 +10,25 @@ description: "XStringListToTextProperty, XTextPropertyToStringList, XFreeStringL
 <p>XStringListToTextProperty, XTextPropertyToStringList, XFreeStringList, XTextProperty &#8211; convert string lists and text property structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XStringListToTextProperty(char **<i>list</i>, int <i>count</i>, XTextProperty *<i>text_prop_return</i>);</p>
-<dd>Status XTextPropertyToStringList(XTextProperty *<i>text_prop</i>, char ***<i>list_return</i>, int *<i>count_return</i>);</p>
-<dd>void XFreeStringList(char **<i>list</i>);</dl>
+<dd>Status XStringListToTextProperty(char **<i>list</i>, int <i>count</i>, XTextProperty *<i>text_prop_return</i>);</dd>
+<dd>Status XTextPropertyToStringList(XTextProperty *<i>text_prop</i>, char ***<i>list_return</i>, int *<i>count_return</i>);</dd>
+<dd>void XFreeStringList(char **<i>list</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>count</i></p>
-<dd>Specifies the number of strings.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of strings.</p>
-<dt><i>list</i></p>
-<dd>Specifies the list of strings to be freed.</p>
-<dt><i>list</i></p>
-<dd>Specifies a list of null-terminated character strings.</p>
-<dt><i>list_return</i></p>
-<dd>Returns a list of null-terminated character strings.</p>
-<dt><i>text_prop</i></p>
-<dd>Specifies the <code>XTextProperty</code> structure to be used.</p>
-<dt><i>text_prop_return</i></p>
-<dd>Returns the <code>XTextProperty</code> structure.</dl>
+<dt><i>count</i></dt>
+<dd>Specifies the number of strings.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of strings.</dd>
+<dt><i>list</i></dt>
+<dd>Specifies the list of strings to be freed.</dd>
+<dt><i>list</i></dt>
+<dd>Specifies a list of null-terminated character strings.</dd>
+<dt><i>list_return</i></dt>
+<dd>Returns a list of null-terminated character strings.</dd>
+<dt><i>text_prop</i></dt>
+<dd>Specifies the <code>XTextProperty</code> structure to be used.</dd>
+<dt><i>text_prop_return</i></dt>
+<dd>Returns the <code>XTextProperty</code> structure.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XStringListToTextProperty</code> function sets the specified <code>XTextProperty</code> to be of type STRING (format 8) with a value representing the concatenation of the specified list of null-separated character strings. An extra null byte (which is not included in the nitems member) is stored at the end of the value field of text_prop_return. The strings are assumed (without verification) to be in the STRING encoding. If insufficient memory is available for the new value string, <code>XStringListToTextProperty</code> does not set any fields in the <code>XTextProperty</code> structure and returns a zero status. Otherwise, it returns a nonzero status. To free the storage for the value field, use <code>XFree</code>. </p>
 <p> The <code>XTextPropertyToStringList</code> function returns a list of strings representing the null-separated elements of the specified <code>XTextProperty</code> structure. The data in text_prop must be of type STRING and format 8. Multiple elements of the property (for example, the strings in a disjoint text selection) are separated by NULL (encoding 0). The contents of the property are not null-terminated. If insufficient memory is available for the list and its elements, <code>XTextPropertyToStringList</code> sets no return values and returns a zero status. Otherwise, it returns a nonzero status. To free the storage for the list and its contents, use <code>XFreeStringList</code>. </p>

@@ -11,14 +11,14 @@ description: "XkbSASetPtrDfltValue – Sets the valueXXX field of act from val"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbSASetPtrDfltValue</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>int </code><i>val</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action in which to set valueXXX</p>
-<dt><i>&#8211; val</i></p>
-<dd>value to set in valueXXX</dl>
+</dd><dd>action in which to set valueXXX</dd>
+<dt><i>&#8211; val</i></dt>
+<dd>value to set in valueXXX</dd></dl>
 <h2>Description</h2>
 <p>Actions associated with the XkbPtrDfltAction structure change the mk_dflt_btn attribute of the MouseKeys control. </p>
 <p> If the MouseKeys control is not enabled, KeyPress and KeyRelease events are treated as though the action is XkbSA_NoAction. Otherwise, this action changes the <i>mk_dflt_btn </i> attribute of the MouseKeys control. </p>

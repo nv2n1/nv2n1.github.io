@@ -11,29 +11,17 @@ std::filesystem::copy_options - std::filesystem::copy_options
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;filesystem&gt;
-
 enum class copy_options {
-
     none = /* unspecified */,
-
     skip_existing = /* unspecified */,
-
     overwrite_existing = /* unspecified */,
-
     update_existing = /* unspecified */,
-
     recursive = /* unspecified */,           (since C++17)
-
     copy_symlinks = /* unspecified */,
-
     skip_symlinks = /* unspecified */,
-
     directories_only = /* unspecified */,
-
     create_symlinks = /* unspecified */,
-
     create_hard_links = /* unspecified */
-
 };</code></pre> 
 This type represents available options that control the behavior of the copy() and copy_file() function. 
 copy_options satisfies the requirements of BitmaskType (which means the bitwise operators operator&amp;, operator|, operator^, operator~, operator&amp;=, operator|=, and operator^= are defined for this type). none represents the empty bitmask; every other enumerator represents a distinct bitmask element. 
@@ -65,14 +53,10 @@ create_hard_links Instead of creating copies of files, create hardlinks that res
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/dir/subdir&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;).put('a');

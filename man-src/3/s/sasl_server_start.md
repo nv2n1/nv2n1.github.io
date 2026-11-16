@@ -10,7 +10,6 @@ description: "sasl_server_start – Begin an authentication negotiation"
 <p>sasl_server_start &#8211; Begin an authentication negotiation </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_server_start(sasl_conn_t *conn,
                       const char *mech,
                       const char *clientin,

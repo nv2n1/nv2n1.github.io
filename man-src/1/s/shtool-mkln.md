@@ -17,12 +17,12 @@ description: "shtool mkln – GNU shtool enhanced"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Enable the output of the essential shell commands which are executed.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Force the creation of the link even if it exists. Default is to fail with error.</p>
-<dt><code>-s</code>, <code>&#8211;symbolic</code></p>
-<dd> Create a symbolic link instead of a hard-link.</dl>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Force the creation of the link even if it exists. Default is to fail with error.</dd>
+<dt><code>-s</code>, <code>&#8211;symbolic</code></dt>
+<dd> Create a symbolic link instead of a hard-link.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script

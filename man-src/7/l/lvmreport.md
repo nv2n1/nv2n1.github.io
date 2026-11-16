@@ -13,10 +13,10 @@ description: "lvmreport — LVM reporting and related features"
 <h2>Categorization based on reporting facility</h2>
 <p>Based on functionality, commands which make use of the reporting infrastructure are divided in two groups:</p>
 <dl>
-<dt><code>Report-oriented</p>
-<dd>These commands inform about current LVM state and their primary role is to display this information in compendious way. To make a distinction, we will name this report as main report</code>. The set of report-only commands include: pvs, vgs, lvs, pvdisplay, vgdisplay, lvdisplay, lvm devtypes, lvm fullreport. For further information about main report, see <code>main report specifics</code>.</p>
-<dt><code>Processing-oriented</p>
-<dd>These commands are responsible for changing LVM state and they do not contain any main report as identified for report-oriented commands, they only perform some kind of processing. The set of processing-oriented commands includes: pvcreate, vgcreate, lvcreate, pvchange, vgchange, lvchange, pvremove, vgremove, lvremove, pvresize, vgextend, vgreduce, lvextend, lvreduce, lvresize, lvrename, pvscan, vgscan, lvscan, pvmove, vgcfgbackup, vgck, vgconvert, vgexport, vgimport, vgmknodes. </p>
+<dt><code>Report-oriented</dt>
+<dd>These commands inform about current LVM state and their primary role is to display this information in compendious way. To make a distinction, we will name this report as main report</code>. The set of report-only commands include: pvs, vgs, lvs, pvdisplay, vgdisplay, lvdisplay, lvm devtypes, lvm fullreport. For further information about main report, see <code>main report specifics</code>.</dd>
+<dt><code>Processing-oriented</dt>
+<dd>These commands are responsible for changing LVM state and they do not contain any main report as identified for report-oriented commands, they only perform some kind of processing. The set of processing-oriented commands includes: pvcreate, vgcreate, lvcreate, pvchange, vgchange, lvchange, pvremove, vgremove, lvremove, pvresize, vgextend, vgreduce, lvextend, lvreduce, lvresize, lvrename, pvscan, vgscan, lvscan, pvmove, vgcfgbackup, vgck, vgconvert, vgexport, vgimport, vgmknodes. </dd>
 <p> If enabled, so called log report</code> is either displayed solely (for processing-oriented commands) or in addition to main report (for report-oriented commands). The log report contains a log of operations, messages and per-object status with complete object identification collected during LVM command execution. See <code>log report specifics</code> for more information about this report type. </p>
 </dl>
 <h2>Terms</h2>
@@ -24,154 +24,154 @@ description: "lvmreport — LVM reporting and related features"
 <h2>Common report configuration settings and command line options</h2>
 <p>There are common configuration settings and command line options which apply to both <code>main report</code> and <code>log report</code>. Following lists contain all of them, separated into groups based on their use. </p>
 <dl>
-<dd><code>Common configuration settings:</code> </p>
+<dd><code>Common configuration settings:</code> </dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Changing report output format, composition and other output modifiers:</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Changing report output format, composition and other output modifiers:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>global/units</p>
-<dt>&#8211;</p>
-<dd>global/suffix</p>
-<dt>&#8211;</p>
-<dd>report/output_format</p>
-<dt>&#8211;</p>
-<dd>report/compact_output</p>
-<dt>&#8211;</p>
-<dd>report/compact_output_cols</p>
-<dt>&#8211;</p>
-<dd>report/aligned</p>
-<dt>&#8211;</p>
-<dd>report/headings</p>
-<dt>&#8211;</p>
-<dd>report/separator</p>
-<dt>&#8211;</p>
-<dd>report/list_item_separator</p>
-<dt>&#8211;</p>
-<dd>report/prefixes</p>
-<dt>&#8211;</p>
-<dd>report/quoted</p>
-<dt>&#8211;</p>
-<dd>report/columns_as_rows</p>
-<dt>&#8211;</p>
-<dd>report/binary_values_as_numeric</p>
-<dt>&#8211;</p>
-<dd>report/time_format</p>
-<dt>&#8211;</p>
-<dd>report/mark_hidden_devices</p>
-<dt>&#8211;</p>
-<dd>report/two_word_unknown_device</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>global/units</dd>
+<dt>&#8211;</dt>
+<dd>global/suffix</dd>
+<dt>&#8211;</dt>
+<dd>report/output_format</dd>
+<dt>&#8211;</dt>
+<dd>report/compact_output</dd>
+<dt>&#8211;</dt>
+<dd>report/compact_output_cols</dd>
+<dt>&#8211;</dt>
+<dd>report/aligned</dd>
+<dt>&#8211;</dt>
+<dd>report/headings</dd>
+<dt>&#8211;</dt>
+<dd>report/separator</dd>
+<dt>&#8211;</dt>
+<dd>report/list_item_separator</dd>
+<dt>&#8211;</dt>
+<dd>report/prefixes</dd>
+<dt>&#8211;</dt>
+<dd>report/quoted</dd>
+<dt>&#8211;</dt>
+<dd>report/columns_as_rows</dd>
+<dt>&#8211;</dt>
+<dd>report/binary_values_as_numeric</dd>
+<dt>&#8211;</dt>
+<dd>report/time_format</dd>
+<dt>&#8211;</dt>
+<dd>report/mark_hidden_devices</dd>
+<dt>&#8211;</dt>
+<dd>report/two_word_unknown_device</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Special settings</p>
+<dt>&bull;</dt>
+<dd>Special settings</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/buffered</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/buffered</dd></dl>
 </dl>
 </dl>
 </dl>
 </dl>
 <p> This document does not describe these settings in more detail &#8211; if you need detailed information, including values which are accepted for the settings, please run <code>lvmconfig &#8211;type default &#8211;withcomments &lt;setting&gt;</code>. There are more configuration settings in addition to the common set listed above, but they are specific to either <code>main report</code> or <code>log report</code>, see <code>main report specifics</code> and <code>log report specifics</code> for these settings. Besides configuring reports globally by using configuration settings, there are also command line options you can use to extend, override or further specify the report configuration. </p>
 <dl>
-<dd><code>Common command line options:</code> </p>
+<dd><code>Common command line options:</code> </dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Definition of the set set of fields to use</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Definition of the set set of fields to use</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>&#8211;options|-o FieldSet<br />
- Field set to use. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuratin settings that this option overrides.</p>
-<dt>&#8211;</p>
+ Field set to use. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuratin settings that this option overrides.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;options|-o+ FieldSet<br />
- Fields to include to current field set. See <code>main report specifics</code>&nbsp;and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option extends.</p>
-<dt>&#8211;</p>
+ Fields to include to current field set. See <code>main report specifics</code>&nbsp;and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option extends.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;options|-o- FieldSet<br />
- Fields to exclude from current field set. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option reduces.</p>
-<dt>&#8211;</p>
+ Fields to exclude from current field set. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option reduces.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;options|-o# FieldSet<br />
- Compaction of unused fields. Overrides report/compact_output_cols configuration setting.</dl>
+ Compaction of unused fields. Overrides report/compact_output_cols configuration setting.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Sorting</p>
+<dt>&bull;</dt>
+<dd>Sorting</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>&#8211;sort|-O+ FieldSet<br />
- Fields to sort by in ascending order. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option overrides.</p>
-<dt>&#8211;</p>
+ Fields to sort by in ascending order. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option overrides.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;sort|-O- FieldSet<br />
- Fields to sort by in descending order. See <code>main report specifics</code> and <code>log report specifics</code> for information about fields sets configured with global configuration settings that this options overrides.</dl>
+ Fields to sort by in descending order. See <code>main report specifics</code> and <code>log report specifics</code> for information about fields sets configured with global configuration settings that this options overrides.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Selection</p>
+<dt>&bull;</dt>
+<dd>Selection</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>&#8211;select|-S Selection<br />
- Define selection criteria for report output. For <code>log report</code>, this also overrides log/command_log_selection configuration setting, see also <code>log report specifics</code>.</dl>
+ Define selection criteria for report output. For <code>log report</code>, this also overrides log/command_log_selection configuration setting, see also <code>log report specifics</code>.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Changing output format and composition</p>
+<dt>&bull;</dt>
+<dd>Changing output format and composition</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>&#8211;reportformat<br />
- Overrides report/output_format configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides report/output_format configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;aligned<br />
- Overrides report/aligned configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides report/aligned configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;binary<br />
- Overrides report/binary_values_as_numeric configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides report/binary_values_as_numeric configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;nameprefixes<br />
- Overrides report/prefixes configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides report/prefixes configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;noheadings<br />
- Overrides report/noheadings configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides report/noheadings configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;nosuffix<br />
- Overrides global/suffix configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides global/suffix configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;rows<br />
- Overrides report/columns_as_rows configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides report/columns_as_rows configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;separator<br />
- Overrides report/separator configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides report/separator configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;units<br />
- Overrides global/units configuration setting.</p>
-<dt>&#8211;</p>
+ Overrides global/units configuration setting.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;unquoted<br />
- Overrides report/quoted configuration setting.</dl>
+ Overrides report/quoted configuration setting.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Special options</p>
+<dt>&bull;</dt>
+<dd>Special options</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>&#8211;configreport <code>ReportName</code><br />
- This defines the <code>ReportName</code> for which any subsequent -o&#8211;columns, -O&#8211;sort or -S&#8211;select applies to. See also <code>main report specifics</code> and <code>log report specifics</code> for possible <code>ReportName</code> values.</p>
-<dt>&#8211;</p>
+ This defines the <code>ReportName</code> for which any subsequent -o&#8211;columns, -O&#8211;sort or -S&#8211;select applies to. See also <code>main report specifics</code> and <code>log report specifics</code> for possible <code>ReportName</code> values.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;logonly<br />
- When an LVM command contains both <code>main report</code> and <code>log report</code>, this option suppresses the <code>main report</code> output and it causes the <code>log report</code> output to be displayed only.</p>
-<dt>&#8211;</p>
+ When an LVM command contains both <code>main report</code> and <code>log report</code>, this option suppresses the <code>main report</code> output and it causes the <code>log report</code> output to be displayed only.</dd>
+<dt>&#8211;</dt>
 <dd>&#8211;unbuffered<br />
- Overrides report/bufffered configuration setting.</dl>
+ Overrides report/bufffered configuration setting.</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -181,92 +181,92 @@ description: "lvmreport — LVM reporting and related features"
 <p>The <code>main report</code> currently encompasses these distinct subtypes, referenced by their name &#8211; <code>ReportName</code> as listed below. The command in parenthesis is representative command that uses the main report subtype by default. Each subtype has its own configuration setting for global field set definition as well as sort field definition (listed below each individual <code>ReportName</code>): </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>pv</code> representing report about Physical Volumes (<code>pvs</code>)</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>pv</code> representing report about Physical Volumes (<code>pvs</code>)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/pvs_cols</p>
-<dt>&#8211;</p>
-<dd>report/pvs_sort</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/pvs_cols</dd>
+<dt>&#8211;</dt>
+<dd>report/pvs_sort</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>pvseg</code> representing report about Physical Volume Segments (<code>pvs &#8211;segments</code>)</p>
+<dt>&bull;</dt>
+<dd><code>pvseg</code> representing report about Physical Volume Segments (<code>pvs &#8211;segments</code>)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/pvseg_cols</p>
-<dt>&#8211;</p>
-<dd>report/pvseg_sort</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/pvseg_cols</dd>
+<dt>&#8211;</dt>
+<dd>report/pvseg_sort</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>vg</code> representing report about Volume Groups (<code>vgs</code>)</p>
+<dt>&bull;</dt>
+<dd><code>vg</code> representing report about Volume Groups (<code>vgs</code>)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/vgs_cols</p>
-<dt>&#8211;</p>
-<dd>report/vgs_sort</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/vgs_cols</dd>
+<dt>&#8211;</dt>
+<dd>report/vgs_sort</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>lv</code> representing report about Logical Volumes (<code>lvs</code>)</p>
+<dt>&bull;</dt>
+<dd><code>lv</code> representing report about Logical Volumes (<code>lvs</code>)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/lvs_cols</p>
-<dt>&#8211;</p>
-<dd>report/lvs_sort</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/lvs_cols</dd>
+<dt>&#8211;</dt>
+<dd>report/lvs_sort</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>seg</code> representing report about Logical Volume Segments (<code>lvs &#8211;segments</code>)</p>
+<dt>&bull;</dt>
+<dd><code>seg</code> representing report about Logical Volume Segments (<code>lvs &#8211;segments</code>)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/segs_cols</p>
-<dt>&#8211;</p>
-<dd>report/segs_sort</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/segs_cols</dd>
+<dt>&#8211;</dt>
+<dd>report/segs_sort</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>full</code> representing report combining all of the above as a whole (<code>lvm fullreport</code>)</p>
+<dt>&bull;</dt>
+<dd><code>full</code> representing report combining all of the above as a whole (<code>lvm fullreport</code>)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/pvs_cols_full</p>
-<dt>&#8211;</p>
-<dd>report/pvs_sort_full</p>
-<dt>&#8211;</p>
-<dd>report/pvsegs_cols_full</p>
-<dt>&#8211;</p>
-<dd>report/pvseg_sort_full</p>
-<dt>&#8211;</p>
-<dd>report/vgs_cols_full</p>
-<dt>&#8211;</p>
-<dd>report/vgs_sort_full</p>
-<dt>&#8211;</p>
-<dd>report/lvs_cols_full</p>
-<dt>&#8211;</p>
-<dd>report/lvs_sort_full</p>
-<dt>&#8211;</p>
-<dd>report/segs_cols_full</p>
-<dt>&#8211;</p>
-<dd>report/segs_sort_full</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/pvs_cols_full</dd>
+<dt>&#8211;</dt>
+<dd>report/pvs_sort_full</dd>
+<dt>&#8211;</dt>
+<dd>report/pvsegs_cols_full</dd>
+<dt>&#8211;</dt>
+<dd>report/pvseg_sort_full</dd>
+<dt>&#8211;</dt>
+<dd>report/vgs_cols_full</dd>
+<dt>&#8211;</dt>
+<dd>report/vgs_sort_full</dd>
+<dt>&#8211;</dt>
+<dd>report/lvs_cols_full</dd>
+<dt>&#8211;</dt>
+<dd>report/lvs_sort_full</dd>
+<dt>&#8211;</dt>
+<dd>report/segs_cols_full</dd>
+<dt>&#8211;</dt>
+<dd>report/segs_sort_full</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>devtype</code> representing report about device types (<code>lvm devtypes</code>)</p>
+<dt>&bull;</dt>
+<dd><code>devtype</code> representing report about device types (<code>lvm devtypes</code>)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>report/devtypes_cols</p>
-<dt>&#8211;</p>
-<dd>report/devtypes_sort</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>report/devtypes_cols</dd>
+<dt>&#8211;</dt>
+<dd>report/devtypes_sort</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -276,18 +276,18 @@ description: "lvmreport — LVM reporting and related features"
 <p>You can enable log report with <code>log/report_command_log</code> configuration setting &#8211; this functionality is disabled by default. The <code>log report</code> contains a log collected during LVM command execution and then the log is displayed just like any other report known from main report. There is only one log report subtype as shown below together with related configuration settings for fields, sorting and selection: </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>log</code> representing log report</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>log</code> representing log report</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>log/command_log_cols</p>
-<dt>&#8211;</p>
-<dd>log/command_log_sort</p>
-<dt>&#8211;</p>
-<dd>log/command_log_selection</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>log/command_log_cols</dd>
+<dt>&#8211;</dt>
+<dd>log/command_log_sort</dd>
+<dt>&#8211;</dt>
+<dd>log/command_log_selection</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -299,94 +299,94 @@ description: "lvmreport — LVM reporting and related features"
 <p> To help with this, LVM can separate output which you can then redirect to any <code>custom file descriptor</code> that you prepare before running an LVM command or LVM shell and then you make LVM to use these file descriptors for different kinds of output by defining environment variables with file descriptor numbers. See also <code>LVM_OUT_FD</code>, <code>LVM_ERR_FD</code> and <code>LVM_REPORT_FD</code> environment variable description in <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) man page. </p>
 <p> Also note that, by default, reports use the same file descriptor as common print-like messages, which is <code>standard output</code>. If you plan to use <code>log report</code> in your scripts or any external tool, you should use <code>LVM_OUT_FD</code>, <code>LVM_ERR_FD</code> and <code>LVM_REPORT_FD</code> to separate all output types to different file descriptors. For example, with bash, that would be: </p>
 <dl>
-<dd>LVM_OUT_FD=3 LVM_ERR_FD=4 LVM_REPORT_FD=5 &lt;lvm command&gt; 3&gt;out_file 4&gt;err_file 5&gt;report_file</dl>
+<dd>LVM_OUT_FD=3 LVM_ERR_FD=4 LVM_REPORT_FD=5 &lt;lvm command&gt; 3&gt;out_file 4&gt;err_file 5&gt;report_file</dd></dl>
 <p> Where the &lt;lvm_command&gt; is either direct LVM command or LVM shell. You can collect all three types of output in particular files then. </p>
 <p> <code>Log report content</code><br />
  Each item in the log report consists of these set of fields providing various information: </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Basic information (mandatory):</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Basic information (mandatory):</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>log_seq_num<br />
- Item sequence number. The sequence number is unique for each log item and it increases in the order of the log items as they appeared during LVM command execution. </p>
-<dt>&#8211;</p>
+ Item sequence number. The sequence number is unique for each log item and it increases in the order of the log items as they appeared during LVM command execution. </dd>
+<dt>&#8211;</dt>
 <dd>log_type<br />
- Type of log for the item. Currently, these types are used:</p>
+ Type of log for the item. Currently, these types are used:</dd>
 <dl>
 <dd>
-<dl>
-<dd><code>status</code> for any status information that is logged</p>
-<dd><code>print</code> for any common message printed while the log is collected</p>
-<dd><code>error</code> for any error message printed while the log is collected</p>
-<dd><code>warn</code> for any warning message printed while the log is collected</dl>
+</dd><dl>
+<dd><code>status</code> for any status information that is logged</dd>
+<dd><code>print</code> for any common message printed while the log is collected</dd>
+<dd><code>error</code> for any error message printed while the log is collected</dd>
+<dd><code>warn</code> for any warning message printed while the log is collected</dd></dl>
 </dl>
-<dt>&#8211;</p>
+<dt>&#8211;</dt>
 <dd>log_context<br />
- Context of the log for the item. Currently, two contexts are identified:</p>
+ Context of the log for the item. Currently, two contexts are identified:</dd>
 <dl>
 <dd>
-<dl>
-<dd><code>shell</code> for the log collected in the outermost code before and after executing concrete LVM commands</p>
-<dd><code>processing</code> for the log collected while processing LVM entities during LVM command execution</dl>
+</dd><dl>
+<dd><code>shell</code> for the log collected in the outermost code before and after executing concrete LVM commands</dd>
+<dd><code>processing</code> for the log collected while processing LVM entities during LVM command execution</dd></dl>
 </dl>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd>Message (mandatory):</p>
+<dt>&bull;</dt>
+<dd>Message (mandatory):</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>log_message<br />
- Any message associated with current item. For <code>status</code> log type, the message contains either <code>success</code> or <code>failure</code> denoting current state. For <code>print</code>, <code>error</code> and <code>warn</code> log types, the message contains the exact message of that type that got issued.</dl>
+ Any message associated with current item. For <code>status</code> log type, the message contains either <code>success</code> or <code>failure</code> denoting current state. For <code>print</code>, <code>error</code> and <code>warn</code> log types, the message contains the exact message of that type that got issued.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Object information (used only if applicable):</p>
+<dt>&bull;</dt>
+<dd>Object information (used only if applicable):</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>log_object_type field<br />
- Type of the object processed. Currently, these object types are recognized:</p>
+ Type of the object processed. Currently, these object types are recognized:</dd>
 <dl>
 <dd>
-<dl>
-<dd><code>cmd</code> for command as a whole</p>
-<dd><code>orphan</code> for processing group of PVs not in any VG yet</p>
-<dd><code>pv</code> for PV processing</p>
-<dd><code>label</code> for direct PV label processing (without VG metadata)</p>
-<dd><code>vg</code> for VG processing</p>
-<dd><code>lv</code> for LV processing</dl>
+</dd><dl>
+<dd><code>cmd</code> for command as a whole</dd>
+<dd><code>orphan</code> for processing group of PVs not in any VG yet</dd>
+<dd><code>pv</code> for PV processing</dd>
+<dd><code>label</code> for direct PV label processing (without VG metadata)</dd>
+<dd><code>vg</code> for VG processing</dd>
+<dd><code>lv</code> for LV processing</dd></dl>
 </dl>
-<dt>&#8211;</p>
+<dt>&#8211;</dt>
 <dd>log_object_name<br />
- Name of the object processed. </p>
-<dt>&#8211;</p>
+ Name of the object processed. </dd>
+<dt>&#8211;</dt>
 <dd>log_object_id<br />
- ID of the object processed. </p>
-<dt>&#8211;</p>
+ ID of the object processed. </dd>
+<dt>&#8211;</dt>
 <dd>log_object_group<br />
- A group where the processed object belongs to. </p>
-<dt>&#8211;</p>
+ A group where the processed object belongs to. </dd>
+<dt>&#8211;</dt>
 <dd>log_object_group_id<br />
- An ID of a group where the processed object belongs to.</dl>
+ An ID of a group where the processed object belongs to.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Numeric status (used only if applicable)</p>
+<dt>&bull;</dt>
+<dd>Numeric status (used only if applicable)</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
+</dd><dl>
+<dt>&#8211;</dt>
 <dd>log_errno<br />
- Error number associated with current item.</p>
-<dt>&#8211;</p>
+ Error number associated with current item.</dd>
+<dt>&#8211;</dt>
 <dd>log_ret_code<br />
- Rreturn code associated with current item.</dl>
+ Rreturn code associated with current item.</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -396,49 +396,49 @@ description: "lvmreport — LVM reporting and related features"
 <p> <code>List of operators recognized in selection criteria</code></p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Comparison operators (cmp_op)</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Comparison operators (cmp_op)</dd>
 <dl>
 <dd>
-<dl>
-<dd><code>=~</code> matching regular expression.</p>
-<dd><code>!~</code> not matching regular expression.</p>
-<dd><code>= </code> equal to.</p>
-<dd><code>!=</code> not equal to.</p>
-<dd><code>&gt;=</code> greater than or equal to.</p>
-<dd><code>&gt; </code> greater than</p>
-<dd><code>&lt;=</code> less than or equal to.</p>
-<dd><code>&lt; </code> less than.</dl>
+</dd><dl>
+<dd><code>=~</code> matching regular expression.</dd>
+<dd><code>!~</code> not matching regular expression.</dd>
+<dd><code>= </code> equal to.</dd>
+<dd><code>!=</code> not equal to.</dd>
+<dd><code>&gt;=</code> greater than or equal to.</dd>
+<dd><code>&gt; </code> greater than</dd>
+<dd><code>&lt;=</code> less than or equal to.</dd>
+<dd><code>&lt; </code> less than.</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Binary logical operators (cmp_log)</p>
+<dt>&bull;</dt>
+<dd>Binary logical operators (cmp_log)</dd>
 <dl>
 <dd>
-<dl>
-<dd><code>&amp;&amp;</code> all fields must match</p>
-<dd><code>, </code> all fields must match</p>
-<dd><code>||</code> at least one field must match</p>
-<dd><code># </code> at least one field must match</dl>
+</dd><dl>
+<dd><code>&amp;&amp;</code> all fields must match</dd>
+<dd><code>, </code> all fields must match</dd>
+<dd><code>||</code> at least one field must match</dd>
+<dd><code># </code> at least one field must match</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Unary logical operators</p>
+<dt>&bull;</dt>
+<dd>Unary logical operators</dd>
 <dl>
 <dd>
-<dl>
-<dd><code>! </code> logical negation</dl>
+</dd><dl>
+<dd><code>! </code> logical negation</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>Grouping operators</p>
+<dt>&bull;</dt>
+<dd>Grouping operators</dd>
 <dl>
 <dd>
-<dl>
-<dd><code>( </code> left parenthesis</p>
-<dd><code>) </code> right parenthesis</p>
-<dd><code>[ </code> list start</p>
-<dd><code>] </code> list end</p>
-<dd><code>{ </code> list subset start</p>
-<dd><code>} </code> list subset end</dl>
+</dd><dl>
+<dd><code>( </code> left parenthesis</dd>
+<dd><code>) </code> right parenthesis</dd>
+<dd><code>[ </code> list start</dd>
+<dd><code>] </code> list end</dd>
+<dd><code>{ </code> list subset start</dd>
+<dd><code>} </code> list subset end</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -446,123 +446,123 @@ description: "lvmreport — LVM reporting and related features"
  Field type restricts the set of operators and values that you may use with the field when defining selection criteria. You can see field type for each field if you run <code>&lt;lvm command&gt; -S help</code> where you can find the type name enclosed in square brackets. Currently, LVM recognizes these field types in reports: </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>string</code> for set of characters (for each string field type, you can use either string or regular expression &#8211; regex for the value used in selection criteria)</p>
-<dt>&bull;</p>
-<dd><code>string list</code> for set of strings</p>
-<dt>&bull;</p>
-<dd><code>number</code> for integer value</p>
-<dt>&bull;</p>
-<dd><code>size</code> for integer or floating point number with size unit suffix (see also <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) man page and description for &quot;-L&#8211;size&quot; option for the list of recognized suffixes)</p>
-<dt>&bull;</p>
-<dd><code>percent</code> for floating point number with or without &quot;%&quot; suffix (e.g. 50 or 50%)</p>
-<dt>&bull;</p>
-<dd><code>time</code> for time values</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>string</code> for set of characters (for each string field type, you can use either string or regular expression &#8211; regex for the value used in selection criteria)</dd>
+<dt>&bull;</dt>
+<dd><code>string list</code> for set of strings</dd>
+<dt>&bull;</dt>
+<dd><code>number</code> for integer value</dd>
+<dt>&bull;</dt>
+<dd><code>size</code> for integer or floating point number with size unit suffix (see also <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) man page and description for &quot;-L&#8211;size&quot; option for the list of recognized suffixes)</dd>
+<dt>&bull;</dt>
+<dd><code>percent</code> for floating point number with or without &quot;%&quot; suffix (e.g. 50 or 50%)</dd>
+<dt>&bull;</dt>
+<dd><code>time</code> for time values</dd></dl>
 </dl>
 <p> When using <code>string list</code> in selection criteria, there are several ways how LVM can match string list fields from report, depending on what list grouping operator is used and what item separator is used within that set of items. Also, note that order of items does not matter here. </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>matching the set strictly</code> where all items must match &#8211; use [ ], e.g. [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</p>
-<dt>&bull;</p>
-<dd><code>matching a subset of the set</code> &#8211; use { } with &quot;,&quot; or &quot;&amp;&amp;&quot; as item delimiter, e.g. {&quot;a&quot;,&quot;b&quot;,&quot;c&quot;}</p>
-<dt>&bull;</p>
-<dd><code>matching an intersection with the set</code> &#8211; use { } with &quot;#&quot; or &quot;||&quot; as item delimiter, e.g. {&quot;a&quot; || &quot;b&quot; || &quot;c&quot;}</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>matching the set strictly</code> where all items must match &#8211; use [ ], e.g. [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</dd>
+<dt>&bull;</dt>
+<dd><code>matching a subset of the set</code> &#8211; use { } with &quot;,&quot; or &quot;&amp;&amp;&quot; as item delimiter, e.g. {&quot;a&quot;,&quot;b&quot;,&quot;c&quot;}</dd>
+<dt>&bull;</dt>
+<dd><code>matching an intersection with the set</code> &#8211; use { } with &quot;#&quot; or &quot;||&quot; as item delimiter, e.g. {&quot;a&quot; || &quot;b&quot; || &quot;c&quot;}</dd></dl>
 </dl>
 <p> When using <code>time</code> in your selection criteria, LVM can recognize various time formats using standard, absolute or freeform expressions. For examples demonstrating time expressions in selection criteria, see <code>EXAMPLES</code> section. </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>Standard time format</code> </p>
-<dl>
-<dd>
-<dl>
-<dt>&#8211;</p>
-<dd>date</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>Standard time format</code> </dd>
 <dl>
 <dd>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>date</dd>
 <dl>
-<dd>YYYY-MM-DD</p>
-<dd>YYYY-MM, auto DD=1</p>
-<dd>YYYY, auto MM=01 and DD=01</dl>
+<dd>
+</dd><dl>
+<dd>YYYY-MM-DD</dd>
+<dd>YYYY-MM, auto DD=1</dd>
+<dd>YYYY, auto MM=01 and DD=01</dd></dl>
 </dl>
-<dt>&#8211;</p>
-<dd>time</p>
+<dt>&#8211;</dt>
+<dd>time</dd>
 <dl>
 <dd>
-<dl>
-<dd>hh:mm:ss</p>
-<dd>hh:mm, auto ss=0</p>
-<dd>hh, auto mm=0, auto ss=0</dl>
+</dd><dl>
+<dd>hh:mm:ss</dd>
+<dd>hh:mm, auto ss=0</dd>
+<dd>hh, auto mm=0, auto ss=0</dd></dl>
 </dl>
-<dt>&#8211;</p>
-<dd>timezone</p>
+<dt>&#8211;</dt>
+<dd>timezone</dd>
 <dl>
 <dd>
-<dl>
-<dd>+hh:mm or -hh:mm</p>
-<dd>+hh or -hh</dl>
+</dd><dl>
+<dd>+hh:mm or -hh:mm</dd>
+<dd>+hh or -hh</dd></dl>
 </dl>
 <p> The full date/time specification is YYYY-MM-DD hh:mm:ss. Users are able to leave date/time parts from right to left. Whenever these parts are left out, a range is assumed automatically with second granularity. For example: </p>
 <dl>
 <dd>
-<dl>
-<dd>&quot;2015-07-07 9:51&quot; means range of &quot;2015-07-07 9:51:00&quot; &#8211; &quot;2015-07-07 9:51:59&quot;.</p>
-<dd>&quot;2015-07&quot; means range of &quot;2015-07-01 0:00:00&quot; &#8211; &quot;2015-07-31 23:59:59&quot;</p>
-<dd>&quot;2015&quot; means range of &quot;2015-01-01 0:00:00&quot; &#8211; &quot;2015-12-31 23:59:59&quot;</dl>
+</dd><dl>
+<dd>&quot;2015-07-07 9:51&quot; means range of &quot;2015-07-07 9:51:00&quot; &#8211; &quot;2015-07-07 9:51:59&quot;.</dd>
+<dd>&quot;2015-07&quot; means range of &quot;2015-07-01 0:00:00&quot; &#8211; &quot;2015-07-31 23:59:59&quot;</dd>
+<dd>&quot;2015&quot; means range of &quot;2015-01-01 0:00:00&quot; &#8211; &quot;2015-12-31 23:59:59&quot;</dd></dl>
 </dl>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>Absolute time format</code> </p>
+<dt>&bull;</dt>
+<dd><code>Absolute time format</code> </dd>
 <p> Absolute time is defined as number of seconds since the Epoch (1970:01:01 00:00 +00:00). </p>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>@seconds</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>@seconds</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd><code>Freeform time format</code></p>
+<dt>&bull;</dt>
+<dd><code>Freeform time format</code></dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>weekday names (&quot;Sunday&quot; &#8211; &quot;Saturday&quot; or abbreviated as &quot;Sun&quot; &#8211; &quot;Sat&quot;)</p>
-<dt>&#8211;</p>
-<dd>labels for points in time (&quot;noon&quot;, &quot;midnight&quot;)</p>
-<dt>&#8211;</p>
-<dd>labels for a day relative to current day (&quot;today&quot;, &quot;yesterday&quot;)</p>
-<dt>&#8211;</p>
-<dd>points back in time with relative offset from today (N is a number)</p>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>weekday names (&quot;Sunday&quot; &#8211; &quot;Saturday&quot; or abbreviated as &quot;Sun&quot; &#8211; &quot;Sat&quot;)</dd>
+<dt>&#8211;</dt>
+<dd>labels for points in time (&quot;noon&quot;, &quot;midnight&quot;)</dd>
+<dt>&#8211;</dt>
+<dd>labels for a day relative to current day (&quot;today&quot;, &quot;yesterday&quot;)</dd>
+<dt>&#8211;</dt>
+<dd>points back in time with relative offset from today (N is a number)</dd>
 <dl>
 <dd>
-<dl>
-<dd>&quot;N&quot; &quot;seconds&quot; / &quot;minutes&quot; / &quot;hours&quot; / &quot;days&quot; / &quot;weeks&quot; / &quot;years&quot; &quot;ago&quot;</p>
-<dd>&quot;N&quot; &quot;secs&quot; / &quot;mins&quot; / &quot;hrs&quot; &#8230; &quot;ago&quot;</p>
-<dd>&quot;N&quot; &quot;s&quot; / &quot;m&quot; / &quot;h&quot; &#8230; &quot;ago&quot;</dl>
+</dd><dl>
+<dd>&quot;N&quot; &quot;seconds&quot; / &quot;minutes&quot; / &quot;hours&quot; / &quot;days&quot; / &quot;weeks&quot; / &quot;years&quot; &quot;ago&quot;</dd>
+<dd>&quot;N&quot; &quot;secs&quot; / &quot;mins&quot; / &quot;hrs&quot; &#8230; &quot;ago&quot;</dd>
+<dd>&quot;N&quot; &quot;s&quot; / &quot;m&quot; / &quot;h&quot; &#8230; &quot;ago&quot;</dd></dl>
 </dl>
-<dt>&#8211;</p>
-<dd>time specification either in hh:mm:ss format or with AM/PM suffixes</p>
-<dt>&#8211;</p>
-<dd>month names (&quot;January&quot; &#8211; &quot;December&quot; or abbreviated as &quot;Jan&quot; &#8211; &quot;Dec&quot;)</dl>
+<dt>&#8211;</dt>
+<dd>time specification either in hh:mm:ss format or with AM/PM suffixes</dd>
+<dt>&#8211;</dt>
+<dd>month names (&quot;January&quot; &#8211; &quot;December&quot; or abbreviated as &quot;Jan&quot; &#8211; &quot;Dec&quot;)</dd></dl>
 </dl>
 </dl>
 </dl>
 <p> <code>Informal grammar specification</code></p>
 <dl>
 <dd>
-<dl>
-<dd><code>STATEMENT</code> = <code>column</code> cmp_op <code>VALUE</code> | <code>STATEMENT</code> log_op <code>STATEMENT</code> | <code>(STATEMENT)</code> | <code>!(STATEMENT)</code></p>
+</dd><dl>
+<dd><code>STATEMENT</code> = <code>column</code> cmp_op <code>VALUE</code> | <code>STATEMENT</code> log_op <code>STATEMENT</code> | <code>(STATEMENT)</code> | <code>!(STATEMENT)</code></dd>
 <dd><code>VALUE</code> = <code>[VALUE</code> log_op <code>VALUE]</code><br />
- For list-based types: string list. Matches strictly. The log_op must always be of one type within the whole list value.</p>
+ For list-based types: string list. Matches strictly. The log_op must always be of one type within the whole list value.</dd>
 <dd><code>VALUE</code> = <code>{VALUE</code> log_op <code>VALUE}</code><br />
- For list-based types: string list. Matches a subset. The log_op must always be of one type within the whole list value.</p>
+ For list-based types: string list. Matches a subset. The log_op must always be of one type within the whole list value.</dd>
 <dd><code>VALUE</code> = <code>value</code><br />
- For scalar types: number, size, percent, string (or string regex).</dl>
+ For scalar types: number, size, percent, string (or string regex).</dd></dl>
 </dl>
 <h2>Examples</h2>
 <h3>Basic usage</h3>
@@ -878,7 +878,6 @@ before - Before specified time (same as '&lt;'). [time]
  LV LV Tags 
  lvol2 tagA,tagC,tagD
  lvol0 tagA,tagB 
- 
 # lvs -o name,tags -S 'tags=tagA'
  LV LV Tags 
  lvol2 tagA,tagC,tagD
@@ -1015,7 +1014,6 @@ command_log_selection=&quot;!(log_type=status &amp;&amp; message=success)&quot;
  LV LSize Cpy%Sync
  lvol1 4.00m 100.00 
  lvol0 4.00m 
- 
  Command Log
  ===========
  Seq LogType Context ObjType ObjName ObjGrp Msg Errno RetCode</pre>
@@ -1028,7 +1026,6 @@ command_log_selection=&quot;all&quot;
  LV LSize Cpy%Sync
  lvol1 4.00m 100.00 
  lvol0 4.00m 
- 
  Command Log
  ===========
  Seq LogType Context ObjType ObjName ObjGrp Msg Errno RetCode
@@ -1050,7 +1047,6 @@ command_log_selection=&quot;all&quot;
  LV LSize
  lvol1 4.00m
  lvol0 4.00m
- 
  Command Log
  ===========
  ObjType ObjName Msg RetCode
@@ -1067,7 +1063,6 @@ lvm&gt; lvs
  LV LSize Cpy%Sync
  lvol1 4.00m 100.00 
  lvol0 4.00m 
- 
  Command Log
  ===========
  Seq LogType Context ObjType ObjName ObjGrp Msg Errno RetCode

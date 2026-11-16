@@ -13,14 +13,14 @@ description: "tld_check_4 – API function"
 int tld_check_4(const uint32_t *in, size_t inlen, size_t *errpos, const Tld_table **overrides);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const uint32_t * in</p>
-<dd>Array of unicode code points to process. Does not need to be zero terminated.</p>
-<dt>size_t inlen</p>
-<dd>Number of unicode code points.</p>
-<dt>size_t * errpos</p>
-<dd>Position of offending character is returned here.</p>
-<dt>const Tld_table ** overrides</p>
-<dd>A <code>Tld_table</code> array of additional domain restriction structures that complement and supersede the built-in information.</dl>
+<dt>const uint32_t * in</dt>
+<dd>Array of unicode code points to process. Does not need to be zero terminated.</dd>
+<dt>size_t inlen</dt>
+<dd>Number of unicode code points.</dd>
+<dt>size_t * errpos</dt>
+<dd>Position of offending character is returned here.</dd>
+<dt>const Tld_table ** overrides</dt>
+<dd>A <code>Tld_table</code> array of additional domain restriction structures that complement and supersede the built-in information.</dd></dl>
 <h2>Description</h2>
 <p>Test each of the code points in <i>in</i> for whether or not they are allowed by the information in <i>overrides</i> or by the built-in TLD restriction data. When data for the same TLD is available both internally and in <i>overrides</i>, the information in <i>overrides</i> takes precedence. If several entries for a specific TLD are found, the first one is used. If <i>overrides</i> is <code>NULL</code>, only the built-in information is used. The position of the first offending character is returned in <i>errpos</i>.</p>
 <h2>Return Value</h2>
@@ -33,5 +33,5 @@ int tld_check_4(const uint32_t *in, size_t inlen, size_t *errpos, const Tld_tabl
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

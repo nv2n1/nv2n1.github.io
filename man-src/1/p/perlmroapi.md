@@ -34,15 +34,15 @@ struct mro_alg {
 </pre>
 <dl>
 <dt>resolve
-<dd> Pointer to the linearisation function, described below.
-<dt>name
-<dd> Name of the <font SIZE="-1">MRO,</font> either in <font SIZE="-1">ISO-8859-1</font> or <font SIZE="-1">UTF-8.</font>
-<dt>length
-<dd> Length of the name.
-<dt>kflags
-<dd> If the name is given in <font SIZE="-1">UTF-8,</font> set this to <tt>&quot;HVhek_UTF8&quot;</tt>. The value is passed direct as the parameter <i>kflags</i> to <tt>&quot;hv_common()&quot;</tt>.
-<dt>hash
-<dd> A precomputed hash value for the <font SIZE="-1">MRO</font>'s name, or 0.</dl>
+</dt><dd> Pointer to the linearisation function, described below.
+</dd><dt>name
+</dt><dd> Name of the <font SIZE="-1">MRO,</font> either in <font SIZE="-1">ISO-8859-1</font> or <font SIZE="-1">UTF-8.</font>
+</dd><dt>length
+</dt><dd> Length of the name.
+</dd><dt>kflags
+</dt><dd> If the name is given in <font SIZE="-1">UTF-8,</font> set this to <tt>&quot;HVhek_UTF8&quot;</tt>. The value is passed direct as the parameter <i>kflags</i> to <tt>&quot;hv_common()&quot;</tt>.
+</dd><dt>hash
+</dt><dd> A precomputed hash value for the <font SIZE="-1">MRO</font>'s name, or 0.</dd></dl>
 
 <h2>Callbacks</h2>
 

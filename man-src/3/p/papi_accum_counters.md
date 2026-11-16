@@ -17,17 +17,17 @@ int PAPI_accum_counters( long long *values, int array_len );</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>*values</i> an array to hold the counter values of the counting events<br />
- <i>arry_len</i> the number of items in the *events array</dl>
+ <i>arry_len</i> the number of items in the *events array</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>These calls assume an initialized PAPI library and a properly added event set.</dl>
+<dd>These calls assume an initialized PAPI library and a properly added event set.</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>The counters are reset and left running after the call.</dl>
+<dd>The counters are reset and left running after the call.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.</dl>
+ <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.</dd></dl>
 <p> <code>PAPI_accum_counters()</code> adds the event counters into the array *values. </p>
 <pre>do_100events();
 if ( PAPI_read_counters( values, num_hwcntrs ) != PAPI_OK )
@@ -45,6 +45,6 @@ if ( PAPI_accum_counters(values, num_hwcntrs ) != PAPI_OK )
  * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_opt()</code> <code>PAPI_start_counters()</code></dl>
+<dd><code>PAPI_set_opt()</code> <code>PAPI_start_counters()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

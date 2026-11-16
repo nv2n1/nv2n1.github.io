@@ -11,8 +11,6 @@ description: "zcposv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zcposv (UPLO, N, NRHS, A, LDA, B, LDB, X, LDX, WORK, SWORK, RWORK, ITER, INFO)
-
-
 ZCPOSV computes the solution to system of linear equations A * X = B for PO matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zcposv (characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx, * )X, integerLDX, complex*16, dimension( n, * )WORK, complex, dimension( * )SWORK, double precision, dimension( * )RWORK, integerITER, integerINFO)</h3>
@@ -48,10 +46,10 @@ ZCPOSV computes the solution to system of linear equations A * X = B for PO matr
  o EPS is the machine epsilon returned by DLAMCH('Epsilon')
  The value ITERMAX and BWDMAX are fixed to 30 and 1.0D+00
  respectively.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre>
@@ -129,13 +127,13 @@ ZCPOSV computes the solution to system of linear equations A * X = B for PO matr
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 209 of file zcposv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

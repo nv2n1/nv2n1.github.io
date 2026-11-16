@@ -15,24 +15,24 @@ description: "dc1394_vloopback – send format0 video to V4L vloopback device"
 <p> Sends format0 640&#215;480 RGB to the vloopback input device so that it can be consumed by V4L applications on the vloopback output device.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;daemon</code></p>
-<dd> run as a daemon, detached from console (optional).</p>
-<dt><code>&#8211;pipe</code></p>
-<dd> write images to vloopback device instead of using zero-copy mmap mode (optional).</p>
-<dt><code>&#8211;guid</code></p>
-<dd> select camera to use (optional). default is first camera on any port.</p>
-<dt><code>&#8211;video1394</code></p>
-<dd> specifies video1394 device to use (optional). default is /dev/video1394/&lt;port#&gt;.</p>
-<dt><code>&#8211;vloopback</code></p>
-<dd> specifies video4linux device to use (optional). default is to determine this automatically.</p>
-<dt><code>&#8211;palette</code></p>
-<dd> specify the video palette to use (optional). yuv422 (default) or rgb24.</p>
-<dt><code>&#8211;width</code></p>
-<dd> set the initial width (default=640)</p>
-<dt><code>&#8211;height</code></p>
-<dd> set the initial height (default=480)</p>
-<dt><code>&#8211;help</code></p>
-<dd> print help message</dl>
+<dt><code>&#8211;daemon</code></dt>
+<dd> run as a daemon, detached from console (optional).</dd>
+<dt><code>&#8211;pipe</code></dt>
+<dd> write images to vloopback device instead of using zero-copy mmap mode (optional).</dd>
+<dt><code>&#8211;guid</code></dt>
+<dd> select camera to use (optional). default is first camera on any port.</dd>
+<dt><code>&#8211;video1394</code></dt>
+<dd> specifies video1394 device to use (optional). default is /dev/video1394/&lt;port#&gt;.</dd>
+<dt><code>&#8211;vloopback</code></dt>
+<dd> specifies video4linux device to use (optional). default is to determine this automatically.</dd>
+<dt><code>&#8211;palette</code></dt>
+<dd> specify the video palette to use (optional). yuv422 (default) or rgb24.</dd>
+<dt><code>&#8211;width</code></dt>
+<dd> set the initial width (default=640)</dd>
+<dt><code>&#8211;height</code></dt>
+<dd> set the initial height (default=480)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print help message</dd></dl>
 <h2>BUGS</h2>
 <p> This program is maintained by the DC1394 Package Mainteners&#8217; team &lt;libdc1394-packaging [at] lists.sourceforge.net&gt;. </p>
 <p> The bugs related to libdc1394 and current packaging can be submitted here: </p>

@@ -11,7 +11,6 @@ description: "sc::GPetite4 –"
 <p> This class provides a generalized four index petite list.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;gpetite.h&gt;</code></pre>
 <p> Inherits <code>sc::GenPetite4</code>.</p>
 <h3>Public Member Functions</h3>

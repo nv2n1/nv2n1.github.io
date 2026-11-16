@@ -11,19 +11,19 @@ description: "XtAppAddSignal, XtRemoveSignal, XtNoticeSignal – register and re
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>XtSignalId XtAppAddSignal(XtAppContext <i>app_context</i>, XtSignalCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</p>
-<dd>void XtRemoveSignal(XtSignalId <i>id</i>);</p>
-<dd>void XtNoticeSignal(XtSignalId <i>id</i>);</dl>
+<dd>XtSignalId XtAppAddSignal(XtAppContext <i>app_context</i>, XtSignalCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>void XtRemoveSignal(XtSignalId <i>id</i>);</dd>
+<dd>void XtNoticeSignal(XtSignalId <i>id</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>app_context</i></p>
-<dd>Specifies the application context.</p>
-<dt><i>client_data</i></p>
-<dd>Specifies the argument that is to be passed to the specified procedure when a signal has been raised.</p>
-<dt><i>id</i></p>
-<dd>Specifies the ID returned from the corresponding <code>XtAppAddSignal</code> call.</p>
-<dt><i>proc</i></p>
-<dd>Specifies the procedure that is to be called when the signal has been raised.</dl>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies the argument that is to be passed to the specified procedure when a signal has been raised.</dd>
+<dt><i>id</i></dt>
+<dd>Specifies the ID returned from the corresponding <code>XtAppAddSignal</code> call.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the procedure that is to be called when the signal has been raised.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtAppAddSignal</code> function initiates a mechanism for handling signals within the context of the Intrinsics. Prior to establishing an operating system dependent signal handler the application may call <code>XtAppAddSignal</code> and store the returned <i>id</i> in a place accessible to the signal handler. </p>
 <p> Upon receipt of a signal from the operating system, the application may call <code>XtNoticeSignal</code> passing the <i>id</i> returned by the call to <code>XtAppAddSignal</code>. </p>

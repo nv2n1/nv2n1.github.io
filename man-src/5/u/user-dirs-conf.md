@@ -13,17 +13,17 @@ description: "user-dirs.conf – configuration for xdg-user-dirs-update"
 <p> The following keys are recognised: </p>
 <p> enabled=<i>boolean</i></p>
 <dl>
-<dd>When set to False, xdg-user-dirs-update will not change the XDG user dirs configuration.</dl>
+<dd>When set to False, xdg-user-dirs-update will not change the XDG user dirs configuration.</dd></dl>
 <p> filename_encoding=<i>encoding</i></p>
 <dl>
-<dd>This sets the filename encoding to use. <i>encoding</i> can be an explicit encoding name, such as UTF-8, or &quot;locale&quot;, which means the encoding of the users locale will be used.</dl>
+<dd>This sets the filename encoding to use. <i>encoding</i> can be an explicit encoding name, such as UTF-8, or &quot;locale&quot;, which means the encoding of the users locale will be used.</dd></dl>
 <p> Lines beginning with a # character are ignored.</p>
 <h2>Environment</h2>
 <p><code>XDG_CONFIG_DIRS</code></p>
 <dl>
-<dd>The system-wide user-dirs.conf file is located in this directory. The default is /etc/xdg.</dl>
+<dd>The system-wide user-dirs.conf file is located in this directory. The default is /etc/xdg.</dd></dl>
 <p> <code>XDG_CONFIG_HOME</code></p>
 <dl>
-<dd>The per-user user-dirs.conf file is located in this directory. The default is $HOME/.config.</dl>
+<dd>The per-user user-dirs.conf file is located in this directory. The default is $HOME/.config.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-xdg-user-dirs-update/">xdg-user-dirs-update</a></code>(1) </p>

@@ -11,31 +11,31 @@ description: "XtClass, XtSuperclass, XtIsSubclass, XtCheckSubclass, XtIsObject, 
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>WidgetClass XtClass(Widget <i>w</i>);</p>
-<dd>WidgetClass XtSuperclass(Widget <i>w</i>);</p>
-<dd>Boolean XtIsSubclass(Widget <i>w</i>, WidgetClass <i>widget_class</i>);</p>
-<dd>void XtCheckSubclass(Widget <i>widget</i>, WidgetClass <i>widget_class</i>, String <i>message</i>);</p>
-<dd>Boolean XtIsObject(Widget <i>w</i>);</p>
-<dd>Boolean XtIsRectObj(Widget <i>w</i>);</p>
-<dd>Boolean XtIsWidget(Widget <i>w</i>);</p>
-<dd>Boolean XtIsComposite(Widget <i>w</i>);</p>
-<dd>Boolean XtIsConstraint(Widget <i>w</i>);</p>
-<dd>Boolean XtIsShell(Widget <i>w</i>);</p>
-<dd>Boolean XtIsOverrideShell(Widget <i>w</i>);</p>
-<dd>Boolean XtIsWMShell(Widget <i>w</i>);</p>
-<dd>Boolean XtIsVendorShell(Widget <i>w</i>);</p>
-<dd>Boolean XtIsTransientShell(Widget <i>w</i>);</p>
-<dd>Boolean XtIsTopLevelShell(Widget <i>w</i>);</p>
-<dd>Boolean XtIsApplicationShell(Widget <i>w</i>);</p>
-<dd>Boolean XtIsSessionShell(Widget <i>w</i>);</dl>
+<dd>WidgetClass XtClass(Widget <i>w</i>);</dd>
+<dd>WidgetClass XtSuperclass(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsSubclass(Widget <i>w</i>, WidgetClass <i>widget_class</i>);</dd>
+<dd>void XtCheckSubclass(Widget <i>widget</i>, WidgetClass <i>widget_class</i>, String <i>message</i>);</dd>
+<dd>Boolean XtIsObject(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsRectObj(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsWidget(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsComposite(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsConstraint(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsShell(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsOverrideShell(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsWMShell(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsVendorShell(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsTransientShell(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsTopLevelShell(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsApplicationShell(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsSessionShell(Widget <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</p>
-<dt><i>widget_class</i></p>
-<dd>Specifies the widget class.</p>
-<dt><i>message</i></p>
-<dd>Specifies the message that is to be used.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd>
+<dt><i>widget_class</i></dt>
+<dd>Specifies the widget class.</dd>
+<dt><i>message</i></dt>
+<dd>Specifies the message that is to be used.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtClass</code> function returns a pointer to the widget&#8217;s class structure. </p>
 <p> The <code>XtSuperclass</code> function returns a pointer to the widget&#8217;s superclass class structure. </p>

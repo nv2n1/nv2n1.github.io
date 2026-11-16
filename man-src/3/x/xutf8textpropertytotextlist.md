@@ -10,34 +10,34 @@ description: "XmbTextListToTextProperty, XwcTextListToTextProperty, Xutf8TextLis
 <p>XmbTextListToTextProperty, XwcTextListToTextProperty, Xutf8TextListToTextProperty, XmbTextPropertyToTextList, XwcTextPropertyToTextList, Xutf8TextPropertyToTextList, XwcFreeStringList, XDefaultString &#8211; convert text lists and text property structures </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XmbTextListToTextProperty(Display *<i>display</i>, char **<i>list</i>, int <i>count</i>, XICCEncodingStyle <i>style</i>, XTextProperty *<i>text_prop_return</i>);</p>
-<dd>int XwcTextListToTextProperty(Display *<i>display</i>, wchar_t **<i>list</i>, int <i>count</i>, XICCEncodingStyle <i>style</i>, XTextProperty *<i>text_prop_return</i>);</p>
-<dd>int Xutf8TextListToTextProperty(Display *<i>display</i>, char **<i>list</i>, int <i>count</i>, XICCEncodingStyle <i>style</i>, XTextProperty *<i>text_prop_return</i>);</p>
-<dd>int XmbTextPropertyToTextList(Display *<i>display</i>, XTextProperty *<i>text_prop</i>, char ***<i>list_return</i>, int *<i>count_return</i>);</p>
-<dd>int XwcTextPropertyToTextList(Display *<i>display</i>, XTextProperty *<i>text_prop</i>, wchar_t ***<i>list_return</i>, int *<i>count_return</i>);</p>
-<dd>int Xutf8TextPropertyToTextList(Display *<i>display</i>, XTextProperty *<i>text_prop</i>, char ***<i>list_return</i>, int *<i>count_return</i>);</p>
-<dd>void XwcFreeStringList(wchar_t **<i>list</i>);</p>
-<dd>char *XDefaultString(void)</dl>
+<dd>int XmbTextListToTextProperty(Display *<i>display</i>, char **<i>list</i>, int <i>count</i>, XICCEncodingStyle <i>style</i>, XTextProperty *<i>text_prop_return</i>);</dd>
+<dd>int XwcTextListToTextProperty(Display *<i>display</i>, wchar_t **<i>list</i>, int <i>count</i>, XICCEncodingStyle <i>style</i>, XTextProperty *<i>text_prop_return</i>);</dd>
+<dd>int Xutf8TextListToTextProperty(Display *<i>display</i>, char **<i>list</i>, int <i>count</i>, XICCEncodingStyle <i>style</i>, XTextProperty *<i>text_prop_return</i>);</dd>
+<dd>int XmbTextPropertyToTextList(Display *<i>display</i>, XTextProperty *<i>text_prop</i>, char ***<i>list_return</i>, int *<i>count_return</i>);</dd>
+<dd>int XwcTextPropertyToTextList(Display *<i>display</i>, XTextProperty *<i>text_prop</i>, wchar_t ***<i>list_return</i>, int *<i>count_return</i>);</dd>
+<dd>int Xutf8TextPropertyToTextList(Display *<i>display</i>, XTextProperty *<i>text_prop</i>, char ***<i>list_return</i>, int *<i>count_return</i>);</dd>
+<dd>void XwcFreeStringList(wchar_t **<i>list</i>);</dd>
+<dd>char *XDefaultString(void)</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>list</i></p>
-<dd>Specifies a list of null-terminated character strings.</p>
-<dt><i>count</i></p>
-<dd>Specifies the number of strings specified.</p>
-<dt><i>style</i></p>
-<dd>Specifies the manner in which the property is encoded.</p>
-<dt><i>text_prop_return</i></p>
-<dd>Returns the <code>XTextProperty</code> structure.</p>
-<dt><i>text_prop</i></p>
-<dd>Specifies the <code>XTextProperty</code> structure to be used.</p>
-<dt><i>list_return</i></p>
-<dd>Returns a list of null-terminated character strings.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of strings.</p>
-<dt><i>list</i></p>
-<dd>Specifies the list of strings to be freed.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>list</i></dt>
+<dd>Specifies a list of null-terminated character strings.</dd>
+<dt><i>count</i></dt>
+<dd>Specifies the number of strings specified.</dd>
+<dt><i>style</i></dt>
+<dd>Specifies the manner in which the property is encoded.</dd>
+<dt><i>text_prop_return</i></dt>
+<dd>Returns the <code>XTextProperty</code> structure.</dd>
+<dt><i>text_prop</i></dt>
+<dd>Specifies the <code>XTextProperty</code> structure to be used.</dd>
+<dt><i>list_return</i></dt>
+<dd>Returns a list of null-terminated character strings.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of strings.</dd>
+<dt><i>list</i></dt>
+<dd>Specifies the list of strings to be freed.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XmbTextListToTextProperty</code>, <code>XwcTextListToTextProperty</code> and <code>Xutf8TextListToTextProperty</code> functions set the specified <code>XTextProperty</code> value to a set of null-separated elements representing the concatenation of the specified list of null-terminated text strings. The input text strings must be given in the current locale encoding (for <code>XmbTextListToTextProperty</code> and <code>XwcTextListToTextProperty</code>), or in UTF-8 encoding (for <code>Xutf8TextListToTextProperty</code>). </p>
 <p> The functions set the encoding field of text_prop_return to an <code>Atom</code> for the specified display naming the encoding determined by the specified style and convert the specified text list to this encoding for storage in the text_prop_return value field. If the style <code>XStringStyle</code> or <code>XCompoundTextStyle</code> is specified, this encoding is &#8220;STRING&#8221; or &#8220;COMPOUND_TEXT&#8221;, respectively. If the style <code>XUTF8StringStyle</code> is specified, this encoding is &#8220;UTF8_STRING&#8221;. (This is an extension introduced by The XFree86 Project, Inc., in their 4.0.2 release. Its presence is indicated by the macro <code>X_HAVE_UTF8_STRING</code>.) If the style <code>XTextStyle</code> is specified, this encoding is the encoding of the current locale. If the style <code>XStdICCTextStyle</code> is specified, this encoding is &#8220;STRING&#8221; if the text is fully convertible to STRING, else &#8220;COMPOUND_TEXT&#8221;. A final terminating null byte is stored at the end of the value field of text_prop_return but is not included in the nitems member. </p>

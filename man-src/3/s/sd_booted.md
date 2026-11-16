@@ -10,11 +10,10 @@ description: "sd_booted – Test whether the system is running the systemd init 
 <p>sd_booted &#8211; Test whether the system is running the systemd init system</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-daemon.h&gt;
-
 int sd_booted(void);</code></pre>
 <h2>Description</h2>
 <p><code>sd_booted()</code></p>
-<dd>checks whether the system was booted up using the systemd init system.</p>
+<dd>checks whether the system was booted up using the systemd init system.</dd>
 <h2>Return Value</h2>
 <p>On failure, this call returns a negative errno-style error code. If the system was booted up with systemd as init system, this call returns a positive return value, zero otherwise.</p>
 <h2>Notes</h2>

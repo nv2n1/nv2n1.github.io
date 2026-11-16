@@ -11,16 +11,16 @@ description: "XkbAllocServerMap – Allocate and initialize an empty server map 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbAllocServerMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>count_acts</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description in which to allocate server map</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask selecting map components to allocate</p>
-<dt><i>&#8211; count_acts</i></p>
-<dd>value of num_acts field in map to be allocated</dl>
+</dd><dd>keyboard description in which to allocate server map</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask selecting map components to allocate</dd>
+<dt><i>&#8211; count_acts</i></dt>
+<dd>value of num_acts field in map to be allocated</dd></dl>
 <h2>Description</h2>
 <p><i>XkbAllocServerMap </i> allocates and initializes an empty server map in the <i>server </i> field of the keyboard description specified by <i>xkb. </i> The <i>which </i> parameter specifies the particular components of the server map structure to allocate, as specified in Table 1. </p>
 <table>
@@ -73,11 +73,11 @@ description: "XkbAllocServerMap – Allocate and initialize an empty server map 
 <p> If <i>XkbAllocServerMap </i> is successful, it returns Success. Otherwise, it can return either BadMatch or BadAlloc errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>Notes</h2>
 <p>The <i>min_key_code </i> and <i>max_key_code </i> fields of the <i>xkb </i> parameter must be legal values. If they are not valid, <i>XkbAllocServerMap </i> returns BadValue.</p>

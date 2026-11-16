@@ -12,7 +12,6 @@ std::swap(std::shared_ptr) - std::swap(std::shared_ptr)
 
 <pre><code>template &lt;class T&gt;
 (since C++ 11)
-
     void swap(shared_ptr&lt;T&gt; &amp;lhs, shared_ptr&lt;T&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::shared_ptr. Swaps the pointers of lhs and rhs. Calls lhs.swap(rhs). 
 

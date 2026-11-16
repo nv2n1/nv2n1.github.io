@@ -107,15 +107,15 @@ description: "pamlookup – map an image to a new image by using it as indices i
 <p> If you want to use two separate 1-plane images as indices (so that your output reflects the combination of both inputs), use <code>pamstack</code> to combine the two into one two-plane image (and use a 2-dimensional lookup table image). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-lookupfile=</code><i>lookupfile</i></p>
-<dd> <i>lookupfile</i> names the file that contains the PAM or PNM image that is the lookup table. This option is mandatory. </p>
-<dt><code>-missingcolor=</code><i>color</i></p>
-<dd> This option is meaningful only if the lookup image (and therefore the output) is a PNM image. <i>color</i> specifies the color that is to go in the output wherever the index from the input is not present in the lookup table (not present means the index exceeds the dimensions of the lookup image &#8212; e.g. index is 100 but the lookup image is a 50 x 1 PPM). </p>
+<dt><code>-lookupfile=</code><i>lookupfile</i></dt>
+<dd> <i>lookupfile</i> names the file that contains the PAM or PNM image that is the lookup table. This option is mandatory. </dd>
+<dt><code>-missingcolor=</code><i>color</i></dt>
+<dd> This option is meaningful only if the lookup image (and therefore the output) is a PNM image. <i>color</i> specifies the color that is to go in the output wherever the index from the input is not present in the lookup table (not present means the index exceeds the dimensions of the lookup image &#8212; e.g. index is 100 but the lookup image is a 50 x 1 PPM). </dd>
 <p> If you don&#8217;t specify this option of <code>-fit</code>, <code>pamlookup</code> uses the value from the top left corner of the lookup image whenever an index exceeds the dimensions of the lookup image. </p>
 <p> Specify the color (<i>color</i>) as described for the argument of the <code>ppm_parsecolor()</code> library routine . </p>
 <p> Another way to deal with a too-small lookup image is to use the <code>-fit</code> option. </p>
-<dt><code>-fit</code></p>
-<dd> This option says to shrink or expand the lookup image as necessary to fit the indices present in the index image, per the index image&#8217;s maxval. For example, if your index image has a single plane and a maxval of 255 and your lookup image is 1 row of 10 columns, <code>pamlookup</code> stretches your lookup image to 255 columns before doing the lookups. <code>pamlookup</code> does the stretching (or shrinking) with the <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) </p>
+<dt><code>-fit</code></dt>
+<dd> This option says to shrink or expand the lookup image as necessary to fit the indices present in the index image, per the index image&#8217;s maxval. For example, if your index image has a single plane and a maxval of 255 and your lookup image is 1 row of 10 columns, <code>pamlookup</code> stretches your lookup image to 255 columns before doing the lookups. <code>pamlookup</code> does the stretching (or shrinking) with the <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) </dd>
 <p> program. </p>
 <p> When you use <code>-fit</code>, <code>pamlookup</code> never fails or warns you due to invalid lookup image dimensions, and the <code>-missingcolor</code> option has no effect. </p>
 </dl>

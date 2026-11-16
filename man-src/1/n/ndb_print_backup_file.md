@@ -11,18 +11,18 @@ description: "ndb_print_backup_file – print NDB backup file contents"
 <p> ndb_print_backup_file &#8211; print NDB backup file contents </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndb_print_backup_file </code><i>file_name</i></dl>
+<dt> <code>ndb_print_backup_file </code><i>file_name</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ndb_print_backup_file</code></p>
-<dd>obtains diagnostic information from a cluster backup file. </p>
+<dd>obtains diagnostic information from a cluster backup file. </dd>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ndb_print_backup_file <i>file_name</i>
 </pre>
-</dl>
+</dd></dl>
 <p> <i>file_name</i> is the name of a cluster backup file. This can be any of the files (.Data, .ctl, or .log file) found in a cluster backup directory. These files are found in the data node&#8217;s backup directory under the subdirectory BACKUP-<i>#</i>, where <i>#</i> is the sequence number for the backup. For more information about cluster backup files and their contents, see Section 17.5.3.1, lqMySQL Cluster Backup Conceptsrq. </p>
 <p> Like <code>ndb_print_schema_file</code> and <code>ndb_print_sys_file</code> (and unlike most of the other NDB utilities that are intended to be run on a management server host or to connect to a management server) <code>ndb_print_backup_file</code> must be run on a cluster data node, since it accesses the data node file system directly. Because it does not make use of the management server, this utility can be used when the management server is not running, and even when the cluster has been completely shut down. </p>
 <p> <code>Additional Options</code>: None.</p>

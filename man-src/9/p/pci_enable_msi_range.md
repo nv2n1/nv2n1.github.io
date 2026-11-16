@@ -15,15 +15,15 @@ pci_enable_msi_range - configure device's MSI capability structure
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to configure</dl>
+<dl><dd></dd><dd>device to configure</dd></dl>
  
 
  <i>minvec</i>
-<dl><dd>minimal number of interrupts to configure</dl>
+<dl><dd>minimal number of interrupts to configure</dd></dl>
  
 
  <i>maxvec</i>
-<dl><dd>maximum number of interrupts to configure</dl>
+<dl><dd>maximum number of interrupts to configure</dd></dl>
 
 <h2>Description</h2>
 

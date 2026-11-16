@@ -12,10 +12,8 @@ std::experimental::atomic_weak_ptr&lt;T&gt;::atomic_weak_ptr - std::experimental
 
 <pre><code>constexpr atomic_weak_ptr() noexcept;
 (1)
-
     constexpr atomic_weak_ptr(weak_ptr&lt;T&gt; desired) noexcept;
 (2)
-
     atomic_weak_ptr(const atomic_weak_ptr &amp;) = delete;
 (3)</code></pre> 
 Constructs a new atomic_weak_ptr object. 

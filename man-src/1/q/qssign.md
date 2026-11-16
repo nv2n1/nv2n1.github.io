@@ -23,13 +23,13 @@ url: "/docs/linux/man/1-qssign/"
 
 <dl>
 <dt>-s &lt;secret&gt;
-<dd> Passphrase used to calculate signature.
-<dt>-S &lt;program&gt;
-<dd> Specifies a program which writes the passphrase to stdout.
-<dt>-e
-<dd> Writes end marker when stopping data signing.
-<dt>-v
-<dd> Verification mode checking the integrity of signed data.</dl>
+</dt><dd> Passphrase used to calculate signature.
+</dd><dt>-S &lt;program&gt;
+</dt><dd> Specifies a program which writes the passphrase to stdout.
+</dd><dt>-e
+</dt><dd> Writes end marker when stopping data signing.
+</dd><dt>-v
+</dt><dd> Verification mode checking the integrity of signed data.</dd></dl>
 
 <h2>EXAMPLE</h2>
 

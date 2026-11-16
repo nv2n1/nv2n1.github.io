@@ -19,13 +19,14 @@ description: "aleph – extended Unicode TeX"
 <h2>OPTIONS</h2>
 <p> Run aleph &#8211;help to see the complete list of options; this is not exhaustive.</p>
 <dl>
-<dt><code>&#8211;fmt</code><i>&nbsp;format</i></p>
-<dd> Use <i>format</i> as the name of the format to be used, instead of the name by which Aleph was called or a <i>%&amp;</i> line.</p>
-<dt><code>&#8211;halt-on-error</code></p>
-<dd> Exit with an error code when an error is encountered during processing.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;ini</code></p>
-<dd> Be `initial&#8217; Aleph for dumping formats; this is implicitly true if the program is called as <code>inialeph</code>.</p>
-<dt><code>&#8211;interaction</code><i>&nbsp;mode</i></p>
+<dt><code>&#8211;fmt</code><i>&nbsp;format</i></dt>
+<dd> Use <i>format</i> as the name of the format to be used, instead of the name by which Aleph was called or a <i>%&amp;</i> line.</dd>
+<dt><code>&#8211;halt-on-error</code></dt>
+<dd> Exit with an error code when an error is encountered during processing.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;ini</code></dt>
+<dd> Be `initial&#8217; Aleph for dumping formats; this is implicitly true if the program is called as <code>inialeph</code>.</dd>
+<dt><code>&#8211;interaction</code><i>&nbsp;mode</i></dt>
 <dd> Sets the interaction mode. The mode can be one of <i>batchmode</i>, <i>nonstopmode</i>, <i>scrollmode</i>, and <i>errorstopmode</i>. The meaning of these modes is the same as that of the corresponding 
+</dd></dl>

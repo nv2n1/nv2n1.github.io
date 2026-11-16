@@ -80,14 +80,14 @@ description: "snapperd_selinux – Security Enhanced Linux Policy for the snappe
 <p> <code>snapperd_conf_t</code> </p>
 <p> &#8211; Set files with the snapperd_conf_t type, if you want to treat the files as snapperd configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/snapper(/.*)?, /etc/sysconfig/snapper </p>
+<dt>Paths:</dt>
+<dd>/etc/snapper(/.*)?, /etc/sysconfig/snapper </dd>
 </dl>
 <p> <code>snapperd_data_t</code> </p>
 <p> &#8211; Set files with the snapperd_data_t type, if you want to treat the files as snapperd content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/mnt/(.*/)?.snapshots(/.*)?, /home/(.*/)?.snapshots(/.*)?, /.snapshots(/.*)?, /usr/.snapshots(/.*)?, /var/.snapshots(/.*)?, /etc/.snapshots(/.*)?, /home/.snapshots(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/mnt/(.*/)?.snapshots(/.*)?, /home/(.*/)?.snapshots(/.*)?, /.snapshots(/.*)?, /usr/.snapshots(/.*)?, /var/.snapshots(/.*)?, /etc/.snapshots(/.*)?, /home/.snapshots(/.*)? </dd>
 </dl>
 <p> <code>snapperd_exec_t</code> </p>
 <p> &#8211; Set files with the snapperd_exec_t type, if you want to transition an executable to the snapperd_t domain. </p>

@@ -61,22 +61,22 @@ description: "mailutil – mail utility program"
 <p> The arguments are standard c-client mailbox names. A variety of mailbox name formats and types of mailboxes are supported by c-client; examples of the most common forms of names are: </p>
 <p> <i></p>
 <dl>
-<dt>Name</p>
-<dd> </i> <i>Meaning</i></p>
-<dt>INBOX</p>
-<dd> primary incoming mail folder on the local system</p>
-<dt>archive/tx-project</p>
-<dd> mail folder named &quot;tx-project&quot; in &quot;archive&quot; subdirectory of local filesystem home directory</p>
-<dt>{imapserver.foo.com}INBOX</p>
-<dd> primary incoming mail folder on IMAP server system &quot;imapserver.foo.com&quot;</p>
-<dt>{imapserver.foo.com}archive/tx-project</p>
-<dd> mail folder named &quot;tx-project&quot; in &quot;archive&quot; subdirectory on IMAP server system &quot;imapserver.foo.com&quot;</p>
-<dt>#news.comp.mail.misc</p>
-<dd> newsgroup &quot;comp.mail.misc&quot; on local filesystem</p>
-<dt>{newserver.foo.com/nntp}comp.mail.misc</p>
-<dd> newsgroup &quot;comp.mail.misc&quot; on NNTP server system &quot;newserver.foo.com&quot;</p>
-<dt>{popserver.foo.com/pop3}</p>
-<dd> mail folder on POP3 server system &quot;popserver.foo.com&quot;</dl>
+<dt>Name</dt>
+<dd> </i> <i>Meaning</i></dd>
+<dt>INBOX</dt>
+<dd> primary incoming mail folder on the local system</dd>
+<dt>archive/tx-project</dt>
+<dd> mail folder named &quot;tx-project&quot; in &quot;archive&quot; subdirectory of local filesystem home directory</dd>
+<dt>{imapserver.foo.com}INBOX</dt>
+<dd> primary incoming mail folder on IMAP server system &quot;imapserver.foo.com&quot;</dd>
+<dt>{imapserver.foo.com}archive/tx-project</dt>
+<dd> mail folder named &quot;tx-project&quot; in &quot;archive&quot; subdirectory on IMAP server system &quot;imapserver.foo.com&quot;</dd>
+<dt>#news.comp.mail.misc</dt>
+<dd> newsgroup &quot;comp.mail.misc&quot; on local filesystem</dd>
+<dt>{newserver.foo.com/nntp}comp.mail.misc</dt>
+<dd> newsgroup &quot;comp.mail.misc&quot; on NNTP server system &quot;newserver.foo.com&quot;</dd>
+<dt>{popserver.foo.com/pop3}</dt>
+<dd> mail folder on POP3 server system &quot;popserver.foo.com&quot;</dd></dl>
 <p> See your system manager for more information about the types of mailboxes which are available on your system.</p>
 <h2>RESTRICTIONS</h2>
 <p> You must surround a <i>{host}mailbox</i> argument with quotation marks if you run <code>mailutil</code> from <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1) or another shell for which braces have special meaning. </p>

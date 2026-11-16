@@ -12,7 +12,6 @@ std::unique_lock&lt;Mutex&gt;::try_lock_for - std::unique_lock&lt;Mutex&gt;::try
 
 <pre><code>template &lt;class Rep, class Period&gt;
 (since C++ 11)
-
     bool try_lock_for(const std::chrono::duration&lt;Rep, Period&gt; &amp;timeout_duration);</code></pre> 
 Tries to lock the associated mutex. Blocks until specified timeout_duration has elapsed or the lock is acquired, whichever comes first. On successful lock acquisition returns true, otherwise returns false. Effectively calls mutex()-&gt;try_lock_for(timeout_duration). 
 This function may block for longer than timeout_duration due to scheduling or resource contention delays. 

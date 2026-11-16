@@ -15,14 +15,14 @@ description: "era_check – validate era metadata on device or file."
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress output messages, return only exit code.</p>
-<dt><code>&#8211;super-block-only</code></p>
-<dd>Only check the superblock is present.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress output messages, return only exit code.</dd>
+<dt><code>&#8211;super-block-only</code></dt>
+<dd>Only check the superblock is present.</dd></dl>
 <h2>Example</h2>
 <p>Analyse thin provisioning metadata on logical volume /dev/vg/metadata: </p>
 <pre> $ era_check /dev/vg/metadata</pre>

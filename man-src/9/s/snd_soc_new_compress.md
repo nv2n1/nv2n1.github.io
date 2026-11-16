@@ -15,11 +15,11 @@ snd_soc_new_compress - create a new compress.
 <h2>Arguments</h2>
 
 <i>rtd</i>
-<dl><dd><dd>The runtime for which we will create compress</dl>
+<dl><dd></dd><dd>The runtime for which we will create compress</dd></dl>
  
 
  <i>num</i>
-<dl><dd>the device index number (zero based - shared with normal PCMs)</dl>
+<dl><dd>the device index number (zero based - shared with normal PCMs)</dd></dl>
 
 <h2>Return</h2>
 

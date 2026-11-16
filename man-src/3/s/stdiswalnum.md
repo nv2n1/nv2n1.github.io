@@ -11,7 +11,6 @@ std::iswalnum - std::iswalnum
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     int iswalnum(std::wint_t ch);</code></pre> 
 Checks if the given wide character is an alphanumeric character, i.e. either a number (0123456789), an uppercase letter (ABCDEFGHIJKLMNOPQRSTUVWXYZ), a lowercase letter (abcdefghijklmnopqrstuvwxyz) or any alphanumeric character specific to the current locale. 
 If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 
@@ -31,12 +30,9 @@ ISO_30112 specifies which Unicode characters are include in POSIX alnum category
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     wchar_t c = L'\u13ad'; // the Cherokee letter HA ('Ꭽ')
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; std::boolalpha;

@@ -16,7 +16,7 @@ url: "/docs/linux/man/3-expr/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;graphviz/expr.h&gt;
 Expr_t *exopen(Exdisc_t *);
 Excc_t *exccopen(Expr_t *, Exccdisc_t *);
@@ -38,7 +38,7 @@ void exstatement(Expr_t *);
 int extoken(Expr_t *);
 char *extype(int);
 Extype_t exzero(int);
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
 <h2>DESCRIPTION</h2>

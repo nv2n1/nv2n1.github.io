@@ -10,7 +10,6 @@ description: "text_length – Returns the length of a string in pixels. Allegro 
 <p>text_length &#8211; Returns the length of a string in pixels. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int text_length(const FONT *f, const char *str);</code></pre>
 <h2>Description</h2>
 <p>Returns the length (in pixels) of a string in the specified font. Example: </p>

@@ -22,6 +22,6 @@ description: "QuantLib::BespokeCalendar – Bespoke calendar."
 <h3><code>BespokeCalendar</code> (const std::string &amp; name = &#8221;)</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>different bespoke calendars created with the same name (or different bespoke calendars created with no name) will compare as equal.</dl>
+<dd>different bespoke calendars created with the same name (or different bespoke calendars created with no name) will compare as equal.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

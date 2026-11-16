@@ -15,14 +15,14 @@ description: "lxc-usernet – unprivileged user network administration file."
 <p> <code>user</code> <code>type</code> <code>bridge</code> <code>number</code> </p>
 <p> Where</p>
 <dl>
-<dt><code>user</code></p>
-<dd>is the username to whom this entry applies.</p>
-<dt><code>type</code></p>
-<dd>is the type of network interface being allowed. Only veth is currently supported.</p>
-<dt><code>bridge</code></p>
-<dd>is the bridge to which the network interfaces may be attached, for instance <i>lxcbr0</i>.</p>
-<dt><code>number</code></p>
-<dd>is the number of network interfaces of the given type which the given user may attach to the given bridge, for instance <i>2</i>.</dl>
+<dt><code>user</code></dt>
+<dd>is the username to whom this entry applies.</dd>
+<dt><code>type</code></dt>
+<dd>is the type of network interface being allowed. Only veth is currently supported.</dd>
+<dt><code>bridge</code></dt>
+<dd>is the bridge to which the network interfaces may be attached, for instance <i>lxcbr0</i>.</dd>
+<dt><code>number</code></dt>
+<dd>is the number of network interfaces of the given type which the given user may attach to the given bridge, for instance <i>2</i>.</dd></dl>
 <h2>See Also</h2>
 <p><code>lxc</code>(1), <code><a href="/docs/linux/man/1-lxc-user-nic/">lxc-user-nic</a></code>(1)</p>
 <h2>Author</h2>

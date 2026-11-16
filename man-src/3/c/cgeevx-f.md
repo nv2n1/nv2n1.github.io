@@ -43,10 +43,10 @@ description: "cgeevx.f –"
  (in exact arithmetic) but diagonal scaling will. For further
  explanation of balancing, see section 4.10.2 of the LAPACK
  Users' Guide.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>BALANC</i> </p>
+<dd><i>BALANC</i> </dd>
 <pre> BALANC is CHARACTER*1
  Indicates how the input matrix should be diagonally scaled
  and/or permuted to improve the conditioning of its
@@ -174,13 +174,13 @@ description: "cgeevx.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 284 of file cgeevx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

@@ -15,10 +15,10 @@ description: "listbasic – Extract the BASIC from a ZX Spectrum file"
 <p> listbasic extracts the BASIC listing from a ZX Spectrum snapshot or tape file and prints it to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-b</i></p>
-<dd> specifies that the program to list is a Beta BASIC program.</p>
-<dt><i>file</i></p>
-<dd> specifies a snapshot or tape image from which to extract the BASIC, which must be in a format supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3).</dl>
+<dt><i>-b</i></dt>
+<dd> specifies that the program to list is a Beta BASIC program.</dd>
+<dt><i>file</i></dt>
+<dd> specifies a snapshot or tape image from which to extract the BASIC, which must be in a format supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3).</dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>SEE ALSO</h2>

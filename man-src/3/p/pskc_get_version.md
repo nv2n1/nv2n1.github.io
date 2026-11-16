@@ -13,8 +13,8 @@ description: "pskc_get_version – API function"
 const char *pskc_get_version(pskc_t *container);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyContainer Version attribute. Normally this string is always &quot;1.0&quot; and a missing field is a syntax error according to the PSKC schema.</p>
 <h2>Returns</h2>

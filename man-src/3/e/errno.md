@@ -28,278 +28,278 @@ description: "errno – number of last error"
 <h3>List of error names</h3>
 <p> In the list of the symbolic error names below, various names are marked as follows:</p>
 <dl>
-<dt>*</p>
-<dd> <i>POSIX.1-2001</i>: The name is defined by POSIX.1-2001, and is defined in later POSIX.1 versions, unless otherwise indicated.</p>
-<dt>*</p>
-<dd> <i>POSIX.1-2008</i>: The name is defined in POSIX.1-2008, but was not present in earlier POSIX.1 standards.</p>
-<dt>*</p>
-<dd> <i>C99</i>: The name is defined by C99.</dl>
+<dt>*</dt>
+<dd> <i>POSIX.1-2001</i>: The name is defined by POSIX.1-2001, and is defined in later POSIX.1 versions, unless otherwise indicated.</dd>
+<dt>*</dt>
+<dd> <i>POSIX.1-2008</i>: The name is defined in POSIX.1-2008, but was not present in earlier POSIX.1 standards.</dd>
+<dt>*</dt>
+<dd> <i>C99</i>: The name is defined by C99.</dd></dl>
 <p> Below is a list of the symbolic error names that are defined on Linux:</p>
 <dl>
-<dt><code>E2BIG</code></p>
-<dd> Argument list too long (POSIX.1-2001).</p>
-<dt><code>EACCES</code></p>
-<dd> Permission denied (POSIX.1-2001).</p>
-<dt><code>EADDRINUSE</code></p>
-<dd> Address already in use (POSIX.1-2001).</p>
-<dt><code>EADDRNOTAVAIL</code></p>
-<dd> Address not available (POSIX.1-2001).</p>
-<dt><code>EAFNOSUPPORT</code></p>
-<dd> Address family not supported (POSIX.1-2001).</p>
-<dt><code>EAGAIN</code></p>
-<dd> Resource temporarily unavailable (may be the same value as <code>EWOULDBLOCK</code>) (POSIX.1-2001).</p>
-<dt><code>EALREADY</code></p>
-<dd> Connection already in progress (POSIX.1-2001).</p>
-<dt><code>EBADE</code></p>
-<dd> Invalid exchange.</p>
-<dt><code>EBADF</code></p>
-<dd> Bad file descriptor (POSIX.1-2001).</p>
-<dt><code>EBADFD</code></p>
-<dd> File descriptor in bad state.</p>
-<dt><code>EBADMSG</code></p>
-<dd> Bad message (POSIX.1-2001).</p>
-<dt><code>EBADR</code></p>
-<dd> Invalid request descriptor.</p>
-<dt><code>EBADRQC</code></p>
-<dd> Invalid request code.</p>
-<dt><code>EBADSLT</code></p>
-<dd> Invalid slot.</p>
-<dt><code>EBUSY</code></p>
-<dd> Device or resource busy (POSIX.1-2001).</p>
-<dt><code>ECANCELED</code></p>
-<dd> Operation canceled (POSIX.1-2001).</p>
-<dt><code>ECHILD</code></p>
-<dd> No child processes (POSIX.1-2001).</p>
-<dt><code>ECHRNG</code></p>
-<dd> Channel number out of range.</p>
-<dt><code>ECOMM</code></p>
-<dd> Communication error on send.</p>
-<dt><code>ECONNABORTED</code></p>
-<dd> Connection aborted (POSIX.1-2001).</p>
-<dt><code>ECONNREFUSED</code></p>
-<dd> Connection refused (POSIX.1-2001).</p>
-<dt><code>ECONNRESET</code></p>
-<dd> Connection reset (POSIX.1-2001).</p>
-<dt><code>EDEADLK</code></p>
-<dd> Resource deadlock avoided (POSIX.1-2001).</p>
-<dt><code>EDEADLOCK</code></p>
-<dd> On most architectures, a synonym for <code>EDEADLK</code>. On some architectures (e.g., Linux MIPS, PowerPC, SPARC), it is a separate error code &quot;File locking deadlock error&quot;.</p>
-<dt><code>EDESTADDRREQ</code></p>
-<dd> Destination address required (POSIX.1-2001).</p>
-<dt><code>EDOM</code></p>
-<dd> Mathematics argument out of domain of function (POSIX.1, C99).</p>
-<dt><code>EDQUOT</code></p>
-<dd> Disk quota exceeded (POSIX.1-2001).</p>
-<dt><code>EEXIST</code></p>
-<dd> File exists (POSIX.1-2001).</p>
-<dt><code>EFAULT</code></p>
-<dd> Bad address (POSIX.1-2001).</p>
-<dt><code>EFBIG</code></p>
-<dd> File too large (POSIX.1-2001).</p>
-<dt><code>EHOSTDOWN</code></p>
-<dd> Host is down.</p>
-<dt><code>EHOSTUNREACH</code></p>
-<dd> Host is unreachable (POSIX.1-2001).</p>
-<dt><code>EHWPOISON</code></p>
-<dd> Memory page has hardware error.</p>
-<dt><code>EIDRM</code></p>
-<dd> Identifier removed (POSIX.1-2001).</p>
-<dt><code>EILSEQ</code></p>
-<dd> Invalid or incomplete multibyte or wide character (POSIX.1, C99).</p>
+<dt><code>E2BIG</code></dt>
+<dd> Argument list too long (POSIX.1-2001).</dd>
+<dt><code>EACCES</code></dt>
+<dd> Permission denied (POSIX.1-2001).</dd>
+<dt><code>EADDRINUSE</code></dt>
+<dd> Address already in use (POSIX.1-2001).</dd>
+<dt><code>EADDRNOTAVAIL</code></dt>
+<dd> Address not available (POSIX.1-2001).</dd>
+<dt><code>EAFNOSUPPORT</code></dt>
+<dd> Address family not supported (POSIX.1-2001).</dd>
+<dt><code>EAGAIN</code></dt>
+<dd> Resource temporarily unavailable (may be the same value as <code>EWOULDBLOCK</code>) (POSIX.1-2001).</dd>
+<dt><code>EALREADY</code></dt>
+<dd> Connection already in progress (POSIX.1-2001).</dd>
+<dt><code>EBADE</code></dt>
+<dd> Invalid exchange.</dd>
+<dt><code>EBADF</code></dt>
+<dd> Bad file descriptor (POSIX.1-2001).</dd>
+<dt><code>EBADFD</code></dt>
+<dd> File descriptor in bad state.</dd>
+<dt><code>EBADMSG</code></dt>
+<dd> Bad message (POSIX.1-2001).</dd>
+<dt><code>EBADR</code></dt>
+<dd> Invalid request descriptor.</dd>
+<dt><code>EBADRQC</code></dt>
+<dd> Invalid request code.</dd>
+<dt><code>EBADSLT</code></dt>
+<dd> Invalid slot.</dd>
+<dt><code>EBUSY</code></dt>
+<dd> Device or resource busy (POSIX.1-2001).</dd>
+<dt><code>ECANCELED</code></dt>
+<dd> Operation canceled (POSIX.1-2001).</dd>
+<dt><code>ECHILD</code></dt>
+<dd> No child processes (POSIX.1-2001).</dd>
+<dt><code>ECHRNG</code></dt>
+<dd> Channel number out of range.</dd>
+<dt><code>ECOMM</code></dt>
+<dd> Communication error on send.</dd>
+<dt><code>ECONNABORTED</code></dt>
+<dd> Connection aborted (POSIX.1-2001).</dd>
+<dt><code>ECONNREFUSED</code></dt>
+<dd> Connection refused (POSIX.1-2001).</dd>
+<dt><code>ECONNRESET</code></dt>
+<dd> Connection reset (POSIX.1-2001).</dd>
+<dt><code>EDEADLK</code></dt>
+<dd> Resource deadlock avoided (POSIX.1-2001).</dd>
+<dt><code>EDEADLOCK</code></dt>
+<dd> On most architectures, a synonym for <code>EDEADLK</code>. On some architectures (e.g., Linux MIPS, PowerPC, SPARC), it is a separate error code &quot;File locking deadlock error&quot;.</dd>
+<dt><code>EDESTADDRREQ</code></dt>
+<dd> Destination address required (POSIX.1-2001).</dd>
+<dt><code>EDOM</code></dt>
+<dd> Mathematics argument out of domain of function (POSIX.1, C99).</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> Disk quota exceeded (POSIX.1-2001).</dd>
+<dt><code>EEXIST</code></dt>
+<dd> File exists (POSIX.1-2001).</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Bad address (POSIX.1-2001).</dd>
+<dt><code>EFBIG</code></dt>
+<dd> File too large (POSIX.1-2001).</dd>
+<dt><code>EHOSTDOWN</code></dt>
+<dd> Host is down.</dd>
+<dt><code>EHOSTUNREACH</code></dt>
+<dd> Host is unreachable (POSIX.1-2001).</dd>
+<dt><code>EHWPOISON</code></dt>
+<dd> Memory page has hardware error.</dd>
+<dt><code>EIDRM</code></dt>
+<dd> Identifier removed (POSIX.1-2001).</dd>
+<dt><code>EILSEQ</code></dt>
+<dd> Invalid or incomplete multibyte or wide character (POSIX.1, C99).</dd>
 <dt>
-<dd> The text shown here is the glibc error description; in POSIX.1, this error is described as &quot;Illegal byte sequence&quot;.</p>
-<dt><code>EINPROGRESS</code></p>
-<dd> Operation in progress (POSIX.1-2001).</p>
-<dt><code>EINTR</code></p>
-<dd> Interrupted function call (POSIX.1-2001); see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid argument (POSIX.1-2001).</p>
-<dt><code>EIO</code></p>
-<dd> Input/output error (POSIX.1-2001).</p>
-<dt><code>EISCONN</code></p>
-<dd> Socket is connected (POSIX.1-2001).</p>
-<dt><code>EISDIR</code></p>
-<dd> Is a directory (POSIX.1-2001).</p>
-<dt><code>EISNAM</code></p>
-<dd> Is a named type file.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> Key has expired.</p>
-<dt><code>EKEYREJECTED</code></p>
-<dd> Key was rejected by service.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> Key has been revoked.</p>
-<dt><code>EL2HLT</code></p>
-<dd> Level 2 halted.</p>
-<dt><code>EL2NSYNC</code></p>
-<dd> Level 2 not synchronized.</p>
-<dt><code>EL3HLT</code></p>
-<dd> Level 3 halted.</p>
-<dt><code>EL3RST</code></p>
-<dd> Level 3 reset.</p>
-<dt><code>ELIBACC</code></p>
-<dd> Cannot access a needed shared library.</p>
-<dt><code>ELIBBAD</code></p>
-<dd> Accessing a corrupted shared library.</p>
-<dt><code>ELIBMAX</code></p>
-<dd> Attempting to link in too many shared libraries.</p>
-<dt><code>ELIBSCN</code></p>
-<dd> .lib section in a.out corrupted</p>
-<dt><code>ELIBEXEC</code></p>
-<dd> Cannot exec a shared library directly.</p>
-<dt><code>ELNRANGE</code></p>
-<dd> Link number out of range.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many levels of symbolic links (POSIX.1-2001).</p>
-<dt><code>EMEDIUMTYPE</code></p>
-<dd> Wrong medium type.</p>
-<dt><code>EMFILE</code></p>
-<dd> Too many open files (POSIX.1-2001). Commonly caused by exceeding the <code>RLIMIT_NOFILE</code> resource limit described in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2). Can also be caused by exceeding the limit specified in <i>/proc/sys/fs/nr_open</i>.</p>
-<dt><code>EMLINK</code></p>
-<dd> Too many links (POSIX.1-2001).</p>
-<dt><code>EMSGSIZE</code></p>
-<dd> Message too long (POSIX.1-2001).</p>
-<dt><code>EMULTIHOP</code></p>
-<dd> Multihop attempted (POSIX.1-2001).</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> Filename too long (POSIX.1-2001).</p>
-<dt><code>ENETDOWN</code></p>
-<dd> Network is down (POSIX.1-2001).</p>
-<dt><code>ENETRESET</code></p>
-<dd> Connection aborted by network (POSIX.1-2001).</p>
-<dt><code>ENETUNREACH</code></p>
-<dd> Network unreachable (POSIX.1-2001).</p>
-<dt><code>ENFILE</code></p>
-<dd> Too many open files in system (POSIX.1-2001). On Linux, this is probably a result of encountering the <i>/proc/sys/fs/file-max</i> limit (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</p>
-<dt><code>ENOANO</code></p>
-<dd> No anode.</p>
-<dt><code>ENOBUFS</code></p>
-<dd> No buffer space available (POSIX.1 (XSI STREAMS option)).</p>
-<dt><code>ENODATA</code></p>
-<dd> No message is available on the STREAM head read queue (POSIX.1-2001).</p>
-<dt><code>ENODEV</code></p>
-<dd> No such device (POSIX.1-2001).</p>
-<dt><code>ENOENT</code></p>
-<dd> No such file or directory (POSIX.1-2001).</p>
+</dt><dd> The text shown here is the glibc error description; in POSIX.1, this error is described as &quot;Illegal byte sequence&quot;.</dd>
+<dt><code>EINPROGRESS</code></dt>
+<dd> Operation in progress (POSIX.1-2001).</dd>
+<dt><code>EINTR</code></dt>
+<dd> Interrupted function call (POSIX.1-2001); see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid argument (POSIX.1-2001).</dd>
+<dt><code>EIO</code></dt>
+<dd> Input/output error (POSIX.1-2001).</dd>
+<dt><code>EISCONN</code></dt>
+<dd> Socket is connected (POSIX.1-2001).</dd>
+<dt><code>EISDIR</code></dt>
+<dd> Is a directory (POSIX.1-2001).</dd>
+<dt><code>EISNAM</code></dt>
+<dd> Is a named type file.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> Key has expired.</dd>
+<dt><code>EKEYREJECTED</code></dt>
+<dd> Key was rejected by service.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> Key has been revoked.</dd>
+<dt><code>EL2HLT</code></dt>
+<dd> Level 2 halted.</dd>
+<dt><code>EL2NSYNC</code></dt>
+<dd> Level 2 not synchronized.</dd>
+<dt><code>EL3HLT</code></dt>
+<dd> Level 3 halted.</dd>
+<dt><code>EL3RST</code></dt>
+<dd> Level 3 reset.</dd>
+<dt><code>ELIBACC</code></dt>
+<dd> Cannot access a needed shared library.</dd>
+<dt><code>ELIBBAD</code></dt>
+<dd> Accessing a corrupted shared library.</dd>
+<dt><code>ELIBMAX</code></dt>
+<dd> Attempting to link in too many shared libraries.</dd>
+<dt><code>ELIBSCN</code></dt>
+<dd> .lib section in a.out corrupted</dd>
+<dt><code>ELIBEXEC</code></dt>
+<dd> Cannot exec a shared library directly.</dd>
+<dt><code>ELNRANGE</code></dt>
+<dd> Link number out of range.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many levels of symbolic links (POSIX.1-2001).</dd>
+<dt><code>EMEDIUMTYPE</code></dt>
+<dd> Wrong medium type.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> Too many open files (POSIX.1-2001). Commonly caused by exceeding the <code>RLIMIT_NOFILE</code> resource limit described in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2). Can also be caused by exceeding the limit specified in <i>/proc/sys/fs/nr_open</i>.</dd>
+<dt><code>EMLINK</code></dt>
+<dd> Too many links (POSIX.1-2001).</dd>
+<dt><code>EMSGSIZE</code></dt>
+<dd> Message too long (POSIX.1-2001).</dd>
+<dt><code>EMULTIHOP</code></dt>
+<dd> Multihop attempted (POSIX.1-2001).</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> Filename too long (POSIX.1-2001).</dd>
+<dt><code>ENETDOWN</code></dt>
+<dd> Network is down (POSIX.1-2001).</dd>
+<dt><code>ENETRESET</code></dt>
+<dd> Connection aborted by network (POSIX.1-2001).</dd>
+<dt><code>ENETUNREACH</code></dt>
+<dd> Network unreachable (POSIX.1-2001).</dd>
+<dt><code>ENFILE</code></dt>
+<dd> Too many open files in system (POSIX.1-2001). On Linux, this is probably a result of encountering the <i>/proc/sys/fs/file-max</i> limit (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</dd>
+<dt><code>ENOANO</code></dt>
+<dd> No anode.</dd>
+<dt><code>ENOBUFS</code></dt>
+<dd> No buffer space available (POSIX.1 (XSI STREAMS option)).</dd>
+<dt><code>ENODATA</code></dt>
+<dd> No message is available on the STREAM head read queue (POSIX.1-2001).</dd>
+<dt><code>ENODEV</code></dt>
+<dd> No such device (POSIX.1-2001).</dd>
+<dt><code>ENOENT</code></dt>
+<dd> No such file or directory (POSIX.1-2001).</dd>
 <dt>
-<dd> Typically, this error results when a specified pathname does not exist, or one of the components in the directory prefix of a pathname does not exist, or the specified pathname is a dangling symbolic link.</p>
-<dt><code>ENOEXEC</code></p>
-<dd> Exec format error (POSIX.1-2001).</p>
-<dt><code>ENOKEY</code></p>
-<dd> Required key not available.</p>
-<dt><code>ENOLCK</code></p>
-<dd> No locks available (POSIX.1-2001).</p>
-<dt><code>ENOLINK</code></p>
-<dd> Link has been severed (POSIX.1-2001).</p>
-<dt><code>ENOMEDIUM</code></p>
-<dd> No medium found.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Not enough space/cannot allocate memory (POSIX.1-2001).</p>
-<dt><code>ENOMSG</code></p>
-<dd> No message of the desired type (POSIX.1-2001).</p>
-<dt><code>ENONET</code></p>
-<dd> Machine is not on the network.</p>
-<dt><code>ENOPKG</code></p>
-<dd> Package not installed.</p>
-<dt><code>ENOPROTOOPT</code></p>
-<dd> Protocol not available (POSIX.1-2001).</p>
-<dt><code>ENOSPC</code></p>
-<dd> No space left on device (POSIX.1-2001).</p>
-<dt><code>ENOSR</code></p>
-<dd> No STREAM resources (POSIX.1 (XSI STREAMS option)).</p>
-<dt><code>ENOSTR</code></p>
-<dd> Not a STREAM (POSIX.1 (XSI STREAMS option)).</p>
-<dt><code>ENOSYS</code></p>
-<dd> Function not implemented (POSIX.1-2001).</p>
-<dt><code>ENOTBLK</code></p>
-<dd> Block device required.</p>
-<dt><code>ENOTCONN</code></p>
-<dd> The socket is not connected (POSIX.1-2001).</p>
-<dt><code>ENOTDIR</code></p>
-<dd> Not a directory (POSIX.1-2001).</p>
-<dt><code>ENOTEMPTY</code></p>
-<dd> Directory not empty (POSIX.1-2001).</p>
-<dt><code>ENOTRECOVERABLE</code></p>
-<dd> State not recoverable (POSIX.1-2008).</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> Not a socket (POSIX.1-2001).</p>
-<dt><code>ENOTSUP</code></p>
-<dd> Operation not supported (POSIX.1-2001).</p>
-<dt><code>ENOTTY</code></p>
-<dd> Inappropriate I/O control operation (POSIX.1-2001).</p>
-<dt><code>ENOTUNIQ</code></p>
-<dd> Name not unique on network.</p>
-<dt><code>ENXIO</code></p>
-<dd> No such device or address (POSIX.1-2001).</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> Operation not supported on socket (POSIX.1-2001).</p>
+</dt><dd> Typically, this error results when a specified pathname does not exist, or one of the components in the directory prefix of a pathname does not exist, or the specified pathname is a dangling symbolic link.</dd>
+<dt><code>ENOEXEC</code></dt>
+<dd> Exec format error (POSIX.1-2001).</dd>
+<dt><code>ENOKEY</code></dt>
+<dd> Required key not available.</dd>
+<dt><code>ENOLCK</code></dt>
+<dd> No locks available (POSIX.1-2001).</dd>
+<dt><code>ENOLINK</code></dt>
+<dd> Link has been severed (POSIX.1-2001).</dd>
+<dt><code>ENOMEDIUM</code></dt>
+<dd> No medium found.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Not enough space/cannot allocate memory (POSIX.1-2001).</dd>
+<dt><code>ENOMSG</code></dt>
+<dd> No message of the desired type (POSIX.1-2001).</dd>
+<dt><code>ENONET</code></dt>
+<dd> Machine is not on the network.</dd>
+<dt><code>ENOPKG</code></dt>
+<dd> Package not installed.</dd>
+<dt><code>ENOPROTOOPT</code></dt>
+<dd> Protocol not available (POSIX.1-2001).</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> No space left on device (POSIX.1-2001).</dd>
+<dt><code>ENOSR</code></dt>
+<dd> No STREAM resources (POSIX.1 (XSI STREAMS option)).</dd>
+<dt><code>ENOSTR</code></dt>
+<dd> Not a STREAM (POSIX.1 (XSI STREAMS option)).</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> Function not implemented (POSIX.1-2001).</dd>
+<dt><code>ENOTBLK</code></dt>
+<dd> Block device required.</dd>
+<dt><code>ENOTCONN</code></dt>
+<dd> The socket is not connected (POSIX.1-2001).</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> Not a directory (POSIX.1-2001).</dd>
+<dt><code>ENOTEMPTY</code></dt>
+<dd> Directory not empty (POSIX.1-2001).</dd>
+<dt><code>ENOTRECOVERABLE</code></dt>
+<dd> State not recoverable (POSIX.1-2008).</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> Not a socket (POSIX.1-2001).</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> Operation not supported (POSIX.1-2001).</dd>
+<dt><code>ENOTTY</code></dt>
+<dd> Inappropriate I/O control operation (POSIX.1-2001).</dd>
+<dt><code>ENOTUNIQ</code></dt>
+<dd> Name not unique on network.</dd>
+<dt><code>ENXIO</code></dt>
+<dd> No such device or address (POSIX.1-2001).</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> Operation not supported on socket (POSIX.1-2001).</dd>
 <dt>
-<dd> (<code>ENOTSUP</code> and <code>EOPNOTSUPP</code> have the same value on Linux, but according to POSIX.1 these error values should be distinct.)</p>
-<dt><code>EOVERFLOW</code></p>
-<dd> Value too large to be stored in data type (POSIX.1-2001).</p>
-<dt><code>EOWNERDEAD</code></p>
-<dd> Owner died (POSIX.1-2008).</p>
-<dt><code>EPERM</code></p>
-<dd> Operation not permitted (POSIX.1-2001).</p>
-<dt><code>EPFNOSUPPORT</code></p>
-<dd> Protocol family not supported.</p>
-<dt><code>EPIPE</code></p>
-<dd> Broken pipe (POSIX.1-2001).</p>
-<dt><code>EPROTO</code></p>
-<dd> Protocol error (POSIX.1-2001).</p>
-<dt><code>EPROTONOSUPPORT</code></p>
-<dd> Protocol not supported (POSIX.1-2001).</p>
-<dt><code>EPROTOTYPE</code></p>
-<dd> Protocol wrong type for socket (POSIX.1-2001).</p>
-<dt><code>ERANGE</code></p>
-<dd> Result too large (POSIX.1, C99).</p>
-<dt><code>EREMCHG</code></p>
-<dd> Remote address changed.</p>
-<dt><code>EREMOTE</code></p>
-<dd> Object is remote.</p>
-<dt><code>EREMOTEIO</code></p>
-<dd> Remote I/O error.</p>
-<dt><code>ERESTART</code></p>
-<dd> Interrupted system call should be restarted.</p>
-<dt><code>ERFKILL</code></p>
-<dd> Operation not possible due to RF-kill.</p>
-<dt><code>EROFS</code></p>
-<dd> Read-only filesystem (POSIX.1-2001).</p>
-<dt><code>ESHUTDOWN</code></p>
-<dd> Cannot send after transport endpoint shutdown.</p>
-<dt><code>ESPIPE</code></p>
-<dd> Invalid seek (POSIX.1-2001).</p>
-<dt><code>ESOCKTNOSUPPORT</code></p>
-<dd> Socket type not supported.</p>
-<dt><code>ESRCH</code></p>
-<dd> No such process (POSIX.1-2001).</p>
-<dt><code>ESTALE</code></p>
-<dd> Stale file handle (POSIX.1-2001).</p>
+</dt><dd> (<code>ENOTSUP</code> and <code>EOPNOTSUPP</code> have the same value on Linux, but according to POSIX.1 these error values should be distinct.)</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd> Value too large to be stored in data type (POSIX.1-2001).</dd>
+<dt><code>EOWNERDEAD</code></dt>
+<dd> Owner died (POSIX.1-2008).</dd>
+<dt><code>EPERM</code></dt>
+<dd> Operation not permitted (POSIX.1-2001).</dd>
+<dt><code>EPFNOSUPPORT</code></dt>
+<dd> Protocol family not supported.</dd>
+<dt><code>EPIPE</code></dt>
+<dd> Broken pipe (POSIX.1-2001).</dd>
+<dt><code>EPROTO</code></dt>
+<dd> Protocol error (POSIX.1-2001).</dd>
+<dt><code>EPROTONOSUPPORT</code></dt>
+<dd> Protocol not supported (POSIX.1-2001).</dd>
+<dt><code>EPROTOTYPE</code></dt>
+<dd> Protocol wrong type for socket (POSIX.1-2001).</dd>
+<dt><code>ERANGE</code></dt>
+<dd> Result too large (POSIX.1, C99).</dd>
+<dt><code>EREMCHG</code></dt>
+<dd> Remote address changed.</dd>
+<dt><code>EREMOTE</code></dt>
+<dd> Object is remote.</dd>
+<dt><code>EREMOTEIO</code></dt>
+<dd> Remote I/O error.</dd>
+<dt><code>ERESTART</code></dt>
+<dd> Interrupted system call should be restarted.</dd>
+<dt><code>ERFKILL</code></dt>
+<dd> Operation not possible due to RF-kill.</dd>
+<dt><code>EROFS</code></dt>
+<dd> Read-only filesystem (POSIX.1-2001).</dd>
+<dt><code>ESHUTDOWN</code></dt>
+<dd> Cannot send after transport endpoint shutdown.</dd>
+<dt><code>ESPIPE</code></dt>
+<dd> Invalid seek (POSIX.1-2001).</dd>
+<dt><code>ESOCKTNOSUPPORT</code></dt>
+<dd> Socket type not supported.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No such process (POSIX.1-2001).</dd>
+<dt><code>ESTALE</code></dt>
+<dd> Stale file handle (POSIX.1-2001).</dd>
 <dt>
-<dd> This error can occur for NFS and for other filesystems.</p>
-<dt><code>ESTRPIPE</code></p>
-<dd> Streams pipe error.</p>
-<dt><code>ETIME</code></p>
-<dd> Timer expired (POSIX.1 (XSI STREAMS option)).</p>
+</dt><dd> This error can occur for NFS and for other filesystems.</dd>
+<dt><code>ESTRPIPE</code></dt>
+<dd> Streams pipe error.</dd>
+<dt><code>ETIME</code></dt>
+<dd> Timer expired (POSIX.1 (XSI STREAMS option)).</dd>
 <dt>
-<dd> (POSIX.1 says &quot;STREAM <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) timeout&quot;.)</p>
-<dt><code>ETIMEDOUT</code></p>
-<dd> Connection timed out (POSIX.1-2001).</p>
-<dt><code>ETOOMANYREFS</code></p>
-<dd> Too many references: cannot splice.</p>
-<dt><code>ETXTBSY</code></p>
-<dd> Text file busy (POSIX.1-2001).</p>
-<dt><code>EUCLEAN</code></p>
-<dd> Structure needs cleaning.</p>
-<dt><code>EUNATCH</code></p>
-<dd> Protocol driver not attached.</p>
-<dt><code>EUSERS</code></p>
-<dd> Too many users.</p>
-<dt><code>EWOULDBLOCK</code></p>
-<dd> Operation would block (may be same value as <code>EAGAIN</code>) (POSIX.1-2001).</p>
-<dt><code>EXDEV</code></p>
-<dd> Improper link (POSIX.1-2001).</p>
-<dt><code>EXFULL</code></p>
-<dd> Exchange full.</dl>
+</dt><dd> (POSIX.1 says &quot;STREAM <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) timeout&quot;.)</dd>
+<dt><code>ETIMEDOUT</code></dt>
+<dd> Connection timed out (POSIX.1-2001).</dd>
+<dt><code>ETOOMANYREFS</code></dt>
+<dd> Too many references: cannot splice.</dd>
+<dt><code>ETXTBSY</code></dt>
+<dd> Text file busy (POSIX.1-2001).</dd>
+<dt><code>EUCLEAN</code></dt>
+<dd> Structure needs cleaning.</dd>
+<dt><code>EUNATCH</code></dt>
+<dd> Protocol driver not attached.</dd>
+<dt><code>EUSERS</code></dt>
+<dd> Too many users.</dd>
+<dt><code>EWOULDBLOCK</code></dt>
+<dd> Operation would block (may be same value as <code>EAGAIN</code>) (POSIX.1-2001).</dd>
+<dt><code>EXDEV</code></dt>
+<dd> Improper link (POSIX.1-2001).</dd>
+<dt><code>EXFULL</code></dt>
+<dd> Exchange full.</dd></dl>
 <h2>NOTES</h2>
 <p> A common mistake is to do </p>
 <p> if (somecall() == -1) {<br />

@@ -17,64 +17,64 @@ description: "ext_ldap_group_acl – Squid LDAP external acl group helper"
 <p> The program operates by searching with a search filter based on the users user name and requested group, and if a match is found it is determined that the user belongs to the group.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a </code><i>never|always|search|find</i></p>
-<dd>When to dereference aliases. Defaults to &#8216;never&#8217;</p>
-<dd><code>never</code> dereference aliases (default), <code>always</code> dereference aliases, only while <code>search</code>ing or only to <code>find</code> the base object</p>
-<dt><code>-b </code><i>basedn </i></p>
-<dd><code>REQUIRED.</code> Specifies the base DN under which the groups are located.</p>
-<dt><code>-B </code><i>basedn </i></p>
-<dd>Specifies the base DN under which the users are located (if different)</p>
-<dt><code>-c</code><i> connect_timeout</i></p>
-<dd>Specify timeout used when connecting to LDAP servers (requires Netscape LDAP API libraries)</p>
-<dt><code>-d</code></p>
-<dd>Debug mode where each step taken will get reported in detail. Useful for understanding what goes wrong if the result is not what was expected.</p>
-<dt><code>-D </code><i>binddn </i><code>-w </code><i>password</i></p>
-<dd>The DN and password to bind as while performing searches. Required if the LDAP directory does not allow anonymous searches.</p>
-<dd>As the password needs to be printed in plain text in your Squid configuration and will be sent on the command line to the helper it is strongly recommended to use a account with minimal associated privileges. This to limit the damage in case someone could get hold of a copy of your Squid configuration file or extracts the password used from a process listing.</p>
-<dt><code>-D </code><i>binddn </i><code>-W </code><i>secretfile </i></p>
-<dd>The DN and the name of a file containing the password to bind as while performing searches.</p>
-<dd>Less insecure version of the former parameter pair with two advantages: The password does not occur in the process listing, and the password is not being compromised if someone gets the squid configuration file without getting the secretfile.</p>
-<dt><code>-E </code><i>certpath</i></p>
-<dd>Enable LDAP over SSL (requires Netscape LDAP API libraries)</p>
-<dt><code>-f </code><i>filter</i></p>
-<dd>LDAP search filter used to search the LDAP directory for any matching group memberships. In the filter <code>%u</code> will be replaced by the user name (or DN if the <code>-F</code> or <code>-u</code> options are used) and <code>%g</code> by the requested group name.</p>
-<dt><code>-F </code><i>filter</i></p>
-<dd>LDAP search filter used to search the LDAP directory for any matching users. In the filter <code>%s</code> will be replaced by the user name. If <code>%</code> is to be included literally in the filter then use <code>%%</code></p>
-<dt><code>-g</code></p>
-<dd>Specifies that the first query argument sent to the helper by Squid is a extension to the basedn and will be temporarily added in front of the global basedn for this query.</p>
-<dt><code>-h</code><i> ldapserver</i></p>
-<dd>Specify the LDAP server to connect to</p>
-<dt><code>-H</code><i> ldapuri</i></p>
-<dd>Specity the LDAP server to connect to by a LDAP URI (requires OpenLDAP libraries)</p>
-<dt><code>-K</code></p>
-<dd>Strip Kerberos Realm component from user names (@ separated)</p>
-<dt><code>-p</code><i> ldapport</i></p>
-<dd>Specify an alternate TCP port where the LDAP server is listening if other than the default LDAP port 389.</p>
-<dt><code>-P</code></p>
-<dd>Use a persistent LDAP connection. Normally the LDAP connection is only open while verifying a users group membership to preserve resources at the LDAP server. This option causes the LDAP connection to be kept open, allowing it to be reused for further user validations. Recommended for larger installations.</p>
-<dt><code>-R</code></p>
-<dd>Do not follow referrals</p>
-<dt><code>-s </code><i>base|one|sub</i></p>
-<dd>search scope. Defaults to <code>sub</code></p>
-<dd><code>base</code> object only,</p>
-<dd><code>one</code> level below the base object or</p>
-<dd><code>sub</code>tree below the base object</p>
-<dt><code>-S</code></p>
-<dd>Strip NT domain name component from user names (/ or \ separated)</p>
-<dt><code>-t</code><i> search_timeout</i></p>
-<dd>Specify time limit on LDAP search operations</p>
-<dt><code>-u </code><i>attr</i></p>
-<dd>LDAP attribute used to construct the user DN from the user name and base dn without needing to search for the user. A maximum of 16 occurrences of <code>%s</code> are supported.</p>
-<dt><code>-v</code><i> 2|3</i></p>
-<dd>LDAP protocol version. Defaults to <code>3 </code> if not specified.</p>
-<dt><code>-Z</code></p>
-<dd>Use TLS encryption</dl>
+<dt><code>-a </code><i>never|always|search|find</i></dt>
+<dd>When to dereference aliases. Defaults to &#8216;never&#8217;</dd>
+<dd><code>never</code> dereference aliases (default), <code>always</code> dereference aliases, only while <code>search</code>ing or only to <code>find</code> the base object</dd>
+<dt><code>-b </code><i>basedn </i></dt>
+<dd><code>REQUIRED.</code> Specifies the base DN under which the groups are located.</dd>
+<dt><code>-B </code><i>basedn </i></dt>
+<dd>Specifies the base DN under which the users are located (if different)</dd>
+<dt><code>-c</code><i> connect_timeout</i></dt>
+<dd>Specify timeout used when connecting to LDAP servers (requires Netscape LDAP API libraries)</dd>
+<dt><code>-d</code></dt>
+<dd>Debug mode where each step taken will get reported in detail. Useful for understanding what goes wrong if the result is not what was expected.</dd>
+<dt><code>-D </code><i>binddn </i><code>-w </code><i>password</i></dt>
+<dd>The DN and password to bind as while performing searches. Required if the LDAP directory does not allow anonymous searches.</dd>
+<dd>As the password needs to be printed in plain text in your Squid configuration and will be sent on the command line to the helper it is strongly recommended to use a account with minimal associated privileges. This to limit the damage in case someone could get hold of a copy of your Squid configuration file or extracts the password used from a process listing.</dd>
+<dt><code>-D </code><i>binddn </i><code>-W </code><i>secretfile </i></dt>
+<dd>The DN and the name of a file containing the password to bind as while performing searches.</dd>
+<dd>Less insecure version of the former parameter pair with two advantages: The password does not occur in the process listing, and the password is not being compromised if someone gets the squid configuration file without getting the secretfile.</dd>
+<dt><code>-E </code><i>certpath</i></dt>
+<dd>Enable LDAP over SSL (requires Netscape LDAP API libraries)</dd>
+<dt><code>-f </code><i>filter</i></dt>
+<dd>LDAP search filter used to search the LDAP directory for any matching group memberships. In the filter <code>%u</code> will be replaced by the user name (or DN if the <code>-F</code> or <code>-u</code> options are used) and <code>%g</code> by the requested group name.</dd>
+<dt><code>-F </code><i>filter</i></dt>
+<dd>LDAP search filter used to search the LDAP directory for any matching users. In the filter <code>%s</code> will be replaced by the user name. If <code>%</code> is to be included literally in the filter then use <code>%%</code></dd>
+<dt><code>-g</code></dt>
+<dd>Specifies that the first query argument sent to the helper by Squid is a extension to the basedn and will be temporarily added in front of the global basedn for this query.</dd>
+<dt><code>-h</code><i> ldapserver</i></dt>
+<dd>Specify the LDAP server to connect to</dd>
+<dt><code>-H</code><i> ldapuri</i></dt>
+<dd>Specity the LDAP server to connect to by a LDAP URI (requires OpenLDAP libraries)</dd>
+<dt><code>-K</code></dt>
+<dd>Strip Kerberos Realm component from user names (@ separated)</dd>
+<dt><code>-p</code><i> ldapport</i></dt>
+<dd>Specify an alternate TCP port where the LDAP server is listening if other than the default LDAP port 389.</dd>
+<dt><code>-P</code></dt>
+<dd>Use a persistent LDAP connection. Normally the LDAP connection is only open while verifying a users group membership to preserve resources at the LDAP server. This option causes the LDAP connection to be kept open, allowing it to be reused for further user validations. Recommended for larger installations.</dd>
+<dt><code>-R</code></dt>
+<dd>Do not follow referrals</dd>
+<dt><code>-s </code><i>base|one|sub</i></dt>
+<dd>search scope. Defaults to <code>sub</code></dd>
+<dd><code>base</code> object only,</dd>
+<dd><code>one</code> level below the base object or</dd>
+<dd><code>sub</code>tree below the base object</dd>
+<dt><code>-S</code></dt>
+<dd>Strip NT domain name component from user names (/ or \ separated)</dd>
+<dt><code>-t</code><i> search_timeout</i></dt>
+<dd>Specify time limit on LDAP search operations</dd>
+<dt><code>-u </code><i>attr</i></dt>
+<dd>LDAP attribute used to construct the user DN from the user name and base dn without needing to search for the user. A maximum of 16 occurrences of <code>%s</code> are supported.</dd>
+<dt><code>-v</code><i> 2|3</i></dt>
+<dd>LDAP protocol version. Defaults to <code>3 </code> if not specified.</dd>
+<dt><code>-Z</code></dt>
+<dd>Use TLS encryption</dd></dl>
 <h2>Configuration</h2>
 <p>This helper is intended to be used as an <code>external_acl_type</code> helper in <code>squid.conf .</code></p>
 <dl>
 <dd><code>external_acl_type ldap_group %LOGIN /path/to/ext_ldap_group_acl &#8230;</code><br />
  <code>acl group1 external ldap_group Group1</code><br />
- <code>acl group2 external ldap_group Group2</code></dl>
+ <code>acl group2 external ldap_group Group2</code></dd></dl>
 <p> <code>NOTE:</code> When constructing search filters it is recommended to first test the filter using <code>ldapsearch</code> to verify that the filter matches what you expect before you attempt to use <code>ext_ldap_group_acl</code></p>
 <h2>Author</h2>
 <p>This program was written by <i>Flavio Pescuma &lt;flavio [at] marasystems.com&gt;</i> <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i> </p>

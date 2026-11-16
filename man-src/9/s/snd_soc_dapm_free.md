@@ -15,7 +15,7 @@ snd_soc_dapm_free - free dapm resources
 <h2>Arguments</h2>
 
 <i>dapm</i>
-<dl><dd><dd>DAPM context</dl>
+<dl><dd></dd><dd>DAPM context</dd></dl>
 
 <h2>Description</h2>
 

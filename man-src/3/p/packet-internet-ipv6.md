@@ -34,10 +34,10 @@ IPv6(
 <code>__init__(self, pktt)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>pktt:</code>
-<dd>Packet trace object (packet.pktt.Pktt) so this layer has
+<dl><dl><dt><code>pktt:</code>
+</dt><dd>Packet trace object (packet.pktt.Pktt) so this layer has
 access to the parent layers.
-</dl></dl></pre>
+</dd></dl></dl></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-baseobj/">baseobj</a>(3),</code> <code><a href="/docs/linux/man/3-packet-internet-ipv4/">packet.internet.ipv4</a>(3),</code> <code><a href="/docs/linux/man/3-packet-transport-tcp/">packet.transport.tcp</a>(3),</code> <code><a href="/docs/linux/man/3-packet-transport-udp/">packet.transport.udp</a>(3)</code> </p>
 <h2>Bugs</h2>

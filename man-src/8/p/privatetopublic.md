@@ -17,7 +17,7 @@ description: "privatetopublic — convert cjdns private keys to public keys and 
 <pre>/usr/libexec/cjdns/privatetopublic &lt;&lt;EOF
 key
 EOF</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Key should be in hex form, maximum 64 characters. Extra characters will be silently ignored.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-publictoip6/">publictoip6</a>(1) <a href="/docs/linux/man/8-privatetopublic/">privatetopublic</a>(8) &#8212; convert cjdns private keys to public keys and IP6 =============================================</p>
@@ -30,7 +30,7 @@ EOF</pre>
 <pre>/usr/libexec/cjdns/privatetopublic &lt;&lt;EOF
 key
 EOF</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Key should be in hex form, maximum 64 characters. Extra characters will be silently ignored.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-publictoip6/">publictoip6</a>(1) </p>

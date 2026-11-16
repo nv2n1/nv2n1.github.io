@@ -11,10 +11,10 @@ description: "systemd-detect-virt – Detect execution in a virtualized environm
 <p> systemd-detect-virt &#8211; Detect execution in a virtualized environment </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>systemd-detect-virt</code> [OPTIONS&#8230;]</dl>
+<dt> <code>systemd-detect-virt</code> [OPTIONS&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>systemd-detect-virt</code></p>
-<dd>detects execution in a virtualized environment. It identifies the virtualization technology and can distinguish full machine virtualization from container virtualization. systemd-detect-virt exits with a return value of 0 (success) if a virtualization technology is detected, and non-zero (error) otherwise. By default, any type of virtualization is detected, and the options <code>&#8211;container</code> and <code>&#8211;vm</code> can be used to limit what types of virtualization are detected. </p>
+<dd>detects execution in a virtualized environment. It identifies the virtualization technology and can distinguish full machine virtualization from container virtualization. systemd-detect-virt exits with a return value of 0 (success) if a virtualization technology is detected, and non-zero (error) otherwise. By default, any type of virtualization is detected, and the options <code>&#8211;container</code> and <code>&#8211;vm</code> can be used to limit what types of virtualization are detected. </dd>
 <p> When executed without <code>&#8211;quiet</code> will print a short identifier for the detected virtualization technology. The following technologies are currently identified: </p>
 <p> <code>Table 1. Known virtualization technologies (both VM, i.e. full hardware virtualization, and container, i.e. shared kernel virtualization)</code> </p>
 <table BORDER>
@@ -138,65 +138,65 @@ description: "systemd-detect-virt – Detect execution in a virtualized environm
 <p> <code>-c</code>, <code>&#8211;container</code></p>
 <dl>
 <dt>
-<dd> Only detects container virtualization (i.e. shared kernel virtualization).</dl>
+</dt><dd> Only detects container virtualization (i.e. shared kernel virtualization).</dd></dl>
 <p> <code>-v</code>, <code>&#8211;vm</code></p>
 <dl>
 <dt>
-<dd> Only detects hardware virtualization.</dl>
+</dt><dd> Only detects hardware virtualization.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;chroot</code></p>
 <dl>
 <dt>
-<dd> Detect whether invoked in a <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) environment. In this mode, no output is written, but the return value indicates whether the process was invoked in a <code>chroot()</code> environment or not.</dl>
+</dt><dd> Detect whether invoked in a <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) environment. In this mode, no output is written, but the return value indicates whether the process was invoked in a <code>chroot()</code> environment or not.</dd></dl>
 <p> <code>&#8211;private-users</code></p>
 <dl>
 <dt>
-<dd> Detect whether invoked in a user namespace. In this mode, no output is written, but the return value indicates whether the process was invoked inside of a user namespace or not. See <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7) for more information.</dl>
+</dt><dd> Detect whether invoked in a user namespace. In this mode, no output is written, but the return value indicates whether the process was invoked inside of a user namespace or not. See <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7) for more information.</dd></dl>
 <p> <code>-q</code>, <code>&#8211;quiet</code></p>
 <dl>
 <dt>
-<dd> Suppress output of the virtualization technology identifier.</dl>
+</dt><dd> Suppress output of the virtualization technology identifier.</dd></dl>
 <p> <code>&#8211;list</code></p>
 <dl>
 <dt>
-<dd> Output all currently known and detectable container and VM environments.</dl>
+</dt><dd> Output all currently known and detectable container and VM environments.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Print a short help text and exit.</dl>
+</dt><dd> Print a short help text and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print a short version string and exit.</dl>
+</dt><dd> Print a short version string and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If a virtualization technology is detected, 0 is returned, a non-zero code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1), <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2), <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> ACRN hypervisor</p>
+<dt> 1.</dt>
+<dd> ACRN hypervisor</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://projectacrn.org">https://projectacrn.org</a></dl>
-<dt> 2.</p>
-<dd> Podman</p>
+</dt><dd> <a rel="nofollow" href="https://projectacrn.org">https://projectacrn.org</a></dd></dl>
+<dt> 2.</dt>
+<dd> Podman</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://podman.io">https://podman.io</a></dl>
-<dt> 3.</p>
-<dd> Windows Subsystem for Linux</p>
+</dt><dd> <a rel="nofollow" href="https://podman.io">https://podman.io</a></dd></dl>
+<dt> 3.</dt>
+<dd> Windows Subsystem for Linux</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows/wsl/about">https://docs.microsoft.com/en-us/windows/wsl/about</a></dl>
-<dt> 4.</p>
-<dd> proot</p>
+</dt><dd> <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows/wsl/about">https://docs.microsoft.com/en-us/windows/wsl/about</a></dd></dl>
+<dt> 4.</dt>
+<dd> proot</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://proot-me.github.io/">https://proot-me.github.io/</a></dl>
-<dt> 5.</p>
-<dd> Pouch</p>
+</dt><dd> <a rel="nofollow" href="https://proot-me.github.io/">https://proot-me.github.io/</a></dd></dl>
+<dt> 5.</dt>
+<dd> Pouch</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://github.com/alibaba/pouch">https://github.com/alibaba/pouch</a></dl>
+</dt><dd> <a rel="nofollow" href="https://github.com/alibaba/pouch">https://github.com/alibaba/pouch</a></dd></dl>
 </dl>
 <h2>Index</h2>

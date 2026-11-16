@@ -15,52 +15,52 @@ description: "ocf_pacemaker_pingd – pingd resource agent"
 <h2>Supported Parameters</h2>
 <p><code>OCF_RESKEY_pidfile</code> = string [/pingd-]</p>
 <dl>
-<dd>PID file</dl>
+<dd>PID file</dd></dl>
 <p> <code>OCF_RESKEY_user</code> = string [root]</p>
 <dl>
-<dd>The user we want to run pingd as </p>
+<dd>The user we want to run pingd as </dd>
 <p> The user we want to run pingd as</dl>
 <p> <code>OCF_RESKEY_dampen</code> = integer [5s]</p>
 <dl>
-<dd>Dampening interval </p>
+<dd>Dampening interval </dd>
 <p> The time to wait (dampening) further changes occur</dl>
 <p> <code>OCF_RESKEY_set</code> = string []</p>
 <dl>
-<dd>Set name </p>
+<dd>Set name </dd>
 <p> The name of the instance_attributes set to place the value in. Rarely needs to be specified.</dl>
 <p> <code>OCF_RESKEY_name</code> = string [pingd]</p>
 <dl>
-<dd>Attribute name </p>
+<dd>Attribute name </dd>
 <p> The name of the attributes to set. This is the name to be used in the constraints.</dl>
 <p> <code>OCF_RESKEY_section</code> = string []</p>
 <dl>
-<dd>Section name </p>
+<dd>Section name </dd>
 <p> The section place the value in. Rarely needs to be specified.</dl>
 <p> <code>OCF_RESKEY_multiplier</code> = integer []</p>
 <dl>
-<dd>Value multiplier </p>
+<dd>Value multiplier </dd>
 <p> The number by which to multiply the number of connected ping nodes by</dl>
 <p> <code>OCF_RESKEY_host_list</code> = string []</p>
 <dl>
-<dd>Host list </p>
+<dd>Host list </dd>
 <p> The list of ping nodes to count. Defaults to all configured ping nodes. Rarely needs to be specified.</dl>
 <p> <code>OCF_RESKEY_interval</code> = integer [1]</p>
 <dl>
-<dd>ping interval in seconds </p>
+<dd>ping interval in seconds </dd>
 <p> How often, in seconds, to check for node liveliness</dl>
 <p> <code>OCF_RESKEY_attempts</code> = integer [2]</p>
 <dl>
-<dd>no. of ping attempts </p>
+<dd>no. of ping attempts </dd>
 <p> Number of ping attempts, per host, before declaring it dead</dl>
 <p> <code>OCF_RESKEY_timeout</code> = integer [2]</p>
 <dl>
-<dd>ping timeout in seconds </p>
+<dd>ping timeout in seconds </dd>
 <p> How long, in seconds, to wait before declaring a ping lost</dl>
 <p> <code>OCF_RESKEY_options</code> = string []</p>
 <dl>
-<dd>Extra Options </p>
+<dd>Extra Options </dd>
 <p> A catch all for any other options that need to be passed to pingd.</dl>
 <h2>Author</h2>
 <p><code>Andrew Beekhof</code> &lt;andrew [at] beekhof.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

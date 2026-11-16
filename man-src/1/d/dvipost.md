@@ -23,29 +23,31 @@ description: "dvipost, pptex, pplatex – post processing of dvi files"
 <p> The filter interpretes dvi extensions in the form of</p>
 <dl>
 <dt>
-<dd> <code>dvipost:</code> <i>name</i> [<i>arg</i>]</dl>
+</dt><dd> <code>dvipost:</code> <i>name</i> [<i>arg</i>]</dd></dl>
 <p> where <i>arg</i> depends on the command <i>name</i> and may be separated from <i>name</i> by <code>=</code> or space. All other extensions are not interpreted by <code>dvipost</code> and remain in the dvi file. </p>
 <p> Such a dvipost command could be placed with the TeX primitive</p>
 <dl>
 <dt>
-<dd> <code>\special{dvipost:</code> <i>cmd</i><code>}</code></dl>
+</dt><dd> <code>\special{dvipost:</code> <i>cmd</i><code>}</code></dd></dl>
 <p> or the LaTeX macro (provided by <code>dvipost.sty</code>)</p>
 <dl>
 <dt>
-<dd> <code>\dvipost{</code><i>cmd</i><code>}</code></dl>
+</dt><dd> <code>\dvipost{</code><i>cmd</i><code>}</code></dd></dl>
 <p> in the dvi file. </p>
 <p> Depending on the type of <code>dvipost</code> commands, the following kinds of arguments may be used:</p>
 <dl>
-<dt><i>length</i></p>
-<dd> is a floating point number followed by a unit specification. The following units are supportet by <code>divipost</code>: <code>pt</code>, <code>in</code>, <code>cm</code> and <code>mm</code>. If no argument is given or the unit specification is missing, the corresponding <i>length</i> is set to 0.</p>
-<dt><i>string</i></p>
-<dd> is an arbitrary string argument.</p>
-<dt><i>flag</i></p>
-<dd> is an integer argument, where a value different from 0 (usually 1) means true and a missing value or 0 means false.</p>
-<dt><i>depth</i></p>
-<dd> is an integer argument, where a value different from 0 (usually 1) increments a depth counter and a missing value or 0 decrements it.</dl>
+<dt><i>length</i></dt>
+<dd> is a floating point number followed by a unit specification. The following units are supportet by <code>divipost</code>: <code>pt</code>, <code>in</code>, <code>cm</code> and <code>mm</code>. If no argument is given or the unit specification is missing, the corresponding <i>length</i> is set to 0.</dd>
+<dt><i>string</i></dt>
+<dd> is an arbitrary string argument.</dd>
+<dt><i>flag</i></dt>
+<dd> is an integer argument, where a value different from 0 (usually 1) means true and a missing value or 0 means false.</dd>
+<dt><i>depth</i></dt>
+<dd> is an integer argument, where a value different from 0 (usually 1) increments a depth counter and a missing value or 0 decrements it.</dd></dl>
 <h3>Change bars</h3>
 <p> All text printed with change mode level higher than 0 is marked with a change bar. </p>
 <p> The following LaTeX macros modifies the change mode level: </p>
 <dl>
 <dt><code>
+</dt></dl>
+</code>

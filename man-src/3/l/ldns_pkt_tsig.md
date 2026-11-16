@@ -41,82 +41,82 @@ description: "ldns_pkt_id, ldns_pkt_qr, ldns_pkt_aa, ldns_pkt_tc, ldns_pkt_rd, l
 <p> ldns_rr_list* ldns_pkt_rr_list_by_name_and_type(const ldns_pkt *packet, const ldns_rdf *ownername, ldns_rr_type type, ldns_pkt_section sec); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_pkt_id</i>()</dl>
+<dt> <i>ldns_pkt_id</i>()</dt></dl>
 <dl>
-<dt> <i>ldns_pkt_qr</i>()</p>
-<dd>Read the packet&#8217;s qr bit .br <code>p</code>: the packet .br Returns value of the bit</dl>
+<dt> <i>ldns_pkt_qr</i>()</dt>
+<dd>Read the packet&#8217;s qr bit .br <code>p</code>: the packet .br Returns value of the bit</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_aa</i>()</p>
-<dd>Read the packet&#8217;s aa bit .br <code>p</code>: the packet .br Returns value of the bit</dl>
+<dt> <i>ldns_pkt_aa</i>()</dt>
+<dd>Read the packet&#8217;s aa bit .br <code>p</code>: the packet .br Returns value of the bit</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_tc</i>()</p>
-<dd>Read the packet&#8217;s tc bit .br <code>p</code>: the packet .br Returns value of the bit</dl>
+<dt> <i>ldns_pkt_tc</i>()</dt>
+<dd>Read the packet&#8217;s tc bit .br <code>p</code>: the packet .br Returns value of the bit</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_rd</i>()</p>
-<dd>Read the packet&#8217;s rd bit .br <code>p</code>: the packet .br Returns value of the bit</dl>
+<dt> <i>ldns_pkt_rd</i>()</dt>
+<dd>Read the packet&#8217;s rd bit .br <code>p</code>: the packet .br Returns value of the bit</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_cd</i>()</p>
-<dd>Read the packet&#8217;s cd bit .br <code>p</code>: the packet .br Returns value of the bit</dl>
+<dt> <i>ldns_pkt_cd</i>()</dt>
+<dd>Read the packet&#8217;s cd bit .br <code>p</code>: the packet .br Returns value of the bit</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_ra</i>()</p>
-<dd>Read the packet&#8217;s ra bit .br <code>p</code>: the packet .br Returns value of the bit</dl>
+<dt> <i>ldns_pkt_ra</i>()</dt>
+<dd>Read the packet&#8217;s ra bit .br <code>p</code>: the packet .br Returns value of the bit</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_ad</i>()</p>
-<dd>Read the packet&#8217;s ad bit .br <code>p</code>: the packet .br Returns value of the bit</dl>
+<dt> <i>ldns_pkt_ad</i>()</dt>
+<dd>Read the packet&#8217;s ad bit .br <code>p</code>: the packet .br Returns value of the bit</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_get_opcode</i>()</p>
-<dd>Read the packet&#8217;s code .br <code>p</code>: the packet .br Returns the opcode</dl>
+<dt> <i>ldns_pkt_get_opcode</i>()</dt>
+<dd>Read the packet&#8217;s code .br <code>p</code>: the packet .br Returns the opcode</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_get_rcode</i>()</p>
-<dd>Return the packet&#8217;s respons code .br <code>p</code>: the packet .br Returns the respons code</dl>
+<dt> <i>ldns_pkt_get_rcode</i>()</dt>
+<dd>Return the packet&#8217;s respons code .br <code>p</code>: the packet .br Returns the respons code</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_qdcount</i>()</p>
-<dd>Return the packet&#8217;s qd count .br <code>p</code>: the packet .br Returns the qd count</dl>
+<dt> <i>ldns_pkt_qdcount</i>()</dt>
+<dd>Return the packet&#8217;s qd count .br <code>p</code>: the packet .br Returns the qd count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_ancount</i>()</p>
-<dd>Return the packet&#8217;s an count .br <code>p</code>: the packet .br Returns the an count</dl>
+<dt> <i>ldns_pkt_ancount</i>()</dt>
+<dd>Return the packet&#8217;s an count .br <code>p</code>: the packet .br Returns the an count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_nscount</i>()</p>
-<dd>Return the packet&#8217;s ns count .br <code>p</code>: the packet .br Returns the ns count</dl>
+<dt> <i>ldns_pkt_nscount</i>()</dt>
+<dd>Return the packet&#8217;s ns count .br <code>p</code>: the packet .br Returns the ns count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_arcount</i>()</p>
-<dd>Return the packet&#8217;s ar count .br <code>p</code>: the packet .br Returns the ar count</dl>
+<dt> <i>ldns_pkt_arcount</i>()</dt>
+<dd>Return the packet&#8217;s ar count .br <code>p</code>: the packet .br Returns the ar count</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_answerfrom</i>()</p>
-<dd>Return the packet&#8217;s answerfrom .br <code>p</code>: packet .br Returns the name of the server</dl>
+<dt> <i>ldns_pkt_answerfrom</i>()</dt>
+<dd>Return the packet&#8217;s answerfrom .br <code>p</code>: packet .br Returns the name of the server</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_querytime</i>()</p>
-<dd>Return the packet&#8217;s querytime .br <code>p</code>: the packet .br Returns the querytime</dl>
+<dt> <i>ldns_pkt_querytime</i>()</dt>
+<dd>Return the packet&#8217;s querytime .br <code>p</code>: the packet .br Returns the querytime</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_size</i>()</p>
-<dd>Return the packet&#8217;s size in bytes .br <code>p</code>: the packet .br Returns the size</dl>
+<dt> <i>ldns_pkt_size</i>()</dt>
+<dd>Return the packet&#8217;s size in bytes .br <code>p</code>: the packet .br Returns the size</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_tsig</i>()</p>
-<dd>Return the packet&#8217;s tsig pseudo rr&#8217;s .br <code>p</code>: the packet .br Returns the tsig rr</dl>
+<dt> <i>ldns_pkt_tsig</i>()</dt>
+<dd>Return the packet&#8217;s tsig pseudo rr&#8217;s .br <code>p</code>: the packet .br Returns the tsig rr</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_question</i>()</p>
-<dd>Return the packet&#8217;s question section .br <code>p</code>: the packet .br Returns the section</dl>
+<dt> <i>ldns_pkt_question</i>()</dt>
+<dd>Return the packet&#8217;s question section .br <code>p</code>: the packet .br Returns the section</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_answer</i>()</p>
-<dd>Return the packet&#8217;s answer section .br <code>p</code>: the packet .br Returns the section</dl>
+<dt> <i>ldns_pkt_answer</i>()</dt>
+<dd>Return the packet&#8217;s answer section .br <code>p</code>: the packet .br Returns the section</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_authority</i>()</p>
-<dd>Return the packet&#8217;s authority section .br <code>p</code>: the packet .br Returns the section</dl>
+<dt> <i>ldns_pkt_authority</i>()</dt>
+<dd>Return the packet&#8217;s authority section .br <code>p</code>: the packet .br Returns the section</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_additional</i>()</p>
-<dd>Return the packet&#8217;s additional section .br <code>p</code>: the packet .br Returns the section</dl>
+<dt> <i>ldns_pkt_additional</i>()</dt>
+<dd>Return the packet&#8217;s additional section .br <code>p</code>: the packet .br Returns the section</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_get_section_clone</i>()</p>
-<dd>return all the rr_list&#8217;s in the packet. Clone the lists, instead of returning pointers. .br <code>p</code>: the packet to look in .br <code>s</code>: what section(s) to return .br Returns ldns_rr_list with the rr&#8217;s or NULL if none were found</dl>
+<dt> <i>ldns_pkt_get_section_clone</i>()</dt>
+<dd>return all the rr_list&#8217;s in the packet. Clone the lists, instead of returning pointers. .br <code>p</code>: the packet to look in .br <code>s</code>: what section(s) to return .br Returns ldns_rr_list with the rr&#8217;s or NULL if none were found</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_rr_list_by_name</i>()</p>
-<dd>return all the rr with a specific name from a packet. Optionally specify from which section in the packet .br <code>p</code>: the packet .br <code>r</code>: the name .br <code>s</code>: the packet&#8217;s section .br Returns a list with the rr&#8217;s or NULL if none were found</dl>
+<dt> <i>ldns_pkt_rr_list_by_name</i>()</dt>
+<dd>return all the rr with a specific name from a packet. Optionally specify from which section in the packet .br <code>p</code>: the packet .br <code>r</code>: the name .br <code>s</code>: the packet&#8217;s section .br Returns a list with the rr&#8217;s or NULL if none were found</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_rr_list_by_type</i>()</p>
-<dd>return all the rr with a specific type from a packet. Optionally specify from which section in the packet .br <code>p</code>: the packet .br <code>t</code>: the type .br <code>s</code>: the packet&#8217;s section .br Returns a list with the rr&#8217;s or NULL if none were found</dl>
+<dt> <i>ldns_pkt_rr_list_by_type</i>()</dt>
+<dd>return all the rr with a specific type from a packet. Optionally specify from which section in the packet .br <code>p</code>: the packet .br <code>t</code>: the type .br <code>s</code>: the packet&#8217;s section .br Returns a list with the rr&#8217;s or NULL if none were found</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_rr_list_by_name_and_type</i>()</p>
-<dd>return all the rr with a specific type and type from a packet. Optionally specify from which section in the packet .br <code>packet</code>: the packet .br <code>ownername</code>: the name .br <code>type</code>: the type .br <code>sec</code>: the packet&#8217;s section .br Returns a list with the rr&#8217;s or NULL if none were found</dl>
+<dt> <i>ldns_pkt_rr_list_by_name_and_type</i>()</dt>
+<dd>return all the rr with a specific type and type from a packet. Optionally specify from which section in the packet .br <code>packet</code>: the packet .br <code>ownername</code>: the name .br <code>type</code>: the type .br <code>sec</code>: the packet&#8217;s section .br Returns a list with the rr&#8217;s or NULL if none were found</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

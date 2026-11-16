@@ -16,8 +16,8 @@ description: "ldns_key_rr2ds"
 <p> ldns_rr* ldns_key_rr2ds(const ldns_rr *key, ldns_hash h); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_rr2ds</i>()</p>
-<dd>returns a new DS rr that represents the given key rr. </p>
+<dt> <i>ldns_key_rr2ds</i>()</dt>
+<dd>returns a new DS rr that represents the given key rr. </dd>
 <p> .br <code>*key</code>: the key to convert .br <code>h</code>: the hash to use LDNS_SHA1/LDNS_SHA256 </p>
 <p> .br Returns ldns_rr* a new rr pointer to a DS</dl>
 <h2>AUTHOR</h2>
@@ -32,3 +32,4 @@ description: "ldns_key_rr2ds"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

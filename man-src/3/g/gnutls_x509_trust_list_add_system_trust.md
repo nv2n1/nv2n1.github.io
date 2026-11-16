@@ -14,12 +14,12 @@ description: "gnutls_x509_trust_list_add_system_trust – API function"
 <p> <code>int gnutls_x509_trust_list_add_system_trust(gnutls_x509_trust_list_t </code><i>list</i><code>, unsigned int </code><i>tl_flags</i><code>, unsigned int </code><i>tl_vflags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_trust_list_t list</p>
-<dd> The structure of the list</p>
-<dt>unsigned int tl_flags</p>
-<dd> GNUTLS_TL_*</p>
-<dt>unsigned int tl_vflags</p>
-<dd> gnutls_certificate_verify_flags if flags specifies GNUTLS_TL_VERIFY_CRL</dl>
+<dt>gnutls_x509_trust_list_t list</dt>
+<dd> The structure of the list</dd>
+<dt>unsigned int tl_flags</dt>
+<dd> GNUTLS_TL_*</dd>
+<dt>unsigned int tl_vflags</dt>
+<dd> gnutls_certificate_verify_flags if flags specifies GNUTLS_TL_VERIFY_CRL</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function adds the system&#8217;s default trusted certificate authorities to the trusted list. Note that on unsupported systems this function returns <code>GNUTLS_E_UNIMPLEMENTED_FEATURE</code>. </p>
 <p> This function implies the flag <code>GNUTLS_TL_NO_DUPLICATES</code>.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_trust_list_add_system_trust – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -14,10 +14,10 @@ description: "dev_alloc_name – allocate a name for a device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device</dl>
+</dd><dd>device</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>name format string</dl>
+<dd>name format string</dd></dl>
 <h2>Description</h2>
 <p>Passed a format string &#8211; eg &#8220;lt<code>d</code>&#8221; it will try and find a suitable id. It scans list of devices to build up a free map, then chooses the first empty slot. The caller must hold the dev_base or rtnl lock while allocating the name and adding the device in order to avoid duplicates. Limited to bits_per_byte * page size devices (ie 32K on most platforms). Returns the number of the unit assigned or a negative errno code.</p>
 <h2>Copyright</h2>

@@ -62,12 +62,9 @@ The test ptr-&gt;weak_this.expired() in the exposition code above makes sure tha
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;type_traits&gt;
 struct C
-
 {
     C(int i)
         : i(i)
@@ -76,7 +73,6 @@ struct C
     int i;
 };
 int main()
-
 {
     auto sp = std::make_shared&lt;C&gt;(12);
     static_assert(std::is_same_v&lt;decltype(sp), std::shared_ptr&lt;C&gt;&gt;);

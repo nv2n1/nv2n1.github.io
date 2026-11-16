@@ -18,6 +18,6 @@ description: "QuantLib::Bisection – Bisection 1-D solver"
 <p>Bisection 1-D solver </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the returned values is tested by checking them against known good results.</dl>
+<dd>the correctness of the returned values is tested by checking them against known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -11,33 +11,19 @@ std::exclusive_scan - std::exclusive_scan
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class InputIt, class OutputIt, class T &gt;
-
 OutputIt exclusive_scan( InputIt first, InputIt last,                                   (1) (since C++17)
-
 OutputIt d_first, T init );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class T &gt;
-
 ForwardIt2 exclusive_scan( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last, (2) (since C++17)
-
 ForwardIt2 d_first, T init);
-
 template&lt; class InputIt, class OutputIt,
-
 class T, class BinaryOperation &gt;                                                        (3) (since C++17)
-
 OutputIt exclusive_scan( InputIt first, InputIt last,
-
 OutputIt d_first, T init, BinaryOperation binary_op );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
-
 class T, class BinaryOperation &gt;                                                        (4) (since C++17)
-
 ForwardIt2 exclusive_scan( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last,
-
 ForwardIt2 d_first, T init, BinaryOperation binary_op );</code></pre> 
 Computes an exclusive prefix sum operation using binary_op (or std::plus&lt;&gt;() for overloads (1-2)) for the range [first, last), using init as the initial value, and writes the results to the range beginning at d_first. &quot;exclusive&quot; means that the i-th input element is not included in the i-th sum. 
 Formally, assigns through each iterator i in [d_first, d_first + (last - first)) the value of the generalized noncommutative sum of init, *j... for every j in [first, first + (i - d_first)) over binary_op, 
@@ -98,41 +84,27 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector data{3, 1, 4, 1, 5, 9, 2, 6};
     std::cout &lt;&lt; &quot;exclusive sum: &quot;;
     std::exclusive_scan(data.begin(), data.end(),
-
                         std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
-
                         0);
     std::cout &lt;&lt; &quot;\ninclusive sum: &quot;;
     std::inclusive_scan(data.begin(), data.end(),
-
                         std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;));
     std::cout &lt;&lt; &quot;\n\nexclusive product: &quot;;
     std::exclusive_scan(data.begin(), data.end(),
-
                         std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
-
                         1, std::multiplies&lt;&gt;{});
-
     std::cout &lt;&lt; &quot;\ninclusive product: &quot;;
-
     std::inclusive_scan(data.begin(), data.end(),
-
                         std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
-
                         std::multiplies&lt;&gt;{});
 }</code></pre>
 

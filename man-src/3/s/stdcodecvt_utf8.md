@@ -11,16 +11,11 @@ std::codecvt_utf8 - std::codecvt_utf8
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;codecvt&gt;
-
     template &lt;
-
         class Elem, (since C++ 11)
-
                         unsigned long Maxcode = 0x10ffff,
         (deprecated in C++ 17)
-
             std::codecvt_mode Mode = (std::codecvt_mode)0
-
         &gt;
     class codecvt_utf8 : public std::codecvt&lt;Elem, char, std::mbstate_t&gt;;</code></pre> 
 std::codecvt_utf8 is a std::codecvt facet which encapsulates conversion between a UTF-8 encoded byte string and UCS2 or UTF-32 character string (depending on the type of Elem). This codecvt facet can be used to read and write UTF-8 files, both text and binary. 
@@ -166,14 +161,10 @@ Although the standard requires that this facet works with UCS2 when the size of 
 
 The following example demonstrates the difference between UCS2/UTF-8 and UTF-16/UTF-8 conversions: the third character in the string is not a valid UCS2 character. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;codecvt&gt;
 int main()
-
 {
     // UTF-8 data. The character U+1d10b, musical sign segno, does not fit in UCS2
     std::string utf8 = u8&quot;z\u6c34\U0001d10b&quot;;

@@ -14,15 +14,15 @@ mongoc_uri_new (const char *uri_string)
  BSON_GNUC_WARN_UNUSED_RESULT;</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>uri_string</code></p>
-<dd>A string containing a URI.</dl>
+<dt><code>uri_string</code></dt>
+<dd>A string containing a URI.</dd></dl>
 <h2>Description</h2>
 <p>Parses a string containing a MongoDB style URI connection string. </p>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_uri_t</code> if successful. Otherwise <code>NULL</code> \&amp;. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Failure to handle the result of this function is a programming error.</dl>
+<dd>Failure to handle the result of this function is a programming error.</dd></dl>
 <h2>Examples</h2>
 <p>Examples of some valid MongoDB connection strings can be seen below. </p>
 <p> <code>mongodb://localhost/</code> </p>

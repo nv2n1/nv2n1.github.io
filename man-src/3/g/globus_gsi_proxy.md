@@ -23,16 +23,16 @@ description: "Globus GSI Proxy API –"
 <p> We envision the API being used in the following manner: </p>
 <p> Delegator Delegatee set desired cert info extension in the handle by using the handle set functions. <code>globus_gsi_proxy_create_req()</code> <code>globus_gsi_proxy_inquire_req()</code> modify cert info extension by using <code>handle set/get/clear functions.</code> <code>globus_gsi_proxy_sign_req()</code> <code>globus_gsi_proxy_assemble_cred()</code> The API documentation is divided into the following sections</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Activation</code></p>
-<dt>&bull;</p>
-<dd> <code>Handle Management</code></p>
-<dt>&bull;</p>
-<dd> <code>Handle Attributes</code></p>
-<dt>&bull;</p>
-<dd> <code>Proxy Operations</code></p>
-<dt>&bull;</p>
-<dd> <code>Proxy Constants</code></dl>
+<dt>&bull;</dt>
+<dd> <code>Activation</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Handle Management</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Handle Attributes</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Proxy Operations</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Proxy Constants</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
 <h2>Index</h2>

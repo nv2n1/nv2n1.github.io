@@ -26,13 +26,13 @@ pmall[-d][-w][-a][-s]
  The following options are honored:
 <dl>
 <dt>-v
-<dd> give debug info
-<dt>-w
-<dd> warn about missing descriptions on modules
-<dt>-a
-<dd> include relative paths
-<dt>-s
-<dd> sort output within each directory</dl>
+</dt><dd> give debug info
+</dd><dt>-w
+</dt><dd> warn about missing descriptions on modules
+</dd><dt>-a
+</dt><dd> include relative paths
+</dd><dt>-s
+</dt><dd> sort output within each directory</dd></dl>
 
 <h2>HISTORICAL NOTE</h2>
 

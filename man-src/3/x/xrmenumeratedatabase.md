@@ -10,7 +10,7 @@ description: "XrmEnumerateDatabase – enumerate resource database entries"
 <p>XrmEnumerateDatabase &#8211; enumerate resource database entries </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dt> #include &lt;X11/Xresource.h&gt; </p>
+<dt> #include &lt;X11/Xresource.h&gt; </dt>
 <table>
 <tr VALIGN=top>
 <td> #define </td>
@@ -26,21 +26,21 @@ description: "XrmEnumerateDatabase – enumerate resource database entries"
 </td>
 </tr>
 </table>
-<dd>Bool XrmEnumerateDatabase(XrmDatabase <i>database</i>, XrmNameList <i>name_prefix</i>, XrmClassList <i>class_prefix</i>, int <i>mode</i>, Bool (*<i>proc</i>)(), XPointer <i>arg</i>);</dl>
+</dd><dd>Bool XrmEnumerateDatabase(XrmDatabase <i>database</i>, XrmNameList <i>name_prefix</i>, XrmClassList <i>class_prefix</i>, int <i>mode</i>, Bool (*<i>proc</i>)(), XPointer <i>arg</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>database</i></p>
-<dd>Specifies the resource database.</p>
-<dt><i>name_prefix</i></p>
-<dd>Specifies the resource name prefix.</p>
-<dt><i>class_prefix</i></p>
-<dd>Specifies the resource class prefix.</p>
-<dt><i>mode</i></p>
-<dd>Specifies the number of levels to enumerate.</p>
-<dt><i>proc</i></p>
-<dd>Specifies the procedure that is to be called for each matching entry.</p>
-<dt><i>arg</i></p>
-<dd>Specifies the user-supplied argument that will be passed to the procedure.</dl>
+<dt><i>database</i></dt>
+<dd>Specifies the resource database.</dd>
+<dt><i>name_prefix</i></dt>
+<dd>Specifies the resource name prefix.</dd>
+<dt><i>class_prefix</i></dt>
+<dd>Specifies the resource class prefix.</dd>
+<dt><i>mode</i></dt>
+<dd>Specifies the number of levels to enumerate.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the procedure that is to be called for each matching entry.</dd>
+<dt><i>arg</i></dt>
+<dd>Specifies the user-supplied argument that will be passed to the procedure.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XrmEnumerateDatabase</code> function calls the specified procedure for each resource in the database that would match some completion of the given name/class resource prefix. The order in which resources are found is implementation-dependent. If mode is <code>XrmEnumOneLevel</code>, a resource must match the given name/class prefix with just a single name and class appended. If mode is <code>XrmEnumAllLevels</code>, the resource must match the given name/class prefix with one or more names and classes appended. If the procedure returns <code>True</code>, the enumeration terminates and the function returns <code>True</code>. If the procedure always returns <code>False</code>, all matching resources are enumerated and the function returns <code>False</code>. </p>
 <p> The procedure is called with the following arguments: </p>

@@ -11,13 +11,9 @@ std::boyer_moore_horspool_searcher - std::boyer_moore_horspool_searcher
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class RandomIt1,
-
 class Hash = std::hash&lt;typename std::iterator_traits&lt;RandomIt1&gt;::value_type&gt;,  (since C++17)
-
 class BinaryPredicate = std::equal_to&lt;&gt; &gt;
-
 class boyer_moore_horspool_searcher;</code></pre> 
 A searcher suitable for use with the Searcher overload of std::search that implements the Boyer-Moore-Horspool_string_searching_algorithm. 
 boyer_moore_horspool_searcher is CopyConstructible and CopyAssignable. 
@@ -83,14 +79,10 @@ Otherwise, returns a pair of iterators to the first and one past last positions 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
                      &quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;

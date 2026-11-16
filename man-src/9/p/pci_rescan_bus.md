@@ -15,7 +15,7 @@ pci_rescan_bus - scan a PCI bus for devices.
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>PCI bus to scan</dl>
+<dl><dd></dd><dd>PCI bus to scan</dd></dl>
 
 <h2>Description</h2>
 

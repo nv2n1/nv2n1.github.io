@@ -49,16 +49,8 @@ fetch_add <i>(public member function)</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;atomically subtracts the argument from the value stored in the atomic object and obtains the value held previously<br />
 fetch_sub <i>(public member function)</i> </p>
 <pre><code>operator+=
-
 operator-= adds, subtracts, or performs bitwise AND, OR, XOR with the atomic value
-
 operator&amp;= (public member function)
-
 operator|=
-
 operator^=
-
-
-
-
 </code></pre>

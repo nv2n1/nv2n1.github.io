@@ -12,7 +12,6 @@ std::filesystem::directory_entry::last_write_time - std::filesystem::directory_e
 
 <pre><code>std::filesystem::file_time_type last_write_time() const;
 (since C++ 17)
-
     std::filesystem::file_time_type last_write_time(std::error_code &amp;ec) const noexcept;</code></pre> 
 If the last modification time is cached in this directory_entry, returns the cached value. Otherwise, returns std::filesystem::last_write_time(path()) or std::filesystem::last_write_time(path(), ec), respectively 
 

@@ -45,10 +45,10 @@ xpackets      V8.x Packets that exceed the contract.
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-f</code><i> format</i></p>
-<dd> Select format. The default is appropriate for the export type of the flow data. Available formats are: </p>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-f</code><i> format</i></dt>
+<dd> Select format. The default is appropriate for the export type of the flow data. Available formats are: </dd>
 <pre>
     0 1 line, interfaces, hex ports
     1 2 line (includes timing and flags)
@@ -76,16 +76,16 @@ xpackets      V8.x Packets that exceed the contract.
    23 ToS Prefix Port aggregation
    24 Full (Catalyst)
 </pre>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-l</code></p>
-<dd> Unbuffer output.</p>
-<dt><code>-n</code></p>
-<dd> Use symbolic names where appropriate.</p>
-<dt><code>-p</code></p>
-<dd> Display header information.</p>
-<dt><code>-w</code></p>
-<dd> Wide output.</dl>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-l</code></dt>
+<dd> Unbuffer output.</dd>
+<dt><code>-n</code></dt>
+<dd> Use symbolic names where appropriate.</dd>
+<dt><code>-p</code></dt>
+<dd> Display header information.</dd>
+<dt><code>-w</code></dt>
+<dd> Wide output.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Display flows in <i>flowfile</i> </p>
 <p> <code>flow-print &lt; flowfile</code></p>

@@ -35,14 +35,12 @@ int main(int argc, char **argv)
     metalink_t *metalink;
     metalink_file_t *file;
     metalink_checksum_t **checksums;
-
     r = metalink_parse_file("sample.metalink", &amp;metalink);
     if (r != 0) {
         fprintf(stderr, "ERROR: code=%d
 ", r);
         exit(EXIT_FAILURE);
     }
-
     file = metalink-&gt;files[0];
     printf("name: %s
 ", file-&gt;name);

@@ -109,6 +109,6 @@ description: "globus_gsi_credential.h –"
 <p>Globus GSI Credential Library. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Lang, Sam Meder</dl>
+<dd>Sam Lang, Sam Meder</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gsi_credential from the source code.</p>

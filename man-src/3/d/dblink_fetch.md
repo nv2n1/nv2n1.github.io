@@ -20,19 +20,19 @@ dblink_fetch(text cursorname, int howmany[, bool fail_on_error]) returns setof r
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> Name of the connection to use; omit this parameter to use the unnamed connection.</dl>
+</dt><dd> Name of the connection to use; omit this parameter to use the unnamed connection.</dd></dl>
 <p> <i>cursorname</i></p>
 <dl>
 <dt>
-<dd> The name of the cursor to fetch from.</dl>
+</dt><dd> The name of the cursor to fetch from.</dd></dl>
 <p> <i>howmany</i></p>
 <dl>
 <dt>
-<dd> The maximum number of rows to retrieve. The next <i>howmany</i> rows are fetched, starting at the current cursor position, moving forward. Once the cursor has reached its end, no more rows are produced.</dl>
+</dt><dd> The maximum number of rows to retrieve. The next <i>howmany</i> rows are fetched, starting at the current cursor position, moving forward. Once the cursor has reached its end, no more rows are produced.</dd></dl>
 <p> <i>fail_on_error</i></p>
 <dl>
 <dt>
-<dd> If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function returns no rows.</dl>
+</dt><dd> If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function returns no rows.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The function returns the row(s) fetched from the cursor. To use this function, you will need to specify the expected set of columns, as previously discussed for <code>dblink</code>.</p>
 <h2>NOTES</h2>
@@ -40,7 +40,7 @@ dblink_fetch(text cursorname, int howmany[, bool fail_on_error]) returns setof r
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SELECT dblink_connect('dbname=postgres');
 dblink_connect-- -- -- -- -- -- -- --OK(1 row)
@@ -52,5 +52,5 @@ funcname | source-- -- -- -- -- -+-- -- -- -- -- -byteain | byteain byteale | by
 funcname | source-- -- -- -- -- --+-- -- -- -- -- --byteanlike | byteanlike byteaout | byteaout(2 rows) SELECT *FROM dblink_fetch('foo', 5) AS(funcname name, source text);
 funcname | source-- -- -- -- --+-- -- -- --(0 rows)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

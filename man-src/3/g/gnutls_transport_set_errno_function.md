@@ -14,10 +14,10 @@ description: "gnutls_transport_set_errno_function – API function"
 <p> <code>void gnutls_transport_set_errno_function(gnutls_session_t </code><i>session</i><code>, gnutls_errno_func </code><i>errno_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_errno_func errno_func</p>
-<dd> a callback function similar to <code>write()</code></dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_errno_func errno_func</dt>
+<dd> a callback function similar to <code>write()</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is the function where you set a function to retrieve errno after a failed push or pull operation. </p>
 <p>&nbsp;<wbr><i>errno_func</i>&nbsp;<wbr>is of the form, int (*gnutls_errno_func)(gnutls_transport_ptr_t); and should return the errno.</p>
@@ -32,6 +32,6 @@ description: "gnutls_transport_set_errno_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

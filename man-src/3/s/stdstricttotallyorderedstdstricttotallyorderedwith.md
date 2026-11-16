@@ -11,84 +11,53 @@ std::StrictTotallyOrdered,std::StrictTotallyOrderedWith - std::StrictTotallyOrde
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     template &lt;class T&gt;
-
     concept StrictTotallyOrdered =
-
         std::EqualityComparable&lt;T&gt; &amp;&amp;
-
     requires(const std::remove_reference_t&lt;T&gt; &amp;a,
-
              const std::remove_reference_t&lt;T&gt; &amp;b)
 {
     (1)(since C++ 20)
-
             a &lt; b;
     requires std::Boolean&lt;decltype(a &lt; b)&gt;;
-
     a &gt; b;
     requires std::Boolean&lt;decltype(a &gt; b)&gt;;
-
     a &lt;= b;
     requires std::Boolean&lt;decltype(a &lt;= b)&gt;;
-
     a &gt;= b;
     requires std::Boolean&lt;decltype(a &gt;= b)&gt;;
 };
-
 template &lt;class T, class U&gt;
-
 concept StrictTotallyOrderedWith =
-
     std::StrictTotallyOrdered&lt;T&gt; &amp;&amp;
-
     std::StrictTotallyOrdered&lt;U&gt; &amp;&amp;
-
     std::CommonReference &lt;
-
     const std::remove_reference_t&lt;T&gt;
 &amp;,
-
     const std::remove_reference_t&lt;U&gt; &amp; &gt; &amp;&amp;
-
                                          std::StrictTotallyOrdered&lt;
-
                                              std::common_reference_t&lt;
-
                                                  const std::remove_reference_t&lt;T&gt; &amp;,
-
                                                  const std::remove_reference_t&lt;U&gt; &amp;&gt;&gt; &amp;&amp;
-
                                              std::EqualityComparableWith&lt;T, U&gt; &amp;&amp;
         (2)(since C++ 20)
-
             requires(const std::remove_reference_t&lt;T&gt; &amp;t,
-
                      const std::remove_reference_t&lt;U&gt; &amp;u)
 {
-
     t &lt; u;
     requires std::Boolean&lt;decltype(t &lt; u)&gt;;
-
     t &gt; u;
     requires std::Boolean&lt;decltype(t &gt; u)&gt;;
-
     t &lt;= u;
     requires std::Boolean&lt;decltype(t &lt;= u)&gt;;
-
     t &gt;= u;
     requires std::Boolean&lt;decltype(t &gt;= u)&gt;;
-
     u &lt; t;
     requires std::Boolean&lt;decltype(u &lt; t)&gt;;
-
     u &gt; t;
     requires std::Boolean&lt;decltype(u &gt; t)&gt;;
-
     u &lt;= t;
     requires std::Boolean&lt;decltype(u &lt;= t)&gt;;
-
     u &gt;= t;
     requires std::Boolean&lt;decltype(u &gt;= t)&gt;;
 };</code></pre> 

@@ -10,40 +10,40 @@ description: "XrmUniqueQuark, XrmStringToQuark, XrmPermStringToQuark, XrmQuarkTo
 <p>XrmUniqueQuark, XrmStringToQuark, XrmPermStringToQuark, XrmQuarkToString, XrmStringToQuarkList, XrmStringToBindingQuarkList &#8211; manipulate resource quarks </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> #include &lt;X11/Xresource.h&gt;</p>
-<dd>XrmQuark XrmUniqueQuark(void);</dl>
+<dt> #include &lt;X11/Xresource.h&gt;</dt>
+<dd>XrmQuark XrmUniqueQuark(void);</dd></dl>
 <p> #define XrmStringToName(string) XrmStringToQuark(string)<br />
  #define XrmStringToClass(string) XrmStringToQuark(string)<br />
  #define XrmStringToRepresentation(string) XrmStringToQuark(string)</p>
 <dl COMPACT>
-<dd>int XrmQuark XrmStringToQuark(char *<i>string</i>);</p>
-<dd>XrmQuark XrmPermStringToQuark(char *<i>string</i>);</dl>
+<dd>int XrmQuark XrmStringToQuark(char *<i>string</i>);</dd>
+<dd>XrmQuark XrmPermStringToQuark(char *<i>string</i>);</dd></dl>
 <p> #define XrmStringToName(string) XrmStringToQuark(string)<br />
  #define XrmStringToClass(string) XrmStringToQuark(string)<br />
  #define XrmStringToRepresentation(string) XrmStringToQuark(string)</p>
 <dl COMPACT>
-<dd>XrmQuark XrmStringToQuark(char *<i>string</i>);</p>
-<dd>XrmQuark XrmPermStringToQuark(char *<i>string</i>);</dl>
+<dd>XrmQuark XrmStringToQuark(char *<i>string</i>);</dd>
+<dd>XrmQuark XrmPermStringToQuark(char *<i>string</i>);</dd></dl>
 <p> #define XrmNameToString(name) XrmQuarkToString(name)<br />
  #define XrmClassToString(class) XrmQuarkToString(class)<br />
  #define XrmRepresentationToString(type) XrmQuarkToString(type)</p>
 <dl COMPACT>
-<dd>char *XrmQuarkToString(XrmQuark <i>quark</i>);</dl>
+<dd>char *XrmQuarkToString(XrmQuark <i>quark</i>);</dd></dl>
 <p> #define XrmStringToNameList(str, name) XrmStringToQuarkList((str), (name))<br />
  #define XrmStringToClassList(str,class) XrmStringToQuarkList((str), (class)) </p>
 <dl COMPACT>
-<dd>void XrmStringToQuarkList(char *<i>string</i>, XrmQuarkList <i>quarks_return</i>);</p>
-<dd>XrmStringToBindingQuarkList(char *<i>string</i>, XrmBindingList <i>bindings_return</i>, XrmQuarkList <i>quarks_return</i>);</dl>
+<dd>void XrmStringToQuarkList(char *<i>string</i>, XrmQuarkList <i>quarks_return</i>);</dd>
+<dd>XrmStringToBindingQuarkList(char *<i>string</i>, XrmBindingList <i>bindings_return</i>, XrmQuarkList <i>quarks_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>bindings_return</i></p>
-<dd>Returns the binding list.</p>
-<dt><i>quark</i></p>
-<dd>Specifies the quark for which the equivalent string is desired.</p>
-<dt><i>quarks_return</i></p>
-<dd>Returns the list of quarks.</p>
-<dt><i>string</i></p>
-<dd>Specifies the string for which a quark or quark list is to be allocated.</dl>
+<dt><i>bindings_return</i></dt>
+<dd>Returns the binding list.</dd>
+<dt><i>quark</i></dt>
+<dd>Specifies the quark for which the equivalent string is desired.</dd>
+<dt><i>quarks_return</i></dt>
+<dd>Returns the list of quarks.</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the string for which a quark or quark list is to be allocated.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XrmUniqueQuark</code> function allocates a quark that is guaranteed not to represent any string that is known to the resource manager. </p>
 <p> These functions can be used to convert from string to quark representation. If the string is not in the Host Portable Character Encoding, the conversion is implementation-dependent. The string argument to <code>XrmStringToQuark</code> need not be permanently allocated storage. <code>XrmPermStringToQuark</code> is just like <code>XrmStringToQuark</code>, except that Xlib is permitted to assume the string argument is permanently allocated, and, hence, that it can be used as the value to be returned by <code>XrmQuarkToString</code>. </p>

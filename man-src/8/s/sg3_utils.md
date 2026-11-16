@@ -44,64 +44,64 @@ description: "sg3_utils – a package of utilities for sending SCSI commands"
 <h2>Exit Status</h2>
 <p>To aid scripts that call these utilities, the exit status is set to indicate success (0) or failure (1 or more). Note that some of the lower values correspond to the SCSI sense key values. The exit status values are:</p>
 <dl>
-<dt><code>0</code></p>
-<dd>success</p>
-<dt><code>1</code></p>
-<dd>syntax error. Either illegal command line options, options with bad arguments or a combination of options that is not permitted.</p>
-<dt><code>2</code></p>
-<dd>the <i>DEVICE</i> reports that it is not ready for the operation requested. The device may be in the process of becoming ready (e.g. spinning up but not at speed) so the utility may work after a wait.</p>
-<dt><code>3</code></p>
-<dd>the <i>DEVICE</i> reports a medium or hardware error (or a blank check). For example an attempt to read a corrupted block on a disk will yield this value.</p>
-<dt><code>5</code></p>
-<dd>the <i>DEVICE</i> reports an &quot;illegal request&quot; with an additional sense code other than &quot;invalid command operation code&quot;. This is often a supported command with a field set requesting an unsupported capability. For commands that require a &quot;service action&quot; field this value can indicate that the command with that service action value is not supported.</p>
-<dt><code>6</code></p>
-<dd>the <i>DEVICE</i> reports a &quot;unit attention&quot; condition. This usually indicates that something unrelated to the requested command has occurred (e.g. a device reset) potentially before the current SCSI command was sent. The requested command has not been executed by the device. Note that unit attention conditions are usually only reported once by a device.</p>
-<dt><code>9</code></p>
-<dd>the <i>DEVICE</i> reports an illegal request with an additional sense code of &quot;invalid command operation code&quot; which means that it doesn&#8217;t support the requested command.</p>
-<dt><code>11</code></p>
-<dd>the <i>DEVICE</i> reports an aborted command. In some cases aborted commands can be retried immediately (e.g. if the transport aborted the command due to congestion).</p>
-<dt><code>14</code></p>
-<dd>the <i>DEVICE</i> reports a miscompare sense key. VERIFY and COMPARE AND WRITE commands may report this.</p>
-<dt><code>15</code></p>
-<dd>the utility is unable to open, close or use the given <i>DEVICE</i>. The given file name could be incorrect or there may be permission problems. Adding the &#8216;-v&#8217; option may give more information.</p>
-<dt><code>20</code></p>
-<dd>the <i>DEVICE</i> reports it has a check condition but &quot;no sense&quot; and non-zero information in its additional sense codes. Some polling commands (e.g. REQUEST SENSE) can receive this response.</p>
-<dt><code>21</code></p>
-<dd>the <i>DEVICE</i> reports a &quot;recovered error&quot;. The requested command was successful. Most likely a utility will report a recovered error to stderr and continue, probably leaving the utility with an exit status of 0 .</p>
-<dt><code>33</code></p>
-<dd>the command sent to <i>DEVICE</i> has timed out.</p>
-<dt><code>97</code></p>
-<dd>a SCSI command response failed sanity checks.</p>
-<dt><code>98</code></p>
-<dd>the <i>DEVICE</i> reports it has a check condition but the error doesn&#8217;t fit into any of the above categories.</p>
-<dt><code>99</code></p>
-<dd>any errors that can&#8217;t be categorized into values 1 to 98 may yield this value. This includes transport and operating system errors after the command has been sent to the device.</p>
-<dt><code>126</code></p>
-<dd>the utility was found but could not be executed. That might occur if the executable does not have execute permissions.</p>
-<dt><code>127</code></p>
-<dd>This is the exit status for utility not found. That might occur when a script calls a utility in this package but the PATH environment variable has not been properly set up, so the script cannot find the executable.</p>
-<dt><code>128 + &lt;signum&gt;</code></p>
-<dd>If a signal kills a utility then the exit status is 128 plus the signal number. For example if a segmentation fault occurs then a utility is typically killed by SIGSEGV which according to &#8216;man 7 signal&#8217; has an associated signal number of 11; so the exit status will be 139 .</p>
-<dt><code>255</code></p>
-<dd>the utility tried to yield an exit status of 255 or larger. That should not happen; given here for completeness.</dl>
+<dt><code>0</code></dt>
+<dd>success</dd>
+<dt><code>1</code></dt>
+<dd>syntax error. Either illegal command line options, options with bad arguments or a combination of options that is not permitted.</dd>
+<dt><code>2</code></dt>
+<dd>the <i>DEVICE</i> reports that it is not ready for the operation requested. The device may be in the process of becoming ready (e.g. spinning up but not at speed) so the utility may work after a wait.</dd>
+<dt><code>3</code></dt>
+<dd>the <i>DEVICE</i> reports a medium or hardware error (or a blank check). For example an attempt to read a corrupted block on a disk will yield this value.</dd>
+<dt><code>5</code></dt>
+<dd>the <i>DEVICE</i> reports an &quot;illegal request&quot; with an additional sense code other than &quot;invalid command operation code&quot;. This is often a supported command with a field set requesting an unsupported capability. For commands that require a &quot;service action&quot; field this value can indicate that the command with that service action value is not supported.</dd>
+<dt><code>6</code></dt>
+<dd>the <i>DEVICE</i> reports a &quot;unit attention&quot; condition. This usually indicates that something unrelated to the requested command has occurred (e.g. a device reset) potentially before the current SCSI command was sent. The requested command has not been executed by the device. Note that unit attention conditions are usually only reported once by a device.</dd>
+<dt><code>9</code></dt>
+<dd>the <i>DEVICE</i> reports an illegal request with an additional sense code of &quot;invalid command operation code&quot; which means that it doesn&#8217;t support the requested command.</dd>
+<dt><code>11</code></dt>
+<dd>the <i>DEVICE</i> reports an aborted command. In some cases aborted commands can be retried immediately (e.g. if the transport aborted the command due to congestion).</dd>
+<dt><code>14</code></dt>
+<dd>the <i>DEVICE</i> reports a miscompare sense key. VERIFY and COMPARE AND WRITE commands may report this.</dd>
+<dt><code>15</code></dt>
+<dd>the utility is unable to open, close or use the given <i>DEVICE</i>. The given file name could be incorrect or there may be permission problems. Adding the &#8216;-v&#8217; option may give more information.</dd>
+<dt><code>20</code></dt>
+<dd>the <i>DEVICE</i> reports it has a check condition but &quot;no sense&quot; and non-zero information in its additional sense codes. Some polling commands (e.g. REQUEST SENSE) can receive this response.</dd>
+<dt><code>21</code></dt>
+<dd>the <i>DEVICE</i> reports a &quot;recovered error&quot;. The requested command was successful. Most likely a utility will report a recovered error to stderr and continue, probably leaving the utility with an exit status of 0 .</dd>
+<dt><code>33</code></dt>
+<dd>the command sent to <i>DEVICE</i> has timed out.</dd>
+<dt><code>97</code></dt>
+<dd>a SCSI command response failed sanity checks.</dd>
+<dt><code>98</code></dt>
+<dd>the <i>DEVICE</i> reports it has a check condition but the error doesn&#8217;t fit into any of the above categories.</dd>
+<dt><code>99</code></dt>
+<dd>any errors that can&#8217;t be categorized into values 1 to 98 may yield this value. This includes transport and operating system errors after the command has been sent to the device.</dd>
+<dt><code>126</code></dt>
+<dd>the utility was found but could not be executed. That might occur if the executable does not have execute permissions.</dd>
+<dt><code>127</code></dt>
+<dd>This is the exit status for utility not found. That might occur when a script calls a utility in this package but the PATH environment variable has not been properly set up, so the script cannot find the executable.</dd>
+<dt><code>128 + &lt;signum&gt;</code></dt>
+<dd>If a signal kills a utility then the exit status is 128 plus the signal number. For example if a segmentation fault occurs then a utility is typically killed by SIGSEGV which according to &#8216;man 7 signal&#8217; has an associated signal number of 11; so the exit status will be 139 .</dd>
+<dt><code>255</code></dt>
+<dd>the utility tried to yield an exit status of 255 or larger. That should not happen; given here for completeness.</dd></dl>
 <p> Most of the error conditions reported above will be repeatable (an example of one that is not is &quot;unit attention&quot;) so the utility can be run again with the &#8216;-v&#8217; option (or several) to obtain more information.</p>
 <h2>Common Options</h2>
 <p>Arguments to long options are mandatory for short options as well. In the short form an argument to an option uses zero or more spaces as a separator (i.e. the short form does not use &quot;=&quot; as a separator). </p>
 <p> If an option takes a numeric argument then that argument is assumed to be decimal unless otherwise indicated (e.g. with a leading &quot;0x&quot;, a trailing &quot;h&quot; or as noted in the usage message). </p>
 <p> Some options are used uniformly in most of the utilities in this package. Those options are listed below. Note that there are some exceptions.</p>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit. In a few older utilities the &#8216;-h&#8217; option requests hexadecimal output. In these cases the &#8216;-?&#8217; option will output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>for SCSI commands that yield a non-trivial response, print out that response in ASCII hexadecimal.</p>
-<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></p>
-<dd>several important SCSI commands (e.g. INQUIRY and MODE SENSE) have response lengths that vary depending on many factors, only some of which these utilities take into account. The maximum response length is typically specified in the &#8216;allocation length&#8217; field of the cdb. In the absence of this option, several utilities use a default allocation length (sometimes recommended in the SCSI draft standards) or a &quot;double fetch&quot; strategy. See <a href="/docs/linux/man/8-sg_logs/">sg_logs</a>(8) for its description of a &quot;double fetch&quot; strategy. These techniques are imperfect and in the presence of faulty SCSI targets can cause problems (e.g. some USB mass storage devices freeze if they receive an INQUIRY allocation length other than 36). Also use of this option disables any &quot;double fetch&quot; strategy that may have otherwise been used.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>for SCSI commands that yield a non-trivial response, output that response in binary to stdout. If any error messages or warning are produced they are usually sent to stderr. Some utilities that consume data to send to the device along with the SCSI command, use this option to provide that data or indicate that it can be read from stdin.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output). Can be used multiple times to further increase verbosity. The additional output is usually sent to stderr.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit. Each utility has its own version number and date of last code change.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit. In a few older utilities the &#8216;-h&#8217; option requests hexadecimal output. In these cases the &#8216;-?&#8217; option will output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>for SCSI commands that yield a non-trivial response, print out that response in ASCII hexadecimal.</dd>
+<dt><code>-m</code>, <code>&#8211;maxlen</code>=<i>LEN</i></dt>
+<dd>several important SCSI commands (e.g. INQUIRY and MODE SENSE) have response lengths that vary depending on many factors, only some of which these utilities take into account. The maximum response length is typically specified in the &#8216;allocation length&#8217; field of the cdb. In the absence of this option, several utilities use a default allocation length (sometimes recommended in the SCSI draft standards) or a &quot;double fetch&quot; strategy. See <a href="/docs/linux/man/8-sg_logs/">sg_logs</a>(8) for its description of a &quot;double fetch&quot; strategy. These techniques are imperfect and in the presence of faulty SCSI targets can cause problems (e.g. some USB mass storage devices freeze if they receive an INQUIRY allocation length other than 36). Also use of this option disables any &quot;double fetch&quot; strategy that may have otherwise been used.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>for SCSI commands that yield a non-trivial response, output that response in binary to stdout. If any error messages or warning are produced they are usually sent to stderr. Some utilities that consume data to send to the device along with the SCSI command, use this option to provide that data or indicate that it can be read from stdin.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output). Can be used multiple times to further increase verbosity. The additional output is usually sent to stderr.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit. Each utility has its own version number and date of last code change.</dd></dl>
 <h2>Numeric Arguments</h2>
 <p>Many utilities have command line options that take numeric arguments. These numeric arguments can be large values (e.g. a logical block address (LBA) on a disk) and can be inconvenient to enter in the default decimal representation. So various other representations are permitted. </p>
 <p> Multiplicative suffixes are accepted. They are one, two or three letter strings appended directly after the number to which they apply: </p>

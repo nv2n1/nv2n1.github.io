@@ -23,7 +23,7 @@ This configuration file specifies which of the work flow definitions are applica
 <h2>Examples</h2>
 
 Condition line
-<dl><dd>EVENT=workflow_UploadCCpp analyzer=CCpp</dl>
+<dl><dd>EVENT=workflow_UploadCCpp analyzer=CCpp</dd></dl>
  
 
  The condition line above expects existence of /usr/share/libreport/workflows/workflow_UploadCCpp.xml
@@ -34,4 +34,4 @@ Condition line
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

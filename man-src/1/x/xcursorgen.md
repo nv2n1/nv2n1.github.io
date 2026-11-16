@@ -19,12 +19,12 @@ description: "xcursorgen – create an X cursor file from a collection of PNG im
 <p> If <i>config-file</i> is not specified, or is specified as &quot;-&quot;, standard input is used for the configuration file. If <i>output-file</i> is not specified, or is specified as &quot;-&quot;, standard output is used for the output file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display the version number and exit.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Display the usage message and exit.</p>
-<dt><code>-p </code><i>dir</i>, <code>&#8211;prefix </code><i>dir</i></p>
-<dd> Find cursor images in the directory specified by <i>dir</i>. If not specified, the current directory is used.</dl>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display the version number and exit.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Display the usage message and exit.</dd>
+<dt><code>-p </code><i>dir</i>, <code>&#8211;prefix </code><i>dir</i></dt>
+<dd> Find cursor images in the directory specified by <i>dir</i>. If not specified, the current directory is used.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-xcursor/">Xcursor</a>(3) </p>
 <h2>Index</h2>

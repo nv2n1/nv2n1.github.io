@@ -12,14 +12,14 @@ description: "obexctl – A command-line interface of BlueZ for OBEX (file trans
 <p> Usage:</p>
 <dl>
 <dt>
-<dd> obexctl [options]</dl>
+</dt><dd> obexctl [options]</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;timeout</code></p>
-<dd> Timeout in seconds for non-interactive mode</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help </p>
+<dt><code>&#8211;timeout</code></dt>
+<dd> Timeout in seconds for non-interactive mode</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help </dd>
 </dl>
 <h2>Index</h2>

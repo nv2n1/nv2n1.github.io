@@ -18,12 +18,12 @@ description: "checkisomd5 — check an MD5 checksum implanted by implantisomd5"
 <p> Program returns exit status 0 if the checksum is correct, 1 if the checksum is incorrect or non-existent, or 2 if the check was aborted.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;md5sumonly</code></p>
-<dd> Do not check the target. Instead, output human-readable information about the target&#8217;s checksums.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Display human-readable progress as the target is checked. Without this option, nothing is outputted except errors.</p>
-<dt><code>&#8211;gauge</code></p>
-<dd> Display a series of numbers from 0 to 100, corresponding to check progress. This output can be piped to <code>dialog &#8211;gauge</code> for a user-friendly progress bar.</dl>
+<dt><code>&#8211;md5sumonly</code></dt>
+<dd> Do not check the target. Instead, output human-readable information about the target&#8217;s checksums.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Display human-readable progress as the target is checked. Without this option, nothing is outputted except errors.</dd>
+<dt><code>&#8211;gauge</code></dt>
+<dd> Display a series of numbers from 0 to 100, corresponding to check progress. This output can be piped to <code>dialog &#8211;gauge</code> for a user-friendly progress bar.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> implantisomd5 (1). </p>
 <h2>Index</h2>

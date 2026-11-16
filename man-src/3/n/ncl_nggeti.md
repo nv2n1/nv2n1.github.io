@@ -17,9 +17,9 @@ the Ngmisc internal parameters.</code></pre>
 
  void c_nggeti (char *pnam, int *ival)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter whose value is to be retrieved. Only the first two characters of the string are examined.
-<dt>IVAL
-<dd>(an output variable of type INTEGER) is the current value of the internal parameter.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter whose value is to be retrieved. Only the first two characters of the string are examined.
+</dd><dt>IVAL
+</dt><dd>(an output variable of type INTEGER) is the current value of the internal parameter.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to retrieve the current value of Ngmisc parameters. For a complete list of parameters available in this utility, see the ngmisc_params man page.
 <h2>Access</h2>To use NGGETI or c_nggeti, load the NCAR Graphics libraries ncarg, ncarg_gks, ncarg_c, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: ngmisc_params, ngseti, nggetc, ngsetc, nggetr, ngsetr, ncarg_cbind. 

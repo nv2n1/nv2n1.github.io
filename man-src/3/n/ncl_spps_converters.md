@@ -52,9 +52,9 @@ I = KMPX (IX), J = KMPY(IY)</pre>
 <h2>Description</h2>
 
 <dl><dt>RX
-<dd>(an input expression of type REAL) is an X coordinate in the coordinate system specified by the second letter of the function name. In a reference to CFUX, RX is a fractional X coordinate; in a reference to CUFX, RX is a user X coordinate.
-<dt>RY
-<dd>(an input expression of type REAL) is a Y coordinate in the coordinate system specified by the second letter of the function name. In a reference to CFUY, RY is a fractional Y coordinate; in a reference to CUFY, RY is a user Y coordinate.</dl>
+</dt><dd>(an input expression of type REAL) is an X coordinate in the coordinate system specified by the second letter of the function name. In a reference to CFUX, RX is a fractional X coordinate; in a reference to CUFX, RX is a user X coordinate.
+</dd><dt>RY
+</dt><dd>(an input expression of type REAL) is a Y coordinate in the coordinate system specified by the second letter of the function name. In a reference to CFUY, RY is a fractional Y coordinate; in a reference to CUFY, RY is a user Y coordinate.</dd></dl>
  
 
  IX and IY occur as arguments only in references to some of the obsolete functions; they represent input expressions of type INTEGER, specifying the X and Y coordinates of a point in either PAUs or MUs (depending on the second letter of the function name). 

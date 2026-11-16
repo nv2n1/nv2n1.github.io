@@ -15,7 +15,7 @@ ipc_get_maxid - get the last assigned id
 <h2>Arguments</h2>
 
 <i>ids</i>
-<dl><dd><dd>ipc identifier set</dl>
+<dl><dd></dd><dd>ipc identifier set</dd></dl>
 
 <h2>Description</h2>
 

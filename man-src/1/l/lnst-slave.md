@@ -16,18 +16,18 @@ description: "lnst-slave – Linux Network Stack Test slave daemon"
 <p> <code>lnst-slave</code> is a daemon script that runs in the background and waits for incomming commands from a controller.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Toggle emitting debugging messages.</p>
-<dt><code>-e, &#8211;daemonize</code></p>
-<dd> Detach from parent process and run in background.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display usage of this command.</p>
-<dt><code>-i, &#8211;pidfile</code><i>=file</i></p>
-<dd> File to write damonized process&#8217; PID to.</p>
-<dt><code>-m, &#8211;no-colours</code></p>
-<dd> Disable coloured terminal output.</p>
-<dt><code>-p, &#8211;port</code><i>=port_number</i></p>
-<dd> The port number <code>lnst-slave</code> should listen on for incomming commands.</dl>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Toggle emitting debugging messages.</dd>
+<dt><code>-e, &#8211;daemonize</code></dt>
+<dd> Detach from parent process and run in background.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display usage of this command.</dd>
+<dt><code>-i, &#8211;pidfile</code><i>=file</i></dt>
+<dd> File to write damonized process&#8217; PID to.</dd>
+<dt><code>-m, &#8211;no-colours</code></dt>
+<dd> Disable coloured terminal output.</dd>
+<dt><code>-p, &#8211;port</code><i>=port_number</i></dt>
+<dd> The port number <code>lnst-slave</code> should listen on for incomming commands.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> <code>lnst-slave</code> will look for configuration in the following location: </p>
 <p> <i>/etc/lnst-slave.conf</i> </p>

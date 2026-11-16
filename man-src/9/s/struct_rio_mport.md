@@ -40,78 +40,78 @@ description: "struct_rio_mport – RIO master port info"
 <h2>Members</h2>
 <p>dbells</p>
 <dl>
-<dd>List of doorbell events</dl>
+<dd>List of doorbell events</dd></dl>
 <p> pwrites</p>
 <dl>
-<dd>List of portwrite events</dl>
+<dd>List of portwrite events</dd></dl>
 <p> node</p>
 <dl>
-<dd>Node in global list of master ports</dl>
+<dd>Node in global list of master ports</dd></dl>
 <p> nnode</p>
 <dl>
-<dd>Node in network list of master ports</dl>
+<dd>Node in network list of master ports</dd></dl>
 <p> net</p>
 <dl>
-<dd>RIO net this mport is attached to</dl>
+<dd>RIO net this mport is attached to</dd></dl>
 <p> lock</p>
 <dl>
-<dd>lock to synchronize lists manipulations</dl>
+<dd>lock to synchronize lists manipulations</dd></dl>
 <p> iores</p>
 <dl>
-<dd>I/O mem resource that this master port interface owns</dl>
+<dd>I/O mem resource that this master port interface owns</dd></dl>
 <p> riores[RIO_MAX_MPORT_RESOURCES]</p>
 <dl>
-<dd>RIO resources that this master port interfaces owns</dl>
+<dd>RIO resources that this master port interfaces owns</dd></dl>
 <p> inb_msg[RIO_MAX_MBOX]</p>
 <dl>
-<dd>RIO inbound message event descriptors</dl>
+<dd>RIO inbound message event descriptors</dd></dl>
 <p> outb_msg[RIO_MAX_MBOX]</p>
 <dl>
-<dd>RIO outbound message event descriptors</dl>
+<dd>RIO outbound message event descriptors</dd></dl>
 <p> host_deviceid</p>
 <dl>
-<dd>Host device ID associated with this master port</dl>
+<dd>Host device ID associated with this master port</dd></dl>
 <p> ops</p>
 <dl>
-<dd>configuration space functions</dl>
+<dd>configuration space functions</dd></dl>
 <p> id</p>
 <dl>
-<dd>Port ID, unique among all ports</dl>
+<dd>Port ID, unique among all ports</dd></dl>
 <p> index</p>
 <dl>
-<dd>Port index, unique among all port interfaces of the same type</dl>
+<dd>Port index, unique among all port interfaces of the same type</dd></dl>
 <p> sys_size</p>
 <dl>
-<dd>RapidIO common transport system size</dl>
+<dd>RapidIO common transport system size</dd></dl>
 <p> phys_efptr</p>
 <dl>
-<dd>RIO port extended features pointer</dl>
+<dd>RIO port extended features pointer</dd></dl>
 <p> phys_rmap</p>
 <dl>
-<dd>LP-Serial EFB Register Mapping type (1 or 2).</dl>
+<dd>LP-Serial EFB Register Mapping type (1 or 2).</dd></dl>
 <p> name[RIO_MAX_MPORT_NAME]</p>
 <dl>
-<dd>Port name string</dl>
+<dd>Port name string</dd></dl>
 <p> dev</p>
 <dl>
-<dd>device structure associated with an mport</dl>
+<dd>device structure associated with an mport</dd></dl>
 <p> priv</p>
 <dl>
-<dd>Master port private data</dl>
+<dd>Master port private data</dd></dl>
 <p> dma</p>
 <dl>
-<dd>DMA device associated with mport</dl>
+<dd>DMA device associated with mport</dd></dl>
 <p> nscan</p>
 <dl>
-<dd>RapidIO network enumeration/discovery operations</dl>
+<dd>RapidIO network enumeration/discovery operations</dd></dl>
 <p> state</p>
 <dl>
-<dd>mport device state</dl>
+<dd>mport device state</dd></dl>
 <p> pwe_refcnt</p>
 <dl>
-<dd>port-write enable ref counter to track enable/disable requests</dl>
+<dd>port-write enable ref counter to track enable/disable requests</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

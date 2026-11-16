@@ -14,7 +14,7 @@ The Kernel Lockdown feature is designed to prevent both direct and indirect acce
 
  If a prohibited or restricted feature is accessed or used, the kernel will emit a message that looks like: 
 
-<dl><dd>&nbsp;Lockdown: X: Y is restricted, see man kernel_lockdown.7</dl>
+<dl><dd>&nbsp;Lockdown: X: Y is restricted, see man kernel_lockdown.7</dd></dl>
  
 
  where X indicates the process name and Y indicates what is restricted. 
@@ -30,45 +30,45 @@ When lockdown is in effect, a number of features are disabled or have their use 
  /dev/kcore 
  /dev/ioports 
  BPF 
- kprobes</dl>
+ kprobes</dd></dl>
  
 
  and the ability to directly configure and control devices, so as to prevent the use of a device to access or modify a kernel image:
 <dl><dt>&bull;
-<dd>The use of module parameters that directly specify hardware parameters to drivers through the kernel command line or when loading a module.
-<dt>&bull;
-<dd>The use of direct PCI BAR access.
-<dt>&bull;
-<dd>The use of the ioperm and iopl instructions on x86.
-<dt>&bull;
-<dd>The use of the KD*IO console ioctls.
-<dt>&bull;
-<dd>The use of the TIOCSSERIAL serial ioctl.
-<dt>&bull;
-<dd>The alteration of MSR registers on x86.
-<dt>&bull;
-<dd>The replacement of the PCMCIA CIS.
-<dt>&bull;
-<dd>The overriding of ACPI tables.
-<dt>&bull;
-<dd>The use of ACPI error injection.
-<dt>&bull;
-<dd>The specification of the ACPI RDSP address.
-<dt>&bull;
-<dd>The use of ACPI custom methods.</dl>
+</dt><dd>The use of module parameters that directly specify hardware parameters to drivers through the kernel command line or when loading a module.
+</dd><dt>&bull;
+</dt><dd>The use of direct PCI BAR access.
+</dd><dt>&bull;
+</dt><dd>The use of the ioperm and iopl instructions on x86.
+</dd><dt>&bull;
+</dt><dd>The use of the KD*IO console ioctls.
+</dd><dt>&bull;
+</dt><dd>The use of the TIOCSSERIAL serial ioctl.
+</dd><dt>&bull;
+</dt><dd>The alteration of MSR registers on x86.
+</dd><dt>&bull;
+</dt><dd>The replacement of the PCMCIA CIS.
+</dd><dt>&bull;
+</dt><dd>The overriding of ACPI tables.
+</dd><dt>&bull;
+</dt><dd>The use of ACPI error injection.
+</dd><dt>&bull;
+</dt><dd>The specification of the ACPI RDSP address.
+</dd><dt>&bull;
+</dt><dd>The use of ACPI custom methods.</dd></dl>
  
 
  Certain facilities are restricted:
 <dl><dt>&bull;
-<dd>Only validly signed modules may be loaded (waived if the module file being loaded is vouched for by IMA appraisal).
-<dt>&bull;
-<dd>Only validly signed binaries may be kexec'd (waived if the binary image file to be executed is vouched for by IMA appraisal).
-<dt>&bull;
-<dd>Unencrypted hibernation/suspend to swap are disallowed as the kernel image is saved to a medium that can then be accessed.
-<dt>&bull;
-<dd>Use of debugfs is not permitted as this allows a whole range of actions including direct configuration of, access to and driving of hardware.
-<dt>&bull;
-<dd>IMA requires the addition of the &quot;secure_boot&quot; rules to the policy, whether or not they are specified on the command line, for both the built-in and custom policies in secure boot lockdown mode.</dl>
+</dt><dd>Only validly signed modules may be loaded (waived if the module file being loaded is vouched for by IMA appraisal).
+</dd><dt>&bull;
+</dt><dd>Only validly signed binaries may be kexec'd (waived if the binary image file to be executed is vouched for by IMA appraisal).
+</dd><dt>&bull;
+</dt><dd>Unencrypted hibernation/suspend to swap are disallowed as the kernel image is saved to a medium that can then be accessed.
+</dd><dt>&bull;
+</dt><dd>Use of debugfs is not permitted as this allows a whole range of actions including direct configuration of, access to and driving of hardware.
+</dd><dt>&bull;
+</dt><dd>IMA requires the addition of the &quot;secure_boot&quot; rules to the policy, whether or not they are specified on the command line, for both the built-in and custom policies in secure boot lockdown mode.</dd></dl>
 
 <h2>Versions</h2>
 

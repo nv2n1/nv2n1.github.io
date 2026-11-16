@@ -11,10 +11,8 @@ std::experimental::make_array - std::experimental::make_array
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / array&gt;
-
     template &lt;class D = void, class... Types&gt;
     (library fundamentals TS v2)
-
         constexpr std::array&lt;VT /* see below */, sizeof...(Types)&gt; make_array(Types &amp;&amp;...t);</code></pre> 
 Creates a std::array whose size is equal to the number of arguments and whose elements are initialized from the corresponding arguments. Returns std::array&lt;VT, sizeof...(Types)&gt;{std::forward&lt;Types&gt;(t)...} 
 If D is void, then the deduced type VT is std::common_type_t&lt;Types...&gt;. Otherwise, it is D. 
@@ -53,12 +51,9 @@ If D is void and any of std::decay_t&lt;Types&gt;... is a specialization of std:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;experimental/array&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     decltype(auto) arr = std::experimental::make_array(1, 2, 3, 4, 5);
     bool is_array_of_5_ints = std::is_same&lt;decltype(arr), std::array&lt;int, 5&gt;&gt;::value;

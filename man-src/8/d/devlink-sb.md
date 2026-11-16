@@ -10,35 +10,21 @@ description: "devlink-sb – devlink shared buffer configuration"
 <p>devlink-sb &#8211; devlink shared buffer configuration</p>
 <h2>Synopsis</h2>
 <pre><code>devlink
-
 [ OPTIONS ]
-
 sb
-
 { COMMAND |
-
     help }
-
 OPTIONS := {
-
     -V[ersion] |
     -n[no-nice-names] }</code></pre>
 <p> <code>devlink sb show </code> [ <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ] ]<br />
  <code>devlink sb pool show </code> [ <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
  <code>pool</code> <i>POOL_INDEX</i> ] </p>
 <pre><code>devlink sb pool set DEV
-
 [ sb
-
 SB_INDEX ]
-
-
 pool POOL_INDEX
-
-
 size POOL_SIZE
-
-
 thtype { static | dynamic }</code></pre>
 <p> <code>devlink sb port pool show </code> [ <i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
  <code>pool</code> <i>POOL_INDEX</i> ]<br />
@@ -65,42 +51,42 @@ thtype { static | dynamic }</code></pre>
 <h3>devlink sb pool set &#8211; set attributes of pool</h3>
 <p><i>DEV</i> &#8211; specifies the devlink device to set pool.</p>
 <dl>
-<dt><code>size</code><i> POOL_SIZE</i></p>
-<dd>size of the pool in Bytes.</p>
-<dt><code>thtype</code> { <code>static</code> | <code>dynamic</code> }</p>
+<dt><code>size</code><i> POOL_SIZE</i></dt>
+<dd>size of the pool in Bytes.</dd>
+<dt><code>thtype</code> { <code>static</code> | <code>dynamic</code> }</dt>
 <dd>pool threshold type. <i>static</i> &#8211; Threshold values for the pool will be passed in Bytes. <i>dynamic</i> &#8211; Threshold values (&quot;to_alpha&quot;) for the pool will be used to compute alpha parameter according to formula:<br />
  alpha = 2 ^ (to_alpha &#8211; 10) The range of the passed value is between 0 to 20. The computed alpha is used to determine the maximum usage of the flow:<br />
- max_usage = alpha / (1 + alpha) * Free_Buffer</dl>
+ max_usage = alpha / (1 + alpha) * Free_Buffer</dd></dl>
 <h3>devlink sb port pool show &#8211; display port-pool combinations and threshold for each</h3>
 <p><i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port.</p>
 <dl>
-<dt><code>pool</code><i> POOL_INDEX</i></p>
-<dd>pool index.</dl>
+<dt><code>pool</code><i> POOL_INDEX</i></dt>
+<dd>pool index.</dd></dl>
 <h3>devlink sb port pool set &#8211; set port-pool threshold</h3>
 <p><i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port.</p>
 <dl>
-<dt><code>pool</code><i> POOL_INDEX</i></p>
-<dd>pool index.</p>
-<dt><code>th</code><i> THRESHOLD</i></p>
-<dd>threshold value. Type of the value is either Bytes or &quot;to_alpha&quot;, depends on <code>thtype</code> set for the pool.</dl>
+<dt><code>pool</code><i> POOL_INDEX</i></dt>
+<dd>pool index.</dd>
+<dt><code>th</code><i> THRESHOLD</i></dt>
+<dd>threshold value. Type of the value is either Bytes or &quot;to_alpha&quot;, depends on <code>thtype</code> set for the pool.</dd></dl>
 <h3>devlink sb tc bind show &#8211; display port-TC to pool bindings and threshold for each</h3>
 <p><i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port.</p>
 <dl>
-<dt><code>tc</code><i> TC_INDEX</i></p>
-<dd>index of either ingress or egress TC, usually in range 0 to 8 (depends on device).</p>
-<dt><code>type</code> { <code>ingress</code> | <code>egress</code> }</p>
-<dd>TC type.</dl>
+<dt><code>tc</code><i> TC_INDEX</i></dt>
+<dd>index of either ingress or egress TC, usually in range 0 to 8 (depends on device).</dd>
+<dt><code>type</code> { <code>ingress</code> | <code>egress</code> }</dt>
+<dd>TC type.</dd></dl>
 <h3>devlink sb tc bind set &#8211; set port-TC to pool binding with specified threshold</h3>
 <p><i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port.</p>
 <dl>
-<dt><code>tc</code><i> TC_INDEX</i></p>
-<dd>index of either ingress or egress TC, usually in range 0 to 8 (depends on device).</p>
-<dt><code>type</code> { <code>ingress</code> | <code>egress</code> }</p>
-<dd>TC type.</p>
-<dt><code>pool</code><i> POOL_INDEX</i></p>
-<dd>index of pool to bind this to.</p>
-<dt><code>th</code><i> THRESHOLD</i></p>
-<dd>threshold value. Type of the value is either Bytes or &quot;to_alpha&quot;, depends on <code>thtype</code> set for the pool.</dl>
+<dt><code>tc</code><i> TC_INDEX</i></dt>
+<dd>index of either ingress or egress TC, usually in range 0 to 8 (depends on device).</dd>
+<dt><code>type</code> { <code>ingress</code> | <code>egress</code> }</dt>
+<dd>TC type.</dd>
+<dt><code>pool</code><i> POOL_INDEX</i></dt>
+<dd>index of pool to bind this to.</dd>
+<dt><code>th</code><i> THRESHOLD</i></dt>
+<dd>threshold value. Type of the value is either Bytes or &quot;to_alpha&quot;, depends on <code>thtype</code> set for the pool.</dd></dl>
 <h3>devlink sb occupancy show &#8211; display shared buffer occupancy values for device or port</h3>
 <p>This command is used to browse shared buffer occupancy values. Values are showed for every port-pool combination as well as for all port-TC combinations (with pool this port-TC is bound to). Format of value is:<br />
  current_value/max_value Note that before showing values, one has to issue <code>occupancy snapshot</code> command first. <i>DEV</i> &#8211; specifies the devlink device to show occupancy values for. <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port to show occupancy values for.</p>
@@ -111,31 +97,31 @@ thtype { static | dynamic }</code></pre>
 <h2>Examples</h2>
 <p>devlink sb show</p>
 <dl>
-<dd>List available share buffers.</dl>
+<dd>List available share buffers.</dd></dl>
 <p> devlink sb pool show</p>
 <dl>
-<dd>List available pools and their config.</dl>
+<dd>List available pools and their config.</dd></dl>
 <p> devlink sb port pool show pci/0000:03:00.0/1 pool 0</p>
 <dl>
-<dd>Show port-pool setup for specified port and pool.</dl>
+<dd>Show port-pool setup for specified port and pool.</dd></dl>
 <p> sudo devlink sb port pool set pci/0000:03:00.0/1 pool 0 th 15</p>
 <dl>
-<dd>Change threshold for port specified port and pool.</dl>
+<dd>Change threshold for port specified port and pool.</dd></dl>
 <p> devlink sb tc bind show pci/0000:03:00.0/1 tc 0 type ingress</p>
 <dl>
-<dd>Show pool binding and threshold for specified port and TC.</dl>
+<dd>Show pool binding and threshold for specified port and TC.</dd></dl>
 <p> sudo devlink sb tc bind set pci/0000:03:00.0/1 tc 0 type ingress pool 0 th 9</p>
 <dl>
-<dd>Set pool binding and threshold for specified port and TC.</dl>
+<dd>Set pool binding and threshold for specified port and TC.</dd></dl>
 <p> sudo devlink sb occupancy snapshot pci/0000:03:00.0</p>
 <dl>
-<dd>Make a snapshot of occupancy of shared buffer for specified devlink device.</dl>
+<dd>Make a snapshot of occupancy of shared buffer for specified devlink device.</dd></dl>
 <p> devlink sb occupancy show pci/0000:03:00.0/1</p>
 <dl>
-<dd>Show occupancy for specified port from the snapshot.</dl>
+<dd>Show occupancy for specified port from the snapshot.</dd></dl>
 <p> sudo devlink sb occupancy clearmax pci/0000:03:00.0</p>
 <dl>
-<dd>Clear watermarks for shared buffer of specified devlink device.</dl>
+<dd>Clear watermarks for shared buffer of specified devlink device.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-dev/">devlink-dev</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code><a href="/docs/linux/man/8-devlink-monitor/">devlink-monitor</a></code>(8), </p>
 <h2>Author</h2>

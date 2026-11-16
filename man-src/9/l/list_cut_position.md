@@ -15,15 +15,15 @@ list_cut_position - cut a list into two
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>a new list to add all removed entries</dl>
+<dl><dd></dd><dd>a new list to add all removed entries</dd></dl>
  
 
  <i>head</i>
-<dl><dd>a list with entries</dl>
+<dl><dd>a list with entries</dd></dl>
  
 
  <i>entry</i>
-<dl><dd>an entry within head, could be the head itself and if so we won't cut the list</dl>
+<dl><dd>an entry within head, could be the head itself and if so we won't cut the list</dd></dl>
 
 <h2>Description</h2>
 

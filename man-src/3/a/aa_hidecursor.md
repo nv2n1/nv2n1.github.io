@@ -14,8 +14,8 @@ description: "aa_hidecursor – hide the hardware cursor."
 <p> void aa_hidecursor(aa_context *c); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Hide the hardware cursor. This function may be ignored by some drivers.</p>
 <h2>SEE ALSO</h2>

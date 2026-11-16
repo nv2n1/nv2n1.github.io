@@ -17,41 +17,41 @@ description: "fusesmb.conf – the configuration file for fusesmb"
 <h2>Special Sections</h2>
 <p><code>fusesmb.conf</code> can contain the following sections:</p>
 <dl>
-<dt>The <code>[global]</code> section</p>
-<dd>Section for global parameters.</p>
-<dt>The <code>[ignore]</code> section</p>
-<dd>Section for specifying servers and/or workgroups that should not be listed.</p>
-<dt>The <code>[/</code><i>SERVER</i><code>]</code> section</p>
-<dd>Section for server-specific settings. The section name should start with a slash &#8220;<code>/</code>&#8221; and not end with a slash.</p>
-<dt>The <code>[/</code><i>SERVER</i><code>/</code><i>SHARE</i><code>]</code></p>
-<dd>Section for share-specific settings. The section name should start with a slash followed by the server name followed by a slash ending on the share name. It should not end with a slash. </p>
+<dt>The <code>[global]</code> section</dt>
+<dd>Section for global parameters.</dd>
+<dt>The <code>[ignore]</code> section</dt>
+<dd>Section for specifying servers and/or workgroups that should not be listed.</dd>
+<dt>The <code>[/</code><i>SERVER</i><code>]</code> section</dt>
+<dd>Section for server-specific settings. The section name should start with a slash &#8220;<code>/</code>&#8221; and not end with a slash.</dd>
+<dt>The <code>[/</code><i>SERVER</i><code>/</code><i>SHARE</i><code>]</code></dt>
+<dd>Section for share-specific settings. The section name should start with a slash followed by the server name followed by a slash ending on the share name. It should not end with a slash. </dd>
 </dl>
 <h2>Explanation Of Each Parameter</h2>
 <p>This chapter explains each possible option. The section names &#8211; specified between parentheses after each option &#8211; shows the applicable sections for this option. For example: ( [global] ) specifies that this option is only possible for the section [global].</p>
 <dl>
-<dt><code>ignore</code> ( [/SERVER] )</p>
-<dd>Ignore this server. Possible values are: true, false, 1 and 0. </p>
+<dt><code>ignore</code> ( [/SERVER] )</dt>
+<dd>Ignore this server. Possible values are: true, false, 1 and 0. </dd>
 <p> Example: <i>ignore</i> = <i>true</i></p>
-<dt><code>interval</code> ( [global] )</p>
-<dd>Interval for scanning the network for shares. Value is a number that specifies the network scanning interval in minutes. If the value is smaller or equal to zero the network is not scanned. </p>
+<dt><code>interval</code> ( [global] )</dt>
+<dd>Interval for scanning the network for shares. Value is a number that specifies the network scanning interval in minutes. If the value is smaller or equal to zero the network is not scanned. </dd>
 <p> Example: <i>interval</i> = <i>20</i></p>
-<dt><code>password</code> ( [global], [/SERVER], [/SERVER/SHARE] )</p>
-<dd>Password. Value is string containing the password. </p>
+<dt><code>password</code> ( [global], [/SERVER], [/SERVER/SHARE] )</dt>
+<dd>Password. Value is string containing the password. </dd>
 <p> Example: <i>password</i> = <i>secret</i></p>
-<dt><code>servers</code> ( [ignore] )</p>
-<dd>Servers to ignore. Value is each server to ignore separated by a comma. </p>
+<dt><code>servers</code> ( [ignore] )</dt>
+<dd>Servers to ignore. Value is each server to ignore separated by a comma. </dd>
 <p> Example: <i>servers</i> = <i>SERVER1, SERVER2, SERVER3</i> </p>
-<dt><code>showhiddenshares</code> ( [global], [/SERVER] )</p>
-<dd>Show hidden shares. Possible values are: true, false, 1 and 0. </p>
+<dt><code>showhiddenshares</code> ( [global], [/SERVER] )</dt>
+<dd>Show hidden shares. Possible values are: true, false, 1 and 0. </dd>
 <p> Example: <i>showhiddenshares</i> = <i>false</i> </p>
-<dt><code>timeout</code> ( [global] )</p>
-<dd>Connection timeout in seconds. A server after this timeout is considered offline. Values smaller than 2 seconds are ignored. </p>
+<dt><code>timeout</code> ( [global] )</dt>
+<dd>Connection timeout in seconds. A server after this timeout is considered offline. Values smaller than 2 seconds are ignored. </dd>
 <p> Example: <i>timeout</i> = <i>10</i> </p>
-<dt><code>username</code> ( [global], [/SERVER], [/SERVER/SHARE] )</p>
-<dd>Username. Value is string containing the username. </p>
+<dt><code>username</code> ( [global], [/SERVER], [/SERVER/SHARE] )</dt>
+<dd>Username. Value is string containing the username. </dd>
 <p> Example: <i>username</i> = <i>johndoe</i> </p>
-<dt><code>workgroups</code> ( [ignore] )</p>
-<dd>Workgroups to ignore. Value is each workgroup to ignore separated by a comma. </p>
+<dt><code>workgroups</code> ( [ignore] )</dt>
+<dd>Workgroups to ignore. Value is each workgroup to ignore separated by a comma. </dd>
 <p> Example: <i>workgroups</i> = <i>WORKGROUP1, WORKGROUP2</i> </p>
 </dl>
 <h2>Example</h2>

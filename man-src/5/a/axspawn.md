@@ -50,7 +50,7 @@ description: "axspawn.conf – Control the operation of axspawn."
  shell /bin/bash<br />
  #<br />
  # bind user id to callsign for outgoing connects.<br />
- associate yes</dl>
+ associate yes</dd></dl>
 <p> The lqassociaterq option has to be used with great care. If a user logs on it removes any existing callsign from the translation table for this userid and replaces it with the callsign and SSID of the user. This will happen with multiple connects (same callsign, different SSIDs), too. Unless you want your users to be able to call out from your machine disable lqassociaterq.</p>
 <h2>Files</h2>
 <p>/etc/ax25/axspawn.conf</p>

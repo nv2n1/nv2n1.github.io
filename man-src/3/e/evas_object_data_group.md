@@ -23,10 +23,10 @@ description: "Object Data Functions – Functions that retrieve and set data ass
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The object to delete the data pointer from<br />
- <i>key</i> The string key the data was stored under</dl>
+ <i>key</i> The string key the data was stored under</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The original data pointer stored at key on obj</dl>
+<dd>The original data pointer stored at key on obj</dd></dl>
 <p> This will remove thee stored data pointer from obj stored under key, and return the original pointer stored under key, if any, nor NULL if nothing was stored under that key. </p>
 <p> Example: </p>
 <pre> int *my_data;
@@ -40,10 +40,10 @@ description: "Object Data Functions – Functions that retrieve and set data ass
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The object to which the data was attached<br />
- <i>key</i> The string key the data was stored under</dl>
+ <i>key</i> The string key the data was stored under</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer stored, or NULL if none was stored</dl>
+<dd>The data pointer stored, or NULL if none was stored</dd></dl>
 <p> This function will return the data pointer attached to the object obj stored using the string key key. If the object is valid and data was stored under the given key, the pointer that was stored will be reuturned. If this is not the case, NULL will be returned, signifying an invalid object or non-existent key. It is possible a NULL pointer was stored given that key, but this situation is non-sensical and thus can be considered an error as well. NULL pointers are never stored as this is the return value if an error occurs. </p>
 <p> Example: </p>
 <pre> int *my_data;
@@ -59,7 +59,7 @@ description: "Object Data Functions – Functions that retrieve and set data ass
 <dl COMPACT>
 <dd><i>obj</i> The object to attach the data pointer to<br />
  <i>key</i> The string key for the data to access it<br />
- <i>data</i> The ponter to the data to be attached</dl>
+ <i>data</i> The ponter to the data to be attached</dd></dl>
 <p> This attaches the pointer data to the object obj given the string key. This pointer will stay &#8216;hooked&#8217; to the object until a new pointer with the same string key is attached with <code>evas_object_data_set()</code> or it is deleted with <code>evas_object_data_del()</code>. On deletion of the object obj, the pointers will not be accessible from the object anymore. </p>
 <p> You can find the pointer attached under a string key using <code>evas_object_data_get()</code>. It is the job of the calling application to free any data pointed to by data when it is no longer required. </p>
 <p> If data is NULL, the old value stored at key will be removed but no new value will be stored. This is synonymous with calling <code>evas_object_data_del()</code> with obj and key. </p>

@@ -19,7 +19,7 @@ description: "dggev.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  DGGEV computes for a pair of N-by-N real nonsymmetric matrices (A,B)
  the generalized eigenvalues, and optionally, the left and/or right
@@ -37,11 +37,11 @@ description: "dggev.f –"
      of(A, B) satisfies
      u(j) **H *A = lambda(j) * u(j) * *H * B.where u(j) * *H is the conjugate - transpose of u(j).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVL</i> </p>
+</dt><dd> <i>JOBVL</i> </dd>
 <pre>
           JOBVL is CHARACTER*1
           = 'N':  do not compute the left generalized eigenvectors;
@@ -172,14 +172,14 @@ description: "dggev.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> Definition at line 226 of file dggev.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

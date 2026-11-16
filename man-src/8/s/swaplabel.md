@@ -17,17 +17,17 @@ description: "swaplabel – print or change the label or UUID of a swap area"
 <h2>Options</h2>
 <p><code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <p> <code>-L</code>, <code>&#8211;label</code> <i>label</i></p>
 <dl>
-<dd>Specify a new <i>label</i> for the device. Swap partition labels can be at most 16 characters long. If <i>label</i> is longer than 16 characters, <code>swaplabel</code> will truncate it and print a warning message.</dl>
+<dd>Specify a new <i>label</i> for the device. Swap partition labels can be at most 16 characters long. If <i>label</i> is longer than 16 characters, <code>swaplabel</code> will truncate it and print a warning message.</dd></dl>
 <p> <code>-U</code>, <code>&#8211;uuid</code> <i>UUID</i></p>
 <dl>
-<dd>Specify a new <i>UUID</i> for the device. The <i>UUID</i> must be in the standard 8-4-4-4-12 character format, such as is output by <code><a href="/docs/linux/man/1-uuidgen/">uuidgen</a></code>(1).</dl>
+<dd>Specify a new <i>UUID</i> for the device. The <i>UUID</i> must be in the standard 8-4-4-4-12 character format, such as is output by <code><a href="/docs/linux/man/1-uuidgen/">uuidgen</a></code>(1).</dd></dl>
 <h2>Environment</h2>
 <p>LIBBLKID_DEBUG=all</p>
 <dl>
-<dd>enables libblkid debug output.</dl>
+<dd>enables libblkid debug output.</dd></dl>
 <h2>Authors</h2>
 <p><code>swaplabel</code> was written by and</p>
 <h2>See Also</h2>

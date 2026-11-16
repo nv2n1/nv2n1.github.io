@@ -15,24 +15,24 @@ description: "mountall – Mount filesystems during boot"
 <p> It reads <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5) and supplements the entries found with a set of built-in entries (generally found in <i>/lib/init/fstab</i>) and calls <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) and <code><a href="/docs/linux/man/8-swapon/">swapon</a></code>(8) in the correct order to mount filesystems once the underlying devices have been created by <code><a href="/docs/linux/man/8-udevd/">udevd</a></code>(8).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;daemon</code></p>
-<dd>Detach and run in the background.</p>
-<dt><code>&#8211;force-fsck</code></p>
-<dd>Force check of all filesystems.</p>
-<dt><code>&#8211;fsck-fix</code></p>
-<dd>Attempt to fix all fsck errors.</p>
-<dt><code>&#8211;no-events</code></p>
-<dd>Do not emit events after mounting filesystems.</p>
-<dt><code>&#8211;dev-wait-time=</code><i>value</i> (in seconds)</p>
-<dd>In case of bootwait or timeout: specify the time to wait for device to be detected. The default is 30 seconds. Legal values are between 1 and 2147483647 seconds.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Reduce output to errors only.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Increase output to include informational messages.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display this help and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Output version information and exit.</dl>
+<dt><code>&#8211;daemon</code></dt>
+<dd>Detach and run in the background.</dd>
+<dt><code>&#8211;force-fsck</code></dt>
+<dd>Force check of all filesystems.</dd>
+<dt><code>&#8211;fsck-fix</code></dt>
+<dd>Attempt to fix all fsck errors.</dd>
+<dt><code>&#8211;no-events</code></dt>
+<dd>Do not emit events after mounting filesystems.</dd>
+<dt><code>&#8211;dev-wait-time=</code><i>value</i> (in seconds)</dt>
+<dd>In case of bootwait or timeout: specify the time to wait for device to be detected. The default is 30 seconds. Legal values are between 1 and 2147483647 seconds.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Reduce output to errors only.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase output to include informational messages.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display this help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Output version information and exit.</dd></dl>
 <h2>Author</h2>
 <p>Written by Scott James Remnant &lt;<code>scott [at] netsplit.com</code>&gt;</p>
 <h2>Bugs</h2>

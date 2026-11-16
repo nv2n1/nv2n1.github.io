@@ -149,17 +149,17 @@ target_link_libraries(consumer_no foo)</pre>
 <h2>Supported Compilers</h2>
 <p>CMake is currently aware of the <code>language standards</code> and <code>compile features</code> available from the following <code>compiler ids</code> as of the versions specified for each:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>AppleClang</code>: Apple Clang for Xcode versions 4.4 though 6.2.</p>
-<dt>&bull;</p>
-<dd><code>Clang</code>: Clang compiler versions 2.9 through 3.4.</p>
-<dt>&bull;</p>
-<dd><code>GNU</code>: GNU compiler versions 4.4 through 5.0.</p>
-<dt>&bull;</p>
-<dd><code>MSVC</code>: Microsoft Visual Studio versions 2010 through 2015.</p>
-<dt>&bull;</p>
-<dd><code>SunPro</code>: Oracle SolarisStudio version 12.4.</p>
-<dt>&bull;</p>
-<dd><code>Intel</code>: Intel compiler versions 12.1 through 16.0 on UNIX platforms.</dl>
+<dt>&bull;</dt>
+<dd><code>AppleClang</code>: Apple Clang for Xcode versions 4.4 though 6.2.</dd>
+<dt>&bull;</dt>
+<dd><code>Clang</code>: Clang compiler versions 2.9 through 3.4.</dd>
+<dt>&bull;</dt>
+<dd><code>GNU</code>: GNU compiler versions 4.4 through 5.0.</dd>
+<dt>&bull;</dt>
+<dd><code>MSVC</code>: Microsoft Visual Studio versions 2010 through 2015.</dd>
+<dt>&bull;</dt>
+<dd><code>SunPro</code>: Oracle SolarisStudio version 12.4.</dd>
+<dt>&bull;</dt>
+<dd><code>Intel</code>: Intel compiler versions 12.1 through 16.0 on UNIX platforms.</dd></dl>
 <h2>Copyright</h2>
 <p>2000-2016 Kitware, Inc.</p>

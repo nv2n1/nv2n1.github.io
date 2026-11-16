@@ -28,13 +28,13 @@ rlCheckRpm name[version][release][arch]
 </code></pre>
 <dl>
 <dt>name
-<dd> Package name like <tt>&quot;kernel&quot;</tt>
-<dt>version
-<dd> Package version like <tt>2.6.25.6</tt>
-<dt>release
-<dd> Package release like <tt>&quot;55.fc9&quot;</tt>
-<dt>arch
-<dd> Package architucture like <tt>&quot;i386&quot;</tt></dl>
+</dt><dd> Package name like <tt>&quot;kernel&quot;</tt>
+</dd><dt>version
+</dt><dd> Package version like <tt>2.6.25.6</tt>
+</dd><dt>release
+</dt><dd> Package release like <tt>&quot;55.fc9&quot;</tt>
+</dd><dt>arch
+</dt><dd> Package architucture like <tt>&quot;i386&quot;</tt></dd></dl>
  
 
  Returns 0 if the specified package is installed. 
@@ -49,15 +49,15 @@ rlAssertRpm name[version][release][arch] &gt;
 
 <dl>
 <dt>name
-<dd> Package name like <tt>&quot;kernel&quot;</tt>
-<dt>version
-<dd> Package version like <tt>2.6.25.6</tt>
-<dt>release
-<dd> Package release like <tt>&quot;55.fc9&quot;</tt>
-<dt>arch
-<dd> Package architucture like <tt>&quot;i386&quot;</tt>
-<dt>--all
-<dd> Assert all packages listed in the <tt>$PACKAGES</tt> <tt>$REQUIRES</tt> and <tt>$COLLECTIONS</tt> environment variables.</dl>
+</dt><dd> Package name like <tt>&quot;kernel&quot;</tt>
+</dd><dt>version
+</dt><dd> Package version like <tt>2.6.25.6</tt>
+</dd><dt>release
+</dt><dd> Package release like <tt>&quot;55.fc9&quot;</tt>
+</dd><dt>arch
+</dt><dd> Package architucture like <tt>&quot;i386&quot;</tt>
+</dd><dt>--all
+</dt><dd> Assert all packages listed in the <tt>$PACKAGES</tt> <tt>$REQUIRES</tt> and <tt>$COLLECTIONS</tt> environment variables.</dd></dl>
  
 
  Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified package is installed. 
@@ -71,13 +71,13 @@ rlAssertNotRpm name[version][release][arch] &gt;
 
 <dl>
 <dt>name
-<dd> Package name like <tt>&quot;kernel&quot;</tt>
-<dt>version
-<dd> Package version like <tt>2.6.25.6</tt>
-<dt>release
-<dd> Package release like <tt>&quot;55.fc9&quot;</tt>
-<dt>arch
-<dd> Package architucture like <tt>&quot;i386&quot;</tt></dl>
+</dt><dd> Package name like <tt>&quot;kernel&quot;</tt>
+</dd><dt>version
+</dt><dd> Package version like <tt>2.6.25.6</tt>
+</dd><dt>release
+</dt><dd> Package release like <tt>&quot;55.fc9&quot;</tt>
+</dd><dt>arch
+</dt><dd> Package architucture like <tt>&quot;i386&quot;</tt></dd></dl>
  
 
  Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified package is not installed. 
@@ -102,9 +102,9 @@ rlAssertBinaryOrigin binary package[package2[...]] PACKAGES = ... rlAssertBinary
 </code></pre>
 <dl>
 <dt>binary
-<dd> Binary name like <tt>&quot;ksh&quot;</tt> or <tt>&quot;/bin/ksh&quot;</tt>
-<dt>package
-<dd> List of packages like <tt>&quot;ksh mksh&quot;</tt>. The parameter is optional. If missing, contents of environment variable <tt>$PACKAGES</tt> are taken into account.</dl>
+</dt><dd> Binary name like <tt>&quot;ksh&quot;</tt> or <tt>&quot;/bin/ksh&quot;</tt>
+</dd><dt>package
+</dt><dd> List of packages like <tt>&quot;ksh mksh&quot;</tt>. The parameter is optional. If missing, contents of environment variable <tt>$PACKAGES</tt> are taken into account.</dd></dl>
  
 
  Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified binary belongs to (one of) the given package(s). Returns 1 and asserts <font SIZE="-1">FAIL</font> if the specified binary does not belong to (any of) the given package(s). Returns 2 and asserts <font SIZE="-1">FAIL</font> if the specified binary is not found. Returns 3 and asserts <font SIZE="-1">FAIL</font> if no packages are given. Returns 100 and asserts <font SIZE="-1">FAIL</font> if invoked with no parameters. 
@@ -136,7 +136,7 @@ rlAssertBinaryOrigin binary package[package2[...]] PACKAGES = ... rlAssertBinary
 </pre>
 <dl>
 <dt><font SIZE="-1">REQ</font>
-<dd> Requirement to be checked. It can be package name, provides string or binary name.</dl>
+</dt><dd> Requirement to be checked. It can be package name, provides string or binary name.</dd></dl>
  
 
  Returns number of unsatisfied requirements. 
@@ -159,17 +159,16 @@ rlAssertBinaryOrigin binary package[package2[...]] PACKAGES = ... rlAssertBinary
 
 <dl>
 <dt>&bull;
-<dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
-<dt>&bull;
-<dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
-<dt>&bull;
-<dd> Petr Splichal &lt;psplicha [at] redhat.com&gt;
-<dt>&bull;
-<dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
-<dt>&bull;
-<dd> Dalibor Pospisil &lt;dapospis [at] redhat.com&gt; 
-
-</dl>
+</dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Dalibor Pospisil &lt;dapospis [at] redhat.com&gt; 
+</dd></dl>
 
 <h2>Index</h2>
 

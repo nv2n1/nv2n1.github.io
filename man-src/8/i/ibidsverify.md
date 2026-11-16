@@ -28,6 +28,6 @@ description: "IBIDSVERIFY –"
 <p><code><a href="/docs/linux/man/8-ibnetdiscover/">ibnetdiscover</a>(8)</code></p>
 <h3>Author</h3>
 <dl>
-<dt><code>Hal Rosenstock</code></p>
-<dd>&lt; <i>halr [at] voltaire.com</i> &gt; </p>
+<dt><code>Hal Rosenstock</code></dt>
+<dd>&lt; <i>halr [at] voltaire.com</i> &gt; </dd>
 </dl>

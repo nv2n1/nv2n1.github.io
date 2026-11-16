@@ -15,10 +15,10 @@ description: "mtx-vscode – vscode extension generator"
 <p> <code>vscode extension generator</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;generate</code></p>
-<dd> generate extension in sync with current version</p>
-<dt><code>&#8211;start</code></p>
-<dd> start vscode with extension context</dl>
+<dt><code>&#8211;generate</code></dt>
+<dd> generate extension in sync with current version</dd>
+<dt><code>&#8211;start</code></dt>
+<dd> start vscode with extension context</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -29,26 +29,19 @@ Some implementations (such as MSVC, IBM, Oracle) produce a human-readable type n
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;typeinfo&gt;
 struct Base {
     virtual ~Base() = default;
 };
-
 struct Derived : Base {
 };
 int main()
 {
-
     Base b1;
-
     Derived d1;
     const Base *pb = &amp;b1;
-
     std::cout &lt;&lt; typeid(*pb).name() &lt;&lt; '\n';
-
     pb = &amp;d1;
-
     std::cout &lt;&lt; typeid(*pb).name() &lt;&lt; '\n';
 }
 </code></pre>

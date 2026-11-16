@@ -10,32 +10,32 @@ description: "XDrawArc, XDrawArcs, XArc – draw arcs and arc structure"
 <p>XDrawArc, XDrawArcs, XArc &#8211; draw arcs and arc structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XDrawArc(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, int <i>angle1</i>, int <i>angle2</i>);</p>
-<dd>int XDrawArcs(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, XArc *<i>arcs</i>, int <i>narcs</i>);</dl>
+<dd>int XDrawArc(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, int <i>angle1</i>, int <i>angle2</i>);</dd>
+<dd>int XDrawArcs(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, XArc *<i>arcs</i>, int <i>narcs</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>angle1</i></p>
-<dd>Specifies the start of the arc relative to the three-o&#8217;clock position from the center, in units of degrees * 64.</p>
-<dt><i>angle2</i></p>
-<dd>Specifies the path and extent of the arc relative to the start of the arc, in units of degrees * 64.</p>
-<dt><i>arcs</i></p>
-<dd>Specifies an array of arcs.</p>
-<dt><i>d</i></p>
-<dd>Specifies the drawable.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>narcs</i></p>
-<dd>Specifies the number of arcs in the array.</p>
-<dt><i>width</i></p>
+<dt><i>angle1</i></dt>
+<dd>Specifies the start of the arc relative to the three-o&#8217;clock position from the center, in units of degrees * 64.</dd>
+<dt><i>angle2</i></dt>
+<dd>Specifies the path and extent of the arc relative to the start of the arc, in units of degrees * 64.</dd>
+<dt><i>arcs</i></dt>
+<dd>Specifies an array of arcs.</dd>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>narcs</i></dt>
+<dd>Specifies the number of arcs in the array.</dd>
+<dt><i>width</i></dt>
 <dd>
-<dt><i>height</i></p>
-<dd>Specify the width and height, which are the major and minor axes of the arc.</p>
-<dt><i>x</i></p>
+</dd><dt><i>height</i></dt>
+<dd>Specify the width and height, which are the major and minor axes of the arc.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates, which are relative to the origin of the drawable and specify the upper-left corner of the bounding rectangle.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates, which are relative to the origin of the drawable and specify the upper-left corner of the bounding rectangle.</dd></dl>
 <h2>Description</h2>
 <p>delim %% <code>XDrawArc</code> draws a single circular or elliptical arc, and <code>XDrawArcs</code> draws multiple circular or elliptical arcs. Each arc is specified by a rectangle and two angles. The center of the circle or ellipse is the center of the rectangle, and the major and minor axes are specified by the width and height. Positive angles indicate counterclockwise motion, and negative angles indicate clockwise motion. If the magnitude of angle2 is greater than 360 degrees, <code>XDrawArc</code> or <code>XDrawArcs</code> truncates it to 360 degrees. </p>
 <p> For an arc specified as %[ ~x, ~y, ~width , ~height, ~angle1, ~angle2 ]%, the origin of the major and minor axes is at % [ x +^ {width over 2} , ~y +^ {height over 2} ]%, and the infinitely thin path describing the entire circle or ellipse intersects the horizontal axis at % [ x, ~y +^ {height over 2} ]% and % [ x +^ width , ~y +^ { height over 2 }] % and intersects the vertical axis at % [ x +^ { width over 2 } , ~y ]% and % [ x +^ { width over 2 }, ~y +^ height ]%. These coordinates can be fractional and so are not truncated to discrete coordinates. The path should be defined by the ideal mathematical path. For a wide line with line-width lw, the bounding outlines for filling are given by the two infinitely thin paths consisting of all points whose perpendicular distance from the path of the circle/ellipse is equal to lw/2 (which may be a fractional value). The cap-style and join-style are applied the same as for a line corresponding to the tangent of the circle/ellipse at the endpoint. </p>
@@ -74,14 +74,14 @@ description: "XDrawArc, XDrawArcs, XArc – draw arcs and arc structure"
 <p>All x and y members are signed integers. The width and height members are 16-bit unsigned integers. You should be careful not to generate coordinates and sizes out of the 16-bit ranges, because the protocol only has 16-bit fields for these values.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadDrawable</code></p>
-<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</p>
-<dt><code>BadGC</code></p>
-<dd>A value for a GContext argument does not name a defined GContext.</p>
-<dt><code>BadMatch</code></p>
-<dd>An <code>InputOnly</code> window is used as a Drawable.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dl>
+<dt><code>BadDrawable</code></dt>
+<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</dd>
+<dt><code>BadGC</code></dt>
+<dd>A value for a GContext argument does not name a defined GContext.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>An <code>InputOnly</code> window is used as a Drawable.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xdrawline/">XDrawLine</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

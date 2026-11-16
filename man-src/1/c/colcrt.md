@@ -17,19 +17,19 @@ description: "colcrt – filter nroff output for CRT previewing"
 <p> <code>&#8211;</code>, <code>&#8211;no-underlining</code></p>
 <dl>
 <dt>
-<dd> Suppress all underlining. This option is especially useful for previewing <i>allboxed</i> tables from <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1).</dl>
+</dt><dd> Suppress all underlining. This option is especially useful for previewing <i>allboxed</i> tables from <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1).</dd></dl>
 <p> <code>-2</code>, <code>&#8211;half-lines</code></p>
 <dl>
 <dt>
-<dd> Causes all half-lines to be printed, effectively double spacing the output. Normally, a minimal space output format is used which will suppress empty lines. The program never suppresses two consecutive empty lines, however. The <code>-2</code> option is useful for sending output to the line printer when the output contains superscripts and subscripts which would otherwise be invisible.</dl>
+</dt><dd> Causes all half-lines to be printed, effectively double spacing the output. Normally, a minimal space output format is used which will suppress empty lines. The program never suppresses two consecutive empty lines, however. The <code>-2</code> option is useful for sending output to the line printer when the output contains superscripts and subscripts which would otherwise be invisible.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>HISTORY</h2>
 <p> The <code>colcrt</code> command appeared in 3.0BSD.</p>
 <h2>BUGS</h2>
@@ -42,9 +42,9 @@ description: "colcrt – filter nroff output for CRT previewing"
 <p> A typical use of <code>colcrt</code> would be:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>tbl exum2.n | nroff -ms | colcrt &#8211; | more</code>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-col/">col</a></code>(1), <code><a href="/docs/linux/man/1-more/">more</a></code>(1), <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/1-ul/">ul</a></code>(1)</p>
 <h2>REPORTING BUGS</h2>
@@ -52,3 +52,4 @@ description: "colcrt – filter nroff output for CRT previewing"
 <h2>AVAILABILITY</h2>
 <p> The <code>colcrt</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
 <h2>Index</h2>
+</p>

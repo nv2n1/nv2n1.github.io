@@ -16,14 +16,14 @@ description: "SDL_JoystickGetHat – Get the current state of a joystick hat"
 <h2>Return Value</h2>
 <p>The current state is returned as a Uint8 which is defined as an OR&#8217;d combination of one or more of the following</p>
 <dl COMPACT>
-<dd><code>SDL_HAT_CENTERED</code></p>
-<dd><code>SDL_HAT_UP</code></p>
-<dd><code>SDL_HAT_RIGHT</code></p>
-<dd><code>SDL_HAT_DOWN</code></p>
-<dd><code>SDL_HAT_LEFT</code></p>
-<dd><code>SDL_HAT_RIGHTUP</code></p>
-<dd><code>SDL_HAT_RIGHTDOWN</code></p>
-<dd><code>SDL_HAT_LEFTUP</code></p>
-<dd><code>SDL_HAT_LEFTDOWN</code></dl>
+<dd><code>SDL_HAT_CENTERED</code></dd>
+<dd><code>SDL_HAT_UP</code></dd>
+<dd><code>SDL_HAT_RIGHT</code></dd>
+<dd><code>SDL_HAT_DOWN</code></dd>
+<dd><code>SDL_HAT_LEFT</code></dd>
+<dd><code>SDL_HAT_RIGHTUP</code></dd>
+<dd><code>SDL_HAT_RIGHTDOWN</code></dd>
+<dd><code>SDL_HAT_LEFTUP</code></dd>
+<dd><code>SDL_HAT_LEFTDOWN</code></dd></dl>
 <h2>See Also</h2>
 <p><i></i><code>SDL_JoystickNumHats</code></p>

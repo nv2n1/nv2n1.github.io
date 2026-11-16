@@ -14,10 +14,10 @@ description: "jbd2_journal_forget – bforget for potentially-journaled buffers.
 <p><i>handle</i></p>
 <dl>
 <dd>
-<dd>transaction handle</dl>
+</dd><dd>transaction handle</dd></dl>
 <p> <i>bh</i></p>
 <dl>
-<dd>bh to &#8216;forget&#8217;</dl>
+<dd>bh to &#8216;forget&#8217;</dd></dl>
 <h2>Description</h2>
 <p>We can only do the bforget if there are no commits pending against the buffer. If the buffer is dirty in the current running transaction we can safely unlink it. </p>
 <p> bh may not be a journalled buffer at all &#8211; it may be a non-JBD buffer which came off the hashtable. Check for this. </p>
@@ -26,8 +26,8 @@ description: "jbd2_journal_forget – bforget for potentially-journaled buffers.
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

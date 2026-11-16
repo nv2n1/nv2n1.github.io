@@ -41,12 +41,9 @@ long double LDBL_MIN </p>
 <p>Demonstrates the use with typedef types, and the difference in the sign of the result between integer and floating-point types<br />
  // Run this code </p>
 <pre><code>#include &lt;limits&gt;
-
 #include &lt;cstddef&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::cout
         &lt;&lt; &quot;short: &quot; &lt;&lt; std::dec &lt;&lt; std::numeric_limits&lt;short&gt;::min()

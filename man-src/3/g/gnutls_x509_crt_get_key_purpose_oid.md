@@ -14,16 +14,16 @@ description: "gnutls_x509_crt_get_key_purpose_oid – API function"
 <p> <code>int gnutls_x509_crt_get_key_purpose_oid(gnutls_x509_crt_t </code><i>cert</i><code>, int </code><i>indx</i><code>, void * </code><i>oid</i><code>, size_t * </code><i>oid_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>int indx</p>
-<dd> This specifies which OID to return. Use (0) to get the first one.</p>
-<dt>void * oid</p>
-<dd> a pointer to a buffer to hold the OID (may be null)</p>
-<dt>size_t * oid_size</p>
-<dd> initially holds the size of <i>oid</i></p>
-<dt>unsigned int * critical</p>
-<dd> output flag to indicate criticality of extension</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>int indx</dt>
+<dd> This specifies which OID to return. Use (0) to get the first one.</dd>
+<dt>void * oid</dt>
+<dd> a pointer to a buffer to hold the OID (may be null)</dd>
+<dt>size_t * oid_size</dt>
+<dd> initially holds the size of <i>oid</i></dd>
+<dt>unsigned int * critical</dt>
+<dd> output flag to indicate criticality of extension</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the key purpose OIDs of the Certificate specified by the given index. These are stored in the Extended Key Usage extension (2.5.29.37) See the GNUTLS_KP_* definitions for human readable names. </p>
 <p> If <i>oid</i> is null then only the size will be filled. The <i>oid</i> returned will be null terminated, although <i>oid_size</i> will not account for the trailing null.</p>
@@ -38,6 +38,6 @@ description: "gnutls_x509_crt_get_key_purpose_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -31,84 +31,80 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 <h3>Options</h3>
 <p> The <code>cimsub </code> command recognizes the following options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-l</code></p>
-<dd> List and display information about all or selected indication subscriptions (&quot;s&quot;), filters (&quot;f&quot;), or handlers (&quot;h&quot;). It is an error to specify the -F option with -lh. It is an error to specify the -H option with -lf. With the -lf or -lh option, fnamespace or hnamespace takes precedence over the -n namespace option if both are specified.</p>
-<dt><code>-e</code></p>
-<dd> Enable the specified subscription (set the SubscriptionState to Enabled).</p>
-<dt><code>-d</code></p>
-<dd> Disable the specified subscription (set the SubscriptionState to Disabled).</p>
-<dt><code>-r</code></p>
-<dd> Remove the specified subscription (&quot;s&quot;), filter (&quot;f&quot;), handler (&quot;h&quot;), or subscription and its referenced filter and handler (&quot;a&quot;) (delete the instance(s) from the repository). The -F and -H options are required with -rs or -ra. It is an error to specify the -F option with -rh. It is an error to specify the -H option with -rf. With the -rf or -rh option, fnamespace or hnamespace takes precedence over the -n namespace option if both are specified.</p>
-<dt><code>-c</code></p>
-<dd> Create the specified subscription (&quot;s&quot;), filter (&quot;f&quot;) or handler (&quot;h&quot;). The -F filter and -H handler options are required with -cs. The Filtername and -Q Query are required with -cf. The Handler Name is required with -ch.With the -cf or -ch option, fnamespace or hnamespace takes precedence over the -n namespace option if both are specified.</p>
-<dt><code>-v</code></p>
-<dd> Include verbose information in the information displayed for each listed instance.</p>
-<dt><code>-n </code><i>namespace</i></p>
-<dd> Specify the namespace. For the -l forms of the command, if no namespace is specified, instances in all namespaces are listed. For all other forms of the command, if no namespace is specified, the command operates on an instance in the namespace root/PG_InterOp.</p>
-<dt><code>-F </code><i>[fnamespace:]filtername</i></p>
-<dd> Specify the Filter Name. Omission of the filter namespace specifies that it is the same as that of the subscription.</p>
-<dt><code>-H </code><i>[hnamespace:][classname.]handlername</i></p>
-<dd> Specify the Handler Name. Omission of the handler namespace specifies that it is the same as that of the subscription. Omission of the handler classname specifies that it is CIM_ListenerDestinationCIMXML.</p>
-<dt><code>-Q</code></p>
-<dd> Specify the Query Expression for the Filter.</p>
-<dt><code>-L</code></p>
-<dd> Specify the Query Language for the Filter.</p>
-<dt><code>-N</code></p>
-<dd> To Use SourceNamespaces property, Specify multiple SourceNamespaces with coma separated or append comma to the single SourceNamespace. By default SourceNamespace property is populated if the single SourceNamespace is specified.</p>
-<dt><code>-D </code></p>
-<dd> Specify Destination of a CIM_IndicationHandlerCIMXML Handler. Required option for CIM_IndicationHandlerCIMXML or CIM_ListenerDestinationCIMXML Handler.</p>
-<dt><code>-M </code></p>
-<dd> Specify Mailto of a PG_ListenerDestinationEmail Handler.</p>
-<dt><code>-C </code></p>
-<dd> Specify Mailcc of a PG_ListenerDestinationEmail Handler.</p>
-<dt><code>-S </code></p>
-<dd> Specify Subject of a PG_ListenerDestinationEmail Handler.</p>
-<dt><code>-T </code></p>
-<dd> Specify Target Host of PG_IndicationHandlerSNMPMapper Handler. Required option for SNMPMapper handler.</p>
-<dt><code>-U </code></p>
-<dd> Specify Security Name of PG_IndicationHandlerSNMPMapper Handler.</p>
-<dt><code>-P </code></p>
-<dd> Specify Port Number of a PG_IndicationHandlerSNMPMapper Handler.(default 162)</p>
-<dt><code>-V </code></p>
+<dt><code>-l</code></dt>
+<dd> List and display information about all or selected indication subscriptions (&quot;s&quot;), filters (&quot;f&quot;), or handlers (&quot;h&quot;). It is an error to specify the -F option with -lh. It is an error to specify the -H option with -lf. With the -lf or -lh option, fnamespace or hnamespace takes precedence over the -n namespace option if both are specified.</dd>
+<dt><code>-e</code></dt>
+<dd> Enable the specified subscription (set the SubscriptionState to Enabled).</dd>
+<dt><code>-d</code></dt>
+<dd> Disable the specified subscription (set the SubscriptionState to Disabled).</dd>
+<dt><code>-r</code></dt>
+<dd> Remove the specified subscription (&quot;s&quot;), filter (&quot;f&quot;), handler (&quot;h&quot;), or subscription and its referenced filter and handler (&quot;a&quot;) (delete the instance(s) from the repository). The -F and -H options are required with -rs or -ra. It is an error to specify the -F option with -rh. It is an error to specify the -H option with -rf. With the -rf or -rh option, fnamespace or hnamespace takes precedence over the -n namespace option if both are specified.</dd>
+<dt><code>-c</code></dt>
+<dd> Create the specified subscription (&quot;s&quot;), filter (&quot;f&quot;) or handler (&quot;h&quot;). The -F filter and -H handler options are required with -cs. The Filtername and -Q Query are required with -cf. The Handler Name is required with -ch.With the -cf or -ch option, fnamespace or hnamespace takes precedence over the -n namespace option if both are specified.</dd>
+<dt><code>-v</code></dt>
+<dd> Include verbose information in the information displayed for each listed instance.</dd>
+<dt><code>-n </code><i>namespace</i></dt>
+<dd> Specify the namespace. For the -l forms of the command, if no namespace is specified, instances in all namespaces are listed. For all other forms of the command, if no namespace is specified, the command operates on an instance in the namespace root/PG_InterOp.</dd>
+<dt><code>-F </code><i>[fnamespace:]filtername</i></dt>
+<dd> Specify the Filter Name. Omission of the filter namespace specifies that it is the same as that of the subscription.</dd>
+<dt><code>-H </code><i>[hnamespace:][classname.]handlername</i></dt>
+<dd> Specify the Handler Name. Omission of the handler namespace specifies that it is the same as that of the subscription. Omission of the handler classname specifies that it is CIM_ListenerDestinationCIMXML.</dd>
+<dt><code>-Q</code></dt>
+<dd> Specify the Query Expression for the Filter.</dd>
+<dt><code>-L</code></dt>
+<dd> Specify the Query Language for the Filter.</dd>
+<dt><code>-N</code></dt>
+<dd> To Use SourceNamespaces property, Specify multiple SourceNamespaces with coma separated or append comma to the single SourceNamespace. By default SourceNamespace property is populated if the single SourceNamespace is specified.</dd>
+<dt><code>-D </code></dt>
+<dd> Specify Destination of a CIM_IndicationHandlerCIMXML Handler. Required option for CIM_IndicationHandlerCIMXML or CIM_ListenerDestinationCIMXML Handler.</dd>
+<dt><code>-M </code></dt>
+<dd> Specify Mailto of a PG_ListenerDestinationEmail Handler.</dd>
+<dt><code>-C </code></dt>
+<dd> Specify Mailcc of a PG_ListenerDestinationEmail Handler.</dd>
+<dt><code>-S </code></dt>
+<dd> Specify Subject of a PG_ListenerDestinationEmail Handler.</dd>
+<dt><code>-T </code></dt>
+<dd> Specify Target Host of PG_IndicationHandlerSNMPMapper Handler. Required option for SNMPMapper handler.</dd>
+<dt><code>-U </code></dt>
+<dd> Specify Security Name of PG_IndicationHandlerSNMPMapper Handler.</dd>
+<dt><code>-P </code></dt>
+<dd> Specify Port Number of a PG_IndicationHandlerSNMPMapper Handler.(default 162)</dd>
+<dt><code>-V </code></dt>
 <dd> Specify SNMPVersion of a PG_IndicationHandlerSNMPMapper Handler.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2 : SNMPv1 Trap<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3 : SNMPv2C Trap<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4 : SNMPv2C Inform<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5 : SNMPv3 Trap<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6 : SNMPv3 Inform<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Required option for SNMPMapper Handler</p>
-<dt><code>-E </code></p>
-<dd> Specify Engine ID of a PG_IndicationHandlerSNMPMapper Handler.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display command usage information.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display the CIM Server version.</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Required option for SNMPMapper Handler</dd>
+<dt><code>-E </code></dt>
+<dd> Specify Engine ID of a PG_IndicationHandlerSNMPMapper Handler.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display command usage information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display the CIM Server version.</dd></dl>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> When an error occurs, an error message is written to stderr and an error value is returned. The following return values are returned:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>0</code></p>
-<dd> Successful completion</p>
-<dt><code>1</code></p>
-<dd> General error</p>
-<dt><code>2</code></p>
-<dd> Connection failed</p>
-<dt><code>3</code></p>
-<dd> Connection timed out</p>
-<dt><code>4</code></p>
-<dd> Access was denied</p>
-<dt><code>5</code></p>
-<dd> Namespace does not exist</p>
-<dt><code>6</code></p>
-<dd> Object could not be found</p>
-<dt><code>7</code></p>
-<dd> Operation is not supported</dl>
+<dt><code>0</code></dt>
+<dd> Successful completion</dd>
+<dt><code>1</code></dt>
+<dd> General error</dd>
+<dt><code>2</code></dt>
+<dd> Connection failed</dd>
+<dt><code>3</code></dt>
+<dd> Connection timed out</dd>
+<dt><code>4</code></dt>
+<dd> Access was denied</dd>
+<dt><code>5</code></dt>
+<dd> Namespace does not exist</dd>
+<dt><code>6</code></dt>
+<dd> Object could not be found</dd>
+<dt><code>7</code></dt>
+<dd> Operation is not supported</dd></dl>
 </dl>
 <h2>USAGE NOTES</h2>
 <p> The <code>cimsub </code> command requires the CIM Server to be running. </p>
@@ -118,55 +114,55 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 <p> List all indication subscriptions in all namespaces on the local CIM Server:</p>
 <dl>
 <dt>
-<dd> <code>cimsub -ls</code></dl>
+</dt><dd> <code>cimsub -ls</code></dd></dl>
 <p> List all indication subscriptions referencing the Filter with Name &#8216;TestFilter&#8217; in all namespaces on the local CIM Server:</p>
 <dl>
 <dt>
-<dd> <code>cimsub -ls -F TestFilter</code></dl>
+</dt><dd> <code>cimsub -ls -F TestFilter</code></dd></dl>
 <p> List all indication subscriptions referencing the CIM_ListenerDestinationCIMXML Handler with Name &#8216;TestHandler&#8217; in all namespaces on the local CIM Server:</p>
 <dl>
 <dt>
-<dd> <code>cimsub -ls -H TestHandler</code></dl>
+</dt><dd> <code>cimsub -ls -H TestHandler</code></dd></dl>
 <p> List all indication subscriptions in the root/cimv2 namespace on the local CIM Server, including subscription state, filter query and handler destination (verbose listing output):</p>
 <dl>
 <dt>
-<dd> <code>cimsub -ls -v -n root/cimv2</code></dl>
+</dt><dd> <code>cimsub -ls -v -n root/cimv2</code></dd></dl>
 <p> Display information about the subscription referencing Filter with Name &#8216;TestFilter&#8217; and referencing CIM_ListenerDestinationCIMXML Handler with Name &#8216;TestHandler&#8217; (all in namespace root/PG_InterOp), including subscription state, filter query and handler destination (verbose listing output):</p>
 <dl>
 <dt>
-<dd> <code>cimsub -ls -v -n root/PG_InterOp -F TestFilter -H TestHandler </code></dl>
+</dt><dd> <code>cimsub -ls -v -n root/PG_InterOp -F TestFilter -H TestHandler </code></dd></dl>
 <p> Display information about the Filter with Name &#8216;TestFilter&#8217; in the root/cimv2 namespace (verbose listing output):</p>
 <dl>
 <dt>
-<dd> <code>cimsub -lf -v -F root/cimv2:TestFilter</code></dl>
+</dt><dd> <code>cimsub -lf -v -F root/cimv2:TestFilter</code></dd></dl>
 <p> List all handlers in all namespaces on the local CIM Server:</p>
 <dl>
 <dt>
-<dd> <code>cimsub -lh</code></dl>
+</dt><dd> <code>cimsub -lh</code></dd></dl>
 <p> Enable the subscription referencing Filter with Name &#8216;TestFilter&#8217; and referencing CIM_ListenerDestinationCIMXML Handler with Name &#8216;TestHandler&#8217; (all in namespace root/PG_InterOp):</p>
 <dl>
 <dt>
-<dd> <code>cimsub -e -F TestFilter -H TestHandler</code></dl>
+</dt><dd> <code>cimsub -e -F TestFilter -H TestHandler</code></dd></dl>
 <p> Disable the subscription in namespace root/cimv2, referencing Filter with Name &#8216;TestFilter&#8217; in namespace test1/cimv2, and referencing PG_ListenerDestinationSystemLog Handler with Name &#8216;TestHandler&#8217; in namespace test2/cimv2:</p>
 <dl>
 <dt>
-<dd> <code>cimsub -d -n root/cimv2 -F test1/cimv2:TestFilter -H test2/cimv2:PG_ListenerDestinationSystemLog.TestHandler</code></dl>
+</dt><dd> <code>cimsub -d -n root/cimv2 -F test1/cimv2:TestFilter -H test2/cimv2:PG_ListenerDestinationSystemLog.TestHandler</code></dd></dl>
 <p> Remove the subscription referencing Filter with Name &#8216;TestFilter&#8217;, and referencing CIM_ListenerDestinationCIMXML Handler with Name &#8216;TestHandler&#8217; (all in namespace root/cimv2), also removing the filter and handler instances (if not referenced by any other subscription):</p>
 <dl>
 <dt>
-<dd> <code>cimsub -ra -n root/cimv2 -F TestFilter -H TestHandler</code></dl>
+</dt><dd> <code>cimsub -ra -n root/cimv2 -F TestFilter -H TestHandler</code></dd></dl>
 <p> Create filter with Name &#8216;filteraa&#8217; with the Query &#8216;select * from IndicationStressTestClass&#8217; with SourceNamespaces test/TestProvider and test/testIndSrcNS1.</p>
 <dl>
 <dt>
-<dd> <code>cimsub -c f filteraa -Q select * from IndicationStressTestClass -N test/TestProvider,test/testIndSrcNS1</code></dl>
+</dt><dd> <code>cimsub -c f filteraa -Q select * from IndicationStressTestClass -N test/TestProvider,test/testIndSrcNS1</code></dd></dl>
 <p> Create handler with Name &#8216;handler01&#8217; and Destination &#8216;/Pegasus_IndicationStressTestConsumer&#8217;.</p>
 <dl>
 <dt>
-<dd> <code>cimsub -c h handler01 -D /Pegasus_IndicationStressTestConsumer</code></dl>
+</dt><dd> <code>cimsub -c h handler01 -D /Pegasus_IndicationStressTestConsumer</code></dd></dl>
 <p> Create Subscription with referencing Filter with Name &#8216;TestFilter&#8217;, and referencing CIM_ListenerDestinationCIMXML Handler with Name &#8216;TestHandler&#8217;</p>
 <dl>
 <dt>
-<dd> <code>cimsub -c s -F filteraa -H handler01 </code></dl>
+</dt><dd> <code>cimsub -c s -F filteraa -H handler01 </code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> cimserver(1), cimconfig(1M). </p>
 <h2>Index</h2>

@@ -15,7 +15,7 @@ disable_irq - disable an irq and wait for completion
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>Interrupt to disable</dl>
+<dl><dd></dd><dd>Interrupt to disable</dd></dl>
 
 <h2>Description</h2>
 

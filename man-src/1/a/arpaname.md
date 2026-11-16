@@ -11,10 +11,10 @@ description: "arpaname – translate IP addresses to the corresponding ARPA name
 <p> arpaname &#8211; translate IP addresses to the corresponding ARPA names </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>arpaname</code> {<i>ipaddress&nbsp;<wbr></i>&#8230;}</dl>
+<dt> <code>arpaname</code> {<i>ipaddress&nbsp;<wbr></i>&#8230;}</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>arpaname</code></p>
-<dd>translates IP addresses (IPv4 and IPv6) to the corresponding IN-ADDR.ARPA or IP6.ARPA names.</p>
+<dd>translates IP addresses (IPv4 and IPv6) to the corresponding IN-ADDR.ARPA or IP6.ARPA names.</dd>
 <h2>SEE ALSO</h2>
 <p> BIND 9 Administrator Reference Manual.</p>
 <h2>AUTHOR</h2>

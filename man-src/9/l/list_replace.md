@@ -15,11 +15,11 @@ list_replace - replace old entry by new one
 <h2>Arguments</h2>
 
 <i>old</i>
-<dl><dd><dd>the element to be replaced</dl>
+<dl><dd></dd><dd>the element to be replaced</dd></dl>
  
 
  <i>new</i>
-<dl><dd>the new element to insert</dl>
+<dl><dd>the new element to insert</dd></dl>
 
 <h2>Description</h2>
 

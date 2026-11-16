@@ -33,16 +33,16 @@ go install example.com / pkg[at] v1 .2.3 go install example.com / pkg[at] latest
 <p> See &#8216;go help install&#8217; or <a rel="nofollow" href="https://golang.org/ref/mod#go-install">https://golang.org/ref/mod#go-install</a> for details. </p>
 <p> In addition to build flags (listed in &#8216;go help build&#8217;) &#8216;go get&#8217; accepts the following flags.</p>
 <dl>
-<dt><code>-t</code></p>
-<dd> The -t flag instructs get to consider modules needed to build tests of packages specified on the command line.</p>
-<dt><code>-u</code></p>
-<dd> The -u flag instructs get to update modules providing dependencies of packages named on the command line to use newer minor or patch releases when available.</p>
-<dt><code>-u=</code><i>patch</i></p>
-<dd> The -u=patch flag (not -u patch) also instructs get to update dependencies, but changes the default to select patch releases.</dl>
+<dt><code>-t</code></dt>
+<dd> The -t flag instructs get to consider modules needed to build tests of packages specified on the command line.</dd>
+<dt><code>-u</code></dt>
+<dd> The -u flag instructs get to update modules providing dependencies of packages named on the command line to use newer minor or patch releases when available.</dd>
+<dt><code>-u=</code><i>patch</i></dt>
+<dd> The -u=patch flag (not -u patch) also instructs get to update dependencies, but changes the default to select patch releases.</dd></dl>
 <p> When the -t and -u flags are used together, get will update test dependencies as well.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> The -d flag instructs get not to build or install packages. get will only update go.mod and download source code needed to build packages.</dl>
+<dt><code>-d</code></dt>
+<dd> The -d flag instructs get not to build or install packages. get will only update go.mod and download source code needed to build packages.</dd></dl>
 <p> Building and installing packages with get is deprecated. In a future release, the -d flag will be enabled by default, and &#8216;go get&#8217; will be only be used to adjust dependencies of the current module. To install a package using dependencies from the current module, use &#8216;go install&#8217;. To install a package ignoring the current module, use &#8216;go install&#8217; with an @version suffix like &quot;@latest&quot; after each argument. </p>
 <p> For more about modules, see <a rel="nofollow" href="https://golang.org/ref/mod.">https://golang.org/ref/mod.</a> </p>
 <p> For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7). </p>

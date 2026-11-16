@@ -120,8 +120,8 @@ description: "gssd_selinux – Security Enhanced Linux Policy for the gssd proce
 <p> <code>gssd_exec_t</code> </p>
 <p> &#8211; Set files with the gssd_exec_t type, if you want to transition an executable to the gssd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/rpc.gssd, /usr/sbin/rpc.svcgssd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/rpc.gssd, /usr/sbin/rpc.svcgssd </dd>
 </dl>
 <p> <code>gssd_keytab_t</code> </p>
 <p> &#8211; Set files with the gssd_keytab_t type, if you want to treat the files as kerberos keytab files. </p>

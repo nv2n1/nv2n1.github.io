@@ -17,12 +17,12 @@ description: "ldapurl – LDAP URL formatting tool"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-a</code><i>&nbsp;<wbr>attrs</i></p>
+</dt><dt><code>-a</code><i>&nbsp;<wbr>attrs</i></dt>
 <dd>
-<dd> Set a comma-separated list of attribute selectors.</p>
-<dt><code>-b</code><i>&nbsp;<wbr>searchbase</i></p>
-<dd> Set the <i>searchbase</i>.</p>
-<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
+</dd><dd> Set a comma-separated list of attribute selectors.</dd>
+<dt><code>-b</code><i>&nbsp;<wbr>searchbase</i></dt>
+<dd> Set the <i>searchbase</i>.</dd>
+<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
 <dd>
 <p> Specify general extensions with <code>-e</code> &#8216;<code>!</code>&#8216; indicates criticality. </p>
 <p> General extensions: </p>
@@ -40,20 +40,20 @@ description: "ldapurl – LDAP URL formatting tool"
                                                 abandon,
     cancel, ignore(SIGINT sends abandon / cancel, or ignores response; if critical, doesn't wait for SIGINT. not really controls)
 </code></pre>
-<dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
-<dd> Set URL extensions; incompatible with <code>-H</code>.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>filter</i></p>
-<dd> Set the URL filter. No particular check on conformity with RFC 4515 LDAP filters is performed, but the value is hex-escaped as required.</p>
-<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></p>
-<dd> Specify URI to be exploded.</p>
-<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></p>
-<dd> Set the host.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></p>
-<dd> Set the TCP port.</p>
-<dt><code>-S</code><i>&nbsp;<wbr>scheme</i></p>
-<dd> Set the URL scheme. Defaults for other fields, like <i>ldapport</i>, may depend on the value of <i>scheme</i>.</p>
-<dt><code>-s</code>&nbsp;<wbr>{<code>base</code>|<code>one</code>|<code>sub</code>|<code>children</code>}</p>
-<dd> Specify the scope of the search to be one of <code>base</code>, <code>one</code>, <code>sub</code>, or <code>children</code> to specify a base object, one-level, subtree, or children search. The default is <code>sub</code>. Note: <code>children</code> scope requires LDAPv3 subordinate feature extension. </p>
+</dd><dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
+<dd> Set URL extensions; incompatible with <code>-H</code>.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>filter</i></dt>
+<dd> Set the URL filter. No particular check on conformity with RFC 4515 LDAP filters is performed, but the value is hex-escaped as required.</dd>
+<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></dt>
+<dd> Specify URI to be exploded.</dd>
+<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></dt>
+<dd> Set the host.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></dt>
+<dd> Set the TCP port.</dd>
+<dt><code>-S</code><i>&nbsp;<wbr>scheme</i></dt>
+<dd> Set the URL scheme. Defaults for other fields, like <i>ldapport</i>, may depend on the value of <i>scheme</i>.</dd>
+<dt><code>-s</code>&nbsp;<wbr>{<code>base</code>|<code>one</code>|<code>sub</code>|<code>children</code>}</dt>
+<dd> Specify the scope of the search to be one of <code>base</code>, <code>one</code>, <code>sub</code>, or <code>children</code> to specify a base object, one-level, subtree, or children search. The default is <code>sub</code>. Note: <code>children</code> scope requires LDAPv3 subordinate feature extension. </dd>
 </dl>
 <h2>OUTPUT FORMAT</h2>
 <p> If the <code>-H</code> option is used, the <i>ldapuri</i> supplied is exploded in its components, which are printed to standard output in an LDIF-like form. </p>

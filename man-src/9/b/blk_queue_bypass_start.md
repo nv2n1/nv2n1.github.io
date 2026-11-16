@@ -14,7 +14,7 @@ description: "blk_queue_bypass_start – enter queue bypass mode"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>queue of interest</dl>
+</dd><dd>queue of interest</dd></dl>
 <h2>Description</h2>
 <p>In bypass mode, only the dispatch FIFO queue of <i>q</i> is used. This function makes <i>q</i> enter bypass mode and drains all requests which were throttled or issued before. On return, it&#8217;s guaranteed that no request is being throttled or has ELVPRIV set and <code>blk_queue_bypass</code><code>true</code> inside queue or RCU read lock.</p>
 <h2>Copyright</h2>

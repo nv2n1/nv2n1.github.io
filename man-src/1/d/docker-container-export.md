@@ -18,7 +18,7 @@ description: "docker-container-export – Export a container’s filesystem as a
 <p> Export the contents of the container called angry_bell to a tar file called angry_bell.tar: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker export angry_bell &gt; angry_bell.tar
 $ docker export --output=angry_bell-latest.tar angry_bell
@@ -27,7 +27,7 @@ $ ls -sh angry_bell.tar
 $ ls -sh angry_bell-latest.tar
 321M angry_bell-latest.tar
 </pre>
-</dl>
+</dd></dl>
 <h2>See also</h2>
 <p> <code><a href="/docs/linux/man/1-docker-import/">docker-import</a>(1)</code> to create an empty filesystem image and import the contents of the tarball into it, then optionally tag it. </p>
 <h2>OPTIONS</h2>

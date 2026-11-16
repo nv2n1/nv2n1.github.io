@@ -11,21 +11,13 @@ std::ranges::SizedRange,std::ranges::disable_sized_range - std::ranges::SizedRan
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ranges&gt;
-
 template&lt; class T &gt;
-
 concept SizedRange = Range&lt;T&gt; &amp;&amp;
-
 ! disable_sized_range&lt;std::remove_cvref_t&lt;T&gt;&gt; &amp;&amp;   (1)
-
 requires(T&amp; t) {
-
     ranges::size(t);
-
 };
-
 template&lt;class&gt;                                    (2)
-
 inline constexpr bool disable_sized_range = false;</code></pre> 
 1) The SizedRange concept specifies the requirements of a Range type that knows its size in constant time with the size function. 
 Formally, given an lvalue t of type std::remove_reference_t&lt;T&gt;, T models SizedRange only if 

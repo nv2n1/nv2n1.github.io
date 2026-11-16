@@ -10,7 +10,6 @@ description: "ustrzcat – Concatenates a string to another one, specifying size
 <p>ustrzcat &#8211; Concatenates a string to another one, specifying size. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrzcat(char *dest, int size, const char *src);</code></pre>
 <h2>Description</h2>
 <p>This function concatenates `src&#8217; to the end of `dest&#8217;, whose length in bytes is specified by `size&#8217; and which is guaranteed to be null-terminated even when `src&#8217; is bigger than `size&#8217;. </p>

@@ -14,14 +14,14 @@ description: "DROP DOMAIN – remove a domain"
 <p><code>DROP DOMAIN</code> removes a domain. Only the owner of a domain can remove it.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the domain does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing domain.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the domain (such as table columns).</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the domain if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the domain does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing domain.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the domain (such as table columns).</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the domain if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>To remove the domain <code>box</code>: </p>
 <pre>DROP DOMAIN box;</pre>

@@ -27,10 +27,10 @@ description: "sladiv.f –"
  The algorithm is due to Michael Baudin and Robert L. Smith
  and can be found in the paper
  &quot;A Robust Complex Division in Scilab&quot;</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>A</i> </p>
+<dd><i>A</i> </dd>
 <pre> A is REAL</pre>
 <p><i>B</i> </p>
 <pre> B is REAL</pre>
@@ -47,13 +47,13 @@ description: "sladiv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>January 2013</dl>
+<dd>January 2013</dd></dl>
 <p> Definition at line 92 of file sladiv.f.</p>
 <h3>subroutine sladiv1 (realA, realB, realC, realD, realP, realQ)</h3>
 <p>Definition at line 178 of file sladiv.f.</p>

@@ -15,11 +15,11 @@ snd_card_file_add - add the file to the file list of the card
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>soundcard structure</dl>
+<dl><dd></dd><dd>soundcard structure</dd></dl>
  
 
  <i>file</i>
-<dl><dd>file pointer</dl>
+<dl><dd>file pointer</dd></dl>
 
 <h2>Description</h2>
 

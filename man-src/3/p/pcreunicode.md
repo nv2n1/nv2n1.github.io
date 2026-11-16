@@ -35,3 +35,4 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> In some situations, you may already know that your strings are valid, and therefore want to skip these checks in order to improve performance. If you set the PCRE_NO_UTF32_CHECK flag at compile time or at run time, PCRE assumes that the pattern or subject it is given (respectively) contains only valid UTF-32 sequences. In this case, it does not diagnose an invalid UTF-32 string. However, if an invalid string is passed, the result is undefined.</p>
 <h3>General comments about UTF modes</h3>
 <p>1. Codepoints less than 256 can be specified in patterns by either braced or unbraced hexadecimal escape sequences (for example, 
+</p>

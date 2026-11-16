@@ -21,9 +21,9 @@ CALL PCGETR (PNAM,RVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first two characters of the string. If the internal parameter is one of the two ('BC' and 'CC') that are arrays, the index of the desired array element may appear, enclosed in parentheses, in columns 3 and following. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'MA', one can use 'MA - MAPPING FLAG' and, instead of 'CC(10)', one can use 'CC(10) - SPECIAL COLOR 10'.
-<dt>RVAL
-<dd>(an output variable of type REAL) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved. If the internal parameter is a value &quot;r&quot; of type REAL, the value returned is &quot;r&quot;. If the internal parameter is a value &quot;i&quot; of type INTEGER, the value returned is &quot;REAL(i)&quot;.</dl>
+</dt><dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first two characters of the string. If the internal parameter is one of the two ('BC' and 'CC') that are arrays, the index of the desired array element may appear, enclosed in parentheses, in columns 3 and following. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'MA', one can use 'MA - MAPPING FLAG' and, instead of 'CC(10)', one can use 'CC(10) - SPECIAL COLOR 10'.
+</dd><dt>RVAL
+</dt><dd>(an output variable of type REAL) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved. If the internal parameter is a value &quot;r&quot; of type REAL, the value returned is &quot;r&quot;. If the internal parameter is a value &quot;i&quot; of type INTEGER, the value returned is &quot;REAL(i)&quot;.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

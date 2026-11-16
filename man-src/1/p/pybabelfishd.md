@@ -14,10 +14,10 @@ description: "pybabelfishd – convert Python objects into human-readable string
 <h2>DESCRIPTION</h2>
 <p> This script starts a daemon process in the background that convert Python objects into human-readable strings for the NWS web interface.</p>
 <dl>
-<dt><code>-h</code> <i>&lt;host&gt;</i></p>
-<dd> hostname of the NWS server</p>
-<dt><code>-p</code> <i>&lt;port&gt;</i></p>
-<dd> port number of the NWS server</dl>
+<dt><code>-h</code> <i>&lt;host&gt;</i></dt>
+<dd> hostname of the NWS server</dd>
+<dt><code>-p</code> <i>&lt;port&gt;</i></dt>
+<dd> port number of the NWS server</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by REvolution Computing, Inc.</p>
 <h2>REPORTING BUGS</h2>

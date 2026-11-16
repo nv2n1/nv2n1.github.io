@@ -10,17 +10,8 @@ description: "QuantLib::AbcdAtmVolCurve – Abcd-interpolated at-the-money (no-s
 <p>QuantLib::AbcdAtmVolCurve &#8211; Abcd-interpolated at-the-money (no-smile) volatility curve. </p>
 <h2>Synopsis</h2>
 <pre><code>const std::vector&lt; Period &gt; &amp; optionTenors () const
-
-
-
 const std::vector&lt; Period &gt; &amp; optionTenorsInInterpolation () const
-
-
-
 const std::vector&lt; Date &gt; &amp; optionDates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; optionTimes () const</code></pre>
 <p> Inherits <code>QuantLib::BlackAtmVolCurve</code>, and <code>QuantLib::LazyObject</code>.</p>
 <h3>Public Member Functions</h3>
@@ -39,17 +30,8 @@ const std::vector&lt; Time &gt; &amp; optionTimes () const</code></pre>
 <p>const std::vector&lt; Date &gt; &amp; optionDates () const</p>
 <p>const std::vector&lt; Time &gt; &amp; optionTimes () const <code>some inspectors</code> </p>
 <pre><code>const std::vector&lt; Period &gt; &amp; optionTenors () const
-
-
-
 const std::vector&lt; Period &gt; &amp; optionTenorsInInterpolation () const
-
-
-
 const std::vector&lt; Date &gt; &amp; optionDates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; optionTimes () const</code></pre>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;)</p>

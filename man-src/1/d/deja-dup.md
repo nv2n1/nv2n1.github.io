@@ -18,22 +18,22 @@ description: "deja-dup – a desktop backup tool"
 <p> Déjà Dup is a simple backup tool. It hides the complexity of backing up the Right Way (encrypted, off-site, and regular) and uses duplicity as the backend.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version</p>
-<dt><code>&#8211;restore</code></p>
-<dd> Restore given files</p>
-<dt><code>&#8211;backup</code></p>
-<dd> Immediately start a backup</p>
-<dt><code>&#8211;restore-missing</code></p>
-<dd> Restore deleted files</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version</dd>
+<dt><code>&#8211;restore</code></dt>
+<dd> Restore given files</dd>
+<dt><code>&#8211;backup</code></dt>
+<dd> Immediately start a backup</dd>
+<dt><code>&#8211;restore-missing</code></dt>
+<dd> Restore deleted files</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-duplicity/">duplicity</a></code>(1) </p>
 <h2>Index</h2>

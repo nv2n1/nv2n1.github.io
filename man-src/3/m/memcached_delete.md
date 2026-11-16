@@ -12,11 +12,11 @@ description: "memcached_delete – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_return_t memcached_delete(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, time_t<i>&nbsp;<wbr>expiration</i>)</p>
+<dt><code>memcached_return_t memcached_delete(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, time_t<i>&nbsp;<wbr>expiration</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_delete_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, time_t<i>&nbsp;<wbr>expiration</i>)</p>
+</dd><dt><code>memcached_return_t memcached_delete_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, time_t<i>&nbsp;<wbr>expiration</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_delete()</i> is used to delete a particular key. <i>memcached_delete_by_key()</i> works the same, but it takes a master key to find the given value. </p>
 <p> Expiration works by placing the item into a delete queue, which means that it won&#8217;t be possible to retrieve it by the &quot;get&quot; command. The &quot;add&quot; and &quot;replace&quot; commands with this key will also fail (the &quot;set&quot; command will succeed, however). After the time passes, the item is finally deleted from server memory. </p>
@@ -35,3 +35,4 @@ description: "memcached_delete – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

@@ -19,23 +19,23 @@ stg show[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4
 <p> -b BRANCH, &#8211;branch BRANCH</p>
 <dl>
 <dt>
-<dd> Use BRANCH instead of the default branch.</dl>
+</dt><dd> Use BRANCH instead of the default branch.</dd></dl>
 <p> -a, &#8211;applied</p>
 <dl>
 <dt>
-<dd> Show the applied patches.</dl>
+</dt><dd> Show the applied patches.</dd></dl>
 <p> -u, &#8211;unapplied</p>
 <dl>
 <dt>
-<dd> Show the unapplied patches.</dl>
+</dt><dd> Show the unapplied patches.</dd></dl>
 <p> -s, &#8211;stat</p>
 <dl>
 <dt>
-<dd> Show a diffstat summary of the specified patches.</dl>
+</dt><dd> Show a diffstat summary of the specified patches.</dd></dl>
 <p> -O OPTIONS, &#8211;diff-opts OPTIONS</p>
 <dl>
 <dt>
-<dd> Extra options to pass to &quot;git diff&quot;.</dl>
+</dt><dd> Extra options to pass to &quot;git diff&quot;.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

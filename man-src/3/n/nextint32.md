@@ -10,39 +10,17 @@ description: "QuantLib::MersenneTwisterUniformRng – Uniform random number gene
 <p>QuantLib::MersenneTwisterUniformRng &#8211; Uniform random number generator. </p>
 <h2>Synopsis</h2>
 <pre><code>MersenneTwisterUniformRng (unsigned long seed=0)
-
-
-
 MersenneTwisterUniformRng (const std::vector&lt; unsigned long &gt; &amp;seeds)
-
-
-
 sample_type next () const
-
-
-
 unsigned long nextInt32 () const
-
-
 return a random number on [0,0xffffffff]-interval</code></pre>
 <h3>Public Types</h3>
 <p>typedef <code>Sample</code>&lt; <code>Real</code> &gt; <code>sample_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>MersenneTwisterUniformRng (unsigned long seed=0)
-
-
-
 MersenneTwisterUniformRng (const std::vector&lt; unsigned long &gt; &amp;seeds)
-
-
-
 sample_type next () const
-
-
-
 unsigned long nextInt32 () const
-
-
 return a random number on [0,0xffffffff]-interval</code></pre>
 <h2>Detailed Description</h2>
 <p>Uniform random number generator. </p>
@@ -50,7 +28,7 @@ return a random number on [0,0xffffffff]-interval</code></pre>
 <p> For more details see <a rel="nofollow" href="http://www.math.keio.ac.jp/matumoto/emt.html">http://www.math.keio.ac.jp/matumoto/emt.html</a> </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the returned values is tested by checking them against known good results.</dl>
+<dd>the correctness of the returned values is tested by checking them against known good results.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>MersenneTwisterUniformRng</code> (unsigned long seed = 0) [explicit]</h3>
 <p>if the given seed is 0, a random seed will be chosen based on clock()</p>

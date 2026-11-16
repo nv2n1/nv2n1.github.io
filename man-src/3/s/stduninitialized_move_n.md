@@ -10,19 +10,12 @@ description: "std::uninitialized_move_n – std::uninitialized_move_n"
 <p>std::uninitialized_move_n &#8211; std::uninitialized_move_n</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;memory&gt;
-
 template&lt; class InputIt, class Size, class ForwardIt &gt;
-
 std::pair&lt;InputIt, ForwardIt&gt; uninitialized_move_n( InputIt first, Size count, (1) (since C++17)
-
 ForwardIt d_first );
-
 template&lt; class ExecutionPolicy, class InputIt, class Size, class ForwardIt &gt;
-
 std::pair&lt;InputIt, ForwardIt&gt; uninitialized_move_n( ExecutionPolicy&amp;&amp; policy,  (2) (since C++17)
-
 InputIt first, Size count,
-
 ForwardIt d_first );</code></pre>
 <p>1) Moves count elements from a range beginning at first to an uninitialized memory area beginning at d_first as if by </p>
 <pre><code>for (; n &gt; 0; ++d_first, (void)++first, --n)

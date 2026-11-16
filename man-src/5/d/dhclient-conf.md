@@ -140,7 +140,7 @@ description: "dhclient.conf – DHCP client configuration file"
 <p> The <code>db-time-format</code> option determines which of two output methods are used for printing times in leases files. The <i>default</i> format provides day-and-time in UTC, whereas <i>local</i> uses a seconds-since-epoch to store the time value, and helpfully places a local timezone time in a comment on the same line. The formats are described in detail in this manpage, within the LEASE DECLARATIONS section. </p>
 <p> The <i>lease-id-format</i> parameter</p>
 <dl>
-<dd><code>lease-id-format </code><i>format</i><code>;</code> </p>
+<dd><code>lease-id-format </code><i>format</i><code>;</code> </dd>
 <p> The <i>format</i> parameter must be either <code>octal</code> or <code>hex</code>. This parameter governs the format used to write certain values to lease files. With the default format, octal, values are written as quoted strings in which non-printable characters are represented as octal escapes &#8211; a backslash character followed by three octal digits. When the hex format is specified, values are written as an unquoted series of hexadecimal digit pairs, separated by colons. </p>
 <p> Currently, the values written out based on lease-id-format are the default-duid and the IAID value (DHCPv6 only). The client automatically reads the values in either format. Note that when the format is octal, rather than as an octal string, IAID is output as hex if it contains no printable characters or as a string if contains only printable characters. This is done to maintain backward compatibility. </p>
 <p>&nbsp;<code>reject&nbsp;</code><i>cidr-ip-address</i>&nbsp;[<code>,</code>&nbsp;<i>&#8230;</i><code>&nbsp;</code><i>cidr-ip-address</i>&nbsp;]&nbsp;<code>;</code> </p>

@@ -24,21 +24,21 @@ url: "/docs/linux/man/1-zone2ldap/"
 
 <dl>
 <dt>-b
-<dd> LDAP Base DN. LDAP systems require a &quot;base dn&quot;, which is generally considered the LDAP Directory root. If the zone you are loading is different from the base, then you will need to tell zone2ldap what your LDAP base is.
-<dt>-v
-<dd> Print version information, and immediatly exit.
-<dt>-f
-<dd> Zone file. Bind 9.1 compatible zone file, from which zone information will be read.
-<dt>-d
-<dd> Dump debug information to standard out.
-<dt>-w
-<dd> LDAP Bind password, corresponding the the value of &quot;-b&quot;.
-<dt>-h
-<dd> LDAP Directory host. This is the hostname of the LDAP system you wish to store zone information on. An LDAP server should be listening on port 389 of the target system. This may be ommited, and will default to &quot;localhost&quot;.
-<dt>-c
-<dd> This will create the zone portion of the DN you are importing. For instance, if you are creating a domain.com zone, zone2ldap should first create &quot;dc=domain,dc=com&quot;. This is useful if you are creating multiple domains.
-<dt>-z
-<dd> This is the name of the zone specified in the SOA record.</dl>
+</dt><dd> LDAP Base DN. LDAP systems require a &quot;base dn&quot;, which is generally considered the LDAP Directory root. If the zone you are loading is different from the base, then you will need to tell zone2ldap what your LDAP base is.
+</dd><dt>-v
+</dt><dd> Print version information, and immediatly exit.
+</dd><dt>-f
+</dt><dd> Zone file. Bind 9.1 compatible zone file, from which zone information will be read.
+</dd><dt>-d
+</dt><dd> Dump debug information to standard out.
+</dd><dt>-w
+</dt><dd> LDAP Bind password, corresponding the the value of &quot;-b&quot;.
+</dd><dt>-h
+</dt><dd> LDAP Directory host. This is the hostname of the LDAP system you wish to store zone information on. An LDAP server should be listening on port 389 of the target system. This may be ommited, and will default to &quot;localhost&quot;.
+</dd><dt>-c
+</dt><dd> This will create the zone portion of the DN you are importing. For instance, if you are creating a domain.com zone, zone2ldap should first create &quot;dc=domain,dc=com&quot;. This is useful if you are creating multiple domains.
+</dd><dt>-z
+</dt><dd> This is the name of the zone specified in the SOA record.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

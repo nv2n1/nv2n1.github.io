@@ -49,12 +49,12 @@ description: "guestfs-performance – engineering libguestfs for greatest perfor
 <p> Every time libguestfs runs it will check that no host files used by the appliance have changed. If any have, then the appliance is rebuilt. This usually happens when a package is installed or updated on the host (eg. using programs like <tt>&quot;yum&quot;</tt> or <tt>&quot;apt-get&quot;</tt>). The reason for reconstructing the appliance is security: the new program that has been installed might contain a security fix, and so we want to include the fixed program in the appliance automatically. </p>
 <p> These are the performance implications:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The process of building (or rebuilding) the cached appliance is slow, and you can avoid this happening by using a fixed appliance (see below).</p>
-<dt>&bull;</p>
-<dd> If not using a fixed appliance, be aware that updating software on the host will cause a one time rebuild of the appliance.</p>
-<dt>&bull;</p>
-<dd> <i>/var/tmp</i> (or <tt>$TMPDIR</tt>, <tt>$LIBGUESTFS_CACHEDIR</tt>) should be on a fast disk, and have plenty of space for the appliance.</dl>
+<dt>&bull;</dt>
+<dd> The process of building (or rebuilding) the cached appliance is slow, and you can avoid this happening by using a fixed appliance (see below).</dd>
+<dt>&bull;</dt>
+<dd> If not using a fixed appliance, be aware that updating software on the host will cause a one time rebuild of the appliance.</dd>
+<dt>&bull;</dt>
+<dd> <i>/var/tmp</i> (or <tt>$TMPDIR</tt>, <tt>$LIBGUESTFS_CACHEDIR</tt>) should be on a fast disk, and have plenty of space for the appliance.</dd></dl>
 <h2>USING A FIXED APPLIANCE</h2>
 <p> To fully control when the appliance is built, you can build a fixed appliance. This appliance should be stored on a fast local disk. </p>
 <p> To build the appliance, run the command: </p>
@@ -71,10 +71,10 @@ description: "guestfs-performance – engineering libguestfs for greatest perfor
 <h3>Performance of the fixed appliance</h3>
 <p> In our testing we did not find that using a fixed appliance gave any measurable performance benefit, even when the appliance was located in memory (ie. on <i>/dev/shm</i>). However there are two points to consider:</p>
 <dl>
-<dt>1.</p>
-<dd> Using a fixed appliance stops libguestfs from ever rebuilding the appliance, meaning that libguestfs will have more predictable start-up times.</p>
-<dt>2.</p>
-<dd> The appliance is loaded on demand. A simple test such as: </p>
+<dt>1.</dt>
+<dd> Using a fixed appliance stops libguestfs from ever rebuilding the appliance, meaning that libguestfs will have more predictable start-up times.</dd>
+<dt>2.</dt>
+<dd> The appliance is loaded on demand. A simple test such as: </dd>
 <pre>
  time guestfish -a /dev/null run
 </pre>
@@ -86,12 +86,12 @@ description: "guestfs-performance – engineering libguestfs for greatest perfor
 <p> Consider writing your program as a daemon which holds a guest open while making a series of changes. Or marshal all the operations you want to perform before opening the guest. </p>
 <p> You can also try adding disks from multiple guests to a single appliance. Before trying this, note the following points:</p>
 <dl>
-<dt>1.</p>
-<dd> Adding multiple guests to one appliance is a security problem because it may allow one guest to interfere with the disks of another guest. Only do it if you trust all the guests, or if you can group guests by trust.</p>
-<dt>2.</p>
-<dd> There is a hard limit to the number of disks you can add to a single appliance. Call &#8220;guestfs_max_disks&#8221; in <code>guestfs</code>(3) to get this limit. For further information see &#8220;<font SIZE="-1">LIMITS&#8221;</font> in <code>guestfs</code>(3).</p>
-<dt>3.</p>
-<dd> Using libguestfs this way is complicated. Disks can have unexpected interactions: for example, if two guests use the same <font SIZE="-1">UUID</font> for a filesystem (because they were cloned), or have volume groups with the same name (but see <tt>&quot;guestfs_lvm_set_filter&quot;</tt>).</dl>
+<dt>1.</dt>
+<dd> Adding multiple guests to one appliance is a security problem because it may allow one guest to interfere with the disks of another guest. Only do it if you trust all the guests, or if you can group guests by trust.</dd>
+<dt>2.</dt>
+<dd> There is a hard limit to the number of disks you can add to a single appliance. Call &#8220;guestfs_max_disks&#8221; in <code>guestfs</code>(3) to get this limit. For further information see &#8220;<font SIZE="-1">LIMITS&#8221;</font> in <code>guestfs</code>(3).</dd>
+<dt>3.</dt>
+<dd> Using libguestfs this way is complicated. Disks can have unexpected interactions: for example, if two guests use the same <font SIZE="-1">UUID</font> for a filesystem (because they were cloned), or have volume groups with the same name (but see <tt>&quot;guestfs_lvm_set_filter&quot;</tt>).</dd></dl>
 <p> <code><a href="/docs/linux/man/1-virt-df/">virt-df</a></code>(1) adds multiple disks by default, so the source code for this program would be a good place to start.</p>
 <h2>SHORTENING THE TIME TAKEN FOR INSPECTION OF VMs</h2>
 <p> The main advice is obvious: Do not perform inspection (which is expensive) unless you need the results. </p>
@@ -99,12 +99,12 @@ description: "guestfs-performance – engineering libguestfs for greatest perfor
 <p> Some disks don’t need to be inspected at all: for example, if you are creating a disk image, or if the disk image is not a <font SIZE="-1">VM,</font> or if the disk image has a known layout. </p>
 <p> Even when basic inspection (<tt>&quot;guestfs_inspect_os&quot;</tt>) is required, auxiliary inspection operations may be avoided:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Mounting disks is only necessary to get further filesystem information.</p>
-<dt>&bull;</p>
-<dd> Listing applications (<tt>&quot;guestfs_inspect_list_applications&quot;</tt>) is an expensive operation on Linux, but almost free on Windows.</p>
-<dt>&bull;</p>
-<dd> Generating a guest icon (<tt>&quot;guestfs_inspect_get_icon&quot;</tt>) is cheap on Linux but expensive on Windows.</dl>
+<dt>&bull;</dt>
+<dd> Mounting disks is only necessary to get further filesystem information.</dd>
+<dt>&bull;</dt>
+<dd> Listing applications (<tt>&quot;guestfs_inspect_list_applications&quot;</tt>) is an expensive operation on Linux, but almost free on Windows.</dd>
+<dt>&bull;</dt>
+<dd> Generating a guest icon (<tt>&quot;guestfs_inspect_get_icon&quot;</tt>) is cheap on Linux but expensive on Windows.</dd></dl>
 <h2>PARALLEL APPLIANCES</h2>
 <p> Libguestfs appliances are mostly I/O bound and you can launch multiple appliances in parallel. Provided there is enough free memory, there should be little difference in launching 1 appliance vs N appliances in parallel. </p>
 <p> On a 2-core (4-thread) laptop with 16 <font SIZE="-1">GB</font> of <font SIZE="-1">RAM,</font> using the (not especially realistic) test Perl script below, the following plot shows excellent scalability when running between 1 and 20 appliances in parallel: </p>
@@ -177,14 +177,14 @@ test();</p>
 <h2>USING USER-MODE LINUX</h2>
 <p> Since libguestfs 1.24, it has been possible to use the User-Mode Linux (uml) backend instead of <font SIZE="-1">KVM</font> (see &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <code>guestfs</code>(3)). This section makes some general remarks about this backend, but it is <code>highly advisable</code> to measure your own workload under <font SIZE="-1">UML</font> rather than trusting comments or intuition.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">UML</font> usually performs the same or slightly slower than <font SIZE="-1">KVM,</font> on baremetal.</p>
-<dt>&bull;</p>
-<dd> However <font SIZE="-1">UML</font> often performs the same under virtualization as it does on baremetal, whereas <font SIZE="-1">KVM</font> can run much slower under virtualization (since hardware virt acceleration is not available).</p>
-<dt>&bull;</p>
-<dd> Upload and download is as much as 10 times slower on <font SIZE="-1">UML</font> than <font SIZE="-1">KVM.</font> Libguestfs sends this data over the <font SIZE="-1">UML</font> emulated serial port, which is far less efficient than KVM’s virtio-serial.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">UML</font> lacks some features (eg. qcow2 support), so it may not be applicable at all.</dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">UML</font> usually performs the same or slightly slower than <font SIZE="-1">KVM,</font> on baremetal.</dd>
+<dt>&bull;</dt>
+<dd> However <font SIZE="-1">UML</font> often performs the same under virtualization as it does on baremetal, whereas <font SIZE="-1">KVM</font> can run much slower under virtualization (since hardware virt acceleration is not available).</dd>
+<dt>&bull;</dt>
+<dd> Upload and download is as much as 10 times slower on <font SIZE="-1">UML</font> than <font SIZE="-1">KVM.</font> Libguestfs sends this data over the <font SIZE="-1">UML</font> emulated serial port, which is far less efficient than KVM’s virtio-serial.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">UML</font> lacks some features (eg. qcow2 support), so it may not be applicable at all.</dd></dl>
 <p> For some actual figures, see: <a rel="nofollow" href="http://rwmj.wordpress.com/2013/08/14/performance-of-user-mode-linux-as-a-libguestfs-backend/#content">http://rwmj.wordpress.com/2013/08/14/performance-of-user-mode-linux-as-a-libguestfs-backend/#content</a></p>
 <h2>TROUBLESHOOTING POOR PERFORMANCE</h2>
 <h3>Ensure hardware virtualization is available</h3>
@@ -290,10 +290,8 @@ probe process(&#8220;/usr/lib*/libguestfs.so.0&#8221;)<br />
 <p> Firstly, you have to change qemu so it runs with the <tt>&quot;-S&quot;</tt> and <tt>&quot;-s&quot;</tt> options. These options cause qemu to pause at boot and allow you to attach a debugger. Read <code><a href="/docs/linux/man/1-qemu/">qemu</a></code>(1) for further information. Libguestfs invokes qemu several times (to scan the help output and so on) and you only want the final invocation of qemu to use these options, so use a qemu wrapper script like this: </p>
 <pre><code>
 #!/ bin / bash -
-
 #Set this to point to the real qemu binary.
 qemu = / usr / bin / qemu - kvm
-
        if["$1" != "-global"];
 then
 #Scanning help output etc.
@@ -339,27 +337,27 @@ then
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAT">DETAILED ANALYSIS</a></p>
+<dt><a href="#lbAT">DETAILED ANALYSIS</a></dt>
 <dd>
-<dt><a href="#lbAY">PERFORMANCE REGRESSIONS IN OTHER PROGRAMS</a></p>
+</dd><dt><a href="#lbAY">PERFORMANCE REGRESSIONS IN OTHER PROGRAMS</a></dt>
 <dd>
-<dt><a href="#lbAZ">SEE ALSO</a></p>
+</dd><dt><a href="#lbAZ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBA">AUTHORS</a></p>
+</dd><dt><a href="#lbBA">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbBB">COPYRIGHT</a></p>
+</dd><dt><a href="#lbBB">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbBC">LICENSE</a></p>
+</dd><dt><a href="#lbBC">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbBD">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBD">BUGS</a></dt>
+<dd></dd></dl>

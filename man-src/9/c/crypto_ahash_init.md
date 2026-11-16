@@ -14,7 +14,7 @@ description: "crypto_ahash_init – (re)initialize message digest handle"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>ahash_request handle that already is initialized with all necessary data using the ahash_request_* API functions</dl>
+</dd><dd>ahash_request handle that already is initialized with all necessary data using the ahash_request_* API functions</dd></dl>
 <h2>Description</h2>
 <p>The call (re-)initializes the message digest referenced by the ahash_request handle. Any potentially existing state created by previous operations is discarded.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_ahash_init – (re)initialize message digest handle"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

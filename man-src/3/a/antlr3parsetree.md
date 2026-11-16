@@ -21,12 +21,12 @@ description: "include/antlr3parsetree.h –"
 <p> <code>Todo</code></p>
 <dl>
 <dt>
-<dd> May not need this in the end</dl>
+</dt><dd> May not need this in the end</dd></dl>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>ANTLR3_PARSE_TREE_struct</code></h3>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_PARSE_TREE</code>&quot;</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

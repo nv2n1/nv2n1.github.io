@@ -15,27 +15,27 @@ snd_jack_new - Create a new jack
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>id</i>
-<dl><dd>an identifying string for this jack</dl>
+<dl><dd>an identifying string for this jack</dd></dl>
  
 
  <i>type</i>
-<dl><dd>a bitmask of enum snd_jack_type values that can be detected by this jack</dl>
+<dl><dd>a bitmask of enum snd_jack_type values that can be detected by this jack</dd></dl>
  
 
  <i>jjack</i>
-<dl><dd>Used to provide the allocated jack object to the caller.</dl>
+<dl><dd>Used to provide the allocated jack object to the caller.</dd></dl>
  
 
  <i>initial_kctl</i>
-<dl><dd>if true, create a kcontrol and add it to the jack list.</dl>
+<dl><dd>if true, create a kcontrol and add it to the jack list.</dd></dl>
  
 
  <i>phantom_jack</i>
-<dl><dd>Don't create a input device for phantom jacks.</dl>
+<dl><dd>Don't create a input device for phantom jacks.</dd></dl>
 
 <h2>Description</h2>
 

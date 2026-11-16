@@ -13,8 +13,8 @@ description: "mongoc_uri_unescape() – Unescapes an URI encoded string. For exa
 mongoc_uri_unescape (const char *escaped_string);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>escaped_string</code></p>
-<dd>A utf8 encoded string.</dl>
+<dt><code>escaped_string</code></dt>
+<dd>A utf8 encoded string.</dd></dl>
 <h2>Description</h2>
 <p>Unescapes an URI encoded string. For example, &quot;%40&quot; would become &quot;@&quot;. </p>
 <h2>Returns</h2>

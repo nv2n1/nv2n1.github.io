@@ -16,7 +16,6 @@ description: "fixatan2 – Fixed point version of the libc atan2() routine. Alle
 <p> This is a fixed point version of the libc atan2() routine. It computes the arc tangent of `y / x&#8217;, but the signs of both arguments are used to determine the quadrant of the result, and `x&#8217; is permitted to be zero. This function is useful to convert Cartesian coordinates to polar coordinates. Example: </p>
 <pre><code>
 fixed result;
-
 /* Sets `result' to binary angle 64. */
 result = fixatan2(itofix(1), 0);
 /* Sets `result' to binary angle -109. */

@@ -11,14 +11,11 @@ description: "std::experimental::filesystem::path::operator= – std::experiment
 <h2>Synopsis</h2>
 <pre><code>path &amp;operator=(const path &amp;p);
 (1)(filesystem TS)
-
     path &amp;
     operator=(path &amp;&amp;p);
 (2)(filesystem TS)
-
     template &lt;class Source&gt;
     (2)(filesystem TS)
-
         path &amp;
         operator=(const Source &amp;source);</code></pre>
 <p>1) Replaces the contents of *this with a copy of the contents of p.<br />
@@ -38,11 +35,8 @@ noexcept<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::path p = &quot;C:/users/abcdef/AppData/Local&quot;;
     p = p / &quot;Temp&quot;; // move assignment

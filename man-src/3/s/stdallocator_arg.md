@@ -11,10 +11,8 @@ std::allocator_arg - std::allocator_arg
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;memory&gt;
-
 constexpr std::allocator_arg_t allocator_arg = std::allocator_arg_t();         (since C++11)
 (until C++17)
-
 inline constexpr std::allocator_arg_t allocator_arg = std::allocator_arg_t();  (since C++17)</code></pre> 
 std::allocator_arg is a constant of type std::allocator_arg_t used to disambiguate, at call site, the overloads of the constructors and member functions of allocator-aware objects, such as std::tuple, 
 std::function, std::packaged_task, 

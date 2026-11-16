@@ -14,7 +14,7 @@ description: "report_event.conf – configuration file for libreport."
 <p> Directives start with a reserved word. Currently, there is only one directive, &quot;include&quot;. </p>
 <p> include <i>FILE</i></p>
 <dl>
-<dd>This directive causes files which match FILE to be read and parsed as if they are inserted textually where this directive occurs. FILE can use shell pattern metacharacters (*,?,etc) to specify multiple files. Relative paths are interpreted relative to current file.</dl>
+<dd>This directive causes files which match FILE to be read and parsed as if they are inserted textually where this directive occurs. FILE can use shell pattern metacharacters (*,?,etc) to specify multiple files. Relative paths are interpreted relative to current file.</dd></dl>
 <p> Rule starts with a line with non-space leading character. All subsequent lines which start with space or tab form one rule. Note that separating newline is retained. </p>
 <p> Rules may be commented out with #. One # is sufficient to comment out even a multi-line rule (no need to comment out every line). </p>
 <p> Rules specify which programs to run on the problem directory. Each rule may have conditions to be checked before the program is run. </p>
@@ -52,66 +52,67 @@ description: "report_event.conf – configuration file for libreport."
 &lt;!ATTLIST note-html xml:lang CDATA #IMPLIED&gt;
 &lt;!ELEMENT allow-empty (&quot;yes&quot;|&quot;no&quot;)&gt;
 &lt;!ELEMENT default-value (#PCDATA)&gt;</pre>
-</dl>
+</dd></dl>
 <p> name</p>
 <dl>
-<dd>User visible name of event</dl>
+<dd>User visible name of event</dd></dl>
 <p> description</p>
 <dl>
-<dd>User visible description</dl>
+<dd>User visible description</dd></dl>
 <p> exclude-items-by-default</p>
 <dl>
-<dd>Comma separated names of excluded problem elements. User can include any of these elements if he wishes it.</dl>
+<dd>Comma separated names of excluded problem elements. User can include any of these elements if he wishes it.</dd></dl>
 <p> include-items-by-default</p>
 <dl>
-<dd>Comma separated names of included problem elements. User can exclude any of these elements if he wishes it.</dl>
+<dd>Comma separated names of included problem elements. User can exclude any of these elements if he wishes it.</dd></dl>
 <p> exclude-items-always</p>
 <dl>
-<dd>Comma separated names of included problem elements. User cannot include any of these elements.</dl>
+<dd>Comma separated names of included problem elements. User cannot include any of these elements.</dd></dl>
 <p> exclude-binary-items</p>
 <dl>
-<dd>If &quot;yes&quot; then all binary problem elements are excluded. User can include them if he wishes it.</dl>
+<dd>If &quot;yes&quot; then all binary problem elements are excluded. User can include them if he wishes it.</dd></dl>
 <p> minimal-rating</p>
 <dl>
-<dd>Minimal backtrace rating required for executing the event. Backtrace rating is a measure of backtrace usability and understandability. With an increasing number of unresolved frames the backtrace rating gets lower values.</dl>
+<dd>Minimal backtrace rating required for executing the event. Backtrace rating is a measure of backtrace usability and understandability. With an increasing number of unresolved frames the backtrace rating gets lower values.</dd></dl>
 <p> gui-review-elements</p>
 <dl>
-<dd>If &quot;yes&quot;, user must explicitly approve that all included problem elements can be published. If &quot;no&quot;, the event is executed automatically. If not provided, &quot;yes&quot; is expected.</dl>
+<dd>If &quot;yes&quot;, user must explicitly approve that all included problem elements can be published. If &quot;no&quot;, the event is executed automatically. If not provided, &quot;yes&quot; is expected.</dd></dl>
 <p> support-restricted-access</p>
 <dl>
-<dd>If &quot;yes&quot;, the UI tools will offer the users to enter the new report with restricted access. If &quot;no&quot;, the UI tools will never offer the users to enter the report with restricted access. &quot;no&quot; is the default value. The element should have one argument named <i>optionname</i> which defines name of an option holding configuration of the restricted access feature. The option must of <i>bool</i> type.</dl>
+<dd>If &quot;yes&quot;, the UI tools will offer the users to enter the new report with restricted access. If &quot;no&quot;, the UI tools will never offer the users to enter the report with restricted access. &quot;no&quot; is the default value. The element should have one argument named <i>optionname</i> which defines name of an option holding configuration of the restricted access feature. The option must of <i>bool</i> type.</dd></dl>
 <p> advanced-options</p>
 <dl>
-<dd>List of options which are hidden in the default view.</dl>
+<dd>List of options which are hidden in the default view.</dd></dl>
 <p> label</p>
 <dl>
-<dd>Event option label</dl>
+<dd>Event option label</dd></dl>
 <p> note-html</p>
 <dl>
-<dd>Event option HTML formatted description</dl>
+<dd>Event option HTML formatted description</dd></dl>
 <p> allow-empty</p>
 <dl>
-<dd>Determines if user can leave the option empty</dl>
+<dd>Determines if user can leave the option empty</dd></dl>
 <p> default-value</p>
 <dl>
-<dd>A value which is used by default</dl>
+<dd>A value which is used by default</dd></dl>
 <p> option:name</p>
 <dl>
-<dd>Name of exported environment variable name. libreport tools communicate through Environment Variables.</dl>
+<dd>Name of exported environment variable name. libreport tools communicate through Environment Variables.</dd></dl>
 <h2>Examples</h2>
 <dl>
 <dd>
 <pre>EVENT=post-create analyzer=Python abrt-action-analyze-python
 EVENT=post-create
  getent passwd &quot;`cat uid`&quot; | cut -d: -f1 &gt;username</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-abrtd/">abrtd</a>(8)</p>
 <h2>Author</h2>
 <p>Manual page written by Denys Vlasenko &lt;m[blue]<code>dvlasenk [at] redhat.com</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>dvlasenk [at] redhat.com</p>
+<dt> 1.</dt>
+<dd>dvlasenk [at] redhat.com</dd>
 <dl>
-<dd>mailto:dvlasenk [at] redhat.com</dl>
+<dd>mailto:dvlasenk [at] redhat.com</dd></dl>
+</dl>

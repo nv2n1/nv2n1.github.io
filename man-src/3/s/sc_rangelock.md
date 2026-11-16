@@ -15,41 +15,14 @@ sc::RangeLock -
 <h3>Public Member Functions</h3>
 
 <pre><code>RangeLock (Pool *pool=0)
-
-
-
 void increment (int start, int fence)
-
-
-
 void decrement (int start, int fence)
-
-
-
 void set (int start, int fence, int value)
-
-
-
 void sum (int start, int fence, int delta)
-
-
-
 int checkeq (int start, int fence, int value)
-
-
-
 int checkgr (int start, int fence, int value)
-
-
-
 void check ()
-
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
-
 int lockvalue (int i)
 </code></pre>
 

@@ -14,11 +14,8 @@ Defined in header &lt;experimental/memory_resource&gt;
 template &lt; class Alloc &gt; 
 class resource_adaptor_imp : public memory_resource; // for exposition only <pre><code>template &lt;class Allocator&gt;
 (library fundamentals TS)
-
     using resource_adaptor = resource_adaptor_imp&lt;
-
         typename std::allocator_traits&lt;Allocator&gt;::
-
             template rebind_alloc&lt;char&gt;&gt;;</code></pre> 
 The alias template resource_adaptor adapts the allocator type Allocator with a memory_resource interface. The allocator is rebound to a char value type before it is actually adapted (using the resource_adaptor_imp class template), so that adapting specializations of the same allocator template always yields the same type, regardless of the value type the allocator template is originally instantiated with. 
 resource_adaptor_imp is a class template whose members are described below. The name resource_adaptor_imp is for exposition purposes only and not normative. 
@@ -33,16 +30,12 @@ allocator_type Alloc
 Member functions of resource_adaptor_imp 
 std::experimental::pmr::resource_adaptor_imp::resource_adaptor_imp <pre><code>resource_adaptor_imp() = default;
 (1)(library fundamentals TS)
-
     resource_adaptor_imp(const resource_adaptor_imp &amp;other) = default;
 (2)(library fundamentals TS)
-
     resource_adaptor_imp(resource_adaptor_imp &amp;&amp;other) = default;
 (3)(library fundamentals TS)
-
     explicit resource_adaptor_imp(const Alloc &amp;a2);
 (4)(library fundamentals TS)
-
     explicit resource_adaptor_imp(Alloc &amp;&amp;a2);
 (5)(library fundamentals TS)</code></pre> 
 1) Default constructor. Default constructs the wrapped allocator. 

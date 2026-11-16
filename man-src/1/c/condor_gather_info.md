@@ -20,94 +20,90 @@ description: "condor_gather_info Gather information about an HTCondor installati
 <p> The information gathered by this tool:</p>
 <dl>
 <dt>
-<dd> 1. Identity</p>
+</dt><dd> 1. Identity</dd>
 <dt>
-<dd> * User name who generated the report</p>
+</dt><dd> * User name who generated the report</dd>
 <dt>
-<dd> * Script location and machine name</p>
+</dt><dd> * Script location and machine name</dd>
 <dt>
-<dd> * Date of report creation</p>
+</dt><dd> * Date of report creation</dd>
 <dt>
-<dd> * uname -a</p>
+</dt><dd> * uname -a</dd>
 <dt>
-<dd> * Contents of /etc/issue</p>
+</dt><dd> * Contents of /etc/issue</dd>
 <dt>
-<dd> * Contents of /etc/redhat-release</p>
+</dt><dd> * Contents of /etc/redhat-release</dd>
 <dt>
-<dd> * Contents of /etc/debian_version</p>
+</dt><dd> * Contents of /etc/debian_version</dd>
 <dt>
-<dd> * Contents of $(LOG)/MasterLog</p>
+</dt><dd> * Contents of $(LOG)/MasterLog</dd>
 <dt>
-<dd> * Contents of $(LOG)/ShadowLog</p>
+</dt><dd> * Contents of $(LOG)/ShadowLog</dd>
 <dt>
-<dd> * Contents of $(LOG)/SchedLog</p>
+</dt><dd> * Contents of $(LOG)/SchedLog</dd>
 <dt>
-<dd> * Output of ps -auxww -forest</p>
+</dt><dd> * Output of ps -auxww -forest</dd>
 <dt>
-<dd> * Output of df -h</p>
+</dt><dd> * Output of df -h</dd>
 <dt>
-<dd> * Output of iptables -L</p>
+</dt><dd> * Output of iptables -L</dd>
 <dt>
-<dd> * Output of ls `condor_config_val LOG`</p>
+</dt><dd> * Output of ls `condor_config_val LOG`</dd>
 <dt>
-<dd> * Output of ldd `condor_config_val SBIN`/condor_schedd</p>
+</dt><dd> * Output of ldd `condor_config_val SBIN`/condor_schedd</dd>
 <dt>
-<dd> * Contents of /etc/hosts</p>
+</dt><dd> * Contents of /etc/hosts</dd>
 <dt>
-<dd> * Contents of /etc/nsswitch.conf</p>
+</dt><dd> * Contents of /etc/nsswitch.conf</dd>
 <dt>
-<dd> * Output of ulimit -a</p>
+</dt><dd> * Output of ulimit -a</dd>
 <dt>
-<dd> * Output of uptime</p>
+</dt><dd> * Output of uptime</dd>
 <dt>
-<dd> * Output of free</p>
+</dt><dd> * Output of free</dd>
 <dt>
-<dd> * Network interface configuration ( ifconfig )</p>
+</dt><dd> * Network interface configuration ( ifconfig )</dd>
 <dt>
-<dd> * HTCondor version</p>
+</dt><dd> * HTCondor version</dd>
 <dt>
-<dd> * Location of HTCondor configuration files</p>
+</dt><dd> * Location of HTCondor configuration files</dd>
 <dt>
-<dd> * HTCondor configuration variables</p>
+</dt><dd> * HTCondor configuration variables</dd>
 <dt>
-<dd> * All variables and values</p>
+</dt><dd> * All variables and values</dd>
 <dt>
-<dd> * Definition locations for each configuration variable</p>
+</dt><dd> * Definition locations for each configuration variable</dd>
 <dt>
-<dd> 2. Job Information</p>
+</dt><dd> 2. Job Information</dd>
 <dt>
-<dd> * Output of condor_q jobid</p>
+</dt><dd> * Output of condor_q jobid</dd>
 <dt>
-<dd> * Output of condor_q -l jobid</p>
+</dt><dd> * Output of condor_q -l jobid</dd>
 <dt>
-<dd> * Output of condor_q -analyze jobid</p>
+</dt><dd> * Output of condor_q -analyze jobid</dd>
 <dt>
-<dd> * Job event log, if it exists</p>
+</dt><dd> * Job event log, if it exists</dd>
 <dt>
-<dd> * Only events pertaining to the job ID</p>
+</dt><dd> * Only events pertaining to the job ID</dd>
 <dt>
-<dd> * If <i>condor_gather_info</i> has the proper permissions, it runs <i>condor_fetchlog</i> on the machine where the job most recently ran, and includes the contents of the logs from the <i>condor_master</i> , <i>condor_startd</i> , and <i>condor_starter</i> .</dl>
+</dt><dd> * If <i>condor_gather_info</i> has the proper permissions, it runs <i>condor_fetchlog</i> on the machine where the job most recently ran, and includes the contents of the logs from the <i>condor_master</i> , <i>condor_startd</i> , and <i>condor_starter</i> .</dd></dl>
 <h2>Options</h2>
 <p> <code>&#8211;jobid </code> <i>&lt;ClusterId.ProcId&gt;</i></p>
 <dl>
 <dt>
-<dd> Data mine information about this HTCondor job from the local HTCondor installation and <i>condor_schedd</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Data mine information about this HTCondor job from the local HTCondor installation and <i>condor_schedd</i> .</dd>
+</dl>
 <p> <code>&#8211;scratch </code> <i>/path/to/directory</i></p>
 <dl>
 <dt>
-<dd> A path to temporary space needed when building the output tar file. Defaults to /tmp/cgi-&lt;PID&gt; , where &lt;PID&gt; is replaced by the process ID of <i>condor_gather_info</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> A path to temporary space needed when building the output tar file. Defaults to /tmp/cgi-&lt;PID&gt; , where &lt;PID&gt; is replaced by the process ID of <i>condor_gather_info</i> .</dd>
+</dl>
 <h2>Files</h2>
 <dl>
 <dt>
-<dd> * condor-profile.txt The Identity portion of the information gathered when <i>condor_gather_info</i> is run without arguments.</p>
+</dt><dd> * condor-profile.txt The Identity portion of the information gathered when <i>condor_gather_info</i> is run without arguments.</dd>
 <dt>
-<dd>
-<dt>
-<dd> * cgi-&lt;username&gt;-jid&lt;cluster&gt;.&lt;proc&gt;-&lt;year&gt;-&lt;month&gt;-&lt;day&gt;-&lt;hour&gt;_&lt;minute&gt;_&lt;second&gt;-&lt;TZ&gt;.tar.gz The output file which contains all of the information produced by this tool.</dl>
+</dt><dd> * cgi-&lt;username&gt;-jid&lt;cluster&gt;.&lt;proc&gt;-&lt;year&gt;-&lt;month&gt;-&lt;day&gt;-&lt;hour&gt;_&lt;minute&gt;_&lt;second&gt;-&lt;TZ&gt;.tar.gz The output file which contains all of the information produced by this tool.</dd></dl>
 <h2>Exit Status</h2>
 <p> <i>condor_gather_info</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Author</h2>

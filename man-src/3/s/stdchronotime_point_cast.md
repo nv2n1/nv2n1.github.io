@@ -12,15 +12,10 @@ std::chrono::time_point_cast - std::chrono::time_point_cast
 
 <pre><code>template &lt;class ToDuration, class Clock, class Duration&gt;
 (since C++ 11)
-
     time_point&lt;Clock, ToDuration&gt; time_point_cast((until C++ 14)
-
                                                       const time_point&lt;Clock, Duration&gt; &amp;t);
-
 template &lt;class ToDuration, class Clock, class Duration&gt;
-
 constexpr time_point&lt;Clock, ToDuration&gt; time_point_cast((since C++ 14)
-
                                                             const time_point&lt;Clock, Duration&gt; &amp;t);</code></pre> 
 Converts a std::chrono::time_point from one duration to another. 
 
@@ -39,23 +34,17 @@ time_point_cast will only participate in overload resolution if ToDuration is an
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 using Clock = std::chrono::high_resolution_clock;
-
 using Ms = std::chrono::milliseconds;
-
 using Sec = std::chrono::seconds;
 template &lt;class Duration&gt;
-
 using TimePoint = std::chrono::time_point&lt;Clock, Duration&gt;;
 inline void print_ms(const TimePoint&lt;Ms&gt; &amp;time_point)
-
 {
     std::cout &lt;&lt; time_point.time_since_epoch().count() &lt;&lt; &quot; ms\n&quot;;
 }
 int main()
-
 {
     TimePoint&lt;Sec&gt; time_point_sec(Sec(4));
     // implicit cast, no precision loss

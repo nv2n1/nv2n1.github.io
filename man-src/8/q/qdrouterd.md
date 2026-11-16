@@ -21,8 +21,8 @@ description: "qdrouterd – dispatch router"
 <p> -h, &#8211;help : Print this help</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/qdrouterd.conf</code></p>
-<dd>Configuration flie.</dl>
+<dt><code>/etc/qdrouterd.conf</code></dt>
+<dd>Configuration flie.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-qdrouterd-conf/">qdrouterd.conf</a>(5)</i>, <i><a href="/docs/linux/man/8-qdstat/">qdstat</a>(8)</i>, <i><a href="/docs/linux/man/8-qdmanage/">qdmanage</a>(8)</i> </p>
 <p> <i><a rel="nofollow" href="http://qpid.apache.org/components/dispatch-router">http://qpid.apache.org/components/dispatch-router</a></i></p>

@@ -16,11 +16,11 @@ void bson_iter_overwrite_double(bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>value</code></p>
-<dd> The new double value.</dl>
+<dt><code>value</code></dt>
+<dd> The new double value.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_overwrite_double/">bson_iter_overwrite_double</a>(3)</code> function shall overwrite the contents of a BSON_TYPE_DOUBLE element in place. </p>
 <p> This may only be done when the underlying bson document allows mutation. </p>

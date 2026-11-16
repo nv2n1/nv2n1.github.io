@@ -16,8 +16,8 @@ description: "ipa-otptoken-import – Imports OTP tokens from RFC 6030 XML file"
 <p> If the <code>infile</code> contains encrypted token data, then the <i>keyfile</i> (<code>-k</code>) option MUST be specified. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k</code> <i>keyfile</i></p>
-<dd> File containing the key used to decrypt the token data.</dl>
+<dt><code>-k</code> <i>keyfile</i></dt>
+<dd> File containing the key used to decrypt the token data.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>

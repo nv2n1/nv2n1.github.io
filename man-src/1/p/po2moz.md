@@ -15,35 +15,35 @@ description: "po2moz – Convert Gettext PO localization files to Mozilla .dtd a
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/moz2po.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/moz2po.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h/&#8211;help</p>
-<dd> show this help message and exit</p>
-<dt>&#8211;manpage</p>
-<dd> output a manpage based on the help</p>
-<dt>&#8211;progress</p>
-<dd> show progress as: dots, none, bar, names, verbose</p>
-<dt>&#8211;errorlevel</p>
-<dd> show errorlevel as: none, message, exception, traceback</p>
-<dt>-i/&#8211;input</p>
-<dd> read from INPUT in inc.po, inc.pot, *, it.po, it.pot, js, lang.po, lang.pot, manifest, rdf, dtd.po, dtd.pot, ini.po, ini.pot, properties.po, properties.pot formats</p>
-<dt>-x/&#8211;exclude</p>
-<dd> exclude names matching EXCLUDE from input paths</p>
-<dt>-o/&#8211;output</p>
-<dd> write to OUTPUT in inc, *, it, js, lang, rdf, manifest, dtd, ini, properties formats</p>
-<dt>-t/&#8211;template</p>
-<dd> read from TEMPLATE in inc, *, it, js, lang, rdf, dtd, ini, properties, manifest formats</p>
-<dt>-S/&#8211;timestamp</p>
-<dd> skip conversion if the output file has newer timestamp</p>
-<dt>-l/&#8211;locale</p>
-<dd> set output locale (required as this sets the directory names)</p>
-<dt>&#8211;removeuntranslated</p>
-<dd> remove untranslated strings from output</p>
-<dt>&#8211;threshold</p>
-<dd> only convert files where the translation completion is above PERCENT</p>
-<dt>&#8211;fuzzy</p>
-<dd> use translations marked fuzzy</p>
-<dt>&#8211;nofuzzy</p>
-<dd> don&#8217;t use translations marked fuzzy (default) </p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h/&#8211;help</dt>
+<dd> show this help message and exit</dd>
+<dt>&#8211;manpage</dt>
+<dd> output a manpage based on the help</dd>
+<dt>&#8211;progress</dt>
+<dd> show progress as: dots, none, bar, names, verbose</dd>
+<dt>&#8211;errorlevel</dt>
+<dd> show errorlevel as: none, message, exception, traceback</dd>
+<dt>-i/&#8211;input</dt>
+<dd> read from INPUT in inc.po, inc.pot, *, it.po, it.pot, js, lang.po, lang.pot, manifest, rdf, dtd.po, dtd.pot, ini.po, ini.pot, properties.po, properties.pot formats</dd>
+<dt>-x/&#8211;exclude</dt>
+<dd> exclude names matching EXCLUDE from input paths</dd>
+<dt>-o/&#8211;output</dt>
+<dd> write to OUTPUT in inc, *, it, js, lang, rdf, manifest, dtd, ini, properties formats</dd>
+<dt>-t/&#8211;template</dt>
+<dd> read from TEMPLATE in inc, *, it, js, lang, rdf, dtd, ini, properties, manifest formats</dd>
+<dt>-S/&#8211;timestamp</dt>
+<dd> skip conversion if the output file has newer timestamp</dd>
+<dt>-l/&#8211;locale</dt>
+<dd> set output locale (required as this sets the directory names)</dd>
+<dt>&#8211;removeuntranslated</dt>
+<dd> remove untranslated strings from output</dd>
+<dt>&#8211;threshold</dt>
+<dd> only convert files where the translation completion is above PERCENT</dd>
+<dt>&#8211;fuzzy</dt>
+<dd> use translations marked fuzzy</dd>
+<dt>&#8211;nofuzzy</dt>
+<dd> don&#8217;t use translations marked fuzzy (default) </dd>
 </dl>
 <h2>Index</h2>

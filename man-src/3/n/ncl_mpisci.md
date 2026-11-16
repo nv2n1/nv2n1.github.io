@@ -14,7 +14,7 @@ and MPLNRI, this function returns a suggested color index for that area.</code><
 
  int c_mpisci (int iain)
 <h2>Description</h2><dl COMPACT><dt>IAIN
-<dd>is an input expression of type INTEGER, specifying the area identifier of a particular area of interest.</dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
+</dt><dd>is an input expression of type INTEGER, specifying the area identifier of a particular area of interest.</dd></dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
 <h2>Usage</h2>The statement &quot;ISCI=MPISCI(IAIN)&quot; retrieves in ISCI the suggested color index for the area with area identifier IAIN. For example, if IMAD is the area identifier of the little island in Lake Superior called &quot;Lake Madeline&quot;, then MPISCI(IMAD) has the value 6. The suggested color indices are defined in such a way as to ensure that areas that touch each other have different color indices. 
 
  To get a suggested color index for the area, at a specified level, that contains the area with a specified area identifier, use MPISCI in combination with MPIOAR (which see). For example, MPISCI(MPIOAR(IMAD,4)) has the value 6, which is the color index for &quot;Wisconsin&quot; or any portion thereof, and MPISCI(MPIOAR(IMAD,2)) = 5, which is the color index for &quot;North America&quot;.

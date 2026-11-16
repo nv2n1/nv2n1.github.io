@@ -28,18 +28,18 @@ description: "hash – hash database access method"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;lorder; } HASHINFO; </p>
 <p> The elements of this structure are as follows:</p>
 <dl>
-<dt><i>bsize</i></p>
-<dd> defines the hash table bucket size, and is, by default, 256 bytes. It may be preferable to increase the page size for disk-resident tables and tables with large data items.</p>
-<dt><i>ffactor</i></p>
-<dd> indicates a desired density within the hash table. It is an approximation of the number of keys allowed to accumulate in any one bucket, determining when the hash table grows or shrinks. The default value is 8.</p>
-<dt><i>nelem</i></p>
-<dd> is an estimate of the final size of the hash table. If not set or set too low, hash tables will expand gracefully as keys are entered, although a slight performance degradation may be noticed. The default value is 1.</p>
-<dt><i>cachesize</i></p>
-<dd> is the suggested maximum size, in bytes, of the memory cache. This value is <i>only advisory</i>, and the access method will allocate more memory rather than fail.</p>
-<dt><i>hash</i></p>
-<dd> is a user-defined hash function. Since no hash function performs equally well on all possible data, the user may find that the built-in hash function does poorly on a particular data set. A user-specified hash functions must take two arguments (a pointer to a byte string and a length) and return a 32-bit quantity to be used as the hash value.</p>
-<dt><i>lorder</i></p>
-<dd> is the byte order for integers in the stored database metadata. The number should represent the order as an integer; for example, big endian order would be the number 4,321. If <i>lorder</i> is 0 (no order is specified), the current host order is used. If the file already exists, the specified value is ignored and the value specified when the tree was created is used.</dl>
+<dt><i>bsize</i></dt>
+<dd> defines the hash table bucket size, and is, by default, 256 bytes. It may be preferable to increase the page size for disk-resident tables and tables with large data items.</dd>
+<dt><i>ffactor</i></dt>
+<dd> indicates a desired density within the hash table. It is an approximation of the number of keys allowed to accumulate in any one bucket, determining when the hash table grows or shrinks. The default value is 8.</dd>
+<dt><i>nelem</i></dt>
+<dd> is an estimate of the final size of the hash table. If not set or set too low, hash tables will expand gracefully as keys are entered, although a slight performance degradation may be noticed. The default value is 1.</dd>
+<dt><i>cachesize</i></dt>
+<dd> is the suggested maximum size, in bytes, of the memory cache. This value is <i>only advisory</i>, and the access method will allocate more memory rather than fail.</dd>
+<dt><i>hash</i></dt>
+<dd> is a user-defined hash function. Since no hash function performs equally well on all possible data, the user may find that the built-in hash function does poorly on a particular data set. A user-specified hash functions must take two arguments (a pointer to a byte string and a length) and return a 32-bit quantity to be used as the hash value.</dd>
+<dt><i>lorder</i></dt>
+<dd> is the byte order for integers in the stored database metadata. The number should represent the order as an integer; for example, big endian order would be the number 4,321. If <i>lorder</i> is 0 (no order is specified), the current host order is used. If the file already exists, the specified value is ignored and the value specified when the tree was created is used.</dd></dl>
 <p> If the file already exists (and the <code>O_TRUNC</code> flag is not specified), the values specified for <i>bsize</i>, <i>ffactor</i>, <i>lorder</i>, and <i>nelem</i> are ignored and the values specified when the tree was created are used. </p>
 <p> If a hash function is specified, <i>hash_open</i> attempts to determine if the hash function specified is the same as the one with which the database was created, and fails if it is not. </p>
 <p> Backward-compatible interfaces to the routines described in <code>dbm</code>(3), and <code>ndbm</code>(3) are provided, however these interfaces are not compatible with previous file formats.</p>

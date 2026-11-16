@@ -13,15 +13,15 @@ description: "memcached_prepend – Appending to or Prepending to data on the se
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_return_t memcached_prepend(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</p>
+<dt><code>memcached_return_t memcached_prepend(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_append(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</p>
+</dd><dt><code>memcached_return_t memcached_append(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_prepend_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</p>
+</dd><dt><code>memcached_return_t memcached_prepend_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_append_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</p>
+</dd><dt><code>memcached_return_t memcached_append_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_prepend()</i> and memcached_append are used to modify information on a server. All methods take a key, and its length to store the object. Keys are currently limited to 250 characters when using either a version of memcached which is 1.4 or below, or when using the text protocol. You must supply both a value and a length. Optionally you may test an expiration time for the object and a 16 byte value (it is meant to be used as a bitmap). &quot;flags&quot; is a 4byte space that is stored alongside of the main value. Many sub libraries make use of this field, so in most cases users should avoid making use of it. </p>
 <p> <i>memcached_prepend()</i> places a segment of data before the last piece of data stored. Currently expiration and key are not used in the server. </p>
@@ -40,3 +40,4 @@ description: "memcached_prepend – Appending to or Prepending to data on the se
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

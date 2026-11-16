@@ -15,12 +15,12 @@ description: "nice – run a program with modified scheduling priority"
 <p> Run COMMAND with an adjusted niceness, which affects process scheduling. With no COMMAND, print the current niceness. Niceness values range from <code>-20</code> (most favorable to the process) to 19 (least favorable to the process). </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-n</code>, <code>&#8211;adjustment</code>=<i>,N/</i></p>
-<dd> add integer N to the niceness (default 10)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-n</code>, <code>&#8211;adjustment</code>=<i>,N/</i></dt>
+<dd> add integer N to the niceness (default 10)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> NOTE: your shell may have its own version of nice, which usually supersedes the version described here. Please refer to your shell&#8217;s documentation for details about the options it supports.</p>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie.</p>

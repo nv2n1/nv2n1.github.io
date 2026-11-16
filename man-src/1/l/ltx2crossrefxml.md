@@ -14,12 +14,12 @@ description: "ltx2crossrefxml.pl – create XML files for submitting to crossref
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>latex_file1</i>&nbsp;<i>latex_file2</i>&nbsp;&#8230;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>config_file</i></p>
-<dd> Configuration file. If this file is absent, defaults are used. See below for its format.</p>
-<dt><code>-o</code> <i>output_file</i></p>
-<dd> Output file. If this option is not used, the <font SIZE="-1">XML</font> is output to stdout.</p>
-<dt><code>-rpi-is-xml</code></p>
-<dd> Do not transform author and title input strings, assume they are valid <font SIZE="-1">XML.</font></dl>
+<dt><code>-c</code> <i>config_file</i></dt>
+<dd> Configuration file. If this file is absent, defaults are used. See below for its format.</dd>
+<dt><code>-o</code> <i>output_file</i></dt>
+<dd> Output file. If this option is not used, the <font SIZE="-1">XML</font> is output to stdout.</dd>
+<dt><code>-rpi-is-xml</code></dt>
+<dd> Do not transform author and title input strings, assume they are valid <font SIZE="-1">XML.</font></dd></dl>
 <p> The usual <tt>&quot;--help&quot;</tt> and <tt>&quot;--version&quot;</tt> options are also supported. Options can begin with either <tt>&quot;-&quot;</tt> or <tt>&quot;--&quot;</tt>, and ordered arbitrarily.</p>
 <h2>DESCRIPTION</h2>
 <p> For each given <i>latex_file</i>, this script reads <tt>&quot;.rpi&quot;</tt> and (if they exist) <tt>&quot;.bbl&quot;</tt> files and outputs corresponding <font SIZE="-1">XML</font> that can be uploaded to Crossref (&lt;<a rel="nofollow" href="https://crossref.org">https://crossref.org</a>&gt;). Any extension of <i>latex_file</i> is ignored, and <i>latex_file</i> itself is not read (and need not even exist). </p>
@@ -97,11 +97,11 @@ $registrant = 'Registrant';
 <p> Copyright (C) 2012-2021 Boris Veytsman </p>
 <p> This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License &lt;<a rel="nofollow" href="https://www.gnu.org/licenses/gpl.html">https://www.gnu.org/licenses/gpl.html</a>&gt;. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">CITATIONS</a></p>
+<dt><a href="#lbAI">CITATIONS</a></dt>
 <dd>
-<dt><a href="#lbAJ">EXAMPLES</a></p>
+</dd><dt><a href="#lbAJ">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAK">AUTHOR</a></p>
+</dd><dt><a href="#lbAK">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAL">COPYRIGHT AND LICENSE</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">COPYRIGHT AND LICENSE</a></dt>
+<dd></dd></dl>

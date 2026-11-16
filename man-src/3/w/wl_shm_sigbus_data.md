@@ -15,13 +15,7 @@ wl_shm_sigbus_data -
 <h3>Public Attributes</h3>
 
 <pre><code>struct wl_shm_pool * current_pool
-
-
-
 int access_count
-
-
-
 int fallback_mapping_used
 </code></pre>
 

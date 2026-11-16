@@ -11,7 +11,6 @@ description: "sc::VDWShape –"
 <p> The <code>VDWShape</code> class describes the surface of a molecule as the union of atom centered spheres, each the van der Waals radius of the atom.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;molshape.h&gt;</code></pre>
 <p> Inherits <code>sc::UnionShape</code>.</p>
 <h3>Public Member Functions</h3>

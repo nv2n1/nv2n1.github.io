@@ -18,14 +18,14 @@ description: "ldns_bget_token, ldns_bgetc, ldns_bskipcs"
 <p> void ldns_bskipcs(ldns_buffer *buffer, const char *s); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_bget_token</i>()</p>
-<dd>returns a token/char from the buffer b. This function deals with ( and ) in the buffer, and ignores when it finds them. .br <code>*b</code>: the buffer to read from .br <code>*token</code>: the token is put here .br <code>*delim</code>: chars at which the parsing should stop .br <code>*limit</code>: how much to read. If 0 the builtin maximum is used .br Returns s 0 on error of EOF of b. Otherwise return the length of what is read</dl>
+<dt> <i>ldns_bget_token</i>()</dt>
+<dd>returns a token/char from the buffer b. This function deals with ( and ) in the buffer, and ignores when it finds them. .br <code>*b</code>: the buffer to read from .br <code>*token</code>: the token is put here .br <code>*delim</code>: chars at which the parsing should stop .br <code>*limit</code>: how much to read. If 0 the builtin maximum is used .br Returns s 0 on error of EOF of b. Otherwise return the length of what is read</dd></dl>
 <dl>
-<dt> <i>ldns_bgetc</i>()</p>
-<dd>returns the next character from a buffer. Advances the position pointer with 1. When end of buffer is reached returns EOF. This is the buffer&#8217;s equivalent for getc(). .br <code>*buffer</code>: buffer to read from .br Returns EOF on failure otherwise return the character</dl>
+<dt> <i>ldns_bgetc</i>()</dt>
+<dd>returns the next character from a buffer. Advances the position pointer with 1. When end of buffer is reached returns EOF. This is the buffer&#8217;s equivalent for getc(). .br <code>*buffer</code>: buffer to read from .br Returns EOF on failure otherwise return the character</dd></dl>
 <dl>
-<dt> <i>ldns_bskipcs</i>()</p>
-<dd>skips all of the characters in the given string in the buffer, moving the position to the first character that is not in *s. .br <code>*buffer</code>: buffer to use .br <code>*s</code>: characters to skip .br Returns void</dl>
+<dt> <i>ldns_bskipcs</i>()</dt>
+<dd>skips all of the characters in the given string in the buffer, moving the position to the first character that is not in *s. .br <code>*buffer</code>: buffer to use .br <code>*s</code>: characters to skip .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

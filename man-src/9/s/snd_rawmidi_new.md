@@ -14,22 +14,22 @@ description: "snd_rawmidi_new – create a rawmidi instance"
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>the id string</dl>
+<dd>the id string</dd></dl>
 <p> <i>device</i></p>
 <dl>
-<dd>the device index</dl>
+<dd>the device index</dd></dl>
 <p> <i>output_count</i></p>
 <dl>
-<dd>the number of output streams</dl>
+<dd>the number of output streams</dd></dl>
 <p> <i>input_count</i></p>
 <dl>
-<dd>the number of input streams</dl>
+<dd>the number of input streams</dd></dl>
 <p> <i>rrawmidi</i></p>
 <dl>
-<dd>the pointer to store the new rawmidi instance</dl>
+<dd>the pointer to store the new rawmidi instance</dd></dl>
 <h2>Description</h2>
 <p>Creates a new rawmidi instance. Use <code>snd_rawmidi_set_ops</code> to set the operators to the new instance.</p>
 <h2>Return</h2>

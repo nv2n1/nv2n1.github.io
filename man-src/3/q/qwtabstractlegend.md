@@ -28,21 +28,21 @@ description: "QwtAbstractLegend –"
 <p> Legends, that need to be under control of the <code>QwtPlot</code> layout system need to be derived from <code>QwtAbstractLegend</code>. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Other type of legends can be implemented by connecting to the <code>QwtPlot::legendDataChanged()</code> signal. But as these legends are unknown to the plot layout system the layout code ( on screen and for <code>QwtPlotRenderer</code> ) need to be organized in application code.</dl>
+<dd>Other type of legends can be implemented by connecting to the <code>QwtPlot::legendDataChanged()</code> signal. But as these legends are unknown to the plot layout system the layout code ( on screen and for <code>QwtPlotRenderer</code> ) need to be organized in application code.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtLegend</code></dl>
+<dd><code>QwtLegend</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtAbstractLegend::QwtAbstractLegend (QWidget *parent = NULL) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual bool QwtAbstractLegend::isEmpty () const [pure virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when no plot item is inserted</dl>
+<dd>True, when no plot item is inserted</dd></dl>
 <p> Implemented in <code>QwtLegend</code>.</p>
 <h3>virtual void QwtAbstractLegend::renderLegend (QPainter *painter, const QRectF &amp;rect, boolfillBackground) const [pure virtual]</h3>
 <p>Render the legend into a given rectangle. </p>
@@ -50,25 +50,25 @@ description: "QwtAbstractLegend –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>rect</i> Bounding rectangle<br />
- <i>fillBackground</i> When true, fill rect with the widget background</dl>
+ <i>fillBackground</i> When true, fill rect with the widget background</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>renderLegend()</code> is used by <code>QwtPlotRenderer</code></dl>
+<dd><code>renderLegend()</code> is used by <code>QwtPlotRenderer</code></dd></dl>
 <p> Implemented in <code>QwtLegend</code>.</p>
 <h3>int QwtAbstractLegend::scrollExtent (Qt::Orientationorientation) const [virtual]</h3>
 <p>Return the extent, that is needed for elements to scroll the legend ( usually scrollbars ), </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>orientation</i> Orientation</dl>
+<dd><i>orientation</i> Orientation</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Extent of the corresponding scroll element</dl>
+<dd>Extent of the corresponding scroll element</dd></dl>
 <p> Reimplemented in <code>QwtLegend</code>.</p>
 <h3>virtual void QwtAbstractLegend::updateLegend (const QVariant &amp;itemInfo, const QList&lt; <code>QwtLegendData</code> &gt; &amp;data) [pure virtual], [slot]</h3>
 <p>Update the entries for a plot item. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>itemInfo</i> Info about an item<br />
- <i>data</i> List of legend entry attributes for the item</dl>
+ <i>data</i> List of legend entry attributes for the item</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

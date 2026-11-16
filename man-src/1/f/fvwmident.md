@@ -23,16 +23,16 @@ description: "FvwmIdent – the Fvwm identify-window module"
 <h2>Configuration Options</h2>
 <p>FvwmIdent reads the same .fvwm2rc file as fvwm reads when it starts up, and looks for lines as listed below: </p>
 <dl>
-<dt>*FvwmIdent: Colorset <i>n</i></p>
-<dd>Tells the module to use colorset <i>n</i>. See FvwmTheme. </p>
-<dt>*FvwmIdent: Fore <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of black for text. Switches off the Colorset option. </p>
-<dt>*FvwmIdent: Back <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of white for the window background. Switches off the Colorset option. </p>
-<dt>*FvwmIdent: Font <i>fontname</i></p>
-<dd>Tells the module to use <i>fontname</i> instead of fixed for text. </p>
-<dt>*FvwmIdent: MinimalLayer <i>layer</i></p>
-<dd>FvwmIdent places its window on the layer of a target window. But not below the minimal layer. By default, the minimal layer is 4 just like the fvwm default layer. If <i>layer</i> is 0, the layer of the target window is always used. If <i>layer</i> is &quot;default&quot; or not specified, the default behavior is restored. If <i>layer</i> is &quot;none&quot;, FvwmIdent is placed as a normal window even if the target window is above it. </p>
+<dt>*FvwmIdent: Colorset <i>n</i></dt>
+<dd>Tells the module to use colorset <i>n</i>. See FvwmTheme. </dd>
+<dt>*FvwmIdent: Fore <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of black for text. Switches off the Colorset option. </dd>
+<dt>*FvwmIdent: Back <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of white for the window background. Switches off the Colorset option. </dd>
+<dt>*FvwmIdent: Font <i>fontname</i></dt>
+<dd>Tells the module to use <i>fontname</i> instead of fixed for text. </dd>
+<dt>*FvwmIdent: MinimalLayer <i>layer</i></dt>
+<dd>FvwmIdent places its window on the layer of a target window. But not below the minimal layer. By default, the minimal layer is 4 just like the fvwm default layer. If <i>layer</i> is 0, the layer of the target window is always used. If <i>layer</i> is &quot;default&quot; or not specified, the default behavior is restored. If <i>layer</i> is &quot;none&quot;, FvwmIdent is placed as a normal window even if the target window is above it. </dd>
 </dl>
 <h2>Author</h2>
 <p>Robert Nation and Nobutaka Suzuki (nobuta-s [at] is.aist-nara.ac.jp).</p>

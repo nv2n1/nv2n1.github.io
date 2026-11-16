@@ -16,11 +16,11 @@ bool bson_iter_find(bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> A string containing the requested key.</dl>
+<dt><code>key</code></dt>
+<dd> A string containing the requested key.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_find/">bson_iter_find</a>(3)</code> function shall advance <code>iter</code> to the element named <code>key</code> or exhaust all elements of <code>iter</code> \&amp;. If <code>iter</code> is exhausted, false is returned and <code>iter</code> should be considered invalid. </p>
 <p> <code>key</code> is case-sensitive. For a case-folded version, see <code><a href="/docs/linux/man/3-bson_iter_find_case/">bson_iter_find_case</a>(3)</code> \&amp;. </p>

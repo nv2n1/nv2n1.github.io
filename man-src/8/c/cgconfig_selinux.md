@@ -90,14 +90,14 @@ description: "cgconfig_selinux – Security Enhanced Linux Policy for the cgconf
 <p> <code>cgconfig_etc_t</code> </p>
 <p> &#8211; Set files with the cgconfig_etc_t type, if you want to store cgconfig files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cgconfig.conf, /etc/sysconfig/cgconfig </p>
+<dt>Paths:</dt>
+<dd>/etc/cgconfig.conf, /etc/sysconfig/cgconfig </dd>
 </dl>
 <p> <code>cgconfig_exec_t</code> </p>
 <p> &#8211; Set files with the cgconfig_exec_t type, if you want to transition an executable to the cgconfig_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/cgconfigparser, /usr/sbin/cgconfigparser </p>
+<dt>Paths:</dt>
+<dd>/sbin/cgconfigparser, /usr/sbin/cgconfigparser </dd>
 </dl>
 <p> <code>cgconfig_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the cgconfig_initrc_exec_t type, if you want to transition an executable to the cgconfig_initrc_t domain. </p>

@@ -38,22 +38,22 @@ ssize_t getdents64(int fd, void *dirp, size_t count);
 <p> <i>d_ino</i> is an inode number. <i>d_off</i> is the distance from the start of the directory to the start of the next <i>linux_dirent</i>. <i>d_reclen</i> is the size of this entire <i>linux_dirent</i>. <i>d_name</i> is a null-terminated filename. </p>
 <p> <i>d_type</i> is a byte at the end of the structure that indicates the file type. It contains one of the following values (defined in <i>&lt;dirent.h&gt;</i>):</p>
 <dl>
-<dt><code>DT_BLK</code></p>
-<dd> This is a block device.</p>
-<dt><code>DT_CHR</code></p>
-<dd> This is a character device.</p>
-<dt><code>DT_DIR</code></p>
-<dd> This is a directory.</p>
-<dt><code>DT_FIFO</code></p>
-<dd> This is a named pipe (FIFO).</p>
-<dt><code>DT_LNK</code></p>
-<dd> This is a symbolic link.</p>
-<dt><code>DT_REG</code></p>
-<dd> This is a regular file.</p>
-<dt><code>DT_SOCK</code></p>
-<dd> This is a UNIX domain socket.</p>
-<dt><code>DT_UNKNOWN</code></p>
-<dd> The file type is unknown.</dl>
+<dt><code>DT_BLK</code></dt>
+<dd> This is a block device.</dd>
+<dt><code>DT_CHR</code></dt>
+<dd> This is a character device.</dd>
+<dt><code>DT_DIR</code></dt>
+<dd> This is a directory.</dd>
+<dt><code>DT_FIFO</code></dt>
+<dd> This is a named pipe (FIFO).</dd>
+<dt><code>DT_LNK</code></dt>
+<dd> This is a symbolic link.</dd>
+<dt><code>DT_REG</code></dt>
+<dd> This is a regular file.</dd>
+<dt><code>DT_SOCK</code></dt>
+<dd> This is a UNIX domain socket.</dd>
+<dt><code>DT_UNKNOWN</code></dt>
+<dd> The file type is unknown.</dd></dl>
 <p> The <i>d_type</i> field is implemented since Linux 2.6.4. It occupies a space that was previously a zero-filled padding byte in the <i>linux_dirent</i> structure. Thus, on kernels up to and including 2.6.3, attempting to access this field always provides the value 0 (<code>DT_UNKNOWN</code>). </p>
 <p> Currently, only some filesystems (among them: Btrfs, ext2, ext3, and ext4) have full support for returning the file type in <i>d_type</i>. All applications must properly handle a return of <code>DT_UNKNOWN</code>.</p>
 <h3>getdents64()</h3>
@@ -69,16 +69,16 @@ ssize_t getdents64(int fd, void *dirp, size_t count);
 <p> On success, the number of bytes read is returned. On end of directory, 0 is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> Invalid file descriptor <i>fd</i>.</p>
-<dt><code>EFAULT</code></p>
-<dd> Argument points outside the calling process&#8217;s address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> Result buffer is too small.</p>
-<dt><code>ENOENT</code></p>
-<dd> No such directory.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> File descriptor does not refer to a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> Invalid file descriptor <i>fd</i>.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Argument points outside the calling process&#8217;s address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Result buffer is too small.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> No such directory.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> File descriptor does not refer to a directory.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4.</p>
 <h2>NOTES</h2>

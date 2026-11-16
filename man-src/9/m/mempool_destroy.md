@@ -14,7 +14,7 @@ description: "mempool_destroy – deallocate a memory pool"
 <p><i>pool</i></p>
 <dl>
 <dd>
-<dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dl>
+</dd><dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dd></dl>
 <h2>Description</h2>
 <p>Free all reserved elements in <i>pool</i> and <i>pool</i> itself. This function only sleeps if the <code>free_fn</code> function sleeps.</p>
 <h2>Copyright</h2>

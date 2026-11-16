@@ -27,10 +27,8 @@ The number of characters written to the put area.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::strstream dyn; // dynamically-allocated output buffer
     dyn &lt;&lt; &quot;Test: &quot; &lt;&lt; 1.23 &lt;&lt; std::ends;

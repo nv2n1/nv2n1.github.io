@@ -15,8 +15,8 @@ description: "grab_color_image – grab an image using libdc1394"
 <p> Get one image using libdc1394 and store it as a portable pix map (ppm) image.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;guid</p>
-<dd> specifies camera to use. default is the first camera found in the system. <code>&#8211;help</code> print help message</dl>
+<dt>&#8211;guid</dt>
+<dd> specifies camera to use. default is the first camera found in the system. <code>&#8211;help</code> print help message</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Peter De Schrijver &lt;p2 [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others) and added to upstream by Peter Antoniac &lt;theseinfeld [at] users.sf.net&gt;. </p>
 <h2>Index</h2>

@@ -20,14 +20,14 @@ description: "ppmtospu – convert a PPM image to an Atari Spectrum 512 image"
 <p> The input must be 320 pixels wide by 200 pixels high. If you have an image of a different size, you can use <code>pamcut</code> or <code>pamscale</code> to force it to these dimensions. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d0</code></p>
-<dd> The program does no dithering. </p>
-<dt><code>-d2</code></p>
-<dd> The program uses a 2&#215;2 ordered dither. </p>
+<dt><code>-d0</code></dt>
+<dd> The program does no dithering. </dd>
+<dt><code>-d2</code></dt>
+<dd> The program uses a 2&#215;2 ordered dither. </dd>
 <p> This is the default. </p>
-<dt><code>-d4</code></p>
+<dt><code>-d4</code></dt>
 <dd> The program uses a 4&#215;4 ordered dither.<br />
-&nbsp;<wbr> </p>
+&nbsp;<wbr> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sputoppm/">sputoppm</a></code>(1) , <code><a href="/docs/linux/man/1-sputoppm/">sputoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code>ppm</code>(1) </p>

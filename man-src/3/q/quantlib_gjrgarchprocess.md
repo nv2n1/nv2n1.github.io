@@ -49,7 +49,7 @@ description: "QuantLib::GJRGARCHProcess – Stochastic-volatility GJR-GARCH(1,1)
 <p>returns the time value corresponding to the given date in the reference system of the stochastic process. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dl>
+<dd>As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dd></dl>
 <p> Reimplemented from <code>StochasticProcess</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

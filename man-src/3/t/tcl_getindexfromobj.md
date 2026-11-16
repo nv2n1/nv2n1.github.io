@@ -18,14 +18,14 @@ int
  msg, flags, indexPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting; if NULL, then no message is provided on errors.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) The string value of this object is used to search through <i>tablePtr</i>. The internal representation is modified to hold the index of the matching table entry.</p>
-<dd>const char <i>**tablePtr</i> (in) An array of null-terminated strings. The end of the array is marked by a NULL string pointer. Note that references to the <i>tablePtr</i> may be retained in the internal representation of <i>objPtr</i>, so this should represent the address of a statically-allocated array.</p>
-<dd>const void <i>*structTablePtr</i> (in) An array of arbitrary type, typically some <code>struct</code> type. The first member of the structure must be a null-terminated string. The size of the structure is given by <i>offset</i>. Note that references to the <i>structTablePtr</i> may be retained in the internal representation of <i>objPtr</i>, so this should represent the address of a statically-allocated array of structures.</p>
-<dd>int <i>offset</i> (in) The offset to add to structTablePtr to get to the next entry. The end of the array is marked by a NULL string pointer.</p>
-<dd>const char <i>*msg</i> (in) Null-terminated string describing what is being looked up, such as <code>option</code>. This string is included in error messages.</p>
-<dd>int <i>flags</i> (in) OR-ed combination of bits providing additional information for operation. The only bit that is currently defined is <code>TCL_EXACT</code>.</p>
-<dd>int <i>*indexPtr</i> (out) The index of the string in <i>tablePtr</i> that matches the value of <i>objPtr</i> is returned here. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting; if NULL, then no message is provided on errors.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) The string value of this object is used to search through <i>tablePtr</i>. The internal representation is modified to hold the index of the matching table entry.</dd>
+<dd>const char <i>**tablePtr</i> (in) An array of null-terminated strings. The end of the array is marked by a NULL string pointer. Note that references to the <i>tablePtr</i> may be retained in the internal representation of <i>objPtr</i>, so this should represent the address of a statically-allocated array.</dd>
+<dd>const void <i>*structTablePtr</i> (in) An array of arbitrary type, typically some <code>struct</code> type. The first member of the structure must be a null-terminated string. The size of the structure is given by <i>offset</i>. Note that references to the <i>structTablePtr</i> may be retained in the internal representation of <i>objPtr</i>, so this should represent the address of a statically-allocated array of structures.</dd>
+<dd>int <i>offset</i> (in) The offset to add to structTablePtr to get to the next entry. The end of the array is marked by a NULL string pointer.</dd>
+<dd>const char <i>*msg</i> (in) Null-terminated string describing what is being looked up, such as <code>option</code>. This string is included in error messages.</dd>
+<dd>int <i>flags</i> (in) OR-ed combination of bits providing additional information for operation. The only bit that is currently defined is <code>TCL_EXACT</code>.</dd>
+<dd>int <i>*indexPtr</i> (out) The index of the string in <i>tablePtr</i> that matches the value of <i>objPtr</i> is returned here. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures provide an efficient way for looking up keywords, switch names, option names, and similar things where the value of an object must be one of a predefined set of values. <code>Tcl_GetIndexFromObj</code> compares <i>objPtr</i> against each of the strings in <i>tablePtr</i> to find a match. A match occurs if <i>objPtr</i>&#8216;s string value is identical to one of the strings in <i>tablePtr</i>, or if it is a non-empty unique abbreviation for exactly one of the strings in <i>tablePtr</i> and the <code>TCL_EXACT</code> flag was not specified; in either case the index of the matching entry is stored at <i>*indexPtr</i> and <code>TCL_OK</code> is returned. </p>

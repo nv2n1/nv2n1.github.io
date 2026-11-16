@@ -20,3 +20,4 @@ int ustat(dev_t dev, struct ustat *ubuf);
 <p> <code>ustat</code>() returns information about a mounted filesystem. <i>dev</i> is a device number identifying a device containing a mounted filesystem. <i>ubuf</i> is a pointer to a <i>ustat</i> structure that contains the following members: </p>
 <p> daddr_t f_tfree; /* Total free blocks */ ino_t f_tinode; /* Number of free inodes */ char f_fname[6]; /* Filsys name */ char f_fpack[6]; /* Filsys pack name */ </p>
 <p> The last two fields, <i>f_fname</i> and <i>f_fpack</i>, are not implemented and will always be filled with null bytes (&#8216;
+</p>

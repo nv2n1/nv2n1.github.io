@@ -10,28 +10,27 @@ description: "ne_has_support – determine feature support status"
 <p>ne_has_support &#8211; determine feature support status</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ne_utils.h&gt;
-
 int ne_has_support(int feature);</code></pre>
 <h2>Description</h2>
-<dd>The <code>ne_has_support</code> function can be used to determine whether a particular optional feature, given by the feature code <i>feature</i>, is supported. The following feature codes are available: </p>
+<dd>The <code>ne_has_support</code> function can be used to determine whether a particular optional feature, given by the feature code <i>feature</i>, is supported. The following feature codes are available: </dd>
 <p> <code>NE_FEATURE_SSL</code></p>
 <dl>
-<dd>Indicates support for SSL/TLS</dl>
+<dd>Indicates support for SSL/TLS</dd></dl>
 <p> <code>NE_FEATURE_ZLIB</code></p>
 <dl>
-<dd>Indicates support for compressed responses</dl>
+<dd>Indicates support for compressed responses</dd></dl>
 <p> <code>NE_FEATURE_IPV6</code></p>
 <dl>
-<dd>Indicates support for IPv6</dl>
+<dd>Indicates support for IPv6</dd></dl>
 <p> <code>NE_FEATURE_LFS</code></p>
 <dl>
-<dd>Indicates support for large files</dl>
+<dd>Indicates support for large files</dd></dl>
 <p> <code>NE_FEATURE_SOCKS</code></p>
 <dl>
-<dd>Indicates support for SOCKSv5</dl>
+<dd>Indicates support for SOCKSv5</dd></dl>
 <p> <code>NE_FEATURE_TS_SSL</code></p>
 <dl>
-<dd>Indicates support for thread-safe SSL initialization &#8212; see ne_sock_init</dl>
+<dd>Indicates support for thread-safe SSL initialization &#8212; see ne_sock_init</dd></dl>
 <h2>Return Value</h2>
 <p><code>ne_has_support</code> returns non-zero if the given feature is supported, or zero otherwise.</p>
 <h2>See Also</h2>
@@ -39,5 +38,5 @@ int ne_has_support(int feature);</code></pre>
 <h2>Author</h2>
 <p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

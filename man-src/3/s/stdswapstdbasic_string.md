@@ -11,15 +11,10 @@ std::swap(std::basic_string) - std::swap(std::basic_string)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Alloc&gt;
-
 void swap(std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;lhs, (until C++ 17)
-
                                                             std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;rhs);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 void swap(std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;lhs, (since C++ 17)
-
                                                             std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::basic_string. Swaps the contents of lhs and rhs. Equivalent to lhs.swap(rhs). 
 

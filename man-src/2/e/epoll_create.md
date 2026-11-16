@@ -21,24 +21,24 @@ int epoll_create1(int flags);
 <h3>epoll_create1()</h3>
 <p> If <i>flags</i> is 0, then, other than the fact that the obsolete <i>size</i> argument is dropped, <code>epoll_create1</code>() is the same as <code>epoll_create</code>(). The following value can be included in <i>flags</i> to obtain different behavior:</p>
 <dl>
-<dt><code>EPOLL_CLOEXEC</code></p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dl>
+<dt><code>EPOLL_CLOEXEC</code></dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, these system calls return a file descriptor (a nonnegative integer). On error, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>size</i> is not positive.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>epoll_create1</code>()) Invalid value specified in <i>flags</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-user limit on the number of epoll instances imposed by <i>/proc/sys/fs/epoll/max_user_instances</i> was encountered. See <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) for further details.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOMEM</code></p>
-<dd> There was insufficient memory to create the kernel object.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>size</i> is not positive.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>epoll_create1</code>()) Invalid value specified in <i>flags</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-user limit on the number of epoll instances imposed by <i>/proc/sys/fs/epoll/max_user_instances</i> was encountered. See <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) for further details.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> There was insufficient memory to create the kernel object.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>epoll_create</code>() was added to the kernel in version 2.6. Library support is provided in glibc starting with version 2.3.2. </p>
 <p> <code>epoll_create1</code>() was added to the kernel in version 2.6.27. Library support is provided in glibc starting with version 2.9.</p>

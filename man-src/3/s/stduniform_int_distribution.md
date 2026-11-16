@@ -11,10 +11,8 @@ std::uniform_int_distribution - std::uniform_int_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;random&gt;
-
     template &lt;class IntType = int&gt;
     (since C++ 11)
-
         class uniform_int_distribution;</code></pre> 
 Produces random integer values i, uniformly distributed on the closed interval [a, b], that is, distributed according to the discrete probability function 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;P(i|a,b) = 
@@ -70,10 +68,8 @@ operator&gt;&gt;
 
 This program simulates throwing 6-sided dice. 
  // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::random_device rd;  // Will be used to obtain a seed for the random number engine
     std::mt19937 gen(rd()); // Standard mersenne_twister_engine seeded with rd()

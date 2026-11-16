@@ -15,8 +15,8 @@ description: "gnome-subtitles – video subtitling for the GNOME desktop"
 <p> <code>Gnome Subtitles</code> is a subtitle editor for the GNOME desktop. It supports the most common text-based subtitle formats and allows for subtitle editing, conversion and synchronization. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>filename</code></p>
-<dd> Specifies the subtitle file to open when <code>Gnome Subtitles</code> starts. If this is not specified, a blank subtitle file will be loaded with the &quot;Unsaved Subtitles&quot; label. </p>
+<dt><code>filename</code></dt>
+<dd> Specifies the subtitle file to open when <code>Gnome Subtitles</code> starts. If this is not specified, a blank subtitle file will be loaded with the &quot;Unsaved Subtitles&quot; label. </dd>
 </dl>
 <p> Gnome Subtitles also obeys all normal GNOME and GTK+ command line options. </p>
 <h2>BUGS</h2>

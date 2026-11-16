@@ -15,7 +15,7 @@ description: "sysctl.conf – sysctl preload/configuration file"
 <pre># comment
 ; comment
 token = value</pre>
-</dl>
+</dd></dl>
 <p> Note that blank lines are ignored, and whitespace before and after a token or value is ignored, although a value can contain whitespace within. Lines which begin with a <i>#</i> or <i>;</i> are considered comments and ignored. If a line begins with a single -, any attempts to set the value that fail will be ignored. </p>
 <h2>Notes</h2>
 <p>As the <code>/etc/sysctl.conf</code> file is used to override default kernel parameter values, only a small number of parameters is predefined in the file. Use <i>/sbin/sysctl -a</i> or follow <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8) to list all possible parameters. The description of individual parameters can be found in the kernel documentation.</p>

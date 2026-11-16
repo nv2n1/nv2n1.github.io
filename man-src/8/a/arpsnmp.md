@@ -24,6 +24,6 @@ ethercodes.dat - vendor ethernet block list</pre>
 <p>Craig Leres of the Lawrence Berkeley National Laboratory Network Research Group, University of California, Berkeley, CA. </p>
 <p> The current version is available via anonymous ftp: </p>
 <dl>
-<dd><i><a href="ftp://ftp.ee.lbl.gov/arpwatch.tar.gz">ftp://ftp.ee.lbl.gov/arpwatch.tar.gz</a></i></dl>
+<dd><i><a href="ftp://ftp.ee.lbl.gov/arpwatch.tar.gz">ftp://ftp.ee.lbl.gov/arpwatch.tar.gz</a></i></dd></dl>
 <h2>Bugs</h2>
 <p>Please send bug reports to arpwatch [at] ee.lbl.gov. Attempts are made to suppress DECnet flip flops but they aren&#8217;t always successful. </p>

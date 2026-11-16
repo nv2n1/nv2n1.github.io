@@ -15,11 +15,11 @@ blk_queue_io_opt - set optimal request size for the queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>opt</i>
-<dl><dd>optimal request size in bytes</dl>
+<dl><dd>optimal request size in bytes</dd></dl>
 
 <h2>Description</h2>
 

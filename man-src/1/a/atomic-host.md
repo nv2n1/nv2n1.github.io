@@ -26,12 +26,12 @@ description: "atomic-host – Manage Atomic Host Commands"
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 man rpm-ostree 
 man ostree 
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> January 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) </p>
 <h2>Index</h2>

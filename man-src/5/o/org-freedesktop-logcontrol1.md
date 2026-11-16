@@ -29,8 +29,6 @@ description: "org.freedesktop.LogControl1 – D-Bus interface to query and set l
     interface org.freedesktop.DBus.Introspectable { ... };
     interface org.freedesktop.DBus.Properties { ... };
 };
-
-
 </code></pre>
 <h3>Properties</h3>
 <p><i>LogLevel</i> describes the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)-style log-level, and should be one of &quot;emerg&quot;, &quot;alert&quot;, &quot;crit&quot;, &quot;err&quot;, &quot;warning&quot;, &quot;notice&quot;, &quot;info&quot;, &quot;debug&quot;, in order of increasing verbosity. <i>LogTarget</i> describes the log target (mechanism). It should be one of &quot;console&quot; (log to the console or standard output), &quot;kmsg&quot; (log to the kernel ring buffer), &quot;journal&quot; (log to the journal natively, see <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8)), &quot;syslog&quot; (log using the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) call). Those two properties are writable, so they may be set by sufficiently privileged users. <i>SyslogIdentifier</i> is a read-only property that shows the &quot;syslog identifier&quot;. It is a short string that identifies the program that is the source of log messages that is passed to the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) call.</p>

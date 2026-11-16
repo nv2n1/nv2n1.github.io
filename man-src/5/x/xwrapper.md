@@ -13,10 +13,10 @@ description: "Xorg.wrap – Xorg X server binary wrapper"
 <h2>Config File</h2>
 <p>Xorg.wrap&#8217;s default behavior can be overridden from the <i>/etc/X11/Xwrapper.config</i> config file. Lines starting with a <code>#</code> in Xwrapper.config are considered comments and will be ignored. Any other non empty lines must take the form of <code>key</code> = <i>value</i>.</p>
 <dl>
-<dt><code>allowed_users</code> = <i>rootonly</i>|<i>console</i>|<i>anybody</i></p>
-<dd>Specify which users may start the X server through the wrapper. Use <i>rootonly</i> to only allow root, use <i>console</i> to only allow users logged into a physical console, and use <i>anybody</i> to allow anybody. The default is <i>console</i>.</p>
-<dt><code>needs_root_rights</code> = <i>yes</i>|<i>no</i>|<i>auto</i></p>
-<dd>Configure if the wrapper should drop its elevated (root) rights before starting the X server. Use <i>yes</i> to force execution as root, <i>no</i> to force execution with all suid rights dropped, and <i>auto</i> to letter the wrapper auto-detect. The default is <i>auto</i>.</dl>
+<dt><code>allowed_users</code> = <i>rootonly</i>|<i>console</i>|<i>anybody</i></dt>
+<dd>Specify which users may start the X server through the wrapper. Use <i>rootonly</i> to only allow root, use <i>console</i> to only allow users logged into a physical console, and use <i>anybody</i> to allow anybody. The default is <i>console</i>.</dd>
+<dt><code>needs_root_rights</code> = <i>yes</i>|<i>no</i>|<i>auto</i></dt>
+<dd>Configure if the wrapper should drop its elevated (root) rights before starting the X server. Use <i>yes</i> to force execution as root, <i>no</i> to force execution with all suid rights dropped, and <i>auto</i> to letter the wrapper auto-detect. The default is <i>auto</i>.</dd></dl>
 <p> When auto-detecting the wrapper will drop rights if kms graphics are available and not drop them if no kms graphics are detected. If a system has multiple graphics cards and some are not kms capable auto-detection may fail, in this case manual configuration should be used.</p>
 <h2>See Also</h2>
 <p>Xorg X server information: <i><a href="/docs/linux/man/1-xorg/">Xorg</a></i>(1) </p>

@@ -100,11 +100,11 @@ description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_
 <p> In the descriptions of routines here, a calling sequence like</p>
 <dl>
 <dt>
-<dd> <code>function</code>(<i>arg1</i>, <i>arg2</i>)</dl>
+</dt><dd> <code>function</code>(<i>arg1</i>, <i>arg2</i>)</dd></dl>
 <p> should be interpreted for Bourne shell and Tcl scripts as</p>
 <dl>
 <dt>
-<dd> <code>function</code> <i>arg1</i> <i>arg2</i></dl>
+</dt><dd> <code>function</code> <i>arg1</i> <i>arg2</i></dd></dl>
 <h3>jsv_clear_params()</h3>
 <p> This function clears all received job parameters that were stored during the last job verification process.</p>
 <h3>jsv_clear_envs()</h3>
@@ -120,28 +120,28 @@ description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_
  <code>A</code>, <code>a</code>, <code>ar</code>, <code>b</code>, <code>ckpt</code>, <code>dl</code>, <code>e</code>, <code>h</code>, <code>hold_jid</code>, <code>hold_jid_ad</code>, <code>i</code>, <code>j</code>, <code>js</code>, <code>M</code>, <code>m</code>, <code>masterq</code>, <code>N</code>, <code>notify</code>, <code>o</code>, <code>P</code>, <code>p</code>, <code>R</code>, <code>r</code>, <code>S</code>, <code>shell</code>, <code>tc</code>, <code>w</code><br />
  Other parameters are related to the submission command arguments as follows:</p>
 <dl>
-<dt><code>ac</code></p>
-<dd> The the job context. The outcome of the evaluation of all <code>-ac</code>, <code>-dc</code>, and <code>-sc</code> options is passed as a parameter with the name <code>ac</code>, whose value is a comma-separated list of variable/value pairs;</p>
-<dt><code>binding_strategy</code>,&nbsp;<code>binding_type</code>,&nbsp;<code>binding_amount</code>,&nbsp;<code>binding_step</code>,&nbsp;<code>binding_socket</code>,&nbsp;<code>binding_core</code>,&nbsp;<code>binding_exp_n</code>,&nbsp;<code>binding_exp_socket</code><i>id</i>,&nbsp;<code>binding_exp_core</code><i>id</i></p>
-<dd> The values passed to the <code>-binding</code> parameter are passed as multiple parameters to JSV instances. <code>binding_strategy</code> represents the strategy to be used and is one of: <code>linear</code>, <code>striding</code> or <code>explicit</code>. <code>binding_type</code> is the instance that should do the binding, one of: <code>env</code>, <code>set</code> or <code>pe</code>. <code>binding_socket</code> and <code>binding_core</code> are socket/core values whereas <code>binding_step</code> is the step size (used only for striding binding). The length of the socket/core value list of the explicit binding is reported as <code>binding_exp_n</code>. The <i>id</i> part of <code>binding_exp_socket</code><i>id</i> and <code>binding_exp_core</code><i>id</i> will be replaced by the position of the socket/core pair within the explicit binding list (0 &lt;= <i>id</i> &lt; <code>binding_exp</code><i>_n</i>). The first socket/core pair of the explicit binding will be reported with the parameter names <code>binding_exp_socket0</code> and <code>binding_exp_core0</code>. Values that do not apply for the specified binding will not be reported to JSV. E.g. <code>binding_step</code> will only be reported for the striding binding and all <code>binding_exp_&#8230;</code> values will only be passed if explicit binding was specified.</p>
-<dt><code>c_interval</code></p>
-<dd> Checkpoint interval, specified as a numeric value with <code>-c</code>;</p>
-<dt><code>c_occasion</code></p>
-<dd> Checkpoint &quot;occasion_specifier&quot; <code>-c</code>. (<code>n</code>, <code>s</code>, <code>m</code>, or <code>x</code>) specified with <code>-c</code>;</p>
-<dt><code>cwd</code></p>
-<dd> Working directory, possibly specified with <code>-cwd</code> or <code>-wd</code>;</p>
-<dt><code>display</code></p>
-<dd> Reflects the <code>-display</code> submit argument and also sets job environment variable DISPLAY to the same value;</p>
-<dt><code>l_hard</code></p>
-<dd> <code>-l</code> or <code>-hard</code> followed by <code>-l</code>;</p>
-<dt><code>l_soft</code></p>
-<dd> <code>-soft</code> followed by <code>-l</code>;</p>
-<dt><code>pe_name</code>, <code>pe_min</code>, <code>pe_max</code></p>
-<dd> The PE name and range limits specified with <code>-pe</code>;</p>
-<dt><code>q_hard</code></p>
-<dd> <code>-q</code>, or <code>-hard</code> followed by <code>-q</code>;</p>
-<dt><code>q_soft</code></p>
-<dd> <code>-soft</code> followed by <code>-q</code>.</dl>
+<dt><code>ac</code></dt>
+<dd> The the job context. The outcome of the evaluation of all <code>-ac</code>, <code>-dc</code>, and <code>-sc</code> options is passed as a parameter with the name <code>ac</code>, whose value is a comma-separated list of variable/value pairs;</dd>
+<dt><code>binding_strategy</code>,&nbsp;<code>binding_type</code>,&nbsp;<code>binding_amount</code>,&nbsp;<code>binding_step</code>,&nbsp;<code>binding_socket</code>,&nbsp;<code>binding_core</code>,&nbsp;<code>binding_exp_n</code>,&nbsp;<code>binding_exp_socket</code><i>id</i>,&nbsp;<code>binding_exp_core</code><i>id</i></dt>
+<dd> The values passed to the <code>-binding</code> parameter are passed as multiple parameters to JSV instances. <code>binding_strategy</code> represents the strategy to be used and is one of: <code>linear</code>, <code>striding</code> or <code>explicit</code>. <code>binding_type</code> is the instance that should do the binding, one of: <code>env</code>, <code>set</code> or <code>pe</code>. <code>binding_socket</code> and <code>binding_core</code> are socket/core values whereas <code>binding_step</code> is the step size (used only for striding binding). The length of the socket/core value list of the explicit binding is reported as <code>binding_exp_n</code>. The <i>id</i> part of <code>binding_exp_socket</code><i>id</i> and <code>binding_exp_core</code><i>id</i> will be replaced by the position of the socket/core pair within the explicit binding list (0 &lt;= <i>id</i> &lt; <code>binding_exp</code><i>_n</i>). The first socket/core pair of the explicit binding will be reported with the parameter names <code>binding_exp_socket0</code> and <code>binding_exp_core0</code>. Values that do not apply for the specified binding will not be reported to JSV. E.g. <code>binding_step</code> will only be reported for the striding binding and all <code>binding_exp_&#8230;</code> values will only be passed if explicit binding was specified.</dd>
+<dt><code>c_interval</code></dt>
+<dd> Checkpoint interval, specified as a numeric value with <code>-c</code>;</dd>
+<dt><code>c_occasion</code></dt>
+<dd> Checkpoint &quot;occasion_specifier&quot; <code>-c</code>. (<code>n</code>, <code>s</code>, <code>m</code>, or <code>x</code>) specified with <code>-c</code>;</dd>
+<dt><code>cwd</code></dt>
+<dd> Working directory, possibly specified with <code>-cwd</code> or <code>-wd</code>;</dd>
+<dt><code>display</code></dt>
+<dd> Reflects the <code>-display</code> submit argument and also sets job environment variable DISPLAY to the same value;</dd>
+<dt><code>l_hard</code></dt>
+<dd> <code>-l</code> or <code>-hard</code> followed by <code>-l</code>;</dd>
+<dt><code>l_soft</code></dt>
+<dd> <code>-soft</code> followed by <code>-l</code>;</dd>
+<dt><code>pe_name</code>, <code>pe_min</code>, <code>pe_max</code></dt>
+<dd> The PE name and range limits specified with <code>-pe</code>;</dd>
+<dt><code>q_hard</code></dt>
+<dd> <code>-q</code>, or <code>-hard</code> followed by <code>-q</code>;</dd>
+<dt><code>q_soft</code></dt>
+<dd> <code>-soft</code> followed by <code>-q</code>.</dd></dl>
 <p> See for explanation of the following pseudo parameters: <code>CLIENT</code>, <code>CMDNAME</code>, <code>CMDARGS</code>, <code>CMDARG</code><i>i</i>, <code>CONTEXT</code>, <code>GROUP</code>, <code>JOB_ID</code>, <code>USER</code>, <code>VERSION</code>.</p>
 <h3>jsv_get_param(<i>param_name</i>)</h3>
 <p> This function returns the value of a specific job parameter <i>param_name</i>. </p>
@@ -343,7 +343,7 @@ description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_
 <p> Find in the table below the returned values for the &quot;*is*&quot; and &quot;*get*&quot; functions when following job is submitted:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 qsub -l mem=1G,mem2=200M -l a=lx-amd64 ...
 </pre>
@@ -412,7 +412,7 @@ qsub -l mem=1G,mem2=200M -l a=lx-amd64 ...
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <pre>
 Include files:
@@ -434,13 +434,13 @@ Example files:
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
 <h2>Index</h2>
-<dt><a href="#lbBH">EXAMPLES</a></p>
+<dt><a href="#lbBH">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbBI">FILES</a></p>
+</dd><dt><a href="#lbBI">FILES</a></dt>
 <dd>
-<dt><a href="#lbBJ">BUGS</a></p>
+</dd><dt><a href="#lbBJ">BUGS</a></dt>
 <dd>
-<dt><a href="#lbBK">SEE ALSO</a></p>
+</dd><dt><a href="#lbBK">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBL">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBL">COPYRIGHT</a></dt>
+<dd></dd></dl>

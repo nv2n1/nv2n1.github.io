@@ -25,21 +25,21 @@ description: "kupfer – Convenient command and access tool for applications and
 <p> You may also pipe text to <code>kupfer</code> to pass it to a currently running instance of the program.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;no-splash</code></p>
-<dd> Launch without presenting main interface</p>
-<dt><code>&#8211;list-plugins</code></p>
-<dd> Display a list of all installed plugins</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable more verbose output that can help understanding the program&#8217;s operation.</p>
-<dt><code>&#8211;relay</code></p>
-<dd> Is deprecated and will be started by the Multihead Support plugin when needed</p>
-<dt><code>&#8211;exec-helper=</code><i>HELPER</i></p>
-<dd> Run plugin helper program, which should be the name of a module inside kupfer. </p>
+<dt><code>&#8211;no-splash</code></dt>
+<dd> Launch without presenting main interface</dd>
+<dt><code>&#8211;list-plugins</code></dt>
+<dd> Display a list of all installed plugins</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enable more verbose output that can help understanding the program&#8217;s operation.</dd>
+<dt><code>&#8211;relay</code></dt>
+<dd> Is deprecated and will be started by the Multihead Support plugin when needed</dd>
+<dt><code>&#8211;exec-helper=</code><i>HELPER</i></dt>
+<dd> Run plugin helper program, which should be the name of a module inside kupfer. </dd>
 <p> The following are generic options</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display usage information</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version information</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display usage information</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version information</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> Custom plugins are added to kupfer by installing them to the directory <i>~/.local/share/kupfer/plugins</i>, or any kupfer/plugins directory in any of <code>$XDG_DATA_DIRS</code>.</p>
 <h2>ENVIRONMENT VARIABLES</h2>

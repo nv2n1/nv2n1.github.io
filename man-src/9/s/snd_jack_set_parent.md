@@ -15,11 +15,11 @@ snd_jack_set_parent - Set the parent device for a jack
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>The jack to configure</dl>
+<dl><dd></dd><dd>The jack to configure</dd></dl>
  
 
  <i>parent</i>
-<dl><dd>The device to set as parent for the jack.</dl>
+<dl><dd>The device to set as parent for the jack.</dd></dl>
 
 <h2>Description</h2>
 

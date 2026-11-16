@@ -75,26 +75,26 @@ short *XRRRates (Display *<i>dpy</i>, int <i>screen</i>,
 Time XRRTimes (Display *<i>dpy</i>, int <i>screen</i>, Time *<i>config_timestamp</i>);</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>screen</i></p>
-<dd>Specifies which screen.</p>
-<dt><i>draw</i></p>
-<dd>Specifies the screen.</p>
-<dt><i>rotation</i></p>
-<dd>Specifies the possible rotations or reflections of the screen.</p>
-<dt><i>current_rotation</i></p>
-<dd>Specifies the current rotations and reflection of the screen.</p>
-<dt><i>timestamp</i></p>
-<dd>Specifies the server timestamp.</p>
-<dt><i>config_timestamp</i></p>
-<dd>Specifies the timestamp when the screen was last (re)configured.</p>
-<dt><i>config</i></p>
-<dd>Specifies the screen configuration being used.</p>
-<dt><i>sizes</i></p>
-<dd>Specifies the array of supported sizes.</p>
-<dt><i>rate</i></p>
-<dd>Specifies the refresh rate in Hz. </p>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>screen</i></dt>
+<dd>Specifies which screen.</dd>
+<dt><i>draw</i></dt>
+<dd>Specifies the screen.</dd>
+<dt><i>rotation</i></dt>
+<dd>Specifies the possible rotations or reflections of the screen.</dd>
+<dt><i>current_rotation</i></dt>
+<dd>Specifies the current rotations and reflection of the screen.</dd>
+<dt><i>timestamp</i></dt>
+<dd>Specifies the server timestamp.</dd>
+<dt><i>config_timestamp</i></dt>
+<dd>Specifies the timestamp when the screen was last (re)configured.</dd>
+<dt><i>config</i></dt>
+<dd>Specifies the screen configuration being used.</dd>
+<dt><i>sizes</i></dt>
+<dd>Specifies the array of supported sizes.</dd>
+<dt><i>rate</i></dt>
+<dd>Specifies the refresh rate in Hz. </dd>
 </dl>
 <h2>Datatypes</h2>
 <p><code>Rotations/Reflections</code> </p>

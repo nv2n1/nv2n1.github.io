@@ -11,11 +11,8 @@ std::experimental::make_ostream_joiner - std::experimental::make_ostream_joiner
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/iterator&gt;
-
 template &lt;class charT, class traits, class DelimT&gt;
-
 std::experimental::ostream_joiner&lt;std::decay_t&lt;DelimT&gt;, charT, traits&gt;           (library fundamentals TS v2)
-
 make_ostream_joiner(std::basic_ostream&lt;charT, traits&gt;&amp; os, DelimT&amp;&amp; delimiter);</code></pre> 
 Creates an ostream_joiner object, deducing the template arguments from the types of the function arguments. 
 
@@ -31,9 +28,7 @@ A ostream_joiner object, created as if by std::experimental::ostream_joiner&lt;s
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;experimental/iterator&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 int main()
 {

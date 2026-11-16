@@ -19,12 +19,12 @@ url: "/docs/linux/man/3-mlx5dv_alloc_var/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_var *
 mlx5dv_alloc_var(struct ibv_context *context, uint32_t flags);
 void mlx5dv_free_var(struct mlx5dv_var *dv_var);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -38,15 +38,15 @@ void mlx5dv_free_var(struct mlx5dv_var *dv_var);
 
 <dl>
 <dt>context
-<dd> RDMA device context to work on.
-<dt>flags
-<dd> Allocation flags for the UAR.</dl>
+</dt><dd> RDMA device context to work on.
+</dd><dt>flags
+</dt><dd> Allocation flags for the UAR.</dd></dl>
 
 <h3>dv_var</h3>
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 struct mlx5dv_var {
     uint32_t page_id;
     uint32_t length;
@@ -54,12 +54,12 @@ struct mlx5dv_var {
     uint64_t comp_mask;
 };
 </code></pre>
-<dt>page_id
-<dd> The device page id to be used.
-<dt>length
-<dd> The mmap length parameter to be used for mapping a VA to the allocated VAR entry.
-<dt>mmap_off
-<dd> The mmap offset parameter to be used for mapping a VA to the allocated VAR entry.</dl>
+</dd><dt>page_id
+</dt><dd> The device page id to be used.
+</dd><dt>length
+</dt><dd> The mmap length parameter to be used for mapping a VA to the allocated VAR entry.
+</dd><dt>mmap_off
+</dt><dd> The mmap offset parameter to be used for mapping a VA to the allocated VAR entry.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

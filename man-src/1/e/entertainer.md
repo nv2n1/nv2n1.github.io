@@ -17,8 +17,8 @@ description: "entertainer – Media Center for the GNOME/Xfce Desktop"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (&quot;-&quot;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>entertainer</code> was originally written by Lauri Taimila &lt;lauri [at] taimila.com&gt; and is now maintained by the Entertainer Developers &lt;entertainer-dev [at] lists.ironlionsoftware.com&gt;. </p>
 <p> This manual page was written by Marco Rodrigues &lt;gothicx [at] sapo.pt&gt; and Matt Layman &lt;laymansterms.dev [at] gmail.com&gt;. </p>

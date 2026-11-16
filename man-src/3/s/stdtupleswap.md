@@ -45,12 +45,9 @@ std::is_nothrow_swappable_v&lt;T2&gt; &amp;&amp;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;tuple&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::tuple&lt;int, std::string, float&gt; p1, p2;
     p1 = std::make_tuple(10, &quot;test&quot;, 3.14);

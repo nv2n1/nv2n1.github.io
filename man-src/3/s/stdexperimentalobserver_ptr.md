@@ -11,9 +11,7 @@ std::experimental::observer_ptr - std::experimental::observer_ptr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/memory&gt;
-
 template&lt; class W &gt;                      (library fundamentals TS v2)
-
 class observer_ptr;</code></pre> 
 std::experimental::observer_ptr is a non-owning pointer, or observer. The observer stores a pointer to a second object, known as the watched object. An observer_ptr may also have no watched object. 
 An observer is not responsible in any way for the watched object; there is no inherent relationship between an observer and the object it watches. 

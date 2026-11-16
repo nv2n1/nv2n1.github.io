@@ -31,6 +31,6 @@ description: "QuantLib::TrinomialTree – Recombining trinomial tree class."
 <p> This class defines a recombining trinomial tree approximating a 1-D stochastic process. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The diffusion term of the SDE must be independent of the underlying process.</dl>
+<dd>The diffusion term of the SDE must be independent of the underlying process.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

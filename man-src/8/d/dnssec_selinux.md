@@ -18,8 +18,8 @@ description: "dnssec_selinux – Security Enhanced Linux Policy for the dnssec p
 <p> dnssec_t </code> </p>
 <p> &#8211; Set files with the dnssec_t type, if you want to treat the files as dnssec data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/unbound/.*.key, /var/named/chroot/etc/rndc.key, /etc/dnssec-trigger/dnssec_trigger_server.key, /etc/rndc.key </p>
+<dt>Paths:</dt>
+<dd>/etc/unbound/.*.key, /var/named/chroot/etc/rndc.key, /etc/dnssec-trigger/dnssec_trigger_server.key, /etc/rndc.key </dd>
 </dl>
 <p> <code>dnssec_trigger_exec_t </code> </p>
 <p> &#8211; Set files with the dnssec_trigger_exec_t type, if you want to transition an executable to the dnssec_trigger_t domain. </p>
@@ -33,9 +33,9 @@ description: "dnssec_selinux – Security Enhanced Linux Policy for the dnssec p
 <p> Policy governs the access confined processes have to these ports. SELinux dnssec policy is very flexible allowing users to setup their dnssec processes in as secure a method as possible. </p>
 <p> The following port types are defined for dnssec: </p>
 <dl>
-<dt><code>dnssec_port_t </code></p>
+<dt><code>dnssec_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8955</dl>
+</dd><dd>Default Defined Ports: tcp 8955</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux dnssec policy is very flexible allowing users to setup their dnssec processes in as secure a method as possible. </p>

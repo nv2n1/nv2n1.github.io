@@ -16,10 +16,10 @@ description: "XmListItemPos — A List function that returns the position of an 
 <h2>Description</h2>
 <p><code>XmListItemPos</code> returns the position of the first instance of the specified item in a list.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget</p>
-<dt><i>item</i></p>
-<dd>Specifies the item whose position is returned</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget</dd>
+<dt><i>item</i></dt>
+<dd>Specifies the item whose position is returned</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the position in the list of the first instance of the specified item. The position of the first item in the list is 1; the position of the second item is 2; and so on. This function returns 0 (zero) if the item is not found.</p>

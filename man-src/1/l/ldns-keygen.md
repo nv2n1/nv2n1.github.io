@@ -17,16 +17,16 @@ description: "ldns-keygen – generate a DNSSEC key pair"
 <p> <code>ldns-keygen</code> prints the basename for the key files: K&lt;name&gt;+&lt;alg&gt;+&lt;id&gt; </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a </code><i>&lt;algorithm&gt;</i></p>
-<dd> Create a key with this algorithm. Specifying &#8216;list&#8217; here gives a list of supported algorithms. Several alias names are also accepted (from older versions and other software), the list gives names from the RFC. Also the plain algo number is accepted. </p>
-<dt><code>-b </code><i>&lt;bits&gt;</i></p>
-<dd> Use this many bits for the key length. </p>
-<dt><code>-k</code></p>
-<dd> When given, generate a key signing key. This just sets the flag field to 257 instead of 256 in the DNSKEY RR in the .key file. </p>
-<dt><code>-r </code><i>device</i></p>
-<dd> Make ldns-keygen use this file to seed the random generator with. This will default to /dev/random. </p>
-<dt><code>-v</code></p>
-<dd> Show the version and exit </p>
+<dt><code>-a </code><i>&lt;algorithm&gt;</i></dt>
+<dd> Create a key with this algorithm. Specifying &#8216;list&#8217; here gives a list of supported algorithms. Several alias names are also accepted (from older versions and other software), the list gives names from the RFC. Also the plain algo number is accepted. </dd>
+<dt><code>-b </code><i>&lt;bits&gt;</i></dt>
+<dd> Use this many bits for the key length. </dd>
+<dt><code>-k</code></dt>
+<dd> When given, generate a key signing key. This just sets the flag field to 257 instead of 256 in the DNSKEY RR in the .key file. </dd>
+<dt><code>-r </code><i>device</i></dt>
+<dd> Make ldns-keygen use this file to seed the random generator with. This will default to /dev/random. </dd>
+<dt><code>-v</code></dt>
+<dd> Show the version and exit </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by the ldns team as an example for ldns usage. </p>

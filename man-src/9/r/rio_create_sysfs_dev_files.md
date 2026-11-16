@@ -14,11 +14,11 @@ description: "rio_create_sysfs_dev_files – create RIO specific sysfs files"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>device whose entries should be created</dl>
+</dd><dd>device whose entries should be created</dd></dl>
 <h2>Description</h2>
 <p>Create files when <i>rdev</i> is added to sysfs.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

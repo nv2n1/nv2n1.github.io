@@ -17,12 +17,12 @@ description: "PREPARE – prepare a statement for execution"
 <p> Prepared statements have the largest performance advantage when a single session is being used to execute a large number of similar statements. The performance difference will be particularly significant if the statements are complex to plan or rewrite, for example, if the query involves a join of many tables or requires the application of several rules. If the statement is relatively simple to plan and rewrite but relatively expensive to execute, the performance advantage of prepared statements will be less noticeable.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>An arbitrary name given to this particular prepared statement. It must be unique within a single session and is subsequently used to execute or deallocate a previously prepared statement.</p>
-<dt><i>datatype</i></p>
-<dd>The data type of a parameter to the prepared statement. If the data type of a particular parameter is unspecified or is specified as unknown, it will be inferred from the context in which the parameter is used. To refer to the parameters in the prepared statement itself, use $1, $2, etc.</p>
-<dt><i>statement</i></p>
-<dd>Any <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, or <code>VALUES</code> statement.</dl>
+<dt><i>name</i></dt>
+<dd>An arbitrary name given to this particular prepared statement. It must be unique within a single session and is subsequently used to execute or deallocate a previously prepared statement.</dd>
+<dt><i>datatype</i></dt>
+<dd>The data type of a parameter to the prepared statement. If the data type of a particular parameter is unspecified or is specified as unknown, it will be inferred from the context in which the parameter is used. To refer to the parameters in the prepared statement itself, use $1, $2, etc.</dd>
+<dt><i>statement</i></dt>
+<dd>Any <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, or <code>VALUES</code> statement.</dd></dl>
 <h2>Notes</h2>
 <p>In some situations, the query plan produced for a prepared statement will be inferior to the query plan that would have been chosen if the statement had been submitted and executed normally. This is because when the statement is planned and the planner attempts to determine the optimal query plan, the actual values of any parameters specified in the statement are unavailable. PostgreSQL collects statistics on the distribution of data in the table, and can use constant values in a statement to make guesses about the likely result of executing the statement. Since this data is unavailable when planning prepared statements with parameters, the chosen plan might be suboptimal. To examine the query plan PostgreSQL has chosen for a prepared statement, use EXPLAIN [<code><a href="/docs/linux/man/7-explain/">explain</a></code>(7)]. </p>
 <p> For more information on query planning and the statistics collected by PostgreSQL for that purpose, see the ANALYZE [<code><a href="/docs/linux/man/7-analyze/">analyze</a></code>(7)] documentation. </p>

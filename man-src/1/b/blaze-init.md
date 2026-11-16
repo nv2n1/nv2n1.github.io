@@ -16,18 +16,18 @@ description: "blaze-init – create or recover a BlazeBlogger repository"
 <p> <code>blaze-init</code>&#8216;s job is either to create a fresh new BlazeBlogger repository, or to recover an existing one, optionally changing the configuration and template files back to their original state while leaving the user data (i.e. both pages and blog posts) untouched.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the BlazeBlogger repository is to be placed. The default option is the current working directory.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Force rewrite of already existing configuration, style, theme and language files.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Avoid displaying messages that are not necessary.</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Display all messages including the list of created files.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the BlazeBlogger repository is to be placed. The default option is the current working directory.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Force rewrite of already existing configuration, style, theme and language files.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Avoid displaying messages that are not necessary.</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Display all messages including the list of created files.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1).</p>
 <h2>BUGS</h2>

@@ -21,26 +21,26 @@ description: "gdbm_load – re-create a GDBM database from a dump file."
 <p> If the input file is in ASCII dump format, the mode and ownership of the created database are restored from the information in the dump. This can be overridden using the command line options (see below).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;block-size</code>=<i>NUM</i></p>
-<dd> Sets block size.</p>
-<dt><code>-c</code>, <code>&#8211;cache-size</code>=<i>NUM</i></p>
-<dd> Sets cache size.</p>
-<dt><code>-M</code>, <code>&#8211;mmap</code></p>
-<dd> Use memory mapping.</p>
-<dt><code>-m</code>, <code>&#8211;mode</code>=<i>MODE</i></p>
-<dd> Set database file mode (octal number).</p>
-<dt><code>-n</code>, <code>&#8211;no-meta</code></p>
-<dd> Do not attempt to restore database meta-data (mode and ownership).</p>
-<dt><code>-r</code>, <code>&#8211;replace</code></p>
-<dd> If the database exists, replace records in it.</p>
-<dt><code>-u</code>, <code>&#8211;user</code>=<i>NAME</i>|<i>UID</i>[:<i>NAME</i>|<i>GID</i>]</p>
-<dd> Set file ownership.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print a short usage summary.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Print a list of available options.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print program version</dl>
+<dt><code>-b</code>, <code>&#8211;block-size</code>=<i>NUM</i></dt>
+<dd> Sets block size.</dd>
+<dt><code>-c</code>, <code>&#8211;cache-size</code>=<i>NUM</i></dt>
+<dd> Sets cache size.</dd>
+<dt><code>-M</code>, <code>&#8211;mmap</code></dt>
+<dd> Use memory mapping.</dd>
+<dt><code>-m</code>, <code>&#8211;mode</code>=<i>MODE</i></dt>
+<dd> Set database file mode (octal number).</dd>
+<dt><code>-n</code>, <code>&#8211;no-meta</code></dt>
+<dd> Do not attempt to restore database meta-data (mode and ownership).</dd>
+<dt><code>-r</code>, <code>&#8211;replace</code></dt>
+<dd> If the database exists, replace records in it.</dd>
+<dt><code>-u</code>, <code>&#8211;user</code>=<i>NAME</i>|<i>UID</i>[:<i>NAME</i>|<i>GID</i>]</dt>
+<dd> Set file ownership.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print a short usage summary.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Print a list of available options.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print program version</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gdbm_dump/">gdbm_dump</a></code>(1), <code><a href="/docs/linux/man/1-gdbmtool/">gdbmtool</a></code>(1), <code><a href="/docs/linux/man/3-gdbm/">gdbm</a></code>(3). </p>
 <p> For a detailed description of <code>gdbm_load</code> and other <code>gdbm</code> utilities, refer to the <code>GDBM Manual</code> available in Texinfo format. To access it, run: </p>

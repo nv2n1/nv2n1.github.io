@@ -19,15 +19,15 @@ description: "sshpk-conv – convert between key formats"
 <p> Assume the following SSH-format public key in <code>id_ecdsa.pub</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTI...9M/4c4= user [at] host
 </pre>
-</dl>
+</dd></dl>
 <p> Identify it with <code>-i</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ sshpk-conv -i id_ecdsa.pub
 id_ecdsa: a 256 bit ECDSA public key
@@ -37,33 +37,33 @@ Fingerprint:
   SHA256:vCNX7eUkdvqqW0m4PoxQAZRv+CM4P4fS8+CbliAvS4k
   81:ad:d5:57:e5:6f:7d:a2:93:79:56:af:d7:c0:38:51
 </pre>
-</dl>
+</dd></dl>
 <p> Convert it to <code>pkcs8</code> format, for use with e.g. OpenSSL: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ sshpk - conv - t pkcs8 id_ecdsa-- -- -BEGIN PUBLIC KEY-- -- -MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAsA4R6N6AS3gzaPBeLjG2ObSgUsR zOt + kWJoijLnw3ZMYUKmAx + lD0I5XUxdrPcs1vH5f3cn9TvRvO9L0z / hzg ==
     -- -- -END PUBLIC KEY-- -- -
 </code></pre>
-</dl>
+</dd></dl>
 <p> Retrieve the public half of a private key: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ openssl genrsa 2048 | sshpk-conv -t ssh -c foo@bar
 ssh-rsa AAAAB3NzaC1yc2EAAA...koK7 foo@bar
 </pre>
-</dl>
+</dd></dl>
 <p> Convert a private key to PKCS#1 (OpenSSL) format from a new-style OpenSSH key format (the <code>ssh-keygen -o</code> format): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ ssh - keygen - o - f foobar... $ sshpk - conv - p - t pkcs1 foobar-- -- -BEGIN RSA PRIVATE KEY-- -- -MIIDpAIBAAKCAQEA6T / GYJndb1TRH3 + NL....-- -- -END RSA PRIVATE KEY-- -- -
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-i, &#8211;identify</code><br />
 &nbsp;<wbr>&nbsp;Instead of converting the key, output identifying information about it to&nbsp;<br />

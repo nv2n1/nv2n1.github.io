@@ -24,7 +24,7 @@ description: "pmAddProfile – add instance(s) to the current PMAPI instance pro
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmdelprofile/">pmDelProfile</a></code>(3), <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3), <code><a href="/docs/linux/man/3-pmgetindom/">pmGetInDom</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupindom/">pmLookupInDom</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/3-pmusecontext/">pmUseContext</a></code>(3) and <code><a href="/docs/linux/man/3-pmwhichcontext/">pmWhichContext</a></code>(3).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_PROFILESPEC</code></p>
-<dd><i>indom</i> was <code>PM_INDOM_NULL</code> and <i>instlist</i> was not empty</dl>
+<dt><code>PM_ERR_PROFILESPEC</code></dt>
+<dd><i>indom</i> was <code>PM_INDOM_NULL</code> and <i>instlist</i> was not empty</dd></dl>
 <h2>Caveat</h2>
 <p>It is possible to add non-existent instance domains and non-existent instances to an instance profile. None of the routines that use the instance profile will ever issue an error if you do this. The cost of checking, when checking is possible, outweighs any benefits.</p>

@@ -10,15 +10,10 @@ description: "std::ranges::view::reverse,std::ranges::reverse_view – std::rang
 <p>std::ranges::view::reverse,std::ranges::reverse_view &#8211; std::ranges::view::reverse,std::ranges::reverse_view</p>
 <h2>Synopsis</h2>
 <pre><code>template&lt; View V &gt;
-
 requires BidirectionalRange&lt;V&gt;                                      (1) (since C++20)
-
 class reverse_view : public ranges::view_interface&lt;reverse_view&lt;V&gt;&gt;
-
 namespace view {
-
     inline constexpr /*unspecified*/ reverse = /*unspecified*/;         (2) (since C++20)
-
 }</code></pre>
 <p>1) A range adaptor that represents a view of underlying View with reversed order.<br />
 2) The expression view::reverse(E) is expression-equivalent to (has the same effect as) one of the following expressions, except that E is evaluated only once:<br />
@@ -73,12 +68,9 @@ reverse_view(R&amp;&amp;) -&gt; reverse_view&lt;all_view&lt;R&gt;&gt;;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;array&gt;
-
 #include &lt;ranges&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::array&lt;int, 6&gt; il{3, 1, 4, 1, 5, 9};
     std::ranges::reverse_view rv{il};

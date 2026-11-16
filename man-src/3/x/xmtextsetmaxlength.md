@@ -16,10 +16,10 @@ description: "XmTextSetMaxLength — A Text function that sets the value of the 
 <h2>Description</h2>
 <p><code>XmTextSetMaxLength</code> sets the value of the current maximum allowable length of the text string in the Text widget. The maximum allowable length prevents the user from entering a text string from the keyboard that is larger than this limit. Strings that are entered using the <code>XmNvalue</code> (or <code>XmNvalueWcs</code>) resource, or the <code>XmTextSetString</code> (or <code>XmTextSetStringWcs</code>) function ignore this resource.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</p>
-<dt><i>max_length</i></p>
-<dd>Specifies the maximum allowable length of the text string</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd>
+<dt><i>max_length</i></dt>
+<dd>Specifies the maximum allowable length of the text string</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3), <code><a href="/docs/linux/man/3-xmtextsetstring/">XmTextSetString</a></code>(3), and <code><a href="/docs/linux/man/3-xmtextsetstringwcs/">XmTextSetStringWcs</a></code>(3).</p>

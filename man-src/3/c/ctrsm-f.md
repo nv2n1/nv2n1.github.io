@@ -23,10 +23,10 @@ description: "ctrsm.f –"
  non-unit, upper or lower triangular matrix and op( A ) is one of
  op( A ) = A or op( A ) = A**T or op( A ) = A**H.
  The matrix X is overwritten on B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  On entry, SIDE specifies whether op( A ) appears on the left
  or right of X as follows:
@@ -98,13 +98,13 @@ description: "ctrsm.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -114,7 +114,8 @@ description: "ctrsm.f –"
  Iain Duff, AERE Harwell.
  Jeremy Du Croz, Numerical Algorithms Group Ltd.
  Sven Hammarling, Numerical Algorithms Group Ltd.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 181 of file ctrsm.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

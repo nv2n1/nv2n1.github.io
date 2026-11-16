@@ -55,9 +55,9 @@ description: "auditd_selinux – Security Enhanced Linux Policy for the auditd p
 <p> Policy governs the access confined processes have to these ports. SELinux auditd policy is very flexible allowing users to setup their auditd processes in as secure a method as possible. </p>
 <p> The following port types are defined for auditd: </p>
 <dl>
-<dt><code>audit_port_t</code></p>
+<dt><code>audit_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 60</dl>
+</dd><dd>Default Defined Ports: tcp 60</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type auditd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>anon_inodefs_t</code> </p>
@@ -115,24 +115,24 @@ description: "auditd_selinux – Security Enhanced Linux Policy for the auditd p
 <p> <code>auditd_exec_t</code> </p>
 <p> &#8211; Set files with the auditd_exec_t type, if you want to transition an executable to the auditd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/auditd, /usr/sbin/auditd </p>
+<dt>Paths:</dt>
+<dd>/sbin/auditd, /usr/sbin/auditd </dd>
 </dl>
 <p> <code>auditd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the auditd_initrc_exec_t type, if you want to transition an executable to the auditd_initrc_t domain. </p>
 <p> <code>auditd_log_t</code> </p>
 <p> &#8211; Set files with the auditd_log_t type, if you want to treat the data as auditd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/audit(/.*)?, /var/log/audit.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/audit(/.*)?, /var/log/audit.log.* </dd>
 </dl>
 <p> <code>auditd_unit_file_t</code> </p>
 <p> &#8211; Set files with the auditd_unit_file_t type, if you want to treat the files as auditd unit content. </p>
 <p> <code>auditd_var_run_t</code> </p>
 <p> &#8211; Set files with the auditd_var_run_t type, if you want to store the auditd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/auditd.pid, /var/run/auditd_sock, /var/run/audit_events </p>
+<dt>Paths:</dt>
+<dd>/var/run/auditd.pid, /var/run/auditd_sock, /var/run/audit_events </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

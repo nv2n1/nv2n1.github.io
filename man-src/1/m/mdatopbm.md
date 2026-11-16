@@ -15,14 +15,14 @@ description: "mdatopbm – convert a Microdesign .mda or .mdp file into a portab
 <p> Reads a MicroDesign file as input. Reads from stdin if input file is omitted. Produces a portable bitmap as output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Output the PBM in ASCII rather than binary.</p>
-<dt><code>-d</code></p>
-<dd> Double the height of the output file, to compensate for the aspect ratio used in MicroDesign files.</p>
-<dt><code>-i</code></p>
-<dd> Invert the colours used.</p>
-<dt><code>&#8212;</code></p>
-<dd> End of options (use this if the filename starts with &quot;-&quot;)</dl>
+<dt><code>-a</code></dt>
+<dd> Output the PBM in ASCII rather than binary.</dd>
+<dt><code>-d</code></dt>
+<dd> Double the height of the output file, to compensate for the aspect ratio used in MicroDesign files.</dd>
+<dt><code>-i</code></dt>
+<dd> Invert the colours used.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> End of options (use this if the filename starts with &quot;-&quot;)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pbmtomda/">pbmtomda</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>

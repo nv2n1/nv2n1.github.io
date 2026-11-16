@@ -11,18 +11,18 @@ description: "XkbLockModifiers – Locks and unlocks any of the eight real keybo
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbLockModifiers</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>affect</i><code>,</code> <code>unsigned int </code><i>values</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>affect</i></p>
-<dd>mask of real modifiers whose lock state is to change</p>
-<dt><i>values</i></p>
-<dd>1 =&gt; lock, 0 =&gt; unlock; only for modifiers selected by affect</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>affect</i></dt>
+<dd>mask of real modifiers whose lock state is to change</dd>
+<dt><i>values</i></dt>
+<dd>1 =&gt; lock, 0 =&gt; unlock; only for modifiers selected by affect</dd></dl>
 <h2>Description</h2>
 <p><i>XkbLockModifiers </i> sends a request to the server to lock the real modifiers selected by both <i>affect </i> and <i>values</i> and to unlock the real modifiers selected by <i>affect, </i> but not selected by <i>values. XkbLockModifiers </i> does not wait for a reply from the server. It returns True if the request was sent, and False otherwise. </p>
 <p> The functions in this section that change the use of modifiers use a mask in the parameter affect. It is a bitwise inclusive OR of the legal modifier masks: </p>
@@ -80,8 +80,8 @@ description: "XkbLockModifiers – Locks and unlocks any of the eight real keybo
 </table>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbLockModifiers </i> function returns True if a request is sent to the server to lock the real modifiers selected by both <i>affect </i> and <i>values</i> and to unlock the real modifiers selected by <i>affect, </i> but not selected by <i>values.</i></p>
-<dt>False</p>
-<dd>The <i>XkbLockModifiers </i> function returns False if the request was not sent. </p>
+<dt>True</dt>
+<dd>The <i>XkbLockModifiers </i> function returns True if a request is sent to the server to lock the real modifiers selected by both <i>affect </i> and <i>values</i> and to unlock the real modifiers selected by <i>affect, </i> but not selected by <i>values.</i></dd>
+<dt>False</dt>
+<dd>The <i>XkbLockModifiers </i> function returns False if the request was not sent. </dd>
 </dl>

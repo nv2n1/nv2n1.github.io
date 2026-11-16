@@ -15,11 +15,11 @@ clk_set_rate - set the clock rate for a clock source
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock source</dl>
+<dl><dd></dd><dd>clock source</dd></dl>
  
 
  <i>rate</i>
-<dl><dd>desired clock rate in Hz</dl>
+<dl><dd>desired clock rate in Hz</dd></dl>
 
 <h2>Description</h2>
 

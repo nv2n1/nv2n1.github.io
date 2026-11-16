@@ -18,50 +18,50 @@ description: "splitxyz – Split xyz[dh] data tables into individual segments"
 <p> none.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII [or binary, see <code>-bi</code>] files with 2, 3, or 5 columns holding (x,y,[z[,d,h]]) data values. To use (x,y,z,d,h) input, sorted so that d is non-decreasing, specify the <code>-S</code> option; default expects (x,y,z) only. If no files are specified, <code>splitxyz</code> will read from standard input.</p>
-<dt><code>-A</code><i>azimuth</i>/<i>tolerance</i></p>
-<dd> Write out only those segments which are within +/- <i>tolerance</i> degrees of <i>azimuth</i> in heading, measured clockwise from North, [0 &#8211; 360]. [Default writes all acceptable segments, regardless of orientation].</p>
-<dt><code>-C</code><i>course_change</i></p>
-<dd> Terminate a segment when a course change exceeding <i>course_change</i> degrees of heading is detected [ignore course changes].</p>
-<dt><code>-D</code><i>minimum_distance</i></p>
-<dd> Do not write a segment out unless it is at least <i>minimum_distance</i> units long [0]</p>
-<dt><code>-F</code><i>xy_filter</i>/<i>z_filter</i></p>
-<dd> Filter the z values and/or the x,y values, assuming these are functions of d coordinate. <i>xy_filter</i> and <i>z_filter</i> are filter widths in distance units. If a filter width is zero, the filtering is not performed. The absolute value of the width is the full width of a cosine-arch low-pass filter. If the width is positive, the data are low-pass filtered; if negative, the data are high-pass filtered by subtracting the low-pass value from the observed value. If <i>z_filter</i> is non-zero, the entire series of input z values is filtered before any segmentation is performed, so that the only edge effects in the filtering will happen at the beginning and end of the complete data stream. If <i>xy_filter</i> is non-zero, the data is first divided into segments and then the x,y values of each segment are filtered separately. This may introduce edge effects at the ends of each segment, but prevents a low-pass x,y filter from rounding off the corners of track segments. [Default = no filtering].</p>
-<dt><code>-N</code><i>template</i></p>
-<dd> Write each segment to a separate output file [Default writes a multiple segment file to stdout]. Append a format template for the individual file names; this template <code>must</code> contain a C format specifier that can format an integer argument (the running segment number across all tables); this is usually %d but could be %08d which gives leading zeros, etc. [Default is splitxyz_segment_%d.{txt|bin}, depending on <code>-bo</code>]. Alternatively, give a template with two C format specifiers and we will supply the table number and the segment number within the table to build the file name.</p>
-<dt><code>-Q</code><i>flags</i></p>
-<dd> Specify your desired output using any combination of <i>xyzdh</i>, in any order. Do not space between the letters. Use lower case. The output will be ASCII (or binary, see <code>-bo</code>) columns of values corresponding to <i>xyzdh</i> [Default is <code>-Q</code><i>xyzdh</i> (<code>-Q</code><i>xydh</i> if only 2 input columns)].</p>
-<dt><code>-S</code></p>
-<dd> Both d and h are supplied. In this case, input contains x,y,z,d,h. [Default expects (x,y,z) input, and d,h are computed from delta x, delta y. Use <code>-fg</code> to indicate map data; then x,y are assumed to be in degrees of longitude, latitude, distances are considered to be in kilometers, and angles are actually azimuths. Otherwise, distances are Cartesian in same units as x,y and angles are counter-clockwise from horizontal].</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2, 3, or 5 input columns as set by <code>-S</code>].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is 1-5 output columns as set by <code>-Q</code>].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks. Do not let a segment have a gap exceeding <i>gap</i>; instead, split it into two segments. [Default ignores gaps].</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII [or binary, see <code>-bi</code>] files with 2, 3, or 5 columns holding (x,y,[z[,d,h]]) data values. To use (x,y,z,d,h) input, sorted so that d is non-decreasing, specify the <code>-S</code> option; default expects (x,y,z) only. If no files are specified, <code>splitxyz</code> will read from standard input.</dd>
+<dt><code>-A</code><i>azimuth</i>/<i>tolerance</i></dt>
+<dd> Write out only those segments which are within +/- <i>tolerance</i> degrees of <i>azimuth</i> in heading, measured clockwise from North, [0 &#8211; 360]. [Default writes all acceptable segments, regardless of orientation].</dd>
+<dt><code>-C</code><i>course_change</i></dt>
+<dd> Terminate a segment when a course change exceeding <i>course_change</i> degrees of heading is detected [ignore course changes].</dd>
+<dt><code>-D</code><i>minimum_distance</i></dt>
+<dd> Do not write a segment out unless it is at least <i>minimum_distance</i> units long [0]</dd>
+<dt><code>-F</code><i>xy_filter</i>/<i>z_filter</i></dt>
+<dd> Filter the z values and/or the x,y values, assuming these are functions of d coordinate. <i>xy_filter</i> and <i>z_filter</i> are filter widths in distance units. If a filter width is zero, the filtering is not performed. The absolute value of the width is the full width of a cosine-arch low-pass filter. If the width is positive, the data are low-pass filtered; if negative, the data are high-pass filtered by subtracting the low-pass value from the observed value. If <i>z_filter</i> is non-zero, the entire series of input z values is filtered before any segmentation is performed, so that the only edge effects in the filtering will happen at the beginning and end of the complete data stream. If <i>xy_filter</i> is non-zero, the data is first divided into segments and then the x,y values of each segment are filtered separately. This may introduce edge effects at the ends of each segment, but prevents a low-pass x,y filter from rounding off the corners of track segments. [Default = no filtering].</dd>
+<dt><code>-N</code><i>template</i></dt>
+<dd> Write each segment to a separate output file [Default writes a multiple segment file to stdout]. Append a format template for the individual file names; this template <code>must</code> contain a C format specifier that can format an integer argument (the running segment number across all tables); this is usually %d but could be %08d which gives leading zeros, etc. [Default is splitxyz_segment_%d.{txt|bin}, depending on <code>-bo</code>]. Alternatively, give a template with two C format specifiers and we will supply the table number and the segment number within the table to build the file name.</dd>
+<dt><code>-Q</code><i>flags</i></dt>
+<dd> Specify your desired output using any combination of <i>xyzdh</i>, in any order. Do not space between the letters. Use lower case. The output will be ASCII (or binary, see <code>-bo</code>) columns of values corresponding to <i>xyzdh</i> [Default is <code>-Q</code><i>xyzdh</i> (<code>-Q</code><i>xydh</i> if only 2 input columns)].</dd>
+<dt><code>-S</code></dt>
+<dd> Both d and h are supplied. In this case, input contains x,y,z,d,h. [Default expects (x,y,z) input, and d,h are computed from delta x, delta y. Use <code>-fg</code> to indicate map data; then x,y are assumed to be in degrees of longitude, latitude, distances are considered to be in kilometers, and angles are actually azimuths. Otherwise, distances are Cartesian in same units as x,y and angles are counter-clockwise from horizontal].</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2, 3, or 5 input columns as set by <code>-S</code>].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is 1-5 output columns as set by <code>-Q</code>].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks. Do not let a segment have a gap exceeding <i>gap</i>; instead, split it into two segments. [Default ignores gaps].</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your <code>gmt.conf</code> file. Longitude and latitude are formatted according to <i>FORMAT_GEO_OUT</i>, whereas other values are formatted according to <i>FORMAT_FLOAT_OUT</i>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <i>FORMAT_FLOAT_OUT</i> setting.</p>
 <h2>DISTANCE CALCULATIONS</h2>

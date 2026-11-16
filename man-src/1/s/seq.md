@@ -17,17 +17,17 @@ description: "seq – print a sequence of numbers"
 <p> Print numbers from FIRST to LAST, in steps of INCREMENT. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;format</code>=<i>,FORMAT/</i></p>
-<dd> use printf style floating-point FORMAT</p>
-<dt><code>-s</code>, <code>&#8211;separator</code>=<i>,STRING/</i></p>
+<dt><code>-f</code>, <code>&#8211;format</code>=<i>,FORMAT/</i></dt>
+<dd> use printf style floating-point FORMAT</dd>
+<dt><code>-s</code>, <code>&#8211;separator</code>=<i>,STRING/</i></dt>
 <dd> use STRING to separate numbers (default: 
-)</p>
-<dt><code>-w</code>, <code>&#8211;equal-width</code></p>
-<dd> equalize width by padding with leading zeroes</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+)</dd>
+<dt><code>-w</code>, <code>&#8211;equal-width</code></dt>
+<dd> equalize width by padding with leading zeroes</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If FIRST or INCREMENT is omitted, it defaults to 1. That is, an omitted INCREMENT defaults to 1 even when LAST is smaller than FIRST. The sequence of numbers ends when the sum of the current number and INCREMENT would become greater than LAST. FIRST, INCREMENT, and LAST are interpreted as floating point values. INCREMENT is usually positive if FIRST is smaller than LAST, and INCREMENT is usually negative if FIRST is greater than LAST. INCREMENT must not be 0; none of FIRST, INCREMENT and LAST may be NaN. FORMAT must be suitable for printing one argument of type &#8216;double&#8217;; it defaults to %.PRECf if FIRST, INCREMENT, and LAST are all fixed point decimal numbers with maximum precision PREC, and to %g otherwise.</p>
 <h2>AUTHOR</h2>
 <p> Written by Ulrich Drepper.</p>

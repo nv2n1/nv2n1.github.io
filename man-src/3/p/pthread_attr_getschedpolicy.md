@@ -10,10 +10,8 @@ description: "pthread_attr_setschedpolicy, pthread_attr_getschedpolicy – set/g
 <p>pthread_attr_setschedpolicy, pthread_attr_getschedpolicy &#8211; set/get scheduling policy attribute in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setschedpolicy(pthread_attr_t *attr, int policy);
 int pthread_attr_getschedpolicy(const pthread_attr_t *attr, int *policy);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_attr_setschedpolicy</code>() function sets the scheduling policy attribute of the thread attributes object referred to by <i>attr</i> to the value specified in <i>policy</i>. This attribute determines the scheduling policy of a thread created using the thread attributes object <i>attr</i>. </p>
@@ -25,8 +23,8 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_attr_setschedpolicy</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>Invalid value in <i>policy</i>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid value in <i>policy</i>.</dd></dl>
 <p> POSIX.1 also documents an optional <code>ENOTSUP</code> error (&quot;attempt was made to set the attribute to an unsupported value&quot;) for <code>pthread_attr_setschedpolicy</code>().</p>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

@@ -18,22 +18,22 @@ description: "fc-match – match available fonts"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Displays sorted list of best matching fonts, but do not do any pruning on the list.</p>
-<dt><code>-s</code></p>
-<dd> Displays sorted list of best matching fonts.</p>
-<dt><code>-v</code></p>
-<dd> Print verbose output of the whole font pattern for each match, or <i>element</i>s if any is provided.</p>
-<dt><code>-f</code></p>
-<dd> Format output according to the format specifier <i>format</i>.</p>
-<dt><code>-V</code></p>
-<dd> Show version of the program and exit.</p>
-<dt><code>-h</code></p>
-<dd> Show summary of options.</p>
-<dt><i>pattern</i></p>
-<dd> Displays fonts matching <i>pattern</i> (uses empty pattern by default).</p>
-<dt><i>element</i></p>
-<dd> If set, the <i>element</i> property is displayed for matching fonts.</dl>
+<dt><code>-a</code></dt>
+<dd> Displays sorted list of best matching fonts, but do not do any pruning on the list.</dd>
+<dt><code>-s</code></dt>
+<dd> Displays sorted list of best matching fonts.</dd>
+<dt><code>-v</code></dt>
+<dd> Print verbose output of the whole font pattern for each match, or <i>element</i>s if any is provided.</dd>
+<dt><code>-f</code></dt>
+<dd> Format output according to the format specifier <i>format</i>.</dd>
+<dt><code>-V</code></dt>
+<dd> Show version of the program and exit.</dd>
+<dt><code>-h</code></dt>
+<dd> Show summary of options.</dd>
+<dt><i>pattern</i></dt>
+<dd> Displays fonts matching <i>pattern</i> (uses empty pattern by default).</dd>
+<dt><i>element</i></dt>
+<dd> If set, the <i>element</i> property is displayed for matching fonts.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fc-list/">fc-list</a></code>(1) <code><a href="/docs/linux/man/3-fcfontmatch/">FcFontMatch</a></code>(3) <code><a href="/docs/linux/man/3-fcfontsort/">FcFontSort</a></code>(3) <code><a href="/docs/linux/man/3-fcpatternformat/">FcPatternFormat</a></code>(3) <code><a href="/docs/linux/man/1-fc-cat/">fc-cat</a></code>(1) <code><a href="/docs/linux/man/1-fc-cache/">fc-cache</a></code>(1) <code><a href="/docs/linux/man/1-fc-pattern/">fc-pattern</a></code>(1) <code><a href="/docs/linux/man/1-fc-query/">fc-query</a></code>(1) <code><a href="/docs/linux/man/1-fc-scan/">fc-scan</a></code>(1) </p>
 <p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.</p>

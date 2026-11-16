@@ -10,11 +10,8 @@ description: "timegm, timelocal – inverses of gmtime and localtime"
 <p>timegm, timelocal &#8211; inverses of gmtime and localtime</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;time.h&gt;
-
 time_t timelocal(struct tm *tm);
-
 time_t timegm(struct tm *tm);
-
 Feature Test Macro Requirements for glibc (see
 feature_test_macros(7)):</code></pre>
 <p> <code>timelocal</code>(), <code>timegm</code>():<br />
@@ -28,8 +25,8 @@ feature_test_macros(7)):</code></pre>
 <p>On success, these functions return the calendar time (seconds since the Epoch), expressed as a value of type <i>time_t</i>. On error, they return the value <i>(time_t)&nbsp;-1</i> and set <i>errno</i> to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EOVERFLOW</code></p>
-<dd>The result cannot be represented.</dl>
+<dt><code>EOVERFLOW</code></dt>
+<dd>The result cannot be represented.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

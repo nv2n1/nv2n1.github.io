@@ -19,11 +19,12 @@ description: "pdfjadetex – PDF output from JadeTeX"
 <h2>OPTIONS</h2>
 <p> This version of pdfjadeTeX understands the following command line options.</p>
 <dl>
-<dt><code>&#8211;fmt</code><i>&nbsp;format</i></p>
-<dd> Use <i>format</i> as the name of the format to be used, instead of the name by which pdfjadeTeX was called or a <i>%&amp;</i> line.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;ini</code></p>
-<dd> Be <code>pdfinitex</code>, for dumping formats; this is implicitly true if the program is called as <code>pdfinitex</code>.</p>
-<dt><code>&#8211;interaction</code><i>&nbsp;mode</i></p>
+<dt><code>&#8211;fmt</code><i>&nbsp;format</i></dt>
+<dd> Use <i>format</i> as the name of the format to be used, instead of the name by which pdfjadeTeX was called or a <i>%&amp;</i> line.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;ini</code></dt>
+<dd> Be <code>pdfinitex</code>, for dumping formats; this is implicitly true if the program is called as <code>pdfinitex</code>.</dd>
+<dt><code>&#8211;interaction</code><i>&nbsp;mode</i></dt>
 <dd> Sets the interaction mode. The mode can be one of <i>batchmode</i>, <i>nonstopmode</i>, <i>scrollmode</i>, and <i>errorstopmode</i>. The meaning of these modes is the same as that of the corresponding 
+</dd></dl>

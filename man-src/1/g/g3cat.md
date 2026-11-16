@@ -17,22 +17,22 @@ description: "g3cat – concatenate multiple g3 documents"
 <p> If the input data is malformed, a warning is printed to stderr, and the output file will have a blank line at this place. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l </code></p>
-<dd> separate files with a one-pixel wide black line.</p>
-<dt><code>-h &lt;blank lines&gt;</code></p>
-<dd> specifies the number of blank lines <i>g3cat</i> should prepend to each page. Default is 0.</p>
-<dt><code>-L &lt;lines&gt;</code></p>
-<dd> limit lenght of output page to maximum &lt;lines&gt; lines.</dl>
+<dt><code>-l </code></dt>
+<dd> separate files with a one-pixel wide black line.</dd>
+<dt><code>-h &lt;blank lines&gt;</code></dt>
+<dd> specifies the number of blank lines <i>g3cat</i> should prepend to each page. Default is 0.</dd>
+<dt><code>-L &lt;lines&gt;</code></dt>
+<dd> limit lenght of output page to maximum &lt;lines&gt; lines.</dd></dl>
 <h2>SPECIAL-CASE OPTIONS</h2>
 <dl>
-<dt><code>-w &lt;width&gt;</code></p>
-<dd> specifies the desired page width in pixels per line. Default is 1728 PELs, and this is mandatory if you want to send the fax to a standard fax machine. If one of the input files doesn&#8217;t match this line width (for example because it was created by a broken G3 creator), a warning is printed, and the line width is transparently fixed.</p>
-<dt><code>-a </code></p>
-<dd> byte-align the end-of-line codes (EOL) in the file. Every EOL will end at a byte boundary, that is, with a &nbsp;<wbr>01 byte.</p>
-<dt><code>-p &lt;pad&gt;</code></p>
-<dd> specifies a minimum number of bytes that each output line must be padded to. Padding is done with 0-bits before the EOL code.</p>
-<dt><code>-R</code></p>
-<dd> suppress output of end-of-page code (RTC). </p>
+<dt><code>-w &lt;width&gt;</code></dt>
+<dd> specifies the desired page width in pixels per line. Default is 1728 PELs, and this is mandatory if you want to send the fax to a standard fax machine. If one of the input files doesn&#8217;t match this line width (for example because it was created by a broken G3 creator), a warning is printed, and the line width is transparently fixed.</dd>
+<dt><code>-a </code></dt>
+<dd> byte-align the end-of-line codes (EOL) in the file. Every EOL will end at a byte boundary, that is, with a &nbsp;<wbr>01 byte.</dd>
+<dt><code>-p &lt;pad&gt;</code></dt>
+<dd> specifies a minimum number of bytes that each output line must be padded to. Padding is done with 0-bits before the EOL code.</dd>
+<dt><code>-R</code></dt>
+<dd> suppress output of end-of-page code (RTC). </dd>
 </dl>
 <h2>Example</h2>
 <p> The following example will put a header line on a given g3 page, &#8216;page1&#8217; and put the result into &#8216;page2&#8217;: </p>

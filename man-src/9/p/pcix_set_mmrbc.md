@@ -15,11 +15,11 @@ pcix_set_mmrbc - set PCI-X maximum memory read byte count
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to query</dl>
+<dl><dd></dd><dd>PCI device to query</dd></dl>
  
 
  <i>mmrbc</i>
-<dl><dd>maximum memory read count in bytes valid values are 512, 1024, 2048, 4096</dl>
+<dl><dd>maximum memory read count in bytes valid values are 512, 1024, 2048, 4096</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,54 +15,54 @@ description: "xprop – property displayer for X"
 <p> The <i>xprop</i> utility is for displaying window and font properties in an X server. One window or font is selected using the command line arguments or possibly in the case of a window, by clicking on the desired window. A list of properties is then given, possibly with formatting information.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print out a summary of command line options.</dl>
+<dt><code>-help</code></dt>
+<dd> Print out a summary of command line options.</dd></dl>
 <dl>
-<dt><code>-grammar</code></p>
-<dd> Print out a detailed grammar for all command line options.</dl>
+<dt><code>-grammar</code></dt>
+<dd> Print out a detailed grammar for all command line options.</dd></dl>
 <dl>
-<dt><code>-id </code><i>id</i></p>
-<dd> This argument allows the user to select window <i>id</i> on the command line rather than using the pointer to select the target window. This is very useful in debugging X applications where the target window is not mapped to the screen or where the use of the pointer might be impossible or interfere with the application.</dl>
+<dt><code>-id </code><i>id</i></dt>
+<dd> This argument allows the user to select window <i>id</i> on the command line rather than using the pointer to select the target window. This is very useful in debugging X applications where the target window is not mapped to the screen or where the use of the pointer might be impossible or interfere with the application.</dd></dl>
 <dl>
-<dt><code>-name </code><i>name</i></p>
-<dd> This argument allows the user to specify that the window named <i>name</i> is the target window on the command line rather than using the pointer to select the target window.</dl>
+<dt><code>-name </code><i>name</i></dt>
+<dd> This argument allows the user to specify that the window named <i>name</i> is the target window on the command line rather than using the pointer to select the target window.</dd></dl>
 <dl>
-<dt><code>-font </code><i>font</i></p>
-<dd> This argument allows the user to specify that the properties of font <i>font</i> should be displayed.</dl>
+<dt><code>-font </code><i>font</i></dt>
+<dd> This argument allows the user to specify that the properties of font <i>font</i> should be displayed.</dd></dl>
 <dl>
-<dt><code>-root</code></p>
-<dd> This argument specifies that X&#8217;s root window is the target window. This is useful in situations where the root window is completely obscured.</dl>
+<dt><code>-root</code></dt>
+<dd> This argument specifies that X&#8217;s root window is the target window. This is useful in situations where the root window is completely obscured.</dd></dl>
 <dl>
-<dt><code>-display </code><i>display</i></p>
-<dd> This argument allows you to specify the server to connect to; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dl>
+<dt><code>-display </code><i>display</i></dt>
+<dd> This argument allows you to specify the server to connect to; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dd></dl>
 <dl>
-<dt><code>-len </code><i>n</i></p>
-<dd> Specifies that at most <i>n</i> bytes of any property should be read or displayed.</dl>
+<dt><code>-len </code><i>n</i></dt>
+<dd> Specifies that at most <i>n</i> bytes of any property should be read or displayed.</dd></dl>
 <dl>
-<dt><code>-notype</code></p>
-<dd> Specifies that the type of each property should not be displayed.</dl>
+<dt><code>-notype</code></dt>
+<dd> Specifies that the type of each property should not be displayed.</dd></dl>
 <dl>
-<dt><code>-fs </code><i>file</i></p>
-<dd> Specifies that file <i>file</i> should be used as a source of more formats for properties.</dl>
+<dt><code>-fs </code><i>file</i></dt>
+<dd> Specifies that file <i>file</i> should be used as a source of more formats for properties.</dd></dl>
 <dl>
-<dt><code>-frame</code></p>
-<dd> Specifies that when selecting a window by hand (i.e. if none of <code>-name</code>, <code>-root</code>, or <code>-id</code> are given), look at the window manager frame (if any) instead of looking for the client window.</dl>
+<dt><code>-frame</code></dt>
+<dd> Specifies that when selecting a window by hand (i.e. if none of <code>-name</code>, <code>-root</code>, or <code>-id</code> are given), look at the window manager frame (if any) instead of looking for the client window.</dd></dl>
 <dl>
-<dt><code>-remove </code><i>property-name</i></p>
-<dd> Specifies the name of a property to be removed from the indicated window.</dl>
+<dt><code>-remove </code><i>property-name</i></dt>
+<dd> Specifies the name of a property to be removed from the indicated window.</dd></dl>
 <dl>
-<dt><code>-set </code><i>property-name</i> <i>value</i></p>
-<dd> Specifies the name of a property and a property value, to be set on the indicated window.</dl>
+<dt><code>-set </code><i>property-name</i> <i>value</i></dt>
+<dd> Specifies the name of a property and a property value, to be set on the indicated window.</dd></dl>
 <dl>
-<dt><code>-spy</code></p>
-<dd> Examine window properties forever, looking for property change events.</dl>
+<dt><code>-spy</code></dt>
+<dd> Examine window properties forever, looking for property change events.</dd></dl>
 <dl>
-<dt><code>-version</code></p>
-<dd> Print program version information and exit.</dl>
+<dt><code>-version</code></dt>
+<dd> Print program version information and exit.</dd></dl>
 <dl>
-<dt><code>-f </code><i>name</i> <i>format</i> [<i>dformat</i>]</p>
+<dt><code>-f </code><i>name</i> <i>format</i> [<i>dformat</i>]</dt>
 <dd> Specifies that the <i>format</i> for <i>name</i> should be <i>format</i> and that the <i>dformat</i> for <i>name</i> should be <i>dformat</i>. If <i>dformat</i> is missing, &quot; = $0+
-&quot; is assumed.</dl>
+&quot; is assumed.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> For each of these properties, its value on the selected window or font is printed using the supplied formatting information if any. If no formatting information is supplied, internal defaults are used. If a property is not defined on the selected window or font, &quot;not defined&quot; is printed as the value for that property. If no property list is given, all the properties possessed by the selected window or font are printed. </p>
 <p> A window may be selected in one of four ways. First, if the desired window is the root window, the -root argument may be used. If the desired window is not the root window, it may be selected in two ways on the command line, either by id number such as might be obtained from <i>xwininfo</i>, or by name if the window possesses a name. The -id argument selects a window by id number in either decimal or hex (must start with 0x) while the -name argument selects a window by name. </p>
@@ -75,26 +75,26 @@ description: "xprop – property displayer for X"
 <p> A value of 8 means that the property is a sequence of bytes while a value of 16 would mean that the property is a sequence of words. The difference between these two lies in the fact that the sequence of words will be byte swapped while the sequence of bytes will not be when read by a machine of the opposite byte order of the machine that originally wrote the property. For more information on how properties are formatted and stored, consult the Xlib manual. </p>
 <p> Once the size of the fields has been specified, it is necessary to specify the type of each field (i.e., is it an integer, a string, an atom, or what?) This is done using one format character per field. If there are more fields in the property than format characters supplied, the last character will be repeated as many times as necessary for the extra fields. The format characters and their meaning are as follows:</p>
 <dl>
-<dt>a</p>
-<dd> The field holds an atom number. A field of this type should be of size 32.</p>
-<dt>b</p>
-<dd> The field is an boolean. A 0 means false while anything else means true.</p>
-<dt>c</p>
-<dd> The field is an unsigned number, a cardinal.</p>
-<dt>i</p>
-<dd> The field is a signed integer.</p>
-<dt>m</p>
-<dd> The field is a set of bit flags, 1 meaning on.</p>
-<dt>o</p>
-<dd> The field is an array of icons, packed as a sequence of 32 bit numbers consisting of the width, height and ARGB pixel values, as defined for the _NET_WM_ICON property in the <i>Extended Window Manager Hints</i> specification. A field of this type must be of size 32.</p>
-<dt>s</p>
-<dd> This field and the next ones until either a 0 or the end of the property represent a sequence of bytes. This format character is only usable with a field size of 8 and is most often used to represent a string.</p>
-<dt>t</p>
-<dd> This field and the next ones until either a 0 or the end of the property represent an internationalized text string. This format character is only usable with a field size of 8. The string is assumed to be in an ICCCM compliant encoding and is converted to the current locale encoding before being output.</p>
-<dt>u</p>
-<dd> This field and the next ones until either a 0 or the end of the property represent an UTF-8 encoded unicode string. This format character is only usable with a field size of 8. If the string is found to be an invalid character, the type of encoding violation is printed instead, followed by the string formatted using &#8216;s&#8217;. When in an environment not capable of displaying UTF-8 encoded string, behaviour is identical to &#8216;s&#8217;.</p>
-<dt>x</p>
-<dd> The field is a hex number (like &#8216;c&#8217; but displayed in hex &#8211; most useful for displaying window ids and the like)</dl>
+<dt>a</dt>
+<dd> The field holds an atom number. A field of this type should be of size 32.</dd>
+<dt>b</dt>
+<dd> The field is an boolean. A 0 means false while anything else means true.</dd>
+<dt>c</dt>
+<dd> The field is an unsigned number, a cardinal.</dd>
+<dt>i</dt>
+<dd> The field is a signed integer.</dd>
+<dt>m</dt>
+<dd> The field is a set of bit flags, 1 meaning on.</dd>
+<dt>o</dt>
+<dd> The field is an array of icons, packed as a sequence of 32 bit numbers consisting of the width, height and ARGB pixel values, as defined for the _NET_WM_ICON property in the <i>Extended Window Manager Hints</i> specification. A field of this type must be of size 32.</dd>
+<dt>s</dt>
+<dd> This field and the next ones until either a 0 or the end of the property represent a sequence of bytes. This format character is only usable with a field size of 8 and is most often used to represent a string.</dd>
+<dt>t</dt>
+<dd> This field and the next ones until either a 0 or the end of the property represent an internationalized text string. This format character is only usable with a field size of 8. The string is assumed to be in an ICCCM compliant encoding and is converted to the current locale encoding before being output.</dd>
+<dt>u</dt>
+<dd> This field and the next ones until either a 0 or the end of the property represent an UTF-8 encoded unicode string. This format character is only usable with a field size of 8. If the string is found to be an invalid character, the type of encoding violation is printed instead, followed by the string formatted using &#8216;s&#8217;. When in an environment not capable of displaying UTF-8 encoded string, behaviour is identical to &#8216;s&#8217;.</dd>
+<dt>x</dt>
+<dd> The field is a hex number (like &#8216;c&#8217; but displayed in hex &#8211; most useful for displaying window ids and the like)</dd></dl>
 <p> An example <i>format</i> is 32ica which is the format for a property of three fields of 32 bits each, the first holding a signed integer, the second an unsigned integer, and the third an atom. </p>
 <p> The format of a <i>dformat</i> unlike that of a <i>format</i> is not so rigid. The only limitations on a <i>dformat</i> is that one may not start with a letter or a dash. This is so that it can be distinguished from a property name or an argument. A <i>dformat</i> is a text string containing special characters instructing that various fields be printed at various points in a manner similar to the formatting string used by printf. For example, the <i>dformat</i> &quot; is ( $0, $1 \)
 &quot; would render the POINT 3, -4 which has a <i>format</i> of 32ii as &quot; is ( 3, -4 )
@@ -105,10 +105,10 @@ description: "xprop – property displayer for X"
 <p> If the field is not present in the property (this is possible with some properties), &lt;field not available&gt; is displayed instead. $<i>n</i>+ will display field number <i>n</i> then a comma then field number <i>n</i>+1 then another comma then &#8230; until the last field defined. If field <i>n</i> is not defined, nothing is displayed. This is useful for a property that is a list of values. </p>
 <p> A ? is used to start a conditional expression, a kind of if-then statement. ?<i>exp</i>(<i>text</i>) will display <i>text</i> if and only if <i>exp</i> evaluates to non-zero. This is useful for two things. First, it allows fields to be displayed if and only if a flag is set. And second, it allows a value such as a state number to be displayed as a name rather than as just a number. The syntax of <i>exp</i> is as follows:</p>
 <dl>
-<dt><i>exp</i></p>
-<dd> ::= <i>term</i> | <i>term</i>=<i>exp</i> | !<i>exp</i></p>
-<dt><i>term</i></p>
-<dd> ::= <i>n</i> | $<i>n</i> | m<i>n</i></dl>
+<dt><i>exp</i></dt>
+<dd> ::= <i>term</i> | <i>term</i>=<i>exp</i> | !<i>exp</i></dd>
+<dt><i>term</i></dt>
+<dd> ::= <i>n</i> | $<i>n</i> | m<i>n</i></dd></dl>
 <p> The ! operator is a logical &#8220;not&#8221;, changing 0 to 1 and any non-zero value to 0. = is an equality operator. Note that internally all expressions are evaluated as 32 bit numbers so -1 is not equal to 65535. = returns 1 if the two values are equal and 0 if not. <i>n</i> represents the constant value <i>n</i> while $<i>n</i> represents the value of field number <i>n</i>. m<i>n</i> is 1 if flag number <i>n</i> in the first field having format character &#8216;m&#8217; in the corresponding <i>format</i> is 1, 0 otherwise. </p>
 <p> Examples: ?m3(count: $3
 ) displays field 3 with a label of count if and only if flag number 3 (count starts at 0!) is on. ?$2=0(True)?!$2=0(False) displays the inverted value of field 2 as a boolean. </p>
@@ -128,10 +128,10 @@ description: "xprop – property displayer for X"
 <p> To set a simple string property: <i>xprop</i> -root -format MY_ATOM_NAME 8s -set MY_ATOM_NAME &quot;my_value&quot;</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> To get default display.</p>
-<dt><code>XPROPFORMATS</code></p>
-<dd> Specifies the name of a file from which additional formats are to be obtained.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> To get default display.</dd>
+<dt><code>XPROPFORMATS</code></dt>
+<dd> Specifies the name of a file from which additional formats are to be obtained.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xdpyinfo/">xdpyinfo</a>(1), <a href="/docs/linux/man/1-xwininfo/">xwininfo</a>(1), <a href="/docs/linux/man/1-xdriinfo/">xdriinfo</a>(1), <a href="/docs/linux/man/1-glxinfo/">glxinfo</a>(1), <a href="/docs/linux/man/1-xvinfo/">xvinfo</a>(1)</p>
 <h2>AUTHOR</h2>

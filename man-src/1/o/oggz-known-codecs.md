@@ -20,10 +20,10 @@ description: "oggz-known-codecs — List codecs known by this version of Oggz"
 &nbsp;<wbr></p>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit.</dl>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker July 9, 2008;</p>
 <h2>COPYRIGHT</h2>

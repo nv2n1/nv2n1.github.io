@@ -14,11 +14,11 @@ mongoc_socket_accept (mongoc_socket_t *sock,
  int64_t expire_at);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>expire_at</code></p>
-<dd>An int64_t containing a timeout in milliseconds.</dl>
+<dt><code>expire_at</code></dt>
+<dd>An int64_t containing a timeout in milliseconds.</dd></dl>
 <h2>Description</h2>
 <p>This function is a wrapper around the BSD socket <code><a href="/docs/linux/man/3-accept/">accept</a>(3)</code> interface. It allows for more portability between UNIX-like and Microsoft Windows platforms. </p>
 <h2>Returns</h2>

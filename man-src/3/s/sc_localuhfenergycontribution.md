@@ -19,9 +19,6 @@ description: "sc::LocalUHFEnergyContribution –"
 <p> void <code>cont5</code> (int ij, int kl, double val)</p>
 <h3>Public Attributes</h3>
 <pre><code>double ec
-
-
-
 double ex
 </code></pre>
 <h2>Author</h2>

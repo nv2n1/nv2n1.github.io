@@ -14,17 +14,17 @@ description: "jbd2_journal_get_create_access – notify intent to use newly crea
 <p><i>handle</i></p>
 <dl>
 <dd>
-<dd>transaction to new buffer to</dl>
+</dd><dd>transaction to new buffer to</dd></dl>
 <p> <i>bh</i></p>
 <dl>
-<dd>new buffer.</dl>
+<dd>new buffer.</dd></dl>
 <h2>Description</h2>
 <p>Call this if you create a new bh.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

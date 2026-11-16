@@ -42,12 +42,9 @@ wait_until <i>(public member function)</i></p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;future&gt;
-
 #include &lt;thread&gt;
 int main()
-
 {
     // future from a packaged_task
     std::packaged_task&lt;int()&gt; task([] { return 7; }); // wrap the function

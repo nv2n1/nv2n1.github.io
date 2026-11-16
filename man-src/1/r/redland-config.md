@@ -16,20 +16,20 @@ description: "redland-config – script to get information about the installed v
 <h2>OPTIONS</h2>
 <p> <i>redland-config</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the currently installed version of redland on the standard output.</p>
-<dt><code>&#8211;version-decimal</code></p>
-<dd> Print the currently installed version of redland as a decimal integer.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Print the linker flags that are necessary to link a redland program. This excludes linker arguments used to build the librdf shared library.</p>
-<dt><code>&#8211;libtool-libs</code></p>
-<dd> Print the flags that are necessary to link a redland program with libtool.</p>
-<dt><code>&#8211;private-libs</code></p>
-<dd> Print the linker flags that are necessary to build the librdf shared library. This option is not usually needed because the librdf shared library has already been dynamically linked against these libs.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Print the compiler flags that are necessary to compile a redland program.</p>
-<dt><code>&#8211;prefix=PREFIX</code></p>
-<dd> If specified, use PREFIX instead of the installation prefix that redland was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the currently installed version of redland on the standard output.</dd>
+<dt><code>&#8211;version-decimal</code></dt>
+<dd> Print the currently installed version of redland as a decimal integer.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print the linker flags that are necessary to link a redland program. This excludes linker arguments used to build the librdf shared library.</dd>
+<dt><code>&#8211;libtool-libs</code></dt>
+<dd> Print the flags that are necessary to link a redland program with libtool.</dd>
+<dt><code>&#8211;private-libs</code></dt>
+<dd> Print the linker flags that are necessary to build the librdf shared library. This option is not usually needed because the librdf shared library has already been dynamically linked against these libs.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Print the compiler flags that are necessary to compile a redland program.</dd>
+<dt><code>&#8211;prefix=PREFIX</code></dt>
+<dd> If specified, use PREFIX instead of the installation prefix that redland was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-redland/">redland</a></code>(3),</p>
 <h2>AUTHOR</h2>

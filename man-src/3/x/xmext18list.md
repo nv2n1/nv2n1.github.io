@@ -169,14 +169,14 @@ The Internationalized Extended List widget
 
 <dl COMPACT><dd>values<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is an array of strings of length numColumns which 
  represents the strings displayed in each column of this row. The data is allocated and maintained by the client. If firstColumnPixmaps is True, then value[0] is never referenced.
-<dd>pixmap<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is the pixmap displayed to the left of this row. If 
+</dd><dd>pixmap<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is the pixmap displayed to the left of this row. If 
  firstColumnPixmaps is True then this value is never referenced and mayn remain unset. If no pixmap is desired for this row, even though firstColumnPixmaps is True, set the value of pixmap to None. Color pixmaps may be used.
-<dd>sort_id<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is provided for the convenience of the client and is expected 
+</dd><dd>sort_id<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is provided for the convenience of the client and is expected 
  to be used as a sort index for this row. One value should be specified for each column of the row. See &quot;sortFunctions&quot; below for details.
-<dd>data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is provided for the convenience of the client and may be 
+</dd><dd>data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is provided for the convenience of the client and may be 
  used for any purpose. It is intended to be used as an identifier for the object pointed to by this row
-<dd>selected<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This value is True if this row is selected; may be set by the 
- application.</dl>
+</dd><dd>selected<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This value is True if this row is selected; may be set by the 
+ application.</dd></dl>
  
 
  Neither sort_id nor data are used by the Extended List widget; they exist solely for the convenience of the programmer. 
@@ -206,21 +206,16 @@ The Internationalized Extended List widget
  Note: if a single SelectionCallback is registered on an extended list in extended_se- lect_mode, the value of call_data is undefined. 
 
 <dl COMPACT><dd>void (callback)(Widget w, XtPointer client_data, XtPointer call_data)
-<dd>w<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the Extended List widget
-
-<dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the client data specified by the application
-
-<dd>call_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>a pointer to an Xm18RowInfo structure corrsponding the the row 
+</dd><dd>w<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the Extended List widget
+</dd><dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the client data specified by the application
+</dd><dd>call_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>a pointer to an Xm18RowInfo structure corrsponding the the row 
  selected 
-
-</dl><h2>Sort Function</h2><dl COMPACT><dd>typedef int (Xm18SortFunction) (short column, Xm18RowInfo * row1, Xm18RowInfo * row2);
-<dd>column<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the column currently being sorted
-
-<dd>row1, row2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the two rows being compared. The return value must be an 
+</dd></dl><h2>Sort Function</h2><dl COMPACT><dd>typedef int (Xm18SortFunction) (short column, Xm18RowInfo * row1, Xm18RowInfo * row2);
+</dd><dd>column<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the column currently being sorted
+</dd><dd>row1, row2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the two rows being compared. The return value must be an 
  integer less than, equal to, or greater than 0, depending on whether the first argument is less than, equal to, or greater than the second. 
-
-</dl><h2>Convenience Routines</h2><h2>
-<dt></h2></dl><h2>XmExt18ListGetSelectedRows</h2><dd>Xm18RowInfo ** XmExt18ListGetSelectedRows (Widget w) 
+</dd></dl><h2>Convenience Routines</h2><h2>
+<dt></h2></dt></dl><h2>XmExt18ListGetSelectedRows</h2><dd>Xm18RowInfo ** XmExt18ListGetSelectedRows (Widget w) 
 
  w<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>extended list widget
  
@@ -262,3 +257,4 @@ The Internationalized Extended List widget
  Unselects the row designated by row_info of the passed extended list widget w 
 
 <h2>Copyright</h2>Copyright (c) 1992 by Integrated Computer Solutions, Inc.
+</dd>

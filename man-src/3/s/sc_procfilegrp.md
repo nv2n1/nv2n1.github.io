@@ -11,7 +11,6 @@ description: "sc::ProcFileGrp –"
 <p> The <code>ProcFileGrp</code> concrete class provides an implementation of <code>FileGrp</code> for a single processor.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;fileproc.h&gt;</code></pre>
 <p> Inherits <code>sc::FileGrp</code>.</p>
 <h3>Public Member Functions</h3>

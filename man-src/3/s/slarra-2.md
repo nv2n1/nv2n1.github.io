@@ -20,10 +20,10 @@ description: "slarra.f –"
 <dd>
 <pre> Compute the splitting points with threshold SPLTOL.
  SLARRA sets any &quot;small&quot; off-diagonal elements to zero.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix. N &gt; 0.</pre>
 <p><i>D</i> </p>
@@ -67,16 +67,16 @@ description: "slarra.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Beresford Parlett, University of California, Berkeley, USA </p>
+<dd>Beresford Parlett, University of California, Berkeley, USA </dd>
 <p>&nbsp;<wbr>Jim Demmel, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Inderjit Dhillon, University of Texas, Austin, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
@@ -84,3 +84,4 @@ description: "slarra.f –"
 <p> Definition at line 136 of file slarra.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -15,11 +15,11 @@ snd_soc_jack_notifier_unregister - Unregister a notifier for jack status
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>ASoC jack</dl>
+<dl><dd></dd><dd>ASoC jack</dd></dl>
  
 
  <i>nb</i>
-<dl><dd>Notifier block to unregister</dl>
+<dl><dd>Notifier block to unregister</dd></dl>
 
 <h2>Description</h2>
 

@@ -11,25 +11,25 @@ description: "ndbd_redo_log_reader – check and print content of cluster redo l
 <p> ndbd_redo_log_reader &#8211; check and print content of cluster redo log </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndbd_redo_log_reader </code><i>file_name</i><code> [</code><i>options</i><code>]</code></dl>
+<dt> <code>ndbd_redo_log_reader </code><i>file_name</i><code> [</code><i>options</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Reads a redo log file, checking it for errors, printing its contents in a human-readable format, or both. <code>ndbd_redo_log_reader</code> is intended for use primarily by MySQL developers and support personnel in debugging and diagnosing problems. </p>
+<dd>Reads a redo log file, checking it for errors, printing its contents in a human-readable format, or both. <code>ndbd_redo_log_reader</code> is intended for use primarily by MySQL developers and support personnel in debugging and diagnosing problems. </dd>
 <p> This utility was made available as part of default builds beginning with MySQL Cluster NDB 6.1.3. It remains under development, and its syntax and behavior are subject to change in future releases. For this reason, it should be considered experimental at this time. </p>
 <p> The C++ source files for <code>ndbd_redo_log_reader</code> can be found in the directory /storage/ndb/src/kernel/blocks/dblqh/redoLogReader. </p>
 <p> The following table includes options that are specific to the MySQL Cluster program <code>ndbd_redo_log_reader</code>. Additional descriptions follow the table. For options common to all MySQL Cluster programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq. </p>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ndbd_redo_log_reader <i>file_name</i> [<i>options</i>]
 </pre>
-</dl>
+</dd></dl>
 <p> <i>file_name</i> is the name of a cluster REDO log file. REDO log files are located in the numbered directories under the data node&#8217;s data directory (DataDir); the path under this directory to the REDO log files matches the pattern ndb_<i>#</i>_fs/D<i>#</i>/LCP/<i>#</i>/T<i>#</i>F<i>#</i>.Data. In each case, the <i>#</i> represents a number (not necessarily the same number). For more information, see m[blue]<code>Cluster Data Node FileSystemDir Files</code>m[]<font SIZE="-2">[1]</font>. </p>
 <p> The name of the file to be read may be followed by one or more of the options listed here: </p>
 <dl>
 <dt>
-<dd> * </p>
+</dt><dd> * </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td> <code>Command-Line Format</code> </td>
@@ -53,7 +53,7 @@ ndbd_redo_log_reader <i>file_name</i> [<i>options</i>]
 <p> <code>-noprint</code>: Do not print the contents of the log file.</dl>
 <dl>
 <dt>
-<dd> * </p>
+</dt><dd> * </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td> <code>Command-Line Format</code> </td>
@@ -83,11 +83,11 @@ ndbd_redo_log_reader <i>file_name</i> [<i>options</i>]
 <p> You should have received a copy of the GNU General Public License along with the program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA or see <a rel="nofollow" href="http://www.gnu.org/licenses/.">http://www.gnu.org/licenses/.</a> </p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Cluster Data Node FileSystemDir Files</p>
+<dt> 1.</dt>
+<dd> Cluster Data Node FileSystemDir Files</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html">http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html</a></dl>
+</dt><dd> <a rel="nofollow" href="http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html">http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html</a></dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> For more information, please refer to the MySQL Reference Manual, which may already be installed locally and which is also available online at <a rel="nofollow" href="http://dev.mysql.com/doc/.">http://dev.mysql.com/doc/.</a></p>

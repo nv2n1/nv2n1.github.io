@@ -18,8 +18,8 @@ bson_iter_int64(const bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Fetches the value from a BSON_TYPE_INT64 field. You should verify that this is a BSON_TYPE_INT64 field before calling this function. </p>
 <h2>RETURNS</h2>

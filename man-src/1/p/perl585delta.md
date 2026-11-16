@@ -17,42 +17,42 @@ description: "perl585delta – what is new for perl v5.8.5"
 <p> Perl&#8217;s regular expression engine now contains support for matching on the intersection of two Unicode character classes. You can also now refer to user-defined character classes from within other user defined character classes.</p>
 <h2>Modules and Pragmata</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Carp improved to work nicely with Safe. Carp&#8217;s message reporting should now be anomaly free &#8211; it will always print out line number information.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">CGI</font> upgraded to version 3.05</p>
-<dt>&bull;</p>
-<dd> charnames now avoids clobbering <tt>$_</tt></p>
-<dt>&bull;</p>
-<dd> Digest upgraded to version 1.08</p>
-<dt>&bull;</p>
-<dd> Encode upgraded to version 2.01</p>
-<dt>&bull;</p>
-<dd> FileCache upgraded to version 1.04</p>
-<dt>&bull;</p>
-<dd> libnet upgraded to version 1.19</p>
-<dt>&bull;</p>
-<dd> Pod::Parser upgraded to version 1.28</p>
-<dt>&bull;</p>
-<dd> Pod::Perldoc upgraded to version 3.13</p>
-<dt>&bull;</p>
-<dd> Pod::LaTeX upgraded to version 0.57</p>
-<dt>&bull;</p>
-<dd> Safe now works properly with Carp</p>
-<dt>&bull;</p>
-<dd> Scalar-List-Utils upgraded to version 1.14</p>
-<dt>&bull;</p>
-<dd> Shell&#8217;s documentation has been re-written, and its historical partial auto-quoting of command arguments can now be disabled.</p>
-<dt>&bull;</p>
-<dd> Test upgraded to version 1.25</p>
-<dt>&bull;</p>
-<dd> Test::Harness upgraded to version 2.42</p>
-<dt>&bull;</p>
-<dd> Time::Local upgraded to version 1.10</p>
-<dt>&bull;</p>
-<dd> Unicode::Collate upgraded to version 0.40</p>
-<dt>&bull;</p>
-<dd> Unicode::Normalize upgraded to version 0.30</dl>
+<dt>&bull;</dt>
+<dd> Carp improved to work nicely with Safe. Carp&#8217;s message reporting should now be anomaly free &#8211; it will always print out line number information.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">CGI</font> upgraded to version 3.05</dd>
+<dt>&bull;</dt>
+<dd> charnames now avoids clobbering <tt>$_</tt></dd>
+<dt>&bull;</dt>
+<dd> Digest upgraded to version 1.08</dd>
+<dt>&bull;</dt>
+<dd> Encode upgraded to version 2.01</dd>
+<dt>&bull;</dt>
+<dd> FileCache upgraded to version 1.04</dd>
+<dt>&bull;</dt>
+<dd> libnet upgraded to version 1.19</dd>
+<dt>&bull;</dt>
+<dd> Pod::Parser upgraded to version 1.28</dd>
+<dt>&bull;</dt>
+<dd> Pod::Perldoc upgraded to version 3.13</dd>
+<dt>&bull;</dt>
+<dd> Pod::LaTeX upgraded to version 0.57</dd>
+<dt>&bull;</dt>
+<dd> Safe now works properly with Carp</dd>
+<dt>&bull;</dt>
+<dd> Scalar-List-Utils upgraded to version 1.14</dd>
+<dt>&bull;</dt>
+<dd> Shell&#8217;s documentation has been re-written, and its historical partial auto-quoting of command arguments can now be disabled.</dd>
+<dt>&bull;</dt>
+<dd> Test upgraded to version 1.25</dd>
+<dt>&bull;</dt>
+<dd> Test::Harness upgraded to version 2.42</dd>
+<dt>&bull;</dt>
+<dd> Time::Local upgraded to version 1.10</dd>
+<dt>&bull;</dt>
+<dd> Unicode::Collate upgraded to version 0.40</dd>
+<dt>&bull;</dt>
+<dd> Unicode::Normalize upgraded to version 0.30</dd></dl>
 <h2>Utility Changes</h2>
 <h3>Perl&#8217;s debugger</h3>
 <p> The debugger can now emulate stepping backwards, by restarting and rerunning all bar the last command from a saved command history.</p>
@@ -62,48 +62,45 @@ description: "perl585delta – what is new for perl v5.8.5"
 <p> Perl 5.8.5 should build cleanly from source on LynxOS.</p>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The in-place sort optimisation introduced in 5.8.4 had a bug. For example, in code such as </p>
+<dt>&bull;</dt>
+<dd> The in-place sort optimisation introduced in 5.8.4 had a bug. For example, in code such as </dd>
 <pre>
     @a = sort ($b, @a)
 </pre>
 <p> the result would omit the value <tt>$b</tt>. This is now fixed.</p>
-<dt>&bull;</p>
-<dd> The optimisation for unnecessary assignments introduced in 5.8.4 could give spurious warnings. This has been fixed.</p>
-<dt>&bull;</p>
-<dd> Perl should now correctly detect and read BOM-marked and (BOMless) <font SIZE="-1">UTF-16</font> scripts of either endianness.</p>
-<dt>&bull;</p>
-<dd> Creating a new thread when weak references exist was buggy, and would often cause warnings at interpreter destruction time. The known bug is now fixed.</p>
-<dt>&bull;</p>
-<dd> Several obscure bugs involving manipulating Unicode strings with <tt>&quot;substr&quot;</tt> have been fixed.</p>
-<dt>&bull;</p>
-<dd> Previously if Perl&#8217;s file globbing function encountered a directory that it did not have permission to open it would return immediately, leading to unexpected truncation of the list of results. This has been fixed, to be consistent with Unix shells&#8217; globbing behaviour.</p>
-<dt>&bull;</p>
-<dd> Thread creation time could vary wildly between identical runs. This was caused by a poor hashing algorithm in the thread cloning routines, which has now been fixed.</p>
-<dt>&bull;</p>
-<dd> The internals of the ithreads implementation were not checking if OS-level thread creation had failed. threads-&gt;<code>create()</code> now returns <tt>&quot;undef&quot;</tt> in if thread creation fails instead of crashing perl.</dl>
+<dt>&bull;</dt>
+<dd> The optimisation for unnecessary assignments introduced in 5.8.4 could give spurious warnings. This has been fixed.</dd>
+<dt>&bull;</dt>
+<dd> Perl should now correctly detect and read BOM-marked and (BOMless) <font SIZE="-1">UTF-16</font> scripts of either endianness.</dd>
+<dt>&bull;</dt>
+<dd> Creating a new thread when weak references exist was buggy, and would often cause warnings at interpreter destruction time. The known bug is now fixed.</dd>
+<dt>&bull;</dt>
+<dd> Several obscure bugs involving manipulating Unicode strings with <tt>&quot;substr&quot;</tt> have been fixed.</dd>
+<dt>&bull;</dt>
+<dd> Previously if Perl&#8217;s file globbing function encountered a directory that it did not have permission to open it would return immediately, leading to unexpected truncation of the list of results. This has been fixed, to be consistent with Unix shells&#8217; globbing behaviour.</dd>
+<dt>&bull;</dt>
+<dd> Thread creation time could vary wildly between identical runs. This was caused by a poor hashing algorithm in the thread cloning routines, which has now been fixed.</dd>
+<dt>&bull;</dt>
+<dd> The internals of the ithreads implementation were not checking if OS-level thread creation had failed. threads-&gt;<code>create()</code> now returns <tt>&quot;undef&quot;</tt> in if thread creation fails instead of crashing perl.</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Perl -V has several improvements</p>
+<dt>&bull;</dt>
+<dd> Perl -V has several improvements</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> correctly outputs local patch names that contain embedded code snippets or other characters that used to confuse it.</p>
-<dt>&bull;</p>
-<dd> arguments to -V that look like regexps will give multiple lines of output.</p>
-<dt>&bull;</p>
-<dd> a trailing colon suppresses the linefeed and &#8216;;&#8217; terminator, allowing embedding of queries into shell commands.</p>
-<dt>&bull;</p>
-<dd> a leading colon removes the &#8216;name=&#8217; part of the response, allowing mapping to any name.</dl>
+<dt>&bull;</dt>
+<dd> correctly outputs local patch names that contain embedded code snippets or other characters that used to confuse it.</dd>
+<dt>&bull;</dt>
+<dd> arguments to -V that look like regexps will give multiple lines of output.</dd>
+<dt>&bull;</dt>
+<dd> a trailing colon suppresses the linefeed and &#8216;;&#8217; terminator, allowing embedding of queries into shell commands.</dd>
+<dt>&bull;</dt>
+<dd> a leading colon removes the &#8216;name=&#8217; part of the response, allowing mapping to any name.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> When perl fails to find the specified script, it now outputs a second line suggesting that the user use the <tt>&quot;-S&quot;</tt> flag: </p>
+</dl>
+<dt>&bull;</dt>
+<dd> When perl fails to find the specified script, it now outputs a second line suggesting that the user use the <tt>&quot;-S&quot;</tt> flag: </dd>
 <pre>
     $ perl5.8.5 missing.pl
     Can't open perl script &quot;missing.pl&quot;: No such file or directory.

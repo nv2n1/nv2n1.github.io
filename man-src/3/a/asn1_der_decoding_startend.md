@@ -13,18 +13,18 @@ description: "asn1_der_decoding_startEnd – API function"
 <p> <code>int asn1_der_decoding_startEnd(asn1_node </code><i>element</i><code>, const void * </code><i>ider</i><code>, int </code><i>ider_len</i><code>, const char * </code><i>name_element</i><code>, int * </code><i>start</i><code>, int * </code><i>end</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt>asn1_node element</p>
-<dd>pointer to an ASN1 element</p>
-<dt>const void * ider</p>
-<dd>vector that contains the DER encoding.</p>
-<dt>int ider_len</p>
-<dd>number of bytes of * <i>ider</i> : <i>ider</i> [0].. <i>ider</i> [len-1]</p>
-<dt>const char * name_element</p>
-<dd>an element of NAME structure.</p>
-<dt>int * start</p>
-<dd>the position of the first byte of NAME_ELEMENT decoding ( <i>ider</i> [*start])</p>
-<dt>int * end</p>
-<dd>the position of the last byte of NAME_ELEMENT decoding ( <i>ider</i> [*end])</dl>
+<dt>asn1_node element</dt>
+<dd>pointer to an ASN1 element</dd>
+<dt>const void * ider</dt>
+<dd>vector that contains the DER encoding.</dd>
+<dt>int ider_len</dt>
+<dd>number of bytes of * <i>ider</i> : <i>ider</i> [0].. <i>ider</i> [len-1]</dd>
+<dt>const char * name_element</dt>
+<dd>an element of NAME structure.</dd>
+<dt>int * start</dt>
+<dd>the position of the first byte of NAME_ELEMENT decoding ( <i>ider</i> [*start])</dd>
+<dt>int * end</dt>
+<dd>the position of the last byte of NAME_ELEMENT decoding ( <i>ider</i> [*end])</dd></dl>
 <h2>Description</h2>
 <p>Find the start and end point of an element in a DER encoding string. I mean that if you have a der encoding and you have already used the function <code>asn1_der_decoding()</code> to fill a structure, it may happen that you want to find the piece of string concerning an element of the structure. </p>
 <p> One example is the sequence &quot;tbsCertificate&quot; inside an X509 certificate. </p>
@@ -37,7 +37,7 @@ description: "asn1_der_decoding_startEnd – API function"
 <h2>See Also</h2>
 <p>The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl COMPACT>
-<dd><code>info libtasn1</code></dl>
+<dd><code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl COMPACT>
-<dd><code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+<dd><code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>

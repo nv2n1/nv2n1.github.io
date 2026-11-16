@@ -15,11 +15,11 @@ snd_jack_report - Report the current status of a jack
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>The jack to report status for</dl>
+<dl><dd></dd><dd>The jack to report status for</dd></dl>
  
 
  <i>status</i>
-<dl><dd>The current status of the jack</dl>
+<dl><dd>The current status of the jack</dd></dl>
 
 <h2>Copyright</h2>
 

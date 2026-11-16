@@ -67,12 +67,12 @@ description: "hwlocality_bitmap – The bitmap API"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> CPU sets and nodesets are described in <code>Object Sets (hwloc_cpuset_t and hwloc_nodeset_t)</code>.</dl>
+</dt><dd> CPU sets and nodesets are described in <code>Object Sets (hwloc_cpuset_t and hwloc_nodeset_t)</code>.</dd></dl>
 <p> A bitmap may be of infinite size. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Several examples of using the bitmap API are available under the doc/examples/ directory in the source tree. Regression tests such as tests/hwloc/hwloc_bitmap*.c also make intensive use of this API.</dl>
+</dt><dd> Several examples of using the bitmap API are available under the doc/examples/ directory in the source tree. Regression tests such as tests/hwloc/hwloc_bitmap*.c also make intensive use of this API.</dd></dl>
 <h2>Macro Definition Documentation</h2>
 <h3>#define hwloc_bitmap_foreach_begin(id, bitmap)</h3>
 <p> Loop macro iterating on bitmap bitmap. The loop must start with <code>hwloc_bitmap_foreach_begin()</code> and end with <code>hwloc_bitmap_foreach_end()</code> followed by a terminating &#8216;;&#8217;. </p>
@@ -83,7 +83,7 @@ description: "hwlocality_bitmap – The bitmap API"
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>hwloc_bitmap_foreach_begin()</code></dl>
+</dt><dd> <code>hwloc_bitmap_foreach_begin()</code></dd></dl>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct hwloc_bitmap_s* <code>hwloc_bitmap_t</code></h3>
 <p> Set of bits represented as an opaque pointer to an internal bitmap.</p>
@@ -97,7 +97,7 @@ description: "hwlocality_bitmap – The bitmap API"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> A valid bitmap or NULL.</dl>
+</dt><dd> A valid bitmap or NULL.</dd></dl>
 <p> The bitmap should be freed by a corresponding call to <code>hwloc_bitmap_free()</code>.</p>
 <h3><code>hwloc_bitmap_t</code> hwloc_bitmap_alloc_full (void)</h3>
 <p> Allocate a new full bitmap.</p>
@@ -116,7 +116,7 @@ description: "hwlocality_bitmap – The bitmap API"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This is different from the non-existing hwloc_bitmap_compare_last() which would only compare the highest index of each bitmap.</dl>
+</dt><dd> This is different from the non-existing hwloc_bitmap_compare_last() which would only compare the highest index of each bitmap.</dd></dl>
 <h3>int hwloc_bitmap_compare_first (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2)</h3>
 <p> Compare bitmaps bitmap1 and bitmap2 using their lowest index. Smaller least significant bit is smaller. The empty bitmap is considered higher than anything.</p>
 <h3>void hwloc_bitmap_copy (<code>hwloc_bitmap_t</code> dst, <code>hwloc_const_bitmap_t</code> src)</h3>
@@ -130,7 +130,7 @@ description: "hwlocality_bitmap – The bitmap API"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 if no index is set.</dl>
+</dt><dd> -1 if no index is set.</dd></dl>
 <h3>void hwloc_bitmap_free (<code>hwloc_bitmap_t</code> bitmap)</h3>
 <p> Free bitmap bitmap. If bitmap is NULL, no operation is performed.</p>
 <h3>void hwloc_bitmap_from_ith_ulong (<code>hwloc_bitmap_t</code> bitmap, unsigned i, unsigned long mask)</h3>
@@ -154,7 +154,7 @@ description: "hwlocality_bitmap – The bitmap API"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 if no index is bitmap, or if the index bitmap is infinite.</dl>
+</dt><dd> -1 if no index is bitmap, or if the index bitmap is infinite.</dd></dl>
 <h3>int hwloc_bitmap_list_asprintf (char ** strp, <code>hwloc_const_bitmap_t</code> bitmap)</h3>
 <p> Stringify a bitmap into a newly allocated list string.</p>
 <h3>int hwloc_bitmap_list_snprintf (char *restrict buf, size_t buflen, <code>hwloc_const_bitmap_t</code> bitmap)</h3>
@@ -164,4 +164,5 @@ description: "hwlocality_bitmap – The bitmap API"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending 
+</dt><dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending 
+</dd></dl>

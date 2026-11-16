@@ -15,15 +15,15 @@ get_options - Parse a string into a list of integers
 <h2>Arguments</h2>
 
 <i>str</i>
-<dl><dd><dd>String to be parsed</dl>
+<dl><dd></dd><dd>String to be parsed</dd></dl>
  
 
  <i>nints</i>
-<dl><dd>size of integer array</dl>
+<dl><dd>size of integer array</dd></dl>
  
 
  <i>ints</i>
-<dl><dd>integer array</dl>
+<dl><dd>integer array</dd></dl>
 
 <h2>Description</h2>
 

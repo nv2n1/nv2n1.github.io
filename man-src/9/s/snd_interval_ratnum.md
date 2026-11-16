@@ -15,23 +15,23 @@ snd_interval_ratnum - refine the interval value
 <h2>Arguments</h2>
 
 <i>i</i>
-<dl><dd><dd>interval to refine</dl>
+<dl><dd></dd><dd>interval to refine</dd></dl>
  
 
  <i>rats_count</i>
-<dl><dd>number of ratnum_t</dl>
+<dl><dd>number of ratnum_t</dd></dl>
  
 
  <i>rats</i>
-<dl><dd>ratnum_t array</dl>
+<dl><dd>ratnum_t array</dd></dl>
  
 
  <i>nump</i>
-<dl><dd>pointer to store the resultant numerator</dl>
+<dl><dd>pointer to store the resultant numerator</dd></dl>
  
 
  <i>denp</i>
-<dl><dd>pointer to store the resultant denominator</dl>
+<dl><dd>pointer to store the resultant denominator</dd></dl>
 
 <h2>Return</h2>
 

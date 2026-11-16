@@ -15,52 +15,50 @@ description: "tifficc – little cms ICC profile applier for TIFF."
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>tifficc </code> is little cms ICC profile applier for TIFF.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Handle channels &gt; 4 as alpha.</p>
-<dt><code>-b </code></p>
-<dd> Black point compensation.</p>
-<dt><code>-c &lt;0,1,2,3&gt;</code></p>
-<dd> Precalculates transform. (0=Off, 1=Normal, 2=Hi-res, 3=LoRes) [defaults to 1]</p>
-<dt><code>-e</code></p>
-<dd> Embed destination profile.</p>
-<dt><code>-g</code></p>
-<dd> Marks out-of-gamut colors on softproof.</p>
-<dt><code>-h &lt;0,1,2&gt;</code></p>
-<dd> Show summary of options and examples.</p>
-<dt><code>-i profile</code></p>
-<dd> Input profile (defaults to sRGB).</p>
-<dt><code>-k &lt;0..400&gt; </code></p>
-<dd> Ink-limiting in % (CMYK only).</p>
-<dt><code>-l profile</code></p>
-<dd> Transform by device-link profile.</p>
-<dt><code>-m &lt;0,1,2,3&gt;</code></p>
-<dd> SoftProof intent.</p>
-<dt><code>-n</code></p>
-<dd> Ignore embedded profile on input.</p>
-<dt><code>-p&nbsp;<wbr></code><i>profile</i></p>
-<dd> Soft proof profile.</p>
-<dt><code>-o&nbsp;<wbr></code><i>profile</i></p>
-<dd> Output profile (defaults to sRGB).</p>
-<dt><code>-s&nbsp;<wbr></code><i>profile</i></p>
-<dd> Save embedded profile as &lt;new profile&gt;</p>
-<dt><code>-t &lt;0,1,2,3&gt;</code></p>
-<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</p>
-<dt><code>-v</code></p>
-<dd> Verbose.</p>
-<dt><code>-w</code></p>
-<dd> Wide output (generates 16 bps tiff).</p>
-<dt>You can also use following builtins</p>
-<dd> *Lab &#8211; CIE Lab D50 based *XYZ &#8211; XYZ *adobe1998RBB &#8211; AdobeRGB *colormatchrgb &#8211; ColorMatch RGB *applergb &#8211; Apple RGB</dl>
+<dt><code>-a</code></dt>
+<dd> Handle channels &gt; 4 as alpha.</dd>
+<dt><code>-b </code></dt>
+<dd> Black point compensation.</dd>
+<dt><code>-c &lt;0,1,2,3&gt;</code></dt>
+<dd> Precalculates transform. (0=Off, 1=Normal, 2=Hi-res, 3=LoRes) [defaults to 1]</dd>
+<dt><code>-e</code></dt>
+<dd> Embed destination profile.</dd>
+<dt><code>-g</code></dt>
+<dd> Marks out-of-gamut colors on softproof.</dd>
+<dt><code>-h &lt;0,1,2&gt;</code></dt>
+<dd> Show summary of options and examples.</dd>
+<dt><code>-i profile</code></dt>
+<dd> Input profile (defaults to sRGB).</dd>
+<dt><code>-k &lt;0..400&gt; </code></dt>
+<dd> Ink-limiting in % (CMYK only).</dd>
+<dt><code>-l profile</code></dt>
+<dd> Transform by device-link profile.</dd>
+<dt><code>-m &lt;0,1,2,3&gt;</code></dt>
+<dd> SoftProof intent.</dd>
+<dt><code>-n</code></dt>
+<dd> Ignore embedded profile on input.</dd>
+<dt><code>-p&nbsp;<wbr></code><i>profile</i></dt>
+<dd> Soft proof profile.</dd>
+<dt><code>-o&nbsp;<wbr></code><i>profile</i></dt>
+<dd> Output profile (defaults to sRGB).</dd>
+<dt><code>-s&nbsp;<wbr></code><i>profile</i></dt>
+<dd> Save embedded profile as &lt;new profile&gt;</dd>
+<dt><code>-t &lt;0,1,2,3&gt;</code></dt>
+<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose.</dd>
+<dt><code>-w</code></dt>
+<dd> Wide output (generates 16 bps tiff).</dd>
+<dt>You can also use following builtins</dt>
+<dd> *Lab &#8211; CIE Lab D50 based *XYZ &#8211; XYZ *adobe1998RBB &#8211; AdobeRGB *colormatchrgb &#8211; ColorMatch RGB *applergb &#8211; Apple RGB</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 To color correct from scanner to sRGB:
         tifficc -iscanner.icm in.tif out.tif
 To convert from monitor1 to monitor2:
         tifficc -imon1.icm -omon2.icm in.tif out.tif
-        
 To make a CMYK separation:
         tifficc -oprinter.icm inrgb.tif outcmyk.tif
-        
 To recover sRGB from a CMYK separation:
         tifficc -iprinter.icm incmyk.tif outrgb.tif
 To convert from CIELab TIFF to sRGB

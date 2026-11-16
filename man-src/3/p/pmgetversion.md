@@ -21,7 +21,6 @@ description: "pmGetVersion – fetch installed PCP version number"
 <h2>Example</h2>
 <p>The following C fragment demonstrates the use of both the compile-time macros and the run-time <code>pmGetVersion</code> function for an application that should not be built for PCP versions older than 3.10.5, but after that there are two alternative implementations with a newer (faster, sweeter, smaller) variant of the XYZ service that only becoming available in PCP 4.0.0. </p>
 <pre><code>#include &lt;pcp/pmapi.h&gt;
-
 #ifdef PM_VERSION_CURRENT
 #if PM_VERSION_CURRENT &lt; PM_VERSION(3, 10, 5)
 /* no pmGetVersion() before PCP 3.10.5 */

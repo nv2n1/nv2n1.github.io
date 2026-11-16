@@ -10,10 +10,10 @@ description: "papd – AppleTalk print server daemon"
 <p>papd &#8211; AppleTalk print server daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>papd</code> [-d] [-f configfile] [-p printcap]</dl>
+<dt> <code>papd</code> [-d] [-f configfile] [-p printcap]</dt></dl>
 <h2>Description</h2>
 <p><code>papd</code></p>
-<dd>is the AppleTalk printer daemon. This daemon accepts print jobs from AppleTalk clients (typically Macintosh computers) using the Printer Access Protocol (PAP). When used with System V printing systems, <code>papd</code> spools jobs directly into an <code>lpd</code>(8) spool directory and wakes up <code>lpd</code> after accepting a job from the network to have it re-examine the appropriate spool directory. The actual printing and spooling is handled entirely by <code>lpd</code>. </p>
+<dd>is the AppleTalk printer daemon. This daemon accepts print jobs from AppleTalk clients (typically Macintosh computers) using the Printer Access Protocol (PAP). When used with System V printing systems, <code>papd</code> spools jobs directly into an <code>lpd</code>(8) spool directory and wakes up <code>lpd</code> after accepting a job from the network to have it re-examine the appropriate spool directory. The actual printing and spooling is handled entirely by <code>lpd</code>. </dd>
 <p> <code>papd</code> can also pipe the print job to an external program for processing, and this is the preferred method on systems not using CUPS to avoid compatibility problems with all the flavours of <code>lpd</code> in use. </p>
 <p> As of version 2.0, CUPS is also supported. Simply using <code>cupsautoadd</code> as first papd.conf entry will share all CUPS printers automagically using the PPD files configured in CUPS. It ist still possible to overwrite these defaults by individually define printer shares. See <code>papd.conf</code>(5) for details. </p>
 <p> <code>papd</code> is typically started at boot time, out of system init scripts. It first reads from its configuration file, /etc/atalk//papd.conf. The file is in the same format as /etc/printcap. See <code>printcap</code>(5) for details. The name of the entry is registered with NBP. </p>
@@ -102,28 +102,28 @@ description: "papd – AppleTalk print server daemon"
 <h2>Options</h2>
 <p>-d</p>
 <dl>
-<dd>Do not fork or disassociate from the terminal. Write some debugging information to stderr.</dl>
+<dd>Do not fork or disassociate from the terminal. Write some debugging information to stderr.</dd></dl>
 <p> -f <i>configfile</i></p>
 <dl>
-<dd>Consult <i>configfile</i> instead of /etc/atalk//papd.conf for the configuration information.</dl>
+<dd>Consult <i>configfile</i> instead of /etc/atalk//papd.conf for the configuration information.</dd></dl>
 <p> -p <i>printcap</i></p>
 <dl>
-<dd>Consult <i>printcap</i> instead of /etc/printcap for LPD configuration information.</dl>
+<dd>Consult <i>printcap</i> instead of /etc/printcap for LPD configuration information.</dd></dl>
 <h2>Notes</h2>
 <p>PSSP (Print Server Security Protocol) is an authentication protocol carried out through postscript printer queries to the print server. Using PSSP requires LaserWriter 8.6.1 or greater on the client mac. The user will be prompted to enter their username and password before they print. It may be necessary to re-setup the printer on each client the first time PSSP is enabled, so that the client can figure out that authentication is required to print. You can enable PSSP on a per-printer basis. PSSP is the recommended method of authenticating printers as it is more robust than CAP-style authentication, described below. CAP-style authentication gets its name from the method the CAP (Columbia APpletalk) package used to authenticate its mac clients&#8217; printing. This method requires that a user login to a file share before they print. <code>afpd</code> records the username in a temporary file named after the client&#8217;s Appletalk address, and it deletes the temporary file when the user disconnects. Therefore CAP style authentification will <i>not</i> work for clients connected to <code>afpd</code> via TCP/IP. <code>papd</code> gets the username from the file with the same Appletalk address as the machine connecting to it. CAP-style authentication will work with any mac client. If both CAP and PSSP are enabled for a particular printer, CAP will be tried first, then <code>papd</code> will fall back to PSSP. The list of UAMs to use for authentication (specified with the &#8216;am&#8217; option) applies to all printers. It is not possible to define different authentication methods on each printer. You can specify the list of UAMS multiple times, but only the last setting will be used. Currently only uams_guest.so and uams_clrtxt.so are supported as printer authentication methods. The guest method requires a valid username, but not a password. The Cleartext UAM requires both a valid username and the correct password.</p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- As of this writing, Mac OS X makes no use of PSSP authentication any longer. CAP-style authentication normally won&#8217;t be an option, too caused by the use of AFP over TCP these days. </p>
+ As of this writing, Mac OS X makes no use of PSSP authentication any longer. CAP-style authentication normally won&#8217;t be an option, too caused by the use of AFP over TCP these days. </dd>
 <h2>Files</h2>
 <p>/etc/atalk//papd.conf</p>
 <dl>
-<dd>Default configuration file.</dl>
+<dd>Default configuration file.</dd></dl>
 <p> /etc/printcap</p>
 <dl>
-<dd>Printer capabilities database.</dl>
+<dd>Printer capabilities database.</dd></dl>
 <p> .ppd</p>
 <dl>
-<dd>PostScript Printer Description file. papd answers configuration and font queries from printing clients by consulting the configured PPD file. Such files are available for download from Adobe, Inc. (m[blue]<code><a rel="nofollow" href="http://www.adobe.com/support/downloads/main.htm">http://www.adobe.com/support/downloads/main.htm</a></code>m[]<font SIZE="-2">[1]</font>), or from the printer&#8217;s manufacturer. If no PPD file is configured, papd will return the default answer, possibly causing the client to send excessively large jobs.</dl>
+<dd>PostScript Printer Description file. papd answers configuration and font queries from printing clients by consulting the configured PPD file. Such files are available for download from Adobe, Inc. (m[blue]<code><a rel="nofollow" href="http://www.adobe.com/support/downloads/main.htm">http://www.adobe.com/support/downloads/main.htm</a></code>m[]<font SIZE="-2">[1]</font>), or from the printer&#8217;s manufacturer. If no PPD file is configured, papd will return the default answer, possibly causing the client to send excessively large jobs.</dd></dl>
 <h2>Caveats</h2>
 <p><code>papd</code> accepts characters with the high bit set (a full 8-bits) from the clients, but some PostScript printers (including Apple Computer&#8217;s LaserWriter family) only accept 7-bit characters on their serial interface by default. The same applies for some printers when they&#8217;re accessed via TCP/IP methods (remote LPR or socket). You will need to configure your printer to accept a full 8 bits or take special precautions and convert the printjob&#8217;s encoding (eg. by using <code>co=&quot;protocol=BCP&quot;</code> when using CUPS 1.1.19 or above). </p>
 <p> When printing clients run MacOS 10.2 or above, take care that PPDs do not make use of <code>*cupsFilter:</code> comments unless the appropriate filters are installed at the client&#8217;s side, too (remember: Starting with 10.2 Apple chose to integrate CUPS into MacOS X). For in-depth information on how CUPS uses PPDs see chapter 3.4 in m[blue]<code> <a rel="nofollow" href="http://tinyurl.com/zbxn">http://tinyurl.com/zbxn</a></code>m[]<font SIZE="-2">[2]</font>).</p>
@@ -131,11 +131,12 @@ description: "papd – AppleTalk print server daemon"
 <p><code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1),<code><a href="/docs/linux/man/1-lprm/">lprm</a></code>(1),<code>printcap</code>(5),<code><a href="/docs/linux/man/8-lpc/">lpc</a></code>(8),<code>lpd</code>(8), <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1).</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd><a rel="nofollow" href="http://www.adobe.com/support/downloads/main.htm">http://www.adobe.com/support/downloads/main.htm</a></p>
+<dt> 1.</dt>
+<dd><a rel="nofollow" href="http://www.adobe.com/support/downloads/main.htm">http://www.adobe.com/support/downloads/main.htm</a></dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.adobe.com/support/downloads/main.html#Printer">http://www.adobe.com/support/downloads/main.html#Printer</a></dl>
-<dt> 2.</p>
-<dd><a rel="nofollow" href="http://tinyurl.com/zbxn">http://tinyurl.com/zbxn</a></p>
+<dd><a rel="nofollow" href="http://www.adobe.com/support/downloads/main.html#Printer">http://www.adobe.com/support/downloads/main.html#Printer</a></dd></dl>
+<dt> 2.</dt>
+<dd><a rel="nofollow" href="http://tinyurl.com/zbxn">http://tinyurl.com/zbxn</a></dd>
 <dl>
-<dd><a rel="nofollow" href="http://tinyurl.com/zbxn">http://tinyurl.com/zbxn</a></dl>
+<dd><a rel="nofollow" href="http://tinyurl.com/zbxn">http://tinyurl.com/zbxn</a></dd></dl>
+</dl></dl>

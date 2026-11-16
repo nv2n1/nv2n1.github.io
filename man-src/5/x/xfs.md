@@ -20,61 +20,61 @@ description: "xfs – layout, mount options, and supported file attributes for t
 <h2>Mount Options</h2>
 <p>The following XFS-specific mount options may be used when mounting an XFS filesystem. Other generic options may be used as well; refer to the <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) manual page for more details.</p>
 <dl>
-<dt><code>allocsize=size</code></p>
-<dd>Sets the buffered I/O end-of-file preallocation size when doing delayed allocation writeout. Valid values for this option are page size (typically 4KiB) through to 1GiB, inclusive, in power-of-2 increments. </p>
+<dt><code>allocsize=size</code></dt>
+<dd>Sets the buffered I/O end-of-file preallocation size when doing delayed allocation writeout. Valid values for this option are page size (typically 4KiB) through to 1GiB, inclusive, in power-of-2 increments. </dd>
 <p> The default behavior is for dynamic end-of-file preallocation size, which uses a set of heuristics to optimise the preallocation size based on the current allocation patterns within the file and the access patterns to the file. Specifying a fixed allocsize value turns off the dynamic behavior.</p>
-<dt><code>attr2</code>|<code>noattr2</code></p>
-<dd>The options enable/disable an &quot;opportunistic&quot; improvement to be made in the way inline extended attributes are stored on-disk. When the new form is used for the first time when attr2 is selected (either when setting or removing extended attributes) the on-disk superblock feature bit field will be updated to reflect this format being in use. </p>
+<dt><code>attr2</code>|<code>noattr2</code></dt>
+<dd>The options enable/disable an &quot;opportunistic&quot; improvement to be made in the way inline extended attributes are stored on-disk. When the new form is used for the first time when attr2 is selected (either when setting or removing extended attributes) the on-disk superblock feature bit field will be updated to reflect this format being in use. </dd>
 <p> The default behavior is determined by the on-disk feature bit indicating that attr2 behavior is active. If either mount option it set, then that becomes the new default used by the filesystem. </p>
 <p> CRC enabled filesystems always use the attr2 format, and so will reject the noattr2 mount option if it is set.</p>
-<dt><code>discard</code>|<code>nodiscard</code></p>
-<dd>Enable/disable the issuing of commands to let the block device reclaim space freed by the filesystem. This is useful for SSD devices, thinly provisioned LUNs and virtual machine images, but may have a performance impact. </p>
+<dt><code>discard</code>|<code>nodiscard</code></dt>
+<dd>Enable/disable the issuing of commands to let the block device reclaim space freed by the filesystem. This is useful for SSD devices, thinly provisioned LUNs and virtual machine images, but may have a performance impact. </dd>
 <p> Note: It is currently recommended that you use the fstrim application to discard unused blocks rather than the discard mount option because the performance impact of this option is quite severe. For this reason, nodiscard is the default.</p>
-<dt><code>grpid</code>|<code>bsdgroups</code>|<code>nogrpid</code>|<code>sysvgroups</code></p>
-<dd>These options define what group ID a newly created file gets. When grpid is set, it takes the group ID of the directory in which it is created; otherwise it takes the fsgid of the current process, unless the directory has the setgid bit set, in which case it takes the gid from the parent directory, and also gets the setgid bit set if it is a directory itself.</p>
-<dt><code>filestreams</code></p>
-<dd>Make the data allocator use the filestreams allocation mode across the entire filesystem rather than just on directories configured to use it.</p>
-<dt><code>ikeep</code>|<code>noikeep</code></p>
-<dd>When ikeep is specified, XFS does not delete empty inode clusters and keeps them around on disk. When noikeep is specified, empty inode clusters are returned to the free space pool. noikeep is the default.</p>
-<dt><code>inode32</code>|<code>inode64</code></p>
-<dd>When inode32 is specified, it indicates that XFS limits inode creation to locations which will not result in inode numbers with more than 32 bits of significance. </p>
+<dt><code>grpid</code>|<code>bsdgroups</code>|<code>nogrpid</code>|<code>sysvgroups</code></dt>
+<dd>These options define what group ID a newly created file gets. When grpid is set, it takes the group ID of the directory in which it is created; otherwise it takes the fsgid of the current process, unless the directory has the setgid bit set, in which case it takes the gid from the parent directory, and also gets the setgid bit set if it is a directory itself.</dd>
+<dt><code>filestreams</code></dt>
+<dd>Make the data allocator use the filestreams allocation mode across the entire filesystem rather than just on directories configured to use it.</dd>
+<dt><code>ikeep</code>|<code>noikeep</code></dt>
+<dd>When ikeep is specified, XFS does not delete empty inode clusters and keeps them around on disk. When noikeep is specified, empty inode clusters are returned to the free space pool. noikeep is the default.</dd>
+<dt><code>inode32</code>|<code>inode64</code></dt>
+<dd>When inode32 is specified, it indicates that XFS limits inode creation to locations which will not result in inode numbers with more than 32 bits of significance. </dd>
 <p> When inode64 is specified, it indicates that XFS is allowed to create inodes at any location in the filesystem, including those which will result in inode numbers occupying more than 32 bits of significance. </p>
 <p> inode32 is provided for backwards compatibility with older systems and applications, since 64 bits inode numbers might cause problems for some applications that cannot handle large inode numbers. If applications are in use which do not handle inode numbers bigger than 32 bits, the inode32 option should be specified. </p>
 <p> For kernel v3.7 and later, inode64 is the default.</p>
-<dt><code>largeio</code>|<code>nolargeio</code></p>
-<dd>If &quot;nolargeio&quot; is specified, the optimal I/O reported in st_blksize by <a href="/docs/linux/man/2-stat/">stat</a>(2) will be as small as possible to allow user applications to avoid inefficient read/modify/write I/O. This is typically the page size of the machine, as this is the granularity of the page cache. </p>
+<dt><code>largeio</code>|<code>nolargeio</code></dt>
+<dd>If &quot;nolargeio&quot; is specified, the optimal I/O reported in st_blksize by <a href="/docs/linux/man/2-stat/">stat</a>(2) will be as small as possible to allow user applications to avoid inefficient read/modify/write I/O. This is typically the page size of the machine, as this is the granularity of the page cache. </dd>
 <p> If &quot;largeio&quot; specified, a filesystem that was created with a &quot;swidth&quot; specified will return the &quot;swidth&quot; value (in bytes) in st_blksize. If the filesystem does not have a &quot;swidth&quot; specified but does specify an &quot;allocsize&quot; then &quot;allocsize&quot; (in bytes) will be returned instead. Otherwise the behavior is the same as if &quot;nolargeio&quot; was specified. nolargeio is the default.</p>
-<dt><code>logbufs=value</code></p>
-<dd>Set the number of in-memory log buffers. Valid numbers range from 2-8 inclusive. </p>
+<dt><code>logbufs=value</code></dt>
+<dd>Set the number of in-memory log buffers. Valid numbers range from 2-8 inclusive. </dd>
 <p> The default value is 8 buffers. </p>
 <p> If the memory cost of 8 log buffers is too high on small systems, then it may be reduced at some cost to performance on metadata intensive workloads. The logbsize option below controls the size of each buffer and so is also relevant to this case.</p>
-<dt><code>logbsize=value</code></p>
-<dd>Set the size of each in-memory log buffer. The size may be specified in bytes, or in kibibytes (KiB) with a &quot;k&quot; suffix. Valid sizes for version 1 and version 2 logs are 16384 (value=16k) and 32768 (value=32k). Valid sizes for version 2 logs also include 65536 (value=64k), 131072 (value=128k) and 262144 (value=256k). The logbsize must be an integer multiple of the log stripe unit configured at mkfs time. </p>
+<dt><code>logbsize=value</code></dt>
+<dd>Set the size of each in-memory log buffer. The size may be specified in bytes, or in kibibytes (KiB) with a &quot;k&quot; suffix. Valid sizes for version 1 and version 2 logs are 16384 (value=16k) and 32768 (value=32k). Valid sizes for version 2 logs also include 65536 (value=64k), 131072 (value=128k) and 262144 (value=256k). The logbsize must be an integer multiple of the log stripe unit configured at mkfs time. </dd>
 <p> The default value for version 1 logs is 32768, while the default value for version 2 logs is max(32768, log_sunit).</p>
-<dt><code>logdev=device</code> and <code>rtdev=device</code></p>
-<dd>Use an external log (metadata journal) and/or real-time device. An XFS filesystem has up to three parts: a data section, a log section, and a real-time section. The real-time section is optional, and the log section can be separate from the data section or contained within it.</p>
-<dt><code>noalign</code></p>
-<dd>Data allocations will not be aligned at stripe unit boundaries. This is only relevant to filesystems created with non-zero data alignment parameters (sunit, swidth) by mkfs.</p>
-<dt><code>norecovery</code></p>
-<dd>The filesystem will be mounted without running log recovery. If the filesystem was not cleanly unmounted, it is likely to be inconsistent when mounted in &quot;norecovery&quot; mode. Some files or directories may not be accessible because of this. Filesystems mounted &quot;norecovery&quot; must be mounted read-only or the mount will fail.</p>
-<dt><code>nouuid</code></p>
-<dd>Don&#8217;t check for double mounted file systems using the file system uuid. This is useful to mount LVM snapshot volumes, and often used in combination with &quot;norecovery&quot; for mounting read-only snapshots.</p>
-<dt><code>noquota</code></p>
-<dd>Forcibly turns off all quota accounting and enforcement within the filesystem.</p>
-<dt><code>uquota/usrquota/quota/uqnoenforce/qnoenforce</code></p>
-<dd>User disk quota accounting enabled, and limits (optionally) enforced. Refer to <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8) for further details.</p>
-<dt><code>gquota/grpquota/gqnoenforce</code></p>
-<dd>Group disk quota accounting enabled and limits (optionally) enforced. Refer to <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8) for further details.</p>
-<dt><code>pquota/prjquota/pqnoenforce</code></p>
-<dd>Project disk quota accounting enabled and limits (optionally) enforced. Refer to <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8) for further details.</p>
-<dt><code>sunit=value</code> and <code>swidth=value</code></p>
-<dd>Used to specify the stripe unit and width for a RAID device or a stripe volume. &quot;value&quot; must be specified in 512-byte block units. These options are only relevant to filesystems that were created with non-zero data alignment parameters. </p>
+<dt><code>logdev=device</code> and <code>rtdev=device</code></dt>
+<dd>Use an external log (metadata journal) and/or real-time device. An XFS filesystem has up to three parts: a data section, a log section, and a real-time section. The real-time section is optional, and the log section can be separate from the data section or contained within it.</dd>
+<dt><code>noalign</code></dt>
+<dd>Data allocations will not be aligned at stripe unit boundaries. This is only relevant to filesystems created with non-zero data alignment parameters (sunit, swidth) by mkfs.</dd>
+<dt><code>norecovery</code></dt>
+<dd>The filesystem will be mounted without running log recovery. If the filesystem was not cleanly unmounted, it is likely to be inconsistent when mounted in &quot;norecovery&quot; mode. Some files or directories may not be accessible because of this. Filesystems mounted &quot;norecovery&quot; must be mounted read-only or the mount will fail.</dd>
+<dt><code>nouuid</code></dt>
+<dd>Don&#8217;t check for double mounted file systems using the file system uuid. This is useful to mount LVM snapshot volumes, and often used in combination with &quot;norecovery&quot; for mounting read-only snapshots.</dd>
+<dt><code>noquota</code></dt>
+<dd>Forcibly turns off all quota accounting and enforcement within the filesystem.</dd>
+<dt><code>uquota/usrquota/quota/uqnoenforce/qnoenforce</code></dt>
+<dd>User disk quota accounting enabled, and limits (optionally) enforced. Refer to <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8) for further details.</dd>
+<dt><code>gquota/grpquota/gqnoenforce</code></dt>
+<dd>Group disk quota accounting enabled and limits (optionally) enforced. Refer to <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8) for further details.</dd>
+<dt><code>pquota/prjquota/pqnoenforce</code></dt>
+<dd>Project disk quota accounting enabled and limits (optionally) enforced. Refer to <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8) for further details.</dd>
+<dt><code>sunit=value</code> and <code>swidth=value</code></dt>
+<dd>Used to specify the stripe unit and width for a RAID device or a stripe volume. &quot;value&quot; must be specified in 512-byte block units. These options are only relevant to filesystems that were created with non-zero data alignment parameters. </dd>
 <p> The sunit and swidth parameters specified must be compatible with the existing filesystem alignment characteristics. In general, that means the only valid changes to sunit are increasing it by a power-of-2 multiple. Valid swidth values are any integer multiple of a valid sunit value. </p>
 <p> Typically the only time these mount options are necessary if after an underlying RAID device has had it&#8217;s geometry modified, such as adding a new disk to a RAID5 lun and reshaping it.</p>
-<dt><code>swalloc</code></p>
-<dd>Data allocations will be rounded up to stripe width boundaries when the current end of file is being extended and the file size is larger than the stripe width size.</p>
-<dt><code>wsync</code></p>
-<dd>When specified, all filesystem namespace operations are executed synchronously. This ensures that when the namespace operation (create, unlink, etc) completes, the change to the namespace is on stable storage. This is useful in HA setups where failover must not result in clients seeing inconsistent namespace presentation during or after a failover event.</dl>
+<dt><code>swalloc</code></dt>
+<dd>Data allocations will be rounded up to stripe width boundaries when the current end of file is being extended and the file size is larger than the stripe width size.</dd>
+<dt><code>wsync</code></dt>
+<dd>When specified, all filesystem namespace operations are executed synchronously. This ensures that when the namespace operation (create, unlink, etc) completes, the change to the namespace is on stable storage. This is useful in HA setups where failover must not result in clients seeing inconsistent namespace presentation during or after a failover event.</dd></dl>
 <h2>Removed Mount Options</h2>
 <p>The following mount options have been removed from the kernel, and will yield mount failures if specified. Mount options are deprecated for a significant period time prior to removal. </p>
 <table>

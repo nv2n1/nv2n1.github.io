@@ -18,8 +18,8 @@ description: "wpa_selinux – Security Enhanced Linux Policy for the wpa process
 <p> wpa_cli_exec_t </code> </p>
 <p> &#8211; Set files with the wpa_cli_exec_t type, if you want to transition an executable to the wpa_cli_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/wpa_cli, /sbin/wpa_cli </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/wpa_cli, /sbin/wpa_cli </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanantly change the file context you need to use the <code>semanage fcontext </code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Process Types</h2>

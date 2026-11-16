@@ -18,26 +18,26 @@ description: "wrudf – Maintain an UDF filesystem."
 <p> <code>wrudf</code> provides an interactive shell with operations on existing UDF filesystem: cp, rm, mkdir, rmdir, ls, cd.</p>
 <h3>COMMANDS</h3>
 <dl>
-<dt><code>cp</code></p>
-<dd> copy</p>
-<dt><code>rm</code></p>
-<dd> remove</p>
-<dt><code>mkdir</code></p>
-<dd> make directory</p>
-<dt><code>rmdir</code></p>
-<dd> remove directory</p>
-<dt><code>lsc</code></p>
-<dd> list files (Compact disc version)</p>
-<dt><code>lsh</code></p>
-<dd> list files (Hard disc version)</p>
-<dt><code>cdc</code></p>
-<dd> change working directory (Compact disc)</p>
-<dt><code>cdh</code></p>
-<dd> change working directory (Hard disc)</p>
-<dt><code>quit</code></p>
-<dd> quit <code>wrudf</code></p>
-<dt><code>exit</code></p>
-<dd> quit <code>wrudf</code></dl>
+<dt><code>cp</code></dt>
+<dd> copy</dd>
+<dt><code>rm</code></dt>
+<dd> remove</dd>
+<dt><code>mkdir</code></dt>
+<dd> make directory</dd>
+<dt><code>rmdir</code></dt>
+<dd> remove directory</dd>
+<dt><code>lsc</code></dt>
+<dd> list files (Compact disc version)</dd>
+<dt><code>lsh</code></dt>
+<dd> list files (Hard disc version)</dd>
+<dt><code>cdc</code></dt>
+<dd> change working directory (Compact disc)</dd>
+<dt><code>cdh</code></dt>
+<dd> change working directory (Hard disc)</dd>
+<dt><code>quit</code></dt>
+<dd> quit <code>wrudf</code></dd>
+<dt><code>exit</code></dt>
+<dd> quit <code>wrudf</code></dd></dl>
 <h2>AVAILABILITY</h2>
 <p> <code>wrudf</code> is part of the udftools package and is available from <a rel="nofollow" href="http://linux-udf.sourceforge.net.">http://linux-udf.sourceforge.net.</a></p>
 <h2>SEE ALSO</h2>

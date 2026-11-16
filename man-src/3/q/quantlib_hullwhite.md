@@ -33,10 +33,10 @@ description: "QuantLib::HullWhite – Single-factor Hull-White (extended Vasicek
 <p> This class implements the standard single-factor Hull-White model defined by [ dr_t = ( heta(t) &#8211; lpha r_t)dt + igma dW_t ] where $ lpha $ and $ igma $ are constants. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calibration results are tested against cached values</dl>
+<dd>calibration results are tested against cached values</dd></dl>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>When the term structure is relinked, the r0 parameter of the underlying <code>Vasicek</code> model is not updated.</dl>
+<dd>When the term structure is relinked, the r0 parameter of the underlying <code>Vasicek</code> model is not updated.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, and <code>CallableBonds.cpp</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -44,6 +44,6 @@ description: "QuantLib::HullWhite – Single-factor Hull-White (extended Vasicek
 <p>Futures convexity bias (i.e., the difference between futures implied rate and forward rate) calculated as in G. Kirikos, D. Novak, &#8216;Convexity Conundrums&#8217;, Risk Magazine, March 1997. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>t and T should be expressed in yearfraction using deposit day counter, F_quoted is futures&#8217; market price.</dl>
+<dd>t and T should be expressed in yearfraction using deposit day counter, F_quoted is futures&#8217; market price.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

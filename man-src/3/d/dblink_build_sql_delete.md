@@ -22,19 +22,19 @@ dblink_build_sql_delete(text relname,
 <p> <i>relname</i></p>
 <dl>
 <dt>
-<dd> Name of a local relation, for example foo or myschema.mytab. Include double quotes if the name is mixed-case or contains special characters, for example &quot;FooBar&quot;; without quotes, the string will be folded to lower case.</dl>
+</dt><dd> Name of a local relation, for example foo or myschema.mytab. Include double quotes if the name is mixed-case or contains special characters, for example &quot;FooBar&quot;; without quotes, the string will be folded to lower case.</dd></dl>
 <p> <i>primary_key_attnums</i></p>
 <dl>
 <dt>
-<dd> Attribute numbers (1-based) of the primary key fields, for example 1 2.</dl>
+</dt><dd> Attribute numbers (1-based) of the primary key fields, for example 1 2.</dd></dl>
 <p> <i>num_primary_key_atts</i></p>
 <dl>
 <dt>
-<dd> The number of primary key fields.</dl>
+</dt><dd> The number of primary key fields.</dd></dl>
 <p> <i>tgt_pk_att_vals_array</i></p>
 <dl>
 <dt>
-<dd> Values of the primary key fields to be used in the resulting <code>DELETE</code> command. Each field is represented in text form.</dl>
+</dt><dd> Values of the primary key fields to be used in the resulting <code>DELETE</code> command. Each field is represented in text form.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns the requested SQL statement as text.</p>
 <h2>NOTES</h2>
@@ -42,10 +42,10 @@ dblink_build_sql_delete(text relname,
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SELECT dblink_build_sql_delete('"MyFoo"', '1 2', 2, '{"1", "b"}');
 dblink_build_sql_delete-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -DELETE FROM "MyFoo" WHERE f1 = '1' AND f2 = 'b'(1 row)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

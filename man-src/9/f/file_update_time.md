@@ -15,7 +15,7 @@ file_update_time - update mtime and ctime time
 <h2>Arguments</h2>
 
 <i>file</i>
-<dl><dd><dd>file accessed</dl>
+<dl><dd></dd><dd>file accessed</dd></dl>
 
 <h2>Description</h2>
 

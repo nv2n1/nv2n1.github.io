@@ -11,12 +11,12 @@ url: "/docs/linux/man/1-gm_profile/"
 <h3>Using the Profile Tool</h3>
 <p> The Profile Tool is started by clicking on the profile button () on the toolbar of a map display window. </p>
 <dl>
-<dt><code>1</code></p>
-<dd> Click the map button on the Profile Tool toolbar to select a raster map to profile. The map to profile can be different from the one displayed.</p>
-<dt><code>2</code></p>
-<dd> Click the transect button to begin drawing a transect to profile with a mouse the current map display (i.e., the map display from which you launched the Profile Tool). Draw by holding down the left button to make a dqrubber-band&quot; line for each segment of the transect. A transect can have a single, straight segment or multiple segment. There is no need to &quot;end&quot; the drawing. The Profile Tool will profile the drawn transect at any time. You can also extend an existing transect and draw a profile of the new transect.</p>
-<dt><code>3</code></p>
-<dd> Click the profile button to create the profile.</dl>
+<dt><code>1</code></dt>
+<dd> Click the map button on the Profile Tool toolbar to select a raster map to profile. The map to profile can be different from the one displayed.</dd>
+<dt><code>2</code></dt>
+<dd> Click the transect button to begin drawing a transect to profile with a mouse the current map display (i.e., the map display from which you launched the Profile Tool). Draw by holding down the left button to make a dqrubber-band&quot; line for each segment of the transect. A transect can have a single, straight segment or multiple segment. There is no need to &quot;end&quot; the drawing. The Profile Tool will profile the drawn transect at any time. You can also extend an existing transect and draw a profile of the new transect.</dd>
+<dt><code>3</code></dt>
+<dd> Click the profile button to create the profile.</dd></dl>
 <p> The profile extends from left to right in the profile display. The horizontal (x-axis) scale represents the total distance along the transect to be profiled. Vertical lines mark each node on a multi-segment transect and show the total distance along the transect to the node. The vertical (y-axis) scale is in units of the map that is being profiled. All scaling and axis labels are created automatically, and cannot be changed by the user.<br />
  &amp;bull; The erase button will erase the current transect and profile.<br />
  &amp;bull; The save button will save the profile to an Encapsulated PostScript (.eps) file. </p>

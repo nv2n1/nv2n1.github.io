@@ -10,9 +10,7 @@ description: "rewinddir – reset directory stream"
 <p>rewinddir &#8211; reset directory stream</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/types.h&gt;
-
 #include &lt;dirent.h&gt;
-
 void rewinddir(DIR *dirp);</code></pre>
 <h2>Description</h2>
 <p>The <code>rewinddir</code>() function resets the position of the directory stream <i>dirp</i> to the beginning of the directory.</p>

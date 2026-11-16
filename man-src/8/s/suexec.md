@@ -21,7 +21,7 @@ description: "suexec – Switch user before executing external programs"
 <p>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-V</p>
+<dt>-V</dt>
 <dd>If you are root, this option displays the compile options of suexec. For security reasons all configuration options are changeable only at compile time.<br />
-&nbsp;<wbr> </p>
+&nbsp;<wbr> </dd>
 </dl>

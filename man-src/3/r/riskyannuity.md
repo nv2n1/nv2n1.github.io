@@ -22,15 +22,15 @@ description: "QuantLib::CdsOption – CDS option."
 <p>CDS option. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>the current implementation does not take premium accrual into account</dl>
+<dd>the current implementation does not take premium accrual into account</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
-<dd>the current implementation quietly assumes that the expiry equals the start date of the underlying CDS</dl>
+<dd>the current implementation quietly assumes that the expiry equals the start date of the underlying CDS</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>take premium accrual into account</dl>
+<dd>take premium accrual into account</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>allow expiry to be different from CDS start date</dl>
+<dd>allow expiry to be different from CDS start date</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

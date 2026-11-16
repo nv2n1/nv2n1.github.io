@@ -14,14 +14,14 @@ description: "z8530_rtsdtr – Control the outgoing DTS/RTS line"
 <p><i>c</i></p>
 <dl>
 <dd>
-<dd>The Z8530 channel to control;</dl>
+</dd><dd>The Z8530 channel to control;</dd></dl>
 <p> <i>set</i></p>
 <dl>
-<dd>1 to set, 0 to clear</dl>
+<dd>1 to set, 0 to clear</dd></dl>
 <h2>Description</h2>
 <p>Sets or clears DTR/RTS on the requested line. All locking is handled by the caller. For now we assume all boards use the actual RTS/DTR on the chip. Apparently one or two don&#8217;t. We&#8217;ll scream about them later.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

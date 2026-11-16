@@ -17,17 +17,17 @@ description: "guilt-rebase – Rebase pushed patches"
 <p> &lt;upstream&gt;</p>
 <dl>
 <dt>
-<dd> Branch, tag, or a commit hash identifying upstream repository history.</dl>
+</dt><dd> Branch, tag, or a commit hash identifying upstream repository history.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Rebase current tree against Linuscqs 2.6 tree </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git-fetch <a href="git://git.kernel.org/pub/scm/linux/kernel/git/tovalds/linux-2.6.git">git://git.kernel.org/pub/scm/linux/kernel/git/tovalds/linux-2.6.git</a>
 $ guilt-rebase FETCH_HEAD
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -36,10 +36,10 @@ $ guilt-rebase FETCH_HEAD
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

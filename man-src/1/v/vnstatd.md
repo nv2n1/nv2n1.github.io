@@ -18,30 +18,30 @@ description: "vnstatd – daemon based database updating for vnStat"
 <p> The daemon will proceed to track the availability of monitored interfaces, process the interface traffic statistics and write new values to databases at a configured interval. As a result, the daemon ends up spending most of the time sleeping between updates. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;alwaysadd</code></p>
-<dd> Enable automatic creation of new databases for previously unseen interfaces even if the database directory already contains databases when the daemon is started. New databases will also get created for new interfaces seen while the daemon is running. Pseudo interfaces lo, lo0 and sit0 are excluded from getting added. </p>
-<dt><code>&#8211;config </code><i>file</i></p>
-<dd> Use <i>file</i> as configuration file instead of using normal configuration file search functionality. </p>
-<dt><code>-d, &#8211;daemon</code></p>
-<dd> Fork process to background and run as a daemon. </p>
-<dt><code>-D, &#8211;debug</code></p>
-<dd> Provide additional output for debug purposes. The process will stay attached to the terminal for output. </p>
-<dt><code>-g, &#8211;group </code><i>group</i></p>
-<dd> Set daemon process group to <i>group</i> during startup. <i>group</i> can be either the name of the group or a numerical group id. This option can only be used when the process is started as root. </p>
-<dt><code>&#8211;noadd</code></p>
-<dd> Disable automatic creation of new databases for all available interfaces if the daemon is started with zero database found. Pseudo interfaces lo, lo0 and sit0 are excluded from getting added. </p>
-<dt><code>-n, &#8211;nodaemon</code></p>
-<dd> Stay in foreground attached to the current terminal and start the update process. </p>
-<dt><code>-p, &#8211;pidfile </code><i>file</i></p>
-<dd> Write the process id to <i>file</i> and use it for locking so that another instance of the daemon cannot be started if the same <i>file</i> is specified. </p>
-<dt><code>-s, &#8211;sync</code></p>
-<dd> Synchronize internal counters in the database with interface counters for all available interfaces before starting traffic monitoring. Use this option if the traffic between the previous shutdown and the current startup of the daemon needs to be ignored. This option isn&#8217;t required in normal use because the daemon will automatically synchronize the internal counters after a system reboot, if enought time has passed since the daemon was previously running or if the internal counters are clearly out of sync. </p>
-<dt><code>-u, &#8211;user </code><i>user</i></p>
-<dd> Set daemon process user to <i>user</i> during startup. <i>user</i> can be either the login of the user or a numerical user id. This option can only be used when the process is started as root. </p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show current version of the daemon executable. </p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show a command option summary. </p>
+<dt><code>&#8211;alwaysadd</code></dt>
+<dd> Enable automatic creation of new databases for previously unseen interfaces even if the database directory already contains databases when the daemon is started. New databases will also get created for new interfaces seen while the daemon is running. Pseudo interfaces lo, lo0 and sit0 are excluded from getting added. </dd>
+<dt><code>&#8211;config </code><i>file</i></dt>
+<dd> Use <i>file</i> as configuration file instead of using normal configuration file search functionality. </dd>
+<dt><code>-d, &#8211;daemon</code></dt>
+<dd> Fork process to background and run as a daemon. </dd>
+<dt><code>-D, &#8211;debug</code></dt>
+<dd> Provide additional output for debug purposes. The process will stay attached to the terminal for output. </dd>
+<dt><code>-g, &#8211;group </code><i>group</i></dt>
+<dd> Set daemon process group to <i>group</i> during startup. <i>group</i> can be either the name of the group or a numerical group id. This option can only be used when the process is started as root. </dd>
+<dt><code>&#8211;noadd</code></dt>
+<dd> Disable automatic creation of new databases for all available interfaces if the daemon is started with zero database found. Pseudo interfaces lo, lo0 and sit0 are excluded from getting added. </dd>
+<dt><code>-n, &#8211;nodaemon</code></dt>
+<dd> Stay in foreground attached to the current terminal and start the update process. </dd>
+<dt><code>-p, &#8211;pidfile </code><i>file</i></dt>
+<dd> Write the process id to <i>file</i> and use it for locking so that another instance of the daemon cannot be started if the same <i>file</i> is specified. </dd>
+<dt><code>-s, &#8211;sync</code></dt>
+<dd> Synchronize internal counters in the database with interface counters for all available interfaces before starting traffic monitoring. Use this option if the traffic between the previous shutdown and the current startup of the daemon needs to be ignored. This option isn&#8217;t required in normal use because the daemon will automatically synchronize the internal counters after a system reboot, if enought time has passed since the daemon was previously running or if the internal counters are clearly out of sync. </dd>
+<dt><code>-u, &#8211;user </code><i>user</i></dt>
+<dd> Set daemon process user to <i>user</i> during startup. <i>user</i> can be either the login of the user or a numerical user id. This option can only be used when the process is started as root. </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show current version of the daemon executable. </dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show a command option summary. </dd>
 </dl>
 <h2>CONFIGURATION</h2>
 <p> The behaviour of the daemon is configured mainly using the configuration keywords <code>UpdateInterval, PollInterval</code> and <code>SaveInterval</code> in the configuration file. </p>
@@ -55,20 +55,20 @@ description: "vnstatd – daemon based database updating for vnStat"
 <p> <code>SIGTERM</code> and <code>SIGINT</code> signals will cause the daemon to write all cached data to disk and then exit. </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/lib/vnstat/</i></p>
-<dd> Default database directory. Files are named according to the monitored interfaces.</p>
-<dt><i>/etc/vnstat.conf</i></p>
-<dd> Config file that will be used unless <i>$HOME/.vnstatrc</i> exists. See the configuration chapter and <code><a href="/docs/linux/man/5-vnstat-conf/">vnstat.conf</a></code>(5) for more information.</p>
-<dt><i>/var/log/vnstat.log</i></p>
-<dd> Log file that will be used if logging to file is enable and no other file is specified in the config file.</p>
-<dt><i>/var/run/vnstat.pid</i></p>
-<dd> File used for storing the process id if no other file is specified in the configuration file or using the command line parameter. </p>
+<dt><i>/var/lib/vnstat/</i></dt>
+<dd> Default database directory. Files are named according to the monitored interfaces.</dd>
+<dt><i>/etc/vnstat.conf</i></dt>
+<dd> Config file that will be used unless <i>$HOME/.vnstatrc</i> exists. See the configuration chapter and <code><a href="/docs/linux/man/5-vnstat-conf/">vnstat.conf</a></code>(5) for more information.</dd>
+<dt><i>/var/log/vnstat.log</i></dt>
+<dd> Log file that will be used if logging to file is enable and no other file is specified in the config file.</dd>
+<dt><i>/var/run/vnstat.pid</i></dt>
+<dd> File used for storing the process id if no other file is specified in the configuration file or using the command line parameter. </dd>
 </dl>
 <h2>RESTRICTIONS</h2>
 <p> Updates needs to be executed at least as often as it is possible for the interface to generate enough traffic to overflow the kernel interface traffic counter. Otherwise, it is possible that some traffic won&#8217;t be seen. This isn&#8217;t an issue for 64-bit kernels but at least one update every hour is always required in order to provide proper input. With 32-bit kernels, the maximum time between two updates depends on how fast the interface can transfer 4 GiB. Calculated theoretical times are:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>10 Mbit: 54 minutes</td>
@@ -86,7 +86,7 @@ description: "vnstatd – daemon based database updating for vnStat"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> However, for 1000 Mbit interfaces updating once every minute is usually a usable solution if faster updates can&#8217;t be used. </p>
 <p> Virtual and aliased interfaces cannot be monitored because the kernel doesn&#8217;t provide traffic information for that type of interfaces. Such interfaces are usually named eth0:0, eth0:1, eth0:2 etc. where eth0 is the actual interface being aliased. </p>
 <h2>AUTHOR</h2>

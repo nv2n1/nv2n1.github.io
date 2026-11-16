@@ -11,7 +11,6 @@ std::strerror - std::strerror
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     char *strerror(int errnum);</code></pre> 
 Returns a pointer to the textual description of the system error code errnum, identical to the description that would be printed by std::perror(). 
 errnum is usually acquired from the errno variable, however the function accepts any value of type int. The contents of the string are locale-specific. 
@@ -32,16 +31,11 @@ POSIX allows subsequent calls to strerror to invalidate the pointer value return
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     double not_a_number = std::log(-1.0);
     if (errno == EDOM) {

@@ -12,24 +12,22 @@ description: "npm-whoami – Display npm username"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm whoami [--registry &lt;registry&gt;]
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Print the <code>username</code> config to standard output.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc</p>
-<dt>&bull;</p>
-<dd> npm help adduser </p>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc</dd>
+<dt>&bull;</dt>
+<dd> npm help adduser </dd>
 </dl>
 </dl>
 <h2>Index</h2>

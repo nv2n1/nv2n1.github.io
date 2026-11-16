@@ -10,9 +10,7 @@ description: "std::numpunct_byname – std::numpunct_byname"
 <p>std::numpunct_byname &#8211; std::numpunct_byname</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT &gt;
-
 class numpunct_byname : public std::numpunct&lt;CharT&gt;;</code></pre>
 <p>std::numpunct_byname is a std::numpunct facet which encapsulates numeric punctuation preferences of a locale specified at its construction.<br />
 Two specializations are provided by the standard library<br />
@@ -75,11 +73,8 @@ static std::locale::id id <i>(public member object)</i></p>
 <p>This example demonistrates how to apply numeric punctuation rules of another language without changing the rest of the locale.<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 int main()
-
 {
     const double number = 1000.25;
     std::wcout &lt;&lt; L&quot;default locale: &quot; &lt;&lt; number &lt;&lt; L'

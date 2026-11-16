@@ -15,8 +15,8 @@ description: "grub-kbdcomp — Generate a GRUB keyboard layout file."
 <p> <code>grub-kbdcomp</code> processes an X keyboard layout description in <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5) format into a format that can be used by GRUB&#8217;s <code>keymap</code> command. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;output</code>=<i>FILE</i></p>
-<dd> Write output to <i>FILE</i>. </p>
+<dt><code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> Write output to <i>FILE</i>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>

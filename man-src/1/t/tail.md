@@ -16,36 +16,36 @@ description: "tail – output the last part of files"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;bytes</code>=<i>,[/</i>+]NUM</p>
-<dd> output the last NUM bytes; or use <code>-c</code> +NUM to output starting with byte NUM of each file</p>
-<dt><code>-f</code>, <code>&#8211;follow[=</code>{name|descriptor}]</p>
-<dd> output appended data as the file grows;</p>
+<dt><code>-c</code>, <code>&#8211;bytes</code>=<i>,[/</i>+]NUM</dt>
+<dd> output the last NUM bytes; or use <code>-c</code> +NUM to output starting with byte NUM of each file</dd>
+<dt><code>-f</code>, <code>&#8211;follow[=</code>{name|descriptor}]</dt>
+<dd> output appended data as the file grows;</dd>
 <dt>
-<dd> an absent option argument means &#8216;descriptor&#8217;</p>
-<dt><code>-F</code></p>
-<dd> same as <code>&#8211;follow</code>=<i>,name/</i> <code>&#8211;retry</code></p>
-<dt><code>-n</code>, <code>&#8211;lines</code>=<i>,[/</i>+]NUM</p>
-<dd> output the last NUM lines, instead of the last 10; or use <code>-n</code> +NUM to output starting with line NUM</p>
-<dt><code>&#8211;max-unchanged-stats</code>=<i>,N/</i></p>
-<dd> with <code>&#8211;follow</code>=<i>,name/</i>, reopen a FILE which has not</p>
+</dt><dd> an absent option argument means &#8216;descriptor&#8217;</dd>
+<dt><code>-F</code></dt>
+<dd> same as <code>&#8211;follow</code>=<i>,name/</i> <code>&#8211;retry</code></dd>
+<dt><code>-n</code>, <code>&#8211;lines</code>=<i>,[/</i>+]NUM</dt>
+<dd> output the last NUM lines, instead of the last 10; or use <code>-n</code> +NUM to output starting with line NUM</dd>
+<dt><code>&#8211;max-unchanged-stats</code>=<i>,N/</i></dt>
+<dd> with <code>&#8211;follow</code>=<i>,name/</i>, reopen a FILE which has not</dd>
 <dt>
-<dd> changed size after N (default 5) iterations to see if it has been unlinked or renamed (this is the usual case of rotated log files); with inotify, this option is rarely useful</p>
-<dt><code>&#8211;pid</code>=<i>,PID/</i></p>
-<dd> with <code>-f</code>, terminate after process ID, PID dies</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></p>
-<dd> never output headers giving file names</p>
-<dt><code>&#8211;retry</code></p>
-<dd> keep trying to open a file if it is inaccessible</p>
-<dt><code>-s</code>, <code>&#8211;sleep-interval</code>=<i>,N/</i></p>
-<dd> with <code>-f</code>, sleep for approximately N seconds (default 1.0) between iterations; with inotify and <code>&#8211;pid</code>=<i>,P/</i>, check process P at least once every N seconds</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> always output headers giving file names</p>
-<dt><code>-z</code>, <code>&#8211;zero-terminated</code></p>
-<dd> line delimiter is NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+</dt><dd> changed size after N (default 5) iterations to see if it has been unlinked or renamed (this is the usual case of rotated log files); with inotify, this option is rarely useful</dd>
+<dt><code>&#8211;pid</code>=<i>,PID/</i></dt>
+<dd> with <code>-f</code>, terminate after process ID, PID dies</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
+<dd> never output headers giving file names</dd>
+<dt><code>&#8211;retry</code></dt>
+<dd> keep trying to open a file if it is inaccessible</dd>
+<dt><code>-s</code>, <code>&#8211;sleep-interval</code>=<i>,N/</i></dt>
+<dd> with <code>-f</code>, sleep for approximately N seconds (default 1.0) between iterations; with inotify and <code>&#8211;pid</code>=<i>,P/</i>, check process P at least once every N seconds</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> always output headers giving file names</dd>
+<dt><code>-z</code>, <code>&#8211;zero-terminated</code></dt>
+<dd> line delimiter is NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> NUM may have a multiplier suffix: b 512, kB 1000, K 1024, MB 1000*1000, M 1024*1024, GB 1000*1000*1000, G 1024*1024*1024, and so on for T, P, E, Z, Y. Binary prefixes can be used, too: KiB=K, MiB=M, and so on. </p>
 <p> With <code>&#8211;follow</code> (<code>-f</code>), tail defaults to following the file descriptor, which means that even if a tail&#8217;ed file is renamed, tail will continue to track its end. This default behavior is not desirable when you really want to track the actual name of the file, not the file descriptor (e.g., log rotation). Use <code>&#8211;follow</code>=<i>,name/</i> in that case. That causes tail to track the named file in a way that accommodates renaming, removal and creation.</p>
 <h2>AUTHOR</h2>

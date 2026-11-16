@@ -11,23 +11,23 @@ description: "upower – UPower command line tool"
 <p> upower &#8211; UPower command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>upower</code> [<code>&#8211;dump</code>] [<code>&#8211;enumerate</code>] [<code>&#8211;monitor-detail</code>] [<code>&#8211;monitor</code>] [<code>&#8211;show-info</code>] [<code>&#8211;version</code>] [<code>&#8211;wakeups</code>] [<code>&#8211;help</code>]</dl>
+<dt> <code>upower</code> [<code>&#8211;dump</code>] [<code>&#8211;enumerate</code>] [<code>&#8211;monitor-detail</code>] [<code>&#8211;monitor</code>] [<code>&#8211;show-info</code>] [<code>&#8211;version</code>] [<code>&#8211;wakeups</code>] [<code>&#8211;help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>upower</i></p>
-<dd>is a simple command line client for the <code><a href="/docs/linux/man/7-upower/">UPower</a></code>(7) daemon. TODO: not fully documented.</p>
+<dd>is a simple command line client for the <code><a href="/docs/linux/man/7-upower/">UPower</a></code>(7) daemon. TODO: not fully documented.</dd>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;monitor</code></p>
 <dl>
 <dt>
-<dd> Connect to the UPower daemon and print a line every time a power source is added, removed or changed.</dl>
+</dt><dd> Connect to the UPower daemon and print a line every time a power source is added, removed or changed.</dd></dl>
 <p> <code>&#8211;monitor-detail</code></p>
 <dl>
 <dt>
-<dd> Like <code>&#8211;monitor</code> but prints the full details of the power source whenever an event happens.</dl>
+</dt><dd> Like <code>&#8211;monitor</code> but prints the full details of the power source whenever an event happens.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help options.</dl>
+</dt><dd> Show help options.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David Zeuthen &lt;davidz [at] redhat.com&gt; with a lot of help from many others.</p>
 <h2>BUGS</h2>

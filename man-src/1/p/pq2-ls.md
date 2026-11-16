@@ -17,28 +17,28 @@ description: "pq2-ls – List the available datasets in a dataset meta-repositor
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>datasets</i></p>
-<dd> The dataset or the datasets to be listed; the wildcards &#8216;*&#8217; is supported. By default, all the datasets in the repository are listed.</dl>
+<dt><i>datasets</i></dt>
+<dd> The dataset or the datasets to be listed; the wildcards &#8216;*&#8217; is supported. By default, all the datasets in the repository are listed.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep the temporary files created during the analysis under $TMPDIR</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>&#8211;forcescan</code></p>
-<dd> Force opening of the datasets are open to get the information; by default the pre-processed information is used, if any.</p>
-<dt><code>&#8211;noupdate</code></p>
-<dd> In the case a cache is used, do not update the cache (may be slow on some servers).</p>
-<dt><code>&#8211;refresh</code></p>
-<dd> Refresh the information (requires appropriate credentials; typically it can be done only for owned datasets).</p>
-<dt><code>-d</code> &lt;<i>dataset</i>&gt;, <code>&#8211;dataset</code>=&lt;<i>dataset</i>&gt;</p>
-<dd> Alternative way to define the dataset or the datasets to be listed.</p>
-<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</p>
-<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep the temporary files created during the analysis under $TMPDIR</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>&#8211;forcescan</code></dt>
+<dd> Force opening of the datasets are open to get the information; by default the pre-processed information is used, if any.</dd>
+<dt><code>&#8211;noupdate</code></dt>
+<dd> In the case a cache is used, do not update the cache (may be slow on some servers).</dd>
+<dt><code>&#8211;refresh</code></dt>
+<dd> Refresh the information (requires appropriate credentials; typically it can be done only for owned datasets).</dd>
+<dt><code>-d</code> &lt;<i>dataset</i>&gt;, <code>&#8211;dataset</code>=&lt;<i>dataset</i>&gt;</dt>
+<dd> Alternative way to define the dataset or the datasets to be listed.</dd>
+<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</dt>
+<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dd></dl>
 <h2>FORMAT OF THE OUTPUT</h2>
 <p> The information printed by pq2-ls has the following format: </p>
 <pre>

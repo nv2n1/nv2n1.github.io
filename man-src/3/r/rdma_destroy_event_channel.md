@@ -12,13 +12,12 @@ rdma_destroy_event_channel - Close an event communication channel.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 void rdma_destroy_event_channel
-
     (struct rdma_event_channel *channel);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>channel
-<dd>The communication channel to destroy.</dl>
+</dt><dd>The communication channel to destroy.</dd></dl>
 
 <h2>Description</h2>
 

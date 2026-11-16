@@ -31,10 +31,10 @@ Link with - ldl.
 <p> If no symbol matching <i>addr</i> could be found, then <i>dli_sname</i> and <i>dli_saddr</i> are set to NULL. </p>
 <p> The function <code>dladdr1</code>() is like <code>dladdr</code>(), but returns additional information via the argument <i>extra_info</i>. The information returned depends on the value specified in <i>flags</i>, which can have one of the following values:</p>
 <dl>
-<dt><code>RTLD_DL_LINKMAP</code></p>
-<dd> Obtain a pointer to the link map for the matched file. The <i>extra_info</i> argument points to a pointer to a <i>link_map</i> structure (i.e., <i>struct link_map&nbsp;**</i>), defined in <i>&lt;link.h&gt;</i> as:</p>
+<dt><code>RTLD_DL_LINKMAP</code></dt>
+<dd> Obtain a pointer to the link map for the matched file. The <i>extra_info</i> argument points to a pointer to a <i>link_map</i> structure (i.e., <i>struct link_map&nbsp;**</i>), defined in <i>&lt;link.h&gt;</i> as:</dd>
 <dt>
-<dd> struct link_map {<br />
+</dt><dd> struct link_map {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ElfW(Addr)&nbsp;l_addr;&nbsp;<wbr>&nbsp;/*&nbsp;Difference between the<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address in the ELF file and<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the address in memory&nbsp;*/<br />
@@ -43,23 +43,23 @@ Link with - ldl.
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ElfW(Dyn)&nbsp;*l_ld;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Dynamic section of the<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shared object&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct link_map&nbsp;*l_next,&nbsp;*l_prev;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Chain of loaded objects&nbsp;*/ </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Chain of loaded objects&nbsp;*/ </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Plus additional fields private to the<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;implementation&nbsp;*/ };</p>
-<dt><code>RTLD_DL_SYMENT</code></p>
-<dd> Obtain a pointer to the ELF symbol table entry of the matching symbol. The <i>extra_info</i> argument is a pointer to a symbol pointer: <i>const ElfW(Sym) **</i>. The <i>ElfW</i>() macro definition turns its argument into the name of an ELF data type suitable for the hardware architecture. For example, on a 64-bit platform, <i>ElfW(Sym)</i> yields the data type name <i>Elf64_Sym</i>, which is defined in <i>&lt;elf.h&gt;</i> as:</p>
+<dt><code>RTLD_DL_SYMENT</code></dt>
+<dd> Obtain a pointer to the ELF symbol table entry of the matching symbol. The <i>extra_info</i> argument is a pointer to a symbol pointer: <i>const ElfW(Sym) **</i>. The <i>ElfW</i>() macro definition turns its argument into the name of an ELF data type suitable for the hardware architecture. For example, on a 64-bit platform, <i>ElfW(Sym)</i> yields the data type name <i>Elf64_Sym</i>, which is defined in <i>&lt;elf.h&gt;</i> as:</dd>
 <dt>
-<dd> typedef struct {<br />
+</dt><dd> typedef struct {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Word&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Symbol name&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char st_info;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Symbol type and binding&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char st_other;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Symbol visibility&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Section st_shndx;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Section index&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Addr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_value;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Symbol value&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Xword&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_size;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Symbol size&nbsp;*/ } Elf64_Sym;</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Xword&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_size;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Symbol size&nbsp;*/ } Elf64_Sym;</dd>
 <dt>
-<dd> The <i>st_name</i> field is an index into the string table.</p>
+</dt><dd> The <i>st_name</i> field is an index into the string table.</dd>
 <dt>
-<dd> The <i>st_info</i> field encodes the symbol&#8217;s type and binding. The type can be extracted using the macro <code>ELF64_ST_TYPE(st_info)</code> (or <code>ELF32_ST_TYPE()</code> on 32-bit platforms), which yields one of the following values: </p>
+</dt><dd> The <i>st_info</i> field encodes the symbol&#8217;s type and binding. The type can be extracted using the macro <code>ELF64_ST_TYPE(st_info)</code> (or <code>ELF32_ST_TYPE()</code> on 32-bit platforms), which yields one of the following values: </dd>
 <table>
 <tr VALIGN=top>
 <td><code>Value</code></td>
@@ -108,7 +108,7 @@ Link with - ldl.
 </tr>
 </table>
 <dt>
-<dd> The symbol binding can be extracted from the <i>st_info</i> field using the macro <code>ELF64_ST_BIND(st_info)</code> (or <code>ELF32_ST_BIND()</code> on 32-bit platforms), which yields one of the following values: </p>
+</dt><dd> The symbol binding can be extracted from the <i>st_info</i> field using the macro <code>ELF64_ST_BIND(st_info)</code> (or <code>ELF32_ST_BIND()</code> on 32-bit platforms), which yields one of the following values: </dd>
 <table>
 <tr VALIGN=top>
 <td><code>Value</code></td>
@@ -137,7 +137,7 @@ Link with - ldl.
 </tr>
 </table>
 <dt>
-<dd> The <i>st_other</i> field contains the symbol&#8217;s visibility, which can be extracted using the macro <code>ELF64_ST_VISIBILITY(st_info)</code> (or <code>ELF32_ST_VISIBILITY()</code> on 32-bit platforms), which yields one of the following values: </p>
+</dt><dd> The <i>st_other</i> field contains the symbol&#8217;s visibility, which can be extracted using the macro <code>ELF64_ST_VISIBILITY(st_info)</code> (or <code>ELF32_ST_VISIBILITY()</code> on 32-bit platforms), which yields one of the following values: </dd>
 <table>
 <tr VALIGN=top>
 <td><code>Value</code></td>

@@ -22,23 +22,23 @@ description: "Generic Object Visibility Functions – Functions that deal with t
 <p>Makes the given evas object invisible. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas object.</dl>
+<dd><i>obj</i> The given evas object.</dd></dl>
 <p> References _Evas_Event_Mouse_Out::buttons, EVAS_CALLBACK_MOUSE_OUT, and evas_list_remove(). </p>
 <p> Referenced by evas_object_del(), and evas_object_smart_clipped_member_del().</p>
 <h3>EAPI void evas_object_show (<code>Evas_Object</code> * obj)</h3>
 <p>Makes the given evas object visible. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas object.</dl>
+<dd><i>obj</i> The given evas object.</dd></dl>
 <p> Referenced by evas_object_smart_clipped_member_add().</p>
 <h3>EAPI Evas_Bool evas_object_visible_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Retrieves whether or not the given evas object is visible. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas object.</dl>
+<dd><i>obj</i> The given evas object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the object is visible. 0 otherwise.</dl>
+<dd>1 if the object is visible. 0 otherwise.</dd></dl>
 <p> Referenced by evas_object_smart_clipped_member_add().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

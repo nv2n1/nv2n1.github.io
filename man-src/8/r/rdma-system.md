@@ -10,17 +10,11 @@ description: "rdma-system – RDMA subsystem configuration"
 <p>rdma-system &#8211; RDMA subsystem configuration</p>
 <h2>Synopsis</h2>
 <pre><code>rdma
-
 [ OPTIONS ]
-
 sys
-
 { COMMAND |
-
     help }
-
 OPTIONS := {
-
     -V[ersion] |
     -d[etails] }</code></pre>
 <p> <code>rdma system show</code><br />
@@ -33,13 +27,13 @@ OPTIONS := {
 <h2>Examples</h2>
 <p>rdma system show</p>
 <dl>
-<dd>Shows the state of RDMA subsystem network namespace mode on the system.</dl>
+<dd>Shows the state of RDMA subsystem network namespace mode on the system.</dd></dl>
 <p> rdma system set netns exclusive</p>
 <dl>
-<dd>Sets the RDMA subsystem in network namespace exclusive mode. In this mode RDMA devices are visible only in single network namespace.</dl>
+<dd>Sets the RDMA subsystem in network namespace exclusive mode. In this mode RDMA devices are visible only in single network namespace.</dd></dl>
 <p> rdma system set netns shared</p>
 <dl>
-<dd>Sets the RDMA subsystem in network namespace shared mode. In this mode RDMA devices are shared among network namespaces.</dl>
+<dd>Sets the RDMA subsystem in network namespace shared mode. In this mode RDMA devices are shared among network namespaces.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rdma/">rdma</a></code>(8), <code><a href="/docs/linux/man/8-rdma-link/">rdma-link</a></code>(8), <code><a href="/docs/linux/man/8-rdma-resource/">rdma-resource</a></code>(8), <code><a href="/docs/linux/man/7-network_namespaces/">network_namespaces</a></code>(7), <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7), </p>
 <h2>Author</h2>

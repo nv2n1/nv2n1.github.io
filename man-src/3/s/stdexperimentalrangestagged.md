@@ -12,36 +12,22 @@ std::experimental::ranges::tagged&lt;Base,Tags...&gt;::tagged - std::experimenta
 
 <pre><code>using Base::Base;
 (1)
-
     tagged() = default;
 (2)
-
     tagged(tagged &amp;&amp;that) = default;
 (3)
-
     tagged(const tagged &amp;that) = default;
 (4)
-
     tagged(Base &amp;&amp;that) noexcept(std::is_nothrow_move_constructible&lt;Base&gt;::value)(5)
-
         requires MoveConstructible&lt;Base&gt;;
-
 tagged(const Base &amp;that) noexcept(std::is_nothrow_copy_constructible&lt;Base&gt;::value)(6)
-
     requires CopyConstructible&lt;Base&gt;;
-
 template &lt;class Other&gt;
-
 requires Constructible&lt;Base, Other&gt;(7)
-
 constexpr tagged(ranges::tagged&lt;Other, Tags...&gt; &amp;&amp;that)
-
     noexcept(std::is_nothrow_constructible&lt;Base, Other&gt;::value);
-
 template &lt;class Other&gt;
-
 requires Constructible&lt;Base, const Other &amp;&gt;(8)
-
 constexpr tagged(const ranges::tagged&lt;Other, Tags...&gt; &amp;that);</code></pre> 
 Constructs a tagged object. 
 1) tagged&lt;Base, Tags...&gt; inherits the constructors of Base. 

@@ -15,54 +15,54 @@ description: "arcresub – ARC Resubmission"
 <p> <code>arcresub [options] [jobid &#8230;]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> all jobs</p>
-<dt><code>-j</code>, <code>&#8211;joblist</code>=<i>filename</i></p>
-<dd> the file storing information about active jobs (default ~/.arc/jobs.xml)</p>
-<dt><code>-i</code>, <code>&#8211;jobids-from-file</code>=<i>filename</i></p>
-<dd> a file containing a list of job IDs</p>
-<dt><code>-o</code>, <code>&#8211;jobids-to-file</code>=<i>filename</i></p>
-<dd> the IDs of the submitted jobs will be appended to this file</p>
-<dt><code>-c</code>, <code>&#8211;cluster</code>=<i>name</i></p>
-<dd> select one or more computing elements: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</p>
-<dt><code>-q</code>, <code>&#8211;qluster</code>=<i>name</i></p>
-<dd> select one or more computing elements for the new jobs: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</p>
-<dt><code>-g</code>, <code>&#8211;index</code>=<i>name</i></p>
-<dd> select one or more registries: <i>name</i> can be an alias for a single registry, a group of registries or a URL</p>
-<dt><code>-r</code>, <code>&#8211;rejectmanagement</code>=<i>URL</i></p>
-<dd> skip jobs which are on a computing element with a given URL</p>
-<dt><code>-R</code>, <code>&#8211;rejectdiscovery</code>=<i>URL</i></p>
-<dd> skip the service with the given URL during service discovery</p>
-<dt><code>-S</code>, <code>&#8211;submissioninterface</code>=<i>InterfaceName</i></p>
-<dd> only use this interface for submitting (e.g. org.nordugrid.gridftpjob, org.ogf.glue.emies.activitycreation, org.ogf.bes)</p>
-<dt><code>-I</code>, <code>&#8211;infointerface</code>=<i>InterfaceName</i></p>
-<dd> the computing element specified by URL at the command line should be queried using this information interface (possible options: org.nordugrid.ldapng, org.nordugrid.ldapglue2, org.nordugrid.wsrfglue2, org.ogf.glue.emies.resourceinfo)</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> keep the files on the server (do not clean)</p>
-<dt><code>-m</code>, <code>&#8211;same</code></p>
-<dd> resubmit to the same cluster</p>
-<dt><code>-M</code>, <code>&#8211;not-same</code></p>
-<dd> do not resubmit to the same cluster</p>
-<dt><code>-s</code>, <code>&#8211;status</code>=<i>statusstr</i></p>
-<dd> only select jobs whose status is statusstr</p>
-<dt><code>-P</code>, <code>&#8211;listplugins</code></p>
-<dd> list the available plugins</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></p>
-<dd> timeout in seconds (default 20)</p>
-<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></p>
-<dd> configuration file (default ~/.arc/client.conf)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></p>
-<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</p>
-<dt><code>-b</code>, <code>&#8211;broker</code>=<i>broker</i></p>
-<dd> selected broker: Random (default), FastestQueue or custom</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> print version information</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> print help</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> all jobs</dd>
+<dt><code>-j</code>, <code>&#8211;joblist</code>=<i>filename</i></dt>
+<dd> the file storing information about active jobs (default ~/.arc/jobs.xml)</dd>
+<dt><code>-i</code>, <code>&#8211;jobids-from-file</code>=<i>filename</i></dt>
+<dd> a file containing a list of job IDs</dd>
+<dt><code>-o</code>, <code>&#8211;jobids-to-file</code>=<i>filename</i></dt>
+<dd> the IDs of the submitted jobs will be appended to this file</dd>
+<dt><code>-c</code>, <code>&#8211;cluster</code>=<i>name</i></dt>
+<dd> select one or more computing elements: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</dd>
+<dt><code>-q</code>, <code>&#8211;qluster</code>=<i>name</i></dt>
+<dd> select one or more computing elements for the new jobs: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</dd>
+<dt><code>-g</code>, <code>&#8211;index</code>=<i>name</i></dt>
+<dd> select one or more registries: <i>name</i> can be an alias for a single registry, a group of registries or a URL</dd>
+<dt><code>-r</code>, <code>&#8211;rejectmanagement</code>=<i>URL</i></dt>
+<dd> skip jobs which are on a computing element with a given URL</dd>
+<dt><code>-R</code>, <code>&#8211;rejectdiscovery</code>=<i>URL</i></dt>
+<dd> skip the service with the given URL during service discovery</dd>
+<dt><code>-S</code>, <code>&#8211;submissioninterface</code>=<i>InterfaceName</i></dt>
+<dd> only use this interface for submitting (e.g. org.nordugrid.gridftpjob, org.ogf.glue.emies.activitycreation, org.ogf.bes)</dd>
+<dt><code>-I</code>, <code>&#8211;infointerface</code>=<i>InterfaceName</i></dt>
+<dd> the computing element specified by URL at the command line should be queried using this information interface (possible options: org.nordugrid.ldapng, org.nordugrid.ldapglue2, org.nordugrid.wsrfglue2, org.ogf.glue.emies.resourceinfo)</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> keep the files on the server (do not clean)</dd>
+<dt><code>-m</code>, <code>&#8211;same</code></dt>
+<dd> resubmit to the same cluster</dd>
+<dt><code>-M</code>, <code>&#8211;not-same</code></dt>
+<dd> do not resubmit to the same cluster</dd>
+<dt><code>-s</code>, <code>&#8211;status</code>=<i>statusstr</i></dt>
+<dd> only select jobs whose status is statusstr</dd>
+<dt><code>-P</code>, <code>&#8211;listplugins</code></dt>
+<dd> list the available plugins</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
+<dd> timeout in seconds (default 20)</dd>
+<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></dt>
+<dd> configuration file (default ~/.arc/client.conf)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></dt>
+<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</dd>
+<dt><code>-b</code>, <code>&#8211;broker</code>=<i>broker</i></dt>
+<dd> selected broker: Random (default), FastestQueue or custom</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> print version information</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> print help</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>jobid</code> &#8230;</p>
-<dd> job ID or job name of jobs to be resubmitted</dl>
+<dt><code>jobid</code> &#8230;</dt>
+<dd> job ID or job name of jobs to be resubmitted</dd></dl>
 <h2>EXTENDED DESCRIPTION</h2>
 <p> The <code>arcresub</code> command is used for resubmitting jobs on grid enabled computing resources. The job can be referred to either by the job ID that was returned by <code><a href="/docs/linux/man/1-arcsub/">arcsub</a></code>(1) at submission time or by its jobname if the job description that was submitted contained a jobname attribute. </p>
 <p> More than one job ID and/or jobname can be given. If several jobs were submitted with the same jobname all those jobs will be resubmitted. </p>
@@ -75,19 +75,19 @@ description: "arcresub – ARC Resubmission"
 <p> If the old job was successfully killed the job will be removed from the remote cluster unless the <code>&#8211;keep</code> option was specified. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.arc/client.conf</code></p>
-<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </p>
-<dt><code>~/.arc/jobs.xml</code></p>
-<dd> This a local list of the user&#8217;s active jobs. When a job is successfully submitted it is added to this list and when it is removed from the remote cluster it is removed from this list. This list is used as the list of all active jobs when the user specifies the </p>
+<dt><code>~/.arc/client.conf</code></dt>
+<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </dd>
+<dt><code>~/.arc/jobs.xml</code></dt>
+<dd> This a local list of the user&#8217;s active jobs. When a job is successfully submitted it is added to this list and when it is removed from the remote cluster it is removed from this list. This list is used as the list of all active jobs when the user specifies the </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>X509_USER_PROXY</code></p>
-<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </p>
-<dt><code>ARC_LOCATION</code></p>
-<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </p>
-<dt><code>ARC_PLUGIN_PATH</code></p>
-<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </p>
+<dt><code>X509_USER_PROXY</code></dt>
+<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </dd>
+<dt><code>ARC_LOCATION</code></dt>
+<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </dd>
+<dt><code>ARC_PLUGIN_PATH</code></dt>
+<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> APACHE LICENSE Version 2.0 </p>

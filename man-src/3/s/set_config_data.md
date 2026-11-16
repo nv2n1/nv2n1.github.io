@@ -10,7 +10,6 @@ description: "set_config_data – Sets a block of configuration data. Allegro ga
 <p>set_config_data &#8211; Sets a block of configuration data. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_config_data(const char *data, int length);</code></pre>
 <h2>Description</h2>
 <p>Specifies a block of data to be used by all subsequent config functions, which you have already loaded from disk (eg. as part of some more complicated format of your own, or in a grabber datafile). This routine makes a copy of the information, so you can safely free the data after calling it. </p>

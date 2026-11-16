@@ -26,20 +26,20 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <p> Compression is always performed, even if the compressed file is slightly larger than the original. The worst case expansion is a few bytes for the gzip file header, plus 5 bytes every 32K block, or an expansion ratio of 0.015% for large files. Note that the actual number of used disk blocks almost never increases. <i>gzip</i> preserves the mode, ownership and timestamps of files when compressing or decompressing.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a &#8211;ascii</code></p>
-<dd> Ascii text mode: convert end-of-lines using local conventions. This option is supported only on some non-Unix systems. For MSDOS, CR LF is converted to LF when compressing, and LF is converted to CR LF when decompressing.</p>
-<dt><code>-c &#8211;stdout &#8211;to-stdout</code></p>
-<dd> Write output on standard output; keep original files unchanged. If there are several input files, the output consists of a sequence of independently compressed members. To obtain better compression, concatenate all input files before compressing them.</p>
-<dt><code>-d &#8211;decompress &#8211;uncompress</code></p>
-<dd> Decompress.</p>
-<dt><code>-f &#8211;force</code></p>
-<dd> Force compression or decompression even if the file has multiple links or the corresponding file already exists, or if the compressed data is read from or written to a terminal. If the input data is not in a format recognized by <i>gzip</i>, and if the option &#8211;stdout is also given, copy the input data without change to the standard output: let <i>zcat</i> behave as <i>cat</i>. If <code>-f</code> is not given, and when not running in the background, <i>gzip</i> prompts to verify whether an existing file should be overwritten.</p>
-<dt><code>-h &#8211;help</code></p>
-<dd> Display a help screen and quit.</p>
-<dt><code>-k &#8211;keep</code></p>
-<dd> Keep (don&#8217;t delete) input files during compression or decompression.</p>
-<dt><code>-l &#8211;list</code></p>
-<dd> For each compressed file, list the following fields: </p>
+<dt><code>-a &#8211;ascii</code></dt>
+<dd> Ascii text mode: convert end-of-lines using local conventions. This option is supported only on some non-Unix systems. For MSDOS, CR LF is converted to LF when compressing, and LF is converted to CR LF when decompressing.</dd>
+<dt><code>-c &#8211;stdout &#8211;to-stdout</code></dt>
+<dd> Write output on standard output; keep original files unchanged. If there are several input files, the output consists of a sequence of independently compressed members. To obtain better compression, concatenate all input files before compressing them.</dd>
+<dt><code>-d &#8211;decompress &#8211;uncompress</code></dt>
+<dd> Decompress.</dd>
+<dt><code>-f &#8211;force</code></dt>
+<dd> Force compression or decompression even if the file has multiple links or the corresponding file already exists, or if the compressed data is read from or written to a terminal. If the input data is not in a format recognized by <i>gzip</i>, and if the option &#8211;stdout is also given, copy the input data without change to the standard output: let <i>zcat</i> behave as <i>cat</i>. If <code>-f</code> is not given, and when not running in the background, <i>gzip</i> prompts to verify whether an existing file should be overwritten.</dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Display a help screen and quit.</dd>
+<dt><code>-k &#8211;keep</code></dt>
+<dd> Keep (don&#8217;t delete) input files during compression or decompression.</dd>
+<dt><code>-l &#8211;list</code></dt>
+<dd> For each compressed file, list the following fields: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;compressed size: size of the compressed file<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uncompressed size: size of the uncompressed file<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ratio: compression ratio&nbsp;(0.0%&nbsp;if unknown)<br />
@@ -53,31 +53,31 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <p> The compression methods currently supported are deflate, compress, lzh (SCO compress -H) and pack. The crc is given as ffffffff for a file not in gzip format. </p>
 <p> With &#8211;name, the uncompressed name, date and time are those stored within the compress file if present. </p>
 <p> With &#8211;verbose, the size totals and compression ratio for all files is also displayed, unless some sizes are unknown. With &#8211;quiet, the title and totals lines are not displayed.</p>
-<dt><code>-L &#8211;license</code></p>
-<dd> Display the <i>gzip</i> license and quit.</p>
-<dt><code>-n &#8211;no-name</code></p>
-<dd> When compressing, do not save the original file name and timestamp by default. (The original name is always saved if the name had to be truncated.) When decompressing, do not restore the original file name if present (remove only the <i>gzip</i> suffix from the compressed file name) and do not restore the original timestamp if present (copy it from the compressed file). This option is the default when decompressing.</p>
-<dt><code>-N &#8211;name</code></p>
-<dd> When compressing, always save the original file name and timestamp; this is the default. When decompressing, restore the original file name and timestamp if present. This option is useful on systems which have a limit on file name length or when the timestamp has been lost after a file transfer.</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> Suppress all warnings.</p>
-<dt><code>-r &#8211;recursive</code></p>
-<dd> Travel the directory structure recursively. If any of the file names specified on the command line are directories, <i>gzip</i> will descend into the directory and compress all the files it finds there (or decompress them in the case of <i>gunzip</i> ).</p>
-<dt><code>-S .suf &#8211;suffix .suf</code></p>
-<dd> When compressing, use suffix .suf instead of .gz. Any non-empty suffix can be given, but suffixes other than .z and .gz should be avoided to avoid confusion when files are transferred to other systems. </p>
+<dt><code>-L &#8211;license</code></dt>
+<dd> Display the <i>gzip</i> license and quit.</dd>
+<dt><code>-n &#8211;no-name</code></dt>
+<dd> When compressing, do not save the original file name and timestamp by default. (The original name is always saved if the name had to be truncated.) When decompressing, do not restore the original file name if present (remove only the <i>gzip</i> suffix from the compressed file name) and do not restore the original timestamp if present (copy it from the compressed file). This option is the default when decompressing.</dd>
+<dt><code>-N &#8211;name</code></dt>
+<dd> When compressing, always save the original file name and timestamp; this is the default. When decompressing, restore the original file name and timestamp if present. This option is useful on systems which have a limit on file name length or when the timestamp has been lost after a file transfer.</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> Suppress all warnings.</dd>
+<dt><code>-r &#8211;recursive</code></dt>
+<dd> Travel the directory structure recursively. If any of the file names specified on the command line are directories, <i>gzip</i> will descend into the directory and compress all the files it finds there (or decompress them in the case of <i>gunzip</i> ).</dd>
+<dt><code>-S .suf &#8211;suffix .suf</code></dt>
+<dd> When compressing, use suffix .suf instead of .gz. Any non-empty suffix can be given, but suffixes other than .z and .gz should be avoided to avoid confusion when files are transferred to other systems. </dd>
 <p> When decompressing, add .suf to the beginning of the list of suffixes to try, when deriving an output file name from an input file name.</p>
-<dt><code>&#8211;synchronous</code></p>
-<dd> Use synchronous output. With this option, <i>gzip</i> is less likely to lose data during a system crash, but it can be considerably slower.</p>
-<dt><code>-t &#8211;test</code></p>
-<dd> Test. Check the compressed file integrity.</p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd> Verbose. Display the name and percentage reduction for each file compressed or decompressed.</p>
-<dt><code>-V &#8211;version</code></p>
-<dd> Version. Display the version number and compilation options then quit.</p>
-<dt><code>-# &#8211;fast &#8211;best</code></p>
-<dd> Regulate the speed of compression using the specified digit <i>#</i>, where <code>-1</code> or <code>&#8211;fast</code> indicates the fastest compression method (less compression) and <code>-9</code> or <code>&#8211;best</code> indicates the slowest compression method (best compression). The default compression level is <code>-6</code> (that is, biased towards high compression at expense of speed).</p>
-<dt><code>&#8211;rsyncable</code></p>
-<dd> When you synchronize a compressed file between two computers, this option allows rsync to transfer only files that were changed in the archive instead of the entire archive. Normally, after a change is made to any file in the archive, the compression algorithm can generate a new version of the archive that does not match the previous version of the archive. In this case, rsync transfers the entire new version of the archive to the remote computer. With this option, rsync can transfer only the changed files as well as a small amount of metadata that is required to update the archive structure in the area that was changed.</dl>
+<dt><code>&#8211;synchronous</code></dt>
+<dd> Use synchronous output. With this option, <i>gzip</i> is less likely to lose data during a system crash, but it can be considerably slower.</dd>
+<dt><code>-t &#8211;test</code></dt>
+<dd> Test. Check the compressed file integrity.</dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd> Verbose. Display the name and percentage reduction for each file compressed or decompressed.</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd> Version. Display the version number and compilation options then quit.</dd>
+<dt><code>-# &#8211;fast &#8211;best</code></dt>
+<dd> Regulate the speed of compression using the specified digit <i>#</i>, where <code>-1</code> or <code>&#8211;fast</code> indicates the fastest compression method (less compression) and <code>-9</code> or <code>&#8211;best</code> indicates the slowest compression method (best compression). The default compression level is <code>-6</code> (that is, biased towards high compression at expense of speed).</dd>
+<dt><code>&#8211;rsyncable</code></dt>
+<dd> When you synchronize a compressed file between two computers, this option allows rsync to transfer only files that were changed in the archive instead of the entire archive. Normally, after a change is made to any file in the archive, the compression algorithm can generate a new version of the archive that does not match the previous version of the archive. In this case, rsync transfers the entire new version of the archive to the remote computer. With this option, rsync can transfer only the changed files as well as a small amount of metadata that is required to update the archive structure in the area that was changed.</dd></dl>
 <h2>ADVANCED USAGE</h2>
 <p> Multiple compressed files can be concatenated. In this case, <i>gunzip</i> will extract all members at once. For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gzip -c file1&nbsp;<wbr>&nbsp;&gt;&nbsp;foo.gz<br />
@@ -107,27 +107,27 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is normally 0; if an error occurs, exit status is 1. If a warning occurs, exit status is 2.</p>
 <dl>
-<dt>Usage: gzip [-cdfhklLnNrtvV19] [-S suffix] [file &#8230;]</p>
-<dd> Invalid options were specified on the command line.</p>
-<dt><i>file</i>: not in gzip format</p>
-<dd> The file specified to <i>gunzip</i> has not been compressed.</p>
-<dt><i>file</i>: Corrupt input. Use zcat to recover some data.</p>
-<dd> The compressed file has been damaged. The data up to the point of failure can be recovered using </p>
+<dt>Usage: gzip [-cdfhklLnNrtvV19] [-S suffix] [file &#8230;]</dt>
+<dd> Invalid options were specified on the command line.</dd>
+<dt><i>file</i>: not in gzip format</dt>
+<dd> The file specified to <i>gunzip</i> has not been compressed.</dd>
+<dt><i>file</i>: Corrupt input. Use zcat to recover some data.</dt>
+<dd> The compressed file has been damaged. The data up to the point of failure can be recovered using </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;zcat&nbsp;<i>file</i>&nbsp;&gt;&nbsp;recover</p>
-<dt><i>file</i>: compressed with <i>xx</i> bits, can only handle <i>yy</i> bits</p>
-<dd> <i>File</i> was compressed (using LZW) by a program that could deal with more <i>bits</i> than the decompress code on this machine. Recompress the file with gzip, which compresses better and uses less memory.</p>
-<dt><i>file</i>: already has .gz suffix &#8212; unchanged</p>
-<dd> The file is assumed to be already compressed. Rename the file and try again.</p>
-<dt><i>file</i> already exists; do you wish to overwrite (y or n)?</p>
-<dd> Respond &quot;y&quot; if you want the output file to be replaced; &quot;n&quot; if not.</p>
-<dt>gunzip: corrupt input</p>
-<dd> A SIGSEGV violation was detected which usually means that the input file has been corrupted.</p>
-<dt><i>xx.x%</i> Percentage of the input saved by compression.</p>
-<dd> (Relevant only for <code>-v</code> and <code>-l</code>.)</p>
-<dt>&#8212; not a regular file or directory: ignored</p>
-<dd> When the input file is not a regular file or directory, (e.g. a symbolic link, socket, FIFO, device file), it is left unaltered.</p>
-<dt>&#8212; has <i>xx</i> other links: unchanged</p>
-<dd> The input file has links; it is left unchanged. See <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1) for more information. Use the <code>-f</code> flag to force compression of multiply-linked files.</dl>
+<dt><i>file</i>: compressed with <i>xx</i> bits, can only handle <i>yy</i> bits</dt>
+<dd> <i>File</i> was compressed (using LZW) by a program that could deal with more <i>bits</i> than the decompress code on this machine. Recompress the file with gzip, which compresses better and uses less memory.</dd>
+<dt><i>file</i>: already has .gz suffix &#8212; unchanged</dt>
+<dd> The file is assumed to be already compressed. Rename the file and try again.</dd>
+<dt><i>file</i> already exists; do you wish to overwrite (y or n)?</dt>
+<dd> Respond &quot;y&quot; if you want the output file to be replaced; &quot;n&quot; if not.</dd>
+<dt>gunzip: corrupt input</dt>
+<dd> A SIGSEGV violation was detected which usually means that the input file has been corrupted.</dd>
+<dt><i>xx.x%</i> Percentage of the input saved by compression.</dt>
+<dd> (Relevant only for <code>-v</code> and <code>-l</code>.)</dd>
+<dt>&#8212; not a regular file or directory: ignored</dt>
+<dd> When the input file is not a regular file or directory, (e.g. a symbolic link, socket, FIFO, device file), it is left unaltered.</dd>
+<dt>&#8212; has <i>xx</i> other links: unchanged</dt>
+<dd> The input file has links; it is left unchanged. See <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1) for more information. Use the <code>-f</code> flag to force compression of multiply-linked files.</dd></dl>
 <h2>CAVEATS</h2>
 <p> When writing compressed data to a tape, it is generally necessary to pad the output with zeroes up to a block boundary. When the data is read and the whole block is passed to <i>gunzip</i> for decompression, <i>gunzip</i> detects that there is extra trailing garbage after the compressed data and emits a warning by default. You can use the &#8211;quiet option to suppress the warning.</p>
 <h2>BUGS</h2>

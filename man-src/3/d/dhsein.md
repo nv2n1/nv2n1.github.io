@@ -19,7 +19,7 @@ description: "dhsein.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DHSEIN uses inverse iteration to find specified right and/or left
  eigenvectors of a real upper Hessenberg matrix H.
@@ -28,11 +28,11 @@ description: "dhsein.f –"
               H * x = w * x,     y**h * H = w * y**h
  where y**h denotes the conjugate transpose of the vector y.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
           = 'R': compute right eigenvectors only;
@@ -177,25 +177,26 @@ INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i - th argument
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Each eigenvector is normalized so that the element of largest
   magnitude has magnitude 1; here the magnitude of a complex number
   (x,y) is taken to be |x|+|y|.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 262 of file dhsein.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -15,16 +15,16 @@ description: "uuname – List the names of the known remote UUCP sites."
 <p> <i>Uuname</i> is a program that lists the names of the known remote UUCP sites.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;aliases</code></p>
-<dd> Display aliases.</p>
-<dt><code>-l</code>, <code>&#8211;local</code></p>
-<dd> Print the local name.</p>
-<dt><code>-I</code>, <code>&#8211;config</code> <i>file</i></p>
-<dd> Set the configuration file to use.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Print the software version and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a help screen and exit.</dl>
+<dt><code>-a</code>, <code>&#8211;aliases</code></dt>
+<dd> Display aliases.</dd>
+<dt><code>-l</code>, <code>&#8211;local</code></dt>
+<dd> Print the local name.</dd>
+<dt><code>-I</code>, <code>&#8211;config</code> <i>file</i></dt>
+<dd> Set the configuration file to use.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Print the software version and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a help screen and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> None apparent.</p>
 <h2>SEE ALSO</h2>

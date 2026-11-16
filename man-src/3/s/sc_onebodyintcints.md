@@ -11,7 +11,6 @@ description: "sc::OneBodyIntCints –"
 <p> This implements most one body integrals in the Cints library.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;obintcints.h&gt;</code></pre>
 <p> Inherits <code>sc::OneBodyInt</code>.</p>
 <h3>Public Member Functions</h3>

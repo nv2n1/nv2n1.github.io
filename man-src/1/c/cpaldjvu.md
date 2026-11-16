@@ -16,14 +16,14 @@ description: "cpaldjvu – DjVuDocument encoder for low-color images."
 <p> This program works by first reducing the number of distinct colors to a small specified value using a simple color quantization algorithm. The dominant color is encoded into the background layer. The other colors are encoded into the foreground layer. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-dpi </code><i>n</i></p>
-<dd> Specify the resolution information encoded into the output file expressed in dots per inch. The resolution information encoded in DjVu files determine how the decoder scales the image on a particular display. Meaningful resolutions range from 25 to 6000. The default value is 300 dpi.</p>
-<dt><code>-colors </code><i>n</i></p>
-<dd> Specify a maximum number of distinct colors for the color quantization algorithm. process. The default value is 256. Smaller values can produce much smaller files.</p>
-<dt><code>-bgwhite</code></p>
-<dd> Cause the background layer to use the lightest quantified color instead of the dominant color.</p>
-<dt><code>-verbose</code></p>
-<dd> Display informational messages while running. </p>
+<dt><code>-dpi </code><i>n</i></dt>
+<dd> Specify the resolution information encoded into the output file expressed in dots per inch. The resolution information encoded in DjVu files determine how the decoder scales the image on a particular display. Meaningful resolutions range from 25 to 6000. The default value is 300 dpi.</dd>
+<dt><code>-colors </code><i>n</i></dt>
+<dd> Specify a maximum number of distinct colors for the color quantization algorithm. process. The default value is 256. Smaller values can produce much smaller files.</dd>
+<dt><code>-bgwhite</code></dt>
+<dd> Cause the background layer to use the lightest quantified color instead of the dominant color.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Display informational messages while running. </dd>
 </dl>
 <h2>REMARKS</h2>
 <p> The color quantization might introduce severe degradation if the image contains photographic areas with a large number of very similar colors. Color quantization problems might be solved by pre-processing the input file with a different quantization program such as <code>ppmquant</code>. Avoid using the error diffusion dithering algorithm. This algorithm generates random dithering patterns that might be very costly to encode. </p>

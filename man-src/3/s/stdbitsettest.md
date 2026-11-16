@@ -29,10 +29,8 @@ std::out_of_range if pos does not correspond to a valid position within the bits
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     std::bitset&lt;10&gt; b1(&quot;1111010000&quot;);
     size_t idx = 0;

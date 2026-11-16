@@ -16,20 +16,20 @@ description: "matchpathcon – get the default SELinux security context for the 
 <p> <code>matchpathcon </code> will also take the file type into consideration in determining the default security context if the file exists. If the file does not exist, no file type matching will occur.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-m</code><i> type</i></p>
-<dd>Force file type for the lookup. Valid types are <code>file</code>, <code>dir</code>, pipe<code>, </code>chr_file<code>, </code>blk_file<code>, </code> <code>lnk_file</code>, <code>sock_file</code>.</p>
-<dt><code>-n</code></p>
-<dd>Do not display path.</p>
-<dt><code>-N</code></p>
-<dd>Do not use translations.</p>
-<dt><code>-f</code><i> file_context_file</i></p>
-<dd>Use alternate file_context file</p>
-<dt><code>-p</code><i> prefix</i></p>
-<dd>Use prefix to speed translations</p>
-<dt><code>-P</code><i> policy_root_path</i></p>
-<dd>Use alternate policy root path</p>
-<dt><code>-V</code></p>
-<dd>Verify file context on disk matches defaults</dl>
+<dt><code>-m</code><i> type</i></dt>
+<dd>Force file type for the lookup. Valid types are <code>file</code>, <code>dir</code>, pipe<code>, </code>chr_file<code>, </code>blk_file<code>, </code> <code>lnk_file</code>, <code>sock_file</code>.</dd>
+<dt><code>-n</code></dt>
+<dd>Do not display path.</dd>
+<dt><code>-N</code></dt>
+<dd>Do not use translations.</dd>
+<dt><code>-f</code><i> file_context_file</i></dt>
+<dd>Use alternate file_context file</dd>
+<dt><code>-p</code><i> prefix</i></dt>
+<dd>Use prefix to speed translations</dd>
+<dt><code>-P</code><i> policy_root_path</i></dt>
+<dd>Use alternate policy root path</dd>
+<dt><code>-V</code></dt>
+<dd>Verify file context on disk matches defaults</dd></dl>
 <h2>Author</h2>
 <p>This manual page was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;.</p>
 <h2>See Also</h2>

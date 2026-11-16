@@ -18,18 +18,18 @@ description: "Hercules – IBM System/370, ESA/390, and z/Architecture Emulator"
 <p> <code>Hercules</code> implements only the raw S/370, ESA/390, and z/Architecture instruction set; it does not provide any operating system facilities. This means that you need to provide an operating system or standalone program which <code>Hercules</code> can load from an emulated disk or tape device. You will have to write the operating system or standalone program yourself, unless you can manage to obtain a license from IBM to run one of their operating systems on your PC, or use IBM programs and operating systems which have been placed in the public domain.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code> <i>config-filename</i></p>
-<dd> Sets the name of the configuration file. The default, if none is specified, is <code>hercules.cnf</code>. The default may be overridden via the <code>HERCULES_CNF</code> environment variable.</p>
-<dt><code>-d</code></p>
-<dd> Specifies that Hercules is to be run in &#8216;daemon&#8217; mode, wherein it runs invisibly with no attached console.</p>
-<dt><code>-b</code> <i>logo-filename</i></p>
-<dd> Sets the name of the file containg the screen logo that&#8217;s presented when a 3270 terminal connects. When not specified the default <code>herclogo.txt</code> file is looked for and when not found the built-in logo is used.</p>
-<dt><code>-p</code> <i>dyn-load-dir</i></p>
-<dd> Sets the directory from which dynamic modules are to be loaded. The default depends on the host platform on which Hercules is being run. This option overrides the default.</p>
-<dt><code>-l</code> <i>dynmod-to-load</i></p>
-<dd> Sets the name of an additional dynamic module to be loaded at startup. More than one additional module may be specified, although each must be preceded with the <code>-l</code> option specifier.</p>
-<dt><i>logfile</i></p>
-<dd> Sets an optional log file which will receive a copy of all messages displayed on the control panel</dl>
+<dt><code>-f</code> <i>config-filename</i></dt>
+<dd> Sets the name of the configuration file. The default, if none is specified, is <code>hercules.cnf</code>. The default may be overridden via the <code>HERCULES_CNF</code> environment variable.</dd>
+<dt><code>-d</code></dt>
+<dd> Specifies that Hercules is to be run in &#8216;daemon&#8217; mode, wherein it runs invisibly with no attached console.</dd>
+<dt><code>-b</code> <i>logo-filename</i></dt>
+<dd> Sets the name of the file containg the screen logo that&#8217;s presented when a 3270 terminal connects. When not specified the default <code>herclogo.txt</code> file is looked for and when not found the built-in logo is used.</dd>
+<dt><code>-p</code> <i>dyn-load-dir</i></dt>
+<dd> Sets the directory from which dynamic modules are to be loaded. The default depends on the host platform on which Hercules is being run. This option overrides the default.</dd>
+<dt><code>-l</code> <i>dynmod-to-load</i></dt>
+<dd> Sets the name of an additional dynamic module to be loaded at startup. More than one additional module may be specified, although each must be preceded with the <code>-l</code> option specifier.</dd>
+<dt><i>logfile</i></dt>
+<dd> Sets an optional log file which will receive a copy of all messages displayed on the control panel</dd></dl>
 <h2>FILES</h2>
 <p> <code>hercules.cnf</code></p>
 <h2>ENVIRONMENT</h2>

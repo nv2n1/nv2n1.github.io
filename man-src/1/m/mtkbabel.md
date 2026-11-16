@@ -38,44 +38,44 @@ description: "mtkbabel – Tool for managing GPS data loggers based on the MTK c
 <p> <code> $ mtkbabel -s 115200 -E</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Read all the log memory (overlapped data).</p>
-<dt><code>-b</code> filename.bin</p>
-<dd> Do not read data from a GPS device, but rather read a previously saved .bin file. Ignore -f option.</p>
-<dt><code>-c</code></p>
-<dd> Create a GPX file with both tracks and waypoints.</p>
-<dt><code>-d</code> debug_level</p>
-<dd> Debug level: 0..7.</p>
-<dt><code>-E</code></p>
-<dd> Erase data log memory.</p>
-<dt><code>-f</code></p>
-<dd> Base name for saved files (.bin and .gpx). If you, for example, use <code>-f gpslog</code>, mtkbabel will create files which are called <code>gpslog.gpx</code>, <code>gpslog_trk.gpx</code>, <code>gpslog_wpt.gpx</code> and <code>gpslog.bin</code>.</p>
-<dt><code>-h</code></p>
-<dd> Show a help text and exit.</p>
-<dt><code>-i</code></p>
-<dd> Ignore some error conditions and try to extract as much data as possible from GPS.</p>
-<dt><code>-l</code> {on|off}</p>
-<dd> Turn logging ON/OFF.</p>
-<dt><code>-m</code> {stop|overlap}</p>
-<dd> Set STOP/OVERLAP recording method on memory full.</p>
-<dt><code>-o</code> log_format</p>
-<dd> Enable or disable log fields (FIELD1,-FIELD2,&#8230;), available fields: UTC, VALID, LATITUDE, LONGITUDE, HEIGHT, SPEED, HEADING, DSTA, DAGE, PDOP, HDOP, VDOP, NSAT, SID, ELEVATION, AZIMUTH, SNR, RCR, MILLISECOND, DISTANCE.</p>
-<dt><code>-p</code> port</p>
-<dd> Communication port, default: <code>/dev/ttyUSB0</code>.</p>
-<dt><code>-R</code></p>
-<dd> Recover from disabled log: erase data and reset recording criteria.</p>
-<dt><code>-r</code> time:distance:speed</p>
-<dd> Set logging criteria (zero to disable): every 0.10-9999999.90 seconds, every 0.10-9999999.90 meters, over 0.10-9999999.90 km/h. Not all the devices support such wide ranges, more reasonable values are 1-999 seconds, 10-9999 meters and 10-999 km/h.</p>
-<dt><code>-s</code> speed</p>
-<dd> Serial port speed, default <code>115200</code> baud.</p>
-<dt><code>-t</code></p>
-<dd> Create a GPX file with tracks.</p>
-<dt><code>-v</code></p>
-<dd> Show version information and exit.</p>
-<dt><code>-w</code></p>
-<dd> Create a GPX file with waypoints.</p>
-<dt><code>-x</code></p>
-<dd> Force reading Holux format. This is required to read-back the binary data produced by some Holux devices, which do not embed into the data itself the Holux identifier string.</dl>
+<dt><code>-a</code></dt>
+<dd> Read all the log memory (overlapped data).</dd>
+<dt><code>-b</code> filename.bin</dt>
+<dd> Do not read data from a GPS device, but rather read a previously saved .bin file. Ignore -f option.</dd>
+<dt><code>-c</code></dt>
+<dd> Create a GPX file with both tracks and waypoints.</dd>
+<dt><code>-d</code> debug_level</dt>
+<dd> Debug level: 0..7.</dd>
+<dt><code>-E</code></dt>
+<dd> Erase data log memory.</dd>
+<dt><code>-f</code></dt>
+<dd> Base name for saved files (.bin and .gpx). If you, for example, use <code>-f gpslog</code>, mtkbabel will create files which are called <code>gpslog.gpx</code>, <code>gpslog_trk.gpx</code>, <code>gpslog_wpt.gpx</code> and <code>gpslog.bin</code>.</dd>
+<dt><code>-h</code></dt>
+<dd> Show a help text and exit.</dd>
+<dt><code>-i</code></dt>
+<dd> Ignore some error conditions and try to extract as much data as possible from GPS.</dd>
+<dt><code>-l</code> {on|off}</dt>
+<dd> Turn logging ON/OFF.</dd>
+<dt><code>-m</code> {stop|overlap}</dt>
+<dd> Set STOP/OVERLAP recording method on memory full.</dd>
+<dt><code>-o</code> log_format</dt>
+<dd> Enable or disable log fields (FIELD1,-FIELD2,&#8230;), available fields: UTC, VALID, LATITUDE, LONGITUDE, HEIGHT, SPEED, HEADING, DSTA, DAGE, PDOP, HDOP, VDOP, NSAT, SID, ELEVATION, AZIMUTH, SNR, RCR, MILLISECOND, DISTANCE.</dd>
+<dt><code>-p</code> port</dt>
+<dd> Communication port, default: <code>/dev/ttyUSB0</code>.</dd>
+<dt><code>-R</code></dt>
+<dd> Recover from disabled log: erase data and reset recording criteria.</dd>
+<dt><code>-r</code> time:distance:speed</dt>
+<dd> Set logging criteria (zero to disable): every 0.10-9999999.90 seconds, every 0.10-9999999.90 meters, over 0.10-9999999.90 km/h. Not all the devices support such wide ranges, more reasonable values are 1-999 seconds, 10-9999 meters and 10-999 km/h.</dd>
+<dt><code>-s</code> speed</dt>
+<dd> Serial port speed, default <code>115200</code> baud.</dd>
+<dt><code>-t</code></dt>
+<dd> Create a GPX file with tracks.</dd>
+<dt><code>-v</code></dt>
+<dd> Show version information and exit.</dd>
+<dt><code>-w</code></dt>
+<dd> Create a GPX file with waypoints.</dd>
+<dt><code>-x</code></dt>
+<dd> Force reading Holux format. This is required to read-back the binary data produced by some Holux devices, which do not embed into the data itself the Holux identifier string.</dd></dl>
 <h2>BUGS</h2>
 <p> Please report any bugs to Niccolo Rigacci &lt;niccolo [at] rigacci.org&gt;.</p>
 <h2>LICENCE</h2>

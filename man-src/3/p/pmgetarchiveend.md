@@ -24,8 +24,8 @@ description: "pmGetArchiveEnd – locate logical end of file for a set of archiv
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3), <code><a href="/docs/linux/man/3-pmfetcharchive/">pmFetchArchive</a></code>(3), <code><a href="/docs/linux/man/3-pmgetarchivelabel/">pmGetArchiveLabel</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmsetmode/">pmSetMode</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOCONTEXT</code></p>
-<dd>the current PMAPI context is either invalid, or not associated with an set of archive logs</p>
-<dt><code>PM_ERR_LOGREC</code></p>
-<dd>the set of archives is sufficiently damaged, that not a single valid record can be found </p>
+<dt><code>PM_ERR_NOCONTEXT</code></dt>
+<dd>the current PMAPI context is either invalid, or not associated with an set of archive logs</dd>
+<dt><code>PM_ERR_LOGREC</code></dt>
+<dd>the set of archives is sufficiently damaged, that not a single valid record can be found </dd>
 </dl>

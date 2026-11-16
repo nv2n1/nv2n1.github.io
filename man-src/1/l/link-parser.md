@@ -16,35 +16,35 @@ description: "link-parser – parses natural language sentences"
 <p> This package can be used for linguistic parsing for information retrieval or extraction from natural language documents. Abiword also uses it as a grammar checker.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-pp pp_knowledge_file</code></p>
+<dt><code>-pp pp_knowledge_file</code></dt>
 <dd>
-<dt><code>-c constituent_knowledge_file</code></p>
+</dd><dt><code>-c constituent_knowledge_file</code></dt>
 <dd>
-<dt><code>-a affix_file</code></p>
+</dd><dt><code>-a affix_file</code></dt>
 <dd>
-<dt><code>-ppoff</code></p>
+</dd><dt><code>-ppoff</code></dt>
 <dd>
-<dt><code>-coff</code></p>
+</dd><dt><code>-coff</code></dt>
 <dd>
-<dt><code>-aoff</code></p>
+</dd><dt><code>-aoff</code></dt>
 <dd>
-<dt><code>-batch</code></p>
+</dd><dt><code>-batch</code></dt>
 <dd>
-<dt><code>-&lt;special ! command&gt;</dl>
+</dd><dt><code>-&lt;special ! command&gt;</dt></dl>
 <p> </code></p>
 <h2>USE</h2>
 <dd>
 <p> link-parser, when invoked manually, will take control of the terminal; link-parser will then attempt to analyze the grammar of all input, unless escaped with an exclamation mark, according to the dictionary file provided as an argument. If escaped, the input will be treated as a &quot;special command&quot;; &quot;!help&quot; lists all special commands available. </p>
 <p> link-parser depends on a link-grammar dictionary which contains lists of words and associated metadata about their grammatical properties in order to analyze sentences. A link-grammar dictionary provided by the authors of link-grammar is usually included with the link-grammar package, and can often be found somewhere in the /usr/share/link-grammar/ hierarchy. When this is the case, only the two-letter language code needs to be specified on the command-line. Alternatively, a user can provide their own dictionary as an argument, in which case the dictionary&#8217;s directory should be specified. Hence, either of the commands</p>
-<dl>
-<dt><code>link-parser en</code></p>
+</dd><dl>
+<dt><code>link-parser en</code></dt>
 <dd>
-<dt><code>link-parser /usr/share/link-grammar/en</code></p>
-<dd> will run link-parser using the english dictionary included with the parser.</dl>
+</dd><dt><code>link-parser /usr/share/link-grammar/en</code></dt>
+<dd> will run link-parser using the english dictionary included with the parser.</dd></dl>
 <p> While in a link-parser session, some example output could be: </p>
 <dl>
 <dt>
-<dd> <code>linkparser&gt; Reading a man page is informative.</code> </p>
+</dt><dd> <code>linkparser&gt; Reading a man page is informative.</code> </dd>
 <p> ++++Time 0.00 seconds (0.01 total) </p>
 <p> Found 1 linkage (1 had no P.P. violations)<br />
 &nbsp;<wbr>&nbsp;<wbr>Unique linkage, cost vector&nbsp;<wbr>=&nbsp;<wbr>(UNUSED=0 DIS=0 AND=0 LEN=12) </p>
@@ -59,7 +59,7 @@ description: "link-parser – parses natural language sentences"
 <p> link-parser can also be used non-interactively, either through its API, or via the -batch option. When used with the -batch option, link-parser passively receives input from standard input, and when the stream finishes, it then outputs its analysis. So one could construct an ad-hoc grammar checker by piping text through link-parser with a batch option, and seeing what sentences fail to parse as valid:</p>
 <dl>
 <dt>
-<dd> <code>cat thesis.txt | link-parser /usr/share/link-grammar/en/4.0.dict -batch</code></dl>
+</dt><dd> <code>cat thesis.txt | link-parser /usr/share/link-grammar/en/4.0.dict -batch</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> Information on the shared-library API and the link types used in the parse is avavailable at the Abiword website at <code><a rel="nofollow" href="http://www.abisource.com/projects/link-grammar/dict/index.html">http://www.abisource.com/projects/link-grammar/dict/index.html</a></code><br />
  Peer-reviewed papers explaining link-parser can be found at the original CMU site at <code><a rel="nofollow" href="http://www.link.cs.cmu.edu/link/papers/index.html.">http://www.link.cs.cmu.edu/link/papers/index.html.</a></code></p>

@@ -109,9 +109,7 @@ routine to get the name of the C-binding routine.</p>
 <h2>See Also</h2>
 <pre><code>Online:
 ncarg_cbind(3NCARG),
-
 ncargex(1NCARG),
-
 ncargintro(5NCARG).
 Hardcopy:
 NCAR Graphics Fundamentals, UNIX Version

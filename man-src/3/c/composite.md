@@ -13,14 +13,14 @@ description: "Composite — The Composite widget class"
 <h2>Description</h2>
 <p>Composite widgets are intended to be containers for other widgets and can have an arbitrary number of children. Their responsibilities (implemented either directly by the widget class or indirectly by Intrinsics functions) include:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>Overall management of children from creation to destruction.</p>
-<dt> &bull;</p>
-<dd>Destruction of descendants when the composite widget is destroyed.</p>
-<dt> &bull;</p>
-<dd>Physical arrangement (geometry management) of a displayable subset of managed children.</p>
-<dt> &bull;</p>
-<dd>Mapping and unmapping of a subset of the managed children. Instances of composite widgets need to specify the order in which their children are kept. For example, an application may want a set of command buttons in some logical order grouped by function, and it may want buttons that represent filenames to be kept in alphabetical order.</dl>
+<dt> &bull;</dt>
+<dd>Overall management of children from creation to destruction.</dd>
+<dt> &bull;</dt>
+<dd>Destruction of descendants when the composite widget is destroyed.</dd>
+<dt> &bull;</dt>
+<dd>Physical arrangement (geometry management) of a displayable subset of managed children.</dd>
+<dt> &bull;</dt>
+<dd>Mapping and unmapping of a subset of the managed children. Instances of composite widgets need to specify the order in which their children are kept. For example, an application may want a set of command buttons in some logical order grouped by function, and it may want buttons that represent filenames to be kept in alphabetical order.</dd></dl>
 <h3>Classes</h3>
 <p>Composite inherits behavior and resources from <code>Core</code>. </p>
 <p> The class pointer is <code>compositeWidgetClass</code>. </p>
@@ -138,17 +138,17 @@ description: "Composite — The Composite widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNchildren</code></p>
-<dd>A read-only list of the children of the widget.</p>
-<dt><code>XmNinsertPosition</code></p>
-<dd>Points to the <code>XtOrderProc</code> function described below.</p>
-<dt><code>XmNnumChildren</code></p>
-<dd>A read-only resource specifying the length of the list of children in <code>XmNchildren</code>.</dl>
+<dt><code>XmNchildren</code></dt>
+<dd>A read-only list of the children of the widget.</dd>
+<dt><code>XmNinsertPosition</code></dt>
+<dd>Points to the <code>XtOrderProc</code> function described below.</dd>
+<dt><code>XmNnumChildren</code></dt>
+<dd>A read-only resource specifying the length of the list of children in <code>XmNchildren</code>.</dd></dl>
 <p> The following procedure pointer in a composite widget instance is of type <code>XtOrderProc</code>: </p>
 <pre>Cardinal (* XtOrderProc) (Widget <i>w</i>);</pre>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <p> Composite widgets that allow clients to order their children (usually homogeneous boxes) can call their widget instance&#8217;s <code>XmNinsertPosition</code> procedure from the class&#8217;s <code>insert_child</code> procedure to determine where a new child should go in its children array. Thus, a client of a composite class can apply different sorting criteria to widget instances of the class, passing in a different <code>XmNinsertPosition</code> procedure when it creates each composite widget instance. </p>
 <p> The return value of the <code>XmNinsertPosition</code> procedure indicates how many children should go before the widget. A value of 0 (zero) indicates that the widget should go before all other children; returning the value of <code>XmNumChildren</code> indicates that it should go after all other children. By default, unless a subclass or an application provides an <code>XmNinsertPosition</code> procedure, each child is inserted at the end of the <code>XmNchildren</code> list. The <code>XmNinsertPosition</code> procedure can be overridden by a specific composite widget&#8217;s resource list or by the argument list provided when the composite widget is created.</p>
 <h3>Inherited Resources</h3>

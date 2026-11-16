@@ -14,9 +14,9 @@ description: "nand_opcode_8bits –"
 <p><i>command</i></p>
 <dl>
 <dd>
-<dd>opcode to check</dl>
+</dd><dd>opcode to check</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

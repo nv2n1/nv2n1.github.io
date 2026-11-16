@@ -20,39 +20,35 @@ description: "pon, poff, plog – starts up, shuts down or lists the log of PPP 
 <p> For instance, to use ISP configuration &quot;myisp&quot; run:</p>
 <dl>
 <dt>
-<dd> pon myisp</dl>
+</dt><dd> pon myisp</dd></dl>
 <p> <code>pon</code> will then use the options file <i>/etc/ppp/peers/myisp</i>. You can pass additional <code>pppd options</code> after the ISP name, too. <code>pon</code> can be used to run multiple, simultaneous PPP connections. </p>
 <p> <code>pon</code> takes the following command line options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-q &#8211;quick</code></p>
-<dd> disconnect when ip-up finishes running. This function is only available to the <i>root</i> user.</dl>
+<dt><code>-q &#8211;quick</code></dt>
+<dd> disconnect when ip-up finishes running. This function is only available to the <i>root</i> user.</dd></dl>
 </dl>
 <h3>poff</h3>
 <p> <code>poff</code> closes a PPP connection. If more than one PPP connection exists, the one named in the argument to <code>poff</code> will be killed, e.g.</p>
 <dl>
 <dt>
-<dd> poff myprovider2</dl>
+</dt><dd> poff myprovider2</dd></dl>
 <p> will terminate the connection to myprovider2, and leave the PPP connections to e.g. &quot;myprovider1&quot; or &quot;myprovider3&quot; up and running. </p>
 <p> <code>poff</code> takes the following command line options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-r</code></p>
-<dd> causes the connection to be redialed after it is dropped.</p>
-<dt><code>-d</code></p>
-<dd> toggles the state of pppd&#8217;s debug option.</p>
-<dt><code>-c</code></p>
-<dd> causes <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) to renegotiate compression.</p>
-<dt><code>-a</code></p>
-<dd> stops all running ppp connections. If the argument <code>isp-name</code> is given it will be ignored.</p>
-<dt><code>-h</code></p>
-<dd> displays help information.</p>
-<dt><code>-v</code></p>
-<dd> prints the version and exits.</dl>
+<dt><code>-r</code></dt>
+<dd> causes the connection to be redialed after it is dropped.</dd>
+<dt><code>-d</code></dt>
+<dd> toggles the state of pppd&#8217;s debug option.</dd>
+<dt><code>-c</code></dt>
+<dd> causes <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) to renegotiate compression.</dd>
+<dt><code>-a</code></dt>
+<dd> stops all running ppp connections. If the argument <code>isp-name</code> is given it will be ignored.</dd>
+<dt><code>-h</code></dt>
+<dd> displays help information.</dd>
+<dt><code>-v</code></dt>
+<dd> prints the version and exits.</dd></dl>
 <p> If no argument is given, <code>poff</code> will stop or signal pppd if and only if there is exactly one running. If more than one connection is active, it will exit with an error code of 1. </p>
 </dl>
 <h3>plog</h3>
@@ -61,18 +57,18 @@ description: "pon, poff, plog – starts up, shuts down or lists the log of PPP 
 <p> local2.*<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>-/var/log/ppp.log</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/ppp/options</i></p>
-<dd> PPPd system options file.</p>
-<dt><i>/etc/ppp/pap-secrets</i></p>
-<dd> System PAP passwords file.</p>
-<dt><i>/etc/ppp/chap-secrets</i></p>
-<dd> System CHAP passwords file.</p>
-<dt><i>/etc/ppp/peers/</i></p>
-<dd> Directory holding the peer options files. The default file is called <i>provider</i>.</p>
-<dt><i>/etc/chatscripts/provider</i></p>
-<dd> The chat script invoked from the default <i>/etc/ppp/peers/provider</i>.</p>
-<dt><i>/var/log/ppp.log</i></p>
-<dd> The default PPP log file.</dl>
+<dt><i>/etc/ppp/options</i></dt>
+<dd> PPPd system options file.</dd>
+<dt><i>/etc/ppp/pap-secrets</i></dt>
+<dd> System PAP passwords file.</dd>
+<dt><i>/etc/ppp/chap-secrets</i></dt>
+<dd> System CHAP passwords file.</dd>
+<dt><i>/etc/ppp/peers/</i></dt>
+<dd> Directory holding the peer options files. The default file is called <i>provider</i>.</dd>
+<dt><i>/etc/chatscripts/provider</i></dt>
+<dd> The chat script invoked from the default <i>/etc/ppp/peers/provider</i>.</dd>
+<dt><i>/var/log/ppp.log</i></dt>
+<dd> The default PPP log file.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The p-commands were written by Christoph Lameter &lt;clameter [at] debian.org&gt;. Updated and revised by Philip Hands &lt;phil [at] hands.com&gt;.<br />
  This manual was written by Othmar Pasteka &lt;othmar [at] tron.at&gt;. Modified by Rob Levin &lt;lilo [at] openprojects.net&gt;, with some extensions taken from the old p-commands manual written by John Hasler &lt;jhasler [at] debian.org&gt;.</p>

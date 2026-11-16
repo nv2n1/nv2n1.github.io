@@ -13,50 +13,50 @@ description: "gopen_ws (Open workstation) – opens a GKS workstation."
 <p> void gopen_ws(Gint ws_id, const char *conn_id, Gint ws_type);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) &#8211; A number assigned to a workstation as an identifier that is to be used in all subsequent calls to GKS functions that require a workstation identifier. In NCAR GKS, ws_id can be any non-negative integer.</p>
-<dt>conn_id</p>
-<dd>(Input) &#8211; A connection identifier that has different meanings for different workstation types (see the USAGE section below).</p>
-<dt>ws_type</p>
-<dd>(Input) &#8211; An identifier specifying the specific type of output device targeted. Each GKS package has an implementation-dependent set of workstation types that the package supports. The legal workstation types in NCAR GKS are:</p>
-<dt> 1</p>
-<dd>&#8211; NCGM</p>
-<dt> 3</p>
-<dd>&#8211; WISS</p>
-<dt> 7</p>
-<dd>&#8211; pre-existing X11 window.</p>
-<dt> 8</p>
-<dd>&#8211; non-existing X11 window.</p>
-<dt> 10</p>
-<dd>&#8211; text dump of graphics output.</p>
-<dt> 11</p>
-<dd>&#8211; PDF in portrait mode.</p>
-<dt> 12</p>
-<dd>&#8211; PDF in landscape mode.</p>
-<dt> 20</p>
-<dd>&#8211; color PostScript in portrait mode.</p>
-<dt> 21</p>
-<dd>&#8211; color Encapsulated PostScript (EPS) in portrait mode.</p>
-<dt> 22</p>
-<dd>&#8211; color Encapsulated PostScript Interchange format (EPSI) in portrait mode.</p>
-<dt> 23</p>
-<dd>&#8211; monochrome PostScript in portrait mode.</p>
-<dt> 24</p>
-<dd>&#8211; monochrome Encapsulated PostScript (EPS) in portrait mode.</p>
-<dt> 25</p>
-<dd>&#8211; monochrome Encapsulated PostScript Interchange format (EPSI) in portrait mode.</p>
-<dt> 26</p>
-<dd>&#8211; color PostScript in landscape mode.</p>
-<dt> 27</p>
-<dd>&#8211; color Encapsulated PostScript (EPS) in landscape mode.</p>
-<dt> 28</p>
-<dd>&#8211; color Encapsulated PostScript Interchange format (EPSI) in landscape mode.</p>
-<dt> 29</p>
-<dd>&#8211; monochrome PostScript in landscape mode.</p>
-<dt> 30</p>
-<dd>&#8211; monochrome Encapsulated PostScript (EPS) in landscape mode.</p>
-<dt> 31</p>
-<dd>&#8211; monochrome Encapsulated PostScript Interchange format (EPSI) in landscape mode.</dl>
+<dt>ws_id</dt>
+<dd>(Input) &#8211; A number assigned to a workstation as an identifier that is to be used in all subsequent calls to GKS functions that require a workstation identifier. In NCAR GKS, ws_id can be any non-negative integer.</dd>
+<dt>conn_id</dt>
+<dd>(Input) &#8211; A connection identifier that has different meanings for different workstation types (see the USAGE section below).</dd>
+<dt>ws_type</dt>
+<dd>(Input) &#8211; An identifier specifying the specific type of output device targeted. Each GKS package has an implementation-dependent set of workstation types that the package supports. The legal workstation types in NCAR GKS are:</dd>
+<dt> 1</dt>
+<dd>&#8211; NCGM</dd>
+<dt> 3</dt>
+<dd>&#8211; WISS</dd>
+<dt> 7</dt>
+<dd>&#8211; pre-existing X11 window.</dd>
+<dt> 8</dt>
+<dd>&#8211; non-existing X11 window.</dd>
+<dt> 10</dt>
+<dd>&#8211; text dump of graphics output.</dd>
+<dt> 11</dt>
+<dd>&#8211; PDF in portrait mode.</dd>
+<dt> 12</dt>
+<dd>&#8211; PDF in landscape mode.</dd>
+<dt> 20</dt>
+<dd>&#8211; color PostScript in portrait mode.</dd>
+<dt> 21</dt>
+<dd>&#8211; color Encapsulated PostScript (EPS) in portrait mode.</dd>
+<dt> 22</dt>
+<dd>&#8211; color Encapsulated PostScript Interchange format (EPSI) in portrait mode.</dd>
+<dt> 23</dt>
+<dd>&#8211; monochrome PostScript in portrait mode.</dd>
+<dt> 24</dt>
+<dd>&#8211; monochrome Encapsulated PostScript (EPS) in portrait mode.</dd>
+<dt> 25</dt>
+<dd>&#8211; monochrome Encapsulated PostScript Interchange format (EPSI) in portrait mode.</dd>
+<dt> 26</dt>
+<dd>&#8211; color PostScript in landscape mode.</dd>
+<dt> 27</dt>
+<dd>&#8211; color Encapsulated PostScript (EPS) in landscape mode.</dd>
+<dt> 28</dt>
+<dd>&#8211; color Encapsulated PostScript Interchange format (EPSI) in landscape mode.</dd>
+<dt> 29</dt>
+<dd>&#8211; monochrome PostScript in landscape mode.</dd>
+<dt> 30</dt>
+<dd>&#8211; monochrome Encapsulated PostScript (EPS) in landscape mode.</dd>
+<dt> 31</dt>
+<dd>&#8211; monochrome Encapsulated PostScript Interchange format (EPSI) in landscape mode.</dd></dl>
 <h2>Usage</h2>
 <p>For workstation types of 1 (CGM) the connection ID is the name of the CGM file. One can have at most one workstation of type 1 open at a time. </p>
 <p> For workstations of type 3 (WISS) the connection ID is irrelevant. One can have at most one workstation of type 3 open. One can have workstations of types 1 and 3 open simultaneously and they must have distinct connection IDs. To use the GFLASH package or any GKS segmentation functions WISS must be opened first. </p>

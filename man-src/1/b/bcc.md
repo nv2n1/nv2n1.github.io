@@ -16,158 +16,158 @@ description: "bcc – Bruce’s C compiler"
 <p> The default operation is to produce an 8086 executable called <code>a.out</code> from the source file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-ansi</code></p>
-<dd> Pass the C source through <code>unprotoize</code> after preprocessing and before code generation. This will allow <i>some</i> ansi C to be compiled but it is definitly <code>NOT</code> a true ansi-C compiler.</p>
-<dt><code>-0</code></p>
-<dd> 8086 target (works on 80386 host, but not 6809)</p>
-<dt><code>-3</code></p>
-<dd> 80386 target (may work on 8086 host, but not 6809)</p>
-<dt><code>-A</code></p>
-<dd> pass remainder of option to assembler (e.g. -A-l -Alistfile for a listing)</p>
-<dt><code>-B</code></p>
-<dd> prefix for executable search path (as usual; the search order is all paths specified using <code>-B</code>, in order, then the path given in the environment variable <code>BCC_EXEC_PREFIX</code> if that is set, then the compiled-in defaults (something like /usr/lib/bcc/ followed by /usr/bin/)</p>
-<dt><code>-C</code></p>
-<dd> pass remainder of option to bcc-cc1, see code generation options.</p>
-<dt><code>-D</code></p>
-<dd> preprocessor define</p>
-<dt><code>-E</code></p>
-<dd> produce preprocessor output to standard out.</p>
-<dt><code>-G</code></p>
-<dd> produce GCC objects (Same as -Mg)</p>
-<dt><code>-Ixyz</code></p>
-<dd> include search &#8216;xyz&#8217; path</p>
-<dt><code>-I</code></p>
-<dd> don&#8217;t add default include to search list</p>
-<dt><code>-Lxyz</code></p>
-<dd> add directory name &#8216;xyz&#8217; to the head of the list of library directories searched</p>
-<dt><code>-L</code></p>
-<dd> don&#8217;t add default library to search list</p>
-<dt><code>-Md</code></p>
-<dd> alters the arguments for all passes to produce MSDOS executable COM files. These are small model executables, use <code>-i</code> to get tiny model.</p>
-<dt><code>-Mf</code></p>
-<dd> sets bcc to pass the <code>-c</code> and <code>-f</code> arguments to the code generator for smaller faster code. Note this code is not compatible with the standard calling conventions so a different version of the C library is linked too.</p>
-<dt><code>-Mc</code></p>
-<dd> sets bcc to pass the <code>-c</code> argument to the code generator for smaller faster code. Note the standard libc is normally transparent to this, but there are exceptions.</p>
-<dt><code>-Ms</code></p>
-<dd> alters the arguments for all passes and selects C-library to produce standalone Linux-86 executables</p>
-<dt><code>-Ml</code></p>
-<dd> switches to i386-Linux code generator and library. This configuration accepts the <code>-z</code> flag to generate QMAGIC a.out files instead of the normal OMAGIC.</p>
-<dt><code>-Mg</code></p>
-<dd> switches to i386-Linux code generator and generates OMAGIC object files that can be linked with some versions of gcc; unfortunatly the most recent versions use &#8216;collect2&#8217; to link and this crashes.</p>
-<dt><code>-N</code></p>
-<dd> makes the linker produce a native a.out file (Linux OMAGIC) if combined with -3 the executable will run under Linux-i386.</p>
-<dt><code>-O</code></p>
-<dd> optimize, call <code>copt</code>(<code>1</code>) to optimize 8086 code. Specifiers to choose which rules <code>copt</code> should use can be appended to the <code>-O</code> and the option can be repeated.</p>
-<dt><code>-P</code></p>
-<dd> produce preprocessor output with no line numbers to standard output.</p>
-<dt><code>-Q</code></p>
-<dd> pass full option to c386 (Only for c386 version)</p>
-<dt><code>-S</code></p>
-<dd> produce assembler file</p>
-<dt><code>-T</code></p>
-<dd> temporary directory (overrides previous value and default; default is from the environment variable TMPDIR if that is set, otherwise /tmp)</p>
-<dt><code>-U</code></p>
-<dd> preprocessor undefine</p>
-<dt><code>-V</code></p>
-<dd> print names of files being compiled</p>
-<dt><code>-X</code></p>
-<dd> pass remainder of option to linker (e.g. -X-Ofile is passed to the linker as -Ofile)</p>
-<dt><code>-c</code></p>
-<dd> produce object file</p>
-<dt><code>-f</code></p>
-<dd> turn on floating point support, no effect with i386, changes libc library with 8086 code.</p>
-<dt><code>-g</code></p>
-<dd> produce debugging info (ignored.)</p>
-<dt><code>-o</code></p>
-<dd> output file name follows (assembler, object or executable) (as usual)</p>
-<dt><code>-p</code></p>
-<dd> produce profiling info (ignored.)</p>
-<dt><code>-t1</code></p>
-<dd> pass to the assembler to renumber the text segment for multi-segment programs.</p>
-<dt><code>-v</code></p>
-<dd> print names and args of subprocesses being run. Two or more -v&#8217;s print names of files being unlinked. Three or more -v&#8217;s print names of paths being searched.</p>
-<dt><code>-w</code></p>
-<dd> Supress any warning diagnostics.</p>
-<dt><code>-W</code></p>
-<dd> Turn <code>on</code> assembler warning messages.</p>
-<dt><code>-x</code></p>
-<dd> don&#8217;t include crt0.o in the link.</p>
-<dt><code>-i</code></p>
-<dd> don&#8217;t pass <code>-i</code> to the linker so that it will create an impure executable.</p>
-<dt><code>-7</code></p>
-<dd> Turn on ancient C mode (see CODE GENERATOR OPTIONS below). Among other things, this disables valuable error checks and even parses certain constructs incompatibly (e.g. <i>=-</i> is postdecrement instead of an assignment of a negative number) to later C standards, so this option should only be used with ancient code. To generate executables for a V7 variant you should tell linker to generate old a.out header with <code>-X-7</code> option.</dl>
+<dt><code>-ansi</code></dt>
+<dd> Pass the C source through <code>unprotoize</code> after preprocessing and before code generation. This will allow <i>some</i> ansi C to be compiled but it is definitly <code>NOT</code> a true ansi-C compiler.</dd>
+<dt><code>-0</code></dt>
+<dd> 8086 target (works on 80386 host, but not 6809)</dd>
+<dt><code>-3</code></dt>
+<dd> 80386 target (may work on 8086 host, but not 6809)</dd>
+<dt><code>-A</code></dt>
+<dd> pass remainder of option to assembler (e.g. -A-l -Alistfile for a listing)</dd>
+<dt><code>-B</code></dt>
+<dd> prefix for executable search path (as usual; the search order is all paths specified using <code>-B</code>, in order, then the path given in the environment variable <code>BCC_EXEC_PREFIX</code> if that is set, then the compiled-in defaults (something like /usr/lib/bcc/ followed by /usr/bin/)</dd>
+<dt><code>-C</code></dt>
+<dd> pass remainder of option to bcc-cc1, see code generation options.</dd>
+<dt><code>-D</code></dt>
+<dd> preprocessor define</dd>
+<dt><code>-E</code></dt>
+<dd> produce preprocessor output to standard out.</dd>
+<dt><code>-G</code></dt>
+<dd> produce GCC objects (Same as -Mg)</dd>
+<dt><code>-Ixyz</code></dt>
+<dd> include search &#8216;xyz&#8217; path</dd>
+<dt><code>-I</code></dt>
+<dd> don&#8217;t add default include to search list</dd>
+<dt><code>-Lxyz</code></dt>
+<dd> add directory name &#8216;xyz&#8217; to the head of the list of library directories searched</dd>
+<dt><code>-L</code></dt>
+<dd> don&#8217;t add default library to search list</dd>
+<dt><code>-Md</code></dt>
+<dd> alters the arguments for all passes to produce MSDOS executable COM files. These are small model executables, use <code>-i</code> to get tiny model.</dd>
+<dt><code>-Mf</code></dt>
+<dd> sets bcc to pass the <code>-c</code> and <code>-f</code> arguments to the code generator for smaller faster code. Note this code is not compatible with the standard calling conventions so a different version of the C library is linked too.</dd>
+<dt><code>-Mc</code></dt>
+<dd> sets bcc to pass the <code>-c</code> argument to the code generator for smaller faster code. Note the standard libc is normally transparent to this, but there are exceptions.</dd>
+<dt><code>-Ms</code></dt>
+<dd> alters the arguments for all passes and selects C-library to produce standalone Linux-86 executables</dd>
+<dt><code>-Ml</code></dt>
+<dd> switches to i386-Linux code generator and library. This configuration accepts the <code>-z</code> flag to generate QMAGIC a.out files instead of the normal OMAGIC.</dd>
+<dt><code>-Mg</code></dt>
+<dd> switches to i386-Linux code generator and generates OMAGIC object files that can be linked with some versions of gcc; unfortunatly the most recent versions use &#8216;collect2&#8217; to link and this crashes.</dd>
+<dt><code>-N</code></dt>
+<dd> makes the linker produce a native a.out file (Linux OMAGIC) if combined with -3 the executable will run under Linux-i386.</dd>
+<dt><code>-O</code></dt>
+<dd> optimize, call <code>copt</code>(<code>1</code>) to optimize 8086 code. Specifiers to choose which rules <code>copt</code> should use can be appended to the <code>-O</code> and the option can be repeated.</dd>
+<dt><code>-P</code></dt>
+<dd> produce preprocessor output with no line numbers to standard output.</dd>
+<dt><code>-Q</code></dt>
+<dd> pass full option to c386 (Only for c386 version)</dd>
+<dt><code>-S</code></dt>
+<dd> produce assembler file</dd>
+<dt><code>-T</code></dt>
+<dd> temporary directory (overrides previous value and default; default is from the environment variable TMPDIR if that is set, otherwise /tmp)</dd>
+<dt><code>-U</code></dt>
+<dd> preprocessor undefine</dd>
+<dt><code>-V</code></dt>
+<dd> print names of files being compiled</dd>
+<dt><code>-X</code></dt>
+<dd> pass remainder of option to linker (e.g. -X-Ofile is passed to the linker as -Ofile)</dd>
+<dt><code>-c</code></dt>
+<dd> produce object file</dd>
+<dt><code>-f</code></dt>
+<dd> turn on floating point support, no effect with i386, changes libc library with 8086 code.</dd>
+<dt><code>-g</code></dt>
+<dd> produce debugging info (ignored.)</dd>
+<dt><code>-o</code></dt>
+<dd> output file name follows (assembler, object or executable) (as usual)</dd>
+<dt><code>-p</code></dt>
+<dd> produce profiling info (ignored.)</dd>
+<dt><code>-t1</code></dt>
+<dd> pass to the assembler to renumber the text segment for multi-segment programs.</dd>
+<dt><code>-v</code></dt>
+<dd> print names and args of subprocesses being run. Two or more -v&#8217;s print names of files being unlinked. Three or more -v&#8217;s print names of paths being searched.</dd>
+<dt><code>-w</code></dt>
+<dd> Supress any warning diagnostics.</dd>
+<dt><code>-W</code></dt>
+<dd> Turn <code>on</code> assembler warning messages.</dd>
+<dt><code>-x</code></dt>
+<dd> don&#8217;t include crt0.o in the link.</dd>
+<dt><code>-i</code></dt>
+<dd> don&#8217;t pass <code>-i</code> to the linker so that it will create an impure executable.</dd>
+<dt><code>-7</code></dt>
+<dd> Turn on ancient C mode (see CODE GENERATOR OPTIONS below). Among other things, this disables valuable error checks and even parses certain constructs incompatibly (e.g. <i>=-</i> is postdecrement instead of an assignment of a negative number) to later C standards, so this option should only be used with ancient code. To generate executables for a V7 variant you should tell linker to generate old a.out header with <code>-X-7</code> option.</dd></dl>
 <p> Other options are passed to the linker, in particular -lx, -M, -m, -s, -H. </p>
 <h2>CODE GENERATOR OPTIONS</h2>
 <p> These are all options that the code generator pass <code>bcc-cc1</code> understands, only some will be useful for the <code>-C</code> option of bcc.</p>
 <dl>
-<dt><code>-0</code></p>
-<dd> 8086 target (works even on 80386 host, not on 6809)</p>
-<dt><code>-3</code></p>
-<dd> 80386 target (may work even on 8086 host, not on 6809)</p>
-<dt><code>-D</code></p>
-<dd> define (as usual)</p>
-<dt><code>-E</code></p>
-<dd> produce preprocessor output (as usual)</p>
-<dt><code>-I</code></p>
-<dd> include search path (as usual)</p>
-<dt><code>-P</code></p>
-<dd> produce preprocessor output with no line numbers (as usual)</p>
-<dt><code>-c</code></p>
-<dd> produce code with caller saving regs before function calls</p>
-<dt><code>-d</code></p>
-<dd> print debugging information in assembly output</p>
-<dt><code>-f</code></p>
-<dd> produce code with 1st argument passed in a register (AX, EAX or X)</p>
-<dt><code>-l</code></p>
-<dd> produce code for 2 3 1 0 long byte order (only works in 16-bit code), a special library of compiler helper functions is needed for this mode.</p>
-<dt><code>-o</code></p>
-<dd> assembler output file name follows</p>
-<dt><code>-p</code></p>
-<dd> produce (almost) position-independent code (only for the 6809)</p>
-<dt><code>-t</code></p>
-<dd> print source code in assembly output</p>
-<dt><code>-w</code></p>
-<dd> print what cc1 thinks is the location counter in assembly output</p>
-<dt><code>-7</code></p>
-<dd> Accept various obsolete construct for ancient C compilers, including Ritchie&#8217;s Sixth Edition UNIX C compiler and Seventh Edition UNIX Portable C compiler. Enough of these compilers is emulated to compile all of Seventh Edition userspace and kernel.</dl>
+<dt><code>-0</code></dt>
+<dd> 8086 target (works even on 80386 host, not on 6809)</dd>
+<dt><code>-3</code></dt>
+<dd> 80386 target (may work even on 8086 host, not on 6809)</dd>
+<dt><code>-D</code></dt>
+<dd> define (as usual)</dd>
+<dt><code>-E</code></dt>
+<dd> produce preprocessor output (as usual)</dd>
+<dt><code>-I</code></dt>
+<dd> include search path (as usual)</dd>
+<dt><code>-P</code></dt>
+<dd> produce preprocessor output with no line numbers (as usual)</dd>
+<dt><code>-c</code></dt>
+<dd> produce code with caller saving regs before function calls</dd>
+<dt><code>-d</code></dt>
+<dd> print debugging information in assembly output</dd>
+<dt><code>-f</code></dt>
+<dd> produce code with 1st argument passed in a register (AX, EAX or X)</dd>
+<dt><code>-l</code></dt>
+<dd> produce code for 2 3 1 0 long byte order (only works in 16-bit code), a special library of compiler helper functions is needed for this mode.</dd>
+<dt><code>-o</code></dt>
+<dd> assembler output file name follows</dd>
+<dt><code>-p</code></dt>
+<dd> produce (almost) position-independent code (only for the 6809)</dd>
+<dt><code>-t</code></dt>
+<dd> print source code in assembly output</dd>
+<dt><code>-w</code></dt>
+<dd> print what cc1 thinks is the location counter in assembly output</dd>
+<dt><code>-7</code></dt>
+<dd> Accept various obsolete construct for ancient C compilers, including Ritchie&#8217;s Sixth Edition UNIX C compiler and Seventh Edition UNIX Portable C compiler. Enough of these compilers is emulated to compile all of Seventh Edition userspace and kernel.</dd></dl>
 <p> All the options except -D, -I and -o may be turned off by following the option letter by a &#8216;-&#8216;. Options are processed left to right so the last setting has precedence. </p>
 <h2>PREPROCESSOR DEFINES</h2>
 <p> The preprocessor has a number of manifest constants.</p>
 <dl>
-<dt><code>__BCC__ 1</code></p>
-<dd> The compiler identifier, normally used to avoid compiler limitations.</p>
-<dt><code>__FILE__</code></p>
-<dd> stringized name of current input file</p>
-<dt><code>__LINE__</code></p>
-<dd> current line number</p>
-<dt><code>__MSDOS__ 1</code></p>
-<dd> compiler is configured for generating MSDOS executable COM files.</p>
-<dt><code>__STANDALONE__ 1</code></p>
-<dd> compiler is configured for generating standalone executables.</p>
-<dt><code>__AS386_16__ 1</code></p>
-<dd> compiler is generating 16 bit 8086 assembler and the <code>#asm</code> keyword is available for including 8086 code.</p>
-<dt><code>__AS386_32__ 1</code></p>
-<dd> compiler is generating 32 bit 80386 assembler and the <code>#asm</code> keyword is available for including 80386 code.</p>
-<dt><code>__CALLER_SAVES__ 1</code></p>
-<dd> compiler calling conventions are altered so the calling function must save the <i>SI</i> and <i>DI</i> registers if they are in use (ESI and EDI on the 80386)</p>
-<dt><code>__FIRST_ARG_IN_AX__ 1</code></p>
-<dd> compiler calling conventions are altered so the calling function is passing the first argument to the function in the <i>AX</i> (or <i>EAX</i> ) register.</p>
-<dt><code>__LONG_BIG_ENDIAN__ 1</code></p>
-<dd> alters the word order of code generated by the 8086 compiler.</dl>
+<dt><code>__BCC__ 1</code></dt>
+<dd> The compiler identifier, normally used to avoid compiler limitations.</dd>
+<dt><code>__FILE__</code></dt>
+<dd> stringized name of current input file</dd>
+<dt><code>__LINE__</code></dt>
+<dd> current line number</dd>
+<dt><code>__MSDOS__ 1</code></dt>
+<dd> compiler is configured for generating MSDOS executable COM files.</dd>
+<dt><code>__STANDALONE__ 1</code></dt>
+<dd> compiler is configured for generating standalone executables.</dd>
+<dt><code>__AS386_16__ 1</code></dt>
+<dd> compiler is generating 16 bit 8086 assembler and the <code>#asm</code> keyword is available for including 8086 code.</dd>
+<dt><code>__AS386_32__ 1</code></dt>
+<dd> compiler is generating 32 bit 80386 assembler and the <code>#asm</code> keyword is available for including 80386 code.</dd>
+<dt><code>__CALLER_SAVES__ 1</code></dt>
+<dd> compiler calling conventions are altered so the calling function must save the <i>SI</i> and <i>DI</i> registers if they are in use (ESI and EDI on the 80386)</dd>
+<dt><code>__FIRST_ARG_IN_AX__ 1</code></dt>
+<dd> compiler calling conventions are altered so the calling function is passing the first argument to the function in the <i>AX</i> (or <i>EAX</i> ) register.</dd>
+<dt><code>__LONG_BIG_ENDIAN__ 1</code></dt>
+<dd> alters the word order of code generated by the 8086 compiler.</dd></dl>
 <p> These defines only occur in the 6809 version of the compiler.</p>
 <dl>
-<dt><code>__AS09__ 1</code></p>
-<dd> compiler is generating 6809 code</p>
-<dt><code>__FIRST_ARG_IN_X__ 1</code></p>
-<dd> the first argument to functions is passed in the <i>X</i> register.</p>
-<dt><code>__POS_INDEPENDENT__ 1</code></p>
-<dd> the code generated is (almost) position independent.</dl>
+<dt><code>__AS09__ 1</code></dt>
+<dd> compiler is generating 6809 code</dd>
+<dt><code>__FIRST_ARG_IN_X__ 1</code></dt>
+<dd> the first argument to functions is passed in the <i>X</i> register.</dd>
+<dt><code>__POS_INDEPENDENT__ 1</code></dt>
+<dd> the code generated is (almost) position independent.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>BCC_EXEC_PREFIX</code></p>
-<dd> default directory to seach for compiler passes</p>
-<dt><code>TMPDIR</code></p>
-<dd> directory to place temporary files (default /tmp)</dl>
+<dt><code>BCC_EXEC_PREFIX</code></dt>
+<dd> default directory to seach for compiler passes</dd>
+<dt><code>TMPDIR</code></dt>
+<dd> directory to place temporary files (default /tmp)</dd></dl>
 <h2>DIRECTORIES</h2>
 <p> All the include, library and compiler components are stored under the <i>/usr/bcc</i> directory under Linux-i386, this is laid out the same as a <i>/usr</i> filesystem and if bcc is to be the primary compiler on a system it should be moved there. The configuration for this is in the <code>bcc.c</code> source file only, all other executables are independent of location. </p>
 <p> The library installation also creates the file <code>/usr/lib/liberror.txt</code>, this path is hardcoded into the C library. </p>

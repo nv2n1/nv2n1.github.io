@@ -119,10 +119,10 @@ PDL::Dataflow -- description of the dataflow philosophy
  Blah blah blah <font SIZE="-1">XXX</font> more explanation
 <h2>Limitations</h2>Dataflow as such is a fairly limited addition on top of Perl. To get a more refined addition, the internals of Perl need to be hacked a little. A true implementation would enable flow of everything, including
 <dl><dt>data
-<dd><dt>data size
-<dd><dt>datatype
-<dd><dt>operations
-<dd></dl>
+</dt><dd></dd><dt>data size
+</dt><dd></dd><dt>datatype
+</dt><dd></dd><dt>operations
+</dt><dd></dd></dl>
  
 
  At the moment we only have the first two (hey, 50% in a couple of months is not bad ;) but even this is useful by itself. However, especially the last one is desirable since it would add the possibility of flowing closures from place to place and would make many things more flexible. 

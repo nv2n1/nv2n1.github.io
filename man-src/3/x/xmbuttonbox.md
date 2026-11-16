@@ -206,29 +206,29 @@ description: "XmButtonBox — The Button Box class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNequalSize</code></p>
-<dd>Specifies whether the children are to be maintained with equal sized heights and widths. The chosen height and width for the children is found by asking each child for its preferred size and taking the largest value in each direction.</p>
-<dt><code>XmNfillOption</code></p>
-<dd>Specifies how to use any extra space left over once all children have been sized according to either their preference or equalSize. There are four options:</p>
+<dt><code>XmNequalSize</code></dt>
+<dd>Specifies whether the children are to be maintained with equal sized heights and widths. The chosen height and width for the children is found by asking each child for its preferred size and taking the largest value in each direction.</dd>
+<dt><code>XmNfillOption</code></dt>
+<dd>Specifies how to use any extra space left over once all children have been sized according to either their preference or equalSize. There are four options:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmFillNone</code></p>
-<dd>No automatic filling is performed. Center the children in the minor direction and place the children with equal padding between them in the major direction.</p>
-<dt><code>XmFillMinor</code></p>
-<dd>Place the children with equal padding between them in the major direction, but force all the children to take on the Button Box minor dimension as their minor direction.</p>
-<dt><code>XmFillMajor</code></p>
-<dd>Center the children in the minor direction, but expand all the children in their major direction so that there is no padding between them. Expand the children such that their relative sizes remain constant.</p>
-<dt><code>XmFillAll</code></p>
-<dd>This option combines the placement actions and sizing actions of XmFillMinor and XmFillMajor.</p>
-<dd>Regardless of the fill mode, the ButtonBox widget will always leave the specified margin between its edge and the nearest child. A new String to fillOption resource converter has been registered to convert the following strings to fill options: &quot;none&quot;, &quot;major&quot;, &quot;minor&quot;, &quot;all.&quot; This resource can therefore be set in an application defaults file.</dl>
+</dd><dl COMPACT>
+<dt><code>XmFillNone</code></dt>
+<dd>No automatic filling is performed. Center the children in the minor direction and place the children with equal padding between them in the major direction.</dd>
+<dt><code>XmFillMinor</code></dt>
+<dd>Place the children with equal padding between them in the major direction, but force all the children to take on the Button Box minor dimension as their minor direction.</dd>
+<dt><code>XmFillMajor</code></dt>
+<dd>Center the children in the minor direction, but expand all the children in their major direction so that there is no padding between them. Expand the children such that their relative sizes remain constant.</dd>
+<dt><code>XmFillAll</code></dt>
+<dd>This option combines the placement actions and sizing actions of XmFillMinor and XmFillMajor.</dd>
+<dd>Regardless of the fill mode, the ButtonBox widget will always leave the specified margin between its edge and the nearest child. A new String to fillOption resource converter has been registered to convert the following strings to fill options: &quot;none&quot;, &quot;major&quot;, &quot;minor&quot;, &quot;all.&quot; This resource can therefore be set in an application defaults file.</dd></dl>
 </dl>
-<dt><code>XmNmarginHeight</code></p>
+<dt><code>XmNmarginHeight</code></dt>
 <dd>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the number of pixels to use as a margin around the entire group of children. The marginHeight value applies to both the top and bottom margins, while the marginWidth applies to the left and right margins.</p>
-<dt><code>XmNorientation</code></p>
-<dd>Specifies whether children are to be placed in a row or a column. The orientation may be either XmHORIZONTAL or XmVERTICAL. If the orientation is XmHORIZONTAL, the children are placed in a row with the major dimension being width and the minor dimension being height. If the value is XmVERTICAL, the children are placed in a column with the major dimension being height and the minor dimension being width. The default value is XmHORIZONTAL.</dl>
+</dd><dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the number of pixels to use as a margin around the entire group of children. The marginHeight value applies to both the top and bottom margins, while the marginWidth applies to the left and right margins.</dd>
+<dt><code>XmNorientation</code></dt>
+<dd>Specifies whether children are to be placed in a row or a column. The orientation may be either XmHORIZONTAL or XmVERTICAL. If the orientation is XmHORIZONTAL, the children are placed in a row with the major dimension being width and the minor dimension being height. If the value is XmVERTICAL, the children are placed in a column with the major dimension being height and the minor dimension being width. The default value is XmHORIZONTAL.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Button Box inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

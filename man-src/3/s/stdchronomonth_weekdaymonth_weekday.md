@@ -11,7 +11,6 @@ std::chrono::month_weekday::month_weekday - std::chrono::month_weekday::month_we
 <h2>Synopsis</h2>
 
 <pre><code>constexpr month_weekday(const std::chrono::month &amp;m, (since C++ 20)
-
                                                          const std::chrono::weekday_indexed &amp;wdi) noexcept;</code></pre> 
 Constructs a month_weekday object that stores the month m and the weekday_indexed wdi. 
 

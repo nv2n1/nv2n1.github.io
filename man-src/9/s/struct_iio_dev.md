@@ -49,102 +49,102 @@ description: "struct_iio_dev – industrial I/O device"
 <h2>Members</h2>
 <p>id</p>
 <dl>
-<dd>[INTERN] used to identify device internally</dl>
+<dd>[INTERN] used to identify device internally</dd></dl>
 <p> modes</p>
 <dl>
-<dd>[DRIVER] operating modes supported by device</dl>
+<dd>[DRIVER] operating modes supported by device</dd></dl>
 <p> currentmode</p>
 <dl>
-<dd>[DRIVER] current operating mode</dl>
+<dd>[DRIVER] current operating mode</dd></dl>
 <p> dev</p>
 <dl>
-<dd>[DRIVER] device structure, should be assigned a parent and owner</dl>
+<dd>[DRIVER] device structure, should be assigned a parent and owner</dd></dl>
 <p> event_interface</p>
 <dl>
-<dd>[INTERN] event chrdevs associated with interrupt lines</dl>
+<dd>[INTERN] event chrdevs associated with interrupt lines</dd></dl>
 <p> buffer</p>
 <dl>
-<dd>[DRIVER] any buffer present</dl>
+<dd>[DRIVER] any buffer present</dd></dl>
 <p> buffer_list</p>
 <dl>
-<dd>[INTERN] list of all buffers currently attached</dl>
+<dd>[INTERN] list of all buffers currently attached</dd></dl>
 <p> scan_bytes</p>
 <dl>
-<dd>[INTERN] num bytes captured to be fed to buffer demux</dl>
+<dd>[INTERN] num bytes captured to be fed to buffer demux</dd></dl>
 <p> mlock</p>
 <dl>
-<dd>[DRIVER] lock used to prevent simultaneous device state changes</dl>
+<dd>[DRIVER] lock used to prevent simultaneous device state changes</dd></dl>
 <p> available_scan_masks</p>
 <dl>
-<dd>[DRIVER] optional array of allowed bitmasks</dl>
+<dd>[DRIVER] optional array of allowed bitmasks</dd></dl>
 <p> masklength</p>
 <dl>
-<dd>[INTERN] the length of the mask established from channels</dl>
+<dd>[INTERN] the length of the mask established from channels</dd></dl>
 <p> active_scan_mask</p>
 <dl>
-<dd>[INTERN] union of all scan masks requested by buffers</dl>
+<dd>[INTERN] union of all scan masks requested by buffers</dd></dl>
 <p> scan_timestamp</p>
 <dl>
-<dd>[INTERN] set if any buffers have requested timestamp</dl>
+<dd>[INTERN] set if any buffers have requested timestamp</dd></dl>
 <p> scan_index_timestamp</p>
 <dl>
-<dd>[INTERN] cache of the index to the timestamp</dl>
+<dd>[INTERN] cache of the index to the timestamp</dd></dl>
 <p> trig</p>
 <dl>
-<dd>[INTERN] current device trigger (buffer modes) <i>trig_readonly</i> [INTERN] mark the current trigger immutable</dl>
+<dd>[INTERN] current device trigger (buffer modes) <i>trig_readonly</i> [INTERN] mark the current trigger immutable</dd></dl>
 <p> pollfunc</p>
 <dl>
-<dd>[DRIVER] function run on trigger being received</dl>
+<dd>[DRIVER] function run on trigger being received</dd></dl>
 <p> pollfunc_event</p>
 <dl>
-<dd>[DRIVER] function run on events trigger being received</dl>
+<dd>[DRIVER] function run on events trigger being received</dd></dl>
 <p> channels</p>
 <dl>
-<dd>[DRIVER] channel specification structure table</dl>
+<dd>[DRIVER] channel specification structure table</dd></dl>
 <p> num_channels</p>
 <dl>
-<dd>[DRIVER] number of channels specified in <i>channels</i>.</dl>
+<dd>[DRIVER] number of channels specified in <i>channels</i>.</dd></dl>
 <p> channel_attr_list</p>
 <dl>
-<dd>[INTERN] keep track of automatically created channel attributes</dl>
+<dd>[INTERN] keep track of automatically created channel attributes</dd></dl>
 <p> chan_attr_group</p>
 <dl>
-<dd>[INTERN] group for all attrs in base directory</dl>
+<dd>[INTERN] group for all attrs in base directory</dd></dl>
 <p> name</p>
 <dl>
-<dd>[DRIVER] name of the device.</dl>
+<dd>[DRIVER] name of the device.</dd></dl>
 <p> info</p>
 <dl>
-<dd>[DRIVER] callbacks and constant info from driver</dl>
+<dd>[DRIVER] callbacks and constant info from driver</dd></dl>
 <p> clock_id</p>
 <dl>
-<dd>[INTERN] timestamping clock posix identifier</dl>
+<dd>[INTERN] timestamping clock posix identifier</dd></dl>
 <p> info_exist_lock</p>
 <dl>
-<dd>[INTERN] lock to prevent use during removal</dl>
+<dd>[INTERN] lock to prevent use during removal</dd></dl>
 <p> setup_ops</p>
 <dl>
-<dd>[DRIVER] callbacks to call before and after buffer enable/disable</dl>
+<dd>[DRIVER] callbacks to call before and after buffer enable/disable</dd></dl>
 <p> chrdev</p>
 <dl>
-<dd>[INTERN] associated character device</dl>
+<dd>[INTERN] associated character device</dd></dl>
 <p> groups[IIO_MAX_GROUPS + 1]</p>
 <dl>
-<dd>[INTERN] attribute groups</dl>
+<dd>[INTERN] attribute groups</dd></dl>
 <p> groupcounter</p>
 <dl>
-<dd>[INTERN] index of next attribute group</dl>
+<dd>[INTERN] index of next attribute group</dd></dl>
 <p> flags</p>
 <dl>
-<dd>[INTERN] file ops related flags including busy flag.</dl>
+<dd>[INTERN] file ops related flags including busy flag.</dd></dl>
 <p> debugfs_dentry</p>
 <dl>
-<dd>[INTERN] device specific debugfs dentry.</dl>
+<dd>[INTERN] device specific debugfs dentry.</dd></dl>
 <p> cached_reg_addr</p>
 <dl>
-<dd>[INTERN] cached register address for debugfs reads.</dl>
+<dd>[INTERN] cached register address for debugfs reads.</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -11,7 +11,6 @@ description: "sc::SpatialMOPairIter –"
 <p> <code>SpatialMOPairIter</code> gives the ordering of pairs of spatial orbitals.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;pairiter.h&gt;</code></pre>
 <p> Inherits <code>sc::MOPairIter</code>. Inherited by <code>sc::SpatialMOPairIter_eq</code>, and <code>sc::SpatialMOPairIter_neq</code>.</p>
 <h3>Public Member Functions</h3>

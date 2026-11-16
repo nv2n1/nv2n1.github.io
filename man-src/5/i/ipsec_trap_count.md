@@ -10,9 +10,9 @@ description: "ipsec_trap_count – KLIPS statistic on number of ACQUIREs"
 <p>ipsec_trap_count &#8211; KLIPS statistic on number of ACQUIREs</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>cat</code> <i>/proc/net/ipsec/stats/trap_count</i></dl>
+<dt> <code>cat</code> <i>/proc/net/ipsec/stats/trap_count</i></dt></dl>
 <h2>Obsolete</h2>
-<dd>Note that trap_count is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</p>
+<dd>Note that trap_count is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</dd>
 <h2>Description</h2>
 <p>/proc/net/ipsec/stats/trap_count is a read-only file. It contains a hexadecimal number which records the number of attempts to send PF_ACQUIRE messages. Only those recorded by trap_sendcount were actually successfully passed to userland. Note that the userland may still have lost them on its own.</p>
 <h2>Files</h2>
@@ -24,4 +24,4 @@ description: "ipsec_trap_count – KLIPS statistic on number of ACQUIREs"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

@@ -15,11 +15,11 @@ ida_simple_remove - remove an allocated id.
 <h2>Arguments</h2>
 
 <i>ida</i>
-<dl><dd><dd>the (initialized) ida.</dl>
+<dl><dd></dd><dd>the (initialized) ida.</dd></dl>
  
 
  <i>id</i>
-<dl><dd>the id returned by ida_simple_get.</dl>
+<dl><dd>the id returned by ida_simple_get.</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -13,7 +13,7 @@ description: "Tk_HandleEvent – invoke event handlers for window system events"
 <code>Tk_HandleEvent</code>(<i>eventPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>XEvent <i>*eventPtr</i> (in) Pointer to X event to dispatch to relevant handler(s). It is important that all unused fields of the structure be set to zero. </p>
+<dd>XEvent <i>*eventPtr</i> (in) Pointer to X event to dispatch to relevant handler(s). It is important that all unused fields of the structure be set to zero. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_HandleEvent</code> is a lower-level procedure that deals with window events. It is called by <code>Tcl_ServiceEvent</code> (and indirectly by <code>Tcl_DoOneEvent</code>), and in a few other cases within Tk. It makes callbacks to any window event handlers (created by calls to <code>Tk_CreateEventHandler</code>) that match <i>eventPtr</i> and then returns. In some cases it may be useful for an application to bypass the Tk event queue and call <code>Tk_HandleEvent</code> directly instead of calling <code>Tcl_QueueEvent</code> followed by <code>Tcl_ServiceEvent</code>. </p>

@@ -14,18 +14,18 @@ description: "ipmiutil_tsol – Tyan IPMIv1.5 Serial-Over-LAN Console applicatio
 <p>This command allows Serial-over-LAN sessions to be established with Tyan IPMIv1.5 SMDC such as the M3289 or M3290. The default command run with no arguments will establish default SOL session back to local IP address. Optional arguments may be supplied in any order. </p>
 <h2>Options</h2>
 <dl>
-<dt>&lt;recv ipaddr&gt;</p>
-<dd>Send receiver IP address to SMDC which it will use to send serial traffic to. By default this detects the local IP address and establishes two-way session. Format of ipaddr is XX.XX.XX.XX </p>
-<dt>port</p>
-<dd>Configure UDP port to receive serial traffic on. By default this is 6230. </p>
-<dt>ro|rw</p>
-<dd>Confiure SOL session as read-only or read-write. Sessions are read-write by default. </p>
-<dt>rows</p>
-<dd>Set terminal rows [default: rows=24] </p>
-<dt>cols</p>
-<dd>Set terminal columns [default: cols=80] </p>
-<dt>altterm</p>
-<dd>Alternate terminal setup [default is off] </p>
+<dt>&lt;recv ipaddr&gt;</dt>
+<dd>Send receiver IP address to SMDC which it will use to send serial traffic to. By default this detects the local IP address and establishes two-way session. Format of ipaddr is XX.XX.XX.XX </dd>
+<dt>port</dt>
+<dd>Configure UDP port to receive serial traffic on. By default this is 6230. </dd>
+<dt>ro|rw</dt>
+<dd>Confiure SOL session as read-only or read-write. Sessions are read-write by default. </dd>
+<dt>rows</dt>
+<dd>Set terminal rows [default: rows=24] </dd>
+<dt>cols</dt>
+<dd>Set terminal columns [default: cols=80] </dd>
+<dt>altterm</dt>
+<dd>Alternate terminal setup [default is off] </dd>
 </dl>
 <h2>Examples</h2>
 <p>ipmiutil tsol 192.168.1.1<br />

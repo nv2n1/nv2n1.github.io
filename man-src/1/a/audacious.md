@@ -16,45 +16,45 @@ description: "audacious – an advanced audio player."
 <h2>OPTIONS</h2>
 <p> <code>Getting help:</code> </p>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Show a brief list of options. </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Show a brief list of options. </dd>
 </dl>
 <p> <code>Opening files:</code> </p>
 <dl>
-<dt><i>-e, &#8211;enqueue</i></p>
-<dd> Add the files on the command line to the current playlist but do not start playback. </p>
-<dt><i>-E, &#8211;enqueue-to-temp</i></p>
-<dd> Add the files on the command line to a temporary playlist and start playback. </p>
+<dt><i>-e, &#8211;enqueue</i></dt>
+<dd> Add the files on the command line to the current playlist but do not start playback. </dd>
+<dt><i>-E, &#8211;enqueue-to-temp</i></dt>
+<dd> Add the files on the command line to a temporary playlist and start playback. </dd>
 </dl>
 <p> <code>Controlling playback:</code> </p>
 <dl>
-<dt><i>-p, &#8211;play</i></p>
-<dd> If currently playing, go to the beginning of the song; otherwise, begin playing. </p>
-<dt><i>-u, &#8211;pause</i></p>
-<dd> If currently playing, pause; if paused, resume playing. </p>
-<dt><i>-t, &#8211;play-pause</i></p>
-<dd> If currently playing, pause; otherwise, begin playing. </p>
-<dt><i>-s, &#8211;stop</i></p>
-<dd> Stop playing and go to the beginning of the song. </p>
-<dt><i>-r, &#8211;rew</i></p>
-<dd> Go to the previous song in the playlist. </p>
-<dt><i>-f, &#8211;fwd</i></p>
-<dd> Go to the next song in the playlist. </p>
+<dt><i>-p, &#8211;play</i></dt>
+<dd> If currently playing, go to the beginning of the song; otherwise, begin playing. </dd>
+<dt><i>-u, &#8211;pause</i></dt>
+<dd> If currently playing, pause; if paused, resume playing. </dd>
+<dt><i>-t, &#8211;play-pause</i></dt>
+<dd> If currently playing, pause; otherwise, begin playing. </dd>
+<dt><i>-s, &#8211;stop</i></dt>
+<dd> Stop playing and go to the beginning of the song. </dd>
+<dt><i>-r, &#8211;rew</i></dt>
+<dd> Go to the previous song in the playlist. </dd>
+<dt><i>-f, &#8211;fwd</i></dt>
+<dd> Go to the next song in the playlist. </dd>
 </dl>
 <p> <code>Miscellaneous:</code> </p>
 <dl>
-<dt><i>-m, &#8211;show-main-window</i></p>
-<dd> Show the Audacious window if it is hidden and bring it to the top. </p>
-<dt><i>-j, &#8211;show-jump-box</i></p>
-<dd> Show the Jump to Song window. </p>
-<dt><i>-H, &#8211;headless</i></p>
-<dd> Start in command-line mode; i.e., without any graphical user interface. </p>
-<dt><i>-q, &#8211;quit-after-play</i></p>
-<dd> Exit as soon as playback stops, or immediately if there is nothing to play. </p>
-<dt><i>-v, &#8211;version</i></p>
-<dd> Print version information and exit. </p>
-<dt><i>-V, &#8211;verbose</i></p>
-<dd> Print debugging output while running. </p>
+<dt><i>-m, &#8211;show-main-window</i></dt>
+<dd> Show the Audacious window if it is hidden and bring it to the top. </dd>
+<dt><i>-j, &#8211;show-jump-box</i></dt>
+<dd> Show the Jump to Song window. </dd>
+<dt><i>-H, &#8211;headless</i></dt>
+<dd> Start in command-line mode; i.e., without any graphical user interface. </dd>
+<dt><i>-q, &#8211;quit-after-play</i></dt>
+<dd> Exit as soon as playback stops, or immediately if there is nothing to play. </dd>
+<dt><i>-v, &#8211;version</i></dt>
+<dd> Print version information and exit. </dd>
+<dt><i>-V, &#8211;verbose</i></dt>
+<dd> Print debugging output while running. </dd>
 </dl>
 <h2>KEYBINDINGS</h2>
 <p> z<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Previous song</p>
@@ -94,22 +94,22 @@ description: "audacious – an advanced audio player."
 <p> Control + p<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Display Preferences dialog</p>
 <h2>FILES</h2>
 <dl>
-<dt>~/.config/audacious/config</p>
-<dd> User&#8217;s Audacious configuration.</p>
-<dt>~/.config/audacious/playlists/1000.audpl</p>
-<dd> Default playlist usually loaded on startup.</p>
-<dt>~/.local/share/audacious/Skins, ${prefix}/share/audacious/Skins</p>
-<dd> Default location(s) where Audacious should look for skin files.</p>
-<dt>~/.local/share/audacious/Plugins</p>
-<dd> Location of user-installed plugins.</dl>
+<dt>~/.config/audacious/config</dt>
+<dd> User&#8217;s Audacious configuration.</dd>
+<dt>~/.config/audacious/playlists/1000.audpl</dt>
+<dd> Default playlist usually loaded on startup.</dd>
+<dt>~/.local/share/audacious/Skins, ${prefix}/share/audacious/Skins</dt>
+<dd> Default location(s) where Audacious should look for skin files.</dd>
+<dt>~/.local/share/audacious/Plugins</dt>
+<dd> Location of user-installed plugins.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>SKINSDIR</code></p>
-<dd> Colon separated list of paths where Audacious should look for skin files.</p>
-<dt><code>TARCMD</code></p>
-<dd> Tar command supporting GNU tar style decompression. Used for unpacking gzip and bzip2 compressed skins. Default is <i>tar</i>.</p>
-<dt><code>UNZIPCMD</code></p>
-<dd> Command for decompressing zip files (skins). Default is <i>unzip</i>. </p>
+<dt><code>SKINSDIR</code></dt>
+<dd> Colon separated list of paths where Audacious should look for skin files.</dd>
+<dt><code>TARCMD</code></dt>
+<dd> Tar command supporting GNU tar style decompression. Used for unpacking gzip and bzip2 compressed skins. Default is <i>tar</i>.</dd>
+<dt><code>UNZIPCMD</code></dt>
+<dd> Command for decompressing zip files (skins). Default is <i>unzip</i>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-audtool/">audtool</a></code>(1) </p>

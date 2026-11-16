@@ -15,10 +15,10 @@ description: "ALTER TEXT SEARCH PARSER – change the definition of a text searc
 <p> You must be a superuser to use <code>ALTER TEXT SEARCH PARSER</code>.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing text search parser.</p>
-<dt><i>newname</i></p>
-<dd>The new name of the text search parser.</dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing text search parser.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the text search parser.</dd></dl>
 <h2>Compatibility</h2>
 <p>There is no <code>ALTER TEXT SEARCH PARSER</code> statement in the SQL standard.</p>
 <h2>See Also</h2>

@@ -54,7 +54,7 @@ description: "QuantLib::Calendar – calendar class"
 <p> A calendar should be defined for specific exchange holiday schedule or for general country holiday schedule. Legacy city holiday schedule calendars will be moved to the exchange/country convention. </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the methods for adding and removing holidays are tested by inspecting the calendar before and after their invocation.</dl>
+<dd>the methods for adding and removing holidays are tested by inspecting the calendar before and after their invocation.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>DiscreteHedging.cpp</code>, <code>EquityOption.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>FRA.cpp</code>, <code>Repo.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h2>Constructor &amp; Destructor Documentation</h2>
@@ -65,7 +65,7 @@ description: "QuantLib::Calendar – calendar class"
 <p>Returns the name of the calendar. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>This method is used for output and comparison between calendars. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between calendars. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <h3>bool isBusinessDay (const <code>Date</code> &amp; d) const</h3>
 <p>Returns true iff the date is a business day for the given market.</p>
 <h3>bool isHoliday (const <code>Date</code> &amp; d) const</h3>
@@ -85,13 +85,13 @@ description: "QuantLib::Calendar – calendar class"
 <p>Advances the given date of the given number of business days and returns the result. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>The input date is not modified.</dl>
+<dd>The input date is not modified.</dd></dl>
 <p> <code>Examples: </code> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>FRA.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h3><code>Date</code> advance (const <code>Date</code> &amp; date, const <code>Period</code> &amp; period, <code>BusinessDayConvention</code> convention = Following, bool endOfMonth = false) const</h3>
 <p>Advances the given date as specified by the given period and returns the result. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>The input date is not modified.</dl>
+<dd>The input date is not modified.</dd></dl>
 <h3><code>BigInteger</code> businessDaysBetween (const <code>Date</code> &amp; from, const <code>Date</code> &amp; to, bool includeFirst = true, bool includeLast = false) const</h3>
 <p>Calculates the number of business days between two given dates and returns the result.</p>
 <h2>Friends And Related Function Documentation</h2>

@@ -12,7 +12,6 @@ std::experimental::filesystem::directory_iterator::operator*,operator-&gt; - std
 
 <pre><code>const directory_entry &amp;operator*() const;
 (filesystem TS)
-
     const directory_entry *
     operator-&gt;() const;</code></pre> 
 Accesses the pointed-to directory_entry. 

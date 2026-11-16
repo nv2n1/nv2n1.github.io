@@ -37,13 +37,12 @@ url: "/docs/linux/man/1-nvme-get-ns-id/"
 
 <dl>
 <dt>
-<dd> &bull; Shows the namespace id for the given block device: 
-
-<dl>
+</dt><dd> &bull; Shows the namespace id for the given block device: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme get-ns-id /dev/nvme0n1
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>NVME</h2>

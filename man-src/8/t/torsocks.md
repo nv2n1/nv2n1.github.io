@@ -21,12 +21,12 @@ description: "torsocks — Library for intercepting outgoing network connections
 <p> You can also setup <code><a href="/docs/linux/man/1-torsocks/">torsocks</a>(1)</code> in such a way that all processes automatically use it, a very useful configuration. Please refer to the torsocks script documentation for more information.</p>
 <h2>Environment Variables</h2>
 <dl>
-<dt>TORSOCKS_CONF_FILE</p>
-<dd>This environment variable overrides the default location of the torsocks configuration file. This variable is not honored if the program torsocks is embedded in is setuid. </p>
+<dt>TORSOCKS_CONF_FILE</dt>
+<dd>This environment variable overrides the default location of the torsocks configuration file. This variable is not honored if the program torsocks is embedded in is setuid. </dd>
 </dl>
 <dl>
-<dt>TORSOCKS_LOG_LEVEL</p>
-<dd>Enable logging level of torsocks library. By default, warnings and errors are printed (level 3). Note that each level includes the lower ones except the 1 which disables any possible logging. (default: 3) </p>
+<dt>TORSOCKS_LOG_LEVEL</dt>
+<dd>Enable logging level of torsocks library. By default, warnings and errors are printed (level 3). Note that each level includes the lower ones except the 1 which disables any possible logging. (default: 3) </dd>
 <table>
 <tr VALIGN=top>
 <td>1</td>
@@ -56,28 +56,28 @@ description: "torsocks — Library for intercepting outgoing network connections
 </table>
 </dl>
 <dl>
-<dt>TORSOCKS_LOG_TIME</p>
-<dd>Control whether or not the time is added to each logging line. (default: 1) </p>
+<dt>TORSOCKS_LOG_TIME</dt>
+<dd>Control whether or not the time is added to each logging line. (default: 1) </dd>
 </dl>
 <dl>
-<dt>TORSOCKS_LOG_FILE_PATH</p>
-<dd>If set, torsocks will log in the file set by this variable. (default: stderr) </p>
+<dt>TORSOCKS_LOG_FILE_PATH</dt>
+<dd>If set, torsocks will log in the file set by this variable. (default: stderr) </dd>
 </dl>
 <dl>
-<dt>TORSOCKS_USERNAME</p>
-<dd>Set the username for the SOCKS5 authentication method. Password MUST be set also with the variable below. </p>
+<dt>TORSOCKS_USERNAME</dt>
+<dd>Set the username for the SOCKS5 authentication method. Password MUST be set also with the variable below. </dd>
 </dl>
 <dl>
-<dt>TORSOCKS_PASSWORD</p>
-<dd>Set the password for the SOCKS5 authentication method. Username MUST be set also with the variable above. </p>
+<dt>TORSOCKS_PASSWORD</dt>
+<dd>Set the password for the SOCKS5 authentication method. Username MUST be set also with the variable above. </dd>
 </dl>
 <dl>
-<dt>TORSOCKS_ALLOW_INBOUND</p>
-<dd>Allow inbound connections so the application can accept and listen for connections. </p>
+<dt>TORSOCKS_ALLOW_INBOUND</dt>
+<dd>Allow inbound connections so the application can accept and listen for connections. </dd>
 </dl>
 <dl>
-<dt>TORSOCKS_ISOLATE_PID</p>
-<dd>Set the username and password for the SOCKS5 authentication method to a PID/current time based value automatically. Username and Password MUST NOT be set. </p>
+<dt>TORSOCKS_ISOLATE_PID</dt>
+<dd>Set the username and password for the SOCKS5 authentication method to a PID/current time based value automatically. Username and Password MUST NOT be set. </dd>
 </dl>
 <h2>Known Issues</h2>
 <h3>Dns</h3>

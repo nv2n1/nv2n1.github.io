@@ -15,11 +15,11 @@ pci_enable_sriov - enable the SR-IOV capability
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI device</dl>
+<dl><dd></dd><dd>the PCI device</dd></dl>
  
 
  <i>nr_virtfn</i>
-<dl><dd>number of virtual functions to enable</dl>
+<dl><dd>number of virtual functions to enable</dd></dl>
 
 <h2>Description</h2>
 

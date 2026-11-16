@@ -10,7 +10,6 @@ description: "std::wcscoll – std::wcscoll"
 <p>std::wcscoll &#8211; std::wcscoll</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int wcscoll(const wchar_t *lhs, const wchar_t *rhs);</code></pre>
 <p>Compares two null-terminated wide strings according to the locale most recently installed by std::setlocale, as defined by the LC_COLLATE category. </p>
 <h2>Parameters</h2>
@@ -24,10 +23,8 @@ Positive value if lhs is greater than (follows) rhs. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;clocale&gt;
 void try_compare(const wchar_t *p1, const wchar_t *p2)
-
 {
     if (std::wcscoll(p1, p2) &lt; 0)
         std::wcout &lt;&lt; p1 &lt;&lt; &quot; before &quot; &lt;&lt; p2 &lt;&lt; '
@@ -37,7 +34,6 @@ void try_compare(const wchar_t *p1, const wchar_t *p2)
 ';
 }
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::wcout &lt;&lt; &quot;In the American locale: &quot;;

@@ -30,10 +30,8 @@ Integer value corresponding to the contents of str on success. If the converted 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     const char *str1 = &quot;42&quot;;
     const char *str2 = &quot;3.14159&quot;;

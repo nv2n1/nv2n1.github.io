@@ -18,9 +18,9 @@ GETSI - returns the exponents which define the plotting range in the plotter add
  The plotter coordinates of a point are integers IPX and IPY, where IPX is between 1 and 2**MX and IPY is between 1 and 2**MY. MX and MY are internal parameters of SPPS; each has the default value 10. Values of MX and MY can be set by routine SETI and retrieved by routine GETSI.
 <h2>Synopsis</h2>CALL GETSI (IX,IY)
 <h2>Description</h2><dl COMPACT><dt>IX
-<dd>(an output variable of type INTEGER) is the X axis exponent for plotter coordinates defining a range of 1 to 2**IX - 1. IX has a default value of 10.
-<dt>IY
-<dd>(an output variable of type INTEGER) is the Y axis exponent for plotter coordinates defining a range of 1 to 2**IY - 1. IY has a default value of 10.</dl><h2>Access</h2>To use GETSI, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
+</dt><dd>(an output variable of type INTEGER) is the X axis exponent for plotter coordinates defining a range of 1 to 2**IX - 1. IX has a default value of 10.
+</dd><dt>IY
+</dt><dd>(an output variable of type INTEGER) is the Y axis exponent for plotter coordinates defining a range of 1 to 2**IY - 1. IY has a default value of 10.</dd></dl><h2>Access</h2>To use GETSI, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: spps, seti 
 
  Hardcopy: NCAR Graphics Fundamentals, UNIX Version; User's Guide for NCAR GKS-0A Graphics

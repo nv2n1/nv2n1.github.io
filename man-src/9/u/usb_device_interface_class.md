@@ -10,18 +10,18 @@ description: "USB_DEVICE_INTERFACE_CLASS – describe a usb device with a specif
 <p>USB_DEVICE_INTERFACE_CLASS &#8211; describe a usb device with a specific interface class</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>USB_DEVICE_INTERFACE_CLASS(</code><i>vend</i><code>, </code><i>prod</i><code>, </code><i>cl</i><code>);</code></dl>
+<dt> <code>USB_DEVICE_INTERFACE_CLASS(</code><i>vend</i><code>, </code><i>prod</i><code>, </code><i>cl</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>vend</i></p>
 <dl>
 <dd>
-<dd>the 16 bit USB Vendor ID</dl>
+</dd><dd>the 16 bit USB Vendor ID</dd></dl>
 <p> <i>prod</i></p>
 <dl>
-<dd>the 16 bit USB Product ID</dl>
+<dd>the 16 bit USB Product ID</dd></dl>
 <p> <i>cl</i></p>
 <dl>
-<dd>bInterfaceClass value</dl>
+<dd>bInterfaceClass value</dd></dl>
 <h2>Description</h2>
 <p>This macro is used to create a struct usb_device_id that matches a specific interface class of devices.</p>
 <h2>Copyright</h2>

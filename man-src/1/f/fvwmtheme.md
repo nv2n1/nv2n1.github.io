@@ -20,8 +20,8 @@ description: "FvwmTheme – an fvwm module for managing the appearance of fvwm a
 <h2>Configuration Options</h2>
 <p>FvwmTheme supports some configuration options. </p>
 <dl>
-<dt>*FvwmTheme: Colorset <i>n</i> <i>options</i></p>
-<dd>Creates or modifies colorset <i>n</i>. Each colorset has four colors, an optional pixmap and an optional shape mask. The four colors are used by modules as the foreground, background, highlight and shadow colors. When a colorset is created it defaults to a foreground of black and background of gray. The background and foreground are marked as &quot;average&quot; and &quot;contrast&quot; (see later) so that just specifying a pixmap or gradient gives sensible results. </p>
+<dt>*FvwmTheme: Colorset <i>n</i> <i>options</i></dt>
+<dd>Creates or modifies colorset <i>n</i>. Each colorset has four colors, an optional pixmap and an optional shape mask. The four colors are used by modules as the foreground, background, highlight and shadow colors. When a colorset is created it defaults to a foreground of black and background of gray. The background and foreground are marked as &quot;average&quot; and &quot;contrast&quot; (see later) so that just specifying a pixmap or gradient gives sensible results. </dd>
 <p> Warning: The highest colorset number used determines memory consumption. Thus if you define &#8216;Colorset 100000&#8217;, the memory for 100001 colorsets is used. Keep your colorset numbers as small as possible. </p>
 <p> <i>options</i> is a comma separated list containing some of the keywords: fg, Fore, Foreground, bg, Back, Background, hi, Hilite, Hilight, sh, Shade, Shadow, fgsh, Pixmap, TiledPixmap, AspectPixmap, Transparent, RootTransparent, Shape, TiledShape, AspectShape, NoShape, ?Gradient, Tint, fgTint, bgTint, Alpha, fgAlpha, Dither, NoDither, IconTint, IconAlpha, NoShape and Plain. </p>
 <p> <i>fg</i>, <i>Fore</i> and <i>Foreground</i> take a color name as an argument and set the foreground color. The special name <i>Contrast</i> may be used to select a color that contrasts well with the background color. To reset the foreground color to the default value you can simply omit the color name. </p>
@@ -69,8 +69,8 @@ Colorset 19 Transparent
 <h2>Commands</h2>
 <p>The following fvwm command may be executed at any time to alter the colorsets. It may be bound to a menu item or typed into a module such as FvwmConsole. </p>
 <dl>
-<dt>SendToModule FvwmTheme Colorset <i>options</i></p>
-<dd>The syntax is the same as the configuration option. </p>
+<dt>SendToModule FvwmTheme Colorset <i>options</i></dt>
+<dd>The syntax is the same as the configuration option. </dd>
 </dl>
 <h2>Examples</h2>
 <pre>*FvwmTheme: Colorset 3 fg wheat, bg navy</pre>

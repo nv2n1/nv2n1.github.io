@@ -15,20 +15,20 @@ description: "tapconvert – convert Twisted configurations from one format to a
 <h2>DESCRIPTION</h2>
 <p> The <code>&#8211;help</code> prints out a usage message to standard output.</p>
 <dl>
-<dt><code>&#8211;in</code>, <code>-i</code> <i>&lt;input file&gt;</i></p>
-<dd> The name of the input configuration.</p>
-<dt><code>&#8211;out</code>, <code>-o</code> <i>&lt;output file&gt;</i></p>
-<dd> The name of the output configuration.</p>
-<dt><code>&#8211;typein</code>, <code>-f</code> <i>&lt;input type&gt;</i></p>
-<dd> The type of the input file. Can be either &#8216;guess&#8217;, &#8216;python&#8217;, &#8216;pickle&#8217;, &#8216;xml&#8217;, or &#8216;source&#8217;. Default is &#8216;guess&#8217;.</p>
-<dt><code>&#8211;typeout</code>, <code>-t</code> <i>&lt;output type&gt;</i></p>
-<dd> The type of the output file. Can be either &#8216;pickle&#8217;, &#8216;xml&#8217;, or &#8216;source&#8217;. Default is &#8216;source&#8217;.</p>
-<dt><code>&#8211;decrypt</code>, <code>-d</code></p>
-<dd> Decrypt the specified tap/aos/xml input file.</p>
-<dt><code>&#8211;encrypt</code>, <code>-e</code></p>
-<dd> Encrypt output file before writing.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</dl>
+<dt><code>&#8211;in</code>, <code>-i</code> <i>&lt;input file&gt;</i></dt>
+<dd> The name of the input configuration.</dd>
+<dt><code>&#8211;out</code>, <code>-o</code> <i>&lt;output file&gt;</i></dt>
+<dd> The name of the output configuration.</dd>
+<dt><code>&#8211;typein</code>, <code>-f</code> <i>&lt;input type&gt;</i></dt>
+<dd> The type of the input file. Can be either &#8216;guess&#8217;, &#8216;python&#8217;, &#8216;pickle&#8217;, &#8216;xml&#8217;, or &#8216;source&#8217;. Default is &#8216;guess&#8217;.</dd>
+<dt><code>&#8211;typeout</code>, <code>-t</code> <i>&lt;output type&gt;</i></dt>
+<dd> The type of the output file. Can be either &#8216;pickle&#8217;, &#8216;xml&#8217;, or &#8216;source&#8217;. Default is &#8216;source&#8217;.</dd>
+<dt><code>&#8211;decrypt</code>, <code>-d</code></dt>
+<dd> Decrypt the specified tap/aos/xml input file.</dd>
+<dt><code>&#8211;encrypt</code>, <code>-e</code></dt>
+<dd> Encrypt output file before writing.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Moshe Zadka, based on tapconvert&#8217;s help messages</p>
 <h2>REPORTING BUGS</h2>

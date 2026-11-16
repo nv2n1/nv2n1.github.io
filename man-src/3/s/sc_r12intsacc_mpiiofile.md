@@ -12,9 +12,6 @@ description: "sc::R12IntsAcc_MPIIOFile –"
 <p> Inherits <code>sc::R12IntsAcc</code>. Inherited by <code>sc::R12IntsAcc_MPIIOFile_Ind</code>.</p>
 <h3>Classes</h3>
 <pre><code>struct PairBlkInfo
-
-
-
 Public Member Functions</code></pre>
 <p> <code>R12IntsAcc_MPIIOFile</code> (<code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;mem, const char *filename, int num_te_types, int ni, int nj, int nx, int ny) </p>
 <p> <code>R12IntsAcc_MPIIOFile</code> (<code>StateIn</code> &amp;) </p>
@@ -41,28 +38,12 @@ Public Member Functions</code></pre>
  int <code>ij_index</code> (int i, int j) const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void check_error_code_ (int errcod) const
-
-
 Utility function to check MPI I/O error codes.
-
-
 void init (bool restart)
-
-
-
 int ntasks () const
-
-
 total number of tasks
-
-
 int taskid () const
-
-
 ID of this task.
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>MemoryGrp</code> &gt; <code>mem_</code> </p>
 <p> int <code>nproc_</code> </p>

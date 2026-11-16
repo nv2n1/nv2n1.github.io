@@ -17,8 +17,8 @@ whisper-fill src_path dst_path
 <p> Copies data from src in dst, if missing. Unlike whisper-merge, don&#8217;t overwrite data that&#8217;s already present in the target file, but instead, only add the missing data (e.g. where the gaps in the target file are). Because no values are overwritten, no data or precision gets lost. Also, unlike whisper-merge, try to take the highest-precision archive to provide the data, instead of the one with the largest retention. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show the embedded help.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show the embedded help.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>whisper</code> is a fixed size database, created by Chris Davis. </p>
 <p> This manual page was written by Piotr Popieluch &lt;piotr1212 [at] gmail.com&gt;, for the Fedora project (but may be used by others). </p>

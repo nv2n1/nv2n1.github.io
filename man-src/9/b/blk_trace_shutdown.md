@@ -15,7 +15,7 @@ blk_trace_shutdown - stop and cleanup trace structures
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue associated with the device</dl>
+<dl><dd></dd><dd>the request queue associated with the device</dd></dl>
 
 <h2>Copyright</h2>
 

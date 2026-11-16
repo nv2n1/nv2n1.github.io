@@ -15,7 +15,7 @@ pci_enable_device - Initialize device before it's used by a driver.
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to be initialized</dl>
+<dl><dd></dd><dd>PCI device to be initialized</dd></dl>
 
 <h2>Description</h2>
 

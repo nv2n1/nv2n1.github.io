@@ -15,8 +15,8 @@ description: "Alt-Ergo – An automatic theorem prover dedicated to program veri
 <p> <code>Alt-Ergo</code> is an automatic theorem prover. It takes as inputs an arbitrary polymorphic and multi-sorted first-order formula written is the Why&#8217;s syntax. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Help. Will give you the full list of command line options. </p>
+<dt><code>-h</code></dt>
+<dd> Help. Will give you the full list of command line options. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> <i>Sylvain Conchon &lt;conchon [at] lri.fr&gt; and Evelyne Contejean &lt;contejea [at] lri.fr&gt;</i> </p>

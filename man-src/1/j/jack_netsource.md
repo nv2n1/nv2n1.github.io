@@ -17,75 +17,75 @@ description: "jack_netsource – Netjack Master client for one slave"
  But the main usecase is of course a LAN, where it can achieve one jack period of latency. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code> this help text</p>
+<dt><code>-h</code> this help text</dt>
 <dd>
-<dt><code>-H</code> <i>slave host</i></p>
+</dd><dt><code>-H</code> <i>slave host</i></dt>
 <dd>
- Host name of the slave JACK</p>
-<dt><code>-o</code> <i>num channels</i></p>
+ Host name of the slave JACK</dd>
+<dt><code>-o</code> <i>num channels</i></dt>
 <dd>
- Number of audio playback channels</p>
-<dt><code>-i</code> <i>num channels</i></p>
+ Number of audio playback channels</dd>
+<dt><code>-i</code> <i>num channels</i></dt>
 <dd>
- Number of audio capture channels</p>
-<dt><code>-O</code> <i>num channels</i></p>
+ Number of audio capture channels</dd>
+<dt><code>-O</code> <i>num channels</i></dt>
 <dd>
- Number of midi playback channels</p>
-<dt><code>-I</code> <i>num channels</i></p>
+ Number of midi playback channels</dd>
+<dt><code>-I</code> <i>num channels</i></dt>
 <dd>
- Number of midi capture channels</p>
-<dt><code>-n</code> <i>periods</i></p>
+ Number of midi capture channels</dd>
+<dt><code>-n</code> <i>periods</i></dt>
 <dd>
- Network latency in JACK periods</p>
-<dt><code>-p</code> <i>port</i></p>
+ Network latency in JACK periods</dd>
+<dt><code>-p</code> <i>port</i></dt>
 <dd>
- UDP port that the slave is listening on</p>
-<dt><code>-r</code> <i>reply port</i></p>
+ UDP port that the slave is listening on</dd>
+<dt><code>-r</code> <i>reply port</i></dt>
 <dd>
- UDP port that we are listening on</p>
-<dt><code>-B</code> <i>bind port</i></p>
+ UDP port that we are listening on</dd>
+<dt><code>-B</code> <i>bind port</i></dt>
 <dd>
- reply port, for use in NAT environments</p>
-<dt><code>-b</code> <i>bitdepth</i></p>
+ reply port, for use in NAT environments</dd>
+<dt><code>-b</code> <i>bitdepth</i></dt>
 <dd>
- Set transport to use 16bit or 8bit</p>
-<dt><code>-c</code> <i>bytes</i></p>
+ Set transport to use 16bit or 8bit</dd>
+<dt><code>-c</code> <i>bytes</i></dt>
 <dd>
- Use CELT encoding with &lt;bytes&gt; per period and channel</p>
-<dt><code>-m</code> <i>mtu</i></p>
+ Use CELT encoding with &lt;bytes&gt; per period and channel</dd>
+<dt><code>-m</code> <i>mtu</i></dt>
 <dd>
- Assume this mtu for the link</p>
-<dt><code>-R</code> <i>N</i></p>
+ Assume this mtu for the link</dd>
+<dt><code>-R</code> <i>N</i></dt>
 <dd>
- Redundancy: send out packets N times.</p>
-<dt><code>-e</code></p>
+ Redundancy: send out packets N times.</dd>
+<dt><code>-e</code></dt>
 <dd>
- skip host-to-network endianness conversion</p>
-<dt><code>-N</code> <i>jack name</i></p>
+ skip host-to-network endianness conversion</dd>
+<dt><code>-N</code> <i>jack name</i></dt>
 <dd>
- Reports a different client name to jack</p>
+ Reports a different client name to jack</dd>
 <dt>
-<dt><code>-s</code>, <code>&#8211;server</code> <i>servername</i></p>
+</dt><dt><code>-s</code>, <code>&#8211;server</code> <i>servername</i></dt>
 <dd>
+</dd><dd>
+ Connect to the jack server named <i>servername</i></dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Connect to the jack server named <i>servername</i></p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+ Display help/usage message</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd>
- Display help/usage message</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>
- Output version information and exit </p>
+ Output version information and exit </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> run a 4 audio channel bidirectional link with one period of latency and no midi channels. Audio data is flowing uncompressed over the wire:<br />
  On <i>hostA</i>:</p>
 <dl>
 <dt>
-<dd> <code>jackd -d alsa </code><br />
- <code>jack_netsource -H hostB -n1 -i4 -o4 -I0 -O0 </code></dl>
+</dt><dd> <code>jackd -d alsa </code><br />
+ <code>jack_netsource -H hostB -n1 -i4 -o4 -I0 -O0 </code></dd></dl>
 <p> On <i>hostB</i>:</p>
 <dl>
 <dt>
-<dd> <code>jackd -d net </code> </p>
+</dt><dd> <code>jackd -d net </code> </dd>
 </dl>
 <h2>Index</h2>

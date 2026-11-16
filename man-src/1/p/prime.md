@@ -27,22 +27,22 @@ description: "Prime – a file manager for GNU/Linux console/xterm"
  There is a table showing the DOS-like key combinations along with their respective GNU key bindings in the README file installed with this package. To read more about the levels of experience and the keybindings, please refer to the README file under prime&#8217;s help menu. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;export, -e dirname filename</p>
-<dd> Export directory tree of &#8216;dirname&#8217; into text file named &#8216;filename&#8217; without starting the file manager </p>
-<dt>&#8211;log, -g log-file-name</p>
-<dd> Provide a file to use for writing log information. The program uses ~/prime.log by default </p>
-<dt>&#8211;level X, -l X</p>
-<dd> The GNU DOS experience level to be used. Can be 1-6, defaults to 1. See above text for details </p>
-<dt>&#8211;no-log, -n</p>
-<dd> Do not output log information </p>
-<dt>&#8211;reset-config, -r</p>
-<dd> Reset the configuration file to its defaults </p>
-<dt>&#8211;help, -h</p>
-<dd> Print command line help, including short instructions on the command line options, without starting the program </p>
-<dt>&#8211;version, -v</p>
-<dd> Show program version </p>
-<dt>dirname</p>
-<dd> Load the directory tree of &#8216;dirname&#8217; into Prime on startup </p>
+<dt>&#8211;export, -e dirname filename</dt>
+<dd> Export directory tree of &#8216;dirname&#8217; into text file named &#8216;filename&#8217; without starting the file manager </dd>
+<dt>&#8211;log, -g log-file-name</dt>
+<dd> Provide a file to use for writing log information. The program uses ~/prime.log by default </dd>
+<dt>&#8211;level X, -l X</dt>
+<dd> The GNU DOS experience level to be used. Can be 1-6, defaults to 1. See above text for details </dd>
+<dt>&#8211;no-log, -n</dt>
+<dd> Do not output log information </dd>
+<dt>&#8211;reset-config, -r</dt>
+<dd> Reset the configuration file to its defaults </dd>
+<dt>&#8211;help, -h</dt>
+<dd> Print command line help, including short instructions on the command line options, without starting the program </dd>
+<dt>&#8211;version, -v</dt>
+<dd> Show program version </dd>
+<dt>dirname</dt>
+<dd> Load the directory tree of &#8216;dirname&#8217; into Prime on startup </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>~/prime.log</i> The default file used for log. User can override this by providing another file name as an argument to the program</p>

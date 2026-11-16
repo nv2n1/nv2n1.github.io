@@ -26,20 +26,20 @@ void
 <code>Tcl_LogCommandInfo</code>(<i>interp, script, command, commandLength</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to record information.</p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to record information.</dd>
 <dd>int<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>code</i><br />
- The code returned from script evaluation.</p>
+ The code returned from script evaluation.</dd>
 <dd>Tcl_Obj<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*options</i><br />
- A dictionary of return options.</p>
-<dd>char <i>*message</i> (in) For <code>Tcl_AddErrorInfo</code>, this is a conventional C string to append to the <code>-errorinfo</code> return option. For <code>Tcl_AddObjErrorInfo</code>, this points to the first byte of an array of <i>length</i> bytes containing a string to append to the <code>-errorinfo</code> return option. This byte array may contain embedded null bytes unless <i>length</i> is negative.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) A message to be appended to the <code>-errorinfo</code> return option in the form of a Tcl_Obj value.</p>
-<dd>int <i>length</i> (in) The number of bytes to copy from <i>message</i> when appending to the <code>-errorinfo</code> return option. If negative, all bytes up to the first null byte are used.</p>
-<dd>Tcl_Obj <i>*errorObjPtr</i> (in) The <code>-errorcode</code> return option will be set to this value.</p>
-<dd>char <i>*element</i> (in) String to record as one element of the <code>-errorcode</code> return option. Last <i>element</i> argument must be NULL.</p>
-<dd>va_list <i>argList</i> (in) An argument list which must have been initialized using <code>va_start</code>, and cleared using <code>va_end</code>.</p>
-<dd>const char <i>*script</i> (in) Pointer to first character in script containing command (must be &lt;= command)</p>
-<dd>const char <i>*command</i> (in) Pointer to first character in command that generated the error</p>
-<dd>int <i>commandLength</i> (in) Number of bytes in command; -1 means use all bytes up to first null byte </p>
+ A dictionary of return options.</dd>
+<dd>char <i>*message</i> (in) For <code>Tcl_AddErrorInfo</code>, this is a conventional C string to append to the <code>-errorinfo</code> return option. For <code>Tcl_AddObjErrorInfo</code>, this points to the first byte of an array of <i>length</i> bytes containing a string to append to the <code>-errorinfo</code> return option. This byte array may contain embedded null bytes unless <i>length</i> is negative.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) A message to be appended to the <code>-errorinfo</code> return option in the form of a Tcl_Obj value.</dd>
+<dd>int <i>length</i> (in) The number of bytes to copy from <i>message</i> when appending to the <code>-errorinfo</code> return option. If negative, all bytes up to the first null byte are used.</dd>
+<dd>Tcl_Obj <i>*errorObjPtr</i> (in) The <code>-errorcode</code> return option will be set to this value.</dd>
+<dd>char <i>*element</i> (in) String to record as one element of the <code>-errorcode</code> return option. Last <i>element</i> argument must be NULL.</dd>
+<dd>va_list <i>argList</i> (in) An argument list which must have been initialized using <code>va_start</code>, and cleared using <code>va_end</code>.</dd>
+<dd>const char <i>*script</i> (in) Pointer to first character in script containing command (must be &lt;= command)</dd>
+<dd>const char <i>*command</i> (in) Pointer to first character in command that generated the error</dd>
+<dd>int <i>commandLength</i> (in) Number of bytes in command; -1 means use all bytes up to first null byte </dd>
 </dl>
 <h2>Description</h2>
 <p>The <code>Tcl_SetReturnOptions</code> and <code>Tcl_GetReturnOptions</code> routines expose the same capabilities as the <code>return</code> and <code>catch</code> commands, respectively, in the form of a C interface. </p>
@@ -57,7 +57,7 @@ if (code == TCL_ERROR) {
  Tcl_DecrRefCount(key);
  /* Do something with stackTrace */
 }</pre>
-</dl>
+</dd></dl>
 <p> <code>Tcl_SetReturnOptions</code> sets the return options of <i>interp</i> to be <i>options</i>. If <i>options</i> contains any invalid value for any key, TCL_ERROR will be returned, and the interp result will be set to an appropriate error message. Otherwise, a completion code in agreement with the <code>-code</code> and <code>-level</code> keys in <i>options</i> will be returned. </p>
 <p> As an example, Tcl&#8217;s <code>return</code> command itself could be implemented in terms of <code>Tcl_SetReturnOptions</code> like so:</p>
 <dl COMPACT>
@@ -67,7 +67,7 @@ if (code == TCL_ERROR) {
  Tcl_SetObjResult(interp, objv[objc]);
 }
 return Tcl_SetReturnOptions(interp, Tcl_NewListObj(objc-1, objv+1));</pre>
-</dl>
+</dd></dl>
 <p> (It is not really implemented that way. Internal access privileges allow for a more efficient alternative that meshes better with the bytecode compiler.) </p>
 <p> Note that a newly created <code>Tcl_Obj</code> may be passed in as the <i>options</i> argument without the need to tend to any reference counting. This is analogous to <code>Tcl_SetObjResult</code>. </p>
 <p> While <code>Tcl_SetReturnOptions</code> provides a general interface to set any collection of return options, there are a handful of return options that are very frequently used. Most notably the <code>-errorinfo</code> and <code>-errorcode</code> return options should be set properly when the command procedure of a command returns <code>TCL_ERROR</code>. Tcl provides several simpler interfaces to more directly set these return options. </p>

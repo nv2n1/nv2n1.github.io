@@ -10,7 +10,6 @@ description: "save_sample – Writes a sample into a file. Allegro game programm
 <p>save_sample &#8211; Writes a sample into a file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int save_sample(const char *filename, SAMPLE *spl);</code></pre>
 <h2>Description</h2>
 <p>Writes a sample into a file. The output format is determined from the filename extension. At present Allegro does not natively support the writing of any sample formats, so you must register a custom saver routine with register_sample_file_type(). Example: </p>

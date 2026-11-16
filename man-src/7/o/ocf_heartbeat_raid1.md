@@ -10,39 +10,39 @@ description: "ocf_heartbeat_Raid1 – Manages a software RAID1 device on shared 
 <p>ocf_heartbeat_Raid1 &#8211; Manages a software RAID1 device on shared storage</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>Raid1</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>Raid1</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Resource script for RAID1. It manages a software Raid1 device on a shared storage medium.</p>
+<dd>Resource script for RAID1. It manages a software Raid1 device on a shared storage medium.</dd>
 <h2>Supported Parameters</h2>
 <p><code>raidconf</code></p>
 <dl>
-<dd>The RAID configuration file. e.g. /etc/raidtab or /etc/mdadm.conf. (required, string, no default)</dl>
+<dd>The RAID configuration file. e.g. /etc/raidtab or /etc/mdadm.conf. (required, string, no default)</dd></dl>
 <p> <code>raiddev</code></p>
 <dl>
-<dd>The block device to use. (required, string, no default)</dl>
+<dd>The block device to use. (required, string, no default)</dd></dl>
 <p> <code>homehost</code></p>
 <dl>
-<dd>The value for the homehost directive; this is an mdadm feature to protect RAIDs against being activated by accident. It is recommended to create RAIDs managed by the cluster with &quot;homehost&quot; set to a special value, so they are not accidentially auto-assembled by nodes not supposed to own them. (optional, string, no default)</dl>
+<dd>The value for the homehost directive; this is an mdadm feature to protect RAIDs against being activated by accident. It is recommended to create RAIDs managed by the cluster with &quot;homehost&quot; set to a special value, so they are not accidentially auto-assembled by nodes not supposed to own them. (optional, string, no default)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a Raid1 resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_Raid1 ocf:heartbeat:Raid1 \

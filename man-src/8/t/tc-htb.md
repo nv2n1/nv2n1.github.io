@@ -20,46 +20,46 @@ description: "HTB – Hierarchy Token Bucket"
 <p> In the absence of uncommon configuration options, the process is rather easy. At each node we look for an instruction, and then go to the class the instruction refers us to. If the class found is a barren leaf-node (without children), we enqueue the packet there. If it is not yet a leaf node, we do the whole thing over again starting from that node. </p>
 <p> The following actions are performed, in order at each node we visit, until one sends us to another node, or terminates the process.</p>
 <dl>
-<dt>(i)</p>
-<dd>Consult filters attached to the class. If sent to a leafnode, we are done. Otherwise, restart.</p>
-<dt>(ii)</p>
-<dd>If none of the above returned with an instruction, enqueue at this node.</dl>
+<dt>(i)</dt>
+<dd>Consult filters attached to the class. If sent to a leafnode, we are done. Otherwise, restart.</dd>
+<dt>(ii)</dt>
+<dd>If none of the above returned with an instruction, enqueue at this node.</dd></dl>
 <p> This algorithm makes sure that a packet always ends up somewhere, even while you are busy building your configuration.</p>
 <h2>Link Sharing Algorithm</h2>
 <p>FIXME</p>
 <h2>Qdisc</h2>
 <p>The root of a HTB qdisc class tree has the following parameters: </p>
 <dl>
-<dt>parent major:minor | root</p>
-<dd>This mandatory parameter determines the place of the HTB instance, either at the <code>root</code> of an interface or within an existing class.</p>
-<dt>handle major:</p>
-<dd>Like all other qdiscs, the HTB can be assigned a handle. Should consist only of a major number, followed by a colon. Optional, but very useful if classes will be generated within this qdisc.</p>
-<dt>default minor-id</p>
-<dd>Unclassified traffic gets sent to the class with this minor-id.</p>
-<dt>r2q divisor</p>
-<dd>Divisor used to calculate <code>quantum</code> values for classes. Classes divide <code>rate</code> by this number. Default value is 10.</p>
-<dt>offload</p>
-<dd>Offload the HTB algorithm to hardware (requires driver and device support). </p>
+<dt>parent major:minor | root</dt>
+<dd>This mandatory parameter determines the place of the HTB instance, either at the <code>root</code> of an interface or within an existing class.</dd>
+<dt>handle major:</dt>
+<dd>Like all other qdiscs, the HTB can be assigned a handle. Should consist only of a major number, followed by a colon. Optional, but very useful if classes will be generated within this qdisc.</dd>
+<dt>default minor-id</dt>
+<dd>Unclassified traffic gets sent to the class with this minor-id.</dd>
+<dt>r2q divisor</dt>
+<dd>Divisor used to calculate <code>quantum</code> values for classes. Classes divide <code>rate</code> by this number. Default value is 10.</dd>
+<dt>offload</dt>
+<dd>Offload the HTB algorithm to hardware (requires driver and device support). </dd>
 </dl>
 <h2>Classes</h2>
 <p>Classes have a host of parameters to configure their operation. </p>
 <dl>
-<dt>parent major:minor</p>
-<dd>Place of this class within the hierarchy. If attached directly to a qdisc and not to another class, minor can be omitted. Mandatory.</p>
-<dt>classid major:minor</p>
-<dd>Like qdiscs, classes can be named. The major number must be equal to the major number of the qdisc to which it belongs. Optional, but needed if this class is going to have children.</p>
-<dt>prio priority</p>
-<dd>In the round-robin process, classes with the lowest priority field are tried for packets first. </p>
-<dt>rate rate</p>
-<dd>Maximum rate this class and all its children are guaranteed. Mandatory. </p>
-<dt>ceil rate</p>
-<dd>Maximum rate at which a class can send, if its parent has bandwidth to spare. Defaults to the configured rate, which implies no borrowing </p>
-<dt>burst bytes</p>
-<dd>Amount of bytes that can be burst at <code>ceil</code> speed, in excess of the configured <code>rate.</code> Should be at least as high as the highest burst of all children. </p>
-<dt>cburst bytes</p>
-<dd>Amount of bytes that can be burst at &#8216;infinite&#8217; speed, in other words, as fast as the interface can transmit them. For perfect evening out, should be equal to at most one average packet. Should be at least as high as the highest cburst of all children. </p>
-<dt>quantum bytes</p>
-<dd>Number of bytes to serve from this class before the scheduler moves to the next class. Default value is <code>rate</code> divided by the qdisc <code>r2q</code> parameter. If specified, <code>r2q</code> is ignored. </p>
+<dt>parent major:minor</dt>
+<dd>Place of this class within the hierarchy. If attached directly to a qdisc and not to another class, minor can be omitted. Mandatory.</dd>
+<dt>classid major:minor</dt>
+<dd>Like qdiscs, classes can be named. The major number must be equal to the major number of the qdisc to which it belongs. Optional, but needed if this class is going to have children.</dd>
+<dt>prio priority</dt>
+<dd>In the round-robin process, classes with the lowest priority field are tried for packets first. </dd>
+<dt>rate rate</dt>
+<dd>Maximum rate this class and all its children are guaranteed. Mandatory. </dd>
+<dt>ceil rate</dt>
+<dd>Maximum rate at which a class can send, if its parent has bandwidth to spare. Defaults to the configured rate, which implies no borrowing </dd>
+<dt>burst bytes</dt>
+<dd>Amount of bytes that can be burst at <code>ceil</code> speed, in excess of the configured <code>rate.</code> Should be at least as high as the highest burst of all children. </dd>
+<dt>cburst bytes</dt>
+<dd>Amount of bytes that can be burst at &#8216;infinite&#8217; speed, in other words, as fast as the interface can transmit them. For perfect evening out, should be equal to at most one average packet. Should be at least as high as the highest cburst of all children. </dd>
+<dt>quantum bytes</dt>
+<dd>Number of bytes to serve from this class before the scheduler moves to the next class. Default value is <code>rate</code> divided by the qdisc <code>r2q</code> parameter. If specified, <code>r2q</code> is ignored. </dd>
 </dl>
 <h2>Notes</h2>
 <p>Due to Unix timing constraints, the maximum ceil rate is not infinite and may in fact be quite low. On Intel, there are 100 timer events per second, the maximum rate is that rate at which &#8216;burst&#8217; bytes are sent each timer tick. From this, the minimum burst size for a specified rate can be calculated. For i386, a 10mbit rate requires a 12 kilobyte burst as 100*12kb*8 equals 10mbit. </p>

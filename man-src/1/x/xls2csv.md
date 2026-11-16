@@ -15,5 +15,6 @@ description: "xls2csv – reads MS-Excel file and puts its content as comma-sepa
 <p> <code>xls2csv </code> reads MS-Excel spreadsheet and dumps its content as comma-separated values to stdout. Numbers are printed without delimiters, strings are enclosed in the double quotes. Double-quotes inside string are doubled.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-x</code></p>
+<dt><code>-x</code></dt>
 <dd> print unknown Unicode chars as 
+</dd></dl>

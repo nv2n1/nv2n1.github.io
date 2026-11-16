@@ -20,6 +20,6 @@ description: "QuantLib::AnalyticCapFloorEngine – Analytic engine for cap/floor
 <h3><code>AnalyticCapFloorEngine</code> (const boost::shared_ptr&lt; <code>AffineModel</code> &gt; &amp; model, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; termStructure = <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;())</h3>
 <p><code>Note:</code></p>
 <dl COMPACT>
-<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dl>
+<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

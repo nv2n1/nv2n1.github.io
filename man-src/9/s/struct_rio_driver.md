@@ -24,38 +24,38 @@ description: "struct_rio_driver – RIO driver info"
 <h2>Members</h2>
 <p>node</p>
 <dl>
-<dd>Node in list of drivers</dl>
+<dd>Node in list of drivers</dd></dl>
 <p> name</p>
 <dl>
-<dd>RIO driver name</dl>
+<dd>RIO driver name</dd></dl>
 <p> id_table</p>
 <dl>
-<dd>RIO device ids to be associated with this driver</dl>
+<dd>RIO device ids to be associated with this driver</dd></dl>
 <p> probe</p>
 <dl>
-<dd>RIO device inserted</dl>
+<dd>RIO device inserted</dd></dl>
 <p> remove</p>
 <dl>
-<dd>RIO device removed</dl>
+<dd>RIO device removed</dd></dl>
 <p> shutdown</p>
 <dl>
-<dd>shutdown notification callback</dl>
+<dd>shutdown notification callback</dd></dl>
 <p> suspend</p>
 <dl>
-<dd>RIO device suspended</dl>
+<dd>RIO device suspended</dd></dl>
 <p> resume</p>
 <dl>
-<dd>RIO device awakened</dl>
+<dd>RIO device awakened</dd></dl>
 <p> enable_wake</p>
 <dl>
-<dd>RIO device enable wake event</dl>
+<dd>RIO device enable wake event</dd></dl>
 <p> driver</p>
 <dl>
-<dd>LDM driver struct</dl>
+<dd>LDM driver struct</dd></dl>
 <h2>Description</h2>
 <p>Provides info on a RIO device driver for insertion/removal and power management purposes.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

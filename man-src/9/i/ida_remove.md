@@ -15,11 +15,11 @@ ida_remove - remove the given ID
 <h2>Arguments</h2>
 
 <i>ida</i>
-<dl><dd><dd>ida handle</dl>
+<dl><dd></dd><dd>ida handle</dd></dl>
  
 
  <i>id</i>
-<dl><dd>ID to free</dl>
+<dl><dd>ID to free</dd></dl>
 
 <h2>Copyright</h2>
 

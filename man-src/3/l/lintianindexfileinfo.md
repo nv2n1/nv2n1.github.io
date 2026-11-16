@@ -15,10 +15,10 @@ description: "Lintian::Index::FileInfo – determine file type via magic."
 <p>Lintian::Index::FileInfo determine file type via magic.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>check_magic</p>
+<dt>check_magic</dt>
 <dd>
-<dt>add_fileinfo</p>
-<dd></dl>
+</dd><dt>add_fileinfo</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

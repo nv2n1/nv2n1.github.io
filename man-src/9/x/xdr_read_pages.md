@@ -15,11 +15,11 @@ xdr_read_pages - Ensure page-based XDR data to decode is aligned at current poin
 <h2>Arguments</h2>
 
 <i>xdr</i>
-<dl><dd><dd>pointer to xdr_stream struct</dl>
+<dl><dd></dd><dd>pointer to xdr_stream struct</dd></dl>
  
 
  <i>len</i>
-<dl><dd>number of bytes of page data</dl>
+<dl><dd>number of bytes of page data</dd></dl>
 
 <h2>Description</h2>
 

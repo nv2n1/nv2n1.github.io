@@ -14,10 +14,10 @@ description: "skb_queue_next – return the next packet in the queue"
 <p><i>list</i></p>
 <dl>
 <dd>
-<dd>queue head</dl>
+</dd><dd>queue head</dd></dl>
 <p> <i>skb</i></p>
 <dl>
-<dd>current buffer</dl>
+<dd>current buffer</dd></dl>
 <h2>Description</h2>
 <p>Return the next packet in <i>list</i> after <i>skb</i>. It is only valid to call this if <code>skb_queue_is_last</code> evaluates to false.</p>
 <h2>Copyright</h2>

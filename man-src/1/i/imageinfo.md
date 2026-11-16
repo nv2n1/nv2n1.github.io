@@ -16,34 +16,34 @@ description: "imageinfo – display selected image information"
 <h2>OPTIONS</h2>
 <p> <i>imageinfo</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help message</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display imageinfo version</p>
-<dt><code>&#8211;format</code></p>
-<dd> Display image format</p>
-<dt><code>&#8211;fmtdscr</code></p>
-<dd> Display image format description</p>
-<dt><code>&#8211;size</code></p>
-<dd> Display image size</p>
-<dt><code>&#8211;depth</code></p>
-<dd> Display bit depth</p>
-<dt><code>&#8211;geom</code></p>
-<dd> Display image geometry</p>
-<dt><code>&#8211;width</code></p>
-<dd> Display image width</p>
-<dt><code>&#8211;height</code></p>
-<dd> Display image height</p>
-<dt><code>&#8211;iccname</code></p>
-<dd> Display ICC profile name</p>
-<dt><code>&#8211;iccfile=file</code></p>
-<dd> Save ICC profile to file</p>
-<dt><code>&#8211;iccmd5</code></p>
-<dd> Display MD5 hash of ICC profile</p>
-<dt><code>&#8211;md5hash</code></p>
-<dd> Display MD5 hash of image</p>
-<dt><code>&#8211;sha256hash</code></p>
-<dd> Display SHA-256 hash of image</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help message</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display imageinfo version</dd>
+<dt><code>&#8211;format</code></dt>
+<dd> Display image format</dd>
+<dt><code>&#8211;fmtdscr</code></dt>
+<dd> Display image format description</dd>
+<dt><code>&#8211;size</code></dt>
+<dd> Display image size</dd>
+<dt><code>&#8211;depth</code></dt>
+<dd> Display bit depth</dd>
+<dt><code>&#8211;geom</code></dt>
+<dd> Display image geometry</dd>
+<dt><code>&#8211;width</code></dt>
+<dd> Display image width</dd>
+<dt><code>&#8211;height</code></dt>
+<dd> Display image height</dd>
+<dt><code>&#8211;iccname</code></dt>
+<dd> Display ICC profile name</dd>
+<dt><code>&#8211;iccfile=file</code></dt>
+<dd> Save ICC profile to file</dd>
+<dt><code>&#8211;iccmd5</code></dt>
+<dd> Display MD5 hash of ICC profile</dd>
+<dt><code>&#8211;md5hash</code></dt>
+<dd> Display MD5 hash of image</dd>
+<dt><code>&#8211;sha256hash</code></dt>
+<dd> Display SHA-256 hash of image</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-identify/">identify</a></code>(1)</p>
 <h2>AUTHOR</h2>

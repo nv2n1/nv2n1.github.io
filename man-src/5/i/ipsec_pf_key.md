@@ -10,82 +10,82 @@ description: "ipsec_pf_key – lists PF_KEY sockets registered with KLIPS"
 <p>ipsec_pf_key &#8211; lists PF_KEY sockets registered with KLIPS</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>cat</code> <i>/proc/net/pf_key</i></dl>
+<dt> <code>cat</code> <i>/proc/net/pf_key</i></dt></dl>
 <h2>Stack</h2>
-<dd>Note that pf_key is only supported on the KLIPS and MAST stacks. It is not supported on any other stack.</p>
+<dd>Note that pf_key is only supported on the KLIPS and MAST stacks. It is not supported on any other stack.</dd>
 <h2>Description</h2>
 <p>/proc/net/pf_key is a read-only file which lists the presently open PF_KEY sockets on the local system and their parameters. </p>
 <p> Each line lists one PF_KEY socket. A table entry consists of: </p>
 <p> +</p>
 <dl>
-<dd>sock pointer (sock)</dl>
+<dd>sock pointer (sock)</dd></dl>
 <p> +</p>
 <dl>
-<dd>PID of the socket owner (pid)</dl>
+<dd>PID of the socket owner (pid)</dd></dl>
 <p> +</p>
 <dl>
-<dd>flag to indicate if the socket is dead (d)</dl>
+<dd>flag to indicate if the socket is dead (d)</dd></dl>
 <p> +</p>
 <dl>
-<dd>socket wait queue (sleep)</dl>
+<dd>socket wait queue (sleep)</dd></dl>
 <p> +</p>
 <dl>
-<dd>socket pointer (socket)</dl>
+<dd>socket pointer (socket)</dd></dl>
 <p> +</p>
 <dl>
-<dd>next socket in chain (next)</dl>
+<dd>next socket in chain (next)</dd></dl>
 <p> +</p>
 <dl>
-<dd>previous socket in chain (prev)</dl>
+<dd>previous socket in chain (prev)</dd></dl>
 <p> +</p>
 <dl>
-<dd>last socket error (e)</dl>
+<dd>last socket error (e)</dd></dl>
 <p> +</p>
 <dl>
-<dd>pointer to destruct routine (destruct)</dl>
+<dd>pointer to destruct routine (destruct)</dd></dl>
 <p> +</p>
 <dl>
-<dd>is this a reused socket (r)</dl>
+<dd>is this a reused socket (r)</dd></dl>
 <p> +</p>
 <dl>
-<dd>has this socket been zapped (z)</dl>
+<dd>has this socket been zapped (z)</dd></dl>
 <p> +</p>
 <dl>
-<dd>socket family to which this socket belongs (fa)</dl>
+<dd>socket family to which this socket belongs (fa)</dd></dl>
 <p> +</p>
 <dl>
-<dd>local port number (n)</dl>
+<dd>local port number (n)</dd></dl>
 <p> +</p>
 <dl>
-<dd>protocol version number (p)</dl>
+<dd>protocol version number (p)</dd></dl>
 <p> +</p>
 <dl>
-<dd>Receive queue bytes committed (r)</dl>
+<dd>Receive queue bytes committed (r)</dd></dl>
 <p> +</p>
 <dl>
-<dd>Transmit queue bytes committed (w)</dl>
+<dd>Transmit queue bytes committed (w)</dd></dl>
 <p> +</p>
 <dl>
-<dd>option memory allocations (o)</dl>
+<dd>option memory allocations (o)</dd></dl>
 <p> +</p>
 <dl>
-<dd>size of send buffer in bytes (sndbf)</dl>
+<dd>size of send buffer in bytes (sndbf)</dd></dl>
 <p> +</p>
 <dl>
-<dd>timestamp in seconds (stamp)</dl>
+<dd>timestamp in seconds (stamp)</dd></dl>
 <p> +</p>
 <dl>
-<dd>socket flags (Flags)</dl>
+<dd>socket flags (Flags)</dd></dl>
 <p> +</p>
 <dl>
-<dd>socket type (Type)</dl>
+<dd>socket type (Type)</dd></dl>
 <p> +</p>
 <dl>
-<dd>connection state (St)</dl>
+<dd>connection state (St)</dd></dl>
 <h2>Examples</h2>
 <p><code>c3b8c140 3553 0 c0599818 c05997fc 0 0 0 0 1 0 15 0 2 0 0 0 65535 0.103232 00000000 00000003 01</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> shows that there is one pf_key socket set up that starts at <code>c3b8c140</code>, whose owning process has PID 3553, the socket is not dead, its wait queue is at <code>c0599818</code>, whose owning socket is at <code>c05997fc</code>, with no other sockets in the chain, no errors, no destructor, it is a reused socket which has not been zapped, from protocol family 15 (PF_KEY), local port number 0, protocol socket version 2, no memory allocated to transmit, receive or option queues, a send buffer of almost <code>64kB</code>, a timestamp of 0.103232, no flags set, type 3, in state 1.</p>
 <h2>Files</h2>
 <p>/proc/net/pf_key</p>
@@ -96,4 +96,4 @@ description: "ipsec_pf_key – lists PF_KEY sockets registered with KLIPS"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

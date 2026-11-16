@@ -48,7 +48,6 @@ Returns the value of the referenced bit. </p>
 &nbsp;std::vector&lt;bool&gt;::reference::flip </p>
 <pre><code>void flip();
 (until C++ 11)
-
     void flip() noexcept;
 (since C++ 11)</code></pre>
 <p>Inverts the referenced bit. </p>

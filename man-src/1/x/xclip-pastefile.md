@@ -17,8 +17,8 @@ description: "xclip-copyfile, xclip-cutfile, xclip-pastefile – copy and move f
 <p> <code>xclip-copyfile</code> copies files into the X clipboard, recursing into directories. </p>
 <p> <code>xclip-cutfile</code> copies the files, but also deletes them afterwards.</p>
 <dl>
-<dt><code>-p</code></p>
-<dd> preserve path formation </p>
+<dt><code>-p</code></dt>
+<dd> preserve path formation </dd>
 </dl>
 <p> <code>xclip-pastefile</code> pastes the files out of the clipboard</p>
 <h2>EXAMPLES</h2>

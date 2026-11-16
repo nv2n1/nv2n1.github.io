@@ -42,7 +42,7 @@ description: "QuantLib::SwapRateHelper – Rate helper for bootstrapping over sw
 <p>Rate helper for bootstrapping over swap rates. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>use input <code>SwapIndex</code> to create the swap</dl>
+<dd>use input <code>SwapIndex</code> to create the swap</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Bonds.cpp</code>, and <code>swapvaluation.cpp</code>. </p>
 <h2>Author</h2>

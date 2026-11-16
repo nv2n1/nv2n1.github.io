@@ -22,7 +22,6 @@ int ldap_compare_ext(
     LDAPControl **serverctrls,
     LDAPControl **clientctrls,
     int *msgidp);
-
 int ldap_compare_ext_s(
     LDAP *ld,
     char *dn,

@@ -18,11 +18,11 @@ description: "rebuild-jar-repository – rebuild a JAR repository"
 <p> <code>-c, &#8211;copy</code></p>
 <dl>
 <dt>
-<dd> Copy files.</dl>
+</dt><dd> Copy files.</dd></dl>
 <p> <code>-h, &#8211;hard</code></p>
 <dl>
 <dt>
-<dd> Create hard links.</dl>
+</dt><dd> Create hard links.</dd></dl>
 <p> <code>-s, &#8211;soft, &#8211;symbolic</code> Create symbolic links (default).</p>
 <h2>EXAMPLES</h2>
 <p> <code>rebuild-jar-repository .</code> &#8211; This will update all links created by <code>build-jar-repository</code> in the current working directory. Updated links will be symbolic links. </p>

@@ -16,7 +16,7 @@ description: "rpmmd2solv – convert files in rpm-md format into a solv file"
 <p> <code>-X</code></p>
 <dl>
 <dt>
-<dd> Autoexpand SUSE pattern and product provides into packages.</dl>
+</dt><dd> Autoexpand SUSE pattern and product provides into packages.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-repomdxml2solv/">repomdxml2solv</a>(1), <a href="/docs/linux/man/1-mergesolv/">mergesolv</a>(1), <a href="/docs/linux/man/8-createrepo/">createrepo</a>(8)</p>
 <h2>AUTHOR</h2>

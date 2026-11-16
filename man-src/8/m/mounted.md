@@ -14,10 +14,10 @@ description: "mounted.ocfs2 – Detects all OCFS2 volumes on a system."
 <p><code>mounted.ocfs2</code> is used to detect <i>OCFS2</i> volume(s) on a system. This tool assumes that the nodes detected on the system are part of the same cluster as the one specified in <i>/etc/ocfs2/cluster.conf</i>. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Lists the <i>OCFS2</i> volumes along with their labels and uuids. If a device is not specified, it scans all the devices in /proc/partitions. </p>
-<dt><code>-f</code></p>
-<dd>Lists the <i>OCFS2</i> volumes along with the list of nodes that have mounted the volume. The node names are listed if the <i>O2CB</i> cluster is online. <code>Note:</code> As this information is gathered using dirty-read, the information may be stale. </p>
+<dt><code>-d</code></dt>
+<dd>Lists the <i>OCFS2</i> volumes along with their labels and uuids. If a device is not specified, it scans all the devices in /proc/partitions. </dd>
+<dt><code>-f</code></dt>
+<dd>Lists the <i>OCFS2</i> volumes along with the list of nodes that have mounted the volume. The node names are listed if the <i>O2CB</i> cluster is online. <code>Note:</code> As this information is gathered using dirty-read, the information may be stale. </dd>
 </dl>
 <h2>Examples</h2>
 <p>[root [at] node1 ~]# mounted.ocfs2 -d<br />

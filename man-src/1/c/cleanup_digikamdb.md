@@ -13,14 +13,14 @@ description: "cleanup_digikamdb – Cleanup the digiKam databases to reduce thei
 <p> <code>cleanup_digikamdb</code> [-t] [-T] [-p] [-h]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code></p>
-<dd> Include thumbnail databases.</p>
-<dt><code>-T</code></p>
-<dd> Only cleanup thumbnail databases.</p>
-<dt><code>-p </code><i>path</i></p>
-<dd> Specify a different database <i>path</i>. If this option is not set or the specified <i>path</i> is invalid, the entry from the configuration file will be used.</p>
-<dt><code>-h</code></p>
-<dd> Show command line options.</dl>
+<dt><code>-t</code></dt>
+<dd> Include thumbnail databases.</dd>
+<dt><code>-T</code></dt>
+<dd> Only cleanup thumbnail databases.</dd>
+<dt><code>-p </code><i>path</i></dt>
+<dd> Specify a different database <i>path</i>. If this option is not set or the specified <i>path</i> is invalid, the entry from the configuration file will be used.</dd>
+<dt><code>-h</code></dt>
+<dd> Show command line options.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>cleanup_digikamdb</code> will cleanup and optimize the digiKam database file. This will, in most cases, lead to a smaller database file size and an increased access speed, because unneeded elements are removed from the database and data is optimized. </p>
 <p> The program will make sure that no instance of digiKam is running, because it is more safe to have no database access during the optimization process. It then will read the digiKam configuration file and determine the database location. In a final step the database will be optimized by invoking the sqlite command &#8216;<i>VACUUM</i>;&#8217; on it. If more then one database is found in this location, <code>cleanup_digikamdb</code> will optimize every database found in this path and below. </p>

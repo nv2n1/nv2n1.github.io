@@ -10,7 +10,6 @@ description: "std::setw – std::setw"
 <p>std::setw &#8211; std::setw</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;iomanip&gt;
-
 /*unspecified*/ setw(int n);</code></pre>
 <p>When used in an expression out &lt;&lt; setw(n) or in &gt;&gt; setw(n), sets the width parameter of the stream out or in to exactly n. </p>
 <h2>Parameters</h2>
@@ -33,12 +32,9 @@ The exact effects this modifier has on the input and output vary between the ind
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;sstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;no setw:&quot; &lt;&lt; 42 &lt;&lt; '
 '

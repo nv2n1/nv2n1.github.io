@@ -16,16 +16,16 @@ description: "xbmc-send – program to send some action to Kodi"
 <p> Example</p>
 <dl>
 <dt>
-<dd> kodi-send <code>&#8211;host</code>=<i>192</i>.168.0.1 <code>&#8211;port</code>=<i>9777</i> <code>&#8211;action=</code>&quot;Quit&quot;</dl>
+</dt><dd> kodi-send <code>&#8211;host</code>=<i>192</i>.168.0.1 <code>&#8211;port</code>=<i>9777</i> <code>&#8211;action=</code>&quot;Quit&quot;</dd></dl>
 <p> Options</p>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> Display help message</p>
-<dt><code>&#8211;host</code>=<i>HOST</i></p>
-<dd> Choose what HOST to connect to (default=localhost)</p>
-<dt><code>&#8211;port</code>=<i>PORT</i></p>
-<dd> Choose what PORT to connect to (default=9777)</p>
-<dt><code>&#8211;action</code>=<i>ACTION</i></p>
-<dd> Sends an action to Kodi, this option can be added multiple times to create a macro. </p>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> Display help message</dd>
+<dt><code>&#8211;host</code>=<i>HOST</i></dt>
+<dd> Choose what HOST to connect to (default=localhost)</dd>
+<dt><code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> Choose what PORT to connect to (default=9777)</dd>
+<dt><code>&#8211;action</code>=<i>ACTION</i></dt>
+<dd> Sends an action to Kodi, this option can be added multiple times to create a macro. </dd>
 </dl>
 <h2>Index</h2>

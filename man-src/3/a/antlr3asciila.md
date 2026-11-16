@@ -63,31 +63,31 @@ description: "src/antlr3inputstream.c –"
 <h3>static void antlr3AsciiConsume (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
 <p>Consume the next character in an 8 bit ASCII input stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::charPositionInLine, ANTLR3_INPUT_STREAM_struct::currentLine, ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::line, ANTLR3_INPUT_STREAM_struct::newlineChar, ANTLR3_INPUT_STREAM_struct::nextChar, ANTLR3_INPUT_STREAM_struct::sizeBuf, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static <code>ANTLR3_UINT32</code> antlr3AsciiGetCharPosition (<code>pANTLR3_INPUT_STREAM</code> input) [static]</h3>
 <p>Return the current offset in to the current line in the input stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Current line offset</dl>
+<dd>Current line offset</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::charPositionInLine. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static <code>ANTLR3_UINT32</code> antlr3AsciiGetLine (<code>pANTLR3_INPUT_STREAM</code> input) [static]</h3>
 <p>Return the line number as understood by the 8 bit/ASCII input stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Line number in input stream that we believe we are working on.</dl>
+<dd>Line number in input stream that we believe we are working on.</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::line. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void * antlr3AsciiGetLineBuf (<code>pANTLR3_INPUT_STREAM</code> input) [static]</h3>
 <p>Return a pointer into the input stream that points at the start of the current input line as triggered by the end of line character installed for the stream (&#8216; </p>
 <dl COMPACT>
-<dd><i>input</i></dl>
+<dd><i>input</i></dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::currentLine. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static <code>pANTLR3_STRING</code> antlr3AsciiGetSourceName (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
@@ -96,17 +96,17 @@ description: "src/antlr3inputstream.c –"
 <h3>static <code>ANTLR3_MARKER</code> antlr3AsciiIndex (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
 <p>Calculate the current index in the output stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::nextChar, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static <code>ANTLR3_UCHAR</code> antlr3AsciiLA (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> la) [static]</h3>
 <p>Return the input element assuming an 8 bit ascii input. <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
- <i>la</i> 1 based offset of next input stream element</dl>
+ <i>la</i> 1 based offset of next input stream element</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Next input character in internal ANTLR3 encoding (UTF32)</dl>
+<dd>Next input character in internal ANTLR3 encoding (UTF32)</dd></dl>
 <p> References ANTLR3_CHARSTREAM_EOF, ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::nextChar, ANTLR3_INPUT_STREAM_struct::sizeBuf, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3AsciiSetUcaseLA(), and antlr3GenericSetupStream().</p>
 <h3>static <code>ANTLR3_UCHAR</code> antlr3AsciiLA_ucase (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> la) [static]</h3>
@@ -114,95 +114,95 @@ description: "src/antlr3inputstream.c –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
- <i>la</i> 1 based offset of next input stream element</dl>
+ <i>la</i> 1 based offset of next input stream element</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Next input character in internal ANTLR3 encoding (UTF32)</dl>
+<dd>Next input character in internal ANTLR3 encoding (UTF32)</dd></dl>
 <p> References ANTLR3_CHARSTREAM_EOF, ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::nextChar, ANTLR3_INPUT_STREAM_struct::sizeBuf, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3AsciiSetUcaseLA().</p>
 <h3>static void * antlr3AsciiLT (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_INT32</code> lt) [static]</h3>
 <p>Return the input element assuming an 8 bit ascii input. <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
- <i>lt</i> 1 based offset of next input stream element</dl>
+ <i>lt</i> 1 based offset of next input stream element</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Next input character in internal ANTLR3 encoding (UTF32)</dl>
+<dd>Next input character in internal ANTLR3 encoding (UTF32)</dd></dl>
 <p> References ANTLR3_INT_STREAM_struct::_LA, ANTLR3_FUNC_PTR, and ANTLR3_INPUT_STREAM_struct::istream. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static <code>ANTLR3_MARKER</code> antlr3AsciiMark (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
 <p>Mark the current input point in an Ascii 8 bit stream such as a file stream, where all the input is available in the buffer. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>is</i> Input stream context pointer</dl>
+<dd><i>is</i> Input stream context pointer</dd></dl>
 <p> References ANTLR3_VECTOR_struct::add, ANTLR3_FREE_FUNC, ANTLR3_MALLOC, ANTLR3_INPUT_STREAM_struct::charPositionInLine, ANTLR3_LEX_STATE_struct::charPositionInLine, ANTLR3_VECTOR_struct::count, ANTLR3_INPUT_STREAM_struct::currentLine, ANTLR3_LEX_STATE_struct::currentLine, ANTLR3_VECTOR_struct::get, ANTLR3_INT_STREAM_struct::lastMarker, ANTLR3_INPUT_STREAM_struct::line, ANTLR3_LEX_STATE_struct::line, ANTLR3_INPUT_STREAM_struct::markDepth, ANTLR3_INPUT_STREAM_struct::markers, ANTLR3_INPUT_STREAM_struct::nextChar, ANTLR3_LEX_STATE_struct::nextChar, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void antlr3AsciiRelease (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> mark) [static]</h3>
 <p>Rewind the lexer input to the state specified by the supplied mark. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dl>
+<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::markDepth, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void antlr3AsciiRewind (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> mark) [static]</h3>
 <p>Rewind the lexer input to the state specified by the supplied mark. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dl>
+<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dd></dl>
 <p> References antlr3AsciiSeek(), ANTLR3_LEX_STATE_struct::charPositionInLine, ANTLR3_INPUT_STREAM_struct::charPositionInLine, ANTLR3_LEX_STATE_struct::currentLine, ANTLR3_INPUT_STREAM_struct::currentLine, ANTLR3_VECTOR_struct::get, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_LEX_STATE_struct::line, ANTLR3_INPUT_STREAM_struct::line, ANTLR3_INPUT_STREAM_struct::markers, ANTLR3_INPUT_STREAM_struct::nextChar, ANTLR3_LEX_STATE_struct::nextChar, ANTLR3_INT_STREAM_struct::release, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void antlr3AsciiRewindLast (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
 <p>Rewind the lexer input to the state specified by the last produced mark. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dl>
+<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dd></dl>
 <p> References ANTLR3_INT_STREAM_struct::lastMarker, and ANTLR3_INT_STREAM_struct::rewind. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void antlr3AsciiSeek (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> seekPoint) [static]</h3>
 <p>Rewind the lexer input to the state specified by the supplied mark. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dl>
+<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dd></dl>
 <p> References ANTLR3_FUNC_PTR, ANTLR3_INT_STREAM_struct::consume, ANTLR3_INPUT_STREAM_struct::nextChar, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3AsciiRewind(), and antlr3GenericSetupStream().</p>
 <h3>static void antlr3AsciiSetCharPosition (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> position) [static]</h3>
 <p>Set the current offset in the current line to be a particular setting. <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
- <i>position</i> New setting for current offset.</dl>
+ <i>position</i> New setting for current offset.</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>This does not set the actual pointers in the input stream, it is purely for reporting purposes and so on as per <code>antlr3AsciiSetLine()</code>;</dl>
+<dd>This does not set the actual pointers in the input stream, it is purely for reporting purposes and so on as per <code>antlr3AsciiSetLine()</code>;</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::charPositionInLine. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void antlr3AsciiSetLine (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> line) [static]</h3>
 <p>Set the current line number as understood by the input stream. <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
- <i>line</i> Line number to tell the input stream we are on</dl>
+ <i>line</i> Line number to tell the input stream we are on</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>This function does not change any pointers, it just allows the programmer to set the line number according to some external criterion, such as finding a lexed directive like: nnn &#8216;file.c&#8217; for instance, such that error reporting and so on in is in sync with some original source format.</dl>
+<dd>This function does not change any pointers, it just allows the programmer to set the line number according to some external criterion, such as finding a lexed directive like: nnn &#8216;file.c&#8217; for instance, such that error reporting and so on in is in sync with some original source format.</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::line. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void antlr3AsciiSetNewLineChar (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> newlineChar) [static]</h3>
 <p>Set the newline trigger character in the input stream to the supplied parameter. <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
- <i>newlineChar</i> Character to set to be the newline trigger.</dl>
+ <i>newlineChar</i> Character to set to be the newline trigger.</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>The supplied newLineChar is in UTF32 encoding (which means ASCII and latin1 etc are the same encodings), but the input stream catered to by this function is 8 bit only, so it is up to the programmer to ensure that the character supplied is valid.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>The supplied newLineChar is in UTF32 encoding (which means ASCII and latin1 etc are the same encodings), but the input stream catered to by this function is 8 bit only, so it is up to the programmer to ensure that the character supplied is valid.</dd></dl>
 </dl>
 <p> References ANTLR3_INPUT_STREAM_struct::newlineChar. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
@@ -212,13 +212,13 @@ description: "src/antlr3inputstream.c –"
 <h3>void antlr3AsciiSetupStream (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)</h3>
 <p>Common function to setup function interface for an 8 bit ASCII input stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>Many of the 8 bit ASCII oriented file stream handling functions will be usable by any or at least some other input streams. Therefore it is perfectly acceptable to call this function to install the ASCII handler then override just those functions that would not work for the particular input encoding, such as consume for instance.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>Many of the 8 bit ASCII oriented file stream handling functions will be usable by any or at least some other input streams. Therefore it is perfectly acceptable to call this function to install the ASCII handler then override just those functions that would not work for the particular input encoding, such as consume for instance.</dd></dl>
 </dl>
 <p> References antlr3GenericSetupStream(), antlr3StringFactoryNew(), and ANTLR3_INPUT_STREAM_struct::strFactory. </p>
 <p> Referenced by antlr3AsciiFileStreamNew(), antlr3NewAsciiStringCopyStream(), and antlr3NewAsciiStringInPlaceStream().</p>
@@ -226,7 +226,7 @@ description: "src/antlr3inputstream.c –"
 <p>Return the size of the current input stream, as an Ascii file which in this case is the total input. Other implementations may provide more sophisticated implementations to deal with non-recoverable streams and so on. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::sizeBuf. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static <code>pANTLR3_STRING</code> antlr3AsciiSubstr (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_MARKER</code> start, <code>ANTLR3_MARKER</code> stop) [static]</h3>
@@ -234,7 +234,7 @@ description: "src/antlr3inputstream.c –"
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
  <i>start</i> Offset in input stream where the string starts<br />
- <i>stop</i> Offset in the input stream where the string ends.</dl>
+ <i>stop</i> Offset in the input stream where the string ends.</dd></dl>
 <p> References ANTLR3_STRING_FACTORY_struct::newPtr, and ANTLR3_INPUT_STREAM_struct::strFactory. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>void antlr3GenericSetupStream (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)</h3>
@@ -243,13 +243,13 @@ description: "src/antlr3inputstream.c –"
 <h3>static void antlr3InputClose (<code>pANTLR3_INPUT_STREAM</code> input) [static]</h3>
 <p>Close down an input stream and free any memory allocated by it. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> References ANTLR3_FREE, ANTLR3_STRING_FACTORY_struct::close, ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INT_STREAM_struct::free, ANTLR3_INPUT_STREAM_struct::isAllocated, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_INPUT_STREAM_struct::markers, and ANTLR3_INPUT_STREAM_struct::strFactory. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>static void antlr3InputReset (<code>pANTLR3_INPUT_STREAM</code> input) [static]</h3>
 <p>Reset a re-startable input stream to the start. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> References antlr3VectorNew(), ANTLR3_INPUT_STREAM_struct::charPositionInLine, ANTLR3_INPUT_STREAM_struct::currentLine, ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::line, ANTLR3_INPUT_STREAM_struct::markDepth, ANTLR3_INPUT_STREAM_struct::markers, and ANTLR3_INPUT_STREAM_struct::nextChar. </p>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h2>Author</h2>

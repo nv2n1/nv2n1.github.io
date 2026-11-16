@@ -11,12 +11,9 @@ description: "std::optional<T>::value_or – std::optional<T>::value_or"
 <h2>Synopsis</h2>
 <pre><code>template &lt;class U&gt;
 (since C++ 17)
-
     constexpr T value_or(U &amp;&amp;default_value) const &amp;;
-
 template &lt;class U&gt;
 (since C++ 17)
-
     constexpr T value_or(U &amp;&amp;default_value) &amp;&amp;;</code></pre>
 <p>Returns the contained value if *this has a value, otherwise returns default_value.<br />
 1) Equivalent to bool(*this) ? **this : static_cast&lt;T&gt;(std::forward&lt;U&gt;(default_value))<br />
@@ -37,21 +34,16 @@ U&amp;&amp; must be convertible to T</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;optional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
 std::optional&lt;const char *&gt; maybe_getenv(const char *n)
-
 {
     if (const char *x = std::getenv(n))
         return x;
     else
         return {};
 }
-
 int main()
-
 {
     std::cout &lt;&lt; maybe_getenv(&quot;MYPWD&quot;).value_or(&quot;(none)&quot;) &lt;&lt; '
 ';

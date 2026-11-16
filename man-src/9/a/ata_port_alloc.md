@@ -14,7 +14,7 @@ description: "ata_port_alloc – allocate and initialize basic ATA port resource
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>ATA host this allocated port belongs to</dl>
+</dd><dd>ATA host this allocated port belongs to</dd></dl>
 <h2>Description</h2>
 <p>Allocate and initialize basic ATA port resources.</p>
 <h2>Return</h2>
@@ -23,5 +23,5 @@ description: "ata_port_alloc – allocate and initialize basic ATA port resource
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -108,11 +108,9 @@ description: "ANTLR3_INPUT_STREAM_struct –"
 <p> Pointer to function to return the current line buffer in the input stream The pointer returned is directly into the input stream so you must copy it if you wish to manipulate it without damaging the input stream. Encoding is obviously in the same form as the input stream. </p>
 <p> <code>Remarks:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> Note taht this function wil lbe inaccurate if setLine is called as there is no way at the moment to position the input stream at a particular line number offset.</dl>
+<dt>*</dt>
+<dd> Note taht this function wil lbe inaccurate if setLine is called as there is no way at the moment to position the input stream at a particular line number offset.</dd></dl>
 </dl>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>int <code>ANTLR3_INPUT_STREAM_struct::isAllocated</code></h3>
@@ -148,19 +146,17 @@ description: "ANTLR3_INPUT_STREAM_struct –"
 <h3>void(* <code>ANTLR3_INPUT_STREAM_struct::SetNewLineChar</code>)(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_UINT32</code> <code>newlineChar</code>)</h3>
 <p> Pointer to function to override the default newline character that the input stream looks for to trigger the line and offset and line buffer recording information. <code>Remarks:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> By default the chracter &#8216; </p>
-<dt>*</p>
-<dd> If for some reason you do not want teh counters and pointesr to be restee, yu can set the chracter to some impossible charater such as &#8221; or whatever.</p>
-<dt>*</p>
-<dd> This is a single character only, so choose the last chracter in a sequence of two or more.</p>
-<dt>*</p>
-<dd> This is only a simple aid to error reporting &#8211; if you have a complicated binary inptu structure it may not be adequate, but you can always override every function in the input stream with your own of course, and can even write your own complete input stream set if you like.</p>
-<dt>*</p>
-<dd> It is your responsiblity to set a valid cahracter for the input stream type. Ther is no point setting this to 0xFFFFFFFF if the input stream is 8 bit ASCII as this will just be truncated and never trigger as the comparison will be (INT32)0xFF == (INT32)0xFFFFFFFF</dl>
+<dt>*</dt>
+<dd> By default the chracter &#8216; </dd>
+<dt>*</dt>
+<dd> If for some reason you do not want teh counters and pointesr to be restee, yu can set the chracter to some impossible charater such as &#8221; or whatever.</dd>
+<dt>*</dt>
+<dd> This is a single character only, so choose the last chracter in a sequence of two or more.</dd>
+<dt>*</dt>
+<dd> This is only a simple aid to error reporting &#8211; if you have a complicated binary inptu structure it may not be adequate, but you can always override every function in the input stream with your own of course, and can even write your own complete input stream set if you like.</dd>
+<dt>*</dt>
+<dd> It is your responsiblity to set a valid cahracter for the input stream type. Ther is no point setting this to 0xFFFFFFFF if the input stream is 8 bit ASCII as this will just be truncated and never trigger as the comparison will be (INT32)0xFF == (INT32)0xFFFFFFFF</dd></dl>
 </dl>
 <p> Referenced by antlr3GenericSetupStream().</p>
 <h3>void(* <code>ANTLR3_INPUT_STREAM_struct::setUcaseLA</code>)(<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_BOOLEAN</code> flag)</h3>
@@ -183,5 +179,5 @@ description: "ANTLR3_INPUT_STREAM_struct –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbBJ">Author</a></dt>
+<dd></dd></dl>

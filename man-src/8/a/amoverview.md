@@ -10,36 +10,36 @@ description: "amoverview – display file systems processed by Amanda over time"
 <p>amoverview &#8211; display file systems processed by Amanda over time</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amoverview</code> [&#8211;hostwidth&nbsp;<wbr><i>width</i>] [&#8211;diskwidth&nbsp;<wbr><i>width</i>] [&#8211;skipmissed] [&#8211;last] [&#8211;num0] [&#8211;togo0] [&#8211;verbose] [&#8211;config&nbsp;<wbr>]&nbsp;<wbr><i>config</i></dl>
+<dt> <code>amoverview</code> [&#8211;hostwidth&nbsp;<wbr><i>width</i>] [&#8211;diskwidth&nbsp;<wbr><i>width</i>] [&#8211;skipmissed] [&#8211;last] [&#8211;num0] [&#8211;togo0] [&#8211;verbose] [&#8211;config&nbsp;<wbr>]&nbsp;<wbr><i>config</i></dt></dl>
 <h2>Description</h2>
 <p><code>Amoverview</code></p>
-<dd>displays a chart showing hosts and file systems processed by Amanda along with the backup level performed each day. </p>
+<dd>displays a chart showing hosts and file systems processed by Amanda along with the backup level performed each day. </dd>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Options</h2>
 <p><code>&#8211;config</code> <i>config</i></p>
 <dl>
-<dd>Use configuration <i>config</i>.</dl>
+<dd>Use configuration <i>config</i>.</dd></dl>
 <p> <code>&#8211;hostwidth</code> <i>width</i></p>
 <dl>
-<dd>Set <code>host</code> field column width to <i>width</i> characters instead of 8.</dl>
+<dd>Set <code>host</code> field column width to <i>width</i> characters instead of 8.</dd></dl>
 <p> <code>&#8211;diskwidth</code> <i>width</i></p>
 <dl>
-<dd>Set <code>disk</code> field column width to <i>width</i> characters instead of 20.</dl>
+<dd>Set <code>disk</code> field column width to <i>width</i> characters instead of 20.</dd></dl>
 <p> <code>&#8211;skipmissed</code></p>
 <dl>
-<dd>Compacts the output by only printing stats for the days Amanda actually ran.</dl>
+<dd>Compacts the output by only printing stats for the days Amanda actually ran.</dd></dl>
 <p> <code>&#8211;last</code></p>
 <dl>
-<dd>Outputs the last status of each disk at the start. Useful for long tapecycles and/or sparse reports.</dl>
+<dd>Outputs the last status of each disk at the start. Useful for long tapecycles and/or sparse reports.</dd></dl>
 <p> <code>&#8211;num0</code></p>
 <dl>
-<dd>Outputs the number of level 0 dumps for each disk.</dl>
+<dd>Outputs the number of level 0 dumps for each disk.</dd></dl>
 <p> <code>&#8211;togo0</code></p>
 <dl>
-<dd>Outputs the number of runs until the last level 0 dump is overwritten.</dl>
+<dd>Outputs the number of runs until the last level 0 dump is overwritten.</dd></dl>
 <p> <code>&#8211;verbose</code></p>
 <dl>
-<dd><code>Amoverview</code> can take a long while on large systems. This option reports intermediate steps while it is working.</dl>
+<dd><code>Amoverview</code> can take a long while on large systems. This option reports intermediate steps while it is working.</dd></dl>
 <h2>Results</h2>
 <p><code>amoverview</code> is a summary of the output of &quot; <code>amadmin &lt;config&gt; find</code> &quot;. When the last column of <code>amadmin find</code> contains anything other than &quot;OK&quot;, amoverview translates this into &quot;E&quot; for that day. </p>
 <p> A number indicates the level of backup and it succeeded. An &quot;E&quot; indicates an error for that day. You get an &quot;E&quot; for all errors, like failed to connect, datatimeout, computer crashed, etc, but also for failing to write to tape. </p>
@@ -50,7 +50,6 @@ description: "amoverview – display file systems processed by Amanda over time"
 <pre># amoverview
  date 12 12 12 12 12 12
 host disk 08 09 10 11 12 13
- 
 host1 / 0 1 1 1 1 1
 host1 /var 0 1 1 1 1 1
 host2 / 1 1 1 1 1 0

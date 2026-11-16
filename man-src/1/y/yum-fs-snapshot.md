@@ -16,8 +16,7 @@ description: "yum-fs-snapshot"
 <h2>FILES</h2>
 <p> <code>yum-fs-snapshot</code> uses a configuration file for its specific actions: <i>/etc/yum/pluginconf.d/fs-snapshot.conf</i></p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <h2>SEE ALSO</h2>
 <pre>
 <i>yum-fs-snapshot.conf (5)</i>
@@ -25,7 +24,6 @@ description: "yum-fs-snapshot"
 <h2>AUTHORS</h2>
 <pre><code>
 Josef Bacik&lt;josef[at] toxicpanda.com&gt;
-
     Mike Snitzer&lt;msnitzer[at] fedoraproject.org&gt;
 </code></pre>
 <h2>SEE ALSO</h2>

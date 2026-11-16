@@ -15,18 +15,18 @@ description: "xrdp-sesrun – sesman(8) session launcher"
  This is a tool useful for testing, it simply behaves like xrdp when some user logs in a new session and authenticates, thus starting a new session. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>server</i></p>
-<dd>Server on which sesman is running</p>
-<dt><i>username</i></p>
-<dd>user name of the session being started</p>
-<dt><i>password</i></p>
-<dd>user password</p>
-<dt><i>width</i></p>
-<dd>Screen width</p>
-<dt><i>height</i></p>
-<dd>Screen height</p>
-<dt><i>bpp</i></p>
-<dd>Session color depth </p>
+<dt><i>server</i></dt>
+<dd>Server on which sesman is running</dd>
+<dt><i>username</i></dt>
+<dd>user name of the session being started</dd>
+<dt><i>password</i></dt>
+<dd>user password</dd>
+<dt><i>width</i></dt>
+<dd>Screen width</dd>
+<dt><i>height</i></dt>
+<dd>Screen height</dd>
+<dt><i>bpp</i></dt>
+<dd>Session color depth </dd>
 </dl>
 <h2>Files</h2>
 <p>${SESMAN_BIN_DIR}/sesman<br />

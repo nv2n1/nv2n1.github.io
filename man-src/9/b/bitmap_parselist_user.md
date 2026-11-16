@@ -14,7 +14,8 @@ description: "bitmap_parselist_user –"
 <p><i>ubuf</i></p>
 <dl>
 <dd>
-<dd>pointer to user buffer containing string.</dl>
+</dd><dd>pointer to user buffer containing string.</dd></dl>
 <p> <i>ulen</i></p>
 <dl>
 <dd>buffer size in bytes. If string is smaller than this then it must be terminated with a 
+</dd></dl>

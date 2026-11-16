@@ -32,7 +32,7 @@ description: "include/antlr3rewritestreams.h –"
 <p> Once you start <code>next()</code>ing, do not try to add more elements. It will break the cursor tracking I believe. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>pANTLR3_REWRITE_RULE_NODE_STREAM</code> </p>
+<dd><code>pANTLR3_REWRITE_RULE_NODE_STREAM</code> </dd>
 <p> <code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> </p>
 <p> <code>pANTLR3_REWRITE_RULE_SUBTREE_STREAM</code></dl>
 <p> TODO: add mechanism to detect/puke on modification after reading from stream</p>
@@ -44,3 +44,4 @@ description: "include/antlr3rewritestreams.h –"
 <p>This is an implementation of a token stream, which is basically an element stream that deals with tokens only.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for ANTLR3C from the source code.</p>
+</p>

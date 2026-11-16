@@ -11,11 +11,11 @@ description: "lastcomm – print out information about previously executed comma
 <p> lastcomm &#8211; print out information about previously executed commands.</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>lastcomm</code></p>
+<dt><code>lastcomm</code></dt>
 <dd> [ <i>command-name &#8230;</i> ]<br />
  [ <i>user-name &#8230;</i> ]<br />
  [ <i>terminal-name &#8230;</i> ]<br />
- [ OPTION &#8230; ]</dl>
+ [ OPTION &#8230; ]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>lastcomm</code> prints out information about previously executed commands. If no arguments are specified, <code>lastcomm </code> will print info about all of the commands in <i>acct</i> (the record file). If called with one or more of <i>command-name,</i> <i>user-name, </i> or <i>terminal-name,</i> only records containing those items will be displayed. For example, to find out which users used command `a.out&#8217; and which users were logged into `tty0&#8242;, type: <center> lastcomm a.out tty0<br />
  </center> </p>
@@ -34,41 +34,41 @@ description: "lastcomm – print out information about previously executed comma
 +&nbsp;<wbr>time the process started</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;strict-match</code></p>
-<dd> Print only entries that match *all* of the arguments on the command line.</p>
-<dt><code>&#8211;print-controls </code></p>
-<dd> Print control characters.</p>
-<dt><code>&#8211;user</code><i> name</i></p>
-<dd> List records for user with <i>name.</i> This is useful if you&#8217;re trying to match a username that happens to be the same as a command (e.g., <i>ed</i> ).</p>
-<dt><code>&#8211;command</code><i> name</i></p>
-<dd> List records for command <i>name.</i></p>
-<dt><code>&#8211;tty</code><i> name</i></p>
-<dd> List records for tty <i>name.</i></p>
-<dt><code>&#8211;forwards</code></p>
-<dd> Read file forwards instead of backwards. This avoids trying to seek on the file and can be used to read from a pipe. This must be specified prior to any <code>-f</code> arguments.</p>
-<dt><code>-f</code><i> filename, </i><code>&#8211;file</code><i> filename</i></p>
-<dd> Read from the file <i>filename </i> instead of <i>acct.</i> A filename of &quot;-&quot; will result in reading from stdin. This must either be the first <code>-f</code> option, or <code>&#8211;forwards</code> must precede all <code>-f</code> options.</p>
-<dt><code>&#8211;ahz</code><i> hz</i></p>
-<dd> Use this flag to tell the program what <code>AHZ</code> should be (in hertz). This option is useful if you are trying to view an <i>acct</i> file created on another machine which has the same byte order and file format as your current machine, but has a different value for <code>AHZ.</code></p>
-<dt><code>-p, &#8211;show-paging</code></p>
-<dd> Print paging statistics.</p>
-<dt><code>&#8211;pid</code></p>
-<dd> Show PID and PPID of the process if acct version 3 format is supported by kernel.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Print verbose internal information.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print the version number of <code>lastcomm.</code></p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Prints the usage string and default locations of system files to standard output and exits. </p>
+<dt><code>&#8211;strict-match</code></dt>
+<dd> Print only entries that match *all* of the arguments on the command line.</dd>
+<dt><code>&#8211;print-controls </code></dt>
+<dd> Print control characters.</dd>
+<dt><code>&#8211;user</code><i> name</i></dt>
+<dd> List records for user with <i>name.</i> This is useful if you&#8217;re trying to match a username that happens to be the same as a command (e.g., <i>ed</i> ).</dd>
+<dt><code>&#8211;command</code><i> name</i></dt>
+<dd> List records for command <i>name.</i></dd>
+<dt><code>&#8211;tty</code><i> name</i></dt>
+<dd> List records for tty <i>name.</i></dd>
+<dt><code>&#8211;forwards</code></dt>
+<dd> Read file forwards instead of backwards. This avoids trying to seek on the file and can be used to read from a pipe. This must be specified prior to any <code>-f</code> arguments.</dd>
+<dt><code>-f</code><i> filename, </i><code>&#8211;file</code><i> filename</i></dt>
+<dd> Read from the file <i>filename </i> instead of <i>acct.</i> A filename of &quot;-&quot; will result in reading from stdin. This must either be the first <code>-f</code> option, or <code>&#8211;forwards</code> must precede all <code>-f</code> options.</dd>
+<dt><code>&#8211;ahz</code><i> hz</i></dt>
+<dd> Use this flag to tell the program what <code>AHZ</code> should be (in hertz). This option is useful if you are trying to view an <i>acct</i> file created on another machine which has the same byte order and file format as your current machine, but has a different value for <code>AHZ.</code></dd>
+<dt><code>-p, &#8211;show-paging</code></dt>
+<dd> Print paging statistics.</dd>
+<dt><code>&#8211;pid</code></dt>
+<dd> Show PID and PPID of the process if acct version 3 format is supported by kernel.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Print verbose internal information.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print the version number of <code>lastcomm.</code></dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Prints the usage string and default locations of system files to standard output and exits. </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>acct</i></p>
 <dl>
 <dt>
-<dd> The system wide process accounting file. See <code><a href="/docs/linux/man/5-acct/">acct</a></code>(5) (or <code>pacct</code>(5)) for further details. <i>/var/log/account</i></p>
+</dt><dd> The system wide process accounting file. See <code><a href="/docs/linux/man/5-acct/">acct</a></code>(5) (or <code>pacct</code>(5)) for further details. <i>/var/log/account</i></dd>
 <dl>
 <dt>
-<dd> This directory contains pacct files which contain the binary process accounting data as written by the kernel.</dl>
+</dt><dd> This directory contains pacct files which contain the binary process accounting data as written by the kernel.</dd></dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> The GNU accounting utilities were written by Noel Cragg &lt;noel [at] gnu.ai.mit.edu&gt;. The man page was adapted from the accounting texinfo page by Susan Kleinmann &lt;sgk [at] sgk.tiac.net&gt;.</p>

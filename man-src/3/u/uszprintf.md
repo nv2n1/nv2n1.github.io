@@ -10,7 +10,6 @@ description: "uszprintf – Writes formatted data into a buffer, specifying size
 <p>uszprintf &#8211; Writes formatted data into a buffer, specifying size. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uszprintf(char *buf, int size, const char *format, ...);</code></pre>
 <h2>Description</h2>
 <p>This function writes formatted data into the output buffer, whose length in bytes is specified by `size&#8217; and which is guaranteed to be NULL terminated. Example: </p>

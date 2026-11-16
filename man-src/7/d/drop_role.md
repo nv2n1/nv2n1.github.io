@@ -16,10 +16,10 @@ description: "DROP ROLE – remove a database role"
 <p> However, it is not necessary to remove role memberships involving the role; <code>DROP ROLE</code> automatically revokes any memberships of the target role in other roles, and of other roles in the target role. The other roles are not dropped nor otherwise affected.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the role does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name of the role to remove.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the role does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the role to remove.</dd></dl>
 <h2>Notes</h2>
 <p>PostgreSQL includes a program dropuser [<code><a href="/docs/linux/man/1-dropuser/">dropuser</a></code>(1)] that has the same functionality as this command (in fact, it calls this command) but can be run from the command shell.</p>
 <h2>Examples</h2>

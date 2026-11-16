@@ -16,20 +16,20 @@ description: "defncopy – extract procedures and views from a Microsoft server.
 <p> reads the text of a stored procedure or view, and writes a script suitable for recreating the procedure or view. For tables, it reads the output of sp_help and constructs a `CREATE&#8217; TABLE statement, complete with `CREATE&#8217; INDEX Ns , too. <i>owner</i> is optional if you or the database owner is the owner of the procedure/view being copied. <i>object_name</i> is the name of the system object you wish to extract.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-U </code><i>username</i></p>
-<dd> database server login name.</p>
-<dt><code>-P </code><i>password</i></p>
-<dd> database server password.</p>
-<dt><code>-S </code><i>server</i></p>
-<dd> database server to which to connect.</p>
-<dt><code>-D </code><i>database</i></p>
-<dd> database to use. Optional if the procedure/view being extracted is in your default database.</p>
-<dt><code>-i </code><i>input_file</i></p>
-<dd> a script to apply to the database. Not currently implemented.</p>
-<dt><code>-o </code><i>output_file</i></p>
-<dd> a file to hold the script, defaults to standard output.</p>
-<dt><code>-v</code></p>
-<dd> Show version information and copyright notice.</dl>
+<dt><code>-U </code><i>username</i></dt>
+<dd> database server login name.</dd>
+<dt><code>-P </code><i>password</i></dt>
+<dd> database server password.</dd>
+<dt><code>-S </code><i>server</i></dt>
+<dd> database server to which to connect.</dd>
+<dt><code>-D </code><i>database</i></dt>
+<dd> database to use. Optional if the procedure/view being extracted is in your default database.</dd>
+<dt><code>-i </code><i>input_file</i></dt>
+<dd> a script to apply to the database. Not currently implemented.</dd>
+<dt><code>-o </code><i>output_file</i></dt>
+<dd> a file to hold the script, defaults to standard output.</dd>
+<dt><code>-v</code></dt>
+<dd> Show version information and copyright notice.</dd></dl>
 <h2>NOTES</h2>
 <p> is a filter; it reads from standard input, writes to standard output, and writes errors to standard error. The &#8211;<code>i</code> &#8211;<code>o</code> and &#8211;<code>e</code> options override these defaults. </p>
 <p> makes use of the db-lib API provided by FreeTDS. This API is of course also available to application developers.</p>

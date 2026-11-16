@@ -17,12 +17,12 @@ description: "XmOptionButtonGadget — A RowColumn function that obtains the wid
 <p> When an application creates an instance of the OptionMenu widget, the widget creates two internal gadgets. One is a LabelGadget that is used to display RowColumn&#8217;s <code>XmNlabelString</code> resource. The other is a CascadeButtonGadget that displays the current selection and provides the means for posting the OptionMenu&#8217;s submenu. </p>
 <p> The user can specify resources in a resource file for the automatically created widgets and gadgets of an OptionMenu. The following list identifies the names of these widgets (or gadgets) and the associated OptionMenu areas.</p>
 <dl COMPACT>
-<dt>Option Menu Label Gadget</p>
-<dd><code>OptionLabel</code></p>
-<dt>Option Menu Cascade Button</p>
-<dd><code>OptionButton</code></p>
-<dt><i>option_menu</i></p>
-<dd>Specifies the OptionMenu widget ID</dl>
+<dt>Option Menu Label Gadget</dt>
+<dd><code>OptionLabel</code></dd>
+<dt>Option Menu Cascade Button</dt>
+<dd><code>OptionButton</code></dd>
+<dt><i>option_menu</i></dt>
+<dd>Specifies the OptionMenu widget ID</dd></dl>
 <p> For a complete definition of RowColumn and its associated resources, see <code><a href="/docs/linux/man/3-xmrowcolumn/">XmRowColumn</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the widget ID for the internal button.</p>

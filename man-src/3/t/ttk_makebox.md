@@ -42,29 +42,29 @@ int
 <code>Ttk_GetStickyFromObj</code>(Tcl_Interp *<i>interp</i>, Tcl_Obj *<i>objPtr</i>, int *<i>sticky_rtn</i>);</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Anchor <i>anchor</i> (in) One of the symbolic constants <code>TK_ANCHOR_N</code>, <code>TK_ANCHOR_NE</code>, etc. See <i><a href="/docs/linux/man/3-tk_getanchorfromobj/">Tk_GetAnchorFromObj</a>(3)</i>.</p>
-<dd>Ttk_Box * <i>cavity</i> (in/out) A rectangular region from which a parcel is allocated.</p>
-<dd>short <i>border</i> (in) Extra padding (in pixels) to add uniformly to each side of a region.</p>
-<dd>short <i>bottom</i> (in) Extra padding (in pixels) to add to the bottom of a region.</p>
-<dd>Ttk_Box <i>box</i> (in)</p>
-<dd>Ttk_Box * <i>box_rtn</i> (out) Specifies a rectangular region.</p>
-<dd>int <i>height</i> (in) The height in pixels of a region.</p>
-<dd>Tcl_Interp * <i>interp</i> (in) Used to store error messages.</p>
-<dd>int <i>left</i> (in) Extra padding (in pixels) to add to the left side of a region.</p>
-<dd>Tcl_Obj * <i>objPtr</i> (in) String value contains a symbolic name to be converted to an enumerated value or bitmask. Internal rep may be be modified to cache corresponding value.</p>
-<dd>Ttk_Padding <i>padding</i> (in)</p>
-<dd>Ttk_Padding * <i>padding_rtn</i> (out) Extra padding to add on the inside of a region.</p>
-<dd>Ttk_Box <i>parcel</i> (in) A rectangular region, allocated from a cavity.</p>
-<dd>int <i>relief</i> (in) One of the standard Tk relief options (TK_RELIEF_RAISED, TK_RELIEF_SUNKEN, etc.). See <code>Tk_GetReliefFromObj</code>.</p>
-<dd>short <i>right</i> (in) Extra padding (in pixles) to add to the right side of a region.</p>
-<dd>Ttk_Side <i>side</i> (in) One of <code>TTK_SIDE_LEFT</code>, <code>TTK_SIDE_TOP</code>, <code>TTK_SIDE_RIGHT</code>, or <code>TTK_SIDE_BOTTOM</code>.</p>
-<dd>unsigned <i>sticky</i> (in) A bitmask containing one or more of the bits <code>TTK_STICK_W</code> (west, or left), <code>TTK_STICK_E</code> (east, or right, <code>TTK_STICK_N</code> (north, or top), and <code>TTK_STICK_S</code> (south, or bottom). <code>TTK_FILL_X</code> is defined as a synonym for (TTK_STICK_W|TTK_STICK_E), <code>TTK_FILL_Y</code> is a synonym for (TTK_STICK_N|TTK_STICK_S), and <code>TTK_FILL_BOTH</code> and <code>TTK_STICK_ALL</code> are synonyms for (TTK_FILL_X|TTK_FILL_Y). See also: <i>grid(n)</i>.</p>
-<dd>Tk_Window <i>tkwin</i> (in) Window whose screen geometry determines the conversion between absolute units and pixels.</p>
-<dd>short <i>top</i> (in) Extra padding at the top of a region.</p>
-<dd>int <i>width</i> (in) The width in pixels of a region.</p>
-<dd>int <i>x</i> (in) X coordinate of upper-left corner of region.</p>
+<dd>Tk_Anchor <i>anchor</i> (in) One of the symbolic constants <code>TK_ANCHOR_N</code>, <code>TK_ANCHOR_NE</code>, etc. See <i><a href="/docs/linux/man/3-tk_getanchorfromobj/">Tk_GetAnchorFromObj</a>(3)</i>.</dd>
+<dd>Ttk_Box * <i>cavity</i> (in/out) A rectangular region from which a parcel is allocated.</dd>
+<dd>short <i>border</i> (in) Extra padding (in pixels) to add uniformly to each side of a region.</dd>
+<dd>short <i>bottom</i> (in) Extra padding (in pixels) to add to the bottom of a region.</dd>
+<dd>Ttk_Box <i>box</i> (in)</dd>
+<dd>Ttk_Box * <i>box_rtn</i> (out) Specifies a rectangular region.</dd>
+<dd>int <i>height</i> (in) The height in pixels of a region.</dd>
+<dd>Tcl_Interp * <i>interp</i> (in) Used to store error messages.</dd>
+<dd>int <i>left</i> (in) Extra padding (in pixels) to add to the left side of a region.</dd>
+<dd>Tcl_Obj * <i>objPtr</i> (in) String value contains a symbolic name to be converted to an enumerated value or bitmask. Internal rep may be be modified to cache corresponding value.</dd>
+<dd>Ttk_Padding <i>padding</i> (in)</dd>
+<dd>Ttk_Padding * <i>padding_rtn</i> (out) Extra padding to add on the inside of a region.</dd>
+<dd>Ttk_Box <i>parcel</i> (in) A rectangular region, allocated from a cavity.</dd>
+<dd>int <i>relief</i> (in) One of the standard Tk relief options (TK_RELIEF_RAISED, TK_RELIEF_SUNKEN, etc.). See <code>Tk_GetReliefFromObj</code>.</dd>
+<dd>short <i>right</i> (in) Extra padding (in pixles) to add to the right side of a region.</dd>
+<dd>Ttk_Side <i>side</i> (in) One of <code>TTK_SIDE_LEFT</code>, <code>TTK_SIDE_TOP</code>, <code>TTK_SIDE_RIGHT</code>, or <code>TTK_SIDE_BOTTOM</code>.</dd>
+<dd>unsigned <i>sticky</i> (in) A bitmask containing one or more of the bits <code>TTK_STICK_W</code> (west, or left), <code>TTK_STICK_E</code> (east, or right, <code>TTK_STICK_N</code> (north, or top), and <code>TTK_STICK_S</code> (south, or bottom). <code>TTK_FILL_X</code> is defined as a synonym for (TTK_STICK_W|TTK_STICK_E), <code>TTK_FILL_Y</code> is a synonym for (TTK_STICK_N|TTK_STICK_S), and <code>TTK_FILL_BOTH</code> and <code>TTK_STICK_ALL</code> are synonyms for (TTK_FILL_X|TTK_FILL_Y). See also: <i>grid(n)</i>.</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Window whose screen geometry determines the conversion between absolute units and pixels.</dd>
+<dd>short <i>top</i> (in) Extra padding at the top of a region.</dd>
+<dd>int <i>width</i> (in) The width in pixels of a region.</dd>
+<dd>int <i>x</i> (in) X coordinate of upper-left corner of region.</dd>
 <dd>int <i>y</i> (in) Y coordinate of upper-left corner of region.
-</dl>
+</dd></dl>
 <h2>Boxes</h2>
 <p>The <code>Ttk_Box</code> structure represents a rectangular region of a window:</p>
 <dl COMPACT>
@@ -75,7 +75,7 @@ int
  int <i>width</i>;
  int <i>height</i>;
 } <code>Ttk_Box</code>;</pre>
-</dl>
+</dd></dl>
 <p> All coordinates are relative to the window. </p>
 <p> <code>Ttk_MakeBox</code> is a convenience routine that contsructs a <code>Ttk_Box</code> structure representing a region <i>width</i> pixels wide, <i>height</i> pixels tall, at the specified <i>x, y</i> coordinates. </p>
 <p> <code>Ttk_PadBox</code> returns a new box located inside the specified <i>parcel</i>, shrunken according to the left, top, right, and bottom margins specified by <i>padding</i>. </p>
@@ -95,7 +95,7 @@ int
  short <i>right</i>;
  short <i>bottom</i>;
 } <code>Ttk_Padding</code>;</pre>
-</dl>
+</dd></dl>
 <p> <code>Ttk_MakePadding</code> is a convenience routine that contsructs a <code>Ttk_Padding</code> structure with the specified left, top, right, and bottom components. </p>
 <p> <code>Ttk_UniformPadding</code> constructs a <code>Ttk_Padding</code> structure with all components equal to the specified <i>border</i>. </p>
 <p> <code>Ttk_AddPadding</code> adds two <code>Ttk_Padding</code>s together and returns a combined padding containing the sum of the individual padding components. </p>

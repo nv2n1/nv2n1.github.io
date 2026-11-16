@@ -33,21 +33,21 @@ juniper;command;ShowVersion;show version</pre>
 <p>&lt;device_type&gt; is a lower case name used in the <i><a href="/docs/linux/man/5-router-db/">router.db</a>(5)</i> file. Its case is forced to lower case when reading the configuration files. </p>
 <p> Each &lt;device_type&gt; may have the following directives defined. The login and script directives are required.</p>
 <dl>
-<dt><code>command</code></p>
-<dd>Defines commands to run for the &lt;device_type&gt; and the function that will process the input.</p>
-<dt><code>inloop</code></p>
-<dd>Intended for <i><a href="/docs/linux/man/1-rancid/">rancid</a>(1),</i> <code>inloop</code> defines a function to loop over the input from the device.</p>
-<dt><code>login</code></p>
-<dd>Defines the login script used for the &lt;device_type&gt;, which does not need to be an FQPN, but then must be found in the path.</p>
-<dt><code>module</code></p>
-<dd>Loads a rancid perl module to supply functions used in the <code>command</code> directives for the &lt;device_type&gt;. Multiple module lines may exist for a device type, they are loaded in the order they appear.</p>
-<dt><code>script</code></p>
-<dd>Defines the rancid script used for the &lt;device_type&gt;, which does not need to be an FQPN, but then must be found in the path.</dl>
+<dt><code>command</code></dt>
+<dd>Defines commands to run for the &lt;device_type&gt; and the function that will process the input.</dd>
+<dt><code>inloop</code></dt>
+<dd>Intended for <i><a href="/docs/linux/man/1-rancid/">rancid</a>(1),</i> <code>inloop</code> defines a function to loop over the input from the device.</dd>
+<dt><code>login</code></dt>
+<dd>Defines the login script used for the &lt;device_type&gt;, which does not need to be an FQPN, but then must be found in the path.</dd>
+<dt><code>module</code></dt>
+<dd>Loads a rancid perl module to supply functions used in the <code>command</code> directives for the &lt;device_type&gt;. Multiple module lines may exist for a device type, they are loaded in the order they appear.</dd>
+<dt><code>script</code></dt>
+<dd>Defines the rancid script used for the &lt;device_type&gt;, which does not need to be an FQPN, but then must be found in the path.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/rancid/rancid.types.conf</code></p>
-<dd>Configuration file described here.</p>
-<dt><code>/etc/rancid/rancid.types.base</code></p>
-<dd>Configuration file described here.</dl>
+<dt><code>/etc/rancid/rancid.types.conf</code></dt>
+<dd>Configuration file described here.</dd>
+<dt><code>/etc/rancid/rancid.types.base</code></dt>
+<dd>Configuration file described here.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-control_rancid/">control_rancid</a></code>(1), <code><a href="/docs/linux/man/1-rancid/">rancid</a></code>(1), <code><a href="/docs/linux/man/1-rancid-run/">rancid-run</a></code>(1), <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5), <code><a href="/docs/linux/man/3-rancid/">rancid</a></code>(3) </p>

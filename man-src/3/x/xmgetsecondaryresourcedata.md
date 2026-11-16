@@ -19,10 +19,10 @@ description: "XmGetSecondaryResourceData — A function that provides access to 
 <p> The type <code>XmSecondaryResourceData</code> is a pointer to a structure with two members that are useful to an application: <i>resources</i>, of type <code>XtResourceList</code>, and <code>num_resources</code>, of type <code>Cardinal</code>. The <i>resources</i> member is a list of the widget resources that are not accessible using Xt functions. The <code>num_resources</code> member is the length of the <i>resources</i> list. </p>
 <p> If the return value is greater than 0 (zero), <code>XmGetSecondaryResourceData</code> allocates memory that the application must free. Use <code>XtFree</code> to free the resource list in each structure (the value of the <i>resources</i> member), the structures themselves, and the array of pointers to the structures (the array whose address is <i>secondary_data_return</i>).</p>
 <dl COMPACT>
-<dt><i>widget_class</i></p>
-<dd>Specifies the widget class for which secondary resource data is to be retrieved.</p>
-<dt><i>secondary_data_return</i></p>
-<dd>Specifies a pointer to an array of <code>XmSecondaryResourceData</code> pointers to be returned by this function. If the widget class has no secondary resource data, for example, if the value returned by the function is 0 (zero), the function returns no meaningful value for this argument.</dl>
+<dt><i>widget_class</i></dt>
+<dd>Specifies the widget class for which secondary resource data is to be retrieved.</dd>
+<dt><i>secondary_data_return</i></dt>
+<dd>Specifies a pointer to an array of <code>XmSecondaryResourceData</code> pointers to be returned by this function. If the widget class has no secondary resource data, for example, if the value returned by the function is 0 (zero), the function returns no meaningful value for this argument.</dd></dl>
 <h2>Return</h2>
 <p>Returns the number of secondary resource data structures associated with this widget class.</p>
 <h2>Example</h2>

@@ -26,12 +26,12 @@ description: "QuantLib::SobolBrownianGenerator – Sobol Brownian generator for 
 <h3>enum <code>Ordering</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>Factors </i></p>
-<dd>The variates with the best quality will be used for the evolution of the first factor.</p>
-<dt><i>Steps </i></p>
-<dd>The variates with the best quality will be used for the largest steps of all factors.</p>
-<dt><i>Diagonal </i></p>
-<dd>A diagonal schema will be used to assign the variates with the best quality to the most important factors and the largest steps. </p>
+<dt><i>Factors </i></dt>
+<dd>The variates with the best quality will be used for the evolution of the first factor.</dd>
+<dt><i>Steps </i></dt>
+<dd>The variates with the best quality will be used for the largest steps of all factors.</dd>
+<dt><i>Diagonal </i></dt>
+<dd>A diagonal schema will be used to assign the variates with the best quality to the most important factors and the largest steps. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

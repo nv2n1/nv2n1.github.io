@@ -17,12 +17,12 @@ description: "certmaster-sync — synchronize client certificates with Func."
 <p> The synchronization occurs by querying remote Func methods in <code>certmastermod</code> on the minion hosts. This will gather information, copy any new certificates, and remove any certificates that have been cleaned.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-f, &#8211;force</p>
-<dd> Override the configuration value for <code>sync_certs</code> in <i>/etc/certmaster/certmaster.conf</i></dl>
+<dt>-f, &#8211;force</dt>
+<dd> Override the configuration value for <code>sync_certs</code> in <i>/etc/certmaster/certmaster.conf</i></dd></dl>
 <h2>CONFIGURATION VALUES</h2>
 <dl>
-<dt>sync_certs</p>
-<dd> <code>sync_certs</code> determines whether or not the script will actually synchronize or if it will exit with no operation. You can use -f|&#8211;force to override this configuration value. (Default: False)</dl>
+<dt>sync_certs</dt>
+<dd> <code>sync_certs</code> determines whether or not the script will actually synchronize or if it will exit with no operation. You can use -f|&#8211;force to override this configuration value. (Default: False)</dd></dl>
 <h2>ADDITONAL RESOURCES</h2>
 <p> See <a rel="nofollow" href="https://fedorahosted.org/certmaster.">https://fedorahosted.org/certmaster.</a> It&#8217;s a Wiki. See also <a rel="nofollow" href="https://fedorahosted.org/func">https://fedorahosted.org/func</a></p>
 <h2>AUTHOR</h2>

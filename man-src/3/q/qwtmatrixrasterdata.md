@@ -43,106 +43,106 @@ description: "QwtMatrixRasterData –"
 <p>Resampling algorithm The default setting is NearestNeighbour;. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NearestNeighbour </i></p>
-<dd>Return the value from the matrix, that is nearest to the the requested position.</p>
-<dt><i>BilinearInterpolation </i></p>
-<dd>Interpolate the value from the distances and values of the 4 surrounding values in the matrix,</dl>
+<dt><i>NearestNeighbour </i></dt>
+<dd>Return the value from the matrix, that is nearest to the the requested position.</dd>
+<dt><i>BilinearInterpolation </i></dt>
+<dd>Interpolate the value from the distances and values of the 4 surrounding values in the matrix,</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtMatrixRasterData::numColumns () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of columns of the value matrix</dl>
+<dd>Number of columns of the value matrix</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>valueMatrix()</code>, <code>numRows()</code>, <code>setValueMatrix()</code></dl>
+<dd><code>valueMatrix()</code>, <code>numRows()</code>, <code>setValueMatrix()</code></dd></dl>
 <h3>int QwtMatrixRasterData::numRows () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of rows of the value matrix</dl>
+<dd>Number of rows of the value matrix</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>valueMatrix()</code>, <code>numColumns()</code>, <code>setValueMatrix()</code></dl>
+<dd><code>valueMatrix()</code>, <code>numColumns()</code>, <code>setValueMatrix()</code></dd></dl>
 <h3>QRectF QwtMatrixRasterData::pixelHint (const QRectF &amp;area) const [virtual]</h3>
 <p>Calculate the pixel hint. <code>pixelHint()</code> returns the geometry of a pixel, that can be used to calculate the resolution and alignment of the plot item, that is representing the data. </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>NearestNeighbour </p>
+<dt>&bull;</dt>
+<dd>NearestNeighbour </dd>
 <p>&nbsp;<wbr><code>pixelHint()</code>&nbsp;<wbr>returns the surrounding pixel of the top left value in the matrix.</p>
-<dt>&bull;</p>
-<dd>BilinearInterpolation </p>
+<dt>&bull;</dt>
+<dd>BilinearInterpolation </dd>
 <p>&nbsp;<wbr>Returns an empty rectangle recommending to render in target device&nbsp;<wbr>(&nbsp;<wbr>f.e. screen&nbsp;<wbr>)&nbsp;<wbr>resolution.</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>area</i> Requested area, ignored</dl>
+<dd><i>area</i> Requested area, ignored</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated hint</dl>
+<dd>Calculated hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>ResampleMode</code>, setMatrix(), <code>setInterval()</code></dl>
+<dd><code>ResampleMode</code>, setMatrix(), <code>setInterval()</code></dd></dl>
 <p> Reimplemented from <code>QwtRasterData</code>.</p>
 <h3><code>QwtMatrixRasterData::ResampleMode</code> QwtMatrixRasterData::resampleMode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>resampling algorithm</dl>
+<dd>resampling algorithm</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setResampleMode()</code>, <code>value()</code></dl>
+<dd><code>setResampleMode()</code>, <code>value()</code></dd></dl>
 <h3>void QwtMatrixRasterData::setInterval (Qt::Axisaxis, const <code>QwtInterval</code> &amp;interval) [virtual]</h3>
 <p>Assign the bounding interval for an axis. Setting the bounding intervals for the X/Y axis is mandatory to define the positions for the values of the value matrix. The interval in Z direction defines the possible range for the values in the matrix, what is f.e used by <code>QwtPlotSpectrogram</code> to map values to colors. The Z-interval might be the bounding interval of the values in the matrix, but usually it isn&#8217;t. ( f.e a interval of 0.0-100.0 for values in percentage ) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>axis</i> X, Y or Z axis<br />
- <i>interval</i> Interval</dl>
+ <i>interval</i> Interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtRasterData::interval()</code>, <code>setValueMatrix()</code></dl>
+<dd><code>QwtRasterData::interval()</code>, <code>setValueMatrix()</code></dd></dl>
 <p> Reimplemented from <code>QwtRasterData</code>.</p>
 <h3>void QwtMatrixRasterData::setResampleMode (<code>ResampleMode</code>mode)</h3>
 <p>Set the resampling algorithm. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Resampling mode</dl>
+<dd><i>mode</i> Resampling mode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>resampleMode()</code>, <code>value()</code></dl>
+<dd><code>resampleMode()</code>, <code>value()</code></dd></dl>
 <h3>void QwtMatrixRasterData::setValue (introw, intcol, doublevalue)</h3>
 <p>Change a single value in the matrix. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>row</i> Row index<br />
  <i>col</i> Column index<br />
- <i>value</i> New value</dl>
+ <i>value</i> New value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>value()</code>, <code>setValueMatrix()</code></dl>
+<dd><code>value()</code>, <code>setValueMatrix()</code></dd></dl>
 <h3>void QwtMatrixRasterData::setValueMatrix (const QVector&lt; double &gt; &amp;values, intnumColumns)</h3>
 <p>Assign a value matrix. The positions of the values are calculated by dividing the bounding rectangle of the X/Y intervals into equidistant rectangles ( pixels ). Each value corresponds to the center of a pixel. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>values</i> Vector of values<br />
- <i>numColumns</i> Number of columns</dl>
+ <i>numColumns</i> Number of columns</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>valueMatrix()</code>, <code>numColumns()</code>, <code>numRows()</code>, <code>setInterval()</code>()</dl>
+<dd><code>valueMatrix()</code>, <code>numColumns()</code>, <code>numRows()</code>, <code>setInterval()</code>()</dd></dl>
 <h3>double QwtMatrixRasterData::value (doublex, doubley) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the value at a raster position</dl>
+<dd>the value at a raster position</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> X value in plot coordinates<br />
- <i>y</i> Y value in plot coordinates</dl>
+ <i>y</i> Y value in plot coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>ResampleMode</code></dl>
+<dd><code>ResampleMode</code></dd></dl>
 <p> Implements <code>QwtRasterData</code>.</p>
 <h3>const QVector&lt; double &gt; QwtMatrixRasterData::valueMatrix () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value matrix</dl>
+<dd>Value matrix</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setValueMatrix()</code>, <code>numColumns()</code>, <code>numRows()</code>, <code>setInterval()</code></dl>
+<dd><code>setValueMatrix()</code>, <code>numColumns()</code>, <code>numRows()</code>, <code>setInterval()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

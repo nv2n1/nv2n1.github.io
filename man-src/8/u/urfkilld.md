@@ -10,14 +10,14 @@ description: "urfkilld – urfkill Daemon"
 <p>urfkilld &#8211; urfkill Daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>urfkilld</code> [<code>&#8211;help</code>]</dl>
+<dt> <code>urfkilld</code> [<code>&#8211;help</code>]</dt></dl>
 <h2>Description</h2>
 <p><i>urfkilld</i></p>
-<dd>provides the <i>org.freedesktop.URfkill</i> service on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application calls into the <i>org.freedesktop.URfkill</i> service.</p>
+<dd>provides the <i>org.freedesktop.URfkill</i> service on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application calls into the <i>org.freedesktop.URfkill</i> service.</dd>
 <h2>Options</h2>
 <p><code>&#8211;help</code></p>
 <dl>
-<dd>Show help options.</dl>
+<dd>Show help options.</dd></dl>
 <h2>Author</h2>
 <p>Written by Gary Ching-Pang Lin &lt;glin [at] novell.com&gt; with a lot of help from many others.</p>
 <h2>Bugs</h2>

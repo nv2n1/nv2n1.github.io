@@ -14,8 +14,8 @@ description: "dvd+rw-booktype – format DVD+-RW/-RAM disk with a logical format
 <p>The <code>dvd+rw-booktype</code> command formats dvd disk in the specified dvd drive (e.g. <i>/dev/dvd</i>) with a specified logical format. <code>You can&#8217;t expect this utility to work with all recorders.</code> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-dvd-rom</code></p>
-<dd>This is useful for addressing <code>DVD-ROM compatibility,</code> or playability in legacy units. </p>
+<dt><code>-dvd-rom</code></dt>
+<dd>This is useful for addressing <code>DVD-ROM compatibility,</code> or playability in legacy units. </dd>
 </dl>
 <h2>See Also</h2>
 <p>Most up-to-date information on dvd+rw-tools is available at <a rel="nofollow" href="http://fy.chalmers.se/~appro/linux/DVD+RW/.">http://fy.chalmers.se/~appro/linux/DVD+RW/.</a> </p>

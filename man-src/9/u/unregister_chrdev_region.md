@@ -15,11 +15,11 @@ unregister_chrdev_region - unregister a range of device numbers
 <h2>Arguments</h2>
 
 <i>from</i>
-<dl><dd><dd>the first in the range of numbers to unregister</dl>
+<dl><dd></dd><dd>the first in the range of numbers to unregister</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the number of device numbers to unregister</dl>
+<dl><dd>the number of device numbers to unregister</dd></dl>
 
 <h2>Description</h2>
 

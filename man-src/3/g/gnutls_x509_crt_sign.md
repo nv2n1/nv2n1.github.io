@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_sign – API function"
 <p> <code>int gnutls_x509_crt_sign(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_crt_t </code><i>issuer</i><code>, gnutls_x509_privkey_t </code><i>issuer_key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> a certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>gnutls_x509_crt_t issuer</p>
-<dd> is the certificate of the certificate issuer</p>
-<dt>gnutls_x509_privkey_t issuer_key</p>
-<dd> holds the issuer&#8217;s private key</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>gnutls_x509_crt_t issuer</dt>
+<dd> is the certificate of the certificate issuer</dd>
+<dt>gnutls_x509_privkey_t issuer_key</dt>
+<dd> holds the issuer&#8217;s private key</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is the same a <code>gnutls_x509_crt_sign2()</code> with no flags, and SHA1 as the hash algorithm.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_crt_sign – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

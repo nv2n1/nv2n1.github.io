@@ -13,23 +13,23 @@ MAPUSR - Called by EZMAP routines that draw the various parts of the map. The de
 (input expression, of type INTEGER), if positive, says that a
 particular part of the map is about to be drawn, as follows:</code></pre>
 <dl COMPACT><dt>IPRT
-<dd>Part of map about to be drawn
-<dt>1
-<dd>Perimeter.
-<dt>2
-<dd>Grid.
-<dt>3
-<dd>Labels.
-<dt>4
-<dd>Limb lines.
-<dt>5
-<dd>Continental outlines.
-<dt>6
-<dd>U.S. state outlines.
-<dt>7
-<dd>International outlines.</dl></dl><dd>If IPRT is negative, then the drawing of the last part is complete. The absolute value of IPRT will be one of the above values. Changed quantities should be restored.</dl><h2>Usage</h2>EZMAP executes the statement 
+</dt><dd>Part of map about to be drawn
+</dd><dt>1
+</dt><dd>Perimeter.
+</dd><dt>2
+</dt><dd>Grid.
+</dd><dt>3
+</dt><dd>Labels.
+</dd><dt>4
+</dt><dd>Limb lines.
+</dd><dt>5
+</dt><dd>Continental outlines.
+</dd><dt>6
+</dt><dd>U.S. state outlines.
+</dd><dt>7
+</dt><dd>International outlines.</dd></dl></dl><dd>If IPRT is negative, then the drawing of the last part is complete. The absolute value of IPRT will be one of the above values. Changed quantities should be restored.</dd></dl><h2>Usage</h2>EZMAP executes the statement 
 
-<dl COMPACT><dd>CALL MAPUSR (IPRT)</dl>
+<dl COMPACT><dd>CALL MAPUSR (IPRT)</dd></dl>
  
 
  just before and just after each portion of a map is drawn. The default version of MAPUSR does nothing. 

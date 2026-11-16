@@ -19,24 +19,24 @@ description: "xfce4-session – Starts up the Xfce Desktop Environment"
 <h2>OPTIONS</h2>
 <p> <code>xfce4-session</code> takes the following command line options:</p>
 <dl>
-<dt><code>&#8211;disable-tcp</code></p>
-<dd> Disable binding to TCP ports in the ICE layer. This is not possible on every platform. If you use this option on a platform that does not support it, <code>xfce4-session</code> will print a warning message and ignore the setting.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a help screen and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit. </p>
+<dt><code>&#8211;disable-tcp</code></dt>
+<dd> Disable binding to TCP ports in the ICE layer. This is not possible on every platform. If you use this option on a platform that does not support it, <code>xfce4-session</code> will print a warning message and ignore the setting.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a help screen and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>xfce4-session</code>&#8216;s behaviour is affected by the following environment variables. </p>
 <dl>
-<dt><code>XDG_CONFIG_HOME</code></p>
-<dd> Specifies the root for all user-specific configuration files. If this environment variable is unset, it defaults to <i>~/.config/</i></p>
-<dt><code>XDG_CONFIG_DIRS</code></p>
-<dd> Set of preference ordered base directories relative to which configuration files should be searched in addition to the <code>$XDG_CONFIG_HOME</code> base directory. The directories should be separated with a colon.</p>
-<dt><code>XDG_CACHE_HOME</code></p>
-<dd> Specifies the root for all user-specific cache data. If this environment variable is unset, it defaults to <i>~/.cache/</i></p>
-<dt><code>XFSM_VERBOSE</code></p>
-<dd> When defined, this environment variable enables debugging messages to be saved to <i>~/.xfce4-session.verbose-log</i> The log file from the last session run with this environment variable set is retained at <i>~/.xfce4-session.verbose-log.last</i> These debugging messages are useful for troubleshooting and development. </p>
+<dt><code>XDG_CONFIG_HOME</code></dt>
+<dd> Specifies the root for all user-specific configuration files. If this environment variable is unset, it defaults to <i>~/.config/</i></dd>
+<dt><code>XDG_CONFIG_DIRS</code></dt>
+<dd> Set of preference ordered base directories relative to which configuration files should be searched in addition to the <code>$XDG_CONFIG_HOME</code> base directory. The directories should be separated with a colon.</dd>
+<dt><code>XDG_CACHE_HOME</code></dt>
+<dd> Specifies the root for all user-specific cache data. If this environment variable is unset, it defaults to <i>~/.cache/</i></dd>
+<dt><code>XFSM_VERBOSE</code></dt>
+<dd> When defined, this environment variable enables debugging messages to be saved to <i>~/.xfce4-session.verbose-log</i> The log file from the last session run with this environment variable set is retained at <i>~/.xfce4-session.verbose-log.last</i> These debugging messages are useful for troubleshooting and development. </dd>
 </dl>
 <h2>FILES</h2>
 <p> <code>xfce4-session</code> reads its configuration from Xfconf. <code>xfce4-session</code> stores its session data into <i>$XDG_CACHE_HOME/sessions/</i>. </p>

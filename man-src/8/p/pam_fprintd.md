@@ -14,14 +14,14 @@ description: "pam_fprintd – PAM module to authenticate against fprintd, the fi
 <p>The pam_fprintd module is used to verify a user&#8217;s fingerprints against fingerprints enrolled using fprintd, the fingerprint management daemon.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>debug</code></p>
+<dt><code>debug</code></dt>
 <dd>
-<dt><code>debug=[</code>on<code>|</code>off<code>|</code>true<code>|</code>false<code>|</code>1<code>|</code>0<code>]</code></p>
-<dd>Whether debug should be turned on or off. Debug messages will be generated using pam_syslog which means that they will be saved in the systemd journal by default.</p>
-<dt><code>max-tries=</code><font SIZE="-1">MAX_TRIES</font></p>
-<dd>The number of attempts at fingerprint authentication to try before returning an authentication failure. The minimum, and default, number of tries is 3.</p>
-<dt><code>timeout=</code><font SIZE="-1">TIMEOUT</font></p>
-<dd>The amount of time before returning an authentication failure. The default timeout is 30 seconds, with 10 seconds being the minimum.</dl>
+</dd><dt><code>debug=[</code>on<code>|</code>off<code>|</code>true<code>|</code>false<code>|</code>1<code>|</code>0<code>]</code></dt>
+<dd>Whether debug should be turned on or off. Debug messages will be generated using pam_syslog which means that they will be saved in the systemd journal by default.</dd>
+<dt><code>max-tries=</code><font SIZE="-1">MAX_TRIES</font></dt>
+<dd>The number of attempts at fingerprint authentication to try before returning an authentication failure. The minimum, and default, number of tries is 3.</dd>
+<dt><code>timeout=</code><font SIZE="-1">TIMEOUT</font></dt>
+<dd>The amount of time before returning an authentication failure. The default timeout is 30 seconds, with 10 seconds being the minimum.</dd></dl>
 <h2>Limitations</h2>
 <p>The <font SIZE="-1">PAM</font> stack is by design a serialised authentication, so it is not possible for pam_fprintd to allow authentication through passwords and fingerprints at the same time. </p>
 <p> It is up to the application using the <font SIZE="-1">PAM</font> services to implement separate <font SIZE="-1">PAM</font> processes and run separate authentication stacks separately. This is the way multiple authentication methods are made available to users of gdm for example.</p>
@@ -29,5 +29,6 @@ description: "pam_fprintd – PAM module to authenticate against fprintd, the fi
 <p><code>fprintd</code> was written by Bastien Nocera.</p>
 <h2>See Also</h2>
 <dl>
-<dt><code>fprintd</code>, <font SIZE="-1"><code>PAM</code></font></p>
+<dt><code>fprintd</code>, <font SIZE="-1"><code>PAM</code></font></dt>
 <dd>
+</dd></dl>

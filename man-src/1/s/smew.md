@@ -18,9 +18,9 @@ description: "smew – search related messages from Mew’s database file"
 <p> <i>mydir</i> is a directory part of the message in the database. Note that messages are contained as a relative path from &quot;~/Mail&quot;. If multiple messages are found by <i>myid</i> , the first found one is preferred. However, the message whose directory is <i>mydir</i> is preferred to the first one. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Search a parent message only.</p>
-<dt><code>-p</code></p>
-<dd> Search a child message only. </p>
+<dt><code>-c</code></dt>
+<dd> Search a parent message only.</dd>
+<dt><code>-p</code></dt>
+<dd> Search a child message only. </dd>
 </dl>
 <h2>Index</h2>

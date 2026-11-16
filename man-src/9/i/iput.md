@@ -14,7 +14,7 @@ description: "iput – put an inode"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>inode to put</dl>
+</dd><dd>inode to put</dd></dl>
 <h2>Description</h2>
 <p>Puts an inode, dropping its usage count. If the inode use count hits zero, the inode is then freed and may also be destroyed. </p>
 <p> Consequently, <code>iput</code> can sleep.</p>

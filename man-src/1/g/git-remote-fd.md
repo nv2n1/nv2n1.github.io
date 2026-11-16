@@ -20,24 +20,24 @@ description: "git-remote-fd – Reflect smart transport stream back to caller"
 <p> GIT_TRANSLOOP_DEBUG</p>
 <dl>
 <dt>
-<dd> If set, prints debugging information about various reads/writes.</dl>
+</dt><dd> If set, prints debugging information about various reads/writes.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>git fetch fd::17 master</code></p>
 <dl>
 <dt>
-<dd> Fetch master, using file descriptor #17 to communicate with git-upload-pack.</dl>
+</dt><dd> Fetch master, using file descriptor #17 to communicate with git-upload-pack.</dd></dl>
 <p> <code>git fetch fd::17/foo master</code></p>
 <dl>
 <dt>
-<dd> Same as above.</dl>
+</dt><dd> Same as above.</dd></dl>
 <p> <code>git push fd::7,8 master (as URL)</code></p>
 <dl>
 <dt>
-<dd> Push master, using file descriptor #7 to read data from git-receive-pack and file descriptor #8 to write data to same service.</dl>
+</dt><dd> Push master, using file descriptor #7 to read data from git-receive-pack and file descriptor #8 to write data to same service.</dd></dl>
 <p> <code>git push fd::7,8/bar master</code></p>
 <dl>
 <dt>
-<dd> Same as above.</dl>
+</dt><dd> Same as above.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-gitremote-helpers/">gitremote-helpers</a></code>(7)</p>
 <h2>GIT</h2>

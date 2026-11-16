@@ -21,35 +21,35 @@ description: "update-fonts-alias – compile fonts.alias files"
 <h2>Operands</h2>
 <p><code>update-fonts-alias</code> takes one or more X font directory names to operate on as operands. Only the final path component of the directory name should be specified; e.g.,</p>
 <dl>
-<dd><code>update-fonts-alias 75dpi</code></dl>
+<dd><code>update-fonts-alias 75dpi</code></dd></dl>
 <p> is correct, while &#8216;<code>update-fonts-alias /usr/X11R6/lib/X11/fonts/75dpi</code>&#8216; and &#8216;<code>update-fonts-alias /usr/lib/X11/fonts/75dpi</code>&#8216; are not.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>COLUMNS</code></p>
-<dd>indicates the width of the terminal device in character cells. This value is used for formatting diagnostic messages. If not set, the terminal is queried using <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1) to determine its width. If that fails, a value of &#8217;80&#8217; is assumed.</dl>
+<dt><code>COLUMNS</code></dt>
+<dd>indicates the width of the terminal device in character cells. This value is used for formatting diagnostic messages. If not set, the terminal is queried using <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1) to determine its width. If that fails, a value of &#8217;80&#8217; is assumed.</dd></dl>
 <h2>Diagnostics</h2>
 <h3>Errors</h3>
 <dl>
-<dt><code>usage error: one or more font directories must be provided</code></p>
-<dd><code>update-fonts-alias</code> was invoked without operands. Supply one or more X font directory names to operate on.</p>
-<dt><code>usage error: unrecognized option</code></p>
-<dd><code>update-fonts-alias</code> was invoked with an unrecognized option argument. Use only the options documented in &#8220;OPTIONS&#8221;, above.</p>
-<dt><code>fatal error: path to X font directory must be used</code></p>
-<dd>A directory name was supplied that was not an X font directory name. Supply X font directory names only.</dl>
+<dt><code>usage error: one or more font directories must be provided</code></dt>
+<dd><code>update-fonts-alias</code> was invoked without operands. Supply one or more X font directory names to operate on.</dd>
+<dt><code>usage error: unrecognized option</code></dt>
+<dd><code>update-fonts-alias</code> was invoked with an unrecognized option argument. Use only the options documented in &#8220;OPTIONS&#8221;, above.</dd>
+<dt><code>fatal error: path to X font directory must be used</code></dt>
+<dd>A directory name was supplied that was not an X font directory name. Supply X font directory names only.</dd></dl>
 <h3>Warnings</h3>
 <dl>
-<dt><code>warning: absolute path </code><i>directory</i><code> was provided</code></p>
-<dd>Usage of absolute paths is deprecated. Use only the final component of the X font directory name for <i>directory</i>.</p>
-<dt><code>warning: </code><i>directory</i><code> does not exist or is not a directory</code></p>
-<dd>The supplied <i>directory</i> was invalid. <code>update-fonts-alias</code> skipped it.</dl>
+<dt><code>warning: absolute path </code><i>directory</i><code> was provided</code></dt>
+<dd>Usage of absolute paths is deprecated. Use only the final component of the X font directory name for <i>directory</i>.</dd>
+<dt><code>warning: </code><i>directory</i><code> does not exist or is not a directory</code></dt>
+<dd>The supplied <i>directory</i> was invalid. <code>update-fonts-alias</code> skipped it.</dd></dl>
 <h2>Exit Status</h2>
 <dl>
-<dt>0</p>
-<dd><code>update-fonts-alias</code> ran successfully.</p>
-<dt>1</p>
-<dd><code>update-fonts-alias</code> experienced a fatal error; see the section on diagnostic messages above.</p>
-<dt>2</p>
-<dd><code>update-fonts-alias</code> was invoked with invalid arguments.</dl>
+<dt>0</dt>
+<dd><code>update-fonts-alias</code> ran successfully.</dd>
+<dt>1</dt>
+<dd><code>update-fonts-alias</code> experienced a fatal error; see the section on diagnostic messages above.</dd>
+<dt>2</dt>
+<dd><code>update-fonts-alias</code> was invoked with invalid arguments.</dd></dl>
 <h2>Bugs</h2>
 <p>See the Debian Bug Tracking System &lt;URL: <a rel="nofollow" href="https://bugs.debian.org/xfonts-utils">https://bugs.debian.org/xfonts-utils</a> &gt;. If you wish to report a bug in <code>update-fonts-alias</code>, please see <i>/usr/share/doc/debian/bug-reporting.txt</i> or the <code>reportbug</code>(1) command.</p>
 <h2>Author</h2>

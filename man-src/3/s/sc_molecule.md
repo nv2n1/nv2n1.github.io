@@ -11,449 +11,144 @@ description: "sc::Molecule –"
 <p> The <code>Molecule</code> class contains information about molecules.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;molecule.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>Molecule (const Molecule &amp;)
-
-
-
 Molecule (StateIn &amp;)
-
-
-
 Molecule (const Ref&lt; KeyVal &gt; &amp;input)
-
-
 The Molecule KeyVal constructor is used to generate a Molecule object from the input.
-
-
 Molecule &amp; operator= (const Molecule &amp;)
-
-
-
 void add_atom (int Z, double x, double y, double z, const char *=0, double mass=0.0, int have_charge=0, double charge=0.0)
-
-
 Add an AtomicCenter to the Molecule.
-
-
 virtual void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print information about the molecule.
-
-
 virtual void print_parsedkeyval (std::ostream &amp;=ExEnv::out0(), int print_pg=1, int print_unit=1, int number_atoms=1) const
-
-
-
 int natom () const
-
-
 Returns the number of atoms in the molcule.
-
-
 int Z (int atom) const
-
-
-
 double &amp; r (int atom, int xyz)
-
-
-
 const double &amp; r (int atom, int xyz) const
-
-
-
 double * r (int atom)
-
-
-
 const double * r (int atom) const
-
-
-
 double mass (int atom) const
-
-
-
 const char * label (int atom) const
-
-
 Returns the label explicitly assigned to atom.
-
-
 int atom_at_position (double *, double tol=0.05) const
-
-
 Takes an (x, y, z) postion and finds an atom within the given tolerance distance.
-
-
 int atom_label_to_index (const char *label) const
-
-
 Returns the index of the atom with the given label.
-
-
 double * charges () const
-
-
 Returns a double* containing the nuclear charges of the atoms.
-
-
 double charge (int iatom) const
-
-
 Return the charge of the atom.
-
-
 double nuclear_charge () const
-
-
 Returns the total nuclear charge.
-
-
 void set_point_group (const Ref&lt; PointGroup &gt; &amp;, double tol=1.0e-7)
-
-
 Sets the PointGroup of the molecule.
-
-
 Ref&lt; PointGroup &gt; point_group () const
-
-
 Returns the PointGroup of the molecule.
-
-
 Ref&lt; PointGroup &gt; highest_point_group (double tol=1.0e-8) const
-
-
 Find this molecules true point group (limited to abelian groups).
-
-
 int is_axis (SCVector3 &amp;origin, SCVector3 &amp;udirection, int order, double tol=1.0e-8) const
-
-
 Return 1 if this given axis is a symmetry element for the molecule.
-
-
 int is_plane (SCVector3 &amp;origin, SCVector3 &amp;uperp, double tol=1.0e-8) const
-
-
 Return 1 if the given plane is a symmetry element for the molecule.
-
-
 int has_inversion (SCVector3 &amp;origin, double tol=1.0e-8) const
-
-
 Return 1 if the molecule has an inversion center.
-
-
 int is_linear (double tolerance=1.0e-5) const
-
-
 Returns 1 if the molecule is linear, 0 otherwise.
-
-
 int is_planar (double tolerance=1.0e-5) const
-
-
 Returns 1 if the molecule is planar, 0 otherwise.
-
-
 void is_linear_planar (int &amp;linear, int &amp;planar, double tol=1.0e-5) const
-
-
 Sets linear to 1 if the molecular is linear, 0 otherwise.
-
-
 SCVector3 center_of_mass () const
-
-
 Returns a SCVector3 containing the cartesian coordinates of the center of mass for the molecule.
-
-
 double nuclear_repulsion_energy ()
-
-
 Returns the nuclear repulsion energy for the molecule.
-
-
 void nuclear_repulsion_1der (int center, double xyz[3])
-
-
 Compute the nuclear repulsion energy first derivative with respect to the given center.
-
-
 void nuclear_efield (const double *position, double *efield)
-
-
 Compute the electric field due to the nuclei at the given point.
-
-
 void nuclear_charge_efield (const double *charges, const double *position, double *efield)
-
-
 Compute the electric field due to the given charges at the positions of the nuclei at the given point.
-
-
 void symmetrize (double tol=0.5)
-
-
 If the molecule contains only symmetry unique atoms, this function will generate the other, redundant atoms.
-
-
 void symmetrize (const Ref&lt; PointGroup &gt; &amp;pg, double tol=0.5)
-
-
 Set the point group and then symmetrize.
-
-
 void cleanup_molecule (double tol=0.1)
-
-
 This will try to carefully correct symmetry errors in molecules.
-
-
 void translate (const double *r)
-
-
-
 void move_to_com ()
-
-
-
 void transform_to_principal_axes (int trans_frame=1)
-
-
-
 void transform_to_symmetry_frame ()
-
-
-
 void print_pdb (std::ostream &amp;=ExEnv::out0(), char *title=0) const
-
-
-
 void read_pdb (const char *filename)
-
-
-
 void principal_moments_of_inertia (double *evals, double **evecs=0) const
-
-
 Compute the principal moments of inertia and, possibly, the principal axes.
-
-
 int nunique () const
-
-
 Return information about symmetry unique and equivalent atoms.
-
-
 int unique (int iuniq) const
-
-
 Returns the overall number of the iuniq'th unique atom.
-
-
 int nequivalent (int iuniq) const
-
-
 Returns the number of atoms equivalent to iuniq.
-
-
 int equivalent (int iuniq, int j) const
-
-
 Returns the j'th atom equivalent to iuniq.
-
-
 int atom_to_unique (int iatom) const
-
-
 Converts an atom number to the number of its generating unique atom.
-
-
 int atom_to_unique_offset (int iatom) const
-
-
 Converts an atom number to the offset of this atom in the list of generated atoms.
-
-
 int n_core_electrons ()
-
-
 Return the number of core electrons.
-
-
 int max_z ()
-
-
 Return the maximum atomic number.
-
-
 Ref&lt; AtomInfo &gt; atominfo () const
-
-
 Return the molecule's AtomInfo object.
-
-
 std::string atom_name (int iatom) const
-
-
 Returns the element name of the atom.
-
-
 std::string atom_symbol (int iatom) const
-
-
 Returns the element symbol of the atom.
-
-
 void set_include_q (bool iq)
-
-
 If include_q is true, then include the 'Q' atoms in the charge and efield routines.
-
-
 bool include_q () const
-
-
 Returns include_q. See set_include_q.
-
-
 void set_include_qq (bool iqq)
-
-
 If include_qq is true, include the coupling between pairs of 'Q' atoms when computing nuclear repulsion energy and gradients.
-
-
 bool include_qq () const
-
-
 Returns include_qq. See set_include_qq.
-
-
 int n_q_atom () const
-
-
 Retrieve the number of 'Q' atoms.
-
-
 int q_atom (int i) const
-
-
 Retrieve the 'Q' atoms.
-
-
 int n_non_q_atom () const
-
-
 Retrieve the number of non-'Q' atoms.
-
-
 int non_q_atom (int i) const
-
-
 Retrieve the of non-'Q' atoms.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
-
 Protected Member Functions
 void init_symmetry_info (double tol=0.5)
-
-
-
 void clear_symmetry_info ()
-
-
-
 void clear ()
-
-
-
 void throw_if_atom_duplicated (int begin=0, double tol=1e-3)
-
-
-
 Protected Attributes
 int natoms_
-
-
-
 Ref&lt; AtomInfo &gt; atominfo_
-
-
-
 Ref&lt; PointGroup &gt; pg_
-
-
-
 Ref&lt; Units &gt; geometry_units_
-
-
-
 double ** r_
-
-
-
 int * Z_
-
-
-
 double * charges_
-
-
-
 int nuniq_
-
-
-
 int * nequiv_
-
-
-
 int ** equiv_
-
-
-
 int * atom_to_uniq_
-
-
-
 double * mass_
-
-
-
 char ** labels_
-
-
-
 int q_Z_
-
-
-
 bool include_q_
-
-
-
 bool include_qq_
-
-
-
 std::vector&lt; int &gt; q_atoms_
-
-
-
 std::vector&lt; int &gt; non_q_atoms_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>Molecule</code> class contains information about molecules. </p>

@@ -10,29 +10,27 @@ description: "xcb_x_print_print_put_document_data –"
 <p>xcb_x_print_print_put_document_data &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xprint.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_x_print_print_put_document_data(xcb_connection_t *conn, xcb_drawable_t drawable, uint32_t len_data, uint16_t len_fmt, uint16_t len_options, const uint8_t *data, const xcb_x_print_string8_t *doc_format, const xcb_x_print_string8_t *options);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>len_data</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>len_fmt</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>len_options</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>data</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>doc_format</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>options</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>len_data</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>len_fmt</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>len_options</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>data</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>doc_format</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>options</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

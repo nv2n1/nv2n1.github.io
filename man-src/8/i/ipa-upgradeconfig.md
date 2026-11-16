@@ -17,10 +17,10 @@ description: "ipa-upgradeconfig – Upgrade the IPA Apache configuration"
 <p> This is not intended to be run by an end-user. It is executed when the IPA rpms are upgraded. This must be run as the root user.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Enable debug logging when more verbose output is needed</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Output only errors</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Enable debug logging when more verbose output is needed</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Output only errors</dd></dl>
 <h2>Exit Status</h2>
 <p>0 if the update was successful or there was nothing to do </p>
 <p> 1 if an error occurred</p>

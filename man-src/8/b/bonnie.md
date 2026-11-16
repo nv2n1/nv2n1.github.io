@@ -15,44 +15,44 @@ description: "bonnie++ – program to test hard drive performance."
 <h2>Options</h2>
 <p>For Bonnie++ every option is of the form of a hyphen followed by a letter and then the next parameter contains the value.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>the directory to use for the tests.</p>
-<dt><code>-c</code></p>
-<dd>the level of concurrency (default 1). The number of copies of the test to be performed at the same time.</p>
-<dt><code>-s</code></p>
-<dd>the size of the file(s) for IO performance measures in megabytes. If the size is greater than 1G then multiple files will be used to store the data, and each file will be up to 1G in size. This parameter may include the chunk size seperated from the size by a colon. The chunk-size is measured in bytes and must be a power of two from 256 to 1048576, the default is 8192. NB You can specify the size in giga-bytes or the chunk-size in kilo-bytes if you add <code>g</code> or <code>k</code> to the end of the number respectively. </p>
+<dt><code>-d</code></dt>
+<dd>the directory to use for the tests.</dd>
+<dt><code>-c</code></dt>
+<dd>the level of concurrency (default 1). The number of copies of the test to be performed at the same time.</dd>
+<dt><code>-s</code></dt>
+<dd>the size of the file(s) for IO performance measures in megabytes. If the size is greater than 1G then multiple files will be used to store the data, and each file will be up to 1G in size. This parameter may include the chunk size seperated from the size by a colon. The chunk-size is measured in bytes and must be a power of two from 256 to 1048576, the default is 8192. NB You can specify the size in giga-bytes or the chunk-size in kilo-bytes if you add <code>g</code> or <code>k</code> to the end of the number respectively. </dd>
 <p> If the specified size is 0 then this test will be skipped.</p>
-<dt><code>-n</code></p>
-<dd>the number of files for the file creation test. This is measured in multiples of 1024 files. This is because no-one will want to test less than 1024 files, and we need the extra space on braille displays. </p>
+<dt><code>-n</code></dt>
+<dd>the number of files for the file creation test. This is measured in multiples of 1024 files. This is because no-one will want to test less than 1024 files, and we need the extra space on braille displays. </dd>
 <p> If the specified number is 0 then this test will be skipped. </p>
 <p> The default for this test is to test with 0 byte files. To use files of other sizes you can specify <code>number:max:min:num-directories:chunk-size</code> where <code>max</code> is the maximum size and <code>min</code> is the minimum size (both default to 0 if not specified). If minimum and maximum sizes are specified then every file will have a random size from the range <code>min..max</code> inclusive. If you specify a number of directories then the files will be evenly distributed amoung that many sub-directories. </p>
 <p> If <code>max</code> is <code>-1</code> then hard links will be created instead of files. If <code>max</code> is <code>-2</code> then soft links will be created instead of files. </p>
-<dt><code>-m</code></p>
-<dd>name of the machine &#8211; for display purposes only. </p>
-<dt><code>-r</code></p>
-<dd>RAM size in megabytes. If you specify this the other parameters will be checked to ensure they make sense for a machine of that much RAM. You should not need to do this in general use as it should be able to discover the RAM size. NB If you specify a size of 0 then all checks will be disabled&#8230; </p>
-<dt><code>-x</code></p>
-<dd>number of test runs. This is useful if you want to perform more than one test. It will dump output continuously in CSV format until either the number of tests have been completed, or it is killed. </p>
-<dt><code>-u</code></p>
-<dd>user-id to use. When running as root specify the UID to use for the tests. It is not recommended to use root (since the occasion when a Bonnie++ bug wiped out someone&#8217;s system), so if you really want to run as root then use <code>-u root.</code> Also if you want to specify the group to run as then use the <code>user:group</code> format. If you specify a user by name but no group then the primary group of that user will be chosen. If you specify a user by number and no group then the group will be <code>nogroup.</code> </p>
-<dt><code>-g</code></p>
-<dd>group-id to use. Same as using <code>:group</code> for the <code>-u</code> parameter, just a different way to specify it for compatibility with other programs. </p>
-<dt><code>-q</code></p>
-<dd>quiet mode. If specified then some of the extra informational messages will be suppressed. Also the csv data will be the only output on standard out and the plain text data will be on standard error. This means you can run <code>bonnie++ -q &gt;&gt; file.csv</code> to record your csv data. </p>
-<dt><code>-f size-for-char-io</code></p>
-<dd>fast mode control, skips per-char IO tests if no parameter, otherwise specifies the size of the tests for per-char IO tests (default 20M). </p>
-<dt><code>-b</code></p>
-<dd>no write buffering. fsync() after every write. </p>
-<dt><code>-p</code></p>
-<dd>number of processes to serve semaphores for. This is used to create the semaphores for synchronising multiple Bonnie++ processes. All the processes which are told to use the semaphore with <code>-ys</code> will start each test with synchronization. Use &quot;-p -1&quot; to delete the semaphore. </p>
-<dt><code>-y s|p</code></p>
-<dd>perform synchronization before each test. Option <code>s</code> for semaphores and option <code>p</code> for prompting. </p>
-<dt><code>-D</code></p>
-<dd>use direct IO (O_DIRECT) for the bulk IO tests </p>
-<dt><code>-z seed</code></p>
-<dd>random number seed to repeat the same test. </p>
-<dt><code>-Z random-file</code></p>
-<dd>file containing random data in network byte order.</dl>
+<dt><code>-m</code></dt>
+<dd>name of the machine &#8211; for display purposes only. </dd>
+<dt><code>-r</code></dt>
+<dd>RAM size in megabytes. If you specify this the other parameters will be checked to ensure they make sense for a machine of that much RAM. You should not need to do this in general use as it should be able to discover the RAM size. NB If you specify a size of 0 then all checks will be disabled&#8230; </dd>
+<dt><code>-x</code></dt>
+<dd>number of test runs. This is useful if you want to perform more than one test. It will dump output continuously in CSV format until either the number of tests have been completed, or it is killed. </dd>
+<dt><code>-u</code></dt>
+<dd>user-id to use. When running as root specify the UID to use for the tests. It is not recommended to use root (since the occasion when a Bonnie++ bug wiped out someone&#8217;s system), so if you really want to run as root then use <code>-u root.</code> Also if you want to specify the group to run as then use the <code>user:group</code> format. If you specify a user by name but no group then the primary group of that user will be chosen. If you specify a user by number and no group then the group will be <code>nogroup.</code> </dd>
+<dt><code>-g</code></dt>
+<dd>group-id to use. Same as using <code>:group</code> for the <code>-u</code> parameter, just a different way to specify it for compatibility with other programs. </dd>
+<dt><code>-q</code></dt>
+<dd>quiet mode. If specified then some of the extra informational messages will be suppressed. Also the csv data will be the only output on standard out and the plain text data will be on standard error. This means you can run <code>bonnie++ -q &gt;&gt; file.csv</code> to record your csv data. </dd>
+<dt><code>-f size-for-char-io</code></dt>
+<dd>fast mode control, skips per-char IO tests if no parameter, otherwise specifies the size of the tests for per-char IO tests (default 20M). </dd>
+<dt><code>-b</code></dt>
+<dd>no write buffering. fsync() after every write. </dd>
+<dt><code>-p</code></dt>
+<dd>number of processes to serve semaphores for. This is used to create the semaphores for synchronising multiple Bonnie++ processes. All the processes which are told to use the semaphore with <code>-ys</code> will start each test with synchronization. Use &quot;-p -1&quot; to delete the semaphore. </dd>
+<dt><code>-y s|p</code></dt>
+<dd>perform synchronization before each test. Option <code>s</code> for semaphores and option <code>p</code> for prompting. </dd>
+<dt><code>-D</code></dt>
+<dd>use direct IO (O_DIRECT) for the bulk IO tests </dd>
+<dt><code>-z seed</code></dt>
+<dd>random number seed to repeat the same test. </dd>
+<dt><code>-Z random-file</code></dt>
+<dd>file containing random data in network byte order.</dd></dl>
 <h2>Multiple Processes</h2>
 <p>Run the following commands to run three copies of Bonnie++ simultaneously: </p>
 <p> bonnie++ -p3 </p>

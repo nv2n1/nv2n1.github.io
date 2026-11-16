@@ -55,9 +55,9 @@ description: "ricci_modclusterd_selinux – Security Enhanced Linux Policy for t
 <p> Policy governs the access confined processes have to these ports. SELinux ricci_modclusterd policy is very flexible allowing users to setup their ricci_modclusterd processes in as secure a method as possible. </p>
 <p> The following port types are defined for ricci_modclusterd: </p>
 <dl>
-<dt><code>ricci_modcluster_port_t</code></p>
+<dt><code>ricci_modcluster_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 16851 udp 16851</dl>
+</dd><dd>Default Defined Ports: tcp 16851 udp 16851</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ricci_modclusterd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

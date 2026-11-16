@@ -10,7 +10,6 @@ description: "save_bitmap – Saves a bitmap into any supported file format. All
 <p>save_bitmap &#8211; Saves a bitmap into any supported file format. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int save_bitmap(const char *filename, BITMAP *bmp, const RGB *pal);</code></pre>
 <h2>Description</h2>
 <p>Writes a bitmap into a file, using the specified palette, which should be an array of 256 RGB structures. The output format is determined from the filename extension: at present this function supports BMP, PCX and TGA formats. Two things to watch out for: on some video cards it may be faster to copy the screen to a memory bitmap and save the latter, and if you use this to dump the screen into a file you may end up with an image much larger than you were expecting, because Allegro often creates virtual screens larger than the visible screen. You can get around this by using a sub-bitmap to specify which part of the screen to save, eg: </p>

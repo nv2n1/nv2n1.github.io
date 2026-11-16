@@ -11,13 +11,9 @@ std::basic_regex - std::basic_regex
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;regex&gt;
-
 template &lt;
-
 class CharT,                             (since C++11)
-
 class Traits = std::regex_traits&lt;CharT&gt;
-
 &gt; class basic_regex;</code></pre> 
 The class template basic_regex provides a general framework for holding regular expressions. 
 Several specializations for common character types are provided: 

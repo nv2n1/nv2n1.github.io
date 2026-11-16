@@ -21,41 +21,41 @@ description: "bashdb – bash debugger script"
 <p> See the reference manual &lt;<a rel="nofollow" href="http://bashdb.sourceforge.net/bashdb.html">http://bashdb.sourceforge.net/bashdb.html</a>&gt; for how to to call the debugger from inside your program or arrange for the debugger to get called when your program is sent a signal.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h | &#8211;help</p>
-<dd> Print a usage message on standard error and exit with a return code of 100. </p>
-<dt>-A | &#8211;annotation <i>level</i></p>
-<dd> Sets to output additional stack and status information which allows front-ends such as emacs to track what&#8217;s going on without polling. </p>
+<dt>-h | &#8211;help</dt>
+<dd> Print a usage message on standard error and exit with a return code of 100. </dd>
+<dt>-A | &#8211;annotation <i>level</i></dt>
+<dd> Sets to output additional stack and status information which allows front-ends such as emacs to track what&#8217;s going on without polling. </dd>
 <p> This is needed in for regression testing. Using this option is equivalent to issuing: </p>
 <pre>
   set annotation LEVEL
 </pre>
 <p> inside the debugger. </p>
-<dt>-B | &#8211;basename</p>
-<dd> In places where a filename appears in debugger output give just the basename only. This is needed in for regression testing. Using this option is equivalent to issuing: </p>
+<dt>-B | &#8211;basename</dt>
+<dd> In places where a filename appears in debugger output give just the basename only. This is needed in for regression testing. Using this option is equivalent to issuing: </dd>
 <pre>
   set basename on
 </pre>
 <p> inside the debugger. </p>
-<dt>-n | nx</p>
-<dd> Normally the debugger will read debugger commands in <tt>&quot;~/.bashdbinit&quot;</tt> if that file exists before accepting user interaction. <tt>&quot;.bashdbinit&quot;</tt> is analogus to Perl&#8217;s <tt>&quot;.perldb&quot;</tt> or <font SIZE="-1">GNU</font> gdb&#8217;s <tt>&quot;.gdbinit&quot;</tt>: a user might want to create such a debugger profile to add various user-specific customizations. </p>
+<dt>-n | nx</dt>
+<dd> Normally the debugger will read debugger commands in <tt>&quot;~/.bashdbinit&quot;</tt> if that file exists before accepting user interaction. <tt>&quot;.bashdbinit&quot;</tt> is analogus to Perl&#8217;s <tt>&quot;.perldb&quot;</tt> or <font SIZE="-1">GNU</font> gdb&#8217;s <tt>&quot;.gdbinit&quot;</tt>: a user might want to create such a debugger profile to add various user-specific customizations. </dd>
 <p> Using the <tt>&quot;-n&quot;</tt> option this initialization file will not be read. This is useful in regression testing or in tracking down a problem with one&#8217;s <tt>&quot;.bashdbinit&quot;</tt> profile. </p>
-<dt>-c <i>command-string</i></p>
-<dd> Instead of specifying the name of a script file, one can give an execution string that is to be debugged. Use this option to do that. </p>
+<dt>-c <i>command-string</i></dt>
+<dd> Instead of specifying the name of a script file, one can give an execution string that is to be debugged. Use this option to do that. </dd>
 <p> If you invoke the debugger via <tt>&quot;bash --debugger&quot;</tt>, the filename that will appear in source listing or in a call stack trace will be the artifical name *BOGUS*. </p>
-<dt>-q | &#8211;quiet</p>
-<dd> Do not print introductory version and copyright information. This is again useful in regression testing where we don&#8217;t want to include a changeable copyright date in the regression-test matching. </p>
-<dt>-x <i>debugger-cmdfile</i></p>
-<dd> Run the debugger commands <i>debugger-cmdfile</i> before accepting user input. These commands are read however after any <tt>&quot;.bashdbinit&quot;</tt> commands. Again this is useful running regression-testing debug scripts. </p>
-<dt>-L | &#8211;library <i>debugger-library</i></p>
-<dd> The debugger needs to source or include a number of functions and these reside in a library. If this option is not given the default location of library is relative to the installed bashdb script: <tt>&quot;../lib/bashdb&quot;</tt>. </p>
-<dt>-T | &#8211;tempdir <i>temporary-file-directory</i></p>
-<dd> The debugger needs to make use of some temporary filesystem storage to save persistent information across a subshell return or in order to evaluate an expression. The default directory is <tt>&quot;/tmp&quot;</tt> but you can use this option to set the directory where debugger temporary files will be created. </p>
-<dt>-t | &#8211;tty <i>tty-name</i></p>
-<dd> Debugger output usually goes to a terminal rather than stdout or stdin which the debugged program may use. Determination of the tty or pseudo-tty is normally done automatically. However if you want to control where the debugger output goes, use this option. </p>
-<dt>-V | &#8211;version</p>
-<dd> Show version number and no-warranty and exit with return code 1.</p>
-<dt>-X | &#8211;trace</p>
-<dd> Similar to &quot;<tt>&quot;set -x&quot;</tt>&quot; line tracing except that by default the location of each line, the bash level, and subshell level are printed. You might be able to get something roughly similar if you set <tt>&quot;PS4&quot;</tt> as follows </p>
+<dt>-q | &#8211;quiet</dt>
+<dd> Do not print introductory version and copyright information. This is again useful in regression testing where we don&#8217;t want to include a changeable copyright date in the regression-test matching. </dd>
+<dt>-x <i>debugger-cmdfile</i></dt>
+<dd> Run the debugger commands <i>debugger-cmdfile</i> before accepting user input. These commands are read however after any <tt>&quot;.bashdbinit&quot;</tt> commands. Again this is useful running regression-testing debug scripts. </dd>
+<dt>-L | &#8211;library <i>debugger-library</i></dt>
+<dd> The debugger needs to source or include a number of functions and these reside in a library. If this option is not given the default location of library is relative to the installed bashdb script: <tt>&quot;../lib/bashdb&quot;</tt>. </dd>
+<dt>-T | &#8211;tempdir <i>temporary-file-directory</i></dt>
+<dd> The debugger needs to make use of some temporary filesystem storage to save persistent information across a subshell return or in order to evaluate an expression. The default directory is <tt>&quot;/tmp&quot;</tt> but you can use this option to set the directory where debugger temporary files will be created. </dd>
+<dt>-t | &#8211;tty <i>tty-name</i></dt>
+<dd> Debugger output usually goes to a terminal rather than stdout or stdin which the debugged program may use. Determination of the tty or pseudo-tty is normally done automatically. However if you want to control where the debugger output goes, use this option. </dd>
+<dt>-V | &#8211;version</dt>
+<dd> Show version number and no-warranty and exit with return code 1.</dd>
+<dt>-X | &#8211;trace</dt>
+<dd> Similar to &quot;<tt>&quot;set -x&quot;</tt>&quot; line tracing except that by default the location of each line, the bash level, and subshell level are printed. You might be able to get something roughly similar if you set <tt>&quot;PS4&quot;</tt> as follows </dd>
 <pre><code>
 export PS4 = '(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]}
 '
@@ -72,12 +72,12 @@ export PS4 = '(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]}
 <p> Another reason of the debugger slowness is that the debugger has to intercept every line and check to see if some action is to be taken for this and this is all in bash code. A better and faster architecture would be for the debugger to register a list of conditions or stopping places inside the bash code itself and have it arrange to call the debugger only when a condition requiring the debugger arises. Checks would be faster as this would be done in C code and access to internal structures would make this more efficient.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>*</p>
-<dd> &lt;<a rel="nofollow" href="http://bashdb.sourceforge.net/bashdb.html">http://bashdb.sourceforge.net/bashdb.html</a>&gt; &#8211; an extensive reference manual.</p>
-<dt>*</p>
-<dd> &lt;<a rel="nofollow" href="http://bashdb.sourceforge.net">http://bashdb.sourceforge.net</a>&gt; &#8211; the homepage for the project</p>
-<dt>*</p>
-<dd> &lt;<a rel="nofollow" href="http://www.gnu.org/software/bash/manual/bashref.html">http://www.gnu.org/software/bash/manual/bashref.html</a>&gt; &#8211; bash reference manual</dl>
+<dt>*</dt>
+<dd> &lt;<a rel="nofollow" href="http://bashdb.sourceforge.net/bashdb.html">http://bashdb.sourceforge.net/bashdb.html</a>&gt; &#8211; an extensive reference manual.</dd>
+<dt>*</dt>
+<dd> &lt;<a rel="nofollow" href="http://bashdb.sourceforge.net">http://bashdb.sourceforge.net</a>&gt; &#8211; the homepage for the project</dd>
+<dt>*</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.gnu.org/software/bash/manual/bashref.html">http://www.gnu.org/software/bash/manual/bashref.html</a>&gt; &#8211; bash reference manual</dd></dl>
 <h2>AUTHOR</h2>
 <p> The current version is maintained (or not) by Rocky Bernstein.</p>
 <h2>COPYRIGHT</h2>

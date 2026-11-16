@@ -18,24 +18,24 @@ description: "axlisten – monitor AX.25 traffic"
 <p> <code>Axlisten</code> can use colors to make the output more readable. The ncurses library is used to accomplish this. <code>Color support defaults to being disabled,</code> and the <code>-c</code> parameter is used to enable it.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-8</code></p>
-<dd> Indicates that the terminal is capable of printing 8-bit characters. This parameter is required for the -i parameter to work.</p>
-<dt><code>-a</code></p>
-<dd> Allow for the monitoring of outgoing frames as well as incoming ones.</p>
-<dt><code>-c</code></p>
-<dd> Enable color support.</p>
-<dt><code>-h</code></p>
-<dd> Dump the data portion of the packet in both hexadecimal and ASCII. The default is to display data as ASCII only.</p>
-<dt><code>-i</code></p>
-<dd> Map IBM codepage 437 characters 128-158 to their ISO-Latin-1 equivalents. This is a hack for scandinavian users. This parameter is only valid when used with the -8 and -c parameters.</p>
-<dt><code>-p port</code></p>
-<dd> Monitor only those frames received on a particular port, by default all AX.25 devices are monitored.</p>
-<dt><code>-r</code></p>
-<dd> Dump the data portion in a &quot;readable&quot; fashion, which is more suitable for tracing plaintext AX.25 traffic. CR-LF conversion is done.</p>
-<dt><code>-t</code></p>
-<dd> Displays a timestamp with each packet received.</p>
-<dt><code>-v</code></p>
-<dd> Display the version.</dl>
+<dt><code>-8</code></dt>
+<dd> Indicates that the terminal is capable of printing 8-bit characters. This parameter is required for the -i parameter to work.</dd>
+<dt><code>-a</code></dt>
+<dd> Allow for the monitoring of outgoing frames as well as incoming ones.</dd>
+<dt><code>-c</code></dt>
+<dd> Enable color support.</dd>
+<dt><code>-h</code></dt>
+<dd> Dump the data portion of the packet in both hexadecimal and ASCII. The default is to display data as ASCII only.</dd>
+<dt><code>-i</code></dt>
+<dd> Map IBM codepage 437 characters 128-158 to their ISO-Latin-1 equivalents. This is a hack for scandinavian users. This parameter is only valid when used with the -8 and -c parameters.</dd>
+<dt><code>-p port</code></dt>
+<dd> Monitor only those frames received on a particular port, by default all AX.25 devices are monitored.</dd>
+<dt><code>-r</code></dt>
+<dd> Dump the data portion in a &quot;readable&quot; fashion, which is more suitable for tracing plaintext AX.25 traffic. CR-LF conversion is done.</dd>
+<dt><code>-t</code></dt>
+<dd> Displays a timestamp with each packet received.</dd>
+<dt><code>-v</code></dt>
+<dd> Display the version.</dd></dl>
 <h2>FILES</h2>
 <p> /etc/ax25/axports</p>
 <h2>SEE ALSO</h2>
@@ -45,11 +45,8 @@ description: "axlisten – monitor AX.25 traffic"
 <h2>AUTHORS</h2>
 <pre><code>
 Alan Cox GW4PTS&lt;alan[at] cymru.net&gt;
-
     Jonathan Naylor G4KLX&lt;g4klx[at] g4klx.demon.co.uk&gt;
-
         Phil Karn KA9Q&lt;karn[at] qualcomm.com&gt;
-
             Heikki Hannikainen OH7LZB&lt;hessu[at] pspt.fi&gt;
 </code></pre>
 <h2>Index</h2>

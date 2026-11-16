@@ -25,15 +25,11 @@ excepts - bitmask listing the exception flags to clear
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;cmath&gt;</code></pre> 
 &nbsp;<wbr>&nbsp;#pragma STDC FENV_ACCESS ON <pre><code>volatile double zero = 0.0; // volatile not needed where FENV_ACCESS is supported
-
 volatile double one = 1.0; // volatile not needed where FENV_ACCESS is supported
 int main()
-
 {
     std::feclearexcept(FE_ALL_EXCEPT);
     std::cout &lt;&lt; &quot;1.0/0.0 = &quot; &lt;&lt; 1.0 / zero &lt;&lt; '\n';

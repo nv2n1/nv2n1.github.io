@@ -38,80 +38,80 @@ description: "llvm-nm – list LLVM bitcode and object file’s symbol table"
 <p> Because LLVM bitcode files typically contain objects that are not considered to have addresses until they are linked into an executable image or dynamically compiled “just-in-time”, <code>llvm-nm</code> does not print an address for any symbol in an LLVM bitcode file, even symbols which are defined in the bitcode file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-B</code></p>
-<dd> Use BSD output format. Alias for <code>&#8211;format=bsd</code>.</p>
-<dt><code>&#8211;debug-syms, -a</code></p>
-<dd> Show all symbols, even those usually suppressed.</p>
-<dt><code>&#8211;defined-only</code></p>
-<dd> Print only symbols defined in this file.</p>
-<dt><code>&#8211;demangle, -C</code></p>
-<dd> Demangle symbol names.</p>
-<dt><code>&#8211;dynamic, -D</code></p>
-<dd> Display dynamic symbols instead of normal symbols.</p>
-<dt><code>&#8211;extern-only, -g</code></p>
-<dd> Print only symbols whose definitions are external; that is, accessible from other files.</p>
-<dt><code>&#8211;format=&lt;format&gt;, -f</code></p>
-<dd> Select an output format; <i>format</i> may be <i>sysv</i>, <i>posix</i>, <i>darwin</i>, <i>bsd</i> or <i>just-symbols</i>. The default is <i>bsd</i>.</p>
-<dt><code>&#8211;help, -h</code></p>
-<dd> Print a summary of command-line options and their meanings.</p>
-<dt><code>-j</code></p>
-<dd> Print just the symbol names. Alias for <i>–format=just-symbols`</i>.</p>
-<dt><code>-m</code></p>
-<dd> Use Darwin format. Alias for <code>&#8211;format=darwin</code>.</p>
-<dt><code>&#8211;no-demangle</code></p>
-<dd> Don’t demangle symbol names. This is the default.</p>
-<dt><code>&#8211;no-llvm-bc</code></p>
-<dd> Disable the LLVM bitcode reader.</p>
-<dt><code>&#8211;no-sort, -p</code></p>
-<dd> Show symbols in the order encountered.</p>
-<dt><code>&#8211;no-weak</code></p>
-<dd> Don’t print weak symbols.</p>
-<dt><code>&#8211;numeric-sort, -n, -v</code></p>
-<dd> Sort symbols by address.</p>
-<dt><code>&#8211;portability, -P</code></p>
-<dd> Use POSIX.2 output format. Alias for <code>&#8211;format=posix</code>.</p>
-<dt><code>&#8211;print-armap</code></p>
-<dd> Print the archive symbol table, in addition to the symbols.</p>
-<dt><code>&#8211;print-file-name, -A, -o</code></p>
-<dd> Precede each symbol with the file it came from.</p>
-<dt><code>&#8211;print-size, -S</code></p>
-<dd> Show symbol size as well as address (not applicable for Mach-O).</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Suppress ‘no symbols’ diagnostic.</p>
-<dt><code>&#8211;radix=&lt;RADIX&gt;, -t</code></p>
-<dd> Specify the radix of the symbol address(es). Values accepted are <i>d</i> (decimal), <i>x</i> (hexadecimal) and <i>o</i> (octal).</p>
-<dt><code>&#8211;reverse-sort, -r</code></p>
-<dd> Sort symbols in reverse order.</p>
-<dt><code>&#8211;size-sort</code></p>
-<dd> Sort symbols by size.</p>
-<dt><code>&#8211;special-syms</code></p>
-<dd> Do not filter special symbols from the output.</p>
-<dt><code>&#8211;undefined-only, -u</code></p>
-<dd> Print only undefined symbols.</p>
-<dt><code>&#8211;version, -V</code></p>
-<dd> Display the version of the <code>llvm-nm</code> executable, then exit. Does not stack with other commands.</p>
-<dt><code>@&lt;FILE&gt;</code></p>
-<dd> Read command-line options from response file <i>&lt;FILE&gt;</i>.</dl>
+<dt><code>-B</code></dt>
+<dd> Use BSD output format. Alias for <code>&#8211;format=bsd</code>.</dd>
+<dt><code>&#8211;debug-syms, -a</code></dt>
+<dd> Show all symbols, even those usually suppressed.</dd>
+<dt><code>&#8211;defined-only</code></dt>
+<dd> Print only symbols defined in this file.</dd>
+<dt><code>&#8211;demangle, -C</code></dt>
+<dd> Demangle symbol names.</dd>
+<dt><code>&#8211;dynamic, -D</code></dt>
+<dd> Display dynamic symbols instead of normal symbols.</dd>
+<dt><code>&#8211;extern-only, -g</code></dt>
+<dd> Print only symbols whose definitions are external; that is, accessible from other files.</dd>
+<dt><code>&#8211;format=&lt;format&gt;, -f</code></dt>
+<dd> Select an output format; <i>format</i> may be <i>sysv</i>, <i>posix</i>, <i>darwin</i>, <i>bsd</i> or <i>just-symbols</i>. The default is <i>bsd</i>.</dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd> Print a summary of command-line options and their meanings.</dd>
+<dt><code>-j</code></dt>
+<dd> Print just the symbol names. Alias for <i>–format=just-symbols`</i>.</dd>
+<dt><code>-m</code></dt>
+<dd> Use Darwin format. Alias for <code>&#8211;format=darwin</code>.</dd>
+<dt><code>&#8211;no-demangle</code></dt>
+<dd> Don’t demangle symbol names. This is the default.</dd>
+<dt><code>&#8211;no-llvm-bc</code></dt>
+<dd> Disable the LLVM bitcode reader.</dd>
+<dt><code>&#8211;no-sort, -p</code></dt>
+<dd> Show symbols in the order encountered.</dd>
+<dt><code>&#8211;no-weak</code></dt>
+<dd> Don’t print weak symbols.</dd>
+<dt><code>&#8211;numeric-sort, -n, -v</code></dt>
+<dd> Sort symbols by address.</dd>
+<dt><code>&#8211;portability, -P</code></dt>
+<dd> Use POSIX.2 output format. Alias for <code>&#8211;format=posix</code>.</dd>
+<dt><code>&#8211;print-armap</code></dt>
+<dd> Print the archive symbol table, in addition to the symbols.</dd>
+<dt><code>&#8211;print-file-name, -A, -o</code></dt>
+<dd> Precede each symbol with the file it came from.</dd>
+<dt><code>&#8211;print-size, -S</code></dt>
+<dd> Show symbol size as well as address (not applicable for Mach-O).</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Suppress ‘no symbols’ diagnostic.</dd>
+<dt><code>&#8211;radix=&lt;RADIX&gt;, -t</code></dt>
+<dd> Specify the radix of the symbol address(es). Values accepted are <i>d</i> (decimal), <i>x</i> (hexadecimal) and <i>o</i> (octal).</dd>
+<dt><code>&#8211;reverse-sort, -r</code></dt>
+<dd> Sort symbols in reverse order.</dd>
+<dt><code>&#8211;size-sort</code></dt>
+<dd> Sort symbols by size.</dd>
+<dt><code>&#8211;special-syms</code></dt>
+<dd> Do not filter special symbols from the output.</dd>
+<dt><code>&#8211;undefined-only, -u</code></dt>
+<dd> Print only undefined symbols.</dd>
+<dt><code>&#8211;version, -V</code></dt>
+<dd> Display the version of the <code>llvm-nm</code> executable, then exit. Does not stack with other commands.</dd>
+<dt><code>@&lt;FILE&gt;</code></dt>
+<dd> Read command-line options from response file <i>&lt;FILE&gt;</i>.</dd></dl>
 <h2>MACH-O SPECIFIC OPTIONS</h2>
 <dl>
-<dt><code>&#8211;add-dyldinfo</code></p>
-<dd> Add symbols from the dyldinfo, if they are not already in the symbol table. This is the default.</p>
-<dt><code>&#8211;add-inlinedinfo</code></p>
-<dd> Add symbols from the inlined libraries, TBD file inputs only.</p>
-<dt><code>&#8211;arch=&lt;arch1[,arch2,&#8230;]&gt;</code></p>
-<dd> Dump the symbols from the specified architecture(s).</p>
-<dt><code>&#8211;dyldinfo-only</code></p>
-<dd> Dump only symbols from the dyldinfo.</p>
-<dt><code>&#8211;no-dyldinfo</code></p>
-<dd> Do not add any symbols from the dyldinfo.</p>
-<dt><code>-s &lt;segment&gt; &lt;section&gt;</code></p>
-<dd> Dump only symbols from this segment and section name.</p>
-<dt><code>-x</code></p>
-<dd> Print symbol entry in hex.</dl>
+<dt><code>&#8211;add-dyldinfo</code></dt>
+<dd> Add symbols from the dyldinfo, if they are not already in the symbol table. This is the default.</dd>
+<dt><code>&#8211;add-inlinedinfo</code></dt>
+<dd> Add symbols from the inlined libraries, TBD file inputs only.</dd>
+<dt><code>&#8211;arch=&lt;arch1[,arch2,&#8230;]&gt;</code></dt>
+<dd> Dump the symbols from the specified architecture(s).</dd>
+<dt><code>&#8211;dyldinfo-only</code></dt>
+<dd> Dump only symbols from the dyldinfo.</dd>
+<dt><code>&#8211;no-dyldinfo</code></dt>
+<dd> Do not add any symbols from the dyldinfo.</dd>
+<dt><code>-s &lt;segment&gt; &lt;section&gt;</code></dt>
+<dd> Dump only symbols from this segment and section name.</dd>
+<dt><code>-x</code></dt>
+<dd> Print symbol entry in hex.</dd></dl>
 <h2>BUGS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <code>llvm-nm</code> does not support the full set of arguments that GNU <code>nm</code> does.</dl>
+<dt>&bull;</dt>
+<dd> <code>llvm-nm</code> does not support the full set of arguments that GNU <code>nm</code> does.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-nm</code> exits with an exit code of zero.</p>
 <h2>SEE ALSO</h2>

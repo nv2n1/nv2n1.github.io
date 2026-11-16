@@ -22,24 +22,24 @@ description: "CREATE TRIGGER – define a new trigger"
 <p> Refer to in the documentation for more information about triggers.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name to give the new trigger. This must be distinct from the name of any other trigger for the same table.</p>
-<dt><code>BEFORE</code></p>
+<dt><i>name</i></dt>
+<dd>The name to give the new trigger. This must be distinct from the name of any other trigger for the same table.</dd>
+<dt><code>BEFORE</code></dt>
 <dd>
-<dt><code>AFTER</code></p>
-<dd>Determines whether the function is called before or after the event.</p>
-<dt><i>event</i></p>
-<dd>One of <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, or <code>TRUNCATE</code>; this specifies the event that will fire the trigger. Multiple events can be specified using OR.</p>
-<dt><i>table</i></p>
-<dd>The name (optionally schema-qualified) of the table the trigger is for.</p>
-<dt><code>FOR EACH ROW</code></p>
+</dd><dt><code>AFTER</code></dt>
+<dd>Determines whether the function is called before or after the event.</dd>
+<dt><i>event</i></dt>
+<dd>One of <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, or <code>TRUNCATE</code>; this specifies the event that will fire the trigger. Multiple events can be specified using OR.</dd>
+<dt><i>table</i></dt>
+<dd>The name (optionally schema-qualified) of the table the trigger is for.</dd>
+<dt><code>FOR EACH ROW</code></dt>
 <dd>
-<dt><code>FOR EACH STATEMENT</code></p>
-<dd>This specifies whether the trigger procedure should be fired once for every row affected by the trigger event, or just once per SQL statement. If neither is specified, FOR EACH STATEMENT is the default.</p>
-<dt><i>funcname</i></p>
-<dd>A user-supplied function that is declared as taking no arguments and returning type trigger, which is executed when the trigger fires.</p>
-<dt><i>arguments</i></p>
-<dd>An optional comma-separated list of arguments to be provided to the function when the trigger is executed. The arguments are literal string constants. Simple names and numeric constants can be written here, too, but they will all be converted to strings. Please check the description of the implementation language of the trigger function about how the trigger arguments are accessible within the function; it might be different from normal function arguments.</dl>
+</dd><dt><code>FOR EACH STATEMENT</code></dt>
+<dd>This specifies whether the trigger procedure should be fired once for every row affected by the trigger event, or just once per SQL statement. If neither is specified, FOR EACH STATEMENT is the default.</dd>
+<dt><i>funcname</i></dt>
+<dd>A user-supplied function that is declared as taking no arguments and returning type trigger, which is executed when the trigger fires.</dd>
+<dt><i>arguments</i></dt>
+<dd>An optional comma-separated list of arguments to be provided to the function when the trigger is executed. The arguments are literal string constants. Simple names and numeric constants can be written here, too, but they will all be converted to strings. Please check the description of the implementation language of the trigger function about how the trigger arguments are accessible within the function; it might be different from normal function arguments.</dd></dl>
 <h2>Notes</h2>
 <p>To create a trigger on a table, the user must have the TRIGGER privilege on the table. </p>
 <p> Use DROP TRIGGER [<code><a href="/docs/linux/man/7-drop_trigger/">drop_trigger</a></code>(7)] to remove a trigger. </p>
@@ -49,12 +49,12 @@ description: "CREATE TRIGGER – define a new trigger"
 <h2>Compatibility</h2>
 <p>The <code>CREATE TRIGGER</code> statement in PostgreSQL implements a subset of the SQL standard. The following functionality is currently missing:</p>
 <dl>
-<dt>*</p>
-<dd>SQL allows triggers to fire on updates to specific columns (e.g., AFTER UPDATE OF col1, col2).</p>
-<dt>*</p>
-<dd>SQL allows you to define aliases for the &#8220;old&#8221; and &#8220;new&#8221; rows or tables for use in the definition of the triggered action (e.g., CREATE TRIGGER &#8230; ON tablename REFERENCING OLD ROW AS somename NEW ROW AS othername &#8230;). Since PostgreSQL allows trigger procedures to be written in any number of user-defined languages, access to the data is handled in a language-specific way.</p>
-<dt>*</p>
-<dd>PostgreSQL only allows the execution of a user-defined function for the triggered action. The standard allows the execution of a number of other SQL commands, such as <code>CREATE TABLE</code> as the triggered action. This limitation is not hard to work around by creating a user-defined function that executes the desired commands.</dl>
+<dt>*</dt>
+<dd>SQL allows triggers to fire on updates to specific columns (e.g., AFTER UPDATE OF col1, col2).</dd>
+<dt>*</dt>
+<dd>SQL allows you to define aliases for the &#8220;old&#8221; and &#8220;new&#8221; rows or tables for use in the definition of the triggered action (e.g., CREATE TRIGGER &#8230; ON tablename REFERENCING OLD ROW AS somename NEW ROW AS othername &#8230;). Since PostgreSQL allows trigger procedures to be written in any number of user-defined languages, access to the data is handled in a language-specific way.</dd>
+<dt>*</dt>
+<dd>PostgreSQL only allows the execution of a user-defined function for the triggered action. The standard allows the execution of a number of other SQL commands, such as <code>CREATE TABLE</code> as the triggered action. This limitation is not hard to work around by creating a user-defined function that executes the desired commands.</dd></dl>
 <p> SQL specifies that multiple triggers should be fired in time-of-creation order. PostgreSQL uses name order, which was judged to be more convenient. </p>
 <p> SQL specifies that BEFORE DELETE triggers on cascaded deletes fire <code>after</code> the cascaded DELETE completes. The PostgreSQL behavior is for BEFORE DELETE to always fire before the delete action, even a cascading one. This is considered more consistent. There is also unpredictable behavior when BEFORE triggers modify rows that are later to be modified by referential actions. This can lead to constraint violations or stored data that does not honor the referential constraint. </p>
 <p> The ability to specify multiple actions for a single trigger using OR is a PostgreSQL extension of the SQL standard. </p>

@@ -15,7 +15,7 @@ phy_aneg_done - return auto-negotiation status
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>target phy_device struct</dl>
+<dl><dd></dd><dd>target phy_device struct</dd></dl>
 
 <h2>Description</h2>
 

@@ -23,19 +23,19 @@ description: "nsdb-parameters – NSDB connection parameters"
 <h3>Connection security</h3>
 <p>One of two connection security types may be specified in an NSDB connection parameter entry:</p>
 <dl>
-<dt><code>NONE</code></p>
-<dd>The local system communicates with the NSDB node in plain-text. The local system performs no authentication of the NSDB node.</p>
-<dt><code>TLS</code></p>
-<dd>The local system always uses Transport Layer Security when communicating with the NSDB node. The local system authenticates the NSDB node before making requests. Integrity or encryption is used during communication. Requests to the NSDB node fail if a TLS session cannot be established.</dl>
+<dt><code>NONE</code></dt>
+<dd>The local system communicates with the NSDB node in plain-text. The local system performs no authentication of the NSDB node.</dd>
+<dt><code>TLS</code></dt>
+<dd>The local system always uses Transport Layer Security when communicating with the NSDB node. The local system authenticates the NSDB node before making requests. Integrity or encryption is used during communication. Requests to the NSDB node fail if a TLS session cannot be established.</dd></dl>
 <p> <code>NONE</code> is a low-overhead mode for use when the network and the NSDB are trusted by all NSDB clients. <code>TLS</code> is a high-security mode for use when NSDBs operate on untrusted public networks, but it requires the additional burden of creating and distributing x.509 certificates for each NSDB. </p>
 <p> An NSDB node can operate in one of three security modes:</p>
 <dl>
-<dt><code>Basic</code></p>
-<dd>NSDB clients connect to this NSDB node using only FEDFS_SEC_NONE security.</p>
-<dt><code>Transitional</code></p>
-<dd>NSDB clients connect to this NSDB node using either FEDFS_SEC_NONE or FEDFS_SEC_TLS security.</p>
-<dt><code>Secure</code></p>
-<dd>NSDB clients connect to this NSDB node using only FEDFS_SEC_TLS security.</dl>
+<dt><code>Basic</code></dt>
+<dd>NSDB clients connect to this NSDB node using only FEDFS_SEC_NONE security.</dd>
+<dt><code>Transitional</code></dt>
+<dd>NSDB clients connect to this NSDB node using either FEDFS_SEC_NONE or FEDFS_SEC_TLS security.</dd>
+<dt><code>Secure</code></dt>
+<dd>NSDB clients connect to this NSDB node using only FEDFS_SEC_TLS security.</dd></dl>
 <p> An NSDB client always uses the security type specified in its local NSDB connection parameter database for that NSDB node. For greatest security, it is recommended that NSDB nodes be configured as <code>secure</code> NSDBs (see table above).</p>
 <h3>x.509 certificates</h3>
 <p>Administrators provide the certificate material used to authenticate an NSDB node in a PEM format file that contains an x.509v3 certificate chain. </p>

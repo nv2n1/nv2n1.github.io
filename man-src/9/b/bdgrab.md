@@ -15,7 +15,7 @@ bdgrab - - Grab a reference to an already referenced block device
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>Block device to grab a reference to.</dl>
+<dl><dd></dd><dd>Block device to grab a reference to.</dd></dl>
 
 <h2>Copyright</h2>
 

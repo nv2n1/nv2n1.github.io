@@ -19,7 +19,7 @@ description: "slagv2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SLAGV2 computes the Generalized Schur factorization of a real 2 - by - 2 matrix pencil(A, B)
 where B is upper triangular.This routine
@@ -40,11 +40,11 @@ has a pair of complex conjugate eigenvalues,
                                [b11 0] : = [CSL SNL][b11 b12][CSR - SNR]
                                                     [0 b22][-SNL CSL][0 b22][SNR CSR] where b11 &gt;= b22 &gt; 0.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> </p>
+</dt><dd> <i>A</i> </dd>
 <pre>
           A is REAL array, dimension (LDA, 2)
           On entry, the 2 x 2 matrix A.
@@ -107,18 +107,18 @@ has a pair of complex conjugate eigenvalues,
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dl>
+</dt><dd> Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA</dd></dl>
 <p> Definition at line 157 of file slagv2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -17,6 +17,6 @@ description: "systemd-quotacheck.service, systemd-quotacheck – File system quo
 <p>systemd-quotacheck understands one kernel command line parameter: </p>
 <p> <i>quotacheck.mode=</i></p>
 <dl>
-<dd>One of &quot;auto&quot;, &quot;force&quot;, &quot;skip&quot;. Controls the mode of operation. The default is &quot;auto&quot;, and ensures that file system quota checks are done when the file system quota checker deems them necessary. &quot;force&quot; unconditionally results in full file system quota checks. &quot;skip&quot; skips any file system quota checks.</dl>
+<dd>One of &quot;auto&quot;, &quot;force&quot;, &quot;skip&quot;. Controls the mode of operation. The default is &quot;auto&quot;, and ensures that file system quota checks are done when the file system quota checker deems them necessary. &quot;force&quot; unconditionally results in full file system quota checks. &quot;skip&quot; skips any file system quota checks.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8), <code>systemd-fsck [at] .service</code>(8) </p>

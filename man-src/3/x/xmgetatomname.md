@@ -17,9 +17,9 @@ description: "XmGetAtomName — A function that returns the string representatio
 <h2>Description</h2>
 <p><code>XmGetAtomName</code> returns the string representation for an atom. It mirrors the <i>Xlib</i> interfaces for atom management but provides client-side caching. When and where caching is provided in <i>Xlib</i>, the routines will become pseudonyms for the <i>Xlib</i> routines.</p>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server</p>
-<dt><i>atom</i></p>
-<dd>Specifies the atom for the property name you want returned</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server</dd>
+<dt><i>atom</i></dt>
+<dd>Specifies the atom for the property name you want returned</dd></dl>
 <h2>Return</h2>
 <p>Returns a string. The function allocates space to hold the returned string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XFree</code>.</p>

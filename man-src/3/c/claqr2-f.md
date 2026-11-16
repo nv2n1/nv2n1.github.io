@@ -29,10 +29,10 @@ description: "claqr2.f –"
  an unitary similarity transformation of H. It is to be
  hoped that the final version of H has many zero subdiagonal
  entries.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>WANTT</i> </p>
+<dd><i>WANTT</i> </dd>
 <pre> WANTT is LOGICAL
  If .TRUE., then the Hessenberg matrix H is fully updated
  so that the triangular Schur factor may be
@@ -149,16 +149,16 @@ description: "claqr2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dl>
+<dd>Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dd></dl>
 <p> Definition at line 268 of file claqr2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

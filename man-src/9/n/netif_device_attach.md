@@ -15,7 +15,7 @@ netif_device_attach - mark device as attached
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
 
 <h2>Description</h2>
 

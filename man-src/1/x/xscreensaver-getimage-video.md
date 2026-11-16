@@ -17,10 +17,10 @@ description: "xscreensaver-getimage-video – put a video frame on the root wind
 <h2>OPTIONS</h2>
 <p> <i>xscreensaver-getimage-video</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print diagnostics.</p>
-<dt><code>&#8211;stdout</code></p>
-<dd> Instead of loading the image onto the root window, write it to stdout as a PBM file.</dl>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print diagnostics.</dd>
+<dt><code>&#8211;stdout</code></dt>
+<dd> Instead of loading the image onto the root window, write it to stdout as a PBM file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>X</code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-getimage-file/">xscreensaver-getimage-file</a></code>(1), <code>bttvgrab</code>(1), <code>qcam</code>(1), <code><a href="/docs/linux/man/1-streamer/">streamer</a></code>(1), <code>atitv</code>(1), <code>vidtomem</code>(1)</p>
 <h2>COPYRIGHT</h2>

@@ -15,12 +15,12 @@ description: "SPI_cursor_move – move a cursor"
 <h2>Arguments</h2>
 <p>Portal <i>portal</i></p>
 <dl COMPACT>
-<dd>portal containing the cursor</dl>
+<dd>portal containing the cursor</dd></dl>
 <p> bool <i>forward</i></p>
 <dl COMPACT>
-<dd>true for move forward, false for move backward</dl>
+<dd>true for move forward, false for move backward</dd></dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>maximum number of rows to move</dl>
+<dd>maximum number of rows to move</dd></dl>
 <h2>Notes</h2>
 <p>Moving backward may fail if the cursor&#8217;s plan was not created with the CURSOR_OPT_SCROLL option.</p>

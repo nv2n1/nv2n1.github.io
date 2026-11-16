@@ -16,8 +16,8 @@ description: "rdfdump – dumps an RDOFF object in human-readable form"
 <p> <code>rdfdump</code> supports both version 1 and 2 of RDOFF. It will give warnings if the RDOFF2 format is violated (it looks for incorrect lengths for header records, and checks the overall length count at the start of the file).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-v</p>
-<dd> Print a hex dump of the contents of the segments.</dl>
+<dt>-v</dt>
+<dd> Print a hex dump of the contents of the segments.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Julian Hall &lt;jules [at] earthcorp.com&gt;. </p>
 <p> This manual page was written by Matej Vela &lt;vela [at] debian.org&gt;. </p>

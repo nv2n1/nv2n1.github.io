@@ -16,295 +16,239 @@ description: "opaportconfig"
  [-v] [-x] [-L <i>lid</i>] [#8217lt; <i>sub command</i>&gt;]</p>
 <h2>Options</h2>
 <dl>
-<dt>-l <i>lid</i></p>
-<dd> Destination LID. Default is local port. </p>
-<dt>-m <i>dest_port</i></p>
-<dd> Destination port. Default is port with given LID. Used to access switch ports. </p>
-<dt>-h <i>hfi</i></p>
-<dd> HFI to send through/to. Default is first HFI. </p>
-<dt>-p <i>port</i></p>
-<dd> Port to send through/to. Default is first port. </p>
-<dt>-K <i>mkey</i></p>
-<dd> SM management key to access remote ports. </p>
+<dt>-l <i>lid</i></dt>
+<dd> Destination LID. Default is local port. </dd>
+<dt>-m <i>dest_port</i></dt>
+<dd> Destination port. Default is port with given LID. Used to access switch ports. </dd>
+<dt>-h <i>hfi</i></dt>
+<dd> HFI to send through/to. Default is first HFI. </dd>
+<dt>-p <i>port</i></dt>
+<dd> Port to send through/to. Default is first port. </dd>
+<dt>-K <i>mkey</i></dt>
+<dd> SM management key to access remote ports. </dd>
 <dt>
-&nbsp;<wbr><i>sub command</i>&nbsp;<wbr></p>
-<dd> One of the following choices: </p>
+&nbsp;<wbr><i>sub command</i>&nbsp;<wbr></dt>
+<dd> One of the following choices: </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> enable Enables port. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> disable Disables port. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> bounce Bounces port. </p>
-<dt>
-<dd>
-</dl>
+</dd></dl>
 <p> <code>NOTE:</code> Bouncing remote ports may cause timeouts. </p>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> ledon Turns port LED on. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> ledoff Turns port LED off. </p>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <h2>Configuration Options</h2>
 <dl>
-<dt>-r <i>secs</i></p>
-<dd> Repeats to keep the port down for the specified amount of seconds. </p>
-<dt>-S <i>state</i></p>
-<dd> New state. Default is 0. </p>
+<dt>-r <i>secs</i></dt>
+<dd> Repeats to keep the port down for the specified amount of seconds. </dd>
+<dt>-S <i>state</i></dt>
+<dd> New state. Default is 0. </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> 0 No-op. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 1 Down. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 2 Initiate. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 3 Armed. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 4 Active. </p>
+</dd></dl>
 </dl>
-</dl>
-<dt>-P <i>physstate</i></p>
-<dd> New physical state. Default is 0. </p>
-<dt>
-<dd>
+<dt>-P <i>physstate</i></dt>
+<dd> New physical state. Default is 0. </dd>
 </dl>
 <p> <code>NOTE:</code> All transitions are valid. </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 0 No-op. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 2 Polling. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 3 Disabled. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 11 Phy-Test. Current physstate must be disabled. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>-s <i>speed</i></p>
-<dd> New link speeds enabled. Default is 0. To enable multiple speeds, use the sum of the desired speeds. </p>
+<dt>-s <i>speed</i></dt>
+<dd> New link speeds enabled. Default is 0. To enable multiple speeds, use the sum of the desired speeds. </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> 0 No-op. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 2 0x0002 &#8211; 25 Gb/s. </p>
+</dd></dl>
 </dl>
-</dl>
-<dt>-w <i>width</i></p>
-<dd> New link widths enabled. Default is 0. To enable multiple widths, use sum of desired widths. </p>
+<dt>-w <i>width</i></dt>
+<dd> New link widths enabled. Default is 0. To enable multiple widths, use sum of desired widths. </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> 0 No-op. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 1 0x01 &#8211; 1x. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 2 0x02 &#8211; 2x. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 4 0x04 &#8211; 3x. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 8 0x08 &#8211; 4x. </p>
+</dd></dl>
 </dl>
-</dl>
-<dt>-c <i>LTPCRC</i></p>
-<dd> New LTP CRCs enabled. Default is 0. To enable multiple LTP CRCs, use sum of desired LTP CRCs. </p>
+<dt>-c <i>LTPCRC</i></dt>
+<dd> New LTP CRCs enabled. Default is 0. To enable multiple LTP CRCs, use sum of desired LTP CRCs. </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> 0 No-op. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 1 0x1 &#8211; 14-bit LTP CRC mode. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 2 0x2 &#8211; 16-bit LTP CRC mode. </p>
-</dl>
-</dl>
-<dl>
-<dt>
-<dd>
-<dl>
-<dt>
-<dd>
-<p> 4 0x4 &#8211; 48-bit LTP CRC mode.</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
+<p> 4 0x4 &#8211; 48-bit LTP CRC mode.</dd></dl>
+</dl>
+<dl>
+<dl>
+<dt>
+</dt><dd>
 <p> 8 0x8 &#8211; 12/16 bits per lane LTP CRC mode. </p>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <h2>-h and -p options permit a variety of selections:</h2>
 <dl>
-<dt>-h 0</p>
-<dd> First port in system (default). </p>
-<dt>-h <i>x</i></p>
-<dd> First port on HFI <i>x</i>. </p>
-<dt>-h 0 -p <i>y</i></p>
-<dd> Port <i>y</i> within system. </p>
-<dt>-h <i>x</i>#8217#160;-p <i>y</i></p>
-<dd> HFI <i>x</i>, port <i>y</i>. </p>
+<dt>-h 0</dt>
+<dd> First port in system (default). </dd>
+<dt>-h <i>x</i></dt>
+<dd> First port on HFI <i>x</i>. </dd>
+<dt>-h 0 -p <i>y</i></dt>
+<dd> Port <i>y</i> within system. </dd>
+<dt>-h <i>x</i>#8217#160;-p <i>y</i></dt>
+<dd> HFI <i>x</i>, port <i>y</i>. </dd>
 </dl>
 <h2>Debug Options</h2>
 <dl>
-<dt>-v</p>
-<dd> Verbose output. Additional invocations turn on debugging, openib debugging, and libibumad debugging. </p>
-<dt>-z</p>
-<dd> Does not get port info first, clears most port attributes. </p>
-<dt>-L <i>lid</i></p>
-<dd> Sets PortInfo.LID = lid. </p>
+<dt>-v</dt>
+<dd> Verbose output. Additional invocations turn on debugging, openib debugging, and libibumad debugging. </dd>
+<dt>-z</dt>
+<dd> Does not get port info first, clears most port attributes. </dd>
+<dt>-L <i>lid</i></dt>
+<dd> Sets PortInfo.LID = lid. </dd>
 </dl>
 <h2>Examples</h2>
 <p> opaportconfig -w 1<br />

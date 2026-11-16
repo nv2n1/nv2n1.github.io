@@ -21,14 +21,14 @@ int close(int fd);
 <p> <code>close</code>() returns zero on success. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> isn&#8217;t a valid open file descriptor.</p>
-<dt><code>EINTR</code></p>
-<dd> The <code>close</code>() call was interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred.</p>
-<dt><code>ENOSPC</code>, <code>EDQUOT</code></p>
-<dd> On NFS, these errors are not normally reported against the first write which exceeds the available storage space, but instead against a subsequent <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), or <code>close</code>().</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> isn&#8217;t a valid open file descriptor.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The <code>close</code>() call was interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred.</dd>
+<dt><code>ENOSPC</code>, <code>EDQUOT</code></dt>
+<dd> On NFS, these errors are not normally reported against the first write which exceeds the available storage space, but instead against a subsequent <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), or <code>close</code>().</dd></dl>
 <p> See NOTES for a discussion of why <code>close</code>() should not be retried after an error.</p>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.</p>
@@ -39,10 +39,10 @@ int close(int fd);
 <p> It is probably unwise to close file descriptors while they may be in use by system calls in other threads in the same process. Since a file descriptor may be reused, there are some obscure race conditions that may cause unintended side effects. </p>
 <p> Furthermore, consider the following scenario where two threads are performing operations on the same file descriptor:</p>
 <dl>
-<dt>1.</p>
-<dd> One thread is blocked in an I/O system call on the file descriptor. For example, it is trying to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) to a pipe that is already full, or trying to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) from a stream socket which currently has no available data.</p>
-<dt>2.</p>
-<dd> Another thread closes the file descriptor.</dl>
+<dt>1.</dt>
+<dd> One thread is blocked in an I/O system call on the file descriptor. For example, it is trying to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) to a pipe that is already full, or trying to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) from a stream socket which currently has no available data.</dd>
+<dt>2.</dt>
+<dd> Another thread closes the file descriptor.</dd></dl>
 <p> The behavior in this situation varies across systems. On some systems, when the file descriptor is closed, the blocking system call returns immediately with an error. </p>
 <p> On Linux (and possibly some other systems), the behavior is different. the blocking I/O system call holds a reference to the underlying open file description, and this reference keeps the description open until the I/O system call completes. (See <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for a discussion of open file descriptions.) Thus, the blocking system call in the first thread may successfully complete after the <code>close</code>() in the second thread.</p>
 <h3>Dealing with error returns from close()</h3>
@@ -54,14 +54,14 @@ int close(int fd);
 <p> The <code>EINTR</code> error is a somewhat special case. Regarding the <code>EINTR</code> error, POSIX.1-2008 says: </p>
 <dl>
 <dt>
-<dd> If <code>close</code>() is interrupted by a signal that is to be caught, it shall return -1 with <i>errno</i> set to <code>EINTR</code> and the state of <i>fildes</i> is unspecified.</dl>
+</dt><dd> If <code>close</code>() is interrupted by a signal that is to be caught, it shall return -1 with <i>errno</i> set to <code>EINTR</code> and the state of <i>fildes</i> is unspecified.</dd></dl>
 <p> This permits the behavior that occurs on Linux and many other implementations, where, as with other errors that may be reported by <code>close</code>(), the file descriptor is guaranteed to be closed. However, it also permits another possibility: that the implementation returns an <code>EINTR</code> error and keeps the file descriptor open. (According to its documentation, HP-UX&#8217;s <code>close</code>() does this.) The caller must then once more use <code>close</code>() to close the file descriptor, to avoid file descriptor leaks. This divergence in implementation behaviors provides a difficult hurdle for portable applications, since on many implementations, <code>close</code>() must not be called again after an <code>EINTR</code> error, and on at least one, <code>close</code>() must be called again. There are plans to address this conundrum for the next major release of the POSIX.1 standard.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-shutdown/">shutdown</a></code>(2), <code><a href="/docs/linux/man/2-unlink/">unlink</a></code>(2), <code><a href="/docs/linux/man/3-fclose/">fclose</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">SEE ALSO</a></p>
+<dt><a href="#lbAK">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAL">COLOPHON</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">COLOPHON</a></dt>
+<dd></dd></dl>

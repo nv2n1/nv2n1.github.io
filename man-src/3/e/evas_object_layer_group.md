@@ -17,22 +17,22 @@ description: "Object Layer Functions – Functions that retrieve and set the lay
 <p>Functions that retrieve and set the layer that an evas object is on. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Document which way layers go.</dl>
+<dd>Document which way layers go.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>EAPI short evas_object_layer_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Retrieves the layer of the evas that the given object is part of. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas object.</dl>
+<dd><i>obj</i> The given evas object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of the layer.</dl>
+<dd>Number of the layer.</dd></dl>
 <h3>EAPI void evas_object_layer_set (<code>Evas_Object</code> * obj, short l)</h3>
 <p>Sets the layer of the evas that the given object will be part of. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given evas object.<br />
- <i>l</i> The number of the layer to place the object on.</dl>
+ <i>l</i> The number of the layer to place the object on.</dd></dl>
 <p> References evas_list_find().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

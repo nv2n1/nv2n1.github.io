@@ -14,10 +14,10 @@ description: "gnutls_certificate_set_verify_function – API function"
 <p> <code>void gnutls_certificate_set_verify_function(gnutls_certificate_credentials_t </code><i>cred</i><code>, gnutls_certificate_verify_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t cred</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_certificate_verify_function * func</p>
-<dd> is the callback function</dl>
+<dt>gnutls_certificate_credentials_t cred</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_certificate_verify_function * func</dt>
+<dd> is the callback function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets a callback to be called when peer&#8217;s certificate has been received in order to verify it on receipt rather than doing after the handshake is completed. </p>
 <p> The callback&#8217;s function prototype is: int (*callback)(gnutls_session_t); </p>
@@ -34,6 +34,6 @@ description: "gnutls_certificate_set_verify_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

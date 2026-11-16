@@ -19,11 +19,11 @@ url: "/docs/linux/man/3-ibv_rate_to_mult/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_rate_to_mult(enum ibv_rate rate);
 enum ibv_rate mult_to_ibv_rate(int mult);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

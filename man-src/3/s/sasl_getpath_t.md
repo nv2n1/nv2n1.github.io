@@ -10,7 +10,6 @@ description: "sasl_getpath_t – The SASL callback to indicate location of the m
 <p>sasl_getpath_t &#8211; The SASL callback to indicate location of the mechanism drivers </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_getpath_t(void *context,
                    char **path);</code></pre>
 <h2>Description</h2>

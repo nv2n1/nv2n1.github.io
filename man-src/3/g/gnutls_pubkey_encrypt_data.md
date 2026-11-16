@@ -14,14 +14,14 @@ description: "gnutls_pubkey_encrypt_data – API function"
 <p> <code>int gnutls_pubkey_encrypt_data(gnutls_pubkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>plaintext</i><code>, gnutls_datum_t * </code><i>ciphertext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t key</p>
-<dd> Holds the public key</p>
-<dt>unsigned int flags</p>
-<dd> should be 0 for now</p>
-<dt>const gnutls_datum_t * plaintext</p>
-<dd> The data to be encrypted</p>
-<dt>gnutls_datum_t * ciphertext</p>
-<dd> contains the encrypted data</dl>
+<dt>gnutls_pubkey_t key</dt>
+<dd> Holds the public key</dd>
+<dt>unsigned int flags</dt>
+<dd> should be 0 for now</dd>
+<dt>const gnutls_datum_t * plaintext</dt>
+<dd> The data to be encrypted</dd>
+<dt>gnutls_datum_t * ciphertext</dt>
+<dd> contains the encrypted data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will encrypt the given data, using the public key.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_pubkey_encrypt_data – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

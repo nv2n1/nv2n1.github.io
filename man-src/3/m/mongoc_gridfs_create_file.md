@@ -14,11 +14,11 @@ mongoc_gridfs_create_file (mongoc_gridfs_t *gridfs,
  mongoc_gridfs_file_opt_t *opt);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>gridfs</code></p>
-<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dl>
+<dt><code>gridfs</code></dt>
+<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>opt</code></p>
-<dd>A <code>mongoc_gridfs_file_opt_t</code> to specify file options.</dl>
+<dt><code>opt</code></dt>
+<dd>A <code>mongoc_gridfs_file_opt_t</code> to specify file options.</dd></dl>
 <h2>Description</h2>
 <p>This function shall create a new <code>mongoc_gridfs_file_t</code> \&amp;. </p>
 <p> Use <code><a href="/docs/linux/man/3-mongoc_gridfs_file_writev/">mongoc_gridfs_file_writev</a>(3)</code> to write to the file. </p>

@@ -14,13 +14,13 @@ description: "ata_scsi_translate – Translate then issue SCSI command to ATA de
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>ATA device to which the command is addressed</dl>
+</dd><dd>ATA device to which the command is addressed</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>SCSI command to execute</dl>
+<dd>SCSI command to execute</dd></dl>
 <p> <i>xlat_func</i></p>
 <dl>
-<dd>Actor which translates <i>cmd</i> to an ATA taskfile</dl>
+<dd>Actor which translates <i>cmd</i> to an ATA taskfile</dd></dl>
 <h2>Description</h2>
 <p>Our -&gt;<code>queuecommand</code> function has decided that the SCSI command issued can be directly translated into an ATA command, rather than handled internally. </p>
 <p> This function sets up an ata_queued_cmd structure for the SCSI command, and sends that ata_queued_cmd to the hardware. </p>
@@ -31,5 +31,5 @@ description: "ata_scsi_translate – Translate then issue SCSI command to ATA de
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

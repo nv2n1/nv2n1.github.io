@@ -43,14 +43,14 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_SSH_KEYFUNCTION,
 <p> It gets called when the known_host matching has been done, to allow the application to act and decide for libcurl how to proceed. The callback will only be called if <i><a href="/docs/linux/man/3-curlopt_ssh_knownhosts/">CURLOPT_SSH_KNOWNHOSTS</a>(3)</i> is also set. </p>
 <p> This callback function gets passed the CURL handle, the key from the known_hosts file <i>knownkey</i>, the key from the remote site <i>foundkey</i>, info from libcurl on the matching status and a custom pointer (set with <i><a href="/docs/linux/man/3-curlopt_ssh_keydata/">CURLOPT_SSH_KEYDATA</a>(3)</i>). It MUST return one of the following return codes to tell libcurl how to act: </p>
 <dl COMPACT>
-<dt>CURLKHSTAT_FINE_ADD_TO_FILE</p>
-<dd>The host+key is accepted and libcurl will append it to the known_hosts file before continuing with the connection. This will also add the host+key combo to the known_host pool kept in memory if it wasn&#8217;t already present there. The adding of data to the file is done by completely replacing the file with a new copy, so the permissions of the file must allow this.</p>
-<dt>CURLKHSTAT_FINE</p>
-<dd>The host+key is accepted libcurl will continue with the connection. This will also add the host+key combo to the known_host pool kept in memory if it wasn&#8217;t already present there.</p>
-<dt>CURLKHSTAT_REJECT</p>
-<dd>The host+key is rejected. libcurl will deny the connection to continue and it will be closed.</p>
-<dt>CURLKHSTAT_DEFER</p>
-<dd>The host+key is rejected, but the SSH connection is asked to be kept alive. This feature could be used when the app wants to somehow return back and act on the host+key situation and then retry without needing the overhead of setting it up from scratch again.</dl>
+<dt>CURLKHSTAT_FINE_ADD_TO_FILE</dt>
+<dd>The host+key is accepted and libcurl will append it to the known_hosts file before continuing with the connection. This will also add the host+key combo to the known_host pool kept in memory if it wasn&#8217;t already present there. The adding of data to the file is done by completely replacing the file with a new copy, so the permissions of the file must allow this.</dd>
+<dt>CURLKHSTAT_FINE</dt>
+<dd>The host+key is accepted libcurl will continue with the connection. This will also add the host+key combo to the known_host pool kept in memory if it wasn&#8217;t already present there.</dd>
+<dt>CURLKHSTAT_REJECT</dt>
+<dd>The host+key is rejected. libcurl will deny the connection to continue and it will be closed.</dd>
+<dt>CURLKHSTAT_DEFER</dt>
+<dd>The host+key is rejected, but the SSH connection is asked to be kept alive. This feature could be used when the app wants to somehow return back and act on the host+key situation and then retry without needing the overhead of setting it up from scratch again.</dd></dl>
 <h2>Default</h2>
 <p>NULL</p>
 <h2>Protocols</h2>

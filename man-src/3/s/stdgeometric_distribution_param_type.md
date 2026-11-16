@@ -14,13 +14,7 @@ description: "std::geometric_distribution< _IntType >::param_type –"
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (double __p=0.5)
-
-
-
 double p () const
-
-
-
 Friends</code></pre>
 <p> class <code>geometric_distribution&lt; _IntType &gt;</code> </p>
 <p> bool <code>operator==</code> (const <code>param_type</code> &amp;__p1, const <code>param_type</code> &amp;__p2)</p>

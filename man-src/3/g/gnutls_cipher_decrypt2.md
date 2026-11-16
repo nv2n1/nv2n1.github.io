@@ -14,16 +14,16 @@ description: "gnutls_cipher_decrypt2 – API function"
 <p> <code>int gnutls_cipher_decrypt2(gnutls_cipher_hd_t </code><i>handle</i><code>, const void * </code><i>ciphertext</i><code>, size_t </code><i>ciphertextlen</i><code>, void * </code><i>text</i><code>, size_t </code><i>textlen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_cipher_hd_t handle</p>
-<dd> is a <code>gnutls_cipher_hd_t</code> structure.</p>
-<dt>const void * ciphertext</p>
-<dd> the data to encrypt</p>
-<dt>size_t ciphertextlen</p>
-<dd> The length of data to encrypt</p>
-<dt>void * text</p>
-<dd> the decrypted data</p>
-<dt>size_t textlen</p>
-<dd> The available length for decrypted data</dl>
+<dt>gnutls_cipher_hd_t handle</dt>
+<dd> is a <code>gnutls_cipher_hd_t</code> structure.</dd>
+<dt>const void * ciphertext</dt>
+<dd> the data to encrypt</dd>
+<dt>size_t ciphertextlen</dt>
+<dd> The length of data to encrypt</dd>
+<dt>void * text</dt>
+<dd> the decrypted data</dd>
+<dt>size_t textlen</dt>
+<dd> The available length for decrypted data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will decrypt the given data using the algorithm specified by the context. </p>
 <p> Note that in AEAD ciphers, this will not check the tag. You will need to compare the tag sent with the value returned from <code>gnutls_cipher_tag()</code>.</p>
@@ -40,6 +40,6 @@ description: "gnutls_cipher_decrypt2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

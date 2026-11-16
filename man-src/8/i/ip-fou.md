@@ -11,13 +11,9 @@ description: "ip-fou – Foo-over-UDP receive port configuration"
 <p> ip-gue &#8211; Generic UDP Encapsulation receive port configuration</p>
 <h2>Synopsis</h2>
 <pre><code>ip
-
 [ OPTIONS ]
-
 fou
-
 { COMMAND |
-
     help }</code></pre>
 <p> <code>ip fou add</code> <code>port</code> <i>PORT</i> { <code>gue</code> | <code>ipproto</code> <i>PROTO</i> } [ <code>local</code> <i>IFADDR</i> ] [ <code>peer</code> <i>IFADDR</i> ] [ <code>peer_port</code> <i>PORT</i> ] [ <code>dev</code> <i>IFNAME</i> ] </p>
 <p> <code>ip fou del</code> <code>port</code> <i>PORT</i> [ <code>local</code> <i>IFADDR</i> ] [ <code>peer</code> <i>IFADDR</i> ] [ <code>peer_port</code> <i>PORT</i> ] [ <code>dev</code> <i>IFNAME</i> ] </p>

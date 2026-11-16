@@ -14,14 +14,14 @@ description: "gnutls_hmac_init – API function"
 <p> <code>int gnutls_hmac_init(gnutls_hmac_hd_t * </code><i>dig</i><code>, gnutls_mac_algorithm_t </code><i>algorithm</i><code>, const void * </code><i>key</i><code>, size_t </code><i>keylen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_hmac_hd_t * dig</p>
-<dd> is a <code>gnutls_hmac_hd_t</code> structure.</p>
-<dt>gnutls_mac_algorithm_t algorithm</p>
-<dd> the HMAC algorithm to use</p>
-<dt>const void * key</p>
-<dd> The key to be used for encryption</p>
-<dt>size_t keylen</p>
-<dd> The length of the key</dl>
+<dt>gnutls_hmac_hd_t * dig</dt>
+<dd> is a <code>gnutls_hmac_hd_t</code> structure.</dd>
+<dt>gnutls_mac_algorithm_t algorithm</dt>
+<dd> the HMAC algorithm to use</dd>
+<dt>const void * key</dt>
+<dd> The key to be used for encryption</dd>
+<dt>size_t keylen</dt>
+<dd> The length of the key</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will initialize an context that can be used to produce a Message Authentication Code (MAC) of data. This will effectively use the current crypto backend in use by gnutls or the cryptographic accelerator in use. </p>
 <p> Note that despite the name of this function, it can be used for other MAC algorithms than HMAC.</p>
@@ -38,6 +38,6 @@ description: "gnutls_hmac_init – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

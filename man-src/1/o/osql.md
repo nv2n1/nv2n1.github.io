@@ -16,14 +16,14 @@ description: "osql – utility to test FreeTDS connections and queries"
 <p> works only with the isql that comes with unixODBC.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-S </code><i>dsn</i></p>
-<dd> the Data Source Name to which to connect, as known to odbc.ini</p>
-<dt><code>-U </code><i>username</i></p>
-<dd> database login name.</p>
-<dt><code>-P </code><i>password</i></p>
-<dd> database password.</p>
-<dt><code>-I </code><i>ini_dir</i></p>
-<dd> override odbc.ini file location.</dl>
+<dt><code>-S </code><i>dsn</i></dt>
+<dd> the Data Source Name to which to connect, as known to odbc.ini</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd> database login name.</dd>
+<dt><code>-P </code><i>password</i></dt>
+<dd> database password.</dd>
+<dt><code>-I </code><i>ini_dir</i></dt>
+<dd> override odbc.ini file location.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> If you have an odbc.ini with a section like this: </p>
 <blockquote>

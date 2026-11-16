@@ -20,14 +20,14 @@ description: "pamtowinicon – convert Netpbm PAM images to a Microsoft Windows 
 <h2>OPTIONS</h2>
 <p> In addition to the options common to all programs based on libnetpbm (most notably <code>-quiet</code>, see Common Options ), <code>pamtowinicon</code> recognizes the following command line options: </p>
 <dl>
-<dt><code>-pngthreshold=</code><i>threshold</i></p>
-<dd> <code>pamtowinicon</code> encodes images with resolutions above or equal <i>threshold</i> by <i>threshold</i> as PNG by running <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1) using the more traditional BMP format. </p>
+<dt><code>-pngthreshold=</code><i>threshold</i></dt>
+<dd> <code>pamtowinicon</code> encodes images with resolutions above or equal <i>threshold</i> by <i>threshold</i> as PNG by running <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1) using the more traditional BMP format. </dd>
 <p> When the program uses PNG encoding for a 5-channel PAM with separate AND mask (see below), it discards the AND mask. </p>
 <p> The default value for <i>threshold</i> is 128. </p>
-<dt><code>-truetransparent</code></p>
-<dd> Make all pixels outside the opaque area black, avoiding inversion and other effects on the background of the image (see <code>Windows</code>Icons<code>(1)</code> ). </p>
-<dt><code>-verbose</code></p>
-<dd> Print more messages </p>
+<dt><code>-truetransparent</code></dt>
+<dd> Make all pixels outside the opaque area black, avoiding inversion and other effects on the background of the image (see <code>Windows</code>Icons<code>(1)</code> ). </dd>
+<dt><code>-verbose</code></dt>
+<dd> Print more messages </dd>
 </dl>
 <h2>IMAGES</h2>
 <p> <code>pamtowinicon</code> reads a (multi-image) Netpbm PAM file as input and outputs an single Windows icon file containing those images. </p>
@@ -46,19 +46,19 @@ description: "pamtowinicon – convert Netpbm PAM images to a Microsoft Windows 
 <p> <code>pamtowinicon</code> generates neither 16-bit <code>BI_RGB</code> nor <code>BI_BITFIELDS</code> BMP encoded images, even if the maxval of the input PAM is not 255. </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-winicontopam/">winicontopam</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-ppmtowinicon/">ppmtowinicon</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code>pam</code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code>Windows</code>Icons<code>(1)</code> </p>
-</dl>
+</dd></dl>
 <p> For information on the PNG format, see <a rel="nofollow" href="http://schaik.com/png">http://schaik.com/png</a> . </p>
 <h2>HISTORY</h2>
 <p> <code>pamtowinicon</code> was new in Netpbm 10.63 (June 2013). It obsoleted <code>ppmtowinicon</code> by providing more function and conforming better to Netpbm conventions. </p>

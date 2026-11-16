@@ -21,8 +21,8 @@ description: "acl_get_perm – test for a permission in an ACL permission set"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_get_perm function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>permset_d</i> is not a valid descriptor for a permission set within an ACL entry. </p>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>permset_d</i> is not a valid descriptor for a permission set within an ACL entry. </dd>
 <p> The argument <i>perm</i> is not a valid <i>acl_perm_t</i> value.</dl>
 <h2>STANDARDS</h2>
 <p> This is a non-portable, Linux specific extension to the ACL manipulation functions defined in IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned).</p>
@@ -31,3 +31,4 @@ description: "acl_get_perm – test for a permission in an ACL permission set"
 <h2>AUTHOR</h2>
 <p> Written by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
 <h2>Index</h2>
+</p>

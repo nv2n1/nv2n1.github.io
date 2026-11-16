@@ -85,11 +85,11 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  The caller needs to at least have called the following functions on the to-be-signed certificate object:
 <dl>
 <dt>&bull;
-<dd> <b>hx509_ca_tbs_init()</b>
-<dt>&bull;
-<dd> <b>hx509_ca_tbs_set_subject()</b>
-<dt>&bull;
-<dd> <b>hx509_ca_tbs_set_spki()</b></dl>
+</dt><dd> <b>hx509_ca_tbs_init()</b>
+</dd><dt>&bull;
+</dt><dd> <b>hx509_ca_tbs_set_subject()</b>
+</dd><dt>&bull;
+</dt><dd> <b>hx509_ca_tbs_set_spki()</b></dd></dl>
  
 
  
@@ -101,16 +101,16 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
  <i>signer</i> the CA certificate object to sign with (need private key). 
- <i>certificate</i> return cerificate, free with <b>hx509_cert_free()</b>.</dl>
+ <i>certificate</i> return cerificate, free with <b>hx509_cert_free()</b>.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -122,16 +122,16 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
  <i>signer</i> private key to sign with. 
- <i>certificate</i> return cerificate, free with <b>hx509_cert_free()</b>.</dl>
+ <i>certificate</i> return cerificate, free with <b>hx509_cert_free()</b>.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -143,16 +143,16 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
  <i>uri</i> uri to the CRL. 
- <i>issuername</i> name of the issuer.</dl>
+ <i>issuername</i> name of the issuer.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  issuername not supported
@@ -164,15 +164,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>oid</i> extended key usage to add.</dl>
+ <i>oid</i> extended key usage to add.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -186,15 +186,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>dnsname</i> a hostame.</dl>
+ <i>dnsname</i> a hostame.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -206,15 +206,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>jid</i> string of an a jabber id in UTF8.</dl>
+ <i>jid</i> string of an a jabber id in UTF8.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -226,15 +226,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>principal</i> Microsoft UPN string.</dl>
+ <i>principal</i> Microsoft UPN string.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -246,16 +246,16 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
  <i>oid</i> the oid of the OtherName. 
- <i>os</i> data in the other name.</dl>
+ <i>os</i> data in the other name.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -267,15 +267,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>principal</i> Kerberos principal to add to the certificate.</dl>
+ <i>principal</i> Kerberos principal to add to the certificate.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -287,15 +287,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>rfc822Name</i> a string to a email address.</dl>
+ <i>rfc822Name</i> a string to a email address.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -307,7 +307,7 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>tbs</i> object to free.</dl>
+</dt><dd> <i>tbs</i> object to free.</dd></dl>
  
 
  
@@ -319,14 +319,14 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
- <i>tbs</i> returned to-be-signed certicate object, free with <b>hx509_ca_tbs_free()</b>.</dl>
+</dt><dd> <i>context</i> A hx509 context. 
+ <i>tbs</i> returned to-be-signed certicate object, free with <b>hx509_ca_tbs_free()</b>.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -338,15 +338,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dl>
+ <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -358,14 +358,14 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
- <i>tbs</i> object to be signed.</dl>
+</dt><dd> <i>context</i> A hx509 context. 
+ <i>tbs</i> object to be signed.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -377,15 +377,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>t</i> time when the certificate will expire</dl>
+ <i>t</i> time when the certificate will expire</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -397,15 +397,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>delta</i> seconds to the certificate is going to expire.</dl>
+ <i>delta</i> seconds to the certificate is going to expire.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -417,15 +417,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>t</i> time the certificated will start to be valid</dl>
+ <i>t</i> time the certificated will start to be valid</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -437,15 +437,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dl>
+ <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -457,15 +457,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>serialNumber</i> serial number to use for the to-be-signed certificate object.</dl>
+ <i>serialNumber</i> serial number to use for the to-be-signed certificate object.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -477,15 +477,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>sigalg</i> signature algorithm to use</dl>
+ <i>sigalg</i> signature algorithm to use</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -497,15 +497,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>spki</i> subject public key info to use for the to-be-signed certificate object.</dl>
+ <i>spki</i> subject public key info to use for the to-be-signed certificate object.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -517,15 +517,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>subject</i> the name to set a subject.</dl>
+ <i>subject</i> the name to set a subject.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -537,16 +537,16 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
  <i>flags</i> bit field selecting what to copy from the template certifiate. 
- <i>cert</i> template certificate.</dl>
+ <i>cert</i> template certificate.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -560,16 +560,16 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
  <i>issuerUniqueID</i> to be set 
- <i>subjectUniqueID</i> to be set</dl>
+ <i>subjectUniqueID</i> to be set</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -581,15 +581,15 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context. 
+</dt><dd> <i>context</i> A hx509 context. 
  <i>tbs</i> object to be signed. 
- <i>env</i> enviroment variable to expand variables in the subject name, see hx509_env_init().</dl>
+ <i>env</i> enviroment variable to expand variables in the subject name, see hx509_env_init().</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dl>
+</dt><dd> An hx509 error code, see <b>hx509_get_error_string()</b>.</dd></dl>
  
 
  
@@ -601,7 +601,7 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> an units structure.</dl>
+</dt><dd> an units structure.</dd></dl>
  
 
  

@@ -17,14 +17,14 @@ description: "tiff2rgba – convert a TIFF image to RGBA color space"
 <p> The generated images are stripped images with four samples per pixel (red, green, blue and alpha) or if the <code>-n</code> flag is used, three samples per pixel (red, green, and blue). The resulting images are always planar configuration contiguous. For this reason, this program is a useful utility for transform exotic TIFF files into a form ingestible by almost any TIFF supporting software.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Specify a compression scheme to use when writing image data: <code>-c none</code> for no compression (the default), <code>-c packbits</code> for the PackBits compression algorithm, <code>-c zip</code> for the Deflate compression algorithm, <code>-c jpeg</code> for the JPEG compression algorithm, and <code>-c lzw</code> for Lempel-Ziv &amp; Welch.</p>
-<dt><code>-r</code></p>
-<dd> Write data with a specified number of rows per strip; by default the number of rows/strip is selected so that each strip is approximately 8 kilobytes.</p>
-<dt><code>-b</code></p>
-<dd> Process the image one block (strip/tile) at a time instead of by reading the whole image into memory at once. This may be necessary for very large images on systems with limited RAM.</p>
-<dt><code>-n</code></p>
-<dd> Drop the alpha component from the output file, producing a pure RGB file. Currently this does not work if the <code>-b</code> flag is also in effect.</dl>
+<dt><code>-c</code></dt>
+<dd> Specify a compression scheme to use when writing image data: <code>-c none</code> for no compression (the default), <code>-c packbits</code> for the PackBits compression algorithm, <code>-c zip</code> for the Deflate compression algorithm, <code>-c jpeg</code> for the JPEG compression algorithm, and <code>-c lzw</code> for Lempel-Ziv &amp; Welch.</dd>
+<dt><code>-r</code></dt>
+<dd> Write data with a specified number of rows per strip; by default the number of rows/strip is selected so that each strip is approximately 8 kilobytes.</dd>
+<dt><code>-b</code></dt>
+<dd> Process the image one block (strip/tile) at a time instead of by reading the whole image into memory at once. This may be necessary for very large images on systems with limited RAM.</dd>
+<dt><code>-n</code></dt>
+<dd> Drop the alpha component from the output file, producing a pure RGB file. Currently this does not work if the <code>-b</code> flag is also in effect.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tiff2bw/">tiff2bw</a></code>(1), <code>TIFFReadRGBAImage</code>(3t), <code>libtiff</code>(3) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>

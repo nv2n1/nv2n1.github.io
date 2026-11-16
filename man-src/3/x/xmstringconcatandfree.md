@@ -16,10 +16,10 @@ description: "XmStringConcatAndFree — A compound string function that appends 
 <h2>Description</h2>
 <p><code>XmStringConcatAndFree</code> copies <i>s2</i> to the end of <i>s1</i> and returns a copy of the resulting compound string. The original strings are freed. The function will allocate space to hold the returned compound string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmStringFree</code>.</p>
 <dl COMPACT>
-<dt><i>s1</i></p>
-<dd>Specifies the compound string to which a copy of <i>s2</i> is appended</p>
-<dt><i>s2</i></p>
-<dd>Specifies the compound string that is appended to the end of <i>s1</i></dl>
+<dt><i>s1</i></dt>
+<dd>Specifies the compound string to which a copy of <i>s2</i> is appended</dd>
+<dt><i>s2</i></dt>
+<dd>Specifies the compound string that is appended to the end of <i>s1</i></dd></dl>
 <p> The <code>XmStringConcatAndFree</code> function works like the <code>XmStringConcat</code> function, except that it frees the <i>s1</i> and <i>s2</i> strings, and is therefore more efficient. You should use <code>XmStringConcatAndFree</code> instead of <code>XmStringConcat</code> if you want <i>s1</i> and <i>s2</i> to be freed afterwards.</p>
 <h2>Return</h2>
 <p>Returns a new compound string.</p>

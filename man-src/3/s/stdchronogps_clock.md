@@ -16,13 +16,9 @@ Leap seconds are not inserted into GPS. Thus, every time a leap second is insert
 gps_clock meets the Clock requirements. It does not meet the TrivialClock requirements unless the implementation can guarantee that now() does not throw an exception.<br />
 Time point family </p>
 <pre><code>Defined in namespace std::chrono
-
 template&lt;class Duration&gt;                                                     (since C++20)
-
 using gps_time = std::chrono::time_point&lt;std::chrono::gps_clock, Duration&gt;;
-
 using gps_seconds = gps_time&lt;std::chrono::seconds&gt;;                          (since C++20)
-
 </code></pre>
 <p>operator&lt;&lt;_(std::chrono::gps_time) performs stream output on a gps_time<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />

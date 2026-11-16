@@ -15,21 +15,21 @@ description: "update-initramfs – generate an initramfs image"
 <p>The <code>update-initramfs</code> script manages your initramfs images on your local box. It keeps track of the existing initramfs archives in /boot. There are three modes of operation create, update or delete. You must at least specify one of those modes. The initramfs is a gzipped cpio archive. At boot time, the kernel unpacks that archive into RAM disk, mounts and uses it as initial root file system. All finding of the root device happens in this early userspace. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-k </code><i> version</p>
-<dd>Set the specific kernel version for whom the initramfs will be generated. For example the output of uname -r for your currently running kernel. This argument is optional for update. The default is the latest kernel version. </p>
+<dt><code>-k </code><i> version</dt>
+<dd>Set the specific kernel version for whom the initramfs will be generated. For example the output of uname -r for your currently running kernel. This argument is optional for update. The default is the latest kernel version. </dd>
 <p> The use of &quot;all&quot; for the version</i> string specifies that <code>update-initramfs</code> should operate on all installed kernel versions (with <code>-c</code>), or on all installed kernel versions that already have an initramfs (with <code>-d</code> or <code>-u</code>). </p>
-<dt><code>-c</p>
-<dd>This mode creates a new initramfs. </p>
-<dt>-u</p>
-<dd>This mode updates an existing initramfs. </p>
-<dt>-d</p>
-<dd>This mode deletes an existing initramfs. </p>
-<dt>-v</p>
-<dd>This option increases the amount of information you are given during the chosen action. </p>
-<dt>-b </code><i> directory</p>
-<dd>Set an different bootdir for the image creation. </p>
-<dt></i><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print a short help page describing the available options in <code>update-initramfs.</code> </p>
+<dt><code>-c</dt>
+<dd>This mode creates a new initramfs. </dd>
+<dt>-u</dt>
+<dd>This mode updates an existing initramfs. </dd>
+<dt>-d</dt>
+<dd>This mode deletes an existing initramfs. </dd>
+<dt>-v</dt>
+<dd>This option increases the amount of information you are given during the chosen action. </dd>
+<dt>-b </code><i> directory</dt>
+<dd>Set an different bootdir for the image creation. </dd>
+<dt></i><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print a short help page describing the available options in <code>update-initramfs.</code> </dd>
 </dl>
 <h2>Examples</h2>
 <p>Update the initramfs of the newest kernel: <code>update-initramfs -u</code> Create the initramfs for a specific kernel: <code>update-initramfs -c -k 2.6.18-1-686</code> </p>

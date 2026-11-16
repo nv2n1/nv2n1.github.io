@@ -32,7 +32,7 @@ define device default {
 <p> Device properties specified outside of any device definition apply to all devices. This syntax is provided mainly for backward compatibility, and for simple Amanda configurations. Note that there is no way to provide properties specific to a device without defining a device alias. </p>
 <p> See <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7) for details on how devices are configured, and in particular on how device properties are specified. See <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5) for more information on Amanda configuration in general. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> There is no way to reset a device property to its default value. </p>
 </dl>
 <h2>Properties</h2>
@@ -45,69 +45,69 @@ device-property &quot;USE_QUBITS&quot; &quot;no&quot;</pre>
 <p> Some properties are set based on other configuration values, such as tapetype parameters. These special cases are detailed under the appropriate property, below. </p>
 <p> The order in which device properties are set is as follows: </p>
 <dl>
-<dd>1. Tapetype parameters (including length, blocksize, and readblocksize) are translated into device properties and set accordingly.</dl>
+<dd>1. Tapetype parameters (including length, blocksize, and readblocksize) are translated into device properties and set accordingly.</dd></dl>
 <dl>
-<dd>2. Device properties from any device-property configuration parameters are set, in the order they appear in the configuration file.</dl>
+<dd>2. Device properties from any device-property configuration parameters are set, in the order they appear in the configuration file.</dd></dl>
 <p> Properties described as read-only are not accessible to users. They are listed here for completeness.</p>
 <h3>Common Properties</h3>
 <p>Note that some of these properties are currently unused, and present only for future expansion. Not all devices implement all of these properties. </p>
 <p> APPENDABLE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This boolean property indicates whether this device supports appending data to volumes.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This boolean property indicates whether this device supports appending data to volumes.</dd></dl>
 <p> BLOCK_SIZE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property gives the block size, in bytes, that will be used to write to the device.&nbsp;<wbr>&nbsp;<wbr>The usual suffixes&nbsp;<wbr>(&quot;kbytes&quot;, etc.)&nbsp;<wbr>are allowed.&nbsp;<wbr>&nbsp;<wbr>The tapetype parameter&nbsp;<wbr><i>blocksize</i>&nbsp;<wbr>sets this property.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property gives the block size, in bytes, that will be used to write to the device.&nbsp;<wbr>&nbsp;<wbr>The usual suffixes&nbsp;<wbr>(&quot;kbytes&quot;, etc.)&nbsp;<wbr>are allowed.&nbsp;<wbr>&nbsp;<wbr>The tapetype parameter&nbsp;<wbr><i>blocksize</i>&nbsp;<wbr>sets this property.</dd></dl>
 <p> CANONICAL_NAME</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property contains the full canonical name for this device.&nbsp;<wbr>&nbsp;<wbr>This name may not be the same as the user-supplied name, but is a valid name by which to access this device.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property contains the full canonical name for this device.&nbsp;<wbr>&nbsp;<wbr>This name may not be the same as the user-supplied name, but is a valid name by which to access this device.</dd></dl>
 <p> COMMENT</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This string property is entirely for the user&#8217;s convenience.&nbsp;<wbr>&nbsp;<wbr>It is supported by all devices, but no device interprets its value in any way.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This string property is entirely for the user&#8217;s convenience.&nbsp;<wbr>&nbsp;<wbr>It is supported by all devices, but no device interprets its value in any way.</dd></dl>
 <p> COMPRESSION</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property represents the compression status of the device, and can be used to enable and disable such compression.&nbsp;<wbr>&nbsp;<wbr>This applies mostly to tape devices, although many tape devices do not support setting compression from software.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property represents the compression status of the device, and can be used to enable and disable such compression.&nbsp;<wbr>&nbsp;<wbr>This applies mostly to tape devices, although many tape devices do not support setting compression from software.</dd></dl>
 <p> COMPRESSION_RATE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property gives the compression rate, as a decimal ratio.&nbsp;<wbr>&nbsp;<wbr>It may be a measured value over some unspecified period or a simple estimate.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property gives the compression rate, as a decimal ratio.&nbsp;<wbr>&nbsp;<wbr>It may be a measured value over some unspecified period or a simple estimate.</dd></dl>
 <p> CONCURRENCY</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property indicates the level of concurrent access that this device supports.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property indicates the level of concurrent access that this device supports.</dd></dl>
 <p> FULL_DELETION</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property indicates whether the device supports erasing the entire volume.&nbsp;<wbr>&nbsp;<wbr>Aside from S3 and VFS, most devices cannot support this feature.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property indicates whether the device supports erasing the entire volume.&nbsp;<wbr>&nbsp;<wbr>Aside from S3 and VFS, most devices cannot support this feature.</dd></dl>
 <p> LEOM</p>
 <dl>
-<dd>(read-write) If this property is true, then the device can detect an EOM condition before actually running out of space, allowing Amanda to forgo caching parts while writing. For some devices, it is necessary to override the conservative default value of this property.</dl>
+<dd>(read-write) If this property is true, then the device can detect an EOM condition before actually running out of space, allowing Amanda to forgo caching parts while writing. For some devices, it is necessary to override the conservative default value of this property.</dd></dl>
 <p> MAX_BLOCK_SIZE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property gives the maximum block size this device can support.&nbsp;<wbr>&nbsp;<wbr>See BLOCK SIZES, below.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property gives the maximum block size this device can support.&nbsp;<wbr>&nbsp;<wbr>See BLOCK SIZES, below.</dd></dl>
 <p> MEDIUM_ACCESS_TYPE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property gives the type of the media in the device: read only, WORM&nbsp;<wbr>(Write Once, Read Many), read/write, or write only.&nbsp;<wbr>&nbsp;<wbr>Write-only devices do not support recovery, but the data are not necessarily thrown out.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property gives the type of the media in the device: read only, WORM&nbsp;<wbr>(Write Once, Read Many), read/write, or write only.&nbsp;<wbr>&nbsp;<wbr>Write-only devices do not support recovery, but the data are not necessarily thrown out.</dd></dl>
 <p> MIN_BLOCK_SIZE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property gives the minimum block size this device can support.&nbsp;<wbr>&nbsp;<wbr>See BLOCK SIZES, below.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property gives the minimum block size this device can support.&nbsp;<wbr>&nbsp;<wbr>See BLOCK SIZES, below.</dd></dl>
 <p> MAX_VOLUME_USAGE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>On devices that support it, this property will limit the total amount of data written to a volume;&nbsp;<wbr>attempts to write beyond this point will cause the device to simulate&nbsp;<wbr>&quot;out of space.&quot;&nbsp;<wbr>&nbsp;<wbr>Zero means no limit.&nbsp;<wbr>&nbsp;<wbr>The tapetype parameter&nbsp;<wbr><i>length</i>&nbsp;<wbr>sets this property.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>On devices that support it, this property will limit the total amount of data written to a volume;&nbsp;<wbr>attempts to write beyond this point will cause the device to simulate&nbsp;<wbr>&quot;out of space.&quot;&nbsp;<wbr>&nbsp;<wbr>Zero means no limit.&nbsp;<wbr>&nbsp;<wbr>The tapetype parameter&nbsp;<wbr><i>length</i>&nbsp;<wbr>sets this property.</dd></dl>
 <p> ENFORCE_MAX_VOLUME_USAGE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>If this property is false, limit set by MAX_VOLUME_USAGE property&nbsp;<wbr>(and thus the tapetype LENGTH parameter)&nbsp;<wbr>will not be verified while writing to device, allowing the volume to expand without limit. If this property is true, then MAX_VOLUME_USAGE willbe enforced, limiting the total size of the volume. This property is not available on all devices;&nbsp;<wbr>see below.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>If this property is false, limit set by MAX_VOLUME_USAGE property&nbsp;<wbr>(and thus the tapetype LENGTH parameter)&nbsp;<wbr>will not be verified while writing to device, allowing the volume to expand without limit. If this property is true, then MAX_VOLUME_USAGE willbe enforced, limiting the total size of the volume. This property is not available on all devices;&nbsp;<wbr>see below.</dd></dl>
 <p> PARTIAL_DELETION</p>
 <dl>
-<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property indicates whether the device supports deletion of specific files.&nbsp;<wbr>&nbsp;<wbr>Aside from linear tapes and S3, most devices can support this feature.&nbsp;<wbr>&nbsp;<wbr>It is currently unused by Amanda.</dl>
+<dd>&nbsp;<wbr>(read-only)&nbsp;<wbr>This property indicates whether the device supports deletion of specific files.&nbsp;<wbr>&nbsp;<wbr>Aside from linear tapes and S3, most devices can support this feature.&nbsp;<wbr>&nbsp;<wbr>It is currently unused by Amanda.</dd></dl>
 <p> STREAMING</p>
 <dl>
-<dd>(read-only) This property gives the streaming requirement for this device. For example, tape drives often require a steady supply of data to avoid shoe-shining, while disk devices have no such requirement. Streaming is accomplished by buffering <code>device-output-buffer-size</code> bytes of data. The allowed values are &quot;none&quot; (no streaming buffer necessary), &quot;required&quot; (fill the buffer before starting to write), or &quot;desired&quot; (fill the buffer before starting to write, and if the buffer becomes empty, stop writing until it is completely full again).</dl>
+<dd>(read-only) This property gives the streaming requirement for this device. For example, tape drives often require a steady supply of data to avoid shoe-shining, while disk devices have no such requirement. Streaming is accomplished by buffering <code>device-output-buffer-size</code> bytes of data. The allowed values are &quot;none&quot; (no streaming buffer necessary), &quot;required&quot; (fill the buffer before starting to write), or &quot;desired&quot; (fill the buffer before starting to write, and if the buffer becomes empty, stop writing until it is completely full again).</dd></dl>
 <p> VERBOSE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>If this boolean property is set, then the device will produce verbose debugging output.&nbsp;<wbr>&nbsp;<wbr>This property is not recognized by most devices.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>If this boolean property is set, then the device will produce verbose debugging output.&nbsp;<wbr>&nbsp;<wbr>This property is not recognized by most devices.</dd></dl>
 <h3>Block Sizes</h3>
 <p>Amanda writes device data in blocks. On most devices the block boundaries are embedded in the media along with the data itself, so subsequent reads must use the same block sizes. On tape devices, the block size is dictated by the capabilities of the hardware &#8212; buffer sizes, physical format, and so on. </p>
 <p> Amanda has historically supported a single, fixed block size &#8212; usually 32k. The Device API adds the ability to specify a block size at runtime, using the BLOCK_SIZE property. Devices provide MIN_BLOCK_SIZE and MAX_BLOCK_SIZE as a guide to the range of acceptable block sizes. Note that this does not imply that all sizes in the range MIN_BLOCK_SIZE &#8211; MAX_BLOCK_SIZE are available &#8212; the device may require that block sizes are even multiples of some power of two, for example. Consult the documentation for your hardware and operating system for more information. </p>
 <p> Most devices are flexible enough to read a volume using a different block size than that with which it was written. This can be useful when handling old volumes written with a smaller blocksize, or volumes of unknown blocksize. Unfortunately, some tape devices do not detect oversized blocks correctly, and may lose data if the configured block size is smaller than the volume&#8217;s block size. The tape device driver has a READ_BLOCK_SIZE property which specifies the minimum buffer size that will be allocated for reads from tape. If the hardware supports it, setting this property allows Amanda to correctly read from tapes written with any blocksize less than or equal to READ_BLOCK_SIZE. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> The RAIT device does not support flexible block sizes, as its parity algorithm requires that all child devices have the same, fixed block size. </p>
 </dl>
 <h3>Leom Detection</h3>
@@ -143,7 +143,7 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;MYSECRETKEY&quot;</pre>
 <p> Amanda automatically creates a bucket when writing, if the bucket doesn&#8217;t already exist. At that time, it specifies where Amazon should store the data based on the S3_BUCKET_LOCATION property. If this property is not set, Amazon&#8217;s default value (equivalent to &quot;*&quot;) is used. The bucket location has both billing and legal concerns, so you are encouraged to consult Amazon&#8217;s documentation for details. </p>
 <p> Amazon does not permit changes to bucket locations, so this is a permanent specification. If the bucket already exists and the property is set, then Amanda checks the property against the location of the bucket, and produces an error if they do not match. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If a location constraint is set, the bucket name must consist only of lower-case letters, numbers, dashes, and dots. </p>
 </dl>
 <p> This driver supports the VERBOSE property, but use it carefully &#8212; it produces a great deal of output, and may cause spurious failures by filling your debug log partition. Its logging is generally only useful for developers chasing down a problem in communications with Amazon&#8217;s servers. </p>
@@ -156,82 +156,82 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;MYSECRETKEY&quot;</pre>
 device-property &quot;S3_SECRET_KEY&quot; &quot;agphc2Q7Zmxragphc2RmO2xragpzZGY7a2xqCgr&quot;</pre>
 <p>CLIENT_ID</p>
 <dl>
-<dd>(read-write) The client_id for oauth2.</dl>
+<dd>(read-write) The client_id for oauth2.</dd></dl>
 <p> CLIENT_SECRET</p>
 <dl>
-<dd>(read-write) The client_secret for oauth2.</dl>
+<dd>(read-write) The client_secret for oauth2.</dd></dl>
 <p> CREATE-BUCKET</p>
 <dl>
-<dd>(read-write) Default: yes. If amanda create/delete the bucket.</dl>
+<dd>(read-write) Default: yes. If amanda create/delete the bucket.</dd></dl>
 <p> REFRESH_TOKEN</p>
 <dl>
-<dd>(read-write) The refresh-token for oauth2.</dl>
+<dd>(read-write) The refresh-token for oauth2.</dd></dl>
 <p> MAX_RECV_SPEED</p>
 <dl>
-<dd>(read-write) Maximum speed, in bytes per second, that this device will receive data from S3. If the average speed exceeds this value, the device will stop reading long enough to bring the average below this value.</dl>
+<dd>(read-write) Maximum speed, in bytes per second, that this device will receive data from S3. If the average speed exceeds this value, the device will stop reading long enough to bring the average below this value.</dd></dl>
 <p> MAX_SEND_SPEED</p>
 <dl>
-<dd>(read-write) Maximum speed, in bytes per second, that this device will send data to S3. If the average speed exceeds this value, the device will stop writing long enough to bring the average below this value.</dl>
+<dd>(read-write) Maximum speed, in bytes per second, that this device will send data to S3. If the average speed exceeds this value, the device will stop writing long enough to bring the average below this value.</dd></dl>
 <p> S3_MULTI_DELETE</p>
 <dl>
-<dd>(read-write) If the server support the multi delete protocol (only Amazon S3), default is &quot;YES&quot;. If it fail, it revert to single delete.</dl>
+<dd>(read-write) If the server support the multi delete protocol (only Amazon S3), default is &quot;YES&quot;. If it fail, it revert to single delete.</dd></dl>
 <p> NB_THREADS_BACKUP</p>
 <dl>
-<dd>(read-write) The number of thread that send data to the s3 device, higher value can provide more throutput.</dl>
+<dd>(read-write) The number of thread that send data to the s3 device, higher value can provide more throutput.</dd></dl>
 <p> NB_THREADS_RECOVERY</p>
 <dl>
-<dd>(read-write) The number of thread that read data from the s3 device, higher value can provide more throutput.</dl>
+<dd>(read-write) The number of thread that read data from the s3 device, higher value can provide more throutput.</dd></dl>
 <p> OPENSTACK_SWIFT_API</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Deprecated, set&nbsp;<wbr>&quot;STORAGE_API to&nbsp;<wbr>&quot;SWIFT-1.0&quot;.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Deprecated, set&nbsp;<wbr>&quot;STORAGE_API to&nbsp;<wbr>&quot;SWIFT-1.0&quot;.</dd></dl>
 <p> PROXY</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The proxy hostname or IP in the format&nbsp;<wbr>&quot;host[:port]&quot;.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The proxy hostname or IP in the format&nbsp;<wbr>&quot;host[:port]&quot;.</dd></dl>
 <p> PASSWORD</p>
 <dl>
-<dd>(read-write) The password (for swift v2).</dl>
+<dd>(read-write) The password (for swift v2).</dd></dl>
 <p> PROJECT-ID</p>
 <dl>
-<dd>(read-write) The projectid (for google).</dl>
+<dd>(read-write) The projectid (for google).</dd></dl>
 <p> REUSE-CONNECTION</p>
 <dl>
-<dd>(read-write) Default: YES. Set it to &quot;NO&quot; if reusing a connection cause some bug, this is sometime the case with big block size.</dl>
+<dd>(read-write) Default: YES. Set it to &quot;NO&quot; if reusing a connection cause some bug, this is sometime the case with big block size.</dd></dl>
 <p> S3_ACCESS_KEY</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property gives the Amazon S3 access key used to access the service.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property gives the Amazon S3 access key used to access the service.</dd></dl>
 <p> S3_BUCKET_LOCATION</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Location constraint for buckets on Amazon S3. As of this writing, it can be set to &quot;*&quot; (US Standard, i.e. lowest-latency choice of US East or West), &quot;us-west-1&quot; (US West, Northern California), &quot;EU&quot; (European Union), or &quot;ap-southeast-1&quot; (Asia Pacific). See : <a rel="nofollow" href="http://docs.amazonwebservices.com/general/latest/gr/index.html?rande.html">http://docs.amazonwebservices.com/general/latest/gr/index.html?rande.html</a> for the most up-to-date list.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Location constraint for buckets on Amazon S3. As of this writing, it can be set to &quot;*&quot; (US Standard, i.e. lowest-latency choice of US East or West), &quot;us-west-1&quot; (US West, Northern California), &quot;EU&quot; (European Union), or &quot;ap-southeast-1&quot; (Asia Pacific). See : <a rel="nofollow" href="http://docs.amazonwebservices.com/general/latest/gr/index.html?rande.html">http://docs.amazonwebservices.com/general/latest/gr/index.html?rande.html</a> for the most up-to-date list.</dd></dl>
 <p> SSL_CA_INFO</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Path to CA certificate to use to verify the identity of the S3 server. Only applicable when SSL/TLS is in use. The certificate should be in PEM format if OpenSSL or GnuTLS is being used with libcurl. Multiple certificates can be bundled together simply by concatenating them. If NSS is being used, then it is the directory that the database resides in. The value is passed to <a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3) as CURLOPT_CAINFO.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Path to CA certificate to use to verify the identity of the S3 server. Only applicable when SSL/TLS is in use. The certificate should be in PEM format if OpenSSL or GnuTLS is being used with libcurl. Multiple certificates can be bundled together simply by concatenating them. If NSS is being used, then it is the directory that the database resides in. The value is passed to <a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3) as CURLOPT_CAINFO.</dd></dl>
 <p> S3_HOST</p>
 <dl>
-<dd>(read-write) The host name to connect, in the form &quot;hostname:port&quot; or &quot;ip:port&quot;, default is &quot;s3.amazonaws.com&quot;</dl>
+<dd>(read-write) The host name to connect, in the form &quot;hostname:port&quot; or &quot;ip:port&quot;, default is &quot;s3.amazonaws.com&quot;</dd></dl>
 <p> S3_SECRET_KEY</p>
 <dl>
-<dd>(read-write) This property gives the Amazon S3 secret key used to access the service.</dl>
+<dd>(read-write) This property gives the Amazon S3 secret key used to access the service.</dd></dl>
 <p> S3_SERVER_SIDE_ENCRYPTION</p>
 <dl>
-<dd>(read-write) Set to the server side encryption algorithm to use. There is actually only one algorithm, it is &quot;AES256&quot;. The encryption is done by Amazon on their server. See : <a rel="nofollow" href="http://docs.amazonwebservices.com/AmazonS3/latest/API/index.html?RESTObjectPUT.html">http://docs.amazonwebservices.com/AmazonS3/latest/API/index.html?RESTObjectPUT.html</a> for the most up-to-date list.</dl>
+<dd>(read-write) Set to the server side encryption algorithm to use. There is actually only one algorithm, it is &quot;AES256&quot;. The encryption is done by Amazon on their server. See : <a rel="nofollow" href="http://docs.amazonwebservices.com/AmazonS3/latest/API/index.html?RESTObjectPUT.html">http://docs.amazonwebservices.com/AmazonS3/latest/API/index.html?RESTObjectPUT.html</a> for the most up-to-date list.</dd></dl>
 <p> S3_SERVICE_PATH</p>
 <dl>
-<dd>(read-write) A path to add at the beginning of the URL.</dl>
+<dd>(read-write) A path to add at the beginning of the URL.</dd></dl>
 <p> S3_STORAGE_CLASS</p>
 <dl>
-<dd>(read-write) Storage class for new objects, currently one of &quot;STANDARD&quot; (the default) or &quot;REDUCED_REDUNDANCY&quot; (cheaper, but less redundant). See : <a rel="nofollow" href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?DataDurability.html">http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?DataDurability.html</a> for the most up-to-date list.</dl>
+<dd>(read-write) Storage class for new objects, currently one of &quot;STANDARD&quot; (the default) or &quot;REDUCED_REDUNDANCY&quot; (cheaper, but less redundant). See : <a rel="nofollow" href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?DataDurability.html">http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?DataDurability.html</a> for the most up-to-date list.</dd></dl>
 <p> S3_SSL</p>
 <dl>
-<dd>(read-write) Whether or not to use SSL/TLS to secure communications with Amazon S3.</dl>
+<dd>(read-write) Whether or not to use SSL/TLS to secure communications with Amazon S3.</dd></dl>
 <p> S3_SUBDOMAIN</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Whether or not to use subdomain hostname.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Whether or not to use subdomain hostname.</dd></dl>
 <p> S3_USER_TOKEN</p>
 <dl>
-<dd>(read-write) This property specifies the user token for Amanda Enterprise Edition customers.</dl>
+<dd>(read-write) This property specifies the user token for Amanda Enterprise Edition customers.</dd></dl>
 <p> STORAGE_API</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Which API to use for the cloud: </p>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Which API to use for the cloud: </dd>
 <pre> S3 Amanzon S3 api
  SWIFT-1.0 Openstack swift v1.0
  SWIFT-2.0 Openstack swift v2.0
@@ -240,16 +240,16 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;agphc2Q7Zmxragphc2RmO2xragpzZGY7
 </dl>
 <p> TENANT_ID</p>
 <dl>
-<dd>(read-write) The tenant_id (for swift v2).</dl>
+<dd>(read-write) The tenant_id (for swift v2).</dd></dl>
 <p> TENANT_NAME</p>
 <dl>
-<dd>(read-write) The tenant_name (for swift v2).</dl>
+<dd>(read-write) The tenant_name (for swift v2).</dd></dl>
 <p> USERNAME</p>
 <dl>
-<dd>(read-write) The username (for swift v2).</dl>
+<dd>(read-write) The username (for swift v2).</dd></dl>
 <p> VERBOSE</p>
 <dl>
-<dd>(read-write) If true, verbose data about each HTTP transaction is sent to the debug log.</dl>
+<dd>(read-write) If true, verbose data about each HTTP transaction is sent to the debug log.</dd></dl>
 <h3>S3 Url</h3>
 <p>&nbsp;<wbr>&nbsp;<wbr>SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>&nbsp;<wbr>SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://bucket.host/service_path/file">https://bucket.host/service_path/file</a><br />
 &nbsp;<wbr>&nbsp;<wbr>SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://host/service_path/bucket/file">https://host/service_path/bucket/file</a><br />
@@ -264,43 +264,43 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;agphc2Q7Zmxragphc2RmO2xragpzZGY7
 <p>Most of these properties are automatically detected, but can be overridden in the configuration file if the autodetection fails. Note that tape drives are required to at least support the MTREW (rewind) operation; all other operations can be emulated with the MTREW and read data operations. </p>
 <p> BROKEN_GMT_ONLINE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property if the system&#8217;s GMT_ONLINE macro gives incorrect results.&nbsp;<wbr>&nbsp;<wbr>This is currently true for the Linux IDE-TAPE driver.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property if the system&#8217;s GMT_ONLINE macro gives incorrect results.&nbsp;<wbr>&nbsp;<wbr>This is currently true for the Linux IDE-TAPE driver.</dd></dl>
 <p> BSF</p>
 <dl>
 <dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
-&nbsp;<wbr>driver may execute the MTBSF operation&nbsp;<wbr>(backward seek file).</dl>
+&nbsp;<wbr>driver may execute the MTBSF operation&nbsp;<wbr>(backward seek file).</dd></dl>
 <p> BSF_AFTER_EOM</p>
 <dl>
 <dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
 &nbsp;<wbr>driver should execute an MTBSF&nbsp;<wbr>(backward seek file)&nbsp;<wbr>operation after<br />
-&nbsp;<wbr>MTEOM&nbsp;<wbr>(seek to end of recorded data)&nbsp;<wbr>in order to append.</dl>
+&nbsp;<wbr>MTEOM&nbsp;<wbr>(seek to end of recorded data)&nbsp;<wbr>in order to append.</dd></dl>
 <p> BSR</p>
 <dl>
 <dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
-&nbsp;<wbr>driver may use the MTBSR operation&nbsp;<wbr>(backward seek record).</dl>
+&nbsp;<wbr>driver may use the MTBSR operation&nbsp;<wbr>(backward seek record).</dd></dl>
 <p> EOM</p>
 <dl>
 <dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
-&nbsp;<wbr>driver may use the MTEOM command&nbsp;<wbr>(seek to end of recorded data).</dl>
+&nbsp;<wbr>driver may use the MTEOM command&nbsp;<wbr>(seek to end of recorded data).</dd></dl>
 <p> FINAL_FILEMARKS</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This integer property gives the number of filemarks that should be written at EOD.&nbsp;<wbr>&nbsp;<wbr>It is usually 1 or 2.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This integer property gives the number of filemarks that should be written at EOD.&nbsp;<wbr>&nbsp;<wbr>It is usually 1 or 2.</dd></dl>
 <p> FSF</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device driver may use the MTFSF operation&nbsp;<wbr>(forward seek file).</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device driver may use the MTFSF operation&nbsp;<wbr>(forward seek file).</dd></dl>
 <p> FSF_AFTER_FILEMARK</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device driver needs a FSF to go the next file after the filemark is read. Default to&nbsp;<wbr>&quot;TRUE&quot;&nbsp;<wbr>on Solaris and&nbsp;<wbr>&quot;FALSE&quot;&nbsp;<wbr>on all others machines.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device driver needs a FSF to go the next file after the filemark is read. Default to&nbsp;<wbr>&quot;TRUE&quot;&nbsp;<wbr>on Solaris and&nbsp;<wbr>&quot;FALSE&quot;&nbsp;<wbr>on all others machines.</dd></dl>
 <p> FSR</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device driver may use the MTFSR operation&nbsp;<wbr>(forward seek record).</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device driver may use the MTFSR operation&nbsp;<wbr>(forward seek record).</dd></dl>
 <p> NONBLOCKING_OPEN</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>if O_NONBLOCK must be used on the open call. Default to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>on Linux and&nbsp;<wbr>&quot;false&quot;&nbsp;<wbr>on all others machines. Without it, Linux wait for a few seconds if no tape are loaded. Solaris have strange error it is set to&nbsp;<wbr>&quot;yes&quot;.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>if O_NONBLOCK must be used on the open call. Default to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>on Linux and&nbsp;<wbr>&quot;false&quot;&nbsp;<wbr>on all others machines. Without it, Linux wait for a few seconds if no tape are loaded. Solaris have strange error it is set to&nbsp;<wbr>&quot;yes&quot;.</dd></dl>
 <p> READ_BLOCK_SIZE</p>
 <dl>
 <dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property&nbsp;<wbr>(previously known as&nbsp;<wbr><i>READ_BUFFER_SIZE</i>)&nbsp;<wbr>specifies the block size that will be used for reads;&nbsp;<wbr>this should be large enough to contain any block that may be read from the device&nbsp;<wbr>(for example, from a tape containing variable-sized blocks), and must be larger than BLOCK_SIZE.&nbsp;<wbr>&nbsp;<wbr>This property is most often used when overwriting tapes using a new, smaller block size.<br />
-&nbsp;<wbr>The tapetype parameter&nbsp;<wbr><i>READBLOCKSIZE</i>&nbsp;<wbr>sets this property.&nbsp;<wbr>&nbsp;<wbr>See BLOCK SIZES, above.</dl>
+&nbsp;<wbr>The tapetype parameter&nbsp;<wbr><i>READBLOCKSIZE</i>&nbsp;<wbr>sets this property.&nbsp;<wbr>&nbsp;<wbr>See BLOCK SIZES, above.</dd></dl>
 <h3>NDMP Device</h3>
 <pre>tapedev &quot;ndmp:my.filer.com:10000@st1&quot;
 device-property &quot;NDMP_USERNAME&quot; &quot;jimmy&quot;
@@ -311,19 +311,19 @@ device-property &quot;NDMP_PASSWORD&quot; &quot;thelock&quot;</pre>
 <p>The properties <code>NDMP_USERNAME</code> and <code>NDMP_PASSWORD</code> set the username and password with which to access the NDMP server. The default for both is &quot;ndmp&quot;. </p>
 <p> INDIRECT</p>
 <dl>
-<dd>(read-write) Set to &quot;yes&quot; if the ndmp server doesn&#8217;t allow to set a window length to 0. The default is &quot;no&quot;.</dl>
+<dd>(read-write) Set to &quot;yes&quot; if the ndmp server doesn&#8217;t allow to set a window length to 0. The default is &quot;no&quot;.</dd></dl>
 <p> NDMP_AUTH</p>
 <dl>
-<dd>(read-write) Authentication method to use to connect to the NDMP server. One of &quot;md5&quot; (default), &quot;text&quot;, &quot;none&quot; (for an empty authentication attempt) or &quot;void&quot; (for no authentication attempt at all).</dl>
+<dd>(read-write) Authentication method to use to connect to the NDMP server. One of &quot;md5&quot; (default), &quot;text&quot;, &quot;none&quot; (for an empty authentication attempt) or &quot;void&quot; (for no authentication attempt at all).</dd></dl>
 <p> NDMP_PASSWORD</p>
 <dl>
-<dd>(read-write) Password for md5 or text authentications.</dl>
+<dd>(read-write) Password for md5 or text authentications.</dd></dl>
 <p> NDMP_USERNAME</p>
 <dl>
-<dd>(read-write) Username for md5 or text authentications.</dl>
+<dd>(read-write) Username for md5 or text authentications.</dd></dl>
 <p> READ_BLOCK_SIZE</p>
 <dl>
-<dd>(read-write) This property specifies the block size that will be used for reads; this should be large enough to contain any block that may be read from the device and must be larger than BLOCK_SIZE. See BLOCK_SIZES, above.</dl>
+<dd>(read-write) This property specifies the block size that will be used for reads; this should be large enough to contain any block that may be read from the device and must be larger than BLOCK_SIZE. See BLOCK_SIZES, above.</dd></dl>
 <h3>VFS Device</h3>
 <pre>tapedev &quot;file:/path/to/vtape&quot;</pre>
 <p>The VFS device driver stores data on a UNIX filesystem. Note that although one typically uses the VFS device driver to store data on hard disks, the driver does not interface with any hardware on a block level. </p>
@@ -338,7 +338,7 @@ device-property &quot;NDMP_PASSWORD&quot; &quot;thelock&quot;</pre>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> error occurs, and defaults to true. The monitoring operation works on<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> most filesystems, but if it causes problems, use this property to<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> disable it.
-</dl>
+</dd></dl>
 <h3>DVD-RW Device</h3>
 <pre>tapedev &quot;dvdrw:/var/cache/amanda/dvd-cache:/dev/scd0&quot;
 device-property &quot;DVDRW_MOUNT_POINT&quot; &quot;/media/dvd&quot;
@@ -356,29 +356,29 @@ device-property &quot;DVDRW_UNLABELLED_WHEN_UNMOUNTABLE&quot; &quot;true&quot;</
 <p> The CDRW device supports all of the properties of the VFS device, as well as the properties given below. The DVDRW_MOUNT_POINT property is required. Other properties are optional. </p>
 <p> DVDRW_KEEP_CACHE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>if the disk cache directory should be kept after successfully writing tape data to optical media. The default is false, which causes the cache contents to be deleted immediately after a successful write operation.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>if the disk cache directory should be kept after successfully writing tape data to optical media. The default is false, which causes the cache contents to be deleted immediately after a successful write operation.</dd></dl>
 <p> DVDRW_MOUNT_POINT</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property specifies the filesystem mount point for the optical media. Non-root users must be able to mount optical media by invoking&nbsp;<wbr>&quot;mount&quot;&nbsp;<wbr>and specifying this mount point.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property specifies the filesystem mount point for the optical media. Non-root users must be able to mount optical media by invoking&nbsp;<wbr>&quot;mount&quot;&nbsp;<wbr>and specifying this mount point.</dd></dl>
 <p> DVDRW_UNLABELLED_WHEN_UNMOUNTABLE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Treat unmountable media as empty, unlabelled media. This is necessary when attempting to label freshly formatted media.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Treat unmountable media as empty, unlabelled media. This is necessary when attempting to label freshly formatted media.</dd></dl>
 <p> DVDRW_GROWISOFS_COMMAND</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The command to invoke to burn the DVD.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The command to invoke to burn the DVD.</dd></dl>
 <p> DVDRW_MOUNT_COMMAND</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The command to invoke to mount the DVD.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The command to invoke to mount the DVD.</dd></dl>
 <p> DVDRW_UMOUNT_COMMAND</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The command to invoke to unmount the DVD.</dl>
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>The command to invoke to unmount the DVD.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5) </p>
 <p> The Amanda Wiki: : <a rel="nofollow" href="http://wiki.zmanda.com/">http://wiki.zmanda.com/</a></p>
 <h2>Authors</h2>
 <p><code>Ian Turner</code> &lt;ian [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
 <p> <code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

@@ -18,16 +18,16 @@ description: "curl_getdate – Convert a date string to number of seconds since 
 <h2>PARSING DATES AND TIMES</h2>
 <p> A &quot;date&quot; is a string containing several items separated by whitespace. The order of the items is immaterial. A date string may contain many flavors of items:</p>
 <dl>
-<dt><code>calendar date items</code></p>
-<dd> Can be specified several ways. Month names can only be three-letter english abbreviations, numbers can be zero-prefixed and the year may use 2 or 4 digits. Examples: 06 Nov 1994, 06-Nov-94 and Nov-94 6.</p>
-<dt><code>time of the day items</code></p>
-<dd> This string specifies the time on a given day. You must specify it with 6 digits with two colons: HH:MM:SS. To not include the time in a date string, will make the function assume 00:00:00. Example: 18:19:21.</p>
-<dt><code>time zone items</code></p>
-<dd> Specifies international time zone. There are a few acronyms supported, but in general you should instead use the specific relative time compared to UTC. Supported formats include: -1200, MST, +0100.</p>
-<dt><code>day of the week items</code></p>
-<dd> Specifies a day of the week. Days of the week may be spelled out in full (using english): `Sunday&#8217;, `Monday&#8217;, etc or they may be abbreviated to their first three letters. This is usually not info that adds anything.</p>
-<dt><code>pure numbers</code></p>
-<dd> If a decimal number of the form YYYYMMDD appears, then YYYY is read as the year, MM as the month number and DD as the day of the month, for the specified calendar date.</dl>
+<dt><code>calendar date items</code></dt>
+<dd> Can be specified several ways. Month names can only be three-letter english abbreviations, numbers can be zero-prefixed and the year may use 2 or 4 digits. Examples: 06 Nov 1994, 06-Nov-94 and Nov-94 6.</dd>
+<dt><code>time of the day items</code></dt>
+<dd> This string specifies the time on a given day. You must specify it with 6 digits with two colons: HH:MM:SS. To not include the time in a date string, will make the function assume 00:00:00. Example: 18:19:21.</dd>
+<dt><code>time zone items</code></dt>
+<dd> Specifies international time zone. There are a few acronyms supported, but in general you should instead use the specific relative time compared to UTC. Supported formats include: -1200, MST, +0100.</dd>
+<dt><code>day of the week items</code></dt>
+<dd> Specifies a day of the week. Days of the week may be spelled out in full (using english): `Sunday&#8217;, `Monday&#8217;, etc or they may be abbreviated to their first three letters. This is usually not info that adds anything.</dd>
+<dt><code>pure numbers</code></dt>
+<dd> If a decimal number of the form YYYYMMDD appears, then YYYY is read as the year, MM as the month number and DD as the day of the month, for the specified calendar date.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 Sun, 06 Nov 1994 08:49:37 GMT

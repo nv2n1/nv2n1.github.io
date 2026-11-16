@@ -29,7 +29,7 @@ description: "git-effort – Show effort statistics on file(s)"
 <p> Displays &quot;effort&quot; statistics:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git effort-- above 5 file commits active days
         git -
@@ -42,32 +42,29 @@ $ git effort-- above 5 file commits active days
   git-changelog                                 3          2
   git-graft                                     2          2
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Showing statistics on directories is also possible:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git effort bin man -- --after=&quot;one year ago&quot;
   file                                          commits    active days
   bin.......................................... 406        232
   man.......................................... 118        80
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Only count commits in the specified revision range: </p>
 <p> $ git effort &#8212; master..feature</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   file                                          commits    active days
   bin/git-effort............................... 3          2
   man/git-effort.md............................ 1          1
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Leila Muhtasib &lt;<i>muhtasib [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

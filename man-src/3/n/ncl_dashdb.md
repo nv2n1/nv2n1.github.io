@@ -13,7 +13,7 @@ DASHDB - Defines a dash pattern without labels.
 
  void c_dashdb (int *ipat)
 <h2>Description</h2><dl COMPACT><dt>IPAT
-<dd>(an input expression of type INTEGER) is a 16-bit dash pattern (1=solid, 0=blank); e.g., the binary number 1111000011110000, which is a decimal 61680, will give dashes of medium length.</dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
+</dt><dd>(an input expression of type INTEGER) is a 16-bit dash pattern (1=solid, 0=blank); e.g., the binary number 1111000011110000, which is a decimal 61680, will give dashes of medium length.</dd></dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: carline, colcon, cmpfil, cmpitm, cmplab, cmpmsk, cmptit, cmpusr, mpex08, tdashc, tdashl, tdashp, tdashs, fdldashd.
 <h2>Usage</h2>DASHDB may be called to define a dash pattern for any of the four versions of Dashline. 
 

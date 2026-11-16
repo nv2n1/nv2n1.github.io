@@ -18,17 +18,17 @@ mongoc_stream_write (mongoc_stream_t *stream,
 </pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd> A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd> A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>buf</code></p>
-<dd> The buffer to write.</dl>
+<dt><code>buf</code></dt>
+<dd> The buffer to write.</dd></dl>
 <dl COMPACT>
-<dt><code>count</code></p>
-<dd> The number of bytes to write.</dl>
+<dt><code>count</code></dt>
+<dd> The number of bytes to write.</dd></dl>
 <dl COMPACT>
-<dt><code>timeout_msec</code></p>
-<dd> The number of milliseconds to wait before failure, a timeout of 0 will not block. If negative, use the default timeout.</dl>
+<dt><code>timeout_msec</code></dt>
+<dd> The number of milliseconds to wait before failure, a timeout of 0 will not block. If negative, use the default timeout.</dd></dl>
 <p> The <code><a href="/docs/linux/man/3-mongoc_stream_write/">mongoc_stream_write</a>(3)</code> function shall perform a write to a <code>mongoc_stream_t</code> \&amp;. It&#8217;s modeled on the API and semantics of <code>write(3)</code> , though the parameters map only loosely. </p>
 <h2>Returns</h2>
 <p> The <code>mongoc_stream_write</code> function returns the number of bytes write on success. It returns <code>&gt;= 0</code> and <code>&lt; min_bytes</code> when end-of-file is encountered and <code>-1</code> on failure. <code>errno</code> is set upon failure. </p>

@@ -15,15 +15,15 @@ skb_tailroom_reserve - adjust reserved_tailroom
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to alter</dl>
+<dl><dd></dd><dd>buffer to alter</dd></dl>
  
 
  <i>mtu</i>
-<dl><dd>maximum amount of headlen permitted</dl>
+<dl><dd>maximum amount of headlen permitted</dd></dl>
  
 
  <i>needed_tailroom</i>
-<dl><dd>minimum amount of reserved_tailroom</dl>
+<dl><dd>minimum amount of reserved_tailroom</dd></dl>
 
 <h2>Description</h2>
 

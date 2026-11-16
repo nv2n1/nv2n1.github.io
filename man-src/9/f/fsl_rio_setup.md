@@ -14,11 +14,11 @@ description: "fsl_rio_setup – Setup Freescale PowerPC RapidIO interface"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>platform_device pointer</dl>
+</dd><dd>platform_device pointer</dd></dl>
 <h2>Description</h2>
 <p>Initializes MPC85xx RapidIO hardware interface, configures master port with system-specific info, and registers the master port with the RapidIO subsystem.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -13,10 +13,10 @@ description: "tld_get_4z – API function"
 int tld_get_4z(const uint32_t *in, char **out);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const uint32_t * in</p>
-<dd>Zero terminated array of unicode code points to process.</p>
-<dt>char ** out</p>
-<dd>Zero terminated ascii result string pointer.</dl>
+<dt>const uint32_t * in</dt>
+<dd>Zero terminated array of unicode code points to process.</dd>
+<dt>char ** out</dt>
+<dd>Zero terminated ascii result string pointer.</dd></dl>
 <h2>Description</h2>
 <p>Isolate the top-level domain of <i>in</i> and return it as an ASCII string in <i>out</i>.</p>
 <h2>Return Value</h2>
@@ -29,5 +29,5 @@ int tld_get_4z(const uint32_t *in, char **out);</code></pre>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

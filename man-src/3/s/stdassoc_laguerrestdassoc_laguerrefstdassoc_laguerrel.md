@@ -10,16 +10,11 @@ description: "std::assoc_laguerre,std::assoc_laguerref,std::assoc_laguerrel – 
 <p>std::assoc_laguerre,std::assoc_laguerref,std::assoc_laguerrel &#8211; std::assoc_laguerre,std::assoc_laguerref,std::assoc_laguerrel</p>
 <h2>Synopsis</h2>
 <pre><code>double assoc_laguerre(unsigned int n, unsigned int m, double x);
-
 float assoc_laguerre(unsigned int n, unsigned int m, float x);
-
 long double assoc_laguerre(unsigned int n, unsigned int m, long double x);
 (1)(since C++ 17)
-
     float assoc_laguerref(unsigned int n, unsigned int m, float x);
-
 long double assoc_laguerrel(unsigned int n, unsigned int m, long double x);
-
 double assoc_laguerre(unsigned int n, unsigned int m, IntegralType x);
 (2)(since C++ 17)</code></pre>
 <p>1) Computes the associated_Laguerre_polynomials of the degree n, order m, and argument x<br />
@@ -65,21 +60,16 @@ n+m(x) is the unassociated Laguerre polynomial, std::laguerre(n+m, x)). </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 double L1(unsigned m, double x)
 {
     return -x + m + 1;
 }
-
 double L2(unsigned m, double x)
 {
     return 0.5 * (x * x - 2 * (m + 2) * x + (m + 1) * (m + 2));
 }
-
 int main()
-
 {
     // spot-checks
     std::cout &lt;&lt; std::assoc_laguerre(1, 10, 0.5) &lt;&lt; '=' &lt;&lt; L1(10, 0.5) &lt;&lt; '

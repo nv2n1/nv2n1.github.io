@@ -26,8 +26,8 @@ void __fpurge(FILE *stream);
 <p> Upon successful completion <code>fpurge</code>() returns 0. On error, it returns -1 and sets <i>errno</i> appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>stream</i> is not an open stream.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>stream</i> is not an open stream.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -13,9 +13,9 @@ description: "mwaw2html – convert Mac text document into HTML"
 <p> <code>mwaw2html</code> [<i>OPTION</i>] <i>&lt;Text Mac Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>:</p>
-<dd> Shows this help message</p>
-<dt><code>-v</code>:</p>
-<dd> Output mwaw2html version </p>
+<dt><code>-h</code>:</dt>
+<dd> Shows this help message</dd>
+<dt><code>-v</code>:</dt>
+<dd> Output mwaw2html version </dd>
 </dl>
 <h2>Index</h2>

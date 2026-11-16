@@ -14,18 +14,18 @@ description: "ata_sg_init – Associate command with scatter-gather table."
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Command to be associated</dl>
+</dd><dd>Command to be associated</dd></dl>
 <p> <i>sg</i></p>
 <dl>
-<dd>Scatter-gather table.</dl>
+<dd>Scatter-gather table.</dd></dl>
 <p> <i>n_elem</i></p>
 <dl>
-<dd>Number of elements in s/g table.</dl>
+<dd>Number of elements in s/g table.</dd></dl>
 <h2>Description</h2>
 <p>Initialize the data-related elements of queued_cmd <i>qc</i> to point to a scatter-gather table <i>sg</i>, containing <i>n_elem</i> elements. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

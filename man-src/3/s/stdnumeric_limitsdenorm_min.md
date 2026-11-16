@@ -10,7 +10,6 @@ description: "std::numeric_limits<T>::denorm_min – std::numeric_limits<T>::den
 <p>std::numeric_limits&lt;T&gt;::denorm_min &#8211; std::numeric_limits&lt;T&gt;::denorm_min</p>
 <h2>Synopsis</h2>
 <pre><code>static T denorm_min() throw();             (until C++11)
-
 static constexpr T denorm_min() noexcept;  (since C++11)</code></pre>
 <p>Returns the minimum positive subnormal_value of the type T, if std::numeric_limits&lt;T&gt;::has_denorm != std::denorm_absent, otherwise returns std::numeric_limits&lt;T&gt;::min(). Only meaningful for floating-point types. </p>
 <h2>Return value</h2>
@@ -41,16 +40,11 @@ long double /* implementation-defined */ </p>
 <p>Demonstates the underlying bit structure of the denorm_min() and prints the values<br />
  // Run this code </p>
 <pre><code>#include &lt;cassert&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;limits&gt;
 int main()
-
 {
     // the smallest subnormal value has sign bit = 0, exponent = 0
     // and only the least significant bit of the fraction is 1

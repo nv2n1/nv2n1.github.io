@@ -10,16 +10,10 @@ description: "QuantLib::DividendBarrierOption::arguments – Arguments for divid
 <p>QuantLib::DividendBarrierOption::arguments &#8211; Arguments for dividend barrier option calculation </p>
 <h2>Synopsis</h2>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Inherits <code>QuantLib::BarrierOption::arguments</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> DividendSchedule <code>cashFlow</code></p>
 <h2>Detailed Description</h2>

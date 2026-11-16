@@ -27,13 +27,13 @@ description: "scanadf – acquire multiple images from a scanner equipped with a
 <p> The <code>-S</code> or <code>&#8211;scan-script</code> option specifies the name of script to run after each scanned image is acquired. The script receives the name of the image output file as its first and only command line argument. Additionally the scan script can reference the following environment variables to get information about the parameters of the image. </p>
 <dl>
 <dt>
-<dd> <code>SCAN_RES</code> &#8211; the image resolution (in DPI)<br />
+</dt><dd> <code>SCAN_RES</code> &#8211; the image resolution (in DPI)<br />
  <code>SCAN_WIDTH</code> &#8211; the image width (in pixels)<br />
  <code>SCAN_HEIGHT</code> &#8211; the image height (in pixels)<br />
  <code>SCAN_DEPTH</code> &#8211; the image bit-depth (in bits)<br />
  <code>SCAN_FORMAT</code> &#8211; a string representing the image format (e.g. gray, g42d, text, etc)<br />
  <code>SCAN_FORMAT_ID</code> &#8211; the numeric image format identifier
-</dl>
+</dd></dl>
 <p> If the <code>&#8211;scipt-wait</code> option is given, scanadf will wait until all scan-scripts have been finished before exiting. That will be useful if scanadf is used in conjunction with tools to modify the scanned images. </p>
 <p> The <code>-s</code> or <code>&#8211;start-count</code> option specifies the page number of first scanned image. </p>
 <p> The <code>-e</code> or <code>&#8211;end-count</code> option specifies the last page number to scan. Using this option, you can request a specific number of pages to be scanned, rather than scanning until there are no more images available. </p>
@@ -41,12 +41,12 @@ description: "scanadf – acquire multiple images from a scanner equipped with a
 <p> As you might imagine, much of the power of <code>scanadf</code> comes from the fact that it can control any SANE backend. Thus, the exact set of command-line options depends on the capabilities of the selected device. To see the options for a device named <i>dev</i>, invoke <code>scanadf</code> via a command-line of the form: </p>
 <dl>
 <dt>
-<dd> scanadf &#8211;help &#8211;device <i>dev</i></dl>
+</dt><dd> scanadf &#8211;help &#8211;device <i>dev</i></dd></dl>
 <p> The documentation for the device-specific options printed by <code>&#8211;help</code> is explained in the manual page for <code>scanimage.</code> </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/sane.d</i></p>
-<dd> This directory holds various configuration files. For details, please refer to the manual pages listed below.</dl>
+<dt><i>/etc/sane.d</i></dt>
+<dd> This directory holds various configuration files. For details, please refer to the manual pages listed below.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), xscanimage(1), <a href="/docs/linux/man/7-sane/">sane</a>(7) </p>
 <h2>AUTHOR</h2>
@@ -57,9 +57,9 @@ description: "scanadf – acquire multiple images from a scanner equipped with a
 <p> Only a subset of the SANE backends support feeders and return SANE_STATUS_NO_DOCS appropriately. Backends which are known to work at this time are: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  <code>sane-bh</code> &#8211; Bell+Howell Copiscan II series scanners.<br />
  <code>sane-hp</code> &#8211; Hewlett Packard scanners. A patch to the sane-hp backend is necessary. The &#8211;scantype=ADF option must be specified (earlier versions of the backend used the &#8211;scan-from-adf option, instead).<br />
  <code>sane-umax</code> &#8211; UMAX scanners. Support exists in build 12 and later. The &#8211;source=&quot;Automatic Document Feeder&quot; option must be specified.
-</dl>
+</dd></dl>
 <h2>Index</h2>

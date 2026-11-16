@@ -15,130 +15,130 @@ description: "cman_tool – Cluster Management Tool"
  Be careful that you understand the consequences of the commands issued via cman_tool as they can affect all nodes in your cluster. Most of the time the cman_tool will only be invoked from your startup and shutdown scripts.</p>
 <h2>Subcommands</h2>
 <dl>
-<dt><i>join</i></p>
+<dt><i>join</i></dt>
 <dd>This is the main use of cman_tool. It instructs the cluster manager to attempt to join an existing cluster or (if no existing cluster exists) then to form a new one on its own.<br />
- If no options are given to this command then it will take the cluster configuration information from cluster.conf. However, it is possible to provide all the information on the command-line or to override cluster.conf values by using the command line. </p>
-<dt><i>leave</i></p>
+ If no options are given to this command then it will take the cluster configuration information from cluster.conf. However, it is possible to provide all the information on the command-line or to override cluster.conf values by using the command line. </dd>
+<dt><i>leave</i></dt>
 <dd>Tells CMAN to leave the cluster. You cannot do this if there are subsystems (eg DLM, GFS) active. You should dismount all GFS filesystems, shutdown CLVM, fenced and anything else using the cluster manager before using <code>cman_tool leave.</code> Look at &#8216;cman_tool status&#8217; and group_tool to see how many (and which) subsystems are active.<br />
- When a node leaves the cluster, the remaining nodes recalculate quorum and this may block cluster activity if the required number of votes is not present. If this node is to be down for an extended period of time and you need to keep the cluster running, add the <code>remove</code> option, and the remaining nodes will recalculate quorum such that activity can continue. </p>
-<dt><i>kill</i></p>
-<dd>Tells CMAN to kill another node in the cluster. This will cause the local node to send a &quot;KILL&quot; message to that node and it will shut down. Recovery will occur for the killed node as if it had failed. This is a sort of remote version of &quot;leave force&quot; so only use if if you really know what you are doing. </p>
-<dt><i>expected</i></p>
+ When a node leaves the cluster, the remaining nodes recalculate quorum and this may block cluster activity if the required number of votes is not present. If this node is to be down for an extended period of time and you need to keep the cluster running, add the <code>remove</code> option, and the remaining nodes will recalculate quorum such that activity can continue. </dd>
+<dt><i>kill</i></dt>
+<dd>Tells CMAN to kill another node in the cluster. This will cause the local node to send a &quot;KILL&quot; message to that node and it will shut down. Recovery will occur for the killed node as if it had failed. This is a sort of remote version of &quot;leave force&quot; so only use if if you really know what you are doing. </dd>
+<dt><i>expected</i></dt>
 <dd>Tells CMAN a new value of expected votes and instructs it to recalculate quorum based on this value.<br />
- Use this option if your cluster has lost quorum due to nodes failing and you need to get it running again in a hurry. </p>
-<dt><i>version</i></p>
+ Use this option if your cluster has lost quorum due to nodes failing and you need to get it running again in a hurry. </dd>
+<dt><i>version</i></dt>
 <dd>Used alone this will report the major, minor, patch and config versions used by CMAN (also displayed in &#8216;cman_tool status&#8217;). It can also be used with -r to tell cluster members to update.<br />
  The argument to -r is the version number that cman should look for. If that version is not currently available then cman will poll for it. If a version of 0 is specified then cman will read the configuration file, validate it, distribute it around the cluster (if necessary) and activate it.<br />
- The -D flag can disable the validation stage. This is NOT recommended. </p>
-<dt><i>wait </i></p>
-<dd>Waits until the node is a member of the cluster and then returns. </p>
-<dt><i>status</i></p>
-<dd>Displays the local view of the cluster status. </p>
-<dt><i>nodes</i></p>
-<dd>Displays the local view of the cluster nodes. </p>
-<dt><i>services</i></p>
-<dd>Displays the local view of subsystems using cman (deprecated, group_tool should be used instead). </p>
-<dt><i>debug</i></p>
+ The -D flag can disable the validation stage. This is NOT recommended. </dd>
+<dt><i>wait </i></dt>
+<dd>Waits until the node is a member of the cluster and then returns. </dd>
+<dt><i>status</i></dt>
+<dd>Displays the local view of the cluster status. </dd>
+<dt><i>nodes</i></dt>
+<dd>Displays the local view of the cluster nodes. </dd>
+<dt><i>services</i></dt>
+<dd>Displays the local view of subsystems using cman (deprecated, group_tool should be used instead). </dd>
+<dt><i>debug</i></dt>
 <dd>Sets the debug level of the running cman daemon. Debug output will be sent to syslog level LOG_DEBUG. the <code>-d</code> switch specifies the new logging level. This is the same bitmask used for cman_tool join -d
-</dl>
+</dd></dl>
 <h2>Leave Options</h2>
 <dl>
-<dt><i>-w</i></p>
-<dd>Normally, &quot;cman_tool leave&quot; will fail if the cluster is in transition (ie another node is joining or leaving the cluster). By adding the -w flag, cman_tool will wait and retry the leave operation repeatedly until it succeeds or a more serious error occurs.</p>
-<dt><i>-t &lt;seconds&gt;</i></p>
-<dd>If -w is also specified then -t dictates the maximum amount of time cman_tool is prepared to wait. If the operation times out then a status of 2 is returned.</p>
-<dt><i>force</i></p>
-<dd>Shuts down the cluster manager without first telling any of the subsystems to close down. Use this option with extreme care as it could easily cause data loss.</p>
-<dt><i>remove</i></p>
-<dd>Tells the rest of the cluster to recalculate quorum such that activity can continue without this node. </p>
+<dt><i>-w</i></dt>
+<dd>Normally, &quot;cman_tool leave&quot; will fail if the cluster is in transition (ie another node is joining or leaving the cluster). By adding the -w flag, cman_tool will wait and retry the leave operation repeatedly until it succeeds or a more serious error occurs.</dd>
+<dt><i>-t &lt;seconds&gt;</i></dt>
+<dd>If -w is also specified then -t dictates the maximum amount of time cman_tool is prepared to wait. If the operation times out then a status of 2 is returned.</dd>
+<dt><i>force</i></dt>
+<dd>Shuts down the cluster manager without first telling any of the subsystems to close down. Use this option with extreme care as it could easily cause data loss.</dd>
+<dt><i>remove</i></dt>
+<dd>Tells the rest of the cluster to recalculate quorum such that activity can continue without this node. </dd>
 </dl>
 <h2>Expected Options</h2>
 <dl>
-<dt><i>-e &lt;expected-votes&gt;</i></p>
-<dd>The new value of expected votes to use. This will usually be enough to bring the cluster back to life. Values that would cause incorrect quorum will be rejected. </p>
+<dt><i>-e &lt;expected-votes&gt;</i></dt>
+<dd>The new value of expected votes to use. This will usually be enough to bring the cluster back to life. Values that would cause incorrect quorum will be rejected. </dd>
 </dl>
 <h2>Kill Options</h2>
 <dl>
-<dt><i>-n &lt;nodename&gt;</i></p>
-<dd>The node name of the node to be killed. This should be the unqualified node name as it appears in &#8216;cman_tool nodes&#8217;. </p>
+<dt><i>-n &lt;nodename&gt;</i></dt>
+<dd>The node name of the node to be killed. This should be the unqualified node name as it appears in &#8216;cman_tool nodes&#8217;. </dd>
 </dl>
 <h2>Version Options</h2>
 <dl>
-<dt><i>-r</i></p>
-<dd>Update config version. You don&#8217;t need to use this when adding a new node, the new cman node will tell the rest of the cluster to read the latest version of the config file automatically. The version present in the new configuration must be higher than the one currently in use by cman. </p>
+<dt><i>-r</i></dt>
+<dd>Update config version. You don&#8217;t need to use this when adding a new node, the new cman node will tell the rest of the cluster to read the latest version of the config file automatically. The version present in the new configuration must be higher than the one currently in use by cman. </dd>
 <p> cman_tool version on its own will always show the current version and not the one being looked for. So be aware that the display will possibly not update immediately after you have run cman_tool version -r.</p>
-<dt><i>-D&lt;option&gt;</i></p>
-<dd>see &quot;JOIN&quot; options</p>
-<dt><i>-S</i></p>
-<dd>By default cman_tool version will try to distribute the new cluster.conf file using ccs_sync and ricci. If you have distributed the file yourself and/or do not have ricci installed then the -S option will skip this step. NOTE: it is still important that all nodes in the cluster have the same version of the file. Make sure that this is the case before using this option.</dl>
+<dt><i>-D&lt;option&gt;</i></dt>
+<dd>see &quot;JOIN&quot; options</dd>
+<dt><i>-S</i></dt>
+<dd>By default cman_tool version will try to distribute the new cluster.conf file using ccs_sync and ricci. If you have distributed the file yourself and/or do not have ricci installed then the -S option will skip this step. NOTE: it is still important that all nodes in the cluster have the same version of the file. Make sure that this is the case before using this option.</dd></dl>
 <h2>Wait Options</h2>
 <dl>
-<dt><i>-q</i></p>
-<dd>Waits until the cluster is quorate before returning. <i>-t &lt;seconds&gt;</i> Dictates the maximum amount of time cman_tool is prepared to wait. If the operation times out then a status of 2 is returned. </p>
+<dt><i>-q</i></dt>
+<dd>Waits until the cluster is quorate before returning. <i>-t &lt;seconds&gt;</i> Dictates the maximum amount of time cman_tool is prepared to wait. If the operation times out then a status of 2 is returned. </dd>
 </dl>
 <h2>Join Options</h2>
 <dl>
-<dt><i>-c &lt;clustername&gt;</i></p>
-<dd>Provides a text name for the cluster. You can have several clusters on one LAN and they are distinguished by this name. Note that the name is hashed to provide a unique number which is what actually distinguishes the cluster, so it is possible that two different names can clash. If this happens, the node will not be allowed into the existing cluster and you will have to pick another name or use different port number for cluster communication.</p>
-<dt><i>-p &lt;port&gt;</i></p>
-<dd>UDP port number used for cluster communication. This defaults to 5405.</p>
-<dt><i>-v &lt;votes&gt;</i></p>
-<dd>Number of votes this node has in the cluster. Defaults to 1.</p>
-<dt><i>-e &lt;expected votes&gt;</i></p>
-<dd>Number of expected votes for the whole cluster. If different nodes provide different values then the highest is used. The cluster will only operate when quorum is reached &#8211; that is more than half the available votes are available to the cluster. The default for this value is the total number of votes for all nodes in the configuration file.</p>
-<dt><i>-2</i></p>
-<dd>Sets the cluster up for a special &quot;two node only&quot; mode. Because of the quorum requirements mentioned above, a two-node cluster cannot be valid. This option tells the cluster manager that there will only ever be two nodes in the cluster and relies on fencing to ensure cluster integrity. If you specify this you cannot add more nodes without taking down the existing cluster and reconfiguring it. Expected votes should be set to 1 for a two-node cluster.</p>
-<dt><i>-n &lt;nodename&gt;</i></p>
-<dd>Overrides the node name. By default the unqualified hostname is used. This option is also used to specify which interface is used for cluster communication.</p>
-<dt><i>-N &lt;nodeid&gt;</i></p>
-<dd>Overrides the node ID for this node. Normally, nodes are assigned a node id in cluster.conf. If you specify an incorrect node ID here, the node might not be allowed to join the cluster. Setting node IDs in the configuration is a far better way to do this. <code>Note</code>that<code>the</code>node&#8217;s<code>application</code>to<code>join</code>the<code>cluster</code>may<code>be</code>rejected<code>if</code>you try to set the nodeid to one that has already been used, or if the node was previously a member of the cluster but with a different nodeid.</p>
-<dt><i>-o &lt;nodename&gt;</i></p>
-<dd>Override the name this node will have in the cluster. This will normally be the hostname or the first name specified by -n. Note how this differs from -n: -n tells cman_tool how to find the host address and/or the entry in the configuration file. -o simply changes the name the node will have in the cluster and has no bearing on the actual name of the machine. Use this option will extreme caution. <code>.TP</code> <i>-m &lt;multicast-address&gt;</i> Specifies a multicast address to use for cluster communication. This is required for IPv6 operation. You should also specify an ethernet interface to bind to this multicast address using the -i option.</p>
-<dt><i>-w</i></p>
-<dd>Join and wait until the node is a cluster member.</p>
-<dt><i>-q</i></p>
-<dd>Join and wait until the cluster is quorate. If the cluster join fails and -w (or -q) is specified, then it will be retried. Note that cman_tool cannot tell whether the cluster join was rejected by another node for a good reason or that it timed out for some benign reason; so it is strongly recommended that a timeout is also given with the wait options to join. If you don&#8217;t want join to retry on failure but do want to wait, use the <code>cman_tool join </code> command without -w followed by <code>cman_tool wait.</code></p>
-<dt><i>-k &lt;keyfile&gt;</i></p>
-<dd>All traffic sent out by cman/corosync is encrypted. By default the security key used is simply the cluster name. If you need more security you can specify a key file that contains the key used to encrypt cluster communications. Of course, the contents of the key file must be the same on all nodes in the cluster. It is up to you to securely copy the file to the nodes.</p>
-<dt><i>-t &lt;seconds&gt;</i></p>
-<dd>If -w or -q is also specified then -t dictates the maximum amount of time cman_tool is prepared to wait. If the operation times out then a status of 2 is returned. Note that just because cman_tool has given up, does not mean that cman itself has stopped trying to join a cluster.</p>
-<dt><i>-X</i></p>
+<dt><i>-c &lt;clustername&gt;</i></dt>
+<dd>Provides a text name for the cluster. You can have several clusters on one LAN and they are distinguished by this name. Note that the name is hashed to provide a unique number which is what actually distinguishes the cluster, so it is possible that two different names can clash. If this happens, the node will not be allowed into the existing cluster and you will have to pick another name or use different port number for cluster communication.</dd>
+<dt><i>-p &lt;port&gt;</i></dt>
+<dd>UDP port number used for cluster communication. This defaults to 5405.</dd>
+<dt><i>-v &lt;votes&gt;</i></dt>
+<dd>Number of votes this node has in the cluster. Defaults to 1.</dd>
+<dt><i>-e &lt;expected votes&gt;</i></dt>
+<dd>Number of expected votes for the whole cluster. If different nodes provide different values then the highest is used. The cluster will only operate when quorum is reached &#8211; that is more than half the available votes are available to the cluster. The default for this value is the total number of votes for all nodes in the configuration file.</dd>
+<dt><i>-2</i></dt>
+<dd>Sets the cluster up for a special &quot;two node only&quot; mode. Because of the quorum requirements mentioned above, a two-node cluster cannot be valid. This option tells the cluster manager that there will only ever be two nodes in the cluster and relies on fencing to ensure cluster integrity. If you specify this you cannot add more nodes without taking down the existing cluster and reconfiguring it. Expected votes should be set to 1 for a two-node cluster.</dd>
+<dt><i>-n &lt;nodename&gt;</i></dt>
+<dd>Overrides the node name. By default the unqualified hostname is used. This option is also used to specify which interface is used for cluster communication.</dd>
+<dt><i>-N &lt;nodeid&gt;</i></dt>
+<dd>Overrides the node ID for this node. Normally, nodes are assigned a node id in cluster.conf. If you specify an incorrect node ID here, the node might not be allowed to join the cluster. Setting node IDs in the configuration is a far better way to do this. <code>Note</code>that<code>the</code>node&#8217;s<code>application</code>to<code>join</code>the<code>cluster</code>may<code>be</code>rejected<code>if</code>you try to set the nodeid to one that has already been used, or if the node was previously a member of the cluster but with a different nodeid.</dd>
+<dt><i>-o &lt;nodename&gt;</i></dt>
+<dd>Override the name this node will have in the cluster. This will normally be the hostname or the first name specified by -n. Note how this differs from -n: -n tells cman_tool how to find the host address and/or the entry in the configuration file. -o simply changes the name the node will have in the cluster and has no bearing on the actual name of the machine. Use this option will extreme caution. <code>.TP</code> <i>-m &lt;multicast-address&gt;</i> Specifies a multicast address to use for cluster communication. This is required for IPv6 operation. You should also specify an ethernet interface to bind to this multicast address using the -i option.</dd>
+<dt><i>-w</i></dt>
+<dd>Join and wait until the node is a cluster member.</dd>
+<dt><i>-q</i></dt>
+<dd>Join and wait until the cluster is quorate. If the cluster join fails and -w (or -q) is specified, then it will be retried. Note that cman_tool cannot tell whether the cluster join was rejected by another node for a good reason or that it timed out for some benign reason; so it is strongly recommended that a timeout is also given with the wait options to join. If you don&#8217;t want join to retry on failure but do want to wait, use the <code>cman_tool join </code> command without -w followed by <code>cman_tool wait.</code></dd>
+<dt><i>-k &lt;keyfile&gt;</i></dt>
+<dd>All traffic sent out by cman/corosync is encrypted. By default the security key used is simply the cluster name. If you need more security you can specify a key file that contains the key used to encrypt cluster communications. Of course, the contents of the key file must be the same on all nodes in the cluster. It is up to you to securely copy the file to the nodes.</dd>
+<dt><i>-t &lt;seconds&gt;</i></dt>
+<dd>If -w or -q is also specified then -t dictates the maximum amount of time cman_tool is prepared to wait. If the operation times out then a status of 2 is returned. Note that just because cman_tool has given up, does not mean that cman itself has stopped trying to join a cluster.</dd>
+<dt><i>-X</i></dt>
 <dd>Tells cman not to use the configuration file to get cluster information. If you use this option then cman will apply several defaults to the cluster to get it going. The cluster name will be &quot;RHCluster&quot;, node IDs will default to the IP address of the node and remote node names will show up as Node&lt;nodeid&gt;. All of these, apart from the node names can be overridden on the cman_tool command-line if required.<br />
  If you have to set up fence devices, services or anything else in cluster.conf then this option is probably not worthwhile to you &#8211; the extra readability of sensible node names and numbers will make it worth using cluster.conf for the cluster too. But for a simple failover cluster this might save you some effort.<br />
  On each node using this configuration you will need to have the same authorization key installed. To create this key run<br />
  corosync-keygen<br />
  mv /etc/ais/authkey /etc/cluster/cman_authkey<br />
- then copy that file to all nodes you want to join the cluster. </p>
-<dt><i>-C</i></p>
+ then copy that file to all nodes you want to join the cluster. </dd>
+<dt><i>-C</i></dt>
 <dd>Overrides the default configuration module. Usually cman uses xmlconfig (cluster.conf) to load its configuration. If you have your configuration database held elsewhere (eg LDAP) and have a configuration plugin for it, then you should specify the name of the module (see the documentation for the module for the name of it &#8211; it&#8217;s not necessarily the same as the filename) here.<br />
  It is possible to chain configuration modules by separating them with colons. So to add two modules (eg) &#8216;ldapconfig&#8217; and &#8216;ldappreproc&#8217; to the chain start cman with -C ldapconfig:ldappreproc<br />
- The default value for this is &#8216;xmlconfig&#8217;. Note that if the -X is on the command-line then -C will be ignored.</p>
-<dt><i>-A</i></p>
-<dd>Don&#8217;t load openais services. Normally cman_tool join will load the configuration module &#8216;openaisserviceenablestable&#8217; which will load the services installed by openais. If you don&#8217;t want to use these services or have not installed openais then this switch will disable them.</p>
-<dt><i>-D</i></p>
+ The default value for this is &#8216;xmlconfig&#8217;. Note that if the -X is on the command-line then -C will be ignored.</dd>
+<dt><i>-A</i></dt>
+<dd>Don&#8217;t load openais services. Normally cman_tool join will load the configuration module &#8216;openaisserviceenablestable&#8217; which will load the services installed by openais. If you don&#8217;t want to use these services or have not installed openais then this switch will disable them.</dd>
+<dt><i>-D</i></dt>
 <dd>Tells cman_tool whether to validate the configuration before loading or reloading it. By default the configuration <code>is</code> validated, which is equivalent to -Dfail.<br />
  -Dwarn will validate the configuration and print any messages arising, but will attempt to use it regardless of its validity.<br />
  -Dnone (or just -D) will skip the validation completely.<br />
- The -D switch does not take a space between -D and the parameter. so &#8216;-D fail&#8217; will cause an error. Use -Dfail.</dl>
+ The -D switch does not take a space between -D and the parameter. so &#8216;-D fail&#8217; will cause an error. Use -Dfail.</dd></dl>
 <h2>Nodes Options</h2>
 <dl>
-<dt><i>-a</i></p>
-<dd>Shows the IP address(es) the nodes are communicating on. </p>
-<dt><i>-n &lt;nodename&gt;</i></p>
-<dd>Shows node information for a specific node. This should be the unqualified node name as it appears in &#8216;cman_tool nodes&#8217;. </p>
-<dt><i>-F &lt;format&gt;</i></p>
+<dt><i>-a</i></dt>
+<dd>Shows the IP address(es) the nodes are communicating on. </dd>
+<dt><i>-n &lt;nodename&gt;</i></dt>
+<dd>Shows node information for a specific node. This should be the unqualified node name as it appears in &#8216;cman_tool nodes&#8217;. </dd>
+<dt><i>-F &lt;format&gt;</i></dt>
 <dd>Specify the format of the output. The format string may contain one or more format options, each separated by a comma. Valid format options include: id, name, type, and addr.
-</dl>
+</dd></dl>
 <h2>Debug Options</h2>
 <dl>
-<dt><i>-d &lt;value&gt;</i></p>
+<dt><i>-d &lt;value&gt;</i></dt>
 <dd>The value is a bitmask of<br />
  2 Barriers<br />
  4 Membership messages<br />
  8 Daemon operation, including command-line interaction<br />
  16 Interaction with Corosync<br />
  32 Startup debugging (cman_tool join operations only)
-</dl>
+</dd></dl>
 <h2>Notes</h2>
 <p>the <code>nodes</code> subcommand shows a list of nodes known to cman. the state is one of the following:<br />
  M<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The node is a member of the cluster</p>
@@ -149,8 +149,8 @@ description: "cman_tool – Cluster Management Tool"
 <h2>Disallowed Nodes</h2>
 <p>Occasionally (but very infrequently I hope) you may see nodes marked as &quot;Disallowed&quot; in cman_tool status or &quot;d&quot; in cman_tool nodes. This is a bit of a nasty hack to get around mismatch between what the upper layers expect of the cluster manager and corosync.</p>
 <dl>
-<dt>If a node experiences a momentary lack of connectivity, but one that is long enough to trigger the token timeouts, then it will be removed from the cluster. When connectivity is restored corosync will happily let it rejoin the cluster with no fuss. Sadly the upper layers don&#8217;t like this very much. They may (indeed probably will have) have changed their internal state while the other node was away and there is no straightforward way to bring the rejoined node up-to-date with that state. When this happens the node is marked &quot;Disallowed&quot; and is not permitted to take part in cman operations.</p>
-<dd>If the remainder of the cluster is quorate the the node will be sent a kill message and it will be forced to leave the cluster that way. Note that fencing should kick in to remove the node permanently anyway, but it may take longer than the network outage for this to complete. </p>
+<dt>If a node experiences a momentary lack of connectivity, but one that is long enough to trigger the token timeouts, then it will be removed from the cluster. When connectivity is restored corosync will happily let it rejoin the cluster with no fuss. Sadly the upper layers don&#8217;t like this very much. They may (indeed probably will have) have changed their internal state while the other node was away and there is no straightforward way to bring the rejoined node up-to-date with that state. When this happens the node is marked &quot;Disallowed&quot; and is not permitted to take part in cman operations.</dt>
+<dd>If the remainder of the cluster is quorate the the node will be sent a kill message and it will be forced to leave the cluster that way. Note that fencing should kick in to remove the node permanently anyway, but it may take longer than the network outage for this to complete. </dd>
 <p> If the remainder of the cluster is inquorate then we have a problem. The likelihood is that we will have two (or more) partitioned clusters and we cannot decide which is the &quot;right&quot; one. In this case we need to defer to the system administrator to kill an appropriate selection of nodes to restore the cluster to sensible operation. </p>
 <p> The latter scenario should be very rare and may indicate a bug somewhere in the code. If the local network is very flaky or busy it may be necessary to increase some of the protocol timeouts for corosync. We are trying to think of better solutions to this problem. </p>
 <p> Recovering from this state can, unfortunately, be complicated. Fortunately, in the majority of cases, fencing will do the job for you, and the disallowed state will only be temporary. If it persists, the recommended approach it is to do a cman tool nodes on all systems in the cluster and determine the largest common subset of nodes that are valid members to each other. Then reboot the others and let them rejoin correctly. In the case of a single-node disconnection this should be straightforward, with a large cluster that has experienced a network partition it could get very complicated! </p>

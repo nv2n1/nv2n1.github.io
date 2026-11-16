@@ -17,7 +17,7 @@ description: "git-show-tree – show branch tree of commit history"
 <p> Output the commit history log for all branches as tree view:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 *   4b57684 (HEAD, develop) Merge branch upstream master.
 |\
@@ -49,8 +49,7 @@ description: "git-show-tree – show branch tree of commit history"
 * | 40b131d (tag: 0.8.1) Release 0.8.1
 * | 391431d (tag: 0.8.0) Release 0.8.0
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Nick Lombard <i>github [at] jigsoft.co.za</i></p>
 <h2>REPORTING BUGS</h2>

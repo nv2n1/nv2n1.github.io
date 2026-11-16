@@ -23,13 +23,13 @@ url: "/docs/linux/man/1-ctanbib/"
 
 <dl>
 <dt>-c,--ctan
-<dd> use @ctan type instead of @manual. The difference between the two is that the url field contains package CTAN path, instead of link to the package.
-<dt>-C,--CTAN
-<dd> like --ctan option, but use original url instead of CTAN path.
-<dt>-h,--help
-<dd> print the help message.
-<dt>-v,--version
-<dd> print the version info.</dl>
+</dt><dd> use @ctan type instead of @manual. The difference between the two is that the url field contains package CTAN path, instead of link to the package.
+</dd><dt>-C,--CTAN
+</dt><dd> like --ctan option, but use original url instead of CTAN path.
+</dd><dt>-h,--help
+</dt><dd> print the help message.
+</dd><dt>-v,--version
+</dt><dd> print the version info.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

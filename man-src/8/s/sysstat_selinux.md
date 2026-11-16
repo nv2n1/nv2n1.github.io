@@ -61,16 +61,16 @@ description: "sysstat_selinux – Security Enhanced Linux Policy for the sysstat
 <p> <code>sysstat_exec_t</code> </p>
 <p> &#8211; Set files with the sysstat_exec_t type, if you want to transition an executable to the sysstat_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/sa/sa.*, /usr/lib/atsar/atsa.*, /usr/lib/sysstat/sa.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/sa/sa.*, /usr/lib/atsar/atsa.*, /usr/lib/sysstat/sa.* </dd>
 </dl>
 <p> <code>sysstat_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the sysstat_initrc_exec_t type, if you want to transition an executable to the sysstat_initrc_t domain. </p>
 <p> <code>sysstat_log_t</code> </p>
 <p> &#8211; Set files with the sysstat_log_t type, if you want to treat the data as sysstat log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/sa(/.*)?, /opt/sartest(/.*)?, /var/log/atsar(/.*)?, /var/log/sysstat(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/sa(/.*)?, /opt/sartest(/.*)?, /var/log/atsar(/.*)?, /var/log/sysstat(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

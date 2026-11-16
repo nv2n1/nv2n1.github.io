@@ -18,10 +18,10 @@ description: "aa_autoinitmouse – easy to use AA-lib mouse initialization funct
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>struct aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int mode</code></p>
-<dd> Mask of extra features you request. No such features are available in the current AA-lib version.</dl>
+<dt><code>struct aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int mode</code></dt>
+<dd> Mask of extra features you request. No such features are available in the current AA-lib version.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Attempts to find available mouse driver supporting the specified mode. First attempts to initialize the recommended drivers and then in order drivers available in the aa_kbddrivers array (all regular output drivers compiled into AA-lib).</p>
 <h2>RETURNS</h2>

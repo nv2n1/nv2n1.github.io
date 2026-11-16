@@ -35,27 +35,27 @@ sc - libtool[--config][--debug][{-n, --dry - run}][--features][--finish][--help]
 
 <dl>
 <dt>--config
-<dd> Show all configuration variables.
-<dt>--debug
-<dd> Enable verbose shell tracing.
-<dt>-n, --dry-run
-<dd> Display commands without modifying any files.
-<dt>--features
-<dd> Display basic configuration information and exit.
-<dt>--finish
-<dd> Same as --mode=finish.
-<dt>--help
-<dd> Display help message and exit
-<dt>--mode=<i>MODE</i>
-<dd> Use operation mode <i>MODE</i> (default=inferred from <i>MODE-ARGS</i>).
-<dt>--quiet
-<dd> Same as --silent.
-<dt>--silent
-<dd> Don't print informational messages.
-<dt>--tag=<i>TAG</i>
-<dd> Use configuration variables from tag <i>TAG</i>.
-<dt>--version
-<dd> Print version information.</dl>
+</dt><dd> Show all configuration variables.
+</dd><dt>--debug
+</dt><dd> Enable verbose shell tracing.
+</dd><dt>-n, --dry-run
+</dt><dd> Display commands without modifying any files.
+</dd><dt>--features
+</dt><dd> Display basic configuration information and exit.
+</dd><dt>--finish
+</dt><dd> Same as --mode=finish.
+</dd><dt>--help
+</dt><dd> Display help message and exit
+</dd><dt>--mode=<i>MODE</i>
+</dt><dd> Use operation mode <i>MODE</i> (default=inferred from <i>MODE-ARGS</i>).
+</dd><dt>--quiet
+</dt><dd> Same as --silent.
+</dd><dt>--silent
+</dt><dd> Don't print informational messages.
+</dd><dt>--tag=<i>TAG</i>
+</dt><dd> Use configuration variables from tag <i>TAG</i>.
+</dd><dt>--version
+</dt><dd> Print version information.</dd></dl>
  
 
  
@@ -64,19 +64,19 @@ sc - libtool[--config][--debug][{-n, --dry - run}][--features][--finish][--help]
 
 <dl>
 <dt>clean
-<dd> Remove files from the build directory.
-<dt>compile
-<dd> Compile a source file into a libtool object.
-<dt>execute
-<dd> Automatically set library path, then run a program.
-<dt>finish
-<dd> Complete the installation of libtool libraries.
-<dt>install
-<dd> Install libraries or executables.
-<dt>link
-<dd> Create a library or an executable.
-<dt>uninstall
-<dd> Remove libraries from an installed directory.</dl>
+</dt><dd> Remove files from the build directory.
+</dd><dt>compile
+</dt><dd> Compile a source file into a libtool object.
+</dd><dt>execute
+</dt><dd> Automatically set library path, then run a program.
+</dd><dt>finish
+</dt><dd> Complete the installation of libtool libraries.
+</dd><dt>install
+</dt><dd> Install libraries or executables.
+</dd><dt>link
+</dt><dd> Create a library or an executable.
+</dd><dt>uninstall
+</dt><dd> Remove libraries from an installed directory.</dd></dl>
  
 
  

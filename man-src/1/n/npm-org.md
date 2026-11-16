@@ -12,70 +12,68 @@ description: "npm-org – Manage orgs"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm org set&lt;orgname&gt;&lt;username&gt;[developer | admin | owner] npm org rm&lt;orgname&gt;&lt;username&gt;
     npm org ls&lt;orgname&gt;[&lt;username&gt;]
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Example</h3>
 <p> Add a new developer to an org: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm org set my-org @mx-smith
 </pre>
-</dl>
+</dd></dl>
 <p> Add a new admin to an org (or change a developer to an admin): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm org set my-org @mx-santos admin
 </pre>
-</dl>
+</dd></dl>
 <p> Remove a user from an org: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm org rm my-org mx-santos
 </pre>
-</dl>
+</dd></dl>
 <p> List all users in an org: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm org ls my-org
 </pre>
-</dl>
+</dd></dl>
 <p> List all users in JSON format: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm org ls my-org --json
 </pre>
-</dl>
+</dd></dl>
 <p> See what role a user has in an org: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ npm org ls my-org @mx-santos
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> You can use the <code>npm org</code> commands to manage and view users of an organization. It supports adding and removing users, changing their roles, listing them, and finding specific ones and their roles.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation on npm Orgs <i><a rel="nofollow" href="https://docs.npmjs.com/orgs/">https://docs.npmjs.com/orgs/</a></i> </p>
+<dt>&bull;</dt>
+<dd> Documentation on npm Orgs <i><a rel="nofollow" href="https://docs.npmjs.com/orgs/">https://docs.npmjs.com/orgs/</a></i> </dd>
 </dl>
 </dl>
 <h2>Index</h2>
